@@ -1,3 +1,4 @@
+import base64
 from __future__ import annotations
 
 import hashlib
@@ -50,12 +51,25 @@ class Pipeline:
         self.usage = Usage()
         self.prompt_dir = Path(__file__).parent / "prompts"
 
-    def git(self, *args, check=True):
+    def git_env(self):
         env = os.environ.copy()
         env["GIT_AUTHOR_NAME"] = env["GIT_COMMITTER_NAME"] = "learning-docs-bot"
         env["GIT_AUTHOR_EMAIL"] = env["GIT_COMMITTER_EMAIL"] = "learning-docs-bot@users.noreply.github.com"
-        result = subprocess.run(["git", *args], cwd=self.worktree if self.worktree.exists() else None,
-                                env=env, text=True, capture_output=True)
+        env["GIT_TERMINAL_PROMPT"] = "0"
+        auth = base64.b64encode(f"x-access-token:{self.token}".encode()).decode()
+        env["GIT_CONFIG_COUNT"] = "1"
+        env["GIT_CONFIG_KEY_0"] = "http.extraHeader"
+        env["GIT_CONFIG_VALUE_0"] = f"Authorization: Basic {auth}"
+        return env
+
+    def git(self, *args, check=True):
+        result = subprocess.run(
+            ["git", *args],
+            cwd=self.worktree if self.worktree.exists() else None,
+            env=self.git_env(),
+            text=True,
+            capture_output=True,
+        )
         if check and result.returncode:
             raise RuntimeError(result.stderr.strip() or result.stdout.strip())
         return result.stdout.strip()
@@ -63,11 +77,20 @@ class Pipeline:
     def sync(self):
         if not self.token:
             raise RuntimeError("GITHUB_TOKEN is required")
-        remote = f"https://x-access-token:{quote(self.token, safe='')}@github.com/{self.repo}.git"
+
+        repo_url = f"https://github.com/{self.repo}.git"
+        env = self.git_env()
         if not (self.worktree / ".git").exists():
             self.worktree.parent.mkdir(parents=True, exist_ok=True)
-            subprocess.run(["git", "clone", "--branch", self.branch, "--single-branch", remote, str(self.worktree)], check=True)
-        self.git("remote", "set-url", "origin", remote)
+            subprocess.run(
+                ["git", "clone", "--branch", self.branch, "--single-branch", repo_url, str(self.worktree)],
+                env=env,
+                check=True,
+                timeout=60,
+            )
+
+        # Keep the token out of .git/config and out of command arguments.
+        self.git("remote", "set-url", "origin", repo_url)
         self.git("fetch", "origin", self.branch)
         self.git("checkout", self.branch)
         self.git("reset", "--hard", f"origin/{self.branch}")
