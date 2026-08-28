@@ -1,0 +1,322 @@
+[
+  {
+    "line": 10,
+    "context": "001. 소프트웨어 공학의 기본 원칙 (Nguyên tắc cơ bản của kỹ nghệ phần mềm)",
+    "old": "- 💡 **Mẹo ghi nhớ (Mnemonic):** **현검기** (Hiện - Kiểm - Ký): **현**대적 기술 (Kỹ thuật hiện đại) - **검**증 (Kiểm chứng) - **기**록 (Ghi chép)."
+  },
+  {
+    "line": 17,
+    "context": "002. 폭포수 모형 (Waterfall Model / Mô hình thác nước)",
+    "old": "- 💡 **Mẹo ghi nhớ (Mnemonic):** Nước chảy từ trên xuống, không chảy ngược lại (이전 단계로 돌아갈 수 없음)."
+  },
+  {
+    "line": 23,
+    "context": "003. 나선형 모형 (Spiral Model / Mô hình xoắn ốc)",
+    "old": "- 💡 **Mẹo ghi nhớ (Mnemonic):** **계위개고** (Kế - Nguy - Khai - Khách): **계**획 (Lập KH) - **위**험 (Rủi ro) - **개**발 (Phát triển) - **고**객 (Khách hàng)."
+  },
+  {
+    "line": 32,
+    "context": "004. 애자일 모형의 주요 방법론 (Các phương pháp luận chính của mô hình Agile)",
+    "old": "- 💡 **Mẹo ghi nhớ (Mnemonic):** **스엑기칸린** (Scrum, XP, FDD, Kanban, Lean)."
+  },
+  {
+    "line": 40,
+    "context": "005. 애자일 개발 4가지 핵심 가치 (4 Giá trị cốt lõi của phát triển Agile)",
+    "old": "- 💡 **Mẹo ghi nhớ (Mnemonic):** **개실고변** (Cá - Thực - Khách - Biến): **개**인 (Cá nhân) - **실**행 (Thực thi/Chạy) - **고**객 (Khách hàng) - **변**화 (Thay đổi)."
+  },
+  {
+    "line": 49,
+    "context": "006. XP의 핵심 가치 (Giá trị cốt lõi của XP - eXtreme Programming)",
+    "old": "- 💡 **Mẹo ghi nhớ (Mnemonic):** **의단용존피** (Ý - Đơn - Dũng - Tôn - Phản)."
+  },
+  {
+    "line": 60,
+    "context": "007. 주요 비기능 요구사항 (Các yêu cầu phi chức năng chính / Non-functional Requirements)",
+    "old": "- 💡 **Mẹo ghi nhớ (Mnemonic):** **성보품제인** (Hiệu - Bảo - Chất - Ràng - Giao)."
+  },
+  {
+    "line": 65,
+    "context": "008. 요구사항 개발 프로세스 (Quy trình phát triển yêu cầu)",
+    "old": "- 💡 **Mẹo ghi nhớ (Mnemonic):** **도분명확** (Đồ - Phân - Minh - Xác)."
+  },
+  {
+    "line": 79,
+    "context": "010. 자료 흐름도 (DFD - Data Flow Diagram) 의 구성 요소",
+    "old": "- 💡 **Mẹo ghi nhớ (Mnemonic):** **프흐저단** (Process, Flow, Store, Terminator)."
+  },
+  {
+    "line": 89,
+    "context": "011. 자료 사전 (Data Dictionary) 의 표기 기호",
+    "old": "- 💡 **Mẹo ghi nhớ (Mnemonic):** `{ }` giống như vòng lặp trong code, nên là lặp lại (반복). `* *` giống comment `/* */` trong code."
+  },
+  {
+    "line": 103,
+    "context": "013. UML (Unified Modeling Language)",
+    "old": "- 💡 **Mẹo ghi nhớ (Mnemonic):** **사관다** (Sự - Quan - Đa): 사물 - 관계 - 다이어그램."
+  },
+  {
+    "line": 110,
+    "context": "014. UML의 주요 관계 (Các mối quan hệ chính trong UML)",
+    "old": "- 💡 **Mẹo ghi nhớ (Mnemonic):** **일의실** (Nhất - Ý - Thực): 일반화 - 의존 - 실체화."
+  },
+  {
+    "line": 120,
+    "context": "015. 구조적(Structural) 다이어그램의 종류 (Các loại biểu đồ cấu trúc - Tĩnh)",
+    "old": "- 💡 **Mẹo ghi nhớ (Mnemonic):** **클객컴배복패** (Lớp - Đối - Com - Bố - Phức - Gói). Các biểu đồ này thể hiện cấu trúc \"Tĩnh\" (정적)."
+  },
+  {
+    "line": 131,
+    "context": "016. 행위(Behavioral) 다이어그램의 종류 (Các loại biểu đồ hành vi - Động)",
+    "old": "- 💡 **Mẹo ghi nhớ (Mnemonic):** **유순커상활상타** (Use - Trình - Com - Trạng - Hoạt - Tương - Time). Các biểu đồ này thể현 đặc tính \"Động\" (동적)."
+  },
+  {
+    "line": 169,
+    "context": "022. 사용자 인터페이스의 기본 원칙 (Nguyên tắc cơ bản của UI)",
+    "old": "- 💡 **Mẹo ghi nhớ (Mnemonic):** **직유학유** (Trực - Hữu - Học - Nhu)."
+  },
+  {
+    "line": 231,
+    "context": "040 & 041. 결합도 (Coupling) 의 종류와 정도 (Các loại Độ kết dính / Mức độ từ Yếu → Mạnh)",
+    "old": "- 💡 **Mẹo ghi nhớ (Mnemonic):** **자스제외공내** (Tư - Stamp - Chế - Ngoại - Công - Nội). (Từ Tốt nhất -> Xấu nhất)."
+  },
+  {
+    "line": 242,
+    "context": "043. 주요 응집도 (Cohesion)",
+    "old": "- 💡 **Mẹo ghi nhớ (Mnemonic):** **기순통절시논우** (Kỳ - Thuận - Thông - Tiết - Thời - Luận - Ngẫu). (Từ Tốt nhất -> Xấu nhất)."
+  },
+  {
+    "line": 283,
+    "context": "037. 럼바우(Rumbaugh)의 분석 기법 (Kỹ thuật phân tích của Rumbaugh)",
+    "old": "- 💡 **Mẹo ghi nhớ (Mnemonic):** **객동기** (Khách - Động - Cơ): **객**체 - **동**적 - **기**능. (O-D-F)"
+  },
+  {
+    "line": 291,
+    "context": "038. 객체지향 설계 원칙 (SOLID 원칙) (Các nguyên tắc thiết kế OOP)",
+    "old": "- 💡 **Mẹo ghi nhớ (Mnemonic):** Tên các chữ cái đầu tiếng Anh tạo thành chữ **S-O-L-I-D**."
+  },
+  {
+    "line": 314,
+    "context": "효과적인 모듈 설계 방안 (Phương án thiết kế module hiệu quả)",
+    "old": "- 💡 **Mẹo ghi nhớ (Mnemonic):** **고응저결** (Cao Ứng - Thấp Kết) -> 응집도 높게(Cohesion High), 결합도 낮게(Coupling Low)."
+  },
+  {
+    "line": 333,
+    "context": "생성 패턴 (Creational Pattern / Mẫu khởi tạo) - 5 loại",
+    "old": "- 💡 **Mẹo ghi nhớ (Mnemonic):** **빌팩프싱추** (Build - Fact - Pro - Sing - Ab)."
+  },
+  {
+    "line": 344,
+    "context": "구조 패턴 (Structural Pattern / Mẫu cấu trúc) - 7 loại",
+    "old": "- 💡 **Mẹo ghi nhớ (Mnemonic):** **어브컴데퍼플프** (Ad - Bri - Com - Dec - Fac - Fly - Pro)."
+  },
+  {
+    "line": 366,
+    "context": "요구사항 검증 방법 (Phương pháp xác minh yêu cầu)",
+    "old": "- 💡 **Mẹo ghi nhớ (Mnemonic):** **동워인** (Peer - Walk - Inspect). Inspection là khắt khe và chính thức nhất (공식적)."
+  },
+  {
+    "line": 397,
+    "context": "현행 시스템 파악 (Phân tích hệ thống hiện tại)",
+    "old": "- 💡 **Mẹo ghi nhớ (Mnemonic):** **기구인 -> 아소 -> 하네** (Giống như quy trình từ phần mềm đến phần cứng)."
+  },
+  {
+    "line": 421,
+    "context": "요구사항 명세 기법 (Kỹ thuật Đặc tả yêu cầu)",
+    "old": "- 💡 **Mẹo ghi nhớ (Mnemonic):** **정수비자** (Chính-Toán-Phi-Tự) -> 정형 = 수학적 (Chính thức = Toán học), 비정형 = 자연어 (Phi chính thức = Tự nhiên)."
+  },
+  {
+    "line": 443,
+    "context": "HIPO Chart의 종류 (Các loại biểu đồ HIPO)",
+    "old": "- 💡 **Mẹo ghi nhớ (Mnemonic):** **가총세** (Gia - Tổng - Tế)."
+  },
+  {
+    "line": 518,
+    "context": "ISO/IEC 9126 하위 품질 특성 (Đặc tính con của ISO/IEC 9126)",
+    "old": "- 💡 **Mẹo ghi nhớ (Mnemonic):** **기신사효유이** (Kỳ - Tín - Sử - Hiệu - Duy - Di) (Tên 6 đặc tính chính)."
+  },
+  {
+    "line": 538,
+    "context": "다형성 (Polymorphism) 추가 설명",
+    "old": "- 💡 **Mẹo ghi nhớ (Mnemonic):** **Over-load** = Chở thêm đồ (Thêm tham số). **Over-ride** = Lái đè lên vết xe cũ (Ghi đè nội dung hàm)."
+  },
+  {
+    "line": 548,
+    "context": "객체지향 분석 방법론 종류 (Các phương pháp phân tích OOP)",
+    "old": "- 💡 **Mẹo ghi nhớ (Mnemonic):** **럼객 부미 제유 코이 워연** (Rumbaugh-Object, Booch-Micro, Jacobson-Use case, Coad-ER, Wirfs-Liên tục)."
+  },
+  {
+    "line": 556,
+    "context": "공통 모듈 명세 기법 (Kỹ thuật đặc tả Module chung)",
+    "old": "- 💡 **Mẹo ghi nhớ (Mnemonic):** **정명완일추** (Chính - Minh - Hoàn - Nhất - Truy)."
+  },
+  {
+    "line": 560,
+    "context": "코드(Code)의 주요 기능 (Chức năng chính của Code)",
+    "old": "- 💡 **Mẹo ghi nhớ (Mnemonic):** **식분배표간** (Thức - Phân - Bài - Tiêu - Giản)."
+  },
+  {
+    "line": 640,
+    "context": "데이터베이스의 4가지 정의 (4 Định nghĩa của Database)",
+    "old": "- 💡 **Mẹo ghi nhớ (Mnemonic):** **통저운공** (Thống - Trữ - Vận - Công)."
+  },
+  {
+    "line": 647,
+    "context": "데이터베이스의 4가지 특징 (4 Đặc điểm của Database)",
+    "old": "- 💡 **Mẹo ghi nhớ (Mnemonic):** **실계동내** (Thực - Kế - Đồng - Nội)."
+  },
+  {
+    "line": 658,
+    "context": "DBMS의 정의와 필수 기능 3가지 (Định nghĩa & 3 Chức năng cốt lõi của DBMS)",
+    "old": "- 💡 **Mẹo ghi nhớ (Mnemonic):** **정조제** (Định - Thao - Kiểm / Def-Man-Con)."
+  },
+  {
+    "line": 671,
+    "context": "스키마(Schema)의 정의와 3계층 (Schema & 3 Mức)",
+    "old": "- 💡 **Mẹo ghi nhớ (Mnemonic):** **외개내** (Ngoại - Khái - Nội)."
+  },
+  {
+    "line": 693,
+    "context": "데이터 모델 표시 3요소 (3 Yếu tố của Mô hình dữ liệu)",
+    "old": "- 💡 **Mẹo ghi nhớ (Mnemonic):** **구연제** (Cấu - Toán - Chế)."
+  },
+  {
+    "line": 721,
+    "context": "데이터베이스 설계 순서 (Quy trình thiết kế DB)",
+    "old": "- 💡 **Mẹo ghi nhớ (Mnemonic):** **요개논물구** (Yêu - Khái - Logic - Vật - Cụ)."
+  },
+  {
+    "line": 731,
+    "context": "릴레이션 (Relation / Table) 구성 요소",
+    "old": "- 💡 **Mẹo ghi nhớ (Mnemonic):** **튜카속디** (Tuple-Card, Thuộc-Deg) -> Tuple đi với Cardinality, Cột(속성) đi với Degree."
+  },
+  {
+    "line": 750,
+    "context": "무결성 (Integrity / Tính toàn vẹn) 제약조건",
+    "old": "- 💡 **Mẹo ghi nhớ (Mnemonic):** **개참도** (Thực - Tham - Domain)."
+  },
+  {
+    "line": 778,
+    "context": "정규화(Normalization) 과정과 암기법 (Quy trình chuẩn hóa)",
+    "old": "- 💡 **Mẹo ghi nhớ (Mnemonic):** **도부이결다조** (Do-Bu-I-Gyul-Da-Jo) -> Do (Domain), Bu (부분), I (이행), Gyul (결정자), Da (다치), Jo (조인)."
+  },
+  {
+    "line": 813,
+    "context": "트랜잭션(Transaction)의 정의와 4가지 특성 (Định nghĩa & 4 Đặc tính ACID)",
+    "old": "- 💡 **Mẹo ghi nhớ (Mnemonic):** **ACID** (Atomicity, Consistency, Isolation, Durability) hoặc **원일독지** (Nguyên - Nhất - Độc - Trì)."
+  },
+  {
+    "line": 826,
+    "context": "트랜잭션(Transaction)의 정의와 4가지 특성 (Định nghĩa & 4 Đặc tính ACID)",
+    "old": "- 💡 **Mẹo ghi nhớ**: 장애 유형: 트/시/미 (Transaction, System, Media)"
+  },
+  {
+    "line": 838,
+    "context": "트랜잭션(Transaction)의 정의와 4가지 특성 (Định nghĩa & 4 Đặc tính ACID)",
+    "old": "- 💡 **Mẹo ghi nhớ**: A-PC-C (Thành công) / A-F-Ab (Thất bại)"
+  },
+  {
+    "line": 852,
+    "context": "트랜잭션(Transaction)의 정의와 4가지 특성 (Định nghĩa & 4 Đặc tính ACID)",
+    "old": "- 💡 **Mẹo ghi nhớ**: Vấn đề đồng thời: 갱/비/모/연 (Lost, Uncommitted, Inconsistency, Cascading)"
+  },
+  {
+    "line": 857,
+    "context": "트랜잭션(Transaction)의 정의와 4가지 특성 (Định nghĩa & 4 Đặc tính ACID)",
+    "old": "- 💡 **Mẹo ghi nhớ**: 개인키 = 빠름, 키많음 (Private = Fast, Many keys). 공개키 = 느림, 키적음 (Public = Slow, Few keys)."
+  },
+  {
+    "line": 865,
+    "context": "트랜잭션(Transaction)의 정의와 4가지 특성 (Định nghĩa & 4 Đặc tính ACID)",
+    "old": "- 💡 **Mẹo ghi nhớ**: 위/중/병/장 (Vị trí, Nhân bản, Đồng thời, Lỗi)"
+  },
+  {
+    "line": 870,
+    "context": "트랜잭션(Transaction)의 정의와 4가지 특성 (Định nghĩa & 4 Đặc tính ACID)",
+    "old": "- 💡 **Mẹo ghi nhớ**: 비선형 (Non-linear) là Tree & Graph, còn lại là 선형."
+  },
+  {
+    "line": 916,
+    "context": "트랜잭션(Transaction)의 정의와 4가지 특성 (Định nghĩa & 4 Đặc tính ACID)",
+    "old": "- 💡 **Mẹo ghi nhớ**: 해싱 용어: 버/슬/콜/시/오 (Bucket, Slot, Collision, Synonym, Overflow)"
+  },
+  {
+    "line": 924,
+    "context": "트랜잭션(Transaction)의 정의와 4가지 특성 (Định nghĩa & 4 Đặc tính ACID)",
+    "old": "- 💡 **Mẹo ghi nhớ**: ISAM 3 구역 (기/색/오 - Prime, Index, Overflow)"
+  },
+  {
+    "line": 940,
+    "context": "트랜잭션(Transaction)의 정의와 4가지 특성 (Định nghĩa & 4 Đặc tính ACID)",
+    "old": "- 💡 **Mẹo ghi nhớ**: 도/분/명/확 (Elicitation, Analysis, Spec, Validation)"
+  },
+  {
+    "line": 966,
+    "context": "트랜잭션(Transaction)의 정의와 4가지 특성 (Định nghĩa & 4 Đặc tính ACID)",
+    "old": "- 💡 **Mẹo ghi nhớ**: "
+  },
+  {
+    "line": 993,
+    "context": "트랜잭션(Transaction)의 정의와 4가지 특성 (Định nghĩa & 4 Đặc tính ACID)",
+    "old": "  - 💡 **Mẹo ghi nhớ**: 의/단/용/존/피"
+  },
+  {
+    "line": 1008,
+    "context": "트랜잭션(Transaction)의 정의와 4가지 특성 (Định nghĩa & 4 Đặc tính ACID)",
+    "old": "  - 💡 **Mẹo ghi nhớ**: 직/유/학/유"
+  },
+  {
+    "line": 1043,
+    "context": "트랜잭션(Transaction)의 정의와 4가지 특성 (Định nghĩa & 4 Đặc tính ACID)",
+    "old": "  - 💡 **Mẹo ghi nhớ**: 객/동/기"
+  },
+  {
+    "line": 1048,
+    "context": "트랜잭션(Transaction)의 정의와 4가지 특성 (Định nghĩa & 4 Đặc tính ACID)",
+    "old": "  - 💡 **Mẹo ghi nhớ**: 자/스/제/외/공/내 (Tốt -> Tệ)"
+  },
+  {
+    "line": 1051,
+    "context": "트랜잭션(Transaction)의 정의와 4가지 특성 (Định nghĩa & 4 Đặc tính ACID)",
+    "old": "  - 💡 **Mẹo ghi nhớ**: 기/순/통/절/시/논/우 (Tốt -> Tệ)"
+  },
+  {
+    "line": 1077,
+    "context": "트랜잭션(Transaction)의 정의와 4가지 특성 (Định nghĩa & 4 Đặc tính ACID)",
+    "old": "  - 💡 **Mẹo ghi nhớ**: 동료(Tự thuyết trình) / 워크스루(Họp ngắn) / 인스펙션(Chuyên gia chém)."
+  },
+  {
+    "line": 1227,
+    "context": "트랜잭션(Transaction)의 정의와 4가지 특성 (Định nghĩa & 4 Đặc tính ACID)",
+    "old": "💡 **Mẹo ghi nhớ (Mnemonics):** **SOLID** (S = Single, O = Open, L = Liskov, I = Interface, D = Dependency)"
+  },
+  {
+    "line": 1247,
+    "context": "트랜잭션(Transaction)의 정의와 4가지 특성 (Định nghĩa & 4 Đặc tính ACID)",
+    "old": "💡 **Mẹo ghi nhớ:** 자-스-제-외-공-내 (Data-Stamp-Control-External-Common-Content)"
+  },
+  {
+    "line": 1280,
+    "context": "트랜잭션(Transaction)의 정의와 4가지 특성 (Định nghĩa & 4 Đặc tính ACID)",
+    "old": "💡 **Mẹo ghi nhớ:** 기-순-교-절-시-논-우 (Kì-Sun-Kiều-Chul-Shi-Non-U)"
+  },
+  {
+    "line": 1316,
+    "context": "트랜잭션(Transaction)의 정의와 4가지 특성 (Định nghĩa & 4 Đặc tính ACID)",
+    "old": "💡 **Mẹo ghi nhớ:** Fan-In = Gọi VÀO tôi (High is good) / Fan-Out = Tôi gọi RA (Low is good)."
+  },
+  {
+    "line": 1337,
+    "context": "트랜잭션(Transaction)의 정의와 4가지 특성 (Định nghĩa & 4 Đặc tính ACID)",
+    "old": "💡 **Mẹo ghi nhớ:** 정-명-완-일-추 (Chính-Rõ-Đủ-Nhất-Truy)"
+  },
+  {
+    "line": 1381,
+    "context": "트랜잭션(Transaction)의 정의와 4가지 특성 (Định nghĩa & 4 Đặc tính ACID)",
+    "old": "💡 **Mẹo ghi nhớ:** \"바퀴를 다시 발명하지 마라 (Don't reinvent the wheel)\" - Đừng phát minh lại bánh xe, hãy dùng các mẫu đã được kiểm chứng."
+  },
+  {
+    "line": 1471,
+    "context": "13.3 명세화 (Specification)",
+    "old": "💡 **Mẹo ghi nhớ 미들웨어:** DB, RPC, MOM, TP-Monitor, ORB, WAS"
+  }
+]

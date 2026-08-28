@@ -1,0 +1,108 @@
+{"old": "  - 💡 *Mẹo ghi nhớ*: UNION (hợp), INTERSECT (giao), EXCEPT (trừ). ALL nghĩa là lấy tất cả (kể cả trùng lặp).", "new": "  - 💡 *Mẹo ghi nhớ*: UNION (hợp), INTERSECT (giao), EXCEPT (trừ). ALL nghĩa là lấy tất cả (kể cả trùng lặp)."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: Trigger giống như \"cò súng\", khi có sự kiện (bóp cò) thì sẽ tự động bắn (thực thi).", "new": "  - 💡 *Mẹo ghi nhớ*: Trigger giống như \"cò súng\", khi có sự kiện (bóp cò) thì sẽ tự động bắn (thực thi)."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: SAM MC (Sum, Avg, Max, Min, Count).", "new": "  - 💡 *Mẹo ghi nhớ*: SAM MC (Sum, Avg, Max, Min, Count)."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: 1 Byte = char/boolean, 4 Bytes = int, 8 Bytes = long.", "new": "  - 💡 *Mẹo ghi nhớ*: 1 Byte = char/boolean, 4 Bytes = int, 8 Bytes = long."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: Chỉ dùng `A-Z, a-z, 0-9, _`. Số không đi đầu. Không dùng từ khóa.", "new": "  - 💡 *Mẹo ghi nhớ*: Chỉ dùng `A-Z, a-z, 0-9, _`. Số không đi đầu. Không dùng từ khóa."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: \"Garbage\" (rác) -> Dọn dẹp bộ nhớ không dùng đến.", "new": "  - 💡 *Mẹo ghi nhớ*: \"Garbage\" (rác) -> Dọn dẹp bộ nhớ không dùng đến."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: Prefix (++a) = Làm trước. Postfix (a++) = Làm sau.", "new": "  - 💡 *Mẹo ghi nhớ*: Prefix (++a) = Làm trước. Postfix (a++) = Làm sau."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: AND (&) khắt khe (đều phải 1). OR (|) dễ dãi (1 cái là đủ). XOR (^) thích sự khác biệt.", "new": "  - 💡 *Mẹo ghi nhớ*: AND (&) khắt khe (đều phải 1). OR (|) dễ dãi (1 cái là đủ). XOR (^) thích sự khác biệt."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: Tương tự như toán tử bit nhưng áp dụng cho giá trị đúng/sai (true/false).", "new": "  - 💡 *Mẹo ghi nhớ*: Tương tự như toán tử bit nhưng áp dụng cho giá trị đúng/sai (true/false)."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: Dấu `?` là hỏi xem điều kiện đúng không, nếu đúng lấy cái trước `:`, sai lấy cái sau `:`.", "new": "  - 💡 *Mẹo ghi nhớ*: Dấu `?` là hỏi xem điều kiện đúng không, nếu đúng lấy cái trước `:`, sai lấy cái sau `:`."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: Dấu ngoặc () luôn cao nhất. Đơn, Số, Dịch, Quan, Bit, Logic, Điều, Gán.", "new": "  - 💡 *Mẹo ghi nhớ*: Dấu ngoặc () luôn cao nhất. Đơn, Số, Dịch, Quan, Bit, Logic, Điều, Gán."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: d = decimal (số thập phân), c = character (ký tự), s = string (chuỗi).", "new": "  - 💡 *Mẹo ghi nhớ*: d = decimal (số thập phân), c = character (ký tự), s = string (chuỗi)."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: 'f' trong printf là 'format' (định dạng).", "new": "  - 💡 *Mẹo ghi nhớ*: 'f' trong printf là 'format' (định dạng)."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: 'ln' trong println là 'line new' (xuống dòng mới).", "new": "  - 💡 *Mẹo ghi nhớ*: 'ln' trong println là 'line new' (xuống dòng mới)."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: Nếu (if) đúng thì làm, nếu không (else) thì làm cái khác.", "new": "  - 💡 *Mẹo ghi nhớ*: Nếu (if) đúng thì làm, nếu không (else) thì làm cái khác."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: Đừng quên `break`, nếu không nó sẽ trôi xuống tận dưới cùng.", "new": "  - 💡 *Mẹo ghi nhớ*: Đừng quên `break`, nếu không nó sẽ trôi xuống tận dưới cùng."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: Dùng khi biết trước số lần lặp.", "new": "  - 💡 *Mẹo ghi nhớ*: Dùng khi biết trước số lần lặp."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: Kiểm tra điều kiện trước, làm sau. Có thể không chạy lần nào nếu điều kiện sai ngay từ đầu.", "new": "  - 💡 *Mẹo ghi nhớ*: Kiểm tra điều kiện trước, làm sau. Có thể không chạy lần nào nếu điều kiện sai ngay từ đầu."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: Làm (do) trước, hỏi (while) sau. Chắc chắn chạy ít nhất 1 lần.", "new": "  - 💡 *Mẹo ghi nhớ*: Làm (do) trước, hỏi (while) sau. Chắc chắn chạy ít nhất 1 lần."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: Mảng (Array) lưu các giá trị cùng kiểu, Cấu trúc (Struct) lưu các giá trị khác kiểu.", "new": "  - 💡 *Mẹo ghi nhớ*: Mảng (Array) lưu các giá trị cùng kiểu, Cấu trúc (Struct) lưu các giá trị khác kiểu."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: Chỉ số mảng luôn bắt đầu từ 0.", "new": "  - 💡 *Mẹo ghi nhớ*: Chỉ số mảng luôn bắt đầu từ 0."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: `[hàng][cột]` (Row x Column).", "new": "  - 💡 *Mẹo ghi nhớ*: `[hàng][cột]` (Row x Column)."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: Độ dài mảng phải lớn hơn số ký tự của chuỗi ít nhất 1 (để chứa `\\0`).", "new": "  - 💡 *Mẹo ghi nhớ*: Độ dài mảng phải lớn hơn số ký tự của chuỗi ít nhất 1 (để chứa `\\0`)."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: `&` là địa chỉ (Address), `*` là giá trị (Value).", "new": "  - 💡 *Mẹo ghi nhớ*: `&` là địa chỉ (Address), `*` là giá trị (Value)."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: `a[i]` hoàn toàn tương đương với `*(a + i)`.", "new": "  - 💡 *Mẹo ghi nhớ*: `a[i]` hoàn toàn tương đương với `*(a + i)`."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: List dùng `[]` và linh hoạt. Tuple dùng `()` và cố định (bất biến).", "new": "  - 💡 *Mẹo ghi nhớ*: List dùng `[]` và linh hoạt. Tuple dùng `()` và cố định (bất biến)."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: Python List giống như một cái túi thần kỳ, có thể bỏ bất cứ thứ gì vào.", "new": "  - 💡 *Mẹo ghi nhớ*: Python List giống như một cái túi thần kỳ, có thể bỏ bất cứ thứ gì vào."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: Key-Value (Khóa-Giá trị). Dùng `{}` giống như một từ điển thực sự (tra từ -> ra nghĩa).", "new": "  - 💡 *Mẹo ghi nhớ*: Key-Value (Khóa-Giá trị). Dùng `{}` giống như một từ điển thực sự (tra từ -> ra nghĩa)."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: `range(start, stop, step)`. Bao gồm `start`, nhưng **không** bao gồm `stop`.", "new": "  - 💡 *Mẹo ghi nhớ*: `range(start, stop, step)`. Bao gồm `start`, nhưng **không** bao gồm `stop`."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: `[start : stop : step]`. Giống range, không bao gồm `stop`.", "new": "  - 💡 *Mẹo ghi nhớ*: `[start : stop : step]`. Giống range, không bao gồm `stop`."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: `sep` = phân cách giữa các đối số, `end` = ký tự kết thúc (mặc định là xuống dòng `\\n`).", "new": "  - 💡 *Mẹo ghi nhớ*: `sep` = phân cách giữa các đối số, `end` = ký tự kết thúc (mặc định là xuống dòng `\\n`)."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: `split()` để cắt khoảng trắng, `map()` để ép tất cả sang kiểu nguyên `int`.", "new": "  - 💡 *Mẹo ghi nhớ*: `split()` để cắt khoảng trắng, `map()` để ép tất cả sang kiểu nguyên `int`."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: `for item in tập_hợp`. Lặp qua từng phần tử.", "new": "  - 💡 *Mẹo ghi nhớ*: `for item in tập_hợp`. Lặp qua từng phần tử."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: Python hỗ trợ cả lập trình thủ tục (như C) và hướng đối tượng (OOP). Tham số đầu tiên của hàm trong lớp luôn là `self`.", "new": "  - 💡 *Mẹo ghi nhớ*: Python hỗ trợ cả lập trình thủ tục (như C) và hướng đối tượng (OOP). Tham số đầu tiên của hàm trong lớp luôn là `self`."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: JS = Client Web, PHP = Server, Python = Thông dịch, Shell = Lệnh HĐH.", "new": "  - 💡 *Mẹo ghi nhớ*: JS = Client Web, PHP = Server, Python = Thông dịch, Shell = Lệnh HĐH."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: Built-in = Không cần cài, External = Cần pip/npm/v.v.", "new": "  - 💡 *Mẹo ghi nhớ*: Built-in = Không cần cài, External = Cần pip/npm/v.v."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: UNIX = C + Cây (Tree) + Đa nhiệm/Đa người dùng.", "new": "  - 💡 *Mẹo ghi nhớ*: UNIX = C + Cây (Tree) + Đa nhiệm/Đa người dùng."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: Kernel là \"Trái tim\" làm mọi công việc cốt lõi phần cứng.", "new": "  - 💡 *Mẹo ghi nhớ*: Kernel là \"Trái tim\" làm mọi công việc cốt lõi phần cứng."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: Shell là \"Vỏ bọc\" giao tiếp với Kernel.", "new": "  - 💡 *Mẹo ghi nhớ*: Shell là \"Vỏ bọc\" giao tiếp với Kernel."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: fork (nhân bản, nĩa), chmod (change mode), chown (change owner).", "new": "  - 💡 *Mẹo ghi nhớ*: fork (nhân bản, nĩa), chmod (change mode), chown (change owner)."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: First = Nhanh nhất. Best = Tiết kiệm nhất. Worst = Còn lại khoảng trống lớn nhất.", "new": "  - 💡 *Mẹo ghi nhớ*: First = Nhanh nhất. Best = Tiết kiệm nhất. Worst = Còn lại khoảng trống lớn nhất."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: Thrashing = Kẹt xe bộ nhớ (quá tải).", "new": "  - 💡 *Mẹo ghi nhớ*: Thrashing = Kẹt xe bộ nhớ (quá tải)."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: Nộp -> Nhận -> Chờ chạy -> Chạy -> (Tạm dừng nếu cần) -> Xong.", "new": "  - 💡 *Mẹo ghi nhớ*: Nộp -> Nhận -> Chờ chạy -> Chạy -> (Tạm dừng nếu cần) -> Xong."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: Công thức = `(Đợi + Chạy) / Chạy`. Số càng lớn càng ưu tiên. Giải quyết nhược điểm của SJF (tiến trình dài bị bỏ đói).", "new": "  - 💡 *Mẹo ghi nhớ*: Công thức = `(Đợi + Chạy) / Chạy`. Số càng lớn càng ưu tiên. Giải quyết nhược điểm của SJF (tiến trình dài bị bỏ đói)."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: IPv4 = 32 bit (dấu `.`). IPv6 = 128 bit (dấu `:`).", "new": "  - 💡 *Mẹo ghi nhớ*: IPv4 = 32 bit (dấu `.`). IPv6 = 128 bit (dấu `:`)."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: Data Link = Frame/MAC. Network = IP/Routing. Transport = TCP/UDP/Port. Session = Dialog/Token.", "new": "  - 💡 *Mẹo ghi nhớ*: Data Link = Frame/MAC. Network = IP/Routing. Transport = TCP/UDP/Port. Session = Dialog/Token."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: TCP = Cẩn thận, chậm mà chắc. UDP = Nhanh, mất gói cũng không sao (Video call, Game).", "new": "  - 💡 *Mẹo ghi nhớ*: TCP = Cẩn thận, chậm mà chắc. UDP = Nhanh, mất gói cũng không sao (Video call, Game)."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: Batch là tự động chạy ngầm khối lượng lớn, nên không được chết giữa chừng.", "new": "  - 💡 *Mẹo ghi nhớ*: Batch là tự động chạy ngầm khối lượng lớn, nên không được chết giữa chừng."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: Java dùng Unicode nên `char` là 2 Bytes. Có thêm kiểu `byte` (1 Byte).", "new": "  - 💡 *Mẹo ghi nhớ*: Java dùng Unicode nên `char` là 2 Bytes. Có thêm kiểu `byte` (1 Byte)."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: Trong C, 0 là Sai, mọi số khác 0 đều được coi là Đúng (Thường dùng 1).", "new": "  - 💡 *Mẹo ghi nhớ*: Trong C, 0 là Sai, mọi số khác 0 đều được coi là Đúng (Thường dùng 1)."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: \"Scan\" là quét (đọc vào), luôn nhớ phải có dấu `&` để chỉ đường cho dữ liệu đi vào bộ nhớ.", "new": "  - 💡 *Mẹo ghi nhớ*: \"Scan\" là quét (đọc vào), luôn nhớ phải có dấu `&` để chỉ đường cho dữ liệu đi vào bộ nhớ."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: o = octal, x = hex, u = unsigned, p = pointer.", "new": "  - 💡 *Mẹo ghi nhớ*: o = octal, x = hex, u = unsigned, p = pointer."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: Xếp hạng hoặc các điều kiện loại trừ lẫn nhau thì dùng `else if`.", "new": "  - 💡 *Mẹo ghi nhớ*: Xếp hạng hoặc các điều kiện loại trừ lẫn nhau thì dùng `else if`."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: `switch` thích sự chính xác tuyệt đối (giá trị cụ thể), không thích sự so sánh lớn/nhỏ.", "new": "  - 💡 *Mẹo ghi nhớ*: `switch` thích sự chính xác tuyệt đối (giá trị cụ thể), không thích sự so sánh lớn/nhỏ."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: `break` = Phá vỡ (thoát ra). `continue` = Tiếp tục (bước tiếp).", "new": "  - 💡 *Mẹo ghi nhớ*: `break` = Phá vỡ (thoát ra). `continue` = Tiếp tục (bước tiếp)."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: Mảng trong C/Java đếm từ 0.", "new": "  - 💡 *Mẹo ghi nhớ*: Mảng trong C/Java đếm từ 0."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: Array 2D giống như ma trận Toán học. `i` là hàng (bên ngoài), `j` là cột (bên trong).", "new": "  - 💡 *Mẹo ghi nhớ*: Array 2D giống như ma trận Toán học. `i` là hàng (bên ngoài), `j` là cột (bên trong)."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: C/Java không tự làm sạch bộ nhớ trừ khi bạn khởi tạo ít nhất 1 phần tử.", "new": "  - 💡 *Mẹo ghi nhớ*: C/Java không tự làm sạch bộ nhớ trừ khi bạn khởi tạo ít nhất 1 phần tử."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: Con trỏ giống như tấm bản đồ (chỉ chứa địa chỉ), dùng `*` để đi đến đích và lấy kho báu (giá trị).", "new": "  - 💡 *Mẹo ghi nhớ*: Con trỏ giống như tấm bản đồ (chỉ chứa địa chỉ), dùng `*` để đi đến đích và lấy kho báu (giá trị)."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: Python yêu cầu thụt lề (thường là 4 spaces) vô cùng khắt khe. Sai thụt lề = Lỗi (IndentationError).", "new": "  - 💡 *Mẹo ghi nhớ*: Python yêu cầu thụt lề (thường là 4 spaces) vô cùng khắt khe. Sai thụt lề = Lỗi (IndentationError)."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: C = Pointer, ALGOL = Algorithm, COBOL = Business, FORTRAN = Formula Translation.", "new": "  - 💡 *Mẹo ghi nhớ*: C = Pointer, ALGOL = Algorithm, COBOL = Business, FORTRAN = Formula Translation."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: Java = Đa luồng/Độc lập HĐH, Smalltalk = Thuần OOP/GUI đầu tiên.", "new": "  - 💡 *Mẹo ghi nhớ*: Java = Đa luồng/Độc lập HĐH, Smalltalk = Thuần OOP/GUI đầu tiên."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: AI = LISP & PROLOG. XML = Tag tự định nghĩa. Haskell = Hàm thuần túy.", "new": "  - 💡 *Mẹo ghi nhớ*: AI = LISP & PROLOG. XML = Tag tự định nghĩa. Haskell = Hàm thuần túy."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: io = Input/Output, lib = Library (chung chung như cấp phát bộ nhớ), str = String.", "new": "  - 💡 *Mẹo ghi nhớ*: io = Input/Output, lib = Library (chung chung như cấp phát bộ nhớ), str = String."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: Exception = Bắt lỗi chủ động.", "new": "  - 💡 *Mẹo ghi nhớ*: Exception = Bắt lỗi chủ động."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: 제어 (Điều khiển) = Giám sát, Công việc, Dữ liệu. 처리 (Xử lý) = Dịch ngôn ngữ, Tiện ích.", "new": "  - 💡 *Mẹo ghi nhớ*: Điều khiển gồm Giám sát, Công việc, Dữ liệu (GCD - Giám đốc Công ty Dữ liệu). Xử lý gồm Dịch ngôn ngữ, Tiện ích (DT - Dịch Thuật)."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: Page = Kích thước cố định (Sinh ra rác bên trong). Segment = Kích thước logic (Sinh ra rác bên ngoài).", "new": "  - 💡 *Mẹo ghi nhớ*: Page = Kích thước cố định (Sinh ra rác bên trong). Segment = Kích thước logic (Sinh ra rác bên ngoài)."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: ARP = \"A\"ddress Resolution (Tìm MAC từ IP). RARP = \"R\"everse (Ngược lại).", "new": "  - 💡 *Mẹo ghi nhớ*: ARP = \"A\"ddress Resolution (Tìm MAC từ IP). RARP = \"R\"everse (Ngược lại)."}
+{"old": "  - 💡 *Mẹo ghi nhớ*: Kỹ nghệ phần mềm = Khoa học + Quản lý + Tiết kiệm tiền & thời gian.", "new": "  - 💡 *Mẹo ghi nhớ*: Kỹ nghệ phần mềm = Khoa học + Quản lý + Tiết kiệm tiền & thời gian."}
+{"old": "**💡 Mẹo ghi nhớ (Mnemonics):**", "new": "**💡 Mẹo ghi nhớ (Mnemonics):**"}
+{"old": "**💡 Mẹo ghi nhớ (Mnemonics):**", "new": "**💡 Mẹo ghi nhớ (Mnemonics):**"}
+{"old": "**💡 Mẹo ghi nhớ (Mnemonics):**", "new": "**💡 Mẹo ghi nhớ (Mnemonics):**"}
+{"old": "**💡 Mẹo ghi nhớ (Mnemonics):**", "new": "**💡 Mẹo ghi nhớ (Mnemonics):**"}
+{"old": "**💡 Mẹo ghi nhớ (Mnemonics):**", "new": "**💡 Mẹo ghi nhớ (Mnemonics):**"}
+{"old": "**💡 Mẹo ghi nhớ (Mnemonics):**", "new": "**💡 Mẹo ghi nhớ (Mnemonics):**"}
+{"old": "**💡 Mẹo ghi nhớ (Mnemonics):**", "new": "**💡 Mẹo ghi nhớ (Mnemonics):**"}
+{"old": "**💡 Mẹo ghi nhớ (Mnemonics):**", "new": "**💡 Mẹo ghi nhớ (Mnemonics):**"}
+{"old": "**💡 Mẹo ghi nhớ (Mnemonics):**", "new": "**💡 Mẹo ghi nhớ (Mnemonics):**"}
+{"old": "**💡 Mẹo ghi nhớ (Mnemonics):**", "new": "**💡 Mẹo ghi nhớ (Mnemonics):**"}
+{"old": "**💡 Mẹo ghi nhớ (Mnemonics):**", "new": "**💡 Mẹo ghi nhớ (Mnemonics):**"}
+{"old": "**💡 Mẹo ghi nhớ (Mnemonics):**", "new": "**💡 Mẹo ghi nhớ (Mnemonics):**"}
+{"old": "**💡 Mẹo ghi nhớ (Mnemonics):**", "new": "**💡 Mẹo ghi nhớ (Mnemonics):**"}
+{"old": "**💡 Mẹo ghi nhớ (Mnemonics):**", "new": "**💡 Mẹo ghi nhớ (Mnemonics):**"}
+{"old": "**💡 Mẹo ghi nhớ (Mnemonics):**", "new": "**💡 Mẹo ghi nhớ (Mnemonics):**"}
+{"old": "**💡 Mẹo ghi nhớ (Mnemonics):**", "new": "**💡 Mẹo ghi nhớ (Mnemonics):**"}
+{"old": "**💡 Mẹo ghi nhớ (Mnemonics):**", "new": "**💡 Mẹo ghi nhớ (Mnemonics):**"}
+{"old": "**💡 Mẹo ghi nhớ (Mnemonics):**", "new": "**💡 Mẹo ghi nhớ (Mnemonics):**"}
+{"old": "**💡 Mẹo ghi nhớ (Mnemonics):**", "new": "**💡 Mẹo ghi nhớ (Mnemonics):**"}
+{"old": "**💡 Mẹo ghi nhớ (Mnemonics):**", "new": "**💡 Mẹo ghi nhớ (Mnemonics):**"}
+{"old": "**💡 Mẹo ghi nhớ (Mnemonics):**", "new": "**💡 Mẹo ghi nhớ (Mnemonics):**"}
+{"old": "**💡 Mẹo ghi nhớ (Mnemonics):**", "new": "**💡 Mẹo ghi nhớ (Mnemonics):**"}
+{"old": "**💡 Mẹo ghi nhớ (Mnemonics):**", "new": "**💡 Mẹo ghi nhớ (Mnemonics):**"}
+{"old": "**💡 Mẹo ghi nhớ (Mnemonics):**", "new": "**💡 Mẹo ghi nhớ (Mnemonics):**"}
+{"old": "**💡 Mẹo ghi nhớ (Mnemonics):**", "new": "**💡 Mẹo ghi nhớ (Mnemonics):**"}
+{"old": "**💡 Mẹo ghi nhớ (Mnemonics):**", "new": "**💡 Mẹo ghi nhớ (Mnemonics):**"}
+{"old": "**💡 Mẹo ghi nhớ (Mnemonics):**", "new": "**💡 Mẹo ghi nhớ (Mnemonics):**"}
+{"old": "**💡 Mẹo ghi nhớ (Mnemonics):**", "new": "**💡 Mẹo ghi nhớ (Mnemonics):**"}
+{"old": "**💡 Mẹo ghi nhớ (Mnemonics):**", "new": "**💡 Mẹo ghi nhớ (Mnemonics):**"}
+{"old": "**💡 Mẹo ghi nhớ (Mnemonics):**", "new": "**💡 Mẹo ghi nhớ (Mnemonics):**"}
+{"old": "**💡 Mẹo ghi nhớ (Mnemonics):**", "new": "**💡 Mẹo ghi nhớ (Mnemonics):**"}
+{"old": "**💡 Mẹo ghi nhớ (Mnemonics):**", "new": "**💡 Mẹo ghi nhớ (Mnemonics):**"}
+{"old": "**💡 Mẹo ghi nhớ (Mnemonics):**", "new": "**💡 Mẹo ghi nhớ (Mnemonics):**"}
+{"old": "- 💡 **Mẹo ghi nhớ**: JS là Client, còn lại PPP (PHP, JSP, ASP) đa số là Server.", "new": "- 💡 **Mẹo ghi nhớ**: JS là Client, còn lại PPP (PHP, JSP, ASP) đa số là Server."}
+{"old": "- 💡 **Mẹo ghi nhớ**: **T**emporal = **T**ime (Lặp lại nhiều lần/Loop), **S**patial = **S**pace (Gần nhau/Array).", "new": "- 💡 **Mẹo ghi nhớ**: **T**emporal = **T**ime (Lặp lại nhiều lần/Loop), **S**patial = **S**pace (Gần nhau/Array)."}
+{"old": "- 💡 **Mẹo ghi nhớ**: Working Set = Những món đồ đang \"Working\" (Đang dùng) phải để sẵn trên bàn (Memory).", "new": "- 💡 **Mẹo ghi nhớ**: Working Set = Những món đồ đang \"Working\" (Đang dùng) phải để sẵn trên bàn (Memory)."}
+{"old": "- 💡 **Mẹo ghi nhớ**: Kernel là **Lõi** (Hardware), Shell là **Vỏ** (Giao tiếp người dùng).", "new": "- 💡 **Mẹo ghi nhớ**: Kernel là **Lõi** (Hardware), Shell là **Vỏ** (Giao tiếp người dùng)."}
+{"old": "- 💡 **Mẹo ghi nhớ**: **R**ecently = Lâu không đụng (Thời gian), **F**requently = Ít dùng (Số lần). ", "new": "- 💡 **Mẹo ghi nhớ**: **R**ecently = Lâu không đụng (Thời gian), **F**requently = Ít dùng (Số lần). "}
+{"old": "- 💡 **Mẹo ghi nhớ**: PCB giống như \"Thẻ căn cước + Hồ sơ bệnh án\" của một tiến trình.", "new": "- 💡 **Mẹo ghi nhớ**: PCB giống như \"Thẻ căn cước + Hồ sơ bệnh án\" của một tiến trình."}

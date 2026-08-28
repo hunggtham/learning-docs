@@ -1,0 +1,63 @@
+procs:
+  # =====================
+  # Study Planner React Demo
+  # =====================
+  study-dev:
+    cwd: "/Users/mac/Downloads/study-planner-react-demo"
+    shell: "npm run dev"
+    autostart: true
+
+  # study-build:
+  #   cwd: "/Users/mac/Downloads/study-planner-react-demo"
+  #   shell: "npm run build"
+  #   autostart: false
+
+  # study-preview:
+  #   cwd: "/Users/mac/Downloads/study-planner-react-demo"
+  #   shell: "npm run preview"
+  #   autostart: false
+
+  # study-format:
+  #   cwd: "/Users/mac/Downloads/study-planner-react-demo"
+  #   shell: "npm run format"
+  #   autostart: false
+
+  # study-format-check:
+  #   cwd: "/Users/mac/Downloads/study-planner-react-demo"
+  #   shell: "npm run format:check"
+  #   autostart: false
+
+  # =====================
+  # Marker
+  # =====================
+  # Optional marker_app.py script
+  marker-app:
+    cwd: "/Users/mac/project/others/marker"
+    shell: "source venv/bin/activate && python marker_app.py"
+    autostart: false
+
+  # Optional marker_server.py script
+  # marker-server:
+  #   cwd: "/Users/mac/project/others/marker"
+  #   shell: "source venv/bin/activate && python marker_server.py"
+  #   autostart: false
+
+  # Optional extraction_app.py script
+  # marker-extract:
+  #   cwd: "/Users/mac/project/others/marker"
+  #   shell: "source venv/bin/activate && python extraction_app.py"
+  #   autostart: false
+
+  # Run pytest
+  # marker-test:
+  #   cwd: "/Users/mac/project/others/marker"
+  #   shell: "source venv/bin/activate && pytest"
+  #   autostart: false
+
+  # =====================
+  # Clone Drive
+  # =====================
+  clone-drive:
+    cwd: "/Users/mac/clone_drive"
+    shell: "python drive_copy.py"
+    autostart: false

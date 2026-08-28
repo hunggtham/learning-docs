@@ -1,0 +1,542 @@
+[
+  {
+    "line": 10,
+    "context": "157. 집합 연산자의 종류 (Set Operators / Các toán tử tập hợp)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: UNION (hợp), INTERSECT (giao), EXCEPT (trừ). ALL nghĩa là lấy tất cả (kể cả trùng lặp)."
+  },
+  {
+    "line": 15,
+    "context": "158. 트리거 (Trigger / Trình kích hoạt)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: Trigger giống như \"cò súng\", khi có sự kiện (bóp cò) thì sẽ tự động bắn (thực thi)."
+  },
+  {
+    "line": 21,
+    "context": "160. 그룹 함수 (Group Functions / Hàm nhóm)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: SAM MC (Sum, Avg, Max, Min, Count)."
+  },
+  {
+    "line": 29,
+    "context": "159. C/JAVA의 자료형 (Data Types / Kiểu dữ liệu)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: 1 Byte = char/boolean, 4 Bytes = int, 8 Bytes = long."
+  },
+  {
+    "line": 38,
+    "context": "162. 변수명 작성 규칙 (Variable Naming Rules / Quy tắc đặt tên biến)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: Chỉ dùng `A-Z, a-z, 0-9, _`. Số không đi đầu. Không dùng từ khóa."
+  },
+  {
+    "line": 43,
+    "context": "163. 가비지 콜렉터 (Garbage Collector / Trình thu gom rác)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: \"Garbage\" (rác) -> Dọn dẹp bộ nhớ không dùng đến."
+  },
+  {
+    "line": 53,
+    "context": "164. 산술 연산자 (Arithmetic Operators / Toán tử số học)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: Prefix (++a) = Làm trước. Postfix (a++) = Làm sau."
+  },
+  {
+    "line": 62,
+    "context": "165. 비트 연산자 (Bitwise Operators / Toán tử bit)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: AND (&) khắt khe (đều phải 1). OR (|) dễ dãi (1 cái là đủ). XOR (^) thích sự khác biệt."
+  },
+  {
+    "line": 69,
+    "context": "166. 논리 연산자 (Logical Operators / Toán tử logic)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: Tương tự như toán tử bit nhưng áp dụng cho giá trị đúng/sai (true/false)."
+  },
+  {
+    "line": 75,
+    "context": "167. 조건 연산자 (Conditional Operator / Toán tử điều kiện)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: Dấu `?` là hỏi xem điều kiện đúng không, nếu đúng lấy cái trước `:`, sai lấy cái sau `:`."
+  },
+  {
+    "line": 81,
+    "context": "168. 연산자 우선순위 (Operator Precedence / Thứ tự ưu tiên toán tử)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: Dấu ngoặc () luôn cao nhất. Đơn, Số, Dịch, Quan, Bit, Logic, Điều, Gán."
+  },
+  {
+    "line": 89,
+    "context": "169. 주요 서식 문자열 (Format String / Chuỗi định dạng)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: d = decimal (số thập phân), c = character (ký tự), s = string (chuỗi)."
+  },
+  {
+    "line": 94,
+    "context": "170. printf() 함수 (printf() Function / Hàm in C)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: 'f' trong printf là 'format' (định dạng)."
+  },
+  {
+    "line": 100,
+    "context": "171. JAVA의 출력 함수 (Output Functions in JAVA / Hàm in Java)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: 'ln' trong println là 'line new' (xuống dòng mới)."
+  },
+  {
+    "line": 106,
+    "context": "172. 단순 if문 (Simple if statement / Câu lệnh if đơn giản)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: Nếu (if) đúng thì làm, nếu không (else) thì làm cái khác."
+  },
+  {
+    "line": 112,
+    "context": "173. switch문 (switch statement / Câu lệnh switch)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: Đừng quên `break`, nếu không nó sẽ trôi xuống tận dưới cùng."
+  },
+  {
+    "line": 117,
+    "context": "174. for문 (for loop / Vòng lặp for)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: Dùng khi biết trước số lần lặp."
+  },
+  {
+    "line": 122,
+    "context": "175. while문 (while loop / Vòng lặp while)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: Kiểm tra điều kiện trước, làm sau. Có thể không chạy lần nào nếu điều kiện sai ngay từ đầu."
+  },
+  {
+    "line": 127,
+    "context": "176. do~while문 (do~while loop / Vòng lặp do~while)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: Làm (do) trước, hỏi (while) sau. Chắc chắn chạy ít nhất 1 lần."
+  },
+  {
+    "line": 134,
+    "context": "C언어의 구조체 (Struct in C / Cấu trúc trong C)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: Mảng (Array) lưu các giá trị cùng kiểu, Cấu trúc (Struct) lưu các giá trị khác kiểu."
+  },
+  {
+    "line": 139,
+    "context": "177. 1차원 배열 (1D Array / Mảng 1 chiều)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: Chỉ số mảng luôn bắt đầu từ 0."
+  },
+  {
+    "line": 144,
+    "context": "178. 2차원 배열 (2D Array / Mảng 2 chiều)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: `[hàng][cột]` (Row x Column)."
+  },
+  {
+    "line": 150,
+    "context": "179. 배열 형태의 문자열 변수 (String as Array / Chuỗi dưới dạng mảng)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: Độ dài mảng phải lớn hơn số ký tự của chuỗi ít nhất 1 (để chứa `\\0`)."
+  },
+  {
+    "line": 157,
+    "context": "180. 포인터와 포인터 변수 (Pointers / Con trỏ)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: `&` là địa chỉ (Address), `*` là giá trị (Value)."
+  },
+  {
+    "line": 163,
+    "context": "181. 포인터와 배열 (Pointer and Array / Con trỏ và mảng)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: `a[i]` hoàn toàn tương đương với `*(a + i)`."
+  },
+  {
+    "line": 171,
+    "context": "161. Python의 시퀀스 자료형 (Python Sequence Types / Kiểu chuỗi trong Python)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: List dùng `[]` và linh hoạt. Tuple dùng `()` và cố định (bất biến)."
+  },
+  {
+    "line": 177,
+    "context": "185. Python의 리스트 (Python List / Danh sách trong Python)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: Python List giống như một cái túi thần kỳ, có thể bỏ bất cứ thứ gì vào."
+  },
+  {
+    "line": 183,
+    "context": "186. Python의 딕셔너리 (Dictionary / Từ điển)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: Key-Value (Khóa-Giá trị). Dùng `{}` giống như một từ điển thực sự (tra từ -> ra nghĩa)."
+  },
+  {
+    "line": 190,
+    "context": "187. Python의 Range (Python Range / Dãy số)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: `range(start, stop, step)`. Bao gồm `start`, nhưng **không** bao gồm `stop`."
+  },
+  {
+    "line": 199,
+    "context": "188. Python의 슬라이스 (Python Slice / Cắt chuỗi/mảng)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: `[start : stop : step]`. Giống range, không bao gồm `stop`."
+  },
+  {
+    "line": 209,
+    "context": "183. Python의 print() 함수 (Python print() Function / Hàm in)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: `sep` = phân cách giữa các đối số, `end` = ký tự kết thúc (mặc định là xuống dòng `\\n`)."
+  },
+  {
+    "line": 215,
+    "context": "184. 입력 값의 형변환 (Input Type Casting / Ép kiểu dữ liệu đầu vào)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: `split()` để cắt khoảng trắng, `map()` để ép tất cả sang kiểu nguyên `int`."
+  },
+  {
+    "line": 222,
+    "context": "189. Python의 for문 (Python for loop)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: `for item in tập_hợp`. Lặp qua từng phần tử."
+  },
+  {
+    "line": 228,
+    "context": "191. Python의 클래스 및 메소드 (Python Classes & Methods / Lớp và phương thức)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: Python hỗ trợ cả lập trình thủ tục (như C) và hướng đối tượng (OOP). Tham số đầu tiên của hàm trong lớp luôn là `self`."
+  },
+  {
+    "line": 237,
+    "context": "193. 스크립트 언어의 종류 (Types of Scripting Languages / Các loại ngôn ngữ kịch bản)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: JS = Client Web, PHP = Server, Python = Thông dịch, Shell = Lệnh HĐH."
+  },
+  {
+    "line": 246,
+    "context": "195. 라이브러리 (Libraries / Thư viện)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: Built-in = Không cần cài, External = Cần pip/npm/v.v."
+  },
+  {
+    "line": 256,
+    "context": "197. UNIX의 특징 (Features of UNIX / Đặc điểm của UNIX)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: UNIX = C + Cây (Tree) + Đa nhiệm/Đa người dùng."
+  },
+  {
+    "line": 260,
+    "context": "198. UNIX - 커널(Kernel)의 기능 (Functions of Kernel / Chức năng hạt nhân)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: Kernel là \"Trái tim\" làm mọi công việc cốt lõi phần cứng."
+  },
+  {
+    "line": 264,
+    "context": "199. UNIX - 쉘(Shell)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: Shell là \"Vỏ bọc\" giao tiếp với Kernel."
+  },
+  {
+    "line": 274,
+    "context": "206. UNIX의 주요 명령어 (UNIX Commands / Lệnh UNIX)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: fork (nhân bản, nĩa), chmod (change mode), chown (change owner)."
+  },
+  {
+    "line": 281,
+    "context": "200. 기억장치의 배치 전략 (Memory Placement Strategies / Chiến lược cấp phát bộ nhớ)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: First = Nhanh nhất. Best = Tiết kiệm nhất. Worst = Còn lại khoảng trống lớn nhất."
+  },
+  {
+    "line": 288,
+    "context": "202. 스래싱 (Thrashing)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: Thrashing = Kẹt xe bộ nhớ (quá tải)."
+  },
+  {
+    "line": 292,
+    "context": "203. 프로세스 상태 (Process States / Trạng thái tiến trình)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: Nộp -> Nhận -> Chờ chạy -> Chạy -> (Tạm dừng nếu cần) -> Xong."
+  },
+  {
+    "line": 301,
+    "context": "205. 스케줄링 - HRN (Highest Response-ratio Next)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: Công thức = `(Đợi + Chạy) / Chạy`. Số càng lớn càng ưu tiên. Giải quyết nhược điểm của SJF (tiến trình dài bị bỏ đói)."
+  },
+  {
+    "line": 310,
+    "context": "208. 인터넷 주소 체계 - IPv6 (IPv6 Addressing)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: IPv4 = 32 bit (dấu `.`). IPv6 = 128 bit (dấu `:`)."
+  },
+  {
+    "line": 317,
+    "context": "OSI 7계층 (OSI 7 Layers)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: Data Link = Frame/MAC. Network = IP/Routing. Transport = TCP/UDP/Port. Session = Dialog/Token."
+  },
+  {
+    "line": 330,
+    "context": "TCP/IP 프로토콜 (TCP/IP Protocols)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: TCP = Cẩn thận, chậm mà chắc. UDP = Nhanh, mất gói cũng không sao (Video call, Game)."
+  },
+  {
+    "line": 343,
+    "context": "232. 배치 프로그램 필수 요소 (Batch Program Elements / Yếu tố của Batch)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: Batch là tự động chạy ngầm khối lượng lớn, nên không được chết giữa chừng."
+  },
+  {
+    "line": 363,
+    "context": "235. JAVA의 데이터 타입 크기 (JAVA Data Type Sizes / Kích thước kiểu dữ liệu JAVA)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: Java dùng Unicode nên `char` là 2 Bytes. Có thêm kiểu `byte` (1 Byte)."
+  },
+  {
+    "line": 376,
+    "context": "240. 관계 연산자 (Relational Operators / Toán tử quan hệ)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: Trong C, 0 là Sai, mọi số khác 0 đều được coi là Đúng (Thường dùng 1)."
+  },
+  {
+    "line": 391,
+    "context": "246. scanf() 함수 (scanf() Function / Hàm nhập trong C)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: \"Scan\" là quét (đọc vào), luôn nhớ phải có dấu `&` để chỉ đường cho dữ liệu đi vào bộ nhớ."
+  },
+  {
+    "line": 399,
+    "context": "247. 서식 문자열 (Format String / Chuỗi định dạng - Bổ sung)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: o = octal, x = hex, u = unsigned, p = pointer."
+  },
+  {
+    "line": 429,
+    "context": "252. 다중 if문 (Multi if statement / Câu lệnh if nhiều nhánh)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: Xếp hạng hoặc các điều kiện loại trừ lẫn nhau thì dùng `else if`."
+  },
+  {
+    "line": 435,
+    "context": "253. switch문 (switch statement / Câu lệnh switch - Bổ sung)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: `switch` thích sự chính xác tuyệt đối (giá trị cụ thể), không thích sự so sánh lớn/nhỏ."
+  },
+  {
+    "line": 454,
+    "context": "257. break, continue (Keywords / Từ khóa điều khiển vòng lặp)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: `break` = Phá vỡ (thoát ra). `continue` = Tiếp tục (bước tiếp)."
+  },
+  {
+    "line": 461,
+    "context": "258. 배열과 1차원 배열 (Array & 1D Array / Mảng 1 chiều - Bổ sung)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: Mảng trong C/Java đếm từ 0."
+  },
+  {
+    "line": 468,
+    "context": "259. 2차원 배열 (2D Array / Mảng 2 chiều - Bổ sung)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: Array 2D giống như ma trận Toán học. `i` là hàng (bên ngoài), `j` là cột (bên trong)."
+  },
+  {
+    "line": 477,
+    "context": "260. 배열의 초기화 (Array Initialization / Khởi tạo mảng)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: C/Java không tự làm sạch bộ nhớ trừ khi bạn khởi tạo ít nhất 1 phần tử."
+  },
+  {
+    "line": 487,
+    "context": "262. 포인터와 포인터 변수 (Pointer & Pointer Variable / Con trỏ - Bổ sung)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: Con trỏ giống như tấm bản đồ (chỉ chứa địa chỉ), dùng `*` để đi đến đích và lấy kho báu (giá trị)."
+  },
+  {
+    "line": 499,
+    "context": "264. Python의 기본 문법 (Python Basic Syntax / Cú pháp cơ bản của Python)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: Python yêu cầu thụt lề (thường là 4 spaces) vô cùng khắt khe. Sai thụt lề = Lỗi (IndentationError)."
+  },
+  {
+    "line": 516,
+    "context": "275. 절차적 프로그래밍 언어의 종류 (Procedural Programming Languages / Ngôn ngữ lập trình hướng thủ tục)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: C = Pointer, ALGOL = Algorithm, COBOL = Business, FORTRAN = Formula Translation."
+  },
+  {
+    "line": 522,
+    "context": "276. 객체지향 프로그래밍 언어의 종류 (Object-Oriented Languages / Ngôn ngữ lập trình hướng đối tượng)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: Java = Đa luồng/Độc lập HĐH, Smalltalk = Thuần OOP/GUI đầu tiên."
+  },
+  {
+    "line": 530,
+    "context": "278. 선언형 프로그래밍 언어의 종류 (Declarative Programming Languages / Ngôn ngữ lập trình khai báo)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: AI = LISP & PROLOG. XML = Tag tự định nghĩa. Haskell = Hàm thuần túy."
+  },
+  {
+    "line": 539,
+    "context": "280. C언어의 표준 라이브러리 (C Standard Libraries / Thư viện chuẩn C)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: io = Input/Output, lib = Library (chung chung như cấp phát bộ nhớ), str = String."
+  },
+  {
+    "line": 545,
+    "context": "281. 예외 처리 (Exception Handling / Xử lý ngoại lệ)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: Exception = Bắt lỗi chủ động."
+  },
+  {
+    "line": 564,
+    "context": "283. 운영체제의 구성 (OS Components / Cấu trúc HĐH)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: 제어 (Điều khiển) = Giám sát, Công việc, Dữ liệu. 처리 (Xử lý) = Dịch ngôn ngữ, Tiện ích."
+  },
+  {
+    "line": 602,
+    "context": "291. 세그먼테이션 기법 (Segmentation / Phân đoạn)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: Page = Kích thước cố định (Sinh ra rác bên trong). Segment = Kích thước logic (Sinh ra rác bên ngoài)."
+  },
+  {
+    "line": 676,
+    "context": "계층별 주요 프로토콜 (Major Protocols by Layer / Giao thức theo tầng)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: ARP = \"A\"ddress Resolution (Tìm MAC từ IP). RARP = \"R\"everse (Ngược lại)."
+  },
+  {
+    "line": 693,
+    "context": "168. 소프트웨어 공학의 개념 (Concept of Software Engineering / Khái niệm kỹ nghệ phần mềm)",
+    "old": "  - 💡 *Mẹo ghi nhớ*: Kỹ nghệ phần mềm = Khoa học + Quản lý + Tiết kiệm tiền & thời gian."
+  },
+  {
+    "line": 719,
+    "context": "168. 소프트웨어 공학의 개념 (Concept of Software Engineering / Khái niệm kỹ nghệ phần mềm)",
+    "old": "**💡 Mẹo ghi nhớ (Mnemonics):**"
+  },
+  {
+    "line": 738,
+    "context": "168. 소프트웨어 공학의 개념 (Concept of Software Engineering / Khái niệm kỹ nghệ phần mềm)",
+    "old": "**💡 Mẹo ghi nhớ (Mnemonics):**"
+  },
+  {
+    "line": 757,
+    "context": "168. 소프트웨어 공학의 개념 (Concept of Software Engineering / Khái niệm kỹ nghệ phần mềm)",
+    "old": "**💡 Mẹo ghi nhớ (Mnemonics):**"
+  },
+  {
+    "line": 776,
+    "context": "168. 소프트웨어 공학의 개념 (Concept of Software Engineering / Khái niệm kỹ nghệ phần mềm)",
+    "old": "**💡 Mẹo ghi nhớ (Mnemonics):**"
+  },
+  {
+    "line": 799,
+    "context": "168. 소프트웨어 공학의 개념 (Concept of Software Engineering / Khái niệm kỹ nghệ phần mềm)",
+    "old": "**💡 Mẹo ghi nhớ (Mnemonics):**"
+  },
+  {
+    "line": 814,
+    "context": "168. 소프트웨어 공학의 개념 (Concept of Software Engineering / Khái niệm kỹ nghệ phần mềm)",
+    "old": "**💡 Mẹo ghi nhớ (Mnemonics):**"
+  },
+  {
+    "line": 832,
+    "context": "168. 소프트웨어 공학의 개념 (Concept of Software Engineering / Khái niệm kỹ nghệ phần mềm)",
+    "old": "**💡 Mẹo ghi nhớ (Mnemonics):**"
+  },
+  {
+    "line": 858,
+    "context": "168. 소프트웨어 공학의 개념 (Concept of Software Engineering / Khái niệm kỹ nghệ phần mềm)",
+    "old": "**💡 Mẹo ghi nhớ (Mnemonics):**"
+  },
+  {
+    "line": 876,
+    "context": "168. 소프트웨어 공학의 개념 (Concept of Software Engineering / Khái niệm kỹ nghệ phần mềm)",
+    "old": "**💡 Mẹo ghi nhớ (Mnemonics):**"
+  },
+  {
+    "line": 923,
+    "context": "168. 소프트웨어 공학의 개념 (Concept of Software Engineering / Khái niệm kỹ nghệ phần mềm)",
+    "old": "**💡 Mẹo ghi nhớ (Mnemonics):**"
+  },
+  {
+    "line": 942,
+    "context": "168. 소프트웨어 공학의 개념 (Concept of Software Engineering / Khái niệm kỹ nghệ phần mềm)",
+    "old": "**💡 Mẹo ghi nhớ (Mnemonics):**"
+  },
+  {
+    "line": 963,
+    "context": "168. 소프트웨어 공학의 개념 (Concept of Software Engineering / Khái niệm kỹ nghệ phần mềm)",
+    "old": "**💡 Mẹo ghi nhớ (Mnemonics):**"
+  },
+  {
+    "line": 980,
+    "context": "168. 소프트웨어 공학의 개념 (Concept of Software Engineering / Khái niệm kỹ nghệ phần mềm)",
+    "old": "**💡 Mẹo ghi nhớ (Mnemonics):**"
+  },
+  {
+    "line": 1008,
+    "context": "168. 소프트웨어 공학의 개념 (Concept of Software Engineering / Khái niệm kỹ nghệ phần mềm)",
+    "old": "**💡 Mẹo ghi nhớ (Mnemonics):**"
+  },
+  {
+    "line": 1026,
+    "context": "168. 소프트웨어 공학의 개념 (Concept of Software Engineering / Khái niệm kỹ nghệ phần mềm)",
+    "old": "**💡 Mẹo ghi nhớ (Mnemonics):**"
+  },
+  {
+    "line": 1043,
+    "context": "168. 소프트웨어 공학의 개념 (Concept of Software Engineering / Khái niệm kỹ nghệ phần mềm)",
+    "old": "**💡 Mẹo ghi nhớ (Mnemonics):**"
+  },
+  {
+    "line": 1061,
+    "context": "168. 소프트웨어 공학의 개념 (Concept of Software Engineering / Khái niệm kỹ nghệ phần mềm)",
+    "old": "**💡 Mẹo ghi nhớ (Mnemonics):**"
+  },
+  {
+    "line": 1089,
+    "context": "168. 소프트웨어 공학의 개념 (Concept of Software Engineering / Khái niệm kỹ nghệ phần mềm)",
+    "old": "**💡 Mẹo ghi nhớ (Mnemonics):**"
+  },
+  {
+    "line": 1108,
+    "context": "168. 소프트웨어 공학의 개념 (Concept of Software Engineering / Khái niệm kỹ nghệ phần mềm)",
+    "old": "**💡 Mẹo ghi nhớ (Mnemonics):**"
+  },
+  {
+    "line": 1150,
+    "context": "168. 소프트웨어 공학의 개념 (Concept of Software Engineering / Khái niệm kỹ nghệ phần mềm)",
+    "old": "**💡 Mẹo ghi nhớ (Mnemonics):**"
+  },
+  {
+    "line": 1176,
+    "context": "168. 소프트웨어 공학의 개념 (Concept of Software Engineering / Khái niệm kỹ nghệ phần mềm)",
+    "old": "**💡 Mẹo ghi nhớ (Mnemonics):**"
+  },
+  {
+    "line": 1195,
+    "context": "168. 소프트웨어 공학의 개념 (Concept of Software Engineering / Khái niệm kỹ nghệ phần mềm)",
+    "old": "**💡 Mẹo ghi nhớ (Mnemonics):**"
+  },
+  {
+    "line": 1230,
+    "context": "168. 소프트웨어 공학의 개념 (Concept of Software Engineering / Khái niệm kỹ nghệ phần mềm)",
+    "old": "**💡 Mẹo ghi nhớ (Mnemonics):**"
+  },
+  {
+    "line": 1254,
+    "context": "168. 소프트웨어 공학의 개념 (Concept of Software Engineering / Khái niệm kỹ nghệ phần mềm)",
+    "old": "**💡 Mẹo ghi nhớ (Mnemonics):**"
+  },
+  {
+    "line": 1291,
+    "context": "168. 소프트웨어 공학의 개념 (Concept of Software Engineering / Khái niệm kỹ nghệ phần mềm)",
+    "old": "**💡 Mẹo ghi nhớ (Mnemonics):**"
+  },
+  {
+    "line": 1449,
+    "context": "168. 소프트웨어 공학의 개념 (Concept of Software Engineering / Khái niệm kỹ nghệ phần mềm)",
+    "old": "**💡 Mẹo ghi nhớ (Mnemonics):**"
+  },
+  {
+    "line": 1503,
+    "context": "168. 소프트웨어 공학의 개념 (Concept of Software Engineering / Khái niệm kỹ nghệ phần mềm)",
+    "old": "**💡 Mẹo ghi nhớ (Mnemonics):**"
+  },
+  {
+    "line": 1548,
+    "context": "168. 소프트웨어 공학의 개념 (Concept of Software Engineering / Khái niệm kỹ nghệ phần mềm)",
+    "old": "**💡 Mẹo ghi nhớ (Mnemonics):**"
+  },
+  {
+    "line": 1594,
+    "context": "168. 소프트웨어 공학의 개념 (Concept of Software Engineering / Khái niệm kỹ nghệ phần mềm)",
+    "old": "**💡 Mẹo ghi nhớ (Mnemonics):**"
+  },
+  {
+    "line": 1636,
+    "context": "168. 소프트웨어 공학의 개념 (Concept of Software Engineering / Khái niệm kỹ nghệ phần mềm)",
+    "old": "**💡 Mẹo ghi nhớ (Mnemonics):**"
+  },
+  {
+    "line": 1687,
+    "context": "239 - 244. 각종 연산자",
+    "old": "**💡 Mẹo ghi nhớ (Mnemonics):**"
+  },
+  {
+    "line": 1787,
+    "context": "239 - 244. 각종 연산자",
+    "old": "**💡 Mẹo ghi nhớ (Mnemonics):**"
+  },
+  {
+    "line": 1973,
+    "context": "239 - 244. 각종 연산자",
+    "old": "**💡 Mẹo ghi nhớ (Mnemonics):**"
+  },
+  {
+    "line": 2018,
+    "context": "TẦNG B – NOTE 보충 (HIỂU SÂU)",
+    "old": "- 💡 **Mẹo ghi nhớ**: JS là Client, còn lại PPP (PHP, JSP, ASP) đa số là Server."
+  },
+  {
+    "line": 2031,
+    "context": "TẦNG B – NOTE 보충 (HIỂU SÂU)",
+    "old": "- 💡 **Mẹo ghi nhớ**: **T**emporal = **T**ime (Lặp lại nhiều lần/Loop), **S**patial = **S**pace (Gần nhau/Array)."
+  },
+  {
+    "line": 2043,
+    "context": "TẦNG B – NOTE 보충 (HIỂU SÂU)",
+    "old": "- 💡 **Mẹo ghi nhớ**: Working Set = Những món đồ đang \"Working\" (Đang dùng) phải để sẵn trên bàn (Memory)."
+  },
+  {
+    "line": 2056,
+    "context": "TẦNG B – NOTE 보충 (HIỂU SÂU)",
+    "old": "- 💡 **Mẹo ghi nhớ**: Kernel là **Lõi** (Hardware), Shell là **Vỏ** (Giao tiếp người dùng)."
+  },
+  {
+    "line": 2071,
+    "context": "TẦNG B – NOTE 보충 (HIỂU SÂU)",
+    "old": "- 💡 **Mẹo ghi nhớ**: **R**ecently = Lâu không đụng (Thời gian), **F**requently = Ít dùng (Số lần). "
+  },
+  {
+    "line": 2083,
+    "context": "TẦNG B – NOTE 보충 (HIỂU SÂU)",
+    "old": "- 💡 **Mẹo ghi nhớ**: PCB giống như \"Thẻ căn cước + Hồ sơ bệnh án\" của một tiến trình."
+  }
+]

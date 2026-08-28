@@ -1,0 +1,113 @@
+{"line": 14, "new": "* 💡 **Mẹo ghi nhớ**: Tuyến tính (Linear) là một đường thẳng (Mảng, Stack, Queue). Phi tuyến là rẽ nhánh (Cây, Đồ thị)."}
+{"line": 25, "new": "* 💡 **Mẹo ghi nhớ**: LIFO - Vào sau ra trước, giống như xếp đĩa, lấy đĩa trên cùng ra trước."}
+{"line": 36, "new": "* 💡 **Mẹo ghi nhớ**: Degree là số con trực tiếp. Leaf là chiếc lá ở cuối cành không mọc thêm được nữa."}
+{"line": 47, "new": "* 💡 **Mẹo ghi nhớ**: Tiền/Trung/Hậu tố chỉ vị trí của Root (Gốc) so với Trái/Phải."}
+{"line": 55, "new": "* 💡 **Mẹo ghi nhớ**: Prefix (Pre = trước), Postfix (Post = sau)."}
+{"line": 66, "new": "* 💡 **Mẹo ghi nhớ**: Insertion: bốc bài và chèn. Selection: tìm người lùn nhất xếp hàng. Bubble: bong bóng lớn nổi lên cuối cùng."}
+{"line": 74, "new": "* 💡 **Mẹo ghi nhớ**: Binary = chia đôi (phải sắp xếp trước!)."}
+{"line": 83, "new": "* 💡 **Mẹo ghi nhớ**: Division = Chia lấy dư, Square = Bình phương, Fold = Gấp lại."}
+{"line": 94, "new": "* 💡 **Mẹo ghi nhớ**: Ngoài (Người dùng) - Giữa/Khái niệm (Tổng thể logic) - Trong (Lưu trữ vật lý)."}
+{"line": 103, "new": "* 💡 **Mẹo ghi nhớ**: AMJG (Ant, Maven, Jenkins, Gradle)."}
+{"line": 110, "new": "* 💡 **Mẹo ghi nhớ**: Clearing House = Ngân hàng/Trung tâm kiểm duyệt. Packager = Người đóng gói/Mã hóa."}
+{"line": 132, "new": "* 💡 **Mẹo ghi nhớ**: In = vào kho, Out = ra khỏi kho."}
+{"line": 138, "new": "* 💡 **Mẹo ghi nhớ**: Pareto = 80/20."}
+{"line": 149, "new": "* 💡 **Mẹo ghi nhớ**: White = Nhìn xuyên thấu (Code). Black = Hộp đen không thấy ruột (Chức năng)."}
+{"line": 164, "new": "* 💡 **Mẹo ghi nhớ**: Alpha = có người tạo ra (Dev) giám sát. Beta = thả ra tự nhiên cho User."}
+{"line": 173, "new": "* 💡 **Mẹo ghi nhớ**: Oracle = Nhà tiên tri/Chân lý. Driver = Người lái xe (Gọi cấp dưới)."}
+{"line": 195, "new": "* 💡 **Mẹo ghi nhớ**: Top-down dùng Stub (T-S), Bottom-up dùng Driver (B-D)."}
+{"line": 201, "new": "* 💡 **Mẹo ghi nhớ**: Alien = Người ngoài hành tinh, đọc không hiểu gì cả."}
+{"line": 220, "new": "* 💡 **Mẹo ghi nhớ**: Hub là cái trục xe đạp (trung tâm), Spoke là nan hoa (tỏa ra xung quanh)."}
+{"line": 231, "new": "* 💡 **Mẹo ghi nhớ**: Tripwire = Dây bẫy, chạm vào là báo động."}
+{"line": 240, "new": "* 💡 **Mẹo ghi nhớ**: xUnit là phổ biến nhất cho Unit Test. NTAF có chữ N (Naver)."}
+{"line": 263, "new": "* 💡 **Mẹo ghi nhớ**: Array = Nhà chung cư sát vách. Linked List = Các nhà rải rác nhưng có bản đồ chỉ đường đến nhà tiếp theo."}
+{"line": 271, "new": "* 💡 **Mẹo ghi nhớ**: Queue = Xếp hàng."}
+{"line": 296, "new": "* 💡 **Mẹo ghi nhớ**: Quick = Nhanh nhưng rủi ro (worst case O(n^2)). Merge/Heap = Luôn ổn định O(n log n)."}
+{"line": 316, "new": "* 💡 **Mẹo ghi nhớ**: Đ-T-Đ (Định nghĩa, Thao tác, Điều khiển) = D-M-C (Define, Manipulate, Control)."}
+{"line": 329, "new": "* 💡 **Mẹo ghi nhớ**: S-S-S-P-M (Shared memory, Socket, Semaphore, Pipe, Message Queue)."}
+{"line": 357, "new": "* 💡 **Mẹo ghi nhớ**: Release Note = Nhật ký cập nhật phần mềm."}
+{"line": 387, "new": "* 💡 **Mẹo ghi nhớ**: Jenkins = Java, Gradle = Groovy (Android)."}
+{"line": 431, "new": "* 💡 **Mẹo ghi nhớ**: Statement = Dòng code. Branch = Ngã rẽ (IF). Condition = Điều kiện nhỏ trong IF."}
+{"line": 481, "new": "* 💡 **Mẹo ghi nhớ**: Response = Phản hồi đầu tiên. Turn Around = Hoàn thành toàn bộ."}
+{"line": 564, "new": "* 💡 **Mẹo ghi nhớ**: Bán cộng (Half Adder) thì Sum là XOR (khác nhau thì bằng 1), Carry là AND (cả 2 bằng 1 mới nhớ). (HA = XOR + AND)."}
+{"line": 593, "new": "* 💡 **Mẹo ghi nhớ**: Bi-Ni-By-Wo-Fi-Re-Blo-Fi-DB."}
+{"line": 627, "new": "* 💡 **Mẹo ghi nhớ**: Accumulator (Thùng chứa) = Thuộc ALU (Tính toán xong đổ vào thùng). Instruction Register (Người đọc lệnh) = Thuộc 제어장치 (Đọc xong mới biết đường điều khiển)."}
+{"line": 695, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** BSA = \"Bắt (Branch) Sang (Save) Anh (Address)\". Hãy nhớ trình tự: Chuyển địa chỉ (MAR) -> Lưu PC cũ (MBR) -> Cập nhật PC mới -> Lưu vào bộ nhớ -> Tăng PC lên 1 để chạy."}
+{"line": 716, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** 3 loại 제어 데이터 (Dữ liệu điều khiển): Trạng thái (State) - Điểm (Point) - Thứ tự (Order). Gọi chung là 'Trạng Điểm Tự'."}
+{"line": 746, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Hardwired = Nhanh - Khó - Cứng (Hardware). Micro = Chậm - Dễ - Mềm (Software)."}
+{"line": 765, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Ngang (Horizontal) = Nhiều bit, Không cần dịch (Dài như dải lụa). Dọc (Vertical) = Ít bit, Phải dịch mã (Decoder)."}
+{"line": 787, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Bus Vào/Ra có 3 làn đường: Dữ liệu (chở hàng) - Địa chỉ (chỉ đường) - Điều khiển (cảnh sát giao thông)."}
+{"line": 803, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** I/O = Chậm, Nhiều lỗi, Ký tự (Byte). Nhớ đến cái máy in rùa bò hay kẹt giấy."}
+{"line": 822, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Buffer = RAM, Đơn nhiệm, Phần cứng. Spool = Disk, Đa nhiệm, Phần mềm."}
+{"line": 857, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Trình tự xịn dần: Program (Gà mờ) -> Interrupt (Biết việc) -> DMA (Độc lập) -> Channel (Chuyên nghiệp). Cycle Steal KHÔNG lưu trạng thái CPU."}
+{"line": 878, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Trap (Bẫy) = Lỗi phần mềm (Chia 0, Tràn số). SVC = Chủ động gọi Giám sát (Supervisor)."}
+{"line": 900, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Trình tự: Gọi -> Chờ nốt -> Cất đồ -> Xem ai -> Giải quyết -> Lấy lại đồ -> Làm tiếp. (Lưu PC là quan trọng nhất)."}
+{"line": 918, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Thứ tự: Điện (Power) - Máy (Machine) - Ngoài (External) - Vào/Ra (I/O) - Lỗi (Program) - Gọi (SVC). Polling = Phần mềm (Chậm). Daisy = Nối tiếp. Vector = Phần cứng (Nhanh nhất)."}
+{"line": 943, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** \"E\" đầu tiên = Erasable (Xóa được). Nhớ: EPROM = UV (Tia cực tím), EEPROM = Điện (Electonic). Cycle Time ≥ Access Time."}
+{"line": 964, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** **S**RAM = **S**iêu tốc (Flip-Flop, Cache). **D**RAM = **D**ump (Đổ liên tục - Refresh, Tụ điện, RAM thường)."}
+{"line": 981, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** 자기 코어 (Magnetic Core - Lõi từ) = Đọc là Mất (DRO), Cần ghi lại. 4 dây thần thánh: 2 trục X/Y + 1 dây Đọc (Sense) + 1 dây Cấm (Inhibit)."}
+{"line": 1005, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Công thức tìm ổ cứng: SLT. **S**eek (Tìm Track) -> **L**atency (Đợi Sector xoay tới) -> **T**ransmission (Truyền đi)."}
+{"line": 1022, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** CAM (Content) = Tìm bằng Nội dung. Interleaving (Xen kẽ) = Đa Module, Truy cập song song."}
+{"line": 1042, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Write-Through (Xuyên qua) = Ghi luôn vào RAM (Chậm, Chắc). Write-Back (Ghi lại sau) = Khi nào dọn Cache mới ghi (Nhanh, Nguy hiểm)."}
+{"line": 1057, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Virtual = Đĩa cứng đóng giả làm RAM. Page Fault (Lỗi trang) = Trang chưa nạp, phải đợi."}
+{"line": 1076, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Flynn: S = Single (Đơn), M = Multi (Đa), I = Instruction (Lệnh), D = Data (Dữ liệu). Data Flow = Data dẫn dắt, Không cần PC."}
+{"line": 1103, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Stack = LIFO (Gọi Hàm, Đệ quy). Queue = FIFO (Lập lịch). Liên kết (Linked) = Nhanh chèn/xóa, Chậm tìm kiếm."}
+{"line": 1124, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** 단말 (Đoạn mạt = Cuối cùng) = Leaf (Chiếc Lá). Degree = Bậc = Số con. Pre/In/Post = Vị trí của Gốc (Root) ở Trước/Giữa/Sau."}
+{"line": 1137, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** DFS = Sâu = Stack (D/S). BFS = Rộng = Queue (B/Q). Vô hướng chia 2 vì AB và BA là một."}
+{"line": 1156, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Divide = Cắt nhỏ. Dynamic = Nhớ bài cũ. Greedy = Tham bát bỏ mâm. Backtrack = Đi lùi. O(1) là nhanh nhất."}
+{"line": 1172, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Quick Sort (Nhanh) nhưng Worst là N². Bọt (Bubble), Chọn (Selection), Chèn (Insertion) đều là N²."}
+{"line": 1186, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Binary Search = Phải Sắp Xếp trước (정렬), Tìm bằng cách Chia đôi (절반). Hashing = O(1) Siêu Tốc (Băm ra tìm luôn)."}
+{"line": 1199, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Chaining = Dây xích (Linked List). Open Addressing = Mở cửa đi tìm nhà khác (Linear, Quadratic, Double)."}
+{"line": 1213, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Trình tự: Kế hoạch -> Code -> Dịch (Compile) -> Thử (Test). Module = Ghép lại thành chương trình. Component = Tái sử dụng qua Interface."}
+{"line": 1239, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Trình tự Quản lý Cấu hình: **Đ**ịnh danh, **K**iểm soát, **K**iểm toán, **G**hi chép -> **Đ**i **K**iếm **K**im **G**iáp (식별-통제-감사-기록). Git = Phân tán. IDE 4 bước: CoCoDeDe (Coding - Compile - Debugging - Deployment)."}
+{"line": 1255, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Reverse Engineering (Dịch ngược) = Từ Code -> Bản thiết kế. Migration = Chuyển nhà (môi trường)."}
+{"line": 1277, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** DRM = Chống copy lậu. **Clearing House** = Trạm kiểm soát và cấp phép (Rất hay thi). Firewall (Tường lửa) KHÔNG phải là công nghệ của DRM."}
+{"line": 1295, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Tĩnh (Static) = PMD, SonarQube (Soi code). Động (Dynamic) = Valgrind (Chạy thử). Build = Jenkins (Ông quản gia tự động)."}
+{"line": 1313, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** 6 Đặc tính ISO 9126: **C**hức năng, **T**in cậy, **D**ễ dùng, **H**iệu quả, **B**ảo trì, **C**huyển đổi -> **C**hỉ **T**in **D**ùng **H**àng **B**án **C**hạy (기신사효유이). ISO 25000 = Chuẩn xịn nhất tổng hợp tất cả."}
+{"line": 1332, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Thuốc trừ sâu (Pesticide) = Cần thay mới bộ Test. Đám mây lỗi (Clustering) = 20% code gây ra 80% lỗi."}
+{"line": 1346, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Oracle (Nhà tiên tri) = Cái để phán xét đúng/sai. True = 100%. Heuristic = Đoán."}
+{"line": 1372, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** "}
+{"line": 1390, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** 하향식 (Top-Down) dùng Stub (T-S). 상향식 (Bottom-Up) dùng Driver (B-D). Alpha Test = Dev đứng xem. Beta Test = User tự vọc ở nhà."}
+{"line": 1401, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Driver (Tài xế) = Kẻ điều khiển từ trên. Stub (Gốc cây/Khúc gỗ) = Đứng ở dưới chịu đòn giả."}
+{"line": 1418, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** 5 nguyên tắc Clean Code: **Đ**ọc dễ, **Đ**ơn giản, **Đ**ộc lập, Không **L**ặp, **T**rừu tượng -> **Đ**ợi **Đ**ến **Đ**êm **L**àm **T**hơ (가단의중추)."}
+{"line": 1435, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Hub & Spoke = Nan hoa (Có tâm Hub, sập tâm là chết). Message Bus = Xe buýt (Chở được nhiều, dễ mở rộng)."}
+{"line": 1459, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** IPSec = Tầng Mạng (Network/IP). SSL = Tầng giữa (Socket). JSON = Key-Value (Chìa khóa - Ổ khóa). STAF = Kiểm thử Phân tán (분산)."}
+{"line": 1501, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** "}
+{"line": 1522, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Vô hướng / 2 (Vì không phân biệt đi/về). Ma trận vô hướng = Đối xứng."}
+{"line": 1542, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Pre (Trước) = Root đi đầu. In (Giữa) = Root ở giữa. Post (Sau) = Root đi chót."}
+{"line": 1559, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Postfix = Dấu nằm ở cuối cụm. Prefix = Dấu nằm ở đầu cụm."}
+{"line": 1570, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** 삽입 (Insertion - Chèn) = Từ khóa '이미 순서화된' (Đã sắp xếp sẵn). Chèn bài vào tay, luôn O(n²)."}
+{"line": 1579, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Shell = Vỏ ốc (Xoáy từ rộng vào hẹp). Từ khóa: h(간격 - Khoảng cách), Độ phức tạp O(n^1.5)."}
+{"line": 1589, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Selection = Đi \"chọn\" thằng nhỏ nhất mang lên đầu."}
+{"line": 1599, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Bubble (Nổi bọt) = Từ khóa '인접한 두 개' (Hai bong bóng kề nhau), '플래그 비트' (Flag bit)."}
+{"line": 1611, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Quick = Pivot, Đệ quy, Stack. Tốt: n log n. Xấu: n²."}
+{"line": 1620, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Heap = Đống = Cây (트리). Ổn định vững chắc như cây ở mức O(n log n)."}
+{"line": 1636, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Radix (Cơ số) = 자릿수 (Chữ số), Dùng Queue/Bucket chia theo từng hàng (đơn vị, chục). Siêu tốc O(dn)."}
+{"line": 1659, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Logic = Bản vẽ. Physical = Tòa nhà thực tế."}
+{"line": 1678, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** ISOS (Integrated, Stored, Operational, Shared) - Nhớ chữ O = Operational (Vận hành/Thiết yếu). DBMS có 3 chữ D-M-C (Định nghĩa, Thao tác, Điều khiển)."}
+{"line": 1696, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Ngoại (User/App) - Khái niệm (Toàn cục/Admin) - Nội (Máy móc/Ổ cứng)."}
+{"line": 1711, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Procedure = Gọi mới chạy. Trigger = Tự động (Event). Function = Trả về giá trị (Return)."}
+{"line": 1727, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** APM (Tìm bệnh) -> Optimizer/Execution Plan (Khám bệnh / Xem phim X-quang) -> Tuning (Chữa bệnh / Tạo Index)."}
+{"line": 1765, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** IPC là gửi thư cho nhau. Shared Memory = Bảng tin chung (Nhanh nhất). Semaphore = Cái khóa cửa nhà vệ sinh (Ai đang dùng thì khóa lại)."}
+{"line": 1779, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Test Case = Input + Condition + Expected Output. Bắt buộc viết trước khi test."}
+{"line": 1810, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Quy trình Test: **K**ế hoạch -> **P**hân tích -> **T**hực hiện -> **Đ**ánh giá -> **H**oàn thành -> **K**hi **P**hải **T**hi, **Đ**ừng **H**ỏi (계분구평완)."}
+{"line": 1828, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Jira = Quản lý công việc (Ticket). Slack = Chat. Zeplin = Thiết kế. Swagger = Viết Document cho API. Gradle = Build Android."}
+{"line": 1855, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** 식-모-빌-환-패-개-배 (Thức - Mô - Build - Hoàn - Package - Cải - Phân phối)."}
+{"line": 1881, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Packager (Gói hàng + Khóa), Clearing House (Thu tiền + Đưa chìa)."}
+{"line": 1909, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** 검증 (Verification) = Làm SP đúng kỹ thuật chưa? (Dev). 확인 (Validation) = Làm đúng SP khách cần chưa? (User)."}
+{"line": 1942, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** "}
+{"line": 1960, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** SVN = Trunk (Thân cây to), Revision tăng dần, Tập trung. Git = Snapshot (Chụp ảnh), Phân tán (분산)."}
+{"line": 1970, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Jenkins = Java, Web GUI, Phân tán. Gradle = Groovy, DSL, Cache, Android."}
+{"line": 2003, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Inspection (Khám nghiệm) = Tĩnh (Static). Regression (Hồi quy) = Sửa xong test lại."}
+{"line": 2016, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** White Box = Hộp trắng trong suốt nhìn thấu Code (문장, 분기, 루프). Do Dev tự làm."}
+{"line": 2029, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Black Box = UI, Chức năng. Các kỹ thuật thường chia theo vùng (Partition) và ranh giới (Boundary)."}
+{"line": 2044, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Đơn vị (Unit) -> Tích hợp (Integration) -> Hệ thống (System) -> Nghiệm thu (Acceptance). Alpha = Nội bộ, Beta = Ở nhà."}
+{"line": 2073, "new": "> 💡 **Mẹo ghi nhớ (Mnemonics):** "}
+{"line": 2101, "new": "> 💡 **Mẹo ghi nhớ (Mnemonics):** "}
+{"line": 2133, "new": "> 💡 **Mẹo ghi nhớ (Mnemonics):** "}
+{"line": 2153, "new": "> 💡 **Mẹo ghi nhớ (Mnemonics):** "}
+{"line": 2176, "new": "> 💡 **Mẹo ghi nhớ (Mnemonics):** "}
+{"line": 2201, "new": "> 💡 **Mẹo ghi nhớ (Mnemonics):** "}
+{"line": 2251, "new": "> 💡 **Mẹo ghi nhớ (Mnemonics):** "}
+{"line": 2286, "new": "> 💡 **Mẹo ghi nhớ (Mnemonics):** "}
+{"line": 2410, "new": "# 💡 통합 비유 (Mẹo ghi nhớ tổng hợp)"}
+{"line": 2439, "new": "> 💡 **Mẹo ghi nhớ (Mnemonics):** "}

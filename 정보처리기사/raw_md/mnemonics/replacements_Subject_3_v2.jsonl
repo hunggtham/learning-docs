@@ -1,0 +1,18 @@
+{"old": "- 💡 **Mẹo ghi nhớ (Mnemonics):** 개-추 (개념적 설계는 추상적). Khái niệm = Trừu tượng (Khái-Trừu).", "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Khái-Trừu (Khái niệm = Trừu tượng)."}
+{"old": "- 💡 **Mẹo ghi nhớ:** 논-변 (논리적 설계는 변환). Logic = Chuyển đổi bảng (Logic-Bảng).", "new": "- 💡 **Mẹo ghi nhớ:** Logic-Bảng (Thiết kế Logic = Chuyển đổi sang Bảng)."}
+{"old": "- 💡 **Mẹo ghi nhớ:** 물-저 (물리적 설계는 저장 구조). Vật lý = Lưu trữ thực tế.", "new": "- 💡 **Mẹo ghi nhớ:** Vật-Lưu (Thiết kế Vật lý = Cấu trúc Lưu trữ)."}
+{"old": "- 💡 **Mẹo ghi nhớ:** 구연제 (구조, 연산, 제약조건). Cấu-Toán-Buộc.", "new": "- 💡 **Mẹo ghi nhớ:** Cấu-Toán-Buộc (Cấu trúc, Toán tử, Ràng buộc)."}
+{"old": "- 💡 **Mẹo ghi nhớ:** 튜-카 (튜플-카디널리티), 속-디 (속성-디그리). Tu-Car, At-De.", "new": "- 💡 **Mẹo ghi nhớ:** Tu-Car (Tuple = Cardinality), At-De (Attribute = Degree)."}
+{"old": "- 💡 **Mẹo ghi nhớ:** 도부이결다조 (1NF -> 5NF 순서). Do-Bu-I-Gyeol-Da-Jo.", "new": "- 💡 **Mẹo ghi nhớ:** Nguyên-Phần-Bắc-Quyết-Đa-Chung (Nguyên tử -> Từng phần -> Bắc cầu -> Quyết định -> Đa trị -> Chung)."}
+{"old": "- 💡 **Mẹo ghi nhớ:** 요-개-논-물-구 (Yêu-Khái-Logic-Vật-Cài). Yo-Gae-Non-Mul-Gu.", "new": "- 💡 **Mẹo ghi nhớ:** Yêu-Khái-Lo-Vật-Cài (Yêu cầu -> Khái niệm -> Logic -> Vật lý -> Cài đặt)."}
+{"old": "> 💡 **Mẹo ghi nhớ (Mnemonics):** ", "new": "> 💡 **Mẹo ghi nhớ (Mnemonics):** "}
+{"old": "> 💡 **Mẹo ghi nhớ:**", "new": "> 💡 **Mẹo ghi nhớ:**"}
+{"old": "> 💡 **Mẹo ghi nhớ:** **외 - 개 - 내** (Ngoại - Khái - Nội). Người dùng (Ngoại) -> Thiết kế CSDL (Khái) -> Ổ cứng (Nội).", "new": "> 💡 **Mẹo ghi nhớ:** **Ngoại - Khái - Nội** (Người dùng (Ngoại) -> Thiết kế CSDL (Khái) -> Ổ cứng (Nội))."}
+{"old": "> 💡 **Mẹo ghi nhớ:** **ACID** (Nguyên tử - Nhất quán - Cô lập - Bền vững).", "new": "> 💡 **Mẹo ghi nhớ:** **ACID** (Nguyên tử - Nhất quán - Cô lập - Bền vững)."}
+{"old": "> 💡 **Mẹo ghi nhớ:** **요 - 개 - 논 - 물** (Yêu - Khái - Logic - Vật lý). Dễ thi: Chuẩn hóa ở bước Logic, Access Path/Lưu trữ ở bước Vật lý.", "new": "> 💡 **Mẹo ghi nhớ:** **Yêu - Khái - Lo - Vật** (Yêu cầu -> Khái niệm -> Logic -> Vật lý). Dễ thi: Chuẩn hóa ở bước Logic, Access Path/Lưu trữ ở bước Vật lý."}
+{"old": "> 💡 **Mẹo ghi nhớ:** **카-튜, 디-속** (Cardinality = Tuple, Degree = 속성/Attribute).", "new": "> 💡 **Mẹo ghi nhớ:** **Car-Tu, De-At** (Cardinality = Tuple/Hàng, Degree = Attribute/Cột)."}
+{"old": "> 💡 **Mẹo ghi nhớ:** **셀-행, 프-열** (Select = Hàng/Tuple, Project = Cột/Attribute).", "new": "> 💡 **Mẹo ghi nhớ:** **Se-Hàng, Pro-Cột** (Select = Hàng/Tuple, Project = Cột/Attribute)."}
+{"old": "| 정규형 (Chuẩn) | 조건 (Điều kiện để đạt được) | Mẹo ghi nhớ (VN) |", "new": "| 정규형 (Chuẩn) | 조건 (Điều kiện để đạt được) | Mẹo ghi nhớ (VN) |"}
+{"old": "> 💡 **Mẹo ghi nhớ:** **도-부-이-결-다-조** (Đồ-Bếp-I-Kết-Đa-Giò).", "new": "> 💡 **Mẹo ghi nhớ:** **Đồ-Bếp-I-Kết-Đa-Giò** (Đô-main, Bếp-Phần, I-Bắc cầu, Kết-Quyết định, Đa trị, Giò-Chung)."}
+{"old": "> 💡 **Mẹo ghi nhớ:** **대-개-빠-관** (Đại diện Khóa đối xứng = Khóa cá nhân (개인키) = Nhanh (빠름) = Khó quản lý (관리어려움)).", "new": "> 💡 **Mẹo ghi nhớ:** **Đối-Cá-Nhanh-Khó** (Khóa Đối xứng = Khóa Cá nhân = Nhanh = Khó quản lý khóa)."}
+{"old": "> 💡 **Mẹo ghi nhớ:** **산-관-논** (Toán - Quan - Logic). Nhân chia trước, cộng trừ sau, rồi đến so sánh, cuối cùng là AND/OR.", "new": "> 💡 **Mẹo ghi nhớ:** **Toán - Quan - Lo** (Toán học - Quan hệ - Logic). Nhân chia trước, cộng trừ sau, rồi đến so sánh, cuối cùng là AND/OR."}

@@ -1,0 +1,92 @@
+[
+  {
+    "line": 8,
+    "context": "No Context",
+    "old": "- 💡 **Mẹo ghi nhớ (Mnemonics):** 개-추 (개념적 설계는 추상적). Khái niệm = Trừu tượng (Khái-Trừu)."
+  },
+  {
+    "line": 14,
+    "context": "No Context",
+    "old": "- 💡 **Mẹo ghi nhớ:** 논-변 (논리적 설계는 변환). Logic = Chuyển đổi bảng (Logic-Bảng)."
+  },
+  {
+    "line": 21,
+    "context": "No Context",
+    "old": "- 💡 **Mẹo ghi nhớ:** 물-저 (물리적 설계는 저장 구조). Vật lý = Lưu trữ thực tế."
+  },
+  {
+    "line": 32,
+    "context": "No Context",
+    "old": "- 💡 **Mẹo ghi nhớ:** 구연제 (구조, 연산, 제약조건). Cấu-Toán-Buộc."
+  },
+  {
+    "line": 50,
+    "context": "No Context",
+    "old": "- 💡 **Mẹo ghi nhớ:** 튜-카 (튜플-카디널리티), 속-디 (속성-디그리). Tu-Car, At-De."
+  },
+  {
+    "line": 99,
+    "context": "No Context",
+    "old": "- 💡 **Mẹo ghi nhớ:** 도부이결다조 (1NF -> 5NF 순서). Do-Bu-I-Gyeol-Da-Jo."
+  },
+  {
+    "line": 153,
+    "context": "No Context",
+    "old": "- 💡 **Mẹo ghi nhớ:** 요-개-논-물-구 (Yêu-Khái-Logic-Vật-Cài). Yo-Gae-Non-Mul-Gu."
+  },
+  {
+    "line": 406,
+    "context": "No Context",
+    "old": "> 💡 **Mẹo ghi nhớ (Mnemonics):** "
+  },
+  {
+    "line": 455,
+    "context": "No Context",
+    "old": "> 💡 **Mẹo ghi nhớ:**"
+  },
+  {
+    "line": 468,
+    "context": "No Context",
+    "old": "> 💡 **Mẹo ghi nhớ:** **외 - 개 - 내** (Ngoại - Khái - Nội). Người dùng (Ngoại) -> Thiết kế CSDL (Khái) -> Ổ cứng (Nội)."
+  },
+  {
+    "line": 554,
+    "context": "트랜잭션 (Transaction - Giao dịch) - ACID",
+    "old": "> 💡 **Mẹo ghi nhớ:** **ACID** (Nguyên tử - Nhất quán - Cô lập - Bền vững)."
+  },
+  {
+    "line": 589,
+    "context": "데이터 사전 (Data Dictionary / System Catalog / Metadata)",
+    "old": "> 💡 **Mẹo ghi nhớ:** **요 - 개 - 논 - 물** (Yêu - Khái - Logic - Vật lý). Dễ thi: Chuẩn hóa ở bước Logic, Access Path/Lưu trữ ở bước Vật lý."
+  },
+  {
+    "line": 605,
+    "context": "12.1 릴레이션의 구조 (Cấu trúc Relation / Bảng)",
+    "old": "> 💡 **Mẹo ghi nhớ:** **카-튜, 디-속** (Cardinality = Tuple, Degree = 속성/Attribute)."
+  },
+  {
+    "line": 669,
+    "context": "순수 관계 연산자 (Toán tử quan hệ thuần túy)",
+    "old": "> 💡 **Mẹo ghi nhớ:** **셀-행, 프-열** (Select = Hàng/Tuple, Project = Cột/Attribute)."
+  },
+  {
+    "line": 683,
+    "context": "정규화 단계 (Các chuẩn - Bắt buộc học thuộc)",
+    "old": "| 정규형 (Chuẩn) | 조건 (Điều kiện để đạt được) | Mẹo ghi nhớ (VN) |"
+  },
+  {
+    "line": 692,
+    "context": "정규화 단계 (Các chuẩn - Bắt buộc học thuộc)",
+    "old": "> 💡 **Mẹo ghi nhớ:** **도-부-이-결-다-조** (Đồ-Bếp-I-Kết-Đa-Giò)."
+  },
+  {
+    "line": 741,
+    "context": "개인키 암호 방식 (Private Key / Symmetric Key - Mã hóa Khóa đối xứng)",
+    "old": "> 💡 **Mẹo ghi nhớ:** **대-개-빠-관** (Đại diện Khóa đối xứng = Khóa cá nhân (개인키) = Nhanh (빠름) = Khó quản lý (관리어려움))."
+  },
+  {
+    "line": 809,
+    "context": "연산자 우선순위 (Thứ tự ưu tiên toán tử trong SQL)",
+    "old": "> 💡 **Mẹo ghi nhớ:** **산-관-논** (Toán - Quan - Logic). Nhân chia trước, cộng trừ sau, rồi đến so sánh, cuối cùng là AND/OR."
+  }
+]

@@ -1,0 +1,14 @@
+.DS_Store
+**/.DS_Store
+node_modules/
+**/node_modules/
+dist/
+build/
+*.pdf
+*.zip
+*.mp3
+*.wma
+*.m4a
+*.mts
+*.rar
+*.webloc

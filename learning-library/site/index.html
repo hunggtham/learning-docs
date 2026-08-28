@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#111827" />
+    <title>Study Shelf</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#/" aria-label="Study Shelf home"><span>✦</span> Study Shelf</a>
+      <div class="topbar-actions">
+        <button id="theme-toggle" class="icon-button" type="button" aria-label="Toggle color theme">◐</button>
+      </div>
+    </header>
+
+    <main id="app" class="app" aria-live="polite"></main>
+
+    <template id="home-template">
+      <section class="hero">
+        <p class="eyebrow">PERSONAL KNOWLEDGE LIBRARY</p>
+        <h1>공부 자료를<br /><em>한곳에서, 편하게.</em></h1>
+        <p class="hero-copy">Markdown 노트와 PDF 자료를 빠르게 찾아 읽을 수 있는 개인 학습 서재입니다.</p>
+        <label class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <input id="search" type="search" placeholder="제목 또는 경로로 검색…" autocomplete="off" />
+          <kbd>⌘ K</kbd>
+        </label>
+      </section>
+      <section class="library-section">
+        <div class="library-heading">
+          <div><p class="eyebrow">LIBRARY</p><h2 id="result-title">모든 자료</h2></div>
+          <p id="result-count" class="muted"></p>
+        </div>
+        <div id="filters" class="filters" aria-label="Document filters"></div>
+        <div id="document-grid" class="document-grid"></div>
+      </section>
+    </template>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
