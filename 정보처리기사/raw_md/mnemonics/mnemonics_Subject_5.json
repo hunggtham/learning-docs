@@ -1,0 +1,177 @@
+[
+  {
+    "line": 28,
+    "context": "1.3 컴포넌트 기반(CBD) 방법론 (Component-Based Development)",
+    "old": "- 💡 **Mẹo ghi nhớ:** CBD = \"Lego\" (lắp ráp các mảnh ghép có sẵn)."
+  },
+  {
+    "line": 61,
+    "context": "2.2 소프트웨어 재공학 (Software Reengineering)",
+    "old": "- 💡 **Mẹo ghi nhớ:** Các bước Reengineering: \"Phân Tích -> Tái Cấu Trúc -> Dịch Ngược -> Di Chuyển\"."
+  },
+  {
+    "line": 129,
+    "context": "4.2 CMMI 성숙도 5단계 (CMMI Maturity Levels)",
+    "old": "- 💡 **Mẹo ghi nhớ:** I - M - D - Q - O."
+  },
+  {
+    "line": 234,
+    "context": "7.2 교착상태 (Deadlock)",
+    "old": "- 💡 **Mẹo ghi nhớ:** Điều kiện Deadlock: \"상점비환\" (상호배제, 점유대기, 비선점, 환형대기)."
+  },
+  {
+    "line": 321,
+    "context": "10.4 기타 네트워크 공격",
+    "old": "- 💡 **Mẹo ghi nhớ:** Blue**Jacking** = **Spam message**. Blue**Snarf** = **Snatch files** (cướp file)."
+  },
+  {
+    "line": 456,
+    "context": "2.2 신호 변환 장치 (MODEM & DSU)",
+    "old": "- 💡 **Mẹo ghi nhớ:** MO-Dem = MOdulation - DEModulation. D-SU = Digital - Digital."
+  },
+  {
+    "line": 470,
+    "context": "2.4 PCM (Pulse Code Modulation)",
+    "old": "- 💡 **Mẹo ghi nhớ:** \"표-양-부-복-여\" (Sampling -> Quantizing -> Encoding -> Decoding -> Filtering)."
+  },
+  {
+    "line": 588,
+    "context": "5.3 인터넷 주소 체계 (IP Addresses)",
+    "old": "- 💡 **Mẹo ghi nhớ:** Chuyển đổi IPv4/IPv6: \"Dual - Tunnel - Translate\"."
+  },
+  {
+    "line": 619,
+    "context": "6.2 OSI 7계층 (OSI 7 Layers)",
+    "old": "- 💡 **Mẹo ghi nhớ:** 물-데-네-전-세-표-응 (Physical -> Data -> Network -> Transport -> Session -> Presentation -> Application)."
+  },
+  {
+    "line": 1479,
+    "context": "6.3 주요 네트워크 프로토콜",
+    "old": "- 💡 **Mẹo ghi nhớ (Mnemonics)**: Oracle (오라클) giống như nhà tiên tri, luôn biết trước \"kết quả đúng\" để chúng ta so sánh."
+  },
+  {
+    "line": 1486,
+    "context": "6.3 주요 네트워크 프로토콜",
+    "old": "- 💡 **Mẹo ghi nhớ**: 참-샘-추-일 (Cham-Sam-Chu-Il) -> Thật - Lấy mẫu - Ước lượng - Nhất quán."
+  },
+  {
+    "line": 1505,
+    "context": "6.3 주요 네트워크 프로토콜",
+    "old": "- 💡 **Mẹo ghi nhớ**: 드스슈케스목 (Deu-Seu-Syu-Ke-Seu-Mok) - Driver, Stub, Suite, Case, Script, Mock."
+  },
+  {
+    "line": 1564,
+    "context": "6.3 주요 네트워크 프로토콜",
+    "old": "- 💡 **Mẹo ghi nhớ**: 요-개-논-물-구 (Yo-Gae-Non-Mul-Gu) -> Yêu cầu, Khái niệm, Logic, Vật lý, Triển khai."
+  },
+  {
+    "line": 1593,
+    "context": "6.3 주요 네트워크 프로토콜",
+    "old": "- 💡 **Mẹo ghi nhớ**: 튜카-속디 (Tu-Ca-Sok-Di) -> Tuple-Cardinality, Sokseong-Degree."
+  },
+  {
+    "line": 1644,
+    "context": "6.3 주요 네트워크 프로토콜",
+    "old": "- 💡 **Mẹo ghi nhớ (Mnemonics)**: 도-부-이-결-다-조 (Do-Bu-I-Gyeol-Da-Jo) -> Đậu phụ này, kết cục là cho tất à? (도메인-부분적-이행적-결정자-다치-조인)."
+  },
+  {
+    "line": 1924,
+    "context": "6.3 주요 네트워크 프로토콜",
+    "old": "- 💡 **Mẹo ghi nhớ**: `&`(And)는 주소(Address), `*`(Star)는 값(Value)을 가리킨다고 기억하세요."
+  },
+  {
+    "line": 1946,
+    "context": "6.3 주요 네트워크 프로토콜",
+    "old": "💡 **Mẹo ghi nhớ (Mnemonics):** "
+  },
+  {
+    "line": 1968,
+    "context": "6.3 주요 네트워크 프로토콜",
+    "old": "💡 **Mẹo ghi nhớ (Mnemonics):** "
+  },
+  {
+    "line": 2008,
+    "context": "2. print( ) 함수",
+    "old": "💡 **Mẹo ghi nhớ (Mnemonics):** "
+  },
+  {
+    "line": 2035,
+    "context": "2. 딕셔너리 (Dictionary / Từ điển)",
+    "old": "💡 **Mẹo ghi nhớ (Mnemonics):** "
+  },
+  {
+    "line": 2175,
+    "context": "4. 선언형 프로그래밍 언어 (Declarative)",
+    "old": "💡 **Mẹo ghi nhớ (Mnemonics):** "
+  },
+  {
+    "line": 2218,
+    "context": "2. 운영체제의 구성",
+    "old": "💡 **Mẹo ghi nhớ (Mnemonics):** "
+  },
+  {
+    "line": 2276,
+    "context": "2. 가상기억장치 구현 기법 (Virtual Memory Techniques)",
+    "old": "💡 **Mẹo ghi nhớ (Mnemonics):** "
+  },
+  {
+    "line": 2395,
+    "context": "3. IPv6 주소 (Internet Protocol version 6)",
+    "old": "💡 **Mẹo ghi nhớ (Mnemonics):** "
+  },
+  {
+    "line": 2423,
+    "context": "3. IPv6 주소 (Internet Protocol version 6)",
+    "old": "💡 **Mẹo ghi nhớ (Mnemonics):** "
+  },
+  {
+    "line": 2508,
+    "context": "2. 수학적 산정 기법",
+    "old": "💡 **Mẹo ghi nhớ (Mnemonics):** "
+  },
+  {
+    "line": 2593,
+    "context": "3. 경로 제어 (Routing) 및 흐름 제어 (Flow Control)",
+    "old": "💡 **Mẹo ghi nhớ (Mnemonics):** "
+  },
+  {
+    "line": 2681,
+    "context": "3. 주요 보안 약점 및 방어",
+    "old": "💡 **Mẹo ghi nhớ (Mnemonics):** "
+  },
+  {
+    "line": 2728,
+    "context": "3. 시스템 및 소프트웨어 공격",
+    "old": "💡 **Mẹo ghi nhớ (Mnemonics):** "
+  },
+  {
+    "line": 2786,
+    "context": "2. 보안 체계 3영역",
+    "old": "💡 **Mẹo ghi nhớ (Mnemonics):** "
+  },
+  {
+    "line": 2809,
+    "context": "2. 보안 체계 3영역",
+    "old": "- 💡 **Mẹo ghi nhớ**: Buffer Overflow = Bơm nước quá đầy làm tràn ly."
+  },
+  {
+    "line": 2826,
+    "context": "2. 보안 체계 3영역",
+    "old": "- 💡 **Mẹo ghi nhớ**: C-S-R-F = Cứ Sợ Rằng Fake (Sợ người dùng thật nhưng gửi request fake)."
+  },
+  {
+    "line": 2877,
+    "context": "2. 보안 체계 3영역",
+    "old": "- 💡 **Mẹo ghi nhớ**: "
+  },
+  {
+    "line": 2895,
+    "context": "2. 보안 체계 3영역",
+    "old": "- 💡 **Mẹo ghi nhớ**: Spoof = 속이다 (Fake/Giả mạo), Sniff = 킁킁거리다 (Nghe lén/Trộm xem)."
+  },
+  {
+    "line": 2911,
+    "context": "2. 보안 체계 3영역",
+    "old": "- 💡 **Mẹo ghi nhớ**: DAC = Danh tính, MAC = Mức độ bảo mật, RBAC = Role (Vai trò)."
+  }
+]

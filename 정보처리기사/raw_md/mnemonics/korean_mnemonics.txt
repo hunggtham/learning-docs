@@ -1,0 +1,1 @@
+564|||283. 운영체제의 구성 (OS Components / Cấu trúc HĐH)|||  - 💡 *Mẹo ghi nhớ*: 제어 (Điều khiển) = Giám sát, Công việc, Dữ liệu. 처리 (Xử lý) = Dịch ngôn ngữ, Tiện ích.

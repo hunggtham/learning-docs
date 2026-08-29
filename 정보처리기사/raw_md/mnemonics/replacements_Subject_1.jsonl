@@ -1,0 +1,43 @@
+{"line": 118, "new": "- 💡 **Mẹo ghi nhớ:** **Thác - Ốc - Nguyên - Lặp** (Thác nước, Xoắn ốc, Nguyên mẫu, Lặp lại)."}
+{"line": 125, "new": "- 💡 **Mẹo ghi nhớ:** **Lập - Phân - Phát - Đánh** (Lập kế hoạch, Phân tích rủi ro, Phát triển, Đánh giá)."}
+{"line": 144, "new": "- 💡 **Mẹo ghi nhớ:** **Cá - Biến - Động - Khách** (Cá nhân, Biến đổi, Hoạt động, Khách hàng)."}
+{"line": 154, "new": "- 💡 **Mẹo ghi nhớ:** **Sprint - Họp - Hằng ngày - Đánh giá** (Sprint, Họp kế hoạch, Họp hàng ngày, Đánh giá)."}
+{"line": 241, "new": "- 💡 **Mẹo ghi nhớ:** **Khách - Động - Cơ** (Khách thể/Đối tượng, Động thái, Cơ năng/Chức năng)."}
+{"line": 324, "new": "- 💡 **Mẹo ghi nhớ:** **Tạo - Cấu - Hành** (Khởi tạo, Cấu trúc, Hành vi)."}
+{"line": 363, "new": "- 💡 **Mẹo ghi nhớ:** **DB - RPC - MOM - TP - ORB - WAS** (Các loại Middleware chính)."}
+{"line": 454, "new": "- 💡 **Mẹo ghi nhớ:** **Khơi - Phân - Tả - Xác** (Khơi gợi, Phân tích, Đặc tả, Xác nhận)."}
+{"line": 527, "new": "- 💡 **Mẹo ghi nhớ:** **Chính - Rõ - Đủ - Nhất - Truy** (Chính xác, Rõ ràng, Đầy đủ, Nhất quán, Truy xuất được)."}
+{"line": 560, "new": "- 💡 **Mẹo ghi nhớ:** **Nhận - Phân - Bài - Biểu - Giản** (Nhận diện, Phân loại, Sắp xếp, Biểu diễn, Đơn giản hóa)."}
+{"line": 640, "new": "- 💡 **Mẹo ghi nhớ:** **Thống - Trữ - Vận - Công** (Thống nhất, Lưu trữ, Vận hành, Dùng chung)."}
+{"line": 647, "new": "- 💡 **Mẹo ghi nhớ:** **Thực - Kế - Đồng - Nội** (Thời gian thực, Liên tục, Đồng thời, Nội dung)."}
+{"line": 658, "new": "- 💡 **Mẹo ghi nhớ:** **Định - Thao - Kiểm** (Định nghĩa, Thao tác, Kiểm soát)."}
+{"line": 671, "new": "- 💡 **Mẹo ghi nhớ:** **Ngoại - Khái - Nội** (Ngoại vi, Khái niệm, Nội bộ)."}
+{"line": 693, "new": "- 💡 **Mẹo ghi nhớ:** **Cấu - Toán - Chế** (Cấu trúc, Toán tử, Ràng buộc)."}
+{"line": 721, "new": "- 💡 **Mẹo ghi nhớ:** **Yêu - Khái - Logic - Vật - Cụ** (Yêu cầu, Khái niệm, Logic, Vật lý, Cài đặt)."}
+{"line": 731, "new": "- 💡 **Mẹo ghi nhớ:** **Tuple đi với Cardinality (Số hàng), Thuộc tính (Cột) đi với Degree (Bậc).**"}
+{"line": 750, "new": "- 💡 **Mẹo ghi nhớ:** **Thực - Tham - Miền** (Thực thể, Tham chiếu, Miền giá trị)."}
+{"line": 778, "new": "- 💡 **Mẹo ghi nhớ:** **Miền - Phân - Chuyển - Quyết - Đa - Kết** (Domain, Phần, Chuyển tiếp, Quyết định, Đa trị, Kết nối)."}
+{"line": 813, "new": "- 💡 **Mẹo ghi nhớ:** **ACID (Nguyên - Nhất - Độc - Bền)** (Nguyên tử, Nhất quán, Độc lập, Bền vững)."}
+{"line": 826, "new": "- 💡 **Mẹo ghi nhớ:** **Lỗi: Giao - Hệ - Phương** (Giao dịch, Hệ thống, Phương tiện)."}
+{"line": 838, "new": "- 💡 **Mẹo ghi nhớ:** **A-PC-C (Thành công) / A-F-Ab (Thất bại)** (Active - Partially Committed - Committed / Active - Failed - Aborted)."}
+{"line": 852, "new": "- 💡 **Mẹo ghi nhớ:** **Mất - Chưa - Không - Dây** (Mất cập nhật, Đọc chưa commit, Không nhất quán, Lan dây chuyền)."}
+{"line": 857, "new": "- 💡 **Mẹo ghi nhớ:** **Khóa riêng = Nhanh, Nhiều khóa. Khóa công khai = Chậm, Ít khóa.**"}
+{"line": 865, "new": "- 💡 **Mẹo ghi nhớ:** **Vị - Nhân - Đồng - Lỗi** (Vị trí, Nhân bản, Đồng thời, Lỗi)."}
+{"line": 870, "new": "- 💡 **Mẹo ghi nhớ:** **Phi tuyến (Non-linear) là Tree & Graph, còn lại là Tuyến tính (Linear).**"}
+{"line": 916, "new": "- 💡 **Mẹo ghi nhớ:** **B - S - C - S - O** (Bucket, Slot, Collision, Synonym, Overflow)."}
+{"line": 924, "new": "- 💡 **Mẹo ghi nhớ:** **Chính - Chỉ - Tràn** (Prime, Index, Overflow)."}
+{"line": 940, "new": "- 💡 **Mẹo ghi nhớ:** **Khơi - Phân - Tả - Xác** (Khơi gợi, Phân tích, Đặc tả, Xác nhận)."}
+{"line": 966, "new": ""}
+{"line": 993, "new": "- 💡 **Mẹo ghi nhớ:** **Ý - Đơn - Dụng - Tồn - Tránh** (Ý nghĩa, Đơn giản, Sử dụng, Tồn tại, Tránh)."}
+{"line": 1008, "new": "- 💡 **Mẹo ghi nhớ:** **Trực - Hữu - Học - Hữu** (Trực quan, Hữu ích, Dễ học, Hữu hiệu)."}
+{"line": 1043, "new": "- 💡 **Mẹo ghi nhớ:** **Khách - Động - Cơ** (Khách thể, Động thái, Cơ năng)."}
+{"line": 1048, "new": "- 💡 **Mẹo ghi nhớ:** **Dữ - Tem - Cấu - Ngoại - Chung - Nội** (Dữ liệu, Tem, Cấu trúc, Ngoại vi, Chung, Nội dung - Từ Tốt đến Tệ)."}
+{"line": 1051, "new": "- 💡 **Mẹo ghi nhớ:** **Cơ - Tuần - Thông - Trình - Thời - Logic - Ngẫu** (Cơ năng, Tuần tự, Thông tin, Quy trình, Thời gian, Logic, Ngẫu nhiên - Từ Tốt đến Tệ)."}
+{"line": 1077, "new": "- 💡 **Mẹo ghi nhớ:** **Đồng nghiệp (Tự review) / Walkthrough (Họp ngắn) / Inspection (Chuyên gia soi).**"}
+{"line": 1227, "new": "- 💡 **Mẹo ghi nhớ:** **SOLID** (S = Single, O = Open, L = Liskov, I = Interface, D = Dependency)"}
+{"line": 1247, "new": "- 💡 **Mẹo ghi nhớ:** **Dữ - Tem - Cấu - Ngoại - Chung - Nội** (Data - Stamp - Control - External - Common - Content)."}
+{"line": 1280, "new": "- 💡 **Mẹo ghi nhớ:** **Cơ - Tuần - Giao - Trình - Thời - Logic - Ngẫu** (Functional - Sequential - Communicational - Procedural - Temporal - Logical - Coincidental)."}
+{"line": 1316, "new": "- 💡 **Mẹo ghi nhớ:** **Fan-In = Số người gọi VÀO tôi (Càng cao càng tốt) / Fan-Out = Số người tôi gọi RA (Càng thấp càng tốt).**"}
+{"line": 1337, "new": "- 💡 **Mẹo ghi nhớ:** **Chính - Rõ - Đủ - Nhất - Truy** (Chính xác, Rõ ràng, Đầy đủ, Nhất quán, Truy xuất)."}
+{"line": 1381, "new": "- 💡 **Mẹo ghi nhớ:** **\"Đừng phát minh lại bánh xe\" (Dùng lại Design Pattern đã có sẵn).**"}
+{"line": 1471, "new": "- 💡 **Mẹo ghi nhớ Middleware:** **DB - RPC - MOM - TP-Monitor - ORB - WAS**."}

@@ -1,0 +1,35 @@
+{"line": 28, "new": "- 💡 **Mẹo ghi nhớ:** CBD = \"Lego\" (lắp ráp các mảnh ghép có sẵn)."}
+{"line": 61, "new": "- 💡 **Mẹo ghi nhớ:** Các bước Reengineering: \"Phân Tích -> Tái Cấu Trúc -> Dịch Ngược -> Di Chuyển\"."}
+{"line": 129, "new": "- 💡 **Mẹo ghi nhớ:** I - M - D - Q - O."}
+{"line": 234, "new": "- 💡 **Mẹo ghi nhớ:** Điều kiện Deadlock: \"상점비환\" (Sang-jeom-bi-hwan). Tiếng Việt: 4K (Không chia sẻ - Độc quyền, Khư khư giữ - Giữ và đợi, Không tước đoạt, Không lối thoát - Đợi vòng)."}
+{"line": 321, "new": "- 💡 **Mẹo ghi nhớ:** Blue**Jacking** = **Spam message**. Blue**Snarf** = **Snatch files** (cướp file)."}
+{"line": 456, "new": "- 💡 **Mẹo ghi nhớ:** MO-Dem = MOdulation - DEModulation. D-SU = Digital - Digital."}
+{"line": 470, "new": "- 💡 **Mẹo ghi nhớ:** Quá trình PCM: \"표-양-부-복-여\". Tiếng Việt: \"Lấy - Lượng - Mã - Giải - Lọc\" (Lấy mẫu, Lượng tử hoá, Mã hoá, Giải mã, Lọc)."}
+{"line": 588, "new": "- 💡 **Mẹo ghi nhớ:** Chuyển đổi IPv4/IPv6: \"Dual - Tunnel - Translate\"."}
+{"line": 619, "new": "- 💡 **Mẹo ghi nhớ:** OSI 7: \"물-데-네-전-세-표-응\". Tiếng Việt: \"Vật Liền Mạng - Giao Phiên Trình Ứng\" (Vật lý - Liên kết dữ liệu - Mạng - Giao vận - Phiên - Trình diễn - Ứng dụng)."}
+{"line": 1479, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics)**: Oracle (오라클) giống như nhà tiên tri, luôn biết trước \"kết quả đúng\" để chúng ta so sánh."}
+{"line": 1486, "new": "- 💡 **Mẹo ghi nhớ**: Test Oracle: \"참-샘-추-일\" (Cham-Sam-Chu-Il) -> Thật (True) - Mẫu (Sampling) - Ước lượng (Heuristic) - Nhất quán (Consistent)."}
+{"line": 1505, "new": "- 💡 **Mẹo ghi nhớ**: Môi trường kiểm thử: \"드스슈케스목\" (Deu-Seu-Syu-Ke-Seu-Mok) - Driver, Stub, Suite, Case, Script, Mock."}
+{"line": 1564, "new": "- 💡 **Mẹo ghi nhớ**: Các bước thiết kế DB: \"요-개-논-물-구\" (Yo-Gae-Non-Mul-Gu). Tiếng Việt: \"Yêu - Khái - Lo - Vật - Triển\" (Yêu cầu, Khái niệm, Logic, Vật lý, Triển khai)."}
+{"line": 1593, "new": "- 💡 **Mẹo ghi nhớ**: \"튜카-속디\" (Tu-Ca-Sok-Di) -> Tuple-Cardinality (Hàng-Bản số), Sokseong-Degree (Thuộc tính-Bậc)."}
+{"line": 1644, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics)**: Chuẩn hóa DB: \"도-부-이-결-다-조\" (Do-Bu-I-Gyeol-Da-Jo) -> Câu vui: \"Đậu phụ này, kết cục là cho tất à?\" (Domain - Phần - Bắc cầu - Quyết định - Đa trị - Join)."}
+{"line": 1924, "new": "- 💡 **Mẹo ghi nhớ**: `&`(And)는 주소(Address), `*`(Star)는 값(Value)을 가리킨다고 기억하세요."}
+{"line": 1946, "new": "💡 **Mẹo ghi nhớ (Mnemonics):** "}
+{"line": 1968, "new": "💡 **Mẹo ghi nhớ (Mnemonics):** "}
+{"line": 2008, "new": "💡 **Mẹo ghi nhớ (Mnemonics):** "}
+{"line": 2035, "new": "💡 **Mẹo ghi nhớ (Mnemonics):** "}
+{"line": 2175, "new": "💡 **Mẹo ghi nhớ (Mnemonics):** "}
+{"line": 2218, "new": "💡 **Mẹo ghi nhớ (Mnemonics):** "}
+{"line": 2276, "new": "💡 **Mẹo ghi nhớ (Mnemonics):** "}
+{"line": 2395, "new": "💡 **Mẹo ghi nhớ (Mnemonics):** "}
+{"line": 2423, "new": "💡 **Mẹo ghi nhớ (Mnemonics):** "}
+{"line": 2508, "new": "💡 **Mẹo ghi nhớ (Mnemonics):** "}
+{"line": 2593, "new": "💡 **Mẹo ghi nhớ (Mnemonics):** "}
+{"line": 2681, "new": "💡 **Mẹo ghi nhớ (Mnemonics):** "}
+{"line": 2728, "new": "💡 **Mẹo ghi nhớ (Mnemonics):** "}
+{"line": 2786, "new": "💡 **Mẹo ghi nhớ (Mnemonics):** "}
+{"line": 2809, "new": "- 💡 **Mẹo ghi nhớ**: Buffer Overflow = Bơm nước quá đầy làm tràn ly."}
+{"line": 2826, "new": "- 💡 **Mẹo ghi nhớ**: C-S-R-F = Cứ Sợ Rằng Fake (Sợ người dùng thật nhưng gửi request fake)."}
+{"line": 2877, "new": "- 💡 **Mẹo ghi nhớ**: "}
+{"line": 2895, "new": "- 💡 **Mẹo ghi nhớ**: Spoof = 속이다 (Fake/Giả mạo), Sniff = 킁킁거리다 (Nghe lén/Trộm xem)."}
+{"line": 2911, "new": "- 💡 **Mẹo ghi nhớ**: DAC = Danh tính, MAC = Mức độ bảo mật, RBAC = Role (Vai trò)."}

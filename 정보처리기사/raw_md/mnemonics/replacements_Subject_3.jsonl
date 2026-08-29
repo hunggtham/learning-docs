@@ -1,0 +1,18 @@
+{"line": 8, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Thiết kế **Khái** niệm là quá trình **Trừu** tượng hóa (Khái-Trừu)."}
+{"line": 14, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Thiết kế **Logic** là quá trình chuyển đổi thành **Bảng** (Logic-Bảng)."}
+{"line": 21, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Thiết kế **Vật lý** liên quan đến cấu trúc **Lưu trữ** thực tế (Vật lý - Lưu trữ)."}
+{"line": 32, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Mô hình dữ liệu gồm: **Cấu** trúc, **Toán** tử (phép toán), và Ràng **buộc** (Cấu - Toán - Buộc)."}
+{"line": 50, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** **Tu-Ca** (Tuple = Cardinality - số hàng) và **At-De** (Attribute = Degree - số cột)."}
+{"line": 99, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Chuẩn hóa: **Đồ** (Domain) -> **Bếp** (Bộ phận) -> **I** (Bắc cầu) -> **Kết** (Quyết định) -> **Đa** (Đa trị) -> **Giò** (Join). (Đồ-Bếp-I-Kết-Đa-Giò)."}
+{"line": 153, "new": "- 💡 **Mẹo ghi nhớ (Mnemonics):** Thiết kế CSDL: **Yêu** (Yêu cầu) -> **Khái** (Khái niệm) -> **Logic** -> **Vật** (Vật lý) -> **Cài** (Cài đặt)."}
+{"line": 406, "new": "> 💡 **Mẹo ghi nhớ (Mnemonics):**"}
+{"line": 455, "new": "> 💡 **Mẹo ghi nhớ (Mnemonics):**"}
+{"line": 468, "new": "> 💡 **Mẹo ghi nhớ (Mnemonics):** Lược đồ: **Ngoại** (Người dùng nhìn) -> **Khái** (Thiết kế tổng) -> **Nội** (Lưu trữ vật lý)."}
+{"line": 554, "new": "> 💡 **Mẹo ghi nhớ (Mnemonics):** Giao dịch **ACID**: Atomicity (Nguyên tử), Consistency (Nhất quán), Isolation (Cô lập), Durability (Bền vững)."}
+{"line": 589, "new": "> 💡 **Mẹo ghi nhớ (Mnemonics):** Thiết kế: **Yêu** (Yêu cầu) -> **Khái** (Khái niệm) -> **Logic** (Chuẩn hóa) -> **Vật lý** (Access Path/Lưu trữ)."}
+{"line": 605, "new": "> 💡 **Mẹo ghi nhớ (Mnemonics):** **Tu-Ca** (Tuple = Cardinality) và **At-De** (Attribute = Degree)."}
+{"line": 669, "new": "> 💡 **Mẹo ghi nhớ (Mnemonics):** Chọn **Hàng** dùng **Select** (Select-Hàng), Chọn **Cột** dùng **Project** (Project-Cột)."}
+{"line": 683, "new": "| 정규형 (Chuẩn) | 조건 (Điều kiện để đạt được) | Mẹo ghi nhớ (VN) |"}
+{"line": 692, "new": "> 💡 **Mẹo ghi nhớ (Mnemonics):** Trình tự chuẩn hóa: **Đồ** (Domain - Nguyên tử) -> **Bếp** (Bộ phận - Phụ thuộc 1 phần) -> **I** (Bắc cầu) -> **Kết** (Quyết định - Khóa ứng viên) -> **Đa** (Đa trị) -> **Giò** (Join - Kết nối)."}
+{"line": 741, "new": "> 💡 **Mẹo ghi nhớ (Mnemonics):** Mã hóa đối xứng (Private Key): Dùng 1 khóa **Cá nhân**, tốc độ **Nhanh** nhưng **Khó quản lý** khóa."}
+{"line": 809, "new": "> 💡 **Mẹo ghi nhớ (Mnemonics):** Thứ tự ưu tiên: **Toán** học (+ - * /) -> **Quan** hệ (> < =) -> **Logic** (AND OR NOT)."}
