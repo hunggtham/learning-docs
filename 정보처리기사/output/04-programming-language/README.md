@@ -1,0 +1,98 @@
+# Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)
+
+## Bài học
+
+1. [Tài liệu học đầy đủ](01-tai-lieu-hoc-day-du.md)
+
+## Các bài học theo chủ đề
+
+1. [프로그래밍 언어 기초 (Programming Language Basics)](lessons/01-bai-hoc.md)
+2. [프로그래밍 언어 기초 (Mở rộng) (Programming Language Basics - Extended)](lessons/02-bai-hoc.md)
+3. [072 - 073. 데이터 타입, 변수 및 연산자 (Data Types, Variables & Operators)](lessons/03-bai-hoc.md)
+4. [233. C/C++의 데이터 타입 크기 (Data Type Sizes in C/C++)](lessons/04-bai-hoc.md)
+5. [235. JAVA의 데이터 타입 크기 (Data Type Sizes in JAVA)](lessons/05-bai-hoc.md)
+6. [087. 환경변수와 쉘 스크립트 명령어 (Environment Variables & Shell Scripts)](lessons/06-bai-hoc.md)
+7. [237. 변수명 작성 규칙 (Variable Naming Rules)](lessons/07-bai-hoc.md)
+8. [연산자 (Operators)](lessons/08-bai-hoc.md)
+9. [연산자 심화 (Operators - Advanced)](lessons/09-bai-hoc.md)
+10. [239 - 243. 연산자 (Operators)](lessons/10-bai-hoc.md)
+11. [244. 조건(삼항) 연산자 (Ternary Operator)](lessons/11-bai-hoc.md)
+12. [245. 연산자 우선순위 (Operator Precedence)](lessons/12-bai-hoc.md)
+13. [입출력 (Input/Output)](lessons/13-bai-hoc.md)
+14. [입출력 심화 (Input/Output - Advanced)](lessons/14-bai-hoc.md)
+15. [074. 데이터 입출력 (Data Input/Output)](lessons/15-bai-hoc.md)
+16. [246 - 249. 입출력 함수와 포맷 (I/O Functions & Formats)](lessons/16-bai-hoc.md)
+17. [제어문 (Control Statements)](lessons/17-bai-hoc.md)
+18. [제어문 심화 (Control Statements - Advanced)](lessons/18-bai-hoc.md)
+19. [구조체, 배열 및 포인터 (Structs, Arrays, and Pointers)](lessons/19-bai-hoc.md)
+20. [배열 심화 (Arrays - Advanced)](lessons/20-bai-hoc.md)
+21. [배열과 포인터 심화 (Arrays & Pointers - Advanced)](lessons/21-bai-hoc.md)
+22. [075 - 077. 배열, 조건문, 반복문 (Arrays, Conditionals & Loops)](lessons/22-bai-hoc.md)
+23. [258 - 261. 배열과 문자열 (Arrays & Strings)](lessons/23-bai-hoc.md)
+24. [262 - 263. 포인터 (Pointers)](lessons/24-bai-hoc.md)
+25. [Python 기초 (Python Basics)](lessons/25-bai-hoc.md)
+26. [Python 기본 문법 (Python Basic Syntax)](lessons/26-bai-hoc.md)
+27. [236. Python의 시퀀스 자료형 (Sequence Data Types in Python)](lessons/27-bai-hoc.md)
+28. [264 - 274. 파이썬 문법 (Python Syntax & Basics)](lessons/28-bai-hoc.md)
+29. [라이브러리 및 예외 처리 (Libraries & Exception Handling)](lessons/29-bai-hoc.md)
+30. [080 - 081. 라이브러리와 예외처리 (Libraries & Exception Handling)](lessons/30-bai-hoc.md)
+31. [279 - 280. 라이브러리 (Library)](lessons/31-bai-hoc.md)
+32. [스크립트 및 운영체제 (Script Languages & Operating Systems)](lessons/32-bai-hoc.md)
+33. [운영체제 - 메모리 및 프로세스 관리 (OS - Memory & Process Management)](lessons/33-bai-hoc.md)
+34. [운영체제 (Operating Systems)](lessons/34-bai-hoc.md)
+35. [082. 운영체제 기능 및 종류 (Operating System OS)](lessons/35-bai-hoc.md)
+36. [282. 운영체제의 정의 및 목적 (Definition & Purpose of OS)](lessons/36-bai-hoc.md)
+37. [283 - 288. 운영체제 구성 및 UNIX 시스템 (OS & UNIX)](lessons/37-bai-hoc.md)
+38. [083. 메모리 관리 기법 - 배치 전략 (Memory Placement Strategies)](lessons/38-bai-hoc.md)
+39. [289 - 296. 메모리 관리 및 가상 기억장치 (Memory Management)](lessons/39-bai-hoc.md)
+40. [프로세스 관리 (Process Management)](lessons/40-bai-hoc.md)
+41. [085. 프로세스 및 스레드 (Process & Thread)](lessons/41-bai-hoc.md)
+42. [086. 프로세스 스케줄링 (Process Scheduling)](lessons/42-bai-hoc.md)
+43. [086. 프로세스 스케줄링과 교착상태 (Process Scheduling & Deadlock) - 계속](lessons/43-bai-hoc.md)
+44. [297 - 302. 프로세스와 스레드, 스케줄링 (Processes, Threads & Scheduling)](lessons/44-bai-hoc.md)
+45. [네트워크 통신 (Network Communication)](lessons/45-bai-hoc.md)
+46. [네트워크 프로토콜 및 장비 심화 (Network Protocols & Devices - Advanced)](lessons/46-bai-hoc.md)
+47. [088. 인터넷 구성과 네트워크 - OSI 7계층 (OSI 7 Layer)](lessons/47-bai-hoc.md)
+48. [088. 인터넷 구성과 네트워크 - TCP vs UDP & 흐름/오류 제어](lessons/48-bai-hoc.md)
+49. [309 - 314. OSI 7계층과 네트워크 프로토콜 (OSI 7 Layers & Protocols)](lessons/49-bai-hoc.md)
+50. [089. IP와 서브네팅, IPv4 vs IPv6 (IP & Subnetting)](lessons/50-bai-hoc.md)
+51. [252. 다중 if문 (Multiple if Statement)](lessons/51-bai-hoc.md)
+52. [305 - 308. IP 주소 체계 (IPv4 vs IPv6)](lessons/52-bai-hoc.md)
+53. [프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)](lessons/53-bai-hoc.md)
+54. [가상기억장치 및 페이지 교체 (Virtual Memory & Page Replacement)](lessons/54-bai-hoc.md)
+55. [070. 서버개발 프레임워크 (Server Development Framework)](lessons/55-bai-hoc.md)
+56. [071. 보안 취약성 식별 (Security Vulnerability Identification / Lỗ hổng bảo mật)](lessons/56-bai-hoc.md)
+57. [078. 사용자 정의 함수와 클래스 (User Defined Functions & Classes)](lessons/57-bai-hoc.md)
+58. [079. 프로그래밍 언어의 종류 (Types of Programming Languages)](lessons/58-bai-hoc.md)
+59. [084. 페이지 교체 알고리즘 (Page Replacement Algorithms / Thuật toán thay thế trang nhớ)](lessons/59-bai-hoc.md)
+60. [교착상태 필요충분조건 1 - 상호배제 (Deadlock Conditions - Mutual Exclusion)](lessons/60-bai-hoc.md)
+61. [추가: 응용 SW 기초 기술 (4과목 핵심 요약 1)](lessons/61-bai-hoc.md)
+62. [232. 배치 프로그램 (Batch Program)](lessons/62-bai-hoc.md)
+63. [234. C언어의 구조체 (struct in C)](lessons/63-bai-hoc.md)
+64. [238. 가비지 콜렉터 (Garbage Collector)](lessons/64-bai-hoc.md)
+65. [250. JAVA에서의 표준 출력 (Standard Output in JAVA)](lessons/65-bai-hoc.md)
+66. [251. 단순 if문 (Simple if Statement)](lessons/66-bai-hoc.md)
+67. [253. switch문 (switch Statement)](lessons/67-bai-hoc.md)
+68. [254 - 257. 반복문과 제어 키워드 (Loops & Control Keywords)](lessons/68-bai-hoc.md)
+69. [275 - 278. 프로그래밍 언어의 종류 (Types of Programming Languages)](lessons/69-bai-hoc.md)
+70. [281. 매시업과 SOA (SW Related Terms: Mashup & SOA)](lessons/70-bai-hoc.md)
+71. [226 - 227. 데이터베이스 접속 기술 (Database Connectivity)](lessons/71-bai-hoc.md)
+72. [인터프리터 언어 (Interpreter Languages / Ngôn ngữ thông dịch)](lessons/72-bai-hoc.md)
+73. [284 & 294. 구역성 (Locality / Tính cục bộ)](lessons/73-bai-hoc.md)
+74. [285 & 295. 워킹 셋 (Working Set / Tập làm việc)](lessons/74-bai-hoc.md)
+75. [287. UNIX 시스템의 구성 (Cấu trúc hệ thống UNIX)](lessons/75-bai-hoc.md)
+76. [292. 페이지 교체 알고리즘 (Thuật toán thay thế trang / Page Replacement)](lessons/76-bai-hoc.md)
+77. [298. PCB (Process Control Block)](lessons/77-bai-hoc.md)
+
+## Ghi chú học
+
+- Thuật ngữ giữ tiếng Hàn để đối chiếu đề thi, theo sau là English và nghĩa Việt khi nguồn có nêu.
+- Đọc ví dụ ngay sau khái niệm vì các bài có nhiều cặp dễ nhầm như `결합도 (Coupling) (độ phụ thuộc)` và `응집도 (Cohesion) (độ gắn kết)`.
+- Phần mở rộng/nâng cao không phải nội dung rời: nó nhắc lại kiến thức nền ở mức sâu hơn hoặc trong ngữ cảnh khác.
+
+## 복습 체크리스트 (Checklist ôn tập)
+
+- [ ] 한국어 용어를 보고 English와 Tiếng Việt 의미를 말할 수 있는가?
+- [ ] 정의와 목적을 한 문장으로 설명할 수 있는가?
+- [ ] 비슷한 개념과 구별 기준을 말할 수 있는가?
+- [ ] 예시 또는 간단한 문제에 개념을 적용할 수 있는가?
