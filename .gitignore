@@ -12,3 +12,5 @@ build/
 *.mts
 *.rar
 *.webloc
+# Large IELTS archive (4+ GB); keep outside Git history.
+ielts/
