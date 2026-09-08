@@ -1,3 +1,159 @@
 {
-  "allowedDocuments": []
+  "version": 1,
+  "allowedDocuments": [
+    {
+      "path": "dev_everyday/everyday.md",
+      "title": "Everyday notes",
+      "category": "Personal",
+      "language": "vi",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "10_backend/java/java_beginner_explained_with_senior_notes.md",
+      "title": "Java: Beginner explained with senior notes",
+      "category": "Backend",
+      "language": "vi-en",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "10_backend/putty_ssh_linux_server_commands_extended.md",
+      "title": "PuTTY, SSH and Linux server commands",
+      "category": "Backend",
+      "language": "vi-en",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "10_frontend/css/CSS_Beginner_to_Senior_2026_v2.md",
+      "title": "CSS: Beginner to Senior",
+      "category": "Frontend",
+      "language": "vi-en",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "10_frontend/css/CSS_Master_Supplement_2026.md",
+      "title": "CSS Master Supplement",
+      "category": "Frontend",
+      "language": "vi-en",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "10_frontend/scss/SCSS_Beginner_to_Senior_2026.md",
+      "title": "SCSS: Beginner to Senior",
+      "category": "Frontend",
+      "language": "vi-en",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "10_frontend/scss/SCSS_Master_Supplement_2026.md",
+      "title": "SCSS Master Supplement",
+      "category": "Frontend",
+      "language": "vi-en",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "10_frontend/tailwind/TailwindCSS_Beginner_to_Senior_2026.md",
+      "title": "Tailwind CSS: Beginner to Senior",
+      "category": "Frontend",
+      "language": "vi-en",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "10_frontend/tailwind/TailwindCSS_Beginner_to_Senior_2026_REWRITTEN.md",
+      "title": "Tailwind CSS: Beginner to Senior (rewritten)",
+      "category": "Frontend",
+      "language": "vi-en",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "10_frontend/tailwind/TailwindCSS_Master_Supplement_2026.md",
+      "title": "Tailwind CSS Master Supplement",
+      "category": "Frontend",
+      "language": "vi-en",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "10_frontend/tailwind/TailwindCSS_Master_Supplement_2026_REWRITTEN.md",
+      "title": "Tailwind CSS Master Supplement (rewritten)",
+      "category": "Frontend",
+      "language": "vi-en",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "ielts_docs/output/english_structures_beginner.md",
+      "title": "English Structures — Beginner",
+      "category": "English",
+      "language": "en-vi",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "ielts_docs/output/english_structures_pre_intermediate.md",
+      "title": "English Structures — Pre-Intermediate",
+      "category": "English",
+      "language": "en-vi",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "ielts_docs/output/english_structures_intermediate.md",
+      "title": "English Structures — Intermediate",
+      "category": "English",
+      "language": "en-vi",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "ielts_docs/output/grammar/english_structures_beginner_revised.md",
+      "title": "English Structures — Beginner (revised)",
+      "category": "English",
+      "language": "en-vi",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "ielts_docs/output/grammar/english_structures_pre_intermediate_revised.md",
+      "title": "English Structures — Pre-Intermediate (revised)",
+      "category": "English",
+      "language": "en-vi",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "ielts_docs/output/grammar/english_structures_intermediate_revised.md",
+      "title": "English Structures — Intermediate (revised)",
+      "category": "English",
+      "language": "en-vi",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "ielts_docs/output/grammar/english_structures_pre_advanced_revised.md",
+      "title": "English Structures — Pre-Advanced",
+      "category": "English",
+      "language": "en-vi",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "ielts_docs/output/grammar/english_structures_advanced_revised.md",
+      "title": "English Structures — Advanced",
+      "category": "English",
+      "language": "en-vi",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "ielts_docs/output/grammar/english_structures_advanced_plus_plus_revised.md",
+      "title": "English Structures — Advanced++",
+      "category": "English",
+      "language": "en-vi",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "ielts_docs/output/cert/ielts_complete_exam_guide.md",
+      "title": "IELTS Complete Exam Guide",
+      "category": "English exams",
+      "language": "en-vi",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "ielts_docs/output/cert/toeic_complete_exam_guide.md",
+      "title": "TOEIC Complete Exam Guide",
+      "category": "English exams",
+      "language": "en-vi",
+      "rights": "author-confirmed"
+    }
+  ]
 }
