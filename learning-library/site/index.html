@@ -6,6 +6,17 @@
     <meta name="theme-color" content="#111827" />
     <title>Study Shelf</title>
     <link rel="stylesheet" href="./styles.css" />
+    <style>
+      .doc-card h3 { margin-bottom: 8px; }
+      .doc-language { margin: 0 0 8px; color: var(--muted); font-size: .75rem; }
+      .publish-note { margin: 18px 0 0; color: var(--muted); font-size: .84rem; }
+      .reader-actions { display: flex; flex-wrap: wrap; gap: 20px; }
+      @media (max-width: 760px) {
+        .doc-language { font-size: .7rem; }
+        .reader-actions { display: block; }
+        .reader-actions .open-file { width: 100%; justify-content: center; border: 1px solid var(--accent); border-radius: 9px; background: var(--accent-soft); text-decoration: none; }
+      }
+    </style>
   </head>
   <body>
     <header class="topbar">
@@ -22,6 +33,7 @@
         <p class="eyebrow">PERSONAL KNOWLEDGE LIBRARY</p>
         <h1>공부 자료를<br /><em>한곳에서, 편하게.</em></h1>
         <p class="hero-copy">Markdown 노트와 PDF 자료를 빠르게 찾아 읽을 수 있는 개인 학습 서재입니다.</p>
+        <p class="publish-note">Chỉ các tài liệu đã được chủ sở hữu xác nhận quyền xuất bản mới xuất hiện ở đây.</p>
         <label class="search-box">
           <span aria-hidden="true">⌕</span>
           <input id="search" type="search" placeholder="제목 또는 경로로 검색…" autocomplete="off" />
@@ -33,7 +45,8 @@
           <div><p class="eyebrow">LIBRARY</p><h2 id="result-title">모든 자료</h2></div>
           <p id="result-count" class="muted"></p>
         </div>
-        <div id="filters" class="filters" aria-label="Document filters"></div>
+        <div id="format-filters" class="filters" aria-label="File type filters"></div>
+        <div id="filters" class="filters" aria-label="Document category filters"></div>
         <div id="document-grid" class="document-grid"></div>
       </section>
     </template>

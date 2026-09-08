@@ -23,6 +23,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
+      - name: Audit publication manifest
+        working-directory: learning-library
+        run: npm run audit:library
       - name: Build document index and site artifact
         run: node learning-library/scripts/build-library.mjs
       - uses: actions/upload-pages-artifact@v3

@@ -1,6 +1,5 @@
 import { cp, mkdir, readdir, rm, stat, writeFile } from 'node:fs/promises';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
 import { auditEntries, contentRoot, loadConfig, normalizeEntry, projectRoot } from './audit-library.mjs';
 
 const outRoot = path.join(projectRoot, 'site/library');

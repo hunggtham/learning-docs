@@ -65,6 +65,10 @@ export async function auditEntries(config) {
       continue;
     }
 
+    if (!['author-confirmed', 'permission-confirmed', 'open-license'].includes(entry.rights)) {
+      errors.push(`${entry.path || '(missing path)'}: rights phải là author-confirmed, permission-confirmed hoặc open-license`);
+    }
+
     const relativePath = entry.path.replaceAll('\\', '/');
     if (seen.has(relativePath)) {
       errors.push(`${relativePath}: bị khai báo trùng`);

@@ -7,6 +7,8 @@ A lightweight GitHub Pages reader for the Markdown and PDF files stored in this 
 - Builds a searchable document catalogue from an explicit allow-list of `.md` and `.pdf` files.
 - Renders Markdown in a clean reading layout with a table of contents.
 - Opens PDFs in the browser's native PDF reader.
+- Lets readers filter by Markdown/PDF and open or download the original file.
+- Runs a fail-closed publication audit before copying anything into the Pages artifact.
 - Works as a static site: no account, database, or server is required.
 
 ## Local preview
@@ -22,15 +24,29 @@ Then open `http://localhost:4173`.
 
 ## Add a document safely
 
-Only files named in `library.config.json` are copied into the published site. Add a path **only after confirming you own it, have redistribution permission, or it has a compatible open licence/public-domain status**:
+Only files named in `library.config.json` are copied into the published site. Add a path **only after confirming you own it, have redistribution permission, or it has a compatible open licence/public-domain status**. Audit first:
+
+```bash
+npm run audit:library
+```
+
+Then add an object so the title/category/language shown in the catalogue are explicit:
 
 ```json
 {
   "allowedDocuments": [
-    "dev_everyday/everyday.md"
+    {
+      "path": "dev_everyday/everyday.md",
+      "title": "Everyday notes",
+      "category": "Personal",
+      "language": "vi",
+      "rights": "author-confirmed"
+    }
   ]
 }
 ```
+
+See [PUBLISHING.md](PUBLISHING.md) for the current Korean/English source review and the paths intentionally held back.
 
 ## GitHub Pages setup
 

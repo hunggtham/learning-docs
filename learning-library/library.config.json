@@ -2,13 +2,6 @@
   "version": 1,
   "allowedDocuments": [
     {
-      "path": "dev_everyday/everyday.md",
-      "title": "Everyday notes",
-      "category": "Personal",
-      "language": "vi",
-      "rights": "author-confirmed"
-    },
-    {
       "path": "10_backend/java/java_beginner_explained_with_senior_notes.md",
       "title": "Java: Beginner explained with senior notes",
       "category": "Backend",

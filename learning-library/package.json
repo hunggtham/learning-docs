@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "build:library": "node scripts/build-library.mjs",
+    "audit:library": "node scripts/audit-library.mjs",
     "serve": "python3 -m http.server 4173 --directory site"
   }
 }
