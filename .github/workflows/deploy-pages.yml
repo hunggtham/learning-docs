@@ -1,8 +1,9 @@
-name: Build and deploy Study Shelf
+name: Deploy Study Shelf
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
@@ -11,25 +12,36 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: study-shelf-pages
   cancel-in-progress: true
 
 jobs:
   deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/configure-pages@v5
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
       - name: Audit publication manifest
         working-directory: learning-library
         run: npm run audit:library
-      - name: Build document index and site artifact
+
+      - name: Build Study Shelf
         run: node learning-library/scripts/build-library.mjs
-      - uses: actions/upload-pages-artifact@v3
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
           path: learning-library/site
-      - id: deployment
+
+      - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
