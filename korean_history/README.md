@@ -1,0 +1,17 @@
+# Master Knowledge Book — Lịch sử Hàn Quốc
+
+Bộ tài liệu này được thiết kế như một **knowledge library** độc lập về lịch sử bán đảo Triều Tiên và lịch sử Đại Hàn Dân Quốc, viết chủ yếu bằng tiếng Việt. Nó không phải timeline để học thuộc, cũng không phải tài liệu luyện thi 한국사능력검정시험. Mục tiêu là giải thích **vì sao một trật tự lịch sử hình thành, cơ chế nào giữ nó tồn tại, cú sốc nào làm nó thay đổi và phần nào của quá khứ vẫn còn tác động đến hiện tại**.
+
+Lịch sử ở đây được đọc theo First-Principles Thinking (제1원리 사고). Một triều đại không chỉ là tên vua và niên đại. Ta sẽ hỏi nhà nước huy động thuế và quân đội bằng cách nào, tri thức được lưu trữ ra sao, ai có quyền tiếp cận đất đai, công nghệ làm thay đổi năng suất thế nào, chiến tranh làm biến dạng demographic structure ra sao, và vì sao một institution có thể tiếp tục tồn tại dù regime đã thay đổi.
+
+## Cách sử dụng
+
+Bắt đầu từ [`00_index_and_dependency.md`](00_index_and_dependency.md). Nếu cần một đường đọc tuyến tính, hãy đi từ 01 đến 25. Nếu đã có kiến thức lịch sử cơ bản, các file 26–29 cho phép đọc theo các trục xuyên thời gian như social history, economic history, history of knowledge và public memory. File 30 là chronology để tra nhanh; file 31 là glossary Việt–Anh–Hàn và bản đồ nguồn.
+
+Các chương cố ý phân biệt giữa **fact tương đối chắc**, **cách diễn giải của sử học**, **ký ức tập thể** và **narrative quốc gia**. Với các vấn đề còn tranh luận, tài liệu tránh biến một cách kể duy nhất thành chân lý tuyệt đối.
+
+## Nguồn nền
+
+Xương sống periodization và chronology được đối chiếu với National Institute of Korean History (국사편찬위원회, NIKH), đặc biệt *A History of Korea* và 우리역사넷; các vấn đề văn hoá–xã hội tham chiếu Academy of Korean Studies (한국학중앙연구원) và 한국민족문화대백과사전; hiện vật và lịch sử vật chất đối chiếu National Museum of Korea. Những nguồn này không loại bỏ nhu cầu đọc nghiên cứu học thuật đa góc nhìn, nhưng tạo một baseline tốt để tránh sai niên đại và nhầm thuật ngữ.
+
+> Lịch sử không phải một chuỗi “sự kiện đã xảy ra”. Nó là quá trình một state của xã hội chuyển thành state khác dưới tác động đồng thời của quyền lực, tài nguyên, công nghệ, tư tưởng, môi trường và lựa chọn của con người.
