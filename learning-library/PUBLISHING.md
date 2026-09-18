@@ -1,6 +1,6 @@
 # Publishing checklist
 
-`library.config.json` is the only publication manifest. The Pages workflow copies only the files listed there; adding a file to the repository does not publish it.
+`library.config.json` is the only publication manifest. The Pages workflow copies only files under reviewed `allowedPrefixes` or explicit `allowedDocuments`; adding a file to the repository does not publish it.
 
 Before adding a Markdown or PDF file, confirm one of these in your own records:
 
@@ -31,4 +31,4 @@ To publish an approved file, add one object to `allowedDocuments`:
 }
 ```
 
-Use `npm run audit:library` before `npm run build:library`. The site supports both `.md` and `.pdf`; a PDF should only be added after its redistribution rights are confirmed.
+Use `npm run audit:library` before `npm run build:library`. The site supports both `.md` and `.pdf`; Markdown under an approved prefix is discovered automatically, while PDFs remain explicit per-file entries after redistribution rights are confirmed. `raw` and `raw_md` are always skipped, and `output` is flattened only for display.

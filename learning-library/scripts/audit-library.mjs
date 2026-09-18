@@ -53,6 +53,49 @@ function pathProblem(relativePath) {
   return null;
 }
 
+export async function auditFile(relativePath, entry = {}) {
+  const errors = [];
+  const warnings = [];
+  if (!['author-confirmed', 'permission-confirmed', 'open-license'].includes(entry.rights)) {
+    errors.push(`${relativePath}: rights phải là author-confirmed, permission-confirmed hoặc open-license`);
+  }
+  if (relativePath.startsWith('/') || relativePath.includes('..')) {
+    errors.push(`${relativePath}: path phải tương đối và không được chứa ..`);
+    return { errors, warnings };
+  }
+  if (!/\.(md|pdf)$/i.test(relativePath)) {
+    errors.push(`${relativePath}: chỉ cho phép .md hoặc .pdf`);
+    return { errors, warnings };
+  }
+  const blockedReason = pathProblem(relativePath);
+  if (blockedReason) {
+    errors.push(`${relativePath}: ${blockedReason}`);
+    return { errors, warnings };
+  }
+  const absolutePath = path.resolve(contentRoot, relativePath);
+  if (!absolutePath.startsWith(`${contentRoot}${path.sep}`)) {
+    errors.push(`${relativePath}: path thoát khỏi content root`);
+    return { errors, warnings };
+  }
+  try {
+    const info = await stat(absolutePath);
+    if (!info.isFile()) errors.push(`${relativePath}: không phải file`);
+    if (info.size === 0) warnings.push(`${relativePath}: file rỗng`);
+    if (/\.md$/i.test(relativePath)) {
+      const content = await readFile(absolutePath, 'utf8');
+      for (const pattern of blockedContentPatterns) {
+        if (pattern.test(content)) {
+          errors.push(`${relativePath}: nội dung khớp mẫu bản quyền (${pattern})`);
+          break;
+        }
+      }
+    }
+  } catch {
+    errors.push(`${relativePath}: file không tồn tại`);
+  }
+  return { errors, warnings };
+}
+
 export async function auditEntries(config) {
   const errors = [];
   const warnings = [];
@@ -65,10 +108,6 @@ export async function auditEntries(config) {
       continue;
     }
 
-    if (!['author-confirmed', 'permission-confirmed', 'open-license'].includes(entry.rights)) {
-      errors.push(`${entry.path || '(missing path)'}: rights phải là author-confirmed, permission-confirmed hoặc open-license`);
-    }
-
     const relativePath = entry.path.replaceAll('\\', '/');
     if (seen.has(relativePath)) {
       errors.push(`${relativePath}: bị khai báo trùng`);
@@ -76,41 +115,9 @@ export async function auditEntries(config) {
     }
     seen.add(relativePath);
 
-    if (relativePath.startsWith('/') || relativePath.includes('..')) {
-      errors.push(`${relativePath}: path phải tương đối và không được chứa ..`);
-      continue;
-    }
-    if (!/\.(md|pdf)$/i.test(relativePath)) {
-      errors.push(`${relativePath}: chỉ cho phép .md hoặc .pdf`);
-      continue;
-    }
-    const blockedReason = pathProblem(relativePath);
-    if (blockedReason) {
-      errors.push(`${relativePath}: ${blockedReason}`);
-      continue;
-    }
-
-    const absolutePath = path.resolve(contentRoot, relativePath);
-    if (!absolutePath.startsWith(`${contentRoot}${path.sep}`)) {
-      errors.push(`${relativePath}: path thoát khỏi content root`);
-      continue;
-    }
-    try {
-      const info = await stat(absolutePath);
-      if (!info.isFile()) errors.push(`${relativePath}: không phải file`);
-      if (info.size === 0) warnings.push(`${relativePath}: file rỗng`);
-      if (/\.md$/i.test(relativePath)) {
-        const content = await readFile(absolutePath, 'utf8');
-        for (const pattern of blockedContentPatterns) {
-          if (pattern.test(content)) {
-            errors.push(`${relativePath}: nội dung khớp mẫu bản quyền (${pattern})`);
-            break;
-          }
-        }
-      }
-    } catch {
-      errors.push(`${relativePath}: file không tồn tại`);
-    }
+    const result = await auditFile(relativePath, entry);
+    errors.push(...result.errors);
+    warnings.push(...result.warnings);
   }
 
   return { errors, warnings, count: seen.size };

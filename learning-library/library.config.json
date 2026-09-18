@@ -1,5 +1,38 @@
 {
   "version": 1,
+  "ignoredSegments": [
+    "input",
+    "notion",
+    "generated_markdown",
+    "generated_markdown_translated",
+    "workflow-output"
+  ],
+  "allowedPrefixes": [
+    {
+      "path": "10_backend",
+      "category": "Backend",
+      "language": "vi-en",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "10_frontend",
+      "category": "Frontend",
+      "language": "vi-en",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "11_native",
+      "category": "Native",
+      "language": "en-vi",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "ielts_docs/output",
+      "category": "English",
+      "language": "en-vi",
+      "rights": "author-confirmed"
+    }
+  ],
   "allowedDocuments": [
     {
       "path": "10_backend/java/java_beginner_explained_with_senior_notes.md",
@@ -44,22 +77,8 @@
       "rights": "author-confirmed"
     },
     {
-      "path": "10_frontend/tailwind/TailwindCSS_Beginner_to_Senior_2026.md",
-      "title": "Tailwind CSS: Beginner to Senior",
-      "category": "Frontend",
-      "language": "vi-en",
-      "rights": "author-confirmed"
-    },
-    {
       "path": "10_frontend/tailwind/TailwindCSS_Beginner_to_Senior_2026_REWRITTEN.md",
       "title": "Tailwind CSS: Beginner to Senior (rewritten)",
-      "category": "Frontend",
-      "language": "vi-en",
-      "rights": "author-confirmed"
-    },
-    {
-      "path": "10_frontend/tailwind/TailwindCSS_Master_Supplement_2026.md",
-      "title": "Tailwind CSS Master Supplement",
       "category": "Frontend",
       "language": "vi-en",
       "rights": "author-confirmed"

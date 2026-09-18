@@ -1,5 +1,5 @@
 const app = document.querySelector('#app');
-const state = { docs: [], query: '', filter: 'all', format: 'all' };
+const state = { docs: [], query: '', filter: 'all', format: 'all', folder: '' };
 const escapeHtml = value => String(value).replace(/[&<>'"]/g, char => ({ '&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;' })[char]);
 const fileUrl = path => `./library/files/${path.split('/').map(encodeURIComponent).join('/')}`;
 const titleOf = doc => doc.title || doc.path.split('/').pop().replace(/\.[^.]+$/, '');
@@ -11,7 +11,21 @@ function renderHome() {
   search.value = state.query;
   search.addEventListener('input', event => { state.query = event.target.value; renderCards(); });
   window.addEventListener('keydown', event => { if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') { event.preventDefault(); search.focus(); } }, { once: true });
-  renderFormats(); renderFilters(); renderCards();
+  renderFolderTree(); renderFormats(); renderFilters(); renderCards();
+}
+function folderLabel(folder) { return folder ? `📁 ${folder}` : 'Tất cả thư mục'; }
+function folderCount(folder) { return state.docs.filter(doc => !folder || doc.folder === folder || (doc.folder || '').startsWith(`${folder}/`)).length; }
+function renderFolderTree() {
+  const folders = ['all', ...new Set((state.docs.flatMap(doc => {
+    if (!doc.folder) return [];
+    const parts = doc.folder.split('/');
+    return parts.map((_, index) => parts.slice(0, index + 1).join('/'));
+  })).sort())];
+  document.querySelector('#folder-tree').innerHTML = folders.map(folder => {
+    const value = folder === 'all' ? '' : folder;
+    return `<button class="folder-button ${state.folder === value ? 'active' : ''}" data-folder="${escapeHtml(value)}">${escapeHtml(folderLabel(value))} <span class="folder-count">(${folderCount(value)})</span></button>`;
+  }).join('');
+  document.querySelectorAll('[data-folder]').forEach(button => button.onclick = () => { state.folder = button.dataset.folder; renderFolderTree(); renderCards(); });
 }
 function renderFormats() {
   const formats = ['all', ...new Set(state.docs.map(doc => doc.type))];
@@ -25,9 +39,10 @@ function renderFilters() {
 }
 function renderCards() {
   const term = state.query.trim().toLowerCase();
-  const docs = state.docs.filter(doc => (state.filter === 'all' || doc.category === state.filter) && (state.format === 'all' || doc.type === state.format) && (!term || `${titleOf(doc)} ${doc.path} ${doc.category} ${doc.language || ''}`.toLowerCase().includes(term)));
+  const docs = state.docs.filter(doc => (!state.folder || doc.folder === state.folder || (doc.folder || '').startsWith(`${state.folder}/`)) && (state.filter === 'all' || doc.category === state.filter) && (state.format === 'all' || doc.type === state.format) && (!term || `${titleOf(doc)} ${doc.displayPath || doc.path} ${doc.category} ${doc.language || ''}`.toLowerCase().includes(term)));
   document.querySelector('#result-count').textContent = `${docs.length}개 자료`;
-  document.querySelector('#document-grid').innerHTML = docs.length ? docs.map(doc => `<a class="doc-card" href="#/read/${encodeURIComponent(doc.path)}"><div class="doc-meta"><span class="type-badge">${doc.type}</span><span>${formatSize(doc.size)}</span></div><h3>${escapeHtml(titleOf(doc))}</h3><p class="doc-language">${escapeHtml(doc.language || 'vi')} · ${escapeHtml(doc.rights || 'author-confirmed')}</p><p class="doc-path">${escapeHtml(doc.category)} / ${escapeHtml(doc.path)}</p></a>`).join('') : '<p class="empty">Không có tài liệu phù hợp. Hãy thử đổi bộ lọc hoặc tìm kiếm khác.</p>';
+  document.querySelector('#result-title').textContent = state.folder ? folderLabel(state.folder) : 'Mọi tài liệu';
+  document.querySelector('#document-grid').innerHTML = docs.length ? docs.map(doc => `<a class="doc-card" href="#/read/${encodeURIComponent(doc.path)}"><div class="doc-meta"><span class="type-badge">${doc.type}</span><span>${formatSize(doc.size)}</span></div><h3>${escapeHtml(titleOf(doc))}</h3><p class="doc-language">${escapeHtml(doc.language || 'vi')} · ${escapeHtml(doc.rights || 'author-confirmed')}</p><p class="doc-path">${escapeHtml(doc.displayPath || doc.path)}</p></a>`).join('') : '<p class="empty">Không có tài liệu phù hợp. Hãy thử đổi bộ lọc hoặc tìm kiếm khác.</p>';
 }
 function markdownToHtml(markdown) {
   const blocks = escapeHtml(markdown).replace(/\r/g, '').split('\n'); let html = '', inCode = false, code = [], inList = false;
@@ -37,7 +52,7 @@ function markdownToHtml(markdown) {
 }
 async function renderReader(path) {
   const doc = state.docs.find(item => item.path === path); if (!doc) { location.hash = '#/'; return; }
-  app.innerHTML = `<div class="reader-layout"><aside class="reader-aside"><a class="back-link" href="#/">← 서재로 돌아가기</a><nav id="toc" class="toc"></nav></aside><article class="reader"><header class="reader-header"><p class="eyebrow">${doc.type} · ${escapeHtml(doc.category)}</p><h1>${escapeHtml(titleOf(doc))}</h1><p class="muted">${escapeHtml(doc.path)} · ${formatSize(doc.size)}</p></header><div id="content"></div></article></div>`;
+  app.innerHTML = `<div class="reader-layout"><aside class="reader-aside"><a class="back-link" href="#/">← 서재로 돌아가기</a><nav id="toc" class="toc"></nav></aside><article class="reader"><header class="reader-header"><p class="eyebrow">${doc.type} · ${escapeHtml(doc.category)}</p><h1>${escapeHtml(titleOf(doc))}</h1><p class="muted">${escapeHtml(doc.displayPath || doc.path)} · ${formatSize(doc.size)}</p></header><div id="content"></div></article></div>`;
   const content = document.querySelector('#content');
   if (doc.type === 'PDF') { content.innerHTML = `<iframe class="pdf-frame" title="${escapeHtml(titleOf(doc))}" src="${fileUrl(doc.path)}#view=FitH"></iframe><div class="reader-actions"><a class="open-file" href="${fileUrl(doc.path)}" target="_blank" rel="noreferrer">Mở PDF ở tab mới ↗</a><a class="open-file" href="${fileUrl(doc.path)}" download>Tải PDF xuống ↓</a></div>`; return; }
   try { const response = await fetch(fileUrl(doc.path)); if (!response.ok) throw new Error(); const markdown = await response.text(); content.className = 'markdown'; content.innerHTML = markdownToHtml(markdown); const headings = [...content.querySelectorAll('h1,h2,h3')]; document.querySelector('#toc').innerHTML = headings.map(h => `<a href="#${h.id}">${escapeHtml(h.textContent)}</a>`).join(''); content.insertAdjacentHTML('beforeend', `<a class="open-file" href="${fileUrl(doc.path)}" target="_blank" rel="noreferrer">Mở Markdown gốc ↗</a>`); } catch { content.innerHTML = '<p class="empty">Không thể tải tài liệu. Hãy chạy lại build và kiểm tra đường dẫn trong library.config.json.</p>'; }
