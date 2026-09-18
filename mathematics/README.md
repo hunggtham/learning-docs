@@ -1,16 +1,14 @@
 # Master Knowledge Book — Toán học
 
-Đây là bộ sách Markdown được tổ chức theo **conceptual dependency**, không theo Beginner → Intermediate → Advanced. Mỗi file là một chủ đề đủ độc lập để đọc như một chapter nhỏ, nhưng toàn bộ liên kết thành một knowledge graph.
+Đây là bộ Knowledge Library bằng Markdown được tổ chức theo **conceptual dependency**, không theo Beginner → Intermediate → Advanced. Mỗi file là một chapter độc lập đủ để đọc riêng, nhưng toàn bộ được nối thành một knowledge graph từ nền tảng toán học đến Computer Science, AI/Data, Statistics, Engineering, signal/control và quantitative reasoning.
 
-Mục tiêu là **Understanding > Memorization**, **Reasoning > Formula**, **Connection > Isolated Facts**, **First Principles > Rules**.
+Triết lý xuyên suốt là **Understanding > Memorization**, **Reasoning > Formula**, **Connection > Isolated Facts**, **First Principles > Rules**. Công thức được giải thích theo meaning, assumptions và structure; terminology quan trọng được giữ thêm English và Korean khi hữu ích.
 
-Bản này đã được rà soát qua nhiều vòng. Ngoài các khoảng trống đã bổ sung ở V2 như rational functions, function composition/inverse, conics, orthogonality/projection, infinite series, vector calculus, statistical inference, information theory, constrained optimization và Fourier, vòng audit mới còn bổ sung mathematical modeling & dimensional analysis, topology nhập môn, PDE, likelihood/MLE/MAP, abstract algebra nền tảng, linear programming/duality và Laplace/Z-transform. Các phần này được tách thành topic riêng để dependency giữa Toán nền tảng, CS, AI/Data, signal/control và engineering không bị nhảy cóc.
+Sau bốn vòng audit, thư viện hiện có **87 topic files**. Round 4 bổ sung tensor & multilinear algebra, matrix calculus/Jacobian/Hessian/autodiff, real analysis, complex analysis, stochastic processes/Markov chains/time series, Bayesian inference/hierarchical models và dynamic programming/Bellman/optimal control. Đồng thời các chapter lõi về eigenvalues, integrals và differential equations được rewrite sâu hơn để cân bằng chất lượng với những chapter mới.
 
 ## Cách sử dụng
 
-Nếu đang đọc một topic và gặp prerequisite chưa chắc, dùng dependency map bên dưới để quay về file nền. Không cần đọc tuần tự tuyệt đối. Ví dụ Graph Theory không cần Calculus; nhưng để hiểu Gradient Descent đúng bản chất nên đi qua Functions → Vectors/Linear Algebra → Derivatives/Gradient → Optimization.
-
-Thuật ngữ quan trọng dùng format **Tiếng Việt (English / 한국어)**. English được ưu tiên vì xuất hiện trong documentation, textbook và research; Korean được bổ sung để đối chiếu giáo trình, 시험 và môi trường kỹ thuật tại Hàn Quốc.
+Không bắt buộc đọc tuần tự toàn bộ. Khi gặp concept chưa chắc, quay về prerequisite trong dependency graph. Với AI/Data có thể đi theo Algebra → Functions → Linear Algebra → Calculus → Probability → Optimization. Với signal/control có thể đi Trigonometry → Complex Numbers → Differential Equations → Fourier → Laplace/Z-transform. Với CS lý thuyết có thể đi Logic → Sets → Discrete Mathematics → Graphs/Number Theory/Automata.
 
 ## Table of Contents
 
@@ -60,24 +58,28 @@ Thuật ngữ quan trọng dùng format **Tiếng Việt (English / 한국어)**
 - [Ma trận và hệ phương trình tuyến tính](./04_vectors_linear_algebra/01_matrices_and_linear_systems.md)
 - [Phép biến đổi tuyến tính](./04_vectors_linear_algebra/02_linear_transformations.md)
 - [Không gian vector, cơ sở và số chiều](./04_vectors_linear_algebra/03_vector_spaces_basis_dimension.md)
-- [Eigenvalues và eigenvectors: những hướng không đổi dưới transformation](./04_vectors_linear_algebra/04_eigenvalues_and_eigenvectors.md)
+- [Eigenvalues và eigenvectors: natural directions của transformation](./04_vectors_linear_algebra/04_eigenvalues_and_eigenvectors.md)
 - [Least squares, SVD và matrix decompositions](./04_vectors_linear_algebra/05_least_squares_svd_and_decompositions.md)
 - [Inner product, trực giao và phép chiếu](./04_vectors_linear_algebra/06_inner_product_orthogonality_and_projection.md)
 - [Determinant, rank, null space và nghịch đảo ma trận](./04_vectors_linear_algebra/07_determinant_rank_nullspace_and_inverse.md)
+- [Tensor và multilinear algebra](./04_vectors_linear_algebra/08_tensors_and_multilinear_algebra.md)
+- [Matrix calculus, Jacobian, Hessian và automatic differentiation](./04_vectors_linear_algebra/09_matrix_calculus_jacobian_hessian_and_autodiff.md)
 
-### 05 — Calculus
+### 05 — Calculus & Analysis
 
 - [Giới hạn và tính liên tục](./05_calculus/00_limits_and_continuity.md)
 - [Đạo hàm: tốc độ thay đổi cục bộ](./05_calculus/01_derivatives.md)
 - [Ứng dụng của đạo hàm: shape, approximation và optimization](./05_calculus/02_derivative_applications.md)
-- [Tích phân: tích lũy từ những đóng góp vi phân](./05_calculus/03_integrals_and_accumulation.md)
+- [Tích phân: accumulation, area, expectation và tổng liên tục](./05_calculus/03_integrals_and_accumulation.md)
 - [Giải tích nhiều biến: gradient, Jacobian và tối ưu trong nhiều chiều](./05_calculus/04_multivariable_calculus.md)
 - [Phương trình vi phân và hệ động lực](./05_calculus/05_differential_equations.md)
 - [Giải tích số: khi máy tính phải xấp xỉ calculus](./05_calculus/06_numerical_calculus.md)
 - [Chuỗi vô hạn, power series và sự hội tụ](./05_calculus/07_infinite_series_power_series_and_convergence.md)
 - [Taylor approximation: từ đạo hàm đến mô hình cục bộ nhiều bậc](./05_calculus/08_taylor_series_and_local_approximation.md)
 - [Vector calculus: gradient, divergence, curl và tích phân trên đường/mặt](./05_calculus/09_vector_calculus.md)
-- [Nhập môn phương trình vi phân riêng phần: fields, heat, wave và boundary conditions](./05_calculus/10_partial_differential_equations_and_fields_intro.md)
+- [Nhập môn PDE: fields, heat, wave và boundary conditions](./05_calculus/10_partial_differential_equations_and_fields_intro.md)
+- [Real analysis: giới hạn, hội tụ và nền tảng chặt chẽ của calculus](./05_calculus/11_real_analysis_convergence_and_rigor.md)
+- [Complex analysis: analytic functions, contour integrals và residues](./05_calculus/12_complex_analysis_and_analytic_functions.md)
 
 ### 06 — Probability & Statistics
 
@@ -92,6 +94,8 @@ Thuật ngữ quan trọng dùng format **Tiếng Việt (English / 한국어)**
 - [Covariance, xác suất nhiều biến và multivariate Gaussian](./06_probability_statistics/08_covariance_multivariate_probability_and_gaussian.md)
 - [Các phân phối xác suất thường gặp và vì sao chúng xuất hiện](./06_probability_statistics/09_common_distributions_and_when_they_arise.md)
 - [Likelihood, MLE, MAP và chọn mô hình từ dữ liệu](./06_probability_statistics/10_likelihood_mle_map_and_model_selection.md)
+- [Stochastic processes, Markov chains và time series](./06_probability_statistics/11_stochastic_processes_markov_chains_and_time_series.md)
+- [Bayesian inference, posterior predictive và hierarchical models](./06_probability_statistics/12_bayesian_inference_posterior_predictive_and_hierarchical_models.md)
 
 ### 07 — Discrete Mathematics & Theoretical CS
 
@@ -113,6 +117,7 @@ Thuật ngữ quan trọng dùng format **Tiếng Việt (English / 한국어)**
 - [Tối ưu có ràng buộc, Lagrange multipliers và KKT](./08_optimization_numerical/03_constrained_optimization_lagrange_and_kkt.md)
 - [Root finding, interpolation và numerical linear algebra](./08_optimization_numerical/04_root_finding_interpolation_and_numerical_linear_algebra.md)
 - [Linear programming, duality và simplex](./08_optimization_numerical/05_linear_programming_duality_and_simplex.md)
+- [Dynamic programming, Bellman equation và optimal control](./08_optimization_numerical/06_dynamic_programming_bellman_and_optimal_control.md)
 
 ### 09 — Knowledge Connections
 
@@ -138,79 +143,95 @@ graph TD
     B --> D[Sets, Relations, Mappings]
     C --> MM[Modeling & Dimensional Analysis]
     MM --> E[Algebra]
-    C --> E[Algebra]
+    C --> E
     E --> F[Functions]
     F --> G[Composition & Inverse]
     F --> H[Sequences & Recurrence]
+
     C --> I[Geometry]
     I --> J[Trigonometry]
-    I --> TOP[Topology & Connectivity]
-    J --> K[Harmonics]
-    I --> L[Vectors]
-    E --> L
+    I --> TOP[Topology]
+    E --> L[Vectors]
+    I --> L
     L --> M[Linear Algebra]
     M --> N[Orthogonality & Projection]
-    M --> O[Rank, Null Space, Determinant]
+    M --> O[Rank / Null Space / Determinant]
+    M --> EV[Eigenvalues]
+    M --> TEN[Tensor & Multilinear Algebra]
+
     F --> P[Limits]
     P --> Q[Derivatives]
     Q --> R[Integrals]
     H --> S[Infinite Series]
-    Q --> T[Taylor Approximation]
+    Q --> T[Taylor]
     M --> U[Multivariable Calculus]
     Q --> U
+    U --> MC[Matrix Calculus / Autodiff]
+    TEN --> MC
     U --> V[Vector Calculus]
     R --> W[Differential Equations]
-    V --> PDE[Partial Differential Equations]
+    V --> PDE[PDE]
     W --> PDE
+    P --> RA[Real Analysis]
+    S --> RA
+    E --> CA[Complex Analysis]
+    S --> CA
+    R --> CA
+
     B --> X[Counting & Combinatorics]
     X --> Y[Probability]
     Y --> Z[Random Variables]
     Z --> AA[Statistics]
     AA --> AB[Sampling & Inference]
-    AB --> LKH[Likelihood, MLE & MAP]
-    M --> AC[Covariance & Multivariate Probability]
+    AB --> LKH[Likelihood / MLE / MAP]
+    M --> AC[Multivariate Probability]
     Z --> AC
+    Z --> SP[Stochastic Processes]
+    EV --> SP
+    LKH --> BAYES[Bayesian Inference]
+    SP --> BAYES
+
     B --> AD[Discrete Mathematics]
     AD --> AE[Graph Theory & Trees]
     C --> AF[Number Theory]
     Y --> AG[Information Theory]
     AD --> AH[Automata & Computability]
-    AF --> ALG[Groups, Rings & Fields]
+    AF --> ALG[Groups / Rings / Fields]
     AD --> ALG
+
     Q --> AI[Optimization]
     M --> AI
     U --> AI
+    MC --> AI
     AI --> AJ[Constrained Optimization]
     AJ --> LP[Linear Programming & Duality]
     M --> AK[Numerical Linear Algebra]
     P --> AK
-    J --> AL[Fourier & Frequency]
-    N --> AL
-    S --> AL
+    H --> DP[Dynamic Programming]
+    AI --> DP
+    SP --> DP
+
+    J --> FOURIER[Fourier & Frequency]
+    N --> FOURIER
+    S --> FOURIER
+    CA --> LAPLACE[Laplace / Z Transform]
+    W --> LAPLACE
 ```
 
 ## Những mental models xuyên suốt
 
-**Representation:** cùng một object có thể được biểu diễn bằng formula, graph, vector, matrix, basis coefficients hoặc code. Representation tốt làm structure cần dùng trở nên rõ hơn.
+**Representation.** Cùng một object có thể được nhìn bằng formula, graph, vector, matrix, tensor, basis coefficients, probability distribution hoặc code. Representation tốt biến problem khó thành structure quen thuộc.
 
-**Constraint ↔ feasible set:** equation, inequality, implicit curve, probability simplex và optimization constraints đều là cách cắt không gian xuống các states hợp lệ.
+**Local → Global.** Derivative là local rate nhưng integration tạo global accumulation; differential equation là local law nhưng sinh global trajectory; transition rule của Markov chain tạo long-run distribution.
 
-**Rate ↔ accumulation:** difference/derivative mô tả local change; sum/integral reconstruct total. Differential equations dùng relationship giữa state và rate để model dynamics.
+**Linearization.** Linear algebra quan trọng không phải vì mọi hệ đều linear, mà vì nonlinear systems thường được approximate locally bằng linear maps: Jacobian, Hessian, Taylor expansion và eigenmodes.
 
-**Distance ↔ inner product ↔ projection:** Pythagoras mở rộng thành norm; dot product tạo angle/alignment; projection dẫn tới least squares, regression và PCA.
+**Uncertainty as structure.** Probability không chỉ là “đoán”. Nó cung cấp algebra để model uncertainty, update information và make decisions khi data không đủ chắc chắn.
 
-**Dimension ↔ information loss:** rank và null space mô tả linear map giữ hoặc xóa bao nhiêu directions; inverse tồn tại khi information cần thiết chưa bị collapse.
+**Optimization as choice under structure.** Gradient methods dùng local geometry, linear programming dùng convex polyhedra/duality, dynamic programming dùng optimal substructure và Bellman recursion.
 
-**Multiplicative scale ↔ logarithm:** exponential mô tả repeated multiplication; logarithm đo multiplicative depth, nên xuất hiện trong algorithm complexity, information theory, finance và scientific scales.
+**Change of representation.** Fourier, Laplace/Z-transform, eigenbasis, SVD và complex representation cùng theo một strategy: chuyển problem sang coordinates/domain nơi operations trở nên đơn giản hơn.
 
-**Local approximation ↔ global behavior:** derivative/Taylor mô tả local model; numerical methods ghép local approximations thành algorithms; convergence/error quyết định khi approximation đáng tin.
+## Trạng thái audit
 
-**Uncertainty ↔ evidence:** probability mô tả uncertainty; statistics dùng finite data để estimate/update claims; information theory đo surprise và coding cost.
-
-**Time domain ↔ frequency domain:** Fourier là change of representation tương tự đổi basis trong linear algebra; convolution, filtering và harmonic behavior trở nên rõ hơn trong frequency coordinates.
-
-## Phạm vi hoàn thiện
-
-Bộ này được xem là **hoàn thiện trong phạm vi nền tảng phổ thông + đại học nền tảng + toán cốt lõi cho CS/Software/AI/Data/Statistics/Engineering/quantitative life**. “Hoàn thiện” ở đây không có nghĩa toàn bộ toán học hiện đại đã được bao phủ. Các mảng graduate/research như measure theory, abstract algebra chuyên sâu, topology chuyên sâu, differential geometry chuyên sâu, functional analysis, stochastic calculus, advanced PDE theory/numerical PDE, algebraic geometry và category theory được để ngoài scope thay vì ghi giả là đã cover. Bộ hiện chỉ thêm các chapter nhập môn về topology, algebraic structures và PDE để tạo cầu nối khái niệm.
-
-Xem `COVERAGE_AUDIT.md` để biết ranh giới và kết quả audit chi tiết.
+Chi tiết scope, số topic theo từng nhóm và các phần được nâng cấp trong vòng audit gần nhất nằm tại [COVERAGE_AUDIT.md](./COVERAGE_AUDIT.md).
