@@ -14,7 +14,7 @@ Network effect làm online portal, gaming và messenger ecosystem phát triển.
 
 ## Hallyu
 
-Korean Wave (한류) ban đầu nổi ở East Asia qua television drama rồi mở rộng sang K-pop, film, games, webtoon, beauty và food. Hallyu không thể giải thích chỉ bằng “government made it”. Entertainment firms, training system, broadband, platform distribution, diaspora, fan labor và global media shifts đều tham gia.
+Korean Wave (한류) ban đầu nổi ở East Asia qua television drama rồi mở rộng sang K-pop, film, games, webtoon, beauty và food. Làn sóng Hàn Quốc (한류 / Hallyu, Korean Wave) không thể giải thích chỉ bằng “government made it”. Entertainment firms, training system, broadband, platform distribution, diaspora, fan labor và global media shifts đều tham gia.
 
 ## 2002 World Cup
 

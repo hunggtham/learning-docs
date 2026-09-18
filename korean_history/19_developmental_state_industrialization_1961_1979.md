@@ -2,7 +2,7 @@
 
 ## Developmental state là gì?
 
-**Developmental state (nhà nước kiến tạo phát triển / 발전국가)** mô tả một state có bureaucracy tương đối mạnh, sử dụng credit, industrial policy, export targets và coordination với firms để đẩy structural transformation. South Korea dưới Park Chung-hee là case nổi bật, nhưng growth không thể giải thích bằng một variable duy nhất.
+**Developmental state (nhà nước kiến tạo phát triển / 발전국가)** mô tả một state có bureaucracy tương đối mạnh, sử dụng credit, industrial policy, export targets và coordination với firms để đẩy structural transformation. South Korea dưới Tổng thống Park Chung-hee (박정희 / Park Chung-hee) là case nổi bật, nhưng growth không thể giải thích bằng một variable duy nhất.
 
 ## Export-led industrialization
 
@@ -21,7 +21,7 @@ Large business groups như Samsung, Hyundai, LG phát triển mạnh qua access 
 
 ## Rural transformation và Saemaul
 
-Saemaul Undong (새마을운동) đầu 1970s nhằm cải thiện rural infrastructure và mobilization. Nó có material achievement ở nhiều nơi nhưng cũng gắn với top-down mobilization và authoritarian political environment. Historical evaluation cần giữ cả hai dimension.
+Phong trào Làng mới (새마을운동 / Saemaul Undong, New Village Movement) đầu 1970s nhằm cải thiện rural infrastructure và mobilization. Nó có material achievement ở nhiều nơi nhưng cũng gắn với top-down mobilization và authoritarian political environment. Historical evaluation cần giữ cả hai dimension.
 
 ## Labor và human cost
 

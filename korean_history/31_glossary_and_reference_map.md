@@ -78,3 +78,7 @@ Dùng để kiểm tra heritage inscription và documentary heritage, không dù
 ## Nguyên tắc đối chiếu
 
 Khi một vấn đề liên quan colonial responsibility, wartime violence, authoritarian repression, territorial dispute hoặc current political interpretation, không dùng một nguồn duy nhất. Tối thiểu cần tách: primary evidence, institutional archive, peer-reviewed scholarship và later public memory.
+
+## Proper-name index Việt–Hàn–Anh
+
+Xem [`32_naming_translation_conventions.md`](32_naming_translation_conventions.md). Quy ước: **Tên tiếng Việt (한국어 원문 / English name)**.

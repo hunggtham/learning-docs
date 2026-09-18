@@ -4,9 +4,13 @@ Bộ tài liệu này được thiết kế như một **knowledge library** đ�
 
 Lịch sử ở đây được đọc theo First-Principles Thinking (제1원리 사고). Một triều đại không chỉ là tên vua và niên đại. Ta sẽ hỏi nhà nước huy động thuế và quân đội bằng cách nào, tri thức được lưu trữ ra sao, ai có quyền tiếp cận đất đai, công nghệ làm thay đổi năng suất thế nào, chiến tranh làm biến dạng demographic structure ra sao, và vì sao một institution có thể tiếp tục tồn tại dù regime đã thay đổi.
 
+## Quy ước tên riêng Việt–Hàn–Anh
+
+Lần đầu xuất hiện, tên quan trọng dùng **Tên tiếng Việt (한국어 원문 / English name)**, ví dụ **Cung Cảnh Phúc (경복궁 / Gyeongbokgung Palace)**. Xem [`32_naming_translation_conventions.md`](32_naming_translation_conventions.md).
+
 ## Cách sử dụng
 
-Bắt đầu từ [`00_index_and_dependency.md`](00_index_and_dependency.md). Nếu cần một đường đọc tuyến tính, hãy đi từ 01 đến 25. Nếu đã có kiến thức lịch sử cơ bản, các file 26–29 cho phép đọc theo các trục xuyên thời gian như social history, economic history, history of knowledge và public memory. File 30 là chronology để tra nhanh; file 31 là glossary Việt–Anh–Hàn và bản đồ nguồn.
+Bắt đầu từ [`00_index_and_dependency.md`](00_index_and_dependency.md). Nếu cần một đường đọc tuyến tính, hãy đi từ 01 đến 25. Nếu đã có kiến thức lịch sử cơ bản, các file 26–29 cho phép đọc theo các trục xuyên thời gian như social history, economic history, history of knowledge và public memory. File 30 là chronology để tra nhanh; file 31 là glossary Việt–Anh–Hàn và bản đồ nguồn; file 32 là quy ước tên riêng Việt–Hàn–Anh.
 
 Các chương cố ý phân biệt giữa **fact tương đối chắc**, **cách diễn giải của sử học**, **ký ức tập thể** và **narrative quốc gia**. Với các vấn đề còn tranh luận, tài liệu tránh biến một cách kể duy nhất thành chân lý tuyệt đối.
 

@@ -8,7 +8,7 @@ Một lịch sử tốt không chỉ trả lời “chuyện gì xảy ra”. N�
 
 ## Myth, memory và history
 
-Dangun (단군) là ví dụ tốt để phân biệt ba lớp. Một origin myth có thể không cho phép ta xác nhận toàn bộ chi tiết như fact khảo cổ, nhưng nó vẫn là dữ liệu lịch sử về cách cộng đồng hình dung nguồn gốc và legitimacy. Sai lầm thường gặp là hoặc tin myth theo nghĩa literal, hoặc vứt bỏ myth hoàn toàn. Cách đúng là hỏi: văn bản được viết khi nào, bởi ai, trong bối cảnh nào và được dùng để tạo meaning gì.
+Đàn Quân (단군 / Dangun) là ví dụ tốt để phân biệt ba lớp. Một origin myth có thể không cho phép ta xác nhận toàn bộ chi tiết như fact khảo cổ, nhưng nó vẫn là dữ liệu lịch sử về cách cộng đồng hình dung nguồn gốc và legitimacy. Sai lầm thường gặp là hoặc tin myth theo nghĩa literal, hoặc vứt bỏ myth hoàn toàn. Cách đúng là hỏi: văn bản được viết khi nào, bởi ai, trong bối cảnh nào và được dùng để tạo meaning gì.
 
 ## Periodization là model chứ không phải tự nhiên
 
@@ -16,7 +16,7 @@ Tên như “Three Kingdoms”, “Unified Silla”, “Late Joseon” là **per
 
 ## Peninsula ≠ Republic of Korea
 
-Trước 1945, “lịch sử Hàn Quốc” chủ yếu là lịch sử của các cộng đồng và nhà nước trên bán đảo cùng những vùng liên quan. Sau 1945, cần phân biệt **Korean Peninsula (bán đảo Triều Tiên / 한반도)**, **Republic of Korea (Đại Hàn Dân Quốc / 대한민국)** và **Democratic People's Republic of Korea (CHDCND Triều Tiên / 조선민주주의인민공화국)**. Đọc quá khứ như thể mọi thứ tất yếu dẫn tới biên giới hiện nay là một dạng **teleology (mục đích luận / 목적론)**.
+Trước 1945, “lịch sử Hàn Quốc” chủ yếu là lịch sử của các cộng đồng và nhà nước trên bán đảo cùng những vùng liên quan. Sau 1945, cần phân biệt **bán đảo Triều Tiên (한반도 / Korean Peninsula)**, **Đại Hàn Dân Quốc/Hàn Quốc (대한민국 / Republic of Korea)** và **Cộng hòa Dân chủ Nhân dân Triều Tiên (조선민주주의인민공화국 / Democratic People's Republic of Korea)**. Đọc quá khứ như thể mọi thứ tất yếu dẫn tới biên giới hiện nay là một dạng **teleology (mục đích luận / 목적론)**.
 
 ## Causal graph như một mental model
 

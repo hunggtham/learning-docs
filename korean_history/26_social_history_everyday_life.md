@@ -14,7 +14,7 @@ Women’s legal/economic position biến đổi mạnh theo period. Goryeo elite
 
 ## Migration và city
 
-Seoul/Hanseong luôn quan trọng nhưng twentieth-century urbanization đạt scale khác hẳn. Rural-to-urban migration compressed trong vài decades làm housing, transport và education policy trở thành daily-history force.
+Seoul/Hán Thành (한성 / Hanseong) luôn quan trọng nhưng twentieth-century urbanization đạt scale khác hẳn. Rural-to-urban migration compressed trong vài decades làm housing, transport và education policy trở thành daily-history force.
 
 ## Food
 

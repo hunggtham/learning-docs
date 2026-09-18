@@ -8,7 +8,7 @@ Choe family regime sau đó vận hành như power behind throne. Khi formal ins
 
 ## Mongol invasions
 
-Từ 1231, Mongol forces nhiều lần xâm lược Goryeo. Court dời capital tới Ganghwa Island để kéo dài resistance. Chiến tranh kéo dài làm rural population chịu tổn thất lớn và resource extraction tăng.
+Từ 1231, Mongol forces nhiều lần xâm lược Goryeo. Court dời capital tới đảo Ganghwa (강화도 / Ganghwa Island) để kéo dài resistance. Chiến tranh kéo dài làm rural population chịu tổn thất lớn và resource extraction tăng.
 
 Sau settlement, Goryeo bước vào quan hệ chặt với Yuan. Royal marriage, diplomatic obligation và military participation làm sovereignty bị giới hạn, nhưng Goryeo không biến đơn giản thành một province hoàn toàn giống các vùng Yuan khác. Đây là một dạng layered sovereignty.
 
@@ -18,7 +18,7 @@ Sambyeolcho (삼별초) chống lại settlement với Mongols và court policy.
 
 ## Cuối Goryeo: reform, Neo-Confucianism và geopolitical change
 
-Khi Yuan suy yếu và Ming trỗi dậy, Goryeo cần reposition. Land concentration, powerful families và Buddhist institutional power trở thành target của reform discourse. Neo-Confucian scholars đề xuất state và social order mới. General Yi Seong-gye nổi lên trong bối cảnh này và đến 1392 lập Joseon.
+Khi Yuan suy yếu và Ming trỗi dậy, Goryeo cần reposition. Land concentration, powerful families và Buddhist institutional power trở thành target của reform discourse. Neo-Confucian scholars đề xuất state và social order mới. General Lý Thành Quế (이성계 / Yi Seong-gye) nổi lên trong bối cảnh này và đến 1392 lập Joseon.
 
 ## Knowledge Connection: sovereignty như spectrum
 

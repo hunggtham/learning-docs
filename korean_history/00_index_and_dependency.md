@@ -109,3 +109,5 @@ graph TD
 ## Liên kết với bộ Văn hoá Hàn Quốc
 
 Bộ này tập trung vào **historical process**. Khi cần giải thích sâu về `유교`, `눈치`, `정`, `회식`, `아파트`, `재벌`, `한류` hoặc đời sống đương đại, xem thư mục anh em [`../korean_culture/`](../korean_culture/).
+
+- [`32_naming_translation_conventions.md`](32_naming_translation_conventions.md) — quy ước tên riêng Việt–Hàn–Anh.

@@ -8,11 +8,11 @@ Cuối Silla, aristocratic conflict, local powerful families (호족) và peasan
 
 ## Later Baekje và Later Goguryeo/Taebong
 
-Gyeon Hwon (견훤) lập Later Baekje; Gung Ye (궁예) xây Later Goguryeo rồi Taebong. Điều đáng chú ý là các regime mới dùng historical names cũ. Past identity trở thành political resource: claim legacy giúp tạo legitimacy cho coalition mới.
+Chân Huyên (견훤 / Gyeon Hwon) lập Later Baekje; Cung Duệ (궁예 / Gung Ye) xây Later Goguryeo rồi Taebong. Điều đáng chú ý là các regime mới dùng historical names cũ. Past identity trở thành political resource: claim legacy giúp tạo legitimacy cho coalition mới.
 
 ## Wang Geon và Goryeo
 
-Wang Geon (왕건) lật Gung Ye năm 918, lập Goryeo và thống nhất Later Three Kingdoms năm 936. Thành công không chỉ nhờ battlefield. Ông dùng marriage alliances, accommodation với local elites và symbolic continuity để giảm cost của conquest.
+Vương Kiến (왕건 / Wang Geon) lật Gung Ye năm 918, lập Goryeo và thống nhất Later Three Kingdoms năm 936. Thành công không chỉ nhờ battlefield. Ông dùng marriage alliances, accommodation với local elites và symbolic continuity để giảm cost của conquest.
 
 > Một nhà nước bền không chỉ “đánh thắng”. Nó phải khiến đủ nhiều actor tin rằng sống trong trật tự mới có lợi hơn chống lại nó.
 
@@ -26,7 +26,7 @@ Một central state suy yếu khi tax collector trên giấy không còn chuyể
 
 ## Buddhism và new legitimacy
 
-Late Silla không chỉ có political breakdown mà còn intellectual change. Seon Buddhism (선종) phát triển qua mountain monasteries, nhiều khi gắn với local elites. Religious network có thể cung cấp legitimacy và connectivity cho regional power ngoài capital Gyeongju.
+Late Silla không chỉ có political breakdown mà còn intellectual change. Seon Buddhism (선종) phát triển qua mountain monasteries, nhiều khi gắn với local elites. Religious network có thể cung cấp legitimacy và connectivity cho regional power ngoài capital Gyeongju (경주 / Gyeongju).
 
 ## Goryeo thắng bằng integration cost thấp hơn
 

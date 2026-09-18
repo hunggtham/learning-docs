@@ -10,7 +10,7 @@ Resistance chống colonial rule tồn tại dưới nhiều hình thức: armed
 
 ## Provisional Government
 
-**Korean Provisional Government (대한민국임시정부)** được hình thành ở Shanghai năm 1919. Nó nỗ lực duy trì claim về Korean self-government, diplomacy và organizational continuity trong exile. Capacity thay đổi theo thời kỳ và funding luôn là constraint, nhưng symbolic importance lớn đối với later Republic of Korea historical identity.
+**Chính phủ Lâm thời Đại Hàn Dân Quốc (대한민국임시정부 / Provisional Government of the Republic of Korea)** được hình thành ở Shanghai năm 1919. Nó nỗ lực duy trì claim về Korean self-government, diplomacy và organizational continuity trong exile. Capacity thay đổi theo thời kỳ và funding luôn là constraint, nhưng symbolic importance lớn đối với later Republic of Korea historical identity.
 
 ## Armed struggle và diaspora geography
 
@@ -18,7 +18,7 @@ Manchuria, Russian Far East và China là không gian quan trọng cho armed gro
 
 ## Korean Liberation Army
 
-Korean Liberation Army (한국광복군) thuộc Provisional Government được thành lập năm 1940 tại Chongqing và hoạt động trong Allied context. Liberation năm 1945 đến từ collapse của Japanese Empire trong World War II chứ không phải một single Korean military campaign, nhưng independence movements đóng vai trò duy trì political claim và national mobilization.
+Quang Phục Quân Hàn Quốc (한국광복군 / Korean Liberation Army) thuộc Provisional Government được thành lập năm 1940 tại Chongqing và hoạt động trong Allied context. Liberation năm 1945 đến từ collapse của Japanese Empire trong World War II chứ không phải một single Korean military campaign, nhưng independence movements đóng vai trò duy trì political claim và national mobilization.
 
 ## Mental Model
 

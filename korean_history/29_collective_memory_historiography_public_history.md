@@ -14,7 +14,7 @@ Japanese colonial scholarship từng dùng narratives nhấn mạnh stagnation h
 
 ## Contested memory
 
-Events như colonial collaboration, Jeju 4·3, Korean War civilian massacres, Gwangju hay authoritarian development có memory conflict vì chúng chạm identity và responsibility. Cách tốt không phải “mọi version đều đúng”, mà phân biệt claim nào có archival/supporting evidence mạnh hơn.
+Events như colonial collaboration, Jeju (제주 / Jeju) 4·3, Korean War civilian massacres, Gwangju (광주 / Gwangju) hay authoritarian development có memory conflict vì chúng chạm identity và responsibility. Cách tốt không phải “mọi version đều đúng”, mà phân biệt claim nào có archival/supporting evidence mạnh hơn.
 
 ## Museum như interface
 

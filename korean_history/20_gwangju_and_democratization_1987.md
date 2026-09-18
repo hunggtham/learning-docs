@@ -2,11 +2,11 @@
 
 ## 1979–1980: succession crisis
 
-Sau cái chết của Park Chung-hee, demands for political liberalization tăng. Nhưng military group do Chun Doo-hwan dẫn đầu mở rộng control sau December 1979 military action. May 1980, martial law được mở rộng, political activities bị hạn chế và arrests diễn ra.
+Sau cái chết của Tổng thống Park Chung-hee (박정희 / Park Chung-hee), demands for political liberalization tăng. Nhưng military group do Chun Doo-hwan (전두환 / Chun Doo-hwan) dẫn đầu mở rộng control sau December 1979 military action. May 1980, martial law được mở rộng, political activities bị hạn chế và arrests diễn ra.
 
 ## Gwangju May 1980
 
-Tại Gwangju, protests chống martial law bị quân đội đàn áp; violence leo thang và citizens tổ chức resistance trong nhiều ngày. **Gwangju Democratization Movement (5·18 민주화운동)** trở thành central memory của democratic struggle. Casualty figures và responsibility từng bị political suppression và misinformation bao phủ; later investigations và memorialization giúp đưa event vào public history rõ hơn.
+Tại Gwangju (광주 / Gwangju), protests chống martial law bị quân đội đàn áp; violence leo thang và citizens tổ chức resistance trong nhiều ngày. **Phong trào Dân chủ Gwangju (광주민주화운동 / Gwangju Democratization Movement) (5·18 민주화운동)** trở thành central memory của democratic struggle. Casualty figures và responsibility từng bị political suppression và misinformation bao phủ; later investigations và memorialization giúp đưa event vào public history rõ hơn.
 
 ## Authoritarian stability và social change
 
@@ -14,7 +14,7 @@ Tại Gwangju, protests chống martial law bị quân đội đàn áp; violenc
 
 ## June Democratic Struggle 1987
 
-Sau death of student Park Jong-chul under police torture và subsequent protests, mass mobilization tăng. June 1987 movement gây pressure dẫn tới June 29 Declaration và constitutional reform, bao gồm direct presidential election.
+Sau death of student Park Jong-chul (박종철 / Park Jong-chul) under police torture và subsequent protests, mass mobilization tăng. June 1987 movement gây pressure dẫn tới June 29 Declaration và constitutional reform, bao gồm direct presidential election.
 
 ## Democratization là process, không phải một ngày
 

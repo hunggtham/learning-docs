@@ -2,7 +2,7 @@
 
 ## Vì sao cần học song song?
 
-Korean history sau 1945 không thể chỉ đọc từ Seoul. Democratic People's Republic of Korea hình thành năm 1948 trên nền Soviet occupation zone, land reform, nationalization và political consolidation dưới Korean Workers' Party.
+Korean history sau 1945 không thể chỉ đọc từ Seoul. Cộng hòa Dân chủ Nhân dân Triều Tiên (조선민주주의인민공화국 / Democratic People's Republic of Korea) hình thành năm 1948 trên nền Soviet occupation zone, land reform, nationalization và political consolidation dưới Đảng Lao động Triều Tiên (조선로동당 / Workers' Party of Korea).
 
 ## State building và Korean War
 
@@ -10,15 +10,15 @@ North Korea xây centralized party-state và planned economy. Korean War phá hu
 
 ## Juche và political consolidation
 
-**Juche (주체)** dần trở thành ideological framework nhấn mạnh political autonomy/self-reliance nhưng trên thực tế North Korea vẫn phụ thuộc vào external trade và aid ở nhiều giai đoạn. Personality cult và hereditary leadership structure làm political system ngày càng khác các socialist states khác.
+**Tư tưởng Chủ thể (주체 / Juche)** dần trở thành ideological framework nhấn mạnh political autonomy/self-reliance nhưng trên thực tế North Korea vẫn phụ thuộc vào external trade và aid ở nhiều giai đoạn. Personality cult và hereditary leadership structure làm political system ngày càng khác các socialist states khác.
 
 ## Economic divergence
 
-Từ 1960s onward, South Korea tăng nhanh; North Korean growth chậm lại. Collapse of Soviet bloc làm trade/support shock lớn. 1990s famine, thường gọi “Arduous March” (고난의 행군), gây severe human suffering và thúc đẩy informal marketization từ dưới lên.
+Từ 1960s onward, South Korea tăng nhanh; North Korean growth chậm lại. Collapse of Soviet bloc làm trade/support shock lớn. 1990s famine, thường gọi “Cuộc Hành quân Gian khổ (고난의 행군 / Arduous March)”, gây severe human suffering và thúc đẩy informal marketization từ dưới lên.
 
 ## Markets trong planned system
 
-Jangmadang (장마당) trở thành livelihood institution quan trọng. Đây là historical paradox: formal ideology giữ planned economy nhưng household survival tạo market practice. De facto institution có thể xuất hiện khi formal system không cung cấp đủ goods.
+chợ Jangmadang (장마당 / Jangmadang markets) trở thành livelihood institution quan trọng. Đây là historical paradox: formal ideology giữ planned economy nhưng household survival tạo market practice. De facto institution có thể xuất hiện khi formal system không cung cấp đủ goods.
 
 ## Security state và nuclear program
 

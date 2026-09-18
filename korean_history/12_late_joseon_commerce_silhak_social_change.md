@@ -14,7 +14,7 @@ Population growth và land concentration tạo tension. Reforms như Daedong law
 
 ## New religions và social thought
 
-Catholicism (천주교) vào Joseon qua books và scholar networks trước khi missionary network phát triển mạnh. Nó thách thức ancestral ritual và cosmological assumptions, dẫn đến persecution. Donghak (동학), được Choe Je-u phát triển từ 1860, kết hợp religious và social critique, sau này trở thành lực lượng quan trọng trong 1894.
+Catholicism (천주교) vào Joseon qua books và scholar networks trước khi missionary network phát triển mạnh. Nó thách thức ancestral ritual và cosmological assumptions, dẫn đến persecution. Donghak (동학), được Choe Je-u (최제우 / Choe Je-u) phát triển từ 1860, kết hợp religious và social critique, sau này trở thành lực lượng quan trọng trong 1894.
 
 ## Knowledge Connection: institutional lag
 

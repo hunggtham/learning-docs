@@ -2,7 +2,7 @@
 
 ## Hangul như một cuộc giảm chi phí encoding
 
-Năm 1443, dưới vua Sejong (세종), hệ chữ Hunminjeongeum được tạo và năm 1446 được promulgate. Hangul (한글) không chỉ “dễ hơn Hanja”. Nó thiết kế grapheme dựa trên articulation và structure âm tiết, giúp biểu diễn Korean speech với learning cost thấp hơn Classical Chinese literacy.
+Năm 1443, dưới Vua Sejong Đại đế (세종대왕 / King Sejong the Great), hệ chữ Huấn Dân Chính Âm (훈민정음 / Hunminjeongeum, The Proper Sounds for the Instruction of the People) được tạo và năm 1446 được promulgate. Hangul (한글) không chỉ “dễ hơn Hanja”. Nó thiết kế grapheme dựa trên articulation và structure âm tiết, giúp biểu diễn Korean speech với learning cost thấp hơn Classical Chinese literacy.
 
 Trong information theory language, writing system là encoding layer. Nếu encoding khó học, bandwidth giữa spoken knowledge và written record bị giới hạn bởi số người có literacy. Hangul giảm barrier, dù trong nhiều thế kỷ Classical Chinese vẫn giữ prestige cao trong administration và elite scholarship.
 

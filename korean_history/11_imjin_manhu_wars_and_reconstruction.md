@@ -2,7 +2,7 @@
 
 ## 1592: chiến tranh như system shock
 
-Toyotomi Hideyoshi's forces invaded Joseon in 1592, mở cuộc chiến thường gọi **Imjin War (임진왜란)**, kéo dài với phase thứ hai đến 1598. Early Joseon defense bộc lộ weakness về preparedness và command coordination; Ming China can thiệp, trong khi naval warfare dưới Yi Sun-sin (이순신) làm Japanese supply lines chịu áp lực lớn.
+Toyotomi Hideyoshi's forces invaded Joseon in 1592, mở cuộc chiến thường gọi **Chiến tranh Imjin (임진왜란 / Imjin War)**, kéo dài với phase thứ hai đến 1598. Early Joseon defense bộc lộ weakness về preparedness và command coordination; Ming China can thiệp, trong khi naval warfare dưới Đô đốc Yi Sun-sin (이순신 / Admiral Yi Sun-sin) làm Japanese supply lines chịu áp lực lớn.
 
 War logistics là điểm then chốt. Army không chỉ cần thắng battle; hàng chục nghìn người phải được cấp grain, weapon và transport. Nếu supply chain bị cắt, tactical superiority không bảo đảm strategic success.
 

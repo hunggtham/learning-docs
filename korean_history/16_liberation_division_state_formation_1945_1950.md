@@ -16,11 +16,11 @@ International plans cho trusteeship tạo tranh cãi mạnh. Political labels �
 
 ## 1948: hai state structures
 
-Republic of Korea được thành lập ở south tháng 8/1948; Democratic People's Republic of Korea được thành lập ở north tháng 9/1948. Cả hai đều claim legitimacy trên toàn peninsula. Đây là lý do division không chỉ là geographic partition mà là competing state-building project.
+Đại Hàn Dân Quốc, tức Hàn Quốc (대한민국 / Republic of Korea), được thành lập ở phía nam tháng 8/1948; Cộng hòa Dân chủ Nhân dân Triều Tiên (조선민주주의인민공화국 / Democratic People's Republic of Korea) được thành lập ở phía bắc tháng 9/1948. Cả hai đều claim legitimacy trên toàn peninsula. Đây là lý do division không chỉ là geographic partition mà là competing state-building project.
 
 ## Violence before the Korean War
 
-Period 1948–1950 có insurgency, repression và major episodes of civilian violence, bao gồm Jeju 4·3 và Yeosu–Suncheon events. Những sự kiện này cần được đọc với archival evidence và careful terminology vì memory và responsibility đã là chủ đề tranh luận lâu dài.
+Period 1948–1950 có insurgency, repression và major episodes of civilian violence, bao gồm Jeju (제주 / Jeju) 4·3 và Yeosu–Suncheon events. Những sự kiện này cần được đọc với archival evidence và careful terminology vì memory và responsibility đã là chủ đề tranh luận lâu dài.
 
 ## Mental Model
 

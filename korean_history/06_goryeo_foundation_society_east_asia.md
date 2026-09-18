@@ -2,7 +2,7 @@
 
 ## Foundation như coalition building
 
-Goryeo (고려, 918–1392) thường được nhớ vì tên “Korea” bắt nguồn từ Goryeo. Nhưng về institution, điều quan trọng là triều đại này phải integrate local elites sau thời fragmentation. Wang Geon kết hợp appointment, marriage và recognition of local power thay vì chỉ thay toàn bộ elite cũ.
+Cao Ly (고려 / Goryeo) thường được nhớ vì tên “Korea” bắt nguồn từ Goryeo. Nhưng về institution, điều quan trọng là triều đại này phải integrate local elites sau thời fragmentation. Wang Geon kết hợp appointment, marriage và recognition of local power thay vì chỉ thay toàn bộ elite cũ.
 
 ## State structure và aristocratic order
 

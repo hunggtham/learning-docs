@@ -6,7 +6,7 @@
 
 ## Competition for legitimacy
 
-Trong nhiều thập kỷ, Seoul và Pyongyang đều claim đại diện toàn Korea. Diplomatic competition, propaganda và development performance trở thành phần của inter-Korean rivalry.
+Trong nhiều thập kỷ, Seoul và Bình Nhưỡng (평양 / Pyongyang) đều claim đại diện toàn Korea. Diplomatic competition, propaganda và development performance trở thành phần của inter-Korean rivalry.
 
 ## 1972 Joint Communiqué và các opening cycles
 
@@ -18,7 +18,7 @@ Hai bên gia nhập UN năm 1991 và ký Basic Agreement, một bước institut
 
 ## Sunshine Policy, summits và Kaesong
 
-Late 1990s–2000s engagement policy tạo 2000 summit, later 2007 summit và projects như Kaesong Industrial Complex. Economic cooperation nhằm tạo interdependence, nhưng interdependence chỉ giảm conflict nếu political trust và security conditions đủ ổn định.
+Late 1990s–2000s engagement policy tạo 2000 summit, later 2007 summit và projects như Kaesong (개성 / Kaesong) Industrial Complex. Economic cooperation nhằm tạo interdependence, nhưng interdependence chỉ giảm conflict nếu political trust và security conditions đủ ổn định.
 
 ## 2018 và giới hạn của summit diplomacy
 

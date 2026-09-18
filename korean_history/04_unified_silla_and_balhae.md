@@ -4,11 +4,11 @@
 
 Silla liên minh với Tang để đánh Baekje năm 660 và Goguryeo năm 668, sau đó chiến đấu với Tang để giữ phần lớn bán đảo phía nam. Vì vậy **Unified Silla (통일신라)** là tên hữu ích nhưng dễ gây nhầm nếu hiểu là toàn bộ historical space trước đó đã nằm trong một nhà nước duy nhất.
 
-Ở phía bắc, **Balhae (발해)** được thành lập năm 698 và phát triển trên phần lớn lãnh thổ cũ của Goguryeo cùng vùng Manchuria. Sử học Hàn Quốc thường gọi giai đoạn này là **Northern and Southern States Period (남북국시대)** để nhấn mạnh Silla và Balhae cùng tồn tại.
+Ở phía bắc, **Bột Hải (발해 / Balhae)** được thành lập năm 698 và phát triển trên phần lớn lãnh thổ cũ của Goguryeo cùng vùng Manchuria. Sử học Hàn Quốc thường gọi giai đoạn này là **Northern and Southern States Period (남북국시대)** để nhấn mạnh Silla và Balhae cùng tồn tại.
 
 ## Silla sau chiến tranh: integration problem
 
-Chiếm territory dễ hơn tích hợp territory. Silla phải quản lý former Baekje/Goguryeo populations, local elites và tax base. Capital Gyeongju trở thành trung tâm aristocratic culture nhưng sự tập trung quyền lực và bone-rank rigidity cũng tạo giới hạn.
+Chiếm territory dễ hơn tích hợp territory. Silla phải quản lý former Baekje/Goguryeo populations, local elites và tax base. Capital Gyeongju (경주 / Gyeongju) trở thành trung tâm aristocratic culture nhưng sự tập trung quyền lực và bone-rank rigidity cũng tạo giới hạn.
 
 Buddhist monasteries, trade với Tang và maritime routes kết nối Silla với East Asia. Figures như Jang Bogo (장보고) cho thấy commerce và naval security có thể tạo power ngoài court hierarchy.
 

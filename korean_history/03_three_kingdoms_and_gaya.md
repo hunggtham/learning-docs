@@ -2,7 +2,7 @@
 
 ## Three Kingdoms không xuất hiện hoàn chỉnh từ ngày lập quốc truyền thống
 
-Samguk sagi ghi foundation dates rất sớm cho Goguryeo (고구려), Baekje (백제) và Silla (신라), nhưng state formation thực tế diễn ra dần dần. Điều quan trọng hơn việc thuộc lòng năm đầu là hiểu vì sao từ nhiều chiefdom lại xuất hiện centralized kingdoms.
+Tam Quốc Sử Ký (삼국사기 / Samguk Sagi) ghi foundation dates rất sớm cho Cao Câu Ly (고구려 / Goguryeo), Bách Tế (백제 / Baekje) và Tân La (신라 / Silla), nhưng state formation thực tế diễn ra dần dần. Điều quan trọng hơn việc thuộc lòng năm đầu là hiểu vì sao từ nhiều chiefdom lại xuất hiện centralized kingdoms.
 
 Chiến tranh liên tục tạo áp lực huy động manpower, food và metal. Một kingdom muốn duy trì army phải thu thuế, quản lý local elites, xây road/fortress và tạo command structure. Vì vậy **war-making và state-making** thường reinforce lẫn nhau.
 
@@ -18,11 +18,11 @@ Baekje kiểm soát vùng sông Hán trong những giai đoạn quan trọng r�
 
 ## Silla: từ peripheral polity đến unification war
 
-Silla ban đầu chậm centralize hơn, nhưng dần xây monarchy và aristocratic structure. **Bone-rank system (골품제)** là ví dụ institutionalized status: birth category giới hạn office và marriage possibility. Một rule như vậy giảm uncertainty về hierarchy nhưng cũng tạo rigidity, về lâu dài trở thành constraint.
+Silla ban đầu chậm centralize hơn, nhưng dần xây monarchy và aristocratic structure. **chế độ Cốt phẩm (골품제 / Bone-rank System)** là ví dụ institutionalized status: birth category giới hạn office và marriage possibility. Một rule như vậy giảm uncertainty về hierarchy nhưng cũng tạo rigidity, về lâu dài trở thành constraint.
 
 ## Gaya Confederacy
 
-Gaya (가야) không nên bị xem như footnote. Vùng Nakdong có iron production và exchange network mạnh. Confederacy structure cho thấy centralization không phải outcome duy nhất; nhiều polity có thể hợp tác và cạnh tranh mà không biến ngay thành một kingdom thống nhất.
+Gaya (가야 / Gaya) không nên bị xem như footnote. Vùng Nakdong có iron production và exchange network mạnh. Confederacy structure cho thấy centralization không phải outcome duy nhất; nhiều polity có thể hợp tác và cạnh tranh mà không biến ngay thành một kingdom thống nhất.
 
 ## Buddhism như information và legitimacy infrastructure
 

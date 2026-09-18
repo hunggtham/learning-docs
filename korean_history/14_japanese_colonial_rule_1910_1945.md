@@ -34,7 +34,7 @@ Survey, registry, police network và statistical administration làm population/
 
 ## Cultural rule sau 1919 có giới hạn gì?
 
-Sau March First Movement, colonial government giảm một số overt military-style controls, cho phép newspaper/cultural activity rộng hơn tương đối. Nhưng censorship, police surveillance và political restriction vẫn tồn tại. “Cultural rule” là policy label, không đồng nghĩa liberal democracy.
+Sau Phong trào 1 tháng 3 (3·1운동 / March First Movement), colonial government giảm một số overt military-style controls, cho phép newspaper/cultural activity rộng hơn tương đối. Nhưng censorship, police surveillance và political restriction vẫn tồn tại. “Cultural rule” là policy label, không đồng nghĩa liberal democracy.
 
 ## Korean capital và entrepreneurs
 

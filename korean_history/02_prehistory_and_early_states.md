@@ -12,15 +12,15 @@ Bronze (đồng thanh / 청동) đắt và khó sản xuất hơn stone. Vì v�
 
 ## Gojoseon và vấn đề giữa myth với state formation
 
-**Gojoseon (고조선)** là nhà nước sớm quan trọng trong lịch sử bán đảo và vùng Liêu Đông. Truyền thống gắn nguồn gốc với Dangun, nhưng sử học phân biệt origin narrative với reconstruction từ archaeology và written sources. Gojoseon dần xuất hiện như một polity có lãnh thổ, elite và khả năng ngoại giao/chiến tranh trong các nguồn cổ.
+**Cổ Triều Tiên (고조선 / Gojoseon)** là nhà nước sớm quan trọng trong lịch sử bán đảo và vùng Liêu Đông. Truyền thống gắn nguồn gốc với Dangun, nhưng sử học phân biệt origin narrative với reconstruction từ archaeology và written sources. Gojoseon dần xuất hiện như một polity có lãnh thổ, elite và khả năng ngoại giao/chiến tranh trong các nguồn cổ.
 
-Giai đoạn **Wiman Joseon (위만조선)** cho thấy early Korean history không phải một container dân tộc khép kín. Migration, trade và political competition xuyên biên giới diễn ra liên tục. Khi nhà Hán đánh bại Wiman Joseon năm 108 BCE và thiết lập commanderies, vùng này trở thành interface phức tạp giữa local societies và imperial administration.
+Giai đoạn **Wiman Joseon (위만조선)** cho thấy early Korean history không phải một container dân tộc khép kín. Migration, trade và political competition xuyên biên giới diễn ra liên tục. Khi nhà Hán đánh bại Vệ Mãn Cổ Triều Tiên năm 108 BCE và thiết lập commanderies, vùng này trở thành interface phức tạp giữa local societies và imperial administration.
 
 ## Buyeo, Okjeo, Dongye và Samhan
 
 Sau và song song với Gojoseon tồn tại nhiều political communities như Buyeo (부여), Okjeo (옥저), Dongye (동예), và Samhan (삼한: Mahan, Jinhan, Byeonhan). Không nên coi chúng chỉ là “bản nháp” của các vương quốc sau. Mỗi cộng đồng có ecology, trade network và political structure riêng.
 
-Chính từ môi trường nhiều polity cạnh tranh này, Goguryeo, Baekje, Silla và Gaya dần phát triển. **State formation (hình thành nhà nước / 국가 형성)** là process: consolidation of chiefs, taxation, warfare, law, ritual legitimacy và territorial administration.
+Chính từ môi trường nhiều polity cạnh tranh này, Goguryeo, Baekje, Silla và Gaya (가야 / Gaya) dần phát triển. **State formation (hình thành nhà nước / 국가 형성)** là process: consolidation of chiefs, taxation, warfare, law, ritual legitimacy và territorial administration.
 
 ## Knowledge Connection: complexity và scale
 
