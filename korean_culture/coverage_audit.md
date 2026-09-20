@@ -43,11 +43,11 @@ Một chương tốt cũng nên có ví dụ đời sống, liên kết chéo, m
 | Giáo dục, thi cử, bằng cấp | `05` + `30` | mạnh | đào tạo lại người trưởng thành còn có thể mở rộng |
 | Công sở | `06` | mạnh, đã mở rộng | đã có làm việc từ xa/lai, nhóm toàn cầu và giao tiếp bất đồng bộ |
 | Ẩm thực | `07` | mạnh, đã mở rộng | đã có ăn chay, halal, dị ứng và bữa ăn tập thể đa dạng |
-| Nhà ở, hanok, không gian | `08` + `31` | mạnh, đã mở rộng | `31` đã thêm thiết kế không rào cản và già hoá tại nơi ở quen thuộc |
+| Nhà ở, hanok, không gian | `08` + `31` | mạnh, đã mở rộng | đã thêm thiết kế không rào cản và già hoá tại nơi ở quen thuộc |
 | Tôn giáo và thế giới quan | `09` | mạnh | chỉ thêm phong trào mới khi có nguồn học thuật tốt |
 | Nghệ thuật, thủ công, di sản | `10` | mạnh, đã mở rộng | đã thêm bảo tàng, giám tuyển, biennale, hội chợ nghệ thuật và nghệ thuật số |
 | Lễ Tết, nghi lễ, trò chơi | `11` | mạnh | giữ liên kết với gia đình và vùng miền |
-| Đô thị, tiêu dùng, đời sống số | `12` | mạnh | khả năng tiếp cận kiosk đã có; hành trình đô thị không rào cản còn có thể sâu hơn |
+| Đô thị, tiêu dùng, đời sống số | `12` | mạnh, đã mở rộng | đã thêm hành trình đô thị không rào cản, người gặp hạn chế di chuyển và khả năng tiếp cận số |
 | Hallyu, truyền thông, nền tảng | `13` | mạnh, đã mở rộng | đã thêm lao động sáng tạo, quyền tác giả, quyền chuyển thể, ghi công và phân phối giá trị |
 | Vùng miền, Jeju, bán đảo | `14` | mạnh | tránh biến khác biệt vùng thành định kiến cá nhân |
 | Dân số, già hoá, di cư | `15` | mạnh | mọi số liệu phải ghi năm, quần thể và mẫu số |
@@ -61,12 +61,12 @@ Một chương tốt cũng nên có ví dụ đời sống, liên kết chéo, m
 | Nghĩa vụ quân sự | `23` | khá mạnh | tránh coi trải nghiệm nam giới là trải nghiệm phổ quát |
 | Kinh tế, chaebol, nhà ở, dịch chuyển xã hội | `24` | mạnh | thuế, vay và chính sách phải dùng nguồn hiện hành |
 | Xã hội dân sự và không gian công luận | `25` | mạnh về khung phân tích | dữ kiện chính trị hiện hành luôn phải kiểm chứng mới |
-| Y tế và văn hoá sức khoẻ | `26` | mạnh, đã mở rộng | đã thêm khuyết tật, accessibility, palliative care, hospice và cuối đời |
+| Y tế và văn hoá sức khoẻ | `26` | mạnh, đã mở rộng | đã thêm khuyết tật, khả năng tiếp cận, chăm sóc giảm nhẹ, hospice và cuối đời |
 | Internet, nhắn tin, tiếng lóng, meme | `27` | mạnh | tiếng lóng/nền tảng phải có mốc thời gian |
 | Quy ước tên riêng | `28` | tốt | giữ nhất quán Việt–Hàn–Anh |
 | Nuôi dạy con và chăm sóc | `29` | mạnh | nối chặt với `04`, `05`, `15`, `26` |
 | Đại học và thanh niên | `30` | mạnh | tiếp tục theo dõi thay đổi tuyển dụng |
-| Căn hộ, khu dân cư | `31` | mạnh, đã mở rộng | đã vá khoảng trống về universal design và ageing-in-place |
+| Căn hộ, khu dân cư | `31` | mạnh, đã mở rộng | đã thêm thiết kế phổ quát, nhà thông minh hỗ trợ chăm sóc và ageing-in-place |
 | Mùa, khí hậu, môi trường | `32` | mạnh | xu hướng khí hậu phải gắn mốc thời gian |
 | Dịch vụ, khách hàng, đánh giá | `33` | mạnh | tiếp tục liên kết điều kiện lao động với `06` và `24` |
 
@@ -74,9 +74,7 @@ Một chương tốt cũng nên có ví dụ đời sống, liên kết chéo, m
 
 ### Công sở lai và nhóm toàn cầu
 
-[`06_workplace_organization_hoesik.md`](06_workplace_organization_hoesik.md) hiện đã nối `재택근무`, `하이브리드근무`, giao tiếp bất đồng bộ, múi giờ, nhóm toàn cầu, chủ nghĩa hiện diện số và liên lạc sau giờ làm vào cùng một mô hình tổ chức.
-
-Điểm cốt lõi không còn là “làm ở nhà hay văn phòng”, mà là tổ chức chuyển từ tín hiệu **sự hiện diện vật lý** sang **trạng thái công việc, tài liệu và đầu ra** như thế nào.
+[`06_workplace_organization_hoesik.md`](06_workplace_organization_hoesik.md) đã nối `재택근무`, `하이브리드근무`, giao tiếp bất đồng bộ, múi giờ, nhóm toàn cầu, chủ nghĩa hiện diện số và liên lạc sau giờ làm vào cùng một mô hình tổ chức.
 
 ### Đa dạng nhu cầu ăn uống
 
@@ -88,19 +86,15 @@ sở thích cá nhân
 ≠ dị ứng / chống chỉ định y khoa
 ```
 
-Điều này nối ẩm thực với di cư, trường học, công sở và thiết kế dịch vụ.
-
 ### Nghệ thuật đương đại và thiết chế văn hoá
 
-[`10_arts_music_performance_craft.md`](10_arts_music_performance_craft.md) đã mở rộng từ di sản truyền thống sang bảo tàng, bảo tàng mỹ thuật, giám tuyển, biennale, hội chợ nghệ thuật, không gian độc lập và bảo tồn nghệ thuật số.
-
-Chương hiện giải thích cả **cách nghệ thuật được tạo** lẫn **cách nó được nhìn thấy, lưu trữ, định giá và đưa vào ký ức công cộng**.
+[`10_arts_music_performance_craft.md`](10_arts_music_performance_craft.md) đã mở rộng từ di sản truyền thống sang bảo tàng, giám tuyển, biennale, hội chợ nghệ thuật, không gian độc lập và bảo tồn nghệ thuật số.
 
 ### Lao động sáng tạo và sở hữu trí tuệ
 
-[`13_hallyu_media_platforms.md`](13_hallyu_media_platforms.md) đã được mở rộng từ lưu thông Hallyu sang cấu trúc lao động phía sau sản phẩm: tác giả, biên kịch, trợ lý, vũ công, biên đạo, dịch giả và các nghề hậu trường.
+[`13_hallyu_media_platforms.md`](13_hallyu_media_platforms.md) đã mở rộng từ lưu thông Hallyu sang cấu trúc lao động phía sau sản phẩm: tác giả, biên kịch, trợ lý, vũ công, biên đạo, dịch giả và các nghề hậu trường.
 
-Chương cũng tách ba lớp dễ bị nhầm:
+Chương tách rõ:
 
 ```text
 ghi công (credit)
@@ -108,65 +102,68 @@ ghi công (credit)
 ≠ doanh thu thực nhận
 ```
 
-Ngoài ra, phần mới giải thích quyền chuyển thể, bất cân xứng dữ liệu với nền tảng, lao động theo dự án, quyền thương lượng và tác động của AI/giọng–hình ảnh tổng hợp ở mức khái niệm.
+Ngoài ra đã thêm quyền chuyển thể, bất cân xứng dữ liệu với nền tảng, lao động theo dự án, quyền thương lượng và tác động của nội dung tạo sinh ở mức khái niệm.
 
 ### Khuyết tật, khả năng tiếp cận và cuối đời
 
 [`26_health_medicine_wellness_body.md`](26_health_medicine_wellness_body.md) đã thêm mô hình trong đó mức tham gia xã hội phụ thuộc cả khả năng cá nhân và môi trường. Khả năng tiếp cận được tách thành vật lý, thông tin, số và xã hội.
 
-Chương cũng đã thêm chăm sóc giảm nhẹ, hospice, lập kế hoạch chăm sóc trước, điều trị duy trì sự sống ở mức khái niệm và quá trình đau buồn sau mất mát. Nội dung mang tính giải thích văn hoá–thiết chế, không phải lời khuyên y tế cá nhân.
+Chương cũng đã thêm chăm sóc giảm nhẹ, hospice, lập kế hoạch chăm sóc trước, điều trị duy trì sự sống ở mức khái niệm và đau buồn sau mất mát.
 
 ### Nhà ở không rào cản và già hoá tại nơi ở quen thuộc
 
-[`31_apartment_neighborhood_moving_recycling_everyday_life.md`](31_apartment_neighborhood_moving_recycling_everyday_life.md) đã mở rộng `무장애`, thiết kế phổ quát, an toàn phòng tắm, sự phụ thuộc vào thang máy, nhà thông minh hỗ trợ chăm sóc và **già hoá tại nơi ở quen thuộc (ageing-in-place)**.
-
-Nhà ở vì vậy không chỉ được đánh giá bằng diện tích và vị trí, mà còn bằng việc một người có khả năng cơ thể thay đổi theo tuổi có thể tiếp tục tự sử dụng không gian đến mức nào.
+[`31_apartment_neighborhood_moving_recycling_everyday_life.md`](31_apartment_neighborhood_moving_recycling_everyday_life.md) đã mở rộng `무장애`, thiết kế phổ quát, an toàn phòng tắm, sự phụ thuộc vào thang máy, nhà thông minh hỗ trợ chăm sóc và già hoá tại nơi ở quen thuộc.
 
 ### Thể thao thích ứng và giải trí trong xã hội già hoá
 
 [`20_sports_leisure_fan_culture.md`](20_sports_leisure_fan_culture.md) đã bổ sung thể thao thích ứng, khả năng tiếp cận của khán giả, giải trí người cao tuổi và khoảng cách số trong việc đặt sân, mua vé hoặc tham gia cộng đồng.
 
-Trọng tâm chuyển từ “người Hàn thích môn gì?” sang câu hỏi rộng hơn: **ai thực sự có thời gian, tiền, khả năng cơ thể, giao thông và hạ tầng để tham gia?**
-
-## 5. Khoảng trống ưu tiên tiếp theo
-
-Sau vòng này, thư viện không còn khoảng trống lớn nào buộc phải tạo chương mới. Các vòng sau nên tập trung vào ba dạng cải thiện nhỏ nhưng có giá trị cao.
-
 ### Hành trình đô thị không rào cản
 
-`12`, `26` và `31` đã có từng mảnh. Có thể nối sâu hơn thành một hành trình hoàn chỉnh:
+[`12_city_consumption_digital_life.md`](12_city_consumption_digital_life.md) đã nối nhà ở, vỉa hè, giao thông, thang máy, điểm đến, kiosk, xác thực và dịch vụ số thành một hành trình thống nhất.
+
+Mô hình quan trọng là:
 
 ```text
 nhà
-→ vỉa hè
-→ xe buýt / tàu điện
+→ lối đi
+→ giao thông
 → điểm đến
-→ kiosk / ứng dụng
+→ giao diện số
 → dịch vụ
-→ trở về nhà
+→ quay về nhà
 ```
 
-Một mắt xích không tiếp cận được có thể làm toàn bộ hành trình thất bại.
+Một mắt xích thất bại có thể làm toàn bộ hành trình thất bại.
+
+## 5. Ưu tiên cho các vòng tiếp theo
+
+Sau vòng này, thư viện không còn khoảng trống lớn nào buộc phải tạo chương mới. Nên ưu tiên ba việc.
 
 ### Học tập và đào tạo lại trong tuổi trưởng thành
 
-`05`, `24` và `30` đã giải thích bằng cấp, thị trường lao động và chuyển tiếp đại học–việc làm. Có thể bổ sung sâu hơn về `평생교육`, học lại kỹ năng, chuyển nghề và cách tuổi tác ảnh hưởng quyết định đầu tư vào giáo dục.
+`05`, `24` và `30` đã giải thích bằng cấp, thị trường lao động và chuyển tiếp đại học–việc làm. Có thể bổ sung sâu hơn `평생교육`, học lại kỹ năng, chuyển nghề và cách tuổi tác ảnh hưởng quyết định đầu tư vào giáo dục.
 
-### Đồng bộ thuật ngữ và liên kết chéo
+### Đồng bộ bảng thuật ngữ
 
-Sau khi bổ sung nhiều nội dung mới, `17_glossary_and_reference_map.md` cần tiếp tục nhận các thuật ngữ như:
+[`17_glossary_and_reference_map.md`](17_glossary_and_reference_map.md) cần tiếp tục nhận các thuật ngữ mới như:
 
 ```text
 재택근무 / 하이브리드근무
-접근성 / 무장애 / universal design
+접근성 / 무장애 / thiết kế phổ quát
 완화의료 / 호스피스
 ageing-in-place
 큐레이터 / 비엔날레 / 독립공간
-저작권 / 크레딧 / adaptation rights
+저작권 / 크레딧 / quyền chuyển thể
 장애인 스포츠
+교통약자 / 디지털 접근성
 ```
 
-Đây là công việc đồng bộ, không phải lý do tạo chương mới.
+Cột English của glossary vẫn được giữ vì mục đích tra cứu.
+
+### Kiểm toán liên kết chéo và dữ liệu có thời hạn
+
+Sau mỗi vòng mở rộng cần kiểm tra link, thuật ngữ trùng nghĩa và số liệu có mốc thời gian. Đây là công việc bảo trì thư viện, không phải lý do tạo thêm chương.
 
 ## 6. Các liên kết chéo bắt buộc phải giữ đồng bộ
 
@@ -192,7 +189,7 @@ ageing-in-place
 - nền tảng và tiếng lóng phải có mốc thời gian;
 - tuyên bố y khoa phải dựa trên bằng chứng chuyên môn;
 - dữ kiện chính trị hiện hành phải được kiểm chứng bằng nguồn mới trước khi cập nhật;
-- điều khoản hợp đồng và quyền sở hữu trí tuệ cụ thể phải được kiểm tra theo luật/hợp đồng hiện hành, không suy từ mô hình văn hoá tổng quát.
+- điều khoản hợp đồng và quyền sở hữu trí tuệ cụ thể phải được kiểm tra theo luật/hợp đồng hiện hành.
 
 ## 8. Tiêu chí hoàn thành cho một chương
 
