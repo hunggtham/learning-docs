@@ -24,4 +24,8 @@ Bạn cần có khả năng mở một Korean/Vietnamese stock và tự xác đ�
 
 Với cross-border position, bạn phải đi thêm một lớp: `underlying economics → country/factor → currency → wrapper/domicile/legal claim → custody/access/settlement → tax/cost → repatriation/liquidity → liability match`. Một asset tốt nhưng wrapper, tax, liquidity hoặc capital-mobility không phù hợp vẫn có thể là implementation tệ.
 
-Sau khi hoàn thành domain này, bước tiếp theo không phải đọc thêm vô hạn mà là xây research notebook cho 5–10 securities/sectors thật, đồng thời duy trì country/currency/liquidity dashboard và cập nhật thesis theo daily/weekly/monthly/quarterly cadence.
+## Capstone case studies
+
+Sau domain này, chuyển sang [07 — Integrated Case Studies](../07_integrated_case_studies/README.md). Hai case quan trọng nhất cho market-specific research là [Korea Semiconductor Cycle](../07_integrated_case_studies/03_SEMICONDUCTOR_CYCLE_KOREA_CASE.md) và [Vietnam Property–Bank Credit Cycle](../07_integrated_case_studies/04_VIETNAM_PROPERTY_BANK_CREDIT_CASE.md). Chúng buộc người đọc nối macro, sector, accounting, valuation, liquidity, position sizing và review trong cùng một thesis.
+
+Sau khi hoàn thành domain này và capstone, bước tiếp theo không phải đọc thêm vô hạn mà là xây research notebook cho 5–10 securities/sectors thật, đồng thời duy trì country/currency/liquidity dashboard và cập nhật thesis theo daily/weekly/monthly/quarterly cadence.
