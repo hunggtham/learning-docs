@@ -1,14 +1,20 @@
 # 05 — Options, Volatility Surface, Greeks và Hedging Chuyên Sâu
 
-> Options không chỉ là công cụ “đoán tăng hay giảm”. Chúng là hợp đồng định giá probability distribution, time, volatility và convexity. Chapter này đi từ payoff cơ bản tới volatility surface, Greeks interaction, skew, term structure, hedging và những sai lầm thường gặp khi dùng options để trading hoặc bảo vệ portfolio.
+> Options không chỉ là công cụ “đoán tăng hay giảm”. Chúng là hợp đồng chuyển risk giữa các bên và định giá đồng thời direction, time, volatility, skew, interest rate, dividend, jump risk và liquidity. Chapter này xây từ payoff cơ bản tới volatility surface, Greek interactions, hedging và research workflow để người đọc hiểu vì sao một position có thể đúng direction nhưng vẫn lỗ, và vì sao option premium cao luôn phản ánh risk được chuyển sang ai đó.
 
-## 1. Option Price phản ánh nhiều biến cùng lúc
+## 1. Option là quyền, không phải nghĩa vụ đối với buyer
 
-Giá option không chỉ phụ thuộc underlying tăng hay giảm. Một premium có thể thay đổi vì spot price, strike, time to expiry, implied volatility, interest rate và dividend assumption.
+Buyer của call có quyền mua underlying tại strike trước/đúng expiry tùy exercise style. Buyer của put có quyền bán. Buyer trả premium để mua convexity; seller nhận premium và chấp nhận obligation.
 
-Do đó việc đúng hướng nhưng vẫn lỗ là hoàn toàn có thể nếu IV giảm hoặc time decay lớn hơn directional gain.
+Điều quan trọng là option không tạo return từ hư không. Premium là price của risk transfer. Nếu một investor muốn downside protection, một bên khác phải sẵn sàng bán protection với compensation đủ hấp dẫn.
 
-## 2. Intrinsic Value và Time Value
+## 2. Payoff tại expiry khác P/L trước expiry
+
+Payoff chart thường vẽ tại expiry, nhưng live option price trước expiry còn time value và IV. Long call có thể đang lãi dù spot dưới strike nếu IV tăng mạnh và còn nhiều time. Ngược lại call có thể lỗ dù spot tăng nếu IV collapse và theta decay lớn.
+
+Vì vậy trader phải phân biệt **terminal payoff** với **mark-to-market path**.
+
+## 3. Intrinsic Value
 
 Call intrinsic value:
 
@@ -22,313 +28,476 @@ Put intrinsic value:
 max(K - S, 0)
 ```
 
-Phần premium vượt intrinsic value là time value. Time value phản ánh khả năng option trở nên có giá trị hơn trước expiry.
+Premium vượt intrinsic value là **extrinsic/time value**. Extrinsic value giảm về zero khi expiry đến, nhưng tốc độ giảm không tuyến tính.
 
-## 3. Moneyness
+## 4. Moneyness
 
-Option có thể ITM, ATM hoặc OTM. Nhưng moneyness không chỉ là label. Nó ảnh hưởng Delta, Gamma, Vega và Theta.
+ITM, ATM và OTM là mô tả vị trí strike so với spot/forward. Moneyness ảnh hưởng Delta, Gamma, Vega và probability distribution implied by market.
 
-ATM options thường có Gamma và Vega sensitivity lớn hơn tương đối so với deep ITM/OTM options.
+ATM options thường có Gamma cao gần expiry; longer-dated ATM options thường có Vega lớn hơn vì volatility assumption tác động trên horizon dài hơn.
 
-## 4. Delta
+## 5. Forward Price quan trọng hơn Spot trong Pricing
 
-**Delta** đo option price thay đổi xấp xỉ bao nhiêu khi underlying thay đổi 1 unit.
+Option pricing thường liên hệ với forward price chứ không chỉ spot. Interest-rate differential, dividends hoặc carry làm forward khác spot.
 
-Delta không cố định. Nó thay đổi theo spot, volatility và time.
+Với equity index, expected dividends ảnh hưởng fair forward. Với FX, domestic/foreign rates quyết định forward points. Vì vậy cùng spot price nhưng rate/carry khác có thể làm option surface khác.
 
-Một call ATM có thể Delta khoảng 0.5 như intuition, nhưng con số thực tế phụ thuộc model và market conditions.
+## 6. Put–Call Parity
 
-## 5. Delta không phải Probability tuyệt đối
+Một relationship cơ bản nối call, put, spot/forward và present value của strike. Intuition là nếu hai portfolios tạo cùng terminal payoff thì arbitrage sẽ ép giá gần nhau sau khi tính funding/dividends.
 
-Delta đôi khi được dùng như approximation của probability kết thúc ITM trong một số assumptions, nhưng không nên coi nó là xác suất khách quan đơn giản.
+Parity giúp nhìn options như building blocks và phát hiện synthetic positions.
 
-Model measure, drift assumption và market pricing làm interpretation phức tạp hơn.
+## 7. Synthetic Long và Synthetic Short
 
-## 6. Gamma
+Long call + short put cùng strike/expiry tạo exposure gần synthetic long forward. Short call + long put tạo synthetic short.
 
-**Gamma** đo tốc độ thay đổi của Delta khi underlying thay đổi.
+Điều này cho thấy option strategy names không phải magic; nhiều structures chỉ là cách tái đóng gói direction, carry và convexity.
 
-Long option thường long gamma; short option thường short gamma. Long gamma có convexity: movement lớn có thể giúp position nhiều hơn linear exposure.
+## 8. Delta
 
-## 7. Gamma và Rebalancing
+**Delta** là first-order sensitivity của option price với spot/forward. Nó cho biết position behaves approximately như bao nhiêu units underlying cho một small move.
 
-Một delta-hedged long-gamma position thường cần mua khi market giảm và bán khi market tăng để giữ delta gần zero. Nếu realized volatility đủ cao so với implied cost, gamma scalping có thể có economics tích cực trước costs.
+Delta không cố định. Khi spot, IV và time thay đổi, delta cũng đổi. Vì vậy option không thể được quản lý như static stock exposure.
 
-Nhưng trading friction có thể ăn hết edge.
+## 9. Delta không phải “xác suất thật”
 
-## 8. Theta
+Delta đôi khi được dùng như rough proxy cho probability kết thúc ITM trong một số model assumptions, nhưng đó không phải objective real-world probability.
 
-**Theta** đo time decay gần đúng. Long options thường chịu negative theta; short options thường hưởng positive theta.
+Risk-neutral pricing measure, skew và carry khiến interpretation phức tạp hơn. Dùng delta như risk sensitivity trước, probability proxy sau.
 
-Nhưng “theta income” không phải free return. Short option nhận theta để chịu gamma/tail risk.
+## 10. Gamma
 
-## 9. Vega
+**Gamma** đo tốc độ Delta thay đổi khi underlying move. Long option thường long gamma; short option thường short gamma.
 
-**Vega** đo sensitivity với implied volatility.
+Long gamma hưởng lợi từ large realized movement vì delta tự tăng theo hướng có lợi. Short gamma có profile ngược lại: position trở nên more wrong khi spot chạy xa.
 
-Long options thường long vega. Nếu IV giảm mạnh sau event, long option có thể mất giá dù underlying move đúng hướng.
+## 11. Gamma Concentration gần Expiry
 
-Đây là cơ chế phía sau **IV crush**.
+ATM gamma thường tăng mạnh khi expiry tới. Điều này khiến short-dated options cực nhạy với small spot changes.
 
-## 10. Rho
+Trader thấy option premium nhỏ có thể tưởng risk nhỏ, nhưng gamma near expiry có thể làm P/L biến động nhanh hơn kỳ vọng.
 
-**Rho** đo sensitivity với interest rate. Rho thường ít được retail trader chú ý ở short-dated equity options nhưng có thể quan trọng hơn với long-dated options hoặc rates-sensitive structures.
+## 12. Theta
 
-## 11. Greeks tương tác chứ không độc lập
+**Theta** là sensitivity với passage of time khi các yếu tố khác giữ nguyên. Long options thường negative theta vì optionality mất dần khi time window ngắn lại.
 
-Một position có thể long Delta, long Gamma, short Theta và long Vega cùng lúc. Khi spot thay đổi, toàn bộ Greek profile thay đổi.
+Short-option seller nhận theta nhưng không phải free yield. Theta là compensation cho gamma, gap và volatility risk.
 
-Vì vậy chỉ nhìn một Greek tại thời điểm entry là chưa đủ.
+## 13. Theta không giảm tuyến tính
 
-## 12. Higher-order Greeks
+Time decay thường accelerate gần expiry, đặc biệt với ATM options. Deep ITM/OTM profiles khác nhau.
 
-Các desk chuyên nghiệp có thể theo dõi Vanna, Vomma/Volga, Charm hoặc Speed. Người học không cần thuộc hết ngay, nhưng nên hiểu lý do chúng tồn tại: first-order Greeks cũng thay đổi khi spot, volatility và time thay đổi.
+Do đó “mỗi ngày mất cùng một amount theta” là simplification sai.
 
-## 13. Implied Volatility
+## 14. Vega
 
-**Implied Volatility (IV)** là volatility input khiến model price bằng market price. Nó không phải forecast chắc chắn của realized volatility.
+**Vega** đo sensitivity với implied volatility. Long options thường long vega, short options short vega.
 
-IV phản ánh supply/demand, tail risk premium và uncertainty.
+Long-dated options thường có vega lớn vì thay đổi volatility assumption tác động lên nhiều time hơn.
 
-## 14. Realized Volatility vs Implied Volatility
+## 15. Rho và Carry
 
-Realized volatility nhìn backward hoặc được estimate từ price path. Implied volatility nhìn từ option price hiện tại.
+**Rho** đo sensitivity với rates. Với short-dated equity options nó có thể nhỏ hơn Delta/Gamma/Vega, nhưng với LEAPS, FX options hoặc rates products có thể material.
 
-Một core relative-value question là:
+Rates còn ảnh hưởng funding và forward price nên không nên coi option pricing tách khỏi macro rates.
+
+## 16. Higher-order Greeks
+
+Vanna đo interaction giữa delta và volatility; Volga/Vomma đo vega sensitivity với volatility; Charm đo delta decay theo time; Speed đo gamma change theo spot.
+
+Retail investor không cần thuộc formula, nhưng cần hiểu first-order Greeks tự thay đổi. Một hedge “delta-neutral” hôm nay không guaranteed neutral ngày mai.
+
+## 17. Greek Profile là vector risk
+
+Một position nên được mô tả bằng profile: long/short Delta, Gamma, Vega, Theta và tail exposure.
+
+Ví dụ long straddle gần ATM thường delta gần zero ban đầu nhưng long gamma, long vega và short theta. Khi spot move lớn, delta không còn zero.
+
+## 18. Implied Volatility
+
+**Implied Volatility (IV)** là volatility input khiến pricing model khớp market premium. Nó là price-implied parameter, không phải forecast chắc chắn.
+
+IV chứa expected movement, insurance demand, risk premium, liquidity và supply/demand của options.
+
+## 19. Realized Volatility
+
+**Realized volatility (RV)** đo volatility thực tế của underlying qua price path. Có nhiều estimator: close-to-close, intraday, Parkinson, Yang-Zhang… nhưng concept quan trọng là realized movement sau khi trade xảy ra.
+
+Core volatility trade thường hỏi: market đang price IV bao nhiêu và underlying có thể realize bao nhiêu sau costs/jumps?
+
+## 20. Implied vs Realized không đủ để kết luận edge
+
+IV cao hơn realized trung bình không có nghĩa short options luôn profitable. Difference có thể là compensation cho tail losses và crash correlation.
+
+Một strategy kiếm small premium 99 ngày nhưng mất rất lớn ngày 100 cần đánh giá full distribution, không chỉ average spread IV-RV.
+
+## 21. Volatility Risk Premium
+
+Equity index downside protection thường được bid cao do institutional hedging demand. Đây là một nguồn **volatility risk premium**.
+
+Nhưng premium tồn tại chính vì seller chịu negative convexity trong crisis. Risk premium và free alpha là hai khái niệm khác nhau.
+
+## 22. Volatility Smile và Skew
+
+Market IV không flat qua strikes. Equity indexes thường có downside put skew: OTM puts có IV cao hơn ATM/calls.
+
+Skew phản ánh asymmetric crash risk, supply/demand và dealer balance sheet. Không nên đọc “skew cao = chắc chắn crash”.
+
+## 23. Risk Reversal
+
+Trong FX/options markets, difference giữa OTM call IV và put IV thường được mô tả bằng **risk reversal**. Nó cho biết market trả premium tương đối cho one-sided tail.
+
+Risk reversal là price of asymmetry, không phải directional forecast độc lập.
+
+## 24. Butterfly / Curvature
+
+Ngoài slope skew, surface còn có curvature. Butterfly-style measures phản ánh wing IV so ATM.
+
+Curvature quan trọng với strategies dùng multiple strikes như butterflies, condors và ratio spreads.
+
+## 25. Term Structure
+
+IV khác theo expiry. Short-dated IV chịu immediate event risk; long-dated IV phản ánh uncertainty dài hơn.
+
+Normal term structure có thể upward sloping, nhưng event/crisis có thể invert khi front-end IV spike mạnh.
+
+## 26. Event Volatility
+
+Earnings, CPI, FOMC hoặc election có thể tạo discrete event variance. Expiry bao quanh event thường chứa premium cao hơn neighboring maturities.
+
+Trader phải tách normal daily variance và event variance để tránh mua “high IV” mà không hiểu high vì event nào.
+
+## 27. Implied Move
+
+ATM straddle premium thường được dùng để ước lượng approximate implied move tới expiry/event. Nó không phải exact confidence interval.
+
+Điểm quan trọng là market đã price movement nào. “Tôi nghĩ stock sẽ tăng” chưa đủ; cần hỏi expected magnitude có vượt move priced không.
+
+## 28. Volatility Surface
+
+**Volatility surface** là IV theo strike và maturity. Surface có thể shift, steepen, flatten hoặc twist.
+
+Một strategy có thể đúng spot direction nhưng lỗ vì surface move bất lợi. Calendar spreads và ratio structures đặc biệt nhạy surface shape.
+
+## 29. Sticky Strike và Sticky Delta Intuition
+
+Different markets có empirical behavior khác khi spot move. Skew có thể giữ gần strike levels hoặc delta levels hơn tùy regime.
+
+Không cần memorize rule; quan trọng là biết IV không dịch chuyển rigidly. Surface dynamics chính là một risk source.
+
+## 30. Vol-of-Vol
+
+IV itself biến động. **Volatility of volatility** quan trọng với vega-heavy strategies và long-dated options.
+
+Khi crisis, spot vol và vol-of-vol có thể tăng cùng lúc, làm surface move nonlinear.
+
+## 31. Long Call
+
+Long call mua upside convexity với max loss premium. Nhưng expected return phụ thuộc strike/IV/time, không chỉ bullish view.
+
+Deep OTM call rẻ theo dollars có thể rất đắt theo implied volatility và probability.
+
+## 32. Long Put
+
+Long put mua downside convexity. Nó có thể là directional bearish bet hoặc insurance cho existing asset.
+
+Insurance hiệu quả phải xét cost over repeated periods, not one crisis payoff.
+
+## 33. Vertical Spreads
+
+Bull call, bear put, call credit và put credit spreads combine two strikes để reshape payoff.
+
+Defined max loss không có nghĩa low risk nếu size quá lớn. Position size phải tính max loss và probability distribution.
+
+## 34. Straddle và Strangle
+
+Long straddle/strangle chủ yếu long movement/volatility; short structures short movement/convexity.
+
+Long vol cần realized move đủ lớn và đúng timing. Short vol cần survive tails và margin expansion.
+
+## 35. Butterfly và Condor
+
+Butterfly/condor concentrate payoff around ranges/strikes. They can express view about distribution shape rather than simple direction.
+
+But multiple legs add execution/slippage and assignment complexity.
+
+## 36. Calendar và Diagonal Spreads
+
+Calendars use different expiries; diagonals combine different strikes and expiries. They are bets on term structure, theta and relative vega as much as direction.
+
+Backtesting them requires historical option surfaces, not just underlying candles.
+
+## 37. Covered Call
+
+Covered call = long underlying + short call. Premium reduces downside slightly but caps upside.
+
+Economically it is partially short volatility/convexity. Calling it “passive income” hides what is being sold.
+
+## 38. Protective Put
+
+Long stock + long put creates downside floor. Cost is premium plus possible IV overpayment.
+
+Hedge evaluation should compare protection efficiency, carry drag and trigger horizon.
+
+## 39. Collar
+
+Collar buys put and sells call. It finances insurance by giving up upside.
+
+Zero-cost collar is not free; price is paid through foregone participation and strike constraints.
+
+## 40. Ratio Spread
+
+Ratio spreads use unequal option quantities and can create hidden naked exposure beyond certain spot levels.
+
+Never infer risk from initial debit/credit alone. Plot full payoff and stress assignment.
+
+## 41. Dispersion Intuition
+
+Index volatility depends component volatilities and correlations. Dispersion strategies trade relationship between index options and single-stock options.
+
+Conceptually useful because it shows correlation itself can be priced risk.
+
+## 42. Gamma Scalping
+
+A delta-hedged long-gamma position buys low/sells high mechanically as delta changes. Profitability depends realized volatility relative to implied plus transaction costs.
+
+Continuous frictionless hedging is theoretical; real slippage and jumps matter.
+
+## 43. Dynamic Delta Hedging
+
+Rebalancing hedge frequency is trade-off. Too frequent raises cost; too infrequent leaves directional exposure.
+
+In jump markets no feasible frequency removes gap risk completely.
+
+## 44. Jump Risk
+
+Earnings gaps, central-bank surprises and geopolitical shocks violate smooth-price assumptions. Short gamma can suffer loss before hedge executes.
+
+Model max loss based only continuous diffusion can severely underestimate tail.
+
+## 45. Volatility Clustering
+
+High-volatility periods tend to cluster. IV and realized vol are regime dependent.
+
+Option strategy tested only in calm years may be structurally biased. Stress multiple vol regimes.
+
+## 46. Market Maker Hedging
+
+Dealers hedge aggregate Delta/Gamma/Vega subject to inventory and risk limits. Hedging flows can affect short-term price dynamics.
+
+But public estimates of “dealer gamma” are model-dependent. Treat them as context, not deterministic signal.
+
+## 47. Open Interest
+
+Open interest shows outstanding contracts, not whether participants are net bullish/bearish. Every contract has buyer and seller.
+
+Strike concentration can matter operationally near expiry but should not be interpreted mechanically.
+
+## 48. Volume, Spread và Depth
+
+Option liquidity must be assessed by bid-ask, displayed size, underlying liquidity and ability to execute multi-leg order.
+
+A theoretical edge smaller than spread/commission is not tradeable edge.
+
+## 49. Early Exercise
+
+American options can be exercised early. Deep ITM calls before ex-dividend dates and deep ITM puts under certain rate conditions may have early-exercise economics.
+
+Short seller must understand assignment risk, not just terminal payoff.
+
+## 50. Pin Risk
+
+When spot closes near strike at expiry, assignment may be uncertain across contracts. After-hours moves can leave unexpected stock exposure.
+
+Operational plan before expiry is essential.
+
+## 51. Cash vs Physical Settlement
+
+Index options may cash settle; equity options often settle shares. Settlement style affects capital needs and post-expiry exposure.
+
+Contract specification should be read before trade, not after assignment.
+
+## 52. Contract Multiplier
+
+Quoted option price times multiplier determines cash premium/notional. Small quoted numbers can represent large exposure.
+
+Always compute dollar Delta, dollar Gamma approximation and stress loss at portfolio level.
+
+## 53. Dollar Delta
+
+A practical risk metric:
 
 ```text
-Market đang price bao nhiêu volatility?
-Thực tế có khả năng realize bao nhiêu?
+Dollar Delta ≈ Delta × Contract Multiplier × Underlying Price × Contracts
 ```
 
-## 15. Volatility Risk Premium
+It translates option exposure into approximate underlying-equivalent dollars for small moves.
 
-Equity index options thường có tendency implied volatility cao hơn realized volatility trung bình dài hạn do demand bảo hiểm downside. Chênh lệch này liên quan **volatility risk premium**.
+## 54. Gamma Exposure
 
-Nhưng premium tồn tại vì short-vol strategy chịu loss lớn trong crash.
+Gamma tells how Delta changes. Portfolio with small current Delta but large short Gamma can become highly directional after a fast move.
 
-## 16. Volatility Smile và Skew
+This is why “delta-neutral” does not mean low risk.
 
-Nếu Black-Scholes assumptions hoàn hảo, cùng expiry có thể có IV tương tự qua strikes. Thực tế IV thay đổi theo strike, tạo smile hoặc skew.
+## 55. Vega Exposure
 
-Equity index thường có downside put skew: OTM puts có IV cao hơn vì demand bảo hiểm và crash risk.
+Portfolio may be directionally hedged but heavily short Vega. A volatility spike can create loss even if spot barely moves.
 
-## 17. Put Skew nói gì?
+Aggregate Greeks should be monitored across positions, not each trade in isolation.
 
-Put skew cao có thể phản ánh downside demand, leverage constraints hoặc market-maker inventory. Không nên kết luận đơn giản “skew cao = market chắc chắn crash”.
+## 56. Margin Risk
 
-Skew là price của asymmetry, không phải oracle.
+Short options may face margin requirement increase exactly when IV rises and equity drops. This creates liquidity/forced-liquidation risk beyond theoretical expiry max loss for uncovered positions.
 
-## 18. Term Structure of Volatility
+Risk budget must include margin path.
 
-IV thay đổi theo expiry. Normal regime có thể có upward-sloping term structure; event risk có thể làm short-dated IV spike.
+## 57. Portfolio Hedging bằng Index Futures vs Options
 
-Ví dụ earnings event thường concentrated trong expiry bao quanh ngày earnings.
+Futures hedge beta cheaply and linearly but remove upside/downside symmetrically. Put options preserve upside but cost premium.
 
-## 19. Event Volatility
+Choice depends whether goal is reduce beta, cap tail loss or protect a temporary event window.
 
-Option premium trước earnings, CPI hoặc election có thể chứa event variance. Sau event, uncertainty biến mất và IV có thể collapse.
-
-Long straddle chỉ profitable nếu realized move đủ lớn so với move đã được priced.
-
-## 20. Expected Move
-
-Trader thường dùng ATM straddle price để ước lượng market-implied move. Đây là approximation, không phải confidence interval chính xác tuyệt đối.
-
-Điểm quan trọng là so forecast của bạn với move đã được market price, không chỉ forecast direction.
-
-## 21. Put–Call Parity
-
-Put–call parity nối call, put, spot và present value của strike dưới assumptions chuẩn.
-
-Nó cho thấy options không tồn tại độc lập; nhiều payoff có thể replicated bằng combination của underlying, cash và option khác.
-
-## 22. Synthetic Positions
-
-Long call + short put cùng strike/expiry có thể tạo synthetic long forward gần đúng. Hiểu synthetic positions giúp nhìn options như building blocks thay vì sản phẩm bí ẩn.
-
-## 23. Vertical Spread
-
-Bull call spread mua call strike thấp và bán call strike cao. Strategy giới hạn cả upside lẫn premium cost.
-
-Spread không “an toàn” tuyệt đối; nó chỉ định hình payoff rõ hơn.
-
-## 24. Credit Spread
-
-Credit spread thu premium upfront nhưng thường short convexity trong một range. Max loss có thể giới hạn nếu spread defined-risk.
-
-Positive probability of profit không đồng nghĩa positive expectancy.
-
-## 25. Calendar Spread
-
-Calendar spread sử dụng expiries khác nhau và nhạy với term structure, theta và vega. Nó không chỉ là bet direction.
-
-## 26. Straddle
-
-Long straddle mua call và put cùng strike/expiry, chủ yếu long volatility/gamma và negative theta.
-
-Short straddle làm ngược lại: thu theta nhưng chịu convex tail risk.
-
-## 27. Strangle
-
-Strangle dùng OTM call và put, rẻ hơn straddle nhưng cần move lớn hơn để profitable.
-
-## 28. Covered Call
-
-Covered call = long stock + short call. Nó giảm một phần downside nhờ premium nhưng cap upside.
-
-Không nên gọi covered call là “income miễn phí”; investor đang bán upside convexity.
-
-## 29. Protective Put
-
-Long stock + long put tạo downside floor gần giống insurance. Premium là insurance cost.
-
-Protection càng dài và strike càng gần spot thường càng đắt.
-
-## 30. Collar
-
-Collar kết hợp protective put và short call để giảm insurance cost bằng cách bán một phần upside.
-
-Đây là ví dụ rõ về risk transfer: muốn downside protection rẻ hơn thường phải từ bỏ upside hoặc chấp nhận điều kiện khác.
-
-## 31. Tail Hedge
-
-Tail hedge nhằm trả nhỏ đều đặn để nhận payoff lớn khi crash. Challenge là carry cost có thể kéo dài nhiều năm.
-
-Một hedge chỉ hữu ích nếu investor đủ kỷ luật giữ nó trước khi event xảy ra.
-
-## 32. Dynamic Hedging
-
-Dynamic hedging điều chỉnh underlying exposure khi delta thay đổi. Nó yêu cầu liquidity và transaction cost thấp tương đối.
-
-Trong jump market, continuous hedging assumption thất bại và gap risk vẫn tồn tại.
-
-## 33. Jump Risk
-
-Options models thường giả định price process khá liên tục. Earnings gap hoặc geopolitical shock có thể tạo jumps khiến delta hedge không bảo vệ hoàn hảo.
-
-## 34. Pin Risk
-
-Gần expiry, underlying quanh strike có thể làm assignment outcome không chắc chắn. Short options có thể để lại unexpected position sau expiry.
-
-## 35. Early Exercise
-
-American-style options có thể exercise trước expiry. Dividend, interest rate và deep ITM condition có thể ảnh hưởng optimal exercise.
-
-## 36. Assignment Risk
-
-Short option seller có thể bị assigned. Trader phải hiểu settlement convention, contract multiplier và exercise style của exchange cụ thể.
-
-## 37. Cash-settled vs Physically Settled
-
-Index options có thể cash-settled trong khi equity options có thể deliver shares. Economic exposure và operational requirement khác nhau.
-
-## 38. Contract Multiplier
-
-Premium quote nhỏ có thể che giấu notional lớn nếu multiplier cao. Luôn tính:
-
-```text
-Contract Exposure = Quoted Premium/Price × Contract Multiplier
-```
-
-và stress loss theo underlying move.
-
-## 39. Open Interest và Volume
-
-Open interest cho biết contracts outstanding, volume cho biết activity trong period. Cả hai hỗ trợ đánh giá liquidity nhưng không đủ một mình.
-
-Bid-ask spread và depth vẫn rất quan trọng.
-
-## 40. Market Maker Hedging
-
-Option market makers thường hedge Delta và manage aggregate Greeks. Their flows có thể ảnh hưởng intraday market dynamics nhưng retail narratives về “dealer gamma” thường bị oversimplified.
-
-Không nên biến một estimate dealer positioning thành deterministic prediction.
-
-## 41. Volatility Surface
-
-**Volatility surface** là IV theo cả strike và expiry. Nó cho analyst thấy market price asymmetry và term uncertainty như thế nào.
-
-Surface có thể dịch chuyển, steepen, flatten hoặc twist.
-
-## 42. Surface Risk
-
-Một option strategy tưởng chỉ bet spot có thể thực tế bet surface shape. Ví dụ ratio spread hoặc calendar spread rất nhạy với skew/term-structure changes.
-
-## 43. Hedging Equity Portfolio
-
-Investor có thể dùng index puts, put spreads hoặc futures để giảm beta risk. Nhưng hedge ratio phải dựa trên beta/notional chứ không chỉ portfolio market value.
+## 58. Hedge Ratio
 
 Approximation:
 
 ```text
-Hedge Notional ≈ Portfolio Value × Portfolio Beta
+Hedge Notional ≈ Portfolio Value × Portfolio Beta × Desired Hedge Fraction
 ```
 
-## 44. Basis Risk trong Hedging
+But sector/basis mismatch means residual risk remains. A semiconductor portfolio hedged by broad index is not sector-neutral.
 
-Nếu portfolio gồm Korean semiconductor stocks mà hedge bằng broad KOSPI futures, residual sector risk vẫn còn. Đây là **basis risk**.
+## 59. Basis Risk
 
-## 45. Currency Options
+**Basis risk** appears when hedge instrument does not perfectly match exposure. Cross-hedging Korea sector stock with KOSPI futures, or commodity producer with generic commodity future, leaves residual drivers.
 
-FX options thêm dimension interest-rate differential và currency-specific skew. Hedging USD/KRW exposure bằng options có payoff asymmetry khác forward hedge.
+Perfect hedge often does not exist; goal is reduce chosen risk dimension.
 
-## 46. Volatility Position Sizing
+## 60. FX Options
 
-Option premium paid không phải lúc nào cũng là risk duy nhất. Short options, spreads và margin positions có nonlinear risk.
+FX options price relative rates, spot/forward and currency-specific skew. Corporate/investor hedger can buy downside protection while retaining favorable FX upside, unlike full forward hedge.
 
-Position sizing phải stress underlying gaps và IV shifts, không chỉ max loss theo model nếu liquidity có thể biến mất.
+But option premium and liquidity must be compared with forward carry.
 
-## 47. Scenario Grid
+## 61. Tail Hedging
 
-Một useful option review là grid:
+Tail hedge aims small recurring carry cost for large crisis payoff. Success depends timing, strike, maturity, roll discipline and whether payoff arrives when portfolio liquidity is needed.
+
+A hedge that pays only after forced selling is less useful.
+
+## 62. Hedge Budget
+
+Protection should have explicit annual/quarterly cost budget. Repeatedly buying very expensive protection can destroy compounding.
+
+Evaluate hedge as insurance program, not single-trade P/L.
+
+## 63. Scenario Grid
+
+A practical option risk grid should vary at least:
 
 ```text
-Spot: -10%, -5%, 0%, +5%, +10%
-IV: -10 vol, unchanged, +10 vol
-Time: today, halfway, near expiry
+Spot: -20%, -10%, -5%, 0%, +5%, +10%, +20%
+IV: sharply lower / lower / unchanged / higher / crisis spike
+Time: now / halfway / near expiry
 ```
 
-Xem P/L across scenarios giúp hiểu position thật hơn một payoff chart tại expiry.
+For short options also include gap beyond modeled range and liquidity widening.
 
-## 48. Options không tạo Edge tự động
+## 64. Probability of Profit vs Expectancy
 
-Options chỉ thay đổi payoff distribution. Nếu forecast về probability/volatility không có edge, cấu trúc phức tạp hơn không tự tạo expectancy dương.
+High probability of profit can coexist with negative expectancy if losses are much larger than wins.
 
-## 49. Common Mistake: Cheap OTM Option
+Options especially punish obsession with win rate. Always inspect expected payoff and tail size.
 
-Option premium rẻ tuyệt đối không nghĩa cheap theo volatility. Deep OTM lottery-like options có thể có rất high implied volatility.
+## 65. IV Rank và IV Percentile
 
-## 50. Common Mistake: Selling High Win Rate
+These measures contextualize current IV relative to history but do not tell whether option is mispriced. High IV can be justified by real event risk; low IV can stay low.
 
-Short option strategy có thể thắng 90% trades và vẫn blow up nếu 10% losses cực lớn. Vì vậy expectancy và tail loss quan trọng hơn win rate.
+They are descriptors, not strategies.
 
-## 51. Common Mistake: Ignore IV Rank Context
+## 66. Cheap Premium vs Cheap Volatility
 
-IV percentile/rank có thể hỗ trợ context nhưng không đủ để quyết định trade. High IV có thể hợp lý nếu event risk thật sự cao.
+A 0.20 option can be expensive if probability is tiny and implied vol extreme. Absolute premium price says little about value.
 
-## 52. Common Mistake: Hold to Expiry mặc định
+Compare implied distribution, realized potential and catalyst horizon.
 
-Greeks become nonlinear mạnh gần expiry, đặc biệt gamma. Trader cần biết mục tiêu của position là capture direction, volatility hay event premium để quyết định exit.
+## 67. Options Backtest Difficulty
 
-## 53. Options Research Workflow
+Underlying price history is insufficient for many option strategies. You need historical IV surface, spreads, dividends, rates, contract adjustments, early exercise and realistic fills.
 
-Một workflow nên đi theo:
+Backtests using today’s IV assumptions on old spot data can be misleading.
+
+## 68. Contract Adjustments
+
+Splits, special dividends, mergers and corporate actions can adjust strikes/multipliers. Historical options data requires careful normalization.
+
+Operational knowledge matters as much as model knowledge.
+
+## 69. Volatility Forecasting
+
+Historical volatility, EWMA, GARCH-like models and realized measures can inform forecasts, but options trade relative forecast vs market-implied price.
+
+A forecast of “volatility will be high” is incomplete without saying high relative to what the market already charges.
+
+## 70. Distribution Thinking
+
+Option trader should think in distributions, not single target price. What is probability of mild move, large move, gap, volatility collapse or regime shift?
+
+Payoff should match your distribution view, not just directional opinion.
+
+## 71. Position Sizing
+
+For long options, premium may be max contractual loss but repeated premium loss can still be material. For short options, use stress loss rather than margin requirement as risk size.
+
+Margin is collateral, not economic risk measure.
+
+## 72. Exit và Adjustment Rules
+
+Decide ex ante whether thesis is direction, volatility or event. Exit rules should map to thesis: spot invalidation, IV target, time stop, event completion or Greek exposure limit.
+
+Randomly rolling losing options can hide realized losses and enlarge risk.
+
+## 73. Options Research Workflow
 
 ```text
-Thesis
+Economic / Event Thesis
+→ Distribution View
 → Spot View
-→ Volatility View
+→ Volatility / Skew / Term View
 → Horizon
 → Desired Payoff
-→ Strike/Expiry Selection
+→ Structure
+→ Strike / Expiry
 → Greek Profile
-→ Liquidity/Spread
+→ Liquidity / Cost
 → Scenario Grid
 → Position Size
-→ Exit/Adjustment Rule
+→ Hedge / Adjustment Rule
+→ Exit / Post-trade Attribution
 ```
 
-## 54. Kết luận
+## 74. Post-Trade Attribution
 
-Options là ngôn ngữ của **probability, convexity và insurance**. Học options đúng cách không bắt đầu từ strategy name mà bắt đầu từ câu hỏi: mình muốn exposure nào với Delta, Gamma, Theta và Vega; market đang price volatility ra sao; và mình sẵn sàng trả hoặc nhận premium để chịu loại risk nào.
+After trade, separate P/L into direction, volatility, time decay, execution and sizing. “Call lost” is not enough.
+
+If direction was right but IV crush caused loss, lesson differs from wrong directional thesis.
+
+## 75. Common Failure Modes
+
+Frequent failures include buying deep OTM lotteries, selling naked premium for high win rate, ignoring earnings/dividend/assignment, over-sizing because defined max loss appears small, using illiquid strikes, assuming IV mean reverts automatically and treating dealer-flow estimates as certain forecasts.
+
+## 76. Mental Model cuối cùng
+
+Options are a language for transferring state-contingent risk. A disciplined investor asks:
+
+```text
+Risk nào tôi đang mua hoặc bán?
+Market đang price distribution nào?
+Tôi khác market ở assumption nào?
+Payoff có khớp assumption đó không?
+Carry, liquidity và margin path ra sao?
+Nếu spot + IV + time cùng đi bất lợi, tôi mất bao nhiêu?
+```
+
+Nếu chưa trả lời được các câu này, structure phức tạp hơn không tạo edge; nó chỉ làm risk khó nhìn hơn.
