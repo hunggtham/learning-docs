@@ -256,10 +256,126 @@ For each stock write: business model; sector cycle; three operating KPIs; revenu
 
 Then explicitly note which macro variables matter: Fed/BOK, USD/KRW, China, oil, semiconductors or domestic housing/credit.
 
-## 41. Mental model cuối cùng
+## 41. Earnings Revision Breadth
+
+Index earnings growth có thể bị một vài mega caps chi phối. Vì vậy ngoài aggregate EPS, theo dõi bao nhiêu sectors/companies đang được analysts nâng forecast.
+
+Broad upward revisions thường cho thấy recovery lan rộng hơn. Nếu KOSPI earnings upgrade gần như chỉ đến từ memory semiconductors, market breadth về fundamentals hẹp hơn headline index EPS.
+
+Revision **direction** thường quan trọng hơn absolute estimate. Stock có P/E thấp nhưng forecast liên tục bị hạ có thể chưa rẻ theo forward reality.
+
+## 42. Semiconductor Leading vs Lagging Indicators
+
+Reported semiconductor revenue/margin thường lag inventory, contract pricing và customer capex signals. Một research stack có thể tách:
+
+`End demand → customer inventory → memory spot/contract pricing → producer inventory/utilization → capex → reported margin`
+
+Stock market có thể price turn ở giữa chain, không chờ reported EPS. Vì vậy trailing P/E ở trough thường vô dụng.
+
+## 43. Export Decomposition theo Price, Volume và Mix
+
+Nominal export growth nên tách price và volume nếu data cho phép. Semiconductor exports có thể tăng vì ASP recovery dù unit volume chưa tăng nhiều; auto exports có thể tăng do premium mix.
+
+Volume-driven recovery thường có implication khác price-driven recovery đối với capacity utilization và operating leverage.
+
+## 44. Domestic Demand Dashboard
+
+Korea không chỉ là export story. Household consumption, card spending, employment/wages, housing transactions, household debt-service burden và consumer confidence ảnh hưởng retail, platforms, banks, construction và services.
+
+Nếu export cycle mạnh nhưng domestic real income yếu, KOSPI exporters và domestic small caps có thể diverge rõ.
+
+## 45. Household Balance Sheet Channel
+
+High household leverage làm monetary transmission nonlinear. Rate increase không chỉ giảm new borrowing mà còn tăng debt service khi loans reset/refinance.
+
+Chain có thể là:
+
+`Rates ↑ → mortgage/debt service ↑ → disposable income ↓ → consumption ↓ → property demand ↓ → bank credit quality risk ↑`
+
+Tốc độ phụ thuộc fixed/floating composition và refinancing timing.
+
+## 46. Real-Estate Project-Finance Risk
+
+Construction/property stress có thể truyền qua project-finance exposures, guarantees, securities firms và non-bank funding. Investor nên xem direct loan exposure cùng contingent guarantees và refinancing needs.
+
+PF stress không nhất thiết tạo systemic crisis, nhưng có thể làm credit spreads widen và financing appetite giảm trước khi headline defaults lớn.
+
+## 47. Pension, Insurance và Long-Horizon Institutional Flows
+
+Domestic pension/insurance investors có liability structure và strategic allocation khác retail. Their flows có thể chịu rebalancing, duration matching và foreign-allocation policies.
+
+Không nên interpret mỗi institutional net buy như bullish stock view. Một phần có thể là policy/benchmark rebalance.
+
+## 48. Short Selling, Securities Lending và Borrow Cost
+
+Short interest/lending data có thể hữu ích nhưng cần context. High short interest có thể phản ánh fundamental bearish view, hedge against convertible/derivative exposure hoặc relative-value trade.
+
+Borrow cost và availability quan trọng. Crowded short có squeeze risk, nhưng “short nhiều” không tự động bullish.
+
+## 49. IPO, Lock-Up và Secondary Supply
+
+New listings có limited float, lock-up expiries và shareholder selling schedules. Price có thể mạnh khi supply restricted rồi chịu pressure khi locked shares become tradable.
+
+For growth KOSDAQ names, future equity issuance còn quan trọng vì cash burn/dilution. Valuation phải use fully diluted share count và financing runway.
+
+## 50. Buyback: Announcement vs Cancellation
+
+Headline buyback không đủ. Cần biết shares được cancelled, held as treasury, reissued hay used for compensation/M&A.
+
+Per-share economics cải thiện khi net diluted share count giảm ở sensible valuation. Buyback funded by expensive debt hoặc executed near peak multiple có thể destroy value.
+
+## 51. Governance Discount như Expected-Cash-Flow Problem
+
+“Governance discount” không nên được coi là mystery multiple. Nó có thể phản ánh lower expected payout, inefficient capital allocation, related-party transfer risk hoặc minority-shareholder uncertainty.
+
+Một reform thesis chỉ có value nếu mechanism thay future cash flows/per-share rights. Re-rating không nên được forecast chỉ vì “market nên đánh giá cao hơn”.
+
+## 52. Sector Relative-Strength Matrix
+
+Một weekly matrix có thể so sector return với KOSPI cùng với earnings revisions và valuation change. Nếu sector outperform do multiple expansion trong khi revisions flat, driver khác sector outperform nhờ earnings upgrades.
+
+Tách:
+
+`Relative Return ≈ Earnings Revision Effect + Valuation Re-rating + Flow/Technical Effect`
+
+Đây là approximation nhưng giúp tránh narrative tùy tiện.
+
+## 53. Valuation Regime Matrix
+
+Korean equities nên được đặt trong matrix gồm normalized earnings, real yields, KRW và cycle phase. P/E 12x có meaning khác khi earnings ở peak vs trough; P/B 0,6x có meaning khác nếu sustainable ROE 5% vs 12%.
+
+For cyclicals, dùng normalized ROE/margin và balance-sheet survival. For compounders, focus reinvestment runway và implied growth. For financials, connect P/B với ROE minus cost of equity.
+
+## 54. Flow không tạo Value nhưng có thể tạo Path
+
+Foreign/passive/derivative flows không thay intrinsic business value trực tiếp, nhưng có thể ảnh hưởng entry price, volatility và short-term correlation.
+
+Investor dài hạn nên separate **path driver** khỏi **terminal value driver**. Technical flow có thể là catalyst hoặc noise; earnings/capital allocation cuối cùng quyết định long-run value.
+
+## 55. Event Study cho Korea
+
+Khi có Fed/BOK decision, export release, earnings hoặc geopolitical shock, ghi trước consensus và positioning. Sau event, record move của USD/KRW, Korean 2Y/10Y, KOSPI/KOSDAQ, semis/banks/cyclicals, foreign cash/futures flow và credit spreads nếu relevant.
+
+Sau 1 ngày và 1 tuần, hỏi initial reaction có được confirm hay reverse. Đây là cách xây reaction-function knowledge thay vì ghi nhớ slogan.
+
+## 56. Korea Research Cadence
+
+Một workflow hiệu quả có thể là:
+
+`Daily: anomaly/price/FX/flow`
+
+`Weekly: sectors/revisions/yields/credit`
+
+`Monthly: exports/inflation/activity/BOK/housing`
+
+`Quarterly: company earnings/model/valuation/thesis`
+
+Cadence giúp giảm information overload và tránh biến long-term portfolio thành day-trading response system.
+
+## 57. Mental model cuối cùng
 
 Analyze Korea through:
 
-`Global cycle → exports/trade → KRW/BOK/credit → sector economics → company earnings → governance/capital allocation → expectations/valuation → flows/liquidity`
+`Global cycle → exports/trade → KRW/BOK/credit → household balance sheet → sector economics → company earnings → governance/capital allocation → expectations/valuation → flows/liquidity`
 
 The framework prevents two common mistakes: treating Korea only as a semiconductor proxy, or treating every Korean stock as a macro trade.
