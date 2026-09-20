@@ -1,16 +1,35 @@
 # Libya
 
-## Khung địa lý
-Libya có bờ biển dài Địa Trung Hải nhưng nội địa chủ yếu là Sahara. Dân cư và đô thị tập trung mạnh ở các vùng ven biển quanh Tripoli và Benghazi.
+## Ven biển Địa Trung Hải và nội địa Sahara
 
-## Nước và khô hạn
-Lượng mưa thấp làm nước ngầm hóa thạch trở thành nguồn chiến lược. Việc đưa nước từ các tầng chứa sâu đến khu dân cư cho thấy nước có thể tái cấu trúc địa lý định cư nhưng không loại bỏ giới hạn khô hạn.
+Libya có một trong những tương phản dân cư rõ nhất Bắc Phi: phần lớn dân cư và đô thị tập trung gần bờ Địa Trung Hải, trong khi nội địa rộng lớn thuộc Sahara rất thưa người. Vì vậy diện tích không phản ánh trực tiếp quy mô không gian sống thực tế.
 
-## Kinh tế không gian
-Dầu mỏ liên kết các mỏ nội địa với terminal ven biển. Vì vậy mạng năng lượng có thể chạy xuyên những khu vực cực thưa dân.
+Hai cực đô thị lớn là Tripoli ở phía tây và Benghazi ở phía đông. Giữa chúng là một bờ biển dài nhưng mạng định cư không liên tục như một corridor đô thị dày đặc.
 
-## Kết nối
-Vị trí giữa Maghreb, Sahara và Đông Địa Trung Hải khiến Libya vừa hướng ra biển vừa nối các tuyến xuyên sa mạc.
+## Địa hình, khí hậu và nước
 
-## Mental model
-Đọc Libya qua **ven biển đô thị hóa + nội địa hoang mạc + hành lang dầu–nước nối hai không gian này**.
+Ven biển có mùa đông tương đối ẩm hơn, nhưng chỉ cần đi sâu vào nội địa là lượng mưa giảm rất mạnh. Nước vì vậy là constraint nền tảng. Nhiều tầng chứa nước sâu ở Sahara chứa **nước ngầm hóa thạch (fossil groundwater)** hình thành trong các giai đoạn khí hậu ẩm hơn trong quá khứ.
+
+Đưa nước ngầm từ sa mạc tới vùng đô thị có thể thay đổi geography of supply, nhưng không biến nguồn nước thành vô hạn. Nếu tốc độ khai thác lớn hơn khả năng bổ cập, đó thực chất là sử dụng một stock hữu hạn.
+
+## Dầu khí và mạng không gian riêng
+
+Các mỏ dầu khí nằm sâu trong nội địa hoặc offshore, trong khi terminal và cảng xuất khẩu nằm ven biển. Điều này tạo network `oil field → pipeline → coastal terminal`, chạy xuyên qua vùng gần như không có dân cư.
+
+Vì vậy Libya có hai mạng khác nhau: mạng dân cư ven biển và mạng năng lượng nối Sahara với biển. Không nên giả định nơi tạo GDP lớn cũng là nơi tập trung dân số.
+
+## Tripoli, Benghazi và các cửa ngõ
+
+Tripoli hướng mạnh về phía tây Địa Trung Hải và Maghreb, còn Benghazi là node quan trọng ở Cyrenaica phía đông. Sự phân đôi này phản ánh lịch sử và khoảng cách địa lý nội bộ.
+
+Các cảng và đường ven biển là critical infrastructure vì nhiều vùng nội địa thiếu mạng thay thế dày đặc.
+
+## Rủi ro và môi trường
+
+Nắng nóng, hạn, khan hiếm nước, sa mạc hóa cục bộ và rủi ro ven biển đều đáng chú ý. Dust storm cũng có thể ảnh hưởng giao thông và chất lượng không khí trên khoảng cách lớn.
+
+## Mô hình tư duy
+
+> Libya = **coastal settlement belt + fossil-water dependence + Sahara oil network**. Nước quyết định nơi con người có thể sống; pipeline quyết định cách tài nguyên nội địa kết nối với thị trường toàn cầu.
+
+Xem thêm: [Nước–lương thực–năng lượng](../../../04_global_systems/01_water_food_energy_nexus.md), [Địa lý năng lượng](../../../02_human_geography/07_industry_energy_resources.md), [Châu Phi](../../../03_regions/06_africa.md).

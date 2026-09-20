@@ -43,13 +43,13 @@ Antarctica có chapter riêng phù hợp một polar continent thay vì ép vào
 
 ### Africa — major profiles đã nâng lên mức textbook
 
-Nigeria, Ethiopia, Kenya, Democratic Republic of the Congo, South Africa, Algeria, Egypt, Morocco, Sudan, Tanzania, Uganda, Angola, Cameroon, Ghana và Senegal đã được mở rộng từ summary ngắn thành chapter theo causal chain.
+Nigeria, Ethiopia, Kenya, Democratic Republic of the Congo, South Africa, Algeria, Egypt, Morocco, Sudan, Tanzania, Uganda, Angola, Cameroon, Ghana, Senegal, Libya, Tunisia, Mozambique, Madagascar, Zambia, Zimbabwe, Côte d’Ivoire, Mali, Niger và Botswana đã được mở rộng từ summary ngắn thành chapter theo causal chain.
 
 Các chapter này hiện có các lớp: physical structure → water/climate → settlement/urban hierarchy → production geography → transport/corridor → hazard/exposure → misconception → mental model.
 
 ### Ưu tiên tiếp theo
 
-1. Tiếp tục Africa: Libya, Tunisia, Mozambique, Madagascar, Zambia, Zimbabwe, Côte d’Ivoire, Mali, Niger và các profile còn compact.
+1. Hoàn thiện Africa depth pass: Malawi, Rwanda, Burundi, Somalia, Namibia, Lesotho, Eswatini, Gabon, Congo, Guinea và các island/overseas entries.
 2. Asia depth pass: ưu tiên các country profile 9–15 dòng ở Central, Southern và Western Asia.
 3. Europe depth pass: nâng các profile mini-state/territory và các nước được tạo ở batch đầu.
 4. Americas/Oceania: chuẩn hóa các profile nhỏ và bổ sung comparative geography.
