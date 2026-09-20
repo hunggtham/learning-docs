@@ -232,6 +232,129 @@ Khi công nghệ làm kỹ năng mất giá nhanh hơn, người lao động ph�
 
 Với lập trình viên, học framework mới sau giờ làm là ví dụ rất trực tiếp của học tập suốt đời, dù không liên quan kỳ thi truyền thống.
 
+## 기술의 반감기: kỹ năng cũng có “chu kỳ mất giá”
+
+Không phải mọi kỹ năng xuống giá với cùng tốc độ. Kiến thức nền như xác suất, cấu trúc dữ liệu, viết rõ ràng hoặc hiểu hệ thống có thể dùng lâu; API, công cụ hoặc phiên bản phần mềm cụ thể có thể thay rất nhanh. Vì vậy người trưởng thành cần phân biệt **kiến thức nền có độ bền cao** và **kiến thức công cụ có độ bền thấp**.
+
+Có thể hình dung vốn kỹ năng như danh mục:
+
+```text
+lõi bền: tư duy, nền tảng, nguyên lý
++ lớp nghề: kỹ năng theo lĩnh vực
++ lớp công cụ: framework, phần mềm, quy trình hiện hành
+```
+
+Nếu chỉ học lớp công cụ, người lao động dễ phải bắt đầu lại mỗi khi công nghệ đổi. Nếu chỉ học lý thuyết mà không cập nhật công cụ, kiến thức khó chuyển thành đầu ra. Học tập suốt đời là quản lý cả ba lớp.
+
+## 재교육과 전직: học lại không chỉ để thăng chức
+
+**Đào tạo lại (재교육 / reskilling)** có thể phục vụ ba mục tiêu khác nhau: làm tốt công việc hiện tại, chuyển sang vai trò gần kề hoặc đổi hẳn nghề. Ba mục tiêu cần chiến lược khác nhau.
+
+```text
+nâng kỹ năng hiện tại → tăng chiều sâu
+chuyển vai trò gần → giữ phần kỹ năng cũ + bổ sung khoảng trống
+đổi nghề → xây nền mới + tạo bằng chứng năng lực mới
+```
+
+Ví dụ một lập trình viên chuyển từ frontend sang backend không bắt đầu từ số 0 vì tư duy lập trình, Git, kiểm thử và hiểu sản phẩm vẫn chuyển giao được. Một người chuyển sang ngành hoàn toàn khác cần xây thêm vốn miền kiến thức và mạng quan hệ.
+
+Khái niệm quan trọng là **kỹ năng chuyển giao (transferable skill)**: phần năng lực sống sót qua thay đổi chức danh.
+
+## 학위, 자격증, 포트폴리오, 경력: bốn loại tín hiệu không giống nhau
+
+Thị trường lao động thường đọc nhiều loại bằng chứng cùng lúc:
+
+- `학위`: bằng học thuật, cho tín hiệu về quá trình học có cấu trúc và đôi khi về năng lực sàng lọc;
+- `자격증`: chứng chỉ, cho tín hiệu hẹp hơn về kiến thức hoặc điều kiện nghề cụ thể;
+- `포트폴리오`: hồ sơ sản phẩm/dự án, cho thấy đầu ra có thể quan sát;
+- `경력`: lịch sử công việc, cho bằng chứng theo thời gian về việc đã vận hành trong môi trường thật.
+
+Không loại nào tự động “tốt nhất”. Bằng học thuật có thể rộng nhưng xa công việc; chứng chỉ có thể chuẩn hoá nhưng dễ luyện thi; portfolio cho thấy đầu ra nhưng có thể khó biết mức đóng góp cá nhân; kinh nghiệm thật mạnh nhưng phụ thuộc cơ hội được giao việc.
+
+Nhà tuyển dụng hiệu quả thường **tam giác hoá bằng chứng (evidence triangulation)** thay vì dựa vào một tín hiệu duy nhất.
+
+## 재직자 학습: người đi làm học trong ràng buộc khác học sinh
+
+Người trưởng thành không chỉ có bài học; họ còn có công việc, đi lại, gia đình, sức khoẻ và nghĩa vụ xã hội. Vì vậy nút thắt thường không phải “không muốn học” mà là **ngân sách thời gian và năng lượng**.
+
+```text
+8–10 giờ công việc + đi lại
++ chăm sóc / việc nhà
++ phục hồi / ngủ
+= phần thời gian học còn lại rất nhỏ
+```
+
+Điều này giải thích vì sao khoá học ngắn, bài học theo mô-đun, học trực tuyến và tài liệu có thể tra cứu lại hấp dẫn với người đi làm. Thiết kế giáo dục cho người lớn phải giảm chi phí bắt đầu và hỗ trợ việc quay lại sau gián đoạn.
+
+Trong tổ chức, thời gian học được bảo vệ trong giờ làm có ý nghĩa khác hoàn toàn việc kỳ vọng nhân viên “tự nâng cấp sau giờ”. Nếu mọi chi phí học bị đẩy sang cá nhân, người có trách nhiệm chăm sóc hoặc quãng đường đi làm dài sẽ bất lợi hơn.
+
+## 사내교육 và thị trường lao động nội bộ
+
+Doanh nghiệp có thể đào tạo nhân viên vì kỹ năng mới tạo giá trị ngay trong tổ chức. `사내교육`, cố vấn nội bộ, luân chuyển vị trí và dự án thử giúp chuyển tri thức mà thị trường bên ngoài khó đóng gói thành khoá học.
+
+Đây là **thị trường lao động nội bộ (internal labour market)**: thay vì tuyển người hoàn toàn mới cho mọi kỹ năng, tổ chức tái phân bổ và nâng cấp nhân lực đã hiểu hệ thống.
+
+Ưu điểm là giảm chi phí tuyển và giữ tri thức ngữ cảnh. Rủi ro là đào tạo chỉ phục vụ công cụ riêng của công ty, khiến kỹ năng khó chuyển sang nơi khác. Người học cần phân biệt tri thức đặc thù tổ chức với tri thức có thể mang theo.
+
+## 경력전환: chuyển nghề là bài toán bằng chứng chứ không chỉ kiến thức
+
+Người chuyển nghề thường gặp nghịch lý:
+
+```text
+muốn việc mới → cần kinh nghiệm
+muốn có kinh nghiệm → cần được giao việc mới
+```
+
+Giải pháp thường là tạo **bằng chứng trung gian**: dự án cá nhân, công việc nội bộ gần vai trò mới, chứng chỉ, đóng góp mã nguồn mở, thực tập, freelance hoặc nhiệm vụ có phạm vi nhỏ.
+
+Điểm sâu hơn là thị trường không chỉ hỏi “anh biết gì?” mà hỏi “tôi có lý do gì để tin rằng anh làm được trong bối cảnh thật?”. Vì vậy học tập và xây bằng chứng phải đi song song.
+
+## AI 시대의 학습: công cụ mới làm thay đổi thứ cần học, không xoá nhu cầu học
+
+Khi công cụ AI có thể sinh mã, tóm tắt hoặc hỗ trợ tìm kiếm, giá trị của việc nhớ từng chi tiết cú pháp có thể giảm trong một số tác vụ. Nhưng nhu cầu hiểu yêu cầu, kiểm chứng đầu ra, phát hiện lỗi, mô hình hoá hệ thống và chịu trách nhiệm về quyết định lại tăng.
+
+Có thể tách:
+
+```text
+công việc có thể uỷ quyền cho công cụ
+≠
+trách nhiệm đánh giá kết quả
+```
+
+Nếu người học chỉ biết đặt câu hỏi nhưng không đủ nền để nhận ra câu trả lời sai, năng suất bề ngoài tăng trong khi rủi ro tăng theo. Vì vậy **năng lực kiểm chứng (verification skill)** trở thành phần của vốn con người.
+
+AI cũng làm quá trình học thay đổi: phản hồi nhanh hơn, ví dụ cá nhân hoá hơn, nhưng nguy cơ học thụ động tăng nếu người học chỉ sao chép đầu ra. Công cụ mạnh nhất khi được dùng để tạo vòng phản hồi, không phải thay toàn bộ nỗ lực nhận thức.
+
+## Học người lớn và bất bình đẳng mới
+
+Học suốt đời nghe như cơ hội phổ quát nhưng khả năng tham gia không chia đều. Người có thu nhập cao hơn có thể mua khoá tốt, có máy tính, có phòng yên tĩnh và đủ tiền giảm giờ làm. Người chăm con hoặc cha mẹ già có ít quỹ thời gian hơn.
+
+Vì vậy “mọi người chỉ cần tự học” có thể che một **bất bình đẳng về năng lực tái đào tạo (reskilling capacity)**.
+
+```text
+khả năng học lại
+= thời gian + tiền + sức khoẻ + thiết bị + thông tin + hỗ trợ xã hội
+```
+
+Chính sách giáo dục người lớn và thiết kế nhân sự tốt phải nhìn cả sáu thành phần, không chỉ cung cấp nội dung.
+
+## 전이: học xong có dùng được trong công việc thật hay không?
+
+Một khoá học có thể tạo cảm giác hiểu nhưng thất bại khi người học gặp bài toán thực tế khác ví dụ trong lớp. Đây là vấn đề **chuyển giao học tập (learning transfer)**.
+
+Khả năng chuyển giao tăng khi người học phải:
+
+```text
+hiểu nguyên lý
+→ giải nhiều biến thể
+→ tự tạo đầu ra
+→ nhận phản hồi
+→ sửa lỗi
+→ áp dụng trong bối cảnh mới
+```
+
+Vì vậy một chứng chỉ hoàn thành khoá học không đồng nghĩa kỹ năng đã ổn định. Đầu ra thực tế và khả năng giải thích quyết định thường là kiểm tra sâu hơn.
+
 ## Liên hệ kiến thức: khoa học học tập và tối ưu thi cử
 
 Cường độ học cao không đảm bảo ghi nhớ cao. Khoa học nhận thức phân biệt đọc lại với **gợi nhớ chủ động (active recall)**, học dồn với **lặp lại ngắt quãng (spaced repetition)**. Một học sinh có thể dành nhiều giờ nhưng học không hiệu quả nếu chiến lược chỉ là tiếp xúc thụ động.
@@ -254,11 +377,11 @@ bằng cấp hiếm
 
 Đây là **lạm phát bằng cấp (자격 인플레이션 / credential inflation)**. Nó giải thích tại sao một xã hội có thể học nhiều hơn mà cá nhân vẫn cảm thấy “chưa đủ”.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy
 
-> Hãy coi hệ thống giáo dục Hàn Quốc như một thị trường nơi giáo dục vừa là **tri thức**, vừa là **tín hiệu**, vừa là **cơ chế sàng lọc**, vừa là **bảo hiểm cho tương lai**. Khi nhiều người cùng cạnh tranh bằng tín hiệu, chi phí có thể tăng nhanh hơn tri thức thực. Muốn hiểu `수능`, `학원`, `학벌`, `학군`, `취준`, phải nhìn động lực của toàn hệ thống chứ không quy nó về “người Hàn thích học”.
+> Hãy coi hệ thống giáo dục Hàn Quốc như một thị trường nơi giáo dục vừa là **tri thức**, vừa là **tín hiệu**, vừa là **cơ chế sàng lọc**, vừa là **bảo hiểm cho tương lai**. Khi nhiều người cùng cạnh tranh bằng tín hiệu, chi phí có thể tăng nhanh hơn tri thức thực. Trong giai đoạn người trưởng thành phải học lại nhiều lần, cần thêm một lớp thứ năm: **khả năng tái cấu hình kỹ năng**. Muốn hiểu `수능`, `학원`, `학벌`, `학군`, `취준`, `평생교육`, phải nhìn động lực của toàn hệ thống chứ không quy nó về “người Hàn thích học”.
 
-## Hiểu lầm phổ biến (Common Misconceptions)
+## Hiểu lầm phổ biến
 
 “수능 quyết định toàn bộ cuộc đời” là phóng đại. Nó có trọng lượng lớn ở một số đường tuyển sinh nhưng tồn tại nhiều lộ trình khác.
 
@@ -269,3 +392,9 @@ bằng cấp hiếm
 “Học trường nổi tiếng đảm bảo sự nghiệp tốt” biến tín hiệu xác suất thành quy luật chắc chắn.
 
 “Cạnh tranh giáo dục chỉ do cha mẹ tham vọng” bỏ qua cách thị trường lao động sàng lọc, nhà ở, hiệu ứng bạn bè và bất định về tương lai.
+
+“Người đi làm chỉ cần học thêm công cụ mới” quá hẹp; kỹ năng bền, kỹ năng nghề và công cụ cần được quản lý như ba lớp khác nhau.
+
+“Có chứng chỉ nghĩa là đã có năng lực làm việc” nhầm tín hiệu với bằng chứng thực hành.
+
+“AI làm việc học trở nên không cần thiết” bỏ qua việc công cụ mạnh hơn làm yêu cầu kiểm chứng và chịu trách nhiệm cao hơn.
