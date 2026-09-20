@@ -1,355 +1,312 @@
 # Cổ phiếu, ETF và quỹ đầu tư
 
-> Chapter này giải thích equity và fund products từ bản chất economic claim tới cách chọn wrapper. Mục tiêu là tránh hai nhầm lẫn phổ biến: coi mọi cổ phiếu chỉ là ticker để trade và coi mọi ETF là một “asset an toàn”. Stock là residual ownership; ETF/fund là vehicle chứa một exposure cụ thể.
+> Chương này giải thích cổ phiếu và quỹ từ bản chất quyền sở hữu tới cách triển khai qua ETF. Mục tiêu là nhìn xuyên tên sản phẩm để hiểu tài sản cơ sở, quyền lợi của cổ đông, cơ chế chỉ số, thanh khoản, chi phí và rủi ro thực tế.
 
-## 1. Common stock là residual claim
+## 1. Cổ phiếu phổ thông là quyền lợi còn lại
 
-Common shareholder sở hữu phần residual value của company sau operating obligations, taxes và creditors. Nếu business phát triển, equity holder có upside lớn; nếu company insolvency, common equity thường chịu loss cuối cùng sau creditors.
+Người sở hữu cổ phiếu phổ thông là chủ sở hữu phần còn lại (residual owner). Sau khi doanh nghiệp trả lương, nhà cung cấp, thuế, lãi vay và nghĩa vụ với chủ nợ, phần giá trị còn lại thuộc cổ đông.
 
-Ownership không có nghĩa shareholder trực tiếp lấy company cash. Cash chỉ đến shareholder qua dividends, buybacks, liquidation hoặc sale of shares to another investor. Economic value đến từ future cash-generation capacity của business và capital allocation.
+Điều này tạo tiềm năng tăng trưởng lớn nhưng cũng khiến cổ đông chịu tổn thất đầu tiên khi doanh nghiệp thất bại.
 
-## 2. Market capitalization và enterprise value
+## 2. Giá trị doanh nghiệp và giá trị vốn chủ sở hữu
 
-`Market Cap = Share Price × Shares Outstanding`
+Giá trị doanh nghiệp (Enterprise Value, EV) phản ánh giá trị hoạt động dành cho tất cả nhà cung cấp vốn. Giá trị vốn chủ sở hữu (Equity Value) là phần thuộc cổ đông.
 
-Share price riêng lẻ không nói company “đắt” hay “lớn”. Stock giá 500.000 KRW/share có thể có market cap nhỏ hơn stock 5.000 KRW nếu share count khác.
+Một cầu nối đơn giản:
 
-Enterprise Value (*EV*) gần đúng:
+```text
+EV ≈ Equity Value + Net Debt + Other Senior Claims - Non-operating Assets
+```
 
-`EV = Equity Value + Debt + Preferred + Minority Interest - Cash/non-operating assets`
+Không thể so P/E và EV/EBITDA như thể chúng đo cùng một lớp giá trị.
 
-EV hữu ích khi so operating businesses với capital structures khác nhau, nhưng không phải mọi khoản cash đều excess cash và không phải mọi debt-like obligation đều nằm rõ trên headline debt.
+## 3. Vốn hóa thị trường và free float
 
-## 3. Shares outstanding, diluted shares và free float
+Vốn hóa thị trường:
 
-Shares outstanding là shares economically outstanding. Fully diluted shares còn tính options, warrants, convertibles và stock-based compensation có khả năng chuyển thành common shares.
+```text
+Market Cap = Share Price × Shares Outstanding
+```
 
-Free float là phần cổ phiếu thực sự có thể giao dịch rộng rãi, loại trừ strategic/controlling holdings theo methodology. Low free float có thể làm volatility, index flow và squeeze risk cao hơn.
+Vốn hóa theo free float chỉ tính phần cổ phiếu thực sự có thể giao dịch công khai. Đây là thông tin quan trọng cho thanh khoản và trọng số chỉ số.
 
-Khi định giá một doanh nghiệp tăng trưởng, diluted share count quan trọng hơn basic share count vì per-share value mới là thứ shareholder nhận.
+Doanh nghiệp có market cap lớn nhưng phần lớn cổ phiếu do cổ đông kiểm soát nắm giữ có thể có free float nhỏ hơn nhiều.
 
-## 4. Stock return đến từ đâu?
+## 4. Basic và diluted shares
 
-Long-run shareholder return có thể phân rã khái niệm:
+Số cổ phiếu cơ bản chỉ tính cổ phiếu hiện tại. Số cổ phiếu pha loãng (diluted shares) xem thêm quyền chọn nhân viên, RSU, trái phiếu chuyển đổi và các công cụ có thể tạo cổ phiếu mới.
 
-`Return ≈ fundamental growth + distributions + valuation change`
+Định giá trên mỗi cổ phiếu nên nhìn số pha loãng khi khả năng chuyển đổi có ý nghĩa.
 
-Fundamental growth có thể là EPS/FCF per share growth. Distributions gồm dividend và net buyback. Valuation change là multiple expansion/compression.
+## 5. EPS và tăng trưởng trên mỗi cổ phiếu
 
-Nếu EPS tăng 10% nhưng P/E giảm từ 30x xuống 20x, stock vẫn có thể giảm. Ngược lại, earnings hiện tại yếu nhưng stock tăng nếu market anticipates recovery. Vì vậy “company tốt” không đồng nghĩa “stock chắc chắn tăng”. Starting expectations và valuation matters.
+```text
+EPS = Net Income Available to Common / Diluted Shares
+```
 
-## 5. Dividends
+Doanh thu và lợi nhuận tổng có thể tăng trong khi EPS tăng chậm nếu doanh nghiệp phát hành nhiều cổ phiếu.
 
-Dividend chuyển cash từ company sang shareholder. Ex-dividend price thường điều chỉnh vì company mất một lượng cash tương ứng.
+Nhà đầu tư sở hữu **một phần trên mỗi cổ phiếu**, không sở hữu con số lợi nhuận tổng của công ty.
 
-Dividend yield không phải free return. Yield rất cao có thể phản ánh falling price hoặc market nghi payout không bền vững. Cần đọc payout ratio, FCF coverage, leverage và reinvestment opportunities.
+## 6. Cổ tức
 
-Dividend growth bền vững thường hữu ích hơn headline yield cao nhưng financed by debt.
+Cổ tức là tiền mặt được phân phối từ doanh nghiệp sang cổ đông. Giá thường điều chỉnh quanh ngày không hưởng quyền, nên cổ tức không phải tiền miễn phí.
 
-## 6. Buybacks
+Một doanh nghiệp trả cổ tức cao nhưng không còn khả năng tái đầu tư hiệu quả có kinh tế khác doanh nghiệp trả cổ tức thấp nhưng tái đầu tư ở ROIC rất cao.
 
-Buyback tạo value khi company mua shares dưới intrinsic value và balance sheet vẫn đủ an toàn. Nếu mua ở valuation quá cao, buyback có thể destroy value dù EPS tăng cơ học.
+## 7. Mua lại cổ phiếu
 
-Luôn so gross buyback với thay đổi diluted share count. Nếu company chi nhiều cash buyback chỉ để bù stock-based compensation, economic benefit cho shareholder thấp hơn headline.
+Mua lại tạo giá trị khi:
 
-## 7. Dilution
+```text
+Giá mua hợp lý
++ Doanh nghiệp có đủ nguồn vốn
++ Không làm bảng cân đối yếu
++ Số cổ phiếu thực tế giảm
+```
 
-New issuance, stock-based compensation, convertibles và warrants có thể làm diluted shares tăng. Business có thể tăng total earnings nhanh nhưng per-share economics tăng chậm hơn nhiều.
+Mua lại chỉ để bù lượng cổ phiếu phát hành qua SBC không tạo cùng mức lợi ích cho cổ đông cũ.
 
-Dilution không luôn xấu: phát hành cổ phiếu ở valuation cao để finance project có ROIC tốt có thể tạo value. Câu hỏi đúng là capital raised tạo incremental value trên mỗi share hay không.
+## 8. Pha loãng và phát hành thêm
 
-## 8. Stock split và reverse split
+Phát hành thêm có thể cần thiết để tài trợ tăng trưởng hoặc củng cố vốn, nhưng làm giảm tỷ lệ sở hữu của cổ đông hiện hữu nếu giá trị tạo thêm không đủ lớn.
 
-Stock split thay đổi số đơn vị, không thay enterprise value. 2-for-1 split làm theoretical shares gấp đôi và price một nửa. Reverse split làm ngược lại.
+Phát hành quyền mua, cổ phiếu ưu đãi chuyển đổi, option và warrant đều cần được đưa vào phân tích pha loãng.
 
-Không nên coi stock rẻ hơn chỉ vì nominal price thấp sau split.
+## 9. Chia tách cổ phiếu
 
-## 9. Rights offering
+Chia tách làm tăng số lượng cổ phiếu và giảm giá trên mỗi cổ phiếu theo tỷ lệ tương ứng. Nó không tự thay đổi giá trị doanh nghiệp.
 
-Rights offering cho existing shareholders quyền mua shares mới, thường ở mức discount. Nếu shareholder không exercise hoặc bán rights, ownership có thể dilute.
+Tâm lý hoặc khả năng tiếp cận của nhà đầu tư cá nhân có thể thay đổi, nhưng bản chất kinh tế không đổi tại thời điểm chia tách.
 
-Phải hỏi vì sao company raise capital: high-ROIC expansion, balance-sheet repair, regulatory capital hay repeated funding cho business yếu.
+## 10. Hành động doanh nghiệp
 
-## 10. Preferred shares
+Ngoài chia tách và cổ tức, còn có sáp nhập, tách doanh nghiệp, phát hành quyền mua, cổ tức đặc biệt, hủy cổ phiếu quỹ và thay đổi cấu trúc vốn.
 
-Preferred shares thường ưu tiên dividend/liquidation hơn common nhưng voting/upside khác. Terms có thể rất khác giữa companies và jurisdictions.
+Mỗi hành động có thể ảnh hưởng số cổ phiếu, quyền biểu quyết, cơ sở thuế, chỉ số và hợp đồng phái sinh.
 
-Một preferred share giao dịch discount lớn so common không tự động là arbitrage; quyền biểu quyết, liquidity, convertibility và dividend terms phải được đọc cụ thể.
+## 11. Quyền biểu quyết và quản trị
 
-## 11. Corporate actions và shareholder economics
+Cổ đông không chỉ nhận dòng tiền mà còn có quyền biểu quyết theo cấu trúc cổ phiếu. Một số doanh nghiệp có nhiều lớp cổ phiếu với quyền biểu quyết khác nhau.
 
-Spin-off, tender offer, merger, demerger, special dividend, exchange offer và delisting đều có thể thay economic exposure mà không phải đơn giản “giá tăng/giảm”.
+Nhà đầu tư cần kiểm tra quyền của cổ đông thiểu số, cơ chế bầu hội đồng quản trị và quyền lực của cổ đông kiểm soát.
 
-Investor nên theo dõi record date, effective date, conversion ratio, cash component, tax treatment và treatment của fractional shares. Corporate action là nơi operational misunderstanding dễ biến thành loss dù thesis business không sai.
+## 12. Stewardship và bỏ phiếu ủy quyền
 
-## 12. Voting rights và stewardship
+Quỹ lớn có thể thực hiện vai trò quản trị chủ sở hữu (stewardship) thông qua bỏ phiếu ủy quyền, đối thoại với ban lãnh đạo và chính sách quản trị.
 
-Equity ownership còn đi kèm governance rights tùy share class. Institutional funds có thể vote board, compensation, mergers và shareholder proposals.
+Quỹ thụ động vẫn có quyền cổ đông dù không chủ động chọn từng cổ phiếu.
 
-Với passive fund, stewardship vẫn quan trọng vì fund không đơn giản bán stock chỉ vì governance xấu nếu stock còn trong index. Cần hiểu asset manager có voting policy và engagement framework ra sao.
+## 13. Chỉ số là tập hợp quy tắc
 
-## 13. Index là một rule set
+Một chỉ số phải trả lời:
 
-Index không phải “thị trường tự nhiên”; nó là hệ thống rule chọn và weight securities. Common weighting gồm market-cap/free-float cap, equal weight, price weight và factor weighting.
+```text
+Ai đủ điều kiện?
+Trọng số tính thế nào?
+Có giới hạn tập trung không?
+Khi nào tái cân bằng?
+Dữ liệu nào dùng để thêm / loại cổ phiếu?
+```
 
-Methodology quyết định exposure. Hai indices cùng tên “technology” có thể khác rất nhiều về eligibility, rebalancing, concentration và country exposure.
+Tên “thị trường”, “AI”, “tăng trưởng” hay “giá trị” không đủ để hiểu exposure.
 
-## 14. Rebalancing và reconstitution
+## 14. Chỉ số theo vốn hóa
 
-Index định kỳ rebalance weights và có thể add/remove constituents. Tracking funds phải giao dịch theo changes này, tạo technical flows.
+Chỉ số theo vốn hóa thị trường đặt tỷ trọng lớn hơn vào doanh nghiệp có market cap lớn hơn. Ưu điểm là chi phí giao dịch thấp và tự điều chỉnh theo quy mô thị trường.
 
-Inclusion có thể tác động price trước/around effective date nhưng không thay intrinsic value trực tiếp. Sau inclusion, higher passive ownership cũng có thể ảnh hưởng liquidity, lending supply và voting landscape.
+Nhược điểm là có thể trở nên tập trung khi một số doanh nghiệp tăng giá rất mạnh.
 
-## 15. Index concentration
+## 15. Chỉ số tỷ trọng bằng nhau
 
-Market-cap weighted index tự nhiên tăng weight của companies có market cap lớn. Khi một vài mega caps tăng quá mạnh, “broad market” có thể trở nên concentrated.
+Chỉ số tỷ trọng bằng nhau (equal weight) giảm tập trung ở công ty lớn nhưng cần tái cân bằng thường xuyên hơn, tạo turnover và nghiêng về doanh nghiệp nhỏ hơn.
 
-Investor nên xem top-10 weight, sector concentration, country concentration và earnings concentration. Một index có hàng trăm names không đảm bảo diversification nếu phần lớn return/risk đến từ vài names.
+Nó không đơn giản là “phiên bản tốt hơn” của chỉ số vốn hóa; đó là exposure khác.
 
-## 16. Equal-weight và alternative weighting
+## 16. Rủi ro tập trung chỉ số
 
-Equal-weight giảm concentration vào mega caps nhưng tăng turnover và thường tăng exposure tới smaller companies. Factor indices có thể tilt value, quality, momentum hoặc low volatility.
+Chỉ số rộng theo số lượng cổ phiếu vẫn có thể tập trung theo tỷ trọng hoặc nhân tố.
 
-Không có weighting neutral tuyệt đối. Mỗi methodology là một portfolio-construction choice với factor exposure và transaction cost riêng.
+Cần theo dõi:
 
-## 17. ETF là wrapper
+```text
+Top 10 weight
+Sector weights
+Country weights
+Factor exposure
+Contribution to index return
+```
 
-Exchange-Traded Fund (*ETF*) phát hành shares giao dịch trên exchange trong khi fund sở hữu hoặc replicate underlying exposure. Underlying có thể là stocks, bonds, commodities, futures, options hoặc systematic strategy.
+KOSPI hoặc S&P 500 tăng không đồng nghĩa cổ phiếu trung vị cũng tăng tương ứng.
 
-Câu hỏi “ETF có an toàn không?” không đầy đủ. Broad government-bond ETF và 3x leveraged semiconductor ETF đều là ETF nhưng risk hoàn toàn khác.
+## 17. ETF là cấu trúc quỹ giao dịch trên sở
+
+ETF cho phép mua bán chứng chỉ quỹ trong phiên như cổ phiếu. ETF có thể theo chỉ số hoặc chiến lược chủ động.
+
+Điều quan trọng là tài sản cơ sở và phương pháp quản lý, không phải chữ ETF.
 
 ## 18. NAV và iNAV
 
-`NAV per share = (Fund assets - liabilities) / shares outstanding`
+Giá trị tài sản ròng (NAV) là giá trị tài sản trừ nghĩa vụ trên mỗi chứng chỉ. Giá trị tài sản ròng ước tính trong phiên (iNAV) có thể dùng dữ liệu gần thời gian thực nhưng độ chính xác phụ thuộc tài sản cơ sở.
 
-ETF market price có thể khác NAV vì intraday moves, stale underlying prices, liquidity hoặc stress. Indicative NAV (*iNAV*) cố cập nhật gần real time nhưng chất lượng phụ thuộc underlying market data và FX.
+Nếu tài sản cơ sở đóng cửa hoặc ít giao dịch, iNAV có thể cũ.
 
-Premium/discount chỉ có ý nghĩa sau khi biết NAV có fresh hay stale hay không.
+## 19. Cơ chế tạo và mua lại
 
-## 19. Creation-redemption và Authorized Participants
+Thành viên tạo lập (Authorized Participant, AP) có thể tạo hoặc mua lại lô ETF bằng rổ tài sản hoặc tiền mặt theo quy tắc.
 
-Authorized Participants (*APs*) có thể create/redeem ETF units bằng basket hoặc cash theo fund rules. Nếu ETF trade rich so basket, arbitrage có thể tạo shares rồi bán ETF; nếu cheap, reverse.
+Cơ chế này giúp nhà tạo lập chênh lệch giá và giữ giá ETF gần giá trị tài sản cơ sở trong điều kiện bình thường.
 
-Mechanism này thường anchor price, nhưng trong stressed/closed underlying markets premium/discount có thể widen vì arbitrage risk tăng.
+## 20. Thanh khoản ETF có hai lớp
 
-## 20. Primary vs secondary ETF liquidity
+Thanh khoản của ETF gồm:
 
-Visible ETF volume là secondary-market liquidity. ETF còn có primary liquidity từ underlying basket thông qua creation/redemption.
+```text
+Thanh khoản chứng chỉ ETF trên sở
+Thanh khoản của tài sản cơ sở
+```
 
-Low displayed ETF volume không tự động nghĩa không thể trade nếu underlying rất liquid. Nhưng spread, market depth và AP willingness vẫn quan trọng, đặc biệt với large orders.
+Khối lượng giao dịch ETF thấp không luôn đồng nghĩa ETF không thanh khoản nếu tài sản cơ sở rất thanh khoản và cơ chế tạo–mua lại hoạt động tốt.
 
-## 21. Liquidity under stress
+Ngược lại ETF có khối lượng cao nhưng tài sản cơ sở kém thanh khoản vẫn có thể gặp spread lớn trong căng thẳng.
 
-Trong stress, spread ETF có thể widen vì market makers cần compensation cho inventory, hedging và uncertainty. Bond ETF có thể trade discount so stale NAV vì ETF price đang price credit/liquidity mới nhanh hơn underlying bonds ít giao dịch.
+## 21. Premium và discount
 
-Discount không nhất thiết cho thấy ETF mechanism “hỏng”; đôi khi ETF price chính là price-discovery venue nhanh hơn.
+Giá ETF có thể cao hơn NAV (premium) hoặc thấp hơn NAV (discount).
 
-## 22. Expense ratio và total cost of ownership
+Khi thị trường cơ sở đóng cửa, chênh lệch có thể phản ánh quá trình khám phá giá nhanh hơn NAV cũ thay vì cơ hội chênh lệch giá chắc chắn.
 
-Expense ratio chỉ là một phần cost. Total cost còn gồm bid-ask spread, brokerage, FX conversion, tax drag, tracking difference, lending revenue sharing và slippage.
+## 22. Tracking Difference và Tracking Error
 
-Với buy-and-hold dài hạn, expense ratio/tracking difference quan trọng. Với trade ngắn hạn, spread và market impact có thể quan trọng hơn nhiều.
+**Sai lệch lợi suất (tracking difference)** là chênh lệch lợi suất tích lũy giữa quỹ và chỉ số.
 
-## 23. Tracking difference và tracking error
+**Sai số bám chỉ số (tracking error)** đo biến động của chênh lệch lợi suất theo thời gian.
 
-*Tracking difference* là actual fund return minus benchmark over period. Nó phản ánh fee, tax, replication, cash drag và lending effects.
+Nguyên nhân gồm phí, thuế, tiền mặt, tối ưu hóa rổ, cho vay chứng khoán, chi phí tái cân bằng và FX hedge.
 
-*Tracking error* đo variability của tracking difference. Fund luôn -0,15% sau benchmark có thể tracking error thấp; fund lúc +1%, lúc -1% có tracking error cao.
+## 23. Sao chép vật lý và tổng hợp
 
-Đánh giá cả level và stability.
+ETF vật lý nắm toàn bộ hoặc mẫu tài sản cơ sở. ETF tổng hợp (synthetic ETF) dùng hợp đồng phái sinh để nhận lợi suất chỉ số.
 
-## 24. Physical replication
+Cấu trúc tổng hợp có thể giảm lỗi bám trong một số thị trường nhưng thêm rủi ro đối tác và tài sản bảo đảm.
 
-Physical ETF nắm toàn bộ hoặc sample constituents. Full replication phù hợp index liquid; sampling giảm cost ở index rất rộng hoặc illiquid.
+## 24. Cho vay chứng khoán
 
-Sampling tăng model/tracking risk vì holdings khác exact basket.
+Quỹ có thể cho vay cổ phiếu để kiếm phí. Thu nhập này có thể bù một phần chi phí quỹ.
 
-## 25. Synthetic replication
+Cần kiểm tra tỷ lệ chia thu nhập, chất lượng tài sản thế chấp và giới hạn người vay.
 
-Synthetic ETF dùng swap/derivative để nhận benchmark return. Nó có thể improve access hoặc tracking nhưng thêm counterparty/collateral risk.
+## 25. ETF có phòng vệ và không phòng vệ FX
 
-Synthetic không tự động xấu. Cần xem swap counterparty, collateral quality, reset frequency, overcollateralization và legal structure.
+ETF niêm yết KRW nhưng nắm tài sản USD không phòng vệ vẫn có exposure USD.
 
-## 26. Securities lending
+ETF phòng vệ dùng forward/swap để giảm biến động FX, đổi lại có chi phí carry, basis, giao dịch và sai lệch phòng vệ.
 
-Physical funds có thể cho vay securities cho short sellers để kiếm lending revenue. Revenue có thể offset fee nhưng thêm counterparty/collateral/operational risk.
+## 26. ETF đòn bẩy và nghịch đảo
 
-Đọc phần chia lending revenue, collateral policy và indemnification. Fund fee thấp nhưng manager giữ phần lớn lending revenue có economics khác fund chia phần lớn cho investors.
+Các quỹ này thường đặt mục tiêu theo ngày. Do tái cân bằng hàng ngày, lợi suất nhiều ngày phụ thuộc đường đi của giá.
 
-## 27. Currency exposure
+```text
+Biến động cao + qua lại nhiều
+→ Hao mòn do đường đi có thể lớn
+```
 
-Trading currency không quyết định economic currency. Korean-listed US ETF mua bằng KRW vẫn có thể exposed USD.
+Không nên kỳ vọng lợi suất một tháng luôn bằng “2 × lợi suất chỉ số tháng”.
 
-Approx home-currency return:
+## 27. Quỹ mở truyền thống
 
-`(1 + underlying return) × (1 + FX return) - 1`
+Quỹ mở được mua/bán theo NAV sau thời điểm chốt trong ngày thay vì giao dịch liên tục trên sở.
 
-Nếu S&P tăng 8% USD nhưng USD giảm 7% so KRW, KRW return có thể thấp hơn nhiều.
+Ưu điểm và nhược điểm khác ETF về spread, thuế, khả năng giao dịch và mức minh bạch trong phiên.
 
-## 28. Currency-hedged ETF
+## 28. Quỹ chủ động và quỹ thụ động
 
-Hedged fund dùng forwards/futures/swaps để giảm FX exposure. Hedge return chịu rate differential, roll, basis và implementation cost.
+Quỹ thụ động tuân theo quy tắc chỉ số. Quỹ chủ động cho nhà quản lý quyền lựa chọn chứng khoán, tỷ trọng và đôi khi thời điểm.
 
-Hedging giảm currency volatility nhưng không làm equity/bond underlying an toàn hơn. It replaces one risk with a different cost/implementation profile.
+Quỹ chủ động chỉ đáng trả phí cao hơn nếu lợi thế sau phí và thuế đủ bền vững.
 
-## 29. Leveraged ETF
+## 29. Active Share
 
-Leveraged ETF thường target multiple của DAILY return. Daily reset tạo path dependency.
+Active Share đo mức danh mục chủ động khác benchmark về tỷ trọng. Nó không đo trực tiếp chất lượng.
 
-Underlying +10% rồi -9,09% về gần điểm đầu. 2x ETF xấp xỉ +20% rồi -18,18%: `1.2 × 0.8182 ≈ 0.982`, tức loss dù underlying flat.
+Một quỹ có Active Share thấp nhưng phí cao có thể là “closet index”. Một quỹ Active Share cao có thể rất khác benchmark nhưng vẫn hoạt động kém.
 
-Volatility drag và compounding path càng quan trọng khi leverage/horizon tăng.
+## 30. Direct Indexing
 
-## 30. Inverse ETF
+Đầu tư trực tiếp theo chỉ số (direct indexing) mua trực tiếp nhiều chứng khoán thay vì mua ETF. Nó có thể cho phép tùy chỉnh, loại trừ ngành hoặc quản lý thuế ở một số thị trường.
 
-Inverse ETF target negative daily return. Nó có thể hedge tactical nhưng long holding có thể khác xa inverse cumulative return của index.
+Đổi lại, cần công nghệ, vốn, nhiều giao dịch và quản trị hành động doanh nghiệp.
 
-Phải hiểu daily reset, financing và derivatives structure trước khi dùng nhiều ngày/tuần.
+## 31. Quỹ của quỹ
 
-## 31. Active ETF
+Fund-of-funds nắm các quỹ khác. Nó đơn giản hóa phân bổ nhưng có thể tạo lớp phí, trùng lặp holdings và khó nhìn xuyên factor exposure.
 
-Active ETF không follow static index. Due diligence chuyển sang manager/process: philosophy, research edge, portfolio construction, turnover, capacity, benchmark, fees, factor exposures và risk controls.
+Cần tính tổng chi phí tới tài sản cơ sở.
 
-Một active ETF minh bạch holdings hàng ngày có behavioral implications khác fund ít transparent; structure phụ thuộc market.
+## 32. ETF theo chủ đề
 
-## 32. Mutual fund và index fund
+ETF chủ đề thường có câu chuyện hấp dẫn nhưng dễ gặp:
 
-Mutual funds thường transact tại end-of-day NAV; ETF transact intraday. Cả hai có thể active hoặc passive.
-
-Wrapper không nói strategy. Index fund cũng không neutral vì benchmark methodology quyết định allocation.
-
-## 33. Active fund và alpha
-
-Active performance phải so đúng benchmark và factor exposures sau fees. Nếu fund outperform vì permanent small-cap/value tilt, phần return đó có thể là factor beta hơn manager-specific alpha.
-
-Cần xem consistency, capacity, turnover, drawdown, style drift và after-fee excess return.
-
-## 34. Active Share và closet indexing
-
-*Active Share* đo mức holdings khác benchmark. Fund charge active fee nhưng portfolio gần benchmark có thể là closet indexer.
-
-High Active Share không tự động tốt; nó chỉ nói portfolio khác benchmark. Skill vẫn phải được chứng minh bằng long-run after-fee results và coherent process.
-
-## 35. Style drift
-
-Fund marketed là value/dividend có thể dần nghiêng growth/tech để chase performance. Khi style drift xảy ra, portfolio role thay đổi dù tên fund không đổi.
-
-Monitor holdings, sector weights, factor exposures và manager commentary.
-
-## 36. Thematic ETF và narrative risk
-
-Thematic ETF có thể hold 30–50 names nhưng tất cả cùng phụ thuộc AI capex, lithium price, biotech funding hoặc clean-energy subsidies.
-
-Ticker count không bằng diversification. Theme launch thường xảy ra sau narrative đã popular, nên investor còn chịu timing/valuation risk.
-
-## 37. Broad-market ETF
-
-Broad ETF giảm company-specific burden, thường low cost và phù hợp làm core beta exposure. Nhưng broad index vẫn có country, sector, valuation, concentration và currency risks.
-
-“Broad” cần được định nghĩa qua constituents, weight và geographic coverage.
-
-## 38. Sector ETF
-
-Sector ETF express industry view mà không cần chọn winner cụ thể. Nó hữu ích khi thesis nằm ở sector cycle nhưng company selection uncertainty cao.
-
-Trade-off là bạn sở hữu cả weak firms, index may be concentrated ở leaders, và sector ETF có thể duplicate exposures đã có trong broad index.
-
-## 39. Bond ETF
-
-Bond ETF phải đọc duration, credit quality, yield, maturity bucket, currency và underlying liquidity. Không nên gọi chung “defensive”.
-
-Long-duration Treasury ETF có thể biến động rất mạnh khi yields thay đổi.
-
-## 40. Commodity ETF/ETN
-
-Commodity product có thể physical-backed, futures-based hoặc note. Futures curve/roll yield và issuer credit risk có thể dominate return.
-
-Tên “oil ETF” không đủ để biết exposure có giống spot oil hay không.
-
-## 41. Fund distributions và total-return illusion
-
-ETF/fund có thể distribute dividends/interest hoặc reinvest. Distribution làm NAV giảm cơ học.
-
-So total-return series, không chỉ price chart. Yield cao có thể phản ánh capital distribution, option premium hoặc leverage chứ không đồng nghĩa economic return cao.
-
-## 42. Premium/discount khi market hours lệch nhau
-
-Korean ETF tracking US assets có thể trade khi US cash market đóng. Price sẽ dùng futures, FX và current information trong khi official NAV dựa stale close.
-
-App có thể hiển thị “premium” lớn dù market đang rationally price overnight information.
-
-## 43. AUM, fund closure và merger risk
-
-Fund quá nhỏ có thể bị close/merge vì economics không hấp dẫn cho manager. Closure thường return NAV nhưng tạo tax/reinvestment inconvenience.
-
-AUM không phải quality score; cần kết hợp spread, underlying liquidity, issuer stability và trading activity.
-
-## 44. Delisting và index removal
-
-Một company bị delist hoặc ETF bị closed không có cùng economics. Stock delisting có thể liên quan bankruptcy, acquisition hoặc going-private. Index removal chỉ thay benchmark membership.
-
-Investor phải phân biệt event type và settlement treatment. “Ra khỏi index” không tự động nghĩa business xấu, nhưng passive selling có thể tạo flow.
-
-## 45. Direct indexing
-
-Direct indexing cố sở hữu individual constituents thay vì wrapper, cho phép customization, tax harvesting hoặc exclusions. Đổi lại complexity, tracking error, operational burden và transaction cost tăng.
-
-Nó phù hợp hơn khi account size và tax/context đủ lớn để lợi ích vượt complexity.
-
-## 46. Fund-of-funds và hidden fee layers
-
-Một fund có thể invest vào ETFs/funds khác. Expense ratio headline của outer fund không phải toàn bộ economic cost nếu underlying funds cũng charge fees.
-
-Cần xem acquired-fund fees, overlaps và whether manager adds real allocation value.
-
-## 47. Securities concentration qua nhiều wrappers
-
-Investor có thể hold broad US ETF, Nasdaq ETF, semiconductor ETF và AI thematic ETF rồi tưởng diversified. Nhưng top holdings có thể lặp lại mạnh.
-
-Aggregate exposure theo company, sector và factor xuyên tất cả wrappers. Wrapper count không phải diversification count.
-
-## 48. Factor decomposition
-
-Equity/fund return có thể đến từ market beta, size, value, momentum, quality, low-volatility, sector, country và currency factors.
-
-Nếu manager/ETF outperform, hãy hỏi exposure nào tạo excess return. Đây là cầu nối sang factor investing và performance attribution.
-
-## 49. Stewardship và passive ownership
-
-Khi passive ownership lớn, fund managers vẫn có trách nhiệm voting và governance engagement. Investor dài hạn nên hiểu asset manager xử lý board accountability, climate/capital allocation hoặc minority-shareholder issues như thế nào.
-
-Stewardship không thay valuation, nhưng có thể ảnh hưởng governance quality ở horizon dài.
-
-## 50. ETF due-diligence workflow
-
-Một workflow tốt đi theo:
-
-`Exposure → Benchmark → Holdings → Weighting → Rebalancing → Replication → Currency → Leverage/reset → Fees/tracking → Liquidity → Distributions → Securities lending → Tax/account → Counterparty → Portfolio overlap`
-
-Nếu không thể giải thích exposure trong một đoạn và risk trong một đoạn khác, product chưa đủ rõ để mua.
-
-## 51. Single stock vs ETF
-
-Single stock cho concentrated exposure và potential alpha nếu có research edge. ETF giảm idiosyncratic risk và monitoring burden.
-
-Core-satellite có thể dùng broad ETF core và smaller single-stock/sector positions, nhưng đây là framework chứ không phải universal optimal allocation.
-
-## 52. Khi single-stock diversification là giả
-
-Samsung Electronics, SK hynix và semiconductor ETF là nhiều tickers nhưng vẫn một semiconductor factor. Banks/property/securities ở Vietnam có thể cùng phụ thuộc domestic credit/liquidity.
-
-Aggregate by economic driver, not security name.
-
-## 53. Common mistakes khi chọn ETF/fund
-
-Các lỗi phổ biến gồm chọn theo recent return, theme name hoặc yield; bỏ qua currency; chỉ nhìn expense ratio mà bỏ spread/tracking; không kiểm leverage/reset; tưởng ETF volume bằng toàn bộ liquidity; không biết fund physical hay synthetic; không nhìn top holdings overlap; dùng bond ETF như cash substitute mà bỏ duration.
-
-Phần lớn sai lầm không đến từ ETF mechanics quá phức tạp mà từ việc không biết mình thực sự đang sở hữu exposure nào.
-
-## 54. Mental model cuối cùng
-
-Phân tích equity/fund qua chuỗi:
-
-`Underlying economic claim → shareholder rights/corporate actions → index/manager rules → wrapper structure → fees/tracking/liquidity → currency → factor overlap → portfolio role`
-
-Ticker và marketing name là lớp cuối cùng, không phải điểm bắt đầu.
+```text
+Định nghĩa chủ đề mơ hồ
+Tỷ trọng doanh nghiệp thuần chủ đề thấp
+Định giá cao sau khi xu hướng đã nổi tiếng
+Tập trung ngành
+Turnover cao
+```
+
+Nhãn marketing không phải định nghĩa kinh tế.
+
+## 33. Trùng lặp ẩn giữa các ETF
+
+Hai ETF tên khác nhau có thể cùng nắm nhiều cổ phiếu lớn hoặc cùng mang beta công nghệ/tăng trưởng.
+
+Nên phân tích holdings và factor exposure thay vì chỉ nhìn tên quỹ.
+
+## 34. Tổng chi phí sở hữu
+
+Tổng chi phí không chỉ là expense ratio:
+
+```text
+Phí quản lý
+Spread
+Trượt giá
+Tracking difference
+Thuế
+FX conversion / hedge
+Securities lending economics
+Chi phí cơ hội
+```
+
+Quỹ có phí quản lý thấp hơn chưa chắc cho lợi suất ròng tốt hơn.
+
+## 35. Checklist phân tích ETF
+
+```text
+Chỉ số / chiến lược cơ sở
+Phương pháp trọng số
+Top holdings
+Mức tập trung ngành/quốc gia
+Factor exposure
+Sao chép vật lý / tổng hợp
+AUM
+Spread
+Thanh khoản tài sản cơ sở
+Tracking difference / error
+Phí / thuế
+FX hedge
+Lending
+Hành vi trong giai đoạn căng thẳng
+```
+
+## 36. Mô hình tư duy cuối cùng
+
+```text
+Cổ phiếu → Quyền sở hữu / Dòng tiền / Pha loãng
+Chỉ số → Quy tắc lựa chọn và trọng số
+Quỹ → Cách quản lý
+ETF → Cấu trúc giao dịch và tạo–mua lại
+Kết quả thực → Tài sản cơ sở + FX + Chi phí + Thuế + Thực thi
+```
+
+Mục tiêu là nhìn xuyên lớp bao bì để hiểu chính xác mình đang sở hữu exposure nào và đang trả chi phí gì để sở hữu nó.
