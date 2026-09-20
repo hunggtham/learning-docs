@@ -1,8 +1,8 @@
-# Computer Science Foundations — Comprehensive Knowledge Library
+# Computer Science Basic — Comprehensive Foundations Knowledge Library
 
-Computer Science (khoa học máy tính / 컴퓨터 과학, 전산학) không chỉ là học programming. Lĩnh vực này nghiên cứu cách **information được biểu diễn**, **computation được mô hình hóa**, **algorithms biến state**, **hardware thực thi instructions**, **operating systems phân phối resources**, **languages biểu đạt computation**, **databases và networks quản lý state xuyên thời gian/không gian**, và cuối cùng cách con người xây, vận hành, sử dụng và chịu tác động của các software systems.
+Đây là phần **kiến thức nền tảng (Basic / 기초)** của Computer Science Knowledge Library. Mục tiêu của folder này là xây mental model xuyên suốt từ information và computation đến hardware, operating systems, programming languages, databases, networks, distributed systems, security, software engineering, AI foundations, HCI/graphics và tác động xã hội của computing.
 
-Library này được tổ chức theo **conceptual dependency**, không theo Beginner → Intermediate → Advanced. Mỗi file là một chapter độc lập có mental model riêng, nhưng toàn bộ 100 topic chapters nối thành knowledge graph từ bit đến CPU, OS, runtime, database, Internet, distributed systems, security, software engineering, AI, HCI/graphics và computing in society.
+Library được tổ chức theo **conceptual dependency**, không theo Beginner → Intermediate → Advanced. “Basic” ở đây không có nghĩa nội dung sơ sài; nó có nghĩa đây là **foundation layer** mà các library chuyên sâu có thể dựa vào. Vì vậy các chapter vẫn giải thích mechanism, assumptions, trade-offs, failure modes và connection ở mức đủ sâu để sử dụng lâu dài.
 
 Triết lý xuyên suốt là **Understanding > Memorization**, **Reasoning > Rule**, **Mental Model > Definition**, **Connection > Isolated Fact**. English terminology được giữ vì là terminology chuẩn quốc tế; Korean terminology được note khi hữu ích trong 교과서, 기사 시험, 회사 문서 hoặc technical communication.
 
@@ -10,27 +10,28 @@ Triết lý xuyên suốt là **Understanding > Memorization**, **Reasoning > Ru
 
 ```text
 computer_science/
-├── 00_computation_information/
-├── 01_algorithms_data_structures/
-├── 02_computer_architecture/
-├── 03_operating_systems/
-├── 04_programming_languages/
-├── 05_data_databases/
-├── 06_networks_distributed_systems/
-├── 07_security_reliability/
-├── 08_software_systems/
-├── 09_software_engineering/
-├── 10_ai_foundations/
-├── 11_hci_graphics/
-├── 12_society_ethics_profession/
-├── 90_connections/
-├── 99_glossary.md
-└── COVERAGE_AUDIT.md
+└── basic/
+    ├── 00_computation_information/
+    ├── 01_algorithms_data_structures/
+    ├── 02_computer_architecture/
+    ├── 03_operating_systems/
+    ├── 04_programming_languages/
+    ├── 05_data_databases/
+    ├── 06_networks_distributed_systems/
+    ├── 07_security_reliability/
+    ├── 08_software_systems/
+    ├── 09_software_engineering/
+    ├── 10_ai_foundations/
+    ├── 11_hci_graphics/
+    ├── 12_society_ethics_profession/
+    ├── 90_connections/
+    ├── 99_glossary.md
+    └── COVERAGE_AUDIT.md
 ```
 
 ## Dependency và reading path
 
-Không tồn tại một đường đọc duy nhất. Một đường nền tảng hợp lý là:
+Không tồn tại một đường đọc duy nhất. Một đường foundation hợp lý là:
 
 ```mermaid
 graph TD
@@ -72,6 +73,8 @@ Nếu mục tiêu là backend/system engineering, có thể ưu tiên `00 → 01
 - [Computability và giới hạn của tính toán](./00_computation_information/04_computability_and_limits.md)
 
 ## 01 — Algorithms & Data Structures
+
+Nhóm này chỉ giữ phần DSA cần thiết như **foundation** cho toàn bộ Computer Science. Các cấu trúc/thuật toán chuyên sâu hơn nên nằm trong library Data Structures & Algorithms advanced riêng.
 
 - [Algorithmic thinking, specification và correctness](./01_algorithms_data_structures/00_algorithmic_thinking_and_correctness.md)
 - [Time/space complexity và asymptotic analysis](./01_algorithms_data_structures/01_complexity_and_asymptotic_analysis.md)
@@ -212,10 +215,10 @@ Nếu mục tiêu là backend/system engineering, có thể ưu tiên `00 → 01
 
 ## Liên kết sang các Knowledge Library khác
 
-Computer Science dựa mạnh vào discrete mathematics, logic, probability, statistics, linear algebra, calculus, optimization và information theory. Các phần toán chi tiết đã có trong [Mathematics Knowledge Library](../mathematics/README.md), đặc biệt [Logic & Proof](../mathematics/00_foundations/01_logic_and_proof.md), [Graph Theory](../mathematics/07_discrete_cs/00_graph_theory.md), [Algorithms & Complexity](../mathematics/07_discrete_cs/01_algorithms_complexity_and_logarithms.md), [Automata/Formal Languages](../mathematics/07_discrete_cs/07_automata_formal_languages_and_computability.md), [Information Theory](../mathematics/07_discrete_cs/06_information_theory_and_coding.md), [Linear Algebra](../mathematics/04_vectors_linear_algebra/01_matrices_and_linear_systems.md), [Probability](../mathematics/06_probability_statistics/01_probability_foundations.md) và [Optimization](../mathematics/08_optimization_numerical/00_optimization.md).
+Computer Science dựa mạnh vào discrete mathematics, logic, probability, statistics, linear algebra, calculus, optimization và information theory. Các phần toán chi tiết đã có trong [Mathematics Knowledge Library](../../mathematics/README.md), đặc biệt [Logic & Proof](../../mathematics/00_foundations/01_logic_and_proof.md), [Graph Theory](../../mathematics/07_discrete_cs/00_graph_theory.md), [Algorithms & Complexity](../../mathematics/07_discrete_cs/01_algorithms_complexity_and_logarithms.md), [Automata/Formal Languages](../../mathematics/07_discrete_cs/07_automata_formal_languages_and_computability.md), [Information Theory](../../mathematics/07_discrete_cs/06_information_theory_and_coding.md), [Linear Algebra](../../mathematics/04_vectors_linear_algebra/01_matrices_and_linear_systems.md), [Probability](../../mathematics/06_probability_statistics/01_probability_foundations.md) và [Optimization](../../mathematics/08_optimization_numerical/00_optimization.md).
 
-Các libraries Java, Spring, React, JavaScript, Swift, Kotlin... trong repo nên được đọc như **implementation-specific knowledge**. `computer_science/` giải thích principles làm nền cho những APIs/frameworks đó, vì sao behavior tồn tại và trade-offs phía dưới abstraction.
+Các libraries Java, Spring, React, JavaScript, Swift, Kotlin... trong repo nên được đọc như **implementation-specific knowledge**. `computer_science/basic/` giải thích principles làm nền cho những APIs/frameworks đó, vì sao behavior tồn tại và trade-offs phía dưới abstraction.
 
 ## Scope boundary
 
-“Comprehensive” ở đây nghĩa **cover toàn bộ các foundational mental models lớn của Computer Science**, không có nghĩa nhồi mọi specialization vào một folder. Robotics, computer vision/NLP chuyên sâu, compiler backend optimization chuyên sâu, kernel development, formal verification chuyên sâu, cryptographic protocol proofs, cloud-provider-specific architecture, game-engine implementation, quantum computing và scientific computing đủ lớn để trở thành libraries riêng dựa trên nền tảng này.
+“Comprehensive foundation” ở đây nghĩa **cover toàn bộ các foundational mental models lớn của Computer Science**, không có nghĩa nhồi mọi specialization vào `basic/`. Data Structures & Algorithms chuyên sâu, robotics, computer vision/NLP chuyên sâu, compiler backend optimization chuyên sâu, kernel development, formal verification chuyên sâu, cryptographic protocol proofs, cloud-provider-specific architecture, game-engine implementation, quantum computing và scientific computing nên trở thành các library advanced/specialized riêng dựa trên foundation này.
