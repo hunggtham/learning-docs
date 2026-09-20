@@ -2,7 +2,7 @@
 
 > Phạm vi: Swift căn bản, tư duy lập trình, cấu trúc một ứng dụng iOS, Xcode, SwiftUI, UIKit ở mức nhập môn, Foundation, state, navigation, networking và persistence cơ bản.
 >
-> Baseline thực hành: Xcode 26.6 + Swift 6.2. Xcode 27 / Swift 6.4 / iOS 27 đang ở nhánh RC tại thời điểm biên soạn nên chỉ được nhắc khi cần phân biệt version.
+> Baseline thực hành: Xcode 27 + Swift 6.4. Xcode 27 + Swift 6.4 + iOS 27 SDK là baseline hiện hành. Xcode 27.1/27.2 đang ở beta, vì vậy API chỉ xuất hiện ở các bản beta minor sẽ được đánh dấu riêng.
 
 ## 0. Swift, iOS, Xcode và các khái niệm cần phân biệt
 
@@ -16,10 +16,10 @@ Xcode là IDE chính thức của Apple. Nó chứa Swift compiler, build system
 
 Ba khái niệm phải tách rõ là phiên bản Swift, phiên bản Xcode và deployment target. Swift version quyết định language mode và tính năng ngôn ngữ. Xcode version quyết định toolchain và SDK được cài. Deployment target là phiên bản iOS thấp nhất mà app cho phép cài.
 
-Ví dụ, bạn có thể build bằng Xcode 26 với Swift 6.2 nhưng đặt iOS Deployment Target là iOS 17. Khi đó compiler hiểu Swift 6.2, nhưng code chỉ được gọi API tồn tại từ iOS 17 trở xuống, trừ khi bạn dùng availability check như:
+Ví dụ, bạn có thể build bằng Xcode 27 với Swift 6.4 nhưng đặt iOS Deployment Target là iOS 17. Khi đó compiler hiểu Swift 6.4, nhưng code chỉ được gọi API tồn tại từ iOS 17 trở xuống, trừ khi bạn dùng availability check như:
 
 ```swift
-if #available(iOS 26.0, *) {
+if #available(iOS 27.0, *) {
     // API mới
 } else {
     // fallback cho iOS cũ hơn
@@ -1102,3 +1102,228 @@ Capability như Push Notifications, Sign in with Apple, Associated Domains hoặ
 Sau level này, bạn phải tự tạo được project SwiftUI, hiểu target/scheme/deployment target, viết Swift cơ bản không phụ thuộc copy-paste, model dữ liệu bằng struct/enum, xử lý optional/error, gọi REST API bằng async/await, decode Codable, tạo navigation và state đơn giản, lưu preference, debug bằng breakpoint, viết unit test cơ bản, chạy Simulator và thiết bị thật.
 
 Điểm quan trọng hơn syntax là bạn phải hiểu ownership của state, khác biệt value/reference semantics, optional và error là một phần của type system, async không đồng nghĩa thread, và iOS API luôn bị ràng buộc bởi availability/deployment target.
+
+---
+
+# 26. Operator, precedence và range — phần nhỏ nhưng dùng ở mọi nơi
+
+Swift có arithmetic operator như `+`, `-`, `*`, `/`, remainder `%`; comparison operator như `==`, `!=`, `<`, `<=`, `>`, `>=`; logical operator `!`, `&&`, `||`; assignment operator `=` và compound assignment như `+=`, `-=`. Một điểm quan trọng là assignment trong Swift không trả về một value theo kiểu C, vì vậy bạn không thể vô tình viết `if x = y` rồi compiler coi nó là condition.
+
+Nil-coalescing `??` là operator rất thường dùng với Optional. Range operator gồm `...` cho closed range, `..<` cho half-open range và one-sided range như `array[2...]`. Trong collection code, half-open range thường tự nhiên hơn vì upper bound có thể là `endIndex`.
+
+Swift cho phép định nghĩa custom operator và precedence group, nhưng đây là khả năng nên dùng rất thận trọng. Trong application code, operator tự chế dễ làm giảm readability; chúng phù hợp hơn với domain toán học hoặc library có semantics thực sự rõ ràng.
+
+# 27. String, Character, Unicode và indexing đúng cách
+
+`String` trong Swift không phải mảng byte hay mảng UTF-16. Một ký tự người dùng nhìn thấy có thể được tạo bởi nhiều Unicode scalar. Vì vậy `String.Index` là index riêng của String, không phải `Int`.
+
+```swift
+let text = "Swift 👨‍👩‍👧‍👦"
+let first = text[text.startIndex]
+let next = text.index(after: text.startIndex)
+let prefix = text.prefix(5)
+```
+
+Nếu cần ký tự thứ `n`, có thể dùng:
+
+```swift
+let index = text.index(text.startIndex, offsetBy: n)
+let character = text[index]
+```
+
+Nhưng nếu lặp đi lặp lại random access theo integer, hãy xem lại data structure; `String` không được thiết kế như array O(1) theo vị trí user-perceived character. Với parsing protocol/binary, thường bạn sẽ làm việc với `Data`, UTF-8 view hoặc parser phù hợp thay vì ép String thành byte array.
+
+Các API thường dùng gồm `hasPrefix`, `hasSuffix`, `contains`, `split`, `replacingOccurrences`, `trimmingCharacters`, `lowercased`, `uppercased`. Khi so sánh/search nội dung dành cho người dùng, locale và normalization có thể quan trọng; đừng mặc định lowercase thủ công là cách đúng cho mọi ngôn ngữ.
+
+# 28. Initialization, `deinit`, extension và subscript
+
+Struct có memberwise initializer tự sinh nếu bạn không che nó bằng initializer tùy chỉnh trong declaration. Class cần hiểu designated initializer, convenience initializer và inheritance rule. Initializer có thể failable bằng `init?` khi input không tạo được object hợp lệ.
+
+```swift
+struct EmailAddress {
+    let value: String
+
+    init?(_ value: String) {
+        guard value.contains("@") else { return nil }
+        self.value = value
+    }
+}
+```
+
+`deinit` chỉ tồn tại trên class và chạy trước khi instance bị giải phóng. Nó thích hợp để cleanup resource có ownership rõ, nhưng không nên phụ thuộc vào `deinit` cho operation async quan trọng như gửi analytics hoặc save network data vì timing deallocation không phải lifecycle business guarantee.
+
+Extension giúp thêm method, computed property, initializer, nested type hoặc protocol conformance mà không sửa declaration gốc:
+
+```swift
+extension String {
+    var isBlank: Bool {
+        trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+    }
+}
+```
+
+Subscript cho cú pháp `value[index]`. Custom collection hoặc matrix có thể dùng:
+
+```swift
+struct Matrix {
+    let rows: Int
+    let columns: Int
+    private var values: [Double]
+
+    subscript(row: Int, column: Int) -> Double {
+        get { values[row * columns + column] }
+        set { values[row * columns + column] = newValue }
+    }
+}
+```
+
+# 29. Type casting, `Any`, `AnyObject` và tránh mất type safety
+
+`is` kiểm tra runtime type; `as?` cast an toàn và trả Optional; `as!` force cast và crash nếu sai.
+
+```swift
+if let viewController = value as? UIViewController {
+    // dùng an toàn
+}
+```
+
+`Any` có thể chứa hầu như mọi Swift value, còn `AnyObject` biểu diễn instance của class/reference-compatible object. Trong application Swift hiện đại, nếu bạn thấy dictionary `[String: Any]` lan rộng trong domain layer, đó thường là dấu hiệu nên model hóa dữ liệu bằng struct/enum/Codable. `Any` rất hữu ích ở boundary động như Objective-C, JSON thô, notification payload hoặc SDK legacy, nhưng không nên trở thành default data model.
+
+# 30. Collection algorithms và tư duy functional vừa đủ
+
+Các method `map`, `compactMap`, `flatMap`, `filter`, `reduce`, `sorted`, `first(where:)`, `contains(where:)`, `allSatisfy`, `prefix`, `dropFirst`, `zip` giúp code diễn đạt transformation trực tiếp.
+
+```swift
+let activeNames = users
+    .filter(\.isActive)
+    .map(\.name)
+    .sorted()
+```
+
+`compactMap` vừa transform vừa bỏ `nil`, rất phù hợp parsing:
+
+```swift
+let numbers = ["1", "x", "3"].compactMap(Int.init)
+```
+
+Không cần biến mọi loop thành chuỗi functional dài. Khi transformation nhiều branch, có side effect, cần early exit hoặc performance-sensitive, `for` loop thường dễ đọc hơn.
+
+# 31. Key Path
+
+Key path biểu diễn đường dẫn property như một value có type:
+
+```swift
+let namePath: KeyPath<User, String> = \.name
+let name = user[keyPath: namePath]
+```
+
+Bạn sẽ gặp key path trong sorting, SwiftUI binding, SwiftData query, KVO interop và generic API. Writable key path cho phép mutation khi root/property hỗ trợ.
+
+# 32. Regex hiện đại
+
+Swift có Regex DSL và regex literal trên toolchain hiện đại. Regex phù hợp validation/pattern extraction, nhưng không nên dùng để parse grammar phức tạp hoặc HTML tổng quát.
+
+```swift
+let pattern = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/
+if input.wholeMatch(of: pattern) != nil {
+    print("format email hợp lệ ở mức pattern")
+}
+```
+
+Validation thực tế phải tách “format nhìn hợp lý” khỏi “email tồn tại/thực sự nhận thư được”.
+
+# 33. Swift Package Manager nhập môn
+
+Swift Package Manager, thường viết tắt là SwiftPM hoặc SPM, quản dependency và package Swift. Trong Xcode có thể thêm package qua `File > Add Package Dependencies`. Một package thuần Swift có manifest `Package.swift`.
+
+```swift
+// swift-tools-version: 6.4
+import PackageDescription
+
+let package = Package(
+    name: "CoreKit",
+    platforms: [.iOS(.v17)],
+    products: [
+        .library(name: "CoreKit", targets: ["CoreKit"])
+    ],
+    targets: [
+        .target(name: "CoreKit"),
+        .testTarget(name: "CoreKitTests", dependencies: ["CoreKit"])
+    ]
+)
+```
+
+Trong Swift 6.4, Swift Build trở thành build system mặc định của Swift Package Manager. Với người làm iOS, ý nghĩa thực tế là package ecosystem và build behavior giữa Apple platform và cross-platform ngày càng thống nhất hơn.
+
+# 34. File system, sandbox và `FileManager`
+
+iOS app chạy trong sandbox. Các vị trí như Documents, Library/Application Support và Caches có mục đích khác nhau. User-generated data cần backup không nên đặt vào Caches; dữ liệu có thể tái tạo nên tránh làm phình backup.
+
+```swift
+let documents = FileManager.default.urls(
+    for: .documentDirectory,
+    in: .userDomainMask
+).first!
+```
+
+Khi ghi file, cân nhắc atomic write, error handling, file protection và migration. Không xây path bằng nối string; dùng `URL.appendingPathComponent` hoặc API URL hiện đại.
+
+# 35. SwiftUI form, input, focus và keyboard
+
+Các control thường dùng gồm `TextField`, `SecureField`, `Toggle`, `Picker`, `DatePicker`, `Slider`, `Stepper`. Form dài nên tổ chức bằng `Form`/`Section` khi semantics phù hợp.
+
+`@FocusState` quản focus:
+
+```swift
+enum Field: Hashable { case email, password }
+
+@FocusState private var focusedField: Field?
+
+TextField("Email", text: $email)
+    .focused($focusedField, equals: .email)
+```
+
+Validation nên phân biệt format error, server validation và transient typing state. Đừng hiện lỗi đỏ ngay khi user mới gõ ký tự đầu tiên nếu UX không yêu cầu.
+
+# 36. Gesture và animation cơ bản
+
+SwiftUI animation có hai lớp cần phân biệt: animation của state change và transition khi view xuất hiện/biến mất.
+
+```swift
+withAnimation(.spring) {
+    isExpanded.toggle()
+}
+```
+
+```swift
+if isVisible {
+    DetailView()
+        .transition(.opacity.combined(with: .move(edge: .bottom)))
+}
+```
+
+Gesture gồm tap, long press, drag, magnification và rotation tùy platform/API. Khi kết hợp gesture, cần hiểu precedence giữa `.gesture`, `.highPriorityGesture` và `.simultaneousGesture`. Với iOS 27, một số system gesture như text selection có thể cạnh tranh với custom gesture, vì vậy hãy test behavior trên SDK/OS thật mà app hỗ trợ.
+
+# 37. Xcode Preview và workflow UI
+
+`#Preview` giúp render view với dữ liệu mẫu mà không chạy full app:
+
+```swift
+#Preview("Logged in") {
+    ProfileView(user: .preview)
+}
+```
+
+Preview là công cụ feedback nhanh, không thay Simulator/device test. API liên quan camera, push, keychain, background task, memory pressure hoặc animation timing vẫn cần môi trường runtime phù hợp.
+
+# 38. Những thay đổi Xcode 27 người mới cần biết
+
+Xcode 27 đi cùng Swift 6.4 và iOS 27 SDK. `@State` trong SwiftUI được triển khai bằng macro mới; expression khởi tạo class lưu trong state được đánh giá lazy theo view lifetime thay vì bị đánh giá lặp mỗi lần value-type View được tái tạo. Result builder trong SwiftUI cũng được thống nhất theo `ContentBuilder`, giúp cải thiện type-checking/build time. Phần lớn source code cũ tương thích, nhưng code dựa vào implementation detail của property wrapper/result builder có thể cần migration.
+
+`AsyncImage` trên SDK mới hỗ trợ HTTP caching mặc định theo cache header của server và có API để kiểm soát `URLRequest`, `URLSession`/`URLCache` chi tiết hơn. Điều này không có nghĩa mọi image loader custom trở nên vô dụng; production vẫn có thể cần transform pipeline, disk cache policy, prefetch, placeholder strategy hoặc authenticated request.
+
+# 39. Bài tập tổng hợp Beginner
+
+Hãy tự xây một app “Reading List” có ba màn hình: danh sách sách, chi tiết và form thêm/sửa. Model bằng `struct`/`enum`; dùng `NavigationStack`; local UI state dùng `@State`; model chia sẻ dùng Observation; gọi một REST endpoint bằng `URLSession`; decode bằng Codable; lưu bookmark bằng SwiftData; preference nhỏ bằng UserDefaults; token giả lập qua service Keychain; thêm ít nhất ba unit test và một error state rõ ràng.
+
+Nếu hoàn thành mà không copy nguyên sample, bạn sẽ buộc phải nối các khái niệm language → state → UI → async → persistence → test, chính là bước cần thiết trước khi lên Intermediate.

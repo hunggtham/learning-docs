@@ -154,9 +154,9 @@ func load() async throws -> Data {
 
 Checked continuation yêu cầu resume đúng một lần. Resume 0 hoặc >1 lần là bug nghiêm trọng.
 
-## 4.5 Swift 6.2 default isolation và `@concurrent`
+## 4.5 Swift 6.x default isolation và `@concurrent`
 
-Swift 6.2 hướng đến approachable concurrency: executable/UI target có thể default main-actor isolation, async function có semantics caller-context thuận tự nhiên hơn theo feature setting, và `@concurrent` biểu diễn điểm chủ động chạy concurrent.
+Swift 6.x tiếp tục hướng approachable concurrency: executable/UI target có thể default main-actor isolation, async function có semantics caller-context thuận tự nhiên hơn theo feature setting, và `@concurrent` biểu diễn điểm chủ động chạy concurrent.
 
 Điều này có nghĩa tài liệu Swift 5.7/5.9 cũ về “async function tự động chạy background” hoặc cách sprinkle `nonisolated` có thể không còn là mental model tốt. Hãy đọc compiler diagnostic theo language mode thực tế của target.
 
@@ -479,3 +479,87 @@ Generic abstraction quá sớm làm compiler error và call site khó hiểu. H�
 Async side effect trong initializer thường khó quản lifecycle. Ưu tiên explicit `load()` hoặc `.task`.
 
 Đừng gắn `@MainActor` toàn module để hết warning nếu logic compute/network không thực sự thuộc UI. Fix isolation theo ownership.
+
+---
+
+# 25. Ownership features mới: borrowing, consuming và noncopyable types
+
+Swift hiện đại đang làm ownership ngày càng explicit. `borrowing` cho phép dùng value mà không nhận ownership; `consuming` chuyển ownership. Noncopyable type (`~Copyable`) phù hợp resource cần unique ownership hoặc value không nên bị copy tùy tiện.
+
+Application iOS thông thường chưa cần áp dụng ownership annotation rộng khắp. Giá trị của việc hiểu chúng là bạn có thể đọc standard-library/framework code mới, hiểu vì sao một API tránh copy và thiết kế wrapper cho resource thấp tầng tốt hơn.
+
+Swift 6.4 tiếp tục mở rộng hệ sinh thái này bằng khả năng borrow/mutate accessors, `Ref`/`MutableRef`, `UniqueBox`, `UniqueArray` và `Iterable`, giúp performance-sensitive code tránh copy mà vẫn giữ memory safety tốt hơn so với raw pointer.
+
+# 26. Swift 6.4 interoperability và systems boundary
+
+Swift 6.4 mở rộng interop với C/C++ và Java. Với iOS engineer, C/C++ interop có ý nghĩa thực tế ở SDK media, game engine, crypto, database và thư viện legacy. `Span` có thể bridge với C++20 `std::span`, giảm nhu cầu cặp raw pointer + count thủ công.
+
+Nguyên tắc senior là giữ unsafe/foreign boundary nhỏ. Convert dữ liệu sang Swift-safe representation càng sớm càng tốt, document lifetime và ownership ở adapter, rồi để phần còn lại của app không phải hiểu pointer semantics.
+
+# 27. Continuation thế hệ mới và bridging legacy API
+
+Checked continuation đã giúp bắt double-resume/missing-resume tốt hơn unsafe continuation. Swift 6.4 tiếp tục cải thiện hướng safe continuation với ownership-aware continuation API. Dù dùng loại nào, invariant cốt lõi vẫn là một callback operation phải hoàn thành continuation đúng semantics một lần, cancellation phải propagate nếu legacy API hỗ trợ, và callback có thể chạy trên queue bất kỳ nên isolation crossing phải rõ.
+
+Bridge là boundary migration, không nên biến toàn app async/await thành callback rồi lại bridge qua lại nhiều lần.
+
+# 28. SwiftUI Xcode 27: `State` macro, `ContentBuilder` và migration risk
+
+Xcode 27 thay đổi implementation của hai primitive nền tảng. `State` trở thành macro, cho lazy initialization per view lifetime; nhiều builder chuyên biệt được unified dưới `ContentBuilder` để giảm type-checking cost. Phần lớn app không cần sửa, nhưng code sử dụng reflection, overload hack, custom generic phụ thuộc concrete builder type hoặc assumption rằng initializer expression chạy mỗi lần View struct tạo lại có thể đổi behavior.
+
+Senior migration workflow là tìm các vùng dựa vào side effect trong `@State` initialization, thêm regression test, xem macro expansion nếu diagnostic khó hiểu và không “fix” bằng random annotation.
+
+# 29. SwiftUI performance: image, list, scroll và rendering budget
+
+Image decoding/downsampling thường là nguồn memory/hitch lớn. `AsyncImage` trên iOS 27 có HTTP caching tốt hơn, nhưng cache network bytes không giải quyết mọi vấn đề bitmap memory. Với image lớn, downsample theo display size trước render; với feed dài, prefetch có giới hạn và cancel khi item không còn cần.
+
+List/scroll performance phụ thuộc stable identity, view complexity, expensive modifier, geometry feedback loop và synchronous work. Một item view nhỏ nhưng chạy formatter/parser/database fetch trong `body` vẫn có thể gây hitch.
+
+# 30. Database concurrency và model actor
+
+SwiftData có `ModelActor` để tổ chức access theo concurrency model. Nhưng “đưa mọi DB operation sang background actor” không tự động đúng: query result, model lifetime, context boundary và UI observation vẫn cần thiết kế nhất quán. Tránh truyền mutable model object tự do qua actor boundary; snapshot/value DTO thường dễ reasoning hơn.
+
+Với data lớn, batch fetch, pagination, index và predicate shape quan trọng hơn việc thêm nhiều task. Database optimization bắt đầu từ query plan/data model, không phải concurrency trước.
+
+# 31. Network protocol design và API compatibility
+
+Mobile app có release lag: backend hôm nay phải phục vụ nhiều app version đã cài từ trước. Vì vậy API evolution cần backward compatibility window. Thêm field thường an toàn hơn đổi nghĩa field; enum từ server nên có unknown fallback nếu backend có thể thêm case.
+
+Client request mutation quan trọng nên có idempotency key nếu backend hỗ trợ. Retry mobile network không được vô tình tạo hai payment/order/resource.
+
+# 32. Feature modularization và compile-time architecture
+
+Module không nên chỉ là folder được đổi thành package. Module là compile-time dependency boundary. Một feature module chỉ nên expose entry point/model cần cho consumer. Internal helper để `internal` thay vì `public` cho tiện.
+
+Theo dõi dependency graph. Nếu mọi feature import một mega-module chứa networking, design system, database, analytics và domain, modularization không thật sự giảm coupling.
+
+# 33. API resilience và semantic versioning cho internal package
+
+Ngay cả package nội bộ cũng nên có compatibility discipline nếu nhiều team/feature cùng dùng. Breaking change cần migration plan. Public API docs, deprecation annotation và changelog giúp consumer nâng version có kiểm soát.
+
+`@available(*, deprecated, message:)` cho compiler hướng dẫn migration. Khi thay API, đôi khi giữ shim một release rẻ hơn ép atomic migration toàn repo.
+
+# 34. Advanced testing: property, fuzz, performance và concurrency
+
+Ngoài example-based unit test, parser/serializer và algorithm có thể hưởng lợi từ property-based thinking: encode rồi decode phải giữ invariant; sort output phải có thứ tự và cùng multiset; migration phải bảo toàn record.
+
+Fuzzing đặc biệt hữu ích cho binary/parser boundary. Performance test cần baseline ổn định và đo statistic đủ ý nghĩa, không assert thời gian quá chặt trên CI nhiễu.
+
+Concurrency test nên kiểm cancellation, actor reentrancy, racing request và single-flight behavior. Bug async thường nằm ở interleaving, không ở happy path.
+
+# 35. App startup, scene restoration và resilience
+
+State restoration cần phân biệt navigation/UI transient state với domain persisted state. App có thể bị terminate bất ngờ; đừng dựa vào callback “app sắp chết” để save dữ liệu quan trọng.
+
+Startup path nên deterministic và nhỏ: load config cần thiết, dựng dependency graph, render UI sớm, defer việc không critical. Nếu authentication/session cần check async, model hóa splash/loading state rõ thay vì block main thread.
+
+# 36. Production incident mindset
+
+Khi crash rate hoặc latency tăng, senior không sửa bằng phỏng đoán. Hãy xác định release/version/device/OS bị ảnh hưởng, compare rollout, xem symbolicated stack, log/metric, tạo reproduction nhỏ nhất, sau đó mới patch.
+
+Mobile có đặc thù rollback chậm vì binary đã nằm trên thiết bị. Remote kill switch/feature flag cho tính năng rủi ro và backend backward compatibility là công cụ vận hành, nhưng phải có governance để không biến app thành rừng flag.
+
+# 37. Review checklist cho code Swift/iOS cấp Senior
+
+Một review tốt kiểm tra semantics trước style: ownership state, optional/error path, actor isolation, cancellation, identity, lifetime, API availability, backward compatibility, security/privacy và test. Sau đó mới tới naming/formatting.
+
+Nếu một PR “đúng” nhưng reviewer mất 30 phút mới xác định data flow, đó là tín hiệu architecture/readability cần cải thiện. Code production tối ưu cho thay đổi an toàn trong tương lai, không chỉ compile hôm nay.

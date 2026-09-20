@@ -232,7 +232,7 @@ struct UserSnapshot: Sendable {
 
 Class mutable thường khó Sendable. `@unchecked Sendable` là lời hứa thủ công với compiler; dùng sai có thể đưa data race trở lại.
 
-## 5.5 Swift 6.2 approachable concurrency
+## 5.5 Swift 6.x approachable concurrency
 
 Swift 6.2 đưa ra hướng “single-threaded by default” thông qua default actor isolation option và cho phép opt-in concurrency rõ ràng hơn với `@concurrent`. Điều quan trọng là project setting ảnh hưởng semantics. Khi migrate project cũ, phải kiểm tra Swift language mode, default isolation và strict concurrency diagnostics thay vì copy annotation từ bài blog cũ.
 
@@ -619,3 +619,132 @@ Một codebase khỏe mạnh không được đánh giá bằng số pattern nó
 Đừng “async hóa” function chỉ để có thể gọi trong Task. Async nên phản ánh operation có suspension hoặc concurrency semantics thật.
 
 Đừng bắt mọi model thành class observable. Domain value nên ưu tiên struct nếu identity/reference sharing không phải yêu cầu.
+
+---
+
+# 22. Sequence, Collection, lazy evaluation và complexity
+
+`Sequence` mô tả một chuỗi phần tử có thể iterate; `Collection` mạnh hơn vì có index ổn định trong một số điều kiện và cho phép multi-pass. `RandomAccessCollection` cung cấp distance/index movement hiệu quả hơn. Hiểu protocol hierarchy giúp bạn thiết kế generic API không đòi hỏi capability mạnh hơn mức cần thiết.
+
+`lazy` trên sequence/collection trì hoãn transformation:
+
+```swift
+let result = numbers.lazy
+    .filter { $0.isMultiple(of: 2) }
+    .map { expensiveTransform($0) }
+    .prefix(10)
+```
+
+Nó có thể tránh tạo intermediate array và tránh tính phần tử không dùng. Tuy nhiên lazy chain không tự động nhanh hơn trong mọi trường hợp; đo khi hot path quan trọng.
+
+# 23. Advanced generics: `where`, same-type constraint và generic API design
+
+Generic constraint giúp compiler giữ type safety mà vẫn tái sử dụng code:
+
+```swift
+func merge<C1: Collection, C2: Collection>(
+    _ lhs: C1,
+    _ rhs: C2
+) -> [C1.Element]
+where C1.Element == C2.Element {
+    Array(lhs) + rhs
+}
+```
+
+Hãy đặt constraint đúng capability thực sự cần. Nếu chỉ cần iterate thì nhận `Sequence`, không ép caller thành `Array`. Đây là một trong những idiom quan trọng khi chuyển từ app code sang reusable library code.
+
+# 24. AsyncSequence, stream và event pipeline
+
+`AsyncSequence` là counterpart async của Sequence. Nó phù hợp với stream event theo thời gian như notification, byte stream, location update hoặc observation change.
+
+```swift
+for await event in events {
+    guard !Task.isCancelled else { break }
+    handle(event)
+}
+```
+
+`AsyncStream`/`AsyncThrowingStream` thường dùng để bridge delegate/callback API. Khi tạo stream, bạn phải nghĩ đến buffering policy, termination và cleanup; nếu producer tiếp tục chạy sau khi consumer cancel, bạn có thể leak resource hoặc làm việc vô ích.
+
+# 25. Cancellation, timeout và task group thực tế
+
+Cancellation trong Swift là cooperative. `Task.cancel()` chỉ đánh dấu trạng thái; code cần chạm cancellation-aware suspension point hoặc tự gọi `Task.checkCancellation()`.
+
+Timeout có thể model bằng task group/race giữa operation và clock tùy toolchain/API. Không dùng `DispatchQueue.asyncAfter` như default cho async logic mới nếu Clock/Task sleep đáp ứng được.
+
+Khi fan-out nhiều request, giới hạn concurrency nếu số item lớn. Tạo hàng chục nghìn child task cùng lúc có thể gây pressure dù structured concurrency đúng về mặt semantics.
+
+# 26. Networking: upload, download, cache, cookie và delegate
+
+Ngoài `data(for:)`, URLSession có upload/download task, streaming bytes và delegate cho authentication challenge, progress hoặc background transfer. `URLCache` tuân theo HTTP caching semantics; app không nên tự cache response vô điều kiện nếu server header nói khác, trừ khi có layer cache domain riêng với policy rõ.
+
+Cookie-based auth và token-based auth có lifecycle khác nhau. `HTTPCookieStorage` và session configuration quyết định cookie persistence. Với token, hãy tránh đọc Keychain cho từng byte/request nếu có thể giữ snapshot an toàn trong memory và update nhất quán.
+
+# 27. SwiftData 2026: query, index, history và observation
+
+SwiftData không chỉ là `@Model` + `@Query`. Các bản mới hỗ trợ index/unique constraint, persistent history và tiếp tục bổ sung khả năng query/observe. Trong 2026, SwiftData có thêm sectioned query, hỗ trợ attribute `Codable` theo schema option, `ResultsObserver` cho real-time result matching và `HistoryObserver` cho remote model changes.
+
+Điểm thiết kế quan trọng là persistence query không nên len vào toàn bộ view tree nếu feature cần domain rule/testability. Với màn hình đơn giản, `@Query` trực tiếp rất ergonomic; với logic đồng bộ phức tạp, repository/store boundary có thể hợp lý hơn.
+
+# 28. Animation trung cấp: transaction, phase và matched geometry
+
+Animation không nên chỉ là `.animation(.default, value:)` khắp nơi. `Transaction` cho phép điều chỉnh animation theo update context. `matchedGeometryEffect` hoặc API transition hiện đại giúp chuyển continuity giữa layout, nhưng identity và namespace phải ổn định.
+
+Animation production cần tôn trọng Reduce Motion. Motion không nên che latency network hay trì hoãn interaction vô lý.
+
+# 29. Environment, dependency scope và test override
+
+Environment rất mạnh cho dependency theo view hierarchy, nhưng dependency bắt buộc của domain object nên được truyền explicit ở initializer để compiler đảm bảo object không tồn tại ở trạng thái thiếu dependency.
+
+Một pattern hữu ích là root composition tạo concrete services, sau đó inject xuống feature. Test có thể thay API client bằng fake in-memory mà không cần global singleton.
+
+# 30. Swift Package Manager trung cấp và module boundaries
+
+Package target tạo module boundary thực sự. Khi modularize app, hãy tránh cycle dependency và tránh một `Core` khổng lồ chứa mọi thứ. Một module tốt có trách nhiệm/cohesion rõ, public API nhỏ và không buộc consumer import dependency nội bộ không cần thiết.
+
+Swift 6.4 sử dụng Swift Build làm default trong SwiftPM. Với package đa nền tảng, hãy khai báo `platforms`, conditional dependency/compilation rõ ràng và kiểm tra `#if canImport(...)` chỉ tại boundary cần thiết.
+
+# 31. Conditional compilation và availability
+
+Compile-time condition khác runtime availability:
+
+```swift
+#if DEBUG
+let endpoint = URL(string: "https://staging.example.com")!
+#endif
+
+if #available(iOS 27, *) {
+    // API runtime mới
+}
+```
+
+`#if os(iOS)`, `targetEnvironment(simulator)`, `canImport` quyết định source được compile. `#available` quyết định branch runtime theo OS version. Nhầm hai loại này là lỗi khá phổ biến khi làm framework multi-platform.
+
+# 32. Sanitizers và diagnostics
+
+Xcode cung cấp Address Sanitizer, Thread Sanitizer và các runtime diagnostic khác. Address Sanitizer đặc biệt hữu ích khi có C/C++/unsafe memory bridge. Thread Sanitizer tìm data race ở runtime nhưng không thay Swift 6 compile-time isolation checking; hai lớp này bổ sung nhau.
+
+Main Thread Checker giúp phát hiện một số UIKit/AppKit API bị gọi sai thread. Với Swift concurrency, actor isolation là mental model chính, nhưng diagnostic runtime vẫn có giá trị cho legacy API.
+
+# 33. Testability của time, UUID, random và side effect
+
+Code khó test thường không phải do “thiếu protocol” mà do đọc dependency không kiểm soát như `Date.now`, UUID random, global singleton, notification hoặc filesystem trực tiếp.
+
+Hãy inject clock/generator khi behavior phụ thuộc chúng. Ví dụ, thay vì domain function tự gọi `Date()`, nhận `now` hoặc dependency clock. Test sẽ deterministic và không cần sleep.
+
+# 34. Intermediate capstone architecture
+
+Một feature production-size vừa phải có thể tổ chức theo chiều dọc:
+
+```text
+FeatureCatalog/
+  CatalogView.swift
+  CatalogModel.swift
+  CatalogRoute.swift
+  CatalogService.swift
+  CatalogRepository.swift   // chỉ khi thực sự cần data-source abstraction
+  Models/
+  Tests/
+```
+
+Từ level này, mục tiêu không còn là “mỗi pattern một folder” mà là để người đọc nhìn một feature và biết state ở đâu, event đi đâu, side effect chạy ở đâu, dependency được cấp ở đâu, và test điểm nào.

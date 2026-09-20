@@ -4,10 +4,12 @@ Thư mục `11_native` chứa các bộ tài liệu native mobile theo hệ sinh
 
 ## Swift & iOS
 
-1. [Beginner](01_swift_ios_beginner.md): Swift core, Xcode, SwiftUI/UIKit nhập môn, Foundation, networking, persistence, testing, signing.
-2. [Intermediate](02_swift_ios_intermediate.md): type system sâu hơn, concurrency, data flow, networking layer, architecture, UIKit/SwiftUI interoperability, testing và Xcode workflow.
-3. [Advanced / Senior](03_swift_ios_advanced_senior.md): isolation, actor reentrancy, performance, architecture production, security, CI/CD, Objective-C/C/C++ interop và senior idioms.
-4. [Master Supplement](04_swift_ios_master_supplement.md): version/migration, library evolution, macros, systems features, SwiftUI identity, offline sync, observability và release engineering.
+Bộ Swift/iOS được đặt riêng trong [`swift_ios/`](swift_ios/README.md), sử dụng baseline hiện hành **Xcode 27 + Swift 6.4 + iOS 27 SDK** và vẫn giữ phần migration/legacy để đọc codebase Swift 5.x, UIKit, Combine, Core Data và Objective-C interop.
+
+1. [Beginner](swift_ios/01_swift_ios_beginner.md): Swift core từ số 0, Xcode, Foundation, SwiftUI/UIKit nhập môn, state/navigation, networking, persistence, SPM, file system, form/focus, animation/gesture, testing và signing.
+2. [Intermediate](swift_ios/02_swift_ios_intermediate.md): generics/existentials, structured concurrency, actor/Sendable/AsyncSequence, data flow, networking layer, SwiftData/Core Data, architecture, background execution, module boundaries, sanitizers và deterministic testing.
+3. [Advanced / Senior](swift_ios/03_swift_ios_advanced_senior.md): ownership, actor reentrancy, performance, modularization, Instruments, resilient networking, database concurrency, security, CI/CD, Objective-C/C/C++ interop, production design và incident mindset.
+4. [Master](swift_ios/04_swift_ios_master.md): Swift 5→6.x migration, Swift 6.4, ABI/library evolution, macros, memory-safe systems APIs, offline sync, observability, App Extensions, StoreKit, CloudKit, release engineering và production-readiness audit.
 
 ## Kotlin & Android
 

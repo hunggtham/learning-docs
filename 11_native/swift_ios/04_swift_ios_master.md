@@ -1,10 +1,10 @@
-# Swift & iOS Master Note — Master Supplement
+# Swift & iOS Master Note — Master
 
 > Đây là phần bổ sung để tiến từ senior implementation sang mastery: language evolution, migration strategy, framework design, package/API stability, performance engineering, production operations và những khác biệt version quan trọng.
 
 # 1. Version map cần ghi nhớ
 
-Tại thời điểm biên soạn, nhánh production ổn định phù hợp để học/thực hành là Xcode 26.6 cùng Swift 6.2. Xcode 27 đã có Release Candidate và đi cùng Swift 6.4/iOS 27 SDK, nhưng RC không nên được coi như baseline ổn định cho tài liệu nền.
+Tại thời điểm cập nhật 20/09/2026, baseline hiện hành là Xcode 27 với Swift 6.4 và iOS 27 SDK. Swift 6.4 phát hành chính thức ngày 15/09/2026. Xcode 27.1 và 27.2 đang ở beta, vì vậy tài liệu chỉ coi API của Xcode 27/iOS 27 stable là baseline; behavior chỉ có ở minor beta được ghi chú riêng.
 
 Mốc lịch sử hữu ích:
 
@@ -15,8 +15,9 @@ Mốc lịch sử hữu ích:
 | Swift 5.9 | macro, Observation ecosystem bắt đầu phổ biến |
 | Swift 6.0 | strict data-race safety language mode, typed throws, Synchronization |
 | Swift 6.1 | tiếp tục cải thiện concurrency diagnostics, `nonisolated` mở rộng |
-| Swift 6.2 | approachable concurrency, default isolation option, `@concurrent`, `InlineArray`, `Span`, Observation streams, testing improvements |
-| Swift 6.4 / Xcode 27 RC | toolchain thế hệ tiếp theo; cần theo release notes khi lên stable |
+| Swift 6.2 | approachable concurrency, default isolation option, `@concurrent`, `InlineArray`, `Span` và nhiều cải tiến testing/concurrency |
+| Swift 6.3 | giai đoạn tiếp tục hoàn thiện compiler, build/debug tooling và chuẩn bị các thay đổi ownership/interoperability của 6.4 |
+| Swift 6.4 / Xcode 27 | baseline 2026 hiện hành; Swift Build mặc định trong SwiftPM, ownership/memory-safe APIs và interop tiếp tục mở rộng |
 
 Không nên học Swift bằng cách đóng đinh “một syntax từ blog năm X”. Hãy luôn biết language mode của target và deployment target.
 
@@ -38,7 +39,7 @@ Các fix phổ biến gồm đưa UI model về `@MainActor`, biến mutable sha
 
 ---
 
-# 3. Swift 6.2 approachable concurrency và tác động thiết kế
+# 3. Swift 6.x approachable concurrency và tác động thiết kế
 
 Swift 6.2 thay đổi cách người mới tiếp cận concurrency: code có thể default vào main actor trong target phù hợp, giúp sequential code an toàn hơn, rồi opt-in concurrency tại nơi cần.
 
@@ -54,7 +55,7 @@ Senior migration note: cùng một source file có thể cho diagnostic khác kh
 
 Swift luôn tập trung memory safety nhưng vẫn có escape hatch như `UnsafePointer`.
 
-Swift 6.2 thêm `Span` để truy cập contiguous memory có lifetime safety tốt hơn và `InlineArray` cho fixed-size inline storage. Đây là công cụ phù hợp framework thấp tầng, game/media, parsing, interop hoặc performance-sensitive code hơn là CRUD app thông thường.
+Swift 6.x bổ sung và tiếp tục mở rộng `Span` để truy cập contiguous memory có lifetime safety tốt hơn và `InlineArray` cho fixed-size inline storage. Đây là công cụ phù hợp framework thấp tầng, game/media, parsing, interop hoặc performance-sensitive code hơn là CRUD app thông thường.
 
 Nguyên tắc mastery: chỉ dùng unsafe API khi boundary bắt buộc, encapsulate nó trong surface nhỏ, document invariant và viết test/fuzz nếu parsing binary/untrusted input.
 
@@ -97,7 +98,7 @@ final class SearchModel {
 
 `@ObservationIgnored` loại property khỏi tracking.
 
-Swift 6.2 bổ sung `Observations` như AsyncSequence để stream transactional changes. Đây là bridge quan trọng giữa observation model và async sequence.
+Swift 6.4 mở rộng Observation với API theo dõi thay đổi liên tục/fine-grained có thể tích hợp tự nhiên với async flow. Đây là bridge quan trọng giữa observation model và async sequence.
 
 Mastery point: observation là dependency tracking, không phải domain event bus. Nếu business cần audit event hoặc workflow explicit, dùng event/action abstraction riêng.
 
@@ -470,9 +471,9 @@ Mobile rollback khác web: user có thể giữ version cũ lâu. Backend phải
 
 ---
 
-# 34. Xcode 27 / iOS 27 preview notes
+# 34. Xcode 27 / iOS 27 current-version notes
 
-Xcode 27 RC đi cùng Swift 6.4 và SDK iOS 27. Vì đang ở RC, production app nên kiểm release notes cuối cùng trước adoption.
+Xcode 27 stable đi cùng Swift 6.4 và SDK iOS 27. Khi nâng project, vẫn cần đọc release notes vì behavior của SwiftUI, compiler diagnostics và SDK có thay đổi so với Xcode 26.
 
 SwiftUI thế hệ Xcode 27 giới thiệu thêm API về toolbar, document, reorderable containers và performance/data flow. Một số thay đổi như AsyncImage caching mặc định hoặc State macro/lazy initialization có thể ảnh hưởng assumption cũ, nên migration phải có regression test.
 
@@ -514,3 +515,93 @@ Engineering: SPM, modularization, architecture, testing, CI/CD, signing, release
 Tooling: Xcode, Simulator, LLDB, Instruments, Organizer, `xcodebuild`, Test Plans, package resolution, build settings.
 
 Nếu bạn có thể giải thích và triển khai các nhóm trên mà không chỉ copy sample code, bạn đã vượt qua mức “biết Swift” và đang ở mức iOS engineer có khả năng ownership production system.
+
+---
+
+# 37. Swift 6.4 — những điểm mới cần hiểu ở mức Master
+
+Swift 6.4 phát hành chính thức ngày 15/09/2026. Ngoài phần language/app iOS, release này cho thấy Swift đang mở rộng từ Apple-app language thành general-purpose systems/cross-platform language. Swift Build trở thành default của SwiftPM; Subprocess đạt 1.0; WebAssembly bridge cải thiện đáng kể; Android SDK tiếp tục trưởng thành; Embedded Swift có thêm capability; và ownership/memory-safe performance APIs được mở rộng.
+
+Đối với iOS engineer, không cần dùng toàn bộ ngay. Điều cần học là direction của language: compile-time safety mạnh hơn, ownership explicit hơn, interop rộng hơn và build/tooling cross-platform thống nhất hơn. Khi thiết kế library sống nhiều năm, direction này ảnh hưởng lựa chọn API hôm nay.
+
+# 38. `UniqueArray`, `UniqueBox`, `Ref`, `MutableRef` và `Iterable`
+
+Các kiểu mới giải quyết nhóm bài toán “muốn performance/ownership control nhưng không muốn rơi xuống unsafe pointer”. `UniqueBox` biểu diễn unique ownership của value trên heap; `UniqueArray` hỗ trợ phần tử noncopyable mà không dựa vào copy-on-write như Array truyền thống; `Ref`/`MutableRef` tạo reference an toàn có borrowing/exclusive mutation semantics; `Iterable` cho phép iteration không buộc copy element như Sequence model truyền thống trong một số trường hợp.
+
+Đây là công cụ library/systems-oriented. Đừng thay `Array` bằng `UniqueArray` trong app business chỉ vì mới hơn. Chỉ dùng khi ownership hoặc copying profile thực sự yêu cầu.
+
+# 39. Build technology: Xcode build, Swift Build và SwiftPM
+
+Xcode và SwiftPM historically có build pipeline khác nhau ở một số môi trường. Swift Build được open-source từ engine phía sau Xcode và đến Swift 6.4 trở thành default trong SwiftPM. Điều này giảm khác biệt giữa local/CI/cross-platform package build.
+
+Master-level build debugging cần biết đọc build log, module dependency, derived data, explicit modules, linker failure, package resolution và compiler invocation. Xóa DerivedData chỉ là troubleshooting tactic cuối đường, không phải giải pháp cho mọi lỗi build.
+
+# 40. Debug information và LLDB module tracking
+
+Swift 6.4 hoàn tất một chuỗi cải tiến cách compiler ghi module dependency vào debug info, giúp LLDB tìm đúng module chính xác hơn thay vì lookup mơ hồ theo tên. Với Xcode user, lợi ích chủ yếu tự động: debug expression đáng tin hơn và build product có thể gọn hơn. Với custom build system như Bazel/CMake, maintainer cần theo metadata/module tracking requirement mới.
+
+Điểm rộng hơn: debugger correctness phụ thuộc build graph/module metadata. Một lỗi `po`/expression evaluator không nhất thiết nghĩa object runtime sai.
+
+# 41. Documentation engineering với DocC
+
+Một codebase lâu dài cần documentation gần code. DocC hỗ trợ API reference, article và tutorial. Public framework nên document semantics, invariants, actor/thread requirement, error, availability và example call site; không chỉ lặp lại tên method.
+
+Documentation là một phần API design. Nếu rất khó viết một đoạn ngắn giải thích “type này sở hữu gì, khi nào gọi method này, failure là gì”, thường abstraction chưa đủ rõ.
+
+# 42. Binary size và dependency economics
+
+Mỗi dependency có cost: binary size, launch/load, compile time, supply-chain risk, privacy manifest, transitive dependency và upgrade maintenance. Không đánh giá package chỉ bằng số star.
+
+Trước khi thêm SDK, hỏi capability có thể làm bằng Foundation/system framework không, SDK có privacy/security posture ra sao, release cadence có ổn không, API surface có leak vào domain không và exit strategy là gì.
+
+# 43. Energy efficiency và thermal behavior
+
+Mobile performance không chỉ là latency. CPU/GPU/network/location/background wakeup tiêu pin và tạo nhiệt. Polling thường xuyên, animation liên tục, GPS high accuracy không cần thiết hoặc retry loop có thể làm app bị hệ thống throttle và UX xấu.
+
+Instruments Energy và MetricKit/system metrics nên được dùng khi feature có cost đáng kể. Optimize theo workload thật trên device, không chỉ Simulator.
+
+# 44. MetricKit, crash/hang và field performance
+
+Lab profiling không bắt được mọi device/OS/network. Field telemetry giúp phát hiện crash, hang, launch regression và responsiveness issue sau release. Symbolication phải được vận hành đúng với dSYM/build artifact.
+
+Telemetry design cần privacy minimization. Event đủ để debug không đồng nghĩa thu toàn bộ user data.
+
+# 45. Schema/API migration như một bài toán distributed system
+
+Một mobile release tạo ra distributed version set: backend mới, app mới, app cũ, database local cũ, cache cũ và user có thể offline nhiều ngày. Vì vậy migration phải được thiết kế như distributed systems problem.
+
+Database migration cần forward path rõ; server API phải giữ compatibility; feature flag rollout phải tính old client; sync conflict phải deterministic. Đây là điểm khác biệt giữa app demo và app sống nhiều năm.
+
+# 46. Multi-platform Apple architecture
+
+SwiftUI giúp chia sẻ UI logic giữa iOS, iPadOS, macOS, watchOS, tvOS và visionOS, nhưng “compile được” không đồng nghĩa UX đúng. Navigation, input modality, windowing, menu/command, focus, pointer, remote, Digital Crown và spatial interaction khác nhau.
+
+Shared domain/data layer thường dễ tái sử dụng hơn shared view 100%. Platform-specific adapter/view là bình thường và thường tốt hơn hàng loạt `#if os` xuyên code.
+
+# 47. Cross-platform Swift ngoài Apple
+
+Swift 6.4 tiếp tục đẩy mạnh Linux, Windows, WebAssembly, Android và Embedded. Với iOS engineer, đây là kiến thức mở rộng chứ không phải yêu cầu để làm app iPhone. Tuy nhiên nó thay đổi cách nhìn về package: Foundation subset, filesystem/process/network availability và platform condition cần được cân nhắc nếu library muốn portable.
+
+Không để portability giả định làm phức tạp app chỉ chạy iOS. Chỉ xây portability khi product/library thực sự cần.
+
+# 48. AI-assisted Xcode workflow và giới hạn kỹ thuật
+
+Xcode 27 mở rộng coding-agent integration. Agent có thể hỗ trợ tra API, refactor, viết test hoặc migrate code, nhưng output vẫn phải qua compiler, test, review và threat model. UI lifecycle, entitlement, signing, privacy và concurrency bug là những vùng mà “code nhìn hợp lý” vẫn có thể sai production.
+
+Một workflow an toàn là giao task nhỏ có acceptance criteria, yêu cầu agent giải thích file changed, chạy test/static check, review diff, rồi mới merge. Không cấp secret/signing credential vào prompt hoặc generated log.
+
+# 49. Master checklist trước khi gọi một iOS system là production-ready
+
+Bạn phải trả lời được: source of truth của mỗi state ở đâu; ownership/lifetime của task và object; behavior khi network mất/cancel/retry; database migrate thế nào; app cũ nói chuyện backend mới ra sao; token/PII được bảo vệ thế nào; accessibility/localization hoạt động ra sao; performance budget có đo không; crash/log có symbolicate không; release có staged rollout/flag không; critical flow có test không; API mới có availability fallback không.
+
+Không cần mọi app có kiến trúc enterprise. Nhưng mọi app production cần câu trả lời có chủ đích cho những failure mode phù hợp quy mô của nó.
+
+# 50. Lộ trình đọc lại bộ note như một hệ thống
+
+Lần đầu, đọc Beginner theo thứ tự và code lại ví dụ. Lần hai, học Intermediate đồng thời xây một app có network + persistence + authentication mock + deep link. Lần ba, dùng Advanced để refactor app đó: actor isolation, modular package, cache, test strategy, profiling, CI. Lần bốn, dùng Master để audit migration/version/release/security/observability và viết ADR giải thích các quyết định lớn.
+
+Mục tiêu cuối cùng không phải thuộc tên API. Mục tiêu là có mental model đủ chắc để khi Apple thay API hoặc Swift thêm language feature, bạn có thể đặt cái mới vào đúng lớp kiến thức cũ: type, ownership, state, effect, lifecycle, boundary, performance và compatibility.
+
+# 51. Nguồn chính thức nên theo dõi
+
+Nguồn ưu tiên là Swift.org/Swift Documentation cho language và evolution; Apple Developer Documentation cho iOS SDK, SwiftUI, UIKit, SwiftData, StoreKit và framework; Xcode Release Notes/System Requirements cho toolchain; WWDC session cho design intent và migration example. Blog/tutorial bên ngoài hữu ích để học cách triển khai, nhưng khi behavior/version mâu thuẫn, API contract và release note chính thức phải được ưu tiên.
