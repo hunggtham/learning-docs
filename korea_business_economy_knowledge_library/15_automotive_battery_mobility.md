@@ -1,119 +1,498 @@
 # Ô tô, pin và mobility Hàn Quốc (Automotive & Battery / 자동차·배터리·모빌리티)
 
-Automotive là ví dụ điển hình của một ngành có final brand mạnh nhưng value được tạo bởi hàng nghìn suppliers. EV transition làm ranh giới giữa auto, battery, software và electronics ngày càng chồng lấn.
+Automotive là một trong những ngành tốt nhất để hiểu cách Korean economy biến **supplier network + manufacturing discipline + brand + finance + global production** thành competitive advantage. EV transition làm ngành này phức tạp hơn vì ranh giới giữa auto, battery, electronics, semiconductor và software ngày càng mờ.
 
-## OEM và supplier architecture
+Một chiếc xe không phải sản phẩm của một factory đơn lẻ. Nó là output của một production network gồm hàng nghìn components, logistics, financing, dealers/service và increasingly software/cloud. Vì vậy company analysis phải nhìn **platform economics và ecosystem**, không chỉ unit sales.
 
-**OEM (Original Equipment Manufacturer / 완성차 업체)** như Hyundai Motor/Kia tích hợp vehicle, brand, distribution và warranty. Tier suppliers cung cấp module, component, material và process.
+## Lịch sử upgrading: từ licensed assembly tới global OEM
 
-Một vehicle platform quyết định volume trong nhiều năm. Supplier được nominate cho platform có revenue visibility nhưng cũng chịu price-down pressure và quality obligations.
+Hyundai Motor được thành lập năm 1967 và ban đầu lắp ráp Ford Cortina. Pony giữa thập niên 1970 đánh dấu bước chuyển sang model riêng và export.
 
-## Unit economics của ô tô
+Capability tăng theo nhiều nấc:
 
-Revenue = vehicles sold × average selling price, nhưng profit phụ thuộc mix. SUV/premium/option-rich models thường có margin khác compact models. Incentive và warranty cost ảnh hưởng mạnh.
+```text
+Licensed assembly
+   ↓
+Local components
+   ↓
+Own model/platform
+   ↓
+Engine / powertrain capability
+   ↓
+Quality + design + global brand
+   ↓
+Overseas production
+   ↓
+EV / battery / software-defined vehicle
+```
 
-Factory utilization cũng quan trọng vì plant có fixed cost lớn. Khi sales giảm nhẹ nhưng production cut mạnh, margin có thể giảm disproportionate.
+Đây không phải một leap. Nó là learning-by-doing kéo dài decades.
 
-## EV transition
+1997 crisis là turning point khác: Hyundai Motor mua Kia năm 1998. Về sau group xây ecosystem gồm Hyundai Mobis, Hyundai Steel, Hyundai Glovis, finance affiliates và broad supplier network.
 
-EV giảm một số mechanical components nhưng tăng battery, power electronics, thermal management và software content. Điều này chuyển profit pool giữa suppliers.
+Vertical integration giúp coordination nhưng không nghĩa OEM tự làm mọi thứ. Thousands of suppliers vẫn critical.
 
-Không nên xem transition chỉ như “ICE biến mất”. Trong nhiều năm, company phải vận hành portfolio ICE, hybrid và EV đồng thời, làm capex và complexity tăng.
+## OEM là system integrator
 
-## Battery value chain
+**OEM / 완성차 업체** như Hyundai Motor/Kia chịu trách nhiệm integrate:
 
-Lithium-ion battery chain gồm raw materials → cathode/anode/electrolyte/separator → cell → module/pack → vehicle/ESS. Korean firms có vị trí mạnh ở cell và materials.
+- vehicle architecture;
+- brand;
+- safety/homologation;
+- manufacturing;
+- distribution;
+- warranty;
+- software increasingly.
 
-Battery economics phụ thuộc chemistry, yield, utilization, raw-material contracts, customer contracts và subsidy/localization rules. Revenue tăng mạnh trong ramp-up nhưng factory chưa đạt yield/utilization tốt có thể vẫn lỗ.
+Supplier có thể cung cấp module/component/material nhưng OEM owns final customer promise.
 
-## Capacity contract và customer concentration
+Nếu brake module fail, consumer không quan tâm supplier nào; OEM brand chịu damage.
 
-Battery plant thường gắn với OEM demand dài hạn hoặc joint venture. Điều này giảm demand uncertainty nhưng tăng concentration. Nếu customer delay EV launch, supplier plant utilization bị ảnh hưởng.
+Do đó system integration và supplier-quality governance là core capability.
 
-## Software-defined vehicle
+## Platform economics: một quyết định ảnh hưởng nhiều năm
 
-Vehicle ngày càng có software stack lớn: infotainment, ADAS, OTA update, connectivity. Vì vậy auto company cần competency giống tech company hơn, nhưng vẫn phải đáp ứng safety, homologation và hardware lifecycle dài.
+Vehicle platform thường underpin multiple models/years.
 
-## Lịch sử upgrading của ngành ô tô Hàn Quốc
+Platform standardization giúp:
 
-Hyundai Motor bắt đầu bằng lắp ráp Cortina với Ford sau khi thành lập năm 1967. Pony giữa thập niên 1970 đánh dấu bước chuyển sang model riêng và export. Sau đó industry tiếp tục đi qua các nấc: local components, engine development, quality improvement, overseas plants, premium brands và electrification. Vì vậy capability của Hyundai–Kia ngày nay là accumulation của nhiều thập niên supplier development và manufacturing discipline.
+- spread engineering cost;
+- share components;
+- improve procurement scale;
+- speed new-model launch.
 
-Asian Financial Crisis cũng là turning point khi Hyundai Motor mua Kia năm 1998. Từ đó group xây ecosystem gồm Hyundai Mobis, Hyundai Steel, Hyundai Glovis và financial affiliates. Đây là vertical integration nhưng không có nghĩa mọi component đều tự làm; OEM vẫn dựa vào hàng nghìn suppliers.
+Nhưng common platform tạo common-mode risk: design defect có thể affect multiple models và recall cost lớn.
 
-## Dealer, finance và residual value
+Supplier được nominated vào platform có revenue visibility nhưng cũng chịu quality, price-down và capacity commitments dài hạn.
 
-Profit của automaker không chỉ đến từ factory. Captive finance, leasing, used-car residual value và after-sales service ảnh hưởng demand và margin. Khi interest rate tăng, monthly payment tăng dù sticker price không đổi, khiến unit demand có thể giảm.
+## Revenue decomposition: units không đủ
 
-Residual value đặc biệt quan trọng với leasing. Nếu xe mất giá nhanh hơn assumption, finance arm chịu loss khi thu hồi xe. Vì vậy brand quality và used-car market có connection trực tiếp với financial economics.
-
-## Battery: chemistry quyết định cost và risk
-
-Battery cell economics phụ thuộc cathode chemistry, lithium/nickel/cobalt prices, yield, energy density và safety. NCM/NCA ưu tiên energy density; LFP thường có cost và thermal-stability advantages khác. Không nên hỏi “chemistry nào tốt nhất” mà phải hỏi objective function: range, cost, cycle life, cold-weather performance hay safety.
-
-Battery maker còn đối mặt **utilization risk**. Gigafactory có fixed cost lớn; nếu EV demand thấp hơn kế hoạch, depreciation vẫn tồn tại nhưng output thấp, làm margin xấu. Capacity announcement vì vậy không nên được coi như future revenue đã chắc chắn.
-
-## EV thay đổi cấu trúc supplier
-
-ICE vehicle cần engine, transmission và exhaust system; EV tăng importance của cell, power electronics, inverter, thermal management và software. Supplier thắng ở era cũ không được bảo đảm thắng ở era mới.
-
-Software-defined vehicle làm value shift tiếp sang operating system, OTA update, ADAS và compute platform. Điều này kéo automaker gần hơn với semiconductor và software company, đồng thời tạo cybersecurity và data-governance risk mới.
-
-## Cách đọc một automaker Korea
-
-Ngoài revenue và operating margin, nên nhìn global unit sales, regional mix, ASP, incentive, inventory days, warranty provisions, FX exposure, capex và contribution của finance arm. Với battery company, thêm contracted capacity, utilization, customer concentration, raw-material formula và free cash flow.
-
-## Mental Model
-
-> Automotive là **platform + supply chain + manufacturing scale + brand**. Battery thêm một layer **chemistry + capex + localization**. EV transition là tái phân bổ value trong network chứ không chỉ thay động cơ.
-
-## Common misconceptions
-
-EV sales tăng không đồng nghĩa mọi battery company profit tăng. Overcapacity, raw-material price và utilization có thể làm margin xấu.
-
-Auto exporter hưởng lợi từ KRW yếu chỉ khi revenue currency exposure lớn hơn imported-cost exposure sau hedging.
-
-## Connections
-
-Xem [06_sme_mid_sized_and_subcontracting_ecosystem](./06_sme_mid_sized_and_subcontracting_ecosystem.md), [02_trade_export_and_global_value_chains](./02_trade_export_and_global_value_chains.md) và [11_banks_finance_and_corporate_funding](./11_banks_finance_and_corporate_funding.md).
-
-## Auto revenue không đồng nghĩa unit sales
-
-Automaker revenue có thể tăng dù units flat nếu mix chuyển sang SUV/luxury hoặc price tăng. Vì vậy cần tách:
+Automaker revenue có thể nghĩ:
 
 \[
-Revenue \approx Units \times Average\ Selling\ Price + Other\ Revenue
+Automotive\ Revenue \approx Units \times ASP + Services/Parts/Other
 \]
 
-ASP lại chịu vehicle mix, geography, incentives và FX.
+ASP bị ảnh hưởng bởi:
+
+- SUV/premium mix;
+- options;
+- geography;
+- incentives;
+- FX;
+- fleet vs retail mix.
+
+Units flat nhưng mix premium tăng vẫn làm revenue/margin tăng.
+
+Ngược lại, revenue tăng nhờ KRW translation không nhất thiết nghĩa pricing power tốt hơn.
+
+## Incentives: hidden price cut
+
+Sticker price có thể không giảm nhưng manufacturer/dealer offer cash discount, low-rate finance hoặc promotions.
+
+**Incentive / 판매 인센티브** làm effective realized price thấp hơn.
+
+Khi inventory cao, incentives thường tăng để clear stock. Vì vậy dealer inventory/days supply là leading signal của pricing pressure.
 
 ## Operating leverage và plant utilization
 
-Assembly plant có fixed depreciation/labor overhead lớn. Khi utilization giảm, incentive thường tăng để clear inventory, tạo double pressure: lower price + higher unit fixed cost.
+Assembly plant có fixed cost: depreciation, salaried labor, maintenance và tooling.
 
-Dealer inventory và days supply vì thế là leading signal cho margin.
+Khi utilization giảm:
 
-## Captive finance: bán xe và finance không thể đọc tách hoàn toàn
+```text
+Fixed cost per vehicle ↑
++
+Incentives may ↑
+=
+Margin pressure can exceed unit decline
+```
 
-Auto groups thường có finance affiliates hỗ trợ loans/leases. Low financing rate có thể stimulate vehicle demand nhưng subsidy cost xuất hiện ở manufacturer/finance entity.
+Đây là reason small demand slowdown có thể produce disproportionate profit decline.
 
-Credit loss và residual-value risk trong leasing cần được theo dõi riêng.
+## Warranty provision: quality biến thành accounting cost
+
+Automaker phải estimate future repair/recall obligations và book **warranty provisions / 품질보증충당부채**.
+
+Quality improvement có financial value vì lower warranty cost và higher brand/residual value.
+
+Large recall can hit P&L/cash even if unit sales strong.
+
+Therefore engineering quality is directly financial.
+
+## Brand và residual value
+
+Premium brand allows higher ASP, lower incentives và potentially stronger used-car residual values.
+
+Residual value matters especially for leasing/captive finance. If used cars are worth less than assumptions when leases end, finance entity can incur losses.
+
+Thus brand quality affects both manufacturing margin and finance economics.
+
+## Captive finance: demand engine và credit-risk engine
+
+Automotive groups often operate finance affiliates offering loans/leases/dealer finance.
+
+Captive finance supports sales by lowering monthly payment or easing purchase process.
+
+But it introduces:
+
+- credit loss;
+- funding cost;
+- residual-value risk;
+- interest-rate risk.
+
+Vehicle demand and finance cannot be analyzed fully separately.
+
+A manufacturer may subsidize low-rate loan economics to protect unit sales. The economic cost appears somewhere in group, even if not obvious in sticker price.
+
+## Global production: export company trở thành multinational manufacturer
+
+Korean automakers produce in multiple regions to reduce tariff/logistics, match local demand and access policy incentives.
+
+This changes FX exposure.
+
+A US-produced Hyundai sold in USD has USD revenue but also local USD costs. KRW depreciation benefits group differently than if car were exported from Korea.
+
+Therefore “KRW weak = auto exporter benefit” becomes less simple as overseas production share grows.
+
+## Supplier network: scale-up opportunity và dependency risk
+
+Tier suppliers gain stable platform volume and learn global quality systems.
+
+But price-down expectations, tooling investment and customer concentration can create bargaining asymmetry.
+
+Strong supplier strategy is to use anchor OEM volume to build independent capability, then diversify customers/geographies.
+
+Xem [`06_sme_mid_sized_and_subcontracting_ecosystem.md`](./06_sme_mid_sized_and_subcontracting_ecosystem.md).
+
+## EV transition: profit pool được phân bổ lại
+
+ICE vehicle value chain includes engine, transmission, exhaust/fuel systems.
+
+EV reduces some mechanical complexity but adds:
+
+- battery cells/pack;
+- inverter/power electronics;
+- thermal management;
+- high-voltage systems;
+- computing/software.
+
+Therefore transition creates winners and losers among suppliers.
+
+Legacy supplier capability is not automatically portable to EV.
+
+## Transition cost: ICE, hybrid và EV phải coexist
+
+EV transition is not binary overnight.
+
+Automaker may need simultaneous investment in:
+
+```text
+ICE compliance/refresh
+Hybrid systems
+EV platforms
+Battery partnerships
+Software/ADAS
+```
+
+This increases capex and organizational complexity.
+
+If EV adoption is slower than expected, pure-EV capacity can underutilize; if faster, legacy investment becomes stranded faster.
+
+Hybrid becomes strategic bridge in many markets because it uses existing fuel infrastructure while reducing consumption/emissions.
+
+## EV adoption follows an S-curve, not straight-line growth
+
+Long-run penetration can rise while annual growth fluctuates due to:
+
+- subsidy changes;
+- interest rates;
+- charging infrastructure;
+- model availability;
+- battery cost;
+- consumer confidence;
+- used-EV residual values.
+
+Therefore one weak year does not prove EV transition ended, and one boom year should not be extrapolated forever.
+
+## Battery value chain
+
+Simplified lithium-ion chain:
+
+```text
+Lithium / Nickel / Cobalt / Graphite
+        ↓
+Cathode / Anode / Electrolyte / Separator
+        ↓
+Cell
+        ↓
+Module / Pack / BMS
+        ↓
+EV / ESS
+```
+
+Value and risk exist at every node.
+
+Cell maker economics differ from cathode-material company. Raw-material producer is more commodity-exposed; cell maker adds process/yield/customer qualification; pack/system integrates thermal/safety/control.
+
+## Chemistry: “best battery” không tồn tại without objective
+
+Common chemistries have trade-offs.
+
+High-nickel NCM/NCA can offer high energy density but materials/safety/cost characteristics differ.
+
+LFP often has lower raw-material cost and good cycle/safety characteristics, but energy density/performance trade-offs depend application.
+
+Question should be:
+
+```text
+Optimize for what?
+Range?
+Cost?
+Safety?
+Fast charging?
+Cycle life?
+Cold weather?
+```
+
+Technology choice is objective-dependent.
 
 ## Battery cell economics
 
-Cell cost gồm cathode/anode/electrolyte/separator, manufacturing yield, depreciation và energy. Raw-material price giảm có thể kéo revenue/ASP xuống nhưng không nhất thiết margin giảm nếu pass-through mechanism và cost cùng giảm.
+A simplified cost stack:
 
-Capacity utilization là critical khi industry overbuild. Gigafactory chạy 50% capacity có economics khác rất xa 90%.
+```text
+Materials
++ Manufacturing energy/labor
++ Yield losses
++ Depreciation
++ Logistics
+= Cell cost
+```
 
-## EV demand: adoption S-curve không chạy thẳng
+Materials can dominate cost, but yield and utilization decide whether factory converts materials efficiently into sellable cells.
 
-Long-term EV penetration có thể tăng nhưng yearly growth vẫn volatile vì subsidy, charging, interest rate và model cycle. Không nên extrapolate one-year slowdown thành “EV transition kết thúc”, cũng không extrapolate boom thành perpetual 50% growth.
+Raw-material price decline can reduce reported revenue/ASP under pass-through contracts without necessarily reducing margin.
 
-## Software-defined vehicle và recurring revenue
+Therefore revenue growth alone is poor battery health metric.
 
-OTA updates, ADAS subscriptions và connected services mở khả năng recurring revenue, nhưng customer willingness to pay chưa guaranteed. Software revenue có gross margin cao nhưng requires continuous R&D/cybersecurity.
+## Yield và gigafactory ramp
 
-## Metrics thực hành
+New battery plant rarely reaches optimal yield/utilization immediately.
 
-Automaker: wholesale/retail units, ASP/mix, incentives, plant utilization, inventory, warranty provisions, finance delinquency, FX.
+Ramp includes:
 
-Battery: capacity, utilization, GWh shipments, ASP/kWh, chemistry mix, customer concentration, capex, free cash flow, raw-material pass-through.
+- equipment tuning;
+- process stability;
+- worker learning;
+- quality qualification;
+- scrap reduction.
+
+During ramp, factory may lose money even with large customer order book.
+
+This is similar to semiconductor but chemistry/safety/automotive qualification create different constraints.
+
+## Utilization risk: capacity announcement không phải revenue
+
+Gigafactory has large fixed depreciation.
+
+If planned demand fails:
+
+\[
+Unit\ Fixed\ Cost \uparrow \quad when \quad Utilization \downarrow
+\]
+
+Therefore announced GWh capacity is only potential supply.
+
+Need ask:
+
+- how much is installed vs under construction?
+- contracted vs uncontracted?
+- actual utilization?
+- customer launch schedule?
+- yield?
+
+## Customer concentration và JV structure
+
+Battery plants often built with/near major OEMs or in joint ventures.
+
+Long-term relationship improves demand visibility but increases concentration.
+
+If anchor OEM delays platform launch, battery plant utilization suffers.
+
+JV also affects consolidation and capital obligations. Group headline capacity may not equal proportionate economic ownership.
+
+## Raw-material pass-through contracts
+
+Battery/customer contracts often link cell price partly to lithium/nickel/material indices.
+
+This can reduce commodity margin risk, but formula has lags and basis risk.
+
+If material prices fall, battery revenue may fall mechanically while unit economics stay healthy.
+
+Analyst should distinguish:
+
+```text
+Volume growth
+Material-price pass-through
+Value-added margin
+```
+
+## Localization và industrial policy
+
+Battery economics increasingly depend on local-content and critical-mineral rules.
+
+A plant in US/Europe may have higher operating cost than an Asian plant but gain subsidy/tax advantages and customer proximity.
+
+Therefore plant-location NPV includes policy:
+
+\[
+Project\ NPV = Operating\ Economics + Policy\ Incentives - Localization\ Costs - Risk
+\]
+
+Geopolitics and industrial policy are now part of battery corporate finance.
+
+## Software-Defined Vehicle (SDV)
+
+Vehicle increasingly becomes software platform with:
+
+- infotainment;
+- ADAS;
+- OTA updates;
+- connectivity;
+- centralized compute;
+- data services.
+
+This changes organization. Automaker historically optimized mechanical platform cycles of several years; software needs continuous release and cybersecurity response.
+
+Software and hardware development rhythms conflict, making transformation difficult.
+
+## OTA and recurring revenue: option, not guaranteed money
+
+Connected services/ADAS subscriptions create possibility of recurring revenue.
+
+But willingness to pay is not guaranteed. Customers may resist subscription for features they expect included.
+
+Therefore “software revenue” should be modeled through attach rate, ARPU, churn and development/support cost—not assumed from installed vehicles.
+
+## Cybersecurity and safety
+
+Connected vehicles expand attack surface. Cyber breach can become safety issue, recall issue and privacy issue.
+
+Software quality therefore has regulatory and liability consequences beyond ordinary consumer app.
+
+This is one reason automakers cannot simply copy Silicon Valley “move fast and break things” philosophy.
+
+## Autonomous driving: technical capability vs regulatory/commercial deployment
+
+ADAS/autonomy progress requires sensors, compute, software, mapping/data and safety validation.
+
+A demo can perform well but commercial deployment depends regulation, liability and edge-case performance.
+
+Therefore R&D milestones should not be equated automatically with revenue timeline.
+
+## Mobility services: automaker beyond vehicle sales?
+
+Ride-hailing, robotaxi, fleet and subscription models could shift value from ownership to mobility-as-service.
+
+But economics depend utilization, driver/automation cost, insurance and regulation.
+
+Automakers entering mobility must prove they can operate service economics, not just manufacture vehicles.
+
+## How to analyze Korean automaker
+
+Monitor:
+
+```text
+Wholesale / retail units
+Regional mix
+ASP / product mix
+Incentives
+Inventory / days supply
+Plant utilization
+Warranty provisions
+FX
+Capex
+Finance-arm NIM / credit losses / residual value
+EV / hybrid mix
+```
+
+Need separate Hyundai Motor, Kia and affiliates rather than treat group as one P&L.
+
+## How to analyze battery company
+
+Monitor:
+
+```text
+GWh shipments
+Installed vs utilized capacity
+ASP/kWh and material pass-through
+Chemistry mix
+Yield/ramp
+Customer concentration
+Contract/JV structure
+Raw-material exposure
+Capex/depreciation
+FCF and debt
+```
+
+Capacity growth without utilization/FCF quality can destroy value.
+
+## Stress-test examples
+
+Automaker:
+
+- global units -10%;
+- incentive +5%;
+- KRW strengthens 10%;
+- warranty recall;
+- finance credit loss rises.
+
+Battery:
+
+- EV customer delays launch;
+- utilization -20pt;
+- yield ramp delayed;
+- subsidy rule changes;
+- lithium price falls sharply;
+- capex financing cost rises.
+
+Trace impact into cash, not just revenue.
+
+## Mental Model
+
+> Automotive là **platform + supplier network + manufacturing scale + brand + finance**. EV adds **battery chemistry + localization + software**. Transition is a reallocation of value across the network, not merely replacement of engine by motor.
+
+A compact map:
+
+```text
+Customer demand
+   ↓
+Vehicle platform / Brand
+   ↓
+Supplier + Battery + Software ecosystem
+   ↓
+Manufacturing utilization
+   ↓
+Margin / Cash flow
+   ↓
+Next platform investment
+```
+
+## Common misconceptions
+
+**“EV sales grow → every battery company profits.”** Sai. Utilization/yield/capex/customer contracts matter.
+
+**“Capacity announcement = future revenue.”** Sai. Demand and ramp determine utilization.
+
+**“KRW weak always benefits Korean automakers.”** Not necessarily with overseas production/imported inputs/hedges.
+
+**“Software revenue will automatically make auto margins like software companies.”** Sai. Hardware, safety and continuous R&D remain expensive.
+
+**“ICE disappears immediately.”** Transition can involve ICE/hybrid/EV coexistence for years.
+
+**“Vertical integration means OEM does everything.”** Sai. Supplier network remains essential.
+
+## Connections
+
+Đọc cùng [`02_trade_export_and_global_value_chains.md`](./02_trade_export_and_global_value_chains.md), [`06_sme_mid_sized_and_subcontracting_ecosystem.md`](./06_sme_mid_sized_and_subcontracting_ecosystem.md), [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md), [`21_economy_to_company_transmission.md`](./21_economy_to_company_transmission.md), [`29_innovation_rnd_education_and_human_capital.md`](./29_innovation_rnd_education_and_human_capital.md) và [`34_digital_fintech_cloud_and_it_services.md`](./34_digital_fintech_cloud_and_it_services.md).
