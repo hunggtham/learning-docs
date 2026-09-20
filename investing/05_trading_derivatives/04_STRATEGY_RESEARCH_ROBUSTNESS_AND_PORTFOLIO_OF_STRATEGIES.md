@@ -1,189 +1,463 @@
 # 04 — Strategy Research, Robustness và Portfolio of Strategies
 
-Tài liệu này bổ sung phần còn thiếu giữa “biết backtest” và “có một trading process đáng tin”. Mục tiêu là hiểu cách biến một ý tưởng thành hypothesis, test nó đúng cách, tránh overfitting, đánh giá uncertainty và cuối cùng kết hợp nhiều strategies mà không vô tình nhân đôi cùng một risk.
+Tài liệu này nối khoảng cách giữa “biết backtest” và “có một trading research process đáng tin”. Mục tiêu là biến idea thành hypothesis, test nó với statistical discipline, đánh giá uncertainty, model execution/capacity và cuối cùng ghép nhiều strategies thành một portfolio mà không vô tình nhân đôi cùng một risk.
+
+Một strategy đáng tin không phải strategy có equity curve đẹp nhất. Nó là strategy mà bạn hiểu **vì sao edge có thể tồn tại, edge dễ hỏng ở đâu, result nhạy với assumption nào và account có thể sống qua những path xấu nào**.
 
 ## 1. Trading idea khác strategy
 
-Một trading idea có thể là “breakout sau consolidation thường tiếp tục chạy”. Strategy cần cụ thể hóa idea thành rules có thể test: market nào, timeframe nào, consolidation được định nghĩa ra sao, breakout tính theo close hay intrabar, stop ở đâu, exit khi nào, position size thế nào và có tránh news không.
+Một idea có thể là “breakout sau consolidation thường tiếp tục”. Strategy cần biến idea thành rules có thể reproduce: universe, timeframe, consolidation definition, entry timing, stop, exit, position sizing, trading hours, event filters và maximum exposure.
 
-Nếu hai người đọc rule nhưng implement khác nhau, strategy chưa đủ rõ.
+Nếu hai người implement cùng document nhưng tạo signals rất khác nhau, specification chưa đủ rõ.
 
-## 2. Hypothesis trước data mining
+## 2. Hypothesis phải đứng trước optimization
 
-Một hypothesis tốt bắt đầu từ economic hoặc behavioral logic. Momentum có thể tồn tại vì underreaction và slow information diffusion. Mean reversion có thể tồn tại vì liquidity shocks và temporary dislocations. Carry có thể tồn tại vì compensation cho crash risk.
+Một **hypothesis** tốt bắt đầu từ economic, behavioral hoặc market-structure logic. Momentum có thể đến từ underreaction và slow information diffusion. Mean reversion có thể đến từ temporary liquidity shocks. Carry có thể là compensation cho crash risk. Market making kiếm spread nhưng chịu adverse selection.
 
-Nếu chỉ scan hàng nghìn combinations rồi chọn cái đẹp nhất, bạn dễ tìm noise hơn edge.
+Nếu chỉ scan hàng nghìn parameter combinations rồi chọn top result, xác suất bạn đang khai thác noise rất cao.
 
-## 3. In-sample và Out-of-sample
+## 3. Edge cần có economic story nhưng story không đủ
 
-In-sample dùng để develop idea. Out-of-sample dùng để kiểm tra liệu pattern có tồn tại trên dữ liệu chưa dùng để fit hay không.
+Một plausible story không chứng minh edge tồn tại. Research phải có hai chân: causal intuition và empirical evidence.
 
-Nếu strategy chỉ đẹp trong in-sample nhưng collapse out-of-sample, nhiều khả năng rules đã fit noise.
+Nếu story rất đẹp nhưng data không support, không trade. Nếu data đẹp nhưng không thể giải thích edge và parameter cực fragile, confidence cũng phải thấp.
 
-## 4. Walk-Forward Analysis
+## 4. Define universe trước khi nhìn result
 
-Walk-forward chia history thành nhiều đoạn: train trên một cửa sổ, test trên đoạn kế tiếp, rồi roll forward. Nó mô phỏng tốt hơn quá trình thực tế khi trader cập nhật model theo thời gian.
+Universe selection có thể tạo hidden bias. Nếu bạn chỉ test assets hiện tại liquid và successful, survivorship bias xuất hiện.
 
-Nhưng walk-forward cũng có thể overfit nếu bạn thử quá nhiều window lengths và chỉ giữ setting đẹp nhất.
+Universe phải phản ánh instruments thực sự tradable ở từng thời điểm, bao gồm delisted names nếu equity backtest dài hạn.
 
-## 5. Look-Ahead Bias
+## 5. Timestamp discipline
 
-Look-ahead xảy ra khi backtest vô tình dùng thông tin chưa tồn tại tại thời điểm trade. Ví dụ dùng final daily high để quyết định entry intraday, hoặc dùng economic data đã revised sau này.
+Mỗi feature phải chỉ dùng data available tại decision time. Economic data revisions, corporate filings, index constituents và closing prices cần timestamp chính xác.
 
-Đây là lỗi cực kỳ nguy hiểm vì backtest có thể trông hoàn hảo.
+Một signal dùng today's close nhưng giả định fill tại same close có thể look-ahead nếu signal chỉ xác định sau market close.
 
-## 6. Survivorship Bias
+## 6. Data cleaning không được tạo future knowledge
 
-Nếu test cổ phiếu chỉ trên constituents hiện tại của một index, bạn bỏ qua companies đã delist hoặc phá sản. Result sẽ đẹp hơn thực tế.
+Adjusting splits/dividends là cần, nhưng cách adjustment có thể vô tình rewrite historical prices theo future corporate actions.
 
-Dataset phải phản ánh universe tồn tại tại từng thời điểm.
+Missing data, bad ticks và stale quotes phải được xử lý với rule documented, không sửa thủ công chỉ khi trade xấu.
 
-## 7. Data Snooping
+## 7. In-sample và out-of-sample
 
-Nếu test 1.000 strategies, xác suất một số strategy có backtest đẹp do may mắn tăng rất lớn. P-value hay Sharpe đơn lẻ không còn ý nghĩa như khi chỉ test một hypothesis.
+**In-sample (IS)** dùng develop strategy. **Out-of-sample (OOS)** dùng estimate generalization trên data chưa dùng fit.
 
-Cần tính mental penalty cho số lượng thử nghiệm.
+Nếu OOS repeatedly deteriorates, strategy có thể overfit hoặc regime-specific hơn bạn nghĩ.
 
-## 8. Parameter Stability
+## 8. Validation set và test set
 
-Strategy tốt thường không chỉ hoạt động tại đúng một parameter. Nếu moving average 49 ngày cực tốt nhưng 48 và 50 ngày đều tệ, đó là red flag.
+Trong research nghiêm túc, có thể tách development data thành train/validation và giữ final test set untouched.
 
-Robust edge thường tạo vùng parameters tương đối ổn, không phải một needle peak.
+Nếu bạn liên tục xem test result rồi sửa rules, test set đã trở thành training data về mặt hành vi.
 
-## 9. Transaction Costs
+## 9. Walk-forward analysis
 
-Backtest phải trừ spread, commission, slippage, funding và borrow fees nếu có. Với high-frequency strategy, cost nhỏ có thể xóa toàn bộ edge.
+Walk-forward train trên một window, test trên next window rồi roll forward. Nó mô phỏng process thực tế tốt hơn one-time split.
 
-Cost model nên conservative hơn live average, đặc biệt với volatile periods.
+Nhưng bạn vẫn có thể overfit walk-forward parameters. Không có methodology nào miễn nhiễm data mining nếu researcher thử đủ nhiều variations.
 
-## 10. Market Impact
+## 10. Purged và embargoed validation
 
-Account nhỏ có thể vào ra dễ, nhưng strategy không scale vô hạn. Khi order size lớn relative to liquidity, execution tự đẩy price bất lợi.
+Với overlapping labels hoặc holding periods, adjacent train/test windows có thể leak information. **Purging** loại observations overlap; **embargo** tạo gap giữa train/test.
 
-Capacity là một thuộc tính của strategy.
+Khái niệm này quan trọng hơn với ML/quant research, nhưng tư duy leakage prevention hữu ích cho mọi backtest.
 
-## 11. Regime Dependence
+## 11. Look-ahead bias
 
-Một strategy có thể chỉ hoạt động trong trending regime, low-vol regime hoặc high-rate regime. Điều đó không làm strategy xấu, miễn bạn biết source of edge.
+Look-ahead xảy ra khi model dùng data future. Ví dụ dùng final daily high để trigger intraday trade hoặc dùng earnings figure trước timestamp release.
 
-Sai lầm là giả định backtest average qua nhiều năm nghĩa edge stable mọi lúc.
+Đây là một trong những bugs nguy hiểm nhất vì backtest thường đẹp bất thường.
 
-## 12. Distribution của Returns
+## 12. Survivorship bias
 
-Mean và standard deviation không đủ nếu returns có skew và fat tails. Options strategies thường có nhiều small wins và một số rare large losses.
+Testing chỉ current index members bỏ companies failed/delisted. Result thường inflated.
 
-Cần nhìn histogram, skewness, kurtosis, worst trades và tail scenarios.
+Point-in-time constituent data là gold standard nếu strategy phụ thuộc historical universe membership.
 
-## 13. Win Rate không đủ
+## 13. Selection bias
 
-Strategy win rate 70% vẫn có thể âm nếu average loss quá lớn. Strategy win rate 35% có thể profitable nếu average win lớn.
+Nếu bạn chọn market để test vì biết trước market đó trend tốt, selection bias xuất hiện.
 
-Expectancy theo R là core metric:
+Research nên define selection logic trước: liquidity, instrument class hoặc economic criteria.
+
+## 14. Data-snooping bias
+
+Nếu test 1.000 strategies, một số sẽ có Sharpe đẹp chỉ do chance. Statistical significance phải được interpreted cùng number of trials.
+
+Research log giúp biết bạn đã thử bao nhiêu ideas thật sự, thay vì giả vờ final test là hypothesis đầu tiên.
+
+## 15. Multiple-hypothesis problem
+
+Traditional p-value assume limited hypothesis testing. Khi thousands of rules được tested, false discoveries tăng.
+
+Các concepts như False Discovery Rate, Reality Check hoặc Deflated Sharpe Ratio giúp nhắc rằng raw best Sharpe thường optimistic.
+
+Retail trader không cần triển khai academic tests đầy đủ, nhưng phải có mental penalty rất lớn cho extensive optimization.
+
+## 16. Parameter stability
+
+Robust strategy hiếm khi chỉ hoạt động tại một exact parameter. Nếu MA 49 cực tốt còn 48/50 collapse, đó là red flag.
+
+Hãy plot performance surface theo parameter. Broad plateau đáng tin hơn sharp peak.
+
+## 17. Sensitivity analysis
+
+Thay đổi fees, slippage, execution delay, stop size, entry threshold và holding period. Nếu strategy chỉ profitable với assumptions cực favorable, edge yếu.
+
+Robustness nghĩa conclusion sống qua reasonable perturbations.
+
+## 18. Placebo tests
+
+Có thể shift signal timing, randomize entry nhỏ hoặc test related markets để xem performance có thực sự gắn với proposed mechanism không.
+
+Nếu strategy vẫn “tốt” khi signal bị randomized, backtest infrastructure có thể có leakage hoặc market beta đang tạo illusion.
+
+## 19. Simple benchmark trước complex model
+
+Complex ML strategy phải beat simple baselines sau costs. Nếu linear rule hoặc buy-and-hold tạo same risk-adjusted result, complexity không mang economic value.
+
+Complexity còn tăng operational và overfit risk.
+
+## 20. Transaction costs
+
+Backtest cần commission, spread, slippage, exchange fees, funding, borrow costs và taxes nếu applicable.
+
+Cost model nên conservative và state-dependent. Spread during high volatility thường rộng hơn calm periods.
+
+## 21. Market impact
+
+Large order relative ADV hoặc depth tự làm price bất lợi. Impact thường nonlinear.
+
+Strategy profitable với $10k không tự động scalable tới $10m. Capacity là property của edge.
+
+## 22. Participation rate
+
+Một useful metric là order size relative market volume. High participation tăng impact và information leakage.
+
+Execution assumption phải match realistic participation.
+
+## 23. Shorting constraints
+
+Short strategy phải model borrow availability, borrow fees, recalls và hard-to-borrow names.
+
+A backtest assuming unlimited short access ở exact close price thường unrealistic.
+
+## 24. Futures roll và contract construction
+
+Continuous futures series có thể tạo misleading historical prices nếu roll adjustment không phù hợp strategy.
+
+Need distinguish actual tradable contracts, roll dates, basis và transaction cost during roll.
+
+## 25. FX rollover và CFD financing
+
+Forex/CFD long-horizon strategies phải model swaps/financing. Carry có thể là major component of return.
+
+Ignoring funding can turn losing strategy into fake winner.
+
+## 26. Corporate actions
+
+Equity backtest cần dividends, splits, rights issues, mergers và delistings. Price return và total return khác nhau đáng kể ở long horizons.
+
+## 27. Expectancy
+
+Core equation:
 
 `E = P(win) × AvgWin - P(loss) × AvgLoss`
 
-## 14. Confidence Interval của Expectancy
+Win rate không có ý nghĩa độc lập. Strategy 35% win có thể excellent nếu payoff large; 85% win có thể dangerous nếu rare loss huge.
 
-Sample expectancy chỉ là estimate. Với 30 trades, uncertainty rất lớn. 300 trades cho estimate tốt hơn nhưng vẫn phụ thuộc stationarity.
+## 28. R-multiple
 
-Bạn nên nghĩ theo range thay vì tin một con số exact.
+Normalize trade result bằng initial risk `R`. Nếu stop-defined loss là $100, +2R nghĩa +$200.
 
-## 15. Bootstrap và Monte Carlo
+R giúp compare trades across account sizes và instruments.
 
-Bootstrap resample historical trades để tạo nhiều possible equity paths. Monte Carlo giúp ước lượng distribution của drawdown, losing streak và terminal equity.
+## 29. Confidence interval của expectancy
 
-Mục tiêu không phải dự báo tương lai chính xác mà kiểm tra strategy có sống được qua bad sequences hay không.
+Sample expectancy là estimate, không fact. Với 30 trades uncertainty rất lớn. Confidence interval hoặc bootstrap distribution giúp quantify range.
 
-## 16. Risk of Ruin
+Nếu lower plausible expectancy near zero, sizing nên conservative.
 
-Risk of ruin tăng khi edge nhỏ, variance lớn và position sizing cao. Một profitable strategy vẫn có thể phá sản nếu sizing quá lớn trước khi law of large numbers phát huy tác dụng.
+## 30. Serial correlation
 
-## 17. Fractional Kelly
+Trades không luôn independent. Trend strategy có thể thắng/lỗ thành clusters theo regime.
 
-Kelly cho theoretical optimal growth khi edge và odds biết chính xác. Trong trading, estimates không chính xác nên full Kelly thường quá aggressive.
+Assuming IID trades understates long losing streaks và drawdown risk.
 
-Fractional Kelly hoặc fixed conservative risk thường thực tế hơn.
+## 31. Skewness và tail risk
 
-## 18. Drawdown Budget
+Short-vol/carry strategies thường negative skew: many small wins, rare huge loss. Trend/long-option strategies có thể positive skew.
 
-Trước khi live, define drawdown level mà strategy hoặc trader phải giảm size, pause hoặc review. Rule này nên viết trước khi emotional stress xuất hiện.
+Mean và standard deviation không capture full payoff shape.
 
-Drawdown stop không nhất thiết nghĩa strategy “hỏng”; nó là circuit breaker để tránh compounding errors.
+## 32. Kurtosis và fat tails
 
-## 19. Strategy Degradation
+Financial returns often have more extreme events than normal distribution. VaR based purely normal assumptions có thể underestimate tail risk.
 
-Edge có thể giảm vì competition, market structure thay đổi hoặc participant behavior thích nghi. Theo dõi rolling expectancy, hit rate, slippage và opportunity frequency giúp detect degradation.
+Historical stress và scenario analysis phải complement statistical metrics.
 
-Không nên kill strategy chỉ vì vài losses, nhưng cũng không nên giữ mãi vì backtest lịch sử đẹp.
+## 33. Profit Factor
 
-## 20. Research Log
+`Profit Factor = Gross Profit / Gross Loss`
 
-Mỗi experiment nên ghi hypothesis, data, rules, parameters, result và conclusion. Điều này ngăn bạn vô thức retest cùng idea đến khi tìm ra version đẹp.
+PF >1 means historical gross wins exceed losses, nhưng high PF with few trades có uncertainty lớn.
 
-Research discipline quan trọng không kém coding.
+## 34. Sharpe Ratio
 
-## 21. Forward Test
+Sharpe measures excess return per volatility. Useful for comparison nhưng penalizes upside/downside symmetrically và assume distribution properties that may not hold.
 
-Sau backtest, demo hoặc paper trading giúp test execution assumptions và operational issues. Nó cũng kiểm tra whether bạn thực sự có thể follow rules.
+High Sharpe short-vol strategy vẫn có catastrophic tail.
 
-## 22. Small Live Test
+## 35. Sortino, Calmar và MAR
 
-Live capital nhỏ là bước khác paper trading vì psychology và real fills khác. Mục tiêu giai đoạn này là validate process, không maximize profit.
+Sortino focuses downside deviation. Calmar compares annualized return with max drawdown. MAR uses CAGR / max drawdown.
 
-## 23. Portfolio of Strategies
+Metrics should describe different risk dimensions, not compete for one “best score”.
 
-Nhiều strategies có thể giảm dependency vào một edge duy nhất, nhưng chỉ khi return streams thực sự khác nhau.
+## 36. Maximum drawdown
 
-Trend strategy trên EURUSD và trend strategy trên GBPUSD có thể vẫn cùng USD factor. Strategy count không bằng diversification.
+Historical max drawdown is one observation, not worst possible future drawdown.
 
-## 24. Strategy Correlation
+Sizing based on exact historical MDD is dangerous. Stress larger-but-plausible drawdowns.
 
-Hãy tính correlation của daily hoặc trade-level returns. Nhưng correlation trung bình chưa đủ; cần xem crisis correlation vì strategies có thể cùng fail trong volatility spike.
+## 37. Time under water
 
-## 25. Factor Decomposition
+Drawdown duration matters psychologically and economically. Strategy may recover eventually but remain below high-water mark for years.
 
-Một strategy có thể ẩn exposures như equity beta, short volatility, long carry hoặc USD trend. Nếu nhiều strategies cùng factor, portfolio risk tập trung.
+Capital patience must match expected recovery behavior.
 
-## 26. Volatility Scaling
+## 38. Monte Carlo
 
-Volatility scaling điều chỉnh position size theo estimated risk. Khi volatility tăng, size giảm; khi volatility giảm, size tăng.
+Monte Carlo can reshuffle trades or simulate distributions to generate many equity paths. It helps estimate losing streaks, drawdown and terminal wealth ranges.
 
-Nhược điểm là volatility thường spike sau price move, nên scaling có thể giảm exposure gần lows.
+It does not magically model regime change; output quality depends assumptions.
 
-## 27. Equal Capital vs Equal Risk
+## 39. Bootstrap
 
-Chia capital đều không tạo equal risk. Strategy high-volatility đóng góp nhiều hơn. Risk allocation nên nhìn contribution to portfolio drawdown.
+Bootstrap resamples observed returns/trades. Block bootstrap can preserve some serial dependence by sampling chunks.
 
-## 28. Convexity và Tail Risk
+This can be more realistic than independent reshuffle for clustered strategies.
 
-Short-vol strategies thường nhìn ổn trong normal periods nhưng có negative convexity. Trend following hoặc long options có thể có convex payoff hơn trong crisis.
+## 40. Risk of ruin
 
-Portfolio of strategies nên xem payoff shape, không chỉ average correlation.
+Risk of ruin rises with high sizing, weak edge and high variance. Positive expectancy strategy can still bankrupt an account before edge realizes.
 
-## 29. Operational Risk
+Survival is prerequisite for compounding.
 
-Strategy tốt vẫn có thể fail vì API error, broker outage, wrong symbol, duplicate order hoặc time-zone bug. Automation cần position reconciliation, order validation và kill switch.
+## 41. Kelly criterion
 
-Manual trader cũng có operational risk: nhập sai lot, nhầm direction hoặc trade sai account.
+Kelly estimates growth-optimal bet size under known edge/odds. In trading, edge estimates are noisy, so full Kelly is usually aggressive.
 
-## 30. Post-Trade Attribution
+Fractional Kelly, e.g. quarter/half Kelly, is more robust but still requires conservative estimates.
 
-Sau trade, tách result thành signal quality, sizing, execution và management. Một losing trade đúng process khác một loss do execution mistake.
+## 42. Fixed fractional sizing
 
-## 31. Monthly Strategy Review
+Risking fixed percentage per trade automatically reduces dollar risk during drawdown and increases as equity grows.
 
-Review nên tập trung distribution và process, không chỉ net P/L. Hỏi edge có còn xuất hiện không, costs có đổi không, regime có khác không và rule violations bao nhiêu.
+However correlated trades can still make total risk too high.
 
-## 32. Khi nào nên thay rule
+## 43. Volatility scaling
 
-Chỉ thay rule khi có evidence hoặc logic mới. Không thay chỉ vì recent losses. Mỗi modification cần versioning để biết performance đến từ version nào.
+Scale position inversely to estimated volatility to stabilize risk. But volatility estimates lag and may rise after losses, causing procyclical de-risking.
 
-## 33. Research Mindset
+Use caps/floors and understand estimator behavior.
 
-Strategy research là quá trình falsification: cố tìm lý do idea sai. Nếu hypothesis sống sót nhiều tests độc lập, confidence mới tăng.
+## 44. Portfolio heat
 
-Cách tư duy này trái với confirmation bias, nơi trader chỉ tìm chart đẹp để chứng minh system đúng.
+Portfolio heat sums risk across open positions but should adjust for correlation/common factors.
 
-## 34. Kết luận
+Three trades each risking 0.5% are not truly 1.5% independent risk if all are same USD or equity-beta bet.
 
-Một strategy đáng tin không phải strategy có equity curve đẹp nhất. Nó là strategy có logic hợp lý, rules rõ, cost realistic, parameter ổn định, out-of-sample performance chấp nhận được và sizing đủ bảo thủ để sống qua uncertainty.
+## 45. Drawdown budget
+
+Define thresholds for normal drawdown, caution, size reduction and full review before live trading.
+
+Circuit breaker protects capital and psychology while diagnosis happens.
+
+## 46. Regime dependence
+
+Trend, mean reversion, carry, volatility selling and breakout strategies thrive in different environments.
+
+A strategy can be legitimate and still have long flat periods because source of edge is regime-dependent.
+
+## 47. Regime filter caution
+
+Adding filters after every historical loss is classic overfit. Filter should have causal reason and broad parameter stability.
+
+Simpler robust filter often beats complex perfect-history filter.
+
+## 48. Strategy degradation
+
+Edge can decay due competition, market-structure changes, fees, regulation or participant adaptation.
+
+Monitor rolling expectancy, opportunity count, hit rate, payoff, slippage and factor exposure.
+
+## 49. Distinguish drawdown from degradation
+
+A drawdown can be normal variance. Degradation means distribution itself may have changed.
+
+Use multiple diagnostics; do not kill strategy from few losses, but do not worship historical backtest either.
+
+## 50. Change-point thinking
+
+Statistical change detection can help ask whether mean, variance or execution cost shifted. But small samples make false alarms common.
+
+Combine quantitative evidence with causal market changes.
+
+## 51. Forward test
+
+Paper/demo forward test verifies data timing, signal generation, broker workflow and rule clarity.
+
+It cannot fully test fills or psychology because capital not at risk.
+
+## 52. Small live validation
+
+Small real size checks execution, funding, borrow, latency and emotional response.
+
+Goal is process validation, not profit maximization.
+
+## 53. Scaling plan
+
+Scale gradually only when live fills, cost and behavior match assumptions. Doubling size after short winning streak is not evidence-based scaling.
+
+Capacity and liquidity must be re-evaluated at each scale.
+
+## 54. Research log
+
+Record hypothesis, dataset version, rules, parameters, costs, results and conclusion for every experiment.
+
+This prevents unconscious p-hacking and repeated testing until something works.
+
+## 55. Version control
+
+Every strategy rule change should create new version. Keep performance by version so you know which rules produced which outcome.
+
+Mixing versions destroys statistical interpretation.
+
+## 56. Reproducibility
+
+A research result should be reproducible from raw/approved data plus code/config. Manual undocumented overrides are hidden model risk.
+
+For discretionary trading, screenshots and structured journal approximate reproducibility.
+
+## 57. Portfolio of Strategies
+
+Multiple strategies reduce dependency on one edge only when return streams have different drivers.
+
+Five momentum systems across correlated FX pairs are not five independent edges.
+
+## 58. Strategy correlation
+
+Measure return correlation, but also downside/cisis correlation. Average correlation may hide joint failure in stress.
+
+Rolling correlation helps see regime dependency.
+
+## 59. Factor decomposition
+
+Strategies often hide long equity beta, short volatility, carry, duration or USD exposure. Factor regressions or scenario analysis can reveal common sources.
+
+Diversification should occur at factor level, not strategy-name level.
+
+## 60. Convexity mix
+
+Short-vol strategies produce frequent income but negative convexity. Trend following or long options can provide more positive convexity.
+
+Portfolio design can intentionally combine payoff shapes rather than only correlations.
+
+## 61. Equal capital vs equal risk
+
+Equal capital assigns same dollars but not same risk. High-vol strategy dominates portfolio volatility.
+
+Risk allocation should consider standalone vol, correlation and tail behavior.
+
+## 62. Risk parity across strategies
+
+Strategy risk parity scales each to similar volatility/risk contribution, but correlations and non-normal tails still matter.
+
+It is a starting framework, not complete solution.
+
+## 63. Correlation spikes
+
+During stress, many strategies de-lever simultaneously or respond to same volatility shock. Historical diversification may disappear.
+
+Stress portfolio with correlation assumptions worse than average.
+
+## 64. Liquidity across strategies
+
+If several strategies need exit same instrument during stress, capacity is shared. Portfolio-level liquidity matters.
+
+Independent signals can still compete for same execution bandwidth.
+
+## 65. Capital efficiency và margin
+
+Futures/options allow multiple strategies share collateral, but margin requirements can rise together in volatility spikes.
+
+Unused cash buffer is essential; theoretical margin efficiency can become crisis fragility.
+
+## 66. Operational risk
+
+API error, wrong symbol, duplicate order, time-zone bug, stale data or broker outage can destroy a mathematically good strategy.
+
+Need order validation, reconciliation, alerting, max-order limits and kill switch.
+
+## 67. Model risk
+
+Strategy code may implement different logic than research notebook. Unit tests and sample-trade reconciliation reduce model risk.
+
+Manual strategies need checklist for same reason.
+
+## 68. Broker/counterparty risk
+
+Execution quality, stop-out rules, funding, data feed and legal entity matter, especially OTC CFD/FX.
+
+Strategy edge does not protect against broker failure or unsuitable leverage terms.
+
+## 69. Post-trade attribution
+
+Separate signal quality, sizing, entry execution, exit execution and discretionary override.
+
+A loss following rules is statistical outcome; a profit from breaking rules can still be process failure.
+
+## 70. Daily, weekly và monthly review
+
+Daily review checks operational issues and violations. Weekly review looks execution/slippage and setup distribution. Monthly/quarterly review evaluates edge, regime and degradation.
+
+Do not redesign strategy after every losing day.
+
+## 71. Kill criteria
+
+Before launch, define conditions requiring pause: data failure, broker inconsistency, drawdown threshold, structural market change or statistically meaningful deterioration.
+
+Predefined kill criteria reduce emotional denial.
+
+## 72. Research falsification mindset
+
+Research should try to kill the idea. Search for periods, markets and parameter perturbations where it fails.
+
+If hypothesis survives independent tests, confidence increases. Confirmation-only research creates fragile systems.
+
+## 73. Minimum viable evidence
+
+There is no universal number of trades sufficient. Sample requirement depends variance, edge size, holding period and independence.
+
+A small but economically strong edge needs more observations to distinguish from noise.
+
+## 74. Capacity-adjusted expected return
+
+Expected return before costs is not enough. As capital grows, impact and opportunity availability can reduce return.
+
+The best strategy for small account may not be best for institutional scale.
+
+## 75. Research-to-production checklist
+
+Before live capital, confirm data timestamps, universe, execution assumptions, costs, OOS robustness, parameter sensitivity, risk limits, broker behavior, monitoring, failover and version control.
+
+If one layer is undefined, production risk remains.
+
+## 76. Kết luận
+
+Strategy research là engineering dưới uncertainty. Bạn không cố chứng minh system chắc chắn kiếm tiền; bạn cố estimate edge, hiểu uncertainty và xây sizing/process để survive khi estimate sai.
+
+Một system tốt không cần perfect equity curve. Nó cần logic, reproducibility, realistic costs, robust parameters, independent validation, operational controls và portfolio context đủ mạnh để tồn tại qua regime change.
