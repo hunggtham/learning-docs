@@ -1,6 +1,6 @@
 # 05 — Trading & Derivatives
 
-Domain này tập trung vào trading như một hệ thống xác suất có execution cost và portfolio risk, không phải một bộ pattern vào lệnh. Bạn sẽ học từ Forex/risk management tới futures/options/CFD, backtest, execution microstructure và quản trị nhiều vị thế.
+Domain này tập trung vào trading như một hệ thống xác suất có execution cost và portfolio risk, không phải một bộ pattern vào lệnh. Bạn sẽ học từ Forex/risk management tới futures/options/CFD, backtest, execution microstructure, research robustness và quản trị nhiều strategies.
 
 ## Thứ tự đọc
 
@@ -12,8 +12,10 @@ Domain này tập trung vào trading như một hệ thống xác suất có exe
 
 [03_EXECUTION_MICROSTRUCTURE_AND_TRADING_PORTFOLIO.md](./03_EXECUTION_MICROSTRUCTURE_AND_TRADING_PORTFOLIO.md) đi sâu order book, maker/taker, queue priority, spread, slippage, market impact, adverse selection, broker execution, portfolio heat, factor concentration, volatility targeting, expected shortfall và implementation shortfall.
 
+[04_STRATEGY_RESEARCH_ROBUSTNESS_AND_PORTFOLIO_OF_STRATEGIES.md](./04_STRATEGY_RESEARCH_ROBUSTNESS_AND_PORTFOLIO_OF_STRATEGIES.md) hoàn thiện research process: hypothesis, in/out-of-sample, walk-forward, look-ahead/survivorship/data-snooping bias, parameter stability, transaction costs, bootstrap/Monte Carlo, strategy degradation, research log, forward test, small-live validation và portfolio of strategies.
+
 ## Sau domain này bạn cần làm được gì?
 
-Bạn cần có khả năng tính position size trước khi vào lệnh, phân biệt signal edge và execution edge, đánh giá một backtest bằng expectancy/drawdown chứ không chỉ win rate, nhận ra các lệnh correlated và quản trị tổng risk của trading book. Bạn cũng cần hiểu khi nào không nên trade vì liquidity, news, broker hoặc system conditions bất thường.
+Bạn cần có khả năng tính position size trước khi vào lệnh, phân biệt signal edge và execution edge, đánh giá một backtest bằng expectancy/drawdown/robustness chứ không chỉ win rate, nhận ra các lệnh và strategies correlated, kiểm soát total risk của trading book và biết khi nào edge có thể đã degradation.
 
 Để gắn trading với market cụ thể, chuyển sang [06_markets_korea_vietnam](../06_markets_korea_vietnam/README.md).
