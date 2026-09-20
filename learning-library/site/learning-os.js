@@ -275,7 +275,8 @@
   }
 
   async function renderRelated(doc, host) {
-    if (!host || host.querySelector('.los-related')) return;
+    if (!host || host.querySelector('.los-related') || host.dataset.losRelatedLoading === '1') return;
+    host.dataset.losRelatedLoading = '1';
     try {
       const graph = await loadGraph();
       const linked = new Set();
@@ -285,12 +286,13 @@
       });
       const related = [...linked].map(docByPath).filter(Boolean).slice(0, 6);
       if (!related.length) LOS.docs.filter(item => item.path !== doc.path && item.category === doc.category && item.type === 'MD').slice(0, 4).forEach(item => related.push(item));
-      if (!related.length) return;
+      if (!related.length || !host.isConnected || routePath() !== doc.path || host.querySelector('.los-related')) return;
       const section = document.createElement('section');
       section.className = 'los-related';
       section.innerHTML = `<h3>Knowledge links</h3><div class="los-related-grid">${related.map(item => docMiniItem(item, item.category)).join('')}</div>`;
       host.append(section);
     } catch {}
+    finally { delete host.dataset.losRelatedLoading; }
   }
 
   function enhanceReader(path) {
@@ -307,10 +309,12 @@
       const onScroll = () => {
         clearTimeout(timer);
         timer = setTimeout(() => {
-          const total = Math.max(1, document.documentElement.scrollHeight - innerHeight);
-          const pct = Math.max(0, Math.min(100, scrollY / total * 100));
-          const progress = progressFor(path);
+          if (routePath() !== path) return;
           const state = readDocState(path);
+          const total = Math.max(1, document.documentElement.scrollHeight - innerHeight);
+          const measuredPct = Math.max(0, Math.min(100, scrollY / total * 100));
+          const pct = state.status === 'completed' ? 100 : measuredPct;
+          const progress = progressFor(path);
           writeDocState(path, { progressPct: pct, lastOpened: new Date().toISOString(), currentSection: progress?.headingId || state.currentSection || '' });
         }, 350);
       };
@@ -453,8 +457,13 @@
     requestAnimationFrame(() => {
       LOS.enhanceQueued = false;
       installTopbar();
-      if (document.querySelector('#search')) enhanceHome();
       const path = routePath();
+      if (!path && LOS.readerPath) {
+        LOS.readerCleanup();
+        LOS.readerCleanup = () => {};
+        LOS.readerPath = '';
+      }
+      if (document.querySelector('#search')) enhanceHome();
       if (path) enhanceReader(path);
     });
   }
