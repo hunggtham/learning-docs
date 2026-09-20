@@ -1,216 +1,223 @@
 # Tiến hóa và di truyền quần thể — Evolution and Population Genetics (진화와 집단유전학)
 
-Genetics giải thích variation được tạo và truyền đi. Evolution đặt câu hỏi ở scale lớn hơn: **khi variation đó đi qua hàng trăm, hàng nghìn hay hàng triệu thế hệ, population thay đổi như thế nào?**
+Genetics giải thích allele được tạo và truyền thế nào. Evolution hỏi một câu khác ở scale lớn hơn: **khi hàng nghìn cá thể sinh sản qua nhiều thế hệ, tần số allele trong population thay đổi vì những lực nào?**
 
-**Evolution (tiến hóa / 진화)** theo nghĩa population genetics là sự thay đổi frequency của heritable variant trong population qua thế hệ. Đây là định nghĩa rất khác với cách nói đời thường “tiến hóa thành cao cấp hơn”. Evolution không có hướng bắt buộc tới complexity hay perfection.
+Đây là điểm chuyển quan trọng từ “inheritance trong một family” sang “change trong một population”. Evolution không xảy ra vì một cá thể cố thích nghi trong đời mình. Nó là sự thay đổi distribution của heritable variation qua generation.
 
-## Population là đơn vị quan trọng
+## 1. Population là đơn vị để theo dõi allele frequency
 
-Một **population (quần thể / 개체군)** là nhóm individual cùng species sống trong vùng và có khả năng trao đổi gene ở mức nào đó.
+Một **population (quần thể / 개체군)** là nhóm cá thể cùng species có khả năng giao phối trong một khu vực và thời gian nhất định.
 
-Individual có genotype; population có **allele frequency**.
-
-Giả sử locus có allele A và a. Trong 100 diploid individual có 200 allele copy. Nếu 120 copy là A và 80 là a:
+Nếu một locus có allele A và a, ta có thể mô tả population bằng frequency:
 
 \[
-p=0.6,\quad q=0.4
+p=f(A),\quad q=f(a),\quad p+q=1
 \]
 
-với \(p+q=1\).
+Evolution ở mức tối thiểu có thể được định nghĩa là **change in allele frequency over generations**.
 
-Evolution có thể được quan sát như việc p và q thay đổi theo thế hệ.
+Định nghĩa này biến evolution từ ý tưởng mơ hồ thành một quantity có thể đo.
 
-> **Mental model:** genetics hỏi “một offspring nhận allele nào?”; population genetics hỏi “sau nhiều generation, allele nào trở nên phổ biến hơn hoặc hiếm hơn, và vì sao?”.
+## 2. Hardy–Weinberg: null model để biết khi nào population đang đổi
 
-## Hardy–Weinberg equilibrium — null model trước khi nói evolution
-
-**Hardy–Weinberg equilibrium (하디-바인베르크 평형)** là model tưởng tượng population lý tưởng không có selection, mutation, migration, drift đáng kể và mating ngẫu nhiên tại locus xét.
-
-Nếu allele frequency là p và q, genotype frequency kỳ vọng sau random mating:
+Nếu không có selection, mutation, migration, drift và mating là random, genotype frequency có thể ổn định theo:
 
 \[
-p^2 + 2pq + q^2 = 1
+p^2+2pq+q^2=1
 \]
 
-Trong đó \(p^2\) là AA, \(2pq\) là Aa, \(q^2\) là aa.
+Đây là **Hardy–Weinberg equilibrium (하디-바인베르크 평형)**.
 
-Model không nhằm nói nature thực sự đáp ứng mọi assumption. Nó là **baseline**. Nếu observed genotype khác expectation, ta hỏi process nào đang tác động.
+Không nên học nó như “quy luật quần thể thật phải tuân theo”. Population thật hiếm khi hoàn toàn đáp ứng assumption.
 
-Đây giống null model trong statistics: hiểu trạng thái “không có lực tiến hóa” giúp nhận diện force thật.
+Nó giống null model trong statistics: nếu observed data lệch mạnh khỏi expectation, ta hỏi force nào đang tác động.
 
-## Natural selection — không phải sinh vật tự cố thay đổi
+## 3. Mutation: nguồn allele mới
 
-**Natural selection (chọn lọc tự nhiên / 자연선택)** cần ba điều cơ bản:
+Mutation tạo sequence variant mới. Nhưng mutation rate thường nhỏ, nên mutation một mình hiếm khi thay allele frequency cực nhanh trong short term.
 
-1. individual khác nhau về trait;
-2. variation có phần heritable;
-3. variation ảnh hưởng reproductive success trong environment cụ thể.
+Vai trò sâu hơn của mutation là cung cấp **raw variation** lâu dài.
 
-Nếu genotype nào tạo nhiều surviving offspring hơn trung bình, allele liên quan có thể tăng frequency.
+Selection không tạo mutation phù hợp theo nhu cầu. Selection chỉ làm khác biệt reproductive success giữa variant đã xuất hiện.
 
-### Fitness
+## 4. Natural selection: từ phenotype đến reproductive success
 
-**Fitness (độ thích nghi / 적합도)** trong evolution không đồng nghĩa khỏe, mạnh hay sống lâu. Nó liên quan contribution của genotype/phenotype vào thế hệ tiếp theo trong context cụ thể.
+**Natural selection (chọn lọc tự nhiên / 자연선택)** cần ba điều:
 
-Một trait giúp sống rất lâu nhưng làm reproduction bằng 0 có thể có fitness thấp.
+1. cá thể khác nhau về trait;
+2. một phần khác biệt có thể di truyền;
+3. trait ảnh hưởng reproductive success trong environment hiện tại.
 
-### Selection không “chọn” có ý thức
+Nếu đủ ba điều, variant liên quan higher reproductive success có xu hướng tăng frequency.
 
-Natural selection không phải agent. Không có entity xem trait nào tốt rồi quyết định giữ lại. Differential survival/reproduction tạo statistical outcome qua nhiều generation.
+Selection không “muốn” tạo organism hoàn hảo. Nó là statistical consequence của differential reproduction.
 
-## Adaptation — kết quả lịch sử của selection
+## 5. Fitness: concept tương đối, không phải sức khỏe chung
 
-**Adaptation (thích nghi tiến hóa / 적응)** là heritable trait trở nên phổ biến vì từng tăng fitness trong environment lịch sử.
+**Fitness (적합도)** trong evolution liên quan contribution gene vào generation sau.
 
-Cần phân biệt với **acclimation/acclimatization**, thay đổi sinh lý của individual trong đời, ví dụ tăng ventilation khi lên altitude.
+Một trait tăng survival nhưng giảm reproduction mạnh có thể không tăng fitness tổng.
 
-Một adaptation luôn có trade-off và constraint. Không có trait nào tốt tuyệt đối ở mọi environment.
+Fitness cũng phụ thuộc environment. Fur dày có thể beneficial ở lạnh nhưng costly ở nóng.
 
-## Mutation — nguồn variation mới nhưng không hướng theo nhu cầu
+Do đó không tồn tại “allele tốt tuyệt đối” ngoài context.
 
-Mutation tạo allele mới. Rate mutation thường nhỏ trên mỗi base mỗi generation, nhưng genome lớn và population lớn nên tổng mutation vẫn đáng kể.
+## 6. Selection làm việc trên phenotype, inheritance truyền genotype
 
-Mutation xảy ra không “biết” environment cần gì. Antibiotic không làm bacteria cố tạo đúng mutation resistance. Resistant mutation có thể đã có hoặc xuất hiện random; antibiotic sau đó tạo strong selection làm resistant lineage tăng.
+Environment “thấy” phenotype: tốc độ chạy, color, enzyme activity, immune response.
 
-## Genetic drift — evolution do sampling ngẫu nhiên
+Nhưng response evolutionary chỉ xảy ra nếu variation phenotype có heritable component.
 
-**Genetic drift (phiêu bạt di truyền / 유전적 부동)** là thay đổi allele frequency do random sampling giữa generation.
+Ta có chain:
 
-Effect mạnh hơn trong population nhỏ.
+```text
+genotype variation
+   ↓
+phenotype variation
+   ↓
+differential survival/reproduction
+   ↓
+different allele contribution
+   ↓
+allele-frequency change
+```
 
-Hãy tưởng tượng jar có red và blue bead đại diện allele. Nếu mỗi generation chỉ lấy ngẫu nhiên một số bead để tạo generation tiếp theo, ratio có thể lệch chỉ vì chance.
+Điều này nối trực tiếp genotype–phenotype model ở genetics với population change.
 
-Qua nhiều generation, allele có thể bị fixed hoặc lost mà không liên quan advantage.
+## 7. Genetic drift: randomness cũng làm population tiến hóa
 
-### Bottleneck
+Không phải mọi allele-frequency change đều do selection.
 
-**Population bottleneck (병목현상)** xảy ra khi population size giảm mạnh. Những survivor chỉ đại diện một sample genetic diversity cũ.
+**Genetic drift (phiêu bạt di truyền / 유전적 부동)** là random change do sampling finite population.
 
-Khi population phục hồi number, diversity đã mất không tự động quay lại.
+Nếu population nhỏ, chance event có thể làm allele biến mất hoặc fix dù allele neutral.
 
-### Founder effect
+Ví dụ, vài cá thể tình cờ sinh nhiều offspring hơn không phải vì trait superior mà do chance.
 
-**Founder effect (창시자 효과)** xảy ra khi một population mới được lập bởi số ít individual. Allele frequency của group founder có thể khác population gốc do sampling.
+Drift mạnh hơn ở small population.
 
-## Gene flow — migration nối các population
+## 8. Bottleneck và founder effect
 
-**Gene flow (dòng gene / 유전자 흐름)** là movement allele giữa population qua migration và reproduction.
+Nếu population giảm mạnh đột ngột, survivors chỉ là sample của original gene pool. Đây là **bottleneck**.
 
-Gene flow thường làm population giống nhau hơn về allele frequency, nhưng cũng có thể đưa adaptive allele mới vào population.
+Nếu một nhóm nhỏ colonize vùng mới, allele frequency của population mới phản ánh sample nhỏ ban đầu — **founder effect**.
 
-Trong conservation, fragmented habitat giảm gene flow có thể làm small population tăng inbreeding và drift.
+Hai case cho thấy history contingency ảnh hưởng genetic structure.
 
-## Sexual selection
+Population hiện tại không chỉ phản ánh “selection tối ưu”; nó còn mang dấu vết accident quá khứ.
 
-Một trait có thể giảm survival một chút nhưng tăng mating success mạnh. **Sexual selection (선택)** mô tả selection qua competition for mates hoặc mate choice.
+## 9. Gene flow: population không đóng kín
 
-Peacock tail là example kinh điển. Tail tốn energy và có thể tăng visibility, nhưng nếu tăng reproductive success thì vẫn được selection duy trì.
+**Gene flow (dòng gene / 유전자 이동)** xảy ra khi cá thể hoặc gamete di chuyển giữa population và reproduce.
 
-## Different modes of selection
+Gene flow có thể làm population giống nhau hơn về allele frequency và mang allele mới vào local population.
 
-**Directional selection** đẩy trait distribution về một phía.
+Nó cũng có thể chống lại local adaptation nếu migration liên tục đưa allele không phù hợp local environment.
 
-**Stabilizing selection** favor intermediate range và loại extreme.
+## 10. Selection mode và distribution trait
 
-**Disruptive selection** có thể favor hai extreme hơn intermediate trong một số environment.
+Selection có thể làm distribution phenotype thay đổi theo pattern khác nhau.
 
-Nhưng real trait thường polygenic và fitness landscape có thể thay đổi, nên ba pattern là model chứ không phải three boxes exhaustive.
+**Directional selection** ưu tiên một phía của distribution.
 
-## Frequency-dependent selection
+**Stabilizing selection** ưu tiên vùng trung tâm.
 
-Fitness có thể phụ thuộc trait phổ biến hay hiếm.
+**Disruptive selection** ưu tiên hai extreme.
 
-Trong **negative frequency-dependent selection**, rare phenotype có advantage vì predator/search image hoặc interaction khác. Điều này có thể duy trì polymorphism.
+Nhưng đây là descriptive pattern, không phải ba “loại lực” hoàn toàn độc lập.
 
-Evolution vì vậy không phải lúc nào cũng kéo population về một “best allele” duy nhất.
+## 11. Frequency-dependent selection
 
-## Coevolution
+Fitness của phenotype đôi khi phụ thuộc frequency của chính nó.
 
-Species tương tác tạo selection pressure lên nhau.
+Một rare strategy có thể có advantage vì competitor chưa adapted, hoặc common phenotype có advantage nhờ cooperation.
 
-Predator và prey, host và parasite, flower và pollinator có thể trải qua **coevolution (đồng tiến hóa / 공진화)**.
+Điều này làm evolution trở thành dynamical game thay vì một hướng cố định.
 
-Một adaptation ở species A thay environment của B; response của B lại thay environment của A.
+## 12. Sexual selection
 
-Đây là feedback ở evolutionary scale.
+Trait có thể tăng mating success dù có survival cost.
 
-## Speciation — khi gene flow suy giảm đủ lâu
+Peacock tail là example kinh điển: costly structure nhưng có thể tăng reproductive opportunity.
 
-**Speciation (hình thành loài / 종분화)** là process lineage tách thành species khác.
+Sexual selection nhắc rằng fitness phải tính reproduction, không chỉ sống lâu.
 
-Một cơ chế common là geographic isolation: population bị chia bởi mountain, island hoặc distance; gene flow giảm; mutation, selection và drift làm chúng divergence.
+## 13. Adaptation là kết quả lịch sử, không phải mục đích
 
-Nếu reproductive isolation phát triển, hai group có thể trở thành species khác.
+**Adaptation (thích nghi / 적응)** là heritable trait tăng fitness trong environment nhất định và đã được shaped bởi selection.
 
-Nhưng species concept có nhiều loại và không phải organism nào cũng phù hợp biological species concept, đặc biệt asexual organism hoặc fossil.
+Không nên nói organism “phát triển trait vì cần nó”. Cách nói đúng causal hơn là variant khác nhau tồn tại, variant phù hợp reproduce nhiều hơn, qua generation frequency thay đổi.
 
-## Evidence for evolution
+Language mục đích dễ làm evolution bị hiểu như planning process.
 
-Evolution không dựa vào một bằng chứng duy nhất.
+## 14. Constraint và trade-off
 
-### Fossil record
+Selection không bắt đầu từ blank design. Nó sửa trên structure có sẵn.
 
-Fossil cho sequence thay đổi và extinct lineage qua geological time, dù record không bao giờ complete.
+Evolution bị constrain bởi developmental pathway, genetic architecture, physical law và history.
 
-### Comparative anatomy
+Một trait có benefit và cost. Hemoglobin phải bind oxygen đủ mạnh ở lung nhưng phải release ở tissue. Bone phải strong nhưng không quá heavy.
 
-**Homologous structure** có common origin nhưng function có thể khác. Forelimb bone pattern của human, whale và bat phản ánh shared ancestry.
+Do đó adaptation thường là compromise.
 
-### Biogeography
+## 15. Speciation: khi gene flow giảm đủ lâu
 
-Distribution species trên island và continent phù hợp với history dispersal, isolation và plate tectonics.
+**Speciation (hình thành loài / 종분화)** xảy ra khi lineage diverge đến mức reproductive isolation duy trì khác biệt.
 
-### Molecular evidence
+Geographic separation có thể giảm gene flow. Sau đó mutation, drift và selection làm population diverge.
 
-DNA/protein sequence cho phép estimate relatedness. Shared mutation và conserved gene tạo evidence rất mạnh cho common descent.
+Nếu reproductive barrier hình thành, ngay cả khi gặp lại, gene flow vẫn thấp.
 
-### Direct observation
+Speciation vì thế là population genetics kéo dài theo thời gian.
 
-Antibiotic resistance, pesticide resistance, virus evolution và experimental evolution cho phép quan sát frequency change trong timescale ngắn.
+## 16. Species concept có nhiều cách định nghĩa
 
-## Phylogenetic thinking
+Biological species concept nhấn mạnh reproductive isolation.
 
-Evolution tạo branching lineage. Vì vậy relatedness nên được nghĩ bằng tree chứ không ladder.
+Morphological concept dùng form.
 
-Human không “tiến hóa từ con khỉ hiện đại”. Human và modern ape share common ancestor; các lineage sau đó diverged.
+Phylogenetic concept nhấn mạnh lineage riêng trên tree.
 
-Không có living species nào là “ancestor chưa tiến hóa” của species khác chỉ vì morphology trông simple.
+Không có một definition tiện cho mọi organism, đặc biệt bacteria, fossil và asexual organism.
 
-## Evolution và optimization
+Điều này dẫn thẳng tới phylogeny và taxonomy.
 
-Natural selection có thể tạo structure rất hiệu quả, nhưng không guarantee global optimum.
+## 17. Evolution ở molecular scale
 
-Evolution bị constraint bởi:
+Protein sequence cũng thay đổi qua mutation và selection/drift.
 
-- ancestral structure;
-- available variation;
-- developmental pathway;
-- trade-off;
-- changing environment;
-- drift.
+Nếu một amino acid cực kỳ quan trọng cho function, position đó thường conserved. Nếu change ít ảnh hưởng, variation có thể tích lũy nhanh hơn.
 
-Trong computer science, evolutionary algorithm dùng mutation/selection analogy để search solution space. Nhưng biological evolution phức tạp hơn vì genotype–phenotype mapping, ecology và history.
+Comparative sequence vì thế cho phép suy evolutionary relationship.
 
-## Common misconceptions
+Genomics đã biến evolution thành data problem có thể đo trên hàng triệu site.
 
-### “Individual tiến hóa vì cần thích nghi”
+## 18. Antibiotic resistance: evolution có thể quan sát trực tiếp
 
-Individual có thể acclimate; population evolution qua generation.
+Trong bacterial population, mutation hoặc horizontal gene transfer tạo resistance variant.
 
-### “Survival of the fittest nghĩa là mạnh nhất sống”
+Antibiotic không “dạy” bacterium kháng thuốc. Nó tạo selection pressure: susceptible cell chết hoặc grow kém, resistant cell có relative advantage.
 
-Fitness là reproductive success trong context, không phải strength.
+Sau treatment, resistant allele/gene frequency tăng.
 
-### “Evolution hoàn toàn ngẫu nhiên”
+Đây là evolution theo đúng population-genetic logic.
 
-Mutation và drift có stochastic component; selection thì non-random đối với differential reproductive success trong environment.
+## 19. Evolution và medicine
 
-### “Evolution luôn làm organism phức tạp hơn”
+Pathogen evolution ảnh hưởng vaccine, drug resistance và virulence.
 
-Không. Simplification có thể adaptive. Parasite thường mất structure không còn cần.
+Human allele frequency cũng phản ánh lịch sử selection, drift, migration và demographic bottleneck.
 
-## Mental Model
+Một variant từng beneficial trong environment cũ có thể neutral hoặc harmful trong environment mới.
 
-> Evolution là population-level change tạo bởi mutation, recombination, selection, drift và gene flow. Selection lọc variation theo environment, drift thay frequency do chance, và branching qua thời gian tạo diversity của life.
+Evolutionary reasoning giúp đặt physiology và disease vào historical context.
 
-File [[01_phylogeny_taxonomy_and_biodiversity]] sẽ xây cách đọc evolutionary tree và hệ thống phân loại; [[02_microorganisms_and_viruses]] cho thấy evolution hoạt động đặc biệt nhanh và rõ ở microorganism.
+## 20. Từ population change sang cây sự sống
+
+Nếu population tách ra, divergence tích lũy qua thời gian. Sau hàng triệu năm, lineage tạo branching pattern.
+
+Câu hỏi kế tiếp không còn chỉ là “allele frequency thay đổi thế nào?” mà là:
+
+**làm sao reconstruct quan hệ họ hàng giữa species, đọc một phylogenetic tree thế nào, và taxonomy nên phản ánh history ra sao?**
+
+Tiếp tục với [[01_phylogeny_taxonomy_and_biodiversity]].
