@@ -1,170 +1,229 @@
 # Sinh học thực vật — Plant Biology (식물생물학)
 
-Sau khi học microorganism, ta đã thấy một cell đơn có thể tự đảm nhiệm gần như mọi chức năng sống. Multicellular organism chọn chiến lược khác: chia việc cho nhiều cell chuyên hóa. Điều này tạo efficiency nhưng kéo theo bài toán coordination và transport ở khoảng cách lớn hơn.
+Multicellularity tạo một bài toán mới: cell không còn sống trực tiếp cạnh mọi resource nó cần. Ở thực vật trên cạn, root nằm trong đất để lấy water/mineral, leaf ở không khí để lấy CO₂ và light. Hai vùng resource tách xa nhau nhưng toàn organism phải hoạt động như một system thống nhất.
 
-Plant là một case rất đẹp vì cơ thể của chúng sống đồng thời trong hai môi trường: **root ở đất để lấy water và mineral, shoot ở không khí để lấy light và CO₂**. Toàn bộ plant biology có thể đọc như lời giải cho bài toán nối hai resource system này.
+Chapter này xem plant như một lời giải cho ba constraint lớn: **đứng vững trên cạn, vận chuyển material đường dài và cân bằng CO₂ uptake với water loss**.
 
-## 1. Vì sao plant cần tissue và organ?
+> **Mental model:** plant là hệ hydraulic–photosynthetic sống giữa hai môi trường. Root khai thác đất; leaf khai thác atmosphere/light; vascular tissue nối chúng; hormone và growth pattern điều phối toàn thân.
 
-Một cell nhỏ trao đổi trực tiếp với environment. Một tree cao hàng chục mét thì không thể để mọi cell tự tiếp xúc soil và air.
+## 1. Tại sao lên cạn là một bước tiến hóa khó?
 
-Plant vì thế có specialization:
+Trong water, organism được buoyancy support và gamete có thể di chuyển trong môi trường ẩm. Trên land, plant phải chống gravity, tránh desiccation, lấy water từ soil nhưng CO₂/light từ air và sinh sản không phụ thuộc hoàn toàn free water.
 
-- root hấp thu water/mineral;
-- leaf capture light và CO₂;
-- stem support và transport;
-- vascular tissue nối các vùng xa nhau.
+Các innovation như cuticle, stomata, vascular tissue, root, pollen và seed giải từng phần bài toán này.
 
-Ta đang nhìn lại surface-area-to-volume constraint ở scale organism.
+## 2. Body plan: root và shoot
 
-## 2. Plant cell có gì đặc biệt?
+Plant body thường chia **root system** và **shoot system**.
 
-Plant cell vẫn là eukaryotic cell, nhưng có một số feature nổi bật.
+Root anchor plant, absorb water/mineral và đôi khi storage. Shoot gồm stem, leaf, flower/ reproductive structure.
 
-**Cell wall** bằng cellulose tạo mechanical support và chống bursting khi water vào.
+Division of labor tạo efficiency nhưng yêu cầu transport system giữa hai phần.
 
-**Central vacuole** giữ water, ion, metabolite và tạo turgor pressure.
+## 3. Meristem: plant growth khác animal growth
 
-**Chloroplast** thực hiện photosynthesis.
+Plant duy trì vùng stem cell gọi là **meristem (분열조직)**. Apical meristem ở tip root/shoot tạo primary growth; lateral meristem như vascular cambium tạo secondary growth ở woody plant.
 
-Những structure này không phải danh sách để học thuộc; chúng liên kết thành một strategy: dùng water pressure + rigid wall để support, dùng chloroplast để capture light, và dùng vacuole để quản lý osmotic state.
+Vì growth module tiếp tục suốt đời, plant architecture linh hoạt hơn body plan cố định của nhiều animal.
 
-## 3. Root: hấp thu nhưng phải chọn lọc
+## 4. Plant tissue system
 
-Root hair tăng surface area tiếp xúc soil.
+Ba tissue system lớn:
 
-Water có thể đi theo apoplast hoặc symplast route qua tissue, nhưng endodermis với Casparian strip buộc nhiều solute đi qua membrane trước khi vào vascular cylinder.
+- dermal tissue bảo vệ/exchange;
+- ground tissue thực hiện photosynthesis/storage/support;
+- vascular tissue vận chuyển.
 
-Điều này giống plasma membrane ở scale lớn hơn: plant tạo một checkpoint để control substance vào xylem.
+Không cần nhớ category riêng lẻ; hãy map chúng vào problem: boundary, metabolism, transport.
 
-## 4. Xylem: vận chuyển water bằng physics, không phải bơm từng phân tử
+## 5. Xylem: đưa water/mineral từ root lên shoot
 
-**Xylem (목부)** transport water và mineral chủ yếu từ root lên shoot.
+**Xylem (목부)** gồm vessel element/tracheid chết khi mature ở nhiều plant, tạo tube ít resistance.
 
-Một misconception phổ biến là root “bơm” nước lên toàn cây bằng ATP. Với plant cao, mechanism chính là **cohesion–tension theory**.
+Water lên tree cao chủ yếu nhờ **cohesion–tension mechanism**, không phải pump ở root.
 
-Water evaporate ở leaf qua transpiration, tạo negative pressure. Cohesion giữa water molecule nhờ hydrogen bond truyền tension xuống column nước trong xylem.
-
-Flow causal:
+Transpiration ở leaf làm water evaporate, tạo tension kéo cột water trong xylem. Hydrogen bond tạo cohesion giữa water molecule; adhesion với wall hỗ trợ.
 
 ```text
 water evaporates from leaf
-      ↓
-leaf water potential drops
-      ↓
-water pulled from xylem
-      ↓
-tension propagates down continuous column
-      ↓
-water enters root from soil
+→ water potential decreases
+→ tension develops in xylem
+→ cohesive water column is pulled upward
+→ root absorbs replacement water
 ```
 
-Một property molecular của water đã học ở chemistry trở thành transport mechanism ở whole plant.
+Physics của water từ chemistry chapter xuất hiện ở organism scale.
 
-## 5. Stomata: trade-off giữa CO₂ và water
+## 6. Water potential
 
-Leaf cần mở đường cho CO₂ vào photosynthesis. Nhưng cùng opening đó làm water vapor thoát ra.
+Water movement trong plant được mô tả bằng **water potential \(\Psi\)**. Water có xu hướng đi từ potential cao hơn tới thấp hơn.
 
-**Stoma (khí khổng / 기공)** giải bài toán bằng guard cell có thể thay đổi turgor để mở/đóng pore.
+Một model cơ bản:
 
-Nếu mở nhiều: CO₂ uptake tốt nhưng mất water.
+\[
+\Psi = \Psi_s + \Psi_p
+\]
 
-Nếu đóng: tiết kiệm water nhưng hạn chế photosynthesis.
+trong đó solute potential \(\Psi_s\) thường negative hơn khi solute tăng, pressure potential \(\Psi_p\) có thể positive trong turgid cell.
 
-Đây là trade-off central của terrestrial plant.
+Model này thống nhất osmosis ở cell với movement water trong tissue.
 
-## 6. Transpiration và climate
+## 7. Root uptake và Casparian strip
 
-Temperature, humidity, wind và light ảnh hưởng transpiration.
+Water/mineral vào root qua epidermis/root hair, đi qua cortex tới vascular cylinder.
 
-Không khí khô làm water-potential gradient từ leaf ra atmosphere lớn hơn, tăng water loss.
+**Casparian strip** ở endodermis chặn apoplastic flow và buộc material đi qua membrane chọn lọc trước khi vào xylem.
 
-Vì vậy plant physiology gắn trực tiếp weather và climate.
+Đây là selective membrane transport được phóng lên tissue architecture: plant không muốn mọi ion trong soil đi tự do vào vascular system.
 
-## 7. Phloem: sugar đi từ source tới sink
+## 8. Mineral nutrition
 
-Photosynthesis tạo carbohydrate ở leaf. Nhưng root, fruit, seed và growing tissue cũng cần carbon.
+Plant cần N, P, K, Mg, Fe và nhiều element khác. “Plant lấy thức ăn từ đất” là cách nói sai; carbon biomass chủ yếu từ CO₂, còn đất cung cấp water và mineral nutrient.
 
-**Phloem (사부)** transport sugar từ **source** tới **sink**.
+Nitrogen thường phải ở form như nitrate/ammonium để uptake. Microbe trong nitrogen cycle ảnh hưởng availability, nối plant physiology với soil ecology.
 
-Pressure-flow model: sucrose loading làm water đi vào phloem bằng osmosis, tăng pressure; ở sink sugar được unload, pressure thấp hơn; pressure difference đẩy sap.
+## 9. Mycorrhiza: root không làm việc một mình
 
-Ta lại thấy gradient tạo bulk flow, nhưng lần này ở tissue transport.
+Fungal mycorrhiza tăng effective surface area và giúp uptake phosphorus/water; plant cung cấp carbon compound cho fungus.
 
-## 8. Photosynthesis ở level leaf
+Đây là mutualistic network giữa organism thuộc lineage khác.
 
-Chloroplast-level photosynthesis đã học ở metabolism. Ở whole leaf scale, photosynthesis còn phụ thuộc architecture.
+Plant physiology thực tế phụ thuộc community ecology.
 
-Leaf phải đủ mỏng để CO₂ diffusion không quá xa, đủ area để capture light, và có vein để supply water/export sugar.
+## 10. Stomata: cánh cửa phải chọn giữa CO₂ và water
 
-Structure–function relationship xuất hiện từ organelle lên organ.
+**Stoma (khí khổng / 기공)** là pore được điều khiển bởi guard cell.
 
-## 9. Plant hormone: multicellular coordination không cần nervous system kiểu animal
+CO₂ cần vào leaf cho photosynthesis, nhưng mở pore cũng làm water vapor thoát. Vì vậy stomatal control là trade-off.
 
-Plant không có neuron network như animal nhưng vẫn communication bằng hormone và electrical/chemical signal.
+Guard cell thay ion concentration → water movement → turgor → pore opening/closing.
 
-**Auxin** ảnh hưởng elongation và directional growth.
+Membrane transport, osmosis và hormone gặp nhau ở một structure nhỏ.
 
-**Abscisic acid (ABA)** liên quan drought response và stomatal closure.
+## 11. Transpiration vừa cost vừa benefit
 
-**Ethylene** tham gia fruit ripening và stress response.
+Water loss qua transpiration có cost desiccation, nhưng cũng:
 
-**Gibberellin** ảnh hưởng growth và germination.
+- kéo water/mineral qua xylem;
+- làm mát leaf;
+- tạo water flow cần cho nutrient distribution.
 
-Điểm quan trọng là hormone không có “một chức năng duy nhất”; effect phụ thuộc tissue, concentration và interaction với hormone khác.
+Evolution phải balance chứ không thể “đóng stomata hoàn toàn để tiết kiệm nước”.
 
-## 10. Tropism: growth tạo movement
+## 12. C3, C4 và CAM
 
-Plant không chạy khỏi light nhưng có thể thay growth direction.
+C3 plant fix CO₂ trực tiếp qua Calvin cycle. Khi hot/dry, stomata đóng làm CO₂ giảm và photorespiration tăng.
 
-**Phototropism** làm shoot bend toward light. Auxin distribution khác nhau hai phía stem tạo differential elongation.
+C4 plant tách carbon fixation giữa cell type, concentrate CO₂ quanh Rubisco. CAM plant tách theo time: stomata mở ban đêm, store carbon rồi dùng ban ngày.
 
-**Gravitropism** giúp root và shoot định hướng theo gravity.
+C4/CAM là adaptation giải trade-off CO₂–water theo cách khác nhau.
 
-Movement ở plant thường là consequence của differential growth hoặc turgor change, không phải muscle contraction.
+## 13. Phloem: vận chuyển sugar từ source tới sink
 
-## 11. Meristem và continuous development
+**Phloem (체관부)** transport sucrose và molecule khác giữa **source** (nơi export carbon, thường mature leaf) và **sink** (root, fruit, developing leaf, storage organ).
 
-Plant giữ **meristem** chứa dividing cell ở shoot/root tip.
+Pressure-flow hypothesis: sugar loading giảm water potential, water vào từ xylem tạo pressure; bulk flow đẩy sap tới sink, nơi sugar unloaded.
 
-Nhờ vậy plant có indeterminate growth ở nhiều species: body plan tiếp tục mở rộng trong đời.
+Xylem chủ yếu tension-driven water column; phloem pressure-driven translocation. Hai network tương tác.
 
-Điều này khác nhiều animal có body plan xác định sớm hơn.
+## 14. Plant hormone: control không cần nervous system
 
-Developmental strategy phản ánh lifestyle cố định tại chỗ và nhu cầu liên tục tìm resource.
+Plant dùng chemical signal như auxin, cytokinin, gibberellin, abscisic acid, ethylene, jasmonate và nhiều molecule khác.
 
-## 12. Plant reproduction nối genetics với ecology
+Hormone không có “một chức năng duy nhất”. Effect phụ thuộc concentration, tissue, developmental stage và interaction với hormone khác.
 
-Flowering plant tạo gamete qua meiosis, fertilization tạo embryo trong seed.
+## 15. Auxin và tropism
 
-Flower structure phối hợp pollen transfer, fertilization và seed formation.
+Auxin distribution không đều có thể làm cell elongation khác nhau giữa hai phía organ, tạo bending.
 
-Pollinator interaction tạo coevolution. Fruit có thể recruit animal để disperse seed.
+Trong phototropism của shoot, light direction được sensed và auxin redistribution góp phần làm side tối elongate khác, shoot cong về light.
 
-Reproduction vì thế không chỉ genetics; nó nằm trong ecological network.
+Plant không “nhìn thấy ánh sáng rồi quyết định quay”; behavior emergent từ sensing + hormone + growth differential.
 
-## 13. C3, C4 và CAM: adaptation của carbon fixation
+## 16. Abscisic acid và drought response
 
-Rubisco có thể bind O₂ thay vì CO₂, gây photorespiration.
+Khi water stress, ABA signal góp phần làm stomata close và thay gene expression.
 
-C4 plant spatially concentrate CO₂ quanh Rubisco; CAM plant temporally separate CO₂ uptake và Calvin-cycle processing, mở stomata chủ yếu ban đêm để tiết kiệm water.
+Đóng stomata giảm water loss nhưng cũng giảm CO₂ uptake/photosynthesis. Stress response luôn có trade-off metabolic.
 
-Đây là ví dụ evolution tạo alternative physiological strategy dưới climate pressure.
+## 17. Photoperiod và circadian clock
 
-## 14. Plant–microbe interaction
+Plant đo day length qua light receptor và internal clock để điều chỉnh flowering, dormancy hoặc growth.
 
-Root không sống một mình. Mycorrhizal fungi tăng nutrient acquisition đổi lại carbon. Nitrogen-fixing bacteria ở một số plant cung cấp usable nitrogen.
+Circadian rhythm cho phép anticipation: gene expression thay trước sunrise theo clock, không chỉ phản ứng sau khi light xuất hiện.
 
-Plant organism vì thế thực chất nằm trong network với microorganism.
+Time là một dimension của regulation.
 
-Microbiology và plant biology nối trực tiếp ở rhizosphere.
+## 18. Flower: reproductive structure được tổ chức theo whorl
 
-## 15. Từ plant sang animal: cùng bài toán, lời giải khác
+Flower thường gồm sepal, petal, stamen và carpel, nhưng diversity rất lớn.
 
-Plant và animal đều cần transport, gas exchange, nutrient distribution và signaling. Nhưng strategy khác nhau.
+Developmental gene network quyết định organ identity; mutation regulatory gene có thể biến loại organ này thành loại khác.
 
-Plant dùng xylem/phloem, turgor và growth response. Animal thường có circulation nhanh hơn, muscle-based movement và nervous system để phản ứng nhanh.
+Plant form nối trực tiếp molecular genetics với morphology.
 
-Câu hỏi tiếp theo là: **một animal body giữ internal environment ổn định trong khi tissue tiêu thụ oxygen, nutrient và tạo waste như thế nào?**
+## 19. Pollination khác fertilization
 
-Tiếp tục với [[01_animal_physiology_and_homeostasis]].
+**Pollination** là transfer pollen tới receptive structure. **Fertilization** là fusion gamete sau khi pollen tube đưa sperm tới ovule.
+
+Hai process không đồng nghĩa.
+
+Pollen giải bài toán đưa male gamete trên land mà không cần swimming through external water.
+
+## 20. Seed và fruit
+
+Seed chứa embryo + nutrient reserve/protective coat; giúp dormancy và dispersal.
+
+Fruit phát triển từ ovary/associated tissue ở flowering plant và hỗ trợ seed protection/dispersal.
+
+Dormancy cho phép reproduction tách khỏi immediate environment: seed đợi condition phù hợp mới germinate.
+
+## 21. Double fertilization ở angiosperm
+
+Một sperm fertilize egg tạo zygote; sperm khác fusion với central cell tạo endosperm thường triploid.
+
+Endosperm trở thành nutrient tissue cho embryo.
+
+Đây là innovation đặc trưng flowering plant.
+
+## 22. Plant defense
+
+Plant không chạy khỏi herbivore/pathogen nhưng có structural barrier, toxin, secondary metabolite và inducible immune response.
+
+Damage có thể kích hoạt jasmonate signaling; pathogen pattern activate immune pathway.
+
+Defense cũng có cost energy/growth, tạo trade-off.
+
+## 23. Case study: vì sao cây héo vào trưa nóng rồi hồi lại chiều?
+
+Khi temperature/light cao, transpiration tăng. Nếu water loss qua leaf tạm thời vượt uptake từ root, turgor giảm và leaf wilt.
+
+Khi condition dịu hoặc stomata close, water balance hồi phục.
+
+Héo tạm thời không nhất thiết root “thiếu nước hoàn toàn”; nó là dynamic imbalance trong hydraulic flow.
+
+## 24. Case study: girdling làm cây chết như thế nào?
+
+Nếu bóc vòng bark chứa phloem quanh trunk nhưng xylem còn, water có thể vẫn lên leaf một thời gian. Tuy nhiên sugar từ leaf không xuống root, root dần thiếu carbon và chết; sau đó water uptake collapse.
+
+Experiment này cho thấy xylem/phloem có function khác và organism phụ thuộc source–sink coupling.
+
+## 25. Common misconceptions
+
+“Plant lấy food từ soil” sai; carbon biomass chủ yếu từ CO₂.
+
+“Root hút water bằng pump mạnh đẩy lên cây” không phải mechanism chính ở tree cao.
+
+“Plant không signal vì không có neuron” sai.
+
+“Photosynthesis chỉ xảy ra ban ngày còn respiration chỉ ban đêm” sai; plant respiration diễn ra liên tục, rate tùy condition.
+
+“Stomata càng mở càng tốt cho photosynthesis” bỏ qua water trade-off.
+
+## 26. Bridge: multicellularity ở animal giải cùng bài toán bằng architecture khác
+
+Plant dùng xylem/phloem và growth modular. Animal di chuyển nhiều hơn, metabolism thường cao hơn và dùng internal circulation, gas-exchange organ, kidney, nervous/endocrine control.
+
+[[01_animal_physiology_and_homeostasis]] sẽ cho thấy cùng principle gradient, diffusion, bulk flow và feedback được tái sử dụng trong animal body.
+
+> **Mental model cuối chapter:** plant là hệ transport và control được xây quanh trade-off giữa carbon gain và water loss. Chemistry của water, membrane transport, hormone signaling, evolution và ecology đều hội tụ trong physiology của một chiếc lá hay một root.
