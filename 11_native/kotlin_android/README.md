@@ -18,6 +18,20 @@ Bốn file chính là **learning spine**: chúng giữ thứ tự Beginner → I
 
 [`coverage_audit.md`](coverage_audit.md) là ma trận coverage và checklist dùng cho những vòng update tiếp theo.
 
+## Depth Labs — tăng độ sâu reasoning
+
+Sau khi đã đọc các file chính và casebook tương ứng, dùng [`depth_labs/README.md`](depth_labs/README.md) để đào sâu correctness ở những boundary khó nhất. Depth Labs không mở thêm domain mới; chúng đi sâu vào invariant, race condition, transaction semantics, cancellation, stale state, consistency, effect lifetime, performance evidence, failure injection, compatibility, artifact forensics và API/ABI evolution.
+
+Các lab hiện có:
+
+1. [`depth_labs/01_architecture_invariants_boundary_reasoning.md`](depth_labs/01_architecture_invariants_boundary_reasoning.md) — architecture invariant, state ownership, stale snapshot, transaction boundary và ambiguous outcome.
+2. [`depth_labs/02_offline_sync_consistency_race_conditions.md`](depth_labs/02_offline_sync_consistency_race_conditions.md) — sync correctness, outbox, idempotency, ordering, conflict, cursor, account isolation và failure injection.
+3. [`depth_labs/03_coroutine_flow_concurrency_failure_semantics.md`](depth_labs/03_coroutine_flow_concurrency_failure_semantics.md) — Job tree, cancellation, supervision, backpressure, stream lifetime và concurrency race.
+4. [`depth_labs/04_compose_runtime_state_performance_semantics.md`](depth_labs/04_compose_runtime_state_performance_semantics.md) — Snapshot state, identity, effect lifetime, phase invalidation, semantics và performance reasoning.
+5. [`depth_labs/05_testing_reliability_observability_failure_injection.md`](depth_labs/05_testing_reliability_observability_failure_injection.md) — invariant-based testing, migration/rollback, race test, Macrobenchmark, telemetry, SLI/SLO và rollout guardrail.
+6. [`depth_labs/06_build_compatibility_startup_release_forensics.md`](depth_labs/06_build_compatibility_startup_release_forensics.md) — Gradle/variant/R8, API compatibility, startup critical path và release artifact forensics.
+7. [`depth_labs/07_sdk_native_boundary_api_evolution_consumer_safety.md`](depth_labs/07_sdk_native_boundary_api_evolution_consumer_safety.md) — public API/ABI, SDK consumer safety, JNI/native ownership, compatibility và publishing evolution.
+
 ## Production Casebook — nối kiến thức thành hệ thống thực tế
 
 Sau level Master, đọc [`production_casebook/README.md`](production_casebook/README.md) và các case theo thứ tự. Casebook không lặp lại syntax/API đã giải thích mà tập trung vào boundary, failure mode, system contract và trade-off của một app production.
@@ -76,15 +90,16 @@ Một vòng học hoàn chỉnh là:
 → Production Casebook 01 → 08: architecture + compiler/runtime
 → Production Casebook 09 → 14: Android platform + device/system integration
 → Production Casebook 15 → 20: build + distribution + native + compatibility + startup + SDK authoring
+→ Depth Labs 01 → 07: invariant + race + failure + compatibility reasoning
 → tự thiết kế, build, package, release và giải thích trade-off của một production app
 ```
 
-Khi học Casebook, không nên chỉ copy code. Với mỗi case hãy tự trả lời: state owner là ai; source of truth ở đâu; process/thread/lifecycle nào đang chạy; failure nào retry được; permission/capability nào có thể biến mất; artifact nào thật sự tới device; native/resource/build boundary nào có thể leak; dữ liệu nào nhạy cảm; operation nào cần idempotency; test nào chứng minh invariant; release gặp lỗi thì rollback hoặc disable bằng cách nào. Khi gặp issue “magic” ở Kotlin/Gradle/runtime, dùng Case 08–09 và 15–18 để hạ xuống tầng compiler/JVM/ART/Binder/build/artifact/platform contract thay vì đoán.
+Khi học Casebook và Depth Labs, không nên chỉ copy code. Với mỗi case hãy tự trả lời: state owner là ai; source of truth ở đâu; process/thread/lifecycle nào đang chạy; invariant nào bắt buộc luôn đúng; failure nào retry được; result nào có thể stale; operation nào có ambiguous outcome; permission/capability nào có thể biến mất; artifact nào thật sự tới device; native/resource/build boundary nào có thể leak; dữ liệu nào nhạy cảm; operation nào cần idempotency; test nào chứng minh invariant; release gặp lỗi thì rollback hoặc disable bằng cách nào. Khi gặp issue “magic” ở Kotlin/Gradle/runtime, dùng Case 08–09, 15–18 và Depth Labs để hạ xuống tầng compiler/JVM/ART/Binder/build/artifact/platform contract thay vì đoán.
 
 ## Phạm vi đã cover
 
 Bộ tài liệu không chỉ dạy syntax Kotlin. Nó nối Kotlin language với Android runtime, lifecycle, Compose lẫn XML/View, Gradle/AGP, coroutine/Flow, persistence/networking, DI, navigation, background work, testing, performance, security, build/release, AAB/delivery, native NDK/JNI, platform compatibility, startup, library authoring, legacy migration, system components, hardware capability và production architecture.
 
-Các gap thường bị tutorial bỏ qua đã được cover rõ hơn: process death, Activity Result API, Context lifetime, storage/URI, serialization boundary, coroutine cancellation, Flow backpressure, Compose Snapshot/identity/effect, retry/idempotency, token refresh race, R8/signing, source-set/manifest merge, API-level migration, foreground/background policy, database migration, offline mutation queue, conflict resolution, backup/privacy, dependency governance, SBOM, observability, performance budget, staged rollout/rollback, Kotlin/JVM abstraction leak, Android process/Binder/MessageQueue, permission/capability migration, adaptive/accessibility UI, camera/media/BLE integration, cold-start system surface, split delivery, ABI/page-size compatibility, startup critical path, SDK binary compatibility và long-term maintenance.
+Các gap thường bị tutorial bỏ qua đã được cover rõ hơn: process death, Activity Result API, Context lifetime, storage/URI, serialization boundary, coroutine cancellation, Flow backpressure, Compose Snapshot/identity/effect, retry/idempotency, token refresh race, R8/signing, source-set/manifest merge, API-level migration, foreground/background policy, database migration, offline mutation queue, conflict resolution, backup/privacy, dependency governance, SBOM, observability, performance budget, staged rollout/rollback, Kotlin/JVM abstraction leak, Android process/Binder/MessageQueue, permission/capability migration, adaptive/accessibility UI, camera/media/BLE integration, cold-start system surface, split delivery, ABI/page-size compatibility, startup critical path, SDK binary compatibility, architecture invariant, stale-state race, ambiguous network outcome, sync consistency, deterministic failure injection và long-term maintenance.
 
-Mục tiêu cuối cùng của bộ note không phải để người đọc nhớ mọi API, mà để khi gặp một requirement mới có thể tự suy luận theo các trục **lifetime → ownership → source of truth → execution context → capability → build variant → artifact → concurrency → failure → compatibility → security → observability → distribution/release**, và khi cần có thể hạ xuống tầng compiler/runtime/platform/native/build system để giải thích behavior thay vì dựa vào “magic”.
+Mục tiêu cuối cùng của bộ note không phải để người đọc nhớ mọi API, mà để khi gặp một requirement mới có thể tự suy luận theo các trục **invariant → lifetime → ownership → source of truth → execution context → capability → build variant → artifact → concurrency → ordering → failure → compatibility → security → observability → distribution/release**, và khi cần có thể hạ xuống tầng compiler/runtime/platform/native/build system để giải thích behavior thay vì dựa vào “magic”.
