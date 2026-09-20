@@ -10,7 +10,7 @@ Nếu chỉ dùng mô tả như “phía đông ngọn núi” hoặc “gần b
 
 ## Trái Đất không phải hình cầu hoàn hảo
 
-Trái Đất gần một **khối cầu dẹt (oblate spheroid)**: hơi phình ở Xích đạo. Việc lập bản đồ chính xác còn dùng **ellipsoid tham chiếu** và **mốc trắc địa (geodetic datum / 측지 기준계)**. GPS phổ biến dùng WGS 84. Nếu hai bộ dữ liệu dùng mốc trắc địa khác nhau nhưng bị ghép như thể cùng hệ, đối tượng có thể lệch vị trí.
+Trái Đất gần một **khối cầu dẹt (oblate spheroid)**: hơi phình ở Xích đạo. Việc lập bản đồ chính xác còn dùng **mặt elipxoit tham chiếu (reference ellipsoid)** và **mốc trắc địa (geodetic datum / 측지 기준계)**. GPS phổ biến dùng WGS 84. Nếu hai bộ dữ liệu dùng mốc trắc địa khác nhau nhưng bị ghép như thể cùng hệ, đối tượng có thể lệch vị trí.
 
 Trong GIS, đây là lỗi kinh điển: tọa độ nhìn có vẻ hợp lý nhưng các lớp bản đồ không khớp nhau. Vì thế luôn cần biết cả giá trị tọa độ lẫn **hệ quy chiếu tọa độ (CRS — Coordinate Reference System / 좌표참조체계)**.
 
@@ -27,9 +27,9 @@ a=\sin^2\left(\frac{\Delta\varphi}{2}\right)+\cos\varphi_1\cos\varphi_2\sin^2\le
 c=2\arctan2(\sqrt a,\sqrt{1-a}),\qquad d=Rc
 \]
 
-\(\varphi\) là vĩ độ theo radian, \(\lambda\) là kinh độ, \(R\) là bán kính Trái Đất xấp xỉ. Mô hình mặt cầu đủ tốt cho nhiều ứng dụng; trắc địa chính xác cao dùng ellipsoid.
+\(\varphi\) là vĩ độ theo radian, \(\lambda\) là kinh độ, \(R\) là bán kính Trái Đất xấp xỉ. Mô hình mặt cầu đủ tốt cho nhiều ứng dụng; trắc địa chính xác cao dùng elipxoit (ellipsoid).
 
-Mối liên hệ với công nghệ thông tin rất trực tiếp: ứng dụng di động “tìm địa điểm gần tôi”, **hàng rào địa lý (geofencing)**, lọc sơ bộ tuyến đường, cơ sở dữ liệu không gian và logistics đều cần mô hình khoảng cách phù hợp. Dùng khoảng cách Euclid trực tiếp trên vĩ độ–kinh độ có thể tạo sai số đáng kể ở phạm vi lớn.
+Mối liên hệ với công nghệ thông tin rất trực tiếp: ứng dụng di động “tìm địa điểm gần tôi”, **hàng rào địa lý (geofencing)**, lọc sơ bộ tuyến đường, cơ sở dữ liệu không gian và hậu cần (logistics) đều cần mô hình khoảng cách phù hợp. Dùng khoảng cách Euclid trực tiếp trên vĩ độ–kinh độ có thể tạo sai số đáng kể ở phạm vi lớn.
 
 ## Trái Đất quay, giờ Mặt Trời địa phương và múi giờ
 

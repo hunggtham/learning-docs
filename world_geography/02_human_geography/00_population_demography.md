@@ -44,7 +44,7 @@ Cơ cấu tuổi ảnh hưởng nhu cầu trường học, thị trường lao �
 
 ## Liên hệ với IT và kinh doanh
 
-**Phân tích vị trí (location intelligence)** dùng dữ liệu điều tra dân số hoặc raster dân số để chọn địa điểm kinh doanh, ước lượng thị trường, thiết kế mạng giao hàng và lập kế hoạch dịch vụ công. Tuy nhiên dữ liệu tổng hợp có rủi ro riêng tư và có thể dẫn đến **ngụy biện sinh thái (ecological fallacy)**: “khu vực thu nhập cao” không có nghĩa mọi cư dân đều có thu nhập cao.
+**Phân tích vị trí (location intelligence)** dùng dữ liệu điều tra dân số hoặc dữ liệu lưới (raster) dân số để chọn địa điểm kinh doanh, ước lượng thị trường, thiết kế mạng giao hàng và lập kế hoạch dịch vụ công. Tuy nhiên dữ liệu tổng hợp có rủi ro riêng tư và có thể dẫn đến **ngụy biện sinh thái (ecological fallacy)**: “khu vực thu nhập cao” không có nghĩa mọi cư dân đều có thu nhập cao.
 
 ## Mô hình tư duy
 

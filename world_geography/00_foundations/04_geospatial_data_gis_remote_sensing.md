@@ -4,11 +4,11 @@
 
 Khi câu hỏi chứa “ở đâu”, “gần cái gì”, “nằm trong vùng nào”, “đường nào tối ưu” hoặc “những khu vực nào chồng lấn”, cơ sở dữ liệu thông thường chưa đủ thuận tiện. **GIS — Hệ thống thông tin địa lý (Geographic Information System / 지리정보시스템)** kết hợp dữ liệu, hình học, phân tích và trực quan hóa để làm việc với các quan hệ không gian.
 
-## Dữ liệu vector và raster
+## Dữ liệu vectơ và raster
 
-Hai cách biểu diễn cơ bản là **vector** và **raster**. Vector dùng điểm, đường và đa giác để biểu diễn đối tượng có ranh giới tương đối rõ như trạm, đường, thửa đất hoặc quận. Raster chia không gian thành các ô lưới; mỗi ô chứa một giá trị như độ cao, nhiệt độ hoặc mức phản xạ điện từ.
+Hai cách biểu diễn cơ bản là **dữ liệu vectơ (vector)** và **dữ liệu raster (raster)**. Dữ liệu vectơ dùng điểm, đường và đa giác để biểu diễn đối tượng có ranh giới tương đối rõ như trạm, đường, thửa đất hoặc quận. Dữ liệu raster chia không gian thành các ô lưới; mỗi ô chứa một giá trị như độ cao, nhiệt độ hoặc mức phản xạ điện từ.
 
-Vector phù hợp với quan hệ tô-pô và việc nhận diện từng đối tượng. Raster phù hợp với **trường liên tục (continuous field)** và mô hình hóa theo từng ô. Nhiều quy trình xử lý chuyển qua lại giữa hai dạng; lựa chọn không phải “cái nào hiện đại hơn” mà phụ thuộc bản chất hiện tượng.
+Dữ liệu vectơ phù hợp với quan hệ tô-pô và việc nhận diện từng đối tượng. Dữ liệu raster phù hợp với **trường liên tục (continuous field)** và mô hình hóa theo từng ô. Nhiều quy trình xử lý chuyển qua lại giữa hai dạng; lựa chọn không phải “cái nào hiện đại hơn” mà phụ thuộc bản chất hiện tượng.
 
 ## Hình học, thuộc tính và quan hệ không gian
 
@@ -48,7 +48,7 @@ Cảm biến có điểm ảnh 30 m không phải lúc nào cũng “kém hơn�
 
 ## GIS trong công nghệ thông tin
 
-Một hệ thống GIS phổ biến có thể gồm cơ sở dữ liệu không gian, máy chủ ô bản đồ, dịch vụ mã hóa địa lý và bản đồ phía giao diện người dùng. Cơ sở dữ liệu lưu hình học cùng chỉ mục không gian; phần máy chủ chạy truy vấn không gian; ô bản đồ hoặc **ô vector (vector tile)** giảm dữ liệu truyền; phía trình duyệt hiển thị theo mức phóng đại. Khi hệ thống có hàng triệu đối tượng, kiến trúc cần phân vùng dữ liệu, đơn giản hóa hình học và lưu đệm theo không gian.
+Một hệ thống GIS phổ biến có thể gồm cơ sở dữ liệu không gian, máy chủ ô bản đồ, dịch vụ mã hóa địa lý và bản đồ phía giao diện người dùng. Cơ sở dữ liệu lưu hình học cùng chỉ mục không gian; phần máy chủ chạy truy vấn không gian; ô bản đồ hoặc **ô vectơ (vector tile)** giảm dữ liệu truyền; phía trình duyệt hiển thị theo mức phóng đại. Khi hệ thống có hàng triệu đối tượng, kiến trúc cần phân vùng dữ liệu, đơn giản hóa hình học và lưu đệm theo không gian.
 
 ## Mô hình tư duy
 

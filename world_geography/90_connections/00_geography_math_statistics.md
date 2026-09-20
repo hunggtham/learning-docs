@@ -2,7 +2,7 @@
 
 ## Hình học là ngôn ngữ của vị trí
 
-Tọa độ, khoảng cách, diện tích, phương hướng và phép chiếu đều là các khái niệm hình học. Ở phạm vi địa phương nhỏ có thể xem gần như mặt phẳng, hình học Euclid thường đủ tốt; trên bề mặt toàn cầu cần hình học cầu hoặc ellipsoid. Chọn sai mô hình hình học có thể làm khoảng cách hoặc diện tích sai dù mã chương trình chạy đúng.
+Tọa độ, khoảng cách, diện tích, phương hướng và phép chiếu đều là các khái niệm hình học. Ở phạm vi địa phương nhỏ có thể xem gần như mặt phẳng, hình học Euclid thường đủ tốt; trên bề mặt toàn cầu cần hình học cầu hoặc mặt elipxoit (ellipsoid). Chọn sai mô hình hình học có thể làm khoảng cách hoặc diện tích sai dù mã chương trình chạy đúng.
 
 Khoảng cách Euclid trên mặt phẳng giữa hai điểm là:
 
@@ -14,7 +14,7 @@ Nhưng bài toán địa lý có thể cần khoảng cách vòng tròn lớn tr
 
 ## Quy mô và tư duy về đơn vị
 
-Tỷ lệ bản đồ là một tỷ số. Mật độ là lượng trên diện tích. Gradient là mức thay đổi trên khoảng cách. Đây là **suy luận thứ nguyên (dimensional reasoning)**: nếu dân số tăng gấp đôi nhưng diện tích cũng tăng gấp đôi, mật độ không đổi. Theo dõi đơn vị giúp phát hiện nhiều sai lầm trước cả khi tính toán.
+Tỷ lệ bản đồ là một tỷ số. Mật độ là lượng trên diện tích. **Độ dốc biến thiên (gradient)** là mức thay đổi trên khoảng cách. Đây là **suy luận thứ nguyên (dimensional reasoning)**: nếu dân số tăng gấp đôi nhưng diện tích cũng tăng gấp đôi, mật độ không đổi. Theo dõi đơn vị giúp phát hiện nhiều sai lầm trước cả khi tính toán.
 
 ## Thống kê không gian khác thống kê thông thường ở tính phụ thuộc
 
@@ -44,7 +44,7 @@ Thu nhập trung bình, tỷ lệ bệnh hoặc kết quả bầu cử có thể
 
 ## Tối ưu hóa vị trí
 
-Chọn vị trí cơ sở, lập tuyến và vùng phục vụ là các bài toán tối ưu hóa. Ví dụ **p-median** tìm vị trí của \(p\) cơ sở để giảm tổng khoảng cách có trọng số theo nhu cầu; **set covering** tìm số cơ sở tối thiểu để phủ nhu cầu trong một ngưỡng. Đây là cầu nối trực tiếp với **Nghiên cứu vận hành (Operations Research)**.
+Chọn vị trí cơ sở, lập tuyến và vùng phục vụ là các bài toán tối ưu hóa. Ví dụ **bài toán p-median** tìm vị trí của \(p\) cơ sở để giảm tổng khoảng cách có trọng số theo nhu cầu; **bài toán phủ tập (set covering)** tìm số cơ sở tối thiểu để phủ nhu cầu trong một ngưỡng. Đây là cầu nối trực tiếp với **Nghiên cứu vận hành (Operations Research)**.
 
 ## Lý thuyết đồ thị
 

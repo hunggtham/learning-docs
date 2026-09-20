@@ -12,7 +12,7 @@ Một vùng nên được đọc theo các lớp có quan hệ nhân quả. Nề
 
 ## So sánh mà không đồng nhất hóa
 
-Nhãn vùng giúp suy luận nhưng dễ tạo định kiến. “Châu Phi”, “châu Âu”, “Trung Đông” hay “Mỹ Latinh” đều chứa mức đa dạng rất lớn. Một nhận định đúng ở quy mô lục địa có thể sai khi thu hẹp xuống tiểu vùng. Khi một chapter viết “vùng này thường…”, hãy hiểu đó là một mẫu có ngoại lệ chứ không phải đặc tính của mọi nơi.
+Nhãn vùng giúp suy luận nhưng dễ tạo định kiến. “Châu Phi”, “châu Âu”, “Trung Đông” hay “Mỹ Latinh” đều chứa mức đa dạng rất lớn. Một nhận định đúng ở quy mô lục địa có thể sai khi thu hẹp xuống tiểu vùng. Khi một chương viết “vùng này thường…”, hãy hiểu đó là một mẫu có ngoại lệ chứ không phải đặc tính của mọi nơi.
 
 ## Phương pháp năm lớp
 
@@ -24,6 +24,6 @@ Có thể dùng năm lớp để đọc bất kỳ vùng nào:
 4. **Khung mạng lưới:** cảng, hành lang, thương mại, kết nối số.
 5. **Khung ràng buộc và chuyển đổi:** hiểm họa, khí hậu, nhân khẩu, thể chế và áp lực địa chính trị.
 
-Các chapter sau dùng logic này nhưng không lặp lại thành khuôn mẫu máy móc.
+Các chương sau dùng logic này nhưng không lặp lại thành khuôn mẫu máy móc.
 
 Xem thêm: [Tư duy địa lý](../00_foundations/00_geographical_thinking.md), [Địa lý kinh tế](../02_human_geography/05_economic_geography.md).

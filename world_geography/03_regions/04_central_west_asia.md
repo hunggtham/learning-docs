@@ -4,7 +4,7 @@
 
 Trung Á và Tây Á có các vùng khô và bán khô rộng lớn xen hệ thống núi cùng các hành lang sông, ốc đảo và đất màu mỡ. Vì nước khan hiếm, khu định cư không phân bố đều mà tập trung quanh thung lũng sông, ốc đảo, chân núi và bờ biển. Đây là một nguyên lý địa lý quan trọng: nơi tài nguyên thiết yếu phân bố không đều, dân cư và quyền lực thường tập trung tại các nút kiểm soát tài nguyên đó.
 
-Hoang mạc không có nghĩa là trống rỗng. Các ốc đảo và tuyến caravan trong lịch sử từng tạo nhiều nút đô thị quan trọng.
+Hoang mạc không có nghĩa là trống rỗng. Các ốc đảo và tuyến lữ hành–thương mại (caravan route) trong lịch sử từng tạo nhiều nút đô thị quan trọng.
 
 ## Núi như những tháp nước tự nhiên
 

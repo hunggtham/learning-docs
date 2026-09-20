@@ -14,7 +14,7 @@ Ngược lại, **nội nhiệt Trái Đất (internal heat / 지구 내부 열)
 
 ## Chu trình vật chất và định luật bảo toàn
 
-Nước, carbon, nitrogen và nhiều nguyên tố không biến mất khỏi hệ một cách tùy ý; chúng chuyển giữa các **kho chứa (reservoir)**. Đây là ứng dụng của nguyên lý bảo toàn. Ví dụ, chu trình nước gồm bốc hơi, ngưng tụ, giáng thủy, thấm, dòng chảy mặt và lưu trữ. Khi đô thị hóa phủ bê tông, tổng lượng nước trong hệ Trái Đất gần như không đổi, nhưng cách phân chia dòng nước thay đổi: thấm giảm, dòng chảy mặt tăng và đỉnh lũ có thể cao hơn.
+Nước, cacbon (carbon), nitơ (nitrogen) và nhiều nguyên tố không biến mất khỏi hệ một cách tùy ý; chúng chuyển giữa các **kho chứa (reservoir)**. Đây là ứng dụng của nguyên lý bảo toàn. Ví dụ, chu trình nước gồm bốc hơi, ngưng tụ, giáng thủy, thấm, dòng chảy mặt và lưu trữ. Khi đô thị hóa phủ bê tông, tổng lượng nước trong hệ Trái Đất gần như không đổi, nhưng cách phân chia dòng nước thay đổi: thấm giảm, dòng chảy mặt tăng và đỉnh lũ có thể cao hơn.
 
 Trong mô hình hóa, một kho chứa thường được mô tả bằng cân bằng khối lượng:
 
@@ -22,7 +22,7 @@ Trong mô hình hóa, một kho chứa thường được mô tả bằng cân b
 \Delta S = I - O
 \]
 
-Trong đó \(S\) là lượng lưu trữ, \(I\) là dòng vào và \(O\) là dòng ra trong khoảng thời gian xét. Quan hệ đơn giản này xuất hiện trong hồ chứa, nước ngầm, ngân sách carbon, quản lý hàng tồn kho và cả hệ thống hàng đợi trong tin học: trạng thái tăng khi đầu vào lớn hơn đầu ra.
+Trong đó \(S\) là lượng lưu trữ, \(I\) là dòng vào và \(O\) là dòng ra trong khoảng thời gian xét. Quan hệ đơn giản này xuất hiện trong hồ chứa, nước ngầm, ngân sách cacbon, quản lý hàng tồn kho và cả hệ thống hàng đợi trong tin học: trạng thái tăng khi đầu vào lớn hơn đầu ra.
 
 ## Phản hồi: vì sao hệ không phản ứng tuyến tính đơn giản
 

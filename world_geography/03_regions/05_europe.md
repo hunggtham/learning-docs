@@ -24,7 +24,7 @@ Châu Âu có nhiều đô thị vừa và lớn nằm khá gần nhau thay vì 
 
 ## Chuyển đổi công nghiệp
 
-Các vùng than và đường thủy từng định hình những đai công nghiệp sớm. Phi công nghiệp hóa và chuyển dịch sang dịch vụ làm nhiều thành phố sản xuất cũ đổi chức năng, trong khi logistics và sản xuất công nghệ cao vẫn quan trọng ở nhiều nơi.
+Các vùng than và đường thủy từng định hình những đai công nghiệp sớm. Phi công nghiệp hóa và chuyển dịch sang dịch vụ làm nhiều thành phố sản xuất cũ đổi chức năng, trong khi hậu cần (logistics) và sản xuất công nghệ cao vẫn quan trọng ở nhiều nơi.
 
 ## Hội nhập, biên giới và quy mô
 

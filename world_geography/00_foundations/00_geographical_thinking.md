@@ -16,7 +16,7 @@ Thuật ngữ nền tảng là **tư duy không gian (spatial thinking / 공간�
 
 Khoảng cách hình học chỉ là một cách đo. Trong đời sống, khoảng cách thường được cảm nhận qua **chi phí, thời gian và khả năng tiếp cận**. Hai thành phố cách nhau 500 km nhưng nối bằng đường sắt cao tốc có thể tương tác mạnh hơn hai nơi cách 150 km nhưng bị núi, biên giới hoặc hạ tầng yếu ngăn cách.
 
-Khái niệm **ma sát khoảng cách (friction of distance / 거리 마찰)** mô tả việc mức độ tương tác thường giảm khi chi phí di chuyển tăng. Đây là nền tảng của nhiều **mô hình (model)** trong địa lý, logistics và kinh tế học. Trong công nghệ thông tin, cách nghĩ tương tự xuất hiện ở **độ trễ mạng (network latency)**: máy chủ gần về địa lý thường có thời gian khứ hồi thấp hơn, nhưng định tuyến (routing), cáp biển và kết nối giữa các mạng (peering) có thể khiến khoảng cách mạng khác với khoảng cách trên bản đồ.
+Khái niệm **ma sát khoảng cách (friction of distance / 거리 마찰)** mô tả việc mức độ tương tác thường giảm khi chi phí di chuyển tăng. Đây là nền tảng của nhiều **mô hình (model)** trong địa lý, hậu cần (logistics) và kinh tế học. Trong công nghệ thông tin, cách nghĩ tương tự xuất hiện ở **độ trễ mạng (network latency)**: máy chủ gần về địa lý thường có thời gian khứ hồi thấp hơn, nhưng định tuyến (routing), cáp biển và kết nối giữa các mạng (peering) có thể khiến khoảng cách mạng khác với khoảng cách trên bản đồ.
 
 ## Phân bố: mẫu quan trọng hơn danh sách điểm
 

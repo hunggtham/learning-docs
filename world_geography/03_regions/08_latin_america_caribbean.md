@@ -6,7 +6,7 @@ Mỹ Latinh có tương phản tự nhiên rất lớn: dãy Andes, lưu vực A
 
 ## Phân tầng theo độ cao
 
-Ở vùng nhiệt đới, thay đổi độ cao có thể làm khí hậu đổi nhanh hơn thay đổi vĩ độ. Thành phố vùng cao có thể mát hơn nhiều dù nằm gần Xích đạo. Nông nghiệp trong lịch sử thường phân tầng theo độ cao; giao thông hiện đại làm chuyên môn hóa linh hoạt hơn nhưng gradient sinh–vật lý vẫn quan trọng.
+Ở vùng nhiệt đới, thay đổi độ cao có thể làm khí hậu đổi nhanh hơn thay đổi vĩ độ. Thành phố vùng cao có thể mát hơn nhiều dù nằm gần Xích đạo. Nông nghiệp trong lịch sử thường phân tầng theo độ cao; giao thông hiện đại làm chuyên môn hóa linh hoạt hơn nhưng độ biến thiên sinh–vật lý theo không gian (gradient) vẫn quan trọng.
 
 ## Hệ Amazon
 
@@ -18,7 +18,7 @@ Lưu vực Amazon có lưu lượng sông cực lớn và mức bốc thoát hơ
 
 ## Địa lý hàng hóa
 
-Đậu tương, thịt bò, đồng, lithium, dầu, cà phê và nhiều hàng hóa khác nối vùng với thị trường toàn cầu. Chu kỳ giá có tác động không gian rõ: thành phố mỏ, cảng, đường sắt và thu ngân sách của địa phương có thể cùng tăng hoặc giảm theo chu kỳ hàng hóa.
+Đậu tương, thịt bò, đồng, liti (lithium), dầu, cà phê và nhiều hàng hóa khác nối vùng với thị trường toàn cầu. Chu kỳ giá có tác động không gian rõ: thành phố mỏ, cảng, đường sắt và thu ngân sách của địa phương có thể cùng tăng hoặc giảm theo chu kỳ hàng hóa.
 
 ## Các đảo Caribbean
 

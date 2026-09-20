@@ -26,15 +26,15 @@ Gió tín phong, gió Tây ôn đới và dòng tia là các phần của hoàn 
 
 Không khí ấm có thể chứa nhiều hơi nước hơn trước khi đạt bão hòa. **Độ ẩm tương đối (relative humidity)** phụ thuộc cả lượng hơi nước lẫn nhiệt độ. Khi không khí nguội đến **điểm sương (dew point)**, ngưng tụ có thể xảy ra nếu có hạt nhân ngưng tụ.
 
-Mây thường cần không khí bị nâng lên qua đối lưu, front, địa hình hoặc hội tụ. Khi không khí đi lên, áp suất giảm, khối khí giãn nở và nguội gần theo quá trình đoạn nhiệt.
+Mây thường cần không khí bị nâng lên qua đối lưu, frông, địa hình hoặc hội tụ. Khi không khí đi lên, áp suất giảm, khối khí giãn nở và nguội gần theo quá trình đoạn nhiệt.
 
 ## Mưa địa hình và bóng mưa
 
 Núi buộc không khí ẩm đi lên; sườn đón gió thường mưa nhiều. Sau khi mất bớt hơi ẩm và hạ xuống ở sườn khuất gió, không khí nóng lên đoạn nhiệt và độ ẩm tương đối giảm, tạo **bóng mưa (rain shadow)**. Đây là ví dụ rõ ràng về việc địa lý tự nhiên tạo ra các mẫu phân bố dân cư và nông nghiệp.
 
-## Front và thời tiết vĩ độ trung bình
+## Frông khí quyển và thời tiết vĩ độ trung bình
 
-Khi các khối khí có nhiệt độ và độ ẩm khác nhau gặp nhau, **front khí quyển (weather front)** tạo vùng chênh lệch mạnh. Xoáy thuận vĩ độ trung bình phát triển cùng trường áp suất và động lực dòng tia, thường tạo chuỗi front nóng–front lạnh trong mô hình cổ điển.
+Khi các khối khí có nhiệt độ và độ ẩm khác nhau gặp nhau, **frông khí quyển (weather front)** tạo vùng chênh lệch mạnh. Xoáy thuận vĩ độ trung bình phát triển cùng trường áp suất và động lực dòng tia, thường tạo chuỗi **frông nóng–frông lạnh (warm front–cold front)** trong mô hình cổ điển.
 
 ## Gió mùa
 

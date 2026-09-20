@@ -16,7 +16,7 @@ New Zealand nằm gần ranh giới giữa mảng Thái Bình Dương và mảng
 
 ## Đảo núi lửa cao và đảo san hô vòng
 
-Đảo núi lửa cao có độ cao, suối và đất khác rõ với **đảo san hô vòng (atoll)** thấp. Nước ngầm trên atoll thường tồn tại như một **thấu kính nước ngọt (freshwater lens)** mỏng nổi trên nước mặn, rất nhạy với khai thác quá mức và xâm nhập mặn.
+Đảo núi lửa cao có độ cao, suối và đất khác rõ với **đảo san hô vòng (atoll)** thấp. Nước ngầm trên đảo san hô vòng thường tồn tại như một **thấu kính nước ngọt (freshwater lens)** mỏng nổi trên nước mặn, rất nhạy với khai thác quá mức và xâm nhập mặn.
 
 ## Đại dương không phải khoảng trống giữa các đảo
 
@@ -30,7 +30,7 @@ Nhiều quốc đảo Thái Bình Dương có cao độ thấp, nguồn nước 
 
 ## Xa xôi và chi phí vận tải
 
-Nền kinh tế đảo xa thường chịu chi phí hàng hóa cao vì thị trường nhỏ và khoảng cách lớn. Kinh tế mạng lưới giải thích một phần: lưu lượng ít làm khó đạt quy mô kinh tế, còn tuyến dài tăng nhiên liệu và thời gian. Kết nối số có thể làm giảm một số dạng “xa xôi” đối với dịch vụ, nhưng không thể thay thế logistics vật lý cho thực phẩm, nhiên liệu và vật liệu xây dựng.
+Nền kinh tế đảo xa thường chịu chi phí hàng hóa cao vì thị trường nhỏ và khoảng cách lớn. Kinh tế mạng lưới giải thích một phần: lưu lượng ít làm khó đạt quy mô kinh tế, còn tuyến dài tăng nhiên liệu và thời gian. Kết nối số có thể làm giảm một số dạng “xa xôi” đối với dịch vụ, nhưng không thể thay thế hậu cần vật lý (physical logistics) cho thực phẩm, nhiên liệu và vật liệu xây dựng.
 
 Xem thêm: [Đại dương](../01_physical_geography/05_oceans_coasts.md), [Biến đổi khí hậu](../04_global_systems/00_climate_change.md).
 

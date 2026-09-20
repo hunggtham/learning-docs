@@ -2,7 +2,7 @@
 
 ## Thành phố quan trọng không chỉ vì dân số
 
-Một thành phố có thể không đông dân nhất nhưng vẫn có vai trò vượt trội nếu tập trung tài chính, logistics, thông tin, văn hóa hoặc dịch vụ chuyên môn. **Thành phố toàn cầu (global city / 글로벌 도시)** là một nút trong các mạng xuyên quốc gia, không đơn giản là “siêu đô thị” theo số dân.
+Một thành phố có thể không đông dân nhất nhưng vẫn có vai trò vượt trội nếu tập trung tài chính, hậu cần (logistics), thông tin, văn hóa hoặc dịch vụ chuyên môn. **Thành phố toàn cầu (global city / 글로벌 도시)** là một nút trong các mạng xuyên quốc gia, không đơn giản là “siêu đô thị” theo số dân.
 
 Đây là khác biệt giữa **quy mô (size)** và **tính trung tâm mạng (network centrality)**.
 
@@ -10,7 +10,7 @@ Một thành phố có thể không đông dân nhất nhưng vẫn có vai trò
 
 Trụ sở doanh nghiệp, tuyến hàng không, vận tải biển, tài chính và liên kết dữ liệu tạo mạng liên đô thị. Sức ảnh hưởng của một thành phố phụ thuộc cả năng lực địa phương lẫn vị trí của nó trong mạng. Đây là lý do cảng hoặc trung tâm tài chính có thể có ảnh hưởng vượt xa diện tích lãnh thổ.
 
-Trong lý thuyết đồ thị, tính trung tâm có nhiều cách đo. **Bậc trung tâm (degree centrality)** đo số kết nối trực tiếp; **trung tâm trung gian (betweenness centrality)** đo mức một nút nằm trên các đường đi ngắn; các phép đo kiểu eigenvector coi kết nối tới nút quan trọng có giá trị lớn hơn. Mạng đô thị có trực giác tương tự, dù địa lý thực tế phức tạp hơn đồ thị thuần túy.
+Trong lý thuyết đồ thị, tính trung tâm có nhiều cách đo. **Bậc trung tâm (degree centrality)** đo số kết nối trực tiếp; **trung tâm trung gian (betweenness centrality)** đo mức một nút nằm trên các đường đi ngắn; các phép đo dựa trên **vectơ riêng (eigenvector)** coi kết nối tới nút quan trọng có giá trị lớn hơn. Mạng đô thị có trực giác tương tự, dù địa lý thực tế phức tạp hơn đồ thị thuần túy.
 
 ## Chức năng chỉ huy và điều phối
 
@@ -18,7 +18,7 @@ Các dịch vụ sản xuất cao cấp như luật, tài chính, tư vấn và 
 
 ## Mạng trung tâm–nan hoa và tính dễ tổn thương
 
-Hàng không, logistics và mạng số thường dùng cấu trúc **trung tâm–nan hoa (hub-and-spoke)** để đạt quy mô kinh tế. Nút trung tâm mạnh làm mạng hiệu quả hơn nhưng tạo rủi ro tập trung. Khi thời tiết, đình công hoặc hỏng hạ tầng xảy ra tại nút lớn, gián đoạn có thể lan rộng hơn phạm vi địa phương.
+Hàng không, hậu cần (logistics) và mạng số thường dùng cấu trúc **trung tâm–nan hoa (hub-and-spoke)** để đạt quy mô kinh tế. Nút trung tâm mạnh làm mạng hiệu quả hơn nhưng tạo rủi ro tập trung. Khi thời tiết, đình công hoặc hỏng hạ tầng xảy ra tại nút lớn, gián đoạn có thể lan rộng hơn phạm vi địa phương.
 
 ## Siêu vùng đô thị
 

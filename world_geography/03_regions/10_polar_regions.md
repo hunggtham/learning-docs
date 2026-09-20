@@ -22,7 +22,7 @@ Bắc Cực đang ấm lên nhanh hơn trung bình toàn cầu do nhiều phản
 
 ## Băng vĩnh cửu
 
-**Băng vĩnh cửu (permafrost)** là nền đất duy trì ở 0°C hoặc thấp hơn ít nhất hai năm liên tiếp. Lớp hoạt động phía trên tan theo mùa. Khi permafrost tan, nền móng, đường và đường ống có thể mất ổn định; carbon tích trữ trong đất cũng có thể được giải phóng dưới dạng khí nhà kính.
+**Băng vĩnh cửu (permafrost)** là nền đất duy trì ở 0°C hoặc thấp hơn ít nhất hai năm liên tiếp. Lớp hoạt động phía trên tan theo mùa. Khi băng vĩnh cửu tan, nền móng, đường và đường ống có thể mất ổn định; cacbon (carbon) tích trữ trong đất cũng có thể được giải phóng dưới dạng khí nhà kính.
 
 ## Nam Cực
 
@@ -34,7 +34,7 @@ Tuyến vùng cực không có mức tiếp cận cố định. Băng biển, th
 
 ## Khoa học và địa chính trị
 
-Khoảng cách lớn, lạnh và ánh sáng theo mùa khiến các trạm nghiên cứu phụ thuộc logistics phức tạp. Viễn thám đặc biệt quan trọng vì quan trắc mặt đất thưa.
+Khoảng cách lớn, lạnh và ánh sáng theo mùa khiến các trạm nghiên cứu phụ thuộc hệ thống hậu cần (logistics) phức tạp. Viễn thám đặc biệt quan trọng vì quan trắc mặt đất thưa.
 
 Vùng cực cũng quan trọng với nghiên cứu khí hậu, hoàn lưu đại dương, tài nguyên và vận tải. Tuy nhiên việc một tuyến biển “mở hơn” về vật lý không đồng nghĩa nó tự động cạnh tranh kinh tế; bảo hiểm, cảng hỗ trợ, điều kiện băng, quy định và độ dài mùa khai thác đều quyết định tính khả thi.
 

@@ -22,7 +22,7 @@ Delhi, Mumbai, Bengaluru, Dhaka, Karachi và Kolkata có vai trò khác nhau: tr
 
 ## Hướng ra Ấn Độ Dương
 
-Nam Á có bờ biển dài hướng ra Ấn Độ Dương và nằm gần các tuyến biển nối Tây Á, châu Phi với Đông Nam Á và Đông Á. Địa lý cảng vì thế quan trọng đối với thương mại, nhập khẩu năng lượng và logistics container. Có bờ biển dài không đồng nghĩa kết nối biển hiệu quả; giao thông từ nội địa ra cảng vẫn có thể là điểm nghẽn.
+Nam Á có bờ biển dài hướng ra Ấn Độ Dương và nằm gần các tuyến biển nối Tây Á, châu Phi với Đông Nam Á và Đông Á. Địa lý cảng vì thế quan trọng đối với thương mại, nhập khẩu năng lượng và hậu cần vận tải công-ten-nơ (container logistics). Có bờ biển dài không đồng nghĩa kết nối biển hiệu quả; giao thông từ nội địa ra cảng vẫn có thể là điểm nghẽn.
 
 ## Núi, biên giới và khả năng tiếp cận
 

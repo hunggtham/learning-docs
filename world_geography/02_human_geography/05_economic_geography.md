@@ -24,7 +24,7 @@ Phát triển kinh tế thường đi cùng sự dịch chuyển tỷ trọng la
 
 ## Chuỗi giá trị toàn cầu
 
-Một sản phẩm có thể được thiết kế ở một nước, sản xuất chip ở nước khác, lắp ráp ở nơi khác rồi phân phối toàn cầu. Địa lý của **chuỗi giá trị toàn cầu (global value chain)** phụ thuộc năng lực, mạng lưới nhà cung cấp, thuế quan, logistics và chiến lược đa dạng hóa rủi ro.
+Một sản phẩm có thể được thiết kế ở một nước, sản xuất chip ở nước khác, lắp ráp ở nơi khác rồi phân phối toàn cầu. Địa lý của **chuỗi giá trị toàn cầu (global value chain)** phụ thuộc năng lực, mạng lưới nhà cung cấp, thuế quan, hậu cần (logistics) và chiến lược đa dạng hóa rủi ro.
 
 ## Lợi thế so sánh và địa lý
 

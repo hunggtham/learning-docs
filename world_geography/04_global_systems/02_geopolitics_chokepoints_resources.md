@@ -34,7 +34,7 @@ Quốc gia không giáp biển phụ thuộc các nước láng giềng để ti
 
 ## Chiều sâu chiến lược, địa hình và công nghệ
 
-Núi, hoang mạc, sông và khoảng cách trong lịch sử ảnh hưởng di chuyển và phòng thủ. Tuy nhiên máy bay, tên lửa, vệ tinh, mạng số và logistics tầm xa làm ý nghĩa của khoảng cách thay đổi. Địa hình vẫn quan trọng nhưng công nghệ tái phân bổ trọng số của các ràng buộc.
+Núi, hoang mạc, sông và khoảng cách trong lịch sử ảnh hưởng di chuyển và phòng thủ. Tuy nhiên máy bay, tên lửa, vệ tinh, mạng số và hậu cần tầm xa (long-range logistics) làm ý nghĩa của khoảng cách thay đổi. Địa hình vẫn quan trọng nhưng công nghệ tái phân bổ trọng số của các ràng buộc.
 
 Nền kinh tế số còn tạo địa lý mới của trung tâm dữ liệu, nhà máy chip, tuyến cáp, trạm mặt đất vệ tinh và nguồn điện. “Không gian mạng” vẫn dựa trên các nút vật lý.
 

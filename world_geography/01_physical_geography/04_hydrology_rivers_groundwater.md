@@ -32,7 +32,7 @@ trong đó \(A\) là diện tích mặt cắt ngang và \(v\) là vận tốc tr
 
 ## Nước ngầm
 
-Nước thấm xuống có thể đi vào **tầng chứa nước (aquifer / 대수층)**. Nước ngầm không phải lúc nào cũng là “sông ngầm”; thường nó chảy chậm qua lỗ rỗng hoặc khe nứt theo **gradient thủy lực (hydraulic gradient)**. **Mực nước ngầm (water table)** là bề mặt mà áp suất nước trong lỗ rỗng bằng áp suất khí quyển trong tầng chứa nước không áp.
+Nước thấm xuống có thể đi vào **tầng chứa nước (aquifer / 대수층)**. Nước ngầm không phải lúc nào cũng là “sông ngầm”; thường nó chảy chậm qua lỗ rỗng hoặc khe nứt theo **độ dốc thủy lực (hydraulic gradient)**. **Mực nước ngầm (water table)** là bề mặt mà áp suất nước trong lỗ rỗng bằng áp suất khí quyển trong tầng chứa nước không áp.
 
 Khai thác quá mức có thể làm hạ mực nước ngầm, gây sụt lún đất và xâm nhập mặn ở ven biển. Thời gian bổ cập nước ngầm có thể từ một mùa đến hàng nghìn năm, nên “dưới đất còn nhiều nước” không đồng nghĩa nguồn đó tái tạo nhanh.
 

@@ -32,11 +32,11 @@ Bờ biển là ranh giới động giữa đất liền, đại dương và kh�
 
 ## Địa hình băng hà
 
-Băng hà là khối băng chuyển động dưới tác dụng của trọng lực. Nó xói mòn bằng mài mòn và bứt vật liệu, tạo thung lũng chữ U, hõm băng và vịnh hẹp; đồng thời bồi tụ vật liệu hỗn tạp và moraine. Nhiều hồ và đồng bằng ở vĩ độ cao vẫn mang dấu vết băng hà cũ dù hiện nay không còn băng hà.
+Băng hà là khối băng chuyển động dưới tác dụng của trọng lực. Nó xói mòn bằng mài mòn và bứt vật liệu, tạo thung lũng chữ U, hõm băng và vịnh hẹp; đồng thời bồi tụ vật liệu hỗn tạp và **trầm tích băng tích (moraine)**. Nhiều hồ và đồng bằng ở vĩ độ cao vẫn mang dấu vết băng hà cũ dù hiện nay không còn băng hà.
 
 ## Địa hình karst
 
-Trong đá vôi, nước hơi có tính axit hòa tan calcium carbonate dọc các khe nứt, tạo hang động, hố sụt và hệ thống thoát nước ngầm. Vì nước ngầm trong karst có thể chảy nhanh theo các ống và khe liên thông, chất ô nhiễm có thể lan khác với trong tầng chứa nước thông thường.
+Trong đá vôi, nước hơi có tính axit hòa tan **canxi cacbonat (calcium carbonate)** dọc các khe nứt, tạo hang động, hố sụt và hệ thống thoát nước ngầm. Vì nước ngầm trong địa hình karst có thể chảy nhanh theo các ống và khe liên thông, chất ô nhiễm có thể lan khác với trong tầng chứa nước thông thường.
 
 ## Địa hình hoang mạc
 

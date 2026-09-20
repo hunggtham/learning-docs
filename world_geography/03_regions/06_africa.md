@@ -2,7 +2,7 @@
 
 ## Một lục địa rất lớn, không phải một môi trường duy nhất
 
-Châu Phi trải từ khí hậu Địa Trung Hải qua Sahara, Sahel, rừng mưa nhiệt đới, savanna đến các vùng ôn đới và cao nguyên. Vì vậy nói “khí hậu châu Phi” như một loại duy nhất là sai về quy mô phân tích.
+Châu Phi trải từ khí hậu Địa Trung Hải qua Sahara, Sahel, rừng mưa nhiệt đới, xavan (savanna) đến các vùng ôn đới và cao nguyên. Vì vậy nói “khí hậu châu Phi” như một loại duy nhất là sai về quy mô phân tích.
 
 ## Lục địa cao nguyên và địa lý sông ngòi
 
@@ -12,7 +12,7 @@ Nile, Congo, Niger và Zambezi có sinh thái lưu vực và vai trò phát tri�
 
 ## Sahara và Sahel
 
-Sahara là rào cản cực khô lớn nhưng không phải một khoảng trống hoàn toàn tách biệt. Ốc đảo, tuyến caravan và rìa Sahel từng tạo các mạng xuyên Sahara. Đây là ví dụ về **kết nối có chọn lọc (selective connectivity)**: môi trường khắc nghiệt làm dòng người và hàng hóa tập trung vào những tuyến và nút có nước hoặc khả năng tiếp cận, thay vì xóa dòng lưu chuyển hoàn toàn.
+Sahara là rào cản cực khô lớn nhưng không phải một khoảng trống hoàn toàn tách biệt. Ốc đảo, tuyến lữ hành–thương mại (caravan route) và rìa Sahel từng tạo các mạng xuyên Sahara. Đây là ví dụ về **kết nối có chọn lọc (selective connectivity)**: môi trường khắc nghiệt làm dòng người và hàng hóa tập trung vào những tuyến và nút có nước hoặc khả năng tiếp cận, thay vì xóa dòng lưu chuyển hoàn toàn.
 
 Sahel là vùng chuyển tiếp bán khô nhạy với biến động lượng mưa, chăn thả và quản lý đất. Khi mưa biến động mạnh, sinh kế phải quản lý bất định chứ không chỉ thích nghi với một mức khí hậu trung bình.
 
@@ -28,7 +28,7 @@ Lagos, Cairo, Kinshasa, Nairobi, Johannesburg, Addis Ababa và nhiều thành ph
 
 ## Tài nguyên, hành lang và chuỗi giá trị
 
-Châu Phi có nguồn khoáng sản và năng lượng lớn, nhưng kết quả kinh tế phụ thuộc mạnh vào hạ tầng vận tải, quản trị, năng lực chế biến và kết nối thị trường. Một mỏ xa cảng có thể chịu chi phí logistics rất cao; quốc gia không giáp biển phụ thuộc hành lang đi qua nước láng giềng. Vì vậy địa lý tài nguyên phải đọc cùng **địa lý hành lang (corridor geography)**.
+Châu Phi có nguồn khoáng sản và năng lượng lớn, nhưng kết quả kinh tế phụ thuộc mạnh vào hạ tầng vận tải, quản trị, năng lực chế biến và kết nối thị trường. Một mỏ xa cảng có thể chịu chi phí hậu cần (logistics) rất cao; quốc gia không giáp biển phụ thuộc hành lang đi qua nước láng giềng. Vì vậy địa lý tài nguyên phải đọc cùng **địa lý hành lang (corridor geography)**.
 
 Nhiều tuyến cảng–đường sắt mang **phụ thuộc đường đi (path dependence)** từ các mạng khai thác thời thuộc địa, nhưng đang tiếp tục thay đổi theo đầu tư và cấu trúc thương mại mới.
 

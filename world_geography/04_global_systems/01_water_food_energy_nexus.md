@@ -28,13 +28,13 @@ Thành phố nhập nước, lương thực và năng lượng từ vùng hậu 
 
 ## Nước ảo
 
-Khi một quốc gia nhập lúa mì, thịt hoặc bông, họ gián tiếp nhập lượng nước đã dùng để tạo ra sản phẩm. Khái niệm này gọi là **nước ảo (virtual water / 가상수)**. Nó không có nghĩa nước vật lý được vận chuyển trong container, mà là lượng nước sử dụng ở khâu sản xuất được tính gắn với hàng hóa.
+Khi một quốc gia nhập lúa mì, thịt hoặc bông, họ gián tiếp nhập lượng nước đã dùng để tạo ra sản phẩm. Khái niệm này gọi là **nước ảo (virtual water / 가상수)**. Nó không có nghĩa nước vật lý được vận chuyển trong thùng hàng (container), mà là lượng nước sử dụng ở khâu sản xuất được tính gắn với hàng hóa.
 
 Điều này giúp giải thích vì sao quốc gia khô hạn có thể giảm áp lực lên nước địa phương bằng nhập khẩu thực phẩm, nhưng đổi lại tăng phụ thuộc vào mạng thương mại và biến động giá.
 
 ## Ranh giới hệ thống quyết định kết luận
 
-Một chính sách có thể trông hiệu quả nếu chỉ đo trong ranh giới thành phố nhưng kém hiệu quả nếu tính cả năng lượng ở thượng nguồn hoặc chi phí môi trường ở hạ nguồn. Vì vậy phân tích nexus luôn phải xác định **ranh giới hệ thống (system boundary)**. Đây là mối liên hệ trực tiếp với kỹ thuật hệ thống và phân tích vòng đời.
+Một chính sách có thể trông hiệu quả nếu chỉ đo trong ranh giới thành phố nhưng kém hiệu quả nếu tính cả năng lượng ở thượng nguồn hoặc chi phí môi trường ở hạ nguồn. Vì vậy phân tích mối liên hệ này luôn phải xác định **ranh giới hệ thống (system boundary)**. Đây là mối liên hệ trực tiếp với kỹ thuật hệ thống và phân tích vòng đời.
 
 ## Mô hình tư duy
 

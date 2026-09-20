@@ -22,7 +22,7 @@ Gió và Mặt Trời biến động theo thời gian, nên hệ điện cần t
 
 ## Khoáng sản quan trọng
 
-Chuyển đổi năng lượng làm tăng nhu cầu lithium, nickel, copper, đất hiếm và vật liệu pin. “Đất hiếm” không nhất thiết cực hiếm về địa chất; điểm khó có thể nằm ở hàm lượng quặng, công nghệ tinh luyện và mức tập trung chuỗi cung ứng.
+Chuyển đổi năng lượng làm tăng nhu cầu liti (lithium), niken (nickel), đồng (copper), đất hiếm và vật liệu pin. “Đất hiếm” không nhất thiết cực hiếm về địa chất; điểm khó có thể nằm ở hàm lượng quặng, công nghệ tinh luyện và mức tập trung chuỗi cung ứng.
 
 ## “Lời nguyền tài nguyên” có phải định mệnh?
 

@@ -28,7 +28,7 @@ Các sông xuyên biên giới còn tạo quan hệ thượng nguồn–hạ ngu
 
 **Eo biển Malacca (Strait of Malacca / 말라카 해협)** nằm trên một trong các tuyến biển quan trọng nối Ấn Độ Dương với Thái Bình Dương. Giá trị của một **điểm nghẽn (chokepoint)** không đến từ diện tích mà từ tỷ lệ dòng lưu chuyển phải đi qua và chi phí của tuyến thay thế.
 
-Singapore phát triển trong bối cảnh này nhờ vị trí, mức tích hợp sâu với vận tải biển, thể chế và năng lực logistics. Trong công nghệ thông tin, mô hình tương tự một cổng mạng nhỏ nhưng mang lượng lưu lượng lớn: hỏng hoặc tắc tại nút đó có thể ảnh hưởng toàn hệ thống.
+Singapore phát triển trong bối cảnh này nhờ vị trí, mức tích hợp sâu với vận tải biển, thể chế và năng lực hậu cần (logistics). Trong công nghệ thông tin, mô hình tương tự một cổng mạng nhỏ nhưng mang lượng lưu lượng lớn: hỏng hoặc tắc tại nút đó có thể ảnh hưởng toàn hệ thống.
 
 ## Hành lang sản xuất và chuỗi giá trị toàn cầu
 

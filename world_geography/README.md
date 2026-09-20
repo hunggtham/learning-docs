@@ -1,12 +1,12 @@
 # Knowledge Library — Địa lý thế giới
 
-Bộ tài liệu này được tổ chức theo **khái niệm (concept) → kiến thức phụ thuộc (dependency) → mối quan hệ (relationship)**, không chia theo mức Beginner/Intermediate/Advanced. Mục tiêu là học Địa lý như một hệ thống giải thích **vì sao thế giới có hình dạng, khí hậu, dân cư, thành phố, biên giới, mạng lưới kinh tế và các vùng địa lý như hiện nay**, thay vì ghi nhớ danh sách địa danh.
+Bộ tài liệu này được tổ chức theo **khái niệm (concept) → kiến thức phụ thuộc (dependency) → mối quan hệ (relationship)**, không chia theo các mức cơ bản–trung cấp–nâng cao (Beginner/Intermediate/Advanced). Mục tiêu là học Địa lý như một hệ thống giải thích **vì sao thế giới có hình dạng, khí hậu, dân cư, thành phố, biên giới, mạng lưới kinh tế và các vùng địa lý như hiện nay**, thay vì ghi nhớ danh sách địa danh.
 
 > **Mô hình tư duy (mental model) trung tâm:** Địa lý nghiên cứu *vị trí* (where), *phân bố* (distribution), *quan hệ không gian* (spatial relationship), *quá trình* (process) và *quy mô* (scale). Một hiện tượng chỉ thật sự được hiểu khi ta biết nó xảy ra ở đâu, vì sao ở đó, lan truyền theo cơ chế nào và thay đổi thế nào khi đổi quy mô phân tích.
 
 ## Cách dùng thư viện
 
-Nên đọc `00_foundations` trước để hiểu tư duy không gian, hệ tọa độ, bản đồ và dữ liệu địa lý. Sau đó có thể đi sang `01_physical_geography` để hiểu nền tảng vật lý của Trái Đất, hoặc `02_human_geography` để hiểu dân số, đô thị, kinh tế và chính trị. `03_regions` dùng các nguyên lý trước đó để đọc từng vùng của thế giới. `04_global_systems` tập trung vào các hệ thống xuyên biên giới. `90_connections` nối Địa lý với Toán học, thống kê (statistics), công nghệ thông tin, GIS, kinh tế học và các mô hình tư duy tổng hợp.
+Nên đọc `00_foundations` trước để hiểu tư duy không gian, hệ tọa độ, bản đồ và dữ liệu địa lý. Sau đó có thể đi sang `01_physical_geography` để hiểu nền tảng vật lý của Trái Đất, hoặc `02_human_geography` để hiểu dân số, đô thị, kinh tế và chính trị. `03_regions` dùng các nguyên lý trước đó để đọc từng vùng của thế giới. `04_global_systems` tập trung vào các hệ thống xuyên biên giới. `90_connections` nối Địa lý với Toán học, thống kê (statistics), công nghệ thông tin (IT), GIS, dữ liệu (Data), kinh tế học và các mô hình tư duy tổng hợp.
 
 Quy ước liên kết chéo dùng đường dẫn Markdown tương đối, ví dụ: [Bản đồ và phép chiếu](./00_foundations/03_cartography_projections_scale.md).
 

@@ -8,7 +8,7 @@
 
 ## Quần xã sinh vật lớn là mẫu liên hệ giữa khí hậu và sự sống
 
-**Quần xã sinh vật lớn (biome / 생물군계)** là vùng sinh thái rộng như rừng mưa nhiệt đới, savanna, hoang mạc, rừng ôn đới, rừng phương bắc và tundra. Nhiệt độ và độ ẩm là hai yếu tố kiểm soát mạnh, nhưng chế độ cháy, đất và lịch sử sinh thái cũng quan trọng.
+**Quần xã sinh vật lớn (biome / 생물군계)** là vùng sinh thái rộng như rừng mưa nhiệt đới, xavan (savanna), hoang mạc, rừng ôn đới, rừng phương bắc và đài nguyên (tundra). Nhiệt độ và độ ẩm là hai yếu tố kiểm soát mạnh, nhưng chế độ cháy, đất và lịch sử sinh thái cũng quan trọng.
 
 ## Năng suất sơ cấp thuần
 
@@ -16,7 +16,7 @@ Thực vật chuyển năng lượng Mặt Trời thành sinh khối qua quang h
 
 ## Vùng chuyển tiếp sinh thái và ranh giới
 
-Ranh giới biome thường không sắc nét như biên giới chính trị. **Vùng chuyển tiếp sinh thái (ecotone)** là khu vực chuyển đổi giữa hai hệ. Khi khí hậu dịch chuyển, phạm vi loài có thể thay đổi, nhưng đất, sự phân mảnh sinh cảnh và tốc độ phát tán khiến phản ứng thực tế thường chậm hơn thay đổi khí hậu.
+Ranh giới quần xã sinh vật lớn (biome) thường không sắc nét như biên giới chính trị. **Vùng chuyển tiếp sinh thái (ecotone)** là khu vực chuyển đổi giữa hai hệ. Khi khí hậu dịch chuyển, phạm vi loài có thể thay đổi, nhưng đất, sự phân mảnh sinh cảnh và tốc độ phát tán khiến phản ứng thực tế thường chậm hơn thay đổi khí hậu.
 
 ## Cháy
 
@@ -32,6 +32,6 @@ Nông nghiệp chuyển hệ sinh thái tự nhiên thành hệ sản xuất có
 
 ## Mô hình tư duy
 
-Biome là kết quả của **năng lượng + nước + đất + nhiễu động + lịch sử tiến hóa**. Nếu chỉ nhìn khí hậu, ta có thể giải thích phần lớn mẫu toàn cầu; muốn giải thích một hệ sinh thái địa phương phải thêm địa chất, cháy, sử dụng đất của con người và lịch sử.
+Quần xã sinh vật lớn (biome) là kết quả của **năng lượng + nước + đất + nhiễu động + lịch sử tiến hóa**. Nếu chỉ nhìn khí hậu, ta có thể giải thích phần lớn mẫu toàn cầu; muốn giải thích một hệ sinh thái địa phương phải thêm địa chất, cháy, sử dụng đất của con người và lịch sử.
 
 Xem tiếp: [Nông nghiệp và hệ thống lương thực](../02_human_geography/06_agriculture_food_systems.md), [Phát triển bền vững](../04_global_systems/04_environment_sustainability.md).

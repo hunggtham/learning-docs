@@ -1,14 +1,14 @@
 # Bắc Mỹ
 
-## Một lục địa của các gradient lớn
+## Một lục địa có độ biến thiên không gian rất lớn
 
-Bắc Mỹ trải dài từ Bắc Cực đến vĩ độ nhiệt đới và từ các dãy núi ven Thái Bình Dương qua đồng bằng nội địa đến rìa Đại Tây Dương. Dãy Rocky nằm ở phía tây, đồng bằng rộng ở trung tâm và Appalachia ở phía đông. Quy mô lớn tạo gradient khí hậu lục địa mạnh; ảnh hưởng đại dương rõ hơn ở ven biển.
+Bắc Mỹ trải dài từ Bắc Cực đến vĩ độ nhiệt đới và từ các dãy núi ven Thái Bình Dương qua đồng bằng nội địa đến rìa Đại Tây Dương. Dãy Rocky nằm ở phía tây, đồng bằng rộng ở trung tâm và Appalachia ở phía đông. Quy mô lớn tạo độ biến thiên khí hậu lục địa mạnh theo không gian; ảnh hưởng đại dương rõ hơn ở ven biển.
 
 Đây là nơi có thể quan sát rõ **tính lục địa (continentality)**: vùng nội địa có biên độ nhiệt năm lớn hơn vùng ven biển vì đất nóng và nguội nhanh hơn đại dương. Rocky Mountains còn tạo rào cản địa hình lớn và bóng mưa ở nhiều khu vực phía khuất gió.
 
 ## Hệ Mississippi–Missouri
 
-Lưu vực Mississippi gom nước từ phần rất lớn nội địa rồi đổ ra Vịnh Mexico. Hệ sông hỗ trợ nông nghiệp và vận tải sà lan, cho thấy thủy văn có thể trở thành hạ tầng logistics. Ngũ cốc từ nội địa có thể đi bằng sông tới cảng xuất khẩu với chi phí thấp hơn trong nhiều trường hợp so với chỉ dùng đường bộ.
+Lưu vực Mississippi gom nước từ phần rất lớn nội địa rồi đổ ra Vịnh Mexico. Hệ sông hỗ trợ nông nghiệp và vận tải sà lan, cho thấy thủy văn có thể trở thành hạ tầng hậu cần (logistics). Ngũ cốc từ nội địa có thể đi bằng sông tới cảng xuất khẩu với chi phí thấp hơn trong nhiều trường hợp so với chỉ dùng đường bộ.
 
 Rủi ro lũ cũng là một phần của cùng hệ thống: đồng bằng ngập lũ tạo đất màu mỡ và tuyến vận tải thuận lợi nhưng đồng thời làm người và tài sản phơi lộ với lũ.
 

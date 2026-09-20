@@ -36,7 +36,7 @@ Phân tích khí hậu thường dùng một giai đoạn cơ sở để tính *
 
 ## Khí hậu cổ
 
-Để hiểu biến động khí hậu vượt ra ngoài giai đoạn quan trắc bằng thiết bị, khoa học dùng **chỉ thị gián tiếp (proxy)** như lõi băng, vòng cây và trầm tích. Proxy không phải nhiệt kế trực tiếp; nó cần hiệu chuẩn và diễn giải, vì vậy độ bất định phải được định lượng.
+Để hiểu biến động khí hậu vượt ra ngoài giai đoạn quan trắc bằng thiết bị, khoa học dùng **chỉ thị gián tiếp (proxy)** như lõi băng, vòng cây và trầm tích. Chỉ thị gián tiếp không phải nhiệt kế trực tiếp; nó cần hiệu chuẩn và diễn giải, vì vậy độ bất định phải được định lượng.
 
 ## Mô hình tư duy
 

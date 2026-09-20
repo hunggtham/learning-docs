@@ -4,7 +4,7 @@
 
 **Tính bền vững (sustainability / 지속가능성)** không đơn giản là “thân thiện với môi trường”. Nó hỏi một hệ thống có thể duy trì phúc lợi con người mà không làm suy giảm các dạng vốn tự nhiên và xã hội quan trọng đến mức thu hẹp lựa chọn của các thế hệ tương lai hay không.
 
-Một cách làm khái niệm này bớt mơ hồ là phân biệt **lượng tích lũy (stock)** và **dòng chuyển (flow)**. Sinh khối rừng, lượng nước ngầm và chất hữu cơ trong đất là stock; khai thác, bổ cập, xói mòn và ô nhiễm là flow. Một hệ bền vững dài hạn khi dòng khai thác không liên tục vượt khả năng tái tạo, và chất thải không vượt khả năng hấp thụ của môi trường.
+Một cách làm khái niệm này bớt mơ hồ là phân biệt **lượng tích lũy (stock)** và **dòng chuyển (flow)**. Sinh khối rừng, lượng nước ngầm và chất hữu cơ trong đất là lượng tích lũy (stock); khai thác, bổ cập, xói mòn và ô nhiễm là dòng chuyển (flow). Một hệ bền vững dài hạn khi dòng khai thác không liên tục vượt khả năng tái tạo, và chất thải không vượt khả năng hấp thụ của môi trường.
 
 Nếu bơm nước ngầm 120 đơn vị/năm trong khi bổ cập chỉ 80, nguồn cung có thể vẫn dồi dào vài năm nhờ kho nước lớn, nhưng hệ đang thâm hụt 40 đơn vị mỗi năm. Vì vậy ảnh chụp “hiện còn nhiều tài nguyên” không cho biết hệ có bền vững hay không.
 
@@ -28,7 +28,7 @@ Một nhà máy tạo việc làm ở một nơi nhưng cộng đồng hạ lưu
 
 ## Kinh tế tuần hoàn và giới hạn vật lý
 
-**Kinh tế tuần hoàn (circular economy)** cố giữ giá trị vật liệu qua tái sử dụng, sửa chữa và tái chế. Tuy nhiên tái chế cũng cần năng lượng và logistics; một số vật liệu mất chất lượng sau mỗi vòng và không thể quay vòng 100% vô hạn do tạp nhiễm, hao hụt và chi phí năng lượng.
+**Kinh tế tuần hoàn (circular economy)** cố giữ giá trị vật liệu qua tái sử dụng, sửa chữa và tái chế. Tuy nhiên tái chế cũng cần năng lượng và hậu cần (logistics); một số vật liệu mất chất lượng sau mỗi vòng và không thể quay vòng 100% vô hạn do tạp nhiễm, hao hụt và chi phí năng lượng.
 
 Vì vậy tính bền vững không nên dựa trên mô hình tư duy “vật liệu quay vòng hoàn hảo”. Luôn có thất thoát và nhu cầu năng lượng.
 
