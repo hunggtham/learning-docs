@@ -1,83 +1,81 @@
-# 07 — Integrated Case Studies
+# 07 — Bài tập tích hợp (Integrated Case Studies)
 
-Domain này là **capstone** của toàn bộ Investing Knowledge Library. Các chapter trước dạy từng lớp riêng: financial system, asset classes, company analysis, economics, trading, Korea/Vietnam markets. Ở đây mục tiêu là nối tất cả lại thành một research process hoàn chỉnh.
+Đây là phần tổng hợp cuối (capstone) của toàn bộ thư viện đầu tư. Các phần trước dạy từng lớp riêng như hệ thống tài chính, nhóm tài sản, phân tích doanh nghiệp, kinh tế học, giao dịch và thị trường Hàn Quốc/Việt Nam. Ở đây, mục tiêu là nối tất cả thành một quy trình nghiên cứu hoàn chỉnh.
 
-Case study không được viết như “đáp án lịch sử” hoặc công thức dự báo. Mỗi case được xây như một bài tập reasoning có thể tái sử dụng cho tình huống mới:
+Mỗi tình huống không được viết như “đáp án lịch sử” hoặc công thức dự báo. Nó được xây như một bài tập tư duy có thể tái sử dụng cho tình huống mới:
 
 ```text
-Shock / Question
-→ What was priced?
-→ Macro transmission
-→ Rates / FX / Credit
-→ Sector economics
-→ Company earnings
-→ Valuation
-→ Portfolio impact
-→ Hedge / Execution
-→ Attribution
-→ Thesis update
+Cú sốc / Câu hỏi
+→ Thị trường đã phản ánh điều gì vào giá?
+→ Kênh truyền dẫn vĩ mô
+→ Lãi suất / Tỷ giá / Tín dụng
+→ Kinh tế ngành
+→ Lợi nhuận doanh nghiệp
+→ Định giá
+→ Tác động tới danh mục
+→ Phòng vệ / Thực thi
+→ Phân rã kết quả
+→ Cập nhật luận điểm
 ```
 
 ## Thứ tự đọc
 
-[01_INFLATION_SHOCK_FROM_CPI_TO_PORTFOLIO.md](./01_INFLATION_SHOCK_FROM_CPI_TO_PORTFOLIO.md) bắt đầu từ một CPI surprise và theo dõi toàn bộ chain từ inflation composition → central-bank reaction function → yield curve/real yields → USD/KRW/VND → equity duration → company margins → valuation → portfolio hedge → post-event review.
+[01_INFLATION_SHOCK_FROM_CPI_TO_PORTFOLIO.md](./01_INFLATION_SHOCK_FROM_CPI_TO_PORTFOLIO.md) bắt đầu từ một mức CPI gây bất ngờ so với kỳ vọng (CPI surprise), rồi theo dõi toàn bộ chuỗi từ cấu phần lạm phát → hàm phản ứng của ngân hàng trung ương → đường cong lợi suất/lợi suất thực → USD/KRW/VND → duration của cổ phiếu → biên lợi nhuận doanh nghiệp → định giá → phòng vệ danh mục → đánh giá sau sự kiện.
 
-[02_CREDIT_LIQUIDITY_CRISIS_TRANSMISSION.md](./02_CREDIT_LIQUIDITY_CRISIS_TRANSMISSION.md) phân tích một liquidity/credit stress từ collateral/margin → funding → bank balance sheet → credit spread → forced deleveraging → earnings → sovereign/policy response → portfolio liquidity. Case này giúp phân biệt liquidity problem, solvency problem và recessionary credit cycle.
+[02_CREDIT_LIQUIDITY_CRISIS_TRANSMISSION.md](./02_CREDIT_LIQUIDITY_CRISIS_TRANSMISSION.md) phân tích căng thẳng thanh khoản và tín dụng từ tài sản thế chấp/ký quỹ → nguồn vốn → bảng cân đối ngân hàng → chênh lệch tín dụng → giảm đòn bẩy cưỡng bức → lợi nhuận → phản ứng chính sách → thanh khoản danh mục. Tình huống này giúp phân biệt thiếu thanh khoản, mất khả năng thanh toán và chu kỳ co hẹp tín dụng do suy thoái.
 
-[03_SEMICONDUCTOR_CYCLE_KOREA_CASE.md](./03_SEMICONDUCTOR_CYCLE_KOREA_CASE.md) dùng Korean semiconductor/HBM ecosystem để nối global AI capex, memory supply-demand, inventory, ASP, utilization, capex, equipment/material suppliers, KRW, earnings revisions, cyclical valuation và position sizing.
+[03_SEMICONDUCTOR_CYCLE_KOREA_CASE.md](./03_SEMICONDUCTOR_CYCLE_KOREA_CASE.md) dùng hệ sinh thái bán dẫn/HBM Hàn Quốc để nối chi tiêu AI toàn cầu, cung–cầu bộ nhớ, tồn kho, giá bán bình quân (ASP), công suất sử dụng, capex, nhà cung cấp thiết bị/vật liệu, KRW, điều chỉnh dự báo lợi nhuận, định giá theo chu kỳ và quy mô vị thế.
 
-[04_VIETNAM_PROPERTY_BANK_CREDIT_CASE.md](./04_VIETNAM_PROPERTY_BANK_CREDIT_CASE.md) dùng property–bank–broker–liquidity chain tại Việt Nam để học cách map legal progress, presales, corporate bonds, bank exposure, NPL/provisions, margin liquidity, SBV policy room, valuation và survival analysis.
+[04_VIETNAM_PROPERTY_BANK_CREDIT_CASE.md](./04_VIETNAM_PROPERTY_BANK_CREDIT_CASE.md) dùng chuỗi bất động sản–ngân hàng–chứng khoán–thanh khoản tại Việt Nam để học cách lập bản đồ tiến độ pháp lý, bán trước, trái phiếu doanh nghiệp, mức phơi nhiễm của ngân hàng, NPL/dự phòng, thanh khoản margin, dư địa chính sách của SBV, định giá và khả năng sống sót của bảng cân đối.
 
-## Cách sử dụng case study
+## Cách sử dụng tình huống
 
-Không đọc case như một câu chuyện để ghi nhớ direction. Hãy dừng trước từng bước và tự trả lời ba câu hỏi:
+Không đọc như một câu chuyện để ghi nhớ hướng giá. Hãy dừng trước từng bước và tự trả lời ba câu hỏi:
 
-1. Nếu chỉ biết information tới đây, tôi sẽ dự đoán những transmission channel nào?
-2. Data nào có thể xác nhận hoặc bác bỏ hypothesis?
-3. Market đã price bao nhiêu trước khi event xảy ra?
+1. Nếu chỉ biết thông tin tới đây, những kênh truyền dẫn nào có thể xảy ra?
+2. Dữ liệu nào có thể xác nhận hoặc bác bỏ giả thuyết?
+3. Thị trường đã phản ánh bao nhiêu kỳ vọng vào giá trước sự kiện?
 
 Sau đó mới đọc phần tiếp theo.
 
-## Output nên tạo sau mỗi case
-
-Mỗi case nên kết thúc bằng một note riêng gồm:
+## Ghi chú nên tạo sau mỗi tình huống
 
 ```text
-Initial hypothesis
-Key facts
-What was priced
-Driver tree
-Base / Bull / Bear
-Portfolio exposure
-Execution plan
-Invalidation
-Post-event attribution
-What I learned
+Giả thuyết ban đầu
+Dữ kiện chính
+Điều thị trường đã phản ánh vào giá
+Cây động lực
+Kịch bản cơ sở / tích cực / tiêu cực
+Mức phơi nhiễm danh mục
+Kế hoạch thực thi
+Điều kiện vô hiệu hóa
+Phân rã kết quả sau sự kiện
+Bài học rút ra
 ```
 
-## Liên kết với các domain trước
+## Liên kết với các lĩnh vực trước
 
-Case studies giả định bạn đã đọc ít nhất:
+Các bài tập giả định bạn đã đọc ít nhất:
 
-- [01 — Foundations](../01_foundations/README.md)
-- [02 — Asset Classes](../02_asset_classes/README.md)
-- [03 — Company Analysis](../03_company_analysis/README.md)
-- [04 — Economics](../04_economics/README.md)
+- [01 — Nền tảng đầu tư](../01_foundations/README.md)
+- [02 — Các nhóm tài sản](../02_asset_classes/README.md)
+- [03 — Phân tích doanh nghiệp](../03_company_analysis/README.md)
+- [04 — Kinh tế học và vĩ mô](../04_economics/README.md)
 
-Nếu case có trading/hedging, xem thêm [05 — Trading & Derivatives](../05_trading_derivatives/README.md). Nếu case liên quan Korea/Vietnam, xem [06 — Korea & Vietnam Markets](../06_markets_korea_vietnam/README.md).
+Nếu tình huống có giao dịch hoặc phòng vệ, xem thêm [05 — Giao dịch và phái sinh](../05_trading_derivatives/README.md). Nếu liên quan Hàn Quốc/Việt Nam, xem [06 — Thị trường Hàn Quốc và Việt Nam](../06_markets_korea_vietnam/README.md).
 
 ## Mục tiêu cuối cùng
 
-Sau domain này, người đọc phải có khả năng nhìn một headline mới và không hỏi ngay “mua hay bán gì?”, mà đi theo sequence:
+Sau phần này, khi nhìn một tin mới, người đọc không nên hỏi ngay “mua hay bán gì?”, mà đi theo chuỗi:
 
 ```text
-What changed?
-→ Compared with what expectation?
-→ Through which balance sheet and cash-flow channels?
-→ Who benefits, who loses, and when?
-→ Which part is already priced?
-→ How much risk should be taken?
-→ How will the decision be reviewed?
+Điều gì vừa thay đổi?
+→ So với kỳ vọng nào?
+→ Truyền qua bảng cân đối và dòng tiền nào?
+→ Ai hưởng lợi, ai chịu thiệt và vào thời điểm nào?
+→ Phần nào đã phản ánh vào giá?
+→ Nên nhận bao nhiêu rủi ro?
+→ Quyết định sẽ được đánh giá lại như thế nào?
 ```
 
-Đó là bước chuyển từ biết kiến thức đầu tư sang có một **research operating system**.
+Đó là bước chuyển từ “biết kiến thức đầu tư” sang có một hệ thống vận hành nghiên cứu (research operating system).
