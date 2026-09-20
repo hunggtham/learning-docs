@@ -1,148 +1,286 @@
-# Genealogy của các tập đoàn lớn: công ty Hàn Quốc đã “tiến hóa” như thế nào? (Corporate Genealogies / 기업 계보와 사업변천)
+# Genealogy của các tập đoàn lớn: doanh nghiệp Hàn Quốc đã “tiến hóa” như thế nào? (Corporate Genealogies / 기업 계보와 사업변천)
 
-Tên một tập đoàn hiện nay thường làm người đọc tưởng core business của nó đã tồn tại từ đầu. Thực tế gần như ngược lại. Nhiều group Hàn Quốc bắt đầu từ trading, food, textile, chemical hoặc construction, rồi thay đổi portfolio theo từng phase của industrialization. Hiểu genealogy giúp ta nhìn company như một **dynamic capital-allocation system**, không phải một label cố định.
+Tên một tập đoàn hiện tại dễ tạo ảo giác rằng core business của nó đã tồn tại ngay từ đầu. Thực tế, phần lớn large Korean groups đi qua nhiều lần **entry, exit, acquisition, spin-off, merger, restructuring và technology transition**. Samsung không bắt đầu bằng semiconductor; Hyundai không bắt đầu bằng automobile; SK không bắt đầu bằng telecom hay memory chip; LG không bắt đầu bằng battery.
 
-## Samsung: trading → manufacturing → electronics, finance và advanced technology
+Hiểu genealogy giúp chuyển cách nhìn từ “tập đoàn = một ngành” sang **tập đoàn = một hệ thống tích lũy và tái phân bổ capital, capability và control theo thời gian**.
 
-Samsung bắt đầu năm 1938 với hoạt động thương mại. Sau chiến tranh, group mở rộng sang manufacturing như textiles và sau đó sang insurance/finance. Samsung Electronics được thành lập năm 1969. Từ consumer electronics, group tăng investment vào semiconductor, display và mobile, dần biến technology manufacturing thành core economic engine.
+## Genealogy cần đọc trên bốn trục
 
-Điểm cần giữ trong đầu là “Samsung” không phải một corporation duy nhất. Samsung Electronics, Samsung Life, Samsung C&T, Samsung Biologics và các affiliates là legal entities khác nhau. Genealogy của group là genealogy của **network of affiliates**.
+Khi theo dõi một group qua nhiều thập niên, đừng chỉ liệt kê năm thành lập từng affiliate. Hãy theo dõi bốn thứ.
 
-Tại sao Samsung chuyển được từ trading sang semiconductor? Không phải vì hai business giống nhau, mà vì group tích lũy capital, management capability, financing access và willingness to make long-horizon investments. Semiconductor đòi hỏi khác trading về technology nhưng giống ở một điểm chiến lược: scale và coordination matter.
+**Capital genealogy / 자본 계보**: cash và financing từ business nào được dùng để build hoặc acquire business tiếp theo?
 
-## Hyundai: construction → shipbuilding → automobiles → integrated mobility group
+**Capability genealogy / 역량 계보**: kỹ năng nào được transfer — project execution, process engineering, distribution, brand, regulatory compliance hay software?
 
-Hyundai lớn lên từ construction trong reconstruction era. Construction tạo capability về mega-project execution. Group sau đó bước vào shipbuilding, machinery và automobiles. Hyundai Motor thành lập năm 1967; Pony giữa 1970s đánh dấu bước từ licensed assembly sang proprietary model.
+**Ownership genealogy / 소유·지배 계보**: group split, succession, holding-company conversion hay affiliate restructuring thay control như thế nào?
 
-Sau Asian Financial Crisis, old Hyundai chaebol tách thành nhiều groups độc lập hơn. Hyundai Motor Group hiện đại xoay quanh automobile/mobility và network suppliers; HD Hyundai thiên về shipbuilding/heavy industry; Hyundai Department Store là group khác. Vì vậy gặp chữ “Hyundai” phải xác định **which Hyundai group?**
+**Constraint genealogy**: mỗi business mới giải quyết constraint nào của thời đại — thiếu basic goods, thiếu steel, export scale, digital matching, battery localization hay advanced computing?
 
-Hyundai Motor mua Kia năm 1998, sau đó xây value chain gồm Hyundai Mobis, Hyundai Steel, Hyundai Glovis và finance affiliates. Đây là vertical integration ở quy mô ecosystem.
+> Mental model: corporate history có giá trị khi nó giải thích **vì sao company hiện tại có assets, habits, suppliers, governance và risk profile như hôm nay**.
 
-## LG: chemical → electronics → display, telecom và battery
+## Samsung: trading → manufacturing → electronics → semiconductor và advanced technology
 
-Lucky Chemical thành lập năm 1947. GoldStar thành lập năm 1958 và sản xuất electronics. Hai brand Lucky và GoldStar về sau tạo identity LG. Đây là genealogy thể hiện industrial upgrading rất rõ: consumer chemicals → electrical appliances → electronics → displays/materials → batteries.
+Samsung bắt đầu năm 1938 với trading. Trading tích lũy capability về sourcing, distribution, working capital và commercial relationships. Sau war, group mở rộng vào manufacturing, finance và insurance; Samsung Electronics được thành lập năm 1969.
 
-LG cũng trải qua corporate separation; GS Group được tách khỏi LG trong 2000s. Vì vậy khi nhìn group history cần phân biệt organic growth với spin-off/separation.
+Consumer electronics giúp build mass-production, quality-control và supplier-management capability. Từ đó, investment vào components và semiconductor đưa group vào một industry có economics hoàn toàn khác: enormous capex, rapid technology cycles và yield learning.
 
-LG Chem là ví dụ đặc biệt của path dependence: chemical knowledge và materials capability tạo bridge tự nhiên sang battery materials và energy-storage business, nhưng battery vẫn đòi hỏi manufacturing, quality và capital discipline hoàn toàn mới.
+Transition này không nên hiểu là “trading naturally leads to chips”. Bridge thật sự là **capital accumulation + organizational scale + willingness to make long-horizon bets**.
 
-## SK: textile → fiber → petrochemical → energy → telecom → semiconductor
+Semiconductor trở thành economic engine quan trọng vì process capability có compounding effect. Mỗi generation tạo experience, supplier ecosystem và engineering talent cho generation sau. Đây là **cumulative technological capability**.
 
-SK bắt đầu năm 1953 với Sunkyong Textiles. Group tích hợp ngược sang synthetic fiber và petrochemical, rồi mở rộng mạnh vào energy. Sau đó telecom trở thành pillar quan trọng, và acquisition Hynix năm 2012 đưa semiconductor thành một core engine.
+Samsung genealogy cũng nhắc một điều quan trọng: “Samsung” không phải one corporation. Samsung Electronics, Samsung C&T, Samsung Life, Samsung Biologics và other affiliates có legal balance sheets riêng. Group history phải luôn được chuyển thành **entity map** trước khi phân tích finance.
 
-Genealogy này minh họa **portfolio leap**: một business group có thể dùng capital và management system từ old cash-generating sectors để mua hoặc xây new growth engine. Nhưng acquisition chỉ thành công nếu new business tạo return cao hơn cost of capital.
+## Hyundai: construction → heavy project execution → shipbuilding → automobiles → multiple independent lineages
 
-## Lotte: consumer goods → retail, hospitality, chemical và property
+Hyundai lớn lên từ construction. Reconstruction và infrastructure projects dạy organization cách mobilize labor, procure materials, finance projects và deliver under deadline.
 
-Lotte ở Korea bắt đầu với Lotte Confectionery năm 1967, sau normalization Korea–Japan. Trong 1970s group mở rộng food, beverage, hotel, retail, construction và petrochemicals.
+Capability này giúp group enter heavy industries. Shipbuilding cần dry dock, steel, engineering, export finance và global customer trust. Automobile cần supplier network, design, assembly, distribution và after-sales system.
 
-Lotte khác Samsung/Hyundai ở chỗ domestic consumption, retail và property có vai trò lớn hơn trong portfolio. Vì vậy macro sensitivity cũng khác: household consumption, tourism, commercial real estate và China/Japan consumer flows có thể quan trọng hơn semiconductor cycle.
+Hyundai Motor thành lập năm 1967; Pony trong 1970s đánh dấu bước chuyển từ licensed assembly sang own-model capability. Đây là example rõ của ladder:
 
-## CJ: sugar → food → bio, logistics, media và entertainment
+```text
+foreign technology
+      ↓
+local assembly
+      ↓
+local engineering
+      ↓
+own platform/model
+      ↓
+global manufacturing + brand
+```
 
-CheilJedang thành lập năm 1953 với sugar production và từng thuộc Samsung group. Sau khi tách thành independent group, CJ mở rộng food, bio, logistics, cinema, media và content.
+Sau 1997 crisis, old Hyundai group không giữ nguyên architecture. Nhiều lineages trở thành groups độc lập hơn. Hyundai Motor Group tập trung automobile/mobility; HD Hyundai phát triển từ shipbuilding/heavy-industry lineage; Hyundai Department Store là một separate group.
 
-CJ cho thấy industrial genealogy không nhất thiết đi từ light industry sang heavy industry. Nó có thể đi từ food manufacturing sang **consumer ecosystem + intangible content**. Value capture chuyển từ factory margin sang brand, distribution, IP và platform-like audience networks.
+Vì vậy shared historical name không đồng nghĩa current common control.
 
-## POSCO: state-backed steel → global materials group
+Hyundai case dạy một skill thực hành: gặp brand “Hyundai”, trước tiên hỏi **which legal group and which entity?**
 
-POSCO được thành lập như strategic steel producer, khác family-controlled chaebol về origin. Steel capacity tạo foundation cho Korean heavy industry. Về sau POSCO mở rộng materials, trading, construction và battery materials.
+## LG: consumer chemicals → electronics → materials, display, telecom và battery
 
-Đây là case để hiểu rằng large Korean group không phải lúc nào cũng chaebol. Ownership origin và governance structure khác nhau có thể tạo corporate behavior khác nhau.
+Lucky Chemical thành lập năm 1947; GoldStar thành lập năm 1958. Chemical consumer goods và appliances phản ánh postwar/import-substitution demand.
 
-## Hanwha: explosives → chemicals, defense, finance và energy
+Chemical capability về materials và process, cộng electronics capability về mass manufacturing, tạo nền cho expansion vào higher-value components, displays và batteries.
 
-Hanwha bắt đầu từ Korea Explosives trong early post-war industrial era. Explosives liên quan mining, construction và infrastructure; từ đó group mở rộng chemicals, machinery và defense. Hanwha cũng có finance businesses và gần đây tăng trọng tâm aerospace, defense và renewable/solar value chains.
+LG Chem → battery lineage là example của **related diversification / 관련다각화**. Battery không giống household chemical, nhưng material science, chemical processing và large-scale quality control có bridge logic rõ.
 
-Genealogy của Hanwha cho thấy government procurement và national-security industry có thể trở thành một axis khác của corporate growth.
+Tuy vậy technology adjacency không guarantee success. Battery requires new electrochemistry, safety, yield, capex và OEM customer management. Related diversification chỉ giảm capability gap; nó không eliminate execution risk.
+
+LG genealogy cũng includes major group separations. GS và LS lineages cho thấy corporate family tree có thể branch thành independent groups. Historical relationship không nên bị nhầm với current legal control.
+
+## SK: textile → synthetic fiber → petrochemical → energy → telecom → semiconductor
+
+SK bắt đầu với Sunkyong Textiles năm 1953. Textile business dẫn upstream tới synthetic fiber và petrochemical, một classic case của vertical integration.
+
+Sau đó energy trở thành major pillar. Telecom mở một completely different growth axis dựa trên network infrastructure, recurring subscriptions và mobile adoption.
+
+Acquisition of Hynix in 2012 đưa semiconductor thành strategic core lớn. Đây là example đặc biệt về **portfolio leap through acquisition**.
+
+Acquisition economics có thể viết đơn giản:
+
+\[
+Value\ Created \approx PV(Cash\ Flows\ under\ New\ Ownership) - Purchase\ Price - Integration\ Cost
+\]
+
+Group có capital không có nghĩa acquisition tự động tốt. Value chỉ xuất hiện nếu new owner improves strategy, financing, investment discipline hoặc growth enough to exceed acquisition cost.
+
+SK genealogy vì vậy là case tốt để học **capital allocation as core capability**.
+
+## Lotte: consumer demand, retail, hospitality, chemicals và property
+
+Lotte ở Korea phát triển từ consumer goods và mở rộng sang retail, hotel, food, beverage, construction và chemical businesses.
+
+Khác Samsung/Hyundai, Lotte có domestic-consumption và property exposure lớn hơn. Điều này tạo macro sensitivity khác.
+
+Semiconductor group quan tâm memory cycle và global capex; retail/hospitality group nhạy hơn với household income, tourism, commercial real estate, consumer confidence và demographics.
+
+Genealogy therefore helps predict **which macro variables matter** before reading statements.
+
+## CJ: sugar → food → bio → logistics → media/content
+
+CheilJedang thành lập năm 1953 với sugar production và từng nằm trong Samsung lineage trước khi trở thành independent group.
+
+CJ expansion cho thấy corporate upgrading không nhất thiết phải đi qua steel/shipbuilding. Food manufacturing tạo consumer distribution và brand; bio adds fermentation/science capability; logistics adds network operations; media/content adds IP and audience economics.
+
+Value creation shifts from physical-goods margin toward **brand + distribution + intellectual property + recurring ecosystem relationships**.
+
+CJ therefore is useful counterexample to idea that all Korean conglomerates follow same heavy-industry ladder.
+
+## POSCO: state-backed steel → materials and industrial platform
+
+POSCO has different origin from family-controlled chaebol. It emerged as strategic steel capacity supporting industrialization.
+
+Integrated steel capability then becomes platform for downstream industrial ecosystem and later diversification into materials and related businesses.
+
+POSCO shows why “large Korean business group” and “chaebol” are not synonyms. Ownership origin, governance and historical mission can differ materially.
+
+This matters for analysis because capital allocation, succession risk and government relationship may differ across institutional origins.
+
+## Hanwha: explosives → chemicals → defense, aerospace, finance and energy
+
+Hanwha lineage begins with explosives, a business naturally connected to mining, construction and industrial development.
+
+From there, group expanded into chemicals, machinery and defense, later adding finance and energy-related businesses. Defense and aerospace introduce a distinct growth mechanism: government procurement, certification, export diplomacy and long product lifecycles.
+
+Hanwha illustrates a path where **state demand + engineering capability + heavy-industry base** combine into strategic-industry expansion.
+
+## Doosan: repeated portfolio transformation and restructuring
+
+Doosan is valuable because its genealogy is not a smooth upward line. The group changed core businesses multiple times, moved toward heavy machinery/energy, and faced periods where leverage and industry conditions forced restructuring.
+
+This teaches a crucial lesson: corporate evolution includes **reversal**.
+
+A company can buy a new strategic identity, then later divest assets because debt, cycle or capital return makes the portfolio unsustainable.
+
+Genealogy therefore should include exits, not only entries.
+
+## GS và LS: group separation as capital-allocation event
+
+GS and LS lineages emerged from LG-related group separations. A separation changes more than family labels. It creates independent capital budgets, boards, financing capacities and strategic priorities.
+
+Supplier/customer relationships may remain historically close, but economic control is no longer same.
+
+This distinction helps avoid a common analytical error: assuming historical kinship equals current consolidated group economics.
+
+## KT: public infrastructure → corporatization/privatization → telecom/digital company
+
+KT has a genealogy different from family-founded groups. Its roots lie in public telecom infrastructure, followed by corporatization and privatization evolution.
+
+This shows Korean corporate history cannot be explained only through chaebol template.
+
+Public-enterprise origin often leaves different asset structure, regulation exposure and policy role. See [../25_public_enterprises_and_state_owned_companies](../25_public_enterprises_and_state_owned_companies.md).
 
 ## Naver và Kakao: digital-native groups
 
-Naver và Kakao khác chaebol truyền thống ở origin. Họ không đi từ factory sang technology; họ sinh ra trong internet/mobile era. Scale đến từ user network, advertising, search, messaging, content và fintech ecosystem.
+Naver and Kakao did not need decades of factory accumulation before scaling. Their core assets are software, user networks, data, advertising demand, content and financial/payment ecosystems.
 
-Tuy vậy khi platform mở rộng qua subsidiaries và acquisitions, câu hỏi governance, related-party transaction và group control lại trở nên tương tự large business groups truyền thống. Technology mới nhưng institutional questions cũ quay lại dưới hình thức khác.
+Digital scale follows different production function:
 
-## Một pattern chung: firm đi theo constraint của từng thời đại
+\[
+Revenue\ Growth \not\propto Physical\ Asset\ Growth
+\]
 
-Có thể nén genealogy của nhiều group như sau:
+A platform can serve many additional users with relatively small marginal physical cost compared with manufacturing.
+
+But as platforms expand through subsidiaries, acquisitions and related businesses, old institutional questions reappear: control, related-party transactions, capital allocation and competition.
+
+New technology does not eliminate governance economics.
+
+## Coupang: digital interface + logistics infrastructure
+
+Coupang represents a hybrid genealogy. It is digital-native in customer interface but physical-capital-heavy in fulfillment, warehouses and last-mile network.
+
+Its scale was financed through external equity and growth capital rather than the directed-credit route of 1970s chaebol.
+
+This is important because **same large scale can arise from different financing regimes**.
+
+Traditional industrial group might scale through retained earnings + debt + policy-linked credit; venture-era company may scale through repeated equity funding before profit.
+
+Balance-sheet risk and investor expectations therefore differ.
+
+## Celltrion, Samsung Biologics and new bio champions
+
+Biopharma shows that mature Korea can still create large companies outside classic industrial genealogies.
+
+Competitive advantage can come from regulatory compliance, biologics manufacturing quality, scale, process know-how and global client relationships.
+
+This demonstrates that “Korean champion” is not frozen list inherited from 1970s. New technology frontiers create new corporate lineages.
+
+## Genealogy and the logic of path dependence
+
+Path dependence does not mean “past determines future”. It means past investment changes current opportunity set.
+
+A chemical company may have easier route into battery materials than a retailer because scientists, plants and supplier relationships are adjacent. A construction group may understand mega-project execution better than a software startup.
+
+But path dependence has downside: legacy assets can become **organizational inertia / 조직관성**.
+
+A group good at hardware may underinvest software; an old distribution network may become fixed-cost burden after digital transition.
+
+Historical strength can become future constraint.
+
+## Group splits: genealogy is a tree, not a line
+
+Korean business history repeatedly creates branching trees through succession, spin-offs and restructuring.
 
 ```text
-1950s: basic goods / reconstruction
-      ↓
-1960s: export manufacturing
-      ↓
-1970s: heavy industry / vertical integration
-      ↓
-1980s: technology + quality upgrading
-      ↓
-1990s: global expansion + leverage
-      ↓
-1997 crisis: restructuring
-      ↓
-2000s: brand / IT / overseas production
-      ↓
-2010s–2020s: semiconductors / batteries / platforms / content / AI
+Historical Group
+   ├─ Lineage A
+   │    ├─ current affiliate 1
+   │    └─ current affiliate 2
+   └─ Lineage B
+        └─ separate modern group
 ```
 
-Đây không phải deterministic ladder. Lotte và CJ có route khác Samsung; Naver không đi qua heavy industry. Nhưng timeline giúp hỏi đúng câu: **business hiện tại của group xuất hiện để giải quyết constraint nào ở thời điểm nào?**
+This is why brand familiarity is not enough. Legal entity resolution remains mandatory.
+
+## How to use genealogy in company analysis
+
+For any Korean company/group, build a short chronology with five markers:
+
+1. **Founding business** — what problem did company originally solve?
+2. **First major capability jump** — export, heavy industry, technology, platform, etc.
+3. **Largest acquisitions/divestments** — when did portfolio identity change?
+4. **Ownership restructuring** — splits, holding-company conversion, succession.
+5. **Current cash engine vs growth engine** — what generates cash now, and where is cash reinvested?
+
+Then ask whether old capability is still moat, merely historical background, or now a burden.
+
+## Capital-allocation tree
+
+A useful mental model is:
+
+```text
+Legacy Cash Engine
+       ↓
+Retained Earnings / Debt / Equity
+       ↓
+New Business Investment
+       ↓
+Capability Building
+       ↓
+New Cash Engine?
+       ↓
+Reinvestment / Exit / Restructuring
+```
+
+The group survives across generations only if enough new businesses become future cash engines.
+
+## Genealogy table: đọc company qua constraint mà nó từng giải quyết
+
+| Lineage | Historical constraint | Capability accumulated | Modern strategic axis |
+|---|---|---|---|
+| Samsung | trade/manufacturing scale | process, electronics, capital deployment | semiconductor, devices, bio/finance affiliates |
+| Hyundai | reconstruction/mega projects | project execution, manufacturing | mobility and separate heavy-industry lineages |
+| LG | consumer goods/materials | chemical process, electronics, R&D | battery, electronics, materials |
+| SK | textile/upstream integration | petrochemical, energy, telecom, capital allocation | semiconductor, energy, telecom |
+| Lotte | consumer demand/distribution | retail, brand, property operations | retail, hospitality, chemicals |
+| CJ | basic food production | consumer brand, bio, logistics, IP | food, bio, content, logistics |
+| POSCO | domestic steel shortage | integrated process engineering | steel, advanced materials |
+| Hanwha | explosives/industrial demand | chemicals, machinery, defense systems | defense, aerospace, energy, finance |
+| Naver/Kakao | digital matching/communication | software, data, network effects | platform, content, fintech |
+| Coupang | fragmented commerce logistics | fulfillment density, software routing | e-commerce/logistics infrastructure |
+| Bio champions | global biologics manufacturing | GMP, regulatory and bioprocess capability | CDMO, biosimilar and bio manufacturing |
+
+The table is not a ranking. It is a map of path dependence.
 
 ## Mental Model
 
-> Đừng ghi nhớ “Samsung = electronics”, “Hyundai = car”, “SK = telecom”. Hãy nghĩ mỗi group là một cây phả hệ của capital, capability và ownership. Core business hôm nay là kết quả của nhiều lần entry, exit, acquisition, spin-off và technology transition.
+> Corporate genealogy is the history of **capital moving between capabilities under changing constraints**. A group name is only the surface. The real object is a tree of entities, ownership, cash engines, accumulated know-how and strategic pivots.
 
-## Cách dùng genealogy khi phân tích company
+## Common misconceptions
 
-Khi đọc một group, trước tiên xác định founding business, turning points, acquisition lớn, separation và current cash engine. Sau đó hỏi whether legacy assets đang là moat hay burden. Old business có thể cung cấp cash cho new business, nhưng cũng có thể giữ capital trong low-return assets.
+“Old company = same business for decades” is wrong. Many Korean groups survive precisely because they changed core businesses.
 
-Dùng file này cùng [../19_major_groups_case_studies](../19_major_groups_case_studies.md), [../05_group_structure_affiliates_holding_companies](../05_group_structure_affiliates_holding_companies.md) và [../20_how_to_analyze_a_korean_company](../20_how_to_analyze_a_korean_company.md).
+“Diversification proves management skill” is also wrong. Entry only creates value if new business eventually earns adequate return on capital.
 
-### Nguồn doanh nghiệp chính
+“Shared historical name = same current group” is wrong. Hyundai/LG-related lineages show why entity and control mapping is mandatory.
 
-Samsung corporate history; Hyundai Motor corporate history; LG corporate history; SK history; Lotte history; CJ Group history; POSCO/Hanwha corporate history and disclosures.
+“New-economy firms have no conglomerate-like issues” is wrong. Once digital platforms expand across subsidiaries and markets, governance and concentration questions return.
 
-## Doosan: consumer/trading origin → heavy industry → portfolio restructuring
+## Connections
 
-Doosan có roots cuối thế kỷ 19 và trải qua nhiều lần transformation. Điều quan trọng không phải memorize từng acquisition mà thấy một Korean group có thể thay “core identity” qua capital allocation. Consumer-oriented activities dần nhường chỗ cho heavy industry/energy/machinery, rồi portfolio lại được restructuring khi leverage và industry conditions thay đổi.
+Use this chapter with [../19_major_groups_case_studies](../19_major_groups_case_studies.md) for detailed cases, [../05_group_structure_affiliates_holding_companies](../05_group_structure_affiliates_holding_companies.md) for ownership graphs, and [../20_how_to_analyze_a_korean_company](../20_how_to_analyze_a_korean_company.md) for practical company research.
 
-Doosan là case hữu ích để học rằng genealogy không phải đường thẳng. Group evolution có branching, divestment và debt-driven reversal.
+### Nguồn nền
 
-## HD Hyundai: từ Hyundai lineage đến specialized industrial group
-
-Shipbuilding activities phát triển trong Hyundai era rồi corporate-group restructuring tạo HD Hyundai ecosystem riêng. Đây là example vì sao current group boundary không thể suy từ shared historical name.
-
-“Hyundai” hôm nay có multiple groups/entities với common genealogy nhưng separate control. Entity resolution vì vậy bắt buộc trước khi phân tích.
-
-## GS và LS: spin-off tạo family of independent groups
-
-LG genealogy cũng tạo ra GS và LS qua group separations. Điều này cho thấy chaebol succession không chỉ là inheritance trong cùng group; nó có thể dẫn tới partition of business portfolios thành independent groups.
-
-Corporate history vì thế giải thích vì sao suppliers, brands và ownership networks có historical connection dù hiện tại legal control đã tách.
-
-## KT và telecom privatization lineage
-
-KT cho thấy một genealogy khác family-founded chaebol: public-sector telecom infrastructure → corporatization/privatization → listed telecom/digital company. Business history Korea không thể chỉ dùng family conglomerate template.
-
-## Coupang: digital-native scale bằng logistics capital
-
-Coupang khác Naver/Kakao vì digital interface được kết hợp với physical fulfillment network. Genealogy của nó phản ánh 2010s capital market và venture environment: scale được finance bằng large external equity để build warehouses/logistics trước profit.
-
-Đây là model gần Amazon hơn traditional chaebol, dù khi scale lớn nó cũng tạo ecosystem và labor/regulatory questions tương tự large groups.
-
-## Celltrion và Samsung Biologics: industrial capability đi vào biotech
-
-Các bio firms lớn cho thấy new Korean champions có thể xuất hiện từ regulatory/manufacturing capability chứ không cần genealogy từ 1960s. Một economy mature vẫn tạo large firms mới nếu technology frontier thay đổi.
-
-## Genealogy table: đọc công ty qua “constraint mà nó giải quyết”
-
-| Group/company lineage | Constraint ban đầu nổi bật | Capability tích lũy | Trục hiện tại |
-|---|---|---|---|
-| Samsung | trade/manufacturing scale | electronics, process, capital | semiconductor, devices, finance |
-| Hyundai | reconstruction/infrastructure | project execution, heavy manufacturing | auto, shipbuilding lineages, mobility |
-| LG | consumer chemicals/electronics | materials, electronics, process R&D | battery, electronics, chemicals |
-| SK | textile/energy diversification | petrochemical, telecom, capital allocation | semiconductors, energy, telecom |
-| POSCO | thiếu domestic steel | integrated steel engineering | steel, materials |
-| Naver/Kakao | internet/mobile matching | software, data, platforms | search, messaging, fintech/content |
-| Coupang | fragmented/slow commerce logistics | fulfillment density, software routing | e-commerce/logistics |
-| Bio champions | global biopharma manufacturing gap | quality/regulatory/bioprocess | CDMO, biosimilars |
-
-Table này không phải ranking. Nó là tool để hỏi: capability hiện tại đến từ historical problem nào?
+Corporate histories and disclosures của Samsung, Hyundai lineages, LG/GS/LS, SK, Lotte, CJ, POSCO, Hanwha, Doosan, KT, major digital platforms and bio companies; historical interpretation cross-checked against broader KDI industrial-development literature.
