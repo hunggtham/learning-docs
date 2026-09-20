@@ -1,79 +1,79 @@
-# Latency, throughput, capacity và scalability
+# Độ trễ, thông lượng, năng lực xử lý và khả năng mở rộng
 
-Performance engineering không phải “làm code nhanh” chung chung. Hệ thống có latency distribution, throughput, resource utilization, queueing và workload shape. Optimization đúng phải xác định bottleneck theo measurements và model.
+Kỹ thuật hiệu năng (performance engineering) không đơn giản là “làm mã chạy nhanh”. Một hệ thống có phân bố độ trễ, thông lượng, mức sử dụng tài nguyên, hàng đợi và hình dạng tải. Muốn tối ưu đúng phải xác định nút thắt cổ chai bằng đo lường và mô hình, thay vì đoán.
 
-## Latency và throughput
+## Độ trễ và thông lượng
 
-Latency = time một operation/request hoàn thành. Throughput = operations per unit time. Chúng liên quan nhưng không identical: batching có thể tăng throughput nhưng tăng individual wait; low latency one request không chứng minh high throughput under load.
+**Độ trễ (latency)** là thời gian để một thao tác hoặc yêu cầu hoàn thành. **Thông lượng (throughput)** là số thao tác hoàn thành trong một đơn vị thời gian. Hai đại lượng liên quan nhưng không giống nhau: gom lô (batching) có thể tăng thông lượng nhưng làm từng yêu cầu phải chờ lâu hơn; một yêu cầu đơn lẻ có độ trễ thấp không chứng minh hệ thống chịu được thông lượng cao khi có tải.
 
-Report averages alone hides tail. p95/p99 latency matter because distributed request fan-out can be dominated by slowest dependency.
+Chỉ báo cáo giá trị trung bình dễ che giấu phần đuôi của phân bố. Độ trễ p95/p99 đặc biệt quan trọng vì một yêu cầu phân tán gọi nhiều dịch vụ có thể bị chi phối bởi thành phần chậm nhất.
 
-## Utilization, saturation và queueing
+## Mức sử dụng, bão hòa và hàng đợi
 
-Khi arrival rate gần service capacity, queue grows và latency tăng nonlinearly. Simple M/M/1 intuition gives utilization `ρ=λ/μ`; expected queue delay blows up as ρ→1. Real workloads not M/M/1, but principle remains: running permanent 100% capacity leaves no burst headroom.
+Khi tốc độ yêu cầu đến gần năng lực phục vụ, hàng đợi tăng và độ trễ thường tăng phi tuyến. Mô hình M/M/1 đơn giản cho trực giác với mức sử dụng `ρ = λ/μ`; thời gian chờ tăng rất mạnh khi `ρ` tiến gần 1. Hệ thống thực tế không hoàn toàn là M/M/1, nhưng nguyên lý vẫn hữu ích: vận hành liên tục ở 100% năng lực không để lại khoảng trống cho đột biến tải.
 
-Saturation signal can be CPU run queue, disk queue, connection pool wait, thread pool queue or GC pressure.
+Dấu hiệu bão hòa có thể là hàng đợi CPU, hàng đợi đĩa, thời gian chờ connection pool, hàng đợi thread pool hoặc áp lực thu gom rác.
 
-## Little's Law
+## Định luật Little
 
-For stable system:
+Với hệ thống ổn định:
 
 \[
 L = \lambda W
 \]
 
-Average in-flight L = throughput/arrival rate λ × average time W. If service handles 1000 req/s and average latency 0.2 s, roughly 200 requests in system on average.
+`L` là số công việc trung bình đang ở trong hệ thống, `λ` là tốc độ đến hoặc thông lượng ổn định, còn `W` là thời gian trung bình mỗi công việc ở lại. Nếu dịch vụ xử lý 1000 yêu cầu/giây với độ trễ trung bình 0,2 giây, trung bình có khoảng 200 yêu cầu đang tồn tại trong hệ thống.
 
-This connects concurrency limits to latency/throughput quantitatively.
+Định luật này nối giới hạn đồng thời với độ trễ và thông lượng bằng một quan hệ định lượng.
 
-## Bottleneck
+## Nút thắt cổ chai
 
-End-to-end throughput limited by constrained resource/stage. Speeding non-bottleneck gives little system gain. Profiling, tracing and resource metrics identify where time/capacity spent.
+Thông lượng từ đầu đến cuối bị giới hạn bởi tài nguyên hoặc giai đoạn bị ràng buộc nhất. Tăng tốc phần không phải nút thắt thường đem lại rất ít cải thiện cho toàn hệ thống. Hồ sơ hiệu năng, truy vết phân tán và chỉ số tài nguyên giúp xác định thời gian và năng lực đang bị tiêu tốn ở đâu.
 
-Amdahl's Law similarly limits optimization speedup by fraction improved.
+Định luật Amdahl cũng diễn đạt cùng một trực giác: mức tăng tốc tổng thể bị giới hạn bởi phần công việc thực sự được cải thiện.
 
-## Vertical vs horizontal scaling
+## Mở rộng theo chiều dọc và chiều ngang
 
-Scale up adds CPU/RAM/faster device to one machine. Scale out adds nodes. Horizontal scaling requires partitionable workload/state management, load balancing and distributed coordination; it is not automatic.
+**Mở rộng theo chiều dọc (vertical scaling)** tăng CPU, RAM hoặc thiết bị nhanh hơn cho một máy. **Mở rộng theo chiều ngang (horizontal scaling)** thêm nhiều nút. Mở rộng ngang đòi hỏi tải có thể phân chia, trạng thái được quản lý, có cân bằng tải và có cơ chế phối hợp phân tán; nó không tự động xảy ra chỉ vì thêm máy.
 
-Stateless request processing scales easier, but persistent state still lives somewhere and can bottleneck DB/cache/network.
+Xử lý yêu cầu không trạng thái thường dễ mở rộng hơn, nhưng dữ liệu bền vững vẫn phải nằm ở đâu đó và cơ sở dữ liệu, cache hoặc mạng vẫn có thể trở thành nút thắt mới.
 
-## Caching
+## Bộ nhớ đệm
 
-Cache stores expensive result/data closer to use. Hit ratio, miss penalty, eviction, freshness và invalidation determine value.
+Cache giữ dữ liệu hoặc kết quả đắt tiền gần nơi sử dụng hơn. Giá trị của cache phụ thuộc tỷ lệ trúng, chi phí khi trượt, chính sách loại bỏ, độ mới và cơ chế vô hiệu hóa.
 
-Cache-aside loads on miss; write-through/write-back alter consistency. TTL bounds staleness but doesn't guarantee invalidation exactly when source changes.
+Mô hình cache-aside nạp dữ liệu khi trượt; write-through và write-back thay đổi cách đồng bộ ghi. TTL giới hạn thời gian dữ liệu có thể cũ nhưng không bảo đảm cache bị vô hiệu hóa đúng thời điểm nguồn thay đổi.
 
-Cache stampede occurs many clients miss same hot key and recompute simultaneously; single-flight/locking/jittered expiry mitigate.
+**Bão cache (cache stampede)** xảy ra khi nhiều máy khách cùng trượt trên một khóa nóng rồi đồng thời tính lại dữ liệu. Các kỹ thuật như single-flight, khóa và thêm nhiễu vào thời điểm hết hạn có thể giảm hiện tượng này.
 
-## Batching
+## Gom lô
 
-Batching amortizes fixed overhead: syscall, network RTT, transaction commit, GPU launch. But batch too large increases wait/memory and failure scope. Choose batch by throughput-latency SLO.
+**Gom lô (batching)** chia sẻ chi phí cố định giữa nhiều công việc, chẳng hạn system call, vòng khứ hồi mạng, commit giao dịch hoặc khởi chạy GPU. Tuy nhiên lô quá lớn làm tăng thời gian chờ, bộ nhớ và phạm vi ảnh hưởng khi lỗi. Kích thước lô nên được chọn theo mục tiêu thông lượng và độ trễ của hệ thống.
 
-## Connection pools
+## Nhóm kết nối
 
-DB/network connection setup costly, so pools reuse connections and bound concurrency. Too small creates waits; too large overwhelms database and raises contention. Pool is admission control, not just optimization.
+Thiết lập kết nối cơ sở dữ liệu hoặc mạng có chi phí, nên **nhóm kết nối (connection pool)** tái sử dụng kết nối và đồng thời giới hạn mức song song. Pool quá nhỏ tạo thời gian chờ; pool quá lớn có thể làm cơ sở dữ liệu quá tải và tăng tranh chấp. Vì vậy pool còn là cơ chế kiểm soát đầu vào (admission control), không chỉ là tối ưu.
 
-## Load balancing
+## Cân bằng tải
 
-Round-robin, least-connections, consistent hashing and weighted strategies distribute work under different assumptions. Health check latency/staleness and sticky sessions affect balance. Locality/caching may favor affinity but risk hotspots.
+Round-robin, least-connections, consistent hashing và chiến lược có trọng số phân phối công việc theo các giả định khác nhau. Độ trễ hoặc độ cũ của kiểm tra sức khỏe và phiên bám dính (sticky session) ảnh hưởng chất lượng cân bằng. Tính cục bộ và cache có thể khiến affinity có lợi, nhưng cũng có nguy cơ tạo điểm nóng.
 
-## Performance measurement
+## Đo lường hiệu năng
 
-Measure representative production-like workload, warm-up where runtime JIT/cache matters, percentiles, resource counters and saturation. Microbenchmarks isolate operation but don't substitute end-to-end tests.
+Cần đo với tải gần giống môi trường thực tế, có giai đoạn làm nóng khi JIT hoặc cache ảnh hưởng, theo dõi các phân vị độ trễ, bộ đếm tài nguyên và dấu hiệu bão hòa. Microbenchmark hữu ích để cô lập một thao tác nhưng không thay thế kiểm thử từ đầu đến cuối.
 
-## Mental Model
+## Mô hình tư duy
 
-> Performance is a **flow through finite resources**. Arrival rate creates work; service centers consume capacity; queues store excess; latency reveals waiting. Optimize bottleneck and protect headroom.
+> Hiệu năng là **dòng công việc đi qua các tài nguyên hữu hạn**. Tốc độ đến tạo tải; các trung tâm phục vụ tiêu thụ năng lực; hàng đợi giữ phần vượt quá khả năng xử lý; độ trễ cho thấy thời gian chờ. Hãy tối ưu nút thắt và bảo vệ khoảng trống năng lực.
 
-## Common Misconceptions
+## Những hiểu nhầm thường gặp
 
-**“CPU 100% means efficient.”** Under latency workload it may mean saturated with exploding queue.
+**“CPU 100% nghĩa là sử dụng hiệu quả.”** Với tải nhạy độ trễ, điều đó có thể nghĩa hệ thống đã bão hòa và hàng đợi đang tăng nhanh.
 
-**“Cache makes data access O(1).”** Miss path, network, eviction and consistency still matter.
+**“Có cache thì truy cập dữ liệu trở thành O(1).”** Đường khi trượt, mạng, loại bỏ dữ liệu và nhất quán vẫn tồn tại.
 
-**“Horizontal scaling solves database bottleneck.”** State partition/replication and coordination may become new bottlenecks.
+**“Mở rộng ngang sẽ giải quyết nút thắt cơ sở dữ liệu.”** Phân vùng, sao chép và phối hợp trạng thái có thể trở thành những nút thắt mới.
 
 ## Kết nối
 
-[Complexity](../01_algorithms_data_structures/01_complexity_and_asymptotic_analysis.md) models growth of local algorithms; [memory hierarchy](../02_computer_architecture/02_memory_hierarchy_and_cache.md) hardware performance; [fault tolerance](../07_security_reliability/05_fault_tolerance_observability_and_reliability.md) uses capacity headroom and load shedding.
+[Độ phức tạp](../01_algorithms_data_structures/01_complexity_and_asymptotic_analysis.md) mô hình hóa tốc độ tăng của thuật toán cục bộ; [phân cấp bộ nhớ](../02_computer_architecture/02_memory_hierarchy_and_cache.md) giải thích hiệu năng phần cứng; [khả năng chịu lỗi](../07_security_reliability/05_fault_tolerance_observability_and_reliability.md) sử dụng khoảng trống năng lực và cơ chế giảm tải để giữ hệ thống ổn định.
