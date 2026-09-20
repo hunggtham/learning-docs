@@ -1,20 +1,20 @@
 # Advanced DSA File Manifest
 
-Manifest này thuộc thư mục `computer_science/01_algorithms_data_structures/advanced/`. Word count là số gần đúng, dùng để kiểm tra độ phủ và phát hiện chapter quá mỏng; nó không phải tiêu chí chất lượng duy nhất. Sau bốn content pass, library được nâng theo hướng **concept → mental model → invariant/proof → complexity → implementation → edge cases → language/runtime semantics → system connections** thay vì note tóm tắt.
+Manifest này thuộc thư mục `computer_science/01_algorithms_data_structures/advanced/`. Word count là số gần đúng, dùng để kiểm tra độ phủ và phát hiện chapter quá mỏng; nó không phải tiêu chí chất lượng duy nhất. Sau năm content pass, library được nâng theo hướng **concept → mental model → invariant/proof → complexity → implementation → edge cases → language/runtime semantics → system connections** thay vì note tóm tắt.
 
 | File | Approx. words |
 |---|---:|
-| `00_foundations/00_dsa_as_problem_modeling.md` | 606 |
-| `00_foundations/01_algorithm_correctness_and_invariants.md` | 534 |
+| `00_foundations/00_dsa_as_problem_modeling.md` | ~3,200 |
+| `00_foundations/01_algorithm_correctness_and_invariants.md` | ~3,300 |
 | `00_foundations/02_complexity_analysis.md` | 895 |
 | `00_foundations/03_memory_models_c_java_javascript.md` | ~2,300 |
-| `00_foundations/04_mathematical_toolkit_for_dsa.md` | 762 |
+| `00_foundations/04_mathematical_toolkit_for_dsa.md` | ~3,500 |
 | `00_foundations/_index.md` | 28 |
 | `01_linear_structures/00_arrays_and_dynamic_arrays.md` | 1,051 |
 | `01_linear_structures/01_linked_lists.md` | 988 |
 | `01_linear_structures/02_stacks.md` | 739 |
-| `01_linear_structures/03_queues_deques_and_priority_queues.md` | 645 |
-| `01_linear_structures/04_hash_tables.md` | 681 |
+| `01_linear_structures/03_queues_deques_and_priority_queues.md` | ~3,600 |
+| `01_linear_structures/04_hash_tables.md` | ~4,100 |
 | `01_linear_structures/_index.md` | 14 |
 | `02_trees/00_tree_foundations.md` | ~2,700 |
 | `02_trees/01_binary_search_trees.md` | ~3,000 |
@@ -22,8 +22,8 @@ Manifest này thuộc thư mục `computer_science/01_algorithms_data_structures
 | `02_trees/03_heaps.md` | ~2,700 |
 | `02_trees/04_tries.md` | ~2,200 |
 | `02_trees/05_b_trees_and_external_memory.md` | ~3,500 |
-| `02_trees/06_augmented_trees_and_order_statistics.md` | 736 |
-| `02_trees/07_skip_lists.md` | 721 |
+| `02_trees/06_augmented_trees_and_order_statistics.md` | ~3,100 |
+| `02_trees/07_skip_lists.md` | ~3,300 |
 | `02_trees/_index.md` | 40 |
 | `03_graphs/00_graph_modeling_and_representation.md` | ~2,700 |
 | `03_graphs/01_graph_traversal_bfs_dfs.md` | ~3,200 |
@@ -36,7 +36,7 @@ Manifest này thuộc thư mục `computer_science/01_algorithms_data_structures
 | `03_graphs/08_network_flow_and_matching.md` | ~2,300 |
 | `03_graphs/_index.md` | 29 |
 | `04_algorithmic_paradigms/00_searching.md` | ~3,000 |
-| `04_algorithmic_paradigms/01_sorting.md` | 979 |
+| `04_algorithmic_paradigms/01_sorting.md` | ~3,700 |
 | `04_algorithmic_paradigms/02_recursion_and_backtracking.md` | ~2,900 |
 | `04_algorithmic_paradigms/03_divide_and_conquer.md` | ~1,800 |
 | `04_algorithmic_paradigms/04_greedy_algorithms.md` | ~2,700 |
@@ -44,7 +44,7 @@ Manifest này thuộc thư mục `computer_science/01_algorithms_data_structures
 | `04_algorithmic_paradigms/06_selection_and_top_k.md` | ~1,900 |
 | `04_algorithmic_paradigms/07_two_pointers_sliding_window_prefix_difference.md` | ~2,400 |
 | `04_algorithmic_paradigms/08_intervals_and_sweep_line.md` | ~1,900 |
-| `04_algorithmic_paradigms/09_hard_problems_reductions_and_approximation.md` | 898 |
+| `04_algorithmic_paradigms/09_hard_problems_reductions_and_approximation.md` | ~3,600 |
 | `04_algorithmic_paradigms/_index.md` | 38 |
 | `05_specialized/00_string_algorithms.md` | ~3,100 |
 | `05_specialized/01_range_queries_fenwick_segment_tree.md` | ~3,200 |
@@ -52,7 +52,7 @@ Manifest này thuộc thư mục `computer_science/01_algorithms_data_structures
 | `05_specialized/03_amortized_randomized_and_probabilistic_thinking.md` | ~2,100 |
 | `05_specialized/04_suffix_arrays_suffix_trees_and_lcp.md` | ~2,300 |
 | `05_specialized/05_sparse_table_and_static_range_queries.md` | ~3,000 |
-| `05_specialized/06_probabilistic_data_structures.md` | 880 |
+| `05_specialized/06_probabilistic_data_structures.md` | ~3,700 |
 | `05_specialized/_index.md` | 34 |
 | `80_language_implementations/00_c_dsa_implementation_patterns.md` | ~3,700 |
 | `80_language_implementations/01_java_collections_and_dsa.md` | ~4,000 |
@@ -65,9 +65,9 @@ Manifest này thuộc thư mục `computer_science/01_algorithms_data_structures
 | `90_connections/_index.md` | 12 |
 | `README.md` | ~1,350 |
 
-**Total approximate words:** ~108,000+
+**Total approximate words:** ~134,000+
 
-Các foundation chapters ở thư mục cha không được tính vào tổng này; manifest chỉ đo Advanced DSA Knowledge Library.
+Các foundation chapters ở thư mục cha không được tính vào tổng này; manifest chỉ đo Advanced DSA Knowledge Library. Các số có dấu `~` là estimate phục vụ coverage QA, không phải word count tuyệt đối.
 
 ## Content-pass status
 
@@ -85,35 +85,25 @@ Pass 3 nâng `balanced_search_trees`, `heaps`, `shortest_paths`, `DAG/topologica
 
 ### Pass 4 — hoàn thiện các dependency còn lệch độ sâu
 
-Pass 4 tiếp tục nâng các chapter nền nối nhiều nhánh kiến thức:
+Pass 4 nâng `tree_foundations`, `binary_search_trees`, `b_trees_and_external_memory`, `graph_modeling_and_representation`, `graph_traversal_bfs_dfs`, `searching`, `dynamic_programming`, `sparse_table` và ba chapter C/Java/JavaScript runtime implementation. Sau pass này, phần lớn algorithm-specific core chapters đã ở mức vài nghìn từ.
 
-- `tree_foundations`: recursive structure, iterative traversal, memory representation, Euler flattening, LCA/binary lifting, Tree DP/rerooting, validators và structural misconceptions;
-- `binary_search_trees`: search/insert/delete proof, successor/predecessor, range query, comparator contract, augmentation, persistence, concurrency và invariant testing;
-- `b_trees_and_external_memory`: page/block cost model, insert split/delete borrow-merge, B+Tree leaves, clustered/secondary/composite/covering indexes, fill factor, buffer pool, LSM comparison và concurrency;
-- `graph_modeling_and_representation`: graph classes, adjacency/edge-list/CSR, state/product/time-expanded graph, implicit graph, sparse-vs-dense representation và modeling failure modes;
-- `graph_traversal_bfs_dfs`: BFS layer proof, multi-source/bidirectional BFS, DFS timestamps/colors, iterative postorder, implicit graph, bipartite/component patterns và traversal testing;
-- `searching`: binary-search invariants, lower/upper bound, binary search on answer, real/exponential search, hash/tree/trie/graph search, A*, indexing và candidate-elimination mental model;
-- `dynamic_programming`: state equivalence, transition derivation, knapsack/LCS/edit/LIS/tree/interval/bitmask/digit/profile DP, optimization families, reconstruction, overflow và brute-force differential testing;
-- `sparse_table`: idempotence vs associativity, classic/DST, RMQ-LCA-Cartesian connections, memory/cache model, 2D/static workload và data-structure selection;
-- `C implementation`: ownership, dynamic arrays, arenas/pools, aliasing, open addressing, alloc failure, intrusive structures, sanitizer/fuzzing và API contracts;
-- `Java implementation`: JDK collection semantics, comparator/equality, boxing/GC, primitive layouts, concurrency collections, JVM/JIT profiling và library pitfalls;
-- `JavaScript implementation`: Number/BigInt, Array/TypedArray, Map identity, 32-bit bitwise semantics, queue/heap patterns, Unicode, GC/JIT/event-loop behavior và compact representations.
+### Pass 5 — hoàn thiện reasoning foundation và các cấu trúc còn mỏng
+
+Pass 5 tập trung các chapter còn là điểm lõm cuối cùng của core library:
+
+- `dsa_as_problem_modeling`: chuyển từ giới thiệu ADT thành framework modeling đầy đủ gồm workload, state equivalence, static/dynamic, online/offline, exact/approximate, deterministic/expected guarantees, preprocessing, composition và runtime cost model;
+- `algorithm_correctness_and_invariants`: bổ sung specification, partial/total correctness, loop/representation invariants, structural/strong induction, exchange/cut/contradiction proofs, executable validators, differential/property testing, overflow và concurrency correctness;
+- `mathematical_toolkit_for_dsa`: mở rộng logarithm/sums/recurrences sang combinatorics, algebraic properties, modular arithmetic, probability/expectation, graph identities, aggregate/accounting/potential amortized analysis và information-theoretic lower bounds;
+- `queues_deques_and_priority_queues`: bổ sung ring-buffer invariants, bounded queues/backpressure, monotonic deque proof, 0–1 BFS, indexed/lazy/bucket priority queues, scheduling fairness, blocking/work-stealing/concurrent queues và testing;
+- `hash_tables`: mở rộng chaining/open addressing, probing/tombstones/Robin Hood, hash quality/security, perfect/consistent/rendezvous hashing, incremental resize, database hash join/aggregation, concurrent maps, memory/cache model và adversarial testing;
+- `augmented_trees_and_order_statistics`: mở rộng rank/select, weighted statistics, interval pruning, multiple augmentations, implicit/persistent/lazy trees, multidimensional summaries, concurrency và invariant validation;
+- `skip_lists`: bổ sung complete search/insert/delete contracts, indexed spans, probability/memory trade-offs, storage-engine use, concurrent logical deletion/reclamation, deterministic testing và comparison với tree/B+Tree;
+- `sorting`: nâng từ survey lên chapter về comparator/stability/inversions, quick/merge/heap/hybrid/adaptive/non-comparison sorting, external/database/parallel sorting, partial sorting, hardware locality và correctness benchmarking;
+- `hard_problems_reductions_and_approximation`: bổ sung P/NP distinction sâu hơn, reduction proof discipline, SAT/2-SAT, pseudo-polynomial/FPT/kernel/treewidth, meet-in-the-middle, branch-and-bound, LP relaxation, approximation/PTAS/FPTAS, solver và anytime-gap thinking;
+- `probabilistic_data_structures`: bổ sung parameter sizing/error models, Counting/Cuckoo/XOR filters, CMS/HLL details, MinHash/KMV/LSH, mergeability, temporal windows, adversarial hashing, serialization/monitoring và statistical validation.
 
 ## Remaining natural targets
 
-Sau pass 4, phần lớn core library đã ở mức chapter dài và tương đối đồng đều. Những file vẫn còn ngắn hơn rõ rệt và là mục tiêu hợp lý cho pass sau gồm:
+Sau pass 5, không còn chapter core nào ở mức chỉ vài trăm từ ngoài các `_index.md` cố ý ngắn. Các file ngắn hơn tương đối còn lại — như `complexity_analysis`, `arrays`, `linked_lists`, `stacks`, `probabilistic/amortized thinking` hoặc một số graph subchapters — đã đủ làm chapter độc lập nhưng có thể được nâng tiếp nếu muốn đưa **mọi** chapter về ngưỡng 2,000–3,000 từ.
 
-```text
-00_foundations/00_dsa_as_problem_modeling.md
-00_foundations/01_algorithm_correctness_and_invariants.md
-00_foundations/04_mathematical_toolkit_for_dsa.md
-01_linear_structures/03_queues_deques_and_priority_queues.md
-01_linear_structures/04_hash_tables.md
-02_trees/06_augmented_trees_and_order_statistics.md
-02_trees/07_skip_lists.md
-04_algorithmic_paradigms/01_sorting.md
-04_algorithmic_paradigms/09_hard_problems_reductions_and_approximation.md
-05_specialized/06_probabilistic_data_structures.md
-```
-
-Các `_index.md` cố ý ngắn vì chỉ đóng vai trò navigation, không phải chapter học thuật.
+Hướng mở rộng hợp lý tiếp theo không còn là “vá lỗ hổng cơ bản”, mà là một content pass theo chiều ngang: đồng bộ terminology, thêm cross-links, thêm worked examples lớn xuyên nhiều chapter, hoặc nâng các file 700–1,500 từ còn lại lên cùng độ sâu với nhóm 3,000+ từ.
