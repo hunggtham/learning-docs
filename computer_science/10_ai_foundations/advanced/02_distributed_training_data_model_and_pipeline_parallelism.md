@@ -1,49 +1,49 @@
-# Distributed training: data, model và pipeline parallelism
+# Huấn luyện phân tán: song song dữ liệu, mô hình và đường ống
 
-Modern model có thể quá lớn hoặc training quá chậm cho một accelerator. Distributed training chia computation/state qua nhiều GPUs/nodes, nhưng speedup bị giới hạn bởi communication, synchronization và imbalance chứ không chỉ số thiết bị.
+Mô hình hiện đại có thể quá lớn hoặc quá chậm để huấn luyện trên một bộ tăng tốc duy nhất. **Huấn luyện phân tán (distributed training)** chia tính toán và trạng thái qua nhiều GPU hoặc nhiều nút, nhưng mức tăng tốc bị giới hạn bởi giao tiếp, đồng bộ và mất cân bằng tải chứ không chỉ phụ thuộc số thiết bị.
 
-## Data parallelism
+## Song song dữ liệu
 
-Mỗi worker giữ model replica và xử lý mini-batch khác nhau. Sau backward pass, gradients được aggregate, thường qua all-reduce, để replicas cập nhật nhất quán.
+Trong **song song dữ liệu (data parallelism)**, mỗi worker giữ một bản sao mô hình và xử lý mini-batch khác nhau. Sau bước lan truyền ngược, gradient được tổng hợp, thường bằng phép tập thể `all-reduce`, để các bản sao cập nhật nhất quán.
 
-Nếu computation mỗi step ít so với gradient communication, thêm GPUs cho diminishing returns. Batch size cũng thường tăng, có thể thay optimization dynamics.
+Nếu lượng tính toán mỗi bước nhỏ so với lượng dữ liệu gradient phải truyền, thêm GPU sẽ đem lại lợi ích giảm dần. Kích thước batch cũng thường tăng theo mức song song và có thể thay đổi động lực tối ưu hóa.
 
-## Model/tensor parallelism
+## Song song mô hình và tensor
 
-Khi model không vừa một device, tensor/matrix operations được shard. Một layer có thể cần collectives giữa devices trong forward/backward.
+Khi mô hình không vừa một thiết bị, các tensor hoặc phép toán ma trận được chia nhỏ giữa nhiều thiết bị. Một tầng có thể cần trao đổi dữ liệu tập thể giữa các GPU trong cả bước tiến và bước lùi.
 
-High-bandwidth interconnect trở thành critical. Partition tốt phải cân bằng compute và giảm communication volume.
+Lúc này đường liên kết băng thông cao trở thành tài nguyên quan trọng. Cách phân chia tốt phải vừa cân bằng lượng tính toán vừa giảm khối lượng giao tiếp.
 
-## Pipeline parallelism
+## Song song đường ống
 
-Layers được chia thành stages trên devices. Micro-batches chạy như assembly line. Nếu stage chậm hơn, toàn pipeline bị giới hạn bởi bottleneck stage; đầu/cuối schedule có **pipeline bubble** không tận dụng đủ devices.
+Trong **song song đường ống (pipeline parallelism)**, các tầng được chia thành nhiều giai đoạn trên các thiết bị khác nhau. Các micro-batch đi qua hệ thống giống dây chuyền lắp ráp. Nếu một giai đoạn chậm hơn, toàn bộ đường ống bị giới hạn bởi giai đoạn đó; phần đầu và cuối lịch chạy còn tạo **khoảng trống đường ống (pipeline bubble)** khiến thiết bị chưa được sử dụng hết.
 
-Scheduling strategy đổi memory footprint, staleness và utilization.
+Chiến lược lập lịch khác nhau sẽ thay đổi lượng bộ nhớ cần, độ trễ trạng thái và mức sử dụng thiết bị.
 
-## Optimizer state và sharding
+## Trạng thái bộ tối ưu và phân mảnh trạng thái
 
-Training không chỉ lưu parameters. Gradients và optimizer states như Adam moments có thể chiếm nhiều lần model size. ZeRO-style sharding phân tán optimizer state, gradients và parameters để giảm memory mỗi worker.
+Huấn luyện không chỉ lưu tham số mô hình. Gradient và trạng thái của bộ tối ưu như các moment của Adam có thể chiếm dung lượng nhiều lần kích thước tham số. Các kỹ thuật kiểu ZeRO phân tán trạng thái bộ tối ưu, gradient và tham số để giảm lượng bộ nhớ trên mỗi worker.
 
-Memory accounting phải tính activations, temporary buffers và communication workspace, không chỉ checkpoint size.
+Khi tính ngân sách bộ nhớ phải tính cả activation, bộ đệm tạm và vùng làm việc cho giao tiếp, không chỉ kích thước file checkpoint.
 
-## Collective communication
+## Giao tiếp tập thể
 
-All-reduce, all-gather, reduce-scatter là primitives chính. Topology-aware algorithms tận dụng NVLink/intra-node bandwidth trước khi đi inter-node network.
+`all-reduce`, `all-gather` và `reduce-scatter` là các phép giao tiếp tập thể quan trọng. Thuật toán nhận biết topology cố tận dụng băng thông nhanh trong cùng máy, chẳng hạn NVLink, trước khi truyền qua mạng giữa các nút.
 
-Straggler một worker có thể kéo dài synchronous step vì mọi worker chờ collective.
+Một worker chậm có thể kéo dài toàn bộ bước đồng bộ vì các worker khác phải chờ phép tập thể hoàn thành.
 
-## Fault tolerance
+## Khả năng chịu lỗi
 
-Training nhiều ngày tăng xác suất node failure. Checkpoint cần đủ model/optimizer/scheduler/random state để resume gần đúng trajectory.
+Huấn luyện kéo dài nhiều ngày làm xác suất một nút gặp lỗi tăng lên. Checkpoint cần lưu đủ trạng thái mô hình, bộ tối ưu, bộ lập lịch và trạng thái ngẫu nhiên để có thể tiếp tục gần với quỹ đạo huấn luyện trước đó.
 
-Checkpoint quá thường xuyên tốn I/O; quá thưa mất nhiều compute khi failure.
+Checkpoint quá thường xuyên tốn I/O; quá thưa làm mất nhiều giờ tính toán khi xảy ra lỗi.
 
-## Scaling efficiency
+## Hiệu quả mở rộng
 
-Nếu 8 GPUs chỉ nhanh gấp 5 lần 1 GPU, efficiency là khoảng 62.5%. Phần mất đi đến từ communication, idle/bubbles, input pipeline và synchronization.
+Nếu 8 GPU chỉ nhanh gấp 5 lần 1 GPU, hiệu quả mở rộng xấp xỉ 62,5%. Phần mất đi đến từ giao tiếp, thời gian rỗi và pipeline bubble, đường cấp dữ liệu đầu vào và đồng bộ.
 
-Amdahl's law cung cấp mental model: phần serial/coordination cuối cùng giới hạn speedup.
+Định luật Amdahl cung cấp mô hình tư duy hữu ích: phần tuần tự và chi phí phối hợp cuối cùng sẽ giới hạn mức tăng tốc.
 
-## Mental Model
+## Mô hình tư duy
 
-> Distributed training là bài toán partition computation, memory và communication. Thêm accelerator chỉ hữu ích khi mỗi device có đủ work và interconnect không biến synchronization thành bottleneck.
+> Huấn luyện phân tán là bài toán phân chia **tính toán, bộ nhớ và giao tiếp**. Thêm bộ tăng tốc chỉ hữu ích khi mỗi thiết bị có đủ công việc và interconnect không biến đồng bộ thành nút thắt cổ chai.

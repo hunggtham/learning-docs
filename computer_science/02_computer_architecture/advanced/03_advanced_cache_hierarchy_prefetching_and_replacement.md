@@ -1,53 +1,53 @@
-# Advanced cache hierarchy, prefetching và replacement
+# Phân cấp bộ nhớ đệm nâng cao, nạp trước và chính sách thay thế
 
-Cache tồn tại vì processor và memory có tốc độ rất khác nhau. Nhưng khi đi sâu hơn L1/L2/L3, câu hỏi không còn là “cache nhanh hơn RAM” mà là cách một hierarchy hữu hạn dự đoán dữ liệu nào đáng giữ gần core, dữ liệu nào nên đẩy xuống tầng thấp hơn và khi nào nên chủ động kéo dữ liệu về trước khi chương trình yêu cầu.
+Bộ nhớ đệm (cache) tồn tại vì bộ xử lý (processor) và bộ nhớ chính có tốc độ rất khác nhau. Khi đi sâu hơn các tầng L1/L2/L3, câu hỏi không còn chỉ là “cache nhanh hơn RAM”, mà là cách một hệ thống phân cấp hữu hạn dự đoán dữ liệu nào đáng giữ gần lõi xử lý (core), dữ liệu nào nên chuyển xuống tầng thấp hơn và khi nào nên chủ động đưa dữ liệu về trước khi chương trình yêu cầu.
 
-## Locality là giả định, không phải định luật
+## Tính cục bộ là giả định, không phải định luật
 
-Cache dựa trên **temporal locality** và **spatial locality**. Nếu một cache line vừa được dùng, có khả năng nó hoặc vùng lân cận sẽ được dùng lại. Workload tuần tự thường phù hợp giả định này; random access trên working set lớn có thể phá vỡ nó.
+Cache dựa trên **tính cục bộ theo thời gian (temporal locality)** và **tính cục bộ theo không gian (spatial locality)**. Nếu một dòng cache (cache line) vừa được sử dụng, có khả năng chính dữ liệu đó hoặc vùng lân cận sẽ sớm được dùng lại. Khối lượng công việc (workload) truy cập tuần tự thường phù hợp với giả định này, trong khi truy cập ngẫu nhiên (random access) trên tập dữ liệu làm việc (working set) lớn có thể phá vỡ nó.
 
-Một cache line thường chứa nhiều byte hơn đúng object mà CPU đang cần. Điều đó giảm số transaction nếu access có spatial locality, nhưng cũng gây **false sharing** khi nhiều core sửa các biến độc lập nằm chung line.
+Một dòng cache thường chứa nhiều byte hơn đúng đối tượng mà CPU đang cần. Điều này giảm số lần giao dịch bộ nhớ khi chương trình có tính cục bộ theo không gian, nhưng cũng có thể gây **chia sẻ giả (false sharing)** khi nhiều lõi sửa các biến độc lập nhưng các biến đó lại nằm chung một dòng cache.
 
-## Set associativity và conflict miss
+## Tính kết hợp theo tập và xung đột cache
 
-Cache direct-mapped đơn giản nhưng nhiều address có thể cạnh tranh cùng slot. Set-associative cache cho mỗi set nhiều ways, giảm conflict nhưng cần so sánh nhiều tags và chọn victim phức tạp hơn.
+Cache ánh xạ trực tiếp (direct-mapped cache) đơn giản, nhưng nhiều địa chỉ có thể cạnh tranh cùng một vị trí. Cache kết hợp theo tập (set-associative cache) cho phép mỗi tập có nhiều vị trí (way), nhờ đó giảm xung đột nhưng phải so sánh nhiều thẻ địa chỉ (tag) và chọn dòng bị thay thế phức tạp hơn.
 
-Miss vì vậy không chỉ do dữ liệu “quá lớn”. Ta thường phân biệt compulsory miss, capacity miss và conflict miss để hiểu cơ chế gây mất locality.
+Một lần trượt cache (cache miss) vì vậy không chỉ xuất hiện khi dữ liệu “quá lớn”. Ta thường phân biệt trượt bắt buộc (compulsory miss), trượt do thiếu dung lượng (capacity miss) và trượt do xung đột (conflict miss) để hiểu nguyên nhân thật sự làm mất tính cục bộ.
 
-## Inclusive, exclusive và non-inclusive hierarchy
+## Phân cấp bao hàm, loại trừ và không bao hàm
 
-Nếu LLC inclusive, line trong cache nhỏ hơn cũng phải có representation ở LLC. Điều này hỗ trợ một số coherence mechanism nhưng tiêu tốn effective capacity. Exclusive hierarchy cố tránh duplicate line giữa levels, đổi lại movement phức tạp hơn. Nhiều CPU hiện đại dùng policy non-inclusive/non-exclusive để cân bằng.
+Nếu cache cấp cuối (LLC) sử dụng chính sách bao hàm (inclusive), dữ liệu có mặt ở cache nhỏ hơn cũng phải có đại diện tại LLC. Cách này hỗ trợ một số cơ chế nhất quán cache (cache coherence) nhưng làm giảm dung lượng hiệu dụng. Phân cấp loại trừ (exclusive) cố tránh lưu trùng một dòng ở nhiều tầng, đổi lại việc di chuyển dữ liệu phức tạp hơn. Nhiều CPU hiện đại dùng chính sách không hoàn toàn bao hàm cũng không hoàn toàn loại trừ để cân bằng hai phía.
 
-## Replacement không thể biết tương lai
+## Chính sách thay thế không thể biết trước tương lai
 
-Optimal replacement về lý thuyết sẽ loại line có lần dùng tiếp theo xa nhất, nhưng hardware không biết future access. LRU chính xác cũng đắt khi associativity lớn. Processor dùng approximation như pseudo-LRU, RRIP hoặc adaptive policies.
+Về lý thuyết, chính sách thay thế tối ưu (optimal replacement) sẽ loại dòng có lần sử dụng tiếp theo xa nhất, nhưng phần cứng không biết trước chuỗi truy cập tương lai. LRU chính xác cũng tốn chi phí khi độ kết hợp lớn. Vì vậy bộ xử lý thường dùng các phương pháp xấp xỉ như pseudo-LRU, RRIP hoặc chính sách thích nghi.
 
-Điểm quan trọng là replacement policy đang cố ước lượng **reuse distance**. Với streaming workload, giữ line vừa đọc lâu có thể vô ích; với hot working set, eviction sai làm miss rate tăng mạnh.
+Bản chất của chính sách thay thế là ước lượng **khoảng cách tái sử dụng (reuse distance)**. Với luồng đọc tuần tự, giữ một dòng vừa đọc quá lâu có thể vô ích; với tập dữ liệu nóng, loại nhầm dòng sẽ làm tỷ lệ trượt cache tăng mạnh.
 
-## Hardware prefetcher
+## Bộ nạp trước của phần cứng
 
-**Prefetching (프리페칭)** dự đoán future access và đưa line vào cache sớm. Stream/stride prefetcher hoạt động tốt với array tuần tự. Pointer chasing khó hơn vì address tiếp theo phụ thuộc dữ liệu vừa load.
+**Nạp trước (prefetching / 프리페칭)** dự đoán lần truy cập tương lai và đưa dòng dữ liệu vào cache sớm. Bộ nạp trước theo luồng hoặc theo bước nhảy (stream/stride prefetcher) hoạt động tốt với mảng tuần tự. Truy lần theo con trỏ (pointer chasing) khó hơn vì địa chỉ tiếp theo phụ thuộc vào dữ liệu vừa được đọc.
 
-Prefetch không miễn phí. Prefetch quá mạnh có thể chiếm bandwidth, pollute cache và đẩy hot data ra ngoài. Vì vậy prefetch accuracy và timeliness đều quan trọng: đúng nhưng quá muộn không che latency; đúng nhưng quá sớm có thể bị evict trước khi dùng.
+Nạp trước không miễn phí. Nếu quá mạnh, nó có thể chiếm băng thông (bandwidth), làm ô nhiễm cache và đẩy dữ liệu nóng ra ngoài. Vì vậy độ chính xác và thời điểm nạp đều quan trọng: dự đoán đúng nhưng quá muộn không che được độ trễ; dự đoán đúng nhưng quá sớm có thể khiến dòng dữ liệu bị loại trước khi được dùng.
 
-## Software và data layout
+## Bố trí dữ liệu trong phần mềm
 
-Array of Structures thuận tiện về object model nhưng có thể tải nhiều field không dùng. Structure of Arrays gom cùng field liên tục, thường phù hợp vectorization và cache locality hơn. Đây là lý do data-oriented design có thể vượt object-oriented layout trong hot path dù thuật toán cấp cao giống nhau.
+Cấu trúc “mảng các cấu trúc” (Array of Structures — AoS) thuận tiện cho mô hình đối tượng nhưng có thể tải nhiều trường không cần dùng. “Cấu trúc các mảng” (Structure of Arrays — SoA) gom các trường cùng loại thành vùng liên tục, thường phù hợp hơn với xử lý véc-tơ (vectorization) và tính cục bộ của cache. Đây là một lý do thiết kế hướng dữ liệu (data-oriented design) có thể hiệu quả hơn bố trí hướng đối tượng trên đường chạy nóng (hot path), dù thuật toán cấp cao không thay đổi.
 
-Blocking/tiling trong matrix multiplication cũng là cache reasoning: chia problem để working set của block vừa cache, nhờ đó cùng line được reuse nhiều lần trước khi bị thay thế.
+Kỹ thuật chia khối (blocking/tiling) trong nhân ma trận cũng dựa trên cùng lập luận: chia bài toán để tập dữ liệu của mỗi khối vừa với cache, nhờ đó một dòng dữ liệu được tái sử dụng nhiều lần trước khi bị thay thế.
 
-## Cache coherence không đồng nghĩa consistency
+## Nhất quán cache không đồng nghĩa với mô hình nhất quán bộ nhớ
 
-Coherence trả lời các core thống nhất giá trị của một cache line như thế nào. Memory consistency trả lời ordering giữa nhiều memory operations được software quan sát ra sao. Một hệ thống có coherence vẫn cần memory model và fences phù hợp.
+Nhất quán cache (cache coherence) trả lời cách các lõi thống nhất giá trị của cùng một dòng cache. Mô hình nhất quán bộ nhớ (memory consistency) trả lời thứ tự mà nhiều thao tác bộ nhớ có thể được phần mềm quan sát. Một hệ thống có coherence vẫn cần mô hình bộ nhớ và hàng rào bộ nhớ (memory fence) phù hợp.
 
 Xem thêm: [Memory consistency, cache coherence và ordering](./00_memory_consistency_cache_coherence_and_ordering.md).
 
-## Production reasoning
+## Suy luận trong hệ thống thực tế
 
-Khi service có CPU utilization cao nhưng IPC thấp và LLC miss cao, tăng thread có thể làm tệ hơn vì working set cạnh tranh cache. Khi nhiều thread cập nhật counters nằm sát nhau, false sharing có thể tạo coherence traffic dù logic không khóa nhau.
+Khi một dịch vụ có mức sử dụng CPU cao nhưng số lệnh hoàn thành mỗi chu kỳ (IPC) thấp và tỷ lệ trượt LLC cao, tăng thêm luồng (thread) có thể làm tình hình tệ hơn vì các tập dữ liệu làm việc cạnh tranh cache. Khi nhiều luồng cập nhật các bộ đếm nằm sát nhau, chia sẻ giả có thể tạo lưu lượng coherence lớn dù logic chương trình không khóa lẫn nhau.
 
-Performance counter như cache-misses, LLC-loads và stalled-cycles chỉ có ý nghĩa khi đặt cạnh access pattern và working-set size. Không nên kết luận “cache là bottleneck” chỉ từ một metric đơn lẻ.
+Các bộ đếm hiệu năng (performance counter) như `cache-misses`, `LLC-loads` và `stalled-cycles` chỉ có ý nghĩa khi đặt cạnh kiểu truy cập và kích thước tập dữ liệu làm việc. Không nên kết luận “cache là nút thắt cổ chai (bottleneck)” chỉ từ một chỉ số đơn lẻ.
 
-## Mental Model
+## Mô hình tư duy
 
-> Cache hierarchy là một hệ thống dự đoán reuse dưới giới hạn capacity và bandwidth. Tối ưu cache không phải làm mọi thứ “nằm trong cache”, mà là tổ chức computation để dữ liệu có giá trị được reuse đủ sớm, giảm conflict và tránh tạo traffic không cần thiết.
+> Phân cấp cache là một hệ thống dự đoán khả năng tái sử dụng dữ liệu dưới giới hạn dung lượng và băng thông. Tối ưu cache không phải làm mọi thứ “nằm trong cache”, mà là tổ chức tính toán để dữ liệu có giá trị được tái sử dụng đủ sớm, giảm xung đột và tránh tạo lưu lượng không cần thiết.

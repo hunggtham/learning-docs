@@ -1,49 +1,49 @@
-# Virtual memory internals: page tables, TLB shootdown và huge pages
+# Cơ chế bên trong của bộ nhớ ảo: bảng trang, TLB shootdown và trang lớn
 
-Ở mức API, process thấy một dải virtual addresses gần như riêng tư. Ở mức kernel, abstraction đó phải được duy trì bằng page tables, permission bits, fault handling và coordination với CPU TLB. Virtual memory vì thế không chỉ là “dùng disk làm RAM”; nó là cơ chế isolation, relocation và demand allocation cốt lõi của OS.
+Ở mức API, một tiến trình nhìn thấy dải địa chỉ ảo gần như riêng tư. Ở mức nhân hệ điều hành (kernel), lớp trừu tượng này phải được duy trì bằng bảng trang, bit quyền truy cập, xử lý lỗi trang và phối hợp với TLB của CPU. Vì vậy bộ nhớ ảo (virtual memory) không chỉ là “dùng đĩa thay RAM”; nó là cơ chế cốt lõi cho cô lập, di chuyển địa chỉ và cấp phát theo nhu cầu.
 
-## Address space là một contract
+## Không gian địa chỉ là một hợp đồng
 
-Hai processes có thể dùng cùng virtual address nhưng map tới physical frames khác nhau. Kernel kiểm soát mapping và permissions như read/write/execute, user/kernel. Isolation này là nền cho process security.
+Hai tiến trình có thể sử dụng cùng một địa chỉ ảo nhưng ánh xạ tới các khung trang vật lý khác nhau. Kernel kiểm soát ánh xạ và các quyền đọc, ghi, thực thi cũng như ranh giới user/kernel. Sự cô lập này là nền tảng của bảo mật tiến trình.
 
-`mmap`, heap growth, shared libraries và file mappings đều là các cách xây dựng address space. Nhiều mapping ban đầu chỉ tạo metadata; physical page có thể chưa được cấp cho tới khi access gây fault.
+`mmap`, mở rộng heap, thư viện dùng chung và ánh xạ file đều là các cách xây dựng không gian địa chỉ. Nhiều ánh xạ ban đầu chỉ tạo siêu dữ liệu; trang vật lý có thể chưa được cấp cho tới khi lần truy cập đầu tiên gây lỗi trang.
 
-## Multi-level page table
+## Bảng trang nhiều cấp
 
-Một flat page table cho address space lớn sẽ lãng phí memory. Multi-level table chỉ materialize các nhánh cần thiết. Đổi lại translation có nhiều levels và cần TLB để không phải walk liên tục.
+Một bảng trang phẳng cho không gian địa chỉ lớn sẽ lãng phí rất nhiều bộ nhớ. **Bảng trang nhiều cấp (multi-level page table)** chỉ tạo các nhánh thực sự cần thiết. Đổi lại, dịch địa chỉ phải đi qua nhiều cấp và cần TLB để tránh lặp lại quá trình duyệt bảng trang liên tục.
 
-Kernel phải quản lý lifecycle của page-table pages, permission changes và synchronization khi nhiều threads cùng process chạy trên nhiều cores.
+Kernel phải quản lý vòng đời của các trang chứa bảng trang, thay đổi quyền và đồng bộ khi nhiều luồng của cùng một tiến trình chạy trên nhiều lõi.
 
-## Minor và major fault
+## Lỗi trang nhỏ và lỗi trang lớn
 
-**Minor page fault** không cần đọc dữ liệu từ storage: ví dụ page đã ở page cache nhưng chưa map vào process, hoặc anonymous page cần cấp mới. **Major page fault** cần I/O từ storage và có latency lớn hơn nhiều.
+**Lỗi trang nhỏ (minor page fault)** không cần đọc dữ liệu từ thiết bị lưu trữ; ví dụ dữ liệu đã có trong page cache nhưng chưa được ánh xạ vào tiến trình, hoặc một trang ẩn danh mới cần được cấp. **Lỗi trang lớn (major page fault)** cần I/O từ thiết bị lưu trữ nên có độ trễ lớn hơn nhiều.
 
-Page fault không tự động là lỗi. Demand paging cố ý dùng fault như control mechanism. Điều đáng quan tâm là frequency và cost trong context workload.
+Lỗi trang không tự động có nghĩa là hệ thống có lỗi. Phân trang theo nhu cầu (demand paging) cố ý dùng page fault như một cơ chế điều khiển. Điều cần quan tâm là tần suất và chi phí của nó trong ngữ cảnh tải thực tế.
 
-## Copy-on-write
+## Sao chép khi ghi
 
-Sau `fork`, parent và child có thể tạm share physical pages ở chế độ read-only. Khi một bên ghi, write fault khiến kernel copy page. **Copy-on-write (COW)** tránh copy toàn bộ address space ngay lập tức.
+Sau `fork`, tiến trình cha và con có thể tạm thời dùng chung các trang vật lý ở chế độ chỉ đọc. Khi một bên ghi, lỗi ghi khiến kernel sao chép trang. **Sao chép khi ghi (copy-on-write — COW)** tránh phải sao chép toàn bộ không gian địa chỉ ngay lập tức.
 
-COW hiệu quả khi phần lớn pages không bị sửa; nếu child ghi gần hết memory, deferred copies vẫn xảy ra và có thể tạo latency/memory spike.
+COW hiệu quả khi phần lớn trang không bị sửa. Nếu tiến trình con ghi gần như toàn bộ vùng nhớ, các bản sao trì hoãn vẫn phải được tạo và có thể gây đột biến độ trễ hoặc mức sử dụng bộ nhớ.
 
-## TLB shootdown từ góc nhìn OS
+## TLB shootdown từ góc nhìn hệ điều hành
 
-Khi kernel unmap page hoặc giảm permission, CPU khác có thể còn stale TLB entry. Kernel phải gửi invalidation và chờ mức synchronization cần thiết. Với nhiều cores, frequent mapping changes có thể tạo scalability cost.
+Khi kernel bỏ ánh xạ một trang hoặc giảm quyền truy cập, CPU khác có thể vẫn giữ mục TLB cũ. Kernel phải gửi yêu cầu vô hiệu hóa và chờ mức đồng bộ cần thiết. Trên máy nhiều lõi, thay đổi ánh xạ quá thường xuyên có thể tạo chi phí mở rộng đáng kể.
 
-Đây là connection trực tiếp với [TLB và virtualization ở tầng architecture](../../02_computer_architecture/advanced/05_tlb_page_walkers_huge_pages_and_virtualization.md).
+Đây là kết nối trực tiếp với [TLB và ảo hóa ở tầng kiến trúc](../../02_computer_architecture/advanced/05_tlb_page_walkers_huge_pages_and_virtualization.md).
 
-## Huge pages và THP
+## Trang lớn và THP
 
-Huge pages tăng TLB reach nhưng làm physical allocation khó hơn. Linux Transparent Huge Pages cố tự động collapse pages nhỏ, nhưng compaction có thể tạo latency. Database thường cân nhắc explicit huge pages để kiểm soát behavior tốt hơn.
+Trang lớn tăng phạm vi bao phủ của TLB nhưng làm cấp phát bộ nhớ vật lý khó hơn. **Transparent Huge Pages (THP)** trên Linux cố tự động hợp nhất các trang nhỏ, nhưng quá trình dồn bộ nhớ có thể gây đột biến độ trễ. Cơ sở dữ liệu đôi khi chọn trang lớn tường minh để kiểm soát hành vi tốt hơn.
 
-Không có policy đúng cho mọi workload. Memory fragmentation, latency sensitivity và access pattern quyết định trade-off.
+Không có chính sách đúng cho mọi tải. Phân mảnh bộ nhớ, độ nhạy với độ trễ và kiểu truy cập quyết định sự đánh đổi.
 
-## Overcommit và OOM
+## Cấp phát vượt mức và OOM
 
-Một OS có thể cho processes reserve virtual memory lớn hơn physical RAM hiện có với giả định không phải mọi reservation đều được touch. Khi assumption sai và reclaim không đủ, hệ thống có thể vào memory pressure hoặc OOM handling.
+Hệ điều hành có thể cho tiến trình đặt trước không gian bộ nhớ ảo lớn hơn lượng RAM vật lý hiện có, với giả định không phải mọi vùng đặt trước đều được sử dụng thật. Khi giả định này sai và cơ chế thu hồi không đủ, hệ thống có thể rơi vào áp lực bộ nhớ hoặc xử lý hết bộ nhớ (Out Of Memory — OOM).
 
-Điều này giải thích vì sao “application đã allocate X GB” có nhiều nghĩa: virtual address reservation, committed anonymous memory, resident set và working set không đồng nhất.
+Vì vậy câu “ứng dụng đã cấp phát X GB” có thể mang nhiều nghĩa khác nhau: vùng địa chỉ ảo đặt trước, bộ nhớ ẩn danh đã cam kết, tập trang đang cư trú trong RAM hoặc tập dữ liệu thực sự được dùng thường xuyên.
 
-## Mental Model
+## Mô hình tư duy
 
-> Virtual memory là bảng ánh xạ có quyền truy cập và lifecycle, không phải một vùng RAM giả. Performance phụ thuộc vào locality của translation, fault behavior, reclaim và coordination giữa cores.
+> Bộ nhớ ảo là một hệ thống ánh xạ có quyền truy cập và vòng đời, không phải một vùng RAM giả. Hiệu năng phụ thuộc vào tính cục bộ của dịch địa chỉ, hành vi lỗi trang, cơ chế thu hồi và chi phí phối hợp giữa các lõi.

@@ -1,53 +1,53 @@
-# OAuth, OIDC, token lifecycle và federation threats
+# OAuth, OIDC, vòng đời token và rủi ro liên kết danh tính
 
-OAuth 2.x và OpenID Connect thường bị gom thành “đăng nhập bằng token”, nhưng chúng giải quyết các bài toán khác nhau. OAuth chủ yếu là delegated authorization; OIDC thêm identity layer để client biết user đã authenticate là ai.
+OAuth 2.x và OpenID Connect thường bị gom thành “đăng nhập bằng token”, nhưng chúng giải quyết các bài toán khác nhau. OAuth chủ yếu cung cấp **ủy quyền được ủy nhiệm (delegated authorization)**; OIDC bổ sung lớp danh tính để ứng dụng khách biết người dùng đã được xác thực là ai.
 
-## Resource owner, client, authorization server và resource server
+## Các vai trò trong OAuth
 
-OAuth tách application muốn gọi API khỏi server phát quyền. Client nhận access token có scope/audience nhất định rồi trình token cho resource server.
+OAuth tách ứng dụng muốn gọi API khỏi máy chủ cấp quyền. Ứng dụng khách (client) nhận access token có phạm vi và đối tượng nhận cụ thể rồi gửi token đó tới máy chủ tài nguyên (resource server).
 
-Token không nên được hiểu là “password mới dùng ở mọi nơi”. Nó có issuer, audience, expiry và privileges cụ thể.
+Token không nên được hiểu là “mật khẩu mới dùng ở mọi nơi”. Nó có bên phát hành, đối tượng nhận, thời hạn và tập quyền cụ thể.
 
-## Authorization Code + PKCE
+## Authorization Code và PKCE
 
-Public clients như mobile app/browser không thể giữ client secret thật sự bí mật. PKCE tạo verifier/challenge để authorization code bị intercept khó bị đổi token bởi attacker khác.
+Ứng dụng công khai như mobile app hoặc ứng dụng chạy trong trình duyệt không thể giữ `client secret` thật sự bí mật. **PKCE (Proof Key for Code Exchange)** tạo cặp verifier/challenge để nếu authorization code bị chặn, kẻ tấn công khác vẫn khó đổi mã đó thành token.
 
-Security đến từ binding code exchange với client instance, không phải từ việc nhét static secret vào app binary.
+Tính an toàn đến từ việc ràng buộc bước đổi mã với chính phiên client đã bắt đầu luồng, không phải từ việc nhúng một secret tĩnh vào file ứng dụng.
 
 ## OIDC và ID token
 
-OIDC thêm ID token chứa claims về authentication event/user. ID token dành cho client xác minh identity; access token dành cho API authorization. Dùng ID token như generic API bearer token làm lẫn trust boundary và audience.
+OIDC bổ sung **ID token** chứa các claim về sự kiện xác thực và danh tính người dùng. ID token dành cho client kiểm tra danh tính; access token dành cho API kiểm tra quyền truy cập. Dùng ID token như một bearer token chung cho API làm lẫn ranh giới tin cậy và đối tượng nhận.
 
-## Token validation
+## Xác minh token
 
-Resource server cần validate signature/MAC theo protocol, issuer, audience, expiry và các claims liên quan. Chỉ decode JWT base64 không phải validation.
+Resource server cần kiểm tra chữ ký hoặc MAC theo giao thức, bên phát hành, đối tượng nhận, thời hạn và các claim liên quan. Chỉ giải mã phần Base64 của JWT không phải là xác minh.
 
-Key rotation yêu cầu JWKS/cache strategy. Cache quá lâu có thể giữ key revoked; fetch mỗi request lại tạo dependency/latency mới.
+Xoay khóa (key rotation) yêu cầu chiến lược dùng JWKS và cache phù hợp. Cache quá lâu có thể giữ khóa đã bị thu hồi; tải khóa lại ở mọi yêu cầu lại tạo thêm dependency và độ trễ.
 
 ## Refresh token
 
-Access token ngắn hạn giảm exposure window nhưng cần refresh mechanism. Refresh token có quyền mạnh và sống lâu hơn, nên rotation, revocation và secure storage quan trọng.
+Access token sống ngắn làm giảm khoảng thời gian token bị lộ có thể bị lạm dụng, nhưng cần cơ chế làm mới. **Refresh token** thường có quyền mạnh hơn và sống lâu hơn, nên việc xoay token, thu hồi và lưu trữ an toàn đặc biệt quan trọng.
 
-Refresh-token reuse detection có thể phát hiện token family bị đánh cắp trong rotation scheme.
+Cơ chế phát hiện tái sử dụng refresh token có thể giúp nhận ra một “họ token” đã bị đánh cắp trong mô hình rotation.
 
-## Bearer token và proof-of-possession
+## Bearer token và bằng chứng sở hữu
 
-Bearer token trao quyền cho bất kỳ ai cầm token. Nếu leak qua logs, browser storage hoặc proxy, attacker có thể replay trong thời hạn token.
+**Bearer token** trao quyền cho bất kỳ ai đang giữ token. Nếu token rò qua log, vùng lưu trữ trình duyệt hoặc proxy, kẻ tấn công có thể phát lại token trong thời hạn còn hiệu lực.
 
-mTLS-bound token hoặc DPoP-like mechanisms cố bind token với key/client proof, giảm replay nhưng tăng complexity.
+Token ràng buộc mTLS hoặc cơ chế kiểu DPoP cố gắn token với một khóa và bằng chứng từ client, giảm khả năng phát lại nhưng làm giao thức và vận hành phức tạp hơn.
 
-## Federation threats
+## Rủi ro trong liên kết danh tính
 
-Open redirect, mix-up attack, CSRF trên redirect flow, nonce/state misuse và confused-deputy problems xuất hiện vì nhiều parties trao đổi qua browser/front-channel/back-channel.
+Open redirect, mix-up attack, CSRF trong luồng redirect, dùng sai `nonce`/`state` và bài toán confused deputy xuất hiện vì nhiều bên trao đổi qua trình duyệt, kênh phía trước và kênh phía sau.
 
-`state` giúp bind authorization response với client transaction; OIDC `nonce` giúp bind ID token với authentication request. Mỗi field bảo vệ threat khác nhau.
+`state` giúp ràng buộc phản hồi ủy quyền với giao dịch mà client đã bắt đầu; `nonce` của OIDC giúp ràng buộc ID token với yêu cầu xác thực. Hai trường này bảo vệ các mối đe dọa khác nhau.
 
-## Scope không thay thế authorization model
+## Scope không thay thế mô hình phân quyền
 
-Scope thường coarse-grained. API vẫn cần object-level authorization: user có `read:account` không nghĩa được đọc account của người khác.
+Scope thường chỉ mô tả quyền ở mức khá thô. API vẫn cần phân quyền ở cấp đối tượng: người dùng có `read:account` không có nghĩa họ được đọc tài khoản của người khác.
 
-Authentication trả lời “ai”; authorization trả lời “được làm gì với resource nào trong context nào”.
+Xác thực trả lời “đây là ai”; phân quyền trả lời “thực thể này được làm gì với tài nguyên nào trong ngữ cảnh nào”.
 
-## Mental Model
+## Mô hình tư duy
 
-> OAuth/OIDC là federation protocol giữa nhiều trust boundaries. Token chỉ an toàn khi issuer, audience, lifetime, binding và redirect flow đều đúng. Đừng reasoning từ hình dạng JWT; hãy reasoning từ authority được trao và nơi token có thể bị replay.
+> OAuth/OIDC là giao thức liên kết nhiều ranh giới tin cậy. Token chỉ an toàn khi bên phát hành, đối tượng nhận, thời hạn, cơ chế ràng buộc và luồng chuyển hướng đều đúng. Đừng suy luận từ hình dạng JWT; hãy suy luận từ quyền lực được trao và những nơi token có thể bị phát lại.
