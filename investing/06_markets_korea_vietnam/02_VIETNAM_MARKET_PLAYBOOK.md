@@ -1,447 +1,587 @@
-# Vietnam Market Playbook
+# Playbook thị trường Việt Nam
 
-> File này tập trung framework evergreen để nghiên cứu thị trường Việt Nam. Market rules, tax, foreign ownership, settlement và index classification có thể thay đổi; khi ra quyết định thực tế cần kiểm tra SSC, VNX, HOSE, HNX, VSDC, SBV và disclosures mới nhất.
+> Thị trường Việt Nam chịu ảnh hưởng đồng thời của tăng trưởng kinh tế, tín dụng ngân hàng, bất động sản, thanh khoản nhà đầu tư nội địa, FDI, đầu tư công và điều kiện USD/VND. Mục tiêu của playbook này là giúp người đọc nối các yếu tố đó thành một hệ thống thay vì nhìn VN-Index như một biến duy nhất.
+
+> Các quy định về biên độ giá, settlement, foreign room, thuế, sản phẩm phái sinh, market access và phân loại chỉ số có thể thay đổi. Khi giao dịch thật phải kiểm tra theo SSC, HOSE, HNX, VSDC, SBV và nguồn chính thức hiện hành.
+
+# Phần I — Cấu trúc thị trường
 
 ## 1. HOSE, HNX và UPCoM
 
-HOSE chứa phần lớn large caps và là trung tâm của VN-Index. HNX có listed market và derivatives infrastructure; UPCoM là registered trading market với disclosure, liquidity và company profile khác.
+Ba khu vực này có đặc điểm niêm yết, thanh khoản và chất lượng công bố khác nhau.
 
-Venue ảnh hưởng trading rules, price bands và liquidity nhưng không quyết định business quality. Một stock giá thấp trên UPCoM không tự động rẻ; một HOSE large cap không tự động an toàn.
+Không nên dùng cùng giả định thanh khoản cho một large-cap HOSE và một mã UPCoM nhỏ.
 
-## 2. VN-Index và VN30 không đại diện hoàn hảo toàn market
+## 2. VN-Index và VN30
 
-VN-Index là capitalization-weighted nên vài large banks, property hoặc consumer names có thể ảnh hưởng index mạnh. VN30 tập trung large/liquid names nhưng sector weights thay đổi theo methodology.
+VN-Index có thể bị dẫn dắt bởi nhóm vốn hóa lớn, đặc biệt ngân hàng và bất động sản ở nhiều giai đoạn.
 
-Index tăng nhưng median stock giảm là possible. Theo dõi breadth, advance/decline, number above moving averages, sector contribution và turnover distribution để biết rally broad hay concentrated.
+VN30 là benchmark quan trọng cho futures và nhiều sản phẩm đầu tư.
 
-## 3. Price bands làm downside execution khác nhiều developed markets
+## 3. Breadth quan trọng hơn headline index
 
-Vietnam applies daily price-limit frameworks by venue; exact percentages/rules must be checked current. Price bands can slow price discovery rather than eliminate loss.
+Luôn theo dõi:
 
-During panic, sell orders can accumulate at floor with little buying. A stop trigger does not guarantee exit. Therefore liquidity-aware position sizing matters more than “I will sell at -7%”.
+```text
+Index Move
+vs
+Advance / Decline
+vs
+Turnover
+vs
+Sector Breadth
+```
 
-For illiquid small caps, maximum position should consider several sessions of poor liquidity, not average normal-day turnover.
+Một rally chỉ do vài large caps khác một rally rộng có nhiều ngành tham gia.
 
-## 4. Lot size, settlement và operational risk
+# Phần II — Thanh khoản nội địa
 
-Trading unit, odd-lot handling, settlement cycle and cash availability can change through market reforms. Investors should distinguish trade date, settlement date, available-to-trade and withdrawable cash.
+## 4. Deposit rate và opportunity cost
 
-Cross-border investors also face bank transfer, FX conversion, custody and holiday mismatch. Operational details can become real risk during market stress.
+Khi lãi suất tiền gửi giảm, chi phí cơ hội của việc giữ cash/deposit thấp hơn và một phần tiền có thể tìm tới tài sản rủi ro.
 
-## 5. Domestic liquidity là một market driver lớn
+Một chuỗi thường được theo dõi:
 
-Vietnamese equities can be highly sensitive to domestic deposit rates, broker margin availability and retail participation. When bank deposit yields fall and liquidity rises, equity turnover/valuation can expand; reverse can occur when funding tightens.
+```text
+Deposit Rate ↓
+→ Equity Opportunity Cost ↓
+→ Brokerage Liquidity / Margin ↑
+→ Turnover ↑
+→ Multiple có thể mở rộng
+```
 
-This is not a deterministic rule. Earnings and risk premium still matter. But domestic liquidity often amplifies direction of fundamentals.
+Nhưng giá tăng trước earnings không đồng nghĩa fundamentals đã phục hồi.
 
-## 6. Margin cycle
+## 5. Margin lending
 
-Broker margin loans increase buying power in uptrend. Rising prices improve collateral and can support more leverage, creating positive feedback.
+Margin giúp tăng purchasing power nhưng tạo feedback hai chiều.
 
-When prices fall, collateral ratios worsen. Forced selling/margin calls can accelerate decline. This is why leverage data, broker balance sheets and turnover matter, especially during speculative phases.
+```text
+Price ↑
+→ Collateral Value ↑
+→ Margin Capacity ↑
+→ Buying Power ↑
+```
 
-## 7. Banks: core of Vietnam equity and credit cycle
+và khi giảm:
 
-Banks require a banking-specific framework. Key metrics include credit growth, Net Interest Margin (*NIM*), CASA/deposit mix, funding costs, Non-Performing Loans (*NPL*), group-2/special-mention loans, provision coverage, credit cost and capital adequacy.
+```text
+Price ↓
+→ Margin Ratio xấu
+→ Forced Sell
+→ Price ↓ thêm
+```
 
-Loan growth is not automatically good. Rapid growth with weak underwriting can create future NPLs. High NIM may reflect strong franchise or higher-risk lending. Sustainable earnings require volume, margin and asset quality together.
+## 6. Turnover
 
-## 8. NIM và funding
+Turnover cao thường hỗ trợ broker earnings và phản ánh risk appetite, nhưng cần tách organic liquidity khỏi margin-driven speculation.
 
-NIM roughly measures spread between interest earning assets and funding cost, adjusted for earning asset base. Deposit competition can compress NIM even when loan rates remain high.
+# Phần III — SBV và VND
 
-CASA—low-cost current/savings deposits—can support funding advantage, but digital-payment strategy, customer mix and rate environment influence stability.
+## 7. SBV reaction function
 
-## 9. NPL, group-2 loans và credit cost
+SBV phải cân bằng:
 
-Reported NPL is lagging outcome. Group-2 or overdue loans can provide earlier warning. Restructured loans and collateral recovery assumptions also matter.
+- growth;
+- inflation;
+- bank liquidity;
+- credit;
+- USD/VND;
+- financial stability.
 
-Provision expense determines credit cost. Profit growth driven by unusually low provisions while early delinquencies rise may be low-quality improvement.
+## 8. Policy room và USD
 
-Provision coverage gives buffer but must be viewed relative to collateral quality and future migration.
+Khi USD mạnh và VND chịu pressure, room nới lỏng nội địa có thể bị hạn chế hơn.
 
-## 10. Property exposure của banks
+Do đó Fed shock có thể ảnh hưởng Việt Nam gián tiếp qua FX constraint.
 
-Property risk can appear through developer loans, mortgages, construction borrowers, corporate bonds and collateral. “Real-estate loan ratio” alone may miss indirect exposure.
+## 9. USD/VND
 
-Stress chain:
+Tỷ giá ảnh hưởng:
 
-`Property sales ↓ → developer cash flow ↓ → bond/loan stress ↑ → bank provisions ↑ → credit standards tighten → economy/property weaken further`
+- nhập khẩu;
+- inflation;
+- foreign flow;
+- doanh nghiệp nợ ngoại tệ;
+- policy expectations.
 
-Track both direct and ecosystem exposure.
+Với từng company phải lập currency map riêng.
 
-## 11. Capital ratios và shareholder dilution
+# Phần IV — Hệ thống ngân hàng
 
-High credit growth consumes capital. Banks may need retained earnings or new equity. Capital adequacy therefore influences sustainable loan growth and dividends.
+## 10. Bank là trung tâm của credit cycle
 
-When valuing bank P/B, link expected ROE with capital needs and dilution. High ROE achieved through excessive leverage is not automatically superior.
+Do capital market chưa thay thế hoàn toàn bank lending, tín dụng ngân hàng có vai trò rất lớn với:
 
-## 12. Property developers: land bank is not cash
+- property;
+- household;
+- SME;
+- corporate investment.
 
-Real-estate thesis requires legal status, approved projects, presales, customer advances, inventory, construction progress, debt, bond maturities and operating cash flow.
+## 11. NIM
 
-Land bank has value only if rights are economically usable and projects can be financed, approved, built and sold. A huge land figure without legal clarity may be inaccessible option rather than realizable NAV.
+Net Interest Margin (NIM) phụ thuộc:
 
-## 13. Presales, backlog và customer advances
+```text
+Asset Yield
+- Funding Cost
+```
 
-Presales can provide demand visibility and financing. Customer advances may be liability on balance sheet before revenue recognition but economically useful cash source.
+Deposit competition, policy rate, loan repricing và CASA đều ảnh hưởng.
 
-Investor should map project timeline: legal completion → launch → presale → construction → handover → revenue recognition/cash collection. Accounting earnings can lag or lead economic cash stages depending project structure.
+## 12. CASA
 
-## 14. Property debt và corporate bonds
+CASA cao thường giúp funding cost thấp hơn, nhưng cần xem độ ổn định của tiền gửi và concentration.
 
-Developers often have project-level debt and bonds with maturity concentration. Interest capitalized into inventory can make income statement look less stressed while financing burden accumulates.
+## 13. NPL và Group-2
 
-Build maturity ladder and compare with cash, presale collections, asset-sale capacity and refinancing access. A company can report book profit while facing liquidity crisis.
+NPL là chỉ báo trễ. Group-2/special mention, restructuring và overdue interest có thể cho warning sớm hơn.
 
-## 15. Securities companies
+## 14. Provision coverage
 
-Broker earnings have several drivers: brokerage fees, margin lending interest, investment banking, proprietary trading and treasury income.
+Coverage cao tạo buffer tốt hơn nhưng vẫn cần đánh giá chất lượng collateral và khả năng thu hồi.
 
-High market turnover benefits brokerage; strong risk appetite supports margin loans. But proprietary books create mark-to-market volatility and concentrated bond/equity exposure.
+## 15. Credit cost
 
-Analyze margin-loan book size vs equity, funding cost, collateral quality and liquidity. Fast-growing margin book is bullish only until collateral cycle turns.
+Credit cost tăng có thể xóa phần tăng lợi nhuận từ NIM.
 
-## 16. Industrial parks và FDI
+Do đó bank earnings phải được nhìn xuyên chu kỳ chứ không chỉ một quý.
 
-Industrial-park companies benefit manufacturing FDI, infrastructure connectivity, land availability and lease pricing. But accounting recognition, remaining leasable area and legal status determine earnings timing.
+## 16. Capital adequacy
 
-FDI headline should be split registered vs disbursed capital. Domestic value-added matters: a foreign factory can boost exports strongly while local supplier benefit varies.
+Tăng trưởng tín dụng cao cần vốn hỗ trợ.
 
-## 17. Export manufacturing
+Nếu capital ratio thấp, bank có thể cần giữ earnings hoặc raise capital, ảnh hưởng shareholder return.
 
-Vietnam exports electronics, textiles, footwear, furniture and other goods. Company sensitivity depends end-market US/EU/China, customer concentration, order lead times, labor cost and FX.
+# Phần V — Bất động sản
 
-Macro export recovery can help revenue but margin may lag if pricing competitive or input costs rise. Always map orderbook and utilization.
+## 17. Pháp lý đi trước doanh thu
 
-## 18. Retail và consumer
+Một project cần đi qua nhiều bước:
 
-Retailers depend same-store sales, store expansion, gross margin, inventory turns and working capital. Consumer staples add brand/pricing power and distribution.
+```text
+Land / Legal Rights
+→ Approval
+→ Site Clearance
+→ Construction Permit
+→ Sales Eligibility
+→ Presales
+→ Construction
+→ Handover
+→ Revenue Recognition
+```
 
-Nominal sales can rise with inflation without real volume improvement. Evaluate volume-price-mix and household income/confidence.
+Quỹ đất lớn không tự động là tài sản có thể monetize ngay.
 
-Rapid store expansion can inflate revenue while unit economics deteriorate, so mature-store profitability and payback period matter.
+## 18. Presales
 
-## 19. Logistics, ports và aviation
+Presales là leading indicator nhưng phải xem:
 
-Ports/logistics benefit trade volumes but capacity, tariffs, concession terms and capex matter. Shipping rates are not equivalent to port earnings.
+- cancellation;
+- payment schedule;
+- buyer financing;
+- discount;
+- legal readiness;
+- cash collection.
 
-Airlines face passenger volume, yields, load factor, fleet leases, fuel and FX. Oil up plus VND weakness can create double cost pressure if revenue is mainly VND.
+## 19. Inventory
 
-## 20. Oil & gas
+Inventory bất động sản có thể gồm:
 
-Vietnam oil/gas companies span upstream, services, gas transport/distribution and downstream. Oil price effects differ by segment.
+- completed units;
+- construction in progress;
+- land development;
+- project chờ pháp lý;
+- capitalized interest.
 
-Upstream benefits higher realized prices but capex/reserve replacement matter. Services depend project activity/backlog. Downstream refining economics depend crack spreads and inventory, not crude direction alone.
+Chất lượng từng lớp khác nhau rất lớn.
 
-## 21. Power và utilities
+## 20. Corporate bonds
 
-Power companies depend generation mix, hydrology/fuel, tariffs, PPAs, dispatch and receivables. Hydropower is sensitive rainfall; thermal plants fuel prices; renewables curtailment/grid constraints can affect output.
+Bond maturity tạo lịch cash obligation độc lập với accounting profit.
 
-Regulatory cash collection can matter as much as accounting revenue.
+Cần xây:
 
-## 22. Public investment causal chain
+```text
+Cash
++ Presale Collection
++ Operating Cash Flow
++ Asset Sale
++ Bank Lines
+vs
+Bond / Bank Maturities
++ Construction Commitment
+```
 
-Higher public infrastructure spending can support contractors, cement/steel, logistics and industrial/property development. But “đầu tư công tăng” is not enough stock thesis.
+## 21. Refinancing
 
-Need project allocation → bidding/win rate → backlog → execution → revenue recognition → margin → cash collection. Contractors can grow revenue but suffer working-capital stress if receivables balloon.
+Một developer có thể solvent trên giấy nhưng thiếu liquidity nếu project monetize chậm hơn debt maturity.
 
-## 23. SBV reaction function
+Đây là maturity mismatch.
 
-State Bank of Vietnam balances growth, inflation, banking liquidity and FX stability. Policy toolkit includes policy rates, open-market/liquidity operations, reserve/credit-related mechanisms and FX intervention.
+# Phần VI — Liên kết property–bank
 
-A strong USD/Fed tightening environment can limit easing room because aggressive domestic easing may pressure VND. Conversely favorable trade balance/FX conditions can give more flexibility.
+## 22. Exposure rộng hơn developer loan
 
-## 24. Interbank, deposit và lending rates
+Bank exposure tới property có thể qua:
 
-Policy-rate headline is only one layer. Interbank rates show short funding conditions; deposit rates influence bank funding and household asset allocation; lending rates affect borrowers.
+- developer loans;
+- mortgages;
+- contractors;
+- corporate bonds;
+- collateral;
+- related groups.
 
-Transmission can be uneven across banks and borrower groups. Track direction of whole rate complex rather than one official rate.
+Do đó reported real-estate loan ratio chưa chắc mô tả toàn bộ risk.
 
-## 25. Credit growth
+## 23. Collateral feedback
 
-Vietnam credit growth is important because banks dominate financing. Fast credit acceleration can support activity/property/markets but later increase asset-quality risk if misallocated.
+```text
+Property Price ↓
+→ Collateral Value ↓
+→ LTV ↑
+→ Lending Standards Tighten
+→ Credit ↓
+→ Property Demand ↓
+```
 
-Ask where credit goes: manufacturing, mortgages, developers, consumer, SMEs? Same aggregate growth can have different economic multipliers and risks.
+Đây là financial accelerator trong nước.
 
-## 26. USD/VND framework
+# Phần VII — Securities companies
 
-USD/VND reflects relative monetary conditions, trade balance, FDI, remittances, import demand, foreign portfolio flows, external debt and USD cycle.
+## 24. Nguồn lợi nhuận
 
-FX stability is policy objective but not independent from domestic liquidity. Analyze SBV choices as trade-offs, not one-direction commitments.
+Broker có thể kiếm từ:
 
-## 27. FX reserves và external balance
+- brokerage;
+- margin lending;
+- proprietary trading;
+- investment banking;
+- bond distribution.
 
-Reserve adequacy provides intervention buffer but reserves are finite and policy has costs. Current-account/trade surpluses and FDI inflows support FX supply; high imports, capital outflows or strong USD can pressure it.
+## 25. Nhạy với thanh khoản
 
-For equity investor, VND moves affect foreign return translation and input costs of import-heavy companies.
+```text
+Market Turnover ↑
+→ Brokerage Revenue ↑
+→ Margin Demand ↑
+```
 
-## 28. FDI: registered vs disbursed
+Nhưng proprietary book và funding cost có thể làm earnings biến động mạnh hơn.
 
-Registered FDI reflects announced commitments; disbursed FDI is closer to realized capital spending. Both matter but answer different questions.
+## 26. Margin book risk
 
-Sector/geography composition matters. High-tech manufacturing FDI can support industrial parks, logistics and local suppliers, but domestic linkages build gradually.
+Cần xem collateral concentration, funding source và leverage, không chỉ tổng margin loan.
 
-## 29. China+1 và supply-chain diversification
+# Phần VIII — FDI và manufacturing
 
-Vietnam can benefit firms diversifying manufacturing, but relocation is not automatic free growth. Infrastructure, electricity, skilled labor, supplier ecosystem and origin rules determine capacity.
+## 27. FDI
 
-Trade tensions can create opportunity and compliance risk simultaneously. Transshipment/origin concerns can lead tariffs if value-added insufficient.
+FDI hỗ trợ:
 
-## 30. Market reclassification và foreign access
+- exports;
+- employment;
+- industrial parks;
+- logistics;
+- suppliers.
 
-Index-market upgrade can improve institutional accessibility and passive-fund eligibility, but price response is path-dependent. Flows may be anticipated before formal effective date.
+Nhưng headline registered FDI khác realized disbursement.
 
-Eligibility, free float, foreign room, liquidity and index weights determine company-level impact. “Upgrade = all stocks rise” is not valid framework.
+## 28. China+1
 
-## 31. Foreign ownership room
+Diversification supply chain có thể kéo manufacturing sang Việt Nam, nhưng lợi ích phụ thuộc:
 
-Some companies/sectors have foreign ownership constraints. When room scarce, foreign-access price dynamics can differ from domestic market.
+- infrastructure;
+- labor;
+- power;
+- logistics;
+- local supplier capability.
 
-Do not assume foreign ownership premium permanent. Regulation, issuance or ownership changes can alter scarcity.
+## 29. Industrial parks
 
-## 32. ETFs và index rebalancing
+KPI gồm:
 
-ETF rebalances create predictable-looking technical flows but execution can front-run. A stock added to index may rise before official close and later mean-revert.
+- land bank pháp lý;
+- occupancy;
+- lease price;
+- remaining area;
+- infrastructure capex;
+- customer mix.
 
-Separate mechanical demand from fundamental thesis. Technical flow can matter for entry timing without changing intrinsic value.
+# Phần IX — Đầu tư công
 
-## 33. VN30 futures
+## 30. Public investment
 
-VN30 futures provide leveraged index exposure and hedge. Notional = futures price × contract multiplier according to current specification; margin is only collateral.
+Infrastructure spending có thể hỗ trợ:
 
-Basis reflects futures vs index. Near expiry convergence matters. Hedge effectiveness depends portfolio beta/composition relative VN30.
+- construction;
+- materials;
+- logistics;
+- industrial parks;
+- long-run productivity.
 
-Using futures to “gỡ lỗ” is leverage escalation, not risk management.
+## 31. Plan và disbursement khác nhau
 
-## 34. Governance và related-party risk
+Không nên dùng ngân sách phê duyệt như doanh thu chắc chắn.
 
-Controlling shareholders may have incentives different from minority investors. Related-party loans/sales, asset transfers, guarantees and private placements require scrutiny.
+Cần theo dõi tốc độ giải ngân và project-level progress.
 
-High ROE/P/E attractiveness cannot compensate for governance if cash can be transferred away from minority holders.
+# Phần X — Consumer và retail
 
-Read ownership, board, related-party notes and capital raises carefully.
+## 32. Household demand
 
-## 35. Financial-statement quality
+Theo dõi:
 
-Vietnam companies can differ in disclosure quality. Compare audited annual statements, quarterly statements and cash flow. Reconcile profit with receivables/inventory/debt.
+- income;
+- employment;
+- inflation;
+- consumer credit;
+- tourism;
+- confidence.
 
-Large “other receivables”, advances, related-party balances or capitalized costs deserve deeper work. Do not infer fraud automatically, but demand explanation.
+## 33. Retail KPI
 
-## 36. Source hierarchy
+- same-store sales;
+- traffic;
+- ticket;
+- store expansion;
+- inventory;
+- gross margin;
+- working capital.
 
-Priority: company filings/audited statements and official exchange/regulator data; then SBV/statistical/customs/planning agencies for macro; then company IR; then broker research/news for synthesis.
+# Phần XI — Energy và utilities
 
-Always separate primary fact from analyst estimate. If a research report says “credit growth expected 18%”, note it as forecast, not official realized data.
+## 34. Power demand
 
-## 37. Daily dashboard
+Tăng manufacturing và data-center/industrial activity kéo nhu cầu điện.
 
-Daily: VN-Index/VN30, breadth, turnover, sector leaders, foreign flow, large block trades if relevant, USD/VND, short/interbank liquidity indicators when available, DXY/US yields, China and oil.
+Nhưng earnings utility còn phụ thuộc tariff, fuel, PPA và regulatory framework.
 
-The purpose is anomaly detection, not daily thesis rewriting.
+## 35. Oil and gas
 
-## 38. Weekly dashboard
+Cần tách upstream, services, midstream và downstream vì oil price tác động khác nhau.
 
-Weekly add margin/liquidity trend, banks vs property relative performance, broker stocks, foreign/index technical events, deposit-rate changes and major policy announcements.
+# Phần XII — Ports, logistics và aviation
 
-Write one paragraph: what changed in liquidity, credit, FX and earnings expectations?
+## 36. Ports
 
-## 39. Monthly dashboard
+KPI:
 
-Monthly track CPI, PMI/industrial production, exports/imports/trade balance, FDI disbursement, credit growth, public-investment disbursement, FX/rates and sector earnings revisions.
+- throughput;
+- capacity;
+- utilization;
+- tariff;
+- regional trade;
+- capex.
 
-Then update regime: domestic-liquidity improving/deteriorating; external demand improving/deteriorating; credit risk rising/falling.
+## 37. Airlines
 
-## 40. Bull/base/bear framework
+Nhạy với:
 
-Base case should be most plausible range, not exact target. Bull case specifies which variables improve beyond consensus; bear case specifies downside path and balance-sheet consequences.
+- passenger volume;
+- ticket yield;
+- fuel;
+- USD/VND;
+- lease/debt;
+- airport capacity.
 
-Example property thesis:
+# Phần XIII — Steel, cement và materials
 
-Base: legal progress + moderate presales + refinancing available.
+## 38. Steel
 
-Bull: faster approvals, stronger sales, lower funding cost.
+Theo dõi:
 
-Bear: delays, weak presales, maturity pressure, dilution/asset sales.
+```text
+Steel Price
+- Raw Material Cost
+= Spread
+```
 
-Assign probabilities only if useful; focus on scenario cash flows and survival first.
+cùng domestic construction, exports và China supply.
 
-## 41. Investment thesis template
+## 39. Cement
 
-For each Vietnamese stock document: business model, controlling owners, sector cycle, top operating KPIs, balance sheet/debt, working capital, cash-flow quality, macro sensitivity, valuation, liquidity, foreign room if relevant, bull/base/bear, catalysts and invalidation.
+Cement nhạy với construction demand, energy cost, local capacity và logistics.
 
-Add position-size limit based on liquidity and drawdown scenario.
+# Phần XIV — Technology và telecom
 
-## 42. Credit Allocation quan trọng hơn Aggregate Credit
+## 40. Technology services
 
-Aggregate credit growth có thể giống nhau nhưng economic consequence rất khác nếu money đi vào productive manufacturing, mortgage demand, speculative property hoặc refinancing old debt.
+Doanh nghiệp IT service có thể hưởng lợi từ outsourcing, digital transformation và foreign revenue.
 
-Một credit dashboard tốt nên hỏi:
+Cần xem labor cost, utilization, attrition và currency.
 
-`Credit tăng ở đâu? → borrower cash flow thế nào? → collateral quality? → investment/capacity nào được tạo? → future NPL risk?`
+## 41. Telecom
 
-Credit quantity hỗ trợ activity ngắn hạn; credit quality quyết định sustainability.
+ARPU, subscriber, capex và regulation là các driver chính.
 
-## 43. Deposit Growth và Loan-to-Deposit Pressure
+# Phần XV — SOE và governance
 
-Banks cần funding để support loan growth. Nếu credit tăng nhanh hơn deposits, competition for funding có thể đẩy deposit rates lên và compress NIM.
+## 42. State ownership
 
-Theo dõi funding mix, wholesale/interbank reliance và maturity mismatch. Một bank tăng loans rất nhanh nhưng funding cost tăng mạnh có thể report growth tốt trước khi margin/asset-quality pressure xuất hiện.
+SOE có thể có strategic assets nhưng capital allocation và shareholder-return incentives có thể khác private company.
 
-## 44. Corporate-Bond Refinancing Wall
+## 43. Related-party risk
 
-Company debt analysis phải nhìn maturity calendar, coupon reset, secured/unsecured status, collateral và refinancing channel. Một developer có assets lớn nhưng maturities concentrated trong 12–24 tháng có liquidity profile khác company debt dài đều.
+Property/financial groups cần kiểm tra kỹ:
 
-Stress framework:
+- receivables;
+- guarantees;
+- asset transfers;
+- related lending;
+- project ownership.
 
-`Operating Cash + Presales/Collections + Asset Sales + New Financing - Debt Maturities - Mandatory Capex`
+## 44. Capital raise
 
-Nếu buffer nhỏ, valuation phải include dilution/restructuring probability.
+Rights issue hoặc private placement có thể cần thiết cho growth nhưng phải phân tích dilution và use of proceeds.
 
-## 45. Property Legal Cycle như Economic Driver
+# Phần XVI — Foreign investors
 
-Real-estate value không chỉ phụ thuộc demand. Legal approval determines when land becomes sellable inventory and when project cash flows can begin.
+## 45. Foreign room
 
-Research nên map each major project through milestones thay vì dùng aggregate land-bank area. Legal progress có thể là catalyst thực vì nó chuyển option value thành monetizable asset.
+Giới hạn sở hữu nước ngoài có thể ảnh hưởng liquidity và valuation.
 
-## 46. Inventory Quality của Developer
+Rule hiện hành phải kiểm tra từ nguồn chính thức tại thời điểm sử dụng.
 
-Property inventory cần tách land cost, construction in progress, completed units và capitalized financing. Inventory tăng không automatically bullish.
+## 46. FX return
 
-Nếu inventory nằm ở project delayed/legal uncertain, carrying cost tăng mà cash realization chậm. Analyst nên compare inventory growth với presales, customer advances và debt growth.
+Nhà đầu tư nước ngoài nhận:
 
-## 47. Broker Margin Book và Liquidity Feedback
+```text
+Home-Currency Return
+= (1 + Local Return)
+× (1 + FX Return)
+- 1
+```
 
-Securities firms vừa là beneficiary vừa là amplifier của market cycle. Margin loans tăng tạo interest income nhưng cũng tạo collateral risk.
+VN stock tăng không bảo đảm return home currency tương đương nếu VND mất giá.
 
-Chain trong bull market:
+# Phần XVII — Market microstructure
 
-`Prices ↑ → collateral value ↑ → margin capacity ↑ → buying power ↑ → turnover ↑`
+## 47. Price limit
 
-Bear market đảo chiều chain và có thể tạo forced selling. Khi phân tích broker, margin-book growth phải đi cùng equity buffer, funding cost và collateral quality.
+Biên độ giá có thể làm stop-loss không thực thi như ở market không giới hạn.
 
-## 48. Proprietary Trading Quality
+Trong panic, nhiều phiên floor liên tiếp có thể kéo dài exit time.
 
-Broker profit từ proprietary book cần tách realized/unrealized gains, equities, bonds và derivatives. Một quarter profit cao nhờ mark-to-market không có quality giống recurring brokerage/margin income.
+## 48. Liquidity-aware sizing
 
-Valuation broker nên normalize through-cycle turnover và prop-trading contribution thay vì annualize peak quarter.
+Position size nên dựa stressed turnover và free float, không chỉ volume bình thường.
 
-## 49. State-Owned Enterprise và Capital Allocation
+## 49. Settlement và custody
 
-Companies có state ownership hoặc strategic public role có thể optimize multiple objectives ngoài minority shareholder return. Điều này không tự động xấu, nhưng capital allocation, dividend policy, pricing/regulation và investment mandate cần được hiểu.
+Quy tắc settlement/custody có thể thay đổi. Cần kiểm tra hiện hành trước giao dịch xuyên biên giới.
 
-Investor nên model what cash can realistically reach minority shareholders, không chỉ accounting profit.
+# Phần XVIII — Valuation
 
-## 50. Privatization / Ownership Change như Event
+## 50. Banks
 
-Ownership restructuring, divestment hoặc strategic investor entry có thể thay governance/capital allocation. Nhưng event thesis phải specify mechanism: board/incentives thay đổi? free float tăng? assets được restructured? payout cải thiện?
+P/B phải đọc cùng normalized ROE, credit cost và capital adequacy.
 
-Không nên assume ownership headline tự động tạo permanent re-rating.
+## 51. Property
 
-## 51. Domestic Savings Allocation
+NAV phải haircut theo:
 
-Household savings có thể luân chuyển giữa deposits, property, gold, equities và other assets. Deposit-rate changes vì vậy ảnh hưởng opportunity cost của equity.
+- legal status;
+- time to monetize;
+- debt;
+- construction cost;
+- tax;
+- execution risk.
 
-Nhưng flow không phải valuation law. Low deposit rates hỗ trợ risk appetite, nhưng nếu earnings deteriorate mạnh thì liquidity alone không guarantee bull market.
+## 52. Brokers
 
-## 52. Market Turnover và Breadth Regimes
+P/B/P/E cần đọc cùng turnover, margin cycle và proprietary exposure.
 
-High turnover concentrated in speculative small caps khác high turnover broad across banks/industrials/consumer.
+## 53. Industrials/consumer
 
-Một healthy broad rally thường có breadth và earnings revisions cải thiện cùng nhau. Nếu index/turnover tăng nhưng breadth narrow và margin leverage tăng nhanh, risk profile khác.
+P/E/EV-EBITDA chỉ có ý nghĩa khi earnings được normalized theo cycle.
 
-## 53. Foreign Flow vs Domestic Flow
+# Phần XIX — Dashboard
 
-Foreign net selling có thể kéo large-cap sentiment nhưng domestic liquidity có thể absorb. Ngược lại foreign buying không guarantee broad market rise nếu domestic deleveraging mạnh.
+## 54. Daily
 
-Normalize foreign flow relative to total turnover/free float và identify whether flow is ETF/index rebalance or discretionary allocation.
+```text
+VN-Index / VN30
+Breadth
+Turnover
+Bank / Property / Broker Leadership
+USD/VND
+Foreign Flow
+```
 
-## 54. Index Weight và Liquidity Premium
+## 55. Weekly
 
-Large liquid names có thể receive valuation premium vì institutional accessibility. Nếu market infrastructure/access cải thiện, liquidity premium có thể redistribute.
+```text
+Deposit Rates
+Margin Liquidity
+Bond / Property News
+Major Regulatory Developments
+```
 
-Nhưng index inclusion/reclassification không change ROE/FCF directly. Long-run re-rating cần combine access improvement với business quality và governance.
+## 56. Monthly / quarterly
 
-## 55. Earnings Revision Breadth cho Vietnam
+```text
+Credit Growth
+Inflation
+FDI Disbursement
+Public Investment
+Exports
+NPL / Group-2
+Property Transactions
+Corporate Bond Activity
+Earnings Revisions
+```
 
-Theo dõi bao nhiêu sectors/companies có EPS forecast rising vs falling. Bank upgrades alone có thể lift index earnings while property/consumer/manufacturing still weak.
+# Phần XX — Research template
 
-Revision breadth giúp distinguish index-level recovery from broad corporate recovery.
+## 57. Stock Việt Nam
 
-## 56. Normalized Valuation theo Cycle
+```text
+Business Model
+→ Sector Cycle
+→ Regulatory / Legal
+→ Balance Sheet
+→ Cash Flow
+→ Liquidity
+→ Earnings Revision
+→ Valuation
+→ Catalyst
+→ Invalidation
+```
 
-Banks: connect P/B with sustainable ROE, credit cost and capital need. Property: NAV/project cash flow plus legal/refinancing haircut. Brokers: through-cycle turnover/margin loans. Cyclicals: mid-cycle margin/utilization. Retail: mature-store economics và reinvestment runway.
+## 58. Market thesis
 
-Trailing P/E alone thường dangerous ở sectors cyclical hoặc accounting recognition lumpy.
+```text
+Global USD / Rates
+→ SBV / VND Constraint
+→ Domestic Rates / Credit
+→ Property / Bank
+→ Margin / Turnover
+→ Sector Earnings
+→ Valuation
+```
 
-## 57. Public Investment: Budget vs Disbursement vs Company Cash
+## Kết luận
 
-Headline approved budget là stage đầu. Investor phải theo actual disbursement, project award, contractor backlog, execution capacity và receivable collection.
+Thị trường Việt Nam không nên được đọc chỉ bằng GDP growth hay VN-Index.
 
-Một contractor có record backlog nhưng negative operating cash flow kéo dài có thể cần more debt despite reported profit.
+Các chuỗi quan trọng nhất là:
 
-## 58. FDI Spillover không tự động
+```text
+Credit
+↔ Property
+↔ Bank Asset Quality
+↔ Domestic Liquidity
+↔ Equity Margin / Turnover
+```
 
-FDI inflow giúp industrial parks/logistics, nhưng domestic suppliers hưởng lợi chỉ khi local content, technology transfer và procurement linkages tăng.
+và:
 
-Country-level export growth có thể lớn trong khi listed domestic companies capture limited margin. Mapping value capture là bước bắt buộc.
+```text
+Global USD
+→ VND / Policy Room
+→ Domestic Financial Conditions
+```
 
-## 59. FX Stress Test theo Company
-
-Build company currency map: export revenue, imported inputs, USD debt, lease obligations và hedge policy.
-
-Scenario `VND weaker +5%` không có same effect across exporters/importers. Airline/retail importer, seafood exporter và industrial park developer có different transmission.
-
-## 60. SBV Policy Trade-Off Matrix
-
-Policy decision nên xem qua ba constraints:
-
-`Domestic growth/credit need`
-
-`Inflation/liquidity condition`
-
-`FX/USD pressure`
-
-Nếu growth weak nhưng USD pressure high, easing room có thể smaller. Nếu FX stable và inflation benign, domestic support room rộng hơn. Framework giúp tránh đọc policy chỉ từ one rate decision.
-
-## 61. Event Study cho Vietnam
-
-Trước major policy/market event, record consensus và positioning. Sau event, theo VN-Index/VN30, banks/property/brokers, turnover, breadth, foreign flow, USD/VND, deposit/interbank rates và relevant bond/liquidity signals.
-
-Review T+1, one week và one month để phân biệt knee-jerk flow với fundamental transmission.
-
-## 62. Liquidity-Aware Position Sizing
-
-Position size nên dựa không chỉ portfolio % mà cả average trading value, order-book depth và bad-day exit assumption.
-
-Một simple stress question: nếu chỉ exit được 10–20% normal daily liquidity trong stress và stock floor multiple sessions, position có còn survivable không?
-
-Đây là risk đặc biệt quan trọng với small/mid caps.
-
-## 63. Governance Monitoring qua Capital Raises
-
-Private placements, rights offerings, convertible instruments và related-party transactions có thể materially change per-share value.
-
-Khi company raise capital, hỏi: capital dùng làm gì, expected incremental ROIC, issue price fair không, controlling owner có participate, dilution bao nhiêu và cash có thực sự flow vào productive assets không?
-
-## 64. Vietnam Research Cadence
-
-Một operating cadence hữu ích:
-
-`Daily: price/breadth/turnover/FX/foreign flow anomalies`
-
-`Weekly: margin/liquidity/deposit rates/sector leadership`
-
-`Monthly: credit/CPI/PMI/trade/FDI/public investment/SBV`
-
-`Quarterly: earnings/cash flow/debt/governance/model update`
-
-Cadence giúp giảm noise và giữ thesis anchored vào variables đúng horizon.
-
-## 65. Mental model cuối cùng
-
-Analyze Vietnam through:
-
-`Global demand/USD → trade/FDI/VND → SBV/liquidity/credit allocation → banks/property/domestic sectors → company cash flow/balance sheet → governance → normalized valuation → liquidity/margin/flows`
-
-This prevents two common errors: treating VN-Index as direct GDP proxy, and treating cheap valuation as sufficient without cash-flow, liquidity and governance analysis.
+Khi hai chuỗi này được nối với earnings và valuation từng ngành, market analysis mới đủ chiều sâu để dùng trong quyết định đầu tư.
