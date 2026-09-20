@@ -222,6 +222,171 @@ K-beauty xuất khẩu mạnh nhờ hiệu ứng lan toả từ Hallyu, bao bì,
 
 Nhưng quốc tịch không thay thế khoa học công thức. Hai serum cùng gắn nhãn K-beauty vẫn có thể khác nhau về thành phần, nồng độ, độ ổn định và mức bằng chứng.
 
+## Bất cân xứng thông tin: người mua nhìn thấy quảng cáo trước khi nhìn thấy rủi ro
+
+Trong nhiều dịch vụ làm đẹp, người cung cấp biết nhiều hơn khách về kỹ thuật, mức hiệu quả và giới hạn. Khách lại thường ra quyết định qua ảnh trước–sau, đánh giá, người ảnh hưởng hoặc tư vấn bán hàng.
+
+Đây là **bất cân xứng thông tin (information asymmetry)**. Nó mạnh hơn khi kết quả khó đánh giá trước khi mua hoặc tác dụng phụ có xác suất thấp nhưng hậu quả lớn.
+
+Một cách phân tích tốt là tách bốn lớp:
+
+```text
+lời hứa tiếp thị
+≠ cơ chế sinh học
+≠ bằng chứng về hiệu quả
+≠ hồ sơ rủi ro
+```
+
+Nếu bốn lớp bị trộn, thuật ngữ nghe “khoa học” có thể tạo cảm giác chắc chắn lớn hơn mức bằng chứng thật.
+
+## Ảnh trước–sau: dữ liệu trực quan nhưng rất dễ thiên lệch
+
+Ảnh `before/after` có sức thuyết phục cao vì mắt người thấy khác biệt trực tiếp. Nhưng ảnh không tự là thí nghiệm kiểm soát.
+
+Kết quả có thể bị ảnh hưởng bởi:
+
+```text
+ánh sáng
++ góc chụp
++ biểu cảm
++ trang điểm
++ khoảng thời gian
++ lựa chọn ca thành công
++ chỉnh sửa ảnh
+```
+
+Điều này không nghĩa mọi ảnh trước–sau đều vô giá trị. Nó nghĩa người đọc phải hỏi cách ảnh được tạo và mẫu nào không được cho xem.
+
+Đây là **thiên lệch chọn mẫu (selection bias)** dưới dạng hình ảnh.
+
+## Người ảnh hưởng và quảng cáo liên kết: kinh nghiệm cá nhân không phải bằng chứng độc lập
+
+Người ảnh hưởng có thể cung cấp thông tin thực tế về cảm giác dùng sản phẩm, màu sắc hoặc trải nghiệm dịch vụ. Nhưng khi có tài trợ, mã giảm giá hoặc lợi ích từ doanh số, động lực của người nói thay đổi.
+
+Cần phân biệt:
+
+```text
+trải nghiệm cá nhân
++ nội dung quảng cáo
++ bằng chứng chuyên môn
+```
+
+Ba loại có thể cùng xuất hiện trong một video nhưng không có cùng trọng lượng chứng cứ.
+
+Một review chân thành vẫn có thể không đại diện cho người khác vì loại da, tiền sử, mục tiêu và cách dùng khác nhau.
+
+## Thuật toán hình ảnh: chuẩn đẹp có thể bị khuếch đại qua cơ chế tuyển chọn
+
+Nền tảng không cần “ra lệnh” rằng một khuôn mặt nào đẹp. Chỉ cần nội dung có một kiểu hình ảnh nhận nhiều tương tác hơn, hệ thống đề xuất có thể làm kiểu đó xuất hiện thường xuyên hơn.
+
+```text
+một dạng hình ảnh nhận tương tác cao
+→ được đề xuất nhiều hơn
+→ người dùng thấy thường xuyên hơn
+→ dạng đó trở thành điểm tham chiếu quen thuộc
+→ nhà sáng tạo tối ưu theo điểm tham chiếu
+```
+
+Đây là vòng phản hồi giữa sở thích, thuật toán và sản xuất nội dung. Nó có thể làm phổ thị giác hẹp hơn mức đa dạng thực tế ngoài đời.
+
+## So sánh xã hội: camera biến bản thân thành đối tượng được đo liên tục
+
+Khi ảnh selfie, video ngắn và phản ứng xã hội xuất hiện liên tục, cá nhân có nhiều cơ hội so sánh bản thân với người khác và với chính phiên bản đã chỉnh sửa của mình.
+
+So sánh không tự động có hại; nó có thể giúp học phong cách. Nhưng khi điểm tham chiếu được chọn từ người nổi tiếng, ảnh đã lọc hoặc ca thẩm mỹ thành công, khoảng cách nhận thức có thể tăng.
+
+Điểm quan trọng về văn hoá là công nghệ làm **tần suất so sánh** tăng. Chuẩn đẹp không chỉ nằm trong tạp chí; nó đi theo người dùng trong điện thoại suốt ngày.
+
+## Ranh giới tiêu dùng–y khoa: cùng mục tiêu “đẹp hơn” nhưng mức rủi ro khác nhau
+
+Mua son, làm tóc, laser và phẫu thuật đều có thể nằm trong một hành trình làm đẹp, nhưng không nên gom thành cùng một loại quyết định.
+
+Có thể xếp theo mức xâm lấn và khả năng đảo ngược:
+
+```text
+trang điểm / quần áo
+→ dịch vụ bề mặt
+→ thủ thuật ít xâm lấn
+→ thủ thuật xâm lấn hơn
+→ phẫu thuật
+```
+
+Càng tiến về phía phải, yêu cầu về thông tin, năng lực người thực hiện, kiểm soát rủi ro, thời gian hồi phục và đồng thuận hiểu biết càng quan trọng.
+
+Một thị trường có giao diện đặt lịch giống nhau có thể làm người dùng cảm thấy các dịch vụ giống nhau về độ nghiêm trọng, trong khi hồ sơ rủi ro thực tế khác rất xa.
+
+## Đồng thuận hiểu biết: “đồng ý” không chỉ là ký giấy
+
+Trong dịch vụ có rủi ro y khoa, **đồng thuận hiểu biết (informed consent)** về mặt khái niệm đòi hỏi người sử dụng hiểu mục tiêu, lựa chọn thay thế, giới hạn, rủi ro đáng kể và điều gì xảy ra nếu kết quả không như mong muốn.
+
+Điểm văn hoá đáng chú ý là môi trường bán hàng nhanh có thể đẩy quyết định theo hướng “chốt ngay hôm nay”. Nếu thời gian suy nghĩ ngắn hơn thời gian cần để hiểu rủi ro, tốc độ thương mại và chất lượng quyết định xung đột nhau.
+
+Do đó, “tư vấn thân thiện” và “quyết định được thông tin đầy đủ” là hai tiêu chí khác nhau.
+
+## Tính đảo ngược và nợ bảo trì
+
+Một số lựa chọn làm đẹp có thể bỏ ngay ngày mai; lựa chọn khác cần bảo trì, chỉnh sửa hoặc mang hậu quả dài hơn. Có thể dùng khái niệm **nợ bảo trì (maintenance debt)**:
+
+```text
+quyết định hôm nay
+→ nhu cầu bảo trì tương lai
+→ chi phí thời gian / tiền / rủi ro lặp lại
+```
+
+Ví dụ chung: kiểu tóc nhuộm cần dặm; một số thủ thuật có hiệu quả tạm thời; can thiệp lâu dài có thể cần theo dõi hoặc chỉnh sửa.
+
+Giá ban đầu vì vậy không phải toàn bộ chi phí. Cần nhìn **tổng chi phí sở hữu (total cost of ownership)** của một thói quen làm đẹp, giống cách đánh giá phần mềm hoặc thiết bị.
+
+## Tác dụng phụ, biến chứng và kết quả không đạt kỳ vọng là ba vấn đề khác nhau
+
+Trong diễn ngôn tiêu dùng, mọi kết quả xấu dễ bị gộp thành “side effect”. Nhưng về tư duy rủi ro nên tách:
+
+```text
+phản ứng dự kiến và thường gặp
+≠ biến cố không mong muốn nghiêm trọng hơn
+≠ kết quả thẩm mỹ không đúng kỳ vọng
+```
+
+Ba nhóm khác nhau về nguyên nhân và cách xử lý. Việc phân biệt giúp tránh hai lỗi: coi mọi khó chịu nhỏ là thảm hoạ hoặc coi rủi ro nghiêm trọng chỉ là “chuyện bình thường”.
+
+## Giá và chất lượng: đắt hơn không tạo bảo đảm tuyến tính
+
+Trong thị trường tín hiệu, giá cao có thể báo thương hiệu, vị trí, tay nghề, dịch vụ hoặc độ khan hiếm. Nhưng `giá cao → kết quả tốt chắc chắn` không phải quan hệ tuyến tính.
+
+Ngược lại, giá rẻ bất thường cũng có thể đi kèm khuyến mãi, công suất cao hoặc mô hình kinh doanh khác chứ không tự động nghĩa chất lượng kém.
+
+Do đó giá là **tín hiệu (signal)** chứ không phải thước đo trực tiếp. Cần xem thêm chuyên môn, quy trình, thành phần, hồ sơ rủi ro và mức phù hợp với nhu cầu.
+
+## Du lịch làm đẹp và rào cản thông tin xuyên ngôn ngữ
+
+Khách quốc tế có thể tiếp cận dịch vụ làm đẹp tại Hàn Quốc qua quảng cáo đa ngôn ngữ và nền tảng du lịch. Nhưng khác biệt ngôn ngữ làm tăng nguy cơ mơ hồ về tên thủ thuật, thuốc dùng, chăm sóc sau dịch vụ và cách liên hệ khi đã rời Hàn Quốc.
+
+Đây là cùng vấn đề của chương giao tiếp:
+
+```text
+dịch đúng từ
+không tự động
+= hiểu đúng rủi ro và kỳ vọng
+```
+
+Trong quyết định có mức rủi ro cao, khả năng hỏi lại và nhận câu trả lời rõ quan trọng hơn lời quảng cáo được dịch trôi chảy.
+
+## Đo “mức phổ biến” của làm đẹp: mẫu số quyết định câu chuyện
+
+Các tuyên bố kiểu “X% người Hàn đã làm thủ thuật Y” dễ gây ấn tượng nhưng phải hỏi:
+
+```text
+mẫu là toàn dân hay khách phòng khám?
+tuổi nào?
+giới nào?
+khu vực nào?
+khoảng thời gian nào?
+phẫu thuật hay mọi loại thủ thuật?
+tự khai hay dữ liệu hành chính?
+```
+
+Một tỷ lệ cao trong nhóm phụ nữ trẻ ở một quận thẩm mỹ không thể suy rộng thành “người Hàn nói chung”. Đây là lý do mọi số liệu về thẩm mỹ cần đi cùng định nghĩa quần thể.
+
 ## Liên hệ kiến thức: thị trường làm đẹp như hệ thống tín hiệu + phản hồi
 
 Có thể mô hình hoá:
@@ -238,9 +403,25 @@ hình ảnh tham chiếu trên truyền thông
 
 Không nút nào một mình “gây ra chuẩn đẹp”. Chuẩn mực xuất hiện từ tương tác giữa ngành công nghiệp, truyền thông, nhóm xã hội, thiết chế và lựa chọn cá nhân.
 
+## Liên hệ kiến thức: quyết định làm đẹp như bài toán bằng chứng–rủi ro–khả năng đảo ngược
+
+Một khung phân tích có thể là:
+
+```text
+lợi ích kỳ vọng
++ chất lượng bằng chứng
++ chi phí toàn vòng đời
++ rủi ro
++ khả năng đảo ngược
++ mức áp lực xã hội
+→ chất lượng quyết định
+```
+
+Khung này không trả lời thay cá nhân nên hay không nên làm gì. Nó giúp tách mong muốn thật của bản thân khỏi quảng cáo, áp lực nhóm và cảm giác khẩn cấp do khuyến mãi.
+
 ## Mô hình tư duy (Mental Model)
 
-> Văn hoá làm đẹp Hàn Quốc là một **thị trường tín hiệu trên cơ thể (signaling market)**, nhưng tín hiệu luôn phụ thuộc bối cảnh. Ngành công nghiệp cung cấp công cụ; camera/nền tảng tạo điểm tham chiếu; nhóm xã hội tạo chuẩn mực; trường học/công sở thêm kỳ vọng; cá nhân chọn mức tham gia. Hiểu hệ thống không đồng nghĩa phải tuân theo lý tưởng của hệ thống.
+> Văn hoá làm đẹp Hàn Quốc là một **thị trường tín hiệu trên cơ thể (signaling market) có bất cân xứng thông tin**. Ngành công nghiệp cung cấp công cụ; camera và nền tảng tạo điểm tham chiếu; nhóm xã hội tạo chuẩn mực; trường học và công sở thêm kỳ vọng; còn dịch vụ y khoa đưa thêm lớp bằng chứng, rủi ro và đồng thuận. Hiểu hệ thống không đồng nghĩa phải tuân theo lý tưởng của hệ thống.
 
 ## Hiểu lầm phổ biến (Common Misconceptions)
 
@@ -255,3 +436,9 @@ Không nút nào một mình “gây ra chuẩn đẹp”. Chuẩn mực xuất 
 “Gầy = khoẻ” là nhầm thước đo thẩm mỹ với thước đo sức khoẻ.
 
 “Bộ lọc chỉ sửa ảnh vô hại” bỏ qua khả năng hình ảnh đã chỉnh sửa quay lại thay đổi cách con người nhìn chính mình.
+
+“Ảnh trước–sau chứng minh hiệu quả” bỏ qua ánh sáng, góc chụp, chỉnh sửa và lựa chọn ca thành công.
+
+“Dịch vụ càng đắt thì càng an toàn” là suy luận yếu; giá và chất lượng không có quan hệ tuyến tính đơn giản.
+
+“Thủ thuật thẩm mỹ chỉ là một dạng tiêu dùng như mua mỹ phẩm” bỏ qua khác biệt về xâm lấn, khả năng đảo ngược và hồ sơ rủi ro.
