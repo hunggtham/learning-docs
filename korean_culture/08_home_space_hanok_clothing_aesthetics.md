@@ -216,6 +216,192 @@ Nội thất quán cà phê, mỹ phẩm và thương hiệu Hàn hiện đại 
 
 Tối giản hiện đại chịu ảnh hưởng thiết kế toàn cầu, kinh tế bán lẻ, thẩm mỹ Instagram và xu hướng vật liệu. Tính liên tục lịch sử có thể tồn tại, nhưng phải chứng minh chứ không suy từ nét giống thị giác.
 
+## Vỏ công trình: tiện nghi bắt đầu trước máy sưởi và điều hoà
+
+Một ngôi nhà có thể được xem như **vỏ công trình (building envelope)** ngăn và điều tiết trao đổi nhiệt, không khí và hơi ẩm với bên ngoài. Tường, mái, cửa sổ, khe hở và lớp cách nhiệt quyết định tải mà hệ sưởi/làm mát phải xử lý.
+
+Có thể hình dung đơn giản:
+
+```text
+nhiệt thất thoát / xâm nhập
+≈ diện tích bề mặt
+× mức truyền nhiệt
+× chênh lệch nhiệt độ
+```
+
+Công thức thực tế phức tạp hơn, nhưng trực giác quan trọng là: máy sưởi mạnh không bù hiệu quả vô hạn cho một vỏ công trình kém. Nếu nhiệt liên tục thoát qua kính hoặc khe, chi phí vận hành tăng.
+
+Vì vậy **tiện nghi nhiệt (thermal comfort)** là sản phẩm của cả kiến trúc lẫn thiết bị.
+
+## 창호: cửa sổ là nơi ánh sáng, nhiệt, tiếng ồn và thông gió gặp nhau
+
+Cửa sổ làm nhiều việc cùng lúc: lấy sáng, cho nhìn ra ngoài, thông gió và tạo ranh giới nhiệt–âm. Tăng diện tích kính có thể làm phòng sáng và có tầm nhìn tốt hơn nhưng cũng tăng tải nắng hoặc thất thoát nhiệt nếu thiết kế không phù hợp.
+
+Đây là một bài toán đa mục tiêu:
+
+```text
+ánh sáng tự nhiên
++ tầm nhìn
++ cách nhiệt
++ cách âm
++ thông gió
++ chi phí
+```
+
+Không có giải pháp tối ưu tuyệt đối. Cửa kính tốt, rèm, lớp che nắng, hướng nhà và hành vi mở cửa phải hoạt động như một hệ thống.
+
+## 남향 선호: hướng nam là ví dụ của khí hậu trở thành giá trị thị trường
+
+Trong nhiều bối cảnh nhà ở Hàn Quốc, hướng nhận nắng tốt từng được coi trọng. Lý do không chỉ là biểu tượng phong thuỷ; ánh nắng mùa đông có giá trị nhiệt và ánh sáng thực tế.
+
+Tuy nhiên trong đô thị cao tầng, “hướng tốt” còn phụ thuộc toà nhà phía trước, khoảng cách, kính, bóng râm và nhu cầu làm mát mùa hè. Một căn quay đúng hướng nhưng bị che hoàn toàn có thể nhận ít nắng hơn căn có hướng khác nhưng mở thoáng.
+
+Bài học là **nhãn bất động sản là biến đại diện**, không thay quan sát vật lý thật.
+
+## 단열 và nhiệt cầu: một điểm yếu có thể chi phối toàn bề mặt
+
+**Cách nhiệt (단열 / insulation)** làm giảm truyền nhiệt qua vỏ công trình. Nhưng nếu có vị trí dẫn nhiệt mạnh hơn — **cầu nhiệt (thermal bridge)** — bề mặt tại đó có thể lạnh hơn, dễ ngưng tụ hơn.
+
+Điều này giải thích vì sao cùng một phòng có thể xuất hiện nấm mốc ở góc hoặc quanh khung cửa thay vì khắp tường.
+
+```text
+cách nhiệt trung bình tốt
+nhưng một nút yếu
+→ nhiệt đi qua nút đó nhiều hơn
+→ bề mặt lạnh cục bộ
+→ nguy cơ 결로 tăng
+```
+
+Trong thiết kế hệ thống, độ tin cậy nhiều khi bị quyết định bởi mắt xích yếu chứ không bởi giá trị trung bình.
+
+## 환기: không khí sạch cần một đường đi có chủ đích
+
+Nhà càng kín khí càng dễ kiểm soát nhiệt, nhưng hơi ẩm, CO₂, mùi nấu ăn và chất ô nhiễm trong nhà vẫn phải được đưa ra ngoài. Vì vậy thông gió là **trao đổi có kiểm soát**, không chỉ mở cửa thật lâu.
+
+Mở cửa sổ tạo thông gió đơn giản nhưng phụ thuộc nhiệt độ ngoài trời, bụi mịn, tiếng ồn và gió. Hệ thống cơ khí có thể lọc và trao đổi ổn định hơn nhưng cần bộ lọc, điện và bảo trì.
+
+Đây là đánh đổi giữa:
+
+```text
+hiệu quả năng lượng
+↔ chất lượng không khí
+```
+
+Thiết kế tốt tìm cách giảm đánh đổi thay vì chọn một phía tuyệt đối.
+
+## 주방 후드 và phòng tắm: nguồn ô nhiễm cần xử lý tại nguồn
+
+Nấu ăn tạo hơi nước, mùi và hạt; tắm tạo độ ẩm cao. Một chiến lược tốt là hút không khí ngay gần nguồn trước khi nó lan khắp nhà.
+
+Đây là nguyên lý **kiểm soát tại nguồn (source control)**:
+
+```text
+loại bỏ gần nơi phát sinh
+thường hiệu quả hơn
+để chất ô nhiễm lan khắp phòng rồi mới xử lý
+```
+
+Vì vậy máy hút mùi, quạt phòng tắm và thói quen dùng chúng là một phần của văn hoá vận hành nhà, không chỉ phụ kiện.
+
+## 결로 và 곰팡이: nấm mốc là kết quả của hệ tương tác
+
+Nấm mốc trong nhà thường được tranh luận theo hai hướng cực đoan: hoặc “người ở không biết thông gió”, hoặc “nhà xây lỗi”. Thực tế có thể gồm cả nhiệt độ bề mặt, độ ẩm, cách nhiệt, vị trí đồ nội thất, sấy quần áo và thông gió.
+
+```text
+bề mặt lạnh
++ độ ẩm cao
++ thời gian
+→ ngưng tụ / môi trường thuận lợi cho nấm mốc
+```
+
+Điều quan trọng về tư duy là phân biệt **nguyên nhân gần** và **nguyên nhân hệ thống**. Lau nấm mốc xử lý triệu chứng; giảm nguồn ẩm hoặc cải thiện cầu nhiệt mới xử lý một phần nguyên nhân.
+
+## Ánh sáng ban ngày: nhà ở còn điều chỉnh nhịp sinh học và cảm giác không gian
+
+Ánh sáng tự nhiên không chỉ tiết kiệm đèn. Thời điểm và cường độ ánh sáng còn ảnh hưởng cảm nhận thời gian trong ngày và trải nghiệm không gian.
+
+Nhưng “càng nhiều kính càng tốt” cũng không đúng. Ánh nắng trực tiếp có thể gây chói và quá nhiệt. Thiết kế phải cân bằng **chiếu sáng ban ngày (daylighting)** với che nắng và riêng tư.
+
+Cửa sổ, rèm, mái hiên và cách bố trí bàn làm việc cùng tạo môi trường sử dụng thực tế.
+
+## Cách âm và quyền riêng tư: âm thanh đi qua nơi mắt không nhìn thấy
+
+Nhà có tường không đồng nghĩa mọi hoạt động riêng tư bị cô lập. Âm thanh đi qua tường, sàn, cửa và đường ống. Vì vậy **quyền riêng tư âm học (acoustic privacy)** phụ thuộc cấu tạo công trình và nền âm thanh xung quanh.
+
+Đây là nền vật lý phía sau `층간소음`. Một chuẩn mực “hãy yên lặng” có thể giảm xung đột, nhưng nếu kết cấu truyền va đập quá tốt thì cư dân phải tự kiềm chế nhiều hơn để bù cho thiết kế.
+
+Văn hoá phép lịch sự nhiều khi là lớp phần mềm bù cho giới hạn phần cứng.
+
+## Floor plan: sơ đồ phòng phân phối thời gian gặp nhau của gia đình
+
+Bố trí phòng không chỉ là thẩm mỹ. Bếp mở, phòng khách trung tâm, phòng riêng và bàn ăn quyết định xác suất các thành viên gặp nhau trong ngày.
+
+```text
+không gian chung dễ tiếp cận
+→ xác suất tương tác ngẫu nhiên tăng
+
+mọi chức năng tách thành phòng riêng
+→ quyền riêng tư tăng
+→ tương tác ngẫu nhiên có thể giảm
+```
+
+Không có kiểu nào luôn tốt hơn. Gia đình có trẻ nhỏ, người làm việc tại nhà và hộ nhiều thế hệ cần cấu trúc riêng tư–chung khác nhau.
+
+## 재택근무: căn hộ trở thành cả nhà lẫn nơi làm việc
+
+Làm việc từ xa làm một căn phòng gánh thêm chức năng: gọi video, tập trung, lưu thiết bị và tách thời gian công việc khỏi nghỉ ngơi. Căn nhà nhỏ có thể thiếu khả năng phân vùng này.
+
+Khi không có phòng làm việc riêng, người dùng tạo ranh giới bằng bàn, tai nghe, giờ sử dụng hoặc quán cà phê. Đây là ví dụ **chức năng xã hội thay đổi nhanh hơn mặt bằng vật lý**.
+
+Một căn hộ thiết kế cho “về nhà sau giờ làm” có thể không tối ưu cho “ở nhà 8 giờ làm việc mỗi ngày”.
+
+## Nhà ở và chăm sóc: thiết kế quyết định mức độc lập của cơ thể
+
+Bậc cửa, độ rộng lối đi, chiều cao tủ, độ trơn của sàn và khoảng cách tới nhà vệ sinh ít được chú ý khi cư dân trẻ khoẻ. Khi cơ thể thay đổi vì tuổi, chấn thương hoặc khuyết tật, các chi tiết đó trở thành biến chính.
+
+Đây là lý do **thiết kế phổ quát (universal design)** có giá trị vòng đời. Một tay vịn hôm nay có thể giúp người già; ngày mai giúp người đang hồi phục chấn thương; một lối rộng giúp cả xe lăn lẫn xe đẩy trẻ em.
+
+Nhà ở tốt không chỉ vừa với cơ thể hiện tại mà có **khả năng thích nghi (adaptability)** với cơ thể tương lai.
+
+## Căn hộ như pin nhiệt: vật liệu có thể làm chậm thay đổi nhiệt độ
+
+Sàn, tường và vật liệu nặng có **khối lượng nhiệt (thermal mass)**. Chúng hấp thụ nhiệt rồi nhả dần, làm nhiệt độ bề mặt thay đổi chậm hơn không khí.
+
+Ondol tận dụng trực giác này: làm nóng khối sàn để nó tiếp tục phát nhiệt sau khi nguồn nhiệt giảm. Nhưng khối lượng nhiệt cũng có độ trễ; bật hệ thống không làm phòng đổi trạng thái ngay như quạt sưởi trực tiếp.
+
+Đây là khác biệt giữa hệ có **quán tính nhiệt** và hệ phản ứng nhanh. Văn hoá sử dụng thiết bị thường học theo đặc tính đó: cài trước, duy trì đều hoặc chỉ sưởi cục bộ tuỳ nhu cầu.
+
+## Trang phục là lớp điều nhiệt di động của cơ thể
+
+Kiến trúc và quần áo giải cùng một bài toán ở hai quy mô. Nhà điều khiển môi trường quanh người; trang phục điều khiển lớp vi khí hậu sát cơ thể.
+
+Mặc nhiều lớp cho phép thay đổi linh hoạt:
+
+```text
+lớp sát da → quản lý ẩm
+lớp giữa → giữ nhiệt
+lớp ngoài → cản gió / mưa
+```
+
+Vì vậy `롱패딩`, đồ giữ nhiệt và thói quen mang áo khoác có thể được đọc như phản ứng với khí hậu, giao thông công cộng và thời gian ở ngoài trời chứ không chỉ xu hướng thời trang.
+
+## Năng lượng hộ gia đình: hành vi và công trình tương tác
+
+Tiêu thụ năng lượng không thể giải thích chỉ bằng “ý thức tiết kiệm”. Hai hộ có hành vi giống nhau nhưng sống trong công trình cách nhiệt khác nhau có thể dùng năng lượng khác đáng kể.
+
+Có thể tách:
+
+```text
+nhu cầu tiện nghi
+× chất lượng vỏ công trình
+× hiệu suất thiết bị
+× hành vi sử dụng
+× thời tiết
+→ tiêu thụ thực tế
+```
+
+Do đó chính sách hoặc lời khuyên chỉ tập trung hành vi cá nhân có thể bỏ qua phần hạ tầng. Ngược lại, công trình hiệu quả cũng không loại bỏ hoàn toàn tác động của thói quen.
+
 ## Liên hệ kiến thức: kiến trúc như giao diện người dùng
 
 Giao diện tốt làm hành động đúng trở nên dễ. Kiến trúc cũng vậy. `현관` làm tháo giày tự nhiên; sàn ondol làm ngồi sàn thoải mái; intercom căn hộ làm kiểm soát khách tiêu chuẩn.
@@ -230,6 +416,9 @@ Ngôi nhà quyết định nhiều mặc định:
 sức chứa lưu trữ
 + hệ nhiệt
 + cách âm
++ chất lượng không khí
++ ánh sáng
++ khả năng tiếp cận
 + vị trí
 + tiện ích chung
 + quy mô hộ
@@ -238,11 +427,11 @@ sức chứa lưu trữ
 
 Một one-room nhỏ tạo hành vi khác căn hộ lớn dù cư dân có cùng “giá trị văn hoá”. Đây là lý do ràng buộc vật chất nên được xem xét trước định kiến.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy
 
-> Không gian là “mã cứng” của một phần văn hoá. Khi kiến trúc thay đổi, hành vi có thể đổi mà không cần ai ra lệnh. Ngược lại, một thói quen có thể sống lâu vì nhà cửa và đồ vật tiếp tục hỗ trợ nó. Trang phục cũng là giao diện: nó mã hoá dịp, vai trò, thiết chế và ký ức lịch sử trên cơ thể.
+> Không gian là “mã cứng” của một phần văn hoá. Nhưng nhà ở không chỉ là sơ đồ phòng: nó là **hệ nhiệt + hệ không khí + hệ âm thanh + hệ ánh sáng + hệ chăm sóc + hệ tài chính**. Khi một lớp thay đổi, hành vi có thể đổi dù giá trị con người không đổi. Trang phục cũng là một lớp kiến trúc di động trên cơ thể, vừa điều nhiệt vừa mã hoá vai trò, dịp và bản sắc.
 
-## Hiểu lầm phổ biến (Common Misconceptions)
+## Những hiểu lầm phổ biến
 
 “Hanok = nhà của người Hàn ngày xưa” quá rộng; hình thức khác theo tầng lớp, vùng và thời kỳ.
 
@@ -253,3 +442,15 @@ Một one-room nhỏ tạo hành vi khác căn hộ lớn dù cư dân có cùng
 “Văn hoá căn hộ làm mọi người sống giống nhau” là sai; cùng một mặt bằng vẫn chứa cấu trúc hộ, thu nhập, thế hệ và lối sống rất khác nhau.
 
 “Thẩm mỹ Hàn Quốc = tối giản” là cách bản chất hoá; thẩm mỹ cần được đặt trong vật liệu và bối cảnh lịch sử.
+
+“Nhà kín hơn luôn tốt hơn” bỏ qua nhu cầu thông gió và kiểm soát ẩm.
+
+“Máy sưởi hoặc điều hoà mạnh có thể bù mọi thiết kế công trình” bỏ qua cách nhiệt, kính, cầu nhiệt và tải nắng.
+
+“Căn hộ chỉ cần đẹp khi bàn giao” bỏ qua vòng đời bảo trì, thích nghi với già hoá và thay đổi chức năng như làm việc tại nhà.
+
+“Tiêu thụ năng lượng cao nghĩa là người ở thiếu ý thức” là suy luận quá nhanh nếu chưa xét chất lượng công trình và thời tiết.
+
+## Đọc tiếp
+
+Đọc cùng [`31_apartment_neighborhood_moving_recycling_everyday_life.md`](31_apartment_neighborhood_moving_recycling_everyday_life.md), [`32_seasons_climate_environment_daily_rhythm.md`](32_seasons_climate_environment_daily_rhythm.md), [`24_economy_chaebol_housing_status_mobility.md`](24_economy_chaebol_housing_status_mobility.md) và [`26_health_medicine_wellness_body.md`](26_health_medicine_wellness_body.md).
