@@ -24,4 +24,8 @@ Bạn cần có khả năng nhận một shock và tự xây chuỗi `shock → 
 
 Bạn cũng cần biết khi nào headline data chỉ là cyclical noise và khi nào balance sheet, debt structure hoặc productivity trend đang thay đổi structural regime.
 
+## Case studies để áp dụng
+
+Đọc [CPI Shock → Portfolio](../07_integrated_case_studies/01_INFLATION_SHOCK_FROM_CPI_TO_PORTFOLIO.md) để luyện `actual → surprise → reaction function → curve/FX/credit → earnings/valuation`. Sau đó đọc [Credit & Liquidity Crisis](../07_integrated_case_studies/02_CREDIT_LIQUIDITY_CRISIS_TRANSMISSION.md) để nối monetary plumbing, collateral, bank balance sheet và financial accelerator vào real economy.
+
 Sau đó chuyển sang [05_trading_derivatives](../05_trading_derivatives/README.md) nếu muốn dùng macro trong trading, hoặc [06_markets_korea_vietnam](../06_markets_korea_vietnam/README.md) để áp dụng trực tiếp vào Hàn Quốc và Việt Nam.
