@@ -13,6 +13,7 @@ Kho tài liệu học được tổ chức theo từng chủ đề. Mỗi bộ c
 - [Korean Culture Master Knowledge Book](korean_culture/README.md): văn hóa Hàn Quốc theo lịch sử, quan hệ, gia đình, giáo dục, công sở, ẩm thực, nghệ thuật, vùng miền, Hallyu và xã hội hiện đại.
 - [KIIP 5단계 Exam Library](kiip/level5/README.md): bộ ôn `영주용 종합평가` và `귀화용 종합평가`, bám 8 chương/50 bài KIIP 5 người học cung cấp, có correction cho dữ liệu thay đổi, 작문·구술, mock và cross-reference sang History/Culture.
 - [Native Mobile Development](11_native/00_INDEX.md): lộ trình Swift/iOS và Kotlin/Android từ Beginner → Intermediate → Advanced/Senior → Master, gồm cả modern stack, legacy interoperability và production engineering.
+- [Investing Knowledge Library](investing/README.md): bộ tài liệu đầu tư từ số 0 tới thực hành, gồm cổ phiếu, ETF, trái phiếu, vàng, Forex, futures/options, phân tích doanh nghiệp, vi mô/vĩ mô, Fed, quản trị rủi ro, cùng thị trường Hàn Quốc và Việt Nam.
 - [Study Planner](planner/study-planner/README.md): ứng dụng lập kế hoạch học tập đồng bộ Supabase.
 - [Study Library](learning-library/README.md): trình đọc Markdown/PDF tĩnh cho GitHub Pages.
 
