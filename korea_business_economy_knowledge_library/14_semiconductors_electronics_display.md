@@ -1,492 +1,358 @@
-# Bán dẫn, điện tử và display Hàn Quốc (Semiconductors & Electronics / 반도체·전자·디스플레이)
+# Bán dẫn, điện tử và màn hình Hàn Quốc (Semiconductors & Electronics / 반도체·전자·디스플레이)
 
-Semiconductor là một trong những ngành quan trọng nhất để hiểu mô hình kinh tế Hàn Quốc hiện đại vì nó kết hợp gần như tất cả themes của library: **capital intensity, R&D, learning-by-doing, export dependence, chaebol scale, supplier ecosystem, cyclicality và geopolitics**.
+Bán dẫn là một trong những ngành quan trọng nhất để hiểu kinh tế Hàn Quốc hiện đại vì nó kết hợp hầu hết các chủ đề lớn của thư viện: **cường độ vốn cao, R&D, học qua thực hành, phụ thuộc xuất khẩu, quy mô chaebol, hệ sinh thái nhà cung cấp, tính chu kỳ và địa chính trị**.
 
-Nhưng “semiconductor industry” không phải một business model. Memory, foundry, fabless, equipment, materials, packaging và electronics final products có economics rất khác nhau. Nếu chỉ nhìn headline “chip demand tăng”, rất dễ áp sai logic cho company cụ thể.
+Nhưng “ngành bán dẫn” không phải một mô hình kinh doanh duy nhất. Bộ nhớ, foundry, fabless, thiết bị, vật liệu, đóng gói và điện tử thành phẩm có cấu trúc kinh tế rất khác nhau. Nếu chỉ nhìn tiêu đề “nhu cầu chip tăng”, rất dễ áp sai logic cho từng công ty.
 
-## Từ consumer electronics tới semiconductor capability
+## Từ điện tử tiêu dùng tới năng lực bán dẫn
 
-Korean electronics industry không bắt đầu ở technology frontier.
+Ngành điện tử Hàn Quốc không bắt đầu ở biên công nghệ. Giai đoạn đầu dựa nhiều vào linh kiện nhập khẩu, cấp phép, lắp ráp và học hỏi từ công nghệ nước ngoài.
 
-GoldStar của LG bắt đầu electronics từ cuối 1950s; Samsung Electronics được thành lập năm 1969. Early phase dựa nhiều vào imported components, licensing, assembly và learning từ foreign technology.
-
-Progression có thể hình dung:
+Có thể hình dung quá trình tích lũy năng lực:
 
 ```text
-Assembly
+Lắp ráp
    ↓
-Component localization
+Nội địa hóa linh kiện
    ↓
-Process engineering
+Kỹ thuật quy trình
    ↓
-Own product design
+Tự thiết kế sản phẩm
    ↓
-Core components / semiconductors
+Linh kiện cốt lõi / bán dẫn
    ↓
-Frontier R&D + standards + ecosystem
+R&D tuyến đầu + tiêu chuẩn + hệ sinh thái
 ```
 
-Đây là **learning-by-doing / 생산을 통한 학습**. Capability không chỉ đến từ patent; nó tích lũy từ production repetition, defect solving, supplier coordination và equipment know-how.
+Đây là **học qua thực hành (learning-by-doing / 생산을 통한 학습)**. Năng lực không chỉ đến từ bằng sáng chế; nó tích lũy qua lặp lại sản xuất, xử lý lỗi, phối hợp nhà cung cấp và kinh nghiệm vận hành thiết bị.
 
-Semiconductor là bước nhảy khó hơn consumer assembly vì fab cần vốn cực lớn và technology node thay đổi liên tục.
+Bán dẫn là bước nhảy khó hơn lắp ráp điện tử vì fab cần lượng vốn rất lớn và thế hệ công nghệ thay đổi liên tục.
 
-## Semiconductor value chain: ai làm gì?
+## Chuỗi giá trị bán dẫn
 
-Một simplified chain:
+Một chuỗi đơn giản:
 
 ```text
-EDA / IP / Architecture
+EDA / IP / Kiến trúc
         ↓
-Chip Design (Fabless / IDM)
+Thiết kế chip (Fabless / IDM)
         ↓
-Wafer Fabrication (Foundry / IDM)
+Chế tạo wafer (Foundry / IDM)
         ↓
-Assembly / Packaging / Test
+Lắp ráp / đóng gói / kiểm thử
         ↓
-System / Device
+Hệ thống / thiết bị cuối
 ```
 
-Song song là equipment/material ecosystem:
+Song song là hệ sinh thái thiết bị và vật liệu: quang khắc, khắc, lắng đọng, đo kiểm; wafer, khí, photoresist, hóa chất; substrate và vật liệu đóng gói.
+
+**IDM (Integrated Device Manufacturer / 종합반도체기업)** thực hiện nhiều công đoạn. **Fabless (팹리스)** tập trung thiết kế. **Foundry (파운드리)** sản xuất theo thiết kế của khách hàng. **OSAT** tập trung lắp ráp và kiểm thử.
+
+Trước khi chọn chỉ số tài chính, phải xác định công ty đang đứng ở nút nào của chuỗi giá trị.
+
+## Bộ nhớ: sản phẩm chuẩn hóa và chu kỳ cung–cầu
+
+DRAM và NAND là hai nhóm bộ nhớ lớn. Bộ nhớ có mức chuẩn hóa cao hơn nhiều loại chip logic tùy biến, nên cân bằng cung–cầu toàn ngành ảnh hưởng mạnh tới **giá bán bình quân (Average Selling Price / ASP)**.
+
+Một chu kỳ bộ nhớ điển hình:
 
 ```text
-Lithography / Etch / Deposition / Metrology
-Wafers / Gases / Photoresist / Chemicals
-Substrates / Packaging materials
+Nhu cầu mạnh / cung thiếu
+        ↓
+ASP + lợi nhuận ↑
+        ↓
+CAPEX ↑
+        ↓
+Công suất tăng theo sau
+        ↓
+Tồn kho ↑ / ASP ↓
+        ↓
+Cắt CAPEX
+        ↓
+Tăng cung chậm lại
+        ↓
+Phục hồi
 ```
 
-**IDM (Integrated Device Manufacturer / 종합반도체기업)** làm nhiều stages.
+Đây là chu kỳ điển hình của ngành thâm dụng vốn và có nét giống hàng hóa. Tuy nhiên “giống hàng hóa” không có nghĩa sản phẩm hoàn toàn đồng nhất; node công nghệ, hiệu quả điện năng, độ tin cậy và cơ cấu sản phẩm vẫn tạo khác biệt.
 
-**Fabless / 팹리스** focus design.
+## HBM: kinh tế của bộ nhớ trở nên khác biệt hơn
 
-**Foundry / 파운드리** manufacture designs của customers.
+**HBM (High Bandwidth Memory / 고대역폭메모리)** xếp chồng nhiều die DRAM để cung cấp băng thông rất cao cho bộ tăng tốc AI.
 
-**OSAT** focus assembly/test.
+HBM đòi hỏi die chất lượng cao, quy trình xếp chồng và TSV, đóng gói tiên tiến, kiểm soát nhiệt, chứng nhận của khách hàng và tỷ lệ đạt chất lượng cao trên nhiều lớp.
 
-Company analysis phải xác định node trước khi chọn metrics.
+Nếu một stack có nhiều die, lỗi tại một lớp có thể làm cả cụm không sử dụng được. Vì vậy bài toán **tỷ lệ đạt (yield / 수율)** phức tạp hơn DRAM đơn lẻ.
 
-## Memory semiconductor: standardized product và supply-demand cycle
+Sự bùng nổ AI không chỉ tăng lượng bit; nó còn làm tăng giá trị của **năng lực đóng gói + yield + chứng nhận khách hàng**.
 
-**DRAM** và **NAND** là memory categories lớn. Memory thường standardized hơn custom logic, nên industry supply-demand balance có influence mạnh tới ASP.
+## Yield: kỹ thuật chuyển thành biên lợi nhuận như thế nào?
 
-Một simplified memory cycle:
+Yield là tỷ lệ sản phẩm đạt chuẩn so với lượng đầu ra lý thuyết.
 
-```text
-Demand strong / supply tight
-        ↓
-ASP + profit ↑
-        ↓
-Capex ↑
-        ↓
-Capacity catches up
-        ↓
-Inventory ↑ / ASP ↓
-        ↓
-Capex cuts
-        ↓
-Supply growth slows
-        ↓
-Recovery
-```
-
-Đây là classic capital-intensive commodity-like cycle.
-
-Nhưng “commodity-like” không nghĩa products identical hoàn toàn. Process node, power efficiency, reliability và product mix vẫn tạo differentiation.
-
-## HBM: memory economics trở nên differentiated hơn
-
-**HBM (High Bandwidth Memory / 고대역폭메모리)** stacks multiple DRAM dies để cung cấp bandwidth rất cao cho AI accelerators.
-
-HBM economics khác commodity DRAM vì cần:
-
-- high-quality dies;
-- stacking/TSV process;
-- advanced packaging integration;
-- thermal control;
-- customer qualification;
-- high yield across multiple stacked layers.
-
-Nếu một stack có nhiều dies, defect ở một layer có thể làm whole stack unusable. Vì vậy yield challenge phức tạp hơn ordinary single-die shipment.
-
-AI boom do đó không chỉ tăng bit demand; nó tăng value của **packaging + yield + qualification capability**.
-
-## Yield: kỹ thuật biến thành gross margin như thế nào?
-
-**Yield / 수율** là tỷ lệ usable dies/process output so với theoretical output.
-
-Giả sử wafer cost gần như fixed. Nếu good dies tăng, unit cost giảm:
+Nếu chi phí wafer gần như cố định:
 
 \[
-Cost\ per\ Good\ Die \approx \frac{Wafer\ Cost + Process\ Cost}{Good\ Dies}
+Chi\ phí\ trên\ die\ tốt
+\approx
+\frac{Chi\ phí\ wafer + Chi\ phí\ quy\ trình}{Số\ die\ đạt\ chuẩn}
 \]
 
-Yield tăng từ 70% lên 90% không chỉ làm shipment tăng; nó spread same fab cost trên nhiều sellable chips.
+Yield tăng từ 70% lên 90% không chỉ làm số sản phẩm bán được tăng; nó còn phân bổ cùng chi phí fab trên nhiều chip hơn.
 
-Vì scale của leading fabs rất lớn, vài percentage points yield có thể có financial effect rất lớn.
+Với quy mô fab hiện đại, vài điểm phần trăm yield có thể tạo ảnh hưởng tài chính rất lớn. Đây là ví dụ rõ của việc kỹ thuật biến thành kế toán.
 
-Đây là ví dụ rõ nhất của connection giữa engineering và accounting.
+## Cường độ vốn: fab là cỗ máy chi phí cố định rất lớn
 
-## Capital intensity: fab là một fixed-cost machine khổng lồ
+Fab cần phòng sạch, quang khắc, thiết bị khắc–lắng đọng, điện nước và đội ngũ kỹ sư. Khấu hao là một khoản chi phí lớn.
 
-Fab cần clean room, lithography, etch/deposition equipment, utilities và engineering staff. Depreciation là cost lớn.
-
-Một approximation:
+Một cách hình dung:
 
 \[
-Unit\ Fixed\ Cost = \frac{Total\ Fixed\ Fab\ Cost}{Good\ Units\ Shipped}
+Chi\ phí\ cố\ định\ trên\ đơn\ vị
+=
+\frac{Tổng\ chi\ phí\ cố\ định\ fab}{Sản\ phẩm\ đạt\ chuẩn\ giao\ bán}
 \]
 
-Khi utilization thấp, unit cost tăng. Khi utilization cao, operating leverage mạnh.
+Khi **tỷ lệ sử dụng công suất (utilization / 가동률)** thấp, chi phí trên đơn vị tăng. Khi utilization cao, **đòn bẩy hoạt động (operating leverage)** mạnh.
 
-Do đó same ASP có thể tạo margin rất khác tùy utilization/yield.
+Vì vậy cùng một ASP vẫn có thể tạo biên lợi nhuận rất khác tùy utilization và yield.
 
-## Capacity lag tạo cycle
+## Độ trễ công suất tạo ra chu kỳ
 
-Fab không thể tăng capacity trong vài tuần. New fab/build-out, tool installation, process qualification và yield ramp mất thời gian.
+Fab không thể tăng công suất trong vài tuần. Xây fab, lắp thiết bị, chứng nhận quy trình và tăng yield cần nhiều thời gian.
 
-Đây là **supply lag**.
+Đây là **độ trễ nguồn cung (supply lag)**.
 
-Khi demand strong, price tăng trước khi new capacity online. Firms thấy high profit và invest; tới lúc capacity online, demand có thể đã chậm.
+Khi nhu cầu mạnh, giá tăng trước khi công suất mới đi vào hoạt động. Doanh nghiệp nhìn thấy lợi nhuận cao và đầu tư; nhưng tới khi công suất mới xuất hiện, nhu cầu có thể đã chậm lại.
 
-Capital intensity + lag là structural source of cyclicality.
+Cường độ vốn lớn + độ trễ dài là nguồn gốc cấu trúc của tính chu kỳ.
 
-## Capex: lớn không đồng nghĩa bullish
+## CAPEX lớn không tự động là tín hiệu tích cực
 
-Capex có hai meanings:
+CAPEX có thể gồm **đầu tư duy trì/chuyển thế hệ công nghệ** và **đầu tư tăng trưởng**.
 
-**Maintenance/technology migration:** cần để giữ competitiveness.
-
-**Growth capex:** tăng future capacity.
-
-Capex lớn có thể signal confidence, nhưng cũng có thể tạo future oversupply.
-
-Value creation phụ thuộc:
+CAPEX lớn có thể phản ánh niềm tin vào tương lai, nhưng cũng có thể tạo dư cung sau này. Tạo giá trị chỉ xảy ra khi:
 
 \[
-Return\ on\ New\ Capacity > Cost\ of\ Capital
+Lợi\ suất\ công\ suất\ mới > Chi\ phí\ vốn
 \]
 
-Không phải `Capex ↑ = Value ↑`.
+Không thể suy luận `CAPEX tăng = giá trị tăng`.
 
-## Depreciation timing và profit
+## Thời điểm khấu hao và lợi nhuận
 
-New fab capex không hit P&L toàn bộ ngay. Khi asset được placed in service, depreciation bắt đầu qua useful life.
+Chi tiền xây fab xảy ra trước; khấu hao chỉ bắt đầu khi tài sản được đưa vào sử dụng. Vì vậy dòng tiền ra có thể xuất hiện trước, còn gánh nặng khấu hao tăng sau khi fab bắt đầu ramp.
 
-Do đó company có thể có cash outflow trước, rồi depreciation burden tăng khi fab ramp.
-
-Nếu demand yếu đúng lúc new capacity starts depreciating, margin pressure double:
+Nếu nhu cầu yếu đúng lúc công suất mới bắt đầu khấu hao, doanh nghiệp chịu hai lực cùng lúc:
 
 ```text
-ASP/utilization ↓
+ASP / utilization ↓
 +
-Depreciation ↑
+Khấu hao ↑
 ```
 
-Đây là reason cash flow và P&L timing khác nhau.
+Đây là lý do thời điểm dòng tiền và lợi nhuận kế toán khác nhau.
 
-## Foundry economics: manufacturing service nhưng moat sâu
+## Kinh tế foundry: dịch vụ sản xuất nhưng hào cạnh tranh rất sâu
 
-Foundry manufacture customer designs. Core variables gồm:
+Foundry sản xuất chip theo thiết kế của khách hàng. Các biến cốt lõi gồm khả năng cạnh tranh của node công nghệ, yield, utilization, lòng tin của khách hàng, hệ sinh thái thiết kế, đóng gói và tốc độ đưa sản phẩm vào sản lượng lớn.
 
-- process node competitiveness;
-- yield;
-- utilization;
-- customer trust;
-- design ecosystem;
-- packaging;
-- time-to-volume.
+Khách hàng không chỉ mua mật độ transistor. Họ cần **PDK (Process Design Kit)**, thư viện IP, khả năng tương thích EDA, quy trình tăng yield đáng tin cậy và hỗ trợ đóng gói.
 
-Customer không chỉ mua transistor density. Họ cần **PDK (Process Design Kit)**, IP libraries, EDA compatibility, reliable yield learning và packaging support.
+Chuyển foundry có chi phí lớn vì thiết kế phải được điều chỉnh và chứng nhận lại. Đây tạo **chi phí chuyển đổi (switching cost)**.
 
-Switching foundry có cost lớn vì design phải be adapted/qualified. Đây tạo switching cost.
+Node nhỏ hơn không tự động tốt hơn; chi phí, điện năng, hiệu năng và yield phải phù hợp use case.
 
-Nhưng node “nhỏ hơn” không tự động better. Cost, power, performance và yield phải match product use case.
+## Kinh tế fabless: nhẹ tài sản hơn nhưng phụ thuộc kiểu khác
 
-## Fabless economics: asset-light hơn nhưng dependency khác
+Fabless tránh CAPEX fab khổng lồ nhưng chi rất mạnh cho R&D và thiết kế.
 
-Fabless avoids gigantic fab capex nhưng spends heavily on R&D/design.
+Rủi ro chính gồm quyền tiếp cận công suất foundry, chi phí tape-out, thất bại thiết kế, tập trung khách hàng và sản phẩm nhanh lỗi thời.
 
-Risks gồm:
+Một design win lớn có thể tạo biên lợi nhuận cao; bỏ lỡ một thế hệ kiến trúc có thể làm tăng trưởng suy sụp.
 
-- foundry capacity access;
-- tape-out cost;
-- design failure;
-- customer concentration;
-- fast product obsolescence.
+Vì vậy năng lực R&D và quan hệ hệ sinh thái quan trọng hơn utilization vật lý.
 
-A single design win có thể tạo high margin; missed architecture generation có thể destroy growth.
+## Đóng gói tiên tiến làm mờ ranh giới front-end và back-end
 
-Do đó R&D execution và ecosystem partnership quan trọng hơn physical utilization.
+Trong lịch sử, đóng gói và kiểm thử thường bị coi là khâu giá trị thấp hơn. AI, HBM và chiplet làm **đóng gói tiên tiến (advanced packaging)** trở thành một nút thắt hiệu năng.
 
-## Advanced packaging: boundary giữa front-end và back-end mờ đi
+Khi nhiều die phải giao tiếp ở băng thông cao, interposer, substrate và thiết kế nhiệt ảnh hưởng trực tiếp tới hiệu năng hệ thống.
 
-Historically packaging/test bị nhìn như lower-value back-end. AI/HBM/chiplets làm packaging trở thành performance bottleneck.
+Điều này làm giá trị dịch chuyển trong chuỗi cung ứng. Một nút từng bị coi là “giá trị thấp” có thể trở thành nút chiến lược khi kiến trúc công nghệ thay đổi.
 
-When multiple dies must communicate at high bandwidth, interposer/substrate/thermal design affect system performance.
+## Thiết bị bán dẫn: “bán cuốc xẻng” nhưng vẫn có chu kỳ
 
-Điều này làm value shift trong supply chain. Analyst phải update mental model khi technology architecture đổi; historical “low-value node” có thể become strategic node.
+Doanh thu thiết bị phụ thuộc lịch CAPEX của fab nhiều hơn ASP chip trực tiếp.
 
-## Equipment suppliers: picks-and-shovels nhưng không immune cycle
+Đơn hàng thiết bị có thể đi trước công suất chip thực tế. Doanh nghiệp thiết bị thường có R&D cao, rào cản chứng nhận lớn, doanh thu dịch vụ từ installed base, tập trung khách hàng và rủi ro kiểm soát xuất khẩu.
 
-Semiconductor equipment revenue phụ thuộc fab capex schedule hơn direct chip ASP.
+Mô hình “picks-and-shovels” không có nghĩa miễn nhiễm chu kỳ. Nếu fab cắt CAPEX, đơn hàng thiết bị mới có thể giảm mạnh.
 
-Order timing có thể lead actual chip capacity.
+## Vật liệu và hóa chất: nhu cầu lặp lại nhưng hào chứng nhận cao
 
-Equipment company economics thường có:
+Khí, photoresist, wafer và hóa chất đặc biệt được tiêu thụ liên tục. So với thiết bị, doanh thu có thể lặp lại hơn khi fab vận hành.
 
-- high R&D;
-- qualification barriers;
-- installed-base service revenue;
-- customer concentration;
-- export-control exposure.
+Tuy nhiên chứng nhận rất nghiêm ngặt vì một lượng tạp chất nhỏ cũng có thể làm yield giảm. Hào cạnh tranh có thể đến từ độ tinh khiết, độ ổn định, logistics và quá trình chứng nhận của khách hàng, không chỉ bằng sáng chế.
 
-“Picks-and-shovels” không nghĩa non-cyclical. If fabs cut capex, new-tool orders can fall sharply.
+Tập trung khách hàng vẫn là rủi ro vì chỉ vài fab lớn đã chiếm phần lớn nhu cầu.
 
-## Materials/chemicals: recurring demand nhưng qualification moat
+## Tồn kho: phải nhìn cả nhà sản xuất và khách hàng
 
-Gases, photoresists, wafers và specialty chemicals được consumed continuously.
+Giá bộ nhớ phục hồi có thể đến từ nhu cầu cuối thật hoặc chỉ từ tái tích trữ tạm thời.
 
-Compared with equipment, revenue may be more recurring once fab runs. But qualification is strict because tiny impurity can damage yield.
-
-Supplier moat có thể đến từ purity, consistency, logistics and customer qualification—not just patent.
-
-Customer concentration remains risk because a few large fabs account for large demand.
-
-## Inventory: supplier và customer inventory đều matter
-
-Memory price recovery có thể đến từ final demand hoặc temporary restocking.
-
-Analyst should separate:
+Cần tách:
 
 ```text
-End demand
-Customer inventory
-Producer inventory
-Channel inventory
+Nhu cầu cuối
+Tồn kho khách hàng
+Tồn kho nhà sản xuất
+Tồn kho kênh phân phối
 ```
 
-If customers restock after very low inventory, orders may temporarily exceed end consumption.
+Nếu khách hàng tái tích trữ sau khi tồn kho xuống rất thấp, đơn hàng có thể tạm thời tăng nhanh hơn tiêu dùng cuối. Ngoại suy giai đoạn này thành tăng trưởng cấu trúc rất dễ gây sai lầm chu kỳ.
 
-Extrapolating restocking as structural demand leads to cycle mistakes.
+## Tăng bit, ASP và cơ cấu sản phẩm
 
-## Bit growth, ASP và mix
-
-Memory revenue can be decomposed conceptually:
+Doanh thu bộ nhớ có thể phân rã gần đúng:
 
 \[
-Revenue \approx Bits\ Shipped \times ASP\ per\ Bit
+Doanh\ thu \approx Bit\ giao\ bán \times ASP\ trên\ bit
 \]
 
-But HBM/product mix complicates average ASP.
+Nhưng HBM và cơ cấu sản phẩm cao cấp làm ASP bình quân phức tạp hơn.
 
-Revenue growth can come from:
+Doanh thu có thể tăng do số bit tăng, giá thị trường tăng, tỷ trọng HBM cao hơn hoặc tỷ giá. Tác động tới biên lợi nhuận khác nhau theo từng nguyên nhân.
 
-- more bits;
-- higher market price;
-- richer HBM/premium mix;
-- FX translation.
+## Tập trung khách hàng: AI tạo tăng trưởng nhưng cũng tạo phụ thuộc mới
 
-Margin effect differs by driver.
+Khách hàng HBM cao cấp ít hơn người mua bộ nhớ phổ thông. Thắng khách hàng hyperscaler hoặc hãng accelerator lớn tạo tăng trưởng rất nhanh nhưng cũng làm mức tập trung khách hàng và yêu cầu chứng nhận cao hơn.
 
-## Customer concentration: AI demand can create new dependency
+Quyền lực khách hàng có thể ảnh hưởng giá, lịch CAPEX và roadmap công nghệ. Tăng trưởng cấu trúc của AI không xóa rủi ro thương lượng.
 
-High-end HBM customers are fewer than generic consumer-memory buyers.
+## Địa chính trị chuỗi cung ứng: bán dẫn là hạ tầng chiến lược
 
-Winning large hyperscaler/accelerator customers creates huge growth but may raise qualification/customer concentration.
+Chip tiên tiến phụ thuộc thiết bị, EDA, IP và vật liệu phân bố toàn cầu. Không quốc gia nào nắm toàn bộ nút quan trọng.
 
-Customer power can influence pricing, capex timing and technology roadmap.
+Kiểm soát xuất khẩu và hạn chế công nghệ có thể tác động quyền tiếp cận thiết bị, thị trường khách hàng, vị trí fab, hoạt động tại Trung Quốc và hợp tác R&D.
 
-Therefore structural demand growth does not remove bargaining risk.
+**Tự cung tự cấp 100%** thường không thực tế và có thể không hiệu quả. Khả năng chống chịu tốt hơn là giảm điểm phụ thuộc đơn lẻ quan trọng và duy trì phương án thay thế đáng tin cậy.
 
-## Supply-chain geopolitics: semiconductor is now strategic infrastructure
+Địa chính trị vì vậy đã trở thành biến dòng tiền doanh nghiệp, không chỉ là bối cảnh chính sách đối ngoại.
 
-Advanced chips depend on global equipment, EDA, IP and materials. No single country owns every critical node.
+## Kinh tế vị trí: vì sao fab tập trung theo cụm?
 
-Export controls and technology restrictions therefore can affect:
+Fab cần điện ổn định, nước siêu tinh khiết, nhà cung cấp, nhân lực kỹ thuật và logistics. Cụm công nghiệp giảm thời gian phối hợp và tăng mật độ nhân lực–nhà cung cấp.
 
-- equipment access;
-- customer markets;
-- fab location;
-- China operations;
-- R&D collaboration.
+Nhưng tập trung cũng tạo **rủi ro chung (common-mode risk)**: sự cố điện, nước hoặc thiên tai địa phương có thể ảnh hưởng nhiều cơ sở cùng lúc.
 
-**Self-sufficiency 100%** is unrealistic and often inefficient. Resilience means reducing critical single-point dependency and maintaining alternatives.
-
-Geopolitics is now a company cash-flow variable, not merely foreign-policy background.
-
-## Location economics: why fabs cluster
-
-Fabs need stable power, ultrapure water, suppliers, engineering talent and logistics.
-
-Clusters reduce coordination time and improve labor/supplier density.
-
-But concentration also creates common-mode risk: local grid/water/disaster issue can affect multiple facilities.
-
-Industrial geography is therefore a trade-off between agglomeration efficiency and resilience.
+Địa lý công nghiệp vì vậy là đánh đổi giữa hiệu quả tập trung và khả năng chống chịu.
 
 Xem [`24_regional_clusters_and_industrial_geography.md`](./24_regional_clusters_and_industrial_geography.md) và [`30_energy_security_power_market_and_transition.md`](./30_energy_security_power_market_and_transition.md).
 
-## Electronics final products: economics khác chip
+## Điện tử thành phẩm có kinh tế khác chip
 
-Smartphone, TV và appliances have BOM, channel inventory, marketing, product-cycle and brand economics.
+Smartphone, TV và thiết bị gia dụng phụ thuộc BOM, tồn kho kênh, marketing, chu kỳ sản phẩm và sức mạnh thương hiệu.
 
-Premium brand creates pricing power; however replacement cycle can limit unit growth.
+Thương hiệu cao cấp tạo quyền định giá nhưng chu kỳ thay thế sản phẩm có thể giới hạn tăng trưởng số lượng. Biên phần cứng có thể vừa phải trong khi dịch vụ và phụ kiện làm giá trị vòng đời khách hàng cao hơn.
 
-Hardware margin may be moderate while ecosystem services/accessories raise lifetime value.
+Vì vậy Samsung Electronics không thể được phân tích như “một công ty bán dẫn” duy nhất; cơ cấu phân khúc rất quan trọng.
 
-Therefore Samsung Electronics cannot be analyzed as “a semiconductor company” only. Segment mix matters.
+## Màn hình: vị trí dẫn đầu công nghệ có thể dịch chuyển
 
-## Display: technology leadership can migrate
+Hàn Quốc từng dẫn đầu LCD nhưng hàng hóa hóa và quy mô Trung Quốc làm kinh tế thay đổi. Doanh nghiệp Hàn Quốc chuyển trọng tâm sang OLED và công nghệ màn hình cao cấp.
 
-Korea historically led LCD, but commoditization and Chinese scale pressure changed economics. Korean firms shifted emphasis toward OLED and advanced display technologies.
+Ngành màn hình có nhiều đặc điểm giống bán dẫn: CAPEX cao, học yield, chứng nhận khách hàng, thế hệ công nghệ và rủi ro dư công suất.
 
-Display has semiconductor-like characteristics:
+Một công nghệ có thể vượt trội về kỹ thuật nhưng thất bại về kinh tế nếu yield, chi phí hoặc mức chấp nhận của khách hàng thấp.
 
-- high capex;
-- yield learning;
-- customer qualification;
-- technology generations;
-- overcapacity risk.
+## OLED: khác biệt hóa đi cùng rủi ro công suất
 
-A technology can be superior technically but fail economically if yield/cost/customer adoption are poor.
+OLED có thể tạo rào cản cao hơn nhờ vật liệu, quy trình và nhu cầu thiết bị cao cấp. Nhưng dây chuyền thế hệ mới vẫn cần đạt utilization đủ cao.
 
-## OLED: differentiation vs capex risk
+Nếu chu kỳ sản phẩm khách hàng yếu, dây chuyền đắt tiền có thể bị sử dụng thấp. Dẫn đầu công nghệ không xóa kinh tế công suất.
 
-OLED can create higher barriers through materials/process know-how and premium-device demand.
+## Hệ sinh thái nhà cung cấp: năng lực lan ra ngoài Samsung/SK/LG
 
-But new-generation capacity still must reach utilization. If customer product cycle disappoints, expensive display lines can underutilize.
+Các doanh nghiệp bán dẫn và điện tử lớn dựa vào nhiều nhà cung cấp thiết bị, vật liệu và linh kiện. Điều này tạo lan tỏa: nhà cung cấp học tiêu chuẩn chất lượng toàn cầu và có thể xuất khẩu sang khách hàng ngoài tập đoàn.
 
-Technology leadership does not eliminate capacity economics.
+Nhưng phụ thuộc captive cũng có thể xuất hiện. Nhà cung cấp có công nghệ tốt nhưng chỉ một khách hàng lớn vẫn có quyền thương lượng yếu.
 
-## Supplier ecosystem: capability spreads beyond Samsung/SK/LG
-
-Large Korean semiconductor/electronics champions rely on many equipment/material/component suppliers.
-
-This creates spillover: suppliers learn world-class quality and can export to external customers.
-
-But captive dependence can also emerge. A supplier with one dominant customer may have technology but weak bargaining power.
-
-Thus semiconductor success can either diffuse productivity or concentrate it depending on supplier scale-up.
+Vì vậy thành công bán dẫn có thể lan tỏa năng suất hoặc làm năng suất tập trung tùy khả năng scale-up của nhà cung cấp.
 
 Xem [`06_sme_mid_sized_and_subcontracting_ecosystem.md`](./06_sme_mid_sized_and_subcontracting_ecosystem.md).
 
-## R&D and talent: process knowledge is cumulative
+## R&D và nhân tài: tri thức quy trình mang tính tích lũy
 
-Semiconductor frontier moves continuously, so R&D is not optional growth spending; much of it is **survival investment**.
+Biên công nghệ bán dẫn di chuyển liên tục nên R&D không chỉ là chi tiêu tăng trưởng; phần lớn còn là **đầu tư để tồn tại (survival investment)**.
 
-Skill also contains tacit knowledge. Senior process engineer may know subtle interactions not captured fully in manuals.
+Nhiều kỹ năng là kiến thức ngầm. Kỹ sư quy trình lâu năm có thể hiểu những tương tác tinh tế không ghi đầy đủ trong tài liệu.
 
-This makes talent retention and cluster depth strategic assets.
+Vì vậy giữ nhân lực và chiều sâu cụm công nghiệp là tài sản chiến lược.
 
 Xem [`29_innovation_rnd_education_and_human_capital.md`](./29_innovation_rnd_education_and_human_capital.md).
 
-## Company-analysis dashboard
+## Bảng chỉ số khi phân tích công ty
 
-For memory/IDM:
+Với doanh nghiệp bộ nhớ/IDM, nên theo dõi ASP, tăng bit, cơ cấu HBM/cao cấp, tồn kho, utilization, bình luận yield, CAPEX, khấu hao, R&D và tiền ròng/nợ ròng.
 
-```text
-ASP / bit growth
-HBM/premium mix
-Inventory days
-Utilization
-Yield commentary
-Capex
-Depreciation
-R&D
-Net cash/debt
-```
+Với foundry, nên theo dõi cơ cấu node, utilization, yield/ramp, tập trung khách hàng, CAPEX và hệ sinh thái đóng gói tiên tiến.
 
-For foundry:
+Với doanh nghiệp thiết bị/vật liệu, nên theo dõi tập trung khách hàng, backlog, installed base, tỷ trọng dịch vụ–vật tư tiêu hao, các lần đạt chứng nhận và rủi ro kiểm soát xuất khẩu.
 
-```text
-Node mix
-Utilization
-Yield/ramp
-Customer concentration
-Capex
-Advanced packaging ecosystem
-```
+Không chỉ số nào nên được đọc một mình.
 
-For equipment/material supplier:
+## Chuẩn hóa chu kỳ khi định giá
 
-```text
-Customer concentration
-Order backlog
-Installed base
-Service/consumable share
-Qualification wins
-Export-control exposure
-```
+Ở đỉnh giá bộ nhớ, P/E quá khứ có thể rất thấp. Ở đáy chu kỳ, P/E có thể rất cao hoặc vô nghĩa.
 
-No metric should be read alone.
+Vì vậy định giá bán dẫn cần giả định **chu kỳ bình thường hóa (normalized cycle)**.
 
-## Cycle normalization
+Nên hỏi ASP giữa chu kỳ là bao nhiêu, utilization bền vững ở mức nào, khấu hao sau fab mới sẽ ra sao và tỷ trọng sản phẩm cao cấp nào thực sự mang tính cấu trúc.
 
-At peak memory price, trailing P/E can appear extremely low. At trough, P/E can appear very high or meaningless.
-
-Therefore semiconductor valuation needs normalized cycle assumptions.
-
-Ask:
-
-```text
-What is mid-cycle ASP?
-What utilization is sustainable?
-How much depreciation after new fabs?
-What premium mix is structural?
-```
-
-This is more useful than mechanically comparing one-year P/E.
+Cách này hữu ích hơn so sánh cơ học P/E một năm.
 
 ## Stress test
 
-Useful shocks:
+Các cú sốc hữu ích gồm ASP bộ nhớ -20%, chậm chứng nhận HBM, utilization -10 điểm phần trăm, fab mới bắt đầu khấu hao trước khi nhu cầu đến, hạn chế xuất khẩu, khách hàng lớn mất thị phần, biến động KRW và giá điện tăng.
 
-- memory ASP -20%;
-- HBM qualification delay;
-- utilization -10pt;
-- new-fab depreciation starts before demand;
-- export restriction;
-- top customer loses share;
-- KRW move;
-- electricity cost increase.
+Sau đó theo dõi tác động tới biên lợi nhuận hoạt động, FCF và phản ứng CAPEX.
 
-Then trace operating margin, FCF and capex response.
+## Mental Model — mô hình tư duy
 
-## Mental Model
-
-> Semiconductor là cuộc chơi của **technology + yield + capacity + product mix + cycle + ecosystem**. Korea’s advantage không nằm ở một factory; nó nằm ở cumulative manufacturing and engineering system built across decades.
-
-Một map ngắn:
+> Bán dẫn là cuộc chơi của **công nghệ + yield + công suất + cơ cấu sản phẩm + chu kỳ + hệ sinh thái**. Lợi thế của Hàn Quốc không nằm ở một nhà máy đơn lẻ mà ở hệ thống sản xuất–kỹ thuật tích lũy qua nhiều thập niên.
 
 ```text
-R&D / Process
+R&D / Quy trình
       ↓
-Yield + Product capability
+Yield + năng lực sản phẩm
       ↓
-Customer qualification
+Chứng nhận khách hàng
       ↓
-Volume / ASP / Mix
+Sản lượng / ASP / cơ cấu
       ↓
-Cash flow
+Dòng tiền
       ↓
-Next-generation capex
+CAPEX thế hệ tiếp theo
       ↓
-Learning loop repeats
+Vòng học lặp lại
 ```
 
-## Common misconceptions
+## Những nhầm lẫn thường gặp
 
-**“AI boom làm memory hết cycle.”** Sai. Structural demand tăng nhưng supply response/capex vẫn tạo cycle.
+**“AI boom làm bộ nhớ hết chu kỳ.”** Sai. Nhu cầu cấu trúc tăng nhưng phản ứng cung và CAPEX vẫn tạo chu kỳ.
 
-**“Capex lớn là bullish.”** Không nếu future return thấp hoặc overcapacity.
+**“CAPEX lớn là tích cực.”** Không nếu lợi suất tương lai thấp hoặc gây dư cung.
 
-**“Advanced node nhỏ hơn luôn tốt hơn.”** Không; yield/cost/PPA/use case matter.
+**“Node nhỏ hơn luôn tốt hơn.”** Không; yield, chi phí, PPA và use case đều quan trọng.
 
-**“Semiconductor company nào cũng hưởng AI như nhau.”** Sai. Node/value-chain exposure khác nhau.
+**“Công ty bán dẫn nào cũng hưởng AI như nhau.”** Sai. Vị trí trong chuỗi giá trị khác nhau.
 
-**“Self-sufficiency 100% là resilience tối ưu.”** Không nhất thiết. Diversification và trusted alternatives thường efficient hơn.
+**“Tự cung tự cấp 100% là chống chịu tối ưu.”** Không nhất thiết. Đa dạng hóa và phương án thay thế đáng tin cậy thường hiệu quả hơn.
 
-**“Revenue tăng nghĩa technology lead tăng.”** Không; ASP/FX/cycle có thể giải thích growth.
+**“Doanh thu tăng nghĩa vị trí công nghệ dẫn đầu hơn.”** Không; ASP, FX và chu kỳ có thể giải thích tăng trưởng.
 
-## Connections
+## Liên kết
 
 Đọc cùng [`02_trade_export_and_global_value_chains.md`](./02_trade_export_and_global_value_chains.md), [`06_sme_mid_sized_and_subcontracting_ecosystem.md`](./06_sme_mid_sized_and_subcontracting_ecosystem.md), [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md), [`21_economy_to_company_transmission.md`](./21_economy_to_company_transmission.md), [`24_regional_clusters_and_industrial_geography.md`](./24_regional_clusters_and_industrial_geography.md), [`29_innovation_rnd_education_and_human_capital.md`](./29_innovation_rnd_education_and_human_capital.md) và [`30_energy_security_power_market_and_transition.md`](./30_energy_security_power_market_and_transition.md).
