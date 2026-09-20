@@ -1,149 +1,127 @@
-# 1945–1961: giải phóng, chiến tranh, cải cách ruộng đất và sự hình thành nền kinh tế hậu chiến (Reconstruction & Early Firms / 해방·전쟁·전후 복구)
+# 1945–1961: giải phóng, chiến tranh, cải cách ruộng đất và nền kinh tế hậu chiến (Reconstruction & Early Firms / 해방·전쟁·전후 복구)
 
-Giai đoạn 1945–1961 thường bị xem như một đoạn “chuyển tiếp” trước khi Korea cất cánh vào thập niên 1960. Cách nhìn đó bỏ qua một điều quan trọng: đây là lúc South Korea phải xây lại gần như toàn bộ **institutional operating system** của một nền kinh tế — quyền sở hữu, tiền tệ, đất đai, ngân hàng, trade, thuế, sản xuất, logistics và labor market — trong điều kiện division và war.
+Giai đoạn 1945–1961 thường bị xem như một đoạn chuyển tiếp trước khi Hàn Quốc tăng trưởng nhanh trong thập niên 1960. Cách nhìn đó bỏ qua một điều quan trọng: đây là lúc Hàn Quốc phải xây lại gần như toàn bộ **hệ điều hành thể chế của nền kinh tế (institutional operating system)**—quyền sở hữu, tiền tệ, đất đai, ngân hàng, thương mại, thuế, sản xuất, logistics và thị trường lao động—trong điều kiện chia cắt và chiến tranh.
 
-Nếu thập niên 1960 là thời kỳ export engine được bật lên, thì 1945–1961 là lúc engine block, fuel line và transmission được lắp lại.
+Nếu thập niên 1960 là lúc động cơ xuất khẩu được khởi động, thì giai đoạn 1945–1961 là lúc các bộ phận nền tảng của động cơ, đường nhiên liệu và hệ truyền động được lắp lại.
 
-## Liberation shock: asset tồn tại nhưng ownership thay đổi
+## Cú sốc sau giải phóng: tài sản còn nhưng quyền sở hữu thay đổi
 
-Sau 1945, nhiều assets từng thuộc Japanese individuals hoặc companies không còn owner cũ. Câu hỏi “ai được quyền sử dụng, quản lý, mua hoặc bán tài sản này?” trở thành câu hỏi kinh tế trung tâm.
+Sau 1945, nhiều tài sản từng thuộc cá nhân hoặc doanh nghiệp Nhật Bản không còn chủ sở hữu cũ. Câu hỏi “ai có quyền sử dụng, quản lý, mua hoặc bán tài sản này?” trở thành một vấn đề kinh tế trung tâm.
 
-**Property rights / 재산권** quan trọng vì investment là quyết định bỏ resource hiện tại để nhận future return. Nếu owner không chắc mình có giữ được future return, incentive bảo trì và capex yếu đi. Vì vậy việc xử lý former Japanese assets ảnh hưởng trực tiếp đến capital formation và cấu trúc doanh nhân hậu chiến.
+**Quyền tài sản (property rights / 재산권)** quan trọng vì đầu tư là quyết định hy sinh nguồn lực hiện tại để nhận lợi ích trong tương lai. Nếu chủ sở hữu không chắc mình có giữ được lợi ích tương lai, động lực bảo trì và đầu tư vốn (CAPEX) sẽ yếu đi. Vì vậy cách xử lý các tài sản cũ của Nhật ảnh hưởng trực tiếp đến hình thành vốn và cấu trúc doanh nhân hậu chiến.
 
-Một factory không thể được coi là productive chỉ vì building còn đứng đó. Firm cần legal control, working capital, imported inputs, managers, electricity và customers. Chính vì vậy post-liberation economy phải tái thiết **institutional coordination**, không chỉ xây lại physical assets.
+Một nhà máy không thể tạo sản lượng chỉ vì tòa nhà còn tồn tại. Doanh nghiệp cần quyền kiểm soát pháp lý, vốn lưu động, nguyên liệu nhập khẩu, người quản lý, điện và khách hàng. Nền kinh tế sau giải phóng vì thế phải tái thiết **khả năng phối hợp thể chế**, không chỉ sửa chữa tài sản vật chất.
 
-## Land reform: thay đổi asset distribution và rural incentives
+## Cải cách ruộng đất: thay đổi phân phối tài sản và động lực ở nông thôn
 
-Cải cách ruộng đất (Land Reform / 농지개혁) cuối 1940s–đầu 1950s làm suy yếu mạnh old landlord–tenant structure. Cơ chế kinh tế không nên được hiểu đơn giản là “chia đất rồi mọi người giàu lên”. Tác động sâu hơn nằm ở distribution of property rights và political economy.
+**Cải cách ruộng đất (land reform / 농지개혁)** cuối thập niên 1940 và đầu 1950 làm suy yếu mạnh cấu trúc địa chủ–tá điền cũ. Không nên hiểu cơ chế này đơn giản là “chia đất rồi nông dân giàu lên”. Tác động sâu hơn nằm ở việc thay đổi quyền tài sản và tương quan quyền lực kinh tế.
 
-Khi cultivator sở hữu nhiều hơn phần land mình canh tác, incentive đầu tư và giữ output có thể tăng. Đồng thời, concentration of landed power giảm, tạo một social structure khác với nhiều developing economies nơi landed elites tiếp tục kiểm soát rural capital và politics.
+Khi người trực tiếp canh tác sở hữu phần đất lớn hơn, họ có động lực giữ lại kết quả lao động và đầu tư vào đất nhiều hơn. Đồng thời, mức tập trung quyền lực của tầng lớp địa chủ giảm. Điều này tạo một cấu trúc xã hội khác với nhiều nền kinh tế đang phát triển nơi tầng lớp sở hữu đất tiếp tục kiểm soát vốn nông thôn và chính trị trong thời gian dài.
 
-Land reform không trực tiếp tạo chaebol. Nhưng nó góp phần tạo environment nơi industrialization sau này diễn ra trên một nền tảng asset distribution và rural social order khác. Urban migration và education expansion cũng xảy ra trong context đó.
+Cải cách ruộng đất không trực tiếp tạo ra chaebol. Nhưng nó góp phần tạo môi trường xã hội mà công nghiệp hóa sau này diễn ra trong đó. Di cư lên thành phố và mở rộng giáo dục cũng diễn ra trên nền cấu trúc mới này.
 
-## Korean War: destruction của capital stock và network
+## Chiến tranh Triều Tiên: phá hủy cả tài sản lẫn mạng lưới
 
-Korean War 1950–1953 phá hủy housing, roads, bridges, factories và commercial networks, đồng thời tạo refugee flows và population displacement lớn.
+Chiến tranh 1950–1953 phá hủy nhà ở, đường, cầu, nhà máy và mạng lưới thương mại, đồng thời tạo dòng người tị nạn và di chuyển dân cư rất lớn.
 
-Để hiểu economic damage, cần phân biệt **stock** và **flow**. Factory, machinery và housing là capital stock; annual production và income là flow. Khi stock bị phá hủy, future flow giảm cho tới khi capacity được rebuilt.
+Để hiểu thiệt hại kinh tế, cần phân biệt **tồn lượng (stock)** và **dòng (flow)**. Nhà máy, máy móc và nhà ở là vốn tồn lượng; sản lượng và thu nhập hằng năm là dòng. Khi vốn tồn lượng bị phá hủy, khả năng tạo dòng thu nhập tương lai giảm cho tới khi năng lực được xây lại.
 
-Nhưng chiến tranh còn phá **relationships**. Supplier mất customer, worker mất workplace, company mất records và banks mất borrower information. Đây là một dạng destruction khó nhìn hơn physical bomb damage nhưng ảnh hưởng productivity rất lớn.
+Nhưng chiến tranh còn phá hủy các mối quan hệ. Nhà cung cấp mất khách hàng, người lao động mất nơi làm việc, doanh nghiệp mất hồ sơ và ngân hàng mất thông tin về người vay. Đây là loại thiệt hại khó nhìn hơn bom đạn phá nhà máy nhưng ảnh hưởng mạnh tới năng suất.
 
-> Mental model: war làm mất cả machine lẫn organizational memory.
+> **Mental Model:** chiến tranh làm mất cả máy móc lẫn trí nhớ tổ chức.
 
-## Reconstruction demand: destruction cũng tạo một loại market mới
+## Nhu cầu tái thiết tạo ra một thị trường mới
 
-Sau war, demand cho cement, construction, transportation, food, textiles, housing và basic consumer goods tăng mạnh. Firms có khả năng procurement và project execution có thể lớn nhanh trong environment này.
+Sau chiến tranh, nhu cầu xi măng, xây dựng, vận tải, thực phẩm, dệt may, nhà ở và hàng tiêu dùng cơ bản tăng mạnh. Doanh nghiệp có khả năng mua sắm vật tư, tổ chức nhân lực và thực hiện dự án có thể lớn nhanh trong môi trường này.
 
-Hyundai Construction là example quan trọng. Capability về managing labor, materials, deadlines và large projects được tích lũy trong reconstruction/construction trước khi Hyundai mở rộng sâu sang automobile và shipbuilding.
+Hyundai Construction là ví dụ quan trọng. Năng lực quản lý lao động, vật liệu, thời hạn và dự án quy mô lớn được tích lũy trong xây dựng trước khi Hyundai mở rộng sâu sang ô tô và đóng tàu.
 
-Điều này cho thấy một idea xuyên suốt lịch sử Korean groups: **organizational capability precedes industry diversification**. Group không nhất thiết có technology mới ngay từ đầu; nó có thể mang capability về execution sang sector mới rồi học technology dần.
+Điều này cho thấy một quy luật xuyên suốt lịch sử các tập đoàn Hàn Quốc: **năng lực tổ chức có thể xuất hiện trước khi doanh nghiệp sở hữu công nghệ của ngành mới**. Tập đoàn có thể mang năng lực thực thi dự án sang một ngành khác rồi học công nghệ dần.
 
-## Aid economy: vì sao foreign exchange là bottleneck
+## Kinh tế viện trợ và hạn chế ngoại tệ
 
-Trong 1950s, South Korea phụ thuộc mạnh vào foreign aid, đặc biệt từ United States. Aid cung cấp food, raw materials, capital goods và — quan trọng nhất về macro — external purchasing power.
+Trong thập niên 1950, Hàn Quốc phụ thuộc mạnh vào viện trợ nước ngoài, đặc biệt từ Hoa Kỳ. Viện trợ cung cấp thực phẩm, nguyên liệu, tư liệu sản xuất và quan trọng hơn về mặt kinh tế vĩ mô là sức mua bằng ngoại tệ.
 
-Một country có thể muốn industrialize nhưng không thể import machinery, oil, fertilizer hoặc industrial inputs nếu không có dollars. Đây là **foreign-exchange constraint / 외환제약**.
+Một quốc gia có thể muốn công nghiệp hóa nhưng không thể nhập máy móc, dầu, phân bón hoặc nguyên liệu công nghiệp nếu thiếu USD. Đây là **hạn chế ngoại tệ (foreign-exchange constraint / 외환제약)**.
 
-Ta có thể hình dung đơn giản:
+Có thể hình dung:
 
 \[
-Import\ Capacity \approx Export\ Earnings + Aid + Foreign\ Borrowing + Other\ FX\ Inflows
+Khả\ năng\ nhập\ khẩu \approx Thu\ ngoại\ tệ\ từ\ xuất\ khẩu + Viện\ trợ + Vay\ nước\ ngoài + Dòng\ ngoại\ tệ\ khác
 \]
 
-Trong 1950s, export earnings còn nhỏ nên aid giữ vai trò lớn. Đây chính là lý do export trong 1960s không chỉ là một policy fashionable; nó là cách thay aid bằng một source foreign exchange bền vững hơn.
+Khi xuất khẩu còn nhỏ, viện trợ trở thành nguồn tài trợ nhập khẩu quan trọng. Nhưng phụ thuộc viện trợ không thể là mô hình tăng trưởng dài hạn. Điều này giải thích vì sao việc tạo ngoại tệ thông qua xuất khẩu trở thành mục tiêu trung tâm trong thập niên sau.
 
-## Aid tạo cả relief lẫn distortion
+## Nhập khẩu thay thế: hợp lý trong ngắn hạn nhưng có giới hạn
 
-Aid giúp economy survive và rebuild, nhưng nó cũng thay relative prices và tạo rents quanh allocation. Nếu imported materials hoặc foreign currency được phân bổ qua administrative channels, access to permits và networks có thể trở thành competitive advantage.
+Trong nền kinh tế thiếu hàng tiêu dùng và thiếu ngoại tệ, sản xuất trong nước để thay hàng nhập khẩu có logic rõ ràng. Dệt may, thực phẩm chế biến và nhiều ngành nhẹ có thể phát triển từ nhu cầu nội địa.
 
-Vì vậy aid economy tạo một bài học institutional quan trọng: khi resource khan hiếm được phân bổ hành chính, **who gets access** có thể quan trọng không kém **who is productive**. Đây là một reason Korea sau đó chú trọng hơn vào export performance như một measurable criterion để discipline firms.
+Nhưng **thay thế nhập khẩu (import substitution / 수입대체)** gặp một giới hạn: để sản xuất trong nước, doanh nghiệp vẫn thường phải nhập máy móc, nhiên liệu hoặc nguyên liệu. Nếu xuất khẩu không tăng, nền kinh tế vẫn thiếu ngoại tệ.
 
-## Import substitution: học sản xuất những thứ trước đây phải nhập
-
-Thập niên 1950 chứng kiến growth của **import-substituting industries / 수입대체산업**. Nếu Korea đang nhập sugar, textiles, household chemicals hoặc processed food, domestic production có thể tiết kiệm foreign exchange và tạo industrial experience.
-
-CheilJedang, tiền thân CJ, bắt đầu với sugar năm 1953. Lucky Chemical, predecessor của LG, bắt đầu với consumer chemical products; GoldStar bước vào electronics. Sunkyong Textiles, lineage của SK, bắt đầu từ textiles.
-
-Các firms này không bắt đầu bằng AI, semiconductor hay media platform. Họ học **mass production, procurement, quality, distribution và cash-cycle management** từ basic goods.
-
-Đây là first step của industrial upgrading:
+Đây là vòng lặp:
 
 ```text
-Imported basic goods
-        ↓
-Domestic substitution
-        ↓
-Stable mass production
-        ↓
-Process learning
-        ↓
-Export capability / new industries
+Muốn sản xuất nhiều hơn
+→ cần nhập máy móc và nguyên liệu
+→ cần ngoại tệ
+→ xuất khẩu còn nhỏ
+→ lại phụ thuộc viện trợ hoặc vay bên ngoài
 ```
 
-## Inflation, money và macro instability
+Chiến lược hướng xuất khẩu sau này là một cách phá vòng lặp này.
 
-Postwar economy không chỉ thiếu factories; nó còn gặp monetary instability và inflation pressure. Khi goods khan hiếm nhưng money supply và fiscal demand tăng, prices có thể tăng nhanh. Inflation làm accounting, savings và long-term contracting khó hơn.
+## Lạm phát, tiền tệ và lý do ổn định vĩ mô quan trọng
 
-Đối với doanh nghiệp, high inflation có hai mặt. Inventory holder có thể thấy nominal profits, nhưng working-capital requirement cũng tăng. Price volatility làm planning khó và credit relationship yếu đi.
+Chiến tranh và thiếu hụt hàng hóa gây áp lực lớn lên giá cả. Khi cung hàng thấp nhưng tiền và nhu cầu tăng, lạm phát có thể làm tín hiệu giá trở nên khó đọc và làm giảm giá trị thực của tiết kiệm.
 
-Đây là reminder rằng industrialization cần **monetary and fiscal stability** đủ để firms có thể plan beyond survival horizon.
+Một nền kinh tế muốn tích lũy vốn cần hộ gia đình sẵn sàng tiết kiệm, ngân hàng có khả năng trung gian vốn và doanh nghiệp có thể lập kế hoạch chi phí. Nếu giá cả biến động quá mạnh, hợp đồng dài hạn và quyết định đầu tư trở nên khó khăn hơn.
 
-## Banking system và credit allocation
+Vì vậy ổn định tiền tệ không phải vấn đề tách khỏi công nghiệp hóa. Nó là điều kiện để tài chính và đầu tư dài hạn hoạt động.
 
-Capital market hiện đại chưa phát triển, nên banks và policy-linked finance giữ vai trò đặc biệt. Credit không chỉ là “tiền cho vay”; nó là quyền được kéo future resources vào investment hiện tại.
+## Ngân hàng và phân bổ tín dụng
 
-Khi domestic savings thấp, allocation của scarce credit ảnh hưởng mạnh company survival và growth. Firms có collateral, political/administrative access hoặc performance tốt có advantage lớn hơn.
+Thị trường vốn Hàn Quốc thời kỳ này còn nông. Doanh nghiệp không thể dễ dàng phát hành trái phiếu hoặc cổ phiếu quy mô lớn như hiện nay. Ngân hàng vì thế giữ vai trò quan trọng trong việc chuyển tiết kiệm và nguồn vốn chính sách thành tín dụng cho doanh nghiệp.
 
-Pattern này phát triển mạnh hơn trong 1960s directed-credit system. Vì vậy 1950s là nơi ta thấy early connection giữa **state, banks và firms** hình thành.
+**Phân bổ tín dụng (credit allocation / 신용배분)** quyết định doanh nghiệp nào có thể mua máy móc, tài trợ tồn kho hoặc mở rộng nhà máy. Khi vốn khan hiếm, giá của vốn không phải yếu tố duy nhất; quyền tiếp cận vốn cũng quan trọng.
 
-## Education và human-capital foundation
+Đây là nền để hiểu cơ chế **tín dụng định hướng (directed credit / 정책금융·지시금융)** mạnh hơn trong thập niên 1960–1970.
 
-South Korea sau war vẫn nghèo về physical capital, nhưng literacy và education expansion dần tạo pool workers có thể học industrial skills. Human capital không lập tức biến thành productivity nếu thiếu factories, nhưng khi investment tăng trong 1960s–1970s, workforce có basic education trở thành complement quan trọng.
+## Sự hình thành của các doanh nghiệp thời kỳ đầu
 
-Đây là một point thường bị bỏ qua khi giải thích growth: machine imported từ abroad có thể được mua trong vài tháng; organizational skill và educated workforce cần nhiều năm tích lũy.
+Nhiều doanh nghiệp sau này trở thành tập đoàn lớn bắt đầu hoặc mở rộng mạnh trong giai đoạn trước và sau chiến tranh. Samsung có nguồn gốc thương mại từ năm 1938 rồi mở rộng sang sản xuất. Lucky Chemical—tiền thân của LG—được thành lập năm 1947. Hyundai phát triển năng lực xây dựng trong thời kỳ tái thiết. SK có nguồn gốc từ ngành dệt với Sunkyong Textiles trong thập niên 1950.
 
-## Early corporate genealogies: firms không lớn lên theo một route duy nhất
+Điểm chung không phải tất cả đều có công nghệ tiên tiến ngay từ đầu. Họ tích lũy các năng lực như mua hàng, quản lý dòng tiền, thực thi dự án, tổ chức lao động, xây quan hệ với ngân hàng và chính phủ, sau đó dùng các năng lực đó để bước sang ngành mới.
 
-Samsung có trading origin từ 1938 rồi tái định hình sau war. Hyundai xây project-execution capability qua construction. LG đi từ chemicals sang electronics. SK đi từ textile sang synthetic fiber và petrochemical. CJ đi từ food processing sang broader consumer/bio/content businesses sau nhiều thập niên.
+## Doanh nghiệp lớn lên nhờ cả thị trường lẫn thể chế
 
-Điều common không phải founding industry, mà là ability **reinvest, learn và reallocate capital** khi economy đổi stage.
+Không nên kể lịch sử theo hai cực “chính phủ tạo ra chaebol” hoặc “doanh nhân tự làm tất cả”. Thực tế là tương tác giữa nhà nước, ngân hàng, doanh nghiệp, viện trợ, nhu cầu thị trường và điều kiện quốc tế.
 
-Xem [08_company_genealogies](./08_company_genealogies.md) để theo dõi các lineages này dài hơn.
+Doanh nghiệp phải bán được hàng, quản lý chi phí và tồn tại. Nhưng khả năng tiếp cận ngoại tệ, giấy phép nhập khẩu, tín dụng và hợp đồng công cũng có thể ảnh hưởng lớn đến tốc độ tích lũy vốn.
 
-## Vì sao 1950s model không đủ để tiếp tục tăng trưởng?
+Mental model phù hợp hơn là:
 
-Đến cuối 1950s, constraints vẫn rõ:
+```text
+Năng lực doanh nghiệp
+× Cơ hội thị trường
+× Tiếp cận vốn và ngoại tệ
+× Thể chế
+→ tốc độ tích lũy
+```
 
-- export base nhỏ;
-- aid dependence lớn;
-- productivity thấp;
-- domestic market hạn chế;
-- foreign exchange thiếu;
-- investment financing còn yếu;
-- industrial structure tập trung basic/light manufacturing.
+Nếu một yếu tố gần bằng không, tăng trưởng bị hạn chế mạnh.
 
-Import substitution có thể tiết kiệm FX, nhưng nếu domestic demand nhỏ, firm nhanh chóng chạm ceiling. Muốn scale vượt ceiling này, Korea phải bán ra external markets.
+## Giáo dục và vốn nhân lực
 
-Đó là bridge logic sang 1960s.
+Hàn Quốc hậu chiến nghèo về vốn vật chất nhưng có động lực mạnh mở rộng giáo dục. **Vốn nhân lực (human capital / 인적자본)** không tạo ra nhà máy ngay lập tức, nhưng làm tăng khả năng tiếp thu công nghệ, quản lý quy trình và di chuyển lao động từ nông nghiệp sang công nghiệp.
 
-## Mental Model
+Khi nền kinh tế chuyển từ hàng tiêu dùng đơn giản sang máy móc, hóa chất, ô tô và điện tử, giá trị của kỹ năng kỹ thuật tăng nhanh. Vì vậy giáo dục trong thập niên 1950 không nên xem là câu chuyện xã hội tách khỏi công nghiệp hóa sau này.
 
-> 1945–1961 là giai đoạn South Korea chuyển từ **disrupted post-colonial economy** sang một **bootstrapped postwar market economy**. Aid cung cấp external lifeline; land reform và asset transfer thay property structure; reconstruction tạo firms và capabilities; import substitution dạy mass production; nhưng FX shortage vẫn là binding constraint.
+## Vì sao 1961 là một điểm chuyển quan trọng
 
-## Common misconceptions
+Đến đầu thập niên 1960, Hàn Quốc vẫn có thu nhập thấp, xuất khẩu nhỏ, phụ thuộc nhập khẩu và viện trợ. Nhưng một số nền tảng đã khác năm 1945: quyền sở hữu đất đã thay đổi, hệ thống nhà nước và ngân hàng đã được xây lại, một số doanh nghiệp đã tích lũy năng lực tổ chức, giáo dục mở rộng và nhu cầu tái thiết tạo kinh nghiệm thực thi dự án.
 
-“1950s không có growth story nên không quan trọng” là sai. Nhiều institution và corporate capabilities cần cho later industrialization được hình thành trong giai đoạn này.
+Vấn đề trung tâm lúc này là làm sao chuyển từ nền kinh tế sống dựa nhiều vào viện trợ và nhu cầu nội địa sang nền kinh tế có thể tự tạo ngoại tệ và tích lũy công nghệ.
 
-“Aid tự động tạo growth” cũng sai. Aid chỉ trở thành productive capacity khi economy có institution và firms biến imported resources thành sustained output.
+Chương tiếp theo, [thập niên 1960: công nghiệp hóa hướng xuất khẩu](./02_1960s_export_industrialization_and_business_formation.md), giải thích cách xuất khẩu, tỷ giá, tín dụng, kế hoạch phát triển và kỷ luật từ thị trường quốc tế được kết nối thành một hệ thống tăng trưởng mới.
 
-“Land reform trực tiếp tạo industrial champions” là quá đơn giản. Nó thay asset distribution và social structure; industrial growth vẫn cần finance, technology, education, trade và corporate capability.
-
-## Connections
-
-Tiếp theo đọc [02_1960s_export_industrialization_and_business_formation](./02_1960s_export_industrialization_and_business_formation.md). Để theo dõi individual groups từ basic goods sang advanced industries, đọc [08_company_genealogies](./08_company_genealogies.md).
-
-### Nguồn nền
-
-- KDI, *The Korean Economy: Six Decades of Growth and Development*.
-- KDI, *The Role of the Foreign Sector and Aid in Korea's Development*.
-- Official histories của LG, SK, CJ, Hyundai và Samsung, dùng như company-level evidence bên cạnh macro history.
+> **Mental Model cuối:** 1945–1961 không phải khoảng trống trước “phép màu Hàn Quốc”. Đây là giai đoạn tái xây quyền sở hữu, nhà nước, ngân hàng, vốn nhân lực và năng lực doanh nghiệp trong điều kiện chiến tranh và thiếu ngoại tệ. Những thành phần đó trở thành nền vật chất và thể chế cho chiến lược xuất khẩu sau này.
