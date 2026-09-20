@@ -148,6 +148,42 @@ Nền tảng số biến văn hoá ăn uống thành bài toán tối ưu: thờ
 
 Văn hoá ẩm thực hiện đại vì vậy không chỉ nằm trong bếp mà còn trong thuật toán xếp hạng.
 
+## Ăn chay, halal và dị ứng: khi “một bữa ăn mặc định” không còn đủ
+
+Xã hội Hàn Quốc ngày càng có nhiều người nước ngoài cư trú, khách du lịch, gia đình đa văn hoá và người có lựa chọn ăn uống khác nhau. Điều đó làm một giả định cũ — “cứ gọi món quen thuộc là cả bàn ăn được” — trở nên kém an toàn hơn.
+
+**Ăn chay (채식 / vegetarian diet)** không chỉ có một mức. Một người có thể tránh thịt đỏ nhưng ăn cá; người khác tránh toàn bộ sản phẩm động vật. Vì vậy câu hỏi `고기 안 드세요?` chưa đủ để xác định nhu cầu. Cần hỏi thành phần cụ thể, kể cả nước dùng, nước mắm, mắm tôm hoặc nguyên liệu ẩn trong sốt.
+
+**Thực phẩm halal (할랄 / halal food)** liên quan các quy tắc tôn giáo về nguyên liệu và quy trình. Một món “không có thịt heo nhìn thấy” chưa chắc đã phù hợp nếu nước dùng, gia vị hoặc cách chế biến có thành phần không phù hợp. Khi nhà hàng gắn nhãn halal, điều quan trọng là hiểu đó là mức cam kết nào và có chứng nhận hay quy trình tách biệt ra sao.
+
+**Dị ứng thực phẩm (식품 알레르기 / food allergy)** là vấn đề y khoa chứ không phải sở thích. Với dị ứng nặng, lượng nhỏ hoặc nhiễm chéo cũng có thể quan trọng. Vì vậy “gắp phần có tôm ra là được” không phải cách xử lý an toàn cho mọi người.
+
+Có thể tách ba lớp:
+
+```text
+sở thích cá nhân
+≠ hạn chế tôn giáo
+≠ chống chỉ định y khoa / dị ứng
+```
+
+Ba trường hợp đều đáng được tôn trọng, nhưng mức rủi ro và cách xác nhận khác nhau.
+
+## 급식 và bữa ăn tập thể: tiêu chuẩn hoá gặp đa dạng
+
+Bữa ăn ở trường, công ty, bệnh viện hoặc quân đội cần phục vụ số đông, nên tiêu chuẩn hoá giúp giảm chi phí. Nhưng khi người dùng đa dạng hơn, hệ thống phải tăng khả năng hiển thị thành phần, lựa chọn thay thế và quy trình xử lý dị ứng.
+
+Đây là bài toán thiết kế dịch vụ: càng tiêu chuẩn hoá, hiệu suất càng cao; càng cá nhân hoá, khả năng đáp ứng nhu cầu riêng càng tốt nhưng chi phí phối hợp tăng. Văn hoá ăn uống hiện đại phải thương lượng giữa hai phía này.
+
+Trong nhóm quốc tế, một câu đơn giản như `못 드시는 음식 있으세요?` — “có món nào anh/chị không ăn được không?” — có giá trị lớn vì nó biến giả định ngầm thành thông tin rõ ràng trước khi đặt món.
+
+## Thị trường nguyên liệu quốc tế và ẩm thực lai
+
+Khi di cư và thương mại mở rộng, siêu thị và khu phố có thêm nguyên liệu Đông Nam Á, Nam Á, Trung Đông hoặc Trung Á. Nhà hàng Việt, Thái, Ấn, Trung Á và nhiều nền ẩm thực khác không chỉ phục vụ cộng đồng di cư; chúng cũng được người Hàn tiêu dùng và điều chỉnh theo khẩu vị địa phương.
+
+Quá trình này tạo **ẩm thực lai (hybrid cuisine)**. Một món có thể dùng nguyên liệu hoặc kỹ thuật ngoại nhập nhưng được định giá, trình bày và tiêu dùng theo nhịp sống Hàn Quốc. Ngược lại, món Hàn ở nước ngoài cũng thay đổi vì nguồn nguyên liệu, quy định và khẩu vị sở tại.
+
+Vì vậy “ẩm thực Hàn Quốc” không phải một danh sách đóng. Nó là một hệ thống tiếp tục hấp thụ nguyên liệu, công nghệ bảo quản, nền tảng giao hàng và dân số mới.
+
 ## Liên hệ kiến thức: lên men như hệ sinh thái được kiểm soát
 
 Một hũ lên men là **vi hệ sinh thái (micro-ecosystem)**. Ta không “tạo” từng phân tử hương vị trực tiếp; ta điều chỉnh **điều kiện biên (boundary conditions)** — muối, nhiệt độ, oxy, cơ chất — để cộng đồng vi sinh tự vận hành.
@@ -156,7 +192,7 @@ Một hũ lên men là **vi hệ sinh thái (micro-ecosystem)**. Ta không “t�
 
 ## Mô hình tư duy (Mental Model)
 
-> Ẩm thực Hàn Quốc là kết quả của bốn tầng: **sinh thái quyết định nguyên liệu; công nghệ bảo quản biến nguyên liệu qua mùa; giao thức xã hội biến ăn uống thành quan hệ; nền tảng/logistics hiện đại biến cách món ăn được tìm, gọi và giao**. Kimchi chỉ hiểu trọn khi nhìn cùng vi sinh vật, mùa đông, lao động gia đình và ký ức vị giác.
+> Ẩm thực Hàn Quốc là kết quả của năm tầng: **sinh thái quyết định nguyên liệu; công nghệ bảo quản biến nguyên liệu qua mùa; giao thức xã hội biến ăn uống thành quan hệ; dân số và di cư làm đa dạng nhu cầu; nền tảng/logistics hiện đại biến cách món ăn được tìm, gọi và giao**. Kimchi chỉ hiểu trọn khi nhìn cùng vi sinh vật, mùa đông, lao động gia đình và ký ức vị giác.
 
 ## Hiểu lầm phổ biến (Common Misconceptions)
 
@@ -169,6 +205,8 @@ Một hũ lên men là **vi hệ sinh thái (micro-ecosystem)**. Ta không “t�
 “Người Hàn bắt buộc phải uống rượu để hoà nhập” không phải chuẩn mực nên coi là mặc định; bối cảnh văn hoá không xoá quyền từ chối.
 
 “Banchan luôn lấy thêm miễn phí” cũng không phải quy tắc phổ quát; phụ thuộc nhà hàng và món.
+
+“Không có thịt nhìn thấy thì chắc chắn là món chay hoặc halal” là suy luận không an toàn vì nước dùng, sốt và quy trình chế biến cũng quan trọng.
 
 ## Nguồn tham khảo
 
