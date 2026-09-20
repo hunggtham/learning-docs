@@ -16,6 +16,8 @@ Lĩnh vực này chuyển từ việc “biết đọc báo cáo” sang khả n
 
 [06_GOVERNANCE_CAPITAL_ALLOCATION_MA_AND_MANAGEMENT_QUALITY.md](./06_GOVERNANCE_CAPITAL_ALLOCATION_MA_AND_MANAGEMENT_QUALITY.md) hoàn thiện phân tích doanh nghiệp bằng cách tách năng lực vận hành khỏi năng lực phân bổ vốn: ROIC tăng thêm, capex duy trì/tăng trưởng, đầu tư R&D/marketing, cổ tức, mua lại cổ phiếu, pha loãng/SBC, quản lý nợ và đáo hạn, M&A, synergy, goodwill, roll-up, thoái vốn, spin-off, cấu trúc hội đồng quản trị, cổ đông kiểm soát, giao dịch bên liên quan, cơ chế khuyến khích và bảng đánh giá phân bổ vốn trên mỗi cổ phiếu.
 
+[07_INTEGRATED_COMPANY_MODELING_AND_THESIS_LAB.md](./07_INTEGRATED_COMPANY_MODELING_AND_THESIS_LAB.md) là lớp học sâu nối toàn bộ domain thành một quy trình: cây động lực doanh thu, cầu nối biên lợi nhuận, vốn lưu động, lịch nợ, mô hình ba báo cáo, ROIC tăng thêm, dư địa tái đầu tư, bằng chứng moat, reverse DCF, kịch bản theo driver và quản trị luận điểm đầu tư.
+
 ## Sau lĩnh vực này bạn cần làm được gì?
 
 Bạn cần có khả năng đọc ba báo cáo tài chính liên kết với nhau, phân biệt kết quả kế toán và kết quả kinh tế, kiểm tra lợi nhuận có chuyển thành tiền mặt bền vững hay chỉ được hỗ trợ bởi khoản dồn tích, vốn lưu động hoặc thay đổi ước tính; lập bản đồ chuỗi giá trị và bể lợi nhuận; xác định lợi thế cạnh tranh bằng bằng chứng; chọn đúng KPI theo mô hình kinh doanh; phân biệt tăng trưởng cấu trúc với tăng trưởng chu kỳ; xây mô hình ba báo cáo theo động lực cho kịch bản cơ sở/tích cực/tiêu cực; đọc định giá dưới góc kỳ vọng ngầm và đánh giá liệu ban lãnh đạo có biến chất lượng doanh nghiệp thành giá trị trên mỗi cổ phiếu hay không.
@@ -23,5 +25,7 @@ Bạn cần có khả năng đọc ba báo cáo tài chính liên kết với nh
 ## Bài tập tích hợp
 
 Đọc [Chu kỳ bán dẫn Hàn Quốc](../07_integrated_case_studies/03_SEMICONDUCTOR_CYCLE_KOREA_CASE.md) để luyện cây động lực, tồn kho/ASP/công suất sử dụng, điều chỉnh dự báo lợi nhuận, định giá chuẩn hóa và phân bổ vốn. Đọc [Chu kỳ bất động sản–ngân hàng Việt Nam](../07_integrated_case_studies/04_VIETNAM_PROPERTY_BANK_CREDIT_CASE.md) để luyện khả năng sống sót của bảng cân đối, tái cấp vốn, chất lượng kế toán, quản trị và định giá theo ngành.
+
+Sau đó hoàn thành **Module 3 — Company Analysis** trong [Advanced Practice Workbook](../ADVANCED_PRACTICE_WORKBOOK.md). Đầu ra tối thiểu phải gồm mô hình theo driver, `bear/base/bull`, kiểm tra chất lượng lợi nhuận, reverse DCF và `one_page_thesis.md` có catalyst, invalidation và lịch theo dõi.
 
 Sau đó chuyển sang [04 — Kinh tế học và vĩ mô](../04_economics/README.md).
