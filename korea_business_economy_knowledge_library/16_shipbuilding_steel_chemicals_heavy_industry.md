@@ -1,125 +1,455 @@
-# Đóng tàu, thép, hóa chất và công nghiệp nặng (Heavy Industry / 조선·철강·화학·중공업)
+# Đóng tàu, thép, hóa chất và công nghiệp nặng Hàn Quốc (Heavy Industry / 조선·철강·화학·중공업)
 
-Các ngành công nghiệp nặng cho thấy một business có thể có **order cycle nhiều năm**, large working capital và exposure commodity rất khác consumer business. “Doanh thu quý này” thường phản ánh quyết định đặt hàng từ nhiều quý trước.
+Heavy industry là nơi dễ thấy nhất di sản của **Heavy and Chemical Industry drive / 중화학공업화** thập niên 1970. Steel, shipbuilding, petrochemicals và heavy machinery cần vốn lớn, land/ports/power lớn, engineering sâu và supplier network dày. Vì vậy economics của các ngành này khác xa consumer app hoặc retailer: **order cycle dài, fixed cost lớn, working capital nặng và commodity/input exposure mạnh**.
 
-## Shipbuilding: order book trước revenue
+Điểm quan trọng nhất là time lag. Revenue quý này có thể phản ánh order ký nhiều năm trước; capex hôm nay chỉ tạo capacity vài năm sau. Analyst phải luôn hỏi “flow nào xảy ra lúc nào?”.
 
-Đóng tàu nhận contract trước, sau đó design, procurement và construction kéo dài. Vì vậy **order backlog / 수주잔고** là metric trung tâm. Backlog lớn tạo revenue visibility nhưng profit phụ thuộc contract price và future input/labor cost.
+## Vì sao Korea xây được heavy-industry clusters?
 
-Nếu yard nhận order giá thấp trong down-cycle rồi steel/labor cost tăng, revenue tương lai có thể lớn nhưng margin kém. Ngược lại, high-price order trong up-cycle có thể cải thiện margin nhiều quý sau.
+Heavy industry không chỉ cần một champion company. Nó cần **industrial ecosystem**.
 
-**New order**, **backlog** và **recognized revenue** là ba stock/flow khác nhau, không được trộn.
+Steel mill cần port, ore/coal logistics, power, water và downstream buyers. Shipyard cần deep-water coast, steel plate, engines, electronics, design engineers và subcontractors. Petrochemical complex cần feedstock terminals, pipelines, energy và downstream chemical users.
 
-## Ship type và technology
+Một khi cluster hình thành, **agglomeration economies / 집적경제** xuất hiện: supplier gần hơn, skilled labor dày hơn, maintenance nhanh hơn, knowledge flow tốt hơn.
 
-LNG carrier, container ship, tanker và naval vessel có technology/margin khác nhau. Environmental regulations và fuel transition tạo demand cho higher-spec vessels. Korean yards cạnh tranh không chỉ bằng wage cost mà bằng engineering, delivery quality và high-value ship types.
+Đây là lý do Ulsan, Pohang, Geoje/Changwon trở thành industrial belts chứ không phải random geography.
 
-## Steel
+Xem [`24_regional_clusters_and_industrial_geography.md`](./24_regional_clusters_and_industrial_geography.md).
 
-Steel economics gắn raw material như iron ore/coking coal, energy, utilization và downstream demand. Spread giữa product price và raw-material cost quan trọng hơn chỉ nhìn steel price.
+# Phần I — Shipbuilding / 조선
 
-Construction, auto và shipbuilding tạo downstream demand. Vì vậy một downturn property có thể giảm steel demand ngay cả khi auto ổn.
+## Shipbuilding là project business, không phải inventory business thông thường
 
-## Chemicals
+Shipbuilder thường nhận contract trước rồi design, procure, build và deliver trong nhiều năm.
 
-Petrochemical chain biến feedstock thành intermediate và final materials. **Naphtha cracking**, ethylene, propylene và derivative products có margin theo spread. Capacity expansion trong region có thể gây oversupply dù end demand tăng.
+Ba concepts phải tách:
 
-Specialty chemical khác commodity chemical ở differentiation và pricing power. Do đó “chemical company” là label quá rộng.
+```text
+New Orders / 신규수주
+→ flow hợp đồng mới
 
-## Heavy machinery và defense
+Backlog / 수주잔고
+→ stock công việc chưa thực hiện
 
-Heavy machinery, aerospace/defense và industrial equipment có contract cycle, certification và government/customer concentration riêng. Margin có thể phụ thuộc export mix và maintenance/service revenue.
+Revenue Recognition / 매출인식
+→ flow revenue ghi nhận trong kỳ
+```
 
-## Commodity cycle và working capital
+Backlog lớn cho visibility, nhưng **không đồng nghĩa profit/cash chắc chắn**.
 
-Khi raw material price tăng, inventory value tăng và company cần nhiều cash hơn để giữ cùng quantity. Profit có thể nhìn tốt do inventory gains nhưng cash flow xấu. Đây là lý do phải đọc cash flow cùng income statement.
-
-## Tại sao Ulsan–Pohang–Geoje trở thành industrial belt
-
-Heavy industry cần cảng nước sâu, đất lớn, điện, logistics và supplier density. Vì vậy industrial geography quan trọng hơn nhiều so với software. Ulsan phát triển quanh automotive, shipbuilding và petrochemical; Pohang gắn với steel; Geoje gắn với large shipyards. Khi cluster hình thành, skilled labor và specialized suppliers tập trung quanh anchor firms, làm entry ở nơi khác khó hơn.
-
-## Shipbuilding accounting: ký hợp đồng hôm nay, ghi revenue nhiều năm
-
-Một LNG carrier có thể mất nhiều năm từ contract đến delivery. Order book (수주잔고) là future workload, nhưng không phải cash hay profit đảm bảo. Contract price được khóa trong khi steel, labor và equipment cost có thể thay đổi. Nếu cost estimate tăng, expected margin có thể giảm trước khi tàu giao.
-
-Vì vậy cần theo dõi **new orders, order backlog, order price, delivery schedule và cost revision**. Shipbuilder có order book kỷ lục vẫn có thể tạo cash flow yếu nếu working capital và milestone payments bất lợi.
-
-## Steel: blast furnace economics và spread
-
-Steel profit phụ thuộc spread giữa selling price và raw-material cost như iron ore/coking coal, cộng energy cost và utilization. Blast furnace cần chạy gần capacity tối ưu; demand shock làm fixed cost trên mỗi ton tăng.
-
-Downstream demand từ autos, construction, shipbuilding và machinery tạo cycle. Vì vậy POSCO không thể phân tích chỉ từ steel price; phải map customer industries.
-
-## Petrochemical: naphtha cracking và commodity exposure
-
-Korea có large petrochemical complexes dựa nhiều vào imported feedstock. Naphtha cracker biến feedstock thành ethylene/propylene và derivatives. Profit thường theo **spread** giữa product price và feedstock cost. Khi China tăng capacity lớn, regional supply-demand có thể thay đổi structural, không chỉ cyclical.
-
-Đây là distinction quan trọng: cyclical downturn sẽ recover khi inventory/supply normalize; structural oversupply có thể giữ return thấp nhiều năm.
-
-## Defense và heavy machinery
-
-Defense/aerospace có economics khác commodity heavy industry. Contract dài, qualification barrier cao, government customer lớn và export approval quan trọng. Backlog tạo visibility nhưng political risk và project execution vẫn cao.
-
-Korea gần đây mở rộng defense exports, nhưng analyst vẫn phải tách order announcement khỏi recognized revenue, margin và cash collection.
-
-## Transition risk
-
-Decarbonization tác động steel, chemicals và shipbuilding theo hai hướng: tăng compliance/capex cost nhưng đồng thời tạo market cho green steel, LNG/alternative-fuel ships, hydrogen và carbon-reduction equipment. Incumbent có asset base lớn nên transition vừa là opportunity vừa là stranded-asset risk.
-
-## Mental Model
-
-> Heavy industry được đọc theo **order → production → delivery → cash collection**, với input cost và capacity ở giữa. Time lag dài làm reported earnings thường “nhìn vào quá khứ” nhiều hơn người mới tưởng.
-
-## Common misconceptions
-
-Backlog lớn không đảm bảo profit lớn nếu contract pricing kém hoặc cost overrun.
-
-Commodity price cao không luôn tốt cho producer downstream; phải biết company đứng ở đâu trong chain.
-
-## Connections
-
-Xem [02_trade_export_and_global_value_chains](./02_trade_export_and_global_value_chains.md), [11_banks_finance_and_corporate_funding](./11_banks_finance_and_corporate_funding.md) và [21_economy_to_company_transmission](./21_economy_to_company_transmission.md).
-
-## Shipbuilding: order price hôm nay, cost thực hiện nhiều năm
-
-Ship contract thường fixed/semifixed price trong khi steel plate, labor và equipment cost phát sinh sau. Vì vậy profitability của backlog phụ thuộc quality của orders, không chỉ size.
-
-Một high-price LNG carrier order có margin profile khác bulk carrier. Product mix matter.
-
-## Percentage-of-completion và estimate risk
-
-Long-duration projects recognize revenue theo progress khi accounting criteria đáp ứng. Estimate total project cost sai có thể khiến margin revision lớn về sau.
-
-Analyst nên theo contract asset/liability, provisions và cost-estimate changes.
-
-## Steel spread
-
-Steel margin có thể simplified:
+Một identity useful:
 
 \[
-Spread \approx Steel\ Selling\ Price - Iron\ Ore - Coking\ Coal - Energy - Conversion\ Cost
+Ending\ Backlog = Beginning\ Backlog + New\ Orders - Revenue\ Recognized - Cancellations
 \]
 
-Reality phức tạp hơn nhưng spread thinking giúp tránh nhìn steel price riêng lẻ. Steel price tăng 20% không bullish nếu raw materials tăng 30%.
+## Quality of backlog quan trọng hơn size
 
-## Petrochemical crack/spread
+Một shipbuilder có backlog 4 năm nghe rất tốt. Nhưng nếu phần lớn order được ký ở downcycle với low price và steel/labor cost sau đó tăng, margin có thể thấp.
 
-Naphtha cracker chuyển feedstock thành ethylene/propylene và derivatives. Profit phụ thuộc product-feedstock spread và utilization.
+Ngược lại, high-price LNG/carrier orders ký khi market tight có thể improve earnings nhiều quarters sau.
 
-China capacity expansion có thể compress regional spreads ngay cả khi end demand tăng. Commodity chemicals vì vậy thường có brutal cycles.
+Do đó backlog phải được đọc cùng:
 
-## Decarbonization capex
+- order price;
+- ship type;
+- delivery year;
+- steel/equipment cost;
+- FX;
+- payment milestones.
 
-Steel/chemicals là hard-to-abate. Carbon constraint đòi hydrogen-based reduction, electrification, CCUS hoặc process innovation. Transition tạo capex burden trước khi customer willingness-to-pay green premium rõ.
+## Ship types có economics khác nhau
 
-## Defense mix như counter-cycle
+Container ship, tanker, LNG carrier, offshore unit và naval vessel không phải same product.
 
-Một heavy-industry group có defense segment với backlog/public demand có thể offset commercial industrial cycle phần nào. Nhưng correlation không bằng zero vì shared labor/material/capital constraints.
+High-spec LNG carriers yêu cầu cryogenic containment, sophisticated engineering và supplier qualification cao hơn bulk carriers.
 
-## Metrics thực hành
+Korean yards historically cạnh tranh mạnh ở high-value ships nơi **engineering complexity + delivery reliability** tạo barrier tốt hơn labor cost đơn thuần.
 
-Shipbuilding: order intake, backlog/annual revenue, newbuild prices, steel cost, FX, advance payments.
+Product mix quyết định margin.
 
-Steel: shipment, ASP, raw-material spread, utilization, inventory.
+## Long-term contract accounting và estimate risk
 
-Chemicals: utilization, product spread, feedstock, China capacity, turnaround schedule.
+Nhiều shipbuilding projects recognize revenue over time khi accounting criteria được đáp ứng.
+
+Simplified:
+
+\[
+Recognized\ Revenue \approx Contract\ Value \times Progress\ Percentage
+\]
+
+Progress thường liên quan cost incurred/estimated total cost hoặc relevant performance measure.
+
+Nếu estimate total cost tăng, expected project margin phải be revised. Vì vậy one-quarter profit can change because **estimate changed**, not because shipyard physically built much less.
+
+This is why contract assets/liabilities and provisions matter.
+
+## Cash collection có thể khác revenue recognition
+
+Ship contracts use advance/milestone payments. Revenue accounting và cash timing may diverge.
+
+A yard can report growing revenue while cash conversion weak if payment schedule unfavorable.
+
+Working capital analysis therefore matters even with huge backlog.
+
+## Newbuild price cycle và capacity discipline
+
+Shipbuilding supply cannot increase overnight. Yard slots are finite, and adding capacity is slow/capital intensive.
+
+When global shipping profits are strong, owners order more ships; yard slots tighten; newbuild prices rise.
+
+But excessive ordering eventually increases vessel supply and can weaken future freight rates/order appetite.
+
+Thus shipbuilding cycle has long lags between:
+
+```text
+Freight market
+→ New orders
+→ Yard backlog
+→ Ship deliveries
+→ Global fleet capacity
+```
+
+## FX exposure
+
+Many ship contracts are denominated in USD while significant labor/local costs are KRW.
+
+Weak KRW can help, but yards hedge large exposures and imported equipment can offset benefit.
+
+Need examine hedging and timing rather than apply “KRW weak = good”.
+
+## Environmental regulation as demand driver
+
+IMO emissions rules and fuel transition create demand for cleaner vessels, dual-fuel engines and fleet replacement.
+
+But regulation does not guarantee endless orders. Ship owners compare retrofit vs newbuild, fuel availability and charter economics.
+
+Green transition therefore changes product mix and replacement cycle rather than mechanically raising all shipbuilding demand.
+
+# Phần II — Steel / 철강
+
+## Steel is a spread business
+
+Steel producer buys/uses raw materials and energy to produce steel products.
+
+Simplified margin thinking:
+
+\[
+Steel\ Spread \approx Steel\ ASP - Iron\ Ore - Coking\ Coal - Energy - Conversion\ Cost
+\]
+
+Reality includes mix, freight, scrap, alloy and downstream processing, but spread logic prevents a common mistake: **steel price up does not automatically mean profit up**.
+
+If ore/coal/energy rise faster, margin can compress.
+
+## Blast furnace economics and utilization
+
+Integrated blast furnaces are high fixed-cost assets designed to run near stable utilization.
+
+Demand slowdown reduces shipment/utilization but many costs remain.
+
+Therefore small volume declines can create disproportionate earnings pressure.
+
+Shutdown/restart also costs money, so producer may continue output even in weak market, which can worsen oversupply.
+
+This is classic heavy-industry operating leverage.
+
+## Downstream sectors drive steel mix
+
+Autos need automotive sheet; construction uses rebar/structural steel; shipbuilding uses plate; appliances need specialized products.
+
+One steel producer can face different cycles across products.
+
+Therefore macro “steel demand” should be decomposed by downstream industry.
+
+## Commodity steel vs premium steel
+
+Higher-strength automotive steel, electrical steel or specialty products can have better qualification barriers than generic commodity steel.
+
+Moving product mix upward is a way to escape pure price competition, but requires customer co-development and quality consistency.
+
+This is similar to Korea’s broader strategy: **upgrade from volume to differentiated capability**.
+
+## China capacity and regional pricing
+
+China’s enormous steel capacity affects Asian pricing even when Korean domestic demand stable.
+
+If Chinese exports rise due domestic weakness, regional prices can come under pressure.
+
+Thus Korea steel economics depend not only local construction/autos but Chinese capacity/utilization and trade measures.
+
+# Phần III — Petrochemicals / 석유화학
+
+## Petrochemical chain: feedstock → basic chemicals → derivatives
+
+Korean petrochemical complexes often use naphtha/feedstocks to produce ethylene, propylene and downstream products.
+
+A simplified chain:
+
+```text
+Naphtha / Feedstock
+      ↓
+Cracker
+      ↓
+Ethylene / Propylene
+      ↓
+PE / PP / ABS / Other derivatives
+      ↓
+Packaging / Auto / Electronics / Construction
+```
+
+Company exposure depends where it sits.
+
+## Spread matters more than product price
+
+A chemical product price may rise, but if feedstock rises faster, profitability worsens.
+
+Simplified:
+
+\[
+Chemical\ Margin \approx Product\ Price - Feedstock\ Cost - Conversion\ Cost
+\]
+
+Analysts often monitor spreads such as ethylene–naphtha rather than headline ethylene price alone.
+
+## Turnaround and utilization
+
+Crackers/plants periodically shut for maintenance (**turnaround / 정기보수**).
+
+This affects quarterly volume/cost but is not necessarily structural weakness.
+
+Need distinguish planned maintenance from demand-driven low utilization.
+
+## Cyclical oversupply vs structural oversupply
+
+This distinction is essential.
+
+**Cyclical oversupply** may resolve as inventory normalizes and weak producers cut run rates.
+
+**Structural oversupply** happens when capacity growth persistently exceeds realistic demand because new large plants enter with lower costs.
+
+China’s petrochemical capacity expansion can create structural pressure for Korean commodity producers.
+
+If industry supply curve shifts permanently, “wait for cycle recovery” may be wrong thesis.
+
+## Specialty chemicals: different economics
+
+Specialty products can have customer qualification, formulation/IP and application know-how.
+
+This creates higher switching costs and pricing power than commodity ethylene/polymer.
+
+Therefore “chemical company” is too broad. Need separate commodity vs specialty mix.
+
+# Phần IV — Heavy machinery và industrial equipment
+
+## Equipment is capex-cycle exposure
+
+Heavy machinery, industrial robots, turbines, construction equipment and factory tools often sell to other firms’ capex budgets.
+
+Their orders can move before final economic output because customers order equipment in anticipation of capacity expansion.
+
+This makes equipment companies **leading-cycle businesses** in some contexts.
+
+But backlog quality, aftermarket/service and customer concentration matter.
+
+## Installed base creates service economics
+
+Once equipment is installed, maintenance, parts and upgrades can create recurring revenue.
+
+A manufacturer with large installed base may have less volatile service margin than new-equipment revenue.
+
+This is similar to semiconductor equipment economics.
+
+# Working capital và commodity inflation
+
+Heavy-industry firms carry large raw-material and work-in-progress inventories.
+
+If commodity prices rise, company may need more cash to hold the same physical quantity.
+
+Example:
+
+```text
+Same 100 tons inventory
+× raw material price +30%
+→ inventory funding need +30% approximately
+```
+
+Accounting profit may also include inventory gains, but operating cash flow can deteriorate because cash is tied up.
+
+Therefore income statement alone can mislead.
+
+## Contract assets, receivables and advance payments
+
+Project companies may have contract assets or customer advances.
+
+Customer advances are economically useful because customer finances part of production.
+
+Contract assets/receivables consume financing.
+
+A backlog business with favorable advance-payment terms can have much better cash economics than same-margin business with back-loaded cash collection.
+
+# Commodity cycle vs structural competitiveness
+
+High commodity price can mask weak competitive position.
+
+A steel/chemical company may earn record profit simply because market spread temporarily wide.
+
+Structural advantage should show through:
+
+- lower cost curve;
+- premium product mix;
+- high utilization across cycle;
+- customer qualification;
+- logistics/cluster advantage;
+- better capital allocation.
+
+Normalize earnings before valuation.
+
+# Decarbonization: cost shock và innovation opportunity
+
+Steel and chemicals are hard-to-abate sectors.
+
+Carbon transition may require:
+
+- hydrogen-based reduction;
+- electric furnaces;
+- CCUS;
+- process electrification;
+- recycled feedstock;
+- renewable/low-carbon power.
+
+These investments create capex burden before green premium is certain.
+
+At same time, firms that develop low-carbon processes may gain access to customers facing Scope 3 requirements or carbon-border rules.
+
+Transition economics is therefore:
+
+```text
+Near-term CAPEX / Cost ↑
+vs
+Long-term compliance / market-access / premium opportunity
+```
+
+## Stranded-asset risk
+
+Old plant can become uneconomic before physical life ends if carbon cost, regulation or customer preference changes.
+
+This is **stranded asset / 좌초자산** risk.
+
+Heavy industry must manage technology transition while still earning returns on legacy assets.
+
+# Defense: related heavy-industry capability but different demand model
+
+Defense/aerospace uses engineering/manufacturing capabilities from heavy industry but its demand economics differ: government customers, long qualification, geopolitical procurement and export approval.
+
+A defense segment can diversify cyclicality of commercial shipbuilding/machinery, but not eliminate risk.
+
+Detailed analysis is in [`32_defense_aerospace_and_strategic_industries.md`](./32_defense_aerospace_and_strategic_industries.md).
+
+# How to analyze a shipbuilder
+
+Monitor:
+
+```text
+New orders
+Backlog / annual revenue
+Ship-type mix
+Newbuild prices
+Steel/equipment cost
+Contract margin revisions
+Advance payments / contract assets
+FX / hedging
+Delivery schedule
+```
+
+Key question: **What margin is embedded in backlog?**
+
+# How to analyze steel
+
+Monitor:
+
+```text
+Shipment volume
+ASP/product mix
+Iron ore / coking coal / energy
+Spread
+Utilization
+Inventory
+China supply/export
+Automotive/construction/ship demand
+Decarbonization capex
+```
+
+# How to analyze petrochemicals
+
+Monitor:
+
+```text
+Product-feedstock spreads
+Utilization
+Turnaround schedule
+Regional/China capacity additions
+Feedstock mix
+Inventory
+Specialty vs commodity share
+Capex / debt
+```
+
+# Stress tests
+
+Shipbuilding:
+
+- steel plate +20%;
+- KRW strengthens;
+- delivery delay;
+- low-margin legacy backlog persists.
+
+Steel:
+
+- China export surge;
+- ore/coal costs rise while ASP flat;
+- construction demand falls.
+
+Chemicals:
+
+- naphtha rises;
+- new China capacity enters;
+- utilization falls below breakeven.
+
+Always test cash/working capital, not only EBIT.
+
+# Mental Model
+
+> Heavy industry is a **time-lag + fixed-cost + spread + working-capital** business. Reported earnings often reflect orders and prices decided long before the current quarter.
+
+A common flow:
+
+```text
+Order / Market spread
+      ↓
+Capacity utilization
+      ↓
+Production over months/years
+      ↓
+Revenue recognition
+      ↓
+Cash collection
+      ↓
+Next-cycle capex
+```
+
+# Common misconceptions
+
+**“Backlog lớn = profit lớn.”** Sai. Contract price/cost/margin quality matter.
+
+**“Steel/chemical price tăng = producer bullish.”** Sai. Need input spread.
+
+**“Heavy industry chỉ cạnh tranh bằng labor cost.”** Sai. Engineering, cluster, scale, reliability và product mix matter.
+
+**“Decarbonization chỉ là cost.”** Không; it creates new products/market-access opportunities too.
+
+**“Commodity cycle sẽ luôn mean-revert.”** Not if capacity/technology structure changes permanently.
+
+# Connections
+
+Đọc cùng [`00_history/03_1970s_hci_and_chaebol_expansion.md`](./00_history/03_1970s_hci_and_chaebol_expansion.md), [`02_trade_export_and_global_value_chains.md`](./02_trade_export_and_global_value_chains.md), [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md), [`21_economy_to_company_transmission.md`](./21_economy_to_company_transmission.md), [`24_regional_clusters_and_industrial_geography.md`](./24_regional_clusters_and_industrial_geography.md), [`30_energy_security_power_market_and_transition.md`](./30_energy_security_power_market_and_transition.md) và [`32_defense_aerospace_and_strategic_industries.md`](./32_defense_aerospace_and_strategic_industries.md).
