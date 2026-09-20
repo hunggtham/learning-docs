@@ -1,283 +1,596 @@
-# 04 — Monetary System, Liquidity và Crisis Transmission
+# Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng
 
-> Chương này đi sâu vào phần thường bị bỏ qua khi học macro: tiền thực sự di chuyển giữa central bank, commercial banks, Treasury, money-market funds, bond market và non-bank financial institutions như thế nào. Mục tiêu là hiểu vì sao cùng là “Fed bơm tiền”, “thanh khoản tăng” hay “yield tăng” nhưng tác động lên asset prices có thể khác nhau tùy plumbing và loại shock.
+> Chương này đi sâu vào “đường ống” của hệ thống tài chính: tiền gửi, dự trữ, repo, collateral, dealer balance sheet, quỹ thị trường tiền tệ, USD funding và các cơ chế làm một cú sốc nhỏ biến thành stress lớn. Mục tiêu là phân biệt rõ **tiền**, **thanh khoản**, **vốn**, **tài sản bảo đảm** và **khả năng trả nợ**.
 
-## 1. Tiền trong nền kinh tế không chỉ là tiền giấy
+# Phần I — Các lớp tiền khác nhau
 
-Trong nền kinh tế hiện đại, phần lớn tiền mà doanh nghiệp và hộ gia đình sử dụng là bank deposits chứ không phải physical cash. Khi ngân hàng cho vay, họ đồng thời tạo một asset là loan và một liability là deposit cho khách hàng. Vì vậy commercial bank credit creation là một phần quan trọng của money creation.
+## 1. Tiền mặt, tiền gửi và dự trữ
 
-Central-bank reserves là một loại tiền khác. Reserves chủ yếu được giữ giữa các institutions đủ điều kiện trong hệ thống ngân hàng và được dùng cho settlement. Hộ gia đình không trực tiếp giữ reserve account tại central bank.
+Ba khái niệm này không giống nhau.
 
-Điểm quan trọng là reserves và household deposits liên quan nhưng không đồng nhất. Một chart central-bank balance sheet tăng không có nghĩa cùng lượng tiền đó tự động chảy vào stock market.
+**Tiền mặt (cash/banknotes):** tiền giấy do ngân hàng trung ương phát hành.
 
-## 2. Central Bank Balance Sheet
+**Tiền gửi ngân hàng (bank deposits):** nghĩa vụ của ngân hàng thương mại với khách hàng.
 
-Balance sheet của central bank có assets và liabilities.
+**Dự trữ ngân hàng (bank reserves):** tài sản của ngân hàng thương mại tại ngân hàng trung ương, chủ yếu dùng cho thanh toán giữa các ngân hàng và đáp ứng yêu cầu hệ thống.
 
-Assets thường gồm government securities và các khoản lending. Liabilities gồm currency in circulation và reserve balances của banks, cùng một số accounts khác như Treasury account tùy hệ thống.
+Nhà đầu tư cá nhân không trực tiếp giữ reserves.
 
-Khi central bank mua government bond từ một dealer và thanh toán bằng reserves, assets của central bank tăng bond, liabilities tăng reserves. Đây là một balance-sheet operation.
+## 2. Khi ngân hàng cho vay
 
-Tác động kinh tế phụ thuộc vào context: rates, scarcity of safe assets, bank balance sheets, risk appetite và expectations.
+Khi ngân hàng cấp một khoản vay, nó thường đồng thời tạo:
 
-## 3. Reserves và Settlement
+```text
+Asset: Loan
+Liability: Deposit
+```
 
-Banks dùng reserves để thanh toán obligations với nhau. Nếu khách hàng Bank A chuyển tiền sang Bank B, deposits thay đổi ở hai banks và settlement cuối cùng có thể diễn ra qua reserve balances.
+Do đó tín dụng ngân hàng có thể mở rộng sức mua trong nền kinh tế mà không cần ngân hàng trung ương in một lượng tiền giấy tương ứng.
 
-Một banking system cần đủ reserves để settlement vận hành ổn định. Nhưng “nhiều reserves” không đồng nghĩa banks bắt buộc phải cho vay nhiều hơn. Lending quyết định bởi borrower demand, credit standards, capital, expected return và regulation.
+## 3. Bảng cân đối ngân hàng trung ương
 
-Đây là lý do QE trong một banking crisis có thể tăng reserves rất mạnh nhưng loan growth vẫn yếu.
+Một bảng cân đối đơn giản có thể gồm:
 
-## 4. Policy Rate và Corridor/Floor System
+```text
+Assets:
+Government Bonds
+Loans / Facilities
+FX Reserves
 
-Central bank kiểm soát short-term rates bằng operational framework.
+Liabilities:
+Bank Reserves
+Currency in Circulation
+Government Deposits
+```
 
-Trong hệ thống abundant reserves, administered rate trả trên reserves có thể tạo floor hoặc anchor cho overnight rates. Banks không muốn cho vay overnight ở rate thấp hơn mức họ có thể nhận gần như risk-free tại central bank, mọi thứ khác tương đương.
+QE, QT hoặc lending facility thay đổi các dòng này theo cơ chế khác nhau.
 
-Các repo facilities và standing facilities cũng tạo boundaries cho funding market.
+# Phần II — Hệ thống lãi suất ngắn hạn
 
-Investor cần hiểu policy rate là anchor của short end chứ không phải một nút trực tiếp đặt mọi interest rate trong economy.
+## 4. Policy rate không phải mọi lãi suất
 
-## 5. Repo Market
+Ngân hàng trung ương kiểm soát hoặc định hướng một lãi suất ngắn hạn mục tiêu.
 
-Repo, repurchase agreement, về kinh tế gần giống một khoản vay có collateral. Một bên bán security và đồng ý mua lại sau với giá cao hơn; chênh lệch tương ứng financing rate.
+Sau đó chính sách truyền qua:
 
-Government bonds là collateral quan trọng trong repo markets. Nếu repo market stress, funding của dealers và leveraged participants có thể bị gián đoạn dù underlying government bonds vẫn có credit quality cao.
+```text
+Policy Rate
+→ Money-Market Rates
+→ Bank Funding
+→ Bond Yields
+→ Mortgage / Corporate Rates
+```
 
-Repo plumbing quan trọng vì nhiều strategies trong bond market sử dụng leverage. Khi haircut tăng hoặc repo funding biến mất, positions có thể bị forced unwind.
+## 5. Floor system và corridor system
 
-## 6. Haircut và Collateral
+Trong **hệ thống sàn (floor system)**, lượng reserves thường dồi dào và lãi trả trên reserves giúp đặt sàn cho lãi suất ngắn hạn.
 
-Haircut là phần discount áp lên collateral. Nếu bond trị giá 100 nhưng lender chỉ cho vay 98, haircut là 2%.
+Trong **hệ thống hành lang (corridor system)**, lãi vay và lãi gửi tại ngân hàng trung ương tạo vùng mục tiêu để thị trường tiền tệ giao dịch bên trong.
 
-Trong stress, lender có thể nâng haircut lên 5% hoặc 10%. Borrower phải đưa thêm collateral hoặc giảm position. Đây là một cơ chế deleveraging.
+Không cần học thuộc từng tên chương trình; điều quan trọng là hiểu ngân hàng trung ương điều khiển giá của funding ngắn hạn như thế nào.
 
-Vì vậy crisis có thể lan không chỉ qua loss mà qua financing terms. Asset price giảm làm collateral value giảm; haircut tăng; forced selling tăng; price lại giảm thêm. Đây là collateral spiral.
+# Phần III — Repo và collateral
 
-## 7. Treasury General Account
+## 6. Repo là gì?
 
-Treasury General Account, TGA, là tài khoản của US Treasury tại Fed.
+Repo về kinh tế gần với khoản vay có bảo đảm.
 
-Khi Treasury thu tax hoặc issue debt và proceeds chảy vào TGA, reserves trong banking system có thể giảm. Khi Treasury chi tiêu, tiền từ TGA chảy ra private sector và reserves tăng lại.
+```text
+Borrower giao collateral
+→ nhận cash
+→ sau đó mua lại collateral với giá cao hơn
+```
 
-Vì vậy Fed balance sheet đứng yên không có nghĩa banking-system reserves đứng yên. TGA flows có thể thay đổi liquidity distribution.
+Chênh lệch giá phản ánh lãi repo.
 
-Investor macro đôi khi theo dõi TGA vì Treasury financing operations tương tác với money markets.
+## 7. Collateral
 
-## 8. Money Market Funds
+Tài sản bảo đảm (collateral) không chỉ giảm rủi ro tín dụng. Nó còn quyết định khả năng một tổ chức có thể vay bao nhiêu.
 
-Money-market funds đầu tư vào short-duration high-quality instruments như Treasury bills, repo và government securities tùy loại fund.
+Tài sản có thanh khoản và chất lượng cao thường cho phép vay với haircut thấp hơn.
 
-Khi policy rates cao, money funds có yield hấp dẫn và thu hút cash khỏi bank deposits. Điều này có thể làm banks phải cạnh tranh funding bằng deposit rates cao hơn.
+## 8. Haircut
 
-Nếu deposit funding cost tăng, net interest margin và lending economics của banks thay đổi.
+Haircut là phần giá trị collateral không được tính khi cho vay.
 
-## 9. Reverse Repo Facility
+Ví dụ:
 
-Overnight Reverse Repo Facility cho các counterparties đủ điều kiện gửi cash đổi lấy securities qua transaction với Fed.
+```text
+Collateral value = 100
+Haircut = 10%
+Borrowing capacity ≈ 90
+```
 
-Trong giai đoạn liquidity rất dư thừa, facility có thể hấp thụ lượng lớn cash và tạo floor cho money-market rates.
+Nếu haircut tăng lên 20%, khả năng vay chỉ còn khoảng 80 dù giá tài sản chưa đổi.
 
-Khi balances ở facility giảm, cash có thể dịch sang T-bills hoặc các instruments khác. Nhưng không nên coi mỗi dollar RRP giảm là một dollar “đi vào chứng khoán”. Destination phụ thuộc relative yields và market structure.
+## 9. Haircut spiral
 
-## 10. Treasury Issuance và Term Premium
+Trong stress:
 
-Government deficit cần financing qua debt issuance. Khi Treasury phát hành nhiều bonds, private sector phải hấp thụ supply lớn hơn.
+```text
+Volatility ↑
+→ Haircut ↑
+→ Cần thêm collateral / cash
+→ Forced Selling ↑
+→ Giá ↓
+→ Haircut ↑ thêm
+```
 
-Nếu demand không tăng tương ứng, yields có thể phải tăng để attract buyers. Long-end yields còn phản ánh term premium: compensation cho duration và uncertainty khi giữ bond dài hạn.
+Đây là một cơ chế khuếch đại khủng hoảng.
 
-Do đó 10-year yield có thể tăng ngay cả khi market không kỳ vọng policy rate tăng, nếu fiscal supply hoặc term premium tăng.
+# Phần IV — Dealer và market-making
 
-## 11. Dealer Balance Sheets
+## 10. Dealer balance sheet
 
-Primary dealers và market makers cần balance-sheet capacity để intermediate bond trading.
+Dealer giúp kết nối người mua và người bán, giữ inventory và cung cấp market-making.
 
-Khi volatility tăng hoặc regulatory constraints bind, dealer capacity có thể giảm. Bid-ask spreads mở rộng và Treasury market liquidity có thể xấu dù asset được coi là risk-free về credit.
+Nhưng dealer có giới hạn về:
 
-Market liquidity risk và credit risk là hai thứ khác nhau.
+- capital;
+- funding;
+- leverage;
+- risk limit.
 
-## 12. Non-Bank Financial Institutions
+Khi balance-sheet capacity giảm, market depth có thể giảm ngay cả khi tài sản “rẻ”.
 
-NBFIs gồm hedge funds, asset managers, pension funds, insurance companies và money-market structures không phải commercial banks.
+## 11. Thanh khoản thị trường không phải đặc tính cố định
 
-Nhóm này giữ vai trò ngày càng lớn trong global finance. Họ có thể dùng leverage qua repo, derivatives hoặc synthetic exposures.
+Một tài sản bình thường có thể rất thanh khoản nhưng trở nên khó giao dịch khi:
 
-Vì không có cùng access và regulation như banks, stress ở NBFIs có thể truyền qua margin calls và asset sales thay vì traditional bank run.
+- volatility tăng;
+- dealer giảm inventory;
+- mọi người cùng muốn bán;
+- collateral value giảm.
 
-## 13. Margin Call Spiral
+Do đó liquidity phụ thuộc cả tài sản và hệ thống trung gian.
 
-Giả sử một fund dùng leverage 10x để giữ bond relative-value trade. Nếu price move bất lợi 2%, equity loss có thể lớn hơn nhiều do leverage.
+# Phần V — Money-market funds và cash management
 
-Prime broker hoặc clearing house yêu cầu thêm margin. Fund phải bán assets để raise cash. Nếu nhiều funds cùng strategy, selling pressure đẩy price xấu thêm và tạo margin calls mới.
+## 12. Quỹ thị trường tiền tệ
 
-Đây là forced deleveraging. Nó giải thích vì sao price move trong crisis có thể lớn hơn thay đổi fundamentals ban đầu.
+Money-market fund (MMF) đầu tư vào tài sản ngắn hạn như Treasury bills, repo hoặc giấy tờ có độ an toàn cao.
 
-## 14. Bank Capital khác Bank Liquidity
+Dòng tiền vào/ra MMF có thể thay đổi nhu cầu đối với repo và short-term government debt.
 
-Một bank có thể solvent nhưng thiếu liquidity tạm thời. Assets có giá trị lớn hơn liabilities nhưng cash không đủ đáp ứng withdrawals ngay.
+## 13. Treasury cash balance
 
-Ngược lại, bank insolvent có asset value thực thấp hơn liabilities. Cho vay liquidity chỉ trì hoãn vấn đề nếu capital hole quá lớn.
+Tài khoản tiền của chính phủ tại ngân hàng trung ương thường được gọi là Treasury General Account (TGA) ở Mỹ.
 
-Central-bank lender-of-last-resort function chủ yếu giải quyết liquidity panic, trong khi insolvency cần recapitalization, restructuring hoặc resolution.
+Khi chính phủ tăng mạnh số dư này, reserves của hệ thống ngân hàng có thể giảm nếu các yếu tố khác giữ nguyên.
 
-## 15. Deposit Flight
+Khi chính phủ chi tiêu từ tài khoản, reserves có thể quay lại hệ thống.
 
-Khi depositors chuyển tiền khỏi một bank, bank mất funding. Nếu deposits chuyển sang bank khác, banking-system deposits tổng thể có thể không biến mất, nhưng distribution thay đổi.
+## 14. Reverse repo facility
 
-Nếu tiền chuyển từ deposits sang money-market funds rồi money funds mua T-bills, funding mix của banks thay đổi rộng hơn.
+Reverse repo facility có thể hấp thụ tiền mặt từ các tổ chức đủ điều kiện đổi lấy tài sản bảo đảm.
 
-Bank run hiện đại có thể diễn ra rất nhanh vì mobile banking và social media, làm liquidity management khó hơn historical episodes.
+Dòng tiền giữa MMF, RRP, Treasury bills và deposits có thể thay đổi phân bổ thanh khoản ngắn hạn mà không đồng nghĩa nền kinh tế “thiếu tiền” theo nghĩa đơn giản.
 
-## 16. Duration Mismatch trong Banking
+# Phần VI — Treasury issuance và term premium
 
-Banks thường borrow short và lend long. Nếu deposits repriced hoặc rút nhanh trong khi assets là long-duration fixed-rate securities, mismatch tạo risk.
+## 15. Chính phủ phát hành nợ
 
-Rising rates làm market value của long-duration assets giảm. Nếu bank không cần bán, loss có thể ở dạng unrealized. Nhưng deposit flight buộc bán có thể crystallize loss.
+Nhu cầu tài trợ của chính phủ có thể được đáp ứng qua bills, notes và bonds.
 
-Asset-liability management vì thế là core banking risk.
+Cơ cấu kỳ hạn phát hành ảnh hưởng lượng duration mà khu vực tư nhân phải nắm.
 
-## 17. Credit Creation và Financial Accelerator
+## 16. Term premium
 
-Khi asset prices tăng, collateral value tăng. Borrowers vay dễ hơn, credit mở rộng, spending và investment tăng. Economy mạnh lại hỗ trợ asset prices.
+Nếu thị trường phải hấp thụ nhiều duration hơn trong lúc uncertainty cao, term premium có thể tăng.
 
-Khi cycle đảo, collateral giảm, banks tighten standards, credit giảm và spending yếu. Financial conditions tự khuếch đại downturn.
+```text
+Long-Term Issuance ↑
++ Demand không tăng tương ứng
+→ Term Premium ↑
+→ Long Yield ↑
+```
 
-Đây là financial accelerator. Nó giải thích vì sao property downturn có thể lan sang banks và real economy.
+Điều này có thể thắt financial conditions dù policy rate không đổi.
 
-## 18. Credit Spreads như tín hiệu hệ thống
+# Phần VII — Bank capital và bank liquidity
 
-Corporate yield bằng government yield cộng credit spread gần đúng.
+## 17. Capital và liquidity khác nhau
 
-Nếu risk-free yield không đổi nhưng credit spread tăng 300bp, borrowing cost vẫn tăng mạnh. Vì vậy chỉ nhìn central-bank policy rate có thể bỏ lỡ tightening đến từ market risk premium.
+**Vốn (capital)** hấp thụ lỗ.
 
-High-yield spreads, bank CDS và funding spreads thường được theo dõi để đánh giá stress.
+**Thanh khoản (liquidity)** giúp đáp ứng dòng tiền cần chi ngay.
 
-## 19. Dollar Funding và Global System
+Một ngân hàng có vốn cao vẫn có thể thất bại nếu deposit run quá nhanh và tài sản không bán được.
 
-USD được dùng rộng trong trade, debt và derivatives ngoài Mỹ. Banks và companies bên ngoài Mỹ có thể có USD liabilities nhưng assets hoặc revenue bằng local currency.
+Ngược lại, một ngân hàng có thanh khoản tạm thời nhưng tài sản mất giá lớn hơn equity có thể về bản chất mất khả năng thanh toán.
 
-Khi USD funding scarcity xuất hiện, họ cần mua USD hoặc giảm balance sheet. DXY và cross-currency basis có thể phản ánh stress.
+## 18. Solvency
 
-Federal Reserve swap lines với major central banks là một cơ chế cung cấp USD liquidity ra global system trong crisis.
+**Khả năng thanh toán dài hạn (solvency)** hỏi giá trị kinh tế của tài sản có đủ lớn so với nghĩa vụ hay không.
 
-## 20. Cross-Currency Basis
+Liquidity support không tự động sửa insolvency.
 
-Theo covered interest parity lý tưởng, FX forward và interest-rate differential có quan hệ chặt.
+## 19. Deposit flight
 
-Khi demand USD funding cực mạnh hoặc balance-sheet constraints xuất hiện, cross-currency basis có thể lệch. Điều này cho thấy synthetic USD borrowing trở nên đắt hơn.
+Tiền gửi có thể rút nhanh do:
 
-Basis là một signal plumbing mà retail investors ít thấy nhưng institutions theo dõi trong stress.
+- mất niềm tin;
+- uninsured concentration;
+- lãi suất sản phẩm khác hấp dẫn hơn;
+- tin tức lan nhanh qua digital banking.
 
-## 21. QE tác động qua những channel nào?
+Tốc độ rút tiền hiện đại có thể nhanh hơn mô hình bank run truyền thống.
 
-QE có thể giảm term premium bằng cách central bank mua duration khỏi private sector. Investors bán bonds nhận cash hoặc reserves qua intermediaries và có thể rebalance sang assets khác.
+## 20. Funding concentration
 
-QE cũng gửi signal rằng policy sẽ accommodative và central bank cam kết hỗ trợ market functioning.
+Ngân hàng có hàng triệu retail deposit nhỏ khác hẳn ngân hàng phụ thuộc vài khách hàng doanh nghiệp lớn.
 
-Nhưng effectiveness phụ thuộc context. Nếu economy bị supply constraint và inflation cao, QE rộng có thể tạo policy conflict.
+Funding concentration là một risk factor độc lập.
 
-## 22. QT không chỉ là “rút tiền”
+# Phần VIII — Duration mismatch trong ngân hàng
 
-QT giảm central-bank balance sheet bằng runoff hoặc asset sales tùy program.
+## 21. Tài sản dài hạn, nghĩa vụ ngắn hạn
 
-Khi securities mature mà central bank không reinvest, Treasury phải refinance qua private market. Reserves có thể giảm tùy transaction flows.
+Một cấu trúc điển hình:
 
-Tác động QT phụ thuộc reserve abundance, Treasury issuance mix và money-market offsets. Vì vậy không nên dùng một multiplier đơn giản để dự báo equities.
+```text
+Liability:
+deposits / short-term funding
 
-## 23. Emergency Facilities
+Asset:
+long-duration bonds / mortgages
+```
 
-Trong crisis, central banks có thể tạo temporary facilities để cho institutions vay against collateral hoặc backstop specific markets.
+Khi lãi suất tăng, giá thị trường của tài sản dài hạn giảm.
 
-Mục tiêu thường là restore market functioning, không nhất thiết monetary stimulus theo nghĩa truyền thống.
+Nếu tiền gửi ổn định, ngân hàng có thể giữ tài sản tới đáo hạn. Nếu người gửi rút nhanh, ngân hàng có thể phải bán và hiện thực hóa lỗ.
 
-Investor phải phân biệt facility giải quyết liquidity với policy rate stance giải quyết inflation và aggregate demand.
+## 22. Mark-to-market loss và forced realization
 
-## 24. Banking Crisis Transmission
+Lỗ đánh dấu theo thị trường chưa chắc làm mất tiền mặt ngay.
 
-Bank stress truyền tới economy qua lending. Banks bảo vệ capital bằng giảm new loans, tăng lending standards và giữ liquidity.
+Nhưng khi tài sản buộc phải bán:
 
-SMEs phụ thuộc bank credit chịu ảnh hưởng trước. Investment và hiring giảm. Property transactions chậm. Credit losses có thể tăng tiếp.
+```text
+Unrealized Loss
+→ Realized Loss
+→ Capital ↓
+```
 
-Một crisis nhỏ ở vài banks có thể trở thành macro shock nếu credit contraction đủ rộng.
+Đây là cầu nối từ duration risk sang liquidity và solvency risk.
 
-## 25. Sovereign-Bank Doom Loop
+# Phần IX — Credit creation và financial accelerator
 
-Banks thường nắm government bonds. Nếu sovereign credit deteriorates, bond prices giảm và bank balance sheets yếu.
+## 23. Credit không chỉ phụ thuộc policy rate
 
-Government sau đó có thể phải hỗ trợ banks, làm fiscal position xấu hơn. Đây là sovereign-bank doom loop từng quan trọng trong euro-area crisis.
+Ngân hàng quyết định cho vay dựa trên:
 
-Loop mạnh hơn khi banks concentrated vào domestic sovereign debt.
+- capital;
+- funding;
+- collateral;
+- expected loss;
+- regulation;
+- risk appetite.
 
-## 26. Currency Crisis Transmission
+Do đó policy rate giảm không bảo đảm credit tăng ngay.
 
-Nếu country vay nhiều ngoại tệ, local currency depreciation làm debt burden tăng theo local currency.
+## 24. Financial accelerator
 
-Companies và banks có FX mismatch chịu loss. Capital outflows tăng. Central bank có thể hike rates để bảo vệ currency, nhưng higher rates làm domestic credit stress nặng hơn.
+```text
+Asset Price ↓
+→ Collateral ↓
+→ Lending Standards Tighten
+→ Credit ↓
+→ Investment / Consumption ↓
+→ Earnings ↓
+→ Credit Quality ↓
+```
 
-Đây là một lý do emerging-market currency crisis có thể nhanh chóng trở thành banking và recession crisis.
+Vòng này có thể biến stress tài chính thành suy thoái thực.
 
-## 27. Inflation Crisis khác Financial Crisis
+# Phần X — Non-bank financial institutions
 
-Trong financial crisis, central bank thường muốn cut rates và provide liquidity. Trong inflation crisis, central bank phải tighten dù asset prices giảm.
+## 25. NBFI
 
-Nếu inflation cao và banking stress xảy ra cùng lúc, policy trade-off trở nên khó. Central bank có thể dùng separate tools: liquidity facilities để hỗ trợ market functioning trong khi giữ policy rate restrictive.
+NBFI gồm funds, insurers, pension funds, finance companies và các tổ chức tài chính không phải ngân hàng truyền thống.
 
-Investor không nên thấy liquidity facility rồi kết luận Fed đã “pivot dovish”.
+Rủi ro tín dụng hoặc đòn bẩy có thể chuyển khỏi bank balance sheet sang hệ thống này.
 
-## 28. Fiscal Dominance
+## 26. Leverage ẩn
 
-Fiscal dominance là tình huống monetary policy bị hạn chế bởi government debt dynamics.
+Derivatives, repo hoặc structured products có thể tạo exposure lớn hơn capital bỏ ra.
 
-Nếu debt và interest burden quá lớn, rate hikes có thể làm fiscal cost tăng mạnh. Market có thể lo central bank cuối cùng phải tolerate inflation cao hơn để tránh debt stress.
+Khi volatility tăng, margin call có thể buộc các tổ chức bán tài sản khác để lấy cash.
 
-Không phải country debt cao nào cũng rơi vào fiscal dominance. Currency regime, maturity, domestic savings và institutional credibility rất quan trọng.
+# Phần XI — Global dollar system
 
-## 29. Liquidity Premium và Flight to Quality
+## 27. USD funding ngoài Mỹ
 
-Trong panic, investors sẵn sàng trả premium cho assets dễ bán và perceived safe. Treasury bills hoặc reserve-like instruments có thể được demand mạnh.
+Doanh nghiệp và ngân hàng ngoài Mỹ vay USD để tài trợ thương mại hoặc tài sản.
 
-Assets bình thường tương quan thấp có thể cùng bị bán để raise cash. Đây là dash for cash.
+Khi USD funding khan hiếm:
 
-Flight to quality không nhất thiết nghĩa mọi government bond tăng. Nếu inflation shock hoặc sovereign concern là nguồn crisis, long bonds có thể giảm.
+```text
+USD Funding Cost ↑
+→ FX Hedge Cost ↑
+→ Deleveraging ↑
+→ Global Credit Tightens
+```
 
-## 30. Macro Dashboard cho Liquidity
+## 28. Cross-currency basis
 
-Một liquidity dashboard nên được đọc như một hệ thống. Policy rate cho stance. 2Y yield cho expected path. 10Y yield và term premium cho duration conditions. Credit spreads cho private risk premium. Repo/funding conditions cho plumbing. Bank lending standards cho credit transmission. USD và cross-currency indicators cho global dollar conditions.
+Cross-currency basis phản ánh chi phí hoặc mất cân bằng khi đổi funding giữa các đồng tiền qua swap.
 
-Không có indicator đơn lẻ đại diện hoàn hảo cho “liquidity”.
+Basis căng có thể là tín hiệu nhu cầu USD lớn hơn bình thường.
 
-## 31. Framework phân tích một stress event
+# Phần XII — QE và QT
 
-Khi market xuất hiện shock, trước tiên xác định loss nằm ở đâu. Tiếp theo hỏi ai dùng leverage, funding source là gì và collateral nào đang bị giảm giá. Sau đó tìm forced seller có thể xuất hiện ở đâu và central bank có facility nào phù hợp.
+## 29. QE
 
-Cuối cùng mới chuyển sang asset implication. Nếu shock chủ yếu là liquidity và central bank backstop hiệu quả, recovery có thể nhanh. Nếu underlying solvency hoặc earnings problem còn lớn, liquidity support không xóa loss kinh tế.
+Nới lỏng định lượng (Quantitative Easing, QE) thường là ngân hàng trung ương mua tài sản dài hạn và tạo reserves.
 
-## 32. Case: Rate Shock
+Các kênh tác động có thể gồm:
 
-Giả sử inflation bất ngờ tăng và long yields nhảy mạnh. Long-duration bonds giảm, growth equities chịu discount-rate pressure. Banks có securities losses nhưng NIM có thể tăng lúc đầu.
+- giảm duration supply cho khu vực tư nhân;
+- giảm term premium;
+- hỗ trợ market functioning;
+- portfolio rebalancing.
 
-Nếu depositors chuyển sang higher-yield money funds, bank funding cost tăng. Nếu unrealized bond losses lớn và deposit flight tiếp tục, vấn đề từ rate shock có thể chuyển thành liquidity stress.
+QE không tương đương phát tiền trực tiếp cho hộ gia đình.
 
-## 33. Case: Credit Shock
+## 30. QT
 
-Nếu unemployment tăng và corporate defaults tăng, credit spreads widen. Banks tăng provisions và tighten lending.
+Thắt chặt định lượng (Quantitative Tightening, QT) làm balance sheet ngân hàng trung ương giảm khi tài sản đáo hạn hoặc được bán.
 
-Policy rate có thể giảm nhưng private borrowing cost vẫn cao vì spreads. Đây là lý do monetary easing đôi khi mất thời gian mới hỗ trợ economy.
+Ảnh hưởng phụ thuộc:
 
-## 34. Case: Dollar Shortage
+- tốc độ QT;
+- TGA;
+- RRP;
+- reserve demand;
+- Treasury issuance.
 
-Trong global panic, demand USD tăng. Emerging currencies yếu, offshore funding cost tăng và leveraged positions unwind.
+## 31. Reserves dồi dào nhưng liquidity vẫn có thể kém
 
-Fed swap lines hoặc other liquidity tools có thể giảm shortage. Khi USD funding pressure dịu, risk assets có thể ổn định dù macro outlook vẫn yếu.
+Nhiều reserves không bảo đảm mọi market đều liquid.
 
-## 35. Investor cần rút ra điều gì?
+Stress có thể nằm ở:
 
-Điều quan trọng nhất là phân biệt price of money, quantity/distribution of liquidity và willingness to lend.
+- collateral;
+- dealer capacity;
+- specific funding market;
+- counterparty concern.
 
-Policy rate là price. Reserves và money-market balances nói một phần về quantity. Bank lending standards và credit spreads nói về willingness và risk pricing.
+# Phần XIII — Emergency facilities
 
-Asset prices phụ thuộc cả ba cùng earnings expectations. Vì vậy narrative kiểu “Fed balance sheet tăng nên chứng khoán chắc chắn tăng” là quá đơn giản.
+## 32. Lender of last resort
+
+Ngân hàng trung ương có thể cung cấp thanh khoản tạm thời chống lại collateral đủ chuẩn.
+
+Mục tiêu là giảm forced selling do thiếu cash.
+
+## 33. Liquidity facility không phải recapitalization
+
+Cho vay thanh khoản khác với bơm vốn hấp thụ lỗ.
+
+```text
+Liquidity Facility
+→ giải quyết timing/funding
+
+Recapitalization
+→ bổ sung loss-absorbing capital
+```
+
+Không nên gọi mọi hỗ trợ là “QE” hoặc “bailout”.
+
+# Phần XIV — Các loại khủng hoảng
+
+## 34. Banking crisis
+
+Có thể bắt đầu từ:
+
+- credit loss;
+- duration loss;
+- funding run;
+- fraud;
+- property crash.
+
+Cơ chế và policy response phụ thuộc nguồn gốc.
+
+## 35. Sovereign crisis
+
+Nợ chính phủ có thể trở thành vấn đề khi:
+
+- debt service tăng nhanh;
+- investor demand giảm;
+- debt bằng foreign currency;
+- growth yếu;
+- fiscal credibility xấu.
+
+## 36. Currency crisis
+
+FX shock có thể truyền qua:
+
+```text
+Currency ↓
+→ Imported Inflation ↑
+→ FX Debt Burden ↑
+→ Rate Pressure ↑
+→ Growth ↓
+```
+
+## 37. Inflation crisis
+
+Nếu inflation expectations mất neo, ngân hàng trung ương có thể phải giữ policy chặt dù tăng trưởng yếu.
+
+Đây là trade-off khác hoàn toàn liquidity crisis.
+
+# Phần XV — Fiscal dominance
+
+## 38. Khi monetary và fiscal bắt đầu xung đột
+
+Nếu chi phí tài trợ chính phủ tăng mạnh, tightening monetary có thể làm debt service tăng.
+
+**Fiscal dominance** mô tả tình huống ràng buộc tài khóa làm khả năng ưu tiên ổn định giá của ngân hàng trung ương bị hạn chế.
+
+Không phải mọi mức nợ cao đều đồng nghĩa fiscal dominance.
+
+# Phần XVI — Market indicators
+
+## 39. Dashboard thanh khoản
+
+Có thể theo dõi:
+
+```text
+Policy Rate
+Repo Rates
+SOFR / Money-Market Rates
+Bank Reserves
+TGA
+RRP
+Treasury Issuance
+Credit Spreads
+Cross-Currency Basis
+Bank Funding Spreads
+USD
+```
+
+## 40. Dashboard stress
+
+```text
+Bid-Ask Spread
+Market Depth
+Haircut
+Margin Requirement
+Volatility
+Dealer Inventory
+Funding Spread
+Credit Default Swap
+```
+
+Không một chỉ số đơn lẻ đủ để kết luận hệ thống stress.
+
+# Phần XVII — Chuỗi truyền dẫn khủng hoảng
+
+## 41. Cú sốc funding
+
+```text
+Funding Cost ↑
+→ Leverage ↓
+→ Asset Sales ↑
+→ Price ↓
+→ Collateral ↓
+→ Funding Capacity ↓
+```
+
+## 42. Cú sốc ngân hàng
+
+```text
+Asset Loss
+→ Capital Concern
+→ Deposit Outflow
+→ Liquidity Need
+→ Asset Sale / Central-Bank Facility
+→ Credit Tightening
+→ Real Economy
+```
+
+## 43. Cú sốc USD
+
+```text
+USD ↑
+→ Foreign-Currency Debt Burden ↑
+→ Hedge Cost ↑
+→ Deleveraging
+→ EM / Global Credit Tightening
+```
+
+# Phần XVIII — Cách dùng trong đầu tư
+
+## 44. Giá của tiền và lượng thanh khoản là hai lớp khác nhau
+
+Policy rate là **giá của funding ngắn hạn**.
+
+Nhưng điều kiện tài chính còn phụ thuộc:
+
+- lượng funding có sẵn;
+- collateral;
+- distribution của liquidity;
+- willingness to lend.
+
+## 45. Đừng nhầm reserves với broad liquidity
+
+Reserves cao không đồng nghĩa mọi doanh nghiệp hoặc hộ gia đình dễ vay.
+
+Kênh truyền dẫn qua bank capital, credit standards và collateral vẫn rất quan trọng.
+
+## 46. Đừng nhầm central-bank liquidity với solvency repair
+
+Cho vay emergency có thể cho một tổ chức thêm thời gian nhưng không loại bỏ economic loss nếu tài sản thực sự không đủ giá trị.
+
+## 47. Đọc crisis theo bảng cân đối
+
+Khi có stress, hãy hỏi:
+
+```text
+Ai đang thiếu cash?
+Ai đang thiếu capital?
+Ai đang giữ collateral nào?
+Ai có maturity mismatch?
+Ai có currency mismatch?
+Ai là forced seller?
+Ai có thể cung cấp liquidity?
+```
+
+## 48. Reverse stress test
+
+Thay vì chỉ hỏi “asset giảm 20% thì sao?”, hãy hỏi:
+
+```text
+Điều gì có thể buộc một tổ chức bán tài sản tốt ở đáy?
+```
+
+Câu trả lời thường liên quan margin, funding, collateral hoặc redemption.
+
+# Phần XIX — Checklist nghiên cứu
+
+## 49. Trước khi kết luận “liquidity đang tốt”
+
+Kiểm tra:
+
+```text
+Reserves
+Bank Funding
+Repo
+Collateral
+Dealer Capacity
+Credit Spreads
+Lending Standards
+FX Funding
+Market Depth
+```
+
+## 50. Trước khi kết luận “central bank đã cứu hệ thống”
+
+Hỏi:
+
+```text
+Facility giải quyết liquidity hay capital?
+Collateral được định giá thế nào?
+Ai chịu ultimate credit loss?
+Credit creation có phục hồi không?
+```
 
 ## Kết luận
 
-Monetary plumbing giúp bạn hiểu các channel nằm giữa central-bank decision và market price. Crisis thường trở nên nghiêm trọng khi loss kết hợp leverage, funding mismatch và forced selling. Khi hiểu reserves, repo, collateral, Treasury issuance, bank capital, dollar funding và credit spreads, bạn có thể phân biệt một liquidity accident với một solvency crisis và tránh đọc macro chỉ bằng một chart “liquidity”.
+Hệ thống tiền tệ không thể được hiểu bằng một câu “ngân hàng trung ương bơm tiền” hay “liquidity tăng”.
+
+Cần tách rõ:
+
+```text
+Money
+Reserves
+Deposits
+Funding
+Collateral
+Capital
+Credit
+Market Liquidity
+```
+
+Khủng hoảng thường xuất hiện khi một trong các mắt xích này làm các tổ chức phải bán tài sản, giảm tín dụng hoặc thay đổi hành vi theo cách khuếch đại cú sốc ban đầu.
