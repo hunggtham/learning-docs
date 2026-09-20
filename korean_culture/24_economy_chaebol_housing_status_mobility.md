@@ -215,6 +215,107 @@ cùng thu nhập hằng năm
 → quỹ đạo tài sản ngày càng cách xa
 ```
 
+## 소득·현금흐름·자산·유동성: bốn thứ thường bị trộn thành “có tiền”
+
+**Thu nhập (소득)** là dòng nguồn lực kiếm được trong một giai đoạn. **Dòng tiền (현금흐름)** là tiền thực vào–ra sau khi tính thời điểm thanh toán. **Tài sản (자산)** là nguồn lực tích luỹ có giá trị. **Thanh khoản (유동성)** là mức dễ chuyển tài sản thành tiền để chi ngay mà không chịu chi phí lớn.
+
+Một hộ có căn hộ giá trị cao nhưng ít tiền mặt có thể “giàu tài sản nhưng căng thanh khoản”. Một hộ thu nhập tốt nhưng nợ lớn và chi phí cố định cao có thể vẫn dễ tổn thương khi mất việc.
+
+Có thể viết bảng cân đối hộ đơn giản:
+
+```math
+Net\ Worth = Assets - Liabilities
+```
+
+Nhưng **giá trị ròng** chưa trả lời hộ có sống được sáu tháng nếu thu nhập dừng hay không. Vì vậy phải đọc cùng dòng tiền và thanh khoản.
+
+## 고정비: chi phí cố định quyết định mức độ tự do của hộ
+
+Tiền thuê hoặc trả nợ nhà, phí quản lý, học phí, bảo hiểm, trả góp và chi phí đi lại có thể tạo **chi phí cố định (fixed costs)**. Khi tỷ trọng chi phí cố định cao, hộ ít khả năng giảm chi tiêu nhanh sau cú sốc.
+
+```text
+thu nhập giảm 20%
++ chi phí linh hoạt cao → có thể cắt bớt
++ chi phí cố định cao → khoảng trống tài chính lớn hơn
+```
+
+Điều này giải thích vì sao cùng mức lương nhưng hai hộ có cảm giác an toàn khác nhau. Văn hoá “ổn định việc làm” có thể mạnh hơn khi cấu trúc chi phí ít linh hoạt.
+
+## 부채상환능력: rủi ro nợ nằm ở dòng tiền, không chỉ số nợ tuyệt đối
+
+Hai hộ cùng nợ 300 triệu KRW có thể có rủi ro rất khác nếu thu nhập, lãi suất, kỳ hạn và tài sản dự phòng khác nhau. Vì vậy nhìn số nợ đơn lẻ dễ gây hiểu lầm.
+
+Khái niệm cốt lõi là **khả năng phục vụ nợ (debt-servicing capacity)**:
+
+```text
+thu nhập khả dụng
+− chi phí sinh hoạt bắt buộc
+− nghĩa vụ nợ định kỳ
+= phần đệm còn lại
+```
+
+Không cần thuộc một tỷ lệ pháp lý cụ thể để hiểu cơ chế. Khi phần đệm nhỏ, cú sốc việc làm hoặc lãi suất dễ lan thành vấn đề nhà ở và tiêu dùng.
+
+## 실직 충격: mất việc là cú sốc đi qua cả hộ gia đình
+
+Thất nghiệp không chỉ giảm thu nhập cá nhân. Nó có thể làm hộ điều chỉnh học thêm của con, nhà ở, hẹn hò/kết hôn, đầu tư và chi tiêu chăm sóc sức khoẻ.
+
+```text
+mất việc
+→ dòng tiền giảm
+→ dùng quỹ dự phòng / vay / hỗ trợ gia đình
+→ cắt chi tiêu hoặc trì hoãn quyết định lớn
+→ nếu kéo dài, bán tài sản / chuyển nhà / đổi chiến lược nghề nghiệp
+```
+
+Độ bền phụ thuộc **bộ đệm (buffer)**: tiền mặt, bảo hiểm, thu nhập của người còn lại trong hộ, khả năng vay và mạng gia đình.
+
+## 맞벌이: hai nguồn thu nhập không đồng nghĩa rủi ro đã giảm một nửa
+
+Hộ hai người cùng đi làm (`맞벌이`) có lợi thế vì có hai nguồn thu nhập, nhưng mức đa dạng rủi ro phụ thuộc hai người làm ở đâu. Nếu cùng ngành, cùng công ty hoặc cùng chịu một cú sốc kinh tế, thu nhập có thể giảm đồng thời.
+
+Đây là **tương quan rủi ro (risk correlation)**.
+
+```text
+hai nguồn thu nhập độc lập → giảm rủi ro mạnh hơn
+hai nguồn thu nhập cùng phụ thuộc một ngành → giảm rủi ro ít hơn
+```
+
+Ngoài ra hai người cùng làm toàn thời gian có thể tăng thu nhập tiền mặt nhưng giảm thời gian chăm sóc, làm chi phí dịch vụ/ông bà tăng. Vì vậy quyết định lao động của hộ là bài toán **tiền + thời gian**, không chỉ lương.
+
+## 가족 지원: gia đình như một hệ thống bảo hiểm tư nhân
+
+Cha mẹ hỗ trợ tiền đặt cọc, chăm cháu, cho ở cùng hoặc giúp khi thất nghiệp. Đây là một dạng **chia sẻ rủi ro trong gia đình (family risk sharing)**.
+
+Mạng này giúp cá nhân vượt cú sốc mà thị trường hoặc nhà nước không hấp thụ hoàn toàn. Nhưng vì khả năng hỗ trợ khác nhau giữa các gia đình, cùng một cú sốc có thể tạo kết quả rất khác.
+
+Đây là lý do nguồn lực gia đình vừa là **bộ đệm** vừa là cơ chế có thể tái tạo bất bình đẳng.
+
+## 자영업과 가계: ranh giới giữa doanh nghiệp và hộ gia đình có thể mờ
+
+Với người tự kinh doanh, tài chính cửa hàng và tài chính gia đình thường liên kết: tiền đặt cọc mặt bằng, khoản vay, thu nhập của vợ/chồng và tài sản nhà có thể cùng ảnh hưởng khả năng tồn tại của doanh nghiệp.
+
+Một cú sốc doanh thu vì vậy không chỉ là “lỗ công ty”; nó có thể đi thẳng vào dòng tiền gia đình.
+
+```text
+doanh thu cửa hàng giảm
+→ dòng tiền kinh doanh yếu
+→ chủ bù bằng tiết kiệm hộ
+→ nếu kéo dài, nợ/tài sản hộ bị ảnh hưởng
+```
+
+Phân tích `자영업` mà không nhìn bảng cân đối hộ sẽ bỏ mất phần lớn rủi ro thực.
+
+## 자산가격 상승 và sự phân kỳ thế hệ
+
+Khi tài sản tăng nhanh hơn thu nhập trong một giai đoạn dài, người đã sở hữu tài sản trước đó và người đang cố mua lần đầu đi trên hai quỹ đạo khác nhau.
+
+Người sở hữu hưởng **lợi nhuận vốn (capital gain)**; người chưa sở hữu phải tích luỹ khoản đặt cọc lớn hơn. Khoảng cách có thể tăng dù cả hai cùng chăm chỉ làm việc.
+
+Điều này làm tuổi trở thành biến kinh tế gián tiếp: không phải vì một thế hệ “giỏi đầu tư hơn”, mà vì họ bước vào thị trường ở giá và lãi suất khác nhau.
+
+Cần tránh biến phân tích thế hệ thành đổ lỗi đạo đức; thời điểm tham gia thị trường là một phần của điều kiện ban đầu.
+
 ## 증여·상속 và chuyển giao giữa thế hệ
 
 Khi chi phí gia nhập thị trường nhà ở cao, hỗ trợ của cha mẹ cho tiền đặt cọc/trả trước có thể ảnh hưởng thời điểm kết hôn và mua nhà. `부모 찬스` là diễn ngôn về nguồn lực gia đình không đồng đều.
@@ -228,6 +329,35 @@ Chi phí cưới, tiền đặt cọc jeonse/mua nhà và thiết lập hộ gia
 Đây là liên hệ giữa chương gia đình, dân số và kinh tế:
 
 `결혼` không thể phân tích tách khỏi `주거`.
+
+## 부모찬스와 독립: độc lập kinh tế không phải biến nhị phân
+
+Một người có thể tự trả sinh hoạt hằng tháng nhưng được cha mẹ hỗ trợ tiền đặt cọc; người khác tự trả nhà nhưng dùng bảo hiểm gia đình hoặc được ông bà hỗ trợ chăm con. Vì vậy “độc lập” có nhiều lớp.
+
+Có thể tách:
+
+```text
+độc lập dòng tiền
+độc lập nhà ở
+độc lập chăm sóc
+độc lập khỏi bảo lãnh / tài sản gia đình
+```
+
+Các lớp này không nhất thiết đạt cùng lúc. Điều này giải thích tại sao hai người cùng tuổi và cùng lương có cảm giác “đã tự lập” khác nhau.
+
+## 사회이동: dịch chuyển xã hội phải tách cảm nhận và dữ liệu
+
+Cảm giác “không thể đi lên” có thể ảnh hưởng hành vi ngay cả trước khi ta đo chính xác mức dịch chuyển. Người tin phần thưởng phụ thuộc quá nhiều vào xuất thân có thể giảm đầu tư vào một số đường truyền thống hoặc chuyển sang chiến lược rủi ro hơn.
+
+Nhưng cảm nhận xã hội và số liệu dịch chuyển không đồng nhất. Cần tách:
+
+```text
+mức dịch chuyển thực tế
+≠ cảm nhận về cơ hội
+≠ câu chuyện truyền thông về cơ hội
+```
+
+Cả ba đều quan trọng: dữ liệu cho biết phân phối, cảm nhận tác động quyết định, còn câu chuyện công chúng ảnh hưởng cách cá nhân diễn giải thành công/thất bại.
 
 ## 소비: tín hiệu địa vị, tín hiệu chất lượng và cảm giác thuộc về
 
@@ -306,11 +436,11 @@ Khi môi trường kinh tế đổi, văn hoá có ba phản ứng lớn:
 
 Khung này hữu ích để hiểu đám cưới đơn giản, nghi lễ ngày lễ nhỏ hơn, kết hôn muộn và hộ một người.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy
 
-> Nhiều hiện tượng được gọi là “văn hoá cạnh tranh” thực chất là **hành vi thích nghi trước phần thưởng không đồng đều và điểm nghẽn khan hiếm**. Trường học, nhà tuyển dụng và vị trí nhà ở có phần thưởng khác nhau; hộ gia đình phản ứng bằng chi tiêu giáo dục, tích luỹ bằng cấp, tiết kiệm, dùng đòn bẩy và xây mạng quan hệ. Văn hoá nằm trong cách xã hội diễn giải những chiến lược này, còn động lực kinh tế nằm phía dưới chúng.
+> Nhiều hiện tượng được gọi là “văn hoá cạnh tranh” thực chất là **hành vi thích nghi trước phần thưởng không đồng đều và điểm nghẽn khan hiếm**. Trường học, nhà tuyển dụng và vị trí nhà ở có phần thưởng khác nhau; hộ gia đình phản ứng bằng chi tiêu giáo dục, tích luỹ bằng cấp, tiết kiệm, dùng đòn bẩy và xây mạng quan hệ. Muốn hiểu sâu hơn, hãy đọc hộ gia đình như một hệ thống có **bảng cân đối + dòng tiền + thời gian + mạng bảo hiểm gia đình**. Văn hoá nằm trong cách xã hội diễn giải các chiến lược này, còn ràng buộc kinh tế nằm phía dưới chúng.
 
-## Hiểu lầm phổ biến (Common Misconceptions)
+## Hiểu lầm phổ biến
 
 “Chaebol = mọi tập đoàn Hàn Quốc” là sai.
 
@@ -323,6 +453,14 @@ Khung này hữu ích để hiểu đám cưới đơn giản, nghi lễ ngày l
 “Người trẻ mua hàng xa xỉ vì vô trách nhiệm tài chính” là đơn giản hoá đạo đức mà không xét mẫu số.
 
 “Sở hữu nhà là cột mốc tự nhiên” bỏ qua lịch sử giá nhà, tín dụng và ràng buộc riêng của từng thế hệ.
+
+“Thu nhập cao nghĩa là hộ có sức chống chịu cao” bỏ qua nợ, chi phí cố định, thanh khoản và tài sản dự phòng.
+
+“Hai nguồn thu nhập tự động làm rủi ro giảm một nửa” bỏ qua tương quan ngành nghề và chi phí chăm sóc.
+
+“Có tài sản lớn nghĩa là có nhiều tiền mặt” nhầm giá trị ròng với thanh khoản.
+
+“Hỗ trợ của cha mẹ chỉ là chuyện riêng của gia đình” bỏ qua việc khác biệt khả năng hỗ trợ có thể tích luỹ thành khác biệt xã hội lớn.
 
 ## Nguồn tham khảo định hướng
 
