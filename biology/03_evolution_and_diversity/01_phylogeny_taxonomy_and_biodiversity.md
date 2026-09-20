@@ -1,157 +1,253 @@
-# Phát sinh chủng loại, phân loại và đa dạng sinh học — Phylogeny, Taxonomy and Biodiversity (계통, 분류와 생물다양성)
+# Phylogeny, Taxonomy và Đa dạng sinh học — Phylogeny, Taxonomy and Biodiversity (계통학, 분류학과 생물다양성)
 
-Evolutionary change ở population tạo divergence; divergence kéo dài tạo lineage; lineage tách nhánh qua thời gian tạo nên **cây sự sống (tree of life)**. Vì vậy phylogeny không phải một chương “học tên các nhóm sinh vật” đứng riêng. Nó là cách biểu diễn lịch sử phân nhánh được tạo ra từ chính các process của evolution.
+Evolution cho ta một hình ảnh quan trọng: history của life không phải chiếc thang mà là **cây phân nhánh**. Population tách ra, divergence tích lũy, lineage mới hình thành. Chapter này trả lời ba câu hỏi nối tiếp nhau: làm sao reconstruct cây lịch sử đó, làm sao đặt tên/phân loại organism theo ancestry, và biodiversity hiện tại được tổ chức ra sao?
 
-## 1. Phylogeny là lịch sử quan hệ, không phải thang tiến bộ
+> **Mental model:** phylogeny là hypothesis về lịch sử phân nhánh; taxonomy là hệ thống tên/phân loại cố gắng phản ánh history đó; biodiversity là kết quả hiện tại của hàng tỷ năm branching, extinction và ecological diversification.
 
-**Phylogeny (phát sinh chủng loại / 계통)** mô tả evolutionary relationship giữa lineage.
+## 1. Tree of life không phải “thứ bậc tiến hóa”
 
-Một phylogenetic tree có node biểu diễn common ancestor và branch biểu diễn lineage.
+Một phylogenetic tree gồm node và branch. Node trong tree thường biểu diễn common ancestor; tip là lineage/species sampled.
 
-Sai lầm phổ biến là đọc tree như thang từ “thấp” lên “cao”. Nhưng tree không có hướng tiến bộ như vậy. Hai species hiện đại cùng ở đầu branch và đều đã evolution từ common ancestor qua cùng khoảng thời gian lịch sử.
+Hai tip nằm cạnh nhau trên hình không nhất thiết “giống nhau hơn”; điều quan trọng là **most recent common ancestor**.
 
-Con người không “tiến hóa từ khỉ hiện đại”; human và các ape hiện đại chia sẻ common ancestor.
+Không có tip nào “cao cấp hơn” tip khác. Human và chimpanzee đều là lineage hiện đại, mỗi bên có history riêng từ common ancestor.
 
 ## 2. Cách đọc một tree đúng
 
-Điều quan trọng là pattern branching, không phải vị trí trái/phải của species trên trang.
+Nếu node chia thành A và B, A và B là **sister taxa**. Một group gồm ancestor và toàn bộ descendant gọi là **clade (nhánh đơn ngành / 단계통군)**.
 
-Nếu A và B chia sẻ common ancestor gần hơn so với C, A và B là sister taxa.
+Tree có thể rotate quanh node mà relationship không đổi. Vì vậy order trái–phải của tip thường không mang meaning evolutionary progress.
 
-Xoay branch quanh node không thay relationship.
-
-```text
-      ┌─ A
-  ┌───┤
-  │   └─ B
-──┤
-  └───── C
-```
-
-Tree này nói A và B có common ancestor gần hơn nhau so với C.
+Branch length chỉ có meaning nếu tree được scale theo amount change hoặc time; không phải mọi tree đều như vậy.
 
 ## 3. Homology và analogy
 
-Để reconstruct relationship, ta tìm **homologous character (đặc điểm tương đồng do chung nguồn gốc / 상동형질)**.
+**Homologous structure (구조적 상동성)** giống nhau do shared ancestry. Forelimb của human, bat và whale có same basic bone pattern vì thừa hưởng từ tetrapod ancestor.
 
-Human arm, bat wing và whale flipper có bone pattern tương đồng vì thừa hưởng từ tetrapod ancestor, dù function khác.
+**Analogous/convergent feature** có function tương tự nhưng evolve độc lập, như wing của bird và insect.
 
-Ngược lại, bird wing và insect wing đều dùng để bay nhưng origin khác; similarity này phần lớn là **analogy** do convergent evolution.
+Phân biệt homology với convergence cực kỳ quan trọng khi reconstruct tree.
 
-Nếu nhầm analogy với homology, ta có thể suy tree sai.
+## 4. Shared derived character
 
-## 4. Shared derived character và clade
+Phylogenetic inference tìm **shared derived characters (synapomorphy / 공유파생형질)** — trait xuất hiện ở common ancestor gần và được descendant chia sẻ.
 
-Một **clade (분기군)** gồm common ancestor và toàn bộ descendant.
+Một trait ancestral quá rộng thường không giúp phân giải relationship gần.
 
-Ta ưu tiên character xuất hiện ở ancestor của clade rồi được truyền xuống descendant — **shared derived character**.
-
-Ví dụ hair là derived trait hữu ích để nhận diện Mammalia trong context vertebrate tree.
-
-Cladistics vì vậy cố group organism theo common ancestry, không chỉ similarity tổng quát.
+Ví dụ vertebral column giúp define vertebrate clade nhưng không phân biệt mammal species với nhau.
 
 ## 5. Molecular phylogenetics
 
-Morphology rất hữu ích nhưng có limitation. DNA/protein sequence cung cấp hàng nghìn character để so sánh.
+DNA/protein sequence cung cấp rất nhiều character. Nếu sequence tương đồng do common ancestry, pattern mutation có thể giúp suy tree.
 
-Nếu hai sequence khác ít hơn, chúng thường có common ancestor gần hơn — nhưng phải dùng model vì mutation rate khác nhau giữa site và lineage.
+Nhưng gene tree có thể khác species tree do incomplete lineage sorting, introgression hoặc horizontal gene transfer.
 
-Alignment đặt position homolog cạnh nhau. Sau đó algorithm như maximum likelihood hoặc Bayesian inference estimate tree phù hợp data và model.
+Một gene không phải luôn đại diện toàn history của species.
 
-Điều này nối phylogeny với bioinformatics và statistics.
+## 6. Sequence alignment là bước reasoning chứ không chỉ thao tác kỹ thuật
 
-## 6. Molecular clock: useful nhưng không phải đồng hồ hoàn hảo
+Trước khi so difference, ta cần align nucleotide/amino acid sao cho position tương ứng homologous được đặt cạnh nhau.
 
-Nếu sequence change với rate tương đối ổn định, genetic distance có thể giúp estimate divergence time.
+Insertion/deletion làm alignment không trivial. Algorithm dùng scoring cho match, mismatch, gap.
 
-Nhưng rate không hoàn toàn constant. Generation time, selection, gene region và lineage đều ảnh hưởng.
+Bad alignment có thể tạo false phylogenetic signal. Đây là connection trực tiếp với bioinformatics.
 
-Vì vậy molecular clock cần calibration, thường bằng fossil hoặc geological event.
+## 7. Parsimony, likelihood và Bayesian inference
 
-Model luôn đi kèm assumption — principle từ chapter đầu quay lại.
+**Maximum parsimony** chọn tree cần ít evolutionary change nhất theo model đơn giản.
 
-## 7. Taxonomy: đặt tên để phản ánh relationship
+**Maximum likelihood** hỏi tree/model nào làm observed sequence data có probability cao nhất.
+
+**Bayesian phylogenetics** kết hợp prior với likelihood để suy posterior distribution của tree/parameter.
+
+Không có method “nhìn data rồi tree tự xuất hiện”; mỗi inference dựa trên model mutation/evolution.
+
+## 8. Support cho branch
+
+Bootstrap resampling hoặc posterior probability được dùng đánh giá support của clade.
+
+Support cao không có nghĩa tree chắc chắn tuyệt đối; nó phản ánh stability/probability dưới data và model đã dùng.
+
+Uncertainty nên được giữ lại thay vì ép mọi branch thành certainty.
+
+## 9. Molecular clock
+
+Nếu substitution tích lũy gần đều theo time ở marker phù hợp, sequence divergence có thể estimate split time.
+
+Nhưng rate thay đổi giữa lineage/gene. Calibration bằng fossil hoặc geological event cần thiết.
+
+Clock là model có error bar, không phải đồng hồ literal.
+
+## 10. Taxonomy: đặt tên để communication ổn định
 
 **Taxonomy (phân loại học / 분류학)** đặt tên và group organism.
 
-Traditional ranks gồm domain, kingdom, phylum, class, order, family, genus, species.
-
 Binomial nomenclature dùng genus + species, ví dụ *Homo sapiens*.
 
-Modern taxonomy ngày càng cố phản ánh phylogeny. Nếu một group bỏ sót descendant của common ancestor, classification có thể gây misleading.
+Hierarchy truyền thống: Domain → Kingdom → Phylum → Class → Order → Family → Genus → Species.
 
-## 8. Three domains: Bacteria, Archaea, Eukarya
+Nhưng modern classification ngày càng ưu tiên clade và phylogeny hơn rigid rank.
 
-Ribosomal RNA sequence cho thấy cellular life hiện nay có ba domain lớn: **Bacteria**, **Archaea**, **Eukarya**.
+## 11. Three domains
 
-Archaea ban đầu dễ bị nhìn như “bacteria lạ”, nhưng molecular data cho thấy nhiều system processing information của archaea gần eukaryote hơn bacteria.
+Life cellular hiện đại thường được chia ba domain: **Bacteria, Archaea, Eukarya**.
 
-Điều này là ví dụ khoa học thay đổi classification khi evidence mới xuất hiện.
+Archaea từng bị gộp với bacteria vì đều prokaryotic, nhưng molecular data cho thấy Archaea có nhiều feature information-processing gần Eukarya hơn theo một số hệ.
 
-## 9. Endosymbiosis nối tree với cell biology
+Đây là ví dụ molecular phylogeny thay đổi taxonomy.
 
-Mitochondria có origin từ bacterial lineage được ancestral eukaryotic cell engulfed. Chloroplast có origin từ cyanobacteria-like lineage.
+## 12. Bacteria: metabolic diversity khổng lồ
 
-Do đó evolutionary history không phải lúc nào cũng tree đơn giản. Có những event gene transfer và symbiosis tạo network-like history.
+Bacteria không phải synonym “germ gây bệnh”. Phần lớn bacteria không pathogenic; nhiều species essential trong nutrient cycle, microbiome và biotechnology.
 
-Cell biology ở [[../01_cell_biology/00_cells_membranes_and_transport]] vì thế mang dấu vết phylogeny.
+Bacteria có cell architecture prokaryotic nhưng metabolism rất đa dạng: aerobic/anaerobic respiration, fermentation, photosynthesis, chemolithotrophy.
 
-## 10. Horizontal gene transfer làm microbial evolution đặc biệt
+## 13. Archaea: không chỉ organism sống ở cực hạn
 
-Bacteria có thể nhận gene qua transformation, transduction hoặc conjugation.
+Một số Archaea là extremophile, nhưng rất nhiều sống trong ocean, soil và microbiome bình thường.
 
-Gene có thể đi ngang giữa lineage thay vì chỉ từ parent xuống offspring.
+Methanogen là group đặc biệt tạo methane trong anaerobic environment.
 
-Điều này làm history của một gene không nhất thiết giống history toàn organism.
+Archaea cho thấy morphology “nhìn giống bacteria” không đồng nghĩa close evolutionary relationship.
 
-Antibiotic-resistance gene có thể lan nhanh giữa species qua plasmid.
+## 14. Eukarya và major lineage
 
-## 11. Biodiversity có nhiều tầng
+Eukarya gồm animal, plant, fungi và nhiều protist lineage.
 
-**Biodiversity (đa dạng sinh học / 생물다양성)** không chỉ là số species.
+“Protist” thường là convenience category hơn clade tự nhiên duy nhất.
 
-Ta có thể nói genetic diversity trong species, species diversity trong community và ecosystem diversity trên landscape.
+Modern phylogeny cho thấy eukaryotic diversity sâu hơn classification schoolbook kingdom đơn giản.
 
-Các tầng liên kết: genetic diversity giúp population có raw variation để respond environment; species diversity ảnh hưởng interaction network; ecosystem diversity tạo nhiều habitat.
+## 15. Plant diversity như history của transition lên land
 
-## 12. Species concept và boundary không phải lúc nào cũng rõ
+Green plant ancestry bắt đầu aquatic. Land colonization tạo challenge: tránh mất water, support body, transport, reproduction không phụ thuộc hoàn toàn water.
 
-Biological species concept dùng reproductive isolation nhưng khó dùng với fossil hay asexual organism.
+Bryophyte, vascular plant, seed plant và flowering plant phản ánh các innovation như vascular tissue, seed, pollen, flower/fruit.
 
-Phylogenetic species concept nhấn lineage riêng biệt.
+Plant biology chapter sẽ xem mechanism của những innovation này.
 
-Morphological concept dùng trait observable.
+## 16. Fungi: absorptive heterotroph và network hyphae
 
-Hybridization cũng làm boundary mờ ở một số group.
+Fungi không phải plant. Chúng lấy nutrient bằng secretion enzyme ra môi trường rồi absorb product.
 
-Do đó “species” là model hữu ích nhưng nature không luôn chia thành box sắc nét.
+Hypha tạo mycelium với surface area lớn, rất phù hợp decomposition và symbiosis.
 
-## 13. Extinction là một phần của tree
+Mycorrhiza nối fungi với plant root, ảnh hưởng nutrient acquisition và ecosystem nutrient cycle.
 
-Hầu hết lineage từng tồn tại đã extinct.
+## 17. Animal diversity và body plan
 
-Tree hiện tại chỉ là phần survivor của lịch sử lớn hơn.
+Animal evolution tạo nhiều body plan khác nhau về symmetry, tissue layer, body cavity, segmentation và development.
 
-Mass extinction thay composition biosphere và mở ecological opportunity cho lineage còn lại.
+Không cần học toàn taxonomy trước để hiểu principle: developmental program và gene regulation tạo architecture body; selection và history tạo diversification.
 
-Diversity hiện nay vì thế phản ánh cả origin lẫn loss.
+Vertebrate chỉ là một nhánh nhỏ trong animal diversity.
 
-## 14. Diversity nối với ecology
+## 18. Biodiversity có nhiều cấp
 
-Một species không chỉ có vị trí trên tree; nó còn có **niche**, interaction, resource use và role trong ecosystem.
+**Đa dạng sinh học (biodiversity / 생물다양성)** gồm ít nhất:
 
-Evolutionary history ảnh hưởng ecological trait. Closely related species có thể share physiology và vulnerability.
+- genetic diversity trong species;
+- species diversity trong community;
+- ecosystem diversity trên landscape.
 
-Ngược lại, ecological interaction tạo selection pressure tiếp tục shape evolution.
+Mất biodiversity không chỉ là “mất số loài”. Loss genetic diversity làm population khó adapt; loss functional group có thể đổi ecosystem process.
 
-Evolution và ecology tạo feedback qua nhiều generation.
+## 19. Species richness và evenness
 
-## 15. Từ tree đến microorganism: vì sao cần zoom vào microbial world?
+Community có thể có cùng số species nhưng distribution abundance rất khác.
 
-Nếu chỉ học plant và animal, ta bỏ qua phần lớn metabolic và genetic diversity của life.
+**Richness** là số species; **evenness** phản ánh abundance phân bố đều đến đâu.
 
-Bacteria và archaea thực hiện nhiều reaction nền của carbon/nitrogen cycle. Microbiome ảnh hưởng host. Virus ảnh hưởng evolution và gene transfer.
+Diversity index kết hợp hai dimension, nhưng choice metric phụ thuộc question.
 
-Do đó bước tiếp theo là zoom vào microbial scale, nơi cell biology, genetics, evolution và ecology gặp nhau.
+## 20. Extinction là phần tự nhiên của evolution nhưng rate quan trọng
 
-Tiếp tục với [[02_microorganisms_and_viruses]].
+Lineage luôn xuất hiện và biến mất trong history. Mass extinction là period mất diversity rất nhanh ở geological scale.
+
+Sau extinction, ecological niche trống có thể tạo adaptive radiation ở surviving lineage.
+
+Current extinction concern không phải vì “extinction chưa từng xảy ra”, mà vì rate, cause và consequence đối với ecosystem/human society.
+
+## 21. Adaptive radiation
+
+Khi lineage tiếp cận nhiều niche mới, diversification có thể nhanh. Island colonization hoặc key innovation có thể mở ecological opportunity.
+
+Darwin’s finches thường được dùng minh họa beak diversification theo food niche.
+
+Phylogeny + ecology cùng giải thích pattern.
+
+## 22. Convergent evolution
+
+Environment tương tự có thể favor solution tương tự ở lineage xa nhau.
+
+Streamlined body ở shark, ichthyosaur extinct và dolphin là convergence do hydrodynamic constraint, không phải close ancestry.
+
+Convergence nhắc ta không suy tree chỉ từ superficial similarity.
+
+## 23. Horizontal gene transfer làm tree of life thành network ở microbes
+
+Bacteria/Archaea có thể trao đổi gene qua transformation, transduction, conjugation.
+
+Vì vậy một gene như antibiotic resistance có history khác organism lineage.
+
+Ở deep microbial evolution, “tree” đôi khi cần bổ sung network reticulation.
+
+## 24. Endosymbiosis và chimeric history của eukaryote
+
+Mitochondria bắt nguồn từ bacterial endosymbiont; chloroplast từ cyanobacterial lineage.
+
+Eukaryotic cell vì vậy mang genetic/history component từ nhiều lineage.
+
+Evolution không chỉ phân nhánh; đôi khi lineage merge qua symbiosis.
+
+## 25. Biogeography
+
+Distribution species trên Earth chứa evidence history. Island species thường gần relative trên mainland/nearby island nhưng diverge sau isolation.
+
+Continental drift cũng giải thích pattern fossil/living species.
+
+Biogeography nối evolution với geology và ecology.
+
+## 26. Conservation cần phylogeny
+
+Nếu phải ưu tiên conservation, giữ evolutionary distinct lineage có thể bảo tồn nhiều unique history/function hơn chỉ đếm species.
+
+Phylogenetic diversity là một dimension của biodiversity planning.
+
+Nhưng conservation decision còn phụ thuộc ecology, social value và uncertainty; không có một metric duy nhất quyết định mọi thứ.
+
+## 27. Case study: whale vẫn là mammal
+
+Whale sống dưới nước và body streamlined giống fish ở superficial level, nhưng anatomy, development và molecular phylogeny đặt whale trong mammals, gần hippo hơn fish.
+
+Convergent adaptation với aquatic environment làm body shape giống fish.
+
+Tree thinking giúp phân biệt ancestry với function.
+
+## 28. Case study: giant panda taxonomy
+
+Morphology/diet từng gây tranh luận relation của giant panda. Molecular evidence đặt giant panda trong bear family, còn red panda ở lineage riêng gần musteloid group hơn.
+
+DNA data có thể resolve ambiguity mà morphology đơn độc khó giải.
+
+## 29. Common misconceptions
+
+“Tree tip nằm cao hơn là tiến hóa hơn” sai.
+
+“Species hiện đại là ancestor trực tiếp của species hiện đại khác” thường sai; chúng share ancestor đã extinct hoặc ancestral population.
+
+“Taxonomy là hệ thống cố định từ Linnaeus” sai; classification đổi theo evidence phylogeny.
+
+“Bacteria là một nhóm organism primitive ít diversity” sai.
+
+“Giống morphology = gần họ” có thể sai vì convergence.
+
+## 30. Bridge: microbe và virus làm evolutionary rule trở nên rõ nhất
+
+Phylogeny cho ta map diversity, nhưng microbes đặt ra những câu hỏi đặc biệt: generation time ngắn, population cực lớn, horizontal gene transfer mạnh, metabolism đa dạng, virus phụ thuộc host nhưng evolution nhanh.
+
+[[02_microorganisms_and_viruses]] sẽ dùng chính cell biology, genetics và evolution vừa học để hiểu microbial life và virus.
+
+Sau đó organismal biology sẽ chuyển sang câu hỏi khác: multicellular lineage giải bài toán transport, control và development ở whole-organism scale thế nào?
+
+> **Mental model cuối chapter:** biodiversity không phải catalog tĩnh. Nó là snapshot của branching history cộng extinction, convergence, migration và ecological diversification. Phylogenetic tree là model để reconstruct history đó từ evidence, không phải chiếc thang xếp organism từ thấp tới cao.
