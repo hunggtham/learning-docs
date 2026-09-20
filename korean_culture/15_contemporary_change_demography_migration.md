@@ -229,6 +229,147 @@ Rủi ro khí hậu không tác động mọi nhóm giống nhau. Nắng nóng n
 
 Vì vậy cấu trúc dân số làm thay đổi hồ sơ dễ tổn thương của quá trình thích nghi khí hậu.
 
+## 부양비: “nhiều người già” chưa tự động bằng “gánh nặng không thể chịu nổi”
+
+Khi nói về già hoá, người ta thường dùng trực giác “ít người trẻ phải nuôi nhiều người già”. Nhưng quan hệ thực tế phụ thuộc nhiều hơn tỷ lệ tuổi. Năng suất lao động, tuổi nghỉ hưu thực tế, tỷ lệ việc làm của người lớn tuổi, tài sản tích luỹ, thuế và thiết kế phúc lợi đều ảnh hưởng nguồn lực sẵn có.
+
+**Tỷ số phụ thuộc (dependency ratio)** hữu ích để mô tả cấu trúc tuổi, nhưng không đo trực tiếp ai đang chuyển tiền cho ai. Một người 68 tuổi còn làm việc và có tài sản khác người 68 tuổi cần chăm sóc dài hạn; một người 30 tuổi thất nghiệp cũng không đóng góp giống người 30 tuổi làm toàn thời gian.
+
+Vì vậy nên tách:
+
+```text
+cấu trúc tuổi
+≠ trạng thái việc làm
+≠ nhu cầu chăm sóc
+≠ dòng chuyển giao thực tế
+```
+
+Điều này giúp tránh biến già hoá thành câu chuyện đạo đức “thế hệ này là gánh nặng cho thế hệ kia”.
+
+## 세대계약: xã hội vận hành bằng một “hợp đồng giữa các thế hệ” ngầm
+
+Trẻ em nhận giáo dục và chăm sóc trước khi tạo thu nhập; người trưởng thành đóng thuế, nuôi con và tích luỹ tài sản; người cao tuổi có thể nhận lương hưu, y tế và chăm sóc. Đây là một **hợp đồng giữa các thế hệ (intergenerational contract)**, dù không phải hợp đồng cá nhân ký trực tiếp.
+
+Hệ thống bền khi người tham gia tin rằng đóng góp hôm nay có liên hệ hợp lý với an toàn tương lai. Nếu thế hệ trẻ cảm thấy nhà ở, việc làm và phúc lợi quá xa tầm với, niềm tin vào hợp đồng có thể giảm; nếu người cao tuổi cảm thấy thay đổi chính sách đe doạ an toàn cuối đời, họ cũng phản ứng.
+
+Tranh luận thế hệ vì vậy thường là tranh luận về **phân phối rủi ro theo vòng đời**, không chỉ khác biệt giá trị.
+
+## 압축고령화: tốc độ thay đổi quan trọng ngang mức độ thay đổi
+
+Hai xã hội có cùng tỷ lệ người cao tuổi nhưng trải nghiệm khác nếu một xã hội mất nhiều thập kỷ để thích nghi còn xã hội kia thay đổi rất nhanh. Khi chuyển đổi nhanh, nhà ở, lực lượng chăm sóc, lương hưu, bệnh viện và văn hoá công sở có ít thời gian điều chỉnh.
+
+Đây là **độ trễ thiết chế (institutional lag)**:
+
+```text
+cấu trúc dân số đổi nhanh
+→ nhu cầu xã hội đổi
+→ thiết chế cập nhật chậm hơn
+→ xuất hiện khoảng trống chăm sóc / tài chính / hạ tầng
+```
+
+Vì vậy câu hỏi không chỉ là “Hàn Quốc già tới mức nào?” mà còn là “các hệ thống có bao nhiêu thời gian để tái thiết kế?”.
+
+## 주거와 생애주기: nhà ở là hạ tầng của vòng đời
+
+Nhà ở ảnh hưởng nhiều quyết định dân số cùng lúc. Người trẻ cần không gian và tài chính đủ ổn định để rời nhà cha mẹ; cặp đôi cần quyết định nơi sống; gia đình có con quan tâm trường học và diện tích; người cao tuổi quan tâm thang máy, y tế và khoảng cách với mạng hỗ trợ.
+
+Một căn nhà vì vậy không chỉ là tài sản. Nó là **hạ tầng cho trạng thái vòng đời**.
+
+```text
+việc làm
+→ khả năng chi trả nhà ở
+→ hình thành hộ riêng
+→ kết hôn / sinh con / di chuyển
+→ nhu cầu nhà ở mới
+```
+
+Vòng phản hồi này nối trực tiếp chương nhà ở và kinh tế. Chính sách nhà ở có thể tác động dân số gián tiếp ngay cả khi không được gắn nhãn “chính sách sinh”.
+
+## 이민의 단계: di cư là một đường ống, không phải khoảnh khắc vượt biên giới
+
+Di cư có thể được phân tích thành nhiều giai đoạn:
+
+```text
+quyết định di cư
+→ nhập cảnh / tư cách cư trú
+→ việc làm hoặc học tập
+→ nhà ở
+→ ngôn ngữ và mạng xã hội
+→ chuyển trạng thái cư trú
+→ ở lại lâu dài / hồi hương / tái di cư
+```
+
+Mỗi giai đoạn có điểm nghẽn khác nhau. Một người có việc nhưng không có mạng xã hội vẫn có thể cảm thấy chưa hội nhập; người nói tiếng Hàn tốt nhưng tư cách cư trú bấp bênh vẫn có rủi ro lớn.
+
+Do đó “hội nhập thành công” không nên đo bằng một biến duy nhất như năng lực ngôn ngữ.
+
+## 언어와 제도문해력: biết tiếng chưa đủ, phải biết đọc hệ thống
+
+Người di cư cần không chỉ ngôn ngữ giao tiếp mà còn **năng lực hiểu thiết chế (institutional literacy)**: biết bệnh viện hoạt động ra sao, hợp đồng nhà cần kiểm tra gì, thuế/bảo hiểm được xử lý thế nào, khi nào phải báo thay đổi hành chính và nơi nào hỗ trợ khi có tranh chấp.
+
+Một người TOPIK cao vẫn có thể gặp khó nếu chưa biết quy trình địa phương. Ngược lại, người tiếng Hàn chưa hoàn hảo nhưng có mạng hỗ trợ tốt có thể xử lý đời sống hiệu quả hơn.
+
+Điều này giải thích vai trò của đồng nghiệp, cộng đồng địa phương, trung tâm hỗ trợ và người phiên dịch văn hoá: họ cung cấp **bản đồ hệ thống**, không chỉ dịch từ.
+
+## 2세 và 정체성: thế hệ sau không phải “bản sao nhẹ hơn” của người nhập cư
+
+Trẻ sinh hoặc lớn lên lâu dài ở Hàn Quốc có thể nói tiếng Hàn như ngôn ngữ chính, đi học trong cùng hệ thống và chia ký ức đại chúng với bạn cùng lớp. Tuy vậy tên, ngoại hình, ngôn ngữ gia đình hoặc quốc tịch của cha mẹ có thể khiến người khác tiếp tục xem họ là “người ngoài”.
+
+Đây là căng thẳng giữa **xã hội hoá thực tế** và **phân loại từ bên ngoài**.
+
+Danh tính thế hệ sau có thể gồm nhiều lớp cùng lúc: Hàn Quốc, nguồn gốc gia đình, địa phương, ngôn ngữ và cộng đồng xuyên quốc gia. Không cần ép các lớp đó thành một lựa chọn duy nhất.
+
+## 돌봄이주: già hoá và di cư có thể nối nhau qua thị trường chăm sóc
+
+Khi nhu cầu chăm sóc tăng trong lúc lực lượng lao động trong nước co lại, xã hội có động lực tìm thêm lao động từ bên ngoài. Điều này tạo mối liên hệ giữa chính sách di cư và kinh tế chăm sóc.
+
+Nhưng chăm sóc không giống sản xuất đơn giản. Công việc cần ngôn ngữ, niềm tin, hiểu văn hoá gia đình và xử lý tình huống cảm xúc. Vì vậy đưa thêm lao động vào hệ thống chỉ giải một phần bài toán; đào tạo, quyền lao động, tính liên tục của người chăm và giao tiếp vẫn quan trọng.
+
+Có thể xem đây là **chuỗi chăm sóc xuyên biên giới (transnational care chain)**: nhu cầu của một xã hội được đáp ứng một phần bởi lao động đến từ xã hội khác, trong khi chính người lao động di cư cũng có gia đình cần được chăm ở nơi xuất phát.
+
+## 지역 서비스 임계점: dịch vụ địa phương không giảm tuyến tính với dân số
+
+Một trường học, bệnh viện nhỏ, tuyến xe buýt hoặc siêu thị cần lượng người dùng tối thiểu để hoạt động kinh tế. Khi dân số giảm dưới ngưỡng, dịch vụ có thể đóng hoàn toàn thay vì chỉ “giảm 10%”.
+
+Đây là **hiệu ứng ngưỡng (threshold effect)**:
+
+```text
+dân số giảm nhẹ
+→ dịch vụ vẫn hoạt động
+↓
+qua ngưỡng tối thiểu
+→ dịch vụ đóng
+→ chất lượng sống giảm mạnh
+→ người còn lại càng muốn rời đi
+```
+
+Điều này giải thích vì sao suy giảm địa phương có thể tăng tốc sau một điểm, thay vì giảm đều đặn.
+
+## 생활인구: ai “sử dụng” một địa phương không nhất thiết là người đăng ký thường trú ở đó
+
+Một nơi có thể ít dân thường trú nhưng nhiều người đi làm, sinh viên, khách du lịch hoặc người có nhà thứ hai. Ngược lại, một địa phương có số đăng ký dân cư nhất định nhưng ban ngày nhiều người rời đi làm ở nơi khác.
+
+Vì vậy để hiểu kinh tế địa phương cần phân biệt **dân cư đăng ký**, **dân cư hiện diện** và **dòng người theo thời gian**.
+
+Đây là cách nhìn động hơn: thành phố không chỉ là một bảng đếm người ở, mà là mạng luồng di chuyển theo giờ, ngày và mùa.
+
+## 정책평가: chính sách dân số phải đo cơ chế trung gian, không chỉ kết quả cuối
+
+Nếu một chương trình hỗ trợ sinh con, kết quả cuối như TFR có thể mất nhiều năm và chịu hàng chục biến khác. Đánh giá tốt cần nhìn các bước trung gian:
+
+```text
+người đủ điều kiện có biết chính sách không?
+→ có tiếp cận được không?
+→ chi phí thực giảm bao nhiêu?
+→ thời gian chăm sóc cải thiện không?
+→ cảm nhận an toàn việc làm / nhà ở thay đổi không?
+→ sau đó mới nhìn kết quả sinh
+```
+
+Nếu chỉ hỏi “chi nhiều tiền mà TFR có tăng ngay không?”, ta có thể bỏ qua chương trình nào đang giải đúng điểm nghẽn nhưng cần thời gian. Ngược lại, đầu vào lớn cũng không chứng minh chính sách hiệu quả nếu cơ chế trung gian không thay đổi.
+
+Đây là bài học về **chuỗi nhân quả chính sách (policy causal chain)**.
+
 ## Vòng phản hồi toàn cầu hoá: Hallyu quay lại định nghĩa “Korean”
 
 Khi nội dung Hàn Quốc được khán giả quốc tế tiếp nhận, người Hàn cũng nhìn văn hoá của mình qua phản hồi từ bên ngoài. Ẩm thực, hanbok, hoạ tiết truyền thống và tiếng lóng được đóng gói lại; người hâm mộ quốc tế đôi khi học thuật ngữ Hàn rồi dùng ngược trở lại trên nền tảng toàn cầu.
@@ -243,11 +384,11 @@ Trong cơ sở dữ liệu, lược đồ cũ có thể chạy tốt khi hình d
 
 Xã hội cũng tương tự. Lương hưu, trường học, nhà ở và thiết chế chăm sóc gia đình từng được thiết kế cho dân số trẻ hơn và hộ lớn hơn. Khi “hình dạng dữ liệu” chuyển sang nhiều người cao tuổi + hộ một người + người có nền tảng di cư, thiết chế phải “di chuyển lược đồ”. Nếu không, căng thẳng văn hoá xuất hiện tại chỗ không khớp giữa hệ thống cũ và thực tế mới.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy
 
-> Văn hoá đương đại Hàn Quốc là trạng thái cân bằng tạm thời giữa **cấu trúc dân số, hộ gia đình, thị trường lao động, di cư, công nghệ và ký ức**. Khi nền dân số thay đổi, chuẩn mực về hôn nhân, chăm sóc, công việc, vùng miền và danh tính cũng buộc phải thương lượng lại. Không nên giải thích đầu ra của cả hệ thống bằng một “tính cách thế hệ” duy nhất.
+> Văn hoá đương đại Hàn Quốc là trạng thái cân bằng tạm thời giữa **cấu trúc dân số, hộ gia đình, thị trường lao động, di cư, công nghệ và ký ức**. Khi nền dân số thay đổi, chuẩn mực về hôn nhân, chăm sóc, công việc, vùng miền và danh tính cũng buộc phải thương lượng lại. Muốn hiểu sâu, cần nhìn cả tốc độ thay đổi, độ trễ thiết chế, hợp đồng giữa các thế hệ và chuỗi hội nhập của người di cư; không nên giải thích đầu ra của cả hệ thống bằng một “tính cách thế hệ” duy nhất.
 
-## Hiểu lầm phổ biến (Common Misconceptions)
+## Hiểu lầm phổ biến
 
 “Mức sinh tăng một năm nghĩa là vấn đề mức sinh thấp đã kết thúc” là sai khi đọc xu hướng.
 
@@ -260,6 +401,14 @@ Xã hội cũng tương tự. Lương hưu, trường học, nhà ở và thiế
 “MZ có một tính cách chung” là câu chuyện quá rộng.
 
 “Người cao tuổi không dùng công nghệ” ngày càng là định kiến lỗi thời.
+
+“Tỷ lệ người cao tuổi cao tự động nghĩa là cùng mức gánh nặng kinh tế” bỏ qua việc làm, sức khoẻ, tài sản và thiết kế phúc lợi.
+
+“Biết tiếng Hàn tốt nghĩa là hội nhập hoàn toàn” bỏ qua nhà ở, tư cách pháp lý, mạng xã hội và năng lực hiểu thiết chế.
+
+“Tăng lao động di cư là đủ giải bài toán chăm sóc” bỏ qua đào tạo, quyền lao động, ngôn ngữ và tính liên tục của quan hệ chăm sóc.
+
+“Dân số địa phương giảm 10% thì mọi dịch vụ cũng chỉ giảm 10%” bỏ qua các hiệu ứng ngưỡng khiến dịch vụ có thể đóng hoàn toàn.
 
 ## Dữ liệu và nguồn cần ghi mốc thời gian
 
