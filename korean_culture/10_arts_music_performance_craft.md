@@ -172,6 +172,67 @@ Câu hỏi tốt hơn “có còn truyền thống không?” là: **lớp nào 
 
 Đây là **tính liên tục chức năng (functional continuity)**. Truyền thống sống không phải bằng bất biến tuyệt đối mà bằng sự liên tục được thương lượng.
 
+## 미술관·박물관: nghệ thuật hiện đại cần thiết chế để được nhìn thấy
+
+Nghệ thuật không chỉ tồn tại ở xưởng của nghệ sĩ. **Bảo tàng (박물관 / museum)**, **bảo tàng mỹ thuật (미술관 / art museum)**, phòng trưng bày, quỹ văn hoá, trường nghệ thuật, nhà phê bình và truyền thông cùng tạo hạ tầng để tác phẩm được lưu giữ, diễn giải và tiếp cận công chúng.
+
+Một tác phẩm có thể đi qua chuỗi:
+
+```text
+nghệ sĩ
+→ xưởng / nhóm sáng tác
+→ giám tuyển
+→ triển lãm / phòng trưng bày
+→ nhà sưu tập / bảo tàng
+→ phê bình / lưu trữ
+→ lịch sử nghệ thuật
+```
+
+Chuỗi này không trung lập hoàn toàn. Tác phẩm nào được chọn, ai có ngân sách triển lãm, không gian nào nằm ở Seoul hay địa phương và ai có thời gian tới xem đều ảnh hưởng cái gì trở thành “nghệ thuật được nhìn thấy”.
+
+## 큐레이터: giám tuyển không chỉ treo tranh
+
+**Giám tuyển (큐레이터 / curator)** xây ngữ cảnh để người xem hiểu các tác phẩm có quan hệ gì với nhau. Họ lựa chọn, sắp xếp, viết văn bản, phối hợp mượn tác phẩm, ánh sáng, bảo quản và chương trình giáo dục.
+
+Vì vậy triển lãm là một dạng **thiết kế thông tin (information design)**. Cùng một tác phẩm đặt cạnh các tác phẩm khác, trong một tiêu đề khác hoặc với chú giải khác có thể làm người xem xây cách hiểu khác.
+
+Điều này không có nghĩa giám tuyển “quyết định ý nghĩa duy nhất”; nó cho thấy trải nghiệm nghệ thuật được trung gian bởi thiết chế và giao diện trưng bày.
+
+## 비엔날레와 아트페어: hai logic khác nhau của thế giới nghệ thuật
+
+**Biennale (비엔날레)** thường nhấn mạnh triển lãm quy mô lớn, giám tuyển, chủ đề và trao đổi quốc tế. **Hội chợ nghệ thuật (아트페어 / art fair)** gần thị trường hơn, nơi phòng trưng bày giới thiệu tác phẩm với nhà sưu tập và công chúng.
+
+Hai không gian có thể cùng chứa nghệ thuật đương đại nhưng động lực khác nhau:
+
+```text
+biennale → diễn ngôn / thử nghiệm / đại diện
+art fair → thị trường / quan hệ gallery–collector / giá
+```
+
+Ranh giới không tuyệt đối. Nghệ sĩ cần cả uy tín chuyên môn và khả năng duy trì thu nhập; phòng trưng bày cần doanh thu nhưng cũng xây chương trình nghệ thuật dài hạn.
+
+## 서울 중심성과 지역 문화공간: nghệ thuật cũng có địa lý
+
+Seoul tập trung nhiều bảo tàng, phòng trưng bày, trường nghệ thuật, nhà sưu tập và truyền thông, tạo hiệu ứng tập tụ. Nhưng Gwangju, Busan, Daegu, Jeju và nhiều địa phương có biennale, bảo tàng, liên hoan và không gian độc lập riêng.
+
+Nếu chỉ nhìn nghệ thuật Hàn Quốc qua vài khu ở Seoul, ta dễ nhầm **trung tâm thị trường** với **toàn bộ hệ sinh thái sáng tạo**. Địa phương có thể cung cấp chủ đề, cộng đồng và lịch sử khác; ngược lại, nghệ sĩ địa phương vẫn phải kết nối mạng lưới quốc gia hoặc quốc tế để có nguồn lực và khả năng hiển thị.
+
+## 독립공간: không gian độc lập và thử nghiệm
+
+**Không gian độc lập (독립공간 / independent art space)** thường hoạt động với quy mô nhỏ hơn thiết chế lớn, cho phép nghệ sĩ trẻ hoặc dự án thử nghiệm xuất hiện trước khi có vị trí trong thị trường chính thống.
+
+Nhưng tính độc lập không đồng nghĩa không có ràng buộc. Tiền thuê, tài trợ, lao động tình nguyện, thời gian của người tổ chức và khả năng duy trì khán giả đều là giới hạn thực tế.
+
+Đây là bài toán quen thuộc của văn hoá: **tự do sáng tạo cần hạ tầng vật chất**. Không gian, thời gian và thu nhập quyết định ai có thể tiếp tục làm nghệ thuật đủ lâu để phát triển nghề.
+
+## 디지털 전시 và nghệ thuật trong môi trường số
+
+Triển lãm trực tuyến, tác phẩm video, nghệ thuật tương tác và lưu trữ số làm ranh giới giữa “tác phẩm”, “bản sao” và “giao diện xem” phức tạp hơn. Một file có thể được sao chép gần như không tốn chi phí, nhưng trải nghiệm trong không gian, thiết bị hoặc phiên bản được chứng thực vẫn tạo khác biệt.
+
+Khi nghệ thuật đi vào nền tảng số, khả năng tiếp cận tăng nhưng cũng xuất hiện vấn đề bảo quản định dạng, quyền tác giả và phụ thuộc nền tảng. Một tác phẩm dùng phần mềm cũ có thể khó chạy sau nhiều năm dù file vẫn tồn tại.
+
+Bảo tồn nghệ thuật số vì vậy không chỉ lưu tệp; có khi phải lưu môi trường chạy, phần cứng, tài liệu và hướng dẫn tái tạo.
+
 ## Liên hệ kiến thức: nghệ thuật như hệ lưu trữ đa phương thức
 
 Sách lưu mô tả rõ ràng. Biểu diễn/thủ công lưu tri thức thủ tục trong cơ thể. Vật thể lưu lịch sử vật liệu. Ghi âm lưu âm thanh/hình ảnh nhưng không giữ toàn bộ tương tác.
@@ -183,13 +244,14 @@ tri thức tường minh → sách, ký âm, lưu trữ
 tri thức thủ tục → cơ thể, học nghề
 tri thức vật liệu → công cụ, lò, sợi, sơn
 tri thức xã hội → nghi lễ, khán giả, cộng đồng
+tri thức giám tuyển → triển lãm, chú giải, lưu trữ
 ```
 
-Một hệ di sản khoẻ cần nhiều lớp lưu trữ cùng tồn tại.
+Một hệ nghệ thuật khoẻ cần nhiều lớp lưu trữ cùng tồn tại.
 
 ## Mô hình tư duy (Mental Model)
 
-> Nghệ thuật truyền thống là nơi thông tin được lưu không chỉ bằng chữ mà bằng cơ thể, nhịp, vật liệu, không gian và nghi lễ. Một nghệ nhân bậc thầy hoặc người biểu diễn là “kho dữ liệu sống” của những gì sách không ghi hết. Bảo tồn tốt không chỉ giữ đầu ra; phải giữ cả chuỗi tạo ra đầu ra.
+> Nghệ thuật Hàn Quốc không chỉ là “truyền thống” hoặc “K-pop”. Nó là một chuỗi gồm người thực hành, vật liệu, không gian, thiết chế, thị trường và khán giả. Một nghệ nhân bậc thầy, nghệ sĩ đương đại, giám tuyển hay không gian độc lập đều là những nút khác nhau trong cùng hệ sinh thái lưu giữ và tạo nghĩa.
 
 ## Hiểu lầm phổ biến (Common Misconceptions)
 
@@ -202,6 +264,8 @@ Một hệ di sản khoẻ cần nhiều lớp lưu trữ cùng tồn tại.
 Kỹ năng thủ công không phải “bí quyết cảm tính” đối lập khoa học; nhiều nghề là khoa học vật liệu thực nghiệm tích luỹ trước lý thuyết chính thức.
 
 “Thương mại hoá = mất tính xác thực” quá đơn giản; thị trường có thể vừa phá vừa cứu quá trình truyền nghề tuỳ động lực.
+
+“Bảo tàng chỉ là nơi cất đồ cũ” bỏ qua vai trò nghiên cứu, giám tuyển, giáo dục, bảo quản và định hình ký ức văn hoá.
 
 ## Nguồn tham khảo
 
