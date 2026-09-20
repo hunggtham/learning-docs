@@ -1,91 +1,91 @@
 # Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ
 
-## Công ty là nơi các lớp văn hoá va vào nhau
+## Công ty là nơi nhiều lớp văn hoá va vào nhau
 
-Workplace Hàn Quốc hiện đại là một laboratory đặc biệt: hierarchy Nho giáo, quản trị kiểu công nghiệp, luật lao động, multinational practice, agile software development và expectation của thế hệ trẻ cùng tồn tại. Vì vậy không có một “văn hoá công ty Hàn” duy nhất. Chaebol, startup, ngân hàng, game studio, công ty SI/SM và cơ quan nhà nước có architecture tổ chức rất khác.
+Công sở Hàn Quốc hiện đại là một “phòng thí nghiệm xã hội” đặc biệt: thứ bậc chịu ảnh hưởng Nho giáo, quản trị kiểu công nghiệp, luật lao động, thông lệ của công ty đa quốc gia, phát triển phần mềm linh hoạt và kỳ vọng của thế hệ trẻ cùng tồn tại. Vì vậy không có một “văn hoá công ty Hàn” duy nhất. Chaebol, công ty khởi nghiệp, ngân hàng, studio game, công ty SI/SM và cơ quan nhà nước có **kiến trúc tổ chức (organizational architecture)** rất khác nhau.
 
-Tuy vậy, một số khái niệm giúp đọc system.
+Tuy vậy, một số khái niệm giúp ta đọc được hệ thống.
 
 ## 직급, 직책, 연차: ba trục dễ nhầm
 
-**Rank / 직급** là cấp bậc nhân sự; các tên truyền thống có thể gồm `사원`, `대리`, `과장`, `차장`, `부장`. Nhiều công ty đã thay đổi hoặc giản lược.
+**Cấp bậc nhân sự (직급 / rank)** có thể gồm các tên truyền thống như `사원`, `대리`, `과장`, `차장`, `부장`. Nhiều công ty đã thay đổi hoặc giản lược hệ thống này.
 
-**Position/role / 직책** là vai trò quản lý như `팀장`, `파트장`, `본부장`. Một người có 직급 nhất định nhưng đảm nhiệm hoặc không đảm nhiệm 직책.
+**Vai trò/chức trách (직책 / position, role)** là vị trí quản lý như `팀장`, `파트장`, `본부장`. Một người có 직급 nhất định nhưng có thể đang hoặc không đang đảm nhiệm 직책.
 
-**Years of experience/tenure / 연차** có thể chỉ số năm đi làm hoặc năm trong tổ chức. Trong daily speech, `몇 년 차예요?` giúp định vị seniority nghề nghiệp.
+**Số năm kinh nghiệm hoặc thâm niên (연차 / years of experience, tenure)** có thể chỉ số năm đi làm hoặc số năm trong tổ chức. Trong lời nói hằng ngày, `몇 년 차예요?` giúp xác định mức thâm niên nghề nghiệp.
 
-Nếu coi organization như access-control system, `직급` giống grade, `직책` giống assigned role, còn `연차` giống historical metadata. Permission thực thường là function của cả ba.
+Nếu coi tổ chức như một hệ thống kiểm soát truy cập, `직급` giống cấp, `직책` giống vai trò được gán, còn `연차` giống dữ liệu lịch sử. Quyền hạn thực tế thường là kết quả của cả ba.
 
-Ngoài ra còn có **업무분장 (division of duties / phân công công việc)**. Đây là layer quan trọng vì một người có title cao chưa chắc là owner của task cụ thể. Trong project, câu hỏi `이 건 담당자가 누구예요?` thường quan trọng hơn việc nhìn chức vụ.
+Ngoài ra còn có **phân công công việc (업무분장 / division of duties)**. Đây là lớp quan trọng vì người có chức danh cao chưa chắc là người phụ trách trực tiếp một việc cụ thể. Trong dự án, câu `이 건 담당자가 누구예요?` thường quan trọng hơn việc chỉ nhìn chức vụ.
 
-## 담당자, owner và khái niệm trách nhiệm
+## 담당자: người phụ trách và trách nhiệm vận hành
 
-`담당자` là người phụ trách trực tiếp một việc. Trong team Hàn, nhiều communication xoay quanh việc xác định ai đang `담당` issue nào. Đây là cách biến organization chart thành operational ownership.
+`담당자` là người phụ trách trực tiếp một việc. Trong nhóm Hàn Quốc, nhiều giao tiếp xoay quanh việc xác định ai đang `담당` vấn đề nào. Đây là cách biến sơ đồ tổ chức thành trách nhiệm vận hành thực tế.
 
-Một task tốt thường có bốn thuộc tính:
+Một công việc rõ ràng thường có bốn thuộc tính:
 
 ```text
 담당자: ai chịu trách nhiệm xử lý
 기한: khi nào cần xong
-산출물: output cụ thể là gì
+산출물: đầu ra cụ thể là gì
 공유대상: ai cần được thông báo
 ```
 
-Nếu thiếu một trong bốn, communication dễ trở thành “mọi người đều biết nhưng không ai thực sự sở hữu”.
+Nếu thiếu một trong bốn, giao tiếp dễ rơi vào trạng thái “mọi người đều biết nhưng không ai thực sự sở hữu việc đó”.
 
-`책임소재` nghĩa là locus of responsibility, thường xuất hiện khi có issue và organization cần biết ai chịu trách nhiệm ở layer nào. Khái niệm này có mặt tích cực là accountability, nhưng nếu bị lạm dụng thành blame-hunting thì team sẽ giấu lỗi thay vì report sớm.
+`책임소재` chỉ nơi quy trách nhiệm, thường xuất hiện khi có sự cố và tổ chức cần biết trách nhiệm nằm ở lớp nào. Mặt tích cực là tăng **trách nhiệm giải trình (accountability)**; mặt tiêu cực là nếu bị biến thành săn người để đổ lỗi thì nhân viên sẽ giấu lỗi thay vì báo sớm.
 
-## 보고: báo cáo như một protocol quản trị
+## 보고: báo cáo như một giao thức quản trị
 
-**Reporting / 보고** có vai trò lớn trong nhiều tổ chức Hàn. Người nước ngoài đôi khi cảm thấy phải “báo cáo quá nhiều”, nhưng từ góc nhìn manager, report giảm uncertainty và tạo traceability.
+**Báo cáo (보고 / reporting)** có vai trò lớn trong nhiều tổ chức Hàn. Người nước ngoài đôi khi cảm thấy phải “báo cáo quá nhiều”, nhưng từ góc nhìn quản lý, báo cáo giúp giảm bất định và tạo dấu vết có thể kiểm tra lại.
 
-Một report tốt trả lời: status hiện tại là gì, risk ở đâu, decision cần ai, next step là gì. Vấn đề nảy sinh khi report trở thành ritual phục vụ hierarchy thay vì information flow. Khi cùng dữ liệu phải format lại nhiều lần chỉ vì chain of command, coordination cost tăng.
+Một báo cáo tốt trả lời: trạng thái hiện tại là gì, rủi ro ở đâu, cần ai quyết định và bước tiếp theo là gì. Vấn đề nảy sinh khi báo cáo trở thành nghi thức phục vụ thứ bậc thay vì luồng thông tin. Nếu cùng dữ liệu phải định dạng lại nhiều lần chỉ vì chuỗi cấp trên, chi phí phối hợp sẽ tăng.
 
-Trong software team, có thể phân biệt **information pull** và **information push**. Dashboard cho phép manager pull status; daily report bắt engineer push. Nếu system observability tốt, nhu cầu status report thủ công có thể giảm.
+Trong nhóm phần mềm có thể phân biệt **kéo thông tin (information pull)** và **đẩy thông tin (information push)**. Bảng điều khiển cho phép quản lý tự xem trạng thái; báo cáo hằng ngày yêu cầu kỹ sư chủ động gửi. Nếu khả năng quan sát hệ thống tốt, nhu cầu báo cáo trạng thái thủ công có thể giảm.
 
 ## 보고 타이밍: báo sớm hay tự xử lý trước?
 
-Một khác biệt văn hoá–tổ chức dễ gây conflict là **khi nào phải báo**. Một engineer có thể nghĩ “tôi xử lý xong rồi báo sẽ tốt hơn”; manager có thể nghĩ “issue ảnh hưởng release mà không báo ngay là risk”. Vì vậy report timing là một part của protocol.
+Một khác biệt văn hoá–tổ chức dễ gây xung đột là **khi nào phải báo**. Kỹ sư có thể nghĩ “tôi xử lý xong rồi báo sẽ tốt hơn”; quản lý có thể nghĩ “vấn đề ảnh hưởng phát hành mà không báo ngay là rủi ro”. Vì vậy thời điểm báo cáo cũng là một phần của giao thức làm việc.
 
-Trong incident hoặc UAT, pattern hữu ích là:
+Trong sự cố hoặc UAT, khuôn mẫu hữu ích là:
 
 ```text
-1. 발견: phát hiện issue
-2. 영향도: ảnh hưởng tới đâu
-3. 임시조치: đã làm gì tạm thời
-4. 원인: đã biết root cause chưa
-5. 다음 액션: ai làm gì tiếp
+1. 발견: phát hiện vấn đề
+2. 영향도: phạm vi ảnh hưởng
+3. 임시조치: biện pháp tạm thời đã làm
+4. 원인: đã biết nguyên nhân gốc chưa
+5. 다음 액션: ai làm gì tiếp theo
 ```
 
-`선보고 후조치` — báo trước rồi xử lý — có thể phù hợp khi impact lớn hoặc cần approval. Nhưng technical emergency đôi khi phải `선조치 후보고` nếu delay gây thiệt hại. Điều quan trọng là team phải biết rule, không để engineer đoán bằng 눈치.
+`선보고 후조치` — báo trước rồi xử lý — có thể phù hợp khi ảnh hưởng lớn hoặc cần phê duyệt. Nhưng tình huống kỹ thuật khẩn cấp đôi khi cần `선조치 후보고` nếu trì hoãn gây thiệt hại. Điều quan trọng là nhóm phải biết quy tắc, không để kỹ sư phải đoán bằng 눈치.
 
 ## 결재, 승인 và 합의
 
-**Approval / 결재** là quy trình xin phê duyệt, thường qua hệ thống điện tử `전자결재`. Nó giúp compliance, budget control và accountability. Nhưng chain quá dài tăng decision latency.
+**Phê duyệt (결재 / approval)** thường là quy trình chính thức, nhiều nơi dùng hệ thống điện tử `전자결재`. Nó giúp kiểm soát tuân thủ, ngân sách và trách nhiệm. Nhưng chuỗi phê duyệt quá dài làm tăng độ trễ quyết định.
 
-`승인` cũng là approval, nhưng sắc thái có thể rộng hơn và không nhất thiết là formal document routing như `결재`. `합의` trong workflow có thể chỉ việc stakeholder liên quan đồng thuận trước khi final approver ký.
+`승인` cũng có nghĩa phê duyệt nhưng rộng hơn và không nhất thiết gắn với tuyến văn bản chính thức như `결재`. `합의` trong luồng công việc có thể chỉ việc các bên liên quan đồng thuận trước khi người có quyền cuối cùng ký.
 
-Một approval chain có thể trông như:
+Một chuỗi phê duyệt có thể trông như:
 
 ```text
 작성자 → 검토자 → 합의자 → 결재권자
 ```
 
-Nếu người học chỉ dịch tất cả thành “approve” sẽ bỏ mất architecture của process.
+Nếu người học dịch tất cả thành một từ “approve”, họ sẽ bỏ mất kiến trúc của quy trình.
 
-Little’s Law trong queueing theory nói rằng lượng work-in-progress liên quan arrival rate và time trong system. Dù không cần áp công thức máy móc, logic này hữu ích: nếu mọi request phải qua nhiều reviewer bận, queue sẽ tăng. “Văn hoá chậm” đôi khi không phải attitude mà là architecture của approval.
+**Định luật Little (Little’s Law)** trong lý thuyết hàng đợi cho thấy lượng công việc đang xử lý liên quan tới tốc độ việc đến và thời gian nằm trong hệ thống. Không cần áp công thức máy móc để thấy logic: nếu mọi yêu cầu phải qua nhiều người duyệt đang bận, hàng đợi sẽ dài. “Văn hoá chậm” đôi khi không phải thái độ mà là kiến trúc của quy trình phê duyệt.
 
 ## 회의: cuộc họp và quyền nói
 
-Trong team hierarchy mạnh, người junior có thể ít phản biện công khai hơn, đặc biệt khi chưa có trust. Điều này tạo **information loss**: người gần problem nhất biết bug nhưng signal bị attenuate trên đường lên management.
+Trong nhóm có thứ bậc mạnh, người trẻ hoặc cấp thấp hơn có thể ít phản biện công khai, đặc biệt khi chưa có niềm tin. Điều này tạo **mất mát thông tin (information loss)**: người gần vấn đề nhất biết lỗi nhưng tín hiệu bị yếu đi trên đường lên cấp quản lý.
 
-Các organization hiệu quả cố tạo psychological safety — **an toàn tâm lý / 심리적 안전감** — để disagreement về task không bị hiểu là disrespect cá nhân. Đây là nơi cultural literacy quan trọng: có thể giữ kính ngữ nhưng vẫn challenge assumption bằng evidence.
+Các tổ chức hiệu quả cố xây dựng **an toàn tâm lý (심리적 안전감 / psychological safety)** để bất đồng về công việc không bị hiểu là thiếu tôn trọng cá nhân. Đây là nơi hiểu văn hoá trở nên quan trọng: có thể giữ kính ngữ nhưng vẫn phản biện giả định bằng bằng chứng.
 
-Ví dụ thay vì trực tiếp `그건 틀렸습니다` trong tình huống nhạy cảm, người nói có thể frame: `제가 확인한 로그에서는 다른 결과가 보여서요. 이 부분을 다시 확인해 보면 좋을 것 같습니다.` Nội dung kỹ thuật không yếu đi; delivery giảm face threat.
+Ví dụ, thay vì trực tiếp `그건 틀렸습니다` trong tình huống nhạy cảm, người nói có thể dùng `제가 확인한 로그에서는 다른 결과가 보여서요. 이 부분을 다시 확인해 보면 좋을 것 같습니다.` Nội dung kỹ thuật không yếu đi; cách diễn đạt chỉ giảm nguy cơ làm người khác mất mặt.
 
-## 회의록, 정리 và “ai hiểu gì sau meeting?”
+## 회의록, 정리: sau cuộc họp mọi người hiểu cùng một việc chưa?
 
-**Meeting minutes / 회의록** và từ `정리` rất quan trọng. Sau meeting, nhiều team dùng message kiểu:
+**Biên bản họp (회의록 / meeting minutes)** và từ `정리` rất quan trọng. Sau họp, nhiều nhóm dùng tin nhắn kiểu:
 
 ```text
 오늘 회의 내용 정리드립니다.
@@ -94,26 +94,26 @@ Ví dụ thay vì trực tiếp `그건 틀렸습니다` trong tình huống nh�
 3. 재테스트: 금요일 오전
 ```
 
-`정리하다` ở đây không chỉ là “sắp xếp”; nó là biến discussion thành shared state. Một meeting không có written summary dễ tạo nhiều version of truth.
+`정리하다` ở đây không chỉ là “sắp xếp”; nó là biến thảo luận thành trạng thái chung. Một cuộc họp không có bản tổng kết viết ra dễ tạo nhiều “phiên bản sự thật” khác nhau.
 
-Trong distributed systems, consensus đắt. Trong team người, meeting minutes là một low-cost consensus artifact.
+Trong hệ thống phân tán, đạt đồng thuận có chi phí cao. Trong nhóm con người, biên bản họp là một vật chứng đồng thuận có chi phí thấp.
 
-## 공유: “share” không chỉ là gửi file
+## 공유: “chia sẻ” không chỉ là gửi file
 
-`공유드립니다`, `내용 공유 부탁드립니다`, `관련자에게 공유해 주세요` xuất hiện rất nhiều trong corporate Korean. `공유` có thể nghĩa gửi information để mọi stakeholder giữ cùng context.
+`공유드립니다`, `내용 공유 부탁드립니다`, `관련자에게 공유해 주세요` xuất hiện rất nhiều trong tiếng Hàn doanh nghiệp. `공유` có thể nghĩa là gửi thông tin để những người liên quan cùng nắm bối cảnh.
 
-Nhưng share quá rộng tạo notification overload. Good communication cần phân biệt:
+Nhưng chia sẻ quá rộng tạo quá tải thông báo. Giao tiếp tốt cần phân biệt:
 
-- người phải action;
+- người phải hành động;
 - người chỉ cần biết;
-- người cần approve;
-- người không cần nhận message.
+- người cần phê duyệt;
+- người không cần nhận tin.
 
-Email CC, messenger mention và project tool đều là routing layer. Culture “share nhiều cho an toàn” có thể giảm blame risk nhưng tăng cognitive load.
+Email CC, nhắc tên trên trình nhắn tin và công cụ quản lý dự án đều là các lớp định tuyến thông tin. Văn hoá “chia sẻ nhiều cho an toàn” có thể giảm nguy cơ bị quy trách nhiệm nhưng tăng tải nhận thức.
 
-## 인수인계: handover như chuyển state giữa người
+## 인수인계: bàn giao như chuyển trạng thái giữa người
 
-**Handover / 인수인계** là quá trình chuyển công việc khi đổi owner, nghỉ phép, chuyển team hoặc nghỉ việc. Một handover tốt không chỉ có danh sách task; nó phải truyền cả hidden state:
+**Bàn giao (인수인계 / handover)** là quá trình chuyển công việc khi đổi người phụ trách, nghỉ phép, chuyển nhóm hoặc nghỉ việc. Một bàn giao tốt không chỉ có danh sách việc; nó phải truyền cả trạng thái ẩn:
 
 ```text
 현재 상태
@@ -125,108 +125,108 @@ Email CC, messenger mention và project tool đều là routing layer. Culture �
 과거 의사결정 이유
 ```
 
-Nếu chỉ truyền file mà không truyền reason behind decision, người mới nhận task có code nhưng mất context. Đây là organizational knowledge-loss problem.
+Nếu chỉ truyền file mà không truyền lý do của quyết định cũ, người mới nhận việc có mã nguồn nhưng mất bối cảnh. Đây là vấn đề mất kiến thức tổ chức.
 
 ## 회식: ăn uống như hạ tầng quan hệ
 
-**Company dinner / 회식** historically là nơi đồng nghiệp tạo bond ngoài formal office. Vì high-context work dựa nhiều vào trust, shared meal giúp tăng bandwidth của quan hệ. Trong một số tổ chức, information và mentorship từng diễn ra ở đây.
+**Bữa ăn công ty (회식 / company dinner)** trong lịch sử là nơi đồng nghiệp tạo gắn kết ngoài văn phòng chính thức. Vì môi trường làm việc ngữ cảnh cao dựa nhiều vào niềm tin, bữa ăn chung giúp tăng “băng thông quan hệ”. Ở một số tổ chức, thông tin và hướng dẫn nghề nghiệp từng được truyền qua không gian này.
 
-Nhưng 회식 cũng có cost: thời gian cá nhân, alcohol pressure, exclusion của người chăm con hoặc không uống. Vì vậy norm đang thay đổi: lunch gathering, voluntary attendance, earlier end time và non-alcoholic format phổ biến hơn ở nhiều nơi.
+Nhưng 회식 cũng có chi phí: thời gian cá nhân, áp lực uống rượu, và sự bất lợi với người có trách nhiệm chăm sóc hoặc không uống. Vì vậy chuẩn mực đang thay đổi: ăn trưa cùng nhau, tham gia tự nguyện, kết thúc sớm và hình thức không rượu phổ biến hơn ở nhiều nơi.
 
-Điều cần tránh là đồng nhất “회식 = ép uống”. Có môi trường như vậy, nhưng không phải definition của 회식.
+Điều cần tránh là đồng nhất “회식 = ép uống”. Có môi trường như vậy, nhưng đó không phải định nghĩa của 회식.
 
-## 술자리 etiquette và quyền từ chối
+## Phép lịch sự khi uống rượu và quyền từ chối
 
-Tập quán truyền thống thường gồm rót rượu cho người khác bằng hai tay, người trẻ quay mặt khi uống trước người lớn tuổi, không tự đổ đầy ly trong một số context. Những ritual này encode respect.
+Tập quán truyền thống thường gồm rót rượu cho người khác bằng hai tay, người trẻ quay mặt khi uống trước người lớn tuổi, hoặc không tự rót đầy ly trong một số bối cảnh. Những nghi thức này mã hoá sự tôn trọng.
 
-Tuy nhiên, workplace hiện đại chịu luật, compliance và thay đổi norm. Việc ép uống không nên được hợp thức hoá bằng “văn hoá Hàn”. Cultural knowledge dùng để hiểu signal, không phải để xoá boundary cá nhân.
+Tuy nhiên công sở hiện đại chịu tác động của luật, quy định tuân thủ và thay đổi chuẩn mực. Việc ép uống không nên được hợp thức hoá bằng “văn hoá Hàn”. Kiến thức văn hoá dùng để hiểu tín hiệu, không phải để xoá ranh giới cá nhân.
 
-## 야근, 연차 và availability culture
+## 야근, 연차 và văn hoá luôn sẵn sàng
 
-**Overtime / 야근** từng gắn với giai đoạn growth-oriented management và competition cao. Có nơi “ngồi lại lâu” trở thành signal của commitment ngay cả khi productivity không tăng. Đây là classic proxy failure: presence được dùng thay cho output vì output khó đo.
+**Làm thêm giờ (야근 / overtime)** từng gắn với giai đoạn quản trị ưu tiên tăng trưởng và cạnh tranh cao. Có nơi “ngồi lại lâu” trở thành tín hiệu của sự tận tâm ngay cả khi năng suất không tăng. Đây là lỗi dùng một chỉ báo thay thế kém: thời gian hiện diện được dùng thay cho đầu ra vì đầu ra khó đo.
 
-Trong knowledge work, productivity không tuyến tính với time. Sau fatigue threshold, error rate tăng. Với programming, một giờ debug lúc tỉnh táo có thể giá trị hơn ba giờ code lúc kiệt sức.
+Trong công việc tri thức, năng suất không tăng tuyến tính theo thời gian. Sau ngưỡng mệt mỏi, tỷ lệ lỗi tăng. Với lập trình, một giờ gỡ lỗi lúc tỉnh táo có thể giá trị hơn ba giờ viết mã khi kiệt sức.
 
-`연차` còn có nghĩa **ngày nghỉ phép năm** ngoài nghĩa số năm kinh nghiệm, nên context rất quan trọng. `연차를 쓰다` nghĩa dùng ngày phép. Ở team tốt, leave là resource được plan; ở team thiếu người, employee có thể cảm thấy phải nhìn workload của đồng đội trước khi nghỉ.
+`연차` còn có nghĩa **ngày nghỉ phép năm** ngoài nghĩa số năm kinh nghiệm, nên bối cảnh rất quan trọng. `연차를 쓰다` nghĩa là dùng ngày phép. Ở nhóm vận hành tốt, nghỉ phép là nguồn lực được lên kế hoạch; ở nhóm thiếu người, nhân viên có thể cảm thấy phải nhìn khối lượng việc của đồng đội trước khi nghỉ.
 
-Đây là một ví dụ của informal constraint: quyền pháp lý có thể tồn tại, nhưng social cost perceived vẫn ảnh hưởng behavior.
+Đây là ví dụ về **ràng buộc không chính thức (informal constraint)**: quyền pháp lý có thể tồn tại, nhưng chi phí xã hội mà người lao động cảm nhận vẫn ảnh hưởng hành vi.
 
-## 정규직, 계약직, 파견, 협력사: employment status ảnh hưởng experience
+## 정규직, 계약직, 파견, 협력사: loại hình việc làm ảnh hưởng trải nghiệm
 
-Không phải mọi người trong cùng office có cùng organizational position. Có thể có:
+Không phải mọi người trong cùng văn phòng có cùng vị trí tổ chức. Có thể có:
 
-- `정규직`: nhân viên regular;
-- `계약직`: contract employee;
-- `파견`: dispatched worker;
-- `협력사`: nhân sự của vendor/partner company;
-- `프리랜서`: freelancer.
+- `정규직`: nhân viên chính thức;
+- `계약직`: nhân viên hợp đồng;
+- `파견`: lao động phái cử;
+- `협력사`: nhân sự của công ty đối tác/nhà cung cấp;
+- `프리랜서`: người làm tự do.
 
-Hai người ngồi cạnh nhau có thể làm cùng project nhưng quyền access, benefit, evaluation và job security khác nhau. Vì vậy “văn hoá công ty” phải đọc cùng employment structure.
+Hai người ngồi cạnh nhau có thể làm cùng dự án nhưng quyền truy cập, phúc lợi, đánh giá và độ ổn định việc làm khác nhau. Vì vậy “văn hoá công ty” phải được đọc cùng cấu trúc việc làm.
 
-Trong IT/SI project, relationship `원청–협력사` hoặc client–vendor có thể tạo power asymmetry. Đây là nơi `갑–을` vocabulary xuất hiện, nhưng không nên mặc định mọi hợp tác đều abuse. Mấu chốt là ai kiểm soát budget, acceptance và renewal.
+Trong dự án IT/SI, quan hệ `원청–협력사` hoặc khách hàng–nhà cung cấp có thể tạo bất cân xứng quyền lực. Đây là nơi từ vựng `갑–을` xuất hiện, nhưng không nên mặc định mọi hợp tác đều là lạm dụng. Mấu chốt là ai kiểm soát ngân sách, nghiệm thu và gia hạn.
 
-## SI, SM và project culture trong IT Hàn Quốc
+## SI, SM và văn hoá dự án trong IT Hàn Quốc
 
-Trong IT Hàn, `SI (System Integration)` thường chỉ project xây hệ thống mới, còn `SM (System Management/Maintenance)` liên quan vận hành, bảo trì và cải tiến hệ thống hiện có. Culture công việc khác nhau:
+Trong IT Hàn, `SI (System Integration)` thường chỉ dự án xây hệ thống mới, còn `SM (System Management/Maintenance)` liên quan vận hành, bảo trì và cải tiến hệ thống hiện có. Văn hoá công việc có trọng tâm khác nhau.
 
-SI thường xoay quanh milestone, requirement, UAT, release và deadline project. SM nhấn mạnh incident, change request, operation continuity và long-term knowledge.
+SI thường xoay quanh cột mốc, yêu cầu, UAT, phát hành và thời hạn dự án. SM nhấn mạnh sự cố, yêu cầu thay đổi, tính liên tục vận hành và kiến thức dài hạn.
 
 Các từ hay gặp:
 
-- `요구사항`: requirement;
-- `개발`: development;
-- `테스트`: test;
-- `검수`: acceptance/inspection;
-- `오픈`: go-live;
-- `장애`: incident/outage;
-- `유지보수`: maintenance;
-- `상주`: làm onsite dài hạn tại client.
+- `요구사항`: yêu cầu (requirement);
+- `개발`: phát triển;
+- `테스트`: kiểm thử;
+- `검수`: nghiệm thu/kiểm tra;
+- `오픈`: đưa hệ thống vào vận hành (go-live);
+- `장애`: sự cố/gián đoạn;
+- `유지보수`: bảo trì;
+- `상주`: làm việc dài hạn tại chỗ của khách hàng.
 
-Culture high-context dễ làm requirement nằm trong conversation thay vì ticket. Vì vậy project đa quốc gia cần biến oral agreement thành artifact rõ ràng.
+Văn hoá ngữ cảnh cao dễ làm yêu cầu chỉ tồn tại trong hội thoại thay vì phiếu công việc. Vì vậy dự án đa quốc gia cần biến thoả thuận miệng thành tài liệu hoặc mục công việc rõ ràng.
 
 ## 메신저 và email: 확인, 회신, 전달
 
-Corporate Korean có nhiều phrase tưởng giống nhau nhưng chức năng khác:
+Tiếng Hàn doanh nghiệp có nhiều cụm tưởng giống nhau nhưng chức năng khác:
 
 - `확인 부탁드립니다`: xin kiểm tra/xác nhận;
 - `회신 부탁드립니다`: xin phản hồi;
 - `전달드립니다`: chuyển thông tin/tài liệu;
 - `공유드립니다`: chia sẻ để cùng nắm;
 - `참고 부탁드립니다`: xin tham khảo;
-- `검토 부탁드립니다`: xin review về nội dung/chất lượng.
+- `검토 부탁드립니다`: xin rà soát nội dung/chất lượng.
 
-Một response chỉ `네` có thể acknowledge nhưng chưa hoàn tất action. Vì vậy với task quan trọng, nên explicit output: `확인 후 3시까지 회신드리겠습니다.`
+Một phản hồi chỉ `네` có thể xác nhận đã nhận thông tin nhưng chưa có nghĩa hành động đã hoàn tất. Vì vậy với việc quan trọng, nên nói rõ đầu ra: `확인 후 3시까지 회신드리겠습니다.`
 
-## 꼰대: phê phán authority lỗi thời
+## 꼰대: phê phán quyền lực lỗi thời
 
-**Kkondae / 꼰대** là từ phổ biến để chỉ người áp đặt kinh nghiệm, tuổi hoặc địa vị theo cách giáo điều lên người khác. Từ này quan trọng vì nó là evidence rằng hierarchy đang được internal critique.
+**꼰대 (kkondae)** là từ phổ biến để chỉ người áp đặt kinh nghiệm, tuổi hoặc địa vị của mình lên người khác theo cách giáo điều. Từ này quan trọng vì nó cho thấy thứ bậc không chỉ được duy trì mà còn bị phê phán từ bên trong xã hội.
 
-Một “꼰대” không chỉ là người lớn tuổi. Một người trẻ cũng có thể bị gọi như vậy nếu mindset là “tôi đã trải qua nên anh phải chịu giống tôi”. Core problem là dùng seniority làm substitute cho reasoning.
+Một “꼰대” không chỉ là người lớn tuổi. Người trẻ cũng có thể bị gọi như vậy nếu suy nghĩ theo kiểu “tôi đã phải chịu nên anh cũng phải chịu”. Vấn đề cốt lõi là dùng thâm niên thay cho lập luận.
 
-## MZ세대 và giới hạn của label thế hệ
+## MZ세대 và giới hạn của nhãn thế hệ
 
-`MZ세대` ghép Millennials và Generation Z, từng rất phổ biến trong media và corporate discourse. Nhưng hai cohort này trải qua technology và labour market khác nhau, nên label quá rộng dễ mất explanatory power.
+`MZ세대` ghép Millennials và Generation Z, từng rất phổ biến trong truyền thông và diễn ngôn doanh nghiệp. Nhưng hai nhóm trải qua công nghệ và thị trường lao động khác nhau, nên nhãn quá rộng dễ mất khả năng giải thích.
 
-Thay vì nói “MZ không thích hierarchy”, nên hỏi cụ thể: họ kỳ vọng transparency về evaluation không? muốn work-life boundary? thích title phẳng? phản ứng thế nào với unpaid social obligation? Những variable này đo được hơn.
+Thay vì nói “MZ không thích thứ bậc”, nên hỏi cụ thể: họ có kỳ vọng đánh giá minh bạch không? có muốn ranh giới công việc–đời sống rõ hơn không? có thích hệ thống chức danh phẳng không? phản ứng thế nào với nghĩa vụ xã hội không được trả công? Những biến này cụ thể hơn.
 
-## Knowledge Connection: organization như information network
+## Liên hệ kiến thức: tổ chức như một mạng thông tin
 
-Một công ty tồn tại để coordinate information và action. Hierarchy là routing topology. Nếu mọi message phải đi qua manager, topology giống tree. Tree dễ control nhưng dễ bottleneck. Cross-functional squad thêm lateral edges giúp information đi nhanh hơn nhưng cần rule rõ để tránh conflict.
+Một công ty tồn tại để phối hợp thông tin và hành động. Thứ bậc là **cấu trúc định tuyến (routing topology)**. Nếu mọi tin phải đi qua quản lý, cấu trúc giống cây: dễ kiểm soát nhưng dễ tạo điểm nghẽn. Nhóm liên chức năng tạo thêm các liên kết ngang để thông tin đi nhanh hơn nhưng cần quy tắc rõ để tránh xung đột.
 
-Văn hoá công sở vì vậy có thể phân tích như network design: authority, information, incentive và trust là các channel khác nhau.
+Văn hoá công sở vì vậy có thể phân tích như thiết kế mạng: quyền lực, thông tin, động lực và niềm tin là các kênh khác nhau.
 
-## Mental Model
+## Mô hình tư duy (Mental Model)
 
-> Đừng hỏi “công ty Hàn có hierarchy không?” Hãy hỏi hierarchy nằm ở layer nào: title, salary, approval, speaking order, evaluation, contract status hay knowledge. Một công ty có thể phẳng ở cách xưng hô nhưng vẫn tập trung quyền budget; hoặc có title truyền thống nhưng technical decision lại rất evidence-driven.
+> Đừng chỉ hỏi “công ty Hàn có thứ bậc không?”. Hãy hỏi thứ bậc nằm ở lớp nào: chức danh, lương, phê duyệt, thứ tự phát biểu, đánh giá, loại hợp đồng hay kiến thức. Một công ty có thể phẳng ở cách xưng hô nhưng vẫn tập trung quyền ngân sách; hoặc có chức danh truyền thống nhưng quyết định kỹ thuật lại dựa mạnh vào bằng chứng.
 
-## Common Misconceptions
+## Hiểu lầm phổ biến (Common Misconceptions)
 
-“Mọi công ty Hàn đều bắt buộc 회식” sai.
+“Mọi công ty Hàn đều bắt buộc 회식” là sai.
 
-“Cấp dưới không được phản biện” là overgeneralization; cách phản biện và mức psychological safety mới là biến quan trọng.
+“Cấp dưới không được phản biện” là khái quát quá mức; cách phản biện và mức an toàn tâm lý mới là biến quan trọng.
 
-“Ở lại muộn nghĩa là chăm chỉ” là một cultural signal từng tồn tại ở nhiều nơi nhưng không phải thước đo productivity đáng tin.
+“Ở lại muộn nghĩa là chăm chỉ” là tín hiệu văn hoá từng tồn tại ở nhiều nơi nhưng không phải thước đo năng suất đáng tin.
 
-“`네` nghĩa là task đã hoàn tất” sai; nhiều khi chỉ là acknowledgement.
+“`네` nghĩa là công việc đã hoàn tất” là sai; nhiều khi nó chỉ xác nhận đã nhận thông tin.
 
-“Cùng ngồi một văn phòng nghĩa là cùng status” cũng sai; contract type và vendor relationship có thể tạo khác biệt lớn.
+“Cùng ngồi một văn phòng nghĩa là cùng địa vị” cũng sai; loại hợp đồng và quan hệ khách hàng–nhà cung cấp có thể tạo khác biệt lớn.
