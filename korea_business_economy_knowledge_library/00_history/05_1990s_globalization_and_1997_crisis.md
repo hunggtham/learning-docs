@@ -1,258 +1,174 @@
-# Thập niên 1990 và khủng hoảng 1997: globalization, leverage và cuộc tái cấu trúc lớn (Asian Financial Crisis / 외환위기·기업구조조정)
+# Thập niên 1990 và khủng hoảng 1997: toàn cầu hóa, đòn bẩy và cuộc tái cơ cấu lớn (Asian Financial Crisis / 외환위기·기업구조조정)
 
-Thập niên 1990 là turning point giữa hai mô hình tăng trưởng của Hàn Quốc. Một bên là hệ thống đã tạo ra industrialization rất nhanh: bank-centered finance, high investment, chaebol expansion và coordination mạnh giữa state–bank–firm. Bên kia là một economy ngày càng mở cửa, nơi capital quốc tế có thể vào ra nhanh hơn, investor đòi transparency cao hơn và firms phải sống với market discipline mạnh hơn.
+Thập niên 1990 là điểm chuyển giữa hai mô hình tăng trưởng của Hàn Quốc. Một bên là hệ thống đã tạo ra công nghiệp hóa rất nhanh: tài chính dựa vào ngân hàng, đầu tư cao, chaebol mở rộng và sự phối hợp mạnh giữa nhà nước–ngân hàng–doanh nghiệp. Bên kia là nền kinh tế ngày càng mở, nơi vốn quốc tế có thể vào ra nhanh hơn, nhà đầu tư đòi hỏi minh bạch cao hơn và doanh nghiệp phải chịu kỷ luật thị trường mạnh hơn.
 
-Khủng hoảng 1997 không phải một tai nạn tách rời lịch sử trước đó. Nó là lúc **những strength từng giúp Korea tăng trưởng—high investment, leverage, group coordination và rapid expansion—gặp một environment mới nơi refinancing và foreign confidence trở thành constraint thực**.
+Khủng hoảng 1997 không phải tai nạn tách rời lịch sử trước đó. Nó là thời điểm **những điểm mạnh từng giúp Hàn Quốc tăng trưởng—đầu tư cao, đòn bẩy, phối hợp tập đoàn và mở rộng nhanh—gặp một môi trường mới nơi tái cấp vốn và niềm tin của chủ nợ nước ngoài trở thành giới hạn thực sự**.
 
-## Globalization thay đổi luật chơi
+## Toàn cầu hóa thay đổi luật chơi
 
-Trong 1980s và đầu 1990s, Hàn Quốc tiếp tục liberalize trade và finance. Firms có access tốt hơn tới external capital; financial institutions cũng tham gia international funding nhiều hơn.
+Trong thập niên 1980 và đầu 1990, Hàn Quốc tiếp tục tự do hóa thương mại và tài chính. Doanh nghiệp tiếp cận vốn bên ngoài tốt hơn; các tổ chức tài chính cũng tham gia huy động vốn quốc tế nhiều hơn.
 
-Điều này tạo lợi ích rõ ràng: investment không còn bị giới hạn hoàn toàn bởi domestic saving/bank credit. Nhưng external funding mang thêm hai loại risk.
+Điều này có lợi ích rõ ràng: đầu tư không còn bị giới hạn hoàn toàn bởi tiết kiệm trong nước và tín dụng ngân hàng nội địa. Nhưng vốn bên ngoài mang thêm hai loại rủi ro.
 
-**Maturity mismatch / 만기불일치** xuất hiện khi borrower dùng debt ngắn hạn để tài trợ asset dài hạn.
+**Chênh lệch kỳ hạn (maturity mismatch / 만기불일치)** xuất hiện khi người vay dùng nợ ngắn hạn để tài trợ tài sản dài hạn.
 
-**Currency mismatch / 통화불일치** xuất hiện khi borrower vay foreign currency nhưng cash flow chủ yếu bằng KRW.
+**Chênh lệch tiền tệ (currency mismatch / 통화불일치)** xuất hiện khi người vay vay ngoại tệ nhưng dòng tiền chủ yếu bằng KRW.
 
-Nếu lenders luôn rollover debt và KRW ổn định, structure này có vẻ rẻ. Nhưng khi confidence mất, cả hai mismatch cùng bùng nổ.
+Nếu chủ nợ luôn đồng ý gia hạn và tỷ giá ổn định, cấu trúc này có vẻ rẻ. Nhưng khi niềm tin biến mất, cả hai chênh lệch có thể cùng bùng nổ.
 
-## Solvency và liquidity: bài học cốt lõi của 1997
+## Khả năng thanh toán và thanh khoản: bài học cốt lõi
 
-Một asset có thể vẫn có long-term value nhưng company/bank không đủ cash trả debt đáo hạn tuần này.
-
-Đây là distinction:
+Một tài sản có thể vẫn có giá trị dài hạn nhưng công ty hoặc ngân hàng không đủ tiền để trả khoản nợ đáo hạn trong tuần này.
 
 ```text
-Solvency
-→ Giá trị dài hạn có đủ cover liabilities không?
+Khả năng thanh toán dài hạn (solvency)
+→ Giá trị tài sản dài hạn có đủ bù nghĩa vụ không?
 
-Liquidity
-→ Có cash/credit line để trả nghĩa vụ đúng hạn không?
+Thanh khoản (liquidity)
+→ Có tiền mặt hoặc hạn mức tín dụng để trả đúng hạn không?
 ```
 
-Nếu debt phải rollover mỗi 3 tháng nhưng asset mature sau 5 năm, firm cần market confidence liên tục. Khi rollover dừng, liquidity crisis xảy ra trước khi có thời gian chứng minh asset value.
+Nếu nợ phải gia hạn mỗi ba tháng nhưng tài sản chỉ tạo tiền sau năm năm, doanh nghiệp phụ thuộc liên tục vào niềm tin thị trường. Khi chủ nợ ngừng gia hạn, khủng hoảng thanh khoản có thể xảy ra trước khi doanh nghiệp có thời gian chứng minh giá trị dài hạn của tài sản.
 
-1997 cho thấy **refinancing dependence là risk**, không chỉ interest rate.
+Khủng hoảng 1997 cho thấy **phụ thuộc tái cấp vốn (refinancing dependence)** tự nó đã là một loại rủi ro, không chỉ lãi suất cao hay thấp.
 
-## Chaebol expansion và debt-funded growth
+## Chaebol và tăng trưởng tài trợ bằng nợ
 
-Nhiều chaebol trong đầu–giữa 1990s mở rộng vào nhiều industries cùng lúc. Debt giúp group tăng assets nhanh mà controlling family không phải dilute equity quá mạnh.
+Nhiều chaebol đầu–giữa thập niên 1990 mở rộng sang nhiều ngành cùng lúc. Nợ cho phép tập đoàn tăng tài sản nhanh mà gia đình kiểm soát không phải pha loãng quyền sở hữu quá mạnh.
 
-Leverage có thể nâng ROE khi return on assets cao hơn debt cost:
+Đòn bẩy có thể nâng ROE khi lợi nhuận trên tài sản cao hơn chi phí nợ:
 
 \[
-ROE \approx ROA + (ROA-r)\times\frac{Debt}{Equity}
+ROE \approx ROA + (ROA-r)\times\frac{Nợ}{Vốn\ chủ}
 \]
 
-Nhưng khi `ROA < r`, cùng leverage khuếch đại loss.
+Nhưng khi `ROA < r`, cùng một đòn bẩy sẽ khuếch đại thua lỗ. Nguy hiểm không chỉ nằm ở tỷ lệ nợ cao mà ở việc **khả năng sinh lời giảm đồng thời đòn bẩy tăng**.
 
-KDI sau này chỉ ra rằng trước crisis, debt-servicing capacity của corporate sector suy yếu do **profitability giảm đồng thời leverage tăng**. Đây là combination nguy hiểm hơn chỉ nhìn debt/equity riêng lẻ.
+## Mở rộng đa ngành và vấn đề phân bổ vốn
 
-## Vì sao profitability bắt đầu yếu đi?
+Trong một tập đoàn lớn, công ty tạo tiền có thể hỗ trợ công ty đang mở rộng. Thị trường vốn nội bộ này hữu ích khi thị trường bên ngoài chưa hoàn thiện, nhưng nó có thể che chất lượng dự án.
 
-Đến giữa 1990s, Korea không còn là low-wage manufacturing economy như vài thập niên trước. Labor cost tăng, competition từ lower-cost Asian producers mạnh hơn và nhiều sectors có overcapacity.
+Nếu một ngành yếu vẫn nhận vốn vì quan hệ trong tập đoàn thay vì tỷ suất sinh lợi, nguồn lực bị giữ lại trong hoạt động kém hiệu quả. Khi tín dụng bên ngoài còn dồi dào, vấn đề có thể chưa lộ rõ. Khi tín dụng co lại, chất lượng từng dự án trở nên quan trọng ngay lập tức.
 
-Điều này có nghĩa return trên new investment không còn chắc chắn cao như thời early catch-up.
+Đây là lý do khủng hoảng tài chính thường biến vấn đề phân bổ vốn vốn âm thầm thành vấn đề thanh khoản công khai.
 
-Nếu firm tiếp tục dùng leverage để expand trong khi marginal return giảm, balance sheet ngày càng fragile.
+## Tự do hóa tài chính nhưng giám sát chưa trưởng thành cùng tốc độ
 
-Đây là transition problem: **strategy phù hợp với catch-up era có thể trở nên quá aggressive khi economy trưởng thành**.
+Mở cửa tài chính làm các ngân hàng và tổ chức tài chính có thêm nguồn vốn, nhưng quản trị rủi ro, giám sát và cơ chế xử lý phá sản chưa phát triển đồng đều.
 
-## Corporate governance và “soft budget constraint”
+Một hệ thống có thể có “nhiều thị trường hơn” nhưng chưa chắc có “nhiều kỷ luật hơn”. Kỷ luật thị trường chỉ hoạt động khi người cho vay tin rằng họ có thể mất tiền, thông tin đủ minh bạch và doanh nghiệp yếu có thể được tái cơ cấu hoặc phá sản thay vì luôn được cứu.
 
-Trước crisis, large groups thường có expectation rằng banks hoặc state sẽ khó để một major firm fail vì employment và supplier impact quá lớn.
+Nếu kỳ vọng hỗ trợ ngầm vẫn còn, chủ nợ có thể đánh giá thấp rủi ro và tiếp tục cho vay.
 
-Nếu manager/controller tin exit threat không credible, họ có incentive invest aggressive hơn. Đây gần với **soft budget constraint** và moral hazard.
+## Vì sao nợ ngoại tệ đặc biệt nguy hiểm?
 
-KDI nghiên cứu corporate sector hậu crisis nhấn mạnh các weakness như transparency thấp, governance yếu, insufficient monitoring và lack of credible exit.
+Giả sử doanh nghiệp vay 100 triệu USD nhưng doanh thu chủ yếu bằng KRW. Khi KRW mất giá 30%, số KRW cần để trả cùng 100 triệu USD tăng rất mạnh dù khoản nợ USD không đổi.
 
-Điều quan trọng không phải kết luận “mọi chaebol quản trị tệ”, mà là system-level incentive đã làm debt-funded expansion dễ hơn và discipline chậm hơn.
-
-## 1997: corporate failures làm confidence xấu đi
-
-Năm 1997, một chuỗi major corporate failures làm non-performing loans tăng và confidence trong financial system giảm. Hanbo Steel là một signal sớm; sau đó Kia và nhiều groups khác gặp distress.
-
-IMF chronology ghi nhận **six of the top-30 chaebols** declared bankruptcy trong giai đoạn lead-up crisis. Financial institutions vốn có exposure lớn với corporate sector vì vậy bị kéo vào stress.
-
-Đây là transmission:
+Đây là cơ chế khuếch đại:
 
 ```text
-Corporate distress
-   ↓
-Bank/NBFI asset quality xấu
-   ↓
-Foreign creditors lo ngại
-   ↓
-Rollover giảm
-   ↓
-FX liquidity cạn
-   ↓
-KRW pressure + interest rates tăng
-   ↓
-Corporate distress nặng hơn
+KRW mất giá
+→ nghĩa vụ nợ ngoại tệ tính bằng KRW tăng
+→ bảng cân đối xấu đi
+→ chủ nợ lo ngại hơn
+→ khó tái cấp vốn
+→ phải bán tài sản / cắt đầu tư
+→ kinh tế yếu hơn
 ```
 
-Một feedback loop hình thành.
+Nếu nhiều doanh nghiệp và ngân hàng cùng có cấu trúc tương tự, vấn đề của từng công ty trở thành vấn đề hệ thống.
 
-## Asian contagion: external shock gặp domestic vulnerability
+## Từ cú sốc khu vực đến khủng hoảng ngoại hối Hàn Quốc
 
-Crisis không chỉ là domestic event. Thailand devaluation và regional turmoil làm investor risk appetite với Asia giảm mạnh.
+Khủng hoảng tài chính châu Á năm 1997 làm nhà đầu tư quốc tế đánh giá lại rủi ro trong khu vực. Khi niềm tin giảm, khả năng vay và gia hạn nợ ngắn hạn của các tổ chức Hàn Quốc suy yếu nhanh.
 
-Khi external lenders bắt đầu phân biệt ít hơn giữa countries và ưu tiên giảm exposure, Korea phải đối mặt sudden stop trong foreign funding.
+Hàn Quốc có nền công nghiệp thực và nhiều doanh nghiệp có khả năng cạnh tranh, nhưng hệ thống tài chính lại thiếu ngoại tệ thanh khoản để đáp ứng nghĩa vụ ngắn hạn. Đây là ví dụ điển hình cho việc **nền kinh tế có tài sản tốt vẫn có thể rơi vào khủng hoảng nếu cấu trúc tài trợ sai kỳ hạn và sai tiền tệ**.
 
-IMF documentation ghi nhận khó khăn lớn trong việc rollover lượng short-term external debt rất lớn vào cuối 1997.
+## IMF và chương trình ổn định
 
-Đây là lý do nói crisis chỉ do chaebol là thiếu. External capital-flow shock là một part thiết yếu.
+Hàn Quốc phải nhận chương trình hỗ trợ quốc tế có IMF tham gia. Đi kèm hỗ trợ là các yêu cầu cải cách tài chính, doanh nghiệp và thị trường.
 
-## Reserve pressure và foreign-exchange liquidity
+Không nên hiểu giai đoạn này chỉ như “IMF áp đặt chính sách” hoặc “IMF cứu Hàn Quốc”. Về mặt kinh tế, vấn đề trung tâm là khôi phục ngoại tệ, niềm tin của chủ nợ và khả năng hoạt động của hệ thống tài chính, đồng thời xử lý các doanh nghiệp và tổ chức tài chính không còn bền vững.
 
-Nếu commercial banks/companies cần USD để repay debt nhưng market không rollover, demand USD tăng mạnh.
+Trong ký ức xã hội Hàn Quốc, `IMF` trở thành cách gọi cả thời kỳ khủng hoảng, thất nghiệp và tái cơ cấu chứ không chỉ tên một tổ chức quốc tế.
 
-Central bank reserves có thể được dùng để cung cấp liquidity, nhưng reserve hữu hạn. Khi market thấy usable reserves giảm, confidence có thể xấu thêm.
+## Tái cơ cấu ngân hàng
 
-Currency crisis vì vậy có self-reinforcing dynamics.
+Một ngân hàng yếu không chỉ là vấn đề của cổ đông ngân hàng. Nếu ngân hàng không thể cho vay hoặc thanh toán, doanh nghiệp lành mạnh cũng mất vốn lưu động và nền kinh tế thực bị ảnh hưởng.
 
-KRW depreciation sau đó làm foreign-currency liabilities measured in KRW lớn hơn, tạo **balance-sheet effect**.
+Do đó tái cơ cấu tài chính bao gồm xử lý nợ xấu, đóng hoặc hợp nhất tổ chức yếu, tăng vốn và cải thiện giám sát. Mục tiêu là khôi phục khả năng phân bổ tín dụng nhưng với tiêu chuẩn rủi ro chặt hơn.
 
-## IMF Stand-By Arrangement: stabilization và reform
+## Tái cơ cấu doanh nghiệp: từ tăng quy mô sang khả năng sinh lời và dòng tiền
 
-Hàn Quốc đạt IMF Stand-By Arrangement vào đầu tháng 12/1997. Program ban đầu bao gồm monetary tightening để ổn định currency/inflation, cùng financial-sector và corporate restructuring.
+Trước khủng hoảng, doanh thu và tài sản lớn thường được xem là dấu hiệu sức mạnh. Sau khủng hoảng, câu hỏi chuyển mạnh sang lợi nhuận, dòng tiền, đòn bẩy và khả năng trả nợ.
 
-IMF document ngày 5/12/1997 ghi nhận call rate đã được nâng mạnh trong bối cảnh stabilization khẩn cấp. Đây là medicine rất đau vì high rates cũng làm corporate debt service nặng hơn.
-
-Cần tách hai câu hỏi khi đọc lịch sử:
-
-1. **Crisis đã xảy ra vì sao?**
-2. **Adjustment program tối ưu hay không?**
-
-Hai debate này không giống nhau. Crisis bắt đầu trước IMF program; nhưng design và social cost của stabilization/reform vẫn là chủ đề có tranh luận.
-
-## Financial restructuring: không chỉ cứu banks
-
-Sau crisis, authorities đóng hoặc tái cấu trúc weak financial institutions, recapitalize banks và reform supervision.
-
-Market infrastructure cũng thay đổi: accounting, disclosure, external audit, capital-market rules và financial supervision được nâng cấp.
-
-Mục tiêu lớn hơn là chuyển hệ thống từ **relationship/implicit guarantee** sang **risk pricing và transparency** nhiều hơn.
-
-Đọc thêm [`../09_disclosure_accounting_dart_kind.md`](../09_disclosure_accounting_dart_kind.md) và [`../11_banks_finance_and_corporate_funding.md`](../11_banks_finance_and_corporate_funding.md).
-
-## Corporate restructuring: debt reduction, asset sales và portfolio focus
-
-Firms bị pressure giảm leverage, bán non-core assets và cải thiện cash-flow discipline.
-
-Cross-debt guarantees giữa affiliates bị hạn chế mạnh hơn. Governance reforms mở rộng outside directors và minority-shareholder protections.
-
-Không phải mọi reform tạo perfect governance, nhưng **information environment và credible failure threat** thay đổi đáng kể so với pre-crisis era.
-
-## “Big Deals”: coordinated restructuring trong transition economy
-
-Government thúc đẩy một số industry swaps giữa chaebol, thường gọi **Big Deals / 빅딜**, nhằm giảm duplicated investment và overcapacity.
-
-Điểm đáng học không phải memorize từng deal. Nó cho thấy Korea đang ở trạng thái transition: muốn chuyển sang market-led restructuring nhưng vẫn dùng state coordination trong crisis.
-
-Đây là một tension xuyên suốt post-1997 reform.
-
-## Daewoo: scale không bảo đảm survival
-
-Daewoo là case điển hình cho aggressive diversification và debt-funded expansion.
-
-Group rất lớn và có international presence, nhưng scale không bù được funding fragility và weak cash generation khi environment đảo chiều.
-
-Collapse của Daewoo là signal rằng **political/economic importance không còn guarantee survival tuyệt đối**.
-
-Điều này tăng credibility của market discipline, dù state vẫn có vai trò lớn trong workout/restructuring.
-
-## Hyundai–Kia và selection effect của crisis
-
-Hyundai Motor mua Kia Motors năm 1998. Về sau, transaction này trở thành foundation cho Hyundai Motor Group hiện đại.
-
-Crisis vì vậy không chỉ destroy firms. Nó reallocate assets từ weak owner sang stronger operator.
-
-Đây là một form của **creative destruction under crisis conditions**.
-
-Nhưng reallocation chỉ tạo productivity gain nếu buyer thực sự quản lý asset tốt hơn—not merely because asset changed hands.
-
-## Labor-market restructuring và social cost
-
-Corporate restructuring đi cùng layoffs, unemployment và expansion của non-regular employment.
-
-Vì vậy 1997 không chỉ là balance-sheet event. Nó thay **psychological contract** giữa worker và company.
-
-Lifetime-employment expectation ở large firms suy yếu tương đối; outsourcing, performance evaluation và labor flexibility trở nên visible hơn.
-
-Generational memory của crisis vẫn ảnh hưởng risk perception, saving behavior và workplace culture.
-
-Xem [`../12_labor_titles_compensation_and_workplace.md`](../12_labor_titles_compensation_and_workplace.md).
-
-## From “too important to fail” to stronger market discipline
-
-Sau crisis, bond spreads, ratings, foreign investors và equity market có role lớn hơn.
-
-Large firms vẫn có advantages, nhưng creditors/investors bắt đầu price balance-sheet risk rõ hơn.
-
-Tuy nhiên concentration không biến mất. Surviving groups có thể mạnh hơn vì weak competitors rời market và assets được consolidate.
-
-Vì vậy reform có dual outcome:
+Một doanh nghiệp có thể lớn nhưng vẫn yếu nếu:
 
 ```text
-Lower leverage / better governance
-        +
-Stronger surviving conglomerates
+Lợi nhuận hoạt động thấp
++ lãi vay cao
++ nợ ngắn hạn lớn
++ tài sản khó bán
+→ rủi ro thanh khoản cao
 ```
 
-Cả hai có thể đúng cùng lúc.
+Điều này góp phần thay đổi cách doanh nghiệp Hàn Quốc được quản lý và đánh giá.
 
-## Crisis 1997 và crisis 2008: vì sao experience 1997 quan trọng?
+## Daewoo: quy mô không thay thế được kỷ luật bảng cân đối
 
-KDI research sau Global Financial Crisis cho rằng improvements sau 1997—stronger financial soundness, higher reserves, better macro risk management—giúp Korea đối phó tốt hơn với shock toàn cầu sau này.
+Daewoo là một trong những ví dụ nổi bật nhất của mở rộng nhanh bằng nợ. Tập đoàn phát triển trên nhiều ngành và thị trường nhưng cuối cùng không thể duy trì cấu trúc tài chính khi điều kiện vốn thay đổi.
 
-Đây là example của institutional learning. Crisis có thể thay rules, balance sheets và risk culture lâu dài.
-
-## Mental Model
-
-> Khủng hoảng 1997 là lúc Korea phát hiện rằng **high growth + high investment không bảo đảm financial resilience**. Một system có thể tạo factories rất tốt nhưng vẫn fragile nếu debt maturity, FX exposure, governance và exit mechanism yếu.
-
-Một causal chain dễ nhớ:
+Bài học không phải “đa ngành luôn xấu”. Vấn đề là tốc độ mở rộng, chất lượng tài sản, khả năng tạo tiền, mức đòn bẩy và khả năng tái cấp vốn phải phù hợp nhau.
 
 ```text
-Liberalization + high leverage
-          ↓
-Profitability weakening
-          ↓
-Corporate failures
-          ↓
-Financial-system losses
-          ↓
-Foreign rollover stops
-          ↓
-FX liquidity crisis
-          ↓
-Currency/rate shock
-          ↓
-Deep restructuring
+Tăng tài sản nhanh
+≠
+Tăng giá trị kinh tế nhanh
 ```
 
-## Common misconceptions
+Nếu tài sản mới tạo ROIC thấp hơn chi phí vốn, mở rộng quy mô có thể phá hủy giá trị.
 
-**“IMF gây ra crisis.”** Timeline không ủng hộ cách nói này: liquidity/confidence crisis đã xảy ra trước arrangement. Nhưng adjustment design và social cost là debate riêng.
+## Quản trị doanh nghiệp trở thành vấn đề trung tâm
 
-**“Crisis chỉ do chaebol.”** Sai. Corporate leverage, financial supervision, short-term external debt và regional capital-flow shock cùng tương tác.
+Khủng hoảng làm lộ rõ các vấn đề về sở hữu chéo, bảo lãnh nội bộ, giao dịch bên liên quan và khoảng cách giữa quyền kiểm soát với quyền sở hữu kinh tế.
 
-**“Company lớn thì sẽ được cứu.”** Daewoo cho thấy assumption này không an toàn.
+Sau khủng hoảng, Hàn Quốc tăng yêu cầu về công bố thông tin, quản trị, kiểm toán, cấu trúc nợ và trách nhiệm của doanh nghiệp niêm yết. Đây là nền lịch sử để hiểu tại sao ngày nay DART, báo cáo hợp nhất, bên liên quan và bảo vệ cổ đông thiểu số lại quan trọng.
 
-**“Sau crisis chaebol biến mất.”** Không. Structure và financing thay đổi, còn large business groups vẫn central.
+## Thị trường lao động cũng bị tái cấu trúc
 
-**“Vấn đề là debt cao đơn thuần.”** Không đủ. Debt maturity, currency, profitability và rollover access quyết định fragility.
+Khủng hoảng không chỉ xảy ra trên bảng cân đối. Tái cơ cấu doanh nghiệp làm thất nghiệp tăng, việc làm trọn đời trở nên kém chắc chắn hơn và doanh nghiệp sử dụng nhiều hình thức lao động linh hoạt hơn.
 
-## Connections
+Một phần cấu trúc **lao động hai tầng (labor-market dualism)** của Hàn Quốc hiện đại—khác biệt giữa lao động ổn định tại doanh nghiệp lớn và lao động không thường xuyên/SME—có liên hệ với các thay đổi sau khủng hoảng.
 
-Đọc tiếp [`06_2000s_restructuring_it_and_global_firms.md`](./06_2000s_restructuring_it_and_global_firms.md), [`../04_chaebol_and_large_business_groups.md`](../04_chaebol_and_large_business_groups.md), [`../08_corporate_governance_ownership_and_control.md`](../08_corporate_governance_ownership_and_control.md), [`../09_disclosure_accounting_dart_kind.md`](../09_disclosure_accounting_dart_kind.md), [`../11_banks_finance_and_corporate_funding.md`](../11_banks_finance_and_corporate_funding.md) và [`../12_labor_titles_compensation_and_workplace.md`](../12_labor_titles_compensation_and_workplace.md).
+## Vốn nước ngoài và M&A
 
-### Nguồn nền
+Sau 1997, Hàn Quốc mở hơn với đầu tư trực tiếp nước ngoài và mua bán doanh nghiệp. Vốn quốc tế không chỉ đến dưới dạng khoản vay mà còn dưới dạng vốn chủ sở hữu, mua cổ phần và đầu tư chiến lược.
 
-- KDI, *Empirical Analysis of Corporate Restructuring in Korea*: https://www.kdi.re.kr/eng/research/reportView?pub_no=8966
-- KDI, *The Korean Corporate Sector: Crisis and Reform*: https://www.kdi.re.kr/eng/research/reportView?pub_no=982
-- KDI, *Financial Restructuring in Korea*: https://www.kdi.re.kr/eng/research/reportView?pub_no=14660
-- IMF, *Republic of Korea Stand-By Arrangement*, 5 December 1997: https://www.imf.org/external/np/oth/korea.htm
-- IMF, chronology of pre-crisis events and early responses in Korea.
+Điều này giúp tái cấp vốn cho một số doanh nghiệp, tăng cạnh tranh và đưa thêm phương pháp quản trị quốc tế vào thị trường. Đồng thời nó làm doanh nghiệp Hàn Quốc phải quan tâm hơn đến lợi ích cổ đông và định giá thị trường.
+
+## Từ “quá lớn để thất bại” đến câu hỏi về kỷ luật
+
+Một trong những vấn đề khó nhất của tập đoàn lớn là kỳ vọng rằng chính phủ sẽ không để họ phá sản vì tác động việc làm và hệ thống. Kỳ vọng đó tạo **rủi ro đạo đức (moral hazard / 도덕적 해이)**: người cho vay và doanh nghiệp có thể chấp nhận rủi ro cao hơn nếu tin rằng tổn thất cuối cùng sẽ được xã hội hóa.
+
+Khủng hoảng 1997 buộc Hàn Quốc chứng minh rằng quy mô không bảo đảm được cứu trợ vô điều kiện. Việc một số tập đoàn lớn sụp đổ làm kỷ luật này trở nên đáng tin hơn.
+
+## Bài học về bảng cân đối quốc gia
+
+Khủng hoảng cũng cho thấy phải nhìn cả nền kinh tế như một hệ thống bảng cân đối liên kết:
+
+```text
+Doanh nghiệp vay
+→ ngân hàng tài trợ
+→ ngân hàng vay ngoại tệ
+→ nhà đầu tư nước ngoài cung cấp vốn
+```
+
+Nếu mắt xích cuối rút vốn, áp lực truyền ngược qua ngân hàng tới doanh nghiệp. Vì vậy dự trữ ngoại hối, cấu trúc nợ nước ngoài và thanh khoản hệ thống trở thành vấn đề an ninh kinh tế.
+
+## Connection — Hàn Quốc sau 1997 khác trước 1997 như thế nào?
+
+Sau khủng hoảng, Hàn Quốc vẫn giữ các tập đoàn lớn và nền sản xuất xuất khẩu, nhưng môi trường tài chính thay đổi rõ rệt hơn: minh bạch cao hơn, đòn bẩy doanh nghiệp giảm ở nhiều nhóm, thị trường vốn quan trọng hơn, nhà đầu tư nước ngoài có vai trò lớn hơn và khả năng sinh lời/dòng tiền được chú ý hơn.
+
+Chương tiếp theo, [thập niên 2000: tái cơ cấu, CNTT và doanh nghiệp toàn cầu](./06_2000s_restructuring_it_and_global_firms.md), giải thích cách nền kinh tế hậu khủng hoảng kết hợp cải cách tài chính với băng rộng, điện tử, thương hiệu toàn cầu và sự trỗi dậy của Trung Quốc.
+
+> **Mental Model cuối:** 1997 là thời điểm Hàn Quốc học rằng năng lực công nghiệp mạnh không thể bù cho cấu trúc tài trợ yếu. Sau khủng hoảng, câu hỏi của doanh nghiệp chuyển từ “có thể tăng quy mô nhanh đến đâu?” sang “tăng trưởng này có tạo dòng tiền, chịu được nợ và bảo vệ được các bên cung cấp vốn hay không?”.
