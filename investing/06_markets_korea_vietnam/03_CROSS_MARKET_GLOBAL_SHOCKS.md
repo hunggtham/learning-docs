@@ -359,3 +359,245 @@ Cross-market analysis is translation problem, not headline reaction:
 `One global shock × different economic structures × different policy constraints × different index composition = different asset outcomes`
 
 The edge is understanding transmission and expectations better, not memorizing direction.
+
+## 50. Surprise khác Level
+
+Market thường phản ứng với **difference giữa actual và expectation**, không phải level tuyệt đối. CPI 3% có thể bullish nếu market expected 3,4%, bearish nếu expected 2,6%.
+
+Framework nên là:
+
+`Actual - Consensus - Market Pricing - Positioning = Effective Surprise`
+
+Consensus survey chỉ là một proxy. Futures curves, bond yields, options skew và positioning có thể cho biết market đã price khác survey như thế nào.
+
+## 51. Reaction Function của Market
+
+Cùng một data surprise có thể tạo response khác tùy regime. Strong payrolls trong low-inflation recovery có thể bullish vì earnings; strong payrolls trong inflation fight có thể bearish vì Fed repricing.
+
+Do đó cần học **market reaction function**, không chỉ economic direction. Reaction function thay đổi khi dominant concern chuyển từ growth sang inflation, liquidity hoặc credit.
+
+## 52. Dominant Macro Variable
+
+Tại mỗi thời điểm, market thường tập trung vào một vài variables. Có period CPI dominates, period banking liquidity dominates, period AI capex/earnings dominates.
+
+Một useful question trước event là: “market đang sợ cái gì nhất?” Shock vào non-dominant variable có thể tạo reaction nhỏ dù headline lớn.
+
+## 53. Shock Persistence
+
+Shock có thể transitory, persistent hoặc structural. Temporary shipping disruption khác multi-year trade fragmentation. One-quarter inventory correction khác structural demand decline.
+
+Expected duration quyết định valuation impact. Short shock chủ yếu affects near-term earnings; persistent shock changes terminal margin/ROIC/capex and therefore intrinsic value much more.
+
+## 54. Stock vs Flow Variables
+
+Debt outstanding, installed capacity và inventories là **stocks**; new borrowing, capex, production và inventory change là **flows**.
+
+Markets often turn when flow changes direction even while stock level remains bad. Semiconductor inventories can still be high but price improve if destocking slows. Property debt can remain high but stress ease if refinancing flow reopens.
+
+Distinguishing stock vs flow helps detect turning points.
+
+## 55. Feedback Loop và Reflexivity
+
+Some shocks are self-limiting; others self-reinforcing. Currency weakness can improve exporter earnings but also increase inflation/import cost. Property price decline can tighten collateral, reduce credit, weaken demand and push property lower.
+
+Map feedback:
+
+`Initial Shock → Balance-Sheet Change → Behavior/Policy Response → New Price Move`
+
+If loop is reinforcing, tail risk larger than first-order estimate.
+
+## 56. Balance-Sheet Sensitivity
+
+Same earnings shock hurts leveraged entity more. Country/company with large FX debt, short maturity or thin liquidity buffer can enter nonlinear stress.
+
+Cross-market comparison therefore needs balance-sheet layer:
+
+`Operating Shock × Financial Leverage × Refinancing Need × Liquidity = Equity Tail Risk`
+
+This is why two countries with similar GDP slowdown can have very different asset outcomes.
+
+## 57. Policy Space
+
+Policy response capacity depends inflation, currency, fiscal position, banking health and credibility. Economy with low inflation/stable FX may cut rates/support credit more easily than economy facing currency pressure.
+
+“Growth weak → central bank eases” is incomplete. Ask whether policy has space and whether transmission works.
+
+## 58. Monetary vs Fiscal Offset
+
+A negative external shock can be offset by rate cuts, fiscal spending, credit support or FX adjustment. Each channel creates different winners.
+
+Rate cuts favor duration/borrowers but may weaken currency. Public investment supports construction/materials but can raise debt/term premium. FX depreciation supports exporters but hurts importers/foreign-currency debtors.
+
+Policy mix must be mapped, not summarized as “stimulus”.
+
+## 59. Terms-of-Trade Shock
+
+Terms of trade compare export prices with import prices. Korea as major energy importer can suffer when energy import prices rise faster than export prices. Vietnam has different commodity/export composition, so same oil/metals move can affect national income differently.
+
+Terms-of-trade shock transmits through trade balance, currency, corporate margins and household real income.
+
+## 60. Global Liquidity vs Domestic Liquidity
+
+Global USD liquidity affects cross-border funding, foreign flows and valuation. Domestic liquidity affects local bank funding, margin lending and household asset allocation.
+
+Korea's liquid market often reflects global flow quickly. Vietnam can sometimes diverge if domestic liquidity strongly offsets foreign selling. But prolonged global dollar stress can still constrain FX/policy.
+
+## 61. Cross-Asset Confirmation Scorecard
+
+Instead of binary confirmation, build scorecard:
+
+`Rates: support / conflict`
+
+`FX: support / conflict`
+
+`Credit: support / conflict`
+
+`Commodities: support / conflict`
+
+`Earnings revisions: support / conflict`
+
+`Breadth/flows: support / conflict`
+
+If only equities confirm a narrative while rates/FX/credit reject it, conviction should be lower.
+
+## 62. Relative-Value Signal
+
+Sometimes absolute markets both fall but one country falls less because structure is more resilient. Relative performance can contain information.
+
+Example: Korea vs Vietnam under semiconductor boom, property stress or USD shock. Compare sector-adjusted returns rather than raw indices if composition differs significantly.
+
+Relative-value analysis asks “who is more exposed to this shock?” rather than “does everything go up or down?”.
+
+## 63. Correlation không phải Transmission
+
+Two markets can correlate because common global factor, without direct economic linkage. Correlation can disappear when dominant factor changes.
+
+Causal analysis should identify shared driver: USD, China demand, semiconductors, oil, global risk premium or domestic liquidity. This is more durable than extrapolating historical correlation coefficient.
+
+## 64. Base Currency của Investor
+
+A Korean investor evaluating Vietnam stock has VND asset return plus VND/KRW currency effect. A Vietnam-based investor in Korea has KRW/VND effect.
+
+A market can outperform locally but underperform in investor's base currency. Cross-market allocation should compare total return after FX, tax, cost and liquidity.
+
+## 65. Shock to Earnings vs Shock to Multiple
+
+Some events mainly affect cash flows; others mainly discount rate/risk premium. Fed term-premium shock can compress multiple before earnings change. Semiconductor demand shock changes EPS directly. Governance/access reform may lower risk premium with little immediate earnings change.
+
+Decompose:
+
+`Price Change ≈ Earnings Revision + Multiple Change + Currency + Distribution/Carry`
+
+This makes post-event attribution more precise.
+
+## 66. Earnings Revision Diffusion
+
+Shock starts in exposed sectors then can diffuse. Oil spike first hits airlines/chemicals, later household spending, then banks via credit. AI capex starts semiconductor suppliers, later power/grid/cooling and wages/capex competition.
+
+Track breadth of earnings revisions to see whether theme is broadening or exhausting.
+
+## 67. Flow Feedback
+
+Price rise can attract passive/benchmark/momentum flows, causing further rise even before fundamentals catch up. Decline can trigger margin calls, stop-outs and de-risking.
+
+Flow feedback affects path and volatility, but should not be confused with terminal value. Ask whether flow-induced move creates better/worse expected return from new price.
+
+## 68. Volatility và Optionality
+
+Higher uncertainty raises value of flexibility. Companies with net cash, unused credit and variable capex survive shocks better than highly leveraged fixed-cost firms.
+
+At country level, reserve buffers, policy credibility and fiscal space are forms of optionality. Shock analysis should price both exposure and ability to respond.
+
+## 69. Time-Horizon Matrix
+
+Separate reaction by horizon:
+
+`Minutes/Hours: rates, FX, futures, positioning`
+
+`Days/Weeks: sector flows, valuation, revisions`
+
+`Quarters: revenue/margins/credit quality`
+
+`Years: capex/supply chains/productivity/geopolitics`
+
+A view can be bearish short term but bullish long term if shock triggers capacity exit or structural relocation.
+
+## 70. Pre-Mortem trước Shock
+
+Before important event, write what could invalidate your preferred scenario. Nếu expect dovish outcome, what if inflation composition is sticky? Nếu expect China stimulus benefit, what if stimulus increases competing supply instead of demand?
+
+Pre-mortem reduces confirmation bias after event.
+
+## 71. Post-Event Attribution
+
+After event, record not only whether market rose/fell but why your forecast differed:
+
+`Shock magnitude wrong?`
+
+`Market pricing assumption wrong?`
+
+`Policy response different?`
+
+`Transmission channel weaker/stronger?`
+
+`Positioning dominated?`
+
+This turns mistakes into reusable knowledge.
+
+## 72. Scenario Probability Update
+
+Do not replace thesis completely after one data point. Update probabilities. If base case soft landing 50%, hard landing 25%, reacceleration 25%, a weak payroll may shift weights rather than set hard landing to 100%.
+
+Probability thinking avoids narrative whiplash and forces consistency across new information.
+
+## 73. Cross-Market Hedge Thinking
+
+Hedge should target factor, not country label. Korea semiconductor portfolio may hedge global tech beta/FX differently from Vietnam bank/property portfolio.
+
+Broad index short can leave large basis risk if underlying exposure is sector-specific. Cross-market hedges need sensitivity mapping and stress tests.
+
+## 74. Shock Library phải được Versioned
+
+Historical case is useful only if regime context is stored: starting valuation, inflation, policy rate, leverage, positioning and policy credibility.
+
+Same “oil shock” in different regimes can behave differently. Research note should record context so future comparison is apples-to-apples.
+
+## 75. Unified Shock Template
+
+For every new event, fill:
+
+`1. What happened?`
+
+`2. Surprise vs consensus/pricing?`
+
+`3. Demand, supply, financial or policy shock?`
+
+`4. Expected persistence?`
+
+`5. Global rates/USD/commodities/credit response?`
+
+`6. Korea: trade → KRW/BOK/credit → sectors?`
+
+`7. Vietnam: trade/FDI → VND/SBV/credit → sectors?`
+
+`8. Balance-sheet vulnerabilities?`
+
+`9. Policy offset capacity?`
+
+`10. Earnings vs multiple effect?`
+
+`11. Technical flows/positioning?`
+
+`12. What is already priced?`
+
+`13. Bull/base/bear probabilities?`
+
+`14. What data will confirm/invalidate?`
+
+## 76. Mental model nâng cao
+
+Cross-market analysis is translation plus state dependence:
+
+`Shock × Starting Conditions × Expectations × Balance Sheets × Policy Space × Market Structure × Positioning = Asset Outcome`
+
+The same headline can produce opposite prices because one term in this equation changed. The edge is not memorizing event-response pairs; it is understanding which channel dominates now and updating that model when evidence changes.
