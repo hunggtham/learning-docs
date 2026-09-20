@@ -94,4 +94,4 @@ Security concern quan trọng là parser differential: hai components parse cùn
 
 ## Kết nối
 
-Xem [string algorithms](../01_algorithms_data_structures/09_string_algorithms_and_text_indexing.md), [compiler/VM/JIT](./03_compilers_interpreters_vm_and_jit.md) và [automata/formal languages](../../mathematics/07_discrete_cs/07_automata_formal_languages_and_computability.md).
+Xem [string algorithms](../01_algorithms_data_structures/09_string_algorithms_and_text_indexing.md), [compiler/VM/JIT](./03_compilers_interpreters_vm_and_jit.md) và [automata/formal languages](../../../mathematics/07_discrete_cs/07_automata_formal_languages_and_computability.md).
