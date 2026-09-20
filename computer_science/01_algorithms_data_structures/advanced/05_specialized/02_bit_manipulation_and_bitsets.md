@@ -1,13 +1,13 @@
-# Bit Manipulation và Bitsets
+# thao tác bit và Bitsets
 **Thao tác bit và tập bit (Bit Manipulation & Bitsets / 비트 연산과 비트셋)**
 
-Bit manipulation khai thác representation nhị phân của integer để biểu diễn flags, subsets, masks và trạng thái compact. Nó thường được dạy như một danh sách tricks (`x & -x`, `x & (x-1)`, XOR...), nhưng cách học đó dễ quên và dễ dùng sai.
+thao tác bit khai thác cách biểu diễn (representation) nhị phân của integer để biểu diễn flags, subsets, masks và trạng thái gọn. Nó thường được dạy như một danh sách tricks (`x & -x`, `x & (x-1)`, XOR...), nhưng cách học đó dễ quên và dễ dùng sai.
 
 Cách hiểu bền hơn là:
 
-> Bitwise operation là các phép toán trên **nhiều boolean positions cùng lúc**. Mỗi bit là một biến nhị phân; integer chỉ là container đóng gói chúng.
+> Bitwise thao tác là các phép toán trên **nhiều boolean positions cùng lúc**. Mỗi bit là một biến nhị phân; integer chỉ là container đóng gói chúng.
 
-## Mental Model
+## Mô hình tư duy
 
 Nếu ta có `k` boolean flags:
 
@@ -23,7 +23,7 @@ mask = \sum_{i=0}^{k-1} f_i 2^i
 
 Bit `i = 1` nghĩa flag `i` đang bật.
 
-Hardware có thể AND/OR/XOR cả machine word trong một instruction, nên bitset tạo **word-level parallelism** tự nhiên.
+Hardware có thể AND/OR/XOR cả machine word trong một instruction, nên tập bit (bitset) tạo **song song ở mức từ máy** tự nhiên.
 
 ## Các phép cơ bản
 
@@ -36,7 +36,7 @@ Hardware có thể AND/OR/XOR cả machine word trong một instruction, nên bi
 >>  right shift
 ```
 
-Với bit mask `1 << k`:
+Với mặt nạ bit `1 << k`:
 
 ### Kiểm tra bit
 
@@ -64,11 +64,11 @@ x &= ~(1u << k);
 x ^= (1u << k);
 ```
 
-Điểm quan trọng là type/width. `1 << k` dùng type của literal `1`; nếu cần shift tới bit cao của 64-bit value trong C/Java, dùng literal phù hợp như `1ULL << k` hoặc `1L << k`.
+Điểm quan trọng là type/width. `1 << k` dùng type của literal `1`; nếu cần shift tới bit cao của 64-bit giá trị trong C/Java, dùng literal phù hợp như `1ULL << k` hoặc `1L << k`.
 
-## AND, OR, XOR như set operations
+## AND, OR, XOR như set các thao tác
 
-Nếu mỗi bit đại diện một element trong universe nhỏ:
+Nếu mỗi bit đại diện một phần tử trong universe nhỏ:
 
 ```text
 A & B -> intersection
@@ -77,11 +77,11 @@ A ^ B -> symmetric difference
 A & ~B -> A \ B
 ```
 
-Đây là lý do bitsets rất mạnh cho graph/set algorithms: một machine word có thể xử lý 64 memberships cùng lúc.
+Đây là lý do bitsets rất mạnh cho đồ thị/set các thuật toán: một machine word có thể xử lý 64 memberships cùng lúc.
 
 ## XOR algebra
 
-XOR có properties:
+XOR có các tính chất:
 
 \[
 x \oplus x = 0
@@ -95,7 +95,7 @@ x \oplus 0 = x
 x \oplus y = y \oplus x
 \]
 
-và associative.
+và có tính kết hợp (associative).
 
 Nếu mọi number xuất hiện đúng hai lần trừ một number xuất hiện một lần:
 
@@ -103,15 +103,15 @@ Nếu mọi number xuất hiện đúng hai lần trừ một number xuất hi�
 x ^ x = 0
 ```
 
-làm các pairs triệt tiêu, để lại unique value.
+làm các pairs triệt tiêu, để lại unique giá trị.
 
-Điều này không phải magic trick; constraints của problem khớp chính xác algebra của XOR.
+Điều này không phải magic trick; các ràng buộc của problem khớp chính xác algebra của XOR.
 
-Nếu có ba lần, hoặc nhiều unique values, cùng trick không còn đủ information.
+Nếu có ba lần, hoặc nhiều unique các giá trị, cùng trick không còn đủ thông tin.
 
 ## Two's Complement
 
-Signed integers thường dùng **two's complement (2의 보수)** representation.
+Signed integers thường dùng **two's complement (2의 보수)** cách biểu diễn.
 
 Trong fixed width:
 
@@ -119,7 +119,7 @@ Trong fixed width:
 -x = \sim x + 1
 \]
 
-Đây là cơ sở của nhiều bit identities, nhưng language semantics vẫn phải được tôn trọng.
+Đây là cơ sở của nhiều bit identities, nhưng language ngữ nghĩa (semantics) vẫn phải được tôn trọng.
 
 ## Least Significant Set Bit
 
@@ -139,9 +139,9 @@ x    = 1011000₂
 AND  = 0001000₂
 ```
 
-Fenwick tree dùng value này làm block size.
+cây Fenwick (Fenwick Tree) dùng giá trị này làm block size.
 
-Mental reason: `-x` giữ bit 1 thấp nhất của `x` và đảo pattern phía trên theo two's-complement carry, nên AND chỉ còn bit đó.
+Mental reason: `-x` giữ bit 1 thấp nhất của `x` và đảo mẫu phía trên theo two's-complement carry, nên AND chỉ còn bit đó.
 
 ## Xóa bit 1 thấp nhất
 
@@ -163,23 +163,23 @@ while (x) {
 }
 ```
 
-Số iterations bằng số set bits, không phải bit width.
+Số iterations bằng số set bits, không phải độ rộng bit.
 
-Trong production, ưu tiên compiler/library intrinsic như `Integer.bitCount`, `Long.bitCount`, `std::popcount` nếu available vì có thể map tới hardware POPCNT.
+Trong hệ thống thực tế, ưu tiên trình biên dịch/library intrinsic như `Integer.bitCount`, `Long.bitCount`, `std::popcount` nếu available vì có thể map tới hardware POPCNT.
 
-## Kiểm tra power of two
+## Kiểm tra lũy thừa của hai
 
-Positive integer `x` là power of two nếu chỉ có một set bit:
+Positive integer `x` là lũy thừa của hai nếu chỉ có một set bit:
 
 ```text
 x > 0 && (x & (x - 1)) == 0
 ```
 
-Phải có `x > 0`; zero cũng thỏa expression thứ hai nhưng không phải power of two.
+Phải có `x > 0`; zero cũng thỏa expression thứ hai nhưng không phải lũy thừa của hai.
 
-Đây là ví dụ constraints nhỏ làm bit trick đúng hay sai.
+Đây là ví dụ các ràng buộc nhỏ làm bit trick đúng hay sai.
 
-## Bitmask subset representation
+## Bitmask subset cách biểu diễn
 
 Với `n` nhỏ, mask từ `0` tới `2^n - 1` biểu diễn mọi subset.
 
@@ -195,9 +195,9 @@ for (unsigned mask = 0; mask < (1u << n); ++mask) {
 }
 ```
 
-Bitmask không biến exponential problem thành polynomial. Nó chỉ encode state gọn và làm membership operation rẻ.
+Bitmask không biến exponential problem thành polynomial. Nó chỉ encode trạng thái (state) gọn và làm membership thao tác rẻ.
 
-Nếu cần enumerate `2^n` subsets, output/search space vẫn exponential.
+Nếu cần enumerate `2^n` subsets, đầu ra/không gian tìm kiếm vẫn exponential.
 
 ## Enumerating submasks
 
@@ -209,11 +209,11 @@ for (unsigned sub = mask; sub; sub = (sub - 1) & mask) {
 }
 ```
 
-`sub - 1` thay đổi suffix bits; AND với original `mask` ép result chỉ chứa allowed bits.
+`sub - 1` thay đổi suffix bits; AND với original `mask` ép kết quả chỉ chứa các bit được phép.
 
-Pattern này đi qua submasks theo descending numeric order.
+mẫu này đi qua submasks theo descending numeric order.
 
-Muốn include empty submask, xử lý `0` riêng hoặc dùng loop có break rõ ràng để tránh unsigned underflow loop.
+Muốn include rỗng submask, xử lý `0` riêng hoặc dùng loop có break rõ ràng để tránh unsigned tràn dưới loop.
 
 ## Vì sao tổng `(mask, submask)` pairs là `3^n`?
 
@@ -231,17 +231,17 @@ Vậy tổng combinations:
 3^n
 \]
 
-Đây là lý do nested loop over masks and submasks thường `O(3^n)`, không phải `O(4^n)` nếu structure đúng.
+Đây là lý do vòng lặp lồng nhau over masks and submasks thường `O(3^n)`, không phải `O(4^n)` nếu structure đúng.
 
 ## Superset enumeration
 
-Nếu universe mask có `n` bits và cần enumerate supersets của `mask`, có thể enumerate submasks của complement rồi OR lại, hoặc dùng transformed loops tùy problem.
+Nếu mặt nạ toàn miền có `n` bit và cần liệt kê các siêu tập của `mask`, có thể liệt kê các mặt nạ con của phần bù rồi OR trở lại, hoặc dùng vòng lặp biến đổi phù hợp với bài toán.
 
-Mental model tốt hơn memorizing syntax là: tách **fixed required bits** và **free bits**.
+Mô hình tư duy tốt hơn memorizing syntax là: tách **các bit bắt buộc cố định** và **các bit tự do**.
 
 ## Gray Code
 
-**Gray code (그레이 코드)** sắp `2^n` bit patterns sao cho hai consecutive values khác đúng một bit.
+**Gray code (그레이 코드)** sắp `2^n` bit các mẫu sao cho hai consecutive các giá trị khác đúng một bit.
 
 Binary-reflected Gray code:
 
@@ -249,23 +249,23 @@ Binary-reflected Gray code:
 g(i)=i\oplus(i>>1)
 \]
 
-Useful khi chuyển state mà chỉ muốn một bit thay đổi mỗi bước, hardware encoders, combinatorial generation và một số DP/enumeration optimizations.
+Hữu ích khi chuyển trạng thái mà chỉ muốn một bit thay đổi mỗi bước, hardware encoders, combinatorial generation và một số DP/enumeration optimizations.
 
-## Bitmask Dynamic Programming
+## Bitmask quy hoạch động (dynamic programming)
 
-Nếu state phụ thuộc subset nhỏ `n`, DP có thể dùng:
+Nếu trạng thái phụ thuộc subset nhỏ `n`, DP có thể dùng:
 
 ```text
 dp[mask]
 ```
 
-Ví dụ Traveling Salesman exact DP:
+Ví dụ Traveling Salesman chính xác DP:
 
 ```text
 dp[mask][v] = minimum cost đi qua set mask và kết thúc tại v
 ```
 
-State count:
+trạng thái count:
 
 \[
 O(2^n n)
@@ -273,17 +273,17 @@ O(2^n n)
 
 Transitions có thể đưa total tới `O(2^n n^2)`.
 
-Bitmask làm state identity compact; nó không loại exponential dependence vào `n`.
+Bitmask làm trạng thái identity gọn; nó không loại exponential dependence vào `n`.
 
 ## SOS DP / Subset DP
 
-Nhiều problems cần tổng function trên mọi submask:
+Nhiều problems cần tổng hàm trên mọi submask:
 
 \[
 g[mask] = \sum_{sub \subseteq mask} f[sub]
 \]
 
-Naive iterate all mask-submask pairs `O(3^n)`. **Sum Over Subsets DP (SOS DP)** có thể làm:
+Cách đơn giản duyệt mọi cặp mặt nạ–mặt nạ con có độ phức tạp `O(3^n)`. **Sum Over Subsets DP (SOS DP)** có thể giảm độ phức tạp bằng cách tái sử dụng các tổng trung gian:
 
 \[
 O(n2^n)
@@ -291,11 +291,11 @@ O(n2^n)
 
 bằng cách lần lượt cho phép từng bit đóng góp.
 
-Đây là một example mạnh nơi binary representation định nghĩa dimensions của DP state.
+Đây là một example mạnh nơi binary cách biểu diễn định nghĩa dimensions của DP trạng thái.
 
-## Bitset là gì?
+## tập bit là gì?
 
-Nếu universe có nhiều hơn machine-word bits, dùng array of words:
+Nếu universe có nhiều hơn machine-word bits, dùng mảng of words:
 
 ```text
 word 0 -> bits 0..63
@@ -310,11 +310,11 @@ word = index / 64
 bit  = index % 64
 ```
 
-Set operations chạy word-by-word.
+Set các thao tác chạy word-by-word.
 
-Nếu universe có 6400 elements, intersection cần khoảng 100 64-bit AND operations thay vì kiểm 6400 booleans riêng lẻ.
+Nếu universe có 6400 các phần tử, intersection cần khoảng 100 64-bit AND các thao tác thay vì kiểm 6400 booleans riêng lẻ.
 
-## Java BitSet
+## Java tập bit
 
 Java cung cấp `java.util.BitSet`:
 
@@ -330,23 +330,23 @@ b.set(200);
 a.and(b);
 ```
 
-`BitSet` tự quản word array và có methods `and`, `or`, `xor`, `nextSetBit`, `cardinality`.
+`BitSet` tự quản word mảng và có methods `and`, `or`, `xor`, `nextSetBit`, `cardinality`.
 
-Nếu cần fixed-size dense flags, `BitSet` thường memory-efficient hơn `HashSet<Integer>` rất nhiều.
+Nếu cần tập cờ dày đặc có kích thước cố định, `BitSet` thường tiết kiệm bộ nhớ hơn `HashSet<Integer>` rất nhiều.
 
 ## JavaScript bitwise operators chỉ 32-bit
 
 Đây là pitfall rất quan trọng.
 
-JavaScript `Number` là floating-point double, nhưng bitwise operators truyền thống convert operand sang signed 32-bit integer.
+JavaScript `Number` là số dấu phẩy động độ chính xác kép, nhưng các toán tử bit truyền thống chuyển toán hạng sang số nguyên có dấu 32 bit.
 
 ```js
 1 << 31
 ```
 
-có signed 32-bit semantics; shift count cũng modulo 32 theo operator rules.
+Các phép toán này sử dụng ngữ nghĩa số nguyên có dấu 32 bit; số lượng bit dịch cũng được lấy modulo 32 theo quy tắc của toán tử.
 
-Không thể dùng Number bitwise operators cho arbitrary 53-bit masks như thể chúng là 64-bit integers.
+Không thể dùng toán tử bit trên `Number` cho các mặt nạ 53 bit tùy ý như thể chúng là số nguyên 64 bit.
 
 ## BigInt bitmasks trong JavaScript
 
@@ -363,11 +363,11 @@ Nhưng không được mix `Number` và `BigInt` trực tiếp:
 1n + 1 // TypeError
 ```
 
-BigInt phù hợp mask lớn nhưng performance/cost model khác typed-array bitsets.
+BigInt phù hợp mask lớn nhưng hiệu năng/mô hình chi phí khác typed-array bitsets.
 
-Nếu universe hàng nghìn bits và operations bulk, `Uint32Array`/custom word bitset có thể thực dụng hơn một giant BigInt tùy engine/workload.
+Nếu universe hàng nghìn bits và các thao tác bulk, `Uint32Array`/custom word tập bit có thể thực dụng hơn một giant BigInt tùy engine/khối lượng công việc.
 
-## Java shift semantics
+## Java shift ngữ nghĩa
 
 Java có:
 
@@ -384,13 +384,13 @@ System.out.println(x >> 1);  // vẫn negative
 System.out.println(x >>> 1); // large positive
 ```
 
-Shift distance của `int` chỉ dùng low 5 bits; của `long` dùng low 6 bits. Vì vậy shift >= width không có semantics giống toán học naïve.
+Shift khoảng cách của `int` chỉ dùng low 5 bits; của `long` dùng low 6 bits. Vì vậy shift >= width không có ngữ nghĩa giống toán học naïve.
 
 ## C shift caveats
 
-C bit shifting signed values có nhiều corner cases. Left shift làm overflow signed range có thể dẫn tới undefined behavior; right shift negative signed value historically có implementation-defined aspects theo standard/version context.
+Dịch bit trên giá trị có dấu trong C có nhiều trường hợp biên (corner cases). Dịch trái làm vượt miền số có dấu có thể dẫn tới hành vi không xác định; dịch phải một giá trị âm từng có những chi tiết phụ thuộc cách triển khai tùy chuẩn và phiên bản.
 
-Khi thao tác raw bits, unsigned integer types thường an toàn hơn:
+Khi thao tác các bit thô, unsigned integer types thường an toàn hơn:
 
 ```c
 uint32_t
@@ -401,15 +401,15 @@ và constants nên có unsigned/wide suffix phù hợp.
 
 ## Endianness không phải bit numbering trong integer
 
-Bit operations trên integer value thường độc lập với memory endianness. `x & 1` kiểm least significant bit của numeric value dù bytes được lưu little-endian hay big-endian.
+Bit các thao tác trên integer giá trị thường độc lập với bộ nhớ endianness. `x & 1` kiểm least significant bit của numeric giá trị dù byte được lưu little-endian hay big-endian.
 
-Endianness trở nên quan trọng khi serialize/interpret multi-byte memory representation, network protocol hoặc cast byte arrays.
+Endianness trở nên quan trọng khi serialize/interpret multi-byte bộ nhớ cách biểu diễn, mạng protocol hoặc cast byte các mảng.
 
 Đừng trộn “bit thấp” với “byte nằm ở address thấp”.
 
 ## Signed vs Unsigned Interpretation
 
-Cùng bit pattern có thể được diễn giải khác:
+Cùng bit mẫu có thể được diễn giải khác:
 
 ```text
 11111111₂
@@ -417,55 +417,55 @@ Cùng bit pattern có thể được diễn giải khác:
 
 là 255 nếu unsigned 8-bit, -1 nếu signed two's complement 8-bit.
 
-Bitwise transform làm việc trên pattern; comparison/arithmetic sau đó phụ thuộc signedness.
+Bitwise transform làm việc trên mẫu; phép so sánh/arithmetic sau đó phụ thuộc signedness.
 
 ## Bitboard
 
-Board game nhỏ có thể encode whole board bằng bits. Chess engines dùng **bitboards**: một 64-bit integer cho positions của một loại piece/occupancy.
+Bàn cờ nhỏ có thể mã hóa toàn bộ trạng thái bằng bit. Chess engines dùng **bàn cờ dạng bit**: một 64-bit integer cho positions của một loại piece/occupancy.
 
 Move generation có thể dùng shifts, masks và AND để tính nhiều squares đồng thời.
 
-Đây là example word-level parallelism rất thực tế.
+Đây là example song song ở mức từ máy rất thực tế.
 
-## Graph bằng Bitsets
+## đồ thị bằng Bitsets
 
-Dense graph nhỏ có thể lưu adjacency row như bitset.
+đồ thị dày nhỏ có thể lưu adjacency row như tập bit.
 
-Common neighbors của `u` và `v`:
+Phổ biến các đỉnh kề của `u` và `v`:
 
 ```text
 adj[u] & adj[v]
 ```
 
-Triangle counting hoặc transitive operations có thể tận dụng hardware word operations.
+Đếm tam giác hoặc các phép toán liên quan tới bao đóng bắc cầu có thể tận dụng thao tác trên cả từ máy của phần cứng.
 
-Floyd-Warshall boolean reachability có thể optimize bằng bitsets: nếu `i` reaches `k`, OR row `k` vào row `i`, giảm constant factor mạnh so với per-vertex boolean loops.
+Bài toán khả đạt Boolean kiểu Floyd–Warshall có thể được tối ưu bằng bitset: nếu `i` reaches `k`, OR row `k` vào row `i`, giảm constant factor mạnh so với per-vertex boolean loops.
 
-## Bitset DP
+## tập bit DP
 
-Classic subset-sum boolean DP:
+Kinh điển subset-sum boolean DP:
 
 ```text
 possible sums
 ```
 
-có thể encode bằng bitset `bits`, trong đó bit `s` nghĩa sum `s` reachable.
+có thể encode bằng tập bit `bits`, trong đó bit `s` nghĩa sum `s` có thể tới.
 
-Với item weight `w`:
+Với item trọng số `w`:
 
 ```text
 bits |= bits << w
 ```
 
-Một shift+OR xử lý nhiều states cùng lúc.
+Một shift+OR xử lý nhiều các trạng thái cùng lúc.
 
-Trong languages/libraries support efficient arbitrary bitset shift, điều này có thể tăng tốc rất lớn so với nested loops.
+Trong languages/libraries support efficient arbitrary tập bit shift, điều này có thể tăng tốc rất lớn so với các vòng lặp lồng nhau.
 
-## Bloom Filter connection
+## bộ lọc Bloom connection
 
-Bloom filter cũng là bit array, nhưng semantics khác exact bitset membership. Multiple hash functions map keys vào bit positions; query có false positives.
+bộ lọc Bloom cũng là bit mảng, nhưng ngữ nghĩa khác chính xác tập bit membership. Multiple các hàm băm map các khóa vào bit positions; truy vấn có các dương tính giả.
 
-Bitset ở đây là storage primitive, còn Bloom filter là probabilistic data structure xây trên nó.
+tập bit ở đây là lưu trữ primitive, còn bộ lọc Bloom là cấu trúc dữ liệu xác suất xây trên nó.
 
 Xem [Probabilistic Data Structures](./06_probabilistic_data_structures.md).
 
@@ -491,11 +491,11 @@ Check:
 (mask & WRITE) != 0
 ```
 
-Nếu field là enum flags trong protocol/database, cần document bit assignments ổn định để compatibility không bị phá.
+Nếu trường là enum flags trong protocol/cơ sở dữ liệu, cần document bit assignments ổn định để compatibility không bị phá.
 
 ## Bit packing
 
-Nhiều small integers có thể pack trong một word bằng shift + mask.
+Nhiều số nguyên nhỏ có thể được đóng gói trong một từ máy bằng phép dịch bit và mặt nạ.
 
 Ví dụ RGB 8-bit channels:
 
@@ -509,9 +509,9 @@ Extract green:
 (g >> 8) & 0xFF
 ```
 
-Packing giảm memory/bandwidth nhưng tăng complexity và coupling vào bit layout. Production serialization còn phải định nghĩa endianness/versioning.
+Packing giảm bộ nhớ/bandwidth nhưng tăng complexity và coupling vào bit bố trí. Trong hệ thống thực tế, serialization còn phải định nghĩa endianness/versioning.
 
-## Mask tạo từ `k` low bits
+## Mask tạo từ `k` các bit thấp
 
 Nếu muốn mask có `k` bits thấp bằng 1:
 
@@ -519,23 +519,23 @@ Nếu muốn mask có `k` bits thấp bằng 1:
 (1 << k) - 1
 ```
 
-nhưng cần cẩn thận khi `k` bằng word width vì shifting by width có semantics nguy hiểm/khác language.
+Tuy nhiên cần cẩn thận khi `k` bằng đúng độ rộng từ máy, vì dịch bit một lượng bằng độ rộng kiểu dữ liệu có ngữ nghĩa nguy hiểm hoặc khác nhau giữa các ngôn ngữ.
 
-Với fixed-width types, special-case full width hoặc dùng library helper.
+Với độ rộng cố định types, special-case full width hoặc dùng library helper.
 
 ## Rotate vs Shift
 
-Shift đẩy bits ra ngoài và fill zeros/sign bits. Rotate chuyển bits bị đẩy ra quay lại đầu kia.
+Phép dịch đẩy các bit ra ngoài và điền bit 0 hoặc bit dấu; phép xoay đưa các bit bị đẩy ra quay lại đầu bên kia.
 
-Cryptographic/hash algorithms thường dùng rotate (`rotl`, `rotr`) vì muốn mix bits mà không mất information.
+Cryptographic/hash các thuật toán thường dùng rotate (`rotl`, `rotr`) vì muốn mix bits mà không mất thông tin.
 
 C++20 có `std::rotl`/`std::rotr`; Java có `Integer.rotateLeft/Right` và `Long.rotateLeft/Right`.
 
-Đừng implement rotate bằng shifts mà quên width/signedness edge cases.
+Đừng implement rotate bằng shifts mà quên width/signedness các trường hợp biên (edge cases).
 
 ## Finding Highest/Lowest Set Bit
 
-Operations như count-leading-zeros (CLZ), count-trailing-zeros (CTZ) và bit length thường có hardware intrinsics.
+các thao tác như đếm số bit 0 đầu (CLZ), đếm số bit 0 cuối (CTZ) và bit length thường có hardware intrinsics.
 
 Examples:
 
@@ -545,7 +545,7 @@ Integer.numberOfTrailingZeros(x)
 Integer.highestOneBit(x)
 ```
 
-Applications:
+các ứng dụng:
 
 ```text
 log2 floor
@@ -555,11 +555,11 @@ Fenwick/segment internals
 bitset scanning
 ```
 
-Nếu library có intrinsic, dùng nó thay manual loop khi clarity/performance phù hợp.
+Nếu thư viện có intrinsic phù hợp, nên dùng nó thay cho vòng lặp viết tay khi điều đó cải thiện độ rõ ràng hoặc hiệu năng.
 
-## Next power of two
+## Next lũy thừa của hai
 
-Dynamic buffers, hash tables hoặc segment trees đôi khi round capacity lên power of two.
+động các bộ đệm, hash tables hoặc segment các cây đôi khi round capacity lên lũy thừa của hai.
 
 Một approach conceptually:
 
@@ -568,19 +568,19 @@ n > 0
 next = 1 << ceil(log2(n))
 ```
 
-Bit-smearing tricks tồn tại, nhưng library bit-length functions thường rõ và an toàn hơn.
+Bit-smearing tricks tồn tại, nhưng library bit-length các hàm thường rõ và an toàn hơn.
 
-Power-of-two capacity cho phép modulo index bằng mask:
+Power-of-two capacity cho phép chỉ số modulo bằng mask:
 
 ```text
 index & (capacity - 1)
 ```
 
-chỉ khi capacity thực sự là power of two.
+chỉ khi capacity thực sự là lũy thừa của hai.
 
 ## Bit Hacks không nên thay clarity vô điều kiện
 
-Modern compilers tối ưu nhiều patterns. Một obscure trick không tự động nhanh hơn clear code/library intrinsic.
+Hiện đại compilers tối ưu nhiều các mẫu. Một obscure trick không tự động nhanh hơn clear code/library intrinsic.
 
 Ví dụ manual popcount hack có thể chậm hơn hardware intrinsic và khó review.
 
@@ -596,29 +596,29 @@ không phải để code trông “low-level”.
 
 ## Security considerations
 
-Bitwise code xuất hiện nhiều trong crypto, parsers và protocols. Nhưng custom crypto bit tricks rất dễ tạo side channels hoặc logic bugs.
+Mã thao tác bit xuất hiện nhiều trong mật mã, bộ phân tích cú pháp và giao thức. Tuy nhiên các mẹo bit tự viết cho mật mã rất dễ tạo kênh rò rỉ phụ hoặc lỗi logic.
 
-Constant-time programming là specialized security discipline; branchless bit operations không tự động làm code constant-time vì compiler/runtime/memory behavior còn ảnh hưởng.
+Constant-time programming là chuyên biệt security discipline; branchless bit các thao tác không tự động làm code constant-time vì trình biên dịch/môi trường chạy (runtime)/bộ nhớ hành vi còn ảnh hưởng.
 
 Không nên tự thiết kế cryptographic primitive chỉ vì hiểu bitwise operators.
 
-## Common misconceptions
+## Những hiểu lầm phổ biến
 
-**“Bitmask luôn O(1).”** Chỉ khi state fit trong fixed number machine words. Arbitrary-size bitset operation là `O(number of words)`.
+**“Bitmask luôn O(1).”** Chỉ khi trạng thái fit trong fixed number machine words. Arbitrary-size tập bit thao tác là `O(number of words)`.
 
 **“Bitwise trong JavaScript dùng toàn bộ 53-bit integer precision.”** Không; Number bitwise operators dùng 32-bit coercion.
 
-**“`x & -x` luôn an toàn cho mọi type.”** Cần hiểu signed width và language overflow semantics.
+**“`x & -x` luôn an toàn cho mọi type.”** Cần hiểu signed width và language tràn số ngữ nghĩa.
 
-**“Bit DP làm exponential problem thành fast polynomial.”** State count vẫn `2^n`; bitmask chỉ làm representation compact.
+**“Bit DP làm exponential problem thành fast polynomial.”** trạng thái count vẫn `2^n`; bitmask chỉ làm cách biểu diễn gọn.
 
-**“Shift giống multiply/divide cho mọi signed value.”** Rounding, overflow và sign-fill có thể khác arithmetic expectation.
+**“Shift giống multiply/divide cho mọi signed giá trị.”** Rounding, tràn số và sign-fill có thể khác arithmetic expectation.
 
-**“Bitset = Bloom filter.”** Bitset thường exact flags; Bloom filter thêm hashing và probabilistic false positives.
+**“tập bit = bộ lọc Bloom.”** tập bit thường chính xác flags; bộ lọc Bloom thêm hashing và probabilistic các dương tính giả.
 
-## Testing Bit Code
+## kiểm thử Bit Code
 
-Bit bugs thường nằm ở boundaries:
+Bit bugs thường nằm ở các ranh giới:
 
 ```text
 bit 0
@@ -633,7 +633,7 @@ JavaScript >31 bit cases
 BigInt/Number conversion
 ```
 
-Property tests hữu ích:
+tính chất tests hữu ích:
 
 ```text
 set rồi clear bit -> original value
@@ -643,9 +643,9 @@ submask loop chỉ sinh subsets của mask và không duplicate
 bitset AND tương đương set intersection reference
 ```
 
-## Khi nào bit manipulation thật sự đáng dùng?
+## Khi nào thao tác bit thật sự đáng dùng?
 
-Bit representation đặc biệt mạnh khi:
+Bit cách biểu diễn đặc biệt mạnh khi:
 
 ```text
 universe nhỏ hoặc vừa và dense
@@ -655,12 +655,12 @@ word-level batch operations hữu ích
 memory bandwidth quan trọng
 ```
 
-Nếu domain keys sparse, huge hoặc dynamic labels, `HashSet`, sorted set hoặc compressed bitmap có thể phù hợp hơn.
+Nếu domain các khóa sparse, huge hoặc động labels, `HashSet`, sorted set hoặc bitmap nén có thể phù hợp hơn.
 
-Roaring Bitmap chẳng hạn chia universe thành chunks và chọn representation dense/sparse theo local cardinality; đây là production example vượt qua “plain bitset vs set” bằng hybrid structure.
+Roaring Bitmap, chẳng hạn, chia miền giá trị thành các khối và chọn cách biểu diễn dày hoặc thưa theo lực lượng cục bộ. Đây là một ví dụ thực tế vượt khỏi lựa chọn đơn giản “bitset hay set” bằng một cấu trúc lai.
 
-## Mental Model mở rộng
+## Mô hình tư duy mở rộng
 
-> Bit manipulation không phải collection của mẹo nhị phân. Nó là **data representation design**: khi state thật sự là boolean vector, binary integer/bitset cho phép memory compact, algebra rõ và hardware xử lý nhiều flags cùng lúc.
+> thao tác bit không phải collection của mẹo nhị phân. Nó là **data cách biểu diễn design**: khi trạng thái thật sự là boolean vector, binary integer/tập bit cho phép bộ nhớ gọn, algebra rõ và hardware xử lý nhiều flags cùng lúc.
 
-Khi dùng bit trick, luôn hỏi ba điều: proof identity đến từ đâu, integer width/signedness của language là gì, và state có thực sự fit model dense boolean vector không. Nếu ba câu này rõ, bitwise code trở thành công cụ có hệ thống thay vì magic.
+Khi dùng bit trick, luôn hỏi ba điều: chứng minh identity đến từ đâu, integer width/signedness của language là gì, và trạng thái có thực sự fit mô hình dense boolean vector không. Nếu ba câu này rõ, bitwise code trở thành công cụ có hệ thống thay vì magic.

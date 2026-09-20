@@ -1,33 +1,34 @@
-# Suffix Array, Suffix Tree và LCP
-**Suffix Array, Suffix Tree, LCP / 접미사 배열, 접미사 트리, LCP**
+# Mảng hậu tố, cây hậu tố và LCP
+**Suffix Array, Suffix Tree & Longest Common Prefix / 접미사 배열, 접미사 트리, LCP**
 
-Nhiều bài string không hỏi về prefix của toàn string mà hỏi về **mọi substring**: pattern có xuất hiện không, substring lặp dài nhất là gì, hai suffix giống nhau bao lâu, có bao nhiêu distinct substrings, hay longest common substring giữa hai strings là gì.
+Nhiều bài toán chuỗi không chỉ hỏi prefix của toàn chuỗi mà hỏi về **mọi substring**: mẫu có xuất hiện không, chuỗi con lặp dài nhất là gì, có bao nhiêu chuỗi con phân biệt, hai suffix giống nhau bao lâu, hay longest common substring giữa hai văn bản là gì.
 
-Nếu index từng substring trực tiếp, số substring của string length `n` là `O(n^2)`. Suffix structures tránh lưu toàn bộ set này bằng một observation quan trọng: **mọi substring là prefix của một suffix nào đó**.
+Một chuỗi dài `n` có `Θ(n²)` substring nếu đếm theo vị trí. Lưu hoặc lập chỉ mục từng substring trực tiếp là quá đắt. Các cấu trúc hậu tố tận dụng một nhận xét then chốt:
 
-Vì vậy thay vì index tất cả substrings, ta tổ chức các suffixes và khai thác shared prefixes.
+> **Mọi substring đều là prefix của ít nhất một suffix.**
+
+Thay vì quản lý `Θ(n²)` substring, ta tổ chức `n` suffix rồi khai thác thứ tự và các prefix dùng chung giữa chúng.
 
 ## 1. Suffix là gì?
 
-Với string `banana`:
+Với `banana`:
 
 ```text
-index  suffix
-0      banana
-1      anana
-2      nana
-3      ana
-4      na
-5      a
+0  banana
+1  anana
+2  nana
+3  ana
+4  na
+5  a
 ```
 
-Có đúng `n` suffixes, một suffix bắt đầu tại mỗi position.
+Có đúng `n` suffix, một suffix bắt đầu tại mỗi vị trí.
 
-Mọi substring `s[l..r]` là prefix của suffix bắt đầu tại `l`. Đây là lý do suffix indexing đủ để answer substring queries.
+Substring `s[l..r]` chính là prefix của suffix bắt đầu tại `l`. Đây là cầu nối từ bài toán substring sang suffix indexing.
 
 ## 2. Suffix Array
 
-**Suffix Array (SA / 접미사 배열)** là array các starting indices của suffixes theo lexicographic order.
+**Mảng hậu tố (Suffix Array – SA / 접미사 배열)** lưu vị trí bắt đầu của các suffix sau khi sắp xếp theo thứ tự từ điển.
 
 Với `banana`:
 
@@ -40,296 +41,485 @@ Với `banana`:
 2: nana
 ```
 
-Suffix Array là:
-
-```text
-[5, 3, 1, 0, 4, 2]
-```
-
-SA không lưu suffix strings riêng biệt. Nó chỉ lưu indices vào original text, nên compact hơn suffix trie/tree ở mức constant factors và locality thường tốt hơn.
-
-## 3. Vì sao substring search trở thành binary search?
-
-Trong lexicographically sorted suffixes, tất cả suffixes bắt đầu bằng cùng pattern tạo một contiguous interval.
-
-Ví dụ pattern `ana` trong `banana` match suffixes `ana` và `anana`, nằm cạnh nhau trong suffix order.
-
-Ta có thể binary search lower bound và upper bound của pattern trên SA. Nếu mỗi comparison pattern-với-suffix mất `O(m)` cho pattern length `m`, query đơn giản là:
-
-\[
-O(m\log n)
-\]
-
-với preprocessing SA tách riêng.
-
-Điểm quan trọng là sorting suffixes biến substring search thành ordered search.
-
-## 4. Naive suffix construction quá đắt
-
-Nếu tạo mọi suffix string rồi sort, ta có `n` strings với total character storage `O(n^2)`. Comparison giữa suffixes cũng có thể tốn `O(n)`.
-
-Naive approach vì thế có thể lên tới `O(n^2 log n)` hoặc tệ hơn tùy implementation.
-
-Suffix-array algorithms tốt hơn tránh materialize mọi suffix, thay vào đó sort suffixes bằng **ranks** đại diện cho prefixes ngày càng dài.
-
-## 5. Prefix-doubling construction
-
-Một cách học rất thực dụng để xây SA là doubling.
-
-Ban đầu sort suffixes theo ký tự đầu tiên, tức prefix length 1. Mỗi suffix có một rank.
-
-Sau đó để sort theo first 2 characters, suffix tại `i` được đại diện bởi pair:
-
-```text
-(rank[i], rank[i + 1])
-```
-
-Tiếp theo prefix length 4 dùng:
-
-```text
-(rank[i], rank[i + 2])
-```
-
-rồi 8, 16, ...
-
-Ở step với length `2^k`, pair ranks của hai halves size `2^{k-1}` đủ mô tả order của prefix đó.
-
-Nếu mỗi round sort `n` pairs bằng comparison sort, complexity thường:
-
-\[
-O(n\log^2 n)
-\]
-
-Có thể giảm còn `O(n log n)` bằng counting/radix sort trên integer ranks.
-
-## 6. Sentinel và boundary handling
-
-Khi `i + len` vượt string, rank của phần ngoài thường dùng một sentinel nhỏ hơn mọi valid rank, ví dụ `-1`.
-
-Nếu append một terminal character `$` nhỏ hơn mọi alphabet character, suffix order đôi khi dễ reason hơn. Nhưng sentinel phải thực sự unique và ordering phải rõ.
-
-Boundary semantics nhỏ này ảnh hưởng trực tiếp correctness của construction.
-
-## 7. Rank array
-
-Nếu `SA[pos] = suffixStart`, rank array là inverse:
-
-```text
-rank[suffixStart] = pos
-```
-
-Rank cho biết suffix bắt đầu tại index `i` đứng ở vị trí nào trong suffix order.
-
-Nó là bridge giữa original text order và suffix-array order, đặc biệt quan trọng cho Kasai LCP algorithm.
-
-## 8. LCP Array
-
-**LCP (Longest Common Prefix / 최장 공통 접두사)** array lưu độ dài common prefix giữa hai suffixes kề nhau trong suffix order.
-
-Nếu:
+nên:
 
 ```text
 SA = [5, 3, 1, 0, 4, 2]
 ```
 
-thì một convention phổ biến là:
+Điểm quan trọng: SA chỉ lưu chỉ số, không lưu lại toàn bộ các suffix. Vì vậy representation gọn hơn rất nhiều so với materialize `n` string con.
+
+## 3. Vì sao substring search trở thành binary search?
+
+Trong thứ tự suffix đã sắp xếp, mọi suffix bắt đầu bằng cùng một pattern tạo thành một đoạn liên tiếp.
+
+Ví dụ pattern `ana` khớp suffix `ana` và `anana`, nằm cạnh nhau trong SA.
+
+Ta có thể dùng binary search để tìm:
+
+```text
+lower bound của pattern
+upper bound của pattern
+```
+
+Nếu mỗi phép so sánh pattern–suffix tốn `O(m)` với pattern dài `m`, truy vấn cơ bản là:
+
+\[
+O(m\log n)
+\]
+
+sau khi SA đã được xây.
+
+## 4. So sánh suffix không nên tạo substring mới
+
+Một implementation tệ có thể tạo `s.substring(i)` cho từng suffix rồi sort. Điều này dễ tạo tổng dữ liệu `Θ(n²)` và nhiều allocation.
+
+Cách đúng về representation là giữ index vào string gốc và so sánh qua index hoặc rank.
+
+Đây là một bài học hệ thống quan trọng: cùng một ý tưởng thuật toán nhưng materialization không cần thiết có thể phá cả memory lẫn performance.
+
+## 5. Prefix-Doubling
+
+Một cách xây Suffix Array dễ học là **doubling**.
+
+Ban đầu xếp suffix theo ký tự đầu tiên. Sau đó ở vòng `k`, mỗi suffix được đặc trưng bởi cặp rank của hai block dài `2^(k-1)`:
+
+```text
+(rank[i], rank[i + 2^(k-1)])
+```
+
+Mỗi vòng tăng độ dài prefix đã biết thứ tự lên gấp đôi:
+
+```text
+1, 2, 4, 8, 16, ...
+```
+
+Nếu sort cặp rank bằng comparison sort, complexity thường `O(n log² n)`. Nếu rank là số nguyên và dùng radix/counting sort, có thể đạt `O(n log n)`.
+
+## 6. Bất biến của Doubling
+
+Sau vòng `k`:
+
+> `rank[i]` biểu diễn đúng lớp thứ tự của prefix dài `2^k` bắt đầu tại `i`.
+
+Khi xây vòng sau, cặp rank của hai nửa đủ quyết định thứ tự prefix dài gấp đôi.
+
+Đây là một ví dụ đẹp của tư duy **nâng cấp tóm lược (summary refinement)**: thay vì so lại chuỗi dài, ta so hai summary đã được xác minh từ vòng trước.
+
+## 7. Sentinel và ký tự kết thúc
+
+Khi `i + len` vượt chuỗi, rank phần còn lại phải có quy ước rõ, thường dùng `-1` nhỏ hơn mọi rank hợp lệ.
+
+Một cách khác là thêm terminal symbol `$` nhỏ hơn mọi ký tự hợp lệ và chỉ xuất hiện một lần.
+
+Sentinel không phải chi tiết nhỏ. Nó ảnh hưởng trực tiếp lexicographic order và tính duy nhất của suffix.
+
+## 8. Rank Array
+
+Nếu:
+
+```text
+SA[pos] = suffixStart
+```
+
+thì inverse array:
+
+```text
+rank[suffixStart] = pos
+```
+
+Rank giúp chuyển từ vị trí trong text sang vị trí trong thứ tự suffix.
+
+Nó đặc biệt quan trọng trong Kasai và các bài cần hỏi quan hệ giữa suffix bắt đầu tại hai index gốc.
+
+## 9. LCP Array
+
+**LCP (Longest Common Prefix / 최장 공통 접두사)** thường được định nghĩa:
 
 ```text
 LCP[i] = lcp(SA[i-1], SA[i])
+LCP[0] = 0
 ```
 
-với `LCP[0] = 0`.
+LCP đo lượng prefix chung giữa hai suffix kề nhau trong lexicographic order.
 
-LCP biến nhiều substring questions thành array/range questions.
+Một insight rất quan trọng:
 
-## 9. Longest Repeated Substring
+> Các suffix có prefix chung dài sẽ tụ lại thành một vùng liên tiếp trong SA.
 
-Nếu một substring xuất hiện ít nhất hai lần, có ít nhất hai suffixes chia sẻ prefix đó.
+Vì vậy LCP biến nhiều bài substring thành bài trên mảng.
 
-Trong sorted suffix order, những suffixes có common prefix lớn sẽ nằm gần nhau. Vì vậy length của longest repeated substring chính là:
+## 10. Longest Repeated Substring
+
+Nếu một substring xuất hiện ít nhất hai lần, tồn tại ít nhất hai suffix chia sẻ prefix đó.
+
+Trong thứ tự đã sắp xếp, hai suffix có prefix chung dài nhất sẽ có một cặp kề nhau phản ánh độ dài đó.
+
+Do đó:
 
 ```text
-max(LCP)
+longest repeated substring length = max(LCP)
 ```
 
-Nếu cần substring thật, lấy starting index từ suffix pair tương ứng.
+Nếu cần substring cụ thể, lấy vị trí tương ứng trong SA.
 
-Đây là một kết quả đẹp: một problem trên `O(n^2)` substrings biến thành maximum trên array size `O(n)` sau preprocessing.
+## 11. Kasai xây LCP trong O(n)
 
-## 10. Kasai Algorithm xây LCP trong O(n)
+Naive tính LCP lại từ đầu cho từng cặp suffix kề nhau có thể `O(n²)` ở chuỗi lặp nhiều.
 
-Naive tính LCP cho mỗi pair adjacent suffixes từ đầu có thể tốn `O(n^2)` trong strings có nhiều prefix lặp.
+Kasai duy trì độ dài `h` của prefix chung đã biết. Khi chuyển từ suffix bắt đầu tại `i` sang suffix `i+1`, ta có thể giảm `h` tối đa một rồi tiếp tục so sánh.
 
-Kasai tận dụng property rằng nếu suffix `i` và một neighbor trong suffix order có LCP length `h`, thì khi chuyển sang suffix `i+1`, common prefix candidate thường ít nhất `h-1` trước khi tiếp tục compare.
+Mỗi ký tự chỉ làm `h` tăng hữu hạn lần, và mỗi bước ngoài cùng làm `h` giảm tối đa một.
 
-Algorithm duy trì `h`, decrement tối đa 1 mỗi step của original index, còn mỗi character comparison làm `h` tăng. Tổng số tăng/giảm bị bounded tuyến tính, nên total `O(n)`.
-
-Đây là một dạng amortized reasoning rất hay trong string algorithms.
-
-## 11. LCP giữa hai suffix bất kỳ
-
-Nếu muốn LCP của suffixes đứng tại positions `i` và `j` trong suffix order, answer là minimum LCP trên interval giữa chúng:
+Tổng số thao tác so sánh thành công được khấu hao tuyến tính:
 
 \[
-LCP(SA[i], SA[j]) = \min LCP[i+1..j]
+O(n)
 \]
 
-Do đó sau khi có LCP array, ta có thể xây RMQ structure như Sparse Table hoặc Segment Tree.
+Đây là một ví dụ rất hay của amortized analysis trong string algorithms.
 
-Với static text và nhiều LCP queries, Sparse Table cho preprocessing `O(n log n)` và query `O(1)`.
+## 12. LCP giữa hai suffix bất kỳ trở thành RMQ
 
-Suffix structure vì thế kết nối trực tiếp với range-query structures.
-
-## 12. Count Distinct Substrings
-
-Tổng số substrings của string length `n` là:
+Giả sử `rank[a] < rank[b]`. Khi đó:
 
 \[
-\frac{n(n+1)}{2}
+lcp(a,b)=\min LCP[rank[a]+1..rank[b]]
 \]
 
-Nếu xét suffixes theo lexicographic order, suffix tại SA position `i` đóng góp length của nó trừ phần prefix đã xuất hiện trong suffix trước, tức trừ `LCP[i]`.
+Lý do: để hai suffix đầu-cuối cùng chia sẻ prefix dài `x`, mọi cặp suffix kề nhau giữa chúng trong lexicographic interval cũng phải chia sẻ ít nhất prefix dài `x`.
 
-Số distinct substrings:
+Vì vậy sau SA + LCP, bài toán LCP tùy ý trở thành **Range Minimum Query**.
 
-\[
-\frac{n(n+1)}{2} - \sum LCP[i]
-\]
-
-Đây là một ứng dụng rất trực tiếp của LCP như “amount of duplicate prefix information”.
-
-## 13. Longest Common Substring giữa hai strings
-
-Ghép hai strings bằng separator unique:
+Có thể dùng:
 
 ```text
-A + '#' + B
+Sparse Table -> static, O(1) query sau O(n log n) preprocessing
+Segment Tree -> O(log n) query
 ```
 
-xây SA và LCP. Longest common substring phải xuất hiện như common prefix giữa một suffix từ A và một suffix từ B.
+Đây là ví dụ cross-domain rất đẹp giữa string indexing và range-query data structures.
 
-Ta scan adjacent suffixes thuộc hai source khác nhau và lấy maximum LCP phù hợp.
+## 13. Số substring phân biệt
 
-Separator phải không xuất hiện trong inputs và ordering semantics phải rõ.
-
-## 14. Pattern occurrences
-
-Binary search trên SA có thể tìm range suffixes bắt đầu bằng pattern. Kích thước interval đó chính là số occurrences nếu overlapping occurrences được tính theo starting positions.
-
-Nếu cần list positions, các SA entries trong interval là starting positions. Nếu cần output theo text order, có thể sort positions hoặc dùng structure phụ.
-
-## 15. Suffix Tree
-
-**Suffix Tree / 접미사 트리** là compressed trie của tất cả suffixes.
-
-Naive suffix trie có thể có `O(n^2)` nodes/characters. Path compression gộp chains một-child thành một edge label đại diện substring của original text, thường lưu bằng `(start,end)` indices thay vì copy string.
-
-Suffix tree có `O(n)` nodes trong construction chuẩn với terminal symbol và assumptions thích hợp.
-
-Mỗi path từ root biểu diễn một substring. Vì thế pattern search đi theo edge labels theo `O(m)` về mặt character work trong ideal representation.
-
-## 16. Tại sao Suffix Tree khó implement?
-
-Một naive build insert từng suffix vẫn `O(n^2)`. Algorithms như Ukkonen xây online trong linear time nhưng cần suffix links, active point, implicit/explicit nodes và careful edge handling.
-
-Implementation complexity và object/pointer overhead lớn khiến suffix array thường thực dụng hơn cho many static-text workloads.
-
-Suffix tree vẫn rất quan trọng để hiểu compressed suffix structure và nhiều theoretical algorithms.
-
-## 17. Suffix Links
-
-Trong suffix tree construction, suffix link thường nối node đại diện string `xα` tới node đại diện `α`. Nó cho phép chuyển nhanh từ context hiện tại sang suffix context ngắn hơn mà không quay lại root.
-
-Concept này phản ánh recurring idea trong string algorithms: reuse information giữa overlapping suffix/prefix states, tương tự failure links trong KMP/Aho–Corasick ở một abstraction khác.
-
-## 18. Suffix Automaton
-
-**Suffix Automaton (SAM / 접미 자동자)** là minimal DFA nhận tất cả substrings của một string theo một characterization tương ứng.
-
-Dù tên là “suffix”, states của SAM represent equivalence classes của substrings có cùng end-position behavior. Number of states tối đa khoảng `2n-1` cho non-empty string construction chuẩn.
-
-Mỗi state có `len` là maximum substring length trong class, suffix link và transitions.
-
-## 19. Count distinct substrings bằng Suffix Automaton
-
-Mỗi SAM state `v` (trừ initial state) đóng góp số substring lengths mới:
+Tổng số substring tính theo vị trí:
 
 \[
-len[v] - len[link[v]]
+\frac{n(n+1)}2
 \]
 
-Tổng qua states cho số distinct substrings.
+Xét suffix theo thứ tự SA. Suffix `SA[i]` có `n-SA[i]` prefix, nhưng `LCP[i]` prefix đầu đã xuất hiện trong suffix trước.
 
-Đây là một cách khác suffix-array/LCP formula, cho thấy cùng combinatorial object có thể được nén theo two very different representations.
+Do đó số substring phân biệt:
 
-## 20. Longest Common Substring với Suffix Automaton
+\[
+\sum_i (n-SA[i]-LCP[i])
+\]
 
-Xây SAM cho string A. Sau đó scan B, duy trì current automaton state và current matched length. Khi transition không có, follow suffix links để giảm context.
+hay tương đương:
 
-Maximum matched length trong scan cho longest common substring length.
+\[
+\frac{n(n+1)}2-\sum_i LCP[i]
+\]
 
-Cách này có thể đạt linear-time behavior theo alphabet transition assumptions và là một ứng dụng kinh điển của SAM.
+LCP có thể được hiểu như lượng “trùng lặp thông tin” giữa suffix hiện tại và phần đã thấy trước đó.
 
-## 21. Suffix Array vs Suffix Tree vs Suffix Automaton
+## 14. Longest Common Substring giữa hai chuỗi
 
-Suffix Array compact, cache-friendly, dễ serialize và phù hợp static text + lexicographic/range queries. LCP bổ sung rất nhiều sức mạnh.
+Ghép:
 
-Suffix Tree hỗ trợ direct path navigation mạnh nhưng implementation/memory overhead lớn.
+```text
+A + '#' + B + '$'
+```
 
-Suffix Automaton rất mạnh cho substring-language questions, occurrence equivalence và online extension, nhưng mental model automaton khác lexicographic order.
+với các separator không xuất hiện trong input.
 
-Không có structure “master” tốt nhất. Chọn theo query family.
+Xây SA + LCP, sau đó xét các cặp suffix kề nhau thuộc hai nguồn khác nhau. LCP lớn nhất của các cặp đó là độ dài longest common substring.
 
-## 22. Khi chỉ cần single-pattern search, đừng over-engineer
+Nếu có nhiều hơn hai chuỗi, bài toán cần một cửa sổ trên SA chứa đủ nguồn và lấy min-LCP trong cửa sổ, kết hợp two pointers/RMQ tùy formulation.
 
-Nếu chỉ có một pattern và một text, KMP hoặc Z algorithm thường đơn giản hơn nhiều với `O(n+m)`.
+## 15. Tìm tất cả occurrence của pattern
 
-Nếu có dictionary nhiều patterns và cần scan text, Aho–Corasick có thể phù hợp.
+Binary search trên SA tìm đoạn suffix bắt đầu bằng pattern.
 
-Nếu nhiều substring/order queries trên một static text, SA + LCP đáng giá.
+Kích thước đoạn chính là số occurrence theo vị trí bắt đầu.
 
-Nếu cần prefix dictionary/autocomplete, Trie là model tự nhiên hơn.
+Nếu cần xuất vị trí theo thứ tự text, các vị trí trong SA range phải được sort hoặc xử lý bằng cấu trúc phụ vì SA order là lexicographic, không phải text order.
 
-Specialized suffix structures nên được dùng khi workload justify preprocessing/complexity.
+## 16. LCP-Accelerated Search
 
-## 23. Unicode và alphabet semantics
+Binary search pattern trên SA cơ bản có thể so lại nhiều prefix giống nhau ở nhiều bước.
 
-String algorithms thường trình bày trên alphabet symbols đơn giản. Trong Java, `char` là UTF-16 code unit; một Unicode code point có thể dùng surrogate pair. JavaScript string indexing cũng theo UTF-16 code units.
+Có thể giữ LCP của pattern với biên trái/phải để bỏ qua phần prefix đã biết chung, giảm lượng ký tự phải so sánh trong một số thiết kế.
 
-Nếu domain yêu cầu Unicode code points hoặc grapheme clusters, “character” trong algorithm phải được định nghĩa chính xác trước preprocessing.
+Ý tưởng tổng quát:
 
-Suffix order cũng phụ thuộc comparator/collation. Lexicographic order theo code units khác locale-aware collation.
+> Nếu đã biết hai chuỗi cùng prefix dài `k`, đừng so lại `k` ký tự đó ở lần tiếp theo.
 
-## 24. Memory considerations
+Đây là một motif tái sử dụng thông tin rất phổ biến trong string algorithms.
 
-Suffix Array cần integer array size `n`, rank arrays và temporary buffers trong construction. Với text rất lớn, memory constants vẫn quan trọng.
+## 17. Suffix Tree
 
-Suffix Tree có many nodes/edges và pointer/object overhead, đặc biệt đắt trong Java/JavaScript nếu mỗi node là object/hash map.
+**Cây hậu tố (Suffix Tree / 접미사 트리)** là compressed trie của mọi suffix.
 
-Compressed arrays/primitive buffers thường có locality tốt hơn.
+Suffix Trie naive có thể `Θ(n²)` node/ký tự. Suffix Tree nén các chuỗi node một-con thành một cạnh có nhãn là một đoạn của text gốc.
 
-## 25. Testing suffix structures
+Thay vì sao chép nhãn cạnh, lưu:
 
-Với small random strings, naive suffix list có thể làm oracle: tạo tất cả suffixes thật, sort strings rồi so starting indices với SA.
+```text
+(start, end)
+```
 
-LCP có thể được so với naive pairwise prefix comparison cho adjacent SA entries.
+trỏ vào string gốc.
 
-Distinct substring count có thể được kiểm tra bằng brute-force HashSet trên n nhỏ.
+Với terminal symbol và construction chuẩn, Suffix Tree có số node tuyến tính theo `n`.
 
-Các test quan trọng gồm all-equal string như `aaaaa`, all-distinct, periodic strings như `abababab`, empty/single-character và Unicode semantics nếu supported.
+## 18. Search trong Suffix Tree
 
-## 26. Connection với Burrows–Wheeler Transform và FM-index
+Pattern search đi theo nhãn cạnh. Nếu representation cạnh dùng chỉ số vào text, tổng số ký tự pattern cần kiểm tra về lý tưởng là `O(m)`.
 
-Suffix ordering liên quan sâu tới **Burrows–Wheeler Transform (BWT)**. BWT reorder text dựa trên sorted rotations/suffix-like order để tạo runs thuận lợi cho compression.
+Sau khi tới locus của pattern, mọi leaf bên dưới tương ứng với occurrence.
 
-FM-index kết hợp BWT với rank/select-like structures để làm compressed full-text index, hỗ trợ pattern search trong space gần compressed text.
+Do đó complexity tự nhiên là:
 
-Đây là bước từ textbook suffix array sang search/indexing systems quy mô lớn và bioinformatics.
+\[
+O(m+k)
+\]
 
-## Mental Model
+với `k` là số occurrence phải xuất.
 
-> Suffix structures tránh index `O(n^2)` substrings trực tiếp bằng cách nhận ra rằng **mọi substring là prefix của một suffix**.
+## 19. Ukkonen và vì sao Suffix Tree khó cài
 
-Suffix Array tổ chức suffixes theo lexicographic order; LCP đo mức shared prefix giữa neighbors; Suffix Tree compress prefix trie của suffixes; Suffix Automaton compress substrings theo future/end-position equivalence. Mỗi structure là một cách khác nhau để tái sử dụng overlap information trong string.
+Xây Suffix Tree naive bằng cách chèn từng suffix là `O(n²)`.
 
-Xem thêm: [String Algorithms](./00_string_algorithms.md), [Sparse Table & RMQ](./05_sparse_table_and_static_range_queries.md), [Trie](../02_trees/04_tries.md), [Searching](../04_algorithmic_paradigms/00_searching.md).
+Ukkonen đạt linear time về lý thuyết bằng các khái niệm:
+
+```text
+implicit tree
+active point
+suffix links
+end index dùng chung cho leaf edges
+rule extensions
+```
+
+Implementation rất tinh tế. Đây là ví dụ nơi thuật toán lý thuyết đẹp nhưng engineering complexity lớn.
+
+Trong nhiều workload text tĩnh, SA gọn hơn, dễ serialize hơn và cache-friendly hơn.
+
+## 20. Suffix Link
+
+Suffix link thường nối trạng thái biểu diễn `xα` tới trạng thái biểu diễn `α`.
+
+Nó cho phép “bỏ ký tự đầu” của context mà không quay về gốc và tìm lại từ đầu.
+
+Motif này xuất hiện ở nhiều string structures:
+
+```text
+KMP failure link
+Aho–Corasick failure link
+Suffix Tree suffix link
+Suffix Automaton suffix link
+```
+
+Đây đều là cách tái sử dụng trạng thái của các prefix/suffix chồng lấn.
+
+## 21. Suffix Automaton
+
+**Suffix Automaton (SAM / 접미 자동자)** là DFA tối thiểu đại diện cho tập substring của một chuỗi theo lớp tương đương end-position.
+
+Mỗi state thường giữ:
+
+```text
+len   -> độ dài substring dài nhất của lớp
+link  -> suffix link
+next  -> transition theo ký tự
+```
+
+State không đại diện một substring duy nhất mà đại diện một lớp substring có cùng tập vị trí kết thúc.
+
+## 22. Ý nghĩa của Clone trong SAM
+
+Khi thêm ký tự mới, đôi lúc một state cũ phải được tách về mặt ngữ nghĩa để giữ đúng automaton tối thiểu. Ta tạo **clone state** có transition/link giống state cũ nhưng `len` ngắn hơn.
+
+Clone không tương ứng với một prefix mới của text. Nó là một trạng thái kỹ thuật cần thiết để chia lớp tương đương end-position.
+
+Đây là phần quan trọng để hiểu SAM không phải “một trie tối ưu hóa”.
+
+## 23. Số substring phân biệt bằng SAM
+
+Mỗi state `v` đóng góp số substring mới:
+
+\[
+len[v]-len[link[v]]
+\]
+
+Tổng trên các state cho số substring phân biệt.
+
+Trực giác: state đại diện tất cả độ dài trong interval:
+
+```text
+(len[link[v]] + 1) ... len[v]
+```
+
+và các substring này thuộc cùng lớp end-position.
+
+## 24. Occurrence Count trong SAM
+
+Nếu mỗi prefix-end state được khởi tạo count 1, rồi propagate count theo thứ tự `len` giảm dần qua suffix link, ta thu được số end positions của mỗi state.
+
+Khi đó có thể trả lời số lần xuất hiện của substring sau khi đi transition tới state tương ứng, với caveat về cách substring được ánh xạ vào state.
+
+## 25. Longest Common Substring với SAM
+
+Xây SAM cho `A`, rồi quét `B`. Duy trì state hiện tại và độ dài match; khi transition thất bại, đi suffix link để tìm context ngắn hơn có thể tiếp tục.
+
+Độ dài match lớn nhất là longest common substring.
+
+Đây là counterpart automaton của cách làm SA + LCP.
+
+## 26. SA, Suffix Tree hay SAM?
+
+| Nhu cầu | Cấu trúc thường phù hợp |
+|---|---|
+| text tĩnh, memory gọn, binary search/RMQ | Suffix Array + LCP |
+| traversal theo substring prefix và query giàu cấu trúc | Suffix Tree |
+| online xây một chuỗi, substring-state queries | Suffix Automaton |
+
+Không có cấu trúc “mạnh nhất”. Representation phù hợp phụ thuộc query set, memory budget và độ phức tạp implementation chấp nhận được.
+
+## 27. FM-Index và Burrows–Wheeler Transform
+
+Ở quy mô text lớn, suffix ordering còn dẫn tới **Burrows–Wheeler Transform (BWT)** và FM-index.
+
+FM-index dùng BWT + rank/select-like structures để hỗ trợ **backward search** cho pattern trong bộ nhớ nén hơn nhiều so với lưu suffix tree đầy đủ.
+
+Đây là nền tảng quan trọng của compressed full-text indexing và bioinformatics.
+
+Mô hình tư duy mở rộng:
+
+> Suffix order không chỉ hỗ trợ binary search; nó còn làm lộ cấu trúc lặp của text để vừa nén vừa tìm kiếm.
+
+## 28. SA-IS và Linear-Time Construction
+
+Có các thuật toán xây SA tuyến tính như SA-IS, dựa trên phân loại suffix và induced sorting.
+
+Chúng quan trọng về lý thuyết và trong implementation chuyên dụng, nhưng prefix-doubling thường dễ học, dễ debug và đủ tốt cho nhiều workload.
+
+Không nên dùng thuật toán construction phức tạp hơn chỉ vì asymptotic tốt hơn nếu `n` và hệ số thực tế không yêu cầu.
+
+## 29. Alphabet và Unicode
+
+String algorithm phải xác định đơn vị ký tự:
+
+```text
+byte
+UTF-16 code unit
+Unicode code point
+grapheme cluster
+```
+
+Suffix structure chỉ đúng theo alphabet mà comparator sử dụng.
+
+Trong Java, `char` là UTF-16 code unit. Trong JavaScript, index chuỗi cũng chủ yếu theo UTF-16 code unit. Nếu miền bài toán nói “ký tự người dùng nhìn thấy”, representation có thể phải khác.
+
+## 30. Bộ nhớ
+
+SA cơ bản cần vài mảng số nguyên kích thước `O(n)`. Doubling có thể cần SA, rank, tmp và buffers sort.
+
+Suffix Tree/SAM dùng nhiều node/state và transition. Nếu alphabet lớn, map/hash transition tăng overhead; nếu alphabet nhỏ cố định, array transition nhanh hơn nhưng tốn chỗ trống.
+
+Cùng `O(n)` nhưng hệ số bộ nhớ có thể chênh rất lớn.
+
+## 31. Cache Locality
+
+SA và LCP là các mảng liên tiếp nên rất thân thiện với cache và serialization.
+
+Suffix Tree nhiều node/con trỏ dễ tạo pointer chasing. SAM có thể nằm giữa hai thái cực tùy representation transitions.
+
+Đây là lý do SA thường rất thực dụng dù cây hậu tố có query complexity lý thuyết đẹp.
+
+## 32. Static vs Dynamic Text
+
+Suffix Array/Tree cổ điển được tối ưu cho text tương đối tĩnh. Nếu text thay đổi giữa chuỗi, một edit có thể làm thay đổi rất nhiều suffix order.
+
+Dynamic full-text indexing cần cấu trúc phức tạp hơn hoặc chiến lược rebuild/batching.
+
+Nếu workload là append-only stream, SAM có lợi thế vì construction online tự nhiên hơn.
+
+## 33. Output-Sensitive Bound
+
+Nếu pattern xuất hiện `k` lần và API yêu cầu liệt kê mọi vị trí, complexity không thể nhỏ hơn `Ω(k)`.
+
+Một cấu trúc cho search `O(m)` vẫn cần thêm `O(k)` để output occurrences.
+
+Đừng nhầm chi phí tìm vùng kết quả với chi phí materialize kết quả.
+
+## 34. Kiểm thử Suffix Array
+
+Với chuỗi nhỏ, có thể tạo oracle:
+
+```text
+suffixes = [(s[i:], i) for i]
+sort trực tiếp
+so index với SA
+```
+
+Các invariant:
+
+```text
+SA là permutation của 0..n-1
+suffixes theo SA tăng lexicographically
+rank[SA[i]] == i
+LCP[i] đúng với cặp kề
+```
+
+## 35. Kiểm thử Kasai
+
+Với chuỗi nhỏ, tính LCP naive cho từng cặp suffix kề rồi so với Kasai.
+
+Case quan trọng:
+
+```text
+all same chars: aaaaa
+all distinct
+periodic string: ababab...
+empty/single char
+Unicode theo đúng unit đã định nghĩa
+```
+
+Chuỗi `aaaaa` đặc biệt tốt để bắt bug vì LCP rất dài và overlapping mạnh.
+
+## 36. Kiểm thử SAM
+
+Có thể generate mọi substring của chuỗi nhỏ bằng brute force và so:
+
+```text
+SAM accepts đúng mọi substring
+SAM rejects các string không phải substring
+số distinct substrings khớp brute force set
+occurrence count khớp oracle
+```
+
+Clone-related bug thường lộ rõ qua random differential testing.
+
+## 37. Những hiểu lầm phổ biến
+
+“Suffix Array lưu mọi suffix string” — sai; nó chỉ cần lưu index.
+
+“Có SA thì mọi substring query là O(log n)” — còn phụ thuộc chi phí so pattern, LCP acceleration và output size.
+
+“Suffix Tree luôn tốt hơn SA vì query O(m)” — bỏ qua memory, cache locality và implementation complexity.
+
+“SAM state tương ứng đúng một substring” — sai; state là lớp tương đương của nhiều substring.
+
+“Coordinate của string luôn là ký tự Unicode thực” — sai nếu runtime index theo code unit/byte.
+
+## Mô hình tư duy
+
+> Các cấu trúc hậu tố biến không gian `Θ(n²)` substring thành một representation tuyến tính bằng cách tổ chức `n` suffix và chia sẻ thông tin prefix giữa chúng.
+
+Suffix Array khai thác **thứ tự**. LCP khai thác **mức giống nhau giữa hàng xóm trong thứ tự**. Suffix Tree khai thác **nén đường đi prefix**. Suffix Automaton khai thác **lớp tương đương theo vị trí kết thúc**.
+
+Khi gặp bài substring lớn, hãy hỏi: **text tĩnh hay append-only, cần search hay counting/rank/RMQ, cần output mọi occurrence không, memory có quan trọng không, alphabet là gì, và có cần construction đủ đơn giản để kiểm chứng không?**
+
+Xem thêm: [String Algorithms](./00_string_algorithms.md), [Sparse Table](./05_sparse_table_and_static_range_queries.md), [Range Queries](./01_range_queries_fenwick_segment_tree.md), [Amortized & Probabilistic Thinking](./03_amortized_randomized_and_probabilistic_thinking.md).

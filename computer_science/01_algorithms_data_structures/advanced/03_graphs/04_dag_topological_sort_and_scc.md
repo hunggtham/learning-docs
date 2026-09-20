@@ -1,15 +1,15 @@
-# DAG, Topological Sort và Strongly Connected Components
+# DAG, sắp xếp tô-pô và Strongly Connected các thành phần
 **DAG, sắp xếp tô-pô và thành phần liên thông mạnh / 방향 비순환 그래프, 위상 정렬, 강한 연결 요소**
 
-Directed graph thường được dùng để biểu diễn dependency: package A cần B, task X phải chạy trước Y, course prerequisite, build target, data pipeline, state transition hoặc workflow. Khi dependency có cycle, câu hỏi “cái nào phải trước cái nào” có thể mất ý nghĩa hoặc cần xử lý đặc biệt.
+đồ thị có hướng thường được dùng để biểu diễn dependency: package A cần B, task X phải chạy trước Y, course prerequisite, xây dựng đích, data chuỗi xử lý, trạng thái (state) transition hoặc workflow. Khi dependency có chu trình, câu hỏi “cái nào phải trước cái nào” có thể mất ý nghĩa hoặc cần xử lý đặc biệt.
 
-**Directed Acyclic Graph (DAG / 방향 비순환 그래프)** là directed graph không có directed cycle. DAG quan trọng vì nó biến một quan hệ phụ thuộc phức tạp thành một structure có thể xử lý theo thứ tự.
+**Directed Acyclic đồ thị (DAG / 방향 비순환 그래프)** là đồ thị có hướng không có directed chu trình. DAG quan trọng vì nó biến một quan hệ phụ thuộc phức tạp thành một structure có thể xử lý theo thứ tự.
 
-## Mental Model
+## Mô hình tư duy
 
-> DAG cho ta một **partial order**: không phải mọi cặp node đều so sánh được, nhưng mọi dependency edge đều yêu cầu một hướng trước-sau. Topological sort biến partial order đó thành một linear order hợp lệ.
+> DAG cho ta một **thứ tự bộ phận**: không phải mọi cặp nút đều so sánh được, nhưng mọi dependency cạnh đều yêu cầu một hướng trước-sau. sắp xếp tô-pô biến thứ tự bộ phận đó thành một linear order hợp lệ.
 
-Nếu graph có cycle, không có topological order đầy đủ vì một cycle tạo contradiction kiểu:
+Nếu đồ thị có chu trình, không có thứ tự tô-pô đầy đủ vì một chu trình tạo contradiction kiểu:
 
 ```text
 A trước B
@@ -17,9 +17,9 @@ B trước C
 C trước A
 ```
 
-## Topological order là gì?
+## thứ tự tô-pô là gì?
 
-Một ordering `v1, v2, ..., vn` là topological order nếu với mọi edge:
+Một ordering `v1, v2, ..., vn` là thứ tự tô-pô nếu với mọi cạnh:
 
 \[
 u \to v
@@ -27,24 +27,24 @@ u \to v
 
 thì `u` xuất hiện trước `v`.
 
-Topological order **không nhất thiết duy nhất**. Nếu hai tasks không phụ thuộc nhau, chúng có thể đổi chỗ mà vẫn hợp lệ.
+thứ tự tô-pô **không nhất thiết duy nhất**. Nếu hai tasks không phụ thuộc nhau, chúng có thể đổi chỗ mà vẫn hợp lệ.
 
-Điều này rất quan trọng trong scheduling: graph chỉ encode constraints bắt buộc, không phải một schedule duy nhất.
+Điều này rất quan trọng trong scheduling: đồ thị chỉ encode các ràng buộc bắt buộc, không phải một schedule duy nhất.
 
-## Kahn's Algorithm: reasoning bằng indegree
+## Kahn's thuật toán: reasoning bằng indegree
 
-**Indegree (진입 차수)** của node là số incoming edges. Trong dependency graph, indegree 0 nghĩa node hiện không còn prerequisite chưa xử lý.
+**Indegree (진입 차수)** của nút là số incoming các cạnh. Trong dependency đồ thị, indegree 0 nghĩa nút hiện không còn prerequisite chưa xử lý.
 
-Kahn's algorithm:
+Kahn's thuật toán:
 
-1. tính indegree mọi node;
-2. đưa tất cả node indegree 0 vào frontier;
-3. lấy một node ra, append vào order;
-4. “xóa logic” các outgoing edges bằng cách giảm indegree neighbors;
-5. neighbor nào về 0 thì trở thành eligible;
-6. nếu xử lý đủ `V` node, graph là DAG.
+1. tính indegree mọi nút;
+2. đưa tất cả nút indegree 0 vào frontier;
+3. lấy một nút ra, append vào order;
+4. “xóa logic” các outgoing các cạnh bằng cách giảm indegree các đỉnh kề;
+5. đỉnh kề nào về 0 thì trở thành eligible;
+6. nếu xử lý đủ `V` nút, đồ thị là DAG.
 
-### JavaScript implementation
+### JavaScript cách triển khai
 
 ```js
 function topoSort(n, g) {
@@ -80,11 +80,11 @@ Complexity:
 O(V+E)
 \]
 
-vì mỗi vertex vào queue tối đa một lần và mỗi edge giảm indegree đúng một lần.
+vì mỗi đỉnh vào queue tối đa một lần và mỗi cạnh giảm indegree đúng một lần.
 
-## Tại sao Kahn phát hiện cycle?
+## Tại sao Kahn phát hiện chu trình?
 
-Nếu còn nodes chưa xử lý nhưng không còn indegree-0 node, mỗi node còn lại có ít nhất một incoming edge từ region còn lại. Theo finite graph, follow incoming edges mãi cuối cùng phải lặp lại một vertex, tạo cycle.
+Nếu còn các nút chưa xử lý nhưng không còn indegree-0 nút, mỗi nút còn lại có ít nhất một incoming cạnh từ region còn lại. Theo finite đồ thị, follow incoming các cạnh mãi cuối cùng phải lặp lại một đỉnh, tạo chu trình.
 
 Do đó:
 
@@ -92,24 +92,24 @@ Do đó:
 processedCount < V
 ```
 
-là certificate rằng graph có directed cycle.
+là certificate rằng đồ thị có directed chu trình.
 
-## Frontier data structure quyết định secondary objective
+## Frontier cấu trúc dữ liệu quyết định secondary objective
 
-Nếu chỉ cần một order bất kỳ, queue đủ. Nếu muốn lexicographically smallest order, dùng min-heap thay queue:
+Nếu chỉ cần một thứ tự tô-pô bất kỳ, hàng đợi là đủ. Nếu muốn thứ tự nhỏ nhất theo từ điển, dùng đống nhỏ nhất thay cho hàng đợi:
 
 ```text
 frontier = all indegree-0 nodes
 always choose smallest eligible node
 ```
 
-Correctness vẫn giống nhau; data structure chỉ thêm secondary objective.
+tính đúng đắn vẫn giống nhau; cấu trúc dữ liệu chỉ thêm secondary objective.
 
-Nếu muốn maximize parallelism, thay vì lấy một node, có thể lấy toàn bộ current frontier như một execution wave. Đây là basis cho build systems và workflow schedulers.
+Nếu muốn maximize parallelism, thay vì lấy một nút, có thể lấy toàn bộ hiện tại frontier như một execution wave. Đây là basis cho xây dựng các hệ thống và workflow bộ lập lịchs.
 
-## DFS Topological Sort
+## DFS sắp xếp tô-pô
 
-Một cách khác dùng DFS. Node được append sau khi tất cả descendants đã được xử lý, sau đó reverse finish order.
+Một cách khác dùng DFS. nút được append sau khi tất cả các hậu duệ đã được xử lý, sau đó reverse finish order.
 
 ```java
 void dfs(int u) {
@@ -133,44 +133,44 @@ Ba trạng thái thường là:
 2 = finished / black
 ```
 
-Edge tới node đang `active` là back edge và chứng minh có directed cycle.
+cạnh tới nút đang `active` là back cạnh và chứng minh có directed chu trình.
 
-DFS topo và Kahn đều `O(V+E)`, nhưng mental model khác nhau:
+DFS topo và Kahn đều `O(V+E)`, nhưng mental mô hình khác nhau:
 
 ```text
 Kahn -> repeatedly remove prerequisites-free nodes
 DFS  -> output node only after all descendants finish
 ```
 
-## Topological order không phải “sort theo label”
+## thứ tự tô-pô không phải “sort theo label”
 
-Tên “sort” dễ gây hiểu nhầm. Topological sort không so sánh key như quicksort/mergesort. Nó linearize dependency constraints.
+Tên “sort” dễ gây hiểu nhầm. sắp xếp tô-pô không so sánh khóa như quicksort/mergesort. Nó linearize dependency các ràng buộc.
 
-Nếu graph có nhiều valid orders, algorithm được phép trả bất kỳ order nào trừ khi problem thêm tie-breaking rule.
+Nếu đồ thị có nhiều hợp lệ orders, thuật toán được phép trả bất kỳ order nào trừ khi problem thêm quy tắc phân xử khi bằng nhau quy tắc.
 
 ## DP trên DAG
 
-DAG đặc biệt mạnh vì topological order chính là evaluation order của dynamic programming.
+DAG đặc biệt mạnh vì thứ tự tô-pô chính là evaluation order của quy hoạch động (dynamic programming).
 
-Giả sử `dp[v]` phụ thuộc các predecessor `u -> v`. Sau topological sort, khi tới `v`, mọi predecessor đã được xử lý.
+Giả sử `dp[v]` phụ thuộc các predecessor `u -> v`. Sau sắp xếp tô-pô, khi tới `v`, mọi predecessor đã được xử lý.
 
-### Longest path trên DAG
+### Longest đường đi trên DAG
 
-Longest path trên general graph rất khó vì cycle cho phép combinatorial explosion. Trên DAG:
+Longest đường đi trên general đồ thị rất khó vì chu trình cho phép bùng nổ tổ hợp. Trên DAG:
 
 \[
 dp[v] = \max_{u \to v}(dp[u] + w(u,v))
 \]
 
-chỉ cần một pass theo topological order:
+chỉ cần một pass theo thứ tự tô-pô:
 
 \[
 O(V+E)
 \]
 
-### Path counting
+### đường đi counting
 
-Nếu muốn số paths từ source tới mỗi node:
+Nếu muốn số các đường đi từ nguồn tới mỗi nút:
 
 ```text
 ways[source] = 1
@@ -179,11 +179,11 @@ for u in topo:
         ways[v] += ways[u]
 ```
 
-Không cycle nghĩa là contribution chỉ chảy theo một chiều và không cần repeated relaxation.
+Không chu trình nghĩa là contribution chỉ chảy theo một chiều và không cần lặp lại relaxation.
 
-## Scheduling và Critical Path Method
+## Scheduling và Critical đường đi Method
 
-Trong project scheduling, vertex/edge có thể biểu diễn task và dependency. Earliest completion time có thể được tính bằng longest path trong DAG nếu durations không âm theo model phù hợp.
+Trong project scheduling, đỉnh/cạnh có thể biểu diễn task và dependency. Earliest completion time có thể được tính bằng longest đường đi trong DAG nếu durations không âm theo mô hình phù hợp.
 
 Ví dụ:
 
@@ -191,32 +191,32 @@ Ví dụ:
 finish[v] = duration[v] + \max_{u \to v} finish[u]
 \]
 
-Task trên longest dependency chain tạo **critical path**: delay ở đó trực tiếp kéo dài project finish time nếu không có slack.
+Task trên longest dependency chain tạo **critical đường đi**: delay ở đó trực tiếp kéo dài project thời điểm kết thúc nếu không có slack.
 
-Đây là connection trực tiếp giữa DAG algorithm và project/build scheduling.
+Đây là connection trực tiếp giữa DAG thuật toán và project/xây dựng scheduling.
 
-## Strongly Connected Component là gì?
+## thành phần liên thông mạnh là gì?
 
-Trong directed graph, một **Strongly Connected Component (SCC / 강한 연결 요소)** là một maximal set vertices sao cho với mọi `u,v` trong component:
+Trong đồ thị có hướng, một **thành phần liên thông mạnh (SCC / 강한 연결 요소)** là một maximal set các đỉnh sao cho với mọi `u,v` trong thành phần:
 
 ```text
 u reaches v
 v reaches u
 ```
 
-Từ “maximal” quan trọng: không thể thêm vertex ngoài vào mà vẫn giữ mutual reachability.
+Từ “maximal” quan trọng: không thể thêm đỉnh ngoài vào mà vẫn giữ mutual reachability.
 
 SCC là cách nén những region mà directed reachability đã trở thành “hai chiều”.
 
-## Condensation Graph
+## Condensation đồ thị
 
-Collapse mỗi SCC thành một super-node. Nếu có edge giữa hai SCC khác nhau, tạo edge giữa super-nodes.
+Co mỗi SCC thành một siêu nút (super-node). Nếu có cạnh nối hai SCC khác nhau, tạo cạnh tương ứng giữa hai siêu nút.
 
-Graph kết quả gọi là **condensation DAG (축약 DAG)** và luôn là DAG.
+đồ thị kết quả gọi là **condensation DAG (축약 DAG)** và luôn là DAG.
 
-Proof rất trực tiếp: nếu condensation graph có cycle giữa nhiều components, từ component nào cũng có thể đi vòng về component khác và quay lại; như vậy chúng thực ra mutually reachable và phải là cùng một SCC, contradiction.
+chứng minh rất trực tiếp: nếu condensation đồ thị có chu trình giữa nhiều các thành phần, từ thành phần nào cũng có thể đi vòng về thành phần khác và quay lại; như vậy chúng thực ra mutually có thể tới và phải là cùng một SCC, contradiction.
 
-Mental pipeline rất mạnh:
+Mental chuỗi xử lý rất mạnh:
 
 ```text
 graph directed phức tạp
@@ -228,23 +228,23 @@ collapse mutually-reachable regions
 solve easier problem on DAG
 ```
 
-## Kosaraju's Algorithm
+## Kosaraju's thuật toán
 
 Kosaraju dùng hai DFS passes.
 
-### Pass 1: finish order trên graph gốc
+### Pass 1: finish order trên đồ thị gốc
 
-DFS graph và record vertices theo finishing time.
+DFS đồ thị và record các đỉnh theo finishing time.
 
 ### Pass 2: DFS transpose theo reverse finish order
 
-**Transpose graph** đảo mọi edge `u -> v` thành `v -> u`.
+**Transpose đồ thị** đảo mọi cạnh `u -> v` thành `v -> u`.
 
-Process vertices theo decreasing finish time. Mỗi DFS trong transpose thu được một SCC.
+xử lý các đỉnh theo decreasing thời điểm kết thúc. Mỗi DFS trong transpose thu được một SCC.
 
 ### Intuition
 
-Trong condensation DAG, finishing order của DFS có property giúp ta chọn một component mà trên transpose không “chảy” sang component chưa nên gom. Đảo edges biến sink/source relation, và reverse finish order cô lập từng component đúng lúc.
+Trong DAG co SCC, thứ tự hoàn tất của DFS giúp chọn một thành phần sao cho trên đồ thị chuyển vị nó không đi sang thành phần chưa nên được gom. Đảo cạnh làm đổi vai trò nguồn–đích, còn việc duyệt theo thứ tự hoàn tất đảo ngược giúp cô lập từng SCC đúng thời điểm.
 
 Complexity:
 
@@ -252,13 +252,13 @@ Complexity:
 O(V+E)
 \]
 
-nhưng cần transpose graph hoặc cách iterate reverse edges.
+nhưng cần transpose đồ thị hoặc cách iterate reverse các cạnh.
 
-## Tarjan's SCC Algorithm
+## Tarjan's SCC thuật toán
 
-Tarjan tìm SCC trong một DFS bằng discovery index và stack active.
+Tarjan tìm các thành phần liên thông mạnh trong một lượt DFS bằng chỉ số khám phá và một ngăn xếp đang hoạt động.
 
-Mỗi node có:
+Mỗi nút có:
 
 ```text
 index[u] = thời điểm discover
@@ -266,31 +266,31 @@ low[u]   = smallest discovery index reachable
            trong active DFS region theo rule của SCC
 ```
 
-Node được push lên stack khi active. Khi:
+nút được push lên stack khi active. Khi:
 
 \[
 low[u] = index[u]
 \]
 
-`u` là root của một SCC; pop stack cho tới `u`.
+`u` là nút gốc của một SCC; pop stack cho tới `u`.
 
 ### Vì sao cần `onStack`?
 
-Không phải mọi visited neighbor đều được phép kéo `low[u]` xuống. Edge tới node thuộc SCC đã hoàn tất không biểu diễn một cycle nằm trong active region hiện tại.
+Không phải mọi đã thăm đỉnh kề đều được phép kéo `low[u]` xuống. cạnh tới nút thuộc SCC đã hoàn tất không biểu diễn một chu trình nằm trong active region hiện tại.
 
-Vì vậy khi gặp edge tới visited node `v`, chỉ dùng `index[v]` để update low nếu `v` vẫn `onStack`.
+Vì vậy khi gặp cạnh tới đã thăm nút `v`, chỉ dùng `index[v]` để cập nhật low nếu `v` vẫn `onStack`.
 
 Đây là một bug kinh điển khi implement Tarjan.
 
 ## Low-link trong Tarjan khác bridge low-link
 
-Cùng tên `low` nhưng semantics không hoàn toàn giống nhau.
+Cùng tên `low` nhưng ngữ nghĩa (semantics) không hoàn toàn giống nhau.
 
-Bridge/articulation trong undirected graph hỏi subtree có thể đi ngược tới ancestor nào mà không dùng parent edge.
+Bridge/articulation trong đồ thị vô hướng (undirected graph) hỏi cây con có thể đi ngược tới tổ tiên nào mà không dùng nút cha cạnh.
 
-Tarjan SCC hỏi active directed DFS region có thể reach discovery index nhỏ nhất nào trong current stack semantics.
+Trong Tarjan SCC, giá trị low-link biểu diễn chỉ số khám phá nhỏ nhất mà vùng DFS có hướng đang hoạt động có thể đi tới trong phạm vi các đỉnh vẫn còn trên ngăn xếp.
 
-Không nên copy công thức giữa hai algorithms mà không hiểu invariant.
+Không nên copy công thức giữa hai các thuật toán mà không hiểu bất biến (invariant).
 
 ## Java skeleton cho Tarjan SCC
 
@@ -326,35 +326,35 @@ void dfs(int u) {
 }
 ```
 
-Recursive DFS có thể stack-overflow trên graph cực sâu. Production implementation có thể cần iterative traversal hoặc tăng stack có chủ đích tùy runtime.
+Recursive DFS có thể stack-overflow trên đồ thị cực sâu. Trong hệ thống thực tế, cách triển khai có thể cần iterative traversal hoặc tăng stack có chủ đích tùy môi trường chạy (runtime).
 
-## SCC và cycle detection
+## SCC và phát hiện chu trình
 
-Một SCC có nhiều hơn một vertex chắc chắn chứa directed cycle. SCC một vertex cũng có cycle nếu có self-loop.
+Một SCC có nhiều hơn một đỉnh chắc chắn chứa directed chu trình. SCC một đỉnh cũng có chu trình nếu có self-loop.
 
-Do đó SCC decomposition không chỉ nói “có cycle không”, mà còn cho biết **cycle clusters ở đâu** và cách chúng liên hệ với phần acyclic còn lại.
+Do đó SCC decomposition không chỉ nói “có chu trình không”, mà còn cho biết **chu trình clusters ở đâu** và cách chúng liên hệ với phần acyclic còn lại.
 
-## Application: dependency systems
+## ứng dụng: dependency các hệ thống
 
-### Build graph
+### xây dựng đồ thị
 
-Nếu modules A, B, C tạo SCC, chúng có circular dependency. Build system có thể reject, bundle chúng thành một unit hoặc yêu cầu refactor boundary.
+Nếu modules A, B, C tạo SCC, chúng có circular dependency. xây dựng hệ thống có thể reject, bundle chúng thành một unit hoặc yêu cầu refactor ranh giới.
 
 ### Package managers
 
 Dependency SCC có thể biểu diễn nhóm packages phụ thuộc vòng nhau. Condensation DAG cho thứ tự xử lý giữa groups.
 
-### State machines
+### trạng thái machines
 
-SCC là region mà các states có thể quay lại lẫn nhau. Một SCC không có outgoing edge trong condensation DAG là terminal recurrent region theo deterministic/nondeterministic model phù hợp.
+SCC là region mà các trạng thái có thể quay lại lẫn nhau. Một SCC không có outgoing cạnh trong condensation DAG là vùng lặp lại cuối cùng theo xác định/nondeterministic mô hình phù hợp.
 
-### Web/link graph
+### Web/link đồ thị
 
-SCC có thể biểu diễn communities với mutual reachability, dù graph analytics production thường dùng thêm metrics khác.
+SCC có thể biểu diễn communities với mutual reachability, dù đồ thị analytics hệ thống thực tế thường dùng thêm metrics khác.
 
 ## 2-SAT connection
 
-Trong implication graph của 2-SAT, mỗi boolean literal có node và clause tạo implications. Formula unsatisfiable nếu một variable `x` và `¬x` nằm trong cùng SCC.
+Trong implication đồ thị của 2-SAT, mỗi literal Boolean có nút và clause tạo implications. Công thức unsatisfiable nếu một variable `x` và `¬x` nằm trong cùng SCC.
 
 Sau SCC decomposition, condensation order còn giúp derive assignment.
 
@@ -364,9 +364,9 @@ Sau SCC decomposition, condensation order còn giúp derive assignment.
 
 Hai concepts thường bị nhầm.
 
-**Transitive closure** thêm thông tin reachability: edge logic `u -> v` tồn tại nếu `v` reachable từ `u`.
+**Transitive closure** thêm thông tin reachability: cạnh logic `u -> v` tồn tại nếu `v` có thể tới từ `u`.
 
-**Transitive reduction** cố bỏ các edge dư mà vẫn giữ cùng reachability relation. Với DAG, transitive reduction là unique theo điều kiện chuẩn.
+**Transitive reduction** cố bỏ các cạnh dư mà vẫn giữ cùng reachability relation. Với DAG, transitive reduction là unique theo điều kiện chuẩn.
 
 Ví dụ nếu có:
 
@@ -376,55 +376,55 @@ B -> C
 A -> C
 ```
 
-edge `A -> C` là redundant về reachability.
+cạnh `A -> C` là redundant về reachability.
 
-Trong dependency visualization, reduction giúp graph dễ đọc hơn; closure giúp query reachability nhanh hơn nhưng có thể tốn `O(V^2)` space.
+Trong dependency visualization, reduction giúp đồ thị dễ đọc hơn; closure giúp truy vấn reachability nhanh hơn nhưng có thể tốn `O(V^2)` space.
 
-## Uniqueness của topological order
+## Uniqueness của thứ tự tô-pô
 
-Topological order unique khi tại mỗi bước Kahn chỉ có đúng một eligible indegree-0 node. Nếu có hai choices, ít nhất hai valid orders có thể tồn tại.
+thứ tự tô-pô unique khi tại mỗi bước Kahn chỉ có đúng một eligible indegree-0 nút. Nếu có hai choices, ít nhất hai hợp lệ orders có thể tồn tại.
 
-Equivalent view: trong một topological order unique, mỗi cặp consecutive vertices phải có dependency structure buộc thứ tự phù hợp.
+Góc nhìn tương đương: trong một thứ tự tô-pô unique, mỗi cặp consecutive các đỉnh phải có dependency structure buộc thứ tự phù hợp.
 
-Đây là useful property khi problem hỏi “schedule có duy nhất không?”.
+Đây là useful tính chất khi problem hỏi “schedule có duy nhất không?”.
 
-## Common misconceptions
+## Những hiểu lầm phổ biến
 
-**“Có topological sort cho mọi directed graph.”** Sai. Chỉ DAG mới có full topological order.
+**“Có sắp xếp tô-pô cho mọi đồ thị có hướng.”** Sai. Chỉ DAG mới có full thứ tự tô-pô.
 
-**“Kahn không output đủ node nghĩa là algorithm bug.”** Có thể graph có cycle; đó chính là detection mechanism.
+**“Kahn không đầu ra đủ nút nghĩa là thuật toán bug.”** Có thể đồ thị có chu trình; đó chính là detection mechanism.
 
-**“Topological order là unique.”** Thường không.
+**“thứ tự tô-pô là unique.”** Thường không.
 
-**“SCC giống connected component của undirected graph.”** Không. Directed reachability phải đúng cả hai chiều.
+**“SCC giống thành phần liên thông của đồ thị vô hướng.”** Không. Directed reachability phải đúng cả hai chiều.
 
-**“Tarjan low giống bridge low nên dùng cùng formula.”** Không nên; invariants khác nhau.
+**“Tarjan low giống bridge low nên dùng cùng formula.”** Không nên; các bất biến khác nhau.
 
-**“Collapse SCC có thể vẫn còn cycle.”** Không. Nếu còn cycle, các components trên cycle phải là một SCC lớn hơn.
+**“Collapse SCC có thể vẫn còn chu trình.”** Không. Nếu còn chu trình, các thành phần trên chu trình phải là một SCC lớn hơn.
 
-## Testing
+## kiểm thử
 
-Cho topological sort, sau khi có `pos[v]`, kiểm mọi edge:
+Cho sắp xếp tô-pô, sau khi có `pos[v]`, kiểm mọi cạnh:
 
 \[
 pos[u] < pos[v]
 \]
 
-Nếu algorithm report cycle, có thể differential-test với DFS color-state trên graph nhỏ.
+Nếu thuật toán report chu trình, có thể differential-test với DFS color-trạng thái trên đồ thị nhỏ.
 
 Cho SCC, kiểm:
 
-- vertices cùng component mutually reachable trên small reference graph;
-- vertices khác component không mutually reachable cả hai chiều;
-- condensation graph acyclic;
-- self-loop và isolated vertex;
-- parallel edges;
-- chain, one big cycle, many small SCCs.
+- các đỉnh cùng thành phần mutually có thể tới trên small tham chiếu đồ thị;
+- các đỉnh khác thành phần không mutually có thể tới cả hai chiều;
+- condensation đồ thị acyclic;
+- self-loop và isolated đỉnh;
+- các cạnh song song;
+- một chuỗi dài, một chu trình lớn, hoặc nhiều SCC nhỏ.
 
-Property-based tests đặc biệt hữu ích với Tarjan vì bug `onStack` và low-link thường chỉ xuất hiện ở graph shape cụ thể.
+Property-based tests đặc biệt hữu ích với Tarjan vì bug `onStack` và low-link thường chỉ xuất hiện ở đồ thị shape cụ thể.
 
-## Mental Model mở rộng
+## Mô hình tư duy mở rộng
 
-> Topological sort là cách **tháo một dependency graph từ ngoài vào**. SCC là cách **nén các vùng không thể áp một thứ tự một chiều bên trong**. Sau khi nén mọi mutual-reachability region, phần còn lại bắt buộc trở thành DAG.
+> sắp xếp tô-pô là cách **tháo một dependency đồ thị từ ngoài vào**. SCC là cách **nén các vùng không thể áp một thứ tự một chiều bên trong**. Sau khi nén mọi mutual-reachability region, phần còn lại bắt buộc trở thành DAG.
 
-Khi gặp directed graph có cycles, thay vì cố áp dụng DAG algorithm trực tiếp, hãy hỏi liệu cycle có semantic meaning gì và liệu SCC condensation có biến problem thành DAG problem dễ hơn không.
+Khi gặp đồ thị có hướng có các chu trình, thay vì cố áp dụng DAG thuật toán trực tiếp, hãy hỏi liệu chu trình có semantic meaning gì và liệu SCC condensation có biến problem thành DAG problem dễ hơn không.

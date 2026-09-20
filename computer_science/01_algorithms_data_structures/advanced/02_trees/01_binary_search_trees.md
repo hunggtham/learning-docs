@@ -1,22 +1,22 @@
-# Binary Search Tree
+# cây tìm kiếm nhị phân
 **Cây tìm kiếm nhị phân (Binary Search Tree, BST / 이진 탐색 트리)**
 
-Binary Search Tree thêm một **order invariant / 정렬 불변식** lên binary tree để việc search không cần duyệt toàn bộ structure. Với mỗi node `x`, một formulation phổ biến là:
+cây tìm kiếm nhị phân thêm một **bất biến thứ tự / 정렬 불변식** lên cây nhị phân để việc search không cần duyệt toàn bộ structure. Với mỗi nút `x`, một formulation phổ biến là:
 
 ```text
 mọi key trong left subtree  < x.key
 mọi key trong right subtree > x.key
 ```
 
-Nếu domain cho phép duplicate keys, policy phải được định nghĩa ngay từ đầu: reject duplicate, lưu count/value-list trong node, hoặc cho equal key đi về một phía theo rule cố định. BST đúng không chỉ vì từng node trông hợp lý; nó đúng vì **mọi subtree** đều thỏa cùng invariant.
+Nếu miền bài toán cho phép khóa trùng, chính sách phải được định nghĩa ngay từ đầu: từ chối khóa trùng, lưu số lần xuất hiện/danh sách giá trị trong nút, hoặc luôn đưa khóa bằng nhau về một phía theo quy tắc cố định. BST đúng không chỉ vì từng nút trông hợp lý; nó đúng vì **mọi cây con** đều thỏa cùng bất biến (invariant).
 
-## Từ binary search trên array tới BST
+## Từ tìm kiếm nhị phân trên mảng tới BST
 
-Sorted array cho binary search `O(log n)` vì midpoint comparison loại nửa candidates. Nhưng insert vào giữa array cần dịch chuyển nhiều elements, thường `O(n)`.
+mảng đã sắp xếp cho tìm kiếm nhị phân `O(log n)` vì midpoint phép so sánh loại nửa các ứng viên. Nhưng insert vào giữa mảng cần dịch chuyển nhiều các phần tử, thường `O(n)`.
 
-BST giữ sorted order dưới dạng links thay vì vị trí contiguous cố định. Search vẫn loại một subtree sau mỗi comparison; insert/delete có thể relink local nodes thay vì shift toàn bộ suffix.
+BST giữ thứ tự đã sắp xếp bằng các liên kết thay vì vị trí liên tiếp cố định. Mỗi phép so sánh khi tìm kiếm vẫn loại bỏ được một cây con; thao tác chèn/xóa có thể nối lại cục bộ các nút thay vì dịch toàn bộ phần đuôi dữ liệu.
 
-Trade-off là performance giờ phụ thuộc **height `h`**:
+sự đánh đổi (trade-off) là hiệu năng giờ phụ thuộc **chiều cao `h`**:
 
 ```text
 search   O(h)
@@ -24,13 +24,13 @@ insert   O(h)
 delete   O(h)
 ```
 
-Nếu tree balanced, `h = O(log n)`. Nếu tree thoái hóa thành chain, `h = O(n)`.
+Nếu cây balanced, `h = O(log n)`. Nếu cây thoái hóa thành chain, `h = O(n)`.
 
-Đây là insight trung tâm: BST không bảo đảm logarithmic time chỉ nhờ order invariant. Muốn worst-case logarithmic còn cần balancing strategy.
+Đây là insight trung tâm: BST không bảo đảm logarithmic time chỉ nhờ bất biến thứ tự. Muốn trường hợp xấu nhất logarithmic còn cần balancing strategy.
 
-## Search như một proof bằng loại trừ
+## Search như một chứng minh bằng loại trừ
 
-Tại node `x`:
+Tại nút `x`:
 
 ```text
 target < x.key  -> right subtree chắc chắn không chứa target
@@ -38,7 +38,7 @@ target > x.key  -> left subtree chắc chắn không chứa target
 target = x.key  -> tìm thấy
 ```
 
-Mỗi bước search hợp lệ vì BST invariant cho phép **chứng minh cả một subtree không thể chứa answer**.
+Mỗi bước search hợp lệ vì BST bất biến cho phép **chứng minh cả một cây con không thể chứa answer**.
 
 Iterative C version:
 
@@ -52,11 +52,11 @@ TreeNode *bst_search(TreeNode *root, int key) {
 }
 ```
 
-Nếu insert/delete từng phá invariant dù chỉ một node, code trên vẫn compile và chạy nhưng proof “bỏ subtree này là an toàn” không còn đúng.
+Nếu thao tác chèn/xóa phá bất biến dù chỉ tại một nút, mã vẫn có thể biên dịch và chạy nhưng lập luận “bỏ qua cây con này là an toàn” không còn đúng.
 
 ## Insert
 
-Insert trước hết là search tới vị trí null nơi key phải nằm.
+Thao tác chèn trước hết tìm tới vị trí `null` nơi khóa phải nằm.
 
 ```java
 TreeNode insert(TreeNode root, int key) {
@@ -72,13 +72,13 @@ TreeNode insert(TreeNode root, int key) {
 }
 ```
 
-Correctness đến từ việc vị trí insert được xác định bởi cùng comparisons như search. Nếu ta dừng ở null trong left branch của node `x`, mọi ancestor constraints đã chứng minh key thuộc chính interval đó.
+Tính đúng đắn đến từ việc vị trí chèn được xác định bằng cùng các phép so sánh như khi tìm kiếm. Nếu ta dừng ở `null` trong nhánh trái của nút `x`, các ràng buộc từ mọi tổ tiên đã chứng minh khóa thuộc đúng khoảng giá trị đó.
 
-Một cách nhìn hữu ích là mỗi node chia numeric/order space thành các interval nhỏ hơn. Search path không chỉ đi qua nodes; nó liên tục thu hẹp interval hợp lệ của key.
+Một cách nhìn hữu ích là mỗi nút chia numeric/order space thành các interval nhỏ hơn. đường tìm kiếm không chỉ đi qua các nút; nó liên tục thu hẹp interval hợp lệ của khóa.
 
-## Duplicate policy không phải chi tiết nhỏ
+## phần tử trùng chính sách không phải chi tiết nhỏ
 
-Ba policy phổ biến:
+Ba chính sách phổ biến:
 
 ```text
 1. reject duplicate
@@ -86,51 +86,51 @@ Ba policy phổ biến:
 3. equal key luôn đi một side theo rule cố định
 ```
 
-Policy số 2 thường sạch hơn nếu key đại diện identity còn nhiều records chia sẻ key. Policy số 3 vẫn có thể đúng nhưng range/search/delete phải dùng cùng rule.
+Chính sách thứ hai thường rõ ràng hơn nếu khóa đại diện cho định danh còn nhiều bản ghi có thể chia sẻ cùng khóa. Chính sách thứ ba vẫn có thể đúng, nhưng truy vấn khoảng, tìm kiếm và xóa phải tuân thủ cùng một quy tắc.
 
-Trong production map/set abstraction, key equality còn liên quan comparator contract. Nếu comparator cho rằng hai keys bằng nhau (`compare(a,b)==0`) thì ordered set/map thường coi chúng là cùng vị trí order, dù object identity khác.
+Trong hệ thống thực tế map/set sự trừu tượng (abstraction), khóa equality còn liên quan hợp đồng bộ so sánh. Nếu comparator cho rằng hai các khóa bằng nhau (`compare(a,b)==0`) thì ordered set/map thường coi chúng là cùng vị trí order, dù định danh đối tượng khác.
 
 ## Minimum, maximum, successor, predecessor
 
-Minimum của BST nằm bằng cách đi left liên tục; maximum tương tự với right.
+Phần tử nhỏ nhất của BST được tìm bằng cách đi liên tục sang trái; phần tử lớn nhất tương tự bằng cách đi sang phải.
 
-Successor của node `x` là key nhỏ nhất lớn hơn `x.key`.
+Successor của nút `x` là khóa nhỏ nhất lớn hơn `x.key`.
 
-Nếu `x` có right subtree, successor là minimum của right subtree.
+Nếu `x` có right cây con, successor là minimum của right cây con.
 
-Nếu không có right subtree, ta đi lên ancestors cho tới ancestor đầu tiên mà `x` nằm trong left subtree của ancestor đó.
+Nếu không có right cây con, ta đi lên ancestors cho tới tổ tiên đầu tiên mà `x` nằm trong left cây con của tổ tiên đó.
 
 Predecessor đối xứng.
 
-Các operation này là lý do ordered map/tree mạnh hơn hash table. Hash table biết “key này có không?”, nhưng không tự nhiên biết “key gần nhất nhỏ hơn X là gì?”.
+Các thao tác này là lý do ordered map/cây mạnh hơn bảng băm (Hash Table). bảng băm biết “khóa này có không?”, nhưng không tự nhiên biết “khóa gần nhất nhỏ hơn X là gì?”.
 
-## Delete là operation khó nhất của BST cơ bản
+## Delete là thao tác khó nhất của BST cơ bản
 
 Delete có ba case.
 
-### Case 1 — leaf
+### Case 1 — nút lá
 
-Không có child, chỉ cần bỏ link từ parent.
+Không có nút con, chỉ cần bỏ link từ nút cha.
 
-### Case 2 — một child
+### Case 2 — một nút con
 
-Thay node bằng child duy nhất. Vì toàn subtree child đã thỏa order range của node cũ, relink này giữ invariant.
+Ta thay nút bằng nút con duy nhất của nó. Vì toàn bộ cây con đó đã thỏa khoảng thứ tự của nút cũ, việc nối lại liên kết vẫn giữ bất biến.
 
-### Case 3 — hai children
+### Case 3 — hai các nút con
 
-Ta không thể đơn giản đưa một child lên nếu vẫn muốn giữ cả hai subtrees. Strategy phổ biến là thay node bằng **inorder successor** — minimum của right subtree — rồi xóa successor ở vị trí cũ.
+Ta không thể đơn giản đưa một nút con lên nếu vẫn muốn giữ cả hai các cây con. Strategy phổ biến là thay nút bằng **inorder successor** — minimum của right cây con — rồi xóa successor ở vị trí cũ.
 
 Tại sao successor an toàn?
 
-- nó lớn hơn mọi key trong left subtree vì nó nằm trong right subtree của node cũ;
-- nó là phần tử nhỏ nhất bên phải, nên sau khi lên vị trí node cũ, các key còn lại trong right subtree vẫn không nhỏ hơn nó;
-- successor không có left child, nên delete lần hai giảm về case đơn giản hơn.
+- nó lớn hơn mọi khóa trong left cây con vì nó nằm trong right cây con của nút cũ;
+- nó là phần tử nhỏ nhất bên phải, nên sau khi lên vị trí nút cũ, các khóa còn lại trong right cây con vẫn không nhỏ hơn nó;
+- successor không có left nút con, nên delete lần hai giảm về case đơn giản hơn.
 
 Có thể dùng predecessor đối xứng.
 
 ## Delete bằng transplant
 
-Trong implementation có parent pointers, một helper `transplant(u, v)` thay subtree rooted at `u` bằng subtree rooted at `v`. Đây là abstraction giúp tách “relink parent-child” khỏi logic chọn successor.
+Trong cách triển khai có các con trỏ tới nút cha, một helper `transplant(u, v)` thay cây con rooted at `u` bằng cây con rooted at `v`. Đây là sự trừu tượng giúp tách “relink parent-child” khỏi logic chọn successor.
 
 Pseudo-flow:
 
@@ -148,9 +148,9 @@ else:
     s.left = node.left
 ```
 
-Cách này làm rõ invariant hơn code gán pointer ad-hoc ở nhiều chỗ.
+Cách này làm rõ bất biến hơn code gán con trỏ ad-hoc ở nhiều chỗ.
 
-## Inorder traversal và sorted order
+## Inorder traversal và thứ tự đã sắp xếp
 
 Inorder traversal:
 
@@ -158,13 +158,13 @@ Inorder traversal:
 left -> root -> right
 ```
 
-trả keys theo sorted order vì mọi key bên trái nhỏ hơn root và mọi key bên phải lớn hơn root, recursively.
+trả các khóa theo thứ tự đã sắp xếp vì mọi khóa bên trái nhỏ hơn nút gốc và mọi khóa bên phải lớn hơn nút gốc, recursively.
 
-Đây là một theorem đơn giản nhưng cực quan trọng: local invariant ở từng node đủ để suy ra global sorted order của toàn tree.
+Đây là một theorem đơn giản nhưng cực quan trọng: cục bộ bất biến ở từng nút đủ để suy ra toàn cục thứ tự đã sắp xếp của toàn cây.
 
-## Range query
+## truy vấn khoảng (range query)
 
-Muốn lấy keys trong `[L, R]`, không cần scan cả tree.
+Muốn lấy các khóa trong `[L, R]`, không cần quét cả cây.
 
 ```text
 nếu node.key > L: left subtree có thể chứa answer
@@ -178,9 +178,9 @@ Trong balanced BST, complexity gần:
 O(\log n + k)
 \]
 
-với `k` là số kết quả output. Đây là **output-sensitive complexity**: nếu query cần trả hàng triệu records, không structure nào tránh được cost tương ứng với số output.
+với `k` là số kết quả đầu ra. Đây là **nhạy theo kích thước đầu ra complexity**: nếu truy vấn cần trả hàng triệu records, không structure nào tránh được chi phí tương ứng với số đầu ra.
 
-## BST shape phụ thuộc insertion order
+## BST shape phụ thuộc thứ tự chèn
 
 Insert:
 
@@ -202,15 +202,15 @@ vào raw BST tạo chain:
         5
 ```
 
-Search giờ là linear. Random insertion order thường cho expected height tốt hơn, nhưng đó không phải worst-case guarantee.
+Search giờ là linear. ngẫu nhiên thứ tự chèn thường cho kỳ vọng chiều cao tốt hơn, nhưng đó không phải trường hợp xấu nhất bảo đảm.
 
-AVL, Red-Black Tree, Treap hoặc randomized skip-list-like approaches tồn tại vì ta cần kiểm soát shape, không chỉ order.
+AVL, cây đỏ-đen (Red-Black Tree), Treap hoặc các cấu trúc ngẫu nhiên kiểu Skip List tồn tại vì ta cần kiểm soát cả hình dạng cây, không chỉ thứ tự khóa.
 
-## BST vs sorted array
+## BST vs mảng đã sắp xếp
 
-BST và sorted array cùng khai thác total order nhưng tối ưu workload khác nhau.
+BST và mảng đã sắp xếp cùng khai thác thứ tự toàn phần nhưng tối ưu khối lượng công việc khác nhau.
 
-Sorted array:
+mảng đã sắp xếp:
 
 ```text
 lookup        O(log n)
@@ -228,11 +228,11 @@ predecessor/successor tự nhiên
 node overhead + pointer chasing
 ```
 
-Nếu workload static và đọc nhiều, sorted array có thể tốt hơn tree dù Big-O lookup giống nhau. Đây là ví dụ cho thấy locality và mutation pattern quan trọng ngang asymptotic complexity.
+Nếu khối lượng công việc tĩnh và đọc nhiều, mảng đã sắp xếp có thể tốt hơn cây dù Big-O tra cứu giống nhau. Đây là ví dụ cho thấy tính cục bộ (locality) và sự thay đổi dữ liệu mẫu quan trọng ngang asymptotic complexity.
 
 ## BST vs HashMap
 
-HashMap thường cho expected `O(1)` equality lookup, nhưng không duy trì order.
+`HashMap` thường cho phép tra cứu theo quan hệ bằng nhau với chi phí kỳ vọng `O(1)`, nhưng không duy trì thứ tự.
 
 Balanced BST cho `O(log n)` nhưng hỗ trợ:
 
@@ -244,17 +244,17 @@ range iteration
 ordered traversal
 ```
 
-Câu hỏi đúng không phải “HashMap nhanh hơn TreeMap đúng không?” mà là “workload có cần order semantics không?”.
+Câu hỏi đúng không phải “HashMap nhanh hơn TreeMap đúng không?” mà là “khối lượng công việc có cần order ngữ nghĩa (semantics) không?”.
 
-## Parent pointer, iterator và ordered traversal
+## nút cha con trỏ, iterator và ordered traversal
 
-Nếu node có parent pointer, successor/predecessor có thể tìm bằng upward navigation. Điều này giúp iterator không cần stack lớn nếu tree structure ổn định.
+Nếu nút có nút cha con trỏ, successor/predecessor có thể tìm bằng upward navigation. Điều này giúp iterator không cần stack lớn nếu cây structure ổn định.
 
-Nhưng parent pointer tạo thêm invariant: rotation, delete và transplant đều phải update nó chính xác. Nếu một field không cần cho API/workload, đừng thêm chỉ vì “có vẻ tiện”.
+Nhưng nút cha con trỏ tạo thêm bất biến: rotation, delete và transplant đều phải cập nhật nó chính xác. Nếu một trường không cần cho API/khối lượng công việc, đừng thêm chỉ vì “có vẻ tiện”.
 
 ## Augmented BST
 
-BST node có thể lưu thêm metadata nếu metadata recompute được từ children.
+BST nút có thể lưu thêm siêu dữ liệu nếu siêu dữ liệu recompute được từ các nút con.
 
 Ví dụ:
 
@@ -265,9 +265,9 @@ maxEndpoint
 min/max key
 ```
 
-Nếu update metadata trên path thay đổi, ta có thể hỗ trợ order statistics hoặc interval queries.
+Nếu cập nhật siêu dữ liệu trên đường đi thay đổi, ta có thể hỗ trợ order thống kê hoặc interval các truy vấn.
 
-Một order-statistics tree với `size` trả k-th smallest bằng cách nhìn size của left subtree:
+Một cây thống kê thứ tự (order-statistics tree) có trường `size` có thể trả phần tử nhỏ thứ k bằng cách xét kích thước cây con trái:
 
 ```text
 leftSize = size(left)
@@ -277,19 +277,19 @@ k <= leftSize     -> go left
 k > leftSize + 1  -> go right với k giảm
 ```
 
-Raw BST có thể làm được, nhưng muốn guarantee `O(log n)` vẫn cần balance.
+Raw BST có thể làm được, nhưng muốn bảo đảm `O(log n)` vẫn cần balance.
 
-## BST như một decision tree của comparisons
+## BST như một decision cây của các phép so sánh
 
-Mỗi search path là một sequence comparisons. Height chính là số comparisons worst-case theo tree shape.
+Mỗi đường tìm kiếm là một sequence các phép so sánh. chiều cao chính là số các phép so sánh trường hợp xấu nhất theo cây shape.
 
-Điều này nối BST với information theory: tree càng lệch, một số keys cần nhiều comparisons. Self-balancing tree đang trả maintenance cost trong update để giữ decision tree không quá sâu.
+Điều này nối BST với thông tin theory: cây càng lệch, một số các khóa cần nhiều các phép so sánh. Self-balancing cây đang trả maintenance chi phí trong cập nhật để giữ decision cây không quá sâu.
 
-## Comparator và total order
+## Comparator và thứ tự toàn phần
 
 Một BST tổng quát không nhất thiết dùng integer `<`. Nó dựa trên comparator.
 
-Comparator cần có behavior nhất quán với total order:
+Comparator cần có hành vi nhất quán với thứ tự toàn phần:
 
 ```text
 antisymmetry
@@ -297,7 +297,7 @@ transitivity
 consistency
 ```
 
-Nếu comparator bất nhất, tree có thể đưa cùng key về các directions mâu thuẫn và search không còn reliable.
+Nếu comparator bất nhất, cây có thể đưa cùng khóa về các directions mâu thuẫn và search không còn reliable.
 
 Trong Java:
 
@@ -305,35 +305,35 @@ Trong Java:
 Comparator<User> byId = Comparator.comparingLong(User::id);
 ```
 
-Tránh comparator kiểu `a.id - b.id` nếu overflow có thể xảy ra.
+Tránh comparator kiểu `a.id - b.id` nếu tràn số có thể xảy ra.
 
 ## Persistent BST
 
-Nếu structure immutable hoặc cần version history, update có thể **path-copy** chỉ các nodes trên search path và reuse phần còn lại.
+Nếu structure bất biến sau khi tạo hoặc cần version lịch sử, cập nhật có thể **path-copy** chỉ các nút trên đường tìm kiếm và reuse phần còn lại.
 
-Với balanced persistent tree, một update tạo `O(log n)` nodes mới thay vì copy cả tree. Đây là structural sharing — rất quan trọng trong functional programming, versioned data và persistent state systems.
+Với balanced persistent cây, một cập nhật tạo `O(log n)` các nút mới thay vì copy cả cây. Đây là chia sẻ cấu trúc — rất quan trọng trong lập trình hàm, versioned data và persistent trạng thái (state) các hệ thống.
 
 ## Concurrency note
 
-BST mutation có thể thay nhiều links và rotations. Concurrent ordered maps vì thế cần synchronization strategy phức tạp hơn đơn giản đặt mutex quanh một variable.
+BST sự thay đổi dữ liệu có thể thay nhiều links và rotations. Concurrent ordered maps vì thế cần synchronization strategy phức tạp hơn đơn giản đặt mutex quanh một variable.
 
-Production concurrent trees có thể dùng coarse-grained lock, fine-grained lock, optimistic techniques hoặc completely different structures. DSA invariant vẫn là nền tảng, nhưng concurrency thêm một lớp invariant về atomicity/visibility.
+Trong hệ thống thực tế, concurrent các cây có thể dùng coarse-grained lock, fine-grained lock, optimistic techniques hoặc completely different structures. DSA bất biến vẫn là nền tảng, nhưng concurrency thêm một lớp bất biến về atomicity/visibility.
 
-## Common misconceptions
+## Những hiểu lầm phổ biến
 
 “BST search luôn O(log n)” là sai với unbalanced BST.
 
-“Binary tree” không đồng nghĩa BST.
+“cây nhị phân” không đồng nghĩa BST.
 
-“Inorder luôn sorted” chỉ đúng khi order invariant thật sự được duy trì.
+“Inorder luôn sorted” chỉ đúng khi bất biến thứ tự thật sự được duy trì.
 
-“Delete node hai children chỉ cần copy successor key” có thể chưa đủ nếu node chứa value, metadata hoặc identity semantics phức tạp; phải chuyển đúng record/fields theo API contract.
+“Delete nút hai các nút con chỉ cần copy successor khóa” có thể chưa đủ nếu nút chứa giá trị, siêu dữ liệu hoặc identity ngữ nghĩa phức tạp; phải chuyển đúng record/các trường theo hợp đồng API.
 
-“Random BST thường tốt” không thay thế deterministic guarantee nếu input có thể adversarial.
+“ngẫu nhiên BST thường tốt” không thay thế xác định bảo đảm nếu đầu vào có thể đối kháng.
 
-## Testing BST
+## kiểm thử BST
 
-Ngoài test search output, hãy validate invariant sau random insert/delete:
+Ngoài kiểm tra kết quả tìm kiếm, hãy xác minh bất biến sau các chuỗi chèn/xóa ngẫu nhiên:
 
 ```text
 inorder strictly/non-strictly sorted theo duplicate policy
@@ -343,17 +343,17 @@ parent pointers đúng nếu có
 metadata == recomputation từ children
 ```
 
-Một validator mạnh dùng range constraints:
+Một bộ xác minh mạnh dùng range các ràng buộc:
 
 ```text
 validate(node, low, high)
 ```
 
-thay vì chỉ check `left < node < right`, vì violation có thể nằm sâu hơn một level.
+thay vì chỉ check `left < node < right`, vì violation có thể nằm sâu hơn một tầng.
 
-## Mental Model
+## Mô hình tư duy
 
-> BST biến **global sorted order** thành **local branching rule**. Mỗi comparison không chỉ chọn child; nó loại cả một interval keys. Search nhanh khi tree height thấp. Update mạnh vì structure động, nhưng chính mutation tạo rủi ro shape lệch nên balancing trở thành bước tiến tự nhiên tiếp theo.
+> BST biến **toàn cục thứ tự đã sắp xếp** thành **cục bộ branching quy tắc**. Mỗi phép so sánh không chỉ chọn nút con; nó loại cả một interval các khóa. Search nhanh khi cây chiều cao thấp. cập nhật mạnh vì structure động, nhưng chính sự thay đổi dữ liệu tạo rủi ro shape lệch nên balancing trở thành bước tiến tự nhiên tiếp theo.
 
 Khi thiết kế hoặc dùng BST, hãy hỏi:
 

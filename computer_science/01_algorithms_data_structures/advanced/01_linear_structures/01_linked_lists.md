@@ -1,9 +1,9 @@
 # Danh sách liên kết
-**Linked List / 연결 리스트**
+**danh sách liên kết / 연결 리스트**
 
-Linked list tách **thứ tự logic** khỏi **vị trí vật lý trong memory**. Array nói “phần tử thứ `i` nằm ở offset tính được”; linked list nói “phần tử tiếp theo nằm ở nơi `next` chỉ tới”. Chính lựa chọn representation này tạo ra toàn bộ trade-off: local rewiring rẻ, nhưng random access và locality kém.
+danh sách liên kết tách **thứ tự logic** khỏi **vị trí vật lý trong bộ nhớ**. mảng nói “phần tử thứ `i` nằm ở offset tính được”; danh sách liên kết nói “phần tử tiếp theo nằm ở nơi `next` chỉ tới”. Chính lựa chọn cách biểu diễn (representation) này tạo ra toàn bộ sự đánh đổi (trade-off): cục bộ rewiring rẻ, nhưng truy cập ngẫu nhiên và tính cục bộ (locality) kém.
 
-## 1. Singly Linked List
+## 1. danh sách liên kết đơn
 
 ```c
 typedef struct Node {
@@ -12,7 +12,7 @@ typedef struct Node {
 } Node;
 ```
 
-Representation:
+cách biểu diễn:
 
 ```text
 head
@@ -20,9 +20,9 @@ head
 [10|•] -> [20|•] -> [30|null]
 ```
 
-Muốn tới node thứ `i` phải follow `i` links, nên access theo index là `O(n)`. Không tồn tại phép tính địa chỉ trực tiếp như array.
+Muốn tới nút thứ `i` phải follow `i` links, nên access theo index là `O(n)`. Không tồn tại phép tính địa chỉ trực tiếp như mảng.
 
-## 2. Insert O(1) chỉ đúng khi đã biết vị trí local
+## 2. Insert O(1) chỉ đúng khi đã biết vị trí cục bộ
 
 Push đầu:
 
@@ -36,11 +36,11 @@ Node *push_front(Node *head, int value) {
 }
 ```
 
-Rewiring chỉ constant work. Nhưng nếu yêu cầu “insert trước phần tử có value X”, ta vẫn phải search X trước, có thể `O(n)`.
+Nối lại con trỏ chỉ cần số thao tác hằng. Nhưng nếu yêu cầu là “chèn trước phần tử có giá trị X”, ta vẫn phải tìm X trước, có thể tốn `O(n)`.
 
-Một lỗi reasoning phổ biến là nói “linked list insert O(1)” mà bỏ qua cost tìm vị trí. Complexity phải tính **toàn bộ operation contract**, không chỉ pointer update cuối.
+Một lỗi reasoning phổ biến là nói “danh sách liên kết insert O(1)” mà bỏ qua chi phí tìm vị trí. Complexity phải tính **toàn bộ thao tác contract**, không chỉ con trỏ cập nhật cuối.
 
-## 3. Tail pointer thay đổi append cost
+## 3. Tail con trỏ thay đổi append chi phí
 
 Nếu list chỉ giữ `head`, append cuối cần traverse `O(n)`. Nếu giữ thêm `tail`, append có thể `O(1)`:
 
@@ -48,28 +48,28 @@ Nếu list chỉ giữ `head`, append cuối cần traverse `O(n)`. Nếu giữ 
 head -> ... -> tail
 ```
 
-Nhưng thêm `tail` tạo thêm invariant phải duy trì:
+Nhưng thêm `tail` tạo thêm bất biến (invariant) phải duy trì:
 
 ```text
 empty => head == null && tail == null
 non-empty => tail.next == null
 ```
 
-Metadata giúp operation nhanh hơn nhưng tăng burden correctness.
+siêu dữ liệu giúp thao tác nhanh hơn nhưng tăng burden tính đúng đắn.
 
 ## 4. Delete và predecessor problem
 
-Trong singly linked list, để xóa `cur`, ta thường cần `prev`:
+Trong danh sách liên kết đơn, để xóa `cur`, ta thường cần `prev`:
 
 ```text
 prev.next = cur.next
 ```
 
-Nếu chỉ có pointer tới `cur`, không có cách generic đi lùi về predecessor trong `O(1)`.
+Nếu chỉ có con trỏ tới `cur`, không có cách tổng quát đi lùi về predecessor trong `O(1)`.
 
-Một trick khi được phép thay đổi value là copy data từ `cur.next` vào `cur` rồi bỏ node sau, nhưng không hoạt động cho tail và phá node identity. Nó là problem-specific hack chứ không thay đổi limitation cơ bản của singly list.
+Một trick khi được phép thay đổi giá trị là copy data từ `cur.next` vào `cur` rồi bỏ nút sau, nhưng không hoạt động cho tail và phá định danh nút. Nó là problem-specific hack chứ không thay đổi limitation cơ bản của singly list.
 
-## 5. Doubly Linked List
+## 5. danh sách liên kết đôi (Doubly Linked List)
 
 Doubly list lưu cả `prev` và `next`:
 
@@ -81,18 +81,18 @@ class Node<E> {
 }
 ```
 
-Nếu đã có reference tới node, detach `O(1)`:
+Nếu đã có tham chiếu tới nút, detach `O(1)`:
 
 ```text
 node.prev.next = node.next
 node.next.prev = node.prev
 ```
 
-Đổi lại mỗi node tốn thêm pointer/reference, mutation phải cập nhật nhiều links hơn và corruption có nhiều dạng hơn.
+Đổi lại mỗi nút tốn thêm con trỏ/tham chiếu, sự thay đổi dữ liệu phải cập nhật nhiều links hơn và corruption có nhiều dạng hơn.
 
-## 6. Sentinel Nodes làm invariant đơn giản hơn
+## 6. Sentinel các nút làm bất biến đơn giản hơn
 
-Thay vì `head == null`/`tail == null` và rất nhiều special case, doubly list có thể dùng hai sentinel:
+Thay vì `head == null`/`tail == null` và rất nhiều trường hợp đặc biệt, doubly list có thể dùng hai giá trị canh gác (sentinel):
 
 ```text
 HEAD <-> ... <-> TAIL
@@ -105,9 +105,9 @@ HEAD.next == TAIL
 TAIL.prev == HEAD
 ```
 
-Insert/remove giữa hai nodes luôn cùng pattern. Sentinel không làm algorithm asymptotically nhanh hơn; nó làm **state space của edge cases nhỏ hơn**, từ đó correctness dễ hơn.
+Insert/remove giữa hai các nút luôn cùng mẫu. Sentinel không làm thuật toán asymptotically nhanh hơn; nó làm **không gian trạng thái của các trường hợp biên (edge cases) nhỏ hơn**, từ đó tính đúng đắn dễ hơn.
 
-## 7. Circular Linked List
+## 7. Circular danh sách liên kết
 
 Trong circular list, tail nối lại head:
 
@@ -117,11 +117,11 @@ A -> B -> C
 |_________|
 ```
 
-Nó phù hợp round-robin scheduling, cyclic buffers logic, Josephus-like problems hoặc intrusive queues.
+Nó phù hợp lập lịch luân phiên, cyclic các bộ đệm logic, Josephus-like problems hoặc intrusive queues.
 
-Nhưng traversal không thể dùng `while (p != NULL)`. Termination condition phải dựa vào quay lại start hoặc số bước. Representation thay đổi loop invariant.
+Nhưng traversal không thể dùng `while (p != NULL)`. Termination điều kiện phải dựa vào quay lại start hoặc số bước. cách biểu diễn thay đổi bất biến vòng lặp.
 
-## 8. Reverse Linked List và loop invariant
+## 8. Reverse danh sách liên kết và bất biến vòng lặp
 
 ```c
 Node *reverse(Node *head) {
@@ -138,33 +138,33 @@ Node *reverse(Node *head) {
 }
 ```
 
-Invariant hữu ích:
+bất biến hữu ích:
 
-> `prev` là reverse đúng của prefix đã xử lý; `cur` là head của suffix chưa xử lý; hai phần không overlap và hợp lại chứa đúng toàn bộ nodes ban đầu.
+> `prev` là reverse đúng của prefix đã xử lý; `cur` là head của suffix chưa xử lý; hai phần không overlap và hợp lại chứa đúng toàn bộ các nút ban đầu.
 
 `next` phải được lưu trước khi phá `cur->next`; nếu không ta mất đường tới suffix.
 
-## 9. Floyd Cycle Detection
+## 9. Floyd phát hiện chu trình
 
-Dùng `slow` đi 1 bước, `fast` đi 2 bước. Nếu có cycle, hai pointer sẽ gặp nhau.
+Dùng `slow` đi 1 bước, `fast` đi 2 bước. Nếu có chu trình, hai con trỏ sẽ gặp nhau.
 
-Tại sao? Sau khi cả hai vào cycle, khoảng cách modulo cycle length thay đổi 1 mỗi iteration, nên cuối cùng bằng 0.
+Tại sao? Sau khi cả hai vào chu trình, khoảng cách modulo chu trình length thay đổi 1 mỗi iteration, nên cuối cùng bằng 0.
 
-Sau khi gặp, có thể tìm cycle entry bằng cách đưa một pointer về head rồi cho cả hai đi cùng tốc độ; chúng gặp lại ở entry.
+Sau khi gặp, có thể tìm chu trình mục bằng cách đưa một con trỏ về head rồi cho cả hai đi cùng tốc độ; chúng gặp lại ở mục.
 
-Kỹ thuật này khai thác arithmetic trên khoảng cách trong cycle, không cần extra hash set.
+Kỹ thuật này khai thác arithmetic trên khoảng cách trong chu trình, không cần extra hash set.
 
-## 10. Middle Node và k-th from end bằng relative-speed pointers
+## 10. nút giữa và k-th from end bằng relative-speed các con trỏ
 
-Fast/slow không chỉ cho cycle detection. Nếu `fast` đi 2 còn `slow` đi 1, khi fast tới cuối, slow gần middle.
+Fast/slow không chỉ cho phát hiện chu trình. Nếu `fast` đi 2 còn `slow` đi 1, khi fast tới cuối, slow gần middle.
 
-Muốn k-th node từ cuối, giữ hai pointers cách nhau `k` nodes. Khi pointer trước tới cuối, pointer sau chính là answer.
+Muốn nút thứ k từ cuối, giữ hai các con trỏ cách nhau `k` các nút. Khi con trỏ trước tới cuối, con trỏ sau chính là answer.
 
-Mental model: linked list không có random index, nhưng **relative distance giữa pointers** có thể encode position information.
+Mô hình tư duy: danh sách liên kết không hỗ trợ truy cập ngẫu nhiên theo chỉ số, nhưng **khoảng cách tương đối giữa các con trỏ** có thể mã hóa thông tin vị trí.
 
 ## 11. Merge sorted linked lists
 
-Hai sorted lists có thể merge tuyến tính bằng cách luôn lấy head nhỏ hơn. Sentinel dummy head giúp code gọn:
+Hai các danh sách đã sắp xếp có thể merge tuyến tính bằng cách luôn lấy head nhỏ hơn. Sentinel nút đầu giả giúp code gọn:
 
 ```java
 Node dummy = new Node(0);
@@ -185,26 +185,26 @@ tail.next = (a != null) ? a : b;
 return dummy.next;
 ```
 
-Đây là combine primitive của linked-list merge sort.
+Đây là kết hợp primitive của linked-list sắp xếp trộn.
 
-## 12. Merge Sort trên Linked List
+## 12. sắp xếp trộn trên danh sách liên kết
 
-Linked list không có random access tốt, nên Quicksort/index-based strategies kém tự nhiên. Merge Sort lại rất hợp:
+danh sách liên kết không có truy cập ngẫu nhiên tốt, nên Quicksort/index-based strategies kém tự nhiên. sắp xếp trộn lại rất hợp:
 
 1. tìm midpoint bằng slow/fast;
 2. split list;
 3. recursively sort hai nửa;
-4. merge bằng rewiring nodes.
+4. merge bằng rewiring các nút.
 
-Time `O(n log n)`. Extra array buffer không cần; merge có thể relink nodes. Tuy nhiên recursion stack vẫn tồn tại.
+Time `O(n log n)`. bộ đệm mảng bổ sung không cần; merge có thể relink các nút. Tuy nhiên ngăn xếp đệ quy vẫn tồn tại.
 
 ## 13. Splice là thế mạnh thật sự của linked structures
 
-Nếu đã biết boundaries, có thể chuyển cả một đoạn list sang vị trí khác bằng vài pointer updates mà không move từng element.
+Nếu đã biết các ranh giới, có thể chuyển cả một đoạn list sang vị trí khác bằng vài con trỏ các cập nhật mà không move từng phần tử.
 
-Đây là operation khó làm hiệu quả trên contiguous array. Intrusive lists, OS kernels và some schedulers dùng node-based structures vì **splice/relink** quan trọng hơn indexed access.
+Đây là thao tác khó thực hiện hiệu quả trên mảng liên tiếp. Danh sách nội tại, nhân hệ điều hành và một số bộ lập lịch dùng cấu trúc dựa trên nút vì **nối lại liên kết** quan trọng hơn truy cập theo chỉ số.
 
-## 14. LRU Cache: composition thay vì một cấu trúc đơn lẻ
+## 14. LRU bộ nhớ đệm: composition thay vì một cấu trúc đơn lẻ
 
 LRU cần:
 
@@ -214,7 +214,7 @@ move accessed item lên đầu nhanh
 evict least-recent item nhanh
 ```
 
-Hash map giải lookup, doubly linked list giải recency order.
+bảng ánh xạ băm giải tra cứu, danh sách liên kết đôi giải recency order.
 
 ```text
 HashMap<key, Node>
@@ -223,23 +223,23 @@ HEAD <-> most recent ... least recent <-> TAIL
 
 `get`:
 
-1. map lookup expected `O(1)`;
-2. detach node `O(1)`;
+1. map tra cứu kỳ vọng `O(1)`;
+2. detach nút `O(1)`;
 3. attach sau HEAD `O(1)`.
 
-Không có map thì search list `O(n)`. Không có list thì map không biết least recently used. Đây là ví dụ quan trọng của **data structure composition**.
+Không có ánh xạ thì tìm trong danh sách tốn `O(n)`. Không có danh sách thì ánh xạ không biết phần tử nào ít được sử dụng gần đây nhất. Đây là ví dụ quan trọng của **phối hợp nhiều cấu trúc dữ liệu (data-structure composition)**.
 
-## 15. Node identity và stable address
+## 15. định danh nút và ổn định address
 
-Một lợi thế node-based structure là node có identity riêng. Nếu node allocation không đổi, pointer/reference tới node có thể giữ ổn định qua nhiều insert khác nơi khác.
+Một lợi thế cấu trúc dựa trên nút là nút có identity riêng. Nếu nút cấp phát không đổi, con trỏ/tham chiếu tới nút có thể giữ ổn định qua nhiều insert khác nơi khác.
 
-Dynamic array grow có thể invalid raw pointers/iterators do relocation. Linked list thường không di chuyển các node còn tồn tại.
+mảng động grow có thể không hợp lệ raw các con trỏ/iterators do relocation. danh sách liên kết thường không di chuyển các nút còn tồn tại.
 
-Nếu API cần stable handles, intrusive references hoặc long-lived iterator semantics, đây có thể là lý do dùng node-based structure dù locality kém.
+Nếu API cần ổn định handles, intrusive các tham chiếu hoặc long-lived iterator ngữ nghĩa (semantics), đây có thể là lý do dùng cấu trúc dựa trên nút dù tính cục bộ kém.
 
-## 16. C: ownership là phần của data structure
+## 16. C: quyền sở hữu (ownership) là phần của cấu trúc dữ liệu
 
-Node chứa value trực tiếp hay pointer?
+nút chứa giá trị trực tiếp hay con trỏ?
 
 ```text
 list owns node, borrows value
@@ -247,13 +247,13 @@ list owns node và value
 list stores copied value
 ```
 
-Destructor semantics phải rõ. Nếu value là heap object do list sở hữu, delete node phải gọi destructor/free value. Nếu value borrowed, free nó có thể gây double-free.
+Ngữ nghĩa của hàm hủy phải rõ ràng. Nếu giá trị là đối tượng trên heap do danh sách sở hữu, khi xóa nút phải gọi hàm hủy hoặc giải phóng giá trị. Nếu giá trị chỉ được mượn, giải phóng nó có thể gây lỗi giải phóng hai lần (double-free).
 
-Trong C, logical invariant và lifetime invariant phải đúng đồng thời.
+Trong C, logic bất biến và vòng đời (lifetime) bất biến phải đúng đồng thời.
 
-## 17. Java/JavaScript: GC không xóa semantic ownership
+## 17. Java/JavaScript: GC không xóa semantic quyền sở hữu
 
-GC chỉ reclaim object không còn reachable. Nếu application giữ reference tới node đã remove, node và object graph phía sau vẫn sống.
+GC chỉ thu hồi đối tượng không còn có thể tới. Nếu ứng dụng giữ tham chiếu tới nút đã remove, nút và đồ thị đối tượng phía sau vẫn sống.
 
 Một bug kiểu:
 
@@ -262,11 +262,11 @@ remove node khỏi list
 nhưng giữ nó trong debug/history/global map
 ```
 
-có thể trở thành logical memory leak dù language có GC.
+có thể trở thành logic rò rỉ bộ nhớ dù language có GC.
 
-## 18. Locality: lý do LinkedList thường thua ArrayList trong thực tế
+## 18. tính cục bộ: lý do LinkedList thường thua ArrayList trong thực tế
 
-Textbook nhấn mạnh insert/delete `O(1)`, nhưng node-based list có:
+Sách giáo khoa thường nhấn mạnh chèn/xóa `O(1)`, nhưng danh sách dựa trên nút còn có các chi phí khác:
 
 ```text
 pointer/reference overhead
@@ -276,13 +276,13 @@ poor prefetching
 branching
 ```
 
-Nếu workload chỉ append, iterate và random access, dynamic array thường tốt hơn rõ rệt.
+Nếu khối lượng công việc chỉ append, iterate và truy cập ngẫu nhiên, mảng động thường tốt hơn rõ rệt.
 
-Linked list đáng dùng khi **relinking hoặc stable node identity** thật sự là operation cốt lõi.
+danh sách liên kết đáng dùng khi **relinking hoặc ổn định định danh nút** thật sự là thao tác cốt lõi.
 
-## 19. Intrusive Linked List
+## 19. Intrusive danh sách liên kết
 
-Trong intrusive list, link fields nằm trực tiếp trong object domain:
+Trong intrusive list, link các trường nằm trực tiếp trong đối tượng domain:
 
 ```c
 struct Task {
@@ -292,19 +292,19 @@ struct Task {
 };
 ```
 
-Không cần allocate wrapper node riêng, giảm indirection/allocation. Nhưng object chỉ có thể thuộc một list cho mỗi bộ link fields, coupling representation mạnh hơn.
+Không cần cấp phát wrapper nút riêng, giảm indirection/cấp phát. Nhưng đối tượng chỉ có thể thuộc một list cho mỗi bộ link các trường, coupling cách biểu diễn mạnh hơn.
 
-Kernel/system code thường dùng intrusive structures vì kiểm soát layout/lifetime tốt.
+Kernel/hệ thống code thường dùng intrusive structures vì kiểm soát bố trí/vòng đời tốt.
 
-## 20. XOR Linked List: kỹ thuật thú vị nhưng ít thực dụng
+## 20. XOR danh sách liên kết: kỹ thuật thú vị nhưng ít thực dụng
 
-XOR list encode `prev XOR next` trong một field để giảm một pointer, nhưng code khó debug, không hợp GC/moving collectors, khó integrate tooling và thường không đáng trade-off trên modern systems.
+XOR list encode `prev XOR next` trong một trường để giảm một con trỏ, nhưng code khó gỡ lỗi, không hợp GC/moving collectors, khó integrate tooling và thường không đáng sự đánh đổi trên modern các hệ thống.
 
-Bài học không phải học XOR list để dùng, mà là hiểu rằng **giảm metadata có thể làm semantics/maintainability phức tạp hơn nhiều**.
+Bài học không phải học XOR list để dùng, mà là hiểu rằng **giảm siêu dữ liệu có thể làm ngữ nghĩa/maintainability phức tạp hơn nhiều**.
 
-## 21. Persistent Linked List
+## 21. Persistent danh sách liên kết
 
-Singly linked list immutable có persistence rất tự nhiên. Thêm đầu:
+danh sách liên kết đơn bất biến sau khi tạo có persistence rất tự nhiên. Thêm đầu:
 
 ```text
 newHead -> oldHead -> ...
@@ -312,19 +312,19 @@ newHead -> oldHead -> ...
 
 không cần copy tail; version mới share suffix với version cũ. `cons` là `O(1)`.
 
-Functional lists khai thác property này rất mạnh. Ngược lại random access vẫn tuyến tính.
+Functional lists khai thác tính chất này rất mạnh. Ngược lại truy cập ngẫu nhiên vẫn tuyến tính.
 
-Representation node-based có thể kém cho mutable cache locality nhưng rất hợp structural sharing.
+cách biểu diễn node-based có thể kém cho có thể thay đổi tính cục bộ bộ nhớ đệm nhưng rất hợp chia sẻ cấu trúc.
 
 ## 22. ABA và concurrent linked structures
 
-Lock-free stack/list nghe đơn giản vì CAS pointer, nhưng memory reclamation rất khó. Một node có thể bị remove, free, rồi allocator reuse cùng address; thread khác thấy pointer “giống cũ” và CAS sai logic — hiện tượng ABA.
+không khóa (lock-free) stack/list nghe đơn giản vì CAS con trỏ, nhưng thu hồi bộ nhớ (memory reclamation) rất khó. Một nút có thể bị remove, free, rồi bộ cấp phát reuse cùng address; luồng khác thấy con trỏ “giống cũ” và CAS sai logic — hiện tượng ABA.
 
-Hazard pointers, epoch-based reclamation hoặc tagged pointers là các kỹ thuật giải một phần vấn đề. Vì vậy “chỉ vài pointer writes” không có nghĩa concurrent list đơn giản.
+con trỏ nguy hiểm, epoch-based reclamation hoặc tagged các con trỏ là các kỹ thuật giải một phần vấn đề. Vì vậy “chỉ vài con trỏ writes” không có nghĩa concurrent list đơn giản.
 
-## 23. Iterator invalidation và modification
+## 23. mất hiệu lực của bộ lặp và modification
 
-Nếu iteration đang chạy mà list bị mutate, semantics cần được định nghĩa:
+Nếu iteration đang chạy mà list bị mutate, ngữ nghĩa cần được định nghĩa:
 
 ```text
 iterator có còn hợp lệ không?
@@ -332,11 +332,11 @@ insert trước/sau current có được nhìn thấy không?
 remove current bằng iterator có safe không?
 ```
 
-Java collections có fail-fast behavior ở nhiều iterator, nhưng đó không phải synchronization guarantee. Custom C/JS structure phải tự định nghĩa contract.
+Java collections có fail-fast hành vi ở nhiều iterator, nhưng đó không phải synchronization bảo đảm. Custom C/JS structure phải tự định nghĩa contract.
 
-## 24. Validation của doubly linked list
+## 24. xác minh của danh sách liên kết đôi
 
-Một validator có thể kiểm tra:
+Một bộ xác minh có thể kiểm tra:
 
 ```text
 head.prev == null hoặc sentinel invariant
@@ -347,11 +347,11 @@ last reachable node == tail
 no unintended cycle
 ```
 
-Trong debug/test, validator `O(n)` sau random mutation sequence có giá trị rất lớn để bắt corruption gần nơi xảy ra.
+Trong gỡ lỗi/test, bộ xác minh `O(n)` sau ngẫu nhiên sự thay đổi dữ liệu sequence có giá trị rất lớn để bắt corruption gần nơi xảy ra.
 
-## 25. Differential Testing
+## 25. Differential kiểm thử
 
-Custom list có thể được so với reference `ArrayList`/JS Array cho behavior sequence:
+Custom list có thể được so với tham chiếu `ArrayList`/JS mảng cho hành vi sequence:
 
 ```text
 addFirst
@@ -362,11 +362,11 @@ insertAt
 removeAt
 ```
 
-Array reference có thể chậm nhưng đơn giản, rất phù hợp làm oracle cho input nhỏ.
+mảng tham chiếu có thể chậm nhưng đơn giản, rất phù hợp làm oracle cho đầu vào nhỏ.
 
-## 26. Khi nào nên chọn Linked List?
+## 26. Khi nào nên chọn danh sách liên kết?
 
-Dùng linked structure khi workload thật sự cần một hoặc nhiều yếu tố:
+Dùng linked structure khi khối lượng công việc thật sự cần một hoặc nhiều yếu tố:
 
 ```text
 stable node identity
@@ -376,12 +376,12 @@ persistent sharing của suffix
 intrusive scheduling/list membership
 ```
 
-Không chọn chỉ vì “insert O(1)”. Nếu phải search trước insert, locality và footprint có thể khiến dynamic array tốt hơn.
+Không nên chọn chỉ vì “chèn là `O(1)`”. Nếu phải tìm kiếm trước khi chèn, tính cục bộ và kích thước bộ nhớ có thể khiến mảng động tốt hơn.
 
-## Mental Model
+## Mô hình tư duy
 
-> Linked list lưu **quan hệ kế tiếp**, không lưu tọa độ. Nó tối ưu việc thay đổi topology cục bộ bằng pointer/reference rewiring, và trả giá bằng traversal, locality và metadata.
+> danh sách liên kết lưu **quan hệ kế tiếp**, không lưu tọa độ. Nó tối ưu việc thay đổi topology cục bộ bằng con trỏ/tham chiếu rewiring, và trả giá bằng traversal, tính cục bộ và siêu dữ liệu.
 
-Khi hiểu representation này, mọi trade-off — predecessor problem, sentinel, stable node identity, LRU composition, persistence, concurrency — đều trở thành hệ quả tự nhiên.
+Khi hiểu cách biểu diễn này, mọi sự đánh đổi — predecessor problem, giá trị canh gác (sentinel), ổn định định danh nút, LRU composition, persistence, concurrency — đều trở thành hệ quả tự nhiên.
 
 Xem thêm: [Arrays](./00_arrays_and_dynamic_arrays.md), [Stacks](./02_stacks.md), [Queues/Deque](./03_queues_deques_and_priority_queues.md), [Memory Models](../00_foundations/03_memory_models_c_java_javascript.md).

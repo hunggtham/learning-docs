@@ -1,17 +1,24 @@
-# Two Pointers, Sliding Window, Prefix Sum và Difference Techniques
-**Two Pointers, Sliding Window, Prefix Sum & Difference / 투 포인터, 슬라이딩 윈도우, 누적합, 차분**
+# Hai con trỏ, cửa sổ trượt, tổng tiền tố và kỹ thuật hiệu
+**Two Pointers, Sliding Window, Prefix & Difference / 투 포인터, 슬라이딩 윈도우, 누적합, 차분**
 
-Nhóm kỹ thuật này nhìn bề ngoài gồm nhiều “pattern” khác nhau, nhưng có cùng một nguyên lý sâu: **hai trạng thái lân cận thường giống nhau rất nhiều, vì vậy đừng tính lại từ đầu**.
+Nhóm kỹ thuật này thường được học như nhiều “mẫu bài” khác nhau, nhưng chúng có một nguyên lý chung rất sâu:
 
-Two Pointers tận dụng order/monotonicity để loại cả một vùng candidates. Sliding Window reuse trạng thái của window cũ khi biên dịch chuyển. Prefix Sum precompute cumulative state để range query thành subtraction. Difference Array lưu thay đổi ở boundaries thay vì cập nhật từng phần tử.
+> **Hai trạng thái lân cận thường giống nhau rất nhiều; đừng tính lại từ đầu nếu có thể cập nhật từ trạng thái trước.**
 
-Đây không phải bốn mẹo độc lập; chúng là bốn cách khác nhau để **reuse structure giữa các trạng thái liên tiếp**.
+Hai con trỏ dùng thứ tự hoặc tính đơn điệu để loại cả một vùng ứng viên. Cửa sổ trượt tái sử dụng trạng thái khi hai biên dịch chuyển. Tổng tiền tố lưu trạng thái tích lũy để truy vấn đoạn thành phép hiệu. Mảng hiệu lưu **thay đổi tại ranh giới** thay vì cập nhật mọi phần tử trong đoạn.
 
-## 1. Two Pointers trên sorted array
+Đây không phải bốn mẹo rời rạc; chúng là bốn cách khai thác **sự chồng lặp giữa các trạng thái liên tiếp**.
 
-Giả sử array đã sort tăng dần và cần tìm hai phần tử có tổng bằng `target`.
+## 1. Hai con trỏ trên dữ liệu đã sắp xếp
 
-Đặt `L=0`, `R=n-1`.
+Giả sử mảng tăng dần và cần tìm hai phần tử có tổng bằng `target`.
+
+Đặt:
+
+```text
+L = 0
+R = n - 1
+```
 
 Nếu:
 
@@ -19,45 +26,70 @@ Nếu:
 a[L]+a[R] < target
 \]
 
-thì tăng `L` là safe. Vì với `a[L]` hiện tại, thay `a[R]` bằng bất kỳ phần tử nhỏ hơn nào chỉ làm tổng nhỏ hơn nữa. Không có pair dùng `a[L]` với index `<=R` có thể đạt target.
+thì tăng `L` là an toàn. Với `a[L]` hiện tại, mọi phần tử bên trái `R` đều không lớn hơn `a[R]`, nên ghép `a[L]` với chúng chỉ cho tổng còn nhỏ hơn.
 
 Nếu tổng quá lớn, giảm `R` theo reasoning đối xứng.
 
-Mỗi pointer chỉ di chuyển một chiều, nên total `O(n)` sau khi data đã sorted.
+Mỗi pointer chỉ di chuyển một chiều, nên quét là `O(n)` sau khi dữ liệu đã được sắp xếp.
 
-Điểm cốt lõi là proof từ sorted invariant, không phải việc có đúng “hai biến index”.
+## 2. Invariant của Two Pointers
 
-## 2. Sorting cost có phải được tính không?
+Cách chứng minh tốt hơn việc nhớ “nếu nhỏ thì L++” là xác định vùng ứng viên còn lại.
 
-Nếu input chưa sorted và ta sort chỉ để dùng two pointers, total complexity là:
+Bất biến:
+
+> Nếu có một cặp đáp án chưa được tìm thấy, ít nhất một cặp như vậy vẫn nằm trong hình chữ nhật chỉ số `[L,R]` hiện tại.
+
+Mỗi lần tăng `L` hoặc giảm `R`, ta phải chứng minh toàn bộ các cặp bị loại không thể là đáp án.
+
+Đây là dạng **candidate elimination** giống binary search nhưng thay vì loại nửa khoảng bằng một phép so sánh, ta loại một hàng/cột ứng viên nhờ monotonic order.
+
+## 3. Chi phí sorting phải được tính
+
+Nếu input chưa được sắp xếp và ta sort trước:
 
 \[
 O(n\log n)+O(n)=O(n\log n)
 \]
 
-Nếu problem yêu cầu original indices, sorting còn phải giữ index metadata.
+Nếu cần giữ index gốc, mỗi phần tử phải mang theo original index.
 
-Trong Two Sum unsorted one-shot, hash map `O(n)` expected có thể phù hợp hơn. Nhưng nếu có nhiều queries trên same array, sort một lần rồi two-pointers/binary-search có thể đáng giá.
+Với Two Sum một lần, Hash Map expected `O(n)` có thể tốt hơn. Với nhiều query trên cùng dữ liệu, sorting một lần có thể đáng giá hơn.
 
-Luôn phân tích toàn pipeline, không chỉ scan phase.
+Luôn phân tích toàn pipeline, không chỉ phase quét.
 
-## 3. Opposite-direction và same-direction pointers
+## 4. Các dạng Two Pointers
 
-“Two pointers” không chỉ là một pointer trái và một pointer phải.
+### Đối hướng
 
-**Opposite direction**: `L` từ đầu, `R` từ cuối; phổ biến ở sorted pair sum, palindrome, container/range problems.
+`L` từ đầu, `R` từ cuối.
 
-**Same direction**: cả hai đi từ trái sang phải nhưng đại diện boundaries khác nhau; sliding window là một dạng.
+Dùng cho:
 
-**Read/write pointers**: một pointer đọc input, một pointer viết compacted output in-place.
+```text
+pair sum trên sorted array
+palindrome
+container/interval problems
+partition theo điều kiện
+```
 
-**Fast/slow pointers**: hai pointers đi tốc độ khác nhau trên linked structure.
+### Cùng hướng
 
-Điểm chung là pointers encode một invariant giúp mỗi vị trí không bị xử lý lặp vô ích.
+Hai pointer cùng tăng nhưng đại diện hai ranh giới khác nhau. Sliding window là dạng điển hình.
 
-## 4. Read/Write Pointers cho in-place compaction
+### Read/Write
 
-Ví dụ remove duplicates khỏi sorted array:
+Một pointer đọc, một pointer ghi output compact tại chỗ.
+
+### Fast/Slow
+
+Hai pointer chạy tốc độ khác nhau trên linked structure hoặc sequence trạng thái.
+
+Điểm chung là mỗi pointer có nghĩa trong một invariant cụ thể.
+
+## 5. Read/Write Pointer
+
+Ví dụ loại duplicate khỏi sorted array:
 
 ```java
 int write = 0;
@@ -68,347 +100,590 @@ for (int read = 0; read < a.length; read++) {
 }
 ```
 
-Invariant: prefix `[0, write)` luôn chứa output hợp lệ đã compact; `read` đang khám phá input chưa xử lý.
-
-Pattern này xuất hiện trong remove-element, filter-in-place, partition và stream compaction.
-
-## 5. Fast/Slow Pointers trên linked list
-
-Floyd cycle detection đặt `slow` đi 1 step, `fast` đi 2 steps. Nếu list có cycle, hai pointers cuối cùng gặp nhau trong cycle.
-
-Nếu không cycle, `fast` chạm null.
-
-Midpoint cũng dùng slow/fast: khi fast đi hết list, slow ở gần giữa.
-
-Điểm quan trọng là linked list không có random access, nên pointer-speed relation thay thế arithmetic index.
-
-## 6. Fixed-size Sliding Window
-
-Giả sử cần maximum sum của subarray length `k`.
-
-Naive tính sum cho mỗi window `O(k)`, tổng `O(nk)`.
-
-Nếu current window sum là `S`, khi dịch một bước:
-
-\[
-S' = S - a[L] + a[R+1]
-\]
-
-Ta chỉ bỏ một phần tử và thêm một phần tử. Sau initial `O(k)`, mỗi shift `O(1)`, total `O(n)`.
-
-Đây là state reuse ở dạng rõ nhất.
-
-## 7. Variable Sliding Window cần monotonic property
-
-Giả sử array chỉ có số dương và cần longest subarray có sum `<= K`.
-
-Khi tăng `R`, sum không giảm. Nếu sum vượt K, tăng `L` sẽ làm sum giảm hoặc giữ. Vì vậy ta có thể shrink cho đến khi invariant được khôi phục.
-
-Pseudo:
+Bất biến:
 
 ```text
-for R:
-    add a[R]
-    while window invalid:
-        remove a[L]
-        L++
-    update answer
+[0, write) là output hợp lệ đã compact
+[read, n) chưa xử lý
 ```
 
-Mỗi element vào window một lần và ra một lần, nên total `O(n)`.
+Pattern này dùng cho filter-in-place, remove element, partition và stream compaction.
 
-## 8. Tại sao số âm phá sliding-window sum đơn giản?
+## 6. Stable vs Unstable Compaction
 
-Nếu array có negative numbers, tăng `R` có thể làm sum giảm; tăng `L` có thể làm sum tăng nếu phần tử bỏ ra âm.
+Read/write pointer như trên giữ thứ tự tương đối của phần tử được giữ lại, tức là stable.
 
-Monotonic relation giữa boundary movement và predicate mất đi. Khi đó “sum quá lớn thì tăng left” không còn guaranteed safe.
+Nếu không cần giữ order, có thể swap phần tử cần xóa với phần tử cuối và giảm kích thước logic; cách này giảm số lần dịch nhưng thay đổi order.
 
-Một problem tương tự có thể cần prefix sums + hash map, monotonic deque, balanced tree hoặc different algorithm.
+Yêu cầu ổn định là một phần của output semantics, không phải chỉ implementation detail.
 
-Đây là một lesson quan trọng: sliding window không được xác định bởi syntax hai pointers; nó được xác định bởi **monotonic validity under boundary movement**.
+## 7. Fast/Slow Pointer trên Linked List
 
-## 9. Window state không chỉ là sum
+Floyd cycle detection:
 
-Window có thể duy trì frequency map, count distinct, number of violations, max/min hoặc other summary.
+```text
+slow += 1 bước
+fast += 2 bước
+```
 
-Ví dụ longest substring without repeated characters giữ frequency/last-position information. Khi thêm character làm duplicate, move left cho tới khi uniqueness invariant phục hồi.
+Nếu có chu trình, hai pointer cuối cùng gặp nhau. Nếu không, `fast` chạm null.
 
-Nếu update add/remove mỗi element `O(1)` expected, total vẫn tuyến tính vì boundaries monotonic.
+Tìm middle node cũng dùng fast/slow: khi fast đi hết, slow ở gần giữa.
 
-## 10. Minimum Window Substring
+Ở linked list không có random access, relation về tốc độ thay thế arithmetic index.
 
-Bài minimum window chứa đủ required character counts có hai phases lặp:
+## 8. Vì sao Floyd gặp nhau?
 
-Mở rộng right cho tới khi window valid.
+Sau khi cả hai vào chu trình, xét vị trí modulo độ dài chu trình `C`.
 
-Sau đó shrink left tối đa trong khi vẫn valid, cập nhật minimum.
+Mỗi bước, khoảng cách tương đối giữa fast và slow tăng 1 modulo `C`.
 
-Một biến như `formed` hoặc number of satisfied requirements tránh scan toàn frequency map mỗi step.
+Do đó sau tối đa `C` bước, khoảng cách trở thành 0 và hai pointer gặp nhau.
 
-Đây là ví dụ window invariant phức tạp hơn sum nhưng cùng state-transition pattern.
+Đây là một chứng minh dùng modular arithmetic chứ không phải “fast chắc chắn đuổi kịp slow” theo trực giác mơ hồ.
 
-## 11. At Most K → Exactly K transformation
+## 9. Tìm điểm bắt đầu chu trình
 
-Một kỹ thuật đẹp với counting windows là:
+Sau khi fast và slow gặp nhau, đặt một pointer về head rồi cho cả hai đi 1 bước mỗi lần. Điểm gặp tiếp theo là đầu chu trình.
+
+Kết quả này đến từ quan hệ giữa:
+
+```text
+độ dài đoạn trước chu trình
+số vòng fast đã đi thêm
+vị trí gặp modulo cycle length
+```
+
+Đây là ví dụ nơi hiểu đại số giúp nhớ thuật toán tốt hơn học thuộc bước.
+
+## 10. Fixed-Size Sliding Window
+
+Giả sử cần tổng lớn nhất của subarray dài `k`.
+
+Naive: tính lại từng window `O(k)`, tổng `O(nk)`.
+
+Nếu sum hiện tại là `S`, dịch một bước:
+
+\[
+S' = S-a[L]+a[R+1]
+\]
+
+Sau initial `O(k)`, mỗi shift `O(1)`, tổng `O(n)`.
+
+Cửa sổ trượt chính là **incremental maintenance** của summary.
+
+## 11. Variable-Size Sliding Window
+
+Một pattern điển hình:
+
+```text
+for R từ trái sang phải:
+    thêm a[R] vào state
+    while window không hợp lệ:
+        bỏ a[L]
+        L++
+    cập nhật answer
+```
+
+Nếu `L` và `R` chỉ tăng, mỗi phần tử vào window một lần và rời một lần.
+
+Do đó ngay cả có `while` lồng trong `for`, tổng số bước dịch pointer vẫn `O(n)`.
+
+Đây là amortized reasoning.
+
+## 12. Sliding Window cần tính đơn điệu của tính hợp lệ
+
+Ví dụ mảng số dương, tìm longest subarray có sum `<= K`.
+
+Khi tăng `R`, sum không giảm. Khi tăng `L`, sum không tăng.
+
+Predicate “sum <= K” có quan hệ monotonic với hai biên, nên có thể shrink `L` cho tới khi window hợp lệ trở lại.
+
+Đây là điều kiện bản chất; syntax hai pointer chỉ là biểu hiện bên ngoài.
+
+## 13. Vì sao số âm phá pattern sum đơn giản?
+
+Nếu có số âm:
+
+```text
+mở rộng R có thể làm sum giảm
+bỏ a[L] âm có thể làm sum tăng
+```
+
+Tính đơn điệu biến mất. Việc “sum > K thì L++” không còn an toàn.
+
+Khi đó có thể cần:
+
+```text
+prefix sum + Hash Map
+prefix sum + monotonic deque
+balanced tree
+binary search trên prefix theo structure đặc biệt
+```
+
+Đừng dùng sliding window chỉ vì bài hỏi subarray.
+
+## 14. Window State có thể phức tạp hơn Sum
+
+State có thể là:
+
+```text
+frequency map
+count distinct
+number of violations
+sum
+max/min qua monotonic deque
+multiset/order-statistic structure
+```
+
+Điều kiện quan trọng là có thể cập nhật khi add/remove endpoint đủ rẻ.
+
+Nếu mỗi add/remove là `O(1)` expected và hai biên đơn điệu, tổng vẫn thường `O(n)`.
+
+## 15. Longest Substring Without Repeating Characters
+
+State có thể dùng:
+
+```text
+frequency map
+hoặc lastSeen[char]
+```
+
+Nếu dùng `lastSeen`, khi gặp ký tự đã xuất hiện trong window:
+
+```text
+L = max(L, lastSeen[c] + 1)
+```
+
+Ta nhảy `L` trực tiếp thay vì tăng từng bước.
+
+Đây là ví dụ summary mạnh hơn có thể giảm số update state dù asymptotic vẫn `O(n)`.
+
+## 16. Minimum Window Substring
+
+Cần duy trì số lượng từng ký tự yêu cầu.
+
+Pattern:
+
+1. mở rộng phải cho đến khi đủ requirement;
+2. shrink trái tối đa trong khi vẫn đủ;
+3. cập nhật minimum;
+4. tiếp tục mở rộng.
+
+Một biến `formed` hoặc số requirement đã thỏa giúp tránh quét toàn frequency map sau mỗi thay đổi.
+
+Bản chất là giữ một predicate “window covers target multiset”.
+
+## 17. At-Most → Exactly
+
+Một kỹ thuật rất mạnh:
 
 \[
 count(exactly\ K)=count(atMost\ K)-count(atMost\ K-1)
 \]
 
-Nếu `atMost(K)` có monotonic sliding-window solution, ta có thể derive exactly-K count.
+Nếu `atMost(K)` có sliding-window solution đơn điệu, ta suy ra exact-K count.
 
-Ví dụ subarrays với exactly K distinct values.
+Ứng dụng:
 
-Đây là inclusion-exclusion ở mức simple difference giữa cumulative constraints.
+```text
+subarray có đúng K distinct values
+binary subarray với sum đúng K trong một số formulation
+```
 
-## 12. Prefix Sum
+Đây là phép biến đổi từ constraint chính xác khó thành hai constraint tích lũy dễ hơn.
 
-Định nghĩa:
+## 18. Counting Windows: tại sao cộng `R-L+1`?
+
+Nếu sau khi shrink, `[L,R]` là window hợp lệ nhỏ nhất theo một invariant kiểu “at most K”, thì mọi suffix của nó kết thúc tại `R`:
+
+```text
+[L,R], [L+1,R], ..., [R,R]
+```
+
+đều hợp lệ trong nhiều bài at-most.
+
+Số window kết thúc tại `R` là:
+
+\[
+R-L+1
+\]
+
+Hiểu lý do combinatorial này tốt hơn học công thức thuộc lòng.
+
+## 19. Sliding Window Maximum cần Deque đơn điệu
+
+Nếu cần max của mỗi window, recompute max `O(k)` quá đắt.
+
+Deque giữ index sao cho:
+
+```text
+index tăng
+value giảm
+```
+
+Khi thêm phần tử mới, loại khỏi cuối mọi candidate nhỏ hơn hoặc bằng vì chúng bị dominated: cũ hơn và không lớn hơn.
+
+Front luôn là max hiện tại.
+
+Mỗi index vào/ra deque tối đa một lần, nên `O(n)`.
+
+## 20. Median trong Sliding Window
+
+Median khó hơn max vì không có một extreme duy nhất.
+
+Có thể dùng:
+
+```text
+two heaps + delayed deletion
+balanced multiset
+order-statistic tree
+Fenwick trên compressed values nếu domain phù hợp
+```
+
+Đây là ví dụ cùng “window” nhưng query summary khác làm cấu trúc phụ thay đổi hoàn toàn.
+
+## 21. Prefix Sum
+
+Quy ước nửa mở:
 
 ```text
 P[0] = 0
 P[i+1] = P[i] + a[i]
 ```
 
-Khi đó sum của half-open range `[L,R)`:
+Khi đó:
+
+\[
+sum([L,R))=P[R]-P[L]
+\]
+
+Preprocessing `O(n)`, query `O(1)`.
+
+Prefix array là representation của **trạng thái tích lũy sau mỗi prefix**.
+
+## 22. Prefix Technique dựa trên phép nghịch đảo
+
+Sum có inverse là subtraction:
 
 \[
 P[R]-P[L]
 \]
 
-hoặc inclusive `[L,R]`:
+XOR tự nghịch đảo:
 
 \[
-P[R+1]-P[L]
+rangeXor=P[R]\oplus P[L]
 \]
 
-Preprocessing `O(n)`, mỗi range-sum query `O(1)`.
+Nhưng `min` không có inverse tương tự; không thể lấy range min bằng hiệu hai prefix minimum.
 
-Ta trả upfront memory `O(n)` và build cost để nhiều query rẻ hơn.
+Hiểu tính chất đại số giúp biết khi nào prefix query `O(1)` khả thi.
 
-## 13. Prefix Sum là representation của cumulative state
+## 23. Prefix Frequency
 
-Prefix array không chỉ là một trick cộng số. Nó lưu state sau khi xử lý prefix đầu tiên `i` elements.
-
-Range query lấy “state đến R” trừ “state trước L”. Điều này hoạt động vì sum có inverse operation subtraction.
-
-XOR prefix cũng tương tự vì XOR tự đảo:
-
-\[
-rangeXor(L,R)=P[R+1]\oplus P[L]
-\]
-
-Không phải mọi aggregate đều hỗ trợ subtraction/inverse đơn giản. Min/max prefix không thể lấy range min bằng `prefixMin[R] - prefixMin[L]`.
-
-## 14. Prefix Frequency
-
-Nếu alphabet/value domain nhỏ, prefix không cần là scalar. Ta có thể lưu cumulative frequency vectors.
-
-Ví dụ string lowercase:
+Với alphabet nhỏ:
 
 ```text
-pref[i][c] = số lần char c trong prefix length i
+pref[i][c] = số lần c trong prefix length i
 ```
 
-Frequency của char c trong `[L,R)`:
+Frequency của `c` trong `[L,R)`:
 
 ```text
 pref[R][c] - pref[L][c]
 ```
 
-Memory `O(nσ)` với alphabet size `σ`, đổi lại range histogram query nhanh.
+Trade-off:
 
-## 15. Prefix Sum + Hash Map cho subarray sum
+```text
+memory O(nσ)
+query histogram nhanh
+```
 
-Nếu cần đếm subarrays có sum `K`, kể cả có số âm:
+Kỹ thuật này rất hữu ích cho string/range counting khi `σ` nhỏ.
 
-Subarray `(j,i]` có sum K khi:
+## 24. Prefix Sum + Hash Map cho Subarray Sum K
+
+Nếu:
 
 \[
 P[i]-P[j]=K
 \]
 
-hay:
+thì:
 
 \[
 P[j]=P[i]-K
 \]
 
-Khi scan prefix `P[i]`, ta chỉ cần biết có bao nhiêu previous prefixes bằng `P[i]-K` trong hash map.
+Khi quét `P[i]`, chỉ cần đếm số prefix trước bằng `P[i]-K`.
 
-Total expected `O(n)`.
+Hash Map lưu:
 
-Đây là ví dụ rất quan trọng nơi prefix sum biến subarray problem thành pair relation giữa cumulative states.
+```text
+prefixValue -> frequency đã thấy
+```
 
-## 16. Prefix Minimum/Maximum kết hợp chứ không trừ
+Expected `O(n)` kể cả input có số âm.
 
-Dù min không invertible, prefix min vẫn hữu ích cho problems khác.
+Đây là một pattern cực quan trọng: biến subarray thành **quan hệ giữa hai prefix states**.
 
-Ví dụ maximum subarray sum ending at current prefix có thể reason qua minimum previous prefix:
+## 25. Longest Subarray với Sum K
+
+Nếu cần độ dài lớn nhất, lưu **vị trí đầu tiên** của mỗi prefix sum.
+
+Khi tại `i` có `P[i]-K` từng xuất hiện ở `j`, subarray `(j,i]` có sum K. Để maximize length, giữ earliest `j`.
+
+Cùng equation nhưng metadata trong Hash Map thay đổi theo objective:
+
+```text
+count -> frequency
+longest -> earliest index
+shortest -> latest index hoặc cấu trúc khác tùy bài
+```
+
+## 26. Prefix Minimum và Maximum Subarray
+
+Maximum subarray sum có thể nhìn qua prefix:
 
 \[
-P[i]-\min_{j<i}P[j]
+P[R]-\min_{L<R}P[L]
 \]
 
-Ta không hỏi arbitrary range min; ta hỏi best prior boundary. Do đó cumulative summary vẫn hữu ích.
+Khi quét `R`, chỉ cần giữ minimum prefix trước đó.
 
-## 17. 2D Prefix Sum
+Đây là ví dụ prefix summary vẫn hữu ích dù `min` không invertible cho arbitrary range query.
 
-Với matrix, define cumulative rectangle từ `(0,0)` tới trước `(r,c)` theo half-open convention.
+## 27. Kadane dưới góc nhìn Incremental State
 
-Sum rectangle `[r1,r2) × [c1,c2)` dùng inclusion-exclusion:
+Kadane giữ:
+
+```text
+bestEndingHere
+bestOverall
+```
+
+Mỗi bước quyết định:
+
+```text
+bắt đầu subarray mới tại i
+hoặc
+nối a[i] vào subarray trước
+```
+
+Kadane và prefix-min là hai cách nhìn cùng cấu trúc tối ưu hóa.
+
+Việc liên hệ hai formulation giúp hiểu thuật toán thay vì học tên riêng.
+
+## 28. 2D Prefix Sum
+
+Với ma trận và prefix rectangle nửa mở:
+
+\[
+P[r][c]=sum([0,r)\times[0,c))
+\]
+
+Query rectangle:
 
 \[
 P[r2][c2]-P[r1][c2]-P[r2][c1]+P[r1][c1]
 \]
 
-Subtract hai vùng thừa rồi add lại overlap đã bị subtract hai lần.
+Đây là inclusion-exclusion: trừ hai vùng thừa và cộng lại vùng bị trừ hai lần.
 
-Đây là geometric form của inclusion-exclusion.
+## 29. Higher-Dimensional Prefix
 
-## 18. Difference Array
+Ý tưởng mở rộng lên 3D hoặc nhiều chiều bằng inclusion-exclusion trên các mặt/cạnh/góc.
 
-Prefix representation lưu cumulative value. Difference representation lưu change giữa neighbors.
+Nhưng số term tăng theo `2^d`, nên practical chủ yếu khi số chiều nhỏ.
 
-Với initial zero array, muốn add `x` vào inclusive range `[L,R]`:
+Đây là ví dụ complexity phụ thuộc **số chiều**, không chỉ số phần tử.
+
+## 30. Difference Array
+
+Difference representation lưu:
+
+\[
+d[i]=a[i]-a[i-1]
+\]
+
+với quy ước thích hợp.
+
+Range add `x` vào `[L,R]`:
 
 ```text
 diff[L] += x
 diff[R+1] -= x
 ```
 
-Sau tất cả updates, prefix sum của `diff` reconstruct final values.
+Sau mọi update, prefix sum của `diff` khôi phục giá trị cuối.
 
-Mỗi range update `O(1)`, final materialization `O(n)`.
+Ta chuyển `O(length)` work của mỗi range update thành hai boundary updates.
 
-## 19. Difference Array chỉ phù hợp khi queries có thể deferred
+## 31. Difference Array như Event Encoding
 
-Nếu sau mỗi range update phải query exact current point/range online, simple difference array chưa đủ vì chưa materialize prefix.
+`+x` tại `L` nghĩa “bắt đầu hiệu lực”. `-x` sau `R` nghĩa “kết thúc hiệu lực”.
 
-Khi operations interleave online, Fenwick Tree hoặc Segment Tree có thể cần thiết.
+Do đó difference array chính là một sweep-line event representation trên miền tọa độ nhỏ/rời rạc.
 
-Difference array mạnh khi updates batch/offline và final output/query đến sau.
+Prefix sum là bước tích phân các thay đổi đó.
 
-Again, workload timing quyết định structure.
+## 32. 2D Difference
 
-## 20. 2D Difference
+Muốn cộng `x` vào rectangle, cập nhật bốn corner của difference matrix theo inclusion-exclusion. Sau đó prefix 2D tái dựng toàn ma trận.
 
-Rectangle add trên matrix có thể update bốn corners của 2D difference array với inclusion-exclusion signs, rồi prefix accumulate theo hai dimensions để recover final matrix.
+Kỹ thuật này rất mạnh khi có nhiều rectangle updates nhưng chỉ cần materialize kết quả cuối một lần.
 
-Pattern giống 1D nhưng boundaries trở thành rectangle corners.
+Nếu xen kẽ update/query online, cần Fenwick/Segment Tree 2D hoặc structure khác.
 
-Đây là technique mạnh cho batch area updates.
+## 33. Prefix và Difference là hai cách biểu diễn đối ngẫu
 
-## 21. Monotonic Stack và amortized O(n)
+Prefix lưu **trạng thái tích lũy**.
 
-Dù tên không phải sliding window, monotonic stack cùng triết lý loại candidates vĩnh viễn.
-
-Next Greater Element: khi current value lớn hơn stack top, top đã tìm được next greater và bị pop. Mỗi index push một lần, pop một lần.
-
-Nested `while` nhìn có vẻ `O(n^2)` nhưng total operations `O(n)` theo amortized analysis.
-
-## 22. Monotonic Deque cho Sliding Window Maximum
-
-Recompute max mỗi window size k là `O(nk)`.
-
-Deque giữ indices với values giảm dần.
-
-Khi thêm `a[r]`, pop tail indices có value `<= a[r]`. Chúng không thể trở thành maximum trong một future window chứa `a[r]` vì `a[r]` vừa mới hơn vừa không nhỏ hơn.
-
-Pop front nếu index đã ra khỏi window.
-
-Front luôn là maximum current window.
-
-Mỗi index enter/leave deque tối đa một lần → `O(n)`.
-
-## 23. Monotonic Queue cho prefix optimization
-
-Một số DP/prefix problems cần minimum/maximum prefix trong moving range. Monotonic deque duy trì optimum candidate khi range boundaries dịch chuyển.
-
-Ví dụ shortest subarray with sum at least K khi có negative numbers có thể dùng prefix sums + monotonic deque, thay vì simple sliding window.
-
-Ta cần tìm previous prefix nhỏ nhất phù hợp và loại dominated prefixes.
-
-Đây là một bước nâng cao nối prefix representation với monotonic candidate structure.
-
-## 24. Two Pointers trên hai arrays
-
-Merge two sorted arrays dùng pointers `i,j`, mỗi step consume phần tử nhỏ hơn. Intersection/union of sorted lists cũng tương tự.
-
-Nếu lengths `n,m`, total `O(n+m)` vì mỗi pointer chỉ tăng.
-
-Search engines intersect sorted postings lists theo mental model này, có thể thêm skip/galloping optimization nếu sizes chênh nhiều.
-
-## 25. Three Sum và sorting reduction
-
-Three Sum có thể sort array rồi fix một index `i`, sau đó two-pointers tìm pair cho target `-a[i]`.
-
-Total:
-
-\[
-O(n^2)
-\]
-
-after sorting, thay vì naive `O(n^3)`.
-
-Duplicates cần skip cẩn thận để tránh output lặp.
-
-Pattern cho thấy two-pointers thường xuất hiện sau khi một dimension được fixed hoặc data được sorted.
-
-## 26. Partition và Two Pointers
-
-Quicksort partition có thể dùng pointers quét inward/outward; Dutch National Flag dùng boundaries cho `< pivot`, `== pivot`, `> pivot`.
-
-Các pointers không phải chỉ “search pair” mà có thể đại diện boundaries của regions với invariants khác nhau.
-
-Một cách học tốt là annotate mỗi region:
+Difference lưu **sự thay đổi giữa các trạng thái kế tiếp**.
 
 ```text
-[processed less][processed equal][unknown][processed greater]
+difference --prefix sum--> original
+original   --difference--> differences
 ```
 
-và chứng minh mỗi pointer move làm unknown region nhỏ lại.
+Một bên tối ưu query aggregate, bên kia tối ưu range update offline.
 
-## 27. Circular Window
+Hiểu mối quan hệ này giúp nhớ kỹ thuật một cách tự nhiên.
 
-Với circular array, một cách là index modulo `n` hoặc conceptually duplicate data. Nhưng duplicate thật làm memory `O(n)` thêm; modulo giữ compact hơn.
+## 34. Imos Method
 
-Cần tránh window length vượt semantics allowed và tránh infinite pointer loops.
+Trong một số tài liệu Nhật, difference + prefix cho range coverage được gọi là Imos method.
 
-## 28. Overflow
+Ví dụ nhiều đoạn tô màu trên timeline:
 
-Prefix sums có thể vượt `int` ngay cả khi individual values vừa `int`.
+```text
++1 tại start
+-1 tại end
+prefix -> số lớp phủ tại mỗi vị trí
+```
 
-Java nên dùng `long` nếu `n * maxValue` có thể vượt 32-bit. C chọn integer width phù hợp. JavaScript `Number` phải nằm trong safe integer range nếu cần exactness.
+Bản chất vẫn là event accumulation.
 
-Prefix structures tích lũy values nên overflow risk lớn hơn nhìn từng element.
+## 35. Circular Window
 
-## 29. Online vs Offline là câu hỏi quyết định
+Với circular array, có thể:
 
-Prefix Sum và Difference Array mạnh vì cho phép preprocessing hoặc deferred materialization.
+```text
+xử lý index modulo n
+hoặc
+conceptually concatenate array với chính nó
+```
 
-Nếu queries/update interleave online, Fenwick/Segment Tree có thể cần. Nếu data static và query nhiều, prefix có thể đơn giản hơn nhiều.
+Nhưng phải giới hạn window length không vượt `n` nếu bài chỉ cho mỗi phần tử xuất hiện một vòng.
 
-Không nên dùng Segment Tree chỉ vì range query nghe “nâng cao” nếu Prefix Sum `O(1)` query đã đủ.
+Circularity thường làm ranh giới phức tạp hơn, không thay bản chất window.
 
-## 30. Một cách nhận diện kỹ thuật
+## 36. Two Pointers trên Hai Mảng
 
-Nếu brute force tính lại gần như cùng state cho windows/ranges kế tiếp, hãy hỏi phần nào có thể reuse.
+Merge hai sorted arrays dùng pointer `i,j`.
 
-Nếu pointers có thể chỉ đi một chiều nhờ sorted/monotonic invariant, two pointers có thể loại repeated search.
+Tìm intersection/union cũng vậy.
 
-Nếu query là aggregate trên static ranges, prefix may fit.
+Mỗi pointer chỉ tăng, nên `O(n+m)`.
 
-Nếu update là batch range-add, difference representation may fit.
+Đây là same-direction two pointers nhưng trên hai sequence khác nhau.
 
-Nếu optimum candidate trong moving range cần được giữ và dominated candidates có thể loại vĩnh viễn, monotonic deque/stack có thể fit.
+## 37. K-Way Merge
 
-## Mental Model
+Hai pointer tổng quát lên `k` sorted streams bằng min-heap giữ head hiện tại của mỗi stream.
 
-> Những kỹ thuật này đều thắng bằng cách xác định **phần nào của trạng thái cũ vẫn còn đúng khi boundary thay đổi**, rồi chỉ cập nhật phần chênh lệch.
+Complexity:
 
-Two Pointers reuse ordering để không quay lại candidates đã loại. Sliding Window reuse current window state. Prefix Sum reuse cumulative prefixes. Difference Array defer work vào boundaries. Monotonic structures loại dominated candidates vĩnh viễn.
+\[
+O(N\log k)
+\]
 
-Nếu bạn hiểu invariant làm cho pointer chỉ đi một chiều hoặc state update chỉ `O(1)`, bạn không cần học thuộc hàng chục “patterns” riêng lẻ.
+với `N` tổng số phần tử.
 
-Xem thêm: [Searching](./00_searching.md), [Intervals & Sweep Line](./08_intervals_and_sweep_line.md), [Range Queries](../05_specialized/01_range_queries_fenwick_segment_tree.md), [Amortized Thinking](../05_specialized/03_amortized_randomized_and_probabilistic_thinking.md).
+Đây là ví dụ “two pointers” mở rộng thành frontier có nhiều candidate, và heap trở thành structure chọn candidate nhỏ nhất tiếp theo.
+
+## 38. Binary Search vs Two Pointers
+
+Nếu cần tìm pair cho một query, có thể với mỗi `i` binary-search complement `O(n log n)`. Two pointers exploit monotonic relation giữa cả hai chỉ số để đạt `O(n)`.
+
+Binary search loại ứng viên theo một chiều độc lập; two pointers khai thác quan hệ hai chiều mạnh hơn.
+
+## 39. Monotonicity là tín hiệu quan trọng
+
+Two pointers/sliding window thường xuất hiện khi có một predicate kiểu:
+
+```text
+nếu tăng L thì property chỉ thay theo một hướng
+nếu tăng R thì property chỉ thay theo một hướng
+```
+
+Nếu validity nhảy lên xuống không có cấu trúc, pointer monotonic không đủ.
+
+Hãy tìm **đơn điệu của không gian ứng viên**, không tìm keyword “subarray”.
+
+## 40. Offline Query và Prefix Precomputation
+
+Nếu toàn bộ query đã biết trước, có thể sort/reorder query hoặc xây multiple prefix summaries.
+
+Nếu query đến online sau mỗi update, static prefix không đủ.
+
+Tính online/offline là một chiều thiết kế quan trọng thường bị bỏ qua khi học kỹ thuật này.
+
+## 41. Overflow
+
+Prefix sum rất dễ overflow vì tích lũy nhiều phần tử.
+
+Nếu `a[i]` là `int`, tổng có thể cần `long`.
+
+2D prefix hoặc weighted count còn có thể cần kiểu rộng hơn do tích số lượng phần tử với magnitude.
+
+Kiểu số phải chọn theo cận tổng, không theo cận của một phần tử.
+
+## 42. Memory Trade-Off
+
+Prefix array dùng `O(n)` memory. Nếu chỉ cần running prefix một lần, không cần lưu toàn bộ.
+
+Nếu có nhiều loại query, có thể phải lưu nhiều prefix arrays, tăng memory nhanh.
+
+Data structure design luôn là trade-off giữa recomputation và materialized summaries.
+
+## 43. Kiểm thử
+
+Các case quan trọng:
+
+```text
+empty / one element
+all equal
+negative values
+zeros
+duplicates
+K=0
+window size 1 / n
+prefix sum gần overflow
+circular boundaries
+Unicode nếu window trên string
+```
+
+Với window, nên differential-test trên `n` nhỏ bằng brute-force enumerate mọi subarray.
+
+## 44. Những hiểu lầm phổ biến
+
+“Có subarray là dùng sliding window” — sai nếu validity không đơn điệu.
+
+“Hai vòng while/for nghĩa O(n²)” — sai nếu pointer chỉ đi một chiều và mỗi phần tử bị xử lý hữu hạn lần.
+
+“Prefix Sum chỉ dùng để tính tổng” — sai; có thể lưu count, XOR hoặc nhiều summary tích lũy.
+
+“Difference Array dùng được cho update/query online bất kỳ” — sai; dạng đơn giản phù hợp batch updates rồi materialize.
+
+“Two pointers luôn cần sorted array” — không; fast/slow, read/write và variable window không nhất thiết cần sorting.
+
+## Mô hình tư duy
+
+> Hai con trỏ, cửa sổ trượt, prefix và difference đều là kỹ thuật **khai thác tính gần nhau của các trạng thái**. Một trạng thái mới không được tính từ đầu; nó được suy từ trạng thái trước bằng một thay đổi nhỏ hoặc bằng một dữ liệu tóm lược đã tiền xử lý.
+
+Khi gặp bài sequence/range, hãy hỏi: **candidate space có monotonic không, hai biên có thể chỉ di chuyển một chiều không, window state có cập nhật nhanh khi add/remove không, aggregate có inverse không, và có thể lưu thay đổi ở boundary thay vì cập nhật toàn đoạn không?**
+
+Xem thêm: [Searching](./00_searching.md), [Intervals & Sweep Line](./08_intervals_and_sweep_line.md), [Range Queries](../05_specialized/01_range_queries_fenwick_segment_tree.md), [Monotonic Stack/Queue](../01_linear_structures/02_stacks.md), [Queues & Deques](../01_linear_structures/03_queues_deques_and_priority_queues.md).

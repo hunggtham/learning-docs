@@ -54,7 +54,8 @@ advanced/
 │   ├── 04_tries.md
 │   ├── 05_b_trees_and_external_memory.md
 │   ├── 06_augmented_trees_and_order_statistics.md
-│   └── 07_skip_lists.md
+│   ├── 07_skip_lists.md
+│   └── 08_advanced_heaps_and_priority_queue_engineering.md
 ├── 03_graphs/
 │   ├── 00_graph_modeling_and_representation.md
 │   ├── 01_graph_traversal_bfs_dfs.md
@@ -64,7 +65,8 @@ advanced/
 │   ├── 05_union_find.md
 │   ├── 06_bridges_articulation_and_biconnectivity.md
 │   ├── 07_eulerian_paths_and_cycles.md
-│   └── 08_network_flow_and_matching.md
+│   ├── 08_network_flow_and_matching.md
+│   └── 09_dynamic_temporal_and_large_scale_graphs.md
 ├── 04_algorithmic_paradigms/
 │   ├── 00_searching.md
 │   ├── 01_sorting.md
@@ -75,7 +77,9 @@ advanced/
 │   ├── 06_selection_and_top_k.md
 │   ├── 07_two_pointers_sliding_window_prefix_difference.md
 │   ├── 08_intervals_and_sweep_line.md
-│   └── 09_hard_problems_reductions_and_approximation.md
+│   ├── 09_hard_problems_reductions_and_approximation.md
+│   ├── 10_greedy_matroids_primal_dual_and_approximation.md
+│   └── 11_constraint_search_branch_and_bound.md
 ├── 05_specialized/
 │   ├── 00_string_algorithms.md
 │   ├── 01_range_queries_fenwick_segment_tree.md
@@ -92,7 +96,12 @@ advanced/
 └── 90_connections/
     ├── 00_choose_the_right_data_structure.md
     ├── 01_dsa_in_databases_networks_and_systems.md
-    └── 02_problem_solving_workflow.md
+    ├── 02_problem_solving_workflow.md
+    ├── 03_case_study_database_indexing.md
+    ├── 04_case_study_autocomplete_search.md
+    ├── 05_case_study_routing_graph_system.md
+    ├── 06_case_study_streaming_analytics.md
+    └── 07_case_study_scheduler_backpressure.md
 ```
 
 Mỗi nhóm có `_index.md` để điều hướng ngắn gọn trong Obsidian, GitHub và GitHub Pages.
@@ -114,6 +123,7 @@ flowchart TD
     K --> L[Balanced Trees]
     L --> M[Augmented Trees]
     J --> N[Heap]
+    N --> N2[Advanced Heap Engineering]
     J --> O[Trie]
     L --> P[B / B+ Tree]
     F --> Q[Graph Representation]
@@ -125,10 +135,13 @@ flowchart TD
     R --> W[Bridge / Articulation]
     R --> X[Euler]
     Q --> Y[Flow / Matching]
+    Q --> Y2[Dynamic / Temporal Graphs]
     C --> Z[Searching / Sorting]
     B --> AA[Recursion / Backtracking]
     AA --> AB[Divide & Conquer]
+    AA --> AB2[Constraint Search / Branch & Bound]
     B --> AC[Greedy]
+    AC --> AC2[Matroid / Primal-Dual / Approximation]
     B --> AD[Dynamic Programming]
     F --> AE[Two Pointers / Sliding Window]
     J --> AF[Range Structures]
@@ -163,14 +176,48 @@ Một lộ trình thiên về hệ thống:
 Hashing → cache / hash join
 Balanced Tree → ordered map
 B+Tree → database index / external memory
-Heap → scheduler / Top-K / Dijkstra
-Graph → dependency / routing / flow
+Heap → scheduler / Top-K / Dijkstra → advanced heap engineering
+Graph → dependency / routing / flow → dynamic & temporal graphs
 Trie + suffix structures → indexing / autocomplete / search
 Fenwick / Segment Tree → online aggregate queries
 Probabilistic structures → memory-bounded large-scale analytics
 ```
 
-Các từ trong sơ đồ được giữ bằng tiếng Anh vì chúng đóng vai trò tên cấu trúc, tên thuật toán hoặc từ khóa tra cứu; phần giải thích xung quanh ưu tiên tiếng Việt.
+Một lộ trình đi sâu vào thiết kế thuật toán:
+
+```text
+Greedy → exchange argument → matroid / primal-dual / approximation
+Recursion & Backtracking → CSP → propagation → branch-and-bound
+Graph Modeling → static algorithms → dynamic/temporal/large-scale graph
+Heap → binary heap → indexed/meldable/radix/relaxed priority queues
+```
+
+Các từ trong sơ đồ được giữ bằng tiếng Anh khi chúng là tên cấu trúc, tên thuật toán hoặc từ khóa tra cứu; phần giải thích xung quanh ưu tiên tiếng Việt.
+
+## Case study xuyên nhiều cấu trúc
+
+Sau khi đã đọc các chapter theo chủ đề, nhóm `90_connections` cung cấp các bài tổng hợp để luyện cách ghép nhiều cấu trúc thành một thiết kế hoàn chỉnh.
+
+```text
+Database Indexing
+  Hash Table + B+Tree + Buffer Pool + Bloom Filter + LSM
+
+Autocomplete & Search Suggestions
+  Trie/FST + Heap + Hash Map + Unicode + fuzzy search + cache
+
+Routing System
+  Graph + Dijkstra + Priority Queue + Radix/Trie + hashing
+
+Streaming Analytics
+  Hash Map + CMS + HLL + Top-K + window + distributed merge
+
+Scheduler & Backpressure
+  Queue + Deque + Priority Queue + fairness + work stealing + admission control
+```
+
+Các case study không giới thiệu “một thuật toán mới”. Chúng kiểm tra khả năng chuyển từ yêu cầu hệ thống sang workload, state, invariant, representation, composition, failure mode, testing và benchmark.
+
+Một cách đọc hiệu quả là đọc case study một lần để hiểu kiến trúc, quay lại các chapter được liên kết để đào sâu từng primitive, sau đó đọc lại case study và tự thay đổi workload. Ví dụ, database chuyển từ read-heavy sang write-heavy sẽ làm lựa chọn giữa B+Tree và LSM thay đổi; autocomplete chuyển từ dictionary tĩnh sang cập nhật liên tục sẽ làm lựa chọn giữa FST và Trie thay đổi.
 
 ## Mô hình tư duy xuyên suốt
 
@@ -197,6 +244,8 @@ Cần kết quả chính xác hay xấp xỉ đã đủ?
 Một thư viện dùng lâu dài không nên dừng ở mảng → cây → đồ thị → quy hoạch động. Hệ thống thực tế tạo ra nhiều mô hình chi phí khác nhau.
 
 B/B+Tree xuất hiện khi I/O theo trang quan trọng hơn số lần so sánh. Cây tăng cường (augmented tree) xuất hiện khi khóa có thứ tự cần thêm thông tin như hạng hoặc tóm tắt khoảng. Skip list cho thấy ngẫu nhiên có thể thay thế bất biến cân bằng xác định. Luồng mạng (network flow) mô hình hóa dung lượng chứ không chỉ khả năng đi tới. Cấu trúc hậu tố tái sử dụng thông tin tiền tố và thứ tự trên văn bản. Bloom filter, Count-Min Sketch và HyperLogLog chấp nhận sai số có giới hạn để giảm bộ nhớ.
+
+Các chapter sau-core mở rộng tiếp: heap nâng cao phân biệt các workload cần `meld`, `decrease-key` hoặc priority nguyên; đồ thị động/temporal xem topology và trọng số như trạng thái thay đổi theo thời gian; matroid và primal-dual giải thích sâu hơn khi nào greedy thực sự đúng hoặc chỉ gần tối ưu; constraint search kết nối backtracking với propagation, bound và solver hiện đại.
 
 Những phần này cho thấy cùng các nguyên lý nền tảng được mở rộng như thế nào khi khối lượng công việc thay đổi.
 

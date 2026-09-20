@@ -1,9 +1,9 @@
-# Sparse Table và Static Range Queries
+# bảng thưa (Sparse Table) và tĩnh các truy vấn khoảng (range queries)
 **스파스 테이블과 정적 구간 질의**
 
-Sparse Table là một structure dành cho workload rất cụ thể: **dữ liệu tĩnh (static data / 정적 데이터)** nhưng có rất nhiều range queries. Nếu array không update, ta có thể trả nhiều preprocessing và memory hơn để query sau đó cực nhanh.
+bảng thưa là một structure dành cho khối lượng công việc rất cụ thể: **dữ liệu tĩnh (static data / 정적 데이터)** nhưng có rất nhiều các truy vấn khoảng. Nếu mảng không cập nhật, ta có thể trả nhiều tiền xử lý và bộ nhớ hơn để truy vấn sau đó cực nhanh.
 
-Đây là cùng trade-off quen thuộc của DSA:
+Đây là cùng sự đánh đổi (trade-off) quen thuộc của DSA:
 
 ```text
 ít mutation
@@ -11,11 +11,11 @@ Sparse Table là một structure dành cho workload rất cụ thể: **dữ li�
 → preprocess mạnh
 ```
 
-Sparse Table đặc biệt mạnh với các operation như minimum, maximum và GCD, nơi query có thể trả `O(1)` sau preprocessing `O(n log n)`.
+Sparse Table đặc biệt mạnh với các phép toán như cực tiểu, cực đại và GCD, cho phép trả lời truy vấn trong `O(1)` sau tiền xử lý `O(n log n)`.
 
 ## Power-of-two decomposition
 
-Sparse Table lưu aggregate của mọi interval có length là power of two:
+bảng thưa lưu aggregate của mọi interval có length là lũy thừa của hai:
 
 ```text
 st[k][i] = aggregate của đoạn bắt đầu tại i, length 2^k
@@ -30,10 +30,10 @@ st[0][i] = a[i]
 Transition:
 
 \[
-st[k][i] = combine(st[k-1][i], st[k-1][i + 2^{k-1}])
+st[k][i] = kết hợp(st[k-1][i], st[k-1][i + 2^{k-1}])
 \]
 
-Vì interval length `2^k` có thể chia thành hai halves length `2^(k-1)`.
+Vì một khoảng có độ dài `2^k` có thể chia thành hai nửa, mỗi nửa dài `2^(k-1)`.
 
 Construction cần khoảng:
 
@@ -41,13 +41,13 @@ Construction cần khoảng:
 O(n\log n)
 \]
 
-time và memory.
+time và bộ nhớ.
 
-## Tại sao powers of two?
+## Tại sao các lũy thừa của hai?
 
-Mọi positive length có logarithmic representation theo powers of two. Precompute intervals tăng gấp đôi giúp ta reuse kết quả nhỏ để tạo block lớn.
+Mọi positive length có logarithmic cách biểu diễn (representation) theo các lũy thừa của hai. Precompute intervals tăng gấp đôi giúp ta reuse kết quả nhỏ để tạo block lớn.
 
-Idea này xuất hiện nhiều nơi:
+Ý tưởng này xuất hiện nhiều nơi:
 
 ```text
 binary lifting ancestors
@@ -56,7 +56,7 @@ segment-tree levels
 sparse table
 ```
 
-Powers of two không phải magic; chúng tạo hierarchy có số levels logarithmic.
+các lũy thừa của hai không phải magic; chúng tạo hierarchy có số các tầng logarithmic.
 
 ## Java construction cho RMQ
 
@@ -104,7 +104,7 @@ final class SparseMin {
 }
 ```
 
-Precompute `floor(log2(x))` tránh floating-point logarithm trong query và làm semantics integer rõ ràng.
+Precompute `floor(log2(x))` tránh logarit dấu phẩy động trong truy vấn và làm ngữ nghĩa (semantics) integer rõ ràng.
 
 ## O(1) RMQ nhờ idempotence
 
@@ -127,9 +127,9 @@ Hai blocks có thể overlap. Với `min`:
 \min(x,x)=x
 \]
 
-nên việc một element xuất hiện ở cả hai blocks không thay result.
+nên việc một phần tử xuất hiện ở cả hai blocks không thay kết quả.
 
-Property:
+tính chất:
 
 \[
 f(x,x)=x
@@ -139,17 +139,17 @@ f(x,x)=x
 
 Min, max và GCD là các examples quan trọng.
 
-Do đó query chỉ combine hai precomputed values → `O(1)`.
+Do đó truy vấn chỉ kết hợp hai precomputed các giá trị → `O(1)`.
 
 ## Associative chưa đủ cho classic O(1) trick
 
-Sum associative:
+Sum có tính kết hợp (associative):
 
 \[
 (a+b)+c=a+(b+c)
 \]
 
-nhưng không idempotent:
+nhưng không lũy đẳng (idempotent):
 
 \[
 x+x\ne x
@@ -157,7 +157,7 @@ x+x\ne x
 
 Nếu hai blocks overlap, phần overlap bị double-count.
 
-Vì vậy classic Sparse Table two-overlap query không hoạt động cho sum.
+Vì vậy classic bảng thưa two-overlap truy vấn không hoạt động cho sum.
 
 Đây là distinction cần hiểu rõ:
 
@@ -166,30 +166,30 @@ associative -> dễ combine partition không overlap
 idempotent  -> cho phép overlap mà result không đổi
 ```
 
-## Sparse Table cho GCD
+## bảng thưa cho GCD
 
-GCD idempotent:
+GCD lũy đẳng (idempotent):
 
 \[
 \gcd(x,x)=x
 \]
 
-nên query range GCD cũng `O(1)` bằng hai blocks overlap.
+nên truy vấn range GCD cũng `O(1)` bằng hai blocks overlap.
 
 Điều này hữu ích trong number-theory range problems.
 
-## Sparse Table cho AND/OR
+## bảng thưa cho AND/OR
 
-Bitwise AND và OR cũng idempotent:
+Bitwise AND và OR cũng lũy đẳng (idempotent):
 
 ```text
 x & x = x
 x | x = x
 ```
 
-nên có thể dùng same RMQ-style query technique.
+nên có thể dùng same RMQ-style truy vấn technique.
 
-Bitwise XOR không idempotent vì:
+Bitwise XOR không lũy đẳng (idempotent) vì:
 
 ```text
 x ^ x = 0
@@ -199,7 +199,7 @@ nên overlap trick không đúng.
 
 ## Non-overlapping decomposition
 
-Ngay cả với associative non-idempotent operation, ordinary Sparse Table blocks vẫn có thể decompose range thành `O(log n)` disjoint power-of-two blocks.
+Ngay cả với có tính kết hợp (associative) non-lũy đẳng (idempotent) thao tác, ordinary bảng thưa blocks vẫn có thể decompose range thành `O(log n)` disjoint power-of-two blocks.
 
 Ví dụ sum:
 
@@ -207,24 +207,24 @@ Ví dụ sum:
 length 13 = 8 + 4 + 1
 ```
 
-Query `O(log n)`.
+truy vấn `O(log n)`.
 
-Nhưng với static sum, prefix sum cho `O(1)` và memory `O(n)` nên sparse table thường không phải lựa chọn tốt.
+Nhưng với tĩnh sum, tổng tiền tố cho `O(1)` và bộ nhớ `O(n)` nên bảng thưa thường không phải lựa chọn tốt.
 
-## Disjoint Sparse Table
+## Disjoint bảng thưa
 
-**Disjoint Sparse Table (DST)** hỗ trợ `O(1)` range query cho nhiều associative operations, kể cả sum.
+**Disjoint bảng thưa (DST)** hỗ trợ `O(1)` truy vấn khoảng (range query) cho nhiều có tính kết hợp (associative) các thao tác, kể cả sum.
 
-Mental model khác classic sparse table.
+Mô hình tư duy khác classic bảng thưa.
 
-Ở mỗi level, array được chia thành blocks. Quanh midpoint của mỗi block, preprocess:
+Ở mỗi tầng, mảng được chia thành blocks. Quanh midpoint của mỗi block, preprocess:
 
 ```text
 suffix aggregates bên trái midpoint
 prefix aggregates bên phải midpoint
 ```
 
-Với query `[L,R]`, tìm highest bit nơi `L` và `R` khác nhau. Level đó xác định một midpoint nằm giữa hai endpoints. Answer combine:
+Với truy vấn `[L,R]`, tìm highest bit nơi `L` và `R` khác nhau. tầng đó xác định một midpoint nằm giữa hai endpoints. Answer kết hợp:
 
 ```text
 suffix(L -> midpoint-1)
@@ -233,13 +233,13 @@ suffix(L -> midpoint-1)
 
 Hai phần disjoint nên không cần idempotence.
 
-Preprocessing vẫn khoảng `O(n log n)`, query `O(1)`.
+tiền xử lý vẫn khoảng `O(n log n)`, truy vấn `O(1)`.
 
-DST phức tạp hơn và constants lớn hơn; dùng khi static associative queries thật sự cần extreme query speed.
+DST phức tạp hơn và constants lớn hơn; dùng khi tĩnh có tính kết hợp (associative) các truy vấn thật sự cần extreme truy vấn speed.
 
-## Sparse Table vs Prefix Sum
+## bảng thưa vs tổng tiền tố
 
-Static sum:
+tĩnh sum:
 
 ```text
 Prefix Sum:
@@ -248,9 +248,9 @@ query O(1)
 memory O(n)
 ```
 
-Sparse table không thắng.
+bảng thưa không thắng.
 
-Static min/max/GCD:
+tĩnh min/max/GCD:
 
 ```text
 Prefix Sum không áp dụng
@@ -259,11 +259,11 @@ preprocess O(n log n)
 query O(1)
 ```
 
-Data structure phải match algebra của operation.
+cấu trúc dữ liệu phải match algebra của thao tác.
 
-## Sparse Table vs Segment Tree
+## bảng thưa vs cây đoạn (Segment Tree)
 
-Segment Tree:
+cây đoạn:
 
 ```text
 preprocess O(n)
@@ -272,7 +272,7 @@ point update O(log n)
 range update có thể hỗ trợ lazy
 ```
 
-Sparse Table:
+bảng thưa:
 
 ```text
 preprocess O(n log n)
@@ -280,11 +280,11 @@ query O(1) với idempotent op
 updates rất không phù hợp
 ```
 
-Nếu có mutation, Segment Tree thường là choice tự nhiên hơn.
+Nếu có sự thay đổi dữ liệu, cây đoạn thường là choice tự nhiên hơn.
 
-## Sparse Table vs Fenwick Tree
+## bảng thưa vs cây Fenwick (Fenwick Tree)
 
-Fenwick Tree tối ưu prefix-like group operations và point updates:
+cây Fenwick tối ưu prefix-like group các thao tác và point các cập nhật:
 
 ```text
 update O(log n)
@@ -292,58 +292,58 @@ prefix/range sum O(log n)
 memory O(n)
 ```
 
-Sparse Table tối ưu static idempotent queries.
+bảng thưa tối ưu tĩnh lũy đẳng (idempotent) các truy vấn.
 
-Hai structures giải workload khác nhau; không nên chọn theo “cái nào advanced hơn”.
+Hai structures giải khối lượng công việc khác nhau; không nên chọn theo “cái nào advanced hơn”.
 
-## Vì sao update đắt?
+## Vì sao cập nhật đắt?
 
-Một point update `a[p]` ảnh hưởng mọi precomputed block chứa `p`.
+Một cập nhật điểm `a[p]` ảnh hưởng mọi precomputed block chứa `p`.
 
-Ở level `k`, có thể có nhiều starting positions `i` sao cho interval `[i,i+2^k)` chứa `p`. Tổng số affected table entries không chỉ `O(log n)`.
+Ở tầng `k`, có thể có nhiều các vị trí bắt đầu `i` sao cho interval `[i,i+2^k)` chứa `p`. Tổng số affected table các mục không chỉ `O(log n)`.
 
-Sparse table intentionally duplicates information để query nhanh. Mutation phá nhiều copies đó.
+bảng thưa intentionally các phần tử trùng thông tin để truy vấn nhanh. sự thay đổi dữ liệu phá nhiều copies đó.
 
-Đây là trade-off giữa **redundant preprocessing** và update cost.
+Đây là sự đánh đổi giữa **redundant tiền xử lý** và cập nhật chi phí.
 
-## Memory layout
+## bộ nhớ bố trí
 
-`st[k][i]` layout level-major như Java `int[][]` làm mỗi level contiguous logical array.
+`st[k][i]` bố trí level-major như Java `int[][]` làm mỗi tầng contiguous logic mảng.
 
-Query đọc hai cells cùng level. Construction scan sequentially.
+truy vấn đọc hai cells cùng tầng. Construction quét sequentially.
 
-Trong C có thể allocate flat buffer:
+Trong C có thể cấp phát flat bộ đệm:
 
 ```c
 st[k * n + i]
 ```
 
-để giảm allocation overhead.
+để giảm cấp phát overhead.
 
-Java object-per-row overhead thường chấp nhận được, nhưng dataset rất lớn cần estimate memory.
+Java object-per-row overhead thường chấp nhận được, nhưng dataset rất lớn cần estimate bộ nhớ.
 
-## Memory estimation
+## bộ nhớ estimation
 
-Với `n = 1,000,000`, levels khoảng 20.
+Với `n = 1,000,000`, các tầng khoảng 20.
 
-Nếu mỗi cell `int` 4 bytes:
+Nếu mỗi cell `int` 4 byte:
 
 ```text
 ~20,000,000 ints
 ~80 MB raw numeric data
 ```
 
-chưa tính array headers/references.
+chưa tính mảng headers/các tham chiếu.
 
 Nếu dùng `long`, raw data khoảng 160 MB.
 
-Đây là lý do Sparse Table không “free” chỉ vì query nhanh.
+Đây là lý do bảng thưa không “free” chỉ vì truy vấn nhanh.
 
 ## Precomputing logs
 
-`log2[len]` array tốn `O(n)` thêm memory.
+`log2[len]` mảng tốn `O(n)` thêm bộ nhớ.
 
-Alternative có thể dùng integer bit operation:
+Alternative có thể dùng integer bit thao tác:
 
 Java:
 
@@ -357,13 +357,13 @@ JavaScript:
 const k = 31 - Math.clz32(len);
 ```
 
-nhưng `Math.clz32` có 32-bit semantics. Với very large lengths, representation khác cần cân nhắc.
+nhưng `Math.clz32` có 32-bit ngữ nghĩa. Với very large lengths, cách biểu diễn khác cần cân nhắc.
 
-Choice là readability vs small memory saving/runtime detail.
+Choice là readability vs small bộ nhớ saving/môi trường chạy (runtime) detail.
 
-## Empty array và invalid range
+## rỗng mảng và không hợp lệ range
 
-Production API phải định nghĩa:
+Trong hệ thống thực tế, API phải định nghĩa:
 
 ```text
 n = 0 xử lý thế nào?
@@ -371,11 +371,11 @@ L > R thì sao?
 range out of bounds?
 ```
 
-Competitive-programming implementation thường assume valid input; reusable library không nên.
+Competitive-programming cách triển khai thường assume hợp lệ đầu vào; reusable library không nên.
 
 ## Inclusive vs half-open intervals
 
-Sparse table examples thường dùng inclusive `[L,R]`, nhưng systems/codebase có thể prefer half-open `[L,R)`.
+bảng thưa examples thường dùng inclusive `[L,R]`, nhưng các hệ thống/codebase có thể prefer half-open `[L,R)`.
 
 Half-open length:
 
@@ -389,9 +389,9 @@ và right block starts at:
 R - 2^k
 ```
 
-Hãy chọn một convention và giữ nhất quán. Mixing interval semantics là source off-by-one phổ biến.
+Hãy chọn một convention và giữ nhất quán. Mixing interval ngữ nghĩa là nguồn off-by-one phổ biến.
 
-## RMQ — Range Minimum Query
+## RMQ — Truy vấn cực tiểu trên khoảng (Range Minimum Query)
 
 RMQ là một foundational problem:
 
@@ -399,26 +399,26 @@ RMQ là một foundational problem:
 query(L,R) = minimum value/index trên interval
 ```
 
-Sparse table cho static RMQ `O(1)` sau `O(n log n)` preprocess.
+bảng thưa cho tĩnh RMQ `O(1)` sau `O(n log n)` preprocess.
 
-Nhưng RMQ còn có deeper algorithms đạt linear preprocessing + O(1) query bằng Cartesian Tree/LCA reductions. Đây là chủ đề lý thuyết nâng cao hơn.
+Nhưng RMQ còn có deeper các thuật toán đạt linear tiền xử lý + O(1) truy vấn bằng Cartesian cây/LCA reductions. Đây là chủ đề lý thuyết nâng cao hơn.
 
-Sparse table nổi bật vì implementation đơn giản và constants practical.
+bảng thưa nổi bật vì cách triển khai đơn giản và constants practical.
 
 ## RMQ và LCA
 
-Lowest Common Ancestor trên static tree có thể reduce thành RMQ.
+Lowest Phổ biến tổ tiên trên tĩnh cây có thể reduce thành RMQ.
 
-DFS Euler tour ghi sequence nodes và depths:
+DFS Euler tour ghi sequence các nút và depths:
 
 ```text
 node:  A B D B E B A C ...
 depth: 0 1 2 1 2 1 0 1 ...
 ```
 
-LCA của `u,v` là node có minimum depth giữa lần xuất hiện phù hợp của chúng trong Euler tour interval.
+LCA của `u,v` là nút có minimum độ sâu giữa lần xuất hiện phù hợp của chúng trong Euler tour interval.
 
-Pipeline:
+chuỗi xử lý:
 
 ```text
 Tree
@@ -429,21 +429,21 @@ Tree
 → O(1) LCA query
 ```
 
-Đây là example tuyệt đẹp của problem transformation.
+Đây là example tuyệt đẹp của problem phép biến đổi.
 
-## Cartesian Tree connection
+## Cartesian cây connection
 
-Cartesian Tree của array giữ heap property theo value và inorder order theo original indices.
+Cartesian Tree của mảng duy trì tính chất heap theo giá trị và thứ tự inorder theo các chỉ số ban đầu.
 
-RMQ giữa two positions liên quan LCA của corresponding nodes trong Cartesian Tree.
+RMQ giữa hai vị trí có liên hệ với LCA của hai nút tương ứng trong Cartesian Tree.
 
-Vì vậy RMQ, Cartesian Tree và LCA có equivalence sâu về structure.
+Vì vậy RMQ, Cartesian cây và LCA có equivalence sâu về structure.
 
-## Static idempotent query như semilattice intuition
+## tĩnh lũy đẳng (idempotent) truy vấn như semilattice intuition
 
-Min/max/GCD có algebraic properties phù hợp: associative + idempotent.
+Min/max/GCD có algebraic các tính chất phù hợp: có tính kết hợp (associative) + lũy đẳng (idempotent).
 
-Không cần học lattice theory để dùng structure, nhưng biết algebra giúp chọn data structure đúng hơn:
+Không cần học lattice theory để dùng structure, nhưng biết algebra giúp chọn cấu trúc dữ liệu đúng hơn:
 
 ```text
 operation properties
@@ -451,27 +451,27 @@ operation properties
 → query structure
 ```
 
-Đây là tư duy tổng quát có ích cho Segment Tree monoid, Fenwick group-like prefix difference và sparse table idempotence.
+Đây là tư duy tổng quát có ích cho cây đoạn monoid, Fenwick group-like prefix difference và bảng thưa idempotence.
 
-## 2D Sparse Table
+## 2D bảng thưa
 
-Static 2D range minimum có thể mở rộng sparse table theo hai dimensions:
+Với truy vấn cực tiểu 2D trên dữ liệu tĩnh, Sparse Table có thể được mở rộng theo hai chiều:
 
 ```text
 st[kx][ky][x][y]
 ```
 
-Memory/preprocessing tăng mạnh khoảng `O(nm log n log m)`.
+bộ nhớ/tiền xử lý tăng mạnh khoảng `O(nm log n log m)`.
 
-Query rectangle có thể combine bốn blocks nếu operation idempotent.
+truy vấn rectangle có thể kết hợp bốn blocks nếu thao tác lũy đẳng (idempotent).
 
-Practical only khi dimensions vừa phải và query volume rất lớn.
+Practical only khi dimensions vừa phải và truy vấn volume rất lớn.
 
-## Sparse Table trên strings/objects
+## bảng thưa trên strings/các đối tượng
 
-Structure không bắt buộc numeric nếu combine operation deterministic và table storage feasible.
+Structure không bắt buộc numeric nếu kết hợp thao tác xác định và table lưu trữ feasible.
 
-Ví dụ lưu index của minimum theo custom comparator thay vì value. Điều này hữu ích nếu cần trả original position.
+Ví dụ có thể lưu chỉ số của phần tử nhỏ nhất theo một bộ so sánh tùy biến thay vì lưu trực tiếp giá trị. Cách này hữu ích khi cần trả về vị trí ban đầu.
 
 Store index:
 
@@ -479,30 +479,30 @@ Store index:
 st[k][i] = index của best element trong block
 ```
 
-Combine compares `a[idx1]` và `a[idx2]`.
+kết hợp compares `a[idx1]` và `a[idx2]`.
 
-## Tie-breaking
+## quy tắc phân xử khi bằng nhau
 
-Nếu range minimum cần earliest index khi values tie, comparator phải define:
+Nếu truy vấn cực tiểu trên khoảng cần trả chỉ số sớm nhất khi nhiều giá trị bằng nhau, bộ so sánh phải định nghĩa rõ quy tắc phân xử:
 
 ```text
 smaller value wins
 if equal, smaller index wins
 ```
 
-Tie semantics phải được encoded trong `combine`. Otherwise value đúng nhưng index result có thể không đúng specification.
+Tie ngữ nghĩa phải được encoded trong `combine`. Otherwise giá trị đúng nhưng index kết quả có thể không đúng specification.
 
-## Offline queries vs Sparse Table
+## ngoại tuyến các truy vấn vs bảng thưa
 
-Nếu tất cả queries biết trước, có thể có offline algorithms khác mạnh hơn.
+Nếu tất cả các truy vấn biết trước, có thể có ngoại tuyến các thuật toán khác mạnh hơn.
 
-Ví dụ static RMQ offline có Tarjan LCA-like reductions hoặc Mo's algorithm cho query classes khác.
+Ví dụ tĩnh RMQ ngoại tuyến có Tarjan LCA-like reductions hoặc Mo's thuật toán cho truy vấn classes khác.
 
-Sparse Table phù hợp khi muốn online query sau one-time preprocess và data static.
+bảng thưa phù hợp khi muốn trực tuyến truy vấn sau one-time preprocess và data tĩnh.
 
-## Mo's Algorithm khác gì?
+## Mo's thuật toán khác gì?
 
-Mo's algorithm reorder offline range queries để minimize boundary movement. Nó hữu ích khi:
+Mo's thuật toán reorder ngoại tuyến các truy vấn khoảng để minimize ranh giới movement. Nó hữu ích khi:
 
 ```text
 add/remove element khỏi current range rẻ
@@ -511,65 +511,65 @@ operation không có simple prefix/segment structure
 
 Complexity thường khoảng `O((n+q)sqrt(n))` style tùy variant.
 
-Sparse Table là preprocessing-based online O(1) cho operation class hẹp hơn.
+bảng thưa là preprocessing-based trực tuyến O(1) cho thao tác class hẹp hơn.
 
-## Query volume và break-even
+## truy vấn volume và break-even
 
-Sparse Table preprocess `O(n log n)` chỉ đáng giá nếu q lớn hoặc latency per query rất quan trọng.
+bảng thưa preprocess `O(n log n)` chỉ đáng giá nếu q lớn hoặc độ trễ (latency) per truy vấn rất quan trọng.
 
-Nếu chỉ vài RMQ queries, Segment Tree hoặc even scan có thể đủ tùy n.
+Nếu chỉ vài RMQ các truy vấn, cây đoạn hoặc even quét có thể đủ tùy n.
 
-DSA choice nên nhìn total lifecycle cost:
+DSA choice nên nhìn total lifecycle chi phí:
 
 \[
-preprocess + q\times query + updates\times update
+preprocess + q\times truy vấn + các cập nhật\times cập nhật
 \]
 
-không chỉ fastest query complexity.
+không chỉ fastest truy vấn complexity.
 
-## Cache behavior
+## bộ nhớ đệm hành vi
 
-Query classic sparse table đọc hai positions. Rất ít memory accesses, tốt cho latency nhưng table lớn có thể vượt cache.
+truy vấn classic bảng thưa đọc hai positions. Rất ít bộ nhớ accesses, tốt cho độ trễ nhưng table lớn có thể vượt bộ nhớ đệm.
 
-Preprocessing scan levels sequentially, khá cache-friendly.
+tiền xử lý quét các tầng sequentially, khá thân thiện với bộ nhớ đệm.
 
-Segment tree query chạm logarithmic nodes có pattern nhảy hơn.
+cây đoạn truy vấn chạm logarithmic các nút có mẫu nhảy hơn.
 
-Actual performance phụ thuộc n và memory hierarchy.
+Actual hiệu năng phụ thuộc n và phân cấp bộ nhớ.
 
-## JavaScript implementation caveat
+## JavaScript cách triển khai caveat
 
-Một `Array<Array<number>>` rất tiện nhưng memory overhead có thể lớn. Typed arrays:
+Một `Array<Array<number>>` rất tiện nhưng bộ nhớ overhead có thể lớn. Typed các mảng:
 
 ```js
 const st = Array.from({length: levels}, () => new Int32Array(n));
 ```
 
-compact hơn nếu numeric range fit 32-bit.
+gọn hơn nếu miền giá trị số fit 32-bit.
 
-Nếu values vượt range, `Float64Array` hoặc BigInt representation cần cân nhắc.
+Nếu các giá trị vượt range, `Float64Array` hoặc BigInt cách biểu diễn cần cân nhắc.
 
-## C implementation caveat
+## C cách triển khai caveat
 
-Nếu `1 << k` dùng signed `int`, large shifts có thể overflow/undefined corners tùy context. Dùng correct unsigned/size type và ensure k within width.
+Nếu `1 << k` dùng `int` có dấu, phép dịch lớn có thể gây tràn hoặc rơi vào trường hợp hành vi không xác định tùy ngữ cảnh. Nên dùng kiểu không dấu hoặc kiểu kích thước phù hợp và bảo đảm `k` nằm trong độ rộng kiểu dữ liệu.
 
-Memory allocation `levels * n * sizeof(T)` cũng cần overflow check cho general-purpose library.
+cấp phát bộ nhớ `levels * n * sizeof(T)` cũng cần tràn số check cho general-purpose library.
 
-## Common misconceptions
+## Những hiểu lầm phổ biến
 
-“Sparse Table dùng cho mọi range query” — sai; strength chính là static data và operation properties phù hợp.
+“bảng thưa dùng cho mọi truy vấn khoảng” — sai; strength chính là tĩnh data và thao tác các tính chất phù hợp.
 
-“Associative là đủ cho O(1) query” — sai với classic overlapping-block method; idempotence mới cho phép overlap.
+“Chỉ cần tính kết hợp là đủ để truy vấn `O(1)`” — sai với phương pháp các khối chồng lấn kinh điển; tính lũy đẳng mới cho phép hai khối truy vấn chồng lên nhau.
 
-“Update chỉ sửa O(log n) cells vì có log levels” — sai; một point thuộc nhiều intervals ở each level.
+“cập nhật chỉ sửa O(log n) cells vì có log các tầng” — sai; một point thuộc nhiều intervals ở each tầng.
 
-“Sparse Table luôn tốt hơn Segment Tree vì O(1)” — bỏ qua preprocessing, memory và mutation.
+“bảng thưa luôn tốt hơn cây đoạn vì O(1)” — bỏ qua tiền xử lý, bộ nhớ và sự thay đổi dữ liệu.
 
 “Sum dùng hai block như min” — sai vì overlap double-count.
 
-## Testing
+## kiểm thử
 
-Randomized differential test rất đơn giản:
+ngẫu nhiên hóa differential test rất đơn giản:
 
 ```text
 generate random array nhỏ
@@ -592,13 +592,13 @@ duplicates/ties
 negative values
 ```
 
-Nếu lưu index, test tie-breaking separately.
+Nếu lưu index, test quy tắc phân xử khi bằng nhau separately.
 
-## Mental Model
+## Mô hình tư duy
 
-> Sparse Table là **memoization cho mọi interval power-of-two của dữ liệu tĩnh**. Với idempotent operation, một arbitrary range được cover bởi hai possibly-overlapping blocks nên query chỉ cần hai table reads. Query cực nhanh được mua bằng redundant preprocessing và memory, vì vậy structure này chỉ hợp workload ít/no updates và nhiều repeated queries.
+> bảng thưa là **memoization cho mọi interval power-of-two của dữ liệu tĩnh**. Với lũy đẳng (idempotent) thao tác, một arbitrary range được cover bởi hai possibly-các khối chồng lấn nên truy vấn chỉ cần hai table reads. truy vấn cực nhanh được mua bằng redundant tiền xử lý và bộ nhớ, vì vậy structure này chỉ hợp khối lượng công việc ít/no các cập nhật và nhiều lặp lại các truy vấn.
 
-Khi gặp range-query problem, hãy hỏi:
+Khi gặp range-truy vấn problem, hãy hỏi:
 
 ```text
 Data có update không?

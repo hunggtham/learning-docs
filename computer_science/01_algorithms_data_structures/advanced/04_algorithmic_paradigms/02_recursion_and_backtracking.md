@@ -1,19 +1,19 @@
-# Recursion và Backtracking
+# Recursion và quay lui (backtracking)
 **Đệ quy và quay lui (Recursion & Backtracking / 재귀와 백트래킹)**
 
-Recursion không phải chỉ là “function gọi chính nó”. Nó là một cách mô hình hóa problem bằng **một contract nhỏ hơn của cùng loại problem**. Backtracking xây trên recursion hoặc explicit stack để explore một không gian lựa chọn, nhưng thêm một ý tưởng quan trọng: sau khi thử một decision, ta có thể **undo** nó để thử decision khác.
+Recursion không phải chỉ là “hàm gọi chính nó”. Nó là một cách mô hình hóa problem bằng **một contract nhỏ hơn của cùng loại problem**. quay lui xây trên recursion hoặc explicit stack để explore một không gian lựa chọn, nhưng thêm một ý tưởng quan trọng: sau khi thử một decision, ta có thể **undo** nó để thử decision khác.
 
-Hai khái niệm thường đi cùng nhau nhưng không giống nhau. Một tree traversal có thể recursive mà không backtrack theo nghĩa search choices. Một Sudoku solver thường vừa recursive vừa backtracking vì mỗi candidate tạo một branch có thể phải hoàn tác.
+Hai khái niệm thường đi cùng nhau nhưng không giống nhau. Duyệt cây có thể dùng đệ quy mà không phải quay lui theo nghĩa thử các lựa chọn. Bộ giải Sudoku thường vừa đệ quy vừa quay lui vì mỗi ứng viên tạo một nhánh có thể phải hoàn tác.
 
-## Mental Model
+## Mô hình tư duy
 
-> Recursion là “giải subproblem rồi tin vào contract của subproblem”. Backtracking là “choose → constrain → explore → undo”, tức DFS trên một state-space tree ngầm.
+> Recursion là “giải subproblem rồi tin vào contract của subproblem”. quay lui là “choose → constrain → explore → undo”, tức DFS trên một trạng thái-space cây ngầm.
 
-Muốn hiểu một recursive algorithm, đừng đọc bằng cách mô phỏng từng stack frame ngay từ đầu. Hãy xác định contract của function trước.
+Muốn hiểu một recursive thuật toán, đừng đọc bằng cách mô phỏng từng khung ngăn xếp ngay từ đầu. Hãy xác định contract của hàm trước.
 
-## Recursive contract
+## hợp đồng đệ quy
 
-Giả sử function:
+Giả sử hàm:
 
 ```text
 solve(state)
@@ -25,36 +25,36 @@ có contract:
 
 Một recursion đúng cần ba yếu tố:
 
-1. **Base case** giải trực tiếp instance đủ nhỏ.
-2. **Recursive reduction** biến current problem thành một hay nhiều subproblems đúng cùng contract.
-3. **Progress measure** phải tiến gần base case để đảm bảo termination.
+1. **trường hợp cơ sở** giải trực tiếp instance đủ nhỏ.
+2. **Recursive reduction** biến hiện tại problem thành một hay nhiều subproblems đúng cùng contract.
+3. **Progress measure** phải tiến gần trường hợp cơ sở để đảm bảo termination.
 
-Ví dụ binary tree height:
+Ví dụ cây nhị phân chiều cao:
 
 \[
-height(node)=1+\max(height(left),height(right))
+chiều cao(node)=1+\max(chiều cao(left),chiều cao(right))
 \]
 
-Base case:
+trường hợp cơ sở:
 
 ```text
 height(null) = 0
 ```
 
-Progress measure là subtree size/depth giảm khi đi xuống child.
+Progress measure là kích thước cây con/độ sâu giảm khi đi xuống nút con.
 
-## Recursion và induction
+## Recursion và quy nạp
 
-Recursion correctness thường mirror mathematical induction.
+Recursion tính đúng đắn thường mirror mathematical quy nạp.
 
-Induction nói:
+quy nạp nói:
 
 ```text
 base case đúng
 nếu smaller cases đúng -> current case đúng
 ```
 
-Recursive proof cũng vậy:
+Recursive chứng minh cũng vậy:
 
 ```text
 base return đúng
@@ -62,11 +62,11 @@ assume recursive calls trả đúng theo contract
 show current combine logic tạo answer đúng
 ```
 
-Đây là lý do induction là công cụ proof tự nhiên cho recursive algorithms.
+Đây là lý do quy nạp là công cụ chứng minh tự nhiên cho recursive các thuật toán.
 
-## Call stack thực sự giữ gì?
+## ngăn xếp lời gọi thực sự giữ gì?
 
-Mỗi active function call cần lưu state để tiếp tục sau khi recursive call return: parameters, local variables, return address và runtime metadata.
+Mỗi lời gọi hàm đang hoạt động cần lưu trạng thái để tiếp tục sau khi lời gọi đệ quy trả về: tham số, biến cục bộ, địa chỉ trả về và metadata của môi trường chạy.
 
 Ví dụ:
 
@@ -79,19 +79,19 @@ int factorial(int n) {
 
 Call `factorial(5)` phải giữ các pending multiplications `5 *`, `4 *`, `3 *`, `2 *` trên stack.
 
-Độ sâu recursion là `O(n)`, nên memory stack cũng `O(n)` dù arithmetic work chỉ `O(n)`.
+Độ sâu recursion là `O(n)`, nên bộ nhớ stack cũng `O(n)` dù arithmetic work chỉ `O(n)`.
 
 ## Tail recursion không phải lúc nào cũng tối ưu được
 
-Tail-recursive function có recursive call là operation cuối cùng. Một số languages/runtime có thể tối ưu thành loop, nhưng không nên giả định điều đó portable.
+Tail-hàm đệ quy có lời gọi đệ quy là thao tác cuối cùng. Một số languages/môi trường chạy có thể tối ưu thành loop, nhưng không nên giả định điều đó portable.
 
-Java không đảm bảo tail-call optimization. JavaScript specification/runtime behavior cũng không nên được dựa vào như một optimization phổ biến. C compiler có thể optimize trong một số case nhưng không phải semantic guarantee chung.
+Java không đảm bảo tối ưu lời gọi đuôi. JavaScript specification/môi trường chạy hành vi cũng không nên được dựa vào như một optimization phổ biến. C trình biên dịch có thể optimize trong một số case nhưng không phải semantic bảo đảm chung.
 
-Nếu depth có thể rất lớn, explicit loop/stack thường an toàn hơn.
+Nếu độ sâu có thể rất lớn, explicit loop/stack thường an toàn hơn.
 
-## Tree traversal: recursion khớp shape dữ liệu
+## cây traversal: recursion khớp shape dữ liệu
 
-Binary tree vốn có recursive definition:
+cây nhị phân vốn có recursive definition:
 
 ```text
 Tree = empty
@@ -109,11 +109,11 @@ void inorder(Node x) {
 }
 ```
 
-Ở đây recursion không phải trick; representation của data đã recursive.
+Ở đây recursion không phải trick; cách biểu diễn (representation) của data đã recursive.
 
-## Recursion tree và complexity
+## cây đệ quy và complexity
 
-Một recursive function không thể phân tích chỉ bằng depth. Phải xem branching factor và work mỗi node.
+Một hàm đệ quy không thể phân tích chỉ bằng độ sâu. Phải xem hệ số phân nhánh và work mỗi nút.
 
 Ví dụ naive Fibonacci:
 
@@ -121,13 +121,13 @@ Ví dụ naive Fibonacci:
 fib(n) = fib(n-1) + fib(n-2)
 ```
 
-tạo recursion tree có rất nhiều repeated states. Complexity exponential không phải vì recursion bản thân chậm, mà vì cùng subproblem được recompute nhiều lần.
+tạo cây đệ quy có rất nhiều lặp lại các trạng thái. Complexity exponential không phải vì recursion bản thân chậm, mà vì cùng subproblem được recompute nhiều lần.
 
-Memoization biến state tree thành state DAG bằng cách reuse results.
+Memoization biến trạng thái cây thành trạng thái DAG bằng cách reuse các kết quả.
 
-## Backtracking là DFS trên implicit state graph/tree
+## quay lui là DFS trên implicit đồ thị trạng thái/cây
 
-Nhiều combinatorial problems không build graph rõ ràng. Mỗi partial solution là một state; mỗi choice sinh child state.
+Nhiều combinatorial problems không xây dựng đồ thị rõ ràng. Mỗi partial lời giải là một trạng thái; mỗi choice sinh nút con trạng thái.
 
 Ví dụ permutations:
 
@@ -161,7 +161,7 @@ function permutations(nums) {
 }
 ```
 
-State tree không được materialize; recursion stack chính là path hiện tại.
+trạng thái cây không được materialize; ngăn xếp đệ quy chính là đường đi hiện tại.
 
 ## Choose → Constrain → Explore → Undo
 
@@ -177,9 +177,9 @@ for candidate in candidates(state):
     undo(candidate)
 ```
 
-`undo` phải đối xứng với mutation. Nếu `apply()` thay đổi ba structures nhưng `undo()` chỉ restore hai, bug có thể chỉ xuất hiện ở branch sau.
+`undo` phải đối xứng với sự thay đổi dữ liệu. Nếu `apply()` thay đổi ba structures nhưng `undo()` chỉ restore hai, bug có thể chỉ xuất hiện ở branch sau.
 
-Trong code production, có ba strategy để quản state:
+Trong code hệ thống thực tế, có ba strategy để quản trạng thái:
 
 ```text
 mutable + undo      -> ít allocation, dễ bug rollback
@@ -187,9 +187,9 @@ copy-on-recursion   -> đơn giản correctness, tốn memory/time
 persistent state    -> structural sharing, implementation phức tạp hơn
 ```
 
-## Subsets: branching factor 2
+## Subsets: hệ số phân nhánh 2
 
-Mỗi element có hai choices: lấy hoặc không lấy.
+Mỗi phần tử có hai choices: lấy hoặc không lấy.
 
 ```java
 void subsets(int i, int[] a, List<Integer> cur) {
@@ -206,9 +206,9 @@ void subsets(int i, int[] a, List<Integer> cur) {
 }
 ```
 
-Có `2^n` subsets, nên algorithm output tất cả subsets không thể tốt hơn `Omega(2^n)` chỉ xét số answers.
+Có `2^n` subsets, nên thuật toán đầu ra tất cả subsets không thể tốt hơn `Omega(2^n)` chỉ xét số answers.
 
-Đây là distinction quan trọng giữa algorithm inefficiency và output-size lower bound.
+Đây là khác biệt quan trọng giữa sự kém hiệu quả của thuật toán và cận dưới do kích thước đầu ra.
 
 ## Permutations và factorial growth
 
@@ -218,17 +218,17 @@ Với `n` distinct items, số permutations là:
 n!
 \]
 
-Dù pruning/check cực nhanh, nếu phải output tất cả permutations thì complexity ít nhất proportional `n!`.
+Dù pruning/check cực nhanh, nếu phải đầu ra tất cả permutations thì complexity ít nhất proportional `n!`.
 
-Backtracking không “làm exponential thành polynomial”. Nó giúp không gian search được biểu diễn gọn và cho phép prune branches không cần thiết.
+quay lui không “làm exponential thành polynomial”. Nó giúp không gian search được biểu diễn gọn và cho phép prune branches không cần thiết.
 
-## Pruning: loại cả subtree
+## Pruning: loại cả cây con
 
-Nếu partial state đã không thể dẫn tới valid answer, descendants của nó không cần generate.
+Nếu partial trạng thái đã không thể dẫn tới hợp lệ answer, các hậu duệ của nó không cần generate.
 
-Ví dụ N-Queens: nếu queen mới conflict với column hoặc diagonal đã dùng, toàn bộ placements tiếp theo dưới branch đó invalid.
+Ví dụ N-Queens: nếu queen mới conflict với column hoặc diagonal đã dùng, toàn bộ placements tiếp theo dưới branch đó không hợp lệ.
 
-Thay vì scan board mỗi lần, maintain constraints:
+Thay vì quét board mỗi lần, maintain các ràng buộc:
 
 ```text
 usedColumn[c]
@@ -238,11 +238,11 @@ usedDiag2[r+c]
 
 Check từ `O(n)` xuống gần `O(1)`.
 
-Search speed không chỉ phụ thuộc số branches; còn phụ thuộc cost validate mỗi branch.
+Tốc độ tìm kiếm không chỉ phụ thuộc vào số nhánh mà còn phụ thuộc chi phí xác minh mỗi nhánh.
 
-## Bitmask backtracking
+## Bitmask quay lui
 
-Nếu `n` nhỏ, constraints có thể encode bằng bitmask.
+Nếu `n` nhỏ, các ràng buộc có thể encode bằng bitmask.
 
 N-Queens có thể giữ:
 
@@ -252,45 +252,45 @@ main diagonals
 anti diagonals
 ```
 
-và compute available positions bằng bit operations. Điều này giảm constant factor rất mạnh và tránh set/hash allocation.
+và compute available positions bằng bit các thao tác. Điều này giảm constant factor rất mạnh và tránh set/hash cấp phát.
 
-Nhưng bitmask không thay đổi worst-case combinatorial nature; nó chỉ làm state transition rẻ hơn.
+Nhưng bitmask không thay đổi trường hợp xấu nhất combinatorial nature; nó chỉ làm trạng thái transition rẻ hơn.
 
-## Duplicate control phải gắn với state semantics
+## phần tử trùng control phải gắn với trạng thái ngữ nghĩa (semantics)
 
-Giả sử input sorted có duplicates và ta generate combinations/permutations. Rule phổ biến:
+Giả sử đầu vào sorted có các phần tử trùng và ta generate combinations/permutations. quy tắc phổ biến:
 
 ```text
 if (i > start && a[i] == a[i-1]) continue;
 ```
 
-Điểm quan trọng là **skip duplicate ở cùng recursion depth**, vì hai equal candidates tại cùng choice position tạo cùng subtree semantic.
+Điểm quan trọng là **skip phần tử trùng ở cùng recursion độ sâu**, vì hai equal các ứng viên tại cùng choice position tạo cùng cây con semantic.
 
-Nếu skip equal value ở mọi depth, ta có thể loại legitimate solutions có nhiều occurrences.
+Nếu skip equal giá trị ở mọi độ sâu, ta có thể loại legitimate các lời giải có nhiều occurrences.
 
-Rule chống duplicate phải derive từ câu hỏi:
+quy tắc chống phần tử trùng phải derive từ câu hỏi:
 
-> Hai branches này có đại diện cùng decision tại state hiện tại hay không?
+> Hai branches này có đại diện cùng decision tại trạng thái hiện tại hay không?
 
-## Backtracking cho Combination Sum
+## quay lui cho Combination Sum
 
-Nếu candidates positive và có target còn lại `remain`, ta có pruning monotonic:
+Nếu các ứng viên positive và có đích còn lại `remain`, ta có pruning monotonic:
 
 ```text
 candidate > remain -> không cần thử candidate lớn hơn nữa
 ```
 
-nếu candidates sorted.
+nếu các ứng viên sorted.
 
-Nếu values có negative numbers, reasoning này vỡ. Một branch đang overshoot có thể quay lại bằng số âm.
+Nếu các giá trị có negative numbers, reasoning này vỡ. Một branch đang overshoot có thể quay lại bằng số âm.
 
-Đây là ví dụ assumptions quyết định validity của pruning.
+Đây là ví dụ các giả định quyết định validity của pruning.
 
-## N-Queens: state-space reasoning
+## N-Queens: trạng thái-space reasoning
 
-Thay vì đặt queen ở bất kỳ cell nào, ta có thể model mỗi row đặt đúng một queen. Điều đó giảm branching space ngay từ representation.
+Thay vì đặt queen ở bất kỳ cell nào, ta có thể mô hình mỗi row đặt đúng một queen. Điều đó giảm branching space ngay từ cách biểu diễn.
 
-State tối thiểu chỉ cần:
+trạng thái tối thiểu chỉ cần:
 
 ```text
 row hiện tại
@@ -298,23 +298,23 @@ occupied columns
 occupied diagonals
 ```
 
-Không nhất thiết giữ full board nếu chỉ cần count solutions.
+Không nhất thiết giữ full board nếu chỉ cần count các lời giải.
 
-Problem modeling tốt có thể quan trọng hơn micro-optimization trong DFS.
+Problem mô hình hóa tốt có thể quan trọng hơn micro-optimization trong DFS.
 
-## Sudoku và constraint propagation
+## Sudoku và ràng buộc propagation
 
-Sudoku solver naive thử digits 1..9 cho mọi empty cell. Tốt hơn là maintain candidate set của từng cell hoặc row/column/box masks.
+Sudoku solver naive thử digits 1..9 cho mọi rỗng cell. Tốt hơn là maintain ứng viên set của từng cell hoặc các mặt nạ hàng/cột/khối.
 
-Một heuristic mạnh là chọn cell có **Minimum Remaining Values (MRV)** — ít candidates nhất.
+Một heuristic mạnh là chọn cell có **Minimum Remaining các giá trị (MRV)** — ít các ứng viên nhất.
 
-Tại sao? Nếu branch sắp fail, ta muốn fail sớm để prune subtree lớn.
+Tại sao? Nếu branch sắp fail, ta muốn fail sớm để prune cây con lớn.
 
-Đây gọi là **fail-first principle** trong constraint satisfaction.
+Đây gọi là **fail-first principle** trong ràng buộc satisfaction.
 
-## Branch ordering
+## thứ tự phân nhánh
 
-Nếu chỉ cần một solution, thứ tự candidates ảnh hưởng runtime mạnh dù worst-case không đổi.
+Nếu chỉ cần một lời giải, thứ tự các ứng viên ảnh hưởng môi trường chạy mạnh dù trường hợp xấu nhất không đổi.
 
 Các heuristics thường gồm:
 
@@ -324,66 +324,66 @@ candidate có khả năng fail sớm
 candidate có score tốt trước nếu branch-and-bound
 ```
 
-Nếu cần enumerate toàn bộ solutions, ordering chỉ thay sequence output, không giảm số valid leaves; pruning vẫn có thể giảm invalid states.
+Nếu cần enumerate toàn bộ các lời giải, ordering chỉ thay sequence đầu ra, không giảm số hợp lệ các nút lá; pruning vẫn có thể giảm không hợp lệ các trạng thái.
 
-## Backtracking và memoization
+## quay lui và memoization
 
-Nếu future answer chỉ phụ thuộc một canonical state, nhiều histories có thể merge.
+Nếu tương lai answer chỉ phụ thuộc một canonical trạng thái, nhiều histories có thể merge.
 
-Ví dụ recursive coin change có thể reach cùng state:
+Ví dụ recursive coin change có thể reach cùng trạng thái:
 
 ```text
 (index, remainingAmount)
 ```
 
-qua nhiều đường. Nếu solve(state) luôn cho cùng result, memoization tránh recompute.
+qua nhiều đường. Nếu solve(state) luôn cho cùng kết quả, memoization tránh recompute.
 
-Lúc đó implicit tree thực chất là graph với repeated nodes.
+Lúc đó implicit cây thực chất là đồ thị với lặp lại các nút.
 
 ### Dấu hiệu nên nghĩ DP
 
-Nếu bạn thấy recursion tree có nhiều calls với cùng parameters hoặc cùng logical state, hãy hỏi:
+Nếu bạn thấy cây đệ quy có nhiều calls với cùng parameters hoặc cùng logic trạng thái, hãy hỏi:
 
-> Lịch sử đi tới state này có còn ảnh hưởng future không?
+> Lịch sử đi tới trạng thái này có còn ảnh hưởng tương lai không?
 
-Nếu không, state có thể memoize.
+Nếu không, trạng thái có thể memoize.
 
-## Backtracking khác Dynamic Programming thế nào?
+## quay lui khác quy hoạch động (dynamic programming) thế nào?
 
-Backtracking thường explore choices để tìm feasible/optimal solution và dựa mạnh vào pruning.
+quay lui thường explore choices để tìm feasible/lời giải tối ưu và dựa mạnh vào pruning.
 
-DP xác định equivalence classes của histories thành states và reuse result.
+DP xác định các lớp tương đương của histories thành các trạng thái và reuse kết quả.
 
-Một problem có thể dùng cả hai: backtracking để explore structure, memoization để merge repeated states.
+Một bài toán có thể dùng cả hai: quay lui để khám phá không gian cấu trúc, còn ghi nhớ (memoization) để hợp nhất các trạng thái lặp lại.
 
 Không nên phân loại bằng syntax “có recursion hay không”. Top-down DP cũng recursive.
 
-## Branch and Bound
+## nhánh và cận
 
-**Branch and Bound (분기 한정법)** mở rộng backtracking cho optimization. Ngoài feasibility pruning, ta tính optimistic bound của best result có thể đạt từ partial state.
+**nhánh và cận (분기 한정법)** mở rộng quay lui cho optimization. Ngoài feasibility pruning, ta tính optimistic bound của best kết quả có thể đạt từ partial trạng thái.
 
-Nếu bound còn tệ hơn best solution đã biết, prune branch.
+Nếu bound còn tệ hơn best lời giải đã biết, prune branch.
 
-Ví dụ TSP exact solver có thể dùng lower bound trên remaining route cost. Knapsack exact search có thể dùng fractional-knapsack upper bound.
+Ví dụ TSP chính xác solver có thể dùng cận dưới trên remaining route chi phí. Knapsack chính xác search có thể dùng fractional-knapsack cận trên (upper bound).
 
-Mental model:
+Mô hình tư duy:
 
 ```text
 backtracking      -> prune impossible branches
 branch-and-bound  -> prune branches không thể beat incumbent
 ```
 
-## Alpha-Beta như specialized pruning
+## Alpha-Beta như chuyên biệt pruning
 
-Trong minimax game tree, alpha-beta pruning loại branches không thể ảnh hưởng final decision do current lower/upper bounds.
+Trong minimax game cây, alpha-beta pruning loại branches không thể ảnh hưởng final decision do hiện tại lower/các cận trên.
 
-Nó là một ví dụ domain-specific của general idea: nếu partial information đã chứng minh descendants không thể thay answer, skip whole subtree.
+Nó là một ví dụ domain-specific của general idea: nếu partial thông tin đã chứng minh các hậu duệ không thể thay answer, skip whole cây con.
 
 ## Explicit stack thay recursion
 
-Deep graph/tree có thể overflow call stack. Ta có thể mô phỏng recursion bằng explicit stack.
+Deep đồ thị/cây có thể tràn số ngăn xếp lời gọi. Ta có thể mô phỏng recursion bằng explicit stack.
 
-Nhưng với backtracking, frame cần lưu nhiều state hơn chỉ node:
+Nhưng với quay lui, frame cần lưu nhiều trạng thái hơn chỉ nút:
 
 ```text
 current state
@@ -391,15 +391,15 @@ next candidate index
 data cần undo
 ```
 
-Recursive syntax tự động lưu program counter/local variables trong call frame; iterative version phải encode chúng rõ ràng.
+Cú pháp đệ quy tự động lưu bộ đếm lệnh và biến cục bộ trong khung lời gọi; phiên bản dạng lặp phải biểu diễn các thông tin này một cách tường minh.
 
-Đây là lý do iterative backtracking đôi khi phức tạp hơn iterative DFS đơn giản.
+Đây là lý do iterative quay lui đôi khi phức tạp hơn iterative DFS đơn giản.
 
-## C: ownership và mutable state
+## C: quyền sở hữu (ownership) và có thể thay đổi trạng thái
 
-Trong C, recursive function cần rõ ai sở hữu buffers. Nếu mỗi recursive call `malloc` một state copy, overhead lớn và dễ leak khi early return.
+Trong C, hàm đệ quy cần rõ ai sở hữu các bộ đệm. Nếu mỗi lời gọi đệ quy `malloc` một trạng thái copy, overhead lớn và dễ leak khi early return.
 
-Pattern mutable shared arrays + explicit undo thường hiệu quả hơn, nhưng cần discipline:
+mẫu có thể thay đổi shared các mảng + explicit undo thường hiệu quả hơn, nhưng cần discipline:
 
 ```c
 path[depth] = candidate;
@@ -408,23 +408,23 @@ search(depth + 1);
 used[candidate] = false;
 ```
 
-Nếu recursion có multiple exit paths, cleanup phải nhất quán.
+Nếu recursion có multiple exit các đường đi, cleanup phải nhất quán.
 
-## Java: collections và copy cost
+## Java: collections và copy chi phí
 
-Trong Java, pattern:
+Trong Java, mẫu:
 
 ```java
 ans.add(new ArrayList<>(path));
 ```
 
-ở leaf là bắt buộc nếu `path` tiếp tục mutate. Nếu thêm chính `path`, mọi references trong `ans` có thể cùng trỏ tới object đang bị thay đổi.
+ở nút lá là bắt buộc nếu `path` tiếp tục mutate. Nếu thêm chính `path`, mọi các tham chiếu trong `ans` có thể cùng trỏ tới đối tượng đang bị thay đổi.
 
-Đây là một bug aliasing phổ biến.
+Đây là một bug bí danh bộ nhớ phổ biến.
 
-## JavaScript: object mutation và recursion limit
+## JavaScript: đối tượng sự thay đổi dữ liệu và recursion limit
 
-Trong JavaScript, arrays/objects dùng reference semantics. `ans.push(path)` lưu reference; thường cần:
+Trong JavaScript, các mảng/các đối tượng dùng tham chiếu ngữ nghĩa. `ans.push(path)` lưu tham chiếu; thường cần:
 
 ```js
 ans.push([...path]);
@@ -432,9 +432,9 @@ ans.push([...path]);
 
 cho snapshot.
 
-Deep recursive search còn có call-stack limit phụ thuộc engine. Với input depth không kiểm soát, explicit stack hoặc iterative design an toàn hơn.
+Deep recursive search còn có call-stack limit phụ thuộc engine. Với đầu vào độ sâu không kiểm soát, explicit stack hoặc iterative design an toàn hơn.
 
-## Complexity của backtracking
+## Complexity của quay lui
 
 Một cách estimate tốt hơn chỉ nói “exponential” là:
 
@@ -442,51 +442,51 @@ Một cách estimate tốt hơn chỉ nói “exponential” là:
 O(\text{number of visited states} \times \text{cost per state})
 \]
 
-Pruning giảm visited states. Better constraint representation giảm cost/state. Memoization merge repeated states. Branch ordering có thể giúp tìm incumbent sớm để prune mạnh hơn.
+Pruning giảm đã thăm các trạng thái. Better ràng buộc cách biểu diễn giảm chi phí/trạng thái. Memoization merge lặp lại các trạng thái. thứ tự phân nhánh có thể giúp tìm incumbent sớm để prune mạnh hơn.
 
 Đây là decomposition thực dụng khi optimize solver.
 
-## Search space vs solution space
+## không gian tìm kiếm vs không gian lời giải
 
-Không gian candidate có thể lớn hơn rất nhiều số valid solutions. Một good backtracking model cố generate ít invalid state nhất có thể.
+Không gian ứng viên có thể lớn hơn rất nhiều số hợp lệ các lời giải. Một good quay lui mô hình cố generate ít không hợp lệ trạng thái nhất có thể.
 
-Ví dụ generate all `n^n` board configurations rồi kiểm N-Queens là vô lý; enforce one queen per row ngay từ state model giảm search space trước cả pruning.
+Ví dụ generate all `n^n` board configurations rồi kiểm N-Queens là vô lý; enforce one queen per row ngay từ mô hình trạng thái giảm không gian tìm kiếm trước cả pruning.
 
-## Common mistakes
+## Phổ biến mistakes
 
-**Quên undo mutation.** Branch sau thừa state của branch trước.
+**Quên hoàn tác thay đổi dữ liệu.** Nhánh sau sẽ thừa trạng thái của nhánh trước.
 
 **Undo sai thứ tự.** Nếu mutations phụ thuộc nhau, restore phải đối xứng reverse order.
 
-**Base case quá sớm/quá muộn.** Có thể miss solution hoặc recurse ngoài bounds.
+**trường hợp cơ sở quá sớm/quá muộn.** Có thể miss lời giải hoặc recurse ngoài bounds.
 
-**Pruning không có proof.** Có thể loại valid solutions.
+**Pruning không có chứng minh.** Có thể loại hợp lệ các lời giải.
 
-**Copy state quá nhiều.** Correct nhưng chậm/memory-heavy.
+**Copy trạng thái quá nhiều.** Correct nhưng chậm/memory-heavy.
 
-**Dùng global mutable state nhưng không reset giữa runs.** Test riêng lẻ pass, batch fail.
+**Dùng toàn cục có thể thay đổi trạng thái nhưng không reset giữa runs.** Test riêng lẻ pass, batch fail.
 
-**Không xử lý duplicates đúng depth.** Sinh duplicate answers hoặc bỏ mất answers.
+**Không xử lý các phần tử trùng đúng độ sâu.** Sinh phần tử trùng answers hoặc bỏ mất answers.
 
-**Assume recursion luôn an toàn.** Deep input có thể stack overflow.
+**Assume recursion luôn an toàn.** Deep đầu vào có thể stack tràn số.
 
-## Testing backtracking
+## kiểm thử quay lui
 
-Với `n` nhỏ, compare output count với known combinatorial values:
+Với `n` nhỏ, so sánh đầu ra count với known combinatorial các giá trị:
 
 ```text
 subsets -> 2^n
 permutations distinct -> n!
 ```
 
-Kiểm mỗi output thỏa constraints và không duplicate nếu semantics yêu cầu unique.
+Kiểm mỗi đầu ra thỏa các ràng buộc và không phần tử trùng nếu ngữ nghĩa yêu cầu unique.
 
-Một kỹ thuật mạnh là dùng brute-force generator đơn giản làm oracle cho small `n`, rồi compare optimized pruning version.
+Một kỹ thuật mạnh là dùng brute-force generator đơn giản làm oracle cho small `n`, rồi so sánh optimized pruning version.
 
-Ngoài final answers, có thể assert state restored sau mỗi recursive call trong debug build.
+Ngoài final answers, có thể assert trạng thái restored sau mỗi lời gọi đệ quy trong gỡ lỗi xây dựng.
 
-## Mental Model mở rộng
+## Mô hình tư duy mở rộng
 
-> Backtracking không phải “thử tất cả một cách mù quáng”. Nó là **search-space engineering**: chọn state representation, candidate order, invariant và bound sao cho cả subtree có thể bị loại càng sớm càng tốt mà vẫn giữ completeness.
+> Quay lui không phải “thử tất cả một cách mù quáng”. Nó là **thiết kế không gian tìm kiếm (search-space engineering)**: chọn cách biểu diễn trạng thái, thứ tự ứng viên, bất biến và cận sao cho có thể loại bỏ cả cây con càng sớm càng tốt mà vẫn không bỏ sót nghiệm.
 
-Khi một problem có choices lồng nhau, hãy hỏi: state tối thiểu là gì, branch nào có thể prove impossible sớm, có repeated state để memoize không, và output size itself có exponential không. Những câu hỏi đó quan trọng hơn việc nhớ một template recursion cụ thể.
+Khi một problem có choices lồng nhau, hãy hỏi: trạng thái tối thiểu là gì, branch nào có thể prove impossible sớm, có lặp lại trạng thái để memoize không, và kích thước đầu ra itself có exponential không. Những câu hỏi đó quan trọng hơn việc nhớ một template recursion cụ thể.

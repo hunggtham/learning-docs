@@ -1,15 +1,15 @@
-# Graph: mô hình hóa và biểu diễn
+# đồ thị: mô hình hóa và biểu diễn
 **Đồ thị (Graph / 그래프)**
 
-Graph là abstraction cho tình huống mà **relationship quan trọng ngang entity**. User và friendship, city và road, package và dependency, service và network call, bank account và transaction, webpage và hyperlink, function và call relation đều có thể được mô hình hóa bằng:
+đồ thị là sự trừu tượng (abstraction) cho tình huống mà **mối quan hệ quan trọng ngang entity**. Người dùng và quan hệ bạn bè, thành phố và đường đi, gói phần mềm và quan hệ phụ thuộc, dịch vụ và lời gọi mạng, tài khoản ngân hàng và giao dịch, trang web và siêu liên kết, hay hàm và quan hệ lời gọi đều có thể được mô hình hóa bằng:
 
 \[
 G=(V,E)
 \]
 
-trong đó `V` là tập vertices/nodes và `E` là tập edges.
+trong đó `V` là tập các đỉnh/các nút và `E` là tập các cạnh.
 
-Điểm khó nhất của graph problem thường không phải BFS hay Dijkstra. Phần khó là quyết định:
+Điểm khó nhất của đồ thị problem thường không phải BFS hay Dijkstra. Phần khó là quyết định:
 
 ```text
 một vertex đại diện cho cái gì?
@@ -19,60 +19,60 @@ weight/capacity/time có nằm trên edge hay node?
 graph là directed, undirected, multigraph hay state graph?
 ```
 
-Một thuật toán hoàn toàn đúng trên **model sai** vẫn cho answer sai cho problem thật.
+Một thuật toán hoàn toàn đúng trên **mô hình sai** vẫn cho answer sai cho problem thật.
 
 ## Directed, undirected và weighted
 
-**Undirected graph / 무방향 그래프** dùng edge `u -- v` khi relationship đối xứng: road hai chiều, friendship, cable connection.
+**đồ thị vô hướng (undirected graph) / 무방향 그래프** dùng cạnh `u -- v` khi mối quan hệ đối xứng: road hai chiều, friendship, cable connection.
 
-**Directed graph / 방향 그래프** dùng edge `u -> v` khi relationship có hướng: dependency, hyperlink, money transfer, call graph.
+**đồ thị có hướng / 방향 그래프** dùng cạnh `u -> v` khi mối quan hệ có hướng: dependency, hyperlink, money transfer, call đồ thị.
 
-**Weighted graph / 가중 그래프** gắn cost lên edge hoặc node. Weight có thể là distance, latency, price, risk, time, energy, probability transform hoặc capacity.
+**đồ thị có trọng số / 가중 그래프** gắn chi phí lên cạnh hoặc nút. trọng số có thể là khoảng cách, độ trễ (latency), price, risk, time, energy, xác suất transform hoặc capacity.
 
-Không phải mọi weight đều dùng shortest path. Capacity dẫn tới flow; probability có thể cần log transform; exchange rate có thể dẫn tới negative-cycle/arbitrage reasoning.
+Không phải mọi trọng số đều dùng đường đi ngắn nhất (shortest path). Capacity dẫn tới flow; xác suất có thể cần log transform; exchange rate có thể dẫn tới negative-cycle/arbitrage reasoning.
 
-## Simple graph, multigraph và self-loop
+## đơn giản đồ thị, multigraph và self-loop
 
-Một **simple graph** không có parallel edges và thường không có self-loop. Nhưng nhiều domains thực tế cho phép cả hai.
+Một **đơn giản đồ thị** không có các cạnh song song và thường không có self-loop. Nhưng nhiều domains thực tế cho phép cả hai.
 
-Parallel edges xuất hiện khi hai cities có nhiều flights khác nhau, hai services có nhiều channels hoặc graph giữ historical links.
+các cạnh song song xuất hiện khi hai cities có nhiều flights khác nhau, hai services có nhiều channels hoặc đồ thị giữ các liên kết lịch sử.
 
-Self-loop xuất hiện khi một state có transition về chính nó hoặc data chứa explicit relation `(u,u)`.
+Self-loop xuất hiện khi một trạng thái (state) có transition về chính nó hoặc data chứa explicit relation `(u,u)`.
 
-Nếu algorithm vô thức giả định simple graph, kết quả có thể sai. Bridge detection là ví dụ: hai parallel edges giữa cùng cặp nodes nghĩa là xóa một edge chưa chắc disconnect graph. Vì vậy edge identity phải được giữ rõ.
+Nếu thuật toán vô thức giả định đơn giản đồ thị, kết quả có thể sai. Bridge detection là ví dụ: hai các cạnh song song giữa cùng cặp các nút nghĩa là xóa một cạnh chưa chắc disconnect đồ thị. Vì vậy cạnh identity phải được giữ rõ.
 
-## Path, walk, trail và cycle
+## đường đi, walk, trail và chu trình
 
-Một **walk** cho phép lặp vertices/edges. **Trail** thường không lặp edge. **Path** thường không lặp vertex trong định nghĩa graph-theory chuẩn. **Cycle** quay lại điểm bắt đầu.
+Một **walk** cho phép lặp các đỉnh/các cạnh. **Trail** thường không lặp cạnh. **đường đi** thường không lặp đỉnh trong định nghĩa graph-theory chuẩn. **chu trình** quay lại điểm bắt đầu.
 
-Trong programming problems, từ “path” đôi khi được dùng lỏng hơn. Khi proof quan trọng, hãy xác định semantics chính xác thay vì dựa vào wording.
+Trong programming problems, từ “đường đi” đôi khi được dùng lỏng hơn. Khi chứng minh quan trọng, hãy xác định ngữ nghĩa (semantics) chính xác thay vì dựa vào wording.
 
-Shortest path với non-negative weights luôn có thể chọn một simple path optimal vì cycle không giúp giảm cost. Nhưng với negative cycle, objective có thể không còn finite minimum.
+đường đi ngắn nhất với non-negative các trọng số luôn có thể chọn một đơn giản đường đi optimal vì chu trình không giúp giảm chi phí. Nhưng với negative chu trình, objective có thể không còn finite minimum.
 
 ## Connectivity và reachability
 
-Trong undirected graph, **connected component / 연결 요소** là maximal set vertices nối được với nhau.
+Trong đồ thị vô hướng, **thành phần liên thông / 연결 요소** là maximal set các đỉnh nối được với nhau.
 
-Trong directed graph, reachability có hướng. Strongly connected component yêu cầu reachability hai chiều giữa mọi cặp nodes trong component.
+Trong đồ thị có hướng, reachability có hướng. thành phần liên thông mạnh yêu cầu reachability hai chiều giữa mọi cặp các nút trong thành phần.
 
-Đây là lý do “component” trong directed graph không đơn giản là chạy BFS và gom tất cả nodes reachable từ source.
+Đây là lý do “thành phần” trong đồ thị có hướng không đơn giản là chạy BFS và gom tất cả các nút có thể tới từ nguồn.
 
 ## Degree
 
-Undirected vertex có degree bằng số incident edges, với self-loop convention cần chú ý.
+Undirected đỉnh có degree bằng số incident các cạnh, với self-loop convention cần chú ý.
 
-Directed graph có:
+đồ thị có hướng có:
 
 ```text
 indegree  = số edges đi vào
 outdegree = số edges đi ra
 ```
 
-Degree không chỉ là metadata. Eulerian conditions dùng parity/balance của degree; Kahn topological sort dùng indegree; graph sparsity thường liên quan average degree.
+Degree không chỉ là siêu dữ liệu. Eulerian các điều kiện dùng parity/balance của degree; Kahn sắp xếp tô-pô dùng indegree; đồ thị sparsity thường liên quan average degree.
 
-## Adjacency matrix
+## ma trận kề
 
-Adjacency matrix dùng `V x V` cells.
+ma trận kề dùng `V x V` cells.
 
 ```text
 matrix[u][v] = có edge hay weight
@@ -94,19 +94,19 @@ iterate neighbors của u tốn O(V)
 không phù hợp sparse graph lớn
 ```
 
-Nếu graph có 1 triệu vertices nhưng mỗi vertex chỉ vài neighbors, matrix là bất khả thi.
+Nếu đồ thị có 1 triệu các đỉnh nhưng mỗi đỉnh chỉ vài các đỉnh kề, matrix là bất khả thi.
 
-## Adjacency list
+## danh sách kề
 
-Adjacency list lưu neighbors theo từng vertex.
+danh sách kề lưu các đỉnh kề theo từng đỉnh.
 
-Memory:
+bộ nhớ:
 
 \[
 O(V+E)
 \]
 
-và iteration neighbors của `u` là `O(deg(u))`.
+và iteration các đỉnh kề của `u` là `O(deg(u))`.
 
 Java:
 
@@ -121,17 +121,17 @@ JavaScript:
 const g = Array.from({ length: n }, () => []);
 ```
 
-Undirected edge thường được lưu hai adjacency entries. Nếu algorithm cần biết hai entries đó đại diện cùng physical edge, hãy gắn unique edge id.
+Undirected cạnh thường được lưu hai adjacency các mục. Nếu thuật toán cần biết hai các mục đó đại diện cùng vật lý cạnh, hãy gắn unique cạnh id.
 
-## Edge list
+## danh sách cạnh
 
-Edge list chỉ lưu:
+danh sách cạnh chỉ lưu:
 
 ```text
 (u, v, weight)
 ```
 
-Nó phù hợp khi algorithm xử lý edges toàn cục hơn là neighbors từng vertex.
+Nó phù hợp khi thuật toán xử lý các cạnh toàn cục hơn là các đỉnh kề từng đỉnh.
 
 Kruskal MST là ví dụ điển hình:
 
@@ -141,11 +141,11 @@ scan edges
 DSU quyết định edge có nối hai component khác nhau không
 ```
 
-Không có representation “tốt nhất”; operation chính quyết định representation.
+Không có cách biểu diễn (representation) “tốt nhất”; thao tác chính quyết định cách biểu diễn.
 
 ## CSR — Compressed Sparse Row
 
-Object-heavy adjacency lists tiện code nhưng có overhead references/allocations. Trong high-performance graph processing, **CSR (Compressed Sparse Row)** lưu graph bằng contiguous arrays.
+Danh sách kề dùng nhiều đối tượng thuận tiện khi lập trình nhưng tốn chi phí tham chiếu và cấp phát. Trong xử lý đồ thị hiệu năng cao, **CSR (Compressed Sparse Row)** lưu đồ thị bằng các mảng liên tiếp trong bộ nhớ.
 
 Conceptually:
 
@@ -153,7 +153,7 @@ Conceptually:
 offsets[u] .. offsets[u+1]-1
 ```
 
-là segment trong `edges[]` chứa neighbors của `u`.
+là segment trong `edges[]` chứa các đỉnh kề của `u`.
 
 Ví dụ:
 
@@ -162,78 +162,78 @@ offsets = [0, 2, 5, 5]
 edges   = [1, 2, 0, 2, 3]
 ```
 
-Neighbors của node 1 là `edges[2..4]`.
+các đỉnh kề của nút 1 là `edges[2..4]`.
 
-CSR giảm per-node object overhead, tăng locality và rất hợp static sparse graph. Trade-off là dynamic insert/delete khó hơn adjacency lists động.
+CSR giảm chi phí đối tượng trên mỗi nút, tăng tính cục bộ (locality) và rất phù hợp với đồ thị thưa tĩnh. Đánh đổi là thao tác chèn/xóa động khó hơn so với danh sách kề động.
 
-## Adjacency map và sparse external IDs
+## Adjacency map và sparse bên ngoài IDs
 
-Nếu vertex IDs là strings hoặc sparse 64-bit IDs, có thể dùng mapping:
+Nếu đỉnh IDs là strings hoặc sparse 64-bit IDs, có thể dùng ánh xạ:
 
 ```text
 external id -> compact integer id
 ```
 
-sau đó lưu graph bằng arrays trên compact IDs.
+sau đó lưu đồ thị bằng các mảng trên gọn IDs.
 
-Điều này thường tốt hơn `Map<String,List<String>>` ở graph rất lớn vì comparisons, hash, object allocation và memory locality đều cải thiện.
+Điều này thường tốt hơn `Map<String,List<String>>` ở đồ thị rất lớn vì các phép so sánh, hash, đối tượng cấp phát và bộ nhớ tính cục bộ đều cải thiện.
 
-Đây là một pattern production quan trọng: **normalize identity trước, optimize representation sau**.
+Đây là một mẫu hệ thống thực tế quan trọng: **normalize identity trước, optimize cách biểu diễn sau**.
 
-## Modeling state-space graph
+## mô hình hóa đồ thị không gian trạng thái
 
-Trong nhiều bài, node không phải entity domain mà là **state / 상태**.
+Trong nhiều bài, nút không phải entity domain mà là **trạng thái / 상태**.
 
-Ví dụ grid có key và door. State không thể chỉ là `(row,col)`; hai lần đứng cùng cell nhưng giữ key-mask khác nhau có future khác nhau.
+Ví dụ grid có khóa và door. trạng thái không thể chỉ là `(row,col)`; hai lần đứng cùng cell nhưng giữ key-mask khác nhau có tương lai khác nhau.
 
-State đúng có thể là:
+trạng thái đúng có thể là:
 
 ```text
 (row, col, keysMask)
 ```
 
-Nếu ta visited theo `(row,col)` בלבד, algorithm có thể loại sai một đường quay lại cell với nhiều keys hơn.
+Nếu ta đã thăm theo `(row,col)` בלבד, thuật toán có thể loại sai một đường quay lại cell với nhiều các khóa hơn.
 
-Ngược lại, state chứa quá nhiều history không ảnh hưởng future sẽ làm graph phình khổng lồ.
+Ngược lại, trạng thái chứa quá nhiều lịch sử không ảnh hưởng tương lai sẽ làm đồ thị phình khổng lồ.
 
-Một state tốt giữ đúng **future-relevant information** — mental model này giống Dynamic Programming.
+Một trạng thái tốt giữ đúng **future-relevant thông tin** — mental mô hình này giống quy hoạch động (dynamic programming).
 
-## Product graph
+## Product đồ thị
 
-Khi problem có nhiều dimensions constraints, ta có thể tạo **product graph**.
+Khi problem có nhiều dimensions các ràng buộc, ta có thể tạo **product đồ thị**.
 
-Ví dụ shortest path với tối đa `K` coupons:
+Ví dụ đường đi ngắn nhất với tối đa `K` coupons:
 
 ```text
 state = (vertex, couponsUsed)
 ```
 
-Edge transition có thể:
+cạnh transition có thể:
 
 ```text
 đi bình thường: (u,k) -> (v,k)
 dùng coupon:     (u,k) -> (v,k+1)
 ```
 
-Graph mới có khoảng `V*(K+1)` states. Standard shortest-path algorithm giờ có thể chạy trên expanded state space.
+đồ thị mới có khoảng `V*(K+1)` các trạng thái. Chuẩn shortest-path thuật toán giờ có thể chạy trên expanded không gian trạng thái.
 
-Đây là cách biến “constraint phức tạp” thành topology rõ ràng.
+Đây là cách biến “ràng buộc phức tạp” thành topology rõ ràng.
 
-## Time-expanded graph
+## đồ thị mở rộng theo thời gian
 
-Scheduling, transport và temporal network có thể cần time trong state:
+Scheduling, transport và temporal mạng có thể cần time trong trạng thái:
 
 ```text
 (vertex, time)
 ```
 
-Ví dụ train chỉ chạy ở departure times cụ thể. Edge không chỉ nói “A nối B”; nó nói “từ A lúc t có thể tới B lúc t'”.
+Ví dụ train chỉ chạy ở departure times cụ thể. cạnh không chỉ nói “A nối B”; nó nói “từ A lúc t có thể tới B lúc t'”.
 
-Time-expanded graph có thể lớn, nên đôi khi ta không materialize toàn bộ; generate transitions on demand.
+đồ thị mở rộng theo thời gian có thể lớn, nên đôi khi ta không materialize toàn bộ; generate transitions on demand.
 
-## Implicit graph
+## đồ thị ẩn
 
-Graph không nhất thiết phải được build trước.
+đồ thị không nhất thiết phải được xây dựng trước.
 
 Word ladder:
 
@@ -242,27 +242,27 @@ vertex = một word
 edge = đổi đúng một ký tự
 ```
 
-Thay vì tạo mọi pair edges `O(n^2)`, ta có thể generate neighbors qua wildcard buckets hoặc dictionary lookup khi BFS cần.
+Thay vì tạo mọi pair các cạnh `O(n^2)`, ta có thể generate các đỉnh kề qua wildcard các ngăn băm hoặc dictionary tra cứu khi BFS cần.
 
-Puzzle, game state và combinatorial search thường dùng implicit graphs.
+Puzzle, game trạng thái và combinatorial search thường dùng implicit các đồ thị.
 
-Mental model:
+Mô hình tư duy:
 
-> Graph là **relation**, không phải bắt buộc là `List<List<Integer>>`.
+> đồ thị là **relation**, không phải bắt buộc là `List<List<Integer>>`.
 
 ## Hypergraph và relation nhiều hơn hai endpoints
 
-Standard graph edge nối hai vertices. Nhưng một relation có thể liên quan nhiều entities cùng lúc, ví dụ một database transaction chạm nhiều accounts hoặc một constraint chứa nhiều variables.
+Chuẩn đồ thị cạnh nối hai các đỉnh. Nhưng một relation có thể liên quan nhiều entities cùng lúc, ví dụ một cơ sở dữ liệu transaction chạm nhiều accounts hoặc một ràng buộc chứa nhiều variables.
 
-**Hypergraph** cho phép hyperedge nối nhiều vertices. Trong implementation, hyperedge thường được biến đổi thành bipartite incidence graph hoặc auxiliary node để dùng algorithms chuẩn.
+**Hypergraph** cho phép hyperedge nối nhiều các đỉnh. Trong cách triển khai, hyperedge thường được biến đổi thành bipartite incidence đồ thị hoặc phụ trợ nút để dùng các thuật toán chuẩn.
 
-Biết model này giúp tránh ép mọi problem về pairwise edge một cách sai nghĩa.
+Biết mô hình này giúp tránh ép mọi problem về pairwise cạnh một cách sai nghĩa.
 
-## Bipartite modeling
+## Bipartite mô hình hóa
 
-Nếu domain có hai loại entities rõ ràng — jobs/workers, students/projects, users/items — graph thường bipartite.
+Nếu miền bài toán có hai loại thực thể rõ ràng — chẳng hạn công việc/người lao động, sinh viên/dự án hoặc người dùng/mục dữ liệu — đồ thị thường là đồ thị hai phía (bipartite graph).
 
-Tách hai phía giúp nhận ra matching/flow structure thay vì generic graph search.
+Tách hai phía giúp nhận ra matching/flow structure thay vì tổng quát đồ thị search.
 
 Ví dụ:
 
@@ -272,15 +272,15 @@ Worker -> Job nếu worker có thể làm job
 
 Maximum matching trả assignment tối đa không conflict.
 
-## Graph và sparse matrix
+## đồ thị và sparse matrix
 
-Adjacency matrix chính là matrix representation của relation. Nhiều graph algorithms có linear algebra interpretation.
+ma trận kề chính là matrix cách biểu diễn của relation. Nhiều các thuật toán đồ thị có linear algebra interpretation.
 
-Repeated matrix multiplication liên quan path counts/reachability. PageRank dùng transition matrix. Graph Neural Network layers thường aggregate neighbor features, tương đương sparse-matrix-like operations.
+lặp lại matrix multiplication liên quan đường đi counts/reachability. PageRank dùng transition matrix. đồ thị Neural mạng các tầng thường aggregate đỉnh kề features, tương đương sparse-matrix-like các thao tác.
 
-CSR thực chất cũng là representation kinh điển của sparse matrix. Graph theory và linear algebra vì thế là hai góc nhìn của cùng structure.
+CSR thực chất cũng là cách biểu diễn kinh điển của sparse matrix. đồ thị theory và linear algebra vì thế là hai góc nhìn của cùng structure.
 
-## Memory cost không chỉ là O(V+E)
+## bộ nhớ chi phí không chỉ là O(V+E)
 
 Hai adjacency lists đều là `O(V+E)` nhưng constants có thể khác hàng lần.
 
@@ -290,79 +290,79 @@ Java:
 ArrayList<ArrayList<EdgeObject>>
 ```
 
-có object headers, references và boxing nếu dùng wrapper types.
+có phần đầu các đối tượng, các tham chiếu và đóng hộp nếu dùng wrapper types.
 
-C arrays có thể compact hơn nhưng ownership/reallocation phức tạp hơn.
+C các mảng có thể gọn hơn nhưng quyền sở hữu (ownership)/reallocation phức tạp hơn.
 
-JavaScript arrays/objects có dynamic runtime overhead.
+JavaScript các mảng/các đối tượng có động môi trường chạy (runtime) overhead.
 
-Khi graph có hàng chục triệu edges, representation bytes-per-edge trở thành một first-class design metric.
+Khi đồ thị có hàng chục triệu cạnh, số byte cần cho mỗi cạnh trở thành một chỉ số thiết kế quan trọng hàng đầu.
 
-## Edge direction storage
+## cạnh direction lưu trữ
 
-Directed graph lưu đúng direction.
+đồ thị có hướng lưu đúng direction.
 
-Undirected graph thường lưu hai entries:
+đồ thị vô hướng thường lưu hai các mục:
 
 ```text
 u -> v
 v -> u
 ```
 
-Nhưng algorithms như Euler/bridge cần tránh coi hai entries là hai physical edges khác nhau. Unique edge id hoặc paired reverse-index là pattern tốt.
+Nhưng các thuật toán như Euler/bridge cần tránh coi hai các mục là hai vật lý các cạnh khác nhau. Unique cạnh id hoặc paired reverse-index là mẫu tốt.
 
-Flow algorithms cũng thường tạo explicit reverse residual edge, nhưng reverse edge ở đó có semantics khác: nó đại diện khả năng undo flow chứ không phải original undirected relation.
+Flow các thuật toán cũng thường tạo explicit reverse residual cạnh, nhưng reverse cạnh ở đó có ngữ nghĩa khác: nó đại diện khả năng undo flow chứ không phải original undirected relation.
 
-## Graph mutation
+## đồ thị sự thay đổi dữ liệu
 
-Nếu graph static, CSR/sorted neighbor arrays rất tốt.
+Nếu đồ thị tĩnh, CSR/sorted đỉnh kề các mảng rất tốt.
 
-Nếu graph dynamic với nhiều edge insert/delete, structure cần hỗ trợ mutation: hash sets/maps per node, balanced sets hoặc specialized dynamic graph structures.
+Nếu đồ thị động với nhiều thao tác chèn/xóa cạnh, cấu trúc biểu diễn phải hỗ trợ thay đổi dữ liệu hiệu quả, chẳng hạn tập/map băm theo từng nút, tập cân bằng hoặc cấu trúc đồ thị động chuyên biệt.
 
-Trade-off:
+sự đánh đổi:
 
 ```text
 static -> compact, cache-friendly, preprocess mạnh
 dynamic -> flexible update, nhiều metadata/overhead hơn
 ```
 
-Đây là cùng pattern thấy ở sparse table vs segment tree.
+Đây là cùng mẫu thấy ở bảng thưa (Sparse Table) vs cây đoạn (Segment Tree).
 
 ## Dense vs sparse
 
-Một graph có thể gọi là sparse khi `E` gần tuyến tính theo `V`, và dense khi `E` gần `V^2`.
+Một đồ thị có thể gọi là sparse khi `E` gần tuyến tính theo `V`, và dense khi `E` gần `V^2`.
 
-Representation và algorithm thường thay đổi theo density.
+cách biểu diễn và thuật toán thường thay đổi theo density.
 
-Dijkstra adjacency matrix có thể `O(V^2)` và đủ tốt cho dense graph nhỏ. Heap + adjacency list tốt hơn với sparse graph lớn.
+Dijkstra ma trận kề có thể `O(V^2)` và đủ tốt cho đồ thị dày nhỏ. Heap + danh sách kề tốt hơn với đồ thị thưa lớn.
 
-Floyd-Warshall `O(V^3)` đôi khi hợp graph nhỏ cần all-pairs, dù asymptotic nhìn rất lớn.
+Floyd-Warshall `O(V^3)` đôi khi hợp đồ thị nhỏ cần all-pairs, dù asymptotic nhìn rất lớn.
 
-## Modeling failures phổ biến
+## mô hình hóa failures phổ biến
 
-### Gộp state quá mạnh
+### Gộp trạng thái quá mạnh
 
-Visited theo city nhưng problem còn phụ thuộc stops-used, fuel, key-set hoặc time.
+Việc chỉ đánh dấu đã thăm theo thành phố là chưa đủ nếu bài toán còn phụ thuộc vào số chặng đã dùng, lượng nhiên liệu, tập khóa đang có hoặc thời gian.
 
-### State quá chi tiết
+### trạng thái quá chi tiết
 
-Lưu full path trong state khi future chỉ cần current vertex + small metadata. State explosion không cần thiết.
+Lưu full đường đi trong trạng thái khi tương lai chỉ cần hiện tại đỉnh + small siêu dữ liệu. trạng thái explosion không cần thiết.
 
 ### Direction sai
 
-Dependency `A depends on B` có thể encode `A->B` hoặc `B->A`; algorithm topological scheduling phụ thuộc convention. Hãy định nghĩa rõ edge nghĩa gì.
+Dependency `A depends on B` có thể encode `A->B` hoặc `B->A`; thuật toán topological scheduling phụ thuộc convention. Hãy định nghĩa rõ cạnh nghĩa gì.
 
-### Weight sai meaning
+### trọng số sai meaning
 
-Latency path có thể cộng; bandwidth path bottleneck có thể dùng min; reliability có thể nhân probabilities. Không phải metric nào cũng là additive shortest path.
+độ trễ đường đi có thể cộng; bandwidth đường đi bottleneck có thể dùng min; reliability có thể nhân probabilities. Không phải metric nào cũng là additive đường đi ngắn nhất.
 
-### Không xác định graph class
+### Không xác định đồ thị class
 
-Parallel edge, self-loop, disconnected components, negative weights, directed/undirected đều có thể làm assumptions của algorithm sai.
+Parallel cạnh, self-loop, disconnected các thành phần, negative các trọng số, directed/undirected đều có thể làm các giả định của thuật toán sai.
 
-## Modeling checklist
+## mô hình hóa checklist
 
-Trước khi chọn algorithm, viết rõ:
+Trước khi chọn thuật toán, viết rõ:
 
 ```text
 Vertex = ?
@@ -378,11 +378,11 @@ Có cần actual path hay chỉ value/reachability?
 
 Chỉ sau đó mới hỏi BFS, DFS, Dijkstra, DSU hay flow.
 
-## Mental Model
+## Mô hình tư duy
 
-> Graph algorithm bắt đầu từ **state modeling**, không phải từ việc nhận diện tên thuật toán. Vertex là một equivalence class của situations có cùng future possibilities; edge là một allowed transition/relation. Representation phải tối ưu cho operation chính: neighbor traversal, edge lookup, global edge sort hay compact scan.
+> thuật toán đồ thị bắt đầu từ **trạng thái mô hình hóa**, không phải từ việc nhận diện tên thuật toán. đỉnh là một equivalence class của situations có cùng tương lai possibilities; cạnh là một allowed transition/relation. cách biểu diễn phải tối ưu cho thao tác chính: đỉnh kề traversal, cạnh tra cứu, toàn cục cạnh sort hay gọn quét.
 
-Một graph problem tốt thường được giải theo pipeline:
+Một đồ thị problem tốt thường được giải theo chuỗi xử lý:
 
 ```text
 Story/domain

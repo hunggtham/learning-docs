@@ -1,17 +1,17 @@
-# JavaScript Runtime Patterns cho DSA
-**JavaScript 자료구조와 런타임 패턴**
+# Các mẫu DSA và môi trường chạy JavaScript
+**JavaScript DSA & Runtime Patterns / JavaScript 자료구조와 런타임 패턴**
 
-JavaScript cho phép viết DSA rất nhanh, nhưng cùng một algorithm có thể có correctness/performance caveat khác C hoặc Java vì `Number`, dynamic arrays, object identity, garbage collection, UTF-16 strings và JIT runtime behavior.
+JavaScript cho phép triển khai thuật toán và cấu trúc dữ liệu rất nhanh, nhưng cùng một thuật toán có thể có những điểm cần lưu ý khác C hoặc Java. Nguyên nhân đến từ kiểu `Number`, mảng động, định danh đối tượng, bộ thu gom rác, chuỗi UTF-16 và hành vi của môi trường JIT.
 
-Mental model cần giữ là:
+Mô hình tư duy cần giữ là:
 
-> Algorithmic invariant không đổi, nhưng **representation semantics + runtime cost model** đổi theo ngôn ngữ.
+> **Bất biến thuật toán (algorithmic invariant)** không đổi theo ngôn ngữ, nhưng ngữ nghĩa của cách biểu diễn dữ liệu và mô hình chi phí của môi trường chạy có thể thay đổi.
 
-Vì vậy học DSA bằng JavaScript không chỉ là chuyển syntax từ Java/C; cần hiểu các điểm runtime có thể làm assumptions cũ sai.
+Vì vậy, học DSA bằng JavaScript không chỉ là chuyển cú pháp từ Java hoặc C. Cần hiểu những ranh giới của môi trường chạy có thể làm một giả định vốn đúng ở ngôn ngữ khác trở nên sai.
 
-## `Number` và integer precision
+## `Number` và độ chính xác số nguyên
 
-JavaScript `Number` là IEEE-754 double. Integers chỉ được biểu diễn chính xác tới:
+JavaScript `Number` dùng số dấu phẩy động IEEE-754 dạng double. Số nguyên chỉ được biểu diễn chính xác trong miền an toàn đến:
 
 \[
 2^{53}-1
@@ -21,60 +21,51 @@ JavaScript `Number` là IEEE-754 double. Integers chỉ được biểu diễn c
 Number.MAX_SAFE_INTEGER
 ```
 
-Nếu prefix sum, shortest-path distance, combinatorial count hoặc ID arithmetic có thể vượt safe integer range, result có thể mất exactness dù không overflow kiểu fixed-width.
-
-Ví dụ:
+Nếu tổng tiền tố, khoảng cách đường đi, số tổ hợp hoặc ID có thể vượt miền số nguyên an toàn, kết quả có thể mất độ chính xác dù không xuất hiện kiểu tràn số cố định như `int32` hoặc `int64`.
 
 ```js
 Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2
 ```
 
-có thể cho behavior gây ngạc nhiên do precision.
+Biểu thức trên minh họa việc hai số nguyên toán học khác nhau có thể không còn được phân biệt chính xác bằng `Number`.
 
 ## `BigInt`
 
-`BigInt` cho arbitrary-size integer:
+`BigInt` hỗ trợ số nguyên có độ lớn tùy ý:
 
 ```js
 const x = 12345678901234567890n;
 ```
 
-Nhưng không trộn trực tiếp arithmetic với `Number`:
+Không được trộn trực tiếp phép toán số học giữa `BigInt` và `Number`:
 
 ```js
 1n + 1 // TypeError
 ```
 
-Comparator cho BigInt nên dùng relational logic:
+Khi sắp xếp `BigInt`, nên dùng so sánh quan hệ:
 
 ```js
 (a, b) => a < b ? -1 : a > b ? 1 : 0
 ```
 
-thay vì `a - b` nếu callback cần Number return.
+thay vì dựa vào `a - b`.
 
-## Infinity và BigInt
+## `Infinity` và `BigInt`
 
-`Infinity` phù hợp Number-based shortest paths:
+`Infinity` là giá trị canh gác thuận tiện cho thuật toán đường đi ngắn nhất dùng `Number`:
 
 ```js
 const dist = Array(n).fill(Infinity);
 ```
 
-BigInt không có `BigInt Infinity`. Nếu dùng BigInt distance, cần explicit sentinel:
+`BigInt` không có giá trị `Infinity`. Nếu khoảng cách dùng `BigInt`, cần chọn cách biểu diễn rõ ràng như `null`, `undefined`, một cờ `reachable` riêng hoặc một cận trên `BigInt` đã biết chắc là đủ lớn.
 
-```text
-null
-undefined
-separate reachable boolean
-hoặc known upper-bound BigInt
-```
+Lựa chọn giá trị canh gác là một phần của **cách biểu diễn (representation)**, không chỉ là chi tiết cú pháp.
 
-Representation choice ảnh hưởng algorithm boilerplate.
+## Mảng JavaScript không phải mảng C
 
-## Array là dynamic object, không phải C array
-
-JavaScript `Array` hỗ trợ dynamic length và mixed element types.
+JavaScript `Array` có độ dài động và có thể chứa nhiều loại giá trị:
 
 ```js
 const a = [];
@@ -82,65 +73,46 @@ a.push(1);
 a.push(2);
 ```
 
-Runtime có thể optimize dense homogeneous arrays tốt, nhưng sparse/mixed shapes có thể dùng representation khác.
+Các engine thường tối ưu tốt mảng dày đặc có kiểu phần tử ổn định, nhưng mảng thưa hoặc trộn nhiều kiểu có thể được biểu diễn khác. Không nên giả định mỗi phần tử luôn nằm trong một ô nhớ liên tiếp giống `double[]` của C.
 
-Đừng assume mỗi Array element luôn là raw contiguous 8-byte slot như C `double[]`.
-
-## Dense array và sparse array
+## Mảng dày đặc, mảng thưa và lỗ trống
 
 ```js
 const a = [];
 a[1_000_000] = 1;
 ```
 
-`a.length` trở thành 1,000,001 dù chỉ một entry được set.
+`a.length` trở thành `1_000_001` dù chỉ có một phần tử được gán. Engine có thể chuyển sang cách biểu diễn phù hợp với mảng thưa.
 
-Runtime có thể switch sang sparse/dictionary-like representation.
-
-Với DSA numeric dense storage, tránh index jumps hoặc `delete a[i]` nếu không cần.
-
-## Hole khác `undefined`
+Ngoài ra:
 
 ```js
-const a = new Array(3);
+const a = new Array(3);                 // có 3 lỗ trống
+const b = [undefined, undefined, undefined]; // có 3 phần tử thật
 ```
 
-tạo holes.
-
-```js
-const b = [undefined, undefined, undefined];
-```
-
-có explicit elements.
-
-Một số array methods xử lý holes khác explicit undefined.
-
-Nếu algorithm cần initialized numeric storage, dùng:
+Lỗ trống (hole) và phần tử có giá trị `undefined` không hoàn toàn giống nhau đối với mọi phương thức mảng. Nếu cần vùng lưu trữ số đã khởi tạo, dùng:
 
 ```js
 Array(n).fill(0)
 ```
 
-hoặc TypedArray.
+hoặc một `TypedArray` phù hợp.
 
-## Array làm stack rất tự nhiên
+## Dùng mảng làm ngăn xếp
+
+Mảng rất tự nhiên khi dùng làm ngăn xếp:
 
 ```js
 stack.push(x);
 stack.pop();
 ```
 
-Operations ở cuối thường là natural choice.
+Các thao tác ở cuối mảng thường phù hợp với mô hình này.
 
-## Queue và `shift()`
+## Hàng đợi và `shift()`
 
-Repeated:
-
-```js
-queue.shift();
-```
-
-có thể gây reindex/copy/internal work tùy engine/representation. Với queue lớn, dùng head index:
+Gọi `shift()` lặp lại trên hàng đợi lớn có thể phát sinh chi phí di chuyển, đánh lại chỉ số hoặc xử lý nội bộ tùy engine. Với BFS, mẫu dùng chỉ số đầu thường dễ dự đoán hơn:
 
 ```js
 const q = [];
@@ -152,13 +124,7 @@ while (head < q.length) {
 }
 ```
 
-Đây là pattern cực phổ biến cho BFS.
-
-## Queue compaction
-
-Nếu queue sống lâu, processed prefix giữ array references và logical memory tới khi array released.
-
-Có thể compact theo threshold:
+Nếu hàng đợi tồn tại lâu và phần tiền tố đã xử lý giữ nhiều tham chiếu không cần thiết, có thể nén theo một ngưỡng hợp lý:
 
 ```js
 if (head > 4096 && head * 2 > q.length) {
@@ -167,15 +133,13 @@ if (head > 4096 && head * 2 > q.length) {
 }
 ```
 
-hoặc `q = q.slice(head)`.
+Không cần nén sau mỗi lần lấy phần tử khỏi hàng đợi.
 
-Threshold là engineering choice; không cần compact sau mỗi dequeue.
+## Deque tự cài đặt
 
-## Custom deque
+Nếu thường xuyên thêm và lấy ở cả hai đầu, nên cân nhắc bộ đệm vòng (ring buffer) thay vì dựa vào `shift()` và `unshift()`.
 
-Nếu cần push/pop cả hai đầu thường xuyên, có thể implement ring buffer thay vì dựa `unshift/shift`.
-
-Representation:
+Một deque dạng vòng thường duy trì:
 
 ```text
 buffer
@@ -185,28 +149,26 @@ size
 capacity
 ```
 
-Grow giống dynamic circular array.
+Khi đầy, có thể tăng dung lượng tương tự mảng động rồi sao chép theo thứ tự logic.
 
-## Object vs Map
+## `Object` và `Map`
 
-Plain object:
+Đối tượng thông thường:
 
 ```js
 const obj = {};
 ```
 
-có property semantics và keys chủ yếu strings/symbols.
-
-`Map` hỗ trợ arbitrary key identity:
+có ngữ nghĩa thuộc tính, chuỗi prototype và quy tắc chuyển đổi khóa riêng. `Map` hỗ trợ khóa với nhiều kiểu và so sánh khóa theo ngữ nghĩa phù hợp hơn cho ánh xạ tổng quát:
 
 ```js
 const map = new Map();
 map.set(objectKey, value);
 ```
 
-General DSA mapping thường `Map` rõ semantics hơn object hacks.
+Với bài toán DSA cần từ điển hoặc bảng ánh xạ tổng quát, `Map` thường thể hiện ý định rõ hơn.
 
-## Object key coercion
+## Chuyển đổi khóa của `Object`
 
 ```js
 const o = {};
@@ -214,21 +176,17 @@ o[1] = 'a';
 o['1'] = 'b';
 ```
 
-hai accesses liên quan same string property key `"1"`.
+Hai phép truy cập trên cùng liên quan đến khóa chuỗi `"1"`. Nếu miền bài toán cần phân biệt kiểu khóa, `Map` an toàn và rõ nghĩa hơn.
 
-Nếu domain phân biệt key types, `Map` safer.
-
-## Prototype caveat
-
-Plain object có prototype chain trừ object đặc biệt:
+Đối tượng thông thường còn có chuỗi prototype. Có thể tạo từ điển không prototype bằng:
 
 ```js
 const dict = Object.create(null);
 ```
 
-Dù vậy, `Map` vẫn thường là choice rõ ràng hơn cho algorithmic dictionary.
+nhưng `Map` vẫn thường là lựa chọn dễ hiểu hơn cho cấu trúc ánh xạ thuật toán.
 
-## `Map` key equality và object identity
+## Định danh đối tượng trong `Map`
 
 ```js
 const m = new Map();
@@ -236,68 +194,57 @@ m.set({x: 1}, 'value');
 console.log(m.get({x: 1})); // undefined
 ```
 
-Hai object literals có identity khác nhau.
+Hai object literal có cùng trường và giá trị vẫn là hai đối tượng khác nhau. `Map` không tự so sánh sâu theo nội dung.
 
-Với state `(x,y,mask)`, options:
+Với trạng thái `(x, y, mask)`, có thể:
 
 ```text
-encode integer
-encode string
-nested Maps
-intern canonical object
+mã hóa thành số nguyên
+mã hóa thành chuỗi
+dùng Map lồng nhau
+chuẩn hóa thành một đối tượng dùng chung
 ```
 
-Đừng tạo object mới rồi expect value equality.
+Không nên tạo một object mới rồi kỳ vọng nó bằng một object cũ chỉ vì các trường giống nhau.
 
-## Canonical state encoding
+## Mã hóa trạng thái chuẩn
 
-Nếu ranges nhỏ:
+Nếu miền giá trị nhỏ và chắc chắn không vượt giới hạn toán tử bit:
 
 ```js
 const key = ((x * width + y) << bits) | mask;
 ```
 
-nhưng bitwise operators có 32-bit semantics, nên range cần chắc chắn fit.
-
-Safer generic:
+Tuy nhiên, toán tử bit của `Number` dùng ngữ nghĩa 32 bit. Với miền tổng quát hơn, có thể dùng:
 
 ```js
 const key = `${x},${y},${mask}`;
 ```
 
-String encoding đơn giản nhưng allocation/hash overhead cao hơn.
+Khóa chuỗi đơn giản nhưng phát sinh cấp phát và chi phí băm. Nếu các cận kích thước đã biết, mảng nhiều chiều hoặc `TypedArray` có thể hiệu quả hơn.
 
-Nested arrays/maps có thể tốt hơn tùy bounds.
+## `Set` và mảng đánh dấu
 
-## `Set`
-
-`Set` là default tốt cho visited/membership khi key identity semantics phù hợp.
+`Set` là lựa chọn mặc định tốt cho tập đã thăm khi khóa không phải ID số nguyên dày đặc:
 
 ```js
 const seen = new Set();
 seen.add(key);
-if (seen.has(key)) { ... }
+if (seen.has(key)) { /* ... */ }
 ```
 
-Nếu vertices là dense integer `0..n-1`, boolean/typed array thường memory/performance tốt hơn.
-
-## Boolean visited bằng Array vs TypedArray
+Nếu đỉnh là các số nguyên liên tiếp `0..n-1`, một mảng đánh dấu thường gọn hơn:
 
 ```js
 const seen = new Uint8Array(n);
-```
-
-cho dense numeric IDs, compact và predictable.
-
-```js
 seen[v] = 1;
 ```
 
-Thường phù hợp graph algorithms lớn hơn `Array(n).fill(false)` object semantics.
+Đây là ví dụ điển hình về việc chọn cấu trúc theo **miền khóa**, không chỉ theo tên thao tác “membership”.
 
-## TypedArray
+## `TypedArray`
 
-Common types:
+Các kiểu thường dùng:
 
 ```text
 Int32Array
@@ -307,115 +254,77 @@ BigInt64Array
 BigUint64Array
 ```
 
-Advantages:
+Ưu điểm chính là độ dài cố định, vùng lưu trữ số gọn, quy tắc chuyển đổi dễ dự đoán hơn và khả năng làm việc với dữ liệu nhị phân. Đổi lại, chúng không hỗ trợ `push/pop` như mảng động và mỗi kiểu có miền giá trị cố định.
 
-```text
-fixed length
-compact numeric storage
-predictable coercion
-interop với binary buffers
+## Tràn số và chuyển đổi trong `TypedArray`
+
+Gán một `Number` lớn vào `Int32Array` sẽ chuyển giá trị theo ngữ nghĩa số nguyên 32 bit. Nếu khoảng cách của Dijkstra có thể vượt `2^31-1`, `Int32Array` có thể làm sai kết quả dù phép toán bằng `Number` ban đầu vẫn chính xác.
+
+Khi cần miền số của `Number`, có thể dùng `Float64Array`:
+
+```js
+const dist = new Float64Array(n);
+dist.fill(Infinity);
 ```
 
-Trade-offs:
-
-```text
-không dynamic push/pop
-numeric range fixed
-assignment có coercion/wrap semantics
-```
-
-## `Int32Array` overflow semantics
-
-Assign large Number vào `Int32Array` sẽ convert/wrap theo 32-bit integer semantics.
-
-Nếu Dijkstra distance có thể > 2^31-1, `Int32Array` sai dù Number algorithm đúng.
-
-Use `Float64Array` cho Number range hoặc different representation.
-
-## `Uint8Array` cho flags
-
-Visited, color, state nhỏ rất hợp:
+`Uint8Array` rất phù hợp với cờ hoặc trạng thái nhỏ:
 
 ```js
 const state = new Uint8Array(n);
-// 0 unvisited, 1 visiting, 2 done
+// 0 = chưa thăm, 1 = đang thăm, 2 = hoàn tất
 ```
 
-compact hơn objects/strings.
+`BigInt64Array` và `BigUint64Array` chứa số nguyên 64 bit; chúng không có miền vô hạn như `BigInt` độc lập.
 
-## BigInt typed arrays
+## Toán tử bit dùng 32 bit
 
-`BigInt64Array` và `BigUint64Array` hỗ trợ 64-bit bigint storage, nhưng values vẫn limited 64-bit modulo semantics, không arbitrary-size như standalone BigInt.
-
-Đừng nhầm “BigInt type” với unlimited typed-array cell.
-
-## Bitwise operators là 32-bit
-
-Number bitwise operators convert operands sang signed/unsigned 32-bit.
+Các toán tử bit trên `Number` chuyển toán hạng sang số nguyên 32 bit. Vì vậy:
 
 ```js
 1 << 31
 ```
 
-có signed behavior.
-
-Bitmask với >31 useful bits cần caution. `BigInt` bitwise operators có thể hỗ trợ larger masks:
+có hành vi số có dấu 32 bit. Một mặt nạ cần hơn khoảng 31 bit hữu dụng phải được thiết kế cẩn thận. `BigInt` có toán tử bit riêng:
 
 ```js
 1n << 60n
 ```
 
-nhưng code/collections/comparators phải consistent BigInt.
+nhưng toàn bộ phép toán và cấu trúc liên quan phải nhất quán với `BigInt`.
 
-## `>>> 0`
-
-Pattern:
+Mẫu:
 
 ```js
 x >>> 0
 ```
 
-convert về unsigned 32-bit Number.
+chuyển về `Number` không dấu 32 bit. Nó hữu ích trong một số thao tác băm hoặc bit, nhưng sẽ cắt bỏ các bit cao và không phải cách tổng quát để “biến số thành số dương”.
 
-Useful trong hashing/bit operations, nhưng silently truncates higher bits. Không dùng như generic “make positive” nếu data >32-bit.
+## Sắp xếp số
 
-## Numeric sort comparator
-
-Default:
+`Array.prototype.sort()` mặc định không nên được dùng để suy ra thứ tự số tăng dần:
 
 ```js
 [2, 10, 3].sort()
 ```
 
-sort theo string-like ordering semantics, không numeric ascending như thường mong đợi.
-
-Use:
+Với `Number`, dùng:
 
 ```js
 arr.sort((a, b) => a - b);
 ```
 
-cho Number safe domain.
-
-## BigInt sort comparator
-
-Không trả `a-b` BigInt trực tiếp vì comparator return expected Number-like sign contract; relational comparator an toàn:
+Với `BigInt`, dùng so sánh quan hệ:
 
 ```js
 arr.sort((a, b) => a < b ? -1 : a > b ? 1 : 0);
 ```
 
-## Sort stability
+ECMAScript hiện đại quy định `Array.prototype.sort()` là ổn định (stable). Nếu phải hỗ trợ môi trường cũ hoặc không chuẩn, cần kiểm tra môi trường đích thay vì giả định.
 
-Modern ECMAScript specifies stable `Array.prototype.sort`, nhưng nếu code targeting old/nonstandard environments cần check runtime. Library docs/runtime target vẫn là source of truth.
+## Hàng đợi ưu tiên
 
-Stability matters khi secondary order relies on original order.
-
-## Custom priority queue
-
-JavaScript standard library không có built-in general `PriorityQueue` giống Java.
-
-DSA code thường implement binary heap:
+Thư viện chuẩn JavaScript không cung cấp một `PriorityQueue` tổng quát giống Java. Mã DSA thường tự cài đặt heap nhị phân:
 
 ```js
 class MinHeap {
@@ -425,188 +334,151 @@ class MinHeap {
   }
 
   push(x) { /* sift up */ }
-  pop() { /* swap root/last + sift down */ }
+  pop() { /* đổi root với phần tử cuối rồi sift down */ }
   peek() { return this.a[0]; }
 }
 ```
 
-Comparator semantics phải consistent.
+Hàm so sánh phải nhất quán và có tính bắc cầu.
 
-## Object allocation trong heap
+## Cấp phát đối tượng trong heap
 
-Dijkstra:
+Dijkstra viết theo kiểu:
 
 ```js
 heap.push({ node: v, dist: nd });
 ```
 
-rất readable nhưng có nhiều object allocations.
+rất dễ đọc nhưng có thể tạo nhiều đối tượng tạm thời. Nếu đo đạc cho thấy cấp phát hoặc GC là nút thắt, có thể cân nhắc mảng song song, tuple nhỏ, trạng thái mã hóa hoặc heap theo kiểu **struct-of-arrays**.
 
-Nếu performance/memory critical, alternatives:
+Không nên làm mã nguồn phức tạp trước khi có số liệu đo cho thấy điều đó cần thiết.
 
-```text
-parallel arrays
-small tuples
-encoded integer states
-custom struct-of-arrays heap
-```
+## Dijkstra với phần tử cũ trong heap
 
-Profile trước khi complexity hóa code.
-
-## Stale-entry Dijkstra
-
-Do custom heap thường không support decrease-key:
+Heap tự cài đặt thường không có `decrease-key`. Một mẫu đơn giản là chèn khoảng cách mới:
 
 ```js
 heap.push([newDist, v]);
 ```
 
-khi pop:
+và khi lấy ra, bỏ qua phần tử đã cũ:
 
 ```js
 if (d !== dist[v]) continue;
 ```
 
-Pattern này đơn giản và robust.
+Mẫu này đơn giản, dễ kiểm chứng và thường đủ tốt.
 
-## Recursion depth
+## Độ sâu đệ quy
 
-Recursive DFS/backtracking có thể vượt call stack.
+DFS hoặc quay lui (backtracking) đệ quy có thể vượt ngăn xếp lời gọi. Giới hạn cụ thể không phải một hằng số di động giữa các trình duyệt, phiên bản Node.js hoặc engine.
 
-Runtime limit không standardized portable theo number cụ thể. Đừng assume một depth cố định từ browser/Node version khác.
+Với cây hoặc đồ thị có thể rất sâu, nên chuyển sang ngăn xếp tường minh:
 
-Deep graph/tree nên iterative.
-
-## Tail-call optimization
-
-ECMAScript có proper-tail-call history/spec semantics trong strict contexts, nhưng mainstream runtime support/practical portability không nên được giả định cho DSA stack safety.
-
-Use explicit stack khi depth uncontrolled.
-
-## Async không giải recursion stack tự động theo cách miễn phí
-
-Chuyển code sang Promise/`async` thay scheduling semantics, allocation/overhead lớn và không phải general substitute cho iterative DFS.
-
-DSA CPU traversal nên explicit stack nếu stack-safe cần thiết.
-
-## Event loop và long-running algorithms
-
-JavaScript trên browser/Node thường chạy user JS trên event-loop thread context. Một `O(n^2)` loop dài có thể block UI/event processing.
-
-Algorithm complexity vì thế ảnh hưởng responsiveness, không chỉ throughput.
-
-Large CPU-bound task có thể cần:
-
-```text
-chunking/yielding
-Web Worker
-worker_threads
-native/WASM
+```js
+const stack = [start];
+while (stack.length) {
+  const u = stack.pop();
+  // xử lý u
+}
 ```
 
-nhưng concurrency design là separate concern.
+Không nên dựa vào tối ưu lời gọi đuôi như một bảo đảm an toàn ngăn xếp cho mã DSA phổ thông.
 
-## Microtasks và yielding
+## `async` không thay thế thuật toán dạng lặp
 
-`await Promise.resolve()` yield vào microtask queue nhưng có thể vẫn starve other event phases nếu loop poorly designed.
+Chuyển một DFS sâu sang `Promise` hoặc `async` làm thay đổi cách lập lịch và tạo thêm chi phí cấp phát. Đây không phải giải pháp tổng quát thay cho việc dùng ngăn xếp tường minh.
 
-Không dùng async scheduling như substitute cho correct algorithm selection.
+Tương tự, `await Promise.resolve()` chỉ chuyển việc tiếp tục sang hàng đợi microtask; nếu lặp không hợp lý, nó vẫn có thể làm các giai đoạn khác của event loop bị đói.
 
-## Garbage collection
+**Lập lịch bất đồng bộ không sửa được lựa chọn thuật toán sai.**
 
-JS runtime reclaim unreachable objects, nhưng Map/Set/cache/closure có thể giữ references sống lâu.
+## Event loop và thuật toán chạy lâu
 
-Unbounded memoization:
+Trong trình duyệt và trong nhiều ngữ cảnh Node.js, mã JavaScript của người dùng chạy trên luồng gắn với event loop. Một vòng lặp `O(n²)` dài có thể làm giao diện hoặc xử lý sự kiện bị chặn.
+
+Khi công việc CPU lớn, có thể cân nhắc:
+
+```text
+chia nhỏ công việc và chủ động nhường quyền thực thi
+Web Worker
+worker_threads
+native code / WebAssembly
+```
+
+Thiết kế xử lý đồng thời là một vấn đề riêng; nó không thay đổi độ phức tạp cơ bản của thuật toán.
+
+## Bộ thu gom rác và vòng đời dữ liệu
+
+GC thu hồi đối tượng không còn đạt tới được, nhưng `Map`, `Set`, bộ nhớ đệm, closure, listener và timer có thể giữ tham chiếu sống lâu hơn dự kiến.
 
 ```js
 const cache = new Map();
 ```
 
-có thể trở thành logical memory leak.
+Nếu bộ nhớ đệm trên không có chính sách giới hạn hoặc loại bỏ, nó có thể trở thành rò rỉ bộ nhớ ở cấp logic.
 
-GC tự động không nghĩa memory lifecycle không cần design.
+GC tự động không có nghĩa là vòng đời bộ nhớ không cần được thiết kế.
 
-## WeakMap và WeakSet
+## `WeakMap` và `WeakSet`
 
-WeakMap keys phải là objects/non-primitive appropriate according to runtime semantics; entries không giữ key alive như strong map.
+`WeakMap` hữu ích khi cần gắn siêu dữ liệu với vòng đời của một đối tượng mà không muốn ánh xạ mạnh giữ đối tượng đó sống. Tuy nhiên, nó không hỗ trợ duyệt như `Map`, nên không phù hợp với bảng trạng thái thuật toán cần liệt kê toàn bộ phần tử.
 
-Useful cho metadata gắn với object lifetime.
+## Closure và giữ tham chiếu
 
-Không enumerable, không suitable cho general algorithm state table cần iteration.
+Closure có thể giữ tham chiếu tới mảng hoặc cây lớn ngay cả khi hàm bên ngoài đã trả về. Listener và timer cũng giữ callback cùng trạng thái được bắt giữ.
 
-## Closures và retention
+Nhiều rò rỉ bộ nhớ JavaScript là **rò rỉ do khả năng đạt tới (reachability leak)** chứ không phải lỗi quên `free()` như trong C.
 
-Closure có thể giữ reference tới large array/tree dù outer function đã return.
+## Hình dạng đối tượng và JIT
 
-Event listeners/timers cũng giữ callbacks và captured state.
+Các engine JIT thường có tối ưu nội bộ dựa trên **hình dạng đối tượng (object shape)**. Những đối tượng được tạo với cùng trường và cùng thứ tự thường dễ tối ưu hơn các đối tượng liên tục thêm/xóa trường theo nhiều kiểu khác nhau.
 
-Memory leaks JS thường là reachability leaks hơn manual-free errors.
-
-## Object shape và hidden classes
-
-JIT engines có internal object-shape optimizations. Objects được tạo cùng property order/shape thường optimization-friendly hơn objects thay đổi fields tùy hứng.
-
-Trong hot loops, stable data shape có thể giúp performance.
-
-Nhưng exact hidden-class behavior là engine-specific; đừng code phụ thuộc internal undocumented thresholds.
-
-## `delete` property và shapes
-
-Repeated add/delete dynamic properties có thể degrade optimized shape.
-
-For DSA fixed record, initialize known fields upfront:
+Với bản ghi cố định, nên khởi tạo các trường từ đầu:
 
 ```js
 const node = { key, left: null, right: null, size: 1 };
 ```
 
-thường clearer và shape-stable.
+Chi tiết về hidden class là đặc thù engine; không nên viết mã phụ thuộc vào các ngưỡng nội bộ không được đặc tả.
 
-## Class vs object literal
+## `class` và object literal
 
-`class Node` và object literal đều ultimately use object semantics. Class giúp consistent construction/API, không tự guarantee compact C-like layout.
+`class Node` và object literal cuối cùng đều tạo đối tượng JavaScript. `class` giúp thống nhất cách xây dựng và API, nhưng không tự tạo bố trí bộ nhớ gọn giống `struct` của C.
 
-For millions nodes, representation choice arrays vs objects matters more than class syntax.
+Khi có hàng triệu nút, quyết định dùng mảng, `TypedArray` hay đối tượng thường quan trọng hơn việc chọn cú pháp `class` hay object literal.
 
-## Private fields
+## Đồ thị CSR trong JavaScript
 
-`#field` cung cấp language-level privacy nhưng có runtime/tooling considerations. Không cần dùng trong performance DSA unless encapsulation matters.
-
-## CSR graph trong JavaScript
-
-Static dense-ID graph có thể dùng TypedArrays:
+Với đồ thị tĩnh có ID đỉnh dày đặc, có thể dùng **CSR (Compressed Sparse Row)** bằng `TypedArray`:
 
 ```text
 Uint32Array offsets
 Uint32Array edges
 ```
 
-để giảm object/array overhead.
-
-Building CSR có thể cần two-pass:
+Quá trình xây dựng thường gồm hai lượt:
 
 ```text
-count degrees
-prefix-sum offsets
-fill edges
+đếm bậc
+prefix sum để tạo offsets
+điền danh sách cạnh
 ```
 
-Đây là bridge giữa JS convenience và systems-style compact representation.
+Cách này giảm chi phí của nhiều object/mảng con và đưa cách biểu diễn JavaScript gần hơn với bố trí dữ liệu kiểu hệ thống.
 
-## Dynamic adjacency lists
-
-Readable:
+Với đồ thị vừa phải, danh sách kề vẫn là mặc định dễ đọc:
 
 ```js
 const g = Array.from({length: n}, () => []);
 g[u].push(v);
 ```
 
-Good default cho moderate graphs.
+Khi có hàng triệu cạnh, nên đo chi phí của các mảng lồng nhau thay vì mặc định rằng chúng đủ gọn.
 
-If millions edges, nested array object overhead cần benchmark.
+## Chuỗi JavaScript dùng UTF-16
 
-## String là UTF-16 code units
+Các thao tác:
 
 ```js
 s.length
@@ -614,63 +486,53 @@ s[i]
 s.charCodeAt(i)
 ```
 
-operate largely on UTF-16 code units.
-
-Emoji/code point ngoài BMP có surrogate pairs.
+chủ yếu làm việc trên **đơn vị mã UTF-16 (UTF-16 code unit)**. Một ký tự Unicode ngoài BMP có thể chiếm hai code unit:
 
 ```js
 '😀'.length === 2
 ```
 
-String algorithm phải define unit:
+Thuật toán chuỗi phải xác định rõ đơn vị đang xử lý:
 
 ```text
 UTF-16 code unit
 Unicode code point
-grapheme cluster
+cụm tự vị (grapheme cluster)
 ```
 
-## Iterating code points
+Vòng lặp:
 
 ```js
 for (const ch of s) {
-    // iterates Unicode code points-ish strings via iterator semantics
+  // duyệt theo code point theo ngữ nghĩa iterator của chuỗi
 }
 ```
 
-better than index for surrogate pairs, nhưng grapheme cluster vẫn có thể gồm nhiều code points.
+xử lý cặp thay thế tốt hơn truy cập từng code unit, nhưng một ký tự mà người dùng nhìn thấy vẫn có thể gồm nhiều code point. Khi cần phân đoạn theo ký tự hiển thị, có thể dùng `Intl.Segmenter`.
 
-`Intl.Segmenter` có thể segment graphemes khi UI/user-perceived chars cần thiết.
+## Chuỗi là bất biến
 
-## String immutability
+Chuỗi JavaScript không thay đổi tại chỗ. Engine có thể tối ưu phép nối trong nhiều trường hợp, nhưng khi xây chuỗi lớn, việc gom các đoạn vào mảng rồi `join()` thường là lựa chọn dễ kiểm soát hơn.
 
-JavaScript strings immutable. Repeated concatenation runtime có optimizations nhưng large construction thường better dùng array pieces + `join` trong some workloads.
+Nếu đây là đường chạy nóng, cần đo trên tải công việc thực tế thay vì dựa vào giả định chung.
 
-Benchmark if hot.
+## Thứ tự duyệt của `Map` và `Object`
 
-## Map iteration order
+`Map` giữ **thứ tự chèn**, nhưng đó không phải thứ tự khóa đã sắp xếp. Nếu thuật toán cần ánh xạ có thứ tự giống `TreeMap`, JavaScript chuẩn không cung cấp sẵn một cây cân bằng tổng quát; có thể cần tự cài đặt hoặc dùng thư viện.
 
-`Map` giữ insertion order by spec. Nhưng order đó không phải sorted key order.
+Quy tắc duyệt thuộc tính của `Object` có các nhóm thứ tự được đặc tả, trong đó khóa dạng số nguyên có quy tắc riêng. Không nên dùng object thông thường như một ánh xạ có thứ tự tổng quát chỉ vì một ví dụ nhỏ cho ra thứ tự mong muốn.
 
-Nếu algorithm needs sorted map semantics, Map + sort keys mỗi time không equivalent TreeMap performance.
+Về ngữ nghĩa, `Map` thường rõ ràng hơn khi mục tiêu thực sự là một ánh xạ.
 
-JavaScript standard library thiếu built-in balanced ordered map; custom/library structure có thể cần.
+## Trạng thái dày đặc và trạng thái thưa
 
-## Object property iteration order
-
-Property enumeration có specified ordering categories nhưng subtle integer-like key rules. Đừng dùng plain object iteration như generic sorted/insertion-order map assumption.
-
-Map semantics clearer.
-
-## Stable state encoding bằng string
+Khóa chuỗi:
 
 ```js
 const key = `${r}|${c}|${mask}`;
 ```
 
-simple but allocates string.
-
-Alternative nested arrays if bounds known:
+đơn giản nhưng tạo chuỗi mới. Nếu các cận nhỏ và biết trước, có thể cấp phát trạng thái dày đặc:
 
 ```js
 const seen = Array.from({length: rows}, () =>
@@ -678,63 +540,33 @@ const seen = Array.from({length: rows}, () =>
 );
 ```
 
-Memory may explode. Estimate state space first.
+Tuy nhiên kích thước có thể tăng rất nhanh. Với không gian trạng thái thưa, `Map` hoặc `Set` dùng khóa chuẩn hóa bằng chuỗi hay `BigInt` có thể tiết kiệm bộ nhớ hơn.
 
-## Big state and hash Map
+Đây chính là sự đánh đổi **thưa–dày (sparse–dense)** quen thuộc trong quy hoạch động và biểu diễn đồ thị.
 
-For sparse reachable states, `Map`/`Set` with canonical string/BigInt keys may be better than dense tensor allocation.
+## `NaN`, `-0` và số dấu phẩy động
 
-Same sparse-vs-dense DP trade-off as Java/C.
-
-## TypedArray initialization
-
-Typed arrays initialize numeric zeros automatically:
-
-```js
-const dist = new Float64Array(n);
-```
-
-but zero may not be desired sentinel.
-
-```js
-dist.fill(Infinity);
-```
-
-for shortest-path Number domain.
-
-## `NaN` caveats
-
-`NaN` comparisons are unusual:
+`NaN` có ngữ nghĩa đặc biệt:
 
 ```js
 NaN === NaN // false
 ```
 
-`Map`/Set use SameValueZero-like semantics where NaN keys can behave differently from `===` intuition.
+`Map` và `Set` dùng ngữ nghĩa kiểu SameValueZero, nên cách `NaN` làm khóa không hoàn toàn giống trực giác dựa trên `===`. Thuật toán số nên tránh để `NaN` xuất hiện nếu miền bài toán không định nghĩa rõ ý nghĩa của nó.
 
-Algorithm numeric domain should avoid NaN unless explicitly meaningful.
+JavaScript cũng có `0` và `-0`. Phần lớn phép so sánh và cấu trúc ánh xạ coi chúng tương đương cho mục đích DSA, nhưng đây vẫn là trường hợp biên cần biết trong tính toán số mức thấp.
 
-## `-0`
-
-JavaScript has `0` and `-0` at Number level. Most equality/map semantics treat them equivalent enough for DSA, but numeric edge cases can matter in low-level math.
-
-Usually normalize/ignore unless domain distinguishes sign-zero behavior.
-
-## Floating-point sums
-
-Prefix sum of decimals can accumulate rounding:
+Tổng số dấu phẩy động có thể tích lũy sai số làm tròn:
 
 ```js
 0.1 + 0.2 !== 0.3
 ```
 
-If domain is money, integer minor units or decimal library may be needed.
+Với tiền tệ, thường nên lưu số nguyên theo đơn vị nhỏ nhất hoặc dùng thư viện số thập phân phù hợp. Tính đúng đắn của thuật toán phụ thuộc vào cách biểu diễn số, không chỉ vào công thức toán học.
 
-Algorithm mathematical correctness depends numeric representation.
+## Sắp xếp đối tượng và hàm so sánh
 
-## Sorting objects
-
-Comparator should avoid inconsistent results:
+Một hàm so sánh nhiều trường có thể viết:
 
 ```js
 items.sort((a, b) =>
@@ -742,159 +574,122 @@ items.sort((a, b) =>
 );
 ```
 
-If fields may exceed safe range, relational comparisons instead of subtraction.
+Nếu trường có thể vượt miền số nguyên an toàn, nên dùng so sánh quan hệ thay cho phép trừ. Hàm so sánh phải nhất quán và có tính bắc cầu; nếu không, kết quả sắp xếp có thể khó dự đoán.
 
-Comparator should be transitive to avoid undefined-like sorting behavior/results.
+## Đo hiệu năng trong môi trường JIT
 
-## Performance measurement
-
-JS JIT has warm-up/tiering/deoptimization. Microbenchmark should:
+JavaScript JIT có giai đoạn làm nóng, tối ưu theo tầng và có thể mất tối ưu. Một phép đo vi mô nên:
 
 ```text
-run warm-up
-use realistic data shapes
-consume result để tránh dead-work artifacts
-measure multiple iterations
-observe memory/GC
-avoid comparing cold run only
+chạy làm nóng trước khi đo
+sử dụng hình dạng dữ liệu gần thực tế
+thực sự tiêu thụ kết quả để tránh đo công việc vô nghĩa
+đo nhiều lần
+quan sát cả bộ nhớ và GC
+không chỉ so sánh lần chạy lạnh đầu tiên
 ```
 
-Node `performance.now()`/`process.hrtime.bigint()` can measure timing, but methodology matters more than timer resolution.
+Có thể dùng `performance.now()` hoặc `process.hrtime.bigint()`, nhưng phương pháp đo quan trọng hơn độ phân giải của đồng hồ.
 
-## Hidden benchmark trap: polymorphic data
+Một benchmark chỉ dùng mảng toàn số có thể không phản ánh hệ thống thực tế nơi dữ liệu trộn số, object và chuỗi. Dữ liệu đo phải gần với tải công việc thật.
 
-Benchmark array of all numbers rồi production array mixed number/object/string có thể represent differently.
+## Trình duyệt và Node.js
 
-Benchmark same shape as workload.
+Ngữ nghĩa ECMAScript cơ bản có thể giống nhau, nhưng phiên bản engine, giới hạn bộ nhớ, cấu hình GC và môi trường thực thi có thể khác. Không nên đưa ra một con số hiệu năng phổ quát cho “JavaScript” mà không nêu rõ môi trường chạy.
 
-## Browser vs Node runtime
+## Web Worker và `worker_threads`
 
-Same ECMAScript semantics, but engine version, memory limits, GC tuning và environment differ.
+Công việc CPU lớn có thể được chuyển sang worker để tránh chặn luồng chính. Tuy nhiên truyền dữ liệu, tuần tự hóa và bộ nhớ dùng chung đều có chi phí.
 
-Do not claim universal performance numbers for “JavaScript” without runtime context.
+Xử lý song song chỉ hữu ích khi công việc có thể chia được và phần công việc đủ lớn để bù chi phí phối hợp.
 
-## Web Worker / worker_threads
+## `SharedArrayBuffer` và `Atomics`
 
-CPU-bound algorithms có thể move to worker to avoid blocking main thread.
+JavaScript có cơ chế đồng thời mức thấp trên bộ nhớ dùng chung. Tuy nhiên, viết cấu trúc dữ liệu không khóa (lock-free) đúng đắn đòi hỏi hiểu thứ tự bộ nhớ và giao thức phối hợp.
 
-Data transfer/serialization/shared memory adds cost.
+Chỉ thêm `Atomics` vào một cấu trúc dữ liệu tùy ý không tự biến nó thành cấu trúc an toàn khi truy cập đồng thời.
 
-Parallelism only helps if workload partitionable and overhead justified.
+## Liên hệ với WebAssembly
 
-## SharedArrayBuffer và Atomics
+Với công việc số học hoặc đồ thị rất nhạy về hiệu năng, C/Rust/WASM có thể cho bố trí bộ nhớ gọn hơn và quyền kiểm soát lớn hơn. Tuy nhiên, chi phí qua ranh giới JavaScript–WebAssembly và chuyển đổi dữ liệu có thể chi phối nếu lời gọi quá nhỏ hoặc quá thường xuyên.
 
-Low-level shared-memory concurrency exists but correct lock-free algorithms require memory-order/coordination understanding.
+Khi dùng WASM, thường nên gom đủ công việc thành lô trước khi chuyển qua ranh giới môi trường.
 
-Just using `Atomics` does not make arbitrary data structure thread-safe.
+## Kiểm thử đối chiếu
 
-## WebAssembly connection
-
-For performance-critical numeric/graph operations, C/Rust/WASM may offer compact memory/control. But boundary crossing and data conversion can dominate if calls too fine-grained.
-
-Batch work across boundary.
-
-## Common misconceptions
-
-“Array index access luôn như C array” — abstraction/runtime representation khác.
-
-“Bitmask bằng Number có 53 bits vì Number safe integer 53 bits” — JS bitwise operators coerce to 32-bit, nên ordinary bitwise mask không dùng all 53 bits.
-
-“Map object keys compare by fields” — chúng compare identity.
-
-“`shift()` luôn O(1)” — không nên assume; head-index queue safer predictable pattern.
-
-“BigInt chỉ là Number lớn hơn” — arithmetic mixing/API semantics khác.
-
-“GC nghĩa là không leak” — strong references/caches/closures vẫn giữ memory.
-
-“Async recursion tránh stack issue free” — scheduling/overhead semantics khác, không general DSA fix.
-
-## Testing DSA trong JavaScript
-
-Use reference simple implementation trên small random inputs.
+JavaScript là ngôn ngữ động, vì vậy kiểm thử dựa trên tính chất và đối chiếu với cách làm đơn giản đặc biệt hữu ích.
 
 Heap:
 
 ```text
-push random values
-compare popped sequence với [...values].sort((a,b)=>a-b)
+đưa nhiều giá trị vào heap
+lấy lần lượt ra
+so sánh với [...values].sort((a, b) => a - b)
 ```
 
-Graph shortest path:
+Đường đi ngắn nhất:
 
 ```text
-small graphs
-compare Dijkstra/BFS with Floyd-Warshall reference
+dùng đồ thị nhỏ
+so sánh Dijkstra hoặc BFS với Floyd-Warshall làm tham chiếu
 ```
 
-String algorithms:
+Thuật toán chuỗi:
 
 ```text
-compare KMP matches với naive index checks
-include Unicode/code-unit cases according to chosen semantics
+so sánh vị trí KMP tìm được với cách kiểm tra ngây thơ
+thêm trường hợp Unicode phù hợp với đơn vị chuỗi đã chọn
 ```
 
-## Property tests
+## Kiểm thử dựa trên tính chất
 
-Binary search lower bound:
+Với tìm kiếm nhị phân tìm cận dưới, kết quả `ans` phải thỏa:
 
 ```text
-all i < ans: a[i] < target
-all i >= ans: a[i] >= target
+mọi i < ans  : a[i] < target
+mọi i >= ans : a[i] >= target
 ```
 
-DSU:
+Với DSU, phân hoạch liên thông phải tương đương với các thành phần liên thông của đồ thị tham chiếu. Với Segment Tree, có thể sinh ngẫu nhiên cập nhật và truy vấn rồi đối chiếu với mảng xử lý trực tiếp.
+
+Kiểm thử kiểu này thường bắt được lỗi ở ranh giới biểu diễn tốt hơn một vài ví dụ viết tay.
+
+## Phân tích bộ nhớ
+
+Heap snapshot trong Chrome DevTools hoặc công cụ của Node.js có thể cho thấy `Map` còn giữ tham chiếu, cấu trúc nút dùng quá nhiều object hoặc listener/closure giữ dữ liệu ngoài dự kiến.
+
+CPU profile giúp tìm vòng lặp nóng, hàm so sánh tốn kém, thao tác băm hoặc mã hóa chuỗi chiếm nhiều thời gian. Tối ưu nên dựa trên bằng chứng đo được.
+
+## Danh sách kiểm tra cách biểu diễn
 
 ```text
-connectivity partition equivalent reference graph components
+ID số nguyên dày đặc?        -> Array / TypedArray
+Khóa thưa và tùy ý?          -> Map / Set
+Cần hàng đợi?                -> mảng + head index / deque tự cài đặt
+Cần hàng đợi ưu tiên?        -> heap tự cài đặt / thư viện phù hợp
+Cần bitmask > 32 bit?        -> BigInt hoặc cách biểu diễn khác
+Cần số nguyên chính xác >2^53? -> BigInt
+Đồ thị tĩnh rất lớn?         -> cân nhắc CSR bằng TypedArray
+DFS có thể rất sâu?          -> ngăn xếp dạng lặp
+Xử lý Unicode?               -> xác định code unit / code point / grapheme
 ```
 
-Segment tree:
+## Mô hình tư duy
+
+> DSA trong JavaScript mạnh nhất khi ta giữ rõ **bất biến thuật toán**, nhưng không giả định môi trường chạy giống C hoặc Java. `Array`, `Map`, `Number`, `BigInt`, `TypedArray` và object đều có ranh giới ngữ nghĩa riêng. Tính đúng đắn trước hết đòi hỏi chọn đúng ngữ nghĩa số, so sánh và chuỗi; hiệu năng sau đó phụ thuộc cách biểu diễn dữ liệu, lượng cấp phát và hành vi của môi trường chạy thực tế.
+
+Khi cách triển khai bắt đầu lớn, hãy tự hỏi:
 
 ```text
-random update/query compare brute-force array
-```
-
-JS dynamic language makes property testing particularly valuable.
-
-## Memory profiling
-
-Chrome DevTools/Node heap snapshots can reveal retained Maps, object-heavy nodes, listeners/closures.
-
-CPU profiles identify hot loops/comparators/hash/string encoding.
-
-Optimize based on evidence.
-
-## Representation checklist
-
-```text
-Dense integer IDs?       -> Array/TypedArray
-Sparse arbitrary keys?   -> Map/Set
-Need queue?               -> array + head index / custom deque
-Need priority queue?      -> custom heap/library
-Need >32-bit bitmask?     -> BigInt or alternate representation
-Need exact >2^53 int?     -> BigInt
-Huge static graph?        -> consider CSR TypedArrays
-Deep DFS?                 -> iterative stack
-Unicode text?             -> define code unit/code point/grapheme semantics
-```
-
-## Mental Model
-
-> JavaScript DSA mạnh nhất khi ta giữ algorithmic invariant rõ nhưng **không giả định runtime giống C/Java**. Array, Map, Number, BigInt, TypedArray và objects mỗi loại có semantic boundary riêng. Correctness trước hết cần numeric/equality/string semantics đúng; performance sau đó cần stable data shape, compact representation và measurement dưới runtime thật.
-
-Khi implementation bắt đầu lớn, hãy hỏi:
-
-```text
-Number range có exact không?
-Bitwise có bị 32-bit coercion không?
-State key dùng value hay identity?
-Array có dense không?
-Queue có tránh shift/unshift hot path không?
-Recursion depth có bounded không?
-Object allocation/GC có dominate không?
-TypedArray type có đủ range không?
-Unicode unit có đúng domain không?
+Miền Number có còn chính xác không?
+Toán tử bit có bị ép về 32 bit không?
+Khóa trạng thái cần so sánh theo giá trị hay định danh?
+Mảng có thực sự dày đặc không?
+Đường chạy nóng của hàng đợi có tránh shift/unshift không?
+Độ sâu đệ quy có bị chặn không?
+Cấp phát object hoặc GC có trở thành nút thắt không?
+Kiểu TypedArray có đủ miền giá trị không?
+Đơn vị Unicode có đúng với miền bài toán không?
 ```
 
 Xem thêm: [Memory Models](../00_foundations/03_memory_models_c_java_javascript.md), [Cross-language Testing](./03_cross_language_testing_and_benchmarking.md).

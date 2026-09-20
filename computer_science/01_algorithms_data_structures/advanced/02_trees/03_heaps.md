@@ -1,35 +1,35 @@
-# Heap và Priority Queue
+# Heap và hàng đợi ưu tiên
 **Đống và hàng đợi ưu tiên (Heap & Priority Queue / 힙과 우선순위 큐)**
 
 Heap được thiết kế cho một loại câu hỏi rất cụ thể: trong một tập dữ liệu thay đổi liên tục, phần tử **nhỏ nhất hoặc lớn nhất hiện tại** là gì, và làm sao cập nhật tập đó mà không phải sort lại toàn bộ sau mỗi thay đổi?
 
-Đây là điểm bắt đầu quan trọng. Heap không phải “một cách sort dữ liệu”. Nó là representation tối thiểu đủ mạnh để giữ một extreme element ở vị trí dễ truy cập.
+Đây là điểm bắt đầu quan trọng. Heap không phải “một cách sort dữ liệu”. Nó là cách biểu diễn (representation) tối thiểu đủ mạnh để giữ một extreme phần tử ở vị trí dễ truy cập.
 
-## Heap property và partial order
+## Heap tính chất và thứ tự bộ phận
 
-Với **min-heap (최소 힙)**, mỗi node thỏa:
+Với **đống nhỏ nhất (최소 힙)**, mỗi nút thỏa:
 
 \[
-key(parent) \le key(child)
+khóa(parent) \le khóa(child)
 \]
 
-Với **max-heap (최대 힙)** thì ngược lại.
+Với **đống lớn nhất (최대 힙)** thì ngược lại.
 
-Invariant này chỉ tạo **partial order**. Trong min-heap, root chắc chắn nhỏ nhất, nhưng hai siblings không cần có thứ tự với nhau; phần tử ở subtree trái cũng không cần nhỏ hơn phần tử ở subtree phải.
+bất biến (invariant) này chỉ tạo **thứ tự bộ phận**. Trong đống nhỏ nhất, nút gốc chắc chắn nhỏ nhất, nhưng hai siblings không cần có thứ tự với nhau; phần tử ở cây con trái cũng không cần nhỏ hơn phần tử ở cây con phải.
 
 Đó chính là lý do heap có thể duy trì extreme nhanh hơn việc giữ toàn bộ collection sorted.
 
-## Mental Model
+## Mô hình tư duy
 
-> Heap cố tình biết ít hơn sorted structure. Nó chỉ duy trì đủ order để extreme luôn ở root. Chính việc “không trả tiền cho thông tin không cần thiết” tạo nên hiệu quả của heap.
+> Heap cố tình lưu ít thông tin thứ tự hơn một cấu trúc đã sắp xếp hoàn toàn. Nó chỉ duy trì đủ quan hệ để phần tử cực trị luôn ở nút gốc. Chính việc “không trả chi phí cho thông tin không cần thiết” tạo nên hiệu quả của heap.
 
-Nếu workload cần predecessor/successor/range order, heap không phù hợp. Nếu workload liên tục cần `min`, `max`, `top-k` hoặc “task ưu tiên cao nhất tiếp theo”, heap rất tự nhiên.
+Nếu tải công việc cần phần tử liền trước/liền sau hoặc duyệt có thứ tự theo khoảng, heap không phù hợp. Nếu liên tục cần `min`, `max`, `top-k` hoặc “tác vụ có độ ưu tiên cao nhất tiếp theo”, heap là lựa chọn tự nhiên.
 
-## Binary heap và complete tree
+## đống nhị phân và complete cây
 
-Binary heap thường dùng **complete binary tree (완전 이진 트리)**: mọi level được lấp đầy từ trái sang phải, trừ level cuối có thể chưa đầy.
+đống nhị phân thường dùng **complete cây nhị phân (완전 이진 트리)**: mọi tầng được lấp đầy từ trái sang phải, trừ tầng cuối có thể chưa đầy.
 
-Shape invariant này cho phép bỏ hoàn toàn pointers. Với array zero-based:
+Shape bất biến này cho phép bỏ hoàn toàn các con trỏ. Với mảng zero-based:
 
 \[
 left(i)=2i+1
@@ -40,14 +40,14 @@ right(i)=2i+2
 \]
 
 \[
-parent(i)=\left\lfloor\frac{i-1}{2}\right\rfloor
+nút cha(i)=\left\lfloor\frac{i-1}{2}\right\rfloor
 \]
 
-Nhờ đó heap có locality tốt hơn pointer-based trees, chỉ cần một contiguous/dynamic array.
+Nhờ đó heap có tính cục bộ (locality) tốt hơn pointer-based các cây, chỉ cần một contiguous/mảng động.
 
-## Insert: giữ shape trước, sửa order sau
+## Chèn: giữ hình dạng trước, sửa thứ tự sau
 
-Để insert `x`, ta append vào cuối array. Việc này tự động giữ complete-tree shape. Sau đó `x` có thể nhỏ hơn parent và phá heap property, nên ta **sift up / bubble up (상향 이동)**:
+Để insert `x`, ta append vào cuối mảng. Việc này tự động giữ complete-tree shape. Sau đó `x` có thể nhỏ hơn nút cha và phá heap tính chất, nên ta **sift up / bubble up (상향 이동)**:
 
 ```text
 append x
@@ -55,13 +55,13 @@ while x violates parent relation:
     swap x with parent
 ```
 
-Mỗi swap đưa element lên một level. Height của complete binary tree là `O(log n)`, nên insert là:
+Mỗi swap đưa phần tử lên một tầng. chiều cao của complete cây nhị phân là `O(log n)`, nên insert là:
 
 \[
 O(\log n)
 \]
 
-### JavaScript implementation
+### JavaScript cách triển khai
 
 ```js
 class MinHeap {
@@ -93,18 +93,18 @@ class MinHeap {
 }
 ```
 
-Comparator phải tạo ordering nhất quán. Nếu comparator không transitive, heap property không còn meaningful.
+Comparator phải tạo ordering nhất quán. Nếu comparator không transitive, heap tính chất không còn meaningful.
 
-## Extract-min: sửa root bằng last element
+## Extract-min: sửa nút gốc bằng last phần tử
 
-Root là minimum. Khi remove root, nếu chỉ xóa `a[0]`, complete-tree representation sẽ bị hỏng. Cách chuẩn là:
+nút gốc là minimum. Khi remove nút gốc, nếu chỉ xóa `a[0]`, complete-tree cách biểu diễn sẽ bị hỏng. Cách chuẩn là:
 
-1. lưu root làm answer;
-2. chuyển last element lên root;
+1. lưu nút gốc làm answer;
+2. chuyển last phần tử lên nút gốc;
 3. giảm size;
-4. sift-down root tới khi heap property được phục hồi.
+4. sift-down nút gốc tới khi heap tính chất được phục hồi.
 
-Trong min-heap, nếu node lớn hơn một child, ta phải swap với child nhỏ hơn. Chọn child nhỏ hơn là cần thiết: swap với child lớn hơn có thể vẫn để child nhỏ hơn vi phạm ngay lập tức.
+Trong đống nhỏ nhất, nếu nút lớn hơn một nút con, ta phải swap với nút con nhỏ hơn. Chọn nút con nhỏ hơn là cần thiết: swap với nút con lớn hơn có thể vẫn để nút con nhỏ hơn vi phạm ngay lập tức.
 
 ```js
 pop() {
@@ -135,23 +135,23 @@ pop() {
 
 `peek()` là `O(1)`, còn `push()` và `pop()` là `O(log n)`.
 
-## Build heap: vì sao `O(n)` chứ không phải `O(n log n)`?
+## xây dựng heap: vì sao `O(n)` chứ không phải `O(n log n)`?
 
-Một cách ngây thơ là insert từng element, cho `O(n log n)`. Nhưng nếu toàn bộ array đã có sẵn, ta có thể gọi sift-down từ parent cuối cùng đi ngược lên root.
+Một cách ngây thơ là insert từng phần tử, cho `O(n log n)`. Nhưng nếu toàn bộ mảng đã có sẵn, ta có thể gọi sift-down từ nút cha cuối cùng đi ngược lên nút gốc.
 
-Thoạt nhìn có `n` nodes và mỗi sift có thể `O(log n)`, nên dễ đoán `O(n log n)`. Nhưng phần lớn nodes nằm gần leaves và hầu như không cần đi xa.
+Thoạt nhìn có `n` các nút và mỗi sift có thể `O(log n)`, nên dễ đoán `O(n log n)`. Nhưng phần lớn các nút nằm gần các nút lá và hầu như không cần đi xa.
 
-Khoảng một nửa nodes là leaves, cost 0. Khoảng một phần tư có height 1, một phần tám có height 2, v.v. Tổng work gần:
+Khoảng một nửa các nút là các nút lá, chi phí 0. Khoảng một phần tư có chiều cao 1, một phần tám có chiều cao 2, v.v. Tổng work gần:
 
 \[
 n\left(\frac{1}{4}\cdot1+\frac{1}{8}\cdot2+\frac{1}{16}\cdot3+\cdots\right)=O(n)
 \]
 
-Đây là ví dụ quan trọng của **aggregate analysis**: không thể lấy worst cost của một node rồi nhân cho mọi node nếu distribution của work rất không đều.
+Đây là ví dụ quan trọng của **aggregate analysis**: không thể lấy worst chi phí của một nút rồi nhân cho mọi nút nếu phân phối của work rất không đều.
 
-## Priority Queue là abstraction, heap là implementation
+## hàng đợi ưu tiên là sự trừu tượng (abstraction), heap là cách triển khai
 
-**Priority Queue (우선순위 큐)** là ADT mô tả operations như:
+**hàng đợi ưu tiên (우선순위 큐)** là ADT mô tả các thao tác như:
 
 ```text
 insert(item, priority)
@@ -159,7 +159,7 @@ peek-best()
 extract-best()
 ```
 
-Binary heap chỉ là một implementation rất phổ biến. Priority queue cũng có thể được implement bằng balanced tree, bucket queues, Fibonacci heap, pairing heap hoặc specialized monotonic queues tùy workload.
+đống nhị phân chỉ là một cách triển khai rất phổ biến. hàng đợi ưu tiên cũng có thể được implement bằng balanced cây, ngăn băm queues, Fibonacci heap, pairing heap hoặc chuyên biệt monotonic queues tùy khối lượng công việc.
 
 Trong Java:
 
@@ -171,7 +171,7 @@ pq.offer(8);
 System.out.println(pq.poll()); // 2
 ```
 
-Muốn max-heap:
+Muốn đống lớn nhất:
 
 ```java
 PriorityQueue<Integer> max =
@@ -186,7 +186,7 @@ Không nên viết comparator kiểu:
 (a, b) -> a.cost - b.cost
 ```
 
-nếu integer có thể lớn, vì subtraction có thể overflow. Dùng:
+nếu integer có thể lớn, vì subtraction có thể tràn số. Dùng:
 
 ```java
 Comparator.comparingInt(Node::cost)
@@ -194,26 +194,26 @@ Comparator.comparingInt(Node::cost)
 
 hoặc `Integer.compare(a.cost, b.cost)`.
 
-Nếu priority là `long`, dùng `Comparator.comparingLong`.
+Nếu độ ưu tiên là `long`, dùng `Comparator.comparingLong`.
 
-## Heap không hỗ trợ arbitrary search tốt
+## Heap không hỗ trợ tìm kiếm tùy ý tốt
 
-Trong min-heap, biết `parent <= child` không cho biết target nằm ở nhánh nào. Nếu target lớn hơn root, cả hai subtrees đều có thể chứa nó. Vì vậy tìm một arbitrary value vẫn có thể:
+Trong đống nhỏ nhất, biết `parent <= child` không cho biết đích nằm ở nhánh nào. Nếu đích lớn hơn nút gốc, cả hai các cây con đều có thể chứa nó. Vì vậy tìm một arbitrary giá trị vẫn có thể:
 
 \[
 O(n)
 \]
 
-Đây là khác biệt bản chất với BST. Heap tối ưu **extreme retrieval**, BST tối ưu **ordered search theo key**.
+Đây là khác biệt bản chất với BST. Heap tối ưu **extreme retrieval**, BST tối ưu **ordered search theo khóa**.
 
 ## Heap Sort
 
 Heap có thể dùng để sort in-place:
 
-1. build max-heap `O(n)`;
-2. swap root lớn nhất với cuối array;
+1. xây dựng đống lớn nhất `O(n)`;
+2. swap nút gốc lớn nhất với cuối mảng;
 3. giảm heap size;
-4. sift-down root;
+4. sift-down nút gốc;
 5. lặp lại.
 
 Time:
@@ -222,15 +222,15 @@ Time:
 O(n\log n)
 \]
 
-Heap sort có worst-case tốt và có thể in-place với `O(1)` extra array space, nhưng thường cache behavior và constant factor không tốt bằng các sort thực dụng khác. Nó cũng không stable theo implementation chuẩn.
+Heap sort có trường hợp xấu nhất tốt và có thể in-place với `O(1)` extra mảng space, nhưng thường bộ nhớ đệm hành vi và constant factor không tốt bằng các sort thực dụng khác. Nó cũng không ổn định theo cách triển khai chuẩn.
 
-Điểm đáng học là heap sort cho thấy cùng invariant “root là extreme” có thể được dùng để xác định phần tử cuối của sorted suffix từng bước.
+Điểm đáng học là heap sort cho thấy cùng bất biến “nút gốc là extreme” có thể được dùng để xác định phần tử cuối của hậu tố đã sắp xếp từng bước.
 
-## Top-K và bounded memory
+## Top-K và bounded bộ nhớ
 
-Nếu stream có `n` phần tử nhưng chỉ cần `k` lớn nhất, sort toàn bộ tạo nhiều order information không cần thiết.
+Nếu luồng có `n` phần tử nhưng chỉ cần `k` phần tử lớn nhất, sắp xếp toàn bộ sẽ tạo nhiều thông tin thứ tự không cần thiết.
 
-Giữ **min-heap size `k`**:
+Giữ **đống nhỏ nhất size `k`**:
 
 ```text
 nếu heap chưa đủ k -> push
@@ -244,17 +244,17 @@ Time:
 O(n\log k)
 \]
 
-Memory:
+bộ nhớ:
 
 \[
 O(k)
 \]
 
-Khi `k << n`, đây là improvement quan trọng cả về time lẫn memory. Pattern này dùng trong ranking candidates, monitoring, recommendation, search aggregation và distributed top-k stages.
+Khi `k << n`, đây là cải thiện quan trọng cả về thời gian lẫn bộ nhớ. Mẫu này xuất hiện trong xếp hạng ứng viên, giám sát, hệ gợi ý, tổng hợp kết quả tìm kiếm và các giai đoạn Top-K phân tán.
 
 ## K-way merge
 
-Giả sử có `k` sorted lists với tổng `N` elements. Ta đưa phần tử đầu mỗi list vào min-heap. Mỗi lần pop smallest, ta advance đúng list đó rồi push phần tử tiếp theo.
+Giả sử có `k` danh sách đã sắp xếp với tổng `N` phần tử. Ta đưa phần tử đầu của mỗi danh sách vào đống nhỏ nhất. Mỗi lần lấy phần tử nhỏ nhất ra, ta chỉ tiến trong đúng danh sách đó rồi đưa phần tử tiếp theo vào heap.
 
 Heap chỉ chứa tối đa `k` heads:
 
@@ -262,27 +262,27 @@ Heap chỉ chứa tối đa `k` heads:
 O(N\log k)
 \]
 
-Đây là core idea của external merge sort, merge SSTables, merge log streams và nhiều pipeline xử lý sorted runs.
+Đây là core idea của bên ngoài sắp xếp trộn, merge SSTables, merge log streams và nhiều chuỗi xử lý xử lý sorted runs.
 
 ## Dijkstra và decrease-key
 
-Classical Dijkstra thường được mô tả với `decrease-key`: nếu distance của vertex giảm, update priority của entry đang trong heap.
+Classical Dijkstra thường được mô tả với `decrease-key`: nếu khoảng cách của đỉnh giảm, cập nhật độ ưu tiên của mục đang trong heap.
 
-Nhiều standard `PriorityQueue` APIs không hỗ trợ update priority trực tiếp. Có hai pattern chính.
+Nhiều standard `PriorityQueue` APIs không hỗ trợ cập nhật độ ưu tiên trực tiếp. Có hai mẫu chính.
 
-### Pattern 1: stale entries
+### mẫu 1: stale các mục
 
-Mỗi khi có distance tốt hơn, push entry mới. Khi pop:
+Mỗi khi có khoảng cách tốt hơn, push mục mới. Khi pop:
 
 ```java
 if (cur.dist() != dist[cur.node()]) continue;
 ```
 
-Entry cũ trở thành stale và được bỏ qua.
+mục cũ trở thành stale và được bỏ qua.
 
-Ưu điểm là implementation đơn giản; nhược điểm là heap có duplicates và memory/work tăng.
+Ưu điểm là cách triển khai đơn giản; nhược điểm là heap có các phần tử trùng và bộ nhớ/work tăng.
 
-### Pattern 2: indexed heap
+### mẫu 2: indexed heap
 
 Duy trì:
 
@@ -290,17 +290,17 @@ Duy trì:
 position[item] -> heap index
 ```
 
-Mỗi swap phải cập nhật `position`. Khi priority thay đổi, tìm item trực tiếp rồi sift-up/sift-down `O(log n)`.
+Mỗi swap phải cập nhật `position`. Khi độ ưu tiên thay đổi, tìm item trực tiếp rồi sift-up/sift-down `O(log n)`.
 
-Pattern này hữu ích khi priority update rất thường xuyên và identity của item quan trọng.
+mẫu này hữu ích khi độ ưu tiên cập nhật rất thường xuyên và identity của item quan trọng.
 
-## Scheduler và event simulation
+## Scheduler và sự kiện simulation
 
-Priority queue không chỉ dùng trong graph algorithms. Một event-driven simulator có events với timestamp; mỗi bước lấy event có thời gian sớm nhất. Scheduler có thể lấy task có deadline/priority cao nhất. Timer wheel, calendar queue hoặc heap đều là cách tổ chức “next event”.
+hàng đợi ưu tiên không chỉ dùng trong các thuật toán đồ thị. Một sự kiện-driven simulator có các sự kiện với timestamp; mỗi bước lấy sự kiện có thời gian sớm nhất. Scheduler có thể lấy task có deadline/độ ưu tiên cao nhất. Timer wheel, calendar queue hoặc heap đều là cách tổ chức “next sự kiện”.
 
-Điểm chung là workload không cần toàn bộ events sorted hoàn chỉnh; nó chỉ liên tục cần **next best**.
+Điểm chung là tải công việc không cần toàn bộ sự kiện được sắp xếp hoàn chỉnh; nó chỉ liên tục cần **phần tử tốt nhất tiếp theo**.
 
-## Median online bằng hai heaps
+## Median trực tuyến bằng hai heaps
 
 Để theo dõi median của stream:
 
@@ -309,56 +309,56 @@ max-heap lower half
 min-heap upper half
 ```
 
-Invariant:
+bất biến:
 
 ```text
 mọi lower <= mọi upper
 size difference <= 1
 ```
 
-Median là root của heap lớn hơn hoặc average của hai roots.
+Median là nút gốc của heap lớn hơn hoặc average của hai các nút gốc.
 
-Mỗi insert `O(log n)`, median query `O(1)`.
+Mỗi insert `O(log n)`, median truy vấn `O(1)`.
 
-Đây là ví dụ composition: hai heaps phối hợp để duy trì một boundary order statistic.
+Đây là ví dụ composition: hai heaps phối hợp để duy trì một ranh giới thống kê thứ tự.
 
-## D-ary heap và branching-factor trade-off
+## D-ary heap và branching-factor sự đánh đổi (trade-off)
 
-Binary heap có 2 children. Có thể dùng d-ary heap với `d` children mỗi node. Height giảm còn khoảng:
+đống nhị phân có 2 các nút con. Có thể dùng d-ary heap với `d` các nút con mỗi nút. chiều cao giảm còn khoảng:
 
 \[
 \log_d n
 \]
 
-nhưng sift-down phải inspect tới `d` children để chọn best. Workload nhiều decrease-key/insert so với extract-min có thể hưởng lợi từ branching factor lớn hơn; cache behavior cũng có thể thay đổi.
+nhưng sift-down phải inspect tới `d` các nút con để chọn best. khối lượng công việc nhiều decrease-key/insert so với extract-min có thể hưởng lợi từ hệ số phân nhánh lớn hơn; bộ nhớ đệm hành vi cũng có thể thay đổi.
 
-Data structure design không phải chỉ chọn “heap hay không”, mà còn chọn representation phù hợp operation mix.
+cấu trúc dữ liệu design không phải chỉ chọn “heap hay không”, mà còn chọn cách biểu diễn phù hợp thao tác mix.
 
-## Stability và tie-breaking
+## tính ổn định và quy tắc phân xử khi bằng nhau
 
-Priority queue thường không đảm bảo stable order giữa items có cùng priority. Nếu domain cần FIFO trong cùng priority, comparator nên thêm sequence number:
+hàng đợi ưu tiên thường không đảm bảo ổn định order giữa items có cùng độ ưu tiên. Nếu domain cần FIFO trong cùng độ ưu tiên, comparator nên thêm số thứ tự:
 
 ```text
 (priority, insertionSequence)
 ```
 
-Ví dụ job scheduler có thể cần “priority cao trước; nếu bằng nhau, task đến trước chạy trước”. Tie-breaking là part của domain semantics, không phải chi tiết phụ.
+Ví dụ job bộ lập lịch có thể cần “độ ưu tiên cao trước; nếu bằng nhau, task đến trước chạy trước”. quy tắc phân xử khi bằng nhau là part của domain ngữ nghĩa (semantics), không phải chi tiết phụ.
 
-## Mutable priority objects: một bug phổ biến
+## có thể thay đổi độ ưu tiên các đối tượng: một bug phổ biến
 
-Nếu heap chứa object rồi priority field của object bị mutate trực tiếp, heap không tự biết để rearrange. Heap array vẫn giữ shape cũ và invariant có thể sai.
+Nếu heap chứa đối tượng rồi độ ưu tiên trường của đối tượng bị mutate trực tiếp, heap không tự biết để rearrange. Heap mảng vẫn giữ shape cũ và bất biến có thể sai.
 
 Do đó hoặc:
 
-- objects immutable về priority;
-- dùng explicit update/decrease-key;
-- push entry mới và dùng stale-entry/version pattern.
+- các đối tượng bất biến sau khi tạo về độ ưu tiên;
+- dùng explicit cập nhật/decrease-key;
+- push mục mới và dùng stale-entry/version mẫu.
 
-Trong Java, mutate object đang ở `PriorityQueue` không khiến queue reheapify tự động.
+Trong Java, mutate đối tượng đang ở `PriorityQueue` không khiến queue reheapify tự động.
 
-## Heap với C: ownership và capacity
+## Heap với C: quyền sở hữu (ownership) và capacity
 
-Trong C, binary heap thường là dynamic array struct:
+Trong C, đống nhị phân thường là mảng động struct:
 
 ```c
 typedef struct {
@@ -368,42 +368,42 @@ typedef struct {
 } Heap;
 ```
 
-Ngoài heap invariant, implementation phải giữ thêm capacity invariant và ownership của `data`. `realloc` failure, object lifetime và comparator callback là concerns mà Java/JavaScript runtime che bớt.
+Ngoài heap bất biến, cách triển khai phải giữ thêm capacity bất biến và quyền sở hữu của `data`. `realloc` failure, đối tượng vòng đời (lifetime) và comparator callback là concerns mà Java/JavaScript môi trường chạy (runtime) che bớt.
 
-Nếu item lớn, có thể heap pointers thay vì copy structs, nhưng locality và ownership semantics thay đổi.
+Nếu item lớn, có thể heap các con trỏ thay vì copy structs, nhưng tính cục bộ và quyền sở hữu ngữ nghĩa thay đổi.
 
-## Common misconceptions
+## Những hiểu lầm phổ biến
 
-**“Heap là sorted array dưới dạng tree.”** Sai. Heap chỉ partial-order.
+**“Heap là mảng đã sắp xếp dưới dạng cây.”** Sai. Heap chỉ partial-order.
 
-**“Build heap phải `O(n log n)` vì mỗi insert `O(log n)`.”** Chỉ đúng nếu build bằng repeated insert. Bottom-up heapify là `O(n)`.
+**“Xây dựng heap phải `O(n log n)` vì mỗi lần chèn tốn `O(log n)`.”** Điều này chỉ đúng nếu xây dựng bằng cách chèn lặp lại. Heapify từ dưới lên (**bottom-up heapify**) là `O(n)`.
 
-**“Min-heap giúp binary-search một value.”** Không. Heap không có BST ordering giữa left/right subtrees.
+**“đống nhỏ nhất giúp binary-search một giá trị.”** Không. Heap không có BST ordering giữa left/right các cây con.
 
-**“PriorityQueue hỗ trợ thay priority của object tự động.”** Thường không. Mutation ngoài heap operations có thể phá invariant.
+**“PriorityQueue hỗ trợ thay độ ưu tiên của đối tượng tự động.”** Thường không. sự thay đổi dữ liệu ngoài heap các thao tác có thể phá bất biến.
 
-**“Heap luôn tốt hơn sorted array cho min.”** Nếu dataset static và cần iterate sorted order nhiều lần, sort một lần có thể tốt hơn. Heap hữu ích khi collection mutate và repeatedly cần extreme.
+**“Heap luôn tốt hơn mảng đã sắp xếp cho min.”** Nếu dataset tĩnh và cần iterate thứ tự đã sắp xếp nhiều lần, sort một lần có thể tốt hơn. Heap hữu ích khi collection mutate và lặp lại cần extreme.
 
-## Testing heap bằng invariant
+## kiểm thử heap bằng bất biến
 
-Sau random sequence push/pop, kiểm:
+Sau ngẫu nhiên sequence push/pop, kiểm:
 
 ```text
 for every i > 0:
     compare(parent(i), i) <= 0
 ```
 
-Đồng thời so pop sequence với reference `sort()` trên datasets nhỏ. Với indexed heap, phải kiểm thêm bidirectional consistency:
+Đồng thời nên so sánh dãy phần tử lấy ra với kết quả tham chiếu từ `sort()` trên các tập dữ liệu nhỏ. Với đống có chỉ mục (indexed heap), cần kiểm tra thêm tính nhất quán hai chiều:
 
 ```text
 position[item] = i
 heap[i] = item
 ```
 
-Heap bugs thường xuất hiện ở boundary: empty, one element, only-left-child, duplicate priorities, comparator ties và last swap.
+Lỗi heap thường xuất hiện ở các trường hợp biên: rỗng, chỉ một phần tử, chỉ có nút con trái, các phần tử có cùng độ ưu tiên, trường hợp bộ so sánh trả hòa và lần đổi chỗ cuối cùng.
 
-## Mental Model mở rộng
+## Mô hình tư duy mở rộng
 
-> Heap là một **dynamic frontier structure**. Nó không cố giữ toàn bộ dữ liệu ordered; nó giữ đủ local invariant để câu hỏi “ai là ứng viên tốt nhất tiếp theo?” luôn trả lời rẻ.
+> Heap là một **động frontier structure**. Nó không cố giữ toàn bộ dữ liệu ordered; nó giữ đủ cục bộ bất biến để câu hỏi “ai là ứng viên tốt nhất tiếp theo?” luôn trả lời rẻ.
 
-Khi gặp một algorithm có loop kiểu “liên tục chọn candidate nhỏ nhất/lớn nhất rồi sinh thêm candidates”, hãy nghĩ tới priority queue. Sau đó mới hỏi binary heap có đúng cost model không, có cần decrease-key không, có bounded priority domain để dùng bucket không, và tie-breaking semantics là gì.
+Khi gặp một thuật toán có loop kiểu “liên tục chọn ứng viên nhỏ nhất/lớn nhất rồi sinh thêm các ứng viên”, hãy nghĩ tới hàng đợi ưu tiên. Sau đó mới hỏi đống nhị phân có đúng mô hình chi phí không, có cần decrease-key không, có bounded độ ưu tiên domain để dùng ngăn băm không, và quy tắc phân xử khi bằng nhau ngữ nghĩa là gì.

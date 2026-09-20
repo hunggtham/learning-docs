@@ -1,17 +1,17 @@
 # Searching
 **Tìm kiếm (Searching / 탐색)**
 
-Searching là quá trình thu hẹp **candidate space / 후보 공간** cho tới khi xác định được target, boundary hoặc chứng minh answer không tồn tại. Điểm phân biệt giữa các search algorithms không phải syntax loop mà là **information nào cho phép loại một vùng candidates**.
+Searching là quá trình thu hẹp **ứng viên space / 후보 공간** cho tới khi xác định được đích, ranh giới hoặc chứng minh answer không tồn tại. Điểm phân biệt giữa các search các thuật toán không phải syntax loop mà là **thông tin nào cho phép loại một vùng các ứng viên**.
 
-Nếu không có structure hỗ trợ, linear scan có thể là optimal practical choice. Nếu dữ liệu sorted, comparison cho phép loại nửa space. Nếu có hash index, identity lookup gần-direct. Nếu state space là graph, BFS/DFS/Dijkstra tổ chức frontier khác nhau. Nếu answer space có monotonic predicate, binary search có thể hoạt động ngay cả khi không tồn tại một array cụ thể.
+Nếu không có structure hỗ trợ, linear quét có thể là optimal practical choice. Nếu dữ liệu sorted, phép so sánh cho phép loại nửa space. Nếu có chỉ mục băm, identity tra cứu gần-direct. Nếu không gian trạng thái là đồ thị, BFS/DFS/Dijkstra tổ chức frontier khác nhau. Nếu answer space có monotonic predicate, tìm kiếm nhị phân có thể hoạt động ngay cả khi không tồn tại một mảng cụ thể.
 
-Mental model quan trọng nhất là:
+Mô hình tư duy quan trọng nhất là:
 
-> Search nhanh khi mỗi observation loại được một vùng candidates lớn mà không bỏ mất answer.
+> Search nhanh khi mỗi observation loại được một vùng các ứng viên lớn mà không bỏ mất answer.
 
-## Linear search và lower bound trực giác
+## tìm kiếm tuyến tính và cận dưới trực giác
 
-Nếu array không sorted, không có hash/index và ta cần tìm một arbitrary value, worst case có thể phải xem mọi phần tử.
+Nếu mảng chưa được sắp xếp, không có băm hoặc chỉ mục và cần tìm một giá trị bất kỳ, trường hợp xấu nhất có thể phải xem mọi phần tử.
 
 ```c
 int linear_search(const int *a, int n, int target) {
@@ -22,23 +22,23 @@ int linear_search(const int *a, int n, int target) {
 }
 ```
 
-Worst-case `O(n)`.
+trường hợp xấu nhất `O(n)`.
 
-Không nên coi linear search là “thuật toán kém”. Nếu dataset nhỏ, chỉ search một lần hoặc preprocessing/indexing đắt hơn query, linear scan có thể là lựa chọn tốt nhất.
+Không nên coi tìm kiếm tuyến tính là “thuật toán kém”. Nếu dataset nhỏ, chỉ search một lần hoặc tiền xử lý/lập chỉ mục đắt hơn truy vấn, linear quét có thể là lựa chọn tốt nhất.
 
-Ví dụ với 20 elements, build hash table rồi lookup một lần thường không có giá trị thực tế.
+Ví dụ với 20 các phần tử, xây dựng bảng băm (Hash Table) rồi tra cứu một lần thường không có giá trị thực tế.
 
-## Binary search cần monotonic information
+## tìm kiếm nhị phân cần monotonic thông tin
 
-Binary search hoạt động vì sorted order tạo một predicate monotonic.
+tìm kiếm nhị phân hoạt động vì thứ tự đã sắp xếp tạo một predicate monotonic.
 
-Ví dụ tìm target trong sorted ascending array:
+Ví dụ tìm đích trong sorted ascending mảng:
 
 ```text
 values < target | maybe target | values > target
 ```
 
-Midpoint comparison cho phép chứng minh một nửa candidates không thể chứa target.
+Midpoint phép so sánh cho phép chứng minh một nửa các ứng viên không thể chứa đích.
 
 ```java
 int binarySearch(int[] a, int target) {
@@ -56,13 +56,13 @@ int binarySearch(int[] a, int target) {
 }
 ```
 
-`lo + (hi-lo)/2` tránh overflow mà `(lo+hi)/2` có thể gây trong fixed-width integer domain.
+`lo + (hi-lo)/2` tránh tràn số mà `(lo+hi)/2` có thể gây trong độ rộng cố định integer domain.
 
-## Loop invariant quan trọng hơn template
+## bất biến vòng lặp quan trọng hơn template
 
-Một binary search đúng nên có invariant rõ ràng.
+Một tìm kiếm nhị phân đúng nên có bất biến (invariant) rõ ràng.
 
-Ví dụ lower-bound dùng half-open interval `[lo, hi)`:
+Ví dụ lower-bound dùng khoảng nửa mở `[lo, hi)`:
 
 ```java
 int lowerBound(int[] a, int target) {
@@ -82,7 +82,7 @@ int lowerBound(int[] a, int target) {
 }
 ```
 
-Invariant có thể viết:
+bất biến có thể viết:
 
 ```text
 mọi index < lo có value < target
@@ -90,27 +90,27 @@ mọi index >= hi có value >= target
 answer boundary nằm trong [lo, hi]
 ```
 
-Khi `lo == hi`, candidate interval co lại thành boundary answer.
+Khi `lo == hi`, ứng viên interval co lại thành ranh giới answer.
 
-Nếu hiểu invariant này, ta không cần học thuộc hàng chục template first/last occurrence khác nhau.
+Nếu hiểu bất biến này, ta không cần học thuộc hàng chục mẫu tìm lần xuất hiện đầu tiên/cuối cùng khác nhau.
 
-## Lower bound và upper bound
+## cận dưới và cận trên (upper bound)
 
-**Lower bound** là vị trí đầu tiên có value `>= target`.
+**cận dưới** là vị trí đầu tiên có giá trị `>= target`.
 
-**Upper bound** là vị trí đầu tiên có value `> target`.
+**cận trên** là vị trí đầu tiên có giá trị `> target`.
 
-Với sorted array, số lần target xuất hiện là:
+Với mảng đã sắp xếp, số lần đích xuất hiện là:
 
 ```text
 upperBound(target) - lowerBound(target)
 ```
 
-Nếu target không tồn tại, lower bound vẫn có ý nghĩa: đó là insertion position để giữ order.
+Nếu đích không tồn tại, cận dưới vẫn có ý nghĩa: đó là insertion position để giữ order.
 
-Đây là lý do APIs kiểu `lower_bound` mạnh hơn function chỉ trả `found/not found`.
+Đây là lý do APIs kiểu `lower_bound` mạnh hơn hàm chỉ trả `found/not found`.
 
-## First true / last false abstraction
+## giá trị đúng đầu tiên / giá trị sai cuối cùng sự trừu tượng (abstraction)
 
 Rất nhiều binary-search problems có thể chuẩn hóa về sequence:
 
@@ -135,9 +135,9 @@ Ta cần first true hay last true?
 
 Đây là cách giảm mạnh off-by-one bugs.
 
-## Binary search on answer
+## tìm kiếm nhị phân on answer
 
-Binary search không cần sorted array. Nó cần **ordered solution space + monotonic feasibility predicate**.
+tìm kiếm nhị phân không cần mảng đã sắp xếp. Nó cần **ordered không gian lời giải + monotonic feasibility predicate**.
 
 Ví dụ tìm ship capacity nhỏ nhất để vận chuyển packages trong `D` ngày.
 
@@ -145,13 +145,13 @@ Ví dụ tìm ship capacity nhỏ nhất để vận chuyển packages trong `D`
 P(C) = có thể ship trong <= D ngày với capacity C không?
 ```
 
-Nếu capacity `C` khả thi thì mọi capacity lớn hơn cũng khả thi:
+Nếu sức chứa `C` khả thi thì mọi sức chứa lớn hơn cũng khả thi:
 
 ```text
 F F F T T T
 ```
 
-Ta tìm first true.
+Ta tìm giá trị đúng đầu tiên.
 
 Complexity:
 
@@ -163,7 +163,7 @@ O(cost(P) * log(answer range))
 
 ## Cách chứng minh predicate monotonic
 
-Đừng chỉ nhìn problem và “cảm giác binary search được”. Hãy chứng minh:
+Đừng chỉ nhìn problem và “cảm giác tìm kiếm nhị phân được”. Hãy chứng minh:
 
 ```text
 P(x) true -> P(y) true với mọi y >= x
@@ -171,23 +171,23 @@ P(x) true -> P(y) true với mọi y >= x
 
 hoặc orientation ngược lại.
 
-Ví dụ minimum capacity, more capacity không thể làm schedule khó hơn nên monotonic.
+Ví dụ trong bài tìm sức chứa tối thiểu, tăng sức chứa không thể làm lịch khó hơn nên vị từ có tính đơn điệu.
 
-Nhưng nếu parameter ảnh hưởng objective theo non-monotonic way, binary search sẽ sai dù code template hoàn hảo.
+Nhưng nếu parameter ảnh hưởng objective theo non-monotonic way, tìm kiếm nhị phân sẽ sai dù code template hoàn hảo.
 
-## Search trên integer answer range
+## Tìm kiếm trên miền đáp án nguyên
 
 Giả sử answer thuộc `[L, R]` inclusive và tìm minimum feasible.
 
-Một robust half-open formulation là search `[L, R+1)` với upper sentinel chắc chắn feasible, hoặc dùng inclusive bounds cẩn thận.
+Một robust half-open formulation là search `[L, R+1)` với upper giá trị canh gác (sentinel) chắc chắn feasible, hoặc dùng inclusive bounds cẩn thận.
 
-Nếu `R+1` có overflow risk, cần representation khác.
+Nếu `R+1` có tràn số risk, cần cách biểu diễn (representation) khác.
 
-Trong production code, boundary domain quan trọng không kém algorithm idea.
+Trong mã dùng trong hệ thống thực tế, ranh giới domain quan trọng không kém thuật toán idea.
 
-## Binary search trên real numbers
+## tìm kiếm nhị phân trên real numbers
 
-Nếu answer continuous, exact equality hiếm có ý nghĩa vì floating-point.
+Nếu answer continuous, chính xác equality hiếm có ý nghĩa vì floating-point.
 
 Ta có hai stopping strategies:
 
@@ -198,27 +198,27 @@ hoặc hi - lo <= epsilon
 
 Fixed iterations thường predictable hơn. Với `double`, khoảng 60–100 iterations thường vượt quá precision cần thiết cho nhiều tasks.
 
-Nhưng correctness phải định nghĩa error tolerance theo domain. `1e-9` không tự động phù hợp với mọi scale.
+Nhưng tính đúng đắn phải định nghĩa error tolerance theo domain. `1e-9` không tự động phù hợp với mọi scale.
 
 ## Floating-point monotonic caveat
 
-Mathematical predicate có thể monotonic nhưng floating-point implementation gần threshold có rounding noise.
+Vị từ toán học có thể đơn điệu, nhưng cách triển khai bằng số dấu phẩy động gần ngưỡng có thể xuất hiện sai số làm tròn.
 
-Nếu predicate dựa vào accumulated floating-point sums, hãy xem xét numerical stability thay vì giả định exact monotonic sequence ở machine level.
+Nếu predicate dựa vào accumulated floating-point sums, hãy xem xét numerical tính ổn định thay vì giả định chính xác monotonic sequence ở machine tầng.
 
-## Exponential search khi chưa biết upper bound
+## Exponential search khi chưa biết cận trên
 
-Nếu answer position không có known finite upper bound, ta có thể grow bound theo powers of two:
+Nếu answer position không có known finite cận trên, ta có thể grow bound theo các lũy thừa của hai:
 
 ```text
 1, 2, 4, 8, 16, ...
 ```
 
-cho tới khi predicate true hoặc vượt target, sau đó binary search interval vừa tìm được.
+cho tới khi predicate true hoặc vượt đích, sau đó tìm kiếm nhị phân interval vừa tìm được.
 
-Cost logarithmic theo answer magnitude.
+chi phí logarithmic theo answer magnitude.
 
-Pattern này hữu ích cho:
+mẫu này hữu ích cho:
 
 ```text
 unbounded sorted stream/API
@@ -226,27 +226,27 @@ unknown array length abstraction
 first failure position trong infinite-like domain
 ```
 
-## Ternary search không phải binary search phiên bản “chia ba nhanh hơn”
+## Ternary search không phải tìm kiếm nhị phân phiên bản “chia ba nhanh hơn”
 
-Ternary search thường dùng trên **unimodal function** — tăng rồi giảm hoặc giảm rồi tăng — để tìm cực trị.
+Ternary search thường dùng trên **unimodal hàm** — tăng rồi giảm hoặc giảm rồi tăng — để tìm cực trị.
 
-Nó không thay binary search trên sorted/monotonic predicate. Chia ba không tự động giảm complexity tốt hơn về constant/logic; property của function quyết định algorithm.
+Nó không thay tìm kiếm nhị phân trên sorted/monotonic predicate. Chia ba không tự động giảm complexity tốt hơn về constant/logic; tính chất của hàm quyết định thuật toán.
 
 ## Interpolation search
 
-Nếu sorted numeric values phân bố gần uniform, interpolation search estimate position từ value thay vì midpoint.
+Nếu các giá trị số đã sắp xếp và phân bố gần đồng đều, Interpolation Search ước lượng vị trí từ chính giá trị thay vì luôn lấy điểm giữa.
 
-Expected performance có thể tốt trên distribution lý tưởng, nhưng worst-case có thể `O(n)`. Nó nhắc rằng search strategy có thể khai thác distribution ngoài order.
+Hiệu năng kỳ vọng có thể tốt trên phân phối lý tưởng, nhưng trường hợp xấu nhất vẫn có thể là `O(n)`. Điều này cho thấy chiến lược tìm kiếm có thể khai thác cả đặc điểm phân phối chứ không chỉ thứ tự.
 
-Trong general-purpose code, binary search predictable hơn.
+Trong general-purpose code, tìm kiếm nhị phân predictable hơn.
 
-## Hash lookup
+## Hash tra cứu
 
-Hash table dùng hash function để map key vào bucket/index structure.
+bảng băm dùng hàm băm để map khóa vào ngăn băm/index structure.
 
-Expected lookup thường `O(1)` nhưng phụ thuộc collision handling và hash distribution.
+kỳ vọng tra cứu thường `O(1)` nhưng phụ thuộc collision handling và hash phân phối.
 
-Hash search không giữ order, nên các query như:
+Tìm kiếm bằng băm không duy trì thứ tự, nên các truy vấn như:
 
 ```text
 floor/ceiling
@@ -256,31 +256,31 @@ predecessor/successor
 
 không tự nhiên.
 
-BST/TreeMap chậm hơn asymptotically cho equality lookup nhưng cung cấp ordered search semantics.
+BST hoặc `TreeMap` chậm hơn về mặt tiệm cận đối với tra cứu bằng nhau, nhưng đổi lại cung cấp ngữ nghĩa tìm kiếm có thứ tự (ordered search semantics).
 
-## Tree search
+## cây search
 
-BST search loại subtree dựa trên order invariant. Complexity `O(h)` chứ không tự động `O(log n)`.
+BST search loại cây con dựa trên bất biến thứ tự. Complexity `O(h)` chứ không tự động `O(log n)`.
 
 Balanced BST giữ `h = O(log n)`.
 
-B/B+Tree mở rộng cùng idea cho external memory bằng fan-out lớn.
+B/B+Tree mở rộng cùng idea cho bên ngoài bộ nhớ bằng fan-out lớn.
 
-Searching vì thế nối trực tiếp với representation.
+Searching vì thế nối trực tiếp với cách biểu diễn.
 
 ## Trie search
 
-Trie không compare toàn key theo total order. Nó consume key từng symbol/prefix.
+Trie không so sánh toàn khóa theo thứ tự toàn phần. Nó consume khóa từng symbol/prefix.
 
-Lookup length `L` thường khoảng `O(L)` dưới child lookup assumptions.
+tra cứu length `L` thường khoảng `O(L)` dưới nút con tra cứu các giả định.
 
-Trie phù hợp khi internal structure của key — prefix — có semantics quan trọng.
+Trie phù hợp khi nội bộ structure của khóa — prefix — có ngữ nghĩa quan trọng.
 
-## Graph search
+## đồ thị search
 
-BFS, DFS, Dijkstra, A* đều là searching trên state graph.
+BFS, DFS, Dijkstra, A* đều là searching trên đồ thị trạng thái.
 
-Khác nhau ở frontier policy:
+Khác nhau ở frontier chính sách:
 
 ```text
 DFS       -> stack
@@ -289,23 +289,23 @@ Dijkstra  -> min priority by distance
 A*        -> min priority by g + heuristic
 ```
 
-Đây là một unified mental model rất mạnh: search algorithm = state space + frontier order + visited/best-known policy.
+Một mô hình tư duy thống nhất rất hữu ích là: thuật toán tìm kiếm = không gian trạng thái + thứ tự của biên tìm kiếm + chính sách đã thăm/giá trị tốt nhất đã biết.
 
-## State-space search và duplicate detection
+## trạng thái-space search và phần tử trùng detection
 
-Trong puzzles/backtracking, cùng logical state có thể được reach qua nhiều histories.
+Trong các bài đố hoặc bài toán quay lui (backtracking), cùng một trạng thái logic (state) có thể được đi tới qua nhiều lịch sử khác nhau.
 
-Nếu future possibilities từ state giống nhau, ta nên canonicalize state và tránh expand lại.
+Nếu tương lai possibilities từ trạng thái giống nhau, ta nên canonicalize trạng thái và tránh expand lại.
 
-Đây chính là relation giữa search, graph visited và DP memoization.
+Đây chính là relation giữa search, đồ thị đã thăm và DP memoization.
 
-## Branch and bound
+## nhánh và cận
 
-Optimization search có thể giữ best-known solution và lower/upper bound cho partial states. Nếu branch không thể beat incumbent, prune.
+Tìm kiếm tối ưu có thể giữ lời giải tốt nhất hiện biết cùng cận dưới/cận trên cho các trạng thái chưa hoàn chỉnh. Nếu một nhánh không thể vượt lời giải hiện tại, có thể cắt tỉa nhánh đó.
 
-Đây không phải binary search; nó là search-tree pruning dựa trên objective bound.
+Đây không phải tìm kiếm nhị phân; nó là search-tree pruning dựa trên objective bound.
 
-Common pattern:
+Phổ biến mẫu:
 
 ```text
 if optimistic_bound(state) >= best:
@@ -322,37 +322,37 @@ A* dùng:
 f(n)=g(n)+h(n)
 \]
 
-trong đó `g` là cost đã đi, `h` là heuristic estimate remaining cost.
+trong đó `g` là chi phí đã đi, `h` là heuristic estimate remaining chi phí.
 
-Nếu heuristic admissible/consistent theo assumptions thích hợp, A* vẫn optimal nhưng explore ít states hơn Dijkstra trong nhiều spatial problems.
+Nếu heuristic chấp nhận được/consistent theo các giả định thích hợp, A* vẫn optimal nhưng explore ít các trạng thái hơn Dijkstra trong nhiều spatial problems.
 
-Heuristic là extra information giúp loại/deprioritize candidates — cùng bản chất với mọi search optimization.
+Heuristic là extra thông tin giúp loại/deprioritize các ứng viên — cùng bản chất với mọi search optimization.
 
-## Search index trong database
+## Chỉ mục tìm kiếm trong cơ sở dữ liệu
 
-Database table scan là linear search ở storage scale.
+cơ sở dữ liệu table quét là tìm kiếm tuyến tính ở lưu trữ scale.
 
-B+Tree index, hash index, inverted index đều là preprocessing structures để giảm candidate rows/documents.
+Chỉ mục B+Tree, chỉ mục băm và chỉ mục đảo đều là các cấu trúc tiền xử lý nhằm giảm số hàng hoặc tài liệu ứng viên cần xét.
 
-Index build/update có cost, vì vậy search speed luôn được mua bằng storage + maintenance.
+Xây dựng và cập nhật chỉ mục đều có chi phí, vì vậy tốc độ tìm kiếm luôn được đánh đổi bằng dung lượng lưu trữ và chi phí bảo trì.
 
-Mental model này giúp nối interview DSA với production systems.
+Mô hình tư duy này giúp nối interview DSA với các hệ thống thực tế.
 
 ## Inverted index
 
-Search engine text retrieval không scan every document cho mỗi query. Nó xây mapping:
+công cụ tìm kiếm text retrieval không quét mọi tài liệu cho mỗi truy vấn. Nó xây ánh xạ:
 
 ```text
 term -> sorted postings list of document IDs
 ```
 
-Query AND intersect postings lists, thường bằng two pointers/skip information.
+Truy vấn AND lấy giao của các danh sách vị trí xuất hiện, thường bằng hai con trỏ (two pointers) hoặc thông tin nhảy để bỏ qua nhanh.
 
-Đây là một search index được thiết kế theo workload: query theo term membership.
+Đây là một chỉ mục tìm kiếm được thiết kế theo tải công việc: truy vấn dựa trên việc một thuật ngữ có xuất hiện hay không.
 
-## Information theory intuition
+## thông tin theory intuition
 
-Nếu cần phân biệt `n` sorted positions bằng binary comparisons, mỗi comparison có khoảng hai outcomes và cung cấp cỡ một bit information.
+Nếu cần phân biệt `n` sorted positions bằng binary các phép so sánh, mỗi phép so sánh có khoảng hai outcomes và cung cấp cỡ một bit thông tin.
 
 Để distinguish `n` possibilities cần khoảng:
 
@@ -362,15 +362,15 @@ Nếu cần phân biệt `n` sorted positions bằng binary comparisons, mỗi c
 
 bits.
 
-Đây là intuition cho logarithmic comparison lower scale của binary search.
+Đây là intuition cho logarithmic phép so sánh lower scale của tìm kiếm nhị phân.
 
-Không phải proof lower bound đầy đủ cho mọi model, nhưng giúp hiểu vì sao `O(log n)` là tự nhiên.
+Không phải chứng minh cận dưới đầy đủ cho mọi mô hình, nhưng giúp hiểu vì sao `O(log n)` là tự nhiên.
 
-## Preprocessing vs query time
+## tiền xử lý vs truy vấn time
 
-Một dataset static với triệu queries đáng để build index/preprocess.
+Một dataset tĩnh với triệu các truy vấn đáng để xây dựng index/preprocess.
 
-Một dataset chỉ query một lần có thể không đáng.
+Một dataset chỉ truy vấn một lần có thể không đáng.
 
 Ví dụ:
 
@@ -386,31 +386,31 @@ q linear scans O(qn)
 
 Break-even phụ thuộc `q`, n và constants.
 
-Searching design vì thế cần nhìn **lifecycle workload**, không chỉ một query cô lập.
+Searching design vì thế cần nhìn **lifecycle khối lượng công việc**, không chỉ một truy vấn cô lập.
 
-## Common binary-search bugs
+## Phổ biến binary-search bugs
 
-### Midpoint update không shrink interval
+### Midpoint cập nhật không shrink interval
 
-Nếu branch dùng `lo = mid` trong interval nơi `mid == lo`, loop có thể infinite. Phải prove interval strictly shrinks.
+Nếu branch dùng `lo = mid` trong interval nơi `mid == lo`, loop có thể infinite. Phải prove khoảng giảm nghiêm ngặt.
 
 ### Wrong first/last orientation
 
-Code tìm first true nhưng predicate thật là true-then-false.
+Mã đang tìm giá trị đúng đầu tiên nhưng vị từ thực tế lại có dạng đúng-rồi-sai.
 
 ### Closed vs half-open trộn lẫn
 
-`hi = n-1` nhưng loop/updates viết như `[lo,hi)` tạo off-by-one.
+`hi = n-1` nhưng loop/các cập nhật viết như `[lo,hi)` tạo off-by-one.
 
 ### Predicate không monotonic
 
 Đây là bug conceptual, không phải syntax.
 
-### Overflow
+### tràn số
 
-`(lo+hi)/2`, `R+1` hoặc feasibility arithmetic có thể overflow.
+`(lo+hi)/2`, `R+1` hoặc feasibility arithmetic có thể tràn số.
 
-## Testing binary search bằng properties
+## kiểm thử tìm kiếm nhị phân bằng các tính chất
 
 Thay vì chỉ vài examples, test:
 
@@ -424,32 +424,32 @@ duplicates nhiều
 target tại first/last index
 ```
 
-Với lower bound, property:
+Với cận dưới, tính chất:
 
 ```text
 for all i < ans: a[i] < target
 for all i >= ans: a[i] >= target
 ```
 
-Property-based test này mạnh hơn checking one expected index.
+Property-based test này mạnh hơn checking one kỳ vọng index.
 
-## Search và cache locality
+## Search và tính cục bộ bộ nhớ đệm
 
-Binary search trên array có `O(log n)` comparisons nhưng access pattern nhảy. Tree search cũng pointer-chasing.
+tìm kiếm nhị phân trên mảng có `O(log n)` các phép so sánh nhưng mẫu truy cập nhảy. cây search cũng pointer-chasing.
 
-For small arrays, linear scan có thể cạnh tranh nhờ contiguous memory, vectorization và branch predictability.
+Với các mảng, linear quét có thể cạnh tranh nhờ contiguous bộ nhớ, vectorization và khả năng dự đoán nhánh.
 
-Asymptotic model không bỏ qua hardware effects.
+mô hình tiệm cận không bỏ qua hardware effects.
 
-## Galloping search trong merge/intersection
+## tìm kiếm nhảy nhanh trong merge/intersection
 
-Khi intersect sorted lists có size rất lệch, thay vì advance one-by-one trên list lớn, exponential/galloping jumps rồi binary search có thể tốt hơn.
+Khi lấy giao hai danh sách đã sắp xếp có kích thước rất chênh lệch, thay vì tiến từng phần tử trên danh sách lớn, có thể nhảy theo cấp số nhân rồi dùng tìm kiếm nhị phân để giảm công việc.
 
-Search techniques thường compose với nhau; không phải mỗi problem chỉ dùng một named algorithm.
+Search techniques thường compose với nhau; không phải mỗi problem chỉ dùng một named thuật toán.
 
 ## Search as elimination
 
-Một cách debug design:
+Một cách gỡ lỗi design:
 
 ```text
 Candidate set ban đầu là gì?
@@ -459,11 +459,11 @@ Candidate set có strictly shrink không?
 Stopping condition chứng minh điều gì?
 ```
 
-Nếu không trả lời được, search logic có thể đang dựa vào intuition chưa được proof.
+Nếu không trả lời được, search logic có thể đang dựa vào intuition chưa được chứng minh.
 
-## Mental Model
+## Mô hình tư duy
 
-> Searching là khoa học của **candidate elimination**. Data order, hash index, prefix structure, graph distance, heuristic hay monotonic predicate đều là information dùng để loại hoặc deprioritize candidates. Algorithm tốt không chỉ “tìm nhanh”; nó giải thích rõ vì sao những candidates bị bỏ chắc chắn không thể là answer.
+> Searching là khoa học của **ứng viên elimination**. Data order, chỉ mục băm, prefix structure, đồ thị khoảng cách, heuristic hay monotonic predicate đều là thông tin dùng để loại hoặc deprioritize các ứng viên. thuật toán tốt không chỉ “tìm nhanh”; nó giải thích rõ vì sao các ứng viên bị bỏ chắc chắn không thể là answer.
 
 Khi gặp một search problem, hãy hỏi:
 

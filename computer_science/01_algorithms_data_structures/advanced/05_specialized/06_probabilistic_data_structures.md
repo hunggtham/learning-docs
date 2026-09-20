@@ -1,688 +1,816 @@
-# Probabilistic Data Structures cho dữ liệu lớn
-**확률적 자료구조 / Probabilistic Data Structures**
+# Cấu trúc dữ liệu xác suất cho dữ liệu lớn
+**Probabilistic Data Structures / 확률적 자료구조**
 
-Khi dữ liệu quá lớn để giữ exact state cho mọi item, requirement thực tế đôi khi không cần exact answer. Nếu product/system chấp nhận một **error model / 오류 모델** rõ ràng, ta có thể đổi một phần exactness lấy memory nhỏ hơn nhiều, mergeability tốt hơn và throughput cao hơn.
+Khi dữ liệu quá lớn để lưu chính xác từng phần tử, yêu cầu thực tế đôi khi cũng không cần câu trả lời tuyệt đối chính xác. Nếu hệ thống chấp nhận một **mô hình sai số (error model)** rõ ràng, ta có thể đánh đổi một phần độ chính xác để lấy bộ nhớ nhỏ hơn rất nhiều, throughput cao hơn và khả năng gộp dữ liệu giữa nhiều node tốt hơn.
 
-Probabilistic data structure không phải “phiên bản thiếu chính xác” của exact structure theo nghĩa mơ hồ. Một structure tốt phải nói rõ:
+Cấu trúc dữ liệu xác suất không phải “bản kém chính xác” của cấu trúc thông thường. Một thiết kế tốt phải nói rõ:
 
 ```text
-query nào được hỗ trợ
-loại lỗi nào có thể xảy ra
-loại lỗi nào không xảy ra
-error probability / magnitude phụ thuộc parameter nào
-structure có merge được không
-update/delete semantics là gì
+truy vấn nào được hỗ trợ
+loại sai số nào có thể xảy ra
+loại sai số nào được bảo đảm không xảy ra
+xác suất hoặc biên độ sai số phụ thuộc tham số nào
+có hỗ trợ merge không
+có hỗ trợ delete/update không
+hash/randomness assumptions là gì
 ```
 
-Mental model trung tâm:
+Mô hình tư duy trung tâm:
 
-> Exact structure giữ đủ information để phân biệt mọi state cần thiết. Probabilistic structure cố ý nén nhiều histories vào cùng internal state và mô tả xác suất hoặc biên độ sai do sự nén đó gây ra.
+> Cấu trúc xác suất chủ động nén nhiều lịch sử dữ liệu khác nhau vào cùng một trạng thái tóm lược, rồi mô tả định lượng lượng thông tin bị mất.
 
 ## Khi nào approximation đáng giá?
 
-Các workloads phổ biến:
+Các workload điển hình:
 
 ```text
-membership trước expensive disk lookup
-ước lượng số user unique
-frequency/heavy hitters trong event stream
-sampling stream không biết trước length
-network telemetry
-large-scale analytics
-cache/filter pipelines
+membership prefilter trước disk/database lookup
+ước lượng số user distinct
+frequency estimation trong event stream
+heavy-hitter detection
+sampling stream dài không biết trước độ dài
+telemetry và network analytics
+phân tán aggregation giữa nhiều machine
 ```
 
-Nếu answer dùng cho accounting, authorization hoặc correctness-critical transaction, approximate structure có thể sai abstraction. Error budget phải đến từ requirement, không phải từ sự tiện lợi của implementation.
+Nếu kết quả quyết định trực tiếp kế toán, authorization hoặc giao dịch tài chính, approximation có thể không phù hợp.
+
+**Error budget phải đi từ business requirement xuống cấu trúc dữ liệu, không phải ngược lại.**
+
+## Ba loại guarantee cần phân biệt
+
+Một cấu trúc xác suất có thể có:
+
+```text
+one-sided error   -> chỉ sai theo một hướng
+bounded additive error
+bounded relative error
+probability of failure δ
+expected error
+high-probability guarantee
+```
+
+Hai cấu trúc cùng “sai số 1%” có thể mang nghĩa hoàn toàn khác nhau.
+
+Ví dụ Bloom Filter có one-sided membership error. HyperLogLog ước lượng cardinality với sai số tương đối thống kê. Count-Min Sketch cho additive over-estimation trong mô hình chuẩn.
 
 ## Bloom Filter
 
-**Bloom Filter / 블룸 필터** trả lời approximate membership cho insertion-only set theo standard model.
+Bloom Filter trả lời gần đúng câu hỏi membership.
 
-Nó dùng bit array length `m` và `k` hash positions cho mỗi key.
+Nó dùng:
+
+```text
+m bit
+k hash positions cho mỗi key
+```
 
 Insert:
 
 ```text
-for each hash position:
-    bit[position] = 1
+set tất cả k bit thành 1
 ```
 
 Query:
 
 ```text
-nếu bất kỳ required bit = 0 -> chắc chắn không có
-nếu mọi required bit = 1 -> có thể có
+nếu có bit bằng 0 -> chắc chắn không có
+nếu tất cả bằng 1 -> có thể có
 ```
 
-Standard Bloom Filter có **false positives** nhưng không có false negatives nếu không delete và implementation/hash consistent.
+Trong mô hình chuẩn chỉ chèn, Bloom Filter có **false positive** nhưng không có **false negative**.
 
-## Bloom Filter error derivation
+## Xác suất false positive
 
-Sau `n` inserts, tổng khoảng `kn` bit-setting events.
+Sau `n` phần tử, có khoảng `kn` lần đặt bit.
 
-Probability một particular bit vẫn 0:
+Xác suất một bit vẫn là 0:
 
 \[
-\left(1-\frac1m\right)^{kn}
-\approx e^{-kn/m}
+\left(1-\frac1m\right)^{kn}\approx e^{-kn/m}
 \]
 
-nên probability bit là 1 xấp xỉ:
+Xác suất bit là 1:
 
 \[
 1-e^{-kn/m}
 \]
 
-Một key chưa insert bị false positive nếu cả `k` positions của nó đều đã 1:
+Một key chưa chèn bị false positive khi cả `k` vị trí đều đã 1:
 
 \[
-p \approx \left(1-e^{-kn/m}\right)^k
+p\approx\left(1-e^{-kn/m}\right)^k
 \]
 
-Formula này cho thấy parameter trade-off. Tăng `k` ban đầu giảm collision chance của query, nhưng set nhiều bits hơn và tăng CPU cost; quá nhiều hashes làm filter saturated nhanh hơn.
+Điều này cho thấy Bloom Filter không có một “accuracy cố định” độc lập số phần tử. Khi `n` tăng mà `m` không đổi, filter dần bão hòa.
 
-## Optimal k intuition
+## Chọn k và m
 
-Với `m` và expected `n` cố định, optimal number hashes gần:
+Với `m,n` cố định, số hash gần tối ưu:
 
 \[
-k \approx \frac mn \ln 2
+k\approx\frac mn\ln2
 \]
 
-Khi đó roughly half bits set trong idealized model.
-
-Không cần memorize formula để dùng mọi lúc, nhưng phải biết filter cần parameterization theo **expected cardinality và target false-positive rate**, không phải chọn arbitrary bit size.
-
-## Sizing từ error budget
-
-Nếu target false-positive probability `p` và expected inserts `n`, required bits scale roughly:
+Nếu muốn false-positive rate `p`, số bit xấp xỉ:
 
 \[
-m \approx -\frac{n\ln p}{(\ln 2)^2}
+m\approx-\frac{n\ln p}{(\ln2)^2}
 \]
 
-Điều quan trọng: filter size tuyến tính theo expected inserted count cho fixed error target, nhưng constant bits/item nhỏ hơn exact hash set rất nhiều vì filter không giữ keys.
+Số bit trên mỗi phần tử:
 
-## Bloom Filter không thể trả keys
+\[
+\frac mn\approx-\frac{\ln p}{(\ln2)^2}
+\]
 
-Vì chỉ giữ bit evidence, ta không thể iterate inserted items hoặc reconstruct original set. Nó chỉ là membership filter.
+Điều cần hiểu là Bloom Filter phải được sizing từ:
 
-Nếu application sau này cần list members, Bloom Filter không thể thay exact structure; nó chỉ đứng trước exact storage như prefilter.
+```text
+expected cardinality
+false-positive target
+memory budget
+CPU/hash budget
+```
 
-## Bloom Filter trước disk/database lookup
+## Double hashing để sinh nhiều vị trí
 
-Một classic pipeline:
+Thực tế không nhất thiết tính `k` hash hoàn toàn độc lập và đắt tiền. Có thể dùng hai hash cơ sở rồi sinh:
+
+\[
+h_i(x)=h_1(x)+i\cdot h_2(x)
+\]
+
+modulo kích thước bảng dưới một construction phù hợp.
+
+Mục tiêu là giảm CPU cost trong khi vẫn có phân bố đủ tốt cho guarantee thực tế.
+
+## Bloom Filter chỉ là prefilter
+
+Bloom Filter không lưu key nên không thể liệt kê lại tập phần tử.
+
+Pipeline điển hình:
 
 ```text
 query key
   ↓
 Bloom Filter
-  ↓ nếu definitely absent: stop
-  ↓ nếu maybe present:
-exact index / disk / SSTable / database
+  ↓ chắc chắn không có -> tránh I/O
+  ↓ có thể có
+exact index / database / SSTable
 ```
 
-False positive chỉ gây extra expensive lookup. Không false negative nghĩa filter không bỏ mất item thật.
+False positive chỉ làm phát sinh thêm một exact lookup. Không có false negative giúp ta không bỏ sót entry thật.
 
-Đây là use case lý tưởng vì error type chỉ ảnh hưởng performance, không correctness final.
+Đây là lý do Bloom Filter đặc biệt phù hợp làm tầng lọc trước storage đắt.
 
 ## Counting Bloom Filter
 
-Standard Bloom Filter khó delete vì clearing một bit có thể xóa evidence của nhiều keys.
+Bloom Filter chuẩn khó delete vì một bit có thể thuộc nhiều key.
 
-Counting Bloom Filter dùng small counters thay bits. Insert increment, delete decrement.
+Counting Bloom Filter thay bit bằng counter nhỏ:
 
-Nhưng deletion chỉ safe nếu application đảm bảo key đang logically present đúng multiplicity. Decrement sai có thể tạo false negatives.
+```text
+insert -> increment
+remove -> decrement
+```
 
-Counters tăng memory đáng kể và có overflow/saturation considerations.
+Delete chỉ an toàn nếu application biết chính xác key thật sự tồn tại. Nếu decrement nhầm, counter có thể xuống 0 dù key khác vẫn dựa trên vị trí đó, tạo false negative.
 
-## Stable/scalable Bloom variants
+Counter còn làm memory tăng và cần xử lý saturation/overflow.
 
-Nếu stream không bounded, fixed Bloom Filter eventually saturates. Variants như scalable Bloom filters add new filters as capacity grows; stable Bloom filters intentionally decay information cho streaming recency scenarios.
+## Scalable Bloom Filter
 
-Mỗi variant đổi error semantics. Không nên gọi chung “Bloom Filter” rồi assume standard guarantees.
+Nếu stream tăng không biết trước, filter cố định sẽ bão hòa.
 
-## Cuckoo Filter intuition
+Một hướng là thêm filter mới khi filter hiện tại đạt ngưỡng tải. Query kiểm tra qua các lớp.
 
-Cuckoo Filter lưu compact fingerprints trong buckets và hỗ trợ deletion natural hơn Bloom Filter. Lookup false positives do fingerprint collisions.
+Điều này cho phép capacity tăng dần nhưng:
 
-Insertion có thể relocate fingerprints như cuckoo hashing.
+```text
+query cost tăng theo số layer
+error budget phải phân bổ giữa layers
+memory tăng theo thời gian
+```
 
-Trade-off khác về load factor, deletion và small-set performance. Khi requirement cần approximate membership + deletion, Cuckoo Filter là một candidate đáng biết.
+Không nên gọi mọi biến thể là “Bloom Filter” rồi giả định cùng một guarantee.
 
-## XOR Filter intuition
+## Stable Bloom Filter
 
-Static approximate membership filters như XOR filters có thể đạt lookup nhanh/memory compact sau build, nhưng dynamic insertion semantics khác Bloom Filter.
+Với stream không giới hạn nhưng chỉ muốn membership gần đây, có thể chủ động làm “quên” thông tin cũ.
 
-Lesson quan trọng: static vs dynamic workload mở ra different probabilistic structures.
+Stable Bloom Filter duy trì kích thước bounded bằng cách giảm/xóa một số counter/bit theo policy.
+
+Đổi lại, false negative có thể xuất hiện cho dữ liệu cũ.
+
+Đây là ví dụ error model thay đổi trực tiếp khi thêm yêu cầu bounded-memory trên stream vô hạn.
+
+## Cuckoo Filter
+
+Cuckoo Filter lưu fingerprint ngắn thay vì chỉ bit.
+
+Mỗi fingerprint có một vài bucket khả dĩ. Insert có thể di chuyển fingerprint hiện tại giống Cuckoo Hashing.
+
+Ưu điểm thường thấy:
+
+```text
+membership nhanh
+delete tự nhiên hơn Bloom Filter
+memory cạnh tranh tốt ở một số false-positive target
+```
+
+Nhược điểm:
+
+```text
+build/insert phức tạp hơn
+có thể cần relocation chain
+capacity/load factor có giới hạn thực tế
+```
+
+False positive xảy ra do fingerprint collision.
+
+## XOR Filter
+
+XOR Filter thường phù hợp với **tập tĩnh**: xây structure một lần rồi query nhiều lần.
+
+Nó có thể rất gọn và query nhanh, nhưng update động không tự nhiên như Bloom/Cuckoo Filter.
+
+Bài học:
+
+> Static workload và dynamic workload dẫn tới cấu trúc xác suất khác nhau.
 
 ## Count-Min Sketch
 
-**Count-Min Sketch (CMS / 카운트-민 스케치)** ước lượng frequency của keys trong stream.
+Count-Min Sketch ước lượng frequency.
 
-Structure có `d` rows, mỗi row width `w`; mỗi row dùng hash function riêng.
+Có `d` hàng, mỗi hàng rộng `w`, mỗi hàng dùng hash riêng.
 
-Update key `x` by `c`:
-
-```text
-counter[row][hash_row(x)] += c
-```
-
-Query estimate:
+Update key `x` thêm `c`:
 
 ```text
-min over rows of corresponding counters
+counter[r][h_r(x)] += c
 ```
 
-Trong standard non-negative frequency model, collisions chỉ thêm counts của keys khác, nên estimate không nhỏ hơn true count.
+Query:
+
+```text
+estimate(x) = min(counter[r][h_r(x)])
+```
+
+Trong mô hình update không âm, collision chỉ cộng noise dương, nên estimate không nhỏ hơn count thật.
 
 ## Vì sao lấy minimum?
 
-Mỗi row estimate:
+Mỗi hàng có thể xem như:
 
 \[
-trueCount(x)+collisionNoise
+estimate_r(x)=trueCount(x)+noise_r
 \]
 
-Noise không âm. Minimum cố chọn row ít polluted nhất.
+với `noise_r>=0`.
 
-Average sẽ giữ more collision noise; minimum phù hợp one-sided error model.
+Lấy minimum chọn hàng ít bị collision noise nhất.
 
-## Width và depth
+Lấy average sẽ cộng ảnh hưởng của các hàng nhiễu nhiều hơn và không giữ one-sided interpretation tương tự.
 
-Typical theoretical parameterization:
+## Tham số ε và δ
+
+Một dạng guarantee kinh điển:
 
 ```text
-width controls additive error magnitude
-depth controls failure probability/confidence
+width  O(1/ε)
+depth  O(log(1/δ))
 ```
 
-Roughly, width `O(1/ε)` và depth `O(log 1/δ)` cho guarantee dạng estimate không vượt true count + `ε * totalMass` với probability cao, dưới assumptions standard.
+để với xác suất cao:
 
-Không nên nhớ constants mà quên semantics: error relative to total stream mass, không necessarily relative error per rare item.
+\[
+estimate(x)\le trueCount(x)+\varepsilon N
+\]
+
+trong đó `N` là tổng mass update trong mô hình chuẩn.
+
+Trực giác:
+
+```text
+width lớn -> ít collision hơn -> giảm độ lớn error
+depth lớn -> có nhiều cơ hội có ít nhất một hàng sạch -> tăng confidence
+```
 
 ## Conservative update
 
-Một CMS variant chỉ increment counters đang ở current minimum estimate thay vì tất cả rows, giúp giảm overestimation practical trong some workloads.
+Thay vì tăng tất cả counter, một biến thể chỉ tăng những counter đang bằng estimate tối thiểu.
 
-Guarantee/semantics cần đọc đúng variant; optimization không tự preserve mọi theoretical property textbook.
+Mục tiêu là tránh đẩy những counter đã bị noise cao lên thêm nữa.
 
-## Heavy hitters
+Thực tế có thể giảm over-estimation, nhưng phải phân biệt guarantee của biến thể với theorem của CMS chuẩn.
 
-Count-Min Sketch có thể combine với heap/candidate set để tìm approximate frequent items.
+## CMS không tự tìm ra heavy hitter identity
 
-Sketch alone query cần key known. Nếu muốn discover heavy hitters without enumerating all keys, cần candidate-generation mechanism khác.
+CMS trả frequency estimate khi đã biết key.
 
-Đây là recurring principle: summary may answer query for given key nhưng không necessarily recover key identities.
+Nếu muốn hỏi:
 
-## Signed updates caveat
+> “Key nào xuất hiện nhiều nhất?”
 
-Standard one-sided CMS reasoning dựa non-negative updates. Nếu stream có negative updates/deletions, counters/noise semantics đổi và cần strict-turnstile/general-turnstile variants/assumptions.
+thì cần thêm candidate structure, ví dụ heap/set hoặc thuật toán heavy-hitter chuyên dụng như Misra–Gries/Space-Saving.
 
-Error guarantee luôn gắn update model.
+Một sketch không lưu identity đầy đủ nên không thể tự “sinh ra” mọi key đã thấy.
+
+## Misra–Gries
+
+Misra–Gries giữ tối đa `k-1` candidate counters để tìm frequent items.
+
+Ý tưởng:
+
+```text
+nếu key đã có -> tăng counter
+nếu còn slot -> thêm key
+nếu hết slot và key mới -> giảm mọi counter, xóa counter về 0
+```
+
+Nó bảo đảm các item có frequency đủ lớn không bị bỏ mất khỏi candidate set theo threshold tương ứng.
+
+Đây là một cách khác CMS: thay vì estimate mọi key đã biết, nó tập trung giữ identity của một tập candidate nhỏ.
+
+## Space-Saving
+
+Space-Saving là một heavy-hitter algorithm khác, thường giữ `k` counters và khi key mới không có slot, thay thế item có count nhỏ nhất.
+
+Nó phù hợp stream analytics khi mục tiêu chính là top frequent items.
+
+Điểm quan trọng là chọn structure theo loại query:
+
+```text
+point frequency query -> CMS
+heavy hitter identity -> Misra–Gries / Space-Saving / hybrid
+```
+
+## Update âm và turnstile model
+
+CMS guarantee chuẩn thường giả định non-negative updates.
+
+Nếu stream cho phép increment và decrement, phải xác định model:
+
+```text
+strict turnstile  -> frequency thực luôn không âm
+general turnstile -> intermediate/final value có thể âm
+```
+
+Một theorem cho insertion-only stream không thể áp dụng nguyên trạng cho general turnstile.
+
+**Error guarantee luôn gắn với update model.**
 
 ## HyperLogLog
 
-**HyperLogLog (HLL / 하이퍼로그로그)** ước lượng cardinality — số distinct values — bằng memory gần constant theo stream size cho fixed precision.
+HyperLogLog ước lượng **số phần tử phân biệt (cardinality)**.
 
-Exact distinct count cần giữ set all unique items hoặc external exact structure. HLL chỉ giữ statistical evidence từ hashes.
+Ý tưởng nền tảng: nếu hash bit giống random, việc nhìn thấy một hash có nhiều zero liên tiếp ở đầu là sự kiện hiếm. Mức cực đại của “độ hiếm” này chứa thông tin về số distinct items đã quan sát.
 
-## Leading-zero intuition
+HLL chia hash space thành nhiều register để giảm variance thay vì chỉ giữ một maximum toàn cục.
 
-Uniform random bitstring bắt đầu bằng `r` zero liên tiếp với probability giảm exponentially.
+## Register của HLL
 
-Nếu thấy một hash có rất nhiều leading zeros, điều đó gợi ý đã sample nhiều distinct hashes.
+Một phần hash chọn register. Phần còn lại xác định `rho`, thường là vị trí bit 1 đầu tiên hoặc số leading zeros theo convention.
 
-Một naive estimator từ maximum leading-zero count có variance lớn. HyperLogLog chia hashes vào nhiều registers và aggregate observations để ổn định estimate.
+Register lưu maximum `rho` từng thấy.
 
-## HLL registers
+Nếu stream có nhiều distinct values, khả năng quan sát các pattern hiếm hơn tăng, làm register lớn hơn.
 
-Hash được split conceptually thành:
+Final estimator kết hợp nhiều register qua một dạng harmonic mean có correction constants.
 
-```text
-bucket/register index bits
-remaining bits dùng để đo rank/leading-zero position
-```
+## Vì sao cần nhiều register?
 
-Mỗi register giữ max observed rank cho items mapped tới nó.
+Chỉ một maximum có variance rất lớn: một hash cực hiếm có thể làm estimate nhảy mạnh.
 
-Final estimate dùng harmonic-style aggregation + corrections tùy algorithm/version.
+Chia dữ liệu vào nhiều bucket độc lập gần đúng rồi aggregate giúp giảm variance.
 
-Memory chỉ là số registers * bits/register, không tăng theo distinct cardinality until representational limits.
-
-## Precision parameter
-
-Nếu có `m` registers, relative standard error classic approximation thường scale khoảng:
+Số register `m` lớn hơn thường làm relative standard error giảm cỡ:
 
 \[
 O(1/\sqrt m)
 \]
 
-Nhiều registers -> more memory, lower error.
+Trong HLL kinh điển, hằng số thường được nhắc khoảng `1.04/√m` dưới mô hình lý tưởng.
 
-Đây là clear error-memory knob.
+Điều cần nhớ: tăng memory theo số register để giảm error theo căn bậc hai.
 
-## Small-cardinality correction
+## Small-range và large-range correction
 
-Khi cardinality nhỏ, raw HLL estimator có bias/variance behavior khác. Implementations thường dùng linear-counting-like corrections hoặc empirically tuned schemes.
+Estimator thuần có bias ở một số miền cardinality.
 
-Production accuracy phụ thuộc exact HLL/HLL++ variant, hash width và bias correction, nên đừng tự implement primitive estimator rồi assume library-grade guarantees.
+Implementation HLL thực tế thường dùng correction cho:
+
+```text
+cardinality nhỏ -> nhiều register còn 0
+cardinality rất lớn -> hash space saturation effects
+```
+
+Do đó không nên tự implement HLL production chỉ từ một công thức rút gọn nếu accuracy quan trọng.
 
 ## Mergeability của HLL
 
-Hai HLL cùng configuration có thể merge register-wise bằng max:
+Nếu hai HLL dùng cùng parameters/hash scheme, có thể merge register-wise bằng maximum:
 
 ```text
-merged[i] = max(A[i], B[i])
+R_merged[i] = max(R_a[i], R_b[i])
 ```
 
-vì each register stores maximum evidence seen in either stream.
+Đây là lý do HLL rất phù hợp distributed analytics.
 
-Đây là lý do HLL rất mạnh trong distributed analytics: each worker summarizes partition, coordinator merges compact states.
+Ta có thể tính sketch trên nhiều shard rồi merge mà không gửi raw IDs.
 
-## Union dễ, intersection khó hơn
-
-HLL merge tự nhiên estimate union cardinality. Intersection có thể derive via inclusion-exclusion:
-
-\[
-|A\cap B|=|A|+|B|-|A\cup B|
-\]
-
-nhưng error có thể amplify khi subtract large noisy estimates. Specialized sketches may be better for set similarity/intersection.
-
-Approximate algebra cần propagate error, không chỉ apply exact formula.
-
-## Reservoir Sampling
-
-Nếu stream length không biết trước và muốn sample `k` items uniformly without storing all items, **Reservoir Sampling / 저수지 샘플링** giữ reservoir size `k`.
-
-Với item thứ `i` (`i` 1-based), nếu `i<=k` thì fill reservoir. Sau đó chọn item với probability `k/i`; nếu chọn, replace random reservoir slot.
-
-Memory `O(k)` independent of stream length.
-
-## Uniformity proof cho k=1
-
-Item ở position `j` được chọn lúc đến với probability `1/j`. Để còn sample cuối stream length `n`, nó phải survive steps `j+1...n`:
-
-\[
-\frac1j\cdot\frac{j}{j+1}\cdot\frac{j+1}{j+2}\cdots\frac{n-1}{n}=\frac1n
-\]
-
-nên mỗi item có equal probability `1/n`.
-
-General reservoir size `k` cho probability inclusion `k/n` mỗi item.
-
-## Weighted reservoir sampling
-
-Nếu items có weights và muốn probability proportional to weight, standard uniform reservoir không đủ. Có weighted reservoir algorithms dùng random keys/priorities.
-
-Again, “sampling” semantics phải precise: uniform over items, over events, over weight hay over distinct keys?
-
-## Sampling with replacement vs without replacement
-
-Reservoir sampling classic size `k` là sample without replacement từ stream positions.
-
-Nếu requirement cần independent samples with replacement, algorithm khác.
-
-Statistics downstream phụ thuộc sampling design.
-
-## Bottom-k / KMV sketches
-
-Một elegant distinct-count/set-summary idea: hash every distinct key uniformly to `[0,1)`, giữ `k` smallest hash values.
-
-Threshold of k-th smallest chứa cardinality information; union sketches dễ merge bằng taking k smallest from combined sets.
-
-KMV/bottom-k còn hỗ trợ approximate set similarity/intersection better than HLL in some workloads.
-
-Conceptually, this is order statistics over random hashes.
+**Mergeability là một feature hệ thống cực kỳ quan trọng của probabilistic summary.**
 
 ## MinHash
 
-**MinHash** estimate Jaccard similarity:
+MinHash ước lượng **Jaccard similarity** giữa hai tập:
 
 \[
 J(A,B)=\frac{|A\cap B|}{|A\cup B|}
 \]
 
-For random permutation/hash, probability two sets có same minimum hash equals Jaccard similarity under idealized assumptions.
+Với một hash/permutation ngẫu nhiên phù hợp, xác suất phần tử có hash nhỏ nhất của hai tập giống nhau bằng Jaccard similarity.
 
-Multiple independent hashes/signature components reduce variance.
+Lặp nhiều hash/signature components tạo estimator ổn định hơn.
 
-Use cases: near-duplicate detection, document similarity, set similarity search.
-
-## Locality-Sensitive Hashing connection
-
-LSH uses hash families designed so similar items collide with higher probability than dissimilar items. Nó khác ordinary hash table hash, nơi goal thường uniform distribution independent of semantic similarity.
-
-MinHash signatures can feed LSH for approximate nearest-neighbor-like set similarity search.
-
-Same word “hash” nhưng objective khác hoàn toàn.
-
-## Quotient/compact filters intuition
-
-Compact approximate membership structures exploit fingerprints/remainders and packed layouts for cache efficiency. Exact details vary, but design space repeatedly trades:
+Ứng dụng:
 
 ```text
-bits per key
-false-positive rate
-build/update support
-delete support
-lookup locality
-mergeability
+near-duplicate documents
+similar sets
+recommendation candidate generation
+web-page deduplication
 ```
 
-Probabilistic data structures nên được chọn bằng requirement matrix, không theo popularity.
+## MinHash và LSH
 
-## Morris approximate counter intuition
+MinHash signature có thể được dùng cùng **Locality-Sensitive Hashing (LSH)** để tìm candidate pair tương tự mà không so mọi cặp.
 
-Ngay cả một single integer count có thể được approximated probabilistically với logarithmic-scale state. Morris counter increments stored exponent-like value probabilistically, representing counts over large range with few bits at cost of variance.
-
-Không phải common application primitive today, nhưng nó minh họa cực đoan idea “trade exact count for tiny memory”.
-
-## Error types cần phân biệt
-
-Approximate structures có thể có:
-
-```text
-false positive
-false negative
-one-sided overestimate
-one-sided underestimate
-unbiased noisy estimate
-relative error
-additive error
-probabilistic confidence failure
-```
-
-Không được nói chung “có sai số khoảng 1%” nếu không định nghĩa 1% của cái gì và confidence bao nhiêu.
-
-## Relative vs additive error
-
-Suppose true count is 10.
-
-Additive error `±100` useless dù total stream huge. Relative error 1% would be `±0.1` idealized.
-
-Count-Min Sketch typical guarantee additive relative to total mass, nên rare-key relative error có thể rất lớn.
-
-HyperLogLog targets relative cardinality error more naturally.
-
-Query requirement quyết định error metric.
-
-## Confidence parameter
-
-Một guarantee dạng:
-
-```text
-error <= ε with probability >= 1-δ
-```
-
-có hai knobs: error magnitude `ε` và failure probability `δ`.
-
-Reducing both usually costs more memory/CPU. Product requirement nên translate thành `ε,δ` thay vì “accuracy cao”.
-
-## Hash independence assumptions
-
-Theoretical proofs có thể assume fully independent hashes, trong khi real implementations dùng practical hash functions/seeds.
-
-Pairwise/k-wise independence may suffice for some bounds. Production library design balances theoretical assumptions, speed và attack resistance.
-
-Không nên extrapolate theorem nếu hash behavior/data adversarial không match assumptions.
-
-## Hash width và collision floor
-
-Nếu using 64-bit hash for enormous cardinalities, raw hash collisions themselves become non-zero. Birthday bound says collision probability grows around square root of hash space.
-
-For standard scales 64-bit may be adequate, but high-integrity/huge systems need reason about hash width.
-
-Approximate structure error is not the only possible collision source.
-
-## Distributed mergeability
-
-Mergeable sketches are algebraically attractive because workers can summarize data independently.
-
-Examples:
-
-```text
-HLL: register-wise max
-CMS with same layout/seeds: counter-wise addition
-Bloom filters same config: bitwise OR for union-membership approximation
-bottom-k: keep k smallest combined hashes
-```
-
-But merge requires same compatible parameters/hash seeds. Combining incompatible sketches silently invalidates guarantees.
-
-## Monoid-like aggregation
-
-Many mergeable sketches have associative merge + identity empty sketch, making them natural distributed aggregation states.
-
-This resembles monoid-based reasoning in segment trees, but operation semantics include probabilistic error.
-
-Associativity enables tree reductions, parallel aggregation and streaming checkpoints.
-
-## Serialization/versioning
-
-Production sketch stored or sent over network needs metadata:
-
-```text
-algorithm/version
-precision parameters
-hash seed/function id
-counter width
-endianness/encoding
-```
-
-Merging states from incompatible versions/configurations can produce nonsense.
-
-Approximate structure is still a data format with schema evolution concerns.
-
-## Saturation
-
-Fixed-size counters/registers may saturate.
-
-Counting Bloom counters can overflow. CMS fixed counters can overflow on long streams. HLL rank storage has finite max. Production implementation chooses counter width, saturation behavior or epoch/windowing.
-
-Overflow can destroy theoretical guarantees if ignored.
-
-## Time windows
-
-Many streams ask “last 5 minutes” rather than all-time.
-
-Sketches that only support monotonic addition cannot simply forget old events. Solutions may use rotating windows, exponential histograms, per-bucket sketches or structures with deletion support.
-
-Time-decay requirement fundamentally changes design.
-
-## Sliding-window approximate counting
-
-A simple system approach: keep one sketch per time bucket and merge buckets covering current window. Trade-off:
-
-```text
-more buckets -> finer expiration accuracy + more memory/merge work
-fewer buckets -> coarser boundaries
-```
-
-Advanced streaming algorithms give stronger bounds, but bucketization already shows temporal state must be modeled explicitly.
-
-## Cardinality under privacy constraints
-
-Approximate aggregate sketches do not automatically provide privacy. HLL/MinHash state can leak information under some threat models. Differential privacy adds noise/analysis distinct from sketch error.
-
-Approximation and privacy are separate concepts.
-
-## Adversarial inputs
-
-If attacker can infer hash seeds or exploit deterministic weak hash, Bloom/CMS guarantees may degrade or be manipulated.
-
-Security-sensitive deployments may rotate/secret seeds or use robust hashing, with performance cost.
-
-Error model should include threat model when untrusted inputs exist.
-
-## Probabilistic structure vs cache
-
-Bloom Filter answers membership approximation; cache stores actual values for subset keys. Combining:
-
-```text
-Bloom says definitely absent -> skip cache/backend lookup path
-maybe present -> cache/backend check
-```
-
-But a Bloom Filter itself cannot return value.
-
-Different structures solve different query classes even if all reduce work.
-
-## Bloom + LSM Tree
-
-LSM storage levels/SSTables can each have Bloom Filter. Point lookup checks filters to skip files definitely lacking key.
-
-False positives cause extra file checks; no false negatives preserve correctness.
-
-This is a canonical systems connection because filter error maps directly to I/O overhead.
-
-## CMS in telemetry
-
-Network flow IDs/cardinality too large for exact per-key map. CMS can estimate frequency with fixed memory. Heavy-hitter candidate mechanism surfaces likely elephants for further exact monitoring.
-
-This tiered design — approximate broad scan + exact small candidate set — is a common production pattern.
-
-## HLL in analytics databases
-
-`APPROX_COUNT_DISTINCT`-style operations can use HLL-family sketches to reduce memory/shuffle. Partial aggregations on workers merge centrally.
-
-Exact `COUNT(DISTINCT)` may require large hash sets/sorts and network transfer; approximate cardinality offers predictable compact state.
-
-Again, correct choice depends business accuracy requirement.
-
-## MinHash for duplicate detection
-
-Documents can be represented by shingles/sets. Exact Jaccard all-pairs is expensive. MinHash signatures compress set similarity; LSH groups likely similar documents; exact comparison can verify candidates.
+LSH không “tính similarity chính xác”; nó tăng xác suất các object giống nhau rơi vào cùng bucket.
 
 Pipeline:
 
 ```text
-raw set
- -> MinHash signature
- -> LSH candidate generation
- -> exact/expensive verification
+raw sets
+  ↓
+MinHash signatures
+  ↓
+LSH candidate buckets
+  ↓
+exact/expensive similarity trên candidate
 ```
 
-Probabilistic structure often works best as a **filtering stage**, not final authority.
+Đây là cùng triết lý với Bloom Filter: approximation dùng để giảm không gian candidate trước bước chính xác đắt hơn.
 
-## Parameter selection should be capacity planning
+## Reservoir Sampling
 
-Do not hard-code sketch parameters without expected scale.
+Nếu stream dài không biết trước và muốn sample `k` phần tử đồng đều, không thể giữ toàn bộ rồi random sau.
 
-For Bloom Filter, need expected `n`, desired `p`.
+Reservoir Sampling giữ `k` item đầu, sau đó với item thứ `i` chọn nó với xác suất phù hợp và nếu được chọn thì thay một vị trí ngẫu nhiên trong reservoir.
 
-For HLL, choose register count from target relative error/memory.
+Với `k=1`, item thứ `i` được chọn với xác suất `1/i`.
 
-For CMS, choose width/depth from additive error/confidence.
+## Vì sao Reservoir Sampling đồng đều?
 
-Then monitor actual cardinality/stream mass. If reality exceeds design assumptions, error can become much worse.
+Xét một item ở vị trí `j`.
 
-## Monitoring sketch health
+Khi item `j` được xử lý, xác suất vào reservoir kích thước `k` là:
 
-Production metrics may include:
+\[
+\frac{k}{j}
+\]
+
+Sau đó ở mỗi bước `i>j`, xác suất nó không bị thay thế là:
+
+\[
+1-\frac1i
+\]
+
+Tích các xác suất sống sót tới cuối tạo xác suất cuối cùng:
+
+\[
+\frac{k}{n}
+\]
+
+cho mọi item.
+
+Đây là ví dụ đẹp của induction/probability proof cho streaming algorithm.
+
+## Weighted Reservoir Sampling
+
+Nếu item có trọng số và không muốn sample uniform, có các biến thể weighted sampling.
+
+Điểm cần xác định trước:
 
 ```text
-Bloom bit occupancy / estimated saturation
-insert count vs design capacity
-CMS counter saturation
-HLL precision/version
-merge incompatibility errors
-observed false-positive sample rate
+sample probability tỷ lệ trọng số?
+with replacement hay without replacement?
+trọng số có thay đổi theo thời gian không?
 ```
 
-Approximate structures need operational observability like any subsystem.
+Sampling semantics phải là một phần specification.
 
-## Validation by simulation
+## Quantile sketch
 
-Because error is statistical, tests should simulate many randomized datasets and compare empirical error distribution with expected envelope.
+Một lớp cấu trúc khác ước lượng median/percentile/quantile trên stream.
 
-One dataset passing does not validate probability guarantee.
+Thay vì lưu mọi giá trị rồi sort, sketch giữ summary nhỏ hơn.
 
-For Bloom Filter:
+Ứng dụng:
 
 ```text
-insert known set
-verify zero false negatives
-query large known-absent sample
-measure false positive rate
+p50/p95/p99 latency
+telemetry
+monitoring
+large-scale analytics
 ```
 
-For HLL/CMS, run across cardinalities/distributions including skew.
+Các sketch khác nhau có error model khác nhau, ví dụ rank error hoặc relative error ở tail. Khi chọn library, phải đọc guarantee cụ thể chứ không chỉ tên “quantile sketch”.
 
-## Differential testing
+## Tại sao p99 cần sketch chuyên biệt?
 
-Small exact reference structures provide ground truth:
+Mean latency có thể nhỏ trong khi tail rất xấu. Muốn theo dõi p99 trên hàng tỷ request mà không lưu toàn bộ sample, exact sorting không thực tế.
+
+Một quantile sketch đổi một lượng error có kiểm soát lấy memory bounded.
+
+Đây là ví dụ product requirement trực tiếp dẫn tới approximate structure.
+
+## Mergeability là dimension thiết kế riêng
+
+Trong distributed system, có hai cách:
 
 ```text
-HashSet for membership/cardinality
-HashMap for counts
-stored stream for sample inclusion checks
+ship raw data về một nơi rồi tính
+hoặc
+compute summary tại shard rồi merge summaries
 ```
 
-Probabilistic result is compared statistically, not exact-value equal except properties like no false negatives where guaranteed.
+Nếu sketch merge được, network cost giảm cực mạnh.
 
-## Random seed reproducibility
+Các cấu trúc như HLL và nhiều frequency/quantile sketch được thiết kế với merge operation rõ ràng.
 
-Tests should often fix/inject seeds để reproduce failure. Production can choose random seeds per process/table for security/distribution.
+Một summary nhỏ nhưng không merge được có thể kém hữu ích trong distributed pipeline.
 
-Deterministic tests and randomized deployment are compatible concerns.
+## Monoid perspective của sketch merge
 
-## Benchmarking
-
-Measure more than throughput:
+Nếu summary có merge associative và identity:
 
 ```text
-bytes per key / fixed sketch bytes
-query/update latency
-merge cost
-cache behavior
-hash computation cost
-error distribution
-serialization size
+merge(merge(A,B),C) = merge(A,merge(B,C))
 ```
 
-A sketch with slightly lower theoretical error may be worse if hash cost or memory layout dominates workload.
+thì ta có thể aggregate theo tree, shard hoặc batch bất kỳ.
 
-## When exact structure is better
+Đây là lý do các sketch merge-friendly rất hợp MapReduce/stream processing.
 
-If cardinality moderate and memory available, exact `HashSet`/`HashMap` often simpler, debuggable and supports iteration/deletion naturally.
+Algebraic properties không chỉ là lý thuyết; chúng quyết định khả năng scale hệ thống.
 
-Approximation introduces operational complexity and error reasoning. Do not use sketches just because data is “big” without quantifying benefit.
+## Hash independence assumptions
 
-## Choosing among common structures
+Nhiều proof giả định hash function có mức independence hoặc uniformity nhất định.
 
-| Question | Candidate |
+Hash implementation thực tế chỉ xấp xỉ mô hình lý tưởng.
+
+Nếu key có pattern xấu, attacker-controlled input hoặc hash quality kém, error thực tế có thể lệch khỏi model.
+
+Vì vậy production sketch nên dùng hash function/library đã được đánh giá phù hợp thay vì tự nghĩ một mixing function đơn giản.
+
+## Adversarial input
+
+Một cấu trúc xác suất được chứng minh dưới random-hash assumption có thể không an toàn trước attacker biết seed hoặc điều khiển key.
+
+Threat model cần hỏi:
+
+```text
+attacker có biết hash seed không?
+attacker có quan sát output để adapt input không?
+sai số chỉ ảnh hưởng analytics hay ảnh hưởng security decision?
+```
+
+Một sketch phù hợp telemetry nội bộ chưa chắc phù hợp access control.
+
+## Deletion không phải feature miễn phí
+
+Bloom Filter chuẩn không delete an toàn. CMS với decrement thay đổi update model. HLL không thể “trừ” một distinct item đơn giản vì register chỉ giữ maxima.
+
+Muốn delete có thể cần:
+
+```text
+counting variant
+windowed/time-decay structure
+rebuild định kỳ
+partition theo epoch
+exact side structure
+```
+
+Một summary nén mạnh thường mất thông tin cần để đảo ngược update.
+
+## Sliding window và time decay
+
+Streaming system thường quan tâm “5 phút gần nhất”, không phải toàn bộ lịch sử.
+
+Có thể dùng:
+
+```text
+epoch buckets
+ring of sketches
+exponential decay
+window-specific algorithms
+```
+
+Ví dụ giữ HLL theo từng minute rồi merge vài bucket gần nhất. Trade-off là boundary error và memory tăng theo số epoch.
+
+Time semantics là một dimension khác ngoài value semantics.
+
+## Cardinality của union và intersection
+
+HLL merge rất tự nhiên cho union.
+
+Intersection không trực tiếp bằng register-wise operation tương tự. Có thể dùng inclusion–exclusion từ estimates:
+
+\[
+|A\cap B|=|A|+|B|-|A\cup B|
+\]
+
+nhưng error của nhiều estimate cộng/trừ có thể làm kết quả kém ổn định, đặc biệt khi intersection nhỏ.
+
+MinHash thường phù hợp hơn nếu mục tiêu chính là similarity/intersection ratio.
+
+Chọn sketch theo query, không chỉ theo loại dữ liệu.
+
+## Error propagation
+
+Nếu một pipeline dùng nhiều approximate stages, error có thể tích lũy hoặc tương tác.
+
+Ví dụ:
+
+```text
+approx frequency -> chọn candidate -> approx cardinality
+```
+
+Không nên giả định mỗi stage “1% error” nghĩa toàn pipeline vẫn “1%”.
+
+Cần hiểu error direction, independence và cách downstream operation khuếch đại sai số.
+
+## Memory budget trước, error sau — hay ngược lại?
+
+Có hai cách thiết kế:
+
+```text
+business cho error target -> tính memory cần
+hệ thống cho memory budget -> tính error đạt được
+```
+
+Ví dụ Bloom Filter cho phép chuyển giữa `n`, `p`, `m` tương đối trực tiếp.
+
+Việc ghi rõ phương trình sizing biến design từ “chọn đại 10 MB” thành một quyết định có thể review.
+
+## Serialization và compatibility
+
+Sketch thường được lưu hoặc truyền qua network. Format phải chứa đủ metadata:
+
+```text
+version
+hash seed/scheme
+number of registers/counters
+precision parameters
+endianness nếu liên quan
+```
+
+Hai HLL khác precision hoặc hash scheme không thể merge tùy tiện.
+
+Versioning của sketch format là một phần của distributed correctness.
+
+## Determinism và reproducibility
+
+Randomized structure có thể cần seed cố định cho test/reproducibility.
+
+Nhưng production security có thể lại cần seed bí mật/ngẫu nhiên.
+
+Không có seed policy duy nhất đúng. Nó phụ thuộc mục tiêu:
+
+```text
+test repeatability
+cross-node merge compatibility
+adversarial resistance
+```
+
+## Concurrency
+
+Counter array hoặc register updates từ nhiều thread có thể race.
+
+Tùy structure, có thể dùng:
+
+```text
+thread-local sketch rồi merge
+atomic counters
+sharded sketch
+lock quanh batch update
+```
+
+Thread-local + merge thường hấp dẫn nếu merge operation rẻ và associative.
+
+Đây là một ví dụ algebraic merge giúp thiết kế concurrent architecture đơn giản hơn.
+
+## Cache locality
+
+Sketch thường dùng array nhỏ và contiguous, nên có locality tốt hơn Hash Map lưu hàng triệu key.
+
+Một trong những lý do sketch nhanh không chỉ là ít operation về lý thuyết mà còn vì working set nhỏ hơn và vừa cache hơn.
+
+Approximation đôi khi mua cả memory lẫn CPU efficiency qua cache.
+
+## Không phải approximation nào cũng probabilistic
+
+Có deterministic approximate algorithms. Ngược lại, randomized algorithm có thể luôn exact.
+
+Do đó phải tách:
+
+```text
+randomness source
+output accuracy
+runtime randomness
+probability of failure
+```
+
+Không nên dùng “probabilistic” như một từ thay thế chung cho “không chính xác”.
+
+## Chọn cấu trúc theo câu hỏi
+
+| Câu hỏi | Cấu trúc thường đáng cân nhắc |
 |---|---|
-| “Key chắc chắn không tồn tại?” | Bloom/Cuckoo/XOR filter family |
-| “Key này xuất hiện khoảng bao nhiêu lần?” | Count-Min Sketch |
-| “Có khoảng bao nhiêu distinct keys?” | HyperLogLog |
-| “Lấy k samples uniform từ stream?” | Reservoir Sampling |
-| “Hai sets giống nhau khoảng bao nhiêu?” | MinHash / bottom-k |
-| “Need exact iteration/value retrieval?” | probabilistic structure alone không đủ |
+| Key có thể đã tồn tại? | Bloom/Cuckoo/XOR Filter |
+| Frequency của key đã biết? | Count-Min Sketch |
+| Heavy hitters là ai? | Misra–Gries / Space-Saving / CMS + candidates |
+| Bao nhiêu giá trị distinct? | HyperLogLog |
+| Hai tập giống nhau bao nhiêu? | MinHash |
+| Lấy mẫu stream đều | Reservoir Sampling |
+| Percentile/quantile | Quantile sketch phù hợp |
 
-Table chỉ là orientation; exact variant phải match update/error model.
+Bảng này chỉ là điểm khởi đầu; update/delete/merge/error model mới quyết định cuối cùng.
 
-## Common misconceptions
+## Kiểm thử cấu trúc xác suất
 
-“Bloom Filter nói present nghĩa key có thật” — sai, chỉ maybe present.
+Testing phải kiểm tra cả correctness logic lẫn statistical behavior.
 
-“Bloom Filter support delete bằng clear bits” — sai cho standard filter vì shared bits.
+Bloom Filter:
 
-“CMS error là ±x” — standard model thường one-sided overestimate.
+```text
+mọi key đã insert phải query true trong mô hình chuẩn
+đo false-positive rate trên tập key độc lập lớn
+```
 
-“HLL cho exact distinct khi cardinality nhỏ” — implementation có corrections nhưng vẫn là approximate structure unless library explicitly switches exact representation.
+CMS:
 
-“Randomized structure error tự biến mất khi data lớn” — không; parameter/error model quyết định.
+```text
+estimate không thấp hơn true count trong insertion-only model
+đo error distribution trên workload khác nhau
+```
 
-“Merge sketches bất kỳ” — sai; configuration/hash compatibility bắt buộc.
+HLL:
 
-“Approximate = không đáng tin” — sai; properly parameterized probabilistic guarantee có thể rất strong và operationally better than exact state impossible to maintain.
+```text
+chạy nhiều trial với cardinality đã biết
+đo relative error distribution
+```
 
-## Mental Model
+Không nên kiểm thử probability bằng 10 sample rồi kết luận guarantee đúng.
 
-> Probabilistic data structures không cố giữ data; chúng giữ **evidence**. Bloom Filter giữ evidence membership trong bits, CMS giữ noisy count evidence, HLL giữ rare hash-pattern evidence về cardinality, reservoir giữ representative sample. Memory nhỏ vì many distinct histories intentionally collapse into the same summary state.
+## Differential và simulation testing
 
-Khi chọn một probabilistic structure, hãy hỏi: **error nào được phép, error metric là additive hay relative, confidence bao nhiêu, stream/update model là gì, cần merge/delete/window không, hash assumptions có hợp threat model không, và approximation sẽ ảnh hưởng correctness hay chỉ performance?**
+Có thể so sketch với exact structure trên dataset nhỏ/vừa:
 
-Xem tiếp: [Hash Tables](../01_linear_structures/04_hash_tables.md), [Amortized & Randomized Thinking](./03_amortized_randomized_and_probabilistic_thinking.md), [Bitsets](./02_bit_manipulation_and_bitsets.md), [DSA in Systems](../90_connections/01_dsa_in_databases_networks_and_systems.md) và [Mathematical Toolkit](../00_foundations/04_mathematical_toolkit_for_dsa.md).
+```text
+HashSet -> exact cardinality
+HashMap -> exact frequency
+full list -> exact sample distribution
+```
+
+Sau đó chạy nhiều seed/workload để quan sát bias, variance và tail error.
+
+Đây là cách nối theory với implementation thực tế.
+
+## Những hiểu lầm phổ biến
+
+“Bloom Filter nói true nghĩa key tồn tại” — sai; chỉ là “có thể tồn tại”.
+
+“Bloom Filter delete một key bằng cách clear các bit của nó” — có thể tạo false negative cho key khác.
+
+“CMS biết heavy hitter là ai” — nó chỉ estimate key được hỏi, trừ khi ghép candidate mechanism.
+
+“HLL có thể xóa một user khỏi cardinality bằng cách undo hash” — không đơn giản vì register giữ max history.
+
+“Sketch nhỏ thì accuracy cố định” — error phụ thuộc parameters và workload size.
+
+“Expected/statistical guarantee vẫn đúng với mọi adversarial hash input” — không nếu assumptions bị phá.
+
+“Merge hai sketch cùng loại luôn hợp lệ” — sai nếu precision/hash/version khác nhau.
+
+## Mô hình tư duy
+
+> Probabilistic data structure là một **hợp đồng nén thông tin**. Ta chủ động bỏ khả năng phân biệt một số trạng thái để đổi lấy memory/throughput/mergeability, nhưng phải mô tả chính xác cái giá bằng error model.
+
+Khi chọn sketch, hãy hỏi: **truy vấn thật sự là membership, frequency, heavy hitter, cardinality, similarity hay quantile; error được phép theo hướng nào; memory bao nhiêu; update có delete không; cần merge giữa shard không; hash assumptions có phù hợp threat model không; và downstream system sẽ dùng estimate như thế nào?**
+
+Xem tiếp: [Hash Tables](../01_linear_structures/04_hash_tables.md), [Amortized, Randomized & Probabilistic Thinking](./03_amortized_randomized_and_probabilistic_thinking.md), [Mathematical Toolkit](../00_foundations/04_mathematical_toolkit_for_dsa.md), [Bit Manipulation](./02_bit_manipulation_and_bitsets.md) và [DSA in Databases, Networks & Systems](../90_connections/01_dsa_in_databases_networks_and_systems.md).

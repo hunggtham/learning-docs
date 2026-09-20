@@ -1,9 +1,9 @@
-# Shortest Paths
+# các đường đi ngắn nhất
 **Đường đi ngắn nhất (Shortest Path / 최단 경로)**
 
-“Shortest path” không phải tên của một thuật toán duy nhất. Nó là một họ bài toán, và lựa chọn algorithm phụ thuộc trực tiếp vào **mô hình trọng số (weight model / 가중치 모델)** của graph.
+“đường đi ngắn nhất (shortest path)” không phải tên của một thuật toán duy nhất. Nó là một họ bài toán, và lựa chọn thuật toán phụ thuộc trực tiếp vào **mô hình trọng số (weight model / 가중치 모델)** của đồ thị.
 
-Cùng một graph topology nhưng nếu edges đều bằng nhau, chỉ có `0/1`, đều không âm, có số âm, hay graph là DAG thì structure toán học khác nhau. Vì vậy trước khi nghĩ tới Dijkstra, câu hỏi đầu tiên phải là:
+Cùng một đồ thị topology nhưng nếu các cạnh đều bằng nhau, chỉ có `0/1`, đều không âm, có số âm, hay đồ thị là DAG thì structure toán học khác nhau. Vì vậy trước khi nghĩ tới Dijkstra, câu hỏi đầu tiên phải là:
 
 ```text
 Edge cost có dạng gì?
@@ -15,11 +15,11 @@ Graph sparse hay dense?
 Có cần actual path hay chỉ distance?
 ```
 
-## Mental Model
+## Mô hình tư duy
 
-> Mọi shortest-path algorithm đều cố cải thiện một **ước lượng distance** bằng relaxation. Khác nhau ở thứ tự relaxation và điều kiện nào cho phép xem một distance là đã “final”.
+> Mọi shortest-path thuật toán đều cố cải thiện một **ước lượng khoảng cách** bằng relaxation. Khác nhau ở thứ tự relaxation và điều kiện nào cho phép xem một khoảng cách là đã “final”.
 
-Với edge `u -> v` có weight `w`, relaxation kiểm tra:
+Với cạnh `u -> v` có trọng số `w`, relaxation kiểm tra:
 
 \[
 dist[v] > dist[u] + w
@@ -31,13 +31,13 @@ Nếu đúng:
 dist[v] \leftarrow dist[u] + w
 \]
 
-Đây là primitive xuyên suốt BFS, Dijkstra, Bellman-Ford và DAG shortest path.
+Đây là primitive xuyên suốt BFS, Dijkstra, Bellman-Ford và DAG đường đi ngắn nhất.
 
-## Unweighted graph: BFS là shortest-path algorithm
+## đồ thị không trọng số: BFS là shortest-path thuật toán
 
-Nếu mọi edge có cùng cost, ví dụ mỗi bước tính 1, **Breadth-First Search (BFS / 너비 우선 탐색)** đã đủ.
+Nếu mọi cạnh có cùng chi phí, ví dụ mỗi bước tính 1, **tìm kiếm theo chiều rộng (BFS / 너비 우선 탐색)** đã đủ.
 
-BFS xử lý graph theo layer:
+BFS xử lý đồ thị theo tầng:
 
 ```text
 distance 0: source
@@ -46,33 +46,33 @@ distance 2: neighbors của layer trước chưa thăm
 ...
 ```
 
-Khi một vertex lần đầu được discover, ta đã tìm được path ít edge nhất tới nó, bởi vì queue đảm bảo mọi path ngắn hơn đã được xử lý trước.
+Khi một đỉnh lần đầu được khám phá, ta đã tìm được đường đi ít cạnh nhất tới nó, bởi vì queue đảm bảo mọi đường đi ngắn hơn đã được xử lý trước.
 
-Complexity với adjacency list:
+Complexity với danh sách kề:
 
 \[
 O(V+E)
 \]
 
-Đây là một insight quan trọng: Dijkstra trên unweighted graph vẫn đúng nếu coi mọi edge weight = 1, nhưng heap là overhead không cần thiết.
+Đây là một insight quan trọng: Dijkstra trên đồ thị không trọng số vẫn đúng nếu coi mọi cạnh trọng số = 1, nhưng heap là overhead không cần thiết.
 
-## 0–1 BFS: khi weights chỉ là 0 hoặc 1
+## 0–1 BFS: khi các trọng số chỉ là 0 hoặc 1
 
-Nếu weight chỉ thuộc `{0,1}`, ta có thể dùng deque thay vì binary heap.
+Nếu trọng số chỉ thuộc `{0,1}`, ta có thể dùng deque thay vì đống nhị phân.
 
-Relax edge weight 0:
+Relax cạnh trọng số 0:
 
 ```text
 push_front(v)
 ```
 
-Relax edge weight 1:
+Relax cạnh trọng số 1:
 
 ```text
 push_back(v)
 ```
 
-Intuition là node có distance không tăng phải được xử lý trước các node làm distance tăng 1. Deque duy trì đúng ordering cần thiết mà không cần general-purpose priority queue.
+Intuition là nút có khoảng cách không tăng phải được xử lý trước các nút làm khoảng cách tăng 1. Deque duy trì đúng ordering cần thiết mà không cần general-purpose hàng đợi ưu tiên.
 
 Complexity:
 
@@ -80,23 +80,23 @@ Complexity:
 O(V+E)
 \]
 
-Ví dụ thực tế: chuyển trạng thái miễn phí hoặc trả phí 1 đơn vị; đi qua portal cost 0 nhưng bước thường cost 1; minimize số lần đổi mode.
+Ví dụ thực tế: chuyển trạng thái miễn phí hoặc trả phí 1 đơn vị; đi qua portal chi phí 0 nhưng bước thường chi phí 1; minimize số lần đổi mode.
 
-## Dijkstra: non-negative weights
+## Dijkstra: non-negative các trọng số
 
-**Dijkstra (다익스트라 알고리즘)** áp dụng khi mọi reachable edge weight không âm.
+**Dijkstra (다익스트라 알고리즘)** áp dụng khi mọi có thể tới cạnh trọng số không âm.
 
-Ta giữ `dist[v]` là best distance hiện biết. Priority queue chọn unsettled vertex có `dist` nhỏ nhất.
+Ta giữ `dist[v]` là best khoảng cách hiện biết. hàng đợi ưu tiên chọn unsettled đỉnh có `dist` nhỏ nhất.
 
-### Invariant cốt lõi
+### bất biến (invariant) cốt lõi
 
-Khi `u` là node có tentative distance nhỏ nhất và mọi edge weight không âm, không thể có một path đi qua một unsettled node xa hơn rồi quay lại làm `u` rẻ hơn.
+Khi `u` là nút có tentative khoảng cách nhỏ nhất và mọi cạnh trọng số không âm, không thể có một đường đi đi qua một unsettled nút xa hơn rồi quay lại làm `u` rẻ hơn.
 
-Giả sử có path tốt hơn tới `u` đi qua một unsettled vertex `x`. Vì edge weights không âm, prefix tới `x` không thể lớn hơn toàn path tới `u`. Nhưng `u` đang là tentative nhỏ nhất trong frontier. Điều này dẫn tới contradiction với giả định có path tốt hơn chưa được phát hiện.
+Giả sử có đường đi tốt hơn tới `u` đi qua một unsettled đỉnh `x`. Vì cạnh các trọng số không âm, prefix tới `x` không thể lớn hơn toàn đường đi tới `u`. Nhưng `u` đang là tentative nhỏ nhất trong frontier. Điều này dẫn tới contradiction với giả định có đường đi tốt hơn chưa được phát hiện.
 
-Do đó khi pop một state non-stale tốt nhất, distance đó có thể được xem là finalized.
+Do đó khi pop một trạng thái (state) non-stale tốt nhất, khoảng cách đó có thể được xem là finalized.
 
-### Java với stale-entry pattern
+### Java với stale-entry mẫu
 
 ```java
 record Edge(int to, long w) {}
@@ -131,15 +131,15 @@ static long[] dijkstra(List<List<Edge>> g, int s) {
 }
 ```
 
-Với adjacency list + binary heap, complexity thường viết:
+Với danh sách kề + đống nhị phân, complexity thường viết:
 
 \[
 O((V+E)\log V)
 \]
 
-hoặc gần `O(E log V)` cho connected sparse graph.
+hoặc gần `O(E log V)` cho connected đồ thị thưa.
 
-## Tại sao negative edge phá Dijkstra?
+## Tại sao negative cạnh phá Dijkstra?
 
 Giả sử:
 
@@ -149,17 +149,17 @@ s -> b : 5
 b -> a : -10
 ```
 
-Dijkstra có thể finalize `a = 2` trước vì `2 < 5`. Nhưng path `s -> b -> a` có cost `-5`, tốt hơn rất nhiều.
+Dijkstra có thể finalize `a = 2` trước vì `2 < 5`. Nhưng đường đi `s -> b -> a` có chi phí `-5`, tốt hơn rất nhiều.
 
-Vấn đề không phải implementation. Assumption “một node tốt nhất hiện tại sẽ không bị cải thiện trong tương lai” đã sai vì negative edge có thể giảm cost sau khi đi qua một node đang xa hơn.
+Vấn đề không phải cách triển khai. giả định “một nút tốt nhất hiện tại sẽ không bị cải thiện trong tương lai” đã sai vì negative cạnh có thể giảm chi phí sau khi đi qua một nút đang xa hơn.
 
-Đây là lý do condition “non-negative weight” là phần của correctness proof, không chỉ là recommendation performance.
+Đây là lý do điều kiện “non-negative trọng số” là phần của tính đúng đắn chứng minh, không chỉ là recommendation hiệu năng.
 
-## Bellman-Ford: relaxation theo số edges
+## Bellman-Ford: relaxation theo số các cạnh
 
-**Bellman-Ford (벨만-포드)** cho phép negative edges.
+**Bellman-Ford (벨만-포드)** cho phép negative các cạnh.
 
-Một shortest simple path không có repeated vertex có tối đa `V-1` edges. Vì vậy nếu ta relax mọi edge `V-1` rounds, mọi shortest path finite sẽ có đủ cơ hội propagate từ source.
+Một shortest đơn giản đường đi không có lặp lại đỉnh có tối đa `V-1` các cạnh. Vì vậy nếu ta relax mọi cạnh `V-1` rounds, mọi đường đi ngắn nhất finite sẽ có đủ cơ hội propagate từ nguồn.
 
 Pseudo-flow:
 
@@ -180,17 +180,17 @@ Complexity:
 O(VE)
 \]
 
-Chậm hơn Dijkstra nhưng support model rộng hơn.
+Chậm hơn Dijkstra nhưng support mô hình rộng hơn.
 
-## Negative cycle semantics
+## Negative chu trình ngữ nghĩa (semantics)
 
-Nếu round thứ `V` vẫn có relaxation trên vertex reachable từ source, có một **negative cycle (음수 사이클)** ảnh hưởng tới region đó.
+Nếu round thứ `V` vẫn có relaxation trên đỉnh có thể tới từ nguồn, có một **negative chu trình (음수 사이클)** ảnh hưởng tới region đó.
 
-Điều này không đơn giản nghĩa là “không có shortest path ở toàn graph”. Nếu cycle không reachable từ source, nó không ảnh hưởng single-source query. Nếu cycle reachable nhưng target không reachable từ cycle, target vẫn có thể có finite shortest path.
+Điều này không đơn giản nghĩa là “không có đường đi ngắn nhất ở toàn đồ thị”. Nếu chu trình không có thể tới từ nguồn, nó không ảnh hưởng single-source truy vấn. Nếu chu trình có thể tới nhưng đích không có thể tới từ chu trình, đích vẫn có thể có finite đường đi ngắn nhất.
 
-Nếu target reachable sau một negative cycle, objective không có finite minimum: đi thêm vòng cycle làm cost giảm vô hạn.
+Nếu đích có thể tới sau một negative chu trình, objective không có finite minimum: đi thêm vòng chu trình làm chi phí giảm vô hạn.
 
-Mental model đúng là:
+Mô hình tư duy đúng là:
 
 ```text
 negative cycle reachable + can reach target
@@ -199,27 +199,27 @@ negative cycle reachable + can reach target
 
 ## SPFA: vì sao cần thận trọng
 
-Shortest Path Faster Algorithm dùng queue để chỉ relax vertices có thay đổi, thường nhanh trên một số data. Nhưng worst-case vẫn có thể rất tệ, gần `O(VE)` và còn có adversarial inputs.
+đường đi ngắn nhất Faster thuật toán dùng queue để chỉ relax các đỉnh có thay đổi, thường nhanh trên một số data. Nhưng trường hợp xấu nhất vẫn có thể rất tệ, gần `O(VE)` và còn có đối kháng các đầu vào.
 
-Vì vậy không nên coi SPFA là “Bellman-Ford nhanh hơn” với guarantee tốt hơn. Dùng khi hiểu workload hoặc trong context mà empirical behavior được chấp nhận.
+Vì vậy không nên coi SPFA là “Bellman-Ford nhanh hơn” với bảo đảm tốt hơn. Dùng khi hiểu khối lượng công việc hoặc trong context mà empirical hành vi được chấp nhận.
 
-## DAG shortest path
+## DAG đường đi ngắn nhất
 
-Nếu graph là **Directed Acyclic Graph (DAG / 방향 비순환 그래프)**, ta có topological order. Mỗi edge luôn đi từ node trước sang node sau trong order.
+Nếu đồ thị là **Directed Acyclic đồ thị (DAG / 방향 비순환 그래프)**, ta có thứ tự tô-pô. Mỗi cạnh luôn đi từ nút trước sang nút sau trong order.
 
-Do đó chỉ cần relax mỗi edge một lần theo topological order:
+Do đó chỉ cần relax mỗi cạnh một lần theo thứ tự tô-pô:
 
 \[
 O(V+E)
 \]
 
-Điểm đặc biệt: DAG shortest path chấp nhận negative edge vì không có cycle để quay lại phá ordering.
+Điểm đặc biệt: DAG đường đi ngắn nhất chấp nhận negative cạnh vì không có chu trình để quay lại phá ordering.
 
-Đây là ví dụ điển hình cho việc topology mạnh hơn weight assumption. Khi graph acyclic, dependency order loại nhu cầu repeated relaxation.
+Đây là ví dụ điển hình cho việc topology mạnh hơn trọng số giả định. Khi đồ thị acyclic, dependency order loại nhu cầu lặp lại relaxation.
 
-## All-pairs shortest paths và Floyd-Warshall
+## All-pairs các đường đi ngắn nhất và Floyd-Warshall
 
-Nếu cần shortest path giữa mọi cặp vertices và graph đủ nhỏ/dense, **Floyd-Warshall (플로이드-워셜)** là một dynamic programming rất trực tiếp.
+Nếu cần đường đi ngắn nhất giữa mọi cặp các đỉnh và đồ thị đủ nhỏ/dense, **Floyd-Warshall (플로이드-워셜)** là một quy hoạch động (dynamic programming) rất trực tiếp.
 
 Định nghĩa:
 
@@ -227,7 +227,7 @@ Nếu cần shortest path giữa mọi cặp vertices và graph đủ nhỏ/dens
 d_k(i,j)
 \]
 
-là shortest distance từ `i` tới `j` khi chỉ được dùng các intermediate vertices trong `{0,...,k}`.
+là shortest khoảng cách từ `i` tới `j` khi chỉ được dùng các intermediate các đỉnh trong `{0,...,k}`.
 
 Transition:
 
@@ -250,25 +250,25 @@ Time:
 O(V^3)
 \]
 
-Memory:
+bộ nhớ:
 
 \[
 O(V^2)
 \]
 
-Nó rất phù hợp khi `V` nhỏ và cần nhiều pair queries, đặc biệt dense graph.
+Nó rất phù hợp khi `V` nhỏ và cần nhiều pair các truy vấn, đặc biệt đồ thị dày.
 
-## Floyd-Warshall và negative cycles
+## Floyd-Warshall và negative các chu trình
 
-Sau algorithm, nếu:
+Sau thuật toán, nếu:
 
 \[
 d[i][i] < 0
 \]
 
-thì có negative cycle reachable từ `i` và quay về `i`.
+thì có negative chu trình có thể tới từ `i` và quay về `i`.
 
-Muốn biết pair `(s,t)` có shortest path không hữu hạn, phải kiểm có vertex `k` sao cho:
+Muốn biết pair `(s,t)` có đường đi ngắn nhất không hữu hạn, phải kiểm có đỉnh `k` sao cho:
 
 ```text
 s reaches k
@@ -276,11 +276,11 @@ k lies on/reaches negative cycle
 negative cycle region reaches t
 ```
 
-Chỉ nhìn một diagonal âm mà tuyên bố mọi cặp invalid là sai.
+Chỉ nhìn một diagonal âm mà tuyên bố mọi cặp không hợp lệ là sai.
 
-## Johnson's algorithm: all-pairs trên sparse graph
+## Johnson's thuật toán: all-pairs trên đồ thị thưa
 
-Khi graph sparse, `O(V^3)` có thể lãng phí. **Johnson's algorithm** dùng Bellman-Ford để tìm potentials, reweight edges thành non-negative mà bảo toàn shortest-path ordering, rồi chạy Dijkstra từ từng source.
+Khi đồ thị sparse, `O(V^3)` có thể lãng phí. **Johnson's thuật toán** dùng Bellman-Ford để tìm potentials, reweight các cạnh thành non-negative mà bảo toàn shortest-path ordering, rồi chạy Dijkstra từ từng nguồn.
 
 Ý tưởng reweight:
 
@@ -290,17 +290,17 @@ w'(u,v)=w(u,v)+h(u)-h(v)
 
 Nếu `h` được chọn từ Bellman-Ford potentials, `w' >= 0`.
 
-Path cost bị shift theo endpoints nhưng relative choice giữa paths cùng source/target không đổi. Đây là một example đẹp của việc biến problem sang domain mà algorithm mạnh hơn áp dụng được.
+đường đi chi phí bị shift theo endpoints nhưng relative choice giữa các đường đi cùng nguồn/đích không đổi. Đây là một example đẹp của việc biến problem sang domain mà thuật toán mạnh hơn áp dụng được.
 
-## Path reconstruction
+## đường đi reconstruction
 
-Distance value thường chưa đủ. Muốn actual route, khi relaxation thành công:
+khoảng cách giá trị thường chưa đủ. Muốn actual route, khi relaxation thành công:
 
 ```text
 parent[v] = u
 ```
 
-Sau algorithm, backtrack từ target tới source.
+Sau thuật toán, backtrack từ đích tới nguồn.
 
 ```java
 List<Integer> path = new ArrayList<>();
@@ -310,11 +310,11 @@ for (int v = target; v != -1; v = parent[v]) {
 Collections.reverse(path);
 ```
 
-Cần phân biệt `parent` cho shortest-path tree với graph parent generic. Nếu có nhiều shortest paths cùng cost, tie-breaking quyết định path nào được lưu.
+Cần phân biệt `parent` cho cây đường đi ngắn nhất với đồ thị nút cha tổng quát. Nếu có nhiều các đường đi ngắn nhất cùng chi phí, quy tắc phân xử khi bằng nhau quyết định đường đi nào được lưu.
 
-## Counting shortest paths
+## Counting các đường đi ngắn nhất
 
-Nếu cần số shortest paths, có thể maintain `ways[v]` cùng `dist[v]`:
+Nếu cần số các đường đi ngắn nhất, có thể maintain `ways[v]` cùng `dist[v]`:
 
 ```text
 new distance better:
@@ -325,25 +325,25 @@ new distance equal:
     ways[v] += ways[u]
 ```
 
-Nhưng correctness còn phụ thuộc processing order và zero-weight cycles. Nếu có zero-cost cycles, số walk shortest có thể không finite. Domain phải nói đang đếm simple paths, walks hay paths trong DAG/positive-weight setting.
+Tính đúng đắn còn phụ thuộc vào thứ tự xử lý và các chu trình trọng số 0. Nếu tồn tại chu trình chi phí 0, số hành trình ngắn nhất có thể là vô hạn. Miền bài toán phải nói rõ đang đếm đường đi đơn, hành trình (walk), hay đường đi trong DAG hoặc đồ thị có trọng số dương.
 
-## Multi-source shortest path
+## Multi-source đường đi ngắn nhất
 
-Nếu có nhiều sources và cần distance tới source gần nhất, không nhất thiết chạy algorithm nhiều lần.
+Nếu có nhiều sources và cần khoảng cách tới nguồn gần nhất, không nhất thiết chạy thuật toán nhiều lần.
 
-Với unweighted graph, enqueue tất cả sources với distance 0 rồi BFS một lần.
+Với đồ thị không trọng số, đưa vào hàng đợi tất cả sources với khoảng cách 0 rồi BFS một lần.
 
-Với non-negative weighted graph, push tất cả sources vào Dijkstra PQ với distance 0.
+Với non-negative đồ thị có trọng số, push tất cả sources vào Dijkstra PQ với khoảng cách 0.
 
-Mental model: tạo một virtual super-source nối tới mọi source bằng edge weight 0.
+Mô hình tư duy: tạo một virtual super-source nối tới mọi nguồn bằng cạnh trọng số 0.
 
 ## Multi-target và early exit
 
-Trong Dijkstra, nếu chỉ cần một target, có thể dừng khi target được pop với non-stale minimum distance, vì lúc đó nó đã finalized.
+Trong Dijkstra, nếu chỉ cần một đích, có thể dừng khi đích được pop với non-stale minimum khoảng cách, vì lúc đó nó đã finalized.
 
-Không nên dừng ngay khi target lần đầu được discovered/relaxed; tentative distance có thể còn được cải thiện trước khi target trở thành min frontier.
+Không nên dừng ngay khi đích lần đầu được được khám phá/relaxed; tentative khoảng cách có thể còn được cải thiện trước khi đích trở thành min frontier.
 
-## A*: shortest path với heuristic
+## A*: đường đi ngắn nhất với heuristic
 
 **A\*** ưu tiên:
 
@@ -351,21 +351,21 @@ Không nên dừng ngay khi target lần đầu được discovered/relaxed; ten
 f(v)=g(v)+h(v)
 \]
 
-trong đó `g(v)` là cost từ source, `h(v)` ước lượng cost còn lại tới target.
+trong đó `g(v)` là chi phí từ nguồn, `h(v)` ước lượng chi phí còn lại tới đích.
 
-Nếu heuristic **admissible** (`h(v)` không overestimate true remaining cost), A* có thể giữ optimality. Nếu heuristic còn consistent, processing behavior gần Dijkstra với reweighted priorities và ít reopen hơn.
+Nếu heuristic **admissible** (`h(v)` không overestimate true remaining chi phí), A* có thể giữ optimality. Nếu heuristic còn consistent, xử lý hành vi gần Dijkstra với reweighted các độ ưu tiên và ít reopen hơn.
 
 Dijkstra chính là A* với `h(v)=0`.
 
-Trong routing/spatial search, heuristic tốt giúp bỏ rất nhiều vùng graph không liên quan.
+Trong routing/spatial search, heuristic tốt giúp bỏ rất nhiều vùng đồ thị không liên quan.
 
 ## Bidirectional search
 
-Nếu source và target rõ ràng, có thể search từ hai phía và gặp nhau ở giữa. Với unweighted graph, bidirectional BFS có thể giảm effective search frontier mạnh từ khoảng `b^d` xuống gần `2b^{d/2}` trong ideal branching model.
+Nếu nguồn và đích đã biết, có thể tìm kiếm từ hai phía và gặp nhau ở giữa. Với đồ thị không trọng số, BFS hai chiều có thể giảm mạnh kích thước biên tìm kiếm hiệu dụng từ khoảng `b^d` xuống gần `2b^{d/2}` trong mô hình phân nhánh lý tưởng.
 
-Weighted bidirectional Dijkstra phức tạp hơn vì stopping condition phải đảm bảo lower bound hai frontier đã đủ lớn; không thể chỉ dừng ở lần đầu hai searches chạm nhau một cách ngây thơ.
+Weighted bidirectional Dijkstra phức tạp hơn vì stopping điều kiện phải đảm bảo cận dưới hai frontier đã đủ lớn; không thể chỉ dừng ở lần đầu hai searches chạm nhau một cách ngây thơ.
 
-## Overflow và infinity representation
+## tràn số và infinity cách biểu diễn (representation)
 
 Trong Java, nếu dùng:
 
@@ -379,13 +379,13 @@ rồi tính:
 INF + w
 ```
 
-có thể overflow thành số âm. Thực tế thường dùng `Long.MAX_VALUE / 4` hoặc guard:
+có thể tràn số thành số âm. Thực tế thường dùng `Long.MAX_VALUE / 4` hoặc guard:
 
 ```text
 if dist[u] != INF before addition
 ```
 
-Trong C, signed integer overflow có thể là undefined behavior. Cần chọn type đủ rộng và kiểm boundary.
+Trong C, signed tràn số nguyên (integer overflow) có thể là undefined hành vi. Cần chọn type đủ rộng và kiểm ranh giới.
 
 JavaScript `Number` biểu diễn integer chính xác tới:
 
@@ -393,27 +393,27 @@ JavaScript `Number` biểu diễn integer chính xác tới:
 2^{53}-1
 \]
 
-Nếu path sum có thể vượt vùng này, cân nhắc `BigInt` hoặc thay đổi model dữ liệu.
+Nếu đường đi sum có thể vượt vùng này, cân nhắc `BigInt` hoặc thay đổi mô hình dữ liệu.
 
-## Floating-point weights
+## Floating-point các trọng số
 
-Nếu weights là `double`, equality test và stale check cần cẩn thận. Với floating-point, expression `curDist != dist[u]` có thể vẫn hoạt động nếu values được copy nguyên từ computed distance, nhưng các comparisons gần boundary có thể chịu rounding.
+Nếu các trọng số là `double`, equality test và stale check cần cẩn thận. Với floating-point, expression `curDist != dist[u]` có thể vẫn hoạt động nếu các giá trị được copy nguyên từ computed khoảng cách, nhưng các phép so sánh gần ranh giới có thể chịu rounding.
 
-Nếu domain là tiền tệ hoặc fixed-scale cost, integer minor units thường an toàn hơn floating point.
+Nếu domain là tiền tệ hoặc fixed-scale chi phí, integer minor units thường an toàn hơn dấu phẩy động.
 
-## Sparse vs dense graph
+## Sparse vs đồ thị dày
 
-Adjacency list phù hợp sparse graph và Dijkstra/BFS thường chỉ iterate outgoing edges thực sự tồn tại.
+danh sách kề phù hợp đồ thị thưa và Dijkstra/BFS thường chỉ iterate outgoing các cạnh thực sự tồn tại.
 
-Adjacency matrix cho edge lookup `O(1)` nhưng iteration neighbors `O(V)`. Trên dense graph, matrix-based algorithms có thể cạnh tranh vì locality tốt và `E ≈ V^2` anyway.
+ma trận kề cho cạnh tra cứu `O(1)` nhưng iteration các đỉnh kề `O(V)`. Trên đồ thị dày, matrix-based các thuật toán có thể cạnh tranh vì tính cục bộ (locality) tốt và `E ≈ V^2` anyway.
 
-Big-O phải gắn với representation.
+Big-O phải gắn với cách biểu diễn.
 
-## Shortest path tree không phải Minimum Spanning Tree
+## đường đi ngắn nhất cây không phải cây khung nhỏ nhất
 
-Dijkstra từ source tạo một shortest-path tree: path từ source tới mỗi vertex là shortest.
+Dijkstra từ nguồn tạo một cây đường đi ngắn nhất: đường đi từ nguồn tới mỗi đỉnh là shortest.
 
-MST tối thiểu **tổng weight của toàn bộ tree**. Nó không đảm bảo path từ root tới từng vertex là shortest.
+MST tối thiểu **tổng trọng số của toàn bộ cây**. Nó không đảm bảo đường đi từ nút gốc tới từng đỉnh là shortest.
 
 Hai objectives khác nhau:
 
@@ -422,38 +422,38 @@ Shortest-path tree -> tối ưu route từ source
 MST                -> tối ưu total infrastructure cost
 ```
 
-Đừng chọn algorithm chỉ vì cả hai “trông như chọn edge nhỏ”.
+Đừng chọn thuật toán chỉ vì cả hai “trông như chọn cạnh nhỏ”.
 
 ## Decision table
 
-| Weight / structure | Algorithm tự nhiên |
+| trọng số / structure | thuật toán tự nhiên |
 |---|---|
-| unweighted / equal weight | BFS |
-| weights 0 hoặc 1 | 0–1 BFS |
-| non-negative weights | Dijkstra |
-| negative edges, không biết cycle | Bellman-Ford |
+| unweighted / equal trọng số | BFS |
+| các trọng số 0 hoặc 1 | 0–1 BFS |
+| non-negative các trọng số | Dijkstra |
+| negative các cạnh, không biết chu trình | Bellman-Ford |
 | DAG | topological relaxation |
-| all-pairs, graph nhỏ/dense | Floyd-Warshall |
-| all-pairs, sparse, có negative edges nhưng không negative cycle | Johnson |
+| all-pairs, đồ thị nhỏ/dense | Floyd-Warshall |
+| all-pairs, sparse, có negative các cạnh nhưng không negative chu trình | Johnson |
 | spatial single-target + heuristic tốt | A* |
 
-Bảng này không thay proof. Nó chỉ nhắc điều kiện model.
+Bảng này không thay chứng minh. Nó chỉ nhắc điều kiện mô hình.
 
-## Common misconceptions
+## Những hiểu lầm phổ biến
 
-**“Dijkstra nhanh hơn Bellman-Ford nên cứ dùng Dijkstra.”** Sai nếu có negative edge. Correctness condition quan trọng hơn speed.
+**“Dijkstra nhanh hơn Bellman-Ford nên cứ dùng Dijkstra.”** Sai nếu có negative cạnh. tính đúng đắn điều kiện quan trọng hơn speed.
 
-**“BFS chỉ là traversal, không phải shortest path.”** Với equal edge costs, BFS chính là shortest-path algorithm tối ưu.
+**“BFS chỉ là traversal, không phải đường đi ngắn nhất.”** Với equal cạnh các chi phí, BFS chính là shortest-path thuật toán tối ưu.
 
-**“Negative cycle nghĩa là mọi shortest path trong graph đều không tồn tại.”** Không. Chỉ các source-target regions bị ảnh hưởng mới không có finite minimum.
+**“Negative chu trình nghĩa là mọi đường đi ngắn nhất trong đồ thị đều không tồn tại.”** Không. Chỉ các source-target regions bị ảnh hưởng mới không có finite minimum.
 
-**“Floyd-Warshall chỉ dùng cho positive weights.”** Nó hỗ trợ negative edges, miễn hiểu semantics negative cycle.
+**“Floyd-Warshall chỉ dùng cho positive các trọng số.”** Nó hỗ trợ negative các cạnh, miễn hiểu ngữ nghĩa negative chu trình.
 
-**“Dijkstra dừng khi target được nhìn thấy lần đầu.”** Không. Dừng khi target được extract/finalize đúng điều kiện.
+**“Dijkstra dừng khi đích được nhìn thấy lần đầu.”** Không. Dừng khi đích được extract/finalize đúng điều kiện.
 
-**“PriorityQueue duplicate entry làm Dijkstra sai.”** Không nếu dùng stale-entry check. Nó là implementation trade-off phổ biến.
+**“PriorityQueue phần tử trùng mục làm Dijkstra sai.”** Không nếu dùng stale-entry check. Nó là cách triển khai sự đánh đổi (trade-off) phổ biến.
 
-## Testing shortest-path implementation
+## kiểm thử shortest-path cách triển khai
 
 Test nên bao gồm:
 
@@ -471,28 +471,28 @@ negative cycle outside source component
 DAG with negative weights
 ```
 
-Một property mạnh sau khi có final distances là với mọi reachable edge `(u,v,w)`:
+Một tính chất mạnh sau khi có final các khoảng cách là với mọi có thể tới cạnh `(u,v,w)`:
 
 \[
 dist[v] \le dist[u] + w
 \]
 
-Nếu parent path được lưu, tổng weight trên parent chain phải bằng reported `dist[target]`.
+Nếu nút cha đường đi được lưu, tổng trọng số trên nút cha chain phải bằng reported `dist[target]`.
 
-Trên graph nhỏ, có thể differential-test Dijkstra non-negative với Floyd-Warshall reference.
+Trên đồ thị nhỏ, có thể differential-test Dijkstra non-negative với Floyd-Warshall tham chiếu.
 
-## Connection với production systems
+## Connection với các hệ thống thực tế
 
-Routing, map navigation, dependency cost, network latency planning, game AI pathfinding, logistics, workflow optimization và build dependency đều có shortest-path variants.
+Routing, điều hướng bản đồ, dependency chi phí, mạng độ trễ (latency) planning, tìm đường cho AI trò chơi, logistics, tối ưu luồng công việc và xây dựng dependency đều có shortest-path variants.
 
-Nhưng production thường thêm constraints: time-dependent weights, turn penalties, multiple resources, capacity, stochastic costs hoặc dynamic graph. Khi đó classical shortest path có thể trở thành state-space shortest path: mỗi “vertex” thực sự là `(location, time, fuel, mode, ...)`.
+Nhưng hệ thống thực tế thường thêm các ràng buộc: time-dependent các trọng số, turn penalties, multiple resources, capacity, stochastic các chi phí hoặc động đồ thị. Khi đó classical đường đi ngắn nhất có thể trở thành trạng thái-space đường đi ngắn nhất: mỗi “đỉnh” thực sự là `(location, time, fuel, mode, ...)`.
 
-Đây là connection quan trọng với problem modeling: algorithm có thể đúng nhưng state representation thiếu thông tin thì kết quả vẫn sai.
+Đây là connection quan trọng với problem mô hình hóa: thuật toán có thể đúng nhưng trạng thái cách biểu diễn thiếu thông tin thì kết quả vẫn sai.
 
-## Mental Model mở rộng
+## Mô hình tư duy mở rộng
 
-> Shortest path không bắt đầu từ tên algorithm; nó bắt đầu từ việc xác định **cost algebra và ordering nào cho phép một candidate trở thành final**.
+> đường đi ngắn nhất không bắt đầu từ tên thuật toán; nó bắt đầu từ việc xác định **chi phí algebra và ordering nào cho phép một ứng viên trở thành final**.
 
-BFS dùng layer order. 0–1 BFS dùng deque để giữ hai mức cost cục bộ. Dijkstra dựa vào non-negative weights. Bellman-Ford dựa vào giới hạn số edges của simple path. DAG dùng dependency order. Floyd-Warshall dùng allowed-intermediate-state DP.
+BFS dựa vào thứ tự theo tầng. 0–1 BFS dùng deque để duy trì hai mức chi phí cục bộ. Dijkstra dựa vào trọng số không âm. Bellman–Ford dựa vào giới hạn số cạnh của đường đi đơn. Thuật toán trên DAG dùng thứ tự phụ thuộc. Floyd–Warshall dùng quy hoạch động theo tập đỉnh trung gian được phép.
 
-Nếu nhớ được điều kiện làm mỗi method đúng, bạn có thể chọn algorithm từ bản chất bài toán thay vì từ pattern memorization.
+Nếu nhớ được điều kiện làm mỗi method đúng, bạn có thể chọn thuật toán từ bản chất bài toán thay vì từ mẫu memorization.

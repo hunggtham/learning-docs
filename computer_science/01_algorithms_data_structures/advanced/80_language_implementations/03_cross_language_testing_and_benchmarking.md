@@ -1,57 +1,59 @@
-# Testing và Benchmarking DSA trên C, Java, JavaScript
-**Data Structure & Algorithm Testing / 자료구조·알고리즘 테스트와 벤치마킹**
+# Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript
+**DSA Testing & Benchmarking / 자료구조·알고리즘 테스트와 벤치마킹**
 
-Một implementation DSA đáng tin cậy cần trả lời ba câu hỏi khác nhau:
-
-```text
-Algorithm có đúng về mặt lý thuyết không?
-Implementation có bug không?
-Chi phí thực tế trên runtime/hardware có đúng với kỳ vọng không?
-```
-
-**Proof**, **testing** và **benchmarking** giải ba lớp vấn đề khác nhau. Proof cho correctness/growth model. Test cố tìm counterexample của code thật. Benchmark đo latency, throughput, memory và scaling trong môi trường cụ thể. Trộn ba mục tiêu này thường dẫn tới kết luận sai: benchmark không chứng minh correctness, và vài unit tests không chứng minh Big-O.
-
-## 1. Specification trước Test
-
-Trước khi viết test, phải xác định contract:
+Một cách triển khai DSA đáng tin cậy phải trả lời ba câu hỏi khác nhau:
 
 ```text
-input hợp lệ là gì?
-output chính xác là gì?
-mutation có được phép không?
-ordering/tie-breaking thế nào?
-error behavior ra sao?
-complexity expectation nào là requirement?
+Thuật toán có đúng về mặt lý thuyết không?
+Cách triển khai có lỗi không?
+Chi phí thực tế trên môi trường chạy và phần cứng có đúng với kỳ vọng không?
 ```
 
-Ví dụ `topK(items, k)` có thể trả unordered set, stable sorted list hoặc arbitrary tie order. Nếu specification mơ hồ, test “fail” có thể chỉ là hai bên hiểu contract khác nhau.
+**Chứng minh (proof)**, **kiểm thử (testing)** và **đo hiệu năng (benchmarking)** giải quyết ba lớp vấn đề khác nhau. Chứng minh giải thích tính đúng đắn và mô hình tăng trưởng. Kiểm thử cố tìm phản ví dụ trong mã nguồn thật. Benchmark đo độ trễ, thông lượng, bộ nhớ và khả năng mở rộng trong một môi trường cụ thể.
 
-## 2. Test public behavior và internal invariant là hai lớp khác nhau
+Benchmark không chứng minh tính đúng đắn, và một vài unit test cũng không chứng minh được Big-O.
 
-Queue phải FIFO dù implement bằng linked list hay ring buffer. Public behavior tests nên không phụ thuộc representation.
+## 1. Đặc tả trước kiểm thử
 
-Custom heap/tree/hash table còn cần invariant tests:
+Trước khi viết test, phải xác định **hợp đồng (contract)**:
 
 ```text
-heap parent <= children
-BST inorder sorted
-AVL/RB balance/color properties
-hash-table size == occupied count
-DSU parent forest valid
-segment-tree parent aggregate = combine(children)
+đầu vào hợp lệ là gì?
+đầu ra chính xác là gì?
+có được phép thay đổi đầu vào không?
+thứ tự và cách phá hòa được định nghĩa thế nào?
+khi lỗi thì hành vi ra sao?
+yêu cầu độ phức tạp nào là bắt buộc?
 ```
 
-Behavior tests bảo vệ abstraction; invariant tests bắt corruption sớm hơn.
+Ví dụ `topK(items, k)` có thể trả một tập không thứ tự, một danh sách đã sắp xếp hoặc một thứ tự tùy ý giữa các phần tử bằng nhau. Nếu đặc tả mơ hồ, một kiểm thử “thất bại” có thể chỉ phản ánh hai cách hiểu khác nhau về hợp đồng.
 
-## 3. Assertions như executable specification
+## 2. Hành vi công khai và bất biến nội bộ là hai lớp khác nhau
 
-Trong debug/test build, structure có thể có:
+Hàng đợi phải giữ FIFO dù được cài bằng danh sách liên kết hay bộ đệm vòng. Kiểm thử hành vi công khai không nên phụ thuộc cách biểu diễn bên trong.
+
+Cấu trúc tự cài đặt còn cần kiểm tra **bất biến (invariant)**:
+
+```text
+heap: nút cha <= các nút con
+BST: duyệt inorder cho thứ tự đã sắp xếp
+AVL/RB Tree: thỏa điều kiện cân bằng và màu
+Hash Table: size khớp số ô đang chứa phần tử
+DSU: các con trỏ cha tạo thành rừng hợp lệ
+Segment Tree: nút cha = phép gộp của các nút con
+```
+
+Kiểm thử hành vi bảo vệ lớp trừu tượng; kiểm tra bất biến giúp phát hiện hỏng cấu trúc sớm hơn.
+
+## 3. Assertion như một đặc tả có thể thực thi
+
+Trong bản dựng dùng để kiểm thử hoặc gỡ lỗi, có thể đặt assertion:
 
 ```java
 assert size >= 0 && size <= capacity;
 ```
 
-hoặc validator:
+hoặc viết các hàm:
 
 ```text
 validateHeap()
@@ -59,110 +61,102 @@ validateBST()
 validateFreeList()
 ```
 
-Assertions không thay input validation ở public boundary. Chúng dùng để phát hiện **programmer assumption** bị phá.
+Assertion không thay cho việc kiểm tra đầu vào ở ranh giới API. Nó dùng để phát hiện giả định của lập trình viên bị phá vỡ.
 
-Một invariant scan `O(n)` sau mỗi mutation là quá đắt cho production nhưng hoàn toàn hợp lý trong randomized tests.
+Một phép kiểm tra bất biến `O(n)` sau mỗi cập nhật có thể quá đắt cho production nhưng hoàn toàn hợp lý trong kiểm thử ngẫu nhiên.
 
-## 4. Unit Tests: deterministic edge cases
+## 4. Unit test nên bắt đầu từ trường hợp biên
 
-Unit tests nên cover smallest boundaries trước:
+Các trường hợp cần ưu tiên:
 
 ```text
-empty
-one element
-two elements
-full capacity
-first resize
-last removal
-duplicate keys
-negative/large values
-max/min index
+rỗng
+một phần tử
+hai phần tử
+đầy dung lượng
+lần tăng dung lượng đầu tiên
+xóa phần tử cuối cùng
+khóa trùng
+giá trị âm hoặc rất lớn
+chỉ số nhỏ nhất/lớn nhất
 ```
 
-Bugs DSA thường nằm ở transitions:
+Lỗi DSA thường xuất hiện ở các điểm chuyển trạng thái:
 
 ```text
-empty -> one
-one -> empty
-capacity -> capacity+1
-root rotation
-head/tail removal
-component merge
+rỗng -> một phần tử
+một phần tử -> rỗng
+capacity -> capacity + 1
+xoay nút gốc
+xóa head/tail
+gộp hai thành phần
 ```
 
-Đừng chỉ test “normal middle state”.
+Không nên chỉ kiểm thử trạng thái “bình thường ở giữa”.
 
-## 5. Differential Testing
+## 5. Kiểm thử đối chiếu
 
-Chạy implementation đang test và một reference implementation đơn giản trên cùng input.
-
-Examples:
+**Kiểm thử đối chiếu (differential testing)** chạy cách triển khai cần kiểm tra và một cách làm tham chiếu đơn giản trên cùng đầu vào.
 
 ```text
-custom heap       vs sorted array
-segment tree      vs raw loop
-Dijkstra          vs Floyd-Warshall trên graph nhỏ
-Kruskal           vs Prim
-custom hash set   vs linear/sorted reference
-Quickselect       vs full sort
+heap tự cài đặt       vs mảng đã sắp xếp
+Segment Tree          vs vòng lặp trực tiếp trên mảng
+Dijkstra              vs Floyd-Warshall trên đồ thị nhỏ
+Kruskal               vs Prim
+Hash Set tự cài đặt   vs mô hình tuyến tính đơn giản
+Quickselect           vs sắp xếp toàn bộ
 ```
 
-Oracle không cần nhanh. Input nhỏ + oracle đơn giản thường đáng tin hơn một optimized oracle phức tạp.
+Bộ tham chiếu không cần nhanh. Với đầu vào nhỏ, một cách làm chậm nhưng đơn giản thường đáng tin hơn một “oracle” tối ưu nhưng phức tạp.
 
-## 6. Property-Based Testing
+## 6. Kiểm thử dựa trên tính chất
 
-Thay vì hard-code output, test properties phải luôn đúng.
+Thay vì mã hóa cứng đầu ra, có thể kiểm tra các tính chất luôn phải đúng.
 
-Sort:
+Sắp xếp:
 
 ```text
-output nondecreasing
-multiset(output) == multiset(input)
+đầu ra không giảm
+multiset(đầu ra) == multiset(đầu vào)
 ```
 
 MST:
 
 ```text
-V-1 edges
-connected
-acyclic
-cost == reference cost
+có V-1 cạnh nếu đồ thị liên thông
+liên thông
+không có chu trình
+chi phí bằng cách làm tham chiếu
 ```
 
-Lower bound:
+Tìm cận dưới:
 
 ```text
-all indices < answer violate predicate
-answer/after satisfy predicate
+mọi vị trí trước đáp án không thỏa điều kiện
+đáp án và các vị trí sau thỏa điều kiện đơn điệu tương ứng
 ```
 
-Data structure:
+Kiểm thử dựa trên tính chất thường gần với đặc tả toán học hơn một tập nhỏ các ví dụ viết tay.
 
-```text
-sequence public operations equivalent reference model
-```
+## 7. Kiểm thử biến hình
 
-Properties gần mathematical specification hơn example tests.
-
-## 7. Metamorphic Testing
-
-Khi khó có oracle, biến đổi input theo relation đã biết.
+Khi khó tạo một oracle trực tiếp, có thể biến đổi đầu vào theo một quan hệ đã biết và kiểm tra đầu ra biến đổi tương ứng.
 
 Ví dụ:
 
 ```text
-rename graph vertices -> mapped result tương đương
-add constant c vào mọi sort key -> order không đổi
-add isolated graph vertex -> old pair distances không đổi
-permute input of a set algorithm -> set output không đổi
-scale all positive MST weights by c -> chosen MST edge ordering structurally tương ứng nếu ties không đổi
+đổi tên các đỉnh đồ thị -> kết quả phải tương đương sau khi ánh xạ lại
+cộng cùng hằng số vào mọi khóa sắp xếp -> thứ tự tương đối không đổi
+thêm một đỉnh cô lập -> khoảng cách giữa các đỉnh cũ không đổi
+hoán vị đầu vào của thuật toán tập hợp -> tập kết quả không đổi
+nhân mọi trọng số MST dương với cùng c -> cấu trúc tối ưu tương ứng nếu quan hệ hòa không đổi
 ```
 
-Metamorphic tests rất hữu ích cho graph, optimization và randomized algorithms.
+Đây được gọi là **kiểm thử biến hình (metamorphic testing)** và đặc biệt hữu ích với đồ thị, tối ưu hóa và thuật toán ngẫu nhiên.
 
-## 8. Model-Based Testing cho mutable structures
+## 8. Kiểm thử dựa trên mô hình cho cấu trúc có trạng thái
 
-Tạo một simple model state và random operation sequence:
+Tạo một mô hình đơn giản rồi sinh chuỗi thao tác:
 
 ```text
 insert
@@ -172,19 +166,19 @@ peek
 update
 ```
 
-Sau mỗi operation:
+Sau mỗi thao tác:
 
 ```text
-compare return value
-compare logical contents
-validate invariants
+so sánh giá trị trả về
+so sánh nội dung logic
+kiểm tra bất biến
 ```
 
-Ví dụ custom deque so với standard library list/deque. Model-based testing đặc biệt mạnh cho data structure bug chỉ xuất hiện sau sequence dài.
+Ví dụ, deque tự cài đặt có thể được đối chiếu với deque của thư viện chuẩn. Phương pháp này rất hiệu quả với lỗi chỉ xuất hiện sau một chuỗi thao tác dài.
 
-## 9. Stateful fuzzing
+## 9. Fuzzing có trạng thái
 
-Fuzzer không chỉ sinh input một lần, mà sinh sequence operations phụ thuộc state:
+Fuzzer không nhất thiết chỉ sinh một đầu vào độc lập. Nó có thể sinh chuỗi thao tác phụ thuộc trạng thái:
 
 ```text
 push 5
@@ -195,189 +189,155 @@ remove index 0
 ...
 ```
 
-Nó có thể tìm bug resize, stale pointer, metadata drift hoặc deletion corner case mà unit tests độc lập không thấy.
+Cách này có thể phát hiện lỗi thay đổi kích thước, con trỏ cũ, sai lệch siêu dữ liệu hoặc lỗi xóa ở trường hợp góc. Luôn ghi lại hạt giống và chuỗi thao tác để tái hiện lỗi.
 
-Log seed + operation trace để reproduce.
+## 10. Thu nhỏ trường hợp lỗi
 
-## 10. Shrinking/minimization
+Một chuỗi 100.000 thao tác gây lỗi ít hữu ích hơn một chuỗi 7 thao tác tối thiểu vẫn gây cùng lỗi. **Thu nhỏ (shrinking/minimization)** cố loại bớt thao tác hoặc giảm giá trị trong khi vẫn giữ lỗi.
 
-Một random sequence 100.000 operations fail không hữu ích bằng 7 operations tối thiểu gây bug.
-
-Shrinking cố loại operations/giảm values mà failure vẫn giữ. Property-testing frameworks có support; nếu tự viết, có thể dùng delta-debugging style:
+Một cách đơn giản theo kiểu delta debugging:
 
 ```text
-thử bỏ nửa trace
-nếu vẫn fail -> giữ phiên bản nhỏ hơn
-lặp
+thử bỏ một nửa chuỗi
+nếu vẫn lỗi -> giữ phiên bản nhỏ hơn
+lặp lại
 ```
 
-Minimal counterexample thường làm invariant bug trở nên hiển nhiên.
+Phản ví dụ nhỏ thường làm nguyên nhân phá bất biến trở nên rõ ràng.
 
-## 11. Random generator phải biết failure modes
+## 11. Bộ sinh dữ liệu phải biết các dạng lỗi
 
-Uniform random numbers chưa đủ.
+Sinh số ngẫu nhiên đồng đều là chưa đủ.
 
-Sorting:
+Sắp xếp nên thử:
 
 ```text
-sorted
-reverse
-nearly sorted
-all equal
-duplicate-heavy
-organ-pipe patterns
+đã sắp xếp
+giảm dần
+gần sắp xếp
+tất cả bằng nhau
+rất nhiều phần tử trùng
+mẫu organ-pipe
 ```
 
-Hash table:
+Bảng băm nên thử va chạm nhiều, chèn/xóa liên tục, ngưỡng hệ số tải và ranh giới băm lại. Đồ thị nên thử đường thẳng, hình sao, chu trình, DAG, clique, đồ thị rời rạc, cạnh song song và self-loop.
 
-```text
-collision-heavy patterns
-insert/delete churn
-load-factor thresholds
-resize boundaries
-```
+Bộ sinh tốt tạo **trường hợp đối nghịch có cấu trúc**, không chỉ tạo nhiễu ngẫu nhiên.
 
-Graph:
+## 12. Hạt giống phải tái hiện được
 
-```text
-path
-star
-cycle
-DAG
-clique
-disconnected
-parallel edges
-self-loops
-```
-
-Generator tốt sinh **structured adversarial cases**, không chỉ noise.
-
-## 12. Deterministic seeds
-
-Mọi randomized test/algorithm benchmark nên có seed configurable. Failure report cần:
+Mọi kiểm thử ngẫu nhiên và benchmark có sinh dữ liệu nên cho phép cấu hình hạt giống. Báo cáo lỗi nên chứa:
 
 ```text
 seed
-input size
-parameters
-runtime/version
-operation trace hoặc generated case
+kích thước đầu vào
+tham số
+phiên bản môi trường chạy
+chuỗi thao tác hoặc trường hợp đã sinh
 ```
 
-Không reproduce được failure nghĩa là debugging cost tăng rất mạnh.
+Không tái hiện được lỗi sẽ làm chi phí gỡ lỗi tăng mạnh.
 
-## 13. Test randomized algorithms mà không làm test flaky
+## 13. Kiểm thử thuật toán ngẫu nhiên mà không làm test chập chờn
 
-Không nên assert “Quickselect luôn dùng < X comparisons” cho một random run. Thay vào đó:
+Không nên kiểm tra kiểu “Quickselect luôn dùng ít hơn X phép so sánh” trong một lần chạy ngẫu nhiên. Thay vào đó:
 
 ```text
-assert correctness cho mọi run
-fix seed cho regression case
-statistical test performance/probability riêng nếu cần
+kiểm tra tính đúng đắn ở mọi lần chạy
+cố định seed cho trường hợp hồi quy
+kiểm tra thống kê về hiệu năng/xác suất ở một bài test riêng nếu cần
 ```
 
-Probabilistic structures cần statistical validation trên nhiều trials với tolerance/confidence, không assert exact false-positive rate trên một small sample.
+Cấu trúc xác suất cần kiểm tra thống kê trên nhiều lần thử với dung sai và mức tin cậy phù hợp.
 
-## 14. Test probabilistic data structures
+## 14. Kiểm thử cấu trúc dữ liệu xác suất
 
 Bloom Filter:
 
 ```text
-no false negative cho inserted items theo standard model
-false-positive rate nằm gần expected trên sufficiently large independent sample
+không có âm tính giả với phần tử đã chèn trong mô hình chuẩn
+tỷ lệ dương tính giả gần mức kỳ vọng trên mẫu độc lập đủ lớn
 ```
 
 HyperLogLog:
 
 ```text
-relative error distribution qua nhiều random datasets
-merge result tương thích single-pass result trong tolerance
+phân phối sai số tương đối trên nhiều tập dữ liệu
+kết quả sau gộp tương thích với kết quả xử lý một lượt trong dung sai
 ```
 
 Count-Min Sketch:
 
 ```text
-estimate >= true count trong non-negative model
-error statistics phù hợp parameterization
+estimate >= true count trong mô hình cập nhật không âm
+thống kê sai số phù hợp với tham số cấu hình
 ```
 
-Test statistical guarantee khác test deterministic equality.
+Bảo đảm thống kê phải được kiểm thử bằng tiêu chí thống kê, không phải bằng so sánh bằng tuyệt đối.
 
 ## 15. Mutation testing
 
-Một cách đánh giá chất lượng test suite là cố tình inject bug nhỏ:
+Một cách đánh giá chất lượng test suite là cố tình đưa vào các lỗi nhỏ:
 
 ```text
 < thành <=
 quên size--
 đảo comparator
-skip low update
-sai boundary +1
+bỏ một bước cập nhật
+sai biên +1
 ```
 
-Nếu tests vẫn pass, suite đang thiếu sensitivity ở behavior đó.
+Nếu toàn bộ test vẫn vượt qua, bộ kiểm thử đang thiếu khả năng phát hiện hành vi đó. **Mutation testing** đặc biệt hữu ích với DSA vì nhiều lỗi chỉ là một dòng nhưng phá bất biến sâu bên trong.
 
-Mutation testing không phải DSA-specific nhưng cực hữu ích vì nhiều bugs là one-line invariant violations.
+## 16. Benchmark khác kiểm thử ở mục tiêu
 
-## 16. Benchmark khác Test ở mục tiêu
+Kiểm thử hỏi đúng hay sai. Benchmark hỏi chi phí bao nhiêu.
 
-Test hỏi đúng/sai. Benchmark hỏi cost.
+Không nên đặt các hàm xác minh nặng vào bên trong vòng đo đường chạy nóng nếu chúng không thuộc tải công việc thật. Khâu chuẩn bị dữ liệu cũng cần tách ra nếu câu hỏi chỉ là chi phí của một thao tác cụ thể.
 
-Benchmark hot path không nên chạy validator nặng bên trong timing loop. Setup/input generation cần tách ra nếu không thuộc workload cần đo.
+Ví dụ, nếu đo `HashMap.get`, nên tạo sẵn map trước khi bắt đầu tính giờ, trừ khi mục tiêu thật sự là đo cả quá trình xây dựng và tra cứu.
 
-Ví dụ benchmark `HashMap.get` thì populate map trước timing, trừ khi question thật sự là build+lookup pipeline.
+## 17. Đo ở nhiều quy mô
 
-## 17. Benchmark nhiều scale, không một `n`
-
-Đo `n` theo geometric progression:
+Nên tăng `n` theo cấp số nhân:
 
 ```text
 1K, 2K, 4K, 8K, ...
 ```
 
-Quan sát ratio:
+Quan sát tỷ lệ thời gian khi tăng gấp đôi đầu vào:
 
 ```text
-n doubled, time ~2x -> linear signal
-~4x                  -> quadratic signal
-slightly >2x         -> n log n / memory effects
+xấp xỉ 2 lần -> tín hiệu gần tuyến tính
+xấp xỉ 4 lần -> tín hiệu gần bậc hai
+hơn 2 lần một chút -> có thể là n log n hoặc hiệu ứng bộ nhớ
 ```
 
-Đây không phải proof Big-O, nhưng giúp phát hiện accidental complexity regression.
+Đây không phải chứng minh Big-O, nhưng rất hữu ích để phát hiện suy giảm độ phức tạp ngoài ý muốn.
 
-## 18. Input shape là một benchmark dimension
+## 18. Hình dạng đầu vào là một chiều của benchmark
 
-Quicksort performance phụ thuộc pivot/input. Hash table phụ thuộc key distribution. Graph algorithm phụ thuộc density. DP phụ thuộc reachable-state density.
+Hiệu năng Quicksort phụ thuộc cách chọn pivot và thứ tự đầu vào. Bảng băm phụ thuộc phân phối khóa. Thuật toán đồ thị phụ thuộc mật độ. DP phụ thuộc mật độ trạng thái đạt tới được.
 
-Benchmark table nên có dimensions:
+Một bảng benchmark nên mô tả:
 
 ```text
-size
-shape/distribution
-operation mix
-read/write ratio
-warm/cold cache
+kích thước
+hình dạng / phân phối
+hỗn hợp thao tác
+tỷ lệ đọc/ghi
+bộ nhớ đệm nóng/lạnh
 ```
 
-Một single random-uniform dataset không đại diện mọi workload.
+Một tập dữ liệu ngẫu nhiên đồng đều duy nhất không đại diện cho mọi tải công việc.
 
-## 19. Throughput vs Latency
+## 19. Thông lượng và độ trễ
 
-Throughput:
+**Thông lượng (throughput)** thường đo số thao tác mỗi giây. **Độ trễ (latency)** đo thời gian cho một thao tác hoặc yêu cầu.
 
-```text
-operations/second
-```
+Một cấu trúc có thông lượng trung bình tốt vẫn có thể có p99 xấu do thay đổi kích thước hoặc GC. Chi phí khấu hao `O(1)` không bảo đảm mỗi thao tác đều có độ trễ hằng số.
 
-Latency:
-
-```text
-time per operation/request
-```
-
-Batch algorithm có throughput tốt nhưng p99 latency xấu do occasional resize/GC. Amortized `O(1)` không bảo đảm per-operation constant latency.
-
-Production benchmark nên đo distribution:
+Khi độ trễ đuôi quan trọng, nên đo:
 
 ```text
 p50
@@ -386,56 +346,52 @@ p99
 max
 ```
 
-nếu tail quan trọng.
+## 20. Bộ nhớ đệm nóng và lạnh
 
-## 20. Warm vs Cold Cache
+Quét lặp lại cùng một mảng có thể chủ yếu đo trường hợp dữ liệu đã nằm trong cache. Điều này khác với lần truy cập đầu tiên hoặc tải công việc có tập dữ liệu lớn hơn LLC.
 
-Benchmark array scan lặp lại cùng buffer có thể đo warm-cache performance, khác first-pass/cold-cache workload.
-
-Search index production có dataset lớn hơn LLC, nên microbenchmark fit-cache có thể misleading.
-
-Cần biết câu hỏi:
+Cần xác định rõ đang đo:
 
 ```text
-steady hot loop?
-first access?
-working set > cache?
+vòng lặp ổn định với cache nóng?
+lần truy cập đầu tiên?
+tập làm việc lớn hơn cache?
 ```
 
-## 21. C: compiler optimization
+## 21. C: tối ưu hóa của trình biên dịch
 
-Benchmark C ở `-O0` không đại diện production optimized build. Cần record flags, compiler version và target architecture.
+Benchmark C với `-O0` không đại diện cho bản dựng production đã tối ưu. Cần ghi lại cờ biên dịch, phiên bản compiler và kiến trúc đích.
 
-Compiler có thể loại computation nếu result không observable. Benchmark phải consume result hoặc dùng harness phù hợp.
+Compiler còn có thể loại bỏ phép tính nếu kết quả không quan sát được. Benchmark phải sử dụng kết quả hoặc dùng harness phù hợp để tránh đo “công việc đã bị tối ưu mất”.
 
-Undefined behavior làm mọi performance conclusion vô nghĩa: optimizer được phép giả định UB không xảy ra.
+Nếu chương trình có hành vi không xác định (undefined behavior), kết luận hiệu năng có thể hoàn toàn vô nghĩa vì optimizer được phép giả định UB không xảy ra.
 
-## 22. C: allocator là một phần workload
+## 22. C: bộ cấp phát là một phần của tải công việc
 
-Linked structure `malloc` mỗi node đang benchmark cả allocator. Điều này đúng nếu production cũng allocate như vậy.
+Danh sách liên kết gọi `malloc` cho từng nút đang đo cả thuật toán lẫn bộ cấp phát. Điều đó đúng nếu hệ thống thật cũng cấp phát như vậy.
 
-Nếu muốn isolate traversal, preallocate nodes. Nếu muốn compare arena vs malloc, allocation phải nằm trong measured workload.
+Nếu muốn tách riêng chi phí duyệt, có thể cấp phát trước các nút. Nếu muốn so arena với `malloc`, thao tác cấp phát phải nằm trong vùng đo.
 
-Không có “benchmark thuần data structure” tách khỏi representation nếu allocation chính là phần implementation.
+Không có benchmark “thuần cấu trúc dữ liệu” tách hoàn toàn khỏi cách biểu diễn nếu cấp phát chính là một phần của cách triển khai.
 
-## 23. C: sanitizers và benchmark tách riêng
+## 23. C: sanitizer và benchmark phải tách riêng
 
-AddressSanitizer/UBSan rất tốt cho correctness nhưng tăng overhead mạnh. Không dùng sanitized build để kết luận production performance.
+AddressSanitizer và UBSan rất hữu ích để tìm lỗi nhưng làm tăng chi phí đáng kể. Không nên dùng bản dựng có sanitizer để kết luận hiệu năng production.
 
-Quy trình:
+Quy trình hợp lý:
 
 ```text
-sanitized tests/fuzzing
-optimized benchmark build riêng
+kiểm thử/fuzzing với sanitizer
+benchmark bằng bản dựng tối ưu riêng
 ```
 
-Correctness trước, performance sau.
+Tính đúng đắn trước, hiệu năng sau.
 
-## 24. Java: JIT warm-up
+## 24. Java: làm nóng JIT
 
-Java code có tiered compilation/JIT. Run đầu đo startup/interpreter/compilation nhiều hơn steady-state.
+Java có biên dịch nhiều tầng và JIT. Những lần chạy đầu có thể đo nhiều chi phí khởi động, thông dịch và biên dịch hơn là trạng thái ổn định.
 
-Framework như JMH xử lý:
+JMH hỗ trợ các khái niệm như:
 
 ```text
 warmup iterations
@@ -445,13 +401,13 @@ blackholes
 state scopes
 ```
 
-Tự viết `System.nanoTime()` loop rất dễ dính dead-code elimination, constant folding hoặc insufficient warmup.
+Tự viết một vòng `System.nanoTime()` rất dễ gặp tối ưu loại mã chết, gộp hằng hoặc làm nóng không đủ.
 
-## 25. Java: GC và allocation rate
+## 25. Java: GC và tốc độ cấp phát
 
-Hai algorithms cùng latency trung bình có thể khác allocation rate. High allocation làm GC hoạt động nhiều và tail latency thay đổi.
+Hai thuật toán có độ trễ trung bình giống nhau có thể có tốc độ cấp phát rất khác. Cấp phát nhiều làm GC hoạt động nhiều hơn và có thể ảnh hưởng độ trễ đuôi.
 
-Đo:
+Các chỉ số nên quan sát:
 
 ```text
 bytes/op
@@ -460,110 +416,102 @@ GC count/time
 peak/live heap
 ```
 
-nếu structure object-heavy.
-
-Primitive arrays vs boxed objects là một khác biệt lớn trong DSA benchmark Java.
+Mảng kiểu nguyên thủy và collection chứa object đóng hộp có thể tạo khác biệt lớn về bộ nhớ và GC.
 
 ## 26. Java: escape analysis và scalar replacement
 
-JIT có thể eliminate allocation ngắn-lived nếu object không escape. Microbenchmark artificial có thể được optimize khác production nơi object escape qua collection/API.
+JIT có thể loại bỏ một số cấp phát ngắn hạn nếu đối tượng không thoát khỏi phạm vi phân tích. Một microbenchmark quá nhân tạo có thể được tối ưu khác xa hệ thống thật, nơi object thoát qua collection hoặc API.
 
-Benchmark cần mimic lifecycle thật; không nên suy từ toy microbenchmark sang full service quá xa.
+Benchmark nên mô phỏng vòng đời dữ liệu thật; không nên suy rộng quá xa từ một ví dụ nhỏ sang toàn bộ dịch vụ.
 
-## 27. JavaScript: JIT tiering và shapes
+## 27. JavaScript: JIT và hình dạng dữ liệu
 
-JavaScript engine tối ưu dựa runtime feedback. Mixed types, changing object shapes, sparse arrays hoặc polymorphic access có thể deoptimize hot code.
+Engine JavaScript tối ưu dựa trên phản hồi khi chạy. Kiểu dữ liệu trộn lẫn, hình dạng object thay đổi, mảng thưa hoặc truy cập đa hình có thể làm mã nóng mất tối ưu.
 
-Benchmark nên giữ data shape realistic. Một benchmark chỉ numbers packed array không đại diện workload thực tế có mixed objects.
+Dữ liệu benchmark phải có hình dạng gần tải công việc thật. Một phép đo chỉ dùng mảng số dày đặc không đại diện cho hệ thống chứa object và chuỗi.
 
-## 28. JavaScript: event loop và async noise
+## 28. JavaScript: event loop và nhiễu bất đồng bộ
 
-Nếu đo pure DSA trong Node/browser, tách network/file timers/GC scheduling càng nhiều càng tốt.
+Nếu đo DSA thuần CPU trong Node.js hoặc trình duyệt, nên tách mạng, file, timer và các nguồn nhiễu khác càng nhiều càng tốt.
 
-`async` không làm algorithm CPU-bound nhanh hơn; nó thay scheduling. Benchmark algorithm nên tránh trộn event-loop waiting trừ khi đó chính là workload.
+`async` không làm một thuật toán CPU-bound nhanh hơn; nó thay đổi cách lập lịch. Chỉ đưa thời gian chờ event loop vào benchmark nếu đó thực sự là một phần của tải công việc cần nghiên cứu.
 
-## 29. JavaScript: `performance.now`/timing granularity
+## 29. JavaScript: độ phân giải thời gian
 
-Operation quá nhanh cần batch nhiều iterations để vượt timer resolution/noise. Nhưng batching quá nhiều có thể thay JIT/GC regime.
+Thao tác quá nhanh cần được lặp theo lô để thời gian đo vượt nhiễu và độ phân giải của đồng hồ. Tuy nhiên, lặp quá nhiều có thể chuyển chương trình sang chế độ JIT hoặc GC khác.
 
-Nên đo nhiều repetitions, discard warm-up và xem distribution thay vì một run.
+Nên đo nhiều lần, bỏ giai đoạn làm nóng và xem phân phối kết quả thay vì chỉ lấy một lần chạy.
 
-## 30. Cross-language benchmark: định nghĩa câu hỏi trước
+## 30. Benchmark đa ngôn ngữ phải định nghĩa câu hỏi trước
 
-So C/Java/JS có thể mang hai mục tiêu khác:
+So C, Java và JavaScript có thể phục vụ hai mục tiêu khác nhau.
 
-**Algorithmic comparison**: nên giữ cùng language/runtime để giảm nhiễu.
+**So sánh thuật toán:** nên giữ cùng ngôn ngữ và môi trường để giảm nhiễu, tập trung vào khác biệt thuật toán.
 
-**Production stack comparison**: runtime overhead, GC/JIT chính là một phần answer.
+**So sánh stack hệ thống:** chi phí runtime, GC, JIT và cách biểu diễn chính là một phần của câu trả lời.
 
-Không nên từ một microbenchmark conclude “language X nhanh hơn language Y nói chung”. Kết luận hợp lệ phải gắn với:
-
-```text
-workload
-implementation
-runtime version
-hardware
-compiler flags
-memory limits
-```
-
-## 31. Fairness không đồng nghĩa code giống hệt
-
-Một implementation idiomatic Java dùng `int[]`, JavaScript dùng TypedArray, C dùng flat array có thể công bằng hơn ép cả ba dùng object-heavy structure giống syntax.
-
-Câu hỏi là compare **best reasonable implementation cùng semantics**, hay compare **same high-level structure**? Hai nghiên cứu khác nhau.
-
-Benchmark report phải nói rõ.
-
-## 32. Correctness parity trước performance parity
-
-Trước cross-language timing, cần verify outputs equivalent. Nếu C uses 64-bit integer còn JS Number mất precision, hai implementation không còn cùng problem semantics.
-
-Nếu Java comparator stable tie rule khác JS version, output contract khác.
-
-Đừng benchmark hai programs giải hơi khác problem rồi gọi đó là language comparison.
-
-## 33. Numeric semantics
-
-C signed overflow có UB trong nhiều trường hợp. Java integer overflow wrap theo two's complement semantics. JavaScript Number là IEEE-754 double với safe integer limit.
-
-Algorithm count/path sum phải dùng representation tương đương hoặc document semantic differences.
-
-BigInt JavaScript làm arithmetic cost khác Number; Java `BigInteger` cũng khác primitive long.
-
-## 34. Memory footprint cross-language
-
-Một node có:
+Không nên từ một microbenchmark kết luận rằng “ngôn ngữ X nhanh hơn ngôn ngữ Y nói chung”. Kết luận hợp lệ phải gắn với:
 
 ```text
-C: struct fields + allocator metadata/alignment
-Java: object header + references + GC metadata effects
-JS: engine object shape/property storage
+khối lượng công việc
+cách triển khai
+phiên bản runtime
+phần cứng
+cờ compiler
+giới hạn bộ nhớ
 ```
 
-So “1 million nodes” chỉ bằng logical count không đủ. Đo resident/live memory thực tế.
+## 31. Công bằng không có nghĩa là mã nguồn giống hệt
 
-Arrays/TypedArrays/primitive arrays thường cho cross-language footprint gần nhau hơn object graph.
+Java dùng `int[]`, JavaScript dùng `TypedArray` và C dùng mảng phẳng có thể là một so sánh công bằng hơn việc ép cả ba dùng cấu trúc object-heavy giống nhau về hình thức.
+
+Phải nói rõ đang so **cách triển khai hợp lý nhất cho cùng ngữ nghĩa** hay **cùng một cấu trúc cấp cao được mô phỏng giống nhau**. Đây là hai câu hỏi nghiên cứu khác nhau.
+
+## 32. Tính đúng đắn phải tương đương trước khi so hiệu năng
+
+Trước khi đo thời gian giữa các ngôn ngữ, phải xác nhận đầu ra và miền số tương đương. Nếu C dùng số nguyên 64 bit còn JavaScript dùng `Number` đã mất độ chính xác, hai chương trình không còn giải cùng một bài toán về mặt ngữ nghĩa.
+
+Tương tự, nếu quy tắc phá hòa hoặc tính ổn định khi sắp xếp khác nhau, hợp đồng đầu ra cũng khác.
+
+## 33. Ngữ nghĩa số giữa các ngôn ngữ
+
+C có thể có hành vi không xác định khi số nguyên có dấu tràn trong nhiều trường hợp. Java cho số nguyên tràn theo ngữ nghĩa two's complement. JavaScript `Number` là IEEE-754 double với giới hạn số nguyên an toàn.
+
+Thuật toán đếm hoặc cộng khoảng cách phải dùng cách biểu diễn tương đương, hoặc tài liệu phải ghi rõ khác biệt ngữ nghĩa.
+
+`BigInt` trong JavaScript và `BigInteger` trong Java cũng có chi phí khác đáng kể so với kiểu số nguyên nguyên thủy.
+
+## 34. Dung lượng bộ nhớ thực tế giữa các ngôn ngữ
+
+Một nút logic giống nhau có thể có chi phí khác:
+
+```text
+C    -> các trường struct + alignment + siêu dữ liệu allocator
+Java -> object header + reference + ảnh hưởng GC
+JS   -> object shape + vùng lưu thuộc tính của engine
+```
+
+Không thể chỉ đếm “một triệu nút” rồi kết luận bộ nhớ giống nhau. Nên đo lượng bộ nhớ thực tế. Mảng phẳng, `TypedArray` và mảng kiểu nguyên thủy thường cho cách so sánh bố trí dữ liệu rõ hơn đồ thị object.
 
 ## 35. CPU profiling
 
-Khi benchmark bất ngờ, profiler giúp phân biệt:
+Khi benchmark cho kết quả bất ngờ, profiler giúp phân biệt thời gian đang nằm ở:
 
 ```text
-algorithm work
+công việc thuật toán
 comparator
-allocation
+cấp phát
 GC
-hash function
-cache misses
+hàm băm
+cache miss
 runtime helper
 ```
 
-Tối ưu không có profile thường dễ tập trung sai chỗ.
+Tối ưu mà không profile rất dễ tập trung sai chỗ.
 
-## 36. Hardware counters
+## 36. Bộ đếm phần cứng
 
-Trong native/perf-oriented environment, counters như:
+Trong môi trường native hoặc nhạy về hiệu năng, các chỉ số như:
 
 ```text
 cycles
@@ -572,15 +520,11 @@ cache misses
 branch misses
 ```
 
-có thể giải thích vì sao hai `O(n)` implementation khác nhau.
+có thể giải thích vì sao hai cách triển khai cùng `O(n)` lại chênh lệch mạnh. Mảng và danh sách liên kết là ví dụ điển hình do tính cục bộ bộ nhớ khác nhau.
 
-Array vs linked list là ví dụ: instruction count và cache miss profile thường khác mạnh.
+## 37. Benchmark bộ nhớ
 
-## 37. Memory benchmark
-
-Space `O(n)` chưa đủ. Constants matter.
-
-Đo:
+Biết rằng cấu trúc là `O(n)` chưa đủ vì hệ số hằng có thể rất lớn. Nên đo:
 
 ```text
 peak RSS
@@ -591,216 +535,185 @@ spare capacity
 fragmentation
 ```
 
-Hash table có spare buckets; tree có pointer/object overhead; graph adjacency objects có thể tốn nhiều hơn CSR arrays.
+Bảng băm có ô dự phòng, cây có con trỏ hoặc object header, còn danh sách kề bằng object có thể tốn nhiều hơn CSR dùng mảng phẳng.
 
-## 38. End-to-end benchmark
+## 38. Benchmark đầu-cuối
 
-Microbenchmark heap `poll()` nhanh hơn 20% chưa chắc cải thiện service nếu heap chỉ chiếm 1% request time.
+Một phép `heap.poll()` nhanh hơn 20% không chắc làm dịch vụ nhanh hơn nếu heap chỉ chiếm 1% thời gian xử lý yêu cầu.
 
-Architecture decision cần end-to-end benchmark gần production:
+Quyết định kiến trúc cần benchmark gần hệ thống thật, bao gồm khi phù hợp:
 
 ```text
-serialization
-database/network
-allocation
-algorithm
-caching
-contention
+tuần tự hóa
+cơ sở dữ liệu / mạng
+cấp phát
+thuật toán
+bộ nhớ đệm
+tranh chấp tài nguyên
 ```
 
 Profile trước khi tối ưu.
 
-## 39. Concurrency benchmark
+## 39. Benchmark xử lý đồng thời
 
-Sequential cost không dự đoán concurrent throughput.
-
-Cần vary:
+Chi phí tuần tự không dự đoán trực tiếp thông lượng khi nhiều luồng cùng truy cập. Nên thay đổi:
 
 ```text
-thread count
-read/write ratio
-key contention
-NUMA/core placement
-critical section size
+số luồng
+tỷ lệ đọc/ghi
+mức tranh chấp khóa
+vị trí NUMA/lõi
+kích thước vùng tới hạn
 ```
 
-Concurrent map có thể scale tốt với dispersed keys nhưng collapse khi mọi threads update cùng key/cache line.
+Một concurrent map có thể mở rộng tốt khi khóa phân tán nhưng sụp giảm hiệu năng khi mọi luồng cùng cập nhật một khóa hoặc một dòng cache.
 
-Report throughput vs threads, không chỉ “8-thread result”.
+Nên báo cáo đường cong thông lượng theo số luồng, không chỉ một kết quả ở 8 luồng.
 
-## 40. False sharing và cache-line contention
+## 40. Chia sẻ giả và tranh chấp dòng cache
 
-Hai counters logic khác nhau nhưng cùng cache line có thể làm threads ping-pong cache ownership.
+Hai bộ đếm logic khác nhau nhưng nằm trên cùng một dòng cache có thể khiến các lõi liên tục chuyển quyền sở hữu dòng cache cho nhau. Đây là **chia sẻ giả (false sharing)**.
 
-Benchmark concurrent arrays/queues nên cân nhắc padding/alignment nếu result bất thường.
+Khi benchmark mảng hoặc hàng đợi dùng đồng thời, cần cân nhắc padding và alignment nếu kết quả có dấu hiệu bất thường. Đây là hiệu ứng phần cứng nằm ngoài Big-O tuần tự nhưng có tác động thực tế lớn.
 
-Đây là hardware effect nằm ngoài sequential Big-O nhưng rất thật.
+## 41. Kỷ luật thống kê trong benchmark
 
-## 41. Benchmark statistical hygiene
-
-Đừng chỉ lấy một average. Nên có:
+Không nên chỉ lấy một giá trị trung bình. Tùy mức độ quan trọng, có thể dùng:
 
 ```text
-multiple forks/processes
-many samples
-median/percentiles
-confidence interval nếu cần
-outlier explanation
+nhiều process/fork
+nhiều mẫu
+median và percentile
+confidence interval
+phân tích outlier
 ```
 
-OS scheduler, thermal throttling, background tasks, CPU frequency scaling tạo noise.
+Bộ lập lịch hệ điều hành, giới hạn nhiệt, tiến trình nền và thay đổi tần số CPU đều tạo nhiễu. Không cần biến mọi benchmark thành nghiên cứu khoa học, nhưng phải đủ kỷ luật để tránh tự kết luận từ nhiễu.
 
-Không cần biến mọi benchmark thành nghiên cứu khoa học, nhưng phải đủ discipline để không tự lừa mình.
+## 42. Benchmark hồi quy
 
-## 42. Regression Benchmark
-
-Benchmark hữu ích nhất khi chạy lặp qua commits/releases với threshold hợp lý.
+Benchmark hữu ích khi được chạy lặp lại qua commit hoặc release với ngưỡng hợp lý.
 
 Ví dụ:
 
 ```text
-heap push throughput không giảm >10%
-peak memory graph parser không tăng >15%
+thông lượng heap push không giảm quá 10%
+bộ nhớ cực đại của graph parser không tăng quá 15%
 ```
 
-Nhưng threshold cần allowance cho noise. Microbenchmark quá flaky làm CI mất giá trị.
+Ngưỡng phải chừa khoảng cho nhiễu. Một microbenchmark quá chập chờn sẽ làm CI mất giá trị.
 
-## 43. Complexity regression tests
+## 43. Kiểm tra hồi quy độ phức tạp
 
-Có thể tạo performance test theo scale ratio hơn là absolute milliseconds.
+Có thể kiểm tra tỷ lệ tăng theo quy mô thay vì chỉ dùng số mili giây tuyệt đối.
 
-Ví dụ algorithm expected near linear:
+Với thuật toán kỳ vọng gần tuyến tính:
 
 ```text
 time(2n) / time(n)
 ```
 
-không nên liên tục gần 4 trên large stable regime.
+không nên liên tục tiến gần 4 trong một miền `n` đủ lớn và ổn định. Cách này không chứng minh độ phức tạp nhưng có thể phát hiện vòng lặp lồng nhau ngoài ý muốn hoặc sao chép ẩn.
 
-Đây không proof complexity, nhưng bắt accidental nested loop hoặc hidden copy regression.
+## 44. Benchmark đầu vào đối nghịch
 
-## 44. Benchmark adversarial inputs
-
-Ngoài average workload, test cases xấu:
+Ngoài tải công việc trung bình, nên thử:
 
 ```text
-hash collision attack
-quicksort pathological ordering
-very deep tree/graph
-huge duplicates
-max capacity resize
+tấn công va chạm băm
+thứ tự bệnh lý cho Quicksort
+cây/đồ thị rất sâu
+rất nhiều phần tử trùng
+ranh giới thay đổi dung lượng cực đại
 ```
 
-Nếu API public hoặc latency-sensitive, worst-case behavior có thể là security/reliability concern.
+Nếu API công khai hoặc hệ thống nhạy với độ trễ, hành vi trường hợp xấu nhất có thể trở thành vấn đề bảo mật hoặc độ tin cậy.
 
-## 45. Reproducible benchmark report
+## 45. Báo cáo benchmark có thể tái hiện
 
-Một result đáng tin nên ghi:
+Một báo cáo đáng tin nên ghi:
 
 ```text
-CPU/cores
+CPU / số lõi
 RAM
-OS
-compiler/runtime version
-flags
-GC mode nếu relevant
+hệ điều hành
+phiên bản compiler/runtime
+các cờ biên dịch
+chế độ GC nếu liên quan
 commit SHA
-input generator + seed
-warmup/measurement config
+bộ sinh đầu vào + seed
+cấu hình warmup và measurement
 ```
 
-Không có metadata, result vài tháng sau gần như không audit được.
+Không có siêu dữ liệu, kết quả vài tháng sau gần như không thể kiểm tra lại.
 
-## 46. Một workflow hoàn chỉnh
+## 46. Quy trình hoàn chỉnh
 
-**Bước 1 — Specification:** viết contract và assumptions.
+**Bước 1 — Đặc tả:** viết hợp đồng và giả định.
 
-**Bước 2 — Proof/Reasoning:** invariant, correctness, complexity.
+**Bước 2 — Chứng minh và suy luận:** xác định bất biến, tính đúng đắn và độ phức tạp.
 
-**Bước 3 — Deterministic Tests:** boundaries và known cases.
+**Bước 3 — Unit test:** kiểm tra trường hợp biên và ví dụ đã biết.
 
-**Bước 4 — Differential/Property Tests:** random small cases + oracle.
+**Bước 4 — Kiểm thử đối chiếu/tính chất:** sinh nhiều trường hợp nhỏ và so với oracle.
 
-**Bước 5 — Fuzz/Adversarial:** long operation sequences, malformed shapes.
+**Bước 5 — Fuzzing/đối nghịch:** thử chuỗi thao tác dài và hình dạng khó.
 
-**Bước 6 — Sanitizers/Runtime checks:** memory/UB ở C, assertions, race tools nếu relevant.
+**Bước 6 — Công cụ kiểm tra runtime:** sanitizer cho C, assertion, công cụ phát hiện race khi phù hợp.
 
-**Bước 7 — Microbenchmark:** isolate primitive operation.
+**Bước 7 — Microbenchmark:** cô lập thao tác nguyên thủy cần đo.
 
-**Bước 8 — Profile:** tìm hotspot thật.
+**Bước 8 — Profiling:** tìm nút thắt thật.
 
-**Bước 9 — End-to-end benchmark:** workload gần production.
+**Bước 9 — Benchmark đầu-cuối:** dùng tải công việc gần hệ thống thực tế.
 
-**Bước 10 — Regression automation:** giữ performance/correctness qua thay đổi.
+**Bước 10 — Tự động hóa hồi quy:** giữ tính đúng đắn và hiệu năng qua các thay đổi.
 
-## 47. Ví dụ: custom Priority Queue cross-language
+## 47. Ví dụ: hàng đợi ưu tiên tự cài đặt trên ba ngôn ngữ
 
-Giả sử implement binary heap ở C/Java/JS.
+Giả sử cùng cài heap nhị phân ở C, Java và JavaScript.
 
-Correctness tests:
+Kiểm thử tính đúng đắn:
 
 ```text
-random push/pop vs sorted reference
-heap invariant after each mutation
-duplicates
-overflow/tie comparator
+push/pop ngẫu nhiên và đối chiếu với danh sách đã sắp xếp
+kiểm tra bất biến heap sau mỗi cập nhật
+thử phần tử trùng
+thử biên số và quy tắc phá hòa của comparator
 ```
 
-Benchmark dimensions:
+Các chiều benchmark:
 
 ```text
 n
-push:pop ratio
-primitive vs object payload
-already ordered/random scores
+tỷ lệ push:pop
+payload kiểu nguyên thủy hay object
+dữ liệu đã có thứ tự hay ngẫu nhiên
 ```
 
-C:
+C cần xét chiến lược cấp phát, bố trí `struct` và cờ compiler. Java cần xét boxing, mảng kiểu nguyên thủy, JIT và GC. JavaScript cần xét `Number`/`BigInt`, `Array`/`TypedArray`, cấp phát tuple/object và độ ổn định hình dạng dữ liệu.
+
+Đó mới là một so sánh có ý nghĩa; chạy một heap 1.000 phần tử đúng một lần là chưa đủ.
+
+## 48. Các lỗi benchmark phổ biến
 
 ```text
-allocator strategy
-struct layout
-compiler flags
+đo bản dựng debug rồi suy ra production
+vô tình đo cả bước chuẩn bị dữ liệu
+không làm nóng JIT
+để compiler loại bỏ công việc không quan sát được
+mẫu đo quá ngắn
+chỉ thử một kích thước đầu vào
+không kiểm tra tính đúng đắn của kết quả
+so các chương trình có ngữ nghĩa số khác nhau
+kết luận từ một giá trị trung bình duy nhất
+lấy microbenchmark để suy ra toàn bộ ứng dụng
 ```
 
-Java:
+## Mô hình tư duy
 
-```text
-boxing vs primitive custom arrays
-JIT warmup
-GC allocation
-```
+> **Chứng minh** giải thích vì sao thuật toán đúng và tăng trưởng ra sao. **Kiểm thử** cố phá cách triển khai. **Benchmark** đo chi phí thật dưới một tải công việc và môi trường cụ thể.
 
-JS:
-
-```text
-Number vs BigInt
-Array vs TypedArray
-object tuple allocation
-JIT shape stability
-```
-
-Đây mới là so sánh có ý nghĩa; chỉ chạy một heap of 1000 items một lần không đủ.
-
-## 48. Common benchmark mistakes
-
-```text
-benchmark debug build
-đo setup cùng hot operation ngoài ý muốn
-không warm up JIT
-compiler loại dead code
-sample quá ngắn
-chỉ một input size
-không kiểm tra result correctness
-so semantics numeric khác nhau
-kết luận từ average duy nhất
-microbenchmark rồi suy ra whole application
-```
-
-## Mental Model
-
-> **Proof** giải thích vì sao algorithm đúng và growth ra sao. **Testing** cố phá implementation. **Benchmarking** đo cost thật dưới một workload và runtime cụ thể.
-
-Ba lớp này phải nối với nhau nhưng không thay thế nhau. Một DSA implementation tốt là nơi mathematical contract, executable tests và empirical performance đều kể cùng một câu chuyện.
+Ba lớp này phải liên kết với nhau nhưng không thay thế nhau. Một cách triển khai DSA tốt là nơi **hợp đồng toán học, kiểm thử có thể thực thi và số liệu hiệu năng thực nghiệm** cùng mô tả nhất quán một hệ thống.
 
 Xem thêm: [Complexity Analysis](../00_foundations/02_complexity_analysis.md), [C Implementation](./00_c_dsa_implementation_patterns.md), [Java Collections](./01_java_collections_and_dsa.md), [JavaScript Runtime](./02_javascript_dsa_runtime_patterns.md).
