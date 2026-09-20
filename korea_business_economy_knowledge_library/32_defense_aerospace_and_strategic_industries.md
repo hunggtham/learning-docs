@@ -1,156 +1,486 @@
-# Quốc phòng, hàng không vũ trụ và các ngành chiến lược (Defense, Aerospace & Strategic Industries / 방산·우주항공·전략산업)
+# Quốc phòng, hàng không vũ trụ và các ngành chiến lược Hàn Quốc (Defense, Aerospace & Strategic Industries / 방산·우주항공·전략산업)
 
-Defense industry khác commercial manufacturing vì customer chủ yếu là government, procurement cycle dài, export cần diplomacy và product phải đáp ứng reliability/security standards cực cao. Khi Korean defense firms mở rộng export, đây không chỉ là câu chuyện “vũ khí bán chạy” mà là kết quả của decades tích lũy heavy-industry, electronics, shipbuilding, precision machinery và public procurement capability.
+Defense industry khác ordinary commercial manufacturing vì customer chủ yếu là government, procurement cycle dài, product phải đáp ứng reliability/security standards cực cao và export thường gắn với diplomacy, financing, training và localization. Khi Korean defense firms mở rộng export, đó không chỉ là câu chuyện “vũ khí bán chạy”; nó phản ánh decades tích lũy từ heavy industry, electronics, shipbuilding, precision machinery, software và public procurement.
 
-## Defense procurement tạo demand khác market consumer
+Một defense company vì vậy nên được nhìn như **long-cycle systems integrator** hơn là ordinary hardware seller.
 
-Trong consumer market, buyer có thể đổi brand nhanh. Trong defense, acquisition program kéo dài nhiều năm và gồm testing, budget approval, interoperability, training, maintenance và logistics support.
+## Defense ecosystem: prime contractor không làm mọi thứ
 
-Revenue vì thế thường lumpy và backlog-heavy. Contract ký hôm nay có thể được recognize thành revenue nhiều năm.
+Industry có nhiều layers:
 
-Xem logic backlog tương tự [16_shipbuilding_steel_chemicals_heavy_industry](./16_shipbuilding_steel_chemicals_heavy_industry.md).
+```text
+Government / DAPA / Foreign buyer
+          ↓
+Prime contractor / Platform integrator
+          ↓
+Subsystem suppliers
+          ↓
+Components / Materials / Software
+```
 
-## Backlog không bằng profit chắc chắn
+Prime contractor tích hợp platform, manage certification/contract và chịu customer interface.
 
-Order backlog (수주잔고) cho visibility nhưng không bảo đảm margin. Analyst cần xem contract type, escalation clauses, development obligations, FX, cost inflation và delivery schedule.
+Supplier có thể sở hữu radar, engine component, optics, electronics, guidance, software hoặc specialty material.
 
-Nếu fixed-price contract ký trước khi material/labor cost tăng, nominal backlog lớn vẫn có thể low margin.
+Economic value capture phụ thuộc:
 
-## Learning curve
+- IP ownership;
+- substitutability;
+- qualification barrier;
+- scale;
+- installed base.
 
-Manufacturing complex systems có learning curve: unit cost giảm khi cumulative production tăng vì process improvement và supplier learning.
+## DAPA và procurement institution
 
-Một representation thường dùng:
+**Defense Acquisition Program Administration (DAPA / 방위사업청)** quản lý nhiều development/acquisition programs.
+
+Defense procurement formalized hơn commercial purchase vì có:
+
+- requirement definition;
+- testing/evaluation;
+- budget approval;
+- security rules;
+- contract milestones;
+- acceptance.
+
+Domestic procurement can fund capability before export market opens, acting as anchor demand.
+
+This is similar to industrial policy/public procurement but with national-security requirements.
+
+## Revenue is backlog-driven and lumpy
+
+A defense contract can span years.
+
+Three variables must be separated:
+
+```text
+Order / 수주
+→ new contract flow
+
+Backlog / 수주잔고
+→ unexecuted contract stock
+
+Revenue
+→ value recognized during delivery/progress
+```
+
+Headline order today may contribute revenue years later.
+
+Backlog therefore gives visibility but not immediate cash/profit.
+
+## Backlog quality matters
+
+Two contracts of same value can have very different economics depending on:
+
+- fixed vs cost-plus pricing;
+- development obligations;
+- localization;
+- escalation clauses;
+- FX;
+- delivery schedule;
+- milestone payment.
+
+A huge order with high local-transfer obligations may have lower retained value than smaller domestic contract.
+
+Therefore always ask: **what margin and cash terms are embedded?**
+
+## Systems integration is a moat
+
+Tank, aircraft, missile or radar is not merely collection of components.
+
+Sensors, software, communications, propulsion, materials and fire-control must work under extreme conditions.
+
+This creates **integration capability / 체계통합 능력**.
+
+Korea can leverage capabilities accumulated from:
+
+- automotive manufacturing;
+- shipbuilding;
+- electronics;
+- semiconductors;
+- heavy machinery;
+- software.
+
+Systems integration is difficult to copy because much knowledge is tacit and proven through testing/field operation.
+
+## Reliability and qualification create switching cost
+
+Once platform/subsystem is qualified, switching supplier can require re-testing, redesign and logistics retraining.
+
+This creates high switching cost and long product life.
+
+But it also makes entry slow: startup cannot simply enter with a good prototype without qualification track record.
+
+Regulation is both barrier and moat.
+
+## Learning curve: cumulative production can reduce unit cost
+
+Complex manufacturing often experiences learning:
 
 \[
 C_n = C_1 n^b, \quad b<0
 \]
 
-Trong đó `C_n` là unit cost ở cumulative unit `n`. Đây không phải law universal, nhưng giúp hiểu vì sao export order lớn có thể cải thiện economics của domestic defense program bằng cách spread fixed development cost.
+where `C_n` is approximate cost at cumulative unit `n`.
 
-## Systems integration là moat
+The exact curve varies, but intuition is important: larger production run spreads engineering/tooling and improves process.
 
-Tank, aircraft, radar hay missile không chỉ là collection parts. Value nằm ở systems integration: sensors, software, propulsion, materials, fire control, communication và reliability phải hoạt động cùng nhau.
+Export order can improve domestic platform economics by increasing cumulative volume.
 
-Korean industrial base có advantage vì các capabilities này đã phát triển trong automobiles, shipbuilding, electronics và heavy machinery.
+This is one reason scale matters even when customer is government.
 
-## Export: product + financing + diplomacy + localization
+## Fixed R&D cost and platform economics
 
-Defense export thường cần package gồm government-to-government relationship, financing, training, maintenance, local production/offset và technology transfer.
+Developing aircraft/missile/platform can require years of R&D before meaningful production revenue.
 
-Vì vậy competitor không chỉ cạnh tranh specification/price. Delivery speed, political reliability và ability transfer production có thể quyết định deal.
+Once development fixed cost paid, additional production units can have better incremental economics.
 
-Một company có great product nhưng export license hoặc diplomatic relationship yếu vẫn không capture market.
+Therefore platform lifecycle matters:
 
-## Aerospace: certification và long development cycle
+```text
+Development
+→ Initial production
+→ Scale production
+→ Export variants
+→ Upgrades
+→ Sustainment
+```
 
-Aircraft business có development cycle rất dài và certification barrier cao. Commercial aerospace còn cần global supplier qualification; military aerospace cần mission-specific approval.
+A successful platform may generate revenue for decades.
 
-High fixed R&D cost tạo scale economics lớn. Một platform bán thêm unit sau development có thể improve project return đáng kể.
+## Sustainment: installed base creates recurring revenue
 
-## Space economy
+Military platforms need:
 
-Space industry gồm launch vehicles, satellites, payloads, ground systems và downstream data services. Upstream hardware capital intensive; downstream satellite imagery/data có software-like economics hơn.
+- maintenance;
+- spare parts;
+- ammunition;
+- software upgrades;
+- training;
+- overhaul.
 
-Policy role lớn vì early demand thường đến từ government: weather, military reconnaissance, communication và science missions.
+Lifecycle support can be economically significant and often more recurring than initial sales.
 
-## Shipbuilding–defense overlap
+Buyer evaluates **total lifecycle cost**, not acquisition price alone.
 
-Naval vessel construction tận dụng shipyard, marine engineering và combat-system integration. Korea có civilian shipbuilding scale nên supplier/process capability có spillover vào naval programs.
+Supplier with strong sustainment network gains moat.
 
-Nhưng military ship profitability không thể suy trực tiếp từ commercial LNG carrier margin vì contract/design/regulatory structure khác.
+## Export package: product alone is not enough
 
-## Dual-use technology
+Defense export may require:
 
-Dual-use (민군겸용) là technology có cả civilian và military use: drones, AI, satellite, cybersecurity, semiconductors, batteries, robotics và autonomous systems.
+```text
+Hardware
++ Financing
++ Training
++ Maintenance
++ Local assembly
++ Technology transfer
++ Government-to-government support
+```
 
-Boundary giữa “defense company” và “technology company” ngày càng mờ. Export control vì vậy trở thành constraint cho commercial supply chain too.
+Thus competitor with slightly weaker specs can win if delivery speed, financing or localization is better.
 
-## Strategic industry và economic security
+This is why defense export is both business and diplomacy.
 
-Semiconductors, batteries, critical minerals, nuclear và defense được policy makers coi strategic vì disruption có national-security cost lớn hơn normal consumer shortage.
+## Localization and offset
 
-Điều này làm efficiency objective thay đổi. Một supply chain redundant có thể expensive hơn nhưng socially optimal nếu resilience value cao.
+Buyer governments often demand **offset/localization / 절충교역·현지화**:
 
-Nếu expected disruption loss là `p × L`, firm hoặc government có thể rationally trả resilience premium nhỏ hơn mức đó.
+- local assembly;
+- local components;
+- training;
+- technology transfer;
+- local jobs.
 
-## How to analyze a defense company
+This helps win contract but can reduce value retained by Korean supplier and create future competitor capability.
 
-Đừng bắt đầu bằng headline order. Hãy map:
+Deal analysis should ask not only total order value but **what economic/IP share remains with exporter**.
 
-1. domestic vs export order;
-2. backlog duration;
-3. platform lifecycle;
-4. recurring maintenance/ammunition revenue;
-5. development cost và R&D funding;
-6. localization/offset obligation;
-7. working-capital timing;
-8. political/export-control risk.
+## Export approval and political risk
 
-Một defense business có thể có visibility tốt nhưng cash conversion weak nếu milestone payment đến muộn.
+Defense sale can require export licenses and government approval.
 
-## Mental Model
+A commercially attractive customer may be unavailable due security/diplomatic restrictions.
 
-> Defense business bán **capability + reliability + lifecycle support + sovereign trust**, không chỉ bán hardware. Economics nằm trong backlog, learning curve, systems integration và government relationship.
+Political relations can accelerate or block deal independent of product quality.
 
-## Common misconceptions
+Therefore addressable market is policy-conditioned.
 
-Order announcement không bằng immediate revenue.
+## FX and long-duration contract risk
 
-Geopolitical tension có thể tăng demand nhưng cũng tăng supply-chain/export-control risk.
+Export contracts may be denominated in USD/EUR while costs largely KRW.
 
-Government customer không có nghĩa credit/cash-flow risk bằng zero; budget timing và milestone acceptance vẫn matter.
+Long duration makes FX exposure large and hedging more complex.
 
-## Connections
+Payment milestones matter; one-time advance vs back-loaded payment creates very different working capital.
 
-Đọc cùng [16_shipbuilding_steel_chemicals_heavy_industry](./16_shipbuilding_steel_chemicals_heavy_industry.md), [29_innovation_rnd_education_and_human_capital](./29_innovation_rnd_education_and_human_capital.md), [25_public_enterprises_and_state_owned_companies](./25_public_enterprises_and_state_owned_companies.md) và [02_trade_export_and_global_value_chains](./02_trade_export_and_global_value_chains.md).
+Do not assume weak KRW automatically improves margin if hedge/localization/imported components offset it.
 
-## Korean defense ecosystem: platform, subsystem và component
+## Working capital: growth can consume cash
 
-Industry không chỉ vài prime contractors. Có platform integrators như Hanwha Aerospace/Hyundai Rotem/KAI-type businesses, missile/radar/electronics specialists, shipyards và hàng trăm component suppliers.
+Defense firm may build inventory/WIP before acceptance.
 
-Prime contractor chịu integration/customer interface; supplier có thể sở hữu critical component technology. Margin capture phụ thuộc IP, substitutability và qualification barrier.
+If order book grows rapidly:
 
-## DAPA và acquisition institution
+```text
+WIP / Inventory ↑
+Contract assets / Receivables ↑
+→ Cash requirement ↑
+```
 
-Defense Acquisition Program Administration (DAPA / 방위사업청) quản lý nhiều procurement/development programs. Đây là institutional difference quan trọng với normal commercial market: requirement, testing, budget và contract rules formalized cao.
+Revenue growth may therefore coexist with weak operating cash flow.
 
-Domestic procurement có thể fund capability trước khi export market mở. Export sau đó spread development/fixed cost và tăng production learning.
+This is especially relevant during export expansion.
 
-## Localization và offset
+## Cost escalation and fixed-price risk
 
-Buyer country thường yêu cầu local assembly, technology transfer hoặc local suppliers. Đây là **offset/localization**. Nó giúp win contract nhưng có trade-off: Korean supplier có thể share know-how và future aftermarket revenue.
+If contract price fixed but steel/electronics/labor cost rise unexpectedly, margin compresses.
 
-Deal tốt không chỉ lớn về order value; phải xem value retained in Korea và long-run service economics.
+Some contracts include escalation clauses; others do not.
 
-## Sustainment: installed base tạo recurring demand
+Backlog quality therefore depends on inflation protection.
 
-Military platform bán một lần nhưng cần spare parts, maintenance, upgrades, training và munitions nhiều năm. Installed base lớn có thể tạo recurring revenue giống razor-and-blades model, dù procurement pattern vẫn lumpy.
+## Domestic vs export margin
 
-Lifecycle cost với buyer thường lớn hơn acquisition price. Supplier có strong sustainment network có competitive advantage.
+Export can have higher unit price but also extra costs: local production, financing, warranty, training and technology transfer.
 
-## FX và export margin
+Domestic contracts may have different procurement pricing/rules.
 
-Contracts có thể denominated USD/EUR/local currency trong khi large share cost KRW. FX move ảnh hưởng margin tùy hedging và payment milestone.
+Never assume export share ↑ automatically means margin ↑.
 
-Long contract duration làm hedging harder than short export sale.
+# Aerospace / 항공우주
 
-## Working capital
+## Aircraft business has extreme development duration
 
-Defense company có thể build inventory/WIP trước milestone acceptance. Revenue growth vì thế kéo contract assets/receivables. Cash conversion là key check khi order book tăng nhanh.
+Aircraft development includes design, prototypes, flight testing, certification and production ramp.
 
-## Aerospace supplier certification
+High fixed R&D makes scale critical.
 
-Commercial aircraft supply chain yêu cầu long qualification, traceability và safety. Once supplier qualified on platform, switching cost cao nhưng volumes phụ thuộc Boeing/Airbus/global cycle.
+Once platform certified, additional unit sales spread development cost—but missing target market can strand enormous R&D.
 
-Korean aerospace supplier có thể benefit from global programs nhưng also customer concentration.
+Aerospace therefore has **high option value and high failure cost**.
 
-## Space downstream economics
+## Certification moat
 
-Satellite imagery, geospatial analytics và communication services có recurring/data economics. Hardware launch success tạo infrastructure; value capture dài hạn có thể nằm ở data applications.
+Commercial aerospace suppliers need traceability, quality systems and long qualification with aircraft OEMs.
 
-AI làm satellite data interpretation scalable hơn, nối space với software rather than only rockets.
+Once supplier is on platform, switching is difficult; but entering is slow.
 
-## Strategic-industry valuation trap
+Korean suppliers can participate in global Boeing/Airbus-type programs without owning entire aircraft.
 
-Label “strategic” có thể tạo premium narrative nhưng valuation cuối cùng vẫn phụ thuộc cash flow. Policy support có thể reduce risk; nó không repeal competition, execution risk hay cost of capital.
+This creates export opportunity but customer concentration.
+
+## Engine economics
+
+Aircraft engines often have large aftermarket economics: parts/maintenance over operating life.
+
+Initial engine sale may have lower margin while lifecycle service generates profit.
+
+This “installed base” logic resembles defense sustainment and medical devices.
+
+## Civil vs military aerospace cycles
+
+Commercial aerospace depends airline demand/fleet replacement.
+
+Military aerospace depends government budget/geopolitics.
+
+Sharing engineering/manufacturing capabilities can diversify cycle, but contracts and economics remain different.
+
+# Space / 우주산업
+
+## Space value chain
+
+Space economy can be separated:
+
+```text
+Launch vehicles
+Satellites / Payloads
+Ground stations
+Communication / Navigation / Earth observation
+Data analytics / Applications
+```
+
+Upstream hardware is capital/engineering intensive.
+
+Downstream data/application can have software-like scaling.
+
+## Government as anchor customer
+
+Weather, defense reconnaissance, communications and science missions create early demand.
+
+Without public missions, private market may not justify high fixed cost of launch/satellite development.
+
+Government procurement therefore can build ecosystem capability.
+
+## Satellite data: value may move downstream
+
+A satellite generates raw data, but economic value may be captured by analytics/application layer.
+
+AI makes image classification/geospatial analytics scalable, connecting space with software/AI industry.
+
+Therefore “space industry” is not only rockets.
+
+# Naval shipbuilding and defense overlap
+
+Korea’s large civilian shipbuilding base creates spillovers into naval vessels: hull construction, marine systems, supply chain and project management.
+
+But naval programs include combat systems, security requirements and unique acceptance.
+
+Commercial LNG-carrier margin cannot be used directly as benchmark for naval ship.
+
+Xem [`16_shipbuilding_steel_chemicals_heavy_industry.md`](./16_shipbuilding_steel_chemicals_heavy_industry.md).
+
+# Dual-use technologies / 민군겸용기술
+
+Drones, AI, satellite, cybersecurity, semiconductors, batteries, robotics and autonomous systems have both civilian/military uses.
+
+Boundary between defense company and technology company is increasingly blurred.
+
+This creates two effects:
+
+1. commercial scale can lower defense technology cost;
+2. export controls/security rules can spill into commercial business.
+
+## AI and autonomous systems
+
+AI can support target recognition, decision support, predictive maintenance, autonomous vehicles and cyber defense.
+
+But production deployment needs reliability, explainability, secure data and human command rules much stricter than ordinary consumer AI.
+
+Demo performance ≠ deployable military capability.
+
+# Strategic industries and economic security
+
+Semiconductors, batteries, nuclear, critical minerals and defense are often treated as strategic because disruption cost exceeds normal consumer inconvenience.
+
+Economic optimization may rationally accept redundancy.
+
+If disruption probability `p` and loss `L`:
+
+\[
+Expected\ Disruption\ Loss = p\times L
+\]
+
+Paying resilience premium below expected avoided loss can be rational.
+
+This is why governments may subsidize domestic/ally capacity even if cheapest supplier abroad exists.
+
+## Strategic status does not remove business discipline
+
+“Strategic” label can improve access to policy support, but firm still faces:
+
+- execution risk;
+- competition;
+- cost overruns;
+- dilution/debt;
+- customer concentration.
+
+Policy support changes risk/return; it does not repeal economics.
+
+# Company archetypes
+
+## Platform/prime contractor
+
+Monitor:
+
+```text
+Backlog
+Domestic vs export mix
+Platform lifecycle
+Development cost
+Localization obligations
+Working capital
+Sustainment share
+```
+
+## Subsystem supplier
+
+```text
+Platform concentration
+IP ownership
+Qualification moat
+Export restriction
+Content per platform
+```
+
+## Aerospace component supplier
+
+```text
+Boeing/Airbus/customer concentration
+Platform production rates
+Certification
+FX
+Aftermarket
+```
+
+## Space-data company
+
+```text
+Satellite access/cost
+Data subscription revenue
+Customer concentration
+Government contracts
+Analytics margin
+```
+
+# Stress tests
+
+Defense prime:
+
+- major export delayed 2 years;
+- localization share higher than expected;
+- materials +15%;
+- KRW strengthens;
+- milestone payment delayed.
+
+Aerospace:
+
+- aircraft production rate cut;
+- certification delay;
+- development overrun.
+
+Space:
+
+- launch failure;
+- satellite delay;
+- government budget cut;
+- data monetization below plan.
+
+# Mental Model
+
+> Defense business sells **capability + reliability + lifecycle support + sovereign trust**. Economics lie in backlog quality, learning curve, systems integration, sustainment and government relationships—not headline order alone.
+
+A compact chain:
+
+```text
+R&D / Qualification
+        ↓
+Domestic anchor demand
+        ↓
+Production learning
+        ↓
+Export + Localization
+        ↓
+Installed base
+        ↓
+Sustainment / Upgrades
+```
+
+# Common misconceptions
+
+**“Order announcement = current revenue.”** Sai. Recognition takes years.
+
+**“Government customer = no credit/cash risk.”** Budget/acceptance timing still matters.
+
+**“Geopolitical tension always helps defense stocks/companies.”** Demand may rise, but supply-chain/export-control risk can also rise.
+
+**“Export order value tells retained economic value.”** Not if localization/technology transfer large.
+
+**“Strategic industry = guaranteed profitability.”** Sai.
+
+**“Space = rockets.”** Much future value can be downstream data/services.
+
+# Connections
+
+Đọc cùng [`02_trade_export_and_global_value_chains.md`](./02_trade_export_and_global_value_chains.md), [`16_shipbuilding_steel_chemicals_heavy_industry.md`](./16_shipbuilding_steel_chemicals_heavy_industry.md), [`25_public_enterprises_and_state_owned_companies.md`](./25_public_enterprises_and_state_owned_companies.md), [`29_innovation_rnd_education_and_human_capital.md`](./29_innovation_rnd_education_and_human_capital.md), [`30_energy_security_power_market_and_transition.md`](./30_energy_security_power_market_and_transition.md) và [`34_digital_fintech_cloud_and_it_services.md`](./34_digital_fintech_cloud_and_it_services.md).
