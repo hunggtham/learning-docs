@@ -1,583 +1,519 @@
 # Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược
 
-> Một chiến lược đẹp trong backtest chưa đủ. Câu hỏi quan trọng hơn là: **lợi thế có thật không, có sống được ngoài mẫu không, có còn tồn tại sau chi phí không và nhiều chiến lược trong cùng portfolio có thật sự đa dạng hay chỉ lặp cùng một factor?**
+> Một chiến lược đẹp trong kiểm thử quá khứ chưa đủ. Câu hỏi quan trọng hơn là: lợi thế có thật không, có tồn tại ngoài mẫu không, có còn dương sau chi phí không và nhiều chiến lược trong cùng danh mục có thật sự đa dạng hay chỉ lặp lại cùng một nhân tố? Nội dung giải thích dùng tiếng Việt; thuật ngữ tiếng Anh chỉ giữ trong ngoặc hoặc dưới dạng viết tắt chuẩn.
 
 # Phần I — Từ ý tưởng tới chiến lược có thể kiểm chứng
 
 ## 1. Ý tưởng chưa phải chiến lược
 
-Một nhận định như “giá thường hồi sau oversold” chỉ là ý tưởng.
+Một nhận định như “giá thường hồi sau trạng thái quá bán” chỉ là ý tưởng.
 
 Chiến lược phải chỉ rõ:
 
 ```text
-Universe
-Signal
-Entry
-Exit
-Sizing
-Cost
-Risk Limit
-Invalidation
+Tập tài sản
+Tín hiệu
+Điểm vào
+Điểm ra
+Quy mô vị thế
+Chi phí
+Giới hạn rủi ro
+Điều kiện vô hiệu hóa
 ```
 
-## 2. Bắt đầu bằng hypothesis
+Nếu hai người đọc mô tả rồi triển khai ra hai hệ thống khác nhau đáng kể, quy tắc vẫn chưa đủ rõ.
 
-Giả thuyết nên có lý do edge tồn tại, ví dụ:
+## 2. Bắt đầu bằng giả thuyết
 
-- risk premium;
-- behavioral bias;
-- liquidity need;
-- institutional constraint;
-- delayed information;
-- market structure.
+Giả thuyết nên giải thích vì sao lợi thế có thể tồn tại, ví dụ:
 
-Việc có một cơ chế hợp lý giúp giảm nguy cơ tìm pattern ngẫu nhiên sau khi nhìn dữ liệu.
+- phần bù rủi ro;
+- thiên lệch hành vi;
+- nhu cầu thanh khoản;
+- giới hạn của tổ chức lớn;
+- thông tin lan truyền chậm;
+- cấu trúc thị trường.
 
-## 3. Falsification
+Có một cơ chế hợp lý giúp giảm nguy cơ chỉ tìm thấy mẫu ngẫu nhiên sau khi nhìn dữ liệu.
 
-Một research process tốt phải cố bác bỏ hypothesis.
+## 3. Cố gắng bác bỏ giả thuyết
+
+Một quy trình nghiên cứu tốt phải chủ động tìm bằng chứng chống lại chính giả thuyết của mình.
 
 Ví dụ:
 
 ```text
-Nếu edge biến mất khi tăng cost hợp lý,
-hoặc không tồn tại ngoài mẫu,
-thì hypothesis chưa đủ mạnh.
+Nếu lợi thế biến mất khi thêm chi phí hợp lý
+hoặc không tồn tại ngoài mẫu
+→ giả thuyết chưa đủ mạnh
 ```
 
-# Phần II — In-sample và out-of-sample
+# Phần II — Trong mẫu và ngoài mẫu
 
-## 4. In-sample
+## 4. Dữ liệu trong mẫu
 
-In-sample là dữ liệu dùng để xây hoặc điều chỉnh strategy.
+**Trong mẫu (in-sample)** là dữ liệu dùng để xây hoặc điều chỉnh chiến lược. Kết quả đẹp ở đây dễ bị khớp quá mức nhất.
 
-Performance tốt ở đây dễ bị overfit nhất.
+## 5. Dữ liệu ngoài mẫu
 
-## 5. Out-of-sample
+**Ngoài mẫu (out-of-sample, OOS)** là dữ liệu chưa dùng để thiết kế quy tắc.
 
-Out-of-sample là dữ liệu chưa dùng để thiết kế rule.
+Nếu lợi thế giữ được ngoài mẫu, bằng chứng mạnh hơn nhưng vẫn không bảo đảm tương lai.
 
-Nếu edge giữ được ở OOS, bằng chứng mạnh hơn nhưng vẫn chưa đủ để đảm bảo tương lai.
+## 6. Kiểm thử cuốn chiếu
 
-## 6. Walk-forward
-
-Walk-forward mô phỏng quá trình cập nhật strategy theo thời gian:
+**Walk-forward** mô phỏng quá trình cập nhật chiến lược theo thời gian:
 
 ```text
-Train quá khứ
-→ Test đoạn sau
-→ Trượt cửa sổ
-→ Lặp lại
+Huấn luyện trên quá khứ
+→ kiểm tra đoạn tiếp theo
+→ trượt cửa sổ
+→ lặp lại
 ```
 
-Nó giúp kiểm tra strategy khi market regime thay đổi.
+Nó giúp kiểm tra khả năng thích nghi khi chế độ thị trường thay đổi.
 
-# Phần III — Các bias làm kết quả đẹp giả tạo
+# Phần III — Các thiên lệch làm kết quả đẹp giả tạo
 
-## 7. Look-ahead bias
+## 7. Thiên lệch nhìn trước
 
-Dùng dữ liệu chưa tồn tại ở thời điểm quyết định.
+**Thiên lệch nhìn trước (look-ahead bias)** xuất hiện khi dùng dữ liệu chưa tồn tại tại thời điểm quyết định.
 
-## 8. Survivorship bias
+## 8. Thiên lệch sống sót
 
-Chỉ dùng asset còn tồn tại hôm nay và bỏ các asset đã delist/fail.
+**Thiên lệch sống sót (survivorship bias)** xuất hiện khi chỉ giữ các tài sản còn tồn tại hôm nay và bỏ những tài sản đã hủy niêm yết hoặc phá sản.
 
-## 9. Data snooping
+## 9. Đào bới dữ liệu
 
-Thử rất nhiều rule rồi chỉ giữ rule đẹp nhất.
+**Đào bới dữ liệu (data snooping)** là thử rất nhiều quy tắc rồi chỉ giữ kết quả đẹp nhất.
 
-## 10. Multiple testing
+## 10. Vấn đề thử nhiều giả thuyết
 
-Nếu thử hàng nghìn strategy, một số sẽ có Sharpe cao chỉ do may mắn.
+Nếu thử hàng nghìn chiến lược, một số sẽ có Sharpe cao chỉ do may mắn. Phải tính tới số lượng thử nghiệm và mức độ tương quan giữa chúng.
 
-Phải tính tới số lượng thử nghiệm và mức độ tương quan giữa chúng.
+# Phần IV — Độ ổn định của tham số
 
-# Phần IV — Parameter stability
+## 11. Không tìm một điểm tối ưu duy nhất
 
-## 11. Đừng tìm một điểm tối ưu duy nhất
+Nếu chiến lược chỉ có lãi ở tham số 47 nhưng thua ở 46 và 48, lợi thế có thể là nhiễu.
 
-Nếu strategy chỉ lời ở parameter 47 nhưng lỗ ở 46 và 48, edge có thể là noise.
+## 12. Vùng tham số ổn định
 
-## 12. Parameter plateau
+Một vùng tham số rộng có kết quả tương đối ổn định thường đáng tin hơn một đỉnh hẹp.
 
-Vùng parameter rộng có kết quả tương đối ổn thường đáng tin hơn một đỉnh hẹp.
+## 13. Tham số nên có ý nghĩa
 
-## 13. Structural parameter
+Nếu có thể, tham số nên gắn với cơ chế kinh tế hoặc cấu trúc thị trường thay vì chỉ được chọn vì làm biểu đồ đẹp nhất.
 
-Parameter nên có ý nghĩa kinh tế hoặc market-structure nếu có thể, thay vì chỉ được tối ưu để đẹp nhất.
+# Phần V — Chi phí và công suất
 
-# Phần V — Chi phí và capacity
+## 14. Lợi thế trước và sau chi phí
 
-## 14. Edge trước chi phí và sau chi phí
-
-Strategy chỉ có giá trị nếu:
+Chiến lược chỉ có giá trị nếu:
 
 ```text
-Gross Edge
-- Spread
-- Commission
-- Slippage
-- Impact
-- Financing
-- Borrow / Roll Cost
+Lợi thế gộp
+- chênh lệch mua–bán
+- phí giao dịch
+- trượt giá
+- tác động thị trường
+- chi phí tài trợ
+- phí vay / chi phí cuộn kỳ hạn
 > 0
 ```
 
-## 15. Market impact
+## 15. Tác động thị trường
 
-Khi capital tăng, chính order của strategy có thể làm giá di chuyển.
+Khi vốn tăng, chính lệnh của chiến lược có thể làm giá di chuyển bất lợi. Kiểm thử bỏ qua yếu tố này thường đánh giá quá cao khả năng mở rộng.
 
-Backtest không tính impact thường scale quá lạc quan.
+## 16. Công suất chiến lược
 
-## 16. Capacity
-
-Capacity là lượng vốn có thể triển khai trước khi execution cost làm edge biến mất.
+**Công suất (capacity)** là lượng vốn có thể triển khai trước khi chi phí thực thi làm lợi thế biến mất.
 
 Nó phụ thuộc:
 
-- liquidity;
-- turnover;
-- holding period;
-- participation rate;
-- market depth.
+- thanh khoản;
+- vòng quay;
+- thời gian nắm giữ;
+- tỷ lệ tham gia;
+- độ sâu thị trường.
 
-# Phần VI — Regime dependence
+# Phần VI — Phụ thuộc chế độ thị trường
 
-## 17. Edge có thể phụ thuộc regime
+## 17. Lợi thế có thể phụ thuộc chế độ
 
-Một strategy trend-following có thể rất tốt khi trend mạnh nhưng tệ trong choppy range.
+Chiến lược theo xu hướng có thể tốt khi xu hướng rõ nhưng kém trong thị trường đảo chiều liên tục.
 
-Một carry strategy có thể tốt khi volatility thấp nhưng chịu tail loss khi funding stress.
+Chiến lược kiếm lợi từ chênh lệch lãi suất có thể tốt khi biến động thấp nhưng chịu tổn thất đuôi khi nguồn vốn căng thẳng.
 
-## 18. Regime không phải lý do để giải thích mọi loss sau sự kiện
+## 18. Không dùng “chế độ thay đổi” để giải thích mọi thất bại
 
-Regime definition phải được đặt trước hoặc có rule quan sát rõ ràng.
+Định nghĩa chế độ phải được đặt trước hoặc có quy tắc quan sát rõ. Nếu chỉ nói “chế độ đã thay đổi” sau khi thua, đó có thể là giải thích bằng nhận thức muộn.
 
-Nếu trader chỉ nói “regime changed” sau khi strategy thua, đó có thể là hindsight explanation.
+## 19. Các chế độ nên kiểm thử
 
-## 19. Stress regimes
+Ít nhất nên có:
 
-Nên test ít nhất:
+- biến động cao;
+- biến động thấp;
+- khủng hoảng thanh khoản;
+- xu hướng mạnh;
+- đi ngang;
+- cú sốc chính sách;
+- khoảng nhảy giá.
 
-- high volatility;
-- low volatility;
-- liquidity crisis;
-- trend;
-- range;
-- policy shock;
-- gap events.
+# Phần VII — Phân phối và rủi ro đuôi
 
-# Phần VII — Distribution và tail risk
+## 20. Trung bình không đủ
 
-## 20. Average không đủ
+Cần xem thêm:
 
-Cần xem:
+- độ lệch phân phối;
+- độ nhọn và đuôi dày;
+- tổn thất đuôi;
+- mức suy giảm;
+- thua lỗ theo cụm.
 
-- skew;
-- kurtosis;
-- tail loss;
-- drawdown;
-- loss clustering.
+## 21. Cấu trúc bán biến động
 
-## 21. Short-vol profile
+Chiến lược có nhiều lệnh thắng nhỏ và vài lệnh thua rất lớn thường mang **độ lệch âm (negative skew)**.
 
-Strategy có nhiều win nhỏ và vài loss rất lớn có thể có negative skew.
+Tỷ lệ thắng 90% không đồng nghĩa an toàn.
 
-Win rate 90% không bảo đảm an toàn.
+## 22. Độ lồi
 
-## 22. Convexity
+**Độ lồi (convexity)** mô tả mức kết quả thay đổi phi tuyến khi giá cơ sở biến động.
 
-Long convexity thường mất chi phí nhỏ thường xuyên để nhận payoff lớn trong tail.
+Mua độ lồi thường phải trả chi phí nhỏ thường xuyên để đổi lấy khoản chi trả lớn trong cú sốc. Bán độ lồi thường ngược lại.
 
-Short convexity thường ngược lại.
+Danh mục cần biết mình đang nghiêng về phía nào.
 
-Portfolio nên biết mình đang nghiêng về hướng nào.
+# Phần VIII — Kỳ vọng và bất định
 
-# Phần VIII — Expectancy và uncertainty
-
-## 23. Expectancy
+## 23. Kỳ vọng
 
 ```text
-Expectancy
-= P(win) × AvgWin
-- P(loss) × AvgLoss
+Kỳ vọng
+= P(thắng) × Lãi trung bình
+- P(thua) × Lỗ trung bình
 ```
 
-Estimate này có uncertainty.
+Bản thân ước lượng này cũng có sai số.
 
-## 24. Confidence interval
+## 24. Khoảng tin cậy
 
-Một mean return dương nhưng confidence interval rất rộng có thể chưa đủ bằng chứng edge thật.
+Lợi suất trung bình dương nhưng khoảng tin cậy rất rộng có thể chưa đủ bằng chứng rằng lợi thế là thật.
 
-Sample size và dependence quyết định độ tin cậy.
+## 25. Kích thước mẫu hiệu dụng
 
-## 25. Effective sample size
-
-500 trade trong cùng một macro regime không tương đương 500 quan sát hoàn toàn độc lập.
-
-Correlation giữa trade làm effective sample nhỏ hơn.
+500 giao dịch trong cùng một chế độ kinh tế không tương đương 500 quan sát độc lập. Tương quan giữa giao dịch làm kích thước mẫu hiệu dụng nhỏ hơn.
 
 # Phần IX — Bootstrap và Monte Carlo
 
-## 26. Bootstrap
+## 26. Lấy mẫu lại
 
-Bootstrap resample historical observations để tạo nhiều possible paths.
+**Bootstrap** lấy mẫu lại các quan sát lịch sử để tạo nhiều đường kết quả khả dĩ.
 
-Nó giúp thấy phân phối drawdown và return thay vì một equity curve duy nhất.
+Nó giúp thấy phân phối mức suy giảm và lợi suất thay vì chỉ một đường vốn.
 
-## 27. Monte Carlo
+## 27. Mô phỏng Monte Carlo
 
 Monte Carlo có thể mô phỏng:
 
-- thứ tự trade;
-- distribution của win/loss;
-- volatility;
-- regime transition;
-- parameter uncertainty.
+- thứ tự giao dịch;
+- phân phối lãi/lỗ;
+- biến động;
+- chuyển đổi chế độ;
+- bất định tham số.
 
-## 28. Không biến simulation thành “độ chính xác giả”
+## 28. Không biến mô phỏng thành độ chính xác giả
 
-Kết quả phụ thuộc assumption đầu vào. Nếu distribution giả định sai, simulation phức tạp vẫn sai.
+Kết quả phụ thuộc giả định đầu vào. Nếu phân phối giả định sai, mô phỏng phức tạp vẫn có thể sai.
 
-# Phần X — Risk of ruin và sizing
+# Phần X — Nguy cơ phá sản và quy mô vị thế
 
-## 29. Risk of ruin
+## 29. Nguy cơ phá sản
 
 Nguy cơ phá sản tăng khi:
 
-- risk/trade lớn;
-- leverage cao;
-- edge nhỏ;
-- losses tương quan;
-- tail risk lớn.
+- rủi ro mỗi giao dịch lớn;
+- đòn bẩy cao;
+- lợi thế nhỏ;
+- thua lỗ tương quan;
+- rủi ro đuôi lớn.
 
-## 30. Kelly criterion
+## 30. Tiêu chuẩn Kelly
 
-Kelly giúp tối đa long-run log growth dưới assumption biết chính xác edge.
+Kelly tối đa hóa tăng trưởng log dài hạn dưới giả định biết chính xác lợi thế. Trong thực tế thường dùng **Kelly phân số (fractional Kelly)** vì lợi thế chỉ được ước lượng.
 
-Trong thực tế edge estimate không chắc, nên thường dùng **fractional Kelly**.
+## 31. Ngân sách mức suy giảm
 
-## 31. Drawdown budget
+Danh mục nên định trước mức suy giảm nào dẫn tới:
 
-Portfolio nên định trước mức drawdown nào dẫn tới:
+- giảm quy mô;
+- dừng chiến lược;
+- xem lại mô hình;
+- kiểm tra vận hành.
 
-- giảm size;
-- dừng strategy;
-- review model;
-- kiểm tra operation.
+Không nên quyết định trong lúc hoảng loạn.
 
-Không nên quyết định trong lúc đang panic.
+# Phần XI — Suy giảm chiến lược
 
-# Phần XI — Strategy degradation
-
-## 32. Vì sao edge suy giảm?
+## 32. Vì sao lợi thế suy giảm?
 
 Có thể do:
 
-- nhiều người khai thác cùng anomaly;
-- market structure thay đổi;
-- cost tăng;
-- regulation thay đổi;
-- regime thay đổi;
-- execution xuống cấp.
+- nhiều người khai thác cùng bất thường;
+- cấu trúc thị trường thay đổi;
+- chi phí tăng;
+- quy định thay đổi;
+- chế độ kinh tế thay đổi;
+- chất lượng thực thi giảm.
 
-## 33. Phân biệt normal variance và degradation
+## 33. Phân biệt biến động bình thường và suy giảm thật
 
-Một chuỗi loss không tự động chứng minh edge mất.
+Một chuỗi thua không tự động chứng minh lợi thế đã mất. Cần so kết quả với phân phối đã kỳ vọng trước đó.
 
-Cần so với distribution expected trước đó.
-
-## 34. Monitoring metrics
+## 34. Chỉ số theo dõi
 
 Theo dõi:
 
 ```text
-Expectancy
-Hit Rate
-Payoff Ratio
-Drawdown
-Slippage
-Turnover
-Factor Exposure
-Capacity
+Kỳ vọng
+Tỷ lệ thắng
+Tỷ lệ lãi/lỗ
+Mức suy giảm
+Trượt giá
+Vòng quay
+Phơi nhiễm nhân tố
+Công suất
 ```
 
-# Phần XII — Research log
+# Phần XII — Nhật ký nghiên cứu
 
 ## 35. Mỗi thay đổi phải có lý do
 
 Ghi:
 
 ```text
-Date
-Version
-Hypothesis
-Rule Change
-Why
-Expected Effect
-Validation Result
+Ngày
+Phiên bản
+Giả thuyết
+Thay đổi quy tắc
+Lý do
+Ảnh hưởng kỳ vọng
+Kết quả xác thực
 ```
 
-## 36. Không rewrite lịch sử
+## 36. Không viết lại lịch sử
 
-Nếu strategy được sửa sau loss, phải giữ version cũ để biết decision lúc đó dựa trên rule nào.
+Nếu chiến lược được sửa sau một chuỗi lỗ, phải giữ phiên bản cũ để biết quyết định lúc đó dựa trên quy tắc nào. Điều này giúp chống thiên lệch nhận thức muộn.
 
-Điều này giúp chống hindsight bias.
+# Phần XIII — Kiểm thử tiến tới tương lai và giao dịch thật nhỏ
 
-# Phần XIII — Forward test và small live
+## 37. Kiểm thử tiến tới tương lai
 
-## 37. Forward test
+**Kiểm thử tiến tới tương lai (forward test)** chạy trên dữ liệu mới theo thời gian thật giúp phát hiện:
 
-Forward test chạy trên dữ liệu mới theo thời gian thật giúp phát hiện:
+- trễ dữ liệu;
+- khác biệt thực thi;
+- lỗi phần mềm;
+- chi phí cao hơn giả định.
 
-- data delay;
-- execution mismatch;
-- bug;
-- cost cao hơn giả định.
+## 38. Giao dịch thật với quy mô nhỏ
 
-## 38. Small live
+Quy mô nhỏ cho phép đo chất lượng khớp và vận hành trước khi tăng vốn.
 
-Dùng size nhỏ cho phép đo fill và operation thực tế trước khi scale.
+## 39. Tăng quy mô từng bước
 
-## 39. Scale từng bước
-
-Không nên nhảy từ backtest sang full capital.
+Không nên đi trực tiếp từ kiểm thử quá khứ sang toàn bộ vốn.
 
 Một lộ trình hợp lý:
 
 ```text
-Backtest
-→ OOS
-→ Walk-Forward
-→ Paper / Forward
-→ Small Live
-→ Gradual Scale
+Kiểm thử quá khứ
+→ ngoài mẫu
+→ walk-forward
+→ mô phỏng thời gian thật
+→ vốn thật nhỏ
+→ tăng quy mô dần
 ```
 
-# Phần XIV — Portfolio of strategies
+# Phần XIV — Danh mục nhiều chiến lược
 
-## 40. Nhiều strategy không tự động đa dạng
+## 40. Nhiều chiến lược không tự động tạo đa dạng hóa
 
-Một portfolio có:
+Một danh mục có chiến lược theo xu hướng, kiếm chênh lệch lãi suất, bán quyền chọn và hồi quy về trung bình vẫn có thể cùng phụ thuộc vào biến động thấp hoặc thanh khoản dồi dào.
 
-- trend strategy;
-- FX carry;
-- short put;
-- mean reversion;
+## 41. Tương quan giữa chiến lược
 
-nhưng có thể cùng phụ thuộc low volatility hoặc abundant liquidity.
+Tương quan nên được đo cả trong giai đoạn bình thường và giai đoạn căng thẳng. Trung bình lịch sử thấp không bảo đảm tương quan thấp khi khủng hoảng.
 
-## 41. Strategy correlation
+## 42. Phân rã theo nhân tố
 
-Correlation nên được đo cả normal và stress periods.
-
-Historical average thấp không bảo đảm correlation thấp khi crisis.
-
-## 42. Factor decomposition
-
-Map strategy về factor:
+Ánh xạ chiến lược về các nhân tố:
 
 ```text
-Equity Beta
-Rates
+Beta cổ phiếu
+Lãi suất
 USD
 Carry
-Trend
-Volatility
-Liquidity
-Commodity
-Country
+Xu hướng
+Biến động
+Thanh khoản
+Hàng hóa
+Quốc gia
 ```
 
-Hai strategy instrument khác nhau có thể là cùng một factor bet.
+Hai chiến lược dùng công cụ khác nhau có thể thực chất là cùng một cược nhân tố.
 
-## 43. Equal capital vs equal risk
+## 43. Chia vốn bằng nhau khác chia rủi ro bằng nhau
 
-Chia capital bằng nhau không đồng nghĩa chia risk bằng nhau.
+Một chiến lược có độ biến động 5% và một chiến lược 30% không đóng góp rủi ro ngang nhau chỉ vì tỷ trọng vốn giống nhau.
 
-Một strategy volatility 5% và strategy volatility 30% không nên được xem như contribution ngang nhau chỉ vì capital weight giống nhau.
+## 44. Điều chỉnh theo độ biến động
 
-## 44. Volatility scaling
+Có thể điều chỉnh quy mô để các chiến lược có mức rủi ro gần nhau hơn, nhưng vẫn cần giới hạn riêng cho rủi ro đuôi, đòn bẩy và thanh khoản.
 
-Có thể scale strategy để target risk gần nhau.
+## 45. Đóng góp rủi ro
 
-Nhưng phải bổ sung cap cho tail, leverage và liquidity.
+Cần biết mỗi chiến lược đóng góp bao nhiêu vào độ biến động danh mục và tổn thất trong kịch bản căng thẳng.
 
-## 45. Risk contribution
+## 46. Tương quan có thể vỡ cấu trúc
 
-Mục tiêu là biết strategy nào đóng góp bao nhiêu vào portfolio volatility và stress loss.
+Trong khủng hoảng nguồn vốn, nhiều chiến lược cùng giảm đòn bẩy khiến tương quan tăng đột ngột. Vì vậy cần ma trận kịch bản ngoài hiệp phương sai lịch sử.
 
-## 46. Correlation breakdown
+# Phần XV — Độ lồi và rủi ro đuôi trong danh mục
 
-Trong funding crisis, nhiều strategy cùng deleverage có thể làm correlation tăng đột ngột.
+## 47. Tập trung bán biến động
 
-Nên có stress matrix ngoài historical covariance.
+Các chiến lược tưởng khác nhau như bán quyền chọn, kiếm carry, cung cấp thanh khoản và một số chiến lược hồi quy về trung bình có thể cùng chịu rủi ro bán biến động.
 
-# Phần XV — Convexity và tail trong portfolio
+## 48. Phòng vệ đuôi
 
-## 47. Short-vol concentration
+**Phòng vệ đuôi (tail hedge)** có thể giảm tổn thất cực đoan nhưng tạo chi phí mang vị thế. Phải đánh giá ở cấp toàn danh mục và qua nhiều năm.
 
-Các strategy tưởng khác nhau như:
+## 49. Ngân sách phòng vệ
 
-- selling options;
-- carry;
-- liquidity provision;
-- some mean reversion;
+Định trước ngân sách phòng vệ giúp tránh mua bảo hiểm quá đắt sau khi khủng hoảng đã bắt đầu.
 
-có thể cùng chịu short-vol/tail exposure.
+# Phần XVI — Rủi ro vận hành
 
-## 48. Tail hedge
+## 50. Chiến lược đúng vẫn có thể mất tiền vì lỗi vận hành
 
-Tail hedge có thể giảm loss cực đoan nhưng có carrying cost.
+Ví dụ:
 
-Phải đánh giá theo nhiều năm và toàn portfolio, không theo một tháng.
+- dữ liệu cũ;
+- lệnh trùng;
+- sai mã;
+- sai hệ số hợp đồng;
+- mất kết nối API;
+- sai trạng thái ký quỹ.
 
-## 49. Hedge budget
+## 51. Công tắc dừng
 
-Định trước ngân sách hedge giúp tránh mua protection quá đắt sau khi crisis đã bắt đầu.
+Mỗi chiến lược cần điều kiện dừng khi trạng thái vận hành không còn đáng tin.
 
-# Phần XVI — Operational risk
+## 52. Đối soát
 
-## 50. Strategy đúng vẫn có thể mất tiền vì operation
+Vị thế thực tế phải được đối chiếu với trạng thái tại nhà môi giới hoặc sở giao dịch.
 
-Rủi ro gồm:
+# Phần XVII — Phân rã sau giao dịch
 
-- stale data;
-- duplicate order;
-- wrong symbol;
-- wrong multiplier;
-- API disconnect;
-- margin mismatch.
-
-## 51. Kill switch
-
-Mỗi strategy cần điều kiện dừng khi operational state không đáng tin.
-
-## 52. Reconciliation
-
-Actual positions phải được đối chiếu với broker/exchange state.
-
-# Phần XVII — Post-trade attribution
-
-## 53. Không chỉ hỏi “trade lời hay lỗ”
+## 53. Không chỉ hỏi giao dịch lời hay lỗ
 
 Phân rã:
 
 ```text
-Signal Quality
-Sizing
-Execution
-Cost
-Market Regime
-Factor Move
-Discretionary Override
+Chất lượng tín hiệu
+Quy mô vị thế
+Thực thi
+Chi phí
+Chế độ thị trường
+Biến động nhân tố
+Can thiệp thủ công
 ```
 
-## 54. Decision quality và outcome
+## 54. Chất lượng quyết định và kết quả
 
-Một decision đúng process vẫn có thể lỗ do uncertainty.
+Một quyết định đúng quy trình vẫn có thể lỗ do bất định. Một quyết định tệ vẫn có thể lời do may mắn. Review phải tách hai thứ.
 
-Một decision tệ vẫn có thể lời do luck.
+# Phần XVIII — Đánh giá định kỳ
 
-Review phải tách hai thứ.
-
-# Phần XVIII — Monthly review
-
-## 55. Review theo strategy
+## 55. Đánh giá theo chiến lược
 
 ```text
-Return
-Drawdown
-Expectancy
-Hit Rate
-Average Win/Loss
-Slippage
-Cost
-Capacity
-Factor Exposure
+Lợi suất
+Mức suy giảm
+Kỳ vọng
+Tỷ lệ thắng
+Lãi/lỗ trung bình
+Trượt giá
+Chi phí
+Công suất
+Phơi nhiễm nhân tố
 ```
 
-## 56. Review portfolio
+## 56. Đánh giá toàn danh mục
 
 ```text
-Gross / Net
-Risk Contribution
-Correlation
-Tail Exposure
-Liquidity
-Margin
-Stress Loss
+Phơi nhiễm tổng / ròng
+Đóng góp rủi ro
+Tương quan
+Rủi ro đuôi
+Thanh khoản
+Ký quỹ
+Tổn thất căng thẳng
 ```
 
-## 57. Rule change discipline
+## 57. Kỷ luật thay đổi quy tắc
 
-Không thay rule chỉ vì tháng vừa rồi xấu.
+Không thay quy tắc chỉ vì tháng vừa rồi xấu. Mọi thay đổi phải có giả thuyết, kiểm thử và phiên bản riêng.
 
-Mọi thay đổi phải có hypothesis, test và version riêng.
+# Phần XIX — Khi nào nên dừng chiến lược?
 
-# Phần XIX — Khi nào dừng strategy?
-
-## 58. Evidence edge mất
+## 58. Bằng chứng lợi thế đã mất
 
 Có thể cân nhắc dừng khi:
 
-- OOS/live performance lệch lớn khỏi distribution;
-- cost vượt edge;
-- structural market change;
-- capacity quá nhỏ;
-- operational risk quá cao.
+- kết quả ngoài mẫu hoặc giao dịch thật lệch lớn khỏi phân phối kỳ vọng;
+- chi phí vượt lợi thế;
+- cấu trúc thị trường thay đổi;
+- công suất quá nhỏ;
+- rủi ro vận hành quá cao.
 
-## 59. Sunk cost
+## 59. Chi phí chìm
 
-Thời gian đã bỏ vào research không phải lý do giữ strategy không còn hiệu quả.
+Thời gian đã bỏ vào nghiên cứu không phải lý do tiếp tục một chiến lược không còn hiệu quả.
 
 # Phần XX — Quy trình nghiên cứu chuẩn
 
-## 60. Pipeline
+## 60. Chuỗi nghiên cứu
 
 ```text
-Hypothesis
-→ Formal Rules
-→ Data Audit
-→ In-Sample
-→ Robustness
-→ Out-of-Sample
-→ Walk-Forward
-→ Cost / Capacity
-→ Bootstrap / Monte Carlo
-→ Forward Test
-→ Small Live
-→ Portfolio Integration
-→ Monitoring
-```
-
-## 61. Checklist cuối
-
-```text
-Edge có cơ chế hợp lý không?
-Có survives OOS không?
-Parameter có stable không?
-Cost realistic không?
-Tail risk là gì?
-Capacity bao nhiêu?
-Correlation với strategy khác?
-Operation fail thì sao?
-Khi nào invalidate?
+Giả thuyết
+→ quy tắc chính thức
+→ kiểm tra dữ liệu
+→ trong mẫu
+→ kiểm tra độ bền
+→ ngoài mẫu
+→ walk-forward
+→ chi phí / công suất
+→ bootstrap / Monte Carlo
+→ kiểm thử tiến tới tương lai
+→ vốn thật nhỏ
+→ tích hợp vào danh mục
+→ giám sát
 ```
 
 ## Kết luận
 
-Một strategy tốt không chỉ có backtest đẹp. Nó phải chứng minh được rằng:
+Nghiên cứu chiến lược tốt không tìm “một biểu đồ đẹp nhất”. Nó cố trả lời ba câu hỏi:
 
 ```text
-Edge có thể tồn tại
-+ không phụ thuộc một parameter duy nhất
-+ sống qua out-of-sample
-+ còn dương sau cost
-+ chịu được drawdown
-+ không trùng risk với toàn portfolio
-+ vận hành an toàn
+Lợi thế có thật không?
+Lợi thế còn tồn tại sau chi phí không?
+Lợi thế có đóng góp đa dạng hóa thật cho danh mục không?
 ```
 
-Mục tiêu của research không phải chứng minh ý tưởng của mình đúng, mà **tìm đủ cách làm nó sai trước khi đưa vốn thật vào**.
+Chỉ khi cả ba câu trả lời đều đủ thuyết phục, chiến lược mới đáng được tăng vốn.
