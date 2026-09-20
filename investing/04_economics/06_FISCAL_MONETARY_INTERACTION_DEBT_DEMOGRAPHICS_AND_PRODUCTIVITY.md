@@ -1,424 +1,600 @@
-# 06 — Fiscal–Monetary Interaction, Debt, Demographics và Productivity
+# Tương tác tài khóa – tiền tệ, nợ công, nhân khẩu học và năng suất
 
-> Vĩ mô dài hạn không thể hiểu chỉ bằng CPI, GDP và một con số policy rate. Tăng trưởng, lạm phát, lãi suất, tỷ giá và valuation còn phụ thuộc cách chính phủ thu–chi, cấu trúc nợ, độ dài kỳ hạn, năng suất, nhân khẩu học, chất lượng thể chế và interaction giữa fiscal policy với monetary policy. Chapter này xây một framework từ accounting identity tới market transmission để người đọc có thể phân tích country risk và long-term asset regime thay vì chỉ theo headline.
+> Chương này tập trung vào các lực **cấu trúc dài hạn** của nền kinh tế. Nếu các chương trước chủ yếu giải thích chu kỳ, dữ liệu và khủng hoảng, chương này trả lời những câu hỏi như: nợ công tăng tới đâu thì đáng lo, dân số già ảnh hưởng lãi suất thế nào, năng suất quyết định tăng trưởng dài hạn ra sao và khi nào chính sách tài khóa bắt đầu ràng buộc chính sách tiền tệ.
 
-## 1. Fiscal và Monetary Policy là hai hệ thống khác nhau nhưng luôn tương tác
+# Phần I — Bảng cân đối khu vực công
 
-**Monetary policy** chủ yếu tác động qua policy rate, liquidity, credit conditions, financial prices và expectations. **Fiscal policy** tác động qua tax, government spending, transfer, subsidy, public investment và debt issuance. Hai hệ thống có mục tiêu, công cụ và độ trễ khác nhau nhưng cùng tác động lên aggregate demand và financial conditions.
+## 1. Không nên nhìn ngân sách và central bank hoàn toàn tách rời
 
-Nếu central bank tightening trong khi fiscal impulse vẫn rất expansionary, household/company income có thể giữ mạnh hơn dự kiến và inflation giảm chậm. Ngược lại, monetary easing trong lúc government austerity mạnh có thể tạo recovery yếu hơn. Vì vậy không nên đọc Fed/BOK/SBV tách khỏi budget stance và debt issuance.
+Chính phủ phát hành nợ; ngân hàng trung ương đặt lãi suất và có thể nắm một phần government bonds.
 
-## 2. Consolidated Public-Sector Balance Sheet
+Để hiểu tổng thể có thể dùng khái niệm **bảng cân đối khu vực công hợp nhất (consolidated public-sector balance sheet)**.
 
-Một cách tư duy hữu ích là nhìn government và central bank như hai bảng cân đối khác nhau nhưng có interaction. Treasury phát hành debt; central bank quyết định base money, reserves và asset holdings. Khi central bank mua government bonds, duration risk chuyển từ private sector sang official sector nhưng nghĩa vụ tài chính của consolidated public sector không biến mất.
+Điều này không có nghĩa Treasury và central bank là cùng một tổ chức pháp lý; nó là công cụ phân tích để hiểu nghĩa vụ chung của khu vực công.
 
-Điểm này giải thích vì sao QE không đơn giản là “xóa nợ”. Debt có thể đổi hình thức từ fixed-rate long bond sang reserve liabilities nhạy hơn với policy rate.
+## 2. Fiscal deficit
 
-## 3. Government Budget Constraint
+Thâm hụt ngân sách (fiscal deficit) xuất hiện khi chi tiêu vượt thu trong kỳ.
 
-Ở mức intuition:
+Không phải mọi deficit đều giống nhau. Cần hỏi tiền được dùng cho:
 
-```text
-Primary Spending + Interest Expense
-= Tax Revenue + New Debt + Other Financing
-```
+- transfer tiêu dùng;
+- infrastructure;
+- defense;
+- healthcare;
+- interest expense;
+- tax cut.
 
-**Primary spending** là spending trước interest. Nếu government thu ít hơn primary spending, nó có primary deficit. Nếu debt stock lớn, interest expense có thể trở thành một driver ngân sách độc lập.
+Cấu trúc chi tiêu quyết định tác động lên demand và potential growth.
 
-Một deficit không tự động xấu. Nếu deficit tài trợ productive infrastructure trong recession, future tax base có thể tăng. Nhưng deficit kéo dài để tài trợ spending có multiplier thấp trong nền kinh tế đã full capacity có inflation và debt-cost implication khác hẳn.
+## 3. Primary balance
 
-## 4. Stock và Flow phải được phân biệt
-
-Debt là **stock** tích lũy từ deficits trước. Deficit là **flow** trong một period. Country debt/GDP cao nhưng primary balance cải thiện có trajectory khác country debt thấp nhưng deficit tăng nhanh.
-
-Investor cần nhìn cả level, direction và composition. Một snapshot debt/GDP không đủ để kết luận sustainability.
-
-## 5. Primary Balance
-
-**Primary balance** loại interest expense để cho thấy policy hiện tại đang thêm hay rút resources khỏi debt stock trước chi phí nợ cũ.
-
-Nếu primary deficit lớn kéo dài, stabilization khó hơn. Nhưng trong recession, cutting deficit quá nhanh có thể làm nominal GDP giảm và paradoxically khiến debt/GDP xấu hơn ngắn hạn. Fiscal sustainability vì vậy là dynamic problem, không phải rule “deficit = xấu”.
-
-## 6. Debt-to-GDP Dynamics
-
-Một approximation quan trọng:
+**Cán cân sơ cấp (primary balance)** loại chi phí lãi vay khỏi ngân sách.
 
 ```text
-Δ(Debt/GDP)
-≈ Primary Deficit/GDP
-+ (Effective Interest Rate - Nominal GDP Growth) × Debt/GDP
+Primary Balance
+= Government Revenue
+- Non-interest Spending
 ```
 
-Term `(r - g)` là core intuition. Nếu nominal growth `g` lớn hơn effective funding rate `r`, debt ratio dễ ổn định hơn. Nếu `r > g` lâu dài, government cần primary balance tốt hơn để tránh debt ratio tăng liên tục.
+Đây là biến quan trọng khi phân tích debt sustainability vì interest expense chịu ảnh hưởng của stock nợ quá khứ.
 
-## 7. Effective Interest Rate khác Market Yield hiện tại
+## 4. Structural và cyclical balance
 
-Debt stock không reprice toàn bộ ngay khi bond yield tăng. **Effective interest rate** phản ánh average coupon/funding cost trên outstanding debt. Nếu maturity dài, rising market yields truyền vào budget chậm hơn. Nếu maturity ngắn, pass-through nhanh hơn.
+Trong recession, tax revenue giảm và unemployment spending tăng tự động.
 
-Do đó cùng một 200 bps rate shock có fiscal impact rất khác giữa hai countries có debt maturity profile khác nhau.
+Do đó deficit headline có thể xấu chỉ vì cycle.
 
-## 8. Gross Financing Need
+**Structural balance** cố điều chỉnh tác động chu kỳ để xem stance tài khóa nền tảng.
 
-Một country không chỉ phải finance current deficit mà còn refinance maturing debt. **Gross financing need** gần bằng deficit mới cộng principal cần rollover.
+# Phần II — Debt dynamics
 
-Country có debt/GDP vừa phải nhưng maturity concentrated trong 12 tháng có refinancing risk lớn hơn country debt cao nhưng maturity dài và investor base ổn định.
+## 5. Tỷ lệ nợ/GDP
 
-## 9. Debt Maturity và Rollover Risk
+Debt/GDP là chỉ số phổ biến nhưng không đủ.
 
-Long maturity lock funding cost nhưng thường trả term premium cao hơn. Short maturity rẻ hơn trong normal times nhưng làm budget nhạy policy rate và market confidence.
+Cần xem thêm:
 
-Debt manager vì vậy tối ưu không chỉ coupon hiện tại mà còn refinancing resilience.
+- interest rate;
+- nominal growth;
+- primary balance;
+- maturity;
+- currency;
+- investor base.
 
-## 10. Domestic-currency vs Foreign-currency Debt
+## 6. Quan hệ r và g
 
-Debt bằng currency government có monetary sovereignty khác debt bằng foreign currency. Foreign-currency debt tạo **currency mismatch**: local currency yếu làm real burden tăng đúng lúc economy thường đang stress.
-
-Đây là một channel cốt lõi của emerging-market crises. Country có current account deficit, low reserves và large short-term FX debt dễ bị sudden stop hơn.
-
-## 11. Original Sin
-
-**Original sin** mô tả khó khăn của một số emerging markets trong việc vay dài hạn bằng chính currency của mình từ foreign investors. Khi phải vay USD/EUR, devaluation không còn chỉ là competitiveness adjustment mà biến thành balance-sheet shock.
-
-Cải thiện domestic bond market và local-currency credibility có thể giảm structural vulnerability này.
-
-## 12. Investor Base của Sovereign Debt
-
-Ai nắm debt cũng quan trọng. Domestic banks, pension funds, foreign funds và central bank có behavior khác nhau. Debt chủ yếu held domestically có thể ít sudden-stop risk hơn foreign hot-money ownership, nhưng có thể tăng **sovereign–bank nexus** nếu banks giữ quá nhiều domestic bonds.
-
-Nếu sovereign bond giảm giá, bank capital yếu; government lại phải hỗ trợ banks, tạo doom loop.
-
-## 13. Fiscal Multiplier không cố định
-
-**Fiscal multiplier** đo output thay đổi tương đối với fiscal impulse. Nó thường lớn hơn khi unemployment cao, private demand yếu, rates bị constrained và economy ít import leakage. Nó có thể nhỏ hơn khi economy gần full capacity hoặc central bank offset bằng tightening.
-
-Vì vậy câu “government spending tăng 1 thì GDP tăng X” không có một X cố định.
-
-## 14. Spending Composition quan trọng hơn headline deficit
-
-Transfer, public wages, defense procurement, infrastructure, education và tax cuts truyền vào economy khác nhau. Infrastructure có thể tăng demand hiện tại và supply capacity tương lai; transfer hỗ trợ household income nhanh nhưng long-run productivity effect phụ thuộc cách tiền được dùng.
-
-Debt dùng để xây productive capacity có economics khác debt dùng để duy trì consumption không tạo future tax base.
-
-## 15. Automatic Stabilizers
-
-Tax revenue tự giảm và unemployment/social spending tự tăng khi economy suy yếu, ngay cả khi parliament không thông qua stimulus mới. Đây là **automatic stabilizers**.
-
-Khi phân tích fiscal stance, cần phân biệt cyclically driven deficit với discretionary policy change.
-
-## 16. Structural vs Cyclical Deficit
-
-**Cyclical deficit** xuất hiện vì economy dưới potential. **Structural deficit** là phần deficit còn lại nếu economy ở normal capacity theo estimate.
-
-Output gap và potential GDP không quan sát trực tiếp nên structural-balance estimate có uncertainty. Dù vậy distinction giúp tránh kết luận sai rằng mọi deficit recession đều là permanent fiscal loosening.
-
-## 17. Fiscal Impulse
-
-Market thường phản ứng với change in fiscal stance hơn level tuyệt đối. Deficit 5% GDP có thể là tightening nếu năm trước 10%. Deficit 3% có thể là easing nếu năm trước balanced.
-
-**Fiscal impulse** vì vậy hữu ích khi nối budget với growth momentum.
-
-## 18. Crowding Out
-
-Nếu government borrowing tăng trong economy gần full capacity, competition for savings có thể đẩy yields lên và làm private capex khó hơn. Đây là **crowding out**.
-
-Crowding out mạnh hay yếu phụ thuộc monetary response, global savings, capital flows và bank conditions. Không nên coi nó tự động xảy ra theo một hệ số cố định.
-
-## 19. Crowding In
-
-Public investment có thể **crowd in** private investment nếu giảm bottleneck. Grid expansion có thể mở data-center projects; ports/roads có thể tăng manufacturing FDI; public R&D có thể tạo technology spillovers.
-
-Do đó cùng một fiscal deficit có thể khác về long-run return tùy use of proceeds.
-
-## 20. Fiscal Dominance
-
-**Fiscal dominance** xuất hiện khi debt-service considerations bắt đầu hạn chế khả năng central bank theo đuổi inflation target độc lập. Nếu rates cần tăng để chống inflation nhưng tăng rates làm sovereign funding stress nghiêm trọng, policy conflict trở nên rõ.
-
-Không phải debt cao nào cũng dẫn tới fiscal dominance. Investor cần nhìn maturity, currency denomination, tax capacity, credibility và domestic savings base.
-
-## 21. Monetary Dominance
-
-Ngược lại, **monetary dominance** là regime trong đó fiscal authority điều chỉnh budget đủ để central bank ưu tiên price stability. Đây là institutional concept, không phải moral label.
-
-Market pricing phụ thuộc việc investors tin regime nào đang chi phối future policy.
-
-## 22. Financial Repression
-
-**Financial repression** là tập hợp cơ chế làm government funding cost thấp tương đối: regulated rates, captive domestic buyers, capital controls hoặc prudential rules ưu tiên government paper.
-
-Nếu nominal yields bị giữ dưới inflation dài, real debt burden có thể giảm nhưng savers chịu negative real return.
-
-## 23. Seigniorage và Inflation Tax
-
-Issuing base money tạo **seigniorage**. Nếu money creation vượt demand for money và supply capacity, inflation có thể đóng vai trò một dạng implicit tax lên holders of nominal money/bonds.
-
-Nhưng relationship không mechanical: banking behavior, reserves demand, velocity và expectations đều quan trọng.
-
-## 24. QE, Reserves và Fiscal Interest Cost
-
-Khi central bank mua long bonds và tạo interest-bearing reserves, consolidated public sector có thể chuyển từ long fixed-duration liability sang shorter-rate-sensitive liability.
-
-Khi policy rate tăng, interest paid on reserves có thể tăng nhanh. Vì vậy QE có fiscal distributional effect dù primary objective là monetary transmission.
-
-## 25. QT và Duration Supply
-
-**Quantitative Tightening (QT)** đưa duration/collateral supply trở lại private market. Impact phụ thuộc Treasury issuance, dealer balance sheet, money-market funds và reserve abundance.
-
-Không nên dùng rule “QT = stocks giảm”. Cần xem net duration/liquidity absorption và market plumbing.
-
-## 26. Treasury Issuance Mix
-
-Bills và long bonds có buyer bases khác nhau. Bill issuance có thể được money-market funds hấp thụ dễ hơn; long-duration issuance ảnh hưởng duration risk và term premium nhiều hơn.
-
-Do đó same deficit có market impact khác tùy maturity mix.
-
-## 27. Term Premium
-
-Long yield có thể tách thành expected future short rates và **term premium**. Fiscal uncertainty, inflation uncertainty, large duration supply và weak marginal demand có thể nâng term premium ngay cả khi policy-rate forecast không đổi.
-
-Vì vậy 10Y yield tăng không đồng nghĩa market nghĩ central bank sẽ hike thêm.
-
-## 28. Yield Curve và Fiscal Information
-
-Front-end curve thường phản ánh monetary path nhiều hơn. Long end phản ánh thêm growth, inflation và term premium. Bear steepening do long yields tăng vì fiscal/term-premium shock khác bear flattening do central bank hawkish.
-
-Phân biệt curve move giúp tránh gán mọi rate change cho cùng một nguyên nhân.
-
-## 29. Sovereign Credit Spread
-
-Countries không có risk-free local funding profile sẽ có sovereign spread phản ánh default, currency, liquidity và political risk. Spread widening truyền vào corporate/bank funding vì sovereign thường là reference curve.
-
-Country risk vì vậy có thể tăng cost of capital toàn economy.
-
-## 30. Debt Restructuring và Recovery
-
-Sovereign default không chỉ là binary “trả/không trả”. Restructuring có thể kéo dài maturity, giảm coupon, đổi principal hoặc thay currency terms. Investor cần nghĩ theo expected recovery và legal seniority/jurisdiction.
-
-## 31. Debt Ceiling và Technical Stress
-
-Political debt-ceiling event có thể tạo bill-market distortions hoặc liquidity stress dù long-run solvency chưa thay đổi. Điều quan trọng là phân biệt **technical payment risk**, political bargaining và structural sustainability.
-
-## 32. Demographics bắt đầu từ Population Pyramid
-
-Tổng population ít thông tin hơn age structure. Working-age share, fertility, life expectancy và migration quyết định labor supply, dependency burden và household saving behavior.
-
-Một country population giảm nhưng vẫn có high productivity growth có thể giữ GDP per capita tốt; một country population tăng nhanh nhưng human capital yếu chưa chắc nâng living standards tương ứng.
-
-## 33. Dependency Ratio
-
-**Dependency ratio** so non-working-age population với working-age population. Aging tăng pension/healthcare burden và có thể giảm tax base growth.
-
-Fiscal impact phụ thuộc retirement age, female labor participation, immigration, healthcare productivity và pension design.
-
-## 34. Labor Force Participation
-
-Population aging không translate one-to-one thành labor shrinkage nếu participation tăng. Policies về childcare, retirement, immigration và flexible work có thể mở rộng effective labor supply.
-
-Investor nên theo labor-force participation chứ không chỉ population headline.
-
-## 35. Human Capital
-
-Education, health, skills và management quality là **human capital**. Một worker có technology nhưng thiếu skill để dùng sẽ không tạo full productivity gain.
-
-Country growth analysis cần nhìn education quality, vocational training, R&D ecosystem và talent mobility.
-
-## 36. Housing và Household Formation
-
-Housing demand chịu household formation, migration và urban concentration hơn population total. Seoul có thể thiếu housing dù national population stagnates; industrial clusters ở Vietnam có thể tăng housing demand cục bộ nhờ migration/FDI.
-
-Đây là lý do national demographic narrative không đủ để phân tích property.
-
-## 37. Aging và Savings
-
-Life-cycle theory gợi ý workers save trước retirement rồi retirees dissave. Nhưng actual pattern phụ thuộc pension adequacy, precautionary saving, inheritance motive và asset distribution.
-
-Vì vậy “aging = yields giảm” là simplification quá mạnh.
-
-## 38. Productivity: Labor Productivity và TFP
-
-**Labor productivity** là output trên worker/hour. **Total Factor Productivity (TFP)** cố đo phần output không giải thích chỉ bằng capital và labor quantity.
-
-TFP thường liên quan technology, organization, competition, knowledge spillovers và allocation efficiency.
-
-## 39. Capital Deepening
-
-Khi mỗi worker có nhiều/better machines, software hoặc infrastructure, output có thể tăng. Đây là **capital deepening**.
-
-Nhưng diminishing returns nghĩa chỉ tăng capital quantity mà không đổi technology cuối cùng có return giảm dần.
-
-## 40. Incremental Capital Output Ratio
-
-Một intuition hữu ích là hỏi thêm một đơn vị investment tạo bao nhiêu output mới. Nếu economy cần ngày càng nhiều debt/capex để tạo cùng một GDP increment, capital efficiency đang xấu.
-
-Đừng chỉ nhìn investment/GDP cao như tín hiệu tích cực; hãy nhìn productivity của investment.
-
-## 41. Misallocation
-
-Capital có thể chảy vào firms/projects có political connection hoặc collateral đẹp nhưng productivity thấp. **Misallocation** làm investment cao mà TFP thấp.
-
-Credit system tốt không chỉ cho vay nhiều mà còn phân bổ capital tới highest-risk-adjusted-return uses.
-
-## 42. Zombie Firms
-
-**Zombie firms** sống nhờ refinancing cheap dù operating return thấp. Chúng giữ labor/capital khỏi productive firms và làm creative destruction yếu.
-
-Rate normalization có thể gây short-run default pain nhưng đôi khi cải thiện allocation dài hạn.
-
-## 43. Bankruptcy Regime
-
-Bankruptcy law quyết định capital được tái phân bổ nhanh hay bị mắc kẹt. Efficient restructuring có thể preserve viable business while clearing bad capital structure.
-
-Country có weak insolvency process thường kéo dài NPL và suppress productivity.
-
-## 44. Competition và Market Power
-
-Too little competition có thể giảm incentive đổi mới; competition quá destructive trong natural monopoly sectors cũng có thể gây underinvestment. Policy design cần phân biệt contestable markets, network industries và strategic sectors.
-
-Productivity không chỉ là technology; market structure cũng quyết định diffusion.
-
-## 45. General-Purpose Technologies
-
-Electricity, computers, internet và AI có thể là **general-purpose technologies** vì ảnh hưởng nhiều industries. Productivity payoff thường có lag do firms phải redesign workflow, data, skills và complementary capital.
-
-Đây là lý do capex boom có thể đến trước measured productivity boom nhiều năm.
-
-## 46. AI: Capex Boom vs Productivity Boom
-
-AI-related investment có thể tăng semiconductor, data-center, power và networking demand trước khi economy-wide TFP tăng. Nếu applications không tạo revenue/cost savings đủ lớn, capital returns có thể thấp dù infrastructure spending rất cao.
-
-Investor nên tách beneficiaries của buildout khỏi ultimate productivity winners.
-
-## 47. Productivity và Wages
-
-Sustainable real wage growth dài hạn cần productivity growth. Nếu nominal wages tăng nhanh hơn productivity, **unit labor cost** tăng và pressure đi vào margin hoặc prices.
+Một trực giác quan trọng:
 
 ```text
-Unit Labor Cost Growth ≈ Wage Growth - Productivity Growth
+r = effective interest rate
+ g = nominal GDP growth
 ```
 
-Relationship này là cầu nối giữa labor market và services inflation.
+Nếu `r > g` kéo dài, debt ratio dễ tăng hơn trừ khi primary balance đủ tốt.
 
-## 48. Potential Growth
+Nếu `g > r`, nền kinh tế có nhiều “không gian” hơn nhưng không có nghĩa debt có thể tăng vô hạn.
 
-Một decomposition đơn giản:
+## 7. Công thức gần đúng
+
+Một dạng trực giác:
 
 ```text
-Potential Growth ≈ Labor Input Growth + Productivity Growth
+Δ Debt/GDP
+≈ Primary Deficit
++ (r - g) × Debt/GDP
 ```
 
-Potential growth không quan sát trực tiếp. Nhưng demographics và productivity là core drivers khiến neutral rates, fiscal capacity và long-run earnings khác nhau giữa countries.
+Mục tiêu không phải dùng như dự báo chính xác, mà hiểu ba lực quyết định hướng của debt ratio.
 
-## 49. Neutral Real Rate — r-star
+## 8. Effective funding rate
 
-**r-star** là real rate lý thuyết cân bằng economy quanh full employment và stable inflation. Nó bị ảnh hưởng bởi productivity, saving, demographics, risk preference và fiscal stance.
+Chi phí lãi thực tế của chính phủ không tăng ngay bằng market yield nếu phần lớn nợ đã khóa lãi cố định dài hạn.
 
-Estimate r-star rất uncertain. Dùng nó như range/concept, không như observable market price.
+Áp lực truyền vào theo lịch đáo hạn.
 
-## 50. Secular Stagnation và Regime Change
+## 9. Maturity structure
 
-Secular stagnation mô tả structural demand yếu, excess savings và low neutral rates. Nhưng deglobalization, green/AI capex, defense spending hoặc persistent fiscal deficits có thể nâng investment demand và change neutral-rate regime.
+Nợ kỳ hạn dài làm chi phí funding repricing chậm hơn.
 
-Macro frameworks phải cho phép structural regime thay đổi.
+Nợ ngắn làm pressure truyền nhanh.
 
-## 51. Productivity, Debt và Asset Valuation
+Do đó hai quốc gia cùng debt/GDP có thể có sensitivity với rate shock hoàn toàn khác nhau.
 
-Higher productivity có thể nâng future cash flows và neutral rates cùng lúc. Equity impact vì vậy không đơn giản: earnings tốt hơn nhưng discount rate cũng có thể cao hơn.
+## 10. Gross financing need
 
-Long-duration assets hưởng nhiều từ low discount rates nhưng có thể chịu pressure nếu productivity boom nâng real yields nhanh hơn earnings expectations.
-
-## 52. Fiscal–Monetary Policy Matrix
-
-Một framework 2×2 hữu ích:
+**Nhu cầu tài trợ gộp (gross financing need)** gồm:
 
 ```text
-Fiscal easing + Monetary easing
-→ demand/liquidity cùng hỗ trợ; inflation risk lớn nếu supply tight.
-
-Fiscal easing + Monetary tightening
-→ policy conflict; front-end rates cao trong khi nominal demand được hỗ trợ.
-
-Fiscal tightening + Monetary easing
-→ central bank bù fiscal drag; disinflation có thể thuận lợi hơn.
-
-Fiscal tightening + Monetary tightening
-→ combined demand contraction; recession/credit risk tăng.
+Fiscal Deficit
++ Debt Maturing
 ```
 
-Đây là starting map, không phải prediction engine.
+Một quốc gia có deficit nhỏ nhưng lượng nợ đáo hạn rất lớn vẫn có refinancing need cao.
 
-## 53. Country External Balance
+# Phần III — Currency và investor base
 
-Fiscal analysis cần nối với **current account**. Twin deficits không luôn dẫn tới crisis, nhưng country phụ thuộc foreign funding sẽ nhạy hơn với global USD tightening.
+## 11. Nợ bằng nội tệ
 
-Reserve-currency issuer và FDI-funded emerging market có funding structure rất khác nhau.
+Quốc gia phát hành nợ chủ yếu bằng đồng tiền mình kiểm soát có flexibility khác quốc gia vay ngoại tệ.
 
-## 54. FX Reserves và Import Cover
+Nhưng điều này không loại bỏ inflation risk hoặc confidence risk.
 
-FX reserves hỗ trợ confidence và intervention capacity. Nhưng headline reserve number nên so với short-term external debt, imports và potential outflows.
+## 12. Nợ ngoại tệ
 
-Một reserve stock lớn nhưng liabilities lớn hơn nhiều chưa chắc tạo buffer mạnh.
+Foreign-currency debt tạo mismatch nếu tax revenue chủ yếu bằng nội tệ.
 
-## 55. Political Economy
+Khi nội tệ giảm:
 
-Tax reform, pension reform, subsidy removal hoặc retirement-age changes có winners/losers rõ ràng nên political constraints quan trọng. Economically optimal policy có thể không politically feasible.
+```text
+Debt Burden in Local Currency ↑
+```
 
-Investor country analysis phải xem institutional ability to implement adjustment, không chỉ spreadsheet debt path.
+## 13. Investor base
 
-## 56. Fiscal Credibility
+Cần biết ai đang nắm government bonds:
 
-Credibility là belief rằng government có khả năng và willingness giữ debt path sustainable. Credibility ảnh hưởng term premium, currency và investor base.
+- domestic banks;
+- pension funds;
+- households;
+- foreign investors;
+- central bank.
 
-Một country có debt cao nhưng institutions mạnh có thể fund rẻ hơn country debt thấp nhưng policy unpredictable.
+Investor base ổn định có thể giảm rollover risk nhưng đôi khi tạo vòng liên kết sovereign–bank.
 
-## 57. Long-Run Country Dashboard
+# Phần IV — Fiscal impulse
 
-Một dashboard nên theo potential growth, productivity, labor force, dependency ratio, fiscal balance, primary balance, interest/revenue ratio, debt/GDP, debt maturity, foreign-currency share, current account, FX reserves, bank-system health và long-term real yields.
+## 14. Fiscal stance và fiscal impulse
 
-Không cần update mọi ngày. Đây là slow-moving structural dashboard dùng theo quarter/year.
+Không chỉ mức deficit quan trọng mà cả **thay đổi của stance tài khóa**.
 
-## 58. Phân biệt Cyclical và Structural
+Nếu deficit từ 8% GDP giảm còn 4%, fiscal policy có thể đang tạo drag dù ngân sách vẫn thâm hụt.
 
-Unemployment tăng vài tháng là cyclical. Fertility decline, pension burden hay productivity trend là structural. Market có thể trade cyclical news hàng ngày nhưng long-run allocation cần structural layer.
+## 15. Fiscal multiplier
 
-Không dùng structural story để biện hộ cho valuation bất kỳ, và không dùng monthly data để kết luận structural regime đã đổi.
+Hệ số nhân tài khóa phụ thuộc:
 
-## 59. Framework phân tích Country hoàn chỉnh
+- nền kinh tế còn slack không;
+- monetary policy phản ứng thế nào;
+- household propensity to spend;
+- openness;
+- loại chi tiêu.
+
+Infrastructure ở recession có hiệu ứng khác tax rebate khi economy đã quá nóng.
+
+## 16. Automatic stabilizers
+
+Thuế và trợ cấp thất nghiệp tự động làm fiscal stance nới hơn khi economy yếu mà không cần luật mới.
+
+Đây là **bộ ổn định tự động (automatic stabilizer)**.
+
+# Phần V — Treasury issuance và bond market
+
+## 17. Cung trái phiếu chính phủ
+
+Deficit lớn hơn thường cần issuance lớn hơn.
+
+Nhưng market impact phụ thuộc:
+
+- bills vs long bonds;
+- dealer capacity;
+- foreign demand;
+- pension demand;
+- central-bank balance sheet.
+
+## 18. Bills và duration supply
+
+Phát hành bills tăng supply ngắn hạn khác phát hành long bonds tăng duration mà khu vực tư nhân phải hấp thụ.
+
+Do đó composition issuance có thể ảnh hưởng term premium.
+
+## 19. Term premium và fiscal risk
+
+Nếu investor yêu cầu compensation lớn hơn để giữ long-duration government debt:
+
+```text
+Term Premium ↑
+→ Long Yield ↑
+→ Mortgage / Corporate Discount Rate ↑
+```
+
+Fiscal condition có thể truyền sang private-sector financing qua kênh này.
+
+# Phần VI — Fiscal và monetary interaction
+
+## 20. Tight monetary + loose fiscal
+
+Nếu central bank cố giảm demand bằng lãi suất cao nhưng fiscal policy đồng thời kích cầu mạnh, hai chính sách có thể kéo ngược nhau.
+
+Kết quả có thể là rates phải duy trì cao lâu hơn.
+
+## 21. Loose monetary + tight fiscal
+
+Ngược lại, fiscal consolidation có thể làm growth yếu và cho central bank nhiều room để nới lỏng.
+
+## 22. QE và fiscal link
+
+Khi central bank mua government bonds, duration được chuyển từ private sector sang central-bank balance sheet.
+
+Nhưng QE không đồng nghĩa government spending được tài trợ miễn phí vĩnh viễn.
+
+Nếu central bank trả interest on reserves, chi phí interest-rate exposure có thể chỉ thay đổi hình thức.
+
+## 23. QT và fiscal issuance
+
+Khi QT diễn ra trong lúc Treasury issuance lớn, private sector phải hấp thụ nhiều duration hơn.
+
+Điều này có thể ảnh hưởng long yields và term premium.
+
+# Phần VII — Fiscal dominance
+
+## 24. Fiscal dominance là gì?
+
+Fiscal dominance xảy ra khi nhu cầu tài trợ và debt-service pressure làm khả năng theo đuổi mục tiêu monetary độc lập bị hạn chế đáng kể.
+
+Không nên dùng nhãn này chỉ vì debt/GDP cao.
+
+## 25. Cơ chế tiềm năng
+
+```text
+Debt Service ↑
+→ Fiscal Stress ↑
+→ Pressure for Lower Rates / Monetization ↑
+→ Inflation Credibility Risk ↑
+```
+
+Nhưng institutional structure quyết định liệu vòng này có thực sự xảy ra hay không.
+
+## 26. Monetary dominance
+
+Trong monetary dominance, central bank ưu tiên price stability và fiscal authority phải điều chỉnh budget để thích nghi với điều kiện funding.
+
+# Phần VIII — Rủi ro lạm phát tài khóa
+
+## 27. Fiscal transfer và demand
+
+Transfer trực tiếp tới household có thể làm demand tăng nhanh hơn nếu propensity to spend cao.
+
+Tác động inflation phụ thuộc economy còn capacity trống hay không.
+
+## 28. Investment spending
+
+Infrastructure có thể tăng demand ngắn hạn nhưng đồng thời tăng supply capacity dài hạn nếu dự án có năng suất cao.
+
+Không nên xem mọi government spending có cùng inflation effect.
+
+# Phần IX — Demographics
+
+## 29. Dân số ảnh hưởng growth như thế nào?
+
+Một cách đơn giản:
+
+```text
+Potential Growth
+≈ Labor-Force Growth
++ Productivity Growth
+```
+
+Dân số già và lực lượng lao động giảm tạo áp lực lên growth nếu productivity không bù đủ.
+
+## 30. Fertility
+
+Birth rate thấp ảnh hưởng labor supply với độ trễ nhiều thập kỷ.
+
+Do đó demographic trend thường rất chậm nhưng khó đảo nhanh.
+
+## 31. Aging
+
+Dân số già ảnh hưởng:
+
+- labor participation;
+- healthcare spending;
+- pension spending;
+- savings;
+- housing demand;
+- fiscal balance.
+
+## 32. Dependency ratio
+
+Tỷ lệ người phụ thuộc so với lực lượng lao động tăng có thể tạo áp lực thuế và ngân sách.
+
+## 33. Immigration
+
+Immigration có thể tăng labor supply và demand cùng lúc.
+
+Tác động ròng phụ thuộc skills, housing capacity, integration và labor-market structure.
+
+# Phần X — Labor participation và human capital
+
+## 34. Participation
+
+Population không phải labor force.
+
+Participation rate quyết định phần dân số trong độ tuổi thực sự tham gia thị trường lao động.
+
+## 35. Human capital
+
+Human capital gồm:
+
+- education;
+- skill;
+- health;
+- experience.
+
+Một quốc gia có dân số không tăng nhưng human capital tăng vẫn có thể nâng productivity.
+
+# Phần XI — Capital accumulation
+
+## 36. Vốn vật chất
+
+Factory, infrastructure, software và equipment giúp worker tạo nhiều output hơn.
+
+Nhưng lợi suất vốn có xu hướng giảm nếu chỉ tăng quantity mà không cải thiện technology hoặc allocation.
+
+## 37. Capital efficiency
+
+Không phải mọi capex đều tăng productivity.
+
+Đầu tư vào project có return thấp có thể làm debt tăng mà potential growth không tăng tương ứng.
+
+# Phần XII — TFP
+
+## 38. Total Factor Productivity
+
+TFP đo phần tăng output không giải thích chỉ bằng tăng labor và capital.
+
+Nó phản ánh:
+
+- technology;
+- management;
+- institutions;
+- competition;
+- allocation efficiency.
+
+## 39. Misallocation
+
+Nếu vốn và lao động bị giữ trong doanh nghiệp năng suất thấp vì subsidy, credit distortion hoặc barrier, TFP toàn nền kinh tế giảm.
+
+## 40. Creative destruction
+
+Doanh nghiệp kém hiệu quả rời thị trường để nguồn lực chuyển sang doanh nghiệp tốt hơn là một phần của productivity growth.
+
+Policy bảo vệ mọi doanh nghiệp yếu vô hạn có thể cản quá trình này.
+
+# Phần XIII — Institutions
+
+## 41. Thể chế và growth
+
+Property rights, contract enforcement, regulation, education và competition policy ảnh hưởng incentive đầu tư dài hạn.
+
+## 42. Rule of law
+
+Nhà đầu tư cần tin rằng hợp đồng và quyền sở hữu có thể được bảo vệ.
+
+Không chắc chắn pháp lý làm required return tăng và đầu tư giảm.
+
+# Phần XIV — AI và năng suất
+
+## 43. AI có thể tăng productivity qua đâu?
+
+AI có thể:
+
+- tự động hóa task;
+- nâng output/worker;
+- giảm search cost;
+- tăng tốc R&D;
+- cải thiện decision support.
+
+Nhưng productivity aggregate chỉ tăng khi technology được triển khai rộng và quy trình doanh nghiệp thay đổi.
+
+## 44. Investment boom vs realized productivity
+
+Capex AI có thể tăng rất nhanh trước khi productivity xuất hiện trong national accounts.
+
+Cần phân biệt:
+
+```text
+Investment in Technology
+và
+Realized Economy-Wide Productivity
+```
+
+## 45. Distribution effect
+
+AI có thể nâng tổng productivity nhưng lợi ích phân phối không đều giữa worker, capital owner và ngành.
+
+# Phần XV — Neutral rate và cấu trúc dài hạn
+
+## 46. R-star
+
+Lãi suất trung tính thực (r-star) chịu ảnh hưởng của:
+
+- productivity;
+- demographics;
+- desired saving;
+- desired investment;
+- fiscal policy;
+- global capital flows.
+
+## 47. Aging và neutral rate
+
+Dân số già có thể làm saving tăng hoặc giảm tùy giai đoạn vòng đời, nên tác động lên r-star không đơn giản một chiều.
+
+## 48. Productivity và r-star
+
+Productivity cao hơn có thể tăng expected return on capital và investment demand, từ đó đẩy neutral rate cao hơn.
+
+# Phần XVI — External balance và fiscal space
+
+## 49. Current account và public debt
+
+Một nước có government deficit nhưng private sector tiết kiệm cao có cấu trúc funding khác nước phụ thuộc foreign capital.
+
+## 50. Twin deficits
+
+Fiscal deficit và current-account deficit cùng tồn tại đôi khi được gọi là **twin deficits**, nhưng quan hệ không cơ học.
+
+Exchange rate, private saving và investment quyết định mức liên kết.
+
+# Phần XVII — Country risk dashboard
+
+## 51. Fiscal
+
+```text
+Debt/GDP
+Primary Balance
+Interest/Revenue
+Gross Financing Need
+Maturity
+```
+
+## 52. Monetary
+
+```text
+Inflation
+Policy Rate
+Real Rate
+Central-Bank Credibility
+FX Regime
+```
+
+## 53. External
+
+```text
+Current Account
+FX Reserves
+External Debt
+Short-Term External Debt
+Foreign Investor Share
+```
+
+## 54. Structural
 
 ```text
 Demographics
-→ Labor Supply / Human Capital
-→ Productivity / Capital Efficiency
-→ Potential Growth
-→ Tax Base / Fiscal Spending
-→ Primary Balance + Debt Structure
-→ Fiscal Credibility
-→ Monetary Flexibility
-→ Real Yields / Term Premium / FX
-→ Credit Conditions
-→ Corporate Earnings
-→ Asset Valuation
+Productivity
+Institutions
+Human Capital
+Investment Quality
 ```
 
-Mỗi arrow là một transmission channel cần kiểm chứng bằng data, không phải slogan.
+# Phần XVIII — Phân biệt cyclical và structural
 
-## 60. Investor Application
+## 55. Cyclical
 
-Khi 10Y yield tăng, đừng dừng ở “Fed hawkish”. Hãy tách expected short rates, inflation compensation, term premium và duration supply. Khi currency yếu, hỏi current account, capital flows, policy credibility và FX debt. Khi government announces stimulus, hỏi multiplier, financing, sector recipients và supply capacity.
+Các biến như PMI, inventory, unemployment và policy rate có thể đảo chiều trong vài quý hoặc vài năm.
 
-## 61. Các lỗi tư duy thường gặp
+## 56. Structural
 
-Sai lầm phổ biến gồm coi debt/GDP như default probability trực tiếp, coi deficit nào cũng xấu, tin inflation luôn giảm debt burden, nghĩ aging luôn kéo rates xuống, nghĩ technology capex đồng nghĩa productivity đã tăng và đọc one-year fiscal number mà bỏ maturity/currency structure.
+Demographics, TFP, institutions và debt maturity structure thay đổi chậm hơn.
 
-Cách sửa là luôn phân tích balance sheet, flow, maturity, currency, incentives và time horizon.
+Không nên dùng một dữ liệu tháng để tuyên bố structural regime đã đổi.
 
-## 62. Mental Model cuối cùng
+# Phần XIX — Cách áp dụng vào đầu tư
 
-Một nền kinh tế có thể tăng trưởng nhanh nhờ debt và investment trong nhiều năm. Câu hỏi sâu hơn luôn là:
+## 57. Với trái phiếu
+
+Cần hỏi:
 
 ```text
-Một đơn vị capital mới tạo bao nhiêu future productive capacity?
-Ai đang tài trợ capital đó?
-Liability mang currency và maturity nào?
-Cash flow/tax base tương lai có đủ phục vụ liability không?
+Inflation Path?
+Policy Path?
+Fiscal Issuance?
+Term Premium?
+Debt Sustainability?
 ```
 
-Đó là điểm nối giữa fiscal policy, monetary system, demographics, productivity và investing.
+## 58. Với FX
+
+```text
+Relative Rates
+Fiscal Credibility
+External Balance
+Growth
+Capital Flows
+```
+
+## 59. Với cổ phiếu
+
+Structural growth ảnh hưởng:
+
+- TAM;
+- wage cost;
+- tax burden;
+- discount rate;
+- sector composition.
+
+## 60. Với quốc gia già hóa
+
+Không nên chỉ kết luận “aging = bearish”.
+
+Cần xem:
+
+- automation;
+- immigration;
+- female participation;
+- retirement age;
+- productivity;
+- fiscal reform.
+
+# Phần XX — Checklist tổng hợp
+
+## 61. Khi phân tích nợ công
+
+```text
+Debt Level
+Primary Balance
+r - g
+Effective Funding Rate
+Maturity
+Currency
+Investor Base
+Gross Financing Need
+```
+
+## 62. Khi phân tích potential growth
+
+```text
+Population
+Participation
+Human Capital
+Capital Stock
+TFP
+Institutions
+```
+
+## 63. Khi phân tích policy mix
+
+```text
+Monetary Stance
+Fiscal Impulse
+Credit Conditions
+FX Constraint
+Inflation Expectations
+```
+
+## Kết luận
+
+Tăng trưởng dài hạn không được quyết định chỉ bởi policy rate hay deficit của một năm.
+
+Nó là kết quả của:
+
+```text
+Labor
++ Capital
++ Productivity
++ Institutions
+```
+
+Trong khi tính bền vững tài khóa phụ thuộc:
+
+```text
+Debt Stock
++ Primary Balance
++ r - g
++ Maturity
++ Currency
++ Investor Base
+```
+
+Nhà đầu tư cần tách **chu kỳ ngắn hạn** khỏi **lực cấu trúc dài hạn** để tránh định giá một biến tạm thời như thể nó tồn tại vĩnh viễn.
