@@ -1,155 +1,162 @@
-# Quần thể, quần xã và hành vi — Population, Community and Behavior (개체군, 군집과 행동)
+# Quần thể, Quần xã và Hành vi — Population, Community and Behavior (개체군, 군집과 행동)
 
-Ở organismal biology, ta theo dõi một cơ thể giữ homeostasis, sinh sản và phát triển. Ecology thay đổi câu hỏi bằng cách lùi camera ra xa hơn: **điều gì xảy ra khi nhiều cá thể cùng loài chia sẻ resource, khi nhiều loài tương tác, và khi behavior của từng cá thể làm thay đổi population-level pattern?**
+Sau khi học organismal biology, ta đã có một cá thể có physiology, behavior và reproduction. Nhưng ngoài tự nhiên, không organism nào tồn tại một mình. Cá thể cạnh tranh resource, tìm mate, tránh predator, tương tác mutualist và chịu environmental fluctuation. Vì vậy scale tiếp theo của Sinh học là **quần thể (population)** và **quần xã (community)**.
 
-Ecology không tách khỏi evolution. Population growth tạo competition; competition tạo selection pressure; evolution lại thay trait và interaction. Vì vậy chapter này nối trực tiếp physiology, behavior và population genetics.
+> **Mental model:** ecology là study của interaction và constraint. Population growth bị giới hạn bởi resource; species interaction thay fitness; behavior nối physiology với environment; community structure xuất hiện từ nhiều interaction đồng thời.
 
-## 1. Từ individual sang population
+## 1. Population size không chỉ là “đếm số con”
 
-Một **population (quần thể / 개체군)** gồm cá thể cùng species sống trong cùng vùng và có interaction/reproduction liên quan.
+Một population được mô tả bởi size \(N\), density, age structure, sex ratio, spatial distribution và genetic composition.
 
-Ở individual scale ta hỏi body temperature hay reproductive output. Ở population scale ta hỏi:
+Hai population cùng N có thể rất khác nếu một population toàn juvenile còn population kia phần lớn old individual. Demography vì vậy cần structure, không chỉ count.
 
-\[
-N(t)=\text{population size at time }t
-\]
+## 2. Exponential growth: baseline khi constraint chưa mạnh
 
-Population size đổi vì birth, death, immigration và emigration:
-
-\[
-\Delta N = B-D+I-E
-\]
-
-Đây là accounting identity đơn giản nhưng rất mạnh: muốn hiểu population tăng/giảm phải tìm cơ chế đi qua bốn dòng này.
-
-## 2. Exponential growth: khi mỗi cá thể tạo contribution tương tự
-
-Nếu resource gần như không giới hạn và per-capita growth rate \(r\) ổn định:
+Nếu per-capita growth rate gần constant:
 
 \[
 \frac{dN}{dt}=rN
 \]
 
-Solution:
+solution là:
 
 \[
 N(t)=N_0e^{rt}
 \]
 
-Vì growth rate tỷ lệ với N hiện tại, population lớn tạo nhiều offspring tuyệt đối hơn, làm curve tăng nhanh.
+Growth càng lớn khi N lớn vì có nhiều individual sinh sản. Đây là positive feedback.
 
-Bacteria trong early culture và invasive population ở stage đầu có thể gần model này.
+Exponential model có thể phù hợp short-term khi resource dư, như microbial culture early phase hoặc invasive population mới vào habitat thuận lợi.
 
-Nhưng exponential growth không thể kéo dài vô hạn trong finite environment.
+## 3. Doubling time
 
-## 3. Logistic growth: resource limitation đi vào model
+Với exponential growth, doubling time xấp xỉ:
 
-Khi population density tăng, food, territory hoặc nesting site trở nên hạn chế.
+\[
+t_d=\frac{\ln 2}{r}
+\]
 
-Một model đơn giản thêm **carrying capacity** \(K\):
+Relation này nối ecology với logarithm. Một population có r lớn gấp đôi nhanh hơn không tuyến tính theo trực giác đơn giản.
+
+## 4. Logistic growth và carrying capacity
+
+Resource hữu hạn làm per-capita growth giảm khi N tăng. Model logistic:
 
 \[
 \frac{dN}{dt}=rN\left(1-\frac{N}{K}\right)
 \]
 
-Khi \(N\ll K\), term gần 1 và growth gần exponential.
+\(K\) là carrying capacity trong model — population size mà net growth tiến gần zero dưới condition cụ thể.
 
-Khi \(N\to K\), growth chậm lại.
+K không phải hằng số vĩnh viễn của species; climate, resource, predator và habitat làm K thay đổi.
 
-Nhưng K không phải “sức chứa cố định vĩnh viễn”. Climate, resource, habitat quality và technology của organism có thể làm K thay đổi.
+## 5. Density-dependent và density-independent factor
 
-Model giúp reasoning, không phải law tuyệt đối.
+Disease transmission, competition và resource shortage thường mạnh hơn khi density cao: density-dependent.
 
-## 4. Density dependence và feedback
+Storm, fire hoặc sudden freeze có thể ảnh hưởng không trực tiếp theo density: density-independent trong model đơn giản.
 
-Nếu crowding làm disease spread tăng hoặc food per individual giảm, death rate có thể tăng và birth rate giảm.
+Phân loại giúp hiểu feedback population, nhưng real event có thể kết hợp cả hai.
 
-Đây là negative feedback ở population scale.
+## 6. Life history trade-off
 
-Một concept từ physiology quay lại trong ecology:
+Organism phân resource hữu hạn cho growth, maintenance và reproduction.
 
-```text
-population density rises
-    ↓
-competition / disease increases
-    ↓
-per-capita growth falls
-    ↓
-population growth slows
-```
+Một species có thể sinh nhiều offspring nhỏ với parental care ít; species khác sinh ít offspring nhưng đầu tư nhiều.
 
-Feedback là pattern xuyên scale.
+Không có “strategy tốt hơn” universal. Fitness phụ thuộc mortality pattern, environment predictability và resource.
 
-## 5. Life history: organism phân bổ resource hữu hạn
+## 7. Survivorship curve
 
-Mỗi organism có finite energy/time. Resource dùng cho growth không đồng thời dùng cho reproduction; reproduction hiện tại có thể giảm survival tương lai.
+Type I: mortality thấp đầu đời, tăng ở tuổi cao. Type II: risk tương đối đều. Type III: mortality rất cao early life nhưng survivor sống lâu hơn.
 
-**Life-history strategy** mô tả trade-off giữa age at reproduction, offspring number, parental investment và lifespan.
+Đây là simplified pattern, useful để liên hệ life-history strategy với demography.
 
-Không có strategy tốt nhất universal. Environment khác nhau ưu tiên trade-off khác nhau.
+## 8. Metapopulation
 
-Đây là điểm physiology nối evolution: energy budget của organism trở thành fitness outcome.
+Species trong fragmented habitat có thể tồn tại thành nhiều local population nối bằng migration.
 
-## 6. Behavior là phenotype có ecological consequence
+Một patch có thể extinct local rồi recolonize. Persistence toàn hệ phụ thuộc balance extinction–colonization và connectivity.
 
-Behavior ảnh hưởng nơi organism ăn, mating, tránh predator và cooperate.
+Conservation corridor có ý nghĩa từ model này.
 
-Một behavior có thể innate, learned hoặc kết hợp.
+## 9. Behavior là phenotype dưới selection
 
-Natural selection có thể shape behavioral tendency nếu variation có heritable component.
+**Hành vi (behavior / 행동)** là response/action của organism, được tạo bởi nervous/endocrine system, development, learning và environment.
 
-Nhưng behavior cũng flexible: learning cho phép response nhanh hơn genetic evolution khi environment thay đổi trong lifetime.
+Behavior có genetic component trong nhiều case nhưng cũng plastic. Natural selection tác động behavior nếu variation heritable ảnh hưởng fitness.
 
-## 7. Optimal foraging là model trade-off
+## 10. Innate và learned behavior không phải hai hộp tuyệt đối
 
-Animal tìm food phải cân bằng energy gain, search time và predation risk.
+Một behavior có thể có predisposition genetic nhưng cần learning để hoàn thiện. Birdsong, navigation hoặc fear response thường là interaction nature–experience.
 
-Model optimal foraging không nói animal “giải equation” trong đầu. Nó hỏi strategy nào có thể được favored hoặc produce observed pattern dưới constraint.
+Learning là phenotypic plasticity cho phép update behavior trong lifetime.
 
-Đây là ví dụ economics-like reasoning trong biology.
+## 11. Optimal foraging và trade-off
 
-## 8. Cooperation và kin selection
+Animal phải maximize energy/nutrient gain nhưng cũng chịu search time, handling time và predation risk.
 
-Một behavior giảm direct reproduction của actor nhưng giúp relative có thể vẫn spread nếu relative share allele.
+Optimal-foraging model không nói animal “tính calculus”; nó là framework dự đoán strategy được selection favor trong constraint.
 
-Hamilton's rule thường viết:
+Model đơn giản có thể fail nếu social factor hoặc learning quan trọng.
+
+## 12. Territoriality
+
+Defending territory có benefit resource/mate nhưng cost energy/injury/time.
+
+Territorial behavior chỉ evolutionarily favorable khi benefit > cost trong context.
+
+Một lần nữa, behavior là economic trade-off dưới biological constraint.
+
+## 13. Altruism và inclusive fitness
+
+Một behavior làm giảm direct reproduction của actor nhưng tăng relative reproduction của genetic relative có thể được giải thích bằng **kin selection**.
+
+Hamilton’s rule đơn giản:
 
 \[
 rB>C
 \]
 
-Trong đó \(r\) là relatedness, \(B\) benefit cho recipient, \(C\) cost cho actor.
+trong đó \(r\) là relatedness, \(B\) benefit recipient và \(C\) cost actor.
 
-Equation không phải universal calculator cho mọi behavior; nó là framework để hiểu inclusive fitness.
+Đây không phải law chính xác cho mọi social behavior, nhưng là mental model mạnh cho inclusive fitness.
 
-## 9. Community: khi nhiều species cùng tồn tại
+## 14. Reciprocal cooperation
 
-Một **community (quần xã / 군집)** gồm population của nhiều species tương tác trong cùng area.
+Cooperation giữa unrelated individual có thể persist nếu interaction lặp lại, cheating bị detect/punish hoặc partner choice tồn tại.
 
-Từ đây interaction có thể được nhìn qua effect lên fitness/growth của hai bên:
+Game theory được dùng model strategy evolution như Prisoner’s Dilemma.
 
-- competition: cả hai chịu cost;
-- predation/herbivory: một bên benefit, một bên cost;
-- mutualism: cả hai benefit;
-- commensalism: một bên benefit, bên kia effect nhỏ.
+Ecology và economics/computation gặp nhau ở strategic interaction.
 
-Nhưng real interaction có thể đổi theo context. Một mutualism có thể yếu hoặc chuyển cost khi resource thay đổi.
+## 15. Niche
 
-## 10. Competition và niche
+**Ecological niche (생태적 지위)** không chỉ là “nơi sống”. Nó gồm resource use, environmental tolerance, timing và interaction role.
 
-**Niche (ổ sinh thái / 생태적 지위)** không chỉ là nơi species sống. Nó gồm resource use, environmental condition và interaction role.
+**Fundamental niche** là range có thể sống khi không bị biotic restriction; **realized niche** là range thực sau competition/predation và interaction khác.
 
-Hai species overlap niche mạnh có thể competition.
+Niche là multidimensional condition/resource space.
 
-Competitive exclusion nói hai species không thể coexist ổn định vô hạn nếu dùng resource hoàn toàn giống nhau trong model đơn giản.
+## 16. Competition
 
-Coexistence có thể xuất hiện qua niche differentiation, temporal separation hoặc trade-off khác.
+Species cạnh tranh khi dùng resource giới hạn chung. Competition có thể exploitative (gián tiếp dùng hết resource) hoặc interference (direct exclusion).
 
-## 11. Predator–prey tạo dynamics chứ không chỉ “ai ăn ai”
+Competitive exclusion principle nói hai species có niche hoàn toàn identical khó coexist ổn định lâu dài trong simple constant environment.
 
-Predator abundance phụ thuộc prey; prey mortality phụ thuộc predator.
+Nhưng real community có fluctuation, spatial heterogeneity và resource partitioning giúp coexistence.
 
-Lotka–Volterra model đơn giản:
+## 17. Resource partitioning
+
+Species có thể chia resource theo space, time hoặc type. Bird species ăn ở tầng cây khác nhau; predator săn time khác nhau.
+
+Partitioning giảm niche overlap và competition.
+
+Pattern có thể là nguyên nhân/effect của evolution; cần experiment để tách.
+
+## 18. Predator–prey dynamics
+
+Simple Lotka–Volterra model:
 
 \[
 \frac{dN}{dt}=rN-aNP
@@ -159,50 +166,107 @@ Lotka–Volterra model đơn giản:
 \frac{dP}{dt}=baNP-mP
 \]
 
-Model có thể tạo oscillation.
+Prey growth bị predation giảm; predator growth phụ thuộc encounter prey.
 
-Thực tế phức tạp hơn vì refuge, alternative prey, seasonality và density dependence, nhưng equation cho mental model về coupled dynamics.
+Model có thể tạo oscillation, nhưng real system thêm carrying capacity, refuge, alternative prey và seasonality.
 
-## 12. Food web: interaction tạo network
+Point không phải thuộc equation mà hiểu feedback coupled population.
 
-Ecosystem không phải chain đơn “grass → rabbit → fox”. Species thường có nhiều food source và predator.
+## 19. Functional response
 
-Food web là graph với species/node và feeding relation/edge.
+Predator consumption không tăng tuyến tính vô hạn với prey density vì handling/satiation.
 
-Network structure ảnh hưởng stability và pathway energy flow.
+Holling Type II response saturates; Type III sigmoid có low consumption khi prey rare.
 
-Graph theory từ CS vì thế có application tự nhiên trong ecology.
+Shape response ảnh hưởng stability prey–predator system.
 
-## 13. Keystone species và indirect effect
+## 20. Mutualism, commensalism, parasitism
 
-Một species có abundance không lớn vẫn có effect lớn nếu position trong network quan trọng.
+Interaction label dựa sign effect relative fitness/growth:
 
-Remove predator có thể tăng herbivore, làm plant biomass giảm — **trophic cascade**.
+- mutualism +/+;
+- competition -/-;
+- predation/parasitism +/-;
+- commensalism +/0 trong model ideal.
 
-Điều này cho thấy effect ecological thường indirect. Muốn causal reasoning phải theo network nhiều step, giống signaling pathway trong cell.
+Nhưng sign có thể change theo context. Mycorrhiza beneficial khi phosphorus low nhưng cost carbon; relationship strength đổi theo nutrient.
 
-## 14. Succession: community thay đổi theo thời gian
+## 21. Keystone species
 
-Sau disturbance, community composition có thể đổi có pattern.
+Một species có effect community lớn hơn abundance gợi ý **keystone species**.
 
-Early colonizer thay environment, tạo condition cho species khác; competition và soil development tiếp tục đổi system.
+Removing predator có thể tạo trophic cascade, làm herbivore tăng và vegetation giảm.
 
-Succession không phải một con đường bắt buộc tới một “climax hoàn hảo”. Disturbance regime và historical contingency ảnh hưởng trajectory.
+Community network có node influence không tỷ lệ đơn giản biomass.
 
-## 15. Behavior, community và evolution feedback nhau
+## 22. Trophic cascade
 
-Predator pressure shape prey behavior; prey behavior đổi grazing pattern; grazing pattern đổi plant community; plant community đổi habitat cho species khác.
+Predator tác động prey trực tiếp; prey tác động producer; vì vậy predator có indirect effect lên plant.
 
-Ecological interaction tạo selection pressure, rồi evolved trait lại đổi ecology.
+Ecology cần causal chain nhiều step giống signaling network.
 
-Đây là **eco-evolutionary feedback**.
+Direct interaction và indirect interaction đôi khi cho outcome ngược trực giác.
 
-## 16. Từ community sang ecosystem: còn thiếu vật chất và năng lượng
+## 23. Food web chứ không phải food chain
 
-Community ecology tập trung organism interaction. Nhưng organism phải lấy energy và matter từ environment.
+Real ecosystem có many feeding links. Species có thể ăn ở nhiều trophic level; omnivory và detrital path phổ biến.
 
-Nếu chỉ biết “ai ăn ai”, ta vẫn chưa biết carbon đi đâu, nitrogen quay vòng thế nào, hay bao nhiêu solar energy vào food web.
+Food web được biểu diễn graph: node = species/group; edge = energy/feeding interaction.
 
-Vì vậy scale tiếp theo là **ecosystem**, nơi biotic community và abiotic environment được xem cùng nhau.
+Network topology ảnh hưởng stability và disturbance propagation.
 
-Tiếp tục với [[01_ecosystems_biogeochemical_cycles_and_conservation]].
+## 24. Disease ecology
+
+Pathogen transmission phụ thuộc host density/contact, immunity, vector và environment.
+
+Simple epidemic model như SIR dùng differential equation để track susceptible–infectious–recovered compartment.
+
+Ecology và epidemiology chia cùng population-dynamics language.
+
+## 25. Invasive species
+
+Species tới new habitat có thể expand nếu escape enemy, resource phù hợp hoặc disturbance mở niche.
+
+Không phải mọi introduced species trở thành invasive; invasion là outcome của propagule pressure + trait + ecosystem context.
+
+Management cần hiểu population growth và interaction, không chỉ loại bỏ individual.
+
+## 26. Community succession
+
+Sau disturbance, community composition thay theo time.
+
+Primary succession bắt đầu nơi gần như không có soil; secondary succession ở nơi soil/biological legacy còn.
+
+Succession không phải luôn fixed linear path tới một climax state; disturbance và contingency có thể tạo alternative trajectory.
+
+## 27. Case study: wolf và trophic cascade
+
+Wolf reintroduction thường được dùng ví dụ predator ảnh hưởng herbivore và vegetation. Nhưng real ecosystem effect phức tạp, gồm prey number/behavior, other predator, human management và climate.
+
+Lesson tốt nhất không phải memorize slogan mà học cách tránh oversimplification trong ecological causality.
+
+## 28. Case study: bee pollination
+
+Plant cung cấp nectar/pollen; pollinator giúp pollen transfer. Network pollination ảnh hưởng plant reproduction và crop yield.
+
+Loss pollinator không chỉ tác động một species mà có thể đổi community interaction.
+
+## 29. Common misconceptions
+
+“Population luôn tiến tới K” sai; environment/K thay đổi và dynamics có delay.
+
+“Predator luôn xấu cho ecosystem” sai; predator có thể stabilize community hoặc tạo cascade.
+
+“Niche = habitat” quá hẹp.
+
+“Altruism tiến hóa vì lợi ích của species” thường là explanation yếu; cần individual/kin/multilevel mechanism cụ thể.
+
+“Community cân bằng cố định nếu không có human” sai; natural disturbance và succession liên tục.
+
+## 30. Bridge: từ interaction local tới ecosystem-scale matter và energy
+
+Population/community chapter theo dõi số lượng organism và interaction. Nhưng ecosystem còn phải hỏi: **energy đi qua trophic level thế nào, carbon/nitrogen/phosphorus quay vòng ra sao, disturbance và climate thay process ở scale landscape/global thế nào?**
+
+Đó là nội dung của [[01_ecosystems_biogeochemical_cycles_and_conservation]].
+
+> **Mental model cuối chapter:** population ecology là dynamics của số lượng; community ecology là dynamics của interaction. Behavior nối decision của individual với fitness, còn food web nối nhiều population thành network. Mọi level đều có feedback, trade-off và constraint.
