@@ -1,59 +1,165 @@
 # Tiền, hệ thống tài chính và market mechanics
 
+> Mục tiêu của chapter này là xây nền cho toàn bộ thư viện đầu tư. Sau khi đọc xong, bạn không chỉ biết stock, bond hay ETF là gì, mà phải hiểu tiền đi qua hệ thống nào, quyền sở hữu và nghĩa vụ được ghi nhận ở đâu, order được khớp thế nào, chi phí ẩn xuất hiện ở đâu và vì sao market price có thể tách khỏi intrinsic value trong ngắn hạn.
+
 ## 1. Bắt đầu từ tiền thay vì bắt đầu từ cổ phiếu
 
-Đầu tư chỉ có ý nghĩa khi hiểu tiền đang đại diện cho điều gì. Tiền là phương tiện trao đổi, đơn vị đo giá trị và công cụ lưu trữ sức mua. Nhưng sức mua của tiền không cố định. Nếu income của bạn tăng 3% trong khi mức giá chung tăng 5%, nominal income cao hơn nhưng real purchasing power giảm. Vì vậy, một trong những lý do tồn tại của investing là chuyển một phần tiền hiện tại thành assets có khả năng bảo vệ hoặc tăng sức mua trong tương lai.
+Tiền có ba chức năng cơ bản: phương tiện trao đổi (*medium of exchange*), đơn vị tính toán (*unit of account*) và công cụ lưu trữ sức mua (*store of value*). Chức năng thứ ba không hoàn hảo vì inflation làm sức mua thay đổi theo thời gian. Nếu tài sản tiền mặt tăng danh nghĩa 3% nhưng mức giá chung tăng 5%, nominal wealth tăng nhưng real purchasing power giảm.
 
-Giá trị thời gian của tiền giải thích tại sao 1 triệu won hôm nay không giống 1 triệu won nhận sau mười năm. Tiền hôm nay có thể được đầu tư, tạo interest hoặc return, rồi compounding. Cùng logic đó được dùng khi định giá bond, stock và project: future cash flow phải được discount về hiện tại.
+Real return có thể tính chính xác bằng:
 
-## 2. Hệ thống tài chính nối người có vốn với người cần vốn
+`Real return = (1 + nominal return) / (1 + inflation) - 1`
 
-Một household có thể tiết kiệm nhiều hơn nhu cầu tiêu dùng hiện tại. Một company lại cần vốn để xây factory, tuyển nhân sự hoặc nghiên cứu sản phẩm. Government cần tài trợ infrastructure và budget. Financial system tồn tại để chuyển capital từ nơi tạm thời dư sang nơi có thể sử dụng.
+Vì vậy đầu tư không đơn giản là “kiếm nhiều tiền hơn”, mà là phân bổ purchasing power hiện tại để đạt purchasing power cao hơn hoặc phù hợp hơn trong tương lai.
 
-Bank thực hiện intermediation bằng deposits và loans. Capital market cho phép doanh nghiệp huy động trực tiếp bằng equity hoặc debt. Equity investor trở thành owner và nhận residual claim. Bond investor trở thành creditor và nhận contractual cash flows trước equity holders trong capital structure.
+Time value of money là nền tảng cho bond pricing, DCF, mortgage và hầu hết valuation. Một khoản tiền nhận hôm nay có giá trị khác cùng nominal amount nhận nhiều năm sau vì tiền hôm nay có thể được đầu tư và compounding. Nếu một dòng tiền tương lai là `CF_t` và discount rate là `r`, present value cơ bản là:
 
-Điểm quan trọng là return không xuất hiện từ hư không. Equity return dài hạn cuối cùng phải liên hệ với profit và cash generation của business. Bond return đến từ interest và repayment, đổi lại investor chịu inflation, duration và credit risk. Commodity hoặc gold không tạo internal cash flow nên return phụ thuộc supply-demand, scarcity, monetary regime và mức giá người khác chấp nhận trả.
+`PV = CF_t / (1 + r)^t`
 
-## 3. Primary market và secondary market
+Discount rate không phải một con số tùy ý. Nó phản ánh time value, inflation expectations và risk premium mà investor yêu cầu.
 
-Primary market là nơi security được phát hành. IPO, rights offering và bond issuance là ví dụ. Capital thực sự được chuyển tới issuer theo cấu trúc giao dịch.
+## 2. Tiền ngân hàng, deposits và credit creation
 
-Secondary market là nơi investors giao dịch securities đã phát hành với nhau. Khi bạn mua một stock trên KRX hay HOSE trong phiên bình thường, phần lớn trường hợp bạn mua từ một holder khác chứ không trực tiếp đưa tiền mới cho company.
+Trong đời sống hiện đại, phần lớn “tiền” household sử dụng không phải banknotes mà là bank deposits. Khi bank cấp loan, nó thường đồng thời tạo một asset là khoản cho vay và một liability là deposit của khách hàng. Điều này giúp hiểu vì sao credit expansion có thể làm spending power tăng trước khi physical cash thay đổi tương ứng.
 
-Secondary market vẫn rất quan trọng với company vì liquidity và valuation ảnh hưởng cost of capital. Một market sâu, minh bạch và liquid làm investors yêu cầu lower liquidity premium, từ đó giúp issuer huy động vốn thuận lợi hơn.
+Central-bank reserves là một lớp khác với household deposits. Reserves chủ yếu phục vụ settlement giữa banks và tương tác với central bank; retail investor không giữ reserves trực tiếp. Vì vậy câu “central bank in tiền” thường quá đơn giản nếu không phân biệt banknotes, reserves, deposits, lending và asset purchases.
 
-## 4. Exchange, broker, custodian và depository
+Đối với investor, điều quan trọng không phải thuộc accounting của hệ thống tiền tệ ngay lập tức, mà hiểu rằng money, credit và collateral liên kết với nhau. Khi banks sẵn sàng lend, collateral values cao và credit spreads thấp, financial conditions dễ hơn. Khi lenders thắt standards, collateral giảm và borrowers phải deleverage, cùng nominal policy rate có thể tạo environment tài chính khắt khe hơn nhiều.
 
-Exchange là nơi rules và matching engine tổ chức giao dịch. Broker là gateway của bạn vào market. Custodian giữ assets theo cấu trúc pháp lý, còn central securities depository hỗ trợ record ownership và settlement.
+## 3. Hệ thống tài chính nối người có vốn với người cần vốn
 
-Người mới thường nhìn app như toàn bộ hệ thống nhưng thực tế app chỉ là giao diện. Khi order được gửi, nó đi qua broker risk checks, routing hoặc exchange, sau đó tới clearing và settlement. Hiểu chuỗi này giúp bạn phân biệt market risk với broker/custody/operational risk.
+Households có thể tiết kiệm, companies cần vốn cho factory, R&D hoặc working capital, còn governments cần tài trợ expenditure. Financial system chuyển capital giữa các chủ thể thông qua banks, bond markets, equity markets, funds và derivatives.
 
-Với OTC Forex hoặc CFD, cấu trúc có thể khác mạnh vì contract thường tồn tại giữa client và broker/dealer thay vì security exchange-listed. Vì vậy legal entity và client-money protection quan trọng hơn.
+Banking là *intermediation*: bank nhận funding và tạo loans. Capital markets cho phép issuer huy động trực tiếp hơn qua equity hoặc debt. Equity investor trở thành residual owner; bond holder là creditor với contractual claim. Preferred shares, subordinated debt và convertible securities nằm ở những vị trí khác nhau trong capital structure.
 
-## 5. Bid, ask, spread và order book
+Nếu company phá sản, claims không ngang nhau. Secured creditors thường đứng trước unsecured creditors; subordinated debt đứng sau senior debt; common equity là residual claim và thường chịu loss đầu tiên. Vì vậy hai securities cùng issuer có thể có risk hoàn toàn khác nhau.
 
-Bid là giá mua tốt nhất hiện tại; ask là giá bán tốt nhất. Spread là chênh lệch giữa hai mức. Nếu bid 99 và ask 100, người mua market order trả gần 100 trong khi người bán market order nhận gần 99. Spread là một cost ẩn của immediacy.
+Return cũng không xuất hiện từ hư không. Equity return dài hạn cuối cùng phải liên quan tới cash generation, reinvestment và valuation. Bond return đến từ coupon, principal repayment và price change. Gold hay commodity không tạo contractual cash flow, nên return phụ thuộc scarcity, inventories, real rates, monetary regime và supply-demand.
 
-Order book chứa resting limit orders. Market depth cho biết bao nhiêu quantity có sẵn ở từng mức giá. Một security có volume hàng ngày cao nhưng order book mỏng tại một thời điểm vẫn có thể slippage lớn.
+## 4. Primary market: khi capital thực sự được huy động
 
-Market order ưu tiên fill. Limit order ưu tiên price. Stop order là trigger. Stop-limit thêm kiểm soát giá nhưng đánh đổi khả năng không thoát được. Không có order type tốt nhất mọi trường hợp; lựa chọn phải dựa vào liquidity và mục tiêu execution.
+Primary market là nơi security mới được phát hành. IPO đưa shares mới ra công chúng; seasoned offering và rights offering tăng equity sau IPO; bond issuance tạo debt mới. Trong primary transaction, issuer nhận capital theo cấu trúc giao dịch.
 
-## 6. Price discovery
+Rights offering đặc biệt quan trọng vì existing shareholders có thể được quyền mua shares mới theo tỷ lệ. Nếu không tham gia, ownership percentage có thể bị dilution. Convertible bonds hoặc warrants cũng có thể tạo future dilution dù share count hiện tại chưa thay đổi.
 
-Giá không phải phép đo trực tiếp của intrinsic value. Nó là mức cân bằng tạm thời giữa buyers và sellers có kỳ vọng, horizon, constraints và thông tin khác nhau.
+Corporate actions khác nhau có economic meaning khác nhau. Stock split thay số shares và price per share nhưng không tự tạo enterprise value. Buyback giảm share count nếu shares thực sự được retired hoặc held as treasury stock, nhưng chỉ tạo value khi mua lại với economics hợp lý và không làm balance sheet yếu đi. Dividend chuyển cash từ company sang shareholders; ex-dividend price adjustment không phải “free money”.
 
-Một pension fund có thể bán vì rebalancing dù vẫn thích business. Một ETF phải mua vì index inclusion. Một trader cover short vì risk limit. Một company buyback shares vì capital allocation. Tất cả flows này có thể di chuyển price mà không đồng nghĩa fundamentals vừa thay đổi.
+## 5. Secondary market và vì sao nó vẫn quan trọng với doanh nghiệp
 
-Do đó investor cần tách price movement khỏi information content. Giá giảm có thể phản ánh thesis xấu đi, valuation compression, forced selling hoặc liquidity shock. Nhiệm vụ của analysis là phân biệt các khả năng này.
+Secondary market là nơi investors giao dịch securities đã phát hành với nhau. Khi bạn mua Samsung Electronics, một KOSPI ETF hay một cổ phiếu HOSE trong phiên bình thường, phần lớn trường hợp tiền đi tới người bán chứ không trực tiếp tới issuer.
 
-## 7. Settlement và counterparty chain
+Tuy vậy secondary market ảnh hưởng cost of capital. Một security liquid và có transparent price discovery thường yêu cầu liquidity premium thấp hơn. Higher valuation cũng có thể làm future equity financing ít dilutive hơn. Bond spread thấp làm refinancing rẻ hơn. Vì vậy secondary-market conditions có thể quay lại ảnh hưởng real corporate decisions.
 
-Trade date không nhất thiết là lúc cash và security cuối cùng đổi chủ về mặt settlement. Các market dùng chu kỳ settlement như T+1 hoặc T+2 tùy hệ thống và sản phẩm. Broker có thể cho bạn nhìn buying power ngay nhưng backend obligations vẫn đang được xử lý.
+## 6. Exchange-traded và OTC khác nhau ở đâu?
 
-Derivatives thêm clearing house, margin và daily mark-to-market. Margin không phải payment cho toàn bộ underlying; nó là collateral để đảm bảo nghĩa vụ. Đây là nguồn của leverage.
+Exchange cung cấp standardized rules, matching, surveillance và thường có centralized clearing. Listed stocks và standardized futures là ví dụ.
 
-## 8. Từ mechanics tới investing
+Over-the-counter (*OTC*) market là nơi contract được giao dịch trực tiếp hoặc qua dealers thay vì một central limit order book duy nhất. FX forwards, swaps và nhiều bonds có thể giao dịch OTC. CFD retail thường là bilateral claim đối với broker/dealer chứ không phải ownership của underlying security.
 
-Hiểu market mechanics giúp bạn tránh nhiều lỗi tưởng là “phân tích”. Một ETF premium 2% so NAV không trở nên tốt hơn chỉ vì chart tăng. Một stock illiquid không phù hợp position lớn dù valuation hấp dẫn. Một stop loss không bảo đảm exact fill khi gap. Một broker leverage cao không làm opportunity tốt hơn.
+Điều này thay đổi risk. Với exchange-traded stock, investor quan tâm market, custody và settlement. Với OTC derivative, legal entity, collateral terms, counterparty quality và close-out rules có thể quan trọng ngang market view.
 
-Nền tảng đúng là luôn hỏi: asset là claim gì, ai là counterparty, cash flow ở đâu, liquidity thế nào, order được thực hiện ra sao và risk nằm ở layer nào.
+## 7. Exchange, broker, clearing house, custodian và depository
+
+Broker là gateway của investor nhưng không phải toàn bộ market infrastructure. Một order có thể đi qua broker risk checks và routing trước khi tới venue. Sau execution còn có clearing và settlement.
+
+Central Counterparty (*CCP*) có thể đứng giữa buyer và seller đối với cleared products. Thay vì A trực tiếp phụ thuộc B, cả hai có obligations với clearing house. CCP quản lý risk qua margin, default fund và default-management procedures. Điều này giảm bilateral counterparty complexity nhưng không khiến systemic risk bằng zero.
+
+Custodian giữ securities hoặc records tài sản theo legal structure. Central Securities Depository (*CSD*) hỗ trợ book-entry ownership và settlement. Segregation of client assets là khái niệm quan trọng: tài sản khách hàng cần được xử lý khác với tài sản của broker theo rules áp dụng. Investor nên hiểu mình đang mở account với legal entity nào, assets đứng tên/được custody ra sao và cơ chế bảo vệ khi intermediary gặp vấn đề.
+
+## 8. Từ order tới fill: bid, ask và spread
+
+Bid là mức giá mua tốt nhất hiện tại; ask là giá bán tốt nhất. Spread là khoảng giữa hai mức. Nếu bid 99 và ask 100, một market buyer có thể phải trả gần 100 trong khi market seller nhận gần 99. Spread là cost của immediacy.
+
+Spread không cố định. Nó thường rộng hơn khi liquidity thấp, volatility cao, news uncertainty lớn hoặc market maker inventory risk tăng. Vì vậy một strategy có vẻ profitable trên close prices có thể mất edge sau spread và slippage.
+
+Order book chứa resting limit orders. *Depth* cho biết quantity tại nhiều price levels. Một security có daily volume cao nhưng depth thấp ở thời điểm bạn trade vẫn có thể tạo market impact lớn.
+
+## 9. Market, limit, stop và stop-limit orders
+
+Market order ưu tiên khả năng được fill, không bảo đảm exact price. Trong liquid market bình thường, slippage có thể nhỏ; khi gap hoặc panic, fill có thể rất xa last price.
+
+Limit order đặt price constraint. Buyer không muốn trả cao hơn limit; seller không muốn bán thấp hơn limit. Đổi lại, order có thể không fill hoặc chỉ fill một phần.
+
+Stop order trở thành executable order khi trigger được chạm theo rules của venue/broker. Nó hữu ích để automate risk control nhưng không bảo đảm loss giới hạn chính xác tại stop price. Stop-limit kiểm soát price tốt hơn nhưng có risk không thoát được nếu market chạy qua limit.
+
+Time-in-force như DAY, GTC, IOC hay FOK mô tả thời gian và điều kiện order tồn tại. Naming/rules có thể khác giữa markets và brokers, nên investor phải đọc specification thực tế thay vì suy đoán từ tên.
+
+## 10. Matching, price-time priority và auctions
+
+Nhiều electronic exchanges dùng logic gần với price-time priority: price tốt hơn được ưu tiên; trong cùng price, order vào trước thường được ưu tiên trước. Điều này giải thích vì sao đặt limit price giống best bid không có nghĩa bạn sẽ fill ngay: trước bạn có thể có một queue lớn.
+
+Markets cũng dùng auctions cho opening, closing hoặc volatility interruptions. Auction gom orders rồi xác định clearing price tối đa hóa executable volume theo rules. Closing auction đặc biệt quan trọng với index funds vì benchmark thường dùng official close; index rebalance có thể tạo volume rất lớn vào cuối phiên.
+
+## 11. Liquidity không chỉ là volume
+
+Liquidity có nhiều dimensions: spread hẹp, depth lớn, khả năng trade size đáng kể mà không move price nhiều, và khả năng market hồi phục sau order imbalance. Daily turnover chỉ là một chỉ báo.
+
+Slippage là khác biệt giữa expected và executed price. Market impact là phần price movement do chính order của bạn gây ra. Nếu position quá lớn so average traded value, exit risk có thể lớn hơn entry risk. Vì vậy position sizing phải gắn với liquidity chứ không chỉ conviction.
+
+Một practical rule là luôn hỏi: nếu thesis sai trong một ngày xấu, mình có thể giảm position bằng cách nào? Nếu câu trả lời phụ thuộc “chắc sẽ có người mua”, liquidity risk chưa được quản lý.
+
+## 12. Price discovery, information và flows
+
+Market price là equilibrium tạm thời giữa participants có information, horizon, leverage và constraints khác nhau. Nó không phải phép đo trực tiếp intrinsic value.
+
+Pension fund có thể bán vì rebalancing; ETF phải mua vì index inclusion; leveraged fund có thể liquidate vì margin; market maker hedge inventory; company buyback shares; retail investors chase momentum. Những flows này có thể move price dù fundamental cash-flow forecast chưa thay đổi.
+
+Do đó price movement nên được phân rã thành ít nhất bốn câu hỏi: fundamentals có đổi không, discount rate có đổi không, positioning/flows có đổi không, và liquidity có đổi không. Đây là cách tránh suy luận “giá giảm nên business xấu” hoặc “giá tăng nên thesis đúng”.
+
+## 13. ETF NAV, premium/discount và creation-redemption
+
+ETF share giao dịch trên exchange nhưng fund đồng thời sở hữu hoặc replicate một basket. Net Asset Value (*NAV*) phản ánh value của assets trừ liabilities trên mỗi share theo methodology.
+
+Authorized Participants (*APs*) có thể create hoặc redeem ETF shares bằng basket/cash theo rules. Cơ chế arbitrage này thường giúp market price bám NAV, nhưng không phải lúc nào cũng hoàn hảo. Khi underlying đóng cửa, illiquid hoặc stressed, ETF price có thể khác indicative NAV đáng kể.
+
+Vì vậy premium không có nghĩa ETF “tốt hơn”, discount không tự động là bargain. Cần biết underlying đang price được không, NAV stale không, spread bao nhiêu và creation/redemption hoạt động bình thường không.
+
+## 14. Settlement, clearing và failed settlement
+
+Trade date là ngày execution; settlement là lúc cash và securities obligations được hoàn tất theo cycle của market/product. Chu kỳ có thể T+1, T+2 hoặc khác và có thể thay đổi theo regulation.
+
+Investor không nên hard-code một cycle cho mọi market. Quan trọng hơn là hiểu unsettled cash, buying power và withdrawable cash không phải cùng một khái niệm.
+
+Settlement fails, operational errors hoặc holiday mismatch có thể tạo risk trong cross-border portfolios. Đây là lý do operational knowledge quan trọng với investor dùng nhiều brokers/currencies.
+
+## 15. Margin, collateral và leverage
+
+Margin là collateral, không phải maximum loss. Futures trader có thể post một phần notional nhưng chịu P/L trên toàn exposure. Khi mark-to-market loss làm equity xuống dưới maintenance threshold, broker/clearing system có thể yêu cầu thêm collateral hoặc liquidate.
+
+Trong leveraged account, path matters. Một position cuối cùng quay về entry price vẫn có thể bị forced liquidation giữa đường nếu drawdown vượt collateral capacity.
+
+Leverage vì vậy phải được đánh giá qua notional exposure, stress loss và liquidity of collateral, không chỉ qua “margin required”.
+
+## 16. Short selling và securities lending
+
+Để short cash stock, trader thường phải borrow shares, bán chúng rồi sau này mua lại để return lender. Borrow fee, availability và recall risk là part of economics.
+
+Short seller có asymmetric risk vì downside của long stock giới hạn ở zero nhưng short loss về lý thuyết có thể tăng khi price tăng. Short squeeze xảy ra khi rising price, recalls hoặc risk limits buộc shorts cover, tạo additional buying.
+
+Regulation về short selling khác theo jurisdiction và có thể thay đổi. Framework vĩnh viễn là: locate/borrow có tồn tại không, borrow cost là bao nhiêu, collateral requirement thế nào và forced-cover conditions là gì.
+
+## 17. Circuit breakers, price limits và market interruptions
+
+Markets dùng circuit breakers, volatility interruptions hoặc daily price limits để quản lý disorderly trading. Những cơ chế này không loại bỏ risk; chúng thay đổi timing của price discovery.
+
+Price limit có thể khiến investor không exit được dù stop level đã bị xuyên về economic value. Trading halt có thể giữ position qua news mới. Vì vậy “có stop-loss” không đồng nghĩa luôn có khả năng thực thi stop.
+
+## 18. Operational và counterparty risk
+
+Investor thường tập trung market direction nhưng có thể mất tiền vì wrong account, wrong contract, phishing, broker failure, withdrawal restriction hoặc misunderstanding of product terms.
+
+Các controls nền tảng gồm 2FA, withdrawal whitelist nếu có, kiểm legal entity, đọc client-asset treatment, test withdrawal với amount nhỏ, lưu transaction records và tránh giữ excess collateral ở high-risk venues chỉ vì leverage cao.
+
+## 19. Một execution checklist thực tế
+
+Trước khi đặt order, hãy xác định security/contract chính xác, venue, currency, position size, average daily liquidity, spread, expected slippage, order type, maximum acceptable execution price và exit plan. Với derivatives, thêm multiplier, tick value, expiry, settlement method, margin và overnight financing.
+
+Sau execution, kiểm fill price, fees, settlement status và actual exposure. Nếu trade lớn, so implementation price với decision price để học market-impact cost.
+
+## 20. Mental model cuối cùng
+
+Mỗi lần nhìn một sản phẩm tài chính, hãy tách nó thành năm layer:
+
+`Economic claim → Legal/counterparty structure → Market/liquidity → Execution/settlement → Portfolio risk`
+
+Nếu không giải thích được cả năm layer, bạn chưa thực sự hiểu sản phẩm dù biết ticker và chart. Market mechanics không phải kiến thức phụ của investing; nó là cơ chế biến thesis thành exposure thực tế.
