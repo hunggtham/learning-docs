@@ -1,495 +1,439 @@
-# 03 — Trading, Forex, phân tích kỹ thuật và quản trị rủi ro
+# Bản đồ tổng quan Trading, Forex và quản trị rủi ro
 
-> File này dành cho người chưa biết trading. Nó không giả định bạn hiểu chart, pip, lot, leverage, margin, stop loss hay backtest. Mục tiêu là giúp bạn nhìn trading như một bài toán xác suất và quản trị vốn trước khi học entry. Nếu chỉ nhớ một điều, hãy nhớ rằng chart đẹp không cứu được một tài khoản dùng position size sai.
+> File này là bản đồ học tập cho toàn bộ `05_trading_derivatives/`. Mục tiêu không phải thay thế các chapter chuyên sâu, mà giúp người đọc hiểu trading là một hệ thống gồm **tín hiệu → quy mô vị thế → thực thi → chi phí → quản trị danh mục → review**.
 
-## Mục lục
+Trading không phải tập hợp các pattern vào lệnh. Một chiến lược chỉ có ý nghĩa khi lợi thế kỳ vọng còn tồn tại sau spread, slippage, financing, drawdown và lỗi vận hành.
 
-1. Trading thực chất là gì?
-2. Edge và expectancy
-3. Tại sao người mới thường thua?
-4. Chart và candlestick
-5. Timeframe và noise
-6. Trend, range và market structure
-7. Support và resistance
-8. Breakout, pullback và mean reversion
-9. Volume, liquidity và volatility
-10. Indicators
-11. SMC/ICT nên hiểu thế nào?
-12. Multi-timeframe analysis
-13. Forex từ con số 0
-14. Pip, point, lot và contract size
-15. Leverage và margin
-16. Balance, equity, free margin và stop-out
-17. Spread, commission, slippage và swap
-18. Carry trade
-19. Position sizing
-20. Stop loss và invalidation
-21. Take profit, R-multiple và expectancy
-22. Risk of ruin
-23. Trading sessions
-24. News trading
-25. Futures trading
-26. Options trading
-27. XAUUSD
-28. Backtest
-29. Forward test
-30. Journal
-31. Overfitting và statistical bias
-32. Psychology và process
-33. Xây trading system
-34. Execution quality
-35. Portfolio heat và correlation
-36. Kelly criterion
-37. Monte Carlo
-38. Profit Factor, Sharpe, Sortino và Calmar
-39. MAE/MFE
-40. Regime filter
-41. Broker safety
-42. Trading như một business
-43. Lộ trình demo → live
+## 1. Mental model cốt lõi
 
----
+```text
+Hypothesis
+→ Signal
+→ Entry / Exit Rule
+→ Position Size
+→ Execution
+→ Cost
+→ P/L Distribution
+→ Portfolio Risk
+→ Review
+```
 
-## 1. Trading thực chất là gì?
+Nếu thiếu một mắt xích, hệ thống chưa hoàn chỉnh.
 
-Trading là hoạt động mở và đóng financial positions nhằm khai thác biến động price trong một horizon ngắn hoặc trung bình. Một trade có thể kéo dài vài giây, vài giờ hoặc vài tuần. Thời gian giữ không phải bản chất cốt lõi. Cốt lõi là trader dựa vào một setup có xác suất và payoff có thể lặp lại.
+## 2. Chart chỉ là biểu diễn dữ liệu giá
 
-Một lần đoán đúng direction không chứng minh skill. Nếu bạn đoán gold tăng vì chiến tranh và đúng một lần, đó có thể chỉ là luck. Edge phải tồn tại qua một sample đủ lớn sau spread, commission, slippage và swap.
+Candlestick, bar hay line chart chỉ là cách hiển thị:
 
-Trader không cần biết lệnh tiếp theo thắng hay thua. Giống insurer không biết chính xác customer nào sẽ claim, trader cần biết distribution của nhiều trades có expected value dương hay không.
+- open;
+- high;
+- low;
+- close;
+- volume nếu có.
 
-## 2. Edge và expectancy
+Chart không tự tạo edge. Edge phải đến từ một quan hệ có khả năng lặp lại và có lý do kinh tế hoặc hành vi hợp lý.
 
-Edge là lợi thế thống kê. Một strategy có edge khi rule rõ ràng, repeatable và expected result sau costs dương.
+## 3. Timeframe
 
-Expectancy có thể viết:
+Timeframe càng nhỏ:
 
-`E = Win rate × Average win - Loss rate × Average loss`
+- noise càng lớn;
+- spread/slippage chiếm tỷ trọng cao hơn;
+- execution quan trọng hơn;
+- số lượng giao dịch nhiều hơn.
 
-Nếu win rate 40%, average win 2R và average loss 1R:
+Không có timeframe “tốt nhất”; nó phải phù hợp strategy, cost và thời gian của trader.
 
-`E = 0,4×2 - 0,6×1 = +0,2R/trade`
+## 4. Trend, range và regime
 
-Strategy vẫn profitable dù phần lớn trades thua.
+Một thị trường có thể ở:
 
-Nếu win rate 80%, average win 0,25R và average loss 2R:
+```text
+Trend
+Range
+High Volatility
+Low Volatility
+Event-Driven State
+```
 
-`E = 0,8×0,25 - 0,2×2 = -0,2R`
+Một setup tốt trong trend có thể hoạt động kém trong range.
 
-Win rate cao không đồng nghĩa edge tốt.
+## 5. Market structure
 
-## 3. Tại sao người mới thường thua?
+Market structure thường mô tả chuỗi swing high, swing low và cách giá phản ứng quanh vùng có order flow lớn.
 
-Người mới thường học entry trước risk. Họ tìm indicator, signal group, “smart money point” hoặc setup được quảng cáo 90% win rate. Nhưng account thường chết vì oversizing, leverage, revenge trading và không hiểu variance.
+Các thuật ngữ như break of structure hoặc change of character chỉ nên dùng như cách mô tả dữ liệu, không phải quy luật tất định.
 
-Một strategy tốt vẫn có losing streak. Nếu trader risk 10% mỗi trade, chỉ năm losses liên tiếp khiến account còn `0,9^5 ≈ 59%`. Nếu risk 1%, sau năm losses còn gần 95%.
+## 6. Support và resistance
 
-Một lỗi khác là strategy hopping. Sau ba losses, trader đổi system; vài losses nữa lại đổi. Không system nào có sample đủ để biết edge.
+Support/resistance là vùng giá nơi hành vi mua/bán từng thay đổi đáng kể.
 
-Người mới cũng nhầm short-term luck với skill. Leverage 1:500 có thể làm account double rất nhanh và cũng làm cháy rất nhanh. Outcome vài trades không đánh giá được process.
+Nên nghĩ theo vùng xác suất, không phải một đường chính xác tuyệt đối.
 
-## 4. Chart và candlestick
+## 7. Breakout
 
-Chart là visualization của historical price. Candlestick chứa open, high, low, close.
+Breakout chỉ có edge nếu sau chi phí, false break và slippage, outcome phân phối vẫn có expectancy dương.
 
-Trên M5, mỗi candle đại diện năm phút. Body thể hiện open-close; wicks thể hiện extremes.
+## 8. Pullback
 
-Một large bullish candle chỉ nói buying pressure mạnh trong period đó, không nói chắc chắn future price tăng. Candle ngay dưới major resistance khác candle breakout từ consolidation.
+Pullback strategy thường đánh cược rằng trend chính còn tiếp tục sau điều chỉnh tạm thời.
 
-Pin bar, engulfing hay doji là descriptions của OHLC relationships. Pattern chỉ có giá trị nếu context và statistics hỗ trợ.
+Điểm quan trọng là định nghĩa trend, invalidation và risk/reward rõ ràng.
 
-## 5. Timeframe và noise
+## 9. Mean reversion
 
-M1, M5, H1, D1 chỉ là scales khác nhau. Một downtrend M1 có thể chỉ là pullback nhỏ trong uptrend H1.
+Mean reversion giả định giá có xu hướng quay về một mức tham chiếu sau khi đi quá xa.
 
-Timeframe nhỏ cho nhiều observations nhưng nhiều noise. Timeframe lớn ít signals hơn nhưng context ổn định hơn.
+Nó có thể thất bại nặng khi thị trường chuyển từ range sang trend.
 
-Trader nên quy định từng timeframe làm nhiệm vụ gì. Ví dụ H1 cho bias, M15 cho zone, M5 cho entry. Mở quá nhiều timeframes thường tạo confirmation bias: zoom đến khi tìm được signal mình muốn.
+## 10. Volume và liquidity
 
-## 6. Trend, range và market structure
+Volume cao không luôn đồng nghĩa liquidity tốt. Cần nhìn thêm:
 
-Uptrend thường được mô tả Higher High và Higher Low. Downtrend có Lower High và Lower Low. Range là price oscillate giữa boundaries mà không có directional structure rõ.
+- spread;
+- depth;
+- market impact;
+- thời điểm trong ngày.
 
-BOS, Break of Structure, và CHoCH/MSS là terms phổ biến nhưng definitions khác nhau giữa communities. Nếu muốn backtest, phải định nghĩa rule objectively.
+## 11. Volatility
 
-Ví dụ: “BOS bullish chỉ được công nhận khi M15 candle close trên swing high có ít nhất hai candles hai phía.” Rule có thể không hoàn hảo nhưng repeatable.
+Volatility quyết định:
 
-Trend-following strategy dễ bị whipsaw trong range. Mean reversion dễ chết trong strong trend. Nhận market regime quan trọng hơn việc tìm nhiều entry patterns.
+- stop distance hợp lý;
+- position size;
+- expected move;
+- margin risk;
+- option pricing.
 
-## 7. Support và resistance
+Cùng một strategy không nên dùng size giống nhau trong mọi volatility regime.
 
-Support là vùng buyers từng đủ mạnh để ngăn hoặc đảo decline. Resistance là vùng sellers từng mạnh.
+## 12. Indicator
 
-Nên coi là zones, không phải một pixel. Prior highs/lows, round numbers và congested areas có thể tập trung resting orders, trapped traders và attention.
+MA, RSI, MACD, ATR hay Bollinger Bands đều là biến đổi của price/volume.
 
-Resistance sau breakout đôi khi trở thành support do short covering và missed buyers chờ retest. Nhưng không phải level nào cũng retest hoặc hold.
+Indicator hữu ích khi nó phục vụ rule rõ ràng, không phải vì thêm nhiều indicator làm hệ thống “chắc chắn” hơn.
 
-Support/resistance tốt nhất được dùng như location filter, không phải standalone signal.
+## 13. SMC / ICT
 
-## 8. Breakout, pullback và mean reversion
+Các khái niệm như liquidity sweep, order block, fair value gap có thể dùng như ngôn ngữ mô tả price action.
 
-Breakout strategy kỳ vọng momentum tiếp tục sau khi price rời range hoặc level. Main risk là false breakout. Filters có thể là close, volume, volatility expansion hoặc retest nhưng không loại hết false signals.
+Nhưng phải chuyển chúng thành rule kiểm chứng được nếu muốn backtest.
 
-Pullback strategy tham gia trend sau correction để có better entry và clearer invalidation.
+## 14. Multi-timeframe
 
-Mean reversion kỳ vọng price đi quá xa mean rồi quay lại. Nó thường hợp range/liquid environment hơn strong trend. RSI oversold không tự động là buy signal nếu market đang repricing mạnh.
+Timeframe lớn có thể cung cấp context; timeframe nhỏ dùng cho timing.
 
-## 9. Volume, liquidity và volatility
+Tuy nhiên thêm quá nhiều timeframe dễ tạo hindsight narrative.
 
-Exchange-traded stocks/futures có centralized volume rõ hơn spot OTC Forex. Forex platforms thường dùng tick volume proxy.
+## 15. Forex là thị trường tương đối
 
-Liquidity là khả năng trade size mà không gây price impact lớn. Liquid market có spread hẹp và depth tốt. Illiquid market có gaps và slippage lớn.
+Một cặp tiền luôn so hai nền kinh tế.
 
-Volatility là magnitude và speed của price changes. ATR đo average range và có thể dùng để normalize stop distance.
+```text
+EUR/USD
+= giá EUR theo USD
+```
 
-Nếu ATR tăng gấp đôi mà stop giữ nguyên, strategy trở nên effectively tighter. Position size phải giảm nếu muốn giữ cùng dollar risk với stop rộng hơn.
+Phân tích cần nhìn relative rates, relative growth, risk sentiment và flow.
 
-## 10. Indicators
+## 16. Pip và lot
 
-Indicator là transformation của price/volume, không phải nguồn thông tin thần bí.
+Pip là đơn vị biến động giá quy ước. Lot là quy mô hợp đồng.
 
-Moving Average làm mượt price và có thể dùng trend filter. RSI đo momentum tương đối; RSI >70 không đồng nghĩa phải short. MACD mô tả momentum/trend relationship. Bollinger Bands kết hợp mean và volatility. VWAP là volume-weighted average price, phổ biến intraday. ATR đo volatility.
+Trước khi giao dịch phải biết:
 
-Không dùng năm indicators cùng đo momentum rồi gọi đó là năm confirmations. Mỗi tool nên có một nhiệm vụ.
+```text
+Contract Size
+Pip Value
+Quote Currency
+Account Currency
+```
 
-## 11. SMC/ICT nên hiểu thế nào?
+## 17. Leverage
 
-Smart Money Concepts/ICT dùng terms như liquidity sweep, order block, fair value gap, premium-discount và structure shift.
+Đòn bẩy (leverage) cho phép kiểm soát notional lớn bằng capital nhỏ hơn.
 
-Liquidity sweep thường mô tả price xuyên prior high/low rồi quay lại. FVG mô tả imbalance ba-candle. Order block thường được trader coi là area trước displacement mạnh.
+Leverage không tạo edge. Nó chỉ phóng đại:
 
-Vấn đề là definitions chủ quan. Để test, bạn phải biến thành rule. Ví dụ: H1 uptrend, price vào H1 demand, sweep M15 low, M5 close structure shift, entry first retracement, stop dưới sweep, target prior high.
+```text
+P/L
+Drawdown
+Margin Risk
+Risk of Ruin
+```
 
-Không tin một concept chỉ vì được gọi “institutional”. Data của cách bạn execute mới quyết định edge.
+## 18. Margin
 
-## 12. Multi-timeframe analysis
+Margin là collateral broker yêu cầu để giữ position.
 
-Context và execution nên tách. H1 có thể quyết định regime; M15 tìm setup; M5 entry.
+```text
+Required Margin
+≈ Notional / Leverage
+```
 
-M1 lower low không tự động đảo H1 uptrend. Mỗi timeframe có structure riêng.
+Margin không phải maximum loss.
 
-Việc liên tục đổi timeframe sau khi vào lệnh thường là dấu hiệu bạn chưa có rule rõ.
+## 19. Equity, free margin và margin level
 
-## 13. Forex từ con số 0
+```text
+Equity = Balance + Floating P/L
+```
 
-EUR/USD 1,1000 nghĩa 1 EUR = 1,10 USD. EUR là base, USD quote. Buy EUR/USD = long EUR, short USD.
+```text
+Margin Level
+= Equity / Used Margin × 100%
+```
 
-USD/JPY 150 nghĩa 1 USD = 150 JPY. Pair tăng nghĩa USD mạnh tương đối hoặc JPY yếu tương đối.
+Nếu equity giảm quá mức, broker có thể margin call hoặc stop-out theo rules riêng.
 
-Major pairs có currencies lớn và thường liquidity tốt. Cross không có USD trực tiếp. Exotic pairs thường spread rộng và country risk cao hơn.
+## 20. Position sizing
 
-Retail spot Forex thường OTC, không giống centralized stock exchange. Vì vậy broker entity và execution model quan trọng.
+Quy mô vị thế phải bắt đầu từ mức lỗ chấp nhận được.
 
-## 14. Pip, point, lot và contract size
+```text
+Position Size
+≈ Allowed Loss / Loss Per Unit at Invalidation
+```
 
-Với nhiều FX pairs, 1 pip = 0,0001. EUR/USD 1,1000 → 1,1001 là 1 pip. JPY pairs thường 0,01.
+Không nên bắt đầu từ “broker cho leverage bao nhiêu”.
 
-Broker có thể quote thêm decimal nhỏ hơn, gọi pipette/point tùy platform.
+## 21. Stop-loss
 
-Standard lot thường = 100.000 units base currency; 0,1 lot = 10.000; 0,01 = 1.000 trong retail FX standard convention.
+Stop là một execution instruction, không phải guarantee giá thoát.
 
-Với EUR/USD và USD account, 1 standard lot thường khoảng $10/pip trong common setup. Nhưng phải tính theo pair/account currency cụ thể.
+Trong gap hoặc event lớn, fill có thể xa trigger.
 
-XAUUSD contract specs khác broker; không áp FX pip rules máy móc.
+## 22. R-multiple
 
-## 15. Leverage và margin
+`R` là lượng rủi ro ban đầu.
 
-Leverage cho phép control notional lớn hơn capital posted. Nếu leverage 1:100, notional $100.000 có thể cần khoảng $1.000 margin theo simplified calculation:
+Ví dụ risk 100 USD:
 
-`Margin ≈ Notional / Leverage`
+```text
+-1R = -100 USD
++2R = +200 USD
+```
 
-Margin không phải max loss. Account $2.000 control $100.000 notional; market move 1% tương ứng khoảng $1.000 P/L trước costs. Underlying move nhỏ có thể làm equity giảm 50%.
+R giúp so trade khác nhau bằng cùng đơn vị rủi ro.
 
-Leverage limit cao không bắt bạn dùng full leverage. Professional risk comes from position size, không từ con số broker quảng cáo.
+## 23. Expectancy
 
-## 16. Balance, equity, free margin và stop-out
+```text
+Expectancy
+= Win Rate × Average Win
+- Loss Rate × Average Loss
+```
 
-Balance là realized account value sau closed trades. Equity = balance + floating P/L.
+Win rate cao không bảo đảm có edge.
 
-Used margin là collateral cho open positions. Free margin = equity trừ used margin.
+## 24. Risk of ruin
 
-Margin Level thường:
+Risk of ruin tăng khi:
 
-`Equity / Used Margin × 100%`
+- risk/trade lớn;
+- edge nhỏ;
+- drawdown kéo dài;
+- correlation giữa trade cao.
 
-Broker có margin-call và stop-out thresholds. Khi margin level thấp, system có thể force-close positions theo policy.
+Survival quan trọng hơn tối đa hóa short-term return.
 
-Nếu bạn không biết stop-out rule, chưa nên trade live leveraged products.
+## 25. Sessions
 
-## 17. Spread, commission, slippage và swap
+Forex có đặc điểm khác nhau theo Asia, London và New York session.
 
-Spread là ask-bid. Buy mở tại ask và P/L thường âm ngay khoảng spread.
+Liquidity và volatility thường thay đổi quanh overlap và data release.
 
-Commission có thể tính per lot hoặc notional. Raw spread account thường có explicit commission.
+## 26. News event
 
-Slippage là chênh giữa requested và fill. CPI/FOMC có thể làm liquidity vanish và slippage rất lớn.
+CPI, NFP, central-bank decision hoặc geopolitical shock có thể làm:
 
-Swap là overnight financing adjustment. Có thể positive hoặc negative tùy pair, direction, rate differential và broker markup. Strategy hold nhiều ngày phải tính swap.
+- spread widen;
+- slippage tăng;
+- stop gap;
+- margin thay đổi.
 
-## 18. Carry trade
-
-Carry trade vay/fund bằng low-yield currency để long higher-yield currency/assets.
-
-Positive carry không bảo vệ khỏi FX loss lớn. Carry strategies dễ tổn thương khi volatility spike và risk-off gây unwinding.
-
-JPY historically là funding currency trong nhiều regimes do low rates; khi carry unwind, JPY có thể strengthen nhanh.
-
-## 19. Position sizing
-
-Account $10.000, risk 0,5% → risk amount $50.
-
-Nếu stop 25 pips, acceptable value = $2/pip. Nếu EUR/USD 1 lot ≈ $10/pip, position ≈ 0,2 lot.
-
-`Position size = Risk amount / (Stop distance × Value per point)`
-
-Thứ tự đúng là xác định invalidation/stop từ chart trước, rồi tính size. Không chọn lot trước rồi ép stop để đúng dollar loss.
-
-Stop rộng gấp đôi thì size khoảng một nửa nếu cùng risk.
-
-## 20. Stop loss và invalidation
-
-Stop là nơi thesis/setup không còn hợp lệ hoặc risk vượt rule.
-
-Structural stop nằm ngoài swing/level. Volatility stop dựa ATR. Time stop thoát nếu expected move không xảy ra trong thời gian định trước.
-
-Không dời stop xa hơn chỉ để tránh nhận loss. Dollar risk được kiểm soát bằng position size, không bằng việc đặt stop tùy theo cảm xúc.
-
-Break-even và trailing rules phải được backtest; dời BE quá sớm có thể giết winners.
-
-## 21. Take profit, R-multiple và expectancy
-
-Nếu risk $50, 1R = $50. Win $100 = +2R, loss full stop = -1R.
-
-R giúp so trades bất kể account size.
-
-RR 1:3 không tự động tốt. Break-even win rate lý thuyết khoảng 25% nếu win đúng 3R và loss 1R, nhưng actual costs và missed fills làm khác.
-
-Partial exit có thể giảm volatility nhưng cũng giảm average win. Phải test exact rule.
-
-## 22. Risk of ruin
-
-Risk of ruin tăng khi risk per trade lớn, edge nhỏ và outcomes correlated.
-
-Risk 10%/trade khiến losing streak bình thường trở thành catastrophe. Risk 0,25–0,5% phù hợp hơn cho learning/live validation khi edge chưa chắc chắn.
-
-Daily loss limit như -2R có thể ngăn tilt. Weekly drawdown threshold có thể buộc pause và review.
-
-Không tăng size để “gỡ”. Martingale biến sequence risk thành blow-up risk.
-
-## 23. Trading sessions
-
-Asia active hơn với JPY/AUD/NZD và regional flows. London mở tăng liquidity EUR/GBP. New York có USD macro data và overlap với London.
-
-Gold thường active mạnh London/NY, đặc biệt quanh US data.
-
-Session high/low có thể là liquidity references. Nhưng session behavior không phải law; cần statistics của instrument/setup.
-
-Chọn session phù hợp lifestyle. Strategy yêu cầu trade lúc bạn thiếu ngủ thường không sustainable.
-
-## 24. News trading
-
-Major data làm spread widen và slippage. CPI, NFP, FOMC, central-bank decisions và geopolitical headlines là examples.
-
-Đặt buy-stop/sell-stop hai phía trước news không phải arbitrage. Whipsaw có thể trigger cả hai, spread mở rộng và fills xấu.
-
-Professional news trading cần consensus, whisper, positioning và reaction function, không chỉ đoán Actual.
-
-Người mới nên tránh mở new position ngay trước high-impact events nếu system chưa được thiết kế cho news.
-
-## 25. Futures trading
-
-Futures có standardized multiplier, tick, expiry và margin. P/L tính theo contract spec.
-
-Daily mark-to-market nghĩa loss thực hiện qua margin process. Không thể “cứ giữ đến khi hồi” nếu margin cạn.
-
-Index futures có thể hedge equity beta. Nhưng hedge ratio cần tính; short arbitrary number contracts có thể overhedge.
-
-Basis và roll matters khi giữ qua expiries.
-
-## 26. Options trading
-
-Long call không chỉ là bullish. P/L phụ thuộc underlying move, time và IV. Long put tương tự ở downside.
-
-Theta làm long options decay theo time, vega tạo sensitivity với IV. IV crush sau earnings có thể làm option lỗ dù direction đúng.
-
-Short options nhận premium nhưng tail risk lớn. Covered call và cash-secured put dễ hiểu hơn naked positions nhưng vẫn có opportunity/downside trade-offs.
-
-Options phù hợp defined-risk structures nhưng cần hiểu payoff trước Greeks nâng cao.
+Event trading đòi hỏi execution plan trước release.
 
 ## 27. XAUUSD
 
-Gold/USD có volatility lớn và hấp dẫn retail traders. Nó nhạy US real yields, DXY, Fed repricing, geopolitics và central-bank demand.
+Gold chịu ảnh hưởng của:
 
-CPI, NFP và FOMC có thể tạo moves lớn. Spread/slippage cũng tăng.
+- real yield;
+- USD;
+- central-bank demand;
+- geopolitics;
+- inflation regime;
+- positioning.
 
-Trước trade phải đọc contract size. Nếu 1 lot = 100 oz theo broker spec, $1 move có P/L rất khác FX pair. Tính tick value, stop dollars và margin trước.
+Không dùng quy tắc đơn giản “inflation tăng → gold tăng”.
 
-Bắt đầu H1/M15/M5 context tốt hơn scalping M1 với oversized leverage.
+## 28. Futures
 
-## 28. Backtest
+Futures là hợp đồng chuẩn hóa trên exchange.
 
-Backtest trả lời: nếu thực hiện rule này nhiều lần trong historical data, distribution thế nào?
+Cần hiểu:
 
-Record instrument, date, session, context, entry, stop, target, result R, costs, MFE, MAE và screenshot nếu có.
+- multiplier;
+- tick;
+- expiry;
+- margin;
+- settlement;
+- basis;
+- roll.
 
-100 trades là starting point thường hữu ích nhưng không phải magic number. Cần nhiều market regimes.
+## 29. Options
 
-Metrics gồm win rate, average win/loss, expectancy, Profit Factor, max drawdown và losing streak.
+Option tạo payoff phi tuyến.
 
-Backtest không chứng minh future profitability; nó loại bớt systems không có evidence.
+```text
+Call = max(S-K, 0)
+Put  = max(K-S, 0)
+```
 
-## 29. Forward test
+Trước expiry, giá option còn phụ thuộc volatility, time, rates và Greeks.
 
-Forward test chạy rule trong live time mà không biết future. Demo kiểm mechanics. Live minimum size kiểm emotion, slippage và actual execution.
+## 30. CFD
 
-Không scale dựa 5 winners. Scale dựa sample đủ và rule adherence ổn.
+CFD thường là bilateral contract với broker.
 
-Nếu live performance khác backtest, tách vấn đề execution, costs, regime và strategy degradation.
+Cần kiểm tra:
 
-## 30. Journal
+- legal entity;
+- financing cost;
+- spread;
+- execution model;
+- stop-out;
+- jurisdiction.
 
-Journal cần lưu setup, context, entry, stop, target, risk, result R và rule adherence.
+## 31. Backtest
 
-Một winner phá rule là bad process. Một -1R loss đúng rule là valid sample.
+Backtest phải cố tái tạo thông tin và execution có thể có thật tại thời điểm quá khứ.
 
-Weekly review tìm lỗi lặp: overtrade sau loss, cut winners, trade ngoài session, poor sleep, news violations.
+Sai lầm phổ biến:
 
-Journal biến memory bias thành data.
+- look-ahead bias;
+- survivorship bias;
+- data snooping;
+- bỏ transaction cost;
+- bỏ slippage.
 
-## 31. Overfitting và statistical bias
+## 32. Forward test
 
-Overfitting xảy ra khi thêm quá nhiều filters để historical equity curve đẹp. System có 15 conditions có thể fit noise.
+Sau backtest nên có out-of-sample hoặc forward test trước khi dùng capital đáng kể.
 
-Look-ahead bias dùng information chưa có tại thời điểm trade. Survivorship bias test chỉ assets còn sống. Selection bias chọn period vì biết trước nó phù hợp.
+## 33. Trading journal
 
-Robust system thường vẫn hoạt động khi parameters thay đổi nhẹ và có economic/behavioral logic.
+Journal nên ghi:
 
-Out-of-sample và walk-forward testing giúp kiểm tra nhưng không loại uncertainty.
+```text
+Setup
+Reason
+Risk
+Expected Outcome
+Actual Execution
+MAE / MFE
+Result
+Rule Violation
+Lesson
+```
 
-## 32. Psychology và process
+## 34. Psychology
 
-Fear thường là size problem. FOMO thường là missing-plan problem. Revenge trading là emotional response to loss.
+Tâm lý không thể sửa một strategy không có edge.
 
-Thay vì “cố kỷ luật”, thiết kế system: max trades/day, fixed risk, daily stop, news rules và condition không trade khi sleep deprived.
+Nhưng một strategy có edge vẫn có thể thất bại nếu trader:
 
-Tilt signs gồm tăng lot, entry sớm, bỏ stop và trade setup không tồn tại. Rule “hai violations → stop session” cụ thể hơn lời hứa bình tĩnh.
+- tăng size sau loss;
+- bỏ rule;
+- revenge trade;
+- stop quá sớm;
+- overtrade.
 
-Variance cần được chấp nhận trước. Profitable system 45% win vẫn có losing streak dài.
+## 35. Portfolio heat
 
-## 33. Xây trading system
+Nhiều trade riêng lẻ có thể cùng chịu một factor.
 
-System phải định nghĩa market, session, timeframe, context, setup, entry, stop, target, risk, news filter và no-trade conditions.
+Ví dụ long EUR/USD, long GBP/USD và long gold có thể cùng là short-USD exposure.
 
-Ví dụ XAUUSD: trade London và first two hours NY; H1 trend; M15 pullback zone; M5 sweep + structure shift; first retracement entry; stop beyond sweep; target 2R; risk 0,25%; không entry gần CPI/NFP/FOMC.
+Cần nhìn tổng risk, không chỉ risk/trade.
 
-Đây chưa phải profitable system, nhưng đủ objective để test.
+## 36. Kelly
 
-Sau backtest, record expectancy, drawdown và losing streak để biết expected pain trước live.
+Kelly criterion cho sizing tối ưu theo growth trong điều kiện giả định hoàn hảo.
 
-## 34. Execution quality
+Thực tế thường dùng fractional Kelly vì:
 
-Backtest thường assume perfect fills. Live có queue, spread, slippage và latency.
-
-Limit order kiểm price nhưng có fill risk/adverse selection. Momentum breakout đôi khi cần market/stop order vì missing trade cost lớn hơn small slippage.
-
-Stop-market ưu tiên exit; stop-limit có thể không fill trong gap.
-
-Scalping edge nhạy execution hơn swing. Live forward test bắt buộc nếu strategy margin nhỏ.
-
-## 35. Portfolio heat và correlation
-
-Long EUR/USD, GBP/USD và gold có thể cùng là short-USD bet. Ba trades 0,5% không phải ba independent risks.
-
-Portfolio heat là total open risk, nhưng correlation cần được xét. Highly correlated positions có effective risk gần tổng nominal risk.
-
-Nếu đã long Nasdaq và semiconductor ETF, long chip stock tăng concentration.
-
-Risk cap theo factor giúp tránh một macro surprise làm nhiều positions stop cùng lúc.
-
-## 36. Kelly criterion
-
-Kelly criterion tìm fraction tối đa long-run logarithmic growth khi probability và payoff known.
-
-Trading không biết probability chính xác và distributions thay đổi, nên full Kelly rất aggressive. Estimation error dễ dẫn overbetting.
-
-Fractional Kelly hoặc simple fixed risk thường thực tế hơn.
-
-Bài học chính: size phải liên hệ edge và uncertainty, không phải confidence cảm tính.
+- edge estimate không chắc;
+- distribution có fat tail;
+- drawdown tâm lý lớn.
 
 ## 37. Monte Carlo
 
-Cùng set 100 outcomes nhưng order khác tạo drawdown khác. Backtest equity curve chỉ là một sequence.
+Monte Carlo giúp kiểm tra nhiều thứ tự trade khác nhau để thấy drawdown distribution và risk of ruin.
 
-Monte Carlo reshuffle/simulate sequences để ước lượng range of drawdowns và losing streaks.
+Nó không sửa được sample kém chất lượng.
 
-Historical max streak 6 không nghĩa future không có 10. Sizing phải survive bad-but-plausible paths.
+## 38. MAE và MFE
 
-## 38. Profit Factor, Sharpe, Sortino và Calmar
+**Maximum Adverse Excursion (MAE)** đo mức đi ngược lớn nhất trước khi trade đóng.
 
-Profit Factor = gross profit / gross loss. >1 nghĩa sample gross positive trước uncertainty.
+**Maximum Favorable Excursion (MFE)** đo mức có lợi lớn nhất.
 
-Sharpe đo excess return per volatility nhưng penalize upside/downside như nhau. Sortino tập trung downside deviation. Calmar so annualized return với max drawdown.
+Hai metric giúp cải thiện stop và exit rule.
 
-Không optimize một metric. High Sharpe short-volatility strategy có thể giấu crash risk.
+## 39. Profit factor
 
-R-based expectancy và drawdown vẫn là language trực quan cho retail trader.
+```text
+Profit Factor
+= Gross Profit / Gross Loss
+```
 
-## 39. MAE/MFE
+Cần đọc cùng sample size, drawdown và cost.
 
-MAE là maximum adverse excursion; MFE maximum favorable excursion.
+## 40. Sharpe / Sortino / Calmar
 
-Nếu winners thường MAE <0,4R nhưng stop 1,2R, có thể nghiên cứu stop efficiency. Nếu trades thường đạt +2R rồi reverse trước target +3R, exit logic có thể cần review.
+Các ratio này mô tả return so với risk theo góc khác nhau nhưng không thay thế:
 
-Đừng optimize trực tiếp trên same sample rồi tin ngay. Candidate rule phải được out-of-sample test.
+- tail risk;
+- liquidity;
+- leverage;
+- operational risk.
 
-MAE/MFE giúp biến stop/target từ cảm giác thành data.
+## 41. Regime dependence
 
-## 40. Regime filter
+Một strategy có thể kiếm tiền chỉ trong một regime.
 
-Trend systems hoạt động tốt hơn directional regimes. Mean reversion tốt hơn stable ranges. Carry tốt hơn low-volatility risk-on. Breakout dễ fail trong chop.
+Cần biết edge phụ thuộc:
 
-Regime filter có thể dựa volatility, trend strength, macro event hoặc cross-asset condition.
+- trend;
+- volatility;
+- carry;
+- liquidity;
+- macro environment.
 
-Filter phải có simple rationale. 12 filters để loại mọi historical loss thường là overfit.
+## 42. Broker safety
 
-Hỏi: edge của strategy đến từ hiện tượng nào và khi nào hiện tượng đó biến mất?
+Trước khi quan tâm setup, cần hiểu broker legal entity, custody/margin rules và khả năng rút tiền.
 
-## 41. Broker safety
+## 43. Từ master map tới chapter chuyên sâu
 
-Với OTC Forex/CFD, broker risk là real risk. Kiểm legal entity, regulator, client-money segregation, margin-closeout, negative-balance policy, dispute mechanism và withdrawal terms.
+Đọc tiếp:
 
-Một brand có nhiều entities. Protection của offshore entity có thể khác entity regulated ở major jurisdiction.
+- [01_DERIVATIVES_FUTURES_OPTIONS_CFD.md](./01_DERIVATIVES_FUTURES_OPTIONS_CFD.md): hợp đồng phái sinh;
+- [02_SYSTEMATIC_RISK_BACKTEST_EXECUTION.md](./02_SYSTEMATIC_RISK_BACKTEST_EXECUTION.md): nghiên cứu hệ thống;
+- [03_EXECUTION_MICROSTRUCTURE_AND_TRADING_PORTFOLIO.md](./03_EXECUTION_MICROSTRUCTURE_AND_TRADING_PORTFOLIO.md): thực thi và microstructure;
+- [04_STRATEGY_RESEARCH_ROBUSTNESS_AND_PORTFOLIO_OF_STRATEGIES.md](./04_STRATEGY_RESEARCH_ROBUSTNESS_AND_PORTFOLIO_OF_STRATEGIES.md): robustness và portfolio of strategies;
+- [05_OPTIONS_VOLATILITY_SURFACE_GREEKS_AND_HEDGING.md](./05_OPTIONS_VOLATILITY_SURFACE_GREEKS_AND_HEDGING.md): options và volatility.
 
-Test withdrawal trước khi tăng deposit. Leverage cực cao, guaranteed return, managed account opaque hoặc yêu cầu gửi crypto tới ví cá nhân là red flags.
+## Kết luận
 
-Dùng 2FA và bảo vệ email/account credentials.
+Trading nên được xem là một hệ thống xác suất:
 
-## 42. Trading như một business
+```text
+Edge
+× Position Sizing
+× Execution Quality
+× Risk Control
+× Discipline
+```
 
-Net P/L phải trừ commission, spread, slippage, swap, data/platform costs và applicable tax.
-
-Opportunity cost của time cũng quan trọng. Strategy 3%/năm nhưng cần sáu giờ chart mỗi ngày có thể kém passive investing + career income.
-
-Capacity giới hạn scale. Small-cap scalp có thể không handle large capital; liquid futures có capacity khác.
-
-Review như business: phân biệt strategy error, execution error và variance. Không đổi model vì ba bad days.
-
-## 43. Lộ trình demo → live
-
-Giai đoạn một học mechanics: pair, pip, lot, margin, P/L và orders. Nếu chưa tự tính được risk, không live.
-
-Giai đoạn hai chọn một market và một setup. Backtest ít nhất một sample đủ lớn và nhiều regimes. Không sửa rule giữa sample để cứu results.
-
-Giai đoạn ba forward-test demo. Sau khi execution ổn, live với minimum size và risk nhỏ như 0,25–0,5% nếu phù hợp strategy.
-
-Vài chục live trades đầu dùng để validate execution, không phải làm giàu. Scale chỉ khi data live nằm trong range expected.
-
-Không trade bằng emergency fund, tiền thuê nhà hoặc debt. Tách investment account và trading account. Một trade lỗ không được biến thành investment chỉ vì không muốn accept loss.
-
-Trading tốt là process quản trị uncertainty, không phải tìm cách luôn đúng.
-
-## Nguồn nền tảng
-
-CFTC Retail Forex Advisory: https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/CustomerAdvisory_MustKnowForex.html
-
-FINRA Order Types: https://www.finra.org/investors/investing/investment-products/stocks/order-types
+Leverage không tạo lợi thế. Pattern không thay thế expectancy. Và một strategy chỉ đáng dùng khi nó sống sót sau chi phí, stress và sai số thực tế.
