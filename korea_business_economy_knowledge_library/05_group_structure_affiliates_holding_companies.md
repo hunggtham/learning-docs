@@ -1,107 +1,448 @@
-# Cấu trúc tập đoàn, affiliate và holding company (Group Structure / 지주회사·계열회사 구조)
+# Cấu trúc tập đoàn, affiliate và holding company tại Hàn Quốc (Group Structure / 지주회사·계열회사 구조)
 
-Khi nhìn sơ đồ tập đoàn Hàn Quốc, người mới thường thấy một mạng lưới mũi tên phức tạp và cố ghi nhớ từng công ty. Cách hiệu quả hơn là hiểu các “primitive” của cấu trúc: parent, subsidiary, affiliate, holding company, ownership percentage, voting rights và control.
+Khi nhìn sơ đồ tập đoàn Hàn Quốc, người mới thường thấy hàng chục legal entities và cố ghi nhớ tên. Cách hiệu quả hơn là coi group như một **graph**: node là pháp nhân, edge là ownership/control/transaction.
 
-## Parent, subsidiary, affiliate
+Mục tiêu không phải nhớ mọi công ty con. Mục tiêu là hiểu **quyền kiểm soát đi qua đâu, cash đi qua đâu, debt nằm ở đâu và shareholders nào thực sự chịu/nhận economic outcome**.
 
-**Công ty mẹ (Parent Company / 모회사)** là công ty kiểm soát một công ty khác. **Công ty con (Subsidiary / 자회사)** nằm dưới control của parent. Trong thực tế accounting, control thường liên quan voting rights và ability to direct relevant activities, không chỉ một threshold máy móc.
+## Brand/group khác legal entity
 
-**Công ty liên kết/affiliate (Affiliate / 계열회사·관계기업)** là từ rộng hơn. Trong ngữ cảnh chaebol, `계열사` thường chỉ các công ty cùng business group. Trong kế toán, `관계기업` có technical meaning gần associate nơi investor có significant influence nhưng không control hoàn toàn.
+“Samsung”, “Hyundai”, “SK” là group identity/brand umbrella.
 
-Do đó khi dịch “affiliate” sang tiếng Hàn phải nhìn context, không map cứng một-một.
+Samsung Electronics, Samsung C&T, Samsung Life… là separate legal entities.
 
-## Holding company
+Mỗi entity có:
 
-**Công ty holding (Holding Company / 지주회사)** sở hữu cổ phần các công ty khác để kiểm soát chúng. Nó khác operating company vì core purpose của holding company là ownership/control thay vì trực tiếp sản xuất sản phẩm chính.
+- board;
+- shareholders;
+- assets/liabilities;
+- contracts;
+- tax/accounting;
+- creditors.
 
-Sơ đồ đơn giản:
+Do đó group-level story không được phép thay entity-level analysis.
+
+## Parent, subsidiary, affiliate: terminology phải theo context
+
+### Parent / 모회사
+
+Entity kiểm soát company khác.
+
+### Subsidiary / 자회사
+
+Entity bị parent control.
+
+### Affiliate / 계열회사
+
+Trong chaebol/business-group context, `계열사` thường nghĩa companies cùng group.
+
+### Associate / 관계기업
+
+Trong accounting, `관계기업` thường có technical meaning là significant influence nhưng không control.
+
+Một English word “affiliate” có thể map khác tùy context. Không dịch máy móc.
+
+## Ownership percentage và control không phải cùng một biến
+
+Ownership tells economic stake.
+
+Control tells decision power.
+
+Suppose A owns 40% B, remaining shareholders dispersed. A may effectively control B.
+
+B owns 35% C and controls C.
+
+Indirect economic stake A→C via this chain:
+
+\[
+0.40\times0.35=14\%
+\]
+
+But control can still propagate through B.
+
+Therefore never infer control only by multiplying percentages.
+
+## Control under accounting
+
+Consolidation generally considers whether investor has:
+
+- power over relevant activities;
+- exposure/rights to variable returns;
+- ability to use power to affect returns.
+
+Thus >50% voting rights is common but not universal criterion.
+
+Read accounting policy and notes when boundary unclear.
+
+## Consolidated vs separate statements
+
+### Separate / 별도재무제표
+
+Shows parent legal entity itself.
+
+### Consolidated / 연결재무제표
+
+Shows parent + controlled subsidiaries as one accounting economic unit.
+
+Intercompany transactions are eliminated to avoid double counting.
+
+If Parent sells 100 to Subsidiary, consolidated group cannot count that as external revenue until goods/services leave consolidated perimeter.
+
+This is one of the most important accounting concepts in group analysis.
+
+## Consolidated group is not necessarily entire chaebol
+
+A business group may contain many companies not controlled by one listed parent.
+
+A listed affiliate’s consolidated statements include only its accounting-controlled subsidiaries, not every company carrying same group brand.
+
+This is why “Samsung Group revenue” cannot be obtained simply from one Samsung Electronics consolidated report.
+
+## NCI / 비지배지분
+
+Parent may control subsidiary without owning 100%.
+
+If Parent owns 70% Subsidiary, consolidated statements include 100% subsidiary assets/revenue/profit because control exists.
+
+But 30% economic claim belongs to outsiders and appears as **Non-Controlling Interests (NCI / 비지배지분)**.
+
+Therefore distinguish:
+
+```text
+Consolidated net income
+vs
+Net income attributable to owners of parent
+```
+
+## EBITDA valuation and NCI trap
+
+Suppose valuation uses 100% consolidated EBITDA but enterprise value ignores minority shareholders’ claim.
+
+That overstates economics available to parent shareholders.
+
+When material NCI exists, adjust valuation consistently.
+
+Same principle applies to subsidiaries listed separately.
+
+## Holding company / 지주회사
+
+A holding company primarily owns stakes in operating companies.
+
+Simple structure:
 
 ```mermaid
 graph TD
-    H[Holding Co / 지주회사] -->|60%| A[Electronics Co]
-    H -->|51%| B[Materials Co]
-    H -->|70%| C[Service Co]
-    A -->|35%| D[Overseas Subsidiary]
+    H[Holding Co / 지주회사] -->|60%| A[Electronics]
+    H -->|55%| B[Materials]
+    H -->|70%| C[Services]
+    A -->|80%| D[Overseas Subsidiary]
 ```
 
-Lợi ích là control chain dễ nhìn hơn và separation giữa businesses rõ hơn. Nhưng economic exposure của shareholder holding company không đơn giản bằng cộng market cap các subsidiaries. Có net debt ở holding, tax leakage, unlisted assets và **holding company discount / 지주회사 할인**.
+Holding layer handles ownership/capital allocation; operating subsidiaries sell products/services.
 
-## Consolidated vs separate financial statements
+## Pure vs operating holding company
 
-Đây là distinction cực quan trọng. **Báo cáo tài chính riêng (separate financial statements / 별도재무제표)** nhìn một legal entity. **Báo cáo hợp nhất (consolidated financial statements / 연결재무제표)** coi parent + subsidiaries được control như một economic group cho mục đích accounting.
+**Pure holding company:** mostly holds investments/stakes.
 
-Nếu Parent bán hàng cho Subsidiary, consolidated revenue không thể đơn giản cộng cả hai bên vì giao dịch nội bộ phải eliminated. Nếu không hiểu consolidation, người đọc dễ double count.
+**Operating holding company:** holds subsidiaries but also has significant own operations.
 
-## Minority interest
+This distinction matters because parent-level revenue/cash flow differs.
 
-Parent không cần sở hữu 100% subsidiary. Nếu sở hữu 60%, consolidated statements có thể bao gồm 100% assets/revenue của subsidiary vì parent controls nó, sau đó phần lợi ích thuộc cổ đông bên ngoài được thể hiện qua **non-controlling interests (NCI / 비지배지분)**.
+## Holding company discount
 
-Đây là lý do consolidated net income và “net income attributable to owners of parent” có thể khác nhau.
+Market value of holding company often trades below sum-of-parts value of stakes/assets.
 
-## Circular ownership và pyramids
+Potential reasons:
 
-Ownership chain kiểu `A → B → C` cho phép control mở rộng theo hình pyramid. Trong một số cấu trúc lịch sử, circular shareholding có thể làm control network phức tạp hơn. Hàn Quốc có regulation nhằm hạn chế cross-shareholding/circular arrangements trong các large business groups nhất định.
+- parent debt;
+- tax leakage;
+- capital-allocation uncertainty;
+- governance/control discount;
+- unlisted asset uncertainty;
+- double-layer overhead;
+- limited ability to upstream cash.
 
-Điểm cần giữ lại không phải sơ đồ lịch sử cụ thể mà là nguyên tắc: **economic control can travel through a chain**. Vì vậy cần nhân ownership percentages để ước lượng indirect economic interest nhưng phải phân tích voting/control riêng.
-
-Ví dụ, nếu A sở hữu 40% B và B sở hữu 30% C, indirect economic stake của A trong C qua chain này gần:
+A simple SOTP:
 
 \[
-0.40 \times 0.30 = 0.12 = 12\%
+Holding\ Equity\ Value \approx \sum Stake\ Values - Net\ Debt - Other\ Claims \pm Adjustments
 \]
 
-Nhưng 12% economic interest không tự động nghĩa chỉ có 12% control nếu B đã control C và A control B.
+Then market may apply discount/premium based on control/capital allocation.
 
-## Related-party transactions
+Do not assume discount is “free arbitrage”; it may reflect real frictions.
 
-Giao dịch với bên liên quan (Related-party Transaction / 특수관계자 거래) là nơi structure biến thành economics thực tế: group company mua dịch vụ từ một affiliate, cho vay, bảo lãnh, bán tài sản hoặc phân bổ business. Không phải mọi related-party transaction đều xấu; trong integrated group chúng có thể hợp lý. Câu hỏi là pricing, necessity, governance và lợi ích cho từng entity.
+## Cash location matters
 
-## Vì sao group cần nhiều pháp nhân?
+Group headline cash can be misleading.
 
-Tách business thành separate corporations giúp ring-fence liability, raise capital riêng, bring strategic partner vào một unit và đo performance theo business. Một battery subsidiary có capex/risk khác consumer-electronics parent; một finance company còn chịu regulatory capital riêng.
+Cash may sit in:
 
-Nhưng càng nhiều legal entities, group càng khó đọc. Economic reality và legal boundary không luôn trùng nhau.
+- regulated financial subsidiary;
+- overseas unit;
+- JV;
+- listed subsidiary with minority shareholders.
 
-## Holding company architecture
+Parent cannot necessarily use all of it freely.
 
-Pure holding company chủ yếu sở hữu stakes; operating holding company vừa hold stakes vừa có own operations. Korean holding-company regulation đặt conditions riêng, nên conversion thường là cả governance lẫn regulatory decision.
+Always ask **cash is at which node?**
 
-Mental model là tách **control layer** khỏi **operating layer**. Holding layer allocate capital và appoint boards; operating subsidiaries sell products/services.
+This is critical in liquidity analysis.
 
-## Consolidation boundary
+## Debt location matters equally
 
-Accounting consolidation không dựa duy nhất >50% shares. Control có thể tồn tại nếu entity có power over relevant activities, exposure to variable returns và ability use power to affect returns. Vì vậy analyst phải đọc accounting policy, not infer from stake alone.
+A subsidiary’s debt is legal obligation of that subsidiary unless guarantee/support structure connects it elsewhere.
 
-Associate thường dùng equity method khi có significant influence nhưng không control. Joint venture lại có joint control. Ba classification này làm revenue/profit presentation khác mạnh.
+But consolidated statements may show debt at group accounting level.
 
-## Minority interest / non-controlling interest
+Therefore distinguish:
 
-Nếu parent owns 70% subsidiary và consolidates 100% revenue/profit, 30% profit attributable to outsiders phải tách thành non-controlling interests (비지배지분). Vì vậy consolidated net income không luôn equal income attributable to parent shareholders.
+```text
+Consolidated leverage
+Parent standalone leverage
+Subsidiary leverage
+Guaranteed / non-guaranteed debt
+```
 
-Khi valuation, analyst cần tránh dùng 100% subsidiary EBITDA nhưng ignore value của minority holders.
+A holding company with low operating cash but high parent debt can be fragile even when subsidiaries profitable.
 
-## Cross-shareholding và circularity
+## Dividend upstream: how operating cash reaches parent
 
-Circular ownership A→B→C→A có thể amplify control và làm unwind khó. Korea đã restrict nhiều forms của circular shareholding, nhưng historical ownership chains vẫn quan trọng để hiểu groups.
+Holding/parent often receives cash via:
 
-Even without circle, pyramidal structure có thể create control leverage. Vẽ graph với percentages giúp thấy điều mà org chart marketing che mất.
+- dividends;
+- management/service fees;
+- asset sales;
+- intra-group loans where legal/permitted.
 
-## Related-party economics
+If subsidiary needs huge capex, dividend capacity may be limited.
 
-Affiliate transaction có thể efficient: logistics affiliate phục vụ toàn group tạo scale; IT affiliate standardize systems. Nhưng price phải gần arm's-length và procurement không nên khóa competitor bất hợp lý.
+Thus parent valuation depends not just subsidiary profit but **cash upstreamability**.
 
-DART disclosures về 특수관계자 거래, guarantees và intra-group balances là nơi analyst kiểm tra claim “synergy” có biến thành value transfer không.
+## Internal capital market
 
-## Spin-off: 인적분할 và 물적분할
+Group can allocate cash across affiliates through investments, dividends, loans and transactions.
 
-Korean corporate news thường dùng `인적분할` (spin-off where existing shareholders generally receive shares in separated company proportionally) và `물적분할` (parent retains shares of newly separated subsidiary). Economic consequence khác nhau, đặc biệt nếu subsidiary sau đó IPO.
+This can overcome external financing frictions and fund new businesses quickly.
 
-Minority shareholders quan tâm whether growth business bị moved into subsidiary and whether parent shareholders receive direct ownership. Đây là reason restructuring announcements có thể gây valuation reaction lớn.
+But it also creates agency risk if cash from high-return listed affiliate is redirected toward low-return group project against minority-shareholder interest.
+
+Internal capital market is neither inherently good nor bad; allocation quality matters.
+
+## Related-party transactions / 특수관계자 거래
+
+Related parties may trade goods/services, lend money, guarantee debt or transfer assets.
+
+These transactions can be efficient because of scale/coordination.
+
+But they can also transfer value between entities.
+
+Key questions:
+
+```text
+Why is transaction needed?
+Price arm's-length?
+Who benefits?
+Who bears risk?
+Could external supplier/customer offer better terms?
+```
+
+DART disclosures are essential.
+
+## Captive business: stable demand vs true competitiveness
+
+An IT/logistics/advertising affiliate may earn large share of revenue from group companies.
+
+Captive demand gives stability and scale.
+
+But analyst should distinguish:
+
+- internal guaranteed-like demand;
+- external-market competitiveness.
+
+If external share grows with healthy margins, capability may be genuinely competitive beyond group.
+
+If almost all revenue captive, growth depends group allocation decisions.
+
+## Pyramidal ownership
+
+A controls B, B controls C, C controls D.
+
+Controller can influence lower-layer assets with limited direct economic ownership.
+
+This creates **control leverage**.
+
+The deeper pyramid, the more important minority-shareholder conflicts can become.
+
+## Cross-shareholding and circular ownership
+
+Historical groups sometimes had structures like:
+
+```text
+A → B → C → A
+```
+
+Circular ownership can reinforce control and make unwinding complex.
+
+Korea has restrictions on many forms of circular/cross-shareholding in large groups, but historical paths remain useful for understanding current control architecture.
+
+Main lesson: graph matters more than org-chart boxes.
+
+## Treasury shares and control
+
+Treasury shares usually lack voting rights while held by company, but restructuring/cancellation/disposal can affect ownership percentages and control dynamics.
+
+Therefore large treasury-share position can be relevant in governance analysis.
+
+## Spin-offs: 인적분할 vs 물적분할
+
+Korean corporate news frequently uses these terms.
+
+### 인적분할
+
+Existing shareholders generally receive shares in separated company proportionally, subject to transaction structure.
+
+Economic ownership is split more directly among existing shareholders.
+
+### 물적분할
+
+Parent creates subsidiary and retains shares of new entity.
+
+Existing parent shareholders own new business indirectly through parent.
+
+If growth subsidiary later IPOs, parent shareholders may worry about dilution/value distribution.
+
+Thus spin-off type has real governance/valuation implications.
+
+## Why companies spin off?
+
+Possible rationales:
+
+- separate risk;
+- attract strategic investor;
+- raise capital;
+- clarify business focus;
+- facilitate IPO/M&A;
+- reorganize control.
+
+“Focus/synergy” in press release is not enough. Need map before/after ownership and cash flow.
+
+## Merger economics
+
+Merger can create operational synergy but exchange ratio determines how value is split among shareholder groups.
+
+Two distinct questions:
+
+1. Does merger create total value?
+2. Is that value distributed fairly between shareholders?
+
+A deal can have positive synergy but controversial exchange ratio.
+
+## JV / 합작회사
+
+Joint venture allows partners share capital, technology and market access.
+
+But governance requires agreement on:
+
+- board/control;
+- funding obligations;
+- IP;
+- exit;
+- deadlock.
+
+JV may not be fully consolidated if control is joint.
+
+Battery industry uses JVs extensively; accounting/economic exposure can therefore differ from headline “capacity”.
+
+## Associate / equity method
+
+If investor has significant influence but not control, investment may use **equity method / 지분법**.
+
+Investor recognizes share of associate profit rather than consolidating 100% revenue/assets.
+
+Thus company with large associate stakes can have material profit with no corresponding consolidated revenue.
+
+## Guarantees connect supposedly separate entities
+
+Legal ring-fencing weakens if parent/affiliate guarantees subsidiary debt.
+
+Therefore group structure analysis must include **credit edges**, not only ownership edges.
+
+Graph types:
+
+```text
+Ownership edge
+Control edge
+Loan edge
+Guarantee edge
+Sales/purchase edge
+Management/personnel edge
+```
+
+A complete group map can overlay several edges.
+
+## Financial affiliates require special caution
+
+Bank/insurance/securities subsidiaries face regulatory capital and restrictions.
+
+Their cash/equity is not freely transferable like ordinary industrial subsidiary.
+
+Mixing financial and industrial entities at group level can obscure leverage.
+
+## Group-level ROIC vs entity-level ROIC
+
+A group may have one cash cow and several low-return projects.
+
+Consolidated return shows aggregate, but minority shareholders of cash-cow affiliate care about their entity-specific allocation.
+
+Thus always analyze both:
+
+```text
+Group capital allocation
+and
+Entity shareholder economics
+```
+
+## Practical graph-reading workflow
+
+1. Identify controller/`동일인` if relevant.
+2. List major listed/unlisted affiliates.
+3. Draw ownership percentages.
+4. Mark which entities are consolidated/associates.
+5. Mark debt/guarantees.
+6. Mark major related-party sales/purchases.
+7. Identify cash-generating nodes.
+8. Identify capex-hungry nodes.
+9. Map restructuring/spin-off/IPO plans.
+10. Recalculate economic ownership before/after transactions.
+
+This converts a complex chart into understandable system.
 
 ## Mental Model
 
-> Đọc group structure như đọc graph trong Computer Science: **node = legal entity, edge = ownership/control/transaction relationship**. Muốn hiểu group, đừng chỉ nhìn node nổi tiếng; hãy xác định edge nào mang quyền kiểm soát và edge nào mang dòng tiền.
+> Đọc Korean group như graph trong Computer Science: **node = legal entity; edge = ownership/control/cash/guarantee/transaction**. Economic reality lies in edges, not brand names.
+
+```text
+Who controls?
+Where is cash?
+Where is debt?
+Who owns minority claims?
+How does value move between nodes?
+```
+
+## Common misconceptions
+
+**“Parent owns 40%, so cannot control.”** Not necessarily.
+
+**“Consolidated statements = whole chaebol.”** Sai.
+
+**“Group cash is freely available to parent.”** Sai.
+
+**“Related-party transaction is automatically bad.”** No; test rationale/pricing.
+
+**“Spin-off creates/destroys value automatically.”** Structure and later actions matter.
+
+**“Same group means automatic debt guarantee.”** Sai; read legal commitment.
 
 ## Connections
 
-[08_corporate_governance_ownership_and_control](./08_corporate_governance_ownership_and_control.md) đi sâu agency problem; [09_disclosure_accounting_dart_kind](./09_disclosure_accounting_dart_kind.md) chỉ nơi tìm ownership và related-party data; [19_major_groups_case_studies](./19_major_groups_case_studies.md) áp dụng mental model vào các group cụ thể.
+Đọc cùng [`03_company_forms_and_size_classes.md`](./03_company_forms_and_size_classes.md), [`04_chaebol_and_large_business_groups.md`](./04_chaebol_and_large_business_groups.md), [`08_corporate_governance_ownership_and_control.md`](./08_corporate_governance_ownership_and_control.md), [`09_disclosure_accounting_dart_kind.md`](./09_disclosure_accounting_dart_kind.md), [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md) và [`19_major_groups_case_studies.md`](./19_major_groups_case_studies.md).
