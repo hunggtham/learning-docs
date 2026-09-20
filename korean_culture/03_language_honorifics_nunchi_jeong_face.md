@@ -150,11 +150,171 @@ Dịch và bản địa hoá Hàn–Việt/Anh thường khó không phải vì 
 
 `잘 부탁드립니다` không có một câu tiếng Anh duy nhất tương đương. Tuỳ bối cảnh, nó có thể gần với “mong được giúp đỡ”, “mong hợp tác tốt”, “nhờ anh/chị hỗ trợ việc này”. Dịch tốt phải giữ **hành vi ngôn ngữ (speech act)**, không chỉ nghĩa từ điển.
 
-## Mô hình tư duy (Mental Model)
+## Chủ ngữ bị lược bỏ: hiệu quả khi cùng bối cảnh, nguy hiểm khi bàn giao công việc
 
-> Tiếng Hàn không chỉ truyền “nội dung”; nó truyền luôn một phần cấu trúc quan hệ. Kính ngữ mã hoá vai trò, cách nói giảm nhẹ quản lý nguy cơ làm mất mặt, `눈치` giải mã bối cảnh, `정` là lịch sử tích luỹ trong quan hệ, còn `체면` là ràng buộc đối với cách xử lý thông tin nhạy cảm. Cùng một câu đúng về logic có thể vẫn sai về giao thức xã hội.
+Tiếng Hàn thường lược bỏ chủ ngữ, tân ngữ hoặc thông tin đã rõ từ bối cảnh. Trong hội thoại hằng ngày, điều này làm câu gọn và tự nhiên. Nhưng trong môi trường công việc nhiều người, cùng cơ chế có thể tạo **mơ hồ tác nhân (agent ambiguity)**.
 
-## Hiểu lầm phổ biến (Common Misconceptions)
+Ví dụ một câu như `확인 후 수정하겠습니다` có thể rõ với người trong cuộc nhưng người ngoài luồng có thể chưa biết “ai kiểm tra?”, “ai sửa?” và “sửa cái gì?”. Nếu nhóm có nhiều công ty hoặc nhiều ngôn ngữ, bối cảnh chung càng ít.
+
+Một giao thức tốt là tăng độ tường minh theo rủi ro:
+
+```text
+việc nhỏ, người nghe rõ bối cảnh
+→ có thể lược bớt
+
+việc liên nhóm / có deadline / có ảnh hưởng production
+→ ghi rõ người phụ trách + đối tượng + thời hạn + trạng thái
+```
+
+Đây không phải vấn đề “tiếng Hàn thiếu rõ ràng”. Mọi ngôn ngữ đều có cách dựa vào bối cảnh; chỉ là chi phí của mơ hồ tăng khi mạng cộng tác lớn hơn.
+
+## Nói lịch sự và cam kết công việc là hai chiều khác nhau
+
+Người học dễ gộp **mức lịch sự** với **mức cam kết**. Nhưng một câu có thể rất lịch sự mà cam kết thấp, hoặc khá ngắn mà cam kết cao.
+
+```text
+네, 확인해 보겠습니다.
+→ lịch sự + xác nhận sẽ kiểm tra
+→ chưa nói thời điểm xong
+
+오늘 4시까지 수정해서 공유드리겠습니다.
+→ cam kết đầu ra + thời hạn rõ
+```
+
+Do đó khi quản lý công việc, cần tách bốn trạng thái:
+
+```text
+đã nghe
+≠ đã hiểu
+≠ đã đồng ý
+≠ đã cam kết hoàn thành
+```
+
+Nhiều hiểu lầm liên văn hoá xảy ra vì một bên nghe `네` và suy thành “đã đồng ý làm”, trong khi bên kia chỉ định nghĩa nó là “đã nhận thông tin”.
+
+## Giao tiếp vòng kín: xác nhận không chỉ bằng `네`
+
+Trong hệ thống có rủi ro cao, **giao tiếp vòng kín (closed-loop communication)** giúp giảm sai lệch. Người nhận không chỉ nói “đã hiểu” mà nhắc lại đầu ra quan trọng bằng lời của mình.
+
+Ví dụ:
+
+```text
+A: 오늘 5시까지 테스트 결과 정리 부탁드립니다.
+B: 네. 5시까지 실패 케이스 포함해서 결과 정리 후 공유드리겠습니다.
+```
+
+Phản hồi của B xác nhận ba thứ: thời hạn, phạm vi và hành động tiếp theo. Nếu B hiểu sai, A có cơ hội sửa ngay.
+
+Trong nhóm Hàn–Việt hoặc nhóm có người mới, kỹ thuật này thường tốt hơn yêu cầu mọi người “có 눈치 hơn”. Nó chuyển một phần kiến thức ngầm thành dữ liệu kiểm tra được.
+
+## Nhật ký quyết định: nói xong chưa chắc hệ thống đã có cùng một sự thật
+
+Cuộc họp tạo **ký ức ngắn hạn của nhóm**, nhưng sau vài giờ mỗi người có thể nhớ khác nhau. Vì vậy những nhóm làm việc tốt thường biến quyết định quan trọng thành văn bản: biên bản, ticket, email, tài liệu hoặc tin ghim.
+
+Có thể tách:
+
+```text
+thảo luận = không gian tạo phương án
+quyết định = phương án đã được chọn
+hành động = ai làm gì, khi nào
+bằng chứng hoàn thành = kết quả được kiểm tra bằng gì
+```
+
+Nếu chỉ có hội thoại mà không có lớp lưu trữ, nhóm phụ thuộc quá nhiều vào trí nhớ và thứ bậc. Người mới hoặc người nói ngôn ngữ thứ hai dễ chịu bất lợi nhất.
+
+## Nhóm Hàn–Việt–Anh: lỗi thường nằm ở lớp chuyển nghĩa chứ không chỉ từ vựng
+
+Trong nhóm đa ngôn ngữ, một thông điệp có thể đi qua nhiều bước:
+
+```text
+ý định bằng tiếng Hàn
+→ câu tiếng Hàn thực tế
+→ người trung gian hiểu
+→ chuyển sang tiếng Việt/Anh
+→ người nhận diễn giải theo văn hoá công việc của mình
+```
+
+Mỗi bước có thể làm mất thông tin. Đặc biệt dễ mất ba lớp:
+
+**Mức bắt buộc.** `검토 부탁드립니다` có thể là yêu cầu xã giao hay việc thực sự phải hoàn thành sớm, tuỳ bối cảnh.
+
+**Chủ thể.** Chủ ngữ bị lược bỏ khiến người dịch phải tự suy ai chịu trách nhiệm.
+
+**Trạng thái quyết định.** `그렇게 하면 될 것 같습니다` có thể được hiểu là gợi ý, đồng ý có điều kiện hoặc gần như quyết định tuỳ cuộc họp.
+
+Vì vậy dịch công việc tốt không chỉ hỏi “câu này nghĩa gì?” mà còn hỏi “câu này đang thực hiện hành động tổ chức nào?”.
+
+## Dịch kỹ thuật: giữ thuật ngữ nhất quán quan trọng hơn dịch đẹp từng câu
+
+Trong dự án phần mềm, nhiều lỗi không đến từ ngữ pháp mà từ **trôi thuật ngữ (terminology drift)**. Cùng một đối tượng có thể bị gọi bằng ba tên khác nhau giữa màn hình, API và tài liệu.
+
+Nhóm đa ngôn ngữ nên giữ bảng ánh xạ ổn định, ví dụ:
+
+```text
+검수 = nghiệm thu / kiểm tra chấp nhận
+승인 = phê duyệt
+반려 = trả lại / từ chối để sửa
+장애 = sự cố hệ thống
+오픈 = đưa hệ thống/chức năng vào vận hành
+```
+
+Không phải lúc nào cũng có một bản dịch duy nhất. Điều quan trọng là trong cùng dự án, một khái niệm cốt lõi không nên đổi tên tuỳ người dịch.
+
+Đây là cùng bài toán với thiết kế API: tên ổn định giảm tải nhận thức.
+
+## Tiếng Anh trong công sở Hàn: từ vay mượn không luôn giữ nghĩa gốc
+
+Môi trường Hàn Quốc dùng nhiều từ vay mượn hoặc từ viết tắt có nguồn gốc tiếng Anh, đặc biệt trong IT, marketing và doanh nghiệp. Nhưng nghĩa sử dụng tại Hàn có thể hẹp hơn, rộng hơn hoặc khác sắc thái so với tiếng Anh bản ngữ.
+
+Ví dụ `컨펌` thường gần “xác nhận/phê duyệt”, `미팅` có thể chỉ nhiều loại cuộc gặp, `오픈` có thể chỉ đưa dịch vụ vào vận hành, `스펙` trong tuyển dụng mang nghĩa bộ tín hiệu hồ sơ. Vì vậy nghe một từ “giống tiếng Anh” không bảo đảm người học đã hiểu đúng cách dùng Hàn.
+
+Có thể xem đây là **từ vựng bản địa hoá (localized loanword)**: nguồn gốc ngoại ngữ nhưng quy tắc sử dụng nằm trong cộng đồng nói tiếng Hàn.
+
+## Phản biện hướng lên: kính trọng không đồng nghĩa im lặng
+
+Trong tổ chức có thứ bậc, việc chỉ ra lỗi của cấp trên hoặc bác một phương án có chi phí xã hội cao hơn. Người nói phải quản lý cả nội dung và thể diện. Vì vậy phản biện thường hiệu quả hơn khi chuyển từ “anh sai” sang **bằng chứng + rủi ro + phương án thay thế**.
+
+Ví dụ:
+
+```text
+현재 로그 기준으로는 A 방식에서 오류 가능성이 있어 보입니다.
+B 방식으로 변경하면 이 부분은 줄일 수 있을 것 같습니다.
+한번 같이 확인해 보시면 좋을 것 같습니다.
+```
+
+Cách nói mềm không làm bằng chứng yếu đi. Nó tách **phản biện ý tưởng** khỏi **đe doạ vị thế người đưa ý tưởng**.
+
+Tuy nhiên nếu tổ chức phạt mọi bất đồng dù người nói đã trình bày có bằng chứng, vấn đề không còn là kỹ năng ngôn ngữ. Đó là cấu trúc quyền lực. Không nên yêu cầu nhân viên “nói khéo hơn” để che một thiết chế không cho phép phản hồi.
+
+## Khi nào nên dùng 눈치, khi nào phải hỏi thẳng?
+
+Một quy tắc thực dụng là nhìn hai biến: **mức rủi ro nếu hiểu sai** và **mức bối cảnh chung**.
+
+```text
+bối cảnh chung cao + rủi ro thấp
+→ có thể dựa nhiều vào 눈치
+
+bối cảnh chung thấp + rủi ro cao
+→ cần hỏi lại và ghi rõ
+```
+
+Ví dụ chọn món ăn khi đi cùng đồng nghiệp quen có thể dựa nhiều vào tín hiệu. Nhưng tiêu chí nghiệm thu, ngày phát hành, thay đổi DB hoặc trách nhiệm xử lý sự cố phải được xác nhận tường minh.
+
+Đây là cách biến “ngữ cảnh cao” từ nhãn văn hoá thành quyết định kỹ thuật về truyền thông.
+
+## Ngôn ngữ số trong nhóm công việc: dấu câu, phản ứng và tốc độ trở thành siêu dữ liệu
+
+Trong phòng chat công việc, nội dung không phải toàn bộ thông điệp. Thời gian phản hồi, biểu tượng phản ứng, việc @mention, gửi vào nhóm hay nhắn riêng đều tạo **siêu dữ liệu quan hệ**.
+
+Một `넵!` có thể làm yêu cầu nghe nhẹ hơn; một câu rất ngắn không biểu tượng có thể bị cảm nhận lạnh hơn dù nội dung giống nhau. Nhưng giải thích sắc thái này luôn cần bối cảnh cá nhân. Người bận hoặc người có phong cách viết ngắn không tự động khó chịu.
+
+Vì vậy trong nhóm đa văn hoá, đừng dùng sắc thái chat làm bằng chứng duy nhất về cảm xúc. Nếu vấn đề quan trọng, chuyển từ suy đoán sang xác nhận.
+
+## Mô hình tư duy
+
+> Tiếng Hàn không chỉ truyền “nội dung”; nó truyền luôn một phần cấu trúc quan hệ. Kính ngữ mã hoá vai trò, cách nói giảm nhẹ quản lý nguy cơ làm mất mặt, `눈치` giải mã bối cảnh, `정` là lịch sử tích luỹ trong quan hệ, còn `체면` là ràng buộc đối với cách xử lý thông tin nhạy cảm. Trong nhóm đa ngôn ngữ, cần thêm một lớp nữa: **quản lý độ mơ hồ**. Cùng một câu đúng về logic có thể vẫn sai về giao thức xã hội, còn một câu rất lịch sự vẫn có thể thiếu chủ thể, thời hạn hoặc tiêu chí hoàn thành.
+
+## Những hiểu lầm phổ biến
 
 `눈치` không đồng nghĩa với sợ hãi hay phục tùng. Một người có 눈치 tốt có thể nhận ra chính xác lúc cần phản biện.
 
@@ -165,3 +325,13 @@ Dịch và bản địa hoá Hàn–Việt/Anh thường khó không phải vì 
 `네` không luôn có nghĩa “đồng ý”. Nhiều khi nó chỉ là phản hồi xác nhận đã nghe.
 
 “Người Hàn không nói thẳng” cũng quá đơn giản. Mức trực tiếp thay đổi mạnh theo thế hệ, vùng, công ty, lĩnh vực và mức độ rủi ro của vấn đề.
+
+“Nhóm đa văn hoá chỉ cần dịch đúng từ là đủ” là sai. Mức bắt buộc, chủ thể, thời hạn, quan hệ quyền lực và trạng thái quyết định đều có thể bị mất dù từ vựng được dịch chính xác.
+
+“Câu càng lịch sự thì cam kết càng chắc” không đúng. Lịch sự và cam kết là hai chiều riêng.
+
+“Người nước ngoài nên học cách đoán ý thay vì hỏi lại” có thể gây hại trong công việc rủi ro cao. Khi hậu quả hiểu sai lớn, xác nhận rõ là kỹ năng chuyên nghiệp chứ không phải thiếu `눈치`.
+
+## Đọc tiếp
+
+Đọc cùng [`06_workplace_organization_hoesik.md`](06_workplace_organization_hoesik.md), [`18_daily_etiquette_gifts_relationships.md`](18_daily_etiquette_gifts_relationships.md), [`22_names_age_identity_social_metadata.md`](22_names_age_identity_social_metadata.md), [`27_internet_communities_messaging_slang_memes.md`](27_internet_communities_messaging_slang_memes.md) và [`30_school_university_youth_campus_culture.md`](30_school_university_youth_campus_culture.md) để nối ngôn ngữ với quyền lực, danh tính, nhắn tin và tổ chức.
