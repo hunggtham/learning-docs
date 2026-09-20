@@ -1,685 +1,683 @@
 # Phân tích sâu các ngành tại Hàn Quốc và Việt Nam
 
-> Mục tiêu của chương này là giúp người đọc hiểu **động cơ kinh tế (economic engine)** của từng ngành thay vì chỉ nhớ ticker. Với mỗi ngành, hãy đi theo chuỗi: **nhu cầu → nguồn cung → giá → công suất → chi phí → vốn lưu động → capex → bảng cân đối → định giá → độ nhạy vĩ mô**.
+> Mục tiêu của chương này là giúp người đọc hiểu **động cơ kinh tế (economic engine)** của từng ngành thay vì chỉ nhớ mã cổ phiếu. Với mỗi ngành, hãy đi theo chuỗi: **nhu cầu → nguồn cung → giá → công suất → chi phí → vốn lưu động → chi tiêu vốn → bảng cân đối → định giá → độ nhạy vĩ mô**. Phần giải thích dùng tiếng Việt; tên KPI và thuật ngữ ngành quốc tế được giữ khi chúng là chuẩn thực tế.
 
 # Phần I — Hàn Quốc
 
-## 1. Memory semiconductor và HBM
+## 1. Bán dẫn bộ nhớ và HBM
 
 Các biến chính:
 
 ```text
-End Demand
-→ Inventory
-→ Bit Growth
+Nhu cầu cuối
+→ Tồn kho
+→ Tăng trưởng bit
 → ASP
-→ Utilization
-→ Product Mix / HBM
-→ Gross Margin
-→ Capex
+→ Tỷ lệ sử dụng công suất
+→ Cơ cấu sản phẩm / HBM
+→ Biên gộp
+→ Chi tiêu vốn
 ```
 
-HBM cần thêm qualification, yield, packaging capacity và customer concentration.
+HBM cần xem thêm quá trình xác nhận của khách hàng, tỷ lệ thành phẩm, công suất đóng gói và mức tập trung khách hàng.
 
-Định giá nên dùng normalized earnings và cycle stage; P/E thấp ở đỉnh lợi nhuận có thể là bẫy.
+Định giá nên dùng lợi nhuận chuẩn hóa và xác định giai đoạn chu kỳ; P/E thấp ở đỉnh lợi nhuận có thể là bẫy.
 
 ## 2. Foundry
 
-Foundry phụ thuộc:
+Mảng foundry phụ thuộc:
 
-- node competitiveness;
-- yield;
-- utilization;
-- customer concentration;
-- capex;
-- advanced packaging.
+- năng lực công nghệ tiến trình;
+- tỷ lệ thành phẩm;
+- tỷ lệ sử dụng công suất;
+- mức tập trung khách hàng;
+- chi tiêu vốn;
+- đóng gói tiên tiến.
 
-Tên node tiên tiến không đủ; economic value phụ thuộc hiệu suất và sản lượng đạt chuẩn.
+Tên node tiên tiến không đủ để chứng minh lợi thế kinh tế; giá trị còn phụ thuộc hiệu suất, sản lượng đạt chuẩn và mức sử dụng thật.
 
-## 3. Semiconductor equipment
+## 3. Thiết bị bán dẫn
 
-Doanh thu thường dẫn theo capex của producer.
+Doanh thu thường đi trước theo kế hoạch chi tiêu vốn của nhà sản xuất.
 
 Theo dõi:
 
-- order intake;
-- backlog;
-- technology transition;
-- process intensity;
-- customer concentration.
+- lượng đơn hàng mới;
+- sổ đơn hàng;
+- chuyển đổi công nghệ;
+- số bước quy trình cần thiết;
+- mức tập trung khách hàng.
 
-Equipment có thể hưởng lợi trước khi wafer volume thực sự tăng.
+Thiết bị có thể hưởng lợi trước khi sản lượng wafer thực sự tăng.
 
-## 4. Semiconductor materials
+## 4. Vật liệu bán dẫn
 
-Materials/chemicals thường gần với wafer starts và utilization hơn capex.
+Vật liệu và hóa chất thường gắn với số wafer đưa vào sản xuất và tỷ lệ sử dụng công suất hơn là chi tiêu vốn mới.
 
-Các rủi ro chính là qualification dependency, input cost và concentration.
+Các rủi ro chính gồm phụ thuộc quy trình xác nhận, giá đầu vào và tập trung khách hàng.
 
-## 5. Autos
+## 5. Ô tô
 
-Driver tree:
+Cây động lực:
 
 ```text
-Global Unit Demand
-→ Mix
-→ Pricing / Incentives
-→ FX
-→ Material Cost
-→ Operating Margin
+Nhu cầu xe toàn cầu
+→ Cơ cấu sản phẩm
+→ Giá bán / ưu đãi
+→ Tỷ giá
+→ Chi phí vật liệu
+→ Biên hoạt động
 ```
 
-Cần theo dõi inventory tại dealer, warranty, financing và regional mix.
+Cần theo dõi tồn kho đại lý, chi phí bảo hành, điều kiện tài trợ và cơ cấu khu vực.
 
-## 6. EV
+## 6. Xe điện
 
-EV economics phụ thuộc:
+Kinh tế xe điện phụ thuộc:
 
-- battery cost;
-- subsidies;
-- charging infrastructure;
-- consumer adoption;
-- residual value;
-- competition.
+- chi phí pin;
+- trợ cấp;
+- hạ tầng sạc;
+- tốc độ chấp nhận của người dùng;
+- giá trị xe cũ;
+- cạnh tranh.
 
-Unit growth cao không đảm bảo margin tốt nếu price war mạnh.
+Sản lượng tăng cao không bảo đảm biên lợi nhuận tốt nếu chiến tranh giá mạnh.
 
-## 7. Batteries
+## 7. Pin
 
-Chuỗi:
+Chuỗi giá trị:
 
 ```text
-Raw Materials
+Nguyên liệu
 → Cathode / Anode / Separator
 → Cell
 → Pack
 → EV / ESS
 ```
 
-Các KPI quan trọng:
+Các KPI quan trọng gồm:
 
-- utilization;
-- contracted volume;
-- raw-material pass-through;
-- yield;
-- customer concentration;
-- capacity expansion.
+- tỷ lệ sử dụng công suất;
+- sản lượng theo hợp đồng;
+- khả năng chuyển giá nguyên liệu;
+- tỷ lệ thành phẩm;
+- mức tập trung khách hàng;
+- tốc độ mở rộng công suất.
 
-Overcapacity là rủi ro lớn dù long-term EV demand tăng.
+Dư công suất là rủi ro lớn ngay cả khi nhu cầu xe điện dài hạn vẫn tăng.
 
-## 8. Shipbuilding
+## 8. Đóng tàu
 
 Theo dõi:
 
-- orderbook;
-- newbuild price;
-- steel cost;
-- labor cost;
-- FX;
-- delivery schedule;
-- vessel mix.
+- sổ đơn hàng;
+- giá tàu mới;
+- chi phí thép;
+- chi phí lao động;
+- tỷ giá;
+- lịch giao hàng;
+- cơ cấu loại tàu.
 
-Backlog cao có thể chứa contract margin thấp nếu ký ở giai đoạn giá kém.
+Sổ đơn hàng lớn có thể chứa nhiều hợp đồng biên lợi nhuận thấp nếu được ký ở giai đoạn giá kém.
 
-## 9. Defense / industrials
+## 9. Quốc phòng và công nghiệp
 
 Các biến chính:
 
-- government budget;
-- export contract;
-- backlog;
-- working capital;
-- production capacity;
-- delivery milestone.
+- ngân sách chính phủ;
+- hợp đồng xuất khẩu;
+- sổ đơn hàng;
+- vốn lưu động;
+- công suất sản xuất;
+- cột mốc giao hàng.
 
-Order lớn không đồng nghĩa cash flow đến ngay.
+Đơn hàng lớn không đồng nghĩa dòng tiền đến ngay.
 
-## 10. Banks
+## 10. Ngân hàng
 
-KPI:
+Các KPI chính:
 
 ```text
-Loan Growth
+Tăng trưởng tín dụng
 NIM
 CASA
 NPL
-Credit Cost
+Chi phí tín dụng
 CET1
-Shareholder Return
+Hoàn vốn cho cổ đông
 ```
 
-P/B phải đọc cùng sustainable ROE và asset quality.
+P/B phải đọc cùng ROE bền vững và chất lượng tài sản.
 
-## 11. Insurance
+## 11. Bảo hiểm
 
 Theo dõi:
 
-- underwriting;
-- asset-liability duration;
-- long yields;
-- capital ratio;
-- reserve adequacy.
+- chất lượng bảo hiểm gốc;
+- khớp kỳ hạn tài sản–nghĩa vụ;
+- lãi suất dài hạn;
+- tỷ lệ vốn;
+- mức đầy đủ của dự phòng.
 
-## 12. Securities firms
+## 12. Công ty chứng khoán
 
 Nhạy với:
 
-- turnover;
-- margin lending;
-- proprietary book;
-- IB;
-- PF exposure;
-- funding cost.
+- giá trị giao dịch;
+- cho vay ký quỹ;
+- danh mục tự doanh;
+- ngân hàng đầu tư;
+- mức phơi nhiễm PF;
+- chi phí nguồn vốn.
 
-## 13. Internet platforms
+## 13. Nền tảng internet
 
-Driver:
+Các động lực gồm:
 
-- MAU/DAU hoặc engagement;
-- ad pricing;
-- commerce GMV;
-- take rate;
-- payment monetization;
-- regulation.
+- MAU/DAU hoặc mức độ tương tác;
+- giá quảng cáo;
+- tổng giá trị hàng hóa giao dịch;
+- tỷ lệ thu phí;
+- khả năng kiếm tiền từ thanh toán;
+- quy định.
 
-Network effect phải được chứng minh bằng retention và economics, không chỉ user count.
+Hiệu ứng mạng phải được chứng minh bằng khả năng giữ người dùng và kinh tế đơn vị, không chỉ số lượng tài khoản.
 
-## 14. Gaming
+## 14. Trò chơi
 
 Theo dõi:
 
-- game pipeline;
-- user retention;
+- danh mục trò chơi mới;
+- tỷ lệ giữ người dùng;
 - ARPU;
-- monetization;
-- development cost;
-- overseas approvals.
+- khả năng kiếm tiền;
+- chi phí phát triển;
+- phê duyệt ở nước ngoài.
 
-Một hit title có thể tạo earnings tập trung cao nên cần pipeline diversification.
+Một trò chơi thành công có thể làm lợi nhuận tập trung quá lớn, nên cần xem độ đa dạng của danh mục sản phẩm.
 
-## 15. Biotech / pharma
+## 15. Công nghệ sinh học và dược phẩm
 
-Biotech giai đoạn sớm cần:
+Công nghệ sinh học giai đoạn sớm cần:
 
-- clinical milestone;
-- probability of success;
-- cash runway;
-- dilution;
-- licensing economics.
+- cột mốc thử nghiệm lâm sàng;
+- xác suất thành công;
+- thời gian tiền mặt còn đủ sử dụng;
+- rủi ro pha loãng;
+- kinh tế của hợp đồng cấp phép.
 
-Pharma trưởng thành cần thêm patent expiry và pipeline replacement.
+Doanh nghiệp dược trưởng thành cần xem thêm thời điểm hết bằng sáng chế và khả năng thay thế sản phẩm trong danh mục.
 
-## 16. Construction
+## 16. Xây dựng
 
-Các rủi ro:
+Các rủi ro gồm:
 
-- housing cycle;
+- chu kỳ nhà ở;
 - PF;
-- cost overrun;
-- presales;
-- overseas project;
-- guarantee.
+- vượt chi phí;
+- bán trước;
+- dự án nước ngoài;
+- bảo lãnh.
 
-CFO và contract asset thường quan trọng ngang reported profit.
+Dòng tiền hoạt động và tài sản hợp đồng thường quan trọng ngang lợi nhuận báo cáo.
 
-## 17. Refining
-
-KPI:
-
-- crack spread;
-- utilization;
-- turnaround;
-- crude differential;
-- inventory effect.
-
-Oil price tăng không tự động tốt cho refiner; spread mới là driver chính hơn.
-
-## 18. Petrochemicals
-
-Theo dõi product-feedstock spread, China capacity, utilization và inventory.
-
-Dư cung kéo dài có thể làm margin thấp dù demand tăng.
-
-## 19. Utilities / power
-
-Các biến:
-
-- tariff;
-- fuel cost;
-- regulated return;
-- generation mix;
-- capex;
-- debt.
-
-Policy có thể làm lợi nhuận lệch đáng kể khỏi commodity move thuần.
-
-## 20. Retail và consumer brands
+## 17. Lọc dầu
 
 Theo dõi:
 
-- same-store sales;
-- traffic;
-- average ticket;
-- inventory;
-- markdown;
-- overseas expansion;
-- brand pricing power.
+- chênh lệch lọc dầu (crack spread);
+- tỷ lệ sử dụng công suất;
+- thời gian bảo trì;
+- chênh lệch giá dầu đầu vào;
+- ảnh hưởng tồn kho.
+
+Giá dầu tăng không tự động tốt cho nhà lọc dầu; chênh lệch giữa sản phẩm và nguyên liệu thường quan trọng hơn.
+
+## 18. Hóa dầu
+
+Theo dõi chênh lệch giữa giá sản phẩm và nguyên liệu, công suất mới tại Trung Quốc, tỷ lệ sử dụng và tồn kho.
+
+Dư cung kéo dài có thể giữ biên lợi nhuận thấp dù nhu cầu tăng.
+
+## 19. Tiện ích và điện
+
+Các biến chính:
+
+- biểu giá;
+- chi phí nhiên liệu;
+- mức lợi nhuận được điều tiết;
+- cơ cấu nguồn phát;
+- chi tiêu vốn;
+- nợ.
+
+Chính sách có thể làm lợi nhuận khác đáng kể so với biến động hàng hóa thuần túy.
+
+## 20. Bán lẻ và thương hiệu tiêu dùng
+
+Theo dõi:
+
+- tăng trưởng cửa hàng hiện hữu;
+- lượng khách;
+- giá trị hóa đơn trung bình;
+- tồn kho;
+- giảm giá hàng tồn;
+- mở rộng ra nước ngoài;
+- quyền định giá của thương hiệu.
 
 # Phần II — Việt Nam
 
-## 21. Banks
+## 21. Ngân hàng
 
-Ngân hàng là sector trọng yếu vì credit là kênh tài trợ lớn của nền kinh tế.
+Ngân hàng là ngành trọng yếu vì tín dụng là kênh tài trợ lớn của nền kinh tế.
 
-Driver tree:
+Cây động lực:
 
 ```text
-Deposit / CASA
-→ Funding Cost
+Tiền gửi / CASA
+→ Chi phí nguồn vốn
 → NIM
-→ Credit Growth
-→ Pre-Provision Profit
-→ Credit Cost
-→ Net Income
-→ Capital / ROE
+→ Tăng trưởng tín dụng
+→ Lợi nhuận trước dự phòng
+→ Chi phí tín dụng
+→ Lợi nhuận ròng
+→ Vốn / ROE
 ```
 
-Cần nhìn thêm Group-2, property exposure và related lending.
+Cần nhìn thêm nợ nhóm 2, mức phơi nhiễm bất động sản và giao dịch với bên liên quan.
 
-## 22. Securities companies
+## 22. Công ty chứng khoán
 
 Nguồn lợi nhuận:
 
-- brokerage;
-- margin lending;
-- proprietary trading;
-- investment banking.
+- môi giới;
+- cho vay ký quỹ;
+- tự doanh;
+- ngân hàng đầu tư.
 
-KPI:
+Các KPI:
 
 ```text
-Market Turnover
-Margin Balance
-Funding Cost
-Prop Book Exposure
-Capital
+Giá trị giao dịch thị trường
+Dư nợ ký quỹ
+Chi phí nguồn vốn
+Mức phơi nhiễm tự doanh
+Vốn
 ```
 
-## 23. Property developers
+## 23. Nhà phát triển bất động sản
 
 Chuỗi quan trọng:
 
 ```text
-Legal Status
-→ Presales
-→ Cash Collection
-→ Construction
-→ Handover
-→ Revenue
+Tình trạng pháp lý
+→ Bán trước
+→ Thu tiền
+→ Xây dựng
+→ Bàn giao
+→ Doanh thu
 ```
 
-và song song:
+Song song phải theo dõi:
 
 ```text
-Debt / Bond Maturity
-→ Refinancing
-→ Liquidity Survival
+Nợ / trái phiếu đáo hạn
+→ tái cấp vốn
+→ khả năng sống sót về thanh khoản
 ```
 
-NAV phải haircut theo pháp lý và thời gian monetize.
+NAV phải được chiết giảm theo pháp lý và thời gian chuyển tài sản thành tiền.
 
-## 24. Industrial parks
+## 24. Khu công nghiệp
 
-Driver:
+Các động lực gồm:
 
 - FDI;
-- land availability;
-- legal readiness;
-- occupancy;
-- lease price;
-- infrastructure;
-- remaining lease term.
+- quỹ đất sẵn có;
+- mức độ hoàn thiện pháp lý;
+- tỷ lệ lấp đầy;
+- giá thuê;
+- hạ tầng;
+- thời hạn thuê đất còn lại.
 
-Registered FDI không bằng realized factory demand.
+FDI đăng ký không đồng nghĩa nhu cầu nhà máy đã hiện thực hóa.
 
-## 25. Manufacturing / export suppliers
+## 25. Sản xuất và doanh nghiệp xuất khẩu
 
 Theo dõi:
 
-- customer mix;
-- export destination;
-- orderbook;
+- cơ cấu khách hàng;
+- thị trường xuất khẩu;
+- sổ đơn hàng;
 - USD/VND;
-- labor;
-- imported inputs;
-- working capital.
+- chi phí lao động;
+- đầu vào nhập khẩu;
+- vốn lưu động.
 
-## 26. Retail
+## 26. Bán lẻ
 
-KPI:
+Các KPI:
 
-- same-store sales;
-- traffic;
-- average ticket;
-- new stores;
-- inventory turnover;
-- gross margin.
+- tăng trưởng cửa hàng hiện hữu;
+- lượng khách;
+- giá trị hóa đơn trung bình;
+- số cửa hàng mới;
+- vòng quay tồn kho;
+- biên gộp.
 
-Store expansion chỉ tạo value nếu incremental ROIC tốt.
+Mở rộng cửa hàng chỉ tạo giá trị nếu ROIC tăng thêm đủ tốt.
 
-## 27. Consumer staples
+## 27. Hàng tiêu dùng thiết yếu
 
 Nhạy với:
 
-- raw materials;
-- pricing power;
-- distribution;
-- household income;
-- brand share.
+- giá nguyên liệu;
+- quyền định giá;
+- mạng phân phối;
+- thu nhập hộ gia đình;
+- thị phần thương hiệu.
 
-## 28. Aviation
+## 28. Hàng không
 
-KPI:
+Các KPI:
 
-- passenger volume;
-- load factor;
-- yield;
-- fuel;
+- lượng hành khách;
+- hệ số ghế sử dụng;
+- doanh thu trên mỗi đơn vị vận chuyển;
+- nhiên liệu;
 - USD/VND;
-- lease/debt;
-- airport constraints.
+- thuê và nợ;
+- giới hạn công suất sân bay.
 
 Có thể dùng RASK/CASK khi dữ liệu phù hợp.
 
-## 29. Airports
+## 29. Sân bay
 
-Driver:
+Các động lực gồm:
 
-- passenger growth;
-- international mix;
-- concession revenue;
-- capex;
-- capacity expansion.
+- tăng trưởng hành khách;
+- tỷ trọng khách quốc tế;
+- doanh thu nhượng quyền;
+- chi tiêu vốn;
+- mở rộng công suất.
 
-## 30. Ports và logistics
-
-Theo dõi:
-
-- container throughput;
-- regional trade;
-- capacity;
-- utilization;
-- tariff;
-- shipping routes;
-- capex.
-
-## 31. Upstream oil & gas
-
-Driver:
-
-- production volume;
-- realized price;
-- lifting cost;
-- reserve life;
-- development capex.
-
-## 32. Oil & gas services
-
-Nhạy với E&P capex và rig/service utilization hơn oil spot đơn thuần.
-
-## 33. Midstream
-
-Pipeline/storage economics phụ thuộc volume, tariff, contract và capex.
-
-## 34. Hydropower
-
-Driver:
-
-- hydrology;
-- reservoir level;
-- electricity price;
-- generation volume;
-- debt.
-
-Weather risk rất quan trọng.
-
-## 35. Thermal power
+## 30. Cảng và logistics
 
 Theo dõi:
 
-- coal/gas cost;
-- heat rate;
-- availability;
-- tariff/PPA;
-- utilization.
+- sản lượng container;
+- thương mại khu vực;
+- công suất;
+- tỷ lệ sử dụng;
+- biểu phí;
+- tuyến vận tải;
+- chi tiêu vốn.
 
-## 36. Renewables
+## 31. Dầu khí thượng nguồn
+
+Các động lực gồm:
+
+- sản lượng khai thác;
+- giá bán thực nhận;
+- chi phí khai thác;
+- tuổi thọ trữ lượng;
+- chi tiêu phát triển mỏ.
+
+## 32. Dịch vụ dầu khí
+
+Nhạy với chi tiêu khai thác của khách hàng và tỷ lệ sử dụng giàn khoan/dịch vụ hơn là chỉ giá dầu giao ngay.
+
+## 33. Trung nguồn
+
+Kinh tế đường ống và lưu trữ phụ thuộc sản lượng, biểu phí, hợp đồng và chi tiêu vốn.
+
+## 34. Thủy điện
+
+Các động lực gồm:
+
+- thủy văn;
+- mực nước hồ;
+- giá điện;
+- sản lượng phát;
+- nợ.
+
+Rủi ro thời tiết đặc biệt quan trọng.
+
+## 35. Nhiệt điện
+
+Theo dõi:
+
+- chi phí than/khí;
+- hiệu suất nhiệt;
+- khả năng sẵn sàng của nhà máy;
+- biểu giá hoặc PPA;
+- tỷ lệ sử dụng.
+
+## 36. Năng lượng tái tạo
 
 Cần phân tích:
 
-- tariff/PPA;
-- curtailment;
-- grid capacity;
-- financing;
-- equipment degradation;
-- policy.
+- biểu giá / PPA;
+- cắt giảm công suất;
+- khả năng truyền tải của lưới;
+- nguồn vốn;
+- suy giảm thiết bị;
+- chính sách.
 
-## 37. Steel
+## 37. Thép
 
-Driver tree:
+Cây động lực:
 
 ```text
-Steel Price
-- Iron Ore / Coal / Scrap
-→ Spread
-× Volume
+Giá thép
+- Quặng sắt / than / phế liệu
+→ Chênh lệch biên
+× Sản lượng
 → EBITDA
 ```
 
-Cần nhìn China supply và domestic construction/public investment.
+Cần nhìn nguồn cung Trung Quốc và nhu cầu xây dựng/đầu tư công trong nước.
 
-## 38. Cement
+## 38. Xi măng
 
-Nhạy với domestic construction, exports, energy cost và regional overcapacity.
+Nhạy với xây dựng trong nước, xuất khẩu, chi phí năng lượng và dư công suất khu vực.
 
-## 39. Technology services
+## 39. Dịch vụ công nghệ
 
-KPI:
+Các KPI:
 
-- headcount;
-- utilization;
-- revenue/employee;
-- attrition;
-- overseas revenue;
-- FX;
-- margin.
+- số nhân sự;
+- tỷ lệ sử dụng nhân sự;
+- doanh thu mỗi nhân viên;
+- tỷ lệ nghỉ việc;
+- doanh thu nước ngoài;
+- tỷ giá;
+- biên lợi nhuận.
 
-## 40. Telecom
+## 40. Viễn thông
 
 Theo dõi:
 
-- subscriber;
+- số thuê bao;
 - ARPU;
-- data consumption;
-- capex;
-- spectrum;
-- regulation.
+- mức sử dụng dữ liệu;
+- chi tiêu vốn;
+- phổ tần;
+- quy định.
 
-## 41. Insurance
+## 41. Bảo hiểm
 
-KPI tùy life/non-life nhưng thường gồm premium growth, combined ratio/reserve quality, investment income và capital.
+KPI phụ thuộc bảo hiểm nhân thọ hay phi nhân thọ, nhưng thường gồm tăng trưởng phí bảo hiểm, tỷ lệ kết hợp hoặc chất lượng dự phòng, thu nhập đầu tư và vốn.
 
-## 42. Agriculture / food
+## 42. Nông nghiệp và thực phẩm
 
-Driver:
+Các động lực gồm:
 
-- commodity price;
-- feed/input cost;
-- disease/weather;
-- export market;
-- inventory cycle.
+- giá hàng hóa;
+- chi phí thức ăn/đầu vào;
+- dịch bệnh/thời tiết;
+- thị trường xuất khẩu;
+- chu kỳ tồn kho.
 
-## 43. Chemicals / fertilizer
+## 43. Hóa chất và phân bón
 
-Theo dõi product-feedstock spread, gas/energy cost, export prices và capacity.
+Theo dõi chênh lệch sản phẩm–nguyên liệu, chi phí khí/năng lượng, giá xuất khẩu và công suất.
 
-# Phần III — Cách so cùng ngành giữa hai nước
+# Phần III — So sánh cùng ngành giữa hai nước
 
-## 44. Không so bội số trực tiếp nếu economics khác
+## 44. Không so bội số trực tiếp khi kinh tế ngành khác nhau
 
-Bank Hàn Quốc và bank Việt Nam có thể khác về:
+Ngân hàng Hàn Quốc và Việt Nam có thể khác về:
 
-- growth;
-- capital requirement;
-- asset quality;
-- funding;
-- shareholder-return policy.
+- tốc độ tăng trưởng;
+- yêu cầu vốn;
+- chất lượng tài sản;
+- cấu trúc nguồn vốn;
+- chính sách hoàn vốn cho cổ đông.
 
-Do đó P/B khác nhau không tự động tạo arbitrage.
+Do đó khác biệt P/B không tự động tạo cơ hội chênh lệch giá.
 
-## 45. Currency exposure
+## 45. Mức phơi nhiễm tiền tệ
 
-Korean exporter thường có global revenue mix cao hơn nhiều doanh nghiệp Việt Nam tập trung domestic demand.
+Doanh nghiệp xuất khẩu Hàn Quốc thường có cơ cấu doanh thu toàn cầu cao hơn nhiều doanh nghiệp Việt Nam tập trung thị trường trong nước.
 
-FX sensitivity phải được model riêng.
+Độ nhạy tỷ giá phải được mô hình hóa riêng.
 
-## 46. Liquidity và free float
+## 46. Thanh khoản và tỷ lệ tự do giao dịch
 
-Một stock Vietnam nhỏ có execution risk lớn hơn large-cap Korea dù valuation hấp dẫn hơn.
+Một cổ phiếu Việt Nam nhỏ có rủi ro thực thi cao hơn cổ phiếu vốn hóa lớn tại Hàn Quốc dù định giá có vẻ hấp dẫn hơn.
 
-Liquidity là một phần của investment case.
+Thanh khoản là một phần của luận điểm đầu tư, không phải vấn đề vận hành tách biệt.
 
-# Phần IV — Accounting traps theo ngành
+# Phần IV — Bẫy kế toán theo ngành
 
-## 47. Banks
-
-Theo dõi:
-
-- restructuring;
-- NPL classification;
-- provision;
-- collateral;
-- related lending.
-
-## 48. Property
+## 47. Ngân hàng
 
 Theo dõi:
 
-- capitalized interest;
-- inventory quality;
-- receivables;
-- customer advances;
-- project ownership.
+- tái cơ cấu nợ;
+- phân loại NPL;
+- dự phòng;
+- tài sản bảo đảm;
+- cho vay bên liên quan.
 
-## 49. Industrials
+## 48. Bất động sản
 
-Theo dõi contract asset, backlog quality, revenue recognition và warranty/provision.
+Theo dõi:
 
-## 50. Consumer
+- lãi vay vốn hóa;
+- chất lượng tồn kho;
+- phải thu;
+- tiền khách hàng trả trước;
+- quyền sở hữu dự án.
 
-Theo dõi inventory, channel stuffing, rebate và promotion.
+## 49. Công nghiệp
+
+Theo dõi tài sản hợp đồng, chất lượng sổ đơn hàng, cách ghi nhận doanh thu và dự phòng bảo hành.
+
+## 50. Tiêu dùng
+
+Theo dõi tồn kho, việc đẩy hàng vào kênh phân phối, chiết khấu và khuyến mãi.
 
 # Phần V — Chu kỳ
 
-## 51. Early cycle
+## 51. Đầu chu kỳ
 
 Thường thấy:
 
-- inventory normalization;
-- orders tăng;
-- liquidity cải thiện;
-- revisions ngừng giảm.
+- tồn kho bình thường hóa;
+- đơn hàng tăng;
+- thanh khoản cải thiện;
+- điều chỉnh dự báo ngừng giảm.
 
-## 52. Mid cycle
+## 52. Giữa chu kỳ
 
-Volume, margin và earnings cùng cải thiện.
+Sản lượng, biên lợi nhuận và lợi nhuận cùng cải thiện.
 
-## 53. Late cycle
+## 53. Cuối chu kỳ
 
-Valuation có thể vẫn thấp theo trailing P/E vì earnings ở đỉnh, trong khi capex/capacity tăng mạnh.
+P/E quá khứ có thể trông thấp vì lợi nhuận ở đỉnh trong khi chi tiêu vốn và công suất mới tăng mạnh.
 
-## 54. Downturn
+## 54. Suy giảm
 
-Cần tập trung survival, balance sheet, refinancing và working capital hơn headline growth.
+Cần tập trung khả năng sống sót, bảng cân đối, tái cấp vốn và vốn lưu động hơn con số tăng trưởng tiêu đề.
 
-# Phần VI — Macro sensitivity matrix
+# Phần VI — Ma trận độ nhạy vĩ mô
 
 ## 55. USD mạnh
 
-Nhạy cảm:
+Độ nhạy khác nhau giữa:
 
-- Korea exporters/importers khác nhau;
-- Vietnam FX-policy constraint;
-- foreign flows;
-- USD debt.
+- doanh nghiệp xuất khẩu và nhập khẩu Hàn Quốc;
+- dư địa chính sách tỷ giá Việt Nam;
+- dòng vốn nước ngoài;
+- doanh nghiệp có nợ USD.
 
-## 56. Oil tăng
+## 56. Dầu tăng
 
-Korea airlines/chemicals/utilities chịu cost; refiners/upstream có logic khác.
+Hàng không, hóa chất và tiện ích Hàn Quốc chịu chi phí khác với lọc dầu hoặc thượng nguồn.
 
-Vietnam airlines, transport, upstream và utilities cũng phản ứng khác nhau.
+Tại Việt Nam, hàng không, vận tải, khai thác dầu và tiện ích cũng phản ứng khác nhau.
 
-## 57. China slowdown
+## 57. Trung Quốc giảm tốc
 
-Korea semis/chemicals/industrials và Vietnam manufacturing/commodities chịu exposure khác nhau.
+Bán dẫn, hóa chất và công nghiệp Hàn Quốc cùng sản xuất và hàng hóa Việt Nam có mức phơi nhiễm khác nhau.
 
-## 58. Domestic rate giảm
+## 58. Lãi suất trong nước giảm
 
-Vietnam property/brokers/banks phản ứng qua liquidity/credit; Korea housing/financials/consumer qua channel riêng.
+Tại Việt Nam, bất động sản, công ty chứng khoán và ngân hàng phản ứng qua thanh khoản/tín dụng. Tại Hàn Quốc, nhà ở, tài chính và tiêu dùng đi qua các kênh khác.
 
-# Phần VII — Mẫu sector notebook
+# Phần VII — Mẫu sổ nghiên cứu ngành
 
 ## 59. Mỗi ngành nên có
 
 ```text
-Economic Engine
-Demand Driver
-Supply Driver
-Pricing
-Capacity / Utilization
-Inventory
-Working Capital
-Capex
-Balance Sheet
-Key KPI
-Leading Indicators
-Valuation Method
-Macro Sensitivity
-Main Risks
+Động cơ kinh tế
+Động lực nhu cầu
+Động lực nguồn cung
+Cơ chế định giá
+Công suất / tỷ lệ sử dụng
+Tồn kho
+Vốn lưu động
+Chi tiêu vốn
+Bảng cân đối
+KPI chính
+Chỉ báo sớm
+Phương pháp định giá
+Độ nhạy vĩ mô
+Rủi ro chính
 ```
 
-## 60. Từ sector tới company
+## 60. Từ ngành tới doanh nghiệp
 
-Không dừng ở “ngành tốt”.
-
-Tiếp tục hỏi:
+Không dừng ở câu “ngành tốt”. Hãy tiếp tục hỏi:
 
 ```text
-Company có vị trí nào trong value chain?
-Market share?
-Cost position?
-Balance sheet?
-Management?
-Valuation?
-What is priced?
+Doanh nghiệp nằm ở đâu trong chuỗi giá trị?
+Thị phần bao nhiêu?
+Vị trí chi phí ra sao?
+Bảng cân đối có khỏe không?
+Chất lượng quản trị thế nào?
+Định giá hiện tại?
+Điều gì đã được phản ánh trong giá?
 ```
 
 ## Kết luận
 
-Deep-dive ngành không nhằm học thuộc hàng chục KPI. Mục tiêu là tìm đúng **một vài biến quyết định dòng tiền** của từng ngành và hiểu chúng phản ứng với chu kỳ như thế nào.
+Phân tích sâu ngành không nhằm học thuộc hàng chục KPI. Mục tiêu là tìm đúng một vài biến quyết định dòng tiền của từng ngành và hiểu chúng phản ứng với chu kỳ như thế nào.
 
 Khung cuối cùng:
 
 ```text
-Demand / Supply
-→ Price / Spread
-→ Volume / Utilization
-→ Margin
-→ Working Capital / Capex
-→ Cash Flow
-→ Balance Sheet
-→ Valuation
-→ Macro Sensitivity
+Nhu cầu / Nguồn cung
+→ Giá / Chênh lệch biên
+→ Sản lượng / Tỷ lệ sử dụng
+→ Biên lợi nhuận
+→ Vốn lưu động / Chi tiêu vốn
+→ Dòng tiền
+→ Bảng cân đối
+→ Định giá
+→ Độ nhạy vĩ mô
 ```
 
-Khi dùng cùng framework này cho Hàn Quốc và Việt Nam, người đọc có thể so sánh hai thị trường bằng cơ chế kinh tế thay vì chỉ bằng ticker hoặc bội số định giá.
+Khi dùng cùng khung này cho Hàn Quốc và Việt Nam, người đọc có thể so sánh hai thị trường bằng cơ chế kinh tế thay vì chỉ bằng mã cổ phiếu hoặc bội số định giá.
