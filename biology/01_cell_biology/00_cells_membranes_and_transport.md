@@ -1,79 +1,235 @@
-# Tế bào, màng và vận chuyển — Cells, Membranes and Transport (세포·세포막·수송)
+# Tế bào, bào quan, màng và vận chuyển — Cells, Organelles, Membranes and Transport (세포, 세포소기관, 막과 수송)
 
-Tế bào (Cell / 세포) là đơn vị nhỏ nhất có thể tự duy trì nhiều đặc tính cốt lõi của sự sống. Hiểu tế bào không nên bắt đầu bằng việc học thuộc tên bào quan, mà bằng một vấn đề: làm thế nào một hệ hóa học có thể giữ được “bên trong” khác “bên ngoài”, kiểm soát vật chất đi qua biên giới, tạo năng lượng và tổ chức hàng nghìn phản ứng cùng lúc?
+Sau khi đã có molecule, enzyme và energy, ta mới có “nguyên liệu”. Nhưng một đống molecule trong một cốc nước vẫn chưa phải tế bào. Sự sống cần **organization**: các reaction phải được đặt đúng chỗ, nồng độ phải được kiểm soát, molecule phải được đưa qua ranh giới, và những process không tương thích cần được tách ra.
 
-## Hai chiến lược tổ chức lớn
+Đó là lý do **tế bào (cell / 세포)** là mental model trung tâm của Sinh học.
 
-Tế bào nhân sơ (Prokaryotic Cell / 원핵세포) không có nucleus được bao bởi membrane và thường có genome dạng circular chromosome nằm trong nucleoid. Bacteria và Archaea thuộc nhóm này. Tế bào nhân thực (Eukaryotic Cell / 진핵세포) có nucleus và nhiều membrane-bound organelles như mitochondria, endoplasmic reticulum và Golgi apparatus.
+## Tế bào giải quyết bốn bài toán cơ bản
 
-Khác biệt này không có nghĩa prokaryote “nguyên thủy và đơn giản” theo nghĩa kém tinh vi. Bacteria có regulatory network, membrane system, quorum sensing và metabolic diversity rất cao. Eukaryote đổi lại complexity bằng compartmentalization: chia không gian thành các vùng có chemistry khác nhau.
+Một cell phải đồng thời giải quyết bốn vấn đề:
 
-## Màng tế bào tạo ra một thế giới bên trong
+1. tạo boundary để có “bên trong” riêng;
+2. kiểm soát vật chất đi vào và đi ra;
+3. tổ chức reaction thành các region hoặc compartment;
+4. duy trì information và energy flow.
 
-Màng sinh chất (Plasma Membrane / 세포막) chủ yếu gồm phospholipid bilayer cùng protein, cholesterol và carbohydrate. Phospholipid có đầu ưa nước và đuôi kỵ nước. Trong nước, cấu trúc bilayer hình thành tự phát do hydrophobic effect.
+Nếu thiếu boundary, concentration gradient biến mất. Nếu thiếu transport, cell không lấy được nutrient và không thải waste. Nếu thiếu organization, reaction cạnh tranh lẫn nhau. Nếu thiếu energy và information, structure không thể được duy trì lâu dài.
 
-Màng không phải bức tường kín. Nó là selective barrier. Các molecule nhỏ không phân cực như O₂ và CO₂ đi qua dễ hơn ion hoặc molecule phân cực lớn. Protein màng cung cấp channel, transporter, receptor và enzyme.
+> **Mental model:** cell là một micro-environment được kiểm soát, không phải một túi nước chứa organelle.
 
-> Mental model: membrane là một API boundary của tế bào. Không phải mọi thứ được phép đi qua; entry, exit và signaling đều qua những interface có rule.
+## Prokaryotic cell — nhỏ nhưng không “đơn giản”
 
-## Khuếch tán và gradient
+**Tế bào nhân sơ (prokaryotic cell / 원핵세포)** gồm Bacteria và Archaea. Chúng không có nucleus được bao bởi membrane.
 
-Khuếch tán (Diffusion / 확산) là chuyển động ròng của particle từ vùng concentration cao sang thấp do chuyển động nhiệt ngẫu nhiên. Không có “molecule biết đường đi xuống gradient”; direction ở cấp hệ xuất hiện từ probability.
+DNA thường nằm trong vùng gọi là **nucleoid (vùng nhân / 핵양체)**. Ribosome tổng hợp protein nằm trong cytoplasm. Plasma membrane kiểm soát trao đổi. Nhiều bacteria có cell wall giúp giữ shape và chống osmotic stress.
 
-Nếu một molecule cần protein channel nhưng vẫn đi theo electrochemical gradient, đó là khuếch tán được hỗ trợ (Facilitated Diffusion / 촉진 확산). Quá trình này không trực tiếp tiêu ATP.
+Một bacterium có thể nhỏ hơn nhiều eukaryotic cell nhưng vẫn thực hiện sensing, movement, gene regulation, metabolism và communication. Vì vậy “prokaryote = primitive” là cách hiểu sai.
 
-Với ion, concentration gradient chưa đủ. Điện tích màng cũng tác động, nên ta nói gradient điện hóa (Electrochemical Gradient / 전기화학적 기울기).
+## Eukaryotic cell — compartmentalization tạo thêm khả năng kiểm soát
 
-## Osmosis và nước
+**Tế bào nhân thực (eukaryotic cell / 진핵세포)** có nucleus và nhiều organelle được membrane bao quanh.
 
-Thẩm thấu (Osmosis / 삼투) là movement của nước qua semipermeable membrane theo chênh lệch water potential. Trong cách nói đơn giản, nước có xu hướng đi về phía có nồng độ solute không thấm qua màng cao hơn.
+### Nucleus
 
-Khái niệm isotonic, hypotonic và hypertonic mô tả ảnh hưởng của dung dịch lên cell volume. Animal cell trong hypotonic solution có thể trương và lyse; plant cell có cell wall nên turgor pressure lại là điều cần thiết để cây đứng vững.
+**Nucleus (nhân / 핵)** giữ phần lớn DNA của eukaryotic cell. Nuclear envelope tách genome khỏi cytoplasm nhưng có **nuclear pore** kiểm soát RNA và protein đi qua.
 
-## Active transport và gradient như một dạng năng lượng
+Việc tách transcription trong nucleus khỏi translation ngoài cytoplasm giúp eukaryote có thêm tầng regulation.
 
-Vận chuyển chủ động (Active Transport / 능동수송) di chuyển substance ngược gradient và cần energy. Na⁺/K⁺ ATPase ở animal cell dùng ATP để bơm 3 Na⁺ ra và 2 K⁺ vào mỗi cycle. Gradient này sau đó được dùng cho electrical signaling, nutrient transport và cell volume.
+### Ribosome
 
-Đây là ví dụ của energy coupling. ATP không trực tiếp “đẩy” mọi molecule; nó tạo gradient, rồi gradient được tái sử dụng. Secondary active transport như sodium-glucose symporter khai thác chính cơ chế này.
+**Ribosome (리보솜)** không phải membrane-bound organelle, nhưng là molecular machine cốt lõi. Nó đọc mRNA và nối amino acid thành protein.
 
-## Bào quan như các reaction environment
+Ribosome xuất hiện ở mọi dạng sống đã biết, cho thấy protein synthesis là process rất cổ.
 
-Nucleus giữ phần lớn genomic DNA. Ribosome thực hiện translation. Rough ER xử lý nhiều protein đi vào secretory pathway; smooth ER tham gia lipid synthesis và calcium storage. Golgi sửa đổi, sort và đóng gói cargo. Lysosome chứa enzyme phân giải trong môi trường acidic. Mitochondrion thực hiện phần lớn aerobic ATP production.
+### Endoplasmic reticulum
 
-Không nên xem organelle như những “phòng ban” tách biệt hoàn toàn. Chúng liên kết bằng vesicle traffic, contact sites, cytoskeleton và signaling. Mitochondria cũng giao tiếp với nucleus để điều chỉnh metabolism và stress response.
+**Lưới nội chất (endoplasmic reticulum, ER / 소포체)** là mạng membrane.
 
-## Cytoskeleton và hình học động
+**Rough ER** có ribosome bám và liên quan đến synthesis protein sẽ được tiết ra ngoài cell, đưa vào membrane hoặc nhiều organelle.
 
-Bộ xương tế bào (Cytoskeleton / 세포골격) gồm microfilament, intermediate filament và microtubule. Nó duy trì shape, vận chuyển cargo và tham gia division. Motor protein như kinesin, dynein và myosin biến chemical energy thành mechanical movement.
+**Smooth ER** tham gia lipid synthesis, detoxification và calcium storage tùy loại cell.
 
-Ở đây biology nối trực tiếp với physics: movement phát sinh từ force, binding kinetics, Brownian motion và molecular conformational change.
+### Golgi apparatus
 
-## Surface area và giới hạn kích thước
+**Bộ máy Golgi (Golgi apparatus / 골지체)** nhận protein/lipid từ ER, modify, sort và đóng gói chúng vào vesicle.
 
-Khi kích thước cell tăng, volume tăng theo lập phương chiều dài, còn surface area chỉ tăng theo bình phương. Nếu cell quá lớn, membrane area không tăng đủ nhanh so với nhu cầu trao đổi của cytoplasm.
+Một cách hình dung hữu ích là ER tạo nhiều “product”, còn Golgi là trung tâm processing và routing. Nhưng đây chỉ là analogy; trong cell, vesicle traffic rất động và hai hệ thống liên tục tương tác.
 
-Với sphere bán kính `r`:
+### Lysosome
 
-```math
-\text{Surface area}=4\pi r^2,\qquad \text{Volume}=\frac{4}{3}\pi r^3
-```
+**Lysosome (tiêu thể / 리소좀)** chứa enzyme hoạt động tốt trong môi trường acid. Nó phân giải macromolecule, damaged organelle và material cell đưa vào.
+
+Lysosome không “tiêu mọi thứ bừa bãi” vì enzyme được compartmentalized và pH bên trong khác cytosol.
+
+### Peroxisome
+
+**Peroxisome (과산화소체)** tham gia oxidation của một số fatty acid và detoxification. Reaction trong peroxisome có thể tạo hydrogen peroxide, nên organelle cũng chứa enzyme để xử lý nó.
+
+### Mitochondrion
+
+**Mitochondrion (ty thể / 미토콘드리아)** là nơi phần lớn aerobic cellular respiration ở eukaryote xảy ra.
+
+Mitochondria có double membrane và DNA riêng. Điều này liên quan đến **endosymbiotic theory (thuyết nội cộng sinh / 세포내공생설)**: tổ tiên mitochondria từng là bacterium sống tự do rồi đi vào quan hệ cộng sinh lâu dài với cell khác.
+
+### Chloroplast
+
+Ở plant và algae, **chloroplast (lục lạp / 엽록체)** chuyển light energy thành chemical energy qua photosynthesis. Chloroplast cũng có double membrane và DNA riêng, hỗ trợ endosymbiotic origin tương tự.
+
+## Cytoskeleton — cell không phải túi mềm vô định hình
+
+**Cytoskeleton (bộ xương tế bào / 세포골격)** là network protein filament giúp giữ shape, vận chuyển cargo, tạo movement và phân chia chromosome.
+
+Ba nhóm lớn thường được nhắc là actin filament, intermediate filament và microtubule.
+
+Microtubule hoạt động như track cho motor protein. Actin tham gia shape change, muscle contraction và cell movement. Đây là một ví dụ nơi structure ở nano-scale tạo motion ở cell-scale.
+
+## Surface area to volume ratio — tại sao cell thường nhỏ?
+
+Khi kích thước linear của vật thể tăng, surface area tăng gần theo bình phương còn volume tăng theo lập phương.
+
+Với cube cạnh \(L\):
+
+\[
+A=6L^2
+\]
+
+\[
+V=L^3
+\]
 
 Do đó:
 
-```math
-\frac{SA}{V}=\frac{3}{r}
-```
+\[
+\frac{A}{V}=\frac{6}{L}
+\]
 
-Tỷ lệ giảm khi `r` tăng. Đây là lý do nhiều cell nhỏ hiệu quả hơn một cell khổng lồ, và vì sao intestine, lung hay root tạo fold/branch để tăng area.
+Khi \(L\) tăng, surface-area-to-volume ratio giảm.
 
-## Endosymbiosis
+Cell lớn hơn có nhiều volume cần nutrient và waste exchange, nhưng membrane area không tăng nhanh tương ứng. Đây là một reason cell size bị constraint.
 
-Lý thuyết nội cộng sinh (Endosymbiotic Theory / 세포내공생설) giải thích mitochondria và chloroplast có nguồn gốc từ bacteria từng sống trong ancestor cell. Bằng chứng gồm double membrane, circular DNA, bacterial-like ribosome và cách division tương tự binary fission.
+Cơ thể lớn giải quyết bằng cách có rất nhiều cell nhỏ và tạo specialized exchange surface như alveoli và intestinal villi.
+
+## Plasma membrane — boundary có tính chọn lọc
+
+**Màng sinh chất (plasma membrane / 세포막)** chủ yếu gồm phospholipid bilayer với protein, cholesterol và carbohydrate.
+
+Phospholipid có hydrophilic head và hydrophobic tail. Trong water, hydrophobic effect làm tail hướng vào nhau và head hướng ra aqueous environment.
+
+Bilayer vừa ổn định vừa fluid. Molecule lipid và nhiều protein có thể di chuyển theo mặt phẳng membrane.
+
+Mô hình này thường gọi là **fluid mosaic model (mô hình khảm lỏng / 유동 모자이크 모델)**.
+
+## Selective permeability — cái gì đi qua được?
+
+Small nonpolar molecule như O₂ và CO₂ có thể diffuse qua lipid bilayer khá dễ.
+
+Ion và phần lớn polar molecule khó qua vì core của bilayer hydrophobic. Chúng thường cần membrane protein.
+
+Điều này biến membrane từ “barrier thụ động” thành một interface có thể regulate exchange.
+
+## Diffusion — từ random motion đến net movement
+
+Molecule trong solution chuyển động ngẫu nhiên. Nếu concentration một phía cao hơn, nhiều molecule sẽ rời phía đó hơn theo thống kê, tạo **net diffusion** xuống concentration gradient.
+
+Diffusion không cần ATP trực tiếp.
+
+Khi equilibrium đạt được, molecule vẫn chuyển động; chỉ là không còn net movement đáng kể giữa hai bên.
+
+## Osmosis — water movement qua membrane
+
+**Osmosis (thẩm thấu / 삼투)** là net movement của water qua selectively permeable membrane do difference về effective solute concentration và water potential.
+
+Ở mức trực giác, phía có nhiều solute không qua membrane thường có ít “free water tendency” hơn, nên water có xu hướng di chuyển về phía đó.
+
+### Tonicity
+
+**Isotonic (đẳng trương / 등장성)**: cell không có net water gain/loss lớn.
+
+**Hypotonic (nhược trương / 저장성)**: environment có effective solute concentration thấp hơn cell; water có xu hướng đi vào.
+
+**Hypertonic (ưu trương / 고장성)**: environment có effective solute concentration cao hơn; water có xu hướng đi ra.
+
+Animal cell trong strongly hypotonic solution có thể swell và lyse. Plant cell có cell wall nên pressure tăng tạo **turgor**, giúp cây đứng vững.
+
+## Facilitated diffusion — đi xuống gradient nhưng cần protein
+
+Một molecule có thể đi xuống concentration gradient nhưng không tự qua lipid bilayer. Khi membrane protein giúp nó đi qua mà không dùng energy trực tiếp, đó là **facilitated diffusion (khuếch tán được hỗ trợ / 촉진확산)**.
+
+Protein có thể là **channel** tạo pore hoặc **carrier** bind molecule rồi đổi conformation.
+
+Glucose transporter là ví dụ carrier; nhiều ion channel cho ion đi theo electrochemical gradient.
+
+## Active transport — đi ngược gradient cần energy
+
+**Active transport (vận chuyển chủ động / 능동수송)** đưa substance theo hướng thermodynamically unfavorable, thường ngược concentration hoặc electrochemical gradient.
+
+### Primary active transport
+
+Protein pump dùng energy trực tiếp, thường từ ATP.
+
+**Na⁺/K⁺ ATPase (나트륨-칼륨 펌프)** ở animal cell dùng ATP để đưa 3 Na⁺ ra và 2 K⁺ vào mỗi cycle điển hình.
+
+Pump giúp duy trì Na⁺ gradient, K⁺ gradient và góp phần vào membrane potential.
+
+### Secondary active transport
+
+Một gradient đã được tạo trước có thể dùng để drive transport chất khác.
+
+Ví dụ, Na⁺ muốn đi vào cell theo electrochemical gradient. Transporter có thể “ghép” dòng Na⁺ này với glucose đi vào, ngay cả khi glucose đi ngược gradient riêng của nó.
+
+Đây là **secondary active transport (2차 능동수송)**.
+
+> **Mental model:** primary active transport dùng energy để “sạc” gradient; secondary transport dùng gradient như một battery để làm work khác.
+
+## Electrochemical gradient và membrane potential
+
+Ion chịu hai lực cùng lúc:
+
+1. chemical gradient do concentration difference;
+2. electrical gradient do charge difference.
+
+Tổng hai effect là **electrochemical gradient**.
+
+Cell membrane có **membrane potential (điện thế màng / 막전위)** vì charge không phân bố đều hai phía.
+
+Neuron sẽ khai thác membrane potential để tạo electrical signal. Mitochondria khai thác proton gradient để tạo ATP.
+
+## Endocytosis và exocytosis — khi cargo quá lớn
+
+Protein lớn hoặc particle không thể đi qua channel đơn giản.
+
+**Endocytosis (nhập bào / 세포내섭취)** dùng membrane tạo vesicle đưa material vào cell.
+
+**Exocytosis (xuất bào / 세포외배출)** làm vesicle fuse với plasma membrane để release cargo ra ngoài.
+
+Neuron release neurotransmitter qua exocytosis. Immune cell có thể dùng endocytosis/phagocytosis để uptake pathogen hoặc debris.
+
+## Membrane protein — boundary trở thành interface thông minh
+
+Membrane protein có thể làm transporter, receptor, enzyme, anchor hoặc adhesion molecule.
+
+Một receptor ngoài cell có thể bind hormone; change conformation truyền signal vào trong. Như vậy membrane không chỉ kiểm soát vật chất mà còn kiểm soát **information flow**.
 
 ## Common misconceptions
 
-“Mọi chất đi từ nơi nhiều sang nơi ít” không đúng khi có active transport, electrical gradient hoặc reaction liên tục tiêu thụ sản phẩm. “Màng chỉ là lớp lipid” cũng sai vì phần lớn specificity của transport và signaling đến từ protein màng.
+### “Membrane là vỏ cứng bao quanh cell”
 
-## Kết nối
+Không. Plasma membrane là cấu trúc fluid và dynamic. Protein/lipid liên tục di chuyển, vesicle liên tục fuse và budding.
 
-Cell boundary tạo nền cho [[01_metabolism_respiration_photosynthesis]] vì respiration và photosynthesis phụ thuộc vào membrane gradient. Receptor trên màng dẫn sang [[02_cell_signaling_and_cell_cycle]]. DNA trong nucleus và protein synthesis nối trực tiếp tới [[../02_genetics_molecular_biology/00_dna_genes_and_gene_expression]].
+### “Diffusion dừng khi equilibrium”
+
+Không. Molecular motion vẫn tiếp tục. Equilibrium chỉ có nghĩa net flux bằng khoảng 0.
+
+### “Active transport luôn dùng ATP trực tiếp”
+
+Không. Secondary active transport dùng energy được lưu trong gradient do process khác tạo ra.
+
+### “Mitochondria là nơi duy nhất tạo ATP”
+
+Không. Glycolysis trong cytosol cũng tạo ATP. Mitochondria là nơi tạo phần lớn ATP trong aerobic eukaryotic respiration.
+
+## Mental Model
+
+> Cell là một system được compartmentalize. Membrane tạo boundary; organelle tạo specialized workspace; transporter kiểm soát matter flow; gradient lưu potential energy; receptor đưa information qua boundary.
+
+Từ đây, câu hỏi tự nhiên là: **cell lấy energy ở đâu để duy trì pump, synthesis và repair?** Đó là nội dung của [[01_metabolism_respiration_photosynthesis]].
