@@ -179,6 +179,165 @@ Một nhân viên có thể ít biểu cảm nhưng xử lý chính xác; ngư�
 
 Đánh giá tốt nên tách hai chiều này.
 
+## Công suất dịch vụ: nhanh hay chậm thường bắt đầu từ toán học hàng chờ
+
+Một quán cà phê, bệnh viện, tổng đài hay nhà hàng đều có **tốc độ khách đến** và **tốc độ phục vụ**. Nếu khách đến trung bình nhanh gần bằng hoặc nhanh hơn khả năng xử lý, hàng chờ tăng rất nhanh dù nhân viên không hề “lười”.
+
+Có thể dùng mô hình đơn giản:
+
+```text
+λ = tốc độ khách đến
+μ = tốc độ phục vụ
+ρ = λ / μ
+```
+
+Khi `ρ` tiến gần 1, hệ thống có rất ít khoảng đệm để hấp thụ dao động. Chỉ một nhóm khách đông bất thường, một máy hỏng hoặc một nhân viên nghỉ có thể làm thời gian chờ tăng mạnh.
+
+Điều này giải thích vì sao một nơi phục vụ “rất nhanh” trong giờ thường nhưng hỗn loạn vào giờ cao điểm. Văn hoá phản hồi nhanh chỉ bền khi doanh nghiệp thiết kế **công suất dự phòng (capacity buffer)** thay vì ép hệ thống vận hành sát 100% mọi lúc.
+
+## 웨이팅 시스템: hàng chờ vật lý được chuyển thành hàng chờ số
+
+Máy lấy số, ứng dụng đặt chỗ và thông báo KakaoTalk không xoá hàng chờ; chúng làm **thời gian chờ ít bị khóa tại chỗ hơn**. Khách có thể đi quanh khu vực rồi quay lại khi gần tới lượt.
+
+Đây là thay đổi rất quan trọng về trải nghiệm:
+
+```text
+thời gian chờ vật lý
+→ thời gian chờ có thể sử dụng cho việc khác
+```
+
+Tổng thời gian có thể vẫn tương tự, nhưng chi phí cảm nhận giảm vì người dùng lấy lại một phần quyền kiểm soát thời gian.
+
+Tuy nhiên hệ thống số cũng tạo rào cản mới cho người không quen ứng dụng, người không có số điện thoại phù hợp hoặc khách du lịch. Hiệu quả ở mức trung bình không đồng nghĩa mọi nhóm đều tiếp cận dễ như nhau.
+
+## 예약, 노쇼 và giá trị kinh tế của một khung thời gian
+
+**Đặt chỗ (예약)** biến thời gian tương lai thành tài nguyên được phân bổ trước. Khi khách đặt rồi không đến — thường gọi là `노쇼` — doanh nghiệp có thể mất một khung phục vụ mà không kịp bán lại.
+
+Vì vậy tiền cọc, chính sách huỷ, xác nhận trước giờ và danh sách chờ không chỉ là “làm khó khách”. Chúng là công cụ quản trị rủi ro của tài nguyên dễ hỏng: một bàn nhà hàng lúc 19:00 hôm nay không thể được tồn kho để bán vào ngày mai.
+
+Điểm cân bằng khó nằm ở đây:
+
+```text
+đặt chỗ quá cứng → khách ngại sử dụng
+đặt chỗ quá lỏng → tỷ lệ khung giờ bị bỏ phí tăng
+```
+
+Thiết kế tốt phải phân bổ rủi ro giữa hai bên chứ không đẩy toàn bộ cho khách hoặc doanh nghiệp.
+
+## Phản hồi nhanh không đồng nghĩa giải quyết nhanh
+
+Một tổ chức có thể trả lời ngay `확인해 보겠습니다` nhưng mất nhiều giờ hoặc nhiều ngày để xử lý. Vì vậy cần tách:
+
+```text
+thời gian phản hồi đầu tiên
+≠ thời gian chẩn đoán
+≠ thời gian giải quyết
+≠ thời gian xác nhận kết quả với khách
+```
+
+Nếu chỉ tối ưu chỉ số phản hồi đầu tiên, nhân viên có động lực gửi câu xác nhận rất nhanh nhưng vấn đề thật vẫn nằm trong hàng đợi. Đây là phiên bản dịch vụ của **Định luật Goodhart**: khi một chỉ số trở thành mục tiêu duy nhất, nó có thể ngừng phản ánh chất lượng mà ban đầu ta muốn đo.
+
+Một hệ thống hỗ trợ tốt phải đo cả tốc độ lẫn độ chính xác, tỷ lệ giải quyết ở lần đầu, tỷ lệ tái mở vấn đề và mức độ khách phải lặp lại thông tin.
+
+## SLA và lời hứa dịch vụ: kỳ vọng cần được đóng gói rõ
+
+Trong dịch vụ chuyên nghiệp, **mức dịch vụ cam kết (service-level agreement / SLA)** hoặc các lời hứa tương tự giúp biến kỳ vọng mơ hồ thành khoảng thời gian và phạm vi cụ thể.
+
+Ngay cả khi không có hợp đồng SLA chính thức, doanh nghiệp vẫn tạo kỳ vọng qua câu như `당일 답변`, `익일 배송`, thời gian dự kiến trên ứng dụng hoặc giờ xử lý của trung tâm hỗ trợ.
+
+Kỳ vọng rõ giúp giảm xung đột vì khách biết “chậm” nghĩa là chậm so với chuẩn nào. Nhưng lời hứa quá tham vọng có thể tạo **nợ kỳ vọng**: doanh nghiệp giành khách bằng cam kết nhanh rồi liên tục chuyển chi phí sang người lao động hoặc cắt chất lượng để giữ thời gian.
+
+## 서비스 복구: lỗi xảy ra rồi thì hệ thống làm gì?
+
+Không có hệ thống dịch vụ nào đạt tỷ lệ lỗi bằng 0. Đơn giao nhầm, món ra chậm, thanh toán lỗi, phòng đặt sai hoặc tư vấn thiếu thông tin đều có thể xảy ra. Điểm khác biệt quan trọng là **khả năng phục hồi dịch vụ (service recovery)**.
+
+Một quy trình phục hồi thường cần:
+
+```text
+nhận lỗi / nhận bất tiện
+→ thu thập sự kiện
+→ xác định quyền xử lý
+→ sửa hoặc bồi hoàn phù hợp
+→ xác nhận khách đã nhận kết quả
+→ ghi nhận nguyên nhân để ngăn tái diễn
+```
+
+Nếu tổ chức chỉ xin lỗi nhưng không có quyền sửa, lời xin lỗi trở thành lao động cảm xúc không có hiệu lực. Nếu chỉ hoàn tiền mà không học từ nguyên nhân, lỗi tiếp tục lặp lại.
+
+Một lần xử lý lỗi tốt đôi khi có thể phục hồi niềm tin mạnh, nhưng không nên dùng ý tưởng này để biện minh rằng “có lỗi cũng tốt”. Mục tiêu vẫn là giảm xác suất lỗi và có cơ chế phục hồi khi lỗi xảy ra.
+
+## Kênh dịch vụ và vấn đề mất ngữ cảnh
+
+Khách có thể bắt đầu ở chatbot, chuyển sang nhân viên chat, gọi điện rồi tới cửa hàng. Nếu mỗi kênh không chia sẻ lịch sử, khách phải kể lại cùng vấn đề nhiều lần.
+
+```text
+nhiều kênh
+không tự động
+= trải nghiệm liền mạch
+```
+
+Điều quan trọng là **bàn giao ngữ cảnh (context handoff)**: mã đơn, lịch sử thao tác, ảnh, kết quả xác minh và quyết định trước phải đi theo vấn đề với mức truy cập phù hợp.
+
+Đây là điểm giao giữa thiết kế dữ liệu và phép lịch sự. Việc bắt khách lặp thông tin không chỉ tốn thời gian; nó còn phát tín hiệu rằng tổ chức “không nhớ” tương tác trước.
+
+## Tiêu chuẩn hoá và cá nhân hoá: hai mục tiêu thường kéo ngược nhau
+
+Chuỗi cửa hàng, bệnh viện lớn hoặc nền tảng muốn quy trình nhất quán để đào tạo nhanh và giảm lỗi. Khách lại muốn hoàn cảnh riêng của mình được hiểu.
+
+```text
+tiêu chuẩn hoá cao
+→ dự đoán được + dễ mở rộng
+nhưng
+→ ít linh hoạt hơn với ngoại lệ
+```
+
+Hệ thống tốt thường chuẩn hoá phần có thể chuẩn hoá — thanh toán, lưu hồ sơ, quy trình an toàn — nhưng để không gian phán đoán cho trường hợp bất thường. Nếu mọi ngoại lệ đều bị ép vào kịch bản, khách cảm thấy “nói chuyện với máy”; nếu mọi nhân viên tự quyết tuỳ ý, chất lượng trở nên không ổn định.
+
+## Dịch vụ tiếp cận được: tốc độ không đủ nếu một số người không dùng được
+
+Kiosk, mã QR, ứng dụng đặt bàn và xác thực số giảm lao động tuyến đầu nhưng có thể tăng khó khăn cho người cao tuổi, người khuyết tật, người nước ngoài hoặc người có năng lực số thấp.
+
+Chất lượng dịch vụ vì vậy cần thêm một chiều: **khả năng tiếp cận (accessibility / 접근성)**.
+
+Một quy trình tốt nên có đường thay thế khi người dùng không thể hoàn tất kênh mặc định. Nếu cửa hàng chỉ còn kiosk nhưng không có cách hỗ trợ người không sử dụng được kiosk, chi phí vận hành đã được giảm bằng cách chuyển khó khăn sang nhóm yếu thế hơn.
+
+Đọc cùng [`12_city_consumption_digital_life.md`](12_city_consumption_digital_life.md) và [`26_health_medicine_wellness_body.md`](26_health_medicine_wellness_body.md).
+
+## Lập lịch lao động: dịch vụ nhanh thường dựa trên dự báo nhu cầu
+
+Nhân sự quá ít làm hàng chờ dài; nhân sự quá nhiều làm chi phí tăng. Vì vậy doanh nghiệp dự báo theo giờ, ngày trong tuần, thời tiết, chương trình khuyến mãi và sự kiện địa phương.
+
+Nhưng dự báo không hoàn hảo. Khi doanh nghiệp tối ưu nhân sự quá sát mức trung bình, sai số dự báo bị người lao động hấp thụ bằng chạy nhanh hơn, bỏ nghỉ hoặc làm thêm.
+
+Đây là một đánh đổi quan trọng:
+
+```text
+hiệu suất sử dụng nhân sự cao
+↔
+khả năng chống chịu khi cầu tăng đột ngột
+```
+
+Một hệ thống bền cần nhìn người lao động như nguồn lực có giới hạn sinh học, không phải công suất co giãn vô hạn.
+
+## Đo chất lượng dịch vụ: một chỉ số không thể đại diện toàn bộ hệ thống
+
+Tổ chức có thể theo dõi thời gian chờ, số khiếu nại, tỷ lệ hoàn tiền, điểm hài lòng hoặc tỷ lệ khách quay lại. Mỗi chỉ số chỉ nhìn một lát cắt.
+
+Ví dụ, số khiếu nại thấp có thể nghĩa chất lượng tốt; nhưng cũng có thể nghĩa quy trình khiếu nại quá khó. Điểm đánh giá cao có thể phản ánh dịch vụ tốt; nhưng cũng có thể chịu thiên lệch chọn mẫu.
+
+Đánh giá hệ thống nên dùng **tam giác hoá bằng chứng (triangulation)**:
+
+```text
+dữ liệu vận hành
++ phản hồi khách hàng
++ dữ liệu người lao động
++ quan sát ngoại lệ
+→ bức tranh đáng tin hơn
+```
+
+Nếu chỉ nghe khách, ta bỏ chi phí lao động. Nếu chỉ nhìn năng suất, ta bỏ trải nghiệm khách. Nếu chỉ nhìn trung bình, ta bỏ các nhóm bị phục vụ kém nhất.
+
 ## Liên hệ kiến thức: ma sát không biến mất, nó được chuyển đi
 
 Khi ứng dụng giúp khách tiết kiệm 10 phút, 10 phút đó không nhất thiết biến mất. Nó có thể được hấp thụ bằng kho gần hơn, người lao động chạy nhanh hơn, thuật toán tốt hơn hoặc tồn kho cao hơn.
@@ -191,13 +350,30 @@ chi phí toàn hệ thống giảm
 
 Nhiều đổi mới thực sự giảm tổng chi phí, nhưng một phần đổi mới chỉ di chuyển chi phí sang chủ thể khác.
 
+## Liên hệ kiến thức: văn hoá dịch vụ như một hệ điều khiển phản hồi
+
+Dịch vụ hiện đại có thể được đọc như một **hệ điều khiển phản hồi (feedback control system)**:
+
+```text
+nhu cầu khách hàng
+→ vận hành
+→ kết quả dịch vụ
+→ đánh giá / khiếu nại / dữ liệu sử dụng
+→ điều chỉnh quy trình
+→ vận hành mới
+```
+
+Nếu phản hồi quá chậm, tổ chức học chậm. Nếu chỉ phản ứng với tín hiệu lớn và dễ thấy như đánh giá 1 sao, tổ chức có thể bỏ qua vấn đề âm thầm nhưng phổ biến. Nếu tối ưu quá nhanh theo từng phản hồi cá nhân, quy trình trở nên dao động và thiếu nhất quán.
+
+Mục tiêu không phải “nghe mọi khách theo đúng nghĩa đen”, mà là phân biệt tín hiệu, nhiễu và lỗi hệ thống.
+
 ## Mô hình tư duy
 
-> Văn hoá dịch vụ Hàn Quốc nên được hiểu như một **hệ thống độ trễ thấp** được tạo bởi hạ tầng, cạnh tranh, nền tảng và lao động. Phép lịch sự chỉ là một lớp; phía dưới còn có hàng chờ, KPI, định tuyến, lao động cảm xúc và dữ liệu danh tiếng.
+> Văn hoá dịch vụ Hàn Quốc nên được hiểu như một **hệ thống độ trễ thấp có giới hạn công suất**. Hạ tầng, cạnh tranh và nền tảng làm tốc độ khả thi; hàng chờ và lịch đặt phân bổ tài nguyên; người lao động hấp thụ biến động; dữ liệu đánh giá đóng vai trò phản hồi; quy trình phục hồi quyết định điều gì xảy ra khi hệ thống thất bại. Phép lịch sự chỉ là lớp giao diện phía trên.
 
 ## Những hiểu lầm phổ biến
 
-“Dịch vụ nhanh vì người Hàn nóng vội” bỏ qua mật độ, logistics và cạnh tranh.
+“Dịch vụ nhanh vì người Hàn nóng vội” bỏ qua mật độ, logistics, công suất và cạnh tranh.
 
 “Điểm đánh giá cao nghĩa là chất lượng chắc chắn cao” bỏ qua cách lấy mẫu và động lực đánh giá.
 
@@ -207,6 +383,12 @@ Nhiều đổi mới thực sự giảm tổng chi phí, nhưng một phần đ�
 
 “Giao hàng miễn phí nghĩa là vận chuyển không có chi phí” chỉ là cách giao diện đóng khung chi phí.
 
+“Phản hồi nhanh nghĩa là đã giải quyết nhanh” là sai; xác nhận đã nhận vấn đề và hoàn thành xử lý là hai trạng thái khác nhau.
+
+“Không có hàng chờ nghĩa là hệ thống hiệu quả” cũng chưa chắc đúng; có thể doanh nghiệp đang duy trì công suất dư lớn hoặc nhu cầu thấp. Phải nhìn cả chi phí và mức sử dụng.
+
+“Kiosk luôn làm dịch vụ tốt hơn” bỏ qua khả năng tiếp cận và đường hỗ trợ cho người không dùng được kênh số.
+
 ## Đọc tiếp
 
-Đọc cùng [`03_language_honorifics_nunchi_jeong_face.md`](03_language_honorifics_nunchi_jeong_face.md), [`06_workplace_organization_hoesik.md`](06_workplace_organization_hoesik.md), [`12_city_consumption_digital_life.md`](12_city_consumption_digital_life.md), [`18_daily_etiquette_gifts_relationships.md`](18_daily_etiquette_gifts_relationships.md) và [`27_internet_communities_messaging_slang_memes.md`](27_internet_communities_messaging_slang_memes.md).
+Đọc cùng [`03_language_honorifics_nunchi_jeong_face.md`](03_language_honorifics_nunchi_jeong_face.md), [`06_workplace_organization_hoesik.md`](06_workplace_organization_hoesik.md), [`12_city_consumption_digital_life.md`](12_city_consumption_digital_life.md), [`18_daily_etiquette_gifts_relationships.md`](18_daily_etiquette_gifts_relationships.md), [`24_economy_chaebol_housing_status_mobility.md`](24_economy_chaebol_housing_status_mobility.md), [`26_health_medicine_wellness_body.md`](26_health_medicine_wellness_body.md) và [`27_internet_communities_messaging_slang_memes.md`](27_internet_communities_messaging_slang_memes.md).
