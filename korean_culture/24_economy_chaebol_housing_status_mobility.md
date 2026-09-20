@@ -1,148 +1,329 @@
 # Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội
 
-Một phần lớn văn hoá Hàn Quốc hiện đại chỉ trở nên dễ hiểu khi đặt cạnh economic structure. `대기업`, `중소기업`, `재벌`, apartment, jeonse, education spending và job competition không phải các topic tách rời. Chúng kết nối qua câu hỏi cơ bản: **nguồn lực, cơ hội và rủi ro được phân phối như thế nào?**
+## Kinh tế là một phần của văn hoá đời sống
 
-## 재벌: không chỉ là “công ty rất lớn”
+Một phần lớn Korean culture hiện đại chỉ hiểu được khi đặt cạnh structure kinh tế. `대기업`, `중소기업`, `재벌`, apartment, jeonse, housing subscription, education spending, job competition và inheritance không phải các topic rời nhau. Chúng nối qua câu hỏi cơ bản: **nguồn lực, cơ hội và rủi ro được phân phối như thế nào, và cá nhân phản ứng ra sao trước distribution đó?**
 
-**재벌 (chaebol / tập đoàn gia đình quy mô lớn)** thường chỉ các business group lớn gồm nhiều affiliate có quan hệ sở hữu và lịch sử kiểm soát gắn với founding family. Không phải mọi large corporation ở Hàn đều là chaebol, và chaebol không phải một legal form duy nhất giống `주식회사`.
+Nếu một vài school, employer hoặc location trả reward cao hơn đáng kể, competition sẽ tập trung ở bottleneck. Behaviour sau đó dễ bị gọi là “văn hoá cạnh tranh”, nhưng first-principles explanation nằm ở payoff landscape.
 
-Để hiểu vì sao chaebol xuất hiện, cần nhìn industrialization strategy. Khi một nền kinh tế muốn tăng năng lực sản xuất nhanh, state và finance có thể tập trung capital vào một số firm có khả năng scale. Nếu firms thành công, network effect và capital accumulation giúp chúng mở rộng sang nhiều sector. Ưu điểm là speed và coordination; risk là concentration of economic power.
+## 재벌: business group chứ không chỉ “công ty rất lớn”
 
-Đây gần giống architecture trade-off. Monolith có thể coordination nhanh khi system còn nhỏ và cần ship nhanh, nhưng về lâu dài coupling và concentration tạo single points of influence.
+**Chaebol / 재벌** thường chỉ các business group lớn có nhiều affiliate và lịch sử kiểm soát gắn với founding family. Không phải mọi large corporation ở Hàn đều là chaebol; chaebol cũng không phải một legal form duy nhất như `주식회사`.
 
-## 대기업 và 중소기업: workplace prestige gắn với risk-return
+Điểm quan trọng là **group structure**. Một family có thể không sở hữu majority tuyệt đối ở từng affiliate nhưng vẫn duy trì influence qua ownership chain, board, cross-holdings history và governance arrangement.
 
-Trong everyday discourse, **대기업 (large enterprise)** thường gắn với compensation, brand, benefits và structured career path; **중소기업 (SME / small and medium enterprise)** rất đa dạng và không thể đánh đồng thành một category chất lượng thấp.
+Vì vậy khi đọc headline về “Samsung”, “Hyundai”, “LG”, cần phân biệt brand umbrella, business group và legal company entity.
 
-Tuy nhiên, nếu labour market tạo chênh lệch lớn về expected income, stability hoặc social prestige, job seeker sẽ rationally crowd vào một số employer. Đây là **queueing under unequal payoff**: hàng chờ dài không nhất thiết vì người trẻ “ám ảnh danh tiếng”, mà có thể vì reward distribution khiến competition hợp lý ở level cá nhân.
+## Tại sao chaebol có thể xuất hiện trong công nghiệp hoá nhanh?
 
-## 스펙: khi con người biến thành feature vector
+Trong giai đoạn catch-up industrialization, state muốn scale manufacturing, export và technology nhanh. Tập trung credit và policy support vào firm có khả năng scale tạo lợi thế coordination. Firm lớn sau đó tích luỹ capital, supplier network, engineering talent và export channel.
 
-Từ **스펙 (spec)** trong job market mượn từ “specification”. Nó có thể chỉ degree, certificate, language score, internship và các signal khác.
-
-Connection với Machine Learning khá trực quan: recruiter không quan sát hoàn toàn productivity tương lai nên dùng observable features để estimate. Candidate biết điều đó nên tối ưu feature. Khi tất cả cùng tối ưu, threshold tăng và xuất hiện **credential inflation (lạm phát bằng cấp / 자격 인플레이션)**.
-
-Đây là arms race: signal ban đầu giúp phân biệt ứng viên, nhưng khi signal trở nên phổ biến, information value giảm.
-
-## 아파트: nhà ở vừa là shelter vừa là asset
-
-Apartment ở Hàn không chỉ là architecture. Với mật độ đô thị cao và lịch sử urbanization nhanh, apartment trở thành một standardized housing product kết nối với school district, transport, brand, redevelopment expectation và household asset.
-
-Khi nhà vừa là nơi ở vừa là store of wealth, decision “sống ở đâu” không còn purely lifestyle. Nó trở thành portfolio decision.
+Ưu điểm của concentration:
 
 ```text
-housing choice
-= shelter utility
-+ commute cost
-+ education access
-+ social environment
-+ financing constraint
-+ expected asset value
+large capital pool
+→ đầu tư project quy mô lớn
+→ economies of scale
+→ export competitiveness
+→ reinvestment
 ```
 
-Không gia đình nào weight các biến này giống nhau, nhưng model giúp hiểu tại sao housing conversation có thể mang emotional intensity lớn.
+Nhưng downside là market power, governance risk và dependency của supplier nhỏ vào buyer lớn.
 
-## 전세: một thiết kế tài chính nằm bên trong văn hoá thuê nhà
+Mental model không phải “chaebol tốt/xấu”, mà là **scale efficiency ↔ concentration risk**.
 
-**전세 (jeonse)** là hệ thống thuê với khoản deposit lớn thay vì monthly rent truyền thống. Tenant chuyển một lump sum lớn cho landlord và nhận lại khi kết thúc contract theo điều kiện pháp lý.
+## 대기업 vs 중소기업: cùng labour market nhưng payoff khác nhau
 
-Điểm first-principles ở đây là opportunity cost. Nếu landlord có thể sử dụng deposit như capital, return từ capital có thể thay thế monthly rent. Khi interest rate, housing price expectation và lending structure thay đổi, attractiveness của jeonse cũng thay đổi.
+`대기업` thường được gắn với salary, benefit, training, brand và career path tốt hơn; `중소기업` cực kỳ heterogeneous, từ firm công nghệ mạnh đến business margin thấp.
 
-Vì vậy jeonse không phải “phong tục lạ”. Nó là financial arrangement hình thành dưới một môi trường vốn cụ thể. Khi environment thay đổi, system chịu stress và risk distribution thay đổi theo.
+Nếu expected payoff chênh lớn, job seeker sẽ crowd vào top employer. Queue dài là response rational ở individual level dù system-level cost là exam/certificate arms race.
 
-## 월세 và transition của rental market
-
-**월세 (monthly rent)** gần với model rent phổ biến toàn cầu: deposit nhỏ hơn và payment hàng tháng. Trong thực tế có nhiều hybrid contract.
-
-Việc household chọn jeonse hay wolse phụ thuộc liquidity, credit access, interest rate, expected duration và risk tolerance. Đây là bài toán finance hơn là chỉ taste.
-
-## 강남, 학군 và capitalization của social infrastructure
-
-Khi một khu vực có school reputation, transit, jobs, private education và amenities tốt, demand tăng. Những lợi thế phi vật chất có thể được **capitalized into land price**—tức chuyển thành giá nhà cao hơn.
-
-Điều này tạo feedback loop:
+Đây là coordination trap:
 
 ```text
-good schools / jobs / amenities
-        ↓
-higher demand
-        ↓
-higher housing price
-        ↓
-selection by household resources
-        ↓
-concentration of advantages
+nhiều người nhắm cùng employer
+→ screening threshold tăng
+→ candidate đầu tư thêm credential
+→ baseline credential tăng
+→ competition không giảm
 ```
 
-Vì vậy education inequality và housing inequality có thể reinforce nhau mà không cần một actor trung tâm chủ ý thiết kế kết quả đó.
+## 정규직·계약직 và dual labour market
 
-## 내 집 마련: sở hữu nhà như lifecycle goal
+Employment status tạo khác biệt về security, benefit, career path và bargaining power. `정규직` không đồng nghĩa job hoàn hảo; `계약직`, `파견`, subcontracting cũng rất đa dạng. Nhưng khi status tạo chênh lệch lớn, chuyển từ temporary sang stable position trở thành life goal quan trọng.
 
-Cụm **내 집 마련** nghĩa là có được căn nhà của riêng mình. Trong nhiều thế hệ, home ownership gắn với security và adulthood milestone. Nhưng khi housing affordability thay đổi, milestone này có thể bị trì hoãn hoặc bị reinterpret.
+Culture của “ổn định” vì vậy có institutional basis. Nó không chỉ là conservative preference; risk của unemployment/housing debt làm stability có utility cao.
 
-Cultural tension xuất hiện khi expectation từ generation trước vẫn tồn tại nhưng constraint của generation sau đã đổi. Nếu cùng một goal cần số năm income lớn hơn nhiều, behaviour “chưa mua nhà” không thể được giải thích chỉ bằng preference.
+## 하청 và supplier hierarchy
 
-## 청약: rule-based allocation và strategic behaviour
+Large firm thường dựa vào network supplier/subcontractor. Contract chain giúp specialization và flexibility nhưng có thể phân phối bargaining power không đều.
 
-Housing subscription system **청약** là một cơ chế allocation có rule về eligibility, score và category thay đổi theo chính sách. Cultural relevance của nó nằm ở việc household planning phải học rule, giữ account, theo dõi supply và tối ưu timing.
+`갑–을` language và `갑질` thường được hiểu rõ hơn khi nhìn exit option: bên nào có nhiều alternative customer/supplier hơn sẽ có negotiation power cao hơn.
 
-Từ góc nhìn game theory, bất kỳ allocation system nào có scarce resource và scoring rule đều tạo strategic response. Khi rule thay đổi, household behaviour cũng điều chỉnh.
+Power asymmetry không chỉ interpersonal; nó có thể nằm trong market structure.
 
-## 소비 và status signal
+## 자영업: self-employment và small business culture
 
-Luxury goods, car, apartment brand, education và dining đôi khi hoạt động như **status signal (tín hiệu địa vị / 지위 신호)**. Tuy nhiên, không nên lấy visible consumption của Seoul affluent districts làm representative cho toàn xã hội.
+Restaurant, cafe, convenience franchise, salon và small shop là phần visible của Korean city. `자영업` có thể là entrepreneurship, family livelihood hoặc career option sau khi rời corporate employment.
 
-Thorstein Veblen gọi một phần hiện tượng này là **conspicuous consumption**. Nhưng status signal không chỉ là phô trương; đôi khi brand còn giảm uncertainty về quality hoặc tạo group belonging. Một luxury handbag và một company laptop đều có thể signal, nhưng signal khác nhau về context.
+Small business exposure cao với rent, labour cost, platform fee, demand fluctuation và competition. Vì vậy streetscape thay nhanh: một location có thể đổi tenant/business concept nhiều lần.
 
-## 갑질: khi power asymmetry trở thành hành vi
+Cultural lesson là “nhiều cafe” không chỉ taste phenomenon; commercial rent, franchise model và entry barrier cũng matter.
 
-**갑질** mô tả misuse hoặc biểu diễn của power từ bên mạnh hơn trong relation `갑–을`. Nó có thể xuất hiện giữa customer–worker, head office–vendor hoặc senior–junior.
+## 스펙: con người bị nén thành observable feature
 
-Để hiểu `갑질`, đừng chỉ nói “người có quyền xấu tính”. Khi exit option yếu và complaint cost cao, power asymmetry tăng. Institution tốt cố giảm abuse bằng transparency, legal protection và alternative channels.
+`스펙 (spec)` có thể gồm degree, GPA, certificate, language score, internship, competition award và experience. Recruiter không quan sát productivity tương lai hoàn hảo nên dùng proxy.
 
-## Social mobility: 개천에서 용 난다 và cảm nhận về ladder
+Candidate biết proxy nào được reward và optimize chúng. Khi quá nhiều người có cùng proxy, signal value giảm: **credential inflation / 자격 인플레이션**.
 
-Thành ngữ **개천에서 용 난다**—“rồng sinh ra từ con suối nhỏ”—biểu thị upward mobility từ background thấp. Trong xã hội industrializing, education từng được nhiều người cảm nhận như ladder mạnh.
+Đây là Goodhart-like effect: measure ban đầu dùng để estimate năng lực trở thành target tự thân.
 
-Khi housing asset và inherited resources tăng trọng lượng, perception về mobility có thể thay đổi. Cultural discourse về `금수저`, `흙수저` xuất hiện trong context này.
+## 학벌·직장·주거: status không nằm ở một object duy nhất
 
-**금수저 (gold spoon)** và **흙수저 (dirt spoon)** là metaphor về family background. Chúng encode một model rằng starting capital khác nhau tạo path khác nhau. Đây gần với initial condition trong mathematics: cùng equation nhưng initial value khác có thể tạo trajectory khác.
+Status có thể được đọc từ school, employer, job title, neighbourhood, apartment brand, car, fashion hoặc social network. Nhưng signal thay theo group.
 
-## Knowledge Connection: compound advantage
+Một developer có thể care GitHub/project hơn luxury bag; một household parent có thể care school district hơn car brand. Vì vậy “status culture” phải luôn hỏi **status within which field?**
 
-Nếu một household có lợi thế nhỏ ở nhiều domain, các lợi thế có thể nhân nhau:
+## 아파트: shelter + asset + school access + identity
+
+Apartment ở Hàn là nhiều thứ cùng lúc:
 
 ```text
-better location
-→ shorter commute
-→ more time
-→ better school access
-→ stronger network
+housing utility
++ location
++ commute
++ school catchment
++ brand/complex quality
++ financing
++ expected resale/redevelopment value
+```
+
+Khi house là cả nơi ở và main household asset, conversation về price mang emotional intensity lớn hơn pure consumer good.
+
+## 아파트 브랜드 và standardization
+
+Large construction brand tạo perceived quality, management expectation và resale signal. Brand giảm information asymmetry khi buyer không thể inspect mọi hidden property của building.
+
+Nhưng brand premium có thể vượt physical quality vì reputation itself có value. Đây là same mechanism với consumer brand nhưng stakes lớn hơn nhiều.
+
+## 재건축·재개발: housing còn là option on future land value
+
+`재건축` thường liên quan rebuild apartment complex cũ; `재개발` rộng hơn ở area redevelopment. Rule và approval thay đổi theo policy/time, nên culture book không nên ghi hard-coded eligibility.
+
+Economic intuition: owner không chỉ nắm current home mà còn có expectation về future development right. Expected future value có thể capitalized vào current price.
+
+Do đó urban-planning decision tạo wealth effect rất lớn.
+
+## 전세: rental contract có embedded finance
+
+`전세` dùng deposit lớn thay monthly rent truyền thống. Tenant giao lump sum và kỳ vọng nhận lại cuối contract theo law/contract.
+
+Economic logic:
+
+```text
+large deposit
+→ landlord có capital sử dụng
+→ return/opportunity cost thay monthly rent
+```
+
+Khi interest rate, housing price và credit environment đổi, attractiveness và risk của jeonse đổi theo.
+
+Jeonse vì vậy là housing + finance, không chỉ custom.
+
+## 전세사기 và risk literacy
+
+Deposit lớn tạo tail risk nếu ownership, senior debt, guarantee hoặc contract structure có vấn đề. High-profile fraud cases làm public awareness về `등기부`, deposit guarantee và landlord risk tăng.
+
+Culture lesson quan trọng: một institution quen thuộc có thể được perceived safe vì familiarity, nhưng familiarity không loại financial/legal risk.
+
+Với transaction thực tế phải dùng current legal/official guidance, không dựa chapter văn hoá này.
+
+## 월세 và hybrid rent
+
+`월세` dùng monthly payment, thường với deposit nhỏ hơn jeonse; real market có nhiều hybrid arrangement.
+
+Choice phụ thuộc:
+
+- liquidity;
+- loan rate;
+- expected stay;
+- housing price expectation;
+- risk tolerance;
+- opportunity cost của deposit.
+
+Do đó “jeonse tốt hơn wolse” không thể trả lời universal.
+
+## 내 집 마련: home ownership như adulthood milestone
+
+`내 집 마련` mang meaning security, autonomy và wealth accumulation. Khi generation trước mua nhà trong một price-income regime khác, expectation “đến tuổi này nên có nhà” có thể persist dù affordability đã đổi.
+
+Đây là **lagging norm**: social timeline update chậm hơn economic constraint.
+
+Khi norm và reality lệch, cá nhân có thể cảm giác failure dù constraint structural.
+
+## 영끌: language của leverage pressure
+
+`영끌` là slang rút từ `영혼까지 끌어모으다`, nghĩa là gom tối đa resource, thường được dùng trong discourse về vay/mua asset. Nó capture tâm lý khi household sợ bỏ lỡ market và dùng leverage cao.
+
+Đây là cultural vocabulary quanh finance, không phải strategy recommendation. Leverage làm return và loss đều amplify.
+
+Nếu equity `E`, asset `A`, debt `D` với `A=E+D`, percentage change nhỏ của asset có thể tạo percentage change lớn hơn trên equity khi D cao.
+
+## 청약: scarce allocation tạo strategy
+
+Housing subscription `청약` dùng rule về qualification, points/categories và supply; chi tiết policy thay đổi nên phải check current official source.
+
+Cultural significance nằm ở planning horizon dài: household mở account, theo dõi eligibility và supply, cân nhắc marriage/child/location status.
+
+Khi resource scarce và allocation rule explicit, participant sẽ optimize around rule. Đây là game theory bình thường, không phải “lách luật” mặc định.
+
+## 학군 và housing capitalization
+
+School reputation, academy access, transit và peer network có thể capitalized vào house price.
+
+Feedback loop:
+
+```text
+school/academy reputation
+→ demand từ household
+→ price tăng
+→ selection by wealth
+→ resource/network concentration
+→ reputation tiếp tục mạnh
+```
+
+Education inequality và housing inequality vì thế có thể reinforce nhau.
+
+## 수도권 집중 và housing pressure
+
+Jobs và universities concentration kéo demand về 수도권. Supply khó adjust instant, nên commute/housing cost tăng.
+
+Một worker có thể move Seoul vì job opportunity rồi chịu housing burden do chính concentration tạo ra. Đây là agglomeration paradox.
+
+## 자산 vs 소득: income không phải toàn bộ class position
+
+Hai household có cùng salary nhưng khác housing asset/inheritance sẽ có financial resilience khác. Khi property value lớn, wealth gap và income gap không giống nhau.
+
+Cultural discourse `금수저/흙수저` phản ánh awareness rằng **initial capital** ảnh hưởng trajectory.
+
+Mathematically:
+
+```text
+same yearly income
++ different initial wealth
++ compounding return
+→ widening asset path
+```
+
+## 증여·상속 và intergenerational transfer
+
+Khi housing entry cost cao, parental support cho deposit/down payment có thể ảnh hưởng timing kết hôn và home purchase. `부모 찬스` là discourse về unequal family resource.
+
+Không phải mọi family nhận support, và transfer chịu law/tax. Cultural point là family wealth có thể trở thành hidden variable trong adulthood milestone.
+
+## 결혼 비용 và housing linkage
+
+Wedding expenditure, jeonse/home deposit và household setup làm marriage vừa romantic vừa financial project. Khi housing expectation cao, marriage timing có thể phụ thuộc capital formation.
+
+Đây là connection giữa chapter family, demography và economy:
+
+`결혼` không thể phân tích tách khỏi `주거`.
+
+## 소비: status signal, quality signal và belonging
+
+Luxury goods, car, dining và fashion đôi khi signal status. Nhưng consumption cũng có functional reason: durability, service, resale, brand trust hoặc community belonging.
+
+Veblen-style conspicuous consumption chỉ là một subset.
+
+Một object có thể simultaneously:
+
+```text
+use value
++ quality signal
++ status signal
++ group identity
+```
+
+Đừng suy motive từ product một cách chắc chắn.
+
+## 명품 và “small luxury”
+
+`명품` trong Korean usage thường chỉ luxury brand. Có discourse rằng người trẻ mua luxury dù housing khó, nhưng cần tránh moral narrative đơn giản. Consumer có thể prioritize visible experience when large asset goal cảm giác unattainable; nhưng pattern thay mạnh theo income.
+
+“Small luxury” là một response possible, không phải law universal.
+
+## 카드·할부 và financialized consumption
+
+Credit card, installment và easy payment làm timing của consumption tách khỏi timing cash outflow. Đây là **intertemporal choice**.
+
+Installment có thể hữu ích cho liquidity nhưng cũng giảm salience của total price. Financial literacy cần nhìn total obligation, không chỉ monthly amount.
+
+## 주식·코인 và aspiration về mobility
+
+Equity/crypto participation trong public discourse thường gắn với aspiration tăng tài sản nhanh khi wage growth cảm giác chậm hơn asset price. Nhưng investment culture khác speculation; risk distribution và horizon matter.
+
+Chapter này chỉ giải cultural context, không đưa investment recommendation. Bộ [`../investing/README.md`](../investing/README.md) xử lý kiến thức đầu tư riêng.
+
+## 갑질: power asymmetry có thể được sản xuất bởi structure
+
+`갑질` không chỉ là personality xấu. Nếu vendor phụ thuộc một buyer, worker khó exit, hoặc customer review có power rất lớn, structure làm abuse cost thấp hơn.
+
+Institution giảm risk bằng contract clarity, complaint channel, labour protection và competition.
+
+Power tốt nhất được phân tích bằng **outside option**: nếu bên yếu có alternative tốt, khả năng bị ép giảm.
+
+## 개천에서 용 난다: mobility narrative
+
+Thành ngữ `개천에서 용 난다` biểu thị upward mobility từ background khiêm tốn. Trong industrializing Korea, education được nhiều người trải nghiệm như ladder mạnh.
+
+Khi asset/inheritance tăng weight, narrative có thể yếu đi và `수저계급론` xuất hiện.
+
+Perceived mobility quan trọng vì nó ảnh hưởng effort, trust và fertility decision. Nếu people tin ladder đóng, họ có thể thay strategy dù objective mobility vẫn tồn tại ở mức nào đó.
+
+## Cumulative advantage: lợi thế nhỏ có thể compound
+
+```text
+better family resources
+→ better location/education access
+→ stronger credentials/network
 → better job probability
-→ higher income
-→ easier housing access
+→ higher savings capacity
+→ easier housing entry
+→ more resources cho next generation
 ```
 
-Đây là **cumulative advantage (lợi thế tích luỹ / 누적 우위)**. Nó giải thích vì sao inequality không chỉ là chênh lệch income tại một thời điểm mà còn là difference trong trajectory.
+Không step nào deterministic, nhưng correlation có thể tích luỹ. Đây là **cumulative advantage / 누적 우위**.
+
+## Knowledge Connection: economy như constraint layer của culture
+
+Một custom chỉ bền nếu household đủ resource thực hiện. Wedding lớn, private education, gift exchange, apartment location và leisure đều có cost.
+
+Khi economic environment thay, culture có ba response:
+
+1. **shrink** — làm nhỏ hơn;
+2. **substitute** — đổi sang form rẻ/nhanh hơn;
+3. **delay/exit** — trì hoãn hoặc bỏ practice.
+
+Đây là framework hữu ích để hiểu simplified wedding, smaller holiday ritual, late marriage và one-person household.
 
 ## Mental Model
 
-> Nhiều hiện tượng thường được gọi là “văn hoá cạnh tranh” thực ra là response của con người trước một payoff landscape: khi một số school, job và location trả reward cao hơn đáng kể, competition tập trung vào các bottleneck đó.
+> Nhiều hiện tượng gọi là “văn hoá cạnh tranh” thực chất là **adaptive behaviour dưới inequality của payoff và scarcity của bottleneck**. School, employer và housing location có reward khác nhau; household phản ứng bằng education spending, credential, saving, leverage và network. Culture nằm trong cách society diễn giải những strategy này, nhưng incentive nằm dưới chúng.
 
 ## Common Misconceptions
 
-### “Chaebol = mọi tập đoàn Hàn Quốc”
+“Chaebol = mọi tập đoàn Hàn Quốc” sai.
 
-Không đúng. Đây là một loại business group mang đặc điểm lịch sử và ownership nhất định.
+“SME = công ty tệ” là overgeneralization; quality distribution rất rộng.
 
-### “Jeonse là sống miễn phí”
+“Jeonse = ở miễn phí” bỏ opportunity cost và risk của deposit.
 
-Tenant không trả monthly rent theo kiểu thông thường nhưng chịu opportunity cost của deposit và nhiều loại risk. Money locked trong deposit có giá trị thời gian.
+“Apartment đắt chỉ vì người Hàn thích apartment” bỏ jobs, transit, schools, supply và finance.
 
-### “Giá nhà cao chỉ vì người Hàn thích apartment”
+“Người trẻ mua luxury vì vô trách nhiệm tài chính” là moral simplification không có denominator.
 
-Preference là một input, nhưng supply, jobs concentration, transport, school district, finance và expectation cùng tham gia.
+“Home ownership là milestone tự nhiên” bỏ lịch sử giá nhà, credit và generation-specific constraint.
 
 ## Nguồn tham khảo định hướng
 
-Với housing và household finance, ưu tiên Statistics Korea, Bank of Korea, Ministry of Land, Infrastructure and Transport và Korea Real Estate Board. Với corporate structure, dùng Korea Fair Trade Commission và tài liệu corporate governance đáng tin cậy.
+Với housing và rental market: Ministry of Land, Infrastructure and Transport, Korea Real Estate Board, Statistics Korea và Bank of Korea. Với chaebol/business group: Korea Fair Trade Commission và disclosure/corporate-governance source. Với policy như `청약`, tax, loan và tenant protection, luôn dùng rule hiện hành thay vì học cứng từ chapter cultural analysis.
