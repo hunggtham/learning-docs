@@ -8,9 +8,9 @@ Một khu căn hộ lớn có thể hoạt động gần như một **thành ph�
 
 ## 이사: chuyển nhà như một lần di chuyển cả hệ thống
 
-**Chuyển nhà (moving / 이사)** nghe giống một việc logistics đơn giản, nhưng thực tế kéo theo nhiều hệ thống con: đồ đạc, hợp đồng nhà, điện–nước–gas, địa chỉ, trường học, quãng đường đi làm và mạng lưới hàng xóm.
+**Chuyển nhà (moving / 이사)** nghe giống một việc hậu cần (logistics) đơn giản, nhưng thực tế kéo theo nhiều hệ thống con: đồ đạc, hợp đồng nhà, điện–nước–gas, địa chỉ, trường học, quãng đường đi làm và mạng lưới hàng xóm.
 
-Nếu ví hộ gia đình như một hệ thống phần mềm, `이사` gần với di chuyển hệ thống (system migration) hơn là sao chép file. Không chỉ dữ liệu — đồ đạc — phải chuyển; các phụ thuộc cũng phải đổi: điện, gas, Internet, địa chỉ nhận hàng, tuyến đến trường và hồ sơ hành chính.
+Nếu ví hộ gia đình như một hệ thống phần mềm, `이사` gần với **di chuyển hệ thống (system migration)** hơn là sao chép tệp. Không chỉ dữ liệu — đồ đạc — phải chuyển; các phụ thuộc cũng phải đổi: điện, gas, Internet, địa chỉ nhận hàng, tuyến đến trường và hồ sơ hành chính.
 
 Chính vì số lượng phụ thuộc lớn, Hàn Quốc có thị trường **dịch vụ chuyển nhà (moving service / 이삿짐센터)** và **chuyển nhà trọn gói (full-service moving / 포장이사)** phát triển. Hộ gia đình trả tiền để chuyển một phần chi phí phối hợp sang nhà cung cấp dịch vụ.
 
@@ -73,11 +73,11 @@ Thang máy tạo những tương tác vi mô lặp lại hằng ngày. Giữ c�
 
 Đây là tính ẩn danh đô thị trong một “ngôi làng thẳng đứng”.
 
-## 택배 và căn hộ như điểm cuối logistics
+## 택배 và căn hộ như điểm cuối của mạng hậu cần
 
 **Giao bưu kiện (parcel delivery / 택배)** trở nên rất hiệu quả khi nhiều hộ tập trung trong cùng khu. Một người giao hàng có thể giao nhiều gói trong khoảng cách ngắn. Địa chỉ chuẩn hoá, mã vào cửa, sảnh và tủ nhận hàng tiếp tục giảm chi phí giao dịch.
 
-Khi mua sắm trực tuyến tăng, lối vào khu căn hộ trở thành một giao diện logistics. Bưu kiện không còn là sự kiện đặc biệt mà trở thành hạ tầng nền.
+Khi mua sắm trực tuyến tăng, lối vào khu căn hộ trở thành một giao diện của mạng hậu cần. Bưu kiện không còn là sự kiện đặc biệt mà trở thành hạ tầng nền.
 
 Nhưng tiện lợi này tạo vấn đề thứ cấp: lưu trữ hàng, nguy cơ thất lạc, rác bìa carton và lưu lượng người giao hàng.
 
@@ -125,7 +125,7 @@ Bản sắc này được xây bằng sự tiếp xúc lặp lại. Một nơi t
 
 ## 당근 và chợ số địa phương
 
-Nền tảng đồ cũ địa phương giúp người cùng khu trao đổi đồ với chi phí logistics thấp. Điểm thú vị là ứng dụng có thể biến tính ẩn danh đô thị thành mạng niềm tin địa phương qua xác minh vị trí và danh tiếng.
+Nền tảng đồ cũ địa phương giúp người cùng khu trao đổi đồ với chi phí hậu cần thấp. Điểm thú vị là ứng dụng có thể biến tính ẩn danh đô thị thành mạng niềm tin địa phương qua xác minh vị trí và danh tiếng.
 
 Một khu dân cư trước đây được định nghĩa chủ yếu bằng gặp mặt trực tiếp; giờ có thêm lớp số. Một người chưa từng nói chuyện với hàng xóm tầng trên lại có thể giao dịch với người lạ cách 500 mét qua ứng dụng.
 
@@ -139,15 +139,86 @@ Chức năng “đồng bộ hoá cư dân” không biến mất; kênh giao ti
 
 Đây là tính liên tục về chức năng: giấy thông báo → loa/bảng tin → SMS/thông báo ứng dụng.
 
+## 무장애와 접근성: thiết kế quyết định ai có thể tự sử dụng không gian
+
+**Không rào cản (무장애 / barrier-free)** và **khả năng tiếp cận (접근성 / accessibility)** không chỉ phục vụ một nhóm nhỏ. Đường dốc, thang máy, tay vịn, cửa đủ rộng, mặt sàn ít trơn và biển chỉ dẫn dễ hiểu có lợi cho người dùng xe lăn, người cao tuổi, người đẩy xe trẻ em, người đang chấn thương hoặc người mang hành lý nặng.
+
+Có thể nhìn khả năng sử dụng nhà ở theo chuỗi:
+
+```text
+cửa vào
+→ sảnh
+→ thang máy
+→ hành lang
+→ cửa căn hộ
+→ phòng tắm / bếp / ban công
+```
+
+Chỉ cần một mắt xích không tiếp cận được, toàn chuỗi có thể bị gián đoạn. Một toà nhà có thang máy nhưng lối vào có nhiều bậc cao vẫn chưa tạo ra hành trình không rào cản đầy đủ.
+
+Đây là lý do **thiết kế phổ quát (universal design)** cố tạo môi trường dùng được cho nhiều khả năng cơ thể ngay từ đầu thay vì chỉ sửa chữa sau khi có vấn đề.
+
+## 욕실과 낙상: phòng tắm là nơi chi tiết nhỏ thành rủi ro lớn
+
+Phòng tắm Hàn Quốc thường có bề mặt ướt, ngưỡng cửa, sàn cứng và không gian tương đối nhỏ. Với người cao tuổi hoặc người suy giảm thăng bằng, các chi tiết như tay vịn, độ chống trượt, chiều cao bồn cầu, ánh sáng và khả năng gọi hỗ trợ có thể quyết định mức độc lập hằng ngày.
+
+Đây là ví dụ điển hình cho nguyên tắc:
+
+```text
+rủi ro cá nhân
+× thiết kế môi trường
+→ xác suất sự cố thực tế
+```
+
+Không thể quy mọi lần té ngã cho “cơ thể yếu”; môi trường có thể làm rủi ro tăng hoặc giảm đáng kể.
+
+## 엘리베이터 의존성: thang máy là hạ tầng sống, không chỉ tiện ích
+
+Trong toà nhà cao tầng, thang máy là điều kiện để nhiều cư dân có thể ra ngoài. Với người dùng xe lăn, người cao tuổi khó leo cầu thang hoặc gia đình có xe đẩy, việc thang máy hỏng có thể biến căn hộ thành không gian gần như bị cô lập tạm thời.
+
+Điều này cho thấy độ tin cậy của thiết bị có ý nghĩa xã hội. Lịch bảo trì, nguồn điện dự phòng, thông báo sửa chữa và khả năng tiếp cận thang máy khác không chỉ là vấn đề kỹ thuật; chúng ảnh hưởng quyền tham gia đời sống bên ngoài căn hộ.
+
+## Aging-in-place: già đi trong nơi ở quen thuộc
+
+**Già hoá tại nơi ở quen thuộc (ageing-in-place)** là ý tưởng người cao tuổi có thể tiếp tục sống ở nhà hoặc khu mình quen thuộc càng lâu càng tốt nếu sức khoẻ và hỗ trợ cho phép. Giá trị của nó không chỉ là “không phải chuyển nhà”, mà còn giữ mạng hàng xóm, tuyến đi bộ, hiệu thuốc, bệnh viện, chợ và ký ức không gian.
+
+Nhưng mong muốn ở lại chỉ khả thi khi nhiều lớp cùng đáp ứng:
+
+```text
+nhà ở an toàn
++ thang máy / lối đi tiếp cận được
++ dịch vụ chăm sóc tại nhà
++ giao thông và y tế gần
++ mạng hỗ trợ xã hội
++ khả năng chi trả
+```
+
+Nếu thiếu một lớp, gia đình có thể phải lựa chọn giữa chuyển tới cơ sở chăm sóc, chuyển gần con cái hoặc tăng lao động chăm sóc tại nhà.
+
+Vì vậy già hoá tại nơi ở quen thuộc nối trực tiếp nhà ở với y tế, giao thông và kinh tế chăm sóc; nó không thể giải bằng việc lắp một tay vịn đơn lẻ.
+
+## 스마트홈과 돌봄: công nghệ có thể hỗ trợ nhưng không thay thế toàn bộ con người
+
+Cảm biến cửa, nút gọi khẩn cấp, phát hiện chuyển động, điều khiển nhiệt độ hoặc thiết bị nhắc thuốc có thể hỗ trợ người sống một mình. Nhưng thiết bị cũng tạo vấn đề mới về quyền riêng tư, lỗi cảm biến, kết nối mạng và khả năng sử dụng giao diện.
+
+Một hệ thống chăm sóc tốt cần phân biệt:
+
+```text
+việc công nghệ làm tốt → cảnh báo, ghi nhận, tự động hoá lặp lại
+việc con người vẫn quan trọng → đánh giá tình huống, giao tiếp, chăm sóc cơ thể, hỗ trợ cảm xúc
+```
+
+Công nghệ giảm một số ma sát nhưng không biến nhu cầu chăm sóc thành bằng 0.
+
 ## Liên hệ kiến thức: khu căn hộ như một hệ điều hành
 
 Khu căn hộ có phần cứng — toà nhà, đường ống, thang máy, bãi đỗ — và phần mềm — quy tắc quản lý, chuẩn cư dân, thông báo và kiểm soát ra vào. Mỗi hộ chạy “ứng dụng” riêng trên nền tảng dùng chung đó.
 
-Nếu thiết kế nền tảng tốt, nhiều xung đột được ngăn bằng mặc định: cách âm tốt, đủ tủ nhận hàng, phân bổ chỗ đỗ rõ và khu phân loại rác dễ hiểu. Nếu thiết kế kém, cư dân phải dùng thương lượng xã hội để bù.
+Nếu thiết kế nền tảng tốt, nhiều xung đột được ngăn bằng mặc định: cách âm tốt, đủ tủ nhận hàng, phân bổ chỗ đỗ rõ, lối đi tiếp cận được và khu phân loại rác dễ hiểu. Nếu thiết kế kém, cư dân phải dùng thương lượng xã hội hoặc lao động chăm sóc để bù.
 
 ## Mô hình tư duy
 
-> Đời sống căn hộ là bài toán **hạ tầng dùng chung**. Nhiều điều tưởng chỉ là phép lịch sự — tiếng ồn, rác, đỗ xe, bưu kiện — thực ra xuất hiện vì hàng trăm hộ đang dùng chung tài nguyên có năng lực hữu hạn.
+> Đời sống căn hộ là bài toán **hạ tầng dùng chung + khả năng tiếp cận**. Nhiều điều tưởng chỉ là phép lịch sự — tiếng ồn, rác, đỗ xe, bưu kiện — thực ra xuất hiện vì hàng trăm hộ đang dùng chung tài nguyên có năng lực hữu hạn. Đồng thời, chất lượng nhà ở còn được đo bằng việc người có khả năng cơ thể khác nhau có thể tự sử dụng không gian đến mức nào.
 
 ## Những hiểu lầm phổ biến
 
@@ -159,6 +230,10 @@ Nếu thiết kế nền tảng tốt, nhiều xung đột được ngăn bằng
 
 “Giao hàng tiện vì công nghệ” mới là nửa câu chuyện; mật độ đô thị và thiết kế toà nhà cũng là điều kiện quan trọng.
 
+“Nhà có thang máy thì tự động thân thiện với người cao tuổi/người khuyết tật” là sai; toàn bộ hành trình từ cửa đường phố tới các không gian bên trong mới quyết định khả năng tiếp cận.
+
+“Già hoá tại nhà chỉ là lựa chọn của gia đình” bỏ qua dịch vụ chăm sóc, giao thông, thiết kế nhà và nguồn lực kinh tế cần để lựa chọn đó khả thi.
+
 ## Đọc tiếp
 
-Đọc cùng [`08_home_space_hanok_clothing_aesthetics.md`](08_home_space_hanok_clothing_aesthetics.md), [`12_city_consumption_digital_life.md`](12_city_consumption_digital_life.md), [`24_economy_chaebol_housing_status_mobility.md`](24_economy_chaebol_housing_status_mobility.md) và [`27_internet_communities_messaging_slang_memes.md`](27_internet_communities_messaging_slang_memes.md).
+Đọc cùng [`08_home_space_hanok_clothing_aesthetics.md`](08_home_space_hanok_clothing_aesthetics.md), [`12_city_consumption_digital_life.md`](12_city_consumption_digital_life.md), [`15_contemporary_change_demography_migration.md`](15_contemporary_change_demography_migration.md), [`24_economy_chaebol_housing_status_mobility.md`](24_economy_chaebol_housing_status_mobility.md), [`26_health_medicine_wellness_body.md`](26_health_medicine_wellness_body.md) và [`27_internet_communities_messaging_slang_memes.md`](27_internet_communities_messaging_slang_memes.md).
