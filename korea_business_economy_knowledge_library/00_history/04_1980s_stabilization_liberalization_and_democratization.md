@@ -1,83 +1,175 @@
-# Thập niên 1980: ổn định, tự do hóa và chuyển từ “được bảo hộ” sang cạnh tranh hơn (Stabilization & Liberalization / 안정화·자율화)
+# Thập niên 1980: ổn định, tự do hóa, dân chủ hóa và chuyển sang cạnh tranh dựa trên năng suất (Stabilization & Liberalization / 안정화·자율화)
 
-Bước vào thập niên 1980, Hàn Quốc không còn là economy nhỏ chỉ sản xuất hàng nhẹ, nhưng cái giá của tăng trưởng nhanh đã hiện rõ: inflation, overcapacity, debt và sự can thiệp quá sâu vào allocation. Vì vậy policy focus chuyển dần từ “đầu tư càng nhanh càng tốt” sang **stabilization, restructuring và liberalization**.
+Bước vào 1980s, South Korea đã có steel mills, shipyards, auto plants, petrochemical complexes và electronics factories. Nhưng success của 1970s HCI đi cùng inflation, leverage, overcapacity và allocation distortions. Vì vậy policy problem thay đổi: **không còn chỉ là “xây thêm capacity”, mà là làm cho capacity hiện có trở nên efficient và financially sustainable hơn**.
 
-## Vì sao phải ổn định sau HCI?
+Thập niên 1980 vì vậy là bridge giữa developmental-state era và economy dựa nhiều hơn vào competition, market signals, technology và capital-market discipline.
 
-Khi capital investment tăng quá nhanh, aggregate demand có thể vượt supply và tạo inflation. Nếu firm vay nhiều để xây capacity nhưng global demand giảm, debt service trở thành gánh nặng. Sau second oil shock và downturn đầu thập niên 1980, Hàn Quốc phải xử lý chính những vấn đề này.
+## Stabilization sau HCI: growth không thể chỉ dựa vào investment volume
 
-Ổn định (stabilization / 안정화) nghĩa là giảm inflation, kiểm soát macro imbalance và buộc investment discipline trở lại. Nó không phải đối lập với growth; nó là điều kiện để capital allocation trở nên bền vững hơn.
+Khi investment tăng quá nhanh, demand for credit, materials và labor có thể vượt supply, kéo inflation lên. Nếu capacity được xây trước demand, utilization giảm và debt service vẫn phải trả.
 
-## Từ sector-specific support sang market discipline nhiều hơn
+Đây là reason policy chuyển sang **macroeconomic stabilization / 거시경제 안정화**.
 
-KDI mô tả cải cách tài chính đầu thập niên 1980 như quá trình thận trọng: government giảm dần một số hỗ trợ theo ngành và tiến tới deregulation, trade liberalization và financial reform. Đây không phải overnight free market. Korea chuyển từng bước từ state-directed allocation sang system có market signals mạnh hơn.
+Stabilization không phải “chống growth”. Nó cố khôi phục conditions để investment decisions phản ánh return hơn là administrative momentum.
 
-Một economy có thể dùng directed credit hiệu quả khi số ngành và project còn ít, nhưng khi economy phức tạp hơn, central authority khó biết project nào có return cao. Information problem tăng theo complexity. Đây là lý do thị trường vốn, competition và price signals trở nên quan trọng hơn khi nền kinh tế trưởng thành.
+Một useful distinction:
 
-## Import liberalization: competition đi vào domestic market
+\[
+Growth\ Quantity \neq Growth\ Quality
+\]
 
-Mở cửa nhập khẩu làm doanh nghiệp nội địa mất một phần protection. Khi goods nước ngoài cạnh tranh trực tiếp, firm không thể dựa mãi vào captive domestic market. Import liberalization vì vậy là một productivity test.
+Nếu GDP tăng nhờ investment lớn nhưng marginal return on capital giảm, same model eventually hits financial constraint.
 
-Nhưng adjustment không đồng đều. Một số firm nâng quality và technology; một số sector dư thừa capacity phải restructure. Chính sách mở cửa tạo winner và loser, nên luôn có political economy conflict.
+## Restructuring: capacity phải được reallocated
 
-## “Three lows” và export boom cuối thập niên 1980
+Overbuilt sectors cần consolidation, shutdown, merger hoặc new demand. Đây là **industrial restructuring / 산업구조조정**.
 
-Nửa sau thập niên 1980, Hàn Quốc hưởng lợi từ môi trường thường được gọi là **3저 호황**: oil price thấp, interest rate quốc tế thấp và đồng dollar yếu so với yen sau Plaza Accord khiến hàng Nhật tương đối đắt hơn. Korea có cơ hội cạnh tranh mạnh hơn trong export manufacturing.
+Restructuring có social cost. Factory closure làm worker mất job; lender nhận bad loan; region mất tax base. Vì vậy adjustment thường political difficult.
 
-Điểm cần nhớ là external tailwind có thể làm firm nhìn tốt hơn fundamental capability. Khi phân tích lịch sử company, nên tách improvement do productivity khỏi improvement do favorable macro environment.
+Nhưng giữ every weak project alive cũng có cost: capital và labor remain trapped in low-return uses.
 
-## Democratization và labor relations
+Đây là early version của **creative destruction vs transition protection** debate vẫn tồn tại trong modern Korea.
 
-Dân chủ hóa năm 1987 đi cùng thay đổi lớn trong labor movement. Wage tăng nhanh hơn, union power mạnh hơn và quan hệ lao động trở thành variable kinh tế quan trọng. Firms không thể tiếp tục dựa vào low-wage model của thập niên 1960.
+## Financial liberalization: giảm directed credit nhưng không chuyển đổi overnight
 
-Điều này lại đẩy doanh nghiệp lên higher value added: automation, quality, branding và technology trở nên cần thiết hơn. Rising wages vì vậy vừa là cost pressure vừa là force thúc đẩy upgrading.
+1980s chứng kiến gradual reform của finance, interest rates, banking và capital market. Nhưng transformation không xảy ra trong một đêm.
 
-## Hyundai và bước vào thị trường Mỹ
+Directed-credit institutions và relationship banking vẫn tồn tại, trong khi firms lớn ngày càng muốn access more diversified finance. Transitional systems often create hybrid incentives: market discipline tăng nhưng implicit expectations about support chưa biến mất hoàn toàn.
 
-Hyundai bắt đầu xuất khẩu Excel sang Hoa Kỳ năm 1986. Đây là bước chuyển từ exporter ở emerging markets sang competition tại developed market. Những vấn đề quality và brand perception sau đó cho thấy export volume không đủ; long-term success cần after-sales service, reliability và R&D.
+Điều này quan trọng vì later 1990s leverage risk xuất hiện trong một environment nơi corporate expansion nhanh hơn tốc độ maturation của risk management và supervision.
 
-## Electronics đi từ assembly sang technology race
+> Mental model: liberalization không phải công tắc `state → market`; nó là quá trình thay đổi từng price, institution và constraint.
 
-Samsung và LG trong thập niên 1980 mở rộng electronics và component capability. Semiconductor trở thành ngành chiến lược đặc biệt vì capital intensity cao, technology cycle nhanh và scale economy mạnh. Samsung bước sâu vào memory semiconductor, đặt nền cho vị thế toàn cầu sau này.
+## Why market signals become more valuable as economy gets complex
 
-Semiconductor là ví dụ rõ cho transition từ **cost-based competition** sang **technology-based competition**. Wage advantage giảm nhưng yield, process technology, capex timing và R&D có thể tạo moat mới.
+Khi economy nhỏ và có vài strategic projects, government may coordinate directly. Nhưng khi thousands of firms, products và technologies emerge, information requirement explodes.
 
-## Chaebol và vấn đề concentration
+No central planner can know every project’s demand elasticity, customer preference và technical risk.
 
-Khi large groups ngày càng đa ngành, economic concentration trở thành policy issue. Fair Trade Act và competition policy phát triển trong bối cảnh này. Từ đây, quan hệ state–chaebol chuyển dần từ “chủ yếu hỗ trợ tăng trưởng” sang vừa hỗ trợ competitiveness vừa kiểm soát concentration và unfair practices.
+Price, profit, interest rate và bankruptcy therefore become **information mechanisms**. Market signal không hoàn hảo, nhưng nó decentralizes information processing.
+
+Đây là structural reason advanced economy cần deeper markets hơn early catching-up economy.
+
+## Import liberalization: domestic firms mất captive market
+
+Gradual import opening exposes domestic firms to foreign goods. Protection previously allowed local producers time to learn; but long protection can preserve inefficiency.
+
+Import competition creates pressure on quality, design, cost control, delivery, R&D và after-sales service. Đây là **competitive discipline / 경쟁규율** applied inside domestic market.
+
+Adjustment differs by firm. Efficient producers upgrade; weak producers shrink. Liberalization therefore redistributes market share rather than uniformly raising every firm’s productivity.
+
+## “Three lows” boom: external tailwind can amplify internal upgrading
+
+Second half 1980s Korea benefited from environment often called **3저 호황** — lower oil prices, lower international interest rates and favorable currency conditions relative to Japan after Plaza Accord.
+
+These changes affect different parts of corporate economics:
+
+```text
+Oil ↓            → input/import bill ↓
+Global rates ↓   → foreign financing burden ↓
+Yen appreciation → Japanese competitors relatively more expensive
+```
+
+Korean exporters gained breathing room to scale and improve.
+
+But analyst should separate **macro tailwind** from **structural capability**. Strong earnings during favorable external regime do not prove firm would remain competitive after conditions reverse.
+
+## Rising wages: cost shock and upgrading pressure at the same time
+
+Democratization and stronger labor organization around 1987 changed wage bargaining and industrial relations. Wage growth accelerated in many sectors.
+
+Firm response can be decomposed into six routes: absorb lower margin; raise price if pricing power exists; automate; improve productivity; move to higher-value products; or relocate labor-intensive production abroad.
+
+This is why rising wage is not merely negative for industrial upgrading. It weakens low-wage strategy and forces firms toward capital, technology and brand.
+
+## Democratization changes the social contract of firms
+
+Industrialization gains are not distributed automatically. Labor bargaining, unions and political institutions affect who captures productivity gains.
+
+After democratization, workplace relations become more contested and formalized. Firms must manage not just production cost but labor relations, workplace safety, benefits and negotiation.
+
+This change contributes to a modern corporate environment where HR system and industrial relations are strategic variables, not administrative afterthoughts.
+
+Xem [../12_labor_titles_compensation_and_workplace](../12_labor_titles_compensation_and_workplace.md).
+
+## Consumer economy becomes more sophisticated
+
+Rising household income and urban middle class expand demand for automobiles, electronics, department stores, finance, travel and branded goods.
+
+This changes corporate challenge from “produce enough basic goods” to “differentiate products”. Marketing, design, distribution and customer service become forms of intangible capital.
+
+The 1988 Seoul Olympics and increased international exposure symbolized a broader shift: Korean firms increasingly compared themselves not just with domestic peers but global brands.
+
+## Hyundai in the US: volume is easier than reputation
+
+Hyundai’s US expansion in 1980s shows difference between **market entry** and **brand quality**.
+
+Low price can attract first-time buyers, but long-run success requires reliability, warranty economics, dealer network, service and resale value.
+
+This becomes a major lesson for 1990s–2000s: Korean firms must upgrade from export volume to **brand trust + quality system**.
+
+## Electronics: from assembly capability to technology race
+
+Samsung and LG expand electronics and components; semiconductor becomes especially important.
+
+Semiconductor changes competitive logic because technology generation moves fast, fixed cost is huge and yield matters. A firm cannot rely only on cheap labor.
+
+Core variables become process technology, equipment timing, yield, R&D, capacity planning and product cycle.
+
+This is a shift from **cost advantage** to **capability advantage**.
+
+## Capital markets grow in relevance
+
+As firms and household savings expand, securities markets and non-bank finance become more relevant. Listed equity and corporate bonds gradually offer alternatives to pure bank finance.
+
+Capital market adds new discipline: share price, disclosure and investor expectations affect management.
+
+But deeper markets also expose firms to volatility and foreign capital flows. Liberalization increases opportunity and sensitivity simultaneously.
+
+Xem [../10_capital_markets_kospi_kosdaq_konex](../10_capital_markets_kospi_kosdaq_konex.md).
+
+## Chaebol concentration becomes a regulatory problem
+
+In 1960s–1970s, policy primarily asks which firms can build industrial capacity fast. By 1980s, another question becomes unavoidable: what happens when the same groups control many affiliates, transactions and markets?
+
+Competition policy and Fair Trade framework grow in importance because large-group scale can create market concentration, control leverage, supplier bargaining asymmetry, internal-transaction concerns and entry barriers.
+
+Policy objective therefore becomes two-sided: preserve scale needed for global competition while limiting abuse and systemic risk. This tension remains central in Korean corporate policy today.
+
+## Overseas production begins to make more economic sense
+
+As domestic wages rise and firms globalize, relocating some labor-intensive production to lower-cost locations becomes rational.
+
+Overseas plant is not merely “cheap labor”. It can also reduce tariff, shorten delivery to customer, hedge FX and access local market.
+
+This is the beginning of Korea’s transition from exporter to **multinational production network**, a process accelerating in 1990s–2000s.
+
+## 1980s set up the vulnerability of 1990s
+
+The decade ends with more sophisticated firms, higher wages, deeper finance and greater globalization. But transition also creates tension: business groups remain highly leveraged; finance liberalizes gradually; risk supervision is still developing; firms seek faster overseas expansion; and global capital becomes easier to access.
+
+In other words, Korea gains new growth channels before fully mastering new financial risks.
+
+This is the institutional bridge to 1997 crisis.
 
 ## Mental Model
 
-> Thập niên 1980 là giai đoạn Korea bắt đầu thay “tăng trưởng bằng allocation” bằng “tăng trưởng bằng competition”. State vẫn quan trọng, nhưng market signal, imports, labor bargaining và technology pressure tăng đáng kể.
+> 1980s is the decade Korea shifts from **growth by mobilization** toward **growth by efficiency, competition and technology**. State coordination remains, but imports, labor bargaining, capital markets and global competition increasingly discipline firms.
 
 ## Common misconceptions
 
-“Tự do hóa” không có nghĩa government biến mất. Trong Korea, liberalization xảy ra theo từng sector và đồng thời với industrial policy mới. Cũng không nên cho rằng democratization chỉ là political event; nó thay đổi wage formation, labor relations và cost structure của firm.
+“Liberalization means government disappears” is wrong. Industrial policy, regulation and public finance remain important; only instruments and relative market role change.
+
+“Rising wage only hurts competitiveness” is incomplete. It hurts low-productivity firms but can accelerate automation and upgrading.
+
+“Three-lows boom proves Korean firms had no real capability” is also wrong. External tailwinds amplified firms that had already built substantial industrial capacity. Capability and macro conditions interacted.
 
 ## Connections
 
-Xem [../22_tax_regulation_and_competition](../22_tax_regulation_and_competition.md), [../12_labor_titles_compensation_and_workplace](../12_labor_titles_compensation_and_workplace.md) và [../10_capital_markets_kospi_kosdaq_konex](../10_capital_markets_kospi_kosdaq_konex.md).
+Next: [05_1990s_globalization_and_1997_crisis](./05_1990s_globalization_and_1997_crisis.md). For supporting concepts read [../12_labor_titles_compensation_and_workplace](../12_labor_titles_compensation_and_workplace.md), [../22_tax_regulation_and_competition](../22_tax_regulation_and_competition.md) and [../10_capital_markets_kospi_kosdaq_konex](../10_capital_markets_kospi_kosdaq_konex.md).
 
-### Nguồn nền để đọc thêm
+### Nguồn nền
 
-KDI, *Korea's Financial Reform since the Early 1980s*; KDI, *Import Liberalization and Industrial Adjustment in Korea*; KDI, *The Korean Economy in Historical Perspectives*.
-
-## Financial liberalization không diễn ra trong một đêm
-
-Directed-credit system của các thập niên trước dần được nới nhưng banking/finance không lập tức trở thành free market hoàn chỉnh. Interest-rate controls, bank ownership, capital-market development và foreign-capital access thay đổi theo nhiều bước. Điều này quan trọng vì corporate leverage structure của 1990s là sản phẩm của transition chưa hoàn chỉnh: firms lớn đã có appetite đầu tư toàn cầu nhưng risk discipline của finance chưa trưởng thành tương ứng.
-
-## Seoul Olympics và consumer economy trưởng thành hơn
-
-Cuối 1980s, rising income, urban middle class và international exposure làm consumption pattern đổi. Electronics, automobiles, department stores, advertising và services tăng vai trò. Korean firms không còn chỉ học cách export; họ phải học brand, design và domestic consumer segmentation.
-
-Đây là nền cho bước chuyển 1990s từ “manufacturer” sang “global brand owner”.
-
-## Labor democratization và wage-productivity bargaining
-
-Sau democratization, labor organization mạnh hơn và wage tăng nhanh ở nhiều sectors. Về economics, đây vừa là redistribution của gains từ industrialization vừa tạo pressure nâng productivity.
-
-Firms có ba phản ứng: automate, move up value chain hoặc relocate labor-intensive production. Vì vậy rising wage không chỉ là cost shock; nó có thể accelerate industrial upgrading nếu firm có capability đầu tư.
-
-## Conglomerate concentration trở thành policy problem mới
-
-Khi chaebol lớn mạnh, policy objective chuyển từ “tạo national champions” sang cân bằng scale benefits với concentration/financial risk. Cross-shareholding, diversification và bank–corporate links bắt đầu bị xem là governance questions, mở đường cho reforms mạnh hơn sau 1997.
+- KDI, *Korea's Financial Reform since the Early 1980s*.
+- KDI, *Import Liberalization and Industrial Adjustment in Korea*.
+- KDI historical studies on Korean stabilization, liberalization and structural transformation.
