@@ -6,274 +6,392 @@
 
 Real assets gắn trực tiếp hơn với physical productive assets, scarce resources hoặc rights over them. Property, farmland, infrastructure, oil reserves và precious metals là examples.
 
-Financial assets như stocks/bonds are claims on cash flows or obligations. Real assets can also generate cash flows—real estate rents, toll roads, pipelines—but valuation depends physical scarcity and replacement cost more directly.
+Financial assets như stocks/bonds là claims trên cash flows hoặc obligations. Real assets cũng có thể tạo cash flow—real estate rents, toll roads, pipelines—but valuation phụ thuộc physical scarcity, replacement cost và local regulation trực tiếp hơn.
 
-## 2. Tại sao real assets có thể liên quan inflation?
+## 2. Real asset không đồng nghĩa inflation hedge tuyệt đối
 
-Inflation can raise replacement cost, rents, commodity prices or nominal revenues. But hedge is not one-to-one.
+Inflation có thể đẩy replacement cost, rents, commodity prices hoặc nominal revenues lên. Nhưng hedge không one-to-one.
 
-If inflation shock causes central banks to raise real rates sharply, leveraged real estate can fall despite rents rising. Gold can fall with rising real yields. Infrastructure with regulated fixed tariffs may lag inflation.
+Nếu inflation shock buộc central bank tăng real rates mạnh, leveraged real estate có thể giảm dù rents tăng. Gold có thể giảm nếu real yields/USD tăng. Infrastructure với regulated fixed tariffs có thể lag inflation.
 
-Always ask whether asset has pricing power, debt structure and pass-through mechanism.
+Luôn hỏi asset có pricing power, pass-through mechanism, debt structure và repricing speed ra sao.
 
 ## 3. Direct real estate vs listed real estate
 
-Owning apartment/building directly creates concentrated local exposure, leverage, taxes, maintenance and illiquidity. Listed REIT provides fractional/liquid market exposure but price reacts immediately to rates and risk sentiment.
+Owning apartment/building trực tiếp tạo concentrated local exposure, leverage, taxes, maintenance, vacancy và illiquidity. Listed REIT cung cấp fractional/liquid exposure nhưng price reacts nhanh với rates và risk sentiment.
 
-Direct property appears less volatile partly because not repriced every second. Economic risk can still exist.
+Direct property trông ít volatile partly vì không mark-to-market từng giây. Economic risk vẫn tồn tại nhưng được quan sát chậm hơn.
 
-## 4. REIT structure
+## 4. Direct-property underwriting
 
-Real Estate Investment Trust (*REIT*) owns income-producing property and distributes substantial earnings/cash under applicable legal/tax regime.
+Một property investment nên bắt đầu từ operating cash flow chứ không phải câu “giá nhà thường tăng”. Framework cơ bản:
 
-REIT economics depend Net Operating Income (*NOI*), occupancy, rents, capex, financing and property values.
+`Gross rent → vacancy/credit loss → operating expenses → NOI → financing → capex → after-debt cash flow`
 
-FFO/AFFO are often more useful than net income because accounting depreciation of property may not reflect economic value decline in same way industrial equipment does.
+NOI không trừ interest/debt service. Sau đó investor cần model maintenance capex, taxes, transaction costs và realistic exit cap rate.
 
-## 5. NOI, FFO và AFFO
+Một property yield cao có thể phản ánh location risk, tenant quality, lease rollover hoặc capex backlog.
+
+## 5. Loan-to-Value và Debt Service Coverage
+
+Loan-to-Value (*LTV*) đo leverage relative property value. Debt Service Coverage Ratio (*DSCR*) đo cash flow so với required debt service.
+
+High LTV làm equity return mạnh khi price tăng nhưng cũng tạo nonlinear downside. Nếu NOI giảm và refinancing rate tăng cùng lúc, equity có thể bị squeeze dù property vẫn operationally profitable.
+
+## 6. REIT structure
+
+Real Estate Investment Trust (*REIT*) owns income-producing property và phân phối phần lớn earnings/cash theo legal/tax regime applicable.
+
+REIT economics phụ thuộc NOI, occupancy, rents, capex, financing, acquisition/disposition và property values.
+
+FFO/AFFO thường hữu ích hơn net income vì accounting depreciation của property không phản ánh economic depreciation theo cách giống factory equipment.
+
+## 7. NOI, FFO và AFFO
 
 NOI = property revenue minus property-level operating expenses before financing/corporate costs.
 
-FFO commonly adjusts net income for real-estate depreciation and gains/losses on property sales. AFFO attempts further adjustment for recurring maintenance capex and straight-line rent, but definitions can vary.
+FFO thường add back real-estate depreciation và loại gains/losses on property sales. AFFO cố điều chỉnh thêm recurring maintenance capex và accounting items như straight-line rent, nhưng definition giữa managers khác nhau.
 
-Investor should reconcile manager-defined AFFO rather than accept headline blindly.
+Investor nên reconcile management AFFO về cash economics thay vì chấp nhận headline.
 
-## 6. Cap rate
+## 8. Same-store NOI
 
-Capitalization rate roughly:
+Same-store NOI theo dõi properties có mặt trong cả hai kỳ, giúp tách organic rent/occupancy growth khỏi growth do acquisition.
+
+REIT tăng FFO mạnh chỉ vì mua thêm property bằng debt/equity có economics khác REIT tăng same-store NOI và AFFO/share.
+
+## 9. Cap rate
 
 `Cap Rate = Property NOI / Property Value`
 
-Higher cap rate implies lower value for same NOI. When risk-free rates rise, required cap rates may rise, reducing property value, though rent growth can offset.
+Cap rate tăng nghĩa required property yield cao hơn và value thấp hơn cho cùng NOI. Cap rate chịu risk-free rates, credit spread, local supply-demand, asset quality và lease duration.
 
-Spread between cap rate and financing/risk-free rate gives useful context but property quality/location matters.
+Investor nên nhìn spread giữa cap rate và financing/risk-free rate nhưng không coi nó là rule cơ học.
 
-## 7. REIT leverage
+## 10. REIT leverage và refinancing
 
-Real estate is naturally leveraged. Analyze debt/asset value, net debt/EBITDA, fixed vs floating debt, maturity ladder, secured debt and covenant headroom.
+Phân tích debt/asset value, net debt/EBITDA, fixed vs floating debt, secured debt, covenant headroom và maturity ladder.
 
-A REIT can own excellent buildings yet issue equity at depressed prices if refinancing stress hits, diluting shareholders.
+REIT có excellent assets vẫn có thể dilute shareholder nếu maturity wall gặp high-rate environment. Refinancing risk thường quan trọng hơn current coupon.
 
-## 8. Property types differ
+## 11. Property types khác nhau
 
-Office depends employment, work-from-home and lease rollover. Logistics depends e-commerce/supply chains. Data centers depend power availability and AI/cloud demand. Retail depends tenant health. Residential depends household formation, rents and regulation.
+Office chịu employment, WFH và lease rollover. Logistics chịu e-commerce, supply chains và land scarcity. Data centers chịu power availability, AI/cloud demand và capex. Residential chịu household formation, affordability, rent regulation. Hotels chịu occupancy, room rates và tourism cycle.
 
-Never value all REITs using same growth/cap-rate assumption.
+Không nên dùng một cap-rate hoặc growth assumption cho toàn bộ real estate.
 
-## 9. Gold as monetary asset
+## 12. Lease structure và inflation pass-through
 
-Gold has scarcity, durable physical properties and long history as reserve/store-of-value. It does not generate internal cash flow.
+Lease có thể fixed escalation, CPI-linked, market-reset hoặc percentage rent. Short leases reprice nhanh hơn nhưng vacancy risk cao hơn; long leases ổn định hơn nhưng có thể lag inflation.
 
-Key drivers: real yields, USD, central-bank purchases, geopolitical/financial confidence, jewelry demand and investor positioning.
+Inflation hedge quality của real estate phụ thuộc lease mechanics, không chỉ asset class label.
 
-Because no cash flow anchors valuation, price can be strongly influenced by macro regime.
+## 13. Development risk
 
-## 10. Gold and real yields
+Property development khác owning stabilized assets. Development thêm permitting, construction cost, delay, financing, leasing và exit-value risk.
 
-Higher real yield raises opportunity cost of holding gold. This relationship is important but not perfect because fiscal/sovereign confidence and central-bank demand can dominate.
+Yield-on-cost phải được so với stabilized cap rate. Nếu build yield chỉ nhỉnh hơn market cap rate rất ít, development premium có thể không đủ bù risk.
 
-Do not reduce gold thesis to CPI. Hot CPI causing real yields/USD higher can pressure gold.
+## 14. Gold as monetary asset
 
-## 11. Physical gold, KRX Gold, ETF và futures
+Gold có scarcity, durability và history như reserve/store-of-value. Nó không tạo internal cash flow.
 
-Physical gold has storage/spread/authenticity issues. Exchange gold accounts/market products differ by jurisdiction/tax. Physical-backed ETF adds fund/custody fee. Futures add roll/margin.
+Key drivers gồm real yields, USD, central-bank purchases, geopolitical/financial confidence, jewelry demand và positioning.
 
-Product wrapper determines tracking and currency exposure. Choose structure based intended role, not name.
+Vì không có cash flow anchor, valuation của gold nhạy mạnh với macro regime và opportunity cost.
 
-## 12. Oil economics
+## 15. Gold và real yields
 
-Oil demand comes transport, industry/petrochemicals and global activity. Supply depends OPEC+, shale, conventional fields, geopolitics and investment cycles.
+Higher real yield làm opportunity cost of holding gold tăng. Relationship này quan trọng nhưng không perfect vì fiscal/sovereign confidence, central-bank diversification và geopolitical demand có thể dominate.
 
-Inventories and spare capacity determine shock sensitivity. Low inventories/spare capacity make supply disruptions more explosive.
+Không nên reduce gold thesis thành “CPI tăng thì gold tăng”.
 
-## 13. Demand-driven vs supply-driven oil rally
+## 16. Gold valuation intuition
 
-Demand rally often signals strong growth. Supply shock can create stagflation: inflation up, household real income down, growth expectations lower.
+Vì gold không có DCF truyền thống, investor có thể dùng real-yield regime, central-bank demand, positioning, ETF flows, production cost và relative purchasing-power history như context.
 
-Same Brent +20% can therefore have opposite equity-sector message.
+Không có một fair-value formula duy nhất. Điều đó làm margin of safety khó đo hơn equity/bond.
 
-## 14. Oil futures curve
+## 17. Physical gold, KRX Gold, ETF và futures
 
-Contango can reflect abundant inventories/storage cost; backwardation often scarcity/value of immediate barrels. But curve interpretation is nuanced.
+Physical gold có storage/spread/authenticity. Exchange gold products khác nhau về tax/custody. Physical-backed ETF có fund/custody fee. Futures có margin và roll.
 
-Futures investor return includes spot/curve movement and roll, so oil ETF may not equal crude headline price.
+Product wrapper quyết định tracking, currency và operational risk. Chọn structure theo portfolio role.
 
-## 15. Energy equities vs oil
+## 18. Oil economics
 
-Producer equity value depends reserves, production volume, lifting cost, capex, taxes, hedges and balance sheet.
+Oil demand đến từ transport, industry/petrochemicals và global activity. Supply phụ thuộc OPEC+, shale, conventional fields, geopolitics và long investment cycles.
 
-Oil +30% does not mean producer stock +30%. Company may have hedged output, high decline rates or heavy capex requirements.
+Inventories và spare capacity quyết định shock sensitivity. Low inventories/spare capacity làm supply disruption bùng giá mạnh hơn.
 
-## 16. Refiners
+## 19. Demand-driven vs supply-driven oil rally
 
-Refinery earnings depend crack spreads—the difference between product prices and crude/input cost—plus utilization and inventory effects.
+Demand rally thường đi cùng strong growth. Supply shock có thể tạo stagflation: inflation tăng, real income giảm và growth expectation yếu.
 
-Crude price direction alone is insufficient. Oil falling with gasoline/diesel prices falling slower can improve margin.
+Cùng Brent +20% nhưng macro message có thể trái ngược.
 
-## 17. Natural gas
+## 20. Commodity futures curve
 
-Gas markets are more regional because pipeline/LNG infrastructure. Weather, storage, liquefaction capacity and transport constraints drive prices.
+Commodities có term structure theo expiries. Contango thường liên quan storage/financing và abundant inventory; backwardation thường phản ánh scarcity/convenience yield cao.
 
-Global LNG links regions increasingly but basis differentials remain.
+Curve không chỉ là hình dạng giá; nó phản ánh economics của carrying physical inventory.
 
-## 18. Copper
+## 21. Convenience yield
 
-Copper demand links construction, grids, electronics, EVs and industrial capex. Supply has mine-grade, permitting and geopolitical constraints.
+*Convenience yield* là benefit phi-tiền-mặt của việc có physical inventory sẵn để production/fulfillment. Khi inventory khan hiếm, convenience yield tăng và near-term futures có thể rich hơn deferred contracts.
 
-Copper is often called growth indicator, but supply shock can raise price even while demand weak. Combine price with inventories and PMIs.
+Khái niệm này giúp hiểu vì sao commodity futures không đơn giản equal spot plus interest.
 
-## 19. Iron ore và steel chain
+## 22. Roll yield
 
-Iron ore heavily linked steel production and China construction/manufacturing. Steel margin depends finished prices minus raw materials/energy.
+Investor duy trì futures exposure phải roll. Persistent contango có thể tạo negative roll; backwardation có thể tạo positive roll, nhưng actual return còn phụ thuộc curve moves và collateral return.
 
-High iron ore can hurt steel mills if product prices cannot pass through. Commodity-chain analysis requires margin, not single input.
+Commodity ETF vì vậy có thể khác đáng kể spot headline price.
 
-## 20. Agricultural commodities
+## 23. Calendar spreads
 
-Agricultural prices respond weather, planting area, yields, inventories, fertilizer, energy, export restrictions and geopolitics.
+Calendar spread trade relative price giữa expiries. Drivers gồm inventory, seasonality, storage constraints, refinery maintenance hoặc temporary disruptions.
 
-They can impact food inflation but investability via futures includes seasonality and roll effects.
+Spread trade giảm outright beta nhưng không market-neutral hoàn toàn; spread có thể move violent khi logistics bottleneck xuất hiện.
 
-## 21. Commodity producers vs commodity futures
+## 24. Producer cost curve
 
-Producer equities embed operating leverage, management, country tax and balance-sheet risk. Futures provide cleaner commodity price exposure but include curve/margin mechanics.
+Commodity producers nên được đặt trên cost curve. Low-cost producer có resilience tốt hơn khi commodity price giảm.
 
-Choose based thesis. If thesis is copper scarcity, copper miner adds mine-specific risks.
+Cost curve gồm cash cost, sustaining capex, royalties, transport và sometimes carbon/closure obligations. Headline “cost per unit” của management cần được normalized.
 
-## 22. Infrastructure
+## 25. Reserve life và depletion
 
-Infrastructure includes toll roads, airports, ports, utilities, pipelines, towers and data infrastructure. Cash flows can be long-lived and sometimes inflation-linked.
+Mining/oil company đang khai thác finite reserves. Production growth mà không replace reserves có thể không bền.
 
-Analyze concession length, regulation, demand, capex and debt. “Infrastructure is defensive” fails if leverage high or tariff regulation unfavorable.
+Theo dõi reserve life, reserve replacement ratio, grade decline, decline rate và exploration/development capex.
 
-## 23. Utilities
+## 26. Energy equities vs commodity price
 
-Utilities may have regulated returns or merchant-market exposure. Regulated utility value depends allowed ROE, rate base growth, financing and regulatory relationship.
+Producer equity return phụ thuộc price, volume, cost, capex, tax, hedges và leverage. Commodity +30% không đồng nghĩa producer +30%.
 
-Rising rates pressure valuation/financing; electrification/AI power demand may raise capex opportunity but also funding needs.
+High operating leverage có thể làm equity tăng hơn commodity ở upside nhưng cũng collapse nhanh hơn trong downturn.
 
-## 24. Farmland/timber
+## 27. Refiners và spread economics
 
-Farmland can generate crop rents/output and land appreciation; timber has biological growth and harvest timing optionality.
+Refinery earnings phụ thuộc crack spread, utilization, inventory effects và product mix. Crude direction đơn giản không đủ.
 
-Direct access is illiquid and operational. Funds may have fee/valuation complexity. Do not infer expected return from historical land indexes without considering leverage and smoothing.
+Oil giảm trong khi product prices giảm chậm hơn có thể improve crack spread; oil tăng rất nhanh có thể hurt working capital.
 
-## 25. Crypto không phải một homogeneous asset class
+## 28. Natural gas và regional basis
 
-Bitcoin's scarcity/security narrative differs from smart-contract platforms, stablecoins and governance tokens.
+Gas markets regional vì pipeline/LNG infrastructure. Weather, storage, liquefaction, pipeline capacity và geopolitics làm basis giữa regions lớn.
 
-Many tokens have supply schedules, insider allocations, protocol revenues or no cash-flow claim. Analyze each economic design.
+Global LNG tăng integration nhưng không xóa transport constraints.
 
-## 26. Bitcoin
+## 29. Copper và industrial metals
 
-Bitcoin has fixed-rule supply issuance and decentralized network, but valuation is demand-driven because it does not create conventional cash flow.
+Copper demand liên kết construction, grids, electronics, EVs và industrial capex. Supply có mine grade, permitting và geopolitical constraints.
 
-Drivers include liquidity/risk appetite, adoption, regulation, custody access and narrative as digital scarce asset.
+Copper được dùng như growth indicator nhưng supply shock cũng có thể đẩy giá. Hãy đọc cùng inventories, treatment charges, PMI và mine supply.
 
-Drawdowns can be extreme, so allocation should be based risk contribution.
+## 30. Iron ore, steel và margin chain
 
-## 27. Stablecoins
+Iron ore liên quan China steel production; steel margin phụ thuộc finished product price minus iron ore/coking coal/energy.
 
-Stablecoin aims track fiat value. Risks include reserve quality, custody, issuer redemption, banking counterparties, smart contracts and regulation.
+High input price có thể hurt mill nếu pricing power yếu. Commodity analysis nên map toàn value chain.
 
-“Stable” describes target price, not absence of credit/liquidity risk.
+## 31. Agriculture
 
-## 28. Smart-contract/protocol risk
+Agricultural prices chịu weather, planted acreage, yield, inventory, fertilizer, energy, export restrictions và geopolitics.
 
-DeFi/protocol assets add code exploits, oracle risk, governance attacks, bridge risk and token-economic dilution.
+Seasonality lớn, nên futures curve và storage constraints quan trọng. Một crop shock có thể feed food inflation nhưng không nhất thiết kéo dài nhiều năm.
 
-Yield can be compensation for hidden tail risk rather than free return.
+## 32. Commodity futures vs producer equities
 
-## 29. Custody risk in crypto
+Futures cung cấp cleaner commodity-price exposure nhưng có curve/margin mechanics. Producer equities thêm operating leverage, management, country tax, reserve quality và balance sheet.
 
-Holding on exchange creates exchange/counterparty risk. Self-custody reduces some counterparty risk but adds key-management risk.
+Chọn instrument theo thesis source.
 
-Operational mistakes can be irreversible. Security procedures are part of investment thesis.
+## 33. Infrastructure
 
-## 30. Private equity
+Infrastructure gồm toll roads, airports, ports, utilities, pipelines, towers và digital infrastructure. Cash flows có thể long-lived và đôi khi inflation-linked.
 
-Private equity buys companies outside public markets, often using operational change/leverage. Returns depend entry valuation, growth/margin improvement, leverage, exit valuation and fees.
+Analyze concession length, regulation, demand elasticity, capex, debt và residual value sau concession.
 
-Less frequent marks smooth reported volatility but do not eliminate economic risk.
+## 34. PPP và concession risk
 
-## 31. Venture capital
+Public-private partnership hoặc concession có contractual cash flow nhưng chịu political/regulatory risk. Tariff formula, traffic guarantee, force-majeure và termination compensation cần đọc kỹ.
 
-VC portfolios have power-law outcomes: many failures, few huge winners. Access, manager selection and vintage diversification matter.
+Contract dài không tự động nghĩa low risk nếu government can renegotiate economics.
 
-Capital is locked for years; cash calls/distributions uncertain. Headline IRR can be sensitive timing.
+## 35. Utilities
 
-## 32. Private credit
+Regulated utility value phụ thuộc allowed ROE, rate-base growth, financing và regulatory relationship. Merchant utility phụ thuộc power price, fuel cost và capacity market.
 
-Private credit lends directly/non-bank to companies. Higher yield can compensate illiquidity, complexity and underwriting risk.
+AI/electrification có thể tăng demand/capex nhưng funding requirement cũng tăng mạnh.
 
-Analyze seniority, collateral, covenants, sponsor behavior, floating-rate burden and recovery assumptions.
+## 36. Farmland và timber
 
-A floating coupon benefits lender until borrower can't pay.
+Farmland tạo crop rents/output và land appreciation. Timber có biological growth và harvest timing optionality.
 
-## 33. Illiquidity premium
+Illiquidity, local regulation, water rights, climate và operating expertise quan trọng hơn historical index chart.
 
-Illiquid asset may offer premium because capital locked. But not every private asset earns premium; high fees/poor selection can consume it.
+## 37. Crypto không phải homogeneous asset class
 
-Illiquidity also removes ability to rebalance in crisis. Treat liquidity as portfolio resource.
+Bitcoin, smart-contract platforms, stablecoins và governance tokens có economic design khác nhau.
 
-## 34. Valuation smoothing
+Phải phân biệt asset có scarcity narrative, fee/revenue claim, collateral role hay purely speculative token.
 
-Private valuations often updated quarterly/model-based. Lower reported volatility may partly be stale marks.
+## 38. Bitcoin
 
-Compare economic leverage and cash-flow sensitivity, not Sharpe ratios using smoothed NAV without adjustment.
+Bitcoin có rule-based supply và decentralized network nhưng không tạo conventional cash flow. Value phụ thuộc adoption, liquidity, regulation, custody access và demand as scarce digital asset.
 
-## 35. J-curve
+Drawdowns cực lớn khiến allocation nên dựa risk contribution, không headline conviction.
 
-Private funds can show negative early returns as fees/investments precede exits, then improve later. This pattern is called J-curve.
+## 39. Stablecoin reserve analysis
 
-Investor needs liquidity planning for capital calls before distributions.
+Stablecoin cần được đọc như short-duration balance-sheet/custody structure. Check reserve assets, segregation, banking counterparties, redemption mechanism, attestation/audit và legal claim của holder.
 
-## 36. Capital calls
+“Stable” mô tả target price, không mô tả credit/liquidity safety.
 
-Commitment is not same as cash invested today. Fund may call capital over years.
+## 40. Smart-contract và protocol economics
 
-Overcommitment strategy can improve cash efficiency but becomes dangerous if distributions stop during crisis while calls continue.
+Protocol có thể thu fees nhưng token holder không nhất thiết có legal claim trên fees. Tokenomics, issuance, staking rewards, governance, treasury và insider unlocks quyết định dilution.
 
-## 37. Hedge funds
+APY cao có thể chỉ là token issuance chứ không economic yield.
 
-“Hedge fund” is legal/organizational category more than single strategy. Equity long-short, macro, relative value, event-driven and quant differ completely.
+## 41. Custody risk in crypto
 
-Analyze actual exposures, leverage, liquidity terms, fees and tail behavior.
+Exchange custody tạo counterparty risk; self-custody giảm một phần counterparty risk nhưng tăng operational/key risk.
 
-## 38. Collectibles
+Security procedure là phần của investment process, không phải vấn đề IT tách biệt.
 
-Art, watches, wine and collectibles face authentication, storage, insurance, dealer/auction spread and illiquidity.
+## 42. Private equity
 
-Index data often suffers selection bias. They are consumption/status assets as much as investments for many owners.
+Private equity return thường đến từ entry valuation, revenue/EBITDA growth, margin improvement, leverage/paydown và exit multiple.
 
-## 39. Inflation hedge phải được định nghĩa
+Một decomposition hữu ích:
 
-An inflation hedge can mean: preserves purchasing power over decades; rises during inflation surprises; or performs in stagflation. Those are different objectives.
+`Equity Return ≈ Operating improvement + Debt paydown + Multiple change + Leverage effect - Fees`
 
-Gold, commodities, REITs and infrastructure behave differently depending real rates and growth.
+Leverage có thể phóng đại cả good và bad outcomes.
 
-## 40. Diversification phải được test trong stress
+## 43. LBO intuition
 
-Asset with low normal correlation can become correlated during deleveraging. Private assets may look uncorrelated because stale marks.
+Leveraged Buyout dùng debt lớn để finance acquisition. Equity sponsor hưởng lợi nếu company tạo cash để repay debt và exit value đủ cao.
 
-Stress-test through inflation shock, recession, liquidity crisis and USD spike.
+Nhưng refinancing, covenant và recession risk cũng tăng. High IRR đôi khi đến từ leverage hơn business transformation.
 
-## 41. Liquidity bucket
+## 44. Private-market metrics: IRR và MOIC
 
-Portfolio should classify assets by realistic time to convert to cash without severe haircut: immediate liquid, moderate, illiquid/locked.
+Internal Rate of Return (*IRR*) nhạy timing cash flows. Multiple on Invested Capital (*MOIC*) đo tổng value relative invested capital nhưng bỏ time.
 
-Do not fund near-term liabilities with private/volatile assets just for yield.
+Một fund 2x trong 3 năm khác 2x trong 10 năm dù MOIC giống nhau. Nên nhìn cả IRR và MOIC.
 
-## 42. Due-diligence checklist
+## 45. TVPI, DPI và RVPI
 
-For any alternative ask: what economic cash flow/scarcity drives return; legal ownership; valuation method; leverage; liquidity/redemption; fees; tax; currency; counterparty/custody; historical stress behavior and role in portfolio.
+*TVPI* = total value / paid-in capital. *DPI* = distributions / paid-in capital. *RVPI* = residual value / paid-in capital.
 
-If role cannot be stated clearly—growth, income, inflation sensitivity, diversification or asymmetric speculation—the allocation is likely performance chasing.
+TVPI cao nhưng DPI thấp nghĩa phần lớn value vẫn unrealized và phụ thuộc marks. Đây là distinction quan trọng khi fund chưa exit.
 
-## 43. Mental model cuối cùng
+## 46. Subscription lines và IRR optics
 
-Real/alternative asset analysis:
+Fund có thể dùng short-term credit lines trước khi call investor capital. Điều này có thể tăng reported IRR vì investor cash được gọi muộn hơn dù underlying economics không thay nhiều.
 
-`Physical/economic driver → cash flow/scarcity → financing/leverage → wrapper/valuation → liquidity → regime sensitivity → portfolio role`
+Đừng so fund chỉ bằng headline IRR mà không hiểu cash-flow mechanics.
 
-Different wrapper can turn same underlying into very different investment experience.
+## 47. Venture capital
+
+VC có power-law return distribution: few winners tạo phần lớn return. Manager selection, access, follow-on reserves và vintage diversification quan trọng.
+
+Average company outcome không mô tả portfolio outcome tốt.
+
+## 48. Private credit
+
+Private credit cung cấp direct/non-bank loans. Yield cao có thể bù illiquidity, underwriting complexity và credit risk.
+
+Analyze seniority, collateral, covenants, leverage, sponsor behavior, floating-rate burden, PIK interest và recovery assumptions.
+
+## 49. Covenant-lite và PIK risk
+
+Covenant-lite loan cho borrower flexibility hơn nhưng lender mất early-warning/protection. Payment-in-Kind (*PIK*) cho phép interest capitalize thay vì cash pay, giúp short-term liquidity nhưng làm debt burden tăng.
+
+High stated yield không hữu ích nếu principal recovery thấp.
+
+## 50. Illiquidity premium
+
+Illiquid asset có thể earn premium vì capital locked, nhưng không phải guarantee. Manager fee, adverse selection và poor underwriting có thể consume toàn bộ premium.
+
+Illiquidity còn làm mất khả năng rebalance trong crisis.
+
+## 51. Valuation smoothing
+
+Private assets thường mark quarterly/model-based, khiến reported volatility/correlation thấp giả tạo.
+
+So economic leverage và cash-flow sensitivity, không chỉ Sharpe dựa smoothed NAV.
+
+## 52. J-curve và capital calls
+
+Private funds thường có negative early returns vì fees/investment trước exits, tạo J-curve. Commitments được draw theo capital calls qua nhiều năm.
+
+Investor cần liquidity reserve cho unfunded commitments, đặc biệt khi distributions stop trong crisis.
+
+## 53. Vintage diversification
+
+Private-market outcome phụ thuộc entry valuations và macro conditions lúc deploy capital. Một vintage đầu tư tại peak khác vintage sau recession.
+
+Diversify vintages để giảm timing concentration.
+
+## 54. Denominator effect
+
+Khi public markets rơi nhanh nhưng private NAV update chậm, private allocation as % portfolio có thể tăng cơ học. Investor có thể bị over target và thiếu liquidity cho calls.
+
+Đây là lý do private allocation phải được stress-tested với public drawdown.
+
+## 55. Secondary market
+
+Private-fund interests có thể bán trên secondary market nhưng thường có discount/premium phụ thuộc liquidity, manager quality và remaining assets.
+
+Secondary pricing giúp reveal economic value khi reported NAV stale.
+
+## 56. Hedge funds
+
+“Hedge fund” là organizational wrapper hơn single asset class. Equity long-short, macro, relative value, event-driven và quant có risk rất khác.
+
+Due diligence cần leverage, gross/net exposure, liquidity terms, side pockets, gates, fees và tail behavior.
+
+## 57. Collectibles
+
+Art, watches, wine và collectibles chịu authentication, storage, insurance, dealer spread, fashion cycle và illiquidity.
+
+Index data thường selection/survivorship-biased. Với nhiều owners, utility/consumption value quan trọng ngang investment return.
+
+## 58. Inflation hedge phải định nghĩa rõ
+
+“Inflation hedge” có thể nghĩa preserve purchasing power dài hạn, respond positively to inflation surprise, hoặc perform in stagflation. Ba mục tiêu khác nhau.
+
+Gold, commodities, REITs và infrastructure phản ứng khác nhau với real rates, growth và financing.
+
+## 59. Diversification trong stress
+
+Low normal correlation có thể biến mất khi deleveraging. Private assets có thể trông uncorrelated vì stale marks.
+
+Stress-test inflation shock, recession, liquidity crisis, USD spike, funding freeze và forced-selling scenario.
+
+## 60. Liquidity bucket
+
+Classify assets theo realistic time-to-cash without severe haircut: immediate liquid, moderate, illiquid/locked.
+
+Near-term liabilities không nên phụ thuộc private or volatile assets chỉ vì expected return cao hơn.
+
+## 61. Due-diligence workflow
+
+Với bất kỳ alternative nào, đi theo:
+
+`Economic driver → Cash flow/scarcity → Valuation method → Leverage/funding → Legal ownership → Liquidity/redemption → Fees/tax → Currency → Counterparty/custody → Stress behavior → Portfolio role`
+
+Nếu không thể giải thích return source và worst-case liquidity, allocation chưa đủ rõ.
+
+## 62. Mental model cuối cùng
+
+Real/alternative asset analysis không bắt đầu từ chart performance. Nó bắt đầu từ physical/economic engine, rồi mới tới financing, wrapper, valuation và portfolio role.
+
+`Driver → Cash flow/scarcity → Financing → Valuation → Liquidity → Regime sensitivity → Portfolio interaction`
+
+Cùng một underlying nhưng wrapper và leverage khác nhau có thể tạo investment experience hoàn toàn khác.
