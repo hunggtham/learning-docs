@@ -197,6 +197,56 @@ Tiếng Hàn doanh nghiệp có nhiều cụm tưởng giống nhau nhưng chứ
 
 Một phản hồi chỉ `네` có thể xác nhận đã nhận thông tin nhưng chưa có nghĩa hành động đã hoàn tất. Vì vậy với việc quan trọng, nên nói rõ đầu ra: `확인 후 3시까지 회신드리겠습니다.`
 
+## 재택근무·하이브리드근무: khi sự hiện diện không còn đồng nghĩa với có mặt tại văn phòng
+
+**Làm việc tại nhà (재택근무 / remote work)** và **làm việc lai (하이브리드근무 / hybrid work)** làm thay đổi một giả định cũ của quản trị: trước đây nhìn thấy một người tại bàn làm việc là tín hiệu dễ quan sát về sự hiện diện; khi làm việc phân tán, tổ chức phải thay tín hiệu đó bằng trạng thái công việc, lịch, tài liệu và đầu ra.
+
+Điểm khó không chỉ nằm ở công nghệ họp trực tuyến. Nó nằm ở việc chuyển từ **quản lý bằng sự hiện diện (presence-based management)** sang **quản lý bằng kết quả và khả năng quan sát (outcome/observability-based management)**. Nếu tổ chức vẫn giữ kỳ vọng “phải phản hồi ngay để chứng minh đang làm việc”, làm việc từ xa có thể chỉ chuyển văn hoá hiện diện từ chiếc ghế sang trạng thái trực tuyến.
+
+```text
+văn phòng truyền thống
+→ hiện diện vật lý là tín hiệu
+
+làm việc phân tán
+→ trạng thái nhiệm vụ + tài liệu + đầu ra là tín hiệu
+```
+
+Vì vậy một nhóm làm việc lai tốt cần xác định rõ việc nào phải đồng bộ theo thời gian thực và việc nào có thể làm bất đồng bộ. Cuộc họp dùng cho quyết định cần tương tác; tài liệu, phiếu công việc và biên bản dùng cho thông tin không cần mọi người có mặt cùng lúc.
+
+### 디지털 프레즌티즘: “luôn xanh trạng thái” không phải năng suất
+
+Khi hệ thống nhắn tin hiển thị trạng thái trực tuyến, một dạng **chủ nghĩa hiện diện số (digital presenteeism)** có thể xuất hiện: người lao động cảm thấy phải giữ trạng thái hoạt động, trả lời nhanh hoặc xuất hiện ở nhiều cuộc họp để chứng minh mình đang làm việc.
+
+Đây là một lỗi đo lường tương tự việc dùng số giờ ngồi văn phòng làm đại diện cho năng suất. Trạng thái xanh dễ đo hơn chất lượng quyết định, độ ổn định của mã nguồn hoặc mức hài lòng của khách hàng, nhưng dễ đo không có nghĩa là đo đúng.
+
+### 시차와 글로벌팀: múi giờ biến thành một ràng buộc tổ chức
+
+Trong nhóm Hàn Quốc–Việt Nam hoặc nhóm toàn cầu, chênh lệch múi giờ nhỏ vẫn có thể ảnh hưởng giờ họp; với nhóm trải rộng hơn, vấn đề càng rõ. Khi một cuộc họp được đặt thuận tiện cho trụ sở chính nhưng rơi vào tối muộn ở nơi khác, chi phí phối hợp bị chuyển sang nhóm ở xa.
+
+Vì vậy làm việc toàn cầu cần quy tắc về **giờ chồng lấn (overlap hours)**, thời hạn phản hồi, ngày nghỉ địa phương và ngôn ngữ tài liệu. Một nhóm nói “dùng tiếng Anh” chưa chắc đã giao tiếp công bằng nếu các quyết định quan trọng vẫn chỉ được chốt trong cuộc trò chuyện tiếng Hàn mà thành viên nước ngoài không tham gia.
+
+### 비동기 커뮤니케이션: tài liệu trở thành bộ nhớ của nhóm
+
+**Giao tiếp bất đồng bộ (asynchronous communication)** đặc biệt quan trọng trong nhóm phân tán. Một quyết định tốt nên có nơi lưu lại: phiếu công việc, biên bản, wiki hoặc nhật ký thay đổi. Điều này giảm phụ thuộc vào trí nhớ của một cá nhân và giảm việc người vắng mặt phải hỏi lại toàn bộ bối cảnh.
+
+Có thể nhìn theo chuỗi:
+
+```text
+thảo luận miệng
+→ quyết định
+→ ghi lại lý do
+→ gắn người phụ trách và thời hạn
+→ người khác có thể tiếp tục công việc mà không cần tái tạo bối cảnh
+```
+
+Đây là nơi `공유`, `회의록` và `인수인계` nối với nhau. Làm việc lai không tạo ra một văn hoá công sở hoàn toàn mới; nó làm chi phí của giao tiếp mơ hồ trở nên dễ thấy hơn.
+
+### 퇴근 후 연락: ranh giới công việc trong không gian số
+
+Khi điện thoại cá nhân cũng là thiết bị làm việc, giờ tan làm không còn tự động cắt kết nối. Tin nhắn có thể đến vào tối, cuối tuần hoặc ngày nghỉ. Vấn đề không chỉ là “có gửi tin nhắn hay không” mà là người nhận **có bị kỳ vọng phải phản hồi ngay không**.
+
+Một tổ chức có thể giảm xung đột bằng cách phân biệt thông tin có thể đọc ngày hôm sau với sự cố thật sự khẩn cấp, dùng lịch gửi chậm, luân phiên trực và quy tắc leo thang rõ. Khi ranh giới không được định nghĩa, nhân viên phải tự suy đoán bằng `눈치`, khiến chi phí tâm lý tăng.
+
 ## 꼰대: phê phán quyền lực lỗi thời
 
 **꼰대 (kkondae)** là từ phổ biến để chỉ người áp đặt kinh nghiệm, tuổi hoặc địa vị của mình lên người khác theo cách giáo điều. Từ này quan trọng vì nó cho thấy thứ bậc không chỉ được duy trì mà còn bị phê phán từ bên trong xã hội.
