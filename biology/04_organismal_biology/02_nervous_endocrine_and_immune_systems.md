@@ -1,248 +1,265 @@
-# Hệ thần kinh, nội tiết và miễn dịch — Nervous, Endocrine and Immune Systems (신경계, 내분비계와 면역계)
+# Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune Systems (신경계, 내분비계와 면역계)
 
-Animal physiology vừa cho thấy toàn cơ thể phải liên tục điều chỉnh blood pressure, glucose, temperature, water balance và nhiều variable khác. Nhưng regulation không thể xảy ra nếu các tissue hoạt động độc lập. Cơ thể cần những hệ thống communication có tốc độ, phạm vi và logic khác nhau.
+Animal physiology vừa cho thấy organism cần coordination giữa nhiều organ. Nhưng coordination có ít nhất ba kiểu bài toán khác nhau. Có response phải cực nhanh và định vị chính xác, như rút tay khỏi vật nóng. Có response cần chậm hơn nhưng kéo dài toàn thân, như điều chỉnh growth hay metabolism. Có response phải phân biệt “self–nonself”, nhận diện pathogen và tạo memory. Ba lớp control tương ứng nổi bật là **nervous system, endocrine system và immune system**.
 
-Ba network lớn là nervous system, endocrine system và immune system. Chúng thường được học thành ba chương riêng, nhưng trong cơ thể thật chúng cross-talk liên tục. Stress signal từ brain đổi hormone; hormone đổi immune state; cytokine từ immune cell ảnh hưởng brain và behavior. Chương này vì thế tập trung vào **communication architecture** chung trước khi đi vào từng hệ.
+> **Mental model:** nervous system tối ưu cho tốc độ và wiring; endocrine system tối ưu cho broadcast chemical signal; immune system tối ưu cho recognition + adaptive memory. Chúng không độc lập mà liên tục tương tác.
 
-## 1. Communication cần sender, signal, receiver và response
+## 1. Neuron là cell chuyên hóa cho information flow
 
-Một signal chỉ có meaning khi receiver có receptor phù hợp.
+**Neuron (뉴런)** có dendrite nhận input, soma tích hợp và axon truyền output tới cell khác.
 
-Ta có generic pattern:
+Thông tin trong neuron không phải electron chạy như dây đồng. Nó được mã hóa bằng thay đổi **membrane potential** do ion channel mở/đóng.
 
-```text
-sender
-  ↓ releases
-signal
-  ↓ reaches
-receptor-bearing target
-  ↓
-transduction
-  ↓
-response
-```
+Membrane chapter đã xây electrochemical gradient; nervous system khai thác gradient đó như communication medium.
 
-Nervous system dùng electrical signal dọc neuron và neurotransmitter ở synapse. Endocrine system dùng hormone trong blood. Immune system dùng cytokine, receptor và cell-cell contact.
+## 2. Resting membrane potential
 
-Khác nhau về medium, nhưng logic molecular tương tự cell signaling đã học.
+Neuron giữ K⁺ cao bên trong, Na⁺ cao bên ngoài nhờ transporter/pump và selective permeability.
 
-## 2. Neuron: cell chuyên hóa cho truyền tín hiệu nhanh
+Resting potential thường âm vì membrane permeable với K⁺ và distribution ion/protein charge.
 
-**Neuron (뉴런)** có dendrite nhận input, cell body tích hợp signal và axon truyền output xa.
+Na⁺/K⁺-ATPase duy trì gradient dài hạn; leak channel quyết định nhiều resting conductance.
 
-Long axon giải quyết spatial problem: signal không cần diffusion chậm qua toàn tissue.
+Pump không trực tiếp tạo từng spike; nó giữ “battery” ion để spike có thể xảy ra.
 
-Neuron dùng membrane potential — concept đã xây ở cell biology — để truyền information.
+## 3. Action potential
 
-## 3. Resting membrane potential: nền điện của neuron
+Khi depolarization đạt threshold, voltage-gated Na⁺ channel mở nhanh → Na⁺ vào → depolarization mạnh. Sau đó Na⁺ channel inactivate và voltage-gated K⁺ channel mở → K⁺ ra → repolarization.
 
-Neuron giữ Na⁺, K⁺ và các ion khác phân bố không đều hai bên membrane. Na⁺/K⁺ ATPase duy trì gradient lâu dài; ion channel quyết định permeability tức thời.
+Refractory period giúp spike đi một chiều và giới hạn firing frequency.
 
-Resting membrane potential thường negative bên trong.
+Action potential là **all-or-none event** ở một segment membrane; intensity stimulus thường được encode nhiều hơn bằng firing frequency/pattern chứ không phải spike “cao hơn”.
 
-Điều này không phải “cell chứa điện” kiểu battery đơn giản. Nó là state xuất hiện từ ion gradient + selective permeability.
+## 4. Myelin và saltatory conduction
 
-Metabolism cung cấp ATP để pump gradient; membrane biến gradient thành electrical potential. Một concept từ ba chapter trước bây giờ trở thành nervous function.
+Myelin cách điện axon, làm current lan xa hơn giữa node of Ranvier. Action potential được regenerate tại node, tạo **saltatory conduction** nhanh và energy-efficient hơn.
 
-## 4. Action potential: positive feedback tạo signal all-or-none
+Multiple sclerosis làm myelin CNS bị damage, cho thấy structure–function của myelin trực tiếp ảnh hưởng signal propagation.
 
-Khi membrane depolarize tới threshold, voltage-gated Na⁺ channel mở. Na⁺ vào làm depolarization mạnh hơn, mở thêm channel — một positive feedback.
+## 5. Synapse: từ electrical signal sang chemical signal rồi quay lại electrical
 
-Sau đó Na⁺ channel inactivate và K⁺ channel mở, K⁺ ra ngoài, membrane repolarize.
+Ở chemical synapse, action potential tới terminal → voltage-gated Ca²⁺ channel mở → Ca²⁺ trigger vesicle exocytosis → neurotransmitter release → bind receptor postsynaptic.
 
-```text
-small depolarization
-   ↓ threshold
-Na+ channels open
-   ↓
-more depolarization
-   ↓
-more Na+ channels open
-   ↓
-rapid spike
-```
+Một lần nữa, Ca²⁺ gradient + vesicle transport + receptor signaling từ cell biology được tái sử dụng.
 
-Refractory period giúp action potential đi một chiều và giới hạn firing rate.
+Synapse có delay nhỏ nhưng cho phép amplification, modulation và plasticity.
 
-Action potential là ví dụ perfect của dynamical switch tạo từ membrane biophysics.
+## 6. Excitatory và inhibitory input
 
-## 5. Myelin: tăng tốc bằng cách thay geometry của membrane
+Postsynaptic receptor có thể làm membrane dễ hoặc khó đạt threshold hơn.
 
-Myelin cách điện các đoạn axon. Action potential được regenerate chủ yếu ở node of Ranvier.
+Neuron tích hợp hàng nghìn input theo space/time. Output spike là result của network integration.
 
-Signal vì thế “nhảy” theo saltatory conduction, nhanh và energy-efficient hơn conduction liên tục.
+Điều này gần với weighted-sum idea trong artificial neural network, nhưng biological neuron phức tạp hơn nhiều về dynamics, chemistry và plasticity.
 
-Structure–function principle lại xuất hiện: thay architecture membrane đổi communication speed.
+## 7. Neurotransmitter không có một “ý nghĩa” cố định
 
-## 6. Synapse: electrical signal trở lại chemical signal
+Glutamate thường excitatory ở CNS, GABA thường inhibitory, nhưng effect cuối cùng phụ thuộc receptor subtype và ion gradient.
 
-Khi action potential tới axon terminal, voltage-gated Ca²⁺ channel mở. Ca²⁺ influx trigger vesicle fusion và neurotransmitter release.
+Acetylcholine làm skeletal muscle contract nhưng có thể giảm heart rate qua receptor khác.
 
-Neurotransmitter diffuse qua synaptic cleft và bind receptor trên target cell.
+Signal molecule không quyết định outcome một mình; receptor/context quyết định interpretation.
 
-Một synapse nối nhiều concept:
+## 8. Sensory transduction
 
-```text
-action potential
- ↓
-Ca2+ gradient
- ↓
-vesicle exocytosis
- ↓
-neurotransmitter diffusion
- ↓
-receptor signaling
- ↓
-postsynaptic response
-```
+Sensory receptor chuyển light, pressure, chemical, temperature hoặc sound thành electrical signal.
 
-Membrane transport, gradient, signaling và cytoskeleton đều gặp lại ở đây.
+Photoreceptor dùng opsin signaling; hair cell inner ear dùng mechanical channel; olfactory receptor thường dùng GPCR.
 
-## 7. Neural circuit: behavior xuất hiện từ network
+Nervous system bắt đầu bằng transduction physical world → membrane signal.
 
-Một neuron đơn không tạo perception hay behavior phức tạp. Circuit gồm nhiều excitatory/inhibitory connection tích hợp input.
+## 9. Reflex arc
 
-Network architecture ảnh hưởng output. Synaptic strength có thể thay đổi qua plasticity, tạo nền cho learning và memory.
+Một reflex cơ bản có sensory neuron → spinal integration → motor neuron → muscle response.
 
-Đây là emergence ở nervous-system scale.
+Brain vẫn nhận information, nhưng fast response có thể được tổ chức local ở spinal cord.
 
-## 8. Endocrine system: communication chậm hơn nhưng broadcast rộng
+Architecture phân cấp giảm latency.
 
-**Hormone (호르몬)** được secreted vào blood và có thể đi khắp body.
+## 10. Central và peripheral nervous system
 
-Nhưng chỉ target có receptor phù hợp phản ứng.
+CNS gồm brain/spinal cord; PNS nối CNS với body.
 
-Peptide hormone thường bind membrane receptor. Steroid hormone lipid-soluble có thể vào cell và bind intracellular receptor.
+Somatic system liên quan voluntary skeletal muscle/sensory; autonomic system điều chỉnh smooth muscle, cardiac muscle, gland.
 
-Chemistry của hormone quyết định route signaling — cùng principle từ molecular chapter.
+Sympathetic/parasympathetic không nên học kiểu “một cái stress, một cái relax” quá cứng; chúng có organ-specific pattern và phối hợp.
 
-## 9. Hormone axis và negative feedback
+## 11. Neuroplasticity
 
-Nhiều endocrine system tổ chức thành axis.
+Synapse strength có thể thay theo activity. Long-term potentiation/depression là model của synaptic plasticity liên quan learning/memory.
 
-Ví dụ hypothalamus → pituitary → peripheral gland. Hormone cuối thường feedback lên upstream center.
+Memory không nằm trong một “file” neuron; nó liên quan distributed network change.
+
+Gene expression và protein synthesis tham gia long-term plasticity, nối neuroscience với molecular genetics.
+
+## 12. Endocrine system: communication bằng hormone
+
+**Hormone (호르몬)** là signaling molecule được release và tác động target có receptor phù hợp, thường qua circulation.
+
+Hormone concentration thấp vẫn có effect vì receptor/signaling amplification.
+
+Endocrine signal chậm hơn synaptic signal nhưng có thể kéo dài và tác động nhiều tissue.
+
+## 13. Peptide và steroid hormone
+
+Peptide hormone hydrophilic thường bind membrane receptor và activate second messenger.
+
+Steroid hormone lipid-soluble có thể xuyên membrane, bind intracellular receptor và điều chỉnh transcription.
+
+Chemistry của signal quyết định signaling architecture.
+
+## 14. Hypothalamus–pituitary axis
+
+Hypothalamus nối nervous và endocrine system. Nó sense neural/internal state và điều khiển pituitary hormone.
+
+Axis như HPA (stress) hay HPT (thyroid) dùng nhiều tầng hormone + negative feedback.
 
 ```text
 hypothalamus
-   ↓ releasing hormone
-pituitary
-   ↓ tropic hormone
-endocrine gland
-   ↓ final hormone
-body tissues
-   ↖ negative feedback
+→ pituitary
+→ peripheral gland
+→ hormone
+↘ negative feedback upstream
 ```
 
-Cấu trúc nhiều tầng cho phép amplification và multiple control point.
+Cascade cho amplification và multi-level control.
 
-## 10. Insulin–glucagon: endocrine regulation của metabolism
+## 15. Thyroid hormone và metabolic rate
 
-Sau meal, blood glucose tăng. Insulin tăng uptake/storage glucose và anabolic process.
+TSH từ pituitary stimulate thyroid; thyroid hormone ảnh hưởng gene expression/metabolism ở nhiều tissue.
 
-Trong fasting, glucagon thúc đẩy liver release glucose và huy động energy store.
+Negative feedback của T3/T4 lên hypothalamus/pituitary giúp giữ range.
 
-Hai hormone không đơn giản “một tăng, một giảm”; chúng coordinate whole-body fuel distribution theo nutritional state.
+Clinical interpretation hormone vì vậy cần nhìn cả upstream/downstream, không chỉ một number.
 
-Cellular metabolism ở chapter trước được điều khiển bởi organism-level endocrine signal.
+## 16. Stress response
 
-## 11. Stress response: nervous và endocrine system phối hợp
+Acute stress có sympathetic activation và adrenal catecholamine; HPA axis tạo cortisol response chậm hơn.
 
-Acute threat activate sympathetic nervous system nhanh. Adrenal medulla release catecholamine, tăng heart rate và mobilize fuel.
+Stress response giúp mobilize energy và adjust physiology ngắn hạn, nhưng chronic dysregulation có consequence khác.
 
-Longer stress response có thể liên quan hypothalamic–pituitary–adrenal axis và cortisol.
+Biological stress không đơn giản là “cảm thấy lo”; nó là multi-system state.
 
-Cùng một event environment được xử lý ở nhiều time scale.
+## 17. Immune system: recognition problem
 
-## 12. Immune system: bài toán self, non-self và damage
+Immune system phải phát hiện threat nhưng tránh attack tissue bình thường quá mức.
 
-Immune system không chỉ “diệt vi khuẩn”. Nó phải phát hiện threat, phân biệt context, loại pathogen nhưng hạn chế damage cho host, và đôi khi tạo memory.
+**Innate immunity (선천면역)** nhận conserved pattern và phản ứng nhanh. **Adaptive immunity (적응면역)** tạo receptor diversity, clonal expansion và memory.
 
-Đây là classification/control problem cực khó vì pathogen evolution liên tục thay đổi target.
+Hai nhánh phối hợp, không phải two separate armies.
 
-## 13. Innate immunity: response nhanh dựa trên pattern
+## 18. Barrier immunity
 
-**Innate immunity (miễn dịch bẩm sinh / 선천면역)** dùng barrier, phagocyte, complement và receptor nhận các pattern phổ biến liên quan pathogen hoặc tissue damage.
+Skin, mucus, stomach acid, antimicrobial peptide và microbiota là first line defense.
 
-Response nhanh vì receptor đã được encoded sẵn trong germline.
+Ngăn entry thường hiệu quả hơn tiêu diệt pathogen sau invasion.
 
-Nhưng specificity hạn chế hơn adaptive immunity.
+Barrier nối anatomy, chemistry và ecology microbiome.
 
-## 14. Inflammation: defense có cost
+## 19. Pattern recognition và inflammation
 
-Injury hoặc infection làm cell release mediator, tăng blood flow và vascular permeability, recruit immune cell.
+Innate immune receptor nhận PAMP/DAMP, kích hoạt cytokine, vascular change và immune-cell recruitment.
 
-Inflammation giúp đưa defense tới site nhưng cũng có thể gây tissue damage nếu quá mạnh hoặc kéo dài.
+**Inflammation (염증)** giúp containment/repair nhưng nếu quá mạnh hoặc chronic có thể gây tissue damage.
 
-Đây là trade-off: defense mạnh có benefit nhưng không miễn phí.
+Inflammation vì vậy là regulated defense, không đồng nghĩa “infection”.
 
-## 15. Adaptive immunity: tạo specificity bằng receptor diversity
+## 20. Phagocyte và complement
 
-B cell và T cell có receptor diversity khổng lồ được tạo qua gene rearrangement.
+Neutrophil/macrophage có thể phagocytose microbe. Complement protein trong blood có thể opsonize, amplify inflammation và làm damage membrane pathogen.
 
-Khi clone có receptor phù hợp antigen được activate, clone expand.
+Innate system dùng recognition tương đối broad nhưng response nhanh.
 
-Ta có selection process ở cell population:
+## 21. Antigen presentation nối innate với adaptive
 
-```text
-many lymphocyte clones
-      ↓ antigen exposure
-matching clone activated
-      ↓
-clonal expansion
-      ↓
-effector + memory cells
-```
+Dendritic cell uptake/process antigen rồi present peptide trên MHC cho T cell.
 
-Logic này giống evolution theo nghĩa selection among variants, nhưng diễn ra trong immune repertoire của một organism.
+T cell không “nhìn thấy nguyên virus” theo cách kháng thể; receptor T cell nhận peptide–MHC complex.
 
-## 16. Antibody: structure quyết định specificity
+MHC diversity ảnh hưởng repertoire antigen presentation ở population.
 
-Antibody có variable region bind antigen và constant region recruit effector function.
+## 22. B cell và antibody
 
-Binding phụ thuộc shape/charge complementarity, quay lại protein structure–function.
+B cell receptor bind antigen; sau activation thích hợp, clone expand và differentiate thành plasma cell/memory cell.
 
-Class switching có thể giữ antigen specificity nhưng đổi constant region, làm effector function khác.
+Antibody có variable region nhận antigen và constant region recruit effector function.
 
-## 17. T cell: nhận antigen qua context của host cell
+Class switching thay constant region mà giữ antigen specificity tương đối, điều chỉnh loại response.
 
-T cell thường không bind free antigen như antibody. Chúng nhận peptide được trình bày trên MHC molecule.
+## 23. T cell
 
-Điều này cho immune system biết cả identity antigen và context cell presenting it.
+CD4 T cell điều phối immune response qua cytokine/help; CD8 cytotoxic T cell có thể kill infected/cancer cell presenting target peptide.
 
-Cytotoxic T cell có thể kill infected cell; helper T cell coordinate response qua cytokine.
+Adaptive immunity là network cell–signal, không chỉ antibody.
 
-## 18. Immune memory và vaccine
+## 24. Clonal selection: evolution-like logic trong cơ thể
 
-Sau primary response, một số memory cell tồn tại. Khi gặp antigen tương tự, response thường nhanh và mạnh hơn.
+B/T cell repertoire chứa nhiều receptor variation. Antigen “select” clone phù hợp để expand.
 
-Vaccination khai thác principle này bằng cách expose immune system tới antigen hoặc instruction tạo antigen trong condition controlled.
+Somatic hypermutation/affinity maturation ở B cell còn tạo variation và selection trong germinal center.
 
-Vaccine không “tăng immunity chung”; nó train adaptive memory đối với target cụ thể.
+Logic variation → selection → expansion giống evolutionary motif nhưng xảy ra trong immune cell population của một organism.
 
-## 19. Autoimmunity, allergy và immunodeficiency: regulation failure theo ba hướng
+## 25. Immune memory và vaccine
 
-Autoimmunity: response hướng vào self component.
+Sau response, memory B/T cell tồn tại lâu hơn, giúp secondary response nhanh/mạnh hơn.
 
-Allergy: response mạnh với antigen thường ít nguy hiểm.
+Vaccine đưa antigen/instruction theo cách kiểm soát để tạo adaptive memory mà giảm risk disease so với natural infection.
 
-Immunodeficiency: defense không đủ.
+Vaccine không tạo “hàng rào tuyệt đối” trong mọi case; effectiveness phụ thuộc pathogen, antigen, immune state và time.
 
-Ba case cho thấy immune system không chỉ cần power; nó cần calibration.
+## 26. Tolerance và autoimmunity
 
-## 20. Neuro–endocrine–immune cross-talk
+Immune system phải loại/kiểm soát lymphocyte phản ứng self qua central/peripheral tolerance.
 
-Cortisol có thể suppress nhiều immune response. Cytokine trong infection có thể tạo fever, fatigue và behavior change qua brain. Autonomic nerve ảnh hưởng organ immune environment.
+Nếu tolerance fail, autoimmunity có thể xảy ra.
 
-Do đó ba system tạo một integrated regulatory network.
+Nếu response quá yếu, infection/cancer surveillance giảm. Immune regulation là trade-off sensitivity–self-damage.
 
-Cơ thể không có “module thần kinh” hoạt động độc lập “module miễn dịch”.
+## 27. Allergy
 
-## 21. Từ regulation sang reproduction và development
+Allergy là inappropriate immune response với antigen thường harmless, thường liên quan IgE/mast cell trong nhiều type.
 
-Nervous/endocrine system cũng điều khiển reproductive physiology. Immune tolerance thay đổi trong pregnancy. Hormone và gene regulation điều khiển puberty, gamete maturation và development.
+Histamine gây vascular permeability, itch, mucus và symptom khác.
 
-Câu hỏi kế tiếp là một trong những câu hỏi lớn nhất Sinh học:
+Allergy không phải immune system “yếu”; đó là misdirected response.
 
-**Từ một fertilized cell chứa một genome, làm thế nào organism tạo ra hàng trăm cell type, body axis và organ có cấu trúc khác nhau?**
+## 28. Nervous–endocrine–immune interaction
 
-Tiếp tục với [[03_reproduction_and_development]].
+Stress hormone ảnh hưởng immune cell; cytokine ảnh hưởng brain/behavior; vagal/autonomic signal ảnh hưởng inflammation; immune activation gây fatigue/fever.
+
+Ba system tạo network feedback.
+
+Không nên học chúng như ba chapter hoàn toàn độc lập của anatomy.
+
+## 29. Case study: fever
+
+Pathogen/immune signal → cytokine → hypothalamic prostaglandin signaling → set point tăng → vasoconstriction/shivering → body temperature tăng.
+
+Fever là output nervous–immune–endocrine-like integration chứ không chỉ “cơ thể nóng vì infection”.
+
+## 30. Case study: epinephrine khi chạy
+
+Exercise/stress → sympathetic/adrenal signal → epinephrine → heart rate/contractility tăng, glycogen breakdown tăng ở context, blood flow redistribute.
+
+Hormone đưa same message toàn body nhưng tissue response khác tùy receptor/signaling network.
+
+## 31. Common misconceptions
+
+“Neuron truyền điện như dây điện” quá đơn giản; ion gradient và channel tạo signal.
+
+“Neurotransmitter X luôn excitatory” sai; receptor/context quyết định.
+
+“Hormone chỉ liên quan sinh dục” sai; hormone điều khiển metabolism, growth, water balance, stress và nhiều process.
+
+“Immune mạnh hơn luôn tốt hơn” sai; overactivation gây allergy/autoimmunity/tissue damage.
+
+“Antibody là toàn bộ adaptive immunity” sai.
+
+## 32. Bridge: một organism được xây từ một fertilized cell như thế nào?
+
+Nervous, endocrine và immune system đều yêu cầu nhiều specialized cell type. Nhưng tất cả bắt đầu từ zygote và gần cùng genome. Vậy cell biết trở thành neuron, muscle hay immune cell bằng cách nào? Body axis, organ và tissue pattern hình thành ra sao?
+
+[[03_reproduction_and_development]] sẽ nối meiosis/fertilization với gene regulation, morphogen, stem cell và developmental pattern.
+
+> **Mental model cuối chapter:** coordination của organism là information problem. Nervous system dùng spike/synapse cho tốc độ; endocrine dùng hormone cho broadcast lâu dài; immune dùng receptor diversity cho recognition và memory. Cả ba tái sử dụng cùng nguyên lý receptor, gradient, feedback và gene expression từ cell biology.
