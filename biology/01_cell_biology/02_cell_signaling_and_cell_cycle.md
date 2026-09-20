@@ -1,236 +1,196 @@
-# Tín hiệu tế bào, chu kỳ tế bào và cái chết tế bào — Cell Signaling, Cell Cycle and Cell Death (세포 신호전달, 세포주기, 세포사멸)
+# Truyền tín hiệu và chu kỳ tế bào — Cell Signaling and Cell Cycle (세포 신호전달과 세포주기)
 
-Một tế bào không thể chỉ ăn nutrient rồi tự chạy mãi. Nó phải biết môi trường thay đổi ra sao, các tế bào bên cạnh đang làm gì, có đủ nutrient không, DNA có bị hỏng không và có nên phân chia hay dừng lại.
+Chương trước kết thúc bằng một câu hỏi: metabolism phải được regulation, vậy cell **biết** lúc nào cần tăng hay giảm activity bằng cách nào? Một liver cell phải phản ứng với insulin khác một neuron; một immune cell phải nhận ra tín hiệu nguy hiểm; một cell đang thiếu nutrient có thể dừng division. Tất cả những việc đó yêu cầu một hệ nhận tín hiệu, truyền tín hiệu và thay đổi response.
 
-Vì vậy, sự sống cần **cell signaling (truyền tín hiệu tế bào / 세포 신호전달)** và **cell-cycle control (điều khiển chu kỳ tế bào / 세포주기 조절)**.
+Vì vậy signaling không phải một chủ đề đứng ngoài metabolism. Nó là layer control nằm trên metabolism, transport, gene expression và cell division.
 
-## Signaling bắt đầu từ một vấn đề rất cơ bản
+## 1. Từ stimulus đến response
 
-Một hormone có thể ở ngoài cell nhưng lại làm gene expression bên trong nucleus thay đổi. Làm sao information vượt qua membrane?
+Một **signal (tín hiệu / 신호)** chỉ có ý nghĩa khi cell có machinery để nhận và diễn giải nó.
 
-Membrane không nhất thiết cho signaling molecule đi vào. Thay vào đó, cell có thể dùng **receptor (thụ thể / 수용체)** để nhận signal và chuyển thông tin sang dạng mà interior của cell hiểu được.
+Một hormone trong blood có thể đi qua rất nhiều tissue, nhưng chỉ cell có receptor phù hợp mới phản ứng mạnh. Vì vậy specificity không nhất thiết nằm ở signal; nó có thể nằm ở receptor và downstream network.
 
-Pattern tổng quát thường là:
+Flow cơ bản:
 
 ```text
-signal → receptor → transduction → response
+signal
+  ↓
+receptor
+  ↓
+signal transduction
+  ↓
+change in enzyme / ion / gene expression
+  ↓
+cellular response
 ```
 
-Đây là một abstraction rất mạnh. Hormone, neurotransmitter, growth factor và immune signal đều có thể được nhìn bằng pattern này.
+Đây là cùng logic sensor → controller → actuator đã gặp ở feedback control.
 
-## Ligand và receptor
+## 2. Receptor: biến thông tin ngoài cell thành state bên trong
 
-**Ligand (phối tử / 리간드)** là molecule bind vào receptor.
+Có hai family lớn cần phân biệt.
 
-Receptor không chỉ “nhận biết” ligand; binding thường làm receptor đổi conformation. Conformation change đó có thể activate enzyme, mở ion channel hoặc tạo docking site cho protein khác.
+Nếu ligand không dễ qua membrane, receptor thường nằm trên plasma membrane. Ligand bind ngoài cell làm protein đổi conformation ở trong cell.
 
-Điều quan trọng là specificity không bao giờ tuyệt đối kiểu khóa–chìa cứng nhắc. Binding phụ thuộc shape, charge, concentration và affinity.
+Nếu ligand nhỏ và lipid-soluble, như steroid hormone, nó có thể đi qua membrane và bind intracellular receptor, sau đó complex tác động lên gene expression.
 
-## Membrane receptor và intracellular receptor
+Điểm lớn không phải học thuộc loại hormone nào. Hãy hỏi: **signal có qua bilayer được không?** Chemistry của molecule quyết định architecture signaling phù hợp.
 
-Hydrophilic signal khó đi qua lipid bilayer nên thường bind **cell-surface receptor**.
+## 3. Signal transduction: vì sao không nối receptor trực tiếp tới mọi response?
 
-Steroid hormone có tính hydrophobic hơn và có thể đi qua membrane, bind **intracellular receptor** trong cytoplasm hoặc nucleus. Receptor–hormone complex có thể trực tiếp ảnh hưởng transcription.
+Một receptor có thể activate nhiều protein downstream. Việc có nhiều bước trung gian mang ba lợi ích.
 
-Đây là lý do cùng gọi là “hormone signaling” nhưng mechanism có thể rất khác nhau.
+Thứ nhất, **amplification**. Một receptor active có thể activate nhiều molecule tiếp theo.
 
-## Signal transduction — biến một tín hiệu thành chuỗi phản ứng
+Thứ hai, **integration**. Một protein downstream có thể nhận input từ nhiều pathway.
 
-Sau khi receptor được activated, signal thường không đi thẳng tới một target duy nhất. Nó đi qua **signal transduction pathway (경로)**.
+Thứ ba, **branching**. Một signal có thể đồng thời đổi metabolism, cytoskeleton và gene expression.
 
-Một protein activate protein tiếp theo, rồi tiếp theo nữa. Nhiều pathway dùng **protein phosphorylation**: kinase gắn phosphate, phosphatase tháo phosphate.
+Vì vậy signaling pathway thường là network hơn là line thẳng.
 
-Phosphorylation có thể đổi shape, activity hoặc localization của protein.
+## 4. Phosphorylation: một switch hóa học tái sử dụng nhiều lần
 
-### Tại sao cascade hữu ích?
+Protein kinase gắn phosphate vào protein; phosphatase tháo phosphate.
 
-Cascade cho ba lợi ích lớn.
+Phosphorylation có thể làm protein đổi shape, localization hoặc binding partner.
 
-Thứ nhất là **amplification**. Một receptor activated có thể activate nhiều molecule downstream, nên signal nhỏ tạo response lớn.
+Điểm quan trọng là phosphate không phải “on” trong mọi case. Có protein được activate khi phosphorylated, có protein bị inhibited.
 
-Thứ hai là **control points**. Nhiều stage tạo nơi để pathway bị tăng, giảm hoặc cross-talk với pathway khác.
+Mental model đúng là:
 
-Thứ ba là **branching**. Một signal có thể tạo nhiều response cùng lúc.
+> phosphorylation là một cách **thay đổi state** của protein nhanh và reversible.
 
-## Second messenger
+## 5. Second messenger: small molecule truyền signal trong cell
 
-Một số pathway dùng **second messenger (chất truyền tin thứ hai / 2차 전달자)** như cAMP, Ca²⁺ hoặc IP₃.
+Một số receptor activate molecule nhỏ như cAMP, IP₃ hoặc Ca²⁺.
 
-Ligand ngoài cell là first messenger. Receptor activate process tạo second messenger bên trong cell.
+**Second messenger (chất truyền tin thứ hai / 2차 전달자)** giúp signal lan nhanh và amplify.
 
-Second messenger thường nhỏ, khuếch tán nhanh và giúp amplify signal.
+Ca²⁺ đặc biệt thú vị. Cytosolic Ca²⁺ bình thường được giữ thấp. Khi channel mở, Ca²⁺ tăng nhanh và bind protein sensor. Vì baseline thấp, một increase nhỏ về absolute amount có thể tạo signal rõ.
 
-Ca²⁺ đặc biệt thú vị vì cell giữ cytosolic Ca²⁺ rất thấp so với extracellular space hoặc ER. Vì vậy mở channel giải phóng Ca²⁺ tạo signal mạnh mà cell có thể tắt bằng pump.
+Đây là ví dụ khác của principle gradient: cell tạo chênh lệch trước, rồi khai thác chênh lệch như information.
 
-## GPCR — một receptor family cực lớn
+## 6. Feedback trong signaling
 
-**G-protein-coupled receptor (GPCR / G단백질 연결 수용체)** có bảy transmembrane segment điển hình.
+Pathway signaling thường tự điều chỉnh.
 
-Khi ligand bind, receptor activate G protein. G protein sau đó điều khiển enzyme hoặc channel downstream.
+Negative feedback giúp signal không kéo dài quá mức. Positive feedback có thể tạo switch-like transition.
 
-Nhiều receptor cho smell, hormone và neurotransmitter thuộc family này.
+Ví dụ trong cell cycle, một số kinase activate process dẫn tới activation mạnh hơn của chính network, giúp cell chuyển dứt khoát từ stage này sang stage khác.
 
-Điểm đáng học không phải tên của hàng trăm GPCR, mà là architecture: receptor → molecular switch → effector → second messenger.
+Điều này cho thấy feedback không chỉ giữ stability; đôi khi nó giúp system chuyển state.
 
-## Receptor tyrosine kinase
+## 7. Cell phải quyết định khi nào divide
 
-**Receptor tyrosine kinase (RTK / 수용체 티로신 키나아제)** thường dimerize hoặc rearrange khi ligand bind, rồi phosphorylate tyrosine residue.
+Division tốn resource và tạo risk. DNA phải được copy chính xác, chromosome phải segregate đúng, cell phải đủ lớn và environment phải cho phép.
 
-Phosphorylated site trở thành docking platform cho signaling protein.
+Do đó cell cycle không thể là clock chạy tự động.
 
-Growth factor signaling, cell proliferation và survival thường sử dụng RTK pathway. Mutation làm pathway luôn “on” có thể góp phần vào cancer.
+**Cell cycle (chu kỳ tế bào / 세포주기)** ở eukaryote thường được mô tả bằng G1, S, G2 và M.
 
-## Cell communication có nhiều khoảng cách
-
-Cell không chỉ gửi hormone toàn cơ thể.
-
-**Autocrine signaling**: cell tác động lên chính nó.
-
-**Paracrine signaling**: signal tác động cell gần đó.
-
-**Endocrine signaling**: hormone đi qua circulation đến target xa.
-
-**Synaptic signaling**: neuron release neurotransmitter vào synapse.
-
-**Direct contact**: membrane protein của hai cell trực tiếp tương tác.
-
-Các category này giúp hiểu spatial organization của multicellular organism.
-
-## Response phụ thuộc context
-
-Cùng một signal có thể tạo response khác ở cell khác vì receptor và downstream machinery khác nhau.
-
-Adrenaline chẳng hạn có thể ảnh hưởng heart cell và liver cell theo cách khác nhau. Không phải hormone “đổi tính chất”, mà target cell đọc signal qua network receptor khác nhau.
-
-> **Mental model:** biological signal không mang toàn bộ meaning bên trong molecule. Meaning xuất hiện từ signal + receptor + trạng thái của receiving cell.
-
-# Từ signaling sang cell cycle
-
-Một multicellular organism lớn lên nhờ cell division, nhưng nếu cell division không được kiểm soát, tissue structure bị phá.
-
-Vì vậy cell phải integrate signal từ nutrient, growth factor, DNA damage và neighboring cell trước khi đi qua các checkpoint.
-
-## Cell cycle là gì?
-
-**Cell cycle (chu kỳ tế bào / 세포주기)** là sequence từ một cell qua growth, DNA replication và division thành daughter cells.
-
-Các phase chính:
-
-- G1: growth và decision có tiếp tục không;
+- G1: growth và kiểm tra condition;
 - S: DNA replication;
-- G2: chuẩn bị division và kiểm tra;
+- G2: preparation và kiểm tra sau replication;
 - M: mitosis + cytokinesis.
 
-Một số cell vào **G0**, trạng thái không tích cực phân chia. G0 có thể temporary hoặc rất lâu tùy cell type.
+Nhưng ý quan trọng hơn tên phase là: mỗi transition cần control logic.
 
-## Vì sao DNA phải replicate trước mitosis?
+## 8. Checkpoint: không phải một “cổng” vật lý
 
-Mỗi daughter cell cần genome đầy đủ. Vì vậy DNA được copy trong S phase trước khi chromosome được phân tách.
+**Checkpoint (điểm kiểm soát / 체크포인트)** là network đánh giá condition trước khi cell tiến sang state tiếp.
 
-Sau replication, mỗi chromosome gồm hai **sister chromatids** gần như identical, nối ở centromere region cho đến khi được tách.
+Ví dụ, DNA damage có thể activate pathway làm cell cycle arrest để repair. Nếu damage không sửa được, cell có thể đi vào senescence hoặc apoptosis.
 
-Điểm quan trọng: chromosome number và DNA amount không phải cùng một khái niệm. Sau S phase DNA amount tăng gấp đôi nhưng chromosome count theo cách đếm centromere chưa nhất thiết gấp đôi.
+Checkpoint vì thế nối signaling với genome integrity.
 
-## Mitosis — bài toán phân phối genome
+## 9. Cyclin và CDK: logic của state transition
 
-**Mitosis (nguyên phân / 유사분열)** tổ chức replicated chromosome rồi phân chúng vào hai nucleus.
+**Cyclin-dependent kinase (CDK)** là kinase điều khiển nhiều event của cell cycle. CDK activity phụ thuộc cyclin, mà cyclin amount thay đổi theo thời gian.
 
-Thay vì học tên phase như một chant, hãy nhìn mục tiêu cơ học:
+Cyclin được synthesized rồi degraded theo sequence, tạo oscillation.
 
-1. chromosome phải condense để dễ vận chuyển;
-2. spindle microtubule phải attach đúng chromosome;
-3. chromosome phải align sao cho mỗi side nhận một copy;
-4. sister chromatid phải tách cùng thời điểm;
-5. nucleus và cell phải tái tổ chức.
+Ta có một control loop:
 
-Các stage prophase, prometaphase, metaphase, anaphase, telophase chỉ là cách chia nhỏ sequence đó.
+```text
+cyclin accumulation
+   ↓
+CDK activation
+   ↓
+cell-cycle events
+   ↓
+cyclin destruction
+   ↓
+CDK activity falls
+```
 
-## Spindle và microtubule
+Cell cycle vì thế là một dynamical system, không chỉ danh sách stage.
 
-**Mitotic spindle (thoi phân bào / 방추사)** được tạo chủ yếu từ microtubule.
+## 10. Mitosis: bài toán phân chia thông tin đã copy
 
-Microtubule attach chromosome qua **kinetochore**, protein structure ở centromere region.
+Sau S phase, mỗi chromosome đã được duplicated thành sister chromatids.
 
-Dynamic polymerization/depolymerization và motor protein tạo force để chromosome di chuyển.
+Mitosis phải đảm bảo mỗi daughter cell nhận một copy.
 
-Đây là connection trực tiếp với cytoskeleton ở file trước.
+Spindle microtubule attach chromosome qua kinetochore. Chromosome alignment và tension được monitored. Khi condition phù hợp, sister chromatids tách và đi về hai pole.
 
-## Checkpoint — cell không chỉ chạy theo clock
+Cytoskeleton đã học ở chapter membrane/organization giờ trở thành machine cơ học cho chromosome segregation.
 
-Cell cycle có **checkpoint (điểm kiểm soát / 체크포인트)**.
+## 11. Meiosis: division phục vụ sexual reproduction
 
-G1/S checkpoint đánh giá growth signal, nutrient và DNA damage trước replication.
+Meiosis khác mitosis vì mục tiêu không phải tạo hai cell giống nhau, mà giảm chromosome number và tạo variation cho gamete.
 
-G2/M checkpoint đánh giá DNA replication có hoàn tất phù hợp không.
+Một diploid cell trải qua một round DNA replication nhưng hai round division.
 
-Spindle checkpoint đánh giá chromosome có attach spindle đúng trước anaphase không.
+Homologous chromosome pair trong meiosis I và có thể crossing-over. Điều này tạo recombination.
 
-Checkpoint không phải “người kiểm tra” riêng lẻ mà là molecular network.
+Vì vậy meiosis là bridge trực tiếp từ cell cycle sang genetics.
 
-## Cyclin và CDK — cơ chế của cell-cycle engine
+## 12. Apoptosis: chết có chương trình là một phần của multicellular life
 
-**Cyclin-dependent kinase (CDK / 사이클린 의존성 키나아제)** là kinase điều khiển nhiều transition của cell cycle.
+Một multicellular organism không chỉ cần cell growth; nó cần loại bỏ cell đúng lúc.
 
-CDK cần bind **cyclin (사이클린)** để active phù hợp. Cyclin concentration tăng giảm theo phase.
+**Apoptosis (chết tế bào theo chương trình / 세포자멸사)** là process regulated, khác với cell rupture hỗn loạn.
 
-Một cách nghĩ: CDK là engine có thể phosphorylate target, còn cyclin là key/context giúp engine active đúng thời điểm.
+Trong development, apoptosis giúp sculpt structure. Trong immunity, nó loại bỏ một số cell không cần nữa. Khi DNA damage quá lớn, apoptosis có thể ngăn cell nguy hiểm tiếp tục division.
 
-Protein inhibitor và checkpoint signal có thể block CDK khi điều kiện không an toàn.
+Đây là một ví dụ nghịch lý thú vị: ở organism đa bào, survival của whole system đôi khi đòi hỏi death của component cell.
 
-## DNA damage và p53
+## 13. Cancer: khi growth control bị phá vỡ
 
-DNA bị damage liên tục bởi replication error, reactive species và environment.
+Cancer không phải “cell tăng trưởng nhanh” đơn giản. Nó là evolutionary process ở cell population trong body.
 
-Protein **p53** đóng vai trò major tumor suppressor trong nhiều context. Khi DNA damage được detect, p53 pathway có thể làm cell-cycle arrest, tăng repair response hoặc nếu damage nghiêm trọng dẫn tới apoptosis.
+Mutation có thể activate growth-promoting pathway, disable tumor suppressor, giảm apoptosis hoặc tăng genomic instability. Cell có advantage proliferative sẽ expand clone.
 
-Không nên học “p53 = gene chống ung thư” như definition đơn giản. Mental model chính là p53 nằm trong network quyết định **repair, stop hay die** khi genomic integrity bị đe dọa.
+Qua nhiều round selection trong tissue environment, tumor có thể tích lũy thêm trait.
 
-# Cell death — chết cũng có thể là một chương trình sinh học
+Như vậy cancer nối signaling, cell cycle, mutation và evolution.
 
-Cell death không phải lúc nào cũng là accident.
+## 14. Signaling không chỉ điều khiển division
 
-## Apoptosis
+Insulin signaling đổi glucose uptake và metabolism. Growth factor đổi proliferation. Neurotransmitter đổi ion channel. Cytokine đổi immune state. Hormone steroid đổi transcription.
 
-**Apoptosis (chết tế bào theo chương trình / 세포자멸사)** là controlled process trong đó cell dismantle chính mình tương đối gọn gàng.
+Cùng architecture receptor → transduction → response được tái sử dụng ở nhiều scale.
 
-Apoptosis quan trọng trong development, immune system và loại bỏ cell bị damage.
+Đây là lý do học signaling một lần tốt sẽ giúp physiology dễ hơn rất nhiều.
 
-Trong embryo, apoptosis góp phần tạo hình cấu trúc. Immune system có thể loại bỏ cell không còn cần. Cell có DNA damage quá lớn có thể self-destruct để giảm nguy cơ mutation lan truyền.
+## 15. Cross-talk: pathway không sống trong sơ đồ riêng
 
-## Necrosis
+Textbook thường vẽ pathway thành các line riêng để dễ đọc. Trong cell thật, pathway cross-talk.
 
-**Necrosis (hoại tử / 괴사)** thường liên quan severe injury, membrane rupture và release intracellular content gây inflammation.
+Một kinase có thể được activate bởi nhiều upstream signal. Một transcription factor có thể nhận input từ stress và hormone. Metabolic state có thể ảnh hưởng signaling qua ATP/AMP ratio.
 
-Thực tế cell-death biology phức tạp hơn cặp apoptosis/necrosis, có nhiều regulated death pathway. Nhưng distinction này là nền hữu ích.
+Do đó response của cell phụ thuộc **context**, không chỉ ligand.
 
-## Cancer như failure của multicellular cooperation
+## 16. Từ signaling sang genetics: response dài hạn cần information system
 
-Cancer không chỉ là “cell phân chia nhanh”. Nó là evolution-like process trong tissue khi cell acquire mutation và epigenetic change giúp bypass normal control.
+Nhiều cellular response ngắn hạn chỉ đổi state protein hiện có. Nhưng nếu cell muốn thay đổi lâu hơn, nó thường thay đổi gene expression.
 
-Cancer cell có thể tăng proliferative signaling, resist growth suppression, avoid cell death, alter metabolism, invade tissue và tương tác với immune system.
+Ví dụ hormone có thể làm tăng transcription enzyme; differentiation thay đổi hàng trăm gene; immune activation đổi expression program.
 
-Điều đáng hiểu là multicellular organism tồn tại vì cell **cooperate**: phân chia khi cần, ở đúng chỗ, chết khi hỏng. Cancer xuất hiện khi một lineage cell phá dần các rule cooperation đó.
+Do đó câu hỏi tiếp theo trở thành:
 
-## Common misconceptions
+**Gene là gì? DNA lưu information bằng cách nào? Cell copy DNA ra sao? Sequence DNA được chuyển thành RNA và protein như thế nào?**
 
-### “Signal mạnh hơn luôn tạo response mạnh hơn vô hạn”
+Cell signaling đã đưa ta tới molecular genetics một cách tự nhiên.
 
-Không. Receptor có thể saturate; pathway có negative feedback; receptor có thể desensitize.
-
-### “Mitosis tạo variation lớn giữa daughter cell”
-
-Thông thường mitosis nhằm tạo genome gần identical. Variation lớn hơn được tạo trong meiosis và mutation.
-
-### “Cell death luôn là điều xấu”
-
-Sai. Programmed cell death là component bình thường của development và tissue maintenance.
-
-### “Cancer là một bệnh duy nhất”
-
-Không. Cancer là nhóm rất lớn disease với tissue origin và molecular mechanism khác nhau, dù có một số hallmarks chung.
-
-## Mental Model
-
-> Cell signaling cho phép cell đọc context; cell cycle cho phép cell nhân bản có kiểm soát; checkpoint và apoptosis bảo vệ integrity của multicellular system. Sự sống ở cấp organism phụ thuộc không chỉ việc từng cell sống, mà việc mỗi cell biết khi nào nên hoạt động, phân chia và dừng lại.
-
-Từ đây ta đã có nền để hỏi một câu lớn hơn: **information nào quyết định protein, receptor và cell behavior?** Câu trả lời bắt đầu từ DNA và gene expression trong [[../02_genetics_molecular_biology/00_dna_genes_and_gene_expression]].
+Tiếp tục với [[../02_genetics_molecular_biology/00_dna_genes_and_gene_expression]].
