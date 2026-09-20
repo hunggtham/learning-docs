@@ -74,7 +74,7 @@ Vai trò của phụ nữ trong quân đội và các tranh luận rộng hơn v
 
 ## K-pop, người nổi tiếng và dòng thời gian quân sự
 
-Nghĩa vụ quân sự có độ hiển thị cao trong ngành giải trí vì việc người nổi tiếng nhập ngũ tạo một khoảng gián đoạn rõ trong dòng sự nghiệp. Với nhóm thần tượng, một thành viên nhập ngũ có thể ảnh hưởng lịch comeback, tiếp thị và hoạt động fandom.
+Nghĩa vụ quân sự có độ hiển thị cao trong ngành giải trí vì việc người nổi tiếng nhập ngũ tạo một khoảng gián đoạn rõ trong dòng sự nghiệp. Với nhóm thần tượng, một thành viên nhập ngũ có thể ảnh hưởng lịch phát hành, tiếp thị và hoạt động của cộng đồng người hâm mộ.
 
 Đây là ví dụ rõ về một thiết chế công tác động lên ngành tư nhân. Nhóm lập kế hoạch phải xem thời điểm nhập ngũ gần như một **ràng buộc cứng (hard constraint)** trong lịch dự án.
 
@@ -95,9 +95,100 @@ logic quan hệ Nho giáo
 
 Không nên biến một đầu vào thành toàn bộ lời giải.
 
+## Tái hội nhập sau xuất ngũ: quay lại không đồng nghĩa tiếp tục đúng chỗ cũ
+
+Một khoảng gián đoạn dài trong đại học hoặc đầu sự nghiệp không chỉ làm lịch bị chậm. Người quay lại còn phải **tái hội nhập (reintegration / 재적응)** với nhịp học, công nghệ, mạng bạn bè và kỳ vọng đã thay đổi trong lúc mình vắng mặt.
+
+Sinh viên `복학생` có thể quay lại khi bạn cùng khoá đã học môn khác, đi trao đổi, tốt nghiệp hoặc hình thành nhóm mới. Người trở lại thị trường lao động có thể thấy công cụ, quy trình và chuẩn tuyển dụng thay đổi. Vì vậy chi phí của gián đoạn không chỉ bằng số tháng phục vụ; còn có **chi phí khởi động lại (restart cost)**.
+
+```text
+rời hệ dân sự
+→ kỹ năng/ngữ cảnh dân sự ít được dùng
+→ mạng quan hệ tiếp tục thay đổi
+→ quay lại
+→ phải cập nhật kiến thức + mạng + nhịp sống
+```
+
+Khả năng tái hội nhập phụ thuộc mức hỗ trợ của trường, công ty, gia đình và mạng bạn bè. Một hệ thống coi việc quay lại là “tự người đó phải xử lý” sẽ tạo ma sát lớn hơn hệ thống có thủ tục, tư vấn và lộ trình rõ.
+
+## Mất kỹ năng và giữ kỹ năng: gián đoạn không tác động mọi năng lực giống nhau
+
+Kỹ năng có tốc độ suy giảm khác nhau. Kiến thức khái niệm sâu có thể giữ lâu hơn thao tác cần luyện thường xuyên; kỹ năng công nghệ thay đổi nhanh còn chịu thêm vấn đề phiên bản.
+
+Có thể tách ba nhóm:
+
+```text
+kỹ năng bền: nền tảng toán, tư duy logic, ngoại ngữ đã thành thói quen
+kỹ năng cần duy trì: thể lực, tốc độ thao tác, thói quen học tập
+kỹ năng biến động nhanh: framework, công cụ, quy trình tuyển dụng, nền tảng số
+```
+
+Vì vậy nói “nghĩa vụ làm mất hai năm sự nghiệp” hoặc “quân đội rèn kỹ năng nên không mất gì” đều quá đơn giản. Tác động ròng phụ thuộc kỹ năng, thời điểm phục vụ và cách người đó tái học sau khi quay lại.
+
+## Chuyển đổi giao thức: từ chuỗi chỉ huy sang nhóm ngang hàng
+
+Môi trường quân đội ưu tiên tính rõ của lệnh, trách nhiệm và phản ứng trong chuỗi chỉ huy. Nhiều môi trường dân sự — đặc biệt nghiên cứu, thiết kế, kỹ thuật phần mềm hoặc nhóm sáng tạo — lại cần tranh luận ngang hàng, bất đồng có lý do và thử nghiệm.
+
+Một người có thể phải chuyển giữa hai **giao thức phối hợp (coordination protocol)**:
+
+```text
+môi trường chỉ huy:
+ai quyết định? → lệnh gì? → ai thực hiện? → báo cáo ra sao?
+
+môi trường hợp tác:
+vấn đề là gì? → giả thuyết nào? → bằng chứng nào? → phương án nào tốt hơn?
+```
+
+Không giao thức nào luôn tốt hơn. Khi rủi ro tức thời cao, chuỗi chỉ huy rõ có giá trị. Khi bài toán mơ hồ cần sáng tạo, tranh luận ngang hàng có thể tốt hơn. Kỹ năng trưởng thành nằm ở việc nhận ra mình đang ở hệ thống nào thay vì mang một giao thức sang mọi nơi.
+
+## Trải nghiệm phục vụ không đồng nhất: cùng nhãn nhưng khác dữ liệu đầu vào
+
+Từ `군대` dễ làm người ngoài tưởng mọi trải nghiệm tương tự nhau. Thực tế quân chủng, đơn vị, nhiệm vụ, vị trí, sức khoẻ, người chỉ huy, thời điểm và mạng đồng đội có thể tạo khác biệt rất lớn.
+
+Đây là vấn đề quen thuộc trong phân tích dữ liệu: một nhãn phân loại rộng có **phương sai nội bộ (within-group variance)** rất cao. Nếu chỉ biết một người “đã phục vụ”, ta chưa biết trải nghiệm cụ thể của họ.
+
+Vì vậy khi một người kể câu chuyện quân đội, nên hiểu nó trước hết là dữ liệu về đơn vị và trải nghiệm của người đó, không phải tự động là mô tả toàn hệ thống.
+
+## Mạng quan hệ quân đội: liên kết mạnh, liên kết yếu và ký ức chung
+
+Sống trong cùng môi trường có ràng buộc cao có thể tạo cảm giác đồng đội mạnh vì nhiều người cùng trải qua lịch, nhiệm vụ và khó khăn. Nhưng sau khi xuất ngũ, mức duy trì quan hệ rất khác nhau.
+
+Một số quan hệ trở thành **liên kết mạnh (strong ties)**, tiếp tục gặp gỡ và hỗ trợ nhau. Nhiều quan hệ khác trở thành **liên kết yếu (weak ties)**: không thân thường xuyên nhưng vẫn có ký ức chung và có thể tái kết nối khi cần.
+
+Điều này giúp giải thích vì sao câu chuyện quân đội có thể tạo chủ đề trò chuyện nhanh giữa hai người mới gặp mà không có nghĩa họ tự động trở thành bạn thân.
+
+## Gia đình và người yêu cũng chịu chi phí của nghĩa vụ
+
+Nghĩa vụ quân sự thường được phân tích như trải nghiệm của người phục vụ, nhưng mạng xung quanh cũng phải thích nghi. Cha mẹ, anh chị em và người yêu điều chỉnh lịch thăm, liên lạc và kỳ vọng. Quan hệ có thể được củng cố, nhưng cũng có thể chịu căng thẳng vì khoảng cách, bất định và nhịp sống khác nhau.
+
+Đây là ví dụ của **chi phí lan truyền (spillover cost)**: một thiết chế áp trực tiếp lên một cá nhân nhưng một phần chi phí thời gian và cảm xúc được phân phối sang mạng gia đình.
+
+Nhìn theo cách này giúp tránh quan niệm rằng nghĩa vụ chỉ có “chi phí cá nhân” hoặc chỉ có “lợi ích huấn luyện”. Nó là một sự kiện vòng đời có tác động mạng.
+
+## Kế hoạch nghề nghiệp: thời điểm phục vụ là một quyết định phối hợp
+
+Trong khuôn khổ pháp lý cho phép, thời điểm thực hiện nghĩa vụ có thể ảnh hưởng cách cá nhân sắp xếp đại học, thực tập, trao đổi, thi chứng chỉ hoặc bước vào việc làm. Vì vậy đây là bài toán **lập lịch dưới ràng buộc (constrained scheduling)**.
+
+Mục tiêu không nhất thiết là “phục vụ càng sớm/càng muộn càng tốt”. Người ta cân nhắc:
+
+- môn học và học kỳ;
+- lịch tuyển dụng;
+- khả năng duy trì kỹ năng;
+- kế hoạch trao đổi hoặc du học;
+- tài chính cá nhân;
+- sức khoẻ và hoàn cảnh gia đình.
+
+Chi tiết pháp lý phải luôn kiểm tra theo nguồn hiện hành. Ở tầng văn hoá, điều cần hiểu là một thiết chế công có thể đi sâu vào cách cá nhân thiết kế toàn bộ lộ trình học–việc của mình.
+
+## Ký ức quân đội trong truyền thông: câu đùa là một cơ sở dữ liệu kinh nghiệm chung
+
+Phim, chương trình giải trí, webtoon và meme thường dùng bối cảnh quân đội vì một bộ phận lớn khán giả có thể nhận ra ngay cấu trúc cấp bậc, ngôn ngữ và tình huống. Nội dung hài hoạt động tốt khi người xem chia sẻ đủ mã văn hoá để hiểu điều đang bị phóng đại.
+
+Nhưng truyền thông có **thiên lệch lựa chọn (selection effect)**: câu chuyện cực đoan, hài hước hoặc kịch tính được kể nhiều hơn ngày bình thường. Nếu chỉ học quân đội qua phim và meme, người xem có thể đánh giá quá cao tần suất của những tình huống hiếm nhưng đáng nhớ.
+
 ## Mô hình tư duy
 
-> Nghĩa vụ quân sự là một “đường hầm thiết chế” mà một phần lớn dân số nam đi qua trước khi trở lại xã hội dân sự. Đường hầm này không quyết định họ trở thành con người như thế nào, nhưng có thể để lại từ vựng, sự dịch chuyển dòng thời gian và các tham chiếu trải nghiệm chung.
+> Nghĩa vụ quân sự là một “đường hầm thiết chế” mà một phần lớn dân số nam đi qua trước khi trở lại xã hội dân sự. Đường hầm này không quyết định họ trở thành con người như thế nào, nhưng có thể để lại từ vựng, sự dịch chuyển dòng thời gian, mạng ký ức chung và chi phí tái hội nhập. Muốn hiểu tác động thật cần nhìn cả giai đoạn **trước phục vụ → trong phục vụ → quay lại trường/công việc**.
 
 ## Những hiểu lầm phổ biến
 
@@ -113,6 +204,20 @@ Quá đơn giản. Thiết chế quân sự có thể củng cố một số m�
 
 Đó là phán đoán giá trị không thể suy ra từ trạng thái phục vụ. Phân tích văn hoá cần tách sự kiện thiết chế khỏi đánh giá xã hội.
 
+### “Xuất ngũ là quay lại cuộc sống cũ từ đúng điểm đã dừng”
+
+Không hẳn. Mạng bạn bè, công nghệ, quy trình tuyển dụng và trạng thái học tập có thể đã thay đổi; tái hội nhập có chi phí riêng.
+
+### “Trải nghiệm quân đội tự động làm mọi người phù hợp môi trường công sở”
+
+Một số kỹ năng như kỷ luật, phối hợp hoặc chịu áp lực có thể chuyển giao trong một số bối cảnh, nhưng môi trường dân sự còn cần tự chủ, phản biện, chuyên môn và sáng tạo. Chuyển giao kỹ năng không tự động xảy ra.
+
+## Đọc tiếp
+
+Đọc cùng [`05_education_exams_credentials.md`](05_education_exams_credentials.md), [`06_workplace_organization_hoesik.md`](06_workplace_organization_hoesik.md), [`22_names_age_identity_social_metadata.md`](22_names_age_identity_social_metadata.md) và [`30_school_university_youth_campus_culture.md`](30_school_university_youth_campus_culture.md) để thấy nghĩa vụ quân sự chen vào dòng học tập, thâm niên, danh tính và bước chuyển sang công sở như thế nào.
+
 ## Nguồn tham khảo định hướng
 
 Với quy định hiện hành, dùng Military Manpower Administration (`병무청`). Cơ quan này công bố định kỳ thay đổi về nhập ngũ, kiểm tra, lực lượng dự bị và phục vụ thay thế; vì vậy không nên dựa vào blog cũ cho thông tin pháp lý thực tế.
+
+Với bối cảnh lịch sử của đình chiến và Chiến tranh Triều Tiên, dùng National Institute of Korean History (`국사편찬위원회`) và National Archives of Korea (`국가기록원`) để tách dữ kiện lịch sử khỏi diễn giải văn hoá.
