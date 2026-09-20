@@ -1,425 +1,205 @@
 # Loại hình công ty và phân loại quy mô tại Hàn Quốc (Company Forms & Size Classes / 회사 형태와 기업 규모)
 
-Trong đời sống hàng ngày, người ta gọi mọi tổ chức kinh doanh là “công ty”. Nhưng khi đọc hợp đồng, DART, job posting hay policy support, phải phân biệt ít nhất ba tầng:
+Trong đời sống hàng ngày, người ta thường gọi mọi tổ chức kinh doanh là “công ty”. Tuy nhiên, khi đọc hợp đồng, DART, tin tuyển dụng hoặc chính sách hỗ trợ, cần phân biệt ít nhất ba tầng: **pháp nhân (legal entity / 법인)** nào đang tồn tại, pháp nhân đó thuộc **nhóm quy mô (size class / 기업 규모)** nào, và nó có nằm trong một **tập đoàn doanh nghiệp (business group / 기업집단)** hay không.
 
-1. **legal entity nào đang tồn tại?**
-2. **entity đó thuộc size class nào?**
-3. **entity đó có nằm trong business group nào không?**
+Ba câu hỏi này giúp tránh những nhầm lẫn phổ biến như “Samsung là một công ty”, “주식회사 nghĩa là công ty niêm yết” hoặc “một công ty con nhỏ của chaebol chắc chắn là doanh nghiệp vừa và nhỏ”.
 
-Ba câu hỏi này tránh rất nhiều lỗi kiểu “Samsung là một công ty”, “주식회사 nghĩa listed” hay “affiliate nhỏ của chaebol là SME”.
+## Hình thức pháp lý không chỉ là thủ tục giấy tờ
 
-## Legal form không phải paperwork cosmetic
+**Hình thức pháp lý (legal form / 회사 형태)** quyết định phạm vi trách nhiệm của chủ sở hữu, quyền quản trị, khả năng chuyển nhượng quyền sở hữu, mức linh hoạt khi huy động vốn, một số cách xử lý thuế–kế toán và tính liên tục của doanh nghiệp khi chủ sở hữu thay đổi.
 
-Legal form quyết định:
+Đây là một phần của hạ tầng pháp lý của nền kinh tế thị trường. Cùng một ý tưởng kinh doanh nhưng hai hình thức pháp lý khác nhau có thể phân bổ quyền kiểm soát và rủi ro rất khác nhau.
 
-- liability của owners;
-- quyền quản trị;
-- khả năng chuyển ownership;
-- fundraising flexibility;
-- tax/accounting treatment trong một số trường hợp;
-- continuity khi owner thay đổi.
+## Năm loại hình công ty chính theo luật thương mại Hàn Quốc
 
-Đây là infrastructure của capitalism: cùng một business idea nhưng form khác tạo risk-sharing khác nhau.
+Luật thương mại Hàn Quốc có các hình thức chính gồm **công ty hợp danh vô hạn (Unlimited Partnership / 합명회사)**, **công ty hợp danh hữu hạn (Limited Partnership / 합자회사)**, **công ty trách nhiệm hữu hạn linh hoạt (Limited Liability Company / 유한책임회사)**, **công ty hữu hạn (Limited Company / 유한회사)** và **công ty cổ phần (Stock Company / 주식회사)**.
 
-## Năm loại company theo Korean Commercial Act
+Không cần học chúng như một danh sách từ vựng. Điều quan trọng là hiểu một phổ cấu trúc từ mô hình gần với hợp danh, nơi thành viên trực tiếp gắn với hoạt động và trách nhiệm, tới công ty cổ phần, nơi quyền sở hữu được chia thành cổ phần và có thể huy động lượng vốn lớn hơn.
 
-Các hình thức company chính gồm:
+## 합명회사: công ty hợp danh với trách nhiệm rất rộng
 
-- **Unlimited Partnership / 합명회사**;
-- **Limited Partnership / 합자회사**;
-- **Limited Liability Company / 유한책임회사**;
-- **Limited Company / 유한회사**;
-- **Stock Company / 주식회사**.
+Trong `합명회사`, các thành viên thường tham gia trực tiếp hơn vào quản lý và chịu phạm vi trách nhiệm lớn hơn. Về kinh tế, hình thức này phù hợp hơn khi các chủ sở hữu biết và tin tưởng nhau, đồng thời doanh nghiệp không cần huy động vốn rộng rãi.
 
-Không cần memorize như vocabulary list; quan trọng là hiểu continuum từ partnership-like structure tới share-based corporation.
+Đổi lại, mức kiểm soát và tham gia trực tiếp của chủ sở hữu cao hơn đi cùng với mức rủi ro tài sản cá nhân lớn hơn.
 
-## 합명회사: partnership với trách nhiệm mạnh của members
+## 합자회사: kết hợp thành viên vô hạn và hữu hạn
 
-Trong `합명회사`, members tham gia gần hơn vào management và chịu liability rất rộng.
+`합자회사` kết hợp thành viên chịu trách nhiệm vô hạn với thành viên chịu trách nhiệm hữu hạn. Logic kinh tế của nó là tách tương đối giữa người trực tiếp điều hành và người chủ yếu cung cấp vốn. Tuy nhiên, các tập đoàn hiện đại quy mô lớn thường không sử dụng hình thức này làm cấu trúc mặc định.
 
-Economically, form này phù hợp hơn khi owners biết/trust nhau và business không cần huy động capital rộng.
+## 유한책임회사: trách nhiệm hữu hạn với cấu trúc linh hoạt
 
-Trade-off:
+`유한책임회사` cung cấp **trách nhiệm hữu hạn (limited liability / 유한책임)** đồng thời cho phép cấu trúc tổ chức và thỏa thuận giữa các thành viên linh hoạt hơn công ty cổ phần trong một số trường hợp. Nó có thể phù hợp với doanh nghiệp có nhóm chủ sở hữu tương đối khép kín hoặc tổ chức chuyên môn không cần cổ phần được giao dịch rộng rãi.
 
-```text
-Owner control/direct involvement cao
-↔
-Personal downside exposure cao hơn
-```
+## 유한회사: công ty hữu hạn có sở hữu tập trung
 
-## 합자회사: general + limited partners
+`유한회사` cũng giới hạn trách nhiệm của thành viên nhưng cơ chế chuyển nhượng phần sở hữu và quản trị phù hợp hơn với cấu trúc sở hữu tập trung. Một số công ty con của tập đoàn nước ngoài tại Hàn Quốc chọn hình thức này vì không cần cơ sở cổ đông rộng hoặc cấu trúc niêm yết công khai.
 
-`합자회사` kết hợp members có unlimited liability và members có limited liability.
+## 주식회사: hình thức công ty cổ phần phổ biến nhất
 
-Logic giống việc tách người điều hành active khỏi capital providers thụ động ở mức nhất định.
+**Công ty cổ phần (Stock Company / 주식회사)** là hình thức phổ biến với doanh nghiệp cần mở rộng quy mô vốn và quản trị.
 
-Nhưng modern large corporations thường không dùng form này làm default.
+Về bản chất, công ty là một pháp nhân tách biệt; cổ đông sở hữu cổ phần; trách nhiệm của cổ đông nhìn chung giới hạn trong phần vốn đầu tư; còn hoạt động quản lý được thực hiện thông qua các cơ quan quản trị của công ty.
 
-## 유한책임회사: LLC-like flexibility
+Việc chia quyền sở hữu thành cổ phần giúp vốn có thể được phân nhỏ và chuyển nhượng. Nhờ đó, nhiều nhà đầu tư có thể cùng tài trợ cho những dự án công nghiệp lớn mà không phải trực tiếp quản lý doanh nghiệp.
 
-`유한책임회사` cho limited liability với contractual/organizational flexibility cao hơn stock company trong một số respects.
+## Trách nhiệm hữu hạn là một đổi mới kinh tế quan trọng
 
-Nó hữu ích cho closely held ventures/professional structures nơi owners không cần public share transfer/liquidity.
+**Trách nhiệm hữu hạn (limited liability / 유한책임)** có nghĩa là khoản lỗ tối đa của nhà đầu tư thông thường được giới hạn trong phần vốn đã đầu tư. Cơ chế này khuyến khích đa dạng hóa đầu tư và giúp tài trợ các dự án quy mô lớn.
 
-## 유한회사: closely held limited company
+Tuy nhiên, nó cũng tạo ra **vấn đề đại diện và chủ nợ (agency and creditor problem)**: chủ sở hữu có thể hưởng phần tăng giá trị trong khi một phần thiệt hại khi doanh nghiệp thất bại có thể chuyển sang chủ nợ và các bên liên quan. Vì vậy công ty hiện đại phải đi cùng quy định về công bố thông tin, bảo vệ chủ nợ, quản trị và vốn.
 
-`유한회사` cũng cho limited liability nhưng ownership transfer/governance thường phù hợp hơn với concentrated ownership.
+Một cấu trúc pháp lý giải quyết một vấn đề thường đồng thời tạo ra một vấn đề quản trị mới.
 
-Foreign multinational subsidiaries đôi khi chọn form này vì không cần broad shareholder base/public listing structure.
+## Các cơ quan quản trị: chủ sở hữu ≠ người quản lý ≠ người đại diện pháp luật
 
-## 주식회사: dominant corporate form
+Trong `주식회사`, cần phân biệt **cổ đông (shareholder / 주주)**, **đại hội đồng cổ đông (General Meeting of Shareholders / 주주총회)**, **hội đồng quản trị (Board of Directors / 이사회)** và **giám đốc đại diện (Representative Director / 대표이사)**.
 
-**Stock Company / 주식회사** là form phổ biến nhất với businesses cần scalable capital/governance.
+Cổ đông sở hữu quyền lợi vốn chủ sở hữu. Đại hội đồng cổ đông quyết định một số vấn đề quan trọng và bầu thành viên hội đồng quản trị theo luật và điều lệ. Hội đồng quản trị giám sát hoặc quyết định các vấn đề quản lý lớn trong phạm vi áp dụng. Giám đốc đại diện có thẩm quyền pháp lý đại diện công ty ra bên ngoài.
 
-Core feature:
+`대표이사` không tự động có nghĩa là “chủ công ty”. Người này có thể là một nhà quản lý chuyên nghiệp. Tương tự, chức danh kinh doanh `CEO` bằng tiếng Anh không phải lúc nào cũng cho biết chính xác người đó có phải người đại diện đã đăng ký pháp lý hay không.
 
-```text
-Company = separate legal person
-Shareholders = owners of shares
-Liability = generally limited to investment
-Management = delegated via corporate organs
-```
+## Cổ đông kiểm soát và giám đốc đại diện là hai khái niệm khác nhau
 
-Shares make ownership divisible and transferable, enabling larger pools of capital.
-
-This is why 주식회사 fits large risky industrial projects better than partnership form.
-
-## Limited liability là economic innovation
-
-Limited liability means investor downside generally capped at capital invested.
-
-This encourages diversified investment and large-scale projects.
-
-But it creates **agency/creditor problem**: owners can capture upside while creditors/others bear some downside if company fails.
-
-Therefore corporation comes with disclosure, creditor protection, governance and capital rules.
-
-Form solves one problem and creates another.
-
-## Corporate organs: owner ≠ manager ≠ legal representative
-
-In a 주식회사, distinguish:
-
-### Shareholders / 주주
-
-Own equity rights.
-
-### General Meeting of Shareholders / 주주총회
-
-Approves certain major matters and elects directors under law/articles.
-
-### Board of Directors / 이사회
-
-Oversees major management decisions where applicable.
-
-### Representative Director / 대표이사
-
-Has statutory authority to represent company externally.
-
-`대표이사` is not automatically “owner”. It may be professional manager.
-
-English business title “CEO” also does not always tell you exact registered representative status.
-
-## Controlling shareholder vs representative director
-
-One person/family may control votes but not be daily CEO.
-
-Another professional CEO may manage company while controller influences board/shareholder decisions.
-
-This distinction is central in chaebol governance.
+Một cá nhân hoặc gia đình có thể kiểm soát quyền biểu quyết nhưng không trực tiếp làm CEO hàng ngày. Ngược lại, một CEO chuyên nghiệp có thể điều hành doanh nghiệp trong khi cổ đông kiểm soát vẫn tác động tới hội đồng quản trị và các quyết định của cổ đông. Phân biệt này đặc biệt quan trọng khi nghiên cứu quản trị chaebol.
 
 Xem [`08_corporate_governance_ownership_and_control.md`](./08_corporate_governance_ownership_and_control.md).
 
-## Articles of Incorporation / 정관
+## Điều lệ công ty (Articles of Incorporation / 정관)
 
-`정관` sets foundational rules such as:
+`정관` quy định các nguyên tắc nền tảng như mục đích kinh doanh, loại và cách phát hành cổ phần, thủ tục quản trị, quy tắc của cổ đông–hội đồng quản trị và năm tài chính. Có thể hiểu đây là “hiến pháp vận hành” ở cấp pháp lý của doanh nghiệp.
 
-- corporate purpose;
-- share classes/issuance;
-- governance procedures;
-- shareholder/board rules;
-- fiscal year.
+## Đăng ký pháp nhân (Corporate Registration / 법인등기)
 
-It is a legal operating constitution of company.
+Hệ thống đăng ký pháp nhân ghi nhận các sự kiện pháp lý như tên đăng ký, địa chỉ, thành viên quản trị và vốn đăng ký. Nguồn này giúp trả lời câu hỏi **pháp nhân nào tồn tại và ai có quyền đại diện pháp lý cho nó**.
 
-## Corporate registration / 법인등기
+DART lại phục vụ nhiều hơn cho việc đọc công bố thông tin và tình hình tài chính. Hai nguồn giải quyết hai nhóm câu hỏi khác nhau.
 
-Corporate registry records legal facts such as registered name/address/directors/capital.
+## Vốn đăng ký (자본금) không phải giá trị doanh nghiệp
 
-This database answers **who legally exists and represents entity**.
+Một lỗi phổ biến của người mới là thấy `자본금` rồi hiểu đó là “giá trị của công ty”. Thực tế, **vốn đăng ký (registered capital / 자본금)** là khái niệm pháp lý–kế toán liên quan tới cổ phần đã phát hành và mệnh giá.
 
-DART answers more about disclosure/financial economics.
+Đối với công ty niêm yết, **vốn hóa thị trường (market capitalization)** được tính gần đúng bằng giá cổ phiếu nhân số cổ phiếu đang lưu hành. **Giá trị doanh nghiệp (enterprise value / EV)** còn điều chỉnh thêm nợ, tiền mặt và một số quyền lợi tài chính khác. Vì vậy `자본금 10억` không có nghĩa doanh nghiệp “chỉ đáng giá 1 tỷ KRW”.
 
-Two sources solve different problems.
+## Công ty tư nhân và công ty niêm yết
 
-## Registered capital / 자본금 is not company value
+Một `주식회사` hoàn toàn có thể là công ty chưa niêm yết. **Công ty niêm yết (listed company / 상장회사)** là doanh nghiệp có cổ phiếu được giao dịch trên sở giao dịch sau khi đáp ứng các điều kiện niêm yết.
 
-A common beginner mistake is seeing `자본금` and thinking “company worth this much”.
-
-Registered capital is legal/accounting concept linked to issued shares/par value.
-
-Market capitalization for listed company:
-
-\[
-Market\ Cap = Share\ Price \times Shares\ Outstanding
-\]
-
-Enterprise value further adjusts debt/cash and other claims.
-
-Therefore `자본금 10억` does not mean company “only worth 1bn KRW”.
-
-## Private vs listed company
-
-A `주식회사` can be completely private.
-
-**Listed company / 상장회사** is a corporation whose shares trade on exchange after meeting listing rules.
-
-Listing changes:
-
-- liquidity;
-- price discovery;
-- disclosure burden;
-- governance scrutiny;
-- access to public equity.
-
-IPO is therefore not merely “raise cash”; it changes information/stakeholder regime.
+Niêm yết làm thay đổi tính thanh khoản của cổ phần, cơ chế hình thành giá, nghĩa vụ công bố thông tin, mức độ giám sát quản trị và khả năng tiếp cận vốn cổ phần đại chúng. Vì vậy **phát hành cổ phiếu lần đầu ra công chúng (IPO)** không đơn thuần là huy động tiền; nó thay đổi cả chế độ thông tin và hệ thống các bên liên quan của doanh nghiệp.
 
 Xem [`10_capital_markets_kospi_kosdaq_konex.md`](./10_capital_markets_kospi_kosdaq_konex.md).
 
-# Foreign companies operating in Korea
+# Doanh nghiệp nước ngoài hoạt động tại Hàn Quốc
 
-Foreign business can enter through several structures.
+Doanh nghiệp nước ngoài có thể vào Hàn Quốc qua nhiều cấu trúc.
 
-## Domestic subsidiary / 현지법인
+**Công ty con trong nước (domestic subsidiary / 현지법인)** là một pháp nhân được thành lập theo luật Hàn Quốc. Công ty mẹ sở hữu cổ phần nhưng công ty con có hợp đồng, tài sản và nghĩa vụ riêng.
 
-A Korean-incorporated legal entity with separate legal personality.
+**Chi nhánh (branch / 지점)** là phần mở rộng của trụ sở nước ngoài chứ không phải một pháp nhân Hàn Quốc tách biệt theo cùng nghĩa với công ty con. Hệ quả về pháp lý, thuế và trách nhiệm vì vậy khác nhau.
 
-Parent owns shares but subsidiary has its own contracts/assets/liabilities.
-
-## Branch / 지점
-
-Branch is extension of foreign headquarters rather than separate Korean corporation in same sense.
-
-Legal/tax/liability consequences differ from subsidiary.
-
-## Liaison office / 연락사무소
-
-Generally limited to non-profit-generating supporting activities such as market research/communication; not normal revenue-operating entity.
-
-Therefore job posting saying “Korea office” should be clarified: subsidiary, branch or liaison office?
+**Văn phòng liên lạc (liaison office / 연락사무소)** nhìn chung chỉ thực hiện hoạt động hỗ trợ không trực tiếp tạo doanh thu như nghiên cứu thị trường hoặc liên lạc. Vì vậy khi một tin tuyển dụng chỉ ghi “Korea office”, cần xác định đó là công ty con, chi nhánh hay văn phòng liên lạc.
 
 Xem [`23_foreign_invested_companies_and_korea_entry.md`](./23_foreign_invested_companies_and_korea_entry.md).
 
-# Size classification: why “small/large” is legal-policy concept
+# Phân loại quy mô: “nhỏ/lớn” còn là một khái niệm pháp lý–chính sách
 
-Company size matters because policy/tax/finance/support rules target different groups.
+Quy mô doanh nghiệp ảnh hưởng tới chính sách, thuế, tài chính và các chương trình hỗ trợ. Tuy nhiên, **doanh nghiệp vừa và nhỏ (SME / 중소기업)** không đơn giản là “dưới 300 nhân viên”. Tiêu chí thay đổi theo ngành và còn bao gồm điều kiện về tính độc lập, quyền kiểm soát và quy mô doanh thu.
 
-But **SME / 중소기업** is not simply “under 300 employees”.
+## Doanh nghiệp vừa và nhỏ (SME / 중소기업)
 
-Criteria vary by industry and include size plus independence/control conditions.
+Bộ Doanh nghiệp vừa và nhỏ và Khởi nghiệp Hàn Quốc áp dụng các tiêu chí luật định, trong đó có ngưỡng doanh thu theo ngành và **tiêu chí độc lập (independence criteria / 독립성 기준)**. Tiêu chí thứ hai giúp ngăn trường hợp một công ty con có quy mô bề ngoài nhỏ nhưng thuộc tập đoàn lớn tự động nhận hỗ trợ dành cho SME.
 
-## SME / 중소기업
+Ngưỡng khác nhau theo ngành vì bán lẻ, sản xuất và phần mềm có cấu trúc quy mô kinh tế khác nhau. Sử dụng số liệu trung bình nhiều năm cũng giúp tránh việc phân loại thay đổi chỉ vì một năm bất thường.
 
-Ministry of SMEs and Startups applies statutory criteria including revenue thresholds by industry and **independence criteria / 독립성 기준**.
+## Doanh nghiệp nhỏ (Small Enterprise / 소기업) và hộ kinh doanh nhỏ (소상공인)
 
-The latter prevents small-looking affiliates of large groups from automatically claiming SME support.
+`소기업` là một nhóm nhỏ hơn bên trong SME với ngưỡng quy mô thấp hơn. Một số chương trình chính sách sử dụng nhóm này riêng biệt.
 
-Policy aim is to target genuinely independent smaller firms.
+`소상공인` thường chỉ các cơ sở kinh doanh hoặc doanh nghiệp siêu nhỏ đáp ứng tiêu chí về lao động và ngành nghề, đồng thời có hệ thống chính sách hỗ trợ riêng. Không nên dịch đơn giản thành “SME” vì phạm vi hẹp hơn đáng kể.
 
-## Why three-year average and industry-specific thresholds matter
+## Doanh nghiệp quy mô trung bình (Mid-sized Enterprise / 중견기업)
 
-Retail, manufacturing and software have different scale economics. Same revenue can represent very different organizational scale.
+`중견기업` nằm giữa SME và doanh nghiệp lớn. Nhóm này đặc biệt quan trọng vì nhiều doanh nghiệp công nghiệp chuyên môn hóa đã vượt quy mô SME nhưng vẫn nhỏ hơn rất nhiều so với các công ty chủ lực của chaebol.
 
-Using industry-specific revenue thresholds recognizes this.
+Chính sách tăng trưởng doanh nghiệp thường quan tâm tới việc tránh **khoảng trống doanh nghiệp trung gian (missing middle)**, tức nền kinh tế có rất nhiều doanh nghiệp nhỏ và một số tập đoàn lớn nhưng thiếu doanh nghiệp trung bình đủ mạnh để tiếp tục mở rộng toàn cầu.
 
-Multi-year averages reduce classification flipping from one unusual year.
+## Vấn đề “tốt nghiệp” khỏi SME (Graduation Problem / 졸업 문제)
 
-## Small enterprise / 소기업
+Khi doanh nghiệp tăng trưởng vượt ngưỡng SME, nó có thể mất bảo lãnh, trợ cấp, ưu đãi thuế hoặc lợi thế mua sắm công. Nếu năng lực nội tại và khả năng tiếp cận vốn chưa tăng đủ nhanh, doanh nghiệp có thể gặp một “vách chính sách”.
 
-A subset of SME with lower size thresholds.
+Chính sách thiết kế kém có thể vô tình tạo động lực để doanh nghiệp duy trì quy mô nhỏ. Một lộ trình tốt hơn là giúp doanh nghiệp đi từ SME → mở rộng quy mô → doanh nghiệp trung bình → doanh nghiệp chuyên môn hóa toàn cầu hoặc doanh nghiệp lớn, thay vì phụ thuộc lâu dài vào hỗ trợ.
 
-Policy programs may use this category separately.
+## Doanh nghiệp lớn (Large Enterprise / 대기업)
 
-## Small business owner / 소상공인
+Trong giao tiếp hàng ngày ở Hàn Quốc, `대기업` thường chỉ công ty lớn, đặc biệt là các công ty nổi tiếng thuộc tập đoàn. Nhưng định nghĩa pháp lý phụ thuộc vào từng luật và chương trình, nên không tồn tại một ngưỡng duy nhất áp dụng cho mọi trường hợp.
 
-`소상공인` generally refers to very small businesses/micro-enterprises with workforce/industry criteria and dedicated policy ecosystem.
+`대기업` cũng không đồng nghĩa với `재벌`. Một công ty có thể rất lớn nhưng hoạt động độc lập và không có cấu trúc tập đoàn gia đình kiểu chaebol.
 
-This category is economically important in Korea because self-employment/small service establishments are widespread.
+## Tập đoàn doanh nghiệp (Business Group / 기업집단)
 
-Do not translate simply as “SME”; it is narrower.
+Một **tập đoàn doanh nghiệp (business group / 기업집단)** gồm nhiều pháp nhân nằm dưới một mạng lưới kiểm soát chung. Quy định ở cấp tập đoàn có thể phân loại cả nhóm dựa trên tổng tài sản và cấu trúc kiểm soát, khác với việc đánh giá quy mô của từng công ty thành viên.
 
-## Mid-sized enterprise / 중견기업
+Vì vậy cần nhớ: **quy mô của pháp nhân không đồng nghĩa với quy mô của tập đoàn**. Samsung Electronics và Samsung Life là hai công ty riêng dù trong giao tiếp người ta thường gọi chung là “Samsung”.
 
-`중견기업` sits between SME and large enterprise.
+## Vì sao phải xác định đúng pháp nhân khi nghiên cứu?
 
-This class is crucial because many industrial hidden champions are too large for SME support but far smaller than chaebol champions.
+Một thương hiệu Hàn Quốc có thể có tên thương mại, tên pháp lý tiếng Hàn, tên pháp lý tiếng Anh, nhiều công ty con có tên gần giống nhau và mã chứng khoán chỉ thuộc về một pháp nhân cụ thể.
 
-Scale-up policy often focuses on avoiding a **missing middle**.
+Trước khi phân tích, cần xác định tên tiếng Hàn chính xác, mã đăng ký khi cần, tình trạng niêm yết và mã cổ phiếu, tập đoàn mẹ, các công ty con chính và phạm vi báo cáo tài chính. Nếu xác định sai pháp nhân, các tỷ số tài chính có thể được tính hoàn toàn đúng nhưng lại áp dụng cho sai doanh nghiệp.
 
-## Graduation problem / 졸업 문제
+## Báo cáo riêng và báo cáo hợp nhất
 
-As firm grows beyond SME thresholds, it may lose:
+**Báo cáo tài chính riêng (separate financial statements / 별도재무제표)** phản ánh chủ yếu pháp nhân công ty mẹ. **Báo cáo tài chính hợp nhất (consolidated financial statements / 연결재무제표)** kết hợp công ty mẹ và các công ty con do công ty mẹ kiểm soát theo quy tắc kế toán.
 
-- guarantees;
-- subsidies;
-- tax benefits;
-- procurement advantages.
-
-If capability/access to capital does not improve fast enough, firm may face a cliff.
-
-Bad policy can create incentive to remain artificially small.
-
-Good growth policy should make path:
-
-```text
-SME
-→ scale-up
-→ mid-sized
-→ global specialist / large company
-```
-
-rather than permanent support dependence.
-
-Xem [`06_sme_mid_sized_and_subcontracting_ecosystem.md`](./06_sme_mid_sized_and_subcontracting_ecosystem.md).
-
-## Large enterprise / 대기업
-
-In everyday Korean, `대기업` means large company, often well-known conglomerate affiliate.
-
-Legally, definition depends on law/program context.
-
-Do not assume one universal threshold.
-
-`대기업` also does not equal `재벌`.
-
-A company can be large standalone without family-controlled chaebol structure.
-
-## Business group / 기업집단
-
-A business group is multiple legal entities under common control.
-
-Group-level regulation can classify the group based on aggregate assets/control network.
-
-This is distinct from standalone size of each affiliate.
-
-Mental model:
-
-```text
-Legal entity size ≠ group size
-```
-
-Samsung Electronics and Samsung Life are separate companies even though public says “Samsung”.
-
-## Why entity resolution matters in research
-
-A Korean brand can have:
-
-- marketing brand;
-- Korean legal name;
-- English legal name;
-- multiple subsidiaries with similar names;
-- ticker for only one entity.
-
-Before analyzing, resolve:
-
-```text
-Exact Korean name
-Business/corporate registration identifier if needed
-Ticker/listing status
-Parent group
-Major subsidiaries
-Consolidated vs separate statements
-```
-
-If entity is wrong, ratios can be mathematically correct but applied to wrong company.
-
-## Consolidated vs separate reporting
-
-Parent may report:
-
-**Separate financial statements / 별도재무제표** — parent legal entity only.
-
-**Consolidated financial statements / 연결재무제표** — parent + controlled subsidiaries as economic group for accounting purposes.
-
-This is not same as entire chaebol group; only accounting-control perimeter.
+Phạm vi hợp nhất này không đồng nghĩa với toàn bộ chaebol. Nó chỉ bao gồm phạm vi kiểm soát kế toán của pháp nhân báo cáo.
 
 Xem [`05_group_structure_affiliates_holding_companies.md`](./05_group_structure_affiliates_holding_companies.md).
 
-## Size class can change economics through policy
+## Phân loại quy mô có thể tác động ngược lại hành vi doanh nghiệp
 
-Crossing threshold can alter support and compliance.
+Khi doanh nghiệp vượt một ngưỡng pháp lý, điều kiện hỗ trợ, tài chính, thuế và tuân thủ có thể thay đổi. Vì vậy bản thân hệ thống phân loại cũng có khả năng ảnh hưởng tới quyết định tổ chức và tốc độ mở rộng của doanh nghiệp.
 
-Therefore classification itself can affect behavior:
+## Một ảnh chụp thống kê SME năm 2024
 
-```text
-Grow beyond threshold
-→ support changes
-→ financing/tax/compliance economics change
-```
+Thống kê cơ bản về SME năm 2024 được công bố năm 2026 cho thấy SME chiếm khoảng 99,9% số doanh nghiệp, 80,4% người lao động và 43,7% doanh thu doanh nghiệp. Đây là số liệu có mốc thời gian và cần được cập nhật trong các phiên bản tương lai, nhưng thông điệp cấu trúc tương đối bền: việc làm và số lượng doanh nghiệp Hàn Quốc tập trung rất lớn ở khu vực SME dù sự chú ý của công chúng thường hướng về chaebol.
 
-This is why firm-size policy can unintentionally influence organizational decisions.
+## Diễn giải dưới góc độ nghề nghiệp
 
-## 2024 SME snapshot released 2026
+Nhãn quy mô chỉ cung cấp một số dấu hiệu ban đầu chứ không quyết định chất lượng công việc. Doanh nghiệp lớn thường có thương hiệu mạnh hơn, chế độ lương–phúc lợi tốt hơn, quy trình chính thức hơn và mức chuyên môn hóa cao hơn. SME hoặc doanh nghiệp trung bình có thể cho phạm vi công việc rộng hơn, tiếp xúc gần hơn với khách hàng–sản phẩm và cơ hội quan sát quyết định nhanh hơn.
 
-Official SME Basic Statistics for 2024, released in 2026, show SMEs account for roughly:
+Chất lượng thực tế phụ thuộc vào đội nhóm, đơn vị kinh doanh và vai trò cụ thể, không chỉ vào phân loại pháp lý của công ty.
 
-- 99.9% enterprises;
-- 80.4% workers;
-- 43.7% corporate sales.
+## Mental Model — mô hình tư duy
 
-These are dated statistics and should be updated in future editions, but structural takeaway is durable: Korean employment/business population is overwhelmingly SME even though public attention focuses on chaebol.
-
-## Career interpretation
-
-Company size label gives some priors but not outcome.
-
-Large enterprise often offers:
-
-- stronger brand;
-- compensation/benefits;
-- formal process;
-- specialization.
-
-SME/mid-sized may offer:
-
-- broader scope;
-- faster decision exposure;
-- closer product/customer contact.
-
-Actual role quality depends team/business, not legal category alone.
-
-## Mental Model
-
-> Khi gặp một Korean company, resolve three layers: **entity → size class → group/control context**. Legal form tells how company exists; size class tells policy/economic context; group tells control network.
+> Khi gặp một công ty Hàn Quốc, hãy giải quyết ba tầng: **pháp nhân → nhóm quy mô → bối cảnh tập đoàn/quyền kiểm soát**. Hình thức pháp lý cho biết công ty tồn tại như thế nào; nhóm quy mô cho biết bối cảnh chính sách–kinh tế; tập đoàn cho biết mạng lưới kiểm soát.
 
 ```text
-Brand
-  ↓ resolve
-Legal Entity
-  ↓ classify
-SME / Mid-sized / Large
-  ↓ map
-Parent / Group / Subsidiaries
+Thương hiệu
+  ↓ xác định
+Pháp nhân
+  ↓ phân loại
+SME / doanh nghiệp trung bình / doanh nghiệp lớn
+  ↓ lập bản đồ
+Công ty mẹ / tập đoàn / công ty con
 ```
 
-## Common misconceptions
+## Những nhầm lẫn thường gặp
 
-**“주식회사 = listed.”** Sai. It only means stock-company legal form.
+**“주식회사 = công ty niêm yết.”** Sai. Đây chỉ là hình thức pháp lý công ty cổ phần.
 
-**“대표이사 = owner.”** Sai. Representative director may be professional manager.
+**“대표이사 = chủ sở hữu.”** Sai. Giám đốc đại diện có thể là nhà quản lý chuyên nghiệp.
 
-**“자본금 = company value.”** Sai.
+**“자본금 = giá trị công ty.”** Sai. Đây là vốn đăng ký, không phải định giá doanh nghiệp.
 
-**“SME = startup.”** Sai. SME is size/legal classification; startup is developmental/business-model concept.
+**“SME = startup.”** Sai. SME là phân loại chủ yếu theo quy mô và tiêu chí pháp lý; startup là khái niệm liên quan tới giai đoạn phát triển và mô hình kinh doanh.
 
-**“Affiliate nhỏ của chaebol automatically qualifies as SME.”** Independence rules can prevent that.
+**“Công ty con nhỏ của chaebol chắc chắn đủ điều kiện SME.”** Sai. Các tiêu chí độc lập có thể loại trừ trường hợp này.
 
-**“대기업 = 재벌.”** Not identical concepts.
+**“대기업 = 재벌.”** Hai khái niệm không đồng nhất.
 
-## Sources & connections
+## Nguồn và liên kết
 
-- Invest KOREA, company/foreign-enterprise forms: https://www.investkorea.org/ik-en/cntnts/i-342/web.do
-- Ministry of SMEs and Startups, SME criteria: https://www.mss.go.kr/site/smba/contents/view.do?menuCd=20103040000002024122824
-- Ministry of SMEs and Startups, 2024 SME Basic Statistics released 2026: https://mss.go.kr/site/smba/foffice/ex/statDB/StReportContentDetailView.do?gb=1&reSeq=2218
+- Invest KOREA: các hình thức doanh nghiệp và doanh nghiệp nước ngoài.
+- Bộ Doanh nghiệp vừa và nhỏ và Khởi nghiệp Hàn Quốc: tiêu chí SME.
+- Bộ Doanh nghiệp vừa và nhỏ và Khởi nghiệp Hàn Quốc: thống kê cơ bản SME năm 2024, công bố năm 2026.
 
 Đọc tiếp [`04_chaebol_and_large_business_groups.md`](./04_chaebol_and_large_business_groups.md), [`05_group_structure_affiliates_holding_companies.md`](./05_group_structure_affiliates_holding_companies.md), [`06_sme_mid_sized_and_subcontracting_ecosystem.md`](./06_sme_mid_sized_and_subcontracting_ecosystem.md), [`07_startups_venture_and_scaleups.md`](./07_startups_venture_and_scaleups.md) và [`10_capital_markets_kospi_kosdaq_konex.md`](./10_capital_markets_kospi_kosdaq_konex.md).
