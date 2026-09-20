@@ -4,20 +4,20 @@ Domain này giải thích từng nhóm tài sản theo bản chất kinh tế, n
 
 ## Thứ tự đọc
 
-[01_STOCKS_ETF_AND_FUNDS.md](./01_STOCKS_ETF_AND_FUNDS.md) giải thích cổ phiếu, market cap, shareholder economics, index, ETF, NAV, tracking, physical/synthetic replication, currency hedge và leveraged/inverse structures.
+[01_STOCKS_ETF_AND_FUNDS.md](./01_STOCKS_ETF_AND_FUNDS.md) giải thích cổ phiếu từ shareholder economics, market cap/EV/free float và dilution tới index methodology, ETF NAV/creation-redemption/liquidity/tracking, physical/synthetic replication, FX hedging, leveraged/inverse reset, active/passive funds và thematic concentration.
 
-[02_BONDS_RATES_AND_CREDIT.md](./02_BONDS_RATES_AND_CREDIT.md) xây nền về coupon, yield, duration, yield curve, real yield, credit spread, default risk và bond funds.
+[02_BONDS_RATES_AND_CREDIT.md](./02_BONDS_RATES_AND_CREDIT.md) xây nền fixed income từ coupon/yield/YTM/YTW tới duration, DV01, convexity, key-rate duration, yield curve, real yield, term premium, credit structure/spreads/default, callable/convertible bonds, inflation-linked bonds, MBS và bond-fund implementation.
 
-[03_REAL_ASSETS_AND_ALTERNATIVES.md](./03_REAL_ASSETS_AND_ALTERNATIVES.md) đi qua REIT, real estate exposure, gold, commodities, crypto, private credit và các tài sản thay thế.
+[03_REAL_ASSETS_AND_ALTERNATIVES.md](./03_REAL_ASSETS_AND_ALTERNATIVES.md) đi sâu REIT/real estate, gold, oil/gas, industrial commodities, infrastructure, crypto/stablecoin/custody, private equity/VC/private credit và liquidity/capital-call mechanics của alternatives.
 
 [04_FACTORS_INDEXING_AND_MULTI_ASSET_BEHAVIOR.md](./04_FACTORS_INDEXING_AND_MULTI_ASSET_BEHAVIOR.md) nâng lên tầng portfolio: market-cap vs equal weight, value, quality, momentum, low volatility, size, smart beta, index methodology, factor crowding, FX exposure và cách correlation thay đổi theo inflation/growth/liquidity regime.
 
-[05_MULTI_ASSET_HEDGING_CURRENCY_AND_REGIME_ALLOCATION.md](./05_MULTI_ASSET_HEDGING_CURRENCY_AND_REGIME_ALLOCATION.md) nối các asset classes thành portfolio thực tế: growth/inflation regimes, hidden duration, credit-equity linkage, FX return decomposition, hedged/unhedged exposure, liability currency, futures/options hedging, inflation/deflation hedges, risk parity, 60/40, volatility targeting, liquidity hierarchy và regime allocation.
+[05_MULTI_ASSET_HEDGING_CURRENCY_AND_REGIME_ALLOCATION.md](./05_MULTI_ASSET_HEDGING_CURRENCY_AND_REGIME_ALLOCATION.md) nối các asset classes thành portfolio thực tế: growth/inflation regimes, hidden duration, equity-credit linkage, cash optionality, FX decomposition, hedged/unhedged exposure và hedge ratio, futures/options hedging, inflation/deflation hedges, gold/commodities/REITs, 60/40, risk parity, trend/carry, volatility targeting, liquidity hierarchy, household balance sheet và regime-probability allocation.
 
-[06_CASH_MONEY_MARKETS_STRUCTURED_PRODUCTS_AND_PRIVATE_MARKETS.md](./06_CASH_MONEY_MARKETS_STRUCTURED_PRODUCTS_AND_PRIVATE_MARKETS.md) bổ sung các nhóm thường bị bỏ qua: cash, deposits, MMF, Treasury bills, commercial paper, repo, structured products, ETN, autocallables, private equity, venture capital, private credit, infrastructure, illiquidity premium, capital calls và liquidity mismatch.
+[06_CASH_MONEY_MARKETS_STRUCTURED_PRODUCTS_AND_PRIVATE_MARKETS.md](./06_CASH_MONEY_MARKETS_STRUCTURED_PRODUCTS_AND_PRIVATE_MARKETS.md) đào sâu cash/deposits/MMF/T-bills/CP/CD/repo/haircuts, structured notes/ELS/autocallables/barriers/worst-of/ETN và embedded options, sau đó đi sang PE/VC/private credit/private real estate/infrastructure, IRR/TVPI/DPI/RVPI, J-curve, capital calls, subscription lines, secondary markets, liquidity mismatch và private-market valuation smoothing.
 
 ## Sau domain này bạn cần làm được gì?
 
-Bạn cần có khả năng nhìn một sản phẩm và xác định return driver, legal claim, liquidity, duration/credit/FX/factor risk, hiểu vì sao hai ETF cùng theme vẫn khác nhau, nhận ra hidden concentration giữa nhiều asset classes, đánh giá embedded option/counterparty risk của structured product và hiểu private-market NAV không đồng nghĩa economic risk thấp.
+Bạn cần có khả năng nhìn một sản phẩm và xác định return driver, legal claim, liquidity, duration/credit/FX/factor risk, hiểu vì sao hai ETF cùng theme vẫn khác nhau, nhận ra hidden concentration giữa nhiều asset classes, giải cấu trúc một structured product thành bond + option risk, đọc private-fund return metrics và hiểu vì sao NAV mượt không đồng nghĩa economic risk thấp.
 
 Sau đó chuyển sang [03_company_analysis](../03_company_analysis/README.md) nếu muốn chọn cổ phiếu, hoặc [04_economics](../04_economics/README.md) nếu muốn đi sâu macro trước.
