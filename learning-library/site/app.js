@@ -5,7 +5,9 @@ let disposeReader = () => {};
 const escapeHtml = value => String(value).replace(/[&<>'"]/g, char => ({ '&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;' })[char]);
 const fileUrl = path => `./library/files/${path.split('/').map(encodeURIComponent).join('/')}`;
 const titleOf = doc => doc.title || doc.path.split('/').pop().replace(/\.[^.]+$/, '');
-const bookmarkKey = doc => `study-shelf-bookmark:${doc.path}`;
+const legacyBookmarkKey = doc => `study-shelf-bookmark:${doc.path}`;
+const progressKey = doc => `study-shelf-progress:${doc.path}`;
+const sectionBookmarksKey = doc => `study-shelf-section-bookmarks:${doc.path}`;
 const memoryStorage = new Map();
 let persistentStorage = true;
 
@@ -21,9 +23,30 @@ function storageRemove(key) {
   try { window.localStorage.removeItem(key); }
   catch { persistentStorage = false; memoryStorage.delete(key); }
 }
-function bookmarkStatus(saved) {
-  if (!saved) return persistentStorage ? 'Bookmark lưu trên trình duyệt này.' : 'Safari đang không cho lưu lâu dài; bookmark chỉ giữ trong phiên hiện tại.';
-  return `${persistentStorage ? 'Đã lưu' : 'Đã lưu tạm trong phiên'} ${new Date(saved.savedAt).toLocaleString()}`;
+function readJson(key, fallback = null) {
+  try { return JSON.parse(storageGet(key) || 'null') ?? fallback; }
+  catch { return fallback; }
+}
+function progressStatus(saved) {
+  if (!saved) return persistentStorage ? 'Tự động lưu vị trí đọc trên trình duyệt này.' : 'Trình duyệt đang chặn lưu lâu dài; tiến độ chỉ giữ trong phiên hiện tại.';
+  return `${persistentStorage ? 'Tự lưu' : 'Lưu tạm'} ${new Date(saved.savedAt).toLocaleString()}`;
+}
+function readProgress(doc) {
+  const current = readJson(progressKey(doc));
+  if (current) return current;
+  const legacy = readJson(legacyBookmarkKey(doc));
+  if (legacy) {
+    storageSet(progressKey(doc), JSON.stringify(legacy));
+    return legacy;
+  }
+  return null;
+}
+function readSectionBookmarks(doc) {
+  const value = readJson(sectionBookmarksKey(doc), []);
+  return Array.isArray(value) ? value : [];
+}
+function writeSectionBookmarks(doc, bookmarks) {
+  return storageSet(sectionBookmarksKey(doc), JSON.stringify(bookmarks));
 }
 
 function formatSize(bytes) { return bytes < 1024 * 1024 ? `${Math.ceil(bytes / 1024)} KB` : `${(bytes / 1024 / 1024).toFixed(1)} MB`; }
@@ -104,29 +127,84 @@ function markdownToHtml(markdown) {
   return html;
 }
 
-function readBookmark(doc) {
-  try { return JSON.parse(storageGet(bookmarkKey(doc)) || 'null'); } catch { return null; }
-}
 function writeRouteSection(path, sectionId) {
   const suffix = sectionId ? `?section=${encodeURIComponent(sectionId)}` : '';
   history.replaceState(null, '', `#/read/${encodeURIComponent(path)}${suffix}`);
 }
 function scrollToHeading(id, behavior = 'smooth') {
   const heading = document.getElementById(id);
-  if (!heading) return;
+  if (!heading) return false;
   window.scrollTo({ top: Math.max(0, heading.getBoundingClientRect().top + window.scrollY - 96), behavior });
+  return true;
 }
 
 async function renderReader(path, sectionId = '') {
   disposeReader();
   const doc = state.docs.find(item => item.path === path);
   if (!doc) { location.hash = '#/'; return; }
-  app.innerHTML = `<div class="reader-layout"><aside class="reader-aside"><a class="back-link" href="#/">← 서재로 돌아가기</a><nav id="toc" class="toc" aria-label="Mục lục tài liệu"></nav></aside><article class="reader"><header class="reader-header"><p class="eyebrow">${doc.type} · ${escapeHtml(doc.category)}</p><h1>${escapeHtml(titleOf(doc))}</h1><p class="muted">${escapeHtml(doc.displayPath || doc.path)} · ${formatSize(doc.size)}</p><div id="reader-toolbar" class="reader-toolbar"></div></header><div id="content"></div></article></div>`;
+
+  app.innerHTML = `<div class="reader-shell">
+    <div class="reader-layout">
+      <aside id="reader-aside" class="reader-aside" aria-label="Điều hướng tài liệu">
+        <div class="reader-aside-top">
+          <a class="back-link" href="#/">← 서재로 돌아가기</a>
+          <button id="toc-close" class="aside-close" type="button" aria-label="Đóng mục lục">×</button>
+        </div>
+        <section class="progress-card" aria-live="polite">
+          <p class="aside-kicker">READING PROGRESS</p>
+          <strong id="current-section-label">Đầu tài liệu</strong>
+          <span id="progress-status">${escapeHtml(progressStatus(readProgress(doc)))}</span>
+        </section>
+        <section class="aside-section">
+          <div class="aside-title-row"><span>Mục lục</span><span id="toc-count" class="aside-count"></span></div>
+          <nav id="toc" class="toc" aria-label="Mục lục tài liệu"></nav>
+        </section>
+        <section class="aside-section bookmarks-panel">
+          <div class="aside-title-row"><span>Bookmarks</span><span id="bookmark-count" class="aside-count"></span></div>
+          <div id="bookmark-list" class="bookmark-list"></div>
+        </section>
+      </aside>
+      <article class="reader">
+        <header class="reader-header">
+          <p class="eyebrow">${doc.type} · ${escapeHtml(doc.category)}</p>
+          <h1>${escapeHtml(titleOf(doc))}</h1>
+          <p class="muted">${escapeHtml(doc.displayPath || doc.path)} · ${formatSize(doc.size)}</p>
+          <div id="reader-toolbar" class="reader-toolbar"></div>
+        </header>
+        <div id="content"></div>
+      </article>
+    </div>
+    <button id="reader-overlay" class="reader-overlay" type="button" aria-label="Đóng mục lục"></button>
+    <div class="reader-edge-actions" aria-label="Reader shortcuts">
+      <button id="toc-toggle" class="edge-button edge-toc" type="button" aria-label="Mở mục lục" title="Mục lục">☰</button>
+      <button id="edge-bookmark" class="edge-button" type="button" aria-label="Bookmark section hiện tại" title="Bookmark section hiện tại">☆</button>
+      <button id="edge-restore" class="edge-button" type="button" aria-label="Về vị trí đọc gần nhất" title="Về vị trí đọc gần nhất">↩</button>
+    </div>
+    <div class="reading-progress-rail" aria-hidden="true"><span id="reading-progress-bar"></span></div>
+  </div>`;
+
   const content = document.querySelector('#content');
+  const aside = document.querySelector('#reader-aside');
+  const overlay = document.querySelector('#reader-overlay');
+  const setDrawer = open => {
+    aside.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+    document.body.classList.toggle('reader-drawer-open', open);
+  };
+  document.querySelector('#toc-toggle').onclick = () => setDrawer(true);
+  document.querySelector('#toc-close').onclick = () => setDrawer(false);
+  overlay.onclick = () => setDrawer(false);
+
   if (doc.type === 'PDF') {
+    document.querySelector('#toc').innerHTML = '<p class="toc-empty">Mục lục theo section hiện hỗ trợ tài liệu Markdown.</p>';
+    document.querySelector('#bookmark-list').innerHTML = '<p class="bookmark-empty">PDF dùng bookmark của trình đọc PDF hoặc mở ở tab mới.</p>';
+    document.querySelector('.reader-edge-actions').hidden = true;
+    document.querySelector('.progress-card').hidden = true;
     content.innerHTML = `<iframe class="pdf-frame" title="${escapeHtml(titleOf(doc))}" src="${fileUrl(doc.path)}#view=FitH"></iframe><div class="reader-actions"><a class="open-file" href="${fileUrl(doc.path)}" target="_blank" rel="noreferrer">Mở PDF ở tab mới ↗</a><a class="open-file" href="${fileUrl(doc.path)}" download>Tải PDF xuống ↓</a></div>`;
+    disposeReader = () => { setDrawer(false); };
     return;
   }
+
   try {
     const response = await fetch(fileUrl(doc.path));
     if (!response.ok) throw new Error();
@@ -134,35 +212,178 @@ async function renderReader(path, sectionId = '') {
     content.className = 'markdown';
     content.innerHTML = markdownToHtml(markdown);
     const headings = [...content.querySelectorAll('h1,h2,h3')];
+    const headingById = new Map(headings.map(heading => [heading.id, heading]));
     const toc = document.querySelector('#toc');
-    toc.innerHTML = headings.map(heading => `<a href="#${heading.id}" data-toc-id="${heading.id}" class="toc-level-${heading.tagName.slice(1)}">${escapeHtml(heading.textContent)}</a>`).join('');
+    document.querySelector('#toc-count').textContent = `${headings.length}`;
+    toc.innerHTML = headings.length ? headings.map(heading => `<div class="toc-item toc-level-${heading.tagName.slice(1)}" data-toc-row="${heading.id}"><a href="#${heading.id}" data-toc-id="${heading.id}">${escapeHtml(heading.textContent)}</a><button class="toc-bookmark-toggle" type="button" data-bookmark-id="${heading.id}" aria-label="Bookmark ${escapeHtml(heading.textContent)}" title="Bookmark section">☆</button></div>`).join('') : '<p class="toc-empty">Tài liệu này chưa có heading để tạo mục lục.</p>';
     content.insertAdjacentHTML('beforeend', `<a class="open-file" href="${fileUrl(doc.path)}" target="_blank" rel="noreferrer">Mở Markdown gốc ↗</a>`);
 
-    const saved = readBookmark(doc);
+    let bookmarks = readSectionBookmarks(doc).filter(item => item && headingById.has(item.headingId));
+    if (bookmarks.length !== readSectionBookmarks(doc).length) writeSectionBookmarks(doc, bookmarks);
+    let activeId = headings[0]?.id || '';
+    let progressTimer = 0;
+    let scrollTicking = false;
+    const status = document.querySelector('#progress-status');
+    const currentLabel = document.querySelector('#current-section-label');
+    const bookmarkList = document.querySelector('#bookmark-list');
     const toolbar = document.querySelector('#reader-toolbar');
-    toolbar.innerHTML = `<button id="save-bookmark" class="bookmark-button" type="button">🔖 Lưu vị trí hiện tại</button><button id="restore-bookmark" class="bookmark-button" type="button" ${saved ? '' : 'disabled'}>↩ Khôi phục vị trí${saved ? '' : ' (chưa lưu)'}</button><button id="clear-bookmark" class="bookmark-button secondary" type="button" ${saved ? '' : 'disabled'}>Xóa bookmark</button><span id="bookmark-status" class="bookmark-status">${escapeHtml(bookmarkStatus(saved))}</span>`;
-    const save = () => {
-      const active = [...headings].reverse().find(heading => heading.getBoundingClientRect().top <= 150) || headings[0];
-      const bookmark = { headingId: active?.id || '', scrollY: Math.round(window.scrollY), savedAt: new Date().toISOString() };
-      const persisted = storageSet(bookmarkKey(doc), JSON.stringify(bookmark));
-      document.querySelector('#restore-bookmark').disabled = false;
-      document.querySelector('#clear-bookmark').disabled = false;
-      document.querySelector('#bookmark-status').textContent = persisted ? bookmarkStatus(bookmark) : 'Đã lưu tạm trong phiên này; Safari chưa cho lưu lâu dài.';
+    const edgeBookmark = document.querySelector('#edge-bookmark');
+    const edgeRestore = document.querySelector('#edge-restore');
+    const progressBar = document.querySelector('#reading-progress-bar');
+
+    toolbar.innerHTML = `<button id="toggle-current-bookmark" class="bookmark-button" type="button">☆ Bookmark section</button><button id="restore-progress" class="bookmark-button" type="button">↩ Về vị trí đọc gần nhất</button><button id="clear-progress" class="bookmark-button secondary" type="button">Xóa vị trí đã lưu</button><span class="bookmark-status">Auto-save bật · lưu theo section và vị trí scroll</span>`;
+
+    const findBookmarkIndex = id => bookmarks.findIndex(item => item.headingId === id);
+    const isBookmarked = id => findBookmarkIndex(id) >= 0;
+    const updateBookmarkButtons = () => {
+      const currentBookmarked = activeId && isBookmarked(activeId);
+      const currentButton = document.querySelector('#toggle-current-bookmark');
+      if (currentButton) currentButton.textContent = currentBookmarked ? '★ Bỏ bookmark section' : '☆ Bookmark section';
+      edgeBookmark.textContent = currentBookmarked ? '★' : '☆';
+      edgeBookmark.classList.toggle('active', Boolean(currentBookmarked));
+      toc.querySelectorAll('[data-bookmark-id]').forEach(button => {
+        const bookmarked = isBookmarked(button.dataset.bookmarkId);
+        button.textContent = bookmarked ? '★' : '☆';
+        button.classList.toggle('active', bookmarked);
+        button.setAttribute('aria-pressed', String(bookmarked));
+      });
     };
-    const restore = () => { const bookmark = readBookmark(doc); if (!bookmark) return; if (bookmark.headingId) scrollToHeading(bookmark.headingId); else window.scrollTo({ top: bookmark.scrollY, behavior: 'smooth' }); };
-    const clear = () => { storageRemove(bookmarkKey(doc)); document.querySelector('#restore-bookmark').disabled = true; document.querySelector('#clear-bookmark').disabled = true; document.querySelector('#bookmark-status').textContent = 'Đã xóa bookmark.'; };
-    document.querySelector('#save-bookmark').onclick = save;
-    document.querySelector('#restore-bookmark').onclick = restore;
-    document.querySelector('#clear-bookmark').onclick = clear;
-    toc.querySelectorAll('[data-toc-id]').forEach(link => link.onclick = event => { event.preventDefault(); const id = link.dataset.tocId; scrollToHeading(id); writeRouteSection(doc.path, id); });
-    const observer = new IntersectionObserver(() => {
-      const active = [...headings].reverse().find(heading => heading.getBoundingClientRect().top <= 150) || headings[0];
-      toc.querySelectorAll('[data-toc-id]').forEach(link => link.classList.toggle('active', link.dataset.tocId === active?.id));
-    }, { threshold: [0, 1] });
-    headings.forEach(heading => observer.observe(heading));
-    disposeReader = () => observer.disconnect();
-    requestAnimationFrame(() => { if (sectionId) scrollToHeading(sectionId, 'auto'); });
-  } catch { content.innerHTML = '<p class="empty">Không thể tải tài liệu. Hãy chạy lại build và kiểm tra đường dẫn trong library.config.json.</p>'; }
+    const renderBookmarkList = () => {
+      document.querySelector('#bookmark-count').textContent = `${bookmarks.length}`;
+      bookmarkList.innerHTML = bookmarks.length ? bookmarks.map(item => `<div class="bookmark-row"><button class="bookmark-jump" type="button" data-bookmark-jump="${item.headingId}">${escapeHtml(item.title)}</button><button class="bookmark-remove" type="button" data-bookmark-remove="${item.headingId}" aria-label="Xóa bookmark ${escapeHtml(item.title)}" title="Xóa bookmark">×</button></div>`).join('') : '<p class="bookmark-empty">Bấm ☆ cạnh một section để lưu.</p>';
+      bookmarkList.querySelectorAll('[data-bookmark-jump]').forEach(button => button.onclick = () => {
+        const id = button.dataset.bookmarkJump;
+        if (scrollToHeading(id)) {
+          writeRouteSection(doc.path, id);
+          if (window.innerWidth <= 900) setDrawer(false);
+        }
+      });
+      bookmarkList.querySelectorAll('[data-bookmark-remove]').forEach(button => button.onclick = () => toggleBookmark(button.dataset.bookmarkRemove, false));
+      updateBookmarkButtons();
+    };
+    const toggleBookmark = (id, force) => {
+      const heading = headingById.get(id);
+      if (!heading) return;
+      const index = findBookmarkIndex(id);
+      const shouldAdd = typeof force === 'boolean' ? force : index < 0;
+      if (shouldAdd && index < 0) bookmarks.push({ headingId: id, title: heading.textContent.trim(), savedAt: new Date().toISOString() });
+      if (!shouldAdd && index >= 0) bookmarks.splice(index, 1);
+      writeSectionBookmarks(doc, bookmarks);
+      renderBookmarkList();
+    };
+
+    const saveProgressNow = id => {
+      const heading = id ? headingById.get(id) : null;
+      const progress = { headingId: heading?.id || '', headingTitle: heading?.textContent.trim() || '', scrollY: Math.round(window.scrollY), savedAt: new Date().toISOString() };
+      storageSet(progressKey(doc), JSON.stringify(progress));
+      status.textContent = progressStatus(progress);
+      return progress;
+    };
+    const scheduleProgressSave = id => {
+      window.clearTimeout(progressTimer);
+      progressTimer = window.setTimeout(() => saveProgressNow(id), 280);
+    };
+    const updateReadPercent = () => {
+      const available = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+      const percent = Math.max(0, Math.min(100, (window.scrollY / available) * 100));
+      progressBar.style.height = `${percent}%`;
+    };
+    const setActiveSection = (id, { syncUrl = true, save = true } = {}) => {
+      if (!id || !headingById.has(id)) return;
+      activeId = id;
+      const heading = headingById.get(id);
+      toc.querySelectorAll('[data-toc-row]').forEach(row => row.classList.toggle('active', row.dataset.tocRow === id));
+      currentLabel.textContent = heading.textContent.trim();
+      updateBookmarkButtons();
+      if (syncUrl) writeRouteSection(doc.path, id);
+      if (save) scheduleProgressSave(id);
+    };
+    const activeFromScroll = () => {
+      if (!headings.length) return '';
+      const cutoff = Math.min(190, Math.max(120, window.innerHeight * 0.23));
+      let active = headings[0];
+      for (const heading of headings) {
+        if (heading.getBoundingClientRect().top <= cutoff) active = heading;
+        else break;
+      }
+      return active.id;
+    };
+    const onScroll = () => {
+      if (scrollTicking) return;
+      scrollTicking = true;
+      requestAnimationFrame(() => {
+        scrollTicking = false;
+        const next = activeFromScroll();
+        if (next && next !== activeId) setActiveSection(next);
+        else if (next) scheduleProgressSave(next);
+        updateReadPercent();
+      });
+    };
+    const restoreProgress = (behavior = 'smooth') => {
+      const saved = readProgress(doc);
+      if (!saved) return false;
+      if (saved.headingId && scrollToHeading(saved.headingId, behavior)) {
+        setActiveSection(saved.headingId, { syncUrl: true, save: false });
+        return true;
+      }
+      window.scrollTo({ top: saved.scrollY || 0, behavior });
+      return true;
+    };
+    const clearProgress = () => {
+      storageRemove(progressKey(doc));
+      storageRemove(legacyBookmarkKey(doc));
+      status.textContent = 'Đã xóa vị trí đã lưu. Auto-save sẽ tạo lại khi bạn tiếp tục đọc.';
+    };
+
+    document.querySelector('#toggle-current-bookmark').onclick = () => activeId && toggleBookmark(activeId);
+    edgeBookmark.onclick = () => activeId && toggleBookmark(activeId);
+    document.querySelector('#restore-progress').onclick = () => restoreProgress();
+    edgeRestore.onclick = () => restoreProgress();
+    document.querySelector('#clear-progress').onclick = clearProgress;
+
+    toc.querySelectorAll('[data-toc-id]').forEach(link => link.onclick = event => {
+      event.preventDefault();
+      const id = link.dataset.tocId;
+      if (scrollToHeading(id)) {
+        setActiveSection(id);
+        if (window.innerWidth <= 900) setDrawer(false);
+      }
+    });
+    toc.querySelectorAll('[data-bookmark-id]').forEach(button => button.onclick = event => {
+      event.preventDefault();
+      event.stopPropagation();
+      toggleBookmark(button.dataset.bookmarkId);
+    });
+
+    renderBookmarkList();
+    const onPageHide = () => saveProgressNow(activeFromScroll() || activeId);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('pagehide', onPageHide);
+    updateReadPercent();
+
+    requestAnimationFrame(() => {
+      const saved = readProgress(doc);
+      if (sectionId && headingById.has(sectionId)) {
+        scrollToHeading(sectionId, 'auto');
+        setActiveSection(sectionId, { syncUrl: false });
+      } else if (saved) {
+        restoreProgress('auto');
+      } else if (headings[0]) {
+        setActiveSection(headings[0].id, { syncUrl: false, save: false });
+      }
+      updateReadPercent();
+    });
+
+    disposeReader = () => {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('pagehide', onPageHide);
+      window.clearTimeout(progressTimer);
+      document.body.classList.remove('reader-drawer-open');
+      if (activeId) saveProgressNow(activeFromScroll() || activeId);
+    };
+  } catch {
+    content.innerHTML = '<p class="empty">Không thể tải tài liệu. Hãy chạy lại build và kiểm tra đường dẫn trong library.config.json.</p>';
+  }
 }
 
 function route() {
