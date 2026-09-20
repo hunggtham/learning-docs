@@ -1,479 +1,447 @@
-# Đầu tư xuyên biên giới: tiền tệ, thuế, wrapper và khả năng tiếp cận thị trường
+# Đầu tư xuyên biên giới: tiền tệ, thuế, cấu trúc sản phẩm và khả năng tiếp cận thị trường
 
-> Khi đầu tư tài sản nước ngoài, lợi nhuận không chỉ đến từ underlying. Người đầu tư còn chịu ảnh hưởng của **tỷ giá, cấu trúc pháp lý của sản phẩm, custody, settlement, thuế, market access và khả năng chuyển tiền**. Một tài sản tốt nhưng implementation kém vẫn có thể tạo kết quả xấu.
+> Khi đầu tư tài sản nước ngoài, kết quả không chỉ phụ thuộc tài sản cơ sở. Nhà đầu tư còn chịu ảnh hưởng của tỷ giá, cấu trúc pháp lý của sản phẩm, lưu ký, thanh toán, thuế, khả năng tiếp cận thị trường và khả năng chuyển tiền. Một tài sản tốt nhưng được triển khai qua cấu trúc không phù hợp vẫn có thể tạo kết quả xấu.
 
-> **Dữ liệu động:** thuế suất, ưu đãi tài khoản, withholding, settlement cycle, foreign room, market-access rule và broker support phải được kiểm tra lại theo nguồn chính thức tại thời điểm đầu tư.
+> **Dữ liệu động:** thuế suất, ưu đãi tài khoản, thuế khấu trừ tại nguồn, chu kỳ thanh toán, giới hạn sở hữu nước ngoài, quy định tiếp cận thị trường và khả năng hỗ trợ của nhà môi giới phải được kiểm tra lại theo nguồn chính thức tại thời điểm đầu tư.
 
 # Phần I — Bốn lớp tiền tệ
 
-## 1. Trading currency
+## 1. Đồng tiền giao dịch
 
-Trading currency là đồng tiền dùng để báo giá và giao dịch sản phẩm.
+**Đồng tiền giao dịch (trading currency)** là đồng tiền dùng để báo giá và mua bán sản phẩm.
 
-ETF niêm yết tại Hàn Quốc có thể giao dịch bằng KRW.
+Ví dụ, một ETF niêm yết tại Hàn Quốc có thể giao dịch bằng KRW.
 
-## 2. Underlying economic currency
+## 2. Đồng tiền kinh tế của tài sản cơ sở
 
-Underlying economic currency là đồng tiền gắn với tài sản hoặc dòng tiền cơ bản.
+**Đồng tiền kinh tế của tài sản cơ sở (underlying economic currency)** là đồng tiền gắn với dòng tiền hoặc mức phơi nhiễm kinh tế của tài sản.
 
-Một ETF KRW theo S&P 500 vẫn có exposure kinh tế lớn với USD nếu không hedge.
+Một ETF giao dịch bằng KRW nhưng theo S&P 500 vẫn có mức phơi nhiễm lớn với USD nếu không phòng vệ.
 
-## 3. Reporting / home currency
+## 3. Đồng tiền báo cáo hoặc đồng tiền gốc
 
-Đây là đồng tiền người đầu tư dùng để đo wealth.
+**Đồng tiền báo cáo (reporting currency)** là đồng tiền nhà đầu tư dùng để đo giá trị tài sản và kết quả.
 
-Với người sống và chi tiêu chủ yếu tại Hàn Quốc, KRW có thể là home/reporting currency trong nhiều bài toán.
+Với người sống và chi tiêu chủ yếu tại Hàn Quốc, KRW thường là đồng tiền gốc trong nhiều bài toán tài chính cá nhân.
 
-## 4. Liability currency
+## 4. Đồng tiền của nghĩa vụ
 
-Liability currency là đồng tiền của các nghĩa vụ tương lai như:
+**Đồng tiền nghĩa vụ (liability currency)** là đồng tiền gắn với các khoản phải chi trong tương lai như:
 
-- tiền thuê nhà;
+- tiền nhà;
 - mua nhà;
 - học phí;
 - trả nợ;
 - chi tiêu hưu trí.
 
-Currency allocation nên liên hệ với liability, không chỉ return expectation.
+Phân bổ tiền tệ nên liên hệ với nghĩa vụ, không chỉ với kỳ vọng lợi suất.
 
-# Phần II — Phân rã lợi nhuận FX
+# Phần II — Phân rã lợi suất theo tỷ giá
 
-## 5. Công thức home-currency return
+## 5. Công thức lợi suất theo đồng tiền gốc
 
 ```text
-Home Return
-= (1 + Local Asset Return)
-× (1 + FX Return)
+Lợi suất theo đồng tiền gốc
+= (1 + lợi suất tài sản địa phương)
+× (1 + lợi suất tỷ giá)
 - 1
 ```
 
-Ví dụ cổ phiếu tăng 10% bằng local currency nhưng local currency giảm mạnh so home currency thì lợi nhuận thực nhận có thể thấp hơn nhiều.
+Nếu cổ phiếu tăng 10% bằng đồng tiền địa phương nhưng đồng tiền đó giảm mạnh so với đồng tiền gốc, lợi suất nhà đầu tư thực nhận có thể thấp hơn nhiều.
 
-## 6. Listing currency không xóa FX exposure
+## 6. Đồng tiền niêm yết không xóa rủi ro tỷ giá
 
-Mua một ETF global bằng KRW không tự động loại USD exposure.
+Mua một ETF toàn cầu bằng KRW không tự động loại rủi ro USD. Cần kiểm tra tài sản cơ sở và chính sách phòng vệ tiền tệ.
 
-Cần kiểm tra underlying và hedge policy.
+# Phần III — Phòng vệ tự nhiên và vốn con người
 
-# Phần III — Natural hedge
+## 7. Phòng vệ tự nhiên
 
-## 7. Natural hedge là gì?
+**Phòng vệ tự nhiên (natural hedge)** xuất hiện khi tài sản và nghĩa vụ có cùng đồng tiền.
 
-Natural hedge xuất hiện khi asset và liability có cùng currency exposure.
+Ví dụ, nếu tương lai chắc chắn cần chi bằng USD thì sở hữu một phần tài sản USD có thể giảm lệch tiền tệ.
 
-Ví dụ có future USD expense thì sở hữu một phần USD asset có thể giảm mismatch.
+## 8. Vốn con người
 
-## 8. Human capital
+Thu nhập lao động cũng là một dạng mức phơi nhiễm kinh tế. Người nhận lương bằng KRW đã có **vốn con người (human capital)** gắn với Hàn Quốc; danh mục đầu tư cần cân nhắc mức tập trung này.
 
-Thu nhập lao động cũng là một dạng economic exposure.
+# Phần IV — Phòng vệ tỷ giá
 
-Người nhận lương KRW đã có “human capital” gắn với Korea; portfolio có thể cần cân nhắc concentration này.
+## 9. Phòng vệ chiến lược
 
-# Phần IV — Currency hedging
+**Phòng vệ chiến lược (strategic hedge)** là tỷ lệ phòng vệ dài hạn tương đối ổn định. Mục tiêu thường là giảm biến động hoặc giảm lệch giữa tài sản và nghĩa vụ, không phải dự báo tỷ giá ngắn hạn.
 
-## 9. Strategic hedge
+## 10. Phòng vệ động
 
-Strategic hedge là tỷ lệ hedge dài hạn tương đối ổn định.
+**Phòng vệ động (dynamic hedge)** thay tỷ lệ phòng vệ theo định giá, chênh lệch lãi suất, biến động hoặc chế độ kinh tế.
 
-Mục tiêu thường là giảm volatility hoặc liability mismatch, không phải dự đoán FX ngắn hạn.
+Cách này phức tạp hơn và tạo thêm rủi ro chọn sai thời điểm.
 
-## 10. Dynamic hedge
+## 11. Phòng vệ không miễn phí
 
-Dynamic hedge thay tỷ lệ theo valuation, rates hoặc regime.
+Chi phí phòng vệ ngoại hối có thể đến từ:
 
-Nó phức tạp hơn và có nguy cơ market timing sai.
+- điểm kỳ hạn;
+- chênh lệch lãi suất;
+- chênh lệch mua–bán;
+- chi phí tái lập vị thế;
+- cơ sở hoán đổi tiền tệ.
 
-## 11. Hedge không miễn phí
+## 12. Tỷ lệ phòng vệ
 
-FX hedge có thể chịu:
+Không nhất thiết chỉ có lựa chọn 0% hoặc 100%. Tỷ lệ hợp lý phụ thuộc mục tiêu, thời hạn, đồng tiền nghĩa vụ và khả năng chịu biến động.
 
-- forward points;
-- interest-rate differential;
-- spread;
-- roll cost;
-- cross-currency basis.
+# Phần V — Điểm kỳ hạn và cơ sở hoán đổi
 
-## 12. Hedge ratio
+## 13. Điểm kỳ hạn
 
-Không nhất thiết hedge 0% hoặc 100%.
+Giá ngoại hối kỳ hạn phản ánh chênh lệch lãi suất giữa hai đồng tiền theo logic cân bằng lãi suất có phòng vệ (covered interest parity), cùng các yếu tố thị trường khác.
 
-Tỷ lệ hợp lý phụ thuộc mục tiêu, horizon, liability và volatility tolerance.
+Phòng vệ một đồng tiền có lãi suất cao hoặc thấp có thể tạo lợi suất nắm giữ khác nhau.
 
-# Phần V — Forward points và basis
+## 14. Cơ sở hoán đổi tiền tệ
 
-## 13. Forward points
+**Cơ sở hoán đổi tiền tệ (cross-currency basis)** phản ánh mất cân bằng nhu cầu nguồn vốn giữa các đồng tiền trong thị trường hoán đổi.
 
-Forward FX phản ánh chênh lệch lãi suất giữa hai đồng tiền theo nguyên lý covered interest parity, cùng các yếu tố thị trường khác.
+Trong căng thẳng, chi phí phòng vệ USD có thể tăng ngay cả khi tỷ giá giao ngay không thay đổi nhiều.
 
-Hedge một currency có lãi suất cao/thấp có thể tạo carry khác nhau.
+# Phần VI — Cấu trúc bao quanh tài sản cơ sở
 
-## 14. Cross-currency basis
+## 15. Cấu trúc sản phẩm là lớp bao quanh tài sản cơ sở
 
-Basis phản ánh mất cân bằng funding và demand trong swap market.
+Một mức phơi nhiễm có thể được sở hữu qua:
 
-Trong stress, cost hedge USD có thể tăng ngay cả khi spot không đổi nhiều.
-
-# Phần VI — Wrapper
-
-## 15. Wrapper là lớp bao quanh underlying
-
-Một exposure có thể được sở hữu qua:
-
-- direct stock;
+- cổ phiếu trực tiếp;
 - ETF;
-- mutual fund;
+- quỹ mở;
 - ETN;
-- depositary receipt;
-- derivative.
+- chứng chỉ lưu ký;
+- phái sinh.
 
-Mỗi wrapper có legal claim và risk khác nhau.
+Mỗi **cấu trúc bao quanh (wrapper)** tạo quyền pháp lý và rủi ro khác nhau.
 
 ## 16. ETF
 
-ETF thường nắm basket hoặc replicate index.
+ETF thường nắm một rổ tài sản hoặc mô phỏng chỉ số. Cần kiểm tra:
 
-Cần xem:
-
-- domicile;
-- replication;
-- securities lending;
-- tracking difference;
-- tax;
-- FX hedge.
+- nơi thành lập pháp lý của quỹ;
+- cách mô phỏng chỉ số;
+- hoạt động cho vay chứng khoán;
+- sai lệch bám chỉ số;
+- thuế;
+- chính sách phòng vệ tỷ giá.
 
 ## 17. ETN
 
-ETN thường là unsecured debt claim đối với issuer gắn payoff với index.
+ETN thường là nghĩa vụ nợ không có tài sản bảo đảm của tổ chức phát hành, với khoản thanh toán gắn với một chỉ số.
 
-Ngoài market exposure còn có issuer credit risk.
+Ngoài mức phơi nhiễm thị trường, người nắm còn chịu rủi ro tín dụng của tổ chức phát hành.
 
-## 18. Depositary receipt
+## 18. Chứng chỉ lưu ký
 
-Depositary receipt đại diện quyền lợi liên quan cổ phiếu ở thị trường khác nhưng thêm lớp depositary/custody và có thể có liquidity khác underlying.
+**Chứng chỉ lưu ký (depositary receipt)** đại diện quyền lợi liên quan tới cổ phiếu ở thị trường khác nhưng thêm một lớp tổ chức lưu ký và có thể có thanh khoản khác tài sản gốc.
 
-# Phần VII — Domicile
+# Phần VII — Nơi thành lập pháp lý của quỹ
 
-## 19. Domicile của fund quan trọng
+## 19. Nơi thành lập quỹ có thể ảnh hưởng kết quả
 
-Fund domicile có thể ảnh hưởng:
+**Nơi thành lập pháp lý (fund domicile)** có thể ảnh hưởng:
 
-- withholding;
-- treaty;
-- legal protection;
-- reporting;
-- estate/tax treatment.
+- thuế khấu trừ tại nguồn;
+- hiệp định thuế;
+- bảo vệ pháp lý;
+- nghĩa vụ báo cáo;
+- xử lý thuế tài sản hoặc thừa kế.
 
-Không nên chỉ nhìn ticker.
+Không nên chỉ nhìn mã giao dịch.
 
-## 20. Local wrapper vs direct foreign asset
+## 20. Sản phẩm nội địa và sở hữu trực tiếp tài sản nước ngoài
 
-Mua sản phẩm niêm yết tại Korea có thể đơn giản hơn về broker/settlement nhưng không nhất thiết tối ưu về fee, tracking hoặc tax.
+Mua sản phẩm niêm yết tại Hàn Quốc có thể đơn giản hơn về nhà môi giới và thanh toán nhưng không nhất thiết tối ưu về phí, độ bám chỉ số hoặc thuế.
 
-Direct ownership có thể cho access tốt hơn nhưng thêm operational burden.
+Sở hữu trực tiếp tài sản nước ngoài có thể cho khả năng tiếp cận tốt hơn nhưng làm tăng gánh nặng vận hành và báo cáo.
 
-# Phần VIII — Custody và beneficial ownership
+# Phần VIII — Lưu ký và quyền sở hữu hưởng lợi
 
-## 21. Custodian
+## 21. Tổ chức lưu ký
 
-Custodian giữ hoặc ghi nhận securities theo legal structure.
+**Tổ chức lưu ký (custodian)** giữ hoặc ghi nhận chứng khoán theo cấu trúc pháp lý của thị trường.
 
-## 22. Beneficial owner
+## 22. Chủ sở hữu hưởng lợi
 
-Người đầu tư có thể là beneficial owner trong khi legal title được giữ qua nominee/custodian.
+Nhà đầu tư có thể là **chủ sở hữu hưởng lợi (beneficial owner)** trong khi tên pháp lý trên hệ thống được giữ thông qua tổ chức đứng tên thay hoặc tổ chức lưu ký.
 
-Cần hiểu quyền:
+Cần hiểu quyền đối với:
 
-- voting;
-- dividend;
-- corporate action;
-- asset segregation.
+- biểu quyết;
+- cổ tức;
+- hành động doanh nghiệp;
+- tách biệt tài sản khách hàng.
 
-## 23. Broker legal entity
+## 23. Pháp nhân của nhà môi giới
 
-Một brand có thể có nhiều legal entity ở các quốc gia khác nhau.
+Một thương hiệu có thể vận hành qua nhiều pháp nhân tại các quốc gia khác nhau. Mức bảo vệ phụ thuộc pháp nhân mà tài khoản thực sự ký hợp đồng, không chỉ tên thương hiệu.
 
-Protection phụ thuộc entity mà account ký hợp đồng, không chỉ tên thương hiệu.
+# Phần IX — Thanh toán và rủi ro múi giờ
 
-# Phần IX — Settlement và time-zone risk
+## 24. Lệch chu kỳ thanh toán
 
-## 24. Settlement mismatch
+Hai thị trường có thể có chu kỳ thanh toán khác nhau. Bán ở thị trường này để mua ở thị trường khác có thể tạo lệch thời điểm tiền mặt.
 
-Hai market có thể có settlement cycle khác nhau.
+## 25. Lệch ngày nghỉ
 
-Bán ở một market để mua market khác có thể tạo cash timing mismatch.
+Hàn Quốc có thể nghỉ khi Mỹ mở cửa, hoặc Việt Nam có thể nghỉ khi thị trường khác giao dịch. Điều này làm phòng vệ và tái cân bằng không diễn ra đồng thời.
 
-## 25. Holiday mismatch
+## 26. Rủi ro múi giờ
 
-Korea nghỉ nhưng Mỹ mở, hoặc Việt Nam nghỉ khi market khác mở, có thể làm hedge/rebalance không đồng thời.
+Sản phẩm nội địa có thể giao dịch khi thị trường tiền mặt của tài sản cơ sở đang đóng cửa. Khi đó chênh lệch so với giá trị tài sản và quá trình khám phá giá có thể biến động mạnh hơn.
 
-## 26. Time zone
+# Phần X — Hành động doanh nghiệp
 
-Price của local wrapper có thể giao dịch khi underlying cash market đang đóng.
+## 27. Cổ tức
 
-Khi đó premium/discount và price discovery có thể biến động hơn.
+Cổ tức xuyên biên giới có thể bị khấu trừ thuế tại nguồn trước khi tới tài khoản.
 
-# Phần X — Corporate actions
+## 28. Quyền mua, chào mua và sáp nhập
 
-## 27. Dividend
+Nhà môi giới hoặc tổ chức lưu ký có thể đặt thời hạn xử lý sớm hơn thời hạn chính thức của thị trường. Nhà đầu tư phải theo dõi thông báo vận hành, không chỉ thông báo từ doanh nghiệp.
 
-Cross-border dividend có thể chịu withholding trước khi tới account.
+## 29. Cổ phiếu lẻ
 
-## 28. Rights / tender / merger
+Hành động doanh nghiệp có thể tạo phần lẻ và cách xử lý khác nhau theo nhà môi giới.
 
-Broker hoặc custodian có thể có deadline xử lý sớm hơn official market deadline.
+# Phần XI — Tiếp cận thị trường Hàn Quốc
 
-## 29. Fractional / odd-lot issue
+## 30. Sản phẩm niêm yết nội địa
 
-Corporate action có thể tạo phần lẻ và cách xử lý khác nhau theo broker.
+Nhà đầu tư tại Hàn Quốc có thể tiếp cận nhiều tài sản toàn cầu qua ETF hoặc ETN nội địa. Luôn nhìn xuyên sản phẩm tới tài sản cơ sở, tiền tệ và cấu trúc pháp lý.
 
-# Phần XI — Korea market access
+## 31. Giao dịch trực tiếp ở nước ngoài
 
-## 30. Local listed products
+Nhà môi giới Hàn Quốc có thể hỗ trợ giao dịch trực tiếp cổ phiếu nước ngoài, nhưng danh sách thị trường, chi phí đổi ngoại tệ, quy định báo cáo và chức năng giao dịch thay đổi theo thời gian.
 
-Nhà đầu tư tại Korea có thể tiếp cận nhiều exposure global qua local ETF/ETN.
+## 32. Tài khoản ưu đãi thuế
 
-Cần nhìn xuyên wrapper tới underlying.
+Các tài khoản như ISA có quy tắc, giới hạn và nhóm sản phẩm đủ điều kiện có thể thay đổi. Tài liệu dài hạn không nên đóng băng một con số cụ thể; cần kiểm tra nguồn chính thức tại thời điểm sử dụng.
 
-## 31. Direct foreign trading
+# Phần XII — Tiếp cận thị trường Việt Nam
 
-Broker Hàn Quốc có thể hỗ trợ direct overseas stocks nhưng market availability, FX conversion và tax reporting phụ thuộc dịch vụ hiện hành.
+## 33. Giới hạn sở hữu nước ngoài
 
-## 32. ISA và tax wrappers
+Một số công ty hoặc ngành có giới hạn sở hữu nước ngoài. Khi **phần sở hữu còn lại cho nhà đầu tư nước ngoài (foreign room)** gần đầy, giá và thanh khoản có thể khác bình thường.
 
-Các tài khoản ưu đãi thuế có rule và limit có thể thay đổi.
+## 34. Tỷ lệ cổ phiếu tự do giao dịch
 
-Không hard-code con số vào tài liệu dài hạn; luôn kiểm tra cơ quan/broker chính thức.
+Vốn hóa lớn nhưng **tỷ lệ tự do giao dịch (free float)** thấp có thể làm thanh khoản thực tế nhỏ hơn tưởng tượng.
 
-# Phần XII — Vietnam market access
+## 35. Biên độ giá
 
-## 33. Foreign ownership
+Biên độ giá hằng ngày có thể kéo dài thời gian thoát vị thế trong giai đoạn căng thẳng.
 
-Một số công ty/ngành có giới hạn sở hữu nước ngoài.
+## 36. Chu kỳ thanh toán và yêu cầu nguồn tiền
 
-Khi foreign room gần đầy, pricing/liquidity có thể khác bình thường.
+Cơ chế thanh toán, yêu cầu có tiền trước giao dịch và quy định tiếp cận có thể thay đổi theo cải cách thị trường. Khi giao dịch thật phải kiểm tra VSDC, HOSE, HNX, SSC và nhà môi giới tại thời điểm đó.
 
-## 34. Free float
+# Phần XIII — Kiểm soát vốn và chuyển tiền về
 
-Market cap lớn nhưng free float thấp có thể làm liquidity thực tế nhỏ hơn tưởng tượng.
+## 37. Khả năng chuyển đổi tiền tệ
 
-## 35. Price limit
+Không phải mọi đồng tiền đều có mức tự do chuyển đổi giống nhau. Cần hiểu khả năng chuyển đổi và chuyển tiền ra/vào theo khuôn khổ pháp lý.
 
-Daily price band có thể kéo dài exit time trong stress.
+## 38. Chuyển lợi nhuận và vốn về nơi cần sử dụng
 
-## 36. Settlement / prefunding / access rules
+**Chuyển tiền về (repatriation)** là khả năng đưa vốn hoặc lợi nhuận từ thị trường đầu tư về nơi nhà đầu tư cần sử dụng.
 
-Cơ chế settlement và yêu cầu funding có thể thay đổi theo cải cách thị trường.
+Lợi nhuận trên giấy không đủ nếu tiền không thể chuyển về đúng lúc hoặc đúng mục đích trong khuôn khổ pháp lý.
 
-Khi giao dịch thật phải kiểm tra VSDC/HOSE/HNX/SSC và broker hiện hành.
+## 39. Chứng từ
 
-# Phần XIII — Capital controls và repatriation
+Chuyển tiền xuyên biên giới có thể yêu cầu chứng từ về nguồn vốn, thuế hoặc mục đích giao dịch. Thiếu hồ sơ có thể làm chậm quá trình rút/chuyển vốn.
 
-## 37. Convertibility
+# Phần XIV — Khung thuế
 
-Không phải mọi currency đều hoàn toàn tự do như nhau.
+## 40. Nơi cư trú thuế
 
-Cần hiểu khả năng chuyển đổi và chuyển tiền ra/vào theo legal framework.
+Thuế thường phụ thuộc **nơi cư trú thuế (tax residency)**, loại tài sản, loại tài khoản và khu vực pháp lý. Không nên suy luận chỉ từ quốc tịch.
 
-## 38. Repatriation
+## 41. Thuế khấu trừ tại nguồn
 
-Profit trên paper chỉ có giá trị khi cash có thể được chuyển về nơi cần sử dụng trong khuôn khổ pháp lý.
+Cổ tức hoặc lãi có thể chịu **thuế khấu trừ tại nguồn (withholding tax)** trước khi tiền tới nhà đầu tư. Hiệp định thuế có thể ảnh hưởng mức thuế cuối cùng.
 
-## 39. Documentation
+## 42. Lãi vốn
 
-Cross-border transfer có thể yêu cầu chứng từ nguồn vốn, thuế hoặc mục đích giao dịch.
+Cách đánh thuế lãi vốn thay đổi giữa thị trường, loại tài sản, nơi cư trú và loại tài khoản.
 
-# Phần XIV — Tax framework
+## 43. Cấu trúc tài khoản ưu đãi thuế
 
-## 40. Tax residency
+Một tài khoản có lợi thế thuế nhưng có thể kèm giới hạn đóng góp, thời gian nắm giữ hoặc danh sách sản phẩm đủ điều kiện riêng.
 
-Thuế thường phụ thuộc residency, loại tài sản, account và jurisdiction.
+## 44. Không tối ưu thuế bằng dữ liệu cũ
 
-Không suy luận chỉ từ quốc tịch.
+Quy định thuế thay đổi. Với quyết định thật, cần xác minh nguồn chính thức hoặc chuyên gia thuế phù hợp với hoàn cảnh cụ thể.
 
-## 41. Withholding tax
+# Phần XV — Tổng chi phí sở hữu
 
-Dividend/interest có thể bị khấu trừ tại nguồn trước khi tới investor.
-
-Treaty có thể ảnh hưởng mức cuối cùng.
-
-## 42. Capital gains
-
-Treatment khác nhau giữa thị trường, loại tài sản và account.
-
-## 43. Tax wrapper
-
-Một wrapper có lợi thế thuế nhưng có thể có limit, lock-up hoặc eligible products riêng.
-
-## 44. Không tối ưu thuế bằng thông tin cũ
-
-Tax rules thay đổi. Với quyết định thật, cần xác minh professional/official source phù hợp.
-
-# Phần XV — Full cost stack
-
-## 45. Chi phí không chỉ là commission
+## 45. Chi phí không chỉ là phí giao dịch
 
 ```text
-Commission
-+ Spread
-+ FX Conversion
-+ Custody
-+ Fund Fee
-+ Tracking Difference
-+ Tax
-+ Financing
-+ Withdrawal / Transfer Cost
+Phí giao dịch
++ chênh lệch mua–bán
++ chi phí đổi ngoại tệ
++ phí lưu ký
++ phí quỹ
++ sai lệch bám chỉ số
++ thuế
++ chi phí tài trợ
++ phí chuyển tiền
 ```
 
-## 46. FX conversion cost
+## 46. Chi phí đổi ngoại tệ
 
-Broker có thể dùng spread hoặc fee khi đổi KRW/USD/VND.
+Nhà môi giới có thể thu chênh lệch tỷ giá hoặc phí khi đổi KRW/USD/VND. Chi phí nhỏ nhưng lặp nhiều lần có thể đáng kể.
 
-Cost nhỏ nhưng lặp nhiều lần có thể đáng kể.
+## 47. Chuyển đổi cổ tức
 
-## 47. Dividend conversion
+Cổ tức bằng ngoại tệ có thể được nhà môi giới tự động đổi sang đồng tiền khác theo tỷ giá của họ, tạo thêm chi phí ẩn.
 
-Dividend ngoại tệ có thể tự động convert theo rate của broker, tạo thêm cost.
+# Phần XVI — Nhóm rủi ro theo quốc gia, tiền tệ và nhân tố
 
-# Phần XVI — Country, currency và factor buckets
+## 48. Không chỉ phân bổ theo nhãn quốc gia
 
-## 48. Đừng chỉ phân bổ theo country label
+Cổ phiếu bán dẫn Hàn Quốc có thể đồng thời mang:
 
-Korean semiconductor có thể chứa:
-
-- Korea beta;
-- global tech beta;
+- beta Hàn Quốc;
+- beta công nghệ toàn cầu;
 - USD/KRW;
-- AI capex;
-- memory cycle.
+- chu kỳ đầu tư AI;
+- chu kỳ bộ nhớ.
 
-## 49. Vietnam bank/property exposure
+## 49. Ngân hàng và bất động sản Việt Nam
 
-Có thể chứa:
+Mức phơi nhiễm có thể gồm:
 
-- domestic credit;
-- property collateral;
+- tín dụng nội địa;
+- tài sản bảo đảm bất động sản;
 - VND;
-- retail liquidity;
-- regulation.
+- thanh khoản nhà đầu tư cá nhân;
+- quy định.
 
-## 50. Look-through
+## 50. Nhìn xuyên cấu trúc sản phẩm
 
-Portfolio nên nhìn xuyên ETF/fund để tránh mua nhiều wrapper nhưng lặp cùng underlying factor.
+**Phân tích xuyên lớp (look-through)** giúp phát hiện trường hợp mua nhiều ETF hoặc quỹ nhưng thực chất lặp lại cùng một nhân tố hoặc cùng tài sản cơ sở.
 
-# Phần XVII — Liability-driven allocation
+# Phần XVII — Phân bổ gắn với nghĩa vụ
 
-## 51. Asset currency nên liên hệ spending currency
+## 51. Đồng tiền tài sản nên liên hệ đồng tiền chi tiêu
 
-Nếu future spending chủ yếu bằng KRW, toàn portfolio 100% unhedged foreign currency có thể tạo mismatch lớn.
+Nếu chi tiêu tương lai chủ yếu bằng KRW, danh mục 100% ngoại tệ không phòng vệ có thể tạo lệch lớn giữa tài sản và nghĩa vụ.
 
-## 52. Short-horizon liability
+## 52. Nghĩa vụ ngắn hạn
 
-Nghĩa vụ gần nên ưu tiên liquidity và currency match hơn expected return cao.
+Nghĩa vụ gần nên ưu tiên thanh khoản và khớp tiền tệ hơn lợi suất kỳ vọng cao.
 
-# Phần XVIII — Provider concentration
+# Phần XVIII — Rủi ro tập trung nhà cung cấp dịch vụ
 
-## 53. Broker concentration
+## 53. Tập trung nhà môi giới
 
-Giữ toàn bộ tài sản tại một broker tạo operational/counterparty concentration.
+Giữ toàn bộ tài sản tại một nhà môi giới tạo rủi ro vận hành và rủi ro đối tác tập trung.
 
-## 54. Fund provider concentration
+## 54. Tập trung nhà cung cấp quỹ
 
-Không phải lúc nào cũng xấu nhưng cần hiểu custody, legal segregation và issuer risk với ETN/structured product.
+Không phải lúc nào cũng xấu, nhưng cần hiểu lưu ký, tách biệt pháp lý và rủi ro tổ chức phát hành đối với ETN hoặc sản phẩm cấu trúc.
 
-# Phần XIX — Stress test kết hợp
+# Phần XIX — Kiểm thử căng thẳng kết hợp
 
-## 55. Cross-border stress
+## 55. Kịch bản xuyên biên giới
 
 Ví dụ:
 
 ```text
-Global Equity -20%
+Cổ phiếu toàn cầu -20%
 USD/KRW +10%
 VND yếu
-Credit Spread ↑
-Market Liquidity ↓
+Chênh lệch tín dụng ↑
+Thanh khoản thị trường ↓
 ```
 
-Phải tính cả asset move và FX move.
+Phải tính cả biến động tài sản và biến động tỷ giá.
 
-## 56. Reverse stress
+## 56. Kiểm thử ngược
 
-Hỏi:
+**Kiểm thử căng thẳng ngược (reverse stress test)** hỏi:
+
+> Điều gì có thể khiến tôi không bán hoặc không chuyển được tiền đúng lúc?
+
+Nguyên nhân có thể là tạm ngừng thị trường, biên độ giá, lệch ngày nghỉ, lỗi nhà môi giới hoặc hạn chế chuyển vốn.
+
+# Phần XX — Khả năng chống chịu vận hành
+
+## 57. Lưu hồ sơ
+
+Nên lưu:
+
+- xác nhận giao dịch;
+- giá vốn;
+- lịch sử đổi ngoại tệ;
+- cổ tức;
+- tài liệu thuế;
+- hành động doanh nghiệp.
+
+## 58. Người thụ hưởng và kế thừa
+
+Tài sản xuyên biên giới còn liên quan quy định thừa kế. Với tài sản lớn cần tư vấn pháp lý và thuế phù hợp từng khu vực pháp lý.
+
+# Phần XXI — Chính sách đầu tư xuyên biên giới
+
+## 59. Tuyên bố chính sách đầu tư
+
+Một **tuyên bố chính sách đầu tư (Investment Policy Statement, IPS)** xuyên biên giới nên ghi:
 
 ```text
-Điều gì có thể khiến tôi không thể bán/chuyển tiền đúng lúc?
+Đồng tiền gốc
+Đồng tiền nghĩa vụ
+Tỷ trọng quốc gia mục tiêu
+Chính sách phòng vệ tỷ giá
+Cấu trúc sản phẩm được phép
+Yêu cầu thanh khoản
+Giới hạn nhà môi giới / lưu ký
+Quy trình kiểm tra thuế
+Quy tắc tái cân bằng
 ```
 
-Có thể là market halt, price limit, holiday mismatch, broker issue hoặc capital-control constraint.
+## 60. Danh sách kiểm tra sản phẩm
 
-# Phần XX — Operational resilience
-
-## 57. Record keeping
-
-Lưu:
-
-- trade confirmations;
-- cost basis;
-- FX conversion;
-- dividend;
-- tax documents;
-- corporate actions.
-
-## 58. Beneficiary và succession
-
-Cross-border asset còn liên quan inheritance/succession rules. Với tài sản lớn cần tư vấn pháp lý/thuế chuyên môn theo jurisdiction.
-
-# Phần XXI — Cross-border IPS
-
-## 59. Investment Policy Statement
-
-Một IPS xuyên biên giới nên ghi:
+Trước khi mua, hãy trả lời:
 
 ```text
-Home Currency
-Liability Currencies
-Target Country Exposure
-FX Hedge Policy
-Allowed Wrappers
-Liquidity Requirement
-Broker / Custody Limits
-Tax Verification Process
-Rebalancing Rule
-```
-
-## 60. Product checklist
-
-Trước khi mua:
-
-```text
-Underlying là gì?
-Currency exposure nào?
-Wrapper/domicile?
-Legal claim?
-Custody?
-Settlement?
-Liquidity?
-Tax?
-Total cost?
-How to exit/repatriate?
+Tài sản cơ sở là gì?
+Mức phơi nhiễm tiền tệ nào?
+Sản phẩm được cấu trúc qua lớp nào?
+Nơi thành lập pháp lý ở đâu?
+Quyền pháp lý mình đang sở hữu là gì?
+Ai lưu ký?
+Thanh toán theo chu kỳ nào?
+Thanh khoản thực tế ra sao?
+Thuế nào có thể áp dụng?
+Tổng chi phí là bao nhiêu?
+Thoát vị thế và chuyển tiền về bằng cách nào?
 ```
 
 ## Kết luận
 
-Cross-border investing không dừng ở việc tìm một tài sản có expected return tốt.
-
-Chuỗi đầy đủ là:
+Đầu tư xuyên biên giới không dừng ở việc tìm một tài sản có lợi suất kỳ vọng tốt. Chuỗi đầy đủ là:
 
 ```text
-Underlying Economics
-→ Currency
-→ Wrapper / Domicile
-→ Legal Claim
-→ Custody / Settlement
-→ Tax / Cost
-→ Market Access
-→ Repatriation
-→ Liability Match
+Tài sản cơ sở
+→ tiền tệ
+→ cấu trúc sản phẩm
+→ quyền pháp lý
+→ lưu ký
+→ thanh toán
+→ thuế
+→ khả năng chuyển tiền
+→ thanh khoản
+→ tổng chi phí
 ```
 
-Một implementation tốt phải bảo đảm exposure mà investor nghĩ mình đang sở hữu cũng là exposure thật về **kinh tế, pháp lý và dòng tiền**.
+Hiểu chuỗi này giúp tránh trường hợp phân tích đúng tài sản nhưng triển khai sai cấu trúc.
