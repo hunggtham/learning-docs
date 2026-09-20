@@ -1,118 +1,412 @@
-# Thuế doanh nghiệp, regulation và chính sách cạnh tranh (Tax & Regulation / 법인세·규제·공정거래)
+# Thuế doanh nghiệp, regulation và chính sách cạnh tranh tại Hàn Quốc (Tax & Regulation / 법인세·규제·공정거래)
 
-Một nền kinh tế doanh nghiệp không vận hành chỉ bằng contract giữa private parties. Nhà nước xác định legal form, tax base, disclosure duty, labor floor, competition rules và giới hạn đối với những cấu trúc có thể tạo concentration hoặc conflict of interest. File này xây mental model về “luật chơi” thay vì biến thành sổ tay pháp lý.
+Doanh nghiệp không vận hành chỉ bằng contract giữa private parties. Nhà nước xác định **tax base, disclosure duties, competition rules, labor floors, environmental constraints, licensing requirements và giới hạn đối với ownership/market conduct**.
 
-## Corporate tax: thuế đánh vào taxable income, không phải revenue
+Vì vậy regulation không phải appendix pháp lý nằm ngoài business model. Trong nhiều ngành — finance, telecom, energy, healthcare, platform, defense — regulation trực tiếp quyết định revenue, cost, entry barrier và capital requirement.
 
-Thuế thu nhập doanh nghiệp (Corporate Income Tax / 법인세) tính trên **thu nhập chịu thuế (taxable income / 과세표준)** sau các điều chỉnh theo luật, không đơn giản lấy revenue nhân tax rate.
+> Mental model: policy/regulation là một **economic variable** giống interest rate, FX hay raw-material price. Nó thay payoff của business decisions.
 
-Theo National Tax Service, với năm tài chính bắt đầu từ 01/01/2026, biểu thuế cơ bản cho công ty vì lợi nhuận sử dụng các bậc 10%, 20%, 22% và 25% theo mức taxable income. Tuy nhiên effective tax rate trên financial statements có thể khác statutory rate do deferred tax, tax credits, overseas tax, permanent differences và loss carryforwards.
+## Corporate income tax: taxable income không phải revenue
+
+Corporate Income Tax (법인세) đánh trên **taxable income / 과세표준**, không phải đơn giản trên revenue hay accounting operating profit.
+
+Accounting profit và taxable income có thể khác vì:
+
+- depreciation rules;
+- tax credits;
+- loss carryforwards;
+- non-deductible expenses;
+- foreign income/tax;
+- timing differences;
+- tax incentives.
+
+A simplified bridge:
+
+```text
+Accounting profit before tax
+± permanent differences
+± timing/tax adjustments
+= taxable income
+```
+
+Therefore analyst should not multiply financial-statement profit by headline statutory rate and expect exact tax expense.
+
+## 2026 corporate tax brackets
+
+For fiscal years beginning on or after 1 January 2026, Korea’s National Tax Service lists the basic corporate income-tax rates for ordinary for-profit corporations as:
+
+| Taxable income | Basic rate |
+|---|---:|
+| up to 200 million KRW | 10% |
+| over 200 million to 20 billion KRW | 20% |
+| over 20 billion to 300 billion KRW | 22% |
+| over 300 billion KRW | 25% |
+
+These are statutory brackets. Actual tax expense/cash tax can differ materially.
+
+Current legal details should always be checked with NTS or professional tax advice before transaction decisions.
+
+## Statutory rate, effective rate và cash tax khác nhau
+
+Three concepts:
+
+**Statutory tax rate** — rate under tax law.
+
+**Effective Tax Rate (ETR)**:
 
 \[
-Effective\ Tax\ Rate \approx \frac{Income\ Tax\ Expense}{Pre\ Tax\ Income}
+ETR \approx \frac{Income\ Tax\ Expense}{Pre-tax\ Accounting\ Income}
 \]
 
-Khi effective tax rate thay đổi mạnh, không nên kết luận ngay “company được ưu đãi” hoặc “tax tăng”; cần đọc tax note.
+**Cash tax** — actual tax cash paid in period.
 
-## VAT và transaction layer
+One-time tax credit can lower ETR; deferred tax can move expense across periods; tax-loss carryforward can reduce current cash tax.
 
-Thuế giá trị gia tăng (Value Added Tax / 부가가치세) là tax trên consumption/transaction chain và khác corporate income tax. Doanh nghiệp thường thu output VAT và khấu trừ input VAT theo rule. Về economics, VAT không nên được trộn với company revenue/profit một cách máy móc.
+Therefore one low-tax year does not prove structural tax advantage.
 
-## Fair Trade Commission
+## Deferred tax: timing creates accounting asset/liability
 
-Korea Fair Trade Commission (공정거래위원회) giám sát competition, large business groups, unfair transactions và nhiều vấn đề market conduct. Với conglomerate analysis, KFTC đặc biệt quan trọng vì regulator nhìn **business group control** thay vì chỉ từng corporation.
+Accounting and tax rules may recognize revenue/expense at different times.
 
-Các large business groups thuộc framework `공시대상기업집단` có disclosure và related obligations; nhóm lớn hơn thuộc `상호출자제한기업집단` chịu thêm restrictions. Threshold cụ thể cần kiểm tra từng năm.
+This creates **deferred tax asset/liability / 이연법인세자산·부채**.
 
-## Antitrust reasoning
+Example: accounting depreciation and tax depreciation differ. Total lifetime tax may be similar, but timing differs.
 
-Competition policy không đồng nghĩa “công ty lớn là xấu”. Một company có market share cao vì technology tốt có thể tạo consumer value. Vấn đề competition xuất hiện khi market power được dùng để ngăn entry, ép trading partners hoặc duy trì structure làm giảm cạnh tranh.
+Deferred tax asset is valuable only if company is likely to generate taxable income to use it. Large DTA in persistently loss-making firm deserves scrutiny.
 
-Market power phụ thuộc **relevant market definition / 관련시장 획정**. Một company có 80% market của một niche nhỏ nhưng vẫn bị substitute từ product khác. Vì vậy market share chỉ có nghĩa sau khi xác định product/geographic market.
+## Tax losses: economic value depends on future profit
 
-## Subcontracting và fair transaction
+Past losses can sometimes reduce future taxable income under rules.
 
-Trong supplier ecosystem, power imbalance có thể nằm ở payment terms, price reduction, technology information hoặc unilateral contract change. Regulatory rules về 하도급 cố giảm abuse nhưng economic dependency vẫn tồn tại. Khi phân tích supplier, legal protection không thay thế việc đo customer concentration.
+But tax-loss carryforward is not cash today. Its value depends on:
 
-## Disclosure và securities regulation
+- future taxable profits;
+- expiry/usage restrictions;
+- ownership/restructuring rules;
+- jurisdiction.
 
-Listed companies phải tuân disclosure và capital-market rules. Một event có thể đồng thời chịu Commercial Act, Capital Markets Act, exchange rules và accounting standards. Vì vậy “company announced X” phải đọc disclosure category và legal consequence, không chỉ headline.
+This is similar to financial option: useful only if future profit exists.
 
-## Regulation như economic variable
+## Tax credit and investment incentive
 
-Regulation có thể tạo cost nhưng cũng tạo moat. Banking license, telecom spectrum, drug approval hoặc environmental permit hạn chế entry. Company đã có license/scale có thể hưởng barrier, trong khi rule change có thể phá economics cũ.
+Government may encourage R&D or strategic CAPEX through tax credits/deductions.
 
-## Regulation là một phần của business model
+Economically, investment credit changes project NPV:
 
-Trong sectors như telecom, finance, energy, healthcare và platforms, regulation quyết định price, entry barrier, data use và permissible conduct. Vì vậy regulatory analysis không phải appendix legal; nó là revenue/cost driver.
+\[
+NPV = PV(After-tax\ Cash\ Flows) - Effective\ Initial\ Cost
+\]
 
-## Effective tax rate vs statutory rate
+Tax credit can lower effective cost and move marginal project from negative to positive NPV.
 
-Statutory corporate tax rate không bằng cash tax. Effective tax rate bị ảnh hưởng tax credits, loss carryforwards, foreign income, deferred tax và one-offs. Analyst nên reconcile income-tax expense với cash tax paid nhiều năm.
+This is why semiconductor/battery investment policy affects real corporate capital allocation.
 
-## Competition policy và chaebol
+But subsidy/tax credit does not guarantee positive ROIC. Bad project can remain bad even after support.
 
-Korea competition policy phát triển một phần để xử lý concentration và unfair transactions trong large business groups. KFTC designation/disclosure rules tạo data về affiliates và control. Đây là nguồn quan trọng cho group analysis.
+## VAT: transaction tax is different from profit tax
 
-## Platform regulation
+Value Added Tax (VAT / 부가가치세) is consumption/transaction-layer tax.
 
-Digital platform tạo new competition problems: self-preferencing, tying, data advantage và dependency của sellers. Traditional market-share analysis đôi khi khó vì zero-price services. Regulator phải xác định relevant market và network effects.
+Business generally collects output VAT and claims eligible input VAT under rules.
 
-## Compliance cost như fixed cost
+VAT collected on behalf of government should not be confused with economic revenue.
 
-Regulation có thể tăng fixed compliance cost. Điều này đôi khi vô tình lợi large incumbents vì họ spread cost trên scale lớn, tạo barrier cho SMEs. Vì vậy “stricter regulation = more competition” không luôn đúng.
+When comparing customer invoice amount with company sales, understand whether VAT is included/excluded.
 
-## Policy uncertainty
+## Tax incidence: legal payer and economic bearer can differ
 
-Khi rule chưa final, market giá vào scenario. Company có thể delay capex hoặc giữ cash. Regulatory uncertainty vì vậy có real-option effect: chờ đợi có value khi irreversible investment lớn.
+Suppose tax is legally imposed on company. Economic burden can still be shared through:
+
+- higher prices;
+- lower wages;
+- lower supplier prices;
+- lower shareholder returns.
+
+Who ultimately bears burden depends on elasticity and market power.
+
+This is **tax incidence / 조세귀착**.
+
+Therefore policy analysis should ask not only “who remits tax?” but “who can pass cost onward?”
+
+## International tax and transfer pricing
+
+Multinational groups transact across affiliates for components, services, royalties, financing and IP.
+
+**Transfer pricing / 이전가격** determines intra-group price and allocation of taxable profit.
+
+Tax authorities apply arm’s-length principles and related rules to prevent artificial profit shifting.
+
+For analyst, local subsidiary margin can reflect global functional allocation, not only local operational quality.
+
+See [23_foreign_invested_companies_and_korea_entry](./23_foreign_invested_companies_and_korea_entry.md).
+
+## Regulation as business architecture
+
+Some industries cannot operate freely without licenses/permissions.
+
+Examples:
+
+- bank license;
+- insurance rules;
+- telecom spectrum;
+- pharmaceutical approval;
+- medical-device approval;
+- environmental permits;
+- defense export approval;
+- electricity-market rules.
+
+This creates two opposite effects.
+
+### Regulation as cost
+
+Compliance requires lawyers, systems, reporting, capital and audits.
+
+### Regulation as moat
+
+Once incumbent has license, compliance infrastructure and track record, new entrant must bear same fixed cost.
+
+Thus regulation can simultaneously protect customers **and** raise entry barrier.
+
+## Fixed compliance cost and firm size
+
+Suppose regulation requires 5 billion KRW annual compliance system.
+
+For company with 5 trillion revenue, cost is 0.1%.
+
+For startup with 50 billion revenue, cost is 10%.
+
+Same rule can therefore favor scale.
+
+This is why “more regulation = less market power” is not always true.
+
+Policy design must consider fixed-cost effects.
+
+## KFTC and competition policy
+
+Korea Fair Trade Commission (공정거래위원회) covers competition, large business groups, unfair transactions, consumer issues and related areas.
+
+For chaebol analysis, KFTC is important because regulator often looks beyond one corporation to **economic control group / 기업집단**.
+
+Large-group designation frameworks impose different disclosure/restriction obligations depending on statutory criteria. Thresholds and designations can change, so use current KFTC data for live analysis.
+
+## Competition policy: company size itself is not violation
+
+Large market share can arise from innovation, efficiency or network effects.
+
+Competition problem appears when market power is used in ways that reduce contestability or harm trading partners/consumers under law.
+
+Key concepts include:
+
+- cartel/collusion;
+- abuse of dominance/market power;
+- exclusionary conduct;
+- unfair trade practices;
+- anti-competitive merger;
+- unfair subcontracting.
+
+Do not replace legal/economic analysis with “big = bad”.
+
+## Relevant market definition
+
+Market share has meaning only after defining **relevant market / 관련시장**.
+
+Need ask:
+
+- Which products are substitutes?
+- Geographic scope?
+- Can customers switch after price increase?
+- Are platforms multi-sided?
+- Are switching costs high?
+
+A company can have 80% share of narrow category but face strong substitute from adjacent technology.
+
+Market definition often determines competition conclusion.
+
+## Concentration metrics: useful but incomplete
+
+Industry concentration can be approximated by top-firm shares or HHI-type measures.
+
+But static share does not capture:
+
+- entry barriers;
+- innovation rate;
+- switching costs;
+- potential competition;
+- buyer power.
+
+High concentration in semiconductor equipment with huge R&D barriers differs economically from temporary concentration in fashion trend.
+
+## Merger control: shareholder synergy vs social competition
+
+Company may propose M&A because synergy lowers cost or expands market.
+
+Regulator asks different question: does transaction materially reduce competition?
+
+These objectives can diverge.
+
+A merger can create shareholder value while harming competition, or improve efficiency without meaningful harm.
+
+Merger analysis therefore needs:
+
+- market definition;
+- concentration;
+- entry barriers;
+- efficiencies;
+- buyer power;
+- innovation effect.
+
+## Chaebol regulation: group-level risks
+
+Large business groups can create economic benefits through scale, internal capital and R&D.
+
+But group structure can also create:
+
+- cross-shareholding/control leverage;
+- related-party favoritism;
+- unfair internal support;
+- supplier dependency;
+- concentration of economic power.
+
+Korea therefore has group-specific disclosure and competition framework beyond normal company law.
+
+See [04_chaebol_and_large_business_groups](./04_chaebol_and_large_business_groups.md).
+
+## Subcontracting regulation: buyer power in supply chains
+
+A large buyer can influence supplier through:
+
+- payment terms;
+- price reduction;
+- design/technology information;
+- unilateral specification changes;
+- delayed acceptance;
+- volume concentration.
+
+Fair-subcontracting rules attempt to limit abuse, but legal protection does not eliminate economic dependency.
+
+Supplier still needs customer diversification and working-capital strength.
+
+See [06_sme_mid_sized_and_subcontracting_ecosystem](./06_sme_mid_sized_and_subcontracting_ecosystem.md).
+
+## Platform competition: zero-price service breaks simple antitrust intuition
+
+Many digital platforms charge user zero or low price while monetizing advertising, sellers or financial services.
+
+Traditional “price increased?” test is insufficient.
+
+Need inspect:
+
+- network effects;
+- data advantage;
+- multi-homing;
+- self-preferencing;
+- tying/bundling;
+- seller dependency;
+- interoperability;
+- switching costs.
+
+Platform is multi-sided market, so intervention on one side can change another side.
+
+## Financial regulation: capital requirement changes business model
+
+Bank cannot maximize leverage like ordinary industrial firm because regulation requires capital/liquidity buffers.
+
+Higher capital requirement can reduce ROE but increase resilience.
+
+Thus regulation changes both return and risk.
+
+Comparing bank ROE to software ROE without regulatory context is meaningless.
+
+## Healthcare regulation: permission is part of product
+
+Drug or medical device cannot monetize solely because technology works; it must pass regulatory approval and often reimbursement processes.
+
+Regulatory capability becomes intangible asset.
+
+This is why bio company value chain is:
+
+```text
+Science → Clinical evidence → Approval → Reimbursement → Commercial adoption
+```
+
+Regulation is embedded in product-market fit.
+
+## Environmental regulation and transition cost
+
+Steel, chemicals, energy and transport face emission rules, permits and carbon constraints.
+
+Policy can create cost today but also market for cleaner technology.
+
+Incumbent with old asset base may face stranded-asset risk; new technology firm may gain demand.
+
+Regulation therefore reallocates value across sectors.
+
+## Policy uncertainty and real options
+
+If company plans irreversible 10-trillion-KRW plant but subsidy/tariff rule may change soon, waiting can have value.
+
+This is real-option logic.
+
+Uncertainty can cause:
+
+- delayed CAPEX;
+- higher hurdle rate;
+- more cash retention;
+- phased investment;
+- geographic diversification.
+
+Therefore policy announcement affects investment before rule becomes effective.
+
+## Compliance as software/infrastructure problem
+
+Modern regulation increasingly requires systems: transaction monitoring, audit logs, privacy controls, accounting data, cybersecurity and reporting.
+
+Compliance cost is therefore not only legal staff; it becomes enterprise-IT architecture.
+
+For Korean SI/SM companies, regulation itself generates demand for system projects.
+
+This connects law directly to [34_digital_fintech_cloud_and_it_services](./34_digital_fintech_cloud_and_it_services.md).
+
+## How to analyze regulatory exposure of a Korean company
+
+Create a regulation map:
+
+| Layer | Questions |
+|---|---|
+| Tax | statutory/effective/cash tax? credits? |
+| Market entry | license/permit/certification required? |
+| Pricing | free price or regulated tariff/reimbursement? |
+| Competition | dominant position, merger, group restrictions? |
+| Labor | overtime/employment obligations? |
+| Environment | emissions/permit/carbon exposure? |
+| Data/security | privacy, financial/security standards? |
+| Trade | tariff, origin, export controls? |
+
+Then identify which rule directly changes cash flow.
 
 ## Mental Model
 
-> Regulation là một phần của business model. Nếu profit tồn tại vì license, tax credit, subsidy, tariff hoặc legal restriction, những policy variables phải nằm trong risk model giống raw-material price hay FX.
+> Tax and regulation define the **feasible strategy space** of a company. A business model is not just product + customer; it is product + customer + law + tax + licenses + competition structure. If profit depends on a rule, that rule belongs inside valuation and risk model.
 
 ## Common misconceptions
 
-Statutory tax rate khác effective tax rate và khác cash tax paid trong kỳ.
+Statutory tax rate ≠ effective tax rate ≠ cash tax.
 
-“Bị regulation” không tự động là negative. Regulation có thể giảm competition nhưng cũng làm compliance cost cao; net effect phải phân tích company-specific.
+Regulation is not always negative for incumbent; it can create moat.
 
-## Nguồn chính
+Large company is not automatically anti-competitive.
 
-National Tax Service: `법인세 세율 (2026년 이후)`; KFTC: `대기업집단 정책` và Fair Trade Act framework.
+High market share alone does not prove dominance abuse.
+
+Government support does not erase project economics.
+
+A policy announcement is not realized cash flow until eligibility, amount and timing are clear.
 
 ## Connections
 
-Xem [04_chaebol_and_large_business_groups](./04_chaebol_and_large_business_groups.md), [06_sme_mid_sized_and_subcontracting_ecosystem](./06_sme_mid_sized_and_subcontracting_ecosystem.md), [08_corporate_governance_ownership_and_control](./08_corporate_governance_ownership_and_control.md) và [09_disclosure_accounting_dart_kind](./09_disclosure_accounting_dart_kind.md).
-### Nguồn kiểm tra hiện hành
+Read [04_chaebol_and_large_business_groups](./04_chaebol_and_large_business_groups.md) for group regulation, [08_corporate_governance_ownership_and_control](./08_corporate_governance_ownership_and_control.md) for internal power, [23_foreign_invested_companies_and_korea_entry](./23_foreign_invested_companies_and_korea_entry.md) for cross-border tax and [26_economic_institutions_and_policy_making](./26_economic_institutions_and_policy_making.md) for policy formation.
 
-- National Tax Service, corporate tax rates from 2026: https://nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7746&mi=2372
-- Korea Fair Trade Commission, Large Business Group Policy: https://www.ftc.go.kr/www/contents.do?key=696
+### Nguồn hiện hành
 
-
-## Tax incidence: người nộp thuế pháp lý và người chịu cost kinh tế có thể khác
-
-Nếu government tăng tax lên firm, firm có thể pass một phần qua higher prices, lower wages hoặc lower shareholder return. Ai cuối cùng chịu burden phụ thuộc elasticity.
-
-Đây là **tax incidence / 조세귀착**. Vì vậy policy analysis không dừng ở “tax đánh vào corporation”.
-
-## Deferred tax và accounting profit
-
-Tax expense trên income statement có thể khác cash tax vì timing differences. Deferred tax asset/liability phát sinh khi accounting recognition và tax recognition lệch thời điểm.
-
-Một low effective tax rate một năm có thể do one-off credit, geographic mix hoặc deferred items, không chứng minh structural tax advantage.
-
-## Merger control
-
-Large M&A có thể cần competition review nếu transaction ảnh hưởng market concentration. Synergy cho shareholders không tự động đồng nghĩa social benefit; regulator xem price, entry barrier, innovation và consumer choice.
-
-## Regulation as moat
-
-Compliance cost có thể bất lợi cho small entrant nhưng advantage cho incumbent đã có legal/compliance infrastructure. Banking, healthcare, telecom và defense đều có effect này.
-
-Regulation vì thế vừa giảm risk/externality vừa có thể tăng entry barrier. Good analysis phải thấy cả hai.
-
-## Platform competition khác industrial cartel
-
-Digital platform có zero/low-price user side, nên consumer-price test truyền thống không đủ. Competition authority còn phải nhìn data, self-preferencing, switching cost, seller dependency và network effects.
-
-Market definition trong platform economy vì vậy khó hơn “ai bán cùng sản phẩm”.
+- National Tax Service, corporate-tax rates: https://nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7746&mi=2372
+- Korea Fair Trade Commission, large business group policy: https://www.ftc.go.kr/www/contents.do?key=696
