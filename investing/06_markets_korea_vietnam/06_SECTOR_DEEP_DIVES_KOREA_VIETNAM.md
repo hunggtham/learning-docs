@@ -1,368 +1,629 @@
 # 06 — Sector Deep Dives: Korea & Vietnam
 
-> Domain Korea/Vietnam sẽ chưa hoàn chỉnh nếu chỉ dừng ở market structure và macro. Investor cuối cùng phải phân tích ngành cụ thể. Chapter này xây sector map thực hành cho Hàn Quốc và Việt Nam, tập trung vào economic driver, KPI, cycle, valuation logic và rủi ro đặc thù.
+> Macro tạo environment nhưng sector quyết định shock truyền tới company bằng cách nào. Chapter này đi sâu theo value chain, demand, supply, pricing, utilization, balance sheet, KPI, accounting traps và valuation. Mục tiêu không phải thuộc một danh sách ratio mà hiểu “economic engine” của từng ngành để biết chỉ số nào là driver, chỉ số nào chỉ là consequence.
 
-## 1. Vì sao Sector Analysis đứng giữa Macro và Company Analysis?
+## 1. Sector Analysis là cầu nối Macro → Company
 
-Macro giải thích environment chung, company analysis giải thích doanh nghiệp cụ thể, còn sector analysis là tầng truyền dẫn ở giữa.
-
-Ví dụ Fed hạ rate không tác động giống nhau lên semiconductor, bank và utility. Oil tăng cũng không ảnh hưởng airline giống refinery hay shipbuilder.
-
-Framework nên là:
+Framework tổng quát:
 
 ```text
 Global Macro
 → Country Macro
-→ Sector Economics
-→ Company Position
-→ Earnings
-→ Valuation
+→ Sector Demand / Supply
+→ Company Competitive Position
+→ Revenue / Margin / Cash Flow
+→ Balance Sheet
+→ Valuation / Expectations
 ```
 
-## 2. Korea: Semiconductor
+Cùng Fed shock nhưng bank, semiconductor và utility phản ứng khác vì transmission khác.
 
-Semiconductor là một trong những sector quan trọng nhất của Korean equity market. Nhưng “semiconductor” không phải một business duy nhất. Nó bao gồm memory, foundry, logic, equipment, materials, packaging và design ecosystem.
+## 2. Value Chain trước Ticker
 
-Memory economics đặc biệt cyclical vì supply additions cần capex lớn và demand có thể thay đổi nhanh. DRAM/NAND pricing thường chịu inventory cycle mạnh.
+Trước khi phân tích company, map value chain: upstream inputs, manufacturers, distributors, customers và substitutes.
 
-### KPI cần theo dõi
+Profit pool thường tập trung ở bottleneck chứ không nhất thiết nơi revenue lớn nhất.
 
-Investor nên theo dõi memory price trend, bit growth, inventory days, utilization, capex guidance, HBM demand, server/AI capex, smartphone/PC demand và gross margin.
+## 3. Demand, Supply và Pricing Power
 
-### HBM và AI
+Mỗi sector thesis nên trả lời demand tăng do structural hay cyclical? Supply response mất bao lâu? Customer/supplier concentration ra sao? Pricing transparent hay contractual?
 
-HBM làm value chain thay đổi vì bandwidth và packaging complexity cao hơn conventional memory. Nhưng investor không nên suy luận “AI growth = mọi semiconductor stock tăng”. Supplier position, yield, capacity và customer concentration quyết định economics cụ thể.
+Sector có demand tốt nhưng supply tăng nhanh hơn vẫn có margin xấu.
 
-### Cycle
+## 4. Operating Leverage
 
-Một cycle đơn giản có thể là:
+High fixed-cost industries như chips, steel, airline, shipbuilding có profit biến động lớn hơn revenue. Small utilization change can create large margin swing.
+
+Model utilization, not just sales growth.
+
+## 5. Financial Leverage
+
+Property, airline, utilities and some industrials often carry material debt. Operating leverage + financial leverage makes equity highly convex to cycle.
+
+Debt maturity schedule belongs inside sector thesis.
+
+## 6. Cycle Position
+
+A sector cycle often moves:
 
 ```text
-Demand tăng
-→ inventory giảm
-→ pricing cải thiện
-→ margin tăng
-→ capex tăng
-→ capacity tăng với độ trễ
-→ oversupply risk tăng
+Demand improves
+→ inventory falls
+→ pricing improves
+→ margins rise
+→ capex expands
+→ supply arrives with lag
+→ pricing weakens
+→ inventory rises
+→ capex cuts
 ```
 
-Timing giữa demand và supply response là phần quan trọng nhất.
+Different industries have different lag lengths.
 
-## 3. Korea: Semiconductor Equipment & Materials
+# Part I — Korea
 
-Equipment companies thường hưởng capex cycle hơn chip pricing trực tiếp. Revenue có thể phụ thuộc fab expansion, technology transition và customer capex.
+## 7. Korea Semiconductor — Split the Ecosystem
 
-Materials suppliers có thể ổn định hơn nếu product được qualification khó thay thế, nhưng customer concentration cao vẫn là risk.
+“Semiconductor” includes memory, foundry, fabless/design, equipment, materials, packaging/test and substrate. Each responds to AI/PC/mobile/capex differently.
 
-Investor nên xem order backlog, customer mix, localization trend, export controls và process-node transition.
+Do not apply memory cycle logic to equipment or design house blindly.
 
-## 4. Korea: Autos
+## 8. DRAM / NAND Memory
 
-Korean auto sector chịu global demand, FX, raw material cost, product mix và incentives.
+Memory has commodity-like pricing because products are relatively standardized. Revenue approximately:
 
-Một KRW yếu có thể hỗ trợ translated/export earnings nếu cost base nội địa lớn, nhưng effect không linear vì overseas production và hedging.
+```text
+Revenue ≈ Bit Shipments × ASP × Mix
+```
 
-### KPI
+HBM/premium products change mix and margin, so headline bit growth is insufficient.
 
-Vehicle volume, ASP, mix SUV/premium/EV, incentive per vehicle, inventory days, operating margin, warranty expense và regional market share đều quan trọng.
+## 9. Memory Leading KPIs
 
-### EV Transition
+Track contract/spot prices, customer inventories, producer inventory days, bit shipments, utilization, capex guidance and channel demand.
 
-EV transition tạo capex và margin uncertainty. Battery cost, platform utilization, charging infrastructure và subsidy policy ảnh hưởng demand.
+Inventory usually turns before reported earnings.
 
-## 5. Korea: Battery Value Chain
+## 10. HBM Economics
 
-Battery sector gồm cell makers, cathode/anode, separator, electrolyte, copper foil và equipment.
+HBM requires advanced stacking/packaging and has different yield/capacity constraints. Pricing and margin can be superior but customer concentration and technology qualification matter.
 
-Economics phụ thuộc EV demand, utilization, raw-material pass-through, chemistry mix và customer contracts.
+Structural AI demand can coexist with cyclical memory oversupply elsewhere.
 
-High growth không đảm bảo high return nếu industry overbuild capacity.
+## 11. Foundry
 
-## 6. Korea: Shipbuilding
+Foundry economics depend wafer starts, utilization, process-node yield, pricing, customer concentration and capex intensity.
 
-Shipbuilding có long order cycle. Orderbook lớn có thể chuyển thành revenue trong nhiều năm.
+A leading node with low yield can still have weak economics despite technology headline.
 
-Key drivers gồm newbuild prices, order intake, backlog, steel cost, labor cost, FX và vessel mix như LNG carriers.
+## 12. Semiconductor Equipment
 
-Do revenue recognition có lag, current earnings có thể phản ánh orders ký từ vài năm trước.
+Equipment follows fab capex and node transitions. Orders/book-to-bill, customer capex, installed base and service revenue matter.
 
-## 7. Korea: Banks
+Equipment can peak before chip revenue if customers cut capex proactively.
 
-Bank analysis khác industrial company. Các KPI cốt lõi gồm NIM, loan growth, deposit mix, credit cost, NPL, CET1/capital ratio và shareholder return policy.
+## 13. Semiconductor Materials / Components
 
-Rate tăng có thể giúp NIM ban đầu nhưng nếu quá cao, credit cost và loan demand có thể xấu.
+Qualification barriers can create sticky customer relationship. Track volume per wafer, content growth, customer concentration and localization/export-control changes.
 
-### Korea-specific sensitivity
+Small supplier can have excellent moat but high single-customer risk.
 
-Household debt, housing prices và regulator policy là những biến rất quan trọng với Korean banks.
+## 14. Semiconductor Valuation
 
-## 8. Korea: Insurance
+Peak-cycle P/E often looks artificially cheap. Use normalized earnings, mid-cycle margin, P/B where asset cycle matters and scenario DCF.
 
-Insurance economics phụ thuộc underwriting, investment portfolio, duration matching và capital regulation.
+Reverse DCF should test how much AI/HBM growth market already prices.
 
-Long-term liabilities làm insurers nhạy với rate curve và asset-liability management.
+## 15. Korea Autos
 
-## 9. Korea: Internet / Platform
+Revenue driver:
 
-Platform businesses có network effect nhưng cũng chịu regulation và advertising/e-commerce cycle.
+```text
+Volume × ASP × Product Mix × FX
+```
 
-KPI có thể gồm MAU/DAU, take rate, GMV, ad load, conversion, ARPU và cloud/AI capex tùy company.
+Margins then depend incentives, raw materials, labor, warranty and regional production mix.
 
-## 10. Korea: Gaming
+## 16. Auto Leading KPIs
 
-Gaming revenue thường hit-driven hơn recurring software. User acquisition cost, retention, bookings và regional approvals quan trọng.
+Track wholesale/retail units, dealer inventory days, incentives, used-car prices, order backlog and regional share.
 
-Pipeline quality có thể làm earnings volatile mạnh.
+High shipments with rising incentives can signal deteriorating demand quality.
 
-## 11. Korea: Biotech
+## 17. EV Transition
 
-Biotech valuation thường dựa trên probability-adjusted future cash flow hơn current earnings.
+EV economics depend battery cost, dedicated platform utilization, software content, subsidy and charging network.
 
-Clinical stage, regulatory milestone, partnership terms, cash runway và dilution risk là core variables.
+Rapid model expansion may depress short-run ROIC if utilization low.
 
-## 12. Korea: Construction & Real Estate
+## 18. FX and Autos
 
-Construction company chịu presales, cost inflation, project financing, unsold inventory và housing cycle.
+KRW weakness can benefit exporters, but overseas plants, component imports and hedging reduce simple translation.
 
-PF exposure có thể tạo balance-sheet risk ngoài headline revenue growth.
+Estimate revenue currency minus cost currency rather than use slogan “weak KRW good”.
 
-## 13. Korea: Refining & Petrochemicals
+## 19. Korea Battery Cells
 
-Refiners kiếm tiền từ refining margin hơn crude price direction đơn giản. Petrochemical companies phụ thuộc product spread, China capacity và feedstock cost.
+Track EV production, capacity utilization, chemistry, contract pricing, raw-material pass-through, customer concentration and capex.
 
-Oil tăng không tự động giúp mọi energy company.
+Structural EV penetration does not guarantee high return if industry builds too much capacity.
 
-## 14. Korea: Utilities
+## 20. Cathode / Anode / Separator / Electrolyte
 
-Utility economics chịu regulation, fuel cost, tariff policy và capex. Profitability có thể bị lag vì tariff adjustment không đồng thời với input-cost shock.
+Each layer has different raw-material exposure and switching/qualification dynamics. Margin can depend more on spread than commodity absolute price.
 
-## 15. Korea: Retail
+Map contract formula before assuming commodity move helps supplier.
 
-Retail chịu household consumption, tourism, inflation và channel mix. Department store, convenience store và e-commerce có margin structure khác nhau.
+## 21. Battery Valuation
 
-Same-store sales và inventory discipline quan trọng.
+Growth multiple must be reconciled with capex and future utilization. Revenue CAGR without free cash flow can overstate value.
 
----
+Analyze return on new plants, not only announced capacity.
 
-## 16. Vietnam: Banks
+## 22. Shipbuilding
 
-Banks thường chiếm trọng số lớn trên Vietnamese equity market, vì vậy hiểu sector này là bắt buộc.
+Shipbuilding is long-cycle orderbook business. Orders today become revenue/profit over years.
 
-Core economics:
+Backlog quality, newbuild prices, steel/labor cost, FX and vessel mix matter more than current quarterly revenue alone.
+
+## 23. Shipbuilding Leading KPIs
+
+New orders, global fleet age, LNG/containership demand, yard slots, order price index and cancellations lead earnings.
+
+High backlog can improve pricing power if capacity constrained.
+
+## 24. Shipbuilding Accounting Trap
+
+Long construction periods make cost estimates and revenue recognition sensitive. Cost inflation can turn apparently profitable contracts into losses.
+
+Track provision for loss-making contracts.
+
+## 25. Korean Industrials / Machinery
+
+Capital goods depend global capex, construction/mining activity and order backlog. Service/parts revenue often carries better margin and stability.
+
+Order intake and book-to-bill are useful leading indicators.
+
+## 26. Defense
+
+Defense companies depend government budgets, export approvals, backlog and contract milestones. Geopolitical demand can be structural but project timing creates lumpiness.
+
+Cash conversion and advance payments matter.
+
+## 27. Korean Banks
+
+Core bridge:
 
 ```text
 Net Interest Income
-+ Fee Income
-- Operating Cost
++ Non-interest Income
+- Operating Expense
 - Credit Cost
-= Profit
+= Pre-tax Profit
 ```
 
-### KPI chính
+Track NIM, loan growth, funding mix, credit cost, CET1 and shareholder return.
 
-NIM, credit growth, CASA, deposit growth, NPL ratio, Group 2 loans, provision coverage, cost-to-income, credit cost và capital adequacy.
+## 28. Korean Bank Asset Quality
 
-### Credit Growth
+Household mortgage, SME, project-finance and commercial-real-estate exposures have different risk. Early delinquencies and Stage/quality migration can lead NPL.
 
-Loan growth cao hỗ trợ earnings nhưng quality quan trọng hơn quantity. Rapid credit expansion có thể tạo future NPL nếu underwriting lỏng.
+Provision coverage is buffer, not immunity.
 
-### Property Exposure
+## 29. Korean Bank Valuation
 
-Vietnamese banks có sensitivity đáng kể với real estate ecosystem qua mortgage, developer loans, corporate bonds và collateral value.
+P/B should be linked to sustainable ROE vs cost of equity. Low P/B can be rational if structural ROE weak or governance discount large.
 
-## 17. Vietnam: Securities Companies
+Capital return/buyback policy affects per-share value.
 
-Brokerage earnings thường liên quan market liquidity, margin lending và investment book.
+## 30. Korean Insurance
 
-Khi market turnover tăng, brokerage và margin income thường tăng. Nhưng proprietary portfolio có thể làm earnings volatility lớn.
+Non-life: premium growth, loss ratio, expense ratio, combined ratio and investment yield. Life: duration, guarantee liabilities, spread and capital adequacy.
 
-### KPI
+Accounting/regulatory changes can alter reported metrics; focus economic asset-liability matching.
 
-Market share, margin loan balance, funding cost, equity capital, brokerage fee rate và proprietary gains/losses.
+## 31. Korean Securities Brokers
 
-## 18. Vietnam: Property Developers
+Revenue comes brokerage, wealth, IB, proprietary and financing. Earnings sensitive to turnover and market valuation.
 
-Property analysis cần tách legal approval, land bank, presales, construction progress, customer collections, debt maturity và project-level economics.
+Risk appears in leveraged investments, real-estate PF and principal positions.
 
-### Land Bank không đồng nghĩa Value ngay lập tức
+## 32. Korea Internet / Platform
 
-Land bank chỉ có value nếu legal process, infrastructure và demand cho phép monetization.
+Track MAU/DAU, time spent, GMV, take rate, ARPU, advertising yield, seller/customer retention, cloud/AI capex and regulatory constraints.
 
-### Cash Flow
+Network effect must translate to monetization without excessive subsidy.
 
-Revenue recognition có thể lag cash collection. Vì vậy phải theo dõi presales và customer advances, không chỉ accounting revenue.
+## 33. Gaming
 
-## 19. Vietnam: Industrial Parks
+Gaming is hit-driven and portfolio-driven. Track bookings, DAU/MAU, payer conversion, ARPPU, retention, UA cost and pipeline.
 
-Industrial-park companies liên kết FDI, manufacturing relocation và infrastructure development.
+One successful title can distort current P/E; normalize franchise economics.
 
-KPI có thể gồm leasable land, occupancy, rental rate, remaining lease term, new-project approvals và location connectivity.
+## 34. Biotech / Pharma
 
-China+1 trend có thể hỗ trợ demand nhưng valuation vẫn phụ thuộc actual leasing economics.
+Pre-commercial biotech should be valued by cash runway, probability-adjusted pipeline and partnership economics rather than P/E.
 
-## 20. Vietnam: Export Manufacturing
+Clinical endpoint, phase transition, regulatory path and dilution are core risks.
 
-Textile, furniture, electronics assembly và seafood chịu global demand, FX, labor cost và trade policy.
+## 35. Korean Construction
 
-Order visibility và customer concentration rất quan trọng.
+Track presales, backlog quality, project-finance guarantees, unsold inventory, raw-material/labor costs and working capital.
 
-## 21. Vietnam: Retail
+Revenue growth with receivables/PF exposure rising may be poor quality.
 
-Retail sector hưởng structural consumption growth nhưng margin có thể mỏng. Same-store sales, store productivity, inventory turnover và expansion payback period quan trọng hơn số lượng store đơn thuần.
+## 36. Refining
 
-## 22. Vietnam: Consumer Staples
+Refiner margin depends **crack spread**, utilization, inventory gains/losses and product mix, not oil direction alone.
 
-Staples thường ổn định hơn discretionary nhưng chịu raw-material cost và pricing power.
+Oil spike can hurt demand or create working-capital needs even if inventory gains help temporarily.
 
-Brand strength, distribution network và rural/urban mix là key drivers.
+## 37. Petrochemicals
 
-## 23. Vietnam: Aviation
+Profit comes product spread over feedstock. China capacity, global operating rates and demand from construction/consumer manufacturing dominate cycle.
 
-Airline economics phụ thuộc passenger volume, load factor, yield, fuel cost, lease cost và FX.
+New capacity can keep spreads depressed despite GDP growth.
 
-USD liabilities và fuel price khiến currency/commodity risk đặc biệt quan trọng.
+## 38. Utilities / Power
 
-## 24. Vietnam: Ports & Logistics
+Fuel cost, tariff regulation, capacity payments, generation mix and capex determine economics.
 
-Port economics phụ thuộc throughput, container volume, tariff, capacity và hinterland connectivity.
+Regulated lag can make rising fuel prices initially negative then recover when tariffs reset.
 
-Logistics company có asset-light và asset-heavy models rất khác nhau.
+## 39. Retail / Department Stores / Convenience
 
-## 25. Vietnam: Oil & Gas
+Same-store sales, traffic, ticket, tourist spending, store productivity and inventory matter.
 
-Upstream, midstream, service và gas distribution có driver khác nhau.
+Different formats have different gross margin and fixed-cost structure.
 
-Oil price cao có thể hỗ trợ upstream capex nhưng downstream margin phụ thuộc spread và policy.
+## 40. Cosmetics / Consumer Brands
 
-## 26. Vietnam: Utilities & Power
+Track channel mix, China/global exposure, sell-in vs sell-out, inventory, brand heat and marketing efficiency.
 
-Power companies chịu hydrology, fuel cost, contract structure, tariff và regulatory framework.
+Distributor shipments can temporarily overstate end demand.
 
-Hydropower earnings có thể phụ thuộc rainfall mạnh, trong khi thermal plants chịu coal/gas cost.
+# Part II — Vietnam
 
-## 27. Vietnam: Construction Materials
+## 41. Vietnam Banks
 
-Steel và cement là cyclical industries phụ thuộc property, infrastructure, raw-material input và China/global pricing.
+Banks are central because they dominate index and domestic credit creation. Track credit growth, NIM, CASA, deposit rates, NPL, Group 2, provision coverage, credit cost, CAR and property exposure.
 
-Utilization và spread quan trọng hơn headline revenue.
+Loan growth quality matters more than headline growth.
 
-## 28. Vietnam: Technology
+## 42. Vietnam Bank Funding
 
-IT services có thể hưởng outsourcing/global digitalization. KPI gồm headcount productivity, revenue per employee, offshore mix, contract backlog và wage inflation.
+Deposit competition, interbank liquidity and CASA affect funding cost. Rapid asset growth without stable funding can compress NIM or increase liquidity risk.
 
-Tech company Việt Nam không nên được định giá giống US SaaS nếu revenue model khác.
+Compare loan/deposit growth and maturity profile.
 
-## 29. Vietnam: Insurance
+## 43. Vietnam Bank Asset Quality
 
-Insurance sector cần xem premium growth, combined ratio với non-life, investment income, reserve adequacy và bancassurance dynamics.
+Look beyond reported NPL to Group 2/restructured loans, collateral concentration and sectors under stress.
 
-## 30. Sector Rotation không phải công thức cố định
+Falling provisions can inflate profit while underlying risk worsens.
 
-Một common mistake là gán mỗi macro regime cho một sector winner cố định. Reality phụ thuộc valuation, balance sheet và expectations.
+## 44. Vietnam Bank Valuation
 
-Banks có thể hưởng rising rates nếu credit quality ổn; nhưng cùng rising rates có thể phá property cycle và cuối cùng làm banks xấu đi.
+P/B and ROE need adjustment for asset quality and capital needs. High ROE from leverage is not same quality as high ROE from funding advantage.
 
-## 31. Sector Earnings Breadth
+Sustainable credit cost is key normalized assumption.
 
-Thay vì chỉ nhìn index earnings, investor nên xem bao nhiêu sector đang có earnings revisions tăng hoặc giảm.
+## 45. Securities Companies
 
-Index growth tập trung vào một vài mega-caps khác broad-based earnings recovery.
+Revenue sources include brokerage, margin lending, proprietary investments and IB.
 
-## 32. Sector Valuation cần Historical Context
+Track turnover, brokerage share, margin balance/funding cost, equity capital and proprietary exposure.
 
-P/E thấp không có nghĩa cheap nếu sector đang ở peak earnings. Cyclical company thường nhìn rẻ nhất gần top cycle và đắt nhất gần bottom.
+## 46. Securities Companies Cycle
 
-Normalized margin và mid-cycle earnings cần được sử dụng.
+Bull market lifts brokerage/margin and asset prices simultaneously, creating strong operating leverage. Down cycle reverses both and can pressure funding.
 
-## 33. Operating Leverage
+Peak P/E can be misleading; use normalized market turnover assumptions.
 
-Sectors có fixed cost cao như semiconductor, steel, airline hoặc shipbuilding có earnings nhạy với small revenue changes.
+## 47. Property Developers
 
-Investor nên model utilization và margin sensitivity.
+Project-level economics matter: legal status, land cost, construction, presales, collections, debt and handover.
 
-## 34. Financial Leverage
+Land bank is optionality, not cash flow until legal/financing/execution path exists.
 
-Property, airline và utilities có thể có debt lớn. High financial leverage kết hợp operating leverage tạo equity volatility cực cao.
+## 48. Property Presales
 
-## 35. Regulatory Sensitivity
+Presales/customer advances can lead accounting revenue. Track sales velocity and cancellation/refund risk.
 
-Banks, utilities, telecom, healthcare và property chịu regulation lớn. Regulatory change có thể quan trọng hơn macro growth.
+Revenue recognized later may represent old sales, so headline growth can lag current demand.
 
-## 36. FX Sensitivity
+## 49. Property Debt
 
-Korea exporters thường có USD revenue đáng kể. Vietnam importers/exporters cũng có exposure khác nhau.
+Map bank loans, corporate bonds, shareholder/related-party funding and maturities. Interest capitalization can delay expense recognition.
 
-Không nên dùng một rule “currency yếu tốt cho exporter” mà không xem cost currency và hedging.
+Refinancing wall is more important than total debt alone.
 
-## 37. Commodity Sensitivity
+## 50. Industrial Parks
 
-Airlines chịu oil như cost; refiners chịu crack spread; steelmakers chịu iron ore/coking coal; food companies chịu agricultural inputs.
+Economics depend leasable land, compensation/site clearance, occupancy, rent, remaining lease term, infrastructure and FDI demand.
 
-Commodity direction chỉ là bước đầu; **spread economics** mới quyết định margin.
+One-off land recognition can make earnings lumpy; cash collection schedule matters.
 
-## 38. China Sensitivity
+## 51. FDI Manufacturing
 
-Korea semiconductor, petrochemical, machinery và tourism có China sensitivity khác nhau. Vietnam có China exposure qua imports, supply chain, tourism và trade competition.
+Electronics, textile, furniture, seafood and other exporters need order visibility, customer concentration, labor, FX, raw material and logistics analysis.
 
-China slowdown có thể vừa giảm demand vừa giảm input cost.
+FDI headline does not directly equal listed-company profit.
 
-## 39. US Cycle Sensitivity
+## 52. Retail
 
-Export-heavy sectors chịu US consumption/capex. Fed policy còn truyền qua USD, global liquidity và valuation.
+Track same-store sales, store openings, closures, revenue/store, gross margin, inventory turns and payback.
 
-## 40. Sector Dashboard Template
+Aggressive store growth can destroy value if new-unit economics deteriorate.
 
-Một sector dashboard nên có:
+## 53. Consumer Staples
+
+Brand/distribution/pricing power are key. Raw-material inflation can squeeze margin until price increases pass through.
+
+Volume response to pricing reveals elasticity.
+
+## 54. Aviation
+
+Key drivers: passenger volume, load factor, yield, fleet utilization, fuel, lease, airport constraints and USD exposure.
+
+Airline high fixed cost means small demand/fuel changes create large profit swings.
+
+## 55. Airports
+
+Passenger throughput, fee regulation, concession revenue and capex matter. Airport economics differ from airline economics despite same traffic driver.
+
+Infrastructure concession duration affects valuation.
+
+## 56. Ports
+
+Track container throughput, tariffs, capacity utilization, new competing terminals and hinterland connectivity.
+
+High utilization can create pricing power until new capacity arrives.
+
+## 57. Logistics
+
+Asset-light freight forwarding has different capital intensity from warehouse/trucking/port assets. Margin structure and working capital differ.
+
+Avoid comparing EV/EBITDA without business-model adjustment.
+
+## 58. Oil & Gas Upstream
+
+Production volume, realized price, reserves, lifting cost, capex and fiscal terms drive economics.
+
+Oil price sensitivity depends hedge/contract/tax structure.
+
+## 59. Oil & Gas Services
+
+Service companies depend upstream capex, rig utilization/day rates and project pipeline. They can lag oil price by investment-cycle delay.
+
+## 60. Gas / Midstream
+
+Volume, regulated/contract tariff, take-or-pay and infrastructure capex matter. Cash flows can be more stable than upstream but still policy-sensitive.
+
+## 61. Power — Hydropower
+
+Hydrology/reservoir, market prices, contract mix and maintenance dominate. Rainfall creates natural volume volatility.
+
+One wet year should not be extrapolated structurally.
+
+## 62. Power — Thermal / Gas
+
+Fuel availability/cost, heat rate, plant utilization and tariff/payment rules matter.
+
+Working-capital stress can be significant if receivables accumulate.
+
+## 63. Renewable Power
+
+Project IRR depends capex, financing, resource quality, grid curtailment, tariff/PPA and land/permitting.
+
+Capacity MW headline is insufficient.
+
+## 64. Steel
+
+Spread economics:
 
 ```text
-Demand Driver
-Supply/Capacity
-Pricing
-Input Cost
+Steel Price - Iron Ore / Coking Coal / Scrap / Energy Costs
+```
+
+Track utilization, inventories, property/public investment demand, imports/exports and China supply.
+
+## 65. Cement / Construction Materials
+
+Local oversupply and transport economics matter. Public investment can lift demand but energy/input costs and competition determine margin.
+
+Capacity utilization is central KPI.
+
+## 66. Technology / IT Services
+
+For outsourcing/services, track headcount, utilization, revenue/employee, wage growth, onsite/offshore mix, backlog and client concentration.
+
+Do not value service company as SaaS just because both are “technology”.
+
+## 67. Telecom
+
+Subscriber base, ARPU, data traffic, churn, capex/spectrum and regulation drive economics. Mature telecom often shifts from subscriber growth to monetization/cost efficiency.
+
+High capex means EBITDA alone overstates distributable cash.
+
+## 68. Insurance Vietnam
+
+Non-life: premium, loss ratio, expense ratio, combined ratio, reserve development and investment yield. Life: new business, persistency, distribution/bancassurance, investment spread and reserve quality.
+
+Interest-rate moves can affect both investment return and liability valuation.
+
+## 69. Agriculture / Food
+
+Weather, disease, feed/input cost, export price, inventory and biosecurity matter. Commodity producer earnings can be highly mean-reverting.
+
+Normalize through cycle.
+
+## 70. Fertilizer / Chemicals
+
+Product price minus feedstock/energy determines spread. Export tax/regulation and global capacity changes matter.
+
+Low P/E at commodity peak is classic trap.
+
+# Cross-Sector Framework
+
+## 71. Demand Indicator
+
+Identify one or two leading demand series closest to end customer: orders, traffic, shipments, loan demand, presales, bookings.
+
+Avoid proxies too far from revenue.
+
+## 72. Supply Indicator
+
+Track capacity, utilization, capex, inventory and competitor entry. Supply response speed determines cyclicality.
+
+Structural demand story can still have cyclical oversupply.
+
+## 73. Pricing Indicator
+
+Use realized ASP, contract price, spread or take rate. Revenue growth without pricing context is incomplete.
+
+Pricing power is visible when price rises without destructive volume loss.
+
+## 74. Input-Cost Indicator
+
+Identify major cost and pass-through lag. Airlines: fuel; steel: ore/coal; food: agriculture; utilities: fuel; banks: funding.
+
+Margin is often spread between output price and input cost.
+
+## 75. Inventory
+
+Inventory can be product, homes, memory chips, vehicles or even unrecognized credit risk. Rising inventory relative sales often signals imbalance.
+
+Interpret industry-specific normalization.
+
+## 76. Utilization
+
+High fixed-cost sectors have nonlinear margin around utilization. Capacity added at cycle peak is a major risk.
+
+Model low/base/high utilization scenarios.
+
+## 77. Working Capital
+
+Cyclical growth can consume receivables/inventory. Reported profit without cash conversion can signal poor quality.
+
+Compare cash conversion across cycle.
+
+## 78. Capex
+
+Capex is both growth signal and future supply. Sector-wide capex boom can sow next downturn.
+
+Ask return on incremental capital, not only capacity growth.
+
+## 79. Balance Sheet
+
+Map net debt, maturity, floating-rate share, FX debt and covenant/collateral. Highly cyclical sector needs stronger balance sheet to survive trough.
+
+## 80. Accounting Traps
+
+Common traps include capitalized interest in property, percentage-of-completion in construction, inventory gains in refining, provisions in banks/insurance and adjusted EBITDA ignoring maintenance capex.
+
+Sector knowledge tells where accounting discretion matters.
+
+## 81. Valuation Framework by Sector
+
+Banks: P/B + sustainable ROE/credit cost. REIT/property: NAV/FFO/project DCF. Cyclicals: normalized earnings/EV-EBITDA through cycle. SaaS/platform: unit economics + margin path. Commodity producers: normalized price/asset NAV.
+
+Multiple must match economic claim.
+
+## 82. Earnings Revisions
+
+Rising revisions across sector are stronger signal than one company beat. Compare direction and breadth.
+
+Revision inflection often follows leading cycle data.
+
+## 83. Relative Strength
+
+Sector outperforming market can indicate expectations shift, but valuation/positioning still matter.
+
+Use relative strength as confirmation, not standalone thesis.
+
+## 84. Regulatory Sensitivity
+
+Banks, utilities, telecom, healthcare, property and platforms face policy. Map rule to capital requirement, allowed price, demand, supply and competition.
+
+Regulation can reshape profit pool permanently.
+
+## 85. FX Sensitivity
+
+Estimate revenue currency minus cost/debt currency. Exporter can benefit from weak home currency only if cost structure/hedges permit.
+
+FX translation and economic exposure are different.
+
+## 86. Commodity Sensitivity
+
+Absolute commodity price is often less useful than spread. Refiner cares crack, steel cares steel-input spread, chemical cares product-feedstock.
+
+Map both input and output.
+
+## 87. China Sensitivity
+
+Separate demand, input-cost, competition and policy channels. China slowdown can hurt Korean exports but lower raw-material costs; Vietnam can gain relocation while losing regional demand.
+
+Second-order effects matter.
+
+## 88. US Sensitivity
+
+US consumption/capex impacts exporters; Fed affects USD, discount rates and global liquidity.
+
+Sector response mixes earnings and valuation channels.
+
+## 89. Sector Dashboard Template
+
+```text
+Demand
+Supply / Capacity
+Price / Spread
 Inventory
 Utilization
+Input Cost
 Margin
+Working Capital
 Capex
-Balance Sheet
+Debt / Liquidity
 Valuation
 Earnings Revisions
-Key Macro Sensitivities
-Regulatory Risks
+Regulation
+FX / Commodity / China / US Sensitivity
+Catalyst / Invalidation
 ```
 
-## 41. Company Comparison trong cùng Sector
+## 90. Peer Comparison
 
-So companies trong cùng sector giúp giảm lỗi so apples-to-oranges. Bank nên so với bank, semiconductor equipment với equipment, retailer với retailer.
+Compare within business model, then adjust for quality, balance sheet, growth and governance. Same sector label can hide very different mix.
 
-Nhưng vẫn phải adjust khác biệt quality và business mix.
+Peer multiple without business normalization is shallow.
 
-## 42. Sector Thesis Template
-
-Một thesis tốt có thể viết:
+## 91. Sector Thesis Template
 
 ```text
-1. Cycle hiện ở đâu?
-2. Demand đang tăng/giảm vì gì?
-3. Supply response ra sao?
-4. Pricing power thuộc về ai?
-5. Margin direction?
-6. Capex direction?
-7. Balance-sheet stress ở đâu?
-8. Earnings revisions đang đi hướng nào?
-9. Valuation đang price scenario gì?
-10. Catalyst và invalidation là gì?
+1. Cycle position?
+2. Demand driver?
+3. Supply response?
+4. Pricing/spread direction?
+5. Inventory/utilization?
+6. Margin trajectory?
+7. Capex / future supply?
+8. Balance-sheet vulnerability?
+9. Revisions?
+10. Valuation expectation?
+11. Catalyst?
+12. Invalidation?
 ```
 
-## 43. Kết luận
+## 92. Mental Model cuối cùng
 
-Sector analysis giúp tránh hai cực đoan: chỉ nhìn macro hoặc chỉ nhìn company. Một stock luôn sống trong value chain, competitive structure và cycle cụ thể.
-
-Đối với Korea, semiconductor/export/currency channel đặc biệt quan trọng. Đối với Vietnam, banks/property/domestic liquidity/FDI channel đặc biệt quan trọng. Nhưng trong cả hai markets, nguyên tắc chung vẫn là:
+Macro does not directly produce company earnings. Transmission runs through sector economics:
 
 ```text
-Macro tạo environment.
-Sector quyết định transmission.
-Company quyết định execution.
-Valuation quyết định expected return.
+Macro creates environment.
+Sector defines demand / supply / pricing transmission.
+Company defines competitive execution and balance-sheet resilience.
+Valuation defines expected return from today’s price.
 ```
+
+Sector research is therefore the bridge that prevents both macro-only investing and company analysis done in a vacuum.
