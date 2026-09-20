@@ -1,8 +1,8 @@
-# Playbook thị trường Việt Nam
+# Cẩm nang phân tích thị trường Việt Nam
 
-> Thị trường Việt Nam chịu ảnh hưởng đồng thời của tăng trưởng kinh tế, tín dụng ngân hàng, bất động sản, thanh khoản nhà đầu tư nội địa, FDI, đầu tư công và điều kiện USD/VND. Mục tiêu của playbook này là giúp người đọc nối các yếu tố đó thành một hệ thống thay vì nhìn VN-Index như một biến duy nhất.
+> Thị trường Việt Nam chịu ảnh hưởng đồng thời của tăng trưởng kinh tế, tín dụng ngân hàng, bất động sản, thanh khoản nhà đầu tư nội địa, FDI, đầu tư công và điều kiện USD/VND. Mục tiêu của tài liệu này là nối các yếu tố đó thành một hệ thống thay vì chỉ nhìn VN-Index như một biến duy nhất. Phần giải thích dùng tiếng Việt; thuật ngữ tiếng Anh chỉ giữ trong ngoặc hoặc dưới dạng viết tắt chuẩn.
 
-> Các quy định về biên độ giá, settlement, foreign room, thuế, sản phẩm phái sinh, market access và phân loại chỉ số có thể thay đổi. Khi giao dịch thật phải kiểm tra theo SSC, HOSE, HNX, VSDC, SBV và nguồn chính thức hiện hành.
+> **Dữ liệu động:** quy định về biên độ giá, chu kỳ thanh toán, giới hạn sở hữu nước ngoài, thuế, sản phẩm phái sinh, khả năng tiếp cận thị trường và phân loại chỉ số có thể thay đổi. Khi giao dịch thật phải kiểm tra SSC, HOSE, HNX, VSDC, SBV và nguồn chính thức hiện hành.
 
 # Phần I — Cấu trúc thị trường
 
@@ -10,578 +10,576 @@
 
 Ba khu vực này có đặc điểm niêm yết, thanh khoản và chất lượng công bố khác nhau.
 
-Không nên dùng cùng giả định thanh khoản cho một large-cap HOSE và một mã UPCoM nhỏ.
+Không nên dùng cùng giả định thanh khoản cho một cổ phiếu vốn hóa lớn trên HOSE và một mã nhỏ trên UPCoM.
 
 ## 2. VN-Index và VN30
 
 VN-Index có thể bị dẫn dắt bởi nhóm vốn hóa lớn, đặc biệt ngân hàng và bất động sản ở nhiều giai đoạn.
 
-VN30 là benchmark quan trọng cho futures và nhiều sản phẩm đầu tư.
+VN30 là chỉ số tham chiếu quan trọng cho hợp đồng tương lai và nhiều sản phẩm đầu tư.
 
-## 3. Breadth quan trọng hơn headline index
+## 3. Độ rộng thị trường quan trọng hơn tiêu đề chỉ số
 
 Luôn theo dõi:
 
 ```text
-Index Move
-vs
-Advance / Decline
-vs
-Turnover
-vs
-Sector Breadth
+Biến động chỉ số
+so với
+Số mã tăng / giảm
+so với
+Giá trị giao dịch
+so với
+Độ rộng theo ngành
 ```
 
-Một rally chỉ do vài large caps khác một rally rộng có nhiều ngành tham gia.
+Một đợt tăng chỉ do vài cổ phiếu vốn hóa lớn khác một đợt tăng rộng có nhiều ngành tham gia.
 
 # Phần II — Thanh khoản nội địa
 
-## 4. Deposit rate và opportunity cost
+## 4. Lãi suất tiền gửi và chi phí cơ hội
 
-Khi lãi suất tiền gửi giảm, chi phí cơ hội của việc giữ cash/deposit thấp hơn và một phần tiền có thể tìm tới tài sản rủi ro.
+Khi lãi suất tiền gửi giảm, chi phí cơ hội của việc giữ tiền mặt thấp hơn và một phần dòng tiền có thể chuyển sang tài sản rủi ro.
 
 Một chuỗi thường được theo dõi:
 
 ```text
-Deposit Rate ↓
-→ Equity Opportunity Cost ↓
-→ Brokerage Liquidity / Margin ↑
-→ Turnover ↑
-→ Multiple có thể mở rộng
+Lãi suất tiền gửi ↓
+→ chi phí cơ hội của cổ phiếu ↓
+→ thanh khoản tại công ty chứng khoán / cho vay ký quỹ ↑
+→ giá trị giao dịch ↑
+→ hệ số định giá có thể mở rộng
 ```
 
-Nhưng giá tăng trước earnings không đồng nghĩa fundamentals đã phục hồi.
+Nhưng giá tăng trước lợi nhuận doanh nghiệp không đồng nghĩa nền tảng đã phục hồi.
 
-## 5. Margin lending
+## 5. Cho vay ký quỹ
 
-Margin giúp tăng purchasing power nhưng tạo feedback hai chiều.
+Cho vay ký quỹ làm tăng sức mua nhưng tạo vòng phản hồi hai chiều.
 
 ```text
-Price ↑
-→ Collateral Value ↑
-→ Margin Capacity ↑
-→ Buying Power ↑
+Giá ↑
+→ giá trị tài sản bảo đảm ↑
+→ hạn mức ký quỹ ↑
+→ sức mua ↑
 ```
 
 và khi giảm:
 
 ```text
-Price ↓
-→ Margin Ratio xấu
-→ Forced Sell
-→ Price ↓ thêm
+Giá ↓
+→ tỷ lệ ký quỹ xấu đi
+→ bán cưỡng bức
+→ giá ↓ thêm
 ```
 
-## 6. Turnover
+## 6. Giá trị giao dịch
 
-Turnover cao thường hỗ trợ broker earnings và phản ánh risk appetite, nhưng cần tách organic liquidity khỏi margin-driven speculation.
+Giá trị giao dịch cao thường hỗ trợ lợi nhuận môi giới và phản ánh khẩu vị rủi ro, nhưng cần tách thanh khoản tự nhiên khỏi đầu cơ dùng đòn bẩy.
 
 # Phần III — SBV và VND
 
-## 7. SBV reaction function
+## 7. Hàm phản ứng của SBV
 
 SBV phải cân bằng:
 
-- growth;
-- inflation;
-- bank liquidity;
-- credit;
+- tăng trưởng;
+- lạm phát;
+- thanh khoản ngân hàng;
+- tín dụng;
 - USD/VND;
-- financial stability.
+- ổn định tài chính.
 
-## 8. Policy room và USD
+**Hàm phản ứng (reaction function)** là cách SBV cân trọng số các mục tiêu này khi dữ liệu thay đổi.
 
-Khi USD mạnh và VND chịu pressure, room nới lỏng nội địa có thể bị hạn chế hơn.
+## 8. Dư địa chính sách và USD
 
-Do đó Fed shock có thể ảnh hưởng Việt Nam gián tiếp qua FX constraint.
+Khi USD mạnh và VND chịu áp lực, dư địa nới lỏng trong nước có thể hẹp hơn.
+
+Do đó cú sốc từ Fed có thể ảnh hưởng Việt Nam gián tiếp qua giới hạn tỷ giá.
 
 ## 9. USD/VND
 
 Tỷ giá ảnh hưởng:
 
-- nhập khẩu;
-- inflation;
-- foreign flow;
-- doanh nghiệp nợ ngoại tệ;
-- policy expectations.
+- giá nhập khẩu;
+- lạm phát;
+- dòng vốn nước ngoài;
+- doanh nghiệp có nợ ngoại tệ;
+- kỳ vọng chính sách.
 
-Với từng company phải lập currency map riêng.
+Với từng doanh nghiệp cần lập bản đồ tiền tệ riêng.
 
 # Phần IV — Hệ thống ngân hàng
 
-## 10. Bank là trung tâm của credit cycle
+## 10. Ngân hàng là trung tâm của chu kỳ tín dụng
 
-Do capital market chưa thay thế hoàn toàn bank lending, tín dụng ngân hàng có vai trò rất lớn với:
+Do thị trường vốn chưa thay thế hoàn toàn tín dụng ngân hàng, ngân hàng có vai trò lớn với:
 
-- property;
-- household;
+- bất động sản;
+- hộ gia đình;
 - SME;
-- corporate investment.
+- đầu tư doanh nghiệp.
 
 ## 11. NIM
 
-Net Interest Margin (NIM) phụ thuộc:
+**Biên lãi ròng (Net Interest Margin, NIM)** phụ thuộc gần đúng vào:
 
 ```text
-Asset Yield
-- Funding Cost
+Lợi suất tài sản sinh lãi
+- Chi phí nguồn vốn
 ```
 
-Deposit competition, policy rate, loan repricing và CASA đều ảnh hưởng.
+Cạnh tranh tiền gửi, lãi suất chính sách, tốc độ điều chỉnh lãi vay và CASA đều ảnh hưởng.
 
 ## 12. CASA
 
-CASA cao thường giúp funding cost thấp hơn, nhưng cần xem độ ổn định của tiền gửi và concentration.
+CASA cao thường giúp giảm chi phí nguồn vốn, nhưng phải xem độ ổn định của tiền gửi và mức độ tập trung khách hàng.
 
-## 13. NPL và Group-2
+## 13. NPL và nợ nhóm 2
 
-NPL là chỉ báo trễ. Group-2/special mention, restructuring và overdue interest có thể cho warning sớm hơn.
+NPL thường là chỉ báo trễ. Nợ nhóm 2, khoản tái cơ cấu và lãi quá hạn có thể cho cảnh báo sớm hơn.
 
-## 14. Provision coverage
+## 14. Tỷ lệ bao phủ dự phòng
 
-Coverage cao tạo buffer tốt hơn nhưng vẫn cần đánh giá chất lượng collateral và khả năng thu hồi.
+Bao phủ dự phòng cao tạo bộ đệm tốt hơn nhưng vẫn phải đánh giá chất lượng tài sản bảo đảm và khả năng thu hồi.
 
-## 15. Credit cost
+## 15. Chi phí tín dụng
 
-Credit cost tăng có thể xóa phần tăng lợi nhuận từ NIM.
+Chi phí tín dụng tăng có thể xóa phần lợi ích từ NIM.
 
-Do đó bank earnings phải được nhìn xuyên chu kỳ chứ không chỉ một quý.
+Do đó lợi nhuận ngân hàng phải được nhìn xuyên chu kỳ chứ không chỉ một quý.
 
-## 16. Capital adequacy
+## 16. An toàn vốn
 
-Tăng trưởng tín dụng cao cần vốn hỗ trợ.
-
-Nếu capital ratio thấp, bank có thể cần giữ earnings hoặc raise capital, ảnh hưởng shareholder return.
+Tăng trưởng tín dụng cao cần vốn hỗ trợ. Nếu tỷ lệ vốn thấp, ngân hàng có thể phải giữ lại lợi nhuận hoặc phát hành thêm, ảnh hưởng lợi ích trên mỗi cổ phần.
 
 # Phần V — Bất động sản
 
 ## 17. Pháp lý đi trước doanh thu
 
-Một project cần đi qua nhiều bước:
+Một dự án thường phải đi qua:
 
 ```text
-Land / Legal Rights
-→ Approval
-→ Site Clearance
-→ Construction Permit
-→ Sales Eligibility
-→ Presales
-→ Construction
-→ Handover
-→ Revenue Recognition
+Quyền sử dụng đất
+→ phê duyệt
+→ giải phóng mặt bằng
+→ giấy phép xây dựng
+→ đủ điều kiện bán
+→ bán trước
+→ xây dựng
+→ bàn giao
+→ ghi nhận doanh thu
 ```
 
-Quỹ đất lớn không tự động là tài sản có thể monetize ngay.
+Quỹ đất lớn không tự động là tài sản có thể chuyển thành tiền ngay.
 
-## 18. Presales
+## 18. Bán trước
 
-Presales là leading indicator nhưng phải xem:
+**Bán trước (presales)** là chỉ báo sớm nhưng phải xem:
 
-- cancellation;
-- payment schedule;
-- buyer financing;
-- discount;
-- legal readiness;
-- cash collection.
+- rủi ro hủy;
+- lịch thanh toán;
+- khả năng vay của người mua;
+- mức chiết khấu;
+- độ sẵn sàng pháp lý;
+- tiền thực thu.
 
-## 19. Inventory
+## 19. Hàng tồn kho bất động sản
 
-Inventory bất động sản có thể gồm:
+Hàng tồn kho có thể gồm:
 
-- completed units;
-- construction in progress;
-- land development;
-- project chờ pháp lý;
-- capitalized interest.
+- sản phẩm hoàn thành;
+- dự án đang xây;
+- đất đang phát triển;
+- dự án chờ pháp lý;
+- lãi vay vốn hóa.
 
 Chất lượng từng lớp khác nhau rất lớn.
 
-## 20. Corporate bonds
+## 20. Trái phiếu doanh nghiệp
 
-Bond maturity tạo lịch cash obligation độc lập với accounting profit.
+Lịch đáo hạn trái phiếu tạo nghĩa vụ tiền mặt độc lập với lợi nhuận kế toán.
 
-Cần xây:
+Cần so:
 
 ```text
-Cash
-+ Presale Collection
-+ Operating Cash Flow
-+ Asset Sale
-+ Bank Lines
-vs
-Bond / Bank Maturities
-+ Construction Commitment
+Tiền mặt
++ tiền thu từ bán trước
++ dòng tiền hoạt động
++ bán tài sản
++ hạn mức ngân hàng
+
+với
+
+Trái phiếu / nợ ngân hàng đáo hạn
++ cam kết xây dựng
 ```
 
-## 21. Refinancing
+## 21. Rủi ro tái cấp vốn
 
-Một developer có thể solvent trên giấy nhưng thiếu liquidity nếu project monetize chậm hơn debt maturity.
+Một nhà phát triển có thể còn tài sản tốt trên sổ sách nhưng thiếu thanh khoản nếu dự án chuyển thành tiền chậm hơn lịch đáo hạn nợ.
 
-Đây là maturity mismatch.
+Đây là **lệch kỳ hạn (maturity mismatch)**.
 
-# Phần VI — Liên kết property–bank
+# Phần VI — Liên kết bất động sản–ngân hàng
 
-## 22. Exposure rộng hơn developer loan
+## 22. Mức phơi nhiễm rộng hơn khoản vay cho nhà phát triển
 
-Bank exposure tới property có thể qua:
+Ngân hàng có thể tiếp xúc với bất động sản qua:
 
-- developer loans;
-- mortgages;
-- contractors;
-- corporate bonds;
-- collateral;
-- related groups.
+- khoản vay nhà phát triển;
+- thế chấp nhà ở;
+- nhà thầu;
+- trái phiếu doanh nghiệp;
+- tài sản bảo đảm;
+- nhóm công ty liên quan.
 
-Do đó reported real-estate loan ratio chưa chắc mô tả toàn bộ risk.
+Do đó tỷ lệ “cho vay bất động sản” được báo cáo chưa chắc mô tả toàn bộ rủi ro kinh tế.
 
-## 23. Collateral feedback
+## 23. Vòng phản hồi tài sản bảo đảm
 
 ```text
-Property Price ↓
-→ Collateral Value ↓
+Giá bất động sản ↓
+→ giá trị tài sản bảo đảm ↓
 → LTV ↑
-→ Lending Standards Tighten
-→ Credit ↓
-→ Property Demand ↓
+→ tiêu chuẩn cho vay chặt hơn
+→ tín dụng ↓
+→ nhu cầu bất động sản ↓
 ```
 
-Đây là financial accelerator trong nước.
+Đây là một dạng **cơ chế khuếch đại tài chính (financial accelerator)** trong nước.
 
-# Phần VII — Securities companies
+# Phần VII — Công ty chứng khoán
 
 ## 24. Nguồn lợi nhuận
 
-Broker có thể kiếm từ:
+Công ty chứng khoán có thể kiếm từ:
 
-- brokerage;
-- margin lending;
-- proprietary trading;
-- investment banking;
-- bond distribution.
+- môi giới;
+- cho vay ký quỹ;
+- tự doanh;
+- ngân hàng đầu tư;
+- phân phối trái phiếu.
 
-## 25. Nhạy với thanh khoản
+## 25. Nhạy với thanh khoản thị trường
 
 ```text
-Market Turnover ↑
-→ Brokerage Revenue ↑
-→ Margin Demand ↑
+Giá trị giao dịch ↑
+→ doanh thu môi giới ↑
+→ nhu cầu ký quỹ ↑
 ```
 
-Nhưng proprietary book và funding cost có thể làm earnings biến động mạnh hơn.
+Nhưng danh mục tự doanh và chi phí nguồn vốn có thể làm lợi nhuận biến động mạnh hơn.
 
-## 26. Margin book risk
+## 26. Rủi ro sổ cho vay ký quỹ
 
-Cần xem collateral concentration, funding source và leverage, không chỉ tổng margin loan.
+Cần xem mức tập trung tài sản bảo đảm, nguồn vốn và đòn bẩy, không chỉ tổng dư nợ ký quỹ.
 
-# Phần VIII — FDI và manufacturing
+# Phần VIII — FDI và sản xuất
 
 ## 27. FDI
 
-FDI hỗ trợ:
+FDI có thể hỗ trợ:
 
-- exports;
-- employment;
-- industrial parks;
+- xuất khẩu;
+- việc làm;
+- khu công nghiệp;
 - logistics;
-- suppliers.
+- nhà cung cấp trong nước.
 
-Nhưng headline registered FDI khác realized disbursement.
+Nhưng vốn đăng ký khác với vốn giải ngân thực tế.
 
 ## 28. China+1
 
-Diversification supply chain có thể kéo manufacturing sang Việt Nam, nhưng lợi ích phụ thuộc:
+Xu hướng đa dạng hóa chuỗi cung ứng có thể kéo sản xuất sang Việt Nam, nhưng mức hưởng lợi phụ thuộc:
 
-- infrastructure;
-- labor;
-- power;
+- hạ tầng;
+- lao động;
+- điện;
 - logistics;
-- local supplier capability.
+- năng lực nhà cung cấp nội địa.
 
-## 29. Industrial parks
+## 29. Khu công nghiệp
 
-KPI gồm:
+Các chỉ số cần theo dõi:
 
-- land bank pháp lý;
-- occupancy;
-- lease price;
-- remaining area;
-- infrastructure capex;
-- customer mix.
+- quỹ đất đã hoàn thiện pháp lý;
+- tỷ lệ lấp đầy;
+- giá thuê;
+- diện tích còn lại;
+- chi tiêu hạ tầng;
+- cơ cấu khách thuê.
 
 # Phần IX — Đầu tư công
 
-## 30. Public investment
+## 30. Tác động của đầu tư công
 
-Infrastructure spending có thể hỗ trợ:
+Chi tiêu hạ tầng có thể hỗ trợ:
 
-- construction;
-- materials;
+- xây dựng;
+- vật liệu;
 - logistics;
-- industrial parks;
-- long-run productivity.
+- khu công nghiệp;
+- năng suất dài hạn.
 
-## 31. Plan và disbursement khác nhau
+## 31. Kế hoạch và giải ngân khác nhau
 
-Không nên dùng ngân sách phê duyệt như doanh thu chắc chắn.
+Ngân sách được phê duyệt không phải doanh thu chắc chắn. Cần theo dõi tốc độ giải ngân và tiến độ từng dự án.
 
-Cần theo dõi tốc độ giải ngân và project-level progress.
+# Phần X — Tiêu dùng và bán lẻ
 
-# Phần X — Consumer và retail
-
-## 32. Household demand
+## 32. Nhu cầu hộ gia đình
 
 Theo dõi:
 
-- income;
-- employment;
-- inflation;
-- consumer credit;
-- tourism;
-- confidence.
+- thu nhập;
+- việc làm;
+- lạm phát;
+- tín dụng tiêu dùng;
+- du lịch;
+- niềm tin.
 
-## 33. Retail KPI
+## 33. Chỉ số bán lẻ
 
-- same-store sales;
-- traffic;
-- ticket;
-- store expansion;
-- inventory;
-- gross margin;
-- working capital.
+- tăng trưởng cửa hàng hiện hữu;
+- lượng khách;
+- giá trị hóa đơn trung bình;
+- mở rộng cửa hàng;
+- tồn kho;
+- biên gộp;
+- vốn lưu động.
 
-# Phần XI — Energy và utilities
+# Phần XI — Năng lượng và tiện ích
 
-## 34. Power demand
+## 34. Nhu cầu điện
 
-Tăng manufacturing và data-center/industrial activity kéo nhu cầu điện.
+Tăng sản xuất và hoạt động công nghiệp làm nhu cầu điện tăng.
 
-Nhưng earnings utility còn phụ thuộc tariff, fuel, PPA và regulatory framework.
+Lợi nhuận doanh nghiệp điện còn phụ thuộc giá bán, nhiên liệu, hợp đồng mua bán điện và quy định.
 
-## 35. Oil and gas
+## 35. Dầu khí
 
-Cần tách upstream, services, midstream và downstream vì oil price tác động khác nhau.
+Cần tách thượng nguồn, dịch vụ, trung nguồn và hạ nguồn vì giá dầu tác động khác nhau lên từng nhóm.
 
-# Phần XII — Ports, logistics và aviation
+# Phần XII — Cảng, logistics và hàng không
 
-## 36. Ports
+## 36. Cảng
 
-KPI:
+Theo dõi:
 
-- throughput;
-- capacity;
-- utilization;
-- tariff;
-- regional trade;
-- capex.
+- sản lượng thông qua;
+- công suất;
+- tỷ lệ sử dụng;
+- biểu phí;
+- thương mại khu vực;
+- chi tiêu vốn.
 
-## 37. Airlines
+## 37. Hàng không
 
 Nhạy với:
 
-- passenger volume;
-- ticket yield;
-- fuel;
+- lượng hành khách;
+- doanh thu trên mỗi hành khách;
+- nhiên liệu;
 - USD/VND;
-- lease/debt;
-- airport capacity.
+- thuê và nợ;
+- công suất sân bay.
 
-# Phần XIII — Steel, cement và materials
+# Phần XIII — Thép, xi măng và vật liệu
 
-## 38. Steel
+## 38. Thép
 
-Theo dõi:
+Có thể bắt đầu bằng:
 
 ```text
-Steel Price
-- Raw Material Cost
-= Spread
+Giá thép
+- Chi phí nguyên liệu
+= Chênh lệch biên lợi nhuận
 ```
 
-cùng domestic construction, exports và China supply.
+sau đó kết hợp xây dựng nội địa, xuất khẩu và nguồn cung Trung Quốc.
 
-## 39. Cement
+## 39. Xi măng
 
-Cement nhạy với construction demand, energy cost, local capacity và logistics.
+Xi măng nhạy với nhu cầu xây dựng, chi phí năng lượng, công suất nội địa và logistics.
 
-# Phần XIV — Technology và telecom
+# Phần XIV — Công nghệ và viễn thông
 
-## 40. Technology services
+## 40. Dịch vụ công nghệ
 
-Doanh nghiệp IT service có thể hưởng lợi từ outsourcing, digital transformation và foreign revenue.
+Doanh nghiệp dịch vụ CNTT có thể hưởng lợi từ thuê ngoài, chuyển đổi số và doanh thu nước ngoài.
 
-Cần xem labor cost, utilization, attrition và currency.
+Cần xem chi phí lao động, tỷ lệ sử dụng nhân sự, tỷ lệ nghỉ việc và tiền tệ.
 
-## 41. Telecom
+## 41. Viễn thông
 
-ARPU, subscriber, capex và regulation là các driver chính.
+ARPU, số thuê bao, chi tiêu vốn và quy định là các động lực chính.
 
-# Phần XV — SOE và governance
+# Phần XV — Doanh nghiệp nhà nước và quản trị
 
-## 42. State ownership
+## 42. Sở hữu nhà nước
 
-SOE có thể có strategic assets nhưng capital allocation và shareholder-return incentives có thể khác private company.
+Doanh nghiệp nhà nước có thể nắm tài sản chiến lược nhưng động cơ phân bổ vốn và hoàn vốn cho cổ đông có thể khác doanh nghiệp tư nhân.
 
-## 43. Related-party risk
+## 43. Rủi ro giao dịch với bên liên quan
 
-Property/financial groups cần kiểm tra kỹ:
+Bất động sản và tập đoàn tài chính cần kiểm tra:
 
-- receivables;
-- guarantees;
-- asset transfers;
-- related lending;
-- project ownership.
+- phải thu lớn;
+- bảo lãnh;
+- chuyển tài sản;
+- cho vay liên quan;
+- quyền sở hữu dự án.
 
-## 44. Capital raise
+## 44. Phát hành vốn
 
-Rights issue hoặc private placement có thể cần thiết cho growth nhưng phải phân tích dilution và use of proceeds.
+Phát hành quyền mua hoặc phát hành riêng lẻ có thể cần thiết cho tăng trưởng nhưng phải phân tích pha loãng và mục đích sử dụng vốn.
 
-# Phần XVI — Foreign investors
+# Phần XVI — Nhà đầu tư nước ngoài
 
-## 45. Foreign room
+## 45. Giới hạn sở hữu nước ngoài
 
-Giới hạn sở hữu nước ngoài có thể ảnh hưởng liquidity và valuation.
+Giới hạn sở hữu nước ngoài có thể ảnh hưởng thanh khoản và định giá. Quy định hiện hành phải kiểm tra từ nguồn chính thức tại thời điểm sử dụng.
 
-Rule hiện hành phải kiểm tra từ nguồn chính thức tại thời điểm sử dụng.
-
-## 46. FX return
+## 46. Lợi suất sau quy đổi tiền tệ
 
 Nhà đầu tư nước ngoài nhận:
 
 ```text
-Home-Currency Return
-= (1 + Local Return)
-× (1 + FX Return)
+Lợi suất theo đồng tiền gốc
+= (1 + lợi suất nội địa)
+× (1 + biến động tỷ giá)
 - 1
 ```
 
-VN stock tăng không bảo đảm return home currency tương đương nếu VND mất giá.
+Cổ phiếu Việt Nam tăng không bảo đảm lợi suất theo đồng tiền gốc tương đương nếu VND mất giá.
 
-# Phần XVII — Market microstructure
+# Phần XVII — Cấu trúc vi mô thị trường
 
-## 47. Price limit
+## 47. Biên độ giá
 
-Biên độ giá có thể làm stop-loss không thực thi như ở market không giới hạn.
+Biên độ giá có thể làm lệnh dừng lỗ không thực thi như ở thị trường không giới hạn.
 
-Trong panic, nhiều phiên floor liên tiếp có thể kéo dài exit time.
+Trong hoảng loạn, nhiều phiên giảm sàn liên tiếp có thể kéo dài thời gian thoát.
 
-## 48. Liquidity-aware sizing
+## 48. Xác định quy mô vị thế theo thanh khoản
 
-Position size nên dựa stressed turnover và free float, không chỉ volume bình thường.
+Quy mô vị thế nên dựa trên giá trị giao dịch khi căng thẳng và tỷ lệ cổ phiếu tự do giao dịch, không chỉ khối lượng bình thường.
 
-## 49. Settlement và custody
+## 49. Thanh toán và lưu ký
 
-Quy tắc settlement/custody có thể thay đổi. Cần kiểm tra hiện hành trước giao dịch xuyên biên giới.
+Quy tắc thanh toán và lưu ký có thể thay đổi. Cần kiểm tra hiện hành trước giao dịch xuyên biên giới.
 
-# Phần XVIII — Valuation
+# Phần XVIII — Định giá
 
-## 50. Banks
+## 50. Ngân hàng
 
-P/B phải đọc cùng normalized ROE, credit cost và capital adequacy.
+P/B phải đọc cùng ROE chuẩn hóa, chi phí tín dụng và an toàn vốn.
 
-## 51. Property
+## 51. Bất động sản
 
-NAV phải haircut theo:
+NAV phải chiết giảm theo:
 
-- legal status;
-- time to monetize;
-- debt;
-- construction cost;
-- tax;
-- execution risk.
+- trạng thái pháp lý;
+- thời gian chuyển thành tiền;
+- nợ;
+- chi phí xây dựng;
+- thuế;
+- rủi ro thực thi.
 
-## 52. Brokers
+## 52. Công ty chứng khoán
 
-P/B/P/E cần đọc cùng turnover, margin cycle và proprietary exposure.
+P/B và P/E cần đọc cùng giá trị giao dịch, chu kỳ ký quỹ và mức phơi nhiễm tự doanh.
 
-## 53. Industrials/consumer
+## 53. Công nghiệp và tiêu dùng
 
-P/E/EV-EBITDA chỉ có ý nghĩa khi earnings được normalized theo cycle.
+P/E hoặc EV/EBITDA chỉ có ý nghĩa khi lợi nhuận được chuẩn hóa theo chu kỳ.
 
-# Phần XIX — Dashboard
+# Phần XIX — Bảng theo dõi
 
-## 54. Daily
+## 54. Hằng ngày
 
 ```text
 VN-Index / VN30
-Breadth
-Turnover
-Bank / Property / Broker Leadership
+Độ rộng thị trường
+Giá trị giao dịch
+Dẫn dắt ngân hàng / bất động sản / chứng khoán
 USD/VND
-Foreign Flow
+Dòng vốn nước ngoài
 ```
 
-## 55. Weekly
+## 55. Hằng tuần
 
 ```text
-Deposit Rates
-Margin Liquidity
-Bond / Property News
-Major Regulatory Developments
+Lãi suất tiền gửi
+Thanh khoản ký quỹ
+Tin trái phiếu / bất động sản
+Thay đổi quy định lớn
 ```
 
-## 56. Monthly / quarterly
+## 56. Hằng tháng / hằng quý
 
 ```text
-Credit Growth
-Inflation
-FDI Disbursement
-Public Investment
-Exports
-NPL / Group-2
-Property Transactions
-Corporate Bond Activity
-Earnings Revisions
+Tăng trưởng tín dụng
+Lạm phát
+FDI giải ngân
+Đầu tư công
+Xuất khẩu
+NPL / nợ nhóm 2
+Giao dịch bất động sản
+Phát hành trái phiếu doanh nghiệp
+Điều chỉnh dự báo lợi nhuận
 ```
 
-# Phần XX — Research template
+# Phần XX — Mẫu nghiên cứu
 
-## 57. Stock Việt Nam
+## 57. Một cổ phiếu Việt Nam
 
 ```text
-Business Model
-→ Sector Cycle
-→ Regulatory / Legal
-→ Balance Sheet
-→ Cash Flow
-→ Liquidity
-→ Earnings Revision
-→ Valuation
-→ Catalyst
-→ Invalidation
+Mô hình kinh doanh
+→ chu kỳ ngành
+→ quy định / pháp lý
+→ bảng cân đối
+→ dòng tiền
+→ thanh khoản
+→ điều chỉnh dự báo lợi nhuận
+→ định giá
+→ chất xúc tác
+→ điều kiện vô hiệu hóa
 ```
 
-## 58. Market thesis
+## 58. Luận điểm toàn thị trường
 
 ```text
-Global USD / Rates
-→ SBV / VND Constraint
-→ Domestic Rates / Credit
-→ Property / Bank
-→ Margin / Turnover
-→ Sector Earnings
-→ Valuation
+USD / lãi suất toàn cầu
+→ giới hạn của SBV / VND
+→ lãi suất và tín dụng trong nước
+→ bất động sản / ngân hàng
+→ ký quỹ / giá trị giao dịch
+→ lợi nhuận theo ngành
+→ định giá
 ```
 
 ## Kết luận
 
-Thị trường Việt Nam không nên được đọc chỉ bằng GDP growth hay VN-Index.
+Thị trường Việt Nam không nên được đọc chỉ bằng tăng trưởng GDP hay VN-Index.
 
-Các chuỗi quan trọng nhất là:
+Hai chuỗi quan trọng là:
 
 ```text
-Credit
-↔ Property
-↔ Bank Asset Quality
-↔ Domestic Liquidity
-↔ Equity Margin / Turnover
+Tín dụng
+↔ bất động sản
+↔ chất lượng tài sản ngân hàng
+↔ thanh khoản nội địa
+↔ ký quỹ / giá trị giao dịch cổ phiếu
 ```
 
 và:
 
 ```text
-Global USD
-→ VND / Policy Room
-→ Domestic Financial Conditions
+USD toàn cầu
+→ VND / dư địa chính sách
+→ điều kiện tài chính trong nước
 ```
 
-Khi hai chuỗi này được nối với earnings và valuation từng ngành, market analysis mới đủ chiều sâu để dùng trong quyết định đầu tư.
+Khi hai chuỗi này được nối với lợi nhuận và định giá từng ngành, phân tích thị trường mới đủ chiều sâu để dùng cho quyết định đầu tư.
