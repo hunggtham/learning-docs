@@ -259,15 +259,161 @@ Một “꼰대” không chỉ là người lớn tuổi. Người trẻ cũng 
 
 Thay vì nói “MZ không thích thứ bậc”, nên hỏi cụ thể: họ có kỳ vọng đánh giá minh bạch không? có muốn ranh giới công việc–đời sống rõ hơn không? có thích hệ thống chức danh phẳng không? phản ứng thế nào với nghĩa vụ xã hội không được trả công? Những biến này cụ thể hơn.
 
+## 의사결정권: quyền quyết định không đồng nghĩa người làm việc
+
+Một tổ chức có thể xác định rõ người thực hiện nhưng vẫn mơ hồ về **quyền quyết định (decision right)**. Ai được đề xuất, ai có quyền chọn phương án, ai phải được hỏi ý kiến và ai chỉ cần được thông báo là bốn vai trò khác nhau.
+
+Có thể mô hình hoá đơn giản:
+
+```text
+người thực hiện
+≠ người chịu trách nhiệm cuối
+≠ người được tham vấn
+≠ người cần được thông báo
+```
+
+Nếu một kỹ sư vừa phải làm việc vừa phải đoán ai có quyền chốt, độ trễ sẽ xuất hiện ở cuối quy trình. Ngược lại, nếu người có quyền quyết định không đủ gần dữ liệu kỹ thuật, quyết định có thể nhanh nhưng chất lượng thấp.
+
+Do đó thiết kế tổ chức tốt phải cân bằng **tốc độ quyết định** với **chất lượng thông tin**.
+
+## 결정 기록: quyết định cần lưu cả lý do, không chỉ kết quả
+
+Một tổ chức thường nhớ “đã chọn phương án A” nhưng quên vì sao A được chọn thay vì B. Khi bối cảnh biến mất, người mới dễ nhìn quyết định cũ như vô lý rồi lặp lại tranh luận trước đây.
+
+Một bản ghi quyết định ngắn nên giữ:
+
+```text
+vấn đề cần giải quyết
+→ các phương án đã cân nhắc
+→ giả định chính
+→ người quyết định
+→ lý do chọn
+→ rủi ro chấp nhận
+→ thời điểm cần xem lại
+```
+
+Trong phát triển phần mềm, cách làm này gần với **bản ghi quyết định kiến trúc (architecture decision record)**. Giá trị lớn nhất không phải tạo thêm giấy tờ mà là bảo tồn **logic của quyết định** để tổ chức không phải trả lại cùng một chi phí suy nghĩ nhiều lần.
+
+## 리뷰: kiểm tra đồng cấp khác với đánh giá con người
+
+`리뷰` trong công việc có thể chỉ rà soát mã nguồn, tài liệu, thiết kế hoặc hiệu suất cá nhân. Các loại này không nên bị trộn.
+
+**Rà soát đồng cấp (peer review)** giúp phát hiện lỗi, truyền kiến thức và chuẩn hoá chất lượng. **Đánh giá hiệu suất (performance review)** liên quan lương, thăng tiến và phát triển nghề nghiệp. Nếu mọi góp ý kỹ thuật đều bị cảm nhận như đánh giá địa vị, nhân viên sẽ phòng thủ thay vì học.
+
+Một hệ thống trưởng thành cố tách:
+
+```text
+phản hồi về sản phẩm
+≠ phản hồi về quy trình
+≠ đánh giá năng lực cá nhân
+≠ quyết định lương / thăng tiến
+```
+
+Sự tách này làm an toàn tâm lý thực tế hơn thay vì chỉ là khẩu hiệu.
+
+## 장애 대응: sự cố cho thấy cấu trúc thật của tổ chức
+
+Khi hệ thống gặp `장애`, sơ đồ tổ chức chính thức thường ít quan trọng hơn mạng phản ứng thực tế. Ai phát hiện? Ai có quyền tạm dừng phát hành? Ai liên lạc khách hàng? Ai khôi phục dịch vụ? Ai giữ nhật ký thời gian?
+
+Một vòng xử lý sự cố có thể gồm:
+
+```text
+phát hiện
+→ phân loại mức độ
+→ khoanh vùng ảnh hưởng
+→ giảm thiệt hại tạm thời
+→ khôi phục dịch vụ
+→ xác minh ổn định
+→ phân tích nguyên nhân
+→ hành động phòng ngừa
+```
+
+Điểm quan trọng là **khôi phục dịch vụ** và **tìm nguyên nhân gốc** không phải cùng một nhiệm vụ. Trong lúc khách hàng bị ảnh hưởng, mục tiêu đầu tiên có thể là giảm thiệt hại; phân tích sâu diễn ra sau khi trạng thái ổn định.
+
+## 포스트모템: học từ lỗi thay vì săn người có lỗi
+
+**Hậu kiểm sự cố (postmortem)** có giá trị khi nó trả lời “hệ thống cho phép lỗi lan rộng bằng cách nào?” thay vì chỉ “ai bấm sai?”.
+
+Nếu một thao tác của một người có thể gây sự cố lớn mà không có kiểm tra, phân quyền hay khả năng quay lui, lỗi nằm cả ở thiết kế hệ thống. Tư duy **không đổ lỗi (blameless)** không có nghĩa xoá trách nhiệm; nó chuyển trọng tâm từ trừng phạt sang cải thiện khả năng phòng ngừa và phát hiện.
+
+Một hậu kiểm tốt có thể tách:
+
+```text
+sự kiện kích hoạt
++ điều kiện tiềm ẩn
++ vì sao không phát hiện sớm
++ vì sao ảnh hưởng lan rộng
++ điều gì giúp phục hồi
++ hành động nào giảm xác suất lặp lại
+```
+
+## MTTR và chỉ số vận hành: cái gì dễ đo chưa chắc là toàn bộ chất lượng
+
+Một số nhóm theo dõi thời gian phát hiện, thời gian khôi phục hoặc số lượng lỗi. Các chỉ số này hữu ích nhưng có thể bị tối ưu sai nếu trở thành mục tiêu duy nhất.
+
+Ví dụ giảm **thời gian khôi phục trung bình (mean time to recovery)** bằng cách đóng sự cố sớm trên hệ thống nhưng chưa xử lý nguyên nhân không làm tổ chức bền hơn. Chỉ số phải được đọc cùng mức ảnh hưởng, tần suất lặp lại và chất lượng hành động phòng ngừa.
+
+Đây là ứng dụng trực tiếp của Định luật Goodhart: khi một chỉ số trở thành mục tiêu tuyệt đối, nó có thể mất giá trị như thước đo.
+
+## 버스 팩터: khi một người trở thành điểm lỗi duy nhất của tri thức
+
+Nếu chỉ một người biết cách triển khai, biết mật khẩu cũ, hiểu logic nghiệp vụ hoặc có quan hệ với khách hàng, tổ chức có một **điểm lỗi duy nhất về tri thức (single point of knowledge)**.
+
+Khái niệm **hệ số xe buýt (bus factor)** hỏi: nếu vài người chủ chốt đột ngột không thể làm việc, nhóm còn vận hành được không?
+
+Giảm rủi ro này không chỉ bằng “viết nhiều tài liệu”. Cần:
+
+```text
+tài liệu có thể tìm được
++ tài liệu còn đúng
++ quyền truy cập được chia sẻ an toàn
++ người thứ hai đã thực hành công việc
++ bàn giao định kỳ
++ tự động hoá những bước dễ quên
+```
+
+Tri thức chỉ nằm trong wiki nhưng không ai thử dùng vẫn có thể thất bại khi khẩn cấp.
+
+## 조직학습: tổ chức học bằng cách biến kinh nghiệm thành thay đổi hệ thống
+
+Một công ty không “học” chỉ vì cá nhân đã rút kinh nghiệm. Học tập tổ chức xảy ra khi kinh nghiệm được chuyển thành thay đổi có thể tồn tại sau khi cá nhân rời đi.
+
+```text
+sự kiện / dự án
+→ quan sát
+→ giải thích
+→ quyết định thay đổi
+→ cập nhật quy trình / công cụ / tài liệu
+→ kiểm tra lại trong lần sau
+```
+
+Nếu nhóm luôn nói “lần sau chú ý hơn” nhưng quy trình không đổi, kiến thức vẫn nằm ở trí nhớ cá nhân. Nếu checklist, kiểm thử tự động, quyền phê duyệt hoặc tài liệu được cải thiện, bài học đã đi vào hệ thống.
+
 ## Liên hệ kiến thức: tổ chức như một mạng thông tin
 
 Một công ty tồn tại để phối hợp thông tin và hành động. Thứ bậc là **cấu trúc định tuyến (routing topology)**. Nếu mọi tin phải đi qua quản lý, cấu trúc giống cây: dễ kiểm soát nhưng dễ tạo điểm nghẽn. Nhóm liên chức năng tạo thêm các liên kết ngang để thông tin đi nhanh hơn nhưng cần quy tắc rõ để tránh xung đột.
 
 Văn hoá công sở vì vậy có thể phân tích như thiết kế mạng: quyền lực, thông tin, động lực và niềm tin là các kênh khác nhau.
 
+## Liên hệ kiến thức: văn hoá công sở như hệ điều khiển phản hồi
+
+Một tổ chức tạo mục tiêu, đo trạng thái, nhận phản hồi và điều chỉnh hành động. Nếu cảm biến là báo cáo sai, chỉ số bị làm đẹp hoặc nhân viên ngại báo lỗi, bộ điều khiển sẽ ra quyết định trên dữ liệu kém.
+
+```text
+mục tiêu
+→ hành động
+→ kết quả
+→ đo lường
+→ báo cáo
+→ quyết định điều chỉnh
+→ hành động mới
+```
+
+Do đó an toàn tâm lý, tài liệu hoá và khả năng quan sát không phải “phần mềm mềm”. Chúng quyết định chất lượng của vòng phản hồi quản trị.
+
 ## Mô hình tư duy (Mental Model)
 
-> Đừng chỉ hỏi “công ty Hàn có thứ bậc không?”. Hãy hỏi thứ bậc nằm ở lớp nào: chức danh, lương, phê duyệt, thứ tự phát biểu, đánh giá, loại hợp đồng hay kiến thức. Một công ty có thể phẳng ở cách xưng hô nhưng vẫn tập trung quyền ngân sách; hoặc có chức danh truyền thống nhưng quyết định kỹ thuật lại dựa mạnh vào bằng chứng.
+> Đừng chỉ hỏi “công ty Hàn có thứ bậc không?”. Hãy hỏi thứ bậc nằm ở lớp nào: chức danh, lương, phê duyệt, thứ tự phát biểu, đánh giá, loại hợp đồng hay kiến thức. Sau đó hỏi tiếp: ai có quyền quyết định, thông tin được lưu ở đâu, hệ thống phản ứng ra sao khi lỗi xảy ra và bài học có đi vào quy trình hay chỉ nằm trong trí nhớ của một người.
 
 ## Hiểu lầm phổ biến (Common Misconceptions)
 
@@ -280,3 +426,7 @@ Văn hoá công sở vì vậy có thể phân tích như thiết kế mạng: q
 “`네` nghĩa là công việc đã hoàn tất” là sai; nhiều khi nó chỉ xác nhận đã nhận thông tin.
 
 “Cùng ngồi một văn phòng nghĩa là cùng địa vị” cũng sai; loại hợp đồng và quan hệ khách hàng–nhà cung cấp có thể tạo khác biệt lớn.
+
+“Viết tài liệu nghĩa là tri thức đã được chuyển giao” là sai; tài liệu phải được tìm thấy, cập nhật và được người khác sử dụng thực tế.
+
+“Hậu kiểm không đổ lỗi nghĩa là không ai chịu trách nhiệm” là sai; mục tiêu là giữ trách nhiệm nhưng tìm cả nguyên nhân hệ thống để lỗi khó tái diễn hơn.
