@@ -1,73 +1,73 @@
-# Machine Learning foundations
+# Nền tảng Học máy
 
-Machine Learning (ML / 기계 학습) xây models từ data thay vì hand-code toàn bộ mapping input→output. Nhưng “học từ data” không có nghĩa model tự tìm chân lý. Learning luôn xảy ra trong hypothesis space, objective, data distribution và evaluation protocol do con người/system thiết kế.
+**Học máy (Machine Learning — ML / 기계 학습)** xây dựng mô hình từ dữ liệu thay vì viết tay toàn bộ ánh xạ đầu vào → đầu ra. Nhưng “học từ dữ liệu” không có nghĩa mô hình tự tìm ra chân lý. Quá trình học luôn diễn ra trong không gian giả thuyết, hàm mục tiêu, phân bố dữ liệu và quy trình đánh giá do con người hoặc hệ thống thiết kế.
 
-## Supervised learning
+## Học có giám sát
 
-Ta có examples `(x, y)` và muốn học function `f(x) ≈ y`. Classification dự đoán category; regression dự đoán numeric target.
+Trong **học có giám sát (supervised learning)**, ta có các ví dụ `(x, y)` và muốn học hàm `f(x) ≈ y`. Phân loại (classification) dự đoán nhóm hoặc nhãn; hồi quy (regression) dự đoán giá trị số.
 
-Training chọn parameters giảm loss trên training data; mục tiêu thật là generalization trên unseen data từ target distribution.
+Quá trình huấn luyện chọn tham số để giảm hàm mất mát trên dữ liệu huấn luyện. Mục tiêu thật sự không phải nhớ dữ liệu đó mà là **khái quát hóa (generalization)** tốt trên dữ liệu chưa thấy nhưng thuộc phân bố mục tiêu.
 
-## Unsupervised và self-supervised
+## Học không giám sát và tự giám sát
 
-Unsupervised learning tìm structure không có explicit labels, như clustering/dimensionality reduction.
+**Học không giám sát (unsupervised learning)** tìm cấu trúc khi không có nhãn tường minh, chẳng hạn phân cụm hoặc giảm chiều.
 
-Self-supervised learning tạo supervision từ structure của data, ví dụ predict masked token/next token. Labels không cần manual nhưng objective vẫn được designer chọn.
+**Học tự giám sát (self-supervised learning)** tạo tín hiệu giám sát từ chính cấu trúc dữ liệu, ví dụ dự đoán token bị che hoặc token tiếp theo. Không cần gán nhãn thủ công, nhưng mục tiêu học vẫn do người thiết kế lựa chọn.
 
-## Features và representation
+## Đặc trưng và biểu diễn
 
-Traditional ML phụ thuộc feature engineering. Deep learning học representations qua multiple layers từ raw-ish input.
+Học máy truyền thống phụ thuộc nhiều vào **kỹ thuật đặc trưng (feature engineering)**. Học sâu (deep learning) có thể học biểu diễn qua nhiều tầng từ dữ liệu đầu vào gần với dạng thô hơn.
 
-Nhưng representation vẫn quyết định what information available. Timestamp bị bỏ hoặc leakage feature được thêm có thể thay model behavior mạnh.
+Tuy nhiên cách biểu diễn vẫn quyết định thông tin nào có sẵn cho mô hình. Bỏ timestamp quan trọng hoặc vô tình thêm một đặc trưng làm rò rỉ đáp án có thể thay đổi hành vi mô hình rất mạnh.
 
-## Loss function
+## Hàm mất mát
 
-Loss biến prediction error thành scalar objective optimization. Mean squared error penalize squared residuals; cross-entropy phù hợp probability classification under common assumptions.
+**Hàm mất mát (loss function)** biến sai số dự đoán thành một giá trị vô hướng để tối ưu. Sai số bình phương trung bình phạt phần dư theo bình phương; cross-entropy phù hợp với nhiều bài toán phân loại xác suất dưới các giả định phổ biến.
 
-Loss không phải business metric. Một model giảm log-loss có thể không tối ưu fraud cost hoặc medical utility nếu threshold/cost asymmetry khác.
+Loss không đồng nghĩa với chỉ số nghiệp vụ. Một mô hình giảm log-loss vẫn có thể không tối ưu chi phí gian lận hoặc lợi ích y tế nếu ngưỡng quyết định và mức thiệt hại giữa các loại sai khác nhau.
 
-## Training, validation và test
+## Tập huấn luyện, xác thực và kiểm thử
 
-Training data fit parameters. Validation data chọn hyperparameters/model decisions. Test data ước lượng final generalization và nên giữ độc lập khỏi tuning.
+Dữ liệu huấn luyện dùng để khớp tham số. Dữ liệu xác thực (validation) dùng để chọn siêu tham số và quyết định mô hình. Dữ liệu kiểm thử (test) dùng để ước lượng khả năng khái quát cuối cùng và nên được giữ độc lập khỏi quá trình tinh chỉnh.
 
-Repeatedly nhìn test results rồi tune biến test thành validation de facto.
+Nếu liên tục xem kết quả test rồi sửa mô hình theo kết quả đó, tập test trên thực tế đã biến thành một tập validation khác.
 
-## Overfitting và underfitting
+## Quá khớp và thiếu khớp
 
-Underfit: model quá hạn chế hoặc training chưa đủ để capture pattern. Overfit: model fit idiosyncrasies/noise của training data và generalize kém.
+**Thiếu khớp (underfitting)** xảy ra khi mô hình quá hạn chế hoặc huấn luyện chưa đủ để nắm được quy luật. **Quá khớp (overfitting)** xảy ra khi mô hình học cả những đặc điểm ngẫu nhiên và nhiễu riêng của dữ liệu huấn luyện nên khái quát kém.
 
-Bias-variance intuition giúp reasoning: model capacity/regularization/data amount ảnh hưởng trade-off.
+Trực giác thiên lệch–phương sai (bias–variance) giúp suy luận cách năng lực mô hình, regularization và lượng dữ liệu tạo ra sự đánh đổi.
 
-## Regularization
+## Điều chuẩn
 
-L1/L2 penalties, dropout, early stopping, data augmentation và architectural constraints đều hạn chế effective fitting hoặc encode prior assumptions.
+Các kỹ thuật như phạt L1/L2, dropout, dừng sớm, tăng cường dữ liệu và ràng buộc kiến trúc đều hạn chế mức độ mô hình có thể khớp dữ liệu hoặc đưa giả định có trước vào quá trình học.
 
-Regularization không chỉ “chống overfit”; nó bias learning toward solutions được cho là plausible/simpler theo mechanism.
+**Điều chuẩn (regularization)** không chỉ là “chống overfit”; nó hướng quá trình học về những nghiệm được xem là hợp lý hoặc đơn giản hơn theo cơ chế đã chọn.
 
-## Distribution shift
+## Dịch chuyển phân bố
 
-Model trained trên distribution A có thể fail khi production distribution B thay. Covariate shift, label shift, concept drift là các forms khác nhau.
+Mô hình được huấn luyện trên phân bố A có thể thất bại khi phân bố thực tế B thay đổi. Dịch chuyển hiệp biến, dịch chuyển nhãn và trôi khái niệm là những dạng khác nhau của **dịch chuyển phân bố (distribution shift)**.
 
-Monitoring cần nhìn input distribution, output confidence, outcome labels nếu có và business metrics.
+Giám sát mô hình cần xem phân bố đầu vào, độ tự tin đầu ra, nhãn kết quả khi có và chỉ số nghiệp vụ, thay vì chỉ theo dõi CPU hoặc lỗi hệ thống.
 
-## Data leakage
+## Rò rỉ dữ liệu
 
-Leakage xảy ra khi training features chứa information không available at prediction time hoặc split làm same entity/time leak giữa train/test.
+**Rò rỉ dữ liệu (data leakage)** xảy ra khi đặc trưng huấn luyện chứa thông tin không tồn tại tại thời điểm dự đoán, hoặc cách chia dữ liệu làm cùng một thực thể hay cùng khoảng thời gian xuất hiện ở cả train và test theo cách không thực tế.
 
-Model metrics có thể cực cao nhưng production fail. Split strategy phải phản ánh deployment timeline/entity structure.
+Khi đó chỉ số đánh giá có thể rất cao nhưng mô hình thất bại khi triển khai. Chiến lược chia dữ liệu phải phản ánh dòng thời gian và cấu trúc thực thể của môi trường sử dụng thật.
 
-## Common Misconceptions
+## Những hiểu nhầm thường gặp
 
-**“Nhiều data luôn tốt hơn.”** Data sai distribution, noisy labels hoặc leakage có thể làm model tệ/misleading.
+**“Càng nhiều dữ liệu càng tốt.”** Không luôn đúng. Dữ liệu sai phân bố, nhãn nhiễu hoặc leakage có thể làm mô hình tệ hơn hoặc tạo cảm giác đánh giá sai lệch.
 
-**“Accuracy cao nghĩa model tốt.”** Class imbalance/cost asymmetry có thể làm accuracy vô nghĩa.
+**“Accuracy cao nghĩa mô hình tốt.”** Không luôn đúng. Mất cân bằng lớp và chi phí sai lệch không đối xứng có thể làm accuracy trở thành chỉ số không phù hợp.
 
-**“Model học objective chúng ta muốn.”** Nó tối ưu proxy loss trên data; proxy mismatch là nguồn failure lớn.
+**“Mô hình học đúng mục tiêu mà chúng ta muốn.”** Không chính xác. Nó tối ưu một hàm mất mát đại diện trên dữ liệu; khoảng cách giữa đại diện và mục tiêu thật là nguồn lỗi quan trọng.
 
-## Mental Model
+## Mô hình tư duy
 
-> ML là optimization trên data dưới assumptions. Generalization—not training fit—is mục tiêu; evaluation phải mô phỏng deployment reality.
+> Học máy là **tối ưu trên dữ liệu dưới một tập giả định**. Mục tiêu là khả năng khái quát chứ không phải khớp dữ liệu huấn luyện; quy trình đánh giá phải mô phỏng càng gần thực tế triển khai càng tốt.
 
 ## Kết nối
 
-Xem [statistics/inference](../../../mathematics/06_probability_statistics/05_descriptive_and_inferential_statistics.md), [optimization](../../../mathematics/08_optimization_numerical/00_optimization.md), [neural networks](./03_neural_networks_and_representation_learning.md) và [AI evaluation](./04_ai_evaluation_data_and_responsibility.md).
+Xem [thống kê và suy luận](../../../mathematics/06_probability_statistics/05_descriptive_and_inferential_statistics.md), [tối ưu hóa](../../../mathematics/08_optimization_numerical/00_optimization.md), [mạng nơ-ron](./03_neural_networks_and_representation_learning.md) và [đánh giá AI](./04_ai_evaluation_data_and_responsibility.md).
