@@ -4,9 +4,9 @@
 
 ## 1. Đánh giá tổng thể hiện tại
 
-Bộ `korean_culture/` đã vượt qua giai đoạn “thu thập kiến thức theo chủ đề”. Cấu trúc hiện tại đã đủ rộng để bao phủ phần lớn đời sống văn hoá Hàn Quốc từ lịch sử, quan hệ, ngôn ngữ, gia đình, giáo dục, công sở, tôn giáo, ẩm thực, nhà ở, Hallyu, vùng miền, dân số, Internet, chăm sóc, khí hậu đến dịch vụ.
+Bộ `korean_culture/` đã vượt qua giai đoạn “thu thập kiến thức theo chủ đề”. Phần chính `01–33` hiện bao phủ phần lớn đời sống văn hoá Hàn Quốc từ lịch sử, quan hệ, ngôn ngữ, gia đình, giáo dục, công sở, tôn giáo, ẩm thực, nhà ở, Hallyu, vùng miền, dân số, Internet, chăm sóc, khí hậu đến dịch vụ.
 
-Điểm mạnh lớn nhất hiện nay không còn là số lượng chủ đề mà là **cơ chế giải thích xuyên chương**. Nhiều hiện tượng đã được mô hình hoá theo chuỗi:
+Điểm mạnh lớn nhất hiện nay là **cơ chế giải thích xuyên chương**. Nhiều hiện tượng được mô hình hoá theo chuỗi:
 
 ```text
 điều kiện vật chất
@@ -19,7 +19,7 @@ Bộ `korean_culture/` đã vượt qua giai đoạn “thu thập kiến thức
 → khả năng thích nghi
 ```
 
-Sau vòng mới nhất, bốn chương từng được xếp vào nhóm “mạnh nhưng còn khoảng trống cơ chế” — `06`, `12`, `20`, `26` — đã được tăng sâu. Vì vậy thư viện hiện **không còn thiếu một mảng kiến thức lớn cần tạo chapter riêng**. Hướng phát triển tiếp theo nên là đồng bộ liên kết, glossary, nguồn và làm sâu chọn lọc các chapter nền tảng còn ở mức “mạnh”.
+Sau vòng mới nhất, `01`, `02` và `13` đã được tăng sâu; `16` và `17` cũng được đồng bộ. Vì vậy thư viện hiện **không còn thiếu mảng lớn và cũng không còn chapter nền tảng nào ở trạng thái rõ ràng “quá mỏng”**. Hướng phát triển tiếp theo nên chuyển từ mở rộng phạm vi sang **kiểm toán tính nhất quán, ví dụ, nguồn, liên kết chéo và khả năng học theo lộ trình**.
 
 ## 2. Chuẩn ngôn ngữ hiện hành
 
@@ -58,32 +58,32 @@ Một chapter đạt mức **rất mạnh** khi không chỉ mô tả hiện tư
 
 | Lĩnh vực | Chapter | Trạng thái hiện tại | Nhận xét |
 |---|---|---|---|
-| Nền tảng hệ thống văn hoá | `01` | mạnh | đủ làm khung nhập môn; có thể tăng thêm phương pháp so sánh văn hoá và kiểm định nhân quả |
-| Nho giáo, quan hệ, thứ bậc | `02` | mạnh | cơ chế rõ; có thể đào sâu quá trình thay đổi thiết chế và khi thâm niên mất quyền giải thích |
+| Nền tảng hệ thống văn hoá | `01` | rất mạnh sau vòng mới | đã thêm phương pháp so sánh, biến gây nhiễu, phản thực tế, cấp độ phân tích, age/cohort/period, thiên lệch chọn mẫu và tam giác hoá nguồn |
+| Nho giáo, quan hệ, thứ bậc | `02` | rất mạnh sau vòng mới | đã thêm quyền lực chính thức/thực tế, tính chính danh, thứ bậc đa trục, voice/exit/loyalty, vòng đời cố vấn và kiểm toán hệ thứ bậc |
 | Ngôn ngữ, kính ngữ, `눈치`, `정`, `체면` | `03` | rất mạnh | đã có giao tiếp đa ngôn ngữ, mơ hồ tác nhân, giao tiếp vòng kín và dịch kỹ thuật |
 | Gia đình, họ tộc, vòng đời | `04` + `29` | rất mạnh | đã có chăm sóc, tải vô hình, vòng đời và thay đổi cấu trúc hộ |
 | Giáo dục, thi cử, bằng cấp | `05` + `30` | rất mạnh | đã có học tập suốt đời, chuyển nghề, kỹ năng chuyển giao và hệ ghép nối đại học–việc làm |
-| Công sở | `06` | rất mạnh sau vòng mới | đã có quyền quyết định, bản ghi quyết định, review, incident, postmortem, bus factor và học tập tổ chức |
+| Công sở | `06` | rất mạnh | đã có quyền quyết định, bản ghi quyết định, review, incident, postmortem, bus factor và học tập tổ chức |
 | Ẩm thực | `07` | rất mạnh | đã có chuỗi cung ứng, chuỗi lạnh, công suất bếp, an toàn, giao hàng và lãng phí |
 | Nhà ở, hanok, không gian | `08` + `31` | rất mạnh | đã có vật lý công trình, vận hành, bảo trì, năng lượng, tiếp cận và già hoá tại chỗ |
 | Tôn giáo và thế giới quan | `09` | rất mạnh | đã có thiết chế xã hội, thiện nguyện, thế tục hoá, mạng quan hệ, quyền lực và đo lường tôn giáo |
 | Nghệ thuật, thủ công, di sản | `10` | rất mạnh | đã có lao động sáng tạo, tài trợ, quyền, bảo quản phòng ngừa và bảo tồn số |
 | Lễ Tết, nghi lễ, trò chơi | `11` | rất mạnh | đã có nén nghi lễ, gia đình đa dạng, hiện diện từ xa, thương mại hoá, accessibility và cường độ thực hành |
-| Đô thị, tiêu dùng, đời sống số | `12` | rất mạnh sau vòng mới | đã thêm reliability, điểm lỗi duy nhất, dự phòng, suy giảm có kiểm soát, sự cố dây chuyền và đường thay thế |
-| Hallyu, truyền thông, nền tảng | `13` | mạnh | đã có lao động sáng tạo, IP và phân phối giá trị; đây là một trong số ít chapter còn có thể tăng sâu vòng hai |
+| Đô thị, tiêu dùng, đời sống số | `12` | rất mạnh | đã có reliability, điểm lỗi duy nhất, dự phòng, suy giảm có kiểm soát, sự cố dây chuyền và đường thay thế |
+| Hallyu, truyền thông, nền tảng | `13` | rất mạnh sau vòng mới | đã thêm vòng đời nội dung, danh mục dự án, cửa sổ phát hành, catalog, retention/churn, exploration–exploitation, bản địa hoá nhiều tầng và lợi thế tích luỹ của IP |
 | Vùng miền, Jeju, bán đảo | `14` | rất mạnh | đã có việc làm vùng, thiết chế neo, dân số hoạt động, ngưỡng dịch vụ và di cư trở về |
 | Dân số, già hoá, di cư | `15` | rất mạnh | đã có hợp đồng thế hệ, độ trễ thiết chế, hội nhập di cư và ngưỡng dịch vụ |
-| Liên hệ giữa các hệ thống | `16` | rất mạnh | cần đồng bộ các mô hình mới từ `06`, `12`, `20`, `26` |
-| Thuật ngữ và bản đồ nguồn | `17` | tốt | cần đồng bộ thuật ngữ mới sau vòng hiện tại |
+| Liên hệ giữa các hệ thống | `16` | rất mạnh, đã đồng bộ | đã tăng từ 30 lên 36 liên hệ và thêm lớp phản thực tế vào khung đọc hiện tượng |
+| Thuật ngữ và bản đồ nguồn | `17` | tốt–rất tốt, đã đồng bộ | đã thêm thuật ngữ mới từ quyền lực, công sở, đô thị, Hallyu, y tế, dịch vụ và mô hình phân tích |
 | Phép lịch sự và quan hệ đời thường | `18` | rất mạnh | đã có ngân sách quan hệ, liên kết mạnh/yếu, ranh giới và sửa chữa quan hệ |
 | Làm đẹp, thời trang, cơ thể | `19` | rất mạnh | đã có bất cân xứng thông tin, ảnh trước–sau, thuật toán hình ảnh, ranh giới tiêu dùng–y khoa và quyết định theo rủi ro |
-| Thể thao, giải trí, fandom | `20` | rất mạnh sau vòng mới | đã thêm dòng người, lối thoát, an toàn đám đông, thị trường vé thứ cấp, quản trị cộng đồng và đo lường tham gia |
+| Thể thao, giải trí, fandom | `20` | rất mạnh | đã có dòng người, lối thoát, an toàn đám đông, thị trường vé thứ cấp, quản trị cộng đồng và đo lường tham gia |
 | Các lớp lịch sử | `21` | rất mạnh | đã có ký ức gia đình, hạ tầng ký ức, thành phố như bản thảo viết chồng và nguồn gốc tư liệu |
 | Tên, tuổi, siêu dữ liệu xã hội | `22` | rất mạnh | đã có danh tính pháp lý/hiển thị, La-tinh hoá và tối thiểu hoá dữ liệu |
 | Nghĩa vụ quân sự | `23` | rất mạnh | đã có tái hội nhập, chi phí khởi động lại, chuyển giao kỹ năng và mạng quan hệ |
 | Kinh tế, chaebol, nhà ở, dịch chuyển xã hội | `24` | rất mạnh | đã có bảng cân đối hộ, thanh khoản, chi phí cố định và mạng bảo hiểm gia đình |
 | Xã hội dân sự và không gian công luận | `25` | mạnh về khung phân tích | mọi dữ kiện chính trị hiện hành phải được kiểm chứng mới trước khi sửa |
-| Y tế và văn hoá sức khoẻ | `26` | rất mạnh sau vòng mới | đã thêm health literacy, teach-back, quyết định chung, continuity of care, chuyển tuyến, đối chiếu thuốc và an toàn bệnh nhân |
+| Y tế và văn hoá sức khoẻ | `26` | rất mạnh | đã có health literacy, teach-back, quyết định chung, continuity of care, chuyển tuyến, đối chiếu thuốc và an toàn bệnh nhân |
 | Internet, nhắn tin, tiếng lóng, meme | `27` | rất mạnh | đã có thuật toán, thiên lệch tham gia, nguồn gốc, quản trị cộng đồng và khoá mạng lưới |
 | Quy ước tên riêng | `28` | tốt | đủ cho vai trò quy chuẩn; không cần mở rộng thành chapter lý thuyết |
 | Nuôi dạy con và chăm sóc | `29` | rất mạnh | đã có chất lượng childcare, trẻ ốm, vai trò cha và tải quản lý vô hình |
@@ -94,109 +94,118 @@ Một chapter đạt mức **rất mạnh** khi không chỉ mô tả hiện tư
 
 ## 5. Kết quả bổ sung mới nhất
 
-### `06` — công sở đã chuyển từ “thứ bậc” sang hệ thống quyết định và học tập
+### `01` — từ chương nhập môn thành phương pháp phân tích văn hoá
 
-[`06_workplace_organization_hoesik.md`](06_workplace_organization_hoesik.md) hiện phân biệt:
-
-```text
-người thực hiện
-≠ người chịu trách nhiệm cuối
-≠ người được tham vấn
-≠ người cần được thông báo
-```
-
-Nội dung mới gồm quyền quyết định, bản ghi lý do của quyết định, rà soát đồng cấp so với đánh giá hiệu suất, vòng xử lý `장애`, hậu kiểm không đổ lỗi, chỉ số thời gian phục hồi, điểm lỗi duy nhất về tri thức, `bus factor` và quá trình biến kinh nghiệm cá nhân thành học tập tổ chức.
-
-Điểm sâu quan trọng là: **một công ty không học chỉ vì một nhân viên “đã rút kinh nghiệm”; tổ chức chỉ học khi bài học đi vào quy trình, công cụ, tài liệu hoặc thiết kế quyền hạn**.
-
-### `12` — đô thị đã có lớp reliability và fallback
-
-[`12_city_consumption_digital_life.md`](12_city_consumption_digital_life.md) giờ tách rõ:
+[`01_cultural_system_history_geography.md`](01_cultural_system_history_geography.md) hiện không chỉ cung cấp nền lịch sử–địa lý mà còn dạy cách kiểm tra một lời giải thích:
 
 ```text
-hiệu suất bình thường
-≠ độ tin cậy
-≠ khả năng phục hồi
+quan sát hiện tượng
+→ chọn nhóm so sánh
+→ tìm lời giải thích thay thế
+→ kiểm tra biến gây nhiễu
+→ đặt phản thực tế
+→ kiểm tra cấp độ phân tích
+→ kiểm tra cách chọn mẫu
+→ tam giác hoá nguồn
 ```
 
-Chương đã thêm điểm lỗi duy nhất, dự phòng, suy giảm chức năng có kiểm soát, sự cố điện/mạng lan theo chuỗi, đường thay thế, cảnh báo khẩn cấp, mệt mỏi cảnh báo và yêu cầu duy trì phương án không số cho các dịch vụ thiết yếu.
+Chương cũng tách rõ hiệu ứng tuổi, hiệu ứng thế hệ và hiệu ứng thời kỳ, đồng thời nhấn mạnh nguyên tắc tiết kiệm lời giải thích: nếu luật, giá, thời gian hoặc giao diện đã giải thích đủ hành vi thì không cần thêm “bản chất văn hoá” như một nguyên nhân mơ hồ.
 
-Mô hình mới giúp tránh sai lầm “thành phố rất tiện = thành phố luôn chống chịu tốt”.
+### `02` — thứ bậc đã được tách thành nhiều loại quyền lực
 
-### `20` — giải trí đã được nâng thành bài toán quản trị sự kiện và cộng đồng
-
-[`20_sports_leisure_fan_culture.md`](20_sports_leisure_fan_culture.md) hiện thêm:
-
-- thị trường vé thứ cấp và công bằng phân bổ;
-- dòng người và điểm nghẽn;
-- khác biệt giữa vào sân và thoát người;
-- an toàn đám đông như trách nhiệm hệ thống;
-- sự kiện như một thành phố tạm thời;
-- thời tiết và hoạt động ngoài trời;
-- quản trị cộng đồng sở thích;
-- chi phí gia nhập của thành viên mới;
-- khác biệt giữa số người từng thử, người tham gia thường xuyên, thời lượng, chi tiêu và độ hiển thị trên mạng.
-
-Điểm cốt lõi là chuyển từ “người Hàn thích môn gì?” sang “hạ tầng, lịch, quản trị, an toàn và khả năng tiếp cận nào làm hoạt động đó có thể tồn tại ở quy mô lớn?”.
-
-### `26` — y tế đã có tính liên tục và năng lực hiểu thông tin sức khoẻ
-
-[`26_health_medicine_wellness_body.md`](26_health_medicine_wellness_body.md) hiện thêm:
+[`02_confucianism_relations_hierarchy.md`](02_confucianism_relations_hierarchy.md) hiện phân biệt:
 
 ```text
-tìm thông tin
-→ hiểu
-→ đánh giá
-→ áp dụng
+quyền hành chính
+≠ quyền chuyên môn
+≠ quyền ngân sách
+≠ quyền thông tin
+≠ quyền mạng quan hệ
 ```
 
-và các cơ chế: `teach-back`, ra quyết định chung, phân biệt rủi ro tương đối–tuyệt đối, tính liên tục của chăm sóc, chuyển tuyến hai chiều, đối chiếu thuốc, xuất viện như điểm chuyển giao, an toàn bệnh nhân nhiều lớp, rào cản của bệnh nhân nước ngoài và bệnh mạn tính như hệ thống quản lý lặp lại.
+Chương mới thêm tính chính danh, khi thâm niên mất giá trị dự báo, thứ bậc đa trục, phản ứng lên tiếng–rời bỏ–trung thành, vòng đời của quan hệ cố vấn và bốn lớp để kiểm tra một tổ chức có thật sự “phẳng” hay chỉ đổi cách xưng hô.
 
-Điểm mới quan trọng là xem **thông tin y tế như trạng thái cần được chuyển qua người, cơ sở và thời gian**, chứ không chỉ là một lời khuyên ở một lần khám.
+Điểm cốt lõi mới là: **thứ bậc không tự động xấu; cần hỏi quyền có đi cùng trách nhiệm, thông tin và kênh phản biện hay không**.
 
-## 6. Đánh giá phần còn thiếu sau vòng này
+### `13` — Hallyu đã có đầy đủ vòng đời kinh tế của nội dung
 
-Không còn gap nào đủ lớn để biện minh cho một chapter mới. Những việc nên làm tiếp thuộc ba nhóm.
-
-### Nhóm A — tăng chiều sâu chọn lọc ở chapter nền
-
-`01`, `02`, `13` vẫn ở mức “mạnh” thay vì “rất mạnh”. Có thể phát triển thêm:
+[`13_hallyu_media_platforms.md`](13_hallyu_media_platforms.md) hiện đi xa hơn sản xuất–phân phối để mô tả:
 
 ```text
-01 → phương pháp so sánh văn hoá, phản chứng, quan hệ nhân quả và biến gây nhiễu
-02 → thâm niên khi nào hữu ích, khi nào trở thành chi phí; thay đổi quyền lực theo loại tổ chức
-13 → vòng đời nội dung, quyền lực nền tảng, kinh tế hit-driven, rủi ro danh tiếng và khả năng sống dài của IP
+ý tưởng
+→ tài trợ / bật đèn xanh
+→ sản xuất
+→ phát hành
+→ khai thác theo cửa sổ
+→ catalog
+→ chuyển thể
+→ tái khám phá
+→ lưu trữ / bảo tồn
 ```
 
-### Nhóm B — đồng bộ knowledge graph
+Chương đã thêm quản lý danh mục dự án, thu hút–giữ chân–rời bỏ người dùng, giá trị catalog, đánh đổi giữa khai thác công thức cũ và khám phá cái mới, bản địa hoá nhiều tầng, bão hoà chú ý, lợi thế tích luỹ của IP và vấn đề phiên bản/bản chính thức trong lưu trữ số.
 
-[`16_connections_mental_models_misconceptions.md`](16_connections_mental_models_misconceptions.md) cần nhận các liên hệ mới:
+### `16` — knowledge graph đã được đồng bộ với các mô hình mới
+
+[`16_connections_mental_models_misconceptions.md`](16_connections_mental_models_misconceptions.md) hiện có **36 liên hệ xuyên chương**, bổ sung:
+
+- quyền lực ↔ thông tin ↔ trách nhiệm;
+- bus factor ↔ chăm sóc gia đình ↔ khả năng chống chịu;
+- độ tin cậy đô thị ↔ phục hồi dịch vụ ↔ fallback;
+- fandom ↔ hàng đợi ↔ tài nguyên khan hiếm;
+- health literacy ↔ bất cân xứng thông tin ↔ đồng thuận;
+- IP ↔ dữ liệu ↔ vốn ↔ lợi thế tích luỹ.
+
+Khung đọc hiện tượng tăng từ 6 lên **7 lớp**, với lớp phản thực tế để kiểm tra giả thuyết nhân quả.
+
+### `17` — glossary đã được đồng bộ
+
+[`17_glossary_and_reference_map.md`](17_glossary_and_reference_map.md) hiện đã thêm từ khoá về:
+
+- tính chính danh và chủ nghĩa quan hệ;
+- `담당자`, `업무분장`, `책임소재`, `인수인계`, `장애`, `사후회고`;
+- đường thay thế và cảnh báo khẩn cấp;
+- đặt chỗ, no-show và ticketing;
+- quyền phái sinh, bản địa hoá và catalog nội dung;
+- health literacy và referral;
+- phản thực tế, biến gây nhiễu, thiên lệch chọn mẫu, graceful degradation, fallback, informed consent, lợi thế tích luỹ và vòng đời nội dung.
+
+## 6. Việc nên làm tiếp: chuyển từ “tăng depth” sang “quality pass”
+
+Sau vòng này, việc thêm nhiều đoạn mới vào từng chapter có nguy cơ làm tài liệu phình nhưng lợi ích biên giảm. Nên ưu tiên bốn loại kiểm toán.
+
+### A. Kiểm toán trùng lặp
+
+Các chủ đề như khả năng tiếp cận, phản hồi, bất cân xứng thông tin, khả năng chống chịu và nền tảng xuất hiện ở nhiều chapter. Cần giữ một nơi giải thích sâu và nơi khác liên kết, tránh mỗi chapter lặp lại cùng định nghĩa dài.
+
+### B. Kiểm toán ví dụ
+
+Mỗi cơ chế quan trọng nên có ít nhất một ví dụ đời sống Hàn Quốc cụ thể, nhưng ví dụ không được biến thành tuyên bố “mọi người đều làm thế”. Ưu tiên ví dụ cho các chapter trừu tượng như `01`, `02`, `16`.
+
+### C. Kiểm toán nguồn và độ mới
+
+Những chapter có số liệu, luật, y tế, chính trị, khí hậu hoặc nền tảng phải gắn mốc thời gian và nguồn. Không cần web cho mọi câu văn; chỉ những tuyên bố có thể đổi hoặc có tranh luận mới cần cập nhật thường xuyên.
+
+### D. Kiểm toán lộ trình học
+
+README/index nên bảo đảm người đọc có thể chọn:
 
 ```text
-06 công sở ↔ khả năng quan sát ↔ học tập tổ chức
-12 đô thị ↔ redundancy ↔ graceful degradation
-20 sự kiện ↔ hàng đợi ↔ an toàn đám đông
-26 y tế ↔ state transfer ↔ continuity of care
+lộ trình nhập môn
+lộ trình đời sống hằng ngày
+lộ trình công việc
+lộ trình lịch sử–truyền thống
+lộ trình xã hội hiện đại
+lộ trình phương pháp phân tích
 ```
 
-### Nhóm C — đồng bộ glossary và nguồn
-
-[`17_glossary_and_reference_map.md`](17_glossary_and_reference_map.md) nên thêm các thuật ngữ như:
-
-- quyền quyết định (decision right);
-- hậu kiểm sự cố (postmortem);
-- điểm lỗi duy nhất (single point of failure);
-- khả năng phục hồi (resilience);
-- suy giảm có kiểm soát (graceful degradation);
-- dòng người (crowd flow);
-- tính liên tục của chăm sóc (continuity of care);
-- đối chiếu thuốc (medication reconciliation);
-- năng lực sức khoẻ (health literacy).
+mà không phải tự đoán thứ tự giữa 33 chapter.
 
 ## 7. Các liên kết chéo bắt buộc phải giữ đồng bộ
 
 ```text
-03 Ngôn ngữ ↔ 06 Công sở ↔ 18 Quan hệ ↔ 27 Nhắn tin ↔ 33 Dịch vụ
+01 Phương pháp ↔ 16 Mô hình tư duy ↔ 17 Thuật ngữ/nguồn
+02 Quan hệ–quyền lực ↔ 03 Ngôn ngữ ↔ 06 Công sở ↔ 18 Quan hệ đời thường
 04 Gia đình ↔ 09 Tôn giáo ↔ 11 Nghi lễ ↔ 29 Nuôi dạy con ↔ 15 Dân số
 05 Giáo dục ↔ 30 Đại học ↔ 24 Dịch chuyển xã hội ↔ 06 Công sở
 06 Công sở ↔ 23 Quân đội ↔ 24 Kinh tế ↔ 27 Nhắn tin ↔ 29 Chăm sóc ↔ 33 Dịch vụ
@@ -205,7 +214,7 @@ Không còn gap nào đủ lớn để biện minh cho một chapter mới. Nh�
 09 Tôn giáo ↔ 11 Nghi lễ ↔ 04 Gia đình ↔ 18 Quan hệ
 10 Nghệ thuật/di sản ↔ 13 Hallyu ↔ 21 Ký ức ↔ 27 Hạ tầng số
 12 Đô thị ↔ 14 Vùng ↔ 20 Sự kiện ↔ 27 Internet ↔ 31 Căn hộ ↔ 33 Dịch vụ
-13 Hallyu ↔ 19 Làm đẹp ↔ 20 Fandom ↔ 24 Kinh tế ↔ 27 Thuật toán
+13 Hallyu ↔ 10 Nghệ thuật ↔ 19 Làm đẹp ↔ 20 Fandom ↔ 24 Kinh tế ↔ 27 Thuật toán
 14 Vùng ↔ 15 Dân số ↔ 24 Kinh tế ↔ 30 Đại học
 15 Dân số ↔ 22 Danh tính ↔ 26 Y tế ↔ 29 Chăm sóc
 19 Làm đẹp ↔ 26 Sức khoẻ ↔ 27 Hình ảnh số ↔ 33 Dịch vụ
