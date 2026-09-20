@@ -42,7 +42,7 @@ Trong lịch sử đời sống Hàn Quốc có nhiều cách tính tuổi. Ba k
 
 Điểm quan trọng về văn hoá là chuẩn pháp lý thay đổi không làm thói quen hội thoại biến mất ngay lập tức. Một người có thể dùng `만 나이` trong giấy tờ nhưng vẫn hỏi `몇 년생이에요?` trong giao tiếp vì năm sinh đủ để xác định thế hệ và thứ tự tuổi tương đối.
 
-## 왜 몇 년생을 물어볼까?: vì sao năm sinh quan trọng?
+## Vì sao người ta hỏi năm sinh? (왜 몇 년생을 물어볼까?)
 
 Nếu hai người biết năm sinh của nhau, họ nhanh chóng suy ra ai lớn hơn và nên bắt đầu giao tiếp ở cấp độ lời nói nào. Đây là một **bài toán phối hợp (coordination problem / 조정 문제)**.
 
