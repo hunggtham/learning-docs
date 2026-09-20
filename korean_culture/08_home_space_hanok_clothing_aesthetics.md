@@ -4,7 +4,7 @@
 
 Văn hoá không chỉ nằm trong đầu. Sàn nhà, nhiệt độ, đồ nội thất và kiến trúc làm một số hành vi dễ hơn hành vi khác. Hàn Quốc là ví dụ rõ qua **ondol (온돌)**, hệ thống sưởi sàn truyền thống.
 
-Trong ondol cổ, khí nóng từ bếp đi qua các kênh dưới sàn trước khi thoát ra ngoài, làm nóng khối vật liệu. Căn hộ hiện đại không dùng cùng cơ chế đốt nhưng tiếp tục **sưởi bức xạ qua sàn (radiant floor heating)** bằng nước nóng hoặc hệ thống boiler. Khi sàn ấm, việc ngồi và ngủ gần sàn trở nên hợp lý. Từ đó văn hoá sinh hoạt trên sàn ảnh hưởng bàn thấp, tháo giày và ranh giới sạch–bẩn giữa trong/ngoài nhà.
+Trong ondol cổ, khí nóng từ bếp đi qua các kênh dưới sàn trước khi thoát ra ngoài, làm nóng khối vật liệu. Căn hộ hiện đại không dùng cùng cơ chế đốt nhưng tiếp tục **sưởi bức xạ qua sàn (radiant floor heating)** bằng nước nóng từ hệ thống `보일러` (boiler). Khi sàn ấm, việc ngồi và ngủ gần sàn trở nên hợp lý. Từ đó văn hoá sinh hoạt trên sàn ảnh hưởng bàn thấp, tháo giày và ranh giới sạch–bẩn giữa trong/ngoài nhà.
 
 Chuỗi từ nguyên lý đầu tiên:
 
@@ -19,7 +19,7 @@ mùa đông lạnh
 
 Không phải mọi bước đều mang tính tất định, nhưng **hạ tầng vật lý tạo khả năng hành động (affordance)**.
 
-## 온돌: từ kênh dẫn khí nóng tới boiler hiện đại
+## 온돌: từ kênh dẫn khí nóng tới hệ thống `보일러` hiện đại
 
 `온돌` thường được dịch đơn giản là “sưởi sàn”, nhưng ondol lịch sử và hệ sưởi sàn hiện đại không hoàn toàn cùng công nghệ. Điều giữ tính liên tục là **nguyên lý chức năng**: nhiệt được đưa vào khối sàn rồi truyền lên phòng.
 
@@ -36,7 +36,7 @@ trong khi công nghệ thay đổi
 
 **Hanok (한옥)** là nhà truyền thống Hàn Quốc, nhưng không có một mẫu duy nhất. Hướng nhà, sân, mái, khung gỗ, `온돌` và `대청마루` được kết hợp theo khí hậu, tầng lớp, vùng và cách sử dụng xã hội.
 
-`대청마루` là sàn gỗ cao, thoáng, phù hợp mùa nóng; `온돌방` tối ưu mùa lạnh. Một ngôi nhà do đó có thể chứa hai chiến lược nhiệt đối lập. Đây là **thiết kế môi trường thụ động (passive environmental design)** trước HVAC hiện đại.
+`대청마루` là sàn gỗ cao, thoáng, phù hợp mùa nóng; `온돌방` tối ưu mùa lạnh. Một ngôi nhà do đó có thể chứa hai chiến lược nhiệt đối lập. Đây là **thiết kế môi trường thụ động (passive environmental design)** trước hệ thống sưởi, thông gió và điều hoà không khí hiện đại (HVAC).
 
 Dẫn nhiệt, đối lưu và bức xạ quyết định cảm giác nhiệt. Ondol tăng nhiệt bức xạ từ sàn; maru hỗ trợ luồng không khí. Kiến trúc truyền thống không cần biết phương trình nhiệt hiện đại để tích luỹ tri thức thực nghiệm qua nhiều thế hệ.
 
@@ -88,11 +88,11 @@ Sống trong căn hộ vì vậy là bài toán **quản trị tài nguyên chun
 
 ## 빌라, 오피스텔, 원룸: loại nhà và giai đoạn đời sống
 
-Ngoài căn hộ, nhà ở đô thị Hàn có nhiều nhóm. `원룸` thường là studio/phòng một không gian; `오피스텔` là toà nhà có logic văn phòng–nhà ở tuỳ cách dùng; `빌라` trong tiếng Hàn đời thường thường chỉ nhà nhiều hộ thấp tầng chứ không giống “villa” sang trọng trong tiếng Anh.
+Ngoài căn hộ, nhà ở đô thị Hàn có nhiều nhóm. `원룸` thường là phòng một không gian kiểu studio; `오피스텔` là toà nhà có logic văn phòng–nhà ở tuỳ cách dùng; `빌라` trong tiếng Hàn đời thường thường chỉ nhà nhiều hộ thấp tầng chứ không giống “villa” sang trọng trong tiếng Anh.
 
 Đây là bẫy dịch thuật quan trọng. Một từ vay từ tiếng Anh có thể đổi nghĩa sau khi được nội địa hoá.
 
-Loại nhà thường tương quan với giai đoạn đời sống, thu nhập, quy mô hộ và vị trí. Sinh viên hoặc người mới đi làm có thể ưu tiên one-room gần tàu điện; gia đình có trẻ có thể ưu tiên khu căn hộ và môi trường trường học. Đây là khuôn mẫu tổng thể, không phải quy tắc cá nhân.
+Loại nhà thường tương quan với giai đoạn đời sống, thu nhập, quy mô hộ và vị trí. Sinh viên hoặc người mới đi làm có thể ưu tiên căn `원룸` gần tàu điện; gia đình có trẻ có thể ưu tiên khu căn hộ và môi trường trường học. Đây là khuôn mẫu tổng thể, không phải quy tắc cá nhân.
 
 ## 고시원: không gian tối thiểu và quyền tiếp cận đô thị
 
@@ -332,7 +332,7 @@ Nhà có tường không đồng nghĩa mọi hoạt động riêng tư bị cô
 
 Văn hoá phép lịch sự nhiều khi là lớp phần mềm bù cho giới hạn phần cứng.
 
-## Floor plan: sơ đồ phòng phân phối thời gian gặp nhau của gia đình
+## Sơ đồ mặt bằng (floor plan): cách bố trí phòng phân phối thời gian gặp nhau của gia đình
 
 Bố trí phòng không chỉ là thẩm mỹ. Bếp mở, phòng khách trung tâm, phòng riêng và bàn ăn quyết định xác suất các thành viên gặp nhau trong ngày.
 
@@ -425,7 +425,7 @@ sức chứa lưu trữ
 → thói quen hằng ngày
 ```
 
-Một one-room nhỏ tạo hành vi khác căn hộ lớn dù cư dân có cùng “giá trị văn hoá”. Đây là lý do ràng buộc vật chất nên được xem xét trước định kiến.
+Một căn `원룸` nhỏ tạo hành vi khác căn hộ lớn dù cư dân có cùng “giá trị văn hoá”. Đây là lý do ràng buộc vật chất nên được xem xét trước định kiến.
 
 ## Mô hình tư duy
 
