@@ -1,154 +1,528 @@
-# Biohealth, dược phẩm, thiết bị y tế và K-Beauty (Biohealth Industry / 바이오헬스·제약·의료기기·K뷰티)
+# Biohealth, dược phẩm, thiết bị y tế và K-Beauty Hàn Quốc (Biohealth / 바이오헬스·제약·의료기기·K뷰티)
 
-Biohealth là một trong những ngành cho thấy Korea đang cố chuyển từ manufacturing-centric growth sang **science + regulation + IP + high-value production**. Nhưng “bio” là label rất rộng: innovative drug discovery, biosimilar, CDMO, diagnostic device, medical imaging và cosmetics có economics khác nhau hoàn toàn.
+Biohealth là một trong những lĩnh vực cho thấy Korea đang chuyển từ manufacturing-centric growth sang **science + regulation + IP + high-value production**. Nhưng “bio” là label rất rộng. Innovative drug discovery, biosimilar, CDMO, diagnostics, medical devices và cosmetics có business model, capital requirement và failure mode khác nhau hoàn toàn.
 
-## Drug discovery: xác suất thấp, upside cao
+Nếu dùng một valuation multiple hoặc một logic “aging → bio tốt” cho tất cả companies, analysis gần như chắc chắn sai.
 
-Developing a new drug là pipeline nhiều stage: discovery → preclinical → clinical trials → regulatory approval → commercialization. Probability failure ở mỗi stage làm expected value rất khác manufacturing bình thường.
+## Ba cổng của biohealth economics
 
-Nếu probability success của từng stage lần lượt là `p1, p2, ...`, overall probability xấp xỉ:
+Một health technology phải đi qua ba cổng:
+
+```text
+Technical success
+      ↓
+Regulatory permission
+      ↓
+Commercial adoption / Reimbursement
+```
+
+Failure ở bất kỳ gate nào có thể làm expected value giảm mạnh.
+
+Đây là điểm khác lớn với ordinary manufacturing. A factory can often sell once product works; drug/device may still need years of approval and payer acceptance.
+
+# Phần I — Innovative pharma / 신약개발
+
+## Drug development là probabilistic pipeline
+
+Simplified pipeline:
+
+```text
+Discovery
+→ Preclinical
+→ Phase 1
+→ Phase 2
+→ Phase 3
+→ Regulatory review
+→ Launch
+→ Post-market monitoring
+```
+
+Each stage has failure probability.
+
+If stage probabilities are `p1...pn`:
 
 \[
-P(success)=\prod_i p_i
+P(success) \approx \prod_i p_i
 \]
 
-Ngay cả khi mỗi stage có probability tương đối cao, multiplication làm final success probability giảm mạnh. Vì vậy pharma valuation thường phụ thuộc pipeline risk-adjusted value chứ không chỉ current revenue.
+This multiplication is why a promising Phase 1 asset is not worth expected peak sales discounted only by time. It needs **probability-adjusted value**.
 
-## Biosimilar: science + process + regulatory execution
+## rNPV: risk-adjusted valuation logic
 
-Biosimilar không phải generic đơn giản. Biological molecule phức tạp hơn small-molecule drug; manufacturing process ảnh hưởng product characteristics. Company cần chứng minh comparability và đáp ứng regulatory standards.
+A simplified drug rNPV:
 
-Korean firms đã xây capability mạnh trong biosimilar và biomanufacturing. Competitive advantage nằm ở cell-line/process know-how, scale, quality system, regulatory track record và global commercial partnerships.
+\[
+rNPV = \sum_t \frac{P_t \times Expected\ CashFlow_t}{(1+r)^t} - Remaining\ R\&D\ Cost
+\]
 
-## CDMO: bán manufacturing capability như service
+`P_t` reflects probability of reaching future stage/commercialization.
 
-Contract Development and Manufacturing Organization (CDMO / 위탁개발생산) sản xuất hoặc hỗ trợ phát triển thuốc cho client. Revenue model gần industrial service hơn drug discovery.
+rNPV is highly assumption-sensitive. It is a framework, not truth.
 
-Key metrics gồm capacity, utilization, order backlog, client concentration, batch success, regulatory inspection và mix giữa development/manufacturing.
+## Clinical endpoint and trial design are economic variables
 
-High fixed cost tạo operating leverage: khi plant utilization tăng, unit cost có thể giảm mạnh. Nhưng overbuild capacity trước demand cũng tạo risk.
+Trial outcome depends not only “drug works” but endpoint, comparator, patient population and statistical design.
 
-## Pharmaceutical reimbursement và price regulation
+A drug can have biological effect but fail commercial/regulatory threshold.
 
-Drug demand không hoàn toàn free-market vì national health insurance, reimbursement rules và physician prescription. Một drug clinically useful vẫn có commercial outcome phụ thuộc reimbursement price và coverage.
+Thus analyst needs understand what success actually means in trial protocol.
 
-Do đó addressable market:
+## Cash runway: pre-revenue biotech can die before science resolves
+
+Small biotech often has little recurring revenue.
+
+Cash runway:
+
+\[
+Runway \approx \frac{Cash}{Quarterly\ Cash\ Burn}
+\]
+
+If runway ends before next major data milestone, dilution/financing risk becomes central.
+
+A great molecule with weak financing can still destroy shareholder value through repeated low-price equity issuance.
+
+## Licensing deals: headline size is usually not guaranteed cash
+
+Biotech licensing often includes:
+
+```text
+Upfront payment
+Development milestones
+Regulatory milestones
+Sales milestones
+Royalties
+```
+
+Headline “$1bn deal” may include mostly contingent milestones.
+
+Always separate:
+
+```text
+Guaranteed cash now
+vs
+Probability-dependent future cash
+```
+
+## Patent protection and patent cliff
+
+Pharma value depends on exclusivity.
+
+Patent landscape can include product, formulation, process and use patents with different expirations.
+
+After exclusivity erosion, generics/biosimilars can compress price/share.
+
+Therefore commercial cash flows need finite exclusivity assumptions.
+
+# Phần II — Biosimilar / 바이오시밀러
+
+## Biosimilar is not “generic biologic” in a simple sense
+
+Biologics are complex molecules produced through living systems/processes. Manufacturing conditions can influence characteristics.
+
+A biosimilar must demonstrate high similarity and regulatory comparability; process/quality capability matters strongly.
+
+Thus barriers include:
+
+- analytical characterization;
+- clinical/regulatory evidence;
+- GMP manufacturing;
+- scale;
+- global commercial partnerships.
+
+## Patent expiry creates opportunity, not automatic share
+
+Originator exclusivity expiry opens market, but share depends on:
+
+- physician confidence;
+- payer incentives;
+- switching rules;
+- price discount;
+- hospital procurement;
+- brand/commercial execution.
+
+Biosimilar economics therefore combine science, regulation and market-access strategy.
+
+## Price erosion and portfolio strategy
+
+Early entrant can gain attractive share, but more competitors usually compress price.
+
+Company needs pipeline of multiple biosimilars/new biologics rather than rely one molecule indefinitely.
+
+This makes product portfolio timing important.
+
+# Phần III — CDMO / 위탁개발생산
+
+## CDMO sells manufacturing capability as service
+
+**Contract Development and Manufacturing Organization** helps clients develop/manufacture biologics/drugs.
+
+CDMO business resembles high-tech industrial service more than biotech lottery.
+
+Core variables:
+
+```text
+Installed capacity
+Utilization
+Customer backlog/contracts
+Batch success/quality
+Client concentration
+Capex/depreciation
+```
+
+## High fixed cost creates operating leverage
+
+Bioreactors/plants require expensive facilities and validation.
+
+At low utilization, depreciation/fixed labor per batch high. At high utilization, unit cost falls.
+
+Same logic as semiconductor fabs, but regulation/quality makes switching slower.
+
+## Qualification and GMP create switching cost
+
+Client moving biologic manufacturing site may need process transfer, validation and regulatory filings.
+
+Therefore successful validated plant can have high switching cost.
+
+Quality history becomes **intangible economic asset**.
+
+A contamination/deviation event can stop production, trigger inspection and damage trust much beyond direct batch loss.
+
+## Capacity expansion risk
+
+High demand can encourage simultaneous industry capex.
+
+If too much capacity comes online before demand, utilization/margin falls.
+
+Therefore announced bioreactor capacity is not future revenue guarantee.
+
+# Phần IV — Medical devices and diagnostics / 의료기기·진단
+
+## Medical device sits between electronics and healthcare regulation
+
+Imaging, ultrasound, surgical devices, diagnostics and digital-health systems combine hardware/software with regulatory evidence.
+
+Commercial success needs:
+
+- approval;
+- hospital procurement;
+- clinical workflow fit;
+- service/training;
+- reimbursement in some products.
+
+Technical superiority alone may not overcome procurement inertia.
+
+## Installed-base economics
+
+A device vendor can place equipment, then earn recurring revenue from:
+
+- consumables;
+- reagents;
+- service contracts;
+- software upgrades.
+
+This resembles printer/razor-and-blades economics.
+
+Installed base can create switching cost because staff are trained and workflows integrated.
+
+## Diagnostics: test volume × reimbursement × consumable margin
+
+Diagnostic system economics often depend not device shipment but tests run over installed base.
+
+Therefore installed equipment can be acquisition channel for recurring reagent revenue.
+
+Need distinguish instrument sale and downstream consumables.
+
+# Phần V — Reimbursement and payer economics / 보험·약가
+
+## Patient need is not equal commercial market
+
+For drug/device:
 
 \[
 Commercial\ Market \neq Patient\ Population \times List\ Price
 \]
 
-Phải điều chỉnh coverage, actual treated population, negotiated price, adherence và competition.
+Need adjust for:
 
-## Medical devices: hardware + software + approval
+- diagnosed patients;
+- eligible population;
+- reimbursement coverage;
+- negotiated price;
+- physician adoption;
+- adherence;
+- competition.
 
-Medical device từ ultrasound, imaging tới diagnostic kit và digital health. Economics nằm giữa electronics và healthcare regulation.
+National health insurance means payer has bargaining power.
 
-Device company cần clinical evidence, regulatory approval, hospital procurement và after-sales service. Switching cost có thể cao nếu workflow và trained staff gắn với installed base.
+## Aging raises need but not unlimited pricing power
 
-Trong diagnostic equipment, consumables/reagents có thể tạo recurring revenue sau initial device placement.
+Aging increases demand for chronic disease, diagnostics and care.
 
-## Cosmetics: beauty industry khác pharmaceuticals
+But payer budget constraint remains. Volume can rise while reimbursement price is pressured.
 
-K-Beauty thường được grouped trong biohealth export statistics nhưng economics gần consumer brand hơn medicine. Barrier to entry thấp hơn pharmaceuticals, product cycle nhanh hơn, marketing/social media và distribution rất quan trọng.
+Thus **demographic tailwind ≠ guaranteed margin expansion**.
 
-Moat có thể đến từ formulation speed, ODM network, brand, influencer/community, retailer channel và global compliance.
+# Phần VI — K-Beauty / K뷰티
 
-Một brand tăng nhanh nhờ viral product nhưng nếu repeat rate thấp, growth dễ đảo chiều. Analyst cần distinguish **sell-in** (ship to distributor) và **sell-through** (consumer mua thật).
+## Cosmetics is consumer-brand economics, not pharma economics
 
-## ODM/OEM ecosystem
+K-Beauty often appears in biohealth export statistics, but business model is closer to consumer goods.
 
-Korea có strong cosmetics ODM/OEM ecosystem. Brand không nhất thiết sở hữu factory. ODM có thể design/formulate sản phẩm cho multiple brands, tạo scale in R&D và production.
+Barriers to entry are lower than innovative pharma. Product cycle faster, brand/social-media/distribution more important.
 
-Điều này làm value chain modular: influencer/startup brand có thể launch nhanh mà không build plant. Nhưng differentiation vì thế chuyển sang brand/community/distribution.
+A cosmetics company can launch quickly, but so can competitors.
 
-## Export diversification
+## ODM/OEM ecosystem reduces factory barrier
 
-KHIDI công bố biohealth exports 2025 đạt 27.87 tỷ USD, record high, gồm pharmaceuticals 10.41 tỷ, medical devices 6.04 tỷ và cosmetics 11.42 tỷ USD. Current number nên được xem như snapshot; structural point quan trọng hơn là export destination đã mở rộng ngoài China sang US, Europe, Japan và emerging markets.
+Korea has strong cosmetics **ODM/OEM** ecosystem.
 
-Market diversification giảm single-country risk nhưng tăng regulatory complexity.
+Brand may outsource formulation/manufacturing, allowing rapid launch without owning plant.
 
-## Clinical/regulatory moat
+This modular value chain lowers capital need but shifts differentiation toward:
 
-Trong healthcare, regulation không chỉ là cost; một khi company đã có approvals, quality system và inspection history, compliance capability trở thành moat vì entrant phải trả fixed cost tương tự.
+- brand;
+- community/influencer;
+- product concept;
+- channel;
+- speed;
+- repeat purchase.
 
-Nhưng regulation cũng tạo binary risk. Warning letter, failed trial hoặc quality issue có thể làm expected cash flow thay đổi đột ngột.
+## Viral growth vs durable brand
 
-## Aging là demand tailwind nhưng không bảo đảm profit
+One viral SKU can drive explosive revenue.
 
-Korea aging tạo structural demand cho drugs, diagnostics và care. Nhưng healthcare spending chịu payer constraint. Volume tăng không đồng nghĩa margin tăng nếu reimbursement bị kiểm soát.
+But durability requires:
 
-Đây là classic distinction giữa **demand need** và **monetizable demand**.
+- repeat purchase;
+- new-product pipeline;
+- multi-channel distribution;
+- geographic diversification;
+- brand equity beyond one product.
 
-## How to analyze a Korean biohealth company
+Therefore follower growth/social buzz should be tied to sell-through data where possible.
 
-Trước tiên xác định company thuộc model nào: discovery biotech, biosimilar, CDMO, device, diagnostics, cosmetics brand hay ODM. Sau đó mới chọn metrics.
+## Sell-in vs sell-through
 
-Discovery biotech: cash runway, pipeline stage, probability-adjusted NPV, licensing deals.
+**Sell-in:** brand ships to distributor/retailer.
 
-CDMO: capacity, utilization, backlog, capex, client concentration.
+**Sell-through:** end consumer purchases.
 
-Biosimilar: approvals, launches, market share, pricing erosion.
+Strong sell-in with weak sell-through can create channel inventory and later returns/discounting.
 
-Device: installed base, consumables, approval, channel.
+Analyst should check receivables, inventory and distributor data, not revenue alone.
 
-Beauty brand: repeat rate, channel mix, geographic mix, marketing efficiency, inventory.
+## Channel economics
 
-Một valuation multiple duy nhất cho tất cả “bio companies” là meaningless.
+Channels include domestic specialty retailers, department stores, D2C, global marketplaces and local distributors.
 
-## Mental Model
+Each has different:
 
-> Biohealth biến scientific knowledge thành cash flow qua ba cổng: **technical success → regulatory permission → commercial adoption**. Failure ở bất kỳ cổng nào đều có thể làm value gần như biến mất.
+- gross margin;
+- marketing cost;
+- inventory ownership;
+- data access;
+- customer acquisition cost.
 
-## Common misconceptions
+D2C may have higher gross margin but high CAC/logistics/returns.
 
-“Thị trường lớn” không nghĩa company sẽ capture value nếu reimbursement hoặc competition không thuận lợi.
+Marketplace gives faster global reach but platform fees and ranking dependency.
 
-Biosimilar không đơn giản là copy thuốc biologic.
+## Inventory and expiry
 
-K-Beauty export tăng không có nghĩa mọi cosmetics brand có moat; ODM ecosystem làm launch dễ nhưng cũng làm competition cao.
+Cosmetics/pharma have shelf-life.
 
-## Connections
+Rapid growth followed by demand slowdown can create inventory write-down/discounting.
 
-Đọc cùng [29_innovation_rnd_education_and_human_capital](./29_innovation_rnd_education_and_human_capital.md), [02_trade_export_and_global_value_chains](./02_trade_export_and_global_value_chains.md) và [27_demographics_households_and_consumption](./27_demographics_households_and_consumption.md).
+High reported revenue near quarter end should be compared with receivables and downstream sell-through if concentration/distributor risk high.
+
+# Export diversification
+
+Biohealth/cosmetics exports have expanded beyond China toward US, Europe, Japan and other markets.
+
+Diversification reduces one-country demand risk but raises regulatory/channel complexity.
+
+Each jurisdiction may require different approval, labeling and commercial strategy.
+
+Global expansion therefore requires regulatory organization, not just translation/marketing.
+
+## 2025 export snapshot
+
+KHIDI reported 2025 Korean biohealth exports around **USD 27.87bn**, including pharmaceuticals, medical devices and cosmetics. This is a dated snapshot released in 2026; use official latest data for current analysis.
+
+Structural takeaway is broader: biohealth/K-beauty are becoming meaningful export engines beyond traditional heavy manufacturing.
+
+# Company archetypes: do not compare unlike models
+
+## Discovery biotech
+
+Metrics:
+
+```text
+Cash runway
+Pipeline stage
+Trial catalysts
+rNPV assumptions
+Licensing/upfront
+Dilution risk
+```
+
+## Biosimilar
+
+```text
+Approvals
+Launch timing
+Market share
+Price erosion
+Manufacturing cost
+Commercial partners
+```
+
+## CDMO
+
+```text
+Capacity
+Utilization
+Backlog/contracts
+Client concentration
+Capex/depreciation
+Quality/inspection track record
+```
+
+## Device/diagnostics
+
+```text
+Installed base
+Consumable/reagent revenue
+Approval/reimbursement
+Hospital channel
+Service margin
+```
+
+## Beauty brand
+
+```text
+SKU concentration
+Repeat rate
+Channel/geography mix
+Marketing efficiency
+Inventory/receivables
+Sell-through
+```
+
+## Cosmetics ODM
+
+```text
+Customer concentration
+Order volume
+R&D/formulation capability
+Plant utilization
+Margin by product mix
+```
+
+One “bio multiple” for all models is meaningless.
+
+# Capital allocation and financing differences
+
+Pre-revenue biotech should generally preserve runway and fund milestones.
+
+Mature CDMO can support more debt because contracted manufacturing cash flows are more visible.
+
+Beauty brand may be asset-light but needs working capital/marketing.
+
+Device company can require service organization and inventory.
+
+Same leverage ratio has different risk across archetypes.
+
+# Clinical/regulatory moat: regulation is both barrier and binary risk
+
+Compliance costs slow entry, but once company builds quality system and approval history, this can create moat.
+
+However same dependence creates binary downside:
+
+- failed trial;
+- inspection issue;
+- warning/recall;
+- approval delay.
+
+Regulatory success should never be assumed just because technology promising.
+
+# Manufacturing quality is economic asset
+
+GMP, validation, batch records and inspection history do not appear fully on balance sheet.
+
+Yet customer willingness to entrust biologic production depends on them.
+
+One quality event can destroy years of trust.
+
+Therefore quality system is **intangible capital**.
+
+# Stress tests
+
+Discovery biotech:
+
+- trial delayed 1 year;
+- probability of success reduced;
+- financing market closes.
+
+CDMO:
+
+- utilization -15pt;
+- top client delayed;
+- new plant ramp slow.
+
+Biosimilar:
+
+- launch delayed;
+- price erosion faster;
+- competitor enters earlier.
+
+Beauty:
+
+- viral SKU growth stops;
+- CAC doubles;
+- distributor inventory rises;
+- China/US channel regulation changes.
+
+# Mental Model
+
+> Biohealth transforms **science into cash flow through technical success, regulation, manufacturing quality and commercial access**. K-Beauty shares export/global-brand logic but follows consumer-brand economics rather than pharmaceutical probability economics.
+
+A compact chain:
+
+```text
+Knowledge / Formula / IP
+          ↓
+Development / Manufacturing
+          ↓
+Regulatory / Quality gate
+          ↓
+Channel / Reimbursement
+          ↓
+Adoption / Repeat use
+          ↓
+Cash flow
+```
+
+# Common misconceptions
+
+**“Large patient population = large revenue.”** Reimbursement/adoption matter.
+
+**“Biosimilar is just generic biologic.”** Process/regulatory complexity is much higher.
+
+**“CDMO is risk-free because it does not develop drugs.”** Capacity, client and quality risk remain.
+
+**“Aging guarantees healthcare profit.”** Payer cost controls can offset volume growth.
+
+**“K-Beauty export growth means every brand has moat.”** ODM lowers entry barrier; repeat/brand/channel matter.
+
+**“Licensing deal headline = guaranteed cash.”** Usually much is contingent milestone value.
+
+# Connections
+
+Đọc cùng [`02_trade_export_and_global_value_chains.md`](./02_trade_export_and_global_value_chains.md), [`07_startups_venture_and_scaleups.md`](./07_startups_venture_and_scaleups.md), [`27_demographics_households_and_consumption.md`](./27_demographics_households_and_consumption.md), [`29_innovation_rnd_education_and_human_capital.md`](./29_innovation_rnd_education_and_human_capital.md) và [`33_logistics_ports_and_distribution_networks.md`](./33_logistics_ports_and_distribution_networks.md).
 
 ### Nguồn nền
 
-- Korea Health Industry Development Institute, 2025 Biohealth Export Results (released March 2026): https://www.khidi.or.kr/board/view?linkId=48940966&menuId=MENU00100
-- KHIDI, 2026 Biohealth Export Outlook: https://www.khidi.or.kr/board/view?linkId=48938589&menuId=MENU00100
-
-## Korean company archetypes: cùng “bio” nhưng balance sheet khác nhau
-
-Samsung Biologics-type CDMO business cần enormous bioreactor capacity, long customer qualification và high utilization. Celltrion-type biosimilar model kết hợp development, manufacturing và commercialization. Discovery biotech nhỏ hơn lại có little current revenue và dependence vào licensing/funding.
-
-Vì vậy debt tolerance khác nhau. Mature CDMO có contracted cash-flow visibility tốt hơn pre-revenue biotech, nên same leverage ratio không có same risk.
-
-## Licensing deal: upfront, milestone và royalty
-
-Biotech có thể license molecule cho global pharma. Deal thường gồm upfront payment, development/regulatory milestones, sales milestones và royalty.
-
-Headline “deal size” thường là maximum contingent value, không phải cash received. Analyst phải tách guaranteed upfront khỏi conditional milestones.
-
-Nếu headline 1 tỷ USD nhưng upfront chỉ 50 triệu, economic certainty rất khác.
-
-## Patent cliff và biosimilar opportunity
-
-Originator biologic mất exclusivity tạo opportunity cho biosimilar entry. Nhưng market share không tự động chuyển vì physician behavior, payer contracts, switching rules và price strategy matter.
-
-Patent landscape cũng phức tạp: product patent, formulation, manufacturing/process patents có expiry khác nhau.
-
-## Beauty channels: Olive Young, D2C và global marketplaces
-
-Domestic beauty discovery increasingly influenced by specialty retailers, social media và online channels. Global expansion có thể qua Amazon/TikTok Shop/local distributors rather than department-store route truyền thống.
-
-Channel mix quyết định gross-to-net revenue, inventory risk và marketing spend. D2C margin cao hơn theoretically nhưng customer acquisition cost cũng cao.
-
-## Inventory và expiry
-
-Cosmetics/pharma inventory có shelf-life. Growth slowing có thể tạo write-down hoặc distributor returns. High sell-in near quarter-end cần compare receivables/inventory và downstream sell-through.
-
-## Manufacturing quality as economic asset
-
-GMP compliance, batch records, validation và inspection track record làm production slower/more expensive nhưng tạo trust. One contamination event có thể stop plant and damage client relationships.
-
-Quality system vì vậy là intangible asset không hiện đầy đủ trên balance sheet.
+- Korea Health Industry Development Institute (KHIDI), 2025 Biohealth Export Results released in 2026: https://www.khidi.or.kr/board/view?linkId=48940966&menuId=MENU00100
+- KHIDI industry/export outlook materials.
+- Korean/global regulatory authority disclosures and company filings for product-specific analysis.
