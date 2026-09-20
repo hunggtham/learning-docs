@@ -1,4 +1,4 @@
-# Sources & Provenance
+# Sources & Provenance — KIIP inside Korean Culture
 
 ## Uploaded KIIP study summaries
 
@@ -33,3 +33,9 @@ Tài liệu ôn thi phải luôn ưu tiên:
 2. nguồn chính thức;
 3. note này;
 4. tài liệu thương mại/community chỉ để tham khảo thêm.
+
+## Scope tag policy
+
+- Nội dung lấy từ 8 PDF cơ bản được gắn `공통` vì đó là xương sống của 영주용 và cũng là nền tảng cho 귀화용.
+- Nội dung không có trong 8 PDF nhưng được thêm từ phạm vi 심화/nguồn chính thức được gắn `귀화용 심화`.
+- Dữ liệu pháp luật/statistic mới hơn không được sửa đè lên source; chúng nằm trong `00_current_facts_and_corrections.md` với nhãn current verification.

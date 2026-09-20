@@ -1,4 +1,6 @@
-# 09. High-Yield Numbers & Institutions
+# 09. High-Yield Numbers & Institutions — phạm vi chung + 심화
+
+> **시험 범위:** `공통`
 
 ## Con số nên thuộc
 
@@ -50,3 +52,16 @@
 `국회 ↔ 정부`  
 `호남 ↔ 영남`  
 `설날 ↔ 추석`
+
+## 귀화용 심화 — phản xạ thêm
+
+> **시험 범위:** `귀화용 심화`
+
+`국민 ↔ 외국인 ↔ 영주자`  
+`체류자격 ↔ 영주권 ↔ 국적`  
+`평등권 · 자유권 · 참정권 · 사회권 · 청구권`  
+`납세 · 국방 · 교육 · 근로의 의무`  
+`국가 ↔ 정부`  
+`광복 → 정부수립 → 한국전쟁 → 민주화`
+
+Nhóm này nên luyện bằng **giải thích**, không chỉ flashcard một từ.

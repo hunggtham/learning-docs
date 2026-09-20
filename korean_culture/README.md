@@ -12,17 +12,22 @@ Xem bảng quy tắc và tên chuẩn tại [`28_naming_translation_conventions.
 
 Bộ sách hiện bao phủ 27 chương nội dung và một index/reference layer, từ lịch sử cổ đại–Joseon–thuộc địa–chiến tranh–compressed modernity đến Nho giáo, kính ngữ, gia đình, giáo dục, công sở, nghĩa vụ quân sự, chaebol–housing, ẩm thực, tôn giáo, nghệ thuật, urban/digital life, internet culture, Hallyu, beauty, sports, healthcare, vùng miền, demographic change và public sphere.
 
-## KIIP 5단계 연계
+## KIIP — 한국사회 이해 시험 대비
 
-Bộ KIIP mới dùng các chapter Culture làm tầng giải thích sâu, còn bản ôn thi giữ cấu trúc ngắn gọn theo 50 bài:
+KIIP được coi là **một lớp ôn thi ứng dụng nằm ngay trong Korean Culture**, không phải một knowledge library tách riêng. Toàn bộ note ở [`kiip/`](kiip/README.md) được tổng hợp theo domain `사회 → 교육 → 문화 → 정치 → 경제 → 법 → 역사 → 지리`, bám 50 bài cơ bản trong bộ tài liệu người học cung cấp.
 
-- [`../kiip/level5/01_영주용_기본/01_사회.md`](../kiip/level5/01_영주용_기본/01_사회.md)
-- [`../kiip/level5/01_영주용_기본/02_교육.md`](../kiip/level5/01_영주용_기본/02_교육.md)
-- [`../kiip/level5/01_영주용_기본/03_문화.md`](../kiip/level5/01_영주용_기본/03_문화.md)
-- [`../kiip/level5/01_영주용_기본/08_지리.md`](../kiip/level5/01_영주용_기본/08_지리.md)
-- bản đồ liên kết toàn bộ: [`../kiip/level5/90_cross_reference/01_korean_culture_map.md`](../kiip/level5/90_cross_reference/01_korean_culture_map.md)
+Không chia thư mục riêng cho `영주용` và `귀화용`. Nội dung dùng chung được gắn `공통`; phần cần học thêm cho nhập quốc tịch được đặt ngay trong đúng domain và gắn `귀화용 심화`. Nhờ vậy, cùng một chủ đề như `사회보험`, `국민`, `기본권`, `정부수립` chỉ có một nơi để học thay vì bị lặp ở hai track.
 
-Đặc biệt, các fact thay đổi theo thời gian như `1인 가구`, pháp luật, tài chính và statistic không được copy mù từ infographic cũ; chúng được tách sang file KIIP `00_current_facts_and_corrections.md` để giữ knowledge book dài hạn sạch và có timestamp.
+Các điểm vào chính:
+
+- [`kiip/00_exam_scope_and_strategy.md`](kiip/00_exam_scope_and_strategy.md) — scope và cách đọc tag.
+- [`kiip/01_사회.md`](kiip/01_사회.md) → [`kiip/08_지리.md`](kiip/08_지리.md) — toàn bộ domain KIIP.
+- [`kiip/09_high_yield_numbers_institutions.md`](kiip/09_high_yield_numbers_institutions.md) — số/cơ quan/cặp dễ nhầm.
+- [`kiip/10_작문_구술.md`](kiip/10_작문_구술.md) — luyện viết và nói.
+- [`kiip/11_mock_01.md`](kiip/11_mock_01.md) — mock có tag `공통` / `귀화용 심화`.
+- [`kiip/12_cross_reference_master_books.md`](kiip/12_cross_reference_master_books.md) — từ note thi nhảy sang chapter sâu trong Culture/History.
+
+Các fact thay đổi theo thời gian như `1인 가구`, pháp luật, tài chính và statistic không được copy mù từ infographic cũ; chúng được tách sang [`kiip/00_current_facts_and_corrections.md`](kiip/00_current_facts_and_corrections.md) để giữ rõ **source nói gì** và **current verification nói gì**.
 
 Nguyên tắc xuyên suốt:
 

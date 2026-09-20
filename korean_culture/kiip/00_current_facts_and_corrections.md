@@ -1,6 +1,6 @@
-# 00. Những dữ liệu trong bản tóm tắt cần cập nhật
+# 00. Source vs Current — dữ liệu cần kiểm tra trước khi học thuộc
 
-Các PDF người học cung cấp rất hữu ích để ôn cấu trúc KIIP, nhưng một số con số/pháp luật phản ánh thời điểm cũ. File này tách rõ **“nội dung trong PDF”** và **“trạng thái được kiểm tra đến 2026-09-20”**.
+Các PDF người học cung cấp rất hữu ích để ôn cấu trúc KIIP, nhưng một số con số/pháp luật phản ánh thời điểm cũ. File này giữ tách biệt **“nội dung trong PDF”** và **“trạng thái được kiểm tra đến 2026-09-20”**. Nội dung mới không được dùng để âm thầm sửa lại nguồn gốc.
 
 > Khi thi, ưu tiên giáo trình/공지 chính thức áp dụng cho kỳ thi của bạn. File này nhằm tránh học nhầm những dữ liệu đã thay đổi rõ ràng.
 

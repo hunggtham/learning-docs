@@ -18,15 +18,13 @@ Bắt đầu từ [`00_index_and_dependency.md`](00_index_and_dependency.md). N�
 
 Các chương cố ý phân biệt giữa **fact tương đối chắc**, **cách diễn giải của sử học**, **ký ức tập thể** và **narrative quốc gia**. Với các vấn đề còn tranh luận, tài liệu tránh biến một cách kể duy nhất thành chân lý tuyệt đối.
 
-## KIIP 5단계 연계
+## KIIP 연계
 
-Nếu mục tiêu là `영주용 종합평가` hoặc `귀화용 종합평가`, không cần biến toàn bộ library lịch sử này thành flashcard. Dùng bản rút gọn theo phạm vi KIIP tại:
+KIIP hiện được đặt như một lớp ôn thi bên trong Korean Culture, tại [`../korean_culture/kiip/`](../korean_culture/kiip/README.md), thay vì là một library độc lập.
 
-- [`../kiip/level5/01_영주용_기본/07_역사.md`](../kiip/level5/01_영주용_기본/07_역사.md)
-- [`../kiip/level5/90_cross_reference/00_korean_history_map.md`](../kiip/level5/90_cross_reference/00_korean_history_map.md)
-- phần `귀화용 심화` về 정부수립·헌정·민주주의: [`../kiip/level5/02_귀화용_심화/05_정부수립_헌정_민주주의.md`](../kiip/level5/02_귀화용_심화/05_정부수립_헌정_민주주의.md)
+Nếu cần ôn phần lịch sử, dùng [`../korean_culture/kiip/07_역사.md`](../korean_culture/kiip/07_역사.md). File đó giữ timeline high-yield cho phần `공통`, đồng thời đánh dấu ngay trong cùng file những đoạn `귀화용 심화` như `광복 → 정부수립 → 한국전쟁 → 민주화`.
 
-KIIP note dùng library này để giải thích sâu khi một timeline hoặc nhân vật khó nhớ; ngược lại, library này không bị rút gọn thành tài liệu luyện thi.
+Bản đồ từ fact KIIP sang các chapter lịch sử chuyên sâu nằm tại [`../korean_culture/kiip/12_cross_reference_master_books.md`](../korean_culture/kiip/12_cross_reference_master_books.md). Nhờ vậy, KIIP note dùng library này để giải thích sâu khi một timeline hoặc nhân vật khó nhớ; ngược lại, library này không bị rút gọn thành tài liệu luyện thi.
 
 ## Nguồn nền
 
