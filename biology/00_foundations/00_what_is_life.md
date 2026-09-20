@@ -1,145 +1,185 @@
-# Sự sống là gì? — What Is Life? (생명이란 무엇인가?)
+# Sự sống là gì? — What Is Life? (생명이란 무엇인가)
 
-Con người thường nhận ra một con mèo, một cái cây hay một vi khuẩn là “sống” mà không cần định nghĩa. Nhưng khi hỏi chính xác **sự sống (life / 생명)** là gì, câu trả lời trở nên khó hơn. Một ngọn lửa có thể lan rộng và tiêu thụ năng lượng. Một tinh thể có thể lớn lên. Virus có vật chất di truyền nhưng không tự sinh sản nếu thiếu tế bào chủ. Vì vậy, Sinh học không dựa vào một dấu hiệu đơn lẻ mà nhìn sự sống như một **hệ thống gồm nhiều đặc tính phối hợp với nhau**.
+Sau khi có cách tư duy về scale, model, feedback và dòng vật chất–năng lượng–thông tin, ta có thể quay lại câu hỏi trung tâm của Sinh học: **điều gì khiến một hệ vật chất trở thành một hệ sống?**
 
-File này xây mental model đầu tiên cho toàn bộ thư viện: sống không phải là “có một chất đặc biệt”, mà là khả năng duy trì một tổ chức vật chất có trao đổi năng lượng, lưu trữ thông tin, phản ứng, sinh sản và tiến hóa.
+Câu hỏi này khó hơn tưởng tượng. Một ngọn lửa lấy nhiên liệu, thải sản phẩm và lan rộng. Một tinh thể có thể tăng kích thước. Một virus mang thông tin di truyền và tiến hóa. Một hạt giống khô gần như không trao đổi chất trong thời gian dài nhưng vẫn có thể nảy mầm. Vì vậy không có một dấu hiệu đơn lẻ nào đủ để phân loại mọi trường hợp.
 
-## Tại sao cần một ranh giới giữa sống và không sống?
+Thay vì tìm một câu định nghĩa ngắn, chương này xây một mental model: **sự sống là một kiểu tổ chức động của vật chất, trong đó một boundary duy trì các quá trình trao đổi chất, lưu trữ và sử dụng thông tin, tự điều chỉnh, sinh sản ở cấp lineage và tham gia vào evolution.**
 
-Nếu Sinh học chỉ học các sinh vật quen thuộc, ta có thể bỏ qua câu hỏi này. Nhưng khoa học cần một khung chung để so sánh vi khuẩn, cây, động vật, nấm, tế bào đơn lẻ, bào quan và virus. Khung đó cũng quan trọng trong astrobiology khi tìm dấu hiệu sống ngoài Trái Đất.
+## 1. Sự sống không phải một chất đặc biệt
 
-Một định nghĩa tốt phải đủ rộng để chứa những dạng sống rất khác nhau, nhưng không rộng đến mức một ngọn lửa hay máy tính cũng tự động được gọi là sinh vật.
+Lịch sử khoa học từng có ý tưởng rằng vật sống chứa một “sinh lực” đặc biệt. Modern biology không cần giả thuyết đó. Cơ thể sống được tạo từ cùng loại nguyên tử có trong vật không sống: carbon, hydrogen, oxygen, nitrogen, phosphorus, sulfur và nhiều ion khác.
 
-## Tổ chức — living systems maintain order
+Điều khác biệt nằm ở **organization**. Carbon trong than và carbon trong DNA vẫn là nguyên tố carbon, nhưng cách các atom được liên kết và cách những molecule đó tham gia vào network reaction hoàn toàn khác.
 
-Mọi hệ sống đều có **organization (tổ chức / 조직화)**. Điều này không có nghĩa chúng bất động hoặc hoàn hảo. Ngược lại, cấu trúc sống được duy trì nhờ một lượng lớn process liên tục.
+Một ví dụ dễ hình dung là máy tính. Silicon, copper và plastic tự chúng không “chạy chương trình”. Chức năng xuất hiện khi chúng được tổ chức thành circuit và các state thay đổi theo rule. Sinh vật khác máy tính rất nhiều, nhưng analogy này giúp thấy rằng **property của hệ không thể suy ra chỉ bằng cách liệt kê vật liệu cấu thành**.
 
-Một tế bào duy trì nồng độ potassium cao bên trong, sodium thấp hơn, pH trong khoảng thích hợp, protein đúng vị trí và membrane còn nguyên vẹn. Nếu các process này dừng đủ lâu, hệ thống mất tổ chức và tế bào chết.
+## 2. Boundary: muốn có “bên trong”, trước hết phải có ranh giới
 
-Đây là điểm quan trọng: **sự sống không phải trạng thái tĩnh mà là trạng thái được duy trì liên tục**.
+Một hệ sống cần duy trì điều kiện bên trong khác với môi trường. Tế bào có nồng độ ion, pH và composition không giống môi trường ngoài. Muốn giữ khác biệt này, cần một **ranh giới (boundary / 경계)**.
 
-Một căn phòng có thể gọn vì ai đó thường xuyên sắp xếp nó. Nếu không có công duy trì, disorder tăng dần. Tế bào tương tự ở mức sâu hơn: nó phải tiêu tốn năng lượng để sửa DNA, tái tạo protein, bơm ion và duy trì membrane.
+Trong tế bào hiện đại, boundary chính là **màng sinh chất (plasma membrane / 세포막)**. Màng không phải bức tường kín. Nếu kín hoàn toàn, tế bào sẽ không lấy được nutrient và không thải waste. Nếu mở hoàn toàn, bên trong và bên ngoài sẽ nhanh chóng cân bằng, làm mất các gradient cần thiết.
 
-> **Mental model:** sống là “giữ một pattern tồn tại qua thời gian” dù các phân tử cụ thể liên tục được thay thế.
+Vì vậy sự sống cần một boundary có tính **selective permeability (tính thấm chọn lọc / 선택적 투과성)**: cho phép một số chất qua, cản một số chất khác, và dùng protein để điều khiển exchange.
 
-## Boundary — vì sao tế bào cần một ranh giới?
+Ngay từ đây ta thấy một principle lặp lại ở nhiều scale: **sống nghĩa là duy trì một số khác biệt có tổ chức khỏi xu hướng cân bằng tự phát**.
 
-Để duy trì tổ chức, một hệ phải phân biệt **bên trong (inside)** với **bên ngoài (outside)**. Tế bào làm điều đó bằng **màng sinh chất (plasma membrane / 세포막)**.
+Chương [[../01_cell_biology/00_cells_membranes_and_transport]] sẽ quay lại câu hỏi này ở mức chi tiết hơn.
 
-Nếu mọi phân tử tự do hòa lẫn với môi trường, tế bào không thể duy trì nồng độ ion, enzyme và chất dinh dưỡng riêng. Membrane không phải bức tường kín. Nó là một boundary có tính chọn lọc: một số chất đi qua dễ, một số cần protein vận chuyển, một số bị giữ lại.
+## 3. Metabolism: boundary thôi chưa đủ
 
-Ý tưởng “boundary + controlled exchange” sẽ trở thành nền cho [[../01_cell_biology/00_cells_membranes_and_transport]].
+Một túi lipid rỗng có boundary nhưng chưa sống. Hệ sống phải liên tục thực hiện phản ứng hóa học để xây cấu trúc, phân hủy chất, sửa chữa và tạo năng lượng sử dụng được.
 
-## Metabolism — sự sống phải biến đổi vật chất và năng lượng
+Tổng thể những reaction này gọi là **chuyển hóa (metabolism / 대사)**.
 
-**Chuyển hóa (metabolism / 대사)** là toàn bộ các phản ứng hóa học giúp hệ sống lấy nguyên liệu, giải phóng hoặc tích trữ năng lượng, xây cấu trúc mới và loại bỏ sản phẩm không cần thiết.
+Metabolism có hai chiều bổ sung nhau. **Catabolism (dị hóa / 이화작용)** phá molecule phức tạp thành molecule đơn giản hơn và thường giải phóng free energy. **Anabolism (đồng hóa / 동화작용)** dùng energy để xây molecule phức tạp như protein, lipid, nucleic acid.
 
-Một tế bào không thể “sống bằng ATP” nếu không có cách tái tạo ATP. ATP giống một đơn vị trung gian giúp ghép reaction giải phóng năng lượng với process cần năng lượng. Nguồn năng lượng cuối cùng có thể đến từ ánh sáng hoặc từ chemical bonds trong thức ăn.
+Nếu chỉ có catabolism, hệ sẽ tự phá nhỏ mình. Nếu chỉ có anabolism, hệ không có nguồn energy và nguyên liệu. Life cần coupling giữa hai phía.
 
-Metabolism thường được chia thành hai xu hướng lớn. **Catabolism (dị hóa / 이화작용)** phá phân tử lớn thành nhỏ hơn và thường giải phóng năng lượng. **Anabolism (đồng hóa / 동화작용)** xây phân tử phức tạp hơn và thường cần năng lượng.
+Điều này dẫn tới câu hỏi tiếp theo: năng lượng trong biology thực sự được chuyển bằng cách nào? Câu trả lời sẽ cần chemistry và ATP, được xây ở [[01_chemistry_energy_and_water]] và [[02_biomolecules_enzymes_and_energy]].
 
-Nhưng đừng học hai từ này như hai danh sách tách rời. Trong tế bào sống, catabolism và anabolism được nối với nhau. Năng lượng và intermediate từ quá trình phân giải được dùng để xây dựng.
+## 4. Homeostasis: sống không có nghĩa giữ mọi thứ bất biến
 
-## Homeostasis — giữ điều kiện bên trong trong vùng hoạt động
+Một cơ thể sống liên tục thay đổi nhưng vẫn giữ nhiều variable trong vùng phù hợp. Đây là **cân bằng nội môi (homeostasis / 항상성)**.
 
-Một enzyme chỉ hoạt động tốt trong một khoảng pH và nhiệt độ nhất định. Membrane, protein và reaction cũng vậy. Vì môi trường ngoài luôn thay đổi, sinh vật cần **homeostasis (cân bằng nội môi / 항상성)**.
+Homeostasis thường bị hiểu sai thành “giữ nguyên”. Chính xác hơn, nó là **dynamic regulation**. Body temperature không đứng yên ở một con số tuyệt đối; glucose blood không cố định; pH có dao động nhỏ. Hệ thống liên tục đo, phản hồi và điều chỉnh để không đi quá xa khỏi vùng hoạt động.
 
-Homeostasis không có nghĩa giữ mọi thứ ở đúng một con số. Nó có nghĩa duy trì các variable trong **range phù hợp**.
+Hãy nghĩ tới cruise control của ô tô. Xe lên dốc thì controller tăng power; xuống dốc thì giảm. Speed vẫn dao động nhẹ, nhưng feedback giữ nó quanh target.
 
-Ví dụ, nhiệt độ cơ thể người dao động theo thời gian trong ngày. Glucose máu tăng sau bữa ăn và giảm giữa các bữa. Hệ thống khỏe mạnh cho phép biến đổi, nhưng điều chỉnh để không đi quá xa khỏi vùng hoạt động.
+Sinh học dùng logic tương tự ở nhiều nơi: insulin–glucagon điều chỉnh glucose, ventilation điều chỉnh CO₂/pH, kidney điều chỉnh water/ion, plant stomata điều chỉnh gas exchange và water loss.
 
-Cơ chế thường có ba phần: sensor nhận biết thay đổi, control system xử lý tín hiệu và effector tạo phản ứng. Đây là mô hình đơn giản, nhưng rất hữu ích khi học endocrine và physiology.
+Homeostasis sẽ trở thành backbone của [[../04_organismal_biology/01_animal_physiology_and_homeostasis]].
 
-## Information — sự sống cần “hướng dẫn” để tái tạo cấu trúc
+## 5. Information: hệ sống phải biết “xây cái gì” và “khi nào làm”
 
-Một tế bào không chỉ cần vật chất và năng lượng. Nó cần thông tin để biết protein nào phải được tạo, vào lúc nào và ở đâu.
+Metabolism cần enzyme. Enzyme là protein. Protein phải được tổng hợp với sequence cụ thể. Điều đó đòi hỏi một hệ lưu trữ và truyền **thông tin sinh học (biological information / 생물학적 정보)**.
 
-Thông tin di truyền được lưu chủ yếu trong **DNA (deoxyribonucleic acid / 디옥시리보핵산)**. Một đoạn DNA có thể chứa thông tin để tạo RNA, và nhiều RNA sau đó hướng dẫn tổng hợp protein.
+Ở hầu hết organism, storage medium chính là DNA. Nhưng DNA không phải bản thiết kế tĩnh cho toàn bộ organism theo nghĩa đơn giản. DNA chứa sequence có thể được transcribe, regulate, recombine và tương tác với môi trường tế bào.
 
-Nhưng DNA không phải “bản thiết kế” theo nghĩa cứng nhắc. Một tế bào gan và neuron trong cùng một người có gần như cùng genome nhưng hoạt động rất khác nhau vì **gene expression (biểu hiện gene / 유전자 발현)** khác nhau.
+Một gene chỉ có effect khi được **expressed** trong đúng cell, đúng time và đúng amount. Liver cell và neuron trong cùng người có gần như cùng genome nhưng hoạt động rất khác vì gene regulation khác nhau.
 
-Do đó, thông tin sinh học có ít nhất hai tầng: thông tin được lưu trong sequence và thông tin điều hòa quyết định phần nào được sử dụng.
+Vì vậy information trong biology có ba lớp cần phân biệt:
 
-## Reproduction — tạo ra hệ sống mới
+```text
+stored sequence
+      ↓
+regulated expression
+      ↓
+functional state of the cell
+```
 
-**Sinh sản (reproduction / 생식)** là khả năng tạo thế hệ mới. Một cá thể cụ thể không nhất thiết phải sinh sản để được xem là sống. Một con la vô sinh vẫn là sinh vật. Vì vậy reproduction là property của lineage và hệ sống qua nhiều thế hệ, không phải điều kiện bắt buộc cho từng cá thể.
+Ta sẽ xây kỹ dòng này ở [[../02_genetics_molecular_biology/00_dna_genes_and_gene_expression]].
 
-Sinh sản đòi hỏi thông tin di truyền được copy, nhưng copy không bao giờ hoàn hảo tuyệt đối. Sai khác nhỏ có thể xuất hiện.
+## 6. Reproduction: cá thể không cần bất tử, lineage cần tiếp tục
 
-Chính sự kết hợp giữa **inheritance (di truyền / 유전)** và **variation (biến dị / 변이)** tạo nền cho evolution.
+Một organism có thể chết, nhưng life vẫn tiếp tục nếu information và organization được truyền sang thế hệ tiếp theo.
 
-## Evolution — đặc tính làm Sinh học khác hẳn nhiều ngành khác
+**Sinh sản (reproduction / 생식)** vì thế không chỉ là “tạo thêm cá thể”. Nó là quá trình truyền biological information và tái tạo một hệ có khả năng tiếp tục metabolism, regulation và reproduction.
 
-**Tiến hóa (evolution / 진화)** là sự thay đổi đặc điểm di truyền của quần thể qua các thế hệ.
+Có hai chiến lược lớn. **Asexual reproduction (sinh sản vô tính / 무성생식)** tạo offspring gần giống parent về genetic material. **Sexual reproduction (sinh sản hữu tính / 유성생식)** kết hợp genetic material từ hai gamete, làm tăng recombination và variation.
 
-Nếu variation ảnh hưởng khả năng sống sót hoặc sinh sản, một số variant có thể trở nên phổ biến hơn. Đây là **natural selection (chọn lọc tự nhiên / 자연선택)**.
+Điểm quan trọng là reproduction tạo cầu nối từ cell biology sang genetics, rồi từ genetics sang evolution.
 
-Quan trọng: cá thể không “tiến hóa” theo nghĩa population genetics trong một đời. Cá thể có thể phát triển, học hoặc thích nghi sinh lý; evolution nói về thay đổi của quần thể qua thế hệ.
+## 7. Variation và evolution: reproduction luôn đi kèm sai khác
 
-Evolution giải thích vì sao các cấu trúc sống vừa tinh vi vừa không hoàn hảo. Cơ thể không được thiết kế mới từ đầu; mỗi thế hệ thừa hưởng structure từ tổ tiên, và selection chỉ sửa đổi những gì đã có.
+Nếu mọi bản sao hoàn toàn giống nhau mãi mãi, evolutionary change sẽ không xảy ra. Trong thực tế, DNA replication có error rất hiếm nhưng không bằng zero; meiosis tạo recombination; sexual reproduction trộn allele; environment tạo khác biệt phenotype.
 
-## Growth và development không giống nhau
+Những khác biệt có thể di truyền tạo **biến dị di truyền (genetic variation / 유전적 변이)**.
 
-**Growth (tăng trưởng / 성장)** thường nói về tăng kích thước hoặc số lượng tế bào. **Development (phát triển / 발생 또는 발달)** nói về thay đổi có tổ chức về hình dạng, chức năng và trạng thái tế bào.
+Trong một population, nếu một variant ảnh hưởng reproductive success, frequency của nó có thể thay đổi qua generation. Đây là nền của **tiến hóa (evolution / 진화)**.
 
-Một embryo không chỉ “to dần”. Các tế bào phân chia, di chuyển, thay đổi gene expression và chuyên hóa thành tissue khác nhau. Vì vậy development là process tổ chức thông tin không gian và thời gian.
+Ta có thể viết relationship lớn:
 
-## Response to stimuli — sinh vật không thụ động
+```text
+reproduction
+    +
+heritable variation
+    +
+differential reproductive success
+    ↓
+evolution across generations
+```
 
-Sinh vật phải cảm nhận môi trường và phản ứng.
+Evolution không phải một “chương cuối”. Nó giải thích vì sao protein, pathway, anatomy và behavior có cấu trúc hiện tại.
 
-Vi khuẩn có thể di chuyển theo gradient dinh dưỡng. Cây hướng lá về ánh sáng. Đồng tử co khi ánh sáng mạnh. Người rút tay khỏi vật nóng trước cả khi ý thức đầy đủ về cơn đau.
+## 8. Cell theory: vì sao tế bào trở thành đơn vị trung tâm?
 
-Khái niệm chung ở đây là **stimulus → detection → signal → response**. Sau này, cell signaling, nervous system và hormone đều là những biến thể phức tạp của pattern này.
+Modern biology dựa mạnh vào **học thuyết tế bào (cell theory / 세포설)**. Ý tưởng cốt lõi là organism được tạo từ cell, cell là unit cơ bản của life, và cell mới sinh từ cell có trước.
 
-## Tế bào là đơn vị nền tảng của sự sống
+Tại sao cell lại là unit phù hợp?
 
-**Cell theory (học thuyết tế bào / 세포설)** có ba ý cốt lõi thường được dạy:
+Vì cell gom được tất cả yêu cầu vừa xây: có boundary, metabolism, information, regulation và machinery để reproduce. Molecule riêng lẻ thường chỉ đáp ứng một phần. Organism đa bào thì lại gồm nhiều cell phối hợp.
 
-1. Mọi sinh vật được cấu tạo từ một hoặc nhiều tế bào.
-2. Tế bào là đơn vị cấu trúc và chức năng cơ bản của sự sống.
-3. Tế bào mới sinh ra từ tế bào đã tồn tại.
+Cell vì thế là scale nhỏ nhất mà toàn bộ package của sự sống được tích hợp tương đối đầy đủ.
 
-Ý thứ hai cần hiểu kỹ. “Đơn vị cơ bản” không có nghĩa tế bào là vật nhỏ nhất trong sinh vật. Protein, DNA và atom nhỏ hơn nhiều. Nhưng một protein riêng lẻ không tự duy trì metabolism, boundary, information flow và reproduction như một living system. Tế bào là mức tổ chức nhỏ nhất mà toàn bộ nhóm process sống cùng xuất hiện.
+## 9. Prokaryote và eukaryote: hai cách tổ chức cell
 
-## Prokaryote và eukaryote — hai kiểu tổ chức tế bào lớn
+Không phải mọi cell giống nhau.
 
-**Tế bào nhân sơ (prokaryotic cell / 원핵세포)** không có nucleus được bao bởi membrane. Bacteria và Archaea thuộc nhóm này.
+**Prokaryotic cell (tế bào nhân sơ / 원핵세포)**, như bacteria và archaea, không có nucleus bao bởi membrane. DNA thường nằm ở nucleoid region. Dù cấu trúc gọn hơn, chúng vẫn có metabolism rất đa dạng và evolutionary success khổng lồ.
 
-**Tế bào nhân thực (eukaryotic cell / 진핵세포)** có **nucleus (nhân / 핵)** và nhiều membrane-bound organelle. Động vật, thực vật, nấm và protist là eukaryote.
+**Eukaryotic cell (tế bào nhân thực / 진핵세포)** có nucleus và nhiều membrane-bound organelle. Compartmentalization cho phép các reaction khác nhau diễn ra trong microenvironment khác nhau.
 
-“Prokaryote đơn giản, eukaryote phức tạp” chỉ là approximation. Bacteria có signaling, gene regulation, metabolism và community behavior rất tinh vi. Điểm khác nhau chính là architecture của tế bào, không phải mức “thông minh”.
+Sự khác nhau này không phải “đơn giản vs cao cấp”. Bacteria không phải phiên bản chưa hoàn thiện của animal cell. Chúng là lineage đã tiến hóa độc lập hàng tỷ năm.
 
-## Virus có sống không?
+## 10. Emergence: multicellular organism không chỉ là nhiều cell cộng lại
 
-Virus tạo ra một boundary thú vị cho định nghĩa sự sống. Virus có genome, có khả năng evolution, và khi nằm trong tế bào chủ có thể điều khiển machinery để tạo bản sao. Nhưng virus không tự duy trì metabolism và không tự sinh sản độc lập.
+Khi nhiều cell cùng tồn tại, chúng có thể specialization. Một neuron tối ưu cho signal transmission. Muscle cell tối ưu cho contraction. Red blood cell tối ưu cho gas transport.
 
-Vì vậy, nhiều nhà sinh học không xếp virus là organism sống hoàn chỉnh, nhưng virus vẫn là biological entity rất quan trọng. Câu hỏi này cho thấy “life” là một cluster of properties chứ không phải một checkbox duy nhất.
+Nhưng specialization tạo dependency: neuron không tự lấy nutrient từ intestine; muscle không tự trao đổi gas với air. Organism đa bào cần tissue, organ và communication system.
 
-## Emergent properties — cái mới xuất hiện khi các phần kết hợp
+Từ đó xuất hiện **tính nổi trội (emergence / 창발)** ở scale organism: circulation, immunity, behavior và cognition không nằm trọn trong một cell riêng lẻ.
 
-**Tính chất nổi emergent property (창발적 특성)** là property xuất hiện ở level tổ chức cao hơn dù từng thành phần riêng lẻ không có property đó.
+Chính vì vậy library sẽ không dừng ở molecular biology. Ta phải đi từ cell → tissue → organ → organism → population → ecosystem.
 
-Một phospholipid riêng lẻ không phải membrane, nhưng hàng triệu phospholipid trong nước có thể tự tổ chức thành bilayer. Một neuron riêng lẻ không có ý thức, nhưng network neuron tạo behavior và cognition. Một cá thể không có population-level evolution, nhưng quần thể qua nhiều thế hệ thì có.
+## 11. Virus nằm ở đâu trong câu hỏi “sống hay không sống?”
 
-Đây là reason Sinh học không thể chỉ giảm mọi thứ thành chemistry rồi dừng lại. Chemistry là nền, nhưng organization tạo thêm behavior mới.
+Virus là case hữu ích vì nó buộc ta kiểm tra definition.
 
-## Common misconceptions
+Virus có genome, mutation và evolution. Nhưng chúng không tự metabolism và không tự reproduce nếu không sử dụng host cell machinery.
 
-### “Vật sống khác vật không sống vì có DNA”
+Vì vậy tùy definition, virus có thể được đặt ở boundary của life. Quan trọng hơn việc tranh luận “có sống hay không” là nhận ra **các property của life có thể tách rời**. Genome/evolution có thể tồn tại trong entity không tự metabolism.
 
-Không đủ. Virus có DNA hoặc RNA nhưng thường không được xem là organism độc lập. Một ống nghiệm chứa DNA không sống. DNA quan trọng vì nó nằm trong hệ thống có khả năng đọc, sửa, sao chép và sử dụng thông tin.
+Điều này nhắc ta rằng “life” là một cluster of properties chứ không nhất thiết một checkbox duy nhất.
 
-### “Homeostasis nghĩa là mọi thứ luôn cố định”
+## 12. Sự sống và nhiệt động lực học: có mâu thuẫn không?
 
-Sai. Sinh vật khỏe mạnh thường dao động. Cái được duy trì là functional range, không phải một number bất biến.
+Organism duy trì organization rất cao. Điều này đôi khi gây hiểu lầm rằng life “chống entropy”. Không phải.
 
-### “Evolution có mục tiêu”
+Living system là **open system**: nhận energy/matter và thải heat/waste. Nó có thể giảm disorder cục bộ trong cơ thể bằng cách làm tổng entropy của system + environment tăng.
 
-Natural selection không nhìn trước tương lai. Một variant trở nên phổ biến vì trong môi trường cụ thể nó giúp reproduction tốt hơn hoặc ít bất lợi hơn. Không có kế hoạch hướng đến “hoàn hảo”.
+Ví dụ, cell dùng energy từ nutrient để xây protein có structure cụ thể, nhưng đồng thời respiration thải heat và products ra môi trường.
 
-## Mental Model
+Vì vậy life không vi phạm thermodynamics. Ngược lại, thermodynamics đặt constraint lên mọi process sống.
 
-> Một hệ sống có thể được nhìn như một boundary chứa network phản ứng hóa học, dùng năng lượng để duy trì tổ chức, dùng thông tin để tái tạo và điều hòa, tạo variation qua reproduction, rồi variation được sàng lọc qua evolution.
+## 13. Một mental model thống nhất
 
-Từ đây, bước tiếp theo là hỏi: **vật chất của hệ sống được làm từ gì và vì sao nước, carbon, ion và chemical bond lại quyết định cách tế bào hoạt động?** File [[01_chemistry_energy_and_water]] sẽ xây nền đó từ đầu.
+Đến đây ta có thể mô tả life bằng một chuỗi liên kết:
+
+```mermaid
+flowchart TD
+A[Boundary] --> B[Controlled internal environment]
+B --> C[Metabolism]
+C --> D[Energy for maintenance and synthesis]
+D --> E[Information expression]
+E --> F[Growth and reproduction]
+F --> G[Heritable variation]
+G --> H[Evolution]
+H --> A
+```
+
+Sơ đồ là vòng chứ không phải line đơn giản. Evolution qua nhiều generation định hình membrane, metabolism và information system; những hệ đó lại tạo điều kiện cho reproduction và variation tiếp tục.
+
+> **Mental model:** một organism sống không phải vật thể đứng yên mà là một pattern được duy trì liên tục bằng exchange với environment. Vật chất cấu thành có thể thay dần, nhưng organization và information được giữ đủ ổn định để system tiếp tục hoạt động.
+
+## 14. Tại sao chương tiếp theo phải là Hóa học?
+
+Ta vừa dùng nhiều từ như molecule, membrane, ion, pH, energy, reaction và protein. Nếu không hiểu chúng, mọi chương sau sẽ buộc phải ghi nhớ bằng hình ảnh mơ hồ.
+
+Do đó bước tiếp theo không phải “học organelle”, mà phải xuống một tầng và hỏi:
+
+**Atom liên kết bằng cách nào? Vì sao water có property đặc biệt? Vì sao lipid tự tạo membrane? pH là gì? Chemical reaction có thể tự diễn ra khi nào?**
+
+Những câu hỏi này xây nền vật lý–hóa học để giải thích sự sống thay vì chỉ mô tả nó.
+
+Tiếp tục: [[01_chemistry_energy_and_water]].
