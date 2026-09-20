@@ -12,15 +12,13 @@ Một nguyên tắc xuyên suốt là:
 
 ## Đọc số liệu dân số: stock, flow và projection không giống nhau
 
-Trước khi học số, cần tách ba loại dữ liệu.
-
-**Stock** trả lời “hiện có bao nhiêu?”, ví dụ tỷ lệ người 65+ trong một năm. **Flow** trả lời “trong period có bao nhiêu event?”, ví dụ số trẻ sinh trong năm. **Projection / 장래추계** là scenario tương lai dựa trên assumption về sinh, chết và migration; projection không phải prophecy.
+Trước khi học số, cần tách ba loại dữ liệu. **Stock** trả lời “hiện có bao nhiêu?”, ví dụ tỷ lệ người 65+ trong một năm. **Flow** trả lời “trong period có bao nhiêu event?”, ví dụ số trẻ sinh trong năm. **Projection / 장래추계** là scenario tương lai dựa trên assumption về sinh, chết và migration; projection không phải prophecy.
 
 Sai lầm phổ biến là trộn ba loại: dùng projection 2050 như fact hiện tại, hoặc lấy một năm tăng sinh rồi kết luận trend dài hạn đã đảo chiều hoàn toàn.
 
 ## 초고령사회: super-aged society là thay đổi cấu trúc, không chỉ nhiều người già
 
-Theo `2025 고령자 통계` của cơ quan thống kê Hàn Quốc, người từ 65 tuổi trở lên chiếm khoảng **20,3% dân số năm 2025**. Mốc 20% thường được dùng để mô tả **super-aged society / 초고령사회**. citeturn175537search1
+Theo `2025 고령자 통계` của cơ quan thống kê Hàn Quốc, người từ 65 tuổi trở lên chiếm khoảng **20,3% dân số năm 2025**. Mốc 20% thường được dùng để mô tả **super-aged society / 초고령사회**.
 
 Già hoá ảnh hưởng nhiều subsystem cùng lúc:
 
@@ -50,18 +48,9 @@ Vì vậy cùng label `1인가구` chứa nhiều population. Product và policy
 
 ## 저출산: fertility thấp là system output
 
-Dữ liệu sơ bộ cho năm **2025** ghi tổng tỷ suất sinh **합계출산율 (Total Fertility Rate / TFR)** khoảng **0,80**, tăng so với 0,72 năm 2023 và 0,75 năm 2024, nhưng vẫn ở mức rất thấp. Đây là dữ liệu `2025 출생·사망통계(잠정)` công bố tháng 2/2026. citeturn943983search16
+Dữ liệu sơ bộ cho năm **2025** ghi tổng tỷ suất sinh **합계출산율 (Total Fertility Rate / TFR)** khoảng **0,80**, tăng so với 0,72 năm 2023 và 0,75 năm 2024, nhưng vẫn ở mức rất thấp. Đây là dữ liệu `2025 출생·사망통계(잠정)` công bố tháng 2/2026.
 
-Điều quan trọng hơn con số là causal model. Quyết định sinh con nằm bên trong:
-
-- housing affordability;
-- employment stability;
-- career interruption;
-- childcare availability;
-- division of unpaid labour;
-- education expectation;
-- marriage timing;
-- perceived future security.
+Điều quan trọng hơn con số là causal model. Quyết định sinh con nằm bên trong housing affordability, employment stability, career interruption, childcare availability, division of unpaid labour, education expectation, marriage timing và perceived future security.
 
 Ta có thể hình dung, không phải model official:
 
@@ -102,16 +91,7 @@ Khi labour/housing payoff thay đổi, nhiều người tách các node: có car
 
 Projection của Statistics Korea công bố năm 2024 dự báo one-person households tăng từ khoảng **7,39 triệu, 34,1% household năm 2022** lên khoảng **9,62 triệu, 41,3% năm 2052**. Đây là projection, không phải guarantee.
 
-Một-person household kéo theo demand cho:
-
-- portion nhỏ và `혼밥`;
-- studio/원룸;
-- compact appliance;
-- delivery và subscription;
-- pet companionship;
-- home security;
-- solo leisure;
-- emergency/care service cho senior.
+Một-person household kéo theo demand cho portion nhỏ và `혼밥`, studio/원룸, compact appliance, delivery và subscription, pet companionship, home security, solo leisure và emergency/care service cho senior.
 
 Khi base rate tăng, stigma giảm. Ăn một mình không còn tự động signal “không có bạn”. Đây là **base-rate shift** trong social interpretation.
 
@@ -119,7 +99,7 @@ Khi base rate tăng, stigma giảm. Ăn một mình không còn tự động sig
 
 `혼밥` và `혼술` cho thấy culture có thể thay mà không cần formal campaign. Khi nhiều người sống một mình, schedule khác nhau và restaurant design thay đổi, solo consumption trở nên normal.
 
-Business adapts bằng bar seat, single portion và delivery. Sau đó environment lại làm solo behaviour dễ hơn. Đây là two-way loop:
+Business adapts bằng bar seat, single portion và delivery. Sau đó environment lại làm solo behaviour dễ hơn:
 
 ```text
 household change
@@ -146,7 +126,7 @@ Ba effect thường bị trộn. Ví dụ thích short-form có thể vừa là 
 
 ## 이주배경인구: Korea ngày càng có nhiều background di cư
 
-Thống kê đăng ký dân số cho năm 2024 cho biết **이주배경인구 (migration-background population)** chiếm khoảng **5,2% tổng dân số**; trong nhóm này có cả công dân Hàn Quốc có background di cư và người nước ngoài. Vì vậy đây không giống chỉ số “foreign nationals”. citeturn175537search2
+Thống kê đăng ký dân số cho năm 2024 cho biết **이주배경인구 (migration-background population)** chiếm khoảng **5,2% tổng dân số**; trong nhóm này có cả công dân Hàn Quốc có background di cư và người nước ngoài. Vì vậy đây không giống chỉ số “foreign nationals”.
 
 Sự phân biệt thuật ngữ rất quan trọng:
 
@@ -159,16 +139,9 @@ Nếu dùng sai denominator, ta dễ tạo headline misleading.
 
 ## 상주 외국인: resident foreign population và daily integration
 
-Khảo sát 2025 về người nhập cư/foreign residents ghi khoảng **1,692 triệu người nước ngoài thường trú theo định nghĩa khảo sát tại tháng 5/2025**. Đây là survey population cụ thể, không nên trộn với tổng số người nước ngoài đăng ký ở mọi status. citeturn175537search0
+Khảo sát 2025 về người nhập cư/foreign residents ghi khoảng **1,692 triệu người nước ngoài thường trú theo định nghĩa khảo sát tại tháng 5/2025**. Đây là survey population cụ thể, không nên trộn với tổng số người nước ngoài đăng ký ở mọi status.
 
-Migration đến Hàn Quốc qua nhiều channel:
-
-- labour migration;
-- international students;
-- marriage migration;
-- professional employment;
-- permanent residents;
-- ethnic Korean return migration.
+Migration đến Hàn Quốc qua nhiều channel: labour migration, international students, marriage migration, professional employment, permanent residents và ethnic Korean return migration.
 
 Mỗi group có legal status, labour market position và integration path khác nhau. “Người nước ngoài ở Hàn” không phải một homogeneous group.
 
@@ -194,13 +167,11 @@ Second-generation identity làm câu hỏi “Korean là gì?” phức tạp h�
 
 Ethnic Korean communities ngoài bán đảo có lịch sử riêng. `조선족` ở Trung Quốc, `고려인` ở former Soviet space, Korean residents in Japan và overseas Koreans có thể share ancestry nhưng nationality, language fluency và cultural memory khác.
 
-Vì vậy ethnicity ≠ citizenship ≠ cultural competence. Một người có Korean ancestry có thể cần học workplace Korean; một người Việt sống lâu ở Seoul có thể hiểu daily protocol rất sâu nhưng không có Korean ancestry.
+Vì vậy ethnicity ≠ citizenship ≠ cultural competence. Một người có Korean ancestry có thể cần học workplace Korean; một người nước ngoài sống lâu ở Seoul có thể hiểu daily protocol rất sâu nhưng không có Korean ancestry.
 
 ## 여성·남성 역할: household và workplace update không cùng tốc độ
 
 Female education/employment tăng mạnh nhưng unpaid care không tự động phân phối lại cùng tốc độ. Nếu workplace vẫn assume “ideal worker” luôn available, còn household cần childcare/elder care, dual-income couple gặp **time conflict**.
-
-Đây là system mismatch:
 
 ```text
 workplace expectation cao
@@ -219,24 +190,15 @@ Care economy có đặc điểm khó automation hoàn toàn vì nhiều task c�
 
 ## 고령층과 디지털: digital divide chuyển từ access sang capability
 
-Năm 2024, khoảng **76,9% người từ 65 tuổi trở lên sử dụng Internet**, và instant messenger usage trong nhóm này rất cao theo `2025 고령자 통계`. citeturn175537search1
+Năm 2024, khoảng **76,9% người từ 65 tuổi trở lên sử dụng Internet**, và instant messenger usage trong nhóm này rất cao theo `2025 고령자 통계`.
 
-Do đó stereotype “senior = offline” ngày càng kém chính xác. Gap mới nằm ở:
-
-- authentication complexity;
-- phishing detection;
-- banking/government UI;
-- kiosk accessibility;
-- font/contrast/cognitive load;
-- recovering from error.
+Do đó stereotype “senior = offline” ngày càng kém chính xác. Gap mới nằm ở authentication complexity, phishing detection, banking/government UI, kiosk accessibility, font/contrast/cognitive load và recovering from error.
 
 Digital inclusion không chỉ là phát smartphone mà là design system dễ dùng và có fallback.
 
 ## 지방소멸: regional decline như feedback loop
 
 `지방소멸` là term policy về risk suy giảm dân số địa phương. Nó không nghĩa một thành phố literal biến mất ngày mai.
-
-Cơ chế feedback:
 
 ```text
 jobs ít
@@ -271,11 +233,7 @@ Demography vì vậy thay vulnerability profile của climate adaptation.
 
 Khi Korean content được global audience consume, người Hàn cũng nhìn culture qua feedback ngoài nước. Food, hanbok, traditional motif và slang được repackage; international fan đôi khi học term Korean rồi dùng ngược trên platform toàn cầu.
 
-Flow không còn:
-
-`Korea → world`
-
-mà là:
+Flow không còn `Korea → world` mà là:
 
 `local creation → global interpretation → domestic feedback → hybrid form`.
 
@@ -283,9 +241,7 @@ mà là:
 
 Trong database, schema cũ có thể chạy tốt khi data shape cũ. Khi distribution dữ liệu đổi, constraint và query cũ bắt đầu inefficient.
 
-Society tương tự. Pension, school, housing và family-care institution từng thiết kế cho population trẻ hơn và household lớn hơn. Khi data shape chuyển sang elderly + single household + migrant background, institution phải “migrate schema”.
-
-Nếu không migrate, cultural stress xuất hiện ở điểm mismatch.
+Society tương tự. Pension, school, housing và family-care institution từng thiết kế cho population trẻ hơn và household lớn hơn. Khi data shape chuyển sang elderly + single household + migrant background, institution phải “migrate schema”. Nếu không migrate, cultural stress xuất hiện ở điểm mismatch.
 
 ## Mental Model
 
@@ -307,10 +263,10 @@ Nếu không migrate, cultural stress xuất hiện ở điểm mismatch.
 
 ## Dữ liệu và nguồn cần timestamp
 
-- `2025 고령자 통계`: 65+ chiếm 20,3% dân số năm 2025; Internet usage của 65+ năm 2024 là 76,9%. citeturn175537search1
-- `2025 출생·사망통계(잠정)`, công bố 25/02/2026: TFR 2025 sơ bộ khoảng 0,80. citeturn943983search16
-- `2024년 이주배경인구 통계`, công bố 08/12/2025: migration-background population chiếm 5,2% tổng dân số năm 2024. citeturn175537search2
-- `2025년 이민자체류실태및고용조사`, công bố 10/03/2026: resident foreigners trong survey khoảng 1,692 triệu tại tháng 5/2025. citeturn175537search0
+- `2025 고령자 통계`: 65+ chiếm 20,3% dân số năm 2025; Internet usage của 65+ năm 2024 là 76,9%. Nguồn: 국가데이터처/Statistics Korea, `2025 고령자 통계`.
+- `2025 출생·사망통계(잠정)`, công bố 25/02/2026: TFR 2025 sơ bộ khoảng 0,80. Nguồn: 국가데이터처/Statistics Korea.
+- `2024년 이주배경인구 통계`, công bố 08/12/2025: migration-background population chiếm 5,2% tổng dân số năm 2024. Nguồn: 국가데이터처/Statistics Korea.
+- `2025년 이민자체류실태및고용조사`, công bố 10/03/2026: resident foreigners trong survey khoảng 1,692 triệu tại tháng 5/2025. Nguồn: 국가데이터처/Statistics Korea.
 - `Household Projections for Korea 2022–2052`: one-person household 7,39 triệu năm 2022; projection khoảng 9,62 triệu năm 2052.
 
 Khi update chapter này, luôn giữ **năm dữ liệu**, **ngày công bố** và **definition của population** cạnh nhau. Đây là requirement để không biến statistic thành cultural myth.
