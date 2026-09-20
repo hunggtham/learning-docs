@@ -1,165 +1,163 @@
 # Căn hộ, khu dân cư, chuyển nhà và đời sống thường nhật
 
-## Apartment không chỉ là chỗ ở
+## Căn hộ không chỉ là chỗ ở
 
-Trong xã hội Hàn Quốc hiện đại, **apartment / 아파트** là một trong những hạ tầng quan trọng nhất của đời sống đô thị. Nó không chỉ quyết định người ta ngủ ở đâu, mà còn ảnh hưởng school district, commute, parcel delivery, parking, neighbour relations, waste disposal và cách trẻ em sử dụng không gian chung.
+Trong xã hội Hàn Quốc hiện đại, **căn hộ (apartment / 아파트)** là một trong những hạ tầng quan trọng nhất của đời sống đô thị. Nó không chỉ quyết định người ta ngủ ở đâu mà còn ảnh hưởng khu trường học, thời gian đi lại, giao bưu kiện, đỗ xe, quan hệ hàng xóm, xử lý rác và cách trẻ em sử dụng không gian chung.
 
-Một apartment complex lớn có thể hoạt động gần như một **micro-city / 소규모 도시**: có cổng, bảo vệ, playground, bãi đỗ xe, management office, senior center, convenience facility và các rule chung. Vì vậy culture trong apartment là culture của việc hàng trăm household phải chia sẻ cùng infrastructure.
+Một khu căn hộ lớn có thể hoạt động gần như một **thành phố thu nhỏ (micro-city / 소규모 도시)**: có cổng, bảo vệ, sân chơi, bãi đỗ xe, văn phòng quản lý, trung tâm người cao tuổi, tiện ích và các quy tắc chung. Vì vậy văn hoá căn hộ là văn hoá của việc hàng trăm hộ gia đình phải chia sẻ cùng một hạ tầng.
 
-## 이사: chuyển nhà như một “system migration”
+## 이사: chuyển nhà như một lần di chuyển cả hệ thống
 
-**Moving / 이사** nghe giống một việc logistics đơn giản, nhưng thực tế nó kéo theo nhiều subsystem: đồ đạc, hợp đồng nhà, utilities, địa chỉ, trường học, commute và neighbour network.
+**Chuyển nhà (moving / 이사)** nghe giống một việc logistics đơn giản, nhưng thực tế kéo theo nhiều hệ thống con: đồ đạc, hợp đồng nhà, điện–nước–gas, địa chỉ, trường học, quãng đường đi làm và mạng lưới hàng xóm.
 
-Nếu ví household như một software system, `이사` gần với migration hơn là copy file. Không chỉ data — đồ đạc — phải chuyển; dependency cũng phải đổi: electricity, gas, internet, parcel address, school route và administrative record.
+Nếu ví hộ gia đình như một hệ thống phần mềm, `이사` gần với di chuyển hệ thống (system migration) hơn là sao chép file. Không chỉ dữ liệu — đồ đạc — phải chuyển; các phụ thuộc cũng phải đổi: điện, gas, Internet, địa chỉ nhận hàng, tuyến đến trường và hồ sơ hành chính.
 
-Chính vì số dependency lớn, Hàn Quốc có thị trường **moving service / 이삿짐센터** và **full-service moving / 포장이사** rất phát triển. Household trả tiền để externalize một phần coordination cost.
+Chính vì số lượng phụ thuộc lớn, Hàn Quốc có thị trường **dịch vụ chuyển nhà (moving service / 이삿짐센터)** và **chuyển nhà trọn gói (full-service moving / 포장이사)** phát triển. Hộ gia đình trả tiền để chuyển một phần chi phí phối hợp sang nhà cung cấp dịch vụ.
 
-## 포장이사: outsourcing domestic complexity
+## 포장이사: thuê ngoài độ phức tạp của việc nhà
 
-Trong `포장이사`, đội dịch vụ có thể đóng gói, vận chuyển và sắp xếp lại nhiều đồ thay cho household. Đây là một ví dụ của broader modern pattern: việc từng do family network tự làm được chuyển sang market service.
+Trong `포장이사`, đội dịch vụ có thể đóng gói, vận chuyển và sắp xếp lại nhiều đồ thay cho gia đình. Đây là ví dụ của một mẫu hiện đại rộng hơn: công việc từng do mạng lưới gia đình tự làm được chuyển sang dịch vụ thị trường.
 
-Urban life làm pattern này hợp lý. Khi người lớn đều đi làm và bạn bè/họ hàng sống xa, opportunity cost của việc tự chuyển nhà tăng. Dịch vụ chuyên nghiệp hoá giúp giảm downtime.
+Đời sống đô thị làm mô hình này hợp lý. Khi người lớn đều đi làm và bạn bè hoặc họ hàng sống xa, chi phí cơ hội của việc tự chuyển nhà tăng. Dịch vụ chuyên nghiệp giúp giảm thời gian gián đoạn.
 
-Cơ chế này giống `산후조리원`, delivery hoặc cleaning service: market lấp một function trước đây thường nằm trong household.
+Cơ chế này giống `산후조리원`, giao hàng hoặc dịch vụ dọn dẹp: thị trường lấp một chức năng trước đây thường nằm trong hộ gia đình.
 
 ## 손 없는 날: niềm tin truyền thống trong một thị trường hiện đại
 
-**Son eomneun nal / 손 없는 날** là những ngày được dân gian xem là ít bị các lực xấu hoặc `손` quấy nhiễu, nên thường được chọn cho việc chuyển nhà, cưới hỏi hoặc mở đầu việc quan trọng.
+**Son eomneun nal (손 없는 날)** là những ngày được dân gian xem là ít bị các lực xấu hoặc `손` quấy nhiễu, nên thường được chọn cho việc chuyển nhà, cưới hỏi hoặc bắt đầu việc quan trọng.
 
-Đây là ví dụ rõ về việc belief có thể ảnh hưởng real market dù claim siêu nhiên không có cơ sở khoa học được xác nhận. Nếu nhiều người cùng thích chuyển vào một số ngày, demand cho moving service tăng vào những ngày đó và giá hoặc availability có thể thay đổi.
+Đây là ví dụ cho thấy niềm tin có thể ảnh hưởng thị trường thật dù khẳng định siêu nhiên không có cơ sở khoa học được xác nhận. Nếu nhiều người cùng muốn chuyển nhà vào một số ngày, nhu cầu dịch vụ tăng và giá hoặc khả năng đặt lịch có thể thay đổi.
 
-Cultural belief vì vậy có thể tạo economic effect thông qua coordination, ngay cả khi ta không chấp nhận literal explanation của belief.
+Vì vậy niềm tin văn hoá có thể tạo **hiệu ứng kinh tế thông qua phối hợp**, ngay cả khi người phân tích không chấp nhận cách giải thích siêu nhiên theo nghĩa đen.
 
 ## 짜장면 và hình ảnh ngày chuyển nhà
 
-**Jajangmyeon / 짜장면** lâu nay gắn với image chuyển nhà trong popular culture vì đây là món dễ gọi, nhanh và phù hợp khi bếp chưa sẵn sàng. Ý nghĩa không nằm ở rule “chuyển nhà phải ăn 짜장면”, mà ở việc một practical solution lặp lại đủ lâu để trở thành cultural trope.
-
-Đây là cách habit hình thành symbol:
+**Jajangmyeon (짜장면)** lâu nay gắn với hình ảnh chuyển nhà trong văn hoá đại chúng vì đây là món dễ gọi, nhanh và phù hợp khi bếp chưa sẵn sàng. Ý nghĩa không nằm ở quy tắc “chuyển nhà phải ăn 짜장면”, mà ở việc một giải pháp thực dụng lặp đủ lâu để trở thành mô-típ văn hoá.
 
 ```text
-practical convenience
-→ lặp lại trong cùng context
-→ xuất hiện trong media/memory
-→ trở thành cultural association
+sự tiện lợi thực dụng
+→ lặp lại trong cùng bối cảnh
+→ xuất hiện trong truyền thông và ký ức
+→ trở thành liên tưởng văn hoá
 ```
 
-## 관리사무소 và governance rất gần đời sống
+## 관리사무소 và quản trị rất gần đời sống
 
-**Management office / 관리사무소** xử lý nhiều issue của apartment complex: facility, announcement, parking, repair coordination hoặc rule chung. Người ở apartment vì vậy tiếp xúc với một layer governance nằm giữa household và municipality.
+**Văn phòng quản lý (management office / 관리사무소)** xử lý nhiều vấn đề của khu căn hộ: cơ sở vật chất, thông báo, đỗ xe, phối hợp sửa chữa hoặc quy tắc chung. Người ở căn hộ vì vậy tiếp xúc với một lớp quản trị nằm giữa hộ gia đình và chính quyền địa phương.
 
-Đây là một dạng local operating layer. City government không thể trực tiếp xử lý mọi elevator, leak hoặc parking conflict; complex có intermediate institution.
+Có thể xem đây là một lớp vận hành địa phương. Chính quyền thành phố không thể trực tiếp xử lý mọi thang máy, rò nước hoặc xung đột đỗ xe; khu căn hộ có thiết chế trung gian.
 
-Về systems design, intermediate layer giảm load cho higher layer nhưng cũng tạo thêm rule và communication channel.
+Trong thiết kế hệ thống, lớp trung gian làm giảm tải cho lớp trên nhưng đồng thời tạo thêm quy tắc và kênh giao tiếp.
 
 ## 경비실 và vai trò của bảo vệ
 
-**Security office / 경비실** trong nhiều apartment vừa có chức năng kiểm soát an ninh, vừa historically thường bị kỳ vọng làm thêm nhiều việc hỗ trợ cư dân như nhận parcel hoặc xử lý việc nhỏ.
+**Phòng bảo vệ (security office / 경비실)** trong nhiều khu căn hộ vừa có chức năng an ninh, vừa từng thường bị kỳ vọng làm thêm nhiều việc hỗ trợ cư dân như nhận bưu kiện hoặc xử lý việc nhỏ.
 
-Điều này tạo một câu hỏi quan trọng về labour boundary: convenience của cư dân có thể dựa trên invisible labour của worker. Khi service expectation mở rộng nhưng job description và compensation không tăng tương ứng, conflict dễ xuất hiện.
+Điều này tạo câu hỏi về ranh giới lao động: sự tiện lợi của cư dân có thể dựa trên lao động vô hình của người khác. Khi kỳ vọng dịch vụ mở rộng nhưng mô tả công việc và thù lao không tăng tương ứng, xung đột dễ xuất hiện.
 
-Đây là cùng cơ chế sẽ gặp ở delivery, call center và customer service: low friction ở phía consumer thường có cost ở phía labour.
+Đây là cùng cơ chế gặp ở giao hàng, tổng đài và chăm sóc khách hàng: ma sát thấp phía người tiêu dùng thường có chi phí ở phía lao động.
 
 ## 층간소음: khi vật lý trở thành quan hệ xã hội
 
-**Inter-floor noise / 층간소음** là một trong những conflict nổi tiếng của apartment life. Vấn đề bắt đầu từ physics: impact noise và airborne noise truyền qua structure. Nhưng nó nhanh chóng trở thành social problem vì người gây noise và người chịu noise có perception khác nhau.
+**Tiếng ồn giữa các tầng (inter-floor noise / 층간소음)** là một trong những xung đột nổi bật của đời sống căn hộ. Vấn đề bắt đầu từ vật lý: tiếng va đập và tiếng truyền trong không khí đi qua kết cấu. Nhưng nó nhanh chóng trở thành vấn đề xã hội vì người gây tiếng và người chịu tiếng có cảm nhận khác nhau.
 
-Một gia đình có trẻ nhỏ có thể xem tiếng chạy là normal life; household bên dưới có thể trải nghiệm nó như repeated disturbance. Không có shared sensor hoàn hảo để hai bên “cảm” cùng mức noise.
+Một gia đình có trẻ nhỏ có thể xem tiếng chạy là sinh hoạt bình thường; hộ phía dưới có thể trải nghiệm nó như sự quấy nhiễu lặp lại. Không có một cảm biến chung hoàn hảo khiến hai bên “cảm” cùng mức tiếng ồn.
 
-Đây là classic conflict giữa **private action** và **shared externality**. Architecture, insulation standard, time of day, communication style và neighbour relationship đều ảnh hưởng outcome.
+Đây là xung đột điển hình giữa **hành động riêng** và **tác động ngoại biên chung (shared externality)**. Kiến trúc, tiêu chuẩn cách âm, thời điểm trong ngày, cách giao tiếp và quan hệ hàng xóm đều ảnh hưởng kết quả.
 
-## 엘리베이터: etiquette trong không gian tạm thời rất nhỏ
+## 엘리베이터: phép lịch sự trong một không gian nhỏ và tạm thời
 
-Elevator là micro-interaction lặp lại hàng ngày. Việc giữ cửa, tránh chắn lối, ưu tiên người mang đồ hoặc xe đẩy, và cách chào neighbour đều là low-level coordination.
+Thang máy tạo những tương tác vi mô lặp lại hằng ngày. Giữ cửa, tránh chắn lối, ưu tiên người mang đồ hoặc xe đẩy và cách chào hàng xóm đều là những hình thức phối hợp cấp thấp.
 
-Điều thú vị là apartment có physical density rất cao nhưng social relationship có thể mỏng. Người ta gặp cùng neighbour hàng trăm lần mà vẫn chỉ exchange một cái gật đầu.
+Điều thú vị là mật độ vật lý trong căn hộ rất cao nhưng quan hệ xã hội có thể mỏng. Người ta gặp cùng một hàng xóm hàng trăm lần mà vẫn chỉ trao một cái gật đầu.
 
-Đây là urban anonymity trong vertical village.
+Đây là tính ẩn danh đô thị trong một “ngôi làng thẳng đứng”.
 
-## 택배 và apartment như logistics endpoint
+## 택배 và căn hộ như điểm cuối logistics
 
-**Parcel delivery / 택배** trở nên cực kỳ hiệu quả khi nhiều household tập trung trong cùng complex. Một driver có thể giao nhiều package trong khoảng cách rất ngắn. Address standardization, access code, lobby và delivery locker tiếp tục giảm transaction cost.
+**Giao bưu kiện (parcel delivery / 택배)** trở nên rất hiệu quả khi nhiều hộ tập trung trong cùng khu. Một người giao hàng có thể giao nhiều gói trong khoảng cách ngắn. Địa chỉ chuẩn hoá, mã vào cửa, sảnh và tủ nhận hàng tiếp tục giảm chi phí giao dịch.
 
-Khi shopping online tăng, entrance của apartment trở thành logistics interface. Parcel không còn là event đặc biệt; nó là background infrastructure.
+Khi mua sắm trực tuyến tăng, lối vào khu căn hộ trở thành một giao diện logistics. Bưu kiện không còn là sự kiện đặc biệt mà trở thành hạ tầng nền.
 
-Nhưng convenience này tạo secondary issue: package storage, theft risk, cardboard waste và traffic của delivery worker.
+Nhưng tiện lợi này tạo vấn đề thứ cấp: lưu trữ hàng, nguy cơ thất lạc, rác bìa carton và lưu lượng người giao hàng.
 
-## 무인택배함 và automation của trust
+## 무인택배함 và tự động hoá niềm tin
 
-**Unmanned parcel locker / 무인택배함** thay thế một interaction trực tiếp bằng authentication và temporary storage. Đây là trust chuyển từ person-to-person sang system-to-user.
+**Tủ nhận hàng tự động (unmanned parcel locker / 무인택배함)** thay một tương tác trực tiếp bằng xác thực và lưu trữ tạm thời. Niềm tin chuyển từ người-với-người sang hệ thống-với-người dùng.
 
-Trong traditional delivery, cần người nhận có mặt. Với locker, asynchronous exchange trở nên bình thường. Đây là cùng logic của ATM, self-checkout và cloud service: coordination không cần đồng thời về thời gian.
+Trong giao hàng truyền thống, người nhận cần có mặt. Với tủ nhận hàng, trao đổi không đồng bộ về thời gian trở thành bình thường. Đây là cùng logic với ATM, quầy tự thanh toán hoặc dịch vụ đám mây: phối hợp không nhất thiết xảy ra đồng thời.
 
-## 분리수거: recycling như household protocol
+## 분리수거: tái chế như giao thức của hộ gia đình
 
-**Waste sorting / 분리수거** là một practice rất visible trong apartment life. Người dân phải phân loại một số loại waste theo local rule; chi tiết category, ngày và cách xử lý có thể khác theo municipality hoặc complex.
+**Phân loại rác (waste sorting / 분리수거)** là thực hành rất dễ thấy trong đời sống căn hộ. Người dân phải phân một số loại rác theo quy định địa phương; chi tiết loại rác, ngày và cách xử lý có thể khác theo chính quyền địa phương hoặc khu căn hộ.
 
-Điểm văn hoá quan trọng là waste disposal không còn là hành vi hoàn toàn private. Household phải tuân một protocol chung để downstream collection và recycling hoạt động.
+Điểm văn hoá quan trọng là xử lý rác không còn là hành vi hoàn toàn riêng tư. Hộ gia đình phải tuân giao thức chung để thu gom và tái chế phía sau hoạt động được.
 
-Nếu một node phân loại sai, cost được đẩy sang worker hoặc processing stage. Đây là một supply chain đảo ngược: product đi từ manufacturer → household, còn waste đi household → collection → sorting → processing.
+Nếu một nút phân loại sai, chi phí được đẩy sang người lao động hoặc công đoạn xử lý sau. Đây là một chuỗi cung ứng đảo ngược: sản phẩm đi từ nhà sản xuất → hộ gia đình, còn rác đi từ hộ gia đình → thu gom → phân loại → xử lý.
 
-## 종량제 và “người thải trả chi phí”
+## 종량제 và nguyên tắc “người thải trả chi phí”
 
-**Volume-based waste fee / 쓰레기 종량제** gắn disposal cost với lượng rác thông qua hệ thống túi hoặc phương thức được quy định. Cơ chế incentive là đơn giản: khi marginal cost của waste trở nên visible, household có lý do giảm và phân loại tốt hơn.
+**Hệ thống phí rác theo lượng (volume-based waste fee / 쓰레기 종량제)** gắn chi phí xử lý với lượng rác thông qua túi hoặc phương thức được quy định. Cơ chế động lực đơn giản: khi chi phí biên của rác trở nên nhìn thấy được, hộ gia đình có lý do giảm rác và phân loại tốt hơn.
 
-Không nên ghi nhớ chi tiết túi rác như một rule national đồng nhất vì municipality có thể có implementation khác. Mental model quan trọng hơn: environmental policy đi vào daily culture thông qua interface rất nhỏ như bag, bin và collection day.
+Không nên ghi nhớ chi tiết túi rác như một quy tắc quốc gia đồng nhất vì mỗi địa phương có thể triển khai khác. Mô hình quan trọng hơn là: chính sách môi trường đi vào văn hoá hằng ngày qua giao diện rất nhỏ như túi, thùng và ngày thu gom.
 
-## 음식물쓰레기: food waste như vấn đề riêng
+## 음식물쓰레기: rác thực phẩm như một vấn đề riêng
 
-**Food waste / 음식물쓰레기** thường được xử lý khác general waste. Điều này ảnh hưởng cooking habit, refrigerator management và apartment smell control.
+**Rác thực phẩm (food waste / 음식물쓰레기)** thường được xử lý khác rác thông thường. Điều này ảnh hưởng thói quen nấu ăn, quản lý tủ lạnh và kiểm soát mùi trong căn hộ.
 
-Cultural implication là một bữa ăn nhiều side dishes không chỉ có dimension ẩm thực; nó còn có waste-management dimension. Household phải cân giữa hospitality abundance và practical storage/disposal.
+Hệ quả văn hoá là một bữa ăn nhiều món phụ không chỉ có chiều ẩm thực mà còn có chiều quản lý rác. Hộ gia đình phải cân bằng giữa sự phong phú khi tiếp khách với khả năng lưu trữ và xử lý thực tế.
 
-## 주차: scarcity tạo social rule
+## 주차: khan hiếm tạo quy tắc xã hội
 
-Parking space trong dense apartment là finite resource. Khi household ownership của car tăng nhanh hơn parking capacity, space trở thành source conflict.
+Chỗ đỗ xe trong khu căn hộ mật độ cao là tài nguyên hữu hạn. Khi số xe tăng nhanh hơn năng lực bãi đỗ, không gian trở thành nguồn xung đột.
 
-Double parking, visitor parking và illegal occupation là các example của **common-pool resource problem**. Mỗi individual muốn convenient access, nhưng nếu mọi người maximize private convenience, shared flow giảm.
+Đỗ kép, chỗ khách và chiếm chỗ sai quy định là ví dụ của **bài toán tài nguyên dùng chung (common-pool resource problem)**. Mỗi cá nhân muốn thuận tiện tối đa, nhưng nếu ai cũng tối đa hoá lợi ích riêng thì luồng chung suy giảm.
 
-Culture ở đây không phải “người Hàn đỗ xe thế nào”; nó là response của group với scarcity được architecture tạo ra từ nhiều năm trước.
+Văn hoá ở đây không phải “người Hàn đỗ xe thế nào”; nó là phản ứng của nhóm với sự khan hiếm do kiến trúc và lịch sử xây dựng tạo ra.
 
-## 동네 và neighbourhood identity
+## 동네 và bản sắc khu dân cư
 
-**Neighbourhood / 동네** trong Korean everyday speech thường mang cảm giác gần và practical hơn administrative district. `우리 동네` có thể bao gồm quán quen, market, pharmacy, park, subway station và route đi bộ hàng ngày.
+**Khu dân cư (neighbourhood / 동네)** trong lời nói hằng ngày thường mang cảm giác gần gũi và thực dụng hơn đơn vị hành chính. `우리 동네` có thể gồm quán quen, chợ, hiệu thuốc, công viên, ga tàu điện và tuyến đi bộ hằng ngày.
 
-Identity này được xây bằng repeated exposure. Một nơi trở thành “khu của mình” không phải vì boundary trên bản đồ mà vì nó nằm trong activity space thường ngày.
+Bản sắc này được xây bằng sự tiếp xúc lặp lại. Một nơi trở thành “khu của mình” không phải vì ranh giới trên bản đồ mà vì nó nằm trong không gian hoạt động thường nhật.
 
-Urban geography gọi vùng đó là **activity space** — tập địa điểm cá nhân thường xuyên sử dụng.
+Địa lý đô thị gọi vùng đó là **không gian hoạt động (activity space)** — tập các địa điểm cá nhân thường xuyên sử dụng.
 
-## 당근 và local digital marketplace
+## 당근 và chợ số địa phương
 
-Local second-hand platform giúp người cùng khu trao đổi đồ với chi phí logistics thấp. Điểm thú vị là app có thể biến anonymity đô thị thành local trust network bằng location verification và reputation.
+Nền tảng đồ cũ địa phương giúp người cùng khu trao đổi đồ với chi phí logistics thấp. Điểm thú vị là ứng dụng có thể biến tính ẩn danh đô thị thành mạng niềm tin địa phương qua xác minh vị trí và danh tiếng.
 
-Một neighbourhood trước đây được định nghĩa bởi mặt đối mặt; giờ có thêm digital layer. Người chưa từng nói chuyện với neighbour tầng trên có thể lại giao dịch với stranger cách 500 mét qua app.
+Một khu dân cư trước đây được định nghĩa chủ yếu bằng gặp mặt trực tiếp; giờ có thêm lớp số. Một người chưa từng nói chuyện với hàng xóm tầng trên lại có thể giao dịch với người lạ cách 500 mét qua ứng dụng.
 
-Đây là **hybrid locality**: địa phương vật lý + platform identity.
+Đây là **tính địa phương lai (hybrid locality)**: địa phương vật lý + bản sắc nền tảng.
 
-## 반상회 và sự thay đổi của community coordination
+## 반상회 và sự thay đổi của phối hợp cộng đồng
 
-Các hình thức meeting neighbourhood như `반상회` từng có vai trò rõ hơn trong một số giai đoạn và khu vực. Trong apartment hiện đại, notice board, mobile app, management broadcast và group chat có thể thay một phần function truyền tin.
+Các hình thức họp khu dân cư như `반상회` từng có vai trò rõ hơn trong một số giai đoạn và khu vực. Trong căn hộ hiện đại, bảng thông báo, ứng dụng, phát thanh quản lý và chat nhóm có thể thay một phần chức năng truyền tin.
 
-Function “đồng bộ hoá cư dân” không biến mất; communication channel đổi.
+Chức năng “đồng bộ hoá cư dân” không biến mất; kênh giao tiếp thay đổi.
 
-Đây là functional continuity: giấy thông báo → loa/notice board → SMS/app notification.
+Đây là tính liên tục về chức năng: giấy thông báo → loa/bảng tin → SMS/thông báo ứng dụng.
 
-## Knowledge Connection: apartment như operating system
+## Liên hệ kiến thức: khu căn hộ như một hệ điều hành
 
-Apartment complex có hardware — building, pipe, elevator, parking — và software — management rule, resident norm, notification, access control. Household chạy “application” của mình trên shared platform đó.
+Khu căn hộ có phần cứng — toà nhà, đường ống, thang máy, bãi đỗ — và phần mềm — quy tắc quản lý, chuẩn cư dân, thông báo và kiểm soát ra vào. Mỗi hộ chạy “ứng dụng” riêng trên nền tảng dùng chung đó.
 
-Nếu platform design tốt, nhiều conflict được ngăn bằng default: sound insulation tốt, parcel locker đủ, parking allocation rõ, recycling area dễ hiểu. Nếu design kém, cư dân phải dùng social negotiation để bù.
+Nếu thiết kế nền tảng tốt, nhiều xung đột được ngăn bằng mặc định: cách âm tốt, đủ tủ nhận hàng, phân bổ chỗ đỗ rõ và khu phân loại rác dễ hiểu. Nếu thiết kế kém, cư dân phải dùng thương lượng xã hội để bù.
 
-## Mental Model
+## Mô hình tư duy
 
-> Đời sống apartment là bài toán shared infrastructure. Nhiều điều tưởng chỉ là etiquette — tiếng ồn, rác, parking, parcel — thực ra xuất hiện vì hàng trăm household đang dùng chung resource có capacity hữu hạn.
+> Đời sống căn hộ là bài toán **hạ tầng dùng chung**. Nhiều điều tưởng chỉ là phép lịch sự — tiếng ồn, rác, đỗ xe, bưu kiện — thực ra xuất hiện vì hàng trăm hộ đang dùng chung tài nguyên có năng lực hữu hạn.
 
-## Common Misconceptions
+## Những hiểu lầm phổ biến
 
-“Apartment làm người Hàn sống tách biệt” quá đơn giản; nó vừa giảm một số loại neighbour intimacy vừa tạo các shared institution mới.
+“Căn hộ làm người Hàn sống tách biệt” là quá đơn giản; nó vừa giảm một số dạng thân mật hàng xóm vừa tạo các thiết chế dùng chung mới.
 
-“Phân loại rác chỉ là thói quen văn hoá” bỏ qua economic incentive, local regulation và downstream recycling system.
+“Phân loại rác chỉ là thói quen văn hoá” bỏ qua động lực kinh tế, quy định địa phương và hệ thống tái chế phía sau.
 
-“Chuyển nhà vào 손 없는 날 vì người Hàn tin mê tín” là generalization; mức độ tin, thực hành và động cơ practical khác nhau giữa cá nhân.
+“Chuyển nhà vào `손 없는 날` vì người Hàn tin mê tín” là khái quát quá mức; mức độ tin, thực hành và động cơ thực dụng khác nhau giữa cá nhân.
 
-“Delivery tiện vì technology” mới là nửa câu chuyện; urban density và building design cũng là điều kiện quan trọng.
+“Giao hàng tiện vì công nghệ” mới là nửa câu chuyện; mật độ đô thị và thiết kế toà nhà cũng là điều kiện quan trọng.
 
 ## Đọc tiếp
 
