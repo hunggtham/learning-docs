@@ -1,453 +1,811 @@
-# Valuation: DCF, multiples và scenario analysis
+# Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản
 
-> Valuation không phải tìm một “giá đúng” duy nhất. Nó là quá trình chuyển assumptions về cash flow, growth, risk và capital allocation thành range of values, rồi so với expectations embedded trong market price. Precision đến từ hiểu drivers, không từ thêm nhiều decimal places.
+> Định giá (valuation) không phải là tìm ra một “giá đúng” duy nhất. Mục tiêu là chuyển các giả định về dòng tiền, tăng trưởng, rủi ro và phân bổ vốn thành một khoảng giá trị hợp lý, sau đó so khoảng đó với những kỳ vọng đang được phản ánh trong giá thị trường.
 
-## 1. Giá và value khác nhau
+## 1. Giá thị trường và giá trị nội tại
 
-Market price là price giao dịch hiện tại. Intrinsic value là estimate của present value cash flows thuộc capital providers/shareholders dưới assumptions.
+**Giá thị trường (market price)** là mức giá đang được giao dịch. **Giá trị nội tại (intrinsic value)** là giá trị hiện tại ước tính của những lợi ích kinh tế mà người sở hữu tài sản có thể nhận được trong tương lai.
 
-Price có thể deviate vì expectations, liquidity, flows và risk premia. Intrinsic value cũng uncertain vì future cash flows unknown.
+Hai con số này có thể khác nhau vì giá thị trường còn chịu ảnh hưởng của kỳ vọng, thanh khoản, dòng tiền giao dịch, tâm lý và mức bù rủi ro. Ngược lại, giá trị nội tại cũng không phải con số chắc chắn vì dòng tiền tương lai luôn chứa bất định.
 
-Vì vậy valuation nên tạo range/scenarios thay vì một target price exact giả tạo.
+Do đó, một mô hình tốt nên tạo ra **khoảng giá trị (valuation range)** và các **kịch bản (scenario)** thay vì cố tạo một mức giá mục tiêu chính xác giả tạo.
 
-## 2. Valuation là bài toán expectation
+## 2. Định giá là bài toán về kỳ vọng
 
-Investor return không phụ thuộc company “tốt” tuyệt đối mà phụ thuộc outcome relative to what price already assumes.
+Lợi nhuận của nhà đầu tư không chỉ phụ thuộc doanh nghiệp “tốt” hay “xấu”, mà phụ thuộc kết quả thực tế so với những gì giá hiện tại đã kỳ vọng.
 
-Một business tuyệt vời có thể tạo poor return nếu market already prices decades of flawless growth. Ngược lại, business trung bình có thể tạo strong return nếu expectations extremely depressed và fundamentals chỉ cần “less bad”.
+Một doanh nghiệp rất tốt vẫn có thể đem lại lợi nhuận thấp nếu thị trường đã định giá nhiều năm tăng trưởng gần như hoàn hảo. Ngược lại, một doanh nghiệp trung bình có thể đem lại lợi nhuận tốt nếu kỳ vọng đang quá bi quan và kết quả thực tế chỉ cần “ít xấu hơn dự kiến”.
 
-## 3. Expected-return perspective
+Đây là lý do câu hỏi quan trọng không chỉ là “doanh nghiệp tăng trưởng bao nhiêu?”, mà còn là:
 
-Một rough equity framework:
+```text
+Giá hiện tại đang giả định điều gì?
+→ Kết quả thực tế có thể khác kỳ vọng đó ở đâu?
+→ Khoảng cách giữa kỳ vọng và thực tế có đủ lớn để tạo lợi nhuận không?
+```
 
-`Expected return ≈ fundamental per-share growth + shareholder yield + valuation change`
+## 3. Khung lợi nhuận kỳ vọng
 
-Company compound EPS/FCF 12% nhưng investor có thể earn less nếu multiple compresses. Expected return framework giúp nối intrinsic value với holding-period outcome.
+Một cách nhìn đơn giản:
 
-## 4. Present value
+```text
+Lợi nhuận kỳ vọng
+≈ tăng trưởng cơ bản trên mỗi cổ phiếu
++ lợi suất phân phối cho cổ đông
++ thay đổi mức định giá
+```
 
-`PV = CF_t / (1 + r)^t`
+Doanh nghiệp có thể tăng EPS hoặc FCF 12% mỗi năm nhưng cổ đông vẫn nhận lợi nhuận thấp hơn nếu hệ số định giá bị co lại.
 
-Higher discount rate lowers value, especially distant cash flows. Điều này tạo intuition về equity duration: growth company với value nằm xa tương lai nhạy với rate changes hơn mature cash generator.
+Vì vậy cần tách ba nguồn:
 
-## 5. Nominal vs real consistency
+- tăng trưởng lợi nhuận hoặc dòng tiền trên mỗi cổ phiếu;
+- cổ tức và mua lại cổ phiếu ròng;
+- mở rộng hoặc thu hẹp bội số định giá (multiple expansion/compression).
 
-Nominal cash flows phải discount bằng nominal rate; real cash flows bằng real rate. Mixing làm model internally inconsistent.
+## 4. Giá trị hiện tại
 
-Inflation tác động revenue, margin, working capital, capex và discount rate khác nhau. Không nên chỉ add inflation vào top-line growth rồi giữ mọi cost assumption unchanged.
+Công thức nền tảng:
 
-## 6. Enterprise Value và Equity Value
+```text
+PV = CF_t / (1 + r)^t
+```
 
-Enterprise Value đại diện operating asset value cho debt + equity capital providers.
+Trong đó `CF_t` là dòng tiền ở thời điểm `t`, còn `r` là tỷ lệ chiết khấu (discount rate).
 
-`EV ≈ Equity Value + Debt + Preferred + Minority Interest - Cash/non-operating assets`
+Tỷ lệ chiết khấu càng cao thì giá trị hiện tại càng thấp, đặc biệt với dòng tiền nằm xa trong tương lai. Đây là trực giác của **độ dài dòng tiền cổ phiếu (equity duration)**: doanh nghiệp tăng trưởng với phần lớn giá trị nằm ở tương lai xa thường nhạy hơn với thay đổi lãi suất thực và tỷ lệ chiết khấu.
 
-Bridge exact phụ thuộc leases, pensions, associates, excess cash và other claims.
+## 5. Nhất quán giữa danh nghĩa và thực
 
-## 7. Net debt nuance
+Dòng tiền danh nghĩa (nominal cash flow) phải được chiết khấu bằng tỷ lệ danh nghĩa. Dòng tiền thực (real cash flow) phải đi cùng tỷ lệ thực.
 
-Không phải mọi cash đều excess. Operating cash, restricted cash hoặc trapped cash có thể không available.
+Lạm phát không chỉ ảnh hưởng doanh thu. Nó còn tác động:
 
-Pension deficits, leases, environmental obligations hoặc supplier financing đôi khi có debt-like economics. Valuation bridge cần economic substance, không chỉ balance-sheet labels.
+- giá bán;
+- chi phí đầu vào;
+- tiền lương;
+- vốn lưu động;
+- chi tiêu vốn;
+- thuế;
+- tỷ lệ chiết khấu.
 
-## 8. FCFF
+Do đó không nên chỉ cộng lạm phát vào tăng trưởng doanh thu rồi giữ nguyên mọi giả định khác.
 
-`FCFF = EBIT(1-T) + D&A - Capex - ΔNWC`
+## 6. Giá trị doanh nghiệp và giá trị vốn chủ sở hữu
 
-Discount FCFF bằng WACC để ra enterprise value.
+**Giá trị doanh nghiệp (Enterprise Value, EV)** phản ánh giá trị hoạt động kinh doanh dành cho các bên cung cấp vốn. **Giá trị vốn chủ sở hữu (Equity Value)** là phần thuộc cổ đông thường sau khi điều chỉnh các nghĩa vụ ưu tiên hơn.
 
-Forecast phải nối revenue/margins/reinvestment với business drivers, không phải chỉ CAGR arbitrary.
+Một cầu nối đơn giản:
 
-## 9. FCFE
+```text
+EV
+≈ Equity Value
++ Debt
++ Preferred Stock
++ Minority Interest
+- Cash và tài sản ngoài hoạt động
+```
 
-`FCFE ≈ Net Income + D&A - Capex - ΔNWC + Net Borrowing`
+Cầu nối thực tế có thể cần thêm thuê tài chính, thiếu hụt quỹ hưu trí, khoản đầu tư liên kết, tiền mặt bị hạn chế hoặc nghĩa vụ đặc biệt khác.
 
-Discount FCFE bằng cost of equity. FCFE useful khi capital structure relatively stable; leverage changes lớn làm cash flow volatile và FCFF thường cleaner.
+Điểm quan trọng là nhìn **bản chất kinh tế** thay vì chỉ dựa tên tài khoản kế toán.
 
-## 10. Mid-year convention
+## 7. Nợ ròng không đơn giản là nợ trừ tiền mặt
 
-Cash flows thực tế đến xuyên năm chứ không phải toàn bộ cuối năm. *Mid-year convention* discount cash flows trung bình khoảng giữa kỳ, làm valuation hơi cao hơn end-year convention khi everything else equal.
+Không phải toàn bộ tiền mặt đều có thể dùng để trả cho cổ đông. Doanh nghiệp có thể cần một lượng tiền tối thiểu cho vận hành, hoặc có tiền bị hạn chế sử dụng.
 
-Điều quan trọng không phải memorize adjustment mà hiểu timing assumption ảnh hưởng PV.
+Một số nghĩa vụ như thuê dài hạn, thâm hụt hưu trí hay tài trợ từ nhà cung cấp có thể mang tính chất giống nợ.
 
-## 11. Forecast revenue từ drivers
+Vì vậy cầu nối EV → Equity Value phải xét:
 
-Thay vì “revenue +10%”, build causal model:
+```text
+Tiền mặt vận hành
+Tiền bị hạn chế
+Nợ vay
+Thuê tài chính
+Nghĩa vụ hưu trí
+Quyền lợi cổ đông thiểu số
+Tài sản đầu tư ngoài hoạt động
+```
 
-`Units/customers × price/ARPU × mix`
+## 8. Dòng tiền tự do cho doanh nghiệp — FCFF
 
-SaaS: beginning ARR + new ARR - churn + expansion. Semis: bit shipment × ASP. Retail: stores × sales/store + same-store sales. Bank: earning assets × spread + fees.
+```text
+FCFF = EBIT(1-T) + D&A - Capex - ΔNWC
+```
 
-Driver model làm bull/bear causal và monitorable.
+FCFF là dòng tiền trước khi phân chia cho chủ nợ và cổ đông. FCFF thường được chiết khấu bằng WACC để ra EV.
 
-## 12. Margin forecast
+Dự báo FCFF phải nối với động lực kinh doanh thực tế, ví dụ:
 
-Gross margin phụ thuộc price, mix, input, utilization và scale. Operating margin thêm R&D/SG&A/overheads.
+```text
+sản lượng × giá bán × cơ cấu sản phẩm
+→ doanh thu
+→ biên lợi nhuận
+→ lợi nhuận hoạt động
+→ tái đầu tư
+→ FCFF
+```
 
-Peak margins hiếm khi persist forever nếu excess returns attract competition. Model fade hoặc explain moat strong enough to resist it.
+Không nên chỉ kéo doanh thu bằng một CAGR tùy ý.
 
-## 13. Reinvestment requirement
+## 9. Dòng tiền tự do cho cổ đông — FCFE
 
-Growth cần capital:
+Một dạng gần đúng:
 
-`Growth ≈ Reinvestment Rate × Return on Incremental Capital`
+```text
+FCFE
+≈ Net Income
++ D&A
+- Capex
+- ΔNWC
++ Net Borrowing
+```
 
-Company tăng 20% nhưng incremental ROIC 5% phải consume capital lớn. Growth chỉ tạo value nếu return trên new capital đủ vượt cost of capital.
+FCFE được chiết khấu bằng **chi phí vốn chủ sở hữu (cost of equity)**.
 
-## 14. ROIC fade
+FCFE phù hợp hơn khi cơ cấu nợ tương đối ổn định. Nếu đòn bẩy thay đổi mạnh, FCFF thường dễ diễn giải hơn.
 
-Mature businesses thường thấy excess ROIC fade vì competition. Terminal assumptions cần decide ROIC eventually converge toward cost of capital, remain above due moat hay collapse below.
+## 10. Quy ước giữa năm
 
-DCF that keeps 30% ROIC forever without economic explanation thường overvalue.
+Dòng tiền thực tế phát sinh xuyên suốt năm chứ không phải toàn bộ vào ngày cuối năm. **Quy ước giữa năm (mid-year convention)** giả định trung bình dòng tiền đến vào giữa kỳ.
 
-## 15. Growth fade
+Điều quan trọng không phải học thuộc một phép điều chỉnh, mà hiểu thời điểm dòng tiền ảnh hưởng trực tiếp đến giá trị hiện tại.
 
-High growth không thể persist indefinitely vì market size, competition và law of large numbers.
+## 11. Dự báo doanh thu từ động lực cơ bản
 
-Forecast nên có transition period từ high growth tới mature growth. Abrupt drop từ 30% năm 5 xuống 3% terminal thường mathematically convenient nhưng economically crude.
+Thay vì viết “doanh thu tăng 10%”, nên xây mô hình từ các động lực thực tế.
 
-## 16. Working capital
+Ví dụ:
 
-Growth có thể absorb cash qua receivables/inventory. Model DSO/DIO/DPO hoặc working-capital-to-sales.
+```text
+Bán lẻ:
+số cửa hàng × doanh thu/cửa hàng × tăng trưởng cửa hàng hiện hữu
 
-Negative working-capital business có thể finance growth via customers/suppliers; slowing growth có thể reverse benefit.
+SaaS:
+ARR đầu kỳ + ARR mới - churn + mở rộng khách hàng hiện hữu
 
-## 17. Capex, depreciation và maintenance
+Bán dẫn:
+bit shipment × ASP
 
-Trong steady state, capex không thể thấp hơn economic depreciation mãi. Growth businesses often capex > D&A; asset-light firms có intangible investment qua R&D/S&M thay vì physical capex.
+Ngân hàng:
+tài sản sinh lãi × chênh lệch lãi suất + phí
+```
 
-Valuation phải capture economic reinvestment kể cả khi accounting expensed.
+Mô hình theo động lực (driver-based model) giúp kịch bản tăng/giảm có nguyên nhân rõ ràng và có thể theo dõi sau đó.
 
-## 18. R&D capitalization intuition
+## 12. Dự báo biên lợi nhuận
 
-Software/pharma/semiconductor có thể expense R&D dù một phần tạo multi-year assets. Analyst có thể capitalize R&D để better match investment and returns, nhưng assumptions về useful life/amortization matter.
+Biên gộp có thể thay đổi theo:
 
-Mục tiêu là hiểu economics, không “improve” earnings artificially.
+- giá bán;
+- cơ cấu sản phẩm;
+- chi phí đầu vào;
+- tỷ lệ sử dụng công suất;
+- hiệu quả quy mô.
 
-## 19. Stock-based compensation
+Biên hoạt động còn phụ thuộc R&D, SG&A và chi phí cố định.
 
-SBC là economic cost qua dilution dù non-cash trong cash flow statement.
+Biên lợi nhuận cực cao thường khó duy trì mãi nếu lợi nhuận hấp dẫn đối thủ. Nếu mô hình giữ biên rất cao dài hạn, cần giải thích lợi thế cạnh tranh nào cho phép điều đó.
 
-Nếu add SBC back to FCF, model phải reflect higher future diluted shares or equivalent repurchase cost. Không thể vừa treat SBC free vừa ignore dilution.
+## 13. Tăng trưởng cần tái đầu tư
 
-## 20. Diluted share count
+Một quan hệ trực giác:
 
-Per-share valuation nên dùng fully diluted share count, including options/warrants/convertibles when economically relevant.
+```text
+Tăng trưởng
+≈ Tỷ lệ tái đầu tư
+× Lợi nhuận trên vốn đầu tư tăng thêm
+```
 
-Treasury-stock method hoặc if-converted method có accounting detail; intuition đơn giản là potential claims trên equity phải được recognized.
+Nếu doanh nghiệp tăng trưởng 20% nhưng lợi nhuận trên vốn tăng thêm chỉ 5%, lượng vốn cần tái đầu tư sẽ rất lớn.
 
-## 21. Taxes và NOLs
+Tăng trưởng chỉ tạo giá trị khi lợi nhuận trên phần vốn mới đủ cao so với chi phí vốn.
 
-Effective tax rate có thể khác statutory vì geographic mix, tax credits, NOLs và one-offs.
+## 14. ROIC giảm dần
 
-Net Operating Losses có thể shield future taxes nhưng finite and conditional. Forecast tax normalization khi benefits expire.
+Do cạnh tranh, nhiều doanh nghiệp trưởng thành sẽ thấy ROIC vượt trội giảm dần theo thời gian.
 
-## 22. Explicit forecast period
+Mô hình cần đặt câu hỏi:
 
-Forecast period nên đủ dài để business transition toward stable economics. Mature utility có thể 5–7 năm; high-growth platform có thể cần longer.
+```text
+ROIC sẽ hội tụ về chi phí vốn?
+Hay vẫn cao hơn nhờ lợi thế cạnh tranh?
+Hay giảm xuống dưới chi phí vốn?
+```
 
-Longer horizon chỉ meaningful nếu assumptions có causal foundation.
+Một DCF giữ ROIC 30% mãi mãi mà không có lý do kinh tế là dấu hiệu định giá quá lạc quan.
 
-## 23. Terminal value
+## 15. Tăng trưởng giảm dần
 
-Gordon growth:
+Tăng trưởng cao không thể kéo dài vô hạn vì:
 
-`TV = FCF_(n+1) / (WACC - g)`
+- quy mô thị trường;
+- cạnh tranh;
+- giới hạn công suất;
+- quy luật số lớn.
 
-Terminal value thường chiếm phần lớn DCF. Vì denominator small, WACC/g errors matter massively.
+Mô hình nên có một giai đoạn chuyển tiếp từ tăng trưởng cao về tăng trưởng trưởng thành. Không nên để tăng trưởng 30% tới năm thứ 5 rồi đột ngột rơi xuống 3% mà không giải thích cơ chế.
 
-Terminal assumptions phải internally consistent với growth, reinvestment và ROIC.
+## 16. Vốn lưu động
 
-## 24. Terminal growth consistency
+Tăng trưởng có thể hút tiền mặt qua phải thu và hàng tồn kho.
 
-Long-run `g` không nên exceed sustainable nominal economy growth indefinitely trừ special assumptions.
+Có thể mô hình bằng:
 
-Nếu business terminal growth 3% và terminal ROIC 15%, reinvestment rate implied khoảng 20%. Model phải actually fund growth đó.
+- DSO;
+- DIO;
+- DPO;
+- hoặc vốn lưu động/doanh thu.
 
-## 25. Exit multiple terminal value
+Doanh nghiệp có vốn lưu động âm có thể được khách hàng hoặc nhà cung cấp tài trợ một phần. Nhưng khi tăng trưởng chậm lại, lợi ích này có thể đảo chiều.
 
-Alternative là apply terminal EV/EBITDA/P-E. Nó không eliminate uncertainty; chỉ convert uncertainty thành future multiple assumption.
+## 17. Capex, khấu hao và chi phí duy trì
 
-Cross-check Gordon và exit multiple để detect inconsistent terminal economics.
+Trong trạng thái dài hạn ổn định, chi tiêu vốn không thể thấp hơn hao mòn kinh tế mãi mãi.
+
+Doanh nghiệp ít tài sản hữu hình vẫn có thể tái đầu tư rất lớn qua R&D, marketing hay phần mềm. Vì vậy phải nhìn **tái đầu tư kinh tế (economic reinvestment)** chứ không chỉ capex kế toán.
+
+## 18. Vốn hóa R&D
+
+Ở phần mềm, dược phẩm hoặc bán dẫn, một phần R&D tạo lợi ích nhiều năm nhưng vẫn được ghi chi phí ngay.
+
+Nhà phân tích đôi khi vốn hóa R&D để so đầu tư và lợi nhuận phù hợp hơn. Tuy nhiên cần giả định tuổi thọ tài sản và khấu hao hợp lý.
+
+Mục tiêu là phản ánh bản chất kinh tế, không phải làm lợi nhuận đẹp hơn.
+
+## 19. Thù lao bằng cổ phiếu — SBC
+
+Thù lao bằng cổ phiếu (stock-based compensation, SBC) là chi phí kinh tế vì gây pha loãng quyền sở hữu.
+
+Nếu cộng SBC trở lại FCF, mô hình phải phản ánh:
+
+- số cổ phiếu pha loãng cao hơn;
+- hoặc chi phí mua lại cổ phiếu để bù pha loãng.
+
+Không thể vừa coi SBC là miễn phí vừa bỏ qua pha loãng.
+
+## 20. Số cổ phiếu pha loãng
+
+Định giá trên mỗi cổ phiếu nên dùng số cổ phiếu pha loãng đầy đủ (fully diluted share count) khi quyền chọn, chứng quyền hoặc trái phiếu chuyển đổi có ý nghĩa kinh tế.
+
+Doanh nghiệp có thể tăng EV nhưng giá trị trên mỗi cổ phiếu không tăng nếu liên tục phát hành thêm cổ phần.
+
+## 21. Thuế và lỗ thuế chuyển tiếp
+
+Thuế suất hiệu dụng có thể khác thuế suất pháp định do:
+
+- cơ cấu địa lý;
+- ưu đãi thuế;
+- tín dụng thuế;
+- lỗ thuế chuyển tiếp (NOL);
+- khoản bất thường.
+
+NOL có thể giảm thuế tương lai nhưng không kéo dài vô hạn. Mô hình phải đưa thuế về mức bình thường khi ưu đãi hết hiệu lực.
+
+## 22. Khoảng dự báo chi tiết
+
+Khoảng dự báo phải đủ dài để doanh nghiệp tiến gần trạng thái kinh tế ổn định.
+
+Doanh nghiệp tiện ích trưởng thành có thể chỉ cần vài năm. Một nền tảng đang tăng trưởng nhanh có thể cần giai đoạn dài hơn.
+
+Kéo dài mô hình không làm nó chính xác hơn nếu các giả định không còn nền tảng kinh tế.
+
+## 23. Giá trị cuối kỳ
+
+Mô hình tăng trưởng Gordon:
+
+```text
+TV = FCF_(n+1) / (WACC - g)
+```
+
+Giá trị cuối kỳ (terminal value) thường chiếm tỷ trọng lớn trong DCF, nên sai lệch nhỏ ở WACC hoặc `g` có thể tạo thay đổi lớn.
+
+Các giả định cuối kỳ phải nhất quán giữa:
+
+```text
+Tăng trưởng
+ROIC
+Tỷ lệ tái đầu tư
+Biên lợi nhuận
+Chi phí vốn
+```
+
+## 24. Kiểm tra tăng trưởng cuối kỳ
+
+Tăng trưởng cuối kỳ không nên cao hơn tăng trưởng danh nghĩa bền vững của nền kinh tế vô hạn trừ khi có lý do đặc biệt.
+
+Nếu tăng trưởng cuối kỳ là 3% và ROIC cuối kỳ là 15%, mô hình phải tái đầu tư đủ vốn để tài trợ mức tăng trưởng đó.
+
+## 25. Giá trị cuối kỳ bằng bội số thoát
+
+Một cách khác là dùng bội số cuối kỳ như EV/EBITDA hoặc P/E.
+
+Cách này không loại bỏ bất định; nó chỉ chuyển bất định sang câu hỏi “doanh nghiệp sẽ được định giá bao nhiêu lần lợi nhuận ở tương lai?”.
+
+Nên đối chiếu phương pháp Gordon với bội số thoát (exit multiple) để phát hiện giả định không nhất quán.
 
 ## 26. WACC
 
-`WACC = w_e × Cost of Equity + w_d × After-tax Cost of Debt`
+```text
+WACC
+= w_e × Cost of Equity
++ w_d × After-tax Cost of Debt
+```
 
-Weights nên reflect sustainable market-value capital structure. WACC phải consistent với currency, inflation và leverage assumptions.
+Trọng số nên dựa trên cơ cấu vốn bền vững theo giá trị thị trường.
 
-## 27. Cost of equity
+WACC phải nhất quán với:
 
-CAPM:
+- tiền tệ;
+- lạm phát;
+- đòn bẩy;
+- rủi ro kinh doanh.
 
-`Cost of Equity = Risk-free Rate + Beta × Equity Risk Premium`
+## 27. Chi phí vốn chủ sở hữu
 
-Beta/ERP estimates uncertain. CAPM useful framework nhưng không physical law.
+Theo CAPM:
 
-Nếu thêm country/small-cap premiums, cần avoid double counting risks already embedded in cash flows or beta.
+```text
+Cost of Equity
+= Risk-free Rate
++ Beta × Equity Risk Premium
+```
 
-## 28. Risk-free rate theo currency
+Beta và phần bù rủi ro cổ phiếu đều là ước tính, không phải hằng số vật lý.
 
-Discount rate nên match cash-flow currency. KRW nominal cash flows không thể casually discount bằng USD risk-free mà bỏ FX/inflation consistency.
+Nếu thêm phần bù rủi ro quốc gia hay quy mô nhỏ, cần tránh tính cùng một rủi ro hai lần nếu nó đã được đưa vào dòng tiền hoặc beta.
 
-For multinational, model segment cash flows hoặc use coherent home-currency translation framework.
+## 28. Lãi suất phi rủi ro phải phù hợp tiền tệ
 
-## 29. Country risk
+Dòng tiền KRW danh nghĩa không nên được chiết khấu tùy tiện bằng lãi suất phi rủi ro USD mà bỏ qua khác biệt lạm phát và ngoại hối.
 
-Country risk có thể đến political, legal, capital controls, sovereign spread, FX convertibility và governance.
+Với doanh nghiệp đa quốc gia, có thể:
 
-Có thể reflect through cash-flow scenarios hoặc discount premium, nhưng đừng double count. Scenario modeling thường clearer khi risk is discrete/nonlinear.
+- mô hình từng khu vực;
+- hoặc chuyển đổi dòng tiền bằng một khung tiền tệ nhất quán.
 
-## 30. Cost of debt
+## 29. Rủi ro quốc gia
 
-Dùng current marginal borrowing cost hơn historical coupon. Stressed company có market yield cao hơn book interest.
+Rủi ro quốc gia (country risk) có thể đến từ:
 
-Tax shield có value chỉ khi taxable income and laws allow. Debt cost should reflect maturity/refinancing profile.
+- chính trị;
+- pháp lý;
+- kiểm soát vốn;
+- rủi ro chủ quyền;
+- khả năng chuyển đổi ngoại tệ;
+- quản trị.
 
-## 31. Capital structure và leverage feedback
+Có thể phản ánh bằng kịch bản dòng tiền hoặc phần bù chiết khấu. Không nên đồng thời phạt cùng một rủi ro ở cả hai nơi mà không kiểm soát.
 
-WACC không constant nếu leverage thay. Distressed company có cost of debt/equity explode khi value falls.
+## 30. Chi phí nợ
 
-For highly leveraged business, Adjusted Present Value (*APV*) hoặc scenario analysis đôi khi clearer than single WACC.
+Chi phí nợ nên phản ánh chi phí vay biên hiện tại, không chỉ lãi coupon lịch sử.
 
-## 32. Sensitivity table
+Doanh nghiệp căng thẳng có thể phải tái cấp vốn ở lợi suất thị trường cao hơn nhiều so với lãi suất kế toán đang ghi nhận.
 
-At minimum vary WACC và terminal growth. Better vary revenue CAGR, margins, ROIC/reinvestment.
+Khi phân tích cần xem cả:
 
-Nếu valuation moves từ 50 đến 150 với tiny change, fragility itself là key insight.
+```text
+chi phí vay mới
+lịch đáo hạn
+khả năng tái cấp vốn
+khả năng sử dụng lá chắn thuế
+```
 
-## 33. Tornado analysis
+## 31. Phản hồi giữa đòn bẩy và giá trị
 
-*Tornado chart* rank valuation sensitivity theo assumptions: volume, price, margin, WACC, terminal growth, capex, working capital.
+WACC không nhất thiết cố định nếu đòn bẩy thay đổi lớn.
 
-Điều này giúp biết research time nên tập trung driver nào thay vì refine variables low impact.
+Khi giá trị doanh nghiệp giảm mạnh, chi phí nợ và chi phí vốn chủ sở hữu có thể cùng tăng. Với doanh nghiệp đòn bẩy cao, phương pháp **giá trị hiện tại điều chỉnh (Adjusted Present Value, APV)** hoặc phân tích kịch bản có thể rõ hơn một WACC duy nhất.
 
-## 34. Scenario analysis
+## 32. Phân tích độ nhạy
 
-Base/bull/bear phải có causal stories. Semiconductor bear: ASP down, utilization low, inventory correction, capex sticky. Bull: HBM mix, supply discipline, pricing strong.
+Tối thiểu nên kiểm tra:
 
-Không nên simply +/-20% target value.
+- WACC;
+- tăng trưởng cuối kỳ;
+- tăng trưởng doanh thu;
+- biên lợi nhuận;
+- ROIC;
+- tỷ lệ tái đầu tư.
 
-## 35. Probability-weighted valuation
+Nếu giá trị thay đổi từ 50 lên 150 chỉ vì một thay đổi rất nhỏ trong giả định, chính độ nhạy đó là một thông tin rủi ro quan trọng.
 
-`Expected Value = Σ p_i × Value_i`
+## 33. Biểu đồ độ nhạy kiểu tornado
 
-Probabilities là judgment. Purpose là force explicit distributions.
+Biểu đồ tornado giúp xếp hạng biến nào ảnh hưởng mạnh nhất đến giá trị.
 
-Low-probability tail loss có thể vẫn require position-size control dù expected value positive.
+Ví dụ:
 
-## 36. Monte Carlo valuation
+```text
+Sản lượng
+Giá bán
+Biên lợi nhuận
+WACC
+Tăng trưởng cuối kỳ
+Capex
+Vốn lưu động
+```
 
-Monte Carlo sample multiple uncertain drivers từ distributions/correlations để tạo valuation distribution.
+Nó giúp tập trung thời gian nghiên cứu vào biến có tác động lớn thay vì tối ưu những biến ít quan trọng.
 
-Nó useful để visualize uncertainty nhưng dễ tạo false sophistication nếu distributions guessed poorly. Model quality vẫn phụ thuộc economics.
+## 34. Phân tích kịch bản
+
+Base/Bull/Bear phải khác nhau ở **cơ chế**, không chỉ cộng trừ 20% giá trị.
+
+Ví dụ bán dẫn:
+
+```text
+Base:
+ASP phục hồi vừa phải
++ utilization tăng
++ nguồn cung có kỷ luật
+
+Bull:
+HBM mix tăng mạnh
++ thiếu công suất
++ pricing power cao hơn
+
+Bear:
+cầu yếu
++ tồn kho tăng
++ công suất mới vào sớm
++ ASP giảm
+```
+
+Sau đó mới chuyển các cơ chế này thành doanh thu, biên lợi nhuận, FCF và giá trị.
+
+## 35. Định giá theo xác suất
+
+```text
+Expected Value = Σ p_i × Value_i
+```
+
+Xác suất vẫn là phán đoán. Mục tiêu của phương pháp này là buộc người phân tích nói rõ phân phối kết quả thay vì ngầm giả định một tương lai duy nhất.
+
+Một kịch bản xác suất thấp nhưng thiệt hại rất lớn vẫn có thể quyết định quy mô vị thế.
+
+## 36. Monte Carlo
+
+Monte Carlo lấy mẫu nhiều biến không chắc chắn từ các phân phối giả định để tạo phân phối giá trị.
+
+Nó hữu ích để hình dung độ bất định, nhưng không tự biến một mô hình yếu thành mô hình tốt. Nếu phân phối đầu vào được đoán sai, đầu ra chỉ tạo cảm giác chính xác giả.
 
 ## 37. Reverse DCF
 
-Reverse DCF starts current price rồi solve assumptions required to justify it: growth, margin, ROIC.
+**DCF ngược (reverse DCF)** bắt đầu từ giá hiện tại rồi giải xem thị trường đang cần những giả định nào để mức giá đó hợp lý.
 
-Question chuyển từ “value bao nhiêu?” thành “market đang price điều gì?”. Đây thường là framing rất powerful.
+Câu hỏi chuyển từ:
 
-## 38. Reverse DCF và implied fade
+```text
+“Giá trị là bao nhiêu?”
+```
 
-Không chỉ solve revenue CAGR. Hãy solve combinations: terminal margin, reinvestment, ROIC fade và duration of excess returns.
+sang:
 
-Market price có thể imply moat lasts 15 years rather than 5; đây là expectation more meaningful than simple P/E.
+```text
+“Giá hiện tại đang giả định tăng trưởng, biên lợi nhuận và ROIC như thế nào?”
+```
+
+Đây là một trong những cách tốt nhất để đọc kỳ vọng đã được phản ánh trong giá.
+
+## 38. Reverse DCF và thời gian duy trì lợi thế
+
+Không chỉ giải một CAGR doanh thu. Có thể giải đồng thời:
+
+- biên lợi nhuận cuối kỳ;
+- tốc độ ROIC giảm dần;
+- tỷ lệ tái đầu tư;
+- thời gian duy trì lợi nhuận vượt chi phí vốn.
+
+Một giá thị trường có thể đang giả định lợi thế cạnh tranh tồn tại 15 năm thay vì 5 năm. Đây thường là thông tin có ý nghĩa hơn một P/E đơn lẻ.
 
 ## 39. P/E
 
-P/E useful khi earnings meaningful/stable. Nó mixes operating, financing và tax.
+P/E hữu ích khi lợi nhuận có ý nghĩa và tương đối ổn định.
 
-Low P/E có thể signal cyclical peak/distress; high P/E có thể rational if high ROIC/growth persist.
+P/E kết hợp nhiều yếu tố:
 
-## 40. PEG caution
+- hoạt động;
+- tài trợ;
+- thuế;
+- chu kỳ.
 
-`PEG = P/E / growth` oversimplifies persistence, margins, ROIC, risk và duration.
+P/E thấp có thể phản ánh đỉnh lợi nhuận chu kỳ hoặc rủi ro cao. P/E cao có thể hợp lý nếu ROIC và tăng trưởng cao có thể duy trì lâu.
 
-Use rough heuristic only.
+## 40. PEG
+
+```text
+PEG = P/E / Growth
+```
+
+PEG quá đơn giản vì bỏ qua:
+
+- chất lượng tăng trưởng;
+- ROIC;
+- biên lợi nhuận;
+- rủi ro;
+- thời gian duy trì tăng trưởng.
+
+Chỉ nên dùng như phép tham khảo nhanh.
 
 ## 41. EV/EBITDA
 
-EV/EBITDA compares operating value before D&A/financing/tax. Useful across leverage structures but ignores capex/working capital.
+EV/EBITDA giúp so giá trị hoạt động trước khấu hao, tài trợ và thuế.
 
-Capital-intensive business deserving same EV/EBITDA as asset-light company is not automatic.
+Ưu điểm là ít bị khác biệt cơ cấu nợ làm méo so sánh. Nhược điểm là bỏ qua capex và vốn lưu động.
+
+Do đó một doanh nghiệp thâm dụng vốn không mặc nhiên xứng đáng cùng EV/EBITDA với doanh nghiệp ít tài sản.
 
 ## 42. EV/EBIT
 
-EV/EBIT includes depreciation, often more economic when D&A approximates asset consumption.
+EV/EBIT đã trừ khấu hao nên có thể phản ánh hao mòn tài sản tốt hơn khi D&A gần với mức tiêu hao kinh tế.
 
-Acquisition amortization/accounting differences still matter.
+Tuy nhiên vẫn cần chú ý khấu hao tài sản mua lại và khác biệt kế toán.
 
 ## 43. EV/Sales
 
-Useful when profits negative, but sales only valuable if future margins/retention plausible.
+EV/Sales hữu ích khi lợi nhuận hiện tại âm, nhưng doanh thu chỉ có giá trị nếu doanh nghiệp có khả năng tạo biên lợi nhuận và dòng tiền tốt trong tương lai.
 
-Compare gross margin, unit economics and required reinvestment.
+Cần so cùng:
+
+- biên gộp;
+- giữ chân khách hàng;
+- unit economics;
+- nhu cầu tái đầu tư.
 
 ## 44. P/B
 
-P/B useful khi book equity links earning assets: banks/insurers/asset-heavy.
+P/B đặc biệt hữu ích với ngân hàng, bảo hiểm và doanh nghiệp mà vốn sổ sách liên quan trực tiếp tới tài sản sinh lời.
 
-Core relation: sustainable ROE relative cost of equity. ROE > COE supports P/B >1 all else equal.
+Quan hệ chính:
 
-## 45. FCF yield
+```text
+ROE bền vững > Cost of Equity
+→ P/B hợp lý có thể > 1
+```
 
-`FCF Yield = FCF / Equity Value` or enterprise version consistently.
+Nếu ROE thấp hơn chi phí vốn kéo dài, chiết khấu P/B có thể hợp lý.
 
-Normalize working capital and growth capex. Temporary inventory liquidation can make FCF yield artificially high.
+## 45. FCF Yield
 
-## 46. Shareholder yield
+```text
+FCF Yield = FCF / Equity Value
+```
 
-Dividend + net buyback yield captures distributions better than dividend alone.
+Hoặc dùng phiên bản theo EV nếu giữ nhất quán.
 
-Debt-funded distribution or buyback above intrinsic value can destroy value despite high shareholder yield.
+Cần chuẩn hóa FCF để loại bỏ:
 
-## 47. Comparable-company analysis
+- giải phóng tồn kho tạm thời;
+- vốn lưu động bất thường;
+- cắt capex không bền vững.
 
-Peers cần similar growth, margins, ROIC, risk, geography, accounting và business model.
+## 46. Lợi suất phân phối cho cổ đông
 
-Explain premium/discount, don't just average multiples.
+Có thể nhìn:
 
-## 48. Historical multiple
+```text
+cổ tức
++ mua lại cổ phiếu ròng
+= shareholder yield
+```
 
-Historical range is context, not fair-value law. Rate regime, business maturity, accounting and index composition change.
+Tuy nhiên mua lại bằng nợ hoặc mua cổ phiếu ở mức giá quá cao vẫn có thể phá hủy giá trị.
 
-A company deserves different multiple after moat erosion even if current P/E below 10-year average.
+## 47. So sánh doanh nghiệp tương đồng
 
-## 49. Sum-of-the-parts
+Doanh nghiệp so sánh nên tương đồng về:
 
-SOTP values segments separately then adjusts corporate debt, tax leakage, holding-company costs and minorities.
+- tăng trưởng;
+- biên lợi nhuận;
+- ROIC;
+- rủi ro;
+- địa lý;
+- mô hình kinh doanh;
+- chuẩn kế toán.
 
-Pure-play peer multiples may overstate segments if separation impossible or synergies/corporate costs material.
+Không nên chỉ lấy trung bình bội số. Cần giải thích tại sao doanh nghiệp xứng đáng mức cao hơn hoặc thấp hơn nhóm.
 
-## 50. NAV valuation
+## 48. Bội số lịch sử
 
-Property/holding companies/investment firms can use Net Asset Value.
+Khoảng bội số lịch sử là dữ liệu tham khảo, không phải luật giá trị hợp lý.
 
-Adjust asset values, debt, tax, liquidity discount và realizability. Land book value may not equal realizable value if legal restrictions exist.
+Lãi suất, mức trưởng thành, lợi thế cạnh tranh và cơ cấu ngành có thể thay đổi. Một doanh nghiệp suy yếu về moat có thể xứng đáng bội số thấp hơn quá khứ dù P/E hiện tại đã dưới trung bình 10 năm.
 
-## 51. Replacement cost
+## 49. Định giá từng phần — SOTP
 
-Commodity/capital-intensive industries sometimes anchor value to replacement cost. If industry trades well above replacement cost, new capacity may enter unless barriers strong.
+**Tổng giá trị từng phần (sum-of-the-parts, SOTP)** định giá từng mảng rồi điều chỉnh:
 
-Useful cycle tool, not universal valuation.
+- nợ công ty mẹ;
+- thuế;
+- chi phí tập đoàn;
+- quyền lợi thiểu số;
+- chiết khấu công ty nắm giữ.
 
-## 52. Liquidation value
+Không nên gán bội số của doanh nghiệp thuần túy cho từng mảng nếu mảng đó không thể tách độc lập hoặc phụ thuộc lớn vào tập đoàn.
 
-Distressed business valuation should haircut receivables, inventory, PPE and deduct wind-down costs/claims.
+## 50. NAV
 
-Book equity can be meaningless if assets hard to monetize.
+Giá trị tài sản ròng (Net Asset Value, NAV) thường dùng với bất động sản, holding company hoặc công ty đầu tư.
 
-## 53. Banks: excess return model
+NAV cần điều chỉnh:
 
-For bank, industrial FCFF awkward. Residual-income intuition:
+- giá trị tài sản thực tế;
+- nợ;
+- thuế;
+- thanh khoản;
+- thời gian hiện thực hóa;
+- rủi ro pháp lý.
 
-`Value ≈ Book Value + PV[(ROE - Cost of Equity) × Beginning Book Equity]`
+Giá trị sổ sách của quỹ đất không bằng giá trị có thể thu hồi nếu pháp lý chưa hoàn tất.
 
-Sustainable ROE above COE creates value; growth destroys value if ROE below COE.
+## 51. Chi phí thay thế
 
-## 54. Insurers
+Với ngành hàng hóa hoặc thâm dụng vốn, chi phí xây mới công suất tương đương có thể là mốc tham khảo.
 
-Insurance valuation may use P/B, ROE, embedded value or appraisal value depending life/non-life structure.
+Nếu giá trị thị trường cao hơn nhiều chi phí thay thế, công suất mới có thể được xây và kéo lợi nhuận về mức bình thường, trừ khi rào cản gia nhập rất cao.
 
-Reserve adequacy, underwriting profitability, investment duration và capital regulation matter more than simple P/E.
+## 52. Giá trị thanh lý
 
-## 55. REITs
+Với doanh nghiệp căng thẳng, cần giảm giá trị phải thu, hàng tồn kho và tài sản cố định theo khả năng bán thực tế, sau đó trừ chi phí đóng cửa và các nghĩa vụ ưu tiên.
 
-Use FFO/AFFO, NAV, cap rates, debt maturity, occupancy và lease growth.
+Giá trị sổ sách vốn chủ sở hữu có thể không có nhiều ý nghĩa nếu tài sản khó chuyển thành tiền.
 
-P/E less informative due real-estate depreciation.
+## 53. Ngân hàng
 
-## 56. SaaS/growth
+FCFF công nghiệp thường không phù hợp với ngân hàng.
 
-Near-term P/E may not meaningful. Focus ARR, retention, gross margin, CAC payback, SBC/dilution and path to FCF.
+Một trực giác từ mô hình lợi nhuận thặng dư:
 
-High growth without strong incremental unit economics should not automatically command premium.
+```text
+Value
+≈ Book Value
++ PV[(ROE - Cost of Equity) × Beginning Book Equity]
+```
 
-## 57. Commodity producers
+ROE bền vững cao hơn chi phí vốn tạo giá trị. Tăng trưởng có thể phá giá trị nếu ROE dưới chi phí vốn.
 
-Value reserves/resources, cost curve, commodity assumptions, capex, royalties/tax, hedge book và balance sheet.
+## 54. Bảo hiểm
 
-Do not extrapolate spot far above incentive price forever.
+Có thể dùng P/B, ROE, embedded value hoặc appraisal value tùy loại hình.
 
-## 58. Early-stage/biotech probability valuation
+Cần chú ý:
 
-For binary milestones, use probability-adjusted cash flows/scenarios rather than one deterministic DCF.
+- đủ dự phòng;
+- lợi nhuận bảo hiểm cốt lõi;
+- duration danh mục đầu tư;
+- vốn pháp định;
+- rủi ro thiên tai hoặc bồi thường.
 
-Clinical success probabilities, time-to-market, dilution, funding runway and competitive pipeline matter.
+## 55. REIT
 
-## 59. Per-share value
+REIT thường được đánh giá bằng:
 
-Enterprise can grow while shareholder stagnates if dilution high. Always model diluted shares and potential future issuance.
+- FFO/AFFO;
+- NAV;
+- cap rate;
+- đáo hạn nợ;
+- tỷ lệ lấp đầy;
+- tăng trưởng giá thuê.
 
-Per-share compounding is the objective, not revenue empire size.
+P/E thường kém hữu ích vì khấu hao bất động sản có thể làm lợi nhuận kế toán thấp hơn dòng tiền kinh tế.
 
-## 60. Balance-sheet optionality
+## 56. SaaS và doanh nghiệp tăng trưởng
 
-Net cash provides resilience and ability buy assets/shares during downturn. Heavy debt amplifies equity sensitivity and can force value-destructive refinancing.
+P/E ngắn hạn có thể không hữu ích nếu doanh nghiệp đang ưu tiên tăng trưởng.
 
-Same enterprise value can create very different equity risk.
+Cần nhìn:
 
-## 61. Reflexivity
+- ARR;
+- retention;
+- gross margin;
+- CAC payback;
+- SBC và pha loãng;
+- con đường tới FCF.
 
-For capital-dependent businesses, market valuation can influence fundamentals. High stock price lowers financing cost; collapsing price may force dilutive issuance.
+Tăng trưởng cao nhưng unit economics yếu không tự động xứng đáng bội số cao.
 
-Banks/property/early growth are especially reflexive.
+## 57. Doanh nghiệp hàng hóa
 
-## 62. Margin of safety
+Cần phân tích:
 
-Margin of safety là buffer for assumption/model error, not arbitrary 20% discount.
+- trữ lượng;
+- đường cong chi phí;
+- giả định giá hàng hóa;
+- capex;
+- thuế và royalty;
+- hedge book;
+- bảng cân đối.
 
-Need wider buffer when leverage, cyclicality, governance uncertainty or terminal sensitivity high.
+Không nên kéo giá giao ngay đang ở đỉnh chu kỳ vào toàn bộ thời gian dự báo.
 
-## 63. Expected-return range
+## 58. Biotech và doanh nghiệp giai đoạn sớm
 
-Project holding-period outcomes:
+Khi kết quả phụ thuộc các mốc nhị phân, nên dùng dòng tiền hoặc kịch bản điều chỉnh xác suất thay vì một DCF duy nhất.
 
-`Future earnings/FCF × exit valuation + distributions - dilution/other claims`
+Các biến quan trọng gồm:
 
-Then compute CAGR/IRR from today's price across scenarios.
+- xác suất thành công thử nghiệm;
+- thời gian ra thị trường;
+- nhu cầu vốn;
+- pha loãng;
+- runway tiền mặt;
+- đối thủ và pipeline.
 
-This often helps decision more than a one-year target price.
+## 59. Giá trị trên mỗi cổ phiếu
 
-## 64. Path dependency
+Doanh nghiệp có thể tăng doanh thu, EBITDA và EV nhưng cổ đông vẫn không hưởng lợi nếu số cổ phiếu tăng nhanh.
 
-Two stocks with same year-5 value can produce different investor experience if one requires repeated dilution, capital calls or survives deep drawdown.
+Luôn kết thúc bằng:
 
-Path matters when leverage, liquidity or investor constraints can force action before terminal value realized.
+```text
+Enterprise Value
+→ Equity Value
+→ Fully Diluted Shares
+→ Value Per Share
+```
 
-## 65. Catalyst vs value
+## 60. Bẫy giá trị
 
-Intrinsic value gap can close slowly. Catalyst affects duration/opportunity cost but is not always necessary for long-term compounder.
+Một cổ phiếu “rẻ” có thể tiếp tục rẻ nếu:
 
-Event-driven thesis requires much more precise path/timing analysis.
+- ROIC thấp;
+- ngành suy giảm;
+- nợ lớn;
+- FCF kém;
+- quản trị yếu;
+- pha loãng liên tục;
+- tài sản khó hiện thực hóa.
 
-## 66. Value trap diagnostic
+Do đó mức bội số thấp không phải luận điểm đầu tư tự thân.
 
-Cheap multiple may reflect structural decline, capital misallocation, leverage, governance, technological disruption or peak cyclical earnings.
+## 61. Biên an toàn
 
-Ask what must improve for multiple to normalize and whether evidence supports it.
+**Biên an toàn (margin of safety)** không chỉ là lấy giá trị nội tại trừ giá thị trường.
 
-## 67. What is priced in?
+Nó còn phụ thuộc độ chắc chắn của mô hình. Doanh nghiệp ổn định với dòng tiền dễ dự báo có thể cần biên thấp hơn doanh nghiệp chu kỳ, đòn bẩy hoặc nhị phân.
 
-Current price implies some combination of growth, margin, ROIC duration, risk and failure probability.
+Biên an toàn phải phản ánh:
 
-Thesis should be phrased relative expectations: “market prices X, evidence supports Y”, not only absolute forecast.
+```text
+độ bất định của dòng tiền
+rủi ro bảng cân đối
+rủi ro thanh khoản
+rủi ro quản trị
+độ nhạy định giá
+```
 
-## 68. Research uncertainty hierarchy
+## 62. Mẫu đầu ra cho một bài định giá
 
-Separate assumptions into high-confidence, medium-confidence và speculative. Revenue volume may be easier than terminal multiple; unit cost may be easier than ten-year market share.
+Một bài định giá hoàn chỉnh nên có:
 
-Allocate research effort to high-impact, high-uncertainty assumptions.
+```text
+1. Động lực doanh thu
+2. Biên lợi nhuận và tái đầu tư
+3. FCFF / FCFE
+4. Cơ cấu vốn
+5. WACC / Cost of Equity
+6. Base / Bull / Bear
+7. Terminal assumptions
+8. DCF
+9. Multiples / SOTP / NAV nếu phù hợp
+10. Reverse DCF
+11. Độ nhạy
+12. Giá trị trên mỗi cổ phiếu
+13. Biên an toàn
+14. Điều kiện làm luận điểm sai
+```
 
-## 69. Valuation checklist
+## Kết luận
 
-Before value: normalize accounting; identify drivers; choose cash flow; model reinvestment; choose consistent discount rate; account taxes/SBC/dilution; build terminal economics; bridge EV-to-equity; scenarios/sensitivity; comparable cross-check; reverse DCF; expected-return range.
+Định giá tốt không phải là làm bảng tính phức tạp nhất. Mục tiêu là hiểu **giá hiện tại đang giả định điều gì**, doanh nghiệp cần tạo bao nhiêu dòng tiền để biện minh cho mức giá đó và yếu tố nào có thể làm kết quả lệch khỏi kỳ vọng.
 
-Then write what would falsify valuation thesis.
+Một mô hình hữu ích phải giúp người đọc trả lời được ba câu hỏi:
 
-## 70. Mental model cuối cùng
-
-`Operating drivers → normalized cash flow → reinvestment/ROIC → growth fade → risk/discount rate → terminal economics → diluted per-share value → market-implied expectations → expected return`
-
-Valuation là framework ra quyết định dưới uncertainty, không phải target-price manufacture.
+```text
+Giá trị được tạo từ đâu?
+Kỳ vọng nào đang được phản ánh trong giá?
+Điều gì phải thay đổi để giá trị hoặc luận điểm đầu tư thay đổi?
+```
