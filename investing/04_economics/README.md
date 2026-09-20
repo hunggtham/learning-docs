@@ -18,6 +18,8 @@ Lĩnh vực này nối doanh nghiệp với nền kinh tế và hệ thống tà
 
 [06_FISCAL_MONETARY_INTERACTION_DEBT_DEMOGRAPHICS_AND_PRODUCTIVITY.md](./06_FISCAL_MONETARY_INTERACTION_DEBT_DEMOGRAPHICS_AND_PRODUCTIVITY.md) hoàn thiện lớp vĩ mô cấu trúc: bảng cân đối khu vực công hợp nhất, cán cân sơ cấp/cơ cấu, động lực nợ trên GDP, lãi suất tài trợ hiệu dụng, nhu cầu tài trợ gộp, lệch kỳ hạn/tiền tệ, cơ sở nhà đầu tư, số nhân và xung lực tài khóa, bộ ổn định tự động, ưu thế tài khóa, liên kết QE/QT với tài khóa, phát hành trái phiếu chính phủ và phần bù kỳ hạn, cán cân đối ngoại, nhân khẩu học, tỷ lệ tham gia lao động, vốn con người, hiệu quả phân bổ vốn, TFP, phân bổ sai nguồn lực, AI/năng suất, lãi suất trung tính và độ tin cậy tài khóa.
 
+[07_MACRO_TRANSMISSION_NOWCASTING_AND_POLICY_LAB.md](./07_MACRO_TRANSMISSION_NOWCASTING_AND_POLICY_LAB.md) là lớp học sâu: xây nowcast theo diffusion, tách bất ngờ dữ liệu khỏi mức tuyệt đối, đọc phản ứng đầu ngắn/đầu dài của đường cong, kênh tín dụng và FX, nhu cầu tài trợ chính phủ, chuyển chế độ kinh tế và tác động bậc một/bậc hai tới doanh nghiệp và tài sản.
+
 ## Sau lĩnh vực này bạn cần làm được gì?
 
 Bạn cần có khả năng nhận một cú sốc và tự xây chuỗi `cú sốc → thu nhập/giá cả → chính sách → lợi suất/FX/tín dụng → lợi nhuận ngành/doanh nghiệp → định giá`; phân biệt cú sốc cầu, cung, tín dụng, thanh khoản và tài khóa; đọc hàm phản ứng của ngân hàng trung ương; tách biến động đầu ngắn của đường cong khỏi phần bù kỳ hạn; phân tích tính bền vững của nợ bằng cán cân sơ cấp, chênh lệch r-g và cấu trúc kỳ hạn/tiền tệ; nối nhân khẩu học và năng suất với tăng trưởng tiềm năng, cơ sở thuế, lãi suất trung tính và định giá dài hạn.
@@ -27,5 +29,7 @@ Bạn cũng cần biết khi nào dữ liệu tiêu đề chỉ là nhiễu chu 
 ## Bài tập tích hợp
 
 Đọc [Cú sốc CPI → Danh mục](../07_integrated_case_studies/01_INFLATION_SHOCK_FROM_CPI_TO_PORTFOLIO.md) để luyện chuỗi `số thực tế → mức bất ngờ → hàm phản ứng → đường cong/tỷ giá/tín dụng → lợi nhuận/định giá`. Sau đó đọc [Khủng hoảng tín dụng và thanh khoản](../07_integrated_case_studies/02_CREDIT_LIQUIDITY_CRISIS_TRANSMISSION.md) để nối cơ chế tiền tệ, tài sản thế chấp, bảng cân đối ngân hàng và cơ chế khuếch đại tài chính vào nền kinh tế thực.
+
+Sau đó hoàn thành **Module 4 — Economics** trong [Advanced Practice Workbook](../ADVANCED_PRACTICE_WORKBOOK.md). Đầu ra tối thiểu là `macro_nowcast.md`, `surprise_map.md`, ma trận chế độ kinh tế và bảng truyền dẫn liên tài sản; mỗi kết luận phải chỉ rõ điều gì đã được thị trường kỳ vọng trước dữ liệu.
 
 Sau đó chuyển sang [05 — Giao dịch và phái sinh](../05_trading_derivatives/README.md) hoặc [06 — Thị trường Hàn Quốc và Việt Nam](../06_markets_korea_vietnam/README.md).
