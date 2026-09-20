@@ -33,9 +33,20 @@ Tài liệu này theo dõi **profile thực sự đã được viết**, không 
 
 **Supplemental Europe:** Kosovo đã có hồ sơ địa lý riêng với ghi chú classification trung tính.
 
+## Africa — hoàn thành coverage M49
+
+**Northern Africa:** Algeria, Egypt, Libya, Morocco, Sudan, Tunisia, Western Sahara.
+
+**Eastern Africa:** British Indian Ocean Territory, Burundi, Comoros, Djibouti, Eritrea, Ethiopia, French Southern Territories, Kenya, Madagascar, Malawi, Mauritius, Mayotte, Mozambique, Réunion, Rwanda, Seychelles, Somalia, South Sudan, Uganda, United Republic of Tanzania, Zambia, Zimbabwe.
+
+**Middle Africa:** Angola, Cameroon, Central African Republic, Chad, Congo, Democratic Republic of the Congo, Equatorial Guinea, Gabon, Sao Tome and Principe.
+
+**Southern Africa:** Botswana, Eswatini, Lesotho, Namibia, South Africa.
+
+**Western Africa:** Benin, Burkina Faso, Cabo Verde, Côte d’Ivoire, Gambia, Ghana, Guinea, Guinea-Bissau, Liberia, Mali, Mauritania, Niger, Nigeria, Saint Helena, Senegal, Sierra Leone, Togo.
+
 ## Chưa viết profile chi tiết
 
-- Africa: inventory đã có, profile chi tiết chưa triển khai.
 - Americas: inventory đã có, profile chi tiết chưa triển khai.
 - Oceania: inventory đã có, profile chi tiết chưa triển khai.
 - Antarctica: mới có entry định hướng, chưa có chapter atlas sâu.
