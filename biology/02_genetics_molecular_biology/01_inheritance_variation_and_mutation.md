@@ -1,194 +1,316 @@
-# Di truyền, biến dị và đột biến — Inheritance, Variation and Mutation (유전, 변이와 돌연변이)
+# Di truyền, Biến dị và Đột biến — Inheritance, Variation and Mutation (유전, 변이와 돌연변이)
 
-Chương trước giải thích cách DNA lưu information và cách cell đọc information đó. Nhưng một organism không chỉ cần giữ information trong một cell; nó phải truyền information sang daughter cell và thế hệ tiếp theo. Khi sexual reproduction xuất hiện, bài toán trở nên khó hơn: mỗi cá thể diploid có hai chromosome set, nhưng gamete chỉ nên nhận một set. Đồng thời offspring không được giống hệt parent, vì meiosis và recombination tạo variation.
+Chapter trước giải thích DNA lưu information và gene expression biến sequence thành function. Nhưng heredity chỉ thật sự trở thành vấn đề khi organism tạo offspring: **allele nào được truyền, chromosome phân ly ra sao, recombination tạo combination mới thế nào, và vì sao offspring vừa giống vừa khác parent?**
 
-Vì vậy inheritance không phải một bảng Punnett độc lập với molecular biology. Nó là hệ quả trực tiếp của cách chromosome được tổ chức và phân chia.
+Đây là nơi molecular genetics gặp meiosis, probability và population thinking.
 
-## 1. Chromosome, homolog và allele
+> **Mental model:** inheritance không phải “trait đi nguyên vẹn từ parent sang child”. Cái được truyền là genetic material; phenotype xuất hiện sau khi allele tương tác với nhau, với regulatory network và với environment.
 
-Một chromosome là một DNA molecule dài cùng protein liên quan. Ở diploid organism, mỗi chromosome type thường có hai bản homolog: một từ mẹ, một từ cha.
+## 1. Allele, genotype và phenotype
 
-Hai homolog mang cùng nhóm gene nhưng có thể có version khác nhau. Version của một gene gọi là **allele (alen / 대립유전자)**.
+Một **allele (alen / 대립유전자)** là một version của locus/gene. **Genotype (kiểu gene / 유전자형)** mô tả allele composition; **phenotype (kiểu hình / 표현형)** là trait quan sát/đo được.
 
-Ví dụ một gene có allele A và a. Một cá thể có thể AA, Aa hoặc aa ở locus đó.
+Genotype không đồng nghĩa phenotype. Cùng genotype có thể cho phenotype khác do environment, development và stochastic factor. Ngược lại, phenotype tương tự có thể đến từ nhiều genotype khác nhau.
 
-Nhưng allele không phải một “trait”. Allele là sequence variant. Trait xuất hiện sau khi sequence ảnh hưởng expression hoặc protein function trong một developmental/environmental context.
+## 2. Diploid organism và homologous chromosome
 
-## 2. Meiosis giải bài toán giảm chromosome number
+Human somatic cell điển hình là diploid: có hai set chromosome, một từ mẹ và một từ cha.
 
-Nếu gamete diploid kết hợp với gamete diploid, chromosome number sẽ tăng gấp đôi mỗi generation. Meiosis giải bài toán bằng cách tạo haploid gamete.
+Hai chromosome tương ứng gọi là **homologous chromosomes**. Chúng mang cùng loại locus theo cùng order gần tương ứng nhưng có thể chứa allele khác nhau.
 
-Sau một lần DNA replication, cell trải qua hai division.
+Sister chromatid thì khác: đó là hai copy của cùng chromosome sau DNA replication.
 
-Trong meiosis I, homologous chromosome pair tách nhau. Trong meiosis II, sister chromatid tách nhau.
+Phân biệt homolog với sister chromatid là điều bắt buộc để hiểu meiosis.
 
-Kết quả cuối cùng là gamete có một chromosome từ mỗi homologous pair.
+## 3. Meiosis tạo gamete haploid
 
-Đây là cơ sở vật lý của Mendel's law of segregation.
+Meiosis giảm chromosome number từ diploid xuống haploid để khi fertilization kết hợp hai gamete, diploid number được phục hồi.
 
-## 3. Mendel không chỉ là ratio 3:1
+Meiosis I tách homologous chromosome; meiosis II tách sister chromatid.
 
-Mendel quan sát trait pattern trước khi chromosome được hiểu rõ. Modern genetics giải thích ratio bằng meiosis.
+Nếu không có reduction division, chromosome number sẽ double mỗi generation.
 
-Nếu parent Aa tạo gamete, homolog mang A và a segregate, nên trong model đơn giản mỗi gamete có probability gần 1/2 mang A và 1/2 mang a.
+Meiosis vì vậy là lời giải structural cho sexual reproduction.
 
-Cross Aa × Aa:
+## 4. Independent assortment: variation xuất hiện từ cách chromosome xếp ngẫu nhiên
 
-\[
-P(AA)=\frac14,\quad P(Aa)=\frac12,\quad P(aa)=\frac14
-\]
+Mỗi homologous pair có orientation tương đối độc lập ở metaphase I. Vì vậy maternal/paternal chromosome combination trong gamete thay đổi.
 
-Ratio genotype 1:2:1 không phải rule thần bí. Nó đi ra từ independent gamete formation và probability multiplication.
-
-## 4. Dominant không có nghĩa mạnh hơn hoặc phổ biến hơn
-
-Nếu heterozygote Aa có phenotype giống AA, allele A được gọi là **dominant**, a là **recessive** trong context trait đó.
-
-Dominance mô tả relationship phenotype ở heterozygote. Nó không nói allele A có fitness cao hơn, phổ biến hơn hay “tốt hơn”.
-
-Một recessive allele vẫn có thể rất common. Một dominant disease allele vẫn có thể rare.
-
-Đây là misconception quan trọng vì nó nối genetics với evolution: dominance và natural selection là hai concept khác nhau.
-
-## 5. Independent assortment có điều kiện
-
-Mendel's law of independent assortment đúng tốt khi gene nằm trên chromosome khác nhau hoặc đủ xa nhau.
-
-Nếu hai gene nằm gần nhau trên cùng chromosome, chúng có xu hướng được truyền cùng nhau. Đây là **linkage (liên kết gene / 유전자 연관)**.
-
-Meiosis có crossing-over giữa homolog, nên linkage không tuyệt đối.
-
-Recombination frequency tăng theo distance giữa loci trong range nhất định, cho phép genetic mapping.
-
-Ta thấy một pattern đẹp: probability inheritance phản ánh physical geometry trên chromosome.
-
-## 6. Recombination tạo combination mới
-
-Trong prophase I, homologous chromosome pair và có thể exchange segment qua crossing-over.
-
-Điều này không tạo allele hoàn toàn mới như mutation, nhưng tạo **new combinations** của allele.
-
-Sexual reproduction tăng variation qua ít nhất ba cơ chế:
-
-1. independent assortment của chromosome;
-2. crossing-over;
-3. random fertilization.
-
-Variation này sẽ trở thành nguyên liệu cho evolution ở chapter sau.
-
-## 7. Probability: prediction cho population, không phải lời hứa cho family nhỏ
-
-Nếu một cross cho probability 25% phenotype nào đó, điều đó không có nghĩa bốn offspring chắc chắn có đúng một cá thể như vậy.
-
-Mỗi conception là random event theo model. Với sample nhỏ, observed ratio có thể lệch xa expected ratio.
-
-Khi sample lớn, law of large numbers làm frequency thường gần expectation hơn.
-
-Đây là bridge sang statistics: Mendelian ratio là probability model, dữ liệu thực cần statistical test để xem deviation có hợp lý do chance hay không.
-
-## 8. Khi Mendel đơn giản không đủ
-
-Nhiều trait không tuân dominant/recessive đơn giản.
-
-Trong **incomplete dominance**, heterozygote có phenotype trung gian. Trong **codominance**, hai allele cùng biểu hiện rõ, như ABO blood group với allele A và B.
-
-Một gene cũng có thể có nhiều allele trong population.
-
-Ngoài ra **pleiotropy** xảy ra khi một gene ảnh hưởng nhiều trait, vì protein có thể tham gia nhiều tissue/process.
-
-Ngược lại, **polygenic trait** chịu ảnh hưởng của nhiều gene.
-
-## 9. Quantitative trait: từ category sang distribution
-
-Height, blood pressure, skin pigmentation và nhiều trait khác biến thiên liên tục.
-
-Khi nhiều locus có effect nhỏ cộng thêm environment, phenotype thường tạo distribution thay vì vài category discrete.
-
-Ta có model khái niệm:
+Nếu có \(n\) chromosome pair và bỏ qua recombination, số combination từ independent assortment là khoảng:
 
 \[
-P = G + E + G\times E + \epsilon
+2^n
 \]
 
-Trong đó phenotype \(P\) chịu ảnh hưởng genetic component \(G\), environment \(E\), interaction và residual variation.
+Ở humans với 23 pair, con số đã hơn tám triệu combination trước khi tính crossing-over.
 
-Equation này không nói organism thật đơn giản là phép cộng; nó là statistical decomposition hữu ích.
+Sexual reproduction tạo variation khổng lồ từ mechanics của meiosis.
 
-## 10. Heritability: câu hỏi về variation trong population
+## 5. Crossing-over: homolog không chỉ chia ngẫu nhiên, chúng còn trao đổi đoạn
 
-**Heritability (hệ số di truyền / 유전력)** mô tả phần variation phenotype trong một population/environment có thể quy cho genetic variation theo model.
+Trong prophase I, homologous chromosome pair và non-sister chromatid có thể recombine.
 
-Nó không nói “X% trait của một cá nhân do gene”.
+**Crossing-over (교차)** tạo chromosome mosaic chứa segment từ maternal/paternal homolog.
 
-Một trait có heritability cao vẫn có thể thay đổi mạnh nếu environment thay đổi. Ví dụ height có genetic contribution lớn trong nhiều population nhưng nutrition vẫn ảnh hưởng rõ.
+Recombination vừa tăng variation vừa có vai trò giúp homolog segregation đúng qua chiasma.
 
-Đây là ví dụ về việc statistical concept phải được hiểu đúng scale.
+Distance giữa loci ảnh hưởng probability recombination, tạo cơ sở genetic mapping.
 
-## 11. Mutation tạo allele mới
+## 6. Mendel: từ pattern phenotype suy ra unit inheritance
 
-Recombination trộn allele có sẵn; **mutation** tạo sequence variant mới.
+Mendel nghiên cứu pea trước khi biết DNA/chromosome. Từ ratio offspring, ông suy ra trait được truyền qua discrete factor.
 
-Mutation có thể xuất hiện do replication error, chemical damage, radiation hoặc mobile genetic element.
+Ngày nay ta nối model Mendel với chromosome behavior.
 
-Nhưng mutation không xuất hiện vì organism “cần thích nghi”. Mutation thường random với respect to adaptive need.
+**Law of segregation** phản ánh hai allele ở diploid individual được phân ly vào gamete qua meiosis.
 
-Natural selection sau đó có thể làm frequency của variant thay đổi.
+**Independent assortment** đúng xấp xỉ cho gene trên chromosome khác nhau hoặc đủ xa nhau; linked gene là limitation quan trọng.
 
-## 12. Mutation effect phụ thuộc vị trí và context
+## 7. Dominant và recessive không có nghĩa “mạnh” và “yếu”
 
-Coding mutation có thể:
+Nếu heterozygote phenotype giống một homozygote, allele thể hiện được gọi **dominant** trong context trait đó; allele kia **recessive**.
 
-- không đổi amino acid vì genetic-code redundancy;
-- đổi amino acid;
-- tạo stop codon;
-- gây frameshift.
+Dominance là relationship phenotype giữa allele, không phải property đạo đức hay evolutionary superiority.
 
-Regulatory mutation có thể đổi gene expression. Splice-site mutation có thể đổi RNA processing. Large structural change có thể duplicate hoặc delete gene.
+Một recessive allele vẫn có thể phổ biến. Một dominant disease allele vẫn có thể rare.
 
-Một mutation cũng có thể neutral trong một environment nhưng harmful hoặc beneficial trong environment khác.
+## 8. Molecular basis của dominance
 
-Do đó không thể gắn nhãn mutation chỉ bằng “tốt/xấu” ngoài context.
+Nhiều recessive loss-of-function allele xảy ra vì một functional copy tạo đủ protein cho phenotype bình thường; đây là **haplosufficiency**.
 
-## 13. Chromosome abnormality: khi variation xảy ra ở scale lớn
+Trong trường hợp khác, một copy không đủ (**haploinsufficiency**) hoặc mutant protein interfere với normal protein (**dominant negative**), làm inheritance dominant.
 
-Nondisjunction trong meiosis có thể làm gamete nhận thừa hoặc thiếu chromosome.
+Mendelian label có molecular mechanism phía sau.
 
-Sau fertilization, offspring có thể có aneuploidy.
+## 9. Punnett square là probability tool, không phải machine dự đoán family cụ thể
 
-Structural chromosome change gồm deletion, duplication, inversion và translocation.
+Cross Aa × Aa cho genotype probability:
 
-Duplication đặc biệt quan trọng trong evolution vì một gene copy có thể giữ function cũ trong khi copy khác tích lũy change và đôi khi phát triển function mới.
+\[
+P(AA)=1/4,\quad P(Aa)=1/2,\quad P(aa)=1/4
+\]
 
-## 14. Penetrance và expressivity: cùng genotype không nhất thiết cùng phenotype
+Nếu complete dominance, phenotype ratio expected 3:1.
 
-**Penetrance** hỏi bao nhiêu người mang genotype thể hiện phenotype.
+Nhưng mỗi child là event mới; bốn child không bắt buộc có đúng ba dominant và một recessive phenotype.
 
-**Expressivity** hỏi phenotype mạnh/yếu đến đâu ở người đã thể hiện.
+Expected ratio xuất hiện khi sample đủ lớn.
 
-Hai concept này nhắc lại rằng gene hoạt động trong network và environment, không phải switch isolated.
+## 10. Product rule và sum rule
 
-## 15. Gene–environment interaction
+Nếu hai independent event cùng xảy ra:
 
-Một allele có effect khác nhau trong environment khác nhau.
+\[
+P(A\cap B)=P(A)P(B)
+\]
 
-Ví dụ enzyme variant có thể chỉ gây phenotype rõ khi diet chứa một substrate nhất định. Temperature có thể ảnh hưởng protein folding ở một số organism. Stress hormone có thể đổi expression program.
+Nếu hỏi một trong các mutually exclusive outcome:
 
-Vì vậy inheritance truyền potential và molecular machinery; phenotype là kết quả của development trong environment.
+\[
+P(A\cup B)=P(A)+P(B)
+\]
 
-## 16. Family genetics nối tới population genetics thế nào?
+Probability giúp giải genetic cross phức tạp mà không cần vẽ Punnett square khổng lồ.
 
-Ở family scale, ta hỏi probability offspring nhận allele.
+Math ở đây mô tả uncertainty của gamete combination.
 
-Ở population scale, ta hỏi allele frequency thay đổi qua generation thế nào.
+## 11. Test cross và inference genotype
 
-Hai scale nối trực tiếp. Meiosis, mating và reproduction tạo sampling process; mutation, selection, drift và migration thay đổi allele frequency.
+Nếu individual có dominant phenotype nhưng genotype có thể AA hoặc Aa, crossing với homozygous recessive có thể cung cấp evidence.
 
-Nếu không có variation từ mutation/recombination, evolution không có raw material.
+Nếu offspring recessive xuất hiện, parent dominant phải mang recessive allele.
 
-## 17. Từ allele sang genome-wide regulation
+Đây là ví dụ scientific inference: phenotype offspring cung cấp data để suy genotype không quan sát trực tiếp.
 
-Mendelian model thường tập trung một hoặc vài locus. Nhưng modern biology có thể đo hàng triệu variant, chromatin state, RNA abundance và protein expression.
+## 12. Incomplete dominance và codominance
 
-Điều này đặt câu hỏi mới: genome không chỉ là list gene; nó được tổ chức và regulation trên quy mô toàn genome như thế nào? Vì sao cùng DNA nhưng cell type khác nhau? Epigenetic mark có vai trò gì? GWAS thực sự nói được gì?
+Không phải mọi locus theo complete dominance.
 
-Đó là bridge sang [[02_genomics_epigenetics_and_regulation]].
+Trong **incomplete dominance**, heterozygote có phenotype intermediate. Trong **codominance**, hai allele product đều thể hiện rõ.
+
+ABO blood group là ví dụ codominance giữa IA và IB, đồng thời cả hai dominant so với i theo phenotype antigen.
+
+Một locus có thể có **multiple alleles** trong population dù mỗi diploid individual chỉ mang tối đa hai allele ở locus đó.
+
+## 13. Pleiotropy và polygenic trait
+
+**Pleiotropy**: một gene ảnh hưởng nhiều trait vì protein tham gia process chung hoặc nhiều tissue.
+
+**Polygenic trait**: nhiều gene đóng góp một trait. Height, skin pigmentation và nhiều quantitative trait thuộc kiểu này.
+
+Điều này phá model “một gene — một trait” vốn chỉ hữu ích trong một số case đơn giản.
+
+## 14. Epistasis: gene tương tác gene
+
+Trong **epistasis (상위성)**, effect của allele ở một locus phụ thuộc genotype ở locus khác.
+
+Ví dụ pathway pigment có enzyme A tạo precursor và enzyme B chuyển precursor thành pigment. Nếu A mất function, B có version nào cũng không tạo pigment.
+
+Phenotype là output của pathway, không phải tổng độc lập của từng gene.
+
+## 15. Linkage: gene gần nhau không assort hoàn toàn độc lập
+
+Gene trên cùng chromosome có tendency đi cùng nhau. Recombination có thể tách chúng.
+
+Recombination frequency tăng theo genetic distance ở khoảng phù hợp. 1% recombination được dùng định nghĩa khoảng 1 centimorgan trong mapping cổ điển.
+
+Nhưng frequency không tăng tuyến tính vô hạn; multiple crossover làm mapping dài cần model correction.
+
+## 16. Sex-linked inheritance
+
+Gene trên sex chromosome tạo pattern inheritance khác autosomal gene.
+
+Ở X-linked recessive trait, male XY chỉ có một X nên allele recessive trên X có thể biểu hiện ngay nếu không có copy tương ứng trên Y.
+
+Nhưng sex determination và sex-linked biology đa dạng giữa species; không nên lấy human XY làm universal model.
+
+## 17. Mutation tạo allele mới
+
+Recombination chỉ shuffle variation sẵn có; **mutation** tạo sequence variation mới.
+
+Point mutation có thể là transition/transversion; insertion/deletion có thể gây frameshift nếu nằm coding region và length không chia hết cho 3.
+
+Large-scale variant gồm duplication, deletion, inversion, translocation và copy-number variation.
+
+Effect phụ thuộc locus, regulatory context và environment.
+
+## 18. Germline và somatic mutation
+
+**Germline mutation** có thể truyền cho offspring nếu nằm lineage tạo gamete.
+
+**Somatic mutation** xảy ra trong body cell và thường không truyền qua reproduction, nhưng có thể ảnh hưởng clone cell — rất quan trọng trong cancer.
+
+Một human body vì vậy không hoàn toàn genetic-uniform; mosaicism có thể xuất hiện.
+
+## 19. Mutation rate và selection không phải cùng thứ
+
+Mutation xuất hiện không vì organism “cần” adaptation. Mutation source có bias nhưng không được tạo ra có định hướng phù hợp future fitness theo cách Lamarck đơn giản.
+
+Selection acts **sau khi variation tồn tại** bằng differential reproduction/survival.
+
+Phân biệt source variation với filter variation là nền của evolution.
+
+## 20. Chromosome nondisjunction
+
+Nếu homolog hoặc sister chromatid không phân ly đúng, gamete có chromosome number bất thường.
+
+Sau fertilization có thể tạo **aneuploidy**.
+
+Effect thường lớn vì dosage của hàng trăm gene thay đổi cùng lúc.
+
+Age-related change trong meiosis có thể ảnh hưởng risk ở một số aneuploidy, nhưng mechanism phức tạp hơn một nguyên nhân đơn.
+
+## 21. Quantitative genetics: trait liên tục được phân tích thế nào?
+
+Nhiều trait tạo distribution liên tục vì nhiều locus + environment.
+
+Ta có thể phân rã phenotypic variance khái niệm:
+
+\[
+V_P=V_G+V_E+V_{G\times E}+...
+\]
+
+Trong đó genetic variance, environmental variance và gene–environment interaction cùng đóng góp.
+
+Đây là statistical model ở population level, không phải decomposition cố định của một individual.
+
+## 22. Heritability: một khái niệm rất dễ hiểu sai
+
+**Heritability (유전력)** là phần variance phenotype trong một population/environment được liên hệ với genetic variance theo model cụ thể.
+
+Heritability cao không có nghĩa trait “không đổi được bởi environment”. Height có heritability cao trong một population nhưng nutrition vẫn ảnh hưởng growth.
+
+Heritability cũng không nói “X% trait của một người do gene”. Nó là property của population variance, không phải individual causal percentage.
+
+## 23. Gene–environment interaction
+
+Cùng genotype có thể phản ứng khác nhau trong environment khác. **Reaction norm** mô tả phenotype của genotype qua range environment.
+
+Ví dụ nutrient, temperature hoặc stress có thể thay effect allele.
+
+Nature và nurture không phải hai hộp cộng độc lập; chúng tương tác.
+
+## 24. Penetrance và expressivity
+
+**Penetrance** mô tả fraction individual mang genotype và biểu hiện phenotype xác định.
+
+**Expressivity** mô tả mức độ phenotype khác nhau giữa người có cùng genotype.
+
+Incomplete penetrance có thể đến từ modifier gene, environment, age hoặc stochastic factor.
+
+Điều này làm pedigree thực tế phức tạp hơn Punnett square đơn giản.
+
+## 25. Pedigree: suy inheritance từ family pattern
+
+Pedigree dùng symbol để biểu diễn relationship và phenotype qua generation.
+
+Ta suy autosomal dominant/recessive, X-linked hoặc mitochondrial pattern dựa trên transmission, nhưng cần cẩn trọng vì small family, incomplete penetrance và new mutation có thể làm pattern mơ hồ.
+
+Pedigree là inference under uncertainty, không phải nhìn một hình rồi “đoán chắc”.
+
+## 26. Mitochondrial inheritance
+
+Mitochondrial DNA ở human thường được truyền chủ yếu từ mẹ vì mitochondria của egg đóng góp phần lớn organelle cho embryo.
+
+Tuy nhiên phenotype mitochondrial disease còn phụ thuộc heteroplasmy và threshold ở tissue.
+
+Non-Mendelian inheritance nhắc ta rằng Mendel là nền, không phải toàn bộ genetics.
+
+## 27. Genetic variation ở population scale
+
+Ở một individual ta nói genotype. Ở population ta quan tâm **allele frequency** và **genotype frequency**.
+
+Đây là bước chuyển cực kỳ quan trọng. Evolution không phải “một individual đổi gene để thích nghi”; nó là change distribution variation trong population qua generation.
+
+Mọi mutation, meiosis, recombination học trong chapter này trở thành input cho population genetics.
+
+## 28. Case study: lactose persistence
+
+Khả năng tiêu hóa lactose ở adulthood liên quan regulation của lactase gene và population history.
+
+Ở một số population có tradition chăn nuôi/sữa, regulatory variant liên quan lactase persistence tăng frequency qua selection.
+
+Trait cho thấy connection:
+
+```text
+regulatory DNA variant
+→ gene expression after childhood
+→ digestive phenotype
+→ cultural/environment context
+→ differential fitness historically
+→ allele-frequency change
+```
+
+Gene–culture coevolution nối molecular genetics, inheritance và evolution.
+
+## 29. Case study: antibiotic resistance không phải bacteria “cố biến đổi”
+
+Trong bacterial population có variation do mutation/horizontal gene transfer. Antibiotic giết susceptible cell mạnh hơn. Resistant variant survive/reproduce, làm resistance allele tăng frequency.
+
+Selection thay composition population; antibiotic không “dạy” từng bacterium cách resistance theo nghĩa có mục tiêu.
+
+Đây là bridge sang evolution và microbiology.
+
+## 30. Common misconceptions
+
+“Dominant allele phổ biến hơn recessive allele” sai.
+
+“Recessive nghĩa yếu” sai.
+
+“50% risk nghĩa hai child chắc chắn một affected” sai.
+
+“Heritability cao nghĩa environment không quan trọng” sai.
+
+“Mutation xảy ra để thích nghi” sai.
+
+“Gene và trait có mapping một-một” hiếm khi đúng cho trait phức tạp.
+
+## 31. Bridge: từ family inheritance sang genome và population
+
+Chapter này đi từ meiosis đến allele transmission và variation. Nhưng modern genetics còn hỏi ở scale lớn hơn: hàng triệu variant trong genome được tổ chức thế nào? Chromatin làm gene accessible ra sao? GWAS tìm association bằng cách nào? Transcriptomics đo expression của hàng nghìn gene ra sao?
+
+[[02_genomics_epigenetics_and_regulation]] sẽ mở rộng sang genome-wide regulation và omics.
+
+Sau đó [[../03_evolution_and_diversity/00_evolution_and_population_genetics]] sẽ lấy chính allele frequency, mutation, recombination và fitness để xây theory evolution.
+
+> **Mental model cuối chapter:** heredity là quá trình chromosome/DNA được phân phối qua meiosis và fertilization; variation phát sinh từ mutation + recombination + assortment; phenotype là outcome của genotype trong context. Khi ta chuyển từ một family sang cả population, chính variation này trở thành dữ liệu cho evolution.
