@@ -1,357 +1,258 @@
-# Công nghệ sinh học, bioinformatics và systems biology — Biotechnology, Bioinformatics and Systems Biology (생명공학, 생물정보학, 시스템생물학)
+# Công nghệ sinh học, tin sinh học và sinh học hệ thống — Biotechnology, Bioinformatics and Systems Biology (생명공학, 생물정보학과 시스템생물학)
 
-Sau khi hiểu DNA, protein, cell, physiology, evolution và ecology, ta có thể hỏi một loại câu hỏi mới: **làm thế nào để đo, đọc, so sánh và thay đổi biological system một cách có kiểm soát?**
+Nếu các chapter trước xây biology như một knowledge graph, biotechnology là lúc ta dùng chính graph đó để can thiệp và đo lường. PCR không phải một trick tách biệt; nó là DNA replication được đưa vào test tube. CRISPR không xuất hiện từ hư không; nó được tái sử dụng từ microbial defense. Sequencing biến chemical polymer thành digital data. Bioinformatics dùng algorithm để suy lại sequence, variation và relationship.
 
-Đó là vùng giao nhau của biotechnology và computational biology. Điều quan trọng là không học các kỹ thuật như danh sách acronym. Mỗi kỹ thuật tồn tại vì nó giải quyết một bottleneck cụ thể: quá ít DNA để đo, sequence quá dài để đọc trực tiếp, genome quá lớn để so bằng mắt, network quá phức tạp để hiểu bằng intuition đơn thuần.
+Vì vậy chapter này được viết như một chuỗi “mechanism → tool → data → inference”, không phải danh sách công nghệ.
 
-## Biotechnology bắt đầu từ khả năng thao tác molecule
+## 1. Từ cơ chế tự nhiên đến công cụ
 
-**Biotechnology (công nghệ sinh học / 생명공학)** sử dụng organism, cell hoặc biological molecule để tạo measurement, product hay intervention.
+Công nghệ sinh học thường bắt đầu bằng một observation về natural mechanism.
 
-Con người đã dùng fermentation hàng nghìn năm trước khi biết microorganism. Modern biotechnology khác ở mức độ control: ta có thể isolate DNA, amplify sequence, clone gene, express recombinant protein, sequence genome và edit selected locus.
+DNA polymerase copy template → ta xây PCR.
 
-## DNA extraction — tách information carrier khỏi cell
+Restriction enzyme cắt DNA → ta dùng cloning.
 
-Muốn nghiên cứu DNA, trước tiên phải phá cell, loại protein/lipid và thu nucleic acid đủ sạch.
+Bacterial plasmid tự replicate → ta dùng vector.
 
-Nguyên lý chung của **DNA extraction (DNA 추출)** là:
+CRISPR-Cas nhận diện sequence → ta dùng gene editing.
+
+Fluorescent protein phát sáng → ta dùng reporter.
+
+Pattern chung:
 
 ```text
-cell/tissue
-→ lysis
-→ remove protein/lipid/contaminant
-→ recover DNA
+natural mechanism
+      ↓
+isolate / engineer component
+      ↓
+control condition
+      ↓
+measure or manipulate biology
 ```
 
-Detergent phá membrane vì membrane chứa lipid. Protease có thể xử lý protein. Salt/alcohol hoặc silica chemistry được dùng để recover nucleic acid tùy protocol.
+## 2. PCR: replication được điều khiển theo chu kỳ
 
-Điều cần hiểu không phải một recipe cố định mà là chemical problem: DNA là polymer charged, hydrophilic; ta thay condition để tách nó khỏi component khác.
+**PCR (polymerase chain reaction / 중합효소 연쇄반응)** khuếch đại một DNA region.
 
-## Gel electrophoresis — tách DNA theo kích thước
+Ta cần template DNA, primer, nucleotide và thermostable DNA polymerase.
 
-DNA backbone mang negative charge nhờ phosphate. Trong electric field, DNA di chuyển về positive electrode.
+Một cycle có ba logic step:
 
-Agarose gel tạo porous network. Fragment nhỏ đi qua pore dễ hơn và di chuyển xa hơn fragment lớn.
+1. denaturation: tách double strand bằng nhiệt;
+2. annealing: primer bind sequence bổ sung;
+3. extension: polymerase kéo dài từ primer.
 
-Vì vậy **gel electrophoresis (겔 전기영동)** biến invisible DNA mixture thành band theo size.
-
-Đây là example kết nối Biology với Physics: electric force + molecular sieving.
-
-## PCR — giải quyết bài toán “mẫu DNA quá ít”
-
-**Polymerase chain reaction (PCR / 중합효소연쇄반응)** amplify một target DNA region.
-
-Một cycle có ba idea:
-
-1. denaturation: heat tách DNA strand;
-2. annealing: primer bind complementary target;
-3. extension: thermostable DNA polymerase kéo dài strand.
-
-Sau mỗi cycle lý tưởng, target gần double. Nếu efficiency hoàn hảo:
+Nếu efficiency lý tưởng, số copy tăng gần exponential theo số cycle:
 
 \[
-N_n=N_0 2^n
+N_n \approx N_0 2^n
 \]
 
-Sau 30 cycle, theoretical amplification là hơn một tỷ lần.
+Đây là exponential growth model quay lại trong molecular experiment.
 
-Thực tế efficiency không 100%, reagent trở thành limiting và product accumulation plateau.
+## 3. Primer tạo specificity
 
-### Primer quyết định specificity
+PCR không khuếch đại “mọi DNA”. Primer define boundary region.
 
-Primer là short DNA sequence định nghĩa boundary target. Nếu primer bind sai location, nonspecific product xuất hiện.
+Nếu primer match nhiều site, non-specific product xuất hiện. Nếu temperature annealing quá thấp, mismatch dễ xảy ra; quá cao, primer khó bind.
 
-PCR vì vậy là combination của sequence design + thermodynamics + enzyme kinetics.
+Vì vậy PCR design là application của base pairing thermodynamics.
 
-## qPCR — từ có/không sang định lượng
+## 4. Gel electrophoresis: charge + size trở thành separation
 
-**Quantitative PCR (qPCR / 실시간 PCR)** theo dõi fluorescence trong amplification.
+DNA backbone mang negative charge. Trong electric field, DNA di chuyển về positive electrode.
 
-Cycle threshold thấp hơn thường nghĩa starting template nhiều hơn, nhưng quantitative interpretation cần efficiency, standard/reference và normalization.
+Gel matrix cản fragment lớn nhiều hơn fragment nhỏ, nên fragment nhỏ chạy xa hơn.
 
-Khi dùng reverse transcription trước PCR để đo RNA, ta có RT-qPCR.
+Một kỹ thuật lab đơn giản kết hợp chemistry của phosphate charge với physics của porous medium.
 
-RNA được convert thành cDNA vì standard DNA polymerase PCR cần DNA template.
+## 5. Recombinant DNA và plasmid
 
-## Restriction enzyme và cloning
+Plasmid là circular DNA có thể replicate trong bacteria.
 
-**Restriction enzyme (제한효소)** nhận sequence DNA đặc hiệu và cắt DNA.
+Nếu insert gene vào plasmid, transform bacteria và select cell mang plasmid, ta có thể clone DNA hoặc expression protein.
 
-**DNA ligase** nối DNA end.
+Vector thường có origin of replication, selectable marker và cloning/expression region.
 
-Classical molecular cloning dùng restriction/ligation hoặc modern assembly method để đưa DNA insert vào vector như plasmid.
+Đây là việc biến natural bacterial DNA element thành engineering platform.
 
-Plasmid thường có origin of replication, selectable marker và cloning/expression region.
+## 6. DNA sequencing: từ molecule sang string
 
-Khi plasmid được đưa vào bacteria, bacteria có thể replicate plasmid; nếu vector expression phù hợp, cell có thể produce recombinant protein.
+Sequencing đo order A/C/G/T.
 
-## Recombinant protein — gene trở thành factory instruction
+Sanger sequencing dùng chain-terminating nucleotide để tạo fragment có length khác nhau rồi đọc order.
 
-Human insulin historically từng được lấy từ animal pancreas; recombinant DNA technology cho phép đưa human insulin gene vào microorganism production system.
+Modern high-throughput sequencing tạo hàng triệu read song song.
 
-Nhưng “đưa gene vào là xong” quá đơn giản. Expression cần promoter, codon/context phù hợp, folding, post-translational modification và purification.
+Nhưng machine output chưa phải “genome”. Nó là measurement cần computation.
 
-E. coli tốt cho nhiều protein nhưng không thực hiện mọi eukaryotic modification, nên mammalian/yeast/insect cell system được dùng tùy protein.
+## 7. Read, coverage và error
 
-## Sequencing — đọc order nucleotide
+Một **read** là đoạn sequence máy đo được.
 
-### Sanger sequencing
+Nếu genome được đọc nhiều lần, ta có **coverage** cao hơn, giúp distinguish sequencing error khỏi true variant.
 
-Sanger method dùng chain-terminating nucleotide để tạo fragment kết thúc ở từng base, sau đó phân tách theo size để infer sequence.
+Coverage không phân bố hoàn toàn đều; GC content, library preparation và mapping ambiguity tạo bias.
 
-Nó đọc tương đối dài và accuracy cao nhưng throughput thấp hơn modern sequencing.
+Do đó experimental design và computational interpretation phải đi cùng nhau.
 
-### Next-generation sequencing
+## 8. Mapping và alignment
 
-**NGS (차세대 염기서열 분석)** tạo rất nhiều short/medium read song song.
+Nếu có reference genome, read có thể được **mapped** tới vị trí giống nhất.
 
-Thay vì đọc chromosome từ đầu tới cuối trong một molecule hoàn hảo, ta nhận millions reads rồi computationally reconstruct hoặc align.
+Sequence alignment tìm cách đặt character tương đồng cạnh nhau, cho phép mismatch và gap.
 
-Đây là lý do sequencing trở thành data problem.
+Một scoring scheme đơn giản thưởng match, phạt mismatch/gap.
 
-### Long-read sequencing
+Dynamic programming như Needleman–Wunsch/Smith–Waterman giải alignment optimal trong model nhất định.
 
-Long-read technology đọc molecule dài hơn, giúp resolve repetitive region, structural variant và genome assembly. Error profile và cost trade-off thay đổi theo platform/generation.
+Biology ở đây gặp algorithms trực tiếp.
 
-Không có “best sequencing” tuyệt đối; choice phụ thuộc question.
+## 9. BLAST: similarity search không đồng nghĩa identity
 
-# Bioinformatics — khi biological information thành data structure
+BLAST tìm sequence region tương tự trong database nhanh hơn full dynamic-programming exhaustive search.
 
-**Bioinformatics (tin sinh học / 생물정보학)** dùng algorithm, statistics và computation để lưu, so sánh và interpret biological data.
+High similarity có thể gợi ý homology/function nhưng không tự động chứng minh cùng function.
 
-Một DNA sequence có thể được biểu diễn như string trên alphabet `{A,C,G,T}`. Từ góc CS, nhiều bài toán biology trở thành string matching, dynamic programming, graph, probabilistic inference và large-scale data processing.
+E-value và score giúp đánh giá match có đáng chú ý so với chance không.
 
-## Sequence alignment — hai sequence giống nhau đến đâu?
+Again: computational hit là evidence, không phải final biological conclusion.
 
-Nếu hai sequence share ancestry, mutation có thể tạo substitution, insertion, deletion.
+## 10. Genome assembly: reconstruct whole từ fragment
 
-**Alignment (정렬)** cố đặt character tương ứng sao cho relation hợp lý.
+Nếu không dựa reference, ta phải assemble read thành longer contig.
 
-Ví dụ:
+Short-read assembly thường dùng overlap/de Bruijn graph concept.
+
+Repeat region làm assembly khó vì cùng sequence có thể xuất hiện ở nhiều vị trí.
+
+Đây là graph problem sinh ra trực tiếp từ physical constraint của sequencing.
+
+## 11. Variant calling: từ read difference tới genotype
+
+Sau mapping, ta tìm position read khác reference.
+
+Nhưng mismatch có thể do sequencing error, mapping error hoặc true variant.
+
+Variant caller dùng depth, base quality, allele fraction và statistical model để estimate genotype.
+
+Data pipeline vì thế là inference under uncertainty.
+
+## 12. RNA-seq: đo gene expression trên quy mô genome
+
+RNA được convert thành cDNA rồi sequencing. Read count liên quan abundance transcript.
+
+Nhưng raw count phụ thuộc sequencing depth và gene length/context, nên cần normalization tùy analysis.
+
+Differential-expression test phải xét biological replicate và variance.
+
+Một heatmap đẹp không thay thế experimental design tốt.
+
+## 13. Single-cell omics: average có thể che mất heterogeneity
+
+Bulk RNA-seq trộn signal nhiều cell. Single-cell RNA-seq đo từng cell, giúp phát hiện cell type/state hiếm.
+
+Nhưng data sparse và noisy hơn. Analysis cần dimension reduction, clustering và careful interpretation.
+
+Đây là nơi statistics/ML hỗ trợ biology, nhưng cluster không tự động tương đương “cell type thật” nếu thiếu biological validation.
+
+## 14. CRISPR-Cas: từ bacterial immunity tới gene editing
+
+CRISPR-Cas system tự nhiên dùng guide RNA để nhận sequence complementary và Cas protein cắt target.
+
+Trong gene editing, ta design guide RNA tới genomic target.
+
+Sau double-strand break, cell repair bằng pathway như NHEJ hoặc HDR. Editing outcome phụ thuộc chính repair machinery của host.
+
+Tool vì thế không “viết DNA tùy ý” một cách magic; nó tạo targeted damage rồi khai thác repair.
+
+## 15. Off-target và delivery là phần của problem
+
+Một editor tốt không chỉ cần cắt target in vitro. Nó phải đến đúng cell/tissue, đủ expression, ít immune/toxic effect và hạn chế off-target.
+
+Engineering challenge luôn gồm system context, không chỉ molecular specificity.
+
+## 16. Synthetic biology: thiết kế circuit bằng component sinh học
+
+Synthetic biology cố xây circuit gene có behavior mong muốn.
+
+Promoter, repressor, activator và sensor có thể ghép thành logical function.
+
+Ví dụ negative-feedback circuit ổn định expression; toggle switch dùng positive feedback để giữ hai state.
+
+Control theory và gene regulation gặp nhau ở đây.
+
+## 17. Systems biology: khi một gene không đủ giải thích phenotype
+
+Nhiều phenotype xuất hiện từ network interaction.
+
+Systems biology dùng network, differential equation và multi-omics để mô hình hóa system-level behavior.
+
+Ví dụ signaling pathway có feedback, metabolic network có flux constraint, gene-regulatory network có attractor.
+
+Mục tiêu không phải vẽ network càng lớn càng tốt, mà tìm model đủ để predict response và test experiment.
+
+## 18. Machine learning trong biology
+
+ML có thể classify cell, predict protein structure/property, detect image pattern hoặc estimate risk từ high-dimensional data.
+
+Nhưng prediction khác explanation.
+
+Một model có accuracy cao có thể exploit confounder. Biological validation vẫn cần để nói mechanism.
+
+Causal inference và experimental intervention là bổ sung quan trọng cho predictive ML.
+
+## 19. Protein structure prediction nối sequence với function
+
+Protein chapter đã xây sequence → folding → function.
+
+Computational structure prediction cố estimate 3D structure từ sequence và evolutionary information.
+
+Structure prediction mạnh giúp hypothesis about binding/function, nhưng dynamic, post-translational modification và cellular environment vẫn cần experiment.
+
+## 20. Database và reproducibility
+
+Bioinformatics phụ thuộc database lớn: genome reference, protein sequence, structure, expression dataset.
+
+Pipeline phải track software version, parameter, reference build và sample metadata.
+
+Đây là điểm software engineering gặp science: reproducibility cần version control, container, workflow và provenance.
+
+## 21. Experimental causality: đo nhiều chưa đủ
+
+Omics thường nói “A associated B”. Gene editing, knockdown/overexpression hoặc controlled perturbation giúp test causality.
+
+Một strong workflow:
 
 ```text
-ACGTTGCA
-ACG-TGGA
+observation
+ ↓
+hypothesis
+ ↓
+perturbation
+ ↓
+measurement
+ ↓
+model update
 ```
 
-Gap đại diện insertion/deletion hypothesis.
+Science tiến theo loop này, không phải data collection một chiều.
 
-## Global và local alignment
+## 22. Ethical layer
 
-**Global alignment** cố align toàn sequence, phù hợp sequence cùng chiều dài/relatedness cao.
+Gene editing, human genomic data, synthetic organism và clinical prediction có ethical issue: consent, privacy, equity, off-target risk và ecological consequence.
 
-**Local alignment** tìm region tương đồng tốt nhất, hữu ích khi protein share domain hoặc sequence dài chỉ có một đoạn related.
+Biological capability không tự trả lời “nên làm gì”. Scientific understanding phải được kết hợp ethical/legal/social reasoning.
 
-Needleman–Wunsch và Smith–Waterman dùng **dynamic programming** để tìm optimal alignment theo scoring scheme.
+## 23. Từ biotechnology sang connections tổng thể
 
-Connection với Computer Science không phải ví dụ trang trí: đây là algorithm thực sự đứng sau molecular comparison.
+Biotechnology cho thấy các concept tưởng xa nhau thực ra dùng chung pattern:
 
-## Scoring alignment
+- PCR dùng exponential amplification;
+- sequencing dùng probability/statistics;
+- assembly dùng graph;
+- systems biology dùng differential equation;
+- ML dùng optimization;
+- CRISPR dùng base pairing + microbial evolution.
 
-Match được reward; mismatch và gap bị penalty. Với protein, substitution matrix như BLOSUM encode probability/biological plausibility của amino-acid replacement.
-
-Thay scoring parameter có thể đổi alignment. Vì vậy alignment là model-based inference, không phải một “sự thật duy nhất” không phụ thuộc assumption.
-
-## Genome assembly — reconstruct từ fragment
-
-Nếu không có reference, reads phải được ghép thành genome.
-
-Một approach dùng overlap giữa read; modern short-read assembly thường dùng **de Bruijn graph** từ k-mer.
-
-Node/edge biểu diễn overlap sequence. Repetitive DNA tạo ambiguity giống việc ghép puzzle có nhiều mảnh giống nhau.
-
-Long read giúp bridge repeat region dài hơn.
-
-## Read mapping
-
-Nếu có reference genome, read được align vào reference.
-
-Challenge gồm sequencing error, repetitive region và true biological variant.
-
-Mapper thường dùng index/data structure để tránh so mỗi read với mọi position, vì brute force quá chậm.
-
-## Variant calling
-
-Sau mapping, software tìm position nơi sample khác reference.
-
-Nhưng một mismatch có thể đến từ sequencing error. Vì vậy variant caller dùng read depth, base quality, mapping quality và probabilistic/statistical model.
-
-“Computer thấy chữ khác” chưa đủ để kết luận biological variant.
-
-## Gene expression data
-
-RNA-seq đo abundance RNA transcript bằng sequencing.
-
-Pipeline conceptual:
-
-```text
-RNA → library → sequencing reads → QC → alignment/quantification → normalization → statistical comparison
-```
-
-Raw read count phụ thuộc sequencing depth và gene length/context, nên comparison cần normalization.
-
-**Differential expression** nói gene có evidence expression khác giữa condition; nó không tự chứng minh gene gây phenotype.
-
-## Multiple testing
-
-Genome-wide analysis có thể test hàng nghìn gene.
-
-Nếu dùng p < 0.05 cho 20,000 test độc lập dưới null, số false positive kỳ vọng có thể rất lớn.
-
-Do đó bioinformatics dùng correction như **false discovery rate (FDR)**.
-
-Đây là connection quan trọng với statistics: dữ liệu lớn không tự động làm inference đúng; multiple comparison làm vấn đề khó hơn.
-
-## Single-cell data
-
-Single-cell RNA-seq tạo matrix cell × gene rất lớn và sparse.
-
-Workflow thường có quality control, normalization, dimensionality reduction, clustering và marker interpretation.
-
-PCA, nearest-neighbor graph, UMAP/t-SNE thường xuất hiện.
-
-Clustering là computational grouping dựa feature; biological cell type cần validation bằng marker, function và context. Algorithm không “phát hiện cell type” một cách tuyệt đối.
-
-# CRISPR — từ immune mechanism của bacteria đến genome editing
-
-**CRISPR–Cas** bắt nguồn từ adaptive defense system ở bacteria/archaea.
-
-Trong engineered genome editing, guide RNA đưa Cas nuclease đến DNA target có sequence phù hợp và PAM requirement.
-
-Cas tạo cut; cell repair DNA bằng pathway như NHEJ hoặc HDR.
-
-NHEJ thường tạo small indel, useful cho gene disruption. HDR có thể đưa template-directed change nhưng efficiency/context khác nhau.
-
-Điểm quan trọng: CRISPR không “viết DNA tùy ý như text editor” hoàn hảo. Off-target, delivery, mosaicism và repair outcome là practical constraint.
-
-## Gene editing khác gene therapy
-
-**Gene editing** thay sequence genome ở target.
-
-**Gene therapy** rộng hơn: có thể đưa functional gene copy mà không edit original locus.
-
-Vector delivery, target tissue, duration expression và immune response là central design issue.
-
-# Omics — đo nhiều layer cùng lúc
-
-**Genomics**: DNA/genome.
-
-**Transcriptomics**: RNA expression.
-
-**Proteomics**: protein abundance/modification.
-
-**Metabolomics**: small metabolite.
-
-Mỗi layer trả lời câu hỏi khác. DNA relatively stable; RNA dynamic; protein gần function hơn nhưng khó đo; metabolite phản ánh state gần phenotype.
-
-Một genome không đủ để suy toàn bộ cell state.
-
-# Systems biology — từ list thành network
-
-Nếu thousands gene/protein interact, ta cần model network.
-
-## Graph model
-
-Node có thể là gene/protein/metabolite; edge là regulation hoặc physical interaction.
-
-Degree, centrality, module và community detection giúp mô tả network.
-
-Nhưng network database có bias: protein được nghiên cứu nhiều có thể có nhiều recorded edge hơn.
-
-## Dynamic model
-
-Concentration một protein \(X\) có thể model đơn giản:
-
-\[
-\frac{dX}{dt}=production-degradation
-\]
-
-Nếu production bị regulator Y ảnh hưởng:
-
-\[
-\frac{dX}{dt}=f(Y)-kX
-\]
-
-Differential equation giúp hỏi system có stable state, oscillation hay switch behavior.
-
-Gene regulatory circuit và signaling pathway có thể được nhìn như control system.
-
-## Feedback tạo switch và oscillation
-
-Positive feedback có thể tạo bistability: system ở state OFF hoặc ON.
-
-Negative feedback với delay có thể tạo oscillation.
-
-Circadian clock và developmental switch cho thấy dynamical systems concept rất relevant biology.
-
-# Machine learning trong biology
-
-ML có thể predict protein structure/property, classify cell, estimate regulatory pattern hoặc model medical image/genomic data.
-
-Nhưng biology data thường có high dimension, small effective sample, batch effect và confounding.
-
-Một model accuracy cao trên test set cùng distribution chưa chắc generalize sang hospital/population khác.
-
-Interpretation phải tách **prediction** khỏi **causal explanation**.
-
-## Feature và representation
-
-DNA sequence có thể encode bằng one-hot, k-mer, embedding hoặc pretrained sequence model.
-
-Protein có sequence embedding, structure graph và physicochemical feature.
-
-Representation quyết định pattern model có thể dễ học.
-
-## Data leakage
-
-Nếu highly similar sequence của cùng family nằm cả train/test, performance có thể bị inflated. Split strategy phải phản ánh real deployment question, ví dụ split theo protein family hoặc time.
-
-Đây là software/ML principle có consequence sinh học trực tiếp.
-
-# Synthetic biology — engineering biological circuit
-
-**Synthetic biology (합성생물학)** cố thiết kế biological component/circuit theo engineering principle.
-
-Một genetic circuit có promoter, sensor, regulator và output.
-
-Logic gate có thể được implement approximate bằng gene regulation:
-
-```text
-Input A + Input B → regulatory network → reporter output
-```
-
-Nhưng biological component noisy, context-dependent và burden host cell. Vì vậy “programming cell” là analogy hữu ích nhưng cell không deterministic như CPU.
-
-# Ethics và interpretation
-
-Khả năng sequence/edit genome tạo vấn đề privacy, consent, equity và long-term consequence.
-
-Genetic data có tính familial: information về một người có thể gợi ý information về relative.
-
-Gene-editing germline còn ảnh hưởng generation chưa thể consent và có uncertainty dài hạn.
-
-Do đó biotechnology không chỉ là technical optimization; governance và ethics là part của responsible science.
-
-## Common misconceptions
-
-### “PCR đọc sequence DNA”
-
-PCR chủ yếu amplify target. Sequencing mới xác định order base.
-
-### “CRISPR thay gene chính xác 100%”
-
-Không. Targeting và repair đều có constraint/error possibility.
-
-### “Bioinformatics chỉ là vẽ biểu đồ”
-
-Bioinformatics gồm algorithm, data structure, statistics, database và biological inference.
-
-### “AI có thể tự tìm causal mechanism từ data lớn”
-
-Không tự động. Prediction, association và causation là ba mục tiêu khác nhau.
-
-## Mental Model
-
-> Biotechnology thao tác biological matter; sequencing biến molecule thành data; bioinformatics biến data thành inference; systems biology biến list thành network/dynamics; synthetic biology thử biến understanding thành controllable circuit. Mỗi bước thêm sức mạnh nhưng cũng thêm assumption và uncertainty.
-
-Để thấy các connection xuyên toàn thư viện giữa scale, mathematics và computation, đọc [[../90_connections/00_biology_math_computation_and_scale]].
+Chương cuối [[../90_connections/00_biology_math_computation_and_scale]] sẽ gom các pattern toán–tính toán này theo cách xuyên toàn library, để người đọc thấy cùng một mental model tái xuất từ molecule đến ecosystem.
