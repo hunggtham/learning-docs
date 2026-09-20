@@ -393,7 +393,7 @@ tìm được thông tin
 
 Hệ thống y tế tốt không đẩy toàn bộ trách nhiệm sang bệnh nhân. Thiết kế biểu mẫu, ngôn ngữ đơn giản, nhắc lại thông tin và xác nhận người bệnh đã hiểu đều có thể giảm lỗi.
 
-## teach-back: “đã giải thích” chưa chắc “đã được hiểu”
+## Xác nhận bằng cách yêu cầu người bệnh diễn đạt lại (teach-back)
 
 Một cách giao tiếp hữu ích là yêu cầu bệnh nhân diễn đạt lại kế hoạch bằng lời của mình. Mục tiêu không phải kiểm tra trí nhớ mà kiểm tra chất lượng truyền thông.
 
@@ -406,7 +406,7 @@ bác sĩ giải thích
 
 Điều này giống giao tiếp vòng kín trong công việc: thông tin chỉ hoàn tất khi bên nhận đã giải mã đúng, không phải khi bên gửi đã nói xong.
 
-## shared decision-making: quyết định y khoa không chỉ là “bác sĩ chọn” hoặc “bệnh nhân tự chọn”
+## Ra quyết định chung (shared decision-making): không chỉ là “bác sĩ chọn” hoặc “bệnh nhân tự chọn”
 
 **Ra quyết định chung (shared decision-making)** đặc biệt quan trọng khi có nhiều lựa chọn hợp lý với đánh đổi khác nhau.
 
@@ -562,11 +562,11 @@ Văn hoá: triệu chứng, chăm sóc và quyết định được hiểu/giao 
 
 Sai lầm xảy ra khi dùng một lớp trả lời câu hỏi của lớp khác, ví dụ dùng “truyền thống lâu đời” để chứng minh hiệu quả, hoặc dùng “nghiên cứu cho thấy có tác dụng” để suy rằng mọi người bắt buộc phải thích can thiệp đó.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model)
 
 > Văn hoá sức khoẻ Hàn Quốc là đầu ra của **cơ thể + bảo hiểm/khả năng tiếp cận + mạng cơ sở y tế + môi trường vật lý/số + tính liên tục thông tin + kỳ vọng gia đình + thị trường tiêu dùng + thông tin số**. Đừng chỉ hỏi “đi đâu chữa bệnh?”. Hãy hỏi thông tin có đi cùng người bệnh không, ai đang giữ kế hoạch dài hạn, người bệnh có hiểu lựa chọn và rủi ro không, và điểm chuyển giao nào dễ làm trạng thái bị mất.
 
-## Hiểu lầm phổ biến (Common Misconceptions)
+## Hiểu lầm phổ biến (common misconceptions)
 
 “Đi bệnh viện nhiều = sức khoẻ dân số kém” bỏ qua ảnh hưởng của khả năng tiếp cận và mức sử dụng.
 
