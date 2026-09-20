@@ -25,6 +25,12 @@ self.addEventListener('activate', event => {
   })());
 });
 
+const offlineResponse = () => new Response('Offline resource unavailable', {
+  status: 503,
+  statusText: 'Offline',
+  headers: { 'Content-Type': 'text/plain; charset=utf-8' }
+});
+
 async function networkFirst(request) {
   const cache = await caches.open(CONTENT_CACHE);
   try {
@@ -32,18 +38,26 @@ async function networkFirst(request) {
     if (response.ok) cache.put(request, response.clone());
     return response;
   } catch {
-    return (await cache.match(request)) || (await caches.match(request));
+    return (await cache.match(request)) || (await caches.match(request)) || offlineResponse();
   }
 }
 
 async function staleWhileRevalidate(request) {
   const cache = await caches.open(CONTENT_CACHE);
   const cached = await cache.match(request) || await caches.match(request);
-  const update = fetch(request).then(response => {
+  if (cached) {
+    fetch(request).then(response => {
+      if (response.ok) cache.put(request, response.clone());
+    }).catch(() => {});
+    return cached;
+  }
+  try {
+    const response = await fetch(request);
     if (response.ok) cache.put(request, response.clone());
     return response;
-  }).catch(() => null);
-  return cached || update;
+  } catch {
+    return offlineResponse();
+  }
 }
 
 self.addEventListener('fetch', event => {
@@ -52,7 +66,7 @@ self.addEventListener('fetch', event => {
   if (url.origin !== self.location.origin) return;
 
   if (event.request.mode === 'navigate') {
-    event.respondWith(networkFirst(event.request).then(response => response || caches.match('./index.html')));
+    event.respondWith(networkFirst(event.request).then(async response => response.status === 503 ? (await caches.match('./index.html')) || response : response));
     return;
   }
 
