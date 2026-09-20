@@ -431,6 +431,170 @@ Khán giả có thể mệt với công thức lặp lại, ngành nội dung đ
 
 Vì vậy Hallyu nên được mô hình hoá như hệ thống động có tăng trưởng, bão hoà, phản ứng ngược và thích nghi.
 
+# Kinh tế vòng đời nội dung: một hit không kết thúc ở ngày phát hành
+
+## Từ bật đèn xanh đến kho nội dung lâu dài
+
+Trước khi một dự án được sản xuất, nhà đầu tư hoặc studio phải quyết định có **bật đèn xanh (greenlight)** hay không. Quyết định dựa trên kịch bản, đội ngũ, ngân sách, dữ liệu khán giả, khả năng bán quyền và mức rủi ro.
+
+Sau phát hành, giá trị của nội dung có thể tiếp tục qua nhiều giai đoạn:
+
+```text
+phát triển ý tưởng
+→ tài trợ / bật đèn xanh
+→ sản xuất
+→ phát hành lần đầu
+→ khai thác theo khu vực / nền tảng
+→ chuyển thể / hàng hoá / biểu diễn
+→ phát hành lại
+→ lưu trữ / tái khám phá
+```
+
+Vì vậy **vòng đời nội dung (content lifecycle)** dài hơn thời điểm nội dung đang thịnh hành.
+
+## Danh mục dự án: công ty không thể đặt cược mọi thứ vào một hit
+
+Công nghiệp nội dung có độ bất định cao. Một tác phẩm được đầu tư lớn vẫn có thể thất bại; một tác phẩm nhỏ có thể bất ngờ lan rộng. Vì vậy công ty thường quản lý nhiều dự án như một **danh mục (portfolio)**.
+
+```text
+nhiều dự án
++ mức rủi ro khác nhau
++ thể loại / thị trường khác nhau
+→ giảm phụ thuộc vào một kết quả duy nhất
+```
+
+Điều này giải thích tại sao hệ sinh thái cần cả dự án thử nghiệm, nội dung đại chúng, nghệ sĩ mới và tài sản trí tuệ đã chứng minh nhu cầu. Tối ưu từng dự án riêng lẻ không giống tối ưu toàn bộ danh mục.
+
+## Cửa sổ phát hành: cùng một nội dung có thể được khai thác theo thời gian khác nhau
+
+Nội dung có thể đi qua nhiều **cửa sổ phát hành (release windows)**: rạp, truyền hình, nền tảng đăng ký, mua lẻ, thị trường quốc tế hoặc phát hành lại. Thứ tự và thời gian giữa các cửa sổ ảnh hưởng doanh thu, khả năng tiếp cận và nguy cơ người xem chuyển sang kênh khác.
+
+Streaming làm một số cửa sổ ngắn lại hoặc biến mất, nhưng nguyên lý vẫn còn: **quyền truy cập vào cùng nội dung có thể được định giá khác theo thời điểm, khu vực và kênh**.
+
+## Kho nội dung cũ: giá trị không chỉ đến từ sản phẩm mới
+
+Một nền tảng hoặc công ty sở hữu thư viện phim, nhạc, webtoon và chương trình cũ có thể tiếp tục tạo giá trị khi tác phẩm được đề xuất lại, nghệ sĩ trở nên nổi tiếng hơn hoặc một chủ đề quay lại xu hướng.
+
+Đây là **giá trị danh mục sau phát hành (catalog value)**. Thuật toán đề xuất có thể làm nội dung cũ sống lại mà không cần tái sản xuất từ đầu.
+
+```text
+nội dung cũ
++ ngữ cảnh mới / xu hướng mới
++ đề xuất nền tảng
+→ khán giả mới
+```
+
+Một “hit cũ” vì vậy có thể trở thành tài sản dài hạn.
+
+## Giữ chân người dùng: nền tảng cần nhiều hơn một tác phẩm nổi tiếng
+
+Một phim nổi tiếng có thể kéo người dùng đến, nhưng nền tảng muốn họ tiếp tục ở lại sau khi xem xong. Vì vậy cần phân biệt:
+
+- **thu hút (acquisition)**: điều gì làm người dùng đến;
+- **giữ chân (retention)**: điều gì làm người dùng tiếp tục sử dụng;
+- **rời bỏ (churn)**: khi nào người dùng ngừng trả tiền hoặc ngừng dùng.
+
+Một tác phẩm có thể rất mạnh ở thu hút nhưng yếu ở giữ chân nếu sau đó không có nội dung phù hợp tiếp theo. Vì vậy chiến lược nền tảng thường phụ thuộc cả danh mục, lịch phát hành và khả năng đề xuất nội dung kế tiếp.
+
+## Dữ liệu có thể tối ưu phân phối nhưng không thay được phán đoán sáng tạo
+
+Dữ liệu cho biết người xem bỏ ở phút nào, thể loại nào tăng ở một khu vực hoặc nhóm nào xem lại nhiều. Nhưng dữ liệu quá khứ không luôn dự đoán tốt nội dung mới vì sản phẩm sáng tạo có yếu tố bất ngờ.
+
+Nếu chỉ sản xuất thứ từng thành công, hệ thống có thể rơi vào **tối ưu cục bộ (local optimum)**: làm tốt hơn công thức cũ nhưng giảm khả năng tạo hình thức mới.
+
+```text
+dữ liệu quá khứ
+→ giảm một phần bất định
+nhưng
+→ không xoá nhu cầu thử nghiệm
+```
+
+Đây là đánh đổi giữa **khai thác cái đã biết (exploitation)** và **khám phá cái mới (exploration)**.
+
+## Thành công toàn cầu và bài toán bản địa hoá nhiều tầng
+
+Bản địa hoá không chỉ là phụ đề. Một nội dung đi quốc tế còn phải xử lý:
+
+```text
+ngôn ngữ
++ phân loại độ tuổi
++ chuẩn pháp lý / hợp đồng
++ thanh toán
++ thời điểm phát hành
++ tiếp thị địa phương
++ tham chiếu văn hoá
+```
+
+Một tác phẩm có thể thành công ở nước này nhưng không ở nước khác vì các tầng ma sát khác nhau. “Nội dung phổ quát” hiếm khi hoàn toàn không cần hạ tầng địa phương.
+
+## Tính xác thực và tính dễ tiếp cận toàn cầu không phải hai cực
+
+Khi nội dung được xuất khẩu, người sản xuất có thể đứng trước câu hỏi: giữ chi tiết địa phương đến mức nào, giải thích bao nhiêu, thay đổi bao nhiêu để khán giả mới hiểu?
+
+Nếu giản lược quá mạnh, tác phẩm có thể mất đặc trưng; nếu giữ mọi tham chiếu mà không tạo lối vào, chi phí hiểu tăng. Đây là bài toán **bản địa đặc thù ↔ khả năng tiếp cận quốc tế**.
+
+Phụ đề, chú thích ngữ cảnh, chiến dịch truyền thông và cộng đồng fan có thể đóng vai trò lớp cầu nối thay vì buộc bản thân tác phẩm phải xoá mọi đặc trưng địa phương.
+
+## Cạnh tranh chú ý và bão hoà: nhiều nội dung hơn có thể làm mỗi nội dung khó được nhìn thấy hơn
+
+Chi phí sản xuất và phân phối số giảm làm nguồn cung nội dung tăng. Nhưng thời gian chú ý của khán giả không tăng tương ứng.
+
+```text
+nguồn cung nội dung tăng nhanh
++ thời gian người xem hữu hạn
+→ cạnh tranh khả năng được nhìn thấy tăng
+```
+
+Khi đó chi phí tiếp thị, thương hiệu nghệ sĩ, fandom có sẵn và vị trí trên nền tảng trở nên quan trọng hơn. Đây là lý do thành công của ngành không tự động đồng nghĩa cơ hội của mọi người sáng tạo đều tăng như nhau.
+
+## Quyền sở hữu IP và quyền thương lượng tích luỹ theo thời gian
+
+Một người sáng tạo có một tác phẩm thành công nhưng không giữ quyền khai thác lâu dài có thể nhận ít lợi ích từ các vòng chuyển thể sau. Ngược lại, người hoặc công ty giữ IP có thể tích luỹ quyền thương lượng khi tài sản tiếp tục sinh doanh thu.
+
+Điều này tạo **hiệu ứng tích luỹ (cumulative advantage)**:
+
+```text
+IP thành công
+→ doanh thu / dữ liệu / danh tiếng
+→ vốn để đầu tư dự án mới
+→ quyền thương lượng cao hơn
+→ khả năng giữ quyền tốt hơn
+```
+
+Cơ chế này giúp giải thích vì sao thị trường sáng tạo có thể đồng thời rất năng động và rất tập trung.
+
+## Lưu trữ, phiên bản và “bản chính thức” trong thời đại số
+
+Nội dung số có thể tồn tại ở nhiều phiên bản: bản phát sóng, bản quốc tế, bản cắt lại, phụ đề khác nhau, remaster hoặc clip ngắn. Điều này làm câu hỏi “đâu là bản gốc?” phức tạp hơn.
+
+Một hệ thống lưu trữ tốt cần theo dõi:
+
+```text
+phiên bản
++ nguồn gốc
++ quyền sử dụng
++ metadata
++ chất lượng tệp
++ lịch sử chỉnh sửa
+```
+
+Khi nền tảng đóng hoặc quyền phân phối hết hạn, nội dung có thể biến mất khỏi nơi người dùng quen truy cập dù dữ liệu vật lý vẫn tồn tại. Vì vậy bảo tồn văn hoá số liên quan cả lưu trữ lẫn quyền truy cập.
+
+## Hallyu như một vòng phản hồi giữa nội dung, dữ liệu và vốn
+
+Có thể mô hình hoá sâu hơn:
+
+```text
+nội dung
+→ khán giả
+→ dữ liệu hành vi
+→ quyết định đầu tư
+→ quyền / phân phối
+→ nội dung mới
+```
+
+Nếu vòng phản hồi quá tập trung vào chỉ số ngắn hạn, hệ thống có thể ưu tiên công thức dễ đo. Nếu không dùng dữ liệu, nhà đầu tư lại bỏ qua tín hiệu nhu cầu có giá trị. Bài toán không phải “dùng dữ liệu hay không”, mà là **dùng dữ liệu cho câu hỏi nào và giữ bao nhiêu không gian cho thử nghiệm sáng tạo**.
+
 ## Liên hệ kiến thức: Hallyu như một chồng giao thức và chuỗi giá trị
 
 ```text
@@ -442,13 +606,14 @@ lớp phân phối: nền tảng / đài / rạp / nhà phát hành
 lớp khám phá: thuật toán / tìm kiếm / mạng xã hội
 lớp cộng đồng: fandom / dịch / remix
 lớp thương mại: album / vé / hàng lưu niệm / du lịch
+lớp vòng đời: danh mục / phát hành lại / lưu trữ / tái khám phá
 ```
 
 Lỗi hoặc bất cân xứng ở một lớp có thể làm thay đổi giá trị của lớp khác. Nội dung xuất sắc nhưng không được phân phối sẽ khó tiếp cận; người sáng tạo có tác phẩm nổi tiếng nhưng hợp đồng yếu có thể nhận ít giá trị kinh tế; nền tảng lớn nhưng mất lòng tin của người dùng có thể giảm sức mạnh mạng lưới.
 
 ## Mô hình tư duy
 
-> Hallyu là **mạng lưới giữa sáng tạo, lao động, quyền sở hữu trí tuệ, nền tảng, fandom và các ngành lân cận**. Người nổi tiếng là phần dễ thấy nhất, nhưng không phải toàn bộ hệ thống. Muốn hiểu một “làn sóng”, phải hỏi đồng thời: ai tạo ra nội dung, ai tài trợ, ai giữ quyền, ai phân phối, ai làm nội dung được nhìn thấy và giá trị cuối cùng được chia như thế nào.
+> Hallyu là **mạng lưới giữa sáng tạo, lao động, quyền sở hữu trí tuệ, nền tảng, fandom, dữ liệu và vòng đời khai thác nội dung**. Người nổi tiếng là phần dễ thấy nhất, nhưng không phải toàn bộ hệ thống. Muốn hiểu một “làn sóng”, phải hỏi đồng thời: ai tạo ra nội dung, ai tài trợ, ai giữ quyền, ai phân phối, ai làm nội dung được nhìn thấy, giá trị được chia như thế nào và tài sản đó còn được khai thác ra sao sau thời điểm phát hành đầu tiên.
 
 ## Những hiểu lầm phổ biến
 
@@ -467,6 +632,10 @@ Lỗi hoặc bất cân xứng ở một lớp có thể làm thay đổi giá t
 “Được ghi credit nghĩa là sở hữu quyền” là sai; ghi công, quyền sở hữu và doanh thu là ba lớp khác nhau.
 
 “Dùng AI tạo nội dung chỉ là vấn đề kỹ thuật” là quá hẹp; đồng ý, quyền hình ảnh, xác thực và nguồn gốc nội dung đều là vấn đề xã hội–pháp lý cần được kiểm tra theo quy định hiện hành.
+
+“Nội dung nổi tiếng trong tuần phát hành là tài sản có giá trị dài hạn” chưa chắc đúng; cần xem khả năng giữ khán giả, tái khám phá, chuyển thể và quyền khai thác.
+
+“Dữ liệu sẽ cho biết chính xác nên sáng tạo gì” là sai; dữ liệu giảm một phần bất định nhưng không thay được thử nghiệm, phán đoán nghệ thuật và khả năng tạo nhu cầu mới.
 
 ## Nguồn tham khảo cập nhật
 
