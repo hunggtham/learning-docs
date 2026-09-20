@@ -16,6 +16,8 @@ Lĩnh vực này xem giao dịch như một hệ thống xác suất có chi ph�
 
 [05_OPTIONS_VOLATILITY_SURFACE_GREEKS_AND_HEDGING.md](./05_OPTIONS_VOLATILITY_SURFACE_GREEKS_AND_HEDGING.md) đi sâu quyền chọn như bài toán phân phối xác suất và rủi ro phụ thuộc trạng thái: giá kỳ hạn và carry, Delta/Gamma/Theta/Vega cùng các Greek bậc cao, biến động ngụ ý so với biến động thực tế, phần bù rủi ro biến động, skew, risk reversal, độ cong, cấu trúc kỳ hạn, bề mặt biến động, vol-of-vol, gamma scalping, assignment, pin risk, jump risk, Greek theo giá trị tiền, ngân sách phòng vệ đuôi và khó khăn khi kiểm thử quyền chọn.
 
+[06_TRADING_SYSTEM_DESIGN_RISK_AND_EXECUTION_LAB.md](./06_TRADING_SYSTEM_DESIGN_RISK_AND_EXECUTION_LAB.md) là lớp học sâu nối giả thuyết, dữ liệu đúng thời điểm, kiểm thử độ bền, sizing, portfolio heat, capacity, execution half-life, TCA, margin stress, forward test, production monitoring, drift detection, kill switch và tiêu chí dừng chiến lược.
+
 ## Sau lĩnh vực này bạn cần làm được gì?
 
 Bạn cần có khả năng đọc một công cụ phái sinh bằng chuỗi `tài sản cơ sở → cấu trúc chi trả → giá trị danh nghĩa/độ nhạy → carry/basis → ký quỹ/tài sản thế chấp → thanh khoản/đáo hạn → đối tác/thanh toán → tương tác với danh mục`.
@@ -27,5 +29,7 @@ Với quyền chọn, cần đọc vị thế bằng `hướng giá + biến đ�
 ## Bài tập tích hợp
 
 Đọc [Cú sốc CPI → Danh mục](../07_integrated_case_studies/01_INFLATION_SHOCK_FROM_CPI_TO_PORTFOLIO.md) để luyện thực thi quanh sự kiện, ghép đúng công cụ phòng vệ, rủi ro IV và phân rã kết quả sau sự kiện. Đọc [Khủng hoảng tín dụng và thanh khoản](../07_integrated_case_studies/02_CREDIT_LIQUIDITY_CRISIS_TRANSMISSION.md) để luyện căng thẳng ký quỹ/tài sản thế chấp, giảm đòn bẩy cưỡng bức, thứ bậc thanh khoản và thực thi trong khủng hoảng.
+
+Sau đó hoàn thành **Module 5 — Trading & Derivatives** trong [Advanced Practice Workbook](../ADVANCED_PRACTICE_WORKBOOK.md). Đầu ra tối thiểu phải có đặc tả chiến lược, bias audit, báo cáo backtest, báo cáo thực thi, giới hạn rủi ro, điều kiện kill switch và quy tắc dừng chiến lược.
 
 Sau đó chuyển sang [06 — Thị trường Hàn Quốc và Việt Nam](../06_markets_korea_vietnam/README.md).
