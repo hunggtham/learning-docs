@@ -1,557 +1,445 @@
-# Case Study 03 — Korea Semiconductor Cycle: Từ AI Capex tới Earnings và Valuation
+# Tình huống 03 — Chu kỳ bán dẫn Hàn Quốc: từ capex AI tới lợi nhuận và định giá
 
-> Korean market có trọng số lớn ở semiconductor, nhưng “semiconductor upcycle” không phải một biến duy nhất. Case này học cách tách demand, inventory, ASP, utilization, capex, HBM mix, equipment/material suppliers, FX, earnings revisions và valuation để tránh thesis kiểu “AI tăng → mọi cổ phiếu chip tăng”.
+> Thị trường Hàn Quốc có tỷ trọng lớn ở ngành bán dẫn, nhưng “chu kỳ tăng bán dẫn” không phải một biến duy nhất. Tình huống này tách nhu cầu, tồn kho, giá bán bình quân (ASP), công suất sử dụng, capex, tỷ trọng HBM, nhà cung cấp thiết bị/vật liệu, tỷ giá, điều chỉnh dự báo lợi nhuận và định giá để tránh luận điểm đơn giản kiểu “AI tăng → mọi cổ phiếu chip tăng”.
 
-## 1. Bắt đầu từ Value Chain
+## 1. Bắt đầu từ chuỗi giá trị
 
-Một semiconductor ecosystem đơn giản hóa:
+Một hệ sinh thái bán dẫn đơn giản hóa:
 
 ```text
-End Demand
-→ Cloud / AI / PC / Smartphone / Auto
-→ Chip Designer / Memory Producer
-→ Foundry / Packaging
-→ Equipment
-→ Materials / Chemicals / Components
-→ Distribution / OEM
+Nhu cầu cuối
+→ Cloud / AI / PC / Smartphone / Ô tô
+→ Nhà thiết kế chip / Nhà sản xuất bộ nhớ
+→ Foundry / Đóng gói
+→ Thiết bị
+→ Vật liệu / Hóa chất / Linh kiện
+→ Phân phối / OEM
 ```
 
-Mỗi node có cycle khác nhau. Memory producer có commodity-like pricing; equipment supplier phụ thuộc capex; materials supplier phụ thuộc wafer starts/utilization; fabless company phụ thuộc design wins và end demand.
+Mỗi mắt xích có chu kỳ khác nhau. Nhà sản xuất bộ nhớ chịu cơ chế giá giống hàng hóa hơn; nhà cung cấp thiết bị phụ thuộc capex; nhà cung cấp vật liệu phụ thuộc số wafer bắt đầu sản xuất và công suất sử dụng; doanh nghiệp fabless phụ thuộc thiết kế được khách hàng lựa chọn và nhu cầu cuối.
 
-## 2. Demand không đồng nhất
+## 2. Nhu cầu không đồng nhất
 
-“Chip demand” nên tách theo end market:
+“Nhu cầu chip” phải được tách theo thị trường cuối:
 
 ```text
-AI Servers
-Traditional Data Center
+Máy chủ AI
+Trung tâm dữ liệu truyền thống
 PC
-Smartphone
-Automotive
-Industrial
-Consumer Electronics
+Điện thoại thông minh
+Ô tô
+Công nghiệp
+Điện tử tiêu dùng
 ```
 
-AI/HBM demand có thể rất mạnh trong khi smartphone/PC recovery yếu. Aggregate semiconductor revenue có thể che sự phân hóa này.
+Nhu cầu AI/HBM có thể rất mạnh trong khi PC hoặc smartphone chỉ phục hồi yếu. Doanh thu bán dẫn tổng thể có thể che mất sự phân hóa này.
 
-## 3. Bit Demand vs Revenue
+## 3. Nhu cầu bit và doanh thu
 
-Memory business cần tách volume và price:
+Với bộ nhớ:
 
 ```text
-Revenue ≈ Bit Shipments × ASP
+Doanh thu ≈ Số bit giao hàng × Giá bán bình quân (ASP)
 ```
 
-Bit demand tăng nhưng ASP giảm nhanh vẫn tạo revenue pressure. Ngược lại supply discipline có thể nâng ASP dù unit demand chỉ tăng vừa phải.
+Nhu cầu bit tăng nhưng ASP giảm mạnh vẫn có thể gây áp lực doanh thu. Ngược lại, kỷ luật nguồn cung có thể làm ASP tăng dù nhu cầu đơn vị chỉ tăng vừa phải.
 
-Đây là lý do chỉ nhìn shipment growth không đủ.
+Vì vậy chỉ nhìn tăng trưởng lượng giao hàng là chưa đủ.
 
-## 4. Inventory Cycle
+## 4. Chu kỳ tồn kho
 
-Inventory tồn tại ở nhiều layers:
+Tồn kho nằm ở nhiều tầng:
 
 ```text
-Producer Inventory
-Distributor Inventory
-OEM Inventory
-Customer Inventory
+Tồn kho nhà sản xuất
+Tồn kho nhà phân phối
+Tồn kho OEM
+Tồn kho khách hàng
 ```
 
-Nếu end demand yếu nhưng customers destock, producer shipments có thể giảm mạnh hơn final demand. Khi destocking kết thúc, shipments có thể rebound trước end-demand boom thực sự.
+Nếu nhu cầu cuối yếu nhưng khách hàng đang giảm tồn kho, lượng giao hàng của nhà sản xuất có thể giảm mạnh hơn nhu cầu cuối. Khi quá trình giảm tồn kho kết thúc, lượng giao hàng có thể phục hồi trước khi nhu cầu cuối thật sự bùng nổ.
 
-Inventory cycle vì vậy tạo turning point sớm hơn GDP hoặc reported earnings.
+Chu kỳ tồn kho vì vậy thường tạo điểm đảo chiều sớm hơn GDP hoặc lợi nhuận kế toán.
 
-## 5. Leading vs Lagging Indicators
+## 5. Chỉ báo dẫn dắt và chỉ báo trễ
 
-Leading indicators có thể gồm:
+Chỉ báo dẫn dắt có thể gồm:
 
 ```text
-Spot / Contract Memory Pricing
-Customer Inventory Days
-Order Lead Times
-Capex Guidance
-Utilization Intentions
-Equipment Orders
-HBM Qualification Progress
-Hyperscaler Capex Guidance
+Giá spot / giá hợp đồng bộ nhớ
+Số ngày tồn kho của khách hàng
+Thời gian giao hàng
+Hướng dẫn capex
+Kế hoạch công suất sử dụng
+Đơn hàng thiết bị
+Tiến độ chứng nhận HBM
+Hướng dẫn capex của hyperscaler
 ```
 
-Lagging indicators gồm reported quarterly revenue, gross margin và EPS.
+Chỉ báo trễ gồm doanh thu quý đã báo cáo, biên lợi nhuận gộp và EPS. Giá cổ phiếu thường phản ứng với chỉ báo dẫn dắt trước dữ liệu kế toán.
 
-Stock price thường phản ứng với leading indicators trước accounting data.
+## 6. ASP và kỷ luật nguồn cung
 
-## 6. ASP và Supply Discipline
+Chu kỳ bộ nhớ thường biến động mạnh vì các nhà sản xuất cùng tăng công suất khi giá tốt.
 
-Memory cycle historically biến động vì producers cùng tăng capacity khi pricing tốt.
-
-Nếu demand tăng nhưng supply cũng tăng nhanh hơn, upcycle có thể ngắn.
-
-Key question:
+Câu hỏi cốt lõi:
 
 ```text
-Demand Growth vs Effective Supply Growth
+Tăng trưởng nhu cầu so với tăng trưởng nguồn cung hiệu dụng
 ```
 
-Effective supply không chỉ wafer capacity. Yield, process migration, product mix và packaging bottlenecks đều ảnh hưởng.
+Nguồn cung hiệu dụng không chỉ là số wafer. Yield, chuyển đổi quy trình, cơ cấu sản phẩm và nút thắt đóng gói đều ảnh hưởng lượng sản phẩm bán được.
 
-## 7. HBM khác Commodity Memory thế nào?
+## 7. HBM khác bộ nhớ hàng hóa truyền thống thế nào?
 
-HBM có economics khác commodity DRAM truyền thống vì:
+HBM có đặc điểm kinh tế khác DRAM phổ thông vì chu kỳ chứng nhận dài hơn, đóng gói tiên tiến quan trọng hơn, độ phức tạp yield/bonding cao hơn, khách hàng tập trung hơn, thế hệ sản phẩm thay nhanh và công suất phân bổ bị giới hạn.
 
-- qualification cycles dài hơn;
-- advanced packaging quan trọng;
-- yield/bonding complexity cao;
-- customer concentration lớn;
-- product generations thay nhanh;
-- capacity allocation constrained.
+Biên lợi nhuận HBM cao có thể cùng tồn tại với bộ nhớ phổ thông yếu, nhưng khả năng duy trì phụ thuộc cạnh tranh, yield và việc được khách hàng chứng nhận.
 
-Do đó HBM premium margin có thể coexist với weak commodity memory, nhưng sustainability phụ thuộc competition và customer qualification.
+## 8. Thay đổi cơ cấu sản phẩm
 
-## 8. Mix Shift
-
-Gross margin improvement có thể đến từ:
+Biên lợi nhuận gộp có thể cải thiện nhờ:
 
 ```text
-Higher ASP
-Higher Utilization
-Better Product Mix
-Yield Improvement
-Lower Input Cost
+ASP cao hơn
+Công suất sử dụng cao hơn
+Cơ cấu sản phẩm tốt hơn
+Yield cải thiện
+Chi phí đầu vào thấp hơn
 ```
 
-Nếu margin tăng chỉ nhờ HBM mix trong khi commodity business vẫn weak, investor nên model mix separately.
+Nếu biên lợi nhuận tăng chủ yếu nhờ tỷ trọng HBM trong khi bộ nhớ phổ thông vẫn yếu, nên mô hình hai phần riêng biệt thay vì dùng một biên lợi nhuận chung.
 
-## 9. Utilization
+## 9. Công suất sử dụng và đòn bẩy vận hành
 
-Fab utilization có operating-leverage effect. Fixed depreciation/labor overhead spread over more output khi utilization tăng.
-
-Cycle trough:
+Nhà máy bán dẫn có chi phí cố định lớn. Khi công suất sử dụng tăng, khấu hao và chi phí lao động cố định được phân bổ trên nhiều sản lượng hơn.
 
 ```text
-Low utilization
-→ High unit cost
-→ Weak margin
+Đáy chu kỳ:
+Công suất sử dụng thấp
+→ Chi phí đơn vị cao
+→ Biên lợi nhuận yếu
+
+Phục hồi:
+Tồn kho bình thường hóa
+→ Công suất sử dụng tăng
+→ Chi phí đơn vị giảm
+→ Biên lợi nhuận cải thiện nhanh hơn doanh thu
 ```
 
-Recovery:
+Đây là lý do lợi nhuận có thể đảo chiều rất mạnh.
+
+## 10. Capex vừa là tín hiệu vừa là nguồn cung tương lai
+
+Capex tăng vừa thể hiện niềm tin vào nhu cầu, vừa tạo thêm nguồn cung trong tương lai.
 
 ```text
-Inventory normalizes
-→ Utilization ↑
-→ Unit cost ↓
-→ Margin improves faster than revenue
+Capex nhà sản xuất tăng
+→ Doanh thu nhà cung cấp thiết bị tăng trong ngắn hạn
+NHƯNG
+→ Công suất toàn ngành tăng sau đó
+→ ASP có thể chịu áp lực về sau
 ```
 
-Đây là reason earnings can inflect sharply.
+Do đó cần tách tác động ngắn hạn và dài hạn.
 
-## 10. Capex
+## 11. Nhà cung cấp thiết bị
 
-Capex vừa là signal demand confidence vừa là future supply.
+Lợi nhuận nhà cung cấp thiết bị thường đi trước quá trình mở rộng công suất của nhà sản xuất. Mức phơi nhiễm khác nhau theo công đoạn như lắng đọng, khắc, quang khắc, kiểm tra, đóng gói và kiểm thử.
 
-Near term, capex rise benefits equipment/material suppliers. Long term, excessive capex can create oversupply and hurt producer margins.
+Chuyển đổi công nghệ có thể làm số bước xử lý tăng ngay cả khi số wafer không tăng tương ứng.
 
-Do đó:
+## 12. Nhà cung cấp vật liệu
 
-```text
-Producer Capex ↑
-→ Supplier Revenue ↑ today
-BUT
-→ Industry Capacity ↑ later
-→ Potential ASP Pressure later
-```
+Nhu cầu vật liệu thường gắn với công suất sử dụng và số wafer bắt đầu sản xuất hơn là capex thiết bị. Khi fab chạy nhiều hơn, hóa chất, khí, wafer và vật liệu tiêu hao nhận lợi ích lặp lại.
 
-## 11. Equipment Suppliers
+Tuy nhiên cần kiểm tra mức tập trung khách hàng và độ phụ thuộc vào quy trình chứng nhận.
 
-Equipment supplier earnings thường lead producer capacity expansion. Nhưng exposure khác nhau theo process step:
+## 13. Đóng gói tiên tiến
+
+Bùng nổ AI/HBM làm công đoạn đóng gói phía sau trở thành nút thắt quan trọng hơn.
+
+Cần lập bản đồ:
 
 ```text
-Deposition
-Etch
-Lithography
-Inspection
-Packaging
-Testing
-```
-
-Technology transition có thể tăng process intensity even without proportional wafer growth.
-
-## 12. Materials Suppliers
-
-Materials demand thường gần utilization/wafer starts hơn equipment capex.
-
-Nếu fab utilization tăng, chemicals/gases/wafers có recurring volume benefit. Nhưng customer concentration và qualification dependency lớn.
-
-Một supplier 70% revenue từ one customer có different risk from diversified global materials company.
-
-## 13. Advanced Packaging
-
-AI/HBM boom làm packaging/back-end bottleneck quan trọng hơn traditional cycle.
-
-Investor cần map:
-
-```text
-HBM Stack
+Xếp chồng HBM
 Bonding
 Interposer / Substrate
-Testing
-Thermal / Power
-Packaging Equipment
+Kiểm thử
+Nhiệt / Nguồn điện
+Thiết bị đóng gói
 ```
 
-Không phải mọi supplier được gắn label “AI semiconductor” đều có same content per system.
+Không phải mọi doanh nghiệp được gắn nhãn “AI semiconductor” đều có hàm lượng giá trị giống nhau trong mỗi hệ thống.
 
-## 14. Customer Concentration
+## 14. Tập trung khách hàng
 
-HBM/AI supply chains often concentrated around few hyperscalers/GPU vendors.
+Chuỗi HBM/AI thường tập trung quanh một số hyperscaler hoặc nhà cung cấp GPU lớn. Nhu cầu mạnh từ một khách hàng có thể tạo tăng trưởng rất nhanh nhưng cũng làm tăng quyền thương lượng và rủi ro chứng nhận.
 
-Strong demand từ one customer có thể tạo explosive growth nhưng also bargaining/qualification risk.
+Mức tập trung khách hàng phải xuất hiện trong cả kịch bản tích cực lẫn tiêu cực.
 
-Model customer concentration trong bull và bear case.
+## 15. Kênh KRW
 
-## 15. KRW Channel
-
-Korean semiconductor producers export globally. KRW depreciation có thể support translated earnings nhưng impact phụ thuộc:
+Nhà sản xuất bán dẫn Hàn Quốc xuất khẩu toàn cầu. KRW yếu có thể hỗ trợ lợi nhuận khi quy đổi ngoại tệ, nhưng tác động phụ thuộc:
 
 ```text
-Revenue Currency
-Input Currency
-Capex Currency
-Debt Currency
-Hedge Program
+Đồng tiền doanh thu
+Đồng tiền chi phí đầu vào
+Đồng tiền capex
+Đồng tiền nợ
+Chương trình phòng vệ
 ```
 
-Do not model USD/KRW as pure profit multiplier.
+Không nên dùng USD/KRW như một hệ số nhân lợi nhuận cố định.
 
-## 16. Korea Export Data
+## 16. Dữ liệu xuất khẩu Hàn Quốc
 
-Semiconductor exports provide high-frequency macro check. Nhưng nominal export growth nên tách price và volume khi possible.
+Xuất khẩu bán dẫn là kiểm tra vĩ mô tần suất cao hữu ích. Tuy nhiên tăng trưởng giá trị xuất khẩu danh nghĩa nên được tách giữa giá và sản lượng khi có thể.
 
-Strong export value do ASP recovery khác strong export growth do unit demand expansion. Sustainability implications khác nhau.
+Tăng xuất khẩu do ASP phục hồi khác với tăng xuất khẩu do nhu cầu đơn vị tăng. Độ bền của hai động lực cũng khác nhau.
 
 Đọc thêm: [Korea Market Playbook](../06_markets_korea_vietnam/01_KOREA_MARKET_PLAYBOOK.md).
 
-## 17. AI Capex as Upstream Driver
+## 17. Capex AI là động lực thượng nguồn
 
-Hyperscaler capex growth can support accelerators, networking, memory, power and cooling.
+Capex của hyperscaler có thể hỗ trợ bộ tăng tốc, mạng, bộ nhớ, điện và làm mát. Nhưng tổng capex không chuyển một-một thành lợi nhuận doanh nghiệp Hàn Quốc.
 
-Nhưng headline capex không map one-to-one tới Korean earnings. Need ask:
+Cần hỏi:
 
 ```text
-What share goes to compute?
-Which architecture?
-HBM content per accelerator?
-Inventory build or end-use deployment?
+Bao nhiêu capex dành cho compute?
+Kiến trúc nào được sử dụng?
+Hàm lượng HBM trên mỗi bộ tăng tốc là bao nhiêu?
+Đây là xây tồn kho hay triển khai cho nhu cầu cuối?
 ```
 
-## 18. Demand Quality
+## 18. Chất lượng nhu cầu
 
-Demand quality tốt hơn khi supported by:
+Nhu cầu chất lượng cao hơn khi được hỗ trợ bởi công suất sử dụng bền vững, workload có khả năng tạo doanh thu, dòng tiền của khách hàng và cơ sở khách hàng mở rộng.
+
+Nhu cầu chất lượng thấp hơn nếu phần lớn là tích trữ tồn kho, xây công suất nhờ trợ cấp hoặc đơn hàng đầu cơ.
+
+## 19. Chu kỳ điều chỉnh dự báo lợi nhuận
+
+Thị trường cổ phiếu thường giao dịch theo hướng thay đổi của dự báo hơn là mức lợi nhuận tuyệt đối.
 
 ```text
-Sustainable utilization
-Monetizable workloads
-Customer cash flow
-Broadening customer base
+ASP / Đơn hàng cải thiện
+→ Dự báo doanh thu tăng
+→ Dự báo biên lợi nhuận gộp tăng
+→ Dự báo EPS tăng
+→ Định giá và giá mục tiêu được cập nhật
 ```
 
-Demand quality thấp hơn nếu mostly inventory prebuild, subsidy-driven overcapacity or speculative orders.
+Độ rộng điều chỉnh dự báo trên toàn ngành cho biết chu kỳ có đang mở rộng ra ngoài một doanh nghiệp dẫn đầu hay không.
 
-## 19. Earnings Revision Cycle
+## 20. Bẫy P/E ở đỉnh lợi nhuận
 
-Equity market often trades revisions more than absolute earnings.
+Cổ phiếu chu kỳ thường trông rẻ nhất theo P/E đúng lúc lợi nhuận ở đỉnh.
 
-Useful sequence:
-
-```text
-ASP/Orders Improve
-→ Analyst Revenue Estimates ↑
-→ Gross Margin Estimates ↑
-→ EPS Revisions ↑
-→ Target Multiples / Price Update
-```
-
-Revision breadth across sector tells whether cycle broadening beyond one leader.
-
-## 20. Peak Earnings Problem
-
-Cyclical stocks can look cheapest on P/E at peak earnings.
-
-Example:
+Ví dụ:
 
 ```text
-Price = 100
-Peak EPS = 20
+Giá = 100
+EPS đỉnh = 20
 P/E = 5x
+
+Nếu EPS chuẩn hóa = 8
+P/E chuẩn hóa = 12,5x
 ```
 
-Nếu normalized EPS only 8, normalized P/E = 12.5x.
+P/E thấp trên lợi nhuận đỉnh có thể là cảnh báo cuối chu kỳ chứ không phải món hời.
 
-Low trailing P/E can therefore be late-cycle warning, not bargain signal.
+## 21. Bẫy P/E ở đáy lợi nhuận
 
-## 21. Trough P/E Problem
+Ở đáy chu kỳ, EPS có thể sụt mạnh khiến P/E rất cao hoặc mất ý nghĩa, trong khi giá cổ phiếu đã tạo đáy vì thị trường kỳ vọng phục hồi.
 
-At trough EPS collapses, P/E may look extremely high or meaningless. Stock can already be bottoming because market expects recovery.
+Nên dùng lợi nhuận chuẩn hóa, biên lợi nhuận giữa chu kỳ, động lực cung–cầu và xu hướng điều chỉnh dự báo.
 
-Use normalized earnings, mid-cycle margin, replacement/supply dynamics and forward revisions.
+## 22. Mô hình kịch bản
 
-Đọc thêm: [Valuation](../03_company_analysis/03_VALUATION_DCF_AND_MULTIPLES.md).
-
-## 22. Scenario Model
-
-### Base
+### Cơ sở
 
 ```text
-AI/HBM demand strong
-Commodity memory gradual recovery
-Supply disciplined
-Utilization improves
-Margins normalize
+Nhu cầu AI/HBM mạnh
+Bộ nhớ phổ thông phục hồi dần
+Nguồn cung có kỷ luật
+Công suất sử dụng cải thiện
+Biên lợi nhuận trở về mức bình thường
 ```
 
-### Bull
+### Tích cực
 
 ```text
-HBM demand exceeds capacity
-Qualification/share gains
-ASP stronger
-Mix shift faster
-Equipment bottleneck prolongs pricing power
+Nhu cầu HBM vượt công suất
+Doanh nghiệp tăng thị phần / được chứng nhận tốt hơn
+ASP mạnh hơn
+Cơ cấu sản phẩm cải thiện nhanh
+Nút thắt thiết bị kéo dài quyền định giá
 ```
 
-### Bear
+### Tiêu cực
 
 ```text
-Hyperscaler capex slows
-Customer inventory rises
-New capacity ramps
-ASP falls
-Utilization drops
-HBM premium compresses
+Capex hyperscaler chậm lại
+Tồn kho khách hàng tăng
+Công suất mới đi vào hoạt động
+ASP giảm
+Công suất sử dụng giảm
+Phần bù HBM co lại
 ```
 
-Each case must translate into revenue, gross margin, capex, FCF and valuation.
+Mỗi kịch bản phải được chuyển thành doanh thu, biên lợi nhuận, capex, FCF và định giá.
 
-## 23. Producer vs Supplier Exposure
-
-Producer often benefits directly from ASP/mix. Equipment supplier benefits capex. Materials supplier benefits utilization. Packaging supplier benefits architecture/content shift.
-
-Thus same cycle stage can favor different parts of value chain.
+## 23. Nhà sản xuất và nhà cung cấp hưởng lợi ở giai đoạn khác nhau
 
 ```text
-Early Recovery → Producers / Pricing
-Expansion → Equipment / Capex
-High Utilization → Materials
-Architecture Shift → Packaging / Specialty Suppliers
-Late Cycle → Oversupply Risk
+Phục hồi sớm → Nhà sản xuất / Giá bán
+Mở rộng → Thiết bị / Capex
+Công suất sử dụng cao → Vật liệu
+Thay đổi kiến trúc → Đóng gói / Nhà cung cấp chuyên biệt
+Cuối chu kỳ → Rủi ro dư cung
 ```
 
-## 24. Balance Sheet
+Cùng một chu kỳ không đồng nghĩa mọi mắt xích đạt đỉnh cùng lúc.
 
-Cycle survival depends balance sheet.
+## 24. Chất lượng bảng cân đối
 
-Questions:
+Khả năng sống sót qua chu kỳ phụ thuộc tiền mặt ròng/nợ, cam kết capex, chính sách cổ tức/mua lại cổ phiếu, lịch đáo hạn nợ, vốn lưu động và rủi ro giảm giá tồn kho.
+
+Bảng cân đối mạnh cho phép doanh nghiệp duy trì capex chiến lược trong suy giảm và có thể giành thị phần.
+
+## 25. Phân bổ vốn
+
+Doanh nghiệp bán dẫn phải đánh đổi khó khăn:
 
 ```text
-Net Cash / Debt
-Capex Commitments
-Dividend / Buyback Policy
-Debt Maturity
-Working Capital
-Inventory Write-down Risk
+Đầu tư sớm → Dẫn đầu công nghệ nhưng tăng rủi ro dư cung
+Đầu tư thiếu → Bảo vệ FCF nhưng có thể mất vị thế sản phẩm/công nghệ
 ```
 
-Strong balance sheet lets producer continue strategic capex through downturn, potentially gain share.
+ROIC tăng thêm qua nhiều chu kỳ quan trọng hơn tỷ lệ capex của riêng một năm.
 
-## 25. Capital Allocation
+## 26. Chất lượng kế toán
 
-Semiconductor companies face difficult capital-allocation trade-off:
+Cần theo dõi định giá và giảm giá tồn kho, lịch khấu hao, chi phí phát triển được vốn hóa, mức tập trung khách hàng, capex so với khấu hao, trợ cấp chính phủ và khoản phải thu khi nhu cầu suy yếu.
+
+Đọc thêm: [Chất lượng lợi nhuận và phân tích điều tra](../03_company_analysis/04_EARNINGS_QUALITY_MODELING_AND_FORENSICS.md).
+
+## 27. Ma trận định giá theo chu kỳ
+
+Một số tổ hợp hữu ích:
 
 ```text
-Invest early → technology leadership, but oversupply risk
-Underinvest → protect FCF, but lose node/product position
+Đáy chu kỳ + Bảng cân đối mạnh + Dự báo bắt đầu tăng
+Giữa chu kỳ + Hệ số chuẩn hóa hợp lý
+Đỉnh chu kỳ + Bùng nổ công suất + Đồng thuận kéo dài tăng trưởng quá mức
 ```
 
-Historical incremental ROIC through cycles matters more than one-year capex intensity.
+Định giá phải được đọc cùng giai đoạn chu kỳ, không chỉ so P/E hiện tại với lịch sử.
 
-## 26. Accounting Quality
+## 28. Mức phơi nhiễm nhân tố
 
-Watch:
-
-- inventory valuation and write-down/reversal;
-- depreciation schedules;
-- capitalized development where relevant;
-- customer concentration;
-- capex vs depreciation;
-- government incentives/subsidies;
-- receivables during demand slowdown.
-
-Đọc thêm: [Earnings Quality and Forensics](../03_company_analysis/04_EARNINGS_QUALITY_MODELING_AND_FORENSICS.md).
-
-## 27. Valuation Matrix
-
-Useful combinations:
+Một vị thế bán dẫn Hàn Quốc có thể đồng thời chứa:
 
 ```text
-Cycle Trough + Balance Sheet Strong + Revisions Turning Up
-Cycle Midpoint + Reasonable Normalized Multiple
-Cycle Peak + Capacity Boom + Consensus Extrapolation
-```
-
-Valuation must be read against cycle stage, not standalone historical P/E percentile.
-
-## 28. Factor Exposure
-
-Korean semiconductor position can embed:
-
-```text
-Korea Country Beta
-Global Tech Beta
-Growth / Duration
+Beta thị trường Hàn Quốc
+Beta công nghệ toàn cầu
+Tăng trưởng / Duration
 USD/KRW
-AI Capex
-Memory Cycle
-China Demand
-Foreign Flow
+Capex AI
+Chu kỳ bộ nhớ
+Nhu cầu Trung Quốc
+Dòng vốn nước ngoài
 ```
 
-A portfolio holding global tech ETF + Korea semiconductor ETF may be more concentrated than ticker count suggests.
+Danh mục nắm cả ETF công nghệ toàn cầu và ETF bán dẫn Hàn Quốc có thể tập trung hơn số lượng mã gợi ý.
 
-## 29. Flow and Index Effects
+## 29. Dòng vốn và ảnh hưởng chỉ số
 
-Large Korean semiconductor names have meaningful index weight. Foreign flows, futures hedging and global ETF allocation can amplify fundamentals.
+Các doanh nghiệp bán dẫn lớn có trọng số đáng kể trong chỉ số Hàn Quốc. Dòng vốn nước ngoài, phòng vệ futures và dòng ETF toàn cầu có thể khuếch đại biến động cơ bản.
 
-Price movement may therefore combine:
+Giá cổ phiếu vì vậy có thể được phân rã thành điều chỉnh lợi nhuận, thay đổi hệ số định giá, tỷ giá, dòng vốn thụ động và vị thế thị trường.
+
+## 30. Cú sốc lãi suất Mỹ
+
+Lợi suất thực tăng có thể làm hệ số định giá công nghệ co lại ngay cả khi lợi nhuận bán dẫn vẫn tăng:
 
 ```text
-Earnings Revision
-Multiple Change
-FX
-Passive / Foreign Flow
-Positioning
+EPS tăng
+P/E giảm
 ```
 
-## 30. Risk Event: US Rate Shock
+Giá cổ phiếu phụ thuộc tác động nào lớn hơn. Đây là lý do phải nối vĩ mô với phân tích doanh nghiệp.
 
-Higher real yields can compress tech multiples even while semiconductor earnings improve.
+## 31. Suy giảm Trung Quốc
 
-This creates tension:
+Trung Quốc ảnh hưởng nhu cầu cuối, sản xuất, chuỗi cung ứng điện tử và chính sách hạn chế công nghệ. Mức độ ảnh hưởng khác nhau theo doanh thu từ Trung Quốc, vị trí nhà máy, cơ cấu khách hàng và nút công nghệ của từng doanh nghiệp.
 
-```text
-EPS ↑
-P/E ↓
-```
+## 32. Hạn chế xuất khẩu công nghệ
 
-Stock return depends which effect dominates.
+Kiểm soát công nghệ có thể hạn chế doanh số thiết bị/chip, buộc thiết kế lại sản phẩm hoặc thúc đẩy cạnh tranh nội địa hóa. Rủi ro chính sách không chỉ là doanh thu hôm nay mà còn là quy mô thị trường và quyết định capex tương lai.
 
-This is why macro and company analysis must be connected.
+## 33. Quy mô vị thế
 
-## 31. Risk Event: China Slowdown
+Quy mô nên phản ánh bất định chu kỳ, rủi ro khách hàng lớn, trùng lặp nhân tố trong danh mục, FX, thanh khoản và mức bất cân xứng của định giá.
 
-China affects end demand, manufacturing, electronics supply chain and geopolitical restrictions.
+Luận điểm bán dẫn có độ tin cậy cao vẫn có thể chỉ phù hợp với tỷ trọng vừa phải nếu danh mục đã tập trung mạnh vào công nghệ toàn cầu và duration.
 
-But exposure differs by company: revenue to China, fab location, end-customer mix and technology node matter.
+## 34. Chọn công cụ phòng vệ
 
-## 32. Risk Event: Export Controls
+Nếu lo beta thị trường Hàn Quốc, futures KOSPI có thể hữu ích nhưng vẫn để lại rủi ro riêng của ngành bán dẫn. Nếu lo USD/KRW, phòng vệ FX chỉ giảm thành phần tiền tệ. Nếu lo hệ số định giá công nghệ toàn cầu, dùng Nasdaq hoặc ETF công nghệ sẽ tạo rủi ro cơ sở.
 
-Technology controls can constrain equipment/chip sales, force product redesign or accelerate localization competition.
+Công cụ phòng vệ phải khớp nhân tố cần giảm.
 
-Policy risk is not just revenue loss today; it changes future addressable market and capital allocation.
+## 35. Bảng theo dõi
 
-## 33. Position Sizing
-
-Size should reflect:
+Theo tuần/tháng:
 
 ```text
-Cycle Uncertainty
-Single-Customer Risk
-Index / Factor Overlap
-FX Exposure
-Liquidity
-Valuation Asymmetry
-```
-
-A high-conviction semiconductor thesis can still deserve moderate weight if total portfolio already long global tech/duration.
-
-## 34. Hedge Choices
-
-If concern is Korea market beta, KOSPI futures/index hedge may help but leaves company-specific semiconductor risk.
-
-If concern is USD/KRW, FX hedge changes currency component but not cycle.
-
-If concern is global tech multiple compression, Nasdaq/tech hedge introduces basis risk.
-
-Hedge must match factor being reduced.
-
-## 35. Monitoring Dashboard
-
-Weekly/monthly:
-
-```text
-Memory spot/contract prices
-Inventory days
-Utilization commentary
-HBM qualification/share
-Hyperscaler capex
-Producer capex
-Equipment orders/backlog
-Export data
+Giá spot / hợp đồng bộ nhớ
+Số ngày tồn kho
+Nhận định về công suất sử dụng
+Chứng nhận / thị phần HBM
+Capex hyperscaler
+Capex nhà sản xuất
+Đơn hàng / backlog thiết bị
+Dữ liệu xuất khẩu
 USD/KRW
-Consensus EPS revisions
-Valuation vs normalized earnings
+Điều chỉnh dự báo EPS đồng thuận
+Định giá so với lợi nhuận chuẩn hóa
 ```
 
-## 36. Thesis Invalidation
+## 36. Điều kiện vô hiệu hóa luận điểm
 
-Possible invalidation:
+Luận điểm phục hồi có thể sai nếu tồn kho khách hàng tăng trở lại, công suất mới vượt nhu cầu, doanh nghiệp mất chứng nhận/thị phần HBM, ASP đảo chiều trước khi công suất sử dụng bình thường hóa, bùng nổ capex báo hiệu dư cung tương lai hoặc tài trợ capex làm bảng cân đối xấu đi.
 
-```text
-Customer inventory rebuilding unexpectedly
-Capacity additions exceed demand
-HBM qualification/share loss
-ASP reversal before utilization normalization
-Capex boom implies future oversupply
-Balance sheet/capex funding deteriorates
-```
+Giá giảm đơn thuần không phải điều kiện vô hiệu hóa nếu cơ chế cốt lõi chưa thay đổi.
 
-Price decline alone is not thesis invalidation unless it reflects one of these mechanisms.
+## 37. Phân rã sau báo cáo lợi nhuận
 
-## 37. Post-Earnings Attribution
+Sau earnings, cần tách doanh thu, ASP, bit shipment, cơ cấu sản phẩm, biên lợi nhuận gộp, tồn kho, capex, hướng dẫn, điều chỉnh đồng thuận và phản ứng giá so với kỳ vọng đã nằm trong giá.
 
-After earnings:
+Doanh nghiệp có thể vượt EPS nhưng giá vẫn giảm nếu hướng dẫn HBM/capex tương lai thấp hơn kỳ vọng rất cao của thị trường.
+
+## 38. Mẫu nghiên cứu dùng lại
 
 ```text
-Revenue Beat/Miss
-ASP
-Bit Shipments
-Mix
-Gross Margin
-Inventory
-Capex
-Guidance
-Consensus Revision
-Price Reaction vs Implied Expectation
-```
-
-A company can beat reported EPS but fall if forward HBM/capex guidance disappoints relative to priced expectations.
-
-## 38. Reusable Semiconductor Research Template
-
-```text
-End Demand
-→ Inventory
-→ Supply / Capacity
+Nhu cầu cuối
+→ Tồn kho
+→ Nguồn cung / Công suất
 → ASP
-→ Utilization
-→ Product Mix
-→ Margin
+→ Công suất sử dụng
+→ Cơ cấu sản phẩm
+→ Biên lợi nhuận
 → Capex
-→ Supplier Revenue
+→ Doanh thu nhà cung cấp
 → FCF
-→ EPS Revisions
-→ Normalized Valuation
-→ Position / Hedge
+→ Điều chỉnh EPS
+→ Định giá chuẩn hóa
+→ Vị thế / Phòng vệ
 ```
 
 ## Kết luận
 
-Semiconductor investing is not a simple technology story. Nó là combination của **commodity cycle, technology transition, capacity economics, customer concentration, FX, capex and valuation**. Edge đến từ việc xác định cycle turning point và expectation gap sớm hơn market, không phải chỉ biết ngành đang tăng trưởng dài hạn.
+Đầu tư bán dẫn không chỉ là câu chuyện công nghệ. Nó là sự kết hợp của **chu kỳ hàng hóa, chuyển đổi công nghệ, kinh tế công suất, tập trung khách hàng, tỷ giá, capex và định giá**. Lợi thế đến từ việc nhận ra điểm đảo chiều của chu kỳ và khoảng cách kỳ vọng sớm hơn thị trường, không phải chỉ từ việc biết ngành có tăng trưởng dài hạn.
