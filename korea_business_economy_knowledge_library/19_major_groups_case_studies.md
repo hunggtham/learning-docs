@@ -1,465 +1,357 @@
-# Case studies các nhóm doanh nghiệp lớn Hàn Quốc (Major Korean Business Groups / 주요 기업집단 사례)
+# Nghiên cứu tình huống các nhóm doanh nghiệp lớn Hàn Quốc (Major Korean Business Groups / 주요 기업집단 사례)
 
-Chapter này không nhằm xếp hạng “tập đoàn tốt nhất”. Mục tiêu là dùng các group nổi tiếng như **laboratory để áp dụng mental model** của toàn library: history, ownership, capital allocation, industry economics, governance, finance và macro transmission.
+Chapter này không nhằm xếp hạng “tập đoàn tốt nhất”. Mục tiêu là dùng các nhóm doanh nghiệp nổi tiếng như **phòng thí nghiệm để áp dụng mô hình tư duy của toàn thư viện**: lịch sử, sở hữu, phân bổ vốn, kinh tế ngành, quản trị, tài chính và truyền dẫn vĩ mô.
 
-Một nguyên tắc phải giữ xuyên suốt: **group name không phải legal entity**. Samsung, Hyundai, SK, LG hay CJ là map của nhiều entities. Khi phân tích đầu tư, tín dụng, tuyển dụng hoặc counterparty risk, luôn quay lại company cụ thể trên DART/KIND và ownership structure hiện hành.
+Một nguyên tắc phải giữ xuyên suốt: **tên tập đoàn không phải pháp nhân**. Samsung, Hyundai, SK, LG hay CJ là mạng lưới nhiều pháp nhân. Khi phân tích đầu tư, tín dụng, tuyển dụng hoặc rủi ro đối tác, luôn phải quay về công ty cụ thể trên DART/KIND và cấu trúc sở hữu hiện hành.
 
-Cấu trúc group có thể thay đổi qua M&A, spin-off, merger và succession. Vì vậy phần dưới đây tập trung vào **cơ chế tương đối bền**, không cố freeze một org chart vốn có thể thay đổi.
+Cấu trúc tập đoàn có thể thay đổi qua M&A, chia tách, sáp nhập và kế nhiệm. Vì vậy phần dưới tập trung vào **cơ chế tương đối bền**, không cố đóng băng một sơ đồ tổ chức vốn luôn thay đổi.
 
-## Framework dùng cho mọi case
+## Khung dùng cho mọi trường hợp
 
-Mỗi group nên được đọc qua bảy lớp:
+Mỗi tập đoàn nên được đọc qua bảy lớp:
 
 ```text
-1. Historical origin
-2. Ownership / control architecture
-3. Cash-generating core
-4. Capital-consuming growth engines
-5. Value-chain integration
-6. Macro / industry sensitivity
-7. Governance and capital-allocation risk
+1. Nguồn gốc lịch sử
+2. Kiến trúc sở hữu / kiểm soát
+3. Mảng cốt lõi tạo tiền mặt
+4. Mảng tăng trưởng tiêu tốn vốn
+5. Mức tích hợp chuỗi giá trị
+6. Độ nhạy vĩ mô / ngành
+7. Rủi ro quản trị và phân bổ vốn
 ```
 
-Nếu bỏ một layer, analysis dễ trở thành brand story.
+Bỏ một lớp, phân tích rất dễ biến thành câu chuyện thương hiệu.
 
-## Samsung — scale, technology cycles và group-level governance
+## Samsung — quy mô, chu kỳ công nghệ và quản trị cấp tập đoàn
 
-### Historical DNA
+### DNA lịch sử
 
-Samsung đi từ trading và manufacturing sang electronics, finance và advanced technology. Semiconductor trở thành một trong những capability quan trọng nhất nhờ hàng thập niên capex, process engineering và yield learning.
+Samsung đi từ thương mại và sản xuất sang điện tử, tài chính và công nghệ tiên tiến. Bán dẫn trở thành một năng lực cốt lõi nhờ nhiều thập niên CAPEX, kỹ thuật quy trình và tích lũy yield.
 
-Genealogy đầy đủ xem [00_history/08_company_genealogies](./00_history/08_company_genealogies.md).
+Xem thêm [`00_history/08_company_genealogies.md`](./00_history/08_company_genealogies.md).
 
-### Entity problem
+### Vấn đề pháp nhân
 
-Public thường nói “Samsung” như một company, nhưng Samsung Electronics, Samsung C&T, Samsung Life, Samsung Biologics và other affiliates là separate legal entities.
+Công chúng thường nói “Samsung” như một công ty, nhưng Samsung Electronics, Samsung C&T, Samsung Life và Samsung Biologics là các pháp nhân riêng biệt.
 
-Investor không thể mua “Samsung Group share”. Mỗi security cho exposure khác nhau.
+Nhà đầu tư không thể mua “cổ phiếu Samsung Group”. Mỗi chứng khoán mang một mức tiếp xúc kinh tế khác nhau.
 
-This is the first governance lesson: **brand boundary ≠ accounting boundary**.
+Đây là bài học quản trị đầu tiên: **ranh giới thương hiệu không bằng ranh giới kế toán**.
 
-### Economic engine
+### Động cơ kinh tế
 
-Samsung Electronics itself combines businesses with very different production functions:
+Riêng Samsung Electronics đã kết hợp các mô hình rất khác nhau như bộ nhớ, foundry/system semiconductor, smartphone, điện tử tiêu dùng và hệ sinh thái linh kiện–màn hình thông qua các pháp nhân khác nhau.
 
-- memory semiconductor;
-- foundry/system semiconductor;
-- smartphones/devices;
-- consumer electronics;
-- related component/display ecosystem through separate entities/group links.
+Bộ nhớ có chu kỳ giá mạnh và đòn bẩy hoạt động do chi phí cố định lớn. Thiết bị di động phụ thuộc cơ cấu sản phẩm, sức mạnh thương hiệu, chi phí linh kiện và chu kỳ thay thế.
 
-Memory has strong price cycle and fixed-cost operating leverage. Mobile/device economics depend product mix, brand, component cost and replacement cycle.
+Vì vậy lợi nhuận hợp nhất có thể thay đổi rất mạnh tùy mảng nào đang dẫn dắt.
 
-Therefore consolidated profit can change dramatically depending on segment mix.
+### Câu hỏi phân tích chính
 
-### Key analytical questions
+Không chỉ hỏi “lợi nhuận Samsung tăng hay giảm?”. Cần hỏi phân khúc nào thay đổi; cải thiện bán dẫn đến từ ASP, sản lượng, HBM hay utilization; cần bao nhiêu CAPEX để duy trì vị trí công nghệ; FCF còn khỏe sau đầu tư không; và các dự án tăng trưởng có đang được tài trợ bằng tiền mặt ở đỉnh chu kỳ không.
 
-Do not ask only “Samsung earnings up/down?”. Ask:
+### Góc nhìn quản trị
 
-- Which segment moved?
-- Is semiconductor improvement ASP, volume, HBM mix or utilization?
-- How much CAPEX is required to sustain technology leadership?
-- Does free cash flow remain strong after investment?
-- Are growth projects funded from cyclical peak cash flow?
+Ở cấp tập đoàn, kiến trúc sở hữu–kiểm soát và lịch sử kế nhiệm quan trọng. Ở cấp công ty niêm yết cụ thể, câu hỏi là quyết định cấp tập đoàn có phù hợp lợi ích cổ đông thiểu số của pháp nhân đó hay không.
 
-### Governance lens
+Đây là điểm nối giữa [`08_corporate_governance_ownership_and_control.md`](./08_corporate_governance_ownership_and_control.md) và [`14_semiconductors_electronics_display.md`](./14_semiconductors_electronics_display.md).
 
-At group level, ownership/control architecture and succession history matter. For a specific listed affiliate, question is whether group-level decisions align with that entity’s minority shareholders.
+### Biến stress chính
 
-This connects [08_corporate_governance_ownership_and_control](./08_corporate_governance_ownership_and_control.md) with [14_semiconductors_electronics_display](./14_semiconductors_electronics_display.md).
+Chu kỳ bán dẫn, thực thi công nghệ, KRW, nhu cầu điện tử toàn cầu, địa chính trị/kiểm soát xuất khẩu và chất lượng phân bổ vốn.
 
-### Stress variables
+## Hyundai Motor Group — sản xuất nền tảng, hệ sinh thái nhà cung cấp và chuyển đổi mobility
 
-Semiconductor cycle, technology execution, KRW, global electronics demand, geopolitics/export controls and capital allocation.
+### DNA lịch sử
 
-## Hyundai Motor Group — platform manufacturing, supplier ecosystem and mobility transition
+Hyundai đi từ xây dựng và thực thi dự án sang công nghiệp nặng và ô tô. Con đường từ lắp ráp theo giấy phép tới mẫu xe riêng thể hiện rõ “thang hấp thụ công nghệ” của Hàn Quốc.
 
-### Historical DNA
+Sau 1997, dòng Hyundai lịch sử tách thành nhiều nhóm hiện đại khác nhau. Vì vậy gặp từ “Hyundai” luôn phải xác định đúng pháp nhân.
 
-Hyundai grew from construction/project execution into heavy industry and automobiles. Hyundai Motor’s path from licensed assembly to own models illustrates Korea’s broader technology-absorption ladder.
+### Kiến trúc chuỗi giá trị
 
-After 1997, historical Hyundai lineage separated into multiple modern groups, so `Hyundai` always requires entity resolution.
+Hyundai Motor Group có hệ sinh thái xoay quanh OEM gồm xe, linh kiện, thép, logistics và tài chính qua nhiều pháp nhân.
 
-### Value-chain architecture
+Tích hợp dọc có thể tăng độ tin cậy nguồn cung, phối hợp chất lượng, rút ngắn phát triển nền tảng và tăng học hỏi nội bộ. Nhưng nó cũng đặt ra câu hỏi về giao dịch liên quan và phân bổ vốn.
 
-Hyundai Motor Group includes OEM-centered ecosystem with vehicles, components, steel, logistics and finance-related activities across entities.
+### Kinh tế ô tô
 
-Vertical integration can create:
-
-- supply reliability;
-- quality coordination;
-- faster platform development;
-- internal learning.
-
-But also creates related-party and capital-allocation questions.
-
-### Auto economics
-
-Core decomposition:
+Một cách phân rã đơn giản:
 
 \[
-Automotive\ Revenue \approx Units \times ASP + Other\ Revenue
+Doanh\ thu\ ô\ tô \approx Số\ xe \times ASP + Doanh\ thu\ khác
 \]
 
-Margins depend on:
+Biên lợi nhuận phụ thuộc khu vực, tỷ trọng SUV/cao cấp, ưu đãi, FX, utilization nhà máy, bảo hành, nguyên liệu và hỗ trợ từ công ty tài chính.
 
-- regional mix;
-- SUV/premium mix;
-- incentives;
-- FX;
-- plant utilization;
-- warranty;
-- raw materials;
-- finance support.
+Tài chính captive giúp bán xe nhưng thêm rủi ro tín dụng và giá trị còn lại.
 
-Captive finance helps sales but introduces credit and residual-value risk.
+### Chuyển sang EV
 
-### EV transition
+Chuyển đổi EV buộc doanh nghiệp đầu tư đồng thời vào pin, nền tảng, phần mềm và hạ tầng sạc trong khi ICE/hybrid vẫn phải duy trì.
 
-EV transition creates simultaneous investments in battery, platform, software and charging ecosystem while ICE/hybrid business still needs support.
+Vì vậy đây không chỉ là “doanh số EV tăng”, mà là **bài toán phân bổ vốn kép**: tài trợ kiến trúc tương lai mà không phá hủy lợi suất của động cơ tiền mặt hiện tại.
 
-Therefore transition is not simply “EV sales growth”. It is **dual-capital allocation problem**: fund future architecture without destroying return from current cash engine.
+### Biến stress chính
 
-### Stress variables
+Nhu cầu Mỹ/EU/Hàn Quốc, KRW, lãi suất, tồn kho đại lý, ưu đãi, utilization EV, chi phí pin và khả năng thực thi phần mềm.
 
-US/EU/Korea demand, KRW, interest rates, dealer inventory, incentives, EV utilization, battery cost and software execution.
+Xem [`15_automotive_battery_mobility.md`](./15_automotive_battery_mobility.md).
 
-See [15_automotive_battery_mobility](./15_automotive_battery_mobility.md).
+## SK — chuyển đổi danh mục và phân bổ vốn giữa các mô hình tiền mặt rất khác nhau
 
-## SK — portfolio transformation and capital allocation across radically different cash-flow profiles
+### DNA lịch sử
 
-### Historical DNA
+SK đi từ dệt may sang hóa dầu–năng lượng, viễn thông rồi bán dẫn. Đây là một trong những ví dụ rõ nhất về bản sắc tập đoàn thay đổi qua **tái phân bổ danh mục và M&A**.
 
-SK moved from textiles into petrochemicals/energy, telecom and later semiconductor. It is one of the clearest Korean examples of group identity changing through **portfolio reallocation and acquisitions**.
+### Vì sao SK khó phân tích?
 
-### Why SK is analytically difficult
+Bán dẫn, viễn thông, năng lượng–hóa chất và pin có kinh tế rất khác nhau:
 
-Semiconductor, telecom, energy/chemicals and battery-related businesses have very different economics:
+- bán dẫn: CAPEX rất lớn + chu kỳ mạnh;
+- viễn thông: dòng tiền lặp lại + CAPEX mạng;
+- hóa chất/năng lượng: nhạy với chênh lệch giá hàng hóa;
+- pin: ramp dài + rủi ro utilization.
 
-- semiconductor: huge CAPEX + severe cycle;
-- telecom: recurring cash flow + network CAPEX;
-- chemicals/energy: commodity/spread sensitivity;
-- battery investment: long ramp-up + utilization risk.
+Câu chuyện cấp tập đoàn như “AI, pin, xanh” là chưa đủ. Phải lần theo pháp nhân nào tài trợ mảng nào và nợ nằm ở đâu.
 
-Group-level narrative such as “AI, battery, green” is not enough. Need trace which entity funds which business and where leverage sits.
+### Câu hỏi phân bổ vốn
 
-### Capital-allocation question
-
-A cash-generating mature affiliate can support a growth affiliate, but group value is created only if new investment earns adequate return.
-
-Therefore central question is:
+Một công ty thành viên trưởng thành tạo tiền mặt có thể hỗ trợ công ty tăng trưởng, nhưng giá trị chỉ được tạo khi vốn mới đạt lợi suất đủ cao:
 
 \[
-Return\ on\ New\ Capital > Cost\ of\ Capital?
+Lợi\ suất\ vốn\ mới > Chi\ phí\ vốn
 \]
 
-### Leverage lens
+Khi nhiều mảng thâm dụng vốn cùng mở rộng, khả năng tái cấp vốn ở cấp tập đoàn trở thành biến quan trọng. Câu chuyện chiến lược không thay thế được dòng tiền.
 
-When several capital-intensive businesses expand simultaneously, consolidated/group refinancing capacity becomes important. Strong narrative cannot substitute cash flow.
+### Biến stress chính
 
-### Stress variables
+Chu kỳ memory/HBM, độ ổn định viễn thông, chênh lệch năng lượng–hóa chất, utilization của mảng tăng trưởng, đòn bẩy công ty nắm giữ/công ty thành viên và khả năng tái cấp vốn.
 
-Memory/HBM cycle, telecom stability, energy/chemical spreads, growth-business utilization, holding-company/affiliate leverage and refinancing.
+## LG — đa dạng hóa liên quan từ hóa chất–điện tử sang pin và vật liệu tiên tiến
 
-## LG — related diversification from chemicals/electronics to batteries and advanced materials
+### DNA lịch sử
 
-### Historical DNA
+LG có gốc trong hóa chất tiêu dùng và điện tử. Sự kết hợp này tạo **năng lực lân cận (capability adjacency)**: khoa học vật liệu + điện tử + sản xuất có thể hỗ trợ pin và vật liệu pin.
 
-LG combines roots in consumer chemicals and electronics. This creates capability adjacency: materials science + electronics + manufacturing can support expansion into battery/materials.
+### Vì sao trường hợp này quan trọng?
 
-### Why this case matters
+LG cho thấy khác biệt giữa **đa dạng hóa liên quan (related diversification)** và đa dạng hóa ngẫu nhiên.
 
-LG demonstrates difference between **related diversification** and random diversification.
+Kiến thức hóa chất hỗ trợ vật liệu pin; năng lực điện tử hỗ trợ tích hợp thiết bị. Nhưng tính lân cận không đảm bảo ROIC cao vì pin vẫn cần công nghệ mới, chứng nhận khách hàng và CAPEX rất lớn.
 
-Chemical knowledge can support battery materials; electronics capability can support device integration. But adjacency does not guarantee high ROIC because battery requires new technology, customer qualification and huge CAPEX.
+### Cấu trúc pháp nhân
 
-### Entity structure
+LG Electronics, LG Chem, LG Energy Solution và các công ty thành viên khác có bảng cân đối và hồ sơ định giá khác nhau.
 
-LG Electronics, LG Chem, LG Energy Solution and other affiliates have different balance sheets and valuation profiles.
+Việc chia tách hoặc niêm yết mảng tăng trưởng thay đổi nơi nhu cầu vốn, quyền sở hữu và phần tăng giá trị tương lai nằm lại. Vì vậy cổ đông công ty mẹ và cổ đông công ty con có thể có lợi ích kinh tế khác nhau.
 
-Spin-off/listing of growth business changes where capital need, ownership and future upside sit.
+### Biến stress chính
 
-Therefore parent shareholder and subsidiary shareholder can have different economic interests.
+Utilization pin, nhu cầu EV, cơ chế chuyển giá nguyên liệu, nhu cầu điện tử, tập trung khách hàng và lợi suất CAPEX.
 
-### Stress variables
+## Lotte — tiêu dùng nội địa, bán lẻ, khách sạn, hóa chất và bất động sản
 
-Battery utilization, EV demand, raw-material pass-through, electronics demand, customer concentration and CAPEX return.
+### DNA lịch sử
 
-## Lotte — domestic consumption, retail, hospitality, chemicals and property
+Danh mục Lotte truyền thống nghiêng nhiều hơn về hàng tiêu dùng, bán lẻ, khách sạn, bất động sản và hóa chất so với các tập đoàn sản xuất xuất khẩu cổ điển.
 
-### Historical DNA
+Vì vậy mức tiếp xúc vĩ mô cũng khác.
 
-Lotte’s portfolio historically emphasizes consumer goods, retail, hospitality, property and chemicals more than classic export-manufacturing groups.
+### Độ nhạy nhu cầu
 
-This gives different macro exposure.
+Các biến quan trọng gồm thu nhập hộ gia đình, niềm tin tiêu dùng, du lịch, lãi suất, bất động sản thương mại, nhân khẩu học nội địa và chu kỳ hóa chất của các công ty công nghiệp trong tập đoàn.
 
-### Demand sensitivity
+Một đợt bùng nổ xuất khẩu bán dẫn có thể ảnh hưởng trực tiếp tới Lotte retail ít hơn nhà cung cấp điện tử.
 
-Key variables include:
+### Đặc tính thâm dụng tài sản
 
-- household income;
-- consumer confidence;
-- tourism;
-- interest rate;
-- commercial property;
-- domestic demographics;
-- chemical cycle for industrial affiliates.
+Bán lẻ, bất động sản và khách sạn có chi phí cố định lớn. Lưu lượng khách và occupancy tạo đòn bẩy hoạt động. Giá bất động sản có thể hỗ trợ tài sản bảo đảm nhưng cũng tạo rủi ro tái cấp vốn khi lãi suất tăng.
 
-A semiconductor export boom may have weaker direct effect on Lotte retail than on electronics suppliers.
+Bài học là đa dạng hóa không loại bỏ chu kỳ; nó chỉ thay đổi **những chu kỳ nào chồng lên nhau**.
 
-### Asset-heavy dimension
+## Hanwha — quốc phòng, hàng không, hóa chất, năng lượng và tài chính trong một tập đoàn rộng
 
-Retail/property/hotel assets can carry large fixed costs. Foot traffic and occupancy therefore create operating leverage.
+### DNA lịch sử
 
-Property value may support collateral but also create refinancing exposure when rates rise.
+Hanwha phát triển từ vật liệu nổ và hoạt động công nghiệp sang hóa chất, máy móc, quốc phòng, hàng không, năng lượng và tài chính.
 
-### Analytical lesson
+### Kinh tế quốc phòng
 
-Group diversification does not eliminate cycle; it changes **which cycles overlap**.
+Quốc phòng–hàng không khác sản xuất thông thường vì khách hàng chính phủ, chu kỳ mua sắm dài, backlog, chứng nhận, phê duyệt xuất khẩu, yêu cầu nội địa hóa và dịch vụ vòng đời.
 
-## Hanwha — defense, aerospace, chemicals, energy and finance under one broad group logic
+Tiêu đề “đơn hàng lớn” phải được chuyển thành lịch giao, biên lợi nhuận và thời điểm thu tiền.
 
-### Historical DNA
+### Năng lượng/solar
 
-Hanwha grew from explosives/industrial activities into chemicals, machinery, defense, aerospace, energy and finance.
+Mảng năng lượng nhạy với chính sách, công suất toàn cầu, đầu vào hàng hóa và utilization. Một tập đoàn vì vậy có thể chứa đồng thời kinh tế backlog dài của quốc phòng và sản xuất năng lượng cạnh tranh rất mạnh.
 
-### Defense economics
+### Công ty tài chính
 
-Defense/aerospace differs from normal manufacturing:
+Pháp nhân tài chính cần logic vốn pháp định và quản lý rủi ro riêng, không thể phân tích như công ty công nghiệp.
 
-- government customers;
-- long procurement cycles;
-- backlog;
-- certification;
-- export approvals;
-- localization/offset;
-- lifecycle support.
+Câu hỏi trung tâm là tập đoàn có thật sự có **lợi thế phân bổ vốn** hay độ phức tạp đang che trợ cấp chéo và đòn bẩy.
 
-Order headline should be translated into delivery schedule, margin and cash collection.
+Xem [`32_defense_aerospace_and_strategic_industries.md`](./32_defense_aerospace_and_strategic_industries.md).
 
-### Energy/solar economics
+## POSCO — nền tảng công nghiệp thượng nguồn và chuyển sang vật liệu
 
-Energy businesses can be exposed to policy, global capacity, commodity input and utilization cycles.
+### DNA lịch sử
 
-Thus one group can contain both long-backlog defense economics and highly competitive energy manufacturing.
+POSCO hình thành như nhà sản xuất thép tích hợp chiến lược, không phải chaebol gia đình truyền thống. Năng lực thép hỗ trợ ô tô, đóng tàu, máy móc và xây dựng, biến POSCO thành một hạ tầng công nghiệp thượng nguồn.
 
-### Finance affiliates
+### Kinh tế thép
 
-Financial entities need separate regulatory-capital logic and should not be analyzed like industrial affiliates.
-
-### Central analytical question
-
-Does diversified group have **capital-allocation advantage**, or is complexity hiding cross-subsidy and leverage?
-
-See [32_defense_aerospace_and_strategic_industries](./32_defense_aerospace_and_strategic_industries.md).
-
-## POSCO — upstream industrial anchor and transition to materials
-
-### Historical DNA
-
-POSCO originated as strategic integrated steel producer rather than family-founded conglomerate.
-
-Steel capability supported autos, shipbuilding, machinery and construction — making POSCO an upstream industrial platform.
-
-### Steel economics
-
-Profit depends on product/raw-material spreads, utilization and downstream demand.
-
-Simplified:
+Lợi nhuận phụ thuộc chênh lệch giá sản phẩm–nguyên liệu, utilization và nhu cầu hạ nguồn:
 
 \[
-Steel\ Margin \approx Selling\ Price - Raw\ Material - Energy - Conversion\ Cost
+Biên\ thép
+\approx
+Giá\ bán
+- Nguyên\ liệu
+- Năng\ lượng
+- Chi\ phí\ chuyển\ đổi
 \]
 
-Commodity price alone cannot explain earnings.
+Giá hàng hóa riêng lẻ không đủ giải thích lợi nhuận.
 
-### Growth transition
+### Chuyển đổi tăng trưởng
 
-Expansion into advanced/battery materials changes growth narrative but also raises CAPEX and execution risk.
+Mở rộng sang vật liệu tiên tiến và vật liệu pin thay đổi câu chuyện tăng trưởng nhưng đồng thời làm CAPEX và rủi ro thực thi tăng.
 
-“Growth sector” does not guarantee growth investment is value-accretive.
+“Ngành tăng trưởng” không đảm bảo khoản đầu tư tạo thêm giá trị. Câu hỏi vẫn là ROIC so với chi phí vốn.
 
-Question remains ROIC vs cost of capital.
+### Khác biệt thể chế
 
-### Institutional difference
+Nguồn gốc POSCO nhắc rằng tập đoàn lớn Hàn Quốc có nhiều phả hệ sở hữu–quản trị khác nhau. Không nên áp mẫu “kế nhiệm gia đình” cho mọi doanh nghiệp lớn.
 
-POSCO’s historical origin reminds analyst that large Korean groups can have different ownership/governance genealogies. Do not apply family-succession template automatically.
+## NAVER — kinh tế tìm kiếm, nền tảng và phân bổ vốn số
 
-## Naver — search/portal/platform economics and digital capital allocation
+### DNA số
 
-### Digital-native DNA
+NAVER không đi qua con đường công nghiệp nặng. Năng lực cốt lõi đến từ phần mềm, tìm kiếm, quảng cáo, nội dung và hệ sinh thái nền tảng.
 
-Naver did not need heavy-industry path. Its core capability arises from software, search, advertising, content and platform ecosystems.
+### Hàm sản xuất
 
-### Production function
+Nền tảng số có thể mở rộng người dùng mà tài sản vật lý không tăng cùng tỷ lệ, nhưng không có nghĩa “không cần tài sản”. Trung tâm dữ liệu, cloud, mua nội dung, compute AI và nhân tài đều là chi phí thật.
 
-Digital platform can scale users without physical assets rising proportionally, but this does not mean “asset free”. Data centers, cloud, content acquisition, AI compute and talent are real costs.
+### Câu hỏi về hào cạnh tranh
 
-### Moat questions
+Cần kiểm tra thói quen người dùng, hệ sinh thái quảng cáo, chất lượng dữ liệu–thuật toán, multi-homing, chi phí chuyển đổi và mức tích hợp dịch vụ.
 
-For search/platform business, inspect:
+### Bài học quản trị
 
-- user habit;
-- advertiser ecosystem;
-- data/algorithm quality;
-- multi-homing;
-- switching cost;
-- content/service integration.
+Khi tập đoàn số thêm công ty con và khoản đầu tư, các câu hỏi conglomerate cổ điển quay lại: bên liên quan, phân bổ vốn và tập trung thị trường. Công nghệ thay đổi loại tài sản nhưng không xóa **lý thuyết đại diện (agency theory)**.
 
-### Governance lesson
+## Kakao — hiệu ứng mạng nhắn tin, mở rộng hệ sinh thái và độ phức tạp quản trị
 
-As digital group adds subsidiaries/investments, classic conglomerate questions reappear: related parties, capital allocation and market concentration.
+Kakao bắt đầu từ mạng nhắn tin–xã hội, từ đó mở rộng sang thanh toán, mobility, nội dung và dịch vụ số khác.
 
-Technology changes assets, not agency theory.
+Nhưng mở rộng hệ sinh thái cũng tăng độ phức tạp. Cần tách mạng người dùng cốt lõi, động cơ kiếm tiền, hoạt động tài chính chịu điều tiết, công ty thành viên tiêu tốn vốn và vấn đề quản trị/bên liên quan.
 
-## Kakao — messaging network effect, ecosystem expansion and governance complexity
+Cơ sở người dùng lớn không đồng nghĩa FCF lớn. Khả năng kiếm tiền và ràng buộc quy định quyết định mức giữ lại giá trị.
 
-Kakao’s foundation in messaging/social network creates direct network effects and adjacent opportunities in payments, mobility, content and other digital services.
+## CJ — động cơ tiền mặt thực phẩm, năng lực bio, mạng logistics và quyền chọn nội dung
 
-But ecosystem expansion increases group complexity.
+### DNA lịch sử
 
-Analyst should separate:
+CJ bắt đầu từ đường và thực phẩm rồi mở rộng sang thương hiệu thực phẩm, bio, logistics, rạp–truyền thông và nội dung.
 
-- core user network;
-- monetization engines;
-- regulated financial activities;
-- capital-consuming affiliates;
-- governance/related-party issues.
+### Vì sao CJ là trường hợp quan trọng?
 
-A huge user base is not equal to free cash flow. Monetization and regulatory constraints determine value capture.
+CJ thể hiện con đường từ sản xuất vật chất sang kinh tế IP vô hình. Thực phẩm có thể tạo nhu cầu hộ gia đình lặp lại; logistics có kinh tế mạng–quy mô; giải trí lại phụ thuộc hit và IP.
 
-## CJ — food cash engine, bio capability, logistics network and content optionality
+Dòng tiền ổn định của thực phẩm có thể tài trợ nội dung biến động hơn nhưng chỉ tạo giá trị nếu kỷ luật vốn đủ tốt.
 
-### Historical DNA
+Mức nổi tiếng không đồng nghĩa dòng tiền. Một phim thành công toàn cầu vẫn có thể tạo ít giá trị cho nhà sản xuất nếu cấu trúc quyền IP hoặc kinh tế sản xuất bất lợi.
 
-CJ started with sugar/food manufacturing and later expanded into food brands, bio, logistics, cinema/media and content.
+### Biến stress chính
 
-### Why CJ is an important case
+Giá đầu vào thực phẩm, nhu cầu tiêu dùng trong–ngoài nước, utilization logistics và rủi ro hit của nội dung.
 
-It demonstrates a route from physical manufacturing into intangible IP economy.
+## Doosan — vì sao phả hệ doanh nghiệp cũng có thể đảo chiều
 
-Food can offer recurring household demand; logistics offers network/scale economics; entertainment is hit-driven and IP-dependent.
+Doosan hữu ích vì chuyển đổi danh mục từng bao gồm cả mở rộng và tái cấu trúc.
 
-### Diversification quality
+M&A công nghiệp nặng có thể thay đổi bản sắc công ty, nhưng đòn bẩy và chu kỳ ngành yếu sau đó có thể buộc bán tài sản hoặc đơn giản hóa danh mục.
 
-Stable food cash flow can support higher-volatility content investment, but only if group capital discipline remains strong.
+Bài học là **chuyển đổi doanh nghiệp không phải lúc nào cũng đi một chiều lên trên; nợ có thể đảo ngược chiến lược**.
 
-Popularity is not cash flow. A globally successful drama/film may create limited economic value if rights structure or production economics are unfavorable.
+Xem [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md).
 
-### Stress variables
+## Coupang — quy mô thời venture cộng mạng logistics vật lý
 
-Food input prices, domestic/global consumer demand, logistics utilization and content hit risk.
+Coupang khác chaebol cũ. Quy mô hình thành trong kỷ nguyên số/venture với lượng vốn cổ phần bên ngoài lớn và đầu tư mạnh vào fulfillment–logistics.
 
-## Doosan — why genealogy includes reversals
+Kinh tế kết hợp dữ liệu/nền tảng khách hàng, thuê bao–retention, tồn kho và quan hệ merchant, CAPEX fulfillment và mật độ last-mile.
 
-Doosan is useful because portfolio transformation has included both expansion and restructuring.
+Trường hợp này cho thấy “công ty công nghệ” vẫn có thể trở thành doanh nghiệp thâm dụng hạ tầng. So sánh đúng không chỉ là portal Hàn Quốc; một phần kinh tế gần với bán lẻ và logistics.
 
-Heavy-industry acquisitions can change company identity, but leverage and weak industry cycle can later force asset sales or portfolio simplification.
+## KT — phả hệ hạ tầng công và kinh tế mạng chịu điều tiết
 
-Lesson:
+KT có phả hệ thể chế khác: hạ tầng viễn thông công được doanh nghiệp hóa và tư nhân hóa thành công ty niêm yết.
 
-> Corporate transformation is not always one-way upgrading. Debt can reverse strategy.
+Phân tích viễn thông tập trung vào ARPU, churn, CAPEX mạng, phổ tần–quy định và dịch vụ doanh nghiệp/số.
 
-This makes Doosan a case for connecting genealogy with [11_banks_finance_and_corporate_funding](./11_banks_finance_and_corporate_funding.md).
+Nguồn gốc công có thể tạo cơ sở tài sản và quan hệ chính sách khác chaebol gia đình.
 
-## Coupang — venture-era scale plus physical logistics network
+## So sánh các tập đoàn mà không biến thành bảng xếp hạng
 
-Coupang is different from old chaebol. Its scale emerged in digital/venture era with large external equity funding and heavy investment in fulfillment/logistics.
+Một bảng so sánh hữu ích không hỏi “tốt nhất/xấu nhất”, mà hỏi biến nào chi phối từng nhóm.
 
-Economics combines:
-
-- platform/customer data;
-- subscription/retention;
-- inventory/merchant relationships;
-- fulfillment CAPEX;
-- last-mile density.
-
-This shows “tech company” can become infrastructure-heavy.
-
-The right comparison is not only Korean portals; parts of economics resemble retail and logistics.
-
-## KT — public-infrastructure lineage and regulated network economics
-
-KT offers different institutional genealogy: public telecom infrastructure evolved into corporatized/privatized listed telecom company.
-
-Telecom analysis focuses on:
-
-- ARPU;
-- churn;
-- network CAPEX;
-- spectrum/regulation;
-- enterprise/digital services.
-
-Public-origin history may influence asset base and policy relationship differently from family-founded chaebol.
-
-## How to compare groups without falling into ranking
-
-A useful comparison table is not “best/worst”, but asks which variables dominate each group.
-
-| Group / ecosystem | Historical capability | Main economic logic | First variables to inspect |
+| Tập đoàn / hệ sinh thái | Năng lực lịch sử | Logic kinh tế chính | Biến cần xem đầu tiên |
 |---|---|---|---|
-| Samsung | process manufacturing + capital scale | semiconductor/electronics cycles | ASP, mix, yield, CAPEX, governance |
-| Hyundai Motor | project execution + manufacturing platform | autos/mobility | units, ASP, incentives, FX, EV CAPEX |
-| SK | portfolio allocation + telecom/energy | mixed recurring + cyclical + growth CAPEX | leverage, semiconductor cycle, utilization |
-| LG | chemicals + electronics | materials/electronics/battery | utilization, customer concentration, CAPEX |
-| Lotte | consumer distribution + property | domestic demand + asset-heavy services | consumption, tourism, property, rates |
-| Hanwha | industrial/defense capability | backlog + strategic industry + finance | backlog quality, project cash flow, leverage |
-| POSCO | integrated steel engineering | commodity spread + materials transition | spreads, utilization, new-project ROIC |
-| Naver/Kakao | network/software/data | digital platform | retention, monetization, regulation, CAPEX |
-| CJ | consumer brand + logistics + IP | recurring demand + network + hit-driven content | margins, logistics utilization, content ROI |
-| Coupang | digital demand + fulfillment density | commerce/logistics scale | retention, contribution margin, fulfillment economics |
-| KT | telecom network | recurring regulated infrastructure | ARPU, churn, CAPEX, regulation |
+| Samsung | sản xuất quy trình + quy mô vốn | chu kỳ bán dẫn/điện tử | ASP, mix, yield, CAPEX, quản trị |
+| Hyundai Motor | thực thi dự án + nền tảng sản xuất | ô tô/mobility | số xe, ASP, ưu đãi, FX, CAPEX EV |
+| SK | phân bổ danh mục + telecom/năng lượng | lặp lại + chu kỳ + CAPEX tăng trưởng | đòn bẩy, chu kỳ bán dẫn, utilization |
+| LG | hóa chất + điện tử | vật liệu/điện tử/pin | utilization, tập trung khách hàng, CAPEX |
+| Lotte | phân phối tiêu dùng + bất động sản | cầu nội địa + dịch vụ thâm dụng tài sản | tiêu dùng, du lịch, bất động sản, lãi suất |
+| Hanwha | công nghiệp/quốc phòng | backlog + ngành chiến lược + tài chính | chất lượng backlog, dòng tiền dự án, đòn bẩy |
+| POSCO | kỹ thuật thép tích hợp | chênh lệch hàng hóa + chuyển sang vật liệu | spread, utilization, ROIC dự án mới |
+| NAVER/Kakao | mạng/phần mềm/dữ liệu | nền tảng số | retention, kiếm tiền, quy định, CAPEX |
+| CJ | thương hiệu tiêu dùng + logistics + IP | cầu lặp lại + mạng + nội dung hit-driven | biên, utilization logistics, ROI nội dung |
+| Coupang | nhu cầu số + mật độ fulfillment | quy mô commerce/logistics | retention, biên đóng góp, kinh tế fulfillment |
+| KT | mạng viễn thông | hạ tầng lặp lại chịu điều tiết | ARPU, churn, CAPEX, quy định |
 
-The table identifies **different analytical lenses**, not winners.
+Bảng này chỉ xác định **lăng kính phân tích khác nhau**, không chọn bên thắng.
 
-## Five mistakes when analyzing Korean groups
+## Năm lỗi phổ biến khi phân tích tập đoàn Hàn Quốc
 
-### Mistake 1 — Brand substitution
+**Lỗi 1 — lấy thương hiệu thay pháp nhân.** Uy tín tập đoàn không thay thế sức khỏe tài chính của công ty thành viên cụ thể.
 
-Using group prestige as proxy for specific affiliate financial health.
+**Lỗi 2 — nhầm phạm vi hợp nhất.** Trộn câu chuyện cấp tập đoàn với nợ hoặc lợi nhuận của một pháp nhân.
 
-### Mistake 2 — Consolidation confusion
+**Lỗi 3 — thiên kiến chủ đề tăng trưởng.** Cho rằng đầu tư vào pin, AI, quốc phòng hoặc bio tự động có lợi suất cao.
 
-Mixing group narrative with standalone entity debt/profit.
+**Lỗi 4 — mù chu kỳ.** Dùng lợi nhuận đỉnh chu kỳ làm mức bền vững.
 
-### Mistake 3 — Growth-theme bias
+**Lỗi 5 — bỏ qua quản trị.** Không kiểm tra ai kiểm soát phân bổ vốn và cổ đông thiểu số ở từng pháp nhân có nhận phần tăng/giảm công bằng hay không.
 
-Assuming battery, AI, defense or bio investment automatically creates high return.
-
-### Mistake 4 — Cycle blindness
-
-Using peak cyclical earnings as sustainable base.
-
-### Mistake 5 — Governance blindness
-
-Ignoring who controls capital allocation and whether entity minority shareholders share upside/downside fairly.
-
-## Practical group-analysis template
-
-For any large Korean group:
+## Mẫu phân tích tập đoàn thực hành
 
 ```markdown
-# Group / Entity
+# Tập đoàn / Pháp nhân
 
-## Historical Genealogy
-## Current Control Map
-## Listed vs Unlisted Entities
-## Cash-Generating Core
-## Growth / Capital-Consuming Businesses
-## Internal Transactions and Shared Infrastructure
-## Group-Level Debt / Funding Dependencies
-## Entity-Specific Balance Sheet
-## Macro and Industry Exposures
-## Governance / Succession / Capital Allocation
-## Key Scenario Risks
+## Phả hệ lịch sử
+## Sơ đồ kiểm soát hiện tại
+## Công ty niêm yết và chưa niêm yết
+## Mảng cốt lõi tạo tiền mặt
+## Mảng tăng trưởng / tiêu tốn vốn
+## Giao dịch nội bộ và hạ tầng dùng chung
+## Nợ cấp tập đoàn / phụ thuộc nguồn vốn
+## Bảng cân đối riêng của pháp nhân
+## Mức tiếp xúc vĩ mô và ngành
+## Quản trị / kế nhiệm / phân bổ vốn
+## Rủi ro theo kịch bản
 ```
 
-This template forces brand story into analyzable structure.
+Mẫu này ép câu chuyện thương hiệu thành cấu trúc có thể kiểm chứng.
 
-## Mental Model
+## Mental Model — mô hình tư duy
 
-> A Korean business group is a **portfolio of legal entities connected by ownership, capital, contracts, history and shared capability**. The group gives strategic context; the legal entity gives financial reality. Good analysis always moves between both levels without confusing them.
+> Một tập đoàn Hàn Quốc là **danh mục các pháp nhân được nối bằng sở hữu, vốn, hợp đồng, lịch sử và năng lực dùng chung**. Tập đoàn cung cấp bối cảnh chiến lược; pháp nhân cung cấp thực tế tài chính. Phân tích tốt phải di chuyển giữa hai cấp mà không trộn chúng.
 
-## Connections
+## Liên kết
 
-Use [00_history/08_company_genealogies](./00_history/08_company_genealogies.md) for historical lineages, [05_group_structure_affiliates_holding_companies](./05_group_structure_affiliates_holding_companies.md) for ownership architecture, [08_corporate_governance_ownership_and_control](./08_corporate_governance_ownership_and_control.md) for control issues and [20_how_to_analyze_a_korean_company](./20_how_to_analyze_a_korean_company.md) for full entity-level research workflow.
+Dùng [`00_history/08_company_genealogies.md`](./00_history/08_company_genealogies.md) cho phả hệ lịch sử, [`05_group_structure_affiliates_holding_companies.md`](./05_group_structure_affiliates_holding_companies.md) cho kiến trúc sở hữu, [`08_corporate_governance_ownership_and_control.md`](./08_corporate_governance_ownership_and_control.md) cho vấn đề kiểm soát và [`20_how_to_analyze_a_korean_company.md`](./20_how_to_analyze_a_korean_company.md) cho quy trình nghiên cứu ở cấp pháp nhân.
