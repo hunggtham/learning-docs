@@ -51,6 +51,9 @@
 | 부의금 | Condolence money | Tiền phúng viếng | 04 |
 | 비혼 | Non-marriage | Lựa chọn không xem hôn nhân là mục tiêu bắt buộc | 15 |
 | 1인가구 | One-person household | Hộ một người | 15 |
+| 육아휴직 | Parental leave | Nghỉ việc tạm thời để chăm con theo cơ chế cho phép | 29, 06 |
+| 아빠육아 | Father-involved childcare | Người cha trực tiếp tham gia và chịu trách nhiệm chăm con | 29 |
+| 돌봄망 | Care network | Mạng lưới người và thiết chế cùng tham gia chăm sóc | 29, 15 |
 
 ## Giáo dục, campus và công việc
 
@@ -61,6 +64,12 @@
 | 학원 | Private academy | Học viện tư, nơi học thêm | 05 |
 | 학벌 | Academic pedigree | Uy tín của trường học và bằng cấp | 05 |
 | 선행학습 | Advanced learning | Học trước chương trình | 05 |
+| 평생교육 | Lifelong learning | Học tập suốt đời | 05 |
+| 재교육 | Reskilling/retraining | Đào tạo lại hoặc cập nhật kỹ năng | 05 |
+| 사내교육 | In-house training | Đào tạo trong doanh nghiệp | 05, 06 |
+| 경력전환 | Career transition | Chuyển hướng hoặc chuyển nghề | 05, 24 |
+| 자격증 | Certification | Chứng chỉ hoặc giấy chứng nhận năng lực theo phạm vi nhất định | 05 |
+| 포트폴리오 | Portfolio | Hồ sơ sản phẩm/dự án dùng làm bằng chứng năng lực | 05, 30 |
 | 학번 | Student cohort/entry-year number | Mã hoặc năm nhập học của sinh viên | 30 |
 | 새내기 | Freshman/new student | Tân sinh viên | 30 |
 | 동기 | Same-cohort peer | Người cùng khoá, cùng đợt gia nhập | 30 |
@@ -69,6 +78,17 @@
 | MT | Membership Training | Hoạt động gắn kết nhóm hoặc campus | 30 |
 | 휴학 | Leave of absence | Bảo lưu, nghỉ học tạm thời | 30 |
 | 복학 | Return to school | Quay lại học sau bảo lưu | 30 |
+| 수강신청 | Course registration | Đăng ký môn học | 30 |
+| 학점 | GPA/credit grade | Điểm hoặc kết quả học phần/tín chỉ | 30 |
+| 조별과제 | Group assignment | Bài tập nhóm | 30 |
+| 발표 | Presentation | Thuyết trình | 30 |
+| 연구실 | Laboratory/research group | Phòng nghiên cứu hoặc nhóm nghiên cứu | 30 |
+| 지도교수 | Academic adviser | Giáo sư hướng dẫn | 30 |
+| 인턴 | Internship | Thực tập | 30 |
+| 통학 | Commuting to school | Đi học từ nhà bằng việc di chuyển hằng ngày | 30 |
+| 자취 | Living independently | Tự thuê/ở riêng, thường xa gia đình | 30 |
+| 기숙사 | Dormitory | Ký túc xá | 30 |
+| 교환학생 | Exchange student | Sinh viên trao đổi | 30 |
 | 취업준비생 | Job seeker preparing for employment | Người đang chuẩn bị xin việc | 30 |
 | 공모전 | Competition/contest | Cuộc thi, thường dùng để xây dự án hoặc hồ sơ | 30 |
 | 대외활동 | External activity | Hoạt động ngoài trường | 30 |
@@ -79,6 +99,8 @@
 | 결재 | Approval | Phê duyệt | 06 |
 | 회식 | Company/group dinner | Liên hoan công ty hoặc nhóm | 06 |
 | 야근 | Overtime | Làm thêm muộn, làm đêm | 06 |
+| 재택근무 | Remote work | Làm việc tại nhà/từ xa | 06 |
+| 하이브리드근무 | Hybrid work | Làm việc kết hợp từ xa và tại văn phòng | 06 |
 
 ## Ăn uống, nhà ở và khu dân cư
 
@@ -112,6 +134,8 @@
 | 종량제 | Volume-based waste fee system | Hệ thống thu phí rác theo lượng | 31 |
 | 음식물쓰레기 | Food waste | Rác thực phẩm | 31 |
 | 동네 | Neighbourhood | Khu mình sống, khu phố | 31 |
+| 무장애 | Barrier-free | Không rào cản trong thiết kế và tiếp cận | 12, 26, 31 |
+| 접근성 | Accessibility | Khả năng tiếp cận vật lý, số hoặc thông tin | 12, 26, 31 |
 
 ## Tôn giáo, nghệ thuật và di sản
 
@@ -134,6 +158,9 @@
 | 백자 | White porcelain | Bạch sứ | 10 |
 | 한지 | Hanji | Giấy truyền thống Hàn | 10 |
 | 민화 | Folk painting | Tranh dân gian | 10 |
+| 큐레이터 | Curator | Giám tuyển | 10 |
+| 비엔날레 | Biennale | Triển lãm nghệ thuật quy mô lớn theo chu kỳ | 10 |
+| 독립공간 | Independent art space | Không gian nghệ thuật độc lập | 10 |
 
 ## Lễ hội, thành phố, mùa và đời sống số
 
@@ -152,6 +179,8 @@
 | 찜질방 | Jjimjilbang | Không gian sauna, tắm và nghỉ | 08, 12 |
 | 배달 | Delivery | Giao hàng, giao đồ ăn | 12, 33 |
 | 카공족 | Cafe-study people | Người học hoặc làm việc lâu ở quán cà phê | 12 |
+| 교통약자 | Mobility-vulnerable traveller | Người gặp hạn chế khi sử dụng giao thông | 12 |
+| 디지털 접근성 | Digital accessibility | Khả năng tiếp cận dịch vụ và giao diện số | 12, 26 |
 | 사계절 | Four seasons | Bốn mùa | 32 |
 | 벚꽃 | Cherry blossom | Hoa anh đào | 32 |
 | 꽃놀이 | Flower viewing | Đi ngắm hoa | 32 |
@@ -193,9 +222,14 @@
 | 연습생 | Trainee | Thực tập sinh thần tượng | 13 |
 | 팬덤 | Fandom | Cộng đồng người hâm mộ | 13 |
 | 웹툰 | Webtoon | Truyện tranh dọc trên nền tảng số | 13 |
+| 저작권 | Copyright | Quyền tác giả/quyền đối với tác phẩm theo phạm vi pháp lý | 13 |
+| 크레딧 | Credit | Ghi công đóng góp | 13 |
 | 초고령사회 | Super-aged society | Xã hội siêu già | 15 |
 | 저출산 | Low fertility | Mức sinh thấp | 15, 29 |
 | 다문화가정 | Multicultural family | Gia đình đa văn hoá | 15 |
+| 이주배경인구 | Migration-background population | Dân số có nền tảng di cư theo định nghĩa thống kê | 15 |
+| 부양비 | Dependency ratio | Tỷ số phụ thuộc theo cấu trúc tuổi | 15 |
+| 생활인구 | De facto/activity population | Dân số hiện diện hoặc sử dụng địa phương theo dòng hoạt động | 15 |
 | 지방소멸 | Local extinction risk | Nguy cơ suy giảm dân số và dịch vụ địa phương | 15 |
 | MZ세대 | Millennials + Gen Z label | Nhãn thế hệ MZ | 06, 15, 30 |
 
@@ -226,6 +260,10 @@
 | 연 나이 | Year age | Tuổi tính theo năm sinh | 22 |
 | 세는나이 | Traditional Korean counting age | Tuổi đếm truyền thống | 22 |
 | 동갑 | Same-age peer | Người đồng tuổi | 22 |
+| 로마자 표기 | Romanization | Cách biểu diễn tên/từ Hàn bằng chữ La-tinh | 22, 28 |
+| 영어이름 | English name | Tên tiếng Anh dùng trong một số môi trường quốc tế/công sở | 22 |
+| 닉네임 | Nickname | Biệt danh hoặc tên hiển thị | 22, 27 |
+| 개인정보 | Personal information | Thông tin cá nhân | 22, 27 |
 | 병역 | Military service obligation | Nghĩa vụ quân sự | 23 |
 | 입대 | Enlistment | Nhập ngũ | 23 |
 | 전역 | Discharge | Xuất ngũ | 23 |
@@ -249,6 +287,8 @@
 | 건강보험 | Health insurance | Bảo hiểm y tế | 26 |
 | 한의학 | Traditional Korean Medicine | Y học Hàn truyền thống | 26 |
 | 건강검진 | Health screening | Khám sức khoẻ định kỳ | 26 |
+| 완화의료 | Palliative care | Chăm sóc giảm nhẹ | 26 |
+| 호스피스 | Hospice | Chăm sóc cuối đời theo mô hình hospice | 26 |
 | 익명성 | Anonymity | Tính ẩn danh | 27, 30 |
 | 단톡방 | Group chat room | Phòng chat nhóm | 27, 30 |
 | 읽씹 | Read-and-ignore | Đã đọc nhưng không trả lời | 27, 33 |
@@ -256,6 +296,23 @@
 | 신조어 | Neologism | Từ mới | 27 |
 | 밈 | Meme | Meme, mẫu nội dung lan truyền | 27 |
 | 악플 | Malicious comment | Bình luận ác ý | 27 |
+
+## Các khái niệm phân tích xuyên chương
+
+| Khái niệm | English | Ý nghĩa sử dụng trong bộ sách | Chương tiêu biểu |
+|---|---|---|---|
+| vòng phản hồi | Feedback loop | Đầu ra quay lại làm thay đổi điều kiện tạo đầu ra tiếp theo | 05, 12, 13, 16 |
+| bất cân xứng thông tin | Information asymmetry | Một bên có nhiều hoặc tốt hơn thông tin bên kia | 05, 12, 24 |
+| tác động ngoại biên | Externality | Chi phí/lợi ích của hành động rơi sang người khác | 12, 20, 31 |
+| phụ thuộc đường đi lịch sử | Path dependence | Quyết định và hạ tầng cũ làm một số lựa chọn sau dễ hơn lựa chọn khác | 01, 16 |
+| kỹ năng chuyển giao | Transferable skill | Kỹ năng giữ giá trị khi chuyển vai trò hoặc công cụ | 05 |
+| năng lực tái đào tạo | Reskilling capacity | Khả năng thực tế để học lại dựa trên thời gian, tiền và hỗ trợ | 05, 15 |
+| tải quản lý vô hình | Mental/coordination load | Công việc nhớ, lập kế hoạch, theo dõi và dự đoán ngoại lệ | 29, 06, 16 |
+| hợp đồng giữa các thế hệ | Intergenerational contract | Cách xã hội phân phối đóng góp và hỗ trợ qua các giai đoạn tuổi | 15, 16 |
+| chuỗi nhân quả chính sách | Policy causal chain | Các bước trung gian nối chính sách với kết quả cuối | 15, 16 |
+| tối thiểu hoá dữ liệu | Data minimization | Chỉ thu thập dữ liệu cần cho mục đích xác định | 22 |
+| ghép nối | Matching | Chức năng nối người với cơ hội, mạng lưới hoặc tổ chức | 30 |
+| độ trễ thiết chế | Institutional lag | Thiết chế thay đổi chậm hơn cấu trúc xã hội hoặc công nghệ | 15 |
 
 ## Bản đồ nguồn: nên dùng gì khi mở rộng
 
