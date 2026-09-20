@@ -1,293 +1,320 @@
-# Samsung Electronics Case Lab — từ consolidated company tới từng economic engine
+# Samsung Electronics — từ công ty hợp nhất đến từng cỗ máy kinh tế
 
-Samsung Electronics là case rất tốt để học một lỗi phổ biến trong company analysis: **một legal entity có thể chứa nhiều business có production function hoàn toàn khác nhau**. Nếu chỉ nhìn consolidated revenue, operating profit và P/E, người đọc dễ bỏ qua việc semiconductor, smartphone, display và automotive electronics phản ứng với cycle theo những cách khác nhau.
+Samsung Electronics là bài thực hành rất tốt để học một lỗi phổ biến trong phân tích doanh nghiệp: **một pháp nhân có thể chứa nhiều mảng kinh doanh có hàm sản xuất hoàn toàn khác nhau**. Nếu chỉ nhìn doanh thu hợp nhất, lợi nhuận hoạt động và P/E, người đọc dễ bỏ qua việc bán dẫn, điện thoại, màn hình và điện tử ô tô phản ứng với chu kỳ theo những cách khác nhau.
 
-Theo disclosure của Samsung Electronics, cấu trúc consolidated hiện gồm DX (Device eXperience), DS (Device Solutions), SDC và Harman. DX bao gồm các finished products như smartphone, TV và home appliances; DS gồm Memory, Foundry và System LSI. Vì vậy câu “Samsung earnings tăng” chưa phải explanation. Câu hỏi đúng là **engine nào tạo ra thay đổi, engine đó đang ở phase nào của cycle, và cash flow có bền sau CAPEX hay không**.
+Theo cấu trúc công bố của Samsung Electronics, công ty có các mảng lớn như DX (Device eXperience), DS (Device Solutions), SDC và Harman. DX gồm nhiều sản phẩm hoàn chỉnh như điện thoại, TV và đồ gia dụng; DS gồm Memory, Foundry và System LSI.
 
-> Snapshot để luyện đọc: FY2025 consolidated sales được Samsung công bố ở mức khoảng KRW 333.6 trillion và operating profit khoảng KRW 43.6 trillion. Đây chỉ là mốc lịch sử để luyện decomposition, không phải assumption cho năm sau.
+Vì vậy câu “lợi nhuận Samsung tăng” chưa phải lời giải thích. Câu hỏi đúng là: **cỗ máy nào tạo ra thay đổi, nó đang ở pha nào của chu kỳ và dòng tiền còn bền sau CAPEX hay không?**
 
-## 1. Entity resolution trước khi model
+Số liệu FY2025 chỉ nên dùng như ảnh chụp lịch sử để luyện phân tích, không được biến thành giả định mặc định cho năm sau.
 
-“Samsung” là group name, còn case này là **Samsung Electronics Co., Ltd.**. Samsung Electronics có subsidiaries được consolidate, nhưng không đồng nghĩa mọi affiliate mang brand Samsung đều nằm trong reporting perimeter của Samsung Electronics.
+## 1. Xác định đúng pháp nhân trước khi lập mô hình
 
-Đây là lý do bước đầu tiên trên DART phải là kiểm tra legal name, consolidated subsidiaries và segment note. Nếu nhầm group boundary với accounting boundary, analyst có thể gán asset, debt hoặc profit của một affiliate khác cho Samsung Electronics.
+“Samsung” là tên tập đoàn, còn bài này phân tích **Samsung Electronics Co., Ltd.** Samsung Electronics hợp nhất nhiều công ty con, nhưng không có nghĩa mọi công ty mang thương hiệu Samsung đều nằm trong phạm vi báo cáo của Samsung Electronics.
 
-Mental model:
+Trên DART, bước đầu phải kiểm tra tên pháp nhân, công ty con hợp nhất và thuyết minh phân khúc. Nếu nhầm ranh giới tập đoàn với ranh giới kế toán, người phân tích có thể gán tài sản, nợ hoặc lợi nhuận của pháp nhân khác cho Samsung Electronics.
 
 ```text
 Samsung Group
-   ├─ Samsung Electronics ← entity đang phân tích
+   ├─ Samsung Electronics ← pháp nhân đang phân tích
    │    ├─ DX
    │    ├─ DS
    │    ├─ SDC
    │    └─ Harman
-   └─ other separate affiliates
+   └─ các công ty liên kết độc lập khác
 ```
 
-## 2. Không có một “Samsung margin” duy nhất
+## 2. Không có một “biên lợi nhuận Samsung” duy nhất
 
-DX và DS khác nhau từ gốc. DX bán finished products. Smartphone economics chịu ảnh hưởng của unit shipment, product mix, component cost, marketing, channel inventory và replacement cycle. DS semiconductor lại có fixed-cost intensity rất cao: fab phải gánh depreciation và engineering cost ngay cả khi utilization thấp.
+DX và DS khác nhau từ gốc. DX bán sản phẩm hoàn chỉnh. Kinh tế điện thoại chịu ảnh hưởng của số máy bán, cơ cấu sản phẩm, chi phí linh kiện, marketing, tồn kho kênh phân phối và chu kỳ thay máy.
 
-Vì vậy cùng một mức revenue decline có thể tạo profit impact rất khác.
+DS bán dẫn lại có **cường độ chi phí cố định (fixed-cost intensity)** rất cao. Fab vẫn phải gánh khấu hao và chi phí kỹ thuật ngay cả khi tỷ lệ sử dụng công suất thấp.
 
-Một decomposition đơn giản cho DX:
-
-\[
-Revenue_{DX} \approx Units \times ASP
-\]
+Với DX có thể bắt đầu từ:
 
 \[
-Operating\ Profit_{DX} \approx Revenue - Components - Manufacturing - Marketing - R\&D - SG\&A
+Doanh\ thu_{DX} \approx Số\ lượng\ bán \times ASP
 \]
 
-Trong DS Memory:
+Lợi nhuận sau đó phụ thuộc chi phí linh kiện, sản xuất, marketing, R&D và SG&A.
 
-\[
-Revenue_{Memory} \approx Bit\ Shipment \times ASP/bit
-\]
-
-\[
-Gross\ Profit \approx Revenue - Wafer/Process\ Cost - Depreciation - Other\ Manufacturing\ Cost
-\]
-
-Khi ASP giảm nhanh hơn cost per bit, margin có thể collapse dù bit shipment vẫn tăng. Đây là lý do “volume growth” trong semiconductor không tự động nghĩa là earnings growth.
-
-## 3. Memory cycle: từ end demand tới operating profit
-
-Một memory upcycle thường không bắt đầu ở income statement. Nó bắt đầu ở quan hệ giữa demand growth và effective supply growth.
+Với bán dẫn, cần mô hình khác:
 
 ```text
-AI / server / mobile / PC demand
-        ↓
-Bit demand
-        ↕
-Industry wafer capacity + node migration + yield
-        ↓
-Supply-demand balance
-        ↓
-ASP
-        ↓
-Revenue
-        ↓
-Utilization + product mix + cost/bit
-        ↓
-Operating profit
+Nhu cầu bit
+→ lượng bit xuất bán
+× ASP
+→ doanh thu
+- chi phí sản xuất
+- khấu hao lớn
+→ lợi nhuận hoạt động
 ```
 
-Nếu analyst chỉ theo spot price, họ có thể bỏ qua contract pricing, product mix và HBM/DDR/NAND composition. Nếu chỉ theo shipment, họ bỏ qua ASP. Nếu chỉ theo operating profit, họ nhìn quá muộn.
+Do đó cùng mức doanh thu giảm 10% có thể tạo tác động lợi nhuận rất khác giữa điện thoại và bộ nhớ.
 
-## 4. Foundry không nên được model như Memory
+## 3. Bộ nhớ: giá, lượng bit và chi phí mỗi bit
 
-Memory sản xuất standardized products hơn và cycle chịu ảnh hưởng mạnh của industry supply discipline. Foundry là manufacturing service cho chip design customers. Economics phụ thuộc technology node, customer qualification, design win, yield và fab utilization.
-
-Hai fab có cùng nominal capacity nhưng economic output khác rất xa nếu một fab chạy high-yield leading-node product còn fab kia underutilized hoặc yield thấp.
-
-Một simplified foundry model:
+Một cách đơn giản để đọc bộ nhớ:
 
 \[
-Revenue \approx Wafer\ Starts \times Utilization \times Revenue/Wafer
+Doanh\ thu \approx Lượng\ bit\ xuất\ bán \times Giá\ bán\ mỗi\ bit
 \]
 
-nhưng margin cần thêm yield:
+Lợi nhuận phụ thuộc thêm chi phí mỗi bit. Khi công nghệ quy trình tốt hơn, yield tăng và mật độ chip cao hơn, chi phí mỗi bit có thể giảm.
 
-\[
-Economic\ Output \propto Good\ Dies = Wafer\ Starts \times Dies/Wafer \times Yield
-\]
+Nhưng giá bán bộ nhớ có tính chu kỳ mạnh. Nếu toàn ngành tăng công suất quá nhanh, nguồn cung vượt nhu cầu và ASP giảm. Vì khấu hao fab vẫn tồn tại, lợi nhuận có thể giảm nhanh hơn doanh thu.
 
-Do đó khi đọc capex, không hỏi chỉ “Samsung đầu tư bao nhiêu”. Hãy hỏi **capex đó đi vào memory, foundry, advanced packaging hay infrastructure; utilization/yield cần đạt mức nào để ROIC vượt cost of capital**.
-
-## 5. CAPEX, depreciation và FCF: nơi semiconductor story trở thành finance
-
-Semiconductor leadership cần investment trước revenue. Cash ra ở thời điểm equipment/fab được xây; depreciation đi vào accounting profit dần theo useful life.
-
-Điều này tạo ba thời điểm khác nhau:
+Đây là **đòn bẩy hoạt động (operating leverage)**.
 
 ```text
-Investment decision
-→ Cash CAPEX
-→ Capacity becomes available
-→ Production / qualification
-→ Revenue
-→ Depreciation continues over useful life
+ASP ↑ + tỷ lệ sử dụng ↑
+→ biên lợi nhuận tăng rất nhanh
+
+ASP ↓ + tỷ lệ sử dụng ↓
+→ khấu hao phân bổ trên ít sản lượng hơn
+→ biên lợi nhuận giảm rất nhanh
 ```
 
-Một upcycle có thể tạo operating cash flow rất lớn nhưng đồng thời kéo theo CAPEX lớn. Vì vậy nên theo ít nhất:
+## 4. HBM làm cơ cấu bộ nhớ khác trước
 
-\[
-FCF \approx CFO - CAPEX
-\]
+HBM không nên được đọc đơn giản như “DRAM giá cao hơn”. Nó yêu cầu xếp chồng chip, đóng gói phức tạp, kiểm soát nhiệt, yield tốt và quá trình chứng nhận với khách hàng AI.
 
-và:
+Vì vậy cần hỏi:
 
-\[
-CAPEX / Depreciation
-\]
+- tỷ trọng HBM trong cơ cấu sản phẩm tăng bao nhiêu;
+- yield và năng lực đóng gói thế nào;
+- khách hàng đã chứng nhận sản phẩm chưa;
+- công suất wafer được chuyển từ DRAM truyền thống sang HBM ra sao;
+- ASP cao hơn có bù được chi phí và độ phức tạp cao hơn không.
 
-Nếu CAPEX liên tục vượt depreciation rất mạnh, company đang mở rộng asset base; analyst cần chứng minh future demand và return, không chỉ gọi đó là “growth investment”.
+HBM có thể nâng giá trị mỗi wafer nhưng cũng tạo **chi phí cơ hội công suất**: wafer dùng cho HBM không thể đồng thời dùng cho sản phẩm khác.
 
-## 6. Worked example bằng số giả định
+## 5. Foundry: không thể chỉ nhìn công suất danh nghĩa
 
-Giả sử Memory business có:
+Foundry có chi phí cố định rất cao nhưng khác bộ nhớ ở chỗ sản phẩm được sản xuất theo thiết kế của khách hàng. Công suất danh nghĩa không có nhiều ý nghĩa nếu khách hàng không đặt đủ wafer hoặc yield thấp.
+
+Một mô hình đơn giản:
 
 ```text
-Năm 1:
-Bit shipment = 100
-ASP/bit = 1.00
-Cost/bit = 0.75
-
-Năm 2:
-Bit shipment +20% → 120
-ASP/bit -15% → 0.85
-Cost/bit -10% → 0.675
+Công suất danh nghĩa
+× tỷ lệ sử dụng
+× yield kinh tế
+× giá mỗi wafer
+→ doanh thu có chất lượng
 ```
 
-Revenue:
+Nếu công suất tăng nhưng tỷ lệ sử dụng thấp, khấu hao trên mỗi wafer tăng. Nếu yield thấp, doanh nghiệp tiêu cùng lượng vật liệu và thời gian máy nhưng thu được ít chip đạt chuẩn hơn.
 
-\[
-100 \times 1.00 = 100
-\]
+Vì vậy cần phân biệt “đã xây fab” với “fab đang tạo lợi nhuận”.
 
-sang:
+## 6. System LSI: thiết kế chip có kinh tế khác foundry
 
-\[
-120 \times 0.85 = 102
-\]
+System LSI tập trung nhiều hơn vào thiết kế và sản phẩm logic. Cơ chế giá trị nằm ở IP, kiến trúc chip, khả năng tích hợp và nhu cầu sản phẩm cuối.
 
-Revenue tăng 2%, nhìn bề ngoài ổn. Nhưng unit gross spread thay từ `0.25` xuống `0.175`. Approximate gross contribution:
+Một doanh nghiệp có thể có foundry mạnh nhưng thiết kế sản phẩm yếu, hoặc ngược lại. Không nên gộp tất cả “semiconductor” thành một khối.
 
-\[
-100 \times 0.25 = 25
-\]
+## 7. DX: điện thoại không chỉ là số lượng máy
 
-sang:
-
-\[
-120 \times 0.175 = 21
-\]
-
-Volume tăng 20% nhưng contribution giảm. Đây là bài học cốt lõi của commodity-like semiconductor economics: **price-cost spread quan trọng hơn shipment headline**.
-
-## 7. DX: product mix quan trọng hơn unit count đơn thuần
-
-Với smartphone, cùng 100 triệu units nhưng mix flagship cao hơn có thể tạo revenue và margin khác hẳn. Tuy nhiên ASP cao không đủ nếu component cost, promotion hoặc channel incentives tăng mạnh.
-
-Driver tree nên là:
+Với smartphone, doanh thu phụ thuộc số máy bán và ASP, nhưng lợi nhuận còn phụ thuộc cơ cấu giữa flagship và tầm trung, chi phí bộ nhớ/màn hình/chip, marketing và mức tồn kho tại kênh bán.
 
 ```text
-Smartphone demand
-→ units
-→ premium / mass mix
-→ ASP
-→ component BOM
-→ marketing + channel incentives
-→ margin
+Số máy bán
+× ASP
+= doanh thu
+- linh kiện
+- sản xuất
+- marketing
+- R&D
+- SG&A
+= lợi nhuận hoạt động
 ```
 
-Khi semiconductor price tăng, điều thú vị là Samsung Electronics vừa có thể hưởng lợi ở DS vừa chịu higher component cost ở DX. Consolidation có thể che một phần internal economic offset này.
+Một năm số máy không tăng nhưng tỷ trọng flagship cao hơn vẫn có thể cải thiện lợi nhuận. Ngược lại, tăng sản lượng bằng khuyến mại mạnh có thể làm doanh thu tăng nhưng biên giảm.
 
-## 8. SDC và Harman: tại sao diversification cần decomposition
+## 8. Tích hợp dọc tạo cả lợi thế và xung đột kinh tế
 
-Display có cycle, customer concentration và technology-transition economics riêng. Harman lại gắn nhiều hơn với automotive electronics, infotainment và vehicle production cycle. Hai business này không nên bị coi như “other” nếu contribution trở nên material.
+Samsung Electronics có nhiều năng lực nội bộ về bộ nhớ, màn hình và linh kiện. Tích hợp dọc có thể giúp phối hợp sản phẩm, bảo đảm nguồn cung và học công nghệ nhanh.
 
-Diversification giúp consolidated company không phụ thuộc duy nhất một cycle, nhưng không xóa cycle. Nó tạo **portfolio of cycles**.
+Nhưng không nên mặc định “tự cung cấp linh kiện luôn tốt”. Nếu linh kiện nội bộ đắt hơn hoặc kém cạnh tranh hơn nguồn ngoài, việc ưu tiên nội bộ có thể làm giảm hiệu quả kinh tế.
 
-## 9. DART reading mission
+Do đó cần phân biệt **lợi ích chiến lược của tích hợp** với **hiệu quả tài chính của từng giao dịch**.
 
-Khi mở annual/business report, không đọc từ trang đầu tới cuối. Hãy tìm theo sequence:
+## 9. SDC và Harman: hai cỗ máy khác nữa
+
+Samsung Display chịu chu kỳ màn hình, công nghệ OLED, công suất và khách hàng lớn. Harman lại liên quan điện tử ô tô, âm thanh và hệ thống kết nối, với chu kỳ hợp đồng dài hơn smartphone.
+
+Điều này làm Samsung Electronics giống một danh mục nhiều doanh nghiệp hơn là một công ty đơn ngành.
+
+Khi phân tích hợp nhất, nên hỏi mỗi mảng đóng góp bao nhiêu vào doanh thu, lợi nhuận, CAPEX và biến động chu kỳ.
+
+## 10. CAPEX: chi tiền hôm nay để giữ quyền cạnh tranh ngày mai
+
+Bán dẫn cần CAPEX rất lớn. Nhưng CAPEX không phải chi phí được ghi hết ngay vào báo cáo kết quả kinh doanh. Tiền mặt ra trước, sau đó tài sản được khấu hao qua nhiều năm.
 
 ```text
-1. 사업의 내용 / business overview
-2. segment revenue and operating profit
-3. inventories
-4. property, plant and equipment
-5. depreciation
-6. cash flow / CAPEX clues
-7. commitments
-8. related parties
-9. shareholder return / treasury shares
-10. auditor and accounting-policy changes
+CAPEX hôm nay
+→ tài sản cố định tăng
+→ khấu hao các năm sau tăng
+→ công suất tương lai tăng
 ```
 
-Sau đó tạo bảng năm năm cho revenue, operating profit, CFO, CAPEX, cash, debt và segment mix. Mục tiêu là nhìn được cycle chứ không phải thuộc một năm.
+Vì vậy một năm lợi nhuận tốt chưa chắc dòng tiền tự do cao nếu doanh nghiệp đang đầu tư cực lớn.
 
-## 10. Macro transmission
-
-Samsung Electronics là một node nơi nhiều macro variables hội tụ.
-
-KRW yếu có thể hỗ trợ translation/export economics nhưng impact thực phụ thuộc currency mix của revenue và cost. Global rate cao có thể làm electronics demand yếu nhưng đồng thời AI infrastructure spending có thể đi theo cycle riêng. Trade restrictions và export controls có thể ảnh hưởng market access, equipment và customer behavior. Energy cost ảnh hưởng manufacturing; consumer confidence ảnh hưởng devices; hyperscaler CAPEX ảnh hưởng AI memory.
-
-Do đó không dùng rule đơn giản kiểu “KRW yếu = Samsung tốt”. Hãy trace từng variable qua từng segment.
-
-## 11. Scenario lab
-
-Một scenario coherent nên thay đổi driver có quan hệ với nhau.
-
-### Memory-downturn scenario
-
-Giả định:
+Cần đọc cùng lúc:
 
 ```text
-Conventional memory ASP: -20%
-HBM mix: tăng nhưng không đủ offset
-Bit shipment: +8%
-Utilization: giảm
-Cost/bit: -7%
-CAPEX: giảm với độ trễ
-DX demand: flat
+Lợi nhuận hoạt động
+→ CFO
+→ CAPEX
+→ FCF
 ```
 
-Câu hỏi không phải tính target price ngay. Hãy trace:
+## 11. Khấu hao làm chu kỳ bán dẫn khó đọc
+
+Khi fab mới đi vào hoạt động, khấu hao tăng ngay cả khi tỷ lệ sử dụng chưa đạt mức tối ưu. Điều này có thể làm lợi nhuận ngắn hạn xấu trước khi công suất mới tạo doanh thu đầy đủ.
+
+Ngược lại, khi fab cũ đã khấu hao nhiều, chi phí kế toán có thể thấp hơn nhưng tài sản lại gần thời điểm cần nâng cấp.
+
+Do đó không nên đánh giá bán dẫn chỉ bằng EBITDA hoặc lợi nhuận một năm. Phải nhìn tuổi tài sản, CAPEX và thế hệ công nghệ.
+
+## 12. Tồn kho: tín hiệu quan trọng của chu kỳ
+
+Tồn kho bộ nhớ tăng nhanh có thể cho thấy sản xuất vượt nhu cầu. Nhưng tồn kho tăng cũng có thể do doanh nghiệp chuẩn bị cho sản phẩm mới hoặc thay đổi chuỗi cung ứng.
+
+Cần đọc tồn kho cùng ASP, sản lượng, tỷ lệ sử dụng và hướng dẫn của ban quản lý.
 
 ```text
-ASP ↓
-→ DS revenue/margin ↓
-→ CFO ↓
-→ inventory risk ↑
-→ CAPEX adjustment lag
-→ FCF compression
+Nhu cầu yếu
+→ tồn kho tăng
+→ cắt sản xuất
+→ nguồn cung tương lai giảm
+→ giá có thể ổn định sau độ trễ
 ```
 
-Sau đó hỏi balance sheet có đủ sức tiếp tục strategic CAPEX trong downturn không. Đây là nơi financial strength có thể trở thành competitive advantage: company có thể tiếp tục đầu tư khi weaker competitor phải cut sâu hơn.
+Đây là một trong những cơ chế tự điều chỉnh của chu kỳ bộ nhớ.
 
-## 12. Valuation logic
+## 13. Tiền mặt lớn không có nghĩa vốn nhàn rỗi hoàn toàn
 
-Không nên áp một multiple duy nhất mà không nghĩ tới segment mix. Peak semiconductor earnings có thể làm P/E nhìn “rẻ” đúng lúc cycle gần peak; trough earnings làm P/E nhìn “đắt” đúng lúc cycle gần đáy.
+Samsung Electronics thường có lượng tiền và tài sản tài chính lớn. Nhưng một phần tiền cần để tài trợ CAPEX, vốn lưu động, R&D, M&A và chống chịu chu kỳ.
 
-Một cách tư duy tốt hơn là normalized earnings hoặc sum-of-the-parts như một analytical lens, không nhất thiết để tạo target price:
+Khi đánh giá phân bổ vốn, cần hỏi:
+
+- tiền mặt tối thiểu cần cho vận hành là bao nhiêu;
+- CAPEX duy trì và CAPEX tăng trưởng khác nhau thế nào;
+- cổ tức/mua lại cổ phiếu có bền không;
+- doanh nghiệp có đang giữ quá nhiều tiền với lợi suất thấp không;
+- M&A có tạo ROIC tốt hơn hoàn vốn cho cổ đông không.
+
+## 14. Tỷ giá: doanh thu toàn cầu và chi phí toàn cầu
+
+Samsung bán sản phẩm toàn cầu và cũng mua nhiều đầu vào bằng ngoại tệ. KRW yếu có thể nâng doanh thu quy đổi nhưng cũng làm một số chi phí nhập khẩu tăng.
+
+Không nên dùng câu “won yếu tốt cho Samsung” mà không phân tích phơi nhiễm ròng.
+
+Cần xem doanh thu theo khu vực, địa điểm sản xuất, đồng tiền chi phí và chính sách phòng hộ.
+
+## 15. Chu kỳ điện thoại và chu kỳ bộ nhớ có thể không đồng pha
+
+Điện thoại có thể yếu trong khi HBM mạnh. Bộ nhớ truyền thống có thể giảm giá trong khi màn hình OLED cải thiện. Harman có thể hưởng đơn hàng ô tô dài hạn trong lúc smartphone chậm.
+
+Đây là lý do lợi nhuận hợp nhất có thể che nhiều chu kỳ đối nghịch.
+
+Một mô hình tốt nên tách ít nhất:
 
 ```text
-Normalized DS earning power
-+ normalized DX earning power
-+ SDC/Harman value
-+ net cash / financial assets adjustment
-- holding / governance / execution risks if relevant
+DX
+DS - Memory
+DS - Foundry / System LSI
+SDC
+Harman
 ```
 
-Mục tiêu là tách **cyclical earnings** khỏi **structural earning power**.
+## 16. Từ DART đến mô hình phân tích
 
-## 13. Thesis breakers
+Khi mở DART hoặc báo cáo năm, không nên đọc từ trang đầu đến cuối. Hãy tìm theo câu hỏi:
 
-Một bullish semiconductor thesis phải có điều kiện bị bác bỏ. Ví dụ: HBM/product qualification chậm, yield không cải thiện, competitor supply tăng nhanh hơn demand, foundry utilization không đủ hấp thụ fixed cost, hoặc CAPEX tăng nhưng ROIC không cải thiện.
+1. Phạm vi hợp nhất gồm những công ty nào?
+2. Phân khúc được công bố thế nào?
+3. Mảng nào tạo phần lớn lợi nhuận?
+4. CAPEX tập trung ở đâu?
+5. Tồn kho và khoản phải thu thay đổi ra sao?
+6. Dòng tiền hoạt động có theo lợi nhuận không?
+7. Các cam kết đầu tư lớn là gì?
+8. Giao dịch bên liên quan có đáng kể không?
 
-Một bearish thesis cũng cần breaker: demand mạnh hơn dự kiến, supply discipline tốt hơn, cost/bit giảm nhanh, mix chuyển sang high-value products hoặc DX tạo cash flow tốt hơn dự kiến.
+Sau đó mới quay lại thuyết minh chi tiết.
 
-Không có thesis breaker thì đó là narrative, chưa phải analysis.
+## 17. Kịch bản chu kỳ bộ nhớ
 
-## 14. Bài tập cuối case
+Một bài tập đơn giản:
 
-Tự tạo một memo một trang với đúng sáu heading:
+### Kịch bản xấu
 
-```markdown
-## Entity and Reporting Boundary
-## Earnings Engines
-## Three Dominant Drivers
-## Cash and CAPEX
-## Downside Stress
-## What Evidence Would Change My View?
+```text
+ASP bộ nhớ giảm mạnh
++ tỷ lệ sử dụng công suất giảm
++ HBM tăng chậm hơn kỳ vọng
+→ biên DS giảm
+→ CFO giảm
+→ CAPEX vẫn cao
+→ FCF chịu áp lực
 ```
 
-Nếu sáu section này rõ ràng, bạn đã chuyển từ “biết Samsung” sang **có thể phân tích Samsung Electronics như một economic system**.
+### Kịch bản cơ sở
 
-## Liên kết
+```text
+ASP ổn định
++ lượng bit tăng vừa phải
++ cơ cấu HBM cải thiện
+→ biên lợi nhuận phục hồi
+→ CFO đủ tài trợ phần lớn CAPEX
+```
 
-Đọc cùng [14_semiconductors_electronics_display](../14_semiconductors_electronics_display.md), [09_disclosure_accounting_dart_kind](../09_disclosure_accounting_dart_kind.md), [21_economy_to_company_transmission](../21_economy_to_company_transmission.md) và [38_forensic_accounting_red_flags_and_earnings_quality](../38_forensic_accounting_red_flags_and_earnings_quality.md).
+### Kịch bản tốt
+
+```text
+Nhu cầu AI mạnh
++ HBM được chứng nhận nhanh
++ yield cải thiện
++ bộ nhớ truyền thống không dư cung
+→ ASP và cơ cấu cùng tốt
+→ lợi nhuận tăng nhanh hơn doanh thu
+```
+
+Mục tiêu không phải đoán đúng con số mà là hiểu biến nào làm kết quả đổi hướng.
+
+## 18. Định giá: không nên dùng một P/E cho mọi pha chu kỳ
+
+P/E thấp ở đỉnh lợi nhuận bộ nhớ có thể là bẫy vì mẫu số đang ở mức bất thường cao. P/E cao ở đáy chu kỳ có thể không có nghĩa cổ phiếu đắt nếu lợi nhuận chuẩn hóa cao hơn nhiều.
+
+Do đó cần ước lượng **lợi nhuận chuẩn hóa (normalized earnings)**, tách giá trị tiền mặt ròng và xem mỗi mảng có cơ chế khác nhau.
+
+Một cách khác là định giá ngược: giá thị trường hiện tại đang ngầm giả định ASP, biên DS, tăng trưởng HBM và ROIC bao nhiêu?
+
+## 19. Điều kiện bác bỏ giả thuyết
+
+Một giả thuyết tích cực về Samsung có thể sai nếu:
+
+- HBM chậm chứng nhận hoặc mất thị phần;
+- foundry duy trì tỷ lệ sử dụng/yield thấp trong thời gian dài;
+- CAPEX tăng nhưng ROIC không cải thiện;
+- smartphone cao cấp mất thị phần hoặc phải tăng khuyến mại;
+- chu kỳ bộ nhớ truyền thống dư cung kéo dài.
+
+Viết trước các điều kiện này giúp tránh thay đổi câu chuyện sau khi kết quả xấu xuất hiện.
+
+## Mental Model — Mô hình tư duy
+
+> Samsung Electronics không phải một “công ty điện tử” duy nhất. Nó là nhiều cỗ máy kinh tế nằm trong cùng một pháp nhân hợp nhất. Phân tích tốt phải tách từng cỗ máy, hiểu động lực riêng rồi mới ghép lại thành doanh thu, lợi nhuận, dòng tiền và định giá hợp nhất.
+
+Chuỗi cần giữ trong đầu:
+
+```text
+Phân khúc nào thay đổi?
+→ động lực sản lượng / giá / cơ cấu nào thay đổi?
+→ chi phí cố định và tỷ lệ sử dụng phản ứng ra sao?
+→ lợi nhuận chuyển thành CFO thế nào?
+→ CAPEX lấy đi bao nhiêu tiền?
+→ FCF còn lại bao nhiêu?
+→ thị trường đang định giá chu kỳ hay thay đổi cấu trúc?
+```
