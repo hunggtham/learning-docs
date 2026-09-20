@@ -4,7 +4,7 @@
 
 Nếu các tài liệu nền tảng giải thích những mô hình chung của Khoa học máy tính, thư viện này đi sâu vào từng ranh giới khái niệm của DSA: cách biểu diễn (representation), bất biến (invariant), chứng minh tính đúng đắn, độ phức tạp, cách triển khai, trường hợp biên và cách cấu trúc dữ liệu được dùng trong hệ thống thực tế.
 
-Quay lại lớp nền tảng: [Thuật toán và cấu trúc dữ liệu — Nền tảng Khoa học máy tính](../../../basic/01_algorithms_data_structures/).
+Quay lại lớp nền tảng: [Thuật toán và cấu trúc dữ liệu — Nền tảng Khoa học máy tính](../../basic/01_algorithms_data_structures/).
 
 DSA không phải danh mục công thức để học thuộc. **Cấu trúc dữ liệu (data structure / 자료구조)** là cách tổ chức trạng thái để một nhóm thao tác trở nên hiệu quả hơn. **Thuật toán (algorithm / 알고리즘)** là cách tổ chức quá trình biến đổi trạng thái từ đầu vào tới đầu ra. Cách biểu diễn và thuật toán luôn liên quan vì hình dạng dữ liệu quyết định thông tin nào có thể truy cập, loại bỏ hoặc tổng hợp nhanh.
 
