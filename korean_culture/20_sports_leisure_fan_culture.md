@@ -191,6 +191,52 @@ Thể thao trường học ở Hàn có thể chia giữa giáo dục thể ch�
 
 Điểm cần tránh là đồng nhất thành công huy chương quốc gia với mức vận động trung bình của toàn dân. Thành tích tinh hoa và sức khoẻ cộng đồng là hai phân phối khác nhau.
 
+## 장애인 스포츠: thể thao thích ứng bắt đầu từ khả năng tham gia
+
+**Thể thao dành cho người khuyết tật và thể thao thích ứng (adaptive sports / 장애인 스포츠)** cho thấy cùng một môn có thể cần luật, thiết bị hoặc không gian được điều chỉnh để nhiều cơ thể khác nhau có thể tham gia.
+
+Điểm cốt lõi không phải “hạ tiêu chuẩn”, mà là xác định phần nào của hoạt động là mục tiêu chính và phần nào chỉ là rào cản do thiết kế ban đầu tạo ra. Ví dụ, đường vào nhà thi đấu, phòng thay đồ, bề mặt sân, thiết bị hỗ trợ và cách truyền thông tin đều có thể quyết định một người có tham gia được hay không.
+
+```text
+khả năng thể chất cá nhân
++ thiết bị phù hợp
++ cơ sở tiếp cận được
++ huấn luyện viên / luật thích ứng
+→ cơ hội tham gia thực tế
+```
+
+Mô hình này nối trực tiếp với chương [`26_health_medicine_wellness_body.md`](26_health_medicine_wellness_body.md) và [`31_apartment_neighborhood_moving_recycling_everyday_life.md`](31_apartment_neighborhood_moving_recycling_everyday_life.md): khuyết tật không chỉ là đặc tính của cơ thể; môi trường có thể khuếch đại hoặc giảm rào cản.
+
+## 관람 접근성: làm khán giả cũng cần khả năng tiếp cận
+
+Khả năng tiếp cận trong thể thao không dừng ở người thi đấu. Một người xem có thể cần chỗ ngồi xe lăn, tuyến đi không bậc, thang máy, nhà vệ sinh phù hợp, phụ đề, thông tin dễ đọc hoặc hỗ trợ nghe.
+
+Vì vậy câu hỏi “sân vận động có bao nhiêu ghế?” chưa đủ. Cần hỏi **bao nhiêu người có thể đi từ đường phố tới ghế, sử dụng dịch vụ và rời sân một cách độc lập, an toàn**.
+
+Đây là cách chuyển tư duy từ “có cơ sở vật chất” sang “có hành trình sử dụng được”.
+
+## 노년 여가: xã hội già hoá làm giải trí trở thành hạ tầng sức khoẻ xã hội
+
+Trong xã hội siêu già, giải trí của người cao tuổi không phải một thị trường phụ. Đi bộ, leo núi mức phù hợp, thể dục nhẹ, khiêu vũ, cờ, lớp văn hoá, trung tâm phúc lợi, hoạt động tôn giáo hoặc tình nguyện có thể đồng thời tạo vận động, lịch sinh hoạt và quan hệ xã hội.
+
+Lợi ích văn hoá quan trọng là **duy trì vai trò và mạng quan hệ**, không chỉ “giết thời gian”. Sau nghỉ hưu, công việc không còn tự tạo lịch và đồng nghiệp; hoạt động giải trí có thể trở thành cấu trúc thay thế.
+
+```text
+nghỉ hưu
+→ mất một phần lịch + mạng xã hội
+→ hoạt động cộng đồng / sở thích
+→ lịch lặp lại + mối quan hệ mới
+→ giảm nguy cơ cô lập xã hội
+```
+
+Không nên suy rằng mọi người cao tuổi thích cùng loại hoạt động. Sức khoẻ, thu nhập, giới, nơi ở, khả năng lái xe và kỹ năng số tạo khác biệt lớn.
+
+## 디지털 여가 격차: giải trí số cũng có khoảng cách tiếp cận
+
+Đặt sân, mua vé, tham gia nhóm, xem lịch lớp hoặc nhận ưu đãi ngày càng đi qua ứng dụng. Điều này giảm ma sát cho người thành thạo điện thoại nhưng có thể tăng rào cản cho người gặp khó khăn về thị lực, thao tác, xác thực hoặc thanh toán số.
+
+Một dịch vụ có thể rất hiện đại nhưng giảm khả năng tham gia nếu không còn kênh thay thế. Vì vậy số hoá giải trí cần đi cùng thiết kế tiếp cận, không chỉ tối ưu tốc độ cho người dùng trung bình.
+
 ## 팬덤: thể thao, idol và game dùng kiến trúc người hâm mộ tương tự
 
 Văn hoá người hâm mộ có thể nhìn như một chồng lớp:
@@ -256,7 +302,7 @@ Núi gần tàu điện → leo núi dễ. Screen golf gần nhà → chơi golf
 
 ## Mô hình tư duy (Mental Model)
 
-> Giải trí ở Hàn Quốc là nơi **địa lý, ngân sách thời gian, công nghệ, thị trường và danh tính** gặp nhau. Núi tạo điều kiện cho leo núi; băng rộng tạo thể thao điện tử; mật độ đô thị tạo screen golf và địa điểm sở thích; nền tảng tạo nhóm; fandom biến người xem thành người tham gia. Đừng coi thời gian rảnh là phần “nằm ngoài hệ thống xã hội”.
+> Giải trí ở Hàn Quốc là nơi **địa lý, ngân sách thời gian, khả năng cơ thể, công nghệ, thị trường và danh tính** gặp nhau. Núi tạo điều kiện cho leo núi; băng rộng tạo thể thao điện tử; mật độ đô thị tạo screen golf và địa điểm sở thích; thiết kế tiếp cận quyết định ai có thể dùng không gian; nền tảng tạo nhóm; fandom biến người xem thành người tham gia. Đừng coi thời gian rảnh là phần “nằm ngoài hệ thống xã hội”.
 
 ## Hiểu lầm phổ biến (Common Misconceptions)
 
@@ -269,3 +315,7 @@ Núi gần tàu điện → leo núi dễ. Screen golf gần nhà → chơi golf
 “Golf ở Hàn chỉ là địa vị” quá hẹp; thể thao, quan hệ công việc, giải trí và tín hiệu tầng lớp có thể cùng tồn tại.
 
 “Xu hướng giải trí trên Instagram đại diện toàn xã hội” là sai lệch lấy mẫu.
+
+“Có sân thể thao là mọi người đều có thể tham gia” bỏ qua lối vào, thiết bị, thông tin, chi phí, sức khoẻ và thiết kế tiếp cận.
+
+“Giải trí người cao tuổi chỉ là hoạt động thụ động” bỏ qua vai trò của vận động, cộng đồng, tình nguyện và việc duy trì mạng quan hệ.
