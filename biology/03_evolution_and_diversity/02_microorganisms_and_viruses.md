@@ -1,79 +1,208 @@
-# Vi sinh vật và virus — Microorganisms and Viruses (미생물·바이러스)
+# Vi sinh vật và virus — Microorganisms and Viruses (미생물과 바이러스)
 
-Vi sinh vật (Microorganism / 미생물) không phải một nhánh tiến hóa duy nhất mà là cách gọi cho các organism hoặc biological entity quá nhỏ để quan sát rõ bằng mắt thường. Bacteria, Archaea, nhiều protist, microscopic fungi và virus đều xuất hiện trong microbiology, nhưng chúng khác nhau sâu sắc về cellular organization, metabolism và evolutionary history.
+Phần lớn lịch sử sự sống trên Trái Đất là lịch sử của sinh vật rất nhỏ. Vi khuẩn và archaea đã tồn tại hàng tỷ năm trước khi động vật xuất hiện, và ngày nay chúng vẫn chi phối nhiều chu trình carbon, nitrogen, sulfur cũng như sống cộng sinh trong cơ thể chúng ta.
 
-## Bacteria và Archaea: nhỏ nhưng không đơn giản
+“Microorganism” không phải một clade duy nhất. Đây là cách gọi dựa trên kích thước và cách quan sát. Bacteria, Archaea, nhiều protist, microscopic fungi và một số algae đều có thể nằm trong microbiology. Virus thậm chí không phải cell, nhưng không thể hiểu modern biology nếu bỏ qua chúng.
 
-Bacteria (세균) và Archaea (고세균) là prokaryote: không có nucleus được bao bởi membrane. Genome thường tập trung trong nucleoid, nhưng cell vẫn có spatial organization, cytoskeleton, membrane protein và regulatory network phức tạp.
+## Bacteria — một cell có thể làm được rất nhiều việc
 
-Bacteria có cell wall chứa peptidoglycan; Archaea không dùng peptidoglycan theo cấu trúc bacterial điển hình và membrane lipid của chúng có chemistry khác. Molecular machinery của Archaea ở một số mặt gần Eukarya hơn Bacteria.
+**Bacteria (vi khuẩn / 세균)** là prokaryote: không có nucleus membrane-bound, nhưng có plasma membrane, DNA, ribosome và metabolic machinery.
 
-Kích thước nhỏ làm surface-area-to-volume ratio cao, hỗ trợ trao đổi nhanh. Generation time của nhiều species ngắn khiến population có thể tiến hóa rất nhanh khi selection mạnh.
+Bacterial chromosome thường là một DNA molecule circular chính, dù có nhiều ngoại lệ. Ngoài chromosome, bacteria có thể mang **plasmid (플라스미드)** — DNA molecule nhỏ tự replicate.
 
-## Metabolic diversity
+Plasmid có thể mang gene liên quan metabolism, stress response hoặc antibiotic resistance và có thể transfer giữa cell trong một số điều kiện.
 
-Human thường nghĩ metabolism quanh glucose và oxygen, nhưng microbes mở rộng rất xa. Một số dùng sulfur, iron, hydrogen hoặc ammonia làm electron donor/acceptor. Một số lấy energy từ light nhưng carbon từ organic compound; một số lấy carbon trực tiếp từ CO₂.
+## Bacterial shape không chỉ là tên gọi
 
-Chemolithoautotroph cho thấy ecosystem không nhất thiết phụ thuộc trực tiếp vào sunlight. Hydrothermal vent community có thể dựa trên chemosynthesis.
+Textbook thường chia shape thành cocci (cầu), bacilli (que) và spiral. Nhưng shape có functional consequence.
 
-> Mental model: microbes là “chemical engineers” của biosphere. Chúng khai thác nhiều redox gradient mà multicellular organism không sử dụng trực tiếp.
+Surface-area-to-volume ratio, motility, nutrient diffusion và interaction với environment có thể khác theo shape.
 
-## Horizontal gene transfer
+Cell wall giúp bacteria chịu osmotic pressure và duy trì morphology.
 
-Ngoài vertical inheritance từ parent sang offspring, bacteria có thể nhận gene bằng transformation, transduction và conjugation. Horizontal gene transfer (수평적 유전자 전달) khiến gene có thể lan giữa lineage nhanh hơn reproduction thông thường.
+## Gram-positive và Gram-negative
 
-Antibiotic-resistance gene thường nằm trên plasmid hoặc mobile genetic element, giúp resistance lan trong microbial community.
+**Gram staining (nhuộm Gram / 그람염색)** chia nhiều bacteria thành hai group dựa trên cell-envelope structure.
 
-## Antibiotic và resistance
+Gram-positive bacteria thường có peptidoglycan layer dày và không có outer membrane kiểu Gram-negative.
 
-Antibiotic nhắm vào process như cell-wall synthesis, ribosome, DNA replication hoặc metabolism. Resistance có thể xuất hiện qua mutation hoặc horizontal gene transfer.
+Gram-negative bacteria có peptidoglycan mỏng hơn nằm giữa inner và outer membrane; outer membrane chứa lipopolysaccharide.
 
-Antibiotic không “dạy” bacteria kháng thuốc. Nó tạo selective pressure: susceptible cell chết nhiều hơn, resistant lineage sống và sinh sản tương đối tốt hơn.
+Classification này quan trọng vì envelope structure ảnh hưởng permeability, immune recognition và sensitivity với một số antimicrobial treatment. Nhưng Gram status không phải phylogenetic tree hoàn chỉnh.
 
-Việc dùng antibiotic không cần thiết, dùng sai liều hoặc trong chăn nuôi quy mô lớn có thể làm selection cho resistance mạnh hơn.
+## Archaea — nhìn giống bacteria nhưng evolutionary khác sâu
 
-## Microbiome
+**Archaea (cổ khuẩn / 고세균)** cũng prokaryotic nhưng membrane lipid, transcription machinery và nhiều molecular feature khác bacteria.
 
-Microbiome (마이크로바이옴) thường chỉ community microorganism và collective genetic material trong một habitat. Gut microbiome tham gia digestion, metabolite production, immune interaction và colonization resistance.
+Một số archaea sống ở extreme environment như high salt hoặc high temperature, nhưng nhiều archaea sống ở ocean, soil và microbiome bình thường.
 
-Tuy nhiên association giữa microbiome và disease không tự động chứng minh causality. Diet, medication, age và lifestyle có thể cùng ảnh hưởng microbiome và health outcome.
+Vì vậy “Archaea = extremophile” là misconception.
 
-## Virus nằm ở biên của khái niệm sự sống
+## Microbial metabolism — diversity vượt xa plant và animal
 
-Virus (바이러스) gồm genetic material DNA hoặc RNA trong protein capsid; nhiều virus còn có lipid envelope. Chúng không có autonomous metabolism và phải dùng host machinery để replicate.
+Human chủ yếu lấy energy từ organic food và dùng oxygen. Microorganism có metabolic diversity lớn hơn nhiều.
 
-Viral genome có thể rất nhỏ nhưng strategy rất đa dạng. DNA virus, RNA virus và retrovirus dùng các replication pathway khác nhau. Retrovirus như HIV reverse-transcribe RNA thành DNA rồi integrate vào host genome.
+Một số dùng light; một số oxidize inorganic compound; một số dùng oxygen; một số dùng nitrate, sulfate hoặc molecule khác làm electron acceptor.
 
-## Viral replication
+Hai trục hữu ích:
 
-Một viral cycle thường có attachment, entry, genome release, replication/gene expression, assembly và exit. Virus có thể lyse cell, bud qua membrane hoặc duy trì latent/persistent state.
+- energy source: light (phototroph) hoặc chemical reaction (chemotroph);
+- carbon source: CO₂/inorganic carbon (autotroph) hoặc organic carbon (heterotroph).
 
-Host range phụ thuộc receptor compatibility, intracellular machinery và immune environment. Việc một virus có thể binding cell không đảm bảo nó hoàn tất replication cycle.
+Kết hợp hai trục tạo photolithoautotroph, chemoorganoheterotroph và nhiều strategy khác.
 
-## Mutation và viral evolution
+Điều này giúp hiểu ecosystem: microorganism mở rộng những chemical pathway mà biosphere có thể khai thác.
 
-RNA virus thường có mutation rate cao hơn cellular organism vì polymerase proofreading hạn chế ở nhiều nhóm. Population lớn và generation nhanh làm adaptation có thể diễn ra nhanh.
+## Nitrogen fixation — vì sao microorganism quan trọng cho toàn biosphere?
 
-Recombination và reassortment cũng tạo variation. Với segmented virus như influenza, reassortment có thể tạo combination genome mới nếu hai strain coinfect cùng host cell.
+Atmospheric N₂ rất nhiều nhưng phần lớn organism không trực tiếp sử dụng được vì N≡N bond rất bền.
 
-## Bacteriophage và CRISPR
+Một số bacteria và archaea có enzyme **nitrogenase** có thể chuyển N₂ thành ammonia/ammonium usable hơn.
 
-Bacteriophage là virus infect bacteria. Cuộc chạy tiến hóa giữa phage và bacteria góp phần tạo nhiều defense system.
+**Nitrogen fixation (cố định đạm / 질소고정)** đưa atmospheric nitrogen vào biological cycle.
 
-CRISPR-Cas ở bacteria và archaea là adaptive defense lưu fragment của foreign nucleic acid để nhận diện lần sau. Biotechnology sau này biến cơ chế này thành genome-editing tool.
+Plant sau đó lấy inorganic nitrogen từ soil; animal lấy nitrogen qua food. Vì vậy protein trong body gián tiếp phụ thuộc microbial process ở planetary scale.
 
-## Biofilm và collective behavior
+## Microbiome — “cơ thể” không chỉ gồm human cell
 
-Microbe không luôn sống đơn lẻ. Biofilm là community gắn trên surface, được bao trong extracellular matrix. Cell trong biofilm có physiology khác planktonic cell và thường chịu antibiotic, immune attack tốt hơn.
+**Microbiome (마이크로바이옴)** nói đến community microorganism và thường cả genetic/material context của chúng trong habitat như gut, skin hoặc soil.
 
-Quorum sensing cho phép một số bacteria dùng signaling molecule để điều chỉnh gene expression theo cell density.
+Gut microbiome tham gia digestion, metabolite production, immune interaction và colonization resistance.
+
+Nhưng microbiome science có variation lớn giữa individual và nhiều correlation chưa phải causation. Claim kiểu “một species bacteria quyết định mood/weight/disease” thường quá đơn giản nếu thiếu mechanistic evidence.
+
+## Symbiosis — không phải mọi microbe đều là pathogen
+
+**Symbiosis (cộng sinh theo nghĩa rộng / 공생)** mô tả interaction lâu dài giữa species.
+
+**Mutualism**: hai bên cùng benefit.
+
+**Commensalism**: một bên benefit, bên kia ít bị ảnh hưởng trong model đơn giản.
+
+**Parasitism**: một bên benefit làm host chịu cost.
+
+Relationship có thể đổi theo context. Một microbe bình thường ở gut có thể gây problem nếu vào bloodstream hoặc host immune state thay đổi.
+
+## Horizontal gene transfer — gene không chỉ đi từ cha mẹ xuống con
+
+Bacteria có thể nhận genetic material ngoài vertical inheritance.
+
+Ba mechanism kinh điển:
+
+**Transformation**: uptake DNA từ environment.
+
+**Transduction**: bacteriophage chuyển DNA giữa bacteria.
+
+**Conjugation**: DNA transfer qua cell-to-cell contact, thường liên quan plasmid.
+
+Horizontal gene transfer làm microbial evolution nhanh và khiến gene history đôi khi khác species history.
+
+## Antibiotic resistance — evolution có thể quan sát trực tiếp
+
+Antibiotic tạo selection pressure. Nếu population có variation giúp một số cell survive better, những lineage đó có thể tăng frequency.
+
+Resistance có thể đến từ mutation hoặc gene acquired qua horizontal transfer.
+
+Mental model quan trọng là **antibiotic không dạy bacteria kháng thuốc**. Nó thay environment, từ đó selection thay composition population.
+
+Việc dùng antibiotic không cần thiết hoặc không đúng chỉ định tạo thêm selection opportunity cho resistant lineage; đây là reason antimicrobial stewardship quan trọng.
+
+# Virus — biological information package phụ thuộc host
+
+**Virus (바이러스)** không phải cell. Virus thường gồm genetic material (DNA hoặc RNA) được đóng trong protein coat **capsid**, đôi khi có lipid envelope lấy từ host membrane.
+
+Virus không có metabolism đầy đủ và không tự translation protein. Nó phải sử dụng host cell machinery.
+
+## Viral life cycle ở mức khái niệm
+
+Mặc dù virus rất đa dạng, một abstraction chung là:
+
+```text
+attachment → entry → genome expression/replication → assembly → release
+```
+
+### Attachment
+
+Viral surface protein bind receptor hoặc surface molecule của host. Điều này góp phần quyết định **host range** và tissue tropism.
+
+### Entry
+
+Genome hoặc particle đi vào host cell bằng fusion, endocytosis hoặc mechanism khác tùy virus.
+
+### Replication và expression
+
+Virus phải tạo genome copy và protein component. Strategy khác nhau tùy genome là DNA, positive-sense RNA, negative-sense RNA hay retroviral RNA.
+
+### Assembly và release
+
+New component tự assemble thành virion. Virus có envelope thường bud qua membrane; virus khác có thể release qua cell lysis hoặc pathway khác.
+
+## DNA virus, RNA virus và retrovirus
+
+Genome type quyết định nhiều step replication.
+
+RNA-dependent RNA polymerase cần cho nhiều RNA virus vì human cell không có enzyme chung để copy RNA từ RNA.
+
+**Retrovirus** dùng **reverse transcriptase (역전사효소)** tạo DNA từ RNA, rồi DNA có thể integrate vào host genome.
+
+Điều này là một exception quan trọng đối với simplified “DNA → RNA → protein” flow, nhưng không phá central dogma ở meaning gốc về sequence information không đi từ protein ngược về nucleic acid.
+
+## Virus có sống không?
+
+Virus có genome, mutation và evolution nhưng không tự duy trì metabolism hay reproduction ngoài host.
+
+Vì vậy nhiều definition không coi virus là organism living độc lập. Tuy nhiên câu hỏi không có một boundary hoàn toàn sạch, và chính ambiguity này giúp hiểu rằng life là set of interacting properties.
+
+## Bacteriophage — virus của bacteria
+
+**Bacteriophage (thực khuẩn thể / 박테리오파지)** infect bacteria.
+
+Một số phage theo lytic cycle, replicate rồi làm host lyse. Một số có thể integrate genome vào host và ở trạng thái dormant/lysogenic trước khi activate.
+
+Phage rất quan trọng trong microbial ecology và gene transfer.
+
+## Virus evolution
+
+Virus population có thể tiến hóa nhanh vì generation time ngắn, population lớn và ở nhiều RNA virus, replication error rate tương đối cao.
+
+Selection, drift, recombination hoặc reassortment có thể tạo lineage mới tùy viral system.
+
+Khi thảo luận variant, cần tách ba khái niệm:
+
+- mutation: change sequence;
+- variant/lineage: population mang combination mutation;
+- phenotype: effect thực tế như transmissibility, immune escape hoặc severity, phải đo bằng evidence.
+
+Không thể suy phenotype chỉ từ số mutation.
+
+## Innate và adaptive immunity nhìn virus như thế nào?
+
+Host có receptor nhận pattern viral và activate innate response, ví dụ interferon pathway. Adaptive immunity dùng antibody và T cell để nhận specific antigen.
+
+Virus có thể evolve mechanism né immune response, nhưng host immune system cũng là dynamic selective environment.
+
+Phần immunity được xây chi tiết trong [[../04_organismal_biology/02_nervous_endocrine_and_immune_systems]].
 
 ## Common misconceptions
 
-“Bacteria = mầm bệnh” là sai; phần lớn bacteria không gây disease và nhiều species thiết yếu cho ecosystem hoặc host. “Virus luôn giết cell” cũng sai; nhiều infection latent, persistent hoặc ít cytopathic.
+### “Bacteria = germ = disease”
 
-“Kháng antibiotic là cơ thể người quen thuốc” cũng sai. Resistance chủ yếu là đặc tính của microbial population, không phải cơ thể host.
+Sai. Phần lớn bacterial interaction không nhất thiết gây disease; nhiều bacteria cần cho ecosystem và host physiology.
 
-## Kết nối
+### “Antibiotic chữa virus”
 
-Cell structure nối với [[../01_cell_biology/00_cells_membranes_and_transport]]. Horizontal gene transfer và mutation nối với [[../02_genetics_molecular_biology/01_inheritance_variation_and_mutation]]. Antibiotic resistance là ví dụ trực tiếp của [[00_evolution_and_population_genetics]], còn microbiome và nutrient cycling nối sang [[../05_ecology/01_ecosystems_biogeochemical_cycles_and_conservation]].
+Antibiotic nhắm bacterial structure/process, không có target tương ứng ở virus. Antiviral drug cần mechanism khác.
+
+### “Virus luôn muốn giết host”
+
+Virus không có ý chí. Virulence là phenotype tiến hóa trong trade-off transmission, replication và host interaction.
+
+### “Microbiome tốt càng đa dạng càng tốt trong mọi trường hợp”
+
+Diversity có thể useful indicator trong một số context nhưng không có rule universal. Function và composition matter.
+
+## Mental Model
+
+> Microorganism cho thấy một cell nhỏ có thể khai thác chemistry cực kỳ đa dạng; virus cho thấy information có thể tiến hóa ngay cả khi không tạo thành living cell độc lập. Cả hai làm rõ rằng evolution, ecology và molecular biology không thể tách rời.
+
+Từ đây thư viện chuyển sang organismal biology: cell phối hợp thành tissue và organ như thế nào, rồi toàn cơ thể duy trì homeostasis ra sao.
