@@ -19,6 +19,7 @@ lịch sử / sinh thái
 → quan hệ + động lực
 → công nghệ / giao diện
 → hành vi quan sát được
+→ phản hồi / thất bại / thích nghi
 ```
 
 Cách tiếp cận này giúp tránh **định kiến khái quát (stereotype)** và cho phép người đọc cập nhật **mô hình tư duy (mental model)** khi gặp người, công ty, thế hệ hoặc vùng miền khác với ví dụ trong sách.
@@ -35,20 +36,20 @@ Xem bảng quy tắc và tên chuẩn tại [`28_naming_translation_conventions.
 
 ## Mức độ bao phủ hiện tại
 
-Bộ sách hiện có **31 chương nội dung chuyên đề**, cộng mục lục, bảng thuật ngữ–bản đồ nguồn, quy ước tên riêng và bản kiểm toán mức độ bao phủ. Nội dung không chỉ dừng ở lịch sử–Nho giáo–ẩm thực–K-pop mà mở rộng tới nhiều hệ thống của đời sống thực:
+Bộ sách dùng dải file `01–33`, trong đó một số file đóng vai trò kết nối, tra cứu hoặc chuẩn hoá. Phần nội dung chuyên đề hiện bao phủ phần lớn các hệ thống quan trọng của đời sống Hàn Quốc hiện đại và lịch sử:
 
-- lịch sử cổ đại → Joseon → thuộc địa → chiến tranh → hiện đại hoá nén (compressed modernity);
-- Nho giáo, tuổi, nhóm thế hệ (cohort), danh xưng, kính ngữ, `눈치`, `정`, `체면`;
-- gia đình, hôn nhân, tang lễ, nuôi dạy con, chăm sóc sau sinh và kinh tế chăm sóc (care economy);
+- lịch sử cổ đại → Joseon → thuộc địa → chiến tranh → hiện đại hoá nén;
+- Nho giáo, tuổi, nhóm thế hệ, danh xưng, kính ngữ, `눈치`, `정`, `체면`;
+- gia đình, hôn nhân, tang lễ, nuôi dạy con, chăm sóc sau sinh và kinh tế chăm sóc;
 - giáo dục, `수능`, `학원`, đại học, `학번`, `선배–후배`, `취준생`;
-- công sở, `업무분장`, `담당자`, báo cáo–phê duyệt–bàn giao, vòng đời nghĩa vụ quân sự, chaebol, nhà ở và dịch chuyển xã hội;
-- ẩm thực, lên men (fermentation), cấu trúc bữa ăn, món theo mùa, `혼밥` và văn hoá uống rượu;
-- hanok, ondol, căn hộ, chuyển nhà, tái chế, bưu kiện và đời sống khu dân cư;
+- công sở, `업무분장`, `담당자`, báo cáo–phê duyệt–bàn giao, học tập tổ chức, nghĩa vụ quân sự, chaebol, nhà ở và dịch chuyển xã hội;
+- ẩm thực, lên men, cấu trúc bữa ăn, chuỗi cung ứng, món theo mùa, `혼밥` và văn hoá uống rượu;
+- hanok, ondol, căn hộ, vật lý công trình, bảo trì, chuyển nhà, tái chế, bưu kiện và đời sống khu dân cư;
 - tôn giáo, nghi lễ, shaman giáo, Phật giáo, Kitô giáo, bói toán, nghệ thuật, biểu diễn dân gian và truyền thừa di sản;
-- Seoul, giao thông công cộng, cửa hàng tiện lợi, quán cà phê, giao hàng, kiosk, thương mại giao nhanh và đời sống số;
-- văn hoá dịch vụ, tương tác khách hàng, lao động cảm xúc, kinh tế đánh giá và quà tặng di động;
+- Seoul, giao thông công cộng, cửa hàng tiện lợi, quán cà phê, giao hàng, kiosk, thương mại giao nhanh, độ tin cậy đô thị và đời sống số;
+- văn hoá dịch vụ, tương tác khách hàng, lao động cảm xúc, hàng chờ, công suất, phục hồi dịch vụ và kinh tế đánh giá;
 - cộng đồng trực tuyến, nhắn tin, tiếng lóng, meme, văn hoá ảnh chụp màn hình, nền tảng sáng tạo nội dung và danh tính số;
-- Hallyu, K-pop, phim truyền hình, webtoon, trò chơi và fandom;
+- Hallyu, K-pop, phim truyền hình, webtoon, trò chơi, fandom, lao động sáng tạo, IP và vòng đời nội dung;
 - làm đẹp, thời trang, hình ảnh cơ thể, màu sắc cá nhân, văn hoá chụp hồ sơ cơ thể, y tế, giải trí và thể thao;
 - mùa, khí hậu, bụi mịn, mùa mưa, nắng nóng và thích nghi khí hậu;
 - bản sắc vùng miền, Jeju, dân số, di cư, già hoá, hộ một người và không gian công cộng.
@@ -63,30 +64,45 @@ Những chương về đời sống thường bị các tài liệu tổng quan 
 
 Các chương nền tảng cũng được viết theo hướng “đọc để hiểu” thay vì liệt kê dữ kiện. Đặc biệt:
 
-- [`02_confucianism_relations_hierarchy.md`](02_confucianism_relations_hierarchy.md) nối Nho giáo với đạo đức theo vai trò, nhóm thế hệ, tính có đi có lại (reciprocity), `우리`, giới và thứ bậc chuyên môn;
+- [`01_cultural_system_history_geography.md`](01_cultural_system_history_geography.md) vừa cung cấp nền lịch sử–địa lý vừa dạy phương pháp so sánh, phản thực tế, cấp độ phân tích, thiên lệch mẫu và tam giác hoá nguồn;
+- [`02_confucianism_relations_hierarchy.md`](02_confucianism_relations_hierarchy.md) nối Nho giáo với đạo đức theo vai trò, tính chính danh, quyền lực đa trục, thâm niên, cố vấn và cơ chế phản biện;
 - [`03_language_honorifics_nunchi_jeong_face.md`](03_language_honorifics_nunchi_jeong_face.md) tách kính ngữ đối với chủ thể/người nghe/từ vựng, cách nói giảm nhẹ, phản hồi khi nghe, ngôn ngữ số và các bẫy dịch thuật;
-- [`06_workplace_organization_hoesik.md`](06_workplace_organization_hoesik.md) giải thích `업무분장`, người phụ trách, `보고`, `결재`, `공유`, `인수인계`, loại hình việc làm và văn hoá dự án SI/SM;
-- [`07_food_table_fermentation_drinking.md`](07_food_table_fermentation_drinking.md) mở rộng cấu trúc bữa ăn, `인분`, phân loại món canh, `떡`, tính mùa vụ, `혼밥`, giao hàng và kinh tế đánh giá;
-- [`09_religion_ritual_worldview.md`](09_religion_ritual_worldview.md) phân biệt danh tính–niềm tin–thực hành–thiết chế và mở rộng các lớp Phật giáo, shaman giáo, Kitô giáo, nghi lễ tổ tiên và bói toán;
-- [`10_arts_music_performance_craft.md`](10_arts_music_performance_craft.md) mở rộng `국악`, `장단`, `사물놀이`, `산조`, gốm, thư pháp, sơn mài, truyền nghề và tái diễn giải;
-- [`12_city_consumption_digital_life.md`](12_city_consumption_digital_life.md) đi sâu vào hạ tầng đô thị, giao thông, kiosk, cửa hàng tiện lợi, giao hàng, thương mại giao nhanh, thanh toán và danh tính số;
+- [`06_workplace_organization_hoesik.md`](06_workplace_organization_hoesik.md) giải thích `업무분장`, người phụ trách, `보고`, `결재`, `공유`, `인수인계`, quyền quyết định, sự cố, hậu kiểm và tri thức tổ chức;
+- [`07_food_table_fermentation_drinking.md`](07_food_table_fermentation_drinking.md) mở rộng cấu trúc bữa ăn, chuỗi cung ứng, chuỗi lạnh, công suất bếp, `혼밥`, giao hàng và lãng phí;
+- [`09_religion_ritual_worldview.md`](09_religion_ritual_worldview.md) phân biệt danh tính–niềm tin–thực hành–thiết chế và mở rộng các lớp Phật giáo, shaman giáo, Kitô giáo, nghi lễ tổ tiên, thế tục hoá và mạng hỗ trợ;
+- [`10_arts_music_performance_craft.md`](10_arts_music_performance_craft.md) mở rộng `국악`, `장단`, `사물놀이`, `산조`, gốm, thư pháp, sơn mài, lao động sáng tạo và bảo tồn số;
+- [`12_city_consumption_digital_life.md`](12_city_consumption_digital_life.md) đi sâu vào hạ tầng đô thị, giao thông, kiosk, cửa hàng tiện lợi, giao hàng, thanh toán, khả năng tiếp cận và độ tin cậy;
+- [`13_hallyu_media_platforms.md`](13_hallyu_media_platforms.md) nối sáng tạo–lao động–quyền–phân phối–dữ liệu–fandom với danh mục dự án, cửa sổ phát hành, catalog, giữ chân người dùng và vòng đời IP;
 - [`15_contemporary_change_demography_migration.md`](15_contemporary_change_demography_migration.md) tách số liệu tại một thời điểm, dòng biến động và dự báo; đồng thời mở rộng già hoá, mức sinh, hộ một người, dân số có nền tảng di cư, kinh tế chăm sóc và khoảng cách số;
-- [`18_daily_etiquette_gifts_relationships.md`](18_daily_etiquette_gifts_relationships.md) mở rộng cuộc hẹn, quà tặng số, `경조사`, phép tang lễ, từ vựng quan hệ, nhóm chat và quy tắc không gian công cộng;
-- [`19_beauty_fashion_body_culture.md`](19_beauty_fashion_body_culture.md) nối lao động làm đẹp, màu sắc cá nhân, kinh tế phòng khám–thủ thuật, camera/bộ lọc, nền tảng thời trang và văn hoá quản lý cơ thể;
-- [`20_sports_leisure_fan_culture.md`](20_sports_leisure_fan_culture.md) nối thể thao, không gian công cộng, nhóm chạy bộ, golf mô phỏng, thể thao điện tử, bán vé, fandom và bất bình đẳng thời gian;
-- [`24_economy_chaebol_housing_status_mobility.md`](24_economy_chaebol_housing_status_mobility.md) mở rộng chaebol, chênh lệch phần thưởng trên thị trường lao động, tự kinh doanh, jeonse, tài chính nhà ở, thừa kế, đòn bẩy và lợi thế tích luỹ;
-- [`26_health_medicine_wellness_body.md`](26_health_medicine_wellness_body.md) mở rộng hành trình bệnh nhân, bảo hiểm, sàng lọc, y học truyền thống, sức khoẻ tinh thần, lao động chăm sóc, sức khoẻ môi trường và năng lực đọc hiểu thông tin sức khoẻ;
+- [`18_daily_etiquette_gifts_relationships.md`](18_daily_etiquette_gifts_relationships.md) mở rộng cuộc hẹn, quà tặng số, `경조사`, phép tang lễ, từ vựng quan hệ, ngân sách quan hệ, nhóm chat và quy tắc không gian công cộng;
+- [`19_beauty_fashion_body_culture.md`](19_beauty_fashion_body_culture.md) nối lao động làm đẹp, bằng chứng, bất cân xứng thông tin, camera/bộ lọc, ranh giới tiêu dùng–y khoa và văn hoá quản lý cơ thể;
+- [`20_sports_leisure_fan_culture.md`](20_sports_leisure_fan_culture.md) nối thể thao, không gian công cộng, bán vé, dòng người, an toàn đám đông, cộng đồng sở thích, fandom và bất bình đẳng thời gian;
+- [`24_economy_chaebol_housing_status_mobility.md`](24_economy_chaebol_housing_status_mobility.md) mở rộng chaebol, thị trường lao động, tự kinh doanh, jeonse, bảng cân đối hộ, tài sản, đòn bẩy và lợi thế tích luỹ;
+- [`26_health_medicine_wellness_body.md`](26_health_medicine_wellness_body.md) mở rộng hành trình bệnh nhân, bảo hiểm, sàng lọc, y học truyền thống, sức khoẻ tinh thần, health literacy, continuity of care, lao động chăm sóc và sức khoẻ môi trường;
 - [`27_internet_communities_messaging_slang_memes.md`](27_internet_communities_messaging_slang_memes.md) mở rộng lịch sử cổng thông tin, sai lệch mẫu của cộng đồng, KakaoTalk, ảnh chụp màn hình, vòng đời tiếng lóng, kinh tế người sáng tạo, quyền riêng tư và vấn đề niềm tin do AI/deepfake.
 
 ## Kiểm toán mức độ bao phủ và hướng nâng cấp tiếp theo
 
-[`coverage_audit.md`](coverage_audit.md) kiểm tra toàn bộ `01`–`33` theo sáu tiêu chí: **định nghĩa (definition), cơ chế (mechanism), biến thiên (variation), thay đổi (change), ranh giới áp dụng (boundary) và hiểu lầm phổ biến (misconception)**. Kết quả hiện tại cho thấy vấn đề chính của thư viện không còn là thiếu nhiều chương lớn, mà là **đào sâu, giữ tính nhất quán và cập nhật độ mới của dữ liệu**.
+[`coverage_audit.md`](coverage_audit.md) kiểm tra toàn bộ `01`–`33` theo **11 lớp**: khái niệm, nguyên nhân, cơ chế, biến thiên, thay đổi, ranh giới, thất bại, chuyển tiếp, đo lường, đánh đổi và liên kết.
 
-Các khoảng trống xuyên chủ đề còn đáng bổ sung dần gồm khả năng tiếp cận và thiết kế phổ quát (accessibility/universal design), chăm sóc cuối đời và giảm nhẹ (palliative care), hệ sinh thái bảo tàng–phòng trưng bày đương đại, lao động sáng tạo và sở hữu trí tuệ, già hoá tại nơi ở quen thuộc (ageing-in-place) và sự thích nghi của ẩm thực trong một xã hội đa dạng hơn. Những khoảng trống này ưu tiên được vá vào chương hiện có thay vì tự động sinh thêm file mới.
+Trạng thái hiện tại cho thấy phần lớn chapter đã ở mức **mạnh** hoặc **rất mạnh**. Vì vậy từ đây ưu tiên không phải tiếp tục tăng số lượng chủ đề mà là:
 
-## Cách đọc
+```text
+kiểm toán trùng lặp
+→ tăng ví dụ đúng chỗ
+→ đồng bộ cross-link
+→ kiểm tra nguồn / độ mới
+→ giữ glossary nhất quán
+→ làm rõ lộ trình học
+```
 
-Không cần đọc theo số file. Nếu muốn đi theo quan hệ nhân quả giữa các khái niệm, dùng [`00_index_and_dependency.md`](00_index_and_dependency.md). Nếu đang sống/làm việc ở Hàn Quốc và muốn hiểu nhanh hành vi đời thường, một lộ trình thực dụng là:
+[`16_connections_mental_models_misconceptions.md`](16_connections_mental_models_misconceptions.md) hiện đóng vai trò đồ thị kiến thức xuyên chương; [`17_glossary_and_reference_map.md`](17_glossary_and_reference_map.md) là bảng tra Việt–Hàn–Anh và bản đồ nguồn; [`coverage_audit.md`](coverage_audit.md) là lớp kiểm soát chất lượng.
+
+## Cách đọc theo mục tiêu
+
+Không cần đọc theo số file. Nếu muốn đi theo quan hệ nhân quả giữa các khái niệm, dùng [`00_index_and_dependency.md`](00_index_and_dependency.md).
+
+### Lộ trình 1 — sống và làm việc hằng ngày ở Hàn Quốc
 
 ```text
 03 ngôn ngữ / kính ngữ
@@ -99,7 +115,7 @@ Không cần đọc theo số file. Nếu muốn đi theo quan hệ nhân quả 
 → 16 liên hệ / mô hình tư duy
 ```
 
-Nếu muốn hiểu vòng đời gia đình–giáo dục–nghề nghiệp:
+### Lộ trình 2 — gia đình, giáo dục và sự nghiệp
 
 ```text
 04 gia đình
@@ -112,7 +128,7 @@ Nếu muốn hiểu vòng đời gia đình–giáo dục–nghề nghiệp:
 → 15 biến đổi dân số
 ```
 
-Nếu muốn hiểu truyền thống như một hệ thống sống thay vì “đồ cổ”:
+### Lộ trình 3 — truyền thống như một hệ thống sống
 
 ```text
 21 các lớp lịch sử
@@ -124,7 +140,7 @@ Nếu muốn hiểu truyền thống như một hệ thống sống thay vì “
 → 16 mô hình tư duy
 ```
 
-Nếu muốn hiểu Hàn Quốc như một **hệ thống xã hội–kỹ thuật (socio-technical system)** hiện đại:
+### Lộ trình 4 — Hàn Quốc như một hệ thống xã hội–kỹ thuật hiện đại
 
 ```text
 01 hệ thống văn hoá
@@ -136,6 +152,31 @@ Nếu muốn hiểu Hàn Quốc như một **hệ thống xã hội–kỹ thu�
 → 26 y tế / chăm sóc
 → 16 liên hệ
 ```
+
+### Lộ trình 5 — Hallyu và kinh tế sáng tạo
+
+```text
+10 nghệ thuật / di sản
+→ 13 Hallyu / nội dung / IP
+→ 20 fandom / sự kiện
+→ 27 nền tảng / cộng đồng số
+→ 19 làm đẹp / hình ảnh
+→ 24 kinh tế / phân phối giá trị
+→ 16 liên hệ
+```
+
+### Lộ trình 6 — học cách tự phân tích một hiện tượng văn hoá
+
+```text
+01 phương pháp nền
+→ 02 quan hệ / quyền lực
+→ 03 ngôn ngữ / ngữ cảnh
+→ 16 mô hình xuyên chương
+→ 17 thuật ngữ / nguồn
+→ coverage_audit
+```
+
+Lộ trình 6 đặc biệt quan trọng nếu mục tiêu không chỉ là “biết Korean culture” mà là có thể gặp một hiện tượng mới rồi tự hỏi đúng câu hỏi, kiểm tra bằng chứng và tránh định kiến.
 
 ## KIIP — 한국사회 이해 시험 대비
 
@@ -151,6 +192,8 @@ Thư mục [`kiip/`](kiip/README.md) tồn tại như **một lớp ôn thi riê
 - Khuôn mẫu của nhóm không đồng nghĩa chắc chắn đúng với từng cá nhân.
 - Sự tiện lợi phải được truy ngược về lao động, vốn và hạ tầng.
 - Nghi lễ phải được đọc cùng chức năng, người tham gia và bối cảnh.
+- Tương quan không tự chứng minh quan hệ nhân quả.
+- Một quan sát cần được đặt trong cơ chế chọn mẫu và cấp độ phân tích của nó.
 - Số liệu thống kê phải đi cùng mẫu số và năm dữ liệu.
 - Quy định hoặc dữ liệu hiện hành phải có mốc thời gian và được kiểm tra lại khi dùng thực tế.
 
