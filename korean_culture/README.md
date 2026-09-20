@@ -1,8 +1,14 @@
 # Korean Culture — Master Knowledge Book
 
-Bộ tài liệu Markdown chuyên sâu bằng tiếng Việt về **Văn hoá Hàn Quốc (Korean Culture / 한국문화)**, được tổ chức theo **conceptual dependency** và **First-Principles Thinking**, không theo Beginner → Intermediate → Advanced.
+Bộ tài liệu Markdown chuyên sâu bằng tiếng Việt về **Văn hoá Hàn Quốc (한국문화 / Korean Culture)**, được tổ chức theo **conceptual dependency** và **First-Principles Thinking**, không theo Beginner → Intermediate → Advanced.
 
 Bắt đầu tại: [`00_index_and_dependency.md`](00_index_and_dependency.md)
+
+## Quy ước tên riêng Việt–Hàn–Anh
+
+Tên người, địa điểm, triều đại, sự kiện, công trình và văn bản quan trọng được ghi lần đầu theo mẫu **Tên tiếng Việt (한국어 원문 / English name)**. Ví dụ: **Cung Cảnh Phúc (경복궁 / Gyeongbokgung Palace)**, **Cao Ly (고려 / Goryeo)** và **Đại vương Thế Tông (세종대왕 / King Sejong the Great)**.
+
+Xem bảng quy tắc và tên chuẩn tại [`28_naming_translation_conventions.md`](28_naming_translation_conventions.md). Tên hiện đại không có cách Việt hoá tự nhiên sẽ giữ romanization để dễ nhận diện và tra cứu.
 
 Bộ sách hiện bao phủ 27 chương nội dung và một index/reference layer, từ lịch sử cổ đại–Joseon–thuộc địa–chiến tranh–compressed modernity đến Nho giáo, kính ngữ, gia đình, giáo dục, công sở, nghĩa vụ quân sự, chaebol–housing, ẩm thực, tôn giáo, nghệ thuật, urban/digital life, internet culture, Hallyu, beauty, sports, healthcare, vùng miền, demographic change và public sphere.
 
@@ -16,4 +22,4 @@ Nguyên tắc xuyên suốt:
 - Group pattern ≠ individual certainty
 - Current rule/data phải có timestamp và được kiểm tra lại khi dùng thực tế
 
-Các chương được thiết kế để đọc trực tiếp trong Obsidian, GitHub hoặc Markdown viewer. `16_connections_mental_models_misconceptions.md` dùng để nối các chương thành knowledge graph; `17_glossary_and_reference_map.md` dùng để tra nhanh thuật ngữ Korean–English–Vietnamese và nguồn mở rộng.
+Các chương được thiết kế để đọc trực tiếp trong Obsidian, GitHub hoặc Markdown viewer. `16_connections_mental_models_misconceptions.md` dùng để nối các chương thành knowledge graph; `17_glossary_and_reference_map.md` dùng để tra nhanh thuật ngữ Korean–English–Vietnamese và nguồn mở rộng; `28_naming_translation_conventions.md` dùng để chuẩn hoá tên Việt–Hàn–Anh.
