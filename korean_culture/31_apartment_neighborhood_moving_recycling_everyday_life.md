@@ -210,6 +210,174 @@ việc con người vẫn quan trọng → đánh giá tình huống, giao tiế
 
 Công nghệ giảm một số ma sát nhưng không biến nhu cầu chăm sóc thành bằng 0.
 
+## 관리비: phí quản lý là bảng giá của hạ tầng dùng chung
+
+`관리비` làm nhiều chi phí vốn vô hình trở nên nhìn thấy: vệ sinh khu chung, bảo vệ, thang máy, chiếu sáng, một số tiện ích, sửa chữa và các khoản quản lý khác tuỳ khu. Điều quan trọng không phải thuộc từng dòng phí, mà hiểu rằng sống trong căn hộ là mua đồng thời **không gian riêng + dịch vụ của hệ thống chung**.
+
+Một căn hộ có giá thuê hoặc giá mua thấp hơn nhưng phí vận hành cao chưa chắc rẻ hơn khi nhìn toàn bộ vòng đời. Ngược lại, tiết kiệm bằng cách trì hoãn bảo trì có thể làm chi phí tương lai tăng mạnh.
+
+Có thể tách:
+
+```text
+chi phí thấy ngay → điện, nước, phí tháng
+chi phí bị trì hoãn → sửa mái, đường ống, thang máy, mặt ngoài
+chi phí rủi ro → sự cố lớn nếu bảo trì kém
+```
+
+Đây là lý do **chi phí vòng đời (life-cycle cost)** quan trọng hơn giá ban đầu.
+
+## Bảo trì phòng ngừa: thứ không hỏng hôm nay vẫn đang già đi
+
+Thang máy, bơm nước, đường ống, chống thấm, hệ thống chữa cháy, camera và cửa tự động đều xuống cấp theo thời gian. Nếu chỉ sửa khi hỏng, cư dân thường thấy chi phí đột ngột và gián đoạn lớn hơn.
+
+**Bảo trì phòng ngừa (preventive maintenance)** dùng kiểm tra định kỳ để phát hiện xu hướng trước khi thành sự cố.
+
+```text
+kiểm tra nhỏ thường xuyên
+→ phát hiện sớm
+→ sửa trước khi hỏng lan
+→ giảm xác suất sự cố lớn
+```
+
+Nhưng bảo trì tạo một vấn đề chính trị vi mô: cư dân hiện tại phải trả tiền cho lợi ích có thể chỉ thấy nhiều năm sau. Đây là xung đột giữa **chi phí hiện tại** và **độ tin cậy tương lai**.
+
+## 장기수선 và bài toán quỹ dự phòng
+
+Một khu chung cư lớn có những hạng mục không thể tài trợ hợp lý bằng một tháng phí quản lý khi chúng đột ngột đến hạn. Vì vậy về mặt nguyên lý, hệ thống cần tích luỹ nguồn lực cho sửa chữa dài hạn.
+
+Bài toán giống quỹ dự phòng của hộ gia đình:
+
+```text
+chi phí lớn nhưng hiếm
+÷ nhiều năm sử dụng
+→ cần tích luỹ dần
+```
+
+Nếu quỹ quá thấp, thế hệ cư dân tại thời điểm hỏng phải chịu cú sốc lớn. Nếu quỹ quá cao hoặc quản trị không minh bạch, cư dân có thể mất niềm tin. Vì vậy quản trị tài chính khu nhà cần **đủ dự phòng + minh bạch + trách nhiệm giải trình**.
+
+## Nước, áp lực và đường ống: hạ tầng ẩn nhưng thiết yếu
+
+Cư dân thường chỉ nhìn thấy vòi nước, nhưng phía sau là bể chứa, bơm, đường ống, van và hệ thống thoát. Trong toà cao tầng, áp lực nước phải được quản lý để tầng cao vẫn dùng được mà không gây áp lực quá mức cho hệ thống.
+
+Rò rỉ nhỏ có thể trở thành xung đột lớn vì nước đi theo trọng lực và xuyên qua ranh giới sở hữu. Một hỏng hóc trong căn hộ A có thể gây thiệt hại cho B phía dưới.
+
+Đây là ví dụ điển hình của **phụ thuộc vật lý xuyên hộ**:
+
+```text
+quyền sở hữu riêng
+≠ hệ thống vật lý hoàn toàn riêng
+```
+
+Tường phân chia pháp lý không ngăn nước, tiếng ồn, khói hoặc nhiệt đi qua kết cấu.
+
+## 환기와 실내공기: kín để tiết kiệm năng lượng nhưng vẫn phải thở
+
+Công trình càng kín khí càng giảm thất thoát nhiệt, nhưng con người vẫn tạo hơi ẩm, CO₂, mùi và chất ô nhiễm trong nhà. Vì vậy hiệu quả năng lượng và chất lượng không khí cần được tối ưu cùng nhau.
+
+Nếu chỉ tăng kín mà không thông gió đủ:
+
+```text
+mất nhiệt giảm
+nhưng
+độ ẩm / chất ô nhiễm có thể tích tụ
+```
+
+Thông gió tự nhiên qua cửa sổ phụ thuộc thời tiết và chất lượng không khí ngoài trời. Hệ thống thông gió cơ khí có thể kiểm soát tốt hơn nhưng cần điện, bộ lọc và bảo trì.
+
+Nhà ở vì vậy là một **hệ thống trao đổi với môi trường**, không phải hộp kín.
+
+## 결로와 곰팡이: vật lý nhiệt trở thành vấn đề sức khoẻ và tranh chấp
+
+Khi bề mặt đủ lạnh, hơi nước trong không khí có thể ngưng tụ. Nếu độ ẩm kéo dài, nấm mốc dễ phát triển hơn. Hiện tượng `결로` vì vậy nằm ở giao điểm của cách nhiệt, cầu nhiệt, thông gió, thói quen sấy quần áo và nhiệt độ trong nhà.
+
+Không nên quy mọi nấm mốc cho “người ở không mở cửa” hoặc mọi trường hợp cho “nhà xây lỗi”. Cần xem chuỗi nguyên nhân cụ thể.
+
+```text
+nhiệt độ bề mặt thấp
++ độ ẩm cao
++ thời gian đủ dài
+→ nguy cơ ngưng tụ / nấm mốc tăng
+```
+
+Đây là bài học quan trọng về **nguyên nhân phân tán**: kết quả có thể do cả thiết kế lẫn vận hành.
+
+## 난방 và 냉방: cùng một căn hộ phải xử lý hai cực khí hậu
+
+Mùa đông làm sưởi sàn rất có giá trị; mùa hè nóng ẩm làm điều hoà và hút ẩm quan trọng. Nhà ở vì vậy phải xử lý hai chế độ gần đối lập:
+
+```text
+mùa đông → giữ nhiệt + sưởi
+mùa hè → thải nhiệt + kiểm soát ẩm
+```
+
+Cách nhiệt tốt giúp cả hai mùa bằng cách giảm trao đổi nhiệt không mong muốn, nhưng kính lớn, hướng nắng, bóng râm và hành vi đóng/mở cửa vẫn ảnh hưởng tải nhiệt.
+
+Một ngôi nhà “ấm mùa đông” chưa chắc tự động “mát mùa hè” nếu bức xạ mặt trời vào quá nhiều.
+
+## 측정과 피드백: đồng hồ đo thay đổi hành vi năng lượng
+
+Khi hộ chỉ nhận một con số tổng cuối tháng, khó biết hành vi nào gây tiêu thụ. Khi có phản hồi chi tiết hơn theo ngày, khu vực hoặc loại thiết bị, người dùng dễ học quan hệ giữa hành động và chi phí.
+
+Đây là nguyên lý **đo lường → phản hồi → điều chỉnh**:
+
+```text
+hành vi
+→ tiêu thụ
+→ số liệu dễ hiểu
+→ người dùng điều chỉnh
+→ tiêu thụ mới
+```
+
+Nhưng đo lường quá chi tiết cũng có thể tăng lo âu hoặc đẩy trách nhiệm hoàn toàn sang cá nhân trong khi chất lượng cách nhiệt của toà nhà mới là yếu tố lớn. Phản hồi tốt phải phân biệt phần người dùng kiểm soát và phần hạ tầng quyết định.
+
+## 정전·단수·승강기 고장: sự cố nhỏ có thể thành chuỗi thất bại
+
+Trong nhà cao tầng, điện không chỉ chạy đèn. Nó liên quan thang máy, bơm, cửa, mạng, thông tin và nhiều thiết bị y tế tại nhà. Mất điện hoặc mất nước kéo dài có thể gây tác động lớn hơn cho người cao tuổi, người khuyết tật hoặc hộ có trẻ nhỏ.
+
+Đây là **thất bại dây chuyền (cascading failure)**:
+
+```text
+một hạ tầng lỗi
+→ hạ tầng phụ thuộc mất chức năng
+→ khả năng di chuyển / liên lạc giảm
+→ nhóm dễ tổn thương chịu tác động lớn hơn
+```
+
+Khả năng phục hồi của khu nhà vì vậy phụ thuộc nguồn dự phòng, quy trình khẩn cấp, thông báo và khả năng hỗ trợ những hộ khó tự xử lý.
+
+## 관리의 투명성: niềm tin cư dân là một phần của hạ tầng
+
+Hai khu có phần cứng tương tự nhưng chất lượng sống khác nhau nếu một nơi thông tin rõ, xử lý khiếu nại minh bạch và bảo trì có kế hoạch; nơi kia thông báo muộn, trách nhiệm mơ hồ và cư dân nghi ngờ chi phí.
+
+Quản trị tốt cần ít nhất:
+
+```text
+thông tin dễ hiểu
++ trách nhiệm rõ
++ hồ sơ quyết định
++ cơ chế phản hồi
++ cách xử lý xung đột
+```
+
+Niềm tin không thay bê tông hay thang máy, nhưng nó giảm **chi phí phối hợp** khi cần sửa chữa hoặc thay đổi quy tắc chung.
+
+## Khu căn hộ như một hệ điều hành có vòng đời
+
+Một hệ điều hành không chỉ được cài rồi bỏ mặc; nó cần cập nhật, vá lỗi và tương thích với phần cứng mới. Khu căn hộ cũng có vòng đời:
+
+```text
+xây mới
+→ sử dụng ổn định
+→ thiết bị già đi
+→ sửa chữa lớn
+→ cải tạo / nâng cấp
+→ có thể tái xây dựng hoặc thay đổi chức năng
+```
+
+Khi dân số cư dân cũng già đi, cùng một toà nhà phải thích nghi với yêu cầu mới: tay vịn, ghế nghỉ, ánh sáng tốt hơn, giao diện số dễ dùng hơn hoặc dịch vụ chăm sóc gần hơn.
+
+Vì vậy **tuổi của công trình** và **tuổi của cư dân** có thể cùng tăng, tạo nhu cầu cải tạo kép.
+
 ## Liên hệ kiến thức: khu căn hộ như một hệ điều hành
 
 Khu căn hộ có phần cứng — toà nhà, đường ống, thang máy, bãi đỗ — và phần mềm — quy tắc quản lý, chuẩn cư dân, thông báo và kiểm soát ra vào. Mỗi hộ chạy “ứng dụng” riêng trên nền tảng dùng chung đó.
@@ -218,7 +386,7 @@ Nếu thiết kế nền tảng tốt, nhiều xung đột được ngăn bằng
 
 ## Mô hình tư duy
 
-> Đời sống căn hộ là bài toán **hạ tầng dùng chung + khả năng tiếp cận**. Nhiều điều tưởng chỉ là phép lịch sự — tiếng ồn, rác, đỗ xe, bưu kiện — thực ra xuất hiện vì hàng trăm hộ đang dùng chung tài nguyên có năng lực hữu hạn. Đồng thời, chất lượng nhà ở còn được đo bằng việc người có khả năng cơ thể khác nhau có thể tự sử dụng không gian đến mức nào.
+> Đời sống căn hộ là bài toán **hạ tầng dùng chung + năng lượng + bảo trì + khả năng tiếp cận + quản trị**. Nhiều điều tưởng chỉ là phép lịch sự — tiếng ồn, rác, đỗ xe, bưu kiện — thực ra xuất hiện vì hàng trăm hộ đang dùng chung tài nguyên có năng lực hữu hạn. Chất lượng nhà ở không chỉ là mặt bằng đẹp mà còn là việc hệ thống có đáng tin, có thể bảo trì, có chịu được sự cố và có cho phép người có khả năng cơ thể khác nhau sống độc lập hay không.
 
 ## Những hiểu lầm phổ biến
 
@@ -234,6 +402,14 @@ Nếu thiết kế nền tảng tốt, nhiều xung đột được ngăn bằng
 
 “Già hoá tại nhà chỉ là lựa chọn của gia đình” bỏ qua dịch vụ chăm sóc, giao thông, thiết kế nhà và nguồn lực kinh tế cần để lựa chọn đó khả thi.
 
+“Phí quản lý là tiền cho những dịch vụ nhìn thấy ngay” bỏ qua phần lớn chi phí bảo trì dài hạn và dự phòng cho hạ tầng chung.
+
+“Nhà mới thì chưa cần nghĩ tới bảo trì” là sai; mọi hệ vật lý bắt đầu lão hoá từ ngày vận hành.
+
+“Tiết kiệm năng lượng chỉ là tắt thiết bị” bỏ qua cách nhiệt, hướng nhà, kính, thông gió và hiệu suất hệ thống.
+
+“Nếu mỗi căn hộ là tài sản riêng thì vấn đề kỹ thuật cũng riêng” không đúng; nước, tiếng ồn, khói, nhiệt và kết cấu tạo phụ thuộc xuyên hộ.
+
 ## Đọc tiếp
 
-Đọc cùng [`08_home_space_hanok_clothing_aesthetics.md`](08_home_space_hanok_clothing_aesthetics.md), [`12_city_consumption_digital_life.md`](12_city_consumption_digital_life.md), [`15_contemporary_change_demography_migration.md`](15_contemporary_change_demography_migration.md), [`24_economy_chaebol_housing_status_mobility.md`](24_economy_chaebol_housing_status_mobility.md), [`26_health_medicine_wellness_body.md`](26_health_medicine_wellness_body.md) và [`27_internet_communities_messaging_slang_memes.md`](27_internet_communities_messaging_slang_memes.md).
+Đọc cùng [`08_home_space_hanok_clothing_aesthetics.md`](08_home_space_hanok_clothing_aesthetics.md), [`12_city_consumption_digital_life.md`](12_city_consumption_digital_life.md), [`15_contemporary_change_demography_migration.md`](15_contemporary_change_demography_migration.md), [`24_economy_chaebol_housing_status_mobility.md`](24_economy_chaebol_housing_status_mobility.md), [`26_health_medicine_wellness_body.md`](26_health_medicine_wellness_body.md), [`27_internet_communities_messaging_slang_memes.md`](27_internet_communities_messaging_slang_memes.md) và [`32_seasons_climate_environment_daily_rhythm.md`](32_seasons_climate_environment_daily_rhythm.md).
