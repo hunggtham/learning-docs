@@ -1,327 +1,317 @@
-# 04 — Factors, Index Construction và Multi-Asset Behavior
+# Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản
 
-> Chương này giải thích vì sao hai ETF cùng được gọi là “cổ phiếu Mỹ”, “cổ phiếu giá trị” hoặc “ETF công nghệ” vẫn có thể cho kết quả rất khác nhau. Mục tiêu là hiểu các factor, cách index được xây dựng, cơ chế rebalancing và cách các asset class phản ứng khác nhau dưới từng economic regime.
+> Chương này đi từ việc “mua chỉ số” sang hiểu chỉ số được xây thế nào, nhân tố là gì, vì sao cùng một nhãn value/quality/momentum có thể tạo kết quả khác nhau và vì sao danh mục nhiều sản phẩm vẫn có thể tập trung vào cùng một nguồn rủi ro.
 
-## 1. Beta, Alpha và Factor
+## 1. Beta thị trường và Alpha
 
-Trong cách nói đơn giản, beta là phần return bạn nhận vì chấp nhận rủi ro của một thị trường rộng. Nếu bạn mua broad equity index, phần lớn return dài hạn đến từ equity beta.
+Beta thị trường là mức phơi nhiễm với chuyển động chung của thị trường. Alpha là phần lợi suất không được giải thích bởi benchmark hoặc mô hình nhân tố đã chọn.
 
-Alpha là phần return vượt quá mức có thể giải thích bởi benchmark hoặc các factor đã biết. Alpha khó tạo bền vững vì một strategy được nhiều người phát hiện có thể nhanh chóng bị arbitrage hoặc trở thành crowded trade.
+Trước khi gọi một kết quả là alpha, cần kiểm tra liệu nó có thể được giải thích bởi value, size, quality, momentum, duration, tín dụng hoặc FX hay không.
 
-Factor là một đặc tính có thể giải thích khác biệt return giữa các nhóm tài sản. Những factor nổi tiếng trong equities gồm size, value, momentum, quality và low volatility. Factor không phải công thức bảo đảm outperform; chúng là nguồn exposure có historical evidence và economic rationale nhất định.
+## 2. Nhân tố là gì?
 
-## 2. Market-Cap Weighting
+Nhân tố (factor) là đặc điểm có hệ thống giúp giải thích khác biệt lợi suất giữa nhiều chứng khoán hoặc tài sản.
 
-Nhiều index lớn dùng free-float market capitalization weighting. Company càng lớn thì trọng số càng cao.
+Một nhân tố hữu ích cần có định nghĩa rõ, lý do kinh tế/hành vi hợp lý, bằng chứng tương đối bền và khả năng triển khai sau chi phí.
 
-Ưu điểm lớn là turnover thấp và index tự điều chỉnh theo market value. Nếu một company tăng mạnh, weight tăng tự nhiên mà fund không phải liên tục mua bán để giữ tỷ lệ cố định.
+## 3. Nhân tố giá trị
 
-Nhược điểm là concentration có thể tăng khi một số mega-cap dẫn dắt market. Một index được gọi là “đa dạng hóa 500 công ty” vẫn có thể chịu ảnh hưởng rất lớn từ top 10 names.
+Giá trị (value) ưu tiên tài sản rẻ hơn so với một thước đo cơ bản như lợi nhuận, giá trị sổ sách, dòng tiền hoặc doanh thu.
 
-Market-cap weighting không cố đánh giá valuation. Company càng đắt theo market value càng có weight lớn, miễn vẫn đáp ứng rule của index.
+Rẻ không đồng nghĩa tốt. Doanh nghiệp có thể rẻ vì chất lượng kém hoặc ngành đang suy giảm cấu trúc. Value premium có thể liên quan phần bù rủi ro, hành vi quá phản ứng hoặc cả hai.
 
-## 3. Equal Weighting
+## 4. Nhân tố tăng trưởng và câu chuyện dài hạn
 
-Equal-weight index cố gắng đặt mỗi constituent ở tỷ trọng tương đương. Điều này giảm dominance của mega caps nhưng làm portfolio nghiêng hơn về smaller companies.
+Tăng trưởng (growth) không phải nhân tố đối lập đơn giản với value. Một doanh nghiệp tăng trưởng cao vẫn có thể rẻ nếu giá chưa phản ánh đầy đủ dòng tiền tương lai, và doanh nghiệp tăng trưởng thấp vẫn có thể đắt.
 
-Equal weight phải rebalance định kỳ. Khi một stock tăng quá mạnh, fund bán bớt; khi stock giảm tương đối, fund mua thêm để quay về equal weight. Cơ chế này tạo implicit contrarian behavior.
+Phải tách **tốc độ tăng trưởng** khỏi **giá trả cho tăng trưởng**.
 
-Nhưng turnover và cost cao hơn. Equal weight cũng có size-factor exposure nên không thể nói outperformance đến hoàn toàn từ “rebalancing thông minh”.
+## 5. Chất lượng và khả năng sinh lời
 
-## 4. Value Factor
+Nhân tố chất lượng (quality) thường kết hợp khả năng sinh lời, bảng cân đối, ổn định lợi nhuận và chất lượng dòng tiền.
 
-Value strategy tìm stocks có giá thấp tương đối so với fundamentals như earnings, book value, cash flow hoặc sales.
+Các thước đo có thể gồm ROIC, ROE, biên lợi nhuận, nợ, biến động lợi nhuận và accrual.
 
-Economic rationale là market có thể overreact với tin xấu, nhà đầu tư ghét companies có outlook kém và đòi risk premium cao. Nếu business không xấu như feared, valuation re-rating tạo return.
+“Quality” không có một định nghĩa duy nhất; quỹ khác nhau có thể chọn thước đo rất khác.
 
-Nhưng value traps tồn tại. Company P/E thấp vì earnings đang ở cyclical peak hoặc business structurally declining có thể tiếp tục rẻ hơn.
+## 6. Động lượng
 
-Value factor vì vậy khác với việc mua bất kỳ stock P/E thấp nào. Factor portfolio dùng rule trên một universe lớn để phân tán idiosyncratic risk.
+Động lượng (momentum) ưu tiên tài sản có xu hướng giá tương đối mạnh trong một khoảng thời gian, thường bỏ qua giai đoạn rất gần để giảm nhiễu đảo chiều ngắn hạn.
 
-## 5. Growth và Duration
+Momentum có bằng chứng dài hạn nhưng có thể chịu cú sập mạnh khi thị trường đảo chiều đột ngột sau khủng hoảng.
 
-Growth stocks có phần lớn valuation nằm ở cash flows tương lai. Vì thế chúng có equity-duration dài hơn và nhạy với discount rates.
+## 7. Quy mô
 
-Khi long-term real yields tăng mạnh, present value của distant cash flows giảm. Đây là lý do unprofitable growth và long-duration tech thường chịu pressure mạnh trong tightening cycle.
+Nhân tố quy mô (size) liên quan cổ phiếu vốn hóa nhỏ hơn. Small cap có thể mang rủi ro thanh khoản, khả năng tiếp cận vốn và biến động lợi nhuận cao hơn.
 
-Nhưng rate sensitivity không phải duy nhất. Nếu growth expectations tăng nhanh hơn discount rate, growth stocks vẫn có thể outperform trong rising-yield environment.
+Nếu triển khai, phải tính spread và chi phí giao dịch vì chính các cổ phiếu nhỏ thường tốn kém hơn để giao dịch.
 
-## 6. Quality Factor
+## 8. Biến động thấp
 
-Quality thường mô tả companies có profitability cao, balance sheet tốt, earnings stability và capital efficiency tốt.
+Nhân tố biến động thấp (low volatility) ưu tiên cổ phiếu có volatility hoặc beta thấp hơn.
 
-ROIC, gross profitability, low leverage và earnings quality là các metric thường gặp. Quality companies có thể giữ margin tốt hơn trong downturn và ít phụ thuộc refinancing.
+Nó có thể tạo danh mục tập trung vào ngành phòng thủ, tiện ích hoặc tài chính tùy phương pháp. “Low vol” không đồng nghĩa ít rủi ro ở mọi chế độ, đặc biệt khi lãi suất tăng mạnh.
 
-Nhược điểm là quality có thể trở nên expensive. Một company tuyệt vời ở valuation quá cao vẫn có future return thấp.
+## 9. Cổ tức
 
-## 7. Momentum Factor
+ETF cổ tức có thể nghiêng về value, quality hoặc các ngành trưởng thành. Lợi suất cổ tức cao có thể đến từ giá giảm vì rủi ro kinh doanh tăng.
 
-Momentum dựa trên quan sát rằng assets đã outperform trong một khoảng thời gian có tendency tiếp tục outperform trong ngắn đến trung hạn.
+Không nên coi dividend yield là nhân tố độc lập khỏi chất lượng bảng cân đối và khả năng duy trì payout.
 
-Behavioral explanation gồm underreaction: market cập nhật information chậm; institutional explanation gồm flow và benchmark chasing.
+## 10. Investment Factor
 
-Momentum có thể crash mạnh khi trend đảo đột ngột, đặc biệt sau panic khi losers hồi cực nhanh. Vì vậy momentum premium đi kèm tail risk đặc thù.
+Một số mô hình xem mức đầu tư doanh nghiệp là nhân tố. Doanh nghiệp mở rộng tài sản rất nhanh có thể tạo lợi suất tương lai thấp hơn nếu đầu tư vào dự án ROIC kém.
 
-## 8. Low Volatility và Minimum Variance
-
-Low-volatility strategies chọn stocks có historical volatility thấp hoặc xây portfolio tối thiểu hóa variance.
-
-Một điều thú vị trong finance là historical low-vol stocks đôi khi có risk-adjusted return tốt hơn mô hình đơn giản dự đoán. Các giải thích gồm leverage constraints và investor preference cho lottery-like stocks.
-
-Tuy nhiên low-vol portfolios thường sector-concentrated vào utilities, staples hoặc defensives và có rate sensitivity riêng.
-
-## 9. Size Factor
-
-Size factor mô tả historical tendency của smaller companies có return cao hơn large caps trong một số period.
-
-Small caps thường ít analyst coverage, financing cost cao và business risk lớn hơn, nên expected risk premium có thể cao hơn.
-
-Nhưng small-cap indices có thể chứa nhiều low-quality companies. Vì vậy size thường được kết hợp với quality hoặc profitability filter trong modern factor strategies.
-
-## 10. Dividend Factor không giống Bond
-
-Dividend ETF có thể tạo income cao nhưng underlying vẫn là equity. Dividend có thể bị cắt, stock price có thể giảm 30–50% và sector concentration có thể lớn.
-
-High dividend yield đôi khi xuất hiện vì stock price sụp. Vì thế yield cao không phải signal an toàn.
-
-Dividend investing phù hợp khi investor muốn cash distribution, nhưng total return vẫn nên là metric chính. Một company giữ earnings và reinvest với ROIC cao có thể tạo wealth tốt hơn company trả dividend cao nhưng business không tăng trưởng.
+Mối liên hệ phải được đọc cùng profitability và chu kỳ ngành.
 
 ## 11. Smart Beta
 
-Smart beta là tên thương mại cho rules-based portfolios khác market-cap weighting. Chúng có thể target value, quality, momentum, dividend hoặc combination.
+Smart beta là cách đóng gói quy tắc khác với chỉ số vốn hóa truyền thống. Nó không phải “thông minh” mặc định.
 
-Điểm cần hiểu là smart beta vẫn là active choice ở tầng methodology dù execution thụ động. Investor đang chọn factor exposure và rule set.
+Một sản phẩm smart beta cần được phân tích như một chiến lược:
 
-Khi so smart-beta ETFs, cần xem factor definition, rebalance frequency, sector constraints, turnover và capacity. Hai “quality ETFs” có thể dùng metric hoàn toàn khác nhau.
+```text
+Tín hiệu
+Cách chuẩn hóa
+Cách xếp hạng
+Trọng số
+Giới hạn ngành / mã
+Tần suất tái cân bằng
+Turnover
+Chi phí
+```
 
-## 12. Index Methodology quan trọng hơn tên ETF
+## 12. Xây tín hiệu nhân tố
 
-Index provider quyết định universe, eligibility, weighting, rebalancing và corporate-action treatment. Fund chỉ cố replicate index đó.
+Một quy trình phổ biến:
 
-Một thematic ETF tên “AI” có thể nắm semiconductor, software, data-center REIT hoặc industrial automation với tỷ trọng rất khác. Chỉ đọc tên sản phẩm là không đủ.
+```text
+Chọn biến cơ bản
+→ Làm sạch dữ liệu
+→ Chuẩn hóa theo nhóm phù hợp
+→ Xếp hạng / Z-score
+→ Kết hợp nhiều tín hiệu
+→ Áp giới hạn
+→ Tạo tỷ trọng
+```
 
-Methodology document là tài liệu quan trọng nhất để hiểu ETF dài hạn. Nó cho biết chính xác điều gì khiến một stock được thêm, bị loại và được gán bao nhiêu weight.
+Sai ở bất kỳ bước nào cũng làm factor exposure khác mục tiêu.
 
-## 13. Reconstitution và Rebalancing Flow
+## 13. Z-Score
 
-Index reconstitution là thay đổi constituents. Rebalancing là điều chỉnh weights.
+Z-score chuẩn hóa một biến so với trung bình và độ lệch chuẩn của nhóm:
 
-Passive funds tracking index phải giao dịch để theo changes. Nếu stock được thêm vào major index, passive demand có thể tăng quanh effective date. Nhưng market thường anticipate event, nên “được thêm index = chắc chắn tăng” không đúng.
+```text
+z = (x - mean) / standard deviation
+```
 
-Turnover quanh rebalance tạo transaction costs và có thể ảnh hưởng tracking difference.
+Nó giúp kết hợp các tín hiệu có đơn vị khác nhau, nhưng nhạy với ngoại lệ và phân phối không chuẩn.
 
-## 14. Multi-Asset Regimes
+## 14. Trung hòa ngành
 
-Assets không có correlation cố định. Correlation phụ thuộc nguồn shock.
+Một chiến lược value không trung hòa ngành có thể trở thành cược lớn vào ngân hàng, năng lượng hoặc vật liệu nếu các ngành đó rẻ hơn thị trường.
 
-Trong growth shock với inflation giảm, equities có thể giảm còn government bonds tăng. Đây là environment nơi stock-bond diversification hoạt động tốt.
+Trung hòa ngành (sector neutralization) giúp tách hiệu ứng chọn cổ phiếu trong ngành khỏi cược ngành, nhưng cũng có thể loại bỏ một phần premium thật.
 
-Trong inflation shock, yields tăng làm bonds giảm trong khi margins và valuations của equities cũng chịu pressure. Stocks và bonds có thể cùng giảm.
+Không có lựa chọn “đúng tuyệt đối”; phải hiểu mục tiêu.
 
-Trong geopolitical supply shock, oil và gold có thể tăng, import-dependent currencies yếu và equities phân hóa theo sector.
+## 15. Trung hòa beta
 
-Đây là lý do portfolio diversification phải dựa trên economic drivers thay vì chỉ historical correlation matrix.
+Nếu mục tiêu nghiên cứu là đo factor thuần, có thể điều chỉnh để beta thị trường gần trung tính. Nhưng quỹ long-only thực tế thường không trung hòa hoàn toàn.
 
-## 15. Equity và Bond Duration cùng tồn tại
+Do đó lợi suất của một ETF factor thường là:
 
-Bond duration là metric rõ ràng về sensitivity với yield. Equity không có contractual maturity nhưng vẫn có duration-like behavior.
+```text
+Market Beta
++ Factor Tilts
++ Sector/Country Tilts
++ Security-Specific Effects
+- Costs
+```
 
-Growth company có cash flows xa nên equity duration dài. Value company có current cash generation cao thường duration ngắn hơn.
+## 16. Phân rã nhân tố
 
-Khi real yields tăng, long-duration bonds và long-duration equities có thể cùng giảm. Điều này giải thích vì sao portfolio tưởng đa dạng hóa theo tên asset class vẫn có thể concentration vào duration risk.
+Phân rã lợi suất (factor attribution) giúp biết danh mục đang kiếm tiền vì value, momentum, size, quality hay chỉ vì beta thị trường.
 
-## 16. Inflation Beta
+Kết quả phụ thuộc mô hình nhân tố được chọn. Một mô hình thiếu nhân tố quan trọng có thể gán nhầm phần dư thành alpha.
 
-Commodity producers, energy stocks, TIPS, commodities và gold đều có relationship khác nhau với inflation.
+## 17. Value Spread
 
-TIPS bảo vệ principal theo inflation index nhưng price vẫn chịu real-yield duration. Commodity futures phản ứng trực tiếp hơn với supply-demand nhưng return còn chịu futures curve. Gold có long-run inflation narrative nhưng short-run driver mạnh thường là real yields và USD.
+Chênh lệch định giá giữa nhóm rẻ và nhóm đắt có thể cung cấp bối cảnh cho value factor.
 
-Không có một “inflation hedge” hoạt động giống nhau trong mọi giai đoạn.
+Nếu chênh lệch cực rộng, lợi suất kỳ vọng của value có thể hấp dẫn hơn, nhưng không có nghĩa điểm đảo chiều sắp xảy ra ngay.
 
-## 17. Currency Exposure là một Asset Factor
+Định giá là tín hiệu chậm, không phải công cụ thời điểm chính xác.
 
-Foreign investment tạo thêm currency exposure nếu không hedge.
+## 18. Factor Crowding
 
-Một Korean investor mua US equity unhedged đang nắm cả US equity beta và long USD/KRW exposure. Khi KRW yếu, FX hỗ trợ return bằng KRW; khi KRW mạnh, FX kéo return xuống.
+Khi nhiều nhà đầu tư cùng mua một chiến lược, định giá và vị thế có thể trở nên đông đúc (crowded).
 
-Hedging loại bớt currency volatility nhưng có hedge cost và không phải luôn tốt hơn. Với long horizon, currency diversification có thể có giá trị riêng.
+Khi unwinding, tương quan giữa các vị thế cùng factor tăng mạnh và thanh khoản giảm. “Đa dạng hóa giữa nhiều quỹ factor” có thể thất bại nếu chúng cùng sở hữu các chứng khoán giống nhau.
 
-## 18. Correlation Breakdown
+## 19. Factor Crash
 
-Historical correlation thường được tính trên data bình thường. Trong crisis, correlations có thể tăng vì deleveraging và liquidity needs khiến nhiều assets bị bán cùng lúc.
+Momentum có thể sụp khi thị trường đảo chiều cực nhanh. Low volatility có thể chịu áp lực khi lãi suất tăng đột ngột. Value có thể chịu nhiều năm hoạt động kém khi cấu trúc thị trường thay đổi hoặc định giá growth tiếp tục mở rộng.
 
-Đặc biệt, assets cùng được finance bằng leverage có thể trở nên correlated khi margin calls xuất hiện. Đây là lý do risk model dựa hoàn toàn vào normal-period covariance có thể đánh giá thấp tail risk.
+Mỗi factor có một dạng thất bại riêng. Cần stress test thay vì chỉ nhìn Sharpe lịch sử.
 
-## 19. Factor Crowding
+## 20. Turnover
 
-Một factor có thể trở thành crowded nếu quá nhiều capital theo cùng strategy. Khi flows đảo, unwind có thể nhanh và mạnh.
+Nhân tố thay đổi nhanh như momentum thường cần turnover cao hơn value hoặc quality.
 
-Crowding không làm factor biến mất vĩnh viễn, nhưng làm valuation và short-term risk quan trọng hơn. Momentum, low volatility và carry đều từng có episodes unwind dữ dội.
+Turnover làm tăng spread, market impact, thuế và tracking difference. Premium gộp cao không có ý nghĩa nếu bị chi phí triển khai ăn hết.
 
-## 20. Core–Satellite ở tầng Factor
+## 21. Capacity
 
-Core có thể là broad market-cap index. Satellite không nhất thiết là single stocks; nó có thể là factor tilts.
+Khi quy mô vốn tăng, chiến lược factor có thể phải giao dịch lượng lớn ở cùng chứng khoán, đặc biệt small cap.
 
-Ví dụ investor muốn tăng quality và value exposure có thể giữ core broad ETF rồi thêm một phần nhỏ quality/value funds. Cách này minh bạch hơn việc mua nhiều thematic ETFs không rõ factor overlap.
+Capacity là giới hạn quy mô trước khi tác động thị trường làm lợi thế suy giảm đáng kể.
 
-## 21. Look-Through Analysis
+## 22. Rebalancing Effect
 
-Khi sở hữu nhiều ETFs, hãy nhìn xuyên qua wrapper để xem underlying holdings và factor exposures.
+Nhiều chỉ số factor tái cân bằng định kỳ. Ngày tái cân bằng có thể tạo dòng vốn có thể dự đoán phần nào và bị nhà giao dịch khác đi trước.
 
-Hai ETFs tên khác nhau có thể top holdings giống đến 70%. Nếu không look-through, investor tưởng diversified nhưng thực tế concentration lớn.
+Chi phí ẩn này nên được xem trong tracking difference dài hạn.
 
-Look-through cũng hữu ích với country ETFs, vì một country index có thể thực chất là bet vào vài sectors. Korea có semiconductor weight lớn; Vietnam có banks và property-related exposures đáng kể.
+## 23. Index Reconstitution
 
-## 22. Chọn Benchmark phù hợp
+Khi chứng khoán được thêm hoặc loại khỏi chỉ số lớn, quỹ thụ động phải giao dịch. Giá có thể phản ứng trước ngày hiệu lực do thị trường dự đoán thay đổi.
 
-Benchmark cần phản ánh opportunity set và risk của strategy.
+Dòng vốn do chỉ số là yếu tố kỹ thuật; nó không thay đổi trực tiếp dòng tiền cơ bản của doanh nghiệp.
 
-Một small-cap value portfolio không nên chỉ so ngắn hạn với mega-cap growth index rồi kết luận thất bại. Nhưng cũng không được tự chọn benchmark dễ beat.
+## 24. Rủi ro phương pháp luận chỉ số
 
-Benchmark tốt phải được chọn trước và đủ investable để investor thực sự có thể mua thay thế strategy.
+Hai ETF cùng nhãn “quality” có thể khác vì:
 
-## 23. Từ Asset Class tới Portfolio
+```text
+Biến dùng để chấm điểm
+Khoảng thời gian dữ liệu
+Xử lý ngoại lệ
+Giới hạn ngành
+Giới hạn mã
+Tần suất tái cân bằng
+Cách xử lý doanh nghiệp mới
+```
 
-Khi xây portfolio, câu hỏi không phải asset nào “tốt nhất”, mà asset nào đóng vai trò gì và driver nào đã có quá nhiều exposure.
+Nhà đầu tư phải đọc methodology, không chỉ tên quỹ.
 
-Nếu income, property và stock portfolio của một household đều nhạy với Korea domestic cycle, global equity hoặc foreign bonds có thể tạo diversification. Nếu tất cả holdings đều long duration, thêm một ticker khác không giải quyết concentration.
+## 25. Active Share và factor exposure
 
-Multi-asset thinking là nhìn through product label tới economic exposure.
+Active Share cao nói danh mục khác benchmark nhiều, nhưng không nói khác theo cách nào.
 
-## 24. Factor Definition không có một chuẩn duy nhất
+Một quỹ Active Share cao có thể chỉ là cược ngành hoặc cược size lớn. Vì vậy nên kết hợp Active Share với phân tích nhân tố.
 
-Một sai lầm phổ biến là coi “value”, “quality” hay “momentum” như những object có definition cố định. Thực tế mỗi provider có thể dùng metric khác nhau. Value có thể dựa P/B, earnings yield, EV/EBITDA, cash-flow yield hoặc composite. Quality có thể dùng ROE, ROIC, gross profitability, leverage, earnings stability hoặc accruals. Momentum có thể dùng 12-1 month return, 6-month return, volatility-adjusted return hoặc bỏ qua recent reversal period theo cách khác.
+## 26. Tracking Error Budget
 
-Vì vậy hai ETF cùng label có thể cho exposure rất khác. Khi so products, cần đọc formula, normalization method, winsorization/outlier treatment, sector-neutralization và weighting rule. Product name chỉ là metadata; factor construction mới là strategy.
+Danh mục factor có thể đặt ngân sách sai lệch bám chỉ số (tracking-error budget). Mục tiêu là nhận exposure đủ lớn để factor có ý nghĩa nhưng không làm tổng rủi ro chủ động vượt giới hạn.
 
-## 25. Cross-Sectional Ranking và Z-Score
+Factor tilt nhỏ có thể không tạo khác biệt sau chi phí; tilt quá lớn có thể khiến danh mục khó chịu đựng nhiều năm hoạt động kém.
 
-Nhiều factor indices không dùng raw metric trực tiếp mà rank companies tương đối trong universe. Một cách phổ biến là chuẩn hóa metric thành z-score để biết company nằm cao hay thấp so với peers.
+## 27. Multi-Factor
 
-Điểm mạnh là các metric có đơn vị khác nhau có thể được combine. Nhưng result phụ thuộc universe. Một company “quality cao” trong small-cap universe không nhất thiết tương đương quality cao trong mega-cap universe.
+Kết hợp value, quality và momentum có thể giảm phụ thuộc vào một factor duy nhất.
 
-Sector-neutral ranking còn thay interpretation. Nếu chọn top quality bên trong từng sector, portfolio vẫn giữ sector balance; nếu rank toàn market, high-quality sectors có thể dominate. Investor cần hiểu mình đang mua stock selection hay sector allocation trá hình.
+Nhưng cách kết hợp quan trọng:
 
-## 26. Profitability và Investment Factors
+```text
+Kết hợp tín hiệu rồi chọn cổ phiếu
+hay
+Xây từng sleeve factor rồi ghép lại
+```
 
-Ngoài classic value/size/momentum, academic asset pricing còn nhấn mạnh profitability và investment intensity. Profitability factor phản ánh firms có operating profitability tốt hơn; investment factor quan sát rằng firms đầu tư assets quá aggressive trong một số framework có future return thấp hơn firms đầu tư thận trọng hơn.
+Hai cách tạo holdings, turnover và tương quan khác nhau.
 
-Điểm quan trọng không phải học tên model, mà hiểu factor model cố tách return thành systematic characteristics. Khi một fund outperform, analyst nên hỏi bao nhiêu đến từ market beta, value, size, quality/profitability, momentum và bao nhiêu còn lại mới thực sự là residual alpha.
+## 28. Correlation giữa các nhân tố thay đổi
 
-## 27. Multi-Factor Attribution
+Value và momentum có thể hỗ trợ nhau ở một giai đoạn nhưng cùng giảm ở giai đoạn khác. Quality và low-vol cũng có thể trùng lặp.
 
-Một portfolio có return cao không đồng nghĩa stock-picking skill. Ví dụ manager overweight small-cap value trong đúng period small-value outperform. Nếu benchmark chỉ là broad cap-weighted index, active return nhìn rất tốt; nhưng factor regression có thể cho thấy phần lớn return được giải thích bởi known systematic tilts.
+Không nên dùng một ma trận tương quan dài hạn cố định để kết luận diversification.
 
-Một mental model hữu ích:
+## 29. Carry ngoài cổ phiếu
 
-`Portfolio Return ≈ Market Beta + Factor Exposures + Security-Specific Alpha + Implementation Friction`
+Carry xuất hiện ở nhiều nhóm tài sản:
 
-Attribution không nhằm phủ nhận skill. Nó giúp biết return đến từ nguồn nào và nguồn đó có thể lặp lại hay không.
+```text
+FX: chênh lệch lãi suất
+Bonds: coupon / roll-down
+Commodities: cấu trúc đường cong
+Volatility: bán premium
+```
 
-## 28. Factor Neutralization
+Carry thường tạo lợi suất đều trong thời kỳ bình thường nhưng có thể chịu cú tháo chạy lớn trong stress.
 
-Một strategy muốn target value có thể vô tình overweight financials/energy và underweight technology. Nếu không neutralize sector, observed value premium một phần có thể thực chất là sector bet.
+## 30. Trend
 
-Sector-neutralization giảm exposure ngoài mục tiêu nhưng cũng làm strategy khác economic meaning ban đầu. Tương tự, beta-neutral hoặc dollar-neutral construction có thể loại market direction nhưng tăng turnover, shorting cost và model dependency.
+Chiến lược theo xu hướng (trend following) có thể áp dụng trên cổ phiếu, lãi suất, FX và hàng hóa.
 
-Neutralization không miễn phí; mỗi constraint thay đổi portfolio economics.
+Trend có thể đa dạng hóa khi khủng hoảng kéo dài vì có khả năng chuyển sang vị thế bán, nhưng có thể chịu nhiều khoản lỗ nhỏ khi thị trường đi ngang hoặc đảo chiều nhanh.
 
-## 29. Value Spread
+## 31. Growth–Inflation Regimes
 
-Không chỉ biết portfolio đang “value” là đủ. Value spread — khoảng cách valuation giữa cheap và expensive groups — giúp biết factor đang rẻ hay đắt tương đối.
+Một khung đa tài sản đơn giản dùng hai trục tăng trưởng và lạm phát:
 
-Nếu value stocks chỉ rẻ hơn growth một chút so lịch sử, expected premium có thể thấp hơn lúc spread cực rộng. Nhưng spread rộng cũng có thể phản ánh real structural differences. Vì vậy factor valuation là context, không phải timing signal chắc chắn.
+```text
+Tăng trưởng ↑ / Lạm phát ↓ hoặc ổn định
+Tăng trưởng ↑ / Lạm phát ↑
+Tăng trưởng ↓ / Lạm phát ↓
+Tăng trưởng ↓ / Lạm phát ↑
+```
 
-## 30. Momentum Turnover và Trading Cost
+Mỗi chế độ tạo phản ứng khác nhau ở cổ phiếu, duration, tín dụng, hàng hóa và tiền tệ. Đây chỉ là bản đồ, không phải luật chắc chắn.
 
-Momentum thường turnover cao vì winners/losers thay đổi liên tục. Gross backtest có thể hấp dẫn nhưng implementation cost, tax, bid-ask spread và market impact ăn đáng kể return.
+## 32. Hidden Duration
 
-Factor càng dựa short lookback và small/illiquid stocks, capacity càng thấp. Một strategy scale tốt trên paper có thể degrade khi AUM lớn. Đây là lý do research phải phân biệt theoretical factor premium và investable factor premium.
+Growth stocks, long-duration bonds và một số REIT có thể cùng nhạy với lợi suất thực dù được gắn nhãn tài sản khác nhau.
 
-## 31. Factor Crash
+Đây là tập trung ẩn phổ biến trong danh mục đa tài sản.
 
-Factor returns không phân phối “êm”. Momentum có thể crash khi market đảo chiều mạnh; low-vol có thể underperform khi high-beta cyclicals rebound; value có thể chịu nhiều năm structural underperformance; carry có thể unwind khi funding/liquidity shock xảy ra.
+## 33. Hidden Credit Beta
 
-Factor crash thường đến từ combination của crowded positioning, leverage, valuation stretch và regime reversal. Vì vậy factor diversification nên xem payoff shape, không chỉ long-run average correlation.
+High-yield bonds, leveraged loans, private credit và một số cổ phiếu tài chính có thể cùng chịu rủi ro khi tăng trưởng suy yếu và credit spread mở rộng.
 
-## 32. Factor Timing rất khó
+Gọi chúng là “bond” không làm chúng trở thành tài sản phòng thủ.
 
-Biết factor có long-run evidence không đồng nghĩa dự báo được năm nào outperform. Investor dễ mua factor sau nhiều năm good performance và bán sau drawdown dài, biến premium lý thuyết thành behavior gap thực tế.
+## 34. FX Exposure
 
-Timing bằng valuation, macro regime hoặc momentum có logic nhất định nhưng cũng thêm model risk. Với nhiều investors, allocation nhỏ, diversified và rebalanced theo policy có thể robust hơn cố dự đoán factor winner mỗi quarter.
+Danh mục toàn cầu phải tách lợi suất tài sản khỏi tỷ giá. Cùng một ETF nước ngoài có thể tạo kết quả khác hoàn toàn cho nhà đầu tư KRW, VND hoặc USD.
 
-## 33. Carry và Trend là Factors ngoài Equity
+Currency exposure là một nhân tố riêng cần được đo và quản lý.
 
-Factor thinking mở rộng sang multiple asset classes. **Carry** tìm return từ chênh lệch yield/roll khi điều kiện khác không đổi; **trend** hoặc time-series momentum giữ exposure theo persistent price direction.
+## 35. Factor Timing
 
-FX carry có thể long high-yield currency và short low-yield currency nhưng thường chịu crash risk khi funding currency mạnh trong risk-off. Commodity carry liên quan futures curve. Bond carry/roll-down phụ thuộc yield curve. Trend có thể giúp trong persistent crisis nhưng bị whipsaw trong range.
+Dự đoán ngắn hạn nhân tố nào sắp thắng rất khó. Định giá và chế độ kinh tế có thể cung cấp bối cảnh nhưng timing thường không chính xác.
 
-Đây là ví dụ cho thấy factor là return mechanism, không phải loại sản phẩm.
+Nếu dùng factor dài hạn, nhà đầu tư phải có khả năng chịu nhiều năm hoạt động kém mà không từ bỏ đúng lúc premium có thể quay lại.
 
-## 34. Factor Correlation thay đổi theo Regime
+## 36. Đánh giá một ETF factor
 
-Value và momentum có thể diversify nhau trong một số period nhưng cùng chịu liquidity shock ở period khác. Quality và low-vol thường có defensive overlap. Size và value có thể cùng nhạy domestic credit/cyclical recovery.
+Checklist:
 
-Một multi-factor portfolio nên stress correlation theo regimes chứ không chỉ dùng full-sample average. Hidden common factor thường xuất hiện khi market căng thẳng.
+```text
+Factor được định nghĩa thế nào?
+Dữ liệu nào được dùng?
+Có trung hòa ngành / beta không?
+Trọng số thế nào?
+Turnover bao nhiêu?
+Chi phí và tracking difference?
+Top holdings / sector tilt?
+Capacity?
+Lịch sử factor crash?
+Exposure có trùng danh mục hiện tại không?
+```
 
-## 35. Tracking Error là “ngân sách active risk”
+## 37. Mô hình tư duy cuối cùng
 
-Một factor tilt càng khác benchmark thì tracking error càng lớn. Điều này không chỉ là số thống kê; nó là behavioral challenge. Portfolio có thể underperform benchmark nhiều năm dù thesis dài hạn chưa sai.
+```text
+Nhãn sản phẩm
+→ Phương pháp chỉ số
+→ Tín hiệu
+→ Cách chuẩn hóa
+→ Trọng số
+→ Exposure thực
+→ Turnover / Chi phí
+→ Factor crowding / Crash
+→ Vai trò trong danh mục
+```
 
-Nếu investor không chịu được 5 năm relative underperformance, allocation active quá lớn so behavioral risk capacity. Factor portfolio vì vậy cần **tracking-error budget**, giống portfolio tổng cần risk budget.
-
-## 36. Index Governance và Methodology Risk
-
-Rules-based không có nghĩa objective tuyệt đối. Index committee/provider vẫn quyết định definitions, rebalance dates, exceptional treatment, corporate actions và methodology changes.
-
-Một index có thể thay methodology sau khi market structure thay đổi. Điều này tạo **methodology risk**: exposure bạn mua hôm nay có thể evolve. Investor nên đọc methodology-change notices nếu product là holding lớn dài hạn.
-
-## 37. Turnover, Tax và Rebalance Premium
-
-Rebalancing có thể tạo buy-low/sell-high behavior nhưng turnover gây spread, tax realization và market impact. Một backtest factor trước cost thường overstated so investable return.
-
-Khi comparing two factor ETFs, hãy xem turnover cùng với tracking difference, không chỉ expense ratio. ETF 0,15% fee nhưng turnover thấp có thể hiệu quả hơn ETF 0,10% fee nhưng implementation friction lớn.
-
-## 38. Capacity và Crowding
-
-Factor strategy trên large liquid equities có capacity lớn hơn micro-cap strategy. Khi AUM tăng, rebalance orders có thể trở thành significant percentage of daily volume, khiến price move trước hoặc trong execution.
-
-Crowding còn tạo anticipatory trading: market participants front-run predictable index rebalances. Điều này không xóa factor edge hoàn toàn nhưng chuyển một phần premium từ fund investors sang liquidity providers/front-runners.
-
-## 39. Active Share và Factor Exposure không giống nhau
-
-Active Share cao nghĩa holdings khác benchmark nhiều, nhưng không nói risk factor khác bao nhiêu. Một portfolio có Active Share cao vẫn có beta/sector/factor gần benchmark nếu individual names offset.
-
-Ngược lại, derivatives overlay có thể tạo factor exposure lớn mà holdings nhìn gần benchmark. Vì vậy holdings-based và returns-based analysis nên dùng bổ sung nhau.
-
-## 40. Factor Portfolio Construction
-
-Một multi-factor portfolio có thể combine value, quality và momentum theo hai cách lớn. **Mixing** giữ separate sleeves rồi combine; **integrated scoring** rank each stock trên nhiều factors cùng lúc.
-
-Mixing minh bạch và dễ attribution nhưng có thể long và short implicit exposures giữa sleeves. Integrated scoring tránh một số offset nhưng phụ thuộc weighting formula hơn.
-
-Không có construction luôn tối ưu. Điều quan trọng là biết portfolio cuối cùng có exposure gì sau khi combine.
-
-## 41. Risk-Controlled Factor Tilt
-
-Factor tilt thực tế nên có constraints về single-stock weight, sector deviation, liquidity, turnover và tracking error. Nếu không, optimizer có thể tập trung vào những names cực đoan để maximize score.
-
-Một strategy robust thường chấp nhận “ít pure factor hơn” để đổi lấy investability tốt hơn. Đây là khác biệt giữa academic portfolio và product có thể scale ngoài đời thật.
-
-## 42. Factor Due-Diligence Checklist
-
-Trước khi mua factor ETF hoặc systematic fund, hãy xác định universe, factor definition, weighting, rebalance, turnover, sector/country constraints, concentration, historical drawdown, factor crash behavior, expense ratio, tracking difference, AUM/liquidity và overlap với holdings hiện tại.
-
-Sau đó hỏi câu quan trọng nhất: factor này giải quyết vai trò gì trong portfolio? Nếu câu trả lời chỉ là “backtest tốt hơn broad index”, thesis chưa đủ.
-
-## 43. Mental Model nâng cao
-
-Có thể nhìn toàn bộ chapter bằng chuỗi:
-
-`Economic rationale → measurable characteristic → portfolio construction → implementation cost → regime sensitivity → factor crowding → realized investor return`
-
-Historical premium nằm ở đầu chuỗi; return mà investor thực sự nhận nằm ở cuối chuỗi. Khoảng cách giữa hai bên có thể rất lớn nếu product construction, cost hoặc behavior kém.
-
-## Kết luận
-
-ETF và index investing tưởng đơn giản vì execution chỉ cần một lệnh, nhưng phía sau là methodology, factor exposure, weighting rule, rebalancing, currency và regime sensitivity. Khi hiểu các lớp này, bạn có thể phân biệt diversification thật với diversification chỉ trên số lượng ticker, đồng thời biết vì sao cùng một portfolio có thể hoạt động rất khác khi inflation, growth và interest-rate regime thay đổi.
+Đầu tư nhân tố chỉ hữu ích khi nhà đầu tư hiểu **mình đang nhận phần bù nào, qua quy tắc nào và với chi phí/rủi ro gì**. Tên gọi `value`, `quality` hay `smart beta` không thay thế phân tích phương pháp.
