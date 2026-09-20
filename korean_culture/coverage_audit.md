@@ -49,8 +49,8 @@ Mục tiêu là biến mỗi chương từ “mô tả hiện tượng” thành
 | Nền tảng hệ thống văn hoá | `01` | mạnh | chỉ bổ sung khi có cơ chế xuyên chương mới |
 | Nho giáo, quan hệ, thứ bậc | `02` | mạnh | giữ ranh giới giữa mô tả và chuẩn tắc |
 | Ngôn ngữ, kính ngữ, `눈치`, `정`, `체면` | `03` | mạnh | có thể đào sâu giao tiếp đa ngôn ngữ và môi trường toàn cầu |
-| Gia đình, họ tộc, vòng đời | `04` + `29` | rất mạnh sau vòng mới | `29` đã thêm cú sốc chăm sóc, tải quản lý vô hình và quyền tự chủ của trẻ |
-| Giáo dục, thi cử, bằng cấp | `05` + `30` | rất mạnh sau vòng mới | đã thêm học tập suốt đời, chuyển nghề, kỹ năng chuyển giao và đại học như hệ ghép nối |
+| Gia đình, họ tộc, vòng đời | `04` + `29` | rất mạnh | `29` đã thêm cú sốc chăm sóc, tải quản lý vô hình và quyền tự chủ của trẻ |
+| Giáo dục, thi cử, bằng cấp | `05` + `30` | rất mạnh | đã thêm học tập suốt đời, chuyển nghề, kỹ năng chuyển giao và đại học như hệ ghép nối |
 | Công sở | `06` | mạnh, đã mở rộng | giữ đồng bộ với `05`, `29`, `30` khi cập nhật kỹ năng và chăm sóc |
 | Ẩm thực | `07` | mạnh | có thể bổ sung sâu hơn kinh tế chuỗi cung ứng thực phẩm nếu cần |
 | Nhà ở, hanok, không gian | `08` + `31` | mạnh | giữ liên kết với già hoá, di cư và tài chính hộ |
@@ -60,27 +60,27 @@ Mục tiêu là biến mỗi chương từ “mô tả hiện tượng” thành
 | Đô thị, tiêu dùng, đời sống số | `12` | mạnh | đã có hành trình đô thị không rào cản và khả năng tiếp cận số |
 | Hallyu, truyền thông, nền tảng | `13` | mạnh | đã có lao động sáng tạo, quyền tác giả, quyền chuyển thể và phân phối giá trị |
 | Vùng miền, Jeju, bán đảo | `14` | mạnh | có thể đào sâu quan hệ giữa vùng, việc làm và di chuyển dân số |
-| Dân số, già hoá, di cư | `15` | rất mạnh sau vòng mới | đã thêm hợp đồng thế hệ, độ trễ thiết chế, ngưỡng dịch vụ và chuỗi hội nhập di cư |
-| Liên hệ giữa các hệ thống | `16` | rất mạnh sau vòng mới | đã mở từ 23 lên 30 mô hình liên hệ và thêm lớp đo lường |
-| Thuật ngữ và bản đồ nguồn | `17` | đã đồng bộ vòng mới | đã thêm thuật ngữ từ 05, 12, 15, 22, 26, 29, 30 |
-| Phép lịch sự và quan hệ đời thường | `18` | mạnh | ưu tiên đào sâu ranh giới cá nhân, mạng quan hệ và chi phí duy trì quan hệ |
+| Dân số, già hoá, di cư | `15` | rất mạnh | đã thêm hợp đồng thế hệ, độ trễ thiết chế, ngưỡng dịch vụ và chuỗi hội nhập di cư |
+| Liên hệ giữa các hệ thống | `16` | rất mạnh | đã có 30 mô hình liên hệ và lớp đo lường |
+| Thuật ngữ và bản đồ nguồn | `17` | đã đồng bộ vòng mới | tiếp tục thêm thuật ngữ sau mỗi vòng nâng sâu |
+| Phép lịch sự và quan hệ đời thường | `18` | rất mạnh sau vòng mới | đã thêm ngân sách quan hệ, liên kết mạnh/yếu, ranh giới, sửa chữa quan hệ và mệt mỏi quan hệ |
 | Làm đẹp, thời trang, cơ thể | `19` | mạnh | số liệu về thủ thuật phải ghi rõ quần thể |
 | Thể thao, giải trí, fandom | `20` | mạnh | đã có thể thao thích ứng, giải trí người cao tuổi và bất bình đẳng thời gian |
-| Các lớp lịch sử | `21` | mạnh | có thể sâu hơn về ký ức lịch sử trong đời sống thường ngày mà không lặp `korean_history/` |
-| Tên, tuổi, siêu dữ liệu xã hội | `22` | rất mạnh sau vòng mới | đã thêm tên pháp lý/hiển thị, La-tinh hoá, danh tính số và tối thiểu hoá dữ liệu |
-| Nghĩa vụ quân sự | `23` | khá mạnh | có thể đào sâu tái hội nhập vào học tập/công việc sau nghĩa vụ |
-| Kinh tế, chaebol, nhà ở, dịch chuyển xã hội | `24` | mạnh | ưu tiên vòng sâu tiếp theo về bảng cân đối hộ, rủi ro và truyền tài sản liên thế hệ |
+| Các lớp lịch sử | `21` | mạnh | ưu tiên tiếp theo: ký ức lịch sử trong đời sống thường ngày mà không lặp `korean_history/` |
+| Tên, tuổi, siêu dữ liệu xã hội | `22` | rất mạnh | đã thêm tên pháp lý/hiển thị, La-tinh hoá, danh tính số và tối thiểu hoá dữ liệu |
+| Nghĩa vụ quân sự | `23` | khá mạnh | ưu tiên tái hội nhập vào học tập/công việc và khác biệt trải nghiệm sau nghĩa vụ |
+| Kinh tế, chaebol, nhà ở, dịch chuyển xã hội | `24` | rất mạnh sau vòng mới | đã thêm bảng cân đối hộ, thanh khoản, chi phí cố định, tương quan rủi ro và mạng bảo hiểm gia đình |
 | Xã hội dân sự và không gian công luận | `25` | mạnh về khung phân tích | dữ kiện chính trị hiện hành luôn phải kiểm chứng mới |
 | Y tế và văn hoá sức khoẻ | `26` | mạnh | đã có khuyết tật, khả năng tiếp cận, chăm sóc giảm nhẹ và cuối đời |
-| Internet, nhắn tin, tiếng lóng, meme | `27` | mạnh | có thể đào sâu thuật toán, chất lượng thông tin và quản trị danh tính số |
+| Internet, nhắn tin, tiếng lóng, meme | `27` | rất mạnh sau vòng mới | đã thêm đề xuất thuật toán, thiên lệch tham gia, nguồn gốc, quản trị cộng đồng và khóa mạng lưới |
 | Quy ước tên riêng | `28` | tốt | giữ nhất quán Việt–Hàn–Anh |
-| Nuôi dạy con và chăm sóc | `29` | rất mạnh sau vòng mới | đã thêm chất lượng chăm trẻ, trẻ ốm, nghỉ chăm con, vai trò cha và tải quản lý vô hình |
-| Đại học và thanh niên | `30` | rất mạnh sau vòng mới | đã thêm đăng ký môn, GPA, bài tập nhóm, phòng nghiên cứu, thực tập và nhà ở sinh viên |
+| Nuôi dạy con và chăm sóc | `29` | rất mạnh | đã thêm chất lượng chăm trẻ, trẻ ốm, nghỉ chăm con, vai trò cha và tải quản lý vô hình |
+| Đại học và thanh niên | `30` | rất mạnh | đã thêm đăng ký môn, GPA, bài tập nhóm, phòng nghiên cứu, thực tập và nhà ở sinh viên |
 | Căn hộ, khu dân cư | `31` | mạnh | đã có thiết kế phổ quát, nhà thông minh hỗ trợ chăm sóc và già hoá tại nơi ở quen thuộc |
 | Mùa, khí hậu, môi trường | `32` | mạnh | xu hướng khí hậu phải gắn mốc thời gian |
 | Dịch vụ, khách hàng, đánh giá | `33` | mạnh | tiếp tục liên kết điều kiện lao động với `06`, `12`, `24` |
 
-## 4. Những nâng cấp độ sâu vừa hoàn thành
+## 4. Những nâng cấp độ sâu đã hoàn thành trong chu kỳ hiện tại
 
 ### Giáo dục không còn kết thúc ở đại học
 
@@ -161,9 +161,49 @@ tên pháp lý
 
 Chương cũng nối La-tinh hoá tên, người nước ngoài, danh xưng công sở toàn cầu, nickname, phân nhóm theo tuổi và tối thiểu hoá dữ liệu.
 
+### Kinh tế hộ gia đình đã được tách khỏi khái niệm “thu nhập” đơn giản
+
+[`24_economy_chaebol_housing_status_mobility.md`](24_economy_chaebol_housing_status_mobility.md) hiện phân biệt:
+
+```text
+thu nhập
+≠ dòng tiền
+≠ tài sản
+≠ thanh khoản
+```
+
+Chương cũng thêm chi phí cố định, khả năng phục vụ nợ, cú sốc thất nghiệp, tương quan giữa hai nguồn thu nhập, gia đình như mạng bảo hiểm tư nhân, tài chính hộ–tự kinh doanh, khác biệt thời điểm gia nhập thị trường tài sản và nhiều lớp của “độc lập kinh tế”.
+
+### Quan hệ đời thường đã chuyển từ phép lịch sự sang kinh tế của mạng xã hội
+
+[`18_daily_etiquette_gifts_relationships.md`](18_daily_etiquette_gifts_relationships.md) hiện dùng mô hình **ngân sách quan hệ**:
+
+```text
+thời gian
++ sự chú ý
++ tiền
++ sự hiện diện
++ năng lượng cảm xúc
+```
+
+Chương đã thêm liên kết mạnh/yếu, khác biệt giữa có đi có lại và kế toán tức thời, cách nói không, mệt mỏi quan hệ, suy giảm quan hệ khi mất không gian chung, chồng lấp vai trò, xin lỗi và sửa chữa quan hệ, chi phí cơ hội của sự có mặt và thân mật số.
+
+### Internet đã chuyển từ “văn hoá meme” sang mô hình hạ tầng niềm tin
+
+[`27_internet_communities_messaging_slang_memes.md`](27_internet_communities_messaging_slang_memes.md) hiện tách rõ:
+
+```text
+phổ biến
+≠ đại diện
+≠ đáng tin
+≠ đúng
+```
+
+Nội dung mới đi sâu vào vòng phản hồi đề xuất, thiên lệch tham gia, phễu lan truyền, cảm xúc mạnh và chỉ số tương tác, phả hệ nguồn, truyền thông tổng hợp, hiệu chuẩn niềm tin, tính độc lập của nguồn, nhiều tài khoản, khóa mạng lưới, quản trị cộng đồng, hệ thống báo cáo và quản lý đầu vào thông tin.
+
 ### Chương liên hệ đã chuyển từ “tổng hợp” sang công cụ phân tích
 
-[`16_connections_mental_models_misconceptions.md`](16_connections_mental_models_misconceptions.md) hiện có 30 liên hệ xuyên chương. Khung phân tích cũng được nâng từ năm lên sáu lớp bằng việc thêm **lớp đo lường**:
+[`16_connections_mental_models_misconceptions.md`](16_connections_mental_models_misconceptions.md) hiện có 30 liên hệ xuyên chương. Khung phân tích đã được nâng lên sáu lớp:
 
 ```text
 vật chất
@@ -178,51 +218,37 @@ vật chất
 
 ### Glossary đã được đồng bộ
 
-[`17_glossary_and_reference_map.md`](17_glossary_and_reference_map.md) đã nhận thêm các nhóm thuật ngữ mới về:
-
-- học tập suốt đời và chuyển nghề;
-- campus và nghiên cứu;
-- chăm sóc và nghỉ chăm con;
-- khả năng tiếp cận;
-- dân số/di cư;
-- danh tính số;
-- chăm sóc cuối đời;
-- các khái niệm phân tích xuyên chương.
+[`17_glossary_and_reference_map.md`](17_glossary_and_reference_map.md) đã nhận các nhóm thuật ngữ mới về học tập suốt đời, campus, chăm sóc, khả năng tiếp cận, dân số/di cư, danh tính số, cuối đời và các khái niệm phân tích xuyên chương.
 
 ## 5. Ưu tiên cho vòng tăng độ sâu tiếp theo
 
-Thư viện hiện không thiếu các chương lớn. Phần tiếp theo nên tập trung vào **failure mode, trade-off và interaction** trong các chương còn mạnh về mô tả nhưng chưa sâu bằng nhóm vừa nâng cấp.
+Thư viện hiện không thiếu chương lớn. Vòng tiếp theo nên tiếp tục theo nguyên tắc **failure mode + trade-off + interaction**, nhưng chuyển sang các chương chưa được nâng sâu trong chu kỳ gần đây.
 
-### Ưu tiên A — `24`: kinh tế hộ gia đình và dịch chuyển xã hội
+### Ưu tiên A — `21`: ký ức lịch sử trong đời sống thường ngày
 
-Nên đào sâu:
-
-```text
-thu nhập ≠ dòng tiền ≠ tài sản ≠ thanh khoản
-```
-
-và quan hệ giữa nợ, nhà ở, giáo dục, kết hôn, hỗ trợ từ cha mẹ, tự kinh doanh, rủi ro thất nghiệp và truyền tài sản giữa thế hệ.
-
-### Ưu tiên B — `18`: quan hệ đời thường và ranh giới
-
-Nên đi sâu cách một mạng quan hệ được duy trì bằng thời gian, quà, phản hồi, `경조사`, chat nhóm và sự có mặt. Cần thêm mô hình **ngân sách quan hệ (relationship budget)** để giải thích vì sao cùng một phép lịch sự có thể là gắn kết hoặc gánh nặng.
-
-### Ưu tiên C — `27`: nền tảng, thuật toán và chất lượng thông tin
-
-Nên tách rõ:
+Không lặp niên đại ở `korean_history/`. Nên tập trung:
 
 ```text
-phổ biến
-≠ đại diện
-≠ đáng tin
-≠ đúng
+ký ức gia đình
+↔ địa danh / tượng đài / bảo tàng
+↔ phim ảnh / truyền hình
+↔ khác biệt thế hệ
+↔ ký ức cá nhân và ký ức công cộng
 ```
 
-và mở rộng cách thuật toán đề xuất, nội dung tạo sinh, danh tính ẩn danh và ảnh chụp màn hình thay cấu trúc niềm tin.
+Mục tiêu là giải thích quá khứ được lưu, kể lại và thương lượng trong hiện tại như thế nào.
 
-### Ưu tiên D — `21`: ký ức lịch sử trong đời sống thường ngày
+### Ưu tiên B — `23`: nghĩa vụ quân sự và tái hội nhập
 
-Không lặp niên đại `korean_history/`, mà tập trung cách ký ức chiến tranh, công nghiệp hoá, đô thị hoá và dân chủ hoá xuất hiện trong gia đình, địa danh, bảo tàng, phim ảnh và khác biệt thế hệ.
+Nên đào sâu giai đoạn sau nghĩa vụ: quay lại đại học, mất nhịp mạng xã hội, kỹ năng bị gián đoạn, chuyển từ hệ thống quân sự sang tổ chức dân sự và cách kinh nghiệm quân đội được hoặc không được chuyển thành vốn nghề nghiệp.
+
+### Ưu tiên C — `14`: vùng miền như hệ kinh tế–di chuyển
+
+Nên nối bản sắc vùng với việc làm, đại học, di cư thanh niên, giao thông, du lịch và quá trình một phương ngữ hoặc món ăn trở thành thương hiệu vùng.
+
+### Ưu tiên D — `03`: giao tiếp đa ngôn ngữ và môi trường toàn cầu
+
+Có thể đào sâu cách kính ngữ, trực tiếp/gián tiếp, dịch nội bộ, tiếng Anh công sở và giao tiếp Hàn–Việt tạo lỗi ở cấp nghĩa, vai trò và thời điểm phản hồi.
 
 ## 6. Các liên kết chéo bắt buộc phải giữ đồng bộ
 
@@ -238,6 +264,7 @@ Không lặp niên đại `korean_history/`, mà tập trung cách ký ức chi�
 13 Hallyu ↔ 19 Làm đẹp ↔ 20 Fandom ↔ 24 Kinh tế ↔ 06 Lao động
 18 Quan hệ ↔ 03 Ngôn ngữ ↔ 22 Danh tính ↔ 27 Nhắn tin
 15 Dân số ↔ 22 Danh tính ↔ 26 Y tế ↔ 29 Chăm sóc
+21 Lịch sử ↔ 14 Vùng miền ↔ 11 Nghi lễ ↔ 13 Truyền thông
 ```
 
 ## 7. Chính sách về độ mới của dữ liệu
