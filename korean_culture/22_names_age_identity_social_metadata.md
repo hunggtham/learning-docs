@@ -84,9 +84,107 @@ Không đi vào chi tiết nhạy cảm, có thể nói Hàn Quốc phát triể
 
 Liên hệ với khoa học máy tính rất rõ: hệ thống định danh càng tập trung và tái sử dụng nhiều thì việc xác thực càng thuận tiện, nhưng phạm vi ảnh hưởng khi dữ liệu bị rò rỉ cũng lớn hơn. Vì vậy văn hoá tiện lợi số và mối quan tâm về `개인정보` — thông tin cá nhân (personal information) — thường cùng tồn tại.
 
+## Tên pháp lý, tên hiển thị và tên dùng trong quan hệ không phải một thứ
+
+Một người có thể đồng thời có tên trên giấy tờ, tên viết bằng Hangul, dạng La-tinh dùng trong hộ chiếu hoặc hệ thống quốc tế, tên tiếng Anh dùng tại công ty và biệt danh trong nhóm bạn. Những lớp này cùng chỉ một người nhưng phục vụ các chức năng khác nhau.
+
+Có thể phân biệt:
+
+```text
+tên pháp lý → dùng để xác nhận đúng cá nhân
+tên hiển thị → giúp người khác nhận ra và gọi thuận tiện
+danh xưng → biểu diễn quan hệ
+biệt danh / tên người dùng → biểu diễn bản sắc theo cộng đồng
+```
+
+Sai lầm xuất hiện khi hệ thống giả định bốn lớp luôn trùng nhau. Một cơ sở dữ liệu có thể yêu cầu đúng tên pháp lý, trong khi đồng nghiệp lại chỉ biết tên tiếng Anh. Nếu không có trường ánh xạ, cùng một người có thể trông như hai hồ sơ khác nhau.
+
+## 로마자 표기: La-tinh hoá là vấn đề tương thích hệ thống, không chỉ phát âm
+
+Tên Hàn khi đi vào môi trường quốc tế phải được biểu diễn bằng bảng chữ cái La-tinh. Nhưng mục tiêu của dạng La-tinh không chỉ là giúp người nước ngoài phát âm; nó còn phải hoạt động với hộ chiếu, vé máy bay, ngân hàng, hồ sơ học tập, email và hệ thống nhân sự.
+
+Do đó một biến thể nhỏ về dấu cách, dấu gạch nối hoặc thứ tự họ–tên có thể trở thành vấn đề đối sánh dữ liệu. Về kỹ thuật, đây là bài toán **chuẩn hoá định danh (identity normalization)**.
+
+```text
+cùng một người
+→ nhiều cách viết tên
+→ hệ thống không biết hai chuỗi là tương đương
+→ hồ sơ bị tách hoặc đối sánh sai
+```
+
+Bài học rộng hơn là: tên người không phải khoá chính hoàn hảo. Hệ thống tốt cần mã định danh ổn định và chỉ dùng tên như thuộc tính hiển thị hoặc đối chiếu bổ sung.
+
+## Người nước ngoài tại Hàn Quốc và ma sát của tên
+
+Tên không theo cấu trúc Hàn có thể tạo ma sát ngược lại. Một số hệ thống cũ có thể giả định độ dài tên, thứ tự họ–tên hoặc bộ ký tự quen thuộc. Người có nhiều tên đệm, tên dài hoặc cấu trúc họ khác có thể gặp lỗi nhập liệu, rút gọn không mong muốn hoặc cách gọi thiếu tự nhiên.
+
+Vấn đề này không phải “tên nước ngoài khó”; nó là **xung đột giữa dữ liệu thật và lược đồ dữ liệu (schema mismatch)**. Khi xã hội đa dạng hơn, lược đồ định danh cũng phải linh hoạt hơn.
+
+## 직함, 영어이름 và công sở toàn cầu
+
+Trong công ty Hàn Quốc, cùng một người có thể được gọi `김과장님`, `팀장님`, `김OO님`, hoặc bằng tên tiếng Anh tuỳ văn hoá tổ chức. Việc đổi hệ thống danh xưng làm thay đổi bề mặt thứ bậc nhưng không nhất thiết thay quyền quyết định phía dưới.
+
+Một công ty có thể bỏ `대리`, `과장` khỏi cách gọi hằng ngày để giảm khoảng cách, nhưng ngân sách, đánh giá và quyền phê duyệt vẫn có cấu trúc. Vì vậy cần tách **giao diện ngôn ngữ của thứ bậc** khỏi **kiến trúc quyền lực**.
+
+Trong nhóm đa quốc gia, tên tiếng Anh có thể giảm ma sát phát âm và giúp giao tiếp nhanh. Nhưng nếu tên này trở thành bắt buộc dù người dùng không muốn, sự tiện lợi của tổ chức lại được mua bằng chi phí bản sắc của cá nhân. Thiết kế tốt cho phép người dùng tự chọn cách hiển thị trong phạm vi hệ thống hỗ trợ được.
+
+## 닉네임, 아이디, 핸들: danh tính số là một lớp riêng
+
+Trên diễn đàn, trò chơi, mạng xã hội và cộng đồng trực tuyến, người dùng thường tương tác bằng **biệt danh số (nickname)** hoặc tên tài khoản. Danh tính này có thể tách khỏi tên pháp lý và cho phép người dùng thử một vai trò khác: chuyên gia, người hâm mộ, game thủ hoặc thành viên ẩn danh.
+
+Tính tách lớp có hai mặt. Nó giảm chi phí phát biểu và bảo vệ riêng tư, nhưng cũng có thể giảm trách nhiệm nếu người dùng tin rằng hành vi trực tuyến không gắn với hậu quả ngoài đời.
+
+Do đó câu hỏi không chỉ là “ẩn danh hay tên thật tốt hơn?”, mà là mức **khả năng truy vết (traceability)** nào phù hợp với mục tiêu của cộng đồng.
+
+## Tuổi trong môi trường số: từ phép lịch sự thành thuộc tính phân khúc
+
+Ngoài giao tiếp trực tiếp, tuổi còn được dùng để phân nhóm nội dung, quảng cáo, quyền truy cập hoặc thiết kế sản phẩm. Khi đó tuổi không còn chỉ là dữ liệu để chọn kính ngữ; nó trở thành biến trong hệ thống ra quyết định.
+
+Điểm cần thận trọng là tuổi chỉ là biến đại diện. Hai người cùng 60 tuổi có thể khác hoàn toàn về kỹ năng số, sức khoẻ và thu nhập. Nếu thiết kế sản phẩm chỉ dựa trên nhãn tuổi, hệ thống dễ tạo định kiến tự động.
+
+Một nguyên tắc tốt là:
+
+```text
+tuổi giúp đặt giả thuyết
+≠ tuổi giải thích đầy đủ năng lực hoặc sở thích
+```
+
+Điều này nối trực tiếp với chương dân số và khả năng tiếp cận số.
+
+## Tối thiểu hoá dữ liệu: không phải siêu dữ liệu nào hữu ích cũng nên thu thập
+
+Vì tuổi, năm sinh, chức danh, quê quán và quan hệ có thể giúp giảm bất định, tổ chức dễ rơi vào logic “càng biết nhiều càng tốt”. Nhưng dữ liệu hữu ích về mặt xã hội không đồng nghĩa cần thiết về mặt nghiệp vụ.
+
+Trong bảo vệ dữ liệu, **tối thiểu hoá dữ liệu (data minimization)** nghĩa là chỉ thu thập những gì cần cho mục đích đã xác định. Đây là đối trọng quan trọng với văn hoá tiện lợi dựa trên định danh dày đặc.
+
+```text
+thêm dữ liệu
+→ cá nhân hoá / xác thực dễ hơn
+nhưng đồng thời
+→ tăng bề mặt rủi ro khi rò rỉ hoặc lạm dụng
+```
+
+Vì vậy thiết kế định danh hiện đại phải cân bằng tiện lợi, khả năng phối hợp và quyền riêng tư.
+
+## Liên hệ kiến thức: danh tính như một hệ nhiều lớp
+
+Có thể coi danh tính xã hội như một ngăn xếp:
+
+```text
+lớp pháp lý: tôi là ai trước nhà nước / hợp đồng?
+lớp tổ chức: vai trò và quyền của tôi là gì?
+lớp quan hệ: anh/chị/em/tiền bối/đồng nghiệp?
+lớp cộng đồng: tôi thuộc nhóm nào?
+lớp số: tài khoản và lịch sử hoạt động nào đại diện cho tôi?
+```
+
+Một xung đột xảy ra khi hai lớp dùng quy tắc khác nhau. Ví dụ người lớn tuổi hơn có thể là cấp dưới trong công ty; tên pháp lý có thể khác tên hiển thị; người ẩn danh trực tuyến có thể là người quen ngoài đời.
+
+Hiểu văn hoá Hàn Quốc sâu hơn không phải học một quy tắc “ai lớn thì trên”, mà học cách nhiều lớp siêu dữ liệu cùng được thương lượng.
+
 ## Mô hình tư duy
 
-> Tên, tuổi, chức danh và cách xưng hô trong tiếng Hàn tạo thành một “phần đầu” của tương tác. Phần đầu này giúp hai bên quyết định giao thức giao tiếp trước khi nội dung chính bắt đầu.
+> Tên, tuổi, chức danh và cách xưng hô trong tiếng Hàn tạo thành một “phần đầu” của tương tác. Phần đầu này giúp hai bên quyết định giao thức giao tiếp trước khi nội dung chính bắt đầu. Trong xã hội số và toàn cầu, phần đầu đó mở rộng thành nhiều lớp định danh: pháp lý, tổ chức, quan hệ và tài khoản số.
 
 ## Những hiểu lầm phổ biến
 
@@ -101,6 +199,14 @@ Luật có thể chuẩn hoá cách tính tuổi hành chính, nhưng thói quen
 ### “Cùng họ nghĩa là cùng một gia đình”
 
 Không đúng. Những họ phổ biến có rất nhiều dòng; bản quán và gia phả mới là lớp phân biệt truyền thống.
+
+### “Tên chỉ là chuỗi ký tự để hiển thị”
+
+Trong đời sống thực, tên còn liên quan xác thực, danh xưng, bản sắc, phát âm và tương thích giữa nhiều hệ thống. Dùng tên làm mã định danh duy nhất là một mô hình dữ liệu yếu.
+
+### “Biết tuổi là đủ để biết nên cư xử thế nào”
+
+Không đúng. Tuổi chỉ là một trục; chức vụ, mức thân thiết, khoá, vai trò và bối cảnh có thể quan trọng hơn.
 
 ## Nguồn tham khảo định hướng
 
