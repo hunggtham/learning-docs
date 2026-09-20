@@ -1,65 +1,85 @@
 # Coverage Audit — Computer Science Foundations
 
-Tài liệu này ghi lại vòng kiểm tra coverage để thư viện không trở thành tập chapter ngẫu nhiên. Nó là maintenance document, không phải cheat sheet.
+Tài liệu này kiểm tra coverage và conceptual boundaries để `computer_science/` không trở thành collection chapter ngẫu nhiên. Sau vòng comprehensive expansion, library có **100 topic chapters** trong **14 nhóm conceptual**, cộng `README.md`, glossary Việt–Anh–Hàn và audit này.
 
-## Scope đã cover
+## 1. Computation & Information — 5 chapters
 
-Library hiện có **59 topic chapters** trong 10 nhóm conceptual cùng README, glossary và audit này.
+Đã cover computation/state transition, information/encoding, binary/hex/integer/floating point, logic/invariants/abstraction và computability/undecidability. Mathematical proof, Boolean algebra và information theory sâu hơn cross-reference sang `mathematics/`.
 
-### Computation & Information
+## 2. Algorithms & Data Structures — 12 chapters
 
-Đã cover computation/state, information/encoding, binary/hex/integer/floating point, logic/invariants/abstraction, computability/undecidability. Các phần toán chứng minh/Boolean/information theory sâu hơn cross-reference sang `mathematics/` thay vì duplicate.
+Đã cover specification/correctness/termination; asymptotic, amortized, worst/average/lower bounds; memory locality/layout; arrays/lists/stacks/queues/deques; hashing; trees/B-tree/heaps/tries; graphs; sorting/search/selection; recursion/divide-and-conquer/greedy/backtracking/DP; string algorithms/KMP/rolling hash/suffix structures; randomized/approximation/online/streaming algorithms; reductions, P/NP/NP-hard/NP-complete và parameterized-complexity intuition.
 
-### Algorithms & Data Structures
+## 3. Computer Architecture — 8 chapters
 
-Đã cover specification/correctness/termination, asymptotic complexity, amortized/worst/average/lower bound, memory locality/layout, arrays/lists/stacks/queues/deques, hashing, trees/B-tree/heaps/tries, graph BFS/DFS/topological/Dijkstra/MST/DSU, sorting/search/selection và algorithmic strategies recursion/divide-and-conquer/greedy/backtracking/DP.
+Đã cover digital logic/sequential circuits; CPU/ISA/instruction cycle; pipeline/out-of-order; cache/TLB/coherence; I/O/interrupt/DMA; assembly/ABI; multicore/SIMD/GPU/NUMA/Amdahl; SSD/HDD/NVMe/FTL/persistence; performance equations, power, benchmarking và roofline intuition.
 
-### Architecture
+## 4. Operating Systems — 8 chapters
 
-Đã cover digital gates/combinational/sequential logic, CPU/ISA/instruction cycle, registers/pipeline/out-of-order, memory hierarchy/cache/TLB/coherence, I/O/interrupt/DMA, machine code/assembly/ABI/linking boundary, multicore/SIMD/GPU/NUMA/Amdahl.
+Đã cover kernel/user privilege, syscalls, processes/threads/scheduling/context switching, synchronization/atomics/memory ordering/deadlock, virtual memory/TLB/COW/mmap, filesystem/page cache/journaling, containers/VM/namespaces/cgroups, IPC/signals/pipes/shared memory, boot/drivers/MMIO/DMA và blocking/non-blocking/async I/O.
 
-### Operating Systems
+## 5. Programming Languages & Runtime — 9 chapters
 
-Đã cover kernel/user privilege, syscalls, process/thread/scheduling/context switching, concurrency/atomics/memory ordering/deadlock/liveness, virtual memory/page table/TLB/COW/mmap, filesystem/page cache/journaling/storage, containers/VM/namespaces/cgroups/isolation.
+Đã cover syntax/semantics/execution models; values/references/aliasing/memory management; scope/closure/control/async; compiler/IR/JIT/runtime; programming paradigms; error/resource safety; type systems/subtyping/generics/variance/ADTs; lexer/parser/AST/semantic analysis/SSA; threads/actors/CSP/structured concurrency/ownership/memory safety.
 
-### Programming Languages
+## 6. Data & Databases — 8 chapters
 
-Đã cover syntax/semantics/execution models, types/value/reference/aliasing, memory management/GC/ownership, scope/closure/control/async, compiler pipeline/IR/JIT/runtime, paradigms và error/resource safety.
+Đã cover data models; relational model/keys/FD/normalization/NULL; transactions ACID/isolation anomalies/locks/MVCC/serializability; indexes/B+ tree/hash/query execution; pages/buffer pool/WAL/recovery/LSM; relational algebra/SQL logical semantics/window/grouping; cardinality estimation/join ordering/query optimization; NoSQL models, shard keys, replication, OLTP/OLAP, row-vs-column stores, warehouse/lake/lakehouse.
 
-### Data & Databases
+## 7. Networks & Distributed Systems — 9 chapters
 
-Đã cover data models, relational model/keys/FD/normalization/NULL, transactions ACID/isolation anomalies/locks/MVCC/serializability, indexes/B+ tree/hash/query plans/cardinality, storage pages/buffer pool/WAL/recovery/LSM/backup distinction.
+Đã cover layering/encapsulation/packets; Ethernet/ARP/IP/subnet/routing/NAT; TCP/UDP/flow/congestion/BDP; DNS/HTTP/TLS; partial failure/time/causality/consistency/CAP; replication/sharding/quorum/consensus/Raft intuition; socket APIs, IPv6, firewall/VPN/MTU; forwarding vs routing, OSPF/BGP/AS/anycast; HTTP/2 framing, HTTP/3/QUIC và modern transport trade-offs.
 
-### Networks & Distributed Systems
+## 8. Security & Reliability — 9 chapters
 
-Đã cover layering/encapsulation/packets, Ethernet/ARP/IP/subnet/routing/NAT, TCP/UDP/flow/congestion/BDP, DNS/HTTP/TLS, distributed partial failure/time/causality/consistency/CAP, replication/sharding/quorum/consensus/Raft intuition/reconfiguration.
+Đã cover threat modeling/trust/least privilege; cryptographic primitives/password hashing/AEAD/PKI; identity/authentication/authorization/session/OAuth-OIDC intuition; memory/injection vulnerabilities; testing/static/formal/fuzz/debugging; retry/timeout/circuit breaker/bulkhead/observability/SLI-SLO; SOP/CORS/XSS/CSRF/SSRF/session web security; keys/secrets/certificates/KMS/HSM/rotation; dependency/build provenance/SBOM/CI supply-chain security.
 
-### Security & Reliability
+## 9. Software Systems — 8 chapters
 
-Đã cover threat modeling/trust/least privilege, cryptographic primitives/password hashing/AEAD/PKI, identity/authn/authz/session/OAuth-OIDC intuition, memory/web/injection vulnerabilities, testing/static/formal/fuzz/debugging, retry/timeout/circuit breaker/bulkhead/observability/SLI-SLO.
+Đã cover modularity/API contracts; Git/build/link/package/reproducibility; latency/throughput/queueing/capacity/pools/scaling; state placement/queues/backpressure; clocks/serialization/schema evolution/idempotency; caching/TTL/stampede/load balancing/CDN/consistent hashing; event/command/log/stream delivery/order/event time; monolith/services/data ownership/saga/gateway/mesh/Conway's Law.
 
-### Software Systems
+## 10. Software Engineering — 5 chapters
 
-Đã cover modularity/API contracts, Git/build/link/package/reproducibility, latency/throughput/queueing/capacity/cache/pool/scaling, queues/backpressure/messaging semantics/state placement, wall vs monotonic time/serialization/schema evolution/idempotency.
+Đã cover requirements/specification/acceptance criteria/traceability/risk-driven process; architecture quality attributes, coupling/cohesion, ADR, information hiding và patterns-by-context; unit/integration/E2E/contract/property/fuzz/mutation/static verification strategy; CI/CD/config/feature flags/deployment/database migration/IaC/runbooks; maintenance/refactoring/legacy/technical debt/data evolution/knowledge debt/sunsetting.
 
-### Cross-domain connections
+## 11. AI Foundations — 5 chapters
 
-Đã thêm source→compiler/JIT→CPU, browser→network→server→DB, data lifecycle memory→disk→network, recurring trade-offs và abstraction/leaky-abstraction model.
+Đã cover agent/problem formulation/state-space search/A*/minimax/planning; logic/knowledge representation/Bayesian networks/approximate inference/causal distinction; supervised/unsupervised/self-supervised learning, loss/generalization/overfit/leakage/shift; neural networks/backprop/SGD/CNN/attention/transformers/embeddings; evaluation metrics/calibration/subgroups/human-in-loop/data provenance/robustness.
 
-## Topics intentionally delegated / cross-referenced
+AI specialization như NLP, computer vision, reinforcement learning, robotics, foundation-model systems và MLOps đủ lớn để thành libraries riêng; chapter hiện tại cung cấp prerequisites và vocabulary để đi vào chúng.
 
-Discrete mathematics, graph proofs, formal logic, probability, information theory và deeper complexity theory đã có dedicated [Mathematics Knowledge Library](../mathematics/README.md). Library này nhắc đủ context để self-contained nhưng không copy dài.
+## 12. HCI & Computer Graphics — 5 chapters
 
-Language/framework-specific APIs như Java Collections, Spring transactions, React rendering, Android/iOS runtimes thuộc các existing programming libraries trong repo; Computer Science library tập trung principles làm nền cho chúng.
+Đã cover mental models/feedback/human factors/Fitts/Hick/errors; interface information architecture/accessibility/keyboard/focus/color/responsive/user research; graphics coordinate spaces/matrices/projection/raster pipeline/shaders/depth; sampling/color spaces/gamma/alpha/textures/raster-vs-ray-tracing/compression; multimedia frame timing/game loop/audio/video/synchronization/real-time behavior.
 
-AI/ML, computer graphics, compilers chuyên sâu, formal methods chuyên sâu, database product internals, kernel development, cryptographic protocol proofs và cloud-provider-specific architecture là domains đủ lớn để thành libraries riêng, không nên nhồi vào “foundations”. Những cầu nối cần thiết đã được đặt.
+## 13. Computing, Society, Ethics & Profession — 4 chapters
 
-## Quality checklist đã áp dụng
+Đã cover privacy/data minimization/consent/purpose/professional responsibility/dual use; data provenance/measurement-sampling-label bias/fairness/feedback loops/governance; copyright/open-source licenses/patent/trademark/data licenses/compliance; energy/embodied cost/e-waste/digital divide/accessibility/resilience/platform concentration.
 
-Mỗi chapter được kiểm tra theo các tiêu chí sau: mở từ problem/mechanism thay vì definition-only; terminology English + Korean khi hữu ích; prose là chính; formulas đều có interpretation; examples/counterexamples ở concept dễ nhầm; common misconceptions; mental model; cross-reference; distinction giữa abstraction và implementation; assumptions/limitations quan trọng.
+Legal specifics thay đổi theo jurisdiction/time nên chapter law chỉ cung cấp conceptual map, không thay current legal research/advice.
 
-## Những ranh giới cần giữ khi mở rộng
+## 14. Cross-domain Connections — 5 chapters
 
-Nếu sau này thêm chapter, chỉ thêm khi concept có mental model riêng và không duplicate thư viện khác. Ví dụ `Compiler Construction` có thể thành library riêng thay vì mở thêm 20 compiler-specific files ở đây. `Cloud Computing` cũng nên là domain mới dựa trên networking/distributed/security/reliability chapters hiện tại.
+Đã có end-to-end source→compiler/JIT→CPU; browser→DNS/TLS/network→server→DB; data lifecycle register→cache→RAM→disk→network; recurring trade-offs; abstraction/leaky-abstraction model.
 
-Mục tiêu của `computer_science/` là trả lời: **“Một computer system hoạt động từ information tới production service như thế nào, và những constraints nào lặp lại xuyên các layers?”** Nếu chapter mới không phục vụ câu hỏi này, nên đặt ở domain khác.
+Các chapter mới cross-link trực tiếp vào những connection này thay vì duplicate toàn bộ content.
+
+## Coverage đối chiếu với một curriculum CS rộng
+
+Library hiện đã có foundational coverage cho các knowledge areas lớn thường xuất hiện trong chương trình Computer Science: algorithmic foundations, architecture, operating systems, programming languages, data management, networking/distributed computing, security, software development/systems, software engineering, AI, HCI, graphics/interactive systems và social/professional issues. Mathematical/statistical foundations nằm trong dedicated `mathematics/` library và được cross-reference thay vì copy.
+
+## Các domain cố ý không nhồi vào foundation library
+
+Các domain sau đủ lớn để tạo Knowledge Library riêng: advanced compiler construction/backend optimization; kernel internals/device-driver programming chuyên sâu; formal methods/model checking/theorem proving chuyên sâu; cryptographic protocol proofs; robotics; NLP/CV chuyên sâu; MLOps/foundation-model engineering; cloud-provider/platform engineering; computer graphics engine/game engine chuyên sâu; quantum computing; scientific/HPC computing; embedded/real-time hardware chuyên sâu.
+
+Việc không tạo 20–50 files cho mỗi specialization là **conceptual boundary**, không phải missing foundational topic.
+
+## Quality audit criteria
+
+Một chapter chỉ được coi là đạt khi có problem/phenomenon trước definition, giải thích mechanism và assumptions, examples/counterexamples hoặc edge case phù hợp, terminology English + Korean khi hữu ích, mental model, misconceptions và cross-reference. Prose phải là phần chính; bullet chỉ dùng cho list tự nhiên.
+
+Vòng comprehensive expansion tập trung xử lý ba loại gap: concept có mặt nhưng quá implicit; foundational domain hoàn toàn chưa có; và production mechanism thường bị framework/API che khuất. Kết quả là library tăng từ 59 lên **100 topic chapters** mà vẫn giữ boundary theo mental model thay vì chia file theo độ khó.
+
+## Maintenance rule
+
+Khi mở rộng tiếp, không thêm chapter chỉ vì technology phổ biến. Chỉ thêm khi topic có mental model riêng, là dependency quan trọng cho nhiều domains, hoặc một specialization mới được tách thành library riêng. `computer_science/` phải tiếp tục trả lời câu hỏi: **“Computation và software systems hoạt động từ information tới human/societal impact như thế nào, và constraints/trade-offs nào lặp lại xuyên các layers?”**
