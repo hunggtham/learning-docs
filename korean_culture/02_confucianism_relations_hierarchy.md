@@ -124,9 +124,134 @@ Trong hệ thống phân tán, kiến trúc tập trung giúp quyết định nh
 
 Thứ bậc có thể làm rõ trách nhiệm và tăng tốc quyết định trong khủng hoảng. Nhưng nếu mọi quyết định nhỏ đều cần phê duyệt từ trên, hệ thống có độ trễ cao. Nhiều công ty Hàn hiện đại thử làm phẳng chức danh hoặc dùng nhóm agile, nhưng nếu quyền ngân sách và đánh giá vẫn tập trung, kiến trúc thực tế chưa hoàn toàn thay đổi.
 
+## Quyền lực chính thức và quyền lực thực tế không phải cùng một thứ
+
+Một người có chức danh cao có **quyền lực chính thức (formal authority)**, nhưng người khác có thể kiểm soát tri thức, quan hệ khách hàng, lịch vận hành hoặc quyền truy cập hệ thống. Đây là **quyền lực thực tế (de facto power)**.
+
+Có thể tách các nguồn quyền lực:
+
+```text
+quyền ra quyết định
++ quyền đánh giá
++ quyền phân bổ ngân sách
++ quyền giữ thông tin
++ quyền kiểm soát lịch / tài nguyên
++ quyền truy cập mạng quan hệ
++ chuyên môn khó thay thế
+```
+
+Hai người cùng cấp bậc có thể có quyền lực rất khác nếu một người kiểm soát nút quan trọng trong mạng. Vì vậy sơ đồ tổ chức chỉ là một lớp của hệ thống.
+
+## Tính chính danh: tại sao người khác chấp nhận quyền của một người?
+
+Quyền lực bền cần hơn chức danh. Thành viên thường đánh giá người ở trên qua năng lực, công bằng, khả năng bảo vệ nhóm, tính nhất quán và việc có chịu trách nhiệm khi sai hay không.
+
+Đây là **tính chính danh (legitimacy / 정당성)**. Khi quyền lực chính thức cao nhưng tính chính danh thấp, tổ chức có thể vẫn vận hành nhưng xuất hiện các dấu hiệu như tuân thủ tối thiểu, né trách nhiệm, im lặng trong họp hoặc rời bỏ tổ chức.
+
+```text
+quyền chính thức cao
++ tính chính danh cao
+→ phối hợp có thể ổn định
+
+quyền chính thức cao
++ tính chính danh thấp
+→ chi phí giám sát và cưỡng chế tăng
+```
+
+Vì vậy `체면` không chỉ là hình thức; nó có thể liên quan trực tiếp đến khả năng duy trì tính chính danh.
+
+## Khi thâm niên mất dần quyền giải thích
+
+Thâm niên hữu ích khi kinh nghiệm tích luỹ thật sự dự đoán được chất lượng quyết định. Nhưng trong môi trường thay đổi nhanh, tuổi nghề không đảm bảo kiến thức hiện hành.
+
+Ví dụ công cụ phát triển phần mềm, mô hình kinh doanh số hoặc quy định mới có thể thay nhanh đến mức người mới học chuyên sâu gần đây nắm một phần kiến thức tốt hơn người làm lâu năm.
+
+Ta có thể tách:
+
+```text
+thâm niên
+→ có thể là biến đại diện cho kinh nghiệm
+nhưng
+thâm niên ≠ năng lực hiện tại
+```
+
+Khi tương quan giữa thâm niên và năng lực giảm, tổ chức cần bổ sung cơ chế đánh giá theo chuyên môn, bằng chứng và kết quả. Đây là một lý do thứ bậc hiện đại có xu hướng trở thành **đa trục** thay vì chỉ xếp theo tuổi hoặc số năm làm việc.
+
+## Thứ bậc đa trục: ai “ở trên” còn phụ thuộc câu hỏi
+
+Trong một dự án, quản lý dự án có thể quyết định ưu tiên, kiến trúc sư quyết định tiêu chuẩn kỹ thuật, khách hàng quyết định nghiệm thu, bộ phận bảo mật quyết định yêu cầu an toàn và người vận hành có quyền dừng phát hành nếu rủi ro quá cao.
+
+Do đó:
+
+```text
+thứ bậc hành chính
+≠ thứ bậc chuyên môn
+≠ thứ bậc sở hữu ngân sách
+≠ thứ bậc quyền phê duyệt
+```
+
+Một tổ chức phức tạp không xoá thứ bậc; nó phân tách thứ bậc theo miền quyết định. Điều này giảm nguy cơ một biến như tuổi hoặc chức danh chi phối mọi quyết định.
+
+## Tiếng nói, rời bỏ và trung thành: cấp dưới phản ứng thế nào khi hệ thống không công bằng?
+
+Khi một người thấy quyết định không hợp lý, họ có nhiều lựa chọn: phản biện, im lặng, thích nghi, tìm đồng minh, chuyển nhóm hoặc rời tổ chức. Có thể tóm tắt bằng ba phản ứng lớn:
+
+- **lên tiếng (voice)**: cố thay hệ thống từ bên trong;
+- **rời bỏ (exit)**: rời quan hệ hoặc tổ chức;
+- **trung thành (loyalty)**: tiếp tục ở lại và chấp nhận một phần chi phí.
+
+Thứ bậc càng làm chi phí lên tiếng cao, tín hiệu vấn đề càng dễ bị giữ ở tầng dưới. Nếu thị trường lao động cho phép rời bỏ dễ hơn, tổ chức có thể mất người giỏi trước khi lãnh đạo nhận ra vấn đề.
+
+Vì vậy khả năng nghe phản hồi là một cơ chế quản trị, không chỉ là phong cách giao tiếp.
+
+## Cố vấn và truyền nghề: quan hệ 선배–후배 cần có vòng đời
+
+Quan hệ tiền bối–hậu bối tạo giá trị khi nó giúp người mới rút ngắn đường học. Nhưng hệ cố vấn tốt phải hướng đến việc người mới ngày càng tự chủ hơn.
+
+```text
+người mới phụ thuộc nhiều
+→ nhận hướng dẫn + bối cảnh
+→ thực hành có phản hồi
+→ tự quyết định trong phạm vi lớn hơn
+→ trở thành người có thể hướng dẫn người khác
+```
+
+Nếu quan hệ không chuyển trạng thái mà giữ hậu bối phụ thuộc lâu dài, nó không còn là cố vấn hiệu quả mà có thể trở thành cơ chế giữ quyền.
+
+Đây là khác biệt giữa **truyền năng lực** và **duy trì lệ thuộc**.
+
+## Thay đổi thiết chế thường đi qua giai đoạn “giao diện mới, quyền lực cũ”
+
+Một công ty có thể bỏ `사원–대리–과장` và gọi mọi người là `님`, nhưng nếu đánh giá, lương, phê duyệt và quyền nói vẫn tập trung như cũ, thay đổi chủ yếu nằm ở giao diện.
+
+Ngược lại, một tổ chức có thể giữ chức danh truyền thống nhưng phân quyền kỹ thuật rất rõ, cho phép phản biện và dùng quy trình minh bạch.
+
+Vì vậy khi đánh giá “văn hoá phẳng”, cần kiểm tra ít nhất bốn lớp:
+
+```text
+ngôn ngữ xưng hô
+quyền quyết định
+quyền phân bổ tài nguyên
+cơ chế phản biện / kháng nghị
+```
+
+Chỉ thay lớp đầu tiên chưa đủ để kết luận cấu trúc đã phẳng.
+
+## Kiểm toán một hệ thống thứ bậc: năm câu hỏi thực tế
+
+Khi quan sát gia đình, trường học hoặc công sở, có thể hỏi:
+
+1. **Ai có quyền quyết định cuối cùng?**
+2. **Ai chịu hậu quả khi quyết định sai?**
+3. **Ai có thông tin quan trọng nhất?**
+4. **Người ở dưới có kênh phản biện an toàn không?**
+5. **Vai trò có thể thay đổi khi năng lực hoặc bối cảnh thay đổi không?**
+
+Một hệ thống có thứ bậc không tự động xấu. Vấn đề nằm ở việc quyền có đi cùng trách nhiệm, thông tin có đi tới người quyết định và người bị ảnh hưởng có kênh phản hồi hay không.
+
 ## Mô hình tư duy (Mental Model)
 
-> Đừng chỉ ghi nhớ “Hàn Quốc coi trọng thứ bậc”. Hãy ghi nhớ rằng nhiều môi trường Hàn Quốc truyền thống dùng **quan hệ** như cơ chế phân phối nghĩa vụ, sự công nhận và quyền. Tuổi, chức vụ, thâm niên, nhóm gia nhập và mức thân thiết là siêu dữ liệu giúp mọi người xác định giao thức. Xã hội hiện đại đang giữ lại một phần siêu dữ liệu này nhưng tranh luận mạnh hơn về việc nó có nên quyết định quyền lực hay không.
+> Đừng chỉ ghi nhớ “Hàn Quốc coi trọng thứ bậc”. Hãy ghi nhớ rằng nhiều môi trường Hàn Quốc truyền thống dùng **quan hệ** như cơ chế phân phối nghĩa vụ, sự công nhận và quyền. Tuổi, chức vụ, thâm niên, nhóm gia nhập và mức thân thiết là siêu dữ liệu giúp mọi người xác định giao thức. Xã hội hiện đại đang giữ lại một phần siêu dữ liệu này nhưng tranh luận mạnh hơn về việc nó có nên quyết định quyền lực hay không. Khi phân tích sâu hơn, phải tách quyền chính thức, chuyên môn, thông tin, tài nguyên và tính chính danh thay vì giả định tất cả cùng nằm ở một người.
 
 ## Hiểu lầm phổ biến (Common Misconceptions)
 
@@ -139,3 +264,7 @@ Thứ bậc có thể làm rõ trách nhiệm và tăng tốc quyết định tr
 “Nho giáo giải thích được mọi thứ trong văn hoá Hàn” là sai. Chủ nghĩa tư bản, Kitô giáo, Phật giáo, lịch sử thuộc địa, chiến tranh, pháp luật, công nghệ và toàn cầu hoá đều là những lớp lớn khác.
 
 “Dùng 존댓말 nghĩa là người nói thật sự đồng ý với thứ bậc” cũng sai; giao thức ngôn ngữ có thể được dùng vì quy ước mà không phản ánh toàn bộ niềm tin cá nhân.
+
+“Bỏ chức danh là tổ chức đã phẳng” là sai nếu quyền quyết định, đánh giá và ngân sách vẫn tập trung như cũ.
+
+“Người làm lâu năm luôn biết đúng hơn” là sai trong môi trường nơi tri thức thay đổi nhanh; thâm niên là một tín hiệu, không phải bằng chứng cuối cùng về năng lực hiện tại.
