@@ -1,379 +1,319 @@
-# 04 — Đo lường rủi ro, Portfolio Analytics và quy tắc ra quyết định
+# Đo lường rủi ro, phân tích danh mục và quy tắc quyết định
 
-Tài liệu này xây lớp định lượng giữa “hiểu diversification” và khả năng thực sự đo một portfolio. Mục tiêu không phải biến investing thành bài toán thuần toán học, mà giúp bạn hiểu mỗi metric đang đo điều gì, assumption nào nằm bên dưới, metric bỏ sót risk nào và cuối cùng nó phải thay đổi decision ra sao.
+> Chương này xây lớp định lượng cho quản trị danh mục. Mục tiêu không phải biến nhà đầu tư thành nhà thống kê, mà giúp hiểu các con số như CAGR, volatility, beta, Sharpe, VaR hay risk contribution đang đo điều gì, bỏ sót điều gì và nên được dùng thế nào trong quyết định thực tế.
 
-Một dashboard đầy số nhưng không dẫn tới decision rule chỉ là decoration. Analytics chỉ có giá trị khi nó giúp sizing, diversification, rebalancing, stress testing hoặc review tốt hơn.
+## 1. Lợi suất đơn giản, lợi suất log và lợi suất hình học
 
-## 1. Simple return
+Lợi suất đơn giản của một kỳ:
 
-Nếu asset tăng từ 100 lên 110:
+```text
+R = Ending Value / Beginning Value - 1
+```
 
-`Return = 110 / 100 - 1 = 10%`
+Lợi suất log (log return) hữu ích trong một số mô hình thống kê vì có tính cộng theo thời gian, nhưng không nên thay thế trực giác về lợi suất thực tế của nhà đầu tư.
 
-Simple return phù hợp cho một period nhưng không thể cộng trực tiếp qua nhiều periods nếu capital compounding.
+Lợi suất hình học phản ánh quá trình ghép lãi. Nếu danh mục tăng 50% rồi giảm 33,3%, tài sản quay về gần điểm xuất phát dù lợi suất số học trung bình vẫn dương.
 
-## 2. Arithmetic vs geometric return
+## 2. CAGR và lợi suất thực
 
-Hai periods +10% rồi -10% có arithmetic average 0%, nhưng capital từ 100 → 110 → 99. Geometric return phản ánh compounding tốt hơn.
+CAGR phản ánh tốc độ tăng trưởng kép hàng năm:
 
-Với `n` periods:
+```text
+CAGR = (Ending Value / Beginning Value)^(1/n) - 1
+```
 
-`Geometric Return = [(1+r1)(1+r2)...(1+rn)]^(1/n) - 1`
+Lợi suất thực sau lạm phát:
 
-Volatility càng lớn, gap giữa arithmetic và geometric average thường càng đáng kể.
+```text
+Real Return = (1 + Nominal Return) / (1 + Inflation) - 1
+```
 
-## 3. CAGR
+Đánh giá một chiến lược dài hạn nên nhìn cả CAGR, mức suy giảm và sức mua thực.
 
-**Compound Annual Growth Rate (CAGR)** trả lời: nếu capital tăng đều mỗi năm với một rate cố định, rate nào nối beginning value với ending value?
+## 3. Time-Weighted Return và Money-Weighted Return
 
-`CAGR = (Ending / Beginning)^(1/Years) - 1`
+Lợi suất theo thời gian (Time-Weighted Return, TWR) loại ảnh hưởng của thời điểm nạp/rút tiền để đánh giá chiến lược hoặc nhà quản lý.
 
-CAGR tiện so long-term outcomes nhưng bỏ qua path và drawdown.
+Lợi suất theo dòng tiền (Money-Weighted Return, MWR) phản ánh trải nghiệm thực của nhà đầu tư, vì thời điểm đóng/rút tiền ảnh hưởng kết quả.
 
-## 4. Log return
+Một quỹ có TWR tốt nhưng nhà đầu tư vào đúng đỉnh và rút đúng đáy vẫn có MWR kém.
 
-Log return là:
+## 4. Độ biến động là độ phân tán, không phải toàn bộ rủi ro
 
-`ln(Pt / Pt-1)`
+Độ biến động (volatility) thường được đo bằng độ lệch chuẩn của lợi suất. Nó cho biết mức dao động thông thường nhưng không trực tiếp cho biết xác suất phá sản, thiếu thanh khoản hay mất vốn vĩnh viễn.
 
-Nó có tính additive theo thời gian và được dùng nhiều trong quantitative finance. Với returns nhỏ, log return gần simple return. Retail investor không cần dùng log return trong mọi analysis, nhưng nên biết vì nhiều models/statistics dùng nó.
+Hai tài sản có cùng volatility nhưng một tài sản có phân phối cân đối, tài sản kia có nhiều khoản lời nhỏ và một khoản lỗ cực lớn. Rủi ro thực tế rất khác nhau.
 
-## 5. Nominal và real return
+## 5. Cụm biến động và thay đổi chế độ
 
-Nominal gain không đảm bảo purchasing power tăng. Gần đúng:
+Biến động tài chính thường có xu hướng tụ thành cụm: giai đoạn yên tĩnh nối tiếp giai đoạn yên tĩnh, giai đoạn căng thẳng nối tiếp căng thẳng.
 
-`Real Return ≈ Nominal Return - Inflation`
+Do đó dùng một mức volatility dài hạn cố định để sizing có thể đánh giá thấp rủi ro ngay khi chế độ thay đổi.
 
-Công thức chính xác:
+Nên xem thêm volatility gần đây, volatility trong giai đoạn xấu và kiểm thử kịch bản.
 
-`Real Return = (1 + Nominal Return)/(1 + Inflation) - 1`
+## 6. Mức suy giảm
 
-Long-term goals nên đánh giá bằng real wealth.
+Mức suy giảm (drawdown) đo khoảng giảm từ đỉnh trước đó. Maximum Drawdown là mức giảm sâu nhất trong giai đoạn quan sát.
 
-## 6. Time-Weighted Return và Money-Weighted Return
+Drawdown quan trọng vì ảnh hưởng tâm lý, nhu cầu thanh khoản và khả năng phục hồi kép.
 
-**TWR** loại bớt ảnh hưởng timing của deposits/withdrawals và phù hợp đánh giá manager/strategy. **MWR/IRR** phản ánh trải nghiệm tiền thật vì cash flow timing matter.
+```text
+Mất 20% → cần +25%
+Mất 50% → cần +100%
+```
 
-Một investor có thể dùng fund tốt nhưng personal MWR thấp nếu nạp nhiều tiền đúng peak.
+## 7. Thời gian phục hồi
 
-## 7. Volatility
+Hai chiến lược có cùng mức suy giảm tối đa nhưng thời gian phục hồi rất khác nhau. Danh mục giảm 20% và hồi trong ba tháng khác đáng kể danh mục giảm 20% rồi mất năm năm mới quay lại đỉnh.
 
-Volatility thường là standard deviation của returns. Nó đo dispersion quanh mean, không phải probability permanent loss.
+Vì vậy nên theo dõi cả độ sâu và thời gian nằm dưới đỉnh (time under water).
 
-Daily volatility có thể annualize gần đúng bằng nhân `√252` nếu assumptions tương đối ổn. Nhưng volatility clustering và non-normal returns làm simple scaling không hoàn hảo.
+## 8. Hiệp phương sai và tương quan
 
-## 8. Volatility clustering
+Hiệp phương sai cho biết hai tài sản cùng biến động thế nào. Tương quan chuẩn hóa về khoảng `-1` tới `+1`.
 
-Markets thường có quiet periods nối tiếp quiet periods và turbulent periods nối tiếp turbulent periods. Volatility không constant.
+```text
+Correlation(A,B) = Cov(A,B) / (σA × σB)
+```
 
-Đây là reason rolling volatility hoặc EWMA/GARCH-style thinking hữu ích hơn một long-run average duy nhất.
+Tương quan bình quân không đủ. Cần xem tương quan trượt theo thời gian, tương quan khi thị trường giảm và các giai đoạn khủng hoảng.
 
-## 9. Downside deviation
+## 9. Phương sai danh mục
 
-Downside deviation chỉ penalize returns dưới threshold, thường là zero hoặc minimum acceptable return.
+Với hai tài sản:
 
-Nó phản ánh investor intuition tốt hơn trong một số cases vì upside surprise không bị coi là risk giống downside.
+```text
+σp² = wA²σA² + wB²σB² + 2wAwBσAσBρAB
+```
 
-## 10. Drawdown
+Công thức cho thấy rủi ro danh mục không phải tổng cơ học rủi ro từng tài sản. Tương tác giữa các vị thế mới quyết định lợi ích đa dạng hóa.
 
-Drawdown đo decline từ prior peak:
+## 10. Beta
 
-`Drawdown = Current Value / Previous Peak - 1`
+Beta đo độ nhạy tương đối của tài sản so với benchmark:
 
-Maximum Drawdown là deepest observed decline. Nhưng historical max drawdown không phải worst possible future drawdown.
+```text
+Beta = Cov(Rasset, Rbenchmark) / Var(Rbenchmark)
+```
 
-## 11. Recovery math
+Beta > 1 nghĩa tài sản thường nhạy hơn thị trường trong dữ liệu quan sát, nhưng beta có thể thay đổi theo chế độ và không mô tả rủi ro nhảy giá hoặc thanh khoản.
 
-Loss và recovery không đối xứng:
+## 11. Alpha phụ thuộc benchmark
 
-`-10% → +11.1%`
+Alpha là phần lợi suất không được giải thích bởi benchmark hoặc mô hình nhân tố đã chọn.
 
-`-25% → +33.3%`
+Nếu benchmark không phù hợp, alpha mất ý nghĩa. Ví dụ một danh mục cổ phiếu vốn hóa nhỏ không nên được đánh giá như thể toàn bộ phần vượt trội so với chỉ số vốn hóa lớn là kỹ năng lựa chọn cổ phiếu.
 
-`-50% → +100%`
+## 12. Sai lệch bám chỉ số và Information Ratio
 
-`-80% → +400%`
+Sai lệch bám chỉ số (Tracking Error) đo biến động của lợi suất chủ động so với benchmark.
 
-Đây là lý do deep drawdown phá compounding và psychology.
+```text
+Information Ratio = Active Return / Tracking Error
+```
 
-## 12. Drawdown duration
+Một chiến lược có lợi suất vượt trội cao nhưng tracking error cực lớn có thể có chất lượng kém hơn một chiến lược vượt trội vừa phải nhưng ổn định.
 
-Không chỉ depth mà **time under water** cũng quan trọng. Strategy -15% nhưng recover sau 2 tháng khác strategy -15% nhưng mất 5 năm mới lập high mới.
+## 13. Active Share
 
-Investor horizon và patience phải match drawdown duration distribution.
+Active Share đo mức danh mục khác với benchmark về tỷ trọng chứng khoán. Nó không trực tiếp đo hiệu quả hay rủi ro.
 
-## 13. Covariance
+Active Share cao chỉ nói danh mục khác chỉ số nhiều. Muốn biết sự khác biệt đó có tạo giá trị hay không vẫn phải xem lợi suất, factor exposure và chi phí.
 
-Covariance đo hai return series có move cùng nhau không và kết hợp scale volatility. Nó là building block của portfolio variance.
+## 14. Sharpe Ratio
 
-Do units khó intuitive, correlation thường dễ interpret hơn.
+```text
+Sharpe = (Rp - Rf) / σp
+```
 
-## 14. Correlation
+Sharpe cho biết phần lợi suất vượt lãi suất phi rủi ro trên mỗi đơn vị volatility. Nó hữu ích khi phân phối tương đối cân đối, nhưng có thể đánh giá cao chiến lược có đuôi lỗ lớn hoặc giá ít được cập nhật.
 
-Correlation chuẩn hóa covariance vào range -1 tới +1. Nhưng correlation gần zero không nghĩa assets independent; nonlinear/tail dependence vẫn có thể tồn tại.
+## 15. Sortino và Calmar
 
-Correlation còn state-dependent, thường tăng giữa risky assets khi crisis.
+Sortino dùng độ lệch giảm giá thay vì tổng volatility.
 
-## 15. Portfolio variance
+Calmar thường so CAGR với Maximum Drawdown.
 
-Với hai assets:
+Hai chỉ số này gần trực giác của nhà đầu tư hơn trong một số trường hợp, nhưng vẫn không thay thế kiểm thử thanh khoản và đuôi phân phối.
 
-`σp² = wA²σA² + wB²σB² + 2wAwBσAσBρAB`
+## 16. Độ lệch và độ nhọn
 
-Term correlation giải thích diversification. Asset volatility cao vẫn có thể giảm portfolio risk nếu correlation sufficiently low.
+Độ lệch (skewness) cho biết phân phối nghiêng về phía nào. Độ nhọn (kurtosis) giúp nhận diện mức độ đuôi dày.
 
-## 16. Marginal Contribution to Risk
+Một chiến lược bán quyền chọn có thể có skew âm: nhiều khoản lời nhỏ và một số khoản lỗ lớn. Sharpe cao trong giai đoạn bình thường có thể che rủi ro này.
 
-**MCTR** hỏi: tăng weight asset thêm một lượng nhỏ sẽ làm total portfolio risk thay đổi bao nhiêu?
+## 17. VaR
 
-Nó hữu ích hơn nhìn standalone volatility khi portfolio đã có nhiều correlated holdings.
+Giá trị chịu rủi ro (Value at Risk, VaR) trả lời câu hỏi dạng: “với mức tin cậy 95% trong một ngày, ngưỡng lỗ ước tính là bao nhiêu?”.
 
-## 17. Component Risk Contribution
+VaR không phải mức lỗ tối đa. 5% trường hợp ngoài ngưỡng có thể rất xấu.
 
-Component contribution thường kết hợp weight với marginal risk. Tổng contributions cộng lại total portfolio volatility theo một số formulations.
+Các cách ước lượng gồm lịch sử, tham số và mô phỏng Monte Carlo; mỗi cách có giả định riêng.
 
-Điều này giúp biết 10% thematic allocation có đang đóng góp 30% risk hay không.
+## 18. Expected Shortfall
 
-## 18. Concentration metrics
+Expected Shortfall tính tổn thất trung bình trong các trường hợp đã vượt VaR. Nó cung cấp thêm thông tin về phần đuôi nhưng vẫn phụ thuộc dữ liệu và mô hình.
 
-Weight lớn nhất là simplest concentration metric. Có thể thêm **Herfindahl-Hirschman Index (HHI)**:
+Nếu dữ liệu chưa từng có một loại cú sốc nào, mô hình không tự biết cú sốc đó sẽ xảy ra.
 
-`HHI = Σ wi²`
+## 19. Rủi ro thanh khoản
 
-HHI cao nghĩa capital concentrated. Nhưng HHI không capture correlation/factor overlap, nên chỉ là first layer.
+Rủi ro thanh khoản gồm spread mở rộng, độ sâu giảm, tác động thị trường và khả năng không thể thoát đúng quy mô mong muốn.
 
-## 19. Effective number of positions
+Một cách thực tế là so vị thế với giá trị giao dịch bình quân và ước lượng số ngày cần để giảm vị thế trong điều kiện bình thường lẫn căng thẳng.
 
-Một intuition từ HHI là `1/HHI`. Equal-weight 10 positions cho effective number gần 10; concentrated portfolio thấp hơn.
+## 20. Rủi ro nhảy giá
 
-Tuy nhiên factor concentration có thể làm effective economic diversification thấp hơn nhiều.
+Rủi ro nhảy giá (gap risk) xuất hiện khi giá vượt qua mức stop mà không giao dịch ở các mức trung gian.
 
-## 20. Beta
+Nó quan trọng với earnings, dữ liệu vĩ mô, sự kiện địa chính trị, cổ phiếu ít thanh khoản và sản phẩm có giới hạn giá.
 
-Beta gần bằng:
+Stop-loss không loại bỏ gap risk.
 
-`β = Cov(asset, market) / Var(market)`
+## 21. Rủi ro đòn bẩy
 
-Beta >1 nghĩa historical sensitivity với benchmark cao hơn. Nhưng beta phụ thuộc sample, benchmark và regime.
+Đòn bẩy làm tổn thất thị trường trở thành rủi ro tồn tại của tài khoản thông qua margin call và thanh lý.
 
-## 21. Alpha
+Nên kiểm thử đồng thời:
 
-Trong simple CAPM framing, alpha là return unexplained by market beta. Nhưng practical alpha attribution cần account for sector, size, value, momentum, quality và currency factors.
+```text
+P/L trong kịch bản xấu
+Yêu cầu ký quỹ sau khi biến động tăng
+Thanh khoản tài sản bảo đảm
+Khả năng bổ sung tiền
+```
 
-Nếu benchmark miss relevant factors, “alpha” có thể chỉ là hidden exposure.
+## 22. Rủi ro tập trung bằng HHI
 
-## 22. R-squared
+Có thể dùng chỉ số Herfindahl–Hirschman (HHI) trên tỷ trọng vị thế như một thước đo đơn giản:
 
-R² cho biết proportion of return variation được regression benchmark/factors giải thích.
+```text
+HHI = Σ wi²
+```
 
-Low R² làm beta/alpha estimates less informative vì model explain little of asset behavior.
+HHI càng cao thì mức tập trung vốn càng lớn. Tuy nhiên nó không nhìn thấy hai mã khác nhau cùng mang một nhân tố.
 
-## 23. Multi-factor exposure
+## 23. Số vị thế hiệu dụng
 
-Portfolio equity returns có thể regress lên market, size, value, momentum hoặc quality factors. Bond portfolios thêm duration/credit factors.
+Một trực giác từ HHI:
 
-Factor decomposition giúp nhìn through ticker wrappers và detect duplicated bets.
+```text
+Effective Number of Positions ≈ 1 / HHI
+```
 
-## 24. Tracking Error
+Danh mục có 20 mã nhưng một mã chiếm 50% sẽ có số vị thế hiệu dụng thấp hơn nhiều so với con số 20.
 
-Tracking error là standard deviation của active return `Portfolio - Benchmark`.
+## 24. Đóng góp rủi ro cận biên
 
-High TE nghĩa result có thể lệch benchmark nhiều, không tự động good/bad. Nó phải phù hợp mandate.
+Đóng góp rủi ro cận biên (Marginal Contribution to Risk, MCTR) hỏi tổng rủi ro danh mục thay đổi bao nhiêu nếu tăng nhẹ tỷ trọng một tài sản.
 
-## 25. Information Ratio
+Đóng góp rủi ro thành phần (Component Risk Contribution) kết hợp MCTR với tỷ trọng để phân rã tổng rủi ro thành từng vị thế.
 
-`Information Ratio = Active Return / Tracking Error`
+Đây là cách phát hiện một vị thế vốn nhỏ nhưng đang chi phối rủi ro.
 
-IR đo efficiency của active risk. Một manager outperform 2% với tiny tracking error khác manager outperform 2% nhưng huge deviations.
+## 25. Mức phơi nhiễm nhân tố
 
-## 26. Active Share
+Rủi ro nên được phân rã theo các nhân tố như:
 
-Active Share đo holding weights khác benchmark đến đâu. Nó không capture derivatives perfectly và không nói active bets có skill.
+```text
+Beta cổ phiếu
+Duration
+Chênh lệch tín dụng
+USD / KRW / VND
+Hàng hóa
+Giá trị / Tăng trưởng
+Động lượng
+Thanh khoản
+```
 
-Use Active Share cùng tracking error để hiểu nature of active management.
+Nhiều mã chứng khoán có thể cùng chịu một nhân tố dù thuộc các quỹ khác nhau.
 
-## 27. Sharpe Ratio
+## 26. Biên hiệu quả và giới hạn của tối ưu hóa
 
-`Sharpe = (Portfolio Return - Risk-free Rate) / Volatility`
+Biên hiệu quả (efficient frontier) mô tả các tổ hợp có lợi suất kỳ vọng cao nhất cho một mức rủi ro nhất định theo giả định của mô hình.
 
-Sharpe hữu ích để compare risk-adjusted returns nhưng penalize upside/downside equally và dễ bị fooled bởi negative-skew strategies.
+Nhưng đầu vào lợi suất kỳ vọng, volatility và tương quan đều có sai số. Tối ưu hóa có thể phóng đại sai số nhỏ thành tỷ trọng cực đoan.
 
-## 28. Sortino Ratio
+Vì vậy kết quả tối ưu phải được xem như công cụ hỗ trợ, không phải chân lý.
 
-`Sortino = Excess Return / Downside Deviation`
+## 27. Co rút ước lượng và tối ưu hóa bền vững
 
-Sortino useful khi investor chỉ care downside variability. Nhưng threshold choice ảnh hưởng result.
+Các kỹ thuật co rút (shrinkage) kéo ước lượng cực đoan về mức ổn định hơn. Tối ưu hóa bền vững (robust optimization) đặt giới hạn hoặc khoảng bất định để tránh danh mục quá nhạy với một con số đầu vào.
 
-## 29. Calmar Ratio
+Trong thực tế, các ràng buộc đơn giản như tỷ trọng tối đa và ngân sách rủi ro thường giúp kết quả ổn định hơn.
 
-`Calmar = CAGR / Max Drawdown`
+## 28. Kiểm thử căng thẳng theo lịch sử
 
-Calmar intuitive cho strategies nơi drawdown là practical constraint. Nhưng max drawdown is sample-specific and unstable.
+Có thể áp lại các giai đoạn như khủng hoảng ngân hàng, cú sốc lạm phát, bán tháo thanh khoản hoặc cú tăng USD.
 
-## 30. Omega Ratio
+Nhưng lịch sử không lặp chính xác. Mục tiêu là tìm độ nhạy chứ không giả định tương lai sẽ sao chép quá khứ.
 
-Omega so probability-weighted gains above threshold với losses below threshold. Nó capture distribution beyond mean/variance nhưng less intuitive.
+## 29. Kịch bản giả định
 
-Không cần dùng mọi metric; mục tiêu là hiểu distribution shape.
+Kịch bản giả định cho phép kết hợp nhiều biến:
 
-## 31. Skewness
+```text
+Cổ phiếu -20%
+Lợi suất 10Y +80bp
+Credit spread +150bp
+USD +10%
+Dầu +25%
+Thanh khoản giảm một nửa
+```
 
-Positive skew: many small losses, occasional big wins. Negative skew: many small wins, occasional big crash.
+Đây thường là cách tốt hơn để kiểm tra các mối phụ thuộc mà dữ liệu bình thường không cho thấy.
 
-Short-option/carry strategies thường negative skew. Trend following có thể more positive skew.
+## 30. Kiểm thử căng thẳng ngược
 
-## 32. Kurtosis và fat tails
+Kiểm thử ngược (reverse stress test) bắt đầu từ thất bại cần tránh:
 
-Financial returns often show more extreme observations than normal distribution. Normal-model probability can underestimate crises.
+> Điều gì phải xảy ra để danh mục buộc phải bán tài sản, vi phạm ký quỹ hoặc không đáp ứng được nghĩa vụ?
 
-Stress tests và Expected Shortfall vì vậy quan trọng.
+Sau đó truy ngược về các cú sốc có thể tạo trạng thái đó.
 
-## 33. Value at Risk
+## 31. Quy tắc quyết định thay vì dự báo điểm
 
-VaR estimate loss threshold tại confidence level/horizon. Ví dụ one-day 95% VaR 2% nghĩa model estimate 95% days loss không vượt 2%.
+Thay vì dự báo chính xác “S&P sẽ tăng 8%”, có thể dùng quy tắc dạng:
 
-VaR không nói tail beyond threshold và phụ thuộc distribution assumptions.
+```text
+Nếu valuation vượt ngưỡng + earnings revisions xấu → giảm rủi ro vệ tinh
+Nếu thanh khoản cá nhân dưới ngưỡng → dừng tăng tài sản rủi ro
+Nếu một nhân tố vượt ngân sách rủi ro → tái cân bằng
+Nếu thesis bị invalidation → đóng vị thế dù giá chưa giảm
+```
 
-## 34. Historical, parametric và Monte Carlo VaR
+Quy tắc giúp giảm phụ thuộc vào dự báo điểm và cảm xúc.
 
-Historical VaR dùng empirical past moves. Parametric VaR assume distribution/model. Monte Carlo VaR simulate many scenarios.
+## 32. Tư duy xác suất và tỷ lệ cơ sở
 
-Mỗi method có model risk khác. Không method nào “truth”.
+Mọi dự báo nên được đặt cạnh tỷ lệ cơ sở (base rate). Nếu một loại doanh nghiệp có lịch sử thất bại cao, luận điểm “lần này khác” cần bằng chứng mạnh hơn.
 
-## 35. Expected Shortfall
+Cập nhật xác suất khi có dữ liệu mới tốt hơn việc chuyển từ chắc chắn “bull” sang chắc chắn “bear”.
 
-**Expected Shortfall (ES/CVaR)** đo average loss conditional on being beyond VaR threshold.
+## 33. Bảng theo dõi rủi ro danh mục
 
-Nó better captures tail severity nhưng vẫn dependent on model/data.
+Một bảng tối thiểu có thể gồm:
 
-## 36. Liquidity-adjusted risk
+```text
+Tỷ trọng
+Đóng góp volatility
+Beta
+Duration / DV01 nếu có
+FX exposure
+Credit exposure
+Thanh khoản
+Maximum Drawdown lịch sử
+Kịch bản stress
+```
 
-A 5% modeled loss assumes you can exit near price. Illiquid asset may suffer additional spread/market impact.
+Mục tiêu là nhìn thấy rủi ro chung giữa các vị thế.
 
-Risk analytics nên include days-to-liquidate, ADV participation và stressed spreads for large positions.
+## 34. Mental model cuối cùng
 
-## 37. Gap risk
+```text
+Lợi suất → Phân phối → Tương quan → Nhân tố → Thanh khoản → Đòn bẩy
+→ Stress → Đóng góp rủi ro → Ngưỡng quyết định → Đánh giá lại
+```
 
-Stops không guarantee loss cap because market can gap through stop level. Overnight, earnings, geopolitical events và illiquid markets create gap risk.
-
-Scenario analysis must include discontinuous moves, not only smooth volatility.
-
-## 38. Leverage-adjusted risk
-
-Leverage scales notional and magnifies drawdown. Margin requirements can increase exactly when volatility rises.
-
-A leveraged portfolio needs buffer above minimum margin; otherwise analytics that ignore liquidation path are incomplete.
-
-## 39. Efficient Frontier
-
-Mean-variance optimization identifies portfolios efficient under assumed expected returns/covariance. Conceptually important, practically fragile.
-
-Expected returns are noisy; small input changes can create extreme weight changes.
-
-## 40. Minimum-variance portfolio
-
-Minimum variance avoids expected-return estimates and only uses covariance, reducing one source of error. But covariance itself is unstable and may overweight low-vol assets for structural reasons.
-
-Constraints are necessary.
-
-## 41. Maximum Sharpe portfolio
-
-The tangency portfolio maximizes expected excess return per volatility under model assumptions. In practice output is highly sensitive to estimated returns.
-
-Treat as analytical reference, not automatic allocation.
-
-## 42. Shrinkage
-
-**Shrinkage** blends noisy covariance/return estimates toward more stable target. It reduces estimation error.
-
-You do not need implement advanced math to learn lesson: extreme estimates deserve skepticism.
-
-## 43. Robust optimization
-
-Robust portfolio construction uses weight bounds, turnover limits, uncertainty ranges and simpler priors to avoid optimizer extremes.
-
-The best mathematical optimum on estimated inputs may be worse than a slightly suboptimal but robust allocation.
-
-## 44. Scenario analysis
-
-Scenarios specify coherent shocks: growth recession, inflation resurgence, USD spike, oil supply shock, liquidity crisis.
-
-Map shock → rates/FX/spreads → assets. This preserves economic causality better than arbitrary percentage changes alone.
-
-## 45. Historical stress tests
-
-Replaying 2008, 2020 or a rate shock can reveal sensitivity. But portfolio composition and market structure today differ, so historical replay is not forecast.
-
-Use history as mechanism library.
-
-## 46. Hypothetical stress tests
-
-Create shocks not yet seen together, e.g. stocks -25%, long yields +150 bps, KRW +10% versus USD and credit spreads +300 bps.
-
-The goal is survival assessment, not probability prediction.
-
-## 47. Sensitivity analysis
-
-Sensitivity isolates one variable: what if rates +100 bps, USD/KRW -5%, earnings -15%?
-
-It helps identify dominant drivers before complex scenario combinations.
-
-## 48. Rolling analytics
-
-Use rolling 3m/12m volatility, beta, correlation or Sharpe to see stability. Structural shifts often appear as metric drift.
-
-But rolling metrics are backward-looking and can react late.
-
-## 49. Downside capture và upside capture
-
-Capture ratios compare portfolio performance in benchmark down/up periods. They help understand asymmetric behavior.
-
-A defensive strategy may underperform bull markets but protect more in down markets.
-
-## 50. Breadth and contribution analysis
-
-Portfolio return dominated by one position is less robust than return spread across holdings. Contribution-to-return reports help detect hidden dependency.
-
-Risk contribution and return contribution should be viewed together.
-
-## 51. Forecast error as a risk metric
-
-If thesis depends on revenue/margin forecasts, track forecast error over time. Large systematic optimism is a model/process risk.
-
-Investor calibration belongs in portfolio analytics too.
-
-## 52. Decision thresholds
-
-Analytics become actionable through thresholds: concentration cap, drawdown review level, rebalance band, liquidity minimum, max currency mismatch or leverage cap.
-
-Thresholds should be set ex ante, not after loss.
-
-## 53. Bayesian updating intuition
-
-New information should update belief, not flip thesis from 0 to 100. Start with prior probability and revise based on evidence strength.
-
-This mindset reduces overreaction to single data points.
-
-## 54. Base-rate thinking
-
-Before forecasting a rare event, ask historical/base frequency. Narrative-specific evidence should be weighed against base rates.
-
-This guards against vivid-story bias.
-
-## 55. Dashboard design
-
-A useful dashboard should display only metrics linked to decisions: allocation, contribution, drawdown, liquidity, currency, factor exposure, realized volatility and thesis flags.
-
-More charts do not necessarily improve decisions.
-
-## 56. Portfolio review
-
-A review should answer: what drove return, what drove risk, where concentration changed, what assumptions changed, and which action—if any—is justified.
-
-If analytics cannot answer those questions, redesign analytics rather than add more metrics.
-
-## 57. Kết luận
-
-Risk measurement is model-assisted judgment, not truth extraction. Every metric compresses reality and carries assumptions.
-
-The professional habit is to combine quantitative measures with economic mechanism, liquidity, scenario analysis and predefined decision rules. The objective is not a perfect risk number; it is fewer preventable mistakes.
+Định lượng không loại bỏ bất định. Nó giúp biến câu “tôi thấy danh mục có vẻ rủi ro” thành các giả định và ngưỡng có thể kiểm tra.
