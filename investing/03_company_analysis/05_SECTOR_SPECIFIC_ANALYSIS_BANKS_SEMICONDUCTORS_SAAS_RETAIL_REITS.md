@@ -1,435 +1,813 @@
-# 05 — Phân tích doanh nghiệp theo ngành: Banks, Semiconductors, SaaS, Retail, REITs và các sector quan trọng
+# Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng
 
-Một trong những lỗi phổ biến nhất khi học phân tích doanh nghiệp là cố dùng cùng một bộ ratio cho mọi ngành. P/E, debt ratio hay gross margin có ý nghĩa rất khác giữa ngân hàng, semiconductor, SaaS, retailer, industrial company và REIT. Tài liệu này giải thích cách thay framework khi **economic engine** của ngành thay đổi.
+> Một lỗi phổ biến là dùng cùng một bộ chỉ số cho mọi doanh nghiệp. P/E, tỷ lệ nợ hay biên gộp có ý nghĩa rất khác giữa ngân hàng, bán dẫn, phần mềm, bán lẻ, hàng không hay REIT. Chương này tập trung vào **động cơ kinh tế của từng ngành (economic engine)** để chọn đúng KPI và đúng phương pháp định giá.
 
-Mục tiêu không phải ghi nhớ thật nhiều KPI. Mục tiêu là hiểu KPI nào là **driver**, KPI nào chỉ là **consequence**, và vì sao cùng một thay đổi macro có thể truyền vào earnings khác nhau ở từng sector.
+## 1. Vì sao phải phân tích theo ngành
 
-## 1. Vì sao sector-specific analysis cần thiết
+Mỗi ngành tạo lợi nhuận theo một cơ chế khác nhau.
 
-Mỗi ngành kiếm tiền theo một cơ chế khác nhau. Bank kiếm tiền từ spread giữa earning assets và funding, đồng thời chịu credit risk. Semiconductor phụ thuộc pricing, utilization, inventory và capex cycle. SaaS có recurring revenue nhưng customer acquisition và retention quyết định economics. Retail phụ thuộc traffic, basket size, inventory turns và markdown. REIT phụ thuộc NOI, occupancy, cap rates và refinancing.
+```text
+Ngân hàng:
+nguồn vốn → tài sản sinh lãi → NIM → credit cost
 
-Ratio chỉ có ý nghĩa khi được đặt trong business model. Một gross margin 20% có thể rất tốt với distributor nhưng cực thấp với software company. Debt/Equity 8x có thể bình thường với bank nhưng nguy hiểm với industrial company.
+Bán dẫn:
+cầu → tồn kho → công suất → ASP → utilization → margin
 
-## 2. Framework chung trước khi đi vào từng ngành
+SaaS:
+khách hàng mới → retention → expansion → ARR → margin
 
-Với bất kỳ sector nào, hãy xác định năm lớp: demand driver, supply/capacity, pricing mechanism, cost structure và capital intensity. Sau đó mới chọn KPI.
+Bán lẻ:
+traffic → ticket → inventory → markdown → store economics
 
-Hãy hỏi thêm cycle dài bao lâu, lead time tạo supply mới, customer concentration, regulatory constraint và variable vs fixed cost. Những yếu tố này quyết định operating leverage và valuation sensitivity.
+REIT:
+occupancy → rent → NOI → cap rate → refinancing
+```
 
-# Phần I — Banks
+Một chỉ số chỉ có ý nghĩa khi được đặt vào đúng cơ chế kinh tế.
 
-## 3. Balance sheet của ngân hàng khác doanh nghiệp thông thường
+## 2. Khung chung trước khi đi vào từng ngành
 
-Với manufacturing company, debt thường là financing. Với bank, deposits và borrowings là raw material dùng để tạo earning assets như loans và securities.
+Với bất kỳ ngành nào, trước tiên hãy xác định:
 
-Do đó debt/equity cao không tự động nghĩa bank yếu. Cần nhìn capital adequacy, asset quality, funding stability và liquidity.
+```text
+Nhu cầu đến từ đâu?
+Nguồn cung mới được tạo nhanh hay chậm?
+Giá bán được quyết định như thế nào?
+Chi phí cố định hay biến đổi?
+Ngành cần bao nhiêu vốn?
+Chu kỳ kéo dài bao lâu?
+Ai có quyền thương lượng?
+Rủi ro pháp lý ở đâu?
+```
 
-## 4. Net Interest Income và NIM
+Sau đó mới chọn KPI và bội số.
 
-Net Interest Income gần bằng interest income trừ interest expense. **Net Interest Margin (NIM)** chuẩn hóa chênh lệch đó theo earning assets.
+# Phần I — Ngân hàng
 
-NIM tăng có thể do lending yields reprice nhanh hơn deposit costs. Nhưng nếu deposit competition mạnh hoặc funding chuyển từ CASA sang term deposits, NIM có thể co lại.
+## 3. Bảng cân đối ngân hàng khác doanh nghiệp công nghiệp
 
-## 5. Loan growth không luôn tốt
+Với doanh nghiệp sản xuất, nợ chủ yếu là nguồn tài trợ. Với ngân hàng, tiền gửi và khoản vay là “nguyên liệu đầu vào” để tạo tài sản sinh lãi như cho vay và chứng khoán.
 
-Loan growth giúp tăng earning assets, nhưng tốc độ quá cao có thể báo underwriting standards yếu hoặc concentration risk. Vì credit losses thường xuất hiện muộn, high growth hôm nay có thể tạo NPL tương lai.
+Do đó tỷ lệ Debt/Equity cao không tự động nghĩa ngân hàng yếu. Cần nhìn:
 
-Hãy xem growth theo segment: mortgages, SME, corporate, consumer unsecured, property developers. Mỗi segment có loss profile khác nhau.
+- vốn an toàn;
+- chất lượng tài sản;
+- chất lượng nguồn vốn;
+- thanh khoản;
+- tập trung tín dụng.
 
-## 6. Asset quality
+## 4. Thu nhập lãi thuần và NIM
 
-NPL ratio là lagging indicator. Early signals có thể đến từ Stage 2/Group-2 loans, delinquency, restructuring, watchlist exposures và collateral values.
+Thu nhập lãi thuần gần bằng:
 
-Provision coverage ratio cho biết buffers so với recognized bad loans. Coverage cao hữu ích nhưng accounting policy và collateral recovery assumptions vẫn cần đọc.
+```text
+Interest Income - Interest Expense
+```
+
+Biên lãi ròng (Net Interest Margin, NIM) chuẩn hóa chênh lệch đó trên tài sản sinh lãi.
+
+NIM tăng khi lợi suất tài sản tăng nhanh hơn chi phí tiền gửi. Nhưng nếu cạnh tranh tiền gửi mạnh hoặc khách hàng chuyển từ CASA sang tiền gửi kỳ hạn, NIM có thể giảm.
+
+## 5. Tăng trưởng tín dụng không luôn tốt
+
+Cho vay tăng giúp tăng tài sản sinh lãi nhưng tăng quá nhanh có thể đi cùng tiêu chuẩn tín dụng thấp.
+
+Rủi ro tín dụng thường xuất hiện trễ. Vì vậy cần xem tăng trưởng theo phân khúc:
+
+- mortgage;
+- SME;
+- doanh nghiệp lớn;
+- tiêu dùng không bảo đảm;
+- bất động sản.
+
+## 6. Chất lượng tài sản
+
+NPL thường là chỉ báo trễ. Tín hiệu sớm hơn có thể gồm:
+
+- Group-2/Stage 2;
+- khoản tái cơ cấu;
+- nợ quá hạn;
+- watchlist;
+- giá trị tài sản bảo đảm.
+
+Tỷ lệ bao phủ dự phòng (provision coverage) giúp đánh giá buffer nhưng còn phụ thuộc chất lượng tài sản thế chấp và chính sách ghi nhận.
 
 ## 7. Credit cost
 
-**Credit cost** thường là provision expense trên average loans. Trong recession, credit cost có thể tăng nhanh và xóa lợi ích của NIM expansion.
+Chi phí tín dụng (credit cost) thường được nhìn bằng dự phòng trên dư nợ bình quân.
 
-Bank earnings phải được nhìn qua cycle. Low provisions trong boom không có nghĩa normalized credit cost luôn thấp.
+Trong suy thoái, credit cost có thể tăng nhanh và xóa phần lợi ích từ NIM cao.
 
-## 8. CASA và funding quality
+Do đó lợi nhuận ngân hàng phải được chuẩn hóa theo chu kỳ.
 
-CASA là current accounts và savings accounts có cost thấp. CASA cao hỗ trợ margin nhưng deposit stickiness mới là vấn đề cốt lõi.
+## 8. CASA và chất lượng funding
 
-Một bank có depositor base concentrated hoặc phụ thuộc wholesale funding có liquidity profile khác bank retail deposits diversified.
+CASA là tiền gửi thanh toán và tiết kiệm chi phí thấp. CASA cao thường hỗ trợ NIM nhưng điều quan trọng hơn là độ ổn định của người gửi tiền.
 
-## 9. Capital adequacy và ROE
+Ngân hàng phụ thuộc vài khách hàng lớn hoặc nguồn vốn wholesale có rủi ro thanh khoản khác ngân hàng có tiền gửi bán lẻ phân tán.
 
-CET1, Tier 1 và Total Capital phản ánh loss-absorbing buffer. ROE cao nhờ leverage lớn không giống ROE cao từ better operating economics.
+## 9. Vốn và ROE
 
-Investor nên tách ROE thành margin, asset turnover/risk, leverage và credit cost để hiểu quality.
+CET1, Tier 1 và Total Capital phản ánh khả năng hấp thụ lỗ.
 
-## 10. Fee income
+ROE cao do đòn bẩy lớn khác hoàn toàn ROE cao nhờ hiệu quả vận hành.
 
-Banks còn kiếm card fees, wealth management, insurance distribution, payments, FX và investment banking. Fee income thường ít capital-intensive hơn lending nhưng có cyclicality riêng.
+Cần tách ROE theo:
 
-Nếu fee growth phụ thuộc bull market hoặc property transactions, sustainability thấp hơn recurring transaction fees.
+```text
+margin
+asset quality
+leverage
+fee income
+credit cost
+```
 
-## 11. Bank valuation
+## 10. Thu nhập phí
 
-P/B thường hữu ích vì book equity là regulatory/economic capital base. Nhưng P/B phải gắn với sustainable ROE và cost of equity.
+Ngân hàng còn có thể kiếm từ:
 
-Một simplified intuition là bank tạo value khi ROE vượt cost of equity bền vững. P/B thấp có thể hợp lý nếu ROE thấp hoặc asset quality xấu.
+- thẻ;
+- quản lý tài sản;
+- bảo hiểm;
+- thanh toán;
+- FX;
+- investment banking.
 
-# Phần II — Insurance
+Thu nhập phí từ giao dịch lặp lại thường bền hơn thu nhập phụ thuộc thị trường tài sản đang nóng.
 
-## 12. Insurance economics
+## 11. Định giá ngân hàng
 
-Insurer nhận premium hôm nay và trả claims sau. Khoảng thời gian giữa hai điểm tạo **float**, có thể được đầu tư.
+P/B thường phù hợp vì book equity liên quan trực tiếp tới vốn kinh tế và vốn pháp định.
 
-Core question là underwriting có profitable trước investment return không. Nếu insurer chỉ kiếm tiền nhờ investment portfolio bù underwriting loss, quality khác hẳn.
+Trực giác chính:
+
+```text
+ROE bền vững > Cost of Equity
+→ P/B hợp lý cao hơn
+```
+
+P/B thấp có thể hợp lý nếu chất lượng tài sản kém hoặc ROE thấp.
+
+# Phần II — Bảo hiểm
+
+## 12. Cơ chế kinh tế của bảo hiểm
+
+Công ty bảo hiểm nhận phí trước và chi trả bồi thường sau. Khoảng tiền giữ trong thời gian đó gọi là **float** và có thể được đầu tư.
+
+Câu hỏi quan trọng:
+
+```text
+Hoạt động underwriting có lời trước lợi nhuận đầu tư không?
+```
+
+Nếu doanh nghiệp chỉ có lời nhờ danh mục đầu tư bù lỗ bảo hiểm, chất lượng khác hẳn doanh nghiệp underwriting tốt.
 
 ## 13. Combined ratio
 
-Với property & casualty insurance, **combined ratio = loss ratio + expense ratio**. Dưới 100% thường nghĩa underwriting profitable.
+Với bảo hiểm phi nhân thọ:
 
-Nhưng reserve releases có thể làm current ratio đẹp. Cần xem reserve development và catastrophe exposure.
+```text
+Combined Ratio
+= Loss Ratio + Expense Ratio
+```
 
-## 14. Life insurance
+Dưới 100% thường nghĩa underwriting có lãi.
 
-Life insurer nhạy với asset-liability matching, lapse behavior, guaranteed rates và long-term yields. Duration mismatch có thể tạo economic loss khi rates thay đổi mạnh.
+Tuy nhiên cần kiểm tra reserve release, catastrophe exposure và lịch sử phát triển dự phòng.
 
-Embedded guarantees và accounting rules làm analysis phức tạp hơn bank.
+## 14. Bảo hiểm nhân thọ
 
-# Phần III — Semiconductors
+Bảo hiểm nhân thọ nhạy với:
 
-## 15. Semiconductor là ngành capital-intensive và cyclical
+- duration tài sản và nghĩa vụ;
+- hành vi hủy hợp đồng;
+- mức lãi cam kết;
+- lợi suất dài hạn;
+- quy định vốn.
 
-Chip demand đến từ servers, smartphones, PCs, autos, industrial và AI infrastructure. Supply phản ứng chậm vì fabs tốn vốn và thời gian.
+Mismatch kỳ hạn có thể tạo lỗ kinh tế khi lãi suất thay đổi mạnh.
 
-Khi demand tăng trong lúc capacity thiếu, ASP và margins có thể tăng rất nhanh. Sau đó capex expansion tạo oversupply và earnings collapse.
+# Phần III — Bán dẫn
 
-## 16. Memory, foundry, fabless và equipment khác nhau
+## 15. Ngành thâm dụng vốn và có chu kỳ
 
-Memory gần commodity hơn với pricing cycle mạnh. Foundry phụ thuộc utilization, process node và yield. Fabless tập trung design, product differentiation và software ecosystem. Equipment companies phụ thuộc fab capex và technology transitions.
+Nhu cầu chip đến từ server, smartphone, PC, ô tô, công nghiệp và AI.
 
-Không nên dùng cùng multiple cho mọi nhóm semiconductor.
+Nguồn cung phản ứng chậm vì fab cần vốn lớn và thời gian dài.
 
-## 17. ASP, bit growth và mix
+Khi cầu tăng trong lúc công suất thiếu:
 
-Memory revenue có thể xem gần đúng:
+```text
+ASP ↑
+Utilization ↑
+Margin ↑ mạnh
+```
 
-`Revenue ≈ bit shipment × ASP`
+Nhưng capex cao sau đó có thể tạo dư cung.
 
-HBM, DDR, NAND và product mix ảnh hưởng margin khác nhau. Revenue growth do mix tốt thường quality khác growth chỉ do volume.
+## 16. Memory, foundry, fabless và equipment
 
-## 18. Utilization và operating leverage
+Các mô hình này khác nhau:
 
-Fab có fixed costs rất cao. Utilization tăng giúp absorption tốt hơn và margin bật mạnh. Khi utilization giảm, reverse operating leverage làm profit rơi nhanh hơn revenue.
+```text
+Memory:
+chu kỳ giá mạnh
 
-Đây là lý do earnings semiconductor có beta rất cao với cycle.
+Foundry:
+utilization + node + yield
 
-## 19. Inventory cycle
+Fabless:
+thiết kế + product differentiation + ecosystem
 
-Cần xem producer inventory, channel inventory và customer inventory. Inventory correction có thể bắt đầu trước khi end demand bottom.
+Equipment:
+capex của khách hàng + technology transition
+```
 
-Stock price thường lead reported earnings vì market price future cycle, không current quarter.
+Không nên dùng cùng bội số cho tất cả.
 
-## 20. Capex và supply discipline
+## 17. ASP, bit growth và cơ cấu sản phẩm
 
-Capex hôm nay là supply của tương lai. Nếu toàn ngành cùng tăng capex sau peak profitability, future oversupply risk tăng.
+Memory revenue gần đúng:
 
-Một company giữ supply discipline trong upcycle có thể bảo vệ pricing tốt hơn.
+```text
+Revenue ≈ Bit Shipment × ASP
+```
 
-## 21. Yield và process competitiveness
+HBM, DDR và NAND có biên lợi nhuận khác nhau. Doanh thu tăng nhờ mix tốt thường có chất lượng khác tăng chỉ nhờ sản lượng.
 
-Foundry và advanced memory economics phụ thuộc manufacturing yield. Yield thấp làm cost per good die tăng mạnh.
+## 18. Utilization và đòn bẩy hoạt động
 
-Process leadership không chỉ là node label; phải xem performance, power, yield, capacity và customer adoption.
+Fab có chi phí cố định cao. Khi utilization tăng, chi phí cố định được phân bổ lên nhiều sản phẩm hơn và margin có thể tăng nhanh hơn doanh thu.
 
-## 22. Semiconductor valuation
+Khi utilization giảm, hiệu ứng ngược lại rất mạnh.
 
-P/E tại peak earnings thường rẻ giả tạo. Mid-cycle earnings, normalized EBITDA, P/B và replacement economics có thể hữu ích hơn tùy company.
+## 19. Chu kỳ tồn kho
 
-Investor phải biết đang ở đâu trong inventory/pricing/capex cycle.
+Cần tách:
 
-# Phần IV — SaaS và Software
+- tồn kho producer;
+- channel inventory;
+- customer inventory.
 
-## 23. SaaS economics
+Điểm đảo chiều tồn kho có thể xuất hiện trước điểm đáy của lợi nhuận báo cáo.
 
-SaaS có recurring revenue và gross margin cao nhưng growth có thể cần sales & marketing lớn. Revenue growth một mình không đủ.
+## 20. Capex và kỷ luật nguồn cung
 
-Key question là mỗi dollar acquisition spend tạo bao nhiêu durable gross profit.
+Capex hôm nay là công suất tương lai.
+
+```text
+Capex toàn ngành ↑ mạnh
+→ Capacity tương lai ↑
+→ Rủi ro dư cung ↑
+→ ASP chịu áp lực
+```
+
+Kỷ luật nguồn cung là biến rất quan trọng trong memory cycle.
+
+## 21. Yield và năng lực công nghệ
+
+Yield thấp làm chi phí trên mỗi die tốt tăng mạnh.
+
+Không nên chỉ nhìn tên node. Cần nhìn:
+
+- hiệu suất;
+- điện năng;
+- yield;
+- công suất;
+- mức chấp nhận của khách hàng.
+
+## 22. Định giá bán dẫn
+
+P/E thường thấp nhất gần đỉnh lợi nhuận và cao nhất gần đáy lợi nhuận.
+
+Do đó nên kết hợp:
+
+- normalized earnings;
+- mid-cycle margin;
+- P/B;
+- replacement economics;
+- revisions;
+- vị trí chu kỳ.
+
+# Phần IV — SaaS và phần mềm
+
+## 23. Cơ chế kinh tế SaaS
+
+SaaS có doanh thu lặp lại và biên gộp cao nhưng có thể cần chi phí bán hàng lớn để tăng trưởng.
+
+Câu hỏi chính:
+
+```text
+Mỗi đồng chi để có khách hàng mới
+tạo ra bao nhiêu gross profit bền vững?
+```
 
 ## 24. ARR, bookings và RPO
 
-ARR là annualized recurring revenue run-rate. Bookings đo contracted sales trong period. Remaining Performance Obligations phản ánh contracted revenue chưa recognized.
+- ARR: doanh thu lặp lại quy đổi năm;
+- bookings: giá trị hợp đồng ký trong kỳ;
+- RPO: nghĩa vụ hợp đồng còn lại chưa ghi nhận doanh thu.
 
-Mỗi metric có timing khác nên cần reconciliation với reported revenue.
+Ba chỉ số có thời điểm ghi nhận khác nhau nên phải đối chiếu với doanh thu báo cáo.
 
 ## 25. NRR và churn
 
-**Net Revenue Retention (NRR)** đo existing customer cohort sau expansion, contraction và churn. NRR >100% nghĩa base khách hàng hiện tại tự tạo growth.
+Net Revenue Retention (NRR) đo doanh thu từ cùng nhóm khách hàng sau expansion, contraction và churn.
 
-Logo churn và revenue churn phải tách vì mất nhiều small clients khác mất một enterprise account.
+```text
+NRR > 100%
+→ khách hàng hiện hữu tự tạo thêm tăng trưởng
+```
 
-## 26. CAC, LTV và payback
+Cần tách logo churn và revenue churn vì mất nhiều khách hàng nhỏ khác mất một khách hàng doanh nghiệp lớn.
 
-CAC đo chi phí acquire customer. LTV ước tính gross profit lifetime, nhưng rất nhạy churn assumptions.
+## 26. CAC, LTV và thời gian hoàn vốn
 
-CAC payback thường đáng tin hơn ratio LTV/CAC quá xa tương lai. Payback ngắn giúp growth self-funded hơn.
+CAC là chi phí có khách hàng mới. LTV ước tính lợi nhuận vòng đời nhưng rất nhạy với giả định churn.
 
-## 27. Sales efficiency
+CAC payback thường dễ kiểm chứng hơn một LTV quá xa tương lai.
 
-Magic Number hoặc incremental ARR per sales spend có thể giúp đánh giá go-to-market efficiency. Nếu growth chậm nhưng sales spend vẫn tăng nhanh, unit economics có thể deteriorate.
+## 27. Hiệu quả bán hàng
+
+Có thể theo dõi:
+
+- Magic Number;
+- ARR mới trên chi phí sales;
+- CAC payback;
+- sales efficiency.
+
+Nếu tăng trưởng chậm nhưng sales & marketing tiếp tục tăng nhanh, unit economics có thể đang xấu đi.
 
 ## 28. Rule of 40
 
-Rule of 40 là heuristic giữa growth và profitability, không phải valuation law. Quality của growth, retention, SBC và capital intensity vẫn quan trọng.
+Rule of 40 chỉ là heuristic giữa tăng trưởng và lợi nhuận.
 
-## 29. Stock-Based Compensation
+Nó không thay thế việc đánh giá:
 
-SBC là economic cost vì dilution shareholder ownership. FCF trước dilution có thể tạo illusion nếu share count tăng đều.
+- retention;
+- SBC;
+- FCF;
+- capital intensity;
+- durability của growth.
 
-Theo dõi diluted shares outstanding và SBC/revenue qua nhiều năm.
+## 29. SBC
 
-## 30. Software valuation
+SBC là chi phí kinh tế thông qua pha loãng.
 
-EV/Sales chỉ có ý nghĩa khi nối tới future margin và reinvestment. High multiple cần retention, TAM, margin expansion và durable moat đủ mạnh để justify.
+Nên theo dõi:
 
-Reverse DCF hữu ích hơn simple peer multiple khi expectations rất cao.
+```text
+SBC / Revenue
+Diluted Share Count
+Net Buyback
+```
 
-# Phần V — Internet Platforms và Marketplaces
+FCF đẹp nhưng số cổ phiếu tăng liên tục có thể làm giá trị trên mỗi cổ phiếu tăng chậm.
+
+## 30. Định giá phần mềm
+
+EV/Sales chỉ có ý nghĩa nếu nối được doanh thu hiện tại tới biên lợi nhuận và FCF tương lai.
+
+Reverse DCF thường hữu ích hơn peer multiple khi kỳ vọng thị trường rất cao.
+
+# Phần V — Nền tảng Internet và marketplace
 
 ## 31. Platform economics
 
-Marketplace hoặc platform kiếm tiền từ take rate, advertising, subscriptions hoặc payments. Network effects có thể mạnh nhưng không phải mọi platform đều winner-take-all.
+Nền tảng có thể kiếm tiền từ:
 
-Hãy nhìn Gross Merchandise Value, active users, engagement, take rate, contribution margin và customer acquisition cost.
+- take rate;
+- quảng cáo;
+- subscription;
+- payments.
 
-## 32. Take rate và monetization
+Network effect có thể mạnh nhưng không phải mọi nền tảng đều winner-take-all.
 
-Take rate tăng có thể boost revenue nhanh nhưng quá cao có thể làm sellers hoặc users multi-home sang platform khác.
+## 32. Take rate
 
-Pricing power của platform phải cân bằng ecosystem health.
+Take rate tăng giúp doanh thu tăng nhanh nhưng nếu quá cao có thể làm seller hoặc user chuyển sang đối thủ.
 
-## 33. Advertising businesses
+Khả năng tăng giá phải cân bằng với sức khỏe hệ sinh thái.
 
-Ad platforms phụ thuộc user attention, ad load, pricing, conversion measurement và advertiser ROI. Revenue growth có thể tách thành impressions × price per impression.
+## 33. Quảng cáo
 
-Privacy regulation hoặc tracking changes có thể thay unit economics nhanh.
+Doanh thu quảng cáo có thể tách:
 
-# Phần VI — Retail và Consumer
+```text
+Impressions × Price per Impression
+```
 
-## 34. Same-Store Sales
+Cần theo dõi attention, ad load, conversion, ROI cho advertiser và thay đổi quyền riêng tư.
 
-Same-store sales tách organic growth khỏi store expansion. Revenue tăng do mở thêm locations có economics khác growth từ traffic/ticket tại existing stores.
+# Phần VI — Bán lẻ và tiêu dùng
+
+## 34. Same-store sales
+
+Same-store sales giúp tách tăng trưởng cửa hàng hiện hữu khỏi tăng trưởng do mở thêm cửa hàng.
+
+Doanh thu tăng nhờ mở nhiều cửa hàng chỉ tạo giá trị khi cửa hàng mới có ROIC tốt.
 
 ## 35. Traffic, ticket và mix
 
-Same-store sales có thể tách gần đúng thành transaction/traffic growth và average ticket growth. Ticket tăng do inflation khác real volume growth.
+Có thể tách:
 
-Mix shift sang premium products có thể nâng both sales và gross margin.
+```text
+Same-store sales
+≈ Traffic Growth + Average Ticket Growth + Mix
+```
 
-## 36. Gross margin và markdown
+Ticket tăng do lạm phát khác tăng trưởng sản lượng thật.
 
-Retail gross margin chịu promotion, shrinkage, sourcing cost và markdown. Inventory dư buộc discount để clear stock, khiến margin giảm.
+## 36. Biên gộp và markdown
 
-Gross margin deterioration trước khi revenue giảm có thể là warning.
+Retail gross margin chịu ảnh hưởng:
+
+- promotion;
+- shrinkage;
+- sourcing cost;
+- markdown;
+- mix.
+
+Tồn kho dư thường dẫn tới giảm giá và margin thấp hơn.
 
 ## 37. Inventory turnover
 
-Inventory turns và days inventory cho biết merchandise velocity. Nhưng level phải đặt trong category context; grocery khác apparel.
+Inventory turns và DIO đo tốc độ hàng hóa di chuyển.
 
-Theo dõi inventory growth so với sales growth là signal quan trọng.
+Mức hợp lý phụ thuộc ngành hàng. Grocery khác apparel rất nhiều.
 
-## 38. Store economics
+Quan trọng là so tồn kho tăng với doanh thu tăng.
 
-New store ROI phụ thuộc revenue ramp, build-out cost, labor, rent và cannibalization. Store count growth chỉ tạo shareholder value nếu incremental ROIC tốt.
+## 38. Kinh tế cửa hàng
 
-## 39. Consumer staples vs discretionary
+Cửa hàng mới cần xem:
 
-Staples có demand ổn định hơn nhưng raw-material inflation và retailer bargaining power vẫn quan trọng. Discretionary nhạy disposable income, credit và confidence hơn.
+```text
+Doanh thu trưởng thành
+Chi phí mở cửa hàng
+Rent
+Labor
+Cannibalization
+Payback
+Incremental ROIC
+```
 
-Valuation premium của staples thường phản ánh stability, không phải absence of risk.
+Mở nhiều điểm bán không tự động tạo giá trị.
 
-# Phần VII — REITs và Real Estate
+## 39. Staples và discretionary
+
+Consumer staples ổn định hơn nhưng vẫn chịu raw-material inflation và bargaining power của retailer.
+
+Consumer discretionary nhạy hơn với thu nhập khả dụng, tín dụng và niềm tin tiêu dùng.
+
+# Phần VII — REIT và bất động sản
 
 ## 40. NOI, FFO và AFFO
 
-**Net Operating Income (NOI)** là property-level income trước financing. FFO điều chỉnh depreciation và property gains/losses. AFFO thường trừ recurring maintenance capex và lease adjustments để gần distributable cash flow hơn.
+NOI là thu nhập cấp tài sản trước chi phí tài trợ.
 
-## 41. Occupancy, rent growth và lease structure
+FFO điều chỉnh khấu hao và lãi/lỗ bán bất động sản. AFFO thường trừ maintenance capex và điều chỉnh thuê để gần dòng tiền phân phối hơn.
 
-Occupancy cao là tốt nhưng lease expiries, rent escalators và tenant credit quality cũng quan trọng.
+## 41. Occupancy và tăng giá thuê
 
-Office long leases, hotels daily reset và apartments annual reset có inflation sensitivity rất khác.
+Tỷ lệ lấp đầy cao chưa đủ. Cần xem:
+
+- lịch hết hạn hợp đồng;
+- rent escalator;
+- chất lượng tenant;
+- tenant concentration.
 
 ## 42. Cap rate
 
-`Cap Rate ≈ NOI / Property Value`
+```text
+Cap Rate ≈ NOI / Property Value
+```
 
-Cap rate tăng thường làm asset values giảm nếu NOI không đổi. Spread giữa cap rate và financing/risk-free rates là một valuation anchor quan trọng.
+Nếu NOI không đổi, cap rate tăng thường làm giá trị tài sản giảm.
+
+Spread giữa cap rate và lãi suất tài trợ là mốc quan trọng.
 
 ## 43. Development pipeline
 
-REIT/developer có thể tạo value qua development nếu yield-on-cost cao hơn market cap rate sau stabilization.
+Dự án mới tạo giá trị khi **yield on cost** cao hơn cap rate thị trường sau khi ổn định.
 
-Nhưng construction cost overruns, delays và leasing risk có thể phá economics.
+Nhưng cần tính:
 
-## 44. Debt và refinancing
+- chậm tiến độ;
+- vượt chi phí;
+- leasing risk;
+- funding cost.
 
-Debt maturity ladder, fixed/floating mix và secured/unsecured structure quyết định rate sensitivity. Refinancing wall trong high-rate regime có thể làm AFFO giảm mạnh.
+## 44. Nợ và tái cấp vốn
+
+Cần xem:
+
+- debt maturity ladder;
+- fixed/floating mix;
+- secured/unsecured;
+- interest coverage.
+
+Một refinancing wall trong môi trường lãi suất cao có thể làm AFFO giảm mạnh.
 
 ## 45. NAV
 
-NAV estimate market value of properties trừ net debt. Premium/discount to NAV phải được hiểu cùng management quality, growth pipeline và cost of capital.
+NAV là giá trị thị trường ước tính của tài sản trừ nợ ròng.
 
-# Phần VIII — Industrials, Construction và Capital Goods
+Premium/discount to NAV cần đọc cùng:
 
-## 46. Backlog và orders
+- management quality;
+- growth pipeline;
+- cost of capital;
+- thanh khoản tài sản.
 
-Industrial companies thường có order backlog. Backlog growth cho demand visibility nhưng cần xem cancellation terms và margin quality.
+# Phần VIII — Công nghiệp, xây dựng và capital goods
 
-Book-to-bill >1 có thể báo orders vượt revenue shipments, nhưng sector context quan trọng.
+## 46. Backlog và đơn hàng
 
-## 47. Operating leverage
+Backlog là lượng đơn đã ký nhưng chưa ghi nhận doanh thu.
 
-Factories và engineering organizations có fixed cost cao. Khi volume tăng, margins có thể expand nhanh; downturn làm reverse operating leverage.
+Backlog lớn chỉ tốt nếu:
 
-Investor cần tách price, volume, mix và productivity contributions.
+- khách hàng có khả năng thanh toán;
+- hợp đồng có margin tốt;
+- không có điều khoản hủy dễ dàng;
+- chi phí đầu vào được kiểm soát.
 
-## 48. Working capital
+## 47. Book-to-bill
 
-Large projects có receivables, contract assets, advances và inventory. Profit có thể tăng nhưng cash conversion yếu nếu milestones chậm.
+```text
+Book-to-Bill
+= New Orders / Revenue Recognized
+```
 
-Cash flow thường là key forensic metric với contractors.
+Trên 1 kéo dài có thể báo hiệu backlog tăng. Dưới 1 kéo dài có thể báo hiệu nhu cầu suy yếu.
 
-## 49. Cyclical valuation
+## 48. Biên lợi nhuận dự án
 
-P/E thấp tại peak order cycle có thể misleading. Use mid-cycle margins, backlog quality và replacement demand.
+Construction và engineering có rủi ro lớn từ:
 
-# Phần IX — Shipping, Airlines và Transportation
+- fixed-price contract;
+- cost overrun;
+- delay;
+- claim;
+- liquidated damages.
 
-## 50. Shipping economics
+Doanh thu tăng không có ý nghĩa nếu margin dự án xấu đi.
 
-Shipping là classic supply-cycle industry. Demand tăng theo trade, nhưng supply phụ thuộc fleet size và multi-year shipbuilding lead time.
+## 49. Vốn lưu động
 
-Freight rates có thể spike khi utilization gần full vì marginal capacity rất hạn chế.
+Dự án lớn có thể hút tiền qua:
 
-## 51. Orderbook-to-fleet
+- receivables;
+- contract assets;
+- inventory;
+- retention money.
 
-New vessel orderbook là key future supply signal. High current rates kích thích orders, tạo risk oversupply vài năm sau.
+CFO thường là chỉ báo quan trọng ngang lợi nhuận.
 
-## 52. Airlines
+# Phần IX — Vận tải biển và hàng không
 
-Airlines có high fixed costs, fuel sensitivity, cyclicality và capacity competition. Key metrics gồm load factor, RASK, CASK, yield và fuel cost.
+## 50. Shipping
 
-Revenue growth không đủ nếu unit costs tăng nhanh hơn.
+Shipping phụ thuộc:
 
-# Phần X — Energy, Oil & Gas và Refining
+```text
+Demand for ton-miles
+Fleet Supply
+Newbuild Orderbook
+Scrapping
+Freight Rate
+Fuel Cost
+```
 
-## 53. Upstream economics
+Giá cước cao kích thích đóng tàu mới, nhưng tàu cần nhiều năm để giao nên chu kỳ có độ trễ lớn.
 
-Oil & gas producer earnings phụ thuộc production × realized price trừ lifting cost, royalties, taxes và capex.
+## 51. Airlines
 
-Reserve life, decline rates và breakeven price quan trọng hơn current oil price một mình.
+Các KPI quan trọng:
 
-## 54. Refining
+- RASK;
+- CASK;
+- load factor;
+- yield;
+- fuel cost;
+- fleet lease;
+- net debt.
 
-Refiners không đơn giản long crude oil. Earnings phụ thuộc **crack spreads** giữa refined products và crude input, utilization và regional capacity.
+Doanh thu cao chưa chắc tạo tiền nếu fuel và lease cost tăng nhanh.
 
-Oil tăng có thể xấu nếu product prices không theo kịp feedstock cost.
+# Phần X — Dầu khí, refining và hóa dầu
 
-## 55. Midstream
+## 52. Upstream oil & gas
 
-Pipelines/storage có volume/contract economics ổn định hơn upstream nhưng vẫn chịu counterparty, regulatory và leverage risk.
+Cần theo dõi:
 
-# Phần XI — Utilities và Power
+- sản lượng;
+- reserve life;
+- lifting cost;
+- decline rate;
+- capex;
+- realized price;
+- hedge book.
 
-## 56. Regulated utilities
+FCF phụ thuộc mạnh giá hàng hóa nên valuation phải dùng giả định giá chuẩn hóa.
 
-Regulated utility earnings phụ thuộc allowed return on equity và rate base. Capex growth có thể tăng rate base nhưng cần regulatory approval.
+## 53. Refining
 
-High rates làm financing expensive và utility valuation nhạy vì income-like characteristics.
+Refiner kiếm từ chênh lệch giữa giá sản phẩm và crude/feedstock.
 
-## 57. Power producers
+KPI quan trọng:
 
-Merchant power earnings phụ thuộc electricity prices, fuel costs, capacity and dispatch. Renewables có resource variability, PPA structure và curtailment risk.
+- crack spread;
+- utilization;
+- turnaround;
+- product mix;
+- inventory effects.
 
-AI/data-center electricity demand có thể là structural driver nhưng grid bottlenecks quyết định monetization.
+## 54. Petrochemicals
+
+Cần nhìn spread giữa sản phẩm hóa chất và feedstock, cùng công suất mới toàn ngành.
+
+Dư cung có thể làm spread thấp kéo dài dù nhu cầu vẫn tăng.
+
+# Phần XI — Utilities và điện
+
+## 55. Utility được điều tiết
+
+Lợi nhuận thường gắn với:
+
+```text
+Rate Base × Allowed Return
+```
+
+Tăng capex có thể hỗ trợ tăng trưởng rate base nhưng cũng tăng nhu cầu tài trợ.
+
+## 56. Power generation
+
+Cần xem:
+
+- giá điện;
+- fuel cost;
+- heat rate;
+- capacity factor;
+- PPA;
+- merchant exposure.
+
+Renewable, thermal và hydro có cấu trúc rủi ro khác nhau.
 
 # Phần XII — Telecom
 
-## 58. ARPU và churn
+## 57. Telecom economics
 
-Telecom economics thường xoay quanh subscribers, ARPU, churn, network capex và spectrum cost.
+Các KPI quan trọng:
 
-Low churn và high ARPU hỗ trợ cash flow, nhưng price competition và regulatory pressure có thể hạn chế growth.
+- ARPU;
+- churn;
+- subscriber growth;
+- capex intensity;
+- spectrum cost;
+- tower economics.
 
-## 59. Capex intensity
+Ngành có recurring revenue nhưng capex lớn và cạnh tranh giá có thể làm ROIC thấp.
 
-5G/fiber rollout cần capex lớn. EBITDA cao không đồng nghĩa FCF cao nếu maintenance/growth capex nặng.
+# Phần XIII — Biotech và dược phẩm
 
-# Phần XIII — Biotech và Pharma
+## 58. Pharma
 
-## 60. Pipeline economics
+Cần theo dõi:
 
-Biotech valuation phụ thuộc probability-adjusted future cash flows của pipeline. Clinical stage, trial design, endpoint, safety và regulatory path là core.
+- patent life;
+- pipeline;
+- clinical milestones;
+- pricing;
+- reimbursement;
+- generic/biosimilar risk.
 
-Single-asset biotech có binary risk rất khác diversified pharma.
+Một sản phẩm lớn sắp mất độc quyền có thể làm tăng trưởng hiện tại nhìn tốt nhưng giá trị tương lai giảm.
 
-## 61. Patent cliffs
+## 59. Biotech
 
-Pharma cash flows có thể giảm mạnh khi exclusivity hết và generics/biosimilars vào. Pipeline replenishment và M&A vì vậy rất quan trọng.
+Biotech giai đoạn sớm cần tập trung:
 
-## 62. R&D productivity
+- xác suất thành công;
+- cash runway;
+- thời gian tới milestone;
+- nhu cầu vốn;
+- dilution;
+- market size.
 
-R&D spend phải được đánh giá theo pipeline output, không chỉ % revenue. High spend không tự động tạo moat.
+Định giá xác suất thường phù hợp hơn P/E.
 
-# Phần XIV — Mining và Materials
+# Phần XIV — Mining và vật liệu
 
-## 63. Commodity price và cost curve
+## 60. Mining economics
 
-Miner economics phụ thuộc realized commodity price, grade, recovery, cash cost, sustaining capex và royalties.
+Cần xem:
 
-Cost curve cho biết producer nằm ở đâu so peers. Low-cost producer survive downturn tốt hơn.
+```text
+Ore Grade
+Recovery Rate
+Production Volume
+Cash Cost
+AISC
+Commodity Price
+Capex
+Reserve Life
+```
 
-## 64. Reserve quality
+Grade giảm có thể làm chi phí tăng ngay cả khi sản lượng ổn định.
 
-Reserves/resources cần nhìn grade, jurisdiction, mine life và capex required. Large resource number không bằng economic reserve.
+## 61. Cost curve
 
-# Phần XV — Framework tổng hợp
+Doanh nghiệp nằm thấp trên đường cong chi phí có khả năng sống tốt hơn qua chu kỳ giá thấp.
 
-## 65. Driver tree
+Định giá không nên chỉ lấy spot price hiện tại nếu spot đang ở đỉnh hoặc đáy bất thường.
 
-Với mỗi company, hãy tạo **driver tree** từ sector KPI tới revenue, margin, capital requirement và FCF.
+# Phần XV — Cách nối ngành với mô hình tài chính
 
-Ví dụ bank: loan growth → earning assets → NII, nhưng funding cost và credit cost quyết định net profit. Semiconductor: bit shipment × ASP → revenue, utilization/mix → margin, capex → FCF.
+## 62. Driver → KPI → báo cáo tài chính
 
-## 66. Leading vs lagging indicators
+Mỗi ngành nên được nối theo chuỗi:
 
-KPI tốt phải được phân loại leading hay lagging. NPL thường lag; Stage-2 loans lead hơn. Semiconductor reported EPS lag inventory/ASP. Retail revenue lag traffic/inventory warning trong một số cases.
+```text
+Động lực ngành
+→ KPI vận hành
+→ Doanh thu
+→ Margin
+→ Working Capital
+→ Capex
+→ Cash Flow
+→ Balance Sheet
+→ Valuation
+```
 
-Stock prices thường phản ứng với inflection ở leading drivers trước headline earnings.
+Ví dụ ngân hàng:
 
-## 67. Industry cycle map
+```text
+Deposit Cost
+→ NIM
+→ Net Interest Income
+→ Pre-Provision Profit
+→ Credit Cost
+→ Net Income
+→ CET1 / Book Value
+→ ROE / P-B
+```
 
-Mỗi sector nên có cycle map gồm demand, inventory, capacity, pricing, margin, capex và supply response time.
+Ví dụ bán dẫn:
 
-Nếu supply lead time dài và demand volatile, boom-bust risk cao. Nếu supply scalable gần tức thì, economics khác.
+```text
+Inventory + Supply
+→ ASP + Utilization
+→ Revenue + Gross Margin
+→ FCF
+→ EPS Revisions
+→ Normalized Valuation
+```
 
-## 68. Balance-sheet sensitivity
+## 63. Không dùng KPI ngoài bối cảnh
 
-Hai companies cùng sector có thể phản ứng khác cùng macro shock vì leverage và maturity structure khác nhau.
+Một KPI chỉ hữu ích khi biết nó dẫn hay trễ.
 
-Sector call đúng nhưng chọn balance sheet yếu vẫn có thể tạo poor investment outcome.
+Ví dụ:
 
-## 69. Valuation phải match economics
+- NPL thường trễ hơn credit stress;
+- EPS thường trễ hơn inventory cycle;
+- ARR có thể đi trước revenue;
+- backlog có thể đi trước doanh thu;
+- cap rate có thể phản ứng nhanh hơn NOI.
 
-Banks: P/B, ROE và excess-return logic. REITs: P/AFFO, cap rate và NAV. SaaS: EV/Sales nối tới future margin. Cyclicals: normalized earnings. Commodity producers: NAV, mid-cycle prices và FCF yield.
+## 64. Mẫu phân tích ngành
 
-Không có universal multiple.
+Với một doanh nghiệp mới, có thể dùng:
 
-## 70. Sector checklist cuối
+```text
+1. Ngành kiếm tiền bằng cơ chế nào?
+2. Nhu cầu và nguồn cung đến từ đâu?
+3. KPI dẫn dắt quan trọng nhất là gì?
+4. Chi phí cố định và biến đổi thế nào?
+5. Vốn lưu động và capex ra sao?
+6. Bảng cân đối chịu chu kỳ thế nào?
+7. Chu kỳ hiện ở giai đoạn nào?
+8. KPI nào thị trường đang tập trung?
+9. Bội số nào phù hợp?
+10. Kịch bản nào làm luận điểm sai?
+```
 
-Trước khi định giá một company, cần giải thích bằng prose: revenue engine, key KPI, cost structure, capex intensity, working-capital behavior, leverage, cycle, regulation, moat, leading indicators và valuation anchor.
+## Kết luận
 
-Nếu chưa làm được, model càng chi tiết càng dễ tạo false precision.
+Phân tích theo ngành không phải học thuộc hàng trăm KPI. Mục tiêu là tìm ra **động cơ kinh tế** quyết định dòng tiền của từng mô hình kinh doanh.
 
-## 71. Kết luận
+Khi hiểu động cơ đó, bạn có thể đi theo chuỗi:
 
-Company analysis tốt không phải thuộc nhiều ratios hơn. Nó là khả năng nhận ra **economic engine** của từng ngành và map từ driver → accounting → cash flow → valuation.
+```text
+Ngành
+→ Driver
+→ KPI
+→ Báo cáo tài chính
+→ Dòng tiền
+→ Chu kỳ
+→ Định giá
+```
 
-Khi hiểu sector mechanics, financial statements trở thành kết quả của một hệ thống kinh tế thay vì những con số rời rạc.
+và tránh lỗi dùng cùng một công thức cho mọi doanh nghiệp.
