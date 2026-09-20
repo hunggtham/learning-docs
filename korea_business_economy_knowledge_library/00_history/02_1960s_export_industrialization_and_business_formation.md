@@ -1,207 +1,171 @@
 # Thập niên 1960: xuất khẩu, kế hoạch phát triển và sự hình thành doanh nghiệp công nghiệp (Export Industrialization / 수출주도 산업화)
 
-Thập niên 1960 là turning point nơi South Korea chuyển từ một economy hậu chiến phụ thuộc aid sang một system đặt **industrial production + export + investment** làm engine. Điểm quan trọng không chỉ là export tăng. Toàn bộ mechanism giữa state, banks, firms, foreign exchange và global demand được tổ chức lại để biến scarce domestic resources thành productive capacity có thể bán ra world market.
+Thập niên 1960 là điểm chuyển khi Hàn Quốc đi từ nền kinh tế hậu chiến phụ thuộc nhiều vào viện trợ sang một hệ thống đặt **sản xuất công nghiệp + xuất khẩu + đầu tư** làm động cơ tăng trưởng. Điều quan trọng không chỉ là xuất khẩu tăng. Quan hệ giữa nhà nước, ngân hàng, doanh nghiệp, ngoại tệ và nhu cầu thế giới được tổ chức lại để biến nguồn lực trong nước còn khan hiếm thành năng lực sản xuất có thể bán trên thị trường quốc tế.
 
-Muốn hiểu chaebol, export manufacturing hay industrial policy Hàn Quốc hiện đại, đây là chapter nền bắt buộc.
+Muốn hiểu chaebol, sản xuất xuất khẩu hoặc chính sách công nghiệp Hàn Quốc hiện đại, đây là chương nền tảng bắt buộc.
 
-## Binding constraint: Korea thiếu foreign exchange hơn là thiếu “ý tưởng đầu tư”
+## Hạn chế ràng buộc: thiếu ngoại tệ
 
-Một nước nghèo có thể biết mình cần factory, road, electricity và machinery nhưng vẫn không thể mua chúng nếu thiếu foreign currency. Machinery, oil, industrial chemicals và technology licenses thường phải nhập.
+Một nước nghèo có thể biết mình cần nhà máy, đường, điện và máy móc nhưng vẫn không thể mua chúng nếu thiếu ngoại tệ. Máy móc, dầu, hóa chất công nghiệp và giấy phép công nghệ thường phải nhập khẩu.
 
-Có thể nén constraint này thành:
-
-\[
-Import\ Capacity = Export\ Earnings + Aid + Foreign\ Borrowing + Other\ FX\ Inflows
-\]
-
-Trong 1950s, aid bù phần lớn gap. Khi Korea muốn giảm dependence on aid, export trở thành source FX có thể mở rộng cùng productive capacity.
-
-Vì vậy export-oriented industrialization không chỉ là “bán hàng để tăng GDP”. Nó là một **financing mechanism for industrialization**.
-
-## Export discipline: world market trở thành examiner của doanh nghiệp
-
-Domestic protected market có thể cho phép inefficient firm sống lâu. Foreign buyer thì không có nghĩa vụ mua Korean goods. Exporter phải cạnh tranh về price, quality, lead time và reliability.
-
-Đây là **export discipline / 수출규율**. Government có thể giảm financing cost hoặc hỗ trợ infrastructure, nhưng nếu product không đạt standard, order sẽ biến mất.
-
-Mechanism này giúp giải thích vì sao industrial policy Korea không đơn giản là subsidy. Performance trên global market cung cấp một loại feedback tương đối khách quan về whether capacity thật sự competitive.
-
-> Mental model: state có thể hỗ trợ firm chạy nhanh hơn, nhưng export market quyết định firm có chạy đúng hướng hay không.
-
-## Export boom không bắt đầu bằng một switch duy nhất
-
-Narrative phổ biến thường kể rằng government “chọn export” rồi firms follow. Historical research cho thấy sequence phức tạp hơn. Những cải cách ngoại hối, emerging export products và entrepreneurial response đã xuất hiện từ đầu 1960s; sau đó policy apparatus tăng tốc và institutionalize export promotion.
-
-Do đó relation nên được đọc như feedback:
-
-```text
-FX reform / incentives
-        ↓
-new export activity
-        ↓
-measured performance
-        ↓
-more credit / support / infrastructure
-        ↓
-larger export capacity
-```
-
-Policy và private response cùng evolve.
-
-## Five-Year Plans: coordination hơn là central planning kiểu command economy
-
-Từ 1962, Economic Development Five-Year Plans (경제개발 5개년계획) cung cấp framework cho infrastructure, investment priorities, foreign borrowing và industrial targets.
-
-South Korea vẫn dùng private firms và markets. State không trực tiếp command every factory output như một centrally planned economy. Vai trò quan trọng hơn là **coordination**: nếu electricity, port, road, credit và factory investment cần xảy ra gần cùng lúc, một planning apparatus có thể giảm coordination failure.
-
-Ví dụ một exporter xây plant nhưng port capacity không đủ sẽ không tạo full value. Industrialization là system problem, nên coordination có economic value.
-
-## Directed credit: bank balance sheet trở thành policy channel
-
-Capital markets thời đó còn shallow. Firms không thể dễ dàng issue bonds/shares quy mô lớn như hiện nay. Bank lending và government-controlled foreign borrowing vì vậy là main channels.
-
-Khi state ảnh hưởng credit allocation, it can change relative cost of capital:
+Có thể nén hạn chế này thành:
 
 \[
-Investment\ Decision \approx f(Expected\ Return, Cost\ of\ Capital, Access\ to\ FX, Risk)
+Khả\ năng\ nhập\ khẩu = Thu\ ngoại\ tệ\ từ\ xuất\ khẩu + Viện\ trợ + Vay\ nước\ ngoài + Dòng\ ngoại\ tệ\ khác
 \]
 
-Nếu priority exporter được vay rẻ hơn hoặc có FX access tốt hơn, project mà market finance bình thường chưa fund được có thể trở nên feasible.
+Trong thập niên 1950, viện trợ bù phần lớn khoảng thiếu hụt. Khi Hàn Quốc muốn giảm phụ thuộc viện trợ, xuất khẩu trở thành nguồn ngoại tệ có thể mở rộng cùng năng lực sản xuất.
 
-Đây là một reason state–bank–firm relationship trở thành structural feature của Korean capitalism.
+Vì vậy **công nghiệp hóa hướng xuất khẩu (export-oriented industrialization / 수출주도 산업화)** không chỉ là “bán hàng để tăng GDP”. Nó còn là một cơ chế tài trợ cho công nghiệp hóa.
 
-## Cumulative advantage: vì sao một số firms cứ lớn dần?
+## Kỷ luật xuất khẩu: thị trường thế giới trở thành người chấm điểm
 
-Giả sử firm A hoàn thành export target, trả debt đúng hạn và triển khai factory thành công. Banks và government có thêm evidence rằng firm A có execution capability. Project sau, A có thể được giao size lớn hơn hoặc access vốn tốt hơn.
+Một thị trường nội địa được bảo hộ có thể cho phép doanh nghiệp kém hiệu quả tồn tại lâu. Người mua nước ngoài thì không có nghĩa vụ mua hàng Hàn Quốc. Nhà xuất khẩu phải cạnh tranh về giá, chất lượng, thời gian giao hàng và độ tin cậy.
 
-Success tạo reputation; reputation tạo capital access; capital access cho phép firm làm project lớn hơn; project thành công lại củng cố reputation.
+Đây là **kỷ luật xuất khẩu (export discipline / 수출규율)**. Chính phủ có thể giảm chi phí vốn hoặc hỗ trợ cơ sở hạ tầng, nhưng nếu sản phẩm không đạt tiêu chuẩn, đơn hàng sẽ biến mất.
 
-Đây là **cumulative advantage / 누적우위**.
+Cơ chế này giải thích vì sao chính sách công nghiệp Hàn Quốc không thể hiểu đơn giản là trợ cấp. Kết quả trên thị trường quốc tế tạo một tín hiệu tương đối khách quan về việc năng lực sản xuất có thật sự cạnh tranh hay không.
 
-Cơ chế này giải thích một phần vì sao một số business groups scale rất nhanh, nhưng cũng tạo concentration. Nó có thể reward capability, nhưng nếu support trở thành automatic, nó tạo moral hazard.
+> **Mental Model:** nhà nước có thể giúp doanh nghiệp chạy nhanh hơn, nhưng khách hàng xuất khẩu quyết định doanh nghiệp có đang chạy đúng hướng hay không.
 
-## Moral hazard và soft budget constraint
+## Bùng nổ xuất khẩu không bắt đầu từ một quyết định duy nhất
 
-Nếu firm tin rằng “mình quá quan trọng để fail”, management có thể borrow quá mức. Đây là **moral hazard / 도덕적 해이**.
+Một câu chuyện đơn giản thường kể rằng chính phủ “chọn xuất khẩu” rồi doanh nghiệp làm theo. Thực tế phức tạp hơn. Cải cách ngoại hối, sự xuất hiện của các mặt hàng xuất khẩu mới và phản ứng của doanh nhân đã bắt đầu từ đầu thập niên 1960; sau đó bộ máy chính sách mới tăng tốc và thể chế hóa việc thúc đẩy xuất khẩu.
 
-Soft budget constraint xuất hiện khi loss không thật sự discipline firm vì rescue luôn expected. Korea 1960s chưa phải crisis era, nhưng institutional seed này quan trọng vì leverage và implicit support expectations tích lũy qua later decades.
-
-Một industrial-policy system bền vững cần cả **support** và **discipline**.
-
-## Light manufacturing: comparative advantage phù hợp stage development
-
-Early exports tập trung labor-intensive products như garments, textiles, footwear, plywood và simple assembly. Đây không phải sign Korea “chọn ngành thấp”. Nó phản ánh relative endowment lúc đó: nhiều labor, ít capital và technology.
-
-Comparative advantage là dynamic. Exporting labor-intensive goods tạo FX và learning, rồi FX được dùng nhập machinery cho ngành capital-intensive hơn.
-
-Sequence hợp lý:
+Quan hệ phù hợp hơn là một vòng phản hồi:
 
 ```text
-Labor-intensive exports
+Cải cách ngoại hối / ưu đãi
         ↓
-FX + savings + management learning
+Hoạt động xuất khẩu mới
         ↓
-capital accumulation
+Kết quả có thể đo được
         ↓
-more complex manufacturing
+Tín dụng / hỗ trợ / hạ tầng nhiều hơn
         ↓
-higher productivity / wages
+Năng lực xuất khẩu lớn hơn
 ```
 
-## Learning by exporting
+Chính sách và phản ứng của khu vực tư nhân cùng phát triển, thay vì một bên hoàn toàn quyết định bên còn lại.
 
-Export không chỉ tạo revenue. Firm tiếp xúc buyer specification, delivery discipline, quality inspection và international market information.
+## Kế hoạch 5 năm: phối hợp chứ không phải kinh tế chỉ huy toàn diện
 
-Đây là **learning by exporting / 수출을 통한 학습**. Buyer có thể ép supplier nâng tolerances, packaging, documentation và process control. Những improvements sau đó có thể spill over sang domestic products và other business lines.
+Từ năm 1962, **Kế hoạch phát triển kinh tế 5 năm (Economic Development Five-Year Plans / 경제개발 5개년계획)** cung cấp khung cho hạ tầng, ưu tiên đầu tư, vay nước ngoài và mục tiêu công nghiệp.
 
-Vì vậy export market vừa là market vừa là technology/management classroom.
+Hàn Quốc vẫn dựa mạnh vào doanh nghiệp tư nhân và thị trường. Nhà nước không trực tiếp ra lệnh sản lượng của từng nhà máy như một nền kinh tế kế hoạch hóa tập trung. Vai trò quan trọng hơn là **phối hợp (coordination / 조정)**: nếu điện, cảng, đường, tín dụng và đầu tư nhà máy phải xuất hiện gần cùng thời điểm, một bộ máy kế hoạch có thể giảm thất bại phối hợp.
 
-## Technology import: từ dependence sang absorption
+Ví dụ, xây nhà máy xuất khẩu nhưng cảng yếu sẽ làm chi phí logistics cao. Xây cảng mà không có sản xuất lại khiến tài sản hạ tầng bị sử dụng thấp. Công nghiệp hóa vì thế cần nhiều khoản đầu tư bổ trợ diễn ra cùng nhau.
 
-Korean firms dùng imported machinery, licenses, technical assistance và joint ventures. Hyundai Motor khi thành lập năm 1967 bắt đầu bằng assembly với foreign technology. Electronics firms cũng phụ thuộc imported components và know-how.
+## Tín dụng định hướng và ngân hàng
 
-Critical distinction là **technology purchase** vs **technology absorption**.
+Thị trường vốn tư nhân còn nhỏ nên ngân hàng trở thành kênh chính để đưa vốn tới doanh nghiệp. Chính phủ sử dụng hệ thống tài chính và các công cụ chính sách để ưu tiên tín dụng cho hoạt động đầu tư và xuất khẩu.
 
-Một firm có thể mua machine nhưng không hiểu process. Muốn own capability, nó cần engineers reverse-engineer, maintain, improve yield và adapt technology.
+**Tín dụng định hướng (directed credit / 지시금융·정책금융)** có thể làm chi phí vốn của ngành ưu tiên thấp hơn mức thị trường thuần túy. Nhưng tín dụng rẻ chỉ có ý nghĩa nếu vốn được biến thành năng lực sản xuất có khả năng trả nợ.
 
-Capability ladder thường là:
+Cơ chế có thể hình dung:
 
 ```text
-Import
-  ↓
-Operate
-  ↓
-Imitate / absorb
-  ↓
-Improve
-  ↓
-Design independently
+Tín dụng ưu tiên
+→ mua máy móc / xây nhà máy
+→ tăng sản lượng
+→ xuất khẩu
+→ thu ngoại tệ
+→ trả nợ và tái đầu tư
 ```
 
-Korean industrial history là câu chuyện đi qua ladder này nhiều lần.
+Nếu xuất khẩu thất bại, chuỗi này có thể biến thành nợ xấu. Vì vậy tăng trưởng dựa vào tín dụng luôn đi cùng rủi ro phân bổ vốn sai.
 
-## Organizational capability: hidden asset của industrialization
+## Tỷ giá và động lực xuất khẩu
 
-Factory equipment nằm trên balance sheet; routines thì không. Nhưng procurement planning, quality control, accounting, export documentation và project management quyết định whether equipment actually earns return.
+Tỷ giá quyết định bao nhiêu KRW doanh nghiệp nhận được từ một USD doanh thu xuất khẩu và bao nhiêu KRW phải trả cho nguyên liệu nhập khẩu. Điều chỉnh tỷ giá và hệ thống ngoại hối trong thập niên 1960 góp phần làm động lực xuất khẩu rõ hơn.
 
-Large exporters tích lũy **organizational capital / 조직자본** qua repetition. Đây là reason một group có thể chuyển từ textile sang petrochemical hoặc construction sang shipbuilding dù technology khác nhau: một số management capability vẫn transferable.
+Không nên hiểu đồng tiền yếu đơn giản là “luôn tốt cho xuất khẩu”. Một doanh nghiệp nhập phần lớn nguyên liệu có thể chịu chi phí cao hơn khi KRW yếu. Tác động ròng phụ thuộc tỷ trọng doanh thu ngoại tệ, chi phí nhập khẩu và khả năng chuyển giá.
 
-## Foreign borrowing: tăng tốc growth nhưng tạo future vulnerability
+Điểm quan trọng là hệ thống tỷ giá phải giúp phản ánh đúng hơn độ khan hiếm ngoại tệ và không làm xuất khẩu bị mất động lực một cách nhân tạo.
 
-Domestic savings còn hạn chế, nên Korea dùng foreign capital và borrowing để finance investment. Borrowing cho phép **front-load capital accumulation**: build plant hôm nay, trả bằng future export earnings.
+## Từ hàng nhẹ đến tích lũy năng lực sản xuất
 
-Nhưng debt chỉ works nếu future return > financing cost. Khi borrowing tăng nhanh hơn productivity, vulnerability tích lũy. Đây là bridge sớm tới leverage issues của 1970s–1990s.
+Xuất khẩu ban đầu tập trung nhiều vào hàng thâm dụng lao động như dệt may, tóc giả, đồ gỗ, sản phẩm chế biến và hàng công nghiệp nhẹ. Đây không phải “giai đoạn thấp kém cần bỏ qua”. Nó là nơi doanh nghiệp học cách đáp ứng đơn hàng quốc tế, quản lý chất lượng, thời gian giao hàng và vốn lưu động.
 
-Corporate-finance principle rất đơn giản:
+Một đơn hàng xuất khẩu buộc doanh nghiệp phối hợp:
 
-\[
-ROIC > Cost\ of\ Capital
-\]
+```text
+Mua nguyên liệu
+→ sản xuất
+→ kiểm tra chất lượng
+→ đóng gói
+→ vận chuyển
+→ làm chứng từ
+→ thu ngoại tệ
+```
 
-Nếu inequality này không giữ lâu dài, growth by debt eventually destroys value.
+Những kỹ năng này tạo **năng lực tổ chức (organizational capability / 조직역량)** có thể chuyển sang ngành phức tạp hơn sau này.
 
-## Urbanization và labor reallocation
+## Học bằng làm và hấp thụ công nghệ
 
-Industrialization cần workers. Rural population chuyển vào cities và industrial zones làm labor dịch từ lower-productivity agriculture sang manufacturing/services.
+Hàn Quốc không phát minh từ đầu mọi công nghệ cần cho công nghiệp hóa. Doanh nghiệp nhập máy móc, mua giấy phép, hợp tác với công ty nước ngoài và học thông qua vận hành thực tế.
 
-Aggregate productivity có thể tăng ngay cả khi productivity trong mỗi sector không đổi nếu workers move từ low-productivity sector sang high-productivity sector. Đây là **structural transformation / 구조전환**.
+Đây là **học bằng làm (learning by doing / 실행을 통한 학습)** và **hấp thụ công nghệ (technology absorption / 기술흡수)**. Giá trị của máy móc không chỉ nằm ở sản lượng hiện tại mà còn ở việc kỹ sư và công nhân hiểu dần cách vận hành, sửa chữa, cải tiến và nội địa hóa.
 
-Nhưng urbanization cũng tạo demand housing, transport, schools và services — mở thêm markets cho construction và consumer firms.
+Quá trình này tạo một dạng lợi thế động. Một quốc gia ban đầu không có lợi thế tự nhiên trong điện tử hay ô tô vẫn có thể xây **lợi thế so sánh động (dynamic comparative advantage / 동태적 비교우위)** thông qua đầu tư và học tập.
 
-## Từ company sang business group
+## Doanh nghiệp lớn bắt đầu tích lũy lợi thế quy mô
 
-Khi successful firms mở rộng, họ thành lập separate entities cho manufacturing, finance, construction hoặc trading. Separate legal entities giúp finance projects, isolate liabilities và organize ownership.
+Khi một doanh nghiệp hoàn thành dự án tốt, xuất khẩu được và trả nợ đúng hạn, doanh nghiệp đó có hồ sơ tín dụng tốt hơn, kinh nghiệm quản lý lớn hơn và khả năng nhận dự án mới cao hơn. Thành công hôm nay làm tăng xác suất được giao nguồn lực ngày mai.
 
-Từ đây hình thành affiliate networks mà sau này được gọi rộng là chaebol structure.
+Đây là **lợi thế tích lũy (cumulative advantage)**:
 
-Điều quan trọng là sequence: business group không xuất hiện chỉ vì family muốn “có nhiều công ty”. Nó là một organizational response với diversification, financing và control trong một fast-industrializing economy.
+```text
+Dự án thành công
+→ uy tín / khả năng vay vốn
+→ dự án lớn hơn
+→ đội ngũ quản lý sâu hơn
+→ năng lực kỹ thuật cao hơn
+→ khả năng nhận dự án tiếp theo
+```
 
-Xem [../04_chaebol_and_large_business_groups](../04_chaebol_and_large_business_groups.md) và [../05_group_structure_affiliates_holding_companies](../05_group_structure_affiliates_holding_companies.md).
+Cơ chế này góp phần giải thích vì sao một số nhóm doanh nghiệp lớn nhanh hơn phần còn lại và sau đó trở thành chaebol.
 
-## Vì sao success 1960s tạo pressure chuyển sang heavy industry?
+## Nhà nước và doanh nghiệp: quan hệ vừa hợp tác vừa kỷ luật
 
-Labor-intensive export success có self-limiting mechanism. Khi employment và wages tăng, low-wage advantage giảm. Competitors có labor cheaper xuất hiện.
+Chính phủ cần doanh nghiệp tư nhân để thực hiện đầu tư, còn doanh nghiệp cần tín dụng, ngoại tệ, hạ tầng và quyền tiếp cận thị trường. Hai bên vì vậy phụ thuộc lẫn nhau.
 
-Muốn tiếp tục tăng income, Korea phải tăng capital per worker, technology content và value added. Đây là structural reason 1970s Heavy and Chemical Industry Drive xuất hiện.
+Nhưng quan hệ này không nên hiểu là chính phủ chỉ “cho tiền”. Trong mô hình lý tưởng, hỗ trợ gắn với kết quả như xuất khẩu, sản lượng hoặc hoàn thành dự án. Khi hỗ trợ không gắn với kỷ luật hiệu quả, nguy cơ hình thành doanh nghiệp sống nhờ ưu đãi tăng lên.
 
-## Mental Model
+Đây là một trong những khác biệt quan trọng giữa **chính sách công nghiệp tạo năng lực** và **trợ cấp bảo vệ doanh nghiệp yếu**.
 
-> Thập niên 1960 là vòng lặp **FX shortage → export → performance discipline → credit/infrastructure support → investment → more export → more FX**. Thành công của vòng lặp vừa tạo productive capacity vừa tạo large firms, leverage và state–bank–business relationships sẽ định hình decades sau.
+## Lao động, đô thị hóa và lợi thế chi phí
 
-## Common misconceptions
+Trong giai đoạn đầu, lực lượng lao động trẻ, di cư từ nông thôn ra thành phố và mức lương còn thấp tạo lợi thế cho ngành thâm dụng lao động. Nhưng lợi thế lương thấp không thể kéo dài mãi.
 
-“Export-led growth = government ra lệnh và firms làm theo” quá đơn giản. Policy, firm experimentation và global demand tương tác hai chiều.
+Khi thu nhập tăng, doanh nghiệp phải chuyển từ cạnh tranh bằng chi phí lao động sang năng suất, chất lượng, công nghệ và thương hiệu. Chính áp lực này góp phần đẩy Hàn Quốc sang các ngành vốn và công nghệ cao hơn trong thập niên 1970–1980.
 
-“Directed credit = free money” cũng sai. Credit là debt, và firms vẫn phải tạo cash flow để survive; nhưng access và pricing được policy influence mạnh.
+## Xuất khẩu tạo dữ liệu cho chính sách
 
-“Labor-intensive export là low-value mistake” sai nếu nhìn development sequence. Nó tạo FX, jobs và learning cần cho bước lên capital-intensive industries.
+Một lợi ích ít được chú ý của chiến lược xuất khẩu là tạo ra dữ liệu thực tế. Nếu doanh nghiệp liên tục mất đơn hàng, chất lượng hoặc chi phí có vấn đề. Nếu doanh nghiệp tăng xuất khẩu nhanh, có thể đã tích lũy một năng lực cạnh tranh đáng kể.
 
-## Connections
+Do đó thị trường quốc tế không chỉ cung cấp ngoại tệ mà còn cung cấp **tín hiệu hiệu suất (performance signal)** cho cả doanh nghiệp và nhà hoạch định chính sách.
 
-Tiếp theo đọc [03_1970s_hci_and_chaebol_expansion](./03_1970s_hci_and_chaebol_expansion.md). Để hiểu trade mechanism sâu hơn, xem [../02_trade_export_and_global_value_chains](../02_trade_export_and_global_value_chains.md); để hiểu later finance risk, xem [../11_banks_finance_and_corporate_funding](../11_banks_finance_and_corporate_funding.md).
+## Từ công nghiệp nhẹ tới câu hỏi về ngành thượng nguồn
 
-### Nguồn nền
+Khi xuất khẩu hàng chế tạo tăng, Hàn Quốc lại gặp một hạn chế mới: nhiều nguyên liệu, máy móc và linh kiện vẫn phải nhập khẩu. Xuất khẩu càng nhiều có thể kéo nhập khẩu đầu vào tăng theo.
 
-- KDI, *Korea’s Rapid Export Expansion in the 1960s: How It Began*.
-- KDI, *Outward-Looking Industrialization Strategy: The Case of Korea*.
-- KDI, *The Korean Economy: Six Decades of Growth and Development*.
+Điều này đặt ra câu hỏi:
+
+> Nếu nền kinh tế chỉ lắp ráp hoặc sản xuất hàng cuối cùng nhưng phụ thuộc thép, hóa chất, máy móc và vật liệu nhập khẩu, giá trị gia tăng nội địa có thể tăng đến đâu?
+
+Câu hỏi đó dẫn trực tiếp tới chiến lược **công nghiệp nặng và hóa chất (Heavy and Chemical Industries, HCI / 중화학공업)** trong thập niên 1970.
+
+## Những rủi ro đã hình thành ngay trong giai đoạn tăng trưởng
+
+Cơ chế tăng trưởng nhanh cũng gieo hạt cho các vấn đề sau này. Tín dụng tập trung vào một số doanh nghiệp có thể làm quyền lực kinh tế tập trung. Doanh nghiệp quen với tăng trưởng bằng nợ có thể mang đòn bẩy cao. Quan hệ gần giữa nhà nước, ngân hàng và tập đoàn có thể tạo rủi ro đạo đức nếu doanh nghiệp tin rằng mình sẽ luôn được cứu.
+
+Vì vậy không nên đọc thập niên 1960 như câu chuyện thành công không có chi phí. Chính những cơ chế giúp tăng trưởng nhanh sau này cũng trở thành đối tượng cải cách.
+
+## Connection — Tại sao thập niên 1970 khác thập niên 1960
+
+Thập niên 1960 chứng minh Hàn Quốc có thể bán hàng công nghiệp ra thế giới và dùng xuất khẩu để tạo ngoại tệ. Nhưng mô hình này vẫn phụ thuộc nhiều vào đầu vào và công nghệ nhập khẩu.
+
+Chương tiếp theo, [thập niên 1970: HCI và mở rộng chaebol](./03_1970s_hci_and_chaebol_expansion.md), giải thích bước chuyển từ hàng công nghiệp nhẹ sang thép, hóa chất, máy móc, đóng tàu và các ngành có vốn cố định rất lớn.
+
+> **Mental Model cuối:** thập niên 1960 không chỉ là “xuất khẩu tăng”. Đó là quá trình xây một vòng phản hồi giữa ngoại tệ, tín dụng, đầu tư, học công nghệ và kỷ luật thị trường quốc tế. Vòng phản hồi này tạo ra năng lực sản xuất và đồng thời làm một số doanh nghiệp tích lũy quy mô nhanh hơn, đặt nền cho cấu trúc tập đoàn của Hàn Quốc sau này.
