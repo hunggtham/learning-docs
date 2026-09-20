@@ -22,15 +22,20 @@ function renderHome() {
 }
 
 function renderFolderTree() {
-  const folders = ['all', ...new Set(state.docs.flatMap(doc => {
-    if (!doc.folder) return [];
-    const parts = doc.folder.split('/');
-    return parts.map((_, index) => parts.slice(0, index + 1).join('/'));
-  }).sort())];
-  document.querySelector('#folder-tree').innerHTML = folders.map(folder => {
-    const value = folder === 'all' ? '' : folder;
-    return `<button class="folder-button ${state.folder === value ? 'active' : ''}" data-folder="${escapeHtml(value)}">${escapeHtml(folderLabel(value))} <span class="folder-count">(${folderCount(value)})</span></button>`;
-  }).join('');
+  const current = state.folder;
+  const prefix = current ? `${current}/` : '';
+  const childNames = [...new Set(state.docs.map(doc => doc.folder || '').filter(folder => folder.startsWith(prefix) && folder !== current).map(folder => folder.slice(prefix.length).split('/')[0]).filter(Boolean))].sort();
+  const parent = current.includes('/') ? current.split('/').slice(0, -1).join('/') : '';
+  const directFiles = state.docs.filter(doc => (doc.folder || '') === current).length;
+  const controls = [];
+  if (current) controls.push(`<button class="folder-button navigation" data-folder="${escapeHtml(parent)}">↩ Lên một cấp</button>`);
+  controls.push(`<button class="folder-button navigation ${current ? '' : 'active'}" data-folder="">⌂ Tất cả thư mục</button>`);
+  const folders = childNames.map(name => {
+    const value = prefix + name;
+    return `<button class="folder-button" data-folder="${escapeHtml(value)}">📁 ${escapeHtml(name)} <span class="folder-count">(${folderCount(value)})</span></button>`;
+  });
+  const summary = current ? `<span class="folder-summary">${directFiles} file trong folder này</span>` : `<span class="folder-summary">Chọn folder để mở nội dung</span>`;
+  document.querySelector('#folder-tree').innerHTML = `${controls.join('')} ${folders.join('')} ${summary}`;
   document.querySelectorAll('[data-folder]').forEach(button => button.onclick = () => { state.folder = button.dataset.folder; renderFolderTree(); renderCards(); });
 }
 
@@ -48,10 +53,10 @@ function renderFilters() {
 
 function renderCards() {
   const term = state.query.trim().toLowerCase();
-  const docs = state.docs.filter(doc => (!state.folder || doc.folder === state.folder || (doc.folder || '').startsWith(`${state.folder}/`)) && (state.filter === 'all' || doc.category === state.filter) && (state.format === 'all' || doc.type === state.format) && (!term || `${titleOf(doc)} ${doc.displayPath || doc.path} ${doc.category} ${doc.language || ''}`.toLowerCase().includes(term)));
-  document.querySelector('#result-count').textContent = `${docs.length}개 자료`;
+  const docs = state.docs.filter(doc => (doc.folder || '') === state.folder && (state.filter === 'all' || doc.category === state.filter) && (state.format === 'all' || doc.type === state.format) && (!term || `${titleOf(doc)} ${doc.displayPath || doc.path} ${doc.category} ${doc.language || ''}`.toLowerCase().includes(term)));
+  document.querySelector('#result-count').textContent = state.folder ? `${docs.length} file` : `${state.docs.length} tài liệu`;
   document.querySelector('#result-title').textContent = state.folder ? folderLabel(state.folder) : 'Mọi tài liệu';
-  document.querySelector('#document-grid').innerHTML = docs.length ? docs.map(doc => `<a class="doc-card" href="#/read/${encodeURIComponent(doc.path)}"><div class="doc-meta"><span class="type-badge">${doc.type}</span><span>${formatSize(doc.size)}</span></div><h3>${escapeHtml(titleOf(doc))}</h3><p class="doc-language">${escapeHtml(doc.language || 'vi')} · ${escapeHtml(doc.rights || 'author-confirmed')}</p><p class="doc-path">${escapeHtml(doc.displayPath || doc.path)}</p></a>`).join('') : '<p class="empty">Không có tài liệu phù hợp. Hãy thử đổi bộ lọc hoặc tìm kiếm khác.</p>';
+  document.querySelector('#document-grid').innerHTML = docs.length ? docs.map(doc => `<a class="doc-card" href="#/read/${encodeURIComponent(doc.path)}"><div class="doc-meta"><span class="type-badge">${doc.type}</span><span>${formatSize(doc.size)}</span></div><h3>${escapeHtml(titleOf(doc))}</h3><p class="doc-language">${escapeHtml(doc.language || 'vi')} · ${escapeHtml(doc.rights || 'author-confirmed')}</p><p class="doc-path">${escapeHtml(doc.displayPath || doc.path)}</p></a>`).join('') : state.folder ? '<p class="empty">Folder này chưa có file trực tiếp. Hãy mở folder con hoặc quay lên một cấp.</p>' : '<p class="empty">Chọn một folder ở trên để xem các file bên trong.</p>';
 }
 
 function markdownToHtml(markdown) {
