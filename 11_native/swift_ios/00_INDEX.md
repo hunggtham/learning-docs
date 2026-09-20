@@ -24,6 +24,10 @@ Tập trung vào ownership, dispatch, actor reentrancy, performance, UIKit/Swift
 
 Tập trung vào migration Swift 5→6.x, Swift 6.4, ABI/library evolution, macros, systems/memory-safety APIs, rendering identity, offline sync, observability, performance/energy budget, App Extensions, WidgetKit, ActivityKit, App Intents, StoreKit, CloudKit, release engineering, distributed-version migration, multi-platform/cross-platform Swift và production-readiness audit.
 
+### 5. [Production Reference & Completion Guide](05_swift_ios_production_reference.md)
+
+Đây là file tra cứu sau khi đã đi qua lộ trình chính. Nó gom những vấn đề xuyên cấp thường chỉ rõ khi app tiến vào production: escaping/sendable closure, numeric correctness, HTTP semantics, tolerant decoding, retry/backoff/idempotency, Core Data legacy, background URLSession, ownership mới, SwiftPM plugin/generated code, observability, Memory Graph, App Extension process boundary, supply-chain security, ADR/compatibility matrix, disaster recovery, release-artifact testing và Definition of Done theo risk.
+
 ## Nguyên tắc version
 
 Một API được compiler biết chưa chắc chạy được trên deployment target cũ. Luôn tách **Xcode version**, **Swift compiler/language mode**, **SDK version** và **deployment target**. Với runtime API mới, dùng availability check; với source khác theo platform/build mode, dùng conditional compilation.
