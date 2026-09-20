@@ -1,32 +1,32 @@
-# Stack
+# Ngăn xếp
 **Ngăn xếp (Stack / 스택)**
 
-Stack mô hình hóa **LIFO — Last In, First Out / 후입선출**: phần tử hoặc công việc được mở sau cùng phải được hoàn tất trước. Đây là một ADT rất đơn giản về API — `push`, `pop`, `peek`, `isEmpty` — nhưng xuất hiện khắp nơi: call stack, DFS, parser, undo/redo, expression evaluation, backtracking, monotonic structures và nhiều algorithm dùng explicit continuation state.
+Ngăn xếp mô hình hóa **vào sau, ra trước (LIFO — Last In, First Out / 후입선출)**: phần tử hoặc công việc được mở sau cùng phải được hoàn tất trước. Đây là một **kiểu dữ liệu trừu tượng (ADT — Abstract Data Type)** có giao diện rất nhỏ — `push`, `pop`, `peek`, `isEmpty` — nhưng xuất hiện ở khắp nơi: ngăn xếp lời gọi (call stack), DFS, bộ phân tích cú pháp (parser), hoàn tác/làm lại (undo/redo), tính biểu thức, quay lui (backtracking), cấu trúc đơn điệu và nhiều thuật toán cần lưu trạng thái để tiếp tục xử lý.
 
-## 1. Stack là abstraction, không phải một implementation cụ thể
+## 1. Ngăn xếp là một abstraction, không phải một implementation cụ thể
 
-Stack có thể được implement bằng dynamic array hoặc linked list.
+Ngăn xếp mô tả **hành vi** chứ không bắt buộc một cách lưu trữ. Nó có thể được cài đặt bằng **mảng động (dynamic array)** hoặc **danh sách liên kết (linked list)**.
 
-Dynamic array:
+Với mảng động:
 
 ```text
-push -> append cuối
-pop  -> giảm size
+push -> thêm vào cuối
+pop  -> giảm size và lấy phần tử cuối
 peek -> a[size-1]
 ```
 
-Linked stack:
+Với danh sách liên kết:
 
 ```text
-push -> insert head
-pop  -> remove head
+push -> chèn ở đầu
+pop  -> xóa ở đầu
 ```
 
-Cả hai cho `push/pop` `O(1)` theo contract thích hợp, nhưng dynamic array thường có locality tốt hơn và ít allocation hơn; linked stack có stable nodes và không cần contiguous growth.
+Cả hai có thể cho `push/pop` `O(1)` theo hợp đồng phù hợp. Mảng động thường có **tính cục bộ bộ nhớ (locality)** tốt và ít lần cấp phát hơn. Danh sách liên kết không cần một vùng nhớ liên tục nhưng phải trả thêm chi phí node, con trỏ và cấp phát.
 
-## 2. Stack trong C, Java và JavaScript
+## 2. Ngăn xếp trong C, Java và JavaScript
 
-Java hiện đại thường dùng `ArrayDeque` thay legacy `Stack`:
+Java hiện đại thường dùng `ArrayDeque` thay cho lớp `Stack` cũ:
 
 ```java
 Deque<Integer> st = new ArrayDeque<>();
@@ -36,7 +36,7 @@ int top = st.peek();
 int x = st.pop();
 ```
 
-JavaScript:
+JavaScript có thể dùng `Array`:
 
 ```js
 const st = [];
@@ -45,7 +45,7 @@ st.push(20);
 const x = st.pop();
 ```
 
-C có thể dùng dynamic array:
+C có thể dùng mảng động:
 
 ```c
 typedef struct {
@@ -55,23 +55,23 @@ typedef struct {
 } IntStack;
 ```
 
-Stack API nên định nghĩa rõ empty behavior: trả boolean + out parameter, sentinel, `null`, exception hay error code.
+API cần định nghĩa rõ hành vi khi ngăn xếp rỗng: trả `boolean` kèm tham số đầu ra, giá trị đặc biệt (sentinel), `null`, ngoại lệ (exception) hay mã lỗi (error code).
 
-## 3. Stack invariant
+## 3. Bất biến của ngăn xếp
 
-Với array-backed stack:
+Với ngăn xếp dựa trên mảng:
 
 ```text
 0 <= size <= capacity
-logical elements = a[0 .. size)
-top nếu có = a[size-1]
+các phần tử logic = a[0 .. size)
+phần tử đỉnh nếu tồn tại = a[size-1]
 ```
 
-Mọi operation phải giữ invariant này. `pop` không cần erase physical bytes nếu semantics không yêu cầu; chỉ giảm logical size. Nhưng nếu stack giữ object references trong GC language/custom container, clear slot cũ đôi khi giúp object trở nên unreachable sớm hơn.
+Mọi thao tác phải giữ **bất biến (invariant)** này. `pop` không nhất thiết phải xóa các byte vật lý; về logic chỉ cần giảm `size`. Tuy nhiên, nếu cấu trúc giữ tham chiếu tới object trong ngôn ngữ có GC, xóa tham chiếu ở ô cũ đôi khi giúp object trở thành không còn truy cập được sớm hơn.
 
-## 4. Parentheses Matching: obligations chưa hoàn tất
+## 4. Ghép cặp dấu ngoặc: lưu nghĩa vụ chưa hoàn tất
 
-Chuỗi bracket hợp lệ vì closing bracket gần nhất phải khớp opening bracket gần nhất chưa đóng.
+Một chuỗi dấu ngoặc hợp lệ vì dấu đóng gần nhất phải khớp dấu mở gần nhất chưa được đóng.
 
 ```js
 function validBrackets(s) {
@@ -79,57 +79,49 @@ function validBrackets(s) {
   const pair = { ')': '(', ']': '[', '}': '{' };
 
   for (const ch of s) {
-    if (ch === '(' || ch === '[' || ch === '{') {
-      st.push(ch);
-    } else if (ch in pair) {
+    if (ch === '(' || ch === '[' || ch === '{') st.push(ch);
+    else if (ch in pair) {
       if (st.length === 0 || st.pop() !== pair[ch]) return false;
     }
   }
-
   return st.length === 0;
 }
 ```
 
-Mental model: stack lưu các **obligations đang mở**. Closing token phải giải quyết obligation mới nhất trước.
+**Mô hình tư duy (mental model):** ngăn xếp lưu các **nghĩa vụ đang mở (open obligations)**. Dấu đóng mới phải giải quyết nghĩa vụ được tạo gần nhất trước.
 
-## 5. Call Stack và Recursion
+## 5. Ngăn xếp lời gọi và đệ quy
 
-Khi A gọi B, B gọi C:
+Khi A gọi B và B gọi C:
 
 ```text
-A frame
-B frame
-C frame <- top
+khung A
+khung B
+khung C <- đỉnh
 ```
 
-C phải return trước B, B trước A. Mỗi frame lưu return address, parameters/local state và metadata runtime.
+C phải trả về trước B, B phải trả về trước A. Mỗi **khung lời gọi (stack frame)** lưu địa chỉ quay về, tham số, trạng thái cục bộ và metadata của runtime. Đệ quy (recursion) tự nhiên vì runtime đã cung cấp ngăn xếp. Nếu độ sâu phụ thuộc dữ liệu đầu vào và có thể rất lớn, dùng ngăn xếp tường minh (explicit stack) thường an toàn hơn.
 
-Recursion tự nhiên vì runtime đã cung cấp stack. Nhưng khi depth phụ thuộc input và có thể rất lớn, explicit stack thường an toàn hơn.
+## 6. Chuyển đệ quy thành ngăn xếp tường minh
 
-## 6. Chuyển recursion thành explicit stack
-
-Recursive DFS:
+DFS đệ quy:
 
 ```java
 void dfs(int u) {
     seen[u] = true;
-    for (int v : g[u]) {
-        if (!seen[v]) dfs(v);
-    }
+    for (int v : g[u]) if (!seen[v]) dfs(v);
 }
 ```
 
-Iterative preorder-like DFS:
+DFS lặp:
 
 ```java
 Deque<Integer> st = new ArrayDeque<>();
 st.push(start);
-
 while (!st.isEmpty()) {
     int u = st.pop();
     if (seen[u]) continue;
     seen[u] = true;
-
     for (int i = g[u].size() - 1; i >= 0; --i) {
         int v = g[u].get(i);
         if (!seen[v]) st.push(v);
@@ -137,329 +129,112 @@ while (!st.isEmpty()) {
 }
 ```
 
-Nhưng để mô phỏng **postorder** chính xác, stack entry thường phải giữ thêm phase/index. Recursion không chỉ là “stack chứa node”; frame còn chứa vị trí tiếp tục sau khi child return.
+Để mô phỏng **hậu thứ tự (postorder)** chính xác, một mục trong ngăn xếp thường phải giữ thêm giai đoạn hoặc chỉ số đang xử lý. Đệ quy không chỉ là “ngăn xếp chứa node”; mỗi khung còn giữ vị trí cần tiếp tục sau khi lời gọi con kết thúc.
 
-## 7. Explicit continuation state
+## 7. Trạng thái tiếp tục (continuation state)
 
-Một iterative tree postorder có thể lưu:
+Một phép duyệt cây hậu thứ tự dạng lặp có thể lưu `(node, visitedChildrenFlag)` hoặc `(node, nextChildIndex)`. Điểm cốt lõi là ngăn xếp lời gọi thực chất lưu các **trạng thái tiếp tục (continuations)** — thông tin cần thiết để biết “sau khi bài toán con xong thì phải làm gì tiếp”. Khi chuyển đệ quy sang vòng lặp, cần xác định trạng thái tiếp tục chứ không chỉ đẩy tham số hàm vào ngăn xếp.
 
-```text
-(node, visitedChildrenFlag)
-```
+## 8. Tính biểu thức và ngăn xếp toán tử
 
-hoặc:
+Biểu thức `3 + 4 * 2` không thể tính đơn giản từ trái sang phải. Thuật toán Shunting-yard hoặc bộ phân tích theo **độ ưu tiên toán tử (operator precedence)** dùng ngăn xếp để trì hoãn các toán tử chưa đủ điều kiện xử lý. Khi toán tử mới có độ ưu tiên thấp hơn, các toán tử mạnh hơn ở đỉnh được lấy ra và xử lý trước.
 
-```text
-(node, nextChildIndex)
-```
+## 9. Trung tố, hậu tố và tiền tố
 
-Đây là insight quan trọng: call stack là stack của **continuations** — thông tin cần để biết “sau khi subproblem xong thì làm gì tiếp”.
-
-Khi convert recursion sang iterative, hãy xác định continuation state, không chỉ push arguments.
-
-## 8. Expression Evaluation và Operator Stack
-
-Expression:
-
-```text
-3 + 4 * 2
-```
-
-không thể evaluate đơn giản trái sang phải. Shunting-yard hoặc operator-precedence parser dùng stack để trì hoãn operators chưa thể resolve.
-
-Operator stack lưu:
-
-```text
-operator đã thấy
-nhưng còn chờ precedence/parenthesis/right operand
-```
-
-Khi operator mới có precedence thấp hơn, các operators mạnh hơn trên stack được pop/evaluate trước.
-
-## 9. Infix, Postfix và Prefix
-
-Postfix (Reverse Polish Notation) biến precedence thành order tường minh:
+Biểu thức hậu tố (postfix / Reverse Polish Notation) biến thứ tự ưu tiên thành thứ tự tường minh:
 
 ```text
 3 4 2 * +
 ```
 
-Evaluation:
+Quy trình: gặp toán hạng thì `push`; gặp toán tử thì lấy các toán hạng cần thiết, tính kết quả rồi `push` lại. Ở giai đoạn tính, hậu tố không cần giải quyết lại dấu ngoặc hay độ ưu tiên vì thứ tự đã được mã hóa trong biểu thức.
 
-1. gặp operand -> push;
-2. gặp operator -> pop operands cần thiết;
-3. compute;
-4. push result.
+## 10. Quay lui và trạng thái hoàn tác
 
-Stack loại nhu cầu parentheses/precedence trong evaluation phase vì expression đã encode order.
+Quay lui (backtracking) thường có mẫu `chọn → áp dụng trạng thái → khám phá → hoàn tác`. Ngăn xếp lời gọi tự nhiên giữ lịch sử lựa chọn. Nếu viết dạng lặp, mỗi khung thường phải chứa trạng thái hiện tại, chỉ số lựa chọn tiếp theo và thông tin cần để hoàn tác. Lựa chọn mới nhất phải được hoàn tác trước khi quay lại lựa chọn cũ hơn.
 
-## 10. Backtracking và undo state
+## 11. Undo/Redo cần hai ngăn xếp
 
-Backtracking thường có pattern:
+Một trình soạn thảo đơn giản có thể giữ `undoStack` và `redoStack`. Khi có hành động mới, đưa hành động vào `undoStack` và xóa `redoStack`. Khi hoàn tác, lấy hành động gần nhất khỏi `undoStack`, áp dụng thao tác nghịch đảo rồi đưa nó vào `redoStack`. Nếu lịch sử cho phép phân nhánh thành nhiều phiên bản, hai ngăn xếp không còn đủ; cách biểu diễn có thể phải chuyển sang cây bền vững (persistent tree) hoặc DAG.
 
-```text
-choose
-push/apply state
-explore
-pop/undo state
-```
+## 12. Ngăn xếp đơn điệu
 
-Call stack tự nhiên giữ choice history. Nếu viết iterative, ta cần explicit frame chứa:
-
-```text
-state
-next choice index
-undo information
-```
-
-Stack phù hợp vì choice mới nhất phải được undo trước khi quay lại choice cũ.
-
-## 11. Undo/Redo cần hai stacks
-
-Một editor đơn giản có thể giữ:
-
-```text
-undoStack
-redoStack
-```
-
-Action mới:
-
-```text
-push undo
-clear redo
-```
-
-Undo:
-
-```text
-pop undo
-apply inverse
-push redo
-```
-
-Redo làm chiều ngược lại. Đây là composition của hai LIFO histories.
-
-Nếu cần branching history/version graph, hai stacks không còn đủ; representation phải tiến lên persistent tree/DAG.
-
-## 12. Monotonic Stack
-
-**Monotonic Stack / 단조 스택** giữ elements/indices theo một order đơn điệu. Ví dụ Next Greater Element:
+**Ngăn xếp đơn điệu (Monotonic Stack / 단조 스택)** giữ phần tử hoặc chỉ số theo một thứ tự đơn điệu. Ví dụ:
 
 ```js
 function nextGreater(a) {
   const ans = Array(a.length).fill(-1);
-  const st = []; // indices, values decreasing
-
+  const st = [];
   for (let i = 0; i < a.length; i++) {
-    while (st.length && a[st[st.length - 1]] < a[i]) {
-      ans[st.pop()] = a[i];
-    }
+    while (st.length && a[st[st.length - 1]] < a[i]) ans[st.pop()] = a[i];
     st.push(i);
   }
-
   return ans;
 }
 ```
 
-Khi `a[i]` lớn hơn stack top, `i` là first greater candidate đã được xác định cho top vì mọi index giữa đã được xử lý mà không đủ lớn.
+Khi `a[i]` lớn hơn giá trị ở đỉnh, `a[i]` chính là ứng viên lớn hơn đầu tiên đã được xác định cho chỉ số đó, vì mọi vị trí ở giữa đã được xét mà không đủ lớn.
 
-## 13. Vì sao monotonic stack O(n) dù có nested while?
+## 13. Vì sao ngăn xếp đơn điệu là O(n)?
 
-Mỗi index:
+Mỗi chỉ số được `push` đúng một lần và bị `pop` tối đa một lần. Tổng số thay đổi là `O(n)`. Đây là **phân tích khấu hao (amortized analysis)**: thấy `for + while` không đủ để kết luận `O(n²)`; cần đếm số lần mỗi phần tử thực sự có thể tham gia thao tác.
 
-```text
-push đúng 1 lần
-pop tối đa 1 lần
-```
+## 14. Hình chữ nhật lớn nhất trong histogram
 
-Tổng stack mutations `O(n)`. Đây là amortized analysis điển hình.
+Ngăn xếp tăng dần giữ các cột mà biên phải cuối cùng chưa được xác định. Khi gặp một cột thấp hơn, các cột cao hơn ở đỉnh biết rằng vị trí hiện tại là phần tử thấp hơn đầu tiên bên phải. Phần tử còn lại sau khi `pop` giúp xác định biên phía trái. Ngăn xếp ở đây lưu **các ứng viên chưa biết biên cuối cùng**.
 
-Nhìn syntax có `for + while` nhưng không thể kết luận `O(n²)` nếu mỗi element bị loại vĩnh viễn sau một lần pop.
+## 15. Min Stack và trạng thái bổ sung
 
-## 14. Largest Rectangle in Histogram
+Muốn `getMin()` chạy `O(1)`, có thể lưu thêm ngăn xếp giá trị nhỏ nhất. Ta đổi thêm bộ nhớ để duy trì thông tin tổng hợp tăng dần (incremental aggregate), nhờ đó truy vấn rẻ hơn. Một biến thể khác lưu `(value, minSoFar)` ở mỗi mục; thao tác đơn giản hơn nhưng metadata bị lặp nhiều hơn.
 
-Increasing stack giữ bars có left boundary tiềm năng chưa bị một bar thấp hơn chặn.
+## 16. Xây hàng đợi bằng hai ngăn xếp
 
-Khi gặp height thấp hơn, các bars cao hơn trên stack biết rằng current index là first smaller bên phải. Node mới trên stack sau pop xác định smaller boundary bên trái.
+`inStack` nhận `enqueue`, `outStack` cung cấp `dequeue`. Khi `outStack` rỗng, chuyển toàn bộ phần tử từ `inStack` sang `outStack`. Mỗi phần tử chỉ được chuyển số lần bị chặn nên chi phí khấu hao của thao tác hàng đợi là `O(1)`.
 
-Area:
+## 17. Ngăn xếp bền vững
 
-\[
-height \times width
-\]
+Danh sách liên kết đơn bất biến (immutable singly linked list) tạo **tính bền vững phiên bản (persistence)** tự nhiên. `push` tạo node mới trỏ tới phiên bản cũ; `pop` trả về phần đuôi cũ. Các phiên bản chia sẻ cấu trúc (structural sharing) thay vì sao chép toàn bộ.
 
-Technique này minh họa monotonic stack như một structure lưu **candidates chưa biết boundary cuối cùng**.
+## 18. Tràn ngăn xếp và độ sâu đệ quy
 
-## 15. Min Stack và augmented state
+Độ sâu đệ quy tối đa phụ thuộc kích thước stack của runtime, kích thước mỗi khung, compiler/JIT, biến cục bộ và công cụ gỡ lỗi. Nếu dữ liệu có thể tạo độ sâu `O(n)`, phiên bản lặp thường đáng cân nhắc dù phiên bản đệ quy dễ đọc hơn.
 
-Muốn `getMin()` `O(1)` có thể lưu thêm minima stack:
+## 19. Đệ quy đuôi không đảm bảo bộ nhớ hằng số
 
-```java
-class MinStack {
-    Deque<Integer> values = new ArrayDeque<>();
-    Deque<Integer> mins = new ArrayDeque<>();
+Một số ngôn ngữ hoặc compiler tối ưu **lời gọi đuôi (tail-call optimization)** trong những điều kiện nhất định. Java không đảm bảo loại bỏ lời gọi đuôi như một hợp đồng ngữ nghĩa. Vì vậy không nên kết luận rằng đệ quy đuôi luôn dùng bộ nhớ `O(1)` nếu runtime không đảm bảo.
 
-    void push(int x) {
-        values.push(x);
-        if (mins.isEmpty() || x <= mins.peek()) mins.push(x);
-    }
+## 20. Bộ nhớ stack và vòng đời object cục bộ
 
-    int pop() {
-        int x = values.pop();
-        if (x == mins.peek()) mins.pop();
-        return x;
-    }
+Trong C, vòng đời object cấp phát trên stack kết thúc khi scope hoặc khung lời gọi kết thúc. Trả con trỏ tới biến cục bộ tạo con trỏ treo (dangling pointer). **Stack ADT** và **call stack của runtime** là hai khái niệm khác nhau dù cùng mang tính LIFO; một Stack ADT hoàn toàn có thể dùng heap.
 
-    int min() { return mins.peek(); }
-}
-```
+## 21. Treiber Stack không khóa
 
-Ta trả extra memory để duy trì aggregate incremental. Pattern này giống augmented tree: lưu đủ summary để query rẻ hơn.
+Treiber Stack là ngăn xếp đồng thời dùng thao tác nguyên tử **so sánh và hoán đổi (CAS — compare-and-swap)** trên `head`. Phần khó nằm ở thu hồi bộ nhớ và **vấn đề ABA (ABA problem)**. Hazard pointer, epoch hoặc con trỏ gắn phiên bản có thể cần thiết. Tính đúng trong môi trường đồng thời không thể suy trực tiếp từ bất biến LIFO tuần tự.
 
-Một biến thể lưu tại mỗi entry `(value, minSoFar)`; push/pop đơn giản hơn nhưng duplicate metadata nhiều hơn.
+## 22. Ngăn xếp giới hạn dung lượng
 
-## 16. Stack with lazy deletion / two-stack transformations
+Nếu biết trước độ sâu tối đa, ngăn xếp có dung lượng cố định tránh được cấp phát và thay đổi kích thước. Khi đầy, API phải định nghĩa rõ hành vi. Hệ thống nhúng hoặc thời gian thực thường thích bộ nhớ giới hạn vì mức dùng bộ nhớ và độ trễ dễ dự đoán hơn.
 
-Nhiều structures có thể được xây từ stacks.
+## 23. Ngữ nghĩa lỗi và underflow
 
-Queue bằng hai stacks:
+`pop` trên ngăn xếp rỗng là **underflow**. API có thể ném ngoại lệ, trả `Optional/null`, trả `boolean` kèm tham số đầu ra hoặc dùng assertion nếu đây là lỗi lập trình nội bộ. Lựa chọn phụ thuộc tầng abstraction và hợp đồng API.
 
-```text
-inStack  nhận enqueue
-outStack cung cấp dequeue
-```
+## 24. Kiểm thử ngăn xếp
 
-Khi `outStack` rỗng, chuyển toàn bộ `inStack` sang `outStack`. Mỗi element chuyển tối đa một lần qua lại theo phase, cho amortized `O(1)` queue operations.
+Cần kiểm tra thứ tự LIFO, `peek` không xóa phần tử, `size` chính xác và hành vi underflow. Có thể dùng **kiểm thử vi sai (differential testing)** để so cấu trúc tự viết với một cấu trúc tham chiếu. Thuật toán ngăn xếp đơn điệu nên được so với lời giải vét cạn `O(n²)` trên nhiều đầu vào nhỏ ngẫu nhiên.
 
-Đây là ví dụ stack + amortized analysis tạo ADT khác.
+## 25. Khi nào nhận ra một bài cần ngăn xếp?
 
-## 17. Persistent Stack
+Các tín hiệu thường gặp là cấu trúc lồng nhau, mở sau phải đóng trước, quay lui, DFS tường minh, phần tử lớn hơn/nhỏ hơn gần nhất, lịch sử undo, mô phỏng postorder và độ ưu tiên toán tử.
 
-Immutable singly linked stack có persistence gần như miễn phí:
+Câu hỏi hữu ích:
 
-```text
-newTop -> oldTop -> ...
-```
+> “Có những công việc nào đã bắt đầu nhưng chưa hoàn tất, và công việc mới nhất có phải được hoàn tất trước không?”
 
-Push tạo node mới trỏ version cũ; pop trả tail cũ. Các versions share structure.
+Nếu có, ngăn xếp thường là mô hình tự nhiên.
 
-Trong functional programming, stack/list persistent là primitive quan trọng vì update không phá history.
+## Mô hình tư duy
 
-## 18. Stack overflow và depth không có một con số cố định
+> Ngăn xếp là **bộ nhớ của những trạng thái tiếp tục hoặc nghĩa vụ chưa hoàn tất**, với quy tắc phần mới nhất được xử lý trước.
 
-Maximum recursion depth phụ thuộc:
-
-```text
-native/runtime stack size
-frame size
-compiler/JIT behavior
-local variables
-debug instrumentation
-```
-
-Một function có large local buffer có thể overflow sớm hơn function nhỏ.
-
-Nếu input adversarial có depth `O(n)`, iterative version thường đáng cân nhắc dù recursion đẹp hơn.
-
-## 19. Tail recursion không phải portable stack guarantee
-
-Một số language/compiler có tail-call optimization trong điều kiện nhất định; Java không đảm bảo tail-call elimination như một semantic contract. JavaScript specification/runtime support cũng không nên được giả định đồng nhất cho production portability.
-
-Vì vậy đừng dựa vào “đây là tail recursion” để kết luận stack usage constant nếu runtime không đảm bảo.
-
-## 20. Stack memory và local object lifetime
-
-Trong C, stack-allocated object lifetime kết thúc khi scope/frame kết thúc. Trả pointer tới local variable là invalid.
-
-```c
-int *bad(void) {
-    int x = 10;
-    return &x; // dangling pointer
-}
-```
-
-“Stack” data structure và “call stack memory” là hai khái niệm liên quan LIFO nhưng không giống nhau. Một stack ADT có thể được allocate trên heap; call stack là runtime execution structure.
-
-## 21. Lock-free Treiber Stack
-
-Một concurrent stack kinh điển là Treiber stack dùng atomic compare-and-swap trên head pointer. Logical algorithm rất ngắn:
-
-```text
-read oldHead
-new.next = oldHead
-CAS(head, oldHead, new)
-retry nếu fail
-```
-
-Nhưng memory reclamation và ABA problem làm production correctness khó. Hazard pointers/epochs/tagged pointers có thể cần thiết.
-
-Điều này nhắc rằng concurrent correctness không thể suy từ sequential LIFO invariant một mình.
-
-## 22. Bounded Stack và memory predictability
-
-Nếu max depth biết trước, fixed-capacity stack có thể tránh allocation/resizing:
-
-```text
-array[capacity]
-size
-```
-
-Push khi full phải định nghĩa behavior. Embedded/real-time systems thường thích bounded storage để memory và latency predictable.
-
-## 23. Error semantics và underflow
-
-`pop` trên empty stack là underflow. API có thể:
-
-```text
-throw exception
-return optional/null
-return boolean + out parameter
-assert programmer error
-```
-
-Không có lựa chọn duy nhất; đúng hay sai phụ thuộc abstraction layer. Internal algorithm stack có thể assert invariant “không bao giờ pop empty”, trong khi public container API cần xử lý input robust hơn.
-
-## 24. Testing Stack
-
-Public behavior:
-
-```text
-push a,b,c -> pop c,b,a
-peek không remove
-size đúng
-underflow đúng contract
-```
-
-Random differential test có thể so custom stack với reference dynamic array.
-
-Monotonic stack algorithms nên so với `O(n²)` brute force trên random arrays nhỏ. Parser stack nên test malformed nesting, unary operators, empty expressions và precedence ties.
-
-## 25. Khi nào nhận ra một bài cần Stack?
-
-Các tín hiệu mạnh:
-
-```text
-nested structure
-last-opened-first-closed
-need to backtrack
-explicit DFS
-nearest greater/smaller
-undo history
-postorder simulation
-operator precedence
-```
-
-Câu hỏi tốt là:
-
-> “Có những công việc nào đã bắt đầu nhưng chưa hoàn tất, và công việc mới nhất có phải cần hoàn tất trước không?”
-
-Nếu có, stack thường là model tự nhiên.
-
-## Mental Model
-
-> Stack là **bộ nhớ của những continuation/obligation chưa hoàn tất**, với quy tắc phần mới nhất được xử lý trước.
-
-Từ parenthesis matching tới recursion, parser, monotonic stack và undo, cùng một LIFO principle xuất hiện dưới nhiều hình thức. Khi chuyển giữa recursive và iterative reasoning, hãy nghĩ stack không chỉ giữ data — nó giữ cả **trạng thái cần để tiếp tục computation**.
-
-Xem thêm: [Queues/Deque](./03_queues_deques_and_priority_queues.md), [Recursion & Backtracking](../04_algorithmic_paradigms/02_recursion_and_backtracking.md), [Graph Traversal](../03_graphs/01_graph_traversal_bfs_dfs.md).
+Từ ghép dấu ngoặc, đệ quy, parser, ngăn xếp đơn điệu đến undo, cùng một nguyên lý LIFO xuất hiện dưới nhiều hình thức. Ngăn xếp không chỉ giữ dữ liệu; nó còn giữ **trạng thái cần thiết để tiếp tục quá trình tính toán (computation)**.
