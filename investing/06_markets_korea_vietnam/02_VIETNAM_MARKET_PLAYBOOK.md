@@ -272,10 +272,176 @@ For each Vietnamese stock document: business model, controlling owners, sector c
 
 Add position-size limit based on liquidity and drawdown scenario.
 
-## 42. Mental model cuối cùng
+## 42. Credit Allocation quan trọng hơn Aggregate Credit
+
+Aggregate credit growth có thể giống nhau nhưng economic consequence rất khác nếu money đi vào productive manufacturing, mortgage demand, speculative property hoặc refinancing old debt.
+
+Một credit dashboard tốt nên hỏi:
+
+`Credit tăng ở đâu? → borrower cash flow thế nào? → collateral quality? → investment/capacity nào được tạo? → future NPL risk?`
+
+Credit quantity hỗ trợ activity ngắn hạn; credit quality quyết định sustainability.
+
+## 43. Deposit Growth và Loan-to-Deposit Pressure
+
+Banks cần funding để support loan growth. Nếu credit tăng nhanh hơn deposits, competition for funding có thể đẩy deposit rates lên và compress NIM.
+
+Theo dõi funding mix, wholesale/interbank reliance và maturity mismatch. Một bank tăng loans rất nhanh nhưng funding cost tăng mạnh có thể report growth tốt trước khi margin/asset-quality pressure xuất hiện.
+
+## 44. Corporate-Bond Refinancing Wall
+
+Company debt analysis phải nhìn maturity calendar, coupon reset, secured/unsecured status, collateral và refinancing channel. Một developer có assets lớn nhưng maturities concentrated trong 12–24 tháng có liquidity profile khác company debt dài đều.
+
+Stress framework:
+
+`Operating Cash + Presales/Collections + Asset Sales + New Financing - Debt Maturities - Mandatory Capex`
+
+Nếu buffer nhỏ, valuation phải include dilution/restructuring probability.
+
+## 45. Property Legal Cycle như Economic Driver
+
+Real-estate value không chỉ phụ thuộc demand. Legal approval determines when land becomes sellable inventory and when project cash flows can begin.
+
+Research nên map each major project through milestones thay vì dùng aggregate land-bank area. Legal progress có thể là catalyst thực vì nó chuyển option value thành monetizable asset.
+
+## 46. Inventory Quality của Developer
+
+Property inventory cần tách land cost, construction in progress, completed units và capitalized financing. Inventory tăng không automatically bullish.
+
+Nếu inventory nằm ở project delayed/legal uncertain, carrying cost tăng mà cash realization chậm. Analyst nên compare inventory growth với presales, customer advances và debt growth.
+
+## 47. Broker Margin Book và Liquidity Feedback
+
+Securities firms vừa là beneficiary vừa là amplifier của market cycle. Margin loans tăng tạo interest income nhưng cũng tạo collateral risk.
+
+Chain trong bull market:
+
+`Prices ↑ → collateral value ↑ → margin capacity ↑ → buying power ↑ → turnover ↑`
+
+Bear market đảo chiều chain và có thể tạo forced selling. Khi phân tích broker, margin-book growth phải đi cùng equity buffer, funding cost và collateral quality.
+
+## 48. Proprietary Trading Quality
+
+Broker profit từ proprietary book cần tách realized/unrealized gains, equities, bonds và derivatives. Một quarter profit cao nhờ mark-to-market không có quality giống recurring brokerage/margin income.
+
+Valuation broker nên normalize through-cycle turnover và prop-trading contribution thay vì annualize peak quarter.
+
+## 49. State-Owned Enterprise và Capital Allocation
+
+Companies có state ownership hoặc strategic public role có thể optimize multiple objectives ngoài minority shareholder return. Điều này không tự động xấu, nhưng capital allocation, dividend policy, pricing/regulation và investment mandate cần được hiểu.
+
+Investor nên model what cash can realistically reach minority shareholders, không chỉ accounting profit.
+
+## 50. Privatization / Ownership Change như Event
+
+Ownership restructuring, divestment hoặc strategic investor entry có thể thay governance/capital allocation. Nhưng event thesis phải specify mechanism: board/incentives thay đổi? free float tăng? assets được restructured? payout cải thiện?
+
+Không nên assume ownership headline tự động tạo permanent re-rating.
+
+## 51. Domestic Savings Allocation
+
+Household savings có thể luân chuyển giữa deposits, property, gold, equities và other assets. Deposit-rate changes vì vậy ảnh hưởng opportunity cost của equity.
+
+Nhưng flow không phải valuation law. Low deposit rates hỗ trợ risk appetite, nhưng nếu earnings deteriorate mạnh thì liquidity alone không guarantee bull market.
+
+## 52. Market Turnover và Breadth Regimes
+
+High turnover concentrated in speculative small caps khác high turnover broad across banks/industrials/consumer.
+
+Một healthy broad rally thường có breadth và earnings revisions cải thiện cùng nhau. Nếu index/turnover tăng nhưng breadth narrow và margin leverage tăng nhanh, risk profile khác.
+
+## 53. Foreign Flow vs Domestic Flow
+
+Foreign net selling có thể kéo large-cap sentiment nhưng domestic liquidity có thể absorb. Ngược lại foreign buying không guarantee broad market rise nếu domestic deleveraging mạnh.
+
+Normalize foreign flow relative to total turnover/free float và identify whether flow is ETF/index rebalance or discretionary allocation.
+
+## 54. Index Weight và Liquidity Premium
+
+Large liquid names có thể receive valuation premium vì institutional accessibility. Nếu market infrastructure/access cải thiện, liquidity premium có thể redistribute.
+
+Nhưng index inclusion/reclassification không change ROE/FCF directly. Long-run re-rating cần combine access improvement với business quality và governance.
+
+## 55. Earnings Revision Breadth cho Vietnam
+
+Theo dõi bao nhiêu sectors/companies có EPS forecast rising vs falling. Bank upgrades alone có thể lift index earnings while property/consumer/manufacturing still weak.
+
+Revision breadth giúp distinguish index-level recovery from broad corporate recovery.
+
+## 56. Normalized Valuation theo Cycle
+
+Banks: connect P/B with sustainable ROE, credit cost and capital need. Property: NAV/project cash flow plus legal/refinancing haircut. Brokers: through-cycle turnover/margin loans. Cyclicals: mid-cycle margin/utilization. Retail: mature-store economics và reinvestment runway.
+
+Trailing P/E alone thường dangerous ở sectors cyclical hoặc accounting recognition lumpy.
+
+## 57. Public Investment: Budget vs Disbursement vs Company Cash
+
+Headline approved budget là stage đầu. Investor phải theo actual disbursement, project award, contractor backlog, execution capacity và receivable collection.
+
+Một contractor có record backlog nhưng negative operating cash flow kéo dài có thể cần more debt despite reported profit.
+
+## 58. FDI Spillover không tự động
+
+FDI inflow giúp industrial parks/logistics, nhưng domestic suppliers hưởng lợi chỉ khi local content, technology transfer và procurement linkages tăng.
+
+Country-level export growth có thể lớn trong khi listed domestic companies capture limited margin. Mapping value capture là bước bắt buộc.
+
+## 59. FX Stress Test theo Company
+
+Build company currency map: export revenue, imported inputs, USD debt, lease obligations và hedge policy.
+
+Scenario `VND weaker +5%` không có same effect across exporters/importers. Airline/retail importer, seafood exporter và industrial park developer có different transmission.
+
+## 60. SBV Policy Trade-Off Matrix
+
+Policy decision nên xem qua ba constraints:
+
+`Domestic growth/credit need`
+
+`Inflation/liquidity condition`
+
+`FX/USD pressure`
+
+Nếu growth weak nhưng USD pressure high, easing room có thể smaller. Nếu FX stable và inflation benign, domestic support room rộng hơn. Framework giúp tránh đọc policy chỉ từ one rate decision.
+
+## 61. Event Study cho Vietnam
+
+Trước major policy/market event, record consensus và positioning. Sau event, theo VN-Index/VN30, banks/property/brokers, turnover, breadth, foreign flow, USD/VND, deposit/interbank rates và relevant bond/liquidity signals.
+
+Review T+1, one week và one month để phân biệt knee-jerk flow với fundamental transmission.
+
+## 62. Liquidity-Aware Position Sizing
+
+Position size nên dựa không chỉ portfolio % mà cả average trading value, order-book depth và bad-day exit assumption.
+
+Một simple stress question: nếu chỉ exit được 10–20% normal daily liquidity trong stress và stock floor multiple sessions, position có còn survivable không?
+
+Đây là risk đặc biệt quan trọng với small/mid caps.
+
+## 63. Governance Monitoring qua Capital Raises
+
+Private placements, rights offerings, convertible instruments và related-party transactions có thể materially change per-share value.
+
+Khi company raise capital, hỏi: capital dùng làm gì, expected incremental ROIC, issue price fair không, controlling owner có participate, dilution bao nhiêu và cash có thực sự flow vào productive assets không?
+
+## 64. Vietnam Research Cadence
+
+Một operating cadence hữu ích:
+
+`Daily: price/breadth/turnover/FX/foreign flow anomalies`
+
+`Weekly: margin/liquidity/deposit rates/sector leadership`
+
+`Monthly: credit/CPI/PMI/trade/FDI/public investment/SBV`
+
+`Quarterly: earnings/cash flow/debt/governance/model update`
+
+Cadence giúp giảm noise và giữ thesis anchored vào variables đúng horizon.
+
+## 65. Mental model cuối cùng
 
 Analyze Vietnam through:
 
-`Global demand/USD → trade/FDI/VND → SBV/liquidity/credit → domestic sectors → company cash flow/balance sheet → governance → valuation → liquidity/margin/flows`
+`Global demand/USD → trade/FDI/VND → SBV/liquidity/credit allocation → banks/property/domestic sectors → company cash flow/balance sheet → governance → normalized valuation → liquidity/margin/flows`
 
 This prevents two common errors: treating VN-Index as direct GDP proxy, and treating cheap valuation as sufficient without cash-flow, liquidity and governance analysis.
