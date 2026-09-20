@@ -8,7 +8,7 @@ Library này được tổ chức theo **conceptual dependency** thay vì Beginn
 
 Không cần học mọi folder theo thứ tự tuyệt đối. Tuy nhiên, một số dependency là thật: muốn hiểu vì sao Transformer hoạt động thì cần hiểu vector, matrix, probability, optimization và neural network; muốn hiểu RAG đúng bản chất thì cần hiểu information retrieval, embedding và language model; muốn hiểu Agent thì cần nối classical agent, planning, state, tool use và feedback loop.
 
-Một reading path trung tâm được khuyến nghị là:
+Reading path trung tâm:
 
 ```mermaid
 flowchart TD
@@ -16,12 +16,14 @@ flowchart TD
     A --> S[Search, Reasoning & Planning]
     M --> ML[Machine Learning]
     S --> ML
+    S --> KR[Knowledge & Reasoning]
     ML --> NN[Neural Networks]
     NN --> DL[Deep Learning Architectures]
     DL --> T[Attention & Transformer]
     T --> LLM[Large Language Models]
     LLM --> RAG[Retrieval & RAG]
     LLM --> AG[Agents & Tool Use]
+    S --> AG
     RAG --> SYS[AI Engineering]
     AG --> SYS
     SYS --> OPS[MLOps / LLMOps]
@@ -29,8 +31,6 @@ flowchart TD
 ```
 
 ## Mental model xuyên suốt
-
-Một AI system có thể được nhìn như một chuỗi biến đổi:
 
 ```text
 Environment / Problem
@@ -50,7 +50,7 @@ Action / Output
 Feedback
 ```
 
-Không phải system nào cũng có đủ mọi bước. Một classifier có thể chỉ nhận input và trả prediction. Một reinforcement-learning agent có feedback trực tiếp từ environment. Một LLM application có thể thêm retrieval, tools, memory và orchestration. Tuy vậy mental model này giúp nối các nhánh AI tưởng như rời rạc thành một hệ thống chung.
+Không phải system nào cũng có đủ mọi bước. Một classifier có thể chỉ nhận input và trả prediction. Một reinforcement-learning agent có feedback trực tiếp từ environment. Một LLM application có thể thêm retrieval, tools, memory và orchestration. Mental model này giúp nối các nhánh AI thành một knowledge graph thay vì collection buzzwords.
 
 ## Structure
 
@@ -74,8 +74,16 @@ Không phải system nào cũng có đủ mọi bước. Một classifier có th
 │   ├── 05_information_theory.md
 │   ├── 06_optimization.md
 │   └── 07_numerical_computation.md
-├── 02_search_reasoning_and_planning/         # đang triển khai
-├── 03_knowledge_and_reasoning/                # planned
+├── 02_search_reasoning_and_planning/
+│   ├── README.md
+│   ├── 00_state_space_and_search.md
+│   ├── 01_uninformed_search.md
+│   ├── 02_heuristic_search.md
+│   ├── 03_adversarial_search_and_games.md
+│   ├── 04_constraint_satisfaction.md
+│   ├── 05_planning.md
+│   └── 06_decision_making_under_uncertainty.md
+├── 03_knowledge_and_reasoning/                # next
 ├── 04_machine_learning/                       # planned
 ├── 05_neural_networks/                        # planned
 ├── 06_deep_learning_architectures/            # planned
@@ -96,34 +104,40 @@ Không phải system nào cũng có đủ mọi bước. Một classifier có th
 └── 90_connections/                            # planned
 ```
 
+## Layer 00 — Foundations
+
+Foundation layer xây mental model chung: AI là gì, lịch sử các paradigm, agent/environment, problem representation, AI system architecture và taxonomy AI ↔ ML ↔ DL ↔ Generative AI.
+
+Bắt đầu: [What is Artificial Intelligence?](./00_foundations/00_what_is_artificial_intelligence.md).
+
+## Layer 01 — Mathematical Foundations
+
+Mathematical layer gồm Linear Algebra, Probability, Statistics, Calculus, Information Theory, Optimization và Numerical Computation. Nội dung nối trực tiếp tới embeddings, attention, cross-entropy, backpropagation, AdamW, LoRA, mixed precision và quantization.
+
+Bắt đầu: [Mathematical Foundations](./01_mathematical_foundations/README.md).
+
+## Layer 02 — Search, Reasoning and Planning Foundations
+
+Layer này đi từ state-space search tới BFS/DFS/UCS, A*, adversarial game search, CSP/SAT, formal planning và decision making under uncertainty với MDP/POMDP/bandits.
+
+Điểm quan trọng là các concepts này sẽ được reuse trong modern Agents và Reinforcement Learning thay vì coi classical AI là lịch sử đã bị thay thế.
+
+Bắt đầu: [Search, Reasoning and Planning](./02_search_reasoning_and_planning/README.md).
+
 ## Những câu hỏi cốt lõi library sẽ trả lời
 
-AI không nên được học như một collection framework. Library này tập trung vào các câu hỏi bền vững hơn: một problem được biểu diễn thành state, vector hay probability distribution như thế nào; tại sao learning có thể xảy ra từ finite data; loss function đang đo điều gì; gradient thực sự mang thông tin gì; representation learning khác feature engineering ra sao; attention giải quyết limitation nào của sequence models; một LLM “biết” gì trong parameters và “không biết” gì; embedding space mang nghĩa gì; retrieval bổ sung knowledge cho model ra sao; agent khác workflow ở đâu; vì sao evaluation AI khó hơn unit test truyền thống; và tại sao production AI là bài toán software + data + model + infrastructure chứ không chỉ là model.
-
-## Các layer đã hoàn thiện
-
-### 00 — Foundations
-
-Foundation layer xây mental model chung cho toàn library: AI là gì, các paradigm lịch sử, agent/environment, problem representation, system architecture và taxonomy AI ↔ ML ↔ DL ↔ Generative AI.
-
-Bắt đầu tại [What is Artificial Intelligence?](./00_foundations/00_what_is_artificial_intelligence.md).
-
-### 01 — Mathematical Foundations
-
-Mathematical layer đã được tách thành các chapter độc lập về Linear Algebra, Probability, Statistics, Calculus, Information Theory, Optimization và Numerical Computation. Mục tiêu không phải học toán tách rời mà hiểu tại sao mỗi tool xuất hiện trong AI.
-
-Bắt đầu tại [Mathematical Foundations](./01_mathematical_foundations/README.md).
+AI không nên được học như một collection framework. Library tập trung vào những câu hỏi bền vững hơn: problem được biểu diễn thành state, vector hay probability distribution như thế nào; search space nổ theo combinatorics ra sao; learning có thể generalize từ finite data vì sao; loss/gradient mang ý nghĩa gì; attention giải quyết limitation nào; LLM lưu pattern gì trong parameters; retrieval bổ sung external information ra sao; agent khác workflow ở đâu; và vì sao production AI là bài toán software + data + model + infrastructure.
 
 ## Terminology convention
 
-Khi một thuật ngữ quan trọng xuất hiện lần đầu, chapter ưu tiên giữ **English term**, giải thích bằng tiếng Việt và thêm **한국어 용어** nếu thuật ngữ thường gặp trong môi trường học tập hoặc công việc tại Hàn Quốc. Ví dụ: `inference (추론 / suy luận)`, `training (학습 / huấn luyện)`, `loss function (손실 함수 / hàm mất mát)`, `embedding (임베딩 / biểu diễn vector)`.
+Khi thuật ngữ quan trọng xuất hiện lần đầu, chapter ưu tiên giữ **English term**, giải thích bằng tiếng Việt và thêm **한국어 용어** nếu hữu ích trong môi trường học tập/công việc tại Hàn Quốc, ví dụ `inference (추론 / suy luận)`, `training (학습 / huấn luyện)`, `heuristic (휴리스틱)`, `loss function (손실 함수)`, `embedding (임베딩)`.
 
-## Nguyên tắc triển khai nội dung
+## Nguyên tắc triển khai
 
-Các folder không được tạo chỉ để có đủ taxonomy. Một folder được coi là “bắt đầu” khi đã có chapter thực sự có thể đọc độc lập. Không tạo hàng loạt file placeholder rỗng.
+Không tạo hàng loạt file placeholder chỉ để đủ taxonomy. Một folder chỉ được coi là bắt đầu khi có chapter đọc độc lập được. Mỗi chapter phải đi từ problem/phenomenon tới mechanism, assumptions, limitations, examples và connections.
 
-Mỗi chapter phải đi từ problem/phenomenon đến mechanism, assumptions, limitations, examples và connections. Những connection như `attention ↔ linear algebra`, `cross-entropy ↔ information theory`, `agent ↔ classical planning`, `RAG ↔ information retrieval`, `LLMOps ↔ distributed systems` được giải thích tại nơi chúng thực sự cần thiết thay vì gom thành trivia.
+Connections như `attention ↔ linear algebra`, `cross-entropy ↔ information theory`, `agent ↔ planning/MDP`, `RAG ↔ information retrieval`, `LLMOps ↔ distributed systems` được giải thích tại nơi chúng thật sự cần thiết.
 
 ## Trạng thái hiện tại
 
-`00_foundations/` và `01_mathematical_foundations/` đã có nội dung đầy đủ ở mức foundation. Phần đang được triển khai tiếp theo là `02_search_reasoning_and_planning/`, sau đó mới đi vào knowledge representation và Machine Learning để giữ dependency logic.
+Đã hoàn thiện foundation layer, mathematical foundations và search/reasoning/planning foundations. Dependency tiếp theo là **Knowledge Representation & Reasoning**, sau đó mới mở rộng Machine Learning để nối symbolic/probabilistic AI với learning-based AI.
