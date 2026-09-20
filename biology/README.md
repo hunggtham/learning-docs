@@ -12,8 +12,10 @@ flowchart TD
     D --> E[Inheritance & variation]
     E --> F[Evolution]
     F --> G[Diversity & phylogeny]
+    F --> M[Microorganisms & viruses]
     B --> H[Organismal biology]
     H --> I[Ecology]
+    M --> I
     D --> J[Genomics & biotechnology]
     I --> K[Conservation & Earth systems]
     J --> L[Bioinformatics & computation]
@@ -37,7 +39,8 @@ biology/
 │   └── 02_genomics_epigenetics_and_regulation.md
 ├── 03_evolution_and_diversity/
 │   ├── 00_evolution_and_population_genetics.md
-│   └── 01_phylogeny_taxonomy_and_biodiversity.md
+│   ├── 01_phylogeny_taxonomy_and_biodiversity.md
+│   └── 02_microorganisms_and_viruses.md
 ├── 04_organismal_biology/
 │   ├── 00_plant_biology.md
 │   ├── 01_animal_physiology_and_homeostasis.md
@@ -55,12 +58,12 @@ biology/
 
 ## Dependency chính
 
-Hóa học của sự sống là nền cho sinh học tế bào. Sinh học tế bào là nền cho chuyển hóa, truyền tín hiệu, DNA và biểu hiện gene. Di truyền học tạo cầu nối sang tiến hóa. Tiến hóa giải thích vì sao đa dạng sinh học có cấu trúc như hiện tại. Sinh lý học cơ thể dựa trên tế bào, signaling và homeostasis, còn sinh thái học nghiên cứu khi các cá thể và loài tương tác ở quy mô lớn hơn.
+Hóa học của sự sống là nền cho sinh học tế bào. Sinh học tế bào là nền cho chuyển hóa, truyền tín hiệu, DNA và biểu hiện gene. Di truyền học tạo cầu nối sang tiến hóa. Tiến hóa giải thích vì sao đa dạng sinh học có cấu trúc như hiện tại và vì sao microbial population thay đổi nhanh. Sinh lý học cơ thể dựa trên tế bào, signaling và homeostasis, còn sinh thái học nghiên cứu khi các cá thể, species và microorganism tương tác ở quy mô lớn hơn.
 
 Mỗi file được viết đủ self-contained để đọc độc lập, nhưng các liên kết `[[...]]` chỉ ra các dependency có giá trị. Nếu một thuật ngữ quan trọng xuất hiện lần đầu, nó được ghi theo dạng “Tiếng Việt (English / 한국어)”.
 
 ## Cách đọc
 
-Có thể đọc tuyến tính theo sơ đồ trên, nhưng không bắt buộc. Nếu muốn hiểu con người và y sinh học, có thể đi từ `00_foundations` → `01_cell_biology` → `02_genetics_molecular_biology` → `04_organismal_biology`. Nếu muốn hiểu AI/bioinformatics, nên đọc thêm `06_biotechnology_computation` và `90_connections`. Nếu muốn hiểu môi trường và biến đổi khí hậu, đi từ evolution sang ecology sẽ tự nhiên hơn.
+Có thể đọc tuyến tính theo sơ đồ trên, nhưng không bắt buộc. Nếu muốn hiểu con người và y sinh học, có thể đi từ `00_foundations` → `01_cell_biology` → `02_genetics_molecular_biology` → `04_organismal_biology`. Nếu muốn hiểu AI/bioinformatics, nên đọc thêm `06_biotechnology_computation` và `90_connections`. Nếu muốn hiểu microbiome, virus và antibiotic resistance, đi từ cell biology → genetics → evolution → `03_evolution_and_diversity/02_microorganisms_and_viruses.md`. Nếu muốn hiểu môi trường và biến đổi khí hậu, đi từ evolution sang ecology sẽ tự nhiên hơn.
 
 > Mental model trung tâm: sự sống là quá trình duy trì trật tự cục bộ nhờ dòng năng lượng, vật chất và thông tin, trong khi vẫn tuân theo đầy đủ các định luật vật lý và hóa học.
