@@ -2,61 +2,51 @@
 
 Tài liệu này theo dõi **profile thực sự đã được viết**, không tính README inventory là profile hoàn chỉnh.
 
-## Hoàn thành nền tảng atlas
+## Nền tảng atlas — hoàn thành
 
 - Methodology và coverage policy: hoàn thành.
-- Global inventory theo UN M49: hoàn thành ở cấp continent/subregion README.
+- Global inventory theo UN M49: hoàn thành.
 - Profile template: hoàn thành.
 - Supplemental policy cho các không gian không là entry M49 chính: hoàn thành.
 
-## Asia — hoàn thành coverage M49
+## Asia — hoàn thành baseline M49
 
-**Central Asia:** Kazakhstan, Kyrgyzstan, Tajikistan, Turkmenistan, Uzbekistan.
+Central Asia, Eastern Asia, South-eastern Asia, Southern Asia và Western Asia đều đã có profile. Supplemental geographic profile cho Taiwan đã được tạo để phục vụ học địa lý mà không dùng cấu trúc file làm tuyên bố về chủ quyền.
 
-**Eastern Asia:** China, Hong Kong SAR, Macao SAR, Democratic People's Republic of Korea, Japan, Mongolia, Republic of Korea. Supplemental geographic profile cho Taiwan đã được tạo.
+## Europe — hoàn thành baseline M49
 
-**South-eastern Asia:** Brunei Darussalam, Cambodia, Indonesia, Lao People's Democratic Republic, Malaysia, Myanmar, Philippines, Singapore, Thailand, Timor-Leste, Viet Nam.
+Eastern, Northern, Southern và Western Europe đều đã có profile. Kosovo có supplemental geographic profile với ghi chú classification trung tính.
 
-**Southern Asia:** Afghanistan, Bangladesh, Bhutan, India, Iran, Maldives, Nepal, Pakistan, Sri Lanka.
+## Africa — hoàn thành baseline M49
 
-**Western Asia:** Armenia, Azerbaijan, Bahrain, Cyprus, Georgia, Iraq, Israel, Jordan, Kuwait, Lebanon, Oman, Qatar, Saudi Arabia, State of Palestine, Syrian Arab Republic, Türkiye, United Arab Emirates, Yemen.
+Northern, Eastern, Middle, Southern và Western Africa đều đã có profile cho toàn bộ country/area trong inventory M49, gồm island/overseas areas và Western Sahara theo tên entry thống kê.
 
-## Europe — hoàn thành coverage M49
+## Americas — hoàn thành baseline M49
 
-**Eastern Europe:** Belarus, Bulgaria, Czechia, Hungary, Poland, Republic of Moldova, Romania, Russian Federation, Slovakia, Ukraine.
+Northern America, Central America, Caribbean và South America đều đã có profile. Americas còn có chapter continental patterns nối mountain systems, basins, urban corridors, gateways và climate teleconnections.
 
-**Northern Europe:** Åland Islands, Denmark, Estonia, Faroe Islands, Finland, Guernsey, Iceland, Ireland, Isle of Man, Jersey, Latvia, Lithuania, Norway, Svalbard and Jan Mayen Islands, Sweden, United Kingdom.
+## Oceania — hoàn thành baseline M49
 
-**Southern Europe:** Albania, Andorra, Bosnia and Herzegovina, Croatia, Gibraltar, Greece, Holy See, Italy, Malta, Montenegro, North Macedonia, Portugal, San Marino, Serbia, Slovenia, Spain.
+Australia and New Zealand, Melanesia, Micronesia và Polynesia đều đã có profile cho mọi country/area trong inventory. Oceania có chapter regional patterns giải thích high island–atoll contrast, freshwater lens, ocean-distance logistics và reef as natural infrastructure.
 
-**Western Europe:** Austria, Belgium, France, Germany, Liechtenstein, Luxembourg, Monaco, Netherlands, Switzerland.
+## Antarctica — hoàn thành atlas profile
 
-**Supplemental Europe:** Kosovo có hồ sơ địa lý riêng với ghi chú classification trung tính.
+Antarctica có chapter riêng phù hợp một polar continent thay vì ép vào country template, bao gồm ice dynamics, Southern Ocean, research logistics và remote sensing.
 
-## Africa — hoàn thành coverage M49
+# Baseline global coverage: HOÀN THÀNH
 
-Northern, Eastern, Middle, Southern và Western Africa đều đã có profile cho toàn bộ country/area trong inventory M49, gồm cả island/overseas areas và Western Sahara theo đúng tên entry thống kê. Đây là baseline coverage; một số profile ngắn sẽ tiếp tục được nâng sâu ở pass sau.
+Ở cấp inventory M49, atlas hiện đã có profile cho **tất cả country/area thuộc Africa, Americas, Asia, Europe, Oceania và Antarctica**, cộng supplemental profiles cho một số không gian địa lý không tách riêng như entry M49 chính.
 
-## Americas — hoàn thành coverage M49
+Điều này không có nghĩa mọi chapter đã đạt độ sâu cuối cùng. Từ đây library chuyển sang **Depth Pass**.
 
-**Northern America:** Bermuda, Canada, Greenland, Saint Pierre and Miquelon, United States of America.
+## Depth Pass — thứ tự ưu tiên
 
-**Central America:** Belize, Costa Rica, El Salvador, Guatemala, Honduras, Mexico, Nicaragua, Panama.
+1. Nâng các profile hiện còn compact, đặc biệt Africa và một số Asia/Europe entries được tạo ở batch đầu.
+2. Chuẩn hóa mỗi profile theo causal chain: physical base → settlement → economy → network → hazard.
+3. Bổ sung misconception, comparative geography và cross-links.
+4. Thêm các chapter comparison theo pattern: landlocked states, archipelagos, megadeltas, mountain states, desert states, global city-states, polar/subpolar territories.
+5. Giữ số liệu thay đổi nhanh ra khỏi narrative chính hoặc ghi rõ thời điểm/nguồn khi thật sự cần.
 
-**Caribbean:** toàn bộ 28 country/area trong M49 đã có profile, từ Greater Antilles tới Lesser Antilles và các low carbonate archipelagos.
+## Definition of Done nâng cao
 
-**South America:** toàn bộ 16 country/area trong M49 đã có profile, bao gồm French Guiana, Falkland Islands (Malvinas), Bouvet Island và South Georgia and the South Sandwich Islands theo tên M49.
-
-Ngoài country/area profiles, Americas có chapter tổng hợp continental patterns để nối mountain systems, basins, urban corridors, trade gateways và climate teleconnections.
-
-## Chưa hoàn thành baseline profile
-
-- Oceania: inventory đã có, profile chi tiết chưa hoàn thành.
-- Antarctica: mới có entry định hướng, chưa có chapter atlas sâu.
-- Supplemental: sẽ tiếp tục bổ sung khi cần cho các không gian địa lý không tách thành entry M49 chính.
-
-## Definition of Done cho mỗi profile
-
-Một profile chỉ chuyển sang trạng thái hoàn thành khi có đủ: khung không gian; địa hình/kiến tạo; khí hậu–nước; dân cư/đô thị; kinh tế không gian; mạng giao thông–liên kết; rủi ro; mental model; cross-link. Những area rất nhỏ có thể gộp một số mục nhưng vẫn phải giải thích cơ chế thay vì chỉ liệt kê facts.
-
-Sau khi baseline toàn cầu hoàn thành, pass thứ hai sẽ ưu tiên nâng các profile compact thành textbook chapter sâu hơn, thay vì tiếp tục mở rộng số lượng file.
+Một profile đạt mức textbook khi người đọc có thể trả lời được: **vì sao dân cư nằm ở đó; vì sao network có hình dạng đó; tài nguyên/nước đến từ đâu; nút nào là critical; hazard biến thành risk bằng cơ chế nào; và territory này giống/khác nơi nào trên thế giới**.

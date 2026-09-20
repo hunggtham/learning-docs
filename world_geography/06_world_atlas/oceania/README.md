@@ -1,19 +1,21 @@
-# Oceania — Inventory theo UN M49
+# Oceania — World Atlas
+
+Oceania trong UN M49 được chia thành Australia and New Zealand, Melanesia, Micronesia và Polynesia. Đây là phân vùng thống kê; bốn nhóm không đồng nhất về geology, climate, scale hay settlement.
+
+Đọc trước [Các mẫu địa lý cấp vùng](./00_regional_patterns.md) để hiểu vì sao island morphology, ocean distance, freshwater và connectivity quan trọng hơn land area trong nhiều trường hợp.
 
 ## Australia and New Zealand
-
-Australia (AUS), Christmas Island (CXR), Cocos (Keeling) Islands (CCK), Heard Island and McDonald Islands (HMD), New Zealand (NZL), Norfolk Island (NFK).
+[Subregion index](./australia_new_zealand/README.md) — gồm Australia, New Zealand và các island areas liên quan trong M49.
 
 ## Melanesia
-
-Fiji (FJI), New Caledonia (NCL), Papua New Guinea (PNG), Solomon Islands (SLB), Vanuatu (VUT).
+[Subregion index](./melanesia/README.md) — Fiji, New Caledonia, Papua New Guinea, Solomon Islands, Vanuatu.
 
 ## Micronesia
-
-Guam (GUM), Kiribati (KIR), Marshall Islands (MHL), Micronesia — Federated States of (FSM), Nauru (NRU), Northern Mariana Islands (MNP), Palau (PLW), United States Minor Outlying Islands (UMI).
+[Subregion index](./micronesia/README.md) — Guam, Kiribati, Marshall Islands, Federated States of Micronesia, Naoero/Nauru, Northern Mariana Islands, Palau, United States Minor Outlying Islands.
 
 ## Polynesia
+[Subregion index](./polynesia/README.md) — American Samoa, Cook Islands, French Polynesia, Niue, Pitcairn, Samoa, Tokelau, Tonga, Tuvalu, Wallis and Futuna Islands.
 
-American Samoa (ASM), Cook Islands (COK), French Polynesia (PYF), Niue (NIU), Pitcairn (PCN), Samoa (WSM), Tokelau (TKL), Tonga (TON), Tuvalu (TUV), Wallis and Futuna Islands (WLF).
+## Cách đọc
 
-Với các đảo nhỏ, profile phải tránh tư duy “diện tích đất nhỏ = không quan trọng”. Không gian biển, EEZ, vị trí tuyến, cáp biển, ngư trường và khoảng cách logistics thường quan trọng hơn diện tích nổi.
+Với island profile, luôn hỏi bốn câu trước khi nhìn GDP hay population: đảo cao hay atoll thấp; freshwater đến từ đâu; node vận tải nào là lifeline; và hazard nào có thể cắt node đó.
