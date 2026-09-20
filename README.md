@@ -7,6 +7,7 @@ Kho tài liệu học được tổ chức theo từng chủ đề. Mỗi bộ c
 - [정보처리기사](정보처리기사/output/README.md): 5 môn, tài liệu Hàn–Anh–Việt, sắp xếp theo mạch kiến thức.
 - [SQLD](sql/output/README.md): mô hình dữ liệu và SQL cơ bản/nâng cao, có ví dụ truy vấn và quy tắc dễ nhầm.
 - [Mathematics Master Knowledge Book](mathematics/README.md): 87 chủ đề Toán theo conceptual dependency và first-principles, có glossary Việt–Anh–Hàn, knowledge connections và coverage audit; bao phủ thêm analysis, tensor/autodiff, stochastic processes, Bayesian inference và dynamic programming/control.
+- [Biology Knowledge Library](biology/README.md): thư viện Sinh học tổ chức theo conceptual boundary từ hóa học của sự sống, tế bào, di truyền, tiến hóa và vi sinh vật đến sinh lý cơ thể, sinh thái, công nghệ sinh học, bioinformatics và systems biology; dùng thuật ngữ Việt–Anh–Hàn, mental model, mathematical connections và coverage audit.
 - [Study Planner](planner/study-planner/README.md): ứng dụng lập kế hoạch học tập đồng bộ Supabase.
 - [Study Library](learning-library/README.md): trình đọc Markdown/PDF tĩnh cho GitHub Pages.
 
