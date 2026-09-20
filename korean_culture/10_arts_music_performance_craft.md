@@ -233,6 +233,137 @@ Khi nghệ thuật đi vào nền tảng số, khả năng tiếp cận tăng nh
 
 Bảo tồn nghệ thuật số vì vậy không chỉ lưu tệp; có khi phải lưu môi trường chạy, phần cứng, tài liệu và hướng dẫn tái tạo.
 
+## Nghệ thuật như một chuỗi lao động, không chỉ một tên nghệ sĩ
+
+Một triển lãm hoặc tác phẩm lớn có thể cần nghệ sĩ, trợ lý xưởng, kỹ thuật viên, người vận chuyển, người đóng khung, giám tuyển, nhà thiết kế, dịch giả, người lắp đặt, bảo vệ, nhân sự truyền thông và giáo dục công chúng.
+
+Tên nghệ sĩ thường là tín hiệu dễ thấy nhất, nhưng **lao động hậu trường (backstage labour)** mới làm tác phẩm có thể xuất hiện an toàn và đúng ý đồ.
+
+```text
+ý tưởng
+→ sản xuất vật thể / phần mềm / biểu diễn
+→ vận chuyển
+→ lắp đặt
+→ diễn giải
+→ bảo quản
+→ tháo dỡ / lưu trữ
+```
+
+Mỗi bước có kỹ năng riêng. Vì vậy “nghệ sĩ sáng tạo, còn bảo tàng chỉ trưng bày” là mô hình quá đơn giản.
+
+## Nguồn thu nghệ thuật: danh tiếng và tiền không đi cùng một đường
+
+Nghệ sĩ có thể nhận thu nhập từ bán tác phẩm, biểu diễn, giảng dạy, tiền đặt hàng, tài trợ, bản quyền, công việc phụ hoặc hợp đồng dự án. Uy tín chuyên môn cao không tự động tạo dòng tiền ổn định.
+
+Đây là **bất cân xứng thời gian của sự nghiệp sáng tạo**: chi phí học và sản xuất xảy ra trước, còn thu nhập có thể đến muộn, không đều và phụ thuộc mạng lưới.
+
+Một nghệ sĩ có thể có triển lãm quan trọng nhưng vẫn cần công việc khác để duy trì đời sống. Ngược lại, một sản phẩm bán tốt chưa chắc được thiết chế nghệ thuật đánh giá cao. Vì vậy cần tách:
+
+```text
+uy tín chuyên môn
+≠ khả năng hiển thị
+≠ doanh số
+≠ thu nhập ròng
+```
+
+## Tài trợ và chọn lọc: ai được nhìn thấy phụ thuộc cả chất lượng lẫn hạ tầng
+
+Quỹ công, quỹ tư nhân, phòng trưng bày, doanh nghiệp và bảo tàng đều có thể tài trợ nghệ thuật. Mỗi nguồn có tiêu chí, mục tiêu và mức tự chủ khác nhau.
+
+Khi nguồn lực khan hiếm, quy trình chọn dự án tạo **hiệu ứng cổng vào (gatekeeping)**. Điều này không nhất thiết là xấu; mọi hệ thống phải lựa chọn khi số đề xuất lớn hơn ngân sách. Nhưng cách đặt tiêu chí quyết định loại nghệ thuật nào dễ được sản xuất.
+
+Ví dụ một chương trình ưu tiên sản phẩm có thể đo lượng khách rõ sẽ tạo động lực khác chương trình ưu tiên thử nghiệm dài hạn. Chính sách tài trợ vì vậy định hình hệ sinh thái gián tiếp qua **cấu trúc phần thưởng**.
+
+## Quyền sở hữu vật thể không đồng nghĩa sở hữu mọi quyền đối với tác phẩm
+
+Trong nghệ thuật, cần tách ít nhất ba lớp:
+
+```text
+sở hữu vật thể
+≠ quyền tác giả
+≠ quyền trưng bày / sao chép / khai thác theo thoả thuận
+```
+
+Mua một bức tranh vật lý không tự động có nghĩa người mua được phép sao chép hình ảnh đó cho mọi mục đích. Ngược lại, bảo tàng có thể trưng bày một tác phẩm nhưng không sở hữu bản quyền của nó.
+
+Chi tiết pháp lý phụ thuộc luật và hợp đồng hiện hành; điều quan trọng ở tầng văn hoá là hiểu **tác phẩm vừa là vật thể vừa là tập quyền**.
+
+## Bảo quản phòng ngừa: di sản hỏng dần ngay cả khi không ai chạm vào
+
+Ánh sáng, độ ẩm, nhiệt độ, côn trùng, bụi, ô nhiễm và ứng suất cơ học đều làm vật liệu già đi. Vì vậy bảo tồn không chỉ là “sửa khi hỏng”; phần quan trọng hơn là **bảo quản phòng ngừa (preventive conservation)**.
+
+```text
+kiểm soát môi trường
++ đóng gói đúng
++ vận chuyển đúng
++ theo dõi tình trạng
+→ giảm tốc độ xuống cấp
+```
+
+Một hiện vật gỗ, giấy, vải và kim loại phản ứng khác nhau với độ ẩm. Vì vậy bảo tàng phải quản lý vi môi trường chứ không thể dùng một công thức cho mọi vật.
+
+## Tính xác thực trong thủ công: vật liệu cũ, kỹ thuật cũ hay chức năng cũ?
+
+Khi phục dựng một nghề hoặc hiện vật, “giữ nguyên” có nhiều nghĩa. Ta có thể giữ nguyên vật liệu, công cụ, quy trình, hình dáng, chức năng hoặc ý nghĩa nghi lễ — nhưng đôi khi không thể giữ tất cả.
+
+Ví dụ vật liệu cũ có thể khan hiếm hoặc gây hại môi trường; công cụ mới có thể tăng an toàn; công trình phải đáp ứng tiêu chuẩn hiện đại. Khi đó cộng đồng phải thương lượng **lớp nào là cốt lõi**.
+
+Đây là lý do tính xác thực không chỉ là “cũ hơn = thật hơn”. Nó là câu hỏi về tính liên tục của tri thức và ý nghĩa.
+
+## Bảo tồn số: lưu file không đủ
+
+Đối với tác phẩm số, nguy cơ không chỉ là mất file. Định dạng có thể lỗi thời, phần mềm hết hỗ trợ, hệ điều hành thay đổi, máy chủ đóng hoặc thiết bị tương tác không còn sản xuất.
+
+Một chiến lược bảo tồn có thể gồm:
+
+```text
+lưu file gốc
++ checksum để phát hiện lỗi bit
++ tài liệu mô tả phụ thuộc
++ di chuyển định dạng khi cần
++ mô phỏng môi trường cũ
++ ghi lại cách nghệ sĩ muốn tác phẩm vận hành
+```
+
+**Checksum** giúp biết file có thay đổi ngoài ý muốn. **Di chuyển định dạng (format migration)** đổi sang định dạng mới nhưng có nguy cơ thay hành vi. **Mô phỏng (emulation)** cố chạy môi trường cũ trên hệ mới. Mỗi cách có đánh đổi giữa độ trung thực và khả năng duy trì.
+
+## Bản gốc trong môi trường số: khi sao chép hoàn hảo trở nên dễ dàng
+
+Với tranh vật lý, bản gốc và bản sao thường có khác biệt vật chất. Với tệp số, hai bản sao bit-for-bit có thể giống hệt nhau.
+
+Do đó giá trị “bản gốc” có thể chuyển từ vật chất sang **nguồn gốc và chứng thực (provenance and authentication)**: ai tạo, phiên bản nào, quyền nào gắn với tệp và lịch sử lưu trữ ra sao.
+
+Đây là cùng bài toán xuất hiện trong ảnh số, âm nhạc và dữ liệu: khi nội dung có thể sao chép gần như không mất chất lượng, thông tin về nguồn gốc trở thành phần cốt lõi của giá trị.
+
+## Đo lường tác động nghệ thuật: lượng khách không bằng toàn bộ giá trị
+
+Bảo tàng và chương trình nghệ thuật cần số liệu để quản lý, nhưng chỉ số dễ nhìn như lượng khách, lượt xem hoặc doanh số có thể bỏ sót tác động dài hạn.
+
+```text
+lượt khách cao
+≠ học được nhiều
+≠ nghệ sĩ phát triển tốt
+≠ cộng đồng địa phương hưởng lợi
+```
+
+Một chương trình nhỏ có thể đào tạo nghệ nhân mới hoặc lưu tri thức hiếm; một triển lãm đông khách có thể chủ yếu nhờ thương hiệu lớn. Vì vậy đánh giá văn hoá cần **nhiều chỉ số**, không một bảng xếp hạng duy nhất.
+
+## Khả năng tiếp cận nghệ thuật: không chỉ có vé vào cửa
+
+Một bảo tàng miễn phí vẫn có thể khó tiếp cận nếu xa giao thông, chú giải chỉ có một ngôn ngữ, không có phụ đề, không thân thiện với xe lăn hoặc giờ mở cửa không phù hợp người đi làm.
+
+Khả năng tiếp cận gồm:
+
+```text
+vật lý
++ tài chính
++ ngôn ngữ
++ cảm giác thuộc về
++ khả năng tiếp cận số
+```
+
+Nếu người mới cảm thấy bảo tàng “không dành cho mình”, rào cản có thể là văn hoá chứ không chỉ giá vé. Thiết kế giáo dục công chúng và chú giải giúp giảm rào cản đó.
+
 ## Liên hệ kiến thức: nghệ thuật như hệ lưu trữ đa phương thức
 
 Sách lưu mô tả rõ ràng. Biểu diễn/thủ công lưu tri thức thủ tục trong cơ thể. Vật thể lưu lịch sử vật liệu. Ghi âm lưu âm thanh/hình ảnh nhưng không giữ toàn bộ tương tác.
@@ -245,15 +376,16 @@ tri thức thủ tục → cơ thể, học nghề
 tri thức vật liệu → công cụ, lò, sợi, sơn
 tri thức xã hội → nghi lễ, khán giả, cộng đồng
 tri thức giám tuyển → triển lãm, chú giải, lưu trữ
+tri thức số → file, mã, môi trường chạy, metadata
 ```
 
 Một hệ nghệ thuật khoẻ cần nhiều lớp lưu trữ cùng tồn tại.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy
 
-> Nghệ thuật Hàn Quốc không chỉ là “truyền thống” hoặc “K-pop”. Nó là một chuỗi gồm người thực hành, vật liệu, không gian, thiết chế, thị trường và khán giả. Một nghệ nhân bậc thầy, nghệ sĩ đương đại, giám tuyển hay không gian độc lập đều là những nút khác nhau trong cùng hệ sinh thái lưu giữ và tạo nghĩa.
+> Nghệ thuật Hàn Quốc không chỉ là “truyền thống” hoặc “K-pop”. Nó là một chuỗi gồm người thực hành, vật liệu, không gian, thiết chế, tài trợ, thị trường, quyền, công nghệ bảo tồn và khán giả. Muốn hiểu vì sao một thực hành sống được, cần hỏi không chỉ “nó đẹp hay quan trọng?” mà còn “ai có thời gian học, ai trả chi phí, ai lưu trữ, ai được nhìn thấy và hệ thống có thể tái tạo nó sau 30 năm hay không?”.
 
-## Hiểu lầm phổ biến (Common Misconceptions)
+## Những hiểu lầm phổ biến
 
 “Nghệ thuật truyền thống” không đồng nghĩa “cổ và bất biến”.
 
@@ -267,7 +399,19 @@ Kỹ năng thủ công không phải “bí quyết cảm tính” đối lập 
 
 “Bảo tàng chỉ là nơi cất đồ cũ” bỏ qua vai trò nghiên cứu, giám tuyển, giáo dục, bảo quản và định hình ký ức văn hoá.
 
+“Mua tác phẩm nghĩa là sở hữu mọi quyền đối với tác phẩm” là sai về cấu trúc quyền.
+
+“File số còn mở được hôm nay thì đã được bảo tồn” là quá đơn giản; phần mềm, định dạng và môi trường chạy cũng có vòng đời.
+
+“Nhiều khách hơn luôn nghĩa là chương trình văn hoá tốt hơn” bỏ qua chất lượng học tập, truyền nghề, đại diện cộng đồng và tác động dài hạn.
+
+## Đọc tiếp
+
+Đọc cùng [`13_hallyu_media_platforms.md`](13_hallyu_media_platforms.md), [`14_regions_jeju_local_identity_peninsula.md`](14_regions_jeju_local_identity_peninsula.md), [`21_historical_layers_ancient_to_modern.md`](21_historical_layers_ancient_to_modern.md) và [`27_internet_communities_messaging_slang_memes.md`](27_internet_communities_messaging_slang_memes.md).
+
 ## Nguồn tham khảo
 
 - UNESCO Intangible Cultural Heritage, danh sách của Republic of Korea.
 - UNESCO: Pansori epic chant; Arirang; Nongak; Talchum; nghi lễ tổ tiên hoàng gia Jongmyo và âm nhạc.
+- `국가유산청` / Korea Heritage Service và `국가유산진흥원`: di sản, bảo tồn và truyền thừa.
+- Với quyền tác giả, quyền khai thác và hợp đồng cụ thể, phải dùng luật và thoả thuận hiện hành thay vì suy từ phân tích văn hoá.
