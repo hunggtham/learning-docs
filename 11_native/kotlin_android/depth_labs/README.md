@@ -13,6 +13,7 @@ Nếu Production Casebook trả lời “các subsystem ghép lại như thế n
 5. [`05_testing_reliability_observability_failure_injection.md`](05_testing_reliability_observability_failure_injection.md) — invariant-based testing, fake/mock fidelity, migration/rollback test, race/failure injection, process death, Macrobenchmark, SLI/SLO, telemetry, staged rollout và incident feedback loop.
 6. [`06_build_compatibility_startup_release_forensics.md`](06_build_compatibility_startup_release_forensics.md) — Gradle/variant/manifest/resource merge, generated code, D8/R8, signing, API-level compatibility, SDK Extensions, OEM/WebView variation, cold-start critical path và release artifact forensics.
 7. [`07_sdk_native_boundary_api_evolution_consumer_safety.md`](07_sdk_native_boundary_api_evolution_consumer_safety.md) — public API/ABI, dependency leakage, Java/Kotlin interop, SDK initialization/thread/error contract, consumer R8, JNI ownership, ABI/native crash, deprecation, SemVer và consumer compatibility testing.
+8. [`08_version_compatibility_migration_forensics.md`](08_version_compatibility_migration_forensics.md) — Kotlin metadata, pre-release binary, language/API/JVM target contract, compiler-plugin lockstep, Compose compiler migration, KSP/kapt, public inline/default-arg/const/value-class ABI, Android target migration, transitive dependency floor và version-upgrade forensic playbook.
 
 ## Cách dùng cùng Production Casebook
 
@@ -39,6 +40,9 @@ Case 15/18/19 Build/compat/startup
 
 Case 17/20 NDK + SDK authoring
 → Depth Lab 07 Consumer/native safety
+
+05 Version Evolution + Case 08/15/18/20
+→ Depth Lab 08 Version compatibility + migration forensics
 ```
 
 ## Quy tắc học
@@ -55,6 +59,8 @@ process death xảy ra ở đây thì sao?
 request/result cũ có thể overwrite state mới không?
 release cũ có đọc data/artifact mới không?
 metric/log nào chứng minh behavior production?
+version change nào làm producer/consumer contract thay đổi?
+artifact hoặc metadata nào thật sự khác trước?
 ```
 
 Nếu chỉ biết tên API nhưng không trả lời được các câu trên, kiến thức vẫn đang ở mức implementation chứ chưa tới mức engineering reasoning.
@@ -71,6 +77,7 @@ Requirement
 -> Failure / Cancellation / Retry
 -> Persistence / Reconstruction
 -> Compatibility
+-> Version / Artifact Contract
 -> Observability
 -> Release / Recovery
 ```
