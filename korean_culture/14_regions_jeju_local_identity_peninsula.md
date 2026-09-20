@@ -280,6 +280,172 @@ Văn hoá vì vậy không ánh xạ một-một với lãnh thổ. Một ngư�
 
 Nhãn định danh vừa mô tả quan hệ với quê hương vừa có lớp lịch sử và chính trị. Khi viết hoặc dịch, cần xem người nói dùng từ nào và trong bối cảnh pháp lý, truyền thông hay đời thường.
 
+## Giao thông nén khoảng cách nhưng không xoá khoảng cách xã hội
+
+Đường cao tốc, KTX, đường sắt đô thị và hàng không nội địa làm giảm **thời gian di chuyển**, nhưng khoảng cách thực tế còn có nhiều lớp khác:
+
+```text
+khoảng cách vật lý
++ chi phí vé
++ tần suất chuyến
++ thời gian từ ga tới điểm cuối
++ lịch làm việc
++ khả năng đi lại của từng người
+= khoảng cách thực dụng
+```
+
+Hai thành phố có thể gần nhau về kilomet nhưng xa về cơ hội nếu chuyến ít, điểm đến cuối khó tiếp cận hoặc lịch không phù hợp. Ngược lại, một nơi xa về địa lý có thể “gần” Seoul hơn về thời gian nếu nằm trên hành lang giao thông nhanh.
+
+Đây là **nén không gian–thời gian (time-space compression)**, nhưng lợi ích phân bố không đều. Khu gần ga lớn có thể nhận thêm khách, nhà ở và đầu tư; khu nằm ngoài mạng chính có thể bị bỏ lại tương đối.
+
+## Đại học, bệnh viện và cơ quan công như “thiết chế neo” của địa phương
+
+Một thành phố không chỉ cần doanh nghiệp. Đại học, bệnh viện lớn, cơ quan công, viện nghiên cứu và cơ sở văn hoá có thể hoạt động như **thiết chế neo (anchor institutions)** vì chúng tạo việc làm tương đối ổn định, kéo người dùng dịch vụ và hình thành mạng chuyên môn.
+
+Khi một trường đại học địa phương thu hút sinh viên, nó còn duy trì nhà trọ, quán ăn, xe buýt, hiệu sách và mạng câu lạc bộ. Khi quy mô sinh viên giảm mạnh, tác động lan sang toàn hệ sinh thái.
+
+Tương tự, bệnh viện khu vực không chỉ là nơi điều trị. Nó quyết định người cao tuổi có thể sống tiếp tại quê hay phải chuyển gần thành phố lớn để tiếp cận chăm sóc. Vì vậy **hạ tầng xã hội** là một phần của bản sắc và khả năng sống còn của vùng.
+
+## Thị trường lao động địa phương: nghề nghiệp định hình ai ở lại và ai rời đi
+
+Người trẻ không rời quê chỉ vì “thích Seoul”. Họ phản ứng với cấu trúc cơ hội. Nếu ngành học, nghề nghiệp mong muốn và mạng nhà tuyển dụng tập trung ở vài đô thị, di cư trở thành chiến lược hợp lý.
+
+Có thể mô hình hoá quyết định đơn giản:
+
+```text
+lợi ích ở lại
+= chi phí nhà thấp hơn
++ mạng gia đình
++ chất lượng sống địa phương
++ cơ hội nghề phù hợp
+
+lợi ích rời đi
+= lương kỳ vọng cao hơn
++ nhiều nhà tuyển dụng
++ mạng chuyên môn dày
++ cơ hội học tập / văn hoá
+```
+
+Không có một kết quả đúng cho mọi người. Vấn đề hệ thống xuất hiện khi quá nhiều ngành nghề có giá trị cao chỉ tồn tại tại một vài nút.
+
+## 대학–취업 연결: đại học địa phương không tự động giữ người trẻ
+
+Xây hoặc duy trì đại học chưa đủ để chống suy giảm dân số nếu sinh viên học xong phải rời vùng để tìm việc. Điều quan trọng là **độ nối giữa giáo dục và thị trường lao động địa phương**.
+
+```text
+đại học đào tạo
+→ thực tập địa phương
+→ doanh nghiệp tuyển
+→ lộ trình nghề nghiệp tồn tại
+→ người trẻ có lý do ở lại
+```
+
+Nếu chuỗi đứt ở bước việc làm, trường có thể trở thành điểm trung chuyển đưa người trẻ ra khỏi vùng thay vì giữ họ lại.
+
+Đây là lý do chính sách vùng cần nhìn **hệ thống ghép nối**, không chỉ số lượng cơ sở.
+
+## 귀향, 귀촌, 귀농: trở về địa phương là một loại di cư khác
+
+Không phải dòng người chỉ đi từ địa phương lên Seoul. Có người **trở về quê (귀향)**, chuyển về nông thôn hoặc thị trấn nhỏ (`귀촌`), hoặc chuyển sang hoạt động nông nghiệp (`귀농`). Động cơ có thể là gia đình, chi phí nhà ở, chất lượng sống, nghỉ hưu, làm việc từ xa hoặc thay đổi nghề.
+
+Nhưng “về quê” không đơn giản là đảo ngược di cư cũ. Người trở về mang theo kỹ năng, kỳ vọng dịch vụ và mạng quan hệ mới; cộng đồng địa phương cũng có quy tắc và lịch sử riêng.
+
+Một người sinh ở địa phương nhưng sống Seoul 20 năm có thể vừa là “người quê” vừa là “người mới” khi trở lại. Đây là ví dụ bản sắc địa phương có **độ phụ thuộc thời gian cư trú**, không chỉ nơi sinh.
+
+## Bản sắc đa địa phương: một người có thể thuộc về nhiều nơi cùng lúc
+
+Đời sống hiện đại làm mô hình “mỗi người có một quê, một nơi ở, một nơi làm” ngày càng kém chính xác. Một người có thể:
+
+- sinh ở Daegu;
+- học ở Daejeon;
+- làm ở Seoul;
+- cha mẹ ở Busan;
+- có nhà ở Gyeonggi;
+- thường xuyên đi Jeju vì công việc.
+
+Đây là **bản sắc đa địa phương (multi-local identity)**. Khi hỏi `고향이 어디예요?`, câu trả lời có thể phụ thuộc ý người hỏi: nơi sinh, nơi lớn lên hay nơi gia đình đang ở.
+
+Nhìn theo mạng, cá nhân không chỉ nằm trong một nút; họ giữ nhiều cạnh nối nhiều địa phương.
+
+## 생활인구 và dân số “thật sự sử dụng” một địa phương
+
+Số người đăng ký cư trú không luôn bằng số người hiện diện và sử dụng dịch vụ mỗi ngày. Khu du lịch, thành phố đại học, khu công nghiệp hoặc địa phương có nhiều người đi về cuối tuần có thể có **dân số hoạt động** khác lớn so với dân số đăng ký.
+
+Điều này quan trọng với giao thông, rác, cấp nước, y tế và kinh tế địa phương. Nếu chỉ nhìn số đăng ký cư trú, ta có thể đánh giá thiếu nhu cầu thật vào mùa cao điểm hoặc giờ làm.
+
+```text
+dân số đăng ký
+≠ dân số ban ngày
+≠ dân số mùa du lịch
+≠ dân số sử dụng dịch vụ
+```
+
+Đây là một ví dụ tốt về việc lựa chọn mẫu số làm thay đổi cách ta hiểu vùng.
+
+## Hiệu ứng ngưỡng: dịch vụ không suy giảm tuyến tính với dân số
+
+Nếu một thị trấn mất 5% dân số, không phải mọi dịch vụ đều giảm đúng 5%. Một trường học cần số học sinh tối thiểu; tuyến xe buýt cần lượng khách đủ; bệnh viện cần nhân lực và số ca; cửa hàng cần doanh thu nền.
+
+Khi rơi dưới **ngưỡng khả thi (viability threshold)**, một dịch vụ có thể đóng hoàn toàn. Sau đó chất lượng sống giảm mạnh hơn mức giảm dân số ban đầu.
+
+```text
+dân số giảm nhẹ
+→ một dịch vụ vượt ngưỡng đóng cửa
+→ chi phí sống tăng mạnh
+→ thêm người rời đi
+→ dịch vụ khác tiếp tục yếu
+```
+
+Đây là lý do `지방소멸` nên được hiểu như bài toán mạng và ngưỡng, không chỉ đường biểu đồ dân số.
+
+## Truyền thông số có thể làm một nơi “gần” hơn về chú ý nhưng không gần hơn về hạ tầng
+
+YouTube, Instagram, bản đồ và video ngắn có thể làm một quán cà phê, làng biển hoặc món ăn địa phương nổi tiếng toàn quốc gần như qua đêm. Đây là **địa lý do thuật toán định hình (algorithmic geography)**.
+
+Khả năng hiển thị số tạo dòng khách, nhưng đường, bãi đỗ, nhà vệ sinh và năng lực xử lý rác vẫn là vật lý. Nếu lượng chú ý tăng nhanh hơn hạ tầng, thành công số có thể tạo quá tải địa phương.
+
+```text
+nội dung lan truyền
+→ khách tăng
+→ doanh thu tăng
+→ nhưng áp lực giao thông / rác / nhà ở cũng tăng
+```
+
+Do đó thương hiệu địa phương không chỉ là bài toán tiếp thị; nó cần quản trị năng lực tiếp nhận.
+
+## Giá nhà và giáo dục có thể tái cấu trúc vùng đô thị
+
+Trong các vùng đô thị, lựa chọn nơi ở phụ thuộc việc làm, trường học, giao thông và kỳ vọng tài sản. Một tuyến tàu mới hoặc danh tiếng trường học có thể thay dòng hộ gia đình giữa các quận/thành phố.
+
+Khi hộ có thu nhập cao tập trung quanh hạ tầng và trường được ưa chuộng, dịch vụ tư nhân cũng theo họ. Đây là cơ chế **tự củng cố không gian**:
+
+```text
+hạ tầng / trường tốt
+→ hộ có khả năng chi trả đến
+→ nhu cầu dịch vụ tăng
+→ dịch vụ và giá nhà tăng
+→ khu vực càng khác biệt
+```
+
+Đọc cùng [`24_economy_chaebol_housing_status_mobility.md`](24_economy_chaebol_housing_status_mobility.md) để thấy địa lý và bất bình đẳng tài sản nối nhau ra sao.
+
+## Khả năng phục hồi vùng: chuyên môn hoá mạnh vừa là lợi thế vừa là rủi ro
+
+Một thành phố nổi bật nhờ một ngành có thể đạt năng suất và bản sắc rất mạnh. Nhưng **chuyên môn hoá (specialization)** cũng làm vùng nhạy với cú sốc của ngành đó.
+
+```text
+cụm ngành mạnh
+→ kỹ năng và nhà cung cấp tập trung
+→ năng suất cao
+
+nhưng nếu nhu cầu ngành giảm
+→ việc làm giảm đồng thời
+→ doanh nghiệp phụ trợ chịu tác động
+→ dân số rời đi nhanh hơn
+```
+
+Vì vậy khả năng phục hồi không có nghĩa mỗi nơi phải có mọi ngành. Nó nghĩa vùng cần đủ đa dạng về doanh nghiệp, kỹ năng và kết nối để hấp thụ cú sốc.
+
 ## Liên hệ kiến thức: vùng là một đặc trưng, không phải nhãn định mệnh
 
 Trong phân tích dữ liệu, vùng địa lý là một đặc trưng có thể tương quan với kết quả nhưng không giải thích toàn bộ biến thiên. Nếu mô hình dự đoán hành vi cá nhân chỉ từ vùng, sai số ở cấp cá nhân sẽ rất lớn.
@@ -300,7 +466,7 @@ Muốn giảm tập trung không chỉ cần xây một toà nhà ở vùng khá
 
 ## Mô hình tư duy
 
-> “Hàn Quốc” là một mạng chung của ngôn ngữ, thiết chế và ký ức quốc gia, nhưng mỗi nút địa phương có lịch sử, sinh thái và cấu trúc kinh tế riêng. Hãy xem Seoul là một nút cực mạnh chứ không phải mẫu duy nhất; xem phương ngữ và ẩm thực như sản phẩm của lịch sử vùng chứ không phải công cụ đo tính cách.
+> “Hàn Quốc” là một mạng chung của ngôn ngữ, thiết chế và ký ức quốc gia, nhưng mỗi nút địa phương có lịch sử, sinh thái và cấu trúc kinh tế riêng. Hãy xem Seoul là một nút cực mạnh chứ không phải mẫu duy nhất; xem phương ngữ và ẩm thực như sản phẩm của lịch sử vùng chứ không phải công cụ đo tính cách. Muốn hiểu sức sống của một địa phương, cần nhìn đồng thời **việc làm, giáo dục, y tế, giao thông, nhà ở, dân số và khả năng duy trì dịch vụ**.
 
 ## Những hiểu lầm phổ biến
 
@@ -314,8 +480,20 @@ Muốn giảm tập trung không chỉ cần xây một toà nhà ở vùng khá
 
 “Văn hoá vùng tồn tại từ xưa nên không đổi” là sai; đường cao tốc, KTX, đại học, di cư, YouTube và du lịch liên tục tái phối trộn bản sắc vùng.
 
+“Xây đường nhanh là đủ để cứu địa phương” bỏ qua việc làm, bệnh viện, trường học, nhà ở và mạng quan hệ.
+
+“Có đại học thì người trẻ sẽ ở lại” không chắc; nếu thị trường lao động địa phương không hấp thụ kỹ năng, trường có thể trở thành điểm trung chuyển ra nơi khác.
+
+“Du lịch viral luôn tốt cho địa phương” bỏ qua năng lực hạ tầng, chi phí nhà ở, rác, giao thông và tính mùa vụ.
+
+## Đọc tiếp
+
+Đọc cùng [`12_city_consumption_digital_life.md`](12_city_consumption_digital_life.md), [`15_contemporary_change_demography_migration.md`](15_contemporary_change_demography_migration.md), [`21_historical_layers_ancient_to_modern.md`](21_historical_layers_ancient_to_modern.md), [`24_economy_chaebol_housing_status_mobility.md`](24_economy_chaebol_housing_status_mobility.md), [`30_school_university_youth_campus_culture.md`](30_school_university_youth_campus_culture.md) và [`32_seasons_climate_environment_daily_rhythm.md`](32_seasons_climate_environment_daily_rhythm.md).
+
 ## Nguồn tham khảo
 
 - UNESCO Intangible Cultural Heritage: Culture of Jeju Haenyeo; Arirang inscriptions; traditional wrestling heritage.
-- 국립국어원 / National Institute of Korean Language: thuật ngữ về ngôn ngữ chuẩn và phương ngữ.
+- `국립국어원` / National Institute of Korean Language: thuật ngữ về ngôn ngữ chuẩn và phương ngữ.
+- `국가데이터처` / Statistics Korea và dữ liệu chính quyền địa phương: dân số, hộ, di cư và thay đổi vùng; luôn ghi năm và định nghĩa mẫu số.
+- `국토교통부` / Ministry of Land, Infrastructure and Transport: hạ tầng giao thông và không gian đô thị khi cần dữ kiện hiện hành.
 - Các chương lịch sử trong [`../korean_history/`](../korean_history/README.md) cho niên đại và bối cảnh lịch sử cần độ chính xác cao hơn.
