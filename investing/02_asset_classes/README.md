@@ -16,6 +16,8 @@ Lĩnh vực này giải thích từng nhóm tài sản theo bản chất kinh t�
 
 [06_CASH_MONEY_MARKETS_STRUCTURED_PRODUCTS_AND_PRIVATE_MARKETS.md](./06_CASH_MONEY_MARKETS_STRUCTURED_PRODUCTS_AND_PRIVATE_MARKETS.md) đi sâu tiền mặt ngân hàng, MMF, T-bill, CP, CD, repo, quy ước báo giá và số ngày, haircut, vòng xoáy ký quỹ và thang tiền mặt; sau đó giải cấu trúc sản phẩm cấu trúc, ELS, autocallable, worst-of và ETN thành trái phiếu + quyền chọn + rủi ro tương quan/nhà phát hành; cuối cùng đi tới PE, VC, tín dụng tư nhân, bất động sản tư nhân và cơ sở hạ tầng với IRR/MOIC/TVPI/DPI/RVPI/PME, đòn bẩy, PIK, LTV/DSCR, thị trường thứ cấp, gọi vốn và rủi ro thanh khoản.
 
+[07_ASSET_PRICING_TERM_STRUCTURE_AND_PORTFOLIO_LAB.md](./07_ASSET_PRICING_TERM_STRUCTURE_AND_PORTFOLIO_LAB.md) là lớp học sâu dùng một ngôn ngữ chung để so tài sản: nguồn lợi suất, duration kinh tế, carry/roll-down, phần bù thanh khoản, cấu trúc kỳ hạn, định giá tương đối/tuyệt đối, hành vi theo regime và vai trò trong danh mục.
+
 ## Sau lĩnh vực này bạn cần làm được gì?
 
 Bạn cần có khả năng nhìn một sản phẩm và xác định `quyền lợi kinh tế → nguồn lợi suất → duration/tín dụng/FX/nhân tố → thanh khoản → đòn bẩy/quyền chọn ẩn → cấu trúc sản phẩm → tổng chi phí → vai trò trong danh mục`.
@@ -25,5 +27,7 @@ Với thu nhập cố định, phải tách lợi suất nắm giữ, thay đổ
 ## Bài tập tích hợp
 
 Đọc [Cú sốc CPI → Danh mục](../07_integrated_case_studies/01_INFLATION_SHOCK_FROM_CPI_TO_PORTFOLIO.md) để thấy duration, lợi suất thực, FX, beta cổ phiếu và phòng vệ tương tác trong cùng một cú sốc. Đọc [Khủng hoảng tín dụng và thanh khoản](../07_integrated_case_studies/02_CREDIT_LIQUIDITY_CRISIS_TRANSMISSION.md) để luyện chênh lệch tín dụng, tài sản thế chấp, repo, độ trễ định giá của tài sản tư nhân và thứ bậc thanh khoản.
+
+Sau đó hoàn thành **Module 2 — Asset Classes** trong [Advanced Practice Workbook](../ADVANCED_PRACTICE_WORKBOOK.md). Đầu ra tối thiểu là `asset_comparison_matrix.md`, trong đó mỗi tài sản phải được phân rã theo nguồn lợi suất, duration, tín dụng, FX, thanh khoản, regime thuận lợi/bất lợi và vai trò danh mục.
 
 Sau đó chuyển sang [03 — Phân tích doanh nghiệp](../03_company_analysis/README.md) hoặc [04 — Kinh tế học và vĩ mô](../04_economics/README.md).
