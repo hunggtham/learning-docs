@@ -2,258 +2,254 @@
 
 ## Không gian sống định hình cơ thể và thói quen
 
-Culture không chỉ nằm trong đầu. Sàn nhà, nhiệt độ, furniture và architecture làm một số hành vi dễ hơn hành vi khác. Hàn Quốc là ví dụ rõ qua **ondol / 온돌**, hệ thống sưởi sàn truyền thống.
+Văn hoá không chỉ nằm trong đầu. Sàn nhà, nhiệt độ, đồ nội thất và kiến trúc làm một số hành vi dễ hơn hành vi khác. Hàn Quốc là ví dụ rõ qua **ondol (온돌)**, hệ thống sưởi sàn truyền thống.
 
-Trong ondol cổ, khí nóng từ bếp đi qua channel dưới sàn trước khi thoát ra ngoài, làm nóng khối vật liệu. Modern apartment không dùng cùng cơ chế đốt nhưng tiếp tục radiant floor heating bằng nước nóng hoặc hệ thống boiler hiện đại. Khi sàn ấm, việc ngồi và ngủ gần sàn trở nên hợp lý. Từ đó floor culture ảnh hưởng bàn thấp, tháo giày và phân chia indoor/outdoor cleanliness.
+Trong ondol cổ, khí nóng từ bếp đi qua các kênh dưới sàn trước khi thoát ra ngoài, làm nóng khối vật liệu. Căn hộ hiện đại không dùng cùng cơ chế đốt nhưng tiếp tục **sưởi bức xạ qua sàn (radiant floor heating)** bằng nước nóng hoặc hệ thống boiler. Khi sàn ấm, việc ngồi và ngủ gần sàn trở nên hợp lý. Từ đó văn hoá sinh hoạt trên sàn ảnh hưởng bàn thấp, tháo giày và ranh giới sạch–bẩn giữa trong/ngoài nhà.
 
-Đây là first-principles chain:
+Chuỗi từ nguyên lý đầu tiên:
 
 ```text
-cold winter
+mùa đông lạnh
 → cần giữ nhiệt
-→ floor heating
+→ sưởi sàn
 → sàn trở thành bề mặt sinh hoạt ấm
 → ngồi/ngủ gần sàn thuận tiện
-→ footwear boundary có ý nghĩa vệ sinh hơn
+→ ranh giới giày dép có ý nghĩa vệ sinh mạnh hơn
 ```
 
-Không phải mọi bước là deterministic, nhưng physical infrastructure tạo **affordance** — làm một số hành vi trở nên tự nhiên hơn.
+Không phải mọi bước đều mang tính tất định, nhưng **hạ tầng vật lý tạo khả năng hành động (affordance)**.
 
-## 온돌: từ combustion channel tới boiler hiện đại
+## 온돌: từ kênh dẫn khí nóng tới boiler hiện đại
 
-`온돌` thường được dịch đơn giản là “sưởi sàn”, nhưng historical ondol và modern floor heating không hoàn toàn cùng technology. Điều giữ continuity là **functional principle**: heat được đưa vào floor mass và truyền lên room.
+`온돌` thường được dịch đơn giản là “sưởi sàn”, nhưng ondol lịch sử và hệ sưởi sàn hiện đại không hoàn toàn cùng công nghệ. Điều giữ tính liên tục là **nguyên lý chức năng**: nhiệt được đưa vào khối sàn rồi truyền lên phòng.
 
-Trong heat transfer, comfort không chỉ phụ thuộc air temperature. Radiant temperature của surface cũng quan trọng. Sàn ấm làm cơ thể cảm thấy dễ chịu ngay cả khi không khí không quá nóng.
+Trong truyền nhiệt, cảm giác dễ chịu không chỉ phụ thuộc nhiệt độ không khí. Nhiệt bức xạ từ bề mặt cũng quan trọng. Sàn ấm làm cơ thể cảm thấy dễ chịu ngay cả khi không khí không quá nóng.
 
-Modern household thường điều khiển qua `보일러` và thermostat. Vì vậy một practice hàng trăm năm có thể tồn tại bằng implementation kỹ thuật hoàn toàn mới.
-
-Đây là một ví dụ mạnh của cultural continuity:
+Hộ gia đình hiện đại thường điều khiển qua `보일러` và bộ điều nhiệt. Vì vậy một thực hành hàng trăm năm có thể tồn tại bằng cách hiện thực hoá kỹ thuật hoàn toàn mới:
 
 ```text
-function survives
-while technology changes
+chức năng được giữ
+trong khi công nghệ thay đổi
 ```
 
-## 한옥: architecture như climate machine
+## 한옥: kiến trúc như một “máy điều hoà khí hậu”
 
-**Hanok / 한옥** là nhà truyền thống Hàn Quốc, nhưng không có một mẫu duy nhất. Orientation, courtyard, roof, wooden frame, `온돌` và `대청마루` được kết hợp theo climate, class, region và social use.
+**Hanok (한옥)** là nhà truyền thống Hàn Quốc, nhưng không có một mẫu duy nhất. Hướng nhà, sân, mái, khung gỗ, `온돌` và `대청마루` được kết hợp theo khí hậu, tầng lớp, vùng và cách sử dụng xã hội.
 
-`대청마루` là sàn gỗ cao, thoáng, phù hợp mùa nóng; `온돌방` tối ưu mùa lạnh. Một ngôi nhà do đó có thể chứa hai thermal strategies đối lập. Đây là passive environmental design trước HVAC hiện đại.
+`대청마루` là sàn gỗ cao, thoáng, phù hợp mùa nóng; `온돌방` tối ưu mùa lạnh. Một ngôi nhà do đó có thể chứa hai chiến lược nhiệt đối lập. Đây là **thiết kế môi trường thụ động (passive environmental design)** trước HVAC hiện đại.
 
-Trong heat transfer, conduction, convection và radiation quyết định comfort. Ondol tăng radiant heat từ sàn; maru hỗ trợ airflow. Kiến trúc truyền thống không cần biết phương trình nhiệt hiện đại để tích luỹ empirical knowledge qua nhiều thế hệ.
+Dẫn nhiệt, đối lưu và bức xạ quyết định cảm giác nhiệt. Ondol tăng nhiệt bức xạ từ sàn; maru hỗ trợ luồng không khí. Kiến trúc truyền thống không cần biết phương trình nhiệt hiện đại để tích luỹ tri thức thực nghiệm qua nhiều thế hệ.
 
-## 안채와 사랑채: architecture encode social structure
+## 안채와 사랑채: kiến trúc mã hoá cấu trúc xã hội
 
-Một số hanok lịch sử của tầng lớp có điều kiện phân chia không gian thành `안채`, `사랑채` và các khu chức năng khác. `안채` historically gắn nhiều hơn với domestic/family space; `사랑채` thường liên quan tiếp khách, học tập và hoạt động của nam giới trong household elite.
+Một số hanok lịch sử của tầng lớp có điều kiện phân chia không gian thành `안채`, `사랑채` và khu chức năng khác. `안채` trong lịch sử gắn nhiều hơn với không gian gia đình/nội trợ; `사랑채` thường liên quan tiếp khách, học tập và hoạt động của nam giới trong hộ tinh hoa.
 
-Điều quan trọng không phải học “phòng nam/phòng nữ” như rule universal. Spatial division thay đổi theo class và period. Nhưng nó cho thấy architecture có thể encode gender và authority.
+Điều quan trọng không phải học “phòng nam/phòng nữ” như quy tắc phổ quát. Phân chia không gian khác theo tầng lớp và thời kỳ. Nhưng nó cho thấy kiến trúc có thể mã hoá giới và quyền lực.
 
-Trong software, access control được viết bằng permission. Trong house, access có thể được “viết” bằng courtyard, doorway, room location và social convention.
+Trong phần mềm, kiểm soát truy cập được viết bằng quyền. Trong nhà, quyền truy cập có thể được “viết” bằng sân, cửa, vị trí phòng và quy ước xã hội.
 
-## 마당 và ranh giới trong–ngoài
+## 마당: ranh giới giữa trong và ngoài
 
-**Courtyard / 마당** là không gian trung gian: phơi thực phẩm, làm kimjang, nghi lễ, trẻ chơi và circulation. Nó không hoàn toàn private room cũng không public street.
+**Sân (마당 / courtyard)** là không gian trung gian: phơi thực phẩm, làm kimjang, nghi lễ, trẻ chơi và đi lại. Nó không hoàn toàn là phòng riêng nhưng cũng không phải đường công cộng.
 
-Khi housing chuyển sang apartment, nhiều activity này được chuyển sang balcony, community space hoặc dịch vụ thương mại. Sự biến mất của một spatial node có thể làm social practice đổi. Nếu không còn sân lớn, việc cả họ làm kimjang quy mô lớn trở nên khó.
+Khi nhà ở chuyển sang căn hộ, nhiều hoạt động này được chuyển sang ban công, không gian cộng đồng hoặc dịch vụ thương mại. Sự biến mất của một nút không gian có thể làm thực hành xã hội đổi. Nếu không còn sân lớn, việc cả họ làm kimjang quy mô lớn trở nên khó.
 
-Đây là connection giữa architecture và culture: social practice cần physical substrate.
+Đây là liên hệ giữa kiến trúc và văn hoá: thực hành xã hội cần nền vật lý.
 
-## 처마 và mùa: roof là environmental control
+## 처마 và mùa: mái là bộ điều khiển môi trường
 
-`처마` — mái hiên — không chỉ decorative. Độ vươn của mái giúp che nắng/mưa và điều chỉnh lượng ánh sáng vào nhà. Khi góc mặt trời thay đổi theo mùa, cùng một roof geometry có thể block summer sun tốt hơn trong khi vẫn cho winter sun vào sâu hơn.
+`처마` — mái hiên — không chỉ để trang trí. Độ vươn của mái giúp che nắng/mưa và điều chỉnh lượng ánh sáng vào nhà. Khi góc mặt trời thay đổi theo mùa, cùng một hình học mái có thể chặn nắng mùa hè tốt hơn nhưng vẫn cho nắng mùa đông vào sâu.
 
-Đây là passive design principle rất hiện đại về mặt logic: thay vì dùng energy để sửa climate sau khi nó vào building, architecture giảm load ngay từ boundary.
+Đây là nguyên lý thiết kế thụ động rất hiện đại về logic: thay vì dùng năng lượng để sửa khí hậu sau khi nó vào công trình, kiến trúc giảm tải ngay từ ranh giới.
 
-## Apartment như hạ tầng của hiện đại hoá
+## Căn hộ như hạ tầng của hiện đại hoá
 
-**Apartment / 아파트** không chỉ là housing type mà là một trong những biểu tượng mạnh của middle-class urban Korea. Standardized apartment giúp cung cấp housing ở đô thị mật độ cao, đi cùng heating, elevator, parking, school district và asset market.
+**Căn hộ (아파트 / apartment)** không chỉ là loại nhà mà còn là một biểu tượng mạnh của tầng lớp trung lưu đô thị Hàn Quốc. Căn hộ chuẩn hoá giúp cung cấp nhà ở mật độ cao, đi cùng sưởi, thang máy, bãi đỗ, khu trường học và thị trường tài sản.
 
-Apartment complex thường hoạt động như micro-city: playground, management office `관리사무소`, security, senior center, convenience facilities và parcel infrastructure. Address và school catchment có thể gắn với property value.
+Khu căn hộ thường hoạt động như một thành phố nhỏ: sân chơi, văn phòng quản lý `관리사무소`, an ninh, trung tâm người cao tuổi, tiện ích và hạ tầng nhận bưu kiện. Địa chỉ và vùng trường học có thể gắn với giá tài sản.
 
-Từ góc nhìn network, vertical housing giảm physical distance giữa hàng trăm household nhưng không nhất thiết tăng social intimacy.
+Theo góc nhìn mạng, nhà ở theo chiều đứng làm giảm khoảng cách vật lý giữa hàng trăm hộ nhưng không nhất thiết tăng mức thân xã hội:
 
 ```text
-physical proximity ≠ social closeness
+ở gần vật lý ≠ thân thiết xã hội
 ```
 
 Nhiều người sống cách nhau vài mét theo chiều dọc nhưng gần như không biết tên nhau.
 
-## 아파트 단지: từ building tới managed ecosystem
+## 아파트 단지: từ toà nhà tới hệ sinh thái được quản lý
 
-`단지` thường chỉ cả complex, không chỉ một toà nhà. Nó có internal road, playground, recycling area, parking, security và resident governance.
+`단지` thường chỉ cả khu phức hợp, không chỉ một toà. Nó có đường nội bộ, sân chơi, khu tái chế, bãi xe, an ninh và cơ chế quản trị cư dân.
 
-Điều này tạo một layer social mới giữa private home và city. `관리비` — maintenance fee — phân bổ cost cho elevator, cleaning, security, heating common area và nhiều shared services.
+Điều này tạo một lớp xã hội mới giữa nhà riêng và thành phố. `관리비` — phí quản lý — phân bổ chi phí cho thang máy, vệ sinh, an ninh, sưởi khu chung và nhiều dịch vụ dùng chung.
 
-Apartment living vì vậy là bài toán **collective resource management**. Một resident tạo noise hoặc parking problem có thể làm externality lên nhiều household khác.
+Sống trong căn hộ vì vậy là bài toán **quản trị tài nguyên chung (collective resource management)**. Một cư dân gây tiếng ồn hoặc đỗ xe sai có thể tạo ngoại ứng lên nhiều hộ khác.
 
 Đọc sâu hơn tại [`31_apartment_neighborhood_moving_recycling_everyday_life.md`](31_apartment_neighborhood_moving_recycling_everyday_life.md).
 
-## 빌라, 오피스텔, 원룸: housing type và life stage
+## 빌라, 오피스텔, 원룸: loại nhà và giai đoạn đời sống
 
-Ngoài apartment, Korean urban housing có nhiều category. `원룸` thường chỉ studio/one-room housing; `오피스텔` là building kết hợp logic office/residential tùy use; `빌라` trong Korean daily usage thường chỉ low-rise multi-family housing chứ không giống “villa” sang trọng trong English.
+Ngoài căn hộ, nhà ở đô thị Hàn có nhiều nhóm. `원룸` thường là studio/phòng một không gian; `오피스텔` là toà nhà có logic văn phòng–nhà ở tuỳ cách dùng; `빌라` trong tiếng Hàn đời thường thường chỉ nhà nhiều hộ thấp tầng chứ không giống “villa” sang trọng trong tiếng Anh.
 
-Đây là translation trap quan trọng. Một từ vay từ English có thể đổi meaning sau khi được nội địa hoá.
+Đây là bẫy dịch thuật quan trọng. Một từ vay từ tiếng Anh có thể đổi nghĩa sau khi được nội địa hoá.
 
-Housing type thường correlate với life stage, income, household size và location. Student hoặc người mới đi làm có thể ưu tiên one-room gần subway; family có trẻ em có thể ưu tiên apartment complex và school environment.
+Loại nhà thường tương quan với giai đoạn đời sống, thu nhập, quy mô hộ và vị trí. Sinh viên hoặc người mới đi làm có thể ưu tiên one-room gần tàu điện; gia đình có trẻ có thể ưu tiên khu căn hộ và môi trường trường học. Đây là khuôn mẫu tổng thể, không phải quy tắc cá nhân.
 
-Nhưng đây là pattern aggregate, không phải rule cá nhân.
+## 고시원: không gian tối thiểu và quyền tiếp cận đô thị
 
-## 고시원: space tối thiểu và urban access
+`고시원` ban đầu gắn với người học thi, nhưng về sau trở thành dạng phòng rất nhỏ, giá thấp hơn nhiều lựa chọn nhà ở đô thị. Nó cho thấy đánh đổi rõ giữa **không gian riêng** và **chi phí vị trí/khả năng tiếp cận**.
 
-`고시원` ban đầu gắn với người học thi, nhưng về sau trở thành một form room rất nhỏ, giá thấp hơn nhiều housing options ở đô thị. Nó cho thấy trade-off rất rõ giữa **private space** và **location/access cost**.
-
-Trong urban economics, resident có thể chấp nhận diện tích thấp để đổi lấy commute ngắn hoặc rent thấp. Cultural experience của Seoul vì vậy không thể tách khỏi square meters và housing affordability.
+Trong kinh tế đô thị, cư dân có thể chấp nhận diện tích nhỏ để đổi lấy thời gian đi lại ngắn hoặc tiền thuê thấp. Trải nghiệm Seoul vì vậy không thể tách khỏi diện tích mét vuông và khả năng chi trả nhà ở.
 
 ## 전세 và văn hoá nhà ở
 
-**Jeonse / 전세** là cơ chế thuê nhà đặc trưng trong đó tenant đặt khoản deposit lớn thay vì trả monthly rent theo mô hình truyền thống. Economic logic của jeonse liên quan interest rates, credit, housing price expectations và landlord finance.
+**Jeonse (전세)** là cơ chế thuê trong đó người thuê đặt khoản tiền lớn thay vì trả tiền thuê hàng tháng theo mô hình truyền thống. Logic kinh tế liên quan lãi suất, tín dụng, kỳ vọng giá nhà và tài chính của chủ nhà.
 
-Jeonse không phải “phong tục” theo nghĩa lễ nghi, nhưng nó ảnh hưởng sâu life planning: tiết kiệm, marriage, relocation và debt. Đây là lý do culture book cần bao gồm institutions kinh tế; chúng định hình experience hằng ngày mạnh hơn nhiều biểu tượng truyền thống.
+Jeonse không phải “phong tục” theo nghĩa lễ nghi, nhưng ảnh hưởng sâu đến kế hoạch đời sống: tiết kiệm, hôn nhân, chuyển chỗ ở và nợ. Đây là lý do một sách văn hoá cần bao gồm thiết chế kinh tế; chúng định hình trải nghiệm hằng ngày mạnh hơn nhiều biểu tượng truyền thống.
 
-## 전세·월세·자가: tenure tạo mental model khác nhau
+## 전세·월세·자가: cách sở hữu/thuê tạo mô hình tư duy khác nhau
 
 Ba trạng thái phổ biến:
 
-- `자가`: sở hữu nhà.
-- `전세`: thuê bằng deposit lớn.
-- `월세`: thuê với monthly payment.
+- `자가`: sở hữu nhà;
+- `전세`: thuê bằng tiền đặt cọc lớn;
+- `월세`: thuê với khoản trả hàng tháng.
 
-Mỗi form tạo cash-flow khác. Owner quan tâm asset value; jeonse tenant quan tâm deposit safety; monthly renter quan tâm recurring expense.
+Mỗi hình thức tạo dòng tiền khác. Chủ nhà quan tâm giá trị tài sản; người thuê jeonse quan tâm an toàn khoản đặt cọc; người thuê tháng quan tâm chi phí lặp lại.
 
-Housing culture vì vậy không chỉ là “người Hàn thích apartment”, mà còn là cách household nghĩ về **asset, debt, rent và mobility**.
+Văn hoá nhà ở vì vậy không chỉ là “người Hàn thích căn hộ”, mà còn là cách hộ nghĩ về **tài sản, nợ, tiền thuê và khả năng di chuyển**.
 
-## 신발을 벗다: tháo giày như boundary protocol
+## 신발을 벗다: tháo giày như giao thức ranh giới
 
-Tháo giày khi vào nhà là practice phổ biến. Nó kết hợp cleanliness với floor living. `현관` — entrance foyer — là buffer zone chuyển từ outdoor sang indoor. Không nên bước giày ngoài lên sàn trong.
+Tháo giày khi vào nhà là thực hành phổ biến. Nó kết hợp sạch sẽ với sinh hoạt trên sàn. `현관` — khu cửa vào — là vùng đệm chuyển từ ngoài sang trong. Không nên bước giày ngoài lên sàn trong.
 
-Trong security model, `현관` giống trust boundary: trước boundary là external environment; sau boundary là clean zone. Physical design làm rule trực quan mà không cần biển hướng dẫn.
+Trong mô hình an ninh, `현관` giống **ranh giới tin cậy (trust boundary)**: trước ranh giới là môi trường bên ngoài; sau ranh giới là vùng sạch. Thiết kế vật lý làm quy tắc trực quan mà không cần biển hướng dẫn.
 
-## 현관: một vài decimet tạo ra hai thế giới
+## 현관: vài chục centimet tạo ra hai thế giới
 
-Nhiều căn hộ có chênh cao, material hoặc tile khác ở `현관`. Design này làm boundary nhìn thấy bằng mắt và cảm nhận bằng chân.
+Nhiều căn hộ có chênh cao, vật liệu hoặc gạch khác ở `현관`. Thiết kế này làm ranh giới nhìn thấy bằng mắt và cảm nhận bằng chân.
 
-Khi architecture encode norm tốt, người mới cũng dễ infer action đúng. Đây chính là **environmental UX**.
+Khi kiến trúc mã hoá chuẩn mực tốt, người mới cũng dễ suy ra hành động đúng. Đây chính là **trải nghiệm người dùng bằng môi trường (environmental UX)**.
 
-## 욕실: “wet bathroom” và cách dùng khác nhau
+## 욕실: phòng tắm “ướt” và cách dùng khác nhau
 
-Nhiều bathroom Hàn Quốc cho phép nước chảy trên sàn nhiều hơn bathroom kiểu dry-zone ở một số nước. Drain, tile và shower layout hỗ trợ cleaning bằng nước.
+Nhiều phòng tắm Hàn Quốc cho phép nước chảy trên sàn nhiều hơn kiểu khu khô ở một số nước. Hệ thoát nước, gạch và bố cục vòi sen hỗ trợ làm sạch bằng nước.
 
-Nhưng modern apartment, hotel và newer renovation có variation lớn. Không nên biến “Korean bathroom = toàn bộ ướt” thành rule.
+Nhưng căn hộ, khách sạn và nhà cải tạo mới có biến thiên lớn. Không nên biến “phòng tắm Hàn = toàn bộ ướt” thành quy tắc.
 
-Điểm cần hiểu là infrastructure tạo cleaning habit: nếu floor có drain và waterproofing, water-based cleaning có transaction cost thấp.
+Điểm cần hiểu là hạ tầng tạo thói quen vệ sinh: nếu sàn có thoát nước và chống thấm, làm sạch bằng nước có chi phí thấp.
 
-## 베란다 và balcony như buffer space
+## 베란다: ban công như vùng đệm chức năng
 
-Trong daily Korean, `베란다` thường được dùng rộng cho balcony/enclosed service space trong apartment. Không gian này có thể dùng phơi đồ, storage, plant hoặc laundry.
+Trong tiếng Hàn đời thường, `베란다` thường được dùng rộng cho ban công/không gian dịch vụ khép trong căn hộ. Nó có thể dùng phơi đồ, chứa đồ, trồng cây hoặc giặt giũ.
 
-Khi apartment enclosure thay courtyard, một số household function được nén vào service zone nhỏ. Đây là miniature version của `마당` transformation.
+Khi căn hộ thay sân, một số chức năng hộ được nén vào vùng dịch vụ nhỏ. Đây là phiên bản thu nhỏ của chuyển đổi từ `마당`.
 
-## 이불, 침대 và floor-sleeping: tradition không phải binary
+## 이불, 침대 và ngủ trên sàn: truyền thống không phải lựa chọn nhị phân
 
-`이불` là bedding; historically floor sleeping phù hợp với ondol. Modern Korean household dùng bed rất phổ biến, nhưng floor mattress/bedding vẫn tồn tại cho guest, small room hoặc preference cá nhân.
+`이불` là chăn đệm; trong lịch sử ngủ trên sàn phù hợp với ondol. Hộ Hàn hiện đại dùng giường rất phổ biến, nhưng nệm/chăn trải sàn vẫn tồn tại cho khách, phòng nhỏ hoặc sở thích cá nhân.
 
-Đây là ví dụ classic của **hybridization**. Bed không “xoá văn hoá ondol”; floor heating vẫn có thể hoạt động dưới bed. New furniture và old infrastructure co-exist.
+Đây là ví dụ điển hình của **lai hoá (hybridization)**. Giường không “xoá văn hoá ondol”; sưởi sàn vẫn hoạt động dưới giường. Đồ nội thất mới và hạ tầng cũ cùng tồn tại.
 
-## 찜질방 và không gian công cộng thân mật
+## 찜질방: không gian công cộng thân mật
 
-**Jjimjilbang / 찜질방** kết hợp bathhouse, sauna, resting và social space. Quy tắc nudity trong bath area nhưng mặc uniform ở common area cho thấy privacy không chỉ phụ thuộc “lộ cơ thể hay không”; nó phụ thuộc context và zone.
+**Jjimjilbang (찜질방)** kết hợp nhà tắm, sauna, nghỉ ngơi và không gian xã hội. Quy tắc khoả thân trong khu tắm nhưng mặc đồng phục ở khu chung cho thấy riêng tư không chỉ phụ thuộc “lộ cơ thể hay không”; nó phụ thuộc bối cảnh và vùng không gian.
 
-Một hành vi có thể acceptable trong environment có protocol rõ nhưng inappropriate ngoài context.
+Một hành vi có thể chấp nhận được trong môi trường có giao thức rõ nhưng không phù hợp ngoài bối cảnh:
 
 ```text
-meaning = action + setting + relationship
+ý nghĩa = hành động + bối cảnh + quan hệ
 ```
 
-## 한복: trang phục như silhouette và status
+## 한복: trang phục như đường nét và địa vị
 
-**Hanbok / 한복** là tên hiện đại cho trang phục truyền thống Hàn. Form thay đổi qua thời đại, giới và status. Đặc trưng quen thuộc hiện nay gồm `저고리`, `치마`, `바지`, nhưng không nên coi một silhouette lễ hội hiện tại là toàn bộ lịch sử hanbok.
+**Hanbok (한복)** là tên hiện đại cho trang phục truyền thống Hàn. Kiểu dáng thay đổi qua thời đại, giới và địa vị. Các thành phần quen thuộc gồm `저고리`, `치마`, `바지`, nhưng không nên coi một kiểu hanbok lễ hội hiện tại là toàn bộ lịch sử trang phục.
 
-Clothing encode body ideal, movement và rank. Color, fabric và accessory từng liên quan tuổi, status và occasion. Modern hanbok (`생활한복`, `개량한복`) reinterpret form để tiện daily life.
+Trang phục mã hoá lý tưởng cơ thể, chuyển động và địa vị. Màu, chất liệu và phụ kiện từng liên quan tuổi, vị trí và dịp. Hanbok hiện đại (`생활한복`, `개량한복`) diễn giải lại hình thức để tiện đời sống.
 
-Trong design, đây là modular transformation: giữ một số invariant — line, proportion, closure — nhưng thay material và function.
+Trong thiết kế, đây là **biến đổi mô-đun**: giữ một số yếu tố bền như đường nét, tỷ lệ, cách đóng/mở nhưng thay vật liệu và chức năng.
 
-## 저고리, 치마, 바지, 두루마기: vocabulary cơ bản của hanbok
+## 저고리, 치마, 바지, 두루마기: từ vựng cơ bản của hanbok
 
-`저고리` là upper garment; `치마` là skirt; `바지` là trousers; `두루마기` là outer robe. Naming này quan trọng vì “hanbok” không phải một item duy nhất.
+`저고리` là áo trên; `치마` là váy; `바지` là quần; `두루마기` là áo ngoài dài. Việc gọi đúng tên quan trọng vì “hanbok” không phải một món duy nhất.
 
-Khi xem phim lịch sử, variation về sleeve, length, headgear và fabric phản ánh period/class hơn là “costume designer thích khác nhau”. Tuy nhiên drama costume cũng là interpretation hiện đại, không phải primary source hoàn hảo.
+Khi xem phim lịch sử, khác biệt về tay áo, chiều dài, mũ và vải có thể phản ánh thời kỳ/tầng lớp. Tuy nhiên trang phục phim vẫn là diễn giải hiện đại, không phải nguồn sơ cấp hoàn hảo.
 
-## 색 và symbolic reading: cần tránh over-decoding
+## 색 và cách đọc biểu tượng: tránh diễn giải quá mức
 
-Korean traditional clothing và architecture dùng color có symbolic, status và ritual context. Nhưng Internet thường đưa ra chart kiểu “màu X luôn nghĩa Y”. Đây là overfitting.
+Trang phục và kiến trúc truyền thống Hàn dùng màu trong bối cảnh biểu tượng, địa vị và nghi lễ. Nhưng Internet thường đưa ra bảng kiểu “màu X luôn nghĩa Y”. Đây là **quá khớp (overfitting)**.
 
-Color meaning thay đổi theo period, object, class và ritual. Một màu có thể có auspicious association ở một context nhưng đơn giản là aesthetic choice ở context khác.
+Ý nghĩa màu thay theo thời kỳ, vật thể, tầng lớp và nghi lễ. Một màu có thể có liên tưởng cát tường trong một bối cảnh nhưng chỉ là lựa chọn thẩm mỹ ở bối cảnh khác.
 
-Cultural analysis nên hỏi **màu này ở đâu, thời nào, trên object gì**, không dùng universal dictionary.
+Phân tích văn hoá nên hỏi **màu này ở đâu, thời nào, trên vật gì**, không dùng từ điển biểu tượng phổ quát.
 
-## 교복: đồng phục và identity tuổi học đường
+## 교복: đồng phục và danh tính tuổi học đường
 
-`교복` — school uniform — là một phần mạnh của visual culture học đường hiện đại. Nó tạo equality ở một layer bằng cách giảm clothing variation, nhưng đồng thời school badge, design và styling lại tạo identity riêng.
+`교복` — đồng phục học sinh — là phần mạnh của văn hoá thị giác học đường hiện đại. Nó tạo bình đẳng ở một lớp bằng cách giảm biến thiên quần áo, nhưng huy hiệu trường, thiết kế và cách phối lại tạo danh tính riêng.
 
-Uniform là interface giữa institution và body. Cùng một học sinh ngoài trường có thể mặc streetwear rất cá nhân; vào school, visual identity được standardized.
+Đồng phục là giao diện giữa thiết chế và cơ thể. Cùng một học sinh ngoài trường có thể mặc rất cá nhân; vào trường, danh tính thị giác được chuẩn hoá.
 
 Điều này nối trực tiếp với [`30_school_university_youth_campus_culture.md`](30_school_university_youth_campus_culture.md).
 
-## 패딩, 정장 và modern dress code
+## 패딩, 정장 và quy tắc ăn mặc hiện đại
 
-Culture clothing Hàn Quốc không dừng ở hanbok. `롱패딩` từng trở thành winter youth icon; suit `정장` vẫn quan trọng trong interview, ceremony và formal business; office dress code ở nhiều ngành đã casual hơn.
+Văn hoá trang phục Hàn Quốc không dừng ở hanbok. `롱패딩` từng trở thành biểu tượng mùa đông của giới trẻ; vest `정장` vẫn quan trọng trong phỏng vấn, nghi lễ và môi trường kinh doanh trang trọng; quy tắc công sở ở nhiều ngành đã thoải mái hơn.
 
-Điểm cần hiểu là **dress code = context protocol**. Một outfit không tự “lịch sự” trong mọi setting. Interview ở ngân hàng và interview ở startup design có expectation khác nhau.
+Điểm cần hiểu là **quy tắc ăn mặc = giao thức theo bối cảnh**. Một bộ đồ không tự “lịch sự” trong mọi nơi. Phỏng vấn ngân hàng và phỏng vấn tại công ty thiết kế khởi nghiệp có kỳ vọng khác nhau.
 
 ## 미: thẩm mỹ không có một từ khoá duy nhất
 
-Các mô tả như “beauty of empty space”, `여백의 미`, “naturalness” hay “curves of hanok” thường xuất hiện khi nói Korean aesthetics. Chúng có giá trị phân tích nhưng dễ bị biến thành essence bất biến.
+Các mô tả như `여백의 미`, “tự nhiên” hay “đường cong của hanok” thường xuất hiện khi nói thẩm mỹ Hàn Quốc. Chúng có giá trị phân tích nhưng dễ bị biến thành bản chất bất biến.
 
-Thẩm mỹ của Goryeo celadon khác Joseon white porcelain; royal court khác folk art; Seoul 2020s khác rural craft. Vì vậy nên phân tích aesthetic theo medium và historical context.
+Thẩm mỹ thanh từ Goryeo khác bạch sứ Joseon; cung đình khác dân gian; Seoul những năm 2020 khác nghề thủ công nông thôn. Vì vậy nên phân tích thẩm mỹ theo vật liệu và bối cảnh lịch sử.
 
-**Bạch sứ Triều Tiên (조선백자 / Joseon white porcelain)** thường được liên hệ với restraint và literati taste. **Thanh từ Cao Ly (고려청자 / Goryeo celadon)** nổi tiếng với glaze xanh ngọc và inlay. Hai aesthetic này cho thấy “Korean beauty” không phải một style duy nhất.
+**Bạch sứ Triều Tiên (조선백자 / Joseon white porcelain)** thường liên hệ với sự tiết chế và gu văn nhân. **Thanh từ Cao Ly (고려청자 / Goryeo celadon)** nổi tiếng với men xanh ngọc và khảm. Hai thẩm mỹ cho thấy “vẻ đẹp Hàn Quốc” không phải một phong cách duy nhất.
 
 ## 단청: màu sắc trên kiến trúc gỗ
 
-**Dancheong / 단청** là hệ thống sơn màu và pattern trên kiến trúc gỗ truyền thống. Nó vừa decorative vừa giúp bảo vệ bề mặt. Màu sắc, motif và vị trí có grammar.
+**Dancheong (단청)** là hệ thống sơn màu và hoạ tiết trên kiến trúc gỗ truyền thống. Nó vừa trang trí vừa giúp bảo vệ bề mặt. Màu, motif và vị trí có “ngữ pháp”.
 
-Nếu nhìn bằng computer graphics, dancheong là texture system có rule. Pattern không random; component có repeat, symmetry và hierarchy. Generative design hiện đại có thể model những grammar như vậy bằng rule-based system.
+Nếu nhìn bằng đồ hoạ máy tính, dancheong là hệ hoa văn có quy tắc. Hoa văn không ngẫu nhiên; thành phần có lặp, đối xứng và thứ bậc. Thiết kế sinh (generative design) hiện đại có thể mô hình hoá các ngữ pháp như vậy bằng hệ luật.
 
-## Minimalism hiện đại có phải “bản chất Hàn Quốc”?
+## Tối giản hiện đại có phải “bản chất Hàn Quốc”?
 
-Interior cafe, mỹ phẩm và branding Hàn hiện đại thường dùng neutral color, clean layout hoặc minimalist visual. Nhưng không nên nối thẳng điều này với Joseon white porcelain rồi kết luận có một “DNA tối giản Hàn Quốc” xuyên hàng thế kỷ.
+Nội thất quán cà phê, mỹ phẩm và thương hiệu Hàn hiện đại thường dùng màu trung tính, bố cục sạch hoặc thị giác tối giản. Nhưng không nên nối thẳng điều này với bạch sứ Joseon rồi kết luận có một “DNA tối giản Hàn Quốc” xuyên hàng thế kỷ.
 
-Modern minimalism chịu ảnh hưởng global design, retail economics, Instagram aesthetics và material trend. Historical continuity có thể tồn tại, nhưng phải chứng minh chứ không suy diễn từ visual similarity.
+Tối giản hiện đại chịu ảnh hưởng thiết kế toàn cầu, kinh tế bán lẻ, thẩm mỹ Instagram và xu hướng vật liệu. Tính liên tục lịch sử có thể tồn tại, nhưng phải chứng minh chứ không suy từ nét giống thị giác.
 
-## Knowledge Connection: architecture như user interface
+## Liên hệ kiến thức: kiến trúc như giao diện người dùng
 
-Good UI làm action đúng trở nên dễ. Architecture cũng vậy. `현관` làm tháo giày tự nhiên; sàn ondol làm floor sitting comfortable; apartment intercom làm visitor control standard.
+Giao diện tốt làm hành động đúng trở nên dễ. Kiến trúc cũng vậy. `현관` làm tháo giày tự nhiên; sàn ondol làm ngồi sàn thoải mái; intercom căn hộ làm kiểm soát khách tiêu chuẩn.
 
-Vì vậy muốn thay culture đôi khi phải thay environment. Chỉ viết policy “hãy tiết kiệm năng lượng” ít hiệu quả hơn thermostat, insulation và feedback tốt.
+Vì vậy muốn thay văn hoá đôi khi phải thay môi trường. Chỉ viết chính sách “hãy tiết kiệm năng lượng” thường kém hiệu quả hơn bộ điều nhiệt, cách nhiệt và phản hồi tốt.
 
-## Knowledge Connection: housing như operating system của daily life
+## Liên hệ kiến thức: nhà ở như hệ điều hành của đời sống hằng ngày
 
-Home quyết định nhiều default:
+Ngôi nhà quyết định nhiều mặc định:
 
 ```text
-storage capacity
-+ thermal system
-+ sound insulation
-+ location
-+ shared facilities
-+ household size
-→ daily routines
+sức chứa lưu trữ
++ hệ nhiệt
++ cách âm
++ vị trí
++ tiện ích chung
++ quy mô hộ
+→ thói quen hằng ngày
 ```
 
-Một one-room nhỏ tạo behaviour khác large apartment dù residents có cùng “cultural values”. Đây là lý do material constraint phải đứng trước stereotype.
+Một one-room nhỏ tạo hành vi khác căn hộ lớn dù cư dân có cùng “giá trị văn hoá”. Đây là lý do ràng buộc vật chất nên được xem xét trước định kiến.
 
-## Mental Model
+## Mô hình tư duy (Mental Model)
 
-> Không gian là “code cứng” của một phần văn hoá. Khi architecture thay đổi, behavior có thể đổi mà không cần ai ra lệnh. Ngược lại, một thói quen có thể sống lâu vì nhà cửa và đồ vật tiếp tục support nó. Trang phục cũng là interface: nó encode occasion, role, institution và historical memory trên cơ thể.
+> Không gian là “mã cứng” của một phần văn hoá. Khi kiến trúc thay đổi, hành vi có thể đổi mà không cần ai ra lệnh. Ngược lại, một thói quen có thể sống lâu vì nhà cửa và đồ vật tiếp tục hỗ trợ nó. Trang phục cũng là giao diện: nó mã hoá dịp, vai trò, thiết chế và ký ức lịch sử trên cơ thể.
 
-## Common Misconceptions
+## Hiểu lầm phổ biến (Common Misconceptions)
 
-“Hanok = nhà của người Hàn ngày xưa” quá rộng; form khác theo class, region và period.
+“Hanok = nhà của người Hàn ngày xưa” quá rộng; hình thức khác theo tầng lớp, vùng và thời kỳ.
 
-“Hanbok luôn giống trang phục cung đình trong phim” sai.
+“Hanbok luôn giống trang phục cung đình trong phim” là sai.
 
-“Người Hàn ngồi sàn vì truyền thống” mới chỉ nửa câu chuyện; thermal technology và spatial design là phần vật chất quan trọng.
+“Người Hàn ngồi sàn vì truyền thống” mới chỉ là nửa câu chuyện; công nghệ nhiệt và thiết kế không gian là phần vật chất quan trọng.
 
-“Apartment culture làm mọi người sống giống nhau” sai; cùng một floor plan vẫn chứa household structure, income, generation và lifestyle rất khác nhau.
+“Văn hoá căn hộ làm mọi người sống giống nhau” là sai; cùng một mặt bằng vẫn chứa cấu trúc hộ, thu nhập, thế hệ và lối sống rất khác nhau.
 
-“Thẩm mỹ Hàn Quốc = tối giản” là essentialism; aesthetic cần được đặt trong medium và historical context.
+“Thẩm mỹ Hàn Quốc = tối giản” là cách bản chất hoá; thẩm mỹ cần được đặt trong vật liệu và bối cảnh lịch sử.
