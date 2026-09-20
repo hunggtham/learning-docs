@@ -1,443 +1,594 @@
 # 05 — Cross-Border Investing: Currency, Tax Wrappers, Market Access và thực hành Hàn–Việt
 
-> Đầu tư quốc tế không chỉ là mua một asset tốt ở quốc gia khác. Return thực tế còn phụ thuộc currency, account wrapper, tax friction, custody, settlement, market-access rules, liquidity, capital controls và nơi bạn sẽ sử dụng tiền trong tương lai. Chapter này xây framework bền vững thay vì ghi cứng những tax rate hoặc regulation có thể thay đổi.
+> Đầu tư quốc tế không chỉ là mua asset tốt ở quốc gia khác. Return thực tế còn phụ thuộc currency, wrapper, custody, settlement, tax friction, foreign ownership, capital controls, liquidity và nơi bạn sẽ sử dụng tiền trong tương lai. Chapter này xây framework bền vững thay vì ghi cứng tax rates hoặc regulations dễ lỗi thời.
 
-## 1. Bắt đầu từ Economic Exposure, không bắt đầu từ nơi niêm yết
+## 1. Bắt đầu từ Economic Exposure
 
-Một ETF niêm yết ở Korea có thể sở hữu US equities, Japanese bonds hoặc gold. Listing venue chỉ nói nơi bạn trade wrapper; **economic exposure** nằm ở underlying cash flows.
+Listing venue không quyết định economic exposure. Korean-listed ETF có thể sở hữu US equities; Vietnam-listed company có USD revenues; US ETF có emerging-market currency exposure.
 
-Vì vậy country allocation nên phân loại theo underlying economy/currency/factor, không chỉ exchange ticker.
+Country allocation phải phân loại theo underlying cash flows, currency và factor exposure, không chỉ ticker/exchange.
 
-## 2. Ba Currency cần phân biệt
-
-Cross-border investor nên tách:
+## 2. Bốn Currency cần phân biệt
 
 ```text
 Trading Currency
 Underlying Economic Currency
+Reporting Currency
 Liability Currency
 ```
 
-Trading currency là đồng tiền dùng settlement. Underlying currency là currency của cash flows/assets. Liability currency là currency bạn cần cho future spending.
+Trading currency dùng settlement. Underlying currency gắn với economic cash flows. Reporting currency là đơn vị app/account hiển thị. Liability currency là đồng tiền bạn cần cho future spending.
 
-Một Korean-listed US ETF giao dịch KRW nhưng vẫn có USD economic exposure nếu unhedged.
+Nhầm các lớp này tạo sai assessment FX risk.
 
-## 3. Reporting Currency
-
-Account có thể hiển thị mọi asset quy đổi về KRW. Đây chỉ là **reporting currency**. Việc app hiển thị KRW không xóa USD/VND risk.
-
-Risk dashboard nên giữ cả local return và home-currency return.
-
-## 4. FX Return Decomposition
-
-Exact relationship gần:
+## 3. Home-Currency Return
 
 ```text
 Home Return = (1 + Local Asset Return) × (1 + FX Return) - 1
 ```
 
-Approximation cho moves nhỏ:
+Với moves nhỏ có thể approximate bằng asset return + FX return, nhưng interaction term material khi volatility lớn.
+
+Korean investor nhìn S&P 500 bằng KRW phải tách equity return và USD/KRW return.
+
+## 4. FX P/L Attribution
+
+Post-trade review nên tách:
 
 ```text
-Home Return ≈ Asset Return + FX Return
+Local Asset Return
++ Currency Translation
++ Income
++ Hedge Carry
++ Hedge Basis
+- Fees / Tax / FX Conversion
 ```
 
-Interaction term trở nên material khi moves lớn.
+Nếu portfolio outperform chỉ vì USD mạnh, đó không phải security-selection alpha.
 
-## 5. Example: USD Asset từ góc nhìn KRW
+## 5. Natural Hedge
 
-Nếu US stock +10% USD và USD/KRW +8% (USD mạnh so KRW), KRW return lớn hơn 18% do interaction. Nếu USD/KRW -8%, phần lớn equity gain có thể bị offset.
+Assets và liabilities cùng currency tạo natural hedge.
 
-Điều này giải thích vì sao headline S&P return không bằng return investor ở Korea nhận.
+Nếu goal là housing deposit ở Korea trong 2 năm, KRW liability nên được funded chủ yếu bằng KRW liquid assets. Nếu future education/payment bằng USD, USD asset bucket có thể hedge tự nhiên.
 
-## 6. Natural Hedge
+## 6. Human Capital Currency
 
-Nếu future liability bằng USD, owning USD assets có thể tạo natural hedge. Nếu liability là mua nhà ở Korea, KRW liability lớn khiến excessive USD/VND exposure tạo mismatch.
+Salary/career income là implicit asset stream. Người sống/làm việc Korea có substantial KRW human-capital exposure.
 
-Hedging decision nên bắt đầu từ balance sheet cá nhân, không từ FX forecast ngắn hạn.
+Foreign assets có thể diversify domestic earning risk, nhưng housing/pension/debt liabilities vẫn cần được map separately.
 
-## 7. Human Capital cũng có Currency Exposure
+## 7. Currency Diversification vs FX Speculation
 
-Salary và career income là một asset-like stream. Người nhận lương KRW đã có substantial KRW human-capital exposure.
+Strategic FX exposure dựa liabilities và total balance sheet. Tactical FX trade dựa forecast.
 
-Điều này có thể justify some foreign assets for diversification, nhưng future Korean housing/liabilities vẫn kéo ngược lại. Household balance sheet nên nhìn tổng thể.
+Không nên dùng long-term diversification position rồi quản lý như weekly FX trade chỉ vì USD/KRW biến động.
 
-## 8. Currency Diversification khác Currency Speculation
+## 8. Hedged vs Unhedged
 
-Owning foreign currencies để diversify purchasing power khác việc timing USD/KRW hàng tuần.
+Hedged product dùng forwards/swaps/futures để offset currency. It reduces translation volatility but creates carry/basis/tracking costs.
 
-Strategic currency allocation dựa liabilities và portfolio role; tactical FX bet dựa forecast. Không nên trộn hai mục tiêu.
+Unhedged exposure can be beneficial when foreign currency diversifies home-country shock. “Hedged safer” is not universally true.
 
-## 9. Hedged vs Unhedged Return
+## 9. Forward Points
 
-Currency-hedged fund dùng forwards/swaps để giảm FX movement. Hedging có cost/benefit từ rate differential, basis, transaction cost và imperfect hedge.
+FX forward reflects interest-rate differential under covered-interest-parity intuition plus basis/frictions.
 
-Unhedged exposure có thể diversify risk-off regimes nếu foreign currency acts safe haven, nhưng relationship không guaranteed.
+Hedge cost is not simply management fee. Rate differential can dominate annual hedged-vs-unhedged result.
 
-## 10. Forward Points
+## 10. Cross-Currency Basis
 
-FX forward price phản ánh interest-rate differential theo no-arbitrage intuition. Currency có higher rate thường trade at forward discount relative to lower-rate currency under conventional quote framework.
+Institutional funding constraints can cause cross-currency basis away from textbook parity.
 
-Hedge cost không nên được mô tả đơn giản là “fee”; carry economics là phần lớn effect.
+Large hedged portfolios may face basis costs that change under dollar funding stress.
 
-## 11. Hedge Ratio
+## 11. Strategic Hedge Ratio
 
-Hedge không nhất thiết 0% hoặc 100%. Investor có thể hedge partial exposure.
+Hedge ratio should reflect liability certainty, horizon and acceptable FX volatility.
 
-Một liability-driven approach định nghĩa target net currency exposure rồi chọn hedge ratio đủ đưa portfolio gần target.
+Known near-term liability usually supports high hedge; long-horizon growth bucket may allow more unhedged exposure.
 
-## 12. Dynamic vs Static FX Hedge
+## 12. Dynamic Hedge
 
-Static hedge giữ fixed ratio; dynamic hedge thay theo valuation/volatility/liability. Dynamic adds model/turnover risk.
+Dynamic hedge changes ratio by valuation/volatility/macro. It adds turnover and model/timing risk.
 
-Nếu không có robust process, simple strategic ratio thường dễ quản lý hơn macro timing.
+Without robust process, strategic hedge + bands is usually easier to govern.
 
-## 13. Wrapper Risk
+## 13. Currency Overlay
 
-ETF/ETN/fund wrapper thêm layer ngoài underlying. Cần hiểu legal structure, replication, collateral, counterparty, tracking và liquidation rules.
+Large portfolio may separate security selection from currency management: underlying managers hold assets while overlay manages FX forwards.
 
-Two products same index can have different realized return and operational risk.
+Conceptually useful even for retail: decide desired asset exposure and currency exposure separately.
 
-## 14. Korean-listed Foreign ETF
+# Phần II — Wrapper và Ownership
 
-Ưu điểm có thể gồm local account convenience, KRW settlement và compatibility với account wrappers. Nhưng evaluate benchmark, physical/synthetic replication, hedged status, tracking difference, AUM, spread, distribution treatment và underlying market hours.
+## 14. Wrapper Risk
 
-Local listing không biến foreign risk thành domestic risk.
+ETF, ETN, mutual fund, direct stock and derivative can reference same market but create different legal claims.
 
-## 15. Direct Foreign Securities
+Wrapper affects custody, tracking, issuer/counterparty, taxation, liquidity and account eligibility.
 
-Direct ownership có thể cho deeper liquidity, broader product choice và lower fund tracking layer. Đổi lại FX conversion, tax/reporting, market hours, estate/legal và account complexity có thể tăng.
+## 15. Korean-Listed Foreign ETF
 
-Decision nên dựa total implementation cost và operational capacity.
+Convenient KRW trading does not remove foreign underlying risk.
 
-## 16. ETF Premium / Discount
+Check benchmark, replication, hedge status, expense, tracking difference, securities lending, distributions, AUM, spread and market-hour mismatch.
 
-ETF market price có thể lệch NAV/iNAV, đặc biệt khi underlying market đóng, stressed hoặc illiquid.
+## 16. Direct Foreign Securities
 
-Local ETF tracking US market trong Asian hours phải price US futures/FX/news, nên apparent premium có thể phản ánh stale NAV hơn true arbitrage.
+Direct ownership may provide deeper liquidity/product choice and remove local-fund tracking layer.
 
-## 17. Holiday Mismatch
+Trade-off: FX conversion, foreign-market hours, tax/reporting, estate/legal and operational complexity.
 
-Korea, Vietnam, US và Europe có holidays khác. Wrapper có thể trade khi underlying closed hoặc ngược lại.
+## 17. ETF vs ETN
 
-Spreads thường wider khi price discovery yếu. Avoid treating normal NAV relationships as guaranteed on mismatched holidays.
+ETF usually fund/share claim over assets; ETN is issuer debt linked to index.
 
-## 18. Time-Zone Risk
+ETN adds issuer credit even when reference exposure identical.
 
-Information may arrive when your local market closed. Gap risk matters for direct foreign positions and local wrappers.
+## 18. Synthetic ETF
 
-If you cannot monitor overnight, position sizing should reflect inability to react, not rely on stop orders as perfect protection.
+Swap-based replication can improve access/tracking but adds counterparty/collateral structure.
 
-## 19. Settlement Cycle
+Synthetic is not automatically worse; read collateral, reset frequency and counterparty limits.
 
-Trade execution and settlement are different. Buying power may update before withdrawable cash.
+## 19. Depositary Receipt
 
-Cross-border cash management must consider settlement, FX conversion, bank transfer and holiday calendars together.
+ADR/GDR-like receipts represent foreign shares through depositary structure. Price can reflect FX, fees and local-market access constraints.
 
-## 20. Prefunding
+Receipt is another wrapper layer; map underlying/share ratio and conversion mechanics.
 
-Some markets/accounts require cash/securities available before order. Others allow different settlement flexibility.
+## 20. Fund Domicile
 
-Operational rules can change; verify broker/exchange current requirements before real trade.
+Two ETFs tracking same index but domiciled in different jurisdictions can have different tax, withholding, estate, distribution and regulatory treatment.
 
-## 21. Custody Chain
+Domicile is separate from listing exchange and underlying country.
 
-Ask who is legal broker, custodian/sub-custodian and depository. Client asset segregation matters if broker fails.
+# Phần III — Market Hours, Price Discovery và Settlement
 
-Brand reputation alone does not tell custody structure.
+## 21. Time-Zone Mismatch
 
-## 22. Brokerage Legal Entity
+Korean ETF tracking US equities trades while US cash market closed. Price may use futures, FX and new information while official NAV references stale close.
 
-A global brand may operate through different regulated entities by jurisdiction. Investor protection and complaint process can differ.
+Apparent premium/discount can therefore be misleading.
 
-Always confirm contract counterparty entity, especially for OTC/CFD products.
+## 22. Holiday Mismatch
 
-## 23. Securities Lending
+Local wrapper may trade while underlying market closed or vice versa. Spreads can widen because arbitrage/price discovery weaker.
 
-Some brokers/funds lend securities. Lending can create income but introduces borrower/collateral/operational considerations.
+Avoid large execution when underlying price cannot update unless strategy explicitly accounts for it.
 
-Know whether participation is optional and how proceeds/risks are handled.
+## 23. Settlement Cycle
 
-## 24. Market Access Korea
+Trade date, security settlement, FX settlement and bank transfer can differ.
 
-Korea offers domestic equities, ETFs, ETNs, bonds and derivatives plus access to foreign securities through brokers. Product availability and tax/account rules change.
+Buying power displayed by broker is not always withdrawable cash. Cross-border liquidity planning must map each step.
 
-Framework: underlying → wrapper → account → execution → after-tax outcome.
+## 24. Prefunding
 
-## 25. Market Access Vietnam
+Some markets/accounts require cash/securities before order. Others allow settlement flexibility.
 
-Vietnam has local market structure, foreign ownership constraints and custody/account rules. For foreign investor, access and repatriation are separate risk layers from stock fundamentals.
+Rules change; verify current broker/exchange source before real transaction.
 
-Always verify current official/broker rules before implementation.
+## 25. Failed Settlement
 
-## 26. Foreign Ownership Limit
+Operational error, holiday mismatch or insufficient securities/cash can create failed settlement and fees/restrictions.
 
-Some Vietnamese sectors/companies can have foreign ownership constraints. Near-full room may affect accessibility and valuation/technical flow.
+Institutions manage settlement risk as separate operational process; retail should at least avoid assuming cross-border transfers are instant.
 
-Do not confuse access premium with business intrinsic value.
+## 26. Corporate Actions across Borders
 
-## 27. Free Float
+Dividends, rights offerings, tender offers, splits and votes may have earlier broker deadlines than local-market official date.
 
-Headline market cap overstates investable liquidity if controlling shareholders hold large stake. **Free-float market cap** matters for index weight and execution.
+Foreign holders can face documentation/processing constraints. Read broker notice, not only company announcement.
 
-Cross-border investor should compare position size with free-float turnover, not total market cap.
+# Phần IV — Custody và Legal Structure
 
-## 28. Daily Price Limits
+## 27. Custody Chain
 
-Vietnam price bands can make stop-loss non-executable in panic. Several floor sessions with no buyers can create realized loss far beyond planned trigger.
+Map broker → custodian → sub-custodian → central depository where applicable.
 
-Liquidity-adjusted position sizing is essential.
+Client-asset segregation and beneficial-ownership records matter if intermediary fails.
 
-## 29. Repatriation Risk
+## 28. Legal vs Beneficial Ownership
 
-After selling, can proceeds be transferred home easily? What documentation, tax clearance or banking process is required?
+In nominee structures, broker/custodian may hold legal title while investor is beneficial owner.
 
-This is operational/country risk invisible in P/E.
+Voting, corporate actions and insolvency protections depend jurisdiction/account structure.
 
-## 30. Capital Controls
+## 29. Brokerage Legal Entity
 
-Capital-account rules can tighten during stress. Even if normal-times process is easy, tail scenario deserves consideration for emerging-market exposure.
+Global brand may serve users through different subsidiaries. Regulator, investor protection, compensation scheme and contract law may differ.
 
-Framework should include ability to move capital, not just asset price.
+Always identify exact legal counterparty.
 
-## 31. Tax Wrapper
+## 30. Omnibus vs Segregated Accounts
 
-ISA, retirement/pension accounts or other tax-advantaged wrappers can materially change net return. Eligibility, contribution limits, withdrawal and allowed products evolve.
+Omnibus custody pools client positions in intermediary account; segregated structure records more separately.
 
-Compare on after-tax basis and verify current official rules.
+Neither label alone determines safety. Reconciliation, regulation and insolvency treatment matter.
 
-## 32. Tax Location
+## 31. Securities Lending
 
-Some assets generate high distributions, others mostly deferred capital gain. Account location can affect tax drag.
+Broker/fund may lend securities. Benefits include lending revenue; risks include collateral/counterparty/recall mechanics.
 
-Optimal tax location is jurisdiction-specific; chapter focuses decision logic, not fixed rates.
+Know whether opt-in/opt-out and who keeps revenue.
 
-## 33. Withholding Tax
+## 32. Operational Concentration
 
-Foreign dividends/interest may face source-country withholding before home-country tax. Treaty/account wrapper can affect treatment.
+Holding all foreign assets, cash and FX conversion at one intermediary creates single-point failure.
 
-Headline yield is not net cash yield.
+Diversification of providers may improve resilience but adds complexity. Scale should justify complexity.
 
-## 34. Capital Gains Treatment
+# Phần V — Korea và Vietnam Market Access
 
-Taxation can differ by security type, account and residence. Cross-border investor should distinguish realized/unrealized gains and local/foreign classification.
+## 33. Korea Access
 
-Do not optimize based on outdated rate remembered from previous year.
+Korea offers domestic securities plus foreign-product access through brokers. Account wrappers may restrict eligible assets.
 
-## 35. Tax Residency
+Implementation chain:
 
-Tax obligations depend on residency and sometimes domicile/citizenship. Moving countries can change reporting and wrapper suitability.
+```text
+Underlying
+→ Wrapper
+→ Account
+→ Broker Entity
+→ Execution
+→ Tax / Reporting
+```
 
-Large/complex cases require professional tax/legal verification.
+## 34. Vietnam Access
 
-## 36. Estate / Inheritance Risk
+Vietnam access may involve foreign investor registration/account/custody rules, ownership limits and specific banking/settlement processes.
 
-Direct foreign ownership may create estate/inheritance considerations. Wrapper vs direct security can differ legally.
+Framework should treat access/repatriation as separate from security fundamentals.
 
-This becomes important as asset size grows and should be part of operational planning.
+## 35. Foreign Ownership Limit
 
-## 37. Documentation Discipline
+Foreign room can constrain accessibility and create technical premium/discount.
 
-Store trade confirmations, FX conversion records, dividend/withholding statements, account statements and tax documents.
+Near-full room is not business moat. Regulation/issuance can change scarcity.
 
-Multi-year reconstruction is difficult; documentation is part of investment process.
+## 36. Free Float
 
-## 38. Cost Stack
+Position size should be compared with **free-float market cap** and actual turnover, not total shares.
 
-Total cost can be expressed conceptually:
+Controlling stakes reduce available liquidity and can increase governance risk.
+
+## 37. Daily Price Limits
+
+Vietnam price bands can make theoretical stop non-executable. Multiple floor sessions with no buyers are a real tail scenario.
+
+Position sizing must include time-to-exit under stressed volume.
+
+## 38. Market Impact
+
+Cross-border investor in less-liquid market should estimate number of days needed to liquidate at reasonable participation rate.
+
+Portfolio liquidity is not just “market is open”.
+
+# Phần VI — Capital Mobility và Repatriation
+
+## 39. Repatriation Risk
+
+After selling, moving proceeds home may require banking/tax/documentation steps.
+
+Operational friction can become country risk during stress.
+
+## 40. Capital Controls
+
+Country may restrict currency conversion or capital movement in exceptional conditions.
+
+Even low-probability controls matter for assets intended to fund foreign liabilities.
+
+## 41. Convertibility Risk
+
+Local asset return can be high but economically less useful if proceeds cannot be converted/transferred at market rate.
+
+Convertibility is a distinct risk from FX depreciation.
+
+## 42. Reserve / Balance-of-Payments Context
+
+For emerging markets, external balance, reserves and foreign-currency funding help evaluate tail capital-mobility/FX risk.
+
+Do not use company P/E alone for cross-border allocation.
+
+# Phần VII — Tax Framework
+
+## 43. Tax Residency
+
+Tax treatment depends residency and sometimes domicile/citizenship/account status.
+
+Moving country can change reporting and wrapper suitability. Tax residency should be reviewed after major life relocation.
+
+## 44. Source-Country Withholding
+
+Dividend/interest may be taxed before reaching account. Treaty can modify rate or allow credits depending circumstances.
+
+Headline dividend yield ≠ net cash yield.
+
+## 45. Tax Treaty
+
+Treaties coordinate taxing rights and may affect withholding/foreign-tax-credit treatment.
+
+Treaty application can depend forms, beneficial ownership and product domicile. Verify current professional/official sources for real money.
+
+## 46. Capital Gains
+
+Realized gains may receive different treatment depending domestic/foreign security, account wrapper, residency and product class.
+
+Permanent library should explain categories, not memorize one year’s rate.
+
+## 47. Tax Wrapper
+
+ISA/pension/retirement-like accounts can change after-tax result materially.
+
+Evaluate contribution/withdrawal restrictions, eligible products and loss/netting rules along with tax benefit.
+
+## 48. Tax Location
+
+Income-heavy assets and growth assets may have different optimal account location depending jurisdiction.
+
+The objective is maximize after-tax portfolio return, not pre-tax yield.
+
+## 49. Foreign Tax Credit
+
+Some systems allow credit for foreign withholding against domestic tax; rules/limits vary.
+
+Records matter because missing statements can turn theoretical credit into unusable claim.
+
+## 50. Estate / Inheritance Risk
+
+Direct foreign securities may have estate/inheritance implications different from local wrappers or domiciled funds.
+
+As portfolio grows, this deserves professional legal/tax review.
+
+## 51. Documentation Discipline
+
+Store trade confirmations, FX conversions, dividends, withholding statements, corporate actions, account statements and transfer records.
+
+Cross-border tax/reporting quality depends record quality.
+
+# Phần VIII — Cost Stack
+
+## 52. Total Cost
 
 ```text
 Broker Commission
 + Exchange / Regulatory Fees
 + Bid-Ask Spread
-+ Slippage
-+ FX Spread
-+ Fund Expense / Tracking Difference
-+ Funding / Borrow Cost
++ Slippage / Impact
++ FX Conversion
++ Fund Expense
++ Tracking Difference
++ Funding / Borrow
 + Tax / Withholding
++ Custody / Transfer Fees
 ```
 
-Lowest advertised commission may not be cheapest implementation.
+“Zero commission” can still be expensive implementation.
 
-## 39. FX Conversion Cost
+## 53. FX Spread
 
-Frequent small conversions can compound spread/fees. Consider conversion policy, minimum fee and whether broker auto-converts dividends.
+Frequent currency conversion compounds friction. Compare explicit FX commission and embedded spread.
 
-Currency management should minimize unnecessary churn.
+Auto-conversion of dividends can create repeated small costs.
 
-## 40. Dividend Currency
+## 54. Tracking Difference
 
-Dividend may arrive in underlying currency or auto-convert. Auto conversion changes net currency exposure and costs.
+Local wrapper may have low expense but poor tracking due tax, futures roll, hedge or operational frictions.
 
-Know account policy before relying on dividend as cash-flow hedge.
+Historical tracking difference is often more informative than expense ratio alone.
 
-## 41. Liquidity Comparison Korea vs Vietnam
+## 55. Securities-Lending Revenue
 
-Korean large caps and major ETFs are generally deeper than many Vietnam small/mid caps, but product-specific liquidity always matters.
+Fund may offset fees through lending income. Analyze how much revenue returns to fund vs manager and collateral policy.
 
-Position size should be defined relative to realistic exit capacity under stressed volume.
+## 56. Funding Cost
 
-## 42. Market Impact
+Margin/CFD/leveraged products add financing. Cross-border carry can overwhelm underlying expected return over long horizon.
 
-A cross-border investor using less-liquid securities must estimate how many days to exit without dominating volume.
+# Phần IX — Country, Currency và Factor Risk
 
-Market order urgency can convert paper return into slippage loss.
+## 57. Country Buckets
 
-## 43. Korea Sector Concentration
+Classify by underlying country risk, not listing venue.
 
-Broad Korea exposure often embeds semiconductor/exporter/industrial/financial sensitivity. Adding separate semiconductor ETF may duplicate same macro factor.
+Korean-listed S&P ETF belongs mostly US/global economic bucket plus Korean wrapper operational characteristics.
 
-Diversification by ticker is not factor diversification.
+## 58. Currency Buckets
 
-## 44. Vietnam Sector Concentration
+Aggregate KRW/USD/VND exposures across all accounts and wrappers.
 
-Vietnam index exposure can be heavy in banks/property/consumer. Broad index still carries domestic credit/property cycle.
+Compare net exposure with liabilities and human capital.
 
-Understand index methodology and weights before assuming “country ETF = diversified”.
+## 59. Factor Buckets
 
-## 45. Common Macro Factors
+Countries can share factor risk. Korea semiconductor ETF, US Nasdaq and global AI fund may all long growth/tech/duration.
 
-Korea and Vietnam differ structurally but share exposure to USD, China, global trade and risk sentiment.
+Country diversification is not factor diversification.
 
-Cross-country diversification may weaken exactly during global deleveraging.
+## 60. Home Bias
 
-## 46. Fed Shock
+Familiar assets feel safer, but salary/property/pension may already concentrate domestic risk.
 
-Hawkish Fed can raise US yields/USD. Korea transmits quickly through KRW, exporters/foreign flows and valuation. Vietnam can transmit through USD/VND pressure, domestic liquidity/policy room and sentiment.
+Foreign diversification can reduce this but adds FX/tax/access complexity. Optimal balance is household-specific.
 
-Speed and policy response differ.
+## 61. Country Risk Premium
 
-## 47. China Shock
+Political, institutional, legal and external-financing uncertainty can raise required return.
 
-Korea has direct export/industrial sensitivity. Vietnam has trade, tourism, input and FDI-relocation channels.
+Country risk should affect valuation and position sizing, not only narrative.
 
-A China slowdown can hurt demand yet lower commodity/input costs or accelerate supply-chain relocation.
+## 62. Sovereign–Corporate Link
 
-## 48. Oil Shock
+Local corporate funding cost often depends sovereign curve, banking system and currency stability.
 
-Korea as energy importer can face terms-of-trade and inflation pressure. Vietnam has mixed importer/producer/regulated-price channels.
+A globally competitive company can still de-rate if country risk premium rises sharply.
 
-Company effect depends sector spread economics, not country headline alone.
+## 63. Banking-System Link
 
-## 49. Country Risk Premium
+Cross-border investor should assess custody/bank system stability because capital movement and corporate funding both depend financial system.
 
-Political/regulatory/institutional uncertainty can raise discount rate even when company cash flows look good.
+Country exposure is more than index constituents.
 
-Country risk should affect required return and position size, not only narrative.
+# Phần X — Korea–Vietnam Specific Cross-Market Thinking
 
-## 50. Currency Buckets
+## 64. Common Global Factors
 
-Aggregate portfolio by KRW, USD, VND and other economic exposures. Compare with future liabilities by currency.
+Korea và Vietnam both exposed to USD, China, global trade and risk sentiment, but transmission differs.
 
-This reveals hidden mismatch that account-by-account view misses.
+Korea market often reprices rapidly through liquid KRW/large-cap exporters. Vietnam can transmit strongly through domestic liquidity, credit and property channels.
 
-## 51. Country Buckets
+## 65. Fed Shock
 
-Classify underlying country risk separately from listing venue. Korean-listed US ETF belongs economically largely to US/Global bucket plus Korean wrapper characteristics.
+Hawkish Fed can raise USD/yields. Korea sees KRW/foreign-flow/valuation effects; Vietnam sees VND pressure and reduced domestic easing room.
 
-## 52. Factor Buckets
+Same shock has different speed and sector weights.
 
-Cross-border positions should also be grouped by equity beta, duration, credit, commodities, growth, value and liquidity.
+## 66. China Shock
 
-Multiple countries can still share same factor.
+Korea has direct industrial/export links. Vietnam has trade, tourism, input and FDI-relocation channels.
 
-## 53. Home Bias
+China slowdown can hurt demand but lower inputs or strengthen China+1 incentives.
 
-Familiarity can make domestic assets feel safer than they are. Salary, property and career may already concentrate domestic risk.
+## 67. Oil Shock
 
-But foreign diversification also adds FX/tax/operational complexity. Goal is balanced total risk, not maximum foreign allocation.
+Korea is major energy importer; Vietnam has mixed importer/producer/regulatory channels.
 
-## 54. Liability-Driven Allocation
+Company-level cost/revenue currency and pass-through determine actual outcome.
 
-Near-term liabilities should be matched by currency and liquidity. Money needed for Korea housing soon should not depend on VND equity liquidity or USD stock recovery.
+## 68. Korea Concentration
 
-Long horizon allows more mismatch but still requires explicit policy.
+Broad Korea exposure can be semiconductor/export/industrial heavy. Adding thematic semiconductor product may duplicate risk.
 
-## 55. Emergency Liquidity
+## 69. Vietnam Concentration
 
-Cross-border transfers can be delayed by holidays, settlement or documentation. Keep emergency cash in accessible liability currency rather than treating foreign portfolio as instant liquidity.
+Vietnam index can be bank/property heavy. Broad country exposure therefore still loads domestic credit/liquidity factor.
 
-## 56. Cross-Border IPS
+# Phần XI — Portfolio Construction
 
-A useful Investment Policy Statement should define target country/currency allocation, maximum FX mismatch, permitted wrappers, liquidity floor, documentation process, rebalancing bands and verification rules for tax/regulation changes.
+## 70. Liability-Driven Allocation
 
-## 57. Product Comparison Template
+Near-term liabilities should match currency and liquidity. Money needed for Korea housing soon should not rely on VND small-cap exit or US equity recovery.
 
-When comparing Korean local ETF vs direct US ETF vs another wrapper, compare:
+## 71. Emergency Liquidity
+
+Cross-border transfers can fail/delay during holidays or compliance review. Keep emergency cash in readily accessible liability currency.
+
+## 72. Cross-Border IPS
+
+IPS should define target country/currency buckets, max FX mismatch, permitted wrappers, liquidity floor, provider concentration limits, rebalancing bands and rules for verifying policy/tax changes.
+
+## 73. Rebalancing Across Currencies
+
+Use new contributions/dividends where possible to rebalance without unnecessary FX conversion/tax realization.
+
+Asset allocation rebalancing and currency rebalancing are separate decisions.
+
+## 74. Liquidity-Adjusted Position Size
+
+A position should be small enough to exit under stressed free-float turnover, not only normal average volume.
+
+Estimate days-to-liquidate and price-limit risk where relevant.
+
+## 75. Provider Concentration Limit
+
+Large portfolio may set max exposure per broker/custodian/bank legal entity.
+
+Operational resilience can justify holding some redundancy even if fee slightly higher.
+
+# Phần XII — Stress Testing và Operations
+
+## 76. Combined Stress
+
+Test asset + FX + liquidity simultaneously:
+
+```text
+Korea equity -25%
+Vietnam equity -35%
+USD/KRW +15%
+USD/VND +7%
+Spreads double
+Vietnam exits restricted by floor liquidity
+Broker transfer delayed
+```
+
+Single-factor stress underestimates cross-border tails.
+
+## 77. Reverse Stress
+
+Ask what combination would make portfolio unable to meet 12-month liabilities or exceed target drawdown.
+
+This identifies fragility better than only plausible scenario list.
+
+## 78. Operational Failure
+
+Simulate broker unavailable, bank transfer delayed, 2FA/device issue, missing tax docs or corporate-action deadline missed.
+
+Backup access and records are portfolio infrastructure.
+
+## 79. Succession / Access Planning
+
+For large/long-term cross-border assets, trusted family/executor needs know where accounts and records exist, subject to security/legal safeguards.
+
+Operational continuity matters beyond investor’s daily activity.
+
+## 80. Snapshot Discipline
+
+Tax, settlement, foreign-room and account rules change. Permanent docs should keep mechanisms evergreen; current decision must verify official sources dated close to transaction.
+
+## 81. Product Comparison Template
 
 ```text
 Underlying Exposure
-Currency Hedge
-Expense / Tracking
-Spread / Liquidity
-Tax Wrapper Eligibility
-Dividend Treatment
-FX Conversion
+Domicile / Legal Claim
+Trading + Underlying Currency
+Hedge Policy
+Expense + Tracking
+Spread + Liquidity
+Tax / Withholding
+Account Eligibility
 Settlement / Market Hours
-Estate / Legal Complexity
-Operational Simplicity
+Custody / Counterparty
+Estate / Reporting Complexity
 ```
 
-Expected return should be compared after expected frictions.
+Compare expected return after all frictions.
 
-## 58. Rebalancing Across Currencies
-
-Rebalancing can use new contributions to reduce FX conversions/tax realization. Sell/buy only when net benefit exceeds friction.
-
-Currency rebalancing and asset-class rebalancing are separate dimensions.
-
-## 59. Stress Testing
-
-Stress scenarios should combine asset + FX + liquidity. Example: Korean equity -20%, VND equity -30%, KRW weak 10%, VND weak 5%, spreads widen and foreign-market access slower.
-
-Single-factor stress underestimates real cross-border tails.
-
-## 60. Operational Failure Scenario
-
-Ask what happens if broker unavailable, bank transfer delayed, account temporarily restricted or documents missing. Keep backup liquidity and records.
-
-Operational resilience is part of portfolio risk management.
-
-## 61. Snapshot Discipline
-
-Tax, settlement, account rules and foreign-room framework change over time. Permanent notes should explain concepts; real-money decision should verify current regulator/exchange/broker/tax-authority source.
-
-This prevents knowledge library becoming stale policy manual.
-
-## 62. Pre-Trade Workflow
+## 82. Pre-Trade Workflow
 
 ```text
-1. Identify underlying economic exposure.
-2. Identify all currencies.
-3. Check wrapper/legal claim.
-4. Check liquidity/free float.
-5. Check settlement/market hours.
-6. Check account/tax wrapper eligibility.
-7. Estimate total cost.
-8. Check tax/withholding/repatriation.
-9. Stress asset + FX + liquidity.
-10. Size relative to liabilities and total portfolio.
+1. Identify underlying economics.
+2. Map four currencies.
+3. Identify domicile/wrapper/legal claim.
+4. Check liquidity/free float/price limits.
+5. Check market hours/settlement/custody.
+6. Estimate tax/withholding and total cost.
+7. Verify repatriation/access rules.
+8. Stress asset + FX + liquidity.
+9. Check portfolio factor/currency duplication.
+10. Size relative liabilities and liquidity.
 ```
 
-## 63. Post-Trade Review
+## 83. Post-Trade Attribution
 
-Separate local asset return, FX return, income, tax, fees and implementation. This shows whether cross-border exposure added security alpha, currency beta or simply extra friction.
+Separate underlying return, currency, hedge carry, income, fees, tax and execution.
 
-## 64. Mental Model cuối cùng
+Cross-border learning improves only when return source is identified correctly.
 
-Cross-border investing is a multi-layer balance-sheet problem:
+## 84. Mental Model cuối cùng
 
 ```text
-Underlying Business / Asset
-+ Country Risk
-+ Currency Risk
-+ Wrapper / Counterparty
-+ Custody / Settlement
-+ Liquidity
-+ Tax / Withholding
-+ Repatriation
-+ Liability Currency
-= Real Investor Outcome
+Underlying Economics
+→ Country / Factor Exposure
+→ Currency Exposure
+→ Wrapper / Domicile / Legal Claim
+→ Custody / Access / Settlement
+→ Tax / Cost
+→ Liquidity / Repatriation
+→ Liability Match
+→ Stress / Operations
 ```
 
-Khi từng layer được tách rõ, lựa chọn giữa Korean ETF, direct foreign security và Vietnamese asset trở thành một quyết định có cấu trúc thay vì chỉ so chart return.
+Cross-border investing is portfolio engineering across legal and monetary systems. Asset selection remains important, nhưng realized wealth depends on implementation layers that do not appear in a simple price chart.
