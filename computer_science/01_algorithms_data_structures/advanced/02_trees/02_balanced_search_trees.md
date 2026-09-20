@@ -1,30 +1,38 @@
-# Balanced Search Trees
-**Cây tìm kiếm cân bằng (Balanced Search Tree / 균형 탐색 트리)**
+# Cây tìm kiếm cân bằng
+**Balanced Search Trees / 균형 탐색 트리**
 
-Binary Search Tree chỉ có lợi nếu chiều cao của cây nhỏ. Một BST có thể chứa đúng cùng tập key nhưng có shape hoàn toàn khác nhau: nếu insert theo thứ tự gần ngẫu nhiên, cây có thể khá thấp; nếu insert `1,2,3,4,5,...`, cây có thể suy thoái thành gần như linked list. Vì vậy operation tưởng như `O(log n)` thực chất chỉ có bound theo chiều cao `h`:
+Cây tìm kiếm nhị phân chỉ thật sự hữu ích khi chiều cao được kiểm soát. Với cùng một tập khóa, một BST có thể thấp gần `log n`, nhưng cũng có thể suy thoái thành chuỗi dài gần `n` nếu thứ tự chèn xấu.
+
+Mọi thao tác cơ bản thực chất có chi phí theo chiều cao:
 
 \[
 search, insert, delete = O(h)
 \]
 
-Nếu `h = n`, ta mất toàn bộ lợi thế của tree search. **Balanced search tree (균형 탐색 트리)** giải quyết vấn đề này bằng cách thêm một invariant hình dạng. Ta trả một ít maintenance cost khi insert/delete để đảm bảo `h = O(log n)` trong dài hạn.
+Vì vậy **cây tìm kiếm cân bằng** thêm một bất biến về hình dạng để bảo đảm:
 
-## Mental Model
+\[
+h = O(\log n)
+\]
 
-> Balancing không làm BST “sorted hơn”. BST order invariant đã đủ để nói left < node < right. Balancing chỉ kiểm soát **shape** để số bước từ root tới leaf không tăng tuyến tính.
+Ta trả thêm chi phí sửa cấu trúc khi cập nhật để đổi lấy cận tìm kiếm ổn định.
 
-Có hai lớp invariant khác nhau:
+## 1. Hai lớp bất biến khác nhau
+
+Balanced BST duy trì đồng thời:
 
 ```text
-BST invariant     -> quyết định key nằm bên trái hay bên phải
-balance invariant -> quyết định tree có được phép nghiêng quá mức hay không
+BST invariant      -> thứ tự khóa
+balance invariant  -> chiều cao/hình dạng được kiểm soát
 ```
 
-Rotation tồn tại vì nó sửa lớp thứ hai mà không phá lớp thứ nhất.
+Rotation tồn tại vì nó có thể sửa lớp thứ hai mà không phá lớp thứ nhất.
 
-## Rotation thực sự bảo toàn điều gì?
+Điểm này rất quan trọng: balancing không làm cây “sorted hơn”; nó chỉ ngăn đường tìm kiếm dài quá mức.
 
-Xét một right rotation:
+## 2. Rotation bảo toàn thứ tự thế nào?
+
+Right rotation:
 
 ```text
         y                     x
@@ -34,19 +42,35 @@ Xét một right rotation:
     A   B                     B   C
 ```
 
-Trước rotation, inorder sequence là:
+Trước và sau rotation, inorder sequence đều là:
 
 ```text
 A < x < B < y < C
 ```
 
-Sau rotation, sequence vẫn y hệt. Nghĩa là rotation thay đổi quan hệ parent-child cục bộ nhưng **không thay đổi sorted order** của các key. Đây là lý do rotation có thể sửa height mà không cần rebuild toàn subtree.
+Rotation chỉ đổi quan hệ cha–con cục bộ. Chính vì inorder order không đổi nên BST invariant được giữ.
 
-Nếu mỗi node còn metadata như `height`, `size`, `maxEnd`, metadata phải được recompute theo đúng thứ tự sau rotation. Tree có thể vẫn là BST nhưng query augmentation sẽ sai nếu metadata cũ còn tồn tại.
+Nếu node có metadata như `height`, `size`, `maxEnd`, `sum`, metadata phải được cập nhật đúng thứ tự sau rotation.
 
-## AVL Tree: cân bằng bằng height
+## 3. Metadata Update Order
 
-**AVL Tree (AVL 트리)** giữ balance factor:
+Sau right rotation ở `y`:
+
+```text
+y trở thành con của x
+```
+
+Nên recompute `y` trước, rồi `x`, vì metadata mới của `x` phụ thuộc metadata mới của `y`.
+
+Pattern tổng quát:
+
+> Khi relink tree, cập nhật metadata từ dưới lên theo topology mới.
+
+Sai thứ tự có thể tạo cây đúng về BST nhưng sai về augmentation.
+
+## 4. AVL Tree
+
+AVL giữ balance factor:
 
 \[
 BF(u)=height(left(u))-height(right(u))
@@ -55,241 +79,473 @@ BF(u)=height(left(u))-height(right(u))
 và yêu cầu:
 
 \[
-BF(u) \in \{-1,0,1\}
+BF(u)\in\{-1,0,1\}
 \]
 
-cho mọi node. Đây là một invariant chặt: hai subtree của bất kỳ node nào không được lệch nhau quá một level.
+ở mọi node.
 
-### Tại sao invariant này cho `O(log n)` height?
+Đây là một invariant cân bằng khá chặt.
 
-Hãy hỏi ngược: với height `h`, cây AVL ít node nhất có bao nhiêu node? Để vẫn đạt height `h` nhưng dùng ít node nhất, một subtree phải có height `h-1`, subtree còn lại nhỏ nhất có thể mà vẫn hợp lệ là `h-2`.
+## 5. Vì sao AVL có chiều cao logarithmic?
 
-Do đó:
+Gọi `N(h)` là số node ít nhất của AVL height `h`.
+
+Để đạt height `h` với ít node nhất nhưng vẫn hợp lệ, hai subtree phải có height `h-1` và `h-2`:
 
 \[
 N(h)=1+N(h-1)+N(h-2)
 \]
 
-Recurrence này tăng giống Fibonacci, tức số node tăng theo exponential của height. Đảo lại quan hệ đó, height chỉ tăng logarithmic theo `n`:
+Recurrence này tăng cùng cấp với Fibonacci, tức tăng theo hàm mũ của `h`.
+
+Do đó đảo lại:
 
 \[
 h=O(\log n)
 \]
 
-Đây là bản chất proof; không cần học thuộc một hằng số cụ thể để hiểu vì sao AVL không thể cao tuyến tính.
+Đây là bản chất của bảo đảm chiều cao AVL.
 
-## AVL insertion: bốn case chỉ là hai loại lệch
+## 6. Bốn case AVL thực chất là hai hình dạng
 
-Insert trước tiên giống BST thường. Sau đó chỉ các ancestor trên search path mới có thể đổi height. Ta đi ngược lên, recompute height và tìm node đầu tiên vi phạm `|BF| <= 1`.
+Sau insert, một node có thể lệch trái hoặc lệch phải.
 
-Các tên LL, RR, LR, RL chỉ mô tả hướng path làm mất cân bằng:
+Nếu đường đi nặng cùng hướng:
 
 ```text
-LL -> right rotation
-RR -> left rotation
-LR -> left rotation ở left child, sau đó right rotation
-RL -> right rotation ở right child, sau đó left rotation
+LL -> rotate right
+RR -> rotate left
 ```
 
-Không nên học đây như bốn mẹo rời rạc. Hãy nhìn shape: nếu subtree nặng nằm “cùng hướng” với parent, một rotation đơn đủ; nếu path zig-zag, cần rotation ở child trước để biến nó về cùng hướng.
+Nếu zig-zag:
 
-### Java skeleton
-
-```java
-final class Node {
-    int key;
-    int height = 1;
-    Node left, right;
-
-    Node(int key) {
-        this.key = key;
-    }
-}
-
-static int h(Node x) {
-    return x == null ? 0 : x.height;
-}
-
-static void pull(Node x) {
-    x.height = 1 + Math.max(h(x.left), h(x.right));
-}
-
-static Node rotateRight(Node y) {
-    Node x = y.left;
-    Node b = x.right;
-
-    x.right = y;
-    y.left = b;
-
-    pull(y);
-    pull(x);
-    return x;
-}
+```text
+LR -> rotate left ở child, rồi rotate right
+RL -> rotate right ở child, rồi rotate left
 ```
 
-Điểm quan trọng trong code không phải tên function mà là thứ tự `pull`: node thấp hơn sau rotation phải được cập nhật trước node mới ở trên.
+Không nên học bốn case như bốn mẹo. Hãy nhìn hình dạng:
 
-## AVL deletion khó hơn insertion ở đâu?
+> zig-zag cần biến thành straight line trước, sau đó một rotation chính sửa được imbalance.
 
-Insert chỉ tăng height trên một path và thường việc sửa node mất cân bằng đầu tiên đủ để khôi phục structure phía trên. Delete có thể làm subtree thấp đi; sau một rotation, height của subtree mới vẫn có thể giảm tiếp và gây imbalance ở ancestor cao hơn. Vì vậy deletion thường phải tiếp tục kiểm tra toàn path lên root.
+## 7. AVL Insert
 
-Đây là một ví dụ tốt cho việc cùng invariant nhưng mutation khác nhau tạo repair logic khác nhau.
+Quy trình:
 
-## Red-Black Tree: encode balance bằng màu
+1. insert như BST;
+2. đi ngược path;
+3. recompute height;
+4. tính balance factor;
+5. rotate nếu vi phạm;
+6. tiếp tục cập nhật metadata cần thiết.
 
-**Red-Black Tree (레드-블랙 트리)** không giữ chênh lệch height trực tiếp. Thay vào đó nó gắn color metadata vào node và duy trì các invariant thường được phát biểu như:
+Insertion chỉ ảnh hưởng các tổ tiên của vị trí chèn.
 
-1. mỗi node là red hoặc black;
-2. root là black;
-3. null leaves/sentinels được xem là black;
-4. red node không có red child;
-5. mọi path từ một node tới descendant null leaves có cùng số black nodes.
+## 8. AVL Delete khó hơn Insert
 
-Từ các property này suy ra không có root-to-leaf path nào dài hơn khoảng gấp đôi path ngắn nhất. Do đó:
+Delete có thể làm height subtree giảm. Sau khi sửa một imbalance, height của subtree mới vẫn có thể thấp hơn trước, tiếp tục làm ancestor cao hơn mất cân bằng.
+
+Vì vậy delete thường phải tiếp tục kiểm tra tới root.
+
+Đây là khác biệt quan trọng giữa:
+
+```text
+insert -> height có thể tăng
+remove -> height có thể giảm dây chuyền
+```
+
+## 9. Red-Black Tree
+
+Red-Black Tree không theo dõi chênh lệch height trực tiếp. Nó dùng màu để encode một ràng buộc cân bằng mềm hơn.
+
+Các invariant phổ biến:
+
+1. mỗi node đỏ hoặc đen;
+2. root đen;
+3. null leaf được xem là đen;
+4. node đỏ không có child đỏ;
+5. mọi path từ một node tới null leaf có cùng số node đen.
+
+Số node đen trên path được gọi là **black height**.
+
+## 10. Vì sao Red-Black cũng logarithmic?
+
+Vì không có hai node đỏ liên tiếp, trên một root-to-leaf path số node đỏ không vượt số node đen đáng kể.
+
+Mọi path có cùng black height, nên path dài nhất không quá khoảng hai lần path ngắn nhất theo số level liên quan.
+
+Từ đó suy ra:
 
 \[
-h = O(\log n)
+h=O(\log n)
 \]
 
-Red-Black cho phép cây “lỏng” hơn AVL. Đổi lại, insert/delete thường cần ít rotation nghiêm ngặt hơn và phù hợp tốt với ordered map/set general-purpose.
+Red-Black cho phép hình dạng “lỏng” hơn AVL nhưng vẫn đủ giữ logarithmic bound.
 
-## Tại sao red node không được có red child?
+## 11. Red-Black Insert
 
-Nếu cho phép chuỗi red dài tùy ý, black-height có thể vẫn giữ nhưng physical height có thể phình lớn. Rule “không red-red” giới hạn số red node giữa các black node. Vì mọi root-to-leaf path có cùng black count và red chỉ có thể xen kẽ, longest path bị bound theo black-height.
+Node mới thường được tô đỏ để không làm tăng black height ngay lập tức.
 
-Màu ở đây không có ý nghĩa semantic; nó là một cách compact để encode structural constraint.
+Vấn đề chỉ xuất hiện nếu parent cũng đỏ.
 
-## Red-Black insertion: điều gì đang được sửa?
+Hai hướng repair chính:
 
-Khi insert một node mới, thường node mới được tô red để không thay đổi black-height ngay lập tức. Vấn đề chỉ phát sinh nếu parent cũng red. Khi đó repair logic dựa vào color của uncle:
+### Uncle đỏ
 
-- nếu uncle red, recolor parent + uncle thành black và grandparent thành red, sau đó tiếp tục kiểm tra cao hơn;
-- nếu uncle black/null, rotations + recolor sửa local red-red violation.
+Recolor parent và uncle thành đen, grandparent thành đỏ, rồi tiếp tục kiểm tra grandparent.
 
-Điểm cần hiểu là repair không “tìm một shape đẹp”. Nó cố khôi phục chính xác hai thứ: không red-red và black-height consistency.
+### Uncle đen/null
 
-## Red-Black deletion vì sao nổi tiếng khó?
+Dùng rotation + recolor để loại red-red violation tại chỗ.
 
-Delete một black node có thể làm một path mất một đơn vị black-height. Nhiều textbook mô tả trạng thái này bằng khái niệm “double black”. Các case sibling-red, sibling-black-with-black-children, sibling-with-red-near/far-child đều là cách phân phối lại black-height qua recolor/rotation.
+Mô hình tư duy:
 
-Nếu chỉ nhớ case mà không giữ mental model “một path đang thiếu black count”, code rất dễ sai.
+> insertion repair bảo vệ đồng thời “không red-red” và “black height không đổi không hợp lệ”.
 
-Trong production, nếu không thật sự cần tự implement balanced tree, dùng standard library thường an toàn hơn. Tự implement nên chủ yếu để hiểu invariant hoặc khi cần augmentation đặc biệt.
+## 12. Red-Black Delete
 
-## AVL hay Red-Black?
+Xóa node đen có thể làm một nhánh thiếu một đơn vị black height.
 
-AVL cân bằng chặt hơn, nên lookup có thể có constant factor tốt hơn vì height thấp hơn. Red-Black cho phép nhiều shape hơn, thường giảm rebalancing pressure ở workload update-heavy.
+Nhiều tài liệu dùng khái niệm **double black** để mô hình hóa thiếu hụt này.
 
-Không nên biến điều này thành luật tuyệt đối. Performance thật còn phụ thuộc allocator, cache locality, branch prediction, key comparison cost và implementation quality.
-
-Một cách reasoning tốt hơn là:
+Các case sibling đỏ/đen và child đỏ/đen thực chất là những cách:
 
 ```text
-read-heavy, lookup latency quan trọng -> AVL có thể hấp dẫn
-mixed read/write general ordered map -> Red-Black thường phổ biến
-external-memory/page I/O dominant -> B/B+Tree phù hợp hơn
-concurrent ordered structure -> có thể cần skip list / specialized tree
+chuyển thiếu hụt black lên trên
+hoặc
+phân phối lại black bằng rotation/recolor
 ```
 
-## Ordered Map khác Hash Map ở capability, không chỉ Big-O
+Nếu chỉ học case mà không hiểu black-height deficit, implementation rất khó nhớ và debug.
 
-Hash table tối ưu exact identity lookup. Balanced BST duy trì total order nên hỗ trợ các operation như:
+## 13. AVL vs Red-Black
+
+AVL cân bằng chặt hơn nên thường có chiều cao thấp hơn một chút. Red-Black cho phép nhiều shape hơn, thường cần ít rotation hơn trong update-heavy workload.
+
+Một cách định hướng:
+
+```text
+lookup-heavy / latency lookup quan trọng   -> AVL có thể hấp dẫn
+ordered map/set tổng quát                  -> Red-Black rất phổ biến
+external-memory                            -> B/B+Tree phù hợp hơn
+concurrent ordered structure               -> có thể cân nhắc Skip List hoặc tree chuyên dụng
+```
+
+Không nên coi đây là luật tuyệt đối. Cache locality, allocator, comparator cost và implementation quality đều ảnh hưởng thực tế.
+
+## 14. Treap: Balance bằng Random Priority
+
+Treap giữ:
+
+```text
+BST order theo key
+heap order theo random priority
+```
+
+Nếu priorities độc lập ngẫu nhiên, expected height là `O(log n)`.
+
+Treap cho thấy balance không nhất thiết đến từ deterministic metadata như height hoặc color. Randomness cũng có thể tạo expected balance.
+
+## 15. Split và Merge trong Treap
+
+Treap đặc biệt mạnh vì `split` và `merge` rất tự nhiên.
+
+`split(root,key)` chia thành:
+
+```text
+L: keys < key
+R: keys >= key
+```
+
+`merge(L,R)` yêu cầu mọi key của `L` nhỏ hơn mọi key của `R`, rồi dùng heap priority để chọn root.
+
+Nhiều sequence/data-structure operations có thể xây từ split/merge thay vì viết insert/delete riêng.
+
+## 16. Implicit Treap
+
+Nếu không lưu key explicit mà coi inorder position là index logic, subtree size cho phép tìm phần tử thứ `k`.
+
+Khi đó Treap có thể biểu diễn sequence động với:
+
+```text
+split theo position
+merge sequences
+insert/delete interval
+reverse interval bằng lazy flag
+range aggregate nếu augment
+```
+
+Đây là cầu nối giữa balanced tree và dynamic array/rope.
+
+## 17. Splay Tree
+
+Splay Tree không giữ balance invariant cứng. Sau access, node được đưa lên root bằng zig, zig-zig, zig-zag rotations.
+
+Một thao tác có thể `O(n)`, nhưng amortized `O(log n)`.
+
+Điểm thú vị là structure tự thích nghi: item được truy cập gần đây hoặc thường xuyên có xu hướng gần root.
+
+Splay Tree minh họa trade-off giữa worst-case per operation và adaptive locality.
+
+## 18. Weight-Balanced Tree
+
+Có thể cân bằng dựa trên subtree size thay vì height/color.
+
+Ví dụ yêu cầu hai subtree không quá lệch theo tỷ lệ. Khi vi phạm, rotate/rebuild.
+
+Ý tưởng quan trọng:
+
+> “Balanced” không chỉ có một định nghĩa; miễn invariant đủ mạnh để bound height hoặc expected cost.
+
+## 19. Scapegoat Tree
+
+Scapegoat Tree tránh lưu balance metadata ở mọi node. Khi insertion làm tree quá cao, tìm một ancestor “scapegoat” có subtree mất cân bằng rồi rebuild toàn subtree đó thành cây cân bằng.
+
+Một update riêng có thể đắt, nhưng amortized bound tốt.
+
+Đây là ví dụ khác của deamortized-vs-amortized design space.
+
+## 20. B-Tree là Balanced Search Tree cho Page I/O
+
+B-Tree/B+Tree cũng cân bằng, nhưng node có nhiều child.
+
+Mục tiêu không chỉ giảm số comparison mà giảm số page access.
+
+Balanced binary tree height `O(log_2 n)`; B-Tree với fanout `B` có height gần:
+
+\[
+O(\log_B n)
+\]
+
+Balanced-tree design phải khớp cost model của storage medium.
+
+## 21. Ordered Map Capability
+
+Balanced BST hỗ trợ tự nhiên:
 
 ```text
 minimum / maximum
+floor / ceiling
 predecessor / successor
-floor(key) / ceiling(key)
+lower_bound / upper_bound
 range iteration
-rank / k-th nếu được augment
 ```
 
-Trong Java, `TreeMap`/`TreeSet` cung cấp `NavigableMap`/`NavigableSet` semantics. `HashMap` không thể trả `floorKey()` một cách tự nhiên vì nó không duy trì order invariant.
+Hash Table không giữ global order nên không hỗ trợ các query này tự nhiên.
 
-Nếu requirement là “lookup exact key nhanh nhất”, hash map thường phù hợp. Nếu requirement là “lookup + order query”, balanced tree giải một bài toán rộng hơn.
+Đây là khác biệt capability, không chỉ complexity.
 
-## Duplicate keys và comparator contract
+## 22. Duplicate Keys
 
-Một tree implementation phải quyết định duplicates được xử lý thế nào: reject, count frequency, lưu multiset node hay đặt duplicate theo một rule ổn định. Nếu comparator cho rằng hai object bằng nhau (`compare(a,b)==0`) nhưng equality semantics của application lại khác, ordered map có thể xem chúng như cùng key.
-
-Trong Java, comparator phải tạo ordering nhất quán, đặc biệt cần transitive:
+Phải xác định policy:
 
 ```text
-a < b và b < c  =>  a < c
+reject duplicate
+count frequency trong node
+lưu multiset entries
+augment bằng tie-break unique id
 ```
 
-Comparator sai có thể làm search path không còn meaningful dù rotation code hoàn hảo.
+Nếu comparator trả `0`, ordered map thường xem hai key là cùng ordering position.
 
-## Augmentation: balanced tree như một framework
+Comparator semantics là một phần của identity trong tree.
 
-Một balanced tree mạnh hơn nhiều khi mỗi node lưu metadata tổng hợp từ subtree. Ví dụ:
+## 23. Comparator Contract
+
+Comparator cần ít nhất tính nhất quán và bắc cầu.
+
+Nếu:
 
 ```text
-size(node) = 1 + size(left) + size(right)
+a < b
+b < c
+nhưng c < a
 ```
 
-cho phép tìm k-th smallest hoặc rank trong `O(log n)`.
+search path không còn có nghĩa toán học.
 
-Interval tree có thể lưu:
+Một rotation hoàn hảo cũng không cứu được tree có comparator không tạo ordering hợp lệ.
+
+## 24. Augmentation
+
+Balanced Tree là framework rất mạnh khi mỗi node lưu summary từ subtree.
+
+Ví dụ:
 
 ```text
-maxEnd(node) = max(interval.end, maxEnd(left), maxEnd(right))
+size
+sum
+maxEnd
+min/max
+custom aggregate
 ```
 
-để prune whole subtrees khi tìm overlap.
+Nếu summary được tính từ child trong `O(1)`, rotation chỉ cần recompute vài node cục bộ nên asymptotic update thường vẫn `O(log n)`.
 
-Nguyên tắc tổng quát là nếu metadata có thể recompute trong `O(1)` từ node + children, thì insert/delete vẫn `O(log n)` vì chỉ `O(log n)` ancestors và một số node rotation cần `pull()` lại.
+## 25. Order Statistics
 
-Xem thêm [Augmented Trees](./06_augmented_trees_and_order_statistics.md).
+Lưu:
 
-## Memory locality: một giới hạn của pointer trees
+\[
+size(u)=1+size(left)+size(right)
+\]
 
-Big-O không nói hết performance. Mỗi tree node thường là một object/allocation riêng, có pointers/references và metadata. Traversal root-to-leaf có thể jump qua nhiều cache lines.
-
-Array-based binary search trên sorted array có cùng `O(log n)` lookup nhưng locality tốt hơn và overhead memory thấp hơn; đổi lại insert/delete giữa array là đắt. Vì vậy static ordered data thường không cần balanced tree.
-
-Đây là một trade-off kinh điển:
+cho phép:
 
 ```text
-sorted array -> read/search tốt, mutation giữa sequence đắt
-balanced BST -> dynamic ordered mutation O(log n), locality kém hơn
+select(k) -> phần tử nhỏ thứ k
+rank(x)   -> số key nhỏ hơn x
 ```
 
-## Connection với B-Tree và external memory
+mỗi query `O(log n)` trên balanced tree.
 
-AVL/Red-Black giả định cost chính là số bước qua node trong RAM. Khi mỗi node access có thể tương ứng disk/page I/O, binary branching trở nên quá hẹp. B-Tree/B+Tree tăng branching factor để mỗi page chứa nhiều keys, giảm tree height và I/O count.
+Đây là ví dụ augmentation biến ordered set thành order-statistic tree.
 
-Nói cách khác, “balance” luôn phải gắn với cost model. RAM tree tối ưu pointer-depth; database index tối ưu page-depth.
+## 26. Interval Tree
 
-## Common misconceptions
+Nếu node keyed theo interval start và lưu `maxEnd` của subtree, có thể prune subtree không thể giao query interval.
 
-**“Balanced” nghĩa là hai subtree phải có cùng size.** Không đúng. AVL bound theo height difference; Red-Black dùng color/black-height. Hai subtree có thể khác số node đáng kể mà tree vẫn hợp lệ.
+Balanced invariant giữ height; augmentation giữ summary phục vụ overlap query.
 
-**Rotation làm thay đổi sorted order.** Không. Rotation được thiết kế chính vì nó bảo toàn inorder order.
+Hai lớp bất biến hoạt động độc lập nhưng phải cùng được bảo trì sau rotation.
 
-**TreeMap luôn chậm hơn HashMap nên không nên dùng.** Sai cách đặt vấn đề. `TreeMap` cung cấp ordered operations mà `HashMap` không cung cấp.
+## 27. Persistent Balanced Tree
 
-**Một BST có random-looking input thì chắc chắn `O(log n)`.** Không có deterministic guarantee. Nếu cần guaranteed logarithmic height, phải dùng structure có balancing invariant hoặc randomized structure với expected guarantee.
+Với immutable/persistent tree, update chỉ sao chép các node trên search path và chia sẻ subtree không đổi.
 
-**Biết bốn case AVL là đã hiểu balanced tree.** Chưa. Quan trọng hơn là hiểu invariant nào bị phá, rotation bảo toàn cái gì, và tại sao repair khôi phục bound `O(log n)`.
+Nếu tree height `O(log n)`, một update tạo `O(log n)` node mới.
 
-## Khi nào nên tự implement?
+Persistent Red-Black/AVL/Treap có thể hỗ trợ snapshot/versioning hiệu quả.
 
-Trong học thuật và interview, tự implement giúp hiểu invariant. Trong production, ưu tiên standard library trừ khi có requirement đặc biệt như custom allocator, intrusive node, lock-free concurrency, augmented metadata hoặc domain-specific ordering.
+## 28. Parent Pointer và Iterator
 
-Nếu tự implement, test không nên chỉ kiểm output. Sau random sequences insert/delete, hãy kiểm toàn bộ structural invariant:
+Nếu cần iterator predecessor/successor nhanh, parent pointer có thể hữu ích.
+
+Nhưng mỗi rotation phải cập nhật parent pointer đúng.
+
+Nếu iterator giữ raw node reference, delete/rotation/invalidation semantics phải được định nghĩa rõ.
+
+## 29. Memory Layout
+
+Node-based trees có pointer chasing và object overhead.
+
+Với dữ liệu nhỏ/tĩnh, sorted array có thể nhanh hơn tree dù insert/delete tệ hơn, vì:
 
 ```text
-BST inorder sorted
-AVL: |BF| <= 1 và stored height đúng
-Red-Black: không red-red và black-height bằng nhau
-metadata augmentation recompute đúng
-node count / parent pointers nhất quán
+contiguous memory
+fewer allocations
+better cache locality
 ```
 
-Property/invariant testing thường phát hiện bug rotation/delete nhanh hơn các example nhỏ.
+Balanced Tree đáng giá khi mutation/order queries thực sự cần.
 
-## Mental Model mở rộng
+## 30. Concurrent Balanced Trees
 
-> Balanced search tree là một **dynamic ordered index**. BST order cho biết đi hướng nào; balance invariant giữ số bước nhỏ; rotation sửa shape mà không phá order; augmentation thêm capability mới mà vẫn giữ logarithmic path length.
+Concurrent tree khó hơn Hash Map hoặc Skip List vì rotation thay đổi nhiều pointer liên quan.
 
-Khi chọn structure, hãy hỏi không chỉ “lookup có nhanh không?” mà còn: dữ liệu có mutate không, có cần order/range/predecessor không, cost model là RAM hay page I/O, và metadata nào cần duy trì cùng key order.
+Fine-grained locking phải xác định lock order để tránh deadlock. Lock-free tree cần linearization, memory ordering và reclamation rất phức tạp.
+
+Đây là lý do concurrent ordered maps đôi khi dùng Skip List: expected `O(log n)` nhưng update topology cục bộ theo level có thể thuận lợi hơn.
+
+## 31. Optimistic Read
+
+Một số implementation cho reader đọc mà không khóa toàn tree, rồi validate version/stamp để phát hiện writer đã thay đổi cấu trúc.
+
+Mẫu này đánh đổi retry để giảm contention read-heavy.
+
+Data structure concurrency không chỉ chọn lock hay no-lock; có cả optimistic validation và copy-on-write.
+
+## 32. Bulk Build
+
+Nếu đã có sorted keys, xây balanced BST không cần insert từng phần tử.
+
+Chọn middle làm root đệ quy tạo tree height tối ưu gần nhất trong `O(n)`.
+
+Nếu dùng insert lặp, dù mỗi insert `O(log n)`, total `O(n log n)`.
+
+Static/batch workload thường cho phép construction tốt hơn online workload.
+
+## 33. Join-Based Balanced Trees
+
+Một góc nhìn nâng cao là xây các operation từ `split` và `join`.
+
+Nếu có primitive:
+
+```text
+split(T, key)
+join(L, key, R)
+```
+
+thì union/intersection/difference của ordered sets có thể được xây đệ quy hiệu quả.
+
+Cách nhìn này đặc biệt hữu ích trong functional/persistent trees.
+
+## 34. Set Union giữa hai Trees
+
+Nếu một set nhỏ hơn nhiều set kia, không nhất thiết insert từng key đơn giản.
+
+Split/join algorithms có thể tận dụng cấu trúc của cả hai tree và đạt complexity phụ thuộc kích thước tương đối tốt hơn trong một số mô hình.
+
+Đây là ví dụ operation set cao cấp có thể ảnh hưởng lựa chọn tree family.
+
+## 35. Tree Validator
+
+BST validator phải kiểm tra global range, không chỉ parent-child.
+
+AVL validator:
+
+```text
+BST order
+stored height đúng
+|BF| <= 1
+```
+
+Red-Black validator:
+
+```text
+BST order
+root black
+no red-red
+mọi root-to-null path cùng black height
+```
+
+Augmented tree còn phải kiểm tra metadata.
+
+Validator sau random operations rất đáng giá khi tự implement.
+
+## 36. Differential Testing
+
+Có thể so custom tree với standard ordered map/set:
+
+```text
+insert/delete/contains
+min/max
+floor/ceiling
+range iteration
+```
+
+Sau mỗi operation, kiểm tra inorder output và invariants.
+
+Rotation bugs thường chỉ lộ sau sequence dài, nên stateful random testing rất hữu ích.
+
+## 37. Những hiểu lầm phổ biến
+
+“BST luôn `O(log n)`” — sai nếu không có balance guarantee.
+
+“AVL luôn nhanh hơn Red-Black” — sai; workload và update cost khác nhau.
+
+“Rotation chỉ đổi hình vẽ” — sai; metadata/parent/iterator semantics phải được bảo trì.
+
+“Balanced Tree tốt hơn sorted array vì insert nhanh” — chưa chắc nếu dữ liệu gần tĩnh và locality quan trọng.
+
+“Red-Black color chỉ là implementation trick” — màu là encoding của invariant giúp chứng minh height bound.
+
+## Mô hình tư duy
+
+> Balanced Search Tree trả một **chi phí bảo trì cục bộ sau update** để mua một **cận toàn cục cho chiều cao**.
+
+AVL dùng height difference, Red-Black dùng black-height + màu, Treap dùng random priority, Splay dùng amortized self-adjustment, B-Tree dùng multiway occupancy phù hợp page I/O.
+
+Khi chọn hoặc triển khai balanced tree, hãy hỏi: **cần deterministic hay expected guarantee, read/write ratio ra sao, có cần augmentation/persistence/split-merge không, memory locality có quan trọng không, và liệu sorted array hoặc Skip List đã phù hợp hơn chưa?**
+
+Xem thêm: [Binary Search Trees](./01_binary_search_trees.md), [Augmented Trees](./06_augmented_trees_and_order_statistics.md), [Skip Lists](./07_skip_lists.md), [B/B+Tree](./05_b_trees_and_external_memory.md).

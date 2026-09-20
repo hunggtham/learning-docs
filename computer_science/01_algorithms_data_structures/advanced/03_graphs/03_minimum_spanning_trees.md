@@ -1,19 +1,19 @@
-# Minimum Spanning Tree
-**Cây khung nhỏ nhất / Minimum Spanning Tree (MST) / 최소 신장 트리**
+# cây khung nhỏ nhất
+**Cây khung nhỏ nhất / cây khung nhỏ nhất (MST) / 최소 신장 트리**
 
-Minimum Spanning Tree giải bài toán: **kết nối toàn bộ vertices của một undirected weighted graph với tổng edge cost nhỏ nhất**. Nó không tối ưu đường đi giữa từng cặp nodes như shortest path; nó tối ưu **tổng chi phí của toàn bộ hạ tầng kết nối**.
+cây khung nhỏ nhất giải bài toán: **kết nối toàn bộ các đỉnh của một undirected đồ thị có trọng số với tổng cạnh chi phí nhỏ nhất**. Nó không tối ưu đường đi giữa từng cặp các nút như đường đi ngắn nhất (shortest path); nó tối ưu **tổng chi phí của toàn bộ hạ tầng kết nối**.
 
-Nếu graph có `V` vertices và connected, một spanning tree có đúng `V-1` edges. MST chọn spanning tree rẻ nhất trong tất cả các spanning trees khả dĩ.
+Nếu đồ thị có `V` các đỉnh và connected, một spanning cây có đúng `V-1` các cạnh. MST chọn spanning cây rẻ nhất trong tất cả các spanning các cây khả dĩ.
 
-## 1. Tại sao lời giải tối ưu phải là tree?
+## 1. Tại sao lời giải tối ưu phải là cây?
 
-Nếu một connected subgraph chứa cycle, bỏ một edge trên cycle vẫn giữ connected. Vì vậy khi mục tiêu chỉ là connectivity và ta không cần redundancy, cycle là dư thừa về số cạnh.
+Nếu một connected subgraph chứa chu trình, bỏ một cạnh trên chu trình vẫn giữ connected. Vì vậy khi mục tiêu chỉ là connectivity và ta không cần redundancy, chu trình là dư thừa về số cạnh.
 
-Mọi connected acyclic graph có `V-1` edges. Do đó search space tự nhiên của bài toán là tập tất cả spanning trees.
+Mọi connected acyclic đồ thị có `V-1` các cạnh. Do đó không gian tìm kiếm tự nhiên của bài toán là tập tất cả spanning các cây.
 
-Nhưng cần nhớ: production network thường cần redundancy. MST cố tình bỏ redundancy để tối thiểu hóa total cost; nó không tối ưu fault tolerance.
+Nhưng cần nhớ: hệ thống thực tế mạng thường cần redundancy. MST cố tình bỏ redundancy để tối thiểu hóa total chi phí; nó không tối ưu fault tolerance.
 
-## 2. MST khác Shortest Path Tree
+## 2. MST khác đường đi ngắn nhất cây
 
 Giả sử:
 
@@ -23,41 +23,41 @@ B-C = 2
 A-C = 3
 ```
 
-MST chọn `A-B` và `B-C`, total 4. Nhưng shortest path từ A tới C trong graph gốc là edge trực tiếp cost 3.
+MST chọn `A-B` và `B-C`, total 4. Nhưng đường đi ngắn nhất từ A tới C trong đồ thị gốc là cạnh trực tiếp chi phí 3.
 
 MST hỏi:
 
-> “Bộ edges rẻ nhất để mọi vertex connected là gì?”
+> “Bộ các cạnh rẻ nhất để mọi đỉnh connected là gì?”
 
-Shortest-path tree hỏi:
+cây đường đi ngắn nhất hỏi:
 
-> “Từ một source, làm sao distance tới từng vertex là nhỏ nhất?”
+> “Từ một nguồn, làm sao khoảng cách tới từng đỉnh là nhỏ nhất?”
 
 Hai objective khác nhau nên không thể thay thế thuật toán cho nhau.
 
-## 3. Cut Property — engine chứng minh của MST
+## 3. Cut tính chất — engine chứng minh của MST
 
-Một **cut** chia vertices thành hai tập `S` và `V-S`. Edge có hai endpoint nằm khác phía gọi là crossing edge.
+Một **cut** chia các đỉnh thành hai tập `S` và `V-S`. cạnh có hai endpoint nằm khác phía gọi là crossing cạnh.
 
-Cut property ở dạng thực dụng:
+Cut tính chất ở dạng thực dụng:
 
-> Với một cut tôn trọng các edges đã chọn, một edge nhẹ nhất crossing cut là **safe**: tồn tại một MST chứa nó.
+> Với một cut tôn trọng các cạnh đã chọn, một cạnh nhẹ nhất crossing cut là **an toàn**: tồn tại một MST chứa nó.
 
-Proof intuition dùng exchange argument. Giả sử MST `T` không chứa light edge `e`. Thêm `e` vào `T` tạo cycle. Cycle phải chứa một crossing edge `f` khác. Vì `w(e) <= w(f)`, thay `f` bằng `e` không tăng total cost. Ta thu được MST khác chứa `e`.
+trực giác chứng minh dùng exchange argument. Giả sử MST `T` không chứa light cạnh `e`. Thêm `e` vào `T` tạo chu trình. chu trình phải chứa một crossing cạnh `f` khác. Vì `w(e) <= w(f)`, thay `f` bằng `e` không tăng total chi phí. Ta thu được MST khác chứa `e`.
 
-Kruskal và Prim chỉ là hai cách khác nhau để liên tục tìm safe edge bằng cut property.
+Kruskal và Prim chỉ là hai cách khác nhau để liên tục tìm an toàn cạnh bằng cut tính chất.
 
-## 4. Cycle Property
+## 4. chu trình tính chất
 
-Trong một cycle, nếu edge `e` nặng hơn nghiêm ngặt mọi edge khác trên cycle, `e` không thể nằm trong bất kỳ MST nào.
+Trong một chu trình, nếu cạnh `e` nặng hơn nghiêm ngặt mọi cạnh khác trên chu trình, `e` không thể nằm trong bất kỳ MST nào.
 
-Nếu một MST chứa `e`, thêm một edge nhẹ hơn khác của cycle tạo cycle rồi bỏ `e`, total giảm — mâu thuẫn tối ưu.
+Nếu một MST chứa `e`, thêm một cạnh nhẹ hơn khác của chu trình tạo chu trình rồi bỏ `e`, total giảm — mâu thuẫn tối ưu.
 
-Cut property giúp **thêm** edge. Cycle property giúp **loại** edge.
+Cut tính chất giúp **thêm** cạnh. chu trình tính chất giúp **loại** cạnh.
 
 ## 5. Kruskal: grow một forest
 
-Kruskal sort edges tăng dần theo weight. Mỗi lần gặp edge `(u,v)`, nếu `u` và `v` ở hai components khác nhau, ta chọn edge và merge components.
+Kruskal sort các cạnh tăng dần theo trọng số. Mỗi lần gặp cạnh `(u,v)`, nếu `u` và `v` ở hai các thành phần khác nhau, ta chọn cạnh và merge các thành phần.
 
 ```text
 sort edges by weight
@@ -67,7 +67,7 @@ for edge in sorted order:
         union(u,v)
 ```
 
-DSU trả lời connectivity nhanh; proof optimality vẫn đến từ cut property.
+DSU trả lời connectivity nhanh; chứng minh optimality vẫn đến từ cut tính chất.
 
 ### Java sketch
 
@@ -98,7 +98,7 @@ Sorting thường chi phối.
 
 ## 6. Minimum Spanning Forest
 
-Nếu graph disconnected, không có spanning tree toàn graph. Kruskal vẫn tạo MST riêng cho từng connected component, gọi là **minimum spanning forest**.
+Nếu đồ thị disconnected, không có spanning cây toàn đồ thị. Kruskal vẫn tạo MST riêng cho từng thành phần liên thông, gọi là **minimum spanning forest**.
 
 API cần phân biệt:
 
@@ -108,17 +108,17 @@ vs
 input required connected graph but was not connected
 ```
 
-`used == V-1` là postcondition cho connected graph.
+`used == V-1` là điều kiện sau cho connected đồ thị.
 
-## 7. Prim: grow một tree qua frontier
+## 7. Prim: grow một cây qua frontier
 
-Prim giữ set `S` các vertices đã vào MST. Mỗi bước chọn edge nhẹ nhất crossing từ `S` ra ngoài.
+Prim giữ set `S` các đỉnh đã vào MST. Mỗi bước chọn cạnh nhẹ nhất crossing từ `S` ra ngoài.
 
-Đây chính là cut `(S, V-S)`, nên lightest crossing edge safe.
+Đây chính là cut `(S, V-S)`, nên lightest crossing cạnh an toàn.
 
 ### Lazy Prim
 
-Push outgoing edges vào heap. Khi pop nếu endpoint ngoài đã visited thì dùng, nếu stale thì skip.
+Push outgoing các cạnh vào heap. Khi pop nếu endpoint ngoài đã đã thăm thì dùng, nếu stale thì skip.
 
 ```text
 visit start
@@ -131,21 +131,21 @@ while heap not empty:
     push its outgoing edges
 ```
 
-Simple, dễ implement, chấp nhận duplicates/stale entries.
+đơn giản, dễ implement, chấp nhận các phần tử trùng/stale các mục.
 
 ### Eager Prim
 
-Giữ `key[v]` = cheapest edge hiện biết nối `v` vào tree. Khi thấy edge nhẹ hơn, update key/parent. Indexed heap/decrease-key cho implementation gọn về state, nhưng standard priority queue không hỗ trợ decrease-key trực tiếp nên có thể dùng lazy duplicates.
+Giữ `key[v]` = cheapest cạnh hiện biết nối `v` vào cây. Khi thấy cạnh nhẹ hơn, cập nhật khóa/nút cha. Indexed heap/decrease-key cho cách triển khai gọn về trạng thái (state), nhưng standard hàng đợi ưu tiên không hỗ trợ decrease-key trực tiếp nên có thể dùng lazy các phần tử trùng.
 
-## 8. Prim và Dijkstra giống code nhưng khác invariant
+## 8. Prim và Dijkstra giống code nhưng khác bất biến (invariant)
 
-Dijkstra priority:
+Dijkstra độ ưu tiên:
 
 ```text
 best path distance từ source tới v
 ```
 
-Prim priority:
+Prim độ ưu tiên:
 
 ```text
 cheapest single edge nối v vào current tree
@@ -157,15 +157,15 @@ Dijkstra relax:
 dist[u]+w(u,v)
 \]
 
-Prim chỉ compare:
+Prim chỉ so sánh:
 
 \[
 w(u,v)
 \]
 
-Nếu copy code mà không hiểu key semantics, bug rất dễ xuất hiện.
+Nếu copy code mà không hiểu khóa ngữ nghĩa (semantics), bug rất dễ xuất hiện.
 
-## 9. Chọn Kruskal hay Prim theo representation
+## 9. Chọn Kruskal hay Prim theo cách biểu diễn (representation)
 
 Kruskal tự nhiên khi:
 
@@ -182,99 +182,99 @@ Prim tự nhiên khi:
 muốn grow từ vertex
 ```
 
-Dense graph có thể dùng Prim `O(V²)` với adjacency matrix mà không cần heap; heap overhead không phải lúc nào cũng thắng.
+đồ thị dày có thể dùng Prim `O(V²)` với ma trận kề mà không cần heap; heap overhead không phải lúc nào cũng thắng.
 
-Algorithm selection phải xét graph density và representation, không chỉ một dòng Big-O.
+thuật toán selection phải xét đồ thị density và cách biểu diễn, không chỉ một dòng Big-O.
 
-## 10. Negative weights không gây vấn đề như shortest path
+## 10. Negative các trọng số không gây vấn đề như đường đi ngắn nhất
 
-MST tree không có cycle. Negative edge chỉ đơn giản là edge rất hấp dẫn về cost và sẽ được chọn nếu không phá tree condition.
+MST cây không có chu trình. Negative cạnh chỉ đơn giản là cạnh rất hấp dẫn về chi phí và sẽ được chọn nếu không phá cây điều kiện.
 
-Không có khái niệm negative cycle làm objective xuống vô hạn vì spanning tree luôn có đúng `V-1` edges.
+Không có khái niệm negative chu trình làm objective xuống vô hạn vì spanning cây luôn có đúng `V-1` các cạnh.
 
 ## 11. Unique MST và ties
 
-Nếu mọi edge weights distinct, MST unique.
+Nếu mọi cạnh các trọng số distinct, MST unique.
 
-Nếu có ties, nhiều MST khác nhau có thể cùng total weight. Test không nên bắt exact edge list trừ khi tie-breaking được cố ý cố định.
+Nếu có ties, nhiều MST khác nhau có thể cùng total trọng số. Test không nên bắt chính xác danh sách cạnh trừ khi quy tắc phân xử khi bằng nhau được cố ý cố định.
 
-Một edge là **critical** nếu xuất hiện trong mọi MST; **optional/pseudo-critical** nếu có thể xuất hiện trong một số MST; và **never-MST** nếu không thể xuất hiện.
+Một cạnh là **critical** nếu xuất hiện trong mọi MST; **optional/pseudo-critical** nếu có thể xuất hiện trong một số MST; và **never-MST** nếu không thể xuất hiện.
 
-Cut/cycle properties là nền cho classification này.
+Cut/chu trình các tính chất là nền cho classification này.
 
-## 12. Edge bắt buộc: unique light edge của một cut
+## 12. cạnh bắt buộc: unique light cạnh của một cut
 
-Nếu edge `e` là **unique** lightest edge crossing một cut, mọi MST phải chứa `e`.
+Nếu cạnh `e` là **unique** lightest cạnh crossing một cut, mọi MST phải chứa `e`.
 
-Lý do: nếu MST không chứa `e`, exchange bằng `e` giảm cost nghiêm ngặt.
+Lý do: nếu MST không chứa `e`, exchange bằng `e` giảm chi phí nghiêm ngặt.
 
-Đây là proof mạnh hơn “safe”: safe nói có một MST chứa edge; unique-light nói mọi MST chứa edge.
+Đây là chứng minh mạnh hơn “an toàn”: an toàn nói có một MST chứa cạnh; unique-light nói mọi MST chứa cạnh.
 
-## 13. Edge bị cấm: unique heaviest trên cycle
+## 13. cạnh bị cấm: unique heaviest trên chu trình
 
-Nếu `e` là unique heaviest trên một cycle, không MST nào chứa `e`. Nếu chứa, thay nó bằng edge nhẹ hơn trên cycle làm total giảm.
+Nếu `e` là unique heaviest trên một chu trình, không MST nào chứa `e`. Nếu chứa, thay nó bằng cạnh nhẹ hơn trên chu trình làm total giảm.
 
 Hai criteria này rất hữu ích trong sensitivity analysis.
 
 ## 14. Bottleneck view
 
-MST cũng là một **minimum bottleneck spanning tree**: weight lớn nhất trong tree là nhỏ nhất có thể theo bottleneck objective thích hợp.
+MST cũng là một **minimum bottleneck spanning cây**: trọng số lớn nhất trong cây là nhỏ nhất có thể theo bottleneck objective thích hợp.
 
-Kruskal cho intuition rõ. Khi tăng threshold `T` và cho phép tất cả edges có weight `<=T`, threshold nhỏ nhất làm graph connected chính là bottleneck optimum.
+Kruskal cho intuition rõ. Khi tăng threshold `T` và cho phép tất cả các cạnh có trọng số `<=T`, threshold nhỏ nhất làm đồ thị connected chính là bottleneck phương án tối ưu.
 
 Connection này biến nhiều bài threshold-connectivity thành Kruskal/DSU problems.
 
-## 15. Maximum Spanning Tree
+## 15. Maximum Spanning cây
 
-Đổi objective thành maximize total weight, Kruskal sort giảm dần hoặc đảo comparator. Logic cut/cycle tương tự theo chiều ngược.
+Nếu mục tiêu chuyển thành tối đa hóa tổng trọng số, Kruskal có thể sắp xếp giảm dần hoặc đảo bộ so sánh. Lập luận dựa trên lát cắt và chu trình được áp dụng theo chiều ngược lại.
 
 Ứng dụng có thể là maximize affinity/reliability score trong một formulation phù hợp.
 
 ## 16. Single-Linkage Clustering
 
-Xây MST trên points theo distance, rồi remove `k-1` edges lớn nhất. Ta được `k` connected clusters.
+Xây MST trên points theo khoảng cách, rồi remove `k-1` các cạnh lớn nhất. Ta được `k` connected clusters.
 
-MST giữ các cheapest links cần cho connectivity; các edges lớn trong MST thường đại diện gaps giữa groups.
+MST giữ các liên kết rẻ nhất cần cho connectivity; các cạnh lớn trong MST thường đại diện gaps giữa groups.
 
-Đây là connection giữa graph theory và hierarchical clustering.
+Đây là connection giữa đồ thị theory và hierarchical clustering.
 
-## 17. Euclidean MST và không materialize complete graph
+## 17. Euclidean MST và không materialize đồ thị đầy đủ
 
-Với `n` points, complete geometric graph có `Θ(n²)` edges. Chạy Kruskal trên tất cả edges có thể quá lớn.
+Với `n` points, complete geometric đồ thị có `Θ(n²)` các cạnh. Chạy Kruskal trên tất cả các cạnh có thể quá lớn.
 
-Trong plane, Euclidean MST là subgraph của Delaunay triangulation, nên geometric structure có thể giảm candidate edges trước khi chạy MST.
+Trong plane, Euclidean MST là subgraph của Delaunay triangulation, nên cấu trúc hình học có thể giảm ứng viên các cạnh trước khi chạy MST.
 
 Bài học rộng hơn:
 
-> Đôi khi complexity bottleneck là **xây graph**, không phải graph algorithm sau đó.
+> Đôi khi complexity bottleneck là **xây đồ thị**, không phải thuật toán đồ thị sau đó.
 
 ## 18. Second-Best MST
 
-Lấy MST `T`. Mỗi non-tree edge `(u,v,w)` khi thêm vào `T` tạo đúng một cycle. Để trở lại tree, phải bỏ một edge trên path `u-v` trong `T`.
+Lấy MST `T`. Mỗi non-tree cạnh `(u,v,w)` khi thêm vào `T` tạo đúng một chu trình. Để trở lại cây, phải bỏ một cạnh trên đường đi `u-v` trong `T`.
 
-Candidate tốt nhất cho edge mới thường bỏ edge lớn nhất trên path:
+ứng viên tốt nhất cho cạnh mới thường bỏ cạnh lớn nhất trên đường đi:
 
 \[
 newCost = mstCost + w - maxEdgeOnPath(u,v)
 \]
 
-Nếu preprocess binary lifting/LCA để query max edge path `O(log V)`, có thể xét mọi non-tree edge hiệu quả.
+Nếu preprocess nhảy nhị phân/LCA để truy vấn max cạnh đường đi `O(log V)`, có thể xét mọi non-tree cạnh hiệu quả.
 
-Đây là connection giữa MST và tree path queries.
+Đây là connection giữa MST và cây đường đi các truy vấn.
 
-## 19. Replacement Edge và sensitivity
+## 19. Replacement cạnh và sensitivity
 
-Nếu một MST edge bị xóa hoặc tăng weight, component tree bị split thành hai phía. Edge ngoài MST rẻ nhất crossing cut đó là replacement candidate.
+Nếu một MST cạnh bị xóa hoặc tăng trọng số, thành phần cây bị split thành hai phía. cạnh ngoài MST rẻ nhất crossing cut đó là replacement ứng viên.
 
-Nếu nhiều updates xảy ra, recompute từ đầu có thể đắt; dynamic MST structures quản lý replacement edges phức tạp hơn.
+Nếu nhiều các cập nhật xảy ra, recompute từ đầu có thể đắt; động MST structures quản lý replacement các cạnh phức tạp hơn.
 
-Static sensitivity analysis vẫn có thể dùng cut/cycle + preprocessing để trả lời “nếu edge này đổi cost thì MST thay đổi thế nào?”.
+tĩnh sensitivity analysis vẫn có thể dùng cut/chu trình + tiền xử lý để trả lời “nếu cạnh này đổi chi phí thì MST thay đổi thế nào?”.
 
-## 20. Dynamic MST khó vì local update có effect toàn cục
+## 20. động MST khó vì cục bộ cập nhật có effect toàn cục
 
-Một edge insertion có thể tạo cycle với path trong MST. Nếu edge mới nhẹ hơn maximum edge trên path, ta swap chúng.
+Một cạnh insertion có thể tạo chu trình với đường đi trong MST. Nếu cạnh mới nhẹ hơn maximum cạnh trên đường đi, ta swap chúng.
 
-Một tree-edge deletion tạo cut và cần tìm cheapest non-tree edge nối lại hai component.
+Một tree-edge deletion tạo cut và cần tìm cheapest non-tree cạnh nối lại hai thành phần.
 
 Hai primitives:
 
@@ -283,42 +283,42 @@ max edge on tree path
 minimum replacement edge crossing cut
 ```
 
-là trung tâm của dynamic MST, dẫn tới dynamic trees như Link-Cut Tree trong advanced settings.
+là trung tâm của động MST, dẫn tới động các cây như Link-Cut cây trong advanced settings.
 
-## 21. Reverse-Delete Algorithm
+## 21. Reverse-Delete thuật toán
 
 Một cách nhìn đối xứng với Kruskal:
 
-1. sort edges giảm dần;
-2. thử delete edge;
-3. nếu graph vẫn connected, giữ edge bị xóa;
+1. sort các cạnh giảm dần;
+2. thử delete cạnh;
+3. nếu đồ thị vẫn connected, giữ cạnh bị xóa;
 4. nếu disconnect, phục hồi.
 
-Cycle property giải thích correctness. Naive connectivity check làm implementation chậm, nhưng algorithm rất hữu ích về mặt conceptual: Kruskal “thêm safe edges”, reverse-delete “xóa unnecessary heavy edges”.
+chu trình tính chất giải thích tính đúng đắn. Cách đơn giản kiểm tra liên thông làm cách triển khai chậm, nhưng thuật toán rất hữu ích về mặt conceptual: Kruskal “thêm an toàn các cạnh”, reverse-delete “xóa unnecessary heavy các cạnh”.
 
 ## 22. MST và Matroid intuition
 
-Spanning forests của graph tạo một cấu trúc gọi là **graphic matroid**. Greedy chọn edges theo weight hoạt động vì independent sets của matroid có exchange property mạnh.
+Spanning forests của đồ thị tạo một cấu trúc gọi là **graphic matroid**. Greedy chọn các cạnh theo trọng số hoạt động vì independent sets của matroid có exchange tính chất mạnh.
 
-Không cần học matroid theory để code Kruskal, nhưng nó giải thích vì sao greedy “sort rồi lấy nếu không tạo cycle” đúng ở đây trong khi nhiều bài khác greedy tương tự lại sai.
+Không cần học matroid theory để code Kruskal, nhưng nó giải thích vì sao greedy “sort rồi lấy nếu không tạo chu trình” đúng ở đây trong khi nhiều bài khác greedy tương tự lại sai.
 
-Greedy correctness không đến từ sorting; nó đến từ structure của feasible sets.
+Greedy tính đúng đắn không đến từ sorting; nó đến từ structure của feasible sets.
 
-## 23. Directed Graph là problem khác
+## 23. đồ thị có hướng là problem khác
 
-Standard MST áp dụng undirected graph. Directed analogue là **minimum spanning arborescence** rooted tại một vertex, giải bằng Chu–Liu/Edmonds-type algorithms.
+Chuẩn MST áp dụng đồ thị vô hướng (undirected graph). Directed analogue là **cây phân nhánh có hướng nhỏ nhất** rooted tại một đỉnh, giải bằng Chu–Liu/Edmonds-type các thuật toán.
 
-Không thể chỉ chạy Kruskal trên directed edges rồi bỏ orientation.
+Không thể chỉ chạy Kruskal trên directed các cạnh rồi bỏ orientation.
 
-## 24. Multigraph và parallel edges
+## 24. Multigraph và các cạnh song song
 
-Kruskal xử lý parallel edges tự nhiên; edge rẻ hơn giữa cùng endpoints thường được xét trước. Self-loop luôn tạo cycle với chính vertex và không thể giúp connect component khác, nên bị bỏ.
+Kruskal xử lý các cạnh song song tự nhiên; cạnh rẻ hơn giữa cùng endpoints thường được xét trước. Self-loop luôn tạo chu trình với chính đỉnh và không thể giúp connect thành phần khác, nên bị bỏ.
 
-Implementation nên giữ edge IDs nếu cần output exact edge identity.
+cách triển khai nên giữ cạnh IDs nếu cần đầu ra chính xác cạnh identity.
 
-## 25. Overflow và comparator correctness
+## 25. tràn số và comparator tính đúng đắn
 
-Total weight có thể vượt `int`. Dùng `long`/64-bit khi constraints yêu cầu.
+Total trọng số có thể vượt `int`. Dùng `long`/64-bit khi các ràng buộc yêu cầu.
 
 Comparator không nên:
 
@@ -326,13 +326,13 @@ Comparator không nên:
 return a.w - b.w;
 ```
 
-nếu overflow có thể xảy ra. Dùng `Long.compare`/`Comparator.comparingLong`.
+nếu tràn số có thể xảy ra. Dùng `Long.compare`/`Comparator.comparingLong`.
 
-C cũng nên tránh subtraction comparator với signed overflow.
+C cũng nên tránh subtraction comparator với signed tràn số.
 
-## 26. Verification của MST result
+## 26. Verification của MST kết quả
 
-Một output MST cần:
+Một đầu ra MST cần:
 
 ```text
 V-1 edges
@@ -341,26 +341,26 @@ acyclic
 tổng weight đúng
 ```
 
-Nhưng ba structural properties đầu chỉ chứng minh spanning tree, chưa chứng minh minimum.
+Nhưng ba structural các tính chất đầu chỉ chứng minh spanning cây, chưa chứng minh minimum.
 
-Để verify optimality, có property mạnh:
+Để verify optimality, có tính chất mạnh:
 
-> Với mọi non-tree edge `(u,v,w)`, maximum edge weight trên path `u-v` trong MST không được lớn hơn `w`.
+> Với mọi non-tree cạnh `(u,v,w)`, maximum cạnh trọng số trên đường đi `u-v` trong MST không được lớn hơn `w`.
 
-Nếu có tree edge trên path nặng hơn `w`, swap sẽ tạo spanning tree nhẹ hơn.
+Nếu có cây cạnh trên đường đi nặng hơn `w`, swap sẽ tạo spanning cây nhẹ hơn.
 
-Property này cho phép validator độc lập mạnh hơn chỉ so output structure.
+tính chất này cho phép bộ xác minh độc lập mạnh hơn chỉ so đầu ra structure.
 
-## 27. Differential Testing
+## 27. Differential kiểm thử
 
-Trên random graph nhỏ:
+Trên ngẫu nhiên đồ thị nhỏ:
 
 - chạy Kruskal;
 - chạy Prim;
-- so total cost;
-- với graph rất nhỏ, brute-force enumerate spanning trees làm oracle.
+- so total chi phí;
+- với đồ thị rất nhỏ, brute-force enumerate spanning các cây làm oracle.
 
-Test cases nên có:
+các trường hợp kiểm thử nên có:
 
 ```text
 1 vertex
@@ -375,9 +375,9 @@ disconnected graph
 very large weights
 ```
 
-## 28. MST trong database/network/system design
+## 28. MST trong cơ sở dữ liệu/mạng/hệ thống design
 
-MST có thể model:
+MST có thể mô hình:
 
 ```text
 minimum cable/road/fiber cost
@@ -386,7 +386,7 @@ clustering backbone
 minimum connection graph trong layout/design
 ```
 
-Nhưng thực tế thường thêm constraints:
+Nhưng thực tế thường thêm các ràng buộc:
 
 ```text
 capacity
@@ -397,12 +397,12 @@ geography
 fault domains
 ```
 
-Khi đó problem có thể không còn là pure MST. DSA model phải khớp requirement, không ép business problem vào thuật toán quen thuộc.
+Khi đó problem có thể không còn là pure MST. DSA mô hình phải khớp yêu cầu, không ép business problem vào thuật toán quen thuộc.
 
-## Mental Model
+## Mô hình tư duy
 
-> MST là bài toán **mua connectivity với total edge cost nhỏ nhất**. Cut property nói cạnh nào safe để thêm; cycle property nói cạnh nào safe để loại. Kruskal và Prim chỉ là hai operational views của cùng optimality structure.
+> MST là bài toán **mua connectivity với total cạnh chi phí nhỏ nhất**. Cut tính chất nói cạnh nào an toàn để thêm; chu trình tính chất nói cạnh nào an toàn để loại. Kruskal và Prim chỉ là hai operational views của cùng optimality structure.
 
-Khi gặp bài liên quan “connect tất cả với chi phí tổng nhỏ nhất”, hãy kiểm tra: graph có undirected không, có cần redundancy không, có thêm constraints không. Nếu objective đúng là pure connectivity cost, MST là abstraction rất mạnh.
+Khi gặp bài liên quan “connect tất cả với chi phí tổng nhỏ nhất”, hãy kiểm tra: đồ thị có undirected không, có cần redundancy không, có thêm các ràng buộc không. Nếu objective đúng là pure connectivity chi phí, MST là sự trừu tượng (abstraction) rất mạnh.
 
 Xem thêm: [Union-Find](./05_union_find.md), [Tree Foundations](../02_trees/00_tree_foundations.md), [Greedy Algorithms](../04_algorithmic_paradigms/04_greedy_algorithms.md).

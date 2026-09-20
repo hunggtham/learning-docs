@@ -1,20 +1,20 @@
 # BFS và DFS
-**Graph Traversal / 그래프 순회**
+**đồ thị Traversal / 그래프 순회**
 
-Traversal trả lời câu hỏi nền tảng nhất của graph: bắt đầu từ một state, ta có thể reach những state nào và theo thứ tự nào? Hai chiến lược kinh điển là **Breadth-First Search (BFS / 너비 우선 탐색)** và **Depth-First Search (DFS / 깊이 우선 탐색)**.
+Traversal trả lời câu hỏi nền tảng nhất của đồ thị: bắt đầu từ một trạng thái (state), ta có thể reach những trạng thái nào và theo thứ tự nào? Hai chiến lược kinh điển là **tìm kiếm theo chiều rộng (BFS / 너비 우선 탐색)** và **tìm kiếm theo chiều sâu (DFS / 깊이 우선 탐색)**.
 
-Cả hai thường có complexity `O(V+E)` trên adjacency list. Khác biệt lớn không nằm ở Big-O mà nằm ở **frontier policy**:
+Cả hai thường có complexity `O(V+E)` trên danh sách kề. Khác biệt lớn không nằm ở Big-O mà nằm ở **frontier chính sách**:
 
 ```text
 BFS: frontier theo FIFO queue -> mở rộng theo layer/distance
 DFS: frontier theo stack      -> đi sâu theo branch rồi quay lại
 ```
 
-Chính search order này quyết định loại theorem/invariant nào ta có thể khai thác.
+Chính thứ tự tìm kiếm này quyết định loại theorem/bất biến (invariant) nào ta có thể khai thác.
 
-## BFS như shortest-path theo số edge
+## BFS như shortest-path theo số cạnh
 
-Nếu mọi edge có cùng cost, BFS từ source `s` khám phá vertices theo nondecreasing distance tính bằng số edges.
+Nếu mọi cạnh có cùng chi phí, BFS từ nguồn `s` khám phá các đỉnh theo nondecreasing khoảng cách tính bằng số các cạnh.
 
 Java:
 
@@ -41,11 +41,11 @@ while (!q.isEmpty()) {
 }
 ```
 
-Tại sao lần đầu tới `v` là shortest path? Queue bảo đảm mọi node distance `d` được process trước nodes distance `d+1`. Nếu có một path ngắn hơn tới `v`, predecessor của path đó phải nằm ở layer trước và đã discover `v` sớm hơn. Mâu thuẫn.
+Tại sao lần đầu tới `v` là đường đi ngắn nhất (shortest path)? Queue bảo đảm mọi nút khoảng cách `d` được xử lý trước các nút khoảng cách `d+1`. Nếu có một đường đi ngắn hơn tới `v`, predecessor của đường đi đó phải nằm ở tầng trước và đã khám phá `v` sớm hơn. Mâu thuẫn.
 
-Đây là proof dựa trên **layer invariant** chứ không phải vì queue “thường dùng như vậy”.
+Đây là chứng minh dựa trên **tầng bất biến** chứ không phải vì queue “thường dùng như vậy”.
 
-## BFS layer structure
+## BFS tầng structure
 
 BFS tạo các lớp:
 
@@ -56,21 +56,21 @@ L2 = nodes cách source 2 edges
 ...
 ```
 
-Mọi edge trong undirected unweighted graph chỉ nối vertices có BFS level chênh lệch tối đa 1.
+Mọi cạnh trong undirected đồ thị không trọng số chỉ nối các đỉnh có BFS tầng chênh lệch tối đa 1.
 
-Layer view hữu ích cho bipartite checking, shortest path reconstruction, level aggregation và reasoning về wave propagation.
+tầng view hữu ích cho kiểm tra hai phía, đường đi ngắn nhất reconstruction, tầng aggregation và reasoning về sự lan truyền theo lớp sóng.
 
-## Parent tree và path reconstruction
+## nút cha cây và đường đi reconstruction
 
-Khi lần đầu discover `v` từ `u`, lưu:
+Khi lần đầu khám phá `v` từ `u`, lưu:
 
 ```text
 parent[v] = u
 ```
 
-ta tạo BFS tree.
+ta tạo BFS cây.
 
-Reconstruct path:
+Reconstruct đường đi:
 
 ```java
 List<Integer> path = new ArrayList<>();
@@ -80,13 +80,13 @@ for (int v = target; v != -1; v = parent[v]) {
 Collections.reverse(path);
 ```
 
-Nếu target unreachable, cần check `dist[target] == -1` trước.
+Nếu đích unreachable, cần check `dist[target] == -1` trước.
 
-Parent metadata biến answer từ “distance là 7” thành actual route.
+nút cha siêu dữ liệu biến answer từ “khoảng cách là 7” thành actual route.
 
 ## Multi-source BFS
 
-Nếu có nhiều sources cùng distance 0, enqueue tất cả ngay từ đầu:
+Nếu có nhiều sources cùng khoảng cách 0, đưa vào hàng đợi tất cả ngay từ đầu:
 
 ```text
 for each source s:
@@ -94,9 +94,9 @@ for each source s:
     enqueue(s)
 ```
 
-BFS sau đó trả distance tới **source gần nhất**.
+BFS sau đó trả khoảng cách tới **nguồn gần nhất**.
 
-Applications:
+các ứng dụng:
 
 ```text
 nearest hospital/exit
@@ -109,19 +109,19 @@ Không cần thuật toán mới; chỉ thay initial frontier.
 
 ## Multi-target / early exit
 
-Nếu chỉ cần path tới một target, BFS có thể dừng khi target được dequeued hoặc ngay khi discovered tùy metadata cần thiết.
+Nếu chỉ cần đường đi tới một đích, BFS có thể dừng khi đích được dequeued hoặc ngay khi được khám phá tùy siêu dữ liệu cần thiết.
 
-Nhưng nếu cần all distances hoặc properties toàn component, early exit sẽ bỏ incomplete information.
+Nhưng nếu cần all các khoảng cách hoặc các tính chất toàn thành phần, early exit sẽ bỏ incomplete thông tin.
 
-Optimization phải khớp required output.
+Optimization phải khớp required đầu ra.
 
 ## Bidirectional BFS
 
-Nếu graph unweighted, branching factor lớn và biết cả source lẫn target, có thể BFS từ hai phía cho tới khi frontiers gặp nhau.
+Nếu đồ thị unweighted, hệ số phân nhánh lớn và biết cả nguồn lẫn đích, có thể BFS từ hai phía cho tới khi frontiers gặp nhau.
 
-Nếu branching factor khoảng `b` và shortest distance `d`, một phía có thể explore cỡ `b^d`, còn bidirectional search gần `2*b^(d/2)` trong idealized tree-like space.
+Nếu hệ số phân nhánh khoảng `b` và shortest khoảng cách `d`, một phía có thể explore cỡ `b^d`, còn bidirectional search gần `2*b^(d/2)` trong idealized tree-like space.
 
-Implementation cần:
+cách triển khai cần:
 
 ```text
 dist/visited từ source
@@ -130,28 +130,28 @@ expand frontier nhỏ hơn khi có thể
 phát hiện node/edge nơi hai search regions giao nhau
 ```
 
-Không phải graph nào cũng được speedup giống nhau, nhưng mental model là giảm search depth mỗi phía.
+Không phải đồ thị nào cũng được speedup giống nhau, nhưng mental mô hình là giảm search độ sâu mỗi phía.
 
 ## BFS trên grid
 
-Grid 4-direction chỉ là implicit graph:
+Grid 4-direction chỉ là đồ thị ẩn:
 
 ```text
 vertex = cell
 edge = move hợp lệ sang neighbor
 ```
 
-Không cần build adjacency list. Generate neighbors on demand:
+Không cần xây dựng danh sách kề. Generate các đỉnh kề on demand:
 
 ```java
 int[][] dirs = {{1,0},{-1,0},{0,1},{0,-1}};
 ```
 
-Visited state có thể encode bằng array 2D. Nếu state còn keys, direction, remaining breaks hoặc mode, visited dimension phải mở rộng tương ứng.
+đã thăm trạng thái có thể encode bằng mảng 2D. Nếu trạng thái còn các khóa, direction, remaining breaks hoặc mode, đã thăm dimension phải mở rộng tương ứng.
 
 ## BFS và 0–1 BFS
 
-BFS đúng cho equal-weight edges. Nếu weights chỉ `0` hoặc `1`, standard BFS không đủ nhưng heap Dijkstra hơi thừa.
+BFS đúng cho equal-weight các cạnh. Nếu các trọng số chỉ `0` hoặc `1`, standard BFS không đủ nhưng heap Dijkstra hơi thừa.
 
 **0–1 BFS** dùng deque:
 
@@ -160,9 +160,9 @@ weight 0 -> push front
 weight 1 -> push back
 ```
 
-để duy trì distance order, đạt `O(V+E)`.
+để duy trì khoảng cách order, đạt `O(V+E)`.
 
-Đây là example cho việc frontier data structure encode cost model.
+Đây là example cho việc frontier cấu trúc dữ liệu encode mô hình chi phí.
 
 ## DFS như một structural exploration
 
@@ -191,9 +191,9 @@ subtree-like reasoning trong DFS forest
 backtracking/state search
 ```
 
-## DFS tree và forest
+## DFS cây và forest
 
-Trên connected graph, DFS từ source tạo một DFS tree. Trên disconnected graph, loop qua all vertices tạo **DFS forest**.
+Trên connected đồ thị, DFS từ nguồn tạo một DFS cây. Trên đồ thị không liên thông, loop qua all các đỉnh tạo **DFS forest**.
 
 ```java
 for (int u = 0; u < n; u++) {
@@ -204,13 +204,13 @@ for (int u = 0; u < n; u++) {
 }
 ```
 
-Mỗi root tương ứng một connected component trong undirected graph.
+Mỗi nút gốc tương ứng một thành phần liên thông trong đồ thị vô hướng (undirected graph).
 
-## Directed cycle detection bằng color states
+## Directed phát hiện chu trình bằng color các trạng thái
 
-Boolean `seen` không đủ để phân biệt edge tới ancestor đang active và edge tới node đã hoàn thành.
+Boolean `seen` không đủ để phân biệt cạnh tới tổ tiên đang active và cạnh tới nút đã hoàn thành.
 
-Dùng ba states:
+Dùng ba các trạng thái:
 
 ```text
 0 = unvisited
@@ -218,7 +218,7 @@ Dùng ba states:
 2 = finished
 ```
 
-Nếu từ `u` có edge tới `v` với state `1`, đó là back edge vào active ancestor → directed cycle.
+Nếu từ `u` có cạnh tới `v` với trạng thái `1`, đó là back cạnh vào active tổ tiên → directed chu trình.
 
 ```java
 boolean dfsCycle(int u) {
@@ -234,11 +234,11 @@ boolean dfsCycle(int u) {
 }
 ```
 
-State `finished` quan trọng vì edge tới một node đã hoàn thành không chứng minh cycle qua current recursion chain.
+trạng thái `finished` quan trọng vì cạnh tới một nút đã hoàn thành không chứng minh chu trình qua hiện tại recursion chain.
 
-## Undirected cycle detection
+## Undirected phát hiện chu trình
 
-Trong undirected graph, edge trở lại parent là representation của chính edge ta vừa đi xuống, không phải cycle.
+Trong đồ thị vô hướng, cạnh trở lại nút cha là cách biểu diễn (representation) của chính cạnh ta vừa đi xuống, không phải chu trình.
 
 Basic DFS:
 
@@ -249,9 +249,9 @@ else if neighbor != parent:
     cycle exists
 ```
 
-Nhưng multigraph cần edge id thay vì chỉ `neighbor != parent`, vì parallel edges giữa cùng endpoints có semantics khác.
+Nhưng multigraph cần cạnh id thay vì chỉ `neighbor != parent`, vì các cạnh song song giữa cùng endpoints có ngữ nghĩa (semantics) khác.
 
-## Discovery và finish time
+## Discovery và thời điểm kết thúc
 
 DFS có hai thời điểm tự nhiên:
 
@@ -260,18 +260,18 @@ tin[u]  = lúc enter u
 tout[u] = lúc finish toàn subtree DFS của u
 ```
 
-Ancestor relation trong DFS tree có thể kiểm tra qua interval nesting:
+quan hệ tổ tiên trong DFS cây có thể kiểm tra qua sự lồng nhau của khoảng:
 
 ```text
 u ancestor của v nếu
 tin[u] <= tin[v] && tout[v] <= tout[u]
 ```
 
-Timestamps/low-link values là nền tảng cho bridges, articulation points, SCC và topological reasoning.
+Timestamps/low-link các giá trị là nền tảng cho bridges, các điểm khớp, SCC và topological reasoning.
 
-## Edge classification trong directed DFS
+## cạnh classification trong directed DFS
 
-Edges có thể được nhìn như:
+các cạnh có thể được nhìn như:
 
 ```text
 tree edge    -> discover node mới
@@ -280,19 +280,19 @@ forward edge -> tới descendant đã discover
 cross edge   -> giữa branches/subtrees khác
 ```
 
-Không phải mọi algorithm cần classification đầy đủ, nhưng distinction giúp hiểu tại sao directed cycle detection dùng back edge.
+Không phải mọi thuật toán cần classification đầy đủ, nhưng distinction giúp hiểu tại sao directed phát hiện chu trình dùng back cạnh.
 
-## Topological order từ finish time
+## thứ tự tô-pô từ thời điểm kết thúc
 
-Trong DAG, nếu DFS finish `u`, mọi reachable descendants đã finish trước. Push `u` vào list khi exit rồi reverse list sẽ tạo topological order.
+Trong DAG, khi DFS hoàn tất nút `u`, mọi hậu duệ có thể đi tới từ `u` đã được hoàn tất trước. Thêm `u` vào danh sách lúc rời nút rồi đảo danh sách sẽ tạo thứ tự tô-pô.
 
-Nếu có back edge/cycle, topological order không tồn tại.
+Nếu có back cạnh/chu trình, thứ tự tô-pô không tồn tại.
 
-Do đó “reverse postorder” không phải trick; nó xuất phát từ dependency finish invariant.
+Do đó “reverse postorder” không phải trick; nó xuất phát từ dependency finish bất biến.
 
-## Iterative DFS và continuation state
+## Iterative DFS và continuation trạng thái
 
-Naive iterative DFS:
+Cách đơn giản iterative DFS:
 
 ```java
 stack.push(source);
@@ -302,7 +302,7 @@ while (!stack.isEmpty()) {
 }
 ```
 
-mô phỏng preorder khá dễ. Nhưng nếu cần postorder/finish event, mỗi stack frame phải nhớ progress trong adjacency list hoặc dùng enter/exit markers.
+mô phỏng preorder khá dễ. Nhưng nếu cần postorder/finish sự kiện, mỗi khung ngăn xếp phải nhớ progress trong danh sách kề hoặc dùng enter/exit markers.
 
 Ví dụ two-phase:
 
@@ -318,43 +318,43 @@ on EXIT:
     process postorder logic
 ```
 
-Điều này cho thấy recursive function frame thật ra chứa `u`, local variables và vị trí loop hiện tại.
+Điều này cho thấy hàm đệ quy frame thật ra chứa `u`, cục bộ variables và vị trí loop hiện tại.
 
-## Recursion depth
+## Recursion độ sâu
 
-Graph dạng chain với hàng trăm nghìn nodes có thể overflow call stack.
+đồ thị dạng chain với hàng trăm nghìn các nút có thể tràn số ngăn xếp lời gọi.
 
-C, Java và JavaScript đều có practical recursion limits khác nhau. Không nên dựa vào tail-call optimization portable.
+C, Java và JavaScript đều có practical giới hạn đệ quy khác nhau. Không nên dựa vào tối ưu lời gọi đuôi portable.
 
-Nếu input depth không controlled, iterative DFS là safer engineering choice.
+Nếu đầu vào độ sâu không controlled, iterative DFS là safer lựa chọn kỹ thuật.
 
-## Visited: mark khi push hay khi pop?
+## đã thăm: mark khi push hay khi pop?
 
-Với BFS, thường mark visited **khi enqueue**, không phải khi dequeue. Nếu đợi tới dequeue, cùng node có thể được enqueue nhiều lần từ nhiều predecessors, làm queue phình lớn.
+Với BFS, thường mark đã thăm **khi đưa vào hàng đợi**, không phải khi lấy khỏi hàng đợi. Nếu đợi tới lấy khỏi hàng đợi, cùng nút có thể được đưa vào hàng đợi nhiều lần từ nhiều predecessors, làm queue phình lớn.
 
-DFS iterative cũng thường mark khi push/discover tùy semantics.
+DFS iterative cũng thường mark khi push/khám phá tùy ngữ nghĩa.
 
-Rule phải nhất quán với invariant “mỗi state được scheduled bao nhiêu lần?”.
+quy tắc phải nhất quán với bất biến “mỗi trạng thái được scheduled bao nhiêu lần?”.
 
-## Graph state và visited key
+## đồ thị trạng thái và đã thăm khóa
 
-Visited phải match state identity.
+đã thăm phải match trạng thái identity.
 
-Nếu state là:
+Nếu trạng thái là:
 
 ```text
 (node, fuel)
 ```
 
-thì `seen[node]` là sai; cần `seen[node][fuel]` hoặc canonical key tương đương.
+thì `seen[node]` là sai; cần `seen[node][fuel]` hoặc canonical khóa tương đương.
 
-Nếu hai histories dẫn tới cùng future-equivalent state, visited có thể merge chúng. Đây là cùng concept với DP memoization.
+Nếu hai histories dẫn tới cùng future-equivalent trạng thái, đã thăm có thể merge chúng. Đây là cùng concept với DP memoization.
 
-## BFS/DFS trên implicit graph
+## BFS/DFS trên đồ thị ẩn
 
-Puzzle, word transformation, lock combinations, scheduling states có thể không materialize adjacency.
+Puzzle, word phép biến đổi, các tổ hợp khóa, scheduling các trạng thái có thể không hiện thực hóa danh sách kề.
 
-Một function:
+Một hàm:
 
 ```text
 neighbors(state)
@@ -362,22 +362,22 @@ neighbors(state)
 
 generate transitions khi cần.
 
-Complexity khi đó nên đo theo số reachable states và generated transitions, không nhất thiết theo một pre-existing `V,E` literal.
+Complexity khi đó nên đo theo số có thể tới các trạng thái và generated transitions, không nhất thiết theo một pre-existing `V,E` literal.
 
 ## Flood fill
 
-Flood fill là BFS/DFS trên grid component. Điểm đáng học không phải thuật toán riêng mà là mapping:
+Flood fill là BFS/DFS trên grid thành phần. Điểm đáng học không phải thuật toán riêng mà là ánh xạ:
 
 ```text
 cell = vertex
 adjacent same-color/passable cells = edges
 ```
 
-Once model đúng, connected-component toolkit áp dụng trực tiếp.
+Once mô hình đúng, connected-component toolkit áp dụng trực tiếp.
 
 ## Bipartite check bằng BFS/DFS coloring
 
-Undirected graph bipartite iff có thể 2-color vertices sao cho mọi edge nối khác màu.
+đồ thị vô hướng bipartite iff có thể 2-color các đỉnh sao cho mọi cạnh nối khác màu.
 
 BFS:
 
@@ -387,11 +387,11 @@ neighbor = 1 - color[u]
 conflict nếu edge nối cùng màu
 ```
 
-Odd cycle là obstruction cho bipartiteness.
+Odd chu trình là obstruction cho bipartiteness.
 
-Đây là example traversal + small metadata giải structural property.
+Đây là example traversal + small siêu dữ liệu giải structural tính chất.
 
-## Component metadata
+## thành phần siêu dữ liệu
 
 Traversal có thể aggregate nhiều thứ trong cùng pass:
 
@@ -403,45 +403,45 @@ bounding box trong grid
 edge count
 ```
 
-Nếu component undirected có `V_c` vertices và `E_c` edges, tree component thỏa `E_c = V_c - 1`; thêm edge có thể tạo cycle.
+Nếu thành phần undirected có `V_c` các đỉnh và `E_c` các cạnh, cây thành phần thỏa `E_c = V_c - 1`; thêm cạnh có thể tạo chu trình.
 
 ## Complexity thật sự
 
-Với adjacency list:
+Với danh sách kề:
 
 \[
 O(V+E)
 \]
 
-vì mỗi vertex visited một số lần constant và mỗi adjacency entry scanned một lần.
+vì mỗi đỉnh đã thăm một số lần constant và mỗi adjacency mục scanned một lần.
 
-Nhưng constants phụ thuộc representation. Object-heavy graph có cache misses/GC; CSR có sequential locality tốt hơn. DFS recursion còn có call overhead.
+Nhưng constants phụ thuộc cách biểu diễn. Object-heavy đồ thị có các lần trượt bộ nhớ đệm/GC; CSR có sequential tính cục bộ (locality) tốt hơn. DFS recursion còn có call overhead.
 
-Big-O giống nhau không nghĩa runtime giống nhau.
+Big-O giống nhau không nghĩa môi trường chạy (runtime) giống nhau.
 
-## Memory complexity
+## bộ nhớ complexity
 
-BFS frontier có thể chứa cả một layer lớn, worst `O(V)`.
+BFS frontier có thể chứa cả một tầng lớn, worst `O(V)`.
 
-DFS stack depth có thể `O(V)` trên chain, nhưng trên balanced/deep-narrow graph thường nhỏ hơn BFS frontier.
+DFS stack độ sâu có thể `O(V)` trên chain, nhưng trên balanced/deep-narrow đồ thị thường nhỏ hơn BFS frontier.
 
-Vì vậy BFS vs DFS đôi khi được chọn vì memory shape chứ không chỉ semantics.
+Vì vậy BFS vs DFS đôi khi được chọn vì bộ nhớ shape chứ không chỉ ngữ nghĩa.
 
-## Common misconceptions
+## Những hiểu lầm phổ biến
 
-“BFS luôn nhanh hơn DFS vì tìm gần trước” là sai. Cả hai `O(V+E)`; goal quyết định suitable traversal.
+“BFS luôn nhanh hơn DFS vì tìm gần trước” là sai. Cả hai `O(V+E)`; goal quyết định phép duyệt phù hợp.
 
-“DFS recursive luôn dùng ít memory” sai; deep chain có stack `O(V)` và có thể crash.
+“DFS recursive luôn dùng ít bộ nhớ” sai; chuỗi rất sâu có stack `O(V)` và có thể crash.
 
-“Visited là boolean theo vertex” sai khi state có thêm dimensions.
+“đã thăm là boolean theo đỉnh” sai khi trạng thái có thêm dimensions.
 
-“Lần đầu thấy node trong weighted graph là shortest” chỉ đúng với BFS equal-weight setting, không với arbitrary positive weights.
+“Lần đầu thấy nút trong đồ thị có trọng số là shortest” chỉ đúng với BFS equal-weight setting, không với arbitrary positive các trọng số.
 
-“Undirected cycle = gặp visited node” sai vì parent edge luôn quay về visited parent.
+“Undirected chu trình = gặp đã thăm nút” sai vì nút cha cạnh luôn quay về đã thăm nút cha.
 
-## Testing traversal
+## kiểm thử traversal
 
-Ngoài examples, test structural properties:
+Ngoài examples, test structural các tính chất:
 
 ```text
 BFS dist[source] == 0
@@ -452,11 +452,11 @@ no node scheduled repeatedly ngoài design
 component count đúng reference model
 ```
 
-Random small graphs có thể so BFS distances với Floyd-Warshall reference để differential test.
+ngẫu nhiên small các đồ thị có thể so BFS các khoảng cách với Floyd-Warshall tham chiếu để differential test.
 
 ## Khi chọn BFS, DFS hay priority-based search?
 
-Một useful decision model:
+Một useful decision mô hình:
 
 ```text
 reachable/component only      -> BFS hoặc DFS
@@ -468,11 +468,11 @@ all possible branches         -> DFS/backtracking
 near-vs-deep exploration      -> frontier policy quyết định
 ```
 
-Traversal family thực chất khác nhau ở cách chọn **next frontier state**.
+Traversal family thực chất khác nhau ở cách chọn **next frontier trạng thái**.
 
-## Mental Model
+## Mô hình tư duy
 
-> BFS và DFS không phải hai code templates để học thuộc. Chúng là hai cách tổ chức frontier. BFS bảo toàn layer/distance order; DFS bảo toàn nested call/branch structure. Khi hiểu invariant của frontier, ta có thể derive multi-source BFS, bidirectional BFS, cycle detection, topo order, SCC, bridge logic và nhiều algorithms khác.
+> BFS và DFS không phải hai mẫu mã để học thuộc. Chúng là hai cách tổ chức **biên tìm kiếm (frontier)**. BFS bảo toàn thứ tự theo tầng hoặc khoảng cách; DFS bảo toàn cấu trúc lời gọi và nhánh lồng nhau. Khi hiểu bất biến của frontier, ta có thể suy ra BFS đa nguồn, BFS hai chiều, phát hiện chu trình, thứ tự tô-pô, SCC, cầu và nhiều thuật toán khác.
 
 Trước khi code traversal, hãy hỏi:
 

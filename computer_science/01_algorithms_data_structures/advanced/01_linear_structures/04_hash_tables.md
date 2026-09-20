@@ -1,156 +1,237 @@
 # Bảng băm
 **Hash Table / 해시 테이블**
 
-Hash table giải bài toán: từ một key, làm sao đi gần trực tiếp tới vùng lưu trữ của key thay vì quét toàn bộ collection? Nó là một trong những structures được dùng nhiều nhất trong software vì equality lookup, membership và grouping xuất hiện khắp nơi: cache, symbol table, deduplication, join, routing metadata, compiler tables, counting và graph state tracking.
+Bảng băm giải một câu hỏi rất phổ biến: **từ một khóa, làm sao đi gần trực tiếp tới vùng lưu trữ liên quan thay vì quét toàn bộ tập dữ liệu?** Đây là một trong những cấu trúc được dùng rộng nhất trong phần mềm: cache, symbol table, deduplication, grouping, database hash join, memoization, routing metadata, frequency counting và theo dõi trạng thái đã thăm.
 
-Mental model cơ bản là:
+Ý tưởng cốt lõi là:
 
-> Hash table dùng một hàm băm để nén key space rất lớn thành một table nhỏ hơn, chấp nhận collision là tất yếu và dùng collision policy để giữ correctness.
+> Hash Table dùng hàm băm để biến không gian khóa rất lớn thành một không gian vị trí nhỏ hơn, chấp nhận collision là tất yếu và dùng một chính sách xử lý collision để bảo toàn tính đúng đắn.
 
-## Hash function và bucket mapping
+Điểm cần hiểu sâu là `O(1)` của Hash Table không phải phép thuật. Nó dựa trên nhiều lớp giả định: chất lượng hash, hệ số tải, chính sách collision, phân bố input, cách quản lý deletion, bộ nhớ và đôi khi cả threat model.
 
-**Hash function / 해시 함수** ánh xạ key sang integer-like hash value. Bucket index sau đó được suy ra từ hash và capacity.
+## Hàm băm và ánh xạ vào bảng
 
 Một mô hình đơn giản:
 
 \[
-index = h(key) \bmod m
+index=h(key)\bmod m
 \]
 
-Trong implementation thực tế, capacity có thể là power of two và index dùng mask thay vì modulo. Khi đó hash mixing phải đảm bảo low bits đủ tốt, nếu không distribution sẽ tệ.
+trong đó `m` là số bucket hoặc slot.
 
-Hash function cho in-memory table cần nhanh, deterministic trong lifetime cần thiết và phân phối keys đủ đều dưới workload dự kiến. “Hash tốt” không chỉ là không collision — điều đó bất khả thi khi key space lớn hơn table — mà là collision distribution không tạo clusters xấu quá thường xuyên.
+Nếu `m` là lũy thừa của hai, implementation có thể dùng bitmask:
 
-## Collision là toán học, không phải bug
+```text
+index = hash & (m - 1)
+```
 
-Theo pigeonhole principle, nếu số possible keys lớn hơn số buckets, collision chắc chắn có thể xảy ra. Vì thế correctness không được dựa trên assumption “hash khác nhau cho mọi key”.
+Cách này nhanh nhưng làm chất lượng các bit thấp của hash trở nên đặc biệt quan trọng. Nếu khóa có pattern mạnh ở các bit thấp mà không được trộn tốt, nhiều khóa có thể dồn vào cùng vùng.
 
-Hai chiến lược lớn:
+Một hash function phù hợp cho bảng băm thường cần:
+
+```text
+xác định trong phạm vi sử dụng cần thiết
+nhanh
+phân tán khóa đủ đều với workload thực tế
+khó bị input pattern phá nếu môi trường có input đối kháng
+```
+
+Mục tiêu không phải “không collision”; điều đó bất khả thi khi miền khóa lớn hơn bảng.
+
+## Collision là điều chắc chắn có thể xảy ra
+
+Theo pigeonhole principle, nếu số khóa khả dĩ lớn hơn số bucket, hai khóa khác nhau có thể cùng ánh xạ tới một vị trí.
+
+Do đó Hash Table đúng phải có hai tầng:
+
+```text
+hash -> tìm vùng ứng viên
+key equality -> xác nhận đúng khóa
+```
+
+Không bao giờ được dùng “hash bằng nhau” như bằng chứng hai khóa bằng nhau.
+
+Trong Java:
+
+```text
+a.equals(b) == true  =>  a.hashCode() == b.hashCode()
+```
+
+Chiều ngược lại không bắt buộc.
+
+## Khóa có thể thay đổi là một lỗi thiết kế nguy hiểm
+
+Nếu một object được dùng làm khóa rồi các trường tham gia `equals/hashCode` bị sửa, entry vẫn nằm ở vị trí được chọn theo hash cũ nhưng lookup sau đó tính hash mới.
+
+Kết quả là khóa có thể trở thành “mất tích” về logic dù entry vẫn chiếm bộ nhớ.
+
+Trong Java, compound key bất biến như record thường an toàn hơn:
+
+```java
+record UserProductKey(long userId, long productId) {}
+```
+
+Trong C hoặc JavaScript, cũng phải tự định nghĩa rõ canonical representation của khóa.
+
+## Hai họ xử lý collision chính
+
+Hai chiến lược lớn là:
 
 ```text
 separate chaining
 open addressing
 ```
 
-Chaining cho mỗi bucket chứa một collection entries. Open addressing giữ entries trực tiếp trong table và probe vị trí khác khi home slot occupied.
-
-## Equality và hash là hai tầng khác nhau
-
-Hash giúp tìm candidate region; equality quyết định key có thật sự bằng nhau không.
-
-Trong Java contract:
-
-```text
-a.equals(b) == true  =>  a.hashCode() == b.hashCode()
-```
-
-Chiều ngược lại không cần đúng vì collision hợp lệ.
-
-Một implementation chỉ so hash mà không compare key có thể trả false equality khi collision. Đây là lỗi correctness nghiêm trọng.
-
-## Hash code stability và mutable keys
-
-Nếu key được insert rồi field dùng trong hash/equality bị thay đổi, entry vẫn nằm ở bucket/probe path cũ nhưng future lookup tính hash mới.
-
-Ví dụ Java object mutable làm `HashMap` key có thể trở thành “mất tích” logic dù entry vẫn chiếm memory.
-
-Vì vậy keys nên immutable theo identity fields, hoặc ít nhất không mutate các fields tham gia `equals/hashCode` trong khi key đang nằm trong table.
-
-Java `record` thường thuận tiện cho compound immutable keys.
+Chúng cùng cung cấp dictionary semantics nhưng có mô hình bộ nhớ rất khác.
 
 ## Separate chaining
 
-Chaining có thể hình dung:
+Mỗi bucket trỏ tới một collection các entry có cùng bucket index.
 
 ```text
 bucket[0] -> entry -> entry
 bucket[1] -> null
 bucket[2] -> entry
-...
 ```
 
-Expected chain length liên quan load factor nếu hashing đều. Chaining xử lý deletion đơn giản: remove entry khỏi chain.
+Lookup:
 
-Nhược điểm lớn của classic pointer-linked chaining là memory locality kém và allocation overhead. Modern implementations có thể dùng compact arrays, small vectors hoặc treeification cho buckets lớn tùy runtime/library.
+```text
+1. tính hash
+2. chọn bucket
+3. duyệt các entry trong bucket
+4. so key equality
+```
 
-## Load factor
+Deletion khá đơn giản vì chỉ cần gỡ entry khỏi bucket chain.
 
-Load factor:
+Ưu điểm:
+
+```text
+load factor có thể vượt 1
+xóa đơn giản
+resize policy linh hoạt
+```
+
+Nhược điểm của chaining kiểu linked nodes:
+
+```text
+nhiều cấp phát nhỏ
+pointer chasing
+locality kém
+object/header overhead
+```
+
+Một implementation hiện đại có thể dùng bucket nhỏ dạng mảng hoặc layout gọn thay vì linked list cổ điển.
+
+## Hệ số tải
+
+Định nghĩa:
 
 \[
-\alpha = \frac{n}{m}
+\alpha=\frac nm
 \]
 
-trong đó `n` entries và `m` buckets/slots.
+với `n` là số entry và `m` là số bucket/slot.
 
-Với chaining, `α` có thể > 1 nhưng chains dài hơn. Với open addressing, table phải có empty slots; `α` tiến gần 1 làm probe length tăng mạnh.
+Load factor càng cao thì bộ nhớ càng tiết kiệm nhưng collision/probing thường càng đắt.
 
-Load factor threshold là trade-off giữa memory overhead và lookup/insert cost.
+Với chaining, `α` có thể lớn hơn 1. Với open addressing, bảng cần slot trống để probing kết thúc hiệu quả nên `α` tiến gần 1 thường làm hiệu năng giảm mạnh.
+
+Do đó capacity planning là sự đánh đổi giữa memory và probe cost.
 
 ## Resize và rehash
 
-Khi capacity thay đổi, mapping bucket thường thay đổi:
+Khi capacity đổi, bucket index thường đổi theo:
 
 \[
-h(key)\bmod m_{old} \neq h(key)\bmod m_{new}
+h(key)\bmod m_{old}\neq h(key)\bmod m_{new}
 \]
 
-vì vậy không thể chỉ `memcpy` table sang vùng lớn hơn và giữ nguyên slot semantics. Entries phải được redistribute theo capacity mới, dù một số implementation power-of-two có thể optimize transfer dựa trên một hash bit mới.
+Vì vậy resize thường cần **rehash/reinsert** các entry vào bảng mới.
 
-Resize thường `O(n)` nhưng xảy ra thưa, cho insert amortized expected `O(1)` dưới assumptions phù hợp.
+Resize có thể tốn `O(n)`, nhưng nếu capacity tăng theo cấp số nhân thì tổng chi phí trên chuỗi nhiều insert thường được phân tích khấu hao thành expected `O(1)` mỗi insert dưới giả định hash phù hợp.
+
+### Vì sao tăng từng 1 là tệ?
+
+Nếu bảng gần đầy và mỗi lần chỉ tăng capacity rất ít, ta có thể rehash gần toàn bộ bảng quá thường xuyên. Tăng theo tỷ lệ giúp số lần resize chỉ logarithmic theo số entry.
 
 ## Incremental rehashing
 
-Rehash toàn table một lần có thể tạo latency spike lớn. Systems latency-sensitive đôi khi dùng **incremental rehashing**: giữ old + new table tạm thời và migrate một số buckets mỗi operation.
+Rehash toàn bộ bảng trong một operation có thể tạo latency spike.
 
-Lookup trong transition có thể phải check cả hai tables. Implementation phức tạp hơn nhưng tail latency tốt hơn.
+Một số hệ thống chọn **incremental rehashing**:
 
-Đây là ví dụ khác của trade-off throughput vs latency smoothness.
+```text
+giữ old table + new table
+di chuyển một lượng nhỏ bucket/entry ở mỗi operation
+lookup tạm thời có thể phải kiểm tra cả hai bảng
+khi migrate xong thì bỏ bảng cũ
+```
+
+Tổng công việc không nhất thiết giảm, nhưng chi phí được dàn ra để cải thiện tail latency.
+
+Đây là ví dụ rõ ràng của trade-off throughput–latency.
 
 ## Open addressing
 
-Open addressing giữ entries trong array chính. Khi home slot occupied, algorithm probe vị trí tiếp theo theo một sequence.
+Open addressing giữ entry trực tiếp trong array table. Khi home slot đã occupied, thuật toán thử các slot khác theo **probe sequence**.
 
-Linear probing:
+### Linear probing
 
 \[
 index_i=(h(key)+i)\bmod m
 \]
 
-Quadratic probing thay step tuyến tính bằng quadratic expression. Double hashing dùng second hash để sinh stride.
+Rất đơn giản và có locality tốt vì các slot gần nhau trong bộ nhớ.
 
-Correctness cần đảm bảo probe sequence có thể tìm được entry nếu nó tồn tại và insert có thể tìm empty slot khi table chưa quá đầy theo design.
+### Quadratic probing
 
-## Why locality makes open addressing attractive
+Probe offset tăng theo hàm bậc hai nhằm giảm một số dạng clustering.
 
-Entries contiguous hơn chaining, giảm pointer chasing và tận dụng cache tốt. Với workloads memory-bound, open addressing có thể rất mạnh dù theoretical expected complexity cùng `O(1)`.
+### Double hashing
 
-Nhưng deletion, high load factor và clustering khó hơn.
+Dùng hash thứ hai để tạo stride:
 
-## Primary clustering trong linear probing
+\[
+index_i=(h_1(key)+i\cdot h_2(key))\bmod m
+\]
 
-Linear probing có thể tạo contiguous occupied runs. Khi collision rơi vào run, entry mới nối dài run; run dài lại thu hút thêm collisions.
+Thiết kế phải bảo đảm stride cho phép đi qua đủ không gian slot theo capacity đã chọn.
 
-Đây gọi là **primary clustering**.
+## Vì sao open addressing có thể rất nhanh trên máy thật?
 
-Hash distribution tốt không loại hoàn toàn phenomenon vì probing policy tự tạo dependency giữa positions.
+Entry nằm gần nhau trong một mảng, nên CPU có thể tận dụng cache line và prefetch tốt hơn chaining bằng pointer.
 
-## Tombstone và deletion
+Do đó hai cấu trúc cùng expected `O(1)` có thể khác đáng kể về tốc độ thực tế vì **data movement** chứ không phải Big-O.
 
-Nếu search qua occupied slots và dừng tại first truly empty slot, deletion không được biến một middle slot thành EMPTY ngay.
+Đây là một bài học tổng quát: độ phức tạp tiệm cận không thay thế phân tích layout bộ nhớ.
+
+## Primary clustering
+
+Linear probing có thể tạo các cụm slot occupied liên tiếp.
+
+Khi một key hash vào giữa cụm, nó phải đi qua cụm và thường được đặt ở cuối. Cụm dài hơn lại thu hút nhiều collision hơn.
+
+Đây là **primary clustering**.
+
+Ngay cả hash function khá tốt vẫn không loại hoàn toàn hiện tượng này vì probing rule tự tạo phụ thuộc giữa các vị trí.
+
+## Deletion và tombstone
+
+Open addressing không thể luôn biến slot vừa xóa thành `EMPTY`.
 
 Ví dụ:
 
 ```text
-home(A)=3
-A ở slot 3
-B collision -> slot 4
+A home = 3, nằm slot 3
+B home = 3, collision nên nằm slot 4
 xóa A
 ```
 
-Nếu slot 3 trở thành EMPTY, lookup B từ home 3 sẽ dừng quá sớm.
+Nếu slot 3 trở thành `EMPTY`, lookup B bắt đầu từ 3 có thể dừng quá sớm và kết luận sai rằng B không tồn tại.
 
-Vì vậy open addressing thường có states:
+Vì vậy thường cần:
 
 ```text
 EMPTY
@@ -158,72 +239,138 @@ OCCUPIED
 DELETED / TOMBSTONE
 ```
 
-Search đi qua tombstone; insert có thể reuse tombstone. Quá nhiều tombstones làm probe dài nên table có thể cần rebuild.
+Lookup đi qua tombstone. Insert có thể tái sử dụng tombstone.
+
+Nhưng quá nhiều tombstone làm probe dài lên, vì vậy bảng có thể cần rebuild ngay cả khi số phần tử sống không lớn.
 
 ## Backward-shift deletion
 
-Một số probing schemes có thể tránh permanent tombstones bằng cách shift subsequent entries backward sau deletion trong những điều kiện nhất định. Điều này giữ probe invariants nhưng implementation tinh tế hơn.
+Một số scheme, đặc biệt các biến thể linear probing, có thể dịch một số entry sau điểm xóa về phía trước để bảo toàn reachability của probe sequence mà không giữ tombstone lâu dài.
 
-Không có một deletion strategy tốt cho mọi probing scheme; phải xuất phát từ probe invariant.
+Điểm quan trọng không phải nhớ thuật toán xóa cụ thể, mà là:
+
+> deletion phải được chứng minh dựa trên invariant của probe sequence.
+
+Không thể tự ý “dọn slot cho đẹp” nếu việc đó làm lookup mất đường tới key khác.
+
+## Khoảng cách probe như một đại lượng trạng thái
+
+Với open addressing, ngoài hash và key còn có một đại lượng quan trọng: entry đã đi xa bao nhiêu slot từ home position.
+
+Probe distance ảnh hưởng:
+
+```text
+latency lookup
+variance giữa các key
+quyết định swap trong Robin Hood hashing
+quy tắc dừng lookup ở một số scheme
+```
+
+Nhìn probe distance như metadata giúp hiểu các thiết kế hiện đại hơn.
 
 ## Robin Hood hashing
 
-Robin Hood hashing theo dõi khoảng cách mỗi entry đã đi từ home slot. Khi new entry đã “đi xa” hơn resident entry, chúng có thể swap để giảm variance probe distances.
+Ý tưởng Robin Hood là “lấy của người may mắn gần nhà để giúp người xui phải đi xa”.
 
-Idea là phân phối bất công ít hơn: entry rất unlucky được ưu tiên hơn entry còn gần home.
+Khi entry mới có probe distance lớn hơn entry đang chiếm slot, hai entry có thể đổi chỗ. Mục tiêu là giảm variance của probe length và tránh một số key có đường dò quá dài.
 
-Kết quả thường cải thiện predictability của lookup probe length, dù implementation deletion/metadata phức tạp hơn.
-
-## Swiss-table style intuition
-
-Modern high-performance hash tables thường dùng groups control bytes/fingerprints để scan nhiều candidate slots cùng lúc với SIMD-friendly operations, thay vì textbook “một slot một lần”.
-
-Điều đáng học không phải một specific implementation version, mà là principle:
-
-> Same ADT và same expected Big-O có thể khác nhau rất lớn vì metadata layout, branch behavior và vectorized candidate filtering.
-
-## Hash mixing và poor input patterns
-
-Nếu capacity power-of-two và keys có low bits correlated, direct masking có thể cluster badly. Hash function/mixing cần spread entropy sang bits dùng cho index.
-
-Ví dụ integer ids multiples of 1024 đi vào table size power-of-two có thể có low bits giống nhau nếu không mix.
-
-Một quality hash table implementation không giả định key raw bits đã uniform.
-
-## Universal hashing intuition
-
-Universal hashing chọn hash function ngẫu nhiên từ một family sao cho xác suất collision của hai distinct keys được bounded.
-
-Mục tiêu lý thuyết là giảm khả năng một fixed adversarial key set ép collisions xấu khi hash choice random/hidden.
-
-Không cần implement universal hashing thường xuyên, nhưng nó giải thích mối liên hệ giữa randomization và expected dictionary performance.
-
-## Hash flooding và security
-
-Nếu attacker kiểm soát input keys và có thể tạo nhiều collisions, expected `O(1)` lookup có thể suy thoái mạnh và trở thành denial-of-service vector.
-
-Runtime/framework có thể dùng randomized seeds, better hashing, bucket treeification hoặc other defenses. Security-sensitive system cần phân biệt “random-looking normal workload” và **adversarial workload**.
-
-Expected complexity luôn gắn với assumptions.
-
-## Cryptographic hash không mặc định là hash-table hash
-
-SHA-family hashes có security properties mạnh nhưng thường đắt hơn nhu cầu in-memory map. Hash table thường cần fast non-cryptographic distribution, trừ khi threat model yêu cầu chống crafted collisions theo cách cụ thể.
-
-“Hash” là family concept; cryptographic hash và table hash có goals khác nhau.
-
-## Compound keys
-
-Key `(userId, productId)` cần equality/hash theo tuple semantics.
-
-Không nên canonicalize bằng concatenation mơ hồ:
+Trade-off:
 
 ```text
-"12" + "34" -> "1234"
-"1" + "234" -> "1234"
+lookup thường ổn định hơn
+insert phức tạp hơn
+metadata/deletion cần cẩn thận hơn
 ```
 
-Có thể dùng tuple/record, length-delimited encoding, nested map hoặc a proper combine function.
+Đây là ví dụ một cấu trúc tối ưu không chỉ mean cost mà còn phân phối cost.
+
+## Cuckoo hashing
+
+Cuckoo hashing cho mỗi key một số vị trí khả dĩ, ví dụ hai hash function:
+
+```text
+slot1 = h1(key)
+slot2 = h2(key)
+```
+
+Nếu cả hai bị chiếm, insert có thể “đá” một entry hiện tại sang vị trí thay thế của nó và tiếp tục chuỗi di chuyển.
+
+Lookup rất hấp dẫn vì chỉ phải kiểm tra một số vị trí cố định nhỏ.
+
+Nhưng insertion có thể tạo cycle; khi đó cần rehash hoặc resize.
+
+Cuckoo hashing cho thấy một trade-off khác: lookup đơn giản hơn đổi lại insertion khó dự đoán hơn.
+
+## SwissTable-style design: bài học về metadata và vectorization
+
+Các hash table hiệu năng cao hiện đại thường tách metadata nhỏ của slot khỏi payload và quét một nhóm metadata cùng lúc để lọc nhanh candidate.
+
+Một control byte có thể mã hóa trạng thái slot và một fingerprint ngắn của hash. CPU có thể so sánh nhiều control byte song song trước khi chạm vào key thật.
+
+Điều đáng học không phải một implementation cụ thể, mà là nguyên lý:
+
+> Cùng ADT và cùng expected Big-O vẫn có thể khác nhau rất lớn nhờ layout metadata, cache locality, branch behavior và SIMD.
+
+## Hash mixing
+
+Nếu capacity là lũy thừa của hai, chỉ một số bit của hash quyết định bucket. Nếu key pattern làm các bit đó kém phân tán, collision tăng mạnh.
+
+Ví dụ ID luôn là bội số của `1024` có nhiều bit thấp bằng 0. Một mapping dùng trực tiếp bit thấp mà không mix có thể tạo distribution xấu.
+
+Do đó implementation thường có bước trộn để khuếch tán thông tin từ toàn bộ key/hash vào các bit dùng cho index.
+
+## Universal hashing: trực giác lý thuyết
+
+Universal hashing chọn ngẫu nhiên một hash function từ một family được thiết kế sao cho với hai key khác nhau, xác suất collision bị chặn.
+
+Ý tưởng quan trọng là: nếu attacker hoặc input không biết chính xác hash function được chọn, một fixed set key khó ép toàn bộ collision theo cùng cách.
+
+Universal hashing giúp nối randomization với expected dictionary performance.
+
+## Hash flooding và input đối kháng
+
+Nếu người dùng kiểm soát key và biết cách tạo nhiều collision, Hash Table có thể suy thoái nghiêm trọng và trở thành vector denial-of-service.
+
+Các biện pháp có thể gồm:
+
+```text
+hash seed ngẫu nhiên
+hash tốt hơn
+bucket treeification
+thay đổi implementation khi collision quá lớn
+rate limiting ở tầng hệ thống
+```
+
+Khi phân tích security-sensitive code, phải tách:
+
+```text
+normal workload
+random workload
+adversarial workload
+```
+
+Expected `O(1)` luôn đi kèm assumption.
+
+## Hash table hash và cryptographic hash không cùng mục tiêu
+
+SHA-256 được thiết kế cho các thuộc tính mật mã mạnh. Hash function cho in-memory table thường ưu tiên tốc độ, phân phối và khả năng chống pattern đủ cho threat model cụ thể.
+
+Dùng cryptographic hash cho mọi map có thể quá đắt. Ngược lại, dùng một hash cực nhanh nhưng dễ bị crafted collision có thể không phù hợp với public-facing server.
+
+“Hash” là một họ ý tưởng, không phải một loại hàm duy nhất.
+
+## Compound key
+
+Khóa `(userId, productId)` phải có equality/hash theo cặp.
+
+Không nên ghép chuỗi mơ hồ:
+
+```text
+"12" + "34" = "1234"
+"1"  + "234" = "1234"
+```
+
+Có thể dùng tuple/record, encoding có delimiter/length rõ hoặc nested map.
 
 Java:
 
@@ -231,222 +378,222 @@ Java:
 record Key(long userId, long productId) {}
 ```
 
-JavaScript object keys trong `Map` dùng identity, nên hai object literals fields giống nhau vẫn khác keys. Có thể dùng canonical string, nested `Map`, integer packing nếu range cho phép hoặc explicit interning.
+JavaScript có một khác biệt quan trọng: object dùng làm key trong `Map` được so theo identity. Hai object literal có cùng field không tự động là cùng key:
 
-C cần define hash/equality cùng field semantics và ownership rõ ràng.
+```js
+const a = {x: 1};
+const b = {x: 1};
+console.log(a === b); // false
+```
 
-## Integer key packing
+Nếu cần value semantics, phải canonicalize hoặc encode key.
 
-Nếu two fields có bounded bit-width, có thể pack vào một integer:
+## Hash Table và memoization
+
+Memoization thường dùng map:
 
 ```text
-key = (x << bitsY) | y
+state -> computed answer
 ```
 
-nhưng phải chứng minh ranges không overlap/overflow. Java signed shifting, C integer promotions và JavaScript 32-bit bitwise semantics có thể làm implementation khác mathematical intent.
+Điều này chỉ đúng nếu key chứa đầy đủ state ảnh hưởng tới kết quả.
 
-Representation trick chỉ đúng khi numeric model được kiểm soát.
+Nếu memo key bỏ một dimension quan trọng, cache có thể trả lời của state khác. Đây là lỗi mô hình hóa, không phải lỗi Hash Table.
 
-## Hash set và membership
+Nếu key chứa quá nhiều dữ liệu lịch sử không cần thiết, số entry có thể bùng nổ.
 
-HashSet thường là hash map chỉ cần keys hoặc map key tới dummy marker.
+Hash Table vì vậy nằm trực tiếp trên ranh giới giữa state modeling và storage.
 
-Deduplication:
+## Hash Table và graph visited set
 
-```java
-Set<String> seen = new HashSet<>();
-for (String x : values) {
-    if (!seen.add(x)) {
-        // duplicate
-    }
-}
-```
+Trong implicit graph có state phức tạp, Hash Set thường lưu các state đã thăm.
 
-Expected total `O(n)` thay vì nested scan `O(n^2)` dưới normal hashing assumptions.
-
-## Frequency map
-
-Counting là pattern rất phổ biến:
-
-```java
-Map<String, Integer> freq = new HashMap<>();
-for (String x : values) {
-    freq.merge(x, 1, Integer::sum);
-}
-```
-
-Nhưng nếu key cardinality rất lớn, memory của exact map có thể dominate. Khi only approximate frequencies cần thiết, Count-Min Sketch là alternative specialized structure.
-
-## Hash table vs balanced tree
-
-Hash table mạnh ở exact equality lookup expected `O(1)`.
-
-Balanced tree mạnh ở ordered operations:
+Tính đúng đắn phụ thuộc canonical state representation:
 
 ```text
-min/max
-predecessor/successor
-floor/ceiling
-range scan
+hai trạng thái logic giống nhau phải encode thành key bằng nhau
+hai trạng thái logic khác nhau không được vô tình encode thành cùng một key nếu equality dựa trên encoding
+```
+
+Ví dụ một board puzzle có thể encode thành string, bitmask hoặc packed integer tùy kích thước.
+
+## Grouping và frequency counting
+
+Một pattern rất phổ biến:
+
+```text
+key -> count
+key -> list of values
+key -> aggregate
+```
+
+Ví dụ:
+
+```java
+freq.merge(x, 1, Integer::sum);
+```
+
+Nhưng nếu key là số nguyên dày đặc trong `[0, n)`, array thường gọn và nhanh hơn Hash Map:
+
+```java
+int[] freq = new int[n];
+```
+
+Hash Table phù hợp khi miền khóa lớn, thưa hoặc không ánh xạ tự nhiên vào một đoạn chỉ số nhỏ.
+
+## Hash Join trong cơ sở dữ liệu
+
+Một equi-join có thể xây Hash Table trên phía nhỏ hơn:
+
+```text
+build phase: key -> rows
+probe phase: đọc bảng còn lại và tra key
+```
+
+Nếu bảng build vừa RAM và hash distribution tốt, đây là cách join rất mạnh.
+
+Nhưng range join hoặc ordered query không phù hợp trực tiếp vì Hash Table không lưu thứ tự.
+
+Đây là ví dụ semantics của cấu trúc quyết định loại operator nó hỗ trợ tốt.
+
+## Khi Hash Table không phải lựa chọn phù hợp
+
+Không nên chọn Hash Table chỉ vì lookup expected `O(1)`.
+
+Nếu cần:
+
+```text
 ordered iteration
+min/max liên tục
+floor/ceiling
+range query
+prefix query
+stable deterministic traversal order
+worst-case guarantee mạnh
 ```
 
-Tree update thường deterministic `O(log n)`. Hash table không giữ global order tự nhiên.
+thì balanced tree, sorted array, Trie hoặc cấu trúc khác có thể phù hợp hơn.
 
-Nếu workload cần cả exact lookup và order, có thể maintain two structures hoặc dùng one ordered structure tùy trade-off.
+Một Hash Table mạnh ở equality lookup nhưng cố tình không duy trì nhiều thông tin khác.
 
-## Hash table vs direct addressing
+## Iteration order là một phần của contract
 
-Nếu key domain nhỏ, dense và bounded, direct array indexing có thể tốt hơn hashing.
+Một số map implementation giữ insertion order, một số không bảo đảm order, một số có order phụ thuộc layout nội bộ.
 
-Ví dụ keys integers `[0, 9999]`:
+Nếu business logic hoặc test vô tình dựa vào iteration order không được contract bảo đảm, resize hoặc thay runtime có thể làm hành vi thay đổi.
+
+Không nên nhầm “order hiện tại quan sát được” với “order được API cam kết”.
+
+## Memory footprint
+
+Space complexity `O(n)` chưa nói đủ.
+
+Chaining có bucket array + node/object overhead. Open addressing cần slot trống theo load factor. Metadata, hash cache, alignment và tombstone đều tiêu tốn memory.
+
+Với hàng chục triệu entry, vài byte trên mỗi entry có thể biến thành hàng trăm MB.
+
+Do đó benchmark Hash Table lớn nên đo cả:
 
 ```text
-value[key]
+bytes per entry
+load factor
+peak memory trong resize
+allocation count
+cache miss behavior
 ```
-
-không collision, no hash computation, predictable locality. Cost là memory proportional to universe size `U` thay vì number of actual entries `n`.
-
-Hash table hữu ích khi universe lớn/sparse.
-
-## Perfect hashing
-
-Nếu key set static và known trước, perfect hashing có thể xây collision-free mapping cho exactly set đó. Minimal perfect hash còn cố dùng near-minimal slot count.
-
-Build phức tạp hơn nhưng lookup rất compact/fast cho static dictionaries, compiler keyword tables, asset indexes hoặc large read-only datasets.
-
-Đây là example rằng “static vs dynamic” thay đổi structure possibilities.
-
-## Caching và memoization
-
-Memoization table map state -> computed result. Correctness phụ thuộc key state chứa **đủ future-relevant information**.
-
-Nếu key thiếu một variable ảnh hưởng result, cache collision về semantics xảy ra ngay cả khi hash implementation hoàn hảo: two distinct logical states bị coi là same key.
-
-Đây là modeling bug, không phải hash collision.
-
-## Graph visited state
-
-BFS/DFS thường dùng hash set khi state space sparse/implicit. Nếu node ids dense `[0,n)`, boolean array/bitset thường nhanh và compact hơn.
-
-Chọn HashSet chỉ vì “visited thường dùng set” có thể bỏ lỡ better representation.
-
-## Database hash join
-
-Hash join xây hash table từ relation nhỏ theo join key, sau đó scan relation lớn và probe matching entries.
-
-Nếu build side không fit memory, engine có thể partition data theo hash và process partitions, chuyển problem thành external-memory hash join.
-
-Mental model giống in-memory table nhưng cost model thêm I/O, memory budget và skew.
-
-## Hash aggregation
-
-SQL:
-
-```sql
-SELECT department_id, COUNT(*)
-FROM employee
-GROUP BY department_id;
-```
-
-có thể dùng hash aggregation: key là group value, entry giữ aggregate state. Nếu groups quá nhiều cho memory, engine phải spill/partition hoặc dùng sort-based aggregation.
-
-Data structure choice xuất hiện trực tiếp trong query plan.
-
-## Consistent hashing trong distributed systems
-
-Consistent hashing không phải internal hash-table collision scheme. Nó map keys/nodes vào a ring-like hash space để khi cluster membership thay đổi, chỉ subset keys cần remap.
-
-Use case là partitioning/sharding/cache distribution, không phải dictionary lookup inside one process.
-
-Cùng chữ “hash” nhưng abstraction khác.
-
-## Rendezvous hashing
-
-Highest Random Weight / rendezvous hashing assign key tới node có score hash cao nhất. Nó cũng giảm remapping khi nodes thay đổi và đôi khi simpler than ring management.
-
-Điểm học được là hashing có thể dùng để **partition responsibility**, không chỉ chọn array bucket.
-
-## Bloom Filter connection
-
-Hash table lưu exact keys; Bloom Filter chỉ lưu bit evidence từ multiple hashes và cho approximate membership với false positives.
-
-Một storage engine có thể đặt Bloom Filter trước expensive SSTable/disk lookup: nếu filter chắc chắn “không”, bỏ I/O; nếu “có thể”, mới check exact structure.
-
-Đây là composition exact + probabilistic structures.
-
-## Resizing policy và latency
-
-Doubling capacity giảm số lần resize nhưng tạo big copy/rehash events. Smaller growth factor dùng memory sát hơn nhưng resize thường xuyên.
-
-Real system có thể pre-size map nếu biết approximate cardinality để tránh repeated resizing.
-
-Java `HashMap` constructor capacity/loading semantics cần hiểu nếu tuning; JavaScript `Map` thường không expose capacity directly.
-
-## Iteration order
-
-Không nên giả định hash map iteration sorted. Một số languages/runtimes define insertion order for specific map types; điều đó là API contract riêng, không phải property chung của hash table theory.
-
-Nếu correctness phụ thuộc iteration order, hãy chọn abstraction có contract rõ ràng thay vì dựa vào implementation accident.
 
 ## Concurrency
 
-Concurrent hash table cần synchronization finer-grained hơn global lock nếu throughput cao. Techniques có thể gồm striped locks, lock-free reads, CAS, bucket-level coordination và resizing protocols.
+Hash Table single-thread không tự trở thành thread-safe khi thêm một mutex quanh vài đoạn code tùy ý.
 
-Correctness phải giữ mapping semantics trong khi table shape thay đổi. Concurrent resize là một trong những phần khó hơn textbook map rất nhiều.
+Resize đặc biệt nhạy vì thay toàn bộ table layout.
 
-Trong Java, `ConcurrentHashMap` cung cấp concurrent semantics khác `HashMap`; không được coi chỉ là drop-in “faster thread-safe map”. Compound operations vẫn cần dùng atomic APIs phù hợp như `compute` thay vì external check-then-act nếu cần atomicity.
-
-## Memory model
-
-Một hash entry object-heavy có overhead lớn: object header, key/value references, bucket nodes, allocator metadata. Open-addressing primitive table có thể compact hơn nhiều.
-
-Big-O đều `O(n)` nhưng actual bytes/key khác lớn. Với millions entries, representation memory có thể quyết định architecture.
-
-## Cache behavior
-
-Chaining pointer chase làm cache misses; open addressing scans nearby slots, có thể tận dụng cache lines/prefetch. Nhưng high load factor tăng probes.
-
-Hash table performance thường memory-bound hơn arithmetic-bound, nên locality và table size quan trọng.
-
-## Common failure modes
-
-- key equality/hash không consistent;
-- mutable key sau insert;
-- delete open-addressing slot thành EMPTY sai invariant;
-- resize raw-copy buckets mà không rehash;
-- load factor quá cao;
-- poor hash mixing với patterned keys;
-- assume iteration order không được contract;
-- adversarial collision/hash flooding;
-- use object identity trong JavaScript khi cần value equality;
-- dùng hash table cho range/order query vốn không phù hợp.
-
-## Testing strategy
-
-Hash table nên được differential-test với reference map/set từ standard library hoặc simple sorted structure trên random operation sequences.
-
-Các cases cần test mạnh:
+Concurrent Hash Map cần xác định:
 
 ```text
-many collisions cố ý
-resize nhiều lần
-insert-delete-reinsert
-tombstone reuse
-duplicate key update
-empty table
-capacity boundaries
-keys có same hash nhưng not equal
+operation nào atomic
+iterator có snapshot hay weak consistency
+compute-if-absent có thể chạy function bao nhiêu lần theo contract
+resize phối hợp ra sao
 ```
 
-Validator có thể kiểm tra `size` khớp occupied entries, every occupied key searchable theo probe invariant và no duplicate logical keys.
+Một operation compound kiểu:
 
-Với custom hash function, statistical distribution tests có thể phát hiện obvious clustering, nhưng không thay formal/security evaluation.
+```text
+if absent then insert
+```
 
-## Mental Model
+phải dùng primitive atomic phù hợp nếu muốn tránh race.
 
-> Hash table đổi global order lấy khả năng dùng hash để nhảy tới một vùng nhỏ nơi key có thể nằm. Performance tốt đến từ ba lớp cùng lúc: hash phân phối đủ tốt, collision policy giữ probe/chain ngắn, và representation tận dụng memory/cache tốt. Correctness vẫn phải dựa trên equality thật, không bao giờ chỉ dựa vào hash.
+## Persistency và crash consistency
 
-Khi chọn hash table, hãy hỏi: **query có thật sự là equality lookup không, key semantics có ổn định không, workload có adversarial không, cardinality/memory bao nhiêu, có cần order/range không, và expected guarantee có đủ cho latency requirement không?**
+Nếu Hash Table nằm trong file hoặc persistent memory, ngoài logical invariant còn có crash invariant.
 
-Xem tiếp: [Arrays](./00_arrays_and_dynamic_arrays.md), [Balanced Search Trees](../02_trees/02_balanced_search_trees.md), [Probabilistic Data Structures](../05_specialized/06_probabilistic_data_structures.md), [Memory Models](../00_foundations/03_memory_models_c_java_javascript.md) và [DSA in Databases & Systems](../90_connections/01_dsa_in_databases_networks_and_systems.md).
+Một resize đang làm dở mà process chết không được để table không thể phục hồi. Điều này có thể cần write-ahead logging, copy-on-write hoặc metadata versioning.
+
+Đây là ví dụ cùng ADT nhưng storage medium làm correctness model thay đổi hoàn toàn.
+
+## Kiểm thử Hash Table
+
+Ngoài test chức năng, nên kiểm tra invariant dưới chuỗi thao tác ngẫu nhiên.
+
+```text
+put/get/remove so với reference map
+insert nhiều key collision có chủ đích
+delete rồi reinsert
+resize nhiều lần
+all keys vẫn lookup được sau resize
+size đúng
+không có duplicate logical key
+```
+
+Với open addressing, cần test đặc biệt cho tombstone và wrap-around probe.
+
+Property mạnh:
+
+> Với mọi key đang được lưu, bắt đầu probe từ home position theo đúng rule phải tìm tới key trước khi gặp một slot thật sự EMPTY cho phép kết luận “không tồn tại”.
+
+## Benchmark Hash Table đúng cách
+
+Không benchmark chỉ trên random integer đẹp.
+
+Nên thử:
+
+```text
+uniform random keys
+sequential keys
+keys có pattern bit
+read-heavy
+write-heavy
+mixed get/put/remove
+high load factor
+large table vượt cache
+miss-heavy workload
+collision-heavy workload hợp lệ
+```
+
+Kết quả còn phụ thuộc allocator, GC, key size, equality cost và CPU cache.
+
+## Những hiểu lầm phổ biến
+
+“Hash Table lookup luôn O(1)” — chỉ đúng theo expected/amortized model dưới assumptions phù hợp.
+
+“Hash collision là lỗi của hash function” — sai; collision là không thể tránh hoàn toàn.
+
+“Hash bằng nhau nghĩa key bằng nhau” — sai.
+
+“Xóa slot open addressing bằng cách đặt EMPTY là đủ” — có thể phá probe chain.
+
+“Load factor càng gần 1 càng tiết kiệm và tốt” — thường làm probe cost tăng mạnh.
+
+“Cryptographic hash luôn tốt hơn” — mục tiêu và chi phí khác nhau.
+
+“HashMap luôn tốt hơn array vì O(1)” — array với dense integer key có direct indexing, ít overhead và locality tốt hơn.
+
+## Mô hình tư duy
+
+> Hash Table không loại bỏ tìm kiếm; nó **dùng hash để thu hẹp mạnh vùng phải tìm**, rồi dùng equality và collision policy để bảo toàn correctness.
+
+Khi đánh giá một bảng băm, hãy hỏi: **hash có phù hợp workload không, key equality có ổn định không, collision được xử lý ra sao, load factor bao nhiêu, deletion giữ probe invariant thế nào, resize ảnh hưởng latency ra sao, layout có thân thiện cache không, và input có thể mang tính đối kháng không?**
+
+Xem tiếp: [Arrays & Dynamic Arrays](./00_arrays_and_dynamic_arrays.md), [Memory Models](../00_foundations/03_memory_models_c_java_javascript.md), [Probabilistic Data Structures](../05_specialized/06_probabilistic_data_structures.md), [Java Collections](../80_language_implementations/01_java_collections_and_dsa.md) và [C Implementation Patterns](../80_language_implementations/00_c_dsa_implementation_patterns.md).

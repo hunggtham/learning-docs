@@ -1,25 +1,25 @@
-# Selection, k-th Element và Top-K
-**Selection Algorithms, Order Statistics & Top-K / 선택 알고리즘과 Top-K**
+# Selection, k-th phần tử và Top-K
+**Selection các thuật toán, Order thống kê & Top-K / 선택 알고리즘과 Top-K**
 
-Selection hỏi một câu ít tham vọng hơn sorting: **không cần biết toàn bộ relative order của mọi phần tử, chỉ cần một rank hoặc một nhóm nhỏ quanh boundary**. Nếu chỉ cần phần tử nhỏ thứ `k`, sorting toàn bộ tạo nhiều information hơn output yêu cầu.
+Bài toán chọn (selection) yêu cầu ít thông tin hơn sắp xếp: **không cần biết toàn bộ thứ tự tương đối của mọi phần tử, chỉ cần một hạng hoặc một nhóm nhỏ quanh ranh giới**. Nếu chỉ cần phần tử nhỏ thứ `k`, sắp xếp toàn bộ tạo nhiều thông tin hơn đầu ra yêu cầu.
 
-Đây là một principle rất quan trọng của algorithm design:
+Đây là một principle rất quan trọng của thuật toán design:
 
-> Đừng trả chi phí để tính information mà contract không cần.
+> Đừng trả chi phí để tính thông tin mà contract không cần.
 
-## 1. Order Statistic
+## 1. thống kê thứ tự
 
-Nếu array sorted tăng dần:
+Nếu mảng sorted tăng dần:
 
 ```text
 [2, 4, 7, 9, 13]
 ```
 
-- smallest = order statistic 1;
-- median = order statistic giữa;
-- percentile = order statistic ở một rank xác định.
+- smallest = thống kê thứ tự 1;
+- median = thống kê thứ tự giữa;
+- percentile = thống kê thứ tự ở một rank xác định.
 
-API phải định nghĩa `k` zero-based hay one-based. Nếu code dùng zero-based, “k-th smallest” thường map thành index `k-1` theo ngôn ngữ tự nhiên. Đây là nguồn off-by-one phổ biến.
+API phải định nghĩa `k` zero-based hay one-based. Nếu code dùng zero-based, “phần tử nhỏ thứ k” thường map thành index `k-1` theo ngôn ngữ tự nhiên. Đây là nguồn off-by-one phổ biến.
 
 ## 2. Full Sort là baseline, không phải luôn sai
 
@@ -29,9 +29,9 @@ Sort rồi lấy rank:
 O(n\log n)
 \]
 
-Nếu sau đó còn hàng nghìn ordered queries, sorting một lần có thể tốt hơn selection riêng lẻ. Nếu chỉ một rank one-shot, có thể làm ít work hơn.
+Nếu sau đó còn hàng nghìn các truy vấn có thứ tự, sorting một lần có thể tốt hơn selection riêng lẻ. Nếu chỉ một rank one-shot, có thể làm ít work hơn.
 
-Selection vs sorting là trade-off giữa:
+Selection vs sorting là sự đánh đổi (trade-off) giữa:
 
 ```text
 single query, ít information
@@ -53,9 +53,9 @@ hoặc three-way:
 < pivot | == pivot | > pivot
 ```
 
-Sau partition, nếu pivot/range equal nằm đúng rank region, ta đã tìm answer mà không cần sort từng phía.
+Sau partition, nếu pivot/range equal nằm đúng vùng hạng, ta đã tìm answer mà không cần sort từng phía.
 
-Partition chính là mechanism biến một comparison với pivot thành **global elimination of candidates**.
+Partition chính là mechanism biến một phép so sánh với pivot thành **toàn cục elimination of các ứng viên**.
 
 ## 4. Quickselect
 
@@ -73,11 +73,11 @@ vì:
 n+n/2+n/4+\cdots=O(n)
 \]
 
-Worst case vẫn `O(n²)` nếu mỗi pivot chỉ loại một phần tử.
+trường hợp xấu nhất vẫn `O(n²)` nếu mỗi pivot chỉ loại một phần tử.
 
-## 5. Randomized Quickselect
+## 5. ngẫu nhiên hóa Quickselect
 
-Random pivot làm input cố định khó ép algorithm liên tục chọn cực trị.
+ngẫu nhiên pivot làm đầu vào cố định khó ép thuật toán liên tục chọn cực trị.
 
 ```js
 function quickselect(a, k) {
@@ -107,19 +107,19 @@ function quickselect(a, k) {
 }
 ```
 
-Function này mutate input. Nếu API phải immutable, copy trước tạo thêm `O(n)` memory/time.
+hàm này mutate đầu vào. Nếu API phải bất biến sau khi tạo, copy trước tạo thêm `O(n)` bộ nhớ/time.
 
-## 6. Three-way partition cho duplicates
+## 6. Three-way partition cho các phần tử trùng
 
-Nếu nhiều values bằng pivot, two-way partition có thể recurse trên vùng equal lớn một cách vô ích.
+Nếu nhiều các giá trị bằng pivot, two-way partition có thể recurse trên vùng equal lớn một cách vô ích.
 
-Three-way partition cho interval `[lt, gt]` chứa tất cả values equal pivot. Nếu target `k` nằm trong interval này, return ngay.
+Three-way partition cho interval `[lt, gt]` chứa tất cả các giá trị bằng chốt. Nếu đích `k` nằm trong interval này, return ngay.
 
-Duplicate-heavy data là case mà three-way partition không chỉ là optimization nhỏ; nó có thể thay đổi shape recursion rõ rệt.
+có nhiều phần tử trùng data là case mà three-way partition không chỉ là optimization nhỏ; nó có thể thay đổi shape recursion rõ rệt.
 
-## 7. Median of Medians: deterministic worst-case O(n)
+## 7. Median of Medians: xác định trường hợp xấu nhất O(n)
 
-Median-of-medians chia data thành groups nhỏ, lấy median mỗi group, recursively tìm median của các medians rồi dùng làm pivot.
+Median-of-medians chia dữ liệu thành các nhóm nhỏ, lấy trung vị của mỗi nhóm, đệ quy tìm trung vị của các trung vị rồi dùng giá trị đó làm chốt.
 
 Analysis bảo đảm pivot loại một fraction đủ lớn ở cả hai phía:
 
@@ -127,27 +127,27 @@ Analysis bảo đảm pivot loại một fraction đủ lớn ở cả hai phía
 T(n) \le T(n/5)+T(7n/10)+O(n)=O(n)
 \]
 
-Ý nghĩa lý thuyết rất lớn: comparison-based selection không có lower bound `Ω(n log n)` như full sorting.
+Ý nghĩa lý thuyết rất lớn: comparison-based selection không có cận dưới `Ω(n log n)` như full sorting.
 
-Nhưng constant factor và implementation complexity khiến randomized Quickselect thường thực dụng hơn trong general code.
+Nhưng constant factor và cách triển khai complexity khiến ngẫu nhiên hóa Quickselect thường thực dụng hơn trong general code.
 
-## 8. Information lower bound của selection
+## 8. thông tin cận dưới của selection
 
-Để tìm minimum, mọi element trừ winner phải “thua” ít nhất một comparison, nên cần ít nhất `n-1` comparisons.
+Để tìm minimum, mọi phần tử trừ winner phải “thua” ít nhất một phép so sánh, nên cần ít nhất `n-1` các phép so sánh.
 
-Selection của arbitrary rank cũng có linear lower bound vì ít nhất phải inspect đủ input để không bỏ sót candidate.
+Selection của arbitrary rank cũng có linear cận dưới vì ít nhất phải inspect đủ đầu vào để không bỏ sót ứng viên.
 
-Vì vậy expected/worst-case `O(n)` selection là asymptotically optimal.
+Vì vậy kỳ vọng/trường hợp xấu nhất `O(n)` selection là asymptotically optimal.
 
-## 9. Median và robust statistics
+## 9. Median và robust thống kê
 
-Median ít nhạy với outlier hơn mean. Exact median batch có thể dùng selection. Nếu data quá lớn/streaming, exact rank đòi lưu nhiều state; lúc đó approximate quantile sketches như KLL/t-digest family phù hợp hơn.
+Median ít nhạy với outlier hơn mean. chính xác median batch có thể dùng selection. Nếu data quá lớn/xử lý luồng, chính xác rank đòi lưu nhiều trạng thái (state); lúc đó xấp xỉ quantile sketches như KLL/t-digest family phù hợp hơn.
 
-Algorithm selection phải xét cả statistical semantics và memory model.
+thuật toán selection phải xét cả statistical ngữ nghĩa (semantics) và mô hình bộ nhớ (memory model).
 
-## 10. Top-K largest bằng min-heap size k
+## 10. Top-K largest bằng đống nhỏ nhất size k
 
-Duy trì min-heap chứa current `k` largest:
+Duy trì đống nhỏ nhất chứa hiện tại `k` largest:
 
 ```text
 heap size < k -> push
@@ -161,27 +161,27 @@ Complexity:
 O(n\log k)
 \]
 
-Memory:
+bộ nhớ:
 
 \[
 O(k)
 \]
 
-Nếu `k << n`, đây là lựa chọn rất mạnh cho streaming.
+Nếu `k << n`, đây là lựa chọn rất mạnh cho xử lý luồng.
 
-## 11. Vì sao min-heap cho k largest?
+## 11. Vì sao đống nhỏ nhất cho k largest?
 
-Trong nhóm current top-k, phần tử quan trọng nhất để quyết định candidate mới là **phần tử nhỏ nhất đang giữ**. Nếu candidate không thắng boundary này, nó không thể vào top-k.
+Trong nhóm hiện tại Top-K, phần tử quan trọng nhất để quyết định ứng viên mới là **phần tử nhỏ nhất đang giữ**. Nếu ứng viên không thắng ranh giới này, nó không thể vào Top-K.
 
-Do đó min-heap đặt đúng boundary element ở root.
+Do đó đống nhỏ nhất đặt đúng ranh giới phần tử ở nút gốc.
 
-Tương tự k smallest dùng max-heap size k.
+Tương tự k smallest dùng đống lớn nhất size k.
 
 ## 12. Quickselect cho batch Top-K
 
-Quickselect partition input để `k` largest/smallest nằm cùng một phía expected `O(n)`.
+Quickselect partition đầu vào để `k` largest/smallest nằm cùng một phía kỳ vọng `O(n)`.
 
-Nếu output không cần sorted, ta dừng ở đó. Nếu cần sorted top-k:
+Nếu đầu ra không cần có thứ tự, ta có thể dừng ở đó. Nếu cần Top-K đã được sắp xếp:
 
 \[
 O(n)+O(k\log k)
@@ -189,7 +189,7 @@ O(n)+O(k\log k)
 
 sort riêng selected region.
 
-Heap và Quickselect giải cùng output contract dưới workload khác:
+Heap và Quickselect giải cùng hợp đồng đầu ra dưới khối lượng công việc khác:
 
 ```text
 stream/bounded memory -> heap
@@ -198,7 +198,7 @@ batch/in-memory       -> quickselect
 
 ## 13. Heapify toàn bộ rồi pop k lần
 
-Build max-heap `O(n)`, pop k lần:
+xây dựng đống lớn nhất `O(n)`, pop k lần:
 
 \[
 O(n+k\log n)
@@ -208,9 +208,9 @@ Giữ toàn dataset `O(n)` nhưng hợp nếu heap còn dùng sau đó hoặc k 
 
 Không có một strategy Top-K duy nhất tốt cho mọi `k/n`.
 
-## 14. Partial Sort
+## 14. sắp xếp một phần
 
-Nếu cần prefix top-k **đã sorted**, partial sort có thể phù hợp hơn full sort.
+Nếu cần prefix Top-K **đã sorted**, sắp xếp một phần có thể phù hợp hơn full sort.
 
 Conceptual distinction:
 
@@ -222,22 +222,22 @@ sorted top-k: membership + order trong top-k
 full sort: order toàn bộ n
 ```
 
-Mỗi contract chứa lượng information khác nhau.
+Mỗi contract chứa lượng thông tin khác nhau.
 
 ## 15. Multi-selection: cần nhiều ranks nhưng chưa cần full sort
 
-Nếu cần quartiles hoặc một tập ranks `k1,k2,...`, ta có thể reuse partition tree thay vì chạy Quickselect độc lập cho từng rank.
+Nếu cần quartiles hoặc một tập ranks `k1,k2,...`, ta có thể reuse partition cây thay vì chạy Quickselect độc lập cho từng rank.
 
-Một partition chia set ranks thành nhóm trái/phải; recurse chỉ nơi có requested ranks.
+Một partition chia set ranks thành nhóm trái/phải; recurse chỉ nơi có các hạng cần tìm.
 
 Đây là middle ground giữa one-rank selection và full sorting.
 
 ## 16. K-way Merge
 
-Có `m` sorted lists và cần k smallest tổng thể. Min-heap chứa current head mỗi list:
+Có `m` các danh sách đã sắp xếp và cần k smallest tổng thể. đống nhỏ nhất chứa hiện tại head mỗi list:
 
-1. pop global smallest;
-2. push next từ same list;
+1. pop toàn cục smallest;
+2. đưa phần tử tiếp theo từ cùng danh sách vào heap;
 3. lặp k lần.
 
 Complexity:
@@ -248,9 +248,9 @@ O(k\log m)
 
 Không cần merge toàn bộ data.
 
-Pattern này xuất hiện trong external sort, database merge, search shards và time-series streams.
+mẫu này xuất hiện trong bên ngoài sort, cơ sở dữ liệu merge, search shards và time-series streams.
 
-## 17. Top-K frequent elements
+## 17. Top-K frequent các phần tử
 
 Bài này gồm hai phases:
 
@@ -259,21 +259,21 @@ frequency counting
 selection theo frequency
 ```
 
-Hash map tạo counts `O(n)` expected. Sau đó heap size k trên `u` unique values:
+Bảng băm tạo bảng tần suất trong thời gian kỳ vọng `O(n)`. Sau đó dùng heap kích thước k trên `u` giá trị phân biệt:
 
 \[
 O(n+u\log k)
 \]
 
-Nếu frequencies bounded `0..n`, bucket-by-frequency có thể đạt near-linear.
+Nếu các tần suất bounded `0..n`, bucket-by-frequency có thể đạt near-linear.
 
-“Top-K” không tự động đồng nghĩa heap; key domain có thể mở alternative.
+“Top-K” không tự động đồng nghĩa heap; khóa domain có thể mở alternative.
 
-## 18. Streaming heavy hitters khác exact Top-K values
+## 18. xử lý luồng các phần tử xuất hiện dày đặc khác chính xác Top-K các giá trị
 
-Nếu muốn items có frequency cao nhất trong stream khổng lồ, exact map có thể cần memory theo số distinct keys.
+Nếu muốn items có tần suất cao nhất trong stream khổng lồ, chính xác map có thể cần bộ nhớ theo số distinct các khóa.
 
-Count-Min Sketch + candidate tracking, Space-Saving hoặc Misra–Gries giảm memory đổi lấy guarantee khác.
+bản phác đếm tối thiểu + ứng viên tracking, Space-Saving hoặc Misra–Gries giảm bộ nhớ đổi lấy bảo đảm khác.
 
 Phân biệt:
 
@@ -285,19 +285,19 @@ top-k frequent over stream
 
 chúng là problem khác nhau dù tên giống.
 
-## 19. Quantile trong distributed systems
+## 19. Quantile trong các hệ thống phân tán
 
-Exact percentile toàn distributed dataset có thể cần shuffle/sort lớn. Approximate sketches cho phép mỗi shard giữ summary rồi merge.
+chính xác percentile toàn distributed dataset có thể cần shuffle/sort lớn. xấp xỉ sketches cho phép mỗi shard giữ dữ liệu tóm lược rồi merge.
 
-Nếu exact, một strategy có thể dùng distributed selection/partition rounds, nhưng network communication trở thành cost chính.
+Nếu chính xác, một strategy có thể dùng distributed selection/partition rounds, nhưng mạng communication trở thành chi phí chính.
 
-Ở scale lớn, communication complexity có thể quan trọng hơn CPU `O(n)` vs `O(n log n)`.
+Ở scale lớn, độ phức tạp truyền thông có thể quan trọng hơn CPU `O(n)` vs `O(n log n)`.
 
-## 20. Distributed Top-K: local reduction rồi global merge
+## 20. Distributed Top-K: cục bộ reduction rồi toàn cục merge
 
-Nếu score mỗi item độc lập và mỗi shard chứa partition disjoint, local top-k của mỗi shard là candidate superset đủ cho global top-k: item không nằm local top-k không thể vượt k items cùng shard đã cao hơn nó.
+Nếu score mỗi item độc lập và mỗi shard chứa partition disjoint, cục bộ Top-K của mỗi shard là ứng viên superset đủ cho toàn cục Top-K: item không nằm cục bộ Top-K không thể vượt k items cùng shard đã cao hơn nó.
 
-Coordinator chỉ cần merge tối đa `shards * k` candidates.
+Coordinator chỉ cần merge tối đa `shards * k` các ứng viên.
 
 Đây là một reduction rất mạnh:
 
@@ -308,39 +308,39 @@ huge distributed dataset
 -> global top-k
 ```
 
-Nếu scoring phụ thuộc global normalization/interaction, property này có thể không còn đúng.
+Nếu scoring phụ thuộc toàn cục normalization/interaction, tính chất này có thể không còn đúng.
 
-## 21. Threshold Algorithms cho sorted access
+## 21. Threshold các thuật toán cho sorted access
 
-Trong information-retrieval/database settings, nếu nhiều attribute lists sorted theo partial scores, threshold algorithms có thể dừng sớm khi current top-k score đã vượt upper bound của unseen candidates.
+Trong information-retrieval/cơ sở dữ liệu settings, nếu nhiều attribute lists sorted theo partial scores, threshold các thuật toán có thể dừng sớm khi hiện tại Top-K score đã vượt cận trên (upper bound) của unseen các ứng viên.
 
-Đây là một generalization của boundary reasoning: maintain lower bound của winners và upper bound của unknowns.
+Đây là một generalization của ranh giới reasoning: maintain cận dưới của winners và cận trên của unknowns.
 
 Không cần full materialization nếu có stopping certificate.
 
-## 22. External-memory selection
+## 22. lựa chọn trên bộ nhớ ngoài
 
-Nếu data không fit RAM, in-place Quickselect trên toàn dataset không còn straightforward. Ta có thể partition data thành files/buckets theo pivot, count sizes, rồi chỉ recurse bucket chứa rank.
+Nếu dữ liệu không vừa RAM, Quickselect tại chỗ trên toàn bộ tập dữ liệu không còn là cách triển khai trực tiếp. Ta có thể partition data thành files/các ngăn băm theo pivot, count sizes, rồi chỉ recurse ngăn băm chứa rank.
 
-Goal chuyển từ comparison count sang giảm I/O passes và bytes read/write.
+Mục tiêu chuyển từ phép so sánh count sang giảm các lượt I/O và byte read/write.
 
-Một algorithm `O(n)` CPU nhưng nhiều random I/O có thể thua external strategy sequential scans.
+Một thuật toán `O(n)` CPU nhưng nhiều ngẫu nhiên I/O có thể thua bên ngoài strategy sequential các lần quét.
 
 ## 23. Selection trên linked data
 
-Quickselect cần efficient partition traversal nhưng không nhất thiết random access. Tuy nhiên pointer-heavy list có cache cost và partition relinking phức tạp.
+Quickselect cần efficient partition traversal nhưng không nhất thiết truy cập ngẫu nhiên. Tuy nhiên pointer-heavy list có bộ nhớ đệm chi phí và partition relinking phức tạp.
 
-Nếu data là linked structure nhưng có thể materialize array rẻ, chuyển representation đôi khi thực tế hơn cố implement specialized list selection.
+Nếu data là linked structure nhưng có thể materialize mảng rẻ, chuyển cách biểu diễn (representation) đôi khi thực tế hơn cố implement chuyên biệt list selection.
 
-## 24. Selection Trees và Tournament Trees
+## 24. Selection các cây và Tournament các cây
 
-Tournament tree lưu kết quả pairwise winners. Tìm minimum cần `n-1` comparisons. Nếu muốn second minimum, chỉ cần xem những elements đã trực tiếp thua minimum trên path, khoảng `log n` candidates trong balanced tournament.
+Tournament Tree lưu kết quả của các cặp so sánh. Tìm phần tử nhỏ nhất cần `n-1` phép so sánh. Nếu muốn phần tử nhỏ thứ hai, chỉ cần xét những phần tử đã trực tiếp thua phần tử nhỏ nhất trên đường đi, khoảng `log n` ứng viên trong cây giải đấu cân bằng.
 
-Đây là insight information reuse: comparison history chứa thêm structure cho order statistics tiếp theo.
+Đây là insight thông tin reuse: phép so sánh lịch sử chứa thêm structure cho order thống kê tiếp theo.
 
-Tournament/loser trees cũng dùng trong k-way external merge.
+Tournament/loser các cây cũng dùng trong k-way bên ngoài merge.
 
-## 25. Online Median bằng hai heaps
+## 25. trực tuyến Median bằng hai heaps
 
 Giữ:
 
@@ -349,7 +349,7 @@ max-heap lower half
 min-heap upper half
 ```
 
-Invariant:
+bất biến (invariant):
 
 ```text
 size difference <= 1
@@ -358,15 +358,15 @@ max(lower) <= min(upper)
 
 Insert `O(log n)`, median `O(1)`.
 
-Đây không phải classic one-shot selection mà là dynamic order statistic cho insertion-only stream.
+Đây không phải bài chọn một lần kinh điển mà là thống kê thứ tự động cho luồng chỉ có thao tác chèn.
 
-Nếu cần delete arbitrary items, two heaps cần lazy deletion/indexing phức tạp hơn hoặc balanced order-stat tree.
+Nếu cần xóa phần tử tùy ý, mô hình hai heap cần xóa lười hoặc lập chỉ mục phức tạp hơn; một cây cân bằng có thống kê thứ tự có thể phù hợp hơn.
 
-## 26. Top-K với updates/deletes
+## 26. Top-K với các cập nhật/deletes
 
-Static heap size k giả định each item xét một lần. Nếu scores thay đổi sau insertion, heap không tự reorder khi object field mutate.
+Heap kích thước k trong trường hợp tĩnh giả định mỗi phần tử chỉ được xét một lần. Nếu điểm số thay đổi sau khi chèn, heap không tự sắp xếp lại chỉ vì trường của đối tượng bị thay đổi.
 
-Java `PriorityQueue` không hỗ trợ arbitrary priority update. Options:
+Java `PriorityQueue` không hỗ trợ arbitrary độ ưu tiên cập nhật. Options:
 
 ```text
 push new version + skip stale
@@ -375,9 +375,9 @@ balanced tree keyed by score
 periodic rebuild
 ```
 
-Output contract động làm data structure choice thay đổi.
+hợp đồng đầu ra động làm cấu trúc dữ liệu choice thay đổi.
 
-## 27. Tie-breaking và determinism
+## 27. quy tắc phân xử khi bằng nhau và determinism
 
 Nếu nhiều items cùng score, cần secondary order:
 
@@ -387,19 +387,19 @@ then timestamp asc
 then id asc
 ```
 
-Comparator phải encode rule. Nếu không, heap/partition có thể trả arbitrary ordering giữa ties, làm tests flaky và distributed results nondeterministic.
+Bộ so sánh phải mã hóa đầy đủ quy tắc phân xử. Nếu không, heap hoặc phép phân hoạch có thể trả thứ tự tùy ý giữa các phần tử hòa nhau, khiến kiểm thử không ổn định và kết quả phân tán không xác định.
 
-Top-k **set membership** và top-k **stable ordered list** là hai contracts khác nhau.
+Top-K theo **tập phần tử thuộc kết quả** và Top-K theo **danh sách có thứ tự ổn định** là hai hợp đồng khác nhau.
 
 ## 28. Floating-point scores
 
-Ranking với `NaN`, `-0`, infinities hoặc floating rounding cần semantics rõ. Comparator không nên giả định total order nếu domain có NaN behavior đặc biệt.
+Ranking với `NaN`, `-0`, infinities hoặc floating rounding cần ngữ nghĩa rõ. Comparator không nên giả định thứ tự toàn phần nếu domain có NaN hành vi đặc biệt.
 
-Nếu score được tính từ nhiều floating components, near-tie results có thể nhạy với evaluation order. Production ranking thường cần deterministic normalization/tie-break key.
+Nếu score được tính từ nhiều floating các thành phần, near-tie các kết quả có thể nhạy với evaluation order. Trong hệ thống thực tế, ranking thường cần xác định normalization/tie-break khóa.
 
 ## 29. Java/C/JavaScript comparator caveats
 
-Java/C comparator dùng subtraction có thể overflow:
+Java/C comparator dùng subtraction có thể tràn số:
 
 ```java
 return a.score - b.score;
@@ -407,19 +407,19 @@ return a.score - b.score;
 
 nên dùng `Integer.compare`/`Long.compare`.
 
-JavaScript comparator Number phải trả negative/zero/positive. Với BigInt, không nên trộn arithmetic result BigInt trực tiếp theo cách API không chấp nhận; dùng relational branches.
+Bộ so sánh cho `Number` trong JavaScript phải trả giá trị âm, 0 hoặc dương. Với `BigInt`, không nên trả trực tiếp kết quả số học BigInt nếu API mong dấu dạng Number; hãy dùng các nhánh so sánh quan hệ.
 
-Comparator correctness là prerequisite của heap/sort/ordered selection.
+Comparator tính đúng đắn là prerequisite của heap/sort/ordered selection.
 
-## 30. Mutation contract
+## 30. sự thay đổi dữ liệu contract
 
-Quickselect thường mutate array. Heap streaming không cần reorder input. Full sort có thể mutate tùy API.
+Quickselect thường mutate mảng. Heap xử lý luồng không cần reorder đầu vào. Full sort có thể mutate tùy API.
 
-Nếu caller cần original order, copy có cost `O(n)` memory/time. Đây là engineering trade-off thật, không chỉ style.
+Nếu bên gọi cần giữ nguyên thứ tự ban đầu, việc sao chép tốn `O(n)` thời gian và bộ nhớ. Đây là một đánh đổi kỹ thuật thực sự, không chỉ là vấn đề phong cách mã.
 
-## 31. Testing Quickselect
+## 31. kiểm thử Quickselect
 
-Reference oracle:
+tham chiếu oracle:
 
 ```text
 copy input
@@ -427,7 +427,7 @@ sort copy
 expected = copy[k]
 ```
 
-Random small arrays cho differential testing rất hiệu quả.
+ngẫu nhiên small các mảng cho differential kiểm thử rất hiệu quả.
 
 Cases:
 
@@ -442,53 +442,53 @@ k = n-1
 negative/large values
 ```
 
-Nếu randomized, log seed để reproduce failure.
+Nếu ngẫu nhiên hóa, log seed để reproduce failure.
 
-## 32. Property của k-th statistic
+## 32. tính chất của k-th statistic
 
-Nếu answer `x` cho zero-based rank `k`, phải có đủ số elements `< x` và `<= x` phù hợp duplicate semantics để rank `k` nằm trong equal block của `x`.
+Nếu answer `x` cho zero-based rank `k`, phải có đủ số các phần tử `< x` và `<= x` phù hợp phần tử trùng ngữ nghĩa để rank `k` nằm trong equal block của `x`.
 
-Property này giúp verify result mà không cần exact pivot history.
+tính chất này giúp verify kết quả mà không cần chính xác pivot lịch sử.
 
-## 33. Testing Top-K
+## 33. kiểm thử Top-K
 
-So multiset output với first k của fully sorted reference. Nếu output contract sorted, compare sequence. Nếu unordered, compare frequency map/multiset.
+So sánh đa tập đầu ra với k phần tử đầu của kết quả tham chiếu đã sắp xếp hoàn toàn. Nếu hợp đồng đầu ra yêu cầu có thứ tự, so sánh dãy; nếu không yêu cầu thứ tự, so sánh bảng tần suất hoặc đa tập.
 
-Tie-breaking phải được test riêng nếu API deterministic.
+quy tắc phân xử khi bằng nhau phải được test riêng nếu API xác định.
 
-## 34. Adversarial input và pivot strategy
+## 34. đối kháng đầu vào và pivot strategy
 
-Quickselect deterministic pivot đầu/cuối dễ bị sorted/adversarial input phá `O(n²)`.
+Quickselect xác định pivot đầu/cuối dễ bị sorted/đối kháng đầu vào phá `O(n²)`.
 
-Random pivot, median-of-three hoặc introspective fallback giúp giảm risk. Public APIs phải cân nhắc adversarial callers nếu latency/security quan trọng.
+ngẫu nhiên pivot, median-of-three hoặc introspective fallback giúp giảm risk. Public APIs phải cân nhắc đối kháng callers nếu độ trễ (latency)/security quan trọng.
 
-## 35. Strategy matrix theo workload
+## 35. Strategy matrix theo khối lượng công việc
 
-Một rank, batch, mutation allowed:
+Một rank, batch, sự thay đổi dữ liệu allowed:
 
 ```text
 Quickselect
 ```
 
-Một rank, deterministic worst-case bound bắt buộc:
+Một rank, xác định trường hợp xấu nhất bound bắt buộc:
 
 ```text
 Median of Medians / deterministic selection
 ```
 
-Top-k streaming, k nhỏ:
+Top-K xử lý luồng, k nhỏ:
 
 ```text
 bounded heap
 ```
 
-Top-k batch unsorted:
+Top-K batch unsorted:
 
 ```text
 Quickselect
 ```
 
-Top-k sorted:
+Top-K sorted:
 
 ```text
 selection + sort k
@@ -496,7 +496,7 @@ heap
 partial sort
 ```
 
-Nhiều rank queries:
+Nhiều rank các truy vấn:
 
 ```text
 sort once
@@ -504,16 +504,16 @@ order-stat tree
 multi-selection
 ```
 
-Streaming percentile approximate:
+xử lý luồng percentile xấp xỉ:
 
 ```text
 quantile sketch
 ```
 
-## Mental Model
+## Mô hình tư duy
 
-> Selection algorithms khai thác việc output chỉ yêu cầu **một boundary trong order**, không cần toàn bộ order. Quickselect loại regions; heap duy trì boundary; tournament tree reuse comparison history; distributed top-k giảm candidate set trước khi merge.
+> Các thuật toán chọn khai thác việc đầu ra chỉ yêu cầu **một ranh giới trong thứ tự**, không cần toàn bộ thứ tự. Quickselect loại bỏ từng vùng; heap duy trì ranh giới; Tournament Tree tái sử dụng lịch sử so sánh; Top-K phân tán giảm tập ứng viên trước khi gộp.
 
-Trước khi chọn algorithm, hãy viết chính xác output contract: một rank, unordered top-k, sorted top-k, dynamic rank, frequency heavy hitters hay approximate percentile. Chỉ một từ “Top-K” chưa đủ xác định bài toán.
+Trước khi chọn thuật toán, hãy viết chính xác hợp đồng đầu ra: một rank, unordered Top-K, sorted Top-K, động rank, tần suất các phần tử xuất hiện dày đặc hay xấp xỉ percentile. Chỉ một từ “Top-K” chưa đủ xác định bài toán.
 
 Xem thêm: [Heap](../02_trees/03_heaps.md), [Sorting](./01_sorting.md), [Probabilistic Structures](../05_specialized/06_probabilistic_data_structures.md), [Complexity](../00_foundations/02_complexity_analysis.md).

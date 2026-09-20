@@ -1,9 +1,9 @@
-# Trie
-**Cây tiền tố / Trie / Prefix Tree / 트라이·접두사 트리**
+# Trie và các cấu trúc chỉ mục tiền tố
+**Trie / Prefix Tree / 트라이·접두사 트리**
 
-Trie là cấu trúc tổ chức keys theo **các phần tử cấu thành của key**, thường là characters hoặc bits. Nếu nhiều keys chia sẻ prefix, phần prefix chung đó được lưu một lần dưới dạng path chung.
+Trie tổ chức khóa theo **các thành phần cấu tạo nên khóa**, thường là ký tự, byte hoặc bit. Nếu nhiều khóa chia sẻ cùng tiền tố, phần tiền tố chung chỉ được biểu diễn một lần dưới dạng đường đi chung.
 
-Ví dụ các từ `car`, `card`, `care`, `cat` chia sẻ prefix `ca`:
+Ví dụ `car`, `card`, `care`, `cat`:
 
 ```text
 (root)
@@ -12,260 +12,529 @@ Ví dụ các từ `car`, `card`, `care`, `cat` chia sẻ prefix `ca`:
   |
   a
  / \
-r   t*
+r*  t*
 |\
 d* e*
 ```
 
-Dấu `*` biểu diễn vị trí kết thúc một word. Một node trong trie không nhất thiết tự đại diện một word; nó đại diện một prefix. Marker như `isEnd` phân biệt prefix `car` với việc chỉ có các words `card`, `care` đi qua node đó.
+Dấu `*` biểu diễn một khóa kết thúc tại nút đó. Một nút trong Trie không nhất thiết là một khóa hoàn chỉnh; nó đại diện cho một **trạng thái tiền tố**.
 
-## 1. Trie giải quyết vấn đề gì?
+Mô hình tư duy cốt lõi:
 
-Hash table rất mạnh cho exact key lookup: “key này có tồn tại không?”. Nhưng nếu câu hỏi là “có key nào bắt đầu bằng `app` không?”, “liệt kê 10 từ bắt đầu bằng prefix này”, hoặc “tìm longest matching prefix”, hash table không tự nhiên vì nó hash toàn key và làm mất structure bên trong key.
+> Hash Table quan tâm định danh của toàn khóa. Trie giữ lại cấu trúc bên trong khóa để biến prefix thành một trạng thái có thể truy vấn trực tiếp.
 
-Trie làm ngược lại: key được tách thành sequence symbols và mỗi symbol quyết định một edge. Prefix trở thành một node/path thật trong structure.
+## 1. Khi nào Trie đáng dùng?
 
-Vì vậy trie phù hợp khi **prefix semantics là một phần của workload**.
+Trie tự nhiên với các truy vấn:
 
-## 2. Insert và Search
+```text
+khóa có tồn tại chính xác không?
+có khóa nào bắt đầu bằng prefix p không?
+có bao nhiêu khóa bắt đầu bằng p?
+liệt kê/top-k khóa có prefix p
+longest-prefix match
+maximum XOR theo bit
+multi-pattern matching khi mở rộng thành automaton
+```
 
-Giả sử key có length `L`. Ta bắt đầu từ root và đi qua từng symbol. Nếu child tương ứng chưa tồn tại khi insert, ta tạo node mới. Sau symbol cuối, đánh dấu `isEnd = true`.
+Nếu chỉ cần exact lookup và không khai thác prefix, Hash Map thường đơn giản và tiết kiệm bộ nhớ hơn.
 
-Search exact cũng đi theo path đó. Nếu thiếu child, key không tồn tại. Nếu đi hết string nhưng node cuối `isEnd = false`, input chỉ là prefix của một key dài hơn, chưa phải exact key.
+## 2. Search và Insert
 
-Với child lookup `O(1)` expected qua array/hash map, time thường:
+Với khóa dài `L`, đi từ gốc qua từng symbol.
+
+Nếu child tương ứng chưa tồn tại khi insert, tạo child mới. Sau symbol cuối, đánh dấu `isEnd` hoặc tăng `endCount`.
+
+Exact search cần hai điều kiện:
+
+```text
+đường đi tồn tại
+nút cuối là điểm kết thúc khóa
+```
+
+Nếu đường đi tồn tại nhưng `isEnd=false`, đầu vào chỉ là prefix của khóa dài hơn.
+
+Nếu lookup child gần `O(1)`, complexity thường:
 
 \[
 O(L)
 \]
 
-Điểm đáng chú ý là runtime phụ thuộc key length nhiều hơn số keys toàn trie.
+phụ thuộc độ dài khóa hơn là số lượng khóa trong dictionary.
 
-## 3. Prefix Search
+## 3. Prefix Query
 
-Để kiểm tra có word nào bắt đầu bằng prefix `p`, ta chỉ cần đi theo path `p`. Nếu path tồn tại, prefix tồn tại trong trie, bất kể node cuối có `isEnd` hay không.
+Để kiểm tra `startsWith(prefix)`, chỉ cần đi hết prefix. Không cần nút cuối là `isEnd`.
 
-Autocomplete có thể tiếp tục DFS/BFS từ node prefix để enumerate descendants.
+Nếu cần liệt kê mọi kết quả, complexity phải tính cả output:
 
-Nếu chỉ enumerate mọi descendant, output có thể rất lớn. Complexity phải tính cả số kết quả; không có algorithm nào output một triệu suggestions trong `O(1)`.
+\[
+O(|prefix| + k + \text{characters emitted})
+\]
 
-Production autocomplete thường giới hạn top-N và cache ranking metadata tại nodes để tránh traverse toàn subtree mỗi query.
+với `k` là số kết quả.
 
-## 4. Representation của children
+Một hệ thống autocomplete không thể trả một triệu gợi ý trong `O(|prefix|)` chỉ vì Trie tìm prefix nhanh.
 
-Một trie node cần mapping:
+## 4. Bất biến quan trọng
 
-```text
-symbol -> child node
-```
-
-Representation phụ thuộc alphabet.
-
-Nếu alphabet nhỏ, cố định như lowercase English `a-z`, có thể dùng array size 26. Lookup rất nhanh và predictable nhưng mỗi node trả memory cho 26 child slots dù hầu hết null.
-
-Nếu alphabet sparse/lớn, `HashMap<Character, Node>` hoặc map theo code point tiết kiệm empty slots nhưng thêm hash/object overhead.
-
-Một sorted small vector/list children có thể tốt khi branching factor nhỏ vì locality tốt hơn hash map.
-
-Không có representation tốt nhất độc lập workload.
-
-## 5. Memory là nhược điểm lớn của naive trie
-
-Trie có thể có số nodes xấp xỉ tổng length của all keys nếu sharing ít. Nếu mỗi node là một Java object chứa HashMap riêng, overhead có thể lớn hơn text data rất nhiều.
-
-Trong JavaScript, object/Map per node cũng tốn metadata và GC pressure. Trong C, pointer arrays lớn cho mỗi node có thể lãng phí mạnh nếu alphabet sparse.
-
-Do đó production tries thường dùng path compression, compact arrays, arena allocation, double-array trie hoặc finite-state compression tùy workload.
-
-## 6. Delete đúng cách
-
-Xóa word không thể đơn giản delete toàn path vì path có thể được key khác dùng chung.
-
-Ví dụ có `car` và `card`. Xóa `car` chỉ cần clear `isEnd` tại node `r`; path `c-a-r-d` vẫn cần cho `card`.
-
-Sau khi clear end marker, ta có thể đi ngược từ dưới lên và reclaim node chỉ khi:
+Một Trie mutable thường cần giữ:
 
 ```text
-node không còn child
-và node không phải end của key khác
+mỗi path từ root tương ứng đúng một prefix
+mọi key tồn tại có đúng một terminal marker/count
+child mapping không chứa duplicate symbol
+passCount/endCount nếu có phải nhất quán với subtree
 ```
 
-Nếu trie lưu frequency/reference count, deletion/reclamation có thể dựa trên count.
+Nếu hỗ trợ duplicate keys, `endCount` tốt hơn `boolean isEnd`.
 
-Đây là một case điển hình của shared-prefix ownership.
+Nếu lưu `passCount`, insert/delete phải cập nhật mọi nút trên path. Metadata tăng tốc query nhưng tạo thêm invariant cần bảo trì.
 
-## 7. Lexicographic Traversal
+## 5. Child Representation
 
-Nếu children được iterate theo symbol order, DFS trên trie output keys theo lexicographic order.
+Mỗi nút cần ánh xạ:
 
-Hash-map children không tự bảo đảm order; cần sorted keys hoặc ordered map nếu lexical traversal là requirement thường xuyên.
+```text
+symbol -> child
+```
 
-Again, order semantics ảnh hưởng representation.
+Các cách phổ biến:
 
-## 8. Compressed Trie / Radix Tree
+### Mảng cố định
 
-Naive trie có nhiều chains mà mỗi node chỉ có một child. Ta có thể compress chain thành một edge label dài hơn.
+Phù hợp alphabet nhỏ, ví dụ 26 chữ thường.
 
-Thay vì:
+Ưu điểm:
+
+```text
+lookup trực tiếp
+layout dễ đoán
+không cần hash
+```
+
+Nhược điểm: mỗi node trả chi phí cho toàn alphabet dù chỉ có 1–2 child.
+
+### Hash Map
+
+Phù hợp alphabet lớn/thưa. Tiết kiệm slot null nhưng tăng object/hash overhead.
+
+### Sorted small vector
+
+Nếu branching factor thường nhỏ, một vector cặp `(symbol, child)` đã sắp xếp có thể cache-friendly hơn Hash Map. Có thể linear scan với vài child hoặc binary search khi nhiều hơn.
+
+Representation nên dựa trên phân phối branching thực tế.
+
+## 6. Bộ nhớ là điểm yếu lớn của Trie ngây thơ
+
+Số node có thể gần tổng độ dài mọi key:
+
+\[
+O\left(\sum |key_i|\right)
+\]
+
+Nếu mỗi node là object Java chứa một HashMap riêng, overhead có thể lớn hơn dữ liệu ký tự nhiều lần.
+
+JavaScript `Map` per node cũng tạo áp lực GC. Trong C, mảng 256 pointer trên mỗi node cực lãng phí nếu branching thưa.
+
+Do đó production Trie thường dùng:
+
+```text
+path compression
+compact node layout
+arena/pool allocation
+double-array trie
+LOUDS / succinct representation
+FST/automaton compression
+```
+
+## 7. Delete
+
+Xóa `car` khi vẫn còn `card` không được giải phóng toàn path `c-a-r`.
+
+Quy trình:
+
+1. đi tới terminal;
+2. giảm `endCount` hoặc clear `isEnd`;
+3. đi ngược lên;
+4. chỉ xóa node nếu không còn child, không còn key kết thúc và metadata cho phép.
+
+Nếu có `passCount`, node có thể được thu hồi khi count xuống 0.
+
+Delete là nơi shared-prefix ownership trở nên rõ nhất.
+
+## 8. Lexicographic Traversal
+
+Nếu child được duyệt theo symbol order, DFS xuất key theo thứ tự từ điển.
+
+Nếu child dùng Hash Map, iteration order có thể không tương ứng lexicographic order; cần sort symbol hoặc dùng ordered representation.
+
+Đây là một ví dụ order semantics ảnh hưởng trực tiếp layout.
+
+## 9. Radix Tree / Patricia Trie
+
+Trie ngây thơ có thể có chuỗi dài các node chỉ có một child:
 
 ```text
 c -> o -> m -> p -> u -> t -> e
 ```
 
-có thể lưu một edge label `"compute"` nếu không có branching bên trong.
+Path compression gộp thành một cạnh nhãn `"compute"`.
 
-**Radix Tree / Patricia Trie / 압축 트라이** giảm node count và pointer overhead. Search phải so sánh nhiều symbols trên mỗi edge label, nhưng total character work vẫn gắn với key length.
+**Radix Tree / Patricia Trie** giảm số node, pointer và cấp phát. Search phải so nhiều symbol trên mỗi cạnh, nhưng tổng ký tự xử lý vẫn gắn với độ dài khóa.
 
-Path compression đặc biệt hiệu quả khi keys dài và branching chỉ xảy ra ở ít positions.
+Path compression đặc biệt hữu ích khi key dài nhưng branching xảy ra ít.
 
-## 9. Patricia Trie cho bit strings
+## 10. Split Edge khi Insert vào Radix Tree
 
-Patricia trie là compressed binary radix trie, thường bỏ các unary internal nodes và chỉ giữ branching positions quan trọng.
+Giả sử cạnh hiện có nhãn `computer`, nhưng chèn `compact`.
 
-Routing tables, IP prefixes và some key-value indexes có thể dùng radix/patricia variants vì prefix bits có semantic trực tiếp.
+Hai chuỗi chia sẻ `com`, sau đó khác nhau. Cạnh phải được tách:
 
-Nếu IPv4 address là 32 bits, route như `10.0.0.0/8` đại diện prefix 8 bits. Longest-prefix match tìm route matching destination với prefix dài nhất.
+```text
+com
+├── puter
+└── pact
+```
 
-## 10. Binary Trie và Maximum XOR
+Insert Radix Tree vì thế phải tìm longest common prefix giữa edge label và phần key còn lại rồi xử lý các trường hợp:
 
-Trie không chỉ dành cho text. Một integer có thể được xem như bit string từ most significant bit xuống least significant bit.
+```text
+match toàn edge
+key kết thúc giữa edge
+mismatch giữa edge
+```
 
-Để maximize `x XOR y`, tại mỗi bit của `x`, ta muốn chọn bit đối nghịch của `y` nếu branch đó tồn tại, vì XOR bit khi khác nhau là 1.
+Đây là lý do compressed trie tiết kiệm memory nhưng implementation phức tạp hơn Trie một ký tự mỗi cạnh.
 
-Ví dụ với fixed 31/32/64-bit width, insert numbers vào binary trie rồi query greedy theo bits có thể tìm maximum XOR partner trong `O(W)` với `W` là bit width.
+## 11. Patricia Trie và Bit Prefix
 
-Đây là ví dụ trie khai thác internal structure của numeric key.
+Patricia Trie thường được dùng cho bit strings hoặc IP prefixes. Nó chỉ giữ các bit/position phân nhánh quan trọng thay vì mọi bit trung gian.
 
-## 11. Prefix Count và Metadata Augmentation
+Trong routing:
 
-Node có thể lưu số words đi qua (`passCount`) và số words kết thúc (`endCount`).
+```text
+10.0.0.0/8
+10.10.0.0/16
+10.10.20.0/24
+```
 
-Khi đó query “bao nhiêu words có prefix `pre`?” chỉ cần đi tới node prefix rồi trả `passCount`.
+khi lookup destination, cần chọn route có **prefix dài nhất khớp**.
 
-Nếu duplicate keys được phép, `endCount` tốt hơn boolean `isEnd`.
+Trie/Radix Tree mã hóa requirement này tự nhiên hơn Hash Table exact-match.
 
-Ta có thể augment thêm top suggestions, frequency, timestamp hoặc subtree statistics. Nhưng metadata làm insert/delete đắt hơn và tăng memory; chỉ lưu summary phục vụ query thật sự cần.
+## 12. Longest Prefix Match
 
-## 12. Autocomplete ranking
+Duyệt key từ gốc, đồng thời ghi nhớ terminal node gần nhất đã gặp.
 
-Trie chỉ giải quyết candidate retrieval theo prefix, không tự giải quyết ranking.
+Khi không còn edge phù hợp, terminal gần nhất chính là longest matching prefix.
 
-Một production autocomplete có thể lưu top-K suggestions tại mỗi popular prefix node. Query prefix dài `L` đi `O(L)`, sau đó trả cached top-K nhanh.
+Đây là pattern quan trọng trong routing và rule matching.
 
-Nhưng update popularity trở nên phức tạp vì score change có thể phải propagate qua nhiều prefix nodes. Đây là read/write trade-off: precompute để query nhanh, trả update cost và memory.
+## 13. Binary Trie và Maximum XOR
 
-## 13. Trie và Aho–Corasick
+Một integer có thể xem như chuỗi bit cố định `W` bit.
 
-Nếu có nhiều patterns và cần scan một text để tìm tất cả matches, chạy trie search từ mọi text position vẫn đắt.
+Muốn maximize `x XOR y`, tại bit hiện tại của `x`, ưu tiên branch có bit đối nghịch nếu tồn tại.
 
-Aho–Corasick thêm **failure links** vào trie. Khi mismatch, automaton chuyển tới longest suffix hiện tại cũng là prefix của một pattern, thay vì restart từ root.
+```text
+x bit = 0 -> ưu tiên y bit = 1
+x bit = 1 -> ưu tiên y bit = 0
+```
 
-Kết quả là multi-pattern matching gần tuyến tính theo text length + matches sau preprocessing dictionary.
+Với word width cố định, insert/query là `O(W)`.
 
-Aho–Corasick cho thấy trie có thể được nâng thành automaton bằng cách thêm cross-links giữa prefix states.
+Binary Trie minh họa rằng Trie không chỉ dành cho text; bất kỳ key có cấu trúc tuần tự đều có thể được index theo prefix.
 
-## 14. Trie vs Hash Table
+## 14. Count theo Prefix
 
-Hash table thường tốt hơn cho exact lookup nếu không cần prefix semantics. Nó có ít logical nodes hơn và implementation/library có sẵn rất tối ưu.
+Nếu node lưu:
 
-Trie đáng giá khi query khai thác structure trong key: prefix existence, longest prefix, lexicographic traversal, prefix counts, routing hoặc autocomplete.
+```text
+passCount = số key đi qua node
+endCount  = số key kết thúc tại node
+```
 
-Có thể tóm lại:
+thì:
 
-> Hash table tối ưu cho **identity của toàn key**; trie tối ưu cho **structure bên trong key**.
+```text
+countPrefix(p) = passCount(node(p))
+countExact(k)  = endCount(node(k))
+```
 
-## 15. Trie vs Sorted Array
+Metadata này rất hữu ích cho dictionary frequency nhưng insert/delete phải cập nhật toàn path đúng thứ tự.
 
-Nếu dictionary static, sorted array + binary search cũng xử lý prefix query khá tốt.
+## 15. Autocomplete không chỉ là Trie
 
-Ta binary search lower bound của prefix rồi scan forward trong range matching prefix. Memory thường compact hơn trie và locality tốt.
+Trie giải quyết candidate retrieval theo prefix, nhưng production autocomplete còn cần ranking.
 
-Trie mạnh hơn khi updates nhiều, character-by-character traversal quan trọng hoặc cần prefix metadata. Sorted array có thể đơn giản hơn cho static dictionary.
+Có thể lưu ở mỗi node:
 
-Vì vậy “prefix query” chưa đủ để mặc định chọn trie; mutation pattern và memory vẫn quan trọng.
+```text
+top-K suggestions
+max score trong subtree
+frequency/time-decay metadata
+```
 
-## 16. Trie vs BST/TreeMap
+Khi đó query prefix có thể trả top results rất nhanh.
 
-Ordered map lưu full keys theo comparator. Prefix range có thể được chuyển thành lower/upper bounds trong lexicographic keyspace, nhưng mỗi comparison có thể inspect nhiều characters.
+Trade-off:
 
-Trie chia sẻ prefixes và không compare lại prefix từ đầu mỗi tree comparison. Tuy nhiên tree node count theo keys thay vì total characters, nên memory trade-off khác.
+```text
+read nhanh hơn
+nhưng update ranking phải propagate lên nhiều prefix node
+```
 
-## 17. Unicode: Character không luôn là “một ký tự người dùng nhìn thấy”
+Đây là read/write trade-off điển hình của materialized metadata.
 
-Trong Java, `char` là UTF-16 code unit. Emoji hoặc nhiều Unicode code points cần surrogate pairs. JavaScript string indexing cũng theo UTF-16 code units.
+## 16. Best-First Autocomplete
 
-Nếu trie semantics cần Unicode code points, nên iterate code points thay vì raw `char`/code unit. Nếu cần grapheme clusters như một ký tự hiển thị, vấn đề còn phức tạp hơn.
+Nếu mỗi node có `maxScore` của subtree, ta không cần cache toàn Top-K tại từng prefix. Sau khi tới prefix node, có thể dùng priority queue ưu tiên subtree có upper bound lớn nhất.
 
-Alphabet definition phải được quyết định trước khi nói complexity theo `L`, vì `L` có thể là bytes, code units, code points hoặc grapheme clusters.
+Đây là một bài branch-and-bound nhỏ:
 
-## 18. Case normalization và locale
+```text
+state = trie node
+upper bound = max score dưới node
+```
 
-Autocomplete/search thường cần case-insensitive behavior hoặc accent normalization. Nếu keys được normalize trước insert nhưng query không normalize cùng rule, lookup sai.
+Khi đã tìm đủ K result và bound còn lại không thể thắng, dừng.
 
-Unicode normalization forms như NFC/NFD cũng có thể làm hai strings visually giống nhưng sequence code points khác.
+Trie có thể kết hợp heap để tạo ranking search thay vì chỉ DFS toàn subtree.
 
-Normalization không thuộc trie algorithm cốt lõi, nhưng là correctness condition của text-key system.
+## 17. Aho–Corasick
+
+Nếu có nhiều pattern và cần quét một text một lần, chạy search riêng cho từng pattern hoặc restart Trie từ từng vị trí là tốn kém.
+
+Aho–Corasick thêm **failure link**.
+
+Khi transition thất bại, automaton chuyển tới suffix dài nhất của prefix hiện tại cũng là prefix của một pattern.
+
+Sau preprocessing dictionary, matching chạy gần:
+
+\[
+O(|text| + \text{number of matches})
+\]
+
+với các giả định representation phù hợp.
+
+## 18. Failure Link như tái sử dụng trạng thái
+
+Failure link có cùng tinh thần với KMP prefix function và suffix link:
+
+> Khi context dài không còn hợp lệ, đừng quay về trạng thái rỗng; tái sử dụng suffix dài nhất còn có ý nghĩa.
+
+Đây là motif rất sâu trong string algorithms.
 
 ## 19. Double-Array Trie
 
-Object-node trie có nhiều pointer overhead. **Double-Array Trie** dùng arrays như `base` và `check` để encode transitions compact hơn và locality tốt hơn.
+Double-Array Trie biểu diễn transitions bằng hai mảng, thường gọi `base` và `check`, nhằm giảm pointer/object overhead và tăng locality.
 
-Implementation/construction phức tạp nhưng rất hữu ích cho static/mostly-static dictionaries và morphological/text systems nơi memory efficiency quan trọng.
+Ý tưởng là ánh xạ child position bằng công thức từ `base[parent] + code(symbol)`, còn `check` xác nhận parent thật sự của slot.
 
-Điểm lớn hơn là một abstract trie có nhiều physical encodings khác nhau.
+Ưu điểm:
 
-## 20. Ternary Search Tree
+```text
+compact hơn object-trie
+array locality tốt
+lookup nhanh
+```
 
-Ternary Search Tree lưu mỗi node một character và ba directions: `<`, `=`, `>` so với character hiện tại.
+Nhược điểm là construction/update phức tạp và quản lý slot trống khó hơn.
 
-Nó cân bằng giữa trie branching array lớn và BST-like character comparison. Memory có thể nhỏ hơn dense trie khi alphabet lớn, nhưng lookup characteristics khác.
+## 20. Succinct Trie và LOUDS
 
-Đây là một alternative đáng biết, không phải default replacement.
+Nếu dictionary rất lớn và gần tĩnh, có thể biểu diễn topology bằng bitvector thay vì pointer per node.
 
-## 21. Persistent Trie
+**LOUDS (Level-Order Unary Degree Sequence)** mã hóa bậc node theo level order và dùng rank/select để điều hướng.
 
-Trong một số bài versioned queries, ta có thể tạo **persistent trie** bằng path copying: mỗi update chỉ copy nodes trên path thay đổi, còn phần còn lại share với version cũ.
+Mục tiêu không còn là “code dễ nhất” mà là giảm bits per node tới gần giới hạn thông tin.
 
-Binary persistent trie có thể dùng cho XOR/rank queries theo prefix versions. Complexity và memory thường `O(W)` nodes per update với bit width `W`.
+Đây là ví dụ succinct data structure: vẫn hỗ trợ navigation nhưng với memory gần tối ưu hơn pointer graph.
 
-Persistent data structures cho thấy prefix sharing không chỉ giữa keys mà còn giữa versions.
+## 21. Finite-State Transducer / Minimal Automaton
 
-## 22. Longest Prefix Match
+Nếu dictionary tĩnh có nhiều suffix giống nhau, Trie chỉ chia sẻ prefix; các suffix giống nhau ở các nhánh khác vẫn bị lặp.
 
-Given query string/key, ta đi theo trie và nhớ node sâu nhất có `isEnd`. Khi path không thể tiếp tục, deepest end marker là longest stored prefix matching query.
+Minimal acyclic finite-state automaton hoặc FST có thể gộp các trạng thái tương đương phía sau, chia sẻ cả suffix structure.
 
-Operation này xuất hiện trong routing, dictionary segmentation và configuration inheritance.
+Điều này đặc biệt mạnh trong dictionary/search-engine indexing.
 
-Hash table phải thử nhiều prefix lengths; trie giải tự nhiên trong một traversal.
+Mô hình tư duy:
 
-## 23. Word segmentation connection
+```text
+Trie       -> chia sẻ prefix
+minimal DFA/FST -> chia sẻ các continuation tương đương
+```
 
-Bài Word Break hỏi string có thể chia thành dictionary words không. Trie có thể giảm repeated substring lookup khi DP/backtracking thử các end positions: từ mỗi start, walk trie theo characters cho tới khi branch chết, và mỗi `isEnd` tạo transition DP.
+## 22. Trie vs Hash Table
 
-Trie không tự giải DP, nhưng representation dictionary làm candidate generation hiệu quả hơn.
+Hash Table tốt hơn khi chỉ cần exact lookup và memory overhead Trie không đáng.
 
-## 24. Testing Trie
+Trie tốt khi query quan tâm:
 
-Test exact search phải phân biệt word và prefix: insert `apple`, search `app` phải false nếu `app` chưa insert, nhưng `startsWith("app")` true.
+```text
+prefix
+longest-prefix
+lexicographic traversal
+prefix count
+structure bên trong key
+```
 
-Delete cần test shared prefixes như `car`, `card`, `care`; xóa một key không được phá keys còn lại.
+Không nên chọn Trie chỉ vì key là string.
 
-Duplicate semantics phải rõ nếu structure hỗ trợ counts. Unicode normalization/case behavior cũng cần test theo API contract.
+## 23. Trie vs Sorted Array
 
-Differential testing có thể so set of full keys với HashSet cho exact membership, và brute-force `startsWith` scan cho prefix queries trên datasets nhỏ.
+Dictionary tĩnh có thể dùng sorted array + binary search để tìm prefix range.
 
-## 25. Complexity nhìn đúng cách
+Ưu điểm:
 
-Trie search thường viết `O(L)`, nhưng child lookup constant chỉ là abstraction. Dense array child lookup thật sự `O(1)` với memory lớn; hash map expected `O(1)`; tree map `O(log σ)` với alphabet size `σ`; compressed edges cần compare multiple symbols.
+```text
+memory gọn
+cache-friendly
+simple serialization
+```
 
-Memory thường proportional tổng số distinct prefix nodes, không chỉ number of keys.
+Trie mạnh hơn khi dynamic update, prefix metadata hoặc character-by-character traversal là trung tâm.
 
-Một trie có thể rất nhanh nhưng không compact. Vì vậy complexity discussion phải đi cùng representation.
+Đối với workload static, sorted array đôi khi thực dụng hơn Trie.
 
-## Mental Model
+## 24. Trie vs TreeMap
 
-> Trie biến **key thành path**. Khi prefix hoặc bit-prefix của key có semantic thật, trie lưu trực tiếp semantic đó trong structure thay vì coi key là một atom như hash table.
+TreeMap giữ full key order. Prefix query có thể chuyển thành range trong lexicographic order.
 
-Sức mạnh của trie đến từ prefix sharing; nhược điểm cũng đến từ việc representation có thể tạo rất nhiều nodes. Radix compression, compact encodings và metadata augmentation là các cách điều chỉnh trade-off cho workload thật.
+Nhưng mỗi comparator có thể phải so lại nhiều prefix character ở nhiều tree node.
 
-Xem thêm: [String Algorithms](../05_specialized/00_string_algorithms.md), [Suffix Structures](../05_specialized/04_suffix_arrays_suffix_trees_and_lcp.md), [Hash Tables](../01_linear_structures/04_hash_tables.md), [DSA trong Systems](../90_connections/01_dsa_in_databases_networks_and_systems.md).
+Trie chia sẻ phần prefix đã duyệt một lần, nhưng trả giá bằng nhiều node hơn.
+
+Không có lựa chọn tốt nhất nếu chưa biết key length, update rate và query mix.
+
+## 25. Unicode
+
+“Character” không phải đơn vị duy nhất.
+
+Có thể có:
+
+```text
+byte
+UTF-16 code unit
+Unicode code point
+grapheme cluster
+normalized form
+```
+
+`é` có thể được biểu diễn trực tiếp hoặc bằng `e + combining mark`. Nếu không normalize, hai string người dùng nhìn giống nhau có thể đi theo hai path khác nhau.
+
+String index production phải xác định normalization policy trước khi xây Trie.
+
+## 26. Case Folding và Locale
+
+Autocomplete/search không phân biệt hoa thường có thể cần case folding. Nhưng mapping chữ thường không luôn là phép một-ký-tự thành một-ký-tự ở mọi ngôn ngữ.
+
+Nếu normalization/case folding là một phần của identity, phải thực hiện nhất quán cả lúc insert và query.
+
+Hash/equality và Trie path đều phụ thuộc cùng canonicalization contract.
+
+## 27. Memory Allocation
+
+Trong C, cấp phát từng node bằng `malloc` có thể đắt. Arena allocator thường rất phù hợp vì nhiều Trie node có cùng vòng đời.
+
+Trong Java/JavaScript, nhiều object nhỏ tạo pressure lên GC.
+
+Mảng node + integer child index có thể giảm object overhead, đặc biệt với dictionary lớn.
+
+## 28. Cache Locality
+
+Pointer-heavy Trie có lookup `O(L)` nhưng mỗi bước có thể gây cache miss.
+
+Radix compression giảm số node truy cập. Double-array hoặc compact arrays tăng locality.
+
+Big-O `O(L)` không nói bao nhiêu cache line phải chạm.
+
+## 29. Persistent Trie
+
+Nếu cần nhiều version, update một key chỉ thay các node trên path của key. Có thể sao chép path rồi chia sẻ toàn bộ phần còn lại.
+
+Persistent Trie hữu ích cho:
+
+```text
+versioned dictionary
+XOR query theo prefix phiên bản
+functional maps
+snapshot
+```
+
+Chi phí update thường tỷ lệ độ dài key hoặc số bit.
+
+## 30. Concurrent Trie
+
+Fine-grained locking hoặc lock-free Trie phức tạp vì insert/delete thay đổi child pointers và lifetime node.
+
+Radix Tree còn có split/merge edge, làm atomic update khó hơn.
+
+Trong read-mostly workload, immutable snapshot + copy-on-write có thể đơn giản hơn mutable concurrent tree.
+
+## 31. Trie trong Database/Search System
+
+Trie/Radix Tree có thể dùng cho:
+
+```text
+term dictionary
+autocomplete
+routing
+prefix-compressed index key
+in-memory ordered key index
+```
+
+B+Tree page cũng có thể dùng prefix compression giữa các key gần nhau để giảm storage. Ý tưởng chia sẻ prefix xuất hiện ngoài Trie thuần túy.
+
+## 32. Kiểm thử
+
+Các case quan trọng:
+
+```text
+empty string nếu hợp lệ
+key là prefix của key khác
+nhiều duplicate key
+xóa key có shared prefix
+alphabet ngoài dự kiến
+Unicode normalized/non-normalized
+very long key
+single-child chains
+high branching node
+```
+
+Với Trie tự cài, có thể differential-test exact lookup với Hash Set và prefix query với brute-force filter trên tập string nhỏ.
+
+## 33. Validator
+
+Nếu có `passCount/endCount`, có thể kiểm tra:
+
+```text
+passCount >= endCount
+passCount phù hợp tổng subtree theo convention
+không node rác có passCount 0 nếu policy yêu cầu thu hồi
+mọi child symbol unique
+```
+
+Radix Tree còn cần kiểm tra không có hai outgoing edge bắt đầu bằng cùng symbol và không có unary node nếu representation yêu cầu compression tối đa.
+
+## 34. Những hiểu lầm phổ biến
+
+“Trie lookup O(L) nên luôn nhanh hơn HashMap” — sai; constant factor và memory locality rất khác.
+
+“Trie chỉ dùng cho từ tiếng Anh” — sai; key có thể là byte, bit, token hoặc code point.
+
+“Prefix query luôn cần Trie” — sai; sorted array/static dictionary có thể đơn giản hơn.
+
+“Unicode string có thể index theo `char` mà không cần policy” — sai với nhiều miền người dùng thực tế.
+
+“Compressed Trie chỉ là Trie ít node hơn” — đúng ở mức ý tưởng nhưng update/split invariants phức tạp hơn nhiều.
+
+## Mô hình tư duy
+
+> Trie biến **prefix từ một quan hệ ngầm trong khóa thành một trạng thái tường minh trong cấu trúc**. Nhờ đó query prefix không phải so lại toàn bộ keyspace.
+
+Khi cân nhắc Trie, hãy hỏi: **query có thực sự cần prefix không, alphabet/normalization là gì, branching factor thế nào, dictionary static hay dynamic, memory overhead có chấp nhận được không, và có cần compression/ranking/persistence/concurrency không?**
+
+Xem thêm: [String Algorithms](../05_specialized/00_string_algorithms.md), [Suffix Structures](../05_specialized/04_suffix_arrays_suffix_trees_and_lcp.md), [Hash Tables](../01_linear_structures/04_hash_tables.md), [B/B+Tree](./05_b_trees_and_external_memory.md).

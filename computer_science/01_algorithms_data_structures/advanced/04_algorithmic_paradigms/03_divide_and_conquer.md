@@ -1,15 +1,15 @@
-# Divide and Conquer
-**Chia để trị / Divide and Conquer / 분할 정복**
+# chia để trị
+**Chia để trị / chia để trị / 분할 정복**
 
-Divide and Conquer là một chiến lược thiết kế thuật toán trong đó một problem lớn được tách thành các subproblems nhỏ hơn có cấu trúc tương tự, giải các phần đó, rồi ghép kết quả lại. Pattern kinh điển:
+chia để trị là một chiến lược thiết kế thuật toán trong đó một problem lớn được tách thành các subproblems nhỏ hơn có cấu trúc tương tự, giải các phần đó, rồi ghép kết quả lại. mẫu kinh điển:
 
 ```text
 Divide → Conquer → Combine
 ```
 
-Điểm quan trọng không phải “dùng recursion”. Một function recursive chưa chắc là divide-and-conquer, và một algorithm divide-and-conquer có thể được implement iterative. Bản chất nằm ở **decomposition**: problem được tách thành các phần nhỏ hơn sao cho mỗi phần có thể giải tương đối độc lập và phần combine không phá lợi ích của việc chia nhỏ.
+Điểm quan trọng không phải “dùng recursion”. Một hàm recursive chưa chắc là divide-and-conquer, và một thuật toán divide-and-conquer có thể được implement iterative. Bản chất nằm ở **decomposition**: problem được tách thành các phần nhỏ hơn sao cho mỗi phần có thể giải tương đối độc lập và phần kết hợp không phá lợi ích của việc chia nhỏ.
 
-## 1. Ba câu hỏi trước khi dùng Divide and Conquer
+## 1. Ba câu hỏi trước khi dùng chia để trị
 
 Khi nhìn một problem, hãy hỏi:
 
@@ -19,23 +19,23 @@ Các phần có overlap/recompute nhiều không?
 Combine result có rẻ hơn giải trực tiếp toàn problem không?
 ```
 
-Nếu subproblems overlap mạnh, Dynamic Programming thường tự nhiên hơn. Nếu combine step đắt gần bằng brute force, việc chia không giúp nhiều. Nếu decomposition rất mất cân bằng, recursion depth có thể xấu.
+Nếu subproblems overlap mạnh, quy hoạch động (dynamic programming) thường tự nhiên hơn. Nếu kết hợp step đắt gần bằng brute force, việc chia không giúp nhiều. Nếu decomposition rất mất cân bằng, recursion độ sâu có thể xấu.
 
-## 2. Recurrence là ngôn ngữ tự nhiên của decomposition
+## 2. công thức truy hồi là ngôn ngữ tự nhiên của decomposition
 
-Nếu mỗi problem size `n` tạo `a` subproblems size khoảng `n/b`, và phần work ngoài recursion là `f(n)`:
+Nếu mỗi bài toán kích thước `n` tạo `a` bài toán con kích thước khoảng `n/b`, và phần công việc ngoài đệ quy là `f(n)`:
 
 \[
 T(n)=aT(n/b)+f(n)
 \]
 
-Merge Sort:
+sắp xếp trộn:
 
 \[
 T(n)=2T(n/2)+\Theta(n)
 \]
 
-Binary Search:
+tìm kiếm nhị phân:
 
 \[
 T(n)=T(n/2)+\Theta(1)
@@ -47,11 +47,11 @@ Karatsuba:
 T(n)=3T(n/2)+\Theta(n)
 \]
 
-Recurrence ghi lại chính **shape của computation tree**.
+công thức truy hồi ghi lại chính **shape của computation cây**.
 
-## 3. Recursion Tree: xem work nằm ở đâu
+## 3. cây đệ quy: xem work nằm ở đâu
 
-Với Merge Sort, mỗi level có tổng input size `n`, nên combine work mỗi level là `Θ(n)`. Có `Θ(log n)` levels:
+Với sắp xếp trộn, mỗi tầng có tổng kích thước đầu vào `n`, nên kết hợp work mỗi tầng là `Θ(n)`. Có `Θ(log n)` các tầng:
 
 \[
 T(n)=\Theta(n\log n)
@@ -63,13 +63,13 @@ Với:
 T(n)=2T(n/2)+\Theta(1)
 \]
 
-internal work mỗi node constant, nhưng số leaves là `Θ(n)`, nên total `Θ(n)`.
+nội bộ work mỗi nút constant, nhưng số các nút lá là `Θ(n)`, nên total `Θ(n)`.
 
-Đừng nhìn thấy `2T(n/2)` rồi tự động kết luận `n log n`; hãy hỏi **work phân bố theo level thế nào**.
+Đừng nhìn thấy `2T(n/2)` rồi tự động kết luận `n log n`; hãy hỏi **work phân bố theo tầng thế nào**.
 
-## 4. Master Theorem: shortcut có điều kiện
+## 4. Định lý Master: cách rút gọn có điều kiện
 
-Với recurrence chuẩn:
+Với công thức truy hồi chuẩn:
 
 \[
 T(n)=aT(n/b)+f(n)
@@ -81,19 +81,19 @@ so sánh `f(n)` với:
 n^{\log_b a}
 \]
 
-Term này đại diện quy mô work của recursion tree nếu internal combine nhỏ.
+Term này đại diện quy mô work của cây đệ quy nếu nội bộ kết hợp nhỏ.
 
-Master theorem rất tiện nhưng không áp dụng cho mọi recurrence. Ví dụ:
+Định lý Master rất tiện nhưng không áp dụng cho mọi công thức truy hồi. Ví dụ:
 
 \[
 T(n)=T(n/3)+T(2n/3)+\Theta(n)
 \]
 
-không đúng dạng equal-size subproblems. Recursion tree/Akra–Bazzi reasoning phù hợp hơn.
+không đúng dạng equal-size subproblems. cây đệ quy/Akra–Bazzi reasoning phù hợp hơn.
 
-## 5. Merge Sort: combine step dựa trên precondition mạnh
+## 5. sắp xếp trộn: kết hợp step dựa trên điều kiện trước mạnh
 
-Hai halves đã sorted, nên merge linear bằng two pointers:
+Hai halves đã sorted, nên merge linear bằng hai con trỏ (two pointers):
 
 ```text
 left smallest vs right smallest
@@ -101,27 +101,27 @@ chọn nhỏ hơn
 advance pointer tương ứng
 ```
 
-Invariant:
+bất biến (invariant):
 
-> Prefix output luôn là các phần tử nhỏ nhất đã được quyết định đúng thứ tự từ hai halves.
+> Prefix đầu ra luôn là các phần tử nhỏ nhất đã được quyết định đúng thứ tự từ hai halves.
 
-Nếu halves chưa sorted, combine `O(n)` này không tồn tại. Divide-and-conquer hiệu quả vì recursive work đã tạo ra **structure thuận lợi cho combine**.
+Nếu halves chưa sorted, kết hợp `O(n)` này không tồn tại. Divide-and-conquer hiệu quả vì recursive work đã tạo ra **structure thuận lợi cho kết hợp**.
 
-## 6. Binary Search: Divide and Conquer một nhánh
+## 6. tìm kiếm nhị phân: chia để trị một nhánh
 
-Binary Search chia interval nhưng chỉ tiếp tục một half.
+tìm kiếm nhị phân chia interval nhưng chỉ tiếp tục một half.
 
-Precondition là monotonic/sorted information đủ mạnh để chứng minh half còn lại không thể chứa answer.
+điều kiện trước là monotonic/sorted thông tin đủ mạnh để chứng minh half còn lại không thể chứa answer.
 
-Mỗi bước giảm search space theo tỷ lệ:
+Mỗi bước giảm không gian tìm kiếm theo tỷ lệ:
 
 \[
 T(n)=T(n/2)+O(1)=O(\log n)
 \]
 
-Không phải cứ lấy midpoint là binary search; phần cốt lõi là proof loại được nửa candidates.
+Không phải cứ lấy midpoint là tìm kiếm nhị phân; phần cốt lõi là chứng minh loại được nửa các ứng viên.
 
-## 7. Quicksort: chất lượng divide quyết định runtime
+## 7. Quicksort: chất lượng divide quyết định môi trường chạy (runtime)
 
 Partition quanh pivot tạo hai subarrays. Nếu gần cân bằng:
 
@@ -135,39 +135,39 @@ Nếu liên tục lệch `0` và `n-1`:
 T(n)=T(n-1)+O(n)=O(n^2)
 \]
 
-Đây là ví dụ rõ rằng cùng framework Divide and Conquer nhưng **partition quality** thay đổi toàn bộ recursion tree.
+Đây là ví dụ rõ rằng cùng khung làm việc chia để trị nhưng **chất lượng phân hoạch** thay đổi toàn bộ cây đệ quy.
 
-Randomized pivot giúp expected behavior tốt hơn, nhưng worst-case vẫn khác expected-case.
+ngẫu nhiên hóa pivot giúp kỳ vọng hành vi tốt hơn, nhưng trường hợp xấu nhất vẫn khác kỳ vọng-case.
 
 ## 8. Quickselect: objective quyết định số subproblems cần giải
 
 Selection chỉ cần rank `k`, nên sau partition chỉ recurse vào side chứa `k`.
 
-Expected recurrence gần:
+kỳ vọng công thức truy hồi gần:
 
 \[
 T(n)=T(n/2)+O(n)=O(n)
 \]
 
-Sorting toàn bộ sẽ tạo nhiều order information hơn output yêu cầu.
+Sắp xếp toàn bộ sẽ tạo nhiều thông tin thứ tự hơn mức đầu ra yêu cầu.
 
 Lesson:
 
 > Decomposition không có nghĩa phải solve tất cả branches. Solve đúng những subproblems mà objective thật sự cần.
 
-## 9. Closest Pair: combine được cứu bởi geometry
+## 9. Closest Pair: kết hợp được cứu bởi geometry
 
-Naive all-pairs `O(n²)`. Divide points theo x, solve hai halves, lấy best distance `d`.
+Cách đơn giản xét mọi cặp có độ phức tạp `O(n²)`. Cách chia để trị chia các điểm theo trục x, giải hai nửa rồi lấy khoảng cách tốt nhất `d`.
 
-Cross-boundary candidates chỉ cần xét trong strip width `2d`. Nếu points strip sorted theo y, packing argument cho thấy mỗi point chỉ cần so với số constant candidates tiếp theo.
+Các ứng viên đi qua đường chia chỉ cần xét trong một dải rộng `2d`. Nếu các điểm trong dải được sắp theo y, lập luận đóng gói cho thấy mỗi điểm chỉ cần so với một số hằng ứng viên tiếp theo.
 
-Combine giữ `O(n)` mỗi level, total `O(n log n)`.
+kết hợp giữ `O(n)` mỗi tầng, total `O(n log n)`.
 
-Đây là pattern quan trọng: **domain-specific theorem làm combine rẻ**.
+Đây là mẫu quan trọng: **domain-specific theorem làm kết hợp rẻ**.
 
-## 10. Karatsuba: giảm branching factor bằng đại số
+## 10. Karatsuba: giảm hệ số phân nhánh bằng đại số
 
-Naive multiplication hai số split high/low cần 4 multiplications recursive. Karatsuba biến đổi để chỉ cần 3:
+Cách đơn giản multiplication hai số split high/low cần 4 multiplications recursive. Karatsuba biến đổi để chỉ cần 3:
 
 \[
 T(n)=3T(n/2)+O(n)
@@ -179,7 +179,7 @@ nên:
 T(n)=O(n^{\log_2 3})\approx O(n^{1.585})
 \]
 
-Optimization ở đây không giảm input size nhiều hơn; nó giảm số branches `a`.
+Optimization ở đây không giảm kích thước đầu vào nhiều hơn; nó giảm số branches `a`.
 
 ## 11. Fast Exponentiation
 
@@ -197,11 +197,11 @@ Mỗi bước halve exponent:
 O(\log n)
 \]
 
-Pattern này xuất hiện trong modular exponentiation, matrix exponentiation và binary lifting.
+mẫu này xuất hiện trong modular exponentiation, matrix exponentiation và nhảy nhị phân.
 
 ## 12. Matrix Multiplication và block decomposition
 
-Naive matrix multiplication `O(n³)`. Divide matrix thành quadrants giúp cache locality và mở đường cho algorithms giảm số recursive multiplications như Strassen.
+Cách đơn giản matrix multiplication `O(n³)`. Divide matrix thành quadrants giúp tính cục bộ bộ nhớ đệm và mở đường cho các thuật toán giảm số recursive multiplications như Strassen.
 
 Strassen giảm 8 recursive products xuống 7:
 
@@ -211,11 +211,11 @@ T(n)=7T(n/2)+O(n^2)
 
 nên exponent nhỏ hơn 3.
 
-Nhưng constants, numeric stability và memory behavior quyết định khi nào nó thực dụng.
+Nhưng constants, numeric tính ổn định và bộ nhớ hành vi quyết định khi nào nó thực dụng.
 
-## 13. Divide and Conquer vs Dynamic Programming
+## 13. chia để trị vs quy hoạch động
 
-Fibonacci recursion chia thành `F(n-1)` và `F(n-2)` nhưng subproblem overlap rất mạnh. Pure divide-and-conquer recompute cùng states nhiều lần.
+Fibonacci recursion chia thành `F(n-1)` và `F(n-2)` nhưng sự chồng lặp bài toán con rất mạnh. Pure divide-and-conquer recompute cùng các trạng thái nhiều lần.
 
 DP thêm memoization/tabulation để reuse:
 
@@ -226,27 +226,27 @@ Dynamic Programming: many branches converge to same state
 
 Question hữu ích:
 
-> Hai histories khác nhau có dẫn tới cùng exact future state không?
+> Hai histories khác nhau có dẫn tới cùng chính xác tương lai trạng thái (state) không?
 
 Nếu có nhiều convergence, nghĩ tới DP.
 
-## 14. Divide and Conquer vs Backtracking
+## 14. chia để trị vs quay lui (backtracking)
 
-Backtracking cũng tạo recursion tree, nhưng mục tiêu khác. Divide-and-conquer chia problem thành subproblems cần giải/ghép. Backtracking enumerate choices trong search space và prune invalid/unpromising branches.
+Quay lui cũng tạo cây đệ quy nhưng mục tiêu khác. Chia để trị chia bài toán thành các bài toán con cần giải rồi ghép kết quả; quay lui liệt kê các lựa chọn trong không gian tìm kiếm và cắt tỉa những nhánh không hợp lệ hoặc không hứa hẹn.
 
-Quicksort recursion không phải “thử choices”; N-Queens không phải “combine independent halves”.
+Quicksort recursion không phải “thử choices”; N-Queens không phải “kết hợp independent halves”.
 
 Nhìn cùng hình cây recursion không có nghĩa cùng paradigm.
 
-## 15. Unbalanced Recurrences
+## 15. Unbalanced các công thức truy hồi
 
-Một recurrence:
+Một công thức truy hồi:
 
 \[
 T(n)=T(n/10)+T(9n/10)+O(n)
 \]
 
-vẫn có thể `O(n log n)` dù split không 50/50, vì depth vẫn logarithmic theo constant ratio và total level work linear theo reasoning phù hợp.
+vẫn có thể `O(n log n)` dù split không 50/50, vì độ sâu vẫn logarithmic theo constant ratio và total tầng work linear theo reasoning phù hợp.
 
 Nhưng:
 
@@ -254,15 +254,15 @@ Nhưng:
 T(n)=T(1)+T(n-1)+O(n)
 \]
 
-có depth linear và total quadratic.
+có độ sâu linear và total quadratic.
 
 Balance không cần hoàn hảo; quan trọng là **mỗi branch giảm theo tỷ lệ đủ mạnh hay không**.
 
-## 16. Base-case threshold và hybrid algorithms
+## 16. Base-case threshold và hybrid các thuật toán
 
-Recursive calls có overhead. Với subarray rất nhỏ, insertion sort có thể nhanh hơn quick/merge sort.
+các lời gọi đệ quy có overhead. Với subarray rất nhỏ, insertion sort có thể nhanh hơn quick/sắp xếp trộn.
 
-Production sort thường:
+Trong hệ thống thực tế, sort thường:
 
 ```text
 large partitions -> divide-and-conquer
@@ -270,13 +270,13 @@ small partitions -> insertion-like strategy
 pathological depth -> fallback heapsort/introsort
 ```
 
-Hybrid algorithm giữ asymptotic guarantee nhưng tối ưu constants theo regime.
+Hybrid thuật toán giữ asymptotic bảo đảm nhưng tối ưu constants theo regime.
 
-## 17. Tail-recursion elimination cho Quicksort stack depth
+## 17. Tail-recursion elimination cho Quicksort stack độ sâu
 
-Nếu always recurse vào smaller partition trước và xử lý larger partition bằng loop, call stack depth có thể giữ `O(log n)` ngay cả khi partitions không đẹp theo một phía.
+Nếu always recurse vào phân vùng nhỏ hơn trước và xử lý phân vùng lớn hơn bằng loop, ngăn xếp lời gọi độ sâu có thể giữ `O(log n)` ngay cả khi partitions không đẹp theo một phía.
 
-Pattern:
+mẫu:
 
 ```text
 partition
@@ -284,13 +284,13 @@ recurse smaller side
 loop on larger side
 ```
 
-Ta đang dùng explicit control-flow transformation để giảm stack usage mà không đổi logical partitioning.
+Ta đang dùng explicit control-flow phép biến đổi để giảm stack usage mà không đổi logic partitioning.
 
-## 18. Parallel Divide and Conquer
+## 18. Parallel chia để trị
 
 Nếu subproblems độc lập, có thể fork tasks song song.
 
-Merge Sort:
+sắp xếp trộn:
 
 ```text
 sort left  || sort right
@@ -311,9 +311,9 @@ Amdahl's Law nhắc rằng phần serial còn lại giới hạn speedup tổng 
 
 ## 19. Grain Size trong parallel recursion
 
-Nếu spawn task tới từng subproblem rất nhỏ, scheduler overhead có thể lớn hơn actual work.
+Nếu spawn task tới từng subproblem rất nhỏ, bộ lập lịch overhead có thể lớn hơn actual work.
 
-Production fork-join thường có threshold:
+Trong hệ thống thực tế, fork-join thường có threshold:
 
 ```text
 if size <= threshold:
@@ -326,10 +326,10 @@ Threshold là engineering parameter cần benchmark.
 
 ## 20. Work và Span
 
-Trong parallel algorithm analysis:
+Trong parallel thuật toán analysis:
 
-- **Work** = tổng operations nếu chạy sequential;
-- **Span / critical path** = longest dependency chain.
+- **Work** = tổng các thao tác nếu chạy sequential;
+- **Span / critical đường đi** = longest dependency chain.
 
 Potential parallelism xấp xỉ:
 
@@ -337,46 +337,46 @@ Potential parallelism xấp xỉ:
 Work/Span
 \]
 
-Divide-and-conquer tự nhiên cho model này vì recursion tree thể hiện dependency structure rõ ràng.
+Divide-and-conquer tự nhiên cho mô hình này vì cây đệ quy thể hiện dependency structure rõ ràng.
 
-## 21. Cache-oblivious algorithms
+## 21. Cache-oblivious các thuật toán
 
-Recursive decomposition thường xử lý smaller contiguous regions. Khi region đủ nhỏ để fit cache, locality tự cải thiện dù algorithm không biết cache size cụ thể.
+Recursive decomposition thường xử lý smaller contiguous regions. Khi region đủ nhỏ để fit bộ nhớ đệm, tính cục bộ (locality) tự cải thiện dù thuật toán không biết bộ nhớ đệm size cụ thể.
 
-Cache-oblivious matrix algorithms, recursive transpose/layout và divide-based searching tận dụng property này.
+Cache-oblivious matrix các thuật toán, recursive transpose/bố trí và divide-based searching tận dụng tính chất này.
 
-Đây là bridge giữa asymptotic decomposition và memory hierarchy.
+Đây là bridge giữa asymptotic decomposition và phân cấp bộ nhớ.
 
-## 22. In-place Divide and Conquer vs extra buffer
+## 22. In-place chia để trị vs extra bộ đệm
 
-Merge Sort array thường cần buffer `O(n)`. Quicksort có thể partition in-place với auxiliary memory chủ yếu recursion stack.
+sắp xếp trộn mảng thường cần bộ đệm `O(n)`. Quicksort có thể partition in-place với bộ nhớ phụ trợ chủ yếu ngăn xếp đệ quy.
 
-Nhưng in-place không luôn nhanh hơn: buffer copy có thể sequential/cache-friendly hơn complex swapping.
+Nhưng in-place không luôn nhanh hơn: bộ đệm copy có thể sequential/thân thiện với bộ nhớ đệm hơn phức tạp swapping.
 
-Space complexity và memory bandwidth phải được xét cùng nhau.
+độ phức tạp bộ nhớ và bộ nhớ bandwidth phải được xét cùng nhau.
 
-## 23. Stable Partition khó hơn unstable partition
+## 23. ổn định Partition khó hơn unstable partition
 
-Quicksort-style in-place partition thường không stable. Nếu output contract yêu cầu stability, combine/partition strategy phức tạp hơn hoặc cần extra memory.
+Quicksort-style in-place partition thường không ổn định. Nếu hợp đồng đầu ra yêu cầu tính ổn định, kết hợp/partition strategy phức tạp hơn hoặc cần extra bộ nhớ.
 
-Một requirement như “giữ order của equal keys” có thể thay đổi implementation landscape dù asymptotic time tương tự.
+Một yêu cầu như “giữ order của equal các khóa” có thể thay đổi cách triển khai landscape dù asymptotic time tương tự.
 
-## 24. CDQ Divide and Conquer
+## 24. CDQ chia để trị
 
-Trong offline problems, recursion có thể chia theo một dimension/time order, còn Fenwick/segment structure xử lý dimension khác.
+Trong các bài toán ngoại tuyến, đệ quy có thể chia theo một chiều hoặc theo thứ tự thời gian, còn Fenwick Tree hoặc Segment Tree xử lý một chiều khác.
 
-CDQ thường xuất hiện trong dominance counting hoặc offline queries. Mental model:
+CDQ thường xuất hiện trong dominance counting hoặc ngoại tuyến các truy vấn. Mô hình tư duy:
 
 ```text
 recursion cố định order ở dimension A
 combine đếm cross-half contributions bằng data structure trên dimension B
 ```
 
-Divide-and-conquer ở đây không còn là “split array rồi merge sort” đơn giản, mà là framework để xử lý cross interactions có cấu trúc.
+Divide-and-conquer ở đây không còn là “split mảng rồi sắp xếp trộn” đơn giản, mà là khung làm việc để xử lý cross interactions có cấu trúc.
 
 ## 25. Divide-and-Conquer DP Optimization
 
-Recurrence dạng:
+công thức truy hồi dạng:
 
 \[
 dp[k][i]=\min_{j<i}(dp[k-1][j]+C(j,i))
@@ -390,59 +390,59 @@ Nếu optimal split indices có monotonicity:
 opt[i]\le opt[i+1]
 \]
 
-ta có thể compute midpoint `i`, tìm best `j` trong narrowed interval, rồi recurse trái/phải với candidate bounds tương ứng.
+ta có thể compute midpoint `i`, tìm best `j` trong narrowed interval, rồi recurse trái/phải với ứng viên bounds tương ứng.
 
-Kỹ thuật này dùng divide-and-conquer để giảm **search range của transition**, không phải để split original problem thành independent halves.
+Kỹ thuật này dùng chia để trị để giảm **miền tìm kiếm của bước chuyển**, không phải để tách bài toán gốc thành hai nửa độc lập.
 
-## 26. Parallel prefix và scan connection
+## 26. Parallel prefix và quét connection
 
-Một số prefix operations có thể được xây bằng upsweep/downsweep tree, nhìn như divide-and-conquer reduction rồi distribute results.
+Một số prefix các thao tác có thể được xây bằng upsweep/downsweep cây, nhìn như divide-and-conquer reduction rồi distribute các kết quả.
 
-Associativity của operation cho phép combine partial aggregates. Đây là connection giữa algebraic property và parallel decomposition.
+Tính kết hợp của phép toán cho phép ghép các kết quả tổng hợp từng phần. Đây là mối liên hệ giữa tính chất đại số và khả năng phân rã để xử lý song song.
 
-## 27. Tree contraction và recursive separators
+## 27. cây contraction và recursive separators
 
-Graph/tree algorithms nâng cao đôi khi dùng separators: loại một small separator chia problem thành regions nhỏ hơn, solve regions rồi combine.
+đồ thị/cây các thuật toán nâng cao đôi khi dùng separators: loại một small separator chia problem thành regions nhỏ hơn, solve regions rồi kết hợp.
 
-Centroid decomposition trên tree là ví dụ: chọn centroid chia tree thành components không lớn hơn n/2, recurse từng component. Depth `O(log n)` nhờ size giảm theo tỷ lệ.
+Centroid decomposition trên cây là ví dụ: chọn centroid chia cây thành các thành phần không lớn hơn n/2, recurse từng thành phần. độ sâu `O(log n)` nhờ size giảm theo tỷ lệ.
 
-Đây là Divide and Conquer trên topology thay vì array interval.
+Đây là chia để trị trên topology thay vì mảng interval.
 
 ## 28. Geometry và spatial partitioning
 
-KD-tree construction, quadtree/octree và BSP cũng mang tinh thần divide-and-conquer: chia không gian thành regions, recurse theo region.
+Việc xây dựng KD-tree, quadtree/octree và BSP cũng mang tinh thần chia để trị: chia không gian thành các vùng rồi đệ quy theo từng vùng.
 
-Hiệu quả phụ thuộc partition balance và query geometry. Một “midpoint” tốt trong coordinate space không nhất thiết tạo equal number of points.
+Hiệu quả phụ thuộc vào mức cân bằng của phép phân hoạch và hình học của truy vấn. Một “điểm giữa” tốt trong không gian tọa độ không nhất thiết chia các điểm thành hai nhóm có số lượng bằng nhau.
 
-## 29. Failure mode: combine quá đắt
+## 29. dạng lỗi: kết hợp quá đắt
 
-Nếu có 2 halves nhưng combine `O(n²)` mỗi level:
+Nếu có 2 halves nhưng kết hợp `O(n²)` mỗi tầng:
 
 \[
 T(n)=2T(n/2)+O(n^2)=O(n^2)
 \]
 
-Divide không tự cứu complexity. Đôi khi combine term dominate hoàn toàn.
+Divide không tự cứu complexity. Đôi khi kết hợp term dominate hoàn toàn.
 
-Khi thiết kế, hãy tính combine ngay từ đầu thay vì chỉ vui vì “đã chia problem làm đôi”.
+Khi thiết kế, hãy tính kết hợp ngay từ đầu thay vì chỉ vui vì “đã chia problem làm đôi”.
 
-## 30. Failure mode: hidden overlap
+## 30. dạng lỗi: hidden overlap
 
-Hai subproblems nhìn khác input index nhưng thực chất tính lại cùng state nội bộ. Nếu overlap lớn, recursion tree phình exponential.
+Hai subproblems nhìn khác đầu vào index nhưng thực chất tính lại cùng trạng thái nội bộ. Nếu overlap lớn, cây đệ quy phình exponential.
 
-Memoization có thể biến tree thành DAG computation.
+Memoization có thể biến cây thành DAG computation.
 
 Đây là lý do phân biệt **subproblem identity** chứ không chỉ argument syntax.
 
-## 31. Failure mode: bad partition adversarially
+## 31. dạng lỗi: bad partition adversarially
 
-Quicksort pivot đầu tiên trên already-sorted array có thể tạo worst-case nếu không có randomization/hybrid fallback.
+Quicksort pivot đầu tiên trên already-mảng đã sắp xếp có thể tạo trường hợp xấu nhất nếu không có randomization/hybrid fallback.
 
-Production algorithm phải xét adversarial input nếu API public. Randomization, median sampling hoặc introspective fallback giúp kiểm soát tail.
+Trong hệ thống thực tế, thuật toán phải xét đối kháng đầu vào nếu API public. Randomization, median sampling hoặc introspective fallback giúp kiểm soát tail.
 
-## 32. Testing Divide and Conquer
+## 32. kiểm thử chia để trị
 
-Các test nên nhắm vào boundaries nơi recursion chia:
+Các test nên nhắm vào các ranh giới nơi recursion chia:
 
 ```text
 n = 0,1,2
@@ -454,23 +454,23 @@ extreme imbalance
 large duplicate groups
 ```
 
-Differential testing với brute force/reference algorithm trên small input rất hiệu quả cho closest pair, selection hoặc recursive transforms.
+Kiểm thử vi sai (kiểm thử vi sai) với thuật toán vét cạn hoặc thuật toán tham chiếu trên đầu vào nhỏ rất hiệu quả cho closest pair, selection hoặc recursive transforms.
 
-## 33. Correctness proof pattern
+## 33. tính đúng đắn chứng minh mẫu
 
-Một proof điển hình dùng strong induction theo input size:
+Một chứng minh điển hình dùng quy nạp mạnh theo kích thước đầu vào:
 
-1. base case đúng;
-2. assume algorithm đúng cho mọi size nhỏ hơn `n`;
-3. prove divide tạo valid subproblems nhỏ hơn;
-4. recursive results đúng theo induction hypothesis;
-5. prove combine biến correct subresults thành correct whole result.
+1. trường hợp cơ sở đúng;
+2. assume thuật toán đúng cho mọi size nhỏ hơn `n`;
+3. prove divide tạo hợp lệ subproblems nhỏ hơn;
+4. recursive các kết quả đúng theo quy nạp hypothesis;
+5. prove kết hợp biến correct subresults thành correct whole kết quả.
 
-Phần khó nhất thường là step 5 — combine invariant/theorem.
+Phần khó nhất thường là step 5 — kết hợp bất biến/theorem.
 
-## 34. Production checklist
+## 34. Trong hệ thống thực tế, checklist
 
-Khi dùng Divide and Conquer, hãy hỏi:
+Khi dùng chia để trị, hãy hỏi:
 
 ```text
 split có balanced đủ không?
@@ -484,10 +484,10 @@ cache locality tốt hay xấu?
 pathological input có fallback không?
 ```
 
-## Mental Model
+## Mô hình tư duy
 
-> Divide and Conquer biến một global problem thành một **recursion tree of smaller obligations**. Performance được quyết định bởi ba thứ: branching factor, tốc độ giảm size và combine cost.
+> chia để trị biến một toàn cục problem thành một **cây đệ quy of smaller obligations**. hiệu năng được quyết định bởi ba thứ: hệ số phân nhánh, tốc độ giảm size và kết hợp chi phí.
 
-Nếu subproblems độc lập, decomposition mở đường cho recursion, parallelism và cache locality. Nếu overlap mạnh, nghĩ DP. Nếu combine hoặc partition xấu, framework không tự mang lại speedup.
+Nếu subproblems độc lập, decomposition mở đường cho recursion, parallelism và tính cục bộ bộ nhớ đệm. Nếu overlap mạnh, nghĩ DP. Nếu kết hợp hoặc partition xấu, khung làm việc không tự mang lại speedup.
 
 Xem thêm: [Complexity Analysis](../00_foundations/02_complexity_analysis.md), [Recursion & Backtracking](./02_recursion_and_backtracking.md), [Dynamic Programming](./05_dynamic_programming.md), [Selection/Top-K](./06_selection_and_top_k.md).

@@ -1,3 +1,3 @@
-# Language Implementations
+# Language các cách triển khai
 
-Folder này không lặp lại theory của từng cấu trúc. Nó giải thích các constraint implementation riêng của C, Java và JavaScript: ownership/memory safety, collection contracts, boxing, Number precision, recursion limits, testing và benchmarking.
+Folder này không lặp lại theory của từng cấu trúc. Nó giải thích các ràng buộc cách triển khai riêng của C, Java và JavaScript: quyền sở hữu (ownership)/an toàn bộ nhớ, collection contracts, đóng hộp, Number precision, giới hạn đệ quy, kiểm thử và benchmarking.

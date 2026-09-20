@@ -1,23 +1,19 @@
 # Mô hình bộ nhớ trong C, Java và JavaScript
-**Memory Model, References & Ownership / 메모리 모델, 참조와 소유권**
+**Memory Model, Reference & Ownership / 메모리 모델, 참조와 소유권**
 
-DSA cuối cùng phải tồn tại trong memory thật. Một linked list trên giấy chỉ là các node nối nhau bằng mũi tên; trong runtime, mỗi node phải nằm ở một vùng nhớ cụ thể, có metadata, lifetime, alignment và locality. Một array trên giấy chỉ là dãy phần tử; trong máy, contiguous layout cho phép CPU prefetch và index arithmetic rất khác pointer chasing.
+Cấu trúc dữ liệu cuối cùng phải tồn tại trong bộ nhớ thật. Một danh sách liên kết trên giấy chỉ là các nút nối nhau bằng mũi tên; trong chương trình, mỗi nút phải có vị trí lưu trữ, vòng đời, siêu dữ liệu và cách truy cập cụ thể. Một mảng trên giấy chỉ là dãy phần tử; trong máy, việc các phần tử nằm gần nhau cho phép CPU tận dụng bộ nhớ đệm và tính địa chỉ rất khác với việc lần theo con trỏ.
 
-Vì vậy khi học cấu trúc dữ liệu nâng cao, representation không chỉ quyết định Big-O. Nó còn quyết định allocation cost, cache behavior, garbage collection pressure, fragmentation, pointer/reference overhead và risk về lifetime.
+Vì vậy, **cách biểu diễn (representation)** không chỉ quyết định Big-O. Nó còn ảnh hưởng chi phí cấp phát, tính cục bộ bộ nhớ (locality), áp lực lên bộ thu gom rác, phân mảnh, chi phí con trỏ/tham chiếu và rủi ro về vòng đời dữ liệu.
 
-## 1. Stack và Heap: mental model thực dụng
+## 1. Ngăn xếp và heap: mô hình tư duy thực dụng
 
-Ở mức DSA, ta có thể dùng một mental model đơn giản nhưng hữu ích.
+Ở mức DSA, có thể dùng một mô hình đơn giản. **Ngăn xếp lời gọi (call stack)** chứa các khung lời gọi hàm: tham số, biến cục bộ, địa chỉ quay về và thông tin quản lý. Mỗi lời gọi đệ quy thường tạo thêm một khung, vì vậy độ sâu đệ quy quá lớn có thể gây **tràn ngăn xếp (stack overflow)**.
 
-**Call stack** chứa function frames: parameters, local state, return information và bookkeeping của lời gọi hàm. Recursive calls tạo thêm frames, nên recursion depth lớn có thể gây stack overflow.
+**Heap** chứa các vùng cấp phát động hoặc các đối tượng có vòng đời linh hoạt hơn một khung hàm. Nút của danh sách liên kết, cây, mảng nền của bảng băm và nhiều object Java/JavaScript thường được mô hình hóa là sống trên heap.
 
-**Heap** chứa dynamic allocations/objects có lifetime linh hoạt hơn call frame. Linked nodes, tree nodes, hash-table backing arrays hoặc objects Java/JavaScript thường sống ở heap theo abstraction runtime.
+Môi trường chạy thực tế có thể tối ưu bằng **phân tích thoát (escape analysis)**, thay thế vô hướng (scalar replacement), các thế hệ GC hoặc các kỹ thuật khác. Tuy nhiên, mô hình stack–heap vẫn rất hữu ích để hiểu đệ quy, cấp phát và vòng đời.
 
-Implementation thật có thể tối ưu bằng escape analysis, scalar replacement, stack allocation nội bộ hoặc GC generations; nhưng khi reasoning về DSA, stack-vs-heap vẫn là model rất tốt để hiểu recursion và dynamic objects.
-
-## 2. C: pointer là address-level abstraction
-
-Trong C:
+## 2. C: con trỏ và địa chỉ bộ nhớ
 
 ```c
 int *a = malloc(100 * sizeof(int));
@@ -27,15 +23,13 @@ a[0] = 42;
 free(a);
 ```
 
-`a` giữ một pointer tới vùng memory được cấp phát. Programmer chịu trách nhiệm đảm bảo allocation tồn tại khi dereference và được release đúng lúc.
+`a` giữ địa chỉ của vùng nhớ được cấp phát. Lập trình viên phải bảo đảm vùng đó còn hợp lệ khi giải tham chiếu và được giải phóng đúng lúc.
 
-Sau `free(a)`, pointer value có thể vẫn còn nhưng vùng đó không còn thuộc object hợp lệ. Dereference sau free là **undefined behavior**.
+Sau `free(a)`, giá trị con trỏ có thể vẫn còn nhưng vùng nhớ không còn thuộc một đối tượng hợp lệ. Truy cập qua con trỏ đó là **hành vi không xác định (undefined behavior)**.
 
-C cho quyền kiểm soát representation rất trực tiếp, nhưng đổi lại ownership và lifetime phải được quản lý thủ công.
+C cho quyền kiểm soát cách biểu diễn rất trực tiếp, nhưng đổi lại việc quản lý **quyền sở hữu (ownership)** và vòng đời phải được thiết kế rõ ràng.
 
-## 3. Ownership trong linked structures bằng C
-
-Một linked list node điển hình:
+## 3. Quyền sở hữu trong cấu trúc liên kết bằng C
 
 ```c
 struct Node {
@@ -44,15 +38,11 @@ struct Node {
 };
 ```
 
-Mỗi node có thể được `malloc` riêng. Khi xóa list, ta phải đi qua từng node, lưu `next`, rồi `free` node hiện tại.
+Nếu mỗi nút được `malloc` riêng, khi hủy danh sách ta phải lưu `next`, giải phóng nút hiện tại rồi chuyển sang nút tiếp theo. Nếu một con trỏ khác vẫn trỏ tới nút đã giải phóng, ta có **con trỏ treo (dangling pointer)**. Nếu mất mọi con trỏ tới một vùng cấp phát mà chưa `free`, ta có rò rỉ bộ nhớ.
 
-Nếu free node nhưng vẫn giữ một pointer khác trỏ tới nó, ta có dangling pointer. Nếu quên free node đã mất reference, memory leak xảy ra.
+Do đó API C nên ghi rõ ai sở hữu vùng nhớ và ai chịu trách nhiệm giải phóng. Hợp đồng quyền sở hữu là một phần của tính đúng đắn, không phải chi tiết phụ của thuật toán.
 
-Vì vậy API C nên document rõ ai **owns** allocation và ai có trách nhiệm free. DSA implementation bằng C không chỉ là thuật toán; ownership contract là một phần correctness.
-
-## 4. Pointer aliasing
-
-Hai pointers có thể trỏ cùng một object:
+## 4. Bí danh bộ nhớ
 
 ```c
 int x = 10;
@@ -62,40 +52,30 @@ int *q = &x;
 printf("%d", *p); // 20
 ```
 
-Đây là **aliasing**. Mutation qua một alias được quan sát qua alias khác.
+`p` và `q` cùng trỏ tới `x`. Đây là **bí danh (aliasing)**. Thay đổi dữ liệu qua một bí danh có thể được quan sát qua bí danh khác.
 
-Aliasing làm reasoning khó hơn vì một function có thể mutate storage mà caller vẫn giữ pointer tới đó. Compiler optimization cũng phải quan tâm alias rules.
+Aliasing làm việc suy luận khó hơn vì một hàm có thể thay đổi vùng nhớ mà nơi gọi vẫn giữ tham chiếu tới đó. Trong cấu trúc dữ liệu, chia sẻ nút giữa nhiều cấu trúc mà không có mô hình quyền sở hữu rõ ràng dễ gây lỗi thay đổi ngoài ý muốn hoặc giải phóng hai lần.
 
-Trong data structures, sharing nodes giữa structures mà không có ownership model rõ rất dễ gây double-free hoặc mutation bugs.
-
-## 5. Contiguous allocation trong C
-
-Array:
+## 5. Cấp phát liên tiếp trong C
 
 ```c
 int *a = malloc(n * sizeof *a);
 ```
 
-lưu elements liên tiếp về mặt logical allocation. Address `a+i` được tính trực tiếp từ base address và element size.
+Các phần tử của mảng nằm liên tiếp trong vùng cấp phát. Địa chỉ `a + i` được tính trực tiếp từ địa chỉ cơ sở và kích thước phần tử, vì vậy truy cập theo chỉ số có chi phí hằng số.
 
-Random access vì thế `O(1)` với arithmetic đơn giản. Traversal còn có locality tốt vì nhiều neighboring elements cùng cache line.
-
-Một array of structs:
+Duyệt tuần tự còn có tính cục bộ tốt vì nhiều phần tử lân cận có thể nằm trên cùng một **dòng bộ nhớ đệm (cache line)**.
 
 ```c
 struct Point { float x, y; };
 struct Point points[n];
 ```
 
-khác cache behavior với array of pointers tới separately allocated Point objects.
+Mảng struct như trên có hành vi bộ nhớ khác đáng kể so với mảng con trỏ tới các `Point` được cấp phát rời rạc. Hai cách có thể cùng Big-O nhưng khác hiệu năng thực tế.
 
-Representation ở mức memory layout có thể ảnh hưởng performance lớn dù algorithmic complexity giống nhau.
+## 6. Phần đệm và căn chỉnh của struct
 
-## 6. Struct padding và alignment
-
-C compiler có thể chèn padding giữa fields để đáp ứng alignment.
-
-Ví dụ:
+Trình biên dịch C có thể chèn **phần đệm (padding)** giữa các trường để đáp ứng yêu cầu **căn chỉnh (alignment)**.
 
 ```c
 struct X {
@@ -104,15 +84,11 @@ struct X {
 };
 ```
 
-size có thể lớn hơn tổng raw field sizes vì alignment padding.
+`sizeof(struct X)` có thể lớn hơn tổng kích thước logic của hai trường. Với hàng triệu nút, vài byte phần đệm trên mỗi nút có thể trở thành nhiều megabyte.
 
-Khi data structure có hàng triệu nodes, vài bytes padding mỗi node có thể thành nhiều megabytes. Field ordering và compact representation đôi khi quan trọng trong systems code.
+Không nên tối ưu vi mô khi chưa cần, nhưng khi đánh giá bộ nhớ phải dùng kích thước thực tế của cấu trúc thay vì chỉ cộng kích thước các trường.
 
-Không nên micro-optimize vô căn cứ, nhưng phải hiểu `sizeof(struct)` mới là memory cost thật.
-
-## 7. Java: reference semantics và Garbage Collection
-
-Trong Java:
+## 7. Java: tham chiếu và thu gom rác
 
 ```java
 Node a = new Node(10);
@@ -121,49 +97,45 @@ b.value = 20;
 System.out.println(a.value); // 20
 ```
 
-`a` và `b` là references tới cùng một object. Assignment `b = a` không clone object.
+`a` và `b` tham chiếu cùng một đối tượng. Phép gán `b = a` không sao chép đối tượng.
 
-Garbage collector reclaim object khi object không còn reachable từ GC roots theo model runtime. Programmer không gọi `free` thủ công như C.
+Bộ thu gom rác (Garbage Collector – GC) có thể thu hồi đối tượng khi nó không còn có thể đạt tới từ các **gốc GC (GC roots)**. Lập trình viên không gọi `free` như trong C.
 
-GC loại bỏ nhiều use-after-free/double-free classes, nhưng không làm memory management “miễn phí”. Allocation, tracing/copying, compaction và pauses vẫn có cost.
+GC loại bỏ nhiều lỗi use-after-free và double-free, nhưng quản lý bộ nhớ không trở thành miễn phí. Cấp phát, đánh dấu, sao chép, nén heap và các khoảng dừng GC đều có chi phí.
 
-## 8. Java memory leak vẫn tồn tại ở cấp logic
-
-Nếu một cache giữ reference tới objects mãi mãi, GC không thể reclaim chúng vì chúng vẫn reachable.
-
-Ví dụ static map không eviction:
+## 8. Java vẫn có rò rỉ bộ nhớ ở cấp logic
 
 ```java
 static final Map<String, Object> CACHE = new HashMap<>();
 ```
 
-có thể tăng vô hạn.
+Nếu cache trên tăng mãi mà không có chính sách loại bỏ, các object vẫn có thể đạt tới nên GC không thể thu hồi chúng. Đây là **giữ tham chiếu ngoài ý muốn (unintended retention)**.
 
-Đây vẫn được gọi là memory leak trong application sense, dù không có quên `free`. Root cause là **unintended retention**, không phải manual deallocation failure.
+Trong ngôn ngữ có GC, rò rỉ bộ nhớ thường không phải “quên free” mà là giữ một đường tham chiếu sống lâu hơn cần thiết.
 
-## 9. Java object overhead
+## 9. Chi phí của object Java
 
-Một `Node` Java không chỉ chứa fields logic. Object thường có header, alignment padding và references có kích thước runtime-dependent.
+Một `Node` Java không chỉ chứa các trường logic. Object thường có phần đầu (object header), căn chỉnh và các reference có kích thước phụ thuộc cấu hình runtime.
 
-Do đó linked list của boxed `Integer` có thể dùng memory nhiều hơn đáng kể so với primitive `int[]`.
+Vì vậy, danh sách liên kết chứa `Integer` có thể tốn nhiều bộ nhớ hơn đáng kể so với `int[]`. `ArrayList<Integer>` cũng phải lưu reference tới các object `Integer`, thay vì lưu trực tiếp các giá trị `int` như một mảng primitive.
 
-`ArrayList<Integer>` còn có boxing: array chứa references tới `Integer` objects thay vì raw ints theo conceptual model thông thường.
+Với DSA số học quy mô lớn, `int[]`, `long[]` hoặc các cấu trúc primitive chuyên dụng thường gọn và thân thiện với cache hơn collection chứa object đóng hộp.
 
-Nếu DSA numerical lớn, primitive arrays như `int[]`, `long[]` thường compact và cache-friendly hơn collections boxed.
+## 10. Mảng Java và đồ thị object
 
-## 10. Java array vs object graph
+`int[]` lưu các giá trị primitive trong một vùng mảng. `Node[]` lưu các reference liên tiếp, nhưng các object mà chúng trỏ tới có thể nằm rải rác trên heap.
 
-`int[]` là contiguous primitive storage abstraction rất khác một `Node[]` mà mỗi entry trỏ tới Node object riêng.
+Một cây biểu diễn bằng các mảng song song:
 
-Node array chứa contiguous references, nhưng targets có thể nằm ở nhiều nơi trong heap. Traversing references gây pointer chasing tương tự linked structure.
+```text
+value[]
+left[]
+right[]
+```
 
-Một tree represented bằng parallel arrays `left[]`, `right[]`, `value[]` có thể locality tốt hơn object-per-node tree, dù API ít object-oriented hơn.
+có thể có tính cục bộ tốt hơn cách mỗi nút là một object độc lập. Đây là một ví dụ của **thiết kế hướng dữ liệu (data-oriented design)**: cách bố trí được chọn theo mẫu truy cập thay vì chỉ theo mô hình object.
 
-Đây là data-oriented design trade-off.
-
-## 11. JavaScript object identity
-
-JavaScript cũng có reference-like semantics cho objects:
+## 11. JavaScript và định danh đối tượng
 
 ```js
 const a = { value: 10 };
@@ -172,15 +144,13 @@ b.value = 20;
 console.log(a.value); // 20
 ```
 
-Assignment không deep-copy object.
+Phép gán không sao chép sâu object. `a` và `b` cùng chỉ tới một định danh đối tượng.
 
-Arrays, Maps, Sets và plain objects đều là runtime-managed objects. Engine dùng garbage collection và có thể thay đổi physical representation dựa trên observed shapes/types.
+Array, `Map`, `Set` và object thông thường đều được runtime quản lý. Engine có thể thay đổi cách biểu diễn vật lý dựa trên kiểu dữ liệu và hình dạng object quan sát được. Lập trình viên không kiểm soát bố trí trực tiếp như C, nhưng mẫu cấp phát và việc giữ reference vẫn ảnh hưởng bộ nhớ và hiệu năng.
 
-Programmer không điều khiển layout như C, nhưng allocation pattern và retention vẫn ảnh hưởng memory/performance.
+## 12. Giá trị nguyên thủy và object trong JavaScript
 
-## 12. JavaScript primitive và object distinction
-
-Primitive values như `number`, `boolean`, `bigint`, `string` có value semantics ở language level. Objects có identity.
+Các giá trị như `number`, `boolean`, `bigint` và `string` có ngữ nghĩa giá trị. Object có định danh riêng.
 
 ```js
 const x = { a: 1 };
@@ -188,77 +158,60 @@ const y = { a: 1 };
 console.log(x === y); // false
 ```
 
-Dù contents giống nhau, object identity khác.
+Hai object có nội dung giống nhau vẫn không phải cùng một object. Điều này đặc biệt quan trọng khi dùng object làm khóa của `Map` hoặc phần tử của `Set`: phép so sánh dựa trên định danh, không tự động so sánh sâu cấu trúc bên trong.
 
-Điều này quan trọng khi dùng object làm key của `Map` hoặc member của `Set`: equality theo object identity, không deep structural equality.
+## 13. Closure và việc giữ dữ liệu trong JavaScript
 
-## 13. Closure và retention trong JavaScript
+Closure có thể giữ các biến sống lâu hơn thời gian thực thi của hàm tạo ra nó. Nếu một listener hoặc callback bắt giữ một object lớn và listener không được tháo bỏ, object đó có thể tiếp tục đạt tới được và không được GC thu hồi.
 
-Closure có thể giữ variables sống lâu hơn lexical function call tưởng tượng.
+Cache, biến toàn cục, timer và tham chiếu DOM cũng có thể tạo ra tình trạng giữ dữ liệu ngoài ý muốn.
 
-Nếu event listener hoặc callback closure capture một large object và listener không được remove, object có thể vẫn reachable và không GC được.
+Vì vậy, dùng ngôn ngữ có GC vẫn cần hiểu đồ thị khả năng đạt tới của các object.
 
-Caches, global arrays, timers và DOM references cũng là nguồn retention.
+## 14. Đồ thị khả năng đạt tới là mô hình tư duy của GC
 
-Vì vậy “GC language” vẫn cần hiểu reachability graph.
+Có thể hình dung heap như một đồ thị: object là đỉnh, reference là cạnh và GC roots là các điểm bắt đầu. Những object có thể đạt tới từ roots được xem là còn sống.
 
-## 14. Reachability graph là mental model của GC
+Nếu `A` trỏ tới `B` và `B` trỏ lại `A`, nhưng không object nào trong chu trình có thể đạt tới từ root, một tracing GC vẫn có thể thu hồi cả chu trình. Đây là khác biệt quan trọng so với cơ chế đếm tham chiếu đơn giản.
 
-Có thể hình dung heap objects là graph; GC roots là starting vertices. Object reachable từ roots được xem là live.
+Mô hình này liên hệ trực tiếp với thuật toán đồ thị: giai đoạn đánh dấu của GC về bản chất là một bài toán tìm các đỉnh có thể đạt tới.
 
-Nếu object A trỏ B và B trỏ A nhưng không object nào reachable từ root, cycle vẫn có thể được collect bởi tracing GC. Đây là khác reference counting đơn giản.
+## 15. Tính cục bộ bộ nhớ đệm
 
-Mental model graph này liên kết trực tiếp với DSA graph traversal: mark phase về bản chất là reachability computation trên object graph.
-
-## 15. Cache locality
-
-CPU không đọc memory một byte tùy ý với cost đồng nhất. Data được tải qua cache lines. Khi truy cập `a[i]`, neighboring elements có thể được tải cùng line.
-
-Array traversal:
+CPU không truy cập mọi byte bộ nhớ với chi phí đồng nhất. Dữ liệu thường được chuyển qua cache theo từng dòng.
 
 ```text
-a[0], a[1], a[2], ...
+mảng:       a[0], a[1], a[2], ...
+danh sách:  node -> next -> next -> ...
 ```
 
-có spatial locality mạnh.
+Duyệt mảng có **tính cục bộ không gian (spatial locality)** mạnh. Danh sách liên kết có thể nhảy giữa nhiều vùng heap và gây nhiều cache miss hơn.
 
-Linked-list traversal:
+Do đó hai thuật toán cùng `O(n)` vẫn có thể khác nhau lớn về thời gian chạy.
 
-```text
-node -> next -> next -> ...
-```
+## 16. Lần theo con trỏ và song song ở cấp bộ nhớ
 
-có thể nhảy qua nhiều heap regions, gây cache misses.
+Danh sách liên kết tạo chuỗi phụ thuộc: phải đọc nút hiện tại mới biết địa chỉ nút kế tiếp. CPU khó nạp trước nhiều bước nếu địa chỉ không dự đoán được.
 
-Do đó hai algorithms cùng `O(n)` có thể khác performance lớn.
+Chỉ số mảng dễ dự đoán hơn, giúp cơ chế prefetch và nhiều truy cập bộ nhớ được xử lý hiệu quả hơn. Đây là một lý do mảng hoặc vector thường được ưu tiên trong mã hiệu năng cao dù một số thao tác chèn giữa có Big-O kém hơn danh sách liên kết.
 
-## 16. Pointer chasing và memory-level parallelism
+## 17. Chi phí cấp phát
 
-Linked list có dependency chain: phải đọc current node mới biết address next node. CPU khó prefetch nhiều bước nếu addresses unpredictable.
+Cấu trúc “mỗi nút một object” cần nhiều lần cấp phát. Chi phí có thể đến từ siêu dữ liệu của allocator, phân mảnh, tranh chấp hoặc áp lực GC.
 
-Array indices predictable hơn, cho phép hardware prefetch và vectorization dễ hơn.
+Trong C/C++, **arena/pool allocator** hoặc mảng cấp phát trước có thể giảm chi phí khi nhiều object có vòng đời giống nhau. Trong Java/JavaScript, giảm số object tạm thời trên đường chạy nóng có thể giảm tốc độ cấp phát và khối lượng công việc của GC.
 
-Đây là lý do arrays/vectors thường được ưu tiên hơn linked lists trong high-performance code dù insert giữa về Big-O có vẻ kém hơn.
+Tuy nhiên, tối ưu phải dựa trên profiling; không nên làm thiết kế khó hiểu chỉ để tránh một vài cấp phát chưa được chứng minh là nút thắt.
 
-## 17. Allocation overhead
+## 18. Phân mảnh bộ nhớ
 
-Object-per-node structure cần nhiều allocations. Allocation có thể gây allocator contention, metadata overhead, fragmentation hoặc GC pressure.
+**Phân mảnh bên ngoài (external fragmentation)** xảy ra khi tổng bộ nhớ trống có thể lớn nhưng bị chia thành nhiều vùng rời rạc không phù hợp với một yêu cầu cấp phát lớn liên tiếp.
 
-Arena/pool allocation trong C/C++ hoặc preallocated arrays có thể giảm overhead khi lifetime của nhiều nodes giống nhau.
+**Phân mảnh bên trong (internal fragmentation)** là phần không gian bị lãng phí bên trong khối đã cấp phát vì khối lớn hơn nhu cầu thật.
 
-Trong Java/JavaScript, giảm temporary object creation ở hot loops có thể giảm allocation rate và GC workload.
+Nhiều cấp phát nhỏ với kích thước khác nhau có hành vi khác với slab, pool hoặc arena dùng các khối đồng nhất.
 
-Nhưng optimization phải dựa trên profiling, không nên hy sinh clarity vô lý.
-
-## 18. Fragmentation
-
-Memory allocator có thể còn nhiều free regions nhưng không phù hợp contiguous request lớn. Đây là fragmentation.
-
-External fragmentation thường liên quan các free blocks rời rạc; internal fragmentation là wasted space trong allocated block lớn hơn nhu cầu.
-
-Data structure có many small variable-sized allocations có behavior khác fixed-size slab/arena.
-
-## 19. Mutation qua reference trong ba ngôn ngữ
+## 19. Thay đổi dữ liệu qua tham chiếu trong ba ngôn ngữ
 
 C:
 
@@ -284,17 +237,13 @@ function setFirst(a) {
 }
 ```
 
-Trong cả ba, storage caller quan sát được bị mutate. Nhưng mechanism và lifetime guarantees khác nhau.
+Trong cả ba ví dụ, nơi gọi quan sát được thay đổi của vùng dữ liệu. Nhưng cơ chế ngôn ngữ và bảo đảm vòng đời khác nhau.
 
-C truyền pointer value. Java truyền reference value by value. JavaScript cũng truyền value; với object, value đó biểu diễn reference-like identity tới object.
+C truyền giá trị con trỏ. Java luôn truyền tham số theo giá trị; với object hoặc array, giá trị được truyền là một reference. JavaScript cũng truyền giá trị; với object, giá trị đó dẫn tới cùng một định danh object.
 
-Cụm “pass by reference” dễ gây hiểu sai nếu không tách language semantics và observable mutation.
+Vì vậy, cách nói “pass by reference” dễ gây hiểu sai nếu không phân biệt cơ chế truyền tham số với việc nhiều biến cùng truy cập một object.
 
-## 20. Copy shallow vs deep
-
-Copy array/object không nhất thiết copy nested objects.
-
-JavaScript:
+## 20. Sao chép nông và sao chép sâu
 
 ```js
 const a = [{ x: 1 }];
@@ -303,61 +252,65 @@ b[0].x = 9;
 console.log(a[0].x); // 9
 ```
 
-Outer array khác, inner object shared.
+`a` và `b` là hai mảng ngoài khác nhau, nhưng phần tử bên trong vẫn là cùng một object. Đây là **sao chép nông (shallow copy)**.
 
-Java `clone()`/copy constructors và C `memcpy` cũng có shallow-copy risks với pointers/references.
+Trong Java, constructor sao chép hoặc `clone()` cũng có thể chỉ sao chép reference. Trong C, `memcpy` một struct chứa con trỏ chỉ sao chép giá trị con trỏ chứ không tự sao chép vùng dữ liệu được trỏ tới.
 
-Persistent data structures khai thác controlled sharing; mutable structures lại có thể gặp alias bugs nếu sharing không intentional.
+Các cấu trúc dữ liệu bất biến hoặc persistent có thể chủ động dùng **chia sẻ cấu trúc (structural sharing)**; ngược lại, với cấu trúc có thể thay đổi, chia sẻ ngoài ý muốn dễ gây lỗi aliasing.
 
-## 21. Recursion depth và explicit stack
+## 21. Độ sâu đệ quy và ngăn xếp tường minh
 
-Mỗi recursive call thường tiêu thụ stack frame.
+Mỗi lời gọi đệ quy thường dùng thêm một khung ngăn xếp. DFS trên cây cân bằng có độ sâu `O(log n)`, trong khi cây lệch hoặc đồ thị dạng đường có thể đạt `O(n)`.
 
-Balanced tree DFS depth `O(log n)` thường an toàn hơn skewed tree depth `O(n)`. Graph DFS trên path dài `10^5` vertices có thể overflow stack trong Java/JavaScript và cả C tùy stack limit.
+Một DFS trên đường dài `10^5` đỉnh có thể vượt giới hạn stack trong C, Java hoặc JavaScript tùy môi trường.
 
-Đổi recursive DFS sang explicit stack chuyển control state từ call stack sang heap-backed/container memory mà ta quản lý được.
+Chuyển sang ngăn xếp tường minh:
 
-Algorithm vẫn là DFS; execution representation thay đổi.
+```text
+call stack  -> container do chương trình quản lý
+```
 
-## 22. Tail recursion không nên được giả định tùy tiện
+không thay đổi bản chất DFS; nó chỉ thay đổi cách lưu trạng thái điều khiển và giúp ta kiểm soát bộ nhớ tốt hơn.
 
-Một số language/runtime có tail-call optimization trong những conditions nhất định, nhưng Java không guarantee general tail-call elimination. JavaScript specification/history và engine support cũng không nên được giả định như universal solution.
+## 22. Không nên mặc định có tối ưu lời gọi đuôi
 
-Nếu depth có thể lớn, explicit iterative design an toàn hơn dựa vào tail-call optimization không chắc chắn.
+Một số ngôn ngữ hoặc runtime có thể tối ưu **lời gọi đuôi (tail call)** trong điều kiện nhất định, nhưng Java không bảo đảm loại bỏ lời gọi đuôi tổng quát. Với JavaScript, không nên giả định mọi engine và môi trường triển khai đều biến đệ quy đuôi thành cách thực thi có độ sâu stack hằng số.
 
-## 23. Numeric representation cũng là memory/correctness issue
+Nếu độ sâu có thể lớn, thiết kế lặp với stack tường minh thường an toàn và dễ dự đoán hơn.
 
-C integer width phụ thuộc type/platform constraints; signed overflow có undefined behavior trong C chuẩn cho nhiều trường hợp.
+## 23. Biểu diễn số cũng là vấn đề bộ nhớ và tính đúng đắn
 
-Java `int` 32-bit signed và `long` 64-bit signed, overflow wrap theo two's-complement semantics của language.
+Trong C, độ rộng số nguyên phụ thuộc kiểu và các ràng buộc của nền tảng; tràn số nguyên có dấu dẫn tới hành vi không xác định trong nhiều trường hợp theo chuẩn C.
 
-JavaScript `Number` là IEEE-754 double; integer exactness chỉ đảm bảo tới:
+Trong Java, `int` là số nguyên có dấu 32 bit và `long` là 64 bit; phép toán tràn theo ngữ nghĩa bù hai của ngôn ngữ.
+
+JavaScript `Number` dùng IEEE-754 double và chỉ bảo đảm biểu diễn chính xác số nguyên đến:
 
 \[
 2^{53}-1
 \]
 
-BigInt cung cấp arbitrary-size integer semantics nhưng không trộn trực tiếp với Number arithmetic.
+`BigInt` hỗ trợ số nguyên có độ lớn tùy ý nhưng không thể trộn trực tiếp với phép toán `Number`.
 
-DSA cost/distance/count có thể sai nếu representation numeric không đủ.
+Khoảng cách, số đếm, prefix sum hoặc chi phí của thuật toán có thể sai hoàn toàn nếu kiểu số được chọn không đủ miền giá trị.
 
-## 24. False sharing và concurrency intuition
+## 24. Chia sẻ giả và trực giác về xử lý đồng thời
 
-Trong concurrent code, hai threads update hai variables logic độc lập nhưng nằm cùng cache line có thể gây cache-coherence ping-pong, gọi là false sharing.
+Trong chương trình đa luồng, hai luồng có thể cập nhật hai biến logic độc lập nhưng nằm trên cùng một cache line. Cơ chế nhất quán cache khi đó có thể khiến dòng cache liên tục chuyển quyền sở hữu giữa các lõi. Hiện tượng này gọi là **chia sẻ giả (false sharing)**.
 
-Đây là ví dụ memory layout ảnh hưởng parallel performance dù data dependency logic không tồn tại.
+Đây là ví dụ cho thấy bố trí bộ nhớ ảnh hưởng hiệu năng song song dù giữa hai biến không có phụ thuộc dữ liệu ở cấp thuật toán.
 
-Concurrent queues, counters và graph algorithms cần nhìn beyond Big-O tới cache coherence/contention.
+Với hàng đợi đồng thời, bộ đếm hoặc thuật toán đồ thị song song, cần nhìn xa hơn Big-O và xét cả tranh chấp cùng hành vi cache-coherence.
 
-## 25. Structure-of-Arrays vs Array-of-Structures
+## 25. Array of Structures và Structure of Arrays
 
-Array of Structures:
+**Mảng các cấu trúc (Array of Structures – AoS):**
 
 ```text
 [{x,y,z}, {x,y,z}, ...]
 ```
 
-Structure of Arrays:
+**Cấu trúc các mảng (Structure of Arrays – SoA):**
 
 ```text
 x[]
@@ -365,48 +318,48 @@ y[]
 z[]
 ```
 
-Nếu computation chỉ scan `x`, SoA có thể locality/vectorization tốt hơn vì không tải y/z không cần thiết. Nếu thường cần toàn record cùng lúc, AoS có thể convenient/local.
+Nếu phép tính chỉ quét `x`, SoA có thể tận dụng cache và vectorization tốt hơn vì không cần tải `y` và `z`. Nếu thường xuyên cần toàn bộ bản ghi cùng lúc, AoS có thể tự nhiên hơn.
 
-DSA implementation production đôi khi chọn physical layout theo access pattern, không chỉ abstract type.
+Cách triển khai DSA trong hệ thống thực tế đôi khi phải chọn bố trí vật lý theo mẫu truy cập chứ không chỉ theo kiểu dữ liệu trừu tượng.
 
-## 26. External memory model
+## 26. Khi dữ liệu vượt khỏi RAM
 
-Khi data không vừa RAM, cost lớn không còn là CPU instruction mà là page/block I/O.
+Khi dữ liệu không vừa bộ nhớ chính, chi phí quan trọng có thể chuyển từ lệnh CPU sang I/O theo trang hoặc khối.
 
-B+Tree tăng branching factor để giảm height và page reads. External merge sort đọc/ghi sequential runs thay vì random access. Buffering trở thành core design.
+B+Tree tăng hệ số phân nhánh để giảm chiều cao và số lần đọc trang. **Sắp xếp trộn ngoài (external merge sort)** ưu tiên đọc/ghi tuần tự các run thay vì truy cập ngẫu nhiên. Bộ đệm và kích thước trang trở thành thành phần trung tâm của thiết kế.
 
-Điều này cho thấy complexity model phải phù hợp hardware layer. RAM model `O(log n)` chưa nói hết khi mỗi step có thể là disk seek.
+Điều này cho thấy mô hình độ phức tạp phải phù hợp với tầng phần cứng. `O(log n)` trong mô hình RAM chưa nói hết chi phí nếu mỗi bước có thể là một lần I/O đĩa.
 
-## 27. Memory complexity phải tính overhead thật
+## 27. Độ phức tạp bộ nhớ phải tính cả hệ số thực tế
 
-Nói hash table `O(n)` memory và tree `O(n)` memory là đúng asymptotically nhưng không nói constants.
+Nói Hash Table và Tree đều dùng `O(n)` bộ nhớ là đúng về tiệm cận nhưng chưa đủ để lập kế hoạch dung lượng.
 
-Hash table có spare capacity/load factor. Tree có parent/child pointers, balance metadata và object headers. Trie có nhiều child slots. Graph adjacency list có per-edge references/objects.
+Hash Table có dung lượng dự phòng theo hệ số tải. Tree có reference/con trỏ, metadata cân bằng và object header. Trie có thể dành nhiều ô cho cạnh con. Danh sách kề của đồ thị có thể có chi phí trên từng cạnh.
 
-Khi `n` lớn, constants quyết định feasibility.
+Khi `n` lớn, các hệ số hằng này có thể quyết định cấu trúc có khả thi hay không.
 
-## 28. Persistent và immutable structures
+## 28. Cấu trúc persistent và bất biến
 
-Immutable/persistent structures không mutate version cũ; update tạo nodes mới và share phần không đổi.
+**Cấu trúc dữ liệu persistent** không phá hủy phiên bản cũ khi cập nhật. Thay vào đó, nó tạo các nút mới và chia sẻ những phần không đổi.
 
-Ví dụ persistent tree update một root-to-leaf path có thể copy `O(log n)` nodes thay vì copy whole tree.
+Ví dụ, cập nhật một cây persistent cân bằng có thể chỉ sao chép `O(log n)` nút trên đường từ gốc tới vị trí cập nhật thay vì sao chép toàn bộ cây.
 
-Structural sharing an toàn hơn mutable aliasing nhưng tăng allocation. Functional languages và versioned algorithms khai thác trade-off này.
+Structural sharing giúp duy trì nhiều phiên bản hiệu quả nhưng làm tăng số lần cấp phát và đòi hỏi mô hình vòng đời phù hợp. Đây là một đánh đổi khác giữa bộ nhớ, tính bất biến và khả năng chia sẻ.
 
-## 29. Benchmark memory-aware
+## 29. Benchmark có ý thức về bộ nhớ
 
-Nếu hai structures cùng complexity, benchmark nên đo cả runtime và allocation/peak memory.
+Nếu hai cấu trúc có cùng Big-O, benchmark vẫn nên đo lượng cấp phát, bộ nhớ cực đại, locality và hành vi GC.
 
-Linked list có thể thua array ở traversal. Object-heavy graph có thể thua compact CSR-style arrays. Hash map với boxed keys có thể tiêu thụ nhiều memory hơn primitive specialized map.
+Danh sách liên kết có thể thua mảng khi duyệt tuần tự. Đồ thị gồm nhiều object nhỏ có thể tốn bộ nhớ hơn CSR bằng mảng phẳng. Hash Map chứa khóa đóng hộp có thể lớn hơn nhiều so với map primitive chuyên dụng.
 
-Performance claim chỉ đáng tin khi workload và representation cụ thể được đo.
+Một tuyên bố về hiệu năng chỉ đáng tin khi khối lượng công việc, cách biểu diễn và môi trường chạy được mô tả cụ thể.
 
-## Mental Model
+## Mô hình tư duy
 
-> Data structure là **algorithm + physical representation + lifetime model**.
+> Cấu trúc dữ liệu trong máy thật là **thuật toán + cách biểu diễn vật lý + mô hình vòng đời**.
 
-Array mạnh không chỉ vì `O(1)` indexing mà còn locality. Linked structure linh hoạt không chỉ vì pointer rewiring mà còn phải trả allocation/pointer-chasing cost. GC loại bỏ manual `free` nhưng không loại allocation/retention cost. C cho quyền ownership trực tiếp; Java/JavaScript cho reachability-managed lifetime nhưng vẫn cần hiểu identity, aliasing và memory pressure.
+Mảng mạnh không chỉ vì lập chỉ mục `O(1)` mà còn nhờ tính cục bộ. Cấu trúc liên kết linh hoạt không chỉ vì có thể nối lại con trỏ mà còn phải trả chi phí cấp phát và lần theo con trỏ. GC loại bỏ việc `free` thủ công nhưng không loại bỏ chi phí cấp phát hoặc việc giữ object quá lâu. C cho quyền kiểm soát ownership trực tiếp; Java và JavaScript quản lý vòng đời theo khả năng đạt tới nhưng vẫn cần hiểu identity, aliasing và áp lực bộ nhớ.
 
-Khi chọn structure, hãy hỏi cả bốn câu: operation complexity là gì, layout nằm thế nào trong memory, object sống bao lâu, và runtime/hardware sẽ truy cập representation đó ra sao.
+Khi chọn cấu trúc, hãy hỏi đồng thời: **độ phức tạp thao tác là gì, dữ liệu được bố trí thế nào, mỗi object sống bao lâu, và runtime/phần cứng sẽ truy cập cách biểu diễn đó ra sao?**
 
 Xem thêm: [Arrays & Dynamic Arrays](../01_linear_structures/00_arrays_and_dynamic_arrays.md), [Linked Lists](../01_linear_structures/01_linked_lists.md), [C Implementation Patterns](../80_language_implementations/00_c_dsa_implementation_patterns.md), [JavaScript Runtime Patterns](../80_language_implementations/02_javascript_dsa_runtime_patterns.md).

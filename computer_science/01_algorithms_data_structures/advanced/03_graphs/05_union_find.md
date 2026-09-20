@@ -1,17 +1,17 @@
-# Union-Find / Disjoint Set Union
+# hợp nhất-tìm kiếm / hợp nhất tập rời nhau
 **Tập hợp rời nhau (Disjoint Set Union / 서로소 집합)**
 
-Union-Find, thường gọi là **Disjoint Set Union (DSU / 서로소 집합 자료구조)**, được thiết kế cho một câu hỏi rất hẹp nhưng xuất hiện rất nhiều:
+hợp nhất-tìm kiếm, thường gọi là **hợp nhất tập rời nhau (DSU / 서로소 집합 자료구조)**, được thiết kế cho một câu hỏi rất hẹp nhưng xuất hiện rất nhiều:
 
 > Khi các phần tử liên tục được hợp nhất thành các nhóm, làm sao biết nhanh hai phần tử có đang thuộc cùng một nhóm hay không?
 
-DSU không cố lưu toàn bộ topology của graph. Nó không biết path giữa hai vertices, không biết degree, không biết shortest path. Nó chỉ duy trì **component identity**.
+DSU không cố lưu toàn bộ topology của đồ thị. Nó không biết đường đi giữa hai các đỉnh, không biết degree, không biết đường đi ngắn nhất (shortest path). Nó chỉ duy trì **thành phần identity**.
 
-## Hai operation cốt lõi
+## Hai thao tác cốt lõi
 
-`find(x)` trả representative của component chứa `x`.
+`find(x)` trả representative của thành phần chứa `x`.
 
-`union(a,b)` hợp nhất hai components nếu chúng khác nhau.
+`union(a,b)` hợp nhất hai các thành phần nếu chúng khác nhau.
 
 Nếu:
 
@@ -21,21 +21,21 @@ find(a) == find(b)
 
 thì `a` và `b` đã connected theo quan hệ merge hiện tại.
 
-## Mental Model
+## Mô hình tư duy
 
-> DSU nén một partition của tập phần tử thành một forest. Mỗi tree đại diện một component; root chỉ là **identifier nội bộ**, không phải vertex “quan trọng nhất”.
+> DSU nén một partition của tập phần tử thành một forest. Mỗi cây đại diện một thành phần; nút gốc chỉ là **identifier nội bộ**, không phải đỉnh “quan trọng nhất”.
 
-Điểm mạnh của DSU đến từ việc nó từ chối lưu thông tin không cần thiết. Nếu bài toán chỉ hỏi connectivity dưới operation merge, path chi tiết là overhead.
+Điểm mạnh của DSU đến từ việc nó từ chối lưu thông tin không cần thiết. Nếu bài toán chỉ hỏi connectivity dưới thao tác merge, đường đi chi tiết là overhead.
 
-## Representation bằng parent forest
+## cách biểu diễn (representation) bằng nút cha forest
 
-Ban đầu mỗi element là một set riêng:
+Ban đầu mỗi phần tử là một set riêng:
 
 ```text
 parent[x] = x
 ```
 
-Khi merge hai sets, ta nối root của một tree vào root của tree kia.
+Khi merge hai sets, ta nối nút gốc của một cây vào nút gốc của cây kia.
 
 Ví dụ:
 
@@ -61,11 +61,11 @@ sau `union(0,2)`:
       3
 ```
 
-Tất cả nodes trong cùng tree có cùng representative root.
+Tất cả các nút trong cùng cây có cùng representative nút gốc.
 
-## Naive union có vấn đề gì?
+## Cách đơn giản union có vấn đề gì?
 
-Nếu luôn gắn root mới vào root cũ một cách tùy ý, có thể tạo chain:
+Nếu luôn gắn nút gốc mới vào nút gốc cũ một cách tùy ý, có thể tạo chain:
 
 ```text
 0 <- 1 <- 2 <- 3 <- 4 <- ...
@@ -76,11 +76,11 @@ Khi đó `find(n-1)` là `O(n)`.
 DSU hiệu quả nhờ hai optimization phối hợp:
 
 1. **union by size/rank (크기/랭크 기준 합치기)**;
-2. **path compression (경로 압축)**.
+2. **đường đi compression (경로 압축)**.
 
 ## Union by size
 
-Khi merge hai components, gắn root của tree nhỏ hơn dưới root của tree lớn hơn.
+Khi merge hai các thành phần, gắn nút gốc của cây nhỏ hơn dưới nút gốc của cây lớn hơn.
 
 ```java
 boolean union(int a, int b) {
@@ -101,15 +101,15 @@ boolean union(int a, int b) {
 }
 ```
 
-### Tại sao size heuristic giúp height nhỏ?
+### Tại sao size heuristic giúp chiều cao nhỏ?
 
-Mỗi khi depth của một node tăng 1 do tree của nó bị gắn dưới tree khác, component mới ít nhất gấp đôi component cũ nếu luôn gắn smaller vào larger.
+Mỗi khi độ sâu của một nút tăng 1 do cây của nó bị gắn dưới cây khác, thành phần mới ít nhất gấp đôi thành phần cũ nếu luôn gắn smaller vào larger.
 
-Một node không thể trải qua hơn `log2 n` lần “component size ít nhất gấp đôi”. Vì vậy chỉ union-by-size đã bound tree height ở `O(log n)`.
+Một nút không thể trải qua quá `log2 n` lần mà “kích thước thành phần ít nhất tăng gấp đôi”. Vì vậy chỉ riêng union-by-size đã chặn chiều cao cây ở `O(log n)`.
 
-## Path compression
+## đường đi compression
 
-`find(x)` không chỉ đi lên root; nó còn sửa parent của các nodes trên path để những lần tìm sau ngắn hơn.
+`find(x)` không chỉ đi lên nút gốc; nó còn sửa nút cha của các nút trên đường đi để những lần tìm sau ngắn hơn.
 
 Recursive Java:
 
@@ -122,7 +122,7 @@ int find(int x) {
 }
 ```
 
-Nếu path ban đầu:
+Nếu đường đi ban đầu:
 
 ```text
 7 -> 5 -> 3 -> 0
@@ -136,7 +136,7 @@ sau `find(7)` có thể thành:
 3 -> 0
 ```
 
-Một operation hiện tại trả thêm maintenance cost để future operations rẻ hơn.
+Một thao tác hiện tại trả thêm maintenance chi phí để tương lai các thao tác rẻ hơn.
 
 ## Iterative find trong C
 
@@ -160,33 +160,33 @@ int dsu_find(DSU *d, int x) {
 }
 ```
 
-Pass đầu tìm root; pass sau compress path. Iterative form tránh recursion depth concern và làm mutation flow rõ ràng.
+Pass đầu tìm nút gốc; pass sau compress đường đi. Iterative form tránh recursion độ sâu concern và làm sự thay đổi dữ liệu flow rõ ràng.
 
 ## `O(alpha(n))` thực sự nghĩa là gì?
 
-Kết hợp union-by-size/rank với path compression cho amortized complexity:
+Kết hợp union-by-size/rank với đường đi compression cho độ phức tạp khấu hao:
 
 \[
 O(\alpha(n))
 \]
 
-mỗi operation, trong đó `\alpha` là **inverse Ackermann function**.
+mỗi thao tác, trong đó `\alpha` là **inverse Ackermann hàm**.
 
-Không cần học chi tiết Ackermann function để dùng DSU. Điều cần hiểu là `alpha(n)` tăng cực chậm; với mọi `n` thực tế, nó là một hằng số rất nhỏ.
+Không cần học chi tiết Ackermann hàm để dùng DSU. Điều cần hiểu là `alpha(n)` tăng cực chậm; với mọi `n` thực tế, nó là một hằng số rất nhỏ.
 
 Nhưng nói “DSU là O(1)” về mặt lý thuyết là không chính xác. Cách nói tốt hơn:
 
-> amortized gần constant trong mọi input size thực tế, với bound `O(alpha(n))`.
+> amortized gần constant trong mọi kích thước đầu vào thực tế, với bound `O(alpha(n))`.
 
-## Amortized analysis ở đây đến từ đâu?
+## phân tích khấu hao ở đây đến từ đâu?
 
-Một `find` riêng lẻ vẫn có thể đi qua nhiều nodes. Nhưng mỗi lần đi qua path dài, compression làm structure phẳng hơn. Ta không thể liên tục trả cost lớn trên cùng các nodes mà không thay đổi future shape.
+Một `find` riêng lẻ vẫn có thể đi qua nhiều các nút. Nhưng mỗi lần đi qua đường đi dài, compression làm structure phẳng hơn. Ta không thể liên tục trả chi phí lớn trên cùng các nút mà không thay đổi tương lai shape.
 
-Đây là cùng family reasoning với dynamic array resize: một operation đắt được “trả” bởi việc làm nhiều operation tương lai rẻ hơn.
+Đây là cùng family reasoning với mảng động resize: một thao tác đắt được “trả” bởi việc làm nhiều thao tác tương lai rẻ hơn.
 
 ## DSU trong Kruskal MST
 
-Kruskal sort edges theo weight rồi xét từng edge `(u,v)`.
+Kruskal sort các cạnh theo trọng số rồi xét từng cạnh `(u,v)`.
 
 Nếu:
 
@@ -194,15 +194,15 @@ Nếu:
 find(u) != find(v)
 ```
 
-edge nối hai components khác nhau nên không tạo cycle; ta nhận edge và `union(u,v)`.
+cạnh nối hai các thành phần khác nhau nên không tạo chu trình; ta nhận cạnh và `union(u,v)`.
 
-Nếu representatives giống nhau, edge đóng cycle và bỏ qua.
+Nếu representatives giống nhau, cạnh đóng chu trình và bỏ qua.
 
-DSU ở đây không tìm cycle bằng traversal. Nó chỉ trả lời “hai endpoints đã connected bởi các edges trước chưa?”.
+DSU ở đây không tìm chu trình bằng traversal. Nó chỉ trả lời “hai endpoints đã connected bởi các cạnh trước chưa?”.
 
-## Cycle detection khi add undirected edges
+## phát hiện chu trình khi add undirected các cạnh
 
-Trong graph ban đầu rỗng, process edges online:
+Trong đồ thị ban đầu rỗng, xử lý các cạnh trực tuyến:
 
 ```text
 for edge (u,v):
@@ -212,11 +212,11 @@ for edge (u,v):
         union(u,v)
 ```
 
-Lưu ý đây là reasoning cho **undirected** connectivity. Directed cycle detection không thể dùng DSU theo cách này vì directed reachability không phải equivalence relation đơn giản.
+Lưu ý đây là reasoning cho **undirected** connectivity. Directed phát hiện chu trình không thể dùng DSU theo cách này vì directed reachability không phải quan hệ tương đương đơn giản.
 
-## Connected components dưới merge-only updates
+## Connected các thành phần dưới merge-only các cập nhật
 
-Nếu vertices ban đầu tách rời và edges chỉ được thêm, DSU là structure rất tự nhiên.
+Nếu các đỉnh ban đầu tách rời và các cạnh chỉ được thêm, DSU là structure rất tự nhiên.
 
 Maintain thêm:
 
@@ -230,11 +230,11 @@ mỗi successful union:
 componentCount--
 ```
 
-Ta có thể query số components `O(1)`.
+Ta có thể truy vấn số các thành phần `O(1)`.
 
-## Component metadata
+## thành phần siêu dữ liệu
 
-Root có thể lưu metadata của toàn component:
+nút gốc có thể lưu siêu dữ liệu của toàn thành phần:
 
 ```text
 size
@@ -244,7 +244,7 @@ maximum value
 aggregate statistics
 ```
 
-Khi merge two roots, combine metadata.
+Khi merge two các nút gốc, kết hợp siêu dữ liệu.
 
 Ví dụ:
 
@@ -253,17 +253,17 @@ size[ra] += size[rb];
 sum[ra] += sum[rb];
 ```
 
-Nguyên tắc là metadata phải thuộc representative hiện tại; không nên đọc `size[x]` cho non-root nếu implementation không giữ nó cập nhật.
+Nguyên tắc là siêu dữ liệu phải thuộc representative hiện tại; không nên đọc `size[x]` cho non-root nếu cách triển khai không giữ nó cập nhật.
 
-## Offline threshold queries
+## ngoại tuyến threshold các truy vấn
 
-Một pattern cực mạnh là sort events theo threshold.
+Một mẫu cực mạnh là sort các sự kiện theo threshold.
 
-Ví dụ: có roads `(u,v,w)` và queries:
+Ví dụ: có roads `(u,v,w)` và các truy vấn:
 
-> Với chỉ roads có cost `<= X`, `a` và `b` có connected không?
+> Với chỉ roads có chi phí `<= X`, `a` và `b` có connected không?
 
-Ta sort roads theo `w`, sort queries theo `X`, rồi tăng dần threshold:
+Ta sắp xếp các cạnh theo `w`, sắp xếp các truy vấn theo `X`, rồi tăng dần ngưỡng:
 
 ```text
 while nextRoad.weight <= query.X:
@@ -272,68 +272,68 @@ while nextRoad.weight <= query.X:
 answer = find(a) == find(b)
 ```
 
-Mỗi edge chỉ được add một lần. Đây là ví dụ của **offline algorithm**: biết trước toàn bộ queries cho phép reorder processing để dùng DSU hiệu quả.
+Mỗi cạnh chỉ được add một lần. Đây là ví dụ của **ngoại tuyến thuật toán**: biết trước toàn bộ các truy vấn cho phép reorder xử lý để dùng DSU hiệu quả.
 
-## Kruskal Reconstruction Tree
+## Kruskal Reconstruction cây
 
-Một extension thú vị: mỗi successful union có thể tạo một internal node mới đại diện thời điểm/weight mà hai components hợp nhất. Leaves là original vertices; internal node weight là edge threshold.
+Một extension thú vị: mỗi successful union có thể tạo một nội bộ nút mới đại diện thời điểm/trọng số mà hai các thành phần hợp nhất. các nút lá là original các đỉnh; nội bộ nút trọng số là cạnh threshold.
 
-Sau khi build, các query như “minimum threshold để u và v connected” có thể biến thành LCA trên reconstruction tree.
+Sau khi xây dựng, các truy vấn như “minimum threshold để u và v connected” có thể biến thành LCA trên reconstruction cây.
 
-Insight này cho thấy DSU không chỉ là endpoint algorithm; nó còn có thể xây một hierarchy từ merge history.
+Insight này cho thấy DSU không chỉ là endpoint thuật toán; nó còn có thể xây một hierarchy từ merge lịch sử.
 
-## DSU với parity / bipartite constraints
+## DSU với parity / bipartite các ràng buộc
 
-Ta có thể lưu thêm relation từ node tới parent. Ví dụ `parity[x]` biểu diễn màu của `x` XOR màu parent.
+Ta có thể lưu thêm relation từ nút tới nút cha. Ví dụ `parity[x]` biểu diễn màu của `x` XOR màu nút cha.
 
-Khi `find(x)` compress path, phải compose parity dọc path.
+Khi `find(x)` compress đường đi, phải compose parity dọc đường đi.
 
-Structure này có thể support constraints kiểu:
+Structure này có thể support các ràng buộc kiểu:
 
 ```text
 u và v phải khác màu
 ```
 
-và detect contradiction khi thêm edges trong online bipartiteness variants.
+và detect contradiction khi thêm các cạnh trong trực tuyến bipartiteness variants.
 
-General principle: DSU có thể duy trì **relative potential** giữa node và representative nếu relation compose được.
+Nguyên tắc tổng quát: DSU có thể duy trì **relative potential** giữa nút và representative nếu relation compose được.
 
 ## Weighted / Potential DSU
 
 Một biến thể lưu:
 
 \[
-potential[x] = value(x) - value(parent(x))
+potential[x] = giá trị(x) - giá trị(nút cha(x))
 \]
 
-hoặc một group-like relation tương tự. Khi union hai components với constraint giữa `a` và `b`, ta tính potential của root mới sao cho relation vẫn đúng.
+hoặc một group-like relation tương tự. Khi union hai các thành phần với ràng buộc giữa `a` và `b`, ta tính potential của nút gốc mới sao cho relation vẫn đúng.
 
-Ứng dụng gồm difference constraints đơn giản, coordinate relation và parity.
+Ứng dụng gồm difference các ràng buộc đơn giản, coordinate relation và parity.
 
-Đây là bước nâng cao: path compression không chỉ đổi parent; mọi metadata relative-to-parent phải được cập nhật tương ứng.
+Đây là bước nâng cao: đường đi compression không chỉ đổi nút cha; mọi siêu dữ liệu relative-to-parent phải được cập nhật tương ứng.
 
-## Tại sao standard DSU không hỗ trợ delete/split tốt?
+## Tại sao DSU chuẩn không hỗ trợ xóa/tách tốt?
 
-DSU được tối ưu cho **monotonic merge**. Sau path compression, nhiều nodes có thể trỏ thẳng tới root; original tree structure gần như bị mất.
+DSU được tối ưu cho **monotonic merge**. Sau đường đi compression, nhiều các nút có thể trỏ thẳng tới nút gốc; original cây structure gần như bị mất.
 
-Nếu xóa một edge đã từng làm components merge, DSU không biết component phải split thành những phần nào vì nó chưa bao giờ lưu đủ graph topology.
+Nếu xóa một cạnh đã từng làm các thành phần merge, DSU không biết thành phần phải split thành những phần nào vì nó chưa bao giờ lưu đủ đồ thị topology.
 
-Đây không phải thiếu feature nhỏ; đó là consequence trực tiếp của information compression.
+Đây không phải thiếu feature nhỏ; đó là consequence trực tiếp của thông tin compression.
 
-> DSU nhanh vì nó quên path structure. Muốn support deletion, bạn cần giữ thêm thông tin hoặc đổi algorithm.
+> DSU nhanh vì nó quên đường đi structure. Muốn support deletion, bạn cần giữ thêm thông tin hoặc đổi thuật toán.
 
 ## Rollback DSU
 
-Nếu cần undo unions trong offline algorithm, standard path compression gây khó vì một `find` có thể mutate nhiều parents.
+Nếu cần undo unions trong ngoại tuyến thuật toán, standard đường đi compression gây khó vì một `find` có thể mutate nhiều các nút cha.
 
 **Rollback DSU (롤백 DSU)** thường:
 
 - dùng union-by-size;
 - không path-compress;
 - mỗi union ghi thay đổi vào stack;
-- rollback pop stack để restore parent/size.
+- rollback pop stack để restore nút cha/size.
 
-Union/find khi đó thường `O(log n)` worst-case do union-by-size height bound, nhưng undo trở nên đơn giản.
+Union/find khi đó thường `O(log n)` trường hợp xấu nhất do union-by-size chiều cao bound, nhưng undo trở nên đơn giản.
 
 ### Change stack idea
 
@@ -347,13 +347,13 @@ rollback():
     restore recorded values
 ```
 
-Optimization không tồn tại trong chân không: path compression tốt cho forward queries nhưng xung đột với reversibility.
+Optimization không tồn tại trong chân không: đường đi compression tốt cho forward các truy vấn nhưng xung đột với reversibility.
 
-## Dynamic connectivity offline
+## động connectivity ngoại tuyến
 
-Nếu edges có cả add và remove theo time, có thể xử lý offline bằng segment tree over time + rollback DSU.
+Nếu các cạnh có cả add và remove theo time, có thể xử lý ngoại tuyến bằng cây đoạn (Segment Tree) over time + rollback DSU.
 
-Mỗi edge tồn tại trên một interval thời gian `[l,r)`. Ta add edge vào các segment-tree nodes phủ interval đó. DFS segment tree:
+Mỗi cạnh tồn tại trên một interval thời gian `[l,r)`. Ta add cạnh vào các segment-tree các nút phủ interval đó. DFS cây đoạn:
 
 ```text
 enter node -> apply unions
@@ -361,25 +361,25 @@ process children / answer queries
 exit node -> rollback
 ```
 
-Mỗi query sees đúng tập edges active tại timestamp của nó.
+Mỗi truy vấn sees đúng tập các cạnh active tại timestamp của nó.
 
-Đây là một example nâng cao của việc combine data structures: segment tree quản time intervals, rollback DSU quản connectivity state.
+Đây là một example nâng cao của việc kết hợp các cấu trúc dữ liệu: cây đoạn quản time intervals, rollback DSU quản connectivity trạng thái (state).
 
 ## Persistent / Partially Persistent DSU
 
-Một hướng khác là giữ history để query connectivity ở version cũ. Có nhiều designs: union tree với timestamps, persistent arrays, or versioned parent relations. Không phải mọi variant support arbitrary branching updates; cần xác định persistence model.
+Một hướng khác là giữ lịch sử để truy vấn connectivity ở version cũ. Có nhiều designs: union cây với timestamps, persistent các mảng, or versioned nút cha relations. Không phải mọi variant support arbitrary branching các cập nhật; cần xác định persistence mô hình.
 
-Điểm conceptual là DSU có thể được mở rộng theo trục **time**, nhưng standard implementation chỉ đại diện state hiện tại.
+Điểm conceptual là DSU có thể được mở rộng theo trục **time**, nhưng standard cách triển khai chỉ đại diện trạng thái hiện tại.
 
-## Small-to-large merging khác DSU thế nào?
+## gộp nhỏ vào lớn khác DSU thế nào?
 
-Một technique khác cũng gọi “merge smaller into larger” là small-to-large merging của sets/maps trên tree. Ví dụ merge color-frequency maps của children vào largest map.
+Một technique khác cũng gọi “merge smaller into larger” là gộp nhỏ vào lớn của sets/maps trên cây. Ví dụ merge color-frequency maps của các nút con vào largest map.
 
-Nó dùng cùng doubling argument để bound element moves `O(log n)`, nhưng không phải DSU. DSU duy trì partition identity; small-to-large có thể duy trì rich collections.
+Kỹ thuật này dùng cùng lập luận nhân đôi để chặn số lần một phần tử bị di chuyển ở `O(log n)`, nhưng nó không phải DSU. DSU duy trì định danh của các phân hoạch, còn gộp nhỏ vào lớn có thể duy trì các tập hợp dữ liệu giàu thông tin hơn.
 
-Cùng proof pattern không đồng nghĩa cùng data structure.
+Cùng chứng minh mẫu không đồng nghĩa cùng cấu trúc dữ liệu.
 
-## Java implementation đầy đủ cơ bản
+## Java cách triển khai đầy đủ cơ bản
 
 ```java
 final class DSU {
@@ -443,7 +443,7 @@ final class DSU {
 }
 ```
 
-## JavaScript implementation
+## JavaScript cách triển khai
 
 ```js
 class DSU {
@@ -482,25 +482,25 @@ class DSU {
 }
 ```
 
-## Common misconceptions
+## Những hiểu lầm phổ biến
 
-**“Representative là smallest element.”** Không trừ khi bạn chủ động giữ rule đó. Root chỉ là implementation identity.
+**“Representative là smallest phần tử.”** Không trừ khi bạn chủ động giữ quy tắc đó. nút gốc chỉ là cách triển khai identity.
 
-**“DSU cho biết đường đi giữa hai vertices.”** Không. Nó chỉ biết cùng component hay không.
+**“DSU cho biết đường đi giữa hai các đỉnh.”** Không. Nó chỉ biết cùng thành phần hay không.
 
-**“DSU dùng được cho directed reachability.”** Không theo standard formulation; directed connectivity không phải equivalence relation đơn giản.
+**“DSU dùng được cho directed reachability.”** Không theo standard formulation; directed connectivity không phải quan hệ tương đương đơn giản.
 
-**“Path compression luôn nên bật.”** Không nếu cần rollback/undo hoặc một persistence design cụ thể.
+**“đường đi compression luôn nên bật.”** Không nếu cần rollback/undo hoặc một persistence design cụ thể.
 
-**“`size[x]` luôn là component size.”** Thường chỉ đúng ở root. Hãy dùng `size[find(x)]`.
+**“`size[x]` luôn là thành phần size.”** Thường chỉ đúng ở nút gốc. Hãy dùng `size[find(x)]`.
 
-**“Gần O(1) nghĩa là worst-case O(1).”** Không. Bound chuẩn là amortized `O(alpha(n))` với hai optimizations.
+**“Gần O(1) nghĩa là trường hợp xấu nhất O(1).”** Không. Bound chuẩn là amortized `O(alpha(n))` với hai optimizations.
 
-## Testing DSU
+## kiểm thử DSU
 
-Một test tốt nên tạo random union/query sequence và compare với reference graph connectivity trên `n` nhỏ.
+Một test tốt nên tạo ngẫu nhiên union/truy vấn sequence và so sánh với tham chiếu đồ thị connectivity trên `n` nhỏ.
 
-Invariants nên kiểm:
+các bất biến nên kiểm:
 
 ```text
 parent[root] == root
@@ -510,11 +510,11 @@ components giảm đúng một khi union successful
 connected là equivalence relation
 ```
 
-Equivalence relation nghĩa là reflexive, symmetric và transitive. Đây cũng là lý do DSU hợp với partition problems.
+quan hệ tương đương nghĩa là reflexive, symmetric và transitive. Đây cũng là lý do DSU hợp với partition problems.
 
-## Connection với equivalence classes
+## Connection với các lớp tương đương
 
-Nếu relation “cùng nhóm” thực sự là equivalence relation, DSU là representation tự nhiên:
+Nếu relation “cùng nhóm” thực sự là quan hệ tương đương, DSU là cách biểu diễn tự nhiên:
 
 ```text
 x ~ x                     reflexive
@@ -522,12 +522,12 @@ x ~ y => y ~ x            symmetric
 x ~ y và y ~ z => x ~ z   transitive
 ```
 
-Connected components của undirected graph, account merging theo shared identity, synonym groups, clustering dưới merge rules đều có thể được nhìn như equivalence classes.
+Connected các thành phần của đồ thị vô hướng (undirected graph), account merging theo định danh dùng chung, synonym groups, clustering dưới merge các quy tắc đều có thể được nhìn như các lớp tương đương.
 
-## Mental Model mở rộng
+## Mô hình tư duy mở rộng
 
-> DSU là một structure tối ưu cho **monotonic equivalence merging**. Nó đổi path/topology detail lấy component identity cực rẻ.
+> DSU là một structure tối ưu cho **monotonic equivalence merging**. Nó đổi đường đi/topology detail lấy thành phần identity cực rẻ.
 
-Khi gặp bài toán connectivity, hãy hỏi: edges chỉ được thêm hay còn bị xóa? Query cần path hay chỉ yes/no cùng component? Có threshold offline không? Có metadata per component không? Có cần rollback không?
+Khi gặp bài toán connectivity, hãy hỏi: các cạnh chỉ được thêm hay còn bị xóa? truy vấn cần đường đi hay chỉ yes/no cùng thành phần? Có threshold ngoại tuyến không? Có siêu dữ liệu per thành phần không? Có cần rollback không?
 
-Nếu câu trả lời là “chỉ merge và hỏi cùng nhóm”, DSU thường là abstraction đúng hơn BFS/DFS lặp lại.
+Nếu câu trả lời là “chỉ merge và hỏi cùng nhóm”, DSU thường là sự trừu tượng (abstraction) đúng hơn BFS/DFS lặp lại.

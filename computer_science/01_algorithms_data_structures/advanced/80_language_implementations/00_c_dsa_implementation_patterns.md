@@ -1,63 +1,31 @@
-# DSA Implementation Patterns trong C
-**C 자료구조 구현 패턴**
+# Các mẫu triển khai DSA trong C
+**C DSA Implementation Patterns / C 자료구조 구현 패턴**
 
-C là ngôn ngữ rất tốt để học DSA vì nó làm lộ ra những thứ mà runtime cao cấp thường che: memory layout, pointer arithmetic, allocation, ownership, object lifetime và failure handling. Nhưng chính vì vậy, một data structure trong C chỉ được coi là “đúng” khi cả hai lớp invariant đều đúng:
+C là ngôn ngữ rất tốt để học DSA vì nó làm lộ rõ những gì runtime cấp cao thường che đi: bố trí bộ nhớ, số học con trỏ, cấp phát, quyền sở hữu (ownership), vòng đời và xử lý lỗi. Vì vậy một cấu trúc dữ liệu C chỉ thực sự đúng khi đồng thời giữ được **bất biến logic** của thuật toán và **bất biến vòng đời/quyền sở hữu** của bộ nhớ.
 
-```text
-logical invariant của algorithm/data structure
-+
-memory lifetime / ownership invariant
-```
+Một heap có thể giữ đúng thứ tự nhưng vẫn sai vì ghi vượt bộ đệm. Một danh sách có thể cho kết quả đúng trên ví dụ nhỏ nhưng vẫn chứa con trỏ treo. Học DSA bằng C là học cả thuật toán lẫn cách biểu diễn.
 
-Một heap có thể giữ đúng order property nhưng vẫn sai vì buffer overflow. Một linked list có thể traverse đúng sample nhưng vẫn chứa dangling pointer. Học DSA bằng C vì thế là học cả representation lẫn algorithm.
+## Quyền sở hữu là một phần của hợp đồng API
 
-## Ownership phải là part của API contract
-
-Một container lưu pointer có thể theo một trong ba semantic chính:
+Một container lưu con trỏ thường có ba lựa chọn ngữ nghĩa:
 
 ```text
-own object
-borrow object
-copy object/value
+sở hữu object
+mượn object
+sao chép object/giá trị
 ```
 
-Ví dụ list node chứa `void *value`. Khi destroy list, có free `value` không? Nếu container borrow pointer, không được free. Nếu own, phải free theo đúng allocator/destructor contract.
-
-Một API general-purpose có thể nhận callback:
+Nếu container sở hữu dữ liệu, nó phải biết cách hủy dữ liệu. Một API tổng quát có thể nhận callback:
 
 ```c
 typedef void (*destroy_fn)(void *);
 ```
 
-Container giữ `destroy_fn` và gọi khi xóa element.
+Nếu quyền sở hữu không rõ, các lỗi thường gặp là double-free, use-after-free, rò rỉ bộ nhớ hoặc giải phóng bằng sai allocator.
 
-Nếu ownership không rõ, bug thường là:
+Một API tốt phải trả lời: ai tạo/hủy container, ai sở hữu phần tử, con trỏ trả về sống tới khi nào và thao tác nào làm con trỏ/bộ lặp mất hiệu lực.
 
-```text
-double free
-use-after-free
-memory leak
-free sai allocator
-```
-
-## Rule “who allocates, who frees”
-
-Một design tốt trả lời được:
-
-```text
-ai tạo container?
-ai hủy container?
-container có allocate nodes riêng không?
-element storage thuộc caller hay container?
-returned pointer sống tới khi nào?
-operation nào invalidate pointer/iterator?
-```
-
-Đây là “lifetime API”, không phải documentation phụ.
-
-## Dynamic array representation
-
-Một vector cơ bản:
+## Mảng động
 
 ```c
 typedef struct {
@@ -67,95 +35,51 @@ typedef struct {
 } IntVector;
 ```
 
-Invariant:
+Bất biến chính:
 
 ```text
 0 <= size <= capacity
-data == NULL nếu capacity == 0 (theo convention)
-valid elements nằm trong [0, size)
-allocated storage đủ capacity elements
+các phần tử hợp lệ nằm trong [0, size)
+vùng cấp phát đủ chứa capacity phần tử
 ```
 
-Append nếu `size == capacity` cần grow.
+Nếu mỗi lần đầy chỉ tăng capacity thêm 1, tổng chi phí sao chép của nhiều lần append trở thành bậc hai. Tăng theo cấp số nhân, ví dụ nhân 2 hoặc khoảng 1.5, cho append `O(1)` khấu hao.
 
-## Growth strategy và amortized O(1)
-
-Nếu mỗi lần đầy chỉ tăng capacity thêm 1, sequence append có total copy cost quadratic.
-
-Geometric growth:
-
-```text
-capacity *= 2
-```
-
-hoặc factor ~1.5 giúp append amortized `O(1)`.
-
-C implementation phải tránh overflow:
+Phải kiểm tra overflow trước khi tính kích thước cấp phát:
 
 ```c
-if (capacity > SIZE_MAX / 2) {
-    // cannot double safely
-}
+if (capacity > SIZE_MAX / 2) return false;
+if (new_capacity > SIZE_MAX / sizeof *v->data) return false;
 ```
 
-và tránh overflow trong bytes:
-
-```c
-if (new_capacity > SIZE_MAX / sizeof *data) {
-    // allocation size overflow
-}
-```
-
-## `realloc` và pointer invalidation
-
-`realloc` có thể move buffer.
+## realloc và mất hiệu lực của con trỏ
 
 ```c
 int *new_data = realloc(v->data, new_cap * sizeof *v->data);
-if (!new_data) {
-    return false;
-}
+if (!new_data) return false;
 
 v->data = new_data;
 v->capacity = new_cap;
 ```
 
-Không viết:
+Không nên ghi trực tiếp kết quả `realloc` vào con trỏ cũ nếu muốn giữ vùng cũ khi cấp phát thất bại. `realloc` thành công có thể di chuyển buffer, vì vậy mọi con trỏ tới phần tử cũ có thể mất hiệu lực.
 
-```c
-v->data = realloc(v->data, ...);
-```
+Đây là ví dụ cách biểu diễn bộ nhớ tạo ra ngữ nghĩa API.
 
-nếu muốn preserve old pointer khi failure.
+## Cập nhật theo kiểu giao dịch
 
-Sau successful growth, mọi pointer tới old elements có thể invalid vì base address đổi.
-
-Đây là API semantic trực tiếp từ representation.
-
-## Transactional mutation
-
-Một mutation tốt thường theo pattern:
+Một thay đổi cấu trúc nên theo mẫu:
 
 ```text
-prepare resources
-validate success
-commit structural change
+chuẩn bị tài nguyên mới
+xác nhận thành công
+commit thay đổi cấu trúc
+sau đó giải phóng trạng thái cũ
 ```
 
-Ví dụ insert vào hash table có resize:
+Ví dụ resize Hash Table: cấp phát bảng mới, rehash thành công, đổi con trỏ/capacity rồi mới giải phóng bảng cũ. Nếu cập nhật nửa chừng rồi cấp phát thất bại, cấu trúc có thể bị hỏng.
 
-```text
-allocate new buckets
-rehash thành công
-sau đó swap pointer/capacity
-free old buckets
-```
-
-Nếu mutation cập nhật half state rồi allocation fail, structure có thể corrupt.
-
-Thinking transactionally giúp exception-safety-like reasoning trong C.
-
-## Linked list node ownership
+## Danh sách liên kết
 
 ```c
 typedef struct Node {
@@ -164,7 +88,7 @@ typedef struct Node {
 } Node;
 ```
 
-Insert front:
+Chèn đầu:
 
 ```c
 Node *n = malloc(sizeof *n);
@@ -176,136 +100,64 @@ list->head = n;
 list->size++;
 ```
 
-Delete phải update links trước/đúng order rồi free đúng node.
+Khi xóa, phải nối lại các liên kết trước khi giải phóng nút. Nếu bên ngoài còn giữ con trỏ tới nút bị xóa, con trỏ đó trở thành không hợp lệ.
 
-Nếu caller giữ pointer tới deleted node, pointer đó invalid. API reusable nên document iterator/node invalidation.
-
-## Doubly linked list invariant
-
-Nếu node có `prev` và `next`, invariant mạnh hơn:
+Với danh sách đôi, cần giữ bất biến hai chiều:
 
 ```text
 n->next != NULL => n->next->prev == n
 n->prev != NULL => n->prev->next == n
 ```
 
-Bug thường đến từ quên update một chiều.
+Nút canh gác (sentinel) có thể giảm số trường hợp đặc biệt ở đầu/cuối danh sách và làm logic nối lại đồng đều hơn.
 
-Debug validator nên assert cả hai directions.
+## Stack, queue và bộ đệm vòng
 
-## Sentinel nodes
-
-Sentinel head/tail giảm special cases cho empty/first/last insertion.
-
-Thay vì nhiều branch:
-
-```text
-if head == NULL
-if deleting first
-if deleting last
-```
-
-sentinel biến operations thành relink uniform.
-
-Trade-off là thêm nodes/abstraction, nhưng code correctness thường tốt hơn.
-
-## Stack/queue bằng array hay linked nodes?
-
-Array stack thường locality tốt và đơn giản.
-
-Linked stack cho growth từng node nhưng nhiều allocations/pointer chasing.
-
-Queue có thể dùng circular buffer để tránh shifting.
+Stack bằng mảng thường có locality tốt và ít cấp phát. Queue có thể dùng **bộ đệm vòng (ring buffer)** để tránh dịch chuyển phần tử.
 
 ```c
 index = (index + 1) % capacity;
 ```
 
-Nếu capacity power-of-two, có thể dùng mask:
+Nếu capacity luôn là lũy thừa của 2:
 
 ```c
 index = (index + 1) & (capacity - 1);
 ```
 
-nhưng chỉ đúng khi invariant capacity là power-of-two.
+Tối ưu bằng bitmask chỉ đúng khi bất biến capacity được duy trì.
 
-Optimization phải đi kèm invariant rõ.
+Có nhiều quy ước ring buffer như `head + size`, `head/tail + one-empty-slot` hoặc thêm cờ `full`. Phải chọn một mô hình và dùng nhất quán.
 
-## Circular buffer invariant
-
-Có nhiều design:
-
-```text
-head + size
-head/tail + one-empty-slot
-head/tail + full flag
-```
-
-Chọn một model và giữ nhất quán. Nhiều queue bugs đến từ mix hai conventions.
-
-## Generic containers: `void *`
-
-`void *` cho runtime genericity:
+## Container tổng quát với void*
 
 ```c
 typedef int (*compare_fn)(const void *, const void *);
 ```
 
-BST, heap hoặc sort generic cần comparator.
+`void *` cho phép viết heap, BST hoặc sort tổng quát nhưng đổi lại mất một phần an toàn kiểu tĩnh, cần cast và làm hợp đồng ownership phức tạp hơn.
 
-Trade-off:
+Macro có thể sinh container theo kiểu cụ thể, giảm cast nhưng làm debug và thông báo lỗi khó hơn. C không có generics native, vì vậy đây là một đánh đổi thiết kế thực sự.
 
-```text
-mất static type safety
-callback overhead
-ownership callback phức tạp
-casts nhiều hơn
-```
+## Hợp đồng comparator
 
-Với DSA learning, typed `int` version trước rồi generalize thường tốt hơn.
-
-## Genericity bằng macro
-
-Macro có thể generate typed container code:
-
-```text
-VECTOR_DEFINE(int, IntVector)
-VECTOR_DEFINE(double, DoubleVector)
-```
-
-Ưu điểm: type-specific, no `void *` cast.
-
-Nhược điểm: macro debugging, error messages và compile-time code duplication.
-
-C không có generics native nên đây là design trade-off thật.
-
-## Comparator contract
-
-Comparator không chỉ trả số âm/dương bất kỳ; nó phải consistent.
-
-Tránh:
+Comparator phải nhất quán và có tính bắc cầu. Tránh:
 
 ```c
 return a - b;
 ```
 
-vì signed overflow.
-
-Safer:
+vì signed overflow. Với số nguyên:
 
 ```c
 return (a > b) - (a < b);
 ```
 
-Với struct, comparator phải tạo order transitive. Nếu comparator inconsistent, qsort/BST/heap semantics có thể sai khó đoán.
+thường an toàn hơn.
 
-## `qsort` caveat
+`qsort` tiện dụng nhưng gọi comparator qua function pointer và API `void *`. Trong đường chạy số học rất nóng, sort chuyên biệt có thể nhanh hơn, nhưng chỉ nên thay thế sau khi đo.
 
-Standard `qsort` tiện nhưng comparator gọi qua function pointer và API `void *` có overhead/type-unsafety.
-
-Trong hot numeric code, specialized sort có thể nhanh hơn. Nhưng custom sorting chỉ đáng nếu measurement yêu cầu; library qsort đủ cho nhiều workloads.
-
-## Struct padding và alignment
+## Padding, alignment và bố trí dữ liệu
 
 ```c
 typedef struct {
@@ -315,231 +167,76 @@ typedef struct {
 } Node;
 ```
 
-Compiler có thể insert padding để alignment. `sizeof(Node)` có thể lớn hơn tổng field sizes.
+Compiler có thể chèn padding để căn chỉnh. `sizeof(Node)` mới là chi phí thực tế.
 
-Khi có hàng triệu nodes, padding ảnh hưởng memory footprint/cache.
+**Array of Structures (AoS)** phù hợp khi thường đọc toàn bản ghi. **Structure of Arrays (SoA)** có thể tốt hơn nếu thuật toán chủ yếu quét một vài trường vì tăng locality và khả năng vectorization.
 
-Reorder fields đôi khi giảm padding, nhưng ABI/readability cũng quan trọng.
+Cách bố trí nên phù hợp mẫu truy cập.
 
-## Array of Structs vs Struct of Arrays
+## Arena và pool allocator
 
-AoS:
+Cấu trúc nhiều nút gọi `malloc` cho từng nút có thể tốn metadata và gây phân mảnh.
 
-```c
-typedef struct {
-    float x, y, z;
-    int id;
-} Point;
+Arena cấp phát một khối lớn rồi chia tuần tự thành các nút. Nó nhanh, có locality tốt và rất phù hợp khi nhiều object có cùng vòng đời, nhưng khó giải phóng riêng từng nút.
 
-Point points[n];
-```
-
-SoA:
-
-```c
-float x[n];
-float y[n];
-float z[n];
-int id[n];
-```
-
-Nếu algorithm thường đọc toàn record, AoS natural.
-
-Nếu chỉ quét một field, SoA có thể cache/SIMD-friendly hơn.
-
-Data layout nên match access pattern.
-
-## Arena allocation
-
-Node-heavy structures gọi `malloc` cho từng node có overhead và fragmentation.
-
-Arena:
+Pool với free-list phù hợp khi object có kích thước cố định và thường xuyên được tái sử dụng:
 
 ```text
-allocate big block
-carve nodes sequentially
-free whole arena at once
+free node     -> đưa vào free list
+allocate node -> lấy từ free list trước khi xin vùng mới
 ```
 
-Ưu điểm:
+Nếu bên ngoài giữ handle lâu dài, generation counter `(index, generation)` giúp phát hiện handle cũ sau khi slot được tái sử dụng.
 
-```text
-fast allocation
-better locality
-simple bulk lifetime
-```
+## Handle thay cho con trỏ thô
 
-Nhược điểm:
+Khi storage có thể di chuyển hoặc compact, public API giữ raw pointer rất rủi ro. Một handle số nguyên có thể ánh xạ tới slot nội bộ. Nếu storage di chuyển, ánh xạ thay đổi nhưng handle vẫn ổn định.
 
-```text
-khó free individual node
-lifetime coarse
-memory có thể giữ tới end of arena
-```
+Mẫu này phổ biến trong game engine và ECS.
 
-AST/temporary graph/tree workloads rất hợp arena.
+## Hash Table và cách xử lý va chạm
 
-## Pool allocator
+**Separate chaining** lưu bucket trỏ tới danh sách entry. **Open addressing** lưu entry trực tiếp trong bảng và thường có locality tốt hơn, nhưng probing, hệ số tải và xóa phức tạp hơn.
 
-Nếu nodes fixed-size và cần reuse delete/insert, free-list pool có thể tái sử dụng slots.
-
-```text
-free node -> push vào free list
-allocate node -> pop free list trước khi request new memory
-```
-
-Pool giữ stable addresses tốt hơn reallocating vector nhưng cần quản generations nếu external handles tồn tại.
-
-## Handle thay raw pointer
-
-Trong systems code, external users giữ raw pointer vào movable storage rất rủi ro.
-
-Có thể dùng integer handle/index:
-
-```text
-handle -> slot
-```
-
-Nếu compaction/move xảy ra, mapping cập nhật nhưng public handle stable.
-
-Generation counter giúp detect stale handles:
-
-```text
-(index, generation)
-```
-
-Game engines/ECS thường dùng idea này.
-
-## Hash table layout
-
-Separate chaining:
-
-```text
-bucket array -> linked/list entries
-```
-
-Open addressing:
-
-```text
-entries stored directly in table slots
-```
-
-Open addressing thường locality tốt hơn nhưng load factor/probing/deletion marker phức tạp.
-
-C cho phép thấy rõ cache trade-off của hai designs.
-
-## Tombstone trong open addressing
-
-Delete không thể luôn set slot thành EMPTY vì search chain có thể bị cắt sớm.
-
-Need states:
+Khi xóa trong open addressing, không thể luôn đặt slot thành `EMPTY` vì có thể cắt chuỗi probing. Thường cần ba trạng thái:
 
 ```text
 EMPTY
 OCCUPIED
-DELETED/TOMBSTONE
+DELETED / TOMBSTONE
 ```
 
-Too many tombstones degrade probing, nên resize/rehash có thể cần dù table chưa full.
+Quá nhiều tombstone làm probing dài hơn, vì vậy đôi khi phải rehash dù bảng chưa đầy.
 
-## Hash function và integer overflow
+Nếu hash dựa vào phép quay vòng số nguyên, nên dùng kiểu unsigned vì unsigned overflow trong C có ngữ nghĩa modulo xác định; signed overflow thì không.
 
-Unsigned overflow trong C có modulo semantics xác định; signed overflow undefined behavior.
+## Độ sâu đệ quy
 
-Hash code nên dùng unsigned types khi relying on wraparound.
+DFS đệ quy rất dễ đọc nhưng stack hữu hạn. Cây lệch hoặc đồ thị dạng đường hàng trăm nghìn đỉnh có thể gây stack overflow.
 
-Understanding integer semantics là part của correct implementation.
+Stack tường minh trên heap cho phép kiểm soát dung lượng và xử lý lỗi cấp phát. Thuật toán vẫn là DFS; chỉ thay cách lưu trạng thái điều khiển.
 
-## Recursion depth
-
-Recursive DFS/tree code rất đẹp nhưng stack size hữu hạn.
-
-Adversarial BST chain hoặc graph depth hàng trăm nghìn có thể crash.
-
-Iterative stack:
-
-```c
-typedef struct {
-    int *data;
-    size_t size, capacity;
-} IntStack;
-```
-
-cho phép memory grow trên heap và explicit failure handling.
-
-## Function recursion vs manual stack
-
-Manual stack còn cho phép lưu exactly state cần thiết thay vì full function frame. Điều này có thể giảm memory và giúp pause/resume traversal.
-
-Nhưng code phức tạp hơn. Use when depth safety/control needed.
-
-## Integer overflow trong algorithms
-
-Shortest path:
-
-```c
-if (dist[u] != INF && dist[u] + w < dist[v])
-```
-
-có thể overflow nếu types/sentinel sai.
-
-Use wider unsigned/signed type phù hợp và explicit guard.
-
-C signed overflow là undefined behavior, không chỉ wrap predictable.
-
-## `size_t` vs `int`
-
-Array length/index general-purpose nên cân nhắc `size_t`, nhưng subtraction/negative sentinel trở nên tricky vì unsigned.
-
-Không mix signed/unsigned tùy tiện:
-
-```c
-for (size_t i = n; i-- > 0; ) { ... }
-```
-
-cần pattern đúng để tránh underflow logic bugs.
-
-## `const` như contract
-
-Reader function:
+## const, restrict và aliasing
 
 ```c
 const Node *tree_find(const Tree *tree, int key);
 ```
 
-cho thấy function không được mutate qua những pointers đó.
+`const` thể hiện rằng hàm không được sửa dữ liệu qua con trỏ đó. Nó không chứng minh bất biến sâu nhưng giúp hợp đồng API rõ hơn.
 
-`const` không chứng minh deep immutability, nhưng giúp API intent rõ và compiler bắt accidental writes.
+`restrict` có thể cho compiler biết các con trỏ không alias theo hợp đồng và mở thêm cơ hội tối ưu. Dùng sai `restrict` dẫn tới undefined behavior, vì vậy chỉ dùng khi mô hình aliasing được hiểu chắc chắn.
 
-## `restrict`
+API cấu trúc dữ liệu nên hạn chế để lộ con trỏ nội bộ có thể thay đổi nếu không cần thiết.
 
-Trong performance-critical code, `restrict` có thể cho compiler biết pointers không alias theo contract, giúp optimization.
+## Quy tắc mất hiệu lực
 
-Nhưng dùng sai `restrict` dẫn tới undefined behavior. Chỉ dùng khi ownership/aliasing semantics được hiểu chắc.
+Mảng động resize có thể làm con trỏ phần tử mất hiệu lực. Hash Table rehash làm bucket/con trỏ nội bộ mất hiệu lực. Xóa nút danh sách làm con trỏ tới nút đó mất hiệu lực. Xoay cây có thể giữ địa chỉ nút nhưng thay đổi quan hệ cha–con.
 
-## Aliasing
+Thư viện C tốt nên ghi rõ các quy tắc này giống cách container C++ mô tả iterator invalidation.
 
-Hai pointers có thể trỏ cùng object. Mutation qua một alias ảnh hưởng value đọc qua alias khác.
+## Mã lỗi và cleanup
 
-Compiler optimization và reasoning manual đều khó hơn khi aliasing uncontrolled.
-
-C data structure API nên hạn chế expose mutable internal pointers nếu không cần.
-
-## Iterator invalidation
-
-Dynamic array growth invalidates element pointers.
-
-Hash table resize invalidates bucket/internal pointers.
-
-Linked list insertion thường không invalid node pointers khác, nhưng deletion invalid deleted node.
-
-Tree rotations có thể giữ node addresses nhưng thay parent/child relations.
-
-Document invalidation rules như C++ containers dù viết C library.
-
-## Error codes
-
-Bool đôi khi không đủ:
+`bool` đôi khi không đủ để mô tả lỗi:
 
 ```c
 typedef enum {
@@ -550,48 +247,19 @@ typedef enum {
 } DsResult;
 ```
 
-Explicit errors giúp caller phân biệt allocation failure với semantic failure.
+Hàm khởi tạo nhiều tài nguyên phải cleanup đúng khi một bước giữa thất bại. Mẫu `goto cleanup` trong C có thể làm luồng giải phóng tập trung và dễ kiểm chứng hơn nhiều nhánh lồng nhau.
 
-## Partial initialization và cleanup
+Destructor có thể đặt con trỏ về `NULL` và reset metadata sau `free`, nhưng điều đó không làm các alias khác tự biến mất. Dùng object sau khi destroy vẫn là lỗi ngữ nghĩa.
 
-Constructor-like function allocate nhiều resources:
-
-```text
-allocate struct
-allocate buffer A
-allocate buffer B
-```
-
-Nếu B fail, phải free A và struct.
-
-Common `goto cleanup` pattern trong C có thể làm cleanup centralized và correct hơn nested branches.
-
-## Destructor phải idempotent không?
-
-Có thể design:
+## Sao chép, clone và chuyển quyền sở hữu
 
 ```c
-void vector_destroy(Vector *v) {
-    free(v->data);
-    v->data = NULL;
-    v->size = 0;
-    v->capacity = 0;
-}
+Tree b = a;
 ```
 
-Sau đó destroy lần hai relatively safe nếu `free(NULL)`.
+nếu `Tree` chứa con trỏ thì đây chỉ là sao chép nông. Nếu cả `a` và `b` cùng được destroy, có thể double-free.
 
-Nhưng caller dùng object sau destroy vẫn semantic error. API contract cần rõ.
-
-## Copy, move và clone semantics
-
-C không có automatic copy constructors.
-
-`Tree b = a;` chỉ shallow-copy pointers nếu struct contains pointers.
-
-Nếu cả hai destroy, double-free.
-
-Need explicit:
+API nên tách rõ:
 
 ```text
 clone/deep_copy
@@ -599,34 +267,26 @@ move/transfer ownership
 borrow reference
 ```
 
-Naming/API patterns giúp tránh accidental shallow copy.
+Tên hàm và hợp đồng rõ ràng giúp tránh sao chép nông ngoài ý muốn.
 
-## Stable address vs compact storage
+## Địa chỉ ổn định và lưu trữ gọn
 
-Pointer-based nodes có stable addresses nhưng locality kém.
+Nút cấp phát riêng có địa chỉ ổn định nhưng locality kém. Nút tham chiếu nhau bằng index trong vector có thể gọn hơn; vector resize có thể đổi địa chỉ cơ sở nhưng index vẫn ổn định nếu thứ tự slot không đổi.
 
-Index-based nodes trong vector compact hơn nhưng growth may move base pointer; indices vẫn stable nếu elements không reordered.
+Lựa chọn phụ thuộc việc bên ngoài có giữ reference/handle hay không và mẫu truy cập thực tế.
 
-Choose based on external references and performance.
+## Biểu diễn đồ thị
 
-## Graph representation trong C
-
-Object-per-edge linked lists dễ implement nhưng overhead lớn.
-
-Compact representation:
+Mỗi cạnh là một object/nút liên kết dễ cài nhưng tốn cấp phát. Với đồ thị tĩnh, CSR gọn hơn:
 
 ```c
 size_t offsets[n + 1];
 int edges[m];
 ```
 
-CSR rất phù hợp static graph.
-
-Dynamic graph có thể dùng edge vectors per vertex hoặc pooled adjacency blocks.
+Đồ thị động có thể dùng vector cạnh cho từng đỉnh hoặc block adjacency từ pool.
 
 ## Flexible Array Member
-
-C cho phép:
 
 ```c
 typedef struct {
@@ -635,17 +295,15 @@ typedef struct {
 } Block;
 ```
 
-Allocate header + elements trong một block:
+Có thể cấp phát header và dữ liệu trong cùng một khối:
 
 ```c
 malloc(sizeof(Block) + n * sizeof(int));
 ```
 
-Giảm pointer indirection/allocation, nhưng size arithmetic phải overflow-safe.
+Cách này giảm một lần gián tiếp qua con trỏ và giảm số cấp phát, nhưng phép tính kích thước phải chống overflow.
 
 ## Intrusive data structures
-
-Intrusive list/tree node embed link fields trong user object:
 
 ```c
 typedef struct Task {
@@ -654,183 +312,106 @@ typedef struct Task {
 } Task;
 ```
 
-Không cần wrapper node allocation.
+Intrusive list nhúng trường liên kết trực tiếp vào object người dùng nên không cần wrapper node. Đổi lại, object bị gắn với bố trí của cấu trúc; nếu muốn tham gia nhiều list có thể cần nhiều trường liên kết.
 
-Trade-off là object tied to structure/layout và một object muốn ở nhiều lists cần multiple link fields.
+## Sentinel và trạng thái tường minh
 
-Linux kernel dùng intrusive patterns rất nhiều.
+Không nên dùng `0`, `-1` hoặc một “magic value” làm rỗng nếu miền dữ liệu hợp lệ có thể chứa chính giá trị đó. Nên dùng size, cờ hoặc trạng thái riêng.
 
-## Sentinel value vs explicit state
+Bài học này áp dụng cho tombstone của Hash Table và `INF` trong thuật toán đồ thị.
 
-Đừng dùng `0`, `-1` hoặc magic value làm “empty” nếu domain có thể chứa value đó.
+## Bộ xác minh bất biến
 
-Prefer explicit state/size/boolean where ambiguity possible.
-
-Same lesson applies hash table tombstones và graph distance INF.
-
-## Debug validators
-
-Mỗi complex structure nên có debug-only validator.
-
-Heap:
+Cấu trúc phức tạp nên có validator dùng trong debug/test.
 
 ```text
-for each child: parent <= child
+Heap       -> parent <= child
+BST        -> mọi khóa nằm trong khoảng hợp lệ
+LinkedList -> size khớp số nút, prev/next đối xứng
+Hash Table -> số slot occupied khớp size và lookup tìm được mọi entry
 ```
 
-BST:
+Chạy validator sau chuỗi thao tác ngẫu nhiên giúp bắt lỗi cấu trúc ngay tại thời điểm bất biến bị phá.
+
+## Sanitizer và phân tích tĩnh
+
+Các công cụ rất hữu ích gồm:
 
 ```text
-all keys inside allowed range
+AddressSanitizer           -> out-of-bounds, use-after-free
+UndefinedBehaviorSanitizer -> signed overflow, shift sai, UB khác
+LeakSanitizer              -> rò rỉ bộ nhớ tùy nền tảng/toolchain
 ```
 
-Linked list:
+Valgrind, compiler warnings và static analyzer cũng giúp tìm lỗi vòng đời và khởi tạo. Nên biên dịch với cảnh báo mạnh như `-Wall -Wextra -Wconversion` và xử lý cảnh báo nghiêm túc.
+
+Đầu ra đúng trên vài test không chứng minh chương trình an toàn bộ nhớ.
+
+## Fuzzing và kiểm thử đối chiếu
+
+Cấu trúc dữ liệu rất phù hợp với chuỗi thao tác ngẫu nhiên:
 
 ```text
-size count matches traversal
-prev/next symmetric
-no unexpected cycle
+insert / delete / find
+so sánh với mô hình tham chiếu đơn giản
+chạy validator và sanitizer
 ```
 
-Hash table:
+Heap tự cài đặt có thể đối chiếu chuỗi pop với bản sao dữ liệu được `qsort`. Hash Set tự cài đặt có thể đối chiếu với mảng nhỏ xử lý tuyến tính.
 
-```text
-occupied count matches size
-lookup finds every stored entry
-```
-
-Validate after random operation sequences.
-
-## Sanitizers
-
-Compiler sanitizers là cực kỳ hữu ích:
-
-```text
-AddressSanitizer   -> out-of-bounds/use-after-free
-UndefinedBehaviorSanitizer -> signed overflow, invalid shifts, etc.
-LeakSanitizer      -> leaks tùy platform/toolchain
-```
-
-Correct output không chứng minh memory-safe code.
-
-## Valgrind và static analysis
-
-Valgrind, compiler warnings, clang-tidy/static analyzers giúp tìm lifetime/initialization issues.
-
-Compile với warnings mạnh:
-
-```text
--Wall -Wextra -Wconversion ...
-```
-
-và treat warnings nghiêm túc trong learning projects.
-
-## Fuzzing
-
-Data structures rất hợp fuzzing:
-
-```text
-random sequence insert/delete/find
-compare với simple reference model
-run validators/sanitizers
-```
-
-Custom parser/tree/hash bugs thường lộ nhanh hơn manual tests.
-
-## Differential testing
-
-Ví dụ custom C heap có thể compare pop sequence với:
-
-```text
-copy data
-qsort reference
-```
-
-Custom set có thể compare small input với sorted-array reference.
-
-Reference chậm nhưng đơn giản là test oracle tốt.
+Một oracle chậm nhưng đơn giản thường tốt hơn một oracle tối ưu phức tạp.
 
 ## Benchmark đúng
 
-Benchmark C phải compile optimization flags consistent:
+Benchmark C nên dùng cờ tối ưu nhất quán như `-O2` hoặc `-O3`, đồng thời bảo đảm compiler không loại bỏ công việc vì kết quả không được quan sát.
 
-```text
--O2 hoặc -O3
-```
+Nên thử nhiều hình dạng đầu vào, đo cả cấp phát nếu cấu trúc dùng nhiều nút và phân biệt rõ cache nóng/lạnh khi điều đó quan trọng.
 
-đồng thời tránh benchmark bị compiler optimize away.
+## ABI và kiểu mờ
 
-Test multiple input shapes, warm caches/cold caches nếu relevant, và measure allocation separately nếu node-heavy.
-
-## ABI và library boundaries
-
-Nếu expose struct definition public, caller phụ thuộc layout. Nếu muốn encapsulation, header có thể forward-declare opaque type:
+Nếu public header công khai toàn bộ `struct`, mã người dùng phụ thuộc bố trí dữ liệu. Nếu muốn đóng gói:
 
 ```c
 typedef struct HashMap HashMap;
 ```
 
-Implementation fields nằm trong `.c` file.
+có thể khai báo kiểu mờ trong header và giữ trường thật trong file `.c`. Khi đó implementation có thể đổi cách biểu diễn mà không thay public API.
 
-Opaque type cho phép đổi representation mà không đổi public API.
+## Pool, luồng và atomic
 
-## Memory pool và thread safety
+Allocator/pool tùy biến không tự an toàn luồng. Môi trường concurrent cần khóa, pool theo luồng hoặc giao thức đồng bộ phù hợp.
 
-Custom allocator/pool không tự thread-safe. Nếu dùng concurrent, cần synchronization hoặc per-thread pools.
+Thêm `_Atomic` vào con trỏ cũng không tự biến danh sách thành lock-free. Các vấn đề như ABA, memory reclamation, hazard pointer và epoch cần thiết kế thuật toán riêng.
 
-Thêm locks có cost/cache contention. Data structure design phải include concurrency model.
+## Những hiểu lầm phổ biến
 
-## Atomic operations không tự làm structure lock-free
+“C luôn nhanh hơn vì gần phần cứng” — không đúng; mã cấp phát dày và locality kém có thể chậm hơn mảng trong managed runtime.
 
-Dùng `_Atomic` pointer chưa đủ để biến linked structure thành correct lock-free algorithm. ABA problem, memory reclamation/hazard pointers/epochs là advanced topics riêng.
+“free xong đặt con trỏ cục bộ thành NULL là hết dangling pointer” — sai nếu alias khác vẫn tồn tại.
 
-Đừng “thêm atomic” vào pointer algorithm rồi assume thread safety.
+“Big-O đúng thì implementation đúng” — sai; UB và lỗi bộ nhớ có thể phá mọi bảo đảm.
 
-## Common misconceptions
+“Linked List chèn O(1) nên luôn nhanh hơn vector” — bỏ qua chi phí tìm vị trí, cấp phát và cache locality.
 
-“C nhanh hơn vì gần hardware” không đảm bảo implementation nhanh; poor locality/malloc-heavy code có thể chậm hơn managed language arrays.
-
-“free xong set local pointer NULL là hết dangling pointers” sai nếu còn aliases.
-
-“malloc failure không cần xử lý trên desktop” không phù hợp reusable/system code.
-
-“Big-O đúng thì implementation đúng” sai; UB/memory bug có thể phá mọi guarantee.
-
-“Linked list insert O(1) nên nhanh hơn vector” bỏ qua search, allocator và cache locality.
-
-## Một checklist implementation C
-
-Trước khi coi data structure hoàn chỉnh:
+## Checklist triển khai
 
 ```text
-Representation invariant là gì?
-Ownership/lifetime của từng pointer là gì?
-Allocation failure có rollback safe không?
-Size arithmetic có overflow không?
-Pointers/iterators invalid khi nào?
-Recursion depth có bounded không?
-Comparator/hash contract đúng không?
-Có validator và randomized test chưa?
-Sanitizers chạy sạch chưa?
-Benchmark có realistic workload không?
+Bất biến biểu diễn là gì?
+Ai sở hữu từng con trỏ và vòng đời của nó?
+Allocation failure có rollback an toàn không?
+Phép tính kích thước có overflow không?
+Con trỏ/bộ lặp mất hiệu lực khi nào?
+Độ sâu đệ quy có bị chặn không?
+Comparator/hash có đúng hợp đồng không?
+Có validator và random differential test chưa?
+Sanitizer đã chạy sạch chưa?
+Benchmark có phản ánh tải công việc thật không?
 ```
 
-## Mental Model
+## Mô hình tư duy
 
-> Trong C, một data structure tồn tại đồng thời ở hai thế giới: **logical topology** của keys/nodes/edges và **physical topology** của bytes/allocations/pointers. Correctness cần cả hai. Performance cũng cần cả hai: một algorithm asymptotically tốt vẫn có thể tệ nếu allocation dày, locality kém hoặc representation quá lớn.
+> Trong C, cấu trúc dữ liệu tồn tại đồng thời ở hai thế giới: **cấu trúc logic của khóa/nút/cạnh** và **cấu trúc vật lý của byte/vùng cấp phát/con trỏ**. Tính đúng đắn và hiệu năng đều phụ thuộc cả hai.
 
-Học DSA bằng C tốt nhất khi mỗi implementation không chỉ có `push`, `pop`, `find`, mà còn có:
-
-```text
-init/destroy
-clear/clone nếu cần
-error handling
-ownership contract
-invariant validator
-random differential tests
-sanitizer run
-```
-
-Khi đó C trở thành công cụ để hiểu sâu representation thay vì chỉ là syntax pointer.
+Một triển khai DSA hoàn chỉnh không chỉ có `push`, `pop`, `find`; nó còn cần `init/destroy`, xử lý lỗi, hợp đồng ownership, validator, kiểm thử đối chiếu ngẫu nhiên và kiểm tra an toàn bộ nhớ.
 
 Xem thêm: [Memory Models](../00_foundations/03_memory_models_c_java_javascript.md), [Cross-language Testing](./03_cross_language_testing_and_benchmarking.md).

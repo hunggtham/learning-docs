@@ -1,53 +1,101 @@
 # Tính đúng đắn và bất biến của thuật toán
 **Algorithm Correctness & Invariants / 알고리즘 정확성과 불변식**
 
-Một thuật toán nhanh nhưng sai không có giá trị. Test chỉ cho thấy chương trình đúng trên những input đã chạy; nó không tự chứng minh rằng algorithm đúng cho mọi input hợp lệ. Trong DSA, một phần quan trọng của kỹ năng không phải chỉ viết code chạy được, mà là xây được **lập luận về tính đúng đắn (correctness reasoning / 정확성 추론)**: giả định gì trước khi chạy, điều gì luôn đúng trong quá trình chạy, vì sao algorithm tiến tới termination, và tại sao trạng thái cuối buộc phải thỏa yêu cầu.
+Một thuật toán nhanh nhưng sai không có giá trị. Kiểm thử chỉ chứng minh chương trình hoạt động đúng trên những trường hợp đã chạy; nó không tự chứng minh rằng thuật toán đúng với mọi đầu vào hợp lệ. Vì vậy, một năng lực trung tâm của DSA là **lập luận về tính đúng đắn (correctness reasoning)**: biết mình được phép giả định điều gì, điều gì phải luôn đúng trong quá trình chạy, vì sao thuật toán tiến về điểm dừng và vì sao trạng thái cuối bắt buộc thỏa yêu cầu.
 
-Correctness không nhất thiết đồng nghĩa với một proof hình thức dài. Trong thực tế, việc xác định đúng invariant thường đủ để biến một đoạn code “khó tin” thành một chuỗi reasoning kiểm tra được.
+Chứng minh không nhất thiết phải là một văn bản toán học dài. Trong thực hành, chỉ cần xác định đúng specification, invariant và progress measure thường đã đủ biến một đoạn code khó tin thành một chuỗi lập luận có thể kiểm tra.
 
-## Specification: trước khi chứng minh phải biết đang chứng minh điều gì
+## Trước khi chứng minh phải có specification
 
-Một algorithm chỉ có thể được gọi là đúng so với một **specification / 명세** cụ thể. Specification thường gồm input domain, precondition, output semantics và postcondition.
+Một thuật toán chỉ “đúng” so với một **đặc tả (specification / 명세)** cụ thể.
 
-Ví dụ binary search có precondition quan trọng: array được sorted theo comparator mà algorithm sử dụng. Postcondition có thể là: nếu target tồn tại thì trả một index chứa target; nếu không tồn tại thì trả `-1`. Nếu API muốn “first occurrence”, postcondition phải mạnh hơn và algorithm cũng khác.
-
-Điều này cho thấy một lỗi phổ biến: cùng tên “binary search” nhưng specification khác nhau có thể yêu cầu invariant khác nhau.
-
-## Precondition và postcondition
-
-**Điều kiện trước (Precondition / 사전 조건)** là điều phải đúng trước khi algorithm bắt đầu. **Điều kiện sau (Postcondition / 사후 조건)** là điều algorithm cam kết khi kết thúc bình thường.
-
-Ví dụ `merge(left, right)` có precondition rằng hai input ranges đã sorted. Postcondition là output chứa đúng multiset phần tử của hai inputs và sorted theo comparator. Nếu input chưa sorted, function không “chậm hơn”; cơ sở correctness của merge bị phá.
-
-Trong production API, precondition cần được quyết định rõ: validate và reject invalid input, dùng assertion cho programmer error, hay xem invalid input là undefined behavior. Cách xử lý phụ thuộc layer của system.
-
-## Partial correctness và termination
-
-Một distinction hữu ích là **partial correctness** và **total correctness**.
-
-Partial correctness nói: nếu algorithm kết thúc, result đúng. Total correctness thêm yêu cầu algorithm thật sự phải kết thúc với mọi input hợp lệ.
-
-Ví dụ một loop có thể duy trì invariant đúng nhưng không bao giờ giảm search space vì update boundary sai; nó partial-correct theo một reasoning hời hợt nhưng không total-correct. Vì vậy proof loop thường cần hai phần: invariant + **variant/ranking function** tiến đơn điệu về termination.
-
-Binary search chẳng hạn có candidate interval length `hi - lo + 1`. Mỗi iteration không return phải giảm interval này, nên loop không thể chạy vô hạn.
-
-## Loop invariant: cách biến vòng lặp thành proof có cấu trúc
-
-**Bất biến vòng lặp (Loop Invariant / 루프 불변식)** là một mệnh đề đúng tại một điểm xác định của mọi iteration.
-
-Một proof loop thường có ba bước:
+Specification thường phải nói rõ:
 
 ```text
-Initialization: invariant đúng trước iteration đầu tiên.
-Maintenance: nếu invariant đúng trước iteration, body giữ nó đúng cho iteration kế.
-Termination: khi loop dừng, invariant + điều kiện dừng suy ra postcondition.
+miền đầu vào hợp lệ
+điều kiện trước
+ngữ nghĩa đầu ra
+điều kiện sau
+tie-breaking nếu có
+hành vi với input không hợp lệ
 ```
 
-Với binary search trên `[lo, hi]`, invariant có thể là:
+Ví dụ “binary search” có thể có nhiều specification khác nhau:
 
-> Nếu target tồn tại trong array, mọi vị trí còn khả năng chứa target nằm trong `[lo, hi]`.
+```text
+trả một vị trí bất kỳ chứa target
+trả vị trí đầu tiên chứa target
+trả lower_bound
+trả insertion point nếu không có target
+```
 
-Nếu `a[mid] < target`, sorted order chứng minh mọi index `<= mid` không thể là answer; cập nhật `lo = mid + 1` giữ invariant. Khi `lo > hi`, candidate set rỗng, nên target không tồn tại.
+Tên thuật toán giống nhau nhưng điều kiện sau khác nhau, nên bất biến và code cũng khác nhau.
+
+## Điều kiện trước và điều kiện sau
+
+**Điều kiện trước (precondition / 사전 조건)** là điều phải đúng trước khi thao tác bắt đầu. **Điều kiện sau (postcondition / 사후 조건)** là điều thao tác cam kết khi kết thúc bình thường.
+
+Ví dụ `merge(left, right)` thường có precondition: hai dãy đầu vào đã được sắp xếp theo cùng comparator. Postcondition cần mạnh hơn câu “đầu ra đã sorted”; nó còn phải bảo toàn đúng đa tập phần tử của hai đầu vào.
+
+```text
+sorted(output)
+multiset(output) = multiset(left) ∪ multiset(right)
+```
+
+Nếu chỉ chứng minh thứ tự mà không chứng minh bảo toàn phần tử, một implementation làm mất hoặc nhân đôi dữ liệu vẫn có thể vượt qua nửa đầu specification.
+
+## Hoare triple: cách viết hợp đồng ngắn gọn
+
+Một cách ký hiệu hữu ích là:
+
+\[
+\{P\}\ C\ \{Q\}
+\]
+
+Trong đó `P` là precondition, `C` là đoạn chương trình và `Q` là postcondition.
+
+Ví dụ:
+
+```text
+{ a đã sorted }
+binarySearch(a, x)
+{ trả vị trí hợp lệ của x hoặc xác nhận x không tồn tại }
+```
+
+Ta không cần formal verification hoàn chỉnh để hưởng lợi từ cách nghĩ này. Nó buộc ta tách rõ “được giả định gì” và “phải bảo đảm gì”.
+
+## Partial correctness và total correctness
+
+**Tính đúng đắn từng phần (partial correctness)** nói rằng: nếu thuật toán kết thúc thì kết quả đúng.
+
+**Tính đúng đắn toàn phần (total correctness)** thêm yêu cầu thuật toán thực sự kết thúc trên mọi input hợp lệ.
+
+Một vòng lặp có thể giữ invariant hoàn hảo nhưng không thu nhỏ không gian tìm kiếm, dẫn tới chạy vô hạn. Vì vậy chứng minh loop thường cần hai phần:
+
+```text
+safety: invariant luôn đúng
+progress: một đại lượng tiến dần về điểm dừng
+```
+
+Đại lượng dùng để chứng minh tiến triển thường gọi là **variant** hoặc **ranking function**.
+
+## Bất biến vòng lặp
+
+**Bất biến vòng lặp (loop invariant / 루프 불변식)** là một mệnh đề đúng tại một vị trí xác định của mọi vòng lặp.
+
+Một mẫu chứng minh chuẩn có ba bước:
+
+```text
+Initialization: invariant đúng trước vòng đầu tiên.
+Maintenance: nếu invariant đúng trước vòng hiện tại, thân vòng giữ nó đúng cho vòng sau.
+Termination: invariant + điều kiện dừng suy ra postcondition.
+```
+
+### Ví dụ: binary search
+
+Với đoạn ứng viên `[lo, hi]`, invariant có thể là:
+
+> Nếu target tồn tại thì mọi vị trí còn có khả năng chứa target đều nằm trong `[lo, hi]`.
 
 ```c
 int binary_search(const int *a, int n, int target) {
@@ -65,198 +113,313 @@ int binary_search(const int *a, int n, int target) {
 }
 ```
 
-## Invariant không phải comment mô tả code
+Nếu `a[mid] < target`, tính sorted cho phép loại toàn bộ `[lo, mid]`. Không chỉ một phần tử bị loại; cả một vùng được chứng minh không còn khả năng chứa đáp án.
 
-Một statement kiểu “array đang được xử lý” không phải invariant hữu ích. Invariant tốt phải đủ mạnh để chứng minh postcondition và đủ đơn giản để chứng minh maintenance.
+Progress measure là độ dài đoạn ứng viên. Mỗi vòng không trả kết quả đều làm đoạn ngắn hơn, nên thuật toán kết thúc.
 
-Ví dụ insertion sort có invariant mạnh:
+## Invariant phải đủ mạnh nhưng không quá khó duy trì
 
-> Trước iteration `i`, prefix `a[0..i)` đã sorted và chứa đúng multiset phần tử ban đầu của prefix đó.
+Một câu kiểu “mảng đang được xử lý đúng” không giúp chứng minh điều gì. Invariant tốt phải đủ mạnh để suy ra postcondition, nhưng đủ đơn giản để chứng minh maintenance.
 
-Chỉ nói “prefix sorted” chưa đủ để chứng minh algorithm không làm mất/nhân đôi phần tử. Correctness thường cần cả order property và conservation property.
+Insertion Sort có invariant mạnh:
 
-## Conservation invariant: dữ liệu không được tự biến mất
+> Trước vòng `i`, đoạn `a[0..i)` đã sorted và chứa đúng đa tập phần tử ban đầu của đoạn đó.
 
-Nhiều algorithms mutate structure, vì vậy ngoài order/shape invariant còn cần một invariant về membership hoặc quantity.
+Hai phần đều quan trọng:
 
-Sorting cần output là permutation của input. Heap operation cần giữ cùng set entries trừ phần tử được insert/delete. Graph traversal cần mỗi discovered state correspond đúng một reachable state. Memory allocator cần tổng các blocks free/allocated khớp arena state.
+```text
+order invariant
+conservation invariant
+```
 
-Đây là lý do validator tốt thường kiểm tra nhiều dimensions thay vì một property duy nhất.
+Nếu thiếu conservation, ta chưa chứng minh thuật toán không làm mất hoặc nhân đôi phần tử.
 
-## Recursion và structural induction
+## Bất biến bảo toàn
 
-Recursive algorithm tự nhiên được chứng minh bằng **quy nạp (Induction / 수학적 귀납법)**.
+Nhiều thuật toán mutate dữ liệu, nên cần theo dõi cái gì phải được bảo toàn.
 
-Với merge sort:
+Sorting bảo toàn đa tập phần tử. Heap giữ toàn bộ phần tử ngoài đúng phần tử vừa chèn/xóa. DSU bảo toàn partition của tập phần tử. Graph traversal phải bảo đảm mọi trạng thái được đánh dấu thực sự reachable từ nguồn theo quy tắc transition.
 
-**Base case:** array length 0 hoặc 1 đã sorted.
+Một validator tốt hiếm khi chỉ kiểm tra một property.
 
-**Inductive hypothesis:** recursive calls sort đúng các subarrays nhỏ hơn.
+## Representation invariant của cấu trúc dữ liệu
 
-**Inductive step:** nếu hai halves sorted đúng và `merge` tạo một sorted permutation của hai halves, toàn array sorted đúng.
+Cấu trúc dữ liệu thường có **bất biến biểu diễn (representation invariant)** mạnh hơn postcondition của từng thao tác.
 
-Tree algorithm còn tự nhiên hơn vì tree được định nghĩa đệ quy. Nếu một function tính subtree size:
+Ví dụ Binary Heap:
 
-\[
-size(u)=1+size(left(u))+size(right(u))
-\]
+```text
+shape là complete binary tree
+size phù hợp vùng hợp lệ của mảng
+heap order đúng trên mọi cạnh cha-con
+```
 
-correctness đến từ structural induction: null/leaf đúng ở base, rồi combine đúng ở parent nếu children đúng.
+Red-Black Tree có thêm các bất biến về màu và black-height. Hash Table phải giữ quan hệ giữa trạng thái slot, số phần tử và quy tắc probing. Doubly Linked List phải giữ `next/prev` đối xứng.
 
-## Recursive contract phải đủ rõ
+Mỗi thao tác public có thể được xem như:
 
-Một cách debug recursion tốt là viết contract cho function thay vì mô phỏng toàn call tree.
+```text
+representation invariant trước thao tác
+        ↓
+thao tác
+        ↓
+representation invariant sau thao tác
+```
+
+Nếu invariant được phục hồi trước khi API trả về, các thao tác sau có thể tiếp tục dựa trên nó.
+
+## Bất biến cục bộ và bất biến toàn cục
+
+Một số invariant có thể kiểm tra cục bộ. Heap order chỉ cần so mỗi cha với con. Nhưng BST không thể chỉ kiểm tra `left < parent < right` ở mỗi cạnh; một khóa sâu trong cây con trái vẫn phải nhỏ hơn toàn bộ cận trên từ tổ tiên.
+
+Do đó validator BST nên truyền khoảng hợp lệ xuống:
+
+```text
+node.key ∈ (lowerBound, upperBound)
+```
+
+Đây là bài học tổng quát: **local consistency không luôn suy ra global correctness**.
+
+## Ghost state: thông tin dùng để chứng minh nhưng không cần lưu trong runtime
+
+Khi reasoning, ta có thể dùng thông tin phụ không tồn tại trong implementation. Đây thường được gọi là **ghost state** trong formal methods.
+
+Ví dụ khi chứng minh sorting, ta có thể tưởng tượng một bản sao multiset của input ban đầu để chứng minh conservation, dù code thực tế không lưu bản sao đó.
+
+Trong BFS, ta có thể reasoning bằng “khoảng cách thật ngắn nhất” `δ(s,v)` dù implementation chỉ lưu `dist[v]`.
+
+Ghost state giúp tách “thông tin cần để chứng minh” khỏi “thông tin cần để chạy hiệu quả”.
+
+## Quy nạp và đệ quy
+
+Thuật toán đệ quy thường được chứng minh bằng **quy nạp (induction / 수학적 귀납법)**.
+
+Merge Sort:
+
+```text
+base: n <= 1 đã sorted
+hypothesis: mọi lời gọi trên kích thước nhỏ hơn trả đúng
+step: hai nửa được sort đúng + merge đúng => toàn bộ đúng
+```
+
+Với cây, **quy nạp cấu trúc (structural induction)** còn tự nhiên hơn. Nếu hàm trên nút chỉ phụ thuộc các cây con, ta giả sử các cây con trả đúng rồi chứng minh phép kết hợp ở nút cha đúng.
+
+## Quy nạp mạnh
+
+Dynamic Programming thường cần **quy nạp mạnh (strong induction)** vì trạng thái hiện tại có thể phụ thuộc nhiều trạng thái nhỏ hơn, không chỉ đúng một trạng thái `n-1`.
+
+Bottom-up DP về bản chất thực thi đúng thứ tự chứng minh: mọi prerequisite được tính trước khi transition hiện tại dùng tới chúng.
+
+## Hợp đồng của hàm đệ quy
+
+Khi debug recursion, thay vì mô phỏng toàn bộ call tree, hãy viết contract cho một lời gọi.
 
 Ví dụ:
 
 ```text
-solve(state) trả optimum achievable từ chính state này trở đi,
-không thay đổi global state ngoài vùng được contract cho phép.
+solve(state) trả giá trị tối ưu đạt được từ state trở đi,
+và khi trả về thì global mutable state đã được phục hồi như trước lời gọi.
 ```
 
-Sau đó recursive caller được quyền tin contract của subcall. Đây là cách induction xuất hiện trong engineering practice.
+Trong backtracking, phần “phục hồi state” là cực kỳ quan trọng. Nếu `choose -> recurse -> unchoose` không đối xứng, lời gọi anh em có thể nhìn thấy trạng thái rác.
 
-## Strong induction
+## Chứng minh termination cho đệ quy
 
-Có những recurrence phụ thuộc nhiều kích thước nhỏ hơn chứ không chỉ `n-1`. Khi đó **strong induction / 강한 귀납법** tự nhiên hơn: giả sử statement đúng cho mọi size nhỏ hơn `n`, rồi chứng minh cho `n`.
+Có base case chưa đủ. Đối số đệ quy phải tiến gần base case theo một well-founded order.
 
-Dynamic Programming proofs thường có dạng này vì state hiện tại có thể phụ thuộc nhiều predecessor states.
-
-## Exchange argument trong greedy algorithms
-
-Greedy algorithm khóa local choice và không quay lại. Vì vậy proof cần chứng minh choice đó **safe**.
-
-Một pattern phổ biến là exchange argument: lấy một optimal solution `O` chưa dùng greedy choice `g`, rồi chỉ ra có thể thay một phần của `O` bằng `g` mà không làm objective tệ hơn và không phá feasibility. Khi đó tồn tại optimal solution chứa `g`; ta recurse trên phần còn lại.
-
-Interval scheduling là ví dụ điển hình. Chọn interval finish sớm nhất để lại nhiều timeline nhất cho future. Nếu một optimal solution bắt đầu bằng interval finish muộn hơn, thay interval đầu bằng greedy interval vẫn không làm mất các intervals phía sau.
-
-Greedy correctness nằm ở argument này, không nằm ở trực giác “chọn cái tốt nhất trước”.
-
-## Cut property và safe edge
-
-Một số graph algorithms dùng proof dạng cut. Trong MST, nếu một edge nhẹ nhất crossing một cut phù hợp, cut property chứng minh edge đó là safe cho một MST. Kruskal và Prim khác cách sinh cut/frontier nhưng cùng dựa trên structural fact này.
-
-Proof pattern quan trọng hơn việc nhớ tên theorem: xác định boundary giữa “đã quyết định” và “chưa quyết định”, rồi chứng minh một local choice crossing boundary không thể làm mất global optimum.
-
-## Contradiction: giả sử điều sai xảy ra
-
-**Proof by contradiction / 귀류법** hữu ích khi algorithm finalizes một choice.
-
-Dijkstra là ví dụ. Với non-negative edges, khi vertex `u` có tentative distance nhỏ nhất được lấy ra, giả sử tồn tại một path ngắn hơn chưa biết tới `u`. Trên path đó phải có transition từ finalized region sang unfinalized region; non-negative weights dẫn tới một candidate distance không thể lớn hơn `dist[u]`, mâu thuẫn với việc `u` là minimum candidate chưa xử lý.
-
-Loại proof này giúp hiểu chính xác vì sao negative edges phá Dijkstra.
-
-## Proof bằng extremal/counterexample reasoning
-
-Khi nghi một rule greedy sai, cách mạnh là tìm **smallest counterexample**. Ví dụ coin system `[1,3,4]`, amount `6`: greedy chọn `4+1+1`, trong khi optimum `3+3`.
-
-Counterexample không chỉ dùng để bác bỏ theorem; nó giúp xác định assumption còn thiếu. Trong trường hợp này, canonical coin structure không đúng cho mọi coin systems.
-
-Một workflow thực tế là brute-force small inputs để tìm counterexample cho conjecture trước khi đầu tư vào proof dài.
-
-## Correctness của binary-search-on-answer
-
-Binary search on answer có hai proof layers.
-
-Thứ nhất, phải chứng minh predicate `P(x)` monotonic, ví dụ:
+Ví dụ:
 
 ```text
-F F F F T T T
+n giảm dần
+số phần tử chưa xử lý giảm dần
+chiều sâu còn lại giảm dần
+kích thước cây con nhỏ hơn cây cha
 ```
 
-Thứ hai, phải chứng minh boundary invariant của implementation để tìm first true hoặc last false.
+Nếu recursion có thể quay lại trạng thái cũ mà không có visited/memoization hoặc progress metric, termination chưa được chứng minh.
 
-Nếu predicate không thật sự monotonic, binary search có thể chạy hoàn hảo nhưng trả answer vô nghĩa. Vì vậy proof algorithm phụ thuộc proof của model/predicate.
+## Greedy và exchange argument
 
-## Correctness của graph traversal
+Greedy khóa lựa chọn cục bộ và không quay lại, vì vậy phải chứng minh lựa chọn đó an toàn.
 
-BFS shortest-path proof dựa trên layer invariant: trước khi dequeue một node ở distance `d+1`, mọi node reachable trong `<=d` edges đã được discovered. Lần đầu discover node vì thế cho shortest unweighted distance.
-
-DFS không có shortest-layer property nhưng có stack/nesting property. Discovery/finish intervals giúp reasoning về ancestor relations, cycle detection, SCC và articulation structures.
-
-“BFS và DFS đều visit mọi node” là đúng nhưng chưa đủ; correctness của application phụ thuộc frontier-order property riêng của từng traversal.
-
-## Correctness của data-structure operations
-
-Không chỉ algorithms một-shot mới cần proof. Data structure là sequence operations, nên mỗi operation phải **preserve representation invariant**.
-
-Heap insertion proof:
-
-1. append ở cuối giữ complete-tree shape;
-2. chỉ heap-order trên ancestor path có thể bị phá;
-3. sift-up sửa mỗi local violation;
-4. khi dừng, toàn tree lại thỏa heap invariant.
-
-AVL rotation proof cần đồng thời giữ BST inorder order và cập nhật balance/height metadata. Augmented tree còn phải giữ subtree summaries. Một structure càng nhiều metadata thì số invariants phải bảo vệ càng nhiều.
-
-## Representation invariant và abstraction function
-
-Một cách nhìn từ software verification là tách:
-
-**Representation invariant**: internal bytes/nodes/pointers phải có shape hợp lệ.
-
-**Abstraction function**: internal representation tương ứng abstract value nào.
-
-Ví dụ hash set internal table có tombstones, spare slots và buckets, nhưng abstract value chỉ là tập keys đang present. Correctness của `contains(k)` được chứng minh từ probe invariant và mapping giữa internal slots với abstract set.
-
-Mental model này rất hữu ích khi implementation phức tạp hơn ADT nhiều.
-
-## Assertions như executable invariants
-
-Invariant có thể chuyển thành checks trong debug/test builds:
-
-```java
-assert size >= 0 && size <= capacity;
-```
-
-```c
-assert(heap_is_valid(h));
-```
-
-```js
-if (debug && !isSorted(run)) throw new Error('run invariant broken');
-```
-
-Assertions không thay validation cho untrusted input. Chúng dùng để phát hiện programmer assumptions bị phá càng gần source càng tốt.
-
-## Validator cho data structure
-
-Với structures phức tạp, viết `validate()` thường đáng giá.
-
-BST validator kiểm tra global key bounds chứ không chỉ parent-child comparisons. Red-Black Tree validator kiểm tra color constraints và black height. Heap validator kiểm tra parent/children order. Hash table validator kiểm tra slot states/counts. DSU validator có thể kiểm tra parent indices và size metadata ở roots.
-
-Sau mỗi random mutation trong test, gọi validator giúp bắt bug structural sớm.
-
-## Differential testing và oracle nhỏ
-
-Khi proof implementation khó, có thể dùng một implementation chậm nhưng rõ ràng làm **oracle** trên small input.
-
-Ví dụ test range structure bằng cách so kết quả với brute-force scan. Test shortest path bằng Floyd-Warshall trên graph nhỏ. Test Top-K bằng full sort. Test randomized structure bằng một `TreeMap`/sorted list reference model.
-
-Differential testing không thay proof algorithmic, nhưng rất mạnh để kiểm tra code thực thi proof đó.
-
-## Property-based testing
-
-Thay vì viết vài examples cố định, generate nhiều operation sequences và kiểm tra properties:
+Mẫu **exchange argument**:
 
 ```text
-insert rồi contains phải true
-sort output phải ordered và cùng multiset input
-union(a,b) khiến find(a)==find(b)
-heap poll sequence phải nondecreasing
+1. Lấy một lời giải tối ưu O.
+2. Nếu O đã chứa lựa chọn greedy g, xong bước này.
+3. Nếu chưa, thay một phần của O bằng g.
+4. Chứng minh lời giải mới vẫn hợp lệ và không tệ hơn O.
+5. Suy ra tồn tại lời giải tối ưu bắt đầu bằng g.
+6. Lặp lại cho phần còn lại.
 ```
 
-Đây là cách biến specification thành test generator.
+Trong interval scheduling, chọn interval kết thúc sớm nhất là an toàn vì thay interval đầu của một optimum bằng interval kết thúc sớm hơn không làm mất thêm không gian thời gian ở phía sau.
 
-## Fuzzing và adversarial cases
+“Có vẻ hợp lý” không phải chứng minh greedy.
 
-Random input tốt nhưng không đủ. Nên thêm boundary/adversarial cases: empty, single element, duplicates, already sorted, reverse sorted, all equal, deep chain, maximum values, overflow boundaries, negative values, disconnected graph, parallel edges, self-loops.
+## Cut property và cycle property
 
-Một proof đúng dưới preconditions rõ ràng sẽ giúp biết adversarial case nào hợp lệ và case nào phải reject.
+Minimum Spanning Tree có các mẫu chứng minh riêng nhưng rất tái sử dụng.
 
-## Integer overflow cũng là correctness
+**Cut property** nói rằng dưới điều kiện phù hợp, cạnh nhẹ nhất cắt qua một cut là cạnh an toàn để thêm vào một MST.
 
-Một recurrence có thể đúng toán học nhưng implementation sai vì finite-width arithmetic.
+**Cycle property** cho góc nhìn đối ngược: trong một cycle, một cạnh nặng nhất thích hợp có thể bị loại khỏi một MST nào đó.
+
+Kruskal và Prim có implementation khác nhau nhưng đều dựa vào cấu trúc chứng minh này.
+
+## Proof by contradiction
+
+Chứng minh phản chứng hữu ích khi thuật toán “finalize” một quyết định.
+
+Dijkstra với cạnh không âm là ví dụ. Khi đỉnh `u` có tentative distance nhỏ nhất được lấy ra, giả sử vẫn có một đường ngắn hơn tới `u`. Trên đường đó phải tồn tại điểm đầu tiên đi từ vùng đã finalize sang vùng chưa finalize. Tính không âm của trọng số tạo một candidate không thể lớn hơn `dist[u]`, mâu thuẫn với việc `u` là candidate nhỏ nhất.
+
+Lập luận này đồng thời chỉ ra vì sao cạnh âm phá điều kiện cốt lõi của Dijkstra.
+
+## Chứng minh bằng cực trị
+
+Một kỹ thuật khác là chọn “phản ví dụ nhỏ nhất”, “đỉnh đầu tiên vi phạm” hoặc “thời điểm đầu tiên invariant bị phá”.
+
+Giả sử một property đúng ban đầu nhưng cuối cùng sai. Xét bước đầu tiên nó trở thành sai. Ngay trước bước đó property còn đúng, nên ta chỉ cần phân tích thao tác vừa thực hiện.
+
+Đây là cách rất mạnh để chứng minh invariant của cấu trúc động.
+
+## Monotonicity và binary search on answer
+
+Nếu predicate `P(x)` có dạng:
+
+```text
+false false false ... true true true
+```
+
+ta có thể tìm điểm chuyển bằng binary search.
+
+Nhưng trước khi viết code phải chứng minh **tính đơn điệu (monotonicity)**. Nếu `P(x)` có thể true rồi false trở lại, binary search on answer không có cơ sở đúng đắn.
+
+Một lỗi phổ biến là thấy “đáp án là một số” rồi áp binary search mà chưa chứng minh predicate có cấu trúc đơn điệu.
+
+## BFS: invariant theo tầng
+
+BFS có một invariant quan trọng:
+
+> Khi một đỉnh được lấy ra theo BFS chuẩn trên đồ thị không trọng số, `dist[v]` là độ dài đường đi ngắn nhất từ nguồn tới `v`.
+
+Lý do queue xử lý đỉnh theo lớp khoảng cách không giảm. Mọi cạnh thêm đúng 1 bước. Một đường ngắn hơn tới `v` nếu tồn tại phải đi qua một lớp nhỏ hơn và đã được khám phá trước.
+
+Điều này giải thích vì sao đánh dấu khi enqueue thường quan trọng: nó ngăn cùng một state được đưa vào queue nhiều lần và giữ rõ nghĩa “đã phát hiện khoảng cách ngắn nhất”.
+
+## DFS: invariant của call stack
+
+Trong DFS đệ quy, call stack biểu diễn đường đi hiện tại trong cây DFS. Với đồ thị có hướng dùng ba màu:
+
+```text
+WHITE = chưa thăm
+GRAY  = đang nằm trên recursion stack
+BLACK = đã hoàn tất
+```
+
+Một cạnh tới `GRAY` cho thấy có chu trình có hướng vì ta quay lại một tổ tiên đang hoạt động. Nếu chỉ dùng `visited` Boolean, thông tin “đang hoạt động” bị mất và không đủ cho chứng minh kiểu này.
+
+## DSU: invariant của đại diện
+
+Disjoint Set Union giữ một forest các parent pointer. Invariant ngữ nghĩa không phải “cây đẹp”, mà là:
+
+```text
+find(x) trả cùng representative khi và chỉ khi x thuộc cùng component theo các union đã áp dụng
+```
+
+Path compression thay đổi hình dạng cây mạnh nhưng không đổi partition logic. Đây là ví dụ một optimization thay representation nhưng giữ semantics.
+
+Nếu có `size[root]` hoặc `rank[root]`, metadata chỉ có ý nghĩa ở root và phải được cập nhật theo đúng union rule.
+
+## Heap: repair local, preserve global
+
+Khi chèn vào Binary Heap, shape invariant được giữ bằng cách thêm ở cuối mảng. Chỉ heap-order trên đường từ node mới tới root có thể bị phá.
+
+Sift-up sửa đúng vùng có khả năng sai. Các cạnh ngoài đường đó không thay đổi nên invariant vẫn đúng ở đó.
+
+Đây là mẫu chứng minh cực kỳ phổ biến:
+
+```text
+một mutation chỉ có thể phá invariant trong một vùng nhỏ
+=> sửa vùng đó
+=> phần còn lại không cần kiểm tra lại
+```
+
+AVL/Red-Black rotation, Segment Tree update và nhiều cấu trúc tăng cường đều dựa trên tư duy này.
+
+## Segment Tree: invariant theo đoạn
+
+Mỗi node Segment Tree đại diện một đoạn và lưu aggregate của chính đoạn đó.
+
+Invariant:
+
+```text
+tree[node] = combine(value của mọi phần tử trong interval(node))
+```
+
+Khi cập nhật một điểm, chỉ các node trên đường từ leaf đó tới root có interval chứa điểm cập nhật. Do đó chỉ cần recompute đường này.
+
+Tính đúng đắn đến từ việc các node không chứa vị trí cập nhật giữ nguyên giá trị đúng, còn các node có chứa nó được tính lại từ hai child đã đúng.
+
+## Shortest path relaxation
+
+Relaxation thường có dạng:
+
+\[
+dist[v] \leftarrow \min(dist[v], dist[u] + w(u,v))
+\]
+
+Một invariant nền tảng là `dist[v]` luôn là chi phí của một đường đi thực sự đã biết tới `v` hoặc `∞`. Vì vậy nó là một **upper bound** trên shortest-path distance thật.
+
+Các thuật toán shortest path khác nhau chủ yếu khác ở quy tắc chọn thứ tự relaxation và điều kiện cho phép ta kết luận bound đã trở thành chính xác.
+
+## Invariant giữa nhiều cấu trúc
+
+LRU Cache dùng Hash Map + Doubly Linked List. Mỗi cấu trúc có thể tự hợp lệ nhưng hệ thống vẫn sai nếu map và list không nhất quán.
+
+Cần invariant liên cấu trúc:
+
+```text
+map và list chứa cùng tập key
+mỗi map entry trỏ đúng node trong list
+size nhất quán
+thứ tự list đúng recency semantics
+```
+
+Trong code production, đây thường là nơi bug khó xuất hiện nhất vì validator riêng lẻ của từng container vẫn pass.
+
+## Atomicity của thao tác phức hợp
+
+Một operation có thể gồm nhiều bước nội bộ. Nếu failure xảy ra giữa chừng, cấu trúc cần hoặc:
+
+```text
+rollback về trạng thái cũ
+hoặc
+đạt một trạng thái mới vẫn hợp lệ theo contract
+```
+
+Trong C, resize Hash Table nên hoàn thành allocation/rehash bảng mới trước khi thay pointer chính. Đây là reasoning gần với transaction: không để public state ở trạng thái nửa cũ nửa mới.
+
+## Concurrency và linearizability
+
+Trong môi trường nhiều luồng, invariant có thể bị phá giữa hai dòng code dù từng dòng riêng lẻ đúng.
+
+Ví dụ:
+
+```text
+if key absent:
+    insert key
+```
+
+Hai thread có thể cùng thấy “absent” rồi cùng insert.
+
+Một mô hình correctness quan trọng là **tính tuyến tính hóa (linearizability / 선형화 가능성)**: mỗi operation concurrent phải có thể được xem như xảy ra tại một thời điểm nguyên tử nào đó giữa lúc gọi và lúc trả về.
+
+Lock-free structures còn cần memory ordering và memory reclamation reasoning. “Dùng atomic pointer” tự nó chưa chứng minh thuật toán đúng.
+
+## Arithmetic correctness
+
+Một proof toán học có thể giả sử số nguyên vô hạn, nhưng code chạy với kiểu hữu hạn.
 
 Ví dụ:
 
@@ -264,61 +427,133 @@ Ví dụ:
 long candidate = dist[u] + weight;
 ```
 
-nếu `dist[u]` dùng sentinel gần `Long.MAX_VALUE`, addition có thể overflow. C signed overflow còn có undefined-behavior implications. JavaScript `Number` mất integer precision sau `2^53-1`.
+Nếu `dist[u]` là sentinel gần `Long.MAX_VALUE`, phép cộng có thể overflow. Trong C, signed overflow có thể dẫn tới undefined behavior. Trong JavaScript, `Number` mất tính chính xác số nguyên sau `2^53 - 1`.
 
-Correctness proof của code phải sử dụng arithmetic model thực tế, không chỉ integer toán học vô hạn.
+Do đó proof của implementation phải bao gồm miền giá trị của kiểu số.
 
 ## Floating-point correctness
 
-Các thuật toán numeric hoặc geometry cần cẩn thận vì equality/ordering trên floating point có rounding. Predicate tưởng monotonic trên real numbers có thể noisy ở machine representation. Comparator không nhất quán vì epsilon tùy tiện có thể phá sorting/tree contracts.
+Số thực máy có sai số làm tròn. So sánh equality, predicate đơn điệu hoặc comparator dựa trên epsilon tùy tiện có thể không còn bắc cầu.
 
-Khi DSA dùng floating values làm keys hoặc boundaries, numeric semantics là một phần của specification.
+Nếu comparator vi phạm transitivity, sort hoặc balanced tree có thể có hành vi không đúng contract.
 
-## Concurrency: invariant có thể bị phá giữa hai dòng code
+Với geometry và numerical algorithms, representation số là một phần của specification, không phải chi tiết implementation.
 
-Một operation single-thread đúng chưa chắc thread-safe. Ví dụ check-then-act:
+## Validator cho cấu trúc dữ liệu
 
-```text
-if key absent:
-    insert key
-```
-
-có thể race giữa hai threads. Concurrent correctness thường dùng concept **linearizability / 선형화 가능성**: mỗi operation phải trông như xảy ra atomically tại một điểm giữa invocation và response.
-
-Lock-free structures còn cần memory-ordering và reclamation reasoning. Đây là lớp correctness vượt khỏi DSA cơ bản nhưng cùng nguyên lý: xác định invariant và chứng minh mọi interleaving hợp lệ giữ nó.
-
-## Proof sketch nên đi cùng code review
-
-Trong code review của algorithm phức tạp, một proof sketch ngắn thường có giá trị hơn comment mô tả từng dòng.
-
-Ví dụ:
+Cấu trúc phức tạp nên có `validate()` trong test/debug.
 
 ```text
-Invariant: deque chứa các candidate indices còn trong window,
-values giảm dần từ front tới back.
-Khi thêm index i, pop back mọi value <= a[i] vì chúng không bao giờ
-có thể thắng i ở future window. Pop front nếu index expired.
-Front luôn là max hiện tại.
+BST        -> kiểm tra cận toàn cây, không chỉ cha-con
+Red-Black  -> màu, root, red-red, black-height
+Heap       -> shape và heap-order
+Hash Table -> trạng thái slot, count, lookup mọi entry
+DSU        -> parent hợp lệ, metadata ở root
+LinkedList -> size và prev/next đối xứng
 ```
 
-Đoạn reasoning này giải thích *tại sao* code monotonic deque đúng và giúp reviewer nhận ra mutation nào phá invariant.
+Validator không thay proof nhưng giúp phát hiện implementation phá proof ở đâu.
 
-## Common misconceptions
+## Differential testing
 
-“Pass tất cả sample tests” không phải proof.
+Một implementation chậm nhưng rõ có thể làm **oracle** cho input nhỏ.
 
-“Invariant đúng lúc kết thúc” chưa đủ; phải đúng sau initialization và được maintenance ở mọi iteration.
+```text
+range query     -> so với quét tuyến tính
+shortest path   -> so với Floyd–Warshall trên graph nhỏ
+Top-K           -> so với sort toàn bộ
+custom BST      -> so với TreeMap/TreeSet
+custom heap     -> so chuỗi pop với mảng đã sort
+```
 
-“Recursion có base case” chưa chứng minh termination nếu recursive arguments không tiến gần base case.
+Differential testing rất hiệu quả vì nó kiểm tra hàng nghìn chuỗi thao tác mà ta khó viết tay.
 
-“Greedy có vẻ hợp lý” không phải exchange proof.
+## Property-based testing
 
-“Data structure vẫn trả đúng vài queries” không chứng minh metadata/invariant chưa âm thầm hỏng.
+Thay vì chỉ kiểm tra output cụ thể, có thể kiểm tra property:
 
-## Mental Model
+```text
+sort(output) phải có thứ tự và cùng multiset input
+push rồi pop trên stack phải khôi phục state phù hợp
+union(a,b) => find(a) == find(b)
+heap poll liên tục phải cho dãy không giảm
+serialize rồi deserialize phải bảo toàn cấu trúc
+```
 
-> Correctness là chuỗi lập luận: specification nói ta phải đạt gì; precondition nói ta được giả định gì; invariant nói điều gì luôn được bảo vệ; progress argument nói vì sao algorithm sẽ kết thúc; termination state + invariant suy ra postcondition.
+Đây là cách biến specification thành test tự động.
 
-Khi một algorithm khó hiểu, đừng đọc code line-by-line trước. Hãy hỏi: **candidate set hiện tại là gì, invariant nào đang giữ, mỗi mutation loại bỏ hoặc bảo toàn điều gì, và tại sao khi dừng không còn trường hợp nào chưa xét?**
+## Adversarial tests
 
-Xem tiếp: [Problem Modeling](./00_dsa_as_problem_modeling.md), [Complexity Analysis](./02_complexity_analysis.md), [Mathematical Toolkit](./04_mathematical_toolkit_for_dsa.md), [Greedy Algorithms](../04_algorithmic_paradigms/04_greedy_algorithms.md) và [Problem Solving Workflow](../90_connections/02_problem_solving_workflow.md).
+Random test không thay thế các case biên được thiết kế có chủ đích:
+
+```text
+rỗng
+một phần tử
+tất cả bằng nhau
+đã sorted / reverse sorted
+nhiều duplicate
+cây cực lệch
+đồ thị rời rạc
+self-loop / parallel edges
+giá trị sát giới hạn kiểu số
+input gây nhiều hash collision
+```
+
+Một proof tốt cho biết case nào nằm trong domain hợp lệ và case nào phải bị từ chối.
+
+## Proof sketch trong code review
+
+Với thuật toán khó, một proof sketch ngắn thường có giá trị hơn comment từng dòng.
+
+Ví dụ Monotonic Queue cho sliding-window maximum:
+
+```text
+Invariant 1: deque chỉ chứa index còn nằm trong window.
+Invariant 2: value tại các index giảm dần từ front tới back.
+Khi thêm i, mọi phần tử ở back có value <= a[i] bị loại vì i mới hơn
+và không nhỏ hơn, nên chúng không thể trở thành maximum trong future window.
+Front vì vậy luôn là maximum hiện tại.
+```
+
+Đây là loại comment giải thích “vì sao đúng”, giúp reviewer đánh giá thay đổi thuật toán.
+
+## Một template chứng minh có thể tái sử dụng
+
+Khi cần chứng minh thuật toán, có thể dùng khung:
+
+```text
+1. Specification là gì?
+2. Preconditions là gì?
+3. State nào đang được duy trì?
+4. Invariant là gì?
+5. Invariant đúng lúc khởi tạo không?
+6. Mỗi transition có giữ invariant không?
+7. Progress measure là gì?
+8. Vì sao thuật toán phải dừng?
+9. Khi dừng, invariant + stop condition suy ra postcondition thế nào?
+10. Numeric/runtime assumptions nào proof đang dựa vào?
+```
+
+Với greedy, thêm exchange/cut argument. Với recursion, thêm induction. Với concurrent structure, thêm linearization point và memory-order reasoning.
+
+## Những hiểu lầm phổ biến
+
+“Pass sample tests là đã đúng” — sai; sample chỉ là bằng chứng hữu hạn.
+
+“Invariant đúng ở cuối là đủ” — sai; phải đúng sau initialization và được duy trì qua mọi transition.
+
+“Có base case thì recursion sẽ dừng” — sai nếu đối số không tiến gần base case.
+
+“Greedy hợp lý theo trực giác” — không thay exchange argument hoặc structural proof.
+
+“Cấu trúc vẫn trả vài query đúng nên metadata chắc đúng” — sai; invariant có thể đã hỏng và chỉ chưa chạm case lộ lỗi.
+
+“Đã chứng minh thuật toán nên code chắc đúng” — sai; overflow, aliasing, indexing và runtime semantics có thể làm implementation khác mô hình toán học.
+
+## Mô hình tư duy
+
+> Tính đúng đắn là một chuỗi lập luận: **specification** nói phải đạt gì; **precondition** nói được giả định gì; **invariant** nói điều gì luôn được bảo vệ; **progress argument** nói vì sao thuật toán sẽ dừng; trạng thái khi dừng cộng với invariant phải suy ra **postcondition**.
+
+Khi gặp một thuật toán khó, đừng đọc code từng dòng trước. Hãy hỏi: **tập ứng viên hiện tại là gì, invariant nào đang được giữ, mỗi transition loại bỏ hay bảo toàn thông tin nào, phần nào có thể bị phá bởi mutation, và vì sao khi dừng không còn trường hợp nào chưa được xử lý?**
+
+Xem tiếp: [Problem Modeling](./00_dsa_as_problem_modeling.md), [Complexity Analysis](./02_complexity_analysis.md), [Mathematical Toolkit](./04_mathematical_toolkit_for_dsa.md), [Greedy Algorithms](../04_algorithmic_paradigms/04_greedy_algorithms.md), [Dynamic Programming](../04_algorithmic_paradigms/05_dynamic_programming.md) và [Problem Solving Workflow](../90_connections/02_problem_solving_workflow.md).

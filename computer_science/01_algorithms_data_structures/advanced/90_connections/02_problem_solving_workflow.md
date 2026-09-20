@@ -1,162 +1,628 @@
-# Workflow giải bài DSA và thiết kế thuật toán
+# Quy trình giải bài DSA và thiết kế thuật toán
 **Problem-Solving Workflow / 문제 해결 흐름**
 
-Giải một bài DSA tốt không bắt đầu bằng việc nhớ “pattern nào giống LeetCode”, mà bắt đầu bằng cách **mô hình hóa đúng vấn đề**, định lượng constraints, tìm một baseline đúng, rồi từng bước loại bỏ work không cần thiết. Mục tiêu của workflow này là biến một problem statement dài thành một chuỗi câu hỏi có thể kiểm chứng.
+Giải một bài DSA tốt không bắt đầu bằng việc cố nhớ “mẫu nào giống LeetCode”, mà bắt đầu bằng **đặc tả đúng vấn đề**, xây mô hình đúng, tìm một baseline đúng, rồi loại bỏ dần những phần công việc không cần thiết.
 
-Một solution mạnh thường có ba lớp reasoning: representation đúng, invariant đúng và complexity phù hợp. Nếu một trong ba sai, code có thể chạy nhưng solution vẫn không đáng tin cậy.
+Một lời giải đáng tin thường có bốn lớp:
 
-## 1. Đọc problem như một specification
+```text
+mô hình trạng thái đúng
+cách biểu diễn đúng
+bất biến / chứng minh đúng
+mô hình chi phí phù hợp
+```
 
-Đừng code ngay khi vừa đọc ví dụ. Trước tiên cần xác định chính xác input, output, assumptions và semantics.
+Nếu một trong bốn lớp sai, code có thể vẫn chạy trên sample nhưng lời giải không bền vững.
 
-Nếu đề nói “subarray”, thông thường đó là đoạn **liên tiếp** của array; nếu nói “subsequence”, phần tử không cần liên tiếp nhưng phải giữ relative order. Nếu graph là directed hay undirected, weighted hay unweighted, multi-edge có được phép không, self-loop có tồn tại không, tất cả đều ảnh hưởng algorithm.
+## 1. Đọc đề như một specification
 
-Interval `[l,r]` và `[l,r)` khác nhau ở boundary semantics. String có thể chỉ chứa ASCII hay Unicode. Integer có thể vượt 32-bit hay không. Những chi tiết này không phải phần phụ; chúng quyết định correctness.
+Trước khi code, phải xác định:
 
-Một thói quen tốt là tự viết lại bài toán bằng một câu ngắn: “Tôi cần tìm X sao cho Y, dưới constraints Z.” Nếu chưa viết được câu này, model vẫn chưa rõ.
+```text
+input domain
+output semantics
+preconditions
+constraints
+edge cases
+error behavior
+```
 
-## 2. Từ story sang mathematical/computational model
+Các từ rất giống nhau có thể tạo bài khác hoàn toàn:
 
-Problem statement thường kể một câu chuyện domain: thành phố, chuyến bay, nhân viên, server, booking, robot hoặc game. DSA bắt đầu khi ta bỏ lớp câu chuyện và nhận ra cấu trúc bên dưới.
+```text
+subarray      -> liên tiếp
+subsequence   -> giữ thứ tự nhưng không cần liên tiếp
+subset        -> không quan tâm vị trí
+path          -> chuỗi đỉnh/cạnh hợp lệ
+simple path   -> không lặp đỉnh
+walk          -> có thể lặp
+```
 
-Một hệ thống đường đi giữa thành phố có thể là graph. Quan hệ cha-con là tree. Booking theo thời gian là intervals. Chuỗi thao tác undo là stack. Các truy vấn cộng đoạn là range-query problem. Một bài “chọn hoặc bỏ từng item” có thể là subset state space.
+Nếu terminology chưa rõ, thuật toán chưa thể bắt đầu chắc chắn.
 
-Việc model hóa đúng thường quan trọng hơn implementation. Nếu model sai, thuật toán đúng vẫn giải sai bài toán.
+## 2. Viết lại bài toán bằng một câu
 
-## 3. Constraints chính là complexity budget
+Một kỹ thuật đơn giản nhưng mạnh:
 
-Constraints không chỉ là thông tin để tránh overflow; chúng cho biết loại thuật toán nào còn khả thi.
+> “Tôi cần tìm/đếm/tối ưu **X**, sao cho **Y**, dưới các ràng buộc **Z**.”
 
-Nếu `n <= 20`, `O(2^n)` có thể hợp lý. Nếu `n ≈ 10^3`, `O(n^2)` đôi khi chấp nhận được. Nếu `n ≈ 10^5` hoặc `10^6`, thường phải hướng tới `O(n log n)` hoặc `O(n)`. Nếu có `10^5` queries trên cùng dataset, preprocessing hoặc data structure index trở nên đáng giá.
+Ví dụ:
 
-Nhưng đây chỉ là heuristic. Constant factor, language runtime và time limit cũng quan trọng. `O(n log n)` với heavy allocation có thể chậm hơn `O(n sqrt(n))` tối ưu tốt ở một miền nhỏ; tuy nhiên asymptotic analysis vẫn là bước lọc đầu tiên.
+> “Tìm chi phí nhỏ nhất để đi từ `s` tới `t`, với trọng số cạnh không âm.”
 
-## 4. Luôn tìm một baseline đúng trước
+Câu này ngay lập tức làm lộ domain thích hợp cho Dijkstra.
 
-Brute force không phải “solution tệ để bỏ đi”; nó là specification executable. Baseline cho ta ba thứ: xác nhận hiểu đề đúng, làm reference cho testing, và phơi bày repeated work.
+Nếu chưa viết được bài toán bằng câu ngắn, story layer vẫn đang che mô hình thật.
 
-Ví dụ Two Sum brute force kiểm tra mọi cặp `O(n^2)`. Khi nhìn vào repeated work, ta thấy với mỗi phần tử `x` ta chỉ cần biết `target - x` đã xuất hiện chưa. Hash set nén việc tìm kiếm này xuống expected `O(1)` mỗi bước.
+## 3. Tách story khỏi computational model
 
-Với range sum, brute force cộng lại đoạn mỗi query. Prefix sum nhận ra cùng prefix được tính lặp đi lặp lại và precompute nó một lần.
+“Thành phố” có thể là đỉnh. “Chuyến bay” là cạnh. “Khóa và cửa” có thể biến trạng thái thành `(position,keyMask)`. “Booking” là interval. “Undo” là stack. “Mạng lưới phụ thuộc” là DAG.
 
-Với recursive search `O(2^n)`, nếu nhiều nhánh đi tới cùng state, memoization biến search tree thành state graph nhỏ hơn.
+Story chỉ là tên gọi. Thuật toán làm việc trên cấu trúc toán học bên dưới.
 
-Optimization tốt thường có thể mô tả bằng câu: **“Tôi đã loại bỏ loại work lặp lại nào?”**
+Một thuật toán đúng trên mô hình sai vẫn giải sai vấn đề.
 
-## 5. Xác định state và information thực sự cần giữ
+## 4. Ràng buộc là ngân sách complexity
 
-Nhiều thuật toán trở nên đơn giản khi ta hỏi: để quyết định bước tiếp theo, cần biết tối thiểu những thông tin nào?
+Hãy chuyển constraints thành quy mô work sơ bộ.
 
-Sliding window thường chỉ cần hai pointers và một summary của window. Dijkstra cần best known distance và frontier priority. DP cần state đủ để đại diện mọi thông tin từ quá khứ có thể ảnh hưởng tương lai.
+```text
+n <= 20         -> 2^n có thể khả thi
+n ~ 10^3        -> n^2 có thể khả thi
+n ~ 10^5        -> thường cần n log n hoặc n
+n ~ 10^6        -> memory/allocation cũng thành vấn đề lớn
+Q ~ 10^5        -> preprocessing/index có thể rất đáng
+```
 
-State quá nhỏ làm solution sai vì mất thông tin. State quá lớn làm complexity bùng nổ. Đây là lý do thiết kế state là trung tâm của DP, graph search và many online algorithms.
+Đây chỉ là heuristic, không phải luật cứng. Runtime, constant factor và time limit vẫn quan trọng.
 
-Một test hữu ích là: nếu hai partial histories tạo cùng state, tương lai của chúng có thực sự tương đương không? Nếu có, ta có thể merge hai histories thành một DP/memo state.
+Nhưng constraints giúp loại nhanh những ý tưởng bất khả thi.
 
-## 6. Chọn representation trước khi chọn algorithm cụ thể
+## 5. Đừng chỉ nhìn n; tìm mọi tham số
 
-Cùng một graph có thể biểu diễn bằng adjacency matrix hoặc adjacency list. Matrix cho edge lookup `O(1)` nhưng memory `O(V^2)`. List phù hợp sparse graph và traversal `O(V+E)`.
+Graph có `V` và `E`. String matching có `n` và `m`. Top-K có `n` và `k`. Knapsack có `n` và `W`.
 
-Một frequency problem có thể dùng array nếu key domain nhỏ và dense, hoặc hash map nếu sparse. Một set các intervals có thể sort theo start để tạo ordering invariant trước khi sweep.
+Một complexity như:
 
-Representation quyết định cost của operation sau đó. Vì thế “algorithm” và “data structure” không nên được suy nghĩ tách rời.
+\[
+O(n\log k)
+\]
 
-## 7. Viết invariant trước khi viết loop phức tạp
+có thể tốt hơn nhiều `O(n log n)` khi `k` nhỏ.
 
-**Invariant / 불변식** là điều phải luôn đúng tại một điểm cụ thể của algorithm. Nó là cầu nối giữa intuition và proof.
+Giữ tham số riêng giúp thấy structure mà việc ép tất cả thành một `n` sẽ che mất.
 
-Với binary search, invariant có thể là “nếu answer tồn tại thì nó vẫn nằm trong interval `[lo, hi]`”. Với sliding window, invariant có thể là “window hiện tại luôn có tổng không vượt `K`”. Với heap, parent-child order phải luôn đúng sau mỗi update. Với DSU, mỗi component phải có một representative root nhất quán.
+## 6. Tìm baseline đúng trước
 
-Nếu không nói được invariant, debug thường trở thành thử-sai. Nếu invariant rõ, ta biết mỗi line update phải bảo toàn điều gì.
+Brute force không phải đáp án “ngu ngốc”; nó là **đặc tả có thể chạy được**.
 
-## 8. Tách correctness khỏi complexity
+Baseline giúp:
 
-Một thuật toán có thể nhanh nhưng sai; hoặc đúng nhưng quá chậm. Hai câu hỏi cần được chứng minh riêng.
+```text
+xác nhận hiểu đề
+làm oracle cho test nhỏ
+cho thấy work nào đang bị lặp
+```
 
-Correctness thường dựa trên induction, exchange argument, cut property, loop invariant hoặc contradiction. Complexity dựa trên counting operations, recurrence, amortized analysis hoặc expected analysis.
+Two Sum `O(n²)` làm lộ rằng inner loop chỉ đang hỏi “complement đã xuất hiện chưa?”, từ đó Hash Set loại quét lặp.
 
-Ví dụ greedy interval scheduling không đúng chỉ vì code chọn interval kết thúc sớm nhất “có vẻ hợp lý”. Ta cần exchange argument cho thấy bất kỳ optimal solution nào cũng có thể đổi first chosen interval thành interval kết thúc sớm nhất mà không làm giảm số lượng interval còn chọn được.
+Range Sum brute force làm lộ rằng cùng prefix bị cộng lại nhiều lần, dẫn tới Prefix Sum.
 
-## 9. Nhận diện các hướng tối ưu hóa phổ biến
+Memoization làm lộ rằng nhiều nhánh recursion đang tính lại cùng state.
 
-Khi baseline quá chậm, có vài câu hỏi rất hữu ích.
+## 7. Hỏi: “Tôi đang tính lại cái gì?”
 
-Nếu đang có nested loop `O(n^2)`, hãy hỏi liệu sorting có tạo monotonic structure cho two pointers hay binary search không; liệu hash table có thay inner scan bằng lookup không; liệu prefix/difference array có tránh recompute aggregate không; liệu sweep line có biến pairwise interaction thành ordered events không.
+Đây là câu hỏi tối ưu hóa quan trọng nhất.
 
-Nếu search tree exponential, hãy hỏi liệu có overlapping states để memoize, có pruning bound để loại branch, có symmetry để tránh xét trạng thái tương đương, hoặc có greedy property để không cần search toàn bộ hay không.
+Các dạng lặp lại phổ biến:
 
-Nếu query lặp lại trên dữ liệu giống nhau, hãy hỏi preprocessing/index có đáng không. Nếu update và query đều nhiều, hãy cân nhắc Fenwick/Segment Tree, balanced tree hoặc specialized structure phù hợp.
+```text
+quét lại cùng prefix
+so lại cùng pair
+tính lại cùng state
+sort lại dữ liệu đã có thứ tự
+lookup tuyến tính lặp lại
+recompute aggregate sau mỗi update
+```
 
-## 10. Dry-run bằng một input nhỏ nhưng “khó chịu”
+Structure thường xuất hiện để **materialize một summary** giúp tránh recomputation.
 
-Ví dụ đẹp trong đề thường không đủ. Hãy tự tạo input phá assumptions: empty, one element, duplicates, all equal, reverse order, negative values, disconnected graph, cycle, multiple shortest paths, zero-weight edge, duplicate edges hoặc extremely skewed tree.
+## 8. Thiết kế state
 
-Dry-run nên theo state thật của algorithm: pointers, queue, stack, distances, parent links, DP table, heap content. Nếu state transition không giải thích được bằng invariant, đó là dấu hiệu design chưa ổn.
+Một state tốt phải đủ thông tin để tương lai được xác định, nhưng không giữ lịch sử thừa.
 
-## 11. Edge cases phải sinh từ model
+Ví dụ grid có key/door:
 
-Một checklist chung hữu ích, nhưng edge cases mạnh nhất xuất phát từ assumption của chính algorithm.
+```text
+(row, col)              -> thiếu
+(row, col, keyMask)     -> đủ hơn
+```
 
-Nếu binary search dùng `mid = (lo + hi) / 2`, hãy nghĩ overflow trong C/Java integer. Nếu recursion depth có thể bằng `n = 10^5`, stack overflow là risk. Nếu Dijkstra được dùng, hãy hỏi edge có negative không. Nếu interval comparator xử lý ties, hãy hỏi domain dùng closed hay half-open intervals.
+Nếu hai lịch sử khác nhau dẫn tới cùng state và từ đó mọi action/cost tương lai tương đương, ta có thể gộp chúng.
 
-Trong C phải kiểm tra bounds, allocation, lifetime và ownership. Trong Java cần chú ý boxing, comparator contract, `equals/hashCode`, recursion depth và mutable keys. Trong JavaScript phải để ý `Number` precision, default `.sort()`, `Array.shift()` cost, recursion limit, `Map` vs plain object và UTF-16 string semantics.
+Đây là nền tảng của memoization, DP và state-space graph.
 
-## 12. Complexity review phải đi theo toàn pipeline
+## 9. Nhận diện state explosion
 
-Đừng chỉ phân tích core loop. Nếu solution sort `O(n log n)` rồi chạy binary search cho mỗi query, total phải gồm cả preprocessing và queries. Nếu mỗi iteration gọi một helper `O(n)`, outer loop nhìn `O(n)` nhưng total có thể `O(n^2)`.
+Nếu state có nhiều chiều:
 
-Memory cũng phải tính cả auxiliary arrays, recursion stack, graph edges, hash-table overhead và duplicated representation.
+```text
+position × mask × time × resource
+```
 
-Một solution production còn cần nhìn allocation rate, cache locality và I/O, nhưng Big-O vẫn là lớp reasoning nền tảng.
+không gian có thể tăng theo tích các miền.
 
-## 13. Testing: so với oracle nhỏ
+Trước khi code, ước lượng số state tối đa.
 
-Khi implementation phức tạp, hãy giữ một brute-force reference cho small random inputs. Sinh nhiều input nhỏ, chạy cả optimized và brute solution, rồi so output. Đây là **differential testing**.
+```text
+n * 2^k
+n * m * k
+V * stops
+```
 
-Ví dụ Segment Tree có thể được so với simple array update + linear range sum. Custom heap có thể được so với sorting reference. Shortest-path implementation có thể được đối chiếu với Floyd–Warshall trên graph nhỏ.
+Một DP transition `O(1)` vẫn vô dụng nếu số state là `10^12`.
 
-Cách này đặc biệt hiệu quả vì brute force dễ viết đúng hơn optimized structure.
+## 10. Dense hay Sparse State?
 
-## 14. Khi nào nên dừng tối ưu?
+Nếu phần lớn state có thể xuất hiện, array/table dense thường nhanh và memory predictable.
 
-Một solution `O(n log n)` rõ ràng, dễ chứng minh và chạy tốt thường đáng chọn hơn một solution `O(n)` cực kỳ phức tạp nếu constraints không cần mức tối ưu đó. Engineering không chỉ tối thiểu hóa runtime mà còn tối thiểu hóa bug risk và maintenance cost.
+Nếu chỉ một phần rất nhỏ reachable, Hash Map/Set có thể tiết kiệm memory dù lookup đắt hơn.
 
-Trong phỏng vấn hoặc competitive programming, giới hạn thời gian có thể đẩy ta tới asymptotic tối ưu hơn. Trong production, readability, observability và resilience cũng là constraints thật.
+Đừng chỉ hỏi “DP array hay map”; hãy hỏi density của reachable state.
 
-## 15. Ví dụ đầy đủ: Longest subarray có tổng không vượt K với số dương
+## 11. Chọn representation trước thuật toán chi tiết
 
-Brute force thử mọi `l`, mở rộng `r` và tính tổng có thể `O(n^2)`. Nhưng vì tất cả số dương, khi mở rộng `r`, tổng chỉ tăng. Nếu tổng vượt `K`, tăng `l` sẽ chỉ làm tổng giảm. Tính monotonic này cho phép sliding window.
+Graph sparse:
 
-Invariant là: sau khi shrink xong, window `[l,r]` luôn có sum `<= K`. Mỗi index chỉ đi qua `l` hoặc `r` tối đa một lần, nên total `O(n)`.
+```text
+adjacency list
+```
 
-Nếu array có số âm, monotonicity biến mất và cùng sliding-window proof không còn đúng. Đây là ví dụ điển hình cho việc constraint nhỏ trong đề có thể là lý do toàn bộ algorithm hoạt động.
+Graph dense hoặc cần edge lookup nhanh:
 
-## 16. Một template reasoning có thể dùng cho mọi bài
+```text
+adjacency matrix
+```
 
-Khi tự học hoặc review solution, hãy ép mình trả lời tuần tự:
+Key integer dense:
 
-**Problem model là gì?** Sequence, set, graph, tree, intervals hay state space?
+```text
+array
+```
 
-**Operation trọng tâm là gì?** Lookup, range query, shortest path, connectivity, optimization hay enumeration?
+Key sparse/string:
 
-**Constraints cho phép complexity nào?**
+```text
+Hash Map
+```
 
-**Baseline đúng đơn giản nhất là gì?**
+Representation quyết định cost của operation tiếp theo.
 
-**Baseline đang lặp lại work nào?**
+## 12. Viết invariant trước loop phức tạp
 
-**Representation/invariant nào loại được work đó?**
+Nếu không thể nói loop đang bảo vệ điều gì, code rất dễ biến thành trial-and-error.
 
-**Tại sao solution đúng?**
+Binary search:
 
-**Time/space complexity của toàn pipeline là gì?**
+> nếu answer tồn tại, nó vẫn nằm trong vùng ứng viên hiện tại.
 
-**Assumption nào có thể vỡ ở edge case?**
+Sliding window:
 
-Nếu trả lời được tám câu này, solution thường đã vượt khỏi mức “nhớ pattern” và trở thành reasoning có thể tái sử dụng.
+> cửa sổ hiện tại luôn thỏa constraint; left là ranh giới nhỏ nhất/lớn nhất theo invariant đã chọn.
 
-## Mental Model
+Monotonic deque:
 
-> Giải DSA là quá trình **nén search space và repeated work** bằng representation, ordering, invariants và reuse. Một optimization có giá trị khi bạn chỉ ra chính xác phần work nào đã biến mất và vì sao correctness vẫn được giữ.
+> deque chứa đúng candidate chưa hết hạn, theo thứ tự giá trị đơn điệu.
 
-Xem thêm: [Chọn cấu trúc dữ liệu phù hợp](./00_choose_the_right_data_structure.md), [Correctness & Invariants](../00_foundations/01_algorithm_correctness_and_invariants.md), [Complexity Analysis](../00_foundations/02_complexity_analysis.md).
+## 13. Invariant cần đủ mạnh
+
+“Inorder prefix đã sorted” chưa đủ chứng minh sorting nếu không đảm bảo các phần tử không bị mất hoặc nhân đôi.
+
+Một invariant tốt thường gồm:
+
+```text
+shape/order property
+membership/conservation property
+candidate completeness
+```
+
+Nó phải đủ mạnh để kết hợp với điều kiện dừng suy ra postcondition.
+
+## 14. Tách correctness và complexity
+
+Correctness trả lời:
+
+```text
+vì sao answer đúng?
+```
+
+Complexity trả lời:
+
+```text
+phải làm bao nhiêu work và dùng bao nhiêu memory?
+```
+
+Một thuật toán có thể đúng nhưng quá chậm; hoặc nhanh nhưng sai.
+
+Đừng dùng “Big-O tốt” như bằng chứng đúng đắn.
+
+## 15. Pattern chứng minh
+
+Các pattern phổ biến:
+
+```text
+loop invariant
+structural induction
+strong induction
+exchange argument
+greedy stays-ahead
+cut/cycle property
+contradiction
+optimal substructure
+residual/certificate proof
+```
+
+Nhận diện pattern chứng minh thường quan trọng hơn nhận diện tên thuật toán.
+
+## 16. Khi baseline O(n²), thử những câu hỏi nào?
+
+Nếu đang xét mọi cặp:
+
+```text
+sort có tạo monotonic order không?
+hash có thay inner scan bằng lookup không?
+two pointers có loại cả vùng candidate không?
+prefix/difference có tái sử dụng aggregate không?
+sweep line có biến pair interaction thành event stream không?
+```
+
+Không có một mẹo duy nhất; mục tiêu là tìm **thông tin nào giúp loại nhiều ứng viên cùng lúc**.
+
+## 17. Khi recursion exponential, thử gì?
+
+```text
+có overlapping states không?        -> memoization / DP
+có branch vô ích nhận ra sớm không? -> pruning
+có bound tốt không?                 -> branch-and-bound
+có symmetry không?                  -> canonicalization
+n có ~40 không?                     -> meet-in-the-middle
+parameter nhỏ không?                -> FPT / bitmask DP
+```
+
+Cây tìm kiếm lớn thường được giảm bằng cách hợp nhất state hoặc loại nhánh.
+
+## 18. Khi có nhiều query
+
+Một query duy nhất có thể quét thẳng. `10^5` query trên cùng data thường đáng để preprocess.
+
+```text
+sorting
+prefix sum
+index
+Sparse Table
+binary lifting
+suffix array
+```
+
+Hãy so:
+
+\[
+C_{build}+Q\cdot C_{query}
+\]
+
+với cách không tiền xử lý.
+
+## 19. Khi vừa update vừa query
+
+Nếu prefix sum bị phá bởi update, chuyển sang structure động như Fenwick/Segment Tree.
+
+Nếu sorted array bị phá bởi insert/delete thường xuyên, chuyển sang balanced tree hoặc structure khác.
+
+Update/query trade-off chính là lý do nhiều data structures tồn tại.
+
+## 20. Chú ý objective thay đổi thuật toán
+
+Cùng dữ liệu interval:
+
+```text
+max số interval không overlap   -> greedy
+tối đa tổng trọng số            -> DP
+minimum rooms                   -> sweep/heap
+union length                    -> merge/sweep
+```
+
+Đừng nhận diện thuật toán chỉ từ “dữ liệu là interval”. Objective quyết định structure reasoning.
+
+## 21. Edge Case phải sinh từ assumption
+
+Nếu Dijkstra yêu cầu non-negative weight, test cạnh âm.
+
+Nếu binary search yêu cầu sorted array, test duplicates/boundaries.
+
+Nếu comparator yêu cầu transitive, test equal/tie cases.
+
+Nếu recursion depth có thể `n`, test skewed tree/path graph.
+
+Edge cases tốt nhất xuất phát từ **điều kiện mà proof sử dụng**.
+
+## 22. Integer Overflow
+
+Một thuật toán đúng trên số nguyên toán học có thể sai trong machine integer.
+
+```java
+mid = (lo + hi) / 2
+```
+
+có thể overflow với integer hữu hạn; mẫu an toàn hơn:
+
+```java
+mid = lo + (hi - lo) / 2
+```
+
+Distance, prefix sum, count và multiplication phải được bound trước khi chọn kiểu số.
+
+## 23. Floating Point
+
+Nếu comparator dùng epsilon thiếu nhất quán, có thể phá transitivity và làm sort/tree sai.
+
+Geometry predicate gần 0 có thể đổi dấu do rounding.
+
+Numeric semantics là một phần của specification.
+
+## 24. Language-Specific Review
+
+### C
+
+```text
+bounds
+ownership
+allocation failure
+integer overflow
+undefined behavior
+pointer invalidation
+```
+
+### Java
+
+```text
+boxing
+equals/hashCode
+Comparator
+mutable key
+StackOverflowError
+GC/allocation
+```
+
+### JavaScript
+
+```text
+Number safe integer
+bitwise 32-bit coercion
+Array.shift cost
+Map object identity
+sort comparator
+UTF-16 semantics
+```
+
+Một thuật toán trừu tượng đúng vẫn cần implementation phù hợp ngôn ngữ.
+
+## 25. Dry-Run như một state trace
+
+Đừng chỉ đọc code bằng mắt. Tạo input nhỏ nhưng khó chịu và ghi:
+
+```text
+lo/hi/mid
+stack/queue content
+heap
+visited
+DP states
+parent links
+window boundaries
+```
+
+Mỗi transition phải giải thích được bằng invariant.
+
+Nếu một biến cập nhật mà không biết nó bảo vệ tính chất nào, đó là dấu hiệu thiết kế chưa rõ.
+
+## 26. Test Oracle
+
+Với input nhỏ, dùng giải pháp chậm nhưng rõ ràng làm oracle.
+
+```text
+Dijkstra       vs Floyd-Warshall
+Segment Tree   vs array scan
+Top-K          vs full sort
+MST            vs brute force nhỏ
+custom map     vs standard map
+```
+
+Differential testing bắt implementation bug rất hiệu quả.
+
+## 27. Property-Based Testing
+
+Thay vì chỉ test output cụ thể, test tính chất:
+
+```text
+sort output ordered + same multiset
+heap pop sequence nondecreasing
+DSU union(a,b) => find(a)==find(b)
+BFS dist[v] <= dist[u]+1 trên edge tree phù hợp
+```
+
+Tính chất thường gần proof hơn example test.
+
+## 28. Adversarial Test
+
+Random input không thay thế input bệnh lý.
+
+```text
+sorted/reverse/all equal
+long collision chain
+skewed tree
+line graph
+complete graph
+large duplicate set
+many equal event times
+maximum recursion depth
+```
+
+Adversarial test kiểm tra đúng nơi asymptotic hoặc invariant dễ vỡ nhất.
+
+## 29. Complexity Review toàn pipeline
+
+Nếu preprocessing `O(n log n)` và mỗi query `O(log n)`, với `Q` query:
+
+\[
+O(n\log n + Q\log n)
+\]
+
+Nếu helper bên trong loop là `O(n)`, phải tính nó vào tổng.
+
+Nếu `sort()` được gọi trong mỗi iteration, complexity có thể lớn hơn trực giác rất nhiều.
+
+Không chỉ phân tích “core loop”.
+
+## 30. Space Review
+
+Tính cả:
+
+```text
+input copy
+aux arrays
+hash-table slack
+object overhead
+recursion stack
+memo table
+adjacency edges
+```
+
+`O(n)` memory có thể vẫn vượt limit vì hệ số lớn.
+
+## 31. Output Size Lower Bound
+
+Nếu phải xuất `k` kết quả, complexity ít nhất `Ω(k)`.
+
+Không thể yêu cầu liệt kê một triệu occurrence trong `O(log n)` chỉ vì index search nhanh.
+
+Luôn tách:
+
+```text
+cost tìm vùng kết quả
+cost materialize output
+```
+
+## 32. Stop Optimization khi đủ
+
+Nếu constraint cho phép `O(n²)` an toàn và solution đơn giản, đôi khi đó là lựa chọn tốt hơn một structure rất phức tạp.
+
+Độ phức tạp code tạo bug và maintenance cost.
+
+Mục tiêu là **đủ tốt với proof rõ**, không phải luôn dùng thuật toán mạnh nhất biết được.
+
+## 33. Profile trước Micro-Optimization
+
+Sau khi asymptotic đã phù hợp, profiling mới trả lời bottleneck thật nằm ở:
+
+```text
+allocation
+hashing
+comparator
+cache miss
+GC
+I/O
+network
+```
+
+Đừng thay HashMap bằng custom structure chỉ từ trực giác nếu path đó chỉ chiếm 1% runtime.
+
+## 34. Từ Interview Solution tới Production
+
+Một solution algorithmic đúng còn cần:
+
+```text
+input validation
+resource limits
+observability
+error handling
+concurrency semantics
+serialization/versioning
+backpressure
+failure recovery
+```
+
+Production hardening không thay đổi proof lõi nhưng mở rộng contract của hệ thống.
+
+## 35. Viết Solution Note sau khi giải
+
+Một ghi chú tốt nên trả lời:
+
+```text
+mô hình bài toán
+baseline
+bottleneck của baseline
+insight tối ưu
+invariant/proof
+complexity
+edge cases
+implementation caveats
+alternative approaches
+```
+
+Cách này biến một bài giải đơn lẻ thành kiến thức tái sử dụng.
+
+## 36. Postmortem khi sai
+
+Không chỉ sửa dòng code. Hãy phân loại lỗi:
+
+```text
+mô hình sai
+state thiếu
+invariant sai
+boundary sai
+complexity sai
+integer/precision sai
+representation sai
+implementation bug
+```
+
+Phân loại đúng giúp tránh lặp lại cùng kiểu lỗi ở bài khác.
+
+## 37. Một quy trình 12 bước
+
+```text
+1. Viết lại specification.
+2. Xác định mọi constraint và parameter.
+3. Bỏ story, dựng computational model.
+4. Viết baseline đúng.
+5. Xác định work bị lặp hoặc candidate thừa.
+6. Thiết kế state tối thiểu đủ thông tin.
+7. Chọn representation phù hợp.
+8. Viết invariant/proof sketch.
+9. Tính time + space toàn pipeline.
+10. Test bằng oracle + adversarial cases.
+11. Profile nếu cần tối ưu thực tế.
+12. Ghi lại insight, không chỉ code.
+```
+
+## 38. Checklist trước khi nộp hoặc merge
+
+```text
+Output semantics có đúng mọi case không?
+Có dùng giả định nào đề không bảo đảm không?
+Invariant có được giữ sau mọi update không?
+Termination có chắc chắn không?
+Complexity có tính helper/API ẩn không?
+Kiểu số có đủ không?
+Recursion depth an toàn không?
+Có mutation/invalidation ngoài ý muốn không?
+Test adversarial đã có chưa?
+Có cách oracle nhỏ để đối chiếu không?
+```
+
+## Mô hình tư duy
+
+> Giải DSA là quá trình **giảm không gian bất định**: specification xác định câu hỏi, model xác định state, invariant loại bỏ trạng thái sai, data structure lưu thông tin hữu ích, còn thuật toán quyết định thứ tự khai thác thông tin đó.
+
+Khi bí, đừng hỏi “mẫu này dùng thuật toán gì?”. Hãy quay lại hỏi: **baseline đang làm thừa công việc nào, state nào thực sự ảnh hưởng tương lai, invariant nào cho phép bỏ candidate, và structure nào materialize thông tin đó rẻ nhất?**
+
+Xem thêm: [Problem Modeling](../00_foundations/00_dsa_as_problem_modeling.md), [Correctness & Invariants](../00_foundations/01_algorithm_correctness_and_invariants.md), [Complexity](../00_foundations/02_complexity_analysis.md), [Choose the Right Data Structure](./00_choose_the_right_data_structure.md), [Cross-Language Testing](../80_language_implementations/03_cross_language_testing_and_benchmarking.md).

@@ -1,15 +1,15 @@
-# Queue, Deque và Priority Queue
-**큐, 덱, 우선순위 큐**
+# Queue, Deque và hàng đợi ưu tiên
+**Queue, Deque & Priority Queue / 큐, 덱, 우선순위 큐**
 
-Queue, deque và priority queue đều quản lý một tập phần tử “đang chờ được xử lý”, nhưng khác nhau ở **selection policy / 선택 정책**: phần tử nào sẽ được lấy ra tiếp theo. Sự khác biệt tưởng nhỏ này quyết định trực tiếp correctness của nhiều algorithms. BFS cần FIFO để giữ layer order; Dijkstra cần minimum-priority extraction; sliding-window maximum cần một deque giữ candidates theo cả thời gian và value order.
+Queue, deque và priority queue đều quản lý một tập phần tử “đang chờ”, nhưng khác nhau ở **chính sách chọn phần tử tiếp theo (selection policy)**. Khác biệt tưởng nhỏ này lại quyết định trực tiếp tính đúng đắn của nhiều thuật toán.
 
-Vì vậy không nên xem queue chỉ là một container có `enqueue/dequeue`. Nó là một abstraction về **thứ tự phục vụ (service order)**.
+BFS cần FIFO để bảo toàn thứ tự theo tầng. Dijkstra cần phần tử có tentative distance nhỏ nhất. Sliding-window maximum cần deque duy trì đồng thời thứ tự thời gian và quan hệ ưu thế về giá trị.
 
-## Queue: FIFO và time order
+Vì vậy queue không chỉ là một container; nó là một abstraction về **thứ tự phục vụ**.
 
-**Queue / 큐** dùng FIFO — First In, First Out / 선입선출. Phần tử vào trước được lấy ra trước.
+## Queue và nguyên tắc FIFO
 
-Java:
+Queue dùng nguyên tắc **vào trước, ra trước (First In, First Out – FIFO / 선입선출)**.
 
 ```java
 Queue<Integer> q = new ArrayDeque<>();
@@ -18,49 +18,51 @@ q.offer(20);
 System.out.println(q.poll()); // 10
 ```
 
-Cốt lõi của queue không phải syntax mà là invariant:
+Bất biến logic:
+
+> Các phần tử còn trong queue xuất hiện theo đúng thứ tự enqueue chưa bị dequeue.
+
+Đây là lý do queue phù hợp với request arrival order, event processing, producer–consumer pipeline và BFS.
+
+## Vì sao BFS cần FIFO?
+
+Trong graph không trọng số, mỗi cạnh tăng độ dài đường đi thêm đúng 1. Khi BFS lấy một node có distance `d`, các node đã được discover trước nó có distance không lớn hơn `d`; các neighbor mới được thêm với distance `d+1`.
+
+FIFO bảo đảm frontier được xử lý theo lớp khoảng cách không giảm.
+
+Nếu thay queue bằng stack, ta có DFS và mất shortest-path guarantee theo số cạnh. Nếu thay bằng min-heap theo weight, ta chuyển sang một policy gần Dijkstra.
+
+Do đó cấu trúc frontier không phải chi tiết implementation; nó là một phần của proof.
+
+## Queue API cũng là một contract
+
+Một queue thực tế phải định nghĩa rõ:
 
 ```text
-mọi phần tử còn trong queue xuất hiện theo đúng thứ tự enqueue chưa được dequeue
+enqueue khi đầy làm gì?
+dequeue khi rỗng làm gì?
+capacity có cố định không?
+operation có block không?
+null có phải một giá trị hợp lệ không?
+queue có thread-safe không?
+iteration có snapshot hay live view?
 ```
 
-FIFO rất phù hợp cho request processing, event buffering, task scheduling theo arrival order và BFS.
+Trong Java, `offer` và `add` có semantics khác khi queue từ chối phần tử; `poll/peek` khác `remove/element` khi queue rỗng.
 
-## Tại sao BFS cần queue?
-
-Trong unweighted graph, BFS khám phá nodes theo distance layers. Khi node distance `d` được dequeue, mọi node đã enqueue trước nó có distance `<= d`, và neighbors mới được enqueue với distance `d+1`.
-
-Queue giữ exact ordering cần cho proof shortest path theo số edges. Nếu thay queue bằng stack, algorithm trở thành DFS và mất layer guarantee. Nếu thay bằng min-heap theo một custom score, ta đã đổi search semantics.
-
-Đây là một ví dụ quan trọng: **data structure của frontier là một phần của algorithmic proof**, không chỉ là implementation detail.
-
-## Queue interface và empty/full semantics
-
-Một queue API nên xác định rõ:
-
-```text
-enqueue khi full làm gì?
-dequeue khi empty trả gì?
-queue có bounded capacity không?
-null/None có được dùng làm value hợp lệ không?
-operation có block hay non-blocking?
-```
-
-Trong Java, `Queue.add` và `offer` khác error semantics; `remove/element` có thể throw khi empty, trong khi `poll/peek` trả `null` theo contract. Với `ArrayDeque`, `null` không được phép làm element, giúp `poll()==null` biểu diễn empty rõ ràng.
-
-Trong C, API thường dùng boolean + output pointer:
+Trong C, một API rõ thường dùng:
 
 ```c
 bool queue_pop(Queue *q, Item *out);
 ```
 
-để tránh dùng magic sentinel trùng với data domain.
+thay vì dùng magic sentinel có thể trùng dữ liệu thật.
 
-## Array queue và vấn đề shift
+## Vì sao shift mảng là thiết kế queue kém?
 
-Naive array queue có thể enqueue ở cuối và khi dequeue thì shift toàn bộ elements sang trái. Điều này biến dequeue thành `O(n)`.
+Nếu dequeue luôn dịch toàn bộ phần tử còn lại sang trái, mỗi lần dequeue tốn `O(n)`.
 
-Cách tốt hơn là giữ `head` index. JavaScript example:
+Cách tốt hơn là giữ `head` index:
 
 ```js
 class Queue {
@@ -86,13 +88,13 @@ class Queue {
 }
 ```
 
-Head-index tránh shift mỗi lần, nhưng cần compaction định kỳ để backing array không giữ references/space cũ quá lâu.
+Head-index tránh shift mỗi operation, nhưng cần compaction nếu runtime vẫn giữ references cũ trong backing array quá lâu.
 
-## Circular buffer / ring buffer
+## Ring buffer
 
-**Circular buffer / 원형 버퍼** dùng fixed array và wrap indices về đầu.
+**Bộ đệm vòng (ring buffer / 원형 버퍼)** dùng một mảng và cho chỉ số quay lại đầu khi chạm cuối.
 
-Một representation rõ ràng giữ:
+Một representation dễ reasoning giữ:
 
 ```text
 capacity
@@ -100,13 +102,11 @@ head
 size
 ```
 
-Tail suy ra:
+Tail được suy ra:
 
 \[
 tail=(head+size)\bmod capacity
 \]
-
-C implementation:
 
 ```c
 typedef struct {
@@ -115,82 +115,122 @@ typedef struct {
     size_t head;
     size_t size;
 } RingQueue;
-
-bool enqueue(RingQueue *q, int x) {
-    if (q->size == q->cap) return false;
-
-    size_t tail = (q->head + q->size) % q->cap;
-    q->a[tail] = x;
-    q->size++;
-    return true;
-}
-
-bool dequeue(RingQueue *q, int *out) {
-    if (q->size == 0) return false;
-
-    *out = q->a[q->head];
-    q->head = (q->head + 1) % q->cap;
-    q->size--;
-    return true;
-}
 ```
 
-Dùng `size` giải quyết ambiguity khi `head == tail`, trạng thái này nếu chỉ giữ hai indices có thể biểu diễn cả empty lẫn full tùy convention.
+Bất biến:
 
-## Power-of-two capacity và masking
+```text
+0 <= size <= cap
+head < cap khi cap > 0
+phần tử logic thứ i nằm tại (head + i) mod cap
+```
 
-Nếu capacity luôn là power of two, wrap có thể dùng bitmask:
+Dùng `size` giúp phân biệt rõ trạng thái rỗng và đầy khi `head == tail`.
+
+## Nhiều convention của ring buffer
+
+Có ít nhất ba cách phổ biến:
+
+```text
+head + size
+head/tail và chừa một slot rỗng
+head/tail + cờ full
+```
+
+Không có convention duy nhất đúng. Sai lầm thường đến từ việc trộn hai convention trong cùng implementation.
+
+Một proof tốt phải xác định chính xác:
+
+```text
+head trỏ phần tử đầu hay slot trống kế tiếp?
+tail trỏ phần tử cuối hay slot trống kế tiếp?
+full được nhận biết bằng gì?
+```
+
+## Capacity là lũy thừa của hai
+
+Nếu `capacity = 2^k`, phép wrap có thể dùng:
 
 ```text
 index & (capacity - 1)
 ```
 
-thay modulo trong một số low-level implementations. Tuy nhiên đây là optimization representation; correctness vẫn dựa trên invariant `capacity` là power of two.
+thay modulo.
 
-Không nên áp dụng trick này nếu capacity arbitrary.
+Nhưng tối ưu này chỉ đúng nếu invariant “capacity luôn là lũy thừa của hai” được giữ qua mọi resize.
 
-## Ring buffer trong systems
+Đây là mẫu chung: optimization bit-level thường tạo thêm một invariant cấu trúc.
 
-Ring buffer rất tự nhiên cho audio, networking, telemetry, logging pipeline và producer-consumer systems vì memory bounded và access contiguous.
+## Bounded queue và overload policy
 
-Một bounded ring buffer buộc system định nghĩa overload policy. Khi full, có thể:
+Queue có capacity hữu hạn buộc hệ thống trả lời câu hỏi: chuyện gì xảy ra khi đầy?
 
 ```text
 block producer
 reject item
-return failure
-overwrite/drop oldest
 drop newest
-spill elsewhere
+drop oldest
+overwrite oldest
+spill sang disk
+scale consumer
 ```
 
-Đây không còn là chi tiết DSA; nó trở thành reliability/backpressure policy của application.
+Đây không còn là chuyện container thuần túy; nó trở thành policy về reliability và backpressure.
 
-## Backpressure
+## Queue không chữa được throughput deficit dài hạn
 
-Queue vô hạn không giải quyết overload; nó chỉ biến overload thành memory growth và latency tăng dần.
+Giả sử tốc độ đến trung bình là `λ` và tốc độ xử lý trung bình là `μ`.
 
-Nếu producer rate `λ` lâu dài lớn hơn consumer service rate `μ`, queue length có xu hướng tăng. Bounded queue ép system phản ứng sớm: block, shed load hoặc scale capacity/service.
+Nếu trong thời gian dài:
 
-Mental model quan trọng:
+\[
+\lambda > \mu
+\]
 
-> Queue hấp thụ burst ngắn hạn; nó không thể chữa throughput deficit dài hạn.
+thì queue có xu hướng dài ra. Queue lớn chỉ trì hoãn hậu quả bằng cách đổi overload thành memory growth và latency growth.
 
-## Little's Law connection
+Mô hình tư duy:
 
-Trong steady state, queueing systems thường dùng intuition của Little's Law:
+> Queue hấp thụ burst ngắn hạn; nó không tạo thêm năng lực xử lý dài hạn.
+
+## Little's Law
+
+Trong trạng thái ổn định, một trực giác quan trọng của queueing theory là:
 
 \[
 L=\lambda W
 \]
 
-trong đó `L` là average items trong system, `λ` throughput và `W` average time in system.
+trong đó:
 
-Không cần biến DSA chapter thành queueing theory, nhưng connection này cho thấy tăng queue capacity không tự giảm latency; queue dài thường đồng nghĩa wait time dài.
+```text
+L = số item trung bình trong hệ thống
+λ = throughput
+W = thời gian trung bình một item ở trong hệ thống
+```
 
-## Deque: thao tác ở cả hai đầu
+Nếu throughput không đổi mà queue length tăng, thời gian chờ trung bình cũng tăng.
 
-**Double-Ended Queue (Deque / 덱)** hỗ trợ push/pop ở front và back.
+Tăng capacity không tự giảm latency; nó chỉ cho phép nhiều item chờ hơn.
+
+## Queue và batching
+
+Một consumer có thể xử lý từng item hoặc gom batch.
+
+Batching có thể giảm overhead cố định trên mỗi item, ví dụ network syscall, disk write hoặc database transaction. Nhưng batch lớn thường tăng latency vì item đầu phải chờ batch đủ hoặc timeout.
+
+Đây là một trade-off hệ thống:
+
+```text
+batch lớn -> throughput tốt hơn, latency thường cao hơn
+batch nhỏ -> latency tốt hơn, overhead trên mỗi item cao hơn
+```
+
+Queue là nơi policy batching thường được thực hiện.
+
+## Deque
+
+**Double-Ended Queue (Deque / 덱)** hỗ trợ thao tác ở cả hai đầu:
 
 ```text
 pushFront
@@ -201,32 +241,40 @@ peekFront
 peekBack
 ```
 
-Deque có thể mô phỏng stack hoặc queue, nhưng giá trị lớn nhất của nó xuất hiện khi algorithm thực sự cần **hai-ended policy**, không chỉ để có API tiện.
+Deque có thể dùng như stack hoặc queue, nhưng sức mạnh thật xuất hiện khi thuật toán cần hai đầu với vai trò khác nhau.
 
-## Array deque và ring representation
+## Deque bằng ring buffer động
 
-Một array deque thường là ring buffer động. Khi push front, head lùi modulo capacity; push back ghi ở tail. Khi full, grow backing array và copy logical order sang buffer mới.
+Một array deque thường dùng ring buffer có thể resize.
 
-Invariant quan trọng là logical order độc lập với physical wrap. Iterator/resize code phải hiểu rằng elements có thể nằm ở hai physical segments:
+Về logic, sequence là liên tục. Về vật lý, nó có thể bị chia thành hai đoạn:
 
 ```text
-[tail segment ........] [........ head segment]
+[tail segment .........] [......... head segment]
 ```
+
+Resize phải copy theo **thứ tự logic**, không phải đơn giản copy vùng nhớ từ index 0 tới cuối.
+
+Đây là một ví dụ representation vật lý khác với thứ tự abstraction.
 
 ## Monotonic deque
 
-Sliding-window maximum là use case kinh điển.
+Sliding-window maximum là ví dụ kinh điển.
 
-Deque giữ indices sao cho:
+Deque giữ index với hai invariant:
 
 ```text
 index tăng từ front tới back
-value giảm từ front tới back
+giá trị giảm từ front tới back
 ```
 
-Khi thêm index `i`, pop back mọi index có value `<= a[i]`. Vì `i` mới hơn và không nhỏ hơn, các elements đó sẽ hết hạn sớm hơn `i` và không bao giờ trở thành maximum trong future windows chứa cả hai.
+Khi thêm `i`, loại ở back mọi index `j` có:
 
-Sau đó pop front nếu index đã ra ngoài window. Front luôn là maximum.
+```text
+a[j] <= a[i]
+```
+
+vì `i` mới hơn và không nhỏ hơn. `j` sẽ hết hạn trước `i` và không thể thắng `i` trong bất kỳ window tương lai chứa cả hai.
 
 ```java
 Deque<Integer> dq = new ArrayDeque<>();
@@ -248,250 +296,419 @@ for (int i = 0; i < a.length; i++) {
 }
 ```
 
-Mỗi index vào deque một lần và ra tối đa một lần, nên total time `O(n)`.
+Mỗi index vào deque một lần và ra tối đa một lần, nên tổng thời gian `O(n)`.
 
-Đây là amortized analysis rất đẹp: inner `while` không làm algorithm `O(n^2)` vì mỗi element bị pop chỉ một lần.
+Inner `while` không làm thuật toán `O(n²)` vì tổng số pop bị chặn tuyến tính.
 
-## Monotonic queue như compressed candidate set
+## Dominance trong monotonic deque
 
-Monotonic deque không lưu mọi element trong window. Nó chỉ giữ những element vẫn có khả năng trở thành answer tương lai.
+Monotonic deque chỉ giữ các candidate chưa bị **chi phối (dominated)**.
 
-Một element nhỏ hơn một element mới hơn bị **dominated**: nó vừa yếu hơn về value, vừa hết hạn sớm hơn. Vì thế có thể loại vĩnh viễn.
-
-Mental model này xuất hiện ở nhiều algorithms: giữ Pareto-like frontier và xóa states bị dominated.
-
-## Deque và 0–1 BFS
-
-Nếu edge weights chỉ `0` hoặc `1`, Dijkstra với heap đúng nhưng nặng hơn cần thiết.
-
-0–1 BFS dùng deque:
+Nếu `j` cũ hơn `i` và:
 
 ```text
-weight 0 -> push front
-weight 1 -> push back
+a[j] <= a[i]
 ```
 
-Node có candidate distance không tăng được ưu tiên trước. Vì distance increment chỉ có hai mức, deque giữ đủ ordering để đạt `O(V+E)`.
+thì `j` tệ hơn `i` ở cả hai tiêu chí:
 
-Deque ở đây hoạt động như một priority queue đặc biệt với priority differences bị giới hạn.
+```text
+hết hạn sớm hơn
+không có giá trị lớn hơn
+```
 
-## Priority Queue là ADT, heap chỉ là một implementation
+Do đó `j` có thể bị loại vĩnh viễn.
 
-**Priority Queue (우선순위 큐)** hỗ trợ operations kiểu:
+Đây là một ví dụ rất rõ của state pruning bằng dominance.
+
+## 0–1 BFS
+
+Nếu edge weight chỉ là `0` hoặc `1`, ta không cần full Priority Queue.
+
+```text
+weight 0 -> pushFront
+weight 1 -> pushBack
+```
+
+Deque giữ đủ ordering để node có tentative distance nhỏ hơn được xử lý trước.
+
+Độ phức tạp:
+
+\[
+O(V+E)
+\]
+
+trong representation adjacency list.
+
+0–1 BFS cho thấy selection policy có thể được chuyên biệt khi miền priority bị giới hạn.
+
+## Priority Queue là ADT, Heap chỉ là implementation phổ biến
+
+Priority Queue hỗ trợ dạng thao tác:
 
 ```text
 insert(item, priority)
-peek-min / peek-max
-extract-min / extract-max
+peekMin / peekMax
+extractMin / extractMax
 ```
 
-Binary heap là implementation phổ biến vì balance giữa memory compact và `O(log n)` update. Nhưng priority queue còn có thể dùng balanced tree, bucket queue, radix heap, pairing heap, Fibonacci heap hoặc specialized structures tùy workload.
-
-Không nên đồng nhất “priority queue” với “heap”.
-
-## Priority không nhất thiết là một số duy nhất
-
-Comparator có thể dùng nhiều fields:
+Binary Heap phổ biến vì cân bằng tốt giữa locality, memory và `O(log n)` update. Nhưng Priority Queue còn có thể được cài bằng:
 
 ```text
-primary: deadline sớm hơn
-secondary: priority class cao hơn
-tertiary: sequence number nhỏ hơn để FIFO trong cùng priority
+balanced tree
+bucket queue
+radix heap
+pairing heap
+Fibonacci heap
+indexed heap
+specialized calendar/event structure
 ```
 
-Tie-breaking là semantics. Nếu scheduler cần stable order trong cùng priority mà comparator bỏ sequence number, behavior có thể nondeterministic hoặc phụ thuộc heap shape.
+Không nên đồng nhất Priority Queue với Binary Heap.
 
-## Binary heap recap
+## Binary Heap và shape invariant
 
-Binary heap giữ partial order:
+Binary Heap thường dùng mảng. Với zero-based index:
 
 ```text
-min-heap: parent <= children
+parent(i) = (i - 1) / 2
+left(i)   = 2i + 1
+right(i)  = 2i + 2
 ```
 
-`peek` `O(1)`, insert và extract `O(log n)`, build heap bottom-up `O(n)`.
+Hai invariant:
 
-Heap không sorted toàn bộ; arbitrary search có thể `O(n)`. Đây là intentional trade-off: chỉ maintain đủ order cho extreme extraction.
+```text
+shape là complete binary tree
+heap-order đúng trên mọi cạnh cha-con
+```
 
-Chi tiết implementation sâu hơn xem [Heap](../02_trees/03_heaps.md).
+Insert giữ shape bằng cách thêm cuối, rồi sift-up sửa order. Extract root giữ shape bằng cách đưa phần tử cuối lên root, giảm size rồi sift-down.
 
-## Mutable priority là một correctness trap
+Một mutation chỉ phá order trên một đường, nên không cần xây lại toàn heap.
 
-Nếu object đã ở Java `PriorityQueue` rồi field dùng trong comparator bị sửa, heap không tự reheapify.
+## Build Heap là O(n), không phải O(n log n)
+
+Nếu insert từng phần tử một, tổng có thể `O(n log n)`.
+
+Nhưng bottom-up heapify gọi sift-down từ các internal node cho tổng thời gian `O(n)`.
+
+Trực giác: phần lớn node nằm gần lá và chỉ có thể đi xuống rất ít bước. Chỉ rất ít node ở gần root có chiều cao lớn.
+
+Đây là ví dụ cần phân tích tổng cost theo độ cao của node thay vì nhân “n node × log n” một cách thô.
+
+## Priority Queue và tie-breaking
+
+Priority không nhất thiết chỉ là một số.
+
+Ví dụ scheduler:
+
+```text
+1. deadline sớm hơn
+2. priority class cao hơn
+3. sequence number nhỏ hơn
+```
+
+Nếu hai item có cùng priority nhưng business semantics yêu cầu FIFO, cần sequence number để làm tie-breaker.
+
+Heap bản thân không cam kết stable order giữa các key bằng nhau.
+
+## Mutable priority là một bẫy
+
+Nếu một object đã nằm trong heap rồi priority field bị sửa trực tiếp, heap không tự biết phải reheapify.
+
+Trong Java:
+
+```text
+node.priority = smallerValue
+```
+
+không tự di chuyển `node` lên.
+
+Có ba hướng:
+
+```text
+xóa và chèn lại
+cài decreaseKey/increaseKey với index map
+chèn state mới và bỏ stale state khi pop
+```
+
+Dijkstra trong thư viện chuẩn thường dùng lựa chọn thứ ba vì `PriorityQueue` không cung cấp decrease-key trực tiếp.
+
+## Lazy deletion trong Dijkstra
+
+Một pattern:
 
 ```java
-state.priority = 1; // queue không biết cần di chuyển state
+record State(int node, long dist) {}
 ```
 
-Do đó Dijkstra thường push entry mới và bỏ stale entry khi poll:
-
-```java
-if (cur.dist() != dist[cur.node()]) continue;
-```
-
-Hoặc implement indexed heap hỗ trợ decrease-key thật sự.
-
-## Indexed priority queue
-
-Nếu cần update priority theo item identity thường xuyên, giữ mapping:
+Khi tìm được distance mới tốt hơn, chèn một `State` mới. Khi pop:
 
 ```text
-item -> heap index
+nếu state.dist != dist[state.node] -> stale, bỏ qua
 ```
 
-Mỗi swap phải cập nhật position map. Decrease/increase-key sau đó có thể sift đúng direction trong `O(log n)`.
+Heap có thể chứa nhiều version của cùng node, nhưng correctness vẫn được giữ nhờ kiểm tra version logic qua distance hiện tại.
 
-Đổi lại implementation phức tạp hơn và có thêm cross-invariant:
+Trade-off:
 
 ```text
-position[heap[i].item] == i
+implementation đơn giản
+heap có thể lớn hơn
+nhiều stale entry hơn
 ```
 
-## Lazy deletion / stale-entry pattern
+## Indexed Heap
 
-Nhiều standard APIs không hỗ trợ remove/update arbitrary entry hiệu quả. Một pattern phổ biến là không xóa entry cũ ngay; thêm entry mới và khi pop thì kiểm tra entry còn current không.
-
-Pattern này đơn giản hóa code nhưng heap có thể phình lớn. Cost thực tế phụ thuộc số updates/stale entries và memory budget.
-
-## Bucket queue và bounded integer priorities
-
-Nếu priorities là small bounded integers, heap `O(log n)` có thể không cần. Ta có thể giữ array/buckets theo priority và tìm bucket non-empty tiếp theo.
-
-Dial's algorithm cho shortest paths với bounded non-negative integer weights khai thác idea này.
-
-Đây là một pattern chung:
-
-> Constraint trên key/priority domain có thể cho structure đơn giản hơn comparison-based priority queue.
-
-## Radix heap intuition
-
-Radix heap khai thác monotonic extracted keys trong một số shortest-path workloads với integer distances. Nó group keys theo bit-prefix/distance ranges thay vì heap binary comparison.
-
-Không cần dùng thường xuyên, nhưng nó minh họa rằng priority queue design phụ thuộc key structure và monotonicity assumptions.
-
-## Stable priority queue
-
-Heap thường không stable. Nếu two items có equal priority và application cần FIFO tie-break, thêm sequence number tăng dần:
+Nếu cần `decreaseKey` thật sự, có thể lưu:
 
 ```text
-(priority, sequence)
+heap[pos] = item
+position[item] = pos
 ```
 
-Comparator sort theo priority trước, sequence sau.
+Mỗi swap trong heap phải cập nhật `position`.
 
-Đây là ví dụ representation thêm metadata để encode semantics application-level.
-
-## Top-K và bounded priority queue
-
-Nếu stream có `N` items nhưng chỉ cần `k` lớn nhất, giữ min-heap size `k`:
+Bất biến liên cấu trúc:
 
 ```text
-nếu heap size < k -> insert
-nếu x > min -> replace min
-nếu không -> bỏ x
+position[heap[i]] == i
 ```
 
-Time:
+Indexed Heap giảm duplicate entry nhưng implementation phức tạp hơn đáng kể.
+
+## d-ary Heap
+
+Binary Heap có 2 child mỗi node. **d-ary heap** có `d` child.
+
+Tăng `d` làm chiều cao giảm:
 
 \[
-O(N\log k)
+O(\log_d n)
 \]
 
-memory `O(k)`. Đây là một cách dùng priority queue như compressed frontier của current best candidates.
+nhưng sift-down phải so nhiều child hơn để chọn child tốt nhất.
 
-## K-way merge
+Trade-off này có thể hữu ích khi workload có nhiều decrease-key hoặc khi memory/cache behavior thuận lợi.
 
-Có `k` sorted streams. Đưa head mỗi stream vào min-priority queue. Mỗi lần extract smallest, advance đúng stream đó.
+Không có `d` tối ưu chung cho mọi hệ thống.
 
-Nếu tổng `N` elements:
+## Bucket Queue
 
-\[
-O(N\log k)
-\]
-
-Đây là nền tảng của external merge sort, log compaction và distributed merge pipelines.
-
-## Scheduling và starvation
-
-Priority scheduler luôn chọn high priority có thể làm low-priority tasks chờ vô hạn nếu high-priority work liên tục tới. Đây gọi là starvation.
-
-Systems thường thêm aging, quotas hoặc multi-level policies để cân bằng priority với fairness.
-
-DSA abstraction không tự giải fairness; scheduler policy phải encode requirement này.
-
-## Multiple queues và work stealing
-
-Concurrent schedulers đôi khi dùng per-worker deques. Worker xử lý local tasks một đầu để giữ locality; idle worker “steal” từ đầu kia của worker khác.
-
-Work-stealing deque là một ví dụ nơi deque semantics kết hợp concurrency protocol và locality. Implementation lock-free thực tế phức tạp hơn deque textbook rất nhiều.
-
-## Blocking queues
-
-Concurrent producer-consumer system cần semantics khi empty/full:
+Nếu priority là integer trong miền nhỏ, có thể dùng array các bucket thay vì heap.
 
 ```text
-take() block khi empty
-put() block khi full
+bucket[p] chứa các item có priority p
 ```
 
-Java `BlockingQueue` family cung cấp contracts này. Đây là ADT khác queue non-blocking thường dùng trong algorithms.
+Extract-min tìm bucket không rỗng nhỏ nhất.
 
-Khi chọn API phải phân biệt **data order** và **coordination semantics**.
+Nếu miền priority nhỏ hoặc current minimum tăng đơn điệu, bucket queue có thể nhanh hơn heap.
 
-## Memory visibility và thread safety
+Đây là tư duy giống Counting Sort: khai thác miền khóa hẹp để bỏ comparison tree tổng quát.
 
-Một queue đúng single-thread không tự trở thành thread-safe khi thêm locks tùy tiện. Concurrent queue correctness cần đảm bảo linearization point và visibility giữa producer/consumer.
+## Dial's Algorithm
 
-Low-level ring buffers có thể dùng atomics, sequence numbers và memory ordering. Đây là phần systems/concurrency, nhưng mental model vẫn là giữ queue invariant trong mọi allowed interleaving.
+Với shortest path có non-negative integer weights bị chặn nhỏ, có thể dùng bucket theo distance modulo/range thay vì heap tổng quát.
 
-## Queue persistence và functional queues
+Đây là một ví dụ selection policy chuyên biệt cho cấu trúc trọng số.
 
-Trong functional programming, queue persistent có thể được tạo từ hai lists/stacks: một list cho front và một list reversed cho rear. Khi front empty, reverse rear.
+Bài học:
 
-Với amortized analysis, operations vẫn có thể constant amortized trong model phù hợp. Đây là ví dụ cùng FIFO ADT nhưng representation hoàn toàn khác imperative ring buffer.
+> Khi priority có thêm structure, Priority Queue tổng quát có thể chưa phải lựa chọn tốt nhất.
 
-## Choosing the right frontier structure
+## Radix Heap
 
-Một useful map:
+Radix Heap khai thác priority integer không giảm theo các lần extract-min và nhóm key theo bit-length của khoảng cách tới last extracted key.
 
-| Requirement | Frontier structure tự nhiên |
-|---|---|
-| arrival order | FIFO queue |
-| LIFO exploration | stack |
-| thao tác hai đầu | deque |
-| max/min theo score | priority queue |
-| two-level 0/1 priority | deque |
-| small bounded integer priorities | bucket queue |
-| sliding-window dominated candidates | monotonic deque |
+Nó là ví dụ nâng cao cho việc dùng representation bit của priority để giảm chi phí so với comparison heap trong một số shortest-path workload.
 
-Điều cần nhớ là **selection policy** chứ không phải table.
+Không cần dùng thường xuyên, nhưng đáng hiểu để thấy “heap” không phải giới hạn cuối của Priority Queue.
 
-## Common failure modes
+## Priority Queue trong event simulation
 
-Dùng `Array.shift()` cho queue JavaScript lớn có thể tạo unnecessary movement/runtime cost.
+Discrete-event simulation thường giữ sự kiện theo timestamp:
 
-Ring buffer không phân biệt full/empty đúng sẽ overwrite hoặc underflow.
+```text
+(time, sequence, event)
+```
 
-Priority queue với mutable key có thể silently phá heap ordering.
+Lấy event sớm nhất, chạy nó, rồi có thể sinh event mới trong tương lai.
 
-Comparator không transitive có thể phá priority semantics.
+Ở đây Priority Queue chính là “đồng hồ logic” của hệ thống mô phỏng.
 
-Unbounded queue dưới overload có thể gây memory exhaustion.
+Nếu cùng timestamp, sequence number có thể bảo đảm deterministic order.
 
-Monotonic deque lưu values thay vì indices có thể không biết element nào đã expired khi duplicates xuất hiện.
+## Scheduler và starvation
 
-## Testing strategy
+Nếu luôn ưu tiên task priority cao, task thấp có thể không bao giờ được chạy nếu dòng task cao liên tục tới. Đây là **starvation**.
 
-Queue/deque có thể test bằng reference `List` nhỏ với random operation sequences. Ring buffer cần đặc biệt test wrap-around nhiều lần, full/empty transitions và resize nếu dynamic.
+Một scheduler thực tế có thể dùng **aging**: priority hiệu dụng của task tăng theo thời gian chờ.
 
-Priority queue nên insert random values rồi poll toàn bộ, kiểm tra output nondecreasing. Indexed heap cần validator cho heap-order và position-map consistency.
+Điều này cho thấy priority policy không chỉ ảnh hưởng performance mà còn fairness.
 
-Monotonic deque có thể differential-test sliding-window results với brute-force `O(nk)` trên arrays nhỏ.
+## Multi-level queue
 
-## Mental Model
+Hệ điều hành hoặc hệ thống worker có thể dùng nhiều queue:
 
-> Queue family không chủ yếu khác nhau ở nơi insert/delete; chúng khác ở **quy tắc chọn phần tử tiếp theo**. FIFO giữ time order, deque cho điều khiển hai biên, priority queue giữ best score, monotonic deque giữ chỉ các candidates chưa bị dominated.
+```text
+high priority queue
+normal queue
+background queue
+```
 
-Khi một algorithm có “frontier”, hãy hỏi: **frontier phải được phục vụ theo thứ tự nào để proof đúng?** Câu trả lời thường cho biết nên dùng queue, stack, deque, heap hay một structure chuyên biệt hơn.
+Scheduler chọn giữa các queue theo policy riêng.
 
-Xem tiếp: [Stacks](./02_stacks.md), [Heap](../02_trees/03_heaps.md), [Graph Traversal](../03_graphs/01_graph_traversal_bfs_dfs.md), [Shortest Paths](../03_graphs/02_shortest_paths.md) và [Selection & Top-K](../04_algorithmic_paradigms/06_selection_and_top_k.md).
+Đây là composition: mỗi queue bên trong có FIFO, còn hệ thống tổng thể có selection policy hai tầng.
+
+## Work-stealing deque
+
+Trong parallel runtime, mỗi worker có thể có deque task riêng.
+
+Một pattern phổ biến:
+
+```text
+worker chủ sở hữu push/pop ở một đầu
+worker khác steal từ đầu đối diện
+```
+
+Mục tiêu là giảm contention ở common case nhưng vẫn cân bằng công việc khi một worker rảnh.
+
+Correctness concurrent của work-stealing deque phức tạp hơn deque single-thread rất nhiều vì phải xử lý atomicity và memory ordering.
+
+## SPSC, MPSC, MPMC
+
+Concurrent queue thường được phân loại theo số producer/consumer:
+
+```text
+SPSC: single producer, single consumer
+MPSC: multiple producer, single consumer
+SPMC: single producer, multiple consumer
+MPMC: multiple producer, multiple consumer
+```
+
+SPSC ring buffer có thể rất đơn giản vì producer và consumer sở hữu các chỉ số khác nhau. MPMC cần coordination mạnh hơn và thường có nhiều trạng thái cạnh tranh.
+
+Không nên dùng complexity của queue single-thread để suy ra chi phí concurrent queue.
+
+## Lock-free không có nghĩa wait-free
+
+**Lock-free** thường bảo đảm toàn hệ thống có tiến triển: trong hữu hạn bước, một thread nào đó hoàn thành operation.
+
+**Wait-free** mạnh hơn: mỗi thread riêng lẻ hoàn thành operation trong số bước bị chặn.
+
+Một lock-free queue vẫn có thể khiến một thread cụ thể retry nhiều lần dưới contention.
+
+Đây là các guarantee về progress, khác với Big-O tuần tự.
+
+## Memory reclamation trong concurrent queue
+
+Một linked queue lock-free không thể đơn giản `free` node ngay khi dequeue nếu thread khác vẫn có thể đang đọc con trỏ tới node đó.
+
+Cần các kỹ thuật như:
+
+```text
+hazard pointers
+epoch-based reclamation
+reference counting trong một số thiết kế
+```
+
+Điều này cho thấy lifetime management là một phần của correctness concurrent.
+
+## Queue và memory retention
+
+Trong Java/JavaScript, queue tự cài đặt bằng array + head index có thể giữ reference tới các item đã dequeue nếu không đặt slot cũ về `null`/`undefined` hoặc compact tùy representation.
+
+Về logic item đã ra khỏi queue, nhưng GC vẫn thấy reference từ backing array.
+
+Do đó logical size và reachable memory không luôn giống nhau.
+
+## Khi queue quá dài: latency distribution
+
+Average queue length không nói hết tail latency. Một burst lớn có thể tạo một số request chờ rất lâu dù mean vẫn chấp nhận được.
+
+Trong hệ thống thực tế nên quan sát:
+
+```text
+queue depth histogram
+p50/p95/p99 waiting time
+drop/reject rate
+consumer utilization
+arrival burstiness
+```
+
+Queue là một cấu trúc dữ liệu nhưng cũng là một điểm đo sức khỏe hệ thống.
+
+## Chọn cấu trúc theo selection policy
+
+Có thể nhìn nhiều thuật toán dưới một khung:
+
+```text
+Stack          -> chọn phần tử mới nhất
+Queue          -> chọn phần tử cũ nhất
+Deque          -> chọn ở một trong hai đầu
+Priority Queue -> chọn phần tử tốt nhất theo comparator
+Randomized     -> chọn ngẫu nhiên
+Bucket Queue   -> chọn theo lớp priority rời rạc
+```
+
+Khi đổi policy của frontier, ta thường đổi cả semantics của thuật toán.
+
+## Kiểm thử queue và deque
+
+Property cơ bản:
+
+```text
+enqueue sequence rồi dequeue hết phải bảo toàn FIFO
+size không âm và không vượt capacity
+ring wrap nhiều lần vẫn giữ thứ tự
+resize không đổi logical order
+full/empty transition đúng
+```
+
+Với deque:
+
+```text
+pushFront/popFront đối xứng
+pushBack/popBack đối xứng
+mixed operations so với reference deque
+```
+
+Random differential test rất hiệu quả cho ring-buffer bugs.
+
+## Kiểm thử Priority Queue
+
+Có thể push random values rồi pop hết và kiểm tra output đã sorted theo comparator.
+
+Với indexed heap, phải kiểm tra:
+
+```text
+heap invariant
+position[heap[i]] == i
+size và active set nhất quán
+```
+
+Với lazy deletion, cần test nhiều stale entries và bảo đảm stale state không được dùng để relax tiếp.
+
+## Những hiểu lầm phổ biến
+
+“Queue chỉ là mảng có push/shift” — `shift` lặp lại có thể rất đắt.
+
+“Queue càng lớn càng chống overload tốt” — queue lớn có thể chỉ biến overload thành latency lớn.
+
+“Priority Queue nghĩa là Binary Heap” — Heap chỉ là một implementation.
+
+“Thay priority field trong object là heap tự cập nhật” — sai.
+
+“Inner while trong monotonic deque làm O(n²)” — sai vì mỗi index bị loại tối đa một lần.
+
+“Concurrent queue chỉ cần thêm lock vào enqueue/dequeue” — chưa đủ để nói về throughput, fairness, blocking semantics và iteration contract.
+
+## Mô hình tư duy
+
+> Queue, Deque và Priority Queue khác nhau chủ yếu ở **quy tắc chọn ai được phục vụ tiếp theo**. Chính quy tắc đó tạo ra thứ tự xử lý, proof of correctness và đặc tính hệ thống.
+
+Khi gặp một frontier hoặc danh sách chờ, hãy hỏi: **cần FIFO, LIFO, hai đầu, minimum priority hay một priority domain chuyên biệt; queue có bounded không; overload xử lý thế nào; fairness có quan trọng không; và selection policy nào chính xác là điều proof của thuật toán cần?**
+
+Xem tiếp: [Stacks](./02_stacks.md), [Heaps](../02_trees/03_heaps.md), [BFS/DFS](../03_graphs/01_graph_traversal_bfs_dfs.md), [Shortest Paths](../03_graphs/02_shortest_paths.md), [Amortized Analysis](../05_specialized/03_amortized_randomized_and_probabilistic_thinking.md) và [Java Collections](../80_language_implementations/01_java_collections_and_dsa.md).

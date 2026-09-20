@@ -1,75 +1,91 @@
-# Khi Exact Algorithm trở nên khó: Reductions, NP-Complete và Approximation
-**환원, NP-완전, 근사 알고리즘**
+# Khi bài toán chính xác trở nên khó: Reduction, NP-Complete và Approximation
+**Reductions, NP-Completeness & Approximation / 환원, NP-완전, 근사 알고리즘**
 
-DSA không chỉ dạy cách làm nhanh. Một phần trưởng thành của algorithmic thinking là nhận ra khi một problem general đã khó tới mức việc tiếp tục “tối ưu data structure” không giải quyết được bản chất search space. Khi đó câu hỏi phải đổi từ:
+DSA không chỉ dạy cách làm một thuật toán nhanh hơn. Một mức trưởng thành quan trọng là nhận ra khi bản chất bài toán đã khó tới mức việc tiếp tục đổi `ArrayList` thành `HashMap`, hoặc tối ưu `O(n²)` thành `O(n log n)`, không còn giải quyết nút thắt chính.
 
-> “Làm sao giảm `O(n^2)` xuống `O(n log n)`?”
+Khi đó câu hỏi chuyển từ:
+
+> “Làm sao tối ưu implementation này?”
 
 sang:
 
-> “General exact problem có khả năng polynomial-time không? Nếu chưa biết, ta có thể khai thác special structure, parameter nhỏ, approximation, heuristic, SAT/ILP solver hay exponential algorithm thông minh nào?”
+> “Bài toán tổng quát có cấu trúc hardness nào? Có special case dễ hơn không? Parameter nào nhỏ? Có thể dùng exact exponential algorithm thông minh, approximation, heuristic hoặc solver chuyên dụng không?”
 
-Chapter này cung cấp mental model để đọc complexity-theory terms và dùng chúng như công cụ engineering, không phải như vocabulary học thuộc.
+Mục tiêu chương này là dùng complexity theory như một **công cụ engineering**, không phải danh sách thuật ngữ để học thuộc.
 
-## Polynomial và exponential là hai scale rất khác
+## Polynomial và exponential khác nhau về bản chất tăng trưởng
 
-`O(n^3)` có thể nặng nhưng vẫn polynomial. `O(2^n)` tăng khác hẳn: mỗi khi `n` tăng 1, work có thể gần gấp đôi.
-
-Rough intuition:
+`O(n³)` có thể chậm, nhưng vẫn polynomial. `O(2^n)` có tốc độ tăng khác hẳn: tăng `n` thêm 1 có thể gần như nhân đôi số trạng thái.
 
 ```text
-2^20  ≈ 1 triệu
-2^30  ≈ 1 tỷ
-2^40  ≈ 1 nghìn tỷ
+2^20 ≈ 1 triệu
+2^30 ≈ 1 tỷ
+2^40 ≈ 1 nghìn tỷ
 ```
 
-Trong khi đó `n^3` với `n=1000` cũng khoảng một tỷ operations nhưng growth khác hoàn toàn khi `n` tăng tiếp.
+Điều này không có nghĩa exponential luôn vô dụng. Nếu parameter thực tế chỉ 20–30, hoặc pruning rất mạnh, exact exponential algorithm có thể là lựa chọn tốt nhất.
 
-Điều quan trọng không phải một threshold cứng, mà là biết exponential search chỉ phù hợp khi `n`/parameter nhỏ hoặc pruning/structure cực mạnh.
+Điều cần nhớ là **input size thực** đôi khi không phải chỉ một biến `n`; độ lớn số được mã hóa bằng bao nhiêu bit cũng quan trọng.
+
+## Input length và giá trị số
+
+Giả sử capacity `W = 1,000,000`. Giá trị `W` cần chỉ khoảng `log₂ W` bit để biểu diễn.
+
+Một algorithm `O(nW)` là polynomial theo **giá trị số** `W`, nhưng không polynomial theo **độ dài encoding** `log W`.
+
+Đây là nguồn gốc khái niệm **giả đa thức (pseudo-polynomial)**.
+
+Phân biệt này giải thích vì sao một bài NP-hard vẫn có DP rất thực dụng khi numeric parameter nhỏ.
 
 ## Decision problem và optimization problem
 
-Complexity theory thường nói về **decision problem / 결정 문제** vì output chỉ yes/no, giúp class definitions rõ ràng.
+Complexity theory thường mô tả **decision problem** với đầu ra yes/no.
 
-Ví dụ optimization TSP hỏi:
+Optimization TSP:
 
 > Tour ngắn nhất dài bao nhiêu?
 
-Decision version hỏi:
+Decision TSP:
 
-> Có tour đi qua mọi city với total cost `<= B` không?
+> Có tour đi qua mọi đỉnh với tổng chi phí `<= B` không?
 
-Nếu giải optimization được thì decision dễ. Ngược lại, nhiều optimization problems có thể solved bằng repeated decision queries/binary search dưới conditions thích hợp.
+Nếu giải optimization được, decision thường dễ suy ra. Ngược lại, trong nhiều bài, optimization có thể được dựng từ decision qua repeated queries hoặc binary search nếu objective có miền thích hợp.
 
-Phân biệt này giúp hiểu tại sao NP-complete thường được định nghĩa cho decision versions.
+Việc chuyển sang decision version giúp định nghĩa lớp P/NP và reduction rõ ràng hơn.
 
 ## Class P
 
-**P** là lớp decision problems có deterministic polynomial-time algorithm trong standard computational model.
+**P** là lớp decision problems có deterministic polynomial-time algorithm trong mô hình tính toán chuẩn.
 
-Examples kinh điển:
+Ví dụ quen thuộc:
 
 ```text
-shortest path với non-negative weights
+shortest path
 minimum spanning tree
 maximum flow
 bipartite matching
-sorting-based decisions
+2-SAT
 ```
 
-Polynomial không đồng nghĩa practical cho mọi `n`; `O(n^100)` vẫn polynomial. Nhưng P dùng để phân biệt growth class lý thuyết, không phải performance SLA.
+“Polynomial” không đồng nghĩa “luôn nhanh”. `O(n^10)` vẫn polynomial nhưng có thể không practical. P là khái niệm về tốc độ tăng lý thuyết, không phải SLA production.
 
 ## Class NP
 
-**NP** là lớp decision problems mà nếu answer là “yes”, tồn tại certificate có thể verify trong polynomial time.
+**NP** là lớp decision problems mà với một instance có đáp án “yes”, tồn tại một **certificate** có thể được verify trong polynomial time.
 
-Ví dụ Hamiltonian Cycle: certificate là một sequence vertices. Verification chỉ cần check sequence dùng mỗi vertex đúng rule và edges tồn tại.
+Ví dụ Hamiltonian Cycle: certificate là một thứ tự các đỉnh. Verification chỉ cần kiểm tra mỗi đỉnh xuất hiện đúng quy tắc và mọi cạnh liên tiếp tồn tại.
 
-NP không có nghĩa “non-polynomial”, “not possible” hay “hard by definition”. P là subset của NP vì nếu solve polynomial được thì verify cũng polynomial.
+NP không có nghĩa “not polynomial” hay “không giải được”. Ta biết:
+
+\[
+P\subseteq NP
+\]
+
+vì nếu solve được polynomial thì hiển nhiên verify cũng polynomial.
 
 ## NP-hard và NP-complete
 
-**NP-hard** nghĩa problem ít nhất khó như mọi problem trong NP theo polynomial-time reduction framework. Nó không bắt buộc là decision problem và không bắt buộc thuộc NP.
+**NP-hard** nghĩa bài toán ít nhất khó như mọi bài trong NP dưới một notion reduction phù hợp.
 
 **NP-complete** nghĩa:
 
@@ -79,115 +95,107 @@ và
 problem là NP-hard
 ```
 
-Nếu tìm polynomial-time algorithm cho bất kỳ NP-complete problem, thì mọi problem trong NP sẽ có polynomial algorithm và `P=NP`.
+Nếu có polynomial-time algorithm cho một NP-complete problem, thì suy ra mọi problem trong NP có polynomial-time algorithm.
 
-Cho tới hiện nay, chưa có proof được cộng đồng chấp nhận rằng `P=NP` hay `P≠NP`.
+Điểm engineering quan trọng không phải tranh luận lý thuyết, mà là: khi nhận ra bài toán tương đương một NP-hard core quen thuộc, ta phải đổi chiến lược giải.
 
-## “NP-complete” không có nghĩa bỏ cuộc
+## NP-complete không có nghĩa mọi instance đều khó
 
-NP-complete nói về general worst-case problem class. Nó không nói every instance khó.
+Hardness là phát biểu về lớp input tổng quát và worst-case.
 
-Real-world instances có thể:
+Instance thực tế có thể dễ vì:
 
 ```text
 n nhỏ
 parameter nhỏ
-structure đặc biệt
-sparse graph
-bounded treewidth
-geometric restrictions
-nearly feasible solution
-strong practical solver heuristics
+graph sparse
+constraint rất chặt
+cấu trúc gần cây
+treewidth nhỏ
+numeric range nhỏ
+dữ liệu có geometry đặc biệt
+solver heuristic rất phù hợp
 ```
 
-Special cases có thể polynomial dù general problem NP-hard.
+Vì vậy “bài này NP-hard” không phải điểm kết thúc. Nó là tín hiệu để hỏi: **structure nào của instance thực tế có thể khai thác?**
 
-Một engineer nên hỏi “instance distribution của tôi là gì?” chứ không dừng ở label complexity.
+## Reduction: ngôn ngữ để so sánh độ khó
 
-## Reduction là language để so độ khó
-
-Một polynomial-time reduction từ A sang B biến instance `x` của A thành instance `f(x)` của B sao cho:
+Một polynomial-time reduction từ `A` sang `B` biến instance `x` của A thành `f(x)` của B sao cho:
 
 \[
 x\in A \iff f(x)\in B
 \]
 
-và `f` computable polynomial time.
+và `f` tính được trong polynomial time.
 
-Nếu A đã biết hard và `A <=p B`, thì B ít nhất hard tương đương theo framework này.
-
-Direction rất dễ nhầm.
-
-Muốn chứng minh B hard, ta reduce **known hard problem A to B**, không phải B to A.
-
-## Reduction cũng là algorithm-design tool tích cực
-
-Reduction không chỉ để chứng minh hardness. Trong thực hành, ta liên tục reduce problem mới về known solvable problem:
-
-```text
-assignment -> bipartite matching
-circulation constraints -> max flow
-difference constraints -> shortest path
-dependency scheduling -> DAG/topological sort
-2-SAT -> implication graph + SCC
-```
-
-Đây là “reuse theorem/algorithm” ở mức problem model.
-
-Nếu có thể transform problem thành flow, matching hay shortest path mà giữ semantics, ta tránh re-invent solver.
-
-## Một reduction tốt cần chứng minh hai chiều
-
-Không đủ chỉ nói “solution của A trông giống solution của B”. Cần chứng minh:
-
-1. nếu A có yes-solution thì transformed B có yes-solution;
-2. nếu transformed B có yes-solution thì có thể suy ra yes-solution cho A.
-
-Nếu thiếu một direction, transformation có thể thêm false solutions hoặc mất valid solutions.
-
-## Independent Set và Vertex Cover
-
-Trong same undirected graph:
+Ký hiệu:
 
 \[
-S \text{ independent}
-\iff
-V\setminus S \text{ vertex cover}
+A\le_p B
 \]
 
-Do đó:
+Nếu A đã biết hard và `A <=p B`, thì B ít nhất hard như A.
+
+### Direction rất dễ nhầm
+
+Muốn chứng minh `B` hard, phải biến **bài đã biết hard A thành B**.
 
 ```text
-Independent Set size >= k
+known hard A  ->  target B
 ```
 
-tương đương:
+Nếu chỉ biết cách biến B thành A, điều đó cho thấy có thể dùng solver A để giải B; nó không chứng minh B hard.
+
+## Reduction cần chứng minh hai chiều semantics
+
+Một reduction đúng thường cần:
 
 ```text
-Vertex Cover size <= |V|-k
+A yes -> B yes
+B yes -> A yes
 ```
 
-Connection này là structural complement relation, minh họa reduction/dual viewpoint rõ ràng.
+Nếu chỉ chứng minh một chiều, transformation có thể tạo thêm lời giải giả hoặc làm mất lời giải hợp lệ.
 
-## Clique connection
+Ngoài ra cần chứng minh transformation chạy polynomial và kích thước instance mới không phình exponential.
 
-Một set vertices là clique trong graph `G` iff nó là independent set trong complement graph `\bar G`.
+## Reduction không chỉ dùng để chứng minh hardness
 
-Vì vậy Clique, Independent Set và Vertex Cover có các transformations chặt chẽ.
+Trong algorithm design, reduction là kỹ năng cực kỳ tích cực:
 
-Mental model quan trọng: nhiều “different” combinatorial problems chỉ là cùng constraint nhìn qua complement/duality.
+```text
+assignment                 -> bipartite matching
+2-SAT                      -> implication graph + SCC
+subtree query              -> Euler Tour + range query
+difference constraints     -> shortest path
+circulation                -> flow
+interval overlap           -> sweep line
+```
 
-## SAT và CNF intuition
+Khi reduce được bài mới về một primitive đã hiểu, ta tái sử dụng cả algorithm, proof và implementation pattern.
 
-SAT hỏi có assignment boolean làm formula true không. CNF-SAT dùng conjunction của clauses, mỗi clause là disjunction literals.
+## SAT như ngôn ngữ ràng buộc
 
-3-SAT restrict mỗi clause có 3 literals nhưng vẫn NP-complete.
+SAT hỏi liệu có assignment Boolean làm công thức đúng hay không.
 
-SAT là central vì many problems có thể encode thành logical constraints; modern SAT solvers cực mạnh trên nhiều practical instances dù worst-case exponential.
+CNF là conjunction của nhiều clause; mỗi clause là disjunction của literals.
 
-## 2-SAT là special case polynomial
+Ví dụ:
 
-2-SAT chỉ có clauses 2 literals và solve bằng implication graph + SCC trong linear time.
+\[
+(x\lor \neg y\lor z)\land(\neg x\lor y)
+\]
+
+SAT quan trọng vì rất nhiều bài combinatorial có thể encode thành Boolean constraints.
+
+Modern SAT solver dùng nhiều kỹ thuật mạnh như propagation, clause learning và branching heuristics, nên nhiều instance lớn có thể giải rất nhanh dù worst-case vẫn exponential.
+
+## 3-SAT và 2-SAT: thay một chi tiết, landscape thay đổi
+
+3-SAT vẫn NP-complete.
+
+2-SAT lại giải được polynomial bằng implication graph.
 
 Clause:
 
@@ -195,430 +203,507 @@ Clause:
 (a\lor b)
 \]
 
-tương đương implications:
+suy ra:
 
 ```text
-not a -> b
-not b -> a
+¬a -> b
+¬b -> a
 ```
 
-Formula satisfiable iff không variable nào cùng SCC với negation của nó.
+Formula satisfiable khi không biến nào nằm cùng SCC với phủ định của chính nó.
 
-Một thay đổi constraint nhỏ — clause length 2 vs 3 — thay đổi complexity landscape mạnh. Đây là lesson lớn: luôn tìm special structure.
+Bài học cực kỳ quan trọng:
 
-## Knapsack: pseudo-polynomial algorithm
+> Một restriction nhỏ của problem có thể biến bài tổng quát hard thành special case dễ.
 
-0/1 Knapsack general decision form NP-complete, nhưng classic DP `O(nW)` theo capacity `W`.
+Do đó luôn tìm cấu trúc đặc biệt trước khi áp một solver tổng quát.
 
-Đây là **pseudo-polynomial**, vì `W` được encode bằng `log W` bits. Runtime polynomial theo numeric value `W`, không polynomial theo input bit-length.
+## Clique, Independent Set và Vertex Cover
 
-Nếu `W` nhỏ thực tế, DP rất practical. Complexity theory giúp giải thích tại sao “NP-hard nhưng DP chạy tốt” không mâu thuẫn.
+Trong đồ thị vô hướng:
 
-## Weakly vs strongly NP-hard intuition
+\[
+S\text{ là independent set}\iff V\setminus S\text{ là vertex cover}
+\]
 
-Một số problems có pseudo-polynomial algorithms và hardness liên quan large numeric values; chúng thường được gọi weakly NP-hard/complete trong appropriate setting.
+Và `S` là clique trong `G` khi và chỉ khi `S` là independent set trong complement graph `\bar G`.
 
-Strongly NP-hard problems vẫn hard ngay khi numeric magnitudes polynomially bounded, nên pseudo-polynomial rescue không tương tự.
+Ba bài tưởng khác nhau nhưng liên kết chặt qua complement và set complement.
 
-Không cần memorize classifications ngay; mental model là numeric value magnitude có thể là hidden dimension.
+Những quan hệ này giúp rèn khả năng nhìn “cùng một ràng buộc dưới biểu diễn khác”.
 
-## Exact exponential algorithms vẫn rất quan trọng
+## Knapsack và pseudo-polynomial DP
 
-Khi `n` nhỏ, exact exponential algorithms là lựa chọn đúng.
+0/1 Knapsack có DP dạng:
 
-Toolbox gồm:
+```text
+dp[capacity]
+```
+
+với runtime `O(nW)`.
+
+Nếu `W` nhỏ, đây là cách cực kỳ thực dụng. Nếu `W` được biểu diễn bằng nhiều bit và rất lớn, `O(nW)` có thể exponential theo input encoding length.
+
+Đây là lý do Knapsack vừa có hardness theory vừa có DP nổi tiếng mà không mâu thuẫn.
+
+## Weakly và strongly NP-hard: trực giác
+
+Một số problem hard chủ yếu vì numeric values có thể rất lớn và có pseudo-polynomial algorithm. Đây là kiểu hardness yếu hơn về mặt cấu trúc.
+
+Strongly NP-hard problems vẫn hard ngay cả khi numeric values được giới hạn polynomial theo input size, nên pseudo-polynomial strategy không giải quyết bản chất tương tự.
+
+Không cần nhớ toàn bộ taxonomy; điều cần học là **numeric magnitude có thể là một parameter ẩn của complexity**.
+
+## Exact exponential algorithm vẫn rất có giá trị
+
+Toolbox exact gồm:
 
 ```text
 backtracking
 branch and bound
 bitmask DP
 meet-in-the-middle
-subset convolution/SOS ideas
-SAT/SMT/ILP/CP solver
-parameterized algorithms
+subset DP
+SAT/SMT/ILP/CP-SAT
+parameterized algorithm
 ```
 
-“Exponential” không đồng nghĩa “bad” nếu parameter nhỏ và alternative approximation không acceptable.
+Nếu `n=25`, một `2^n` algorithm tốt có thể hoàn toàn hợp lý. Nếu business yêu cầu exact result, approximation có thể không chấp nhận được.
 
 ## Meet-in-the-middle
 
-Nếu brute-force `2^n` quá lớn nhưng `n≈40`, split items thành two halves.
+Tách `n` phần tử thành hai nửa.
 
-Enumerate mỗi half:
-
-\[
-2^{n/2}
-\]
-
-states, rồi combine bằng sorting/hash/two pointers/binary search.
-
-Total scale roughly:
+Thay vì duyệt:
 
 \[
-O(2^{n/2}\operatorname{poly}(n))
+2^n
 \]
 
-thay vì `2^n`.
+ta duyệt khoảng:
 
-Subset Sum là classic application.
+\[
+2^{n/2}+2^{n/2}
+\]
 
-Meet-in-the-middle là example quan trọng của **time-space/search decomposition**, không phải magic trick.
+rồi kết hợp bằng sort, hash hoặc binary search.
+
+Subset Sum với `n≈40` là ví dụ kinh điển.
+
+Meet-in-the-middle đổi thêm memory để giảm exponent của time.
 
 ## Bitmask DP
 
-TSP Held-Karp state:
+TSP Held–Karp:
 
 ```text
-dp[mask][v] = minimum cost visit exactly mask and end at v
+dp[mask][v] = chi phí nhỏ nhất đi qua tập mask và kết thúc tại v
 ```
 
-Number states `O(n2^n)`, transitions thêm factor `n`, total around:
+Số state:
+
+\[
+O(n2^n)
+\]
+
+và transition thường dẫn tới:
 
 \[
 O(n^2 2^n)
 \]
 
-vẫn exponential nhưng tốt hơn `n!` brute-force.
+Nó vẫn exponential, nhưng tốt hơn `n!` brute force rất nhiều.
 
-State compression biến many path histories thành same `(mask,v)` state.
+Điểm sâu hơn là state compression: nhiều thứ tự lịch sử khác nhau được gộp nếu chúng có cùng `(mask,v)` và tương lai chỉ phụ thuộc hai thông tin đó.
 
-## Branch and bound
+## Branch and Bound
 
-Backtracking prune khi partial state infeasible. Branch-and-bound còn tính optimistic bound về best objective branch có thể đạt.
+Backtracking loại nhánh khi biết nó infeasible. **Branch and Bound** còn dùng một bound lạc quan về objective tốt nhất có thể đạt từ nhánh.
 
-Minimization example:
+Với minimization:
 
 ```text
-if lowerBound(branch) >= bestKnown:
+if lowerBound(state) >= bestKnown:
     prune
 ```
 
-Bound phải **safe**. Bound yếu chỉ prune ít; bound không valid có thể xóa optimum và phá correctness.
+Bound phải **an toàn**. Nếu bound quá lạc quan, prune ít. Nếu bound sai theo hướng quá mạnh, có thể cắt mất optimum và phá correctness.
 
-Design good bound thường là phần khó nhất.
+Thiết kế bound thường là phần khó nhất.
 
-## Search order ảnh hưởng practical performance
+## Search ordering và incumbent
 
-Branch-and-bound đúng với bất kỳ branch order nếu bound safe, nhưng tìm good incumbent sớm làm pruning mạnh hơn.
+Branch-and-bound vẫn đúng nếu duyệt nhánh theo thứ tự bất kỳ, nhưng tìm được một lời giải tốt sớm sẽ làm `bestKnown` mạnh hơn và prune được nhiều hơn.
 
-Heuristics chọn promising branch first có thể giảm search tree rất lớn dù worst-case unchanged.
+Do đó heuristic ordering có thể thay runtime thực tế hàng bậc độ lớn mà không thay worst-case complexity.
 
-Đây là distinction giữa correctness guarantee và practical search engineering.
+Đây là khác biệt giữa:
+
+```text
+correctness guarantee
+và
+practical search engineering
+```
 
 ## Constraint propagation
 
-CSP/SAT-style search giảm domains trước khi branching. Nếu choosing one variable forces consequences, propagate ngay để detect contradiction early.
+Trong CSP/SAT, trước khi branch có thể suy ra các hậu quả bắt buộc.
 
-Sudoku, exact cover và scheduling có thể được speed up mạnh bằng propagation + smart variable ordering.
+Nếu một biến chỉ còn một giá trị hợp lệ, gán nó ngay. Nếu assignment khiến clause/unit/constraint khác bị ép, tiếp tục propagate.
 
-Backtracking performance phụ thuộc search tree *sau propagation*, không chỉ raw combinatorial size.
+Propagation giúp phát hiện contradiction sớm, làm cây search nhỏ hơn rất nhiều.
+
+Backtracking “thô” và solver hiện đại khác nhau chủ yếu ở lượng thông tin được suy ra trước khi phải đoán tiếp.
+
+## Memoization trong search khó
+
+Hai nhánh search khác nhau có thể dẫn tới cùng state logic. Nếu tương lai chỉ phụ thuộc state, có thể memoize để tránh giải lại.
+
+Đây là cầu nối giữa backtracking và DP.
+
+Một cách nhìn:
+
+```text
+backtracking = duyệt cây lịch sử
+DP/memoization = gom các lịch sử tương đương thành cùng node trạng thái
+```
+
+Nếu số state duy nhất nhỏ hơn rất nhiều số đường đi lịch sử, memoization tạo khác biệt lớn.
 
 ## Parameterized complexity
 
-Nếu problem khó chủ yếu vì parameter `k`, runtime:
+Thay vì chỉ hỏi runtime theo `n`, ta chọn một parameter `k` phản ánh phần khó.
+
+Một algorithm **fixed-parameter tractable (FPT)** có dạng:
 
 \[
-f(k)n^{O(1)}
+f(k)\cdot n^{O(1)}
 \]
 
-được gọi fixed-parameter tractable (FPT) nếu `f` chỉ phụ thuộc `k`.
+`f(k)` có thể exponential theo `k`, nhưng nếu `k` nhỏ thì toàn bộ algorithm vẫn practical.
 
-Ví dụ algorithm exponential theo solution size nhưng polynomial theo graph size có thể excellent khi `k` nhỏ.
+Ví dụ mindset:
 
-Parameterized thinking hỏi:
+```text
+n rất lớn
+nhưng số vertex cần xóa chỉ k=10
+```
 
-> Có một dimension nhỏ tự nhiên nào kiểm soát hardness không?
+thì exponential theo `k` có thể tốt hơn exponential theo `n`.
 
-Examples: treewidth, number of edits, solution size, number of special vertices.
+## Parameter đúng quan trọng hơn label NP-hard
 
-## Kernelization intuition
+Một problem NP-hard theo `n` vẫn có thể dễ khi parameter thực tế nhỏ.
 
-Một parameterized algorithm có thể preprocess instance thành equivalent smaller instance whose size bounded by function of `k`. Đây gọi là kernelization trong appropriate framework.
+Các parameter thường có ý nghĩa:
 
-Engineering analogy: loại forced/irrelevant structure trước expensive search.
+```text
+solution size
+number of conflicts
+treewidth
+number of machines
+number of colors
+edit distance
+feedback vertex count
+```
 
-## Treewidth intuition
+Engineering question nên là:
 
-Graph tree-like có thể cho dynamic programming tốt dù general graph problem NP-hard. Tree decomposition biến graph thành bags với limited interaction width.
+> Hardness nằm ở chiều nào của instance, và chiều đó trong dữ liệu thật có nhỏ không?
 
-Runtime thường exponential theo treewidth `k` nhưng linear/polynomial theo `n`:
+## Kernelization
 
-\[
-f(k)n^{O(1)}
-\]
+Kernelization là preprocessing polynomial-time biến `(instance,k)` thành một instance nhỏ hơn có kích thước bị chặn theo hàm của `k`, đồng thời bảo toàn đáp án.
 
-Đây là một ví dụ structure parameter thay đổi practical solvability.
+Mục tiêu là loại bỏ phần dữ liệu chắc chắn không ảnh hưởng bản chất combinatorial khó.
+
+Có thể xem kernelization như **problem reduction theo parameter** trước khi chạy exact search đắt tiền.
+
+## Treewidth: graph gần cây có thể dễ hơn
+
+Nhiều bài NP-hard trên general graph trở nên dễ hơn trên tree hoặc graph có treewidth nhỏ.
+
+Tree decomposition cho phép DP trên các “bag” kích thước nhỏ, với exponential factor phụ thuộc treewidth thay vì toàn bộ số đỉnh.
+
+Trực giác:
+
+> Nếu graph có thể được ghép từ các phần nhỏ liên kết với nhau qua boundary nhỏ, ta có thể giữ state chỉ trên boundary đó.
+
+Đây là một ví dụ sâu về việc structure của instance quan trọng hơn tên bài toán tổng quát.
 
 ## Approximation algorithm
 
-Approximation algorithm trả feasible solution với **provable quality guarantee** so với optimum.
+Khi exact optimum quá đắt, có thể chấp nhận solution gần optimum với guarantee định lượng.
 
-Với minimization, `α`-approximation thường nghĩa:
+Với minimization, một `ρ`-approximation thường bảo đảm:
 
 \[
-cost(A(I)) \le \alpha\,OPT(I)
+ALG(I)\le \rho\cdot OPT(I)
 \]
 
-cho mọi instances trong problem class.
+Với maximization, convention được viết theo hướng phù hợp để đảm bảo giá trị không quá xa optimum.
 
-Với maximization, ratio convention có thể viết khác; luôn đọc exact definition.
-
-Approximation không đồng nghĩa “answer gần gần”. Guarantee phải formal.
+Điểm quan trọng là approximation algorithm có **guarantee trên mọi instance thuộc mô hình**, khác với heuristic chỉ “thường chạy tốt”.
 
 ## Vertex Cover 2-approximation
 
-Một classic approach: lấy một maximal matching `M`, đưa cả hai endpoints của mỗi matched edge vào cover.
+Một thuật toán đơn giản:
 
-Result size:
+```text
+while còn cạnh chưa cover:
+    chọn một cạnh (u,v)
+    đưa cả u và v vào cover
+    xóa mọi cạnh incident với u hoặc v
+```
 
-\[
-2|M|
-\]
+Các cạnh được chọn tạo một matching. Mọi vertex cover tối ưu phải lấy ít nhất một endpoint của mỗi cạnh matching, nên nếu matching có `k` cạnh thì optimum ít nhất `k` đỉnh.
 
-Bất kỳ vertex cover phải chứa ít nhất một endpoint của mỗi matching edge, và matching edges disjoint, nên:
+Algorithm lấy `2k` đỉnh, nên kích thước không quá `2*OPT`.
 
-\[
-OPT \ge |M|
-\]
+Ví dụ này cho thấy approximation proof thường cần một **lower bound lên optimum** để so solution của algorithm.
 
-suy ra result `<=2OPT`.
+## Set Cover và greedy
 
-Đây là một proof approximation ratio rất rõ: construct solution + lower bound optimum.
+Greedy Set Cover liên tục chọn tập cover nhiều phần tử chưa được cover nhất trên mỗi đơn vị chi phí theo variant phù hợp.
 
-## Metric TSP và triangle inequality
+Nó có logarithmic approximation guarantee trong mô hình chuẩn.
 
-General weighted TSP rất khó approximate mạnh nếu không assumptions. Metric TSP thêm triangle inequality:
+Điểm cần học không phải chỉ công thức guarantee, mà là kỹ thuật proof: mỗi bước phân bổ “giá” cho các phần tử mới được cover và so tổng charge với optimum.
+
+## Metric TSP và vai trò của triangle inequality
+
+General TSP rất khó approximation tốt, nhưng **metric TSP** có thêm triangle inequality:
 
 \[
 d(a,c)\le d(a,b)+d(b,c)
 \]
 
-Structure này cho approximation algorithms có guarantees.
+Cấu trúc này cho phép dùng MST như lower bound và xây các approximation có guarantee hằng số.
 
-Lesson: approximation ratio luôn gắn problem assumptions; không được transfer guarantee sang general variant.
+Một restriction toán học nhỏ có thể thay approximation landscape rất mạnh.
 
-## PTAS và FPTAS intuition
+## PTAS và FPTAS
 
-**PTAS**: với mọi fixed `ε>0`, trả `(1+ε)`-approx (minimization convention) trong polynomial time theo input size, nhưng polynomial degree có thể phụ thuộc mạnh vào `1/ε`.
+**PTAS**: với mọi `ε>0` cố định, có algorithm polynomial theo `n` cho solution trong factor `(1+ε)` thích hợp, nhưng exponent theo `n` có thể phụ thuộc `1/ε`.
 
-**FPTAS** yêu cầu runtime polynomial cả theo input size và `1/ε`.
+**FPTAS** mạnh hơn: runtime polynomial cả theo `n` và `1/ε`.
 
-Knapsack có FPTAS via value scaling ideas.
+Knapsack có FPTAS nổi tiếng dựa trên scaling DP values.
 
-Các terms này giúp mô tả controllable accuracy-time trade-off.
+Tư duy engineering: `ε` là một knob đổi runtime lấy chất lượng solution.
 
-## Heuristic khác approximation
+## Approximation khác heuristic
 
-Heuristic như local search, simulated annealing, tabu search, genetic algorithms, domain-specific greedy có thể excellent thực tế nhưng không có worst-case approximation guarantee tương tự.
+**Approximation algorithm** có worst-case quality guarantee.
 
-Không nên gọi một heuristic “approximation algorithm” chỉ vì output approximate.
+**Heuristic** có thể rất tốt thực tế nhưng không có guarantee tương tự.
 
-Engineering có thể hoàn toàn chọn heuristic — chỉ cần mô tả guarantee trung thực.
+Ví dụ heuristic:
+
+```text
+local search
+simulated annealing
+genetic algorithm
+greedy without proof
+problem-specific neighborhood search
+```
+
+Không nên coi heuristic là “sai”. Chỉ cần gọi đúng bản chất guarantee của nó.
 
 ## Local Search
 
-Local Search bắt đầu với feasible solution, repeatedly move tới neighbor solution tốt hơn cho tới local optimum.
+Bắt đầu từ một solution hợp lệ, liên tục chuyển sang solution hàng xóm tốt hơn.
 
-Performance phụ thuộc neighborhood definition. Local optimum không nhất thiết global optimum.
-
-TSP 2-opt/3-opt là examples practical. Search quality có thể improved bằng random restarts hoặc metaheuristics.
-
-## Randomized algorithms vs heuristics
-
-Một randomized algorithm có thể có provable expected runtime/correctness probability. Heuristic randomness không tự tạo guarantee.
-
-Ví dụ randomized quicksort exact output và expected `O(n log n)`; simulated annealing typically heuristic practical behavior unless specific theorem assumptions.
-
-Phân biệt type of uncertainty quan trọng.
-
-## Relaxation
-
-Một powerful strategy là relax constraint để solve easier problem và dùng result làm bound/guide.
-
-Integer programming relax integrality thành linear programming. Branch-and-bound dùng LP relaxation lower/upper bound.
-
-Combinatorial algorithms cũng có relaxations: MST lower bound cho TSP-like structures under conditions, matching relaxation, etc.
-
-Relaxation connects exact optimization và approximation.
-
-## Linear Programming intuition
-
-LP optimize linear objective với linear constraints trên continuous variables, solvable polynomial-time theoretically.
-
-Many discrete problems become hard vì integrality constraints. LP relaxation cho fractional solution dễ hơn và có thể rounding thành approximate integer solution.
-
-Approximation design thường gồm:
+Câu hỏi thiết kế:
 
 ```text
-relax -> solve -> round -> prove loss bound
+neighborhood là gì?
+move cost tính nhanh thế nào?
+local optimum có tệ không?
+làm sao thoát local optimum?
 ```
 
-## Integrality gap
+2-opt cho TSP là ví dụ kinh điển: thay hai cạnh bằng hai cạnh khác nếu tour ngắn hơn.
 
-Nếu relaxation optimum quá optimistic so với integer optimum, ratio giữa chúng là integrality gap. Nó giới hạn quality có thể chứng minh bằng simple rounding từ relaxation đó.
+Local search thường rất mạnh khi cần good solution nhanh trên instance lớn.
 
-Concept này giải thích tại sao “LP bound rất đẹp” chưa đảm bảo approximation tốt nếu gap lớn.
+## Randomized heuristic
 
-## SAT/SMT/ILP solver như engineering tool
+Random restart hoặc randomized neighborhood giúp tránh bị kẹt cùng local optimum.
 
-Nếu problem size vừa và constraints phức tạp, modeling vào industrial solver có thể tốt hơn tự viết specialized exponential search.
+Khi dùng randomness, nên đo distribution của solution quality và runtime thay vì chỉ báo một lần chạy tốt.
 
-Solver dùng decades of optimizations: clause learning, propagation, cutting planes, presolve, branching heuristics.
+Trong production, reproducibility có thể cần seed được quản lý rõ.
 
-Algorithmic maturity bao gồm biết khi nào **không** nên reimplement solver.
+## ILP/MILP
 
-## Exact Cover và Algorithm X
+Nhiều bài optimization có thể encode bằng biến và ràng buộc tuyến tính nguyên.
 
-Một số combinatorial problems reduce về Exact Cover. Knuth's Algorithm X + Dancing Links là classic search representation tối ưu remove/restore constraints.
-
-Sudoku có thể encode exact cover.
-
-Điểm học được: right representation có thể làm exponential search practical rất nhiều dù worst-case vẫn exponential.
-
-## Approximate counting và sampling
-
-Hardness không chỉ optimization. Exact counting version của NP-style problems có thể thuộc classes như #P và còn khó hơn decision intuition.
-
-Trong large probabilistic systems, approximate counting/sampling đôi khi practical alternative.
-
-Không cần đi sâu complexity zoo, nhưng nên biết decision/optimization/counting có thể có complexity khác nhau.
-
-## Online vs offline hardness
-
-Một problem offline có toàn input trước; online phải quyết định khi input arrives. Competitive analysis compare online algorithm với offline optimum.
-
-Ví dụ cache replacement, ski-rental-like decisions và online scheduling có different guarantee framework from NP approximation.
-
-Không nên trộn approximation ratio và competitive ratio dù cả hai compare với optimum/reference.
-
-## Lower bounds và impossibility thinking
-
-Một kỹ năng quan trọng là hỏi “có reason nào chứng minh class algorithm này không thể tốt hơn không?”
-
-Examples:
+Ví dụ chọn item:
 
 ```text
-comparison sorting Ω(n log n)
-unsorted search Ω(n) comparisons worst case
-NP-hardness under standard assumptions
-streaming memory lower bounds in advanced settings
+x_i ∈ {0,1}
 ```
 
-Lower bound ngăn ta wasting effort tìm optimization bất khả thi trong model hiện tại; thay vào đó ta đổi assumptions/model.
+với objective và constraints tuyến tính.
 
-## Recognizing exponential-state problems
+MILP solver dùng LP relaxation, cutting planes, branch-and-bound/branch-and-cut và nhiều heuristic.
 
-Signals thường gặp:
+Lợi thế engineering:
 
 ```text
-subset of items
-assignment of variables
-ordering/permutation
-partition into groups
-visit all vertices exactly once
-choose compatible combination with global constraints
+mô hình hóa nhanh
+solver trưởng thành
+có bound và optimality gap
+xử lý nhiều constraint business phức tạp
 ```
 
-Nhưng signal không chứng minh NP-hard. Một problem có exponential-looking naive search vẫn có hidden polynomial structure, ví dụ bipartite matching.
+Nhược điểm là performance khó dự đoán theo worst-case và cần solver/tooling phù hợp.
 
-Do đó hãy search for flow/matching/matroid/interval/DAG structure trước khi kết luận “phải brute-force”.
+## SAT, SMT và CP-SAT
 
-## Special cases có thể làm problem dễ
+SAT phù hợp Boolean logic. SMT thêm theory như integer arithmetic, bit-vectors hoặc arrays. Constraint Programming/CP-SAT phù hợp scheduling và combinatorial constraints với propagation mạnh.
 
-Examples:
+Thay vì tự viết backtracking khổng lồ, đôi khi encoding problem vào solver là cách engineering tốt hơn.
+
+Câu hỏi là model nào diễn đạt constraint tự nhiên nhất.
+
+## Solver không loại bỏ nhu cầu mô hình hóa
+
+Một model solver tệ vẫn có thể chạy rất chậm.
+
+Các quyết định quan trọng:
 
 ```text
-general graph -> tree
-arbitrary weights -> non-negative
-arbitrary clauses -> 2-CNF
-arbitrary intervals -> interval graph
-general TSP -> metric/geometric special cases
-large integer capacity -> small W pseudo-polynomial DP
+biến nào thực sự cần?
+constraint nào redundant nhưng giúp propagation?
+symmetry có thể phá bớt không?
+bound ban đầu có tốt không?
+miền biến có thể thu hẹp trước không?
 ```
 
-Constraint thường là algorithmic gift.
+Hardness không biến mất khi dùng solver; solver cung cấp một bộ search/pruning engine rất mạnh.
 
-## Modeling can accidentally create NP-hardness
+## Symmetry breaking
 
-Một requirement nhỏ như “mỗi task có thể assigned many resources, dependencies, deadlines, setup costs và global budget” có thể biến scheduling thành combinatorial optimization hard.
+Nếu nhiều assignment khác nhau thực chất biểu diễn cùng một solution, solver có thể tốn thời gian khám phá các bản sao đối xứng.
 
-Product/system design đôi khi nên simplify constraints để allow efficient optimization.
+Ví dụ gán màu cho graph: hoán đổi tên màu có thể tạo solution logic giống nhau.
 
-Algorithmic complexity có thể feedback vào requirement design.
+Thêm constraint cố định một số lựa chọn đại diện có thể giảm search mà không mất solution thực sự khác biệt.
 
-## Approximation quality vs system value
+Đây là một dạng state-space reduction.
 
-Một 2-approx theoretical guarantee có thể không đủ cho business objective; ngược lại heuristic không guarantee nhưng 0.1% gap practical có thể excellent.
+## Lower bound, upper bound và optimality gap
 
-Engineering evaluation cần cả:
+Trong minimization:
 
 ```text
-theoretical guarantee
-empirical quality distribution
-runtime/tail latency
-robustness
-explainability
-implementation/maintenance cost
+upper bound = chi phí solution khả thi đã tìm được
+lower bound = cận dưới chứng minh optimum không thể thấp hơn
 ```
 
-Theory informs risk; production data informs actual trade-off.
+Nếu hai bound gặp nhau, optimum được chứng minh.
 
-## Anytime algorithms
+Nếu chưa gặp, gap cho biết mức độ chưa chắc chắn.
 
-Một anytime optimizer có thể nhanh chóng tìm feasible solution rồi cải thiện dần, giữ best-so-far và bound gap.
+Solver optimization hiện đại thường báo cả incumbent solution và best bound; đây là thông tin rất hữu ích để quyết định dừng sớm.
 
-Useful khi latency budget variable: stop ở deadline và trả current solution cùng quality bound nếu available.
+## Anytime algorithm
 
-Branch-and-bound/modern solvers thường có this behavior.
+Một **anytime algorithm** có thể trả solution hiện tại bất cứ lúc nào và cải thiện dần nếu được cho thêm thời gian.
 
-## Approximation certificate / optimality gap
+Branch-and-bound, local search và nhiều solver có thể dùng theo cách này.
 
-Nếu có lower bound `LB` và feasible solution cost `UB` cho minimization, gap cho biết distance tới optimum:
+Trong hệ thống deadline-driven, đôi khi “solution tốt trong 2 giây” có giá trị hơn “optimum sau thời gian không biết trước”.
 
-\[
-LB\le OPT\le UB
-\]
+Đây là trade-off trực tiếp giữa quality và compute budget.
 
-Relative gap có thể guide stopping. Đây là stronger engineering signal hơn “solver chạy 10 giây”.
+## Khi nào nên bỏ exactness?
 
-## Common misconceptions
-
-“NP nghĩa non-polynomial” — sai.
-
-“NP-complete nghĩa không solve được” — sai; small/structured instances thường solve exact.
-
-“Reduction direction nào cũng như nhau” — sai; để prove B hard, reduce known-hard A to B.
-
-“Exponential algorithm luôn useless” — sai; parameter nhỏ và meet-in-middle/DP/pruning rất practical.
-
-“Approximation = heuristic” — sai; approximation có formal guarantee.
-
-“Problem NP-hard nên không cần optimize implementation” — sai; exact solver engineering vẫn rất quan trọng khi instances practical.
-
-“P problem luôn fast” — sai; polynomial degree/constants/data scale vẫn có thể quá lớn.
-
-## A reusable decision workflow
-
-Khi một exact problem có vẻ bùng nổ:
+Một quy trình thực dụng:
 
 ```text
-1. Viết exact state/search space và constraints.
-2. Tìm known polynomial structure: graph, flow, matching, interval, DAG, matroid-like.
-3. Kiểm tra constraints có tạo special case dễ hơn không.
-4. Ước lượng n/parameter thật.
-5. Nếu nhỏ: backtracking, bitmask DP, meet-in-middle, branch-and-bound.
-6. Tìm useful parameter k cho FPT approach.
-7. Nếu exact quá đắt: xem approximation guarantee nào tồn tại.
-8. Nếu guarantee chưa đủ/practical: heuristic hoặc solver + empirical validation.
-9. Nếu dùng solver: theo dõi bound/gap, không chỉ runtime.
+1. Xác định exactness có thật sự là requirement không.
+2. Tìm special case polynomial.
+3. Tìm parameter nhỏ cho FPT/exponential method.
+4. Ước lượng state-space và memory.
+5. Thử exact solver nếu instance vừa phải.
+6. Nếu quá lớn, tìm approximation guarantee phù hợp.
+7. Nếu guarantee vẫn quá đắt, dùng heuristic và đo quality thực tế.
 ```
 
-Workflow này tốt hơn reflex “thấy NP-hard -> dùng greedy”.
+Không nên nhảy thẳng sang heuristic chỉ vì thấy từ “NP-hard”.
 
-## Mental Model
+## Khi nào nên dùng brute force?
 
-> Complexity theory không nói ta phải bỏ cuộc. Nó nói **loại leverage nào còn khả dụng**. Nếu general exact polynomial algorithm chưa biết, ta có thể đổi instance assumptions, exploit small parameter, dùng better exponential decomposition, relax problem, approximate với proof, hoặc dùng heuristic/solver có measured behavior.
+Brute force đúng khi:
 
-Điểm trưởng thành là biết guarantee nào mình đang có và guarantee nào đã chủ động từ bỏ.
+```text
+input rất nhỏ
+cần oracle để test algorithm tối ưu hơn
+chỉ chạy offline một lần
+search space thực tế bị constraint thu nhỏ
+implementation đơn giản quan trọng hơn runtime
+```
 
-Xem tiếp: [Backtracking](./02_recursion_and_backtracking.md), [Dynamic Programming](./05_dynamic_programming.md), [Greedy](./04_greedy_algorithms.md), [Graph Flow & Matching](../03_graphs/08_network_flow_and_matching.md), [Mathematical Toolkit](../00_foundations/04_mathematical_toolkit_for_dsa.md) và [Problem Solving Workflow](../90_connections/02_problem_solving_workflow.md).
+Một brute-force solver nhỏ, rõ và đúng còn là reference model rất tốt cho differential testing.
+
+## Hardness và product requirements
+
+Một product có thể thay specification để làm bài dễ hơn.
+
+Ví dụ:
+
+```text
+exact optimal route -> route <= 5% so với optimum
+solve 1 triệu item -> solve theo từng region
+arbitrary graph -> graph được giới hạn gần tree
+real-time answer -> offline preprocessing
+```
+
+Thay requirement không phải “né thuật toán”; đôi khi đó là cách duy nhất biến một optimization không khả thi thành hệ thống có SLA rõ.
+
+## Một workflow nhận diện bài khó
+
+Khi gặp combinatorial problem, có thể hỏi:
+
+```text
+Có đang chọn subset/permutation/partition không?
+Có constraint pairwise hoặc global khiến greedy khó không?
+State space là 2^n, n!, k^n hay gì khác?
+Có special case graph/tree/interval không?
+Numeric parameter có nhỏ không?
+Có thể reduce về flow/matching/2-SAT không?
+Có parameter k nhỏ cho FPT không?
+Có approximation guarantee đã biết theo structure không?
+Solver SAT/ILP/CP có phù hợp không?
+```
+
+Mục tiêu là nhận ra cấu trúc trước khi lao vào micro-optimization.
+
+## Những hiểu lầm phổ biến
+
+“NP nghĩa là non-polynomial” — sai.
+
+“NP-complete nghĩa là không giải được” — sai; nhiều instance cụ thể giải rất tốt.
+
+“Bài NP-hard thì DP polynomial không thể tồn tại” — pseudo-polynomial hoặc special-case DP vẫn có thể tồn tại.
+
+“Reduction B -> SAT chứng minh SAT hard” — sai direction; nó cho thấy SAT có thể giải B nếu encoding đúng.
+
+“Approximation là heuristic” — không nhất thiết; approximation algorithm có guarantee định lượng.
+
+“Solver tự động giải quyết modeling” — sai; model quality ảnh hưởng search cực mạnh.
+
+“Exponential algorithm luôn tệ” — sai nếu parameter nhỏ hoặc exactness bắt buộc.
+
+## Mô hình tư duy
+
+> Khi một bài toán khó, đừng chỉ hỏi “thuật toán nào nhanh hơn?”. Hãy hỏi **hardness nằm ở dimension nào, structure nào của instance làm bài dễ hơn, exactness có thật sự cần không, và ta có thể đổi thời gian–bộ nhớ–độ chính xác như thế nào?**
+
+Reduction giúp đổi góc nhìn. Parameterization đổi biến mà exponential phụ thuộc. Approximation đổi exactness lấy guarantee. Solver đổi công sức implementation lấy một search engine trưởng thành. Heuristic đổi guarantee lấy tốc độ thực tế.
+
+Đó là toolbox đầy đủ hơn cho những bài toán mà “chọn đúng data structure” vẫn chưa đủ.
+
+Xem tiếp: [Recursion & Backtracking](./02_recursion_and_backtracking.md), [Dynamic Programming](./05_dynamic_programming.md), [Greedy Algorithms](./04_greedy_algorithms.md), [Graph Algorithms](../03_graphs/_index.md), [Probabilistic Thinking](../05_specialized/03_amortized_randomized_and_probabilistic_thinking.md) và [Problem Modeling](../00_foundations/00_dsa_as_problem_modeling.md).

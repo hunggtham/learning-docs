@@ -1,45 +1,13 @@
 # Java Collections nhìn dưới góc DSA
-**Java Collections와 자료구조 선택**
+**Java Collections & Data Structure Selection / Java Collections와 자료구조 선택**
 
-Java Collections Framework cung cấp abstractions mạnh và an toàn hơn so với tự quản pointer, nhưng abstraction không làm complexity biến mất. Khi dùng `List`, `Map`, `Set`, `Queue` hay `Deque`, ta vẫn đang chọn data structure với invariant, memory layout và performance profile cụ thể.
+Java Collections Framework cung cấp các lớp trừu tượng an toàn và tiện dụng hơn việc tự quản con trỏ, nhưng lớp trừu tượng không làm độ phức tạp biến mất. Khi chọn `List`, `Map`, `Set`, `Queue` hay `Deque`, ta vẫn đang chọn một cấu trúc dữ liệu với bất biến, bố trí bộ nhớ và đặc tính hiệu năng cụ thể.
 
-Học DSA trong Java nên có hai lớp:
+Học DSA trong Java nên có hai lớp: hiểu cấu trúc dữ liệu/thuật toán ở mức khái niệm, sau đó biết collection nào của JDK hiện thực ngữ nghĩa đó và phải trả chi phí gì.
 
-```text
-1. hiểu data structure / algorithm abstract
-2. biết JDK collection nào hiện thực semantics đó, với cost và caveat nào
-```
+## Interface trước cách triển khai
 
-Nếu chỉ biết interface mà không biết implementation, code vẫn đúng chức năng nhưng có thể chọn sai workload model.
-
-## Interface trước implementation
-
-Các interface mô tả behavioral contract:
-
-```text
-List
-Set
-Map
-Queue
-Deque
-NavigableMap
-NavigableSet
-```
-
-Implementations phổ biến:
-
-```text
-ArrayList
-LinkedList
-HashMap
-HashSet
-TreeMap
-TreeSet
-ArrayDeque
-PriorityQueue
-```
-
-API-level code nên depend on interface khi hợp lý:
+Các interface như `List`, `Set`, `Map`, `Queue`, `Deque`, `NavigableMap` và `NavigableSet` mô tả hợp đồng hành vi. Các lớp như `ArrayList`, `LinkedList`, `HashMap`, `HashSet`, `TreeMap`, `TreeSet`, `ArrayDeque` và `PriorityQueue` cung cấp cách triển khai cụ thể.
 
 ```java
 List<Integer> xs = new ArrayList<>();
@@ -47,150 +15,69 @@ Map<String, User> users = new HashMap<>();
 Deque<Task> q = new ArrayDeque<>();
 ```
 
-Nhưng performance-sensitive code vẫn phải biết concrete type.
+Mã ở cấp API nên phụ thuộc interface khi hợp lý, nhưng mã nhạy về hiệu năng vẫn phải biết concrete type bên dưới.
 
-## ArrayList là default list trong đa số trường hợp
+## ArrayList là lựa chọn mặc định mạnh cho List
 
-`ArrayList` dựa trên resizable array.
-
-Properties quan trọng:
+`ArrayList` dựa trên mảng có thể thay đổi kích thước.
 
 ```text
-get(index)        O(1)
-set(index)        O(1)
-append            amortized O(1)
-insert/remove mid O(n)
-contains          O(n)
+get/set theo chỉ số      O(1)
+thêm cuối                O(1) khấu hao
+chèn/xóa ở giữa          O(n)
+contains                 O(n)
 ```
 
-Nó thường có locality tốt hơn node-based list và ít per-element overhead hơn.
+Nó thường có tính cục bộ bộ nhớ tốt hơn danh sách mỗi nút một object và có ít chi phí phụ trên mỗi phần tử. Ngay cả khi bài toán có chèn/xóa, `ArrayList` vẫn thường phù hợp nếu thao tác chủ yếu ở cuối hoặc dữ liệu không quá lớn.
 
-Ngay cả khi bài toán có insert/delete, `ArrayList` vẫn thường thắng nếu operations chủ yếu ở cuối hoặc dataset vừa phải.
+## LinkedList không tự động nhanh hơn khi chèn/xóa
 
-## LinkedList không tự động tốt cho insert/delete
+Chèn hoặc xóa tại một nút đã biết có thể `O(1)`, nhưng `list.add(i, x)` phải tìm tới vị trí `i` trước và thường mất `O(n)`. Ngoài ra, mỗi nút là một object riêng, làm tăng cấp phát, lần theo reference và áp lực GC.
 
-`LinkedList` có node links. Insert/delete tại node position đã biết có thể `O(1)`, nhưng nếu API chỉ cho index:
+Vì vậy câu “LinkedList chèn O(1)” chỉ đúng khi đã có vị trí nút và bỏ qua các chi phí khác.
 
-```java
-list.add(i, x)
-```
-
-phải traverse tới index trước, thường `O(n)`.
-
-Node allocation, pointer chasing và GC overhead còn làm locality kém.
-
-Vì vậy “LinkedList insert O(1)” là statement thiếu context.
-
-## ArrayDeque cho stack và queue
-
-`ArrayDeque` thường là default tốt cho:
-
-```text
-stack
-queue
-double-ended queue
-```
+## ArrayDeque cho stack, queue và deque
 
 ```java
 Deque<Integer> dq = new ArrayDeque<>();
-
 dq.push(10);
 int x = dq.pop();
-
 dq.offerLast(20);
 int y = dq.pollFirst();
 ```
 
-Nó tránh overhead node của `LinkedList` và không có legacy synchronization baggage của `Stack`.
+`ArrayDeque` thường là lựa chọn mặc định tốt hơn `LinkedList` cho stack/queue và tốt hơn lớp `Stack` cũ. `java.util.Stack` kế thừa `Vector` và mang theo thiết kế đồng bộ hóa kiểu cũ; mã hiện đại thường dùng `Deque`.
 
-## Không dùng `Stack` làm default
+## HashMap và hợp đồng equals/hashCode
 
-`java.util.Stack` là legacy class dựa trên `Vector`. Modern code thường dùng `Deque`:
-
-```java
-Deque<Integer> stack = new ArrayDeque<>();
-```
-
-Interface diễn đạt intention tốt hơn.
-
-## HashMap mental model
-
-`HashMap` map key tới bucket/table position bằng hash.
-
-Expected:
+`HashMap` cho tra cứu, chèn và xóa kỳ vọng gần `O(1)`, nhưng không duy trì thứ tự đã sắp xếp. Tính đúng đắn của khóa phụ thuộc hợp đồng:
 
 ```text
-get/put/remove ~ O(1)
+nếu a.equals(b) == true
+thì a.hashCode() == b.hashCode()
 ```
 
-nhưng không giữ sorted order.
+Chiều ngược lại không bắt buộc: cùng hash không có nghĩa hai object bằng nhau.
 
-Correctness phụ thuộc contract:
+### Không nên dùng khóa có thể thay đổi
 
-```text
-if a.equals(b) == true
-then a.hashCode() == b.hashCode()
-```
-
-Converse không bắt buộc: equal hash không nghĩa equal objects.
-
-## Mutable keys là một lỗi thiết kế phổ biến
-
-Nếu key object thay đổi field tham gia `equals/hashCode` sau khi insert, logical bucket identity có thể thay đổi nhưng HashMap không tự move entry.
-
-Ví dụ bad idea:
-
-```java
-class Key {
-    int userId;
-    int productId;
-    // equals/hashCode use both mutable fields
-}
-```
-
-Sau mutation, `map.get(key)` có thể không tìm như mong đợi.
-
-Prefer immutable key:
+Nếu trường tham gia `equals/hashCode` thay đổi sau khi khóa đã được chèn, `HashMap` không tự di chuyển entry sang bucket mới.
 
 ```java
 record Key(int userId, int productId) {}
 ```
 
-Record rất tiện cho compound state/key trong DSA.
+Record bất biến theo thành phần rất phù hợp cho khóa trạng thái tổng hợp trong DSA.
 
-## Hash collision và worst-case intuition
+### Va chạm và hệ số tải
 
-HashMap expected O(1) không phải magical direct addressing. Collisions vẫn xảy ra.
+HashMap không phải direct addressing. Chất lượng hash, hệ số tải và chi phí `equals` đều ảnh hưởng hiệu năng. Resize là thao tác đắt nhưng được phân bổ trên nhiều lần `put`.
 
-Modern JDK có implementation details giúp long collision chains trong một số conditions, nhưng code không nên phụ thuộc mù quáng vào internal thresholds/version details.
+Nếu biết trước số lượng phần tử lớn, đặt dung lượng ban đầu hợp lý có thể giảm số lần resize. Không nên phụ thuộc vào các ngưỡng nội bộ không được bảo đảm giữa các phiên bản JDK.
 
-Important mental model:
+## HashSet
 
-```text
-hash quality + load factor + equality cost
-```
-
-ảnh hưởng performance thật.
-
-## Load factor và resize
-
-HashMap tăng table khi occupancy vượt threshold liên quan load factor.
-
-Resize là operation đắt nhưng amortized across puts.
-
-Nếu biết expected size lớn, pre-sizing có thể giảm repeated resize:
-
-```java
-Map<Integer, Integer> map = new HashMap<>(expectedCapacity);
-```
-
-Nhưng initial-capacity semantics cần hiểu theo JDK docs/version; đừng hard-code formulas dựa internal implementation nếu không cần.
-
-## HashSet thực chất dùng hashing semantics
-
-`HashSet` cung cấp membership uniqueness. Nó thường dựa trên hash-backed representation.
-
-Use khi cần:
+`HashSet` phù hợp cho:
 
 ```text
 visited
@@ -198,23 +85,11 @@ membership
 deduplication
 ```
 
-Không dùng khi cần sorted iteration/floor/ceiling.
+Nếu cần thứ tự, `floor`, `ceiling` hoặc truy vấn khoảng, cần cấu trúc có thứ tự như `TreeSet`.
 
 ## TreeMap và TreeSet
 
-`TreeMap`/`TreeSet` cung cấp ordered semantics, thường với self-balancing tree implementation.
-
-Operations khoảng:
-
-```text
-get/put/remove O(log n)
-first/last
-floor/ceiling
-lower/higher
-range views
-```
-
-Ví dụ:
+`TreeMap` và `TreeSet` cung cấp ánh xạ/tập có thứ tự, thường với các thao tác chính `O(log n)`:
 
 ```java
 NavigableMap<Integer, String> map = new TreeMap<>();
@@ -223,72 +98,42 @@ map.ceilingEntry(x);
 map.subMap(l, true, r, false);
 ```
 
-Đây là ordered-map abstraction mà HashMap không cung cấp tự nhiên.
-
-## Comparator contract
-
-Comparator phải tạo ordering nhất quán.
-
-Tránh:
+Comparator phải nhất quán và có tính bắc cầu. Tránh:
 
 ```java
 (a, b) -> a.priority - b.priority
 ```
 
-vì overflow.
-
-Dùng:
+vì phép trừ có thể tràn số. Nên dùng:
 
 ```java
 Comparator.comparingInt(Node::priority)
-```
-
-hoặc:
-
-```java
 Integer.compare(a, b)
 ```
 
-Nếu comparator trả `0` cho hai objects mà domain coi khác key, `TreeSet/TreeMap` có thể coi chúng cùng ordering position.
-
-Sorted collection uniqueness dựa comparator/natural ordering semantics, không đơn giản là object identity.
+Nếu comparator trả `0`, `TreeMap`/`TreeSet` xem hai khóa nằm cùng vị trí thứ tự, dù `equals` có thể cho kết quả khác. Đây là khác biệt quan trọng với HashMap.
 
 ## PriorityQueue
 
-Java `PriorityQueue` là heap-based priority queue.
+`PriorityQueue` là heap:
 
 ```text
-peek O(1)
-offer O(log n)
-poll O(log n)
+peek     O(1)
+offer    O(log n)
+poll     O(log n)
 ```
 
-Nó không cho efficient arbitrary search/remove-by-value guarantee kiểu indexed heap.
-
-Dijkstra pattern thường push duplicate states và bỏ stale entries khi pop.
+Một mẫu Dijkstra phổ biến là chèn trạng thái khoảng cách mới thay vì decrease-key, rồi bỏ qua entry cũ khi lấy ra.
 
 ```java
 record State(int node, long dist) {}
-
 PriorityQueue<State> pq =
     new PriorityQueue<>(Comparator.comparingLong(State::dist));
 ```
 
-## Mutable priority pitfall
+Không sửa trường dùng để so sánh của object đang nằm trong queue rồi kỳ vọng heap tự sắp xếp lại. Hãy chèn một trạng thái mới hoặc dùng indexed heap chuyên dụng.
 
-Nếu object đang trong `PriorityQueue` và ta sửa field dùng comparator, queue không tự reheapify.
-
-Bad:
-
-```java
-node.priority = newValue;
-```
-
-khi `node` vẫn nằm trong PQ.
-
-Use immutable state entry + reinsert, hoặc custom indexed heap.
-
-## Primitive arrays thường tốt hơn boxed collections cho algorithms
+## Mảng primitive thường tốt hơn collection đóng hộp trong DSA
 
 ```java
 int[] parent;
@@ -296,188 +141,73 @@ long[] dist;
 boolean[] seen;
 ```
 
-thường tốt hơn:
+thường gọn và nhanh hơn `List<Integer>`, `List<Long>` hoặc `List<Boolean>` khi kích thước đã biết.
 
-```java
-List<Integer>
-List<Long>
-List<Boolean>
-```
+Autoboxing làm cú pháp tiện hơn nhưng tạo thêm object/reference và có thể tăng áp lực GC. Unboxing `null` còn gây `NullPointerException`.
 
-khi size biết trước.
+## Biểu diễn đồ thị
 
-Boxing tạo objects/references, tăng memory và GC pressure.
-
-Trong DSA hot loops, primitive arrays là default rất mạnh.
-
-## Boxing và unboxing
-
-`Integer`, `Long`, `Double` là objects.
-
-```java
-List<Integer> xs = new ArrayList<>();
-```
-
-mỗi element logically boxed.
-
-Autoboxing làm syntax dễ nhưng không miễn phí.
-
-Ngoài performance, null unboxing còn có thể throw `NullPointerException`:
-
-```java
-Integer x = null;
-int y = x; // NPE
-```
-
-## Array of objects vs primitive arrays
-
-Graph edge objects rất readable:
+Dạng dễ đọc:
 
 ```java
 record Edge(int to, int weight) {}
 List<List<Edge>> g;
 ```
 
-Nhưng huge graph có millions edges → object overhead đáng kể.
-
-Alternative compact representation:
+Với hàng triệu cạnh, object overhead có thể đáng kể. Khi đó có thể chuyển sang mảng primitive hoặc CSR:
 
 ```text
+int[] offsets
 int[] to
-int[] weight
-int[] next / offsets
+long[] weight
 ```
 
-JVM arrays of primitives gần với SoA/CSR thinking trong C.
+Nên bắt đầu từ biểu diễn rõ ràng rồi tối ưu khi profiling cho thấy bộ nhớ hoặc GC thực sự là nút thắt.
 
-Readable model first, compact model when workload justifies.
+## Record và tính bất biến
 
-## Record cho immutable algorithm state
-
-Java records rất hợp với:
-
-```text
-priority queue states
-compound map keys
-edges
-coordinates
-```
-
-Ví dụ:
+Record rất hợp cho trạng thái hàng đợi ưu tiên, khóa map tổng hợp, cạnh và tọa độ:
 
 ```java
 record Cell(int r, int c, int mask) {}
 ```
 
-Records generate value-style `equals/hashCode` based components, useful cho hash key nếu components immutable/value-semantic.
+Tuy nhiên, record chỉ làm các reference thành phần không thể được gán lại. Nếu thành phần là một `List` có thể thay đổi thì nội dung bên trong vẫn mutable. Khóa băm cần mức bất biến đủ sâu để `equals/hashCode` không thay đổi trong thời gian khóa nằm trong map.
 
-## Beware record containing mutable component
-
-Record reference itself immutable, nhưng referenced object có thể mutable:
-
-```java
-record Key(List<Integer> xs) {}
-```
-
-Nếu list content tham gia equality/hash và bị mutate, vẫn có mutable-key problem.
-
-Immutability phải deep enough cho identity semantics.
-
-## `computeIfAbsent`
-
-Graph building:
+## computeIfAbsent, merge và miền khóa
 
 ```java
 Map<String, List<String>> g = new HashMap<>();
 g.computeIfAbsent(u, k -> new ArrayList<>()).add(v);
-```
 
-Rất tiện cho sparse maps.
-
-Nhưng trong performance-critical loops, lambda/allocation behavior nên profile thay vì assume free.
-
-## `merge` và frequency maps
-
-```java
 freq.merge(x, 1, Integer::sum);
 ```
 
-hoặc:
-
-```java
-freq.compute(x, (k, v) -> v == null ? 1 : v + 1);
-```
-
-Readable cho counts, nhưng primitive specialized array nhanh hơn nếu key domain nhỏ.
-
-## Key domain quyết định structure
-
-Nếu keys là integers `0..n-1`, đừng reflexively dùng HashMap:
+Các API này rất tiện cho map thưa. Nhưng nếu khóa là số nguyên dày đặc `0..n-1`, mảng thường đơn giản và rẻ hơn:
 
 ```java
 int[] count = new int[n];
 ```
 
-Direct indexing cho constant-time lookup với low overhead.
+Miền khóa quyết định cấu trúc phù hợp. HashMap không phải lựa chọn mặc định cho mọi bài toán ánh xạ.
 
-HashMap phù hợp sparse/unbounded key domain, không phải mọi mapping problem.
+## EnumMap, EnumSet và BitSet
 
-## EnumMap và EnumSet
+Nếu khóa là enum, `EnumMap` và `EnumSet` khai thác miền khóa hữu hạn hiệu quả hơn cấu trúc hash tổng quát.
 
-Nếu key domain là enum, `EnumMap`/`EnumSet` có specialized representation efficient hơn generic hash structures.
+`BitSet` nén nhiều cờ Boolean và hỗ trợ AND/OR/XOR trên nhiều bit mỗi từ máy. Nó hữu ích cho tập membership lớn, bitset DP, giao/hợp tập và một số tối ưu reachability.
 
-Đây là lesson: JDK có domain-specialized collections mà complexity semantics tốt hơn generic choice.
+## Sắp xếp và tìm kiếm nhị phân
 
-## BitSet
+`Arrays.sort` có overload cho primitive và object với đặc tính triển khai khác nhau. Nếu tính ổn định là một phần của hợp đồng, cần đọc tài liệu của đúng API/JDK thay vì suy ra từ tên phương thức.
 
-`java.util.BitSet` compact boolean flags thành machine words.
+`Arrays.binarySearch` trả một vị trí khớp nếu tìm thấy; nếu không, giá trị âm mã hóa insertion point. Nó không phải API lower-bound/upper-bound cho phần tử trùng. Nếu cần lần xuất hiện đầu tiên/cuối cùng, nên tự cài binary search theo bất biến tương ứng.
 
-Useful cho:
+Tìm kiếm nhị phân còn cần truy cập ngẫu nhiên hiệu quả. Áp dụng nó lên `LinkedList` không tự biến truy cập theo chỉ số thành `O(1)`.
 
-```text
-large membership sets
-bitset DP
-set intersection/union
-reachability optimization
-```
+## View, sao chép và bí danh dữ liệu
 
-Operations AND/OR/XOR xử lý many bits per machine word.
-
-## Arrays.sort vs Collections.sort/List.sort
-
-Primitive arrays:
-
-```java
-Arrays.sort(int[])
-```
-
-khác object-array/list sorting implementation details.
-
-Algorithm guarantees/stability có thể khác theo overload/type/version.
-
-Nếu stability semantics quan trọng, check official JDK docs for exact API/version rather than assume.
-
-Core lesson: library method name không thay algorithmic contract.
-
-## Binary search APIs
-
-`Arrays.binarySearch` trả index nếu found; nếu not found trả encoded insertion point negative.
-
-Nếu cần lower-bound/upper-bound với duplicates, thường phải custom implementation vì standard binarySearch không guarantee first occurrence.
-
-Đừng dùng returned arbitrary matching index để suy ra frequency boundary.
-
-## Collections.binarySearch
-
-Trên random-access lists hợp lý. Trên linked list, abstraction may incur traversal cost details. Better understand collection representation rather than apply binary search blindly to a non-random-access structure.
-
-Sorted order alone không đủ; access cost cũng matter.
-
-## List views và aliasing
-
-`subList` thường là view backed by original list, không necessarily independent copy.
-
-Mutation interactions có semantics/invalidation conditions cần hiểu.
+`subList` thường là view dựa trên list gốc. Thay đổi cấu trúc nền có thể ảnh hưởng hoặc làm view mất hiệu lực theo hợp đồng của API.
 
 Nếu cần snapshot độc lập:
 
@@ -485,140 +215,71 @@ Nếu cần snapshot độc lập:
 new ArrayList<>(list.subList(l, r))
 ```
 
-View vs copy là memory/aliasing choice.
+Tương tự, `Collections.unmodifiable*` tạo view không cho sửa qua wrapper nhưng không làm các object bên trong bất biến sâu.
 
-## `Collections.unmodifiable*` không phải deep immutability
+## Iterator fail-fast không phải cơ chế đồng bộ hóa
 
-Unmodifiable wrapper cấm mutation qua wrapper API, nhưng underlying collection hoặc element objects có thể vẫn mutable.
+Nhiều collection cố phát hiện thay đổi cấu trúc trong lúc duyệt và có thể ném `ConcurrentModificationException`. Đây là cơ chế phát hiện lỗi kiểu best-effort, không phải bảo đảm an toàn luồng.
 
-Algorithm state shared across components cần phân biệt read-only view và immutable data.
-
-## Iterator invalidation và fail-fast behavior
-
-Many standard collections có fail-fast iterators detecting structural modification on best-effort basis.
-
-Đây không phải concurrency guarantee.
-
-Đừng dựa vào `ConcurrentModificationException` như synchronization mechanism.
+Không dùng exception này như một primitive đồng bộ hóa.
 
 ## ConcurrentHashMap
 
-`ConcurrentHashMap` hỗ trợ concurrent access với semantics khác HashMap.
+`ConcurrentHashMap` được chọn vì cần ngữ nghĩa truy cập đồng thời, không phải vì nó là “HashMap nhanh hơn”. Các thao tác nhiều bước như “kiểm tra rồi chèn” phải dùng API nguyên tử phù hợp như `putIfAbsent`, `compute` hoặc `merge` nếu muốn tránh race.
 
-Chọn vì concurrency requirement, không vì “nhanh hơn HashMap”.
+## BlockingQueue và backpressure
 
-Operations compound như:
+Trong mô hình producer–consumer, `BlockingQueue` kết hợp cấu trúc queue với ngữ nghĩa đồng bộ hóa. Queue có giới hạn còn biểu diễn **áp lực ngược (backpressure)**: producer có thể phải chờ khi queue đầy.
 
-```text
-check then put
-read-modify-write
-```
-
-cần atomic methods (`compute`, `putIfAbsent`, etc.) nếu muốn race-safe semantics.
-
-## BlockingQueue
-
-Producer-consumer system có thể dùng `BlockingQueue`.
-
-Queue data structure giờ thêm synchronization và blocking semantics.
-
-Bounded queue còn encode backpressure:
-
-```text
-put waits when full
-```
-
-DSA abstraction nối trực tiếp với systems behavior.
+Đây là ví dụ một cấu trúc dữ liệu chuyển trực tiếp thành cơ chế điều tiết của hệ thống.
 
 ## CopyOnWrite collections
 
-Copy-on-write phù hợp read-heavy, write-rare workloads. Mỗi write copy underlying storage, nên write-heavy cực tệ.
+Copy-on-write phù hợp với tải đọc rất nhiều và ghi rất hiếm. Mỗi lần ghi phải sao chép vùng lưu trữ, vì vậy tải ghi cao sẽ rất đắt.
 
-Tên “thread-safe” không đủ để chọn; mutation pattern là critical.
+“Thread-safe” không đủ để chọn collection; tỷ lệ đọc/ghi và ngữ nghĩa snapshot mới là yếu tố quyết định.
 
-## IdentityHashMap
+## IdentityHashMap và WeakHashMap
 
-`IdentityHashMap` dùng reference identity (`==`) thay vì logical `equals` semantics.
+`IdentityHashMap` dùng định danh reference (`==`) thay vì `equals`. Nó phù hợp với một số thuật toán theo dõi object identity, serialization hoặc đồ thị object, nhưng không thay thế HashMap thông thường.
 
-Niche use cases: object graph algorithms, serialization internals, identity-based tracking.
+`WeakHashMap` có ngữ nghĩa vòng đời đặc biệt: entry có thể biến mất khi khóa không còn được tham chiếu mạnh. Nó không phải cache eviction policy tổng quát; muốn dùng đúng phải hiểu GC reachability.
 
-Không dùng thay HashMap chỉ vì key objects.
+## GC không loại bỏ rò rỉ logic
 
-## WeakHashMap và lifetime
+Nếu map, list, listener hoặc cache giữ reference mãi, object vẫn reachable và GC không thể thu hồi. Một memoization cache không giới hạn có thể làm heap tăng liên tục dù không tồn tại lỗi `malloc/free`.
 
-`WeakHashMap` cho keys không giữ strong reachability theo same way; entries có thể disappear khi key GC-eligible.
+Trong Java, quản lý vòng đời chủ yếu là quản lý reachability.
 
-Đây là lifetime semantics đặc biệt, không phải general cache replacement.
+Một root reference có thể giữ toàn bộ cây hoặc đồ thị sống. Chu trình object tự thân không gây leak với tracing GC nếu toàn bộ chu trình không còn reachable từ roots.
 
-Cần hiểu GC reachability nếu dùng.
+## Độ sâu đệ quy
 
-## Garbage collection không loại bỏ memory leaks logic
+Java không bảo đảm tối ưu lời gọi đuôi. DFS trên cây lệch hoặc đồ thị dạng đường có thể gây `StackOverflowError`.
 
-Java tự reclaim unreachable objects, nhưng nếu cache/map/list giữ references mãi, objects vẫn reachable và leak ở application level.
+Khi độ sâu có thể lớn, dùng `ArrayDeque` làm stack tường minh. Không nên dùng `StackOverflowError` như luồng điều khiển bình thường của thuật toán.
 
-Ví dụ unbounded memoization cache có thể tăng heap vô hạn dù không có `malloc/free` bugs.
+## long, overflow và BigInteger
 
-Memory ownership trong Java là **reachability management** nhiều hơn manual free.
-
-## Object retention trong graph/tree
-
-Một root reference giữ toàn bộ reachable graph alive.
-
-Nếu muốn release structure, remove external roots/listeners/caches. Cycles tự thân không gây leak cho tracing GC nếu unreachable từ GC roots.
-
-Đây là khác biệt quan trọng với reference-count-only systems.
-
-## Recursion depth
-
-Java recursion không guaranteed tail-call optimized. Deep DFS/BST chain có thể `StackOverflowError`.
-
-Iterative stack bằng `ArrayDeque` an toàn hơn cho adversarial depth.
-
-Không catch StackOverflowError như normal algorithm control flow.
-
-## `long` cho accumulated cost
-
-Graph distances, prefix sums, counts có thể vượt `int`.
-
-Use `long` when necessary.
-
-Comparator:
-
-```java
-Comparator.comparingLong(State::dist)
-```
-
-Avoid casts/subtraction narrowing.
-
-## Overflow vẫn có trong `long`
-
-`Long.MAX_VALUE + w` overflow.
-
-Infinity sentinel nên có margin hoặc guard:
+Khoảng cách đồ thị, prefix sum và số đếm có thể vượt `int`; khi đó dùng `long`. Nhưng `long` vẫn có thể tràn.
 
 ```java
 static final long INF = Long.MAX_VALUE / 4;
 ```
 
-và only add from reachable values.
+Dùng sentinel có khoảng an toàn và chỉ cộng từ trạng thái reachable giúp giảm rủi ro overflow.
 
-## BigInteger
+Nếu bài toán thực sự cần số nguyên vượt 64 bit, `BigInteger` cung cấp độ chính xác tùy ý nhưng phải trả chi phí object và số học lớn hơn.
 
-Nếu exact integers vượt 64-bit, `BigInteger` cung cấp arbitrary precision nhưng operations/object allocations đắt hơn primitives.
+## Generic và type erasure
 
-Use khi mathematical correctness thật sự cần, không thay `long` mặc định.
+Java generics cung cấp an toàn kiểu ở mức mã nguồn nhưng không nhận primitive làm type argument, vì vậy không có `List<int>`. Đây là một nguyên nhân autoboxing xuất hiện trong collection chuẩn.
 
-## Generic type erasure
+Khi profiling chứng minh boxing là nút thắt, có thể dùng mảng primitive hoặc thư viện collection primitive chuyên dụng.
 
-Java generics giúp type safety source-level, nhưng primitive types không dùng trực tiếp làm type argument.
+## Cấu trúc DSA tùy biến vẫn thường dùng mảng
 
-Đây là lý do standard `List<int>` không tồn tại và boxing xuất hiện.
-
-Specialized primitive libraries có thể dùng khi profile chứng minh cần.
-
-## Custom heap/segment tree thường dùng arrays
-
-Even trong Java OO, low-level DSA implementation thường tốt nhất bằng primitive arrays:
+Ngay trong Java hướng đối tượng, Segment Tree, heap hoặc DSU thường hiệu quả nhất với mảng primitive:
 
 ```java
 long[] tree = new long[4 * n];
@@ -626,273 +287,107 @@ int[] heap = new int[n];
 int[] position = new int[n];
 ```
 
-Không cần biến mọi node thành class object.
+Không cần biến mọi nút thành class. Cách biểu diễn phải phục vụ tải công việc chứ không phục vụ thẩm mỹ OOP.
 
-Representation should serve workload, not OO aesthetics.
+## Streams và độ phức tạp
 
-## Adjacency list patterns
+`stream.sorted()`, `stream.distinct()` hoặc `groupingBy()` vẫn thực hiện công việc thuật toán và xây dựng cấu trúc dữ liệu. Lớp API khai báo không làm chi phí biến mất.
 
-Readable:
+Trong đường chạy nóng, vòng lặp truyền thống thường cho quyền kiểm soát rõ hơn về boxing, cấp phát và dừng sớm. Streams có thể rất dễ đọc ở các phép biến đổi không nhạy về hiệu năng; quyết định nên dựa trên profiling thay vì định kiến.
 
-```java
-List<List<Edge>> g;
-```
+Parallel streams cũng không tự làm thuật toán mở rộng tuyến tính theo số lõi. Chi phí chia/gộp, tranh chấp và phụ thuộc dữ liệu có thể làm song song hóa không hiệu quả.
 
-Memory-conscious static graph:
+## String và Unicode
 
-```text
-int[] head
-int[] to
-int[] next
-long[] weight
-```
+Java `String` dùng UTF-16; `length()` và `charAt()` làm việc theo code unit, không phải luôn theo Unicode code point hoặc ký tự người dùng nhìn thấy.
 
-hoặc CSR offsets.
-
-Know both patterns.
-
-## Streams và complexity
-
-Stream API làm code declarative nhưng không xóa algorithmic work.
-
-```java
-stream.sorted()
-stream.distinct()
-collect(groupingBy(...))
-```
-
-vẫn build/use data structures và có complexity.
-
-Repeated streams over same data có thể redo work; materialize/preprocess khi workload cần reuse.
-
-## Streams trong hot DSA loops
-
-Traditional loops thường dễ kiểm soát allocation, boxing và early exit hơn.
-
-Streams có thể readable ở non-hot transformations, nhưng competitive/performance DSA code thường dùng loops.
-
-Không phải vì streams “chậm luôn”, mà vì cost/control model khác và profiling quyết định.
-
-## Parallel streams không tự động làm algorithm scalable
-
-Parallelization có splitting/merge overhead và shared-memory contention.
-
-Graph traversals, DP dependencies hoặc small arrays có thể không parallelize tốt.
-
-Algorithm dependency structure phải cho phép independent work.
-
-## `String` và Unicode
-
-Java `String` indexing/`charAt` làm việc theo UTF-16 code units, không guaranteed Unicode code points/graphemes.
-
-String DSA production phải xác định unit.
-
-For code points:
+Nếu thuật toán cần code point, có thể dùng:
 
 ```java
 s.codePoints()
 ```
 
-nhưng converting/storing code points có memory/performance implications.
+Nhưng việc chuyển và lưu code point có chi phí riêng. Trước khi viết thuật toán chuỗi, phải xác định đơn vị ký tự của miền bài toán.
 
-## StringBuilder
+`String` là bất biến. Khi xây chuỗi qua nhiều bước, `StringBuilder` thường là bộ đệm thay đổi được phù hợp hơn việc tạo chuỗi trung gian lặp lại.
 
-Repeated string concatenation trong loop có thể tạo nhiều temporary strings.
+## Bộ nhớ thực tế và object header
 
-Use `StringBuilder` khi constructing mutable output sequence.
+Một object Java còn có header, alignment và reference; số byte chính xác phụ thuộc cấu hình JVM. Vì vậy hàng triệu `Node` có thể lớn hơn nhiều so với tổng kích thước các trường logic.
 
-Đây là data-structure choice: dynamic character buffer vs immutable copy chain.
+Các cách biểu diễn phẳng bằng mảng thường giảm đáng kể chi phí này.
 
-## Memory footprint và object headers
+JIT có thể loại bỏ một số cấp phát thông qua escape analysis hoặc scalar replacement, nhưng không nên thiết kế dựa trên giả định rằng một tối ưu cụ thể chắc chắn xảy ra.
 
-Một node object không chỉ chứa fields; JVM object header/alignment/reference width thêm overhead.
+## JMH và profiling
 
-Millions of tiny `Node` objects có thể consume far more memory than raw field sum.
+Microbenchmark Java rất dễ sai do warmup JIT, dead-code elimination và constant folding. JMH cung cấp cơ chế warmup, measurement, fork và blackhole phù hợp hơn một vòng `System.nanoTime()` tự viết.
 
-Arrays/flat representations often reduce overhead significantly.
+Các công cụ như JFR, async-profiler, JMC hoặc profiler tương đương giúp quan sát CPU hotspot, allocation hotspot, GC pressure và lock contention.
 
-Exact bytes depend JVM configuration; measure rather than assume fixed header size.
+Tối ưu collection nên dựa trên dữ liệu đo.
 
-## Escape analysis và JIT
+## Áp lực GC
 
-JIT có thể scalar-replace/eliminate some allocations nếu objects don't escape, nhưng không nên design correctness/performance based on assuming a specific optimization will occur.
+Thuật toán đồ thị hoặc PriorityQueue có thể tạo rất nhiều object sống ngắn. GC thường xử lý object ngắn hạn tốt, nhưng tốc độ cấp phát quá cao vẫn có thể ảnh hưởng throughput và tail latency.
 
-Use profiler/JFR/JMH to observe.
+Các lựa chọn thay thế gồm mảng primitive hoặc cách biểu diễn gọn hơn. Object pooling không phải lúc nào cũng tốt trong JVM hiện đại; phải đo trước khi áp dụng.
 
-## JMH cho microbenchmark
+## Immutability và persistent structures
 
-Java microbenchmark rất dễ sai do JIT warm-up, dead-code elimination và constant folding.
+Collection chuẩn của JDK chủ yếu là mutable. Cấu trúc immutable/persistent có thể hữu ích cho snapshot, versioning và chia sẻ trạng thái an toàn hơn.
 
-JMH giúp handle warm-up/forks/blackholes.
+Persistent tree có thể sao chép chỉ đường cập nhật rồi chia sẻ các nhánh không đổi. Đổi lại, nó tạo thêm object và có mô hình chi phí khác collection mutable.
 
-Không benchmark collection bằng một `System.nanoTime()` loop rồi kết luận global performance.
+## Bảng chọn nhanh
 
-## GC pressure
+| Nhu cầu | Lựa chọn thường phù hợp |
+|---|---|
+| Truy cập ngẫu nhiên theo chỉ số | `ArrayList` / array |
+| Stack, queue, deque | `ArrayDeque` |
+| Tra cứu khóa chính xác | `HashMap` / `HashSet` |
+| Tra cứu có thứ tự hoặc theo khoảng | `TreeMap` / `TreeSet` |
+| Lấy min/max lặp lại | `PriorityQueue` |
+| Khóa số nguyên dày đặc | array / `BitSet` |
+| Ánh xạ cần truy cập đồng thời | `ConcurrentHashMap` sau khi xác định ngữ nghĩa |
+| Producer–consumer có chờ | `BlockingQueue` |
 
-Object-heavy graph/PQ workloads tạo many short-lived objects.
+Bảng chỉ là điểm bắt đầu; tải công việc thực tế và profiling mới quyết định cuối cùng.
 
-GC may handle them efficiently, nhưng extreme allocation rate still affects latency/throughput.
+## Kiểm thử cấu trúc DSA tự cài đặt
 
-Alternatives:
-
-```text
-primitive arrays
-object reuse/pooling carefully
-compact immutable records only where readability matters
-```
-
-Pooling ordinary short-lived Java objects đôi khi làm GC worse; measure.
-
-## Fail-fast vs thread-safe
-
-Fail-fast iterator phát hiện structural modification best-effort; không làm collection thread-safe.
-
-Synchronized wrapper:
-
-```java
-Collections.synchronizedList(...)
-```
-
-có coarse semantics, nhưng iteration vẫn cần external synchronization per contract.
-
-Concurrent collection choice cần đọc semantics cụ thể.
-
-## Immutability và persistent data structures
-
-JDK core collections chủ yếu mutable, nhưng immutable/persistent structures có thể hữu ích cho snapshots/versioning/concurrency.
-
-Persistent tree path-copying reuse unchanged subtrees.
-
-Trade-off là allocations + different constants.
-
-## Null semantics
-
-Different collections have different null policies. `ArrayDeque` không cho null elements. Some maps permit null keys/values; concurrent collections often differ.
-
-Nếu algorithm dùng `null` làm sentinel, collection contract có thể conflict.
-
-Prefer explicit state where ambiguity matters.
-
-## Reference equality vs logical equality
-
-`==` trên objects compare references; `.equals` compare logical equality theo class contract.
-
-Graph/state algorithms dùng wrong equality có thể break visited/dedup.
-
-For enums, `==` is appropriate due singleton constants; for value objects, usually `.equals`/records.
-
-## Defensive copying
-
-Nếu API nhận mutable array/list và lưu reference, caller có thể mutate structure unexpectedly.
-
-Options:
+Có thể dùng collection JDK làm mô hình tham chiếu:
 
 ```text
-borrow and document
-copy on input
-immutable view/snapshot
+heap tự cài đặt      -> so chuỗi pop với danh sách đã sắp xếp
+BST tự cài đặt       -> so tập/thứ tự với TreeSet hoặc TreeMap
+Hash Map tự cài đặt  -> so thao tác ngẫu nhiên với HashMap
 ```
 
-Choice affects memory and semantics.
+Ngoài đầu ra, vẫn nên kiểm tra bất biến sau các chuỗi thao tác ngẫu nhiên.
 
-## Collection selection checklist
+`assert` có thể bị tắt ở runtime, vì vậy kiểm thử tự động nên dùng JUnit hoặc framework property-based testing phù hợp thay vì phụ thuộc ngầm vào Java assertions.
 
-```text
-Need random index?          -> ArrayList / array
-Need stack/queue/deque?     -> ArrayDeque
-Need exact key lookup?      -> HashMap/HashSet
-Need sorted/range lookup?   -> TreeMap/TreeSet
-Need min/max repeatedly?    -> PriorityQueue
-Need dense integer keys?    -> arrays/BitSet
-Need thread-safe mapping?   -> ConcurrentHashMap after semantics review
-Need blocking producer-consumer? -> BlockingQueue
-```
+## Những hiểu lầm phổ biến
 
-Đây là starting point, không thay workload profiling.
+“Java Collections tự chọn cách triển khai tối ưu” — sai; người gọi vẫn chọn concrete type.
 
-## Testing custom DSA in Java
+“LinkedList chèn/xóa O(1) nên tốt hơn ArrayList” — thiếu chi phí tìm vị trí, cấp phát và locality.
 
-Use reference JDK structure khi có thể.
+“ConcurrentHashMap là HashMap nhanh hơn” — sai; nó cung cấp ngữ nghĩa đồng thời và phải trả chi phí phối hợp.
 
-Custom heap:
+“Thay đổi priority của object trong PriorityQueue thì heap tự cập nhật” — sai.
 
-```text
-random pushes/pops
-compare pop sequence với sorted ArrayList
-```
+“Có GC thì không thể rò rỉ bộ nhớ” — sai nếu reference vẫn reachable.
 
-Custom BST:
+“Streams làm thuật toán nhanh hơn về Big-O” — sai; lớp trừu tượng không thay đổi lượng công việc cơ bản.
 
-```text
-compare set/order behavior với TreeSet/TreeMap
-```
+“TreeMap xác định khóa trùng giống HashMap” — sai; comparator/natural ordering có ngữ nghĩa khác `equals/hashCode`.
 
-Custom hash map:
+## Mô hình tư duy
 
-```text
-compare semantics với HashMap trên random operations
-```
+> Java Collections là các **hợp đồng DSA được đóng gói trong framework**. Chúng giảm lượng mã phải tự viết nhưng không loại bỏ trách nhiệm chọn đúng cách biểu diễn.
 
-Property/invariant tests vẫn quan trọng.
-
-## Assertions và validators
-
-Debug builds/tests có thể call:
-
-```java
-assert validateHeap();
-assert validateTree();
-```
-
-Java `assert` có thể disabled runtime; production validation không nên dựa vào it implicitly.
-
-JUnit/property-testing frameworks phù hợp hơn cho automated tests.
-
-## Profiling
-
-JFR, async-profiler, VisualVM/JMC hoặc profiler khác giúp thấy:
-
-```text
-allocation hotspots
-CPU hotspots
-GC pressure
-lock contention
-```
-
-Không optimize collection choice chỉ bằng intuition.
-
-## Common misconceptions
-
-“Java Collections tự chọn implementation tối ưu” — sai; caller chọn concrete type.
-
-“LinkedList insert/delete O(1) nên tốt hơn ArrayList” — thiếu traversal/locality context.
-
-“ConcurrentHashMap = HashMap nhanh hơn” — sai; nó cung cấp concurrency semantics với coordination cost.
-
-“PriorityQueue object priority mutate thì heap tự update” — sai.
-
-“GC nghĩa là không có memory leak” — sai nếu references vẫn reachable.
-
-“Streams làm code O(n) thành nhanh hơn” — abstraction không thay asymptotic cost.
-
-“TreeMap key uniqueness dùng equals giống HashMap” — ordered comparator semantics khác.
-
-## Mental Model
-
-> Java Collections là **DSA contracts được đóng gói trong framework**. Chúng giảm lượng code tự viết nhưng không giảm trách nhiệm chọn đúng representation. Hiểu Java DSA nghĩa là biết operation semantics, complexity, equality/comparator contract, boxing, GC reachability và runtime allocation behavior.
-
-Khi chọn collection, hãy hỏi:
-
-```text
-Operation nào dominant?
-Need order hay chỉ identity?
-Key/value có immutable không?
-Primitive array có đủ không?
-Dataset lớn tới mức object overhead đáng kể không?
-Concurrency semantics có thật sự cần không?
-Iterator/reference invalidation/view semantics thế nào?
-```
-
-Sau đó mới chọn `ArrayList`, `HashMap`, `TreeMap`, `PriorityQueue` hay custom structure.
+Khi chọn collection, hãy hỏi: **thao tác nào chiếm ưu thế, cần thứ tự hay chỉ membership, khóa có bất biến không, mảng primitive có đủ không, object overhead có đáng kể không, có thật sự cần concurrency không, và view/iterator/reference có thể mất hiệu lực khi nào?**
 
 Xem thêm: [Memory Models](../00_foundations/03_memory_models_c_java_javascript.md), [Cross-language Testing](./03_cross_language_testing_and_benchmarking.md).

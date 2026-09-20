@@ -1,134 +1,491 @@
 # Chọn cấu trúc dữ liệu phù hợp
 **Data Structure Selection / 자료구조 선택**
 
-Chọn cấu trúc dữ liệu không phải là nhớ một bảng “bài này dùng cấu trúc nào”, mà là quá trình biến yêu cầu của bài toán thành **workload** rồi chọn representation phù hợp với workload đó. Một cấu trúc dữ liệu chỉ “tốt” khi các operation quan trọng của bài toán trở nên đủ rẻ, invariant cần thiết được giữ ổn định, và chi phí bộ nhớ cũng như chi phí triển khai chấp nhận được.
+Chọn cấu trúc dữ liệu không phải là nhớ một bảng “bài này dùng cấu trúc nào”, mà là quá trình biến yêu cầu thành **khối lượng công việc (workload)** rồi chọn cách biểu diễn phù hợp nhất với khối lượng công việc đó.
 
-Nói cách khác, thay vì hỏi “Array, HashMap hay Tree cái nào nhanh nhất?”, hãy hỏi chính xác hơn: dữ liệu được đọc theo index hay theo key, có cần thứ tự hay không, insert/delete diễn ra ở đâu, có cần min/max liên tục hay không, query có theo range hay prefix không, dữ liệu có static hay mutate thường xuyên không, kích thước dữ liệu có vừa RAM hay phải chạm disk/network hay không.
+Một cấu trúc chỉ “tốt” khi:
 
-## 1. Bắt đầu từ operation chứ không bắt đầu từ tên cấu trúc
+```text
+các thao tác quan trọng đủ rẻ
+bất biến cần thiết được duy trì đúng
+bộ nhớ nằm trong ngân sách
+độ trễ và thông lượng phù hợp SLA
+cách triển khai đủ đơn giản để vận hành và kiểm thử
+```
 
-Một requirement như “tìm user theo `userId` thật nhanh” thực ra nói rằng operation trọng tâm là **exact lookup by key**. Với workload này, hash table thường là ứng viên tự nhiên vì lookup expected `O(1)`. Nhưng nếu requirement đổi thành “tìm toàn bộ user có `userId` trong khoảng A đến B”, hash table không còn phù hợp bằng ordered tree hoặc database index kiểu B+Tree, vì bài toán cần **order semantics** chứ không chỉ exact equality.
+Không có cấu trúc “nhanh nhất” theo nghĩa tuyệt đối. Mảng, bảng băm, cây, heap hay trie chỉ tốt trong một mô hình truy cập cụ thể.
 
-Nếu requirement là “lấy phần tử thứ `i`”, array có lợi thế vì address có thể suy ra trực tiếp từ base address và index. Nếu requirement là “luôn lấy phần tử nhỏ nhất rồi chèn phần tử mới”, heap hợp lý hơn vì nó duy trì partial order đủ cho `min/max` mà không phải sort toàn bộ.
+## 1. Bắt đầu từ thao tác
 
-Bảng sau chỉ nên xem như điểm xuất phát:
+Đừng hỏi “HashMap hay TreeMap?”. Hãy viết các thao tác thật:
 
-| Nhu cầu chính | Cấu trúc thường phù hợp |
+```text
+lookup(key)
+insert(key, value)
+delete(key)
+min()
+max()
+predecessor(key)
+successor(key)
+rangeQuery(l, r)
+prefixSearch(prefix)
+rank(key)
+select(k)
+connect(a, b)
+sameComponent(a, b)
+```
+
+Sau đó đánh dấu thao tác nào chiếm phần lớn lưu lượng và thao tác nào nằm trên đường chạy nóng.
+
+Một thao tác khởi tạo chạy một lần không cần được tối ưu giống thao tác chạy hàng triệu lần mỗi giây.
+
+## 2. Exact Lookup hay Ordered Query?
+
+Nếu chỉ cần equality lookup, Hash Table thường là ứng viên tự nhiên:
+
+```text
+get / put / contains -> expected O(1)
+```
+
+Nếu cần:
+
+```text
+min / max
+floor / ceiling
+predecessor / successor
+range scan
+ordered iteration
+```
+
+thì thứ tự là một phần của bài toán. Balanced BST hoặc B+Tree thường hợp lý hơn.
+
+Nếu dữ liệu tĩnh, sorted array có thể còn tốt hơn cây vì tìm kiếm `O(log n)`, bộ nhớ gọn và locality tốt.
+
+## 3. Static hay Dynamic?
+
+Dữ liệu tĩnh cho phép tiền xử lý mạnh.
+
+Ví dụ:
+
+```text
+static range sum       -> prefix sum
+dynamic point update   -> Fenwick / Segment Tree
+static RMQ             -> Sparse Table
+dynamic ordered set    -> balanced BST
+```
+
+Một câu hỏi rất mạnh:
+
+> Ta có thể trả một khoản chi phí xây dựng trước để làm hàng nghìn truy vấn sau rẻ hơn không?
+
+Nếu câu trả lời là có, hãy nghĩ tới sorting, indexing, prefix structures hoặc preprocessing graph/string.
+
+## 4. Read/Write Ratio
+
+Hai hệ thống chứa cùng dữ liệu nhưng tỷ lệ đọc/ghi khác nhau có thể cần cấu trúc khác.
+
+Một index làm đọc nhanh hơn nhưng mọi write phải duy trì index. Một cache làm đọc nhanh nhưng phải trả chi phí invalidation/freshness. Một LSM Tree tối ưu đường ghi tuần tự nhưng tăng read/compaction complexity.
+
+Data structure selection luôn là bài toán **đẩy chi phí từ thao tác này sang thao tác khác**.
+
+## 5. Dense hay Sparse Key Space?
+
+Nếu key là số nguyên dày đặc `0..n-1`, mảng thường tốt hơn HashMap:
+
+```text
+count[id]
+visited[id]
+dist[id]
+```
+
+Nếu key thưa, lớn hoặc là chuỗi/object, HashMap phù hợp hơn.
+
+Không nên dùng cấu trúc tổng quát khi miền khóa đã cho phép direct addressing rẻ hơn.
+
+## 6. Contiguous Memory hay Node-Based Structure?
+
+Mảng có locality tốt, ít metadata và traversal nhanh. Cấu trúc node-based linh hoạt hơn cho relinking nhưng phải trả giá cho pointer/reference, allocation và cache miss.
+
+Ví dụ Linked List có thể xóa node `O(1)` khi đã có node, nhưng tìm vị trí vẫn `O(n)` và traversal thường chậm hơn mảng.
+
+Big-O không mô tả đầy đủ memory hierarchy.
+
+## 7. Min/Max liên tục hay Full Order?
+
+Nếu chỉ cần phần tử nhỏ nhất/lớn nhất lặp lại, heap thường đủ:
+
+```text
+peek min O(1)
+insert O(log n)
+extract min O(log n)
+```
+
+Không cần trả chi phí duy trì full sorted order của TreeMap.
+
+Nếu cần cả predecessor/range scan, heap không đủ.
+
+Một nguyên tắc quan trọng:
+
+> Chỉ duy trì lượng thứ tự tối thiểu đủ để trả lời query.
+
+## 8. Prefix hay Full-Key Equality?
+
+Nếu workload hỏi prefix:
+
+```text
+autocomplete
+routing prefix
+string dictionary
+```
+
+Trie/Radix Tree có thể trực tiếp mã hóa prefix structure.
+
+Nếu chỉ cần exact string lookup, HashMap có thể đơn giản hơn và gọn hơn.
+
+Structure mạnh là structure lưu đúng loại thông tin mà query cần.
+
+## 9. Range Query yêu cầu phép toán gì?
+
+Không phải mọi range structure hỗ trợ mọi aggregate.
+
+Prefix sum dựa trên khả năng “trừ phần trước”. Fenwick Tree phù hợp các phép toán có cấu trúc đại số thích hợp. Segment Tree chỉ cần phép combine có tính kết hợp. Sparse Table đặc biệt mạnh với static idempotent operation như `min/max/gcd`.
+
+Vì vậy trước khi chọn structure hãy hỏi:
+
+```text
+operation có associative không?
+có identity không?
+có inverse không?
+có idempotent không?
+update là point hay range?
+query là prefix hay arbitrary interval?
+```
+
+## 10. Mutable hay Persistent?
+
+Nếu chỉ cần trạng thái hiện tại, mutable structure thường đơn giản và tiết kiệm allocation.
+
+Nếu cần:
+
+```text
+undo/versioning
+snapshot
+branching histories
+functional semantics
+```
+
+persistent structure với structural sharing có thể phù hợp.
+
+Persistent không có nghĩa “lưu xuống disk”; nó có nghĩa phiên bản cũ vẫn dùng được sau update.
+
+## 11. Exact hay Approximate?
+
+Nếu dữ liệu quá lớn, có thể không cần lưu trạng thái chính xác cho mọi key.
+
+```text
+membership approximate     -> Bloom/Cuckoo/XOR Filter
+cardinality approximate    -> HyperLogLog
+frequency approximate      -> Count-Min Sketch
+similarity approximate     -> MinHash
+```
+
+Nhưng approximation chỉ hợp lệ nếu nghiệp vụ chấp nhận error model.
+
+Một Bloom Filter có false positive nhưng không false negative trong mô hình chuẩn có thể rất tốt làm bộ lọc I/O, nhưng không nên là nguồn sự thật cho authorization.
+
+## 12. Online hay Offline?
+
+Nếu phải trả lời ngay khi dữ liệu đến, chỉ dùng thông tin quá khứ. Nếu có thể giữ toàn bộ input rồi reorder, nhiều thuật toán offline mạnh hơn.
+
+Ví dụ:
+
+```text
+sweep line
+Kruskal + query sorting
+Mo's algorithm
+batch processing
+```
+
+Offline processing có thể đổi thứ tự event để giảm work. Online system không có quyền đó.
+
+## 13. Ordered Array hay Balanced Tree?
+
+Nếu dữ liệu ít thay đổi:
+
+```text
+sorted array
++ binary search
++ sequential range scan
+```
+
+có locality và memory footprint rất tốt.
+
+Nếu insert/delete liên tục ở vị trí tùy ý, balanced tree tránh `O(n)` dịch phần tử.
+
+Không nên chọn tree chỉ vì “search O(log n)” nếu workload thực tế gần tĩnh.
+
+## 14. Heap hay Sorted Structure cho Top-K?
+
+Nếu cần Top-K một lần từ batch dữ liệu:
+
+```text
+Quickselect
+partial sort
+heap size k
+full sort
+```
+
+đều có thể hợp lý tùy `k`, `n` và yêu cầu thứ tự đầu ra.
+
+Nếu dữ liệu đến liên tục, heap size `k` tự nhiên hơn.
+
+Nếu cần truy vấn rank động cho nhiều `k`, order-statistic tree có thể phù hợp hơn.
+
+## 15. Graph Representation
+
+Đồ thị thưa thường dùng adjacency list:
+
+\[
+O(V+E)
+\]
+
+Đồ thị dày có thể dùng adjacency matrix nếu cần edge lookup cực nhanh và `V²` memory chấp nhận được.
+
+Nếu graph tĩnh rất lớn, CSR giúp giảm overhead object và tăng locality.
+
+Representation graph quyết định cả memory lẫn complexity của traversal.
+
+## 16. DSU chỉ tốt khi bài toán đúng mô hình merge-only
+
+DSU hỗ trợ rất tốt:
+
+```text
+union(a,b)
+find(a)
+sameComponent(a,b)
+```
+
+nhưng không hỗ trợ split/delete edge tổng quát.
+
+Nếu graph connectivity thay đổi bằng cả add và remove, cần offline reversal, rollback DSU hoặc dynamic connectivity structure phức tạp hơn.
+
+Structure nhanh thường nhanh vì nó **không hỗ trợ một số thao tác khó**.
+
+## 17. Bounded Memory hay Unbounded Growth?
+
+Queue không giới hạn có thể che giấu overload cho tới khi hệ thống hết memory. Ring buffer bounded bắt hệ thống chọn policy khi đầy:
+
+```text
+block
+drop
+reject
+spill
+backpressure
+```
+
+Data structure capacity là một quyết định reliability, không chỉ implementation detail.
+
+## 18. Worst-Case hay Expected Guarantee?
+
+Hash Table, Skip List và randomized algorithms thường có expected bound tốt. Balanced Tree cho deterministic `O(log n)`.
+
+Nếu workload có thể đối nghịch hoặc tail latency quan trọng, deterministic bound có thể đáng giá hơn constant factor trung bình tốt.
+
+Nếu throughput là mục tiêu chính, expected/amortized design đơn giản hơn có thể thắng.
+
+## 19. Amortized hay Per-Operation Latency?
+
+Dynamic array append `O(1)` amortized nhưng một resize riêng có thể `O(n)`. Hash Table resize tương tự.
+
+Hệ thống real-time có thể cần:
+
+```text
+preallocation
+incremental resize
+deamortized structure
+bounded buffer
+```
+
+Đừng xóa từ “amortized” khi mô tả SLA.
+
+## 20. External Memory
+
+Khi dữ liệu vượt RAM, số page I/O quan trọng hơn số comparison.
+
+B+Tree có fan-out lớn để giảm chiều cao. External Merge Sort dùng sequential I/O. LSM Tree chuyển random write thành sequential append + background compaction.
+
+Data structure phải khớp tầng lưu trữ thực tế.
+
+## 21. Concurrency
+
+Một structure tốt single-thread chưa chắc tốt multi-thread.
+
+Cần hỏi:
+
+```text
+read-heavy hay write-heavy?
+contention tập trung ở đâu?
+lock granularity thế nào?
+cần linearizability không?
+iterator/snapshot semantics là gì?
+```
+
+ConcurrentHashMap không chỉ là HashMap “nhanh hơn”; nó có contract đồng thời khác.
+
+Lock-free structure thêm vấn đề ABA, memory reclamation và ordering.
+
+## 22. Composition
+
+Hệ thống thực tế thường ghép nhiều structure.
+
+### LRU Cache
+
+```text
+HashMap       -> tìm node theo key
+Doubly List   -> recency order
+```
+
+### Dijkstra
+
+```text
+adjacency list
++ distance array/map
++ priority queue
+```
+
+### Database Query Engine
+
+```text
+B+Tree / Hash Index
++ Buffer Pool
++ Hash Join / Sort-Merge Join
++ Heap cho Top-N
+```
+
+### Autocomplete
+
+```text
+Trie/Radix index
++ ranking metadata
++ heap/top-k cache
+```
+
+Điểm khó không chỉ là từng structure mà là **bất biến liên cấu trúc**.
+
+## 23. Đừng nhân đôi nguồn sự thật nếu không cần
+
+Nếu cùng một dữ liệu được lưu trong map và list, cần bảo đảm hai representation luôn đồng bộ.
+
+Mỗi secondary index, cache hoặc metadata tăng tốc query nhưng đồng thời tạo thêm invariant phải duy trì.
+
+Một structure phụ chỉ đáng có nếu lợi ích query lớn hơn cost update, memory và complexity vận hành.
+
+## 24. Một decision matrix thực dụng
+
+| Câu hỏi | Nếu “có”, hãy nghĩ tới |
 |---|---|
-| random access theo index | array / dynamic array |
-| exact lookup theo key | hash map / hash set |
-| ordered dynamic keys | balanced BST / tree map |
-| min/max lặp lại | heap / priority queue |
-| LIFO | stack |
-| FIFO | queue |
-| thao tác hai đầu | deque |
-| prefix string | trie |
-| graph reachability | adjacency list + BFS/DFS |
-| merge-only connectivity | DSU / Union-Find |
-| static prefix/range aggregate | prefix sum |
-| point update + prefix/range sum | Fenwick tree |
-| general range aggregate/update | segment tree |
-| membership approximate rất lớn | Bloom filter |
-| approximate frequency | Count-Min Sketch |
+| key dày đặc dạng integer? | array / bitset |
+| equality lookup là chính? | hash table |
+| cần ordered/range query? | sorted array / balanced tree / B+Tree |
+| cần min/max liên tục? | heap |
+| cần prefix? | trie / radix tree |
+| dữ liệu tĩnh, nhiều range query? | prefix / sparse table |
+| có update + aggregate? | Fenwick / Segment Tree |
+| chỉ merge connectivity? | DSU |
+| text cần substring index? | suffix structures / automata |
+| dữ liệu vượt RAM? | B+Tree / external sort / LSM concepts |
+| memory cực hạn, chấp nhận sai số? | probabilistic structures |
 
-Điểm quan trọng là cùng một requirement có thể có nhiều implementation khác nhau. “Queue” là abstract data type; implementation có thể là circular array, linked list hoặc deque library. Cái phải chọn không chỉ là interface mà còn là representation.
+Bảng chỉ là điểm khởi đầu. Quyết định cuối phải dựa trên workload.
 
-## 2. Read pattern và write pattern quyết định cấu trúc
+## 25. Từ yêu cầu tới cost model
 
-Hai hệ thống có cùng dữ liệu nhưng read/write ratio khác nhau có thể cần cấu trúc khác nhau.
+Một cách formal hơn là viết:
 
-Một dataset gần như static nhưng query rất nhiều thường đáng để preprocessing mạnh. Prefix sum là ví dụ điển hình: ta bỏ `O(n)` upfront để mỗi range-sum query còn `O(1)`. Nếu dữ liệu thay đổi liên tục, prefix sum trở nên đắt vì mỗi update có thể làm hỏng toàn bộ prefix phía sau. Khi đó Fenwick Tree hoặc Segment Tree hy sinh query từ `O(1)` thành `O(log n)` để đổi lấy update `O(log n)`.
+\[
+ExpectedCost = \sum_i p_i C_i
+\]
 
-Tư duy này xuất hiện ở mọi nơi trong Computer Science: **precompute vs update cost**, **indexing vs write amplification**, **cache vs freshness**. Database index cũng chính là một trade-off tương tự: đọc nhanh hơn nhưng insert/update/delete phải trả thêm chi phí duy trì index.
+với `p_i` là tỷ lệ thao tác và `C_i` là chi phí tương ứng.
 
-## 3. Order requirement là một ranh giới lớn
+Sau đó cộng thêm memory cost, latency requirement và implementation complexity.
 
-Hash table rất mạnh nếu chỉ cần equality. Nhưng ngay khi bài toán cần một trong các operation như `min`, `max`, predecessor, successor, lower bound, upper bound hoặc range scan, thứ tự trở thành first-class requirement.
+Không cần luôn tính ra con số chính xác; mục tiêu là tránh tối ưu một thao tác hiếm mà bỏ qua thao tác chi phối.
 
-Balanced BST giữ keys có order với lookup/insert/delete thường `O(log n)`. Đổi lại, nó có overhead pointer/node và locality kém hơn contiguous array. Nếu dữ liệu static, sorted array đôi khi còn tốt hơn tree: binary search `O(log n)`, memory compact, cache locality tốt, và range scan rất hiệu quả.
+## 26. Migration Signal
 
-Vì vậy “dynamic hay static” phải được xét cùng “ordered hay unordered”. Một sorted vector static có thể đánh bại tree map trong thực tế dù cùng có `O(log n)` lookup, bởi constants và cache behavior khác nhau.
+Structure đúng hôm nay có thể sai sau khi workload thay đổi.
 
-## 4. Big-O chưa đủ: memory layout và locality cũng quan trọng
+Dấu hiệu cần xem lại:
 
-Linked list nổi tiếng với insert/delete `O(1)` khi đã có node pointer. Nhưng mỗi node thường chứa pointer metadata, nằm rải rác trong heap và dễ gây cache miss. Array có thể phải dịch chuyển phần tử khi insert giữa, nhưng traversal tuyến tính trên contiguous memory thường rất nhanh trên CPU hiện đại.
+```text
+n tăng 100 lần
+read/write ratio đổi mạnh
+range query xuất hiện nhiều hơn
+GC/allocation trở thành bottleneck
+p99 latency tăng do resize
+memory vượt budget
+concurrency contention tăng
+```
 
-Đây là lý do tại sao một structure có Big-O “đẹp” chưa chắc nhanh hơn trên workload thật. Hardware đọc cache line, không đọc từng biến Java/C riêng lẻ. Trong Java còn có object header và reference indirection; trong JavaScript còn có dynamic representation và JIT behavior. Cost model thực tế chịu ảnh hưởng của runtime.
+Data structure selection là quyết định có thể cần tái đánh giá, không phải lựa chọn một lần mãi mãi.
 
-Khi data lớn đến mức không vừa RAM, locality còn quan trọng hơn. B-Tree/B+Tree giảm số lần truy cập page/disk bằng cách tăng branching factor. Đây là lý do database index không dùng binary search tree đơn giản cho persistent storage.
+## 27. Benchmark đúng workload
 
-## 5. Mutation pattern: dữ liệu thay đổi như thế nào?
+Không benchmark HashMap với random integer rồi suy ra performance cho key dài, expensive hash hoặc adversarial distribution.
 
-Không chỉ “có update hay không” mà phải hỏi update theo dạng nào.
+Không benchmark TreeMap chỉ bằng lookup nếu production workload có range scan lớn.
 
-Nếu chỉ append cuối, dynamic array rất hiệu quả. Nếu thường xuyên insert đầu, deque/circular buffer hợp lý hơn. Nếu chỉ merge các component và hỏi hai node có cùng component không, DSU tối ưu vì nó deliberately không hỗ trợ arbitrary edge deletion. Nếu graph có edge add/remove động và query connectivity online, DSU thường không đủ và ta bước sang dynamic connectivity phức tạp hơn.
+Benchmark phải phản ánh:
 
-Một cấu trúc dữ liệu mạnh thường mạnh vì nó **giới hạn problem model**. Heap nhanh cho min/max vì nó không cố duy trì full sorted order. DSU nhanh vì không hỗ trợ split component. Fenwick Tree gọn vì operation aggregate phải có algebraic structure phù hợp. Hiểu giới hạn này quan trọng hơn thuộc tên cấu trúc.
+```text
+data size
+key distribution
+operation mix
+mutation pattern
+concurrency
+memory pressure
+```
 
-## 6. Invariant là thứ structure “mua” bằng update cost
+## 28. Chọn structure đơn giản nhất đáp ứng yêu cầu
 
-Mỗi data structure duy trì một invariant để query rẻ hơn.
+Structure phức tạp hơn tạo nhiều code, nhiều edge case và nhiều invariant hơn.
 
-Array duy trì contiguous indexing. Heap duy trì parent không lớn hơn children đối với min-heap. BST duy trì mọi key bên trái nhỏ hơn node và mọi key bên phải lớn hơn theo comparator. Balanced BST thêm height/balance invariant. Hash table duy trì mapping từ hash bucket đến entries. Segment Tree duy trì aggregate của mỗi interval node.
+Nếu array + sort một lần đủ, không cần custom balanced tree. Nếu `HashMap` chuẩn đủ, không cần tự viết Cuckoo Hashing. Nếu `O(n²)` với `n<=100` đã dư sức, không cần Segment Tree.
 
-Khi chọn structure, hãy hỏi: **invariant nào trực tiếp giúp trả lời query của tôi?** Nếu invariant không phục vụ query, bạn đang trả update/memory cost vô ích.
+Độ phức tạp implementation cũng là một chi phí kỹ thuật.
 
-Ví dụ, nếu chỉ cần membership, full sorted order của TreeSet có thể là chi phí dư thừa so với HashSet. Ngược lại, nếu cần iterate theo order, HashSet lại thiếu invariant cần thiết.
+## 29. Những hiểu lầm phổ biến
 
-## 7. Composition mới là cách hệ thống thực tế được xây
+“Big-O nhỏ hơn luôn nhanh hơn” — sai do constant factor, locality, allocation và workload mix.
 
-Một structure riêng lẻ hiếm khi giải trọn requirement production. Hệ thống thường ghép nhiều structures, mỗi structure đảm nhận một operation khác nhau.
+“Linked List chèn O(1) nên tốt hơn ArrayList” — bỏ qua chi phí tìm node và cache behavior.
 
-**LRU cache** kết hợp hash map và doubly linked list. Hash map cho lookup `O(1)`; linked list giữ recency order và cho phép move-to-front/remove-tail nhanh.
+“HashMap luôn tốt hơn TreeMap vì O(1)” — sai nếu cần thứ tự hoặc worst-case deterministic guarantee.
 
-**Dijkstra** kết hợp adjacency list để biểu diễn graph với priority queue để luôn chọn vertex có distance nhỏ nhất tiếp theo.
+“Segment Tree tốt hơn prefix sum vì mạnh hơn” — sai nếu dữ liệu tĩnh; sức mạnh dư thừa phải trả bằng memory/code/query cost.
 
-**Kruskal** kết hợp edge list, sorting và DSU. Sorting tạo order theo weight; DSU kiểm tra nhanh liệu thêm edge có tạo cycle không.
+“Chỉ cần chọn một data structure cho cả hệ thống” — hệ thống thật thường là composition.
 
-**Autocomplete** có thể kết hợp trie cho prefix lookup với heap hoặc cached ranking cho top suggestions.
+## 30. Workflow chọn cấu trúc
 
-**Database engine** có thể đồng thời dùng buffer pool, B+Tree index, hash table cho hash join, heap/priority queue cho top-N, và Bloom filter để loại candidate trước khi đọc dữ liệu đắt tiền.
+```text
+1. Viết chính xác operation set.
+2. Ghi tần suất và đường chạy nóng.
+3. Xác định static/dynamic, online/offline.
+4. Xác định ordered/equality/range/prefix semantics.
+5. Xác định dense/sparse và quy mô n.
+6. Xác định memory/cache/I/O model.
+7. Chọn invariant tối thiểu hỗ trợ query.
+8. So các candidate bằng total cost, không chỉ một operation.
+9. Kiểm tra correctness + edge cases.
+10. Benchmark workload đại diện.
+```
 
-Điều này cho thấy data-structure selection thường là bài toán architecture, không phải một lựa chọn duy nhất.
+## Mô hình tư duy
 
-## 8. Một workflow chọn structure có hệ thống
+> Chọn cấu trúc dữ liệu là chọn **thông tin nào đáng được lưu sẵn** và **chi phí nào đáng trả khi cập nhật** để những query quan trọng trở nên rẻ.
 
-Khi gặp bài mới, trước tiên hãy viết các operation bằng ngôn ngữ trung lập. Ví dụ: `lookup(key)`, `insert(key)`, `delete(key)`, `min()`, `successor(key)`, `rangeSum(l,r)`, `prefixSearch(s)`, `connect(a,b)`, `sameComponent(a,b)`.
+Khi phân vân giữa hai cấu trúc, đừng hỏi “cái nào nhanh hơn?”. Hãy hỏi: **workload của tôi là gì, invariant nào thật sự cần, guarantee nào bắt buộc, memory hierarchy ra sao, và liệu một structure đơn giản hơn đã đủ chưa?**
 
-Sau đó đánh dấu operation nào nằm trên hot path và tần suất tương đối của chúng. Một operation chạy một lần lúc startup không cần tối ưu giống operation chạy hàng triệu lần mỗi giây.
-
-Tiếp theo xác định constraints: `n` lớn bao nhiêu, dữ liệu static hay dynamic, có duplicate không, cần deterministic worst-case hay expected complexity đủ, có memory limit không, có concurrency không, dữ liệu ở RAM hay storage ngoài.
-
-Cuối cùng mới so sánh candidate theo tổng cost. Có thể một structure cho lookup nhanh hơn nhưng update chậm hơn; hoặc memory cao hơn nhưng implementation đơn giản và ít bug hơn. Production engineering thường ưu tiên giải pháp đủ nhanh và dễ duy trì thay vì cấu trúc lý thuyết phức tạp nhất.
-
-## 9. Ví dụ reasoning: session store
-
-Giả sử cần lưu session theo `sessionId`, lookup rất nhiều, expiry theo thời gian, và phải xóa session hết hạn.
-
-Hash map giải quyết exact lookup. Nhưng hash map không giúp lấy session sắp hết hạn nhất. Nếu thêm một min-heap keyed by expiry time, ta có thể pop expired sessions theo thứ tự. Tuy nhiên vì session có thể refresh expiry, heap có thể chứa stale entries; khi pop cần kiểm tra version/timestamp với map trước khi xóa thật.
-
-Một requirement tưởng như “lưu session” đã dẫn tới composition `HashMap + MinHeap`, kèm invariant cross-structure. Đây là dạng reasoning quan trọng hơn việc thuộc một bảng Big-O.
-
-## 10. C, Java và JavaScript có cost model khác nhau
-
-Trong C, representation quyết định trực tiếp layout, pointer lifetime và allocation strategy. Một contiguous array of structs có thể khác đáng kể so với array of pointers.
-
-Trong Java, `ArrayList<Integer>` có boxing overhead so với primitive array `int[]`. `HashMap<K,V>` và `TreeMap<K,V>` có semantics và object overhead khác nhau. Comparator phải đúng và nhất quán với ordering cần thiết.
-
-Trong JavaScript, `Array` là general-purpose dynamic collection chứ không phải raw contiguous primitive array theo nghĩa C. `Map` phù hợp hơn plain object khi key là arbitrary object hoặc khi muốn semantics mapping rõ ràng. `TypedArray` hữu ích khi cần numeric fixed-size representation predictable hơn.
-
-Do đó cùng một abstract algorithm có thể dùng structure khác nhau ở mức implementation tùy runtime.
-
-## 11. Những sai lầm chọn cấu trúc thường gặp
-
-Một sai lầm phổ biến là tối ưu một operation nhìn thấy rõ mà bỏ qua operation ẩn. Ví dụ “linked list insert `O(1)`” nhưng application phải tìm vị trí trước, khiến toàn operation vẫn `O(n)`. Một lỗi khác là dùng hash map rồi sau đó liên tục sort keys cho mỗi query; nếu ordering là requirement cốt lõi, tree hoặc sorted representation có thể hợp lý hơn.
-
-Cũng cần tránh chọn structure chỉ vì quen tay. Dùng priority queue khi chỉ cần một lần min có thể là over-engineering. Dùng Segment Tree cho dữ liệu static khi prefix sum đủ dùng cũng vậy.
-
-## Mental Model
-
-> Data structure là một hợp đồng trade-off. Bạn trả bằng memory, update cost, implementation complexity hoặc invariant maintenance để mua những query nhất định rẻ hơn.
-
-Một lựa chọn tốt bắt đầu từ workload: **operation nào cần nhanh, dữ liệu biến đổi ra sao, order nào phải giữ, scale ở đâu, và cost model của runtime/hardware là gì**. Khi các câu đó rõ, tên cấu trúc thường tự xuất hiện như hệ quả thay vì phải đoán.
-
-Xem thêm: [Problem-Solving Workflow](./02_problem_solving_workflow.md), [DSA trong Database, Network và Systems](./01_dsa_in_databases_networks_and_systems.md), [Complexity Analysis](../00_foundations/02_complexity_analysis.md).
+Xem thêm: [Problem Modeling](../00_foundations/00_dsa_as_problem_modeling.md), [Complexity](../00_foundations/02_complexity_analysis.md), [Memory Models](../00_foundations/03_memory_models_c_java_javascript.md), [Problem-Solving Workflow](./02_problem_solving_workflow.md).

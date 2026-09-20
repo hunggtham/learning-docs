@@ -1,13 +1,13 @@
-# Công cụ Toán học cho Data Structures & Algorithms
+# Công cụ toán học cho cấu trúc dữ liệu và thuật toán
 **Mathematical Toolkit for DSA / 알고리즘을 위한 수학 도구**
 
-DSA không đòi hỏi toàn bộ Toán cao cấp, nhưng nó liên tục sử dụng một số ý tưởng toán học: logarithm, tổng hữu hạn, recurrence, combinatorics, modular arithmetic, probability, expectation, induction, graph/tree identities và asymptotic bounds. Mục tiêu của chapter này không phải biến DSA thành môn Toán thuần túy, mà giúp nhìn thấy **vì sao complexity và correctness có hình dạng như vậy** thay vì học thuộc kết quả.
+DSA không yêu cầu toàn bộ toán cao cấp, nhưng liên tục sử dụng một số ý tưởng toán học: logarithm, tổng hữu hạn, truy hồi, tổ hợp, số học modulo, xác suất, kỳ vọng, quy nạp, đại số của phép gộp, đếm trên đồ thị và cận dưới. Mục tiêu của chương này không phải biến DSA thành môn toán thuần túy, mà giúp nhìn thấy **vì sao độ phức tạp và tính đúng đắn có hình dạng như vậy**.
 
-Khi gặp một formula, hãy luôn hỏi nó mô tả hiện tượng gì trong algorithm. Nếu không nối được ký hiệu với structure của computation, formula chưa thực sự được hiểu.
+Khi gặp một công thức, câu hỏi quan trọng nhất là: **công thức này đang mô tả cấu trúc nào của quá trình tính toán?** Nếu ký hiệu không gắn được với hành vi của thuật toán, công thức vẫn chỉ là thứ để học thuộc.
 
-## Logarithm là số lần giảm theo một tỷ lệ cố định
+## Logarithm: số lần thu nhỏ theo tỷ lệ cố định
 
-Nếu search space kích thước `n` và mỗi bước còn một nửa, sau `k` bước:
+Nếu không gian tìm kiếm kích thước `n` và mỗi bước giữ lại một nửa:
 
 \[
 \frac{n}{2^k}\approx 1
@@ -19,43 +19,55 @@ suy ra:
 k\approx \log_2 n
 \]
 
-Đây là nguồn gốc của `O(log n)` trong binary search, balanced BST, heap height, binary lifting và nhiều divide-and-conquer algorithms.
+Đây là nguồn gốc của `O(log n)` trong binary search, balanced BST, heap, binary lifting và nhiều thuật toán divide-and-conquer.
 
-Cơ số logarithm thường không quan trọng trong Big-O vì:
+Cơ số logarithm không quan trọng trong Big-O vì:
 
 \[
 \log_a n = \frac{\log_b n}{\log_b a}
 \]
 
-khác nhau bởi constant factor. Nhưng trong implementation, cơ số vẫn có thể ảnh hưởng constants và data layout. B-tree có `log_B n` theo fan-out lớn vì mỗi page chứa nhiều keys; đó chính là lý do nó phù hợp external memory.
+hai logarithm khác cơ số chỉ khác một hệ số hằng. Nhưng ở cấp hệ thống, cơ số vẫn có ý nghĩa. B+Tree có chiều cao gần `log_B n` với `B` lớn vì mỗi page chứa nhiều khóa, nên số lần I/O giảm mạnh.
 
-Mental model:
+Mô hình tư duy:
 
-> `log n` xuất hiện khi mỗi bước loại bỏ hoặc gom lại một **tỷ lệ cố định** của phần còn lại.
+> `log n` thường xuất hiện khi mỗi bước loại bỏ hoặc gom lại một tỷ lệ cố định của phần còn lại.
 
-## Powers of two và binary representation
+## Lũy thừa của hai và biểu diễn nhị phân
 
-Powers of two xuất hiện khắp DSA vì computer representation và vì doubling/halving rất tự nhiên.
+Chuỗi:
 
 ```text
 1, 2, 4, 8, 16, ...
 ```
 
-Heap index, Fenwick Tree, Sparse Table, binary lifting, bitmask và doubling techniques đều khai thác cấu trúc này.
+xuất hiện khắp DSA vì doubling/halving và biểu diễn bit rất tự nhiên với máy tính.
 
-Nếu `2^k <= n < 2^(k+1)`, thì `k = floor(log2 n)`. Sparse Table lưu blocks length `2^k`; binary lifting lưu ancestor ở distance `2^k`; Fenwick dùng least significant set bit để biểu diễn canonical block size.
+Nếu:
 
-Hiểu powers of two giúp nhìn thấy cùng một idea lặp lại dưới nhiều tên khác nhau.
+\[
+2^k \le n < 2^{k+1}
+\]
 
-## Tổng số học và nested loops
+thì:
 
-Tổng cơ bản:
+\[
+k=\lfloor \log_2 n \rfloor
+\]
+
+Sparse Table lưu block độ dài `2^k`. Binary Lifting lưu tổ tiên cách `2^k` cạnh. Fenwick Tree dùng bit 1 thấp nhất để xác định kích thước block phụ trách. Exponentiation by squaring phân rã số mũ theo bit.
+
+Một insight quan trọng là nhiều kỹ thuật tưởng khác nhau thực ra cùng dùng ý tưởng: **tiền xử lý các bước có kích thước tăng gấp đôi rồi ghép chúng theo biểu diễn nhị phân của một số nguyên**.
+
+## Tổng số học và vòng lặp lồng nhau
+
+Tổng:
 
 \[
 1+2+\cdots+n=\frac{n(n+1)}2=\Theta(n^2)
 \]
 
-giải thích loop:
+mô tả chính xác vòng lặp:
 
 ```c
 for (int i = 0; i < n; ++i)
@@ -63,233 +75,312 @@ for (int i = 0; i < n; ++i)
         work();
 ```
 
-Tổng số lần `work()` không phải `n*n` chính xác, nhưng cùng bậc `Theta(n^2)`.
-
-Một useful habit là biến nested loop thành summation. Nếu inner work phụ thuộc `i`, hãy viết:
+Thay vì đếm số vòng `for`, nên viết số lần thực thi thật dưới dạng tổng:
 
 \[
 T(n)=\sum_{i=1}^{n} f(i)
 \]
 
-rồi nhận diện tổng thay vì đoán complexity bằng số loops.
+Điều này đặc biệt quan trọng khi giới hạn vòng trong phụ thuộc `i`, vì “hai vòng lặp” không tự động nghĩa là `O(n²)`.
 
-## Geometric series
+Ví dụ:
 
-Tổng:
+```c
+for (int i = 1; i <= n; i *= 2)
+    for (int j = 0; j < n; ++j)
+        work();
+```
+
+vòng ngoài chạy `O(log n)` lần, nên tổng là `O(n log n)`.
+
+## Cấp số nhân và phân tích khấu hao
+
+Tổng hình học:
 
 \[
-1+2+4+\cdots+2^k = 2^{k+1}-1
+1+2+4+\cdots+2^k=2^{k+1}-1
 \]
 
-xuất hiện trong complete binary tree và amortized analysis.
+là nền tảng của nhiều phân tích doubling.
 
-Dynamic array tăng capacity gấp đôi. Tổng elements phải copy qua nhiều resize:
+Mảng động tăng capacity gấp đôi. Qua `n` lần append, số phần tử bị copy trong các lần resize xấp xỉ:
 
 \[
-1+2+4+\cdots+\frac n2 < n
+1+2+4+\cdots+\frac n2<n
 \]
 
-nên tổng copy work qua `n` appends là `O(n)`, làm append amortized `O(1)`.
+Do đó tổng copy là `O(n)`, dù một lần append riêng lẻ có thể tốn `O(n)`. Chi phí khấu hao mỗi append vẫn là `O(1)`.
 
-Đây là ví dụ rất quan trọng: một operation riêng lẻ có thể `O(n)`, nhưng sequence operations vẫn có average amortized constant cost nhờ geometric growth.
+Điểm quan trọng: **amortized** không phải “trung bình theo xác suất”. Nó là bảo đảm về tổng chi phí của một chuỗi thao tác hợp lệ.
 
 ## Harmonic series
 
-Tổng harmonic:
+Tổng điều hòa:
 
 \[
 H_n=1+\frac12+\frac13+\cdots+\frac1n=\Theta(\log n)
 \]
 
-xuất hiện trong expected analysis của randomized algorithms, coupon-collector-like reasoning và một số probabilistic processes.
+xuất hiện trong randomized algorithms, coupon-collector reasoning, một số phân tích hashing và nhiều quá trình xác suất.
 
-Không cần nhớ mọi theorem, nhưng nên nhận diện rằng tổng reciprocal thường tăng logarithmically chứ không hội tụ nhanh như geometric series.
+Khi thấy tổng nghịch đảo `1/i`, nên nghĩ tới tăng trưởng logarithmic thay vì tuyến tính.
 
-## Recurrence mô tả shape của recursion
+## Tích và factorial: nhận diện bùng nổ tổ hợp
 
-Recurrence ghi lại runtime của recursive algorithm bằng subproblems.
-
-Merge sort:
-
-\[
-T(n)=2T(n/2)+cn
-\]
-
-Mỗi recursion level tổng combine work `cn`, có khoảng `log n` levels:
-
-\[
-T(n)=\Theta(n\log n)
-\]
-
-Binary search:
-
-\[
-T(n)=T(n/2)+c=\Theta(\log n)
-\]
-
-Worst-case quicksort với partitions `0` và `n-1`:
-
-\[
-T(n)=T(n-1)+cn=\Theta(n^2)
-\]
-
-Recurrence không phải notation trang trí; nó là bản mô tả mathematical của recursion tree.
-
-## Master theorem — biết khi nào được dùng
-
-Với recurrence dạng:
-
-\[
-T(n)=aT(n/b)+f(n)
-\]
-
-`a` là số subproblems, `n/b` là size mỗi subproblem và `f(n)` là divide/combine work. Ta so `f(n)` với:
-
-\[
-n^{\log_b a}
-\]
-
-để xác định phần nào chi phối.
-
-Master theorem rất tiện cho balanced divide-and-conquer, nhưng không nên ép vào recurrence như `T(n)=T(n-1)+n`, subproblems không đều hoặc random recurrence phức tạp. Recursion tree, substitution hoặc probabilistic analysis có thể phù hợp hơn.
-
-## Counting principle
-
-Combinatorics giúp ước lượng search space trước khi code.
-
-Nếu có `n` independent binary choices, số assignments là:
-
-\[
-2^n
-\]
-
-Nếu mỗi position có `k` choices:
-
-\[
-k^n
-\]
-
-Permutations của `n` distinct items:
+Số hoán vị của `n` phần tử phân biệt là:
 
 \[
 n!
 \]
 
-Combinations chọn `r` items:
+Và:
 
 \[
-\binom nr = \frac{n!}{r!(n-r)!}
+n! = n(n-1)(n-2)\cdots 1
 \]
 
-Những số này quyết định feasibility. `2^20` khoảng một triệu; `2^40` khoảng một nghìn tỷ. `20!` đã cực lớn.
+Factorial tăng nhanh hơn mọi `c^n` cố định khi `n` đủ lớn. Một brute force duyệt hoán vị chỉ phù hợp với `n` khá nhỏ.
 
-## Principle of product và sum
+Stirling approximation cho trực giác:
 
-Nếu một process có `a` cách ở bước 1 và `b` cách độc lập tiếp theo, tổng paths là `ab`. Nếu hai groups alternatives loại trừ nhau có `a` và `b` cách, tổng là `a+b`.
+\[
+n! \approx \sqrt{2\pi n}\left(\frac ne\right)^n
+\]
 
-Backtracking tree size thường được ước lượng bằng branching factor và depth:
+và do đó:
+
+\[
+\log(n!)=\Theta(n\log n)
+\]
+
+Kết quả này xuất hiện trực tiếp trong cận dưới của comparison sorting.
+
+## Công thức truy hồi mô tả cây đệ quy
+
+Merge Sort:
+
+\[
+T(n)=2T(n/2)+cn
+\]
+
+Mỗi tầng của cây đệ quy có tổng công việc `Θ(n)` và có `Θ(log n)` tầng, nên:
+
+\[
+T(n)=\Theta(n\log n)
+\]
+
+Binary Search:
+
+\[
+T(n)=T(n/2)+c=\Theta(\log n)
+\]
+
+Quicksort trường hợp xấu khi partition cực lệch:
+
+\[
+T(n)=T(n-1)+cn=\Theta(n^2)
+\]
+
+Truy hồi là bản mô tả toán học của hình dạng recursion tree. Nếu không hiểu recursion tree, dùng công thức dễ trở thành thao tác máy móc.
+
+## Master Theorem và giới hạn của nó
+
+Với:
+
+\[
+T(n)=aT(n/b)+f(n)
+\]
+
+ta so `f(n)` với:
+
+\[
+n^{\log_b a}
+\]
+
+để xem chi phí chia nhánh hay chi phí xử lý mỗi tầng chi phối.
+
+Master Theorem rất tiện khi subproblem có kích thước cân bằng, nhưng không nên ép vào mọi recurrence. Các dạng như:
+
+\[
+T(n)=T(n-1)+n
+\]
+
+hoặc subproblem không đều, recurrence phụ thuộc dữ liệu, hay randomized recurrence thường phù hợp hơn với substitution, recursion tree hoặc probabilistic analysis.
+
+Bài học: theorem là công cụ cho một lớp cấu trúc, không phải phép biến đổi cú pháp tổng quát.
+
+## Nguyên lý cộng và nhân trong tổ hợp
+
+Nếu bước một có `a` lựa chọn và sau mỗi lựa chọn đó bước hai có `b` lựa chọn độc lập, tổng số đường là:
+
+\[
+ab
+\]
+
+Nếu hai nhóm lựa chọn loại trừ nhau có `a` và `b` cách, tổng là:
+
+\[
+a+b
+\]
+
+Cây backtracking thường được ước lượng thô bằng:
 
 \[
 O(b^d)
 \]
 
-nhưng pruning có thể làm effective branching factor nhỏ hơn nhiều.
+với `b` là branching factor và `d` là độ sâu. Pruning làm branching factor hiệu dụng nhỏ hơn, nhưng không tự thay đổi worst-case nếu vẫn tồn tại input buộc duyệt gần toàn cây.
+
+## Combination và subset
+
+Số cách chọn `r` phần tử từ `n` phần tử:
+
+\[
+\binom nr=\frac{n!}{r!(n-r)!}
+\]
+
+Tổng số subset của một tập `n` phần tử là:
+
+\[
+\sum_{r=0}^{n}\binom nr=2^n
+\]
+
+Đây là lý do bitmask trên `n` phần tử tạo không gian `2^n` trạng thái.
+
+Với `n=20`, khoảng một triệu subset còn có thể xử lý trong nhiều bối cảnh. Với `n=40`, hơn một nghìn tỷ subset thường buộc ta dùng meet-in-the-middle hoặc cấu trúc khác.
 
 ## Pigeonhole principle
 
-Nếu nhét nhiều hơn `m` objects vào `m` buckets, ít nhất một bucket chứa từ hai objects trở lên. Đây là nền tảng trực giác cho hash collisions: key space thường lớn hơn bucket space, nên collision không thể tránh hoàn toàn.
+Nếu đặt nhiều hơn `m` đối tượng vào `m` ngăn, ít nhất một ngăn chứa từ hai đối tượng trở lên.
 
-Pigeonhole cũng xuất hiện trong cycle detection, duplicate reasoning và combinatorial proofs.
+Trong hashing, miền khóa thường lớn hơn số bucket, nên collision không phải “lỗi hiếm có thể loại bỏ hoàn toàn”; nó là điều toán học không tránh khỏi. Thiết kế đúng phải quản lý collision.
+
+Pigeonhole cũng xuất hiện trong chứng minh duplicate, cycle và nhiều lập luận tồn tại.
 
 ## Inclusion–exclusion
 
-Khi đếm union của sets, cộng trực tiếp có thể double-count overlap.
-
-Hai sets:
+Với hai tập:
 
 \[
 |A\cup B|=|A|+|B|-|A\cap B|
 \]
 
-Idea này xuất hiện trong combinatorics, bitmask DP/SOS DP, probability và counting problems. Với nhiều sets, formula mở rộng theo alternating intersections.
+Ta phải trừ phần giao vì nó bị đếm hai lần.
 
-## Prefix sums là đại số của phép trừ phần đã tích lũy
+Với nhiều tập, các giao được cộng/trừ luân phiên. Ý tưởng này xuất hiện trong combinatorial counting, bitmask DP, xác suất và một số thuật toán đếm với điều kiện loại trừ.
 
-Prefix sum:
+## Prefix Sum và cấu trúc đại số phía sau
+
+Định nghĩa:
 
 \[
-P[i]=\sum_{j=0}^{i-1} a_j
+P[i]=\sum_{j=0}^{i-1}a_j
 \]
 
-cho:
+thì:
 
 \[
 sum(L,R)=P[R+1]-P[L]
 \]
 
-Tại sao? Vì `P[R+1]` chứa prefix đến `R`, còn `P[L]` chính là phần trước `L` cần loại.
+Điểm sâu hơn không phải công thức, mà là việc phép cộng có **phép nghịch đảo**: contribution của prefix trước `L` có thể bị loại bằng phép trừ.
 
-Mental model này tổng quát sang cumulative counts, prefix XOR và difference arrays. Khi operation có inverse phù hợp, prefix aggregation rất mạnh.
+Điều này giải thích vì sao Prefix Sum làm range sum rất tự nhiên, còn prefix minimum không thể “trừ min cũ” để lấy min của một đoạn bất kỳ.
 
-## Associativity, identity, inverse và idempotence
+## Semigroup, monoid và group trong DSA
 
-Một số DSA structures hoạt động nhờ properties đại số.
+Nhiều cấu trúc range query có thể hiểu bằng đại số.
 
-**Associativity / 결합법칙**:
+### Tính kết hợp
+
+Một phép toán `*` có tính kết hợp nếu:
 
 \[
 (a*b)*c=a*(b*c)
 \]
 
-cho phép group ranges theo nhiều cách. Segment Tree cần combine operation associative.
+Khi đó ta có thể chia đoạn thành nhiều block rồi ghép kết quả theo bất kỳ cách đặt ngoặc nào. Segment Tree cần tính chất này.
 
-**Identity / 항등원** là phần tử `e` sao cho `a*e=e*a=a`. Sum có identity `0`; min có `+infinity`.
+Một tập cùng phép toán kết hợp tạo thành **semigroup**.
 
-**Inverse / 역원** cho phép “trừ” contribution. Prefix sums dùng additive inverse; prefix minimum không có inverse tương tự.
+### Phần tử đơn vị
 
-**Idempotence / 멱등성**:
+Nếu tồn tại `e` sao cho:
+
+\[
+a*e=e*a=a
+\]
+
+thì ta có **monoid**.
+
+Ví dụ:
+
+```text
+sum -> identity 0
+product -> identity 1
+min -> identity +∞
+max -> identity -∞
+```
+
+Identity rất hữu ích cho đoạn rỗng và accumulator ban đầu.
+
+### Phép nghịch đảo
+
+Nếu mỗi phần tử có inverse phù hợp, monoid trở thành group. Prefix Sum hưởng lợi từ inverse của phép cộng:
+
+\[
+a+(-a)=0
+\]
+
+Fenwick Tree cho range sum rất tự nhiên vì prefix aggregate có thể “trừ” nhau.
+
+### Idempotence
+
+Một phép toán idempotent nếu:
 
 \[
 f(x,x)=x
 \]
 
-cho phép Sparse Table classic dùng overlapping blocks với min/max/GCD.
+`min`, `max`, `gcd`, bitwise AND/OR có tính chất này. Classic Sparse Table có thể trả RMQ bằng hai block chồng lấn vì phần giao bị tính hai lần nhưng không thay kết quả.
 
-Hiểu các properties này giúp biết một structure có thể generalize tới operation nào.
+Nhìn bằng đại số giúp trả lời câu hỏi “cấu trúc này có tổng quát sang operation khác không?” chính xác hơn việc học thuộc danh sách.
 
-## Modular arithmetic
+## Commutativity không giống associativity
 
-Modulo xuất hiện trong hashing, combinatorial counting, cyclic buffers và number-theoretic algorithms.
-
-Các identities cơ bản:
+**Giao hoán (commutativity)**:
 
 \[
-(a+b)\bmod m = ((a\bmod m)+(b\bmod m))\bmod m
+a*b=b*a
 \]
 
-\[
-(ab)\bmod m = ((a\bmod m)(b\bmod m))\bmod m
-\]
+không bắt buộc cho mọi cấu trúc. Segment Tree có thể làm việc với phép kết hợp không giao hoán, miễn ta giữ đúng thứ tự trái–phải.
 
-Nhưng division không thể thay bằng integer division modulo. Cần **modular inverse** khi inverse tồn tại.
-
-Trong programming contests hoặc combinatorial DP, một prime modulus thường được chọn để inverse dễ xử lý bằng Fermat's little theorem dưới conditions phù hợp.
-
-## Negative modulo semantics khác nhau theo ngôn ngữ
-
-Mathematical modulo thường được định nghĩa non-negative, nhưng language `%` có thể là remainder với sign rules riêng. Trong Java/C/JavaScript, negative operand có thể tạo negative remainder.
-
-Nếu cần normalized modulo:
+Ví dụ nối chuỗi là associative nhưng không commutative:
 
 ```text
-((x % m) + m) % m
+"ab" + "cd" != "cd" + "ab"
 ```
 
-là pattern phổ biến, nhưng vẫn phải xét overflow/range trong language cụ thể.
+Phân biệt hai tính chất này tránh nhiều lỗi khi tổng quát hóa range structure.
 
-## GCD và Euclidean algorithm
+## Số học modulo
 
-Greatest Common Divisor xuất hiện trong fractions, modular arithmetic, number theory và range queries.
+Các đồng nhất thức cơ bản:
+
+\[
+(a+b)\bmod m=((a\bmod m)+(b\bmod m))\bmod m
+\]
+
+\[
+(ab)\bmod m=((a\bmod m)(b\bmod m))\bmod m
+\]
+
+Modulo xuất hiện trong hashing, cyclic buffer, rolling hash và counting lớn.
+
+Phép chia không thể thay bằng chia số nguyên rồi `% m`. Muốn “chia” trong modulo cần **nghịch đảo modulo (modular inverse)** và inverse chỉ tồn tại khi điều kiện phù hợp được thỏa.
+
+## GCD, coprime và modular inverse
 
 Euclid:
 
@@ -297,57 +388,107 @@ Euclid:
 gcd(a,b)=gcd(b,a\bmod b)
 \]
 
-mỗi bước giảm mạnh argument, cho logarithmic complexity theo magnitude.
+Mỗi bước làm đối số giảm mạnh nên số bước là logarithmic theo độ lớn số.
 
-GCD còn là associative và idempotent, nên phù hợp Sparse Table static range GCD.
+Hai số coprime khi:
 
-## Probability: event, conditional probability và independence
+\[
+gcd(a,m)=1
+\]
 
-Randomized algorithms cần assumption xác suất rõ ràng.
+Khi đó `a` có modular inverse modulo `m`.
 
-Nếu events độc lập:
+Extended Euclidean Algorithm tìm `x,y` sao cho:
+
+\[
+ax+by=gcd(a,b)
+\]
+
+Nếu `gcd(a,m)=1`, từ đó suy ra một inverse của `a (mod m)`.
+
+## Modulo âm trong ngôn ngữ lập trình
+
+Toán học thường chọn phần dư chuẩn không âm, nhưng `%` trong C, Java và JavaScript hoạt động theo quy tắc remainder của ngôn ngữ và có thể trả số âm với toán hạng âm.
+
+Một mẫu normalize thường gặp:
+
+```text
+((x % m) + m) % m
+```
+
+Nhưng implementation vẫn phải xét overflow trước khi cộng nếu kiểu số hữu hạn.
+
+## Bit và lũy thừa của hai
+
+Với số nguyên dương `x`, nếu `x` là lũy thừa của hai thì biểu diễn nhị phân có đúng một bit 1.
+
+Một identity phổ biến:
+
+```text
+x & (x - 1)
+```
+
+xóa bit 1 thấp nhất. Vì vậy:
+
+```text
+x > 0 && (x & (x - 1)) == 0
+```
+
+kiểm tra lũy thừa của hai trong mô hình integer phù hợp.
+
+Fenwick Tree dùng:
+
+```text
+x & -x
+```
+
+để lấy lowbit, tức giá trị của bit 1 thấp nhất. Đây không phải mẹo thần bí; nó là hệ quả của biểu diễn bù hai.
+
+## Xác suất và biến cố
+
+Với hai biến cố độc lập:
 
 \[
 P(A\cap B)=P(A)P(B)
 \]
 
-Nhưng independence không nên được giả định chỉ vì hai events “trông khác nhau”. Hash functions correlated hoặc reused randomness có thể phá model.
+Nhưng không được giả định độc lập chỉ vì hai sự kiện “trông khác nhau”. Hash functions tương quan hoặc randomness dùng lại có thể phá giả định này.
 
-Conditional probability:
+Xác suất có điều kiện:
 
 \[
 P(A\mid B)=\frac{P(A\cap B)}{P(B)}
 \]
 
-hữu ích khi reasoning về collision, randomized sampling và Bayesian-like updates.
+là công cụ nền tảng khi phân tích sampling, collision và quá trình ngẫu nhiên phụ thuộc trạng thái trước đó.
 
-## Expected value và linearity of expectation
+## Kỳ vọng và tính tuyến tính của kỳ vọng
 
-Expected value:
+Kỳ vọng:
 
 \[
 E[X]=\sum_x xP(X=x)
 \]
 
-Một property cực mạnh:
+Tính chất cực mạnh:
 
 \[
 E[X+Y]=E[X]+E[Y]
 \]
 
-không cần `X` và `Y` độc lập.
+không đòi hỏi `X` và `Y` độc lập.
 
-Điều này cho phép phân tích tổng work bằng indicator variables. Ví dụ expected number of collisions hoặc expected successful comparisons có thể được tách thành contribution của từng event.
+Nếu tổng chi phí là tổng contribution của nhiều sự kiện, ta có thể phân tích từng contribution rồi cộng expectation.
 
-Linearity of expectation là một trong những tools probabilistic hữu ích nhất trong algorithm analysis.
+Đây là một trong những lý do probabilistic analysis thường trở nên đơn giản hơn sau khi định nghĩa đúng biến ngẫu nhiên.
 
-## Indicator variables
+## Indicator variable
 
-Định nghĩa indicator:
+Định nghĩa:
 
 \[
 I_i=\begin{cases}
-1 & \text{nếu event i xảy ra}\\
+1 & \text{nếu sự kiện i xảy ra}\\
 0 & \text{nếu không}
 \end{cases}
 \]
@@ -355,207 +496,255 @@ I_i=\begin{cases}
 thì:
 
 \[
-E[I_i]=P(event_i)
+E[I_i]=P(i\text{ xảy ra})
 \]
 
-Nếu total count `X = \sum I_i`, thì:
+Nếu:
 
 \[
-E[X]=\sum P(event_i)
+X=\sum_i I_i
 \]
 
-Cách này biến bài toán “đếm expected number” thành tổng probabilities, rất hữu ích cho randomized algorithms.
+thì:
 
-## Variance và concentration intuition
+\[
+E[X]=\sum_i P(i\text{ xảy ra})
+\]
 
-Expectation chỉ cho average, không nói distribution tập trung quanh average bao nhiêu. Variance đo spread:
+Cách này rất hữu ích để đếm kỳ vọng số collision, số phần tử được chọn hoặc số lần một event xảy ra.
+
+## Variance và tail behavior
+
+Kỳ vọng chỉ nói trung bình, không nói mức độ phân tán.
 
 \[
 Var(X)=E[(X-E[X])^2]
 \]
 
-Trong production latency hoặc probabilistic structures, tail behavior có thể quan trọng hơn mean. Chernoff/Hoeffding bounds là các tools nâng cao để chứng minh sum of random variables tập trung quanh expectation dưới assumptions thích hợp.
+Hai thuật toán có cùng expected runtime nhưng một thuật toán có tail latency lớn hơn rất nhiều có thể khác hẳn trong production.
 
-Không nhất thiết phải thuộc công thức ngay, nhưng nên nhớ: “expected good” chưa đồng nghĩa “bad case cực hiếm” nếu chưa có concentration argument.
+Markov, Chebyshev, Chernoff và Hoeffding là các lớp công cụ để đưa ra cận xác suất vượt quá ngưỡng. Không cần thuộc toàn bộ công thức ngay, nhưng phải nhớ:
 
-## Randomized vs probabilistic output
+> Expected value tốt không tự động chứng minh bad case hiếm.
 
-Một randomized algorithm có thể luôn trả exact answer nhưng runtime random, ví dụ randomized quicksort.
+## Union bound
 
-Một probabilistic data structure có thể trả approximate answer với bounded error, ví dụ Bloom Filter hoặc HyperLogLog.
-
-Hai khái niệm này khác nhau: randomness có thể ảnh hưởng performance, correctness probability hoặc cả hai.
-
-## Structural induction
-
-Tree, linked structure và recursive grammar thường được chứng minh bằng structural induction.
-
-Base: empty/leaf structure đúng.
-
-Step: giả sử substructures đúng, chứng minh combine node hiện tại đúng.
-
-Đây là mathematical version của recursive contract.
-
-## Strong induction và DP
-
-Dynamic Programming state `i` có thể phụ thuộc nhiều states nhỏ hơn. Strong induction giả sử theorem đúng cho mọi state nhỏ hơn rồi chứng minh state hiện tại.
-
-Bottom-up DP thực chất là thực thi proof order này: tính prerequisites trước để transition hiện tại dựa trên values đã đúng.
-
-## Graph identities
-
-Một undirected tree connected với `n` vertices có:
+Với các biến cố `A_1,...,A_k`:
 
 \[
-|E|=n-1
+P\left(\bigcup_i A_i\right)\le\sum_i P(A_i)
 \]
 
-Ngược lại, một connected undirected graph có `n-1` edges thì nó là tree. Nếu graph acyclic với `n-1` edges thì cũng connected.
+Không cần các biến cố độc lập.
 
-Các identities này giúp reasoning và validation.
+Union bound rất hữu ích khi muốn chứng minh “xác suất có ít nhất một lỗi trong nhiều vị trí” nhỏ bằng cách cộng các xác suất lỗi riêng lẻ.
 
-Handshaking lemma:
+## Randomized algorithm và probabilistic data structure
+
+Cần phân biệt hai khái niệm.
+
+Randomized Quicksort luôn trả kết quả sort chính xác nhưng runtime phụ thuộc randomness.
+
+Bloom Filter có thể trả false positive; randomness ảnh hưởng cả representation và xác suất lỗi.
+
+Một thuật toán có thể ngẫu nhiên nhưng exact, hoặc deterministic nhưng approximate, hoặc vừa randomized vừa approximate. Không nên trộn các loại guarantee này.
+
+## Quy nạp cấu trúc
+
+Tree, linked structure và recursive grammar tự nhiên với structural induction.
+
+```text
+base: cấu trúc rỗng hoặc lá đúng
+step: giả sử các substructure đúng, chứng minh cách ghép ở node hiện tại đúng
+```
+
+Đây là phiên bản toán học của contract đệ quy.
+
+## Quy nạp mạnh và Dynamic Programming
+
+Một trạng thái DP có thể phụ thuộc nhiều trạng thái nhỏ hơn. Strong induction giả sử tất cả trạng thái nhỏ hơn đã đúng rồi chứng minh trạng thái hiện tại.
+
+Bottom-up DP thực hiện chính thứ tự chứng minh đó: prerequisite được tính trước khi state mới sử dụng chúng.
+
+## Một số đẳng thức đồ thị cơ bản
+
+Với đồ thị vô hướng:
 
 \[
-\sum_{v\in V} degree(v)=2|E|
+\sum_{v\in V}degree(v)=2|E|
 \]
 
-vì mỗi undirected edge đóng góp 1 degree cho hai endpoints. Suy ra số vertices odd degree luôn chẵn — nền tảng cho Euler trail conditions.
+vì mỗi cạnh đóng góp hai đầu mút. Hệ quả: số đỉnh có bậc lẻ luôn chẵn.
 
-Với directed graph:
+Với đồ thị có hướng:
 
 \[
 \sum indegree(v)=\sum outdegree(v)=|E|
 \]
 
-## Tree height và node count
-
-Perfect binary tree height `h` có:
+Với cây có `n` đỉnh:
 
 \[
-1+2+\cdots+2^h=2^{h+1}-1
+|E|=n-1
 \]
 
-nên nếu balanced tree có `n` nodes, height logarithmic. Đây là mathematical link giữa branching factor và search depth.
+Nếu một đồ thị vô hướng liên thông có `n-1` cạnh thì nó là cây. Nếu một đồ thị vô hướng không chu trình có `n-1` cạnh thì nó cũng phải liên thông.
 
-B-tree dùng branching factor lớn `B`, nên height gần `log_B n`, giảm page accesses.
+Các identity này vừa hỗ trợ chứng minh vừa hỗ trợ validator.
 
-## Amortized analysis: aggregate method
+## Đếm cạnh của đồ thị dày đặc
 
-Aggregate method nhìn cả sequence. Nếu `n` operations tổng cost `T(n)`, amortized cost là:
+Đồ thị vô hướng đơn với `n` đỉnh có tối đa:
+
+\[
+\frac{n(n-1)}2
+\]
+
+cạnh. Đồ thị có hướng đơn không self-loop có tối đa:
+
+\[
+n(n-1)
+\]
+
+cạnh.
+
+Khi `m` gần `n²`, adjacency matrix có thể hợp lý hơn. Khi `m` gần tuyến tính theo `n`, adjacency list/CSR thường tiết kiệm hơn.
+
+Toán đếm giúp chọn representation trước cả khi benchmark.
+
+## Sparse matrix và graph
+
+Adjacency matrix của graph là một ma trận. Với graph thưa, phần lớn entry bằng 0. CSR và các sparse representation về bản chất là cách lưu chỉ các phần tử khác 0.
+
+Nhiều phép toán graph có thể được nhìn dưới dạng linear algebra. Ví dụ số walk độ dài `k` liên hệ với lũy thừa ma trận kề. Tuy nhiên, cách nhìn ma trận không luôn là implementation tốt nhất cho graph traversal thông thường; nó cung cấp một mô hình toán học khác để thấy cấu trúc.
+
+## Phân tích khấu hao: phương pháp tổng hợp
+
+Nếu `n` thao tác có tổng chi phí `T(n)`, chi phí khấu hao là:
 
 \[
 \frac{T(n)}n
 \]
 
-Dynamic array doubling là example kinh điển. Một vài resize đắt nhưng tổng copy work tuyến tính.
+Dynamic Array doubling là ví dụ điển hình: một số append đắt nhưng tổng chi phí vẫn tuyến tính.
 
-Amortized không phải average-case probability. Nó cho guarantee trên mọi sequence thuộc model, chỉ phân phối cost không đều giữa operations.
+## Phương pháp hạch toán
 
-## Accounting method
+Ta gán cho mỗi operation một “giá” có thể lớn hơn chi phí thực tế. Phần dư được coi như credit dành cho thao tác đắt trong tương lai.
 
-Ta có thể “charge” operation rẻ nhiều hơn actual cost và dùng credit trả cho operation đắt sau này.
+Nếu chứng minh credit không bao giờ âm và tổng charge là `O(n)`, tổng actual cost cũng bị chặn bởi `O(n)`.
 
-Ví dụ mỗi append trả một số constant credits; credits tích lũy đủ để cover future array copy. Đây là cách trực giác để chứng minh amortized `O(1)` mà không cần summation chi tiết mỗi lần.
+Đây là cách suy nghĩ trực quan về việc các thao tác rẻ “trả trước” cho resize sau này.
 
-## Potential method
+## Phương pháp thế năng
 
-Potential method định nghĩa một function `Φ(state)` biểu diễn prepaid work/độ “căng” của structure.
+Định nghĩa potential `Φ(D)` cho trạng thái cấu trúc `D`.
 
-Amortized cost:
+Chi phí khấu hao:
 
 \[
 \hat c_i=c_i+\Phi(D_i)-\Phi(D_{i-1})
 \]
 
-Nếu potential tăng ở operation rẻ, ta tích credit; nếu operation đắt làm potential giảm, stored potential trả cost.
+Nếu một operation rẻ làm potential tăng, nó tích trữ “năng lượng”. Một operation đắt có thể làm potential giảm và phần giảm đó bù vào actual cost.
 
-Potential method rất mạnh cho dynamic arrays, stack sequences, splay-like analysis và nhiều dynamic structures.
+Potential method rất mạnh vì không cần gắn credit vào từng object cụ thể; chỉ cần một hàm đo toàn trạng thái.
 
-## Information-theoretic lower bounds
+## Lower bound theo lý thuyết thông tin
 
-Comparison sorting phải phân biệt `n!` possible permutations. Một comparison nhị phân cung cấp tối đa khoảng một bit information. Decision tree cần ít nhất:
+Comparison sorting phải phân biệt `n!` thứ tự input có thể có. Mỗi comparison nhị phân chỉ tạo tối đa hai nhánh trong decision tree.
+
+Chiều cao cây quyết định ít nhất:
 
 \[
 \log_2(n!)=\Omega(n\log n)
 \]
 
-height trong worst case.
+Do đó không thể có general comparison sort worst-case `O(n)`.
 
-Stirling approximation cho intuition:
+Counting Sort/Radix Sort không mâu thuẫn với cận này vì chúng khai thác thông tin khác ngoài pairwise comparison, chẳng hạn miền khóa hữu hạn hoặc representation chữ số.
+
+## Search lower bound
+
+Trên mảng chưa sắp xếp, để khẳng định target không tồn tại, trường hợp xấu nhất phải kiểm tra mọi phần tử:
 
 \[
-\log(n!)=\Theta(n\log n)
+\Omega(n)
 \]
 
-Điều này giải thích vì sao general comparison sort không thể có worst-case `O(n)`.
+Sau khi sắp xếp, mỗi comparison có thể loại gần nửa candidate, dẫn tới logarithmic search.
 
-Lower bound không nói counting/radix sort bất khả thi vì chúng dùng information khác ngoài pairwise comparison.
+Lower bound thường bắt đầu từ câu hỏi:
 
-## Search lower-bound intuition
+> Mỗi observation cung cấp tối đa bao nhiêu thông tin về đáp án?
 
-Unsorted array không có structure giúp loại vùng candidates, nên exact membership trong comparison model có thể cần xem mọi element: `Omega(n)` worst case.
+## Big-O, Omega và Theta
 
-Sorted order cho phép mỗi comparison loại khoảng nửa candidates, dẫn tới logarithmic search.
+`O(g(n))` là cận trên tiệm cận. `Ω(g(n))` là cận dưới. `Θ(g(n))` nói tốc độ tăng bị kẹp cả trên lẫn dưới bởi cùng bậc.
 
-Lower bounds thường đến từ câu hỏi: **mỗi observation cung cấp bao nhiêu information?**
-
-## Asymptotic notation chính xác hơn
-
-`O(g(n))` là upper bound asymptotic.
-
-`Ω(g(n))` là lower bound.
-
-`Θ(g(n))` là tight bound — vừa upper vừa lower cùng bậc.
-
-Một algorithm `Θ(n)` cũng thuộc `O(n^2)`, nhưng nói `O(n^2)` là bound lỏng và ít informative hơn.
-
-Worst-case, average-case, expected và amortized là dimensions khác với `O/Θ/Ω`; không nên trộn chúng.
-
-## Numeric growth và overflow
-
-Mathematical formula có thể đúng nhưng implementation overflow.
-
-`n(n+1)/2` có thể overflow trước division dù result cuối fit. `mid=(lo+hi)/2` có thể overflow integer, nên binary search thường dùng:
+Nếu một thuật toán chạy đúng `3n² + 5n + 7`, có thể nói:
 
 ```text
-lo + (hi - lo) / 2
+O(n²)
+Ω(n²)
+Θ(n²)
 ```
 
-Combinatorial counts như `n!`, Fibonacci hoặc number of paths tăng rất nhanh; cần `BigInteger`, `BigInt`, modulo arithmetic hoặc saturation tùy requirement.
+Việc chỉ nói `O(n³)` cũng đúng về mặt cận trên nhưng quá lỏng và ít thông tin.
 
-## Floating point và error
+## Worst-case, average-case, expected-case và amortized
 
-Real-number formulas khi chạy trên IEEE-754 có rounding. Summation order có thể đổi error. Equality comparisons có thể không ổn định. Binary search trên real values cần stopping criterion theo iterations hoặc tolerance.
+Bốn khái niệm này không giống nhau.
 
-Numerical correctness là một layer khác của mathematical reasoning.
+**Worst-case**: input tệ nhất trong miền hợp lệ.
 
-## Feasibility estimation trước khi code
+**Average-case**: trung bình theo một phân phối input xác định.
 
-Một kỹ năng thực dụng là ước lượng rough operation budget.
+**Expected-case**: kỳ vọng, thường do randomness của thuật toán hoặc cấu trúc.
 
-Nếu `n = 10^5`, `O(n^2)` thường quá lớn trong latency thông thường. `O(n log n)` thường khả thi. `2^n` chỉ hợp khi `n` nhỏ. Nhưng constants, language/runtime, cache và operation complexity vẫn quan trọng.
+**Amortized**: trung bình trên chuỗi thao tác nhưng không cần giả định xác suất.
 
-Không nên biến rough budget thành luật cứng; mục tiêu là loại sớm những algorithm scale sai rõ ràng.
+Trộn các khái niệm này dễ dẫn tới tuyên bố hiệu năng sai.
 
-## Common misconceptions
+## Sai số số học và miền giá trị
 
-`log n` không xuất hiện chỉ vì có recursion; nó xuất hiện khi state size giảm multiplicatively.
+Toán học thường dùng số nguyên vô hạn, nhưng code dùng kiểu hữu hạn.
 
-Expected `O(1)` không phải deterministic `O(1)`.
+Nếu cộng `n` giá trị mỗi giá trị tối đa `M`, tổng có thể tới khoảng `nM`. Trước khi chọn `int` hay `long`, nên ước lượng upper bound.
 
-Amortized `O(1)` không phải “trung bình trên random input”.
+Với multiplication, overflow có thể xảy ra trước modulo:
 
-Modulo không cho phép chia như arithmetic bình thường nếu inverse không tồn tại.
+```text
+(a * b) % m
+```
 
-Associative không đồng nghĩa idempotent; vì thế Segment Tree và Sparse Table classic có requirements khác.
+nếu `a*b` vượt miền kiểu. Correctness phải xét cả bước trung gian.
 
-`O(n)` không luôn nhanh hơn `O(n log n)` ở input nhỏ; asymptotic notation mô tả growth, không constants.
+JavaScript `Number` chỉ biểu diễn chính xác mọi số nguyên tới `2^53-1`; các bài counting lớn có thể cần `BigInt`.
 
-## Mental Model
+## Một checklist toán học cho DSA
 
-> Toán học trong DSA là ngôn ngữ để trả lời bốn câu hỏi: search space lớn bao nhiêu, mỗi bước loại được bao nhiêu, work được lặp lại theo cấu trúc nào, và guarantee đúng/nhanh mạnh tới đâu.
+Khi gặp bài mới, có thể hỏi:
 
-Khi thấy một complexity hoặc theorem, hãy nối nó về structure: `log n` vì halving/doubling, `n log n` vì `log n` levels mỗi level `n` work, `2^n` vì binary choices, amortized constant vì geometric total work, expected bound vì random variables và assumptions, lower bound vì information cần phân biệt nhiều possible answers.
+```text
+Không gian trạng thái có bao nhiêu phần tử?
+Một bước giảm kích thước theo cộng hay theo tỷ lệ?
+Có tổng hoặc recurrence nào mô tả runtime không?
+Operation range có associative không?
+Có identity hoặc inverse không?
+Có idempotent không?
+Có thể dùng bit representation không?
+Có lower bound tự nhiên nào không?
+Có randomness không, và guarantee là expected hay probabilistic?
+Kiểu số có đủ miền giá trị không?
+```
 
-Xem tiếp: [Complexity Analysis](./02_complexity_analysis.md), [Correctness & Invariants](./01_algorithm_correctness_and_invariants.md), [Divide and Conquer](../04_algorithmic_paradigms/03_divide_and_conquer.md), [Dynamic Programming](../04_algorithmic_paradigms/05_dynamic_programming.md), [Amortized & Randomized Thinking](../05_specialized/03_amortized_randomized_and_probabilistic_thinking.md) và [Bit Manipulation](../05_specialized/02_bit_manipulation_and_bitsets.md).
+Những câu hỏi này giúp toán học trở thành công cụ thiết kế thay vì phần phụ lý thuyết.
+
+## Mô hình tư duy
+
+> Toán học trong DSA không phải một tập công thức rời rạc. Nó là ngôn ngữ mô tả **số trạng thái, tốc độ thu nhỏ, cách ghép kết quả, lượng thông tin thu được và giới hạn của điều có thể tối ưu**.
+
+Khi hiểu vì sao một cấu trúc cần associativity, vì sao `log n` xuất hiện khi chia đôi, vì sao `2^n` xuất hiện với subset, hoặc vì sao comparison sorting có cận `n log n`, ta có thể tự suy ra nhiều thuật toán thay vì ghi nhớ từng công thức riêng lẻ.
+
+Xem tiếp: [Problem Modeling](./00_dsa_as_problem_modeling.md), [Correctness & Invariants](./01_algorithm_correctness_and_invariants.md), [Complexity Analysis](./02_complexity_analysis.md), [Bit Manipulation](../05_specialized/02_bit_manipulation_and_bitsets.md), [Sparse Table](../05_specialized/05_sparse_table_and_static_range_queries.md) và [Amortized & Randomized Thinking](../05_specialized/03_amortized_randomized_and_probabilistic_thinking.md).
