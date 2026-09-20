@@ -1,153 +1,457 @@
-# Thị trường vốn Hàn Quốc: KOSPI, KOSDAQ và KONEX (자본시장·코스피·코스닥·코넥스)
+# Thị trường vốn Hàn Quốc: KOSPI, KOSDAQ, KONEX và cách market biến kỳ vọng thành giá (Capital Markets / 자본시장·코스피·코스닥·코넥스)
 
-Thị trường chứng khoán không chỉ là nơi “giá cổ phiếu lên xuống”. Nó là hạ tầng để doanh nghiệp chuyển quyền sở hữu thành nguồn vốn, investor chuyển savings thành capital và thị trường liên tục hình thành price cho risk.
+Thị trường chứng khoán không chỉ là nơi giá cổ phiếu lên xuống. Nó là hạ tầng để **doanh nghiệp huy động equity, investor phân bổ savings, owner tạo liquidity và economy hình thành price cho risk**.
 
-## KOSPI: main board
+Để hiểu Korean company, cần phân biệt rõ company economics và market mechanics. Một công ty tốt có thể là investment tệ nếu price đã quá cao; một công ty đang gặp cycle downturn có thể tăng giá nếu market expected outcome còn xấu hơn.
 
-**KOSPI Market / 유가증권시장** là main board của Korea Exchange, nơi nhiều large corporations niêm yết. KOSPI cũng là tên index đại diện theo market capitalization. Cần phân biệt **market** và **index** dù trong ngôn ngữ hàng ngày cùng được gọi KOSPI.
+> Mental model: market price là giá của **future expectations**, không phải điểm số đạo đức cho company hiện tại.
 
-Market cap của một company:
+## Primary market và secondary market
 
-\[
-Market\ Cap = Share\ Price \times Shares\ Outstanding
-\]
+Đây là distinction đầu tiên.
 
-Market cap không phải “tiền công ty đang có”. Nó là market value của equity theo giá giao dịch hiện tại.
+**Primary market / 발행시장** là nơi new securities are issued. Khi company IPO hoặc issue new shares, cash can flow into company.
 
-## KOSDAQ: growth market
+**Secondary market / 유통시장** là nơi existing investors trade shares with each other. Company usually receives no new cash from daily stock trading.
 
-KOSDAQ được mở từ 1996 nhằm tạo kênh vốn cho SMEs và startup, đặc biệt các ngành technology. So với KOSPI, profile công ty thường thiên về growth, biotech, IT, components và smaller capitalization, dù có những công ty KOSDAQ rất lớn.
+Why secondary market matters then? Because liquidity increases willingness to buy primary issuance.
 
-“KOSDAQ = Nasdaq Hàn Quốc” là analogy hữu ích ở mức trực giác nhưng không nên suy rộng mọi listing rule hoặc market quality là giống nhau.
+An investor is more willing to lock capital into company today if shares can later be sold in a liquid market.
 
-## KONEX: early-stage SME market
+Thus:
 
-KONEX được thiết lập năm 2013 để hỗ trợ SMEs ở giai đoạn sớm tiếp cận direct financing khi KOSDAQ có thể quá xa với họ. Đây là mắt xích cho thấy capital market được thiết kế thành nhiều tầng thay vì một market duy nhất.
+```text
+Secondary liquidity
+      ↓
+Lower investor liquidity premium
+      ↓
+Easier primary fundraising
+```
 
-## Primary vs secondary market
+## KOSPI: market và index không phải cùng concept
 
-Khi công ty IPO hoặc phát hành thêm cổ phần, vốn đi từ investor vào company ở **primary market / 발행시장**. Khi investor A bán cổ phiếu cho investor B trên exchange, đó là **secondary market / 유통시장**; company thường không nhận tiền trực tiếp.
+**KOSPI Market / 유가증권시장** is the main board of Korea Exchange and includes many established large corporations.
 
-Secondary liquidity vẫn quan trọng vì investor sẵn sàng mua primary issuance hơn nếu biết sau này có thể exit.
+**KOSPI Index** is a market-capitalization-based index representing listed equities on that market according to index methodology.
 
-## Valuation multiples
+In daily speech both are called “KOSPI”, but analytical distinction matters.
 
-P/E:
+When someone says “KOSPI rose 2%”, they refer to index, not every company.
 
-\[
-P/E=\frac{Price}{Earnings\ per\ Share}
-\]
+## KOSDAQ: growth/technology market
 
-P/B:
+KOSDAQ launched to provide public-market access for growth companies, SMEs and technology-oriented firms.
 
-\[
-P/B=\frac{Market\ Cap}{Book\ Equity}
-\]
+Its sector mix and risk profile differ from KOSPI, often with more biotech, IT, components and growth businesses.
 
-EV/EBITDA dùng enterprise value để neutralize phần nào capital structure. Không có multiple nào “đúng” cho mọi ngành. Bank thường được đọc khác software; shipbuilder khác consumer platform.
+But `KOSPI = large` and `KOSDAQ = small` is too crude. A large KOSDAQ company can exceed many KOSPI companies in market cap.
 
-## Foreign investors, institutions và individuals
+Peer comparison should follow **business economics**, not exchange label.
 
-Korean market thường theo dõi flows của **개인 (retail individuals)**, **기관 (domestic institutions)** và **외국인 (foreign investors)**. Flow có thể ảnh hưởng short-term price nhưng không thay thế business analysis. Net buying hôm nay không phải thesis.
+## KONEX: lower rung of public-market ladder
 
-## Corporate actions
+KONEX was designed to support smaller/earlier-stage SMEs accessing direct finance before they are ready for KOSDAQ scale and requirements.
 
-Dividend, buyback, rights issue, bonus issue, stock split và convertible securities thay đổi cash hoặc ownership claims. Rights issue có thể tốt nếu capital funding tạo ROIC cao, hoặc destructive nếu liên tục bù cash burn. Context quyết định.
+The three-market architecture shows capital market as a **graduated financing system** rather than a single exchange.
 
-## Lịch sử thị trường vốn: từ bank-dominated sang market finance
+However, smaller markets generally face lower liquidity. A quoted price in illiquid market may not support large trade without significant price impact.
 
-Trong giai đoạn industrialization đầu, bank credit có vai trò áp đảo. Sau liberalization và đặc biệt sau 1997, equity/bond markets trở nên quan trọng hơn trong market discipline. Đây là institutional shift: company không chỉ “xin vốn ngân hàng” mà phải thuyết phục distributed investors.
-
-Market price vì vậy trở thành information signal và governance pressure, dù không phải lúc nào cũng phản ánh intrinsic value chính xác.
-
-## KOSPI và KOSDAQ không đơn giản là “lớn vs nhỏ”
-
-KOSPI thường chứa established large companies, nhưng listing market còn phản ánh history và listing requirements. KOSDAQ được thiết kế cho growth/technology firms và có sector composition khác. Một KOSDAQ company có thể lớn hơn nhiều KOSPI firms.
-
-Do đó valuation comparison nên dùng peers theo business economics, không chỉ cùng exchange.
-
-## Market cap, enterprise value và free float
-
-Market capitalization = share price × total shares outstanding. Nhưng để so operating business, enterprise value thường hữu ích hơn:
+## Market capitalization: equity value, not company cash
 
 \[
-EV = Market\ Cap + Net\ Debt + Preferred/Minority\ Adjustments
+Market\ Capitalization = Share\ Price \times Shares\ Outstanding
 \]
 
-Nếu company có net cash lớn, P/E và EV/EBITDA có thể cho signal khác nhau.
+If a stock trades at 100,000 KRW, it is not automatically “expensive” relative to a 10,000 KRW stock. Shares outstanding can differ by 100×.
 
-Free float lại ảnh hưởng liquidity. Family/group có stake lớn có thể làm tradable shares ít hơn total shares, khiến price volatility và index weight dynamics khác.
+Market cap is current market value of equity claim.
 
-## Foreign ownership và FX channel
+It is not:
 
-Korean equities có participation lớn từ foreign investors. Khi global risk-off xảy ra, foreign selling có thể đi cùng KRW weakness. Đây không nhất thiết là causal one-way; capital flow và FX reinforce each other.
+- revenue;
+- cash balance;
+- enterprise value;
+- amount company received at IPO.
 
-Với exporter, weaker KRW có thể hỗ trợ earnings đồng thời stock bị foreign selling. Vì vậy macro effect lên business và market price có thể trái dấu trong ngắn hạn.
+## Enterprise Value: value of operating enterprise across capital claims
 
-## IPO economics
+A simplified form:
 
-IPO vừa raise capital vừa tạo liquidity cho existing holders. Nhưng analyst cần đọc use of proceeds: capex, debt repayment hay secondary sale cho old shareholders? Hai IPO cùng valuation nhưng capital actually entering company có thể rất khác.
+\[
+EV \approx Market\ Cap + Debt - Cash + Other\ Claims
+\]
 
-Lock-up expiration và overhang cũng ảnh hưởng post-IPO supply.
+Depending on purpose, adjust for preferred shares, NCI, leases or pension obligations.
 
-## Buyback và treasury shares
+EV is useful when comparing operating assets independent of how financed.
 
-Share repurchase chỉ tạo shareholder value rõ khi shares được cancel hoặc use hợp lý. Treasury-share treatment và governance đã là chủ đề quan trọng trong Korea vì shares repurchased nhưng không canceled có thể được sử dụng trong restructuring. Vì vậy “mua cổ phiếu quỹ” không nên tự động diễn giải như US-style buyback yield.
+Two companies can have same market cap but very different debt; EV exposes this difference.
 
-## Mental Model
+## Free float and liquidity
 
-> Stock market là cơ chế biến future cash-flow expectations thành price hôm nay. Price không chỉ phản ánh “company tốt hay xấu” mà phản ánh company **so với expectation đã nằm trong giá**.
+Not every outstanding share trades freely.
 
-## Common misconceptions
+Controlling shareholders, strategic holders, treasury shares or lock-ups may reduce **free float / 유통가능주식**.
 
-Giá cổ phiếu 10.000 KRW không “rẻ” hơn cổ phiếu 100.000 KRW. Cần shares outstanding và earnings/assets.
+Low free float can cause:
 
-KOSPI tăng không nghĩa mọi KOSPI company tăng; cap-weighted index có thể bị các mega caps chi phối.
+- larger price movements;
+- wider spread;
+- lower institutional capacity;
+- index-weight effects;
+- difficulty selling large blocks.
 
-## Sources & connections
+Market cap therefore overstates immediately liquid equity value for a large shareholder.
 
-Nguồn: Korea Exchange (KRX) về KOSPI, KOSDAQ, KONEX và market infrastructure.
+## Price discovery: market processes information imperfectly
 
-Xem [09_disclosure_accounting_dart_kind](./09_disclosure_accounting_dart_kind.md), [11_banks_finance_and_corporate_funding](./11_banks_finance_and_corporate_funding.md) và [07_startups_venture_and_scaleups](./07_startups_venture_and_scaleups.md).
-### Nguồn kiểm tra hiện hành
+Stock price aggregates heterogeneous expectations from thousands of participants.
 
-- KRX KOSPI overview: https://global.krx.co.kr/contents/GLB/02/0201/0201010100/GLB0201010100.jsp
-- KRX KOSDAQ overview: https://global.krx.co.kr/contents/GLB/02/0201/0201010301/GLB0201010301.jsp
-- KRX KONEX overview: https://global.krx.co.kr/contents/GLB/02/0201/0201010304/GLB0201010304T1.jsp
+New information can change:
 
+- expected cash flows;
+- discount rate;
+- perceived risk;
+- probability of scenarios.
 
-## Index không phải “average company”
+This is **price discovery / 가격발견**.
 
-KOSPI index weighted theo market capitalization, nên largest companies ảnh hưởng index nhiều. Index tăng mạnh có thể xảy ra khi semiconductor giants tăng dù median stock flat.
+But price is not always “correct”. Information can be incomplete, participants behavioral and liquidity constrained.
 
-Khi dùng index để infer economy, cần biết sector concentration.
+Practical lesson: treat price as **evidence of market expectation**, not oracle.
 
-## Price discovery và liquidity
+## Order book, bid–ask spread and market depth
 
-Market liquidity là ability trade size mà không move price quá nhiều. Bid-ask spread, depth và turnover matter.
+A quoted last price tells little about liquidity.
 
-Illiquid small-cap có quoted market cap nhưng selling large stake có thể realize price thấp hơn screen price.
+**Bid–ask spread** is gap between highest buyer bid and lowest seller ask.
 
-## PER, PBR và ROE connection
+**Depth** is how much volume exists at nearby prices.
 
-PBR không nên đọc isolated. Simplified Gordon framework cho thấy P/B liên hệ ROE, growth và required return:
+A liquid large-cap may absorb large order with small impact; illiquid small-cap may move several percent from modest order.
+
+This matters especially for small KOSDAQ/KONEX names.
+
+## Index is not “average company”
+
+Market-cap-weighted index gives larger companies much more influence.
+
+A semiconductor mega-cap rally can lift KOSPI even if majority of stocks are flat or down.
+
+Thus index performance, median stock performance and domestic economy can diverge.
+
+When using index as macro signal, inspect sector composition.
+
+## KOSPI/KOSDAQ index movement vs company fundamentals
+
+Company stock can fall on a day when its business outlook unchanged simply because:
+
+- global risk-off;
+- ETF outflow;
+- index rebalancing;
+- FX-driven foreign selling;
+- derivatives hedging.
+
+Short-term price movement therefore should not be reverse-engineered into fake fundamental story.
+
+Separate **market-flow cause** from **business-economics cause**.
+
+## Foreign investors and KRW channel
+
+Foreign investors play major role in Korean market.
+
+When global risk appetite falls, foreign selling can coincide with KRW weakness. Mechanism can reinforce itself through capital flows and hedging, though causality is not one-way.
+
+Interesting paradox: exporter fundamentals may benefit from weaker KRW while share price falls because foreign capital exits.
+
+Business effect and market-flow effect can have opposite signs.
+
+This is why macro-to-stock reasoning needs more than one arrow.
+
+## Individuals, institutions and foreign flows
+
+Korean market commentary often classifies flows into:
+
+- 개인 — retail individuals;
+- 기관 — domestic institutions;
+- 외국인 — foreign investors.
+
+Flow data can explain short-term positioning, but it is not fundamental thesis.
+
+“Foreigners bought today” says nothing about long-term value unless you understand reason, horizon and company economics.
+
+## IPO: fundraising + liquidity + governance transition
+
+Initial Public Offering turns previously private shares into publicly traded securities and may raise new capital.
+
+Important distinction:
+
+**Primary shares** → cash goes to company.
+
+**Secondary shares** → existing shareholder sells; cash goes to seller.
+
+Two IPOs with same headline offer size can therefore inject very different cash into company.
+
+Always read **use of proceeds**.
+
+Common uses:
+
+- CAPEX;
+- debt repayment;
+- R&D;
+- acquisition;
+- working capital.
+
+Use determines whether dilution can create future value.
+
+## Lock-up and overhang
+
+Early investors/founders may be subject to lock-up periods. When lock-up expires, potential supply enters market.
+
+This is **overhang / 잠재매물**.
+
+Overhang does not mean holders will certainly sell, but it changes supply possibility and market expectation.
+
+Post-IPO analysis should distinguish business execution from temporary share-supply dynamics.
+
+## Rights issue and capital increase
+
+New share issuance raises capital but dilutes existing percentage ownership if investors do not participate.
+
+Dilution is not automatically bad.
+
+If new capital earns high return:
+
+\[
+ROIC_{new} > Cost\ of\ Capital
+\]
+
+total value can increase enough to offset dilution.
+
+If company repeatedly issues shares to cover recurring losses with no path to positive economics, quality differs.
+
+Question is **what return will new capital earn?**
+
+## Bonus issue and stock split: units change, business value does not automatically
+
+Stock split increases share count and reduces price per share proportionally, absent market reaction.
+
+A 10:1 split does not make company economically cheaper.
+
+Bonus share issuance can change share units/accounting presentation but does not itself create operating cash flow.
+
+Always normalize per-share data across corporate actions.
+
+## Convertible bonds and dilution optionality
+
+Convertible bond is debt with option to convert into equity under terms.
+
+For investor, it combines downside characteristics of bond with equity upside.
+
+For existing shareholders, conversion can create dilution.
+
+Headline debt ratio may understate future share-count risk if many convertibles outstanding.
+
+Company analysis should track **fully diluted share count** where material.
+
+## Dividend: cash return and total return
+
+Dividend transfers cash from company to shareholders.
+
+On ex-dividend date, share price can mechanically adjust because claim to dividend has separated.
+
+Long-run performance should use **total return**:
+
+\[
+Total\ Return = Price\ Change + Dividends
+\]
+
+Comparing only price can misjudge high-dividend businesses.
+
+## Buyback and cancellation
+
+Share repurchase can return capital, but economic result depends on what happens afterward.
+
+If repurchased shares are cancelled, share count falls and remaining holders own larger percentage.
+
+If held as treasury shares, later use can include compensation or corporate transactions.
+
+Therefore analyst should ask:
+
+- how much was repurchased?
+- at what valuation?
+- cancelled or retained?
+- funded from excess cash or new debt?
+- does company have better high-ROIC uses for cash?
+
+Buyback is capital allocation, not automatically virtue.
+
+## P/E: price relative to earnings
+
+\[
+P/E = \frac{Market\ Cap}{Net\ Income\ attributable\ to\ Common\ Shareholders}
+\]
+
+or per share:
+
+\[
+P/E = \frac{Price}{EPS}
+\]
+
+Low P/E can mean undervaluation — or peak cyclical earnings about to fall.
+
+In memory, chemicals, steel or shipping, P/E often looks lowest near cycle top because denominator earnings are abnormally high.
+
+Normalize earnings before conclusion.
+
+## P/B and ROE connection
+
+\[
+P/B = \frac{Market\ Cap}{Book\ Equity}
+\]
+
+A simplified steady-state framework:
 
 \[
 P/B \approx \frac{ROE-g}{r-g}
 \]
 
-Không phải valuation formula exact, nhưng giải thích vì sao low PBR có thể rational nếu ROE thấp hoặc governance/capital allocation poor.
+This is not exact valuation formula for every company, but shows key intuition: low P/B can be rational when ROE low, growth weak or required return high.
 
-## Ex-dividend và total return
+Therefore “below book = cheap” is not sufficient.
 
-Stock price drop on ex-dividend date không nhất thiết investor “mất tiền”; một phần value chuyển thành cash dividend. Performance nên dùng total return khi so dài hạn.
+Book value only creates economic value if assets earn adequate return.
 
-## Rights issue và dilution
+## EV/EBITDA: useful but dangerous in capital-intensive sectors
 
-New shares raise capital nhưng dilute existing holders nếu họ không participate. Nếu capital invested at high ROIC, dilution có thể still value-accretive; nếu dùng để cover recurring losses, quality khác.
+EV/EBITDA partially neutralizes debt structure and non-cash depreciation.
 
-## Derivatives và hedging
+But in businesses requiring huge recurring CAPEX, depreciation represents real economic capital consumption.
 
-Futures/options trên KOSPI indices cho phép hedge/express risk. Derivatives không inherently speculative; same instrument có thể reduce or increase exposure tùy position.
+Two semiconductor firms with same EV/EBITDA but different future replacement CAPEX may not be equally cheap.
 
-Institutional flow qua derivatives có thể affect spot market short-term, nhưng company intrinsic cash flow không đổi vì futures volume alone.
+Use multiple together with business economics.
+
+## Financial companies require different valuation logic
+
+Banks and insurers are different because debt/deposits are part of operating model, not just financing choice.
+
+P/B, ROE, credit quality and capital adequacy often matter more than EV/EBITDA.
+
+Do not force industrial-company EV framework onto banks.
+
+## Growth company: multiple is expectation package
+
+A high multiple embeds assumptions about future growth, margins and reinvestment.
+
+A stock can fall after good earnings if result is below embedded expectation.
+
+Therefore investment question is not:
+
+> “Is company growing?”
+
+but:
+
+> “Is future reality likely better or worse than what current price already assumes?”
+
+This is expectation investing.
+
+## Required return and discount rate
+
+Equity value is present value of future owner cash flows:
+
+\[
+Value = \sum_{t=1}^{n}\frac{Expected\ Cash\ Flow_t}{(1+r)^t}
+\]
+
+`r` rises with interest rate, business risk, financial leverage and perceived governance risk.
+
+Thus same cash-flow forecast can have lower present value when rates/risk premium rise.
+
+This explains why high-duration growth stocks can be rate-sensitive even before earnings change.
+
+## Short selling: mechanism, not moral category
+
+Short seller borrows shares, sells them and later must repurchase to return.
+
+Profit if price falls; loss if price rises.
+
+Shorting can contribute price discovery and hedging, but leverage and squeeze risk are high.
+
+Regulatory rules can change; always check current KRX/FSC framework before operational decisions.
+
+## Futures and options
+
+Derivatives can hedge or increase risk.
+
+Institution holding Korean equities may short KOSPI futures to reduce market beta while keeping company exposure.
+
+Same instrument used by speculator can increase leverage.
+
+Therefore derivative itself is neither “safe” nor “dangerous”; position structure determines exposure.
+
+## ETF and index flows
+
+Index-linked funds buy/sell according to index membership and weights.
+
+When company enters or exits an index, mechanical flows can move share price independently of fundamental information.
+
+This is another reason price movement does not always imply business change.
+
+## Market discipline after 1997
+
+Historically, Korean industrial finance was bank-dominated. Liberalization and post-1997 reforms increased role of public equity and bond markets.
+
+This changed firm behavior:
+
+- disclosure matters more;
+- investor relations matters;
+- credit rating and valuation matter;
+- capital allocation receives external scrutiny;
+- ownership/control structures become more visible.
+
+Capital markets therefore are institutional layer of corporate governance, not only trading venue.
+
+## How to analyze a Korean listed company in market context
+
+1. Understand business and normalize earnings first.
+2. Calculate current market cap and enterprise value.
+3. Check share count, convertibles and dilution.
+4. Review free float and controlling stake.
+5. Choose valuation metrics appropriate to industry.
+6. Compare with historical range and true peers.
+7. Identify what expectations current price implies.
+8. Separate company fundamentals from market/flow effects.
+9. Include dividends/buybacks in total shareholder return.
+10. Stress test valuation under different earnings and required-return scenarios.
+
+## Mental Model
+
+> Capital market converts **savings → ownership claims → price → capital allocation signal**. Company generates cash flow; market prices the probability and timing of those future cash flows. Good analysis keeps these two layers connected but never confuses them.
+
+## Common misconceptions
+
+Low share price does not mean cheap stock.
+
+Low P/E does not always mean undervalued; cyclical peak can make denominator temporarily huge.
+
+Low P/B does not automatically mean bargain if assets earn poor ROE.
+
+IPO offer size is not equal to cash entering company.
+
+Index rally is not average-company rally.
+
+Buyback is not automatically value creation.
+
+Foreign net buying is not an investment thesis.
+
+Derivative volume is not direct evidence company fundamentals changed.
+
+## Connections
+
+Read [09_disclosure_accounting_dart_kind](./09_disclosure_accounting_dart_kind.md) before valuation, [11_banks_finance_and_corporate_funding](./11_banks_finance_and_corporate_funding.md) for debt/bond funding, [07_startups_venture_and_scaleups](./07_startups_venture_and_scaleups.md) for venture-to-IPO transition and [20_how_to_analyze_a_korean_company](./20_how_to_analyze_a_korean_company.md) for complete workflow.
+
+### Nguồn thực hành
+
+- Korea Exchange KOSPI/KOSDAQ/KONEX market information and listing infrastructure.
+- DART/KIND for company-specific securities and corporate-action filings.
