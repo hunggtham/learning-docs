@@ -1,134 +1,134 @@
-# Playbook thị trường Hàn Quốc
+# Cẩm nang phân tích thị trường Hàn Quốc
 
-> Hàn Quốc là thị trường cổ phiếu phát triển với mức độ kết nối rất cao với xuất khẩu, bán dẫn, USD và dòng vốn toàn cầu. Mục tiêu của playbook này là giúp người đọc phân tích **Korea market như một hệ thống**, không chỉ theo dõi KOSPI hay Samsung Electronics.
+> Hàn Quốc là thị trường cổ phiếu phát triển có mức kết nối rất cao với xuất khẩu, bán dẫn, USD và dòng vốn toàn cầu. Mục tiêu của tài liệu này là giúp người đọc phân tích **thị trường Hàn Quốc như một hệ thống**, không chỉ theo dõi KOSPI hay Samsung Electronics. Phần giải thích dùng tiếng Việt; thuật ngữ tiếng Anh chỉ giữ trong ngoặc hoặc dưới dạng tên chỉ số và viết tắt chuẩn.
 
-> Các quy định giao dịch, short-selling, settlement, thuế, market hours và thành phần chỉ số là dữ liệu động; khi dùng để giao dịch thật phải kiểm tra từ KRX, FSC/FSS, BOK hoặc nguồn chính thức tương ứng.
+> **Dữ liệu động:** quy định bán khống, chu kỳ thanh toán, thuế, giờ giao dịch, thành phần chỉ số và quy tắc sản phẩm có thể thay đổi. Khi áp dụng thực tế phải kiểm tra KRX, FSC/FSS, BOK hoặc nguồn chính thức tương ứng.
 
 # Phần I — Cấu trúc thị trường
 
 ## 1. KRX, KOSPI và KOSDAQ
 
-KRX vận hành nhiều thị trường, trong đó KOSPI tập trung nhiều large-cap và KOSDAQ có tỷ trọng growth/small-mid cap cao hơn.
+KRX vận hành nhiều thị trường. KOSPI tập trung nhiều doanh nghiệp vốn hóa lớn, còn KOSDAQ có tỷ trọng doanh nghiệp tăng trưởng và vốn hóa nhỏ–trung bình cao hơn.
 
-Do đó cùng một cú sốc real yield có thể tác động KOSDAQ mạnh hơn nếu thị trường đang tập trung nhiều cổ phiếu duration dài.
+Do đó cùng một cú sốc lợi suất thực có thể tác động KOSDAQ mạnh hơn nếu chỉ số đang chứa nhiều cổ phiếu có dòng tiền xa trong tương lai.
 
 ## 2. KOSPI 200
 
-KOSPI 200 là benchmark quan trọng cho futures, options và nhiều ETF.
+KOSPI 200 là chỉ số tham chiếu quan trọng cho hợp đồng tương lai, quyền chọn và nhiều ETF.
 
-Dòng tiền index có thể tạo volume kỹ thuật quanh:
+Dòng tiền bám chỉ số có thể tạo khối lượng kỹ thuật lớn quanh:
 
-- rebalance;
-- expiry;
-- closing auction;
-- passive fund flow.
+- tái cân bằng;
+- ngày đáo hạn phái sinh;
+- đấu giá đóng cửa;
+- dòng tiền quỹ thụ động.
 
-## 3. Index concentration
+## 3. Rủi ro tập trung chỉ số
 
-Chỉ số Hàn Quốc có thể bị ảnh hưởng lớn bởi một số doanh nghiệp trọng số cao.
+Chỉ số Hàn Quốc có thể bị ảnh hưởng mạnh bởi một số doanh nghiệp trọng số cao.
 
-Do đó luôn so:
+Nên so đồng thời:
 
 ```text
-Index Return
+Lợi suất chỉ số
 vs
-Market Breadth
+Độ rộng thị trường
 vs
-Sector Breadth
+Độ rộng theo ngành
 ```
+
+Chỉ số tăng không đồng nghĩa cổ phiếu trung vị hoặc đa số ngành cùng tăng.
 
 # Phần II — Nền kinh tế xuất khẩu
 
-## 4. Export cycle
+## 4. Chu kỳ xuất khẩu
 
-Hàn Quốc phụ thuộc lớn vào thương mại toàn cầu.
+Hàn Quốc phụ thuộc lớn vào thương mại toàn cầu. Các nhóm quan trọng gồm:
 
-Các nhóm quan trọng:
+- bán dẫn;
+- ô tô;
+- máy móc;
+- hóa dầu;
+- đóng tàu;
+- pin.
 
-- semiconductors;
-- autos;
-- machinery;
-- petrochemicals;
-- ships;
-- batteries.
+## 5. Giá trị xuất khẩu phải tách giá và lượng
 
-## 5. Export value phải tách price và volume
+Xuất khẩu tăng vì ASP bán dẫn phục hồi khác với tăng vì nhu cầu đơn vị thực sự tăng.
 
-Xuất khẩu tăng vì ASP bán dẫn phục hồi khác với tăng vì unit demand tăng.
-
-Một chuỗi tốt:
+Một chuỗi phân tích tốt:
 
 ```text
-Export Value
-→ Price Effect
-+ Volume Effect
-+ Product Mix
-+ FX Translation
+Giá trị xuất khẩu
+→ Ảnh hưởng giá
++ Ảnh hưởng sản lượng
++ Cơ cấu sản phẩm
++ Ảnh hưởng tỷ giá
 ```
 
-## 6. China exposure
+## 6. Mức phơi nhiễm với Trung Quốc
 
-China ảnh hưởng Korea qua:
+Trung Quốc ảnh hưởng Hàn Quốc qua:
 
-- electronics demand;
-- intermediate goods;
-- chemicals;
-- machinery;
-- tourism;
-- supply chain.
+- nhu cầu điện tử;
+- hàng trung gian;
+- hóa chất;
+- máy móc;
+- du lịch;
+- chuỗi cung ứng.
 
-China stimulus dành cho property khác stimulus dành cho advanced manufacturing; tác động tới Korea khác nhau.
+Kích thích bất động sản khác kích thích sản xuất công nghệ cao; tác động tới Hàn Quốc vì vậy không giống nhau.
 
 # Phần III — Bán dẫn
 
-## 7. Memory cycle
+## 7. Chu kỳ bộ nhớ
 
-Memory nên được đọc qua:
+Bộ nhớ nên được đọc theo chuỗi:
 
 ```text
-End Demand
-→ Customer Inventory
-→ Producer Inventory
+Nhu cầu cuối
+→ Tồn kho khách hàng
+→ Tồn kho nhà sản xuất
 → ASP
-→ Utilization
-→ Margin
-→ Capex
+→ Tỷ lệ sử dụng công suất
+→ Biên lợi nhuận
+→ Chi tiêu vốn
 ```
 
 ## 8. HBM và AI
 
-HBM có economics khác commodity DRAM vì qualification, packaging và yield phức tạp hơn.
+HBM có kinh tế khác DRAM hàng hóa vì quy trình xác nhận, đóng gói và tỷ lệ thành phẩm phức tạp hơn.
 
 Các biến quan trọng:
 
-- hyperscaler capex;
-- accelerator demand;
-- HBM content;
-- customer qualification;
-- product mix;
-- supply discipline.
+- chi tiêu vốn của hyperscaler;
+- nhu cầu bộ tăng tốc;
+- hàm lượng HBM trên mỗi hệ thống;
+- xác nhận của khách hàng;
+- cơ cấu sản phẩm;
+- kỷ luật nguồn cung.
 
-## 9. Equipment và materials
+## 9. Thiết bị và vật liệu
 
-Equipment thường nhạy với capex kế hoạch.
+Doanh nghiệp thiết bị thường nhạy với kế hoạch chi tiêu vốn của nhà sản xuất chip.
 
-Materials/chemicals thường nhạy hơn với wafer starts và utilization.
+Doanh nghiệp vật liệu và hóa chất thường nhạy hơn với số wafer đưa vào sản xuất và tỷ lệ sử dụng công suất.
 
-Do đó cùng một semiconductor upcycle không giúp mọi supplier ở cùng thời điểm.
+Vì vậy cùng một chu kỳ tăng không giúp mọi nhà cung cấp ở cùng thời điểm.
 
-## 10. Earnings revisions
+## 10. Điều chỉnh dự báo lợi nhuận
 
-Stock thường phản ứng với revision trước reported EPS.
+Giá cổ phiếu thường phản ứng với **điều chỉnh dự báo (earnings revisions)** trước lợi nhuận báo cáo.
 
 Theo dõi:
 
 ```text
 ASP
-Orders
-Inventory
-Margin Guidance
-Consensus EPS Revision
-Revision Breadth
+Đơn hàng
+Tồn kho
+Hướng dẫn biên lợi nhuận
+Điều chỉnh EPS đồng thuận
+Độ rộng điều chỉnh dự báo
 ```
 
 # Phần IV — KRW
@@ -138,125 +138,118 @@ Revision Breadth
 USD/KRW chịu ảnh hưởng bởi:
 
 ```text
-Fed / US Yields
+Fed / lợi suất Mỹ
 BOK
-Exports
-Oil
-China
-Foreign Equity Flow
-Global Risk Appetite
+Xuất khẩu
+Dầu
+Trung Quốc
+Dòng vốn cổ phiếu nước ngoài
+Khẩu vị rủi ro toàn cầu
 ```
 
-## 12. KRW yếu và exporters
+## 12. KRW yếu và doanh nghiệp xuất khẩu
 
-KRW yếu có thể tăng translated revenue nhưng đồng thời:
+KRW yếu có thể làm doanh thu quy đổi tăng nhưng đồng thời:
 
-- input nhập khẩu đắt hơn;
-- capex ngoại tệ đắt hơn;
-- foreign flow yếu hơn;
-- global demand có thể đang xấu.
+- đầu vào nhập khẩu đắt hơn;
+- chi tiêu vốn ngoại tệ đắt hơn;
+- dòng vốn nước ngoài có thể yếu;
+- nhu cầu toàn cầu có thể đang xấu.
 
-Vì vậy không dùng khẩu quyết `KRW yếu = exporter tốt`.
+Vì vậy không dùng khẩu quyết “KRW yếu = doanh nghiệp xuất khẩu tốt”.
 
-## 13. Currency map doanh nghiệp
+## 13. Bản đồ tiền tệ của doanh nghiệp
 
-Với từng công ty, lập:
+Với từng doanh nghiệp, lập:
 
 ```text
-Revenue Currency
-Cost Currency
-Debt Currency
-Capex Currency
-Hedge Policy
+Đồng tiền doanh thu
+Đồng tiền chi phí
+Đồng tiền nợ
+Đồng tiền chi tiêu vốn
+Chính sách phòng vệ
 ```
 
-# Phần V — BOK và rates
+# Phần V — BOK và lãi suất
 
-## 14. BOK reaction function
+## 14. Hàm phản ứng của BOK
 
 BOK phải cân bằng:
 
-- inflation;
-- growth;
-- housing;
-- household debt;
-- financial stability;
+- lạm phát;
+- tăng trưởng;
+- nhà ở;
+- nợ hộ gia đình;
+- ổn định tài chính;
 - KRW.
 
-## 15. Policy rate và market rate
+**Hàm phản ứng (reaction function)** là cách BOK cân trọng số các mục tiêu này khi dữ liệu thay đổi.
 
-Doanh nghiệp và hộ gia đình chịu ảnh hưởng của market borrowing rate chứ không chỉ base rate.
+## 15. Lãi suất chính sách và lãi suất thị trường
 
-Theo dõi cả:
+Doanh nghiệp và hộ gia đình chịu ảnh hưởng của lãi vay thị trường chứ không chỉ lãi suất cơ bản.
 
-- government yields;
-- bank funding;
-- mortgage rates;
-- corporate spreads.
+Theo dõi:
 
-## 16. Household debt
+- lợi suất trái phiếu chính phủ;
+- chi phí nguồn vốn ngân hàng;
+- lãi suất thế chấp;
+- chênh lệch tín dụng doanh nghiệp.
 
-Household leverage làm consumption và housing nhạy hơn với refinancing cost.
+## 16. Nợ hộ gia đình
 
-Tác động có độ trễ tùy fixed/floating structure.
+Đòn bẩy hộ gia đình làm tiêu dùng và nhà ở nhạy hơn với chi phí tái cấp vốn. Tác động có độ trễ tùy cơ cấu lãi suất cố định hay thả nổi.
 
-# Phần VI — Real estate PF và credit
+# Phần VI — Tài trợ dự án bất động sản và tín dụng
 
-## 17. Project finance
+## 17. Tài trợ dự án
 
-Real-estate project finance (PF) có thể tạo risk cho developers, securities firms, savings banks hoặc lenders khác.
+**Tài trợ dự án bất động sản (project finance, PF)** có thể tạo rủi ro cho nhà phát triển, công ty chứng khoán, ngân hàng tiết kiệm và bên cho vay khác.
 
 Cần xem:
 
 ```text
-Project Cash Flow
-Collateral
-Guarantees
-Refinancing
-Pre-sales
-Completion Risk
+Dòng tiền dự án
+Tài sản bảo đảm
+Bảo lãnh
+Khả năng tái cấp vốn
+Bán trước
+Rủi ro hoàn thành
 ```
 
-## 18. Credit transmission
+## 18. Cơ chế truyền dẫn tín dụng
 
 ```text
-Funding Cost ↑
-→ PF Refinancing khó hơn
-→ Construction / Developer Stress
-→ Lender Provision ↑
+Chi phí nguồn vốn ↑
+→ tái cấp vốn PF khó hơn
+→ nhà phát triển / xây dựng căng thẳng
+→ dự phòng của bên cho vay ↑
 ```
 
-Đây là một kênh domestic có thể tồn tại ngay cả khi export cycle tốt.
+Đây là một kênh nội địa có thể yếu ngay cả khi xuất khẩu đang tốt.
 
-# Phần VII — Autos và EV
+# Phần VII — Ô tô và xe điện
 
-## 19. Auto drivers
+## 19. Động lực ngành ô tô
 
 Các biến chính:
 
-- global unit demand;
-- pricing;
-- incentives;
-- mix;
-- FX;
-- inventory;
-- warranty;
-- financing.
+- nhu cầu xe toàn cầu;
+- giá bán;
+- ưu đãi bán hàng;
+- cơ cấu sản phẩm;
+- tỷ giá;
+- tồn kho;
+- chi phí bảo hành;
+- điều kiện tài trợ mua xe.
 
-## 20. EV transition
+## 20. Chuyển dịch sang xe điện
 
-EV không chỉ là unit growth. Cần xem:
+Xe điện không chỉ là tăng sản lượng. Cần xem chi phí pin, trợ cấp, hạ tầng sạc, tốc độ chấp nhận của người dùng, giá trị xe cũ và mức cạnh tranh.
 
-- battery cost;
-- subsidies;
-- charging infrastructure;
-- consumer adoption;
-- residual values;
-- competition.
+# Phần VIII — Pin
 
-# Phần VIII — Batteries
-
-## 21. Battery value chain
+## 21. Chuỗi giá trị pin
 
 ```text
 Lithium / Nickel
@@ -266,251 +259,245 @@ Lithium / Nickel
 → EV / ESS
 ```
 
-Mỗi tầng có pricing power và capital intensity khác nhau.
+Mỗi tầng có quyền định giá và cường độ vốn khác nhau.
 
-## 22. Utilization và overcapacity
+## 22. Tỷ lệ sử dụng công suất và dư cung
 
-Capacity expansion quá nhanh có thể làm utilization giảm và phá margin dù end demand vẫn tăng.
+Mở rộng công suất quá nhanh có thể làm tỷ lệ sử dụng giảm và biên lợi nhuận xấu đi dù nhu cầu cuối vẫn tăng.
 
-Đây là lý do growth industry không tự động là good investment.
+Đây là lý do một ngành tăng trưởng nhanh không tự động là khoản đầu tư tốt.
 
-# Phần IX — Shipbuilding và industrials
+# Phần IX — Đóng tàu và công nghiệp
 
-## 23. Shipbuilding
+## 23. Đóng tàu
 
 Theo dõi:
 
-- orderbook;
-- newbuild prices;
-- steel cost;
-- labor;
-- FX;
-- delivery schedule;
-- mix LNG/carrier/container/defense.
+- sổ đơn hàng;
+- giá tàu mới;
+- chi phí thép;
+- lao động;
+- tỷ giá;
+- lịch giao hàng;
+- cơ cấu LNG, container, quốc phòng.
 
-Backlog lớn cần được đánh giá cùng margin của contract đã ký.
+Sổ đơn hàng lớn phải được đánh giá cùng biên lợi nhuận của hợp đồng đã ký.
 
-## 24. Defense và industrials
+## 24. Quốc phòng và công nghiệp
 
-Export order và government budgets có thể tạo backlog dài nhưng cần kiểm tra execution, working capital và recognition timing.
+Đơn hàng xuất khẩu và ngân sách chính phủ có thể tạo sổ đơn hàng dài, nhưng phải kiểm tra khả năng thực thi, vốn lưu động và thời điểm ghi nhận doanh thu.
 
-# Phần X — Financials
+# Phần X — Tài chính
 
-## 25. Banks
+## 25. Ngân hàng
 
-KPI:
+Các chỉ số chính gồm:
 
 - NIM;
-- loan growth;
-- credit cost;
+- tăng trưởng tín dụng;
+- chi phí tín dụng;
 - NPL;
 - CET1;
-- shareholder return policy.
+- chính sách hoàn vốn cho cổ đông.
 
-## 26. Insurance
-
-Nhạy với:
-
-- long rates;
-- asset-liability duration;
-- underwriting;
-- capital regulation.
-
-## 27. Brokers
+## 26. Bảo hiểm
 
 Nhạy với:
 
-- turnover;
-- margin lending;
-- IB activity;
-- proprietary book;
-- PF exposure.
+- lãi suất dài hạn;
+- khớp kỳ hạn tài sản–nghĩa vụ;
+- chất lượng bảo hiểm gốc;
+- quy định vốn.
 
-# Phần XI — Platforms, gaming và biotech
+## 27. Công ty chứng khoán
 
-## 28. Internet platforms
+Nhạy với:
 
-Theo dõi user engagement, ad market, commerce take rate, payments và regulation.
+- giá trị giao dịch thị trường;
+- cho vay ký quỹ;
+- hoạt động ngân hàng đầu tư;
+- danh mục tự doanh;
+- mức phơi nhiễm PF.
 
-## 29. Gaming
+# Phần XI — Nền tảng số, trò chơi và công nghệ sinh học
 
-Game publisher phụ thuộc:
+## 28. Nền tảng internet
 
-- title pipeline;
-- user retention;
-- monetization;
-- development cost;
-- overseas regulation.
+Theo dõi mức độ sử dụng, thị trường quảng cáo, tỷ lệ thu phí giao dịch, thanh toán và quy định.
 
-## 30. Biotech
+## 29. Trò chơi
 
-Cần probability-adjusted analysis, cash runway, milestone và dilution thay vì P/E đơn giản.
+Nhà phát hành trò chơi phụ thuộc:
 
-# Phần XII — Refining, petrochemicals và utilities
+- danh mục sản phẩm mới;
+- duy trì người dùng;
+- khả năng kiếm tiền;
+- chi phí phát triển;
+- quy định ở thị trường nước ngoài.
 
-## 31. Refining
+## 30. Công nghệ sinh học
 
-Crack spread, utilization, oil inventory và product demand là các driver chính.
+Cần phân tích theo xác suất, thời gian tiền mặt còn đủ sử dụng, cột mốc phát triển và rủi ro pha loãng thay vì dùng P/E đơn giản.
 
-## 32. Petrochemicals
+# Phần XII — Lọc dầu, hóa dầu và tiện ích
 
-Product-feedstock spread và regional capacity addition quyết định cycle.
+## 31. Lọc dầu
 
-## 33. Utilities
+**Chênh lệch lọc dầu (crack spread)**, tỷ lệ sử dụng, tồn kho dầu và nhu cầu sản phẩm là các biến chính.
 
-Fuel cost, tariff policy, regulated returns và capex ảnh hưởng earnings.
+## 32. Hóa dầu
 
-# Phần XIII — Foreign flows
+Chênh lệch giữa giá sản phẩm và nguyên liệu cùng công suất mới trong khu vực quyết định chu kỳ.
 
-## 34. Foreign investor flow
+## 33. Tiện ích
 
-Foreign flow có thể phản ánh:
+Chi phí nhiên liệu, chính sách giá bán, mức lợi nhuận được điều tiết và chi tiêu vốn ảnh hưởng lợi nhuận.
 
-- global beta reduction;
-- passive allocation;
-- FX;
-- semiconductor view;
-- valuation.
+# Phần XIII — Dòng vốn nước ngoài
 
-Không mặc định foreign buying là fundamental signal tốt.
+## 34. Dòng vốn của nhà đầu tư nước ngoài
 
-## 35. FX-hedged flow
+Dòng vốn nước ngoài có thể phản ánh:
 
-Một foreign investor có thể mua equity nhưng hedge KRW, nên gross equity flow không mô tả toàn bộ currency demand.
+- giảm beta toàn cầu;
+- phân bổ thụ động;
+- tỷ giá;
+- quan điểm về bán dẫn;
+- định giá.
 
-# Phần XIV — ETF và derivatives
+Không mặc định mua ròng của nước ngoài là tín hiệu cơ bản tích cực.
 
-## 36. Korean-listed foreign ETF
+## 35. Dòng vốn có phòng vệ tiền tệ
 
-ETF niêm yết tại Korea bằng KRW vẫn có thể mang USD, JPY hoặc global equity exposure.
+Nhà đầu tư nước ngoài có thể mua cổ phiếu Hàn Quốc nhưng đồng thời phòng vệ KRW, vì vậy dòng mua cổ phiếu thô không mô tả đầy đủ nhu cầu tiền tệ.
 
-Cần kiểm tra hedge status và underlying.
+# Phần XIV — ETF và phái sinh
 
-## 37. Leveraged/inverse ETF
+## 36. ETF niêm yết tại Hàn Quốc nhưng đầu tư nước ngoài
 
-Daily reset tạo path dependency.
+ETF niêm yết bằng KRW vẫn có thể mang mức phơi nhiễm USD, JPY hoặc cổ phiếu toàn cầu. Cần kiểm tra trạng thái phòng vệ và tài sản cơ sở.
 
-Dùng cho exposure ngắn hạn khác với hold dài hạn.
+## 37. ETF đòn bẩy và nghịch đảo
 
-## 38. Futures và options
+Các quỹ này thường tái đặt mục tiêu hằng ngày nên kết quả nhiều ngày phụ thuộc đường đi của giá. Chúng phù hợp với quản lý phơi nhiễm ngắn hạn hơn là mặc định nắm dài hạn.
 
-Index derivatives ảnh hưởng price discovery và hedge flow, đặc biệt quanh expiry.
+## 38. Hợp đồng tương lai và quyền chọn
 
-# Phần XV — Valuation trong market chu kỳ
+Phái sinh chỉ số ảnh hưởng quá trình khám phá giá và dòng lệnh phòng vệ, đặc biệt quanh ngày đáo hạn.
 
-## 39. Không dùng P/E tại peak/trough một cách máy móc
+# Phần XV — Định giá trong ngành chu kỳ
 
-Semiconductor, shipbuilding, chemicals hoặc brokers có earnings rất chu kỳ.
+## 39. Không dùng P/E ở đỉnh hoặc đáy một cách máy móc
 
-Cần normalized earnings và cycle stage.
+Bán dẫn, đóng tàu, hóa chất và công ty chứng khoán có lợi nhuận chu kỳ mạnh. Cần dùng lợi nhuận chuẩn hóa và xác định giai đoạn chu kỳ.
 
-## 40. P/B và capital allocation
+## 40. P/B và phân bổ vốn
 
-P/B đặc biệt hữu ích với financials nhưng phải đọc cùng ROE và shareholder return.
+P/B đặc biệt hữu ích với doanh nghiệp tài chính nhưng phải đọc cùng ROE, chất lượng tài sản và chính sách hoàn vốn cho cổ đông.
 
-## 41. Governance discount
+## 41. Chiết khấu quản trị
 
-Cross-holdings, controlling shareholders và capital allocation history có thể ảnh hưởng mức multiple mà market sẵn sàng trả.
+**Chiết khấu quản trị (governance discount)** có thể xuất hiện khi sở hữu chéo, cổ đông kiểm soát hoặc lịch sử phân bổ vốn làm nhà đầu tư yêu cầu mức định giá thấp hơn.
 
-# Phần XVI — Event study
+# Phần XVI — Phân tích sự kiện
 
-## 42. Earnings event
+## 42. Báo cáo lợi nhuận
 
-Ghi:
+Ghi lại:
 
 ```text
-Reported vs Consensus
-Guidance
-Revision
-FX
-Margin
-Capex
-Price Reaction
-What Was Priced
+Kết quả so với đồng thuận
+Hướng dẫn tương lai
+Điều chỉnh dự báo
+Tỷ giá
+Biên lợi nhuận
+Chi tiêu vốn
+Phản ứng giá
+Điều gì đã được định giá trước?
 ```
 
-## 43. BOK event
+## 43. Sự kiện BOK
 
-Ghi:
+Ghi lại:
 
 ```text
-Decision
-Statement
-Inflation / Growth View
-FX Concern
-Expected Path
-2Y / 10Y
+Quyết định
+Thông cáo
+Quan điểm lạm phát / tăng trưởng
+Lo ngại tỷ giá
+Đường đi lãi suất kỳ vọng
+Lợi suất 2Y / 10Y
 USD/KRW
-Equity Sector Reaction
+Phản ứng theo ngành
 ```
 
-## 44. Global macro event
+## 44. Sự kiện vĩ mô toàn cầu
 
-Với CPI/FOMC Mỹ:
+Với CPI hoặc FOMC Mỹ:
 
 ```text
-US Yield
+Lợi suất Mỹ
 → USD/KRW
-→ Foreign Flow
-→ KOSDAQ / Growth
-→ Semis / Banks / Importers
+→ dòng vốn nước ngoài
+→ KOSDAQ / cổ phiếu tăng trưởng
+→ bán dẫn / ngân hàng / doanh nghiệp nhập khẩu
 ```
 
-# Phần XVII — Dashboard
+# Phần XVII — Bảng theo dõi
 
-## 45. Daily
+## 45. Hằng ngày
 
 ```text
 KOSPI / KOSDAQ
-Breadth
+Độ rộng thị trường
 USD/KRW
-Foreign Flow
-Semiconductor Leaders
-2Y / 10Y Korea
-Oil
-US Tech / SOX context
+Dòng vốn nước ngoài
+Cổ phiếu bán dẫn dẫn dắt
+Lợi suất Hàn Quốc 2Y / 10Y
+Dầu
+Bối cảnh công nghệ Mỹ / SOX
 ```
 
-## 46. Weekly / monthly
+## 46. Hằng tuần / hằng tháng
 
 ```text
-Exports
-Semiconductor Export Value
-Inventory / ASP
-BOK Communication
-Credit / PF News
-Earnings Revisions
-Valuation
+Xuất khẩu
+Giá trị xuất khẩu bán dẫn
+Tồn kho / ASP
+Thông điệp BOK
+Tin tín dụng / PF
+Điều chỉnh dự báo lợi nhuận
+Định giá
 ```
 
-# Phần XVIII — Research template
+# Phần XVIII — Mẫu nghiên cứu
 
-## 47. Stock Hàn Quốc
+## 47. Một cổ phiếu Hàn Quốc
 
 ```text
-Business
-→ Export / Domestic Exposure
-→ Currency Map
-→ Sector Cycle
+Mô hình kinh doanh
+→ xuất khẩu / nội địa
+→ bản đồ tiền tệ
+→ chu kỳ ngành
 → KPI
-→ Balance Sheet
-→ Earnings Revision
-→ Valuation
-→ Catalyst
-→ Invalidation
+→ bảng cân đối
+→ điều chỉnh dự báo lợi nhuận
+→ định giá
+→ chất xúc tác
+→ điều kiện vô hiệu hóa
 ```
 
-## 48. Market thesis
+## 48. Luận điểm toàn thị trường
 
 ```text
-Global Regime
-→ Korea Growth / Inflation
+Chế độ toàn cầu
+→ tăng trưởng / lạm phát Hàn Quốc
 → BOK
 → KRW
-→ Foreign Flow
-→ Sector Leadership
-→ Earnings
-→ Valuation
+→ dòng vốn nước ngoài
+→ ngành dẫn dắt
+→ lợi nhuận doanh nghiệp
+→ định giá
 ```
 
 ## Kết luận
@@ -518,12 +505,12 @@ Global Regime
 Thị trường Hàn Quốc nên được nhìn như giao điểm của:
 
 ```text
-Global Trade
-+ Semiconductor / Industrial Cycle
+Thương mại toàn cầu
++ chu kỳ bán dẫn / công nghiệp
 + KRW
-+ BOK / Credit
-+ Foreign Flow
-+ Corporate Earnings
++ BOK / tín dụng
++ dòng vốn nước ngoài
++ lợi nhuận doanh nghiệp
 ```
 
-Không nên dùng một headline về Fed, China hay semiconductor để kết luận toàn market. Luôn theo dõi cơ chế truyền dẫn tới từng ngành và từng bảng cân đối doanh nghiệp.
+Không nên dùng một tiêu đề tin tức về Fed, Trung Quốc hay bán dẫn để kết luận toàn bộ thị trường. Luôn theo dõi cơ chế truyền dẫn tới từng ngành và từng bảng cân đối doanh nghiệp.
