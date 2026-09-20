@@ -137,6 +137,150 @@ Trước đây nhiều xung đột biến mất khỏi ký ức công cộng khi
 
 Điều này có lợi cho trách nhiệm giải trình nhưng cũng tạo rủi ro **sụp đổ bối cảnh (context collapse)**: một mảnh thông tin thiếu bối cảnh có thể được một nhóm khán giả hoàn toàn khác xem nhiều năm sau.
 
+## 수강신청: đăng ký môn như một hàng đợi số cho tài nguyên khan hiếm
+
+Ở đại học, chọn môn không chỉ là quyết định học thuật. Một số lớp có số chỗ giới hạn, khung giờ đẹp, giảng viên được ưa chuộng hoặc đáp ứng điều kiện tốt nghiệp. Khi nhu cầu cao hơn số ghế, **đăng ký môn (수강신청)** trở thành bài toán phân bổ tài nguyên.
+
+```text
+số ghế hữu hạn
++ nhiều sinh viên cùng muốn
++ hệ thống mở tại một thời điểm
+= hàng đợi số + cạnh tranh về chuẩn bị
+```
+
+Sinh viên học cách chuẩn bị mã môn, ưu tiên lớp cần thiết và có phương án thay thế. Đây là một kinh nghiệm nhỏ nhưng quan trọng về cách thiết chế biến quyền lựa chọn thành giao diện kỹ thuật.
+
+Điểm sâu hơn là: một chương trình học có thể “cho phép tự do chọn môn” trên giấy, nhưng mức tự do thực tế phụ thuộc số ghế, lịch, môn tiên quyết và năng lực hệ thống đăng ký.
+
+## 학점: điểm đại học vừa là phản hồi học tập vừa là tín hiệu
+
+**Điểm tín chỉ/GPA (학점)** có ít nhất hai chức năng. Một là phản hồi về mức hoàn thành môn học; hai là tín hiệu được dùng trong học bổng, trao đổi, tuyển dụng hoặc học tiếp.
+
+Khi cùng một chỉ số phải phục vụ cả học tập lẫn sàng lọc, hành vi có thể thay đổi. Sinh viên có thể tránh môn khó dù môn đó hữu ích, nếu sợ ảnh hưởng GPA. Đây là ví dụ **tối ưu cục bộ (local optimization)**: chiến lược tốt cho chỉ số ngắn hạn chưa chắc tốt cho vốn kỹ năng dài hạn.
+
+Quy tắc chấm điểm khác theo trường, khoa và môn, nên không nên biến một hệ thống cụ thể thành quy luật chung. Điều cần hiểu là áp lực xuất hiện khi điểm vừa là phản hồi vừa là tín hiệu thị trường.
+
+## 조별과제: bài tập nhóm và bài toán người đi nhờ
+
+**Bài tập nhóm (조별과제)** là nơi sinh viên gặp rất sớm các vấn đề giống công sở: phân công, hạn chót, tài liệu chung, người im lặng, người làm quá nhiều và người chỉ xuất hiện gần ngày nộp.
+
+Đây là bài toán **người đi nhờ (free-rider problem)**. Nếu điểm được chia đều nhưng nỗ lực khó quan sát, cá nhân có động lực đóng góp ít hơn.
+
+Nhóm hiệu quả thường tự tạo cấu trúc:
+
+```text
+mục tiêu rõ
+→ phân việc rõ
+→ mốc kiểm tra trung gian
+→ tài liệu chung
+→ ghi nhận phần đóng góp
+```
+
+Vì vậy `조별과제` không chỉ dạy nội dung môn học; nó dạy chi phí phối hợp. Một sinh viên giỏi chuyên môn nhưng không biết cập nhật trạng thái có thể làm nhóm khó vận hành như một nhân viên kỹ thuật giỏi nhưng không báo tiến độ.
+
+## 발표문화: thuyết trình như năng lực biểu diễn tri thức
+
+Nhiều môn yêu cầu `발표` — trình bày trước lớp. Đây là bước chuyển từ “tôi hiểu” sang “tôi có thể cấu trúc để người khác hiểu”.
+
+Thuyết trình tạo một lớp đánh giá khác bài thi viết: khả năng chọn thông tin, thiết kế slide, nói đúng thời lượng, phản ứng với câu hỏi và phối hợp nhóm.
+
+Nhưng kỹ năng trình bày và độ sâu kiến thức không đồng nhất. Một người nói trôi chảy có thể hiểu nông; người hiểu sâu có thể trình bày kém. Hệ thống đánh giá tốt cần tách **chất lượng nội dung** và **chất lượng truyền đạt** thay vì trộn chúng thành một ấn tượng duy nhất.
+
+## 연구실 và quan hệ cố vấn học thuật
+
+Trong một số ngành, đặc biệt khoa học, kỹ thuật hoặc bậc sau đại học, **phòng nghiên cứu (연구실)** trở thành đơn vị xã hội quan trọng. Sinh viên không chỉ học với giáo sư qua bài giảng mà còn tham gia dự án, họp nhóm, thí nghiệm, viết bài và chia sẻ thiết bị.
+
+Quan hệ `지도교수–학생` có bất cân xứng lớn vì người hướng dẫn có thể kiểm soát cơ hội nghiên cứu, thư giới thiệu và tiến độ học thuật. Bất cân xứng này có thể tạo cố vấn rất mạnh, nhưng cũng đòi hỏi quy tắc về ghi công, khối lượng lao động và xử lý xung đột.
+
+Đây là ví dụ cho thấy “đại học” không phải một môi trường duy nhất. Trải nghiệm sinh viên năm nhất học môn đại cương khác rất xa nghiên cứu sinh phụ thuộc vào phòng thí nghiệm.
+
+## 인턴 và 경력직 문화 bắt đầu từ campus
+
+**Thực tập (인턴)** nằm giữa học và việc. Nó cung cấp môi trường mà sinh viên có thể kiểm tra giả định về nghề, còn doanh nghiệp quan sát ứng viên lâu hơn một cuộc phỏng vấn.
+
+Có thể xem thực tập như **giai đoạn thử hai chiều**:
+
+```text
+sinh viên kiểm tra: công việc thật có phù hợp không?
+doanh nghiệp kiểm tra: ứng viên có vận hành được trong tổ chức không?
+```
+
+Giá trị của thực tập phụ thuộc việc sinh viên thực sự được giao nhiệm vụ, nhận phản hồi và hiểu hệ thống; chỉ có tên công ty trong CV không tự động tạo kỹ năng.
+
+Khi thị trường tuyển dụng coi kinh nghiệm thực hành quan trọng, sinh viên có động lực tìm thực tập sớm hơn. Điều này kéo “chuẩn bị việc làm” ngược vào những năm giữa đại học.
+
+## 통학, 자취, 기숙사: nhà ở làm thay đổi đời sống campus
+
+Sinh viên sống ký túc xá, ở riêng, ở cùng gia đình hoặc đi lại xa có ngân sách thời gian rất khác. Người đi lại 90 phút mỗi chiều ít khả năng tham gia câu lạc bộ tối hoặc học nhóm muộn hơn người sống gần trường.
+
+Do đó trải nghiệm campus không chỉ là văn hoá của trường; nó còn là đầu ra của **địa lý nhà ở**.
+
+```text
+khoảng cách nhà–trường
+→ thời gian di chuyển
+→ khả năng tham gia hoạt động
+→ mật độ quan hệ
+→ cảm giác thuộc về campus
+```
+
+Đây là lý do sinh viên cùng khoa có thể có đời sống xã hội hoàn toàn khác dù học cùng lớp.
+
+## 교환학생 và quốc tế hoá như một lần thay đổi hệ quy chiếu
+
+**Trao đổi sinh viên (교환학생)** hoặc học một thời gian ở nước ngoài cho phép người học tạm rời hệ quy tắc quen thuộc. Những thứ tưởng “bình thường” — cách gọi giáo sư, phát biểu trong lớp, hẹn gặp nhóm, chấm điểm — trở nên dễ nhìn hơn khi đặt cạnh hệ khác.
+
+Đây là một dạng **học qua tương phản (contrastive learning)** về văn hoá. Người học không chỉ tiếp thu văn hoá mới; họ còn nhận ra văn hoá của chính mình.
+
+Quốc tế hoá campus cũng diễn ra ngay trong Hàn Quốc khi sinh viên quốc tế tăng. Nhưng cùng học trong một toà nhà không tự động tạo hội nhập; ngôn ngữ, cấu trúc nhóm và thiết kế lớp quyết định mạng xã hội có thực sự trộn hay không.
+
+## 복학생 và tái nhập cộng đồng
+
+Người quay lại sau `휴학` hoặc quân đội thường phải cập nhật nhiều thứ cùng lúc: chương trình, nền tảng số, bạn cùng khoá, xu hướng nghề nghiệp và nhịp học.
+
+Đây là **chi phí tái nhập (re-entry cost)**. Một hệ thống có thể cho phép bảo lưu rất linh hoạt nhưng nếu thông tin thay đổi không được tổng hợp, sinh viên quay lại phải tự khám phá từ đầu.
+
+Mạng bạn cũ có thể đã tốt nghiệp; sinh viên phải xây liên kết mới với hậu bối. Vì vậy `복학생` là ví dụ rõ cho việc dòng thời gian không tuyến tính tạo một bản sắc xã hội riêng.
+
+## 취준의 장기화 và trạng thái “chưa bắt đầu cuộc đời thật”
+
+Khi chuẩn bị việc làm kéo dài, sinh viên hoặc người mới tốt nghiệp có thể cảm thấy nhiều quyết định khác bị treo: chuyển nhà, hẹn hò nghiêm túc, kết hôn hoặc chi tiêu lớn. Đây là tác động dây chuyền từ thị trường lao động sang vòng đời.
+
+Điểm quan trọng là không nên tâm lý hoá hoàn toàn cảm giác trì hoãn. Nếu thu nhập và lịch làm việc tương lai chưa chắc chắn, chờ trước khi cam kết tài chính lớn có thể là phản ứng hợp lý.
+
+Vì vậy `취준` nằm ở giao điểm của giáo dục, lao động, nhà ở và gia đình, không chỉ ở “động lực cá nhân”.
+
+## 정신건강과 고립: đông người không đồng nghĩa có mạng hỗ trợ
+
+Campus có thể đông nhưng sinh viên vẫn cô lập, đặc biệt khi mới nhập học, sau bảo lưu, học trực tuyến nhiều hoặc sống xa trường. Số người nhìn thấy mỗi ngày không bằng số quan hệ có thể nhờ hỗ trợ.
+
+Mạng hỗ trợ thường cần ba lớp:
+
+```text
+quan hệ gần → hỗ trợ cảm xúc
+quan hệ ngang → chia sẻ thông tin và kinh nghiệm
+thiết chế → tư vấn / học vụ / hỗ trợ khẩn cấp
+```
+
+Không nên biến mọi căng thẳng học tập thành chẩn đoán lâm sàng. Nhưng về văn hoá tổ chức, khả năng tìm người để hỏi và biết nơi nhận hỗ trợ là một phần của thiết kế campus tốt.
+
+## Đại học như hệ thống ghép nối, không chỉ hệ thống truyền kiến thức
+
+Một chức năng sâu của đại học là **ghép nối (matching)**: sinh viên gặp bạn học, giáo sư, phòng nghiên cứu, nhà tuyển dụng, câu lạc bộ và cơ hội quốc tế. Nhiều giá trị của đại học đến từ mạng quan hệ và cơ hội mà bài giảng đơn lẻ khó tạo.
+
+Có thể mô hình hoá:
+
+```text
+tri thức chính thức
++ mạng ngang
++ cố vấn
++ cơ hội dự án
++ tín hiệu bằng cấp
++ ghép nối với thị trường lao động
+= giá trị đại học rộng hơn giờ học
+```
+
+Điều này cũng giải thích vì sao cùng nội dung bài giảng trực tuyến chưa chắc thay toàn bộ trải nghiệm đại học. Nội dung chỉ là một lớp của hệ thống.
+
 ## Văn hoá thanh niên không phải một khối thống nhất
 
 “Gen Z Hàn Quốc”, `MZ세대` hay “sinh viên Hàn” thường được dùng như một phạm trù lớn. Nhưng sinh viên ở đại học hàng đầu Seoul, cao đẳng nghề, đại học địa phương hoặc người vừa đi làm có nguồn lực và trải nghiệm khác nhau.
@@ -151,7 +295,7 @@ Trong phần mềm, **môi trường thử (staging environment)** cho phép h�
 
 ## Mô hình tư duy
 
-> Đại học Hàn Quốc không chỉ là nơi nhận bằng. Nó là một **hệ điều hành xã hội** nơi khoá, thâm niên, câu lạc bộ, gián đoạn quân sự, chuẩn bị việc làm và nền tảng số cùng định hình bản sắc thanh niên.
+> Đại học Hàn Quốc không chỉ là nơi nhận bằng. Nó là một **hệ điều hành xã hội** nơi khoá, thâm niên, câu lạc bộ, gián đoạn quân sự, đăng ký môn, dự án nhóm, nhà ở, cố vấn, chuẩn bị việc làm và nền tảng số cùng định hình bản sắc thanh niên. Giá trị đại học vì vậy nằm trong cả tri thức, ghép nối, tín hiệu và khả năng thử nhiều vai trò trước khi bước vào thị trường lao động.
 
 ## Những hiểu lầm phổ biến
 
@@ -163,6 +307,12 @@ Trong phần mềm, **môi trường thử (staging environment)** cho phép h�
 
 “`취준생` chỉ là người chưa tìm được việc” làm mất bản chất của một giai đoạn có nhịp sinh hoạt, thị trường và bản sắc riêng.
 
+“GPA cao luôn đồng nghĩa học được nhiều nhất” nhầm chỉ số sàng lọc với độ sâu học tập.
+
+“Bài tập nhóm thất bại vì sinh viên thiếu ý thức” bỏ qua cách hệ thống phân công, quan sát đóng góp và thiết kế phần thưởng.
+
+“Cùng học một trường thì có cùng trải nghiệm campus” bỏ qua nhà ở, thời gian đi lại, tài chính và mức tham gia mạng xã hội.
+
 ## Đọc tiếp
 
-Đọc cùng [`02_confucianism_relations_hierarchy.md`](02_confucianism_relations_hierarchy.md), [`05_education_exams_credentials.md`](05_education_exams_credentials.md), [`06_workplace_organization_hoesik.md`](06_workplace_organization_hoesik.md), [`23_military_conscription_service_culture.md`](23_military_conscription_service_culture.md) và [`27_internet_communities_messaging_slang_memes.md`](27_internet_communities_messaging_slang_memes.md).
+Đọc cùng [`02_confucianism_relations_hierarchy.md`](02_confucianism_relations_hierarchy.md), [`05_education_exams_credentials.md`](05_education_exams_credentials.md), [`06_workplace_organization_hoesik.md`](06_workplace_organization_hoesik.md), [`23_military_conscription_service_culture.md`](23_military_conscription_service_culture.md), [`24_economy_chaebol_housing_status_mobility.md`](24_economy_chaebol_housing_status_mobility.md) và [`27_internet_communities_messaging_slang_memes.md`](27_internet_communities_messaging_slang_memes.md).
