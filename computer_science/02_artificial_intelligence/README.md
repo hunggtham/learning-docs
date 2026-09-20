@@ -70,8 +70,8 @@ Modern AI application thường thêm external retrieval, tools, memory, verific
 ├── 08_large_language_models/               ✅ complete
 ├── 09_retrieval_and_rag/                   ✅ complete
 ├── 10_agents_and_ai_systems/               ✅ complete
-├── 11_reinforcement_learning/              ← next
-├── 12_computer_vision/
+├── 11_reinforcement_learning/              ✅ complete
+├── 12_computer_vision/                     ← next
 ├── 13_speech_audio_and_multimodal/
 ├── 14_data_for_ai/
 ├── 15_ai_engineering/
@@ -85,8 +85,6 @@ Modern AI application thường thêm external retrieval, tools, memory, verific
 
 ## Những distinction quan trọng
 
-Library cố ý giữ các ranh giới dễ bị buzzword làm mờ:
-
 ```text
 AI                  ≠ Machine Learning
 Machine Learning    ≠ Deep Learning
@@ -96,6 +94,9 @@ Agent               ≠ Workflow
 Tool Calling        ≠ Agent
 Memory              ≠ Context Window
 State               ≠ Conversation Transcript
+Reward              ≠ True Goal
+State               ≠ Observation
+RL                  ≠ RLHF
 Prompt              ≠ Security Boundary
 Model Probability   ≠ Truth Probability
 Vector Similarity   ≠ Semantic Truth
@@ -106,7 +107,7 @@ Model says “done”   ≠ Verified completion
 
 ## Terminology convention
 
-Thuật ngữ quan trọng giữ English term, giải thích bằng tiếng Việt và thêm 한국어 용어 khi hữu ích trong môi trường Hàn Quốc, ví dụ `inference (추론 / suy luận)`, `training (학습 / huấn luyện)`, `embedding (임베딩 / biểu diễn vector)`, `retrieval (검색 / truy xuất)`, `agent (에이전트 / tác nhân)`.
+Thuật ngữ quan trọng giữ English term, giải thích bằng tiếng Việt và thêm 한국어 용어 khi hữu ích trong môi trường Hàn Quốc, ví dụ `inference (추론 / suy luận)`, `training (학습 / huấn luyện)`, `embedding (임베딩 / biểu diễn vector)`, `retrieval (검색 / truy xuất)`, `agent (에이전트 / tác nhân)`, `reward (보상 / phần thưởng)`.
 
 ## Learning principle
 
