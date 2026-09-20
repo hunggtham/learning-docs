@@ -18,6 +18,8 @@ Lĩnh vực này áp dụng toàn bộ kiến thức từ Nền tảng → Các 
 
 [06_SECTOR_DEEP_DIVES_KOREA_VIETNAM.md](./06_SECTOR_DEEP_DIVES_KOREA_VIETNAM.md) đi sâu động cơ kinh tế của từng ngành. Hàn Quốc bao gồm memory/HBM, foundry, thiết bị/vật liệu, ô tô/EV, pin, đóng tàu, công nghiệp/quốc phòng, ngân hàng, bảo hiểm, môi giới, nền tảng, game, biotech, xây dựng, lọc dầu/hóa dầu, tiện ích, bán lẻ và thương hiệu tiêu dùng. Việt Nam bao gồm ngân hàng, chứng khoán, bất động sản, khu công nghiệp/FDI, bán lẻ/hàng tiêu dùng, hàng không/sân bay, cảng/logistics, dầu khí, thủy điện/nhiệt điện/năng lượng tái tạo, thép/xi măng, dịch vụ công nghệ, viễn thông, bảo hiểm, nông nghiệp và hóa chất. Mỗi ngành được nối với cầu, cung, giá/chênh lệch, tồn kho, công suất sử dụng, vốn lưu động, capex, bảng cân đối, bẫy kế toán, định giá và độ nhạy vĩ mô.
 
+[07_KOREA_VIETNAM_MARKET_THESIS_AND_SCENARIO_LAB.md](./07_KOREA_VIETNAM_MARKET_THESIS_AND_SCENARIO_LAB.md) là lớp học sâu nối chế độ toàn cầu với bảng cân đối quốc gia, ràng buộc chính sách, FX/tín dụng/thanh khoản, ngành, earnings revisions, định giá, market access và quy mô vị thế. Lab yêu cầu xây scenario matrix thay vì giải thích thị trường bằng một headline.
+
 ## Sau lĩnh vực này bạn cần làm được gì?
 
 Bạn cần có khả năng mở một cổ phiếu Hàn Quốc hoặc Việt Nam và tự xác định `chuỗi giá trị → động lực chính → chu kỳ → bảng cân đối → định giá → chất xúc tác/điều kiện vô hiệu hóa`; chọn đúng nguồn sơ cấp; phân biệt biến động chỉ số với độ rộng thị trường và dòng vốn kỹ thuật với thông tin cơ bản; đọc điều chỉnh dự báo lợi nhuận cùng kỳ vọng thị trường; kiểm thử thanh khoản, tái cấp vốn và tiền tệ; đồng thời đánh giá cú sốc toàn cầu bằng chuỗi `mức bất ngờ → truyền dẫn → phản ứng chính sách → lợi nhuận/định giá → dòng vốn`.
@@ -27,5 +29,7 @@ Với vị thế xuyên biên giới, cần thêm lớp `kinh tế của tài s�
 ## Bài tập tổng hợp
 
 Sau lĩnh vực này, chuyển sang [07 — Bài tập tích hợp](../07_integrated_case_studies/README.md). Hai tình huống quan trọng nhất cho nghiên cứu theo thị trường là [Chu kỳ bán dẫn Hàn Quốc](../07_integrated_case_studies/03_SEMICONDUCTOR_CYCLE_KOREA_CASE.md) và [Chu kỳ bất động sản–ngân hàng Việt Nam](../07_integrated_case_studies/04_VIETNAM_PROPERTY_BANK_CREDIT_CASE.md).
+
+Sau đó hoàn thành **Module 6 — Korea & Vietnam** trong [Advanced Practice Workbook](../ADVANCED_PRACTICE_WORKBOOK.md). Đầu ra tối thiểu gồm dashboard riêng cho hai quốc gia, sector scorecard, bản đồ truyền dẫn cú sốc, checklist đầu tư xuyên biên giới và bảng rủi ro vị thế có giới hạn thanh khoản/FX.
 
 Sau khi hoàn thành, bước tiếp theo không phải đọc thêm vô hạn mà là xây sổ nghiên cứu cho 5–10 chứng khoán/ngành thật, duy trì bảng theo dõi quốc gia/tiền tệ/thanh khoản và cập nhật luận điểm theo chu kỳ phù hợp.
