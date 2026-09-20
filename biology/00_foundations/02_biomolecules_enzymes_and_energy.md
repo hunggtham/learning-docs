@@ -1,211 +1,235 @@
-# Đại phân tử sinh học, enzyme và ATP — Biomolecules, Enzymes and Energy (생체분자, 효소와 ATP)
+# Phân tử của sự sống — Biomolecules, Enzymes and Biological Energy (생체분자, 효소와 생물학적 에너지)
 
-Sau khi hiểu atom, bond, water, pH và energy, câu hỏi tiếp theo là: **tế bào được xây bằng những loại phân tử nào, và tại sao chỉ vài nhóm molecule lại có thể tạo ra vô số cấu trúc và chức năng?**
+Chương trước cho ta các quy tắc hóa học: atom liên kết, polarity quyết định interaction với water, hydrophobic effect có thể làm molecule tự tổ chức, pH thay đổi charge, reaction có thermodynamic direction và enzyme có thể hạ activation barrier. Bây giờ câu hỏi tự nhiên là: **từ những quy tắc đó, tại sao sự sống lại sử dụng carbohydrate, lipid, protein và nucleic acid nhiều đến vậy?**
 
-Sinh học thường nhắc bốn nhóm lớn: carbohydrate, lipid, protein và nucleic acid. Nhưng nếu chỉ học một bảng “nhóm — đơn phân — chức năng”, bạn sẽ rất dễ quên. Cách hiểu tốt hơn là nhìn mỗi nhóm như một giải pháp cho một bài toán khác nhau của sự sống.
+Không nên học bốn nhóm này như bốn danh sách độc lập. Chúng giải quyết bốn loại vấn đề khác nhau nhưng chồng lấp: lưu trữ năng lượng và carbon skeleton, tạo boundary, thực hiện chemistry và structure, lưu trữ thông tin.
 
-## Carbohydrate — lưu trữ năng lượng và xây cấu trúc
+## 1. Carbon skeleton: nền kiến trúc chung
 
-**Carbohydrate (cacbohydrat / 탄수화물)** gồm nhiều molecule có carbon, hydrogen và oxygen, thường có nhiều hydroxyl group nên tương tác tốt với water.
+Carbon có thể tạo bốn covalent bond ổn định, nên dễ hình thành chain, branch và ring. Khi gắn thêm các **functional group (nhóm chức / 작용기)** như hydroxyl, carboxyl, amino, phosphate hay methyl, molecule thay đổi polarity, charge và reactivity.
 
-**Monosaccharide (đường đơn / 단당류)** như glucose là đơn vị nhỏ. Glucose vừa là fuel quan trọng vừa là nguyên liệu để xây molecule khác.
+Vì thế biological molecule không chỉ khác nhau ở “tên”. Chúng khác nhau ở cách carbon skeleton được trang trí bằng functional group.
 
-Khi nhiều monosaccharide nối nhau bằng glycosidic bond, ta có **polysaccharide (đa đường / 다당류)**.
+Ví dụ, thêm phosphate thường làm molecule mang negative charge và tăng interaction với water. Trong signaling, phosphorylation protein có thể đổi shape hoặc binding affinity. Trong ATP, phosphate group tham gia energy coupling. Trong DNA, phosphate tạo backbone mang charge âm.
 
-Starch ở thực vật và glycogen ở động vật lưu trữ glucose. Cellulose lại dùng glucose để tạo cấu trúc bền của cell wall thực vật. Điều thú vị là cùng building block glucose nhưng cách nối khác nhau tạo property khác nhau.
+Một motif hóa học có thể xuất hiện ở nhiều context khác nhau. Đây là cách nên đọc Sinh học: nhận ra pattern lặp lại.
 
-Đây là ví dụ rất điển hình của structure–function relationship: **không chỉ thành phần quyết định chức năng, mà cách các thành phần được nối cũng quyết định chức năng**.
+## 2. Carbohydrate: từ fuel đến structure
 
-## Lipid — giải pháp cho boundary và lưu trữ năng lượng dài hạn
+**Carbohydrate (cacbohydrat / 탄수화물)** thường được nghĩ đơn giản là “đường”. Nhưng class này rộng hơn.
 
-**Lipid (지질)** không phải một family thống nhất theo polymer như protein hay DNA. Điểm chung lớn là nhiều lipid có phần nonpolar và ít tan trong water.
+Một **monosaccharide (đường đơn / 단당류)** như glucose vừa là fuel vừa là building block. Khi nhiều monosaccharide nối lại bằng glycosidic bond, ta có polysaccharide.
 
-### Fat và triglyceride
+Hai polymer đều làm từ glucose có thể có property rất khác chỉ vì cách bond khác nhau. Starch/glycogen có linkage phù hợp để enzyme dễ phân giải và huy động glucose. Cellulose có linkage làm chain thẳng, hydrogen bond giữa các chain tạo fiber bền — rất phù hợp cho plant cell wall.
 
-**Triglyceride (중성지방)** gồm glycerol nối với ba fatty acid. Fatty acid có hydrocarbon chain dài, chứa nhiều C–H bond, nên là dạng lưu energy dày đặc.
+Điểm cần giữ lại không phải tên starch vs cellulose mà là principle:
 
-Fatty acid **saturated (bão hòa / 포화지방산)** không có C=C double bond trong chain. **Unsaturated fatty acid (không bão hòa / 불포화지방산)** có một hoặc nhiều double bond, thường làm chain bị kink và khó đóng gói chặt.
+> **Cùng monomer nhưng khác connectivity → khác 3D organization → khác biological function.**
 
-Điều này giải thích vì sao nhiều fat giàu saturated fatty acid rắn hơn ở room temperature, còn oil giàu unsaturated fatty acid thường lỏng hơn.
+Principle này sẽ quay lại mạnh hơn ở protein và DNA.
 
-### Phospholipid — molecule làm membrane gần như tự hình thành
+## 3. Lipid: giải bài toán boundary và energy density
 
-**Phospholipid (인지질)** có đầu polar hydrophilic và hai tail hydrophobic. Molecule có cả phần ưa nước và kỵ nước được gọi là **amphipathic (lưỡng tính / 양친매성)**.
+**Lipid (지질)** không phải một polymer uniform như protein hay DNA. Điểm chung quan trọng là nhiều lipid có vùng nonpolar, nên interaction đặc biệt với water.
 
-Khi cho phospholipid vào water, hydrophobic effect khiến tail tụ vào trong còn head tiếp xúc với water. Kết quả tự nhiên là bilayer hoặc vesicle.
+Triacylglycerol chứa hydrocarbon chain giàu C–H bond, vì vậy khi oxidized có thể giải phóng nhiều energy trên mỗi gram hơn carbohydrate. Đây là lý do fat thích hợp cho long-term energy storage.
 
-Không cần có “người xây màng”; property hóa học của molecule đã làm self-assembly có khả năng xảy ra.
+Nhưng với cell biology, nhóm quan trọng hơn là **phospholipid (인지질)**. Phospholipid có đầu hydrophilic và đuôi hydrophobic, nên là **amphipathic molecule**.
 
-Đây là bridge trực tiếp sang cell membrane.
-
-### Steroid và cholesterol
-
-**Cholesterol (콜레스테롤)** là lipid có ring structure. Nó là thành phần membrane của animal cell và tiền chất cho nhiều steroid hormone.
-
-Cholesterol không chỉ là “chất xấu trong máu”. Cơ thể cần cholesterol. Vấn đề sức khỏe liên quan đến cách cholesterol được vận chuyển, mức lipoprotein và context metabolic, không phải sự tồn tại của molecule này tự nó.
-
-## Protein — machinery linh hoạt nhất của tế bào
-
-**Protein (단백질)** thực hiện một lượng lớn chức năng: enzyme, receptor, channel, antibody, motor, structural fiber và signaling molecule.
-
-Protein được xây từ **amino acid (axit amin / 아미노산)**.
-
-Mỗi amino acid có backbone chung và một **side chain R** khác nhau. Side chain có thể nonpolar, polar, positive hoặc negative. Chính diversity của side chain cho phép protein tạo nhiều shape và chemical property.
-
-### Peptide bond và polypeptide
-
-Amino acid nối nhau bằng **peptide bond (펩타이드 결합)**, tạo **polypeptide chain (폴리펩타이드 사슬)**.
-
-Sequence amino acid gọi là **primary structure (cấu trúc bậc một / 1차 구조)**. Sequence này ảnh hưởng cách chain fold.
-
-### Protein folding — vì sao shape quyết định function?
-
-Protein không hoạt động chỉ vì có đúng amino acid. Nó cần fold thành cấu trúc 3D phù hợp.
-
-Các force như hydrogen bond, ionic interaction, hydrophobic effect và van der Waals interaction cùng góp phần ổn định structure.
-
-Ta thường mô tả:
-
-- primary structure: amino acid sequence;
-- secondary structure: local pattern như alpha helix và beta sheet;
-- tertiary structure: overall 3D shape của một polypeptide;
-- quaternary structure: nhiều polypeptide subunit kết hợp.
-
-Danh sách này chỉ hữu ích nếu hiểu reason: **sequence tạo pattern tương tác → interaction tạo folding → folding tạo binding surface → binding quyết định function**.
-
-> **Mental model:** protein là một sequence hóa học tự gấp thành “tool 3D”. Đổi sequence có thể đổi shape; đổi shape có thể đổi function.
-
-## Denaturation — protein có thể mất shape
-
-**Denaturation (biến tính / 변성)** là khi protein mất structure bậc cao do heat, pH hoặc chemical condition thay đổi.
-
-Khi luộc egg white, protein unfold rồi interact theo cách mới, làm texture thay đổi. Đây là ví dụ đời thường của molecular structure becoming macroscopic property.
-
-Denaturation không nhất thiết cắt peptide bond. Primary sequence có thể còn nguyên nhưng 3D shape bị phá.
-
-## Enzyme — tăng tốc reaction bằng cách hạ activation barrier
-
-**Enzyme (효소)** phần lớn là protein xúc tác reaction. Một số RNA cũng có catalytic activity, gọi là ribozyme.
-
-Một enzyme có **active site (trung tâm hoạt động / 활성 부위)** nơi substrate bind.
-
-Enzyme không “ép” reaction theo nghĩa cơ học. Nó stabilizes transition state hoặc tạo microenvironment phù hợp, nhờ đó giảm activation energy.
-
-### Substrate specificity
-
-**Substrate (cơ chất / 기질)** là molecule enzyme tác động lên. Active site có shape và chemical property phù hợp với một hoặc một nhóm substrate.
-
-Mô hình “lock and key” dễ nhớ nhưng quá cứng. Thực tế protein linh động hơn. **Induced fit (유도 적합)** mô tả việc enzyme có thể đổi conformation khi substrate bind.
-
-### Enzyme rate phụ thuộc những gì?
-
-Nếu substrate rất ít, tăng substrate thường làm reaction rate tăng vì enzyme có nhiều cơ hội gặp substrate hơn.
-
-Khi gần như mọi active site đều bận, enzyme đạt saturation; tăng substrate thêm không làm rate tăng tương ứng nữa.
-
-Temperature tăng có thể làm molecular collision nhanh hơn đến một mức, nhưng quá cao có thể destabilize protein. pH lệch khỏi optimal range có thể đổi charge của amino acid trong active site.
-
-Do đó đồ thị enzyme activity thường không phải đường thẳng vô hạn.
-
-## Competitive và noncompetitive inhibition
-
-Trong **competitive inhibition (ức chế cạnh tranh / 경쟁적 저해)**, inhibitor cạnh tranh với substrate tại hoặc gần active site. Tăng substrate có thể giảm relative effect của inhibitor trong nhiều trường hợp.
-
-Trong **noncompetitive/allosteric inhibition**, inhibitor bind vị trí khác và làm conformation/activity thay đổi.
-
-Điểm quan trọng hơn terminology là hiểu rằng enzyme là protein động, nên bind ở một vị trí có thể thay đổi behavior ở vị trí khác.
-
-Đây là nền cho **allosteric regulation (điều hòa dị lập thể / 알로스테릭 조절)**.
-
-## Feedback inhibition — metabolism tự điều chỉnh
-
-Giả sử pathway tạo sản phẩm P qua nhiều bước:
+Trong water, chúng tự tổ chức thành bilayer. Đó là bridge trực tiếp từ chemistry sang cell:
 
 ```text
-A --E1--> B --E2--> C --E3--> P
+polarity of water
+    +
+amphipathic phospholipid
+    ↓
+hydrophobic effect
+    ↓
+self-assembled bilayer
+    ↓
+selective boundary
 ```
 
-Nếu P đã quá nhiều, tiếp tục chạy E1 sẽ lãng phí nguyên liệu và energy. Một giải pháp là P bind và inhibit E1.
+Không có bilayer, cell khó duy trì composition bên trong khác môi trường. Vì vậy lipid không chỉ là “mỡ”; nó giải một trong những bài toán nền của sự sống: tạo compartment.
 
-Đây là **feedback inhibition (ức chế ngược / 되먹임 억제)**.
+## 4. Protein: sequence trở thành shape, shape trở thành function
 
-Pattern này giúp tế bào tự điều chỉnh pathway mà không cần một “bộ não trung tâm”.
+**Protein (단백질)** là class molecule có range function cực rộng: enzyme, receptor, channel, antibody, structural fiber, motor, transcription factor.
 
-## Nucleic acid — lưu và truyền information
+Protein là polymer của **amino acid (axit amin / 아미노산)**. Mỗi amino acid có backbone chung và một side chain khác nhau. Side chain có thể nonpolar, polar, acidic, basic hoặc có chemistry đặc biệt.
 
-**Nucleic acid (axit nucleic / 핵산)** gồm DNA và RNA. Building block là **nucleotide (뉴클레오타이드)**.
+Amino acid nối bằng peptide bond tạo **polypeptide chain**. Nhưng sequence tuyến tính chỉ là bước đầu. Chain gấp thành structure 3D vì nhiều interaction: hydrophobic effect, hydrogen bond, ionic interaction, van der Waals và đôi khi disulfide bond.
 
-Một nucleotide có ba phần: phosphate group, sugar và nitrogenous base.
+Ta có chain reasoning:
 
-DNA dùng deoxyribose và các base A, T, G, C. RNA thường dùng ribose và A, U, G, C.
+```text
+amino-acid sequence
+      ↓
+local and long-range interactions
+      ↓
+3D structure
+      ↓
+binding / catalysis / mechanics
+      ↓
+biological function
+```
 
-Sequence của base mang information. Nhưng information chỉ hữu ích khi system có machinery để đọc nó. Vì vậy DNA không nên được hình dung như “mã tự chạy”; ribosome, RNA, enzyme và regulatory protein đều cần thiết.
+Nếu mutation đổi một amino acid quan trọng, interaction có thể đổi, folding thay đổi và function thay đổi. Đây là cầu nối trực tiếp sang genetics.
 
-## ATP — tại sao tế bào cần một energy currency?
+## 5. Protein folding không phải “protein tự biết hình dạng”
 
-**ATP (adenosine triphosphate / 아데노신 삼인산)** là nucleotide đặc biệt đóng vai trò trung gian energy trong tế bào.
+Cách nói “protein gấp đúng hình” dễ tạo ấn tượng có kế hoạch. Thực tế, folding xuất hiện từ landscape năng lượng và interaction giữa side chain với nhau và với solvent.
 
-Phản ứng hydrolysis thường được biểu diễn:
+Một số protein có thể tự fold; nhiều protein cần **chaperone (단백질 샤페론)** giúp tránh aggregation hoặc cung cấp môi trường folding thuận lợi.
+
+Nếu protein misfold, cell có quality-control system để refold hoặc degrade. Khi quality control thất bại, aggregate có thể gây pathology trong một số bệnh thần kinh.
+
+Điểm lớn hơn là: **cell không chỉ cần tổng hợp component; nó phải duy trì component ở trạng thái functional.** Đây là một dạng homeostasis ở molecular scale.
+
+## 6. Enzyme: cách life điều khiển reaction rate
+
+Một cell chứa hàng nghìn reaction có thể xảy ra về mặt thermodynamic, nhưng nếu mọi reaction diễn ra không kiểm soát, system sẽ hỗn loạn.
+
+**Enzyme (효소)** là catalyst sinh học, phần lớn là protein. Enzyme tăng reaction rate bằng cách giảm activation energy.
+
+Enzyme không “cung cấp energy” cho reaction. Nó tạo pathway có barrier thấp hơn.
+
+Một model đơn giản:
+
+\[
+E+S \rightleftharpoons ES \rightarrow E+P
+\]
+
+Enzyme \(E\) bind substrate \(S\), tạo complex \(ES\), sau đó product \(P\) được giải phóng.
+
+Nhưng “lock and key” là model quá cứng. Active site thường thay đổi conformation khi substrate bind; đây là **induced fit**.
+
+## 7. Vì sao reaction rate bão hòa?
+
+Nếu tăng substrate concentration, reaction rate thường tăng vì collision giữa enzyme và substrate nhiều hơn. Nhưng khi hầu hết active site đã occupied, thêm substrate không giúp nhiều nữa.
+
+Michaelis–Menten model mô tả một case điển hình:
+
+\[
+v=\frac{V_{max}[S]}{K_m+[S]}
+\]
+
+Không cần thuộc ngay. Mental model quan trọng là:
+
+- \(V_{max}\) phản ánh tốc độ khi enzyme gần như saturated.
+- \(K_m\) là concentration substrate tại đó rate bằng khoảng nửa \(V_{max}\) trong model đơn giản.
+
+Equation này là bridge đẹp giữa molecular mechanism và mathematical model.
+
+## 8. Enzyme regulation: metabolism cần control, không chỉ speed
+
+Nếu enzyme chỉ làm reaction nhanh hơn mà không được regulation, pathway sẽ waste resource.
+
+Một sản phẩm cuối có thể bind enzyme đầu pathway và giảm activity — **feedback inhibition**. Đây chính là negative feedback đã gặp ở chương tư duy, nhưng bây giờ ở molecular scale.
+
+Phosphorylation có thể bật/tắt enzyme. Allosteric molecule có thể bind vị trí khác active site và đổi conformation. Gene expression có thể thay đổi amount enzyme trong thời gian dài hơn.
+
+Do đó regulation tồn tại ở nhiều time scale:
+
+```text
+milliseconds–seconds: allostery / ion / substrate
+minutes: phosphorylation and signaling
+hours–days: gene expression and protein turnover
+```
+
+## 9. ATP: không phải “năng lượng”, mà là một cơ chế coupling
+
+**ATP (adenosine triphosphate / 아데노신 삼인산)** thường được gọi là “energy currency”. Cách nói này hữu ích nếu hiểu đúng.
+
+ATP không phải bình chứa năng lượng bí ẩn. Hydrolysis:
 
 \[
 ATP + H_2O \rightarrow ADP + P_i
 \]
 
-Trong điều kiện tế bào, reaction này có \(\Delta G\) âm đáng kể.
+có free-energy change thuận lợi trong cell. Cell couple reaction này với process không thuận lợi.
 
-Điều đó không có nghĩa “bond cuối cùng của ATP chứa một cục năng lượng”. Breaking bond cần energy. Net release xuất hiện vì products được stabilized tốt hơn và system có free energy thấp hơn.
+Ví dụ, transporter có thể hydrolyze ATP để đổi conformation và bơm ion ngược gradient. Motor protein hydrolyze ATP để tạo movement. Biosynthetic enzyme couple ATP hydrolysis với bond formation.
 
-Tế bào dùng ATP để **couple reactions**. Một process không favorable có thể được nối với ATP hydrolysis để tổng process trở nên favorable.
+Do đó mental model tốt hơn là:
 
-Ví dụ, active transport bơm ion ngược gradient cần energy. ATP có thể phosphorylate protein pump, làm conformation thay đổi và đưa ion qua membrane.
+> ATP là **molecular coupling token** giúp một process thuận lợi kéo theo một process không thuận lợi.
 
-> **Mental model:** ATP giống “adapter” nối process giải phóng energy với process cần energy. Nó không phải kho năng lượng dài hạn như fat.
+## 10. Gradient cũng là một dạng energy storage
 
-## Electron carrier — NADH và FADH₂
+Cell không chỉ store usable free energy trong ATP. Một **electrochemical gradient** cũng có thể làm work.
 
-Energy trong metabolism thường được di chuyển qua electron.
+Mitochondria bơm proton qua inner membrane. Proton muốn quay về theo electrochemical gradient. ATP synthase cho proton đi qua và couple dòng đó với ATP synthesis.
 
-**Oxidation (oxi hóa / 산화)** là mất electron; **reduction (khử / 환원)** là nhận electron.
+Về mặt system:
 
-NAD⁺ có thể nhận electron và hydrogen để thành NADH. NADH sau đó mang high-energy electron đến electron transport chain.
+```text
+redox energy
+   ↓
+proton pumping
+   ↓
+electrochemical gradient
+   ↓
+ATP synthase
+   ↓
+ATP
+```
 
-Đây là reason cellular respiration không phải chỉ “đốt glucose”. Tế bào tách energy thành nhiều bước và lưu tạm trong carrier để kiểm soát tốt hơn.
+Đây là một trong những motif quan trọng nhất trong biology. Bacteria, mitochondria và chloroplast đều khai thác gradient theo các biến thể khác nhau.
 
-## DNA, protein, lipid và carbohydrate không hoạt động riêng lẻ
+## 11. Nucleic acid: chemistry trở thành information storage
 
-Một cell membrane dùng phospholipid tạo bilayer, protein tạo channel và receptor, carbohydrate gắn lên lipid/protein để nhận diện. DNA mã hóa nhiều protein membrane. Enzyme dùng ATP hoặc gradient để vận chuyển. Vì vậy bốn nhóm biomolecule là một network, không phải bốn chương độc lập.
+**Nucleic acid (axit nucleic / 핵산)** gồm DNA và RNA, được xây từ nucleotide.
 
-## Từ molecule lên cell
+Mỗi nucleotide có sugar, phosphate và nitrogenous base. DNA dùng base A, T, G, C; RNA thường dùng A, U, G, C.
 
-Đến đây, ta đã có đủ building block để hiểu cell:
+Điều làm DNA phù hợp để lưu information là sequence base có thể thay đổi gần như tùy ý trong khi sugar-phosphate backbone vẫn giữ cấu trúc polymer tương đối ổn định.
 
-- lipid có thể tự tạo boundary;
-- protein có thể làm machine, channel và receptor;
-- nucleic acid lưu information;
-- carbohydrate cung cấp fuel và structure;
-- ATP nối energy supply với work;
-- enzyme biến reaction chậm thành pathway có tốc độ hữu ích.
+Base pairing A–T và G–C tạo một cơ chế copy: mỗi strand có thể làm template cho strand mới.
 
-Câu hỏi tiếp theo là: **nếu có tất cả những molecule này trong cùng một dung dịch, tại sao chưa đủ để thành cell?** Cần organization, compartment và transport. Đó là nội dung của [[../01_cell_biology/00_cells_membranes_and_transport]].
+Ta vừa đi từ chemistry đến information:
 
-## Common misconceptions
+```text
+specific hydrogen-bond patterns
+      ↓
+complementary base pairing
+      ↓
+templated copying
+      ↓
+heritable information
+```
 
-### “Protein chỉ để xây cơ bắp”
+## 12. RNA: không chỉ là “bản sao tạm của DNA”
 
-Cơ bắp chứa nhiều protein, nhưng protein còn là enzyme, receptor, antibody, channel và molecular motor. Function của protein rộng hơn rất nhiều.
+RNA thường được giới thiệu như messenger giữa DNA và protein, nhưng role rộng hơn. RNA có thể mang information, tạo structure, tham gia catalysis và regulate gene expression.
 
-### “Fat chỉ là nguồn dự trữ không cần thiết”
+Ribosome — machine dịch mRNA thành protein — có core catalytic role từ rRNA. Điều này gợi ý rằng RNA từng có role trung tâm hơn trong early evolution, dù origin-of-life research vẫn còn nhiều câu hỏi mở.
 
-Lipid là thành phần thiết yếu của membrane, signaling và hormone. Vấn đề sức khỏe phụ thuộc loại lipid, lượng và context metabolic.
+## 13. Các biomolecule không hoạt động riêng lẻ
 
-### “ATP là pin của tế bào”
+Một membrane gồm lipid nhưng cần protein channel và receptor. DNA cần protein để copy và regulate. Protein synthesis cần RNA. Enzyme cần cofactor, ion hoặc vitamin-derived molecule. ATP synthesis cần membrane gradient.
 
-Ẩn dụ pin hữu ích nhưng dễ gây sai. ATP được turnover rất nhanh và liên tục tái tạo. Nó gần với currency hoặc energy coupling intermediate hơn là một battery lưu trữ dài hạn.
+Vì vậy bốn class biomolecule không phải bốn “ngăn” độc lập. Chúng tạo một mạng hỗ trợ lẫn nhau.
 
-### “Enzyme làm reaction có thể xảy ra về thermodynamics”
+Ví dụ một glucose transporter:
 
-Enzyme không thay đổi dấu của \(\Delta G\) cho reaction tổng thể. Nó thay đổi tốc độ bằng cách hạ activation barrier.
+- protein tạo transporter;
+- lipid bilayer tạo membrane context;
+- glucose là carbohydrate substrate;
+- ATP hoặc ion gradient có thể cung cấp coupling tùy transporter;
+- gene DNA mã hóa protein;
+- RNA truyền information khi protein được synthesized.
 
-## Mental Model
+Một object nhỏ đã nối gần toàn bộ molecular biology.
 
-> Biomolecule là vật liệu và machinery; enzyme tổ chức reaction thành pathway; ATP và electron carrier nối các pathway bằng dòng energy; DNA/RNA giữ và truyền information. Cell xuất hiện khi các thành phần này được tổ chức trong boundary có kiểm soát.
+## 14. Từ molecule đến cell: tại sao bước tiếp theo phải là organization
+
+Đến đây ta biết những component chính và rule interaction của chúng. Nhưng trộn DNA, protein, lipid và carbohydrate vào một beaker không tự động tạo cell sống.
+
+Cái còn thiếu là **organization in space**.
+
+Cell phải đặt reaction nào ở đâu, tách incompatible process, control exchange với environment và tạo internal transport. Đây là lý do compartment và membrane trở thành câu hỏi kế tiếp.
+
+Chương tiếp theo [[../01_cell_biology/00_cells_membranes_and_transport]] sẽ không bắt đầu bằng “đây là nucleus, đây là mitochondria”. Nó sẽ hỏi từ first principles:
+
+> Nếu một network reaction muốn duy trì mình trong một environment biến động, nó cần chia không gian, kiểm soát boundary và tổ chức dòng vật chất như thế nào?
