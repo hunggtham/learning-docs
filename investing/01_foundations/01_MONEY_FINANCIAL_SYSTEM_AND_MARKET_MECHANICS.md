@@ -1,165 +1,248 @@
-# Tiền, hệ thống tài chính và market mechanics
+# Tiền, hệ thống tài chính và cơ chế vận hành thị trường
 
-> Mục tiêu của chapter này là xây nền cho toàn bộ thư viện đầu tư. Sau khi đọc xong, bạn không chỉ biết stock, bond hay ETF là gì, mà phải hiểu tiền đi qua hệ thống nào, quyền sở hữu và nghĩa vụ được ghi nhận ở đâu, order được khớp thế nào, chi phí ẩn xuất hiện ở đâu và vì sao market price có thể tách khỏi intrinsic value trong ngắn hạn.
+> Chương này xây nền cho toàn bộ thư viện đầu tư. Sau khi đọc xong, bạn không chỉ biết cổ phiếu, trái phiếu hay ETF là gì, mà phải hiểu tiền đi qua hệ thống nào, quyền sở hữu và nghĩa vụ được ghi nhận ở đâu, lệnh được khớp thế nào, chi phí ẩn xuất hiện ở đâu và vì sao giá thị trường có thể tách khỏi giá trị nội tại trong ngắn hạn.
 
 ## 1. Bắt đầu từ tiền thay vì bắt đầu từ cổ phiếu
 
-Tiền có ba chức năng cơ bản: phương tiện trao đổi (*medium of exchange*), đơn vị tính toán (*unit of account*) và công cụ lưu trữ sức mua (*store of value*). Chức năng thứ ba không hoàn hảo vì inflation làm sức mua thay đổi theo thời gian. Nếu tài sản tiền mặt tăng danh nghĩa 3% nhưng mức giá chung tăng 5%, nominal wealth tăng nhưng real purchasing power giảm.
+Tiền có ba chức năng cơ bản: phương tiện trao đổi (medium of exchange), đơn vị tính toán (unit of account) và phương tiện lưu giữ sức mua (store of value). Chức năng thứ ba không hoàn hảo vì lạm phát làm sức mua thay đổi theo thời gian.
 
-Real return có thể tính chính xác bằng:
+Nếu tiền mặt tăng danh nghĩa 3% nhưng mức giá chung tăng 5%, tài sản danh nghĩa tăng nhưng sức mua thực giảm.
 
-`Real return = (1 + nominal return) / (1 + inflation) - 1`
+```text
+Lợi suất thực = (1 + lợi suất danh nghĩa) / (1 + lạm phát) - 1
+```
 
-Vì vậy đầu tư không đơn giản là “kiếm nhiều tiền hơn”, mà là phân bổ purchasing power hiện tại để đạt purchasing power cao hơn hoặc phù hợp hơn trong tương lai.
+Vì vậy đầu tư không đơn giản là “kiếm nhiều tiền hơn”, mà là phân bổ sức mua hiện tại để đạt sức mua phù hợp hơn trong tương lai.
 
-Time value of money là nền tảng cho bond pricing, DCF, mortgage và hầu hết valuation. Một khoản tiền nhận hôm nay có giá trị khác cùng nominal amount nhận nhiều năm sau vì tiền hôm nay có thể được đầu tư và compounding. Nếu một dòng tiền tương lai là `CF_t` và discount rate là `r`, present value cơ bản là:
+Giá trị thời gian của tiền (time value of money) là nền cho định giá trái phiếu, DCF, khoản vay thế chấp và hầu hết mô hình định giá:
 
-`PV = CF_t / (1 + r)^t`
+```text
+PV = CF_t / (1 + r)^t
+```
 
-Discount rate không phải một con số tùy ý. Nó phản ánh time value, inflation expectations và risk premium mà investor yêu cầu.
+Tỷ lệ chiết khấu không phải con số tùy ý. Nó phản ánh giá trị của thời gian, kỳ vọng lạm phát và phần bù rủi ro mà nhà đầu tư yêu cầu.
 
-## 2. Tiền ngân hàng, deposits và credit creation
+## 2. Tiền gửi ngân hàng và tạo tín dụng
 
-Trong đời sống hiện đại, phần lớn “tiền” household sử dụng không phải banknotes mà là bank deposits. Khi bank cấp loan, nó thường đồng thời tạo một asset là khoản cho vay và một liability là deposit của khách hàng. Điều này giúp hiểu vì sao credit expansion có thể làm spending power tăng trước khi physical cash thay đổi tương ứng.
+Trong đời sống hiện đại, phần lớn “tiền” hộ gia đình sử dụng là tiền gửi ngân hàng chứ không phải tiền giấy. Khi ngân hàng cấp khoản vay, bảng cân đối thường đồng thời xuất hiện một tài sản là khoản cho vay và một khoản nợ là tiền gửi của khách hàng.
 
-Central-bank reserves là một lớp khác với household deposits. Reserves chủ yếu phục vụ settlement giữa banks và tương tác với central bank; retail investor không giữ reserves trực tiếp. Vì vậy câu “central bank in tiền” thường quá đơn giản nếu không phân biệt banknotes, reserves, deposits, lending và asset purchases.
+Dự trữ ngân hàng trung ương (central-bank reserves) là một lớp khác. Dự trữ chủ yếu phục vụ thanh toán giữa các ngân hàng và tương tác với ngân hàng trung ương; nhà đầu tư cá nhân không trực tiếp nắm dự trữ.
 
-Đối với investor, điều quan trọng không phải thuộc accounting của hệ thống tiền tệ ngay lập tức, mà hiểu rằng money, credit và collateral liên kết với nhau. Khi banks sẵn sàng lend, collateral values cao và credit spreads thấp, financial conditions dễ hơn. Khi lenders thắt standards, collateral giảm và borrowers phải deleverage, cùng nominal policy rate có thể tạo environment tài chính khắt khe hơn nhiều.
+Vì vậy câu “ngân hàng trung ương in tiền” thường quá đơn giản nếu không phân biệt tiền giấy, dự trữ, tiền gửi, hoạt động cho vay và chương trình mua tài sản.
+
+Điều quan trọng đối với nhà đầu tư là hiểu tiền, tín dụng và tài sản thế chấp liên kết với nhau. Khi ngân hàng sẵn sàng cho vay, giá trị tài sản thế chấp cao và chênh lệch tín dụng thấp, điều kiện tài chính thường dễ chịu hơn. Khi tiêu chuẩn cho vay bị siết, tài sản thế chấp giảm và người vay buộc phải giảm đòn bẩy, cùng một mức lãi suất chính sách có thể tạo môi trường tài chính khắc nghiệt hơn nhiều.
 
 ## 3. Hệ thống tài chính nối người có vốn với người cần vốn
 
-Households có thể tiết kiệm, companies cần vốn cho factory, R&D hoặc working capital, còn governments cần tài trợ expenditure. Financial system chuyển capital giữa các chủ thể thông qua banks, bond markets, equity markets, funds và derivatives.
+Hộ gia đình có thể tiết kiệm; doanh nghiệp cần vốn cho nhà máy, R&D hoặc vốn lưu động; chính phủ cần tài trợ chi tiêu. Hệ thống tài chính chuyển vốn giữa các chủ thể thông qua ngân hàng, thị trường trái phiếu, thị trường cổ phiếu, quỹ và công cụ phái sinh.
 
-Banking là *intermediation*: bank nhận funding và tạo loans. Capital markets cho phép issuer huy động trực tiếp hơn qua equity hoặc debt. Equity investor trở thành residual owner; bond holder là creditor với contractual claim. Preferred shares, subordinated debt và convertible securities nằm ở những vị trí khác nhau trong capital structure.
+Ngân hàng thực hiện chức năng trung gian tài chính (intermediation): nhận nguồn vốn và tạo khoản vay. Thị trường vốn cho phép tổ chức phát hành huy động trực tiếp qua vốn chủ sở hữu hoặc nợ.
 
-Nếu company phá sản, claims không ngang nhau. Secured creditors thường đứng trước unsecured creditors; subordinated debt đứng sau senior debt; common equity là residual claim và thường chịu loss đầu tiên. Vì vậy hai securities cùng issuer có thể có risk hoàn toàn khác nhau.
+Cổ đông phổ thông là người sở hữu quyền lợi còn lại (residual claim). Trái chủ là chủ nợ với quyền đòi thanh toán theo hợp đồng. Cổ phiếu ưu đãi, nợ thứ cấp và trái phiếu chuyển đổi nằm ở những vị trí khác nhau trong cấu trúc vốn.
 
-Return cũng không xuất hiện từ hư không. Equity return dài hạn cuối cùng phải liên quan tới cash generation, reinvestment và valuation. Bond return đến từ coupon, principal repayment và price change. Gold hay commodity không tạo contractual cash flow, nên return phụ thuộc scarcity, inventories, real rates, monetary regime và supply-demand.
+Nếu doanh nghiệp phá sản, các quyền đòi không ngang nhau. Chủ nợ có bảo đảm thường đứng trước chủ nợ không bảo đảm; nợ thứ cấp đứng sau nợ cao cấp; cổ phiếu phổ thông thường chịu tổn thất đầu tiên.
 
-## 4. Primary market: khi capital thực sự được huy động
+## 4. Lợi suất không xuất hiện từ hư không
 
-Primary market là nơi security mới được phát hành. IPO đưa shares mới ra công chúng; seasoned offering và rights offering tăng equity sau IPO; bond issuance tạo debt mới. Trong primary transaction, issuer nhận capital theo cấu trúc giao dịch.
+Lợi suất cổ phiếu dài hạn cuối cùng phải liên quan tới khả năng tạo tiền, tái đầu tư và mức định giá. Lợi suất trái phiếu đến từ coupon, hoàn trả gốc và thay đổi giá. Vàng hoặc hàng hóa không tạo dòng tiền hợp đồng, nên kết quả phụ thuộc cung–cầu, tồn kho, lãi suất thực và chế độ tiền tệ.
 
-Rights offering đặc biệt quan trọng vì existing shareholders có thể được quyền mua shares mới theo tỷ lệ. Nếu không tham gia, ownership percentage có thể bị dilution. Convertible bonds hoặc warrants cũng có thể tạo future dilution dù share count hiện tại chưa thay đổi.
+Một câu hỏi nền tảng cho mọi sản phẩm là:
 
-Corporate actions khác nhau có economic meaning khác nhau. Stock split thay số shares và price per share nhưng không tự tạo enterprise value. Buyback giảm share count nếu shares thực sự được retired hoặc held as treasury stock, nhưng chỉ tạo value khi mua lại với economics hợp lý và không làm balance sheet yếu đi. Dividend chuyển cash từ company sang shareholders; ex-dividend price adjustment không phải “free money”.
+```text
+Ai trả tiền cho tôi?
+Tiền đó đến từ hoạt động kinh tế nào?
+Tôi đang nhận rủi ro gì để đổi lấy khoản tiền đó?
+```
 
-## 5. Secondary market và vì sao nó vẫn quan trọng với doanh nghiệp
+## 5. Thị trường sơ cấp
 
-Secondary market là nơi investors giao dịch securities đã phát hành với nhau. Khi bạn mua Samsung Electronics, một KOSPI ETF hay một cổ phiếu HOSE trong phiên bình thường, phần lớn trường hợp tiền đi tới người bán chứ không trực tiếp tới issuer.
+Thị trường sơ cấp (primary market) là nơi chứng khoán mới được phát hành. IPO đưa cổ phiếu mới ra công chúng; phát hành thêm hoặc phát hành quyền mua làm tăng vốn chủ sở hữu; phát hành trái phiếu tạo khoản nợ mới.
 
-Tuy vậy secondary market ảnh hưởng cost of capital. Một security liquid và có transparent price discovery thường yêu cầu liquidity premium thấp hơn. Higher valuation cũng có thể làm future equity financing ít dilutive hơn. Bond spread thấp làm refinancing rẻ hơn. Vì vậy secondary-market conditions có thể quay lại ảnh hưởng real corporate decisions.
+Trong giao dịch sơ cấp, tổ chức phát hành thực sự nhận vốn.
 
-## 6. Exchange-traded và OTC khác nhau ở đâu?
+Phát hành quyền mua (rights offering) có thể cho cổ đông hiện hữu quyền mua cổ phiếu mới theo tỷ lệ sở hữu. Nếu không tham gia, tỷ lệ sở hữu có thể bị pha loãng. Trái phiếu chuyển đổi và chứng quyền cũng có thể tạo pha loãng trong tương lai dù số cổ phiếu hiện tại chưa tăng.
 
-Exchange cung cấp standardized rules, matching, surveillance và thường có centralized clearing. Listed stocks và standardized futures là ví dụ.
+Các hành động doanh nghiệp có ý nghĩa khác nhau:
 
-Over-the-counter (*OTC*) market là nơi contract được giao dịch trực tiếp hoặc qua dealers thay vì một central limit order book duy nhất. FX forwards, swaps và nhiều bonds có thể giao dịch OTC. CFD retail thường là bilateral claim đối với broker/dealer chứ không phải ownership của underlying security.
+- chia tách cổ phiếu thay đổi số cổ phiếu và giá trên mỗi cổ phiếu nhưng không tự tạo thêm giá trị doanh nghiệp;
+- mua lại cổ phiếu chỉ tạo giá trị nếu giá mua hợp lý và không làm bảng cân đối yếu đi;
+- cổ tức chuyển tiền từ doanh nghiệp sang cổ đông; điều chỉnh giá ngày không hưởng quyền không phải “tiền miễn phí”.
 
-Điều này thay đổi risk. Với exchange-traded stock, investor quan tâm market, custody và settlement. Với OTC derivative, legal entity, collateral terms, counterparty quality và close-out rules có thể quan trọng ngang market view.
+## 6. Thị trường thứ cấp
 
-## 7. Exchange, broker, clearing house, custodian và depository
+Thị trường thứ cấp (secondary market) là nơi nhà đầu tư giao dịch chứng khoán đã phát hành với nhau. Khi mua cổ phiếu Samsung Electronics, ETF KOSPI hoặc cổ phiếu HOSE trong phiên thông thường, tiền chủ yếu đi tới người bán chứ không trực tiếp tới doanh nghiệp.
 
-Broker là gateway của investor nhưng không phải toàn bộ market infrastructure. Một order có thể đi qua broker risk checks và routing trước khi tới venue. Sau execution còn có clearing và settlement.
+Tuy vậy thị trường thứ cấp ảnh hưởng chi phí vốn. Chứng khoán thanh khoản tốt và khám phá giá minh bạch thường yêu cầu phần bù thanh khoản thấp hơn. Định giá cao hơn có thể giúp phát hành cổ phiếu mới ít pha loãng hơn. Chênh lệch trái phiếu thấp làm tái cấp vốn rẻ hơn.
 
-Central Counterparty (*CCP*) có thể đứng giữa buyer và seller đối với cleared products. Thay vì A trực tiếp phụ thuộc B, cả hai có obligations với clearing house. CCP quản lý risk qua margin, default fund và default-management procedures. Điều này giảm bilateral counterparty complexity nhưng không khiến systemic risk bằng zero.
+Vì vậy điều kiện thị trường thứ cấp có thể quay lại ảnh hưởng quyết định đầu tư thực của doanh nghiệp.
 
-Custodian giữ securities hoặc records tài sản theo legal structure. Central Securities Depository (*CSD*) hỗ trợ book-entry ownership và settlement. Segregation of client assets là khái niệm quan trọng: tài sản khách hàng cần được xử lý khác với tài sản của broker theo rules áp dụng. Investor nên hiểu mình đang mở account với legal entity nào, assets đứng tên/được custody ra sao và cơ chế bảo vệ khi intermediary gặp vấn đề.
+## 7. Giao dịch trên sở và giao dịch phi tập trung
 
-## 8. Từ order tới fill: bid, ask và spread
+Sở giao dịch cung cấp bộ quy tắc chuẩn hóa, hệ thống khớp lệnh, giám sát và thường có cơ chế bù trừ tập trung. Cổ phiếu niêm yết và futures chuẩn hóa là ví dụ.
 
-Bid là mức giá mua tốt nhất hiện tại; ask là giá bán tốt nhất. Spread là khoảng giữa hai mức. Nếu bid 99 và ask 100, một market buyer có thể phải trả gần 100 trong khi market seller nhận gần 99. Spread là cost của immediacy.
+Thị trường phi tập trung (over-the-counter, OTC) là nơi hợp đồng được giao dịch trực tiếp hoặc qua nhà tạo lập thay vì một sổ lệnh giới hạn tập trung duy nhất. FX forward, swap và nhiều trái phiếu có thể giao dịch OTC. CFD bán lẻ thường là quyền đòi song phương đối với môi giới/nhà tạo lập chứ không phải quyền sở hữu tài sản cơ sở.
 
-Spread không cố định. Nó thường rộng hơn khi liquidity thấp, volatility cao, news uncertainty lớn hoặc market maker inventory risk tăng. Vì vậy một strategy có vẻ profitable trên close prices có thể mất edge sau spread và slippage.
+Do đó với OTC, pháp nhân đối tác, điều khoản tài sản thế chấp, chất lượng đối tác và quy tắc đóng vị thế có thể quan trọng ngang với nhận định thị trường.
 
-Order book chứa resting limit orders. *Depth* cho biết quantity tại nhiều price levels. Một security có daily volume cao nhưng depth thấp ở thời điểm bạn trade vẫn có thể tạo market impact lớn.
+## 8. Môi giới, bù trừ, lưu ký và trung tâm lưu ký
 
-## 9. Market, limit, stop và stop-limit orders
+Môi giới (broker) là cổng vào thị trường của nhà đầu tư nhưng không phải toàn bộ hạ tầng. Lệnh có thể đi qua kiểm tra rủi ro và định tuyến trước khi tới địa điểm giao dịch. Sau khi khớp còn có bù trừ và thanh toán.
 
-Market order ưu tiên khả năng được fill, không bảo đảm exact price. Trong liquid market bình thường, slippage có thể nhỏ; khi gap hoặc panic, fill có thể rất xa last price.
+Đối tác bù trừ trung tâm (Central Counterparty, CCP) có thể đứng giữa người mua và người bán đối với sản phẩm được bù trừ tập trung. CCP quản lý rủi ro bằng ký quỹ, quỹ mặc định và quy trình xử lý thành viên vỡ nợ.
 
-Limit order đặt price constraint. Buyer không muốn trả cao hơn limit; seller không muốn bán thấp hơn limit. Đổi lại, order có thể không fill hoặc chỉ fill một phần.
+Tổ chức lưu ký (custodian) giữ tài sản hoặc hồ sơ quyền sở hữu theo cấu trúc pháp lý. Trung tâm lưu ký chứng khoán (Central Securities Depository, CSD) hỗ trợ ghi sổ và thanh toán.
 
-Stop order trở thành executable order khi trigger được chạm theo rules của venue/broker. Nó hữu ích để automate risk control nhưng không bảo đảm loss giới hạn chính xác tại stop price. Stop-limit kiểm soát price tốt hơn nhưng có risk không thoát được nếu market chạy qua limit.
+Tách biệt tài sản khách hàng là khái niệm quan trọng. Nhà đầu tư phải hiểu mình ký hợp đồng với pháp nhân nào, chứng khoán được giữ theo cấu trúc nào và cơ chế bảo vệ ra sao nếu trung gian gặp vấn đề.
 
-Time-in-force như DAY, GTC, IOC hay FOK mô tả thời gian và điều kiện order tồn tại. Naming/rules có thể khác giữa markets và brokers, nên investor phải đọc specification thực tế thay vì suy đoán từ tên.
+## 9. Từ lệnh tới khớp: bid, ask và spread
 
-## 10. Matching, price-time priority và auctions
+Giá mua tốt nhất (bid) là mức cao nhất người mua đang sẵn sàng trả. Giá bán tốt nhất (ask) là mức thấp nhất người bán đang sẵn sàng nhận. Chênh lệch mua bán (spread) là khoảng cách giữa hai mức.
 
-Nhiều electronic exchanges dùng logic gần với price-time priority: price tốt hơn được ưu tiên; trong cùng price, order vào trước thường được ưu tiên trước. Điều này giải thích vì sao đặt limit price giống best bid không có nghĩa bạn sẽ fill ngay: trước bạn có thể có một queue lớn.
+Nếu bid = 99 và ask = 100, người mua ngay có thể trả gần 100 còn người bán ngay nhận gần 99. Spread là chi phí của sự tức thời.
 
-Markets cũng dùng auctions cho opening, closing hoặc volatility interruptions. Auction gom orders rồi xác định clearing price tối đa hóa executable volume theo rules. Closing auction đặc biệt quan trọng với index funds vì benchmark thường dùng official close; index rebalance có thể tạo volume rất lớn vào cuối phiên.
+Spread thường rộng hơn khi thanh khoản thấp, biến động cao, bất định thông tin lớn hoặc nhà tạo lập chịu rủi ro tồn kho cao.
 
-## 11. Liquidity không chỉ là volume
+Sổ lệnh chứa các lệnh giới hạn đang chờ. Độ sâu (depth) cho biết khối lượng ở nhiều mức giá. Một chứng khoán có thanh khoản ngày cao nhưng độ sâu thấp đúng lúc bạn giao dịch vẫn có thể tạo trượt giá lớn.
 
-Liquidity có nhiều dimensions: spread hẹp, depth lớn, khả năng trade size đáng kể mà không move price nhiều, và khả năng market hồi phục sau order imbalance. Daily turnover chỉ là một chỉ báo.
+## 10. Market, limit, stop và stop-limit
 
-Slippage là khác biệt giữa expected và executed price. Market impact là phần price movement do chính order của bạn gây ra. Nếu position quá lớn so average traded value, exit risk có thể lớn hơn entry risk. Vì vậy position sizing phải gắn với liquidity chứ không chỉ conviction.
+Lệnh thị trường (market order) ưu tiên khả năng khớp, không bảo đảm giá chính xác. Khi thị trường có gap hoặc hoảng loạn, giá khớp có thể cách xa giá gần nhất.
 
-Một practical rule là luôn hỏi: nếu thesis sai trong một ngày xấu, mình có thể giảm position bằng cách nào? Nếu câu trả lời phụ thuộc “chắc sẽ có người mua”, liquidity risk chưa được quản lý.
+Lệnh giới hạn (limit order) đặt giới hạn giá nhưng có thể không khớp hoặc chỉ khớp một phần.
 
-## 12. Price discovery, information và flows
+Lệnh dừng (stop order) được kích hoạt khi điều kiện giá được thỏa mãn. Nó hữu ích để tự động hóa kiểm soát rủi ro nhưng không bảo đảm mức lỗ đúng bằng giá stop.
 
-Market price là equilibrium tạm thời giữa participants có information, horizon, leverage và constraints khác nhau. Nó không phải phép đo trực tiếp intrinsic value.
+Stop-limit kiểm soát giá tốt hơn sau khi kích hoạt nhưng tăng rủi ro không thoát được nếu thị trường chạy qua mức giới hạn.
 
-Pension fund có thể bán vì rebalancing; ETF phải mua vì index inclusion; leveraged fund có thể liquidate vì margin; market maker hedge inventory; company buyback shares; retail investors chase momentum. Những flows này có thể move price dù fundamental cash-flow forecast chưa thay đổi.
+Các điều kiện thời gian như DAY, GTC, IOC hoặc FOK mô tả lệnh tồn tại bao lâu và được phép khớp ra sao. Quy tắc có thể khác theo sở giao dịch và môi giới.
 
-Do đó price movement nên được phân rã thành ít nhất bốn câu hỏi: fundamentals có đổi không, discount rate có đổi không, positioning/flows có đổi không, và liquidity có đổi không. Đây là cách tránh suy luận “giá giảm nên business xấu” hoặc “giá tăng nên thesis đúng”.
+## 11. Ưu tiên giá–thời gian và đấu giá
 
-## 13. ETF NAV, premium/discount và creation-redemption
+Nhiều sở giao dịch điện tử sử dụng logic gần với ưu tiên giá–thời gian (price-time priority): giá tốt hơn được ưu tiên trước; trong cùng giá, lệnh vào trước thường được ưu tiên trước.
 
-ETF share giao dịch trên exchange nhưng fund đồng thời sở hữu hoặc replicate một basket. Net Asset Value (*NAV*) phản ánh value của assets trừ liabilities trên mỗi share theo methodology.
+Vì vậy đặt lệnh giới hạn đúng giá mua tốt nhất không có nghĩa sẽ được khớp ngay nếu trước bạn có hàng đợi lớn.
 
-Authorized Participants (*APs*) có thể create hoặc redeem ETF shares bằng basket/cash theo rules. Cơ chế arbitrage này thường giúp market price bám NAV, nhưng không phải lúc nào cũng hoàn hảo. Khi underlying đóng cửa, illiquid hoặc stressed, ETF price có thể khác indicative NAV đáng kể.
+Thị trường cũng có thể dùng đấu giá mở cửa, đóng cửa hoặc đấu giá sau ngắt biến động. Đấu giá gom nhiều lệnh rồi tìm mức giá giúp khớp khối lượng lớn nhất theo quy tắc.
 
-Vì vậy premium không có nghĩa ETF “tốt hơn”, discount không tự động là bargain. Cần biết underlying đang price được không, NAV stale không, spread bao nhiêu và creation/redemption hoạt động bình thường không.
+Đấu giá đóng cửa đặc biệt quan trọng với quỹ chỉ số vì nhiều chỉ số dùng giá đóng cửa chính thức làm mốc.
 
-## 14. Settlement, clearing và failed settlement
+## 12. Thanh khoản không chỉ là khối lượng giao dịch
 
-Trade date là ngày execution; settlement là lúc cash và securities obligations được hoàn tất theo cycle của market/product. Chu kỳ có thể T+1, T+2 hoặc khác và có thể thay đổi theo regulation.
+Thanh khoản gồm nhiều chiều:
 
-Investor không nên hard-code một cycle cho mọi market. Quan trọng hơn là hiểu unsettled cash, buying power và withdrawable cash không phải cùng một khái niệm.
+- chênh lệch mua bán hẹp;
+- độ sâu lớn;
+- khả năng giao dịch quy mô đáng kể mà không làm giá dịch chuyển quá mạnh;
+- khả năng thị trường phục hồi sau mất cân bằng lệnh.
 
-Settlement fails, operational errors hoặc holiday mismatch có thể tạo risk trong cross-border portfolios. Đây là lý do operational knowledge quan trọng với investor dùng nhiều brokers/currencies.
+Trượt giá (slippage) là chênh lệch giữa giá kỳ vọng và giá thực thi. Tác động thị trường (market impact) là phần biến động giá do chính lệnh của bạn tạo ra.
 
-## 15. Margin, collateral và leverage
+Nếu vị thế quá lớn so với giá trị giao dịch bình quân, rủi ro khi thoát có thể lớn hơn rủi ro khi vào.
 
-Margin là collateral, không phải maximum loss. Futures trader có thể post một phần notional nhưng chịu P/L trên toàn exposure. Khi mark-to-market loss làm equity xuống dưới maintenance threshold, broker/clearing system có thể yêu cầu thêm collateral hoặc liquidate.
+Một câu hỏi thực tế luôn phải trả lời được:
 
-Trong leveraged account, path matters. Một position cuối cùng quay về entry price vẫn có thể bị forced liquidation giữa đường nếu drawdown vượt collateral capacity.
+> Nếu luận điểm sai trong một ngày thị trường xấu, tôi có thể giảm vị thế bằng cách nào?
 
-Leverage vì vậy phải được đánh giá qua notional exposure, stress loss và liquidity of collateral, không chỉ qua “margin required”.
+## 13. Khám phá giá, thông tin và dòng lệnh
 
-## 16. Short selling và securities lending
+Giá thị trường là trạng thái cân bằng tạm thời giữa những người tham gia có thông tin, thời hạn, đòn bẩy và ràng buộc khác nhau. Nó không phải phép đo trực tiếp của giá trị nội tại.
 
-Để short cash stock, trader thường phải borrow shares, bán chúng rồi sau này mua lại để return lender. Borrow fee, availability và recall risk là part of economics.
+Quỹ hưu trí có thể bán để tái cân bằng; ETF phải mua do thay đổi chỉ số; quỹ dùng đòn bẩy có thể bị thanh lý do ký quỹ; nhà tạo lập phòng vệ tồn kho; doanh nghiệp mua lại cổ phiếu; nhà đầu tư cá nhân đuổi theo động lượng.
 
-Short seller có asymmetric risk vì downside của long stock giới hạn ở zero nhưng short loss về lý thuyết có thể tăng khi price tăng. Short squeeze xảy ra khi rising price, recalls hoặc risk limits buộc shorts cover, tạo additional buying.
+Do đó khi giá biến động, hãy tách bốn câu hỏi:
 
-Regulation về short selling khác theo jurisdiction và có thể thay đổi. Framework vĩnh viễn là: locate/borrow có tồn tại không, borrow cost là bao nhiêu, collateral requirement thế nào và forced-cover conditions là gì.
+```text
+Yếu tố cơ bản có thay đổi không?
+Tỷ lệ chiết khấu có thay đổi không?
+Vị thế và dòng vốn có thay đổi không?
+Thanh khoản có thay đổi không?
+```
 
-## 17. Circuit breakers, price limits và market interruptions
+## 14. ETF, NAV và cơ chế tạo–mua lại
 
-Markets dùng circuit breakers, volatility interruptions hoặc daily price limits để quản lý disorderly trading. Những cơ chế này không loại bỏ risk; chúng thay đổi timing của price discovery.
+Cổ phiếu ETF giao dịch trên sở nhưng quỹ đồng thời sở hữu hoặc mô phỏng một rổ tài sản. Giá trị tài sản ròng (Net Asset Value, NAV) phản ánh giá trị tài sản trừ nghĩa vụ trên mỗi chứng chỉ quỹ theo phương pháp tính.
 
-Price limit có thể khiến investor không exit được dù stop level đã bị xuyên về economic value. Trading halt có thể giữ position qua news mới. Vì vậy “có stop-loss” không đồng nghĩa luôn có khả năng thực thi stop.
+Thành viên tạo lập (Authorized Participant, AP) có thể tạo hoặc mua lại chứng chỉ ETF bằng rổ chứng khoán hoặc tiền mặt. Cơ chế chênh lệch giá này thường giúp giá ETF bám NAV.
 
-## 18. Operational và counterparty risk
+Tuy nhiên khi tài sản cơ sở đóng cửa, kém thanh khoản hoặc thị trường căng thẳng, giá ETF có thể lệch đáng kể khỏi NAV ước tính. Premium không có nghĩa ETF “tốt hơn”, discount không tự động là cơ hội rẻ.
 
-Investor thường tập trung market direction nhưng có thể mất tiền vì wrong account, wrong contract, phishing, broker failure, withdrawal restriction hoặc misunderstanding of product terms.
+## 15. Thanh toán, bù trừ và giao dịch thất bại
 
-Các controls nền tảng gồm 2FA, withdrawal whitelist nếu có, kiểm legal entity, đọc client-asset treatment, test withdrawal với amount nhỏ, lưu transaction records và tránh giữ excess collateral ở high-risk venues chỉ vì leverage cao.
+Ngày giao dịch và ngày thanh toán là hai khái niệm khác nhau. Chu kỳ có thể là T+1, T+2 hoặc khác tùy thị trường và có thể thay đổi theo quy định.
 
-## 19. Một execution checklist thực tế
+Không nên ghi nhớ cứng một chu kỳ cho mọi thị trường. Cần phân biệt tiền chưa thanh toán, sức mua, tiền có thể rút và chứng khoán đã có thể giao dịch.
 
-Trước khi đặt order, hãy xác định security/contract chính xác, venue, currency, position size, average daily liquidity, spread, expected slippage, order type, maximum acceptable execution price và exit plan. Với derivatives, thêm multiplier, tick value, expiry, settlement method, margin và overnight financing.
+Giao dịch thất bại (failed settlement) có thể phát sinh do thiếu tiền, thiếu chứng khoán, lỗi vận hành hoặc vấn đề đối tác. Trong thị trường bình thường đây có thể là sự cố nhỏ; trong khủng hoảng nó có thể trở thành rủi ro thanh khoản và đối tác.
 
-Sau execution, kiểm fill price, fees, settlement status và actual exposure. Nếu trade lớn, so implementation price với decision price để học market-impact cost.
+## 16. Cho vay chứng khoán và bán khống
 
-## 20. Mental model cuối cùng
+Bán khống đòi hỏi vay chứng khoán trước hoặc theo cơ chế được pháp luật cho phép. Người bán khống phải hoàn trả chứng khoán sau này và có thể phải bù cổ tức hoặc quyền lợi tương đương cho bên cho vay.
 
-Mỗi lần nhìn một sản phẩm tài chính, hãy tách nó thành năm layer:
+Chi phí vay thay đổi theo độ khan hiếm. Chứng khoán “khó vay” có thể có phí vay cao, bị thu hồi hoặc thiếu nguồn vay đúng lúc thị trường biến động.
 
-`Economic claim → Legal/counterparty structure → Market/liquidity → Execution/settlement → Portfolio risk`
+Lợi nhuận lý thuyết của bán khống bị giới hạn ở mức giá về 0, còn tổn thất có thể rất lớn nếu giá tăng. Vì vậy sizing và thanh khoản quan trọng hơn việc chỉ có quan điểm “cổ phiếu đắt”.
 
-Nếu không giải thích được cả năm layer, bạn chưa thực sự hiểu sản phẩm dù biết ticker và chart. Market mechanics không phải kiến thức phụ của investing; nó là cơ chế biến thesis thành exposure thực tế.
+## 17. Đòn bẩy và ký quỹ
+
+Đòn bẩy làm phóng đại cả lợi nhuận và tổn thất. Ký quỹ là tài sản bảo đảm, không phải thước đo trực tiếp của quy mô rủi ro.
+
+Khi giá giảm, vốn chủ tài khoản giảm và môi giới/sở giao dịch có thể tăng yêu cầu ký quỹ. Nhà đầu tư có thể bị buộc giảm vị thế đúng lúc thanh khoản xấu nhất.
+
+Đây là lý do một luận điểm đúng cuối cùng vẫn có thể thất bại nếu đường đi của giá vượt khả năng sống sót của tài khoản.
+
+## 18. Ngắt giao dịch, giới hạn giá và rủi ro gap
+
+Sở giao dịch có thể sử dụng ngắt mạch (circuit breaker), tạm dừng hoặc giới hạn biên độ để giảm giao dịch hỗn loạn. Các cơ chế này không xóa rủi ro; chúng chỉ thay đổi cách giá được khám phá theo thời gian.
+
+Stop-loss không bảo đảm thực thi trước khi thị trường bị ngắt hoặc khóa ở giới hạn giá. Vì vậy quản trị rủi ro phải tính đến kịch bản không thể thoát đúng mức dự kiến.
+
+## 19. Quyền sở hữu thụ hưởng và rủi ro trung gian
+
+Trong nhiều cấu trúc, tên nhà đầu tư có thể không trực tiếp xuất hiện ở tầng trung tâm lưu ký. Tài sản có thể được giữ qua tài khoản tổng (omnibus) hoặc cấu trúc nominee.
+
+Điều cần hiểu là quyền sở hữu thụ hưởng, cách tách tài sản khách hàng, chuỗi lưu ký, pháp nhân môi giới và cơ chế giải quyết khi một trung gian phá sản.
+
+Không nên chỉ dựa vào thương hiệu của ứng dụng giao dịch.
+
+## 20. Giá thị trường và giá trị nội tại
+
+Giá thị trường có thể tách khỏi giá trị nội tại trong ngắn hạn do thanh khoản, dòng vốn, yêu cầu ký quỹ, vị thế, tâm lý hoặc hạn chế bảng cân đối của nhà tạo lập.
+
+Nhưng “giá sai” không có nghĩa nó sẽ sửa ngay. Nhà đầu tư cần đủ thanh khoản và thời gian để sống qua khoảng cách giữa luận điểm và thời điểm thị trường cập nhật.
+
+## 21. Checklist trước khi đặt lệnh
+
+Trước khi mua bất kỳ sản phẩm nào, cần trả lời:
+
+```text
+Tôi đang sở hữu quyền lợi pháp lý nào?
+Ai là đối tác hoặc trung gian?
+Tài sản được lưu ký ở đâu?
+Sản phẩm giao dịch trên sở hay OTC?
+Thanh khoản bình thường và thanh khoản khi căng thẳng ra sao?
+Spread, phí và tác động thị trường là bao nhiêu?
+Chu kỳ thanh toán thế nào?
+Có dùng đòn bẩy / ký quỹ không?
+Có rủi ro vay chứng khoán / đối tác / tài sản thế chấp không?
+Nếu cần thoát gấp, lệnh nào phù hợp?
+```
+
+## 22. Mô hình tư duy cuối cùng
+
+Mỗi giao dịch nên được nhìn theo chuỗi:
+
+```text
+Tiền / Nguồn vốn
+→ Quyền lợi pháp lý
+→ Sản phẩm
+→ Sở giao dịch / OTC
+→ Môi giới
+→ Khớp lệnh
+→ Bù trừ
+→ Thanh toán
+→ Lưu ký
+→ Thanh khoản / Chi phí
+→ Quyền sở hữu cuối cùng
+```
+
+Hiểu chuỗi này giúp tránh một lỗi phổ biến: tập trung hoàn toàn vào dự báo giá nhưng không hiểu mình đang nắm quyền gì, qua pháp nhân nào và có thể mất tiền ở lớp vận hành nào.
