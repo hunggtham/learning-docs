@@ -68,9 +68,9 @@ Modern AI application thường thêm external retrieval, tools, memory, verific
 ├── 06_deep_learning_architectures/         ✅ complete
 ├── 07_natural_language_processing/         ✅ complete
 ├── 08_large_language_models/               ✅ complete
-├── 09_retrieval_and_rag/                   ← next
-├── 10_agents_and_ai_systems/
-├── 11_reinforcement_learning/
+├── 09_retrieval_and_rag/                   ✅ complete
+├── 10_agents_and_ai_systems/               ✅ complete
+├── 11_reinforcement_learning/              ← next
 ├── 12_computer_vision/
 ├── 13_speech_audio_and_multimodal/
 ├── 14_data_for_ai/
@@ -93,16 +93,20 @@ Machine Learning    ≠ Deep Learning
 LLM                 ≠ RAG
 RAG                 ≠ Agent
 Agent               ≠ Workflow
+Tool Calling        ≠ Agent
+Memory              ≠ Context Window
+State               ≠ Conversation Transcript
 Prompt              ≠ Security Boundary
 Model Probability   ≠ Truth Probability
 Vector Similarity   ≠ Semantic Truth
 Fine-tuning         ≠ Knowledge Database
 Long Context        ≠ Persistent Memory
+Model says “done”   ≠ Verified completion
 ```
 
 ## Terminology convention
 
-Thuật ngữ quan trọng giữ English term, giải thích bằng tiếng Việt và thêm 한국어 용어 khi hữu ích trong môi trường Hàn Quốc, ví dụ `inference (추론 / suy luận)`, `training (학습 / huấn luyện)`, `embedding (임베딩 / biểu diễn vector)`, `retrieval (검색 / truy xuất)`.
+Thuật ngữ quan trọng giữ English term, giải thích bằng tiếng Việt và thêm 한국어 용어 khi hữu ích trong môi trường Hàn Quốc, ví dụ `inference (추론 / suy luận)`, `training (학습 / huấn luyện)`, `embedding (임베딩 / biểu diễn vector)`, `retrieval (검색 / truy xuất)`, `agent (에이전트 / tác nhân)`.
 
 ## Learning principle
 
