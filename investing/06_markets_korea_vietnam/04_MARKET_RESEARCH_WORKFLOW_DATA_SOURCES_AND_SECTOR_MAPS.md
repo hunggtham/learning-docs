@@ -1,321 +1,525 @@
 # 04 — Market Research Workflow, Data Sources và Sector Maps cho Hàn Quốc & Việt Nam
 
-> Chương này biến toàn bộ kiến thức của domain thị trường thành một quy trình research lặp lại được. Mục tiêu là khi mở một mã ở Hàn Quốc hoặc Việt Nam, bạn biết phải kiểm tra dữ liệu nào trước, dữ liệu nào sau, nguồn nào ưu tiên và cách nối macro với company fundamentals mà không bị ngập trong tin tức.
+> Chapter này biến toàn bộ knowledge library thành một quy trình research lặp lại được. Mục tiêu là khi mở một stock, ETF hoặc sector ở Hàn Quốc hay Việt Nam, bạn biết phải hỏi gì trước, dữ liệu nào là leading/lagging, nguồn nào đáng tin hơn và khi nào một headline thực sự thay đổi thesis. Research tốt không phải đọc thật nhiều tin; nó là giảm uncertainty theo thứ tự hợp lý.
 
-## 1. Research bắt đầu từ câu hỏi, không bắt đầu từ chart
+## 1. Research bắt đầu bằng Question Tree
 
-Khi chọn một stock hoặc ETF, bước đầu tiên không nên là phóng to chart rồi tìm support. Research tốt bắt đầu bằng câu hỏi kinh tế: business kiếm tiền từ đâu, demand driver là gì, balance sheet chịu risk gì và valuation đang price kỳ vọng nào.
+Không nên mở chart rồi cố tìm câu chuyện phù hợp price action. Hãy bắt đầu bằng question tree:
 
-Sau đó mới xác định market-level context. Với Korea, câu hỏi thường liên quan exports, semiconductor cycle, KRW, US yields và BOK. Với Vietnam, credit growth, banking liquidity, property cycle, VND, domestic rates, FDI và public investment thường quan trọng hơn.
+```text
+Business kiếm tiền bằng cơ chế nào?
+Driver nào quyết định revenue/margin?
+Cycle đang ở đâu?
+Balance sheet chịu risk gì?
+Market đang price expectation nào?
+Catalyst nào có thể làm expectation đổi?
+Data nào sẽ falsify thesis?
+```
 
-Cuối cùng mới đến timing và technical structure nếu chiến lược của bạn cần.
+Question tree giúp biết data nào cần đọc và data nào chỉ là noise.
 
-## 2. Source Hierarchy
+## 2. Research có ba tầng
 
-Nguồn dữ liệu nên được xếp theo độ gần với nơi tạo thông tin.
+Một stock chịu tác động từ **company**, **sector** và **macro/market structure**. Sai lầm phổ biến là nhảy từ macro headline thẳng tới buy/sell mà không qua transmission channel.
 
-Primary sources là exchange, regulator, central bank, statistical agency và company filings. Secondary sources là sell-side research, media và data aggregators. Social media là lớp ý tưởng, không phải nguồn xác nhận cuối.
+Framework:
 
-Một headline “BOK sắp đổi chính sách” không nên được coi là fact trước khi bạn đọc statement, minutes hoặc speech chính thức. Một tin “company profit tăng mạnh” phải quay về earnings release và notes.
+```text
+Global Macro
+→ Country Macro
+→ Sector Economics
+→ Company Fundamentals
+→ Expectations / Valuation
+→ Flow / Liquidity
+→ Price
+```
 
-Nguyên tắc này giảm narrative error.
+## 3. Primary Source Hierarchy
 
-## 3. Research Workflow cho một Korean Stock
+Primary sources gồm company filings, exchange disclosures, regulator, central bank và statistical agency. Đây là nơi fact được tạo hoặc công bố chính thức.
 
-Bắt đầu bằng business description và segment revenue. Xác định company bán gì, thị trường địa lý nào quan trọng và key input costs là gì.
+Secondary research, media và data vendors giúp tổng hợp/interpret. Social media hữu ích để phát hiện idea nhưng không nên là final confirmation.
 
-Tiếp theo đọc financials vài năm để hiểu revenue cycle, margins, cash flow, capex và debt. Với semiconductor, theo inventory và memory pricing. Với auto, theo volume, ASP, incentives và FX. Với banks, theo NIM, asset quality và capital.
+## 4. Korea Primary Sources
 
-Sau đó đọc valuation relative history và peers. Cuối cùng mới thêm macro overlay: USD/KRW, exports, BOK, oil, China và US cycle.
+Một research stack Hàn Quốc thường bắt đầu từ company disclosures/DART, KRX market data, BOK monetary/financial data, Statistics Korea và trade/export releases từ authorities liên quan.
 
-Research note nên kết thúc bằng thesis, catalysts, risks và invalidation.
+Không cần nhớ mọi portal ngay; cần nhớ source hierarchy: filing trước commentary.
 
-## 4. Research Workflow cho một Vietnamese Stock
+## 5. Vietnam Primary Sources
 
-Ở Vietnam, first step cũng là business, nhưng governance và liquidity thường cần attention lớn hơn.
+Với Vietnam, ưu tiên company/exchange disclosures, HOSE/HNX/VNX/VSDC-related information, SSC, SBV và General Statistics Office/trade/public-investment sources tùy data.
 
-Kiểm tra listing venue, free float, average trading value và ownership concentration. Sau đó đọc financials và cash flow.
+Governance/disclosure quality khác nhau giữa companies nên notes và audited statements đặc biệt quan trọng.
 
-Với banks, asset quality quan trọng hơn headline profit. Với property developers, legal status, presales, debt maturity và operating cash flow quan trọng hơn land-bank marketing. Với construction/materials, backlog, public investment và working capital quan trọng.
+## 6. Source Timestamp
 
-Sau đó nối với credit policy, VND, domestic rates và sector cycle.
+Ghi ngày công bố và period của data. “Exports tháng 8 công bố tháng 9” khác “news ngày hôm nay”.
 
-## 5. Sector Map của Hàn Quốc
+Một dataset có thể revised; research note nên giữ original release và revision khi surprise quan trọng.
 
-Korea market chịu ảnh hưởng lớn từ semiconductors, autos, batteries, shipbuilding, industrials, chemicals, financials, internet/platforms, biotech và consumer brands.
+## 7. Fact, Estimate và Opinion phải tách riêng
 
-Semiconductor là sector có global earnings cycle mạnh. Memory prices, HBM demand, foundry utilization và equipment capex có thể tác động rộng tới KOSPI.
+Trong notebook, label ba loại:
 
-Autos nhạy với global demand, USD/KRW, incentives, EV transition và tariffs. Shipbuilding nhạy với order cycle, LNG/carrier demand và steel cost. Batteries nhạy EV demand, raw materials và global industrial policy.
+```text
+Fact: dữ liệu đã công bố.
+Estimate: forecast/model của analyst.
+Opinion: interpretation/thesis.
+```
 
-Financials nhạy domestic rates, housing và credit. Internet/platform companies nhạy regulation, advertising và consumer activity.
+Nhiều sai lầm xảy ra khi analyst biến opinion thành fact qua repeated narrative.
 
-Sector map giúp bạn hiểu index move đến từ đâu thay vì chỉ nhìn KOSPI total return.
+## 8. Research Notebook là Living Document
 
-## 6. Sector Map của Việt Nam
+Mỗi thesis nên có version date, key assumptions, evidence, counter-evidence và invalidation. Khi data mới tới, update assumption thay vì viết note mới không liên kết.
 
-Vietnam market có trọng số lớn ở banks, property, consumer, industrials, materials, securities, utilities và energy.
+Versioning giúp tránh hindsight bias.
 
-Banks là trung tâm vì vừa lớn trong index vừa là kênh credit chính. Property liên kết banks, corporate bonds, construction và household wealth. Securities companies nhạy market turnover, margin lending và capital-market sentiment.
+## 9. Base Rate trước Story
 
-Industrials có thể hưởng FDI và public investment nhưng phải tách logistics, industrial parks, construction và manufacturing suppliers.
+Trước khi tin một turnaround, hỏi historical base rate: bao nhiêu companies trong ngành thực sự phục hồi margin sau capacity boom? Bao nhiêu property projects monetize đúng timeline?
 
-Consumer names nhạy income growth và domestic demand. Energy và utilities có policy/regulatory features riêng.
+Base rate làm narrative realistic hơn.
 
-## 7. Semiconductor Dashboard cho Korea
+## 10. Research Workflow cho Korean Stock
 
-Một semiconductor dashboard nên có memory prices, HBM demand signals, export data, inventory, capex, utilization và global semiconductor indices.
+Bắt đầu segment revenue/geography, cost structure và capital intensity. Sau đó đọc 5–10 năm financial/cycle, key KPIs, balance sheet, peer positioning và valuation.
 
-Company earnings thường lag cycle signals. Stock price có thể bottom khi earnings vẫn xấu nếu market anticipates inventory normalization.
+Cuối cùng mới overlay KRW, exports, BOK, China/US cycle và sector flows.
 
-Vì vậy investor không nên đợi headline “profit recovery confirmed” mới bắt đầu research.
+## 11. Research Workflow cho Vietnamese Stock
 
-## 8. Auto Dashboard cho Korea
+Ngoài business economics, kiểm ownership, related-party exposure, free float, disclosure consistency, debt maturity và cash conversion sớm hơn.
 
-Theo global unit sales, US/EU demand, incentives, EV share, FX và raw-material costs.
+Với illiquid names, market/liquidity risk là một phần thesis chứ không phải execution detail cuối cùng.
 
-KRW yếu có thể hỗ trợ translated revenue của exporters nhưng imported components và hedging policy ảnh hưởng net benefit.
+## 12. Company Driver Tree
 
-Tariff và local-production policies cũng có thể thay competitive economics.
+Ví dụ đơn giản:
 
-## 9. Bank Dashboard cho Korea
+```text
+Revenue = Volume × Price × Mix × FX
+EBIT = Revenue × Margin
+FCF = EBIT after tax + D&A - Capex - ΔWorking Capital
+```
 
-Theo BOK policy rate, funding/deposit cost, NIM, household lending, property prices, delinquency và capital ratios.
+Mỗi sector cần driver tree riêng. Research tốt cố giảm earnings thành vài variables có causal meaning.
 
-Higher rates không luôn bullish banks. NIM có thể tăng nhưng credit cost và funding competition cũng tăng.
+## 13. Leading vs Lagging Indicators
 
-Household debt là một structural variable quan trọng trong Korea.
+Reported earnings thường lag. Orders, inventory, utilization, pricing, customer traffic hoặc loan delinquency có thể lead.
 
-## 10. Bank Dashboard cho Vietnam
+Mục tiêu không phải tìm một perfect leading indicator mà hiểu sequencing.
 
-Theo credit growth, NIM, CASA, deposit rates, NPL, Group 2 loans, provision coverage và exposure to property/corporate bonds.
+## 14. Expectations Matter
 
-Một bank tăng profit nhờ giảm provisions trong khi asset quality deteriorates có earnings quality khác bank tăng profit nhờ core lending growth và stable credit cost.
+Stock phản ứng với surprise relative expectations. Good data đã priced có thể không tăng; mediocre data tốt hơn fear có thể rally.
 
-Credit quota và policy transmission cũng có thể ảnh hưởng growth khác nhau giữa banks.
+Research note nên ghi “market likely expects what?” chứ không chỉ “fundamentals good/bad”.
 
-## 11. Property Dashboard cho Vietnam
+## 15. Consensus và Revisions
 
-Property analysis cần legal progress, presales, inventory composition, debt maturity, bond repayment, operating cash flow và project handover schedule.
+Consensus level quan trọng, nhưng earnings **revision direction** thường cho thấy information đang được incorporated.
 
-Land bank chỉ có value khi có khả năng chuyển thành project economic cash flow.
+Theo dõi upward/downward revisions theo sector giúp nhận diện breadth của cycle.
 
-Nếu legal bottleneck kéo dài, reported asset value có thể không phản ánh timing risk.
+## 16. Valuation Context
 
-## 12. Securities Companies ở Vietnam
+Historical average multiple không đủ. Multiple phải đặt cùng rates, cycle, ROIC và growth expectation.
 
-Brokerage companies kiếm tiền từ brokerage fees, margin lending, proprietary trading và investment banking tùy business model.
+Cyclical P/E thấp ở peak earnings có thể là value trap.
 
-Khi market turnover tăng, brokerage và margin revenue thường được hỗ trợ. Nhưng proprietary book tạo earnings volatility.
+## 17. Relative Valuation
 
-Capital adequacy và funding cost quan trọng nếu company mở rộng margin lending nhanh.
+So với peers, own history và alternative assets. Cheap relative peer có thể reflect lower quality or governance.
 
-## 13. Industrial Park và FDI Theme
+Valuation gap chỉ là starting question: vì sao market discount?
 
-Industrial-park companies có thể hưởng lợi từ FDI manufacturing relocation.
+## 18. Reverse Expectations
 
-Nhưng thesis phải đi sâu hơn headline “FDI tăng”. Investor cần xem land available, occupancy, rental rates, infrastructure, legal approvals và customer mix.
+Thay vì hỏi fair value là bao nhiêu, hỏi current price đòi revenue/margin/growth nào.
 
-China+1 là structural theme nhưng valuation vẫn quyết định future return.
+Reverse DCF/earnings bridge hữu ích để biết debate thật nằm ở assumption nào.
 
-## 14. Public Investment Theme
+## 19. Korea Sector Map
 
-Public investment ảnh hưởng contractors, materials và infrastructure-related firms.
+Korea broad market có semiconductor, autos, batteries, shipbuilding/industrials, chemicals/materials, financials, platforms, biotech, consumer và utilities.
 
-Nhưng budget announcement khác actual disbursement. Company có backlog nhưng margin thấp hoặc receivables lớn vẫn có cash-flow risk.
+Each sector maps differently to global growth, China, USD/KRW and rates.
 
-Research phải nối public spending data với company-specific project exposure.
+## 20. Vietnam Sector Map
 
-## 15. Export Data cho Korea
+Vietnam market heavily influenced by banks, property, securities, consumer, industrial parks/manufacturing, materials, utilities/energy and technology.
 
-Korean export data là high-frequency macro signal quan trọng.
+Domestic credit/liquidity channel thường quan trọng hơn Korea.
 
-Semiconductor exports giúp gauge global tech cycle. Exports by destination giúp hiểu US/China exposure.
+## 21. Korea Semiconductor Dashboard
 
-Nhưng nominal export growth có thể chịu price effect và FX. Volume, unit price và product mix cần context.
+Theo memory/HBM pricing, shipments, inventory, utilization, capex, equipment orders, semiconductor exports, global AI/server capex và customer concentration.
 
-## 16. Trade Data cho Vietnam
+Company stock may turn before reported earnings due expectations.
 
-Exports/imports giúp hiểu manufacturing demand, input demand và trade balance.
+## 22. Korea Auto Dashboard
 
-Strong exports có thể hỗ trợ growth và FX, nhưng nếu imports của machinery/raw materials tăng trước production boom, trade balance tạm xấu không nhất thiết negative.
+Theo global unit sales, incentives, ASP/mix, EV share, inventories, regional market share, USD/KRW, warranty costs và tariff/localization policies.
 
-Trade structure cần đọc cùng FDI sector.
+Volume alone can mislead if incentive cost erodes margin.
 
-## 17. FX Dashboard: USD/KRW
+## 23. Korea Battery Dashboard
 
-USD/KRW chịu US-Korea rate expectations, DXY, exports, oil imports, China risk và foreign portfolio flows.
+Theo EV demand, cell utilization, raw materials, cathode/anode pricing, customer contracts, policy/subsidies and capacity additions.
 
-Không nên giải thích mỗi move bằng một variable duy nhất.
+Overcapacity can offset structural growth.
 
-Nếu USD/KRW tăng trong global risk-off, Korean exporters có translation benefit nhưng foreign-equity sentiment có thể xấu. Net effect lên stocks phụ thuộc sector.
+## 24. Korea Shipbuilding Dashboard
 
-## 18. FX Dashboard: USD/VND
+Order intake, backlog, newbuild prices, vessel mix, steel/labor costs, KRW and delivery schedule matter.
 
-VND được quản lý trong framework khác KRW và biến động market không hoàn toàn tự do như KRW.
+Earnings lag order cycle because construction lasts years.
 
-Theo SBV signals, interbank rates, DXY, trade balance, FDI, reserves context và domestic liquidity.
+## 25. Korea Bank Dashboard
 
-FX pressure có thể giới hạn room cho monetary easing nếu policy makers ưu tiên stability.
+BOK rate, deposit competition, NIM, household loans, mortgage/property conditions, delinquency, credit cost, CET1 and shareholder-return policy.
 
-## 19. Foreign Flow ở Korea
+Higher rates help NIM only until funding/credit stress dominates.
 
-Foreign investors có ảnh hưởng lớn tới KOSPI large caps.
+## 26. Korea Insurance Dashboard
 
-Foreign buying/selling nên đọc cùng KRW và semiconductor cycle. Large outflow có thể đến từ global allocation hoặc hedging, không nhất thiết company-specific view.
+Premium growth, loss ratio/combined ratio, investment yield, duration mismatch, capital adequacy and accounting/regulatory changes.
 
-Index rebalancing cũng tạo technical flows.
+Rates affect both assets and long liabilities.
 
-## 20. Foreign Flow ở Vietnam
+## 27. Korea Platform Dashboard
 
-Foreign flow có visibility cao nhưng domestic investors và liquidity vẫn có vai trò rất lớn.
+MAU/DAU, GMV, take rate, ad load, ARPU, cloud/AI capex, competition and regulation.
 
-FTSE/MSCI rebalance, ETF creation/redemption và foreign-room constraints có thể tạo flows không phản ánh fundamental view.
+User growth without monetization quality can destroy unit economics.
 
-Đừng coi một ngày foreign net sell là thesis change tự động.
+## 28. Vietnam Bank Dashboard
 
-## 21. Market Breadth
+Credit growth, NIM, CASA, deposit growth/rates, NPL, Group 2, provision coverage, credit cost, CAR/capital and property/bond exposure.
 
-Index có thể tăng trong khi majority stocks giảm nếu mega caps tăng mạnh.
+Profit growth driven by lower provisioning while early delinquencies rise should be treated differently from core improvement.
 
-Breadth gồm advance/decline, participation và sector leadership. Nó giúp biết rally broad hay narrow.
+## 29. Vietnam Property Dashboard
 
-Ở Korea, mega-cap semiconductor có thể kéo KOSPI. Ở Vietnam, banks hoặc large caps có thể làm VN-Index khác trải nghiệm mid-cap investors.
+Legal progress, presales, customer advances, handover schedule, inventory quality, debt/bond maturity, interest expense and operating cash flow.
 
-## 22. Liquidity và Turnover
+Land bank needs legal and financing path to become value.
 
-Liquidity không chỉ là volume. Cần xem trading value, spread và depth relative position size.
+## 30. Vietnam Securities Dashboard
 
-Vietnam daily price limits làm liquidity risk đặc biệt quan trọng trong panic vì stock có thể floor nhiều sessions với ít buyers.
+Market turnover, brokerage share, margin loans, funding cost, proprietary book, capital adequacy and investment-banking activity.
 
-Korean large caps thường deeper nhưng small caps vẫn có liquidity risk.
+Sector has high operating/market beta.
 
-## 23. Margin Data
+## 31. Vietnam Industrial Park Dashboard
 
-Margin debt có thể amplify both bull and bear phases.
+Leasable land, occupancy, rental rates, remaining lease term, new approvals, location/infrastructure, customer mix and FDI disbursement.
 
-Khi market tăng và brokers mở margin, buying power tăng. Khi prices giảm, forced deleveraging có thể tạo additional selling.
+Registered FDI headline alone is insufficient.
 
-Margin data là sentiment/financial-conditions signal, không phải standalone timing indicator.
+## 32. Vietnam Retail Dashboard
 
-## 24. Earnings Season Workflow
+Same-store sales, traffic, ticket, store openings/closures, inventory turns, gross margin, rent/labor and payback on new stores.
 
-Trước earnings, ghi consensus và key drivers. Sau report, so actual với expectation, nhưng đặc biệt đọc guidance.
+Store count growth can hide poor unit economics.
 
-Stock reaction phụ thuộc surprise và positioning. Company beat nhưng guidance thấp có thể giảm.
+## 33. Vietnam Export Manufacturing Dashboard
 
-Update model và thesis sau report thay vì chỉ ghi “beat/miss”.
+Orders, export volumes, customer/geographic concentration, labor cost, FX, freight and raw-material inputs.
 
-## 25. Central-Bank Meeting Workflow
+US/EU demand and trade policy can dominate local macro.
 
-Trước Fed, BOK hoặc SBV-relevant policy event, ghi market expectation.
+## 34. Vietnam Power / Utility Dashboard
 
-Sau event, không chỉ ghi rate decision. Đọc statement, inflation assessment, growth view, financial-stability concerns và forward guidance.
+Demand growth, generation mix, hydrology/fuel, tariff/payment terms, capex/debt and regulatory framework.
 
-Theo phản ứng của 2Y yield, currency và equity sectors để hiểu market interpretation.
+Revenue growth does not always translate cash if receivables/payment structure weak.
 
-## 26. Geopolitical Shock Workflow
+## 35. Korea Export Data
 
-Khi conflict xảy ra, xác định geography và transmission channel.
+Exports offer relatively high-frequency view of global industrial cycle. Decompose product/destination and price vs volume when possible.
 
-Oil route bị đe dọa khác cyberattack hay tariff announcement. Sau đó map winners/losers theo input costs, exports và FX.
+Semiconductor export value can rise via price even before volume improves.
 
-Korea là energy importer nên oil shock có macro sensitivity cao. Vietnam impact khác theo energy structure và sector mix.
+## 36. Vietnam Trade Data
 
-## 27. Cross-Market Confirmation
+Exports/imports reveal manufacturing cycle, equipment/raw-material demand and trade balance.
 
-Một thesis mạnh hơn khi nhiều markets xác nhận cùng story.
+Rising machinery imports may precede capacity expansion and should not automatically be read as negative trade deterioration.
 
-Ví dụ Korea semiconductor thesis được hỗ trợ nếu memory prices, semiconductor exports, company guidance và related global indices cùng cải thiện.
+## 37. PMI
 
-Nếu stock tăng nhưng earnings revisions và exports yếu, rally có thể chủ yếu valuation/flow-driven.
+PMI diffusion indices show breadth/direction, not exact output growth. New orders, export orders, employment, inventories and prices often matter more than headline 50.
 
-## 28. Relative Strength
+Compare with hard data to avoid survey-only conclusions.
 
-Relative strength so stock hoặc sector với benchmark.
+## 38. Inflation
 
-Company tăng 5% nhưng sector tăng 20% là underperformance. Company giảm 5% trong market giảm 20% có relative strength tốt.
+Separate food/energy, housing, goods/services and wage-sensitive components. For Korea/Vietnam, imported inflation and FX can be material.
 
-Relative analysis giúp tách company-specific information khỏi broad beta.
+Headline disinflation from energy has different policy implication than broad service disinflation.
 
-## 29. Valuation Regime
+## 39. Credit Growth
 
-Không chỉ so P/E hiện tại với historical average. Historical multiple phải đặt trong rate regime và earnings cycle.
+Credit expansion can support demand but quality matters. Rapid lending into low-productivity/property collateral can create future NPL.
 
-P/E 15x khi bond yield 1% khác P/E 15x khi yield 5%. Cyclical company P/E thấp ở peak earnings có thể không rẻ.
+Track composition, lending standards and delinquency.
 
-## 30. Research Notebook Template
+## 40. Korea FX Dashboard
 
-Một research note tốt bắt đầu bằng business model và key drivers. Sau đó là financial trend, balance-sheet risk, valuation, macro sensitivity, catalysts, bear case và invalidation.
+USD/KRW relates to US-Korea rates, DXY, exports, oil imports, China/risk sentiment and foreign flows.
 
-Cuối note ghi những data series phải update định kỳ. Nhờ vậy thesis trở thành living document chứ không phải bài viết một lần.
+No single variable explains all moves; use multi-channel map.
 
-## 31. Watchlist có cấu trúc
+## 41. Vietnam FX Dashboard
 
-Watchlist không nên chỉ là 50 tickers.
+USD/VND should be read with SBV framework, interbank/deposit rates, DXY, trade balance, FDI, liquidity and reserves context.
 
-Mỗi mã cần lý do theo dõi, trigger cần chờ và valuation range. Nếu không có thesis hoặc trigger, mã chỉ tạo information noise.
+Managed currency requires policy interpretation, not free-float logic copied from KRW.
 
-Có thể chia watchlist theo core, cyclical, high-quality compounder, event-driven và speculative research.
+## 42. Foreign Flow Korea
 
-## 32. Weekly Market Review
+Foreign flow matters strongly in large caps, especially semiconductors. But distinguish strategic allocation, index rebalance, FX hedge and company-specific information.
 
-Weekly review nên kiểm tra macro changes, rates, FX, commodity, sector leadership và earnings revisions.
+One-day net flow rarely proves fundamental thesis.
 
-Sau đó xem portfolio exposures có thay đổi không. Nếu không có thesis change, không cần trade chỉ vì một tuần nhiều news.
+## 43. Foreign Flow Vietnam
 
-Review giúp tách learning khỏi impulsive action.
+Foreign flow is visible but domestic liquidity can dominate. ETF/index/reclassification mechanics can create technical flows.
 
-## 33. Monthly Macro Review
+Always compare flow with turnover and sector concentration.
 
-Monthly review phù hợp để cập nhật inflation trend, labor, PMI, credit, exports và policy path.
+## 44. Market Breadth
 
-Không nên thay macro thesis vì một data point. Trend và revisions quan trọng hơn.
+Track advance/decline, percentage above moving averages, new highs/lows, sector participation and equal-weight vs cap-weight index.
 
-Korea và Vietnam có data calendars khác nhau nên notebook cần local calendar riêng.
+Breadth tells whether index move is broad or mega-cap driven.
 
-## 34. Khi nào phải cập nhật Thesis?
+## 45. Turnover
 
-Thesis cần update khi key driver, capital structure, management, regulation hoặc valuation thay đổi đáng kể.
+Rising turnover confirms participation but can also indicate speculative leverage. Compare turnover with margin debt and sector leadership.
 
-Price move tự nó không luôn là thesis change. Nhưng price move có thể thay expected return vì valuation thay đổi.
+Turnover concentration in few speculative names has different meaning from broad institutional participation.
 
-Một stock tốt có thể trở thành khoản đầu tư kém khi price quá cao, và ngược lại.
+## 46. Margin / Leverage
 
-## 35. Research Failure Modes
+Margin increases buying power in up cycle and forced selling in down cycle. Track leverage as amplifier, not standalone timing tool.
 
-Confirmation bias khiến investor chỉ đọc sources ủng hộ thesis. Narrative fallacy biến một story hấp dẫn thành certainty. Overfitting dùng quá nhiều indicators để giải thích quá khứ. Authority bias tin analyst nổi tiếng mà không kiểm assumptions.
+In Vietnam price limits can intensify liquidation path.
 
-Cách phòng vệ là luôn viết bear case và invalidation trước khi mua.
+## 47. Market Microstructure
 
-## 36. Primary Sources nên dùng ở Korea
+Spread, depth, auction rules and price limits affect implementation. Fundamental thesis that requires immediate exit in illiquid stock is incomplete risk design.
 
-KRX dùng cho trading rules, listing và product information. Bank of Korea dùng cho rates, monetary policy và macro research. Government statistical sources dùng cho CPI, employment và national accounts. Company filings và investor relations dùng cho financials và guidance.
+Position size should reflect stressed liquidity.
 
-Khi dữ liệu thay đổi, primary source ưu tiên hơn blog hoặc social media.
+## 48. Earnings Season — Before Report
 
-## 37. Primary Sources nên dùng ở Vietnam
+Write consensus, key debate variables, what market price implies and scenarios. This prevents post-hoc interpretation.
 
-SSC, HOSE, HNX, VSDC và VNX cung cấp market/regulatory information tùy nội dung. State Bank cung cấp monetary-policy và banking information. National statistics source cung cấp macro data. Company/exchange disclosures cung cấp financial reporting.
+For cyclical names, estimate price/mix/utilization rather than only EPS.
 
-Các rule như settlement, tax và foreign-access có thể thay đổi nên phải kiểm hiện hành trước giao dịch thật.
+## 49. Earnings Season — After Report
 
-## 38. Data Hygiene
+Separate headline beat/miss from driver quality. Update model on volume, price, margin, working capital, capex and guidance.
 
-Cùng một metric từ hai websites có thể khác vì definition, currency, adjusted data hoặc reporting period.
+Then inspect market reaction vs expectation/positioning.
 
-Luôn ghi source, date và unit. Với valuation, ghi trailing hay forward. Với growth, ghi YoY hay QoQ. Với FX, ghi pair direction.
+## 50. Earnings Call
 
-Data hygiene nhỏ nhưng tránh rất nhiều analysis errors.
+Compare wording with prior quarters. Note KPI additions/removals, guidance confidence and questions management avoids.
 
-## 39. Từ Research tới Position Size
+Narrative drift can be an early signal.
 
-Research quality không tự quyết định position size. Position còn phụ thuộc uncertainty, liquidity, drawdown risk và portfolio correlation.
+## 51. Central-Bank Workflow
 
-High-conviction thesis ở illiquid small cap vẫn cần size nhỏ hơn broad ETF.
+Before Fed/BOK or relevant policy event, record current pricing. After decision, read statement, forecasts, press conference and reaction of front-end yields/currency/credit.
 
-Risk management là bước cuối của research workflow.
+The surprise may lie in guidance, not rate decision.
 
-## Kết luận
+## 52. Fiscal Policy Workflow
 
-Một investor tự nghiên cứu hiệu quả không cần theo dõi mọi dữ liệu. Cần biết đúng drivers cho từng market và sector, ưu tiên primary sources, cập nhật thesis theo một cadence rõ ràng và phân biệt macro beta với company alpha. Khi workflow được chuẩn hóa, news không còn là dòng thông tin hỗn loạn mà trở thành input có vị trí rõ trong hệ thống phân tích.
+Distinguish announced budget, approved budget and actual disbursement. Public-investment theme needs project pipeline and company exposure.
+
+Fiscal multiplier depends timing and supply bottlenecks.
+
+## 53. Regulatory Event Workflow
+
+Bank/property/telecom/platform/healthcare are regulation-sensitive. Map rule change to revenue, cost, capital requirement, competition and timeline.
+
+Do not stop at “regulation positive/negative”.
+
+## 54. Geopolitical Shock Workflow
+
+First identify physical channel: oil/shipping/export control/tariff/cyber/security. Then map country → sector → company balance sheet.
+
+War headline without transmission channel is not analysis.
+
+## 55. Commodity Shock Workflow
+
+Determine supply vs demand shock. Oil up from global boom differs oil up from supply disruption.
+
+Then map input/output price exposure and hedge contracts.
+
+## 56. China Shock Workflow
+
+Separate property/infrastructure, consumer and manufacturing-policy channels. Korea and Vietnam have different beneficiaries/risks.
+
+Second-order competition and FDI relocation can offset first-order demand effect.
+
+## 57. Cross-Market Confirmation
+
+Strong thesis gains confidence when independent data agree: prices/orders/exports/company guidance/peer results.
+
+If only stock price improves while earnings revisions and industry data weaken, flow/valuation may be driving.
+
+## 58. Relative Strength
+
+Compare stock to sector and sector to market. Absolute +5% can be weak if sector +20%.
+
+Relative strength is evidence about information/flow, not proof of future return.
+
+## 59. Credit Confirmation
+
+For leveraged companies/sectors, bond spreads, funding rates or bank credit conditions can confirm equity story.
+
+Equity can stay euphoric while credit starts pricing refinancing risk.
+
+## 60. Revision Breadth
+
+Count how many companies/sectors receive upward vs downward earnings revisions. Broad revision recovery is stronger than index earnings driven by few mega caps.
+
+## 61. Positioning
+
+Flows, short interest, fund positioning and derivatives can affect reaction. Fundamental surprise may create little price move if positioning already extreme.
+
+Positioning explains reaction, not intrinsic value.
+
+## 62. Catalyst Calendar
+
+Maintain events: earnings, product launch, policy meetings, legal approvals, lockup expiry, index rebalance, project handover and debt maturity.
+
+Catalyst is timing mechanism, not thesis by itself.
+
+## 63. Invalidation
+
+Every thesis needs evidence that would make you reduce confidence: margin not recovering by X condition, project approval delayed, credit cost rises, customer lost, etc.
+
+“Institutional investors selling” alone is usually not fundamental invalidation.
+
+## 64. Bear Case
+
+Bear case should describe mechanism, not arbitrary -20%. What breaks? Demand, pricing, leverage, regulation or governance?
+
+Map from driver failure to earnings/cash flow and balance-sheet consequence.
+
+## 65. Bull Case
+
+Bull case should also be causal: utilization rises, premium mix improves, funding cost falls, legal project unlocks, etc.
+
+Avoid bull case made only by assigning higher multiple.
+
+## 66. Research Note Template
+
+```text
+Business / Sector
+Key Driver Tree
+Cycle Position
+Balance Sheet / Liquidity
+Macro Sensitivities
+Valuation / Expectations
+Catalysts
+Bear / Base / Bull
+Invalidation
+Data to Monitor
+Position Size Logic
+Last Updated
+```
+
+## 67. Watchlist Design
+
+Watchlist should contain reason and trigger, not only ticker. Classify compounder, cyclical, turnaround, event-driven and speculative research.
+
+Remove names with no question to answer.
+
+## 68. Daily Routine
+
+Daily routine should be light: major price/FX/rates moves, company filings, key scheduled data and portfolio-specific alerts.
+
+Avoid consuming every headline; focus what can change assumptions.
+
+## 69. Weekly Review
+
+Review sector leadership, revisions, foreign flow, breadth, FX/rates and catalysts. Reconcile price move with fundamental change.
+
+Weekly is good cadence for learning without overtrading.
+
+## 70. Monthly Review
+
+Update macro trend, credit, exports, PMI, liquidity and valuation regimes. Re-rank sector attractiveness by expected return/risk.
+
+One data point should rarely rewrite full thesis.
+
+## 71. Quarterly Review
+
+Earnings season and company filings justify deeper model update, governance review and capital allocation assessment.
+
+Compare realized vs prior assumptions to calibrate forecast skill.
+
+## 72. Data Dashboard Design
+
+Dashboard should contain only data tied to decisions. Too many charts create false sense of research.
+
+Every series should answer a question: demand, supply, pricing, funding, valuation or liquidity.
+
+## 73. Data Quality Flags
+
+Mark survey vs hard data, seasonally adjusted vs raw, nominal vs real, YoY vs MoM, preliminary vs final and local currency vs USD.
+
+Many apparent contradictions disappear after metadata check.
+
+## 74. Avoid Double Counting
+
+Exports, company revenue and sector shipment may reflect same underlying event. Treat correlated indicators as one evidence cluster, not three independent confirmations.
+
+## 75. Information Edge vs Analytical Edge
+
+Retail investor rarely has first access to public data. Edge more often comes from better synthesis, longer horizon, discipline and avoiding forced behavior.
+
+Speed is not the only competitive advantage.
+
+## 76. Research Time Allocation
+
+Spend most time on high-impact uncertain assumptions, not facts market already knows. If valuation hinges on margin normalization, research margin driver deeply rather than collect unrelated news.
+
+## 77. Decision Log
+
+Before buy/sell, record reason, expected return driver, alternatives considered and what would prove decision wrong.
+
+Review later to separate luck from process.
+
+## 78. From Research to Position
+
+Good thesis still may deserve small position if liquidity/governance/tail risk high. Research confidence and position size are related but not identical.
+
+Portfolio context determines final allocation.
+
+## 79. Mental Model cuối cùng
+
+```text
+Question
+→ Primary Data
+→ Driver Tree
+→ Sector / Macro Context
+→ Expectations
+→ Valuation
+→ Scenario / Invalidation
+→ Position Size
+→ Monitoring Cadence
+→ Attribution / Update
+```
+
+Research is not the accumulation of information. It is a repeatable process for turning uncertain information into a decision that can later be reviewed and improved.
