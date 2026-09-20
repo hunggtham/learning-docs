@@ -33,7 +33,7 @@ Người dùng có thể tìm nhà hàng trên bản đồ, sản phẩm trên �
 
 ## 온라인 커뮤니티: mỗi cộng đồng là một vũ trụ lấy mẫu riêng
 
-`온라인 커뮤니티` có sở thích, đặc điểm dân số và chuẩn mực riêng. Cộng đồng A có thể thiên về người trẻ, nam giới, sinh viên, game thủ hoặc một quan điểm chính trị nhất định; cộng đồng B có quần thể khác.
+`온라인 커뮤니티` có sở thích, đặc điểm dân số và chuẩn mực riêng. Cộng đồng A có thể thiên về người trẻ, nam giới, sinh viên, game thủ hoặc một quan điểm nhất định; cộng đồng B có quần thể khác.
 
 Vì vậy bài đăng lan truyền mạnh không phải thăm dò dư luận.
 
@@ -321,36 +321,234 @@ siêu dữ liệu / nguồn gốc cho biết gì?
 
 Deepfake còn tạo rủi ro riêng tư và lạm dụng nghiêm trọng, đặc biệt với hình ảnh không có đồng thuận. Đây là lĩnh vực nơi khả năng kỹ thuật phải đi cùng ranh giới pháp lý và đạo đức.
 
-## Liên hệ kiến thức: văn hoá Internet như giao thức + động lực + ký ức
+## Phổ biến, đại diện, đáng tin và đúng là bốn thuộc tính khác nhau
 
-Một nền tảng tạo văn hoá qua ba đòn bẩy:
+Một lỗi rất phổ biến khi đọc Internet là gom bốn câu hỏi thành một:
+
+```text
+nội dung được xem nhiều?        → phổ biến
+nội dung phản ánh số đông?       → đại diện
+nguồn có lịch sử đáng tin?       → đáng tin
+mệnh đề có phù hợp bằng chứng?   → đúng
+```
+
+Bốn thuộc tính có thể tách nhau. Một video sai có thể cực kỳ phổ biến; một khảo sát đại diện có thể ít người xem; một người có uy tín vẫn có thể sai trong chủ đề ngoài chuyên môn.
+
+Khung này đặc biệt quan trọng khi người học dùng cộng đồng trực tuyến để hiểu “người Hàn nghĩ gì”. Nền tảng cho ta **dữ liệu về hành vi trên nền tảng**, không tự động cho ta mô hình đại diện của toàn xã hội.
+
+## 알고리즘 추천: thuật toán đề xuất không chỉ phản ánh sở thích, nó còn tạo đường tiếp xúc
+
+Hệ thống đề xuất thường học từ hành vi quá khứ để chọn nội dung tiếp theo. Nhưng khi nội dung được đề xuất làm người dùng xem thêm, dữ liệu mới lại được dùng để cập nhật đề xuất.
+
+```text
+hành vi cũ
+→ đề xuất
+→ tiếp xúc mới
+→ hành vi mới
+→ dữ liệu mới
+→ đề xuất tiếp theo
+```
+
+Đây là **vòng phản hồi đề xuất (recommendation feedback loop)**. Vì vậy bảng tin không phải cửa sổ trung lập vào “những gì đang tồn tại”; nó là kết quả tương tác giữa cung nội dung, hành vi người dùng và mục tiêu tối ưu của nền tảng.
+
+Người dùng có thể cảm thấy một chủ đề “ở khắp nơi” chỉ vì hệ thống đã học rằng họ hay dừng lại ở chủ đề đó.
+
+## 참여 편향: nhóm im lặng thường lớn hơn nhóm phát biểu
+
+Phần lớn người xem một nội dung có thể không bình luận. Trong số người bình luận, chỉ một phần tạo nhiều nội dung. Vì vậy tiếng nói dễ thấy thường đến từ nhóm hoạt động mạnh hơn mức trung bình.
+
+Có thể hình dung một phễu:
+
+```text
+100 người thấy
+→ 30 người đọc/xem kỹ
+→ 5 người bấm phản ứng
+→ 2 người bình luận
+→ 1 người tạo bài mới
+```
+
+Các con số chỉ minh hoạ, không phải tỷ lệ thực tế. Mục tiêu là nhận ra **thiên lệch tham gia (participation bias)**.
+
+Một cộng đồng có thể trông cực kỳ nhất trí vì những người bất đồng chỉ rời đi hoặc không viết gì.
+
+## 바이럴 퍼널: lan truyền là một chuỗi điều kiện, không phải phép màu
+
+Một nội dung lan rộng phải vượt nhiều bước:
+
+```text
+được nhìn thấy
+→ đủ hấp dẫn để dừng lại
+→ đủ rõ để hiểu nhanh
+→ đủ cảm xúc / hữu ích để chia sẻ
+→ đi vào mạng mới
+→ tiếp tục giữ hiệu suất ở mạng mới
+```
+
+Nếu một bước thất bại, lan truyền dừng. Vì vậy “viral” không đồng nghĩa nội dung có chất lượng cao nhất; nó thường là nội dung phù hợp tốt với **cơ chế truyền tải** của nền tảng.
+
+Meme, tiêu đề gây tò mò, clip ngắn và nội dung gây tức giận có thể có lợi thế truyền tải khác bài phân tích dài. Hệ quả là những gì dễ lan không nhất thiết là những gì quan trọng nhất.
+
+## 분노와 주의력: cảm xúc mạnh có thể được khuếch đại vì giữ sự chú ý
+
+Nội dung gây tức giận, sợ hãi hoặc kinh ngạc thường tạo phản ứng nhanh. Nếu nền tảng tối ưu tương tác, nội dung kích thích cảm xúc có thể nhận thêm tín hiệu phân phối.
+
+Điều này không có nghĩa thuật toán “muốn người dùng tức giận” theo ý định con người. Cơ chế có thể xuất hiện vì **mục tiêu đại diện (proxy objective)**: hệ thống tối ưu thời gian xem hoặc tương tác, còn cảm xúc mạnh vô tình giúp đạt chỉ số đó.
+
+Đây là một biến thể của Luật Goodhart: tối ưu chỉ số tương tác không tự động tối ưu chất lượng thảo luận.
+
+## 출처 계보: độ tin cậy cần theo dõi đường đi của thông tin
+
+Một ảnh chụp màn hình có thể ghi “theo chuyên gia”, nhưng không dẫn nguồn. Một bài khác chụp lại ảnh đầu tiên; sau vài vòng, nguồn gốc biến mất.
+
+Để kiểm tra, cần lần ngược **phả hệ nguồn (source lineage)**:
+
+```text
+bài hiện tại
+→ nguồn trực tiếp
+→ nguồn mà nguồn đó dựa vào
+→ tài liệu gốc / dữ liệu gốc
+```
+
+Đây là khác biệt giữa **nguồn sơ cấp**, **nguồn thứ cấp** và **nội dung chỉ lặp lại**.
+
+Trong môi trường AI tạo sinh, kỹ năng này quan trọng hơn vì văn bản trôi chảy không còn là bằng chứng rằng nguồn thật tồn tại.
+
+## 합성미디어: vấn đề mới không chỉ là “giả hay thật” mà là chuỗi bằng chứng
+
+Khi ảnh, âm thanh và video có thể được chỉnh hoặc sinh với chất lượng cao, câu hỏi nhị phân “file này nhìn thật không?” kém hữu ích. Cần hỏi:
+
+```text
+ai công bố đầu tiên?
+nguồn gốc có xác minh được không?
+có bản dài hơn / dữ liệu gốc không?
+nguồn độc lập nào xác nhận?
+thời gian và địa điểm có khớp không?
+```
+
+Đây là **hiệu chuẩn niềm tin (trust calibration)**: không tin tất cả, cũng không nghi tất cả. Mức tin phải tăng hoặc giảm theo chất lượng bằng chứng.
+
+Nếu mọi nội dung đều bị xem là có thể giả, xã hội gặp vấn đề ngược lại: bằng chứng thật cũng dễ bị phủ nhận. Vì vậy nguồn gốc và chuỗi xác minh trở thành hạ tầng niềm tin.
+
+## 계정의 진정성: tài khoản “có vẻ thật” chưa chắc là một cá nhân độc lập
+
+Một tài khoản có ảnh đại diện, lịch sử đăng và phong cách nhất quán vẫn có thể là tài khoản tổ chức, tài khoản được quản lý nhiều người, tài khoản tự động hoặc danh tính nhân tạo.
+
+Do đó khi đánh giá “nhiều người đang nói giống nhau”, cần hỏi các tài khoản có thật sự độc lập hay cùng lấy nội dung từ một nguồn.
+
+**Tính độc lập của quan sát** là điều kiện quan trọng. Một nghìn bài sao chép cùng một tin không mạnh bằng nhiều nguồn độc lập cùng xác nhận.
+
+## 멀티계정과 부캐: nhiều tài khoản có thể là phân vùng danh tính, không nhất thiết lừa dối
+
+Người dùng có thể tách tài khoản nghề nghiệp, sở thích, fandom và đời tư. Khái niệm `부캐` cũng phản ánh việc một người biểu diễn nhiều vai trong các bối cảnh khác nhau.
+
+Việc tách tài khoản giúp quản lý khán giả, nhưng cũng làm ranh giới trách nhiệm phức tạp. Khi ảnh chụp màn hình nối hai tài khoản, những phân vùng từng tách có thể sụp đổ.
+
+Đây là lý do **quản lý khán giả (audience management)** trở thành một kỹ năng số, không chỉ là vấn đề quyền riêng tư kỹ thuật.
+
+## 플랫폼 이동 và khóa mạng lưới
+
+Người dùng có thể không thích một nền tảng nhưng vẫn ở lại vì bạn bè, lịch sử chat, cộng đồng hoặc người theo dõi đều ở đó. Đây là **chi phí chuyển đổi (switching cost)** và **khóa mạng lưới (network lock-in)**.
+
+```text
+nền tảng A có mạng hiện tại
+→ rời đi mất liên hệ / dữ liệu / danh tiếng
+→ chi phí chuyển cao
+→ người dùng tiếp tục ở lại
+→ mạng A vẫn mạnh
+```
+
+Vì vậy thị phần nền tảng không chỉ phản ánh “mọi người thích sản phẩm này hơn”. Hiệu ứng mạng và chi phí di chuyển dữ liệu có thể giữ người dùng ngay cả khi họ phàn nàn.
+
+Khi cộng đồng chuyển nền tảng, văn hoá cũng đổi vì công cụ mới có giới hạn và khả năng khác.
+
+## 운영진과 모더레이션: cộng đồng trực tuyến cũng cần chính quyền vi mô
+
+Một cộng đồng có quản trị viên, quy tắc, chế tài, quy trình báo cáo và quyết định ai bị xoá bài hoặc cấm tài khoản. Đây là **quản trị cộng đồng (community governance)**.
+
+Các lựa chọn quản trị luôn có đánh đổi:
+
+```text
+kiểm duyệt quá lỏng → spam / quấy rối / chất lượng thấp
+kiểm duyệt quá chặt → ít tranh luận / quyền lực quản trị lớn
+quy tắc mơ hồ → xử lý thiếu nhất quán
+quy tắc cứng → khó xử lý ngoại lệ
+```
+
+Do đó “tự do hoàn toàn” và “kiểm soát hoàn toàn” đều không phải thiết kế miễn phí. Chất lượng cộng đồng phụ thuộc quy tắc, năng lực thực thi và tính minh bạch.
+
+## 신고 시스템: báo cáo là cơ chế xếp hàng ưu tiên, không phải phán quyết tức thì
+
+Nút `신고` cho phép người dùng gửi tín hiệu rằng nội dung có vấn đề. Nhưng báo cáo không tự động chứng minh vi phạm; nó tạo một mục cần xem xét.
+
+Nếu hệ thống tự động xử lý theo số lượng báo cáo, nhóm đông có thể lạm dụng báo cáo để gây áp lực. Nếu mọi báo cáo đều cần người kiểm tra thủ công, hệ thống dễ quá tải.
+
+Đây là bài toán giữa **quy mô, độ chính xác và khả năng kháng lạm dụng**.
+
+## 추천·좋아요 수: số lớn là tín hiệu xã hội, nhưng tín hiệu có thể bị phản hồi
+
+Khi bài đã có nhiều lượt thích, người mới có thể chú ý hơn chỉ vì thấy con số. Đây là **bằng chứng xã hội (social proof)**.
+
+```text
+lượt thích ban đầu
+→ khả năng hiển thị / uy tín cảm nhận tăng
+→ thêm tương tác
+→ lượt thích tiếp tục tăng
+```
+
+Vì vậy con số cuối vừa phản ánh phản ứng người dùng vừa chịu ảnh hưởng của thứ tự và khả năng hiển thị. Không nên đọc nó như một phép đo độc lập hoàn toàn.
+
+## 정보 다이어트: kiểm soát đầu vào thông tin là một kỹ năng
+
+Khi nguồn tin quá nhiều, bài toán không còn là “tìm thêm thông tin” mà là **quản lý sự chú ý**. Theo dõi quá nhiều kênh có thể làm người dùng liên tục chuyển ngữ cảnh và tăng cảm giác khẩn cấp.
+
+Một chiến lược là phân tầng nguồn:
+
+```text
+nguồn cần kiểm tra thường xuyên
+nguồn tham khảo khi cần
+nguồn giải trí
+nguồn nên tắt thông báo
+```
+
+Đây không phải lời khuyên “tránh Internet”, mà là nhận ra chú ý cũng là tài nguyên hữu hạn giống thời gian và tiền.
+
+## Liên hệ kiến thức: văn hoá Internet như giao thức + động lực + ký ức + phân phối
+
+Một nền tảng tạo văn hoá qua bốn đòn bẩy:
 
 ```text
 Giao thức: người dùng có thể làm gì? (trả lời, đăng lại, trạng thái đã đọc)
 Động lực: thứ gì được thưởng? (thích, lượt xem, xếp hạng)
 Ký ức: nội dung tồn tại bao lâu? (xoá, ảnh chụp, lưu trữ)
+Phân phối: ai được nhìn thấy nội dung nào? (tìm kiếm, đề xuất, mạng theo dõi)
 ```
 
 Thay một đòn bẩy có thể thay chuẩn mực mà không cần người dùng “đổi tính cách”.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy
 
-> Văn hoá Internet Hàn Quốc là nơi **giao diện, thuật toán, cấu trúc mạng và chuẩn mực xã hội có sẵn cùng kết hợp thành hành vi**. Đừng đọc bình luận, tiếng lóng hay meme như tấm gương trực tiếp của “người Hàn”; hãy hỏi nền tảng nào, quần thể nào, động lực nào, khán giả nào và mốc thời gian nào.
+> Văn hoá Internet Hàn Quốc là nơi **giao diện, thuật toán, cấu trúc mạng, cơ chế quản trị và chuẩn mực xã hội có sẵn cùng kết hợp thành hành vi**. Khi đọc một hiện tượng trực tuyến, hãy tách ít nhất năm câu hỏi: ai tham gia, ai im lặng, nội dung được phân phối thế nào, chỉ số nào đang được tối ưu và bằng chứng gốc nằm ở đâu. Phổ biến không đồng nghĩa đại diện; đại diện không đồng nghĩa đúng; trôi chảy không đồng nghĩa đáng tin.
 
-## Hiểu lầm phổ biến (Common Misconceptions)
+## Những hiểu lầm phổ biến
 
-“Bài viral trong cộng đồng = toàn xã hội đồng ý” là sai vì sai lệch chọn mẫu.
+“Bài viral trong cộng đồng = toàn xã hội đồng ý” là sai vì sai lệch chọn mẫu và thiên lệch tham gia.
 
 “Tiếng lóng là tiếng Hàn sai” là nhầm sắc thái sử dụng với giá trị ngôn ngữ.
 
 “Ẩn danh = không có hậu quả” là sai; nền tảng, kiểm duyệt, dấu vết pháp lý và ảnh chụp màn hình có thể tồn tại.
 
-“Thuật toán quyết định mọi thứ” bỏ qua chất lượng nội dung, mạng ban đầu và sự kiện bên ngoài.
+“Thuật toán quyết định mọi thứ” bỏ qua chất lượng nội dung, mạng ban đầu, lựa chọn người dùng và sự kiện bên ngoài.
 
 “Trạng thái đã đọc cung cấp thông tin khách quan” chỉ đúng về trạng thái tin nhắn, không cho biết ý định.
 
-“Ảnh chụp màn hình giữ nguyên sự thật” là sai nếu bối cảnh trước/sau bị mất.
+“Ảnh chụp màn hình giữ nguyên sự thật” là sai nếu bối cảnh trước/sau bị mất hoặc nguồn gốc không xác minh được.
+
+“Nhiều tài khoản nói cùng một điều nghĩa là có nhiều nguồn độc lập” có thể sai nếu nội dung đều sao chép từ một nguồn.
+
+“Nền tảng phổ biến nhất chắc chắn là sản phẩm được mọi người yêu thích nhất” bỏ qua hiệu ứng mạng và chi phí chuyển đổi.
+
+“AI làm mọi bằng chứng số trở nên vô dụng” cũng sai; điều thay đổi là cần chuỗi nguồn gốc và xác minh tốt hơn.
 
 ## Nguồn tham khảo định hướng
 
-Với mức sử dụng truyền thông: Korea Press Foundation, thống kê ICT/truyền thông chính thức và tài liệu nền tảng. Với tiếng lóng/meme: luôn ghi mốc thời gian nguồn. Với hành vi trực tuyến gây hại, ưu tiên hướng dẫn pháp lý/an toàn và nghiên cứu thay vì giai thoại cộng đồng.
+Với mức sử dụng truyền thông: Korea Press Foundation, thống kê ICT/truyền thông chính thức và tài liệu nền tảng. Với tiếng lóng/meme: luôn ghi mốc thời gian nguồn. Với hành vi trực tuyến gây hại, ưu tiên hướng dẫn pháp lý/an toàn và nghiên cứu thay vì giai thoại cộng đồng. Khi đánh giá thông tin, ưu tiên nguồn gốc, tài liệu sơ cấp, phương pháp thu thập dữ liệu và xác nhận độc lập thay vì chỉ số tương tác.
