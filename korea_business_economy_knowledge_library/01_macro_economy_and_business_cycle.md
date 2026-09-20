@@ -1,12 +1,12 @@
 # Kinh tế vĩ mô và chu kỳ kinh doanh Hàn Quốc (Macroeconomy & Business Cycle / 거시경제와 경기순환)
 
-Một công ty có thể được quản trị rất tốt nhưng vẫn chịu shock từ lãi suất, KRW, giá năng lượng, global trade hoặc semiconductor cycle. **Macroeconomics / 거시경제학** là cách nhìn nền kinh tế ở cấp hệ thống để hiểu những điều kiện chung đó.
+Một công ty có thể được quản trị rất tốt nhưng vẫn chịu cú sốc từ lãi suất, đồng won, giá năng lượng, thương mại toàn cầu hoặc chu kỳ bán dẫn. **Kinh tế vĩ mô (macroeconomics / 거시경제학)** là cách nhìn nền kinh tế ở cấp hệ thống để hiểu những điều kiện chung đó.
 
-Mục tiêu của chapter này không phải biến người đọc thành forecaster. Mục tiêu là biết **macro variable nào đang thay constraint của household, bank, industry và company**, rồi trace effect xuống revenue, cost, balance sheet và valuation.
+Mục tiêu của chương này không phải biến người đọc thành người dự báo. Mục tiêu là biết **biến vĩ mô nào đang thay đổi giới hạn của hộ gia đình, ngân hàng, ngành và doanh nghiệp**, rồi lần theo tác động xuống doanh thu, chi phí, bảng cân đối và định giá.
 
-## GDP đo flow của value added, không phải “tài sản của quốc gia”
+## GDP đo dòng giá trị gia tăng, không phải “tài sản của quốc gia”
 
-**Gross Domestic Product (GDP / 국내총생산)** đo value added được tạo ra trong lãnh thổ trong một period.
+**Tổng sản phẩm trong nước (Gross Domestic Product, GDP / 국내총생산)** đo giá trị gia tăng được tạo ra trong lãnh thổ trong một khoảng thời gian.
 
 Từ phía chi tiêu:
 
@@ -14,492 +14,229 @@ Từ phía chi tiêu:
 Y = C + I + G + (X-M)
 \]
 
-Trong đó:
+Trong đó `C` là tiêu dùng tư nhân, `I` là đầu tư, `G` là chi tiêu và đầu tư chính phủ, `X` là xuất khẩu và `M` là nhập khẩu.
 
-- `C`: private consumption;
-- `I`: investment;
-- `G`: government consumption/investment;
-- `X`: exports;
-- `M`: imports.
+Đây là **đồng nhất thức kế toán (accounting identity)** chứ không phải công thức nhân quả. Xuất khẩu tăng không có nghĩa GDP tự động tăng cùng một lượng nếu hàng xuất khẩu dùng nhiều đầu vào nhập khẩu hoặc các thành phần khác cùng thay đổi.
 
-Đây là accounting identity, không phải causal formula. Tăng `X` không tự động làm GDP tăng cùng magnitude nếu export dùng nhiều imported inputs hoặc các thành phần khác thay đổi.
+Với Hàn Quốc, đầu tư và nhu cầu bên ngoài đặc biệt quan trọng vì bán dẫn, thiết bị sản xuất, ô tô, đóng tàu và xây dựng có quy mô lớn.
 
-Với Korea, `I` và external demand đặc biệt quan trọng vì semiconductor, manufacturing equipment, autos, shipbuilding và construction có weight lớn.
+## Giá trị gia tăng giúp tránh tính trùng
 
-## Value added: tránh double counting
+Nếu công ty thép bán thép giá 100 cho hãng xe và hãng xe bán chiếc xe giá 300, GDP không cộng 100 + 300 thành 400 nếu phần thép đã nằm trong chiếc xe.
 
-Nếu steel company bán steel 100 cho auto maker, auto maker bán car 300, GDP không cộng 100 + 300 = 400 nếu steel đã embedded trong car.
-
-GDP tính **value added** ở mỗi stage.
-
-Mental model:
+GDP tính **giá trị gia tăng (value added / 부가가치)** ở từng giai đoạn:
 
 ```text
-Revenue
-- Intermediate inputs
-= Value added
+Doanh thu
+- đầu vào trung gian
+= giá trị gia tăng
 ```
 
-Điều này quan trọng khi đọc exports. Gross exports có thể lớn nhưng domestic value captured phụ thuộc imported content.
+Điều này quan trọng khi đọc xuất khẩu. Xuất khẩu gộp có thể rất lớn nhưng giá trị giữ lại trong nước phụ thuộc tỷ trọng đầu vào nhập khẩu. Xem [thương mại và chuỗi giá trị](./02_trade_export_and_global_value_chains.md).
 
-Xem [`02_trade_export_and_global_value_chains.md`](./02_trade_export_and_global_value_chains.md).
+## GDP danh nghĩa, GDP thực và tại sao phải tách giá khỏi lượng
 
-## Nominal GDP, Real GDP và price effect
+Nếu doanh thu toàn nền kinh tế tăng chỉ vì giá tăng, ta không thể kết luận sản lượng thật tăng tương ứng.
 
-**Nominal GDP / 명목 GDP** dùng current prices. **Real GDP / 실질 GDP** cố loại price change để đo output volume.
+**GDP danh nghĩa (nominal GDP)** dùng giá hiện hành. **GDP thực (real GDP)** cố loại ảnh hưởng thay đổi giá để đo lượng sản xuất thực tế.
 
-Tương tự company revenue:
+Ví dụ, nếu giá chip tăng mạnh nhưng số lượng chip không tăng, giá trị xuất khẩu danh nghĩa có thể tăng rất nhanh trong khi sản lượng thực tăng ít hơn.
 
-```text
-Revenue growth
-= Price effect + Volume effect + Mix effect
-```
+Tách giá và lượng là nguyên tắc quan trọng khi phân tích cả nền kinh tế lẫn doanh nghiệp.
 
-Nếu nominal sales tăng 10% nhưng selling price tăng 12%, physical volume có thể giảm.
+## GDP và GDI: sản xuất nhiều chưa chắc sức mua tăng tương ứng
 
-Macro cũng vậy: nominal growth không đồng nghĩa real activity tăng tương ứng.
+**Tổng thu nhập quốc nội (Gross Domestic Income, GDI / 국내총소득)** phản ánh sức mua thu nhập sau khi tính thay đổi điều kiện thương mại.
 
-## GDP per capita không bằng household welfare
+Nếu giá hàng Hàn Quốc xuất khẩu tăng nhanh hơn giá hàng phải nhập, cùng một lượng xuất khẩu có thể mua được nhiều hàng nhập khẩu hơn. Ngược lại, giá dầu tăng mạnh có thể làm sức mua quốc gia xấu đi dù GDP thực chưa giảm nhiều.
 
-GDP per capita giúp so output theo population nhưng vẫn không capture đầy đủ:
+Đây là **điều kiện thương mại (terms of trade / 교역조건)**.
 
-- income distribution;
-- unpaid household work;
-- leisure;
-- environmental cost;
-- asset-price affordability;
-- quality of public services.
+Với nền kinh tế nhập nhiều năng lượng và xuất nhiều hàng chế tạo như Hàn Quốc, GDP và GDI có thể cho hai góc nhìn khác nhau về mức “dễ chịu” của chu kỳ.
 
-Một economy có GDP per capita tăng nhưng young renters có thể cảm thấy living standard xấu đi nếu housing cost tăng nhanh hơn income.
+## Tăng trưởng tiềm năng và khoảng cách sản lượng
 
-Vì vậy GDP là production metric quan trọng, không phải universal welfare score.
+GDP thực tế có thể dao động quanh một mức sản lượng bền vững hơn gọi là **sản lượng tiềm năng (potential output / 잠재산출)**.
 
-## GDI và Terms of Trade: purchasing power của Korea có thể đổi ngay cả khi output không đổi
+Nếu cầu vượt năng lực bền vững, nền kinh tế có thể nóng lên, tiền lương và giá tăng. Nếu cầu thấp hơn nhiều, nhà máy và lao động bị sử dụng dưới mức.
 
-Korea import phần lớn oil, gas và raw materials. Nếu import prices tăng mạnh, cùng export volume mua được ít imports hơn.
+Khoảng cách giữa GDP thực tế và tiềm năng được gọi là **khoảng cách sản lượng (output gap / GDP갭)**.
 
-**Terms of Trade (교역조건)** có thể hiểu đơn giản:
+Khái niệm này giúp hiểu tại sao cùng mức tăng GDP 2% có thể mang ý nghĩa khác nhau tùy nền kinh tế đang ở đỉnh hay đáy chu kỳ.
+
+## Tăng trưởng dài hạn đến từ lao động, vốn và năng suất
+
+Một cách nén tăng trưởng dài hạn:
 
 \[
-Terms\ of\ Trade = \frac{Export\ Price\ Index}{Import\ Price\ Index}
+Tăng\ trưởng\ GDP \approx Tăng\ lao\ động + Tích\ lũy\ vốn + Tăng\ năng\ suất
 \]
 
-Nếu denominator tăng nhanh, terms of trade xấu đi.
+Hàn Quốc thời kỳ bắt kịp có lợi từ lực lượng lao động tăng, đô thị hóa và đầu tư vốn rất mạnh. Hiện nay dân số trong độ tuổi lao động giảm và lượng vốn đã lớn, nên **năng suất nhân tố tổng hợp (Total Factor Productivity, TFP / 총요소생산성)** ngày càng quan trọng.
 
-**Gross Domestic Income (GDI / 국내총소득)** giúp nhìn purchasing-power effect mà real GDP có thể không phản ánh đầy đủ.
+Đây là lý do AI, số hóa, chất lượng quản lý và tái phân bổ nguồn lực có ý nghĩa lớn hơn trong nền kinh tế trưởng thành.
 
-Ví dụ, factory vẫn sản xuất same volume nhưng energy import bill tăng mạnh. Real production không giảm nhiều, nhưng national real income có thể chịu pressure.
+## Lạm phát: không chỉ là “mọi thứ đắt hơn”
 
-## Potential growth: vì sao Korea không thể lặp lại tốc độ 1970s
+**Lạm phát (inflation / 물가상승)** là mức tăng chung của giá cả, không phải một vài mặt hàng riêng lẻ tăng giá.
 
-Quarterly growth và long-run capacity là hai khái niệm khác nhau.
+Lạm phát có thể đến từ cầu mạnh, chi phí đầu vào tăng, tỷ giá làm hàng nhập khẩu đắt hơn hoặc kỳ vọng giá–lương tự củng cố.
 
-**Potential Growth / 잠재성장률** hỏi economy có thể tăng bền vững bao nhiêu khi labor/capital được sử dụng ở mức bình thường mà không tạo inflation pressure quá mức.
+Với doanh nghiệp, tác động phụ thuộc quyền định giá. Nếu chi phí tăng 10% nhưng công ty chỉ tăng giá 3%, biên lợi nhuận giảm. Nếu công ty có thể chuyển phần lớn chi phí sang khách hàng, tác động nhỏ hơn.
 
-Một decomposition hữu ích:
+Do đó lạm phát phải được nối với **quyền định giá (pricing power / 가격결정력)** chứ không chỉ nhìn CPI.
 
-\[
-Growth \approx Labor\ Growth + Capital\ Deepening + TFP\ Growth
-\]
+## Lãi suất của BOK truyền vào nền kinh tế như thế nào?
 
-High-growth Korea từng có cả ba drivers mạnh:
-
-1. labor chuyển từ agriculture sang industry;
-2. investment/capital stock tăng nhanh;
-3. technology catch-up nâng TFP.
-
-Current Korea có working-age population giảm, capital stock đã lớn và technology gap với frontier nhỏ hơn. Vì vậy same mechanism không thể tạo same growth rate.
-
-BOK research gần đây nhấn mạnh slower capital accumulation, demographic decline và weak productivity diffusion như các constraints lên potential growth.
-
-Đây không phải dấu hiệu economy “thất bại”; nó phản ánh stage of development. Câu hỏi mới là productivity và per-capita living standards tăng thế nào.
-
-## Output gap: actual economy so với sustainable capacity
-
-**Output Gap / GDP갭** là difference giữa actual output và estimated potential output.
+Ngân hàng Trung ương Hàn Quốc (Bank of Korea, BOK / 한국은행) điều hành lãi suất chính sách. Lãi suất không tác động trực tiếp như một công tắc mà truyền qua nhiều kênh.
 
 ```text
-Positive output gap
-→ demand > sustainable capacity
-→ inflation/wage pressure dễ tăng
-
-Negative output gap
-→ slack / idle capacity
-→ disinflationary pressure dễ tăng
+Lãi suất chính sách
+→ lãi suất thị trường / tiền gửi / khoản vay
+→ chi phí vốn và thu nhập lãi
+→ tiêu dùng / đầu tư / nhà ở
+→ nhu cầu và lạm phát
 ```
 
-Nhưng potential output không quan sát trực tiếp; nó là model estimate. Vì vậy output gap không phải thermometer chính xác và có thể được revise.
+Doanh nghiệp nợ nhiều và hộ gia đình vay lãi suất thả nổi phản ứng nhanh hơn với thay đổi lãi suất. Ngân hàng có thể được hưởng NIM cao hơn trong một số giai đoạn nhưng cũng đối mặt chi phí vốn và rủi ro tín dụng cao hơn.
 
-Central bank luôn nhìn nhiều indicators thay vì dựa một number.
+## Tỷ giá KRW/USD: không có quy tắc “won yếu luôn tốt”
 
-## Business cycle: trend và cycle phải tách riêng
+KRW yếu thường làm doanh thu xuất khẩu quy đổi sang won cao hơn, nhưng đồng thời làm nguyên liệu, năng lượng và nợ ngoại tệ đắt hơn.
 
-Economy dao động quanh long-term trend.
-
-Một simplified cycle:
+Tác động ròng phụ thuộc cấu trúc:
 
 ```text
-Demand recovery
-   ↓
-Production / orders rise
-   ↓
-Inventory + capex + hiring rise
-   ↓
-Capacity pressure / inflation
-   ↓
-Financial tightening
-   ↓
-Demand slows
-   ↓
-Inventory correction / capex cuts
+Doanh thu ngoại tệ
+- chi phí ngoại tệ
+- nợ ngoại tệ
+± phòng hộ tỷ giá
+= mức phơi nhiễm ròng
 ```
 
-Cycle không chạy như đồng hồ và mỗi sector có timing khác nhau.
+Một hãng xuất khẩu có sản xuất nội địa cao có thể hưởng lợi từ KRW yếu. Một hãng nhập phần lớn linh kiện hoặc năng lượng có thể chịu tác động trái chiều.
 
-Korea đặc biệt có **semiconductor cycle**, housing/construction cycle, credit cycle và global trade cycle.
+Do đó cần đọc **mức phơi nhiễm tỷ giá (FX exposure / 환노출)** của từng công ty, không dùng một kết luận cho cả thị trường.
 
-Vì vậy khi company earnings tăng phải hỏi: **structural growth hay cyclical recovery?**
+## Cán cân vãng lai và lý do Hàn Quốc quan tâm ngoại tệ
 
-## Semiconductor cycle: tại sao một industry có thể làm macro data rung mạnh
+**Cán cân vãng lai (current account / 경상수지)** bao gồm thương mại hàng hóa, dịch vụ, thu nhập và chuyển giao.
 
-Memory semiconductor có high fixed cost và volatile price. Khi demand/supply balance thay đổi, price và profit có thể swing rất mạnh.
+Thặng dư vãng lai thường giúp nền kinh tế tích lũy tài sản đối ngoại và giảm phụ thuộc vốn nước ngoài. Thâm hụt không tự động là xấu, nhưng nếu đi cùng nợ ngoại tệ ngắn hạn lớn, rủi ro tái cấp vốn có thể tăng.
 
-Boom truyền qua:
+Ký ức về khủng hoảng 1997 làm thanh khoản ngoại tệ và dự trữ ngoại hối trở thành chủ đề đặc biệt quan trọng trong quản lý vĩ mô Hàn Quốc.
+
+## Nợ hộ gia đình và nhà ở
+
+Nợ hộ gia đình cao làm chính sách tiền tệ phức tạp hơn. Khi lãi suất tăng, chi phí trả nợ tăng và tiêu dùng có thể giảm. Nhưng nếu lãi suất thấp quá lâu, tín dụng và giá bất động sản có thể tăng mạnh.
 
 ```text
-Chip price/order ↑
-→ semiconductor profit ↑
-→ exports ↑
-→ capex ↑
-→ equipment/material orders ↑
-→ tax/income/employment spillover
+Lãi suất ↑
+→ tiền trả nợ ↑
+→ thu nhập khả dụng ↓
+→ tiêu dùng ↓
 ```
 
-Downcycle đảo chain.
+Nhà ở còn ảnh hưởng xây dựng, vật liệu, ngân hàng, bảo hiểm, bán lẻ và tâm lý hộ gia đình. Vì vậy chu kỳ nhà ở là một kênh truyền dẫn lớn của kinh tế Hàn Quốc.
 
-Do semiconductor có weight lớn trong exports/corporate profits, macro Korea có sensitivity lớn hơn many diversified economies.
+## Chu kỳ bán dẫn có thể kéo cả dữ liệu vĩ mô
 
-Xem [`14_semiconductors_electronics_display.md`](./14_semiconductors_electronics_display.md).
+Bán dẫn có tỷ trọng lớn trong xuất khẩu và đầu tư thiết bị. Khi giá bộ nhớ tăng, doanh thu xuất khẩu, lợi nhuận doanh nghiệp, CAPEX và thu thuế có thể cùng cải thiện.
 
-## Inflation: price level chung, không phải một món hàng tăng giá
+Ngược lại, khi chu kỳ giảm, cùng một cơ chế đi theo hướng ngược lại.
 
-**Inflation / 인플레이션** là sustained increase trong general price level.
+Điều này tạo một điểm quan trọng: GDP Hàn Quốc có thể được hỗ trợ bởi một ngành xuất khẩu rất mạnh ngay cả khi tiêu dùng nội địa còn yếu.
 
-Headline CPI có food/energy; **core inflation / 근원물가** cố nhìn underlying trend bằng cách loại một số volatile components tùy methodology.
+## Hàng tồn kho và chu kỳ công nghiệp
 
-Inflation có thể đến từ:
-
-- demand mạnh;
-- wage pressure;
-- import price/FX;
-- energy/food shocks;
-- supply constraints;
-- expectations.
-
-Một oil shock đối với Korea vừa là inflation shock vừa là income shock vì country import energy.
-
-## Inflation expectations: belief có thể ảnh hưởng actual behavior
-
-Nếu workers/firms tin inflation cao sẽ kéo dài, workers đòi wage cao hơn và firms set price cao hơn để protect margins.
-
-Do đó central bank quan tâm expectations, không chỉ current CPI.
-
-Inflation credibility quan trọng vì policy dễ hơn nếu public tin inflation sẽ quay về target.
-
-## Bank of Korea policy rate: một price ảnh hưởng nhiều markets
-
-BOK không “điều khiển GDP” trực tiếp. Policy rate truyền qua system:
+Doanh nghiệp không sản xuất đúng bằng lượng bán trong từng quý. Khi kỳ vọng nhu cầu cao, họ có thể tích tồn kho; khi nhu cầu yếu hơn dự kiến, phải giảm sản xuất để xả tồn kho.
 
 ```text
-Base rate
-   ↓
-Money-market / bond yields
-   ↓
-Bank deposit & loan rates
-   ↓
-Household + corporate debt service
-   ↓
-Consumption / capex / housing
+Kỳ vọng nhu cầu ↑
+→ sản xuất ↑
+→ tồn kho ↑
+
+Nhu cầu thực thấp hơn kỳ vọng
+→ tồn kho dư
+→ cắt sản xuất
+→ đơn hàng nhà cung cấp ↓
 ```
 
-Song song, rate expectations ảnh hưởng FX và asset prices.
+Đây là lý do một thay đổi nhỏ ở nhu cầu cuối có thể tạo biến động lớn hơn ở nhà cung cấp phía trên, còn gọi là **hiệu ứng roi da (bullwhip effect)**.
 
-Transmission có **lag / 시차** vì loans reprice khác nhau và firms/households không đổi behavior ngay lập tức.
+## Chính sách tài khóa và bộ ổn định tự động
 
-## Discount rate và company valuation
+Chính phủ tác động nền kinh tế qua chi tiêu, thuế và chuyển giao. Một phần phản ứng xảy ra tự động: khi kinh tế yếu, thu thuế giảm và một số khoản hỗ trợ tăng; khi kinh tế mạnh, quá trình ngược lại xảy ra.
 
-Một future cash flow có present value:
+Đây là **bộ ổn định tự động (automatic stabilizers)**.
 
-\[
-PV = \frac{CF_t}{(1+r)^t}
-\]
+Ngoài ra chính phủ có thể dùng ngân sách chủ động cho hạ tầng, hỗ trợ ngành, phúc lợi hoặc kích cầu. Tác động phụ thuộc thời điểm, cấu trúc chi tiêu và mức độ nền kinh tế còn công suất dư.
 
-Nếu `r` tăng, distant cash flow bị discount mạnh hơn.
+## Chỉ báo dẫn dắt và chỉ báo trễ
 
-Do đó growth companies với cash flow xa trong future thường valuation-sensitive hơn firms tạo cash ngay hiện tại.
+Không phải mọi dữ liệu kinh tế cùng phản ứng một lúc.
 
-Nhưng “rate cut = stocks tăng” không phải luật. Nếu cut xảy ra vì recession sâu, earnings deterioration có thể lớn hơn discount-rate benefit.
+Đơn hàng, xuất khẩu sơ bộ, PMI hoặc giá chip có thể thay đổi trước lợi nhuận doanh nghiệp. Thất nghiệp và nợ xấu có thể phản ứng trễ hơn.
 
-## Yield curve: market kỳ vọng gì về time
+Vì vậy khi đọc chu kỳ cần phân biệt **chỉ báo dẫn dắt (leading indicator)**, chỉ báo đồng thời và **chỉ báo trễ (lagging indicator)**.
 
-Government bond yields ở các maturities tạo **yield curve / 수익률곡선**.
+Nếu chờ mọi số liệu đều xấu mới kết luận kinh tế giảm, có thể đã đi rất sâu vào chu kỳ.
 
-Curve phản ánh expected future policy rates, inflation, term premium và risk sentiment.
+## Không có một “chu kỳ Hàn Quốc” duy nhất
 
-Corporate debt pricing lại thêm credit spread.
+Các ngành có thể ở những pha khác nhau cùng lúc. Bán dẫn có thể bùng nổ nhờ AI trong khi xây dựng chịu lãi suất cao. Xuất khẩu ô tô có thể tốt trong khi tiêu dùng nội địa yếu. Biohealth có thể tăng nhờ đơn hàng toàn cầu trong lúc SME dịch vụ gặp khó.
 
-Vì vậy company refinancing cost có thể tăng dù BOK rate không đổi nếu investor risk premium tăng.
-
-Xem [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md).
-
-## KRW/USD: tỷ giá là relative price và balance-sheet variable
-
-Nếu KRW weakens against USD, exporter nhận USD có thể quy đổi nhiều KRW hơn. Nhưng benefit chỉ đúng nếu costs/debt không tăng tương ứng.
-
-Cần map four exposures:
+Do đó nên tách ít nhất:
 
 ```text
-Revenue currency
-Cost currency
-Asset currency
-Debt currency
+Chu kỳ xuất khẩu / sản xuất
+Chu kỳ hộ gia đình / tiêu dùng
+Chu kỳ nhà ở / tín dụng
+Chu kỳ đầu tư doanh nghiệp
+Chu kỳ công nghệ riêng từng ngành
 ```
 
-Shipbuilder có USD contract và nhiều KRW cost khác airline mua fuel USD. Semiconductor seller có USD revenue nhưng nhập equipment. Domestic retailer import goods có exposure ngược exporter.
+## Từ biến vĩ mô đến doanh nghiệp
 
-Do đó “won yếu tốt cho Korea” là oversimplification.
+Kinh tế vĩ mô chỉ hữu ích khi nối được xuống doanh nghiệp.
 
-## FX pass-through và imported inflation
-
-KRW depreciation làm imported oil/material/product price tính bằng KRW cao hơn nếu supplier không giảm USD price.
-
-Mức độ truyền vào CPI gọi là **exchange-rate pass-through**.
-
-Firm có pricing power có thể pass cost sang consumer; firm cạnh tranh mạnh phải absorb margin.
-
-Vì vậy FX shock có distribution effect giữa sectors.
-
-## Current account và trade balance khác nhau
-
-**Trade Balance / 무역수지** thường nói goods exports minus goods imports.
-
-**Current Account / 경상수지** rộng hơn, gồm:
-
-- goods;
-- services;
-- primary income;
-- secondary income/transfers.
-
-Korean firms sở hữu assets/operations abroad nên investment income ngày càng quan trọng.
-
-Một economy có goods surplus lớn vẫn có service deficit; current account mới cho external income flow rộng hơn.
-
-## Current account surplus không tự động “tốt”
-
-Surplus có thể phản ánh strong exports/productivity, nhưng cũng có thể tăng khi domestic investment/consumption yếu làm imports giảm.
-
-Do đó phải hỏi **why surplus exists**.
-
-Macro variables không nên được đánh giá tốt/xấu chỉ bằng sign.
-
-## Fiscal policy và automatic stabilizers
-
-Government budget ảnh hưởng demand trực tiếp qua spending và transfers.
-
-**Automatic Stabilizers / 자동안정화장치** hoạt động không cần new law mỗi recession: tax revenue giảm khi income/profit giảm, một số transfers/social spending tăng.
-
-Discretionary fiscal stimulus có multiplier phụ thuộc:
-
-- spare capacity;
-- household saving;
-- monetary stance;
-- import leakage;
-- policy design.
-
-Open economy như Korea có thể thấy một phần stimulus chảy sang imports.
-
-## Fiscal deficit và public debt: stock vs flow
-
-**Fiscal deficit** là flow trong một period. **Public debt** là accumulated stock.
-
-Một year deficit không giống debt crisis. Sustainability phụ thuộc growth, interest rate, maturity, tax base và future spending obligations.
-
-Aging làm pension/health spending trở thành long-run fiscal variable, nên demographic analysis phải nối với public finance.
-
-## Household credit cycle
-
-Housing và household debt là macro amplifier.
-
-Khi property values rise:
+Ví dụ:
 
 ```text
-Collateral value ↑
-→ borrowing capacity ↑
-→ spending/investment ↑
-→ asset demand ↑
+Lãi suất ↑
+→ chi phí vay mua nhà ↑
+→ giao dịch nhà ở ↓
+→ presales yếu
+→ dòng tiền dự án xây dựng ↓
+→ rủi ro PF ↑
 ```
 
-Downturn có thể đảo loop.
-
-Macroprudential rules như LTV/DSR cố target leverage cụ thể hơn policy rate.
-
-Xem [`27_demographics_households_and_consumption.md`](./27_demographics_households_and_consumption.md).
-
-## Construction cycle và PF
-
-Construction có long lead time và financing dependence cao. Rate increase hoặc presale weakness có thể làm project finance stress xuất hiện trước official construction GDP collapse.
-
-PF distress truyền sang contractors, securities firms, lenders và suppliers.
-
-Do đó Korean macro dashboard nên include housing transactions, unsold units, construction orders và PF indicators khi relevant.
-
-Xem [`18_construction_real_estate_and_project_finance.md`](./18_construction_real_estate_and_project_finance.md).
-
-## Labor market: employment quantity và job quality khác nhau
-
-Unemployment rate thấp không tự động nghĩa labor market khỏe toàn diện.
-
-Cần nhìn:
-
-- participation rate;
-- employment by age/gender;
-- regular vs non-regular;
-- wage growth;
-- hours;
-- vacancies;
-- SME/large-firm gap.
-
-Aging có thể làm unemployment rate thấp một phần vì labor-force composition thay đổi, không chỉ vì demand rất mạnh.
-
-## Wage–productivity relationship
-
-Nếu nominal wage tăng nhanh hơn productivity kéo dài, unit labor cost tăng và firm margin/price chịu pressure.
-
-Một simplified measure:
-
-\[
-Unit\ Labor\ Cost \approx \frac{Wage\ per\ Worker}{Output\ per\ Worker}
-\]
-
-Nhưng aggregate relationship khác nhau theo sector. Semiconductor capital intensity cao, restaurant labor intensity cao.
-
-Do đó wage pressure phải map theo business model.
-
-## Leading, coincident và lagging indicators
-
-Economic indicators phản ứng ở timing khác nhau.
-
-**Leading indicators / 선행지표** có thể đổi trước realized activity: orders, surveys, semiconductor prices.
-
-**Coincident indicators / 동행지표** đi cùng activity: industrial production/sales.
-
-**Lagging indicators / 후행지표** phản ánh sau: some employment/credit losses.
-
-Company earnings có thể lead official GDP, nên không mâu thuẫn nếu stock/industry cycle phục hồi trước macro headline.
-
-## Inventory cycle: một small change trong final demand có thể tạo large production swing
-
-Nếu retailers thấy demand giảm, họ vừa order ít hơn vừa destock. Supplier nhận demand shock lớn hơn consumer-sales change.
-
-Đây là **inventory accelerator / 재고순환** và liên quan bullwhip effect.
-
-Manufacturing Korea nhạy với inventory cycles vì intermediate-goods exports lớn.
-
-## Structural vs cyclical: câu hỏi quan trọng nhất
-
-Một variable tăng có thể đến từ cycle hoặc structural change.
-
-Ví dụ HBM demand tăng có both:
-
-- cyclical AI investment boom;
-- structural shift sang higher-bandwidth memory.
-
-Analyst cần tách hai layers vì valuation và capex decision khác nhau.
-
-Cyclical earnings nên không được extrapolate vô hạn; structural capability cũng không nên bị đánh giá chỉ qua một downcycle.
-
-## Current 2026 snapshot: forecast và policy stance phải ghi date
-
-Bank of Korea Economic Outlook tháng 8/2026 dự báo real GDP growth **3,3% năm 2026** và **2,9% năm 2027**, cùng CPI **2,7% năm 2026**. Semiconductor/AI-related demand là một driver quan trọng. Đây là **forecast tại thời điểm tháng 8/2026**, không phải realized final data.
-
-Đến Monetary Policy Report tháng 9/2026, BOK ghi nhận base rate đã được nâng lên **3,00%**, trong bối cảnh inflation pressure, robust growth và housing/household-loan concerns. Đây là **policy snapshot tháng 9/2026** và có thể thay đổi sau đó.
-
-Hai snapshot minh họa lý do chapter tách current data khỏi structural mental models.
-
-## Macro dashboard cho Korean company analysis
-
-Không cần forecast tất cả. Một dashboard practical có thể gồm:
+Hoặc:
 
 ```text
-Growth: real GDP / GDI
-Prices: CPI / core CPI
-Rates: BOK rate / government yields / credit spreads
-FX: KRW/USD
-External: exports / current account / semiconductor indicators
-Household: housing / debt / confidence
-Labor: employment / wage / participation
-Industry: orders / inventory / utilization / backlog
+Nhu cầu AI ↑
+→ nhu cầu HBM ↑
+→ ASP / cơ cấu sản phẩm bộ nhớ ↑
+→ lợi nhuận bán dẫn ↑
+→ CAPEX thiết bị ↑
+→ đơn hàng nhà cung cấp thiết bị ↑
 ```
 
-Sau đó chỉ chọn variables relevant với company.
+Đây là cách biến “tin kinh tế” thành chuỗi nguyên nhân–kết quả. Xem [cơ chế truyền dẫn từ kinh tế đến doanh nghiệp](./21_economy_to_company_transmission.md).
 
-Airline cần oil/FX/demand. Bank cần rates/credit/housing. Semiconductor needs memory prices/global AI capex. Retail needs real income/household debt.
+## Mental Model — Mô hình tư duy
 
-## Scenario analysis tốt hơn một forecast point
+> Kinh tế vĩ mô không phải tập hợp GDP, CPI, lãi suất và tỷ giá. Nó là hệ thống các bảng cân đối và dòng tiền liên kết. Một cú sốc chỉ quan trọng với doanh nghiệp khi ta chỉ ra được đường truyền từ biến vĩ mô tới nhu cầu, giá, chi phí, vốn hoặc bảng cân đối của doanh nghiệp đó.
 
-Thay vì nói “KRW sẽ là 1,xxx”, hãy xây scenarios:
+Khi đọc một chỉ báo mới, hãy hỏi:
 
 ```text
-Scenario A: global AI capex mạnh + KRW stable
-Scenario B: semiconductor downcycle + KRW weak
-Scenario C: rates stay high + housing soft
+Biến nào thay đổi?
+→ ai chịu tác động đầu tiên?
+→ bảng cân đối nào thay đổi?
+→ hành vi tiêu dùng / đầu tư nào thay đổi?
+→ ngành nào nhận tác động?
+→ doanh thu, chi phí hoặc vốn của công ty nào thay đổi?
 ```
 
-Rồi trace company earnings/cash flow.
-
-Scenario thinking tránh false precision và phù hợp với macro uncertainty.
-
-## Mental Model
-
-> Macro là hệ thống **thay đổi boundary conditions** của firms: demand, input prices, funding cost, FX, wages và asset values. Nó không quyết định outcome một mình; company business model quyết định shock được khuếch đại hay hấp thụ.
-
-Một map nén:
-
-```text
-Global cycle + Domestic demand
-          ↓
-Inflation / Rates / FX
-          ↓
-Household + Corporate balance sheets
-          ↓
-Industry orders / Costs
-          ↓
-Company cash flow
-```
-
-## Common misconceptions
-
-**“GDP tăng = mọi company tốt.”** Sai. Sector cycles khác nhau.
-
-**“KRW yếu = mọi exporter được lợi.”** Sai. Cost/debt currency matters.
-
-**“Rate cut = bullish.”** Không luôn; reason for cut quan trọng.
-
-**“Current-account surplus luôn tốt.”** Không; weak imports/domestic demand cũng có thể tăng surplus.
-
-**“Low unemployment = no labor problem.”** Sai. Participation, aging và job quality matter.
-
-**“One forecast point là truth.”** Sai. Forecast là conditional estimate và phải ghi date.
-
-## Connections
-
-Đọc tiếp [`02_trade_export_and_global_value_chains.md`](./02_trade_export_and_global_value_chains.md), [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md), [`18_construction_real_estate_and_project_finance.md`](./18_construction_real_estate_and_project_finance.md), [`21_economy_to_company_transmission.md`](./21_economy_to_company_transmission.md), [`27_demographics_households_and_consumption.md`](./27_demographics_households_and_consumption.md) và [`28_productivity_services_and_economic_dualism.md`](./28_productivity_services_and_economic_dualism.md).
-
-### Nguồn nền và current snapshots
-
-- Bank of Korea, Economic Outlook (August 2026): https://www.bok.or.kr/eng/bbs/E0000634/view.do?menuNo=400423&nttId=11064205
-- Bank of Korea, Monetary Policy Report (September 2026).
-- Bank of Korea research on potential growth, productivity and financial stability.
-- Statistics Korea for CPI, labor and household statistics.
-
-Các forecast, rate và current-cycle statements luôn cần re-check khi dùng sau ngày tài liệu được cập nhật; các causal mechanisms trong chapter được viết để dùng lâu dài.
+Nếu chưa trả lời được chuỗi này, ta mới biết “số liệu”, chưa hiểu cơ chế.
