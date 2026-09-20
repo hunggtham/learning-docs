@@ -1,573 +1,540 @@
-# Nghiên cứu hệ thống, backtest, rủi ro và triển khai thực tế
+# Nghiên cứu hệ thống, kiểm thử quá khứ, rủi ro và triển khai thực tế
 
-> Một ý tưởng trading chỉ trở thành chiến lược khi nó được chuyển thành rule rõ ràng, kiểm thử bằng dữ liệu đúng thời điểm, chịu được chi phí giao dịch và vẫn hoạt động ngoài mẫu. Chương này trình bày quy trình từ **giả thuyết → dữ liệu → backtest → validation → forward test → production monitoring**.
+> Một ý tưởng giao dịch chỉ trở thành chiến lược khi được chuyển thành quy tắc rõ ràng, kiểm thử bằng dữ liệu đúng thời điểm, tính đủ chi phí giao dịch và vẫn hoạt động ngoài mẫu. Chương này dùng tiếng Việt làm ngôn ngữ giải thích; thuật ngữ tiếng Anh chỉ giữ trong ngoặc hoặc dưới dạng viết tắt chuẩn để tiện tra cứu.
 
 # Phần I — Bắt đầu từ giả thuyết
 
-## 1. Idea không phải strategy
+## 1. Ý tưởng không phải chiến lược
 
-“Giá thường bật sau khi sweep liquidity” chỉ là một quan sát.
+“Giá thường bật lại sau khi quét thanh khoản” chỉ là một quan sát.
 
-Muốn thành strategy cần xác định:
+Muốn biến thành chiến lược cần xác định:
 
 ```text
-Universe
-Timeframe
-Signal
-Entry
-Exit
-Stop
-Position Size
-Cost Model
-Invalidation
+Tập tài sản (universe)
+Khung thời gian
+Tín hiệu
+Điểm vào
+Điểm ra
+Mức dừng
+Quy mô vị thế
+Mô hình chi phí
+Điều kiện vô hiệu hóa
 ```
 
-Nếu rule không đủ rõ để hai người code ra kết quả gần giống nhau, hệ thống còn quá mơ hồ.
+Nếu quy tắc chưa đủ rõ để hai người triển khai độc lập cho kết quả gần giống nhau, hệ thống vẫn quá mơ hồ.
 
-## 2. Causal hypothesis
+## 2. Giả thuyết nhân quả
 
-Một strategy tốt nên có lý do tại sao edge có thể tồn tại.
+Một chiến lược tốt nên có lý do tại sao lợi thế có thể tồn tại.
 
-Nguồn edge có thể đến từ:
+Nguồn lợi thế có thể đến từ:
 
-- risk premium;
-- behavioral bias;
-- institutional constraint;
-- liquidity need;
-- slow information diffusion;
-- market structure.
+- phần bù rủi ro;
+- thiên lệch hành vi;
+- giới hạn của tổ chức lớn;
+- nhu cầu thanh khoản;
+- thông tin lan truyền chậm;
+- cấu trúc thị trường.
 
-Không phải mọi edge cần mô hình kinh tế hoàn hảo, nhưng một câu chuyện nhân quả giúp giảm data mining.
+Không phải mọi lợi thế cần một mô hình kinh tế hoàn hảo, nhưng câu chuyện nhân quả giúp giảm nguy cơ khai thác ngẫu nhiên dữ liệu.
 
-## 3. Falsifiable
+## 3. Giả thuyết phải có khả năng bị bác bỏ
 
-Giả thuyết phải có khả năng bị bác bỏ.
+Một giả thuyết tốt phải chỉ ra điều gì sẽ khiến nó không còn đúng.
 
 Ví dụ:
 
 ```text
-Nếu signal chỉ hoạt động trước cost,
-hoặc mất hoàn toàn ở out-of-sample,
-thì hypothesis cần xem lại.
+Nếu tín hiệu chỉ có lãi trước chi phí
+hoặc mất hoàn toàn ngoài mẫu
+→ giả thuyết cần xem lại
 ```
 
 # Phần II — Dữ liệu
 
-## 4. Point-in-time data
+## 4. Dữ liệu đúng tại thời điểm lịch sử
 
-Dữ liệu dùng trong backtest phải là dữ liệu **có thể biết tại thời điểm quyết định**.
+Dữ liệu dùng trong kiểm thử phải là dữ liệu **có thể biết tại thời điểm quyết định**.
 
 Cần phân biệt:
 
 ```text
-Observation Time
-Publication Time
-Revision Time
-Decision Time
-Execution Time
+Thời điểm quan sát
+Thời điểm công bố
+Thời điểm chỉnh sửa dữ liệu
+Thời điểm ra quyết định
+Thời điểm thực thi
 ```
 
-Dùng dữ liệu đã revise sau này cho quyết định quá khứ tạo look-ahead bias.
+Dùng dữ liệu đã được sửa sau này cho quyết định trong quá khứ tạo **thiên lệch nhìn trước (look-ahead bias)**.
 
-## 5. Timestamp audit
+## 5. Kiểm tra dấu thời gian
 
-Mỗi nguồn cần biết:
+Mỗi nguồn dữ liệu cần biết:
 
-- timezone;
-- delay;
-- bar close time;
-- exchange timestamp;
-- publication timestamp.
+- múi giờ;
+- độ trễ;
+- thời điểm đóng nến;
+- dấu thời gian của sở giao dịch;
+- thời điểm công bố.
 
-Sai timestamp vài phút có thể biến một strategy event-driven từ lỗ thành lời giả tạo.
+Sai vài phút có thể biến một chiến lược theo sự kiện từ thua thành thắng giả tạo.
 
-## 6. Data quality
+## 6. Chất lượng dữ liệu
 
 Cần kiểm tra:
 
-- missing values;
-- duplicate;
-- bad ticks;
-- corporate actions;
-- futures roll;
-- delisted securities;
-- timezone changes.
+- giá trị thiếu;
+- bản ghi trùng;
+- điểm dữ liệu lỗi;
+- hành động doanh nghiệp;
+- chuyển kỳ hạn hợp đồng tương lai;
+- chứng khoán bị hủy niêm yết;
+- thay đổi múi giờ.
 
-Backtest tốt bắt đầu từ dữ liệu sạch, không từ indicator phức tạp.
+Kiểm thử tốt bắt đầu từ dữ liệu sạch, không phải từ chỉ báo phức tạp.
 
-# Phần III — Các bias phổ biến
+# Phần III — Các thiên lệch phổ biến
 
-## 7. Look-ahead bias
+## 7. Thiên lệch nhìn trước
 
-Dùng thông tin tương lai trong quá khứ.
+Thiên lệch nhìn trước xuất hiện khi mô hình sử dụng thông tin tương lai trong quá khứ.
 
-Ví dụ dùng close của ngày để quyết định một entry được giả định xảy ra trước close.
+Ví dụ dùng giá đóng cửa của ngày để quyết định một lệnh được giả định xảy ra trước giờ đóng cửa.
 
-## 8. Survivorship bias
+## 8. Thiên lệch sống sót
 
-Chỉ dùng những cổ phiếu còn tồn tại hôm nay làm universe lịch sử sẽ bỏ các công ty phá sản hoặc bị hủy niêm yết.
+**Thiên lệch sống sót (survivorship bias)** xảy ra khi chỉ dùng những tài sản còn tồn tại hôm nay cho dữ liệu lịch sử, bỏ các công ty phá sản hoặc bị hủy niêm yết.
 
 Kết quả thường đẹp giả tạo.
 
-## 9. Selection bias
+## 9. Thiên lệch lựa chọn
 
-Chọn market hoặc period vì biết trước nó phù hợp strategy cũng tạo bias.
+**Thiên lệch lựa chọn (selection bias)** xuất hiện khi chọn thị trường hoặc giai đoạn vì đã biết trước nó phù hợp chiến lược.
 
-## 10. Data snooping
+## 10. Đào bới dữ liệu
 
-Thử quá nhiều biến, rule và timeframe rồi chỉ giữ cái tốt nhất làm tăng xác suất tìm được pattern ngẫu nhiên.
+**Đào bới dữ liệu (data snooping)** là thử quá nhiều biến, quy tắc và khung thời gian rồi chỉ giữ kết quả đẹp nhất.
 
-## 11. Multiple-testing problem
+Càng thử nhiều, xác suất tìm được một mẫu ngẫu nhiên càng cao.
 
-Nếu thử hàng nghìn strategy, một số sẽ có Sharpe cao chỉ do may mắn.
+## 11. Vấn đề thử nhiều giả thuyết
 
-Do đó cần xem số lượng thử nghiệm và mức độ độc lập giữa các thử nghiệm.
+Nếu thử hàng nghìn chiến lược, một số sẽ có Sharpe cao chỉ do may mắn.
+
+Do đó phải ghi lại số lần thử và mức độ độc lập giữa các thử nghiệm.
 
 # Phần IV — Chia dữ liệu
 
-## 12. Train, validation và test
+## 12. Tập huấn luyện, xác thực và kiểm tra
 
 Một cấu trúc phổ biến:
 
 ```text
-Train
-→ xây / fit strategy
+Huấn luyện (train)
+→ xây / hiệu chỉnh mô hình
 
-Validation
+Xác thực (validation)
 → chọn phiên bản
 
-Test
+Kiểm tra (test)
 → đánh giá cuối ngoài mẫu
 ```
 
-Không nên liên tục nhìn test set rồi sửa strategy vì khi đó test set đã trở thành train set.
+Không nên liên tục nhìn tập kiểm tra rồi sửa chiến lược, vì khi đó tập kiểm tra đã bị dùng như dữ liệu huấn luyện.
 
-## 13. Out-of-sample
+## 13. Ngoài mẫu
 
-Out-of-sample (OOS) là phần dữ liệu không dùng để xây rule.
+**Ngoài mẫu (out-of-sample, OOS)** là phần dữ liệu không dùng để xây quy tắc.
 
-Hiệu quả OOS thường đáng tin hơn in-sample, dù vẫn có thể may mắn.
+Kết quả OOS thường đáng tin hơn trong mẫu, dù vẫn có thể chịu may mắn thống kê.
 
-## 14. Walk-forward
+## 14. Kiểm thử cuốn chiếu
 
-Walk-forward lặp quy trình:
+**Kiểm thử cuốn chiếu (walk-forward)** lặp quy trình:
 
 ```text
-Train quá khứ
-→ Test đoạn tiếp theo
-→ Trượt cửa sổ
-→ Lặp lại
+Huấn luyện trên quá khứ
+→ kiểm tra đoạn tiếp theo
+→ trượt cửa sổ
+→ lặp lại
 ```
 
-Nó mô phỏng tốt hơn cách strategy sẽ được cập nhật theo thời gian.
+Cách này mô phỏng tốt hơn việc chiến lược được cập nhật theo thời gian thực.
 
-## 15. Purging và embargo
+## 15. Loại vùng chồng lấn và tạo khoảng cách
 
-Khi labels hoặc trade overlap theo thời gian, train/test có thể rò rỉ thông tin qua các sample gần nhau.
+Khi nhãn hoặc giao dịch chồng lấn thời gian, tập huấn luyện và kiểm tra có thể rò rỉ thông tin.
 
-**Purging** loại sample có overlap; **embargo** tạo khoảng cách giữa các tập.
+**Loại mẫu chồng lấn (purging)** bỏ các quan sát gây giao thoa. **Khoảng cách an toàn (embargo)** tạo khoảng trống giữa hai tập.
 
-Khái niệm này đặc biệt quan trọng trong machine-learning trading.
+Khái niệm này đặc biệt quan trọng với mô hình học máy dùng dữ liệu tài chính theo chuỗi thời gian.
 
-# Phần V — Expectancy và distribution
+# Phần V — Kỳ vọng và phân phối kết quả
 
-## 16. Expectancy
+## 16. Kỳ vọng mỗi giao dịch
 
 ```text
 E
-= P(win) × AvgWin
-- P(loss) × AvgLoss
+= P(thắng) × Lãi trung bình
+- P(thua) × Lỗ trung bình
 ```
 
-Expectancy dương mới là nền tảng; win rate cao không đủ.
+Kỳ vọng dương mới là nền tảng; tỷ lệ thắng cao không đủ.
 
-## 17. R-multiple
+## 17. Bội số R
 
-Chuẩn hóa kết quả theo risk ban đầu giúp so nhiều trade khác nhau.
+**Bội số R (R-multiple)** chuẩn hóa kết quả theo mức rủi ro ban đầu, giúp so sánh các giao dịch có quy mô khác nhau.
 
-## 18. Distribution quan trọng hơn average
+## 18. Phân phối quan trọng hơn trung bình
 
-Hai strategy cùng average return nhưng có thể khác:
+Hai chiến lược có cùng lợi suất trung bình nhưng có thể khác mạnh về:
 
-- skew;
-- fat tails;
-- drawdown;
-- loss clustering;
-- liquidity exposure.
+- độ lệch phân phối;
+- đuôi dày;
+- mức suy giảm;
+- thua lỗ theo cụm;
+- rủi ro thanh khoản.
 
-## 19. Drawdown
+## 19. Mức suy giảm
 
-Maximum drawdown chỉ là một quan sát lịch sử, không phải worst-case tương lai.
+Mức suy giảm tối đa lịch sử không phải tổn thất tệ nhất có thể xảy ra trong tương lai.
 
-Cần xem cả:
+Cần xem thêm:
 
-- duration của drawdown;
-- recovery time;
-- underwater curve.
+- thời gian nằm trong suy giảm;
+- thời gian phục hồi;
+- đường giá trị khi chưa trở lại đỉnh.
 
-# Phần VI — Parameter robustness
+# Phần VI — Độ bền của tham số
 
-## 20. Đừng chỉ tìm một “magic parameter”
+## 20. Không tìm “tham số thần kỳ”
 
-Nếu strategy chỉ lời ở MA = 47 nhưng lỗ ở 45, 46, 48, 49 thì edge có thể rất mong manh.
+Nếu chiến lược chỉ có lãi ở MA = 47 nhưng thua ở 45, 46, 48 và 49 thì lợi thế có thể rất mong manh.
 
-## 21. Parameter surface
+## 21. Bề mặt tham số
 
-Nên xem cả vùng tham số.
+Nên xem cả vùng tham số thay vì một điểm tối ưu. Một vùng rộng có kết quả tương đối ổn định thường đáng tin hơn một đỉnh hẹp.
 
-Một plateau rộng thường đáng tin hơn một đỉnh đơn lẻ.
+## 22. Độ ổn định qua nhiều thị trường
 
-## 22. Stability across markets
+Nếu cùng logic hoạt động ở nhiều thị trường liên quan, bằng chứng thường mạnh hơn trường hợp chỉ hoạt động ở một mã rất cụ thể.
 
-Nếu cùng logic hoạt động ở nhiều market liên quan, bằng chứng tốt hơn strategy chỉ hoạt động ở một ticker rất cụ thể.
+Tuy nhiên không nên đòi hỏi lợi thế phải phổ quát nếu giả thuyết vốn chỉ phù hợp với một cấu trúc thị trường riêng.
 
-Nhưng không nên yêu cầu universal edge nếu hypothesis vốn chỉ phù hợp một market structure.
+## 23. Độ ổn định qua nhiều chế độ
 
-## 23. Stability across regimes
+Nên kiểm tra ít nhất:
 
-Kiểm tra:
+- xu hướng;
+- đi ngang;
+- biến động cao;
+- biến động thấp;
+- khủng hoảng;
+- nới lỏng và thắt chặt.
 
-- trend;
-- range;
-- high vol;
-- low vol;
-- crisis;
-- easing/tightening.
+Chiến lược có thể hợp lệ nhưng chỉ trong một chế độ; điều quan trọng là biết giới hạn đó.
 
-Strategy có thể hợp lệ nhưng chỉ trong một regime; điều quan trọng là biết điều đó.
+# Phần VII — Kiểm tra giả và kiểm tra bác bỏ
 
-# Phần VII — Placebo và falsification tests
+## 24. Kiểm tra giả
 
-## 24. Placebo test
+**Kiểm tra giả (placebo test)** thay tín hiệu thật bằng tín hiệu ngẫu nhiên hoặc dịch thời gian để xem kết quả còn tương tự không.
 
-Thay signal thật bằng signal ngẫu nhiên hoặc dịch thời gian để xem performance có còn tương tự không.
+Nếu có, “lợi thế” có thể chỉ đến từ xu hướng chung của thị trường hoặc một thiên lệch dữ liệu.
 
-Nếu có, “edge” có thể chỉ đến từ market drift hoặc bias.
+## 25. Điểm vào ngẫu nhiên
 
-## 25. Randomized entry
+Giữ quy tắc thoát và quản trị rủi ro nhưng ngẫu nhiên hóa điểm vào giúp kiểm tra tín hiệu vào lệnh thật sự đóng góp bao nhiêu.
 
-Giữ exit/risk rule nhưng randomize entry giúp kiểm tra entry signal thật sự đóng góp bao nhiêu.
+## 26. Đảo chiều tín hiệu
 
-## 26. Reverse signal
+Đảo tín hiệu giúp hiểu lợi thế đến từ hướng dự báo thật hay chỉ từ lớp quản trị rủi ro và thoát lệnh.
 
-Đảo signal đôi khi giúp hiểu edge đến từ direction thật hay chỉ từ risk-management overlay.
+# Phần VIII — Mô hình chi phí
 
-# Phần VIII — Cost model
+## 27. Chênh lệch mua–bán
 
-## 27. Spread
+Chênh lệch mua–bán là chi phí trực tiếp giữa giá mua tốt nhất và giá bán tốt nhất. Kiểm thử dùng giá giữa hoặc giá đóng cửa mà bỏ qua chênh lệch thường quá lạc quan.
 
-Spread là cost trực tiếp giữa bid và ask.
+## 28. Trượt giá
 
-Backtest dùng mid/close mà bỏ spread thường quá lạc quan.
+**Trượt giá (slippage)** phụ thuộc:
 
-## 28. Slippage
+- biến động;
+- loại lệnh;
+- quy mô;
+- thanh khoản;
+- độ trễ;
+- rủi ro sự kiện.
 
-Slippage phụ thuộc:
+Không nên dùng một con số trượt giá cố định cho mọi trạng thái thị trường.
 
-- volatility;
-- order type;
-- size;
-- liquidity;
-- latency;
-- event risk.
+## 29. Tác động của lệnh lên thị trường
 
-Không nên dùng một số slippage cố định cho mọi trạng thái nếu strategy lớn hoặc event-driven.
+Lệnh lớn có thể tự làm giá đi ngược người giao dịch. **Công suất chiến lược (strategy capacity)** giảm khi quy mô tăng và chi phí tác động tăng.
 
-## 29. Market impact
+## 30. Chi phí tài trợ
 
-Order lớn có thể tự đẩy giá đi ngược trader.
+CFD, giao dịch ký quỹ, bán khống và sản phẩm đòn bẩy có chi phí tài trợ. Chiến lược giữ lâu phải tính đầy đủ.
 
-Capacity của strategy giảm khi size tăng.
+## 31. Chi phí vay chứng khoán và khả năng bán khống
 
-## 30. Financing
+Chiến lược bán khống phải tính:
 
-CFD, margin, short borrow hoặc leveraged products có financing cost.
+- phí vay;
+- khả năng tìm được chứng khoán để vay;
+- rủi ro bị thu hồi;
+- trạng thái khó vay.
 
-Strategy giữ lâu phải tính đầy đủ.
+## 32. Chuyển kỳ hạn hợp đồng tương lai
 
-## 31. Borrow cost và short availability
+Chiến lược futures cần mô hình hóa:
 
-Short strategy phải tính:
+- ngày chuyển kỳ hạn;
+- chênh lệch giữa hợp đồng;
+- sự dịch chuyển thanh khoản;
+- cơ sở giá;
+- phí giao dịch.
 
-- borrow fee;
-- locate availability;
-- recall risk;
-- hard-to-borrow behavior.
+# Phần IX — Bootstrap và Monte Carlo
 
-## 32. Futures roll
+## 33. Lấy mẫu lại
 
-Futures strategy cần model:
+**Bootstrap** lấy mẫu lại từ giao dịch hoặc lợi suất lịch sử để tạo nhiều đường kết quả khả dĩ.
 
-- roll date;
-- spread;
-- liquidity migration;
-- basis;
-- commission.
+Mục tiêu là đánh giá bất định của lợi suất và mức suy giảm, thay vì chỉ nhìn một đường lịch sử.
 
-# Phần IX — Monte Carlo và bootstrap
+## 34. Mô phỏng Monte Carlo
 
-## 33. Bootstrap
+Monte Carlo có thể ngẫu nhiên hóa:
 
-Bootstrap lấy lại sample từ historical trades/returns để tạo nhiều đường P/L khả dĩ.
+- thứ tự giao dịch;
+- độ lớn thắng/thua;
+- chế độ biến động;
+- bất định tham số.
 
-Nó giúp nhìn uncertainty của drawdown và return.
+Kết quả cần được đọc như phân phối xác suất, không phải một đường vốn “dự báo tương lai”.
 
-## 34. Monte Carlo
+## 35. Kích thước mẫu
 
-Monte Carlo có thể randomize:
+100 giao dịch không luôn tương đương 100 quan sát độc lập. Nếu phần lớn giao dịch xảy ra trong cùng một chế độ, **kích thước mẫu hiệu dụng (effective sample size)** nhỏ hơn nhiều.
 
-- thứ tự trade;
-- win/loss magnitude;
-- volatility regime;
-- parameter uncertainty.
+## 36. Tự tương quan
 
-Kết quả là distribution, không phải một equity curve duy nhất.
+Nếu lợi suất phụ thuộc vào chuỗi trước đó, giả định độc lập sẽ làm sai số chuẩn trông nhỏ giả tạo.
 
-## 35. Sample size
-
-100 trade không luôn tương đương 100 quan sát độc lập.
-
-Nếu tất cả trade xảy ra trong cùng một regime, effective sample size nhỏ hơn nhiều.
-
-## 36. Serial correlation
-
-Returns có thể phụ thuộc theo chuỗi. Khi đó standard error đơn giản dựa independence có thể quá lạc quan.
-
-# Phần X — Metrics
+# Phần X — Thước đo hiệu quả
 
 ## 37. Sharpe
 
 ```text
 Sharpe
-= Excess Return / Volatility
+= Lợi suất vượt chuẩn / Độ biến động
 ```
 
-Hữu ích nhưng không mô tả tail risk hoặc liquidity.
+Sharpe hữu ích nhưng không mô tả đầy đủ rủi ro đuôi hoặc thanh khoản.
 
 ## 38. Sortino
 
-Sortino dùng downside deviation thay total volatility.
+Sortino thay tổng độ biến động bằng độ lệch phía giảm, phù hợp khi quan tâm nhiều hơn tới biến động bất lợi.
 
 ## 39. Calmar
 
 ```text
 Calmar
-≈ CAGR / Maximum Drawdown
+≈ CAGR / Mức suy giảm tối đa
 ```
 
-Hữu ích với trend-following và strategy có path dài.
+Thước đo này hữu ích với chiến lược có đường lợi nhuận kéo dài qua nhiều chu kỳ.
 
-## 40. Profit factor
+## 40. Hệ số lợi nhuận
 
 ```text
 Profit Factor
-= Gross Profit / Gross Loss
+= Tổng lãi / Tổng lỗ tuyệt đối
 ```
 
-Cần đọc cùng trade count và cost.
+Phải đọc cùng số giao dịch, độ tập trung lợi nhuận và chi phí.
 
-## 41. Hit rate
+## 41. Tỷ lệ thắng
 
-Hit rate là win rate. Không nên dùng riêng lẻ.
+Tỷ lệ thắng chỉ cho biết số giao dịch có lãi, không cho biết độ lớn lãi/lỗ. Không nên dùng riêng lẻ.
 
-# Phần XI — Position sizing
+# Phần XI — Xác định quy mô vị thế
 
-## 42. Fixed risk
+## 42. Rủi ro cố định
 
-Một cách đơn giản là risk một tỷ lệ capital cố định theo invalidation.
+Một cách đơn giản là cho mỗi giao dịch một tỷ lệ rủi ro cố định theo điều kiện vô hiệu hóa.
 
-## 43. Volatility scaling
+## 43. Điều chỉnh theo biến động
 
-Giảm size khi volatility tăng giúp giữ risk gần ổn định hơn.
+Giảm quy mô khi biến động tăng giúp giữ mức rủi ro gần ổn định hơn.
 
 ## 44. Kelly
 
-Kelly tối đa hóa long-run logarithmic growth dưới giả định biết chính xác edge.
+Tiêu chuẩn Kelly tối đa hóa tăng trưởng log dài hạn dưới giả định lợi thế được biết chính xác.
 
-Trong thực tế thường dùng fractional Kelly vì estimate rất không chắc chắn.
+Trong thực tế thường dùng **Kelly phân số (fractional Kelly)** vì lợi thế chỉ được ước lượng và có sai số lớn.
 
-## 45. Portfolio heat
+## 45. Tổng nhiệt rủi ro của danh mục
 
-Tổng risk của nhiều position có thể lớn hơn tổng risk riêng lẻ nếu chúng tương quan.
+Tổng rủi ro của nhiều vị thế có thể lớn hơn phép cộng cơ học nếu chúng phụ thuộc cùng một nhân tố.
 
-# Phần XII — Capacity
+# Phần XII — Công suất chiến lược
 
-## 46. Strategy capacity
+## 46. Công suất
 
-Capacity là quy mô vốn có thể chạy trước khi impact và liquidity làm edge giảm đáng kể.
+Công suất là quy mô vốn có thể triển khai trước khi tác động giá và thiếu thanh khoản làm lợi thế giảm đáng kể.
 
-Một strategy micro-cap có Sharpe cao với 10.000 USD có thể không scale lên 10 triệu USD.
+Một chiến lược cổ phiếu vốn hóa rất nhỏ có Sharpe cao với 10.000 USD có thể không mở rộng được lên 10 triệu USD.
 
-## 47. Turnover
+## 47. Vòng quay
 
-Turnover cao làm strategy nhạy với transaction cost và execution quality.
+Vòng quay cao làm chiến lược nhạy hơn với phí, trượt giá và chất lượng thực thi.
 
-# Phần XIII — Forward test
+# Phần XIII — Kiểm thử tiến tới tương lai
 
-## 48. Paper/forward test
+## 48. Kiểm thử tiến tới tương lai
 
-Forward test kiểm tra strategy trên dữ liệu mới theo thời gian thật.
+**Kiểm thử tiến tới tương lai (forward test)** chạy chiến lược trên dữ liệu mới theo thời gian thật nhưng chưa nhất thiết dùng vốn thật.
 
 Nó giúp phát hiện:
 
-- data mismatch;
-- latency;
-- execution assumption sai;
-- operational bug.
+- khác biệt dữ liệu;
+- độ trễ;
+- giả định thực thi sai;
+- lỗi vận hành.
 
-## 49. Small live
+## 49. Giao dịch thật với quy mô rất nhỏ
 
-Sau forward test, chạy size rất nhỏ có thể cung cấp dữ liệu thực tế về fill và slippage trước khi scale.
+Sau kiểm thử tiến tới tương lai, quy mô thật rất nhỏ giúp thu thập dữ liệu về khớp lệnh và trượt giá trước khi tăng vốn.
 
-# Phần XIV — Production system
+# Phần XIV — Hệ thống vận hành thực tế
 
-## 50. Research code và production code khác nhau
+## 50. Mã nghiên cứu và mã vận hành khác nhau
 
-Notebook backtest có thể chấp nhận thao tác thủ công. Production cần:
+Mã nghiên cứu có thể chấp nhận thao tác thủ công. Hệ thống vận hành cần:
 
-- deterministic logic;
-- logging;
-- retries;
-- monitoring;
-- failure handling.
+- logic xác định;
+- nhật ký;
+- cơ chế thử lại;
+- giám sát;
+- xử lý lỗi.
 
-## 51. Reconciliation
+## 51. Đối soát
 
 Hệ thống phải đối chiếu:
 
 ```text
-Expected Position
-vs
-Broker Position
+Vị thế kỳ vọng
+với
+Vị thế thật tại nhà môi giới
 ```
 
-Nếu khác nhau, cần dừng hoặc xử lý rõ ràng.
+Nếu khác nhau, cần dừng hoặc xử lý theo quy tắc rõ ràng.
 
-## 52. Idempotent order
+## 52. Lệnh không tạo tác dụng lặp
 
-Một order command chạy lại không nên vô tình tạo position gấp đôi.
+Cơ chế **không lặp tác dụng (idempotency)** bảo đảm việc gửi lại cùng yêu cầu sau lỗi mạng không vô tình tạo vị thế gấp đôi.
 
-Đây là yêu cầu phần mềm quan trọng trong automation.
+## 53. Công tắc dừng
 
-## 53. Kill switch
+**Công tắc dừng (kill switch)** cho phép ngừng hệ thống khi:
 
-Kill switch cho phép dừng hệ thống khi:
+- dữ liệu lỗi;
+- API nhà môi giới lỗi;
+- vị thế không khớp;
+- lỗ vượt ngưỡng;
+- thị trường bất thường.
 
-- data lỗi;
-- broker API lỗi;
-- position mismatch;
-- loss vượt threshold;
-- market bất thường.
+## 54. Giới hạn an toàn nội bộ
 
-## 54. Circuit breaker nội bộ
+Có thể đặt trước:
 
-Có thể thiết kế giới hạn:
+- lỗ tối đa trong ngày;
+- phơi nhiễm tổng tối đa;
+- đòn bẩy tối đa;
+- kích thước lệnh tối đa;
+- trượt giá tối đa.
 
-- daily loss;
-- max gross exposure;
-- max leverage;
-- max order size;
-- max slippage.
+# Phần XV — Trôi dữ liệu và suy giảm chiến lược
 
-# Phần XV — Drift và degradation
+## 55. Suy giảm lợi thế
 
-## 55. Strategy degradation
+Lợi thế có thể giảm vì:
 
-Edge có thể giảm vì:
+- thị trường thích nghi;
+- cạnh tranh;
+- chi phí tăng;
+- chế độ thay đổi;
+- cách triển khai lệch khỏi nghiên cứu ban đầu.
 
-- market adapts;
-- competition;
-- cost tăng;
-- regime thay;
-- implementation drift.
+## 56. Trôi phân phối đầu vào
 
-## 56. Feature drift
+**Trôi đặc trưng (feature drift)** là khi phân phối đầu vào thay đổi so giai đoạn dùng để xây mô hình.
 
-Distribution của input có thể thay đổi so training period.
+## 57. Trôi hiệu quả
 
-## 57. Performance drift
+Nên theo dõi:
 
-Theo dõi:
+- tỷ lệ thắng;
+- kỳ vọng;
+- trượt giá;
+- vòng quay;
+- phơi nhiễm nhân tố;
+- mức suy giảm.
 
-- hit rate;
-- expectancy;
-- slippage;
-- turnover;
-- factor exposure;
-- drawdown.
+## 58. Không dừng chiến lược chỉ vì vài lệnh thua
 
-## 58. Không dừng strategy chỉ vì vài loss
+Cần phân biệt biến động ngẫu nhiên bình thường với bằng chứng cho thấy lợi thế đã hỏng. Ngưỡng dừng nên được xác định trước, không dựa trên cảm xúc.
 
-Cần phân biệt normal variance với evidence edge đã hỏng.
+# Phần XVI — Nhật ký nghiên cứu và quản lý phiên bản
 
-Dùng threshold được định nghĩa trước thay vì phản ứng cảm xúc.
+## 59. Quản lý phiên bản
 
-# Phần XVI — Research log
-
-## 59. Versioning
-
-Mỗi thay đổi strategy nên ghi:
+Mỗi thay đổi chiến lược nên ghi:
 
 ```text
-Version
-Date
-Hypothesis
-Rule Change
-Reason
-Expected Effect
-Validation Result
+Phiên bản
+Ngày
+Giả thuyết
+Thay đổi quy tắc
+Lý do
+Ảnh hưởng kỳ vọng
+Kết quả xác thực
 ```
 
-## 60. Không sửa lịch sử
+## 60. Không sửa lịch sử sau khi biết kết quả
 
-Không nên thay code rồi chạy lại và quên strategy cũ từng là gì.
+Nếu thay đổi mã rồi chạy lại toàn bộ lịch sử, phải coi đó là một chiến lược mới. Không được trình bày kết quả cũ như thể thay đổi đã tồn tại từ trước.
 
-Versioning giúp tránh hindsight bias.
+## 61. Tách nghiên cứu và phê duyệt triển khai
 
-# Phần XVII — Quy trình hoàn chỉnh
-
-## 61. Research pipeline
+Một quy trình tốt nên có cổng rõ:
 
 ```text
-1. Causal Hypothesis
-2. Data Audit
-3. Formal Rules
-4. In-Sample Test
-5. Robustness / Parameter Surface
-6. Out-of-Sample
-7. Walk-Forward
-8. Cost / Impact Model
-9. Bootstrap / Monte Carlo
-10. Forward Test
-11. Small Live
-12. Production Monitoring
+Ý tưởng
+→ nghiên cứu
+→ xác thực
+→ kiểm tra chi phí
+→ kiểm thử tiến tới tương lai
+→ vốn thật nhỏ
+→ phê duyệt tăng quy mô
 ```
 
-## 62. Câu hỏi trước khi scale
+# Phần XVII — Kết luận
+
+Một quy trình hệ thống tốt không tối ưu một chỉ số duy nhất. Nó phải chịu được:
 
 ```text
-Edge có lý do tồn tại không?
-OOS còn dương không?
-Cost model thực tế không?
-Sample đủ không?
-Drawdown có chịu được không?
-Capacity bao nhiêu?
-Operational failure có thể gây gì?
+Sai số dữ liệu
+→ sai số mô hình
+→ thay đổi chế độ
+→ chi phí giao dịch
+→ giới hạn thanh khoản
+→ lỗi vận hành
 ```
 
-## Kết luận
-
-Backtest không phải bằng chứng strategy chắc chắn kiếm tiền. Nó là một **thí nghiệm lịch sử có rất nhiều cách sai**.
-
-Một process tốt phải cố phá strategy trước khi bỏ vốn thật:
-
-```text
-Tìm bias
-→ tăng cost
-→ đổi regime
-→ đổi parameter
-→ test OOS
-→ stress execution
-```
-
-Nếu edge vẫn tồn tại sau các bước đó, bằng chứng mới mạnh hơn.
+Lợi thế thật là lợi thế còn tồn tại sau toàn bộ chuỗi đó, không phải đường kiểm thử đẹp nhất.
