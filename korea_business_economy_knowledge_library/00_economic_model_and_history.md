@@ -1,498 +1,234 @@
 # Từ lịch sử đến mô hình kinh tế thị trường Hàn Quốc hiện nay (Economic Model & Historical Bridge / 한국 경제 발전과 현재 구조)
 
-File này là **cầu nối** giữa cụm lịch sử `00_history/` và phần phân tích kinh tế–doanh nghiệp hiện tại. Nếu chưa đọc historical arc, nên đi từ [`00_history/00_legacy_before_1945.md`](./00_history/00_legacy_before_1945.md) đến [`00_history/08_company_genealogies.md`](./00_history/08_company_genealogies.md) trước.
+Chương này là cây cầu giữa cụm lịch sử `00_history/` và phần phân tích kinh tế–doanh nghiệp hiện tại. Nếu chưa đọc chuỗi lịch sử, nên đi từ [giai đoạn trước 1945](./00_history/00_legacy_before_1945.md) đến [phả hệ doanh nghiệp](./00_history/08_company_genealogies.md) trước.
 
-Mục tiêu ở đây không phải kể lại chronology. Câu hỏi trung tâm là: **những cơ chế nào hình thành trong lịch sử vẫn đang quyết định cách Korean economy vận hành hôm nay?**
+Mục tiêu ở đây không phải kể lại dòng thời gian. Câu hỏi trung tâm là: **những cơ chế nào được hình thành trong lịch sử vẫn đang quyết định cách nền kinh tế Hàn Quốc vận hành hôm nay?**
 
-Hàn Quốc hiện nay không thể hiểu bằng một nhãn duy nhất như “export economy”, “chaebol economy”, “high-tech economy” hay “state-led capitalism”. Nó là một hệ thống nhiều lớp hình thành theo thời gian, trong đó manufacturing, services, households, finance, business groups, SMEs, state institutions và global markets cùng tương tác.
+Hàn Quốc hiện nay không thể hiểu bằng một nhãn duy nhất như “nền kinh tế xuất khẩu”, “nền kinh tế chaebol”, “nền kinh tế công nghệ cao” hay “chủ nghĩa tư bản do nhà nước dẫn dắt”. Đây là hệ thống nhiều lớp hình thành theo thời gian, trong đó sản xuất, dịch vụ, hộ gia đình, tài chính, tập đoàn, SME, nhà nước và thị trường toàn cầu cùng tương tác.
 
-## Một nền kinh tế là path-dependent system
+## Nền kinh tế hiện tại là kết quả nén của lịch sử
 
-**Path dependence / 경로의존성** nghĩa là choice và capability tích lũy trong quá khứ làm một số con đường hiện tại rẻ hơn, nhanh hơn hoặc khả thi hơn những con đường khác.
-
-Có thể hình dung historical layers như sau:
+**Phụ thuộc đường đi lịch sử (path dependence / 경로의존성)** nghĩa là các lựa chọn và năng lực tích lũy trong quá khứ làm một số con đường hiện tại rẻ hơn, nhanh hơn hoặc khả thi hơn những con đường khác.
 
 ```mermaid
 graph LR
-    A[Pre-1945 market/industrial legacy] --> B[1945-61 reconstruction, land reform, aid]
-    B --> C[1960s export industrialization]
-    C --> D[1970s heavy & chemical industries]
-    D --> E[1980s stabilization & liberalization]
-    E --> F[1990s globalization]
-    F --> G[1997 crisis & restructuring]
-    G --> H[2000s broadband, global brands, China integration]
-    H --> I[2010s advanced manufacturing & platforms]
-    I --> J[2020s AI, economic security, aging, slow-growth transition]
+    A[Trước 1945: thị trường và di sản công nghiệp] --> B[1945-61: tái thiết, cải cách ruộng đất, viện trợ]
+    B --> C[1960s: công nghiệp hóa hướng xuất khẩu]
+    C --> D[1970s: công nghiệp nặng và hóa chất]
+    D --> E[1980s: ổn định và tự do hóa]
+    E --> F[1990s: toàn cầu hóa]
+    F --> G[1997: khủng hoảng và tái cơ cấu]
+    G --> H[2000s: băng rộng, thương hiệu toàn cầu, Trung Quốc]
+    H --> I[2010s: sản xuất tiên tiến và nền tảng số]
+    I --> J[2020s: AI, an ninh kinh tế, già hóa, tăng trưởng chậm]
 ```
 
-Mỗi phase không xóa phase trước. Semiconductor Korea hôm nay phụ thuộc engineering capability tích lũy từ electronics/industrial policy trước đó. Hyundai Motor Group hiện nay vẫn mang dấu vết của supplier ecosystem và scale logic hình thành trong industrialization. Financial disclosure và market discipline hiện nay lại mang dấu vết của reforms sau 1997.
+Mỗi giai đoạn không xóa giai đoạn trước. Bán dẫn Hàn Quốc hôm nay phụ thuộc năng lực kỹ thuật tích lũy từ điện tử và chính sách công nghiệp trước đó. Hyundai Motor vẫn mang dấu vết của hệ sinh thái nhà cung cấp và logic quy mô hình thành trong công nghiệp hóa. Công bố thông tin và kỷ luật thị trường hiện nay lại mang dấu vết của cải cách sau 1997.
 
-Vì vậy “current structure” là **history compressed into institutions and capabilities**.
+Vì vậy cấu trúc hiện tại có thể hiểu là **lịch sử được nén vào thể chế và năng lực**.
 
-## Từ thiếu productive capacity tới economy có capability sâu
+## Từ thiếu năng lực sản xuất đến nền kinh tế có năng lực sâu
 
-Sau chiến tranh, Korea không chỉ thiếu money. Nó thiếu cả một network complements: electricity, ports, roads, machinery, factories, engineers, management systems, finance và export channels.
+Sau chiến tranh, Hàn Quốc không chỉ thiếu tiền. Nước này thiếu cả một mạng lưới bổ trợ gồm điện, cảng, đường, máy móc, nhà máy, kỹ sư, hệ thống quản lý, tài chính và kênh xuất khẩu.
 
-**Productive capacity / 생산능력** không phải tổng số machines. Một steel mill chỉ có value nếu có ore/energy, port, downstream demand, maintenance, engineers và finance. Automobile plant cần steel, components, logistics, dealers và consumer finance. Semiconductor fab cần ultrapure chemicals, equipment, power, process engineers và global customers.
-
-Industrialization vì vậy là process xây **systems of complements**.
-
-Mental model:
+**Năng lực sản xuất (productive capacity / 생산능력)** không phải tổng số máy móc. Một nhà máy thép chỉ có giá trị nếu có nguyên liệu, năng lượng, cảng, nhu cầu phía dưới, bảo trì, kỹ sư và tài chính. Nhà máy ô tô cần thép, linh kiện, logistics, đại lý và tài chính mua xe. Fab bán dẫn cần hóa chất siêu sạch, thiết bị, điện, kỹ sư quy trình và khách hàng toàn cầu.
 
 ```text
-Infrastructure
-   +
-Capital
-   +
-Technology
-   +
-Skills
-   +
-Organization
-   +
-Demand
-   ↓
-Productive capability
+Hạ tầng
++ vốn
++ công nghệ
++ kỹ năng
++ tổ chức
++ nhu cầu
+↓
+năng lực sản xuất
 ```
 
-Đây là lý do một country không thể copy Korean growth bằng cách chỉ subsidize một factory.
+Đây là lý do không thể sao chép sự phát triển của Hàn Quốc chỉ bằng cách trợ cấp một nhà máy riêng lẻ.
 
-## Vì sao export trở thành growth engine?
+## Vì sao xuất khẩu trở thành động cơ tăng trưởng?
 
-Korea early-development period có domestic market nhỏ và thiếu natural resources. Import machinery, oil và industrial inputs cần foreign currency.
+Hàn Quốc thời kỳ đầu có thị trường nội địa nhỏ và ít tài nguyên tự nhiên. Nhập máy móc, dầu và đầu vào công nghiệp cần ngoại tệ.
 
-Export giải hai constraints cùng lúc:
+Xuất khẩu giải hai hạn chế cùng lúc: tạo ngoại tệ để tài trợ nhập khẩu và mở ra thị trường lớn hơn nhu cầu trong nước.
 
-1. tạo foreign exchange để finance imports;
-2. mở market lớn hơn domestic demand.
-
-Nhưng export còn tạo một cơ chế quan trọng hơn: **export discipline / 수출규율**.
-
-Foreign buyer không có nghĩa vụ mua hàng Korean. Firm phải cạnh tranh về price, quality, delivery và technical standard. Government có thể hỗ trợ credit/infrastructure, nhưng không thể ép global customer chấp nhận product tệ.
-
-Điều này tạo feedback loop:
+Nhưng xuất khẩu còn tạo một cơ chế quan trọng hơn: **kỷ luật xuất khẩu (export discipline / 수출규율)**. Người mua nước ngoài không có nghĩa vụ mua hàng Hàn Quốc. Doanh nghiệp phải cạnh tranh về giá, chất lượng, thời gian giao và tiêu chuẩn kỹ thuật.
 
 ```text
-Policy support
-   ↓
-Firm investment
-   ↓
-Export performance
-   ↓
-Foreign currency + learning
-   ↓
-More capability
-   ↓
-More sophisticated exports
+Hỗ trợ chính sách
+→ đầu tư doanh nghiệp
+→ kết quả xuất khẩu
+→ ngoại tệ + học hỏi
+→ năng lực cao hơn
+→ xuất khẩu phức tạp hơn
 ```
 
-Export-led growth vì vậy vừa là demand strategy vừa là **learning mechanism**.
+Xuất khẩu vì thế vừa là chiến lược nhu cầu vừa là cơ chế học tập.
 
-## Comparative advantage của Korea không phải thứ bất biến
+## Lợi thế so sánh của Hàn Quốc được xây dựng chứ không chỉ “có sẵn”
 
-Trong textbook, comparative advantage thường được hiểu như lợi thế sẵn có. Nhưng Korean history cho thấy advantage có thể được **constructed**.
+Trong giáo trình kinh tế, lợi thế so sánh thường được trình bày như kết quả của nguồn lực sẵn có. Lịch sử Hàn Quốc cho thấy lợi thế có thể được **xây dựng qua thời gian**.
 
-Korea ban đầu không có natural comparative advantage rõ trong shipbuilding, cars, semiconductors hay batteries. Advantage được tạo qua capital investment, imported technology, learning-by-doing, supplier networks và human capital.
+Hàn Quốc ban đầu không có lợi thế tự nhiên rõ ràng trong đóng tàu, ô tô, bán dẫn hay pin. Lợi thế được tạo bằng đầu tư vốn, nhập công nghệ, học bằng làm, mạng lưới nhà cung cấp và vốn nhân lực.
 
-Có thể tách hai loại:
+Đây là **lợi thế so sánh động (dynamic comparative advantage / 동태적 비교우위)**. Chính sách công nghiệp có thể giúp tạo loại lợi thế này, nhưng luôn đi kèm rủi ro chọn sai ngành hoặc đầu tư quá mức.
 
-**Static comparative advantage**: dựa vào resource/endowment hiện tại.
+## Vì sao chaebol trở thành trung tâm của công nghiệp hóa?
 
-**Dynamic comparative advantage / 동태적 비교우위**: capability có thể được tạo qua investment và learning.
+Công nghiệp nặng có chi phí cố định cao và thời gian hoàn vốn dài. Khi thị trường vốn còn nông, các dự án lớn cần tổ chức có khả năng huy động tài chính, kỹ sư và quản lý nhanh.
 
-Industrial policy của Korea historically tập trung mạnh vào loại thứ hai—but với risk lớn vì state/firms có thể chọn sai sector hoặc overinvest.
+Doanh nghiệp thực hiện dự án thành công có hồ sơ tốt hơn, tiếp cận tín dụng tốt hơn và đội ngũ quản lý sâu hơn. Thành công tạo lợi thế tích lũy. Đây là một cơ chế quan trọng trong sự hình thành **chaebol (재벌)** và các tập đoàn kinh doanh lớn.
 
-## Vì sao chaebol trở thành core của industrialization?
+Quy mô tạo lợi thế về CAPEX lớn, danh mục R&D, phân phối toàn cầu, đa dạng hóa rủi ro và thị trường vốn/nhân tài nội bộ. Nhưng cùng quy mô đó tạo rủi ro về khoảng cách giữa quyền kiểm soát và quyền sở hữu, xung đột với cổ đông thiểu số, giao dịch bên liên quan, bất cân xứng với nhà cung cấp và tập trung nguồn lực.
 
-Heavy industry có high fixed cost và long payback. Khi capital market còn shallow, large projects cần organizations có khả năng mobilize finance, engineers và management nhanh.
+Vì vậy Hàn Quốc hiện đại vừa dựa vào các doanh nghiệp vô địch toàn cầu vừa phải điều tiết hành vi của tập đoàn lớn. Xem [chaebol](./04_chaebol_and_large_business_groups.md) và [cấu trúc tập đoàn](./05_group_structure_affiliates_holding_companies.md).
 
-Một firm làm project thành công có track record tốt hơn, access credit tốt hơn và managerial depth lớn hơn. Success tạo cumulative advantage.
+## SME không phải “nền kinh tế nhỏ” tách khỏi tập đoàn lớn
 
-Đây là một mechanism hình thành **chaebol / 재벌** và large business groups.
+SME chiếm gần như toàn bộ số lượng doanh nghiệp và phần lớn việc làm. Trong sản xuất, nhiều SME nằm trong các tầng nhà cung cấp của doanh nghiệp xuất khẩu lớn; trong dịch vụ, hàng triệu doanh nghiệp phục vụ nhu cầu nội địa.
 
-Nhưng chaebol không phải toàn economy. Group lớn đứng trên một network gồm SMEs, banks, workers, logistics, universities và public infrastructure.
+Do đó khoảng cách năng suất giữa doanh nghiệp lớn và SME có hậu quả vĩ mô. Nếu doanh nghiệp toàn cầu tăng năng suất rất nhanh nhưng phần lớn người lao động nằm ở khu vực năng suất thấp hơn, mức tăng lương và năng suất toàn nền kinh tế sẽ bị hạn chế.
 
-Scale tạo advantages:
-
-- large capex;
-- R&D portfolio;
-- global distribution;
-- risk diversification;
-- internal capital/talent markets.
-
-Nhưng same scale tạo risks:
-
-- control–ownership gap;
-- minority-shareholder conflicts;
-- related-party transactions;
-- supplier bargaining asymmetry;
-- resource concentration.
-
-Vì vậy Korea hiện tại vừa dựa vào global champions vừa regulation business-group behavior.
-
-Đọc [`04_chaebol_and_large_business_groups.md`](./04_chaebol_and_large_business_groups.md), [`05_group_structure_affiliates_holding_companies.md`](./05_group_structure_affiliates_holding_companies.md) và [`06_sme_mid_sized_and_subcontracting_ecosystem.md`](./06_sme_mid_sized_and_subcontracting_ecosystem.md).
-
-## SME ecosystem là phần còn lại của production system, không phải “economy nhỏ” tách biệt
-
-SMEs chiếm gần như toàn bộ firm count và phần lớn employment. Trong manufacturing, nhiều SMEs nằm trong supplier tiers của large exporters; trong services, hàng triệu firms phục vụ domestic consumers.
-
-Đây là lý do productivity gap giữa large firms và SMEs có macro consequence. Nếu global champion tăng productivity rất nhanh nhưng 80% workers ở firms productivity thấp hơn nhiều, aggregate wage/productivity diffusion bị hạn chế.
-
-Một vấn đề central của Korea hiện đại là làm sao chuyển:
+Một bài toán trung tâm của Hàn Quốc hiện đại là chuyển từ:
 
 ```text
-Supplier dependence
-   ↓
-Capability accumulation
-   ↓
-Independent technology/brand
-   ↓
-Customer/export diversification
-   ↓
-Scale-up
+Phụ thuộc khách hàng lớn
+→ tích lũy năng lực
+→ công nghệ / thương hiệu riêng
+→ đa dạng khách hàng và xuất khẩu
+→ mở rộng quy mô
 ```
 
-Nếu chain dừng ở “dependence”, dualism kéo dài.
+Nếu chuỗi dừng ở “phụ thuộc”, cấu trúc hai tầng kéo dài. Xem [SME và thầu phụ](./06_sme_mid_sized_and_subcontracting_ecosystem.md).
 
-## 1997 thay đổi luật chơi corporate Korea
+## Khủng hoảng 1997 thay đổi luật chơi của doanh nghiệp Hàn Quốc
 
-Asian Financial Crisis cho thấy scale không thay được balance-sheet discipline.
+Khủng hoảng tài chính châu Á cho thấy quy mô không thay thế được kỷ luật bảng cân đối. Trước khủng hoảng, nhiều doanh nghiệp có đòn bẩy cao, chênh lệch kỳ hạn/tiền tệ và giám sát yếu. Khi khả năng gia hạn vốn nước ngoài dừng lại, khủng hoảng thanh khoản truyền sang tỷ giá, ngân hàng và doanh nghiệp.
 
-Pre-crisis system có high leverage, maturity/currency mismatch và weak monitoring ở nhiều parts. Khi foreign rollover dừng, liquidity crisis truyền sang currency, banks và corporations.
+Sau 1997, Hàn Quốc cải cách mạnh giám sát tài chính, công bố thông tin, quản trị, cấu trúc nợ và cơ chế tái cơ cấu.
 
-Sau 1997, Korea cải cách mạnh financial supervision, disclosure, corporate governance, debt structure và restructuring mechanisms.
-
-Current Korean company vì thế phải được đọc ở hai layers:
+Một công ty Hàn Quốc hiện nay vì thế phải được đọc ở hai lớp:
 
 ```text
-Historical group logic
-→ affiliates, control, industrial capability
+Logic tập đoàn lịch sử
+→ công ty liên kết, quyền kiểm soát, năng lực công nghiệp
 
-Post-1997 market logic
-→ cash flow, leverage, ROIC, disclosure, minority shareholders
+Logic thị trường sau 1997
+→ dòng tiền, đòn bẩy, ROIC, công bố thông tin, cổ đông thiểu số
 ```
 
-Nếu chỉ biết chaebol history, ta dễ bỏ qua balance-sheet risk. Nếu chỉ đọc ratios, ta dễ không hiểu why ownership graph exists.
+Nếu chỉ biết lịch sử chaebol, ta dễ bỏ qua rủi ro bảng cân đối. Nếu chỉ đọc tỷ số tài chính, ta lại không hiểu vì sao sơ đồ sở hữu tồn tại.
 
-Đọc [`00_history/05_1990s_globalization_and_1997_crisis.md`](./00_history/05_1990s_globalization_and_1997_crisis.md).
+## Kinh tế thị trường không có nghĩa nhà nước biến mất
 
-## Market economy không có nghĩa state biến mất
+Hàn Quốc hiện nay là **nền kinh tế thị trường (market economy / 시장경제)**: doanh nghiệp tư nhân, hợp đồng, giá và thị trường vốn quyết định phần lớn việc phân bổ nguồn lực.
 
-Korea hiện nay là **market economy / 시장경제**: private firms, contracts, prices và capital markets quyết định phần lớn resource allocation.
+Nhưng thị trường không tồn tại ngoài thể chế. Chính phủ ảnh hưởng động lực thông qua thuế, tài trợ R&D, quy định cạnh tranh, giám sát tài chính, tài chính chính sách, FTA, năng lượng, đất đai, hạ tầng và mua sắm công.
 
-Nhưng market không tồn tại ngoài institutions. Government ảnh hưởng incentives qua:
+Vai trò nhà nước hiện nay khác thập niên 1970. Tín dụng chỉ đạo trực tiếp ít trung tâm hơn; chính sách thường tác động bằng cách thay đổi **chi phí tương đối, tỷ suất sinh lợi và rủi ro**.
 
-- taxes;
-- R&D grants;
-- competition rules;
-- financial regulation;
-- policy finance;
-- trade agreements;
-- energy policy;
-- land/infrastructure;
-- public procurement.
+Vì vậy chính sách bán dẫn hoặc pin hiện đại không phải bản sao đơn giản của HCI.
 
-State role hiện nay khác 1970s. Directed credit trực tiếp ít central hơn; policy thường tác động qua **relative cost, return và risk**.
+## Đọc Hàn Quốc qua năm bảng cân đối
 
-Do đó modern semiconductor/battery policy không phải bản copy đơn giản của HCI drive.
+Một mô hình rất hữu ích là nhìn nền kinh tế qua năm hệ thống bảng cân đối.
 
-Xem [`26_economic_institutions_and_policy_making.md`](./26_economic_institutions_and_policy_making.md).
+**Hộ gia đình:** thu nhập, nhà ở, tiền gửi, thế chấp và tín dụng quyết định tiêu dùng và ổn định tài chính.
 
-## Korea hiện đại có thể đọc như năm balance sheets chồng lên nhau
+**Doanh nghiệp:** tiền mặt, nợ, CAPEX, vốn lưu động và lợi nhuận quyết định đầu tư và tuyển dụng.
 
-Một mental model rất hữu ích là nhìn economy qua năm balance-sheet systems.
+**Khu vực tài chính:** ngân hàng, bảo hiểm và công ty chứng khoán nối tiết kiệm với tín dụng doanh nghiệp và bất động sản.
 
-### 1. Household balance sheet
+**Chính phủ/khu vực công:** chi tiêu ngân sách, doanh nghiệp công, ngân hàng chính sách và quỹ hưu trí hấp thụ hoặc phân phối lại rủi ro.
 
-Income, housing, deposits, mortgages và consumer credit quyết định domestic consumption và financial stability.
+**Khu vực đối ngoại:** dự trữ ngoại hối, tài sản/nợ nước ngoài, cán cân vãng lai và đầu tư xuyên biên giới nối Hàn Quốc với tài chính thế giới.
 
-### 2. Corporate balance sheet
+Cú sốc thường truyền từ bảng cân đối này sang bảng cân đối khác. Giá nhà giảm có thể ảnh hưởng tài sản thế chấp của hộ, tín dụng ngân hàng và dòng tiền xây dựng. Bùng nổ bán dẫn có thể nâng xuất khẩu, lợi nhuận doanh nghiệp, thu ngân sách và đầu tư.
 
-Cash, debt, capex, working capital và profitability quyết định investment/hiring.
+## Sản xuất toàn cầu và dịch vụ nội địa: hai chu kỳ chồng lên nhau
 
-### 3. Financial-sector balance sheet
+Có thể tách một lớp sản xuất hướng toàn cầu khỏi một lớp dịch vụ phụ thuộc nhu cầu nội địa.
 
-Banks, insurers và securities firms connect household savings với corporate/property credit.
+Lớp toàn cầu gồm bán dẫn, ô tô, pin, đóng tàu, hóa chất và máy móc. Nó nhạy với đầu tư toàn cầu, chu kỳ công nghệ, tỷ giá và địa chính trị.
 
-### 4. Government/public-sector balance sheet
+Lớp nội địa gồm bán lẻ, nhà hàng, nhà ở, y tế, giáo dục, tài chính địa phương và nhiều SME. Nó nhạy với thu nhập hộ gia đình, chi phí trả nợ, dân số và quy định trong nước.
 
-Fiscal spending, public enterprises, policy banks và pensions absorb/redistribute risk.
+Hai chu kỳ có thể đi ngược nhau. Xuất khẩu HBM có thể bùng nổ trong lúc nhà hàng và bán lẻ yếu. Nhà ở có thể hồi phục khi giá bộ nhớ vẫn thấp. Vì vậy GDP tổng thể không đủ để hiểu một doanh nghiệp cụ thể.
 
-### 5. External balance sheet
+## Sản xuất mạnh nhưng năng suất dịch vụ là nút thắt cấu trúc
 
-FX reserves, foreign assets/liabilities, trade/current account và cross-border investments connect Korea với world finance.
+Hàn Quốc giữ năng lực sản xuất rất cao so với nhiều nền kinh tế phát triển. Sản xuất tạo xuất khẩu, lan tỏa R&D và việc làm năng suất cao.
 
-Shock thường truyền từ một balance sheet sang balance sheet khác. Housing decline có thể hit household collateral, bank credit và construction company cash flow. Semiconductor boom có thể nâng exports, corporate profit, fiscal revenue và investment.
+Nhưng phần lớn lao động nằm trong dịch vụ và SME có năng suất thấp hơn nhóm sản xuất ở biên công nghệ. Khi lực lượng lao động giảm và tích lũy vốn chậm lại, tăng trưởng ngày càng phụ thuộc **năng suất nhân tố tổng hợp (TFP)**.
 
-## Global manufacturing và domestic services: hai cycles chồng lên nhau
+Đó là lý do cải cách dịch vụ, số hóa, AI, chất lượng quản lý và tái phân bổ nguồn lực trở thành vấn đề trung tâm. Xem [năng suất và tính hai tầng](./28_productivity_services_and_economic_dualism.md).
 
-Một cách nhìn hữu ích là tách **globally exposed manufacturing** khỏi **domestic-demand services**.
+## Chuyển đổi nhân khẩu học thay đổi giới hạn của nền kinh tế
 
-Global layer gồm semiconductors, autos, batteries, shipbuilding, chemicals, machinery. Nó nhạy với global capex, commodity/technology cycles, FX và geopolitics.
+Hàn Quốc thời tăng trưởng cao từng có lực lượng lao động trẻ và đô thị hóa nhanh. Hiện nay nước này đối mặt già hóa nhanh và dân số trong độ tuổi lao động giảm.
 
-Domestic layer gồm retail, restaurants, housing, healthcare, education, local finance và many SMEs. Nó nhạy với household income, debt service, demographics và domestic regulation.
+Nếu số lao động giảm, tăng trưởng phải bù bằng tỷ lệ tham gia lao động, nhập cư và năng suất. Dân số cũng thay đổi cơ cấu tiêu dùng: y tế và dịch vụ người cao tuổi tăng tương đối; thị trường liên quan trẻ em có thể co lại; suy giảm dân số địa phương làm kinh tế hạ tầng khó hơn.
 
-Hai cycles có thể diverge.
+Nhân khẩu học vì thế đi thẳng vào chiến lược nhân sự, vị trí cửa hàng, nhà ở và sản phẩm. Xem [dân số và hộ gia đình](./27_demographics_households_and_consumption.md).
 
-HBM exports có thể booming khi restaurants/retail yếu. Housing recovery có thể diễn ra khi memory prices vẫn low.
+## Nợ hộ gia đình và nhà ở tạo một bài toán tiền tệ riêng
 
-Vì vậy headline GDP không đủ để hiểu firm.
-
-## Manufacturing strength nhưng service productivity là structural bottleneck
-
-Korea giữ manufacturing capability cao so với many advanced economies. Manufacturing tạo exports, R&D spillovers và high-productivity jobs.
-
-Nhưng employment concentrated nhiều ở services/SMEs có productivity thấp hơn frontier manufacturing.
-
-Trong mature economy, growth identity ngày càng là:
-
-\[
-GDP\ Growth \approx Labor\ Growth + Capital\ Deepening + TFP\ Growth
-\]
-
-Khi labor growth âm và capital deepening chậm lại, **TFP/productivity** phải đóng vai trò lớn hơn.
-
-Đây là reason service reform, digitalization, AI, management quality và resource reallocation trở thành central.
-
-Đọc [`28_productivity_services_and_economic_dualism.md`](./28_productivity_services_and_economic_dualism.md).
-
-## Demographic transition thay đổi constraint của economy
-
-High-growth Korea từng có young labor force và urbanization. Current Korea đối mặt rapid aging và shrinking working-age population.
-
-Nếu workers giảm, growth phải bù bằng participation, immigration và productivity.
-
-Demographics còn thay consumption mix: healthcare/senior services tăng relative importance; education/child-related markets co lại; regional depopulation ảnh hưởng infrastructure economics.
-
-Vì vậy demographics không phải macro background; nó đi thẳng vào HR, store location, housing và product strategy.
-
-Xem [`27_demographics_households_and_consumption.md`](./27_demographics_households_and_consumption.md).
-
-## Household debt và housing tạo một monetary-policy trade-off riêng
-
-Housing chiếm phần lớn assets của many households và debt thường liên kết với property.
-
-Khi rates tăng:
+Nhà ở chiếm phần lớn tài sản của nhiều hộ và nợ thường liên kết với bất động sản.
 
 ```text
-Debt service ↑
-→ disposable income ↓
-→ consumption pressure
+Lãi suất ↑
+→ chi phí trả nợ ↑
+→ thu nhập khả dụng ↓
+→ tiêu dùng chịu áp lực
 ```
 
-Nhưng khi rates giảm quá mạnh, housing/leverage có thể tăng.
+Nhưng nếu lãi suất giảm quá mạnh, giá nhà và đòn bẩy có thể tăng. Vì vậy BOK và cơ quan giám sát phải cân bằng mục tiêu giá cả/tăng trưởng với ổn định tài chính.
 
-Do đó BOK và financial regulators phải balance price/growth objectives với financial stability.
+## Chuỗi giá trị toàn cầu: quốc tịch doanh nghiệp không còn trùng với nơi sản xuất
 
-Korea hiện đại không thể hiểu chỉ bằng corporate exports; household balance sheet là một macro engine riêng.
+Doanh nghiệp Hàn Quốc ngày càng là hệ thống sản xuất đa quốc gia. Hyundai có thể bán xe sản xuất ở nước ngoài; nhà máy pin có thể nằm tại Mỹ hoặc châu Âu; điện tử được lắp ráp khắp châu Á; nội dung được phân phối trên nền tảng toàn cầu.
 
-## Global Value Chains: nationality và production location không còn trùng nhau
+“Made in Korea” vì vậy không phải ranh giới của giá trị doanh nghiệp Hàn Quốc. Cần hỏi công ty kiểm soát phần nào của chuỗi: công nghệ, thiết kế, thương hiệu, quy trình sản xuất, phân phối, IP hay quan hệ khách hàng.
 
-Korean firms ngày càng là multinational production systems.
+Dữ liệu xuất khẩu chỉ đo hàng qua biên giới, không đo toàn bộ giá trị mà doanh nghiệp Hàn Quốc nắm giữ.
 
-Hyundai can sell cars produced abroad; battery plants may be in US/Europe; electronics assembled across Asia; content distributed by global platforms.
+## Địa chính trị trở thành đầu vào của tài chính doanh nghiệp
 
-“Made in Korea” vì vậy không phải boundary của Korean corporate value creation.
+Cạnh tranh Mỹ–Trung, kiểm soát xuất khẩu, trừng phạt, yêu cầu hàm lượng nội địa và quy tắc khoáng sản quan trọng khiến lựa chọn chuỗi cung ứng không còn chỉ tối ưu chi phí.
 
-Cần hỏi company control phần nào của chain:
-
-- technology;
-- design;
-- brand;
-- manufacturing process;
-- distribution;
-- IP;
-- customer relationship.
-
-Gross export data chỉ đo cross-border shipment, không đo toàn bộ value captured by Korean firms.
-
-Xem [`02_trade_export_and_global_value_chains.md`](./02_trade_export_and_global_value_chains.md).
-
-## Geopolitics trở thành input của corporate finance
-
-US–China rivalry, export controls, sanctions, local-content requirements và critical-mineral rules khiến supply-chain choice không còn pure cost optimization.
-
-Một firm có thể chọn plant location có operating cost cao hơn nhưng nhận subsidy, market access và lower geopolitical risk.
-
-Do đó NPV của project hiện đại có thêm **policy/geopolitical state variables**.
+Một doanh nghiệp có thể chọn địa điểm nhà máy có chi phí vận hành cao hơn nhưng nhận trợ cấp, tiếp cận thị trường và giảm rủi ro địa chính trị.
 
 ```text
-Old optimization
-Cost + Quality + Logistics
+Tối ưu cũ
+Chi phí + chất lượng + logistics
 
-New optimization
-Cost + Quality + Logistics + Subsidy + Resilience + Political Risk
+Tối ưu mới
+Chi phí + chất lượng + logistics
++ trợ cấp + khả năng chống chịu + rủi ro chính trị
 ```
 
-Semiconductor, battery, defense và critical materials chịu effect rõ nhất.
+Bán dẫn, pin, quốc phòng và vật liệu quan trọng chịu tác động rõ nhất.
 
-## Energy là hidden constraint của advanced industry
+## Năng lượng là giới hạn ẩn của công nghiệp tiên tiến
 
-Semiconductor fabs, steel, chemicals, batteries và AI data centers đều cần large, reliable energy supply.
+Fab bán dẫn, thép, hóa chất, pin và trung tâm dữ liệu AI đều cần nguồn điện lớn và ổn định. Hàn Quốc phụ thuộc nhiều vào năng lượng nhập khẩu và có hệ thống điện gần như một “đảo” về địa lý.
 
-Korea phụ thuộc nhiều vào imported energy và có geographically isolated electricity system. Vì vậy power generation mix, grid expansion, nuclear/LNG/renewables và tariff policy ảnh hưởng industrial competitiveness.
+Do đó giá điện, điện hạt nhân, LNG, năng lượng tái tạo và lưới truyền tải không phải chủ đề tách khỏi doanh nghiệp. Chúng ảnh hưởng trực tiếp chi phí và khả năng mở rộng công suất. Xem [năng lượng](./30_energy_security_power_market_and_transition.md).
 
-Cheap electricity hỗ trợ manufacturer nhưng nếu tariff không phản ánh cost, public utility balance sheet có thể chịu pressure.
+## Mental Model — Cách nén toàn bộ hệ thống
 
-Đọc [`30_energy_security_power_market_and_transition.md`](./30_energy_security_power_market_and_transition.md).
+> Hàn Quốc hiện đại là một nền kinh tế thị trường có năng lực sản xuất toàn cầu rất sâu, được hình thành từ lịch sử nhà nước–ngân hàng–doanh nghiệp phối hợp mạnh, sau đó được bổ sung bởi kỷ luật thị trường vốn, công nghệ số và mạng sản xuất toàn cầu. Điểm mạnh của hệ thống là khả năng tích lũy năng lực và thực hiện dự án quy mô lớn; điểm yếu nằm ở tính hai tầng giữa doanh nghiệp lớn và SME/dịch vụ, nợ hộ gia đình, nhân khẩu học và phụ thuộc cao vào thương mại–năng lượng–địa chính trị.
 
-## Innovation stage: từ technology absorption tới frontier creation
-
-Catching-up economy có thể tăng productivity bằng imported machinery và licensing.
-
-Frontier economy phải tự tạo invention, process improvement, software, standard, brand và organizational capability.
-
-Đây là lý do R&D spending của Korea cao nhưng quantity spending không đủ. Challenge là **commercialization và diffusion**: innovation của Samsung/Hyundai/SK có lan sang SMEs/services không?
-
-Xem [`29_innovation_rnd_education_and_human_capital.md`](./29_innovation_rnd_education_and_human_capital.md).
-
-## Digital economy: software trở thành layer của mọi industry
-
-Digital Korea không chỉ là Naver/Kakao/Toss.
-
-Banking có core systems và fintech; manufacturing có MES/ERP/AI inspection; logistics có tracking; public sector có e-government; retailers có e-commerce.
-
-Do đó software productivity ảnh hưởng cả non-software firms.
-
-AI tiếp tục trend này: model access có thể commoditize, nhưng data/process integration và human judgment quyết định firm-level productivity gain.
-
-Xem [`34_digital_fintech_cloud_and_it_services.md`](./34_digital_fintech_cloud_and_it_services.md).
-
-## Korea hiện tại có ba growth questions khác nhau
-
-### Cyclical growth
-
-Economy đang ở phase nào của semiconductor, global trade, rates và housing cycle?
-
-### Potential growth
-
-Labor, capital và productivity có thể tạo trend growth bao nhiêu trong nhiều năm?
-
-### Structural transformation
-
-Resources có đang chuyển sang higher-productivity firms/sectors nhanh đủ không?
-
-Ba questions này không được trộn.
-
-Một semiconductor boom có thể nâng cyclical GDP 2026 nhưng không tự xóa aging. Structural reform có thể làm potential growth tốt hơn nhưng gây transition pain ngắn hạn.
-
-## Current 2026 snapshot: mạnh theo cycle nhưng vẫn có structural constraints
-
-Bank of Korea outlook tháng 8/2026 dự báo real GDP growth **3,3% năm 2026** và **2,9% năm 2027**, với semiconductor/AI-related demand là một driver quan trọng. Đây là forecast tại thời điểm tháng 8/2026, không phải final realized outcome.
-
-Cùng lúc, BOK research về potential growth nhấn mạnh working-age decline, slower capital accumulation và productivity diffusion yếu hơn.
-
-Hai câu này có thể đúng cùng lúc:
+Khi phân tích một vấn đề mới, hãy hỏi nó tác động vào lớp nào:
 
 ```text
-2026 cyclical/technology strength
-≠
-long-run structural problem solved
+Lịch sử / thể chế
+→ hộ gia đình
+→ doanh nghiệp
+→ tài chính
+→ ngành
+→ thương mại / tỷ giá
+→ chính sách
 ```
 
-Đây là distinction phải giữ khi đọc news.
-
-## Korea hiện nay cần giải bài toán gì?
-
-High-growth catch-up model đã hoàn thành phần lớn nhiệm vụ ban đầu. Constraints hiện nay khác:
-
-- aging và shrinking labor force;
-- service/SME productivity gap;
-- scale-up bottleneck của smaller firms;
-- household/housing leverage;
-- frontier technology competition;
-- energy/import dependency;
-- geopolitical fragmentation;
-- governance/capital allocation;
-- regional concentration;
-- need to convert R&D into commercial productivity.
-
-Đây không phải list “điểm yếu của Korea”. Nó là definition của **next-stage development problem**.
-
-## Từ macro shock tới company cash flow
-
-Khi có news, đừng dừng ở macro label. Trace transmission:
-
-```text
-Global / domestic shock
-        ↓
-FX / rate / demand / input cost / regulation
-        ↓
-Industry structure
-        ↓
-Company revenue & cost
-        ↓
-Working capital / debt / cash flow
-        ↓
-Capex / hiring / payout
-```
-
-Ví dụ KRW depreciation có thể tốt cho exporter có USD revenue và KRW cost, nhưng xấu cho importer có USD debt. Rate hike có thể xấu cho levered construction nhưng tốt cho bank margin trong một số phase—trừ khi credit losses tăng.
-
-Framework chi tiết ở [`21_economy_to_company_transmission.md`](./21_economy_to_company_transmission.md).
-
-## Mental Model
-
-> Korean economy hiện nay là **một network của historical capabilities và modern constraints**. Manufacturing strength, chaebol scale, SME supplier networks, post-1997 finance, broadband/digital infrastructure, household housing system và industrial policy đều là layers của cùng một system.
-
-Một map nén:
-
-```text
-History
-  ↓
-Institutions + Capabilities
-  ↓
-Households + Firms + Finance
-  ↓
-Trade + Technology + Energy
-  ↓
-Productivity + Capital Allocation
-  ↓
-Growth and Living Standards
-```
-
-## Common misconceptions
-
-**“Korea = chaebol economy.”** Sai. SMEs/services chiếm phần lớn firms/employment.
-
-**“Korea = export economy nên domestic housing không quan trọng.”** Sai. Household/property cycle ảnh hưởng consumption, banks và construction.
-
-**“State-led history nghĩa current economy không phải market economy.”** Sai. Market allocation là central nhưng institutions/policy vẫn thay incentives.
-
-**“Manufacturing mạnh nghĩa productivity problem đã giải quyết.”** Sai. Diffusion sang services/SMEs là challenge riêng.
-
-**“GDP tăng nhanh năm nay nghĩa potential growth đã tăng.”** Sai. Cyclical và structural growth khác nhau.
-
-**“Geopolitics chỉ là political news.”** Sai với semiconductor/battery/defense: nó đi trực tiếp vào capex, sourcing và market access.
-
-## Lộ trình đọc từ đây
-
-Sau historical bridge này, nên đọc theo sequence:
-
-```text
-01 Macro economy
-   ↓
-02 Trade & Global Value Chains
-   ↓
-03 Company forms
-   ↓
-04–08 Groups / SMEs / Startups / Governance
-   ↓
-09–11 Disclosure / Capital markets / Funding
-   ↓
-12–18 Labor / Culture / Industries
-   ↓
-19–25 Case studies / Analysis / Regulation / Geography
-   ↓
-26–34 Institutions / Demographics / Productivity / Innovation / New industries
-```
-
-### Nguồn nền
-
-- KDI historical-development studies on Korean growth, industrial policy, business groups and post-1997 restructuring.
-- Bank of Korea macro research, Economic Outlook and studies on potential growth/productivity.
-- Korea Fair Trade Commission materials on business groups/competition.
-- FSS/DART and KRX for company/capital-market structure.
-- Statistics Korea for demographics/household structure.
-
-Current numbers/forecasts trong chapter luôn được ghi mốc thời gian; historical mechanisms và mental models được tách khỏi short-term snapshots để library không nhanh lỗi thời.
+Sau đó lần theo dòng tiền và quyền quyết định. Đây là cách biến “kinh tế Hàn Quốc” từ một tập hợp sự kiện thành một hệ thống có thể suy luận.
