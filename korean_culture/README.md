@@ -12,6 +12,18 @@ Xem bảng quy tắc và tên chuẩn tại [`28_naming_translation_conventions.
 
 Bộ sách hiện bao phủ 27 chương nội dung và một index/reference layer, từ lịch sử cổ đại–Joseon–thuộc địa–chiến tranh–compressed modernity đến Nho giáo, kính ngữ, gia đình, giáo dục, công sở, nghĩa vụ quân sự, chaebol–housing, ẩm thực, tôn giáo, nghệ thuật, urban/digital life, internet culture, Hallyu, beauty, sports, healthcare, vùng miền, demographic change và public sphere.
 
+## KIIP 5단계 연계
+
+Bộ KIIP mới dùng các chapter Culture làm tầng giải thích sâu, còn bản ôn thi giữ cấu trúc ngắn gọn theo 50 bài:
+
+- [`../kiip/level5/01_영주용_기본/01_사회.md`](../kiip/level5/01_영주용_기본/01_사회.md)
+- [`../kiip/level5/01_영주용_기본/02_교육.md`](../kiip/level5/01_영주용_기본/02_교육.md)
+- [`../kiip/level5/01_영주용_기본/03_문화.md`](../kiip/level5/01_영주용_기본/03_문화.md)
+- [`../kiip/level5/01_영주용_기본/08_지리.md`](../kiip/level5/01_영주용_기본/08_지리.md)
+- bản đồ liên kết toàn bộ: [`../kiip/level5/90_cross_reference/01_korean_culture_map.md`](../kiip/level5/90_cross_reference/01_korean_culture_map.md)
+
+Đặc biệt, các fact thay đổi theo thời gian như `1인 가구`, pháp luật, tài chính và statistic không được copy mù từ infographic cũ; chúng được tách sang file KIIP `00_current_facts_and_corrections.md` để giữ knowledge book dài hạn sạch và có timestamp.
+
 Nguyên tắc xuyên suốt:
 
 - Understanding > Memorization

@@ -18,6 +18,16 @@ Bắt đầu từ [`00_index_and_dependency.md`](00_index_and_dependency.md). N�
 
 Các chương cố ý phân biệt giữa **fact tương đối chắc**, **cách diễn giải của sử học**, **ký ức tập thể** và **narrative quốc gia**. Với các vấn đề còn tranh luận, tài liệu tránh biến một cách kể duy nhất thành chân lý tuyệt đối.
 
+## KIIP 5단계 연계
+
+Nếu mục tiêu là `영주용 종합평가` hoặc `귀화용 종합평가`, không cần biến toàn bộ library lịch sử này thành flashcard. Dùng bản rút gọn theo phạm vi KIIP tại:
+
+- [`../kiip/level5/01_영주용_기본/07_역사.md`](../kiip/level5/01_영주용_기본/07_역사.md)
+- [`../kiip/level5/90_cross_reference/00_korean_history_map.md`](../kiip/level5/90_cross_reference/00_korean_history_map.md)
+- phần `귀화용 심화` về 정부수립·헌정·민주주의: [`../kiip/level5/02_귀화용_심화/05_정부수립_헌정_민주주의.md`](../kiip/level5/02_귀화용_심화/05_정부수립_헌정_민주주의.md)
+
+KIIP note dùng library này để giải thích sâu khi một timeline hoặc nhân vật khó nhớ; ngược lại, library này không bị rút gọn thành tài liệu luyện thi.
+
 ## Nguồn nền
 
 Xương sống periodization và chronology được đối chiếu với National Institute of Korean History (국사편찬위원회, NIKH), đặc biệt *A History of Korea* và 우리역사넷; các vấn đề văn hoá–xã hội tham chiếu Academy of Korean Studies (한국학중앙연구원) và 한국민족문화대백과사전; hiện vật và lịch sử vật chất đối chiếu National Museum of Korea. Những nguồn này không loại bỏ nhu cầu đọc nghiên cứu học thuật đa góc nhìn, nhưng tạo một baseline tốt để tránh sai niên đại và nhầm thuật ngữ.
