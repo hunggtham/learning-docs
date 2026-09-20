@@ -1,5 +1,19 @@
 # 01 — Foundations
 
-Folder này xây nền trước khi bạn chọn cổ phiếu hay ETF. Hãy đọc `00_MASTER_FOUNDATIONS_AND_PORTFOLIO.md` nếu muốn một luồng tổng hợp từ số 0. Sau đó đọc `01_MONEY_FINANCIAL_SYSTEM_AND_MARKET_MECHANICS.md` để hiểu tiền đi qua ngân hàng, thị trường vốn và hệ thống khớp lệnh như thế nào; cuối cùng đọc `02_PORTFOLIO_RISK_ALLOCATION_AND_BEHAVIOR.md` để biến các sản phẩm riêng lẻ thành một danh mục có quy tắc.
+Domain này xây mental model nền tảng trước khi học từng tài sản hoặc chọn cổ phiếu. Mục tiêu là hiểu hệ thống tài chính, cách giá được hình thành, portfolio risk và cách vận hành một kế hoạch đầu tư trong nhiều năm.
 
-Sau folder này, bạn phải trả lời được ba câu trước mọi khoản đầu tư: tài sản tạo return từ đâu, những risk factor nào có thể làm thesis sai, và khoản tiền đó có phù hợp với horizon/liability của mình hay không.
+## Thứ tự đọc
+
+[00_MASTER_FOUNDATIONS_AND_PORTFOLIO.md](./00_MASTER_FOUNDATIONS_AND_PORTFOLIO.md) là bản tổng quan dài, dùng để hình thành bản đồ toàn lĩnh vực.
+
+[01_MONEY_FINANCIAL_SYSTEM_AND_MARKET_MECHANICS.md](./01_MONEY_FINANCIAL_SYSTEM_AND_MARKET_MECHANICS.md) đi sâu vào tiền, ngân hàng, primary/secondary market, exchange, broker, custody, bid/ask, spread, liquidity, settlement và price discovery.
+
+[02_PORTFOLIO_RISK_ALLOCATION_AND_BEHAVIOR.md](./02_PORTFOLIO_RISK_ALLOCATION_AND_BEHAVIOR.md) giải thích diversification, correlation, drawdown, risk contribution, behavioral bias và Investment Policy Statement.
+
+[03_LIFECYCLE_ALLOCATION_REBALANCING_AND_INVESTMENT_OPERATIONS.md](./03_LIFECYCLE_ALLOCATION_REBALANCING_AND_INVESTMENT_OPERATIONS.md) đưa kiến thức sang vận hành thực tế: human capital, liability matching, strategic/tactical allocation, rebalancing, sequence risk, tax location, custody, transaction cost và portfolio review.
+
+## Sau domain này bạn cần làm được gì?
+
+Bạn cần có khả năng giải thích tiền của mình đang đi qua hệ thống nào khi mua chứng khoán, phân biệt market risk với liquidity/counterparty/operational risk, xây allocation theo mục tiêu thay vì theo ticker và viết một Investment Policy Statement đủ rõ để kiểm soát rebalancing, concentration và leverage.
+
+Sau khi hoàn thành, chuyển sang [02_asset_classes](../02_asset_classes/README.md).
