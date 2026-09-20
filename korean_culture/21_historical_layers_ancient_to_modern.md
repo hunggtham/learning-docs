@@ -1,5 +1,7 @@
 # Các lớp lịch sử: từ xã hội cổ đại đến Hàn Quốc hiện đại
 
+> **Bản mở rộng:** phần lịch sử đã được tách thành một Knowledge Library riêng tại [`../korean_history/00_index_and_dependency.md`](../korean_history/00_index_and_dependency.md). Chương hiện tại giữ vai trò cầu nối để giải thích history → culture; nếu muốn học chronology, political economy, war, colonial period, division và democratization theo chiều sâu, hãy dùng thư viện lịch sử riêng.
+
 Văn hoá Hàn Quốc hiện đại không thể giải thích bằng một thời kỳ duy nhất. Một hành vi hôm nay có thể đồng thời mang dấu vết của xã hội nông nghiệp, nhà nước Nho giáo Joseon, thuộc địa Nhật Bản, chiến tranh lạnh, công nghiệp hoá cực nhanh và nền kinh tế nền tảng số. Vì vậy, lịch sử ở đây không phải là danh sách triều đại để học thuộc. Nó là cách truy tìm **path dependence (phụ thuộc đường đi / 경로의존성)**: vì sao một lựa chọn hoặc cú sốc trong quá khứ tiếp tục tạo constraint cho hiện tại.
 
 > Một mental model hữu ích là xem xã hội như một hệ thống phần mềm lâu đời. Giao diện đã thay đổi nhiều lần, nhưng một số protocol, database schema và legacy constraint vẫn còn ở tầng dưới.
@@ -8,19 +10,19 @@ Văn hoá Hàn Quốc hiện đại không thể giải thích bằng một th�
 
 Khi các cộng đồng săn bắt–hái lượm và nông nghiệp định cư hình thành trên bán đảo, thứ thay đổi không chỉ là cách tạo thức ăn. Định cư lâu dài làm xuất hiện vấn đề phân chia đất, lưu trữ lương thực, phòng thủ và tổ chức lao động. Đó là những tiền đề của **political organization (tổ chức chính trị / 정치 조직)**.
 
-Những câu chuyện về **고조선 (Gojoseon)** và thần thoại **단군 (Dangun)** quan trọng không phải chỉ vì câu hỏi “sự kiện nào hoàn toàn lịch sử, sự kiện nào mang tính huyền thoại”. Chúng còn cho thấy cách cộng đồng tạo một **origin narrative (câu chuyện nguồn gốc / 기원 서사)** để giải thích mình là ai. Trong nhiều xã hội, myth không đơn giản đối lập với history; nó có thể hoạt động như một tầng meaning gắn cộng đồng với lãnh thổ và tổ tiên.
+Những câu chuyện về **Cổ Triều Tiên (고조선 / Gojoseon)** và thần thoại **Đàn Quân (단군 / Dangun)** quan trọng không phải chỉ vì câu hỏi “sự kiện nào hoàn toàn lịch sử, sự kiện nào mang tính huyền thoại”. Chúng còn cho thấy cách cộng đồng tạo một **origin narrative (câu chuyện nguồn gốc / 기원 서사)** để giải thích mình là ai. Trong nhiều xã hội, myth không đơn giản đối lập với history; nó có thể hoạt động như một tầng meaning gắn cộng đồng với lãnh thổ và tổ tiên.
 
 ## Ba vương quốc và việc cạnh tranh tạo ra năng lực nhà nước
 
-Thời **고구려 (Goguryeo)**, **백제 (Baekje)** và **신라 (Silla)** cho thấy một quy luật phổ quát của lịch sử: cạnh tranh giữa các nhà nước thường thúc đẩy năng lực huy động nguồn lực, quân sự, luật pháp và ngoại giao. Mỗi vương quốc phát triển mạng lưới quyền lực và quan hệ khác nhau với Trung Hoa, Nhật Bản và các nhóm trên lục địa Á-Âu.
+Thời **Cao Câu Ly (고구려 / Goguryeo)**, **Bách Tế (백제 / Baekje)** và **Tân La (신라 / Silla)** cho thấy một quy luật phổ quát của lịch sử: cạnh tranh giữa các nhà nước thường thúc đẩy năng lực huy động nguồn lực, quân sự, luật pháp và ngoại giao. Mỗi vương quốc phát triển mạng lưới quyền lực và quan hệ khác nhau với Trung Hoa, Nhật Bản và các nhóm trên lục địa Á-Âu.
 
 Phật giáo (Buddhism / 불교) khi đi vào các vương quốc không chỉ là một tôn giáo cá nhân. Nó còn cung cấp ngôn ngữ biểu tượng, nghệ thuật, kiến trúc, nghi lễ và một mô hình về trật tự vượt lên trên địa phương. Vì vậy, chùa, tượng Phật, kỹ thuật kiến trúc và hệ thống giáo dục tôn giáo cũng là một phần của quá trình xây dựng nhà nước.
 
-Sau khi Silla thống nhất phần lớn bán đảo vào thế kỷ VII, khái niệm **통일신라 (Unified Silla)** cần được hiểu có giới hạn: sự thống nhất không bao gồm toàn bộ không gian lịch sử từng thuộc Goguryeo, và ở phía bắc tồn tại **발해 (Balhae)**. Điều này quan trọng vì lịch sử bán đảo không phải một đường thẳng đơn giản dẫn tới quốc gia hiện nay.
+Sau khi Silla thống nhất phần lớn bán đảo vào thế kỷ VII, khái niệm **통일신라 (Unified Silla)** cần được hiểu có giới hạn: sự thống nhất không bao gồm toàn bộ không gian lịch sử từng thuộc Goguryeo, và ở phía bắc tồn tại **Bột Hải (발해 / Balhae)**. Điều này quan trọng vì lịch sử bán đảo không phải một đường thẳng đơn giản dẫn tới quốc gia hiện nay.
 
 ## Goryeo: Phật giáo, thương mại và tên gọi “Korea”
 
-Triều **고려 (Goryeo)** để lại dấu vết đặc biệt trong identity quốc tế bởi từ “Korea” bắt nguồn từ tên Goryeo. Xã hội Goryeo phát triển mạng lưới trao đổi khu vực, Phật giáo giữ vị trí lớn trong nhà nước và đời sống tinh thần, trong khi kỹ thuật in và gốm sứ đạt trình độ cao.
+Triều **Cao Ly (고려 / Goryeo)** để lại dấu vết đặc biệt trong identity quốc tế bởi từ “Korea” bắt nguồn từ tên Goryeo. Xã hội Goryeo phát triển mạng lưới trao đổi khu vực, Phật giáo giữ vị trí lớn trong nhà nước và đời sống tinh thần, trong khi kỹ thuật in và gốm sứ đạt trình độ cao.
 
 **고려청자 (Goryeo celadon)** thường được xem như một biểu tượng thẩm mỹ, nhưng nếu nhìn theo first principles, nó cũng là kết quả của material science. Màu men phụ thuộc vào thành phần khoáng chất, nhiệt độ, môi trường oxy hoá–khử trong lò và kỹ năng kiểm soát quá trình nung. Một vật thể nghệ thuật vì vậy là điểm giao giữa chemistry, engineering, trade network và symbolic taste.
 
@@ -28,19 +30,19 @@ Goryeo cũng trải qua các cuộc xâm lược Mông Cổ và sau đó tồn t
 
 ## Joseon: khi Nho giáo trở thành operating system của nhà nước
 
-Sự thành lập **조선 (Joseon)** năm 1392 đánh dấu một tái cấu trúc lớn. **성리학 (Neo-Confucianism / Tân Nho giáo)** trở thành framework quan trọng cho giáo dục, thi cử, gia đình, nghi lễ và hành chính. Điểm cốt lõi không phải “Joseon thích Nho giáo”, mà là Nho giáo cung cấp một model để trả lời hàng loạt câu hỏi quản trị: ai có quyền, quan chức được chọn bằng gì, gia đình có nghĩa vụ gì, nghi lễ nào biểu thị trật tự và tri thức nào được coi là legitimate.
+Sự thành lập **nhà Triều Tiên (조선 / Joseon)** năm 1392 đánh dấu một tái cấu trúc lớn. **성리학 (Neo-Confucianism / Tân Nho giáo)** trở thành framework quan trọng cho giáo dục, thi cử, gia đình, nghi lễ và hành chính. Điểm cốt lõi không phải “Joseon thích Nho giáo”, mà là Nho giáo cung cấp một model để trả lời hàng loạt câu hỏi quản trị: ai có quyền, quan chức được chọn bằng gì, gia đình có nghĩa vụ gì, nghi lễ nào biểu thị trật tự và tri thức nào được coi là legitimate.
 
 Hệ thống **과거 (civil service examination / khoa cử)** liên kết học tập với địa vị nhà nước. Khi kiến thức kinh điển có thể chuyển thành office và prestige, động lực đầu tư vào giáo dục tăng mạnh. Không nên trực tiếp đồng nhất khoa cử Joseon với 수능 ngày nay, nhưng có thể thấy một connection dài hạn: xã hội nhiều lần sử dụng examination như một technology để phân phối cơ hội trong điều kiện cạnh tranh cao.
 
 ### Hangul như một can thiệp vào information system
 
-Năm 1443, bộ chữ sau này được gọi là **한글 (Hangul)** được tạo dưới thời vua **세종 (Sejong)** và công bố qua **훈민정음 (Hunminjeongeum)**. Điều mang tính cách mạng không chỉ là “dễ học hơn chữ Hán”. Một writing system thay đổi chi phí encode và decode information.
+Năm 1443, bộ chữ sau này được gọi là **chữ Hàn (한글 / Hangul)** được tạo dưới thời **Đại vương Thế Tông (세종대왕 / King Sejong the Great)** và công bố qua **Huấn Dân Chính Âm (훈민정음 / Hunminjeongeum)**. Điều mang tính cách mạng không chỉ là “dễ học hơn chữ Hán”. Một writing system thay đổi chi phí encode và decode information.
 
 Nếu một xã hội chỉ cho phép việc ghi chép chính thức phụ thuộc vào một hệ thống chữ khó tiếp cận với đại đa số dân chúng, information bandwidth giữa nhà nước, tri thức và người dân bị hạn chế. Hangul giảm learning cost để biểu diễn tiếng Hàn. Nói theo ngôn ngữ Computer Science, nó không thay đổi “dữ liệu tiếng Hàn” đang tồn tại trong lời nói, nhưng tạo một encoding phù hợp hơn với cấu trúc âm thanh của ngôn ngữ.
 
 ## Imjin War và ký ức về vulnerability
 
-Các cuộc xâm lược Nhật Bản cuối thế kỷ XVI, thường gọi là **임진왜란 (Imjin War)**, gây phá huỷ lớn và để lại ký ức sâu trong lịch sử Joseon. Nhân vật như **이순신 (Yi Sun-sin)** trở thành biểu tượng không chỉ vì chiến thắng quân sự mà vì cách nation-building sau này lựa chọn và kể lại quá khứ.
+Các cuộc xâm lược Nhật Bản cuối thế kỷ XVI, thường gọi là **Chiến tranh Nhâm Thìn (임진왜란 / Imjin War)**, gây phá huỷ lớn và để lại ký ức sâu trong lịch sử Joseon. Nhân vật như **Lý Thuấn Thần (이순신 / Yi Sun-sin)** trở thành biểu tượng không chỉ vì chiến thắng quân sự mà vì cách nation-building sau này lựa chọn và kể lại quá khứ.
 
 Đây là một nguyên lý quan trọng của **collective memory (ký ức tập thể / 집단기억)**: xã hội không lưu toàn bộ quá khứ với trọng lượng bằng nhau. Một số sự kiện được đưa vào textbook, monument, phim ảnh và ngày kỷ niệm, từ đó trở thành coordinate chung cho nhiều thế hệ.
 
