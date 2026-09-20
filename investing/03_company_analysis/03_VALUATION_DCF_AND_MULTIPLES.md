@@ -6,384 +6,448 @@
 
 Market price là price giao dịch hiện tại. Intrinsic value là estimate của present value cash flows thuộc capital providers/shareholders dưới assumptions.
 
-Price can deviate because expectations, liquidity, flows and risk premia. But intrinsic value itself uncertain because future cash flows unknown.
+Price có thể deviate vì expectations, liquidity, flows và risk premia. Intrinsic value cũng uncertain vì future cash flows unknown.
 
-Therefore use ranges/scenarios, not exact target.
+Vì vậy valuation nên tạo range/scenarios thay vì một target price exact giả tạo.
 
-## 2. Expected return perspective
+## 2. Valuation là bài toán expectation
 
-Valuation should also ask prospective return from current price.
+Investor return không phụ thuộc company “tốt” tuyệt đối mà phụ thuộc outcome relative to what price already assumes.
 
-A rough equity framework:
+Một business tuyệt vời có thể tạo poor return nếu market already prices decades of flawless growth. Ngược lại, business trung bình có thể tạo strong return nếu expectations extremely depressed và fundamentals chỉ cần “less bad”.
 
-`Expected return ≈ earnings/FCF growth + shareholder yield + valuation change`
+## 3. Expected-return perspective
 
-Company can compound earnings 12% but investor earn less if multiple compresses.
+Một rough equity framework:
 
-## 3. Present value
+`Expected return ≈ fundamental per-share growth + shareholder yield + valuation change`
 
-Future cash flow discounted:
+Company compound EPS/FCF 12% nhưng investor có thể earn less nếu multiple compresses. Expected return framework giúp nối intrinsic value với holding-period outcome.
+
+## 4. Present value
 
 `PV = CF_t / (1 + r)^t`
 
-Higher discount rate lowers value, especially distant cash flows. This creates “equity duration”: high-growth company whose value lies far future is more rate-sensitive.
+Higher discount rate lowers value, especially distant cash flows. Điều này tạo intuition về equity duration: growth company với value nằm xa tương lai nhạy với rate changes hơn mature cash generator.
 
-## 4. Nominal vs real valuation
+## 5. Nominal vs real consistency
 
-Nominal cash flows should be discounted by nominal rate; real cash flows by real rate. Mixing produces inconsistency.
+Nominal cash flows phải discount bằng nominal rate; real cash flows bằng real rate. Mixing làm model internally inconsistent.
 
-Inflation affects revenue, margin, working capital, capex and discount rates differently. Simply add inflation to growth without cost/reinvestment changes can overvalue.
+Inflation tác động revenue, margin, working capital, capex và discount rate khác nhau. Không nên chỉ add inflation vào top-line growth rồi giữ mọi cost assumption unchanged.
 
-## 5. Enterprise Value và Equity Value
+## 6. Enterprise Value và Equity Value
 
-Enterprise Value represents operating asset value available to debt+equity capital providers. Equity value is residual for common shareholders.
+Enterprise Value đại diện operating asset value cho debt + equity capital providers.
 
-Simplified:
+`EV ≈ Equity Value + Debt + Preferred + Minority Interest - Cash/non-operating assets`
 
-`EV = Market Cap + Debt + Preferred + Minority Interest - Cash/non-operating assets adjustments`
+Bridge exact phụ thuộc leases, pensions, associates, excess cash và other claims.
 
-Exact bridge depends company.
+## 7. Net debt nuance
 
-## 6. Net debt nuance
+Không phải mọi cash đều excess. Operating cash, restricted cash hoặc trapped cash có thể không available.
 
-Not all cash is excess. Operating cash may be required; restricted cash unavailable. Pension deficits, leases or off-balance obligations may act debt-like.
+Pension deficits, leases, environmental obligations hoặc supplier financing đôi khi có debt-like economics. Valuation bridge cần economic substance, không chỉ balance-sheet labels.
 
-Non-core investments can be added separately if not reflected operating cash flow.
-
-## 7. FCFF
-
-Free Cash Flow to Firm (*FCFF*) available to all capital providers:
+## 8. FCFF
 
 `FCFF = EBIT(1-T) + D&A - Capex - ΔNWC`
 
-Discount FCFF using WACC to get enterprise value.
+Discount FCFF bằng WACC để ra enterprise value.
 
-Forecast should connect revenue/margins/reinvestment to business drivers rather than arbitrary growth rates.
+Forecast phải nối revenue/margins/reinvestment với business drivers, không phải chỉ CAGR arbitrary.
 
-## 8. FCFE
-
-Free Cash Flow to Equity (*FCFE*) is residual after debt-related flows:
+## 9. FCFE
 
 `FCFE ≈ Net Income + D&A - Capex - ΔNWC + Net Borrowing`
 
-Discount FCFE at cost of equity to get equity value.
+Discount FCFE bằng cost of equity. FCFE useful khi capital structure relatively stable; leverage changes lớn làm cash flow volatile và FCFF thường cleaner.
 
-FCFE can be unstable when leverage changes, so FCFF often easier for non-financial firms.
+## 10. Mid-year convention
 
-## 9. Why banks need different framework
+Cash flows thực tế đến xuyên năm chứ không phải toàn bộ cuối năm. *Mid-year convention* discount cash flows trung bình khoảng giữa kỳ, làm valuation hơi cao hơn end-year convention khi everything else equal.
 
-For banks, debt/deposits are operating raw material, so industrial FCFF concept is awkward. Dividend Discount Model or excess-return/residual-income often more natural.
+Điều quan trọng không phải memorize adjustment mà hiểu timing assumption ảnh hưởng PV.
 
-Valuation connects ROE, book value growth, payout and cost of equity.
+## 11. Forecast revenue từ drivers
 
-## 10. Forecast revenue from drivers
-
-Instead of “revenue +10%”, use:
+Thay vì “revenue +10%”, build causal model:
 
 `Units/customers × price/ARPU × mix`
 
-SaaS: starting ARR + new ARR - churn + expansion. Semis: bit shipments × ASP. Retail: stores × sales/store plus same-store sales.
+SaaS: beginning ARR + new ARR - churn + expansion. Semis: bit shipment × ASP. Retail: stores × sales/store + same-store sales. Bank: earning assets × spread + fees.
 
-Driver model makes bull/bear cases causal.
+Driver model làm bull/bear causal và monitorable.
 
-## 11. Margin forecast
+## 12. Margin forecast
 
-Gross margin depends price, mix, input cost, utilization. Operating margin adds scale/R&D/SG&A.
+Gross margin phụ thuộc price, mix, input, utilization và scale. Operating margin thêm R&D/SG&A/overheads.
 
-Do not extend peak margin forever without competitive response. Compare history, peers and capacity cycle.
+Peak margins hiếm khi persist forever nếu excess returns attract competition. Model fade hoặc explain moat strong enough to resist it.
 
-## 12. Reinvestment requirement
+## 13. Reinvestment requirement
 
-Growth requires capital. Sustainable growth links reinvestment and return:
+Growth cần capital:
 
 `Growth ≈ Reinvestment Rate × Return on Incremental Capital`
 
-If company grows 20% but incremental ROIC only 5%, it must consume enormous capital. Growth itself isn't value creation unless return exceeds capital cost.
+Company tăng 20% nhưng incremental ROIC 5% phải consume capital lớn. Growth chỉ tạo value nếu return trên new capital đủ vượt cost of capital.
 
-## 13. Working capital in DCF
+## 14. ROIC fade
 
-Growth can absorb cash through receivables/inventory. Model DSO/DIO/DPO or working-capital-to-sales, not ignore it.
+Mature businesses thường thấy excess ROIC fade vì competition. Terminal assumptions cần decide ROIC eventually converge toward cost of capital, remain above due moat hay collapse below.
 
-Businesses with negative working capital can finance growth via customer/supplier terms; slowing growth can reduce that benefit.
+DCF that keeps 30% ROIC forever without economic explanation thường overvalue.
 
-## 14. Capex and depreciation
+## 15. Growth fade
 
-Separate maintenance and growth conceptually. In steady state, capex cannot remain permanently below economic depreciation if assets wear out.
+High growth không thể persist indefinitely vì market size, competition và law of large numbers.
 
-High-growth infrastructure/semis may require capex far above D&A for years.
+Forecast nên có transition period từ high growth tới mature growth. Abrupt drop từ 30% năm 5 xuống 3% terminal thường mathematically convenient nhưng economically crude.
 
-## 15. Explicit forecast period
+## 16. Working capital
 
-Forecast period should cover transition until business approaches stable economics, not arbitrary 5 years.
+Growth có thể absorb cash qua receivables/inventory. Model DSO/DIO/DPO hoặc working-capital-to-sales.
 
-High-growth company may require 10–15 years transition assumptions; mature utility shorter.
+Negative working-capital business có thể finance growth via customers/suppliers; slowing growth có thể reverse benefit.
 
-Longer forecast doesn't mean better if assumptions weak.
+## 17. Capex, depreciation và maintenance
 
-## 16. Terminal value
+Trong steady state, capex không thể thấp hơn economic depreciation mãi. Growth businesses often capex > D&A; asset-light firms có intangible investment qua R&D/S&M thay vì physical capex.
+
+Valuation phải capture economic reinvestment kể cả khi accounting expensed.
+
+## 18. R&D capitalization intuition
+
+Software/pharma/semiconductor có thể expense R&D dù một phần tạo multi-year assets. Analyst có thể capitalize R&D để better match investment and returns, nhưng assumptions về useful life/amortization matter.
+
+Mục tiêu là hiểu economics, không “improve” earnings artificially.
+
+## 19. Stock-based compensation
+
+SBC là economic cost qua dilution dù non-cash trong cash flow statement.
+
+Nếu add SBC back to FCF, model phải reflect higher future diluted shares or equivalent repurchase cost. Không thể vừa treat SBC free vừa ignore dilution.
+
+## 20. Diluted share count
+
+Per-share valuation nên dùng fully diluted share count, including options/warrants/convertibles when economically relevant.
+
+Treasury-stock method hoặc if-converted method có accounting detail; intuition đơn giản là potential claims trên equity phải được recognized.
+
+## 21. Taxes và NOLs
+
+Effective tax rate có thể khác statutory vì geographic mix, tax credits, NOLs và one-offs.
+
+Net Operating Losses có thể shield future taxes nhưng finite and conditional. Forecast tax normalization khi benefits expire.
+
+## 22. Explicit forecast period
+
+Forecast period nên đủ dài để business transition toward stable economics. Mature utility có thể 5–7 năm; high-growth platform có thể cần longer.
+
+Longer horizon chỉ meaningful nếu assumptions có causal foundation.
+
+## 23. Terminal value
 
 Gordon growth:
 
 `TV = FCF_(n+1) / (WACC - g)`
 
-Terminal value often dominates DCF. Therefore terminal assumptions must be economically consistent: growth cannot exceed economy forever while maintaining unrealistic high ROIC without competition.
+Terminal value thường chiếm phần lớn DCF. Vì denominator small, WACC/g errors matter massively.
 
-## 17. Terminal growth rate
+Terminal assumptions phải internally consistent với growth, reinvestment và ROIC.
 
-Long-term nominal growth should reflect mature economy/inflation and company competitive position.
+## 24. Terminal growth consistency
 
-Very high terminal `g` near WACC mathematically explodes value. Treat as warning.
+Long-run `g` không nên exceed sustainable nominal economy growth indefinitely trừ special assumptions.
 
-## 18. Exit multiple terminal value
+Nếu business terminal growth 3% và terminal ROIC 15%, reinvestment rate implied khoảng 20%. Model phải actually fund growth đó.
 
-Alternative is apply terminal EV/EBITDA or other multiple. This embeds market-comparable assumption at future date.
+## 25. Exit multiple terminal value
 
-It does not avoid terminal uncertainty; it simply hides it in multiple. Cross-check Gordon vs exit multiple.
+Alternative là apply terminal EV/EBITDA/P-E. Nó không eliminate uncertainty; chỉ convert uncertainty thành future multiple assumption.
 
-## 19. WACC
+Cross-check Gordon và exit multiple để detect inconsistent terminal economics.
 
-Weighted Average Cost of Capital:
+## 26. WACC
 
 `WACC = w_e × Cost of Equity + w_d × After-tax Cost of Debt`
 
-Weights ideally reflect sustainable market-value capital structure.
+Weights nên reflect sustainable market-value capital structure. WACC phải consistent với currency, inflation và leverage assumptions.
 
-WACC should match currency and nominal/real framework.
+## 27. Cost of equity
 
-## 20. Cost of equity
-
-CAPM common:
+CAPM:
 
 `Cost of Equity = Risk-free Rate + Beta × Equity Risk Premium`
 
-But beta is historical/model-dependent; ERP estimated. CAPM is tool, not truth.
+Beta/ERP estimates uncertain. CAPM useful framework nhưng không physical law.
 
-Small/country/company risks may require judgment, but avoid piling arbitrary premiums to force result.
+Nếu thêm country/small-cap premiums, cần avoid double counting risks already embedded in cash flows or beta.
 
-## 21. Risk-free rate
+## 28. Risk-free rate theo currency
 
-Risk-free rate should match cash-flow currency. KRW cash flows should not casually discount using US Treasury simply because available.
+Discount rate nên match cash-flow currency. KRW nominal cash flows không thể casually discount bằng USD risk-free mà bỏ FX/inflation consistency.
 
-Currency risk and sovereign conditions belong consistently in cash flows/discount rate.
+For multinational, model segment cash flows hoặc use coherent home-currency translation framework.
 
-## 22. Cost of debt
+## 29. Country risk
 
-Use current marginal borrowing cost, not only historical coupon. For stressed company, market yield can be much higher than book interest rate.
+Country risk có thể đến political, legal, capital controls, sovereign spread, FX convertibility và governance.
 
-Tax shield only valuable if taxable income exists and rules permit.
+Có thể reflect through cash-flow scenarios hoặc discount premium, nhưng đừng double count. Scenario modeling thường clearer khi risk is discrete/nonlinear.
 
-## 23. Beta caution
+## 30. Cost of debt
 
-Beta measures covariance with market, not total business risk. Low historical beta can result stale/illiquid prices.
+Dùng current marginal borrowing cost hơn historical coupon. Stressed company có market yield cao hơn book interest.
 
-DCF sensitivity should focus key drivers, not false confidence from single beta estimate.
+Tax shield có value chỉ khi taxable income and laws allow. Debt cost should reflect maturity/refinancing profile.
 
-## 24. Sensitivity table
+## 31. Capital structure và leverage feedback
 
-At minimum vary WACC and terminal growth. Better also key operating assumptions: revenue CAGR, margin, reinvestment.
+WACC không constant nếu leverage thay. Distressed company có cost of debt/equity explode khi value falls.
 
-If valuation changes from 50 to 150 with tiny assumption shift, thesis is highly fragile. That is useful information.
+For highly leveraged business, Adjusted Present Value (*APV*) hoặc scenario analysis đôi khi clearer than single WACC.
 
-## 25. Scenario analysis
+## 32. Sensitivity table
 
-Base/bull/bear should have causal stories.
+At minimum vary WACC và terminal growth. Better vary revenue CAGR, margins, ROIC/reinvestment.
 
-Semiconductor bear: ASP down, utilization low, inventory correction, capex sticky. Bull: supply constrained, HBM mix high, pricing strong.
+Nếu valuation moves từ 50 đến 150 với tiny change, fragility itself là key insight.
 
-Do not simply multiply value ±20%.
+## 33. Tornado analysis
 
-## 26. Probability weighting
+*Tornado chart* rank valuation sensitivity theo assumptions: volume, price, margin, WACC, terminal growth, capex, working capital.
 
-Expected value:
+Điều này giúp biết research time nên tập trung driver nào thay vì refine variables low impact.
 
-`EV_expected = Σ Probability_i × Value_i`
+## 34. Scenario analysis
 
-Probabilities are judgment. Purpose is force explicit downside/upside, not create scientific certainty.
+Base/bull/bear phải có causal stories. Semiconductor bear: ASP down, utilization low, inventory correction, capex sticky. Bull: HBM mix, supply discipline, pricing strong.
 
-Tail case may deserve separate risk control even low probability.
+Không nên simply +/-20% target value.
 
-## 27. Reverse DCF
+## 35. Probability-weighted valuation
 
-Reverse DCF starts current price and solves assumptions necessary to justify it: growth, margin, ROIC.
+`Expected Value = Σ p_i × Value_i`
 
-This is often more robust than forecasting distant future because question becomes “what must be true?”
+Probabilities là judgment. Purpose là force explicit distributions.
 
-If current price requires 25% revenue CAGR for decade + record margins, margin of safety low.
+Low-probability tail loss có thể vẫn require position-size control dù expected value positive.
 
-## 28. P/E
+## 36. Monte Carlo valuation
 
-Price/Earnings works when earnings meaningful/stable. It mixes operating and financing/tax effects.
+Monte Carlo sample multiple uncertain drivers từ distributions/correlations để tạo valuation distribution.
 
-P/E high can be justified by high growth/ROIC/lower risk; low P/E can signal cyclical peak or distress.
+Nó useful để visualize uncertainty nhưng dễ tạo false sophistication nếu distributions guessed poorly. Model quality vẫn phụ thuộc economics.
 
-Use forward vs trailing carefully; forward estimates can be wrong.
+## 37. Reverse DCF
 
-## 29. PEG ratio caution
+Reverse DCF starts current price rồi solve assumptions required to justify it: growth, margin, ROIC.
 
-PEG = P/E / growth. It assumes simplistic linear relationship and ignores duration, margins, ROIC, risk and growth persistence.
+Question chuyển từ “value bao nhiêu?” thành “market đang price điều gì?”. Đây thường là framing rất powerful.
 
-Use as rough heuristic only.
+## 38. Reverse DCF và implied fade
 
-## 30. EV/EBITDA
+Không chỉ solve revenue CAGR. Hãy solve combinations: terminal margin, reinvestment, ROIC fade và duration of excess returns.
 
-EV/EBITDA compares operating value before D&A/financing/tax. Useful for companies with different debt.
+Market price có thể imply moat lasts 15 years rather than 5; đây là expectation more meaningful than simple P/E.
 
-But EBITDA ignores capex and working capital. Capital-intensive company deserves different multiple from asset-light even same EBITDA growth.
+## 39. P/E
 
-## 31. EV/EBIT
+P/E useful khi earnings meaningful/stable. Nó mixes operating, financing và tax.
 
-EV/EBIT includes depreciation, often better when D&A approximates economic asset consumption.
+Low P/E có thể signal cyclical peak/distress; high P/E có thể rational if high ROIC/growth persist.
 
-Still depends accounting depreciation and acquisition amortization.
+## 40. PEG caution
 
-## 32. EV/Sales
+`PEG = P/E / growth` oversimplifies persistence, margins, ROIC, risk và duration.
 
-Useful when profits negative, but sales only valuable if future margins plausible.
+Use rough heuristic only.
 
-A 2x sales low-margin retailer and 10x sales high-retention software cannot compare directly.
+## 41. EV/EBITDA
 
-## 33. P/B
+EV/EBITDA compares operating value before D&A/financing/tax. Useful across leverage structures but ignores capex/working capital.
 
-P/B meaningful when book equity relates earning assets—banks, insurers, some asset-heavy.
+Capital-intensive business deserving same EV/EBITDA as asset-light company is not automatic.
 
-Core relationship: sustainable ROE vs cost of equity. ROE > COE supports P/B >1; ROE below COE often P/B <1, all else equal.
+## 42. EV/EBIT
 
-## 34. FCF yield
+EV/EBIT includes depreciation, often more economic when D&A approximates asset consumption.
 
-`FCF Yield = FCF / Equity Value` (or enterprise variant consistently).
+Acquisition amortization/accounting differences still matter.
 
-Directly connects cash generation to price, but current FCF may be distorted by working capital or growth capex.
+## 43. EV/Sales
 
-Normalize.
+Useful when profits negative, but sales only valuable if future margins/retention plausible.
 
-## 35. Dividend yield
+Compare gross margin, unit economics and required reinvestment.
 
-Dividend yield ignores retained cash and capital allocation. High yield can signal distress/unsustainable payout.
+## 44. P/B
 
-Total shareholder yield can include net buyback + dividends, but debt-funded distribution may weaken balance sheet.
+P/B useful khi book equity links earning assets: banks/insurers/asset-heavy.
 
-## 36. Comparable-company analysis
+Core relation: sustainable ROE relative cost of equity. ROE > COE supports P/B >1 all else equal.
 
-Peers should have comparable growth, margin, ROIC, risk, geography and accounting.
+## 45. FCF yield
 
-Do not compare Korean memory cyclical to US fabless growth company just because both “semiconductor”.
+`FCF Yield = FCF / Equity Value` or enterprise version consistently.
 
-Explain why premium/discount exists.
+Normalize working capital and growth capex. Temporary inventory liquidation can make FCF yield artificially high.
 
-## 37. Historical multiple
+## 46. Shareholder yield
 
-Historical range provides context but macro/regime may change. P/E 30 during zero rates may not be fair when real yields high.
+Dividend + net buyback yield captures distributions better than dividend alone.
 
-Business itself can mature, changing warranted multiple.
+Debt-funded distribution or buyback above intrinsic value can destroy value despite high shareholder yield.
 
-## 38. Sum-of-the-parts (SOTP)
+## 47. Comparable-company analysis
 
-Conglomerate with distinct businesses may need value segments separately then subtract corporate debt/overheads.
+Peers cần similar growth, margins, ROIC, risk, geography, accounting và business model.
 
-SOTP useful for holding companies but beware assuming each part deserves pure-play multiple without conglomerate costs/taxes.
+Explain premium/discount, don't just average multiples.
 
-## 39. Asset/NAV valuation
+## 48. Historical multiple
 
-Property, holding companies, investment firms can use Net Asset Value.
+Historical range is context, not fair-value law. Rate regime, business maturity, accounting and index composition change.
 
-Adjust assets to realistic market value, taxes, debt and liquidity. Book land value may differ market/legal realizability.
+A company deserves different multiple after moat erosion even if current P/E below 10-year average.
 
-## 40. Replacement cost
+## 49. Sum-of-the-parts
 
-Commodity/capital-intensive industries sometimes compare EV to replacement cost of capacity. High prices encourage new supply; value cannot stay far above replacement cost forever absent barriers.
+SOTP values segments separately then adjusts corporate debt, tax leakage, holding-company costs and minorities.
 
-Replacement cost is cycle tool, not universal valuation.
+Pure-play peer multiples may overstate segments if separation impossible or synergies/corporate costs material.
 
-## 41. Liquidation value
+## 50. NAV valuation
 
-For distressed/asset-rich business estimate cash recoverable if operations wound down after liabilities, transaction costs and haircuts.
+Property/holding companies/investment firms can use Net Asset Value.
 
-Book value can overstate liquidation if inventory/receivables/PPE difficult to monetize.
+Adjust asset values, debt, tax, liquidity discount và realizability. Land book value may not equal realizable value if legal restrictions exist.
 
-## 42. Cyclical valuation
+## 51. Replacement cost
 
-At peak, earnings high make P/E low; at trough, P/E high/negative. Normalize mid-cycle price, volume, margins and utilization.
+Commodity/capital-intensive industries sometimes anchor value to replacement cost. If industry trades well above replacement cost, new capacity may enter unless barriers strong.
 
-Use EV/normalized EBITDA, P/B/replacement or through-cycle DCF.
+Useful cycle tool, not universal valuation.
 
-## 43. Banks
+## 52. Liquidation value
 
-Bank valuation: P/B, ROE, cost of equity, growth, asset quality, capital and payout.
+Distressed business valuation should haircut receivables, inventory, PPE and deduct wind-down costs/claims.
 
-High ROE from leverage/underprovision is lower quality.
+Book equity can be meaningless if assets hard to monetize.
 
-Residual income/excess return model values future ROE above COE on book capital.
+## 53. Banks: excess return model
 
-## 44. REITs
+For bank, industrial FCFF awkward. Residual-income intuition:
 
-Use FFO/AFFO, NAV, cap rates, debt, occupancy and lease growth.
+`Value ≈ Book Value + PV[(ROE - Cost of Equity) × Beginning Book Equity]`
 
-P/E less useful due real-estate depreciation accounting.
+Sustainable ROE above COE creates value; growth destroys value if ROE below COE.
 
-## 45. SaaS/growth
+## 54. Insurers
 
-Near-term P/E may meaningless. Focus ARR, retention, gross margin, CAC efficiency, SBC/dilution and path to FCF.
+Insurance valuation may use P/B, ROE, embedded value or appraisal value depending life/non-life structure.
 
-High growth without incremental economics should not automatically command premium.
+Reserve adequacy, underwriting profitability, investment duration và capital regulation matter more than simple P/E.
 
-## 46. Commodity producers
+## 55. REITs
 
-Value reserves/resources, cost curve, commodity assumptions, capex, royalties/tax and balance sheet.
+Use FFO/AFFO, NAV, cap rates, debt maturity, occupancy và lease growth.
 
-Avoid valuing at current spot forever if price far above marginal incentive cost.
+P/E less informative due real-estate depreciation.
 
-## 47. Per-share value
+## 56. SaaS/growth
 
-Enterprise can grow while shareholder value stagnates if dilution high. Always model diluted shares.
+Near-term P/E may not meaningful. Focus ARR, retention, gross margin, CAC payback, SBC/dilution and path to FCF.
 
-Acquisition funded by stock may raise total EPS depending accretion math but reduce intrinsic per-share if overpaid.
+High growth without strong incremental unit economics should not automatically command premium.
 
-## 48. Balance-sheet optionality
+## 57. Commodity producers
 
-Net cash gives resilience and capacity buybacks/M&A in downturn. Heavy debt amplifies equity sensitivity.
+Value reserves/resources, cost curve, commodity assumptions, capex, royalties/tax, hedge book và balance sheet.
 
-Same EV can produce radically different equity risk due leverage.
+Do not extrapolate spot far above incentive price forever.
 
-## 49. Reflexivity between price and fundamentals
+## 58. Early-stage/biotech probability valuation
 
-For companies needing capital, high share price can lower financing cost and fund growth; collapsing price can force dilution/debt stress.
+For binary milestones, use probability-adjusted cash flows/scenarios rather than one deterministic DCF.
 
-Valuation can influence fundamentals, especially banks/property/early growth.
+Clinical success probabilities, time-to-market, dilution, funding runway and competitive pipeline matter.
 
-## 50. Margin of safety
+## 59. Per-share value
 
-Margin of safety is buffer for assumption error, not arbitrary 20% discount.
+Enterprise can grow while shareholder stagnates if dilution high. Always model diluted shares and potential future issuance.
 
-Need larger buffer when leverage, cyclicality, governance uncertainty or terminal value sensitivity high.
+Per-share compounding is the objective, not revenue empire size.
 
-High-quality predictable firm may justify narrower range but never zero uncertainty.
+## 60. Balance-sheet optionality
 
-## 51. Expected-return range
+Net cash provides resilience and ability buy assets/shares during downturn. Heavy debt amplifies equity sensitivity and can force value-destructive refinancing.
 
-Instead of target only, project 3–5 year scenarios including earnings/FCF, distributions and exit multiple.
+Same enterprise value can create very different equity risk.
 
-Estimate IRR/CAGR from today's price. A stock can be “undervalued” but expected return mediocre if catalyst/time horizon distant.
+## 61. Reflexivity
 
-## 52. Catalyst vs value
+For capital-dependent businesses, market valuation can influence fundamentals. High stock price lowers financing cost; collapsing price may force dilutive issuance.
 
-Intrinsic value doesn't require immediate catalyst for long-term investor, but catalyst affects duration and opportunity cost.
+Banks/property/early growth are especially reflexive.
 
-For event-driven thesis, timing matters more. Distinguish valuation gap from event path.
+## 62. Margin of safety
 
-## 53. What is priced in?
+Margin of safety là buffer for assumption/model error, not arbitrary 20% discount.
 
-Ask: current multiple implies what revenue growth, terminal margin, ROIC and failure probability?
+Need wider buffer when leverage, cyclicality, governance uncertainty or terminal sensitivity high.
 
-Thesis is not “I forecast growth 20%”; it is “market appears to price 12%, and evidence supports higher sustainable growth”.
+## 63. Expected-return range
 
-## 54. Valuation checklist
+Project holding-period outcomes:
 
-Before value: normalize accounting; identify business drivers; choose cash flow; choose consistent discount rate; model reinvestment; terminal assumptions; diluted shares; balance-sheet claims; scenarios; sensitivity; compare multiples; reverse DCF.
+`Future earnings/FCF × exit valuation + distributions - dilution/other claims`
 
-Then write what would make valuation wrong.
+Then compute CAGR/IRR from today's price across scenarios.
 
-## 55. Mental model cuối cùng
+This often helps decision more than a one-year target price.
 
-`Operating drivers → normalized cash flow → reinvestment/ROIC → risk/discount rate → terminal economics → per-share value → market-implied expectations → expected return`
+## 64. Path dependency
 
-Valuation is a decision framework under uncertainty, not target-price manufacture.
+Two stocks with same year-5 value can produce different investor experience if one requires repeated dilution, capital calls or survives deep drawdown.
+
+Path matters when leverage, liquidity or investor constraints can force action before terminal value realized.
+
+## 65. Catalyst vs value
+
+Intrinsic value gap can close slowly. Catalyst affects duration/opportunity cost but is not always necessary for long-term compounder.
+
+Event-driven thesis requires much more precise path/timing analysis.
+
+## 66. Value trap diagnostic
+
+Cheap multiple may reflect structural decline, capital misallocation, leverage, governance, technological disruption or peak cyclical earnings.
+
+Ask what must improve for multiple to normalize and whether evidence supports it.
+
+## 67. What is priced in?
+
+Current price implies some combination of growth, margin, ROIC duration, risk and failure probability.
+
+Thesis should be phrased relative expectations: “market prices X, evidence supports Y”, not only absolute forecast.
+
+## 68. Research uncertainty hierarchy
+
+Separate assumptions into high-confidence, medium-confidence và speculative. Revenue volume may be easier than terminal multiple; unit cost may be easier than ten-year market share.
+
+Allocate research effort to high-impact, high-uncertainty assumptions.
+
+## 69. Valuation checklist
+
+Before value: normalize accounting; identify drivers; choose cash flow; model reinvestment; choose consistent discount rate; account taxes/SBC/dilution; build terminal economics; bridge EV-to-equity; scenarios/sensitivity; comparable cross-check; reverse DCF; expected-return range.
+
+Then write what would falsify valuation thesis.
+
+## 70. Mental model cuối cùng
+
+`Operating drivers → normalized cash flow → reinvestment/ROIC → growth fade → risk/discount rate → terminal economics → diluted per-share value → market-implied expectations → expected return`
+
+Valuation là framework ra quyết định dưới uncertainty, không phải target-price manufacture.
