@@ -1,69 +1,232 @@
-# Thập niên 1970: công nghiệp nặng–hóa chất và sự bành trướng của chaebol (HCI Drive / 중화학공업화)
+# Thập niên 1970: công nghiệp nặng–hóa chất, vertical integration và sự bành trướng của chaebol (HCI Drive / 중화학공업화)
 
-Nếu thập niên 1960 chứng minh rằng Hàn Quốc có thể xuất khẩu hàng công nghiệp, thì thập niên 1970 đặt câu hỏi khó hơn: **có thể chuyển từ hàng thâm dụng lao động sang thép, hóa dầu, máy móc, đóng tàu, ô tô và điện tử không?** Đây là giai đoạn cấu trúc tập đoàn lớn Hàn Quốc bắt đầu mang hình dạng quen thuộc hiện nay.
+Nếu thập niên 1960 chứng minh South Korea có thể export hàng công nghiệp, thì 1970s đặt ra bài toán khó hơn nhiều: **làm sao rời khỏi lợi thế wage thấp và xây các industry có fixed cost, engineering complexity và technology requirement lớn hơn hẳn?**
 
-## Vì sao cần “đi lên” ngành nặng?
+Đây là thời kỳ Heavy and Chemical Industry Drive (HCI / 중화학공업화) và cũng là lúc nhiều business groups bắt đầu mang architecture gần với hình dạng hiện nay.
 
-Labor-intensive manufacturing có thể tạo việc làm và ngoại tệ nhanh, nhưng lợi thế wage thấp không bền vững. Khi thu nhập tăng, các nước có labor cost thấp hơn xuất hiện. Nếu một nền kinh tế muốn tiếp tục tăng productivity, nó phải tăng capital intensity, technology content và value added.
+## Vì sao light manufacturing không thể là điểm dừng?
 
-Trong thập niên 1970, chính phủ thúc đẩy **Heavy and Chemical Industry Drive (HCI / 중화학공업 육성정책)**, tập trung vào các ngành như steel, non-ferrous metals, machinery, shipbuilding, electronics và petrochemicals. Đây là industrial policy quy mô lớn, dùng directed credit, tax incentives, import protection, infrastructure và project selection.
+Garments, footwear và simple assembly phù hợp với economy nhiều labor, ít capital. Nhưng model này có một ceiling. Khi wage tăng, country có labor cheaper xuất hiện; nếu Korea chỉ cạnh tranh bằng price, comparative advantage sẽ erosion.
 
-## POSCO và logic “upstream capability”
+Muốn tiếp tục tăng income per worker, economy cần tăng:
 
-Thép là input nền của construction, shipbuilding, machinery, automobiles và appliances. Nếu phải nhập phần lớn steel, toàn bộ downstream industry chịu foreign-exchange burden và supply risk. POSCO, thành lập năm 1968 và mở rộng mạnh trong thập niên 1970, trở thành một upstream anchor cho industrial ecosystem.
+- capital intensity;
+- engineering content;
+- technology absorption;
+- value added per worker;
+- domestic upstream capability.
 
-Mental model ở đây là **input multiplier**: một investment vào upstream material có thể làm giảm cost hoặc tăng reliability cho nhiều ngành downstream cùng lúc. Vì vậy một số project có strategic value vượt profit của chính firm đó.
+Đây là lý do structural — không chỉ political — đằng sau move sang steel, machinery, shipbuilding, petrochemical, autos và electronics.
 
-## Hyundai: từ construction sang shipbuilding và automobiles
+## HCI Drive: industrial policy ở scale lớn hơn
 
-Hyundai là case đặc biệt rõ về organizational capability chuyển ngành. Construction đã giúp tập đoàn học quản lý project lớn, procurement, labor và deadline. Những capability đó được tái sử dụng trong shipbuilding và automobile manufacturing.
+Heavy and Chemical Industry Drive tập trung credit, tax incentives, protection, infrastructure và administrative coordination vào selected sectors.
 
-Hyundai Motor được thành lập năm 1967; đầu tiên lắp ráp xe theo công nghệ nước ngoài, sau đó phát triển Pony, mẫu xe độc lập đầu tiên của công ty, ra mắt giữa thập niên 1970 và bắt đầu xuất khẩu. Quá trình này cho thấy một pathway phổ biến: **licensed production → local engineering → own model → export network**.
+Điểm khác 1960s là project size và irreversibility lớn hơn. Garment factory có thể scale relatively gradually; integrated steel mill hoặc shipyard cần enormous upfront capital và years trước khi full utilization.
 
-Hyundai Heavy Industries bước vào đóng tàu với logic tương tự nhưng capex lớn hơn rất nhiều. Shipbuilding cần dock, steel, engine, finance và order book. Đây là sector mà state support, export finance và large-scale business group có lợi thế rõ.
+Economics của HCI vì thế có **real-option risk** rất cao: once built, capital không dễ redeploy sang ngành khác.
 
-## Samsung và LG: nền móng electronics
+\[
+Expected\ Project\ Value = PV(Future\ Cash\ Flows) - Initial\ Investment
+\]
 
-Samsung Electronics được thành lập năm 1969, còn GoldStar của LG có từ cuối thập niên 1950. Trong thập niên 1970, consumer electronics và components mở rộng nhanh. Ban đầu, value added có thể thấp hơn các leader quốc tế vì phụ thuộc imported components và know-how, nhưng scale production, quality control và engineering capability được tích lũy dần.
+Nếu demand forecast sai hoặc cost of capital tăng, huge sunk cost có thể trở thành burden.
 
-Điểm quan trọng là ngành electronics có **learning curve / 학습곡선** rất mạnh. Càng sản xuất nhiều, firm càng học cách giảm defect, tăng yield và cải thiện process. Vì vậy scale không chỉ giảm fixed cost; nó còn tăng tốc learning.
+## Why state coordination mattered more in heavy industry
 
-## SK: vertical integration từ textile sang petrochemical
+HCI projects cần nhiều complementary investments đồng thời. Shipyard cần steel, port, skilled welding, marine engines, export finance và customers. Auto plant cần parts suppliers, roads, steel, machine tools và distribution.
 
-SK bắt đầu từ textile, nhưng synthetic fibers phụ thuộc petrochemical inputs. Việc đi ngược lên upstream giúp kiểm soát input, margin và technology. Đây là **vertical integration / 수직계열화**: doanh nghiệp mở rộng vào các stage khác của cùng value chain.
+Private firm riêng lẻ có thể underinvest nếu nó không tin complements sẽ xuất hiện. Đây là **coordination failure / 조정실패**.
 
-Vertical integration có thể tạo advantage khi supply unreliable hoặc market chưa phát triển. Nhưng nó cũng tạo complexity và capital burden. Một group càng integrate nhiều, càng cần governance và capital allocation tốt.
+State-led planning có thể giảm failure bằng cách align infrastructure, finance và industrial capacity. Nhưng same coordination power cũng tạo risk of overinvestment nếu assumptions sai.
 
-## Tại sao chaebol mở rộng nhanh trong giai đoạn này?
+> Mental model: industrial policy giải coordination problem bằng cách tập trung decision; chính việc tập trung đó tạo selection/misallocation risk.
 
-HCI projects có ba đặc điểm: fixed cost rất lớn, payback dài và uncertainty cao. SME khó vay đủ vốn hoặc chịu loss nhiều năm trước khi đạt scale. Large groups có reputation, collateral, bank relationship và khả năng cross-subsidize giữa affiliates.
+## POSCO: upstream steel như infrastructure công nghiệp
 
-Từ góc nhìn state, làm việc với một số large groups cũng giảm coordination cost. Nhưng concentration này có consequence: economic power ngày càng tập trung và relationship giữa government–banks–chaebol trở nên sâu hơn.
+Steel là input cho construction, autos, shipbuilding, machinery và appliances. Domestic steel capacity giảm foreign-exchange burden và tăng supply reliability cho nhiều downstream firms.
 
-## Mặt trái của HCI Drive
+POSCO vì vậy không chỉ là một company case; nó là **upstream platform / 상류 산업기반** cho wider industrial ecosystem.
 
-KDI và nhiều nghiên cứu đánh giá HCI theo hướng mixed. Chính sách này giúp Hàn Quốc xây base công nghiệp nặng rất nhanh, và nhiều sector sau đó trở thành globally competitive. Tuy nhiên, giai đoạn cuối thập niên 1970 xuất hiện overinvestment, inflation, foreign debt pressure và crowding-out với light industry.
+Nếu downstream industry cần steel nhưng phải import với long lead time và FX risk, every project chịu thêm uncertainty. Domestic integrated steel producer giảm một phần friction này.
 
-Điều này minh họa một nguyên tắc first-principles: **một project có strategic rationale vẫn có thể bị overbuilt**. Nếu quá nhiều capital cùng đổ vào một ngành trước demand, return on capital giảm. Industrial policy không xóa supply-demand constraint.
+Đây là lý do một upstream project có spillover lớn hơn profit standalone của chính producer.
 
-## Oil shocks và vulnerability của công nghiệp nặng
+## Hyundai: organizational capability đi từ construction sang shipbuilding và autos
 
-Khủng hoảng dầu 1973 và 1979 nhắc rằng industrialization nặng làm economy phụ thuộc imported energy. Korea thiếu dầu thô nên energy price shock truyền trực tiếp vào cost, inflation, trade balance và corporate margins.
+Hyundai là case textbook của **capability redeployment / 역량 재배치**. Construction đã dạy group project management, procurement, labor organization và schedule control. Những routines đó không đủ để đóng tàu hay chế tạo xe, nhưng chúng giảm organizational gap khi entering new industry.
 
-Đây là nguồn gốc của một pattern còn tồn tại đến hiện nay: Hàn Quốc có manufacturing base mạnh nhưng nhạy với giá energy và commodity quốc tế.
+Hyundai Motor đi từ licensed assembly tới Pony và export. Hyundai Heavy Industries bước vào shipbuilding trong environment nơi Korea chưa có decades of shipbuilding track record như Japan/Europe.
+
+Điểm quan trọng là sequence:
+
+```text
+Project execution capability
+        ↓
+foreign technology / engineering learning
+        ↓
+large-scale production
+        ↓
+quality & delivery track record
+        ↓
+export credibility
+```
+
+Capability tích lũy theo project, không xuất hiện hoàn chỉnh ở day one.
+
+## Electronics: scale learning khác commodity heavy industry
+
+Samsung Electronics thành lập năm 1969; GoldStar của LG đã hoạt động từ cuối 1950s. Trong 1970s, consumer electronics expansion giúp firms tích lũy process-control và mass-production capability.
+
+Electronics có **learning curve / 학습곡선** mạnh. Repetition giúp defect giảm, throughput tăng và supplier quality cải thiện.
+
+Unit cost có thể giảm vì hai mechanism:
+
+\[
+Unit\ Cost \downarrow \quad 
+\text{through} \quad
+Scale\ Economy + Learning\ Effect
+\]
+
+Scale economy spread fixed cost; learning effect cải thiện process. Hai thứ related nhưng không identical.
+
+## SK: từ textile tới petrochemical qua vertical integration
+
+Textile và synthetic fibers phụ thuộc chemical feedstock. Moving upstream giúp group control supply, capture margin và build material capability.
+
+**Vertical integration / 수직계열화** đặc biệt attractive khi supplier market chưa mature hoặc imported input unreliable.
+
+Nhưng vertical integration có cost: capital intensity tăng, management complexity tăng và cyclic exposure mở rộng. Nếu every stage được internalize regardless economics, conglomerate có thể trở thành capital sink.
+
+Vì vậy integration cần được judged bằng transaction cost + strategic control + return on capital, không bằng “sở hữu nhiều stage là tốt”.
+
+## Why chaebol had an advantage in HCI
+
+HCI projects cần huge capital, long payback và ability absorb early losses. Large groups có:
+
+- existing bank relationships;
+- collateral/reputation;
+- internal cash flow từ old businesses;
+- management pool;
+- government track record;
+- khả năng diversify risk qua affiliates.
+
+Từ viewpoint government, working with fewer capable groups giảm coordination cost. Từ viewpoint group, priority access to capital làm expansion nhanh hơn.
+
+Đây là positive feedback nhưng cũng tạo concentration.
+
+## Internal capital market bắt đầu có strategic value
+
+Nếu one affiliate tạo cash nhưng growth opportunity thấp, group có thể channel capital sang new affiliate. Khi external capital market incomplete, internal capital market có thể finance long-horizon projects nhanh hơn.
+
+Tuy nhiên, same mechanism creates future agency problem. Capital có thể được allocated theo family control hoặc group prestige thay vì entity-level ROIC.
+
+Đây là historical root của governance questions ở [../04_chaebol_and_large_business_groups](../04_chaebol_and_large_business_groups.md) và [../08_corporate_governance_ownership_and_control](../08_corporate_governance_ownership_and_control.md).
+
+## Foreign borrowing và leverage
+
+Domestic savings không đủ finance all HCI projects, nên foreign borrowing quan trọng. Debt cho phép Korea build future capacity earlier, nhưng repayment requires future export cash flow.
+
+Leverage magnifies outcomes:
+
+\[
+Equity\ Return \uparrow \text{ when } ROIC > Cost\ of\ Debt
+\]
+
+nhưng khi project return thấp:
+
+\[
+Fixed\ Interest + Weak\ Cash\ Flow \rightarrow Financial\ Stress
+\]
+
+HCI era vì vậy vừa xây industrial capability vừa tăng leverage sensitivity.
+
+## Oil shocks: industrial success tạo energy vulnerability mới
+
+1973 và 1979 oil shocks làm rõ một paradox. Korea giảm dependence on imported manufactured goods nhưng heavy industry lại tăng dependence on imported energy/raw materials.
+
+Industrialization không eliminate external dependence; nó **changes what you depend on**.
+
+Oil price shock truyền qua:
+
+```text
+Oil/LNG cost ↑
+   ↓
+import bill ↑
+   ↓
+inflation / FX pressure ↑
+   ↓
+corporate input cost ↑
+   ↓
+margin / investment pressure
+```
+
+Pattern này vẫn relevant trong current Korea.
+
+## Overinvestment: strategic sector vẫn obey supply–demand
+
+Industrial policy có thể correctly identify long-run strategic industry nhưng still allocate too much capacity too fast.
+
+Nếu multiple projects are built ahead of demand, utilization giảm và return on capital falls. Đây là **overinvestment / 과잉투자**.
+
+Điểm first-principles cần nhớ:
+
+> Strategic importance không repeal economics.
+
+A steel mill, shipyard hay petrochemical complex vẫn cần customers, pricing và adequate utilization.
+
+## Crowding-out và distributional trade-offs
+
+Khi capital và credit are directed into HCI, other sectors may face higher financing constraints. Light industries hoặc SMEs có thể bị **crowded out / 구축효과** khỏi scarce credit và talent.
+
+Vì vậy industrial upgrading có winners và adjustment costs. Aggregate success có thể coexist với firm-level hardship.
+
+Điều này giúp hiểu long-run dualism giữa large industrial groups và smaller firms.
+
+## Industrial clusters emerge
+
+Heavy industry physically concentrates where ports, land, water, electricity và supplier base exist. Ulsan, Pohang, Geoje và southeast industrial belt trở nên critical.
+
+Agglomeration creates self-reinforcement:
+
+```text
+Anchor plant
+  ↓
+suppliers / workers arrive
+  ↓
+training & logistics improve
+  ↓
+location becomes more attractive
+  ↓
+more firms cluster
+```
+
+Đây là origin of industrial geography được phân tích sâu ở [../24_regional_clusters_and_industrial_geography](../24_regional_clusters_and_industrial_geography.md).
+
+## HCI thay đổi labor demand
+
+Light manufacturing cần abundant production labor; HCI tăng demand cho engineers, technicians, welders, machinists và project managers.
+
+Education/training system vì vậy phải evolve. Industrial policy without human capital would hit bottleneck. Đây là connection với [../29_innovation_rnd_education_and_human_capital](../29_innovation_rnd_education_and_human_capital.md).
 
 ## Mental Model
 
-> Thập niên 1970 là lúc Hàn Quốc đổi “engine tăng trưởng” từ **lao động rẻ + hàng nhẹ** sang **capital + engineering + scale**. Chaebol lớn nhanh vì họ trở thành vehicle triển khai project lớn, nhưng chính điều đó làm leverage và concentration tăng cùng lúc.
+> 1970s là lúc Korea chuyển từ **labor-intensive export machine** sang **capital + engineering + scale system**. Chaebol trở thành execution vehicles cho projects lớn; upstream capability và clusters được build nhanh; nhưng leverage, concentration, energy dependence và overinvestment cũng tăng cùng lúc.
 
 ## Common misconceptions
 
-“Công nghiệp nặng thành công nên mọi investment lúc đó đều đúng” là sai. HCI có cả capability-building lẫn misallocation. Ngược lại, chỉ nhìn overinvestment rồi kết luận toàn bộ policy thất bại cũng bỏ qua việc nhiều nền tảng steel, shipbuilding, machinery và electronics sau này tạo export capacity lớn.
+“HCI thành công nên mọi project đều đúng” là sai. Capability-building có thể coexist với low-return investment.
+
+“Chaebol chỉ lớn vì subsidy” cũng incomplete. Policy altered access to capital rất mạnh, nhưng firms vẫn phải execute complex projects và export. Advantage đến từ combination of support + capability + cumulative learning.
+
+“Vertical integration luôn tốt” sai. It helps when supplier markets are incomplete; it destroys value if internal expansion ignores ROIC.
 
 ## Connections
 
-Xem [../16_shipbuilding_steel_chemicals_heavy_industry](../16_shipbuilding_steel_chemicals_heavy_industry.md), [../15_automotive_battery_mobility](../15_automotive_battery_mobility.md), [../14_semiconductors_electronics_display](../14_semiconductors_electronics_display.md) và [../04_chaebol_and_large_business_groups](../04_chaebol_and_large_business_groups.md).
+Đọc tiếp [04_1980s_stabilization_liberalization_and_democratization](./04_1980s_stabilization_liberalization_and_democratization.md) để thấy Korea xử lý inflation, overcapacity và concentration như thế nào. Industry connections: [../14_semiconductors_electronics_display](../14_semiconductors_electronics_display.md), [../15_automotive_battery_mobility](../15_automotive_battery_mobility.md), [../16_shipbuilding_steel_chemicals_heavy_industry](../16_shipbuilding_steel_chemicals_heavy_industry.md).
 
-### Nguồn nền để đọc thêm
+### Nguồn nền
 
-KDI, *Korean Industrial Policy in the 1970's: The Heavy and Chemical Industry Drive*; KDI, *Lessons from Korea's Industrialization Experience*; lịch sử chính thức Hyundai, Samsung, LG và SK.
+- KDI, *Korean Industrial Policy in the 1970's: The Heavy and Chemical Industry Drive*.
+- KDI, *Lessons from Korea's Industrialization Experience*.
+- Corporate histories of POSCO, Hyundai, Samsung, LG and SK.
