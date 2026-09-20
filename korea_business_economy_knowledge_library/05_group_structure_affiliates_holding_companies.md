@@ -1,448 +1,256 @@
-# Cấu trúc tập đoàn, affiliate và holding company tại Hàn Quốc (Group Structure / 지주회사·계열회사 구조)
+# Cấu trúc tập đoàn, công ty thành viên và công ty nắm giữ tại Hàn Quốc (Group Structure / 지주회사·계열회사 구조)
 
-Khi nhìn sơ đồ tập đoàn Hàn Quốc, người mới thường thấy hàng chục legal entities và cố ghi nhớ tên. Cách hiệu quả hơn là coi group như một **graph**: node là pháp nhân, edge là ownership/control/transaction.
+Khi nhìn sơ đồ một tập đoàn Hàn Quốc, người mới thường thấy hàng chục pháp nhân rồi cố ghi nhớ tên từng công ty. Cách hiệu quả hơn là coi cả tập đoàn như một **đồ thị (graph)**: mỗi nút là một pháp nhân, còn mỗi cạnh thể hiện quan hệ sở hữu, kiểm soát, giao dịch, khoản vay hoặc bảo lãnh.
 
-Mục tiêu không phải nhớ mọi công ty con. Mục tiêu là hiểu **quyền kiểm soát đi qua đâu, cash đi qua đâu, debt nằm ở đâu và shareholders nào thực sự chịu/nhận economic outcome**.
+Mục tiêu không phải nhớ mọi công ty con. Mục tiêu là hiểu **quyền kiểm soát đi qua đâu, tiền mặt nằm ở đâu, nợ nằm ở đâu và nhóm cổ đông nào thật sự nhận hoặc gánh kết quả kinh tế**.
 
-## Brand/group khác legal entity
+## Thương hiệu tập đoàn khác với pháp nhân
 
-“Samsung”, “Hyundai”, “SK” là group identity/brand umbrella.
+“Samsung”, “Hyundai” hay “SK” là tên tập đoàn hoặc thương hiệu chung. Samsung Electronics, Samsung C&T và Samsung Life lại là các **pháp nhân riêng biệt (separate legal entities)**.
 
-Samsung Electronics, Samsung C&T, Samsung Life… là separate legal entities.
+Mỗi pháp nhân có hội đồng quản trị, cổ đông, tài sản–nợ phải trả, hợp đồng, nghĩa vụ thuế, chủ nợ và báo cáo tài chính riêng. Vì vậy câu chuyện ở cấp tập đoàn không thể thay thế phân tích ở cấp pháp nhân.
 
-Mỗi entity có:
+## Parent, subsidiary, affiliate và associate khác nhau thế nào?
 
-- board;
-- shareholders;
-- assets/liabilities;
-- contracts;
-- tax/accounting;
-- creditors.
+**Công ty mẹ (parent / 모회사)** là pháp nhân kiểm soát một công ty khác. **Công ty con (subsidiary / 자회사)** là pháp nhân bị công ty mẹ kiểm soát.
 
-Do đó group-level story không được phép thay entity-level analysis.
+Trong bối cảnh chaebol hoặc tập đoàn doanh nghiệp, **công ty thành viên (affiliate / 계열회사)** thường chỉ các công ty cùng nằm trong một nhóm kiểm soát. Nhưng trong kế toán, **công ty liên kết (associate / 관계기업)** thường mang nghĩa kỹ thuật: nhà đầu tư có ảnh hưởng đáng kể nhưng không kiểm soát.
 
-## Parent, subsidiary, affiliate: terminology phải theo context
+Vì vậy một từ tiếng Anh như `affiliate` có thể mang nghĩa khác tùy ngữ cảnh; không nên dịch máy móc.
 
-### Parent / 모회사
+## Tỷ lệ sở hữu và quyền kiểm soát không phải cùng một biến
 
-Entity kiểm soát company khác.
+Tỷ lệ sở hữu cho biết phần lợi ích kinh tế. Quyền kiểm soát cho biết khả năng quyết định hoạt động quan trọng.
 
-### Subsidiary / 자회사
+Giả sử A sở hữu 40% B, trong khi 60% còn lại được chia cho nhiều cổ đông nhỏ. A vẫn có thể kiểm soát B trên thực tế. Nếu B tiếp tục nắm 35% C và kiểm soát C, quyền kiểm soát có thể truyền từ A sang C dù phần sở hữu kinh tế gián tiếp của A tại C chỉ khoảng 14%.
 
-Entity bị parent control.
+Vì vậy không được suy ra quyền kiểm soát chỉ bằng cách nhân các tỷ lệ sở hữu.
 
-### Affiliate / 계열회사
+## Quyền kiểm soát trong kế toán
 
-Trong chaebol/business-group context, `계열사` thường nghĩa companies cùng group.
+Khi xác định có phải hợp nhất một công ty hay không, kế toán thường xem nhà đầu tư có: quyền lực đối với các hoạt động quan trọng, quyền hưởng hoặc chịu biến động lợi ích kinh tế, và khả năng dùng quyền lực đó để ảnh hưởng tới lợi ích hay không.
 
-### Associate / 관계기업
+Sở hữu trên 50% quyền biểu quyết là dấu hiệu phổ biến nhưng không phải tiêu chí duy nhất. Khi ranh giới kiểm soát không rõ, phải đọc chính sách kế toán và thuyết minh báo cáo tài chính.
 
-Trong accounting, `관계기업` thường có technical meaning là significant influence nhưng không control.
+## Báo cáo riêng và báo cáo hợp nhất
 
-Một English word “affiliate” có thể map khác tùy context. Không dịch máy móc.
+**Báo cáo tài chính riêng (separate financial statements / 별도재무제표)** phản ánh pháp nhân công ty mẹ. **Báo cáo tài chính hợp nhất (consolidated financial statements / 연결재무제표)** trình bày công ty mẹ và các công ty con do nó kiểm soát như một đơn vị kinh tế kế toán.
 
-## Ownership percentage và control không phải cùng một biến
+Các giao dịch nội bộ giữa các đơn vị trong phạm vi hợp nhất được loại trừ để tránh tính hai lần. Nếu công ty mẹ bán hàng trị giá 100 cho công ty con, tập đoàn hợp nhất chưa thể coi 100 đó là doanh thu từ bên ngoài cho tới khi hàng hóa hoặc dịch vụ rời phạm vi hợp nhất.
 
-Ownership tells economic stake.
+Đây là một trong những khái niệm quan trọng nhất khi đọc tập đoàn.
 
-Control tells decision power.
+## Nhóm hợp nhất không đồng nghĩa với toàn bộ chaebol
 
-Suppose A owns 40% B, remaining shareholders dispersed. A may effectively control B.
+Một tập đoàn doanh nghiệp có thể chứa nhiều công ty không nằm dưới quyền kiểm soát của cùng một công ty mẹ niêm yết. Báo cáo hợp nhất của một công ty thành viên chỉ bao gồm các công ty con do chính pháp nhân đó kiểm soát, không bao gồm mọi công ty mang cùng thương hiệu tập đoàn.
 
-B owns 35% C and controls C.
+Vì vậy không thể lấy báo cáo hợp nhất của Samsung Electronics rồi coi đó là “doanh thu của toàn Samsung Group”.
 
-Indirect economic stake A→C via this chain:
+## Lợi ích cổ đông không kiểm soát (NCI / 비지배지분)
 
-\[
-0.40\times0.35=14\%
-\]
+Công ty mẹ có thể kiểm soát một công ty con mà không sở hữu 100%. Nếu công ty mẹ nắm 70%, báo cáo hợp nhất vẫn ghi nhận 100% tài sản, doanh thu và lợi nhuận của công ty con vì quyền kiểm soát tồn tại. Nhưng 30% lợi ích kinh tế còn lại thuộc cổ đông bên ngoài và được trình bày dưới dạng **lợi ích cổ đông không kiểm soát (Non-Controlling Interests / 비지배지분)**.
 
-But control can still propagate through B.
+Vì thế cần phân biệt **lợi nhuận ròng hợp nhất** với **lợi nhuận thuộc về cổ đông của công ty mẹ**.
 
-Therefore never infer control only by multiplying percentages.
+## Bẫy NCI khi định giá bằng EBITDA
 
-## Control under accounting
+Nếu nhà phân tích dùng 100% **EBITDA hợp nhất** nhưng lại định giá như thể toàn bộ giá trị đó thuộc cổ đông công ty mẹ, kết quả có thể bị phóng đại. Khi NCI đáng kể, phần quyền lợi của cổ đông thiểu số phải được xử lý nhất quán trong giá trị doanh nghiệp.
 
-Consolidation generally considers whether investor has:
+Nguyên tắc tương tự áp dụng khi tập đoàn sở hữu các công ty con đã niêm yết riêng.
 
-- power over relevant activities;
-- exposure/rights to variable returns;
-- ability to use power to affect returns.
+## Công ty nắm giữ (Holding Company / 지주회사)
 
-Thus >50% voting rights is common but not universal criterion.
-
-Read accounting policy and notes when boundary unclear.
-
-## Consolidated vs separate statements
-
-### Separate / 별도재무제표
-
-Shows parent legal entity itself.
-
-### Consolidated / 연결재무제표
-
-Shows parent + controlled subsidiaries as one accounting economic unit.
-
-Intercompany transactions are eliminated to avoid double counting.
-
-If Parent sells 100 to Subsidiary, consolidated group cannot count that as external revenue until goods/services leave consolidated perimeter.
-
-This is one of the most important accounting concepts in group analysis.
-
-## Consolidated group is not necessarily entire chaebol
-
-A business group may contain many companies not controlled by one listed parent.
-
-A listed affiliate’s consolidated statements include only its accounting-controlled subsidiaries, not every company carrying same group brand.
-
-This is why “Samsung Group revenue” cannot be obtained simply from one Samsung Electronics consolidated report.
-
-## NCI / 비지배지분
-
-Parent may control subsidiary without owning 100%.
-
-If Parent owns 70% Subsidiary, consolidated statements include 100% subsidiary assets/revenue/profit because control exists.
-
-But 30% economic claim belongs to outsiders and appears as **Non-Controlling Interests (NCI / 비지배지분)**.
-
-Therefore distinguish:
-
-```text
-Consolidated net income
-vs
-Net income attributable to owners of parent
-```
-
-## EBITDA valuation and NCI trap
-
-Suppose valuation uses 100% consolidated EBITDA but enterprise value ignores minority shareholders’ claim.
-
-That overstates economics available to parent shareholders.
-
-When material NCI exists, adjust valuation consistently.
-
-Same principle applies to subsidiaries listed separately.
-
-## Holding company / 지주회사
-
-A holding company primarily owns stakes in operating companies.
-
-Simple structure:
+**Công ty nắm giữ (holding company / 지주회사)** chủ yếu sở hữu cổ phần tại các công ty hoạt động.
 
 ```mermaid
 graph TD
-    H[Holding Co / 지주회사] -->|60%| A[Electronics]
-    H -->|55%| B[Materials]
-    H -->|70%| C[Services]
-    A -->|80%| D[Overseas Subsidiary]
+    H[Công ty nắm giữ / 지주회사] -->|60%| A[Điện tử]
+    H -->|55%| B[Vật liệu]
+    H -->|70%| C[Dịch vụ]
+    A -->|80%| D[Công ty con ở nước ngoài]
 ```
 
-Holding layer handles ownership/capital allocation; operating subsidiaries sell products/services.
+Tầng công ty nắm giữ tập trung vào sở hữu và phân bổ vốn; các công ty hoạt động trực tiếp bán hàng hóa hoặc dịch vụ.
 
-## Pure vs operating holding company
+**Công ty nắm giữ thuần túy (pure holding company)** chủ yếu nắm cổ phần đầu tư. **Công ty nắm giữ có hoạt động (operating holding company)** vừa sở hữu công ty con vừa có hoạt động kinh doanh riêng đáng kể. Phân biệt này quan trọng vì nguồn doanh thu và tiền mặt ở công ty mẹ sẽ khác nhau.
 
-**Pure holding company:** mostly holds investments/stakes.
+## Chiết khấu công ty nắm giữ (Holding Company Discount)
 
-**Operating holding company:** holds subsidiaries but also has significant own operations.
+Giá trị thị trường của công ty nắm giữ thường thấp hơn tổng giá trị lý thuyết của các khoản đầu tư mà nó sở hữu. Những lý do thường gặp gồm nợ ở công ty mẹ, thất thoát thuế, bất định trong phân bổ vốn, rủi ro quản trị, tài sản chưa niêm yết khó định giá, chi phí quản lý hai tầng và hạn chế trong việc chuyển tiền mặt từ công ty con lên công ty mẹ.
 
-This distinction matters because parent-level revenue/cash flow differs.
-
-## Holding company discount
-
-Market value of holding company often trades below sum-of-parts value of stakes/assets.
-
-Potential reasons:
-
-- parent debt;
-- tax leakage;
-- capital-allocation uncertainty;
-- governance/control discount;
-- unlisted asset uncertainty;
-- double-layer overhead;
-- limited ability to upstream cash.
-
-A simple SOTP:
+Một cách tính khái quát:
 
 \[
-Holding\ Equity\ Value \approx \sum Stake\ Values - Net\ Debt - Other\ Claims \pm Adjustments
+Giá\ trị\ vốn\ chủ\ công\ ty\ nắm\ giữ
+\approx
+Tổng\ giá\ trị\ các\ khoản\ sở\ hữu
+- Nợ\ ròng
+- Nghĩa\ vụ\ khác
+\pm Điều\ chỉnh
 \]
 
-Then market may apply discount/premium based on control/capital allocation.
+Thị trường sau đó có thể áp dụng mức chiết khấu hoặc phần bù dựa trên chất lượng kiểm soát và phân bổ vốn. Không nên mặc định chiết khấu này là “cơ hội chênh lệch giá miễn phí”; nó có thể phản ánh những ma sát kinh tế thật.
 
-Do not assume discount is “free arbitrage”; it may reflect real frictions.
+## Vị trí của tiền mặt quan trọng
 
-## Cash location matters
+Con số “tiền mặt của tập đoàn” có thể gây hiểu lầm. Tiền có thể nằm tại công ty tài chính chịu giới hạn vốn pháp định, công ty ở nước ngoài, liên doanh hoặc công ty con niêm yết có cổ đông thiểu số.
 
-Group headline cash can be misleading.
+Công ty mẹ không nhất thiết được sử dụng toàn bộ số tiền đó tự do. Khi phân tích thanh khoản, luôn hỏi: **tiền đang nằm ở pháp nhân nào?**
 
-Cash may sit in:
+## Vị trí của nợ cũng quan trọng không kém
 
-- regulated financial subsidiary;
-- overseas unit;
-- JV;
-- listed subsidiary with minority shareholders.
+Nợ của công ty con về nguyên tắc là nghĩa vụ pháp lý của công ty con, trừ khi có bảo lãnh hoặc cơ chế hỗ trợ khác. Tuy nhiên, báo cáo hợp nhất có thể trình bày nợ ở cấp nhóm kế toán.
 
-Parent cannot necessarily use all of it freely.
+Do đó cần phân biệt **đòn bẩy hợp nhất**, **đòn bẩy riêng của công ty mẹ**, **đòn bẩy của từng công ty con** và **nợ có hoặc không có bảo lãnh**.
 
-Always ask **cash is at which node?**
+Một công ty nắm giữ có ít dòng tiền hoạt động nhưng nhiều nợ ở chính công ty mẹ có thể rất mong manh dù các công ty con đang có lãi.
 
-This is critical in liquidity analysis.
+## Dòng cổ tức từ công ty con lên công ty mẹ
 
-## Debt location matters equally
+Công ty mẹ hoặc công ty nắm giữ thường nhận tiền thông qua cổ tức, phí quản lý–dịch vụ, bán tài sản hoặc các khoản vay nội bộ khi pháp luật cho phép.
 
-A subsidiary’s debt is legal obligation of that subsidiary unless guarantee/support structure connects it elsewhere.
+Nếu công ty con đang cần đầu tư vốn lớn, khả năng trả cổ tức có thể giảm. Vì vậy giá trị của công ty mẹ không chỉ phụ thuộc lợi nhuận kế toán của công ty con mà còn phụ thuộc **khả năng chuyển tiền mặt lên trên (cash upstreamability)**.
 
-But consolidated statements may show debt at group accounting level.
+## Thị trường vốn nội bộ
 
-Therefore distinguish:
+Tập đoàn có thể phân bổ tiền giữa các công ty thành viên thông qua đầu tư vốn, cổ tức, khoản vay và giao dịch nội bộ. Cơ chế này giúp giảm ma sát tài chính bên ngoài và tài trợ nhanh cho ngành mới.
 
-```text
-Consolidated leverage
-Parent standalone leverage
-Subsidiary leverage
-Guaranteed / non-guaranteed debt
-```
+Nhưng nó cũng tạo **rủi ro đại diện (agency risk)** nếu tiền từ một công ty niêm yết có lợi suất cao bị chuyển sang dự án lợi suất thấp của tập đoàn trái với lợi ích của cổ đông thiểu số. Thị trường vốn nội bộ không tự thân tốt hay xấu; chất lượng phân bổ vốn mới là vấn đề cốt lõi.
 
-A holding company with low operating cash but high parent debt can be fragile even when subsidiaries profitable.
+## Giao dịch với bên liên quan (Related-Party Transactions / 특수관계자 거래)
 
-## Dividend upstream: how operating cash reaches parent
+Các bên liên quan có thể mua bán hàng hóa–dịch vụ, cho vay, bảo lãnh nợ hoặc chuyển nhượng tài sản. Những giao dịch này có thể hiệu quả nhờ quy mô và phối hợp, nhưng cũng có thể chuyển giá trị giữa các pháp nhân.
 
-Holding/parent often receives cash via:
+Khi đọc giao dịch bên liên quan, cần hỏi: giao dịch có thực sự cần thiết không; mức giá có gần điều kiện giao dịch độc lập không; ai hưởng lợi; ai chịu rủi ro; và liệu một nhà cung cấp hoặc khách hàng bên ngoài có thể đưa ra điều kiện tốt hơn không.
 
-- dividends;
-- management/service fees;
-- asset sales;
-- intra-group loans where legal/permitted.
+DART là nguồn đặc biệt quan trọng để kiểm tra các quan hệ này.
 
-If subsidiary needs huge capex, dividend capacity may be limited.
+## Kinh doanh nội bộ tập đoàn: ổn định nhu cầu nhưng chưa chắc chứng minh sức cạnh tranh
 
-Thus parent valuation depends not just subsidiary profit but **cash upstreamability**.
+Một công ty IT, logistics hoặc quảng cáo thuộc tập đoàn có thể nhận phần lớn doanh thu từ các công ty chị em. **Nhu cầu nội bộ (captive demand)** giúp doanh nghiệp có quy mô và doanh thu ổn định.
 
-## Internal capital market
+Tuy nhiên, nhà phân tích phải tách phần doanh thu dựa vào quan hệ tập đoàn khỏi phần doanh thu thắng được trên thị trường bên ngoài. Nếu tỷ trọng khách hàng ngoài tập đoàn tăng cùng với biên lợi nhuận tốt, đó là dấu hiệu năng lực cạnh tranh bên ngoài đang mạnh lên. Nếu gần như toàn bộ doanh thu đến từ nội bộ, tăng trưởng sẽ phụ thuộc nhiều vào quyết định phân bổ đơn hàng của tập đoàn.
 
-Group can allocate cash across affiliates through investments, dividends, loans and transactions.
+## Cấu trúc sở hữu hình tháp
 
-This can overcome external financing frictions and fund new businesses quickly.
+Trong **sở hữu hình tháp (pyramidal ownership)**, A kiểm soát B, B kiểm soát C và C kiểm soát D. Người kiểm soát ở tầng trên có thể tác động tới tài sản ở tầng dưới với phần sở hữu kinh tế trực tiếp tương đối nhỏ. Đây là một dạng **đòn bẩy kiểm soát (control leverage)**.
 
-But it also creates agency risk if cash from high-return listed affiliate is redirected toward low-return group project against minority-shareholder interest.
+Cấu trúc càng sâu, xung đột giữa người kiểm soát và cổ đông thiểu số càng cần được chú ý.
 
-Internal capital market is neither inherently good nor bad; allocation quality matters.
+## Sở hữu chéo và sở hữu vòng tròn
 
-## Related-party transactions / 특수관계자 거래
-
-Related parties may trade goods/services, lend money, guarantee debt or transfer assets.
-
-These transactions can be efficient because of scale/coordination.
-
-But they can also transfer value between entities.
-
-Key questions:
-
-```text
-Why is transaction needed?
-Price arm's-length?
-Who benefits?
-Who bears risk?
-Could external supplier/customer offer better terms?
-```
-
-DART disclosures are essential.
-
-## Captive business: stable demand vs true competitiveness
-
-An IT/logistics/advertising affiliate may earn large share of revenue from group companies.
-
-Captive demand gives stability and scale.
-
-But analyst should distinguish:
-
-- internal guaranteed-like demand;
-- external-market competitiveness.
-
-If external share grows with healthy margins, capability may be genuinely competitive beyond group.
-
-If almost all revenue captive, growth depends group allocation decisions.
-
-## Pyramidal ownership
-
-A controls B, B controls C, C controls D.
-
-Controller can influence lower-layer assets with limited direct economic ownership.
-
-This creates **control leverage**.
-
-The deeper pyramid, the more important minority-shareholder conflicts can become.
-
-## Cross-shareholding and circular ownership
-
-Historical groups sometimes had structures like:
+Một số tập đoàn trong lịch sử từng có cấu trúc kiểu:
 
 ```text
 A → B → C → A
 ```
 
-Circular ownership can reinforce control and make unwinding complex.
+Sở hữu vòng tròn có thể củng cố quyền kiểm soát và khiến việc tháo gỡ cấu trúc trở nên phức tạp. Hàn Quốc hiện hạn chế nhiều hình thức sở hữu vòng tròn và sở hữu chéo trong các tập đoàn lớn, nhưng lịch sử của những cấu trúc này vẫn hữu ích để hiểu kiến trúc kiểm soát hiện tại.
 
-Korea has restrictions on many forms of circular/cross-shareholding in large groups, but historical paths remain useful for understanding current control architecture.
+Bài học chính: quan hệ giữa các nút quan trọng hơn sơ đồ hộp tổ chức.
 
-Main lesson: graph matters more than org-chart boxes.
+## Cổ phiếu quỹ và quyền kiểm soát
 
-## Treasury shares and control
+**Cổ phiếu quỹ (treasury shares)** thường không có quyền biểu quyết khi được chính công ty nắm giữ. Tuy nhiên, việc hủy, bán hoặc sử dụng chúng trong tái cấu trúc có thể thay đổi tỷ lệ sở hữu và động lực kiểm soát. Vì vậy lượng cổ phiếu quỹ lớn là một biến quan trọng trong phân tích quản trị.
 
-Treasury shares usually lack voting rights while held by company, but restructuring/cancellation/disposal can affect ownership percentages and control dynamics.
+## Chia tách công ty: `인적분할` và `물적분할`
 
-Therefore large treasury-share position can be relevant in governance analysis.
+Hai khái niệm này xuất hiện thường xuyên trong tin tức doanh nghiệp Hàn Quốc.
 
-## Spin-offs: 인적분할 vs 물적분할
+**Chia tách theo tỷ lệ cho cổ đông hiện hữu (인적분할)** thường khiến cổ đông hiện tại nhận cổ phần của công ty được tách theo tỷ lệ, tùy cấu trúc cụ thể.
 
-Korean corporate news frequently uses these terms.
+**Chia tách thành công ty con (물적분할)** tạo ra một công ty con mới mà công ty mẹ tiếp tục sở hữu. Cổ đông hiện hữu của công ty mẹ chỉ sở hữu mảng kinh doanh mới một cách gián tiếp thông qua công ty mẹ.
 
-### 인적분할
+Nếu công ty con tăng trưởng sau đó IPO, cổ đông công ty mẹ có thể lo ngại về pha loãng hoặc phân phối giá trị. Vì vậy loại chia tách có hệ quả quản trị và định giá thật sự.
 
-Existing shareholders generally receive shares in separated company proportionally, subject to transaction structure.
+Các lý do hợp lý để chia tách gồm tách rủi ro, thu hút nhà đầu tư chiến lược, huy động vốn, làm rõ trọng tâm kinh doanh, chuẩn bị IPO/M&A hoặc tái tổ chức quyền kiểm soát. Một thông cáo chỉ nói “tăng tập trung” hoặc “tạo hiệp lực” là chưa đủ; phải lập sơ đồ sở hữu và dòng tiền trước–sau giao dịch.
 
-Economic ownership is split more directly among existing shareholders.
+## Kinh tế của sáp nhập
 
-### 물적분할
+Sáp nhập có thể tạo hiệu quả vận hành nhưng **tỷ lệ hoán đổi (exchange ratio)** quyết định cách giá trị được chia giữa các nhóm cổ đông.
 
-Parent creates subsidiary and retains shares of new entity.
+Cần tách hai câu hỏi: giao dịch có tạo thêm tổng giá trị hay không; và tổng giá trị đó có được phân phối công bằng giữa các cổ đông hay không. Một thương vụ có thể tạo hiệp lực tích cực nhưng vẫn gây tranh cãi về tỷ lệ hoán đổi.
 
-Existing parent shareholders own new business indirectly through parent.
+## Liên doanh (Joint Venture / 합작회사)
 
-If growth subsidiary later IPOs, parent shareholders may worry about dilution/value distribution.
+**Liên doanh (JV / 합작회사)** cho phép nhiều đối tác chia sẻ vốn, công nghệ và khả năng tiếp cận thị trường. Tuy nhiên, quản trị liên doanh đòi hỏi thỏa thuận rõ về hội đồng quản trị, quyền kiểm soát, nghĩa vụ tài trợ, sở hữu trí tuệ, cơ chế thoái vốn và xử lý bế tắc.
 
-Thus spin-off type has real governance/valuation implications.
+Liên doanh có thể không được hợp nhất toàn bộ nếu quyền kiểm soát được chia sẻ. Ngành pin sử dụng JV rất nhiều, nên mức tiếp xúc kinh tế thực và con số “công suất” trên truyền thông có thể khác với phạm vi kế toán hợp nhất.
 
-## Why companies spin off?
+## Công ty liên kết và phương pháp vốn chủ sở hữu
 
-Possible rationales:
+Khi nhà đầu tư có ảnh hưởng đáng kể nhưng không kiểm soát, khoản đầu tư có thể được hạch toán theo **phương pháp vốn chủ sở hữu (equity method / 지분법)**. Nhà đầu tư ghi nhận phần lợi nhuận tương ứng của công ty liên kết thay vì hợp nhất 100% doanh thu và tài sản.
 
-- separate risk;
-- attract strategic investor;
-- raise capital;
-- clarify business focus;
-- facilitate IPO/M&A;
-- reorganize control.
+Vì vậy một doanh nghiệp có thể ghi nhận lợi nhuận đáng kể từ công ty liên kết nhưng không có mức doanh thu hợp nhất tương ứng.
 
-“Focus/synergy” in press release is not enough. Need map before/after ownership and cash flow.
+## Bảo lãnh làm yếu sự tách biệt giữa các pháp nhân
 
-## Merger economics
+Nếu công ty mẹ hoặc công ty thành viên bảo lãnh nợ cho công ty con, mức độ “cách ly” nghĩa vụ pháp lý giảm đi. Vì vậy sơ đồ tập đoàn phải bao gồm không chỉ cạnh sở hữu mà cả **cạnh tín dụng**.
 
-Merger can create operational synergy but exchange ratio determines how value is split among shareholder groups.
-
-Two distinct questions:
-
-1. Does merger create total value?
-2. Is that value distributed fairly between shareholders?
-
-A deal can have positive synergy but controversial exchange ratio.
-
-## JV / 합작회사
-
-Joint venture allows partners share capital, technology and market access.
-
-But governance requires agreement on:
-
-- board/control;
-- funding obligations;
-- IP;
-- exit;
-- deadlock.
-
-JV may not be fully consolidated if control is joint.
-
-Battery industry uses JVs extensively; accounting/economic exposure can therefore differ from headline “capacity”.
-
-## Associate / equity method
-
-If investor has significant influence but not control, investment may use **equity method / 지분법**.
-
-Investor recognizes share of associate profit rather than consolidating 100% revenue/assets.
-
-Thus company with large associate stakes can have material profit with no corresponding consolidated revenue.
-
-## Guarantees connect supposedly separate entities
-
-Legal ring-fencing weakens if parent/affiliate guarantees subsidiary debt.
-
-Therefore group structure analysis must include **credit edges**, not only ownership edges.
-
-Graph types:
+Một bản đồ đầy đủ có thể gồm:
 
 ```text
-Ownership edge
-Control edge
-Loan edge
-Guarantee edge
-Sales/purchase edge
-Management/personnel edge
+Cạnh sở hữu
+Cạnh kiểm soát
+Cạnh khoản vay
+Cạnh bảo lãnh
+Cạnh mua/bán hàng hóa dịch vụ
+Cạnh nhân sự/quản lý
 ```
 
-A complete group map can overlay several edges.
+## Công ty tài chính cần được đọc riêng
 
-## Financial affiliates require special caution
+Ngân hàng, bảo hiểm và công ty chứng khoán chịu yêu cầu vốn pháp định và nhiều hạn chế riêng. Tiền mặt hoặc vốn chủ sở hữu của chúng không thể được chuyển tự do như ở công ty công nghiệp thông thường.
 
-Bank/insurance/securities subsidiaries face regulatory capital and restrictions.
+Nếu trộn công ty tài chính và công ty công nghiệp trong một con số cấp tập đoàn, mức đòn bẩy có thể bị hiểu sai.
 
-Their cash/equity is not freely transferable like ordinary industrial subsidiary.
+## ROIC cấp tập đoàn và ROIC cấp pháp nhân
 
-Mixing financial and industrial entities at group level can obscure leverage.
+Một tập đoàn có thể có một công ty tạo tiền mặt rất mạnh nhưng đồng thời sở hữu nhiều dự án có lợi suất thấp. Con số hợp nhất cho thấy kết quả tổng thể, nhưng cổ đông thiểu số của công ty tạo tiền mặt quan tâm tới cách nguồn lực tại chính pháp nhân đó được sử dụng.
 
-## Group-level ROIC vs entity-level ROIC
+Vì vậy cần phân tích đồng thời **phân bổ vốn cấp tập đoàn** và **kinh tế của cổ đông tại từng pháp nhân**.
 
-A group may have one cash cow and several low-return projects.
+## Quy trình đọc sơ đồ tập đoàn trong thực tế
 
-Consolidated return shows aggregate, but minority shareholders of cash-cow affiliate care about their entity-specific allocation.
+1. Xác định chủ thể kiểm soát hoặc `동일인` khi liên quan.
+2. Liệt kê các công ty niêm yết và chưa niêm yết quan trọng.
+3. Vẽ tỷ lệ sở hữu.
+4. Đánh dấu công ty nào được hợp nhất và công ty nào là công ty liên kết.
+5. Đánh dấu nợ và bảo lãnh.
+6. Đánh dấu các giao dịch mua–bán lớn với bên liên quan.
+7. Xác định các nút tạo tiền mặt.
+8. Xác định các nút cần chi tiêu vốn lớn.
+9. Gắn các kế hoạch tái cấu trúc, chia tách hoặc IPO.
+10. Tính lại quyền sở hữu kinh tế trước và sau giao dịch.
 
-Thus always analyze both:
+Quy trình này biến một sơ đồ phức tạp thành một hệ thống có thể phân tích.
+
+## Mental Model — mô hình tư duy
+
+> Hãy đọc tập đoàn Hàn Quốc như một đồ thị trong khoa học máy tính: **nút = pháp nhân; cạnh = sở hữu / kiểm soát / tiền / bảo lãnh / giao dịch**. Thực tế kinh tế nằm trong quan hệ giữa các nút chứ không nằm ở tên thương hiệu.
 
 ```text
-Group capital allocation
-and
-Entity shareholder economics
+Ai kiểm soát?
+Tiền nằm ở đâu?
+Nợ nằm ở đâu?
+Ai nắm quyền lợi thiểu số?
+Giá trị di chuyển giữa các pháp nhân thế nào?
 ```
 
-## Practical graph-reading workflow
+## Những nhầm lẫn thường gặp
 
-1. Identify controller/`동일인` if relevant.
-2. List major listed/unlisted affiliates.
-3. Draw ownership percentages.
-4. Mark which entities are consolidated/associates.
-5. Mark debt/guarantees.
-6. Mark major related-party sales/purchases.
-7. Identify cash-generating nodes.
-8. Identify capex-hungry nodes.
-9. Map restructuring/spin-off/IPO plans.
-10. Recalculate economic ownership before/after transactions.
+**“Công ty mẹ chỉ sở hữu 40% nên chắc chắn không kiểm soát.”** Sai. Quyền kiểm soát phụ thuộc cả cấu trúc quyền biểu quyết và mức phân tán của các cổ đông khác.
 
-This converts a complex chart into understandable system.
+**“Báo cáo hợp nhất = toàn bộ chaebol.”** Sai.
 
-## Mental Model
+**“Tiền mặt của tập đoàn có thể tự do chuyển về công ty mẹ.”** Sai.
 
-> Đọc Korean group như graph trong Computer Science: **node = legal entity; edge = ownership/control/cash/guarantee/transaction**. Economic reality lies in edges, not brand names.
+**“Giao dịch bên liên quan luôn xấu.”** Sai. Cần kiểm tra lý do kinh doanh và mức giá.
 
-```text
-Who controls?
-Where is cash?
-Where is debt?
-Who owns minority claims?
-How does value move between nodes?
-```
+**“Chia tách công ty tự động tạo hoặc phá hủy giá trị.”** Sai. Cấu trúc và các bước sau chia tách mới quyết định hệ quả.
 
-## Common misconceptions
+**“Cùng tập đoàn nghĩa là nợ luôn được bảo lãnh.”** Sai. Phải đọc cam kết pháp lý cụ thể.
 
-**“Parent owns 40%, so cannot control.”** Not necessarily.
-
-**“Consolidated statements = whole chaebol.”** Sai.
-
-**“Group cash is freely available to parent.”** Sai.
-
-**“Related-party transaction is automatically bad.”** No; test rationale/pricing.
-
-**“Spin-off creates/destroys value automatically.”** Structure and later actions matter.
-
-**“Same group means automatic debt guarantee.”** Sai; read legal commitment.
-
-## Connections
+## Liên kết
 
 Đọc cùng [`03_company_forms_and_size_classes.md`](./03_company_forms_and_size_classes.md), [`04_chaebol_and_large_business_groups.md`](./04_chaebol_and_large_business_groups.md), [`08_corporate_governance_ownership_and_control.md`](./08_corporate_governance_ownership_and_control.md), [`09_disclosure_accounting_dart_kind.md`](./09_disclosure_accounting_dart_kind.md), [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md) và [`19_major_groups_case_studies.md`](./19_major_groups_case_studies.md).
