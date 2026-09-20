@@ -1,53 +1,53 @@
-# Cost-based optimizer, cardinality estimation và statistics
+# Bộ tối ưu dựa trên chi phí, ước lượng số dòng và thống kê
 
-SQL mô tả **what**, không buộc engine thực hiện **how**. Cùng một query có thể join theo nhiều orders, dùng index scan hoặc sequential scan, hash join hoặc nested loop. **Cost-Based Optimizer (CBO / 비용 기반 옵티마이저)** tìm plan có estimated cost thấp dựa trên statistics và cost model.
+SQL mô tả **cần lấy kết quả gì**, không bắt buộc hệ quản trị phải thực hiện **bằng cách nào**. Cùng một truy vấn có thể nối bảng theo nhiều thứ tự, dùng quét chỉ mục hoặc quét tuần tự, dùng hash join hoặc nested-loop join. **Bộ tối ưu dựa trên chi phí (Cost-Based Optimizer — CBO / 비용 기반 옵티마이저)** tìm kế hoạch có chi phí ước lượng thấp dựa trên thống kê và mô hình chi phí.
 
-## Plan space tăng rất nhanh
+## Không gian kế hoạch tăng rất nhanh
 
-Với nhiều tables, số join orders tăng combinatorially. Optimizer không thể thử mọi plan khi query lớn, nên dùng dynamic programming, heuristics hoặc search pruning.
+Khi số bảng tăng, số thứ tự nối tăng theo kiểu tổ hợp. Bộ tối ưu không thể thử mọi kế hoạch cho truy vấn lớn, nên phải dùng quy hoạch động, kinh nghiệm tìm kiếm hoặc cắt tỉa không gian phương án.
 
-Optimization vì thế cũng là algorithmic search problem dưới time budget.
+Vì vậy tối ưu truy vấn bản thân cũng là một bài toán tìm kiếm thuật toán dưới giới hạn thời gian.
 
-## Cardinality là biến trung tâm
+## Số lượng bản ghi là biến trung tâm
 
-Nếu optimizer nghĩ filter trả 10 rows nhưng thực tế 10 triệu, mọi quyết định downstream có thể sai. Nested-loop join hợp lý với outer side nhỏ có thể thảm họa khi outer lớn.
+Nếu bộ tối ưu nghĩ một điều kiện lọc trả 10 dòng nhưng thực tế trả 10 triệu, nhiều quyết định phía sau có thể sai. Nested-loop join hợp lý khi phía ngoài nhỏ có thể trở thành thảm họa khi phía ngoài rất lớn.
 
-**Cardinality estimation** cố dự đoán số rows sau scan/filter/join. Statistics thường gồm row count, distinct values, histograms, null fraction và correlation information.
+**Ước lượng số lượng bản ghi (cardinality estimation)** cố dự đoán số dòng sau quét, lọc hoặc nối. Thống kê thường gồm tổng số dòng, số giá trị khác nhau, histogram, tỷ lệ `NULL` và thông tin tương quan.
 
-## Independence assumption
+## Giả định độc lập
 
-Một lỗi phổ biến là giả định predicates độc lập. Nếu `city='Seoul'` và `country='KR'` tương quan mạnh, nhân hai selectivities như độc lập sẽ underestimate/overestimate.
+Một nguồn sai số phổ biến là giả định các điều kiện độc lập. Nếu `city='Seoul'` và `country='KR'` có tương quan mạnh, nhân hai độ chọn lọc như thể độc lập sẽ làm ước lượng quá thấp hoặc quá cao.
 
-Multi-column statistics giúp nhưng không thể capture mọi dependency trong dữ liệu.
+Thống kê nhiều cột giúp giảm vấn đề nhưng không thể nắm mọi phụ thuộc trong dữ liệu.
 
-## Cost model
+## Mô hình chi phí
 
-Cost không phải milliseconds chính xác. Nó là relative model kết hợp I/O, CPU, random/sequential access và đôi khi parallelism. Hardware mới, cache state hoặc cloud storage có thể làm default constants lệch reality.
+“Cost” trong bộ tối ưu thường không phải số mili-giây chính xác. Nó là mô hình tương đối kết hợp chi phí I/O, CPU, truy cập ngẫu nhiên/tuần tự và đôi khi cả mức song song. Phần cứng mới, trạng thái cache hoặc lưu trữ đám mây có thể khiến các hằng số mặc định lệch khỏi thực tế.
 
-Optimizer cần model đủ tốt để rank plans, không cần tiên tri latency tuyệt đối.
+Bộ tối ưu chỉ cần mô hình đủ tốt để xếp hạng các kế hoạch, không cần dự đoán chính xác tuyệt đối độ trễ.
 
-## Sargability
+## Khả năng tận dụng chỉ mục
 
-Predicate có thể dùng index khi engine biến nó thành search condition phù hợp. Function bọc indexed column, implicit cast hoặc expression phức tạp có thể làm index khó dùng tùy DBMS.
+Một điều kiện **có khả năng tìm kiếm bằng chỉ mục (SARGable)** cho phép hệ quản trị biến nó thành điều kiện truy cập phù hợp. Hàm bao quanh cột đã đánh chỉ mục, ép kiểu ngầm hoặc biểu thức phức tạp có thể làm chỉ mục khó sử dụng tùy DBMS.
 
-Hiểu sargability tốt hơn việc học mẹo “index column này” vì nó giải thích optimizer có access path nào trong plan space.
+Hiểu SARGability hữu ích hơn việc học thuộc mẹo “hãy đánh index cột này”, vì nó giải thích đường truy cập nào thật sự tồn tại trong không gian kế hoạch.
 
-## Parameter sensitivity
+## Độ nhạy với tham số
 
-Prepared statement có parameter mà distribution skewed có thể cần plan khác nhau cho values khác nhau. Một plan tối ưu cho rare value không nhất thiết tốt cho hot value.
+Prepared statement có tham số với phân bố dữ liệu lệch có thể cần kế hoạch khác nhau cho các giá trị khác nhau. Kế hoạch tối ưu cho giá trị hiếm không nhất thiết phù hợp với giá trị xuất hiện rất nhiều.
 
-Các DBMS xử lý bằng generic/custom plans, bind peeking hoặc adaptive mechanisms khác nhau. Đây là nguồn của “query cùng SQL lúc nhanh lúc chậm”.
+Các DBMS xử lý bằng kế hoạch chung/riêng, bind peeking hoặc cơ chế thích nghi khác nhau. Đây là một nguồn của hiện tượng “cùng câu SQL nhưng lúc nhanh lúc chậm”.
 
-## Statistics stale
+## Thống kê cũ
 
-Data distribution thay đổi nhưng statistics cũ khiến estimator sai. Auto analyze giúp nhưng large tables, rapidly changing data và correlated columns vẫn cần diagnosis.
+Phân bố dữ liệu thay đổi nhưng thống kê chưa cập nhật sẽ làm bộ ước lượng sai. Cơ chế tự động phân tích giúp giảm vấn đề, nhưng bảng rất lớn, dữ liệu thay đổi nhanh và cột có tương quan vẫn cần chẩn đoán.
 
-Khi đọc execution plan, cần so estimated rows với actual rows ở từng operator. Divergence sớm thường lan truyền xuống toàn plan.
+Khi đọc kế hoạch thực thi, nên so số dòng ước lượng với số dòng thực tế ở từng toán tử. Sai lệch xuất hiện sớm thường lan truyền xuống phần còn lại của kế hoạch.
 
-## Optimizer và index design
+## Bộ tối ưu và thiết kế chỉ mục
 
-Index không chỉ giảm lookup cost; nó thay plan space, ordering và join possibilities. Composite index order nên phản ánh access patterns, selectivity và required ordering, không phải quy tắc “column selective nhất luôn đứng trước”.
+Chỉ mục không chỉ giảm chi phí tra cứu; nó thay đổi không gian kế hoạch, thứ tự dữ liệu và các phương án nối. Thứ tự cột trong chỉ mục ghép nên phản ánh kiểu truy cập, độ chọn lọc và yêu cầu sắp xếp, thay vì áp dụng máy móc quy tắc “cột chọn lọc nhất luôn đứng trước”.
 
-## Mental Model
+## Mô hình tư duy
 
-> Query optimizer là planner ra quyết định dưới uncertainty. Statistics là perception, cardinality estimate là belief, cost model là utility function, execution plan là action. Khi plan xấu, hãy hỏi belief sai ở đâu trước khi ép hint.
+> Bộ tối ưu truy vấn là một bộ lập kế hoạch ra quyết định dưới điều kiện không chắc chắn. Thống kê là dữ liệu quan sát, ước lượng cardinality là niềm tin về kích thước trung gian, mô hình chi phí là cách đánh giá phương án và kế hoạch thực thi là hành động được chọn. Khi kế hoạch xấu, hãy tìm xem ước lượng sai ở đâu trước khi ép hint.
