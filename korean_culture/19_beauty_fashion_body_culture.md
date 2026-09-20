@@ -1,257 +1,257 @@
-# Beauty, thời trang và văn hoá cơ thể
+# Làm đẹp, thời trang và văn hoá cơ thể
 
-## Cơ thể là một social surface nhưng không phải public property
+## Cơ thể là một bề mặt xã hội nhưng không phải tài sản công cộng
 
-Beauty culture Hàn Quốc thường bị kể theo hai cực: hoặc “người Hàn rất biết chăm sóc bản thân”, hoặc “xã hội Hàn ám ảnh ngoại hình”. Hai cách đều thiếu mechanism. **Appearance / 외모** có giá trị xã hội vì nó có thể signal tuổi, nghề nghiệp, self-discipline, group membership, class và mức độ phù hợp với setting.
+Văn hoá làm đẹp Hàn Quốc thường bị kể theo hai cực: hoặc “người Hàn rất biết chăm sóc bản thân”, hoặc “xã hội Hàn ám ảnh ngoại hình”. Cả hai cách đều thiếu cơ chế giải thích. **Ngoại hình (외모 / appearance)** có giá trị xã hội vì nó có thể phát tín hiệu về tuổi, nghề nghiệp, mức tự chăm sóc, nhóm mà một người thuộc về, tầng lớp và mức độ phù hợp với bối cảnh.
 
-Nhưng signal không đồng nghĩa obligation. Việc một norm tồn tại không có nghĩa cá nhân phải tuân theo nó. Một culture book nên mô tả pressure mà không biến pressure thành lời khuyên “hãy đẹp theo chuẩn đó”.
+Nhưng tín hiệu không đồng nghĩa nghĩa vụ. Việc một chuẩn mực tồn tại không có nghĩa cá nhân phải tuân theo nó. Một cuốn sách văn hoá nên mô tả áp lực xã hội mà không biến áp lực đó thành lời khuyên “hãy đẹp theo chuẩn ấy”.
 
 ## 외모관리: tại sao từ `관리` quan trọng?
 
-`외모관리` literally mang sắc thái **management/maintenance**. Nó đặt appearance vào cùng logic với `건강관리`, `자기관리`: một thứ cần routine chứ không phải event đặc biệt.
+`외모관리` mang sắc thái **quản lý và duy trì (management/maintenance)**. Nó đặt ngoại hình vào cùng logic với `건강관리`, `자기관리`: một thứ cần chăm sóc định kỳ chứ không chỉ là sự kiện đặc biệt.
 
-Routine có thể gồm hair, skincare, makeup, clothes, posture, fitness, nail hoặc dental care. Khi grooming được frame như maintenance, consumer market chuyển từ “mua một món” sang recurring system: cleanser, sunscreen, clinic, salon, membership, treatment cycle.
+Thói quen có thể gồm tóc, chăm sóc da, trang điểm, quần áo, tư thế, thể lực, móng hoặc răng. Khi việc chăm chút ngoại hình được hiểu như bảo trì thường xuyên, thị trường tiêu dùng chuyển từ “mua một món” sang hệ thống lặp lại: sữa rửa mặt, kem chống nắng, phòng khám, salon, thành viên và chu kỳ điều trị.
 
-Mental model:
+Mô hình tư duy:
 
 ```text
-appearance as signal
-→ demand cho maintenance
-→ industry tạo routine/product
-→ routine trở thành norm dễ thấy
-→ norm lại tăng demand
+ngoại hình trở thành tín hiệu
+→ nhu cầu duy trì tăng
+→ ngành công nghiệp tạo thói quen / sản phẩm
+→ thói quen trở thành chuẩn mực dễ thấy
+→ chuẩn mực lại làm nhu cầu tăng
 ```
 
-Đây là feedback loop, không phải biological preference.
+Đây là một **vòng phản hồi (feedback loop)**, không phải sở thích sinh học cố định.
 
-## 피부관리: skincare như consumer science + ritual
+## 피부관리: chăm sóc da như khoa học tiêu dùng + nghi thức
 
-K-beauty nổi tiếng với layering, essence, sheet mask và ingredient marketing. Nhưng domestic routine cực kỳ đa dạng; “10-step Korean skincare” là narrative marketing quốc tế hơn là universal practice.
+K-beauty nổi tiếng với thoa nhiều lớp, essence, mặt nạ giấy và tiếp thị thành phần. Nhưng thói quen trong nước rất đa dạng; “10 bước chăm sóc da kiểu Hàn” là câu chuyện tiếp thị quốc tế nhiều hơn là thực hành phổ quát.
 
-Một routine hợp lý về mặt khoa học không cần nhiều step. Core function thường xoay quanh cleansing phù hợp, moisturization nếu cần và sun protection. Ingredient như retinoid, niacinamide, vitamin C, AHA/BHA có evidence khác nhau về indication và concentration; product viral không tự động hiệu quả hơn.
+Một quy trình hợp lý về mặt khoa học không nhất thiết cần nhiều bước. Chức năng cốt lõi thường xoay quanh làm sạch phù hợp, dưỡng ẩm khi cần và bảo vệ khỏi nắng. Các thành phần như retinoid, niacinamide, vitamin C, AHA/BHA có mức bằng chứng khác nhau tuỳ mục đích và nồng độ; sản phẩm lan truyền mạnh trên mạng không tự động hiệu quả hơn.
 
-Cultural literacy phải tách hai câu hỏi:
+Hiểu văn hoá tốt cần tách hai câu hỏi:
 
-1. sản phẩm này có ý nghĩa gì trong beauty market?
-2. claim sinh học của nó có evidence ở mức nào?
+1. sản phẩm này có ý nghĩa gì trong thị trường làm đẹp?
+2. tuyên bố sinh học của nó có mức bằng chứng nào?
 
-## 자외선 차단: sunscreen như điểm giao giữa thẩm mỹ và y học
+## 자외선 차단: kem chống nắng là điểm giao giữa thẩm mỹ và y học
 
-`자외선 차단제` vừa liên quan phòng photoaging vừa liên quan giảm tác hại UV lên da. Beauty goal “da đều màu” và medical goal “giảm UV damage” có overlap nhưng không hoàn toàn giống nhau.
+`자외선 차단제` vừa liên quan phòng lão hoá do ánh sáng vừa liên quan giảm tác hại tia UV lên da. Mục tiêu thẩm mỹ “da đều màu” và mục tiêu y khoa “giảm tổn thương UV” có phần giao nhau nhưng không hoàn toàn giống nhau.
 
-Điều này cho thấy beauty practice đôi khi có health mechanism thật; ngược lại không nên vì vậy hợp thức hoá mọi claim aesthetic như medical necessity.
+Điều này cho thấy thực hành làm đẹp đôi khi có cơ chế sức khoẻ thật; ngược lại, không nên vì vậy mà biến mọi tuyên bố thẩm mỹ thành nhu cầu y khoa.
 
-## 화장: makeup là social tool chứ không chỉ decoration
+## 화장: trang điểm là công cụ xã hội chứ không chỉ trang trí
 
-**Makeup / 화장** có thể dùng để thể hiện style, professionalism, gender expression hoặc simply enjoyment. Trong service/office context, “trông chỉn chu” đôi khi được encode bằng makeup mạnh hơn đối với phụ nữ, tạo **beauty labour / 미용 노동** không phân bố đều theo giới.
+**Trang điểm (화장 / makeup)** có thể dùng để thể hiện phong cách, sự chuyên nghiệp, biểu hiện giới hoặc đơn giản vì sở thích cá nhân. Trong bối cảnh dịch vụ/văn phòng, yêu cầu “trông chỉn chu” đôi khi được đặt lên phụ nữ mạnh hơn, tạo **lao động làm đẹp (미용 노동 / beauty labour)** phân bố không đều theo giới.
 
-Một requirement không ghi trong job description nhưng được reward social vẫn là cost. Đây là hidden labour: thời gian, tiền và cognitive load bỏ ra để đạt expected presentation.
+Một yêu cầu không ghi trong mô tả công việc nhưng vẫn được xã hội thưởng/phạt cũng tạo chi phí. Đây là dạng lao động ẩn: thời gian, tiền bạc và tải nhận thức bỏ ra để đạt hình ảnh mong đợi.
 
-## 쌩얼 và “natural look paradox”
+## 쌩얼 và nghịch lý “trông tự nhiên”
 
-`쌩얼` chỉ bare face. Việc absence của makeup có label riêng cho thấy makeup đủ salient để “không makeup” thành named state.
+`쌩얼` chỉ khuôn mặt không trang điểm. Việc trạng thái “không trang điểm” có tên riêng cho thấy trang điểm đủ nổi bật để sự vắng mặt của nó trở thành một trạng thái được gọi tên.
 
-Nhưng aesthetic `꾸안꾸` — “trông như không cố nhưng thực ra có chăm chút” — cho thấy một paradox rộng hơn: **effortless appearance có thể cần rất nhiều effort**.
+Nhưng thẩm mỹ `꾸안꾸` — “trông như không cố nhưng thực ra có chăm chút” — cho thấy một nghịch lý rộng hơn: **vẻ ngoài không tốn công có thể cần rất nhiều công sức**.
 
-Trong UX cũng vậy: interface “simple” thường cần architecture phức tạp phía sau. Appearance natural không đồng nghĩa no intervention.
+Trong thiết kế giao diện cũng vậy: giao diện “đơn giản” thường cần kiến trúc phức tạp phía sau. Vẻ ngoài tự nhiên không đồng nghĩa không có can thiệp.
 
-## 퍼스널컬러: classification giúp giảm uncertainty
+## 퍼스널컬러: phân loại giúp giảm bất định
 
-`퍼스널컬러 (personal color)` consultation phân loại màu phù hợp dựa trên undertone/contrast theo hệ thống thương mại nhất định. Popularity của nó cho thấy consumer muốn biến taste mơ hồ thành decision framework.
+Tư vấn `퍼스널컬러 (personal color)` phân loại nhóm màu được cho là phù hợp dựa trên sắc độ nền da và độ tương phản theo một số hệ thống thương mại. Sự phổ biến của nó cho thấy người tiêu dùng muốn biến gu thẩm mỹ mơ hồ thành khung ra quyết định.
 
-Lợi ích psychological rất rõ: thay vì chọn giữa hàng trăm lipstick/clothes, user có category hẹp hơn. Đây là **decision compression**.
+Lợi ích tâm lý khá rõ: thay vì chọn giữa hàng trăm màu son hoặc quần áo, người dùng có một nhóm lựa chọn hẹp hơn. Đây là **nén quyết định (decision compression)**.
 
-Nhưng classification không phải physical law. Lighting, skin condition, style goal và subjective preference vẫn matter. Category hữu ích như heuristic, không nên thành constraint identity.
+Nhưng phân loại không phải định luật vật lý. Ánh sáng, tình trạng da, mục tiêu phong cách và sở thích chủ quan vẫn quan trọng. Nhóm màu có thể hữu ích như **quy tắc kinh nghiệm (heuristic)**, không nên trở thành ràng buộc danh tính.
 
-## 미용실: hair salon như recurring social institution
+## 미용실: salon tóc như một thiết chế dịch vụ lặp lại
 
-`미용실` và hair styling rất visible trong urban Korea. Perm, dye, cut và styling cycle tạo recurring relationship giữa customer và stylist.
+`미용실` và tạo kiểu tóc rất dễ thấy trong đô thị Hàn Quốc. Uốn, nhuộm, cắt và tạo kiểu tạo thành chu kỳ lặp, từ đó hình thành quan hệ dài hạn giữa khách và thợ tóc.
 
-Hair consultation cũng có high-context element: user có thể đưa reference photo, nói `이 느낌으로요`, stylist translate visual target sang hair texture và face shape. Đây là applied design negotiation.
+Tư vấn tóc cũng có yếu tố ngữ cảnh cao: khách có thể đưa ảnh tham khảo, nói `이 느낌으로요`, rồi nhà tạo mẫu chuyển mục tiêu hình ảnh thành quyết định theo chất tóc và khuôn mặt. Đây là quá trình thương lượng thiết kế ứng dụng vào đời thật.
 
-Salon market cũng segmentation mạnh theo neighbourhood, brand, specialization và price; “Korean hairstyle” không phải một standard duy nhất.
+Thị trường salon cũng phân tầng mạnh theo khu vực, thương hiệu, chuyên môn và giá; không có một “kiểu tóc Hàn Quốc” duy nhất.
 
-## 네일, 속눈썹, 렌즈: micro-services quanh presentation
+## 네일, 속눈썹, 렌즈: các dịch vụ nhỏ quanh việc trình bày cơ thể
 
-Nail art, eyelash service và cosmetic contact lens cho thấy beauty economy modular hóa body presentation thành nhiều service nhỏ. Mỗi module có its own maintenance cycle và risk profile.
+Làm móng, dịch vụ lông mi và kính áp tròng thẩm mỹ cho thấy kinh tế làm đẹp chia nhỏ việc trình bày cơ thể thành nhiều dịch vụ độc lập. Mỗi dịch vụ có chu kỳ bảo trì và hồ sơ rủi ro riêng.
 
-Cultural point không phải “người Hàn dùng nhiều dịch vụ”, mà là dense urban market + booking platform + social media cho phép niche service sống được nhờ demand tập trung.
+Điểm văn hoá không phải “người Hàn dùng nhiều dịch vụ”, mà là thị trường đô thị dày đặc + nền tảng đặt lịch + mạng xã hội cho phép dịch vụ ngách tồn tại nhờ nhu cầu tập trung.
 
-## 성형수술: visibility cao không đồng nghĩa universal prevalence
+## 성형수술: độ hiển thị cao không đồng nghĩa ai cũng làm
 
-`성형수술 (cosmetic/plastic surgery)` có visibility cao ở Seoul và trong international discourse. Hàn Quốc có cluster thẩm mỹ lớn, nhưng suy ra “ai cũng phẫu thuật” là ecological fallacy.
+`성형수술` — phẫu thuật thẩm mỹ/tạo hình — có độ hiển thị cao ở Seoul và trong diễn ngôn quốc tế. Hàn Quốc có những cụm dịch vụ thẩm mỹ lớn, nhưng từ đó suy ra “ai cũng phẫu thuật” là **ngụy biện sinh thái (ecological fallacy)**.
 
 Cần tách:
 
-- reconstructive surgery;
-- cosmetic surgery;
-- minimally invasive aesthetic procedure;
-- dermatologic treatment;
-- non-medical beauty service.
+- phẫu thuật tái tạo;
+- phẫu thuật thẩm mỹ;
+- thủ thuật thẩm mỹ ít xâm lấn;
+- điều trị da liễu;
+- dịch vụ làm đẹp không thuộc y khoa.
 
-Các category khác nhau về practitioner, risk, regulation và evidence.
+Các nhóm khác nhau về người thực hiện, rủi ro, quy định và mức bằng chứng.
 
-## 시술: procedure economy và maintenance logic
+## 시술: kinh tế thủ thuật và logic bảo trì
 
-Trong daily Korean, `시술` có thể chỉ nhiều procedure từ laser, injection đến skin treatment. Một số service được marketing như maintenance định kỳ, làm beauty market gần subscription logic.
+Trong tiếng Hàn đời thường, `시술` có thể chỉ nhiều thủ thuật từ laser, tiêm đến chăm sóc da. Một số dịch vụ được tiếp thị như bảo trì định kỳ, khiến thị trường làm đẹp gần với logic thuê bao.
 
-Điểm cần hiểu là **medicalization of appearance**: một feature bình thường có thể được redescribed thành “problem” có procedure solution. Consumer literacy cần hỏi indication, expected effect size, duration, side effect và provider qualification.
+Điểm cần hiểu là **y khoa hoá ngoại hình (medicalization of appearance)**: một đặc điểm bình thường có thể được mô tả lại thành “vấn đề” có giải pháp bằng thủ thuật. Người tiêu dùng cần hỏi chỉ định, mức hiệu quả dự kiến, thời gian duy trì, tác dụng phụ và năng lực của người cung cấp dịch vụ.
 
-## 강남: cluster không phải national average
+## 강남: cụm thẩm mỹ không phải mức trung bình toàn quốc
 
-Gangnam và một số district có mật độ clinic cao. Cluster xuất hiện vì supplier, doctor, staff, marketing, transport, foreign customer và brand reputation cùng tập trung.
+Gangnam và một số quận có mật độ phòng khám cao. Cụm hình thành vì nhà cung cấp, bác sĩ, nhân viên, tiếp thị, giao thông, khách nước ngoài và danh tiếng thương hiệu cùng tập trung.
 
-Nếu observer chỉ đi qua clinic street rồi suy “cả Hàn Quốc sống như vậy”, đó là spatial sampling bias. Cluster được thiết kế để visibility cao.
+Nếu người quan sát chỉ đi qua phố phòng khám rồi suy “cả Hàn Quốc sống như vậy”, đó là **sai lệch lấy mẫu theo không gian (spatial sampling bias)**. Bản chất của cụm là làm một loại hoạt động trở nên cực kỳ dễ thấy.
 
-## 사진, 증명사진 và camera-mediated self
+## 사진, 증명사진 và cái tôi qua camera
 
-Passport/job photo, studio portrait, self-photo booth và social-media image tạo nhiều context nơi appearance được frozen thành image.
+Ảnh hộ chiếu/xin việc, ảnh studio, buồng tự chụp và ảnh mạng xã hội tạo nhiều bối cảnh nơi ngoại hình bị đóng băng thành hình ảnh.
 
-`증명사진` historically có presentation convention khá formal; self-photo studio hiện đại cho phép user control ánh sáng, timing và selection. Camera chuyển từ external observer sang self-production tool.
+`증명사진` trong lịch sử có quy ước trình bày khá trang trọng; studio tự chụp hiện đại cho phép người dùng kiểm soát ánh sáng, thời điểm chụp và ảnh được chọn. Camera chuyển từ người quan sát bên ngoài thành công cụ tự sản xuất hình ảnh.
 
-Khi image có thể retouch, baseline giữa “tôi ngoài đời” và “tôi trên ảnh” trở thành negotiated.
+Khi ảnh có thể chỉnh sửa, chuẩn so sánh giữa “tôi ngoài đời” và “tôi trên ảnh” trở thành thứ phải thương lượng.
 
-## 인생네컷: photo booth như ritual friendship
+## 인생네컷: buồng chụp ảnh như nghi thức bạn bè
 
-`인생네컷` và các self-photo booth tương tự tạo standardized frame để friend/couple ghi lại outing. Vì output nhỏ, rẻ và physical, nó hoạt động như memory token.
+`인생네컷` và các buồng tự chụp tương tự tạo khung ảnh chuẩn để bạn bè/cặp đôi ghi lại một buổi đi chơi. Vì ảnh nhỏ, giá tương đối rẻ và có bản vật lý, nó hoạt động như vật lưu giữ ký ức.
 
-Đây là hybrid analog–digital culture: pose được học từ social media, photo được in vật lý rồi lại chụp lên social platform.
+Đây là văn hoá lai giữa tương tự và số: tư thế được học từ mạng xã hội, ảnh được in ra vật lý rồi lại chụp đăng lên nền tảng số.
 
-## 필터 và beauty app: khi algorithm tham gia tạo chuẩn
+## 필터 và ứng dụng làm đẹp: khi thuật toán tham gia tạo chuẩn
 
-Filter có thể smooth skin, reshape contour, enlarge eyes hoặc đổi màu. Một vòng feedback có thể hình thành:
+Bộ lọc có thể làm mịn da, đổi đường nét, phóng to mắt hoặc thay màu. Một vòng phản hồi có thể hình thành:
 
 ```text
-existing ideal
-→ filter encode ideal
-→ filtered image lan rộng
-→ user quen với image mới
-→ perceived baseline dịch chuyển
-→ filter tiếp tục mạnh hơn
+chuẩn đẹp hiện có
+→ bộ lọc mã hoá chuẩn đó
+→ ảnh đã lọc lan rộng
+→ người dùng quen với hình ảnh mới
+→ mức tham chiếu cảm nhận dịch chuyển
+→ bộ lọc tiếp tục mạnh hơn
 ```
 
-Đây là **algorithmic norm amplification**. Tool không tự tạo beauty ideal từ số 0, nhưng có thể tăng consistency và visibility của ideal.
+Đây là **khuếch đại chuẩn mực bằng thuật toán (algorithmic norm amplification)**. Công cụ không tự tạo chuẩn đẹp từ số 0, nhưng có thể làm chuẩn đó nhất quán và dễ thấy hơn.
 
-## 패션: trend synchronization và tốc độ của supply chain
+## 패션: đồng bộ xu hướng và tốc độ chuỗi cung ứng
 
-Korean urban fashion có thể trông synchronized vì trend cycle nhanh, celebrity influence mạnh và commerce phản ứng nhanh. Nhưng synchronization không nghĩa uniformity toàn xã hội.
+Thời trang đô thị Hàn Quốc có thể trông đồng bộ vì chu kỳ xu hướng nhanh, ảnh hưởng người nổi tiếng mạnh và thương mại phản ứng nhanh. Nhưng đồng bộ không có nghĩa toàn xã hội mặc giống nhau.
 
-Các style ecosystem cùng tồn tại: office minimal, streetwear, vintage, outdoor/gorpcore, luxury, campus casual và subculture/fandom fashion.
+Nhiều hệ sinh thái phong cách cùng tồn tại: tối giản công sở, streetwear, vintage, outdoor/gorpcore, hàng xa xỉ, casual đại học và thời trang tiểu văn hoá/fandom.
 
-E-commerce và same/next-day delivery rút ngắn khoảng cách giữa “thấy trend” và “mua được”. Supply chain làm culture move nhanh hơn.
+Thương mại điện tử và giao trong ngày/ngày hôm sau rút ngắn khoảng cách giữa “thấy xu hướng” và “mua được”. Chuỗi cung ứng làm văn hoá chuyển động nhanh hơn.
 
-## 온라인 쇼핑 và fashion discovery
+## 온라인 쇼핑 và khám phá thời trang
 
-Fashion platform biến discovery thành data process: ranking, review, fit photo, recommendation và influencer content. User không chỉ hỏi “đẹp không?” mà còn “size người giống mình mặc thế nào?”.
+Nền tảng thời trang biến việc tìm đồ thành quy trình dữ liệu: xếp hạng, đánh giá, ảnh mặc thử, gợi ý và nội dung từ người ảnh hưởng. Người dùng không chỉ hỏi “đẹp không?” mà còn “người có số đo giống mình mặc thế nào?”.
 
-Review body measurements giảm information asymmetry nhưng cũng có thể làm body comparison tăng. Platform design vừa hỗ trợ fit decision vừa tạo social reference.
+Đánh giá kèm số đo cơ thể giúp giảm bất cân xứng thông tin nhưng cũng có thể tăng so sánh cơ thể. Thiết kế nền tảng vừa hỗ trợ quyết định về độ vừa vặn vừa tạo điểm tham chiếu xã hội mới.
 
-## 교복: uniform không xoá status, nó chuyển channel
+## 교복: đồng phục không xoá địa vị, nó chuyển kênh
 
-School uniform giảm variance ở clothing base nhưng status competition có thể dịch sang shoes, bag, outerwear, phone hoặc cosmetic detail.
+Đồng phục học sinh làm giảm khác biệt ở lớp quần áo cơ bản nhưng cạnh tranh địa vị có thể chuyển sang giày, túi, áo khoác, điện thoại hoặc chi tiết mỹ phẩm.
 
-Đây là **signal substitution**: khi một channel bị standardized, social differentiation tìm channel khác.
+Đây là **thay thế tín hiệu (signal substitution)**: khi một kênh bị chuẩn hoá, nhu cầu phân biệt xã hội tìm kênh khác.
 
-Điều tương tự xảy ra ở office dress code: đồng phục formal có thể giảm variation áo quần nhưng watch, bag, car hoặc language vẫn signal status.
+Điều tương tự xảy ra với quy tắc ăn mặc công sở: trang phục cơ bản có thể ít khác biệt nhưng đồng hồ, túi, xe hoặc cách nói vẫn phát tín hiệu địa vị.
 
-## 출근룩, 하객룩, 면접룩: context-specific appearance protocol
+## 출근룩, 하객룩, 면접룩: giao thức ngoại hình theo bối cảnh
 
-Korean fashion content thường dùng label theo event: `출근룩` (đi làm), `하객룩` (đi dự cưới), `면접룩` (phỏng vấn). Đây là evidence rằng dress không được tối ưu abstract mà theo **context fit**.
+Nội dung thời trang Hàn Quốc thường dùng nhãn theo sự kiện: `출근룩` (đi làm), `하객룩` (đi dự cưới), `면접룩` (phỏng vấn). Điều này cho thấy quần áo không được tối ưu một cách trừu tượng mà theo **độ phù hợp bối cảnh (context fit)**.
 
-Aesthetic intelligence do đó giống protocol selection: outfit tốt không chỉ đẹp, mà compatible với setting, role và expected formality.
+Hiểu thẩm mỹ vì vậy giống chọn giao thức: trang phục tốt không chỉ đẹp mà còn tương thích với không gian, vai trò và mức trang trọng được kỳ vọng.
 
-## 커플룩 và friendship look
+## 커플룩 và đồ đôi/đồ nhóm bạn
 
-`커플룩`, matching shoes, color coordination hoặc friendship item làm relationship visible. Fashion trở thành communication channel.
+`커플룩`, giày đồng bộ, phối màu hoặc vật phẩm bạn bè làm quan hệ trở nên nhìn thấy được. Thời trang trở thành một kênh giao tiếp.
 
-Signal không cần identical clothes; chỉ cần shared motif để người trong cuộc nhận ra connection.
+Tín hiệu không cần quần áo giống hệt; chỉ cần một hoạ tiết hoặc yếu tố chung để người trong cuộc nhận ra kết nối.
 
-## 등산복 và function trở thành style
+## 등산복: chức năng trở thành phong cách
 
-Outdoor clothing ở Hàn đi từ mountain gear sang daily wear ở nhiều thế hệ. Waterproof membrane, breathable fabric và insulation có technical function, nhưng brand và silhouette thêm social meaning.
+Trang phục ngoài trời ở Hàn Quốc đi từ đồ leo núi sang đồ mặc hằng ngày ở nhiều thế hệ. Màng chống nước, vải thoáng khí và vật liệu giữ nhiệt có chức năng kỹ thuật, nhưng thương hiệu và phom dáng thêm ý nghĩa xã hội.
 
-Khi function product được dùng ngoài original environment, nó chuyển thành lifestyle signifier.
+Khi sản phẩm chức năng được dùng ngoài môi trường ban đầu, nó chuyển thành dấu hiệu lối sống.
 
-## 다이어트: “diet” trong Korean thường nghĩa weight-loss project
+## 다이어트: “diet” trong tiếng Hàn thường nghĩa một dự án giảm cân
 
-`다이어트` trong everyday Korean thường rộng hơn dietary pattern; nó thường nghĩa giảm cân hoặc body-management effort. Social media, idol image và camera culture có thể làm pressure mạnh.
+`다이어트` trong tiếng Hàn đời thường thường rộng hơn “chế độ ăn”; nó hay chỉ nỗ lực giảm cân hoặc quản lý cơ thể. Mạng xã hội, hình ảnh idol và văn hoá camera có thể làm áp lực mạnh hơn.
 
 Cần phân biệt:
 
 ```text
-health target ≠ beauty target ≠ athletic-performance target
+mục tiêu sức khoẻ ≠ mục tiêu thẩm mỹ ≠ mục tiêu thành tích thể thao
 ```
 
-Một body weight không nói đủ về cardiovascular fitness, strength, metabolic health hoặc mental wellbeing.
+Một con số cân nặng không nói đủ về thể lực tim mạch, sức mạnh, sức khoẻ chuyển hoá hay trạng thái tinh thần.
 
-## 바디프로필: fitness, photography và project culture
+## 바디프로필: thể lực, nhiếp ảnh và văn hoá dự án
 
-`바디프로필` là photo shoot cơ thể sau period diet/training, trở nên phổ biến như personal challenge trong một số nhóm. Nó combine fitness goal, visual output và social-media milestone.
+`바디프로필` là buổi chụp cơ thể sau một giai đoạn ăn kiêng/tập luyện, trở nên phổ biến như thử thách cá nhân trong một số nhóm. Nó kết hợp mục tiêu thể lực, đầu ra hình ảnh và cột mốc mạng xã hội.
 
-Điểm cần nhìn hai mặt: project có thể thúc đẩy discipline và exercise, nhưng extreme dehydration/diet để đạt image ngắn hạn không giống sustainable health.
+Cần nhìn hai mặt: dự án có thể thúc đẩy kỷ luật và vận động, nhưng mất nước hoặc ăn kiêng cực đoan để đạt hình ảnh ngắn hạn không giống sức khoẻ bền vững.
 
-Cultural analysis không nên biến temporary photo condition thành health standard.
+Phân tích văn hoá không nên biến trạng thái cơ thể tạm thời trong ngày chụp thành chuẩn sức khoẻ.
 
-## 헬스장 và PT: body management trở thành scheduled service
+## 헬스장 và PT: quản lý cơ thể trở thành dịch vụ có lịch
 
-Gym `헬스장` và personal training `PT` tạo structured exercise around appointment, measurement và progress photo. Fitness market dùng data — body composition, weight, reps — để làm improvement visible.
+Phòng gym `헬스장` và huấn luyện cá nhân `PT` tạo bài tập có cấu trúc quanh lịch hẹn, đo lường và ảnh tiến triển. Thị trường thể lực dùng dữ liệu — thành phần cơ thể, cân nặng, số lần lặp — để làm sự cải thiện dễ nhìn hơn.
 
-Measurement có lợi nhưng Goodhart's Law vẫn đúng: nếu một number trở thành target duy nhất, user có thể optimize number thay vì health system tổng thể.
+Đo lường có lợi nhưng **Định luật Goodhart (Goodhart’s Law)** vẫn hữu ích: nếu một con số trở thành mục tiêu duy nhất, người dùng có thể tối ưu con số thay vì tối ưu toàn bộ hệ thống sức khoẻ.
 
-## 남성 미용: gender boundary đang mở nhưng chưa biến mất
+## 남성 미용: ranh giới giới đang mở nhưng chưa biến mất
 
-Male skincare, eyebrow grooming, perm, makeup cho idol/camera và fitness aesthetic đã phổ biến hơn trong nhiều subgroup. Nhưng acceptance khác mạnh theo occupation, age và peer group.
+Chăm sóc da nam, tỉa lông mày, uốn tóc, trang điểm cho idol/camera và thẩm mỹ thể lực đã phổ biến hơn trong nhiều nhóm. Nhưng mức chấp nhận khác mạnh theo nghề nghiệp, tuổi và nhóm bạn.
 
-Điều này minh họa culture change theo **domain-specific diffusion**, không phải một lần “xã hội thay đổi”.
+Điều này minh hoạ thay đổi văn hoá theo **khuếch tán theo từng lĩnh vực (domain-specific diffusion)**, không phải một lần “cả xã hội cùng đổi”.
 
-## 고령층 và beauty: age không xoá presentation need
+## 고령층 và làm đẹp: tuổi cao không xoá nhu cầu trình bày bản thân
 
-Beauty market không chỉ youth. Hair dye, skincare, dental care, fashion và procedure ở middle/older age cho thấy appearance cũng gắn với active ageing và professional/social participation.
+Thị trường làm đẹp không chỉ dành cho người trẻ. Nhuộm tóc, chăm da, nha khoa, thời trang và thủ thuật ở tuổi trung niên/cao tuổi cho thấy ngoại hình còn gắn với già hoá năng động và tham gia nghề nghiệp–xã hội.
 
-Ageing society có thể mở rộng beauty/wellness demand chứ không chỉ healthcare demand.
+Xã hội già hoá có thể mở rộng nhu cầu làm đẹp/chăm sóc bản thân chứ không chỉ nhu cầu y tế.
 
-## Beauty labour và bất bình đẳng thời gian
+## Lao động làm đẹp và bất bình đẳng thời gian
 
-Nếu một group phải dành nhiều thời gian hơn để đạt “professional appearance”, đó là resource cost. Money và time cho hair, makeup, clothes và body management cạnh tranh với sleep, study và leisure.
+Nếu một nhóm phải dành nhiều thời gian hơn để đạt hình ảnh “chuyên nghiệp”, đó là chi phí tài nguyên. Tiền và thời gian cho tóc, trang điểm, quần áo và quản lý cơ thể cạnh tranh với ngủ, học và giải trí.
 
-Beauty norm vì vậy có class dimension: người có income/time mua được service và product dễ hơn. “Trông tự nhiên và chỉnh chu” có thể là expensive output.
+Chuẩn làm đẹp vì vậy có chiều kích tầng lớp: người có thu nhập/thời gian có thể mua dịch vụ và sản phẩm dễ hơn. “Trông tự nhiên và chỉn chu” đôi khi là một đầu ra đắt tiền.
 
-## K-beauty globalisation: cultural brand và formulation phải được tách
+## Toàn cầu hoá K-beauty: thương hiệu văn hoá và công thức sản phẩm phải được tách
 
-K-beauty export mạnh nhờ Hallyu spillover, packaging, ingredient storytelling, e-commerce và fast product iteration. “Korean” trở thành brand signal giúp giảm uncertainty cho international buyer.
+K-beauty xuất khẩu mạnh nhờ hiệu ứng lan toả từ Hallyu, bao bì, câu chuyện thành phần, thương mại điện tử và vòng lặp phát triển sản phẩm nhanh. “Korean” trở thành tín hiệu thương hiệu giúp giảm bất định cho người mua quốc tế.
 
-Nhưng nationality không thay thế formulation science. Hai serum cùng gắn label K-beauty vẫn khác nhau về ingredient, concentration, stability và evidence.
+Nhưng quốc tịch không thay thế khoa học công thức. Hai serum cùng gắn nhãn K-beauty vẫn có thể khác nhau về thành phần, nồng độ, độ ổn định và mức bằng chứng.
 
-## Knowledge Connection: beauty market như signaling + feedback system
+## Liên hệ kiến thức: thị trường làm đẹp như hệ thống tín hiệu + phản hồi
 
-Ta có thể model:
+Có thể mô hình hoá:
 
 ```text
-media reference
-→ peer expectation
-→ individual grooming
-→ visible adoption
-→ market demand
-→ product/service innovation
-→ media reference mới
+hình ảnh tham chiếu trên truyền thông
+→ kỳ vọng từ nhóm đồng trang lứa
+→ cá nhân chăm chút ngoại hình
+→ mức sử dụng trở nên dễ thấy
+→ nhu cầu thị trường tăng
+→ sản phẩm / dịch vụ đổi mới
+→ tạo hình ảnh tham chiếu mới
 ```
 
-Không node nào một mình “gây ra chuẩn đẹp”. Norm emerge từ interaction giữa industry, media, peer group, institution và individual agency.
+Không nút nào một mình “gây ra chuẩn đẹp”. Chuẩn mực xuất hiện từ tương tác giữa ngành công nghiệp, truyền thông, nhóm xã hội, thiết chế và lựa chọn cá nhân.
 
-## Mental Model
+## Mô hình tư duy (Mental Model)
 
-> Beauty culture Hàn Quốc là một **signaling market trên cơ thể**, nhưng signal luôn phụ thuộc context. Industry cung cấp tool; camera/platform tạo reference; peer group tạo norm; workplace/school thêm expectation; cá nhân chọn mức tham gia. Hiểu system không đồng nghĩa phải tuân theo ideal của system.
+> Văn hoá làm đẹp Hàn Quốc là một **thị trường tín hiệu trên cơ thể (signaling market)**, nhưng tín hiệu luôn phụ thuộc bối cảnh. Ngành công nghiệp cung cấp công cụ; camera/nền tảng tạo điểm tham chiếu; nhóm xã hội tạo chuẩn mực; trường học/công sở thêm kỳ vọng; cá nhân chọn mức tham gia. Hiểu hệ thống không đồng nghĩa phải tuân theo lý tưởng của hệ thống.
 
-## Common Misconceptions
+## Hiểu lầm phổ biến (Common Misconceptions)
 
-“Mọi người Hàn skincare 10 bước” là marketing stereotype.
+“Mọi người Hàn chăm sóc da 10 bước” là định kiến bắt nguồn nhiều từ tiếp thị.
 
-“Hàn Quốc ai cũng phẫu thuật thẩm mỹ” thiếu denominator và sampling precision.
+“Hàn Quốc ai cũng phẫu thuật thẩm mỹ” thiếu mẫu số và độ chính xác về mẫu quan sát.
 
-“Chăm appearance chỉ là vanity” bỏ qua professional norm, identity và social signal.
+“Chăm ngoại hình chỉ là phù phiếm” bỏ qua chuẩn nghề nghiệp, danh tính và tín hiệu xã hội.
 
-“Natural look = không dùng sản phẩm” thường sai.
+“Vẻ tự nhiên = không dùng sản phẩm” thường sai.
 
-“Gầy = khoẻ” là nhầm beauty metric với health metric.
+“Gầy = khoẻ” là nhầm thước đo thẩm mỹ với thước đo sức khoẻ.
 
-“Filter chỉ sửa ảnh vô hại” bỏ qua khả năng image baseline feedback vào self-perception.
+“Bộ lọc chỉ sửa ảnh vô hại” bỏ qua khả năng hình ảnh đã chỉnh sửa quay lại thay đổi cách con người nhìn chính mình.
