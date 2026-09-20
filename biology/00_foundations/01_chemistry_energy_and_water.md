@@ -1,204 +1,195 @@
-# Hóa học của sự sống — Atoms, Bonds, Water, pH and Energy (생명의 화학)
+# Hóa học của sự sống — Chemistry, Water and Energy (생명 화학, 물과 에너지)
 
-Sinh vật được cấu tạo từ vật chất, và vật chất tuân theo các quy luật Hóa học. Vì vậy, trước khi học protein, DNA, membrane hay metabolism, ta cần một lượng Hóa học vừa đủ để trả lời những câu hỏi rất thực tế: tại sao nước hòa tan được nhiều chất? tại sao dầu không trộn với nước? vì sao pH ảnh hưởng enzyme? vì sao ion có thể tạo điện thế qua membrane? và tại sao reaction cần hoặc giải phóng năng lượng?
+Ở chương trước, ta kết luận rằng sự sống không cần một “vật chất bí ẩn”; nó là một kiểu tổ chức đặc biệt của vật chất thông thường. Nhưng nếu vậy, muốn hiểu Sinh học ta buộc phải hiểu một ít Hóa học. Không phải để học thuộc bảng tuần hoàn, mà để trả lời những câu hỏi rất trực tiếp: **vì sao membrane tự hình thành, vì sao protein có thể gấp thành hình dạng cụ thể, vì sao pH làm enzyme ngừng hoạt động, và vì sao một reaction có thể cung cấp energy cho reaction khác?**
 
-File này không cố biến bạn thành người học Hóa học chuyên sâu. Nó chỉ xây những khái niệm tối thiểu nhưng đủ chắc để bạn không phải học thuộc các cơ chế Sinh học như những fact rời rạc.
+Chương này chỉ xây phần Hóa học cần thiết cho Sinh học. Ta đi từ atom và electron đến bond, polarity, water, ion, pH và free energy. Mỗi ý sau sẽ được dùng lại ngay trong biomolecule, membrane, metabolism và physiology.
 
-## Matter — vật chất được làm từ nguyên tử
+## 1. Atom: đơn vị nhỏ để hiểu interaction hóa học
 
-**Nguyên tử (atom / 원자)** là đơn vị nhỏ giữ được tính chất hóa học của một nguyên tố. Một nguyên tử gồm nucleus chứa **proton (양성자)** mang điện dương và **neutron (중성자)** không mang điện, xung quanh là **electron (전자)** mang điện âm.
+Một **nguyên tử (atom / 원자)** gồm nucleus chứa proton và neutron, xung quanh là electron. Trong Sinh học, electron đặc biệt quan trọng vì cách electron phân bố quyết định atom liên kết với atom khác như thế nào.
 
-Số proton xác định nguyên tố. Carbon luôn có 6 proton; oxygen luôn có 8. Số neutron có thể khác nhau, tạo **isotope (đồng vị / 동위원소)**. Một số isotope phóng xạ được dùng trong biological tracing và medical imaging.
+Số proton xác định nguyên tố. Carbon có 6 proton; oxygen có 8. Nhưng chemical behavior phụ thuộc mạnh vào các electron ngoài cùng, thường gọi là **valence electrons**.
 
-Electron mới là phần trực tiếp quyết định phần lớn chemical bonding. Ta không cần đi sâu vào quantum mechanics ở đây; mental model đủ dùng là electron tồn tại trong các energy level, và electron lớp ngoài cùng ảnh hưởng cách nguyên tử liên kết.
+Carbon có khả năng tạo nhiều covalent bond ổn định, nhờ vậy xây được chain, ring và skeleton phức tạp. Đây là một lý do carbon trở thành backbone của hầu hết molecule sinh học.
 
-## Element — vì sao carbon đặc biệt quan trọng?
+Không phải vì carbon “được chọn” có mục đích. Đơn giản là chemistry của carbon cho phép kết hợp vừa đa dạng vừa đủ ổn định trong điều kiện mà life trên Earth hoạt động.
 
-Cơ thể chứa nhiều nguyên tố, nhưng carbon, hydrogen, oxygen, nitrogen, phosphorus và sulfur xuất hiện đặc biệt nhiều trong biomolecule.
+## 2. Bond: molecule tồn tại vì electron được chia sẻ hoặc phân bố lại
 
-**Carbon (C / 탄소)** có thể tạo bốn covalent bond tương đối ổn định. Điều đó cho phép nó tạo chain, ring và skeleton rất đa dạng. Vì thế carbon trở thành “khung” cho carbohydrate, lipid, protein và nucleic acid.
+Khi atom tương tác, electron có thể được chia sẻ hoặc chuyển dịch.
 
-Điều này không có nghĩa carbon là nguyên tố duy nhất có thể tạo chemistry phức tạp, nhưng trên Trái Đất, combination giữa tính linh hoạt của carbon, nước lỏng và điều kiện môi trường đã tạo nền cho life chemistry.
+Trong **liên kết cộng hóa trị (covalent bond / 공유 결합)**, atom chia sẻ electron. Đây là loại bond tạo backbone của protein, carbohydrate, lipid và DNA.
 
-## Chemical bond — nguyên tử liên kết bằng cách nào?
+Trong **liên kết ion (ionic interaction / 이온 결합)**, một atom mất electron và atom khác nhận electron, tạo ion mang charge trái dấu hút nhau. Trong nước, ionic interaction thường yếu hơn hình ảnh “muối cứng” mà ta tưởng vì water molecule bao quanh ion và làm giảm attraction trực tiếp.
 
-### Covalent bond
+Điều này dẫn đến một ý rất quan trọng: **chemical behavior trong cell phụ thuộc vào môi trường nước**. Cùng một pair charge có thể tương tác khác trong membrane interior so với trong cytosol.
 
-**Liên kết cộng hóa trị (covalent bond / 공유결합)** hình thành khi các nguyên tử chia sẻ electron.
+## 3. Electronegativity và polarity: vì sao nước đặc biệt
 
-Trong phân tử nước H₂O, oxygen chia sẻ electron với hai hydrogen. Nhưng oxygen hút electron mạnh hơn hydrogen. Vì vậy electron không được chia đều.
+Atom không phải lúc nào cũng kéo electron với lực như nhau. Khả năng hút electron gọi là **độ âm điện (electronegativity / 전기음성도)**.
 
-Khi phân bố điện tích lệch như vậy, bond được gọi là **polar covalent bond (liên kết cộng hóa trị phân cực / 극성 공유결합)**.
+Oxygen hút electron mạnh hơn hydrogen. Trong molecule H₂O, electron bị kéo về phía oxygen nhiều hơn, khiến oxygen có partial negative charge và hydrogen có partial positive charge. Water vì thế là **phân tử phân cực (polar molecule / 극성 분자)**.
 
-### Ionic interaction
+Polarity tạo ra **hydrogen bond (liên kết hydro / 수소 결합)** giữa các water molecule. Một hydrogen bond riêng lẻ tương đối yếu, nhưng số lượng cực lớn tạo nên property tập thể đáng kể.
 
-Một nguyên tử có thể mất hoặc nhận electron, trở thành **ion (이온)**. Ion dương là cation; ion âm là anion.
+Từ đây nhiều hiện tượng sinh học được nối lại:
 
-Na⁺ và Cl⁻ hút nhau vì điện tích trái dấu. Trong tinh thể muối, lực hút này tạo lattice. Nhưng khi vào nước, water molecule bao quanh các ion và làm chúng tách ra. Đây là lý do muối tan tốt trong nước.
+Water có **specific heat** cao nên body temperature không thay đổi quá đột ngột. Water cohesion giúp column nước trong xylem của plant duy trì liên tục. Ice có cấu trúc mở hơn liquid water nên density thấp hơn, vì vậy ice nổi và insulation cho ecosystem dưới nước vào mùa đông.
 
-Trong tế bào, ion không chỉ là “muối”. Na⁺, K⁺, Ca²⁺, Cl⁻ và H⁺ có vai trò trong điện thế membrane, neuron, muscle contraction, signaling và pH.
+Những property này không phải danh sách ngẫu nhiên. Tất cả đi ra từ một cause chung: polarity và hydrogen bonding.
 
-### Hydrogen bond
+> **Mental model:** nếu muốn hiểu property của một chất sinh học, đừng bắt đầu bằng việc thuộc tính. Hãy truy ngược về structure → charge distribution → interaction.
 
-**Liên kết hydrogen (hydrogen bond / 수소결합)** yếu hơn covalent bond, nhưng khi có rất nhiều thì tổng tác động rất lớn.
+## 4. Hydrophilic và hydrophobic: từ water đến membrane
 
-Water molecule có phần oxygen hơi âm và hydrogen hơi dương. Hydrogen của phân tử này có thể hút oxygen của phân tử khác. Mạng lưới hydrogen bond làm nước có nhiều property sinh học đặc biệt.
+Một molecule có group mang charge hoặc polar thường interaction tốt với water và được gọi là **ưa nước (hydrophilic / 친수성)**.
 
-DNA cũng dựa vào hydrogen bond giữa các base để hai strand nhận biết nhau nhưng vẫn tách được khi cần replication hoặc transcription.
+Ngược lại, hydrocarbon nonpolar interaction kém với water và được gọi là **kỵ nước (hydrophobic / 소수성)**.
 
-> **Mental model:** covalent bond thường xây “khung” molecule; ionic interaction và hydrogen bond thường giúp molecule tương tác, nhận diện và thay đổi cấu trúc.
+Điểm dễ hiểu sai là hydrophobic molecule không bị nước “đẩy” theo nghĩa có lực repulsion đặc biệt. Thay vào đó, water có xu hướng duy trì hydrogen-bond network. Khi nonpolar surface xuất hiện, water phải tổ chức lại quanh nó. Nếu nhiều nonpolar molecule tụ lại, tổng diện tích tiếp xúc với water giảm, làm trạng thái của hệ thuận lợi hơn.
 
-## Water — không chỉ là dung môi nền
+Đây là **hydrophobic effect**.
 
-Khoảng lớn khối lượng của tế bào là nước. Nhưng “tế bào chứa nhiều nước” chưa giải thích vai trò của nước. Quan trọng hơn là **cấu trúc phân cực** của water molecule.
+Chính effect này giúp phospholipid tự tổ chức thành bilayer. Mỗi phospholipid có đầu polar và đuôi nonpolar. Trong nước, đầu quay ra ngoài, đuôi tụ vào trong. Không cần một “máy” xếp từng lipid. Property của molecule và môi trường khiến arrangement này tự xuất hiện.
 
-### Vì sao nước hòa tan được ion và molecule phân cực?
+Ta vừa nối chemistry trực tiếp với origin của membrane, sẽ học sâu hơn ở [[../01_cell_biology/00_cells_membranes_and_transport]].
 
-Water có dipole: oxygen mang partial negative charge, hydrogen mang partial positive charge. Khi Na⁺ vào nước, oxygen của các water molecule quay về phía Na⁺. Khi Cl⁻ vào nước, hydrogen quay về phía Cl⁻.
+## 5. Concentration và diffusion: molecule không đứng yên
 
-Các water molecule tạo **hydration shell (lớp hydrat hóa / 수화 껍질)** quanh ion, làm ion ổn định trong dung dịch.
+Trong liquid, molecule chuyển động liên tục do thermal motion. Nếu một vùng có nhiều molecule hơn vùng khác, random motion tổng thể sẽ tạo **net movement** từ vùng concentration cao sang thấp. Đây là **khuếch tán (diffusion / 확산)**.
 
-Đây là lý do blood plasma, cytosol và nhiều fluid cơ thể có thể vận chuyển ion, glucose và nhiều polar molecule.
+Điểm quan trọng: molecule không “biết” đâu là vùng concentration thấp. Mỗi molecule vẫn chuyển động random. Nhưng vì phía concentration cao có nhiều molecule hơn, xác suất số molecule đi ra nhiều hơn số đi vào.
 
-## Hydrophilic và hydrophobic
+Đây là ví dụ đẹp về emergence: behavior có hướng ở population level xuất hiện từ motion random ở molecular level.
 
-**Hydrophilic (ưa nước / 친수성)** không có nghĩa molecule “thích” nước theo nghĩa ý chí. Nó có nghĩa molecule có charge hoặc polar group có thể tương tác thuận lợi với water.
+Diffusion sẽ trở thành cơ chế của oxygen exchange ở lung, neurotransmitter trong synapse và molecule đi qua membrane.
 
-**Hydrophobic (kỵ nước / 소수성)** thường là molecule không phân cực. Chúng không tạo tương tác thuận lợi với water, nên có xu hướng tụ lại với nhau.
+## 6. Ion và electrochemical gradient
 
-Đây là **hydrophobic effect (효과)**, cực kỳ quan trọng vì nó giúp phospholipid tự tạo membrane và giúp protein gấp thành cấu trúc ba chiều.
+Khi atom mất hoặc nhận electron, nó trở thành **ion (이온)**. Na⁺, K⁺, Ca²⁺ và Cl⁻ cực kỳ quan trọng trong cell.
 
-Dầu nổi tách khỏi nước là ví dụ đời thường. Trong tế bào, cùng nguyên lý đó tạo compartment.
+Ion không chỉ chịu ảnh hưởng bởi concentration difference mà còn bởi electric potential. Vì ion mang charge, movement của nó chịu hai lực:
 
-## Cohesion, adhesion và surface tension
+```text
+chemical gradient
+      +
+electrical gradient
+      ↓
+electrochemical gradient
+```
 
-Hydrogen bond làm các water molecule hút nhau, tạo **cohesion (lực liên kết giữa các phân tử cùng loại / 응집력)**. Water cũng có thể tương tác với surface phân cực, tạo **adhesion (bám dính / 부착력)**.
+Khái niệm này sẽ trở thành nền của membrane potential và neuron action potential.
 
-Trong plant biology, cohesion của water đóng vai trò quan trọng trong việc kéo cột nước từ root lên leaf qua xylem. Đây không phải “nước tự leo” một cách huyền bí; nó liên quan đến transpiration, pressure difference, cohesion và structure của xylem.
+Nếu chưa hiểu electrochemical gradient, nervous system dễ biến thành một loạt thuật ngữ khó nhớ. Vì vậy ta đặt nền ở đây trước.
 
-## Heat capacity — tại sao nước giúp ổn định nhiệt độ?
+## 7. Acid, base và pH: concentration H⁺ ảnh hưởng protein như thế nào?
 
-Water có **specific heat capacity (nhiệt dung riêng / 비열)** cao. Cần khá nhiều energy để tăng nhiệt độ một lượng nhất định vì energy được phân phối vào network hydrogen bond và molecular motion.
+Trong nước, một số molecule có thể nhường proton H⁺, một số có thể nhận proton.
 
-Điều này giúp temperature của cơ thể và môi trường nước thay đổi chậm hơn so với nhiều vật liệu khác.
+**Acid (axit / 산)** là proton donor theo Brønsted–Lowry. **Base (bazơ / 염기)** là proton acceptor.
 
-Khi sweat bay hơi, molecule có kinetic energy cao rời khỏi skin, mang energy theo. Vì vậy evaporation làm mát cơ thể.
-
-## Acid, base và H⁺
-
-Một **acid (axit / 산)** có thể tăng concentration H⁺ trong dung dịch theo cách định nghĩa thông dụng của biology. Một **base (bazơ / 염기)** giảm H⁺ hoặc nhận proton, tùy framework hóa học.
-
-Điều quan trọng trong biology là H⁺ ảnh hưởng charge và cấu trúc của molecule, đặc biệt protein.
-
-## pH — tại sao dùng logarithm?
-
-pH được định nghĩa gần đúng bằng:
+pH được định nghĩa:
 
 \[
 pH=-\log_{10}[H^+]
 \]
 
-Trong đó \([H^+]\) là concentration của hydrogen ion theo mol/L.
+Tại sao dùng logarithm? Vì concentration H⁺ trải trên nhiều bậc độ lớn. Log scale nén range đó thành con số dễ dùng.
 
-Tại sao không dùng trực tiếp concentration? Vì concentration H⁺ trong biological solution có thể trải qua nhiều bậc độ lớn. Logarithm nén range rất rộng thành scale dễ đọc.
+Nếu pH giảm từ 7 xuống 6, [H⁺] không tăng “một đơn vị” mà tăng khoảng 10 lần.
 
-Nếu \([H^+]=10^{-7}\), thì:
+Điều này quan trọng vì protonation state của amino acid side chain thay đổi theo pH. Nếu charge distribution trong protein thay đổi, ionic interaction và hydrogen bond có thể đổi, làm protein đổi structure hoặc activity.
 
-\[
-pH=7
-\]
+Đó là lý do enzyme thường có optimal pH và tại sao blood pH phải được điều chỉnh rất chặt.
 
-Nếu \([H^+]=10^{-6}\), pH = 6. Chỉ giảm 1 pH unit nhưng H⁺ đã tăng **10 lần**.
+## 8. Buffer: homeostasis ở mức hóa học
 
-Do đó pH 5 không chỉ “acid hơn một chút” so với pH 6; H⁺ concentration lớn hơn khoảng 10 lần.
+Nếu mỗi acid molecule sinh ra đều làm pH đổi mạnh, cell sẽ rất bất ổn. Hệ sống dùng **buffer (dung dịch đệm / 완충계)** để giảm biến động pH.
 
-Xem thêm về logarithm trong thư viện Toán nếu cần hiểu sâu cơ chế scale log.
+Buffer thường gồm weak acid và conjugate base. Khi H⁺ tăng, base component hấp thụ bớt H⁺. Khi H⁺ giảm, acid component có thể giải phóng H⁺.
 
-## Buffer — tại sao blood không đổi pH mạnh sau mỗi bữa ăn?
-
-**Buffer (hệ đệm / 완충계)** là system có thể hấp thu một phần H⁺ hoặc nhả H⁺ khi concentration thay đổi, nhờ đó làm pH ổn định hơn.
-
-Blood sử dụng nhiều buffer system, nổi bật là bicarbonate. Điều này quan trọng vì enzyme và protein rất nhạy với pH.
-
-Homeostasis pH không có nghĩa buffer một mình “giữ pH”. Lungs và kidneys cũng tham gia bằng cách điều chỉnh CO₂, bicarbonate và ion.
-
-## Energy — “năng lượng” trong Sinh học nghĩa là gì?
-
-**Energy (năng lượng / 에너지)** là khả năng gây ra thay đổi hoặc thực hiện work. Trong tế bào, work có thể là synthesis molecule, transport ion ngược gradient, muscle contraction hoặc chromosome movement.
-
-Energy tồn tại ở nhiều dạng. Biological system thường quan tâm chemical potential energy trong bond, electrochemical gradient và light energy.
-
-## Thermodynamics — sự sống không vi phạm entropy
-
-**Định luật I nhiệt động lực học** nói energy không tự sinh ra hay biến mất; nó chuyển dạng.
-
-**Định luật II** nói total entropy của hệ cô lập có xu hướng tăng.
-
-Điều này từng khiến người mới thắc mắc: nếu entropy tăng, tại sao organism lại xây được structure rất có trật tự?
-
-Vì organism **không phải hệ cô lập**. Nó lấy energy và matter từ môi trường, duy trì local order rồi thải heat và waste ra ngoài. Tổng thể organism + environment vẫn phù hợp với thermodynamics.
-
-> **Mental model:** sự sống không chống lại entropy bằng phép màu; nó “trả chi phí năng lượng” để duy trì trật tự cục bộ.
-
-## Free energy — reaction có tự diễn ra không?
-
-Trong biochemistry, ta thường dùng **Gibbs free energy (năng lượng tự do Gibbs / 깁스 자유에너지)**.
+Một equation quan trọng là Henderson–Hasselbalch:
 
 \[
-\Delta G = \Delta H - T\Delta S
+pH=pK_a+\log_{10}\frac{[A^-]}{[HA]}
 \]
 
-Bạn chưa cần tính toán sâu. Ý nghĩa chính là:
+Không cần thuộc ngay. Ý nghĩa trực giác là pH phụ thuộc vào ratio giữa dạng protonated và deprotonated.
 
-- \(\Delta G < 0\): process có thể tự phát về thermodynamics trong điều kiện xét.
-- \(\Delta G > 0\): process cần được ghép với nguồn energy khác.
+Ở physiology, bicarbonate buffer nối trực tiếp lung và kidney: lung điều chỉnh CO₂ nhanh, kidney điều chỉnh bicarbonate và H⁺ chậm hơn. Chemical equilibrium vì thế trở thành whole-body homeostasis.
 
-“Tự phát” không đồng nghĩa “xảy ra nhanh”. Gỗ cháy có thể favorable về thermodynamics nhưng cần activation energy để bắt đầu.
+## 9. Chemical reaction: bond thay đổi, atom được sắp xếp lại
 
-## Activation energy và catalyst
+Một **phản ứng hóa học (chemical reaction / 화학 반응)** không tạo atom từ hư không. Nó sắp xếp lại atom bằng cách phá và tạo bond.
 
-Một reaction có thể có sản phẩm energy thấp hơn nhưng vẫn cần vượt qua một barrier ban đầu gọi là **activation energy (năng lượng hoạt hóa / 활성화 에너지)**.
+Ví dụ tổng quát:
 
-**Catalyst (chất xúc tác / 촉매)** làm giảm barrier này mà không bị tiêu thụ theo stoichiometry của reaction. Trong tế bào, phần lớn catalyst là **enzyme (효소)**.
+\[
+A+B \rightarrow C+D
+\]
 
-Enzyme không “tạo năng lượng” và không biến một reaction thermodynamically impossible thành tự nhiên. Nó chủ yếu giúp reaction đi theo pathway có activation barrier thấp hơn.
+Trong biology, reaction thường không xảy ra độc lập. Product của reaction này trở thành substrate của reaction kế tiếp, tạo **pathway**.
 
-## Diffusion — chuyển động nhiệt tạo dòng phân tử
+Metabolism vì vậy giống network hơn là một reaction đơn.
 
-Molecule trong fluid luôn chuyển động nhiệt ngẫu nhiên. Nếu một vùng có concentration cao và vùng khác thấp, xác suất molecule rời vùng đông sang vùng thưa sẽ tạo **net diffusion (khuếch tán ròng / 순확산)** từ high concentration sang low concentration.
+## 10. Energy: “có năng lượng” nghĩa là gì?
 
-Điều này không phải molecule “biết đường”. Nó là kết quả thống kê của random motion.
+Trong biology, energy không phải một chất chứa trong ATP như nước chứa trong chai. **Energy (năng lượng / 에너지)** là khả năng gây thay đổi hoặc thực hiện work.
 
-Diffusion hiệu quả ở khoảng cách nhỏ nhưng chậm khi distance tăng. Đây là một lý do tế bào nhỏ và organism lớn cần hệ vận chuyển như blood vessels.
+Một quantity hữu ích là **Gibbs free energy**:
 
-Một approximation quan trọng trong diffusion là thời gian tăng gần theo bình phương distance. Nếu distance tăng 10 lần, diffusion có thể cần khoảng 100 lần thời gian trong điều kiện tương tự.
+\[
+\Delta G=\Delta H-T\Delta S
+\]
 
-## Gradient — một cách lưu trữ potential
+Ta không cần đi sâu thermodynamics ngay, nhưng phải hiểu sign:
 
-**Gradient (độ dốc / 기울기 또는 농도 구배)** là sự khác biệt theo không gian, ví dụ concentration gradient hoặc electrical gradient.
+Nếu \(\Delta G<0\), process có thể tự diễn ra theo chiều đó về mặt thermodynamic.
 
-Nếu Na⁺ concentration cao bên ngoài cell và thấp bên trong, đã có chemical gradient. Nếu bên trong cell cũng âm hơn, charge difference tạo electrical gradient. Hai effect kết hợp thành **electrochemical gradient (전기화학적 기울기)**.
+Nếu \(\Delta G>0\), process cần được coupled với process khác có free-energy decrease đủ lớn.
 
-Tế bào có thể dùng gradient như một dạng stored potential. Mitochondria tạo proton gradient rồi ATP synthase khai thác gradient đó để tạo ATP.
+Điều này giải thích vì sao cell cần ATP. Nhiều reaction biosynthesis không spontaneous nếu đứng riêng. Cell couple chúng với ATP hydrolysis hoặc ion gradient.
 
-Đây là connection quan trọng giữa chemistry, membrane và metabolism.
+## 11. Spontaneous không đồng nghĩa với nhanh
 
-## Common misconceptions
+Một reaction có \(\Delta G<0\) có thể vẫn xảy ra rất chậm vì phải vượt qua **activation energy (năng lượng hoạt hóa / 활성화 에너지)**.
 
-### “Bond chứa energy nên bẻ bond sẽ giải phóng energy”
+Đốt glucose với oxygen giải phóng nhiều energy, nhưng glucose trên bàn không tự cháy ngay. Có barrier kinetic.
 
-Không chính xác. Breaking a bond cần energy. Net energy của reaction phụ thuộc cả bond bị phá và bond mới được tạo. Nhiều reaction giải phóng energy vì sản phẩm có cấu hình tổng thể ổn định hơn, không đơn giản vì “phá bond”.
+Enzyme giúp hạ activation energy, làm reaction nhanh hơn mà không đổi overall \(\Delta G\).
 
-### “Acid luôn nguy hiểm, base luôn an toàn”
+Điểm này rất quan trọng: enzyme không biến reaction impossible thành possible về thermodynamics. Nó giúp system đi tới trạng thái có thể đạt được nhanh hơn.
 
-Sai. Cả acid và base mạnh đều có thể gây damage. Biology quan tâm concentration, pH, exposure và context.
+Chương [[02_biomolecules_enzymes_and_energy]] sẽ xây tiếp từ đây.
 
-### “Molecule đi từ nơi nồng độ cao sang thấp vì muốn cân bằng”
+## 12. Oxidation–reduction: vì sao electron trở thành “currency” của metabolism
 
-Không. Diffusion xuất hiện từ random thermal motion và xác suất. “Muốn cân bằng” chỉ là shortcut ngôn ngữ.
+Nhiều reaction energy trong cell là **redox reaction (phản ứng oxy hóa–khử / 산화환원 반응)**.
 
-## Mental Model
+**Oxidation** là mất electron; **reduction** là nhận electron.
 
-> Hóa học của sự sống có thể được nhìn bằng bốn câu hỏi: molecule mang charge/polarity gì, nó tương tác với water thế nào, gradient nào đang tồn tại, và reaction đó thay đổi free energy ra sao?
+Trong respiration, electron được lấy dần từ nutrient và chuyển qua carrier như NADH rồi electron transport chain. Cuối cùng oxygen nhận electron.
 
-File tiếp theo [[02_biomolecules_enzymes_and_energy]] sẽ dùng nền này để xây bốn nhóm biomolecule lớn, protein folding, enzyme và ATP. Sau đó bạn sẽ đủ nền để bước vào membrane, organelle và metabolism mà không phải học thuộc máy móc.
+Tại sao không chuyển electron một lần? Vì giải phóng toàn bộ energy đột ngột sẽ khó khai thác. Chuyển qua nhiều step cho phép cell coupling energy release với pumping proton và tạo ATP.
+
+Điều này giống hạ nước từ hồ cao qua turbine thay vì để toàn bộ nước rơi tự do không kiểm soát.
+
+## 13. Thermodynamics và life: trật tự cục bộ không miễn phí
+
+Second law of thermodynamics nói entropy của universe có xu hướng tăng. Living system vẫn có thể duy trì local order vì là open system.
+
+Cell lấy energy-rich molecule hoặc light, dùng chúng để duy trì structure, rồi thải heat và waste. Local organization tăng, nhưng tổng entropy của system + environment vẫn tăng.
+
+Do đó sự sống không chống thermodynamics. Sự sống là một hệ **dissipative**, duy trì organization bằng continuous throughput of energy.
+
+## 14. Từ chemistry đến biomolecule: bước tiếp theo cần giải thích điều gì?
+
+Đến đây ta đã có các rule nền:
+
+Atom tạo bond. Charge và polarity quyết định interaction. Water tạo môi trường đặc biệt. Hydrophobic effect tạo self-assembly. pH làm thay đổi protonation. Reaction có thermodynamic direction và kinetic barrier. Redox transfer electron và energy.
+
+Nhưng cell không được tạo từ những molecule bất kỳ. Nó sử dụng một số class molecule lặp lại: carbohydrate, lipid, protein và nucleic acid.
+
+Vì sao những class này phù hợp? Protein có thể vừa là structure vừa là enzyme bằng cách nào? ATP couple reaction ra sao? Nucleic acid lưu information nhờ property gì?
+
+Đó là bridge tự nhiên sang [[02_biomolecules_enzymes_and_energy]].
