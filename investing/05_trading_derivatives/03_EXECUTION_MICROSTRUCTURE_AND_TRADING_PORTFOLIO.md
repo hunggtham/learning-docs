@@ -1,562 +1,763 @@
-# 03 — Execution, Market Microstructure và Trading Portfolio
+# Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch
 
-> Signal tốt chưa đủ. Một strategy chỉ tạo được live edge khi order đi qua market với friction thấp, sizing đúng, operational state chính xác và portfolio risk được quản lý ở cấp toàn book. Chapter này đi từ limit order book, spread và market impact tới execution algorithms, TCA, margin stress, factor aggregation và production safety.
+> Tín hiệu tốt chưa đủ. Một chiến lược chỉ tạo lợi thế thật khi lệnh được thực thi với chi phí hợp lý, trạng thái tài khoản chính xác và rủi ro được quản lý ở cấp toàn danh mục. Chương này nối **sổ lệnh → spread → slippage → market impact → execution algorithm → portfolio risk → TCA → operational safety**.
 
-## 1. Trading System có ba lớp
+# Phần I — Trading system có ba lớp
 
-Một trading system tối thiểu gồm **signal generation**, **risk sizing** và **execution**.
+## 1. Signal, sizing và execution
 
-Nếu signal expectancy là +0,12R nhưng all-in spread/commission/slippage = 0,10R, edge gần như biến mất. Execution vì vậy không phải hậu cần; nó là một phần của strategy economics.
-
-## 2. Decision Price và Execution Price
-
-Decision price là price khi strategy quyết định trade. Execution price là realized fill.
-
-Khoảng cách giữa hai mức gồm latency, spread, impact, missed fills và market movement. Tracking gap này là nền tảng của **implementation shortfall**.
-
-# Phần I — Limit Order Book và Order Types
-
-## 3. Limit Order Book
-
-Order book chứa resting bids/asks theo price level. Best bid là buy cao nhất; best ask là sell thấp nhất; spread là distance giữa chúng.
-
-Depth cho biết quantity available beyond top of book. Spread hẹp với depth mỏng vẫn có thể tạo large slippage.
-
-## 4. Price-Time Priority
-
-Nhiều venues ưu tiên better price trước, rồi earlier time ở same price.
-
-Backtest “touch limit = filled” thường optimistic vì queue position có thể rất xa phía sau.
-
-## 5. Queue Position
-
-Fill probability phụ thuộc volume ahead, cancellations, incoming market orders và venue rules.
-
-For short-horizon passive strategies, queue modeling có thể quan trọng ngang signal.
-
-## 6. Maker và Taker
-
-Maker provides resting liquidity; taker consumes it.
-
-Maker may save spread/fee nhưng faces non-fill/adverse selection. Taker gets immediacy nhưng pays spread/impact. Optimal choice depends urgency and edge decay.
-
-## 7. Market Order
-
-Market order ưu tiên fill certainty, không price certainty.
-
-Appropriate khi urgency/risk exit cao nhưng dangerous trong thin book hoặc news gap.
-
-## 8. Marketable Limit
-
-Marketable limit crosses spread nhưng caps worst acceptable price.
-
-It reduces extreme slippage risk but can partially fill/miss during fast move.
-
-## 9. Passive Limit
-
-Passive limit controls price but exposes opportunity cost and adverse selection.
-
-If order fills mostly when price is about to continue against you, apparent spread saving is illusory.
-
-## 10. Stop Order
-
-Stop triggers order after threshold. Trigger price is not guaranteed fill price.
-
-Gap/limit move can turn planned -1R into much larger realized loss.
-
-## 11. Stop-Limit
-
-Stop-limit controls maximum acceptable execution price but can fail to exit entirely.
-
-Emergency protection often values certainty over exact price; stop-limit is not automatically safer.
-
-## 12. IOC, FOK và Time-in-Force
-
-**Immediate-or-Cancel (IOC)** executes available quantity then cancels remainder. **Fill-or-Kill (FOK)** requires full immediate fill. **Good-Til-Cancelled (GTC)** remains active under broker/venue rules.
-
-Time-in-force is part of execution logic, not UI detail.
-
-## 13. Partial Fills
-
-Partial fills alter actual position risk and can break hedge ratios or multi-leg trades.
-
-Execution engine must track remaining quantity and reconcile actual fills before submitting replacements.
-
-## 14. Multi-Leg Execution
-
-Spread/option pairs may be executed as package or legged separately.
-
-Legging creates **legging risk**: first leg fills, second moves away. Package order reduces this but may sacrifice fill probability/liquidity.
-
-# Phần II — Spread, Liquidity và Price Discovery
-
-## 15. Spread Compensation
-
-Spread compensates liquidity provider for adverse selection, inventory risk, volatility, venue fees and capital use.
-
-Spread widens when information uncertainty rises.
-
-## 16. Quoted Spread vs Effective Spread
-
-Quoted spread is displayed bid-ask. Effective spread measures actual fill relative midpoint/benchmark.
-
-Price improvement or hidden liquidity can make effective spread smaller than quote; fast moves can make it larger.
-
-## 17. Realized Spread
-
-Market maker may earn quoted spread but lose if price moves against fill immediately.
-
-**Realized spread** measured after short horizon helps separate earned spread from adverse selection.
-
-## 18. Depth
-
-Liquidity is multi-dimensional: spread, depth, resilience and market impact.
-
-A market with narrow spread but tiny depth may be poor for large order.
-
-## 19. Order-Book Imbalance
-
-Displayed bid/ask imbalance can contain short-term information but is noisy and manipulable by cancellations.
-
-Use as context, not deterministic predictor.
-
-## 20. Hidden / Iceberg Liquidity
-
-Some orders show only partial size. Visible depth therefore underestimates actual liquidity in some venues.
-
-Conversely displayed liquidity may vanish instantly, so book snapshot is not guarantee.
-
-## 21. Dark Pools và Off-Exchange Venues
-
-Dark venues allow trading without displaying full pre-trade interest, potentially reducing signaling for institutional orders.
-
-They complicate consolidated price discovery and venue analysis.
-
-## 22. Venue Fragmentation
-
-Same security can trade across exchanges/ATSs. Best route depends price, fee, queue, latency and fill probability.
-
-Broker routing policy can materially affect retail execution quality.
-
-## 23. Price Discovery
-
-Price discovery is process by which new information moves quotes/trades. It may occur first in futures, ETF, options, FX or underlying cash depending market hours/liquidity.
-
-Understanding lead market helps avoid treating stale reference price as fair value.
-
-# Phần III — Auctions và Intraday Structure
-
-## 24. Opening Auction
-
-Open consolidates overnight information and queued orders. Price formation differs continuous market.
-
-Backtest entering “at open” must model auction access and gaps realistically.
-
-## 25. Closing Auction
-
-Close attracts benchmark/index/fund flows. Volume may be huge and technically driven.
-
-Official close is not automatically freely executable unless strategy participates correctly.
-
-## 26. Imbalance Information
-
-Some exchanges publish auction imbalance indicators. They can forecast closing pressure but also change as orders enter/cancel.
-
-Use timing rules exactly; data availability matters in backtest.
-
-## 27. Intraday Seasonality
-
-Volume/volatility often U-shaped in equities; FX follows regional sessions; futures react around scheduled macro events.
-
-Execution assumptions should depend time-of-day.
-
-## 28. Rollover / Fixing Windows
-
-FX fixes, futures settlement windows and index rebalances can create temporary flow concentration.
-
-Short-term strategies need separate cost model for these windows.
-
-# Phần IV — Slippage và Market Impact
-
-## 29. Slippage
-
-Slippage is difference between expected and realized execution. It depends volatility, urgency, size/depth, latency and order type.
-
-Do not model slippage as constant if trading across regimes.
-
-## 30. Implementation Shortfall
-
-Implementation shortfall measures difference between hypothetical portfolio at decision price and actual outcome after execution.
-
-It includes explicit cost, spread, delay, market impact and opportunity cost.
-
-## 31. Opportunity Cost
-
-An unfilled passive order can miss a profitable move. Zero commission/slippage does not mean zero execution cost.
-
-Missed opportunity must be included in strategy economics.
-
-## 32. Market Impact
-
-Own order can move market. Impact grows with size relative to available volume and urgency.
-
-Strategy capacity is limited by impact, not account balance alone.
-
-## 33. Temporary vs Permanent Impact
-
-Temporary impact may revert after execution; permanent impact reflects information/signaling incorporated into fair price.
-
-Execution algorithms aim reduce unnecessary temporary/signaling cost.
-
-## 34. Participation Rate
-
-Participation = own traded volume / market volume during execution.
-
-Higher participation increases speed but generally increases impact/signaling risk.
-
-## 35. Square-Root Impact Intuition
-
-Empirically, impact often grows sublinearly/nonlinearly with order size relative volume and volatility; exact model varies.
-
-Main lesson: doubling order size does not necessarily double cost predictably, and large orders can become disproportionately expensive.
-
-## 36. Capacity
-
-Capacity asks how much capital strategy can deploy before execution erodes edge.
-
-Estimate average daily volume, participation rate, turnover, holding period and exit stress.
-
-# Phần V — Execution Algorithms
-
-## 37. TWAP
-
-TWAP slices order roughly evenly through time.
-
-Simple but ignores varying liquidity; may overtrade quiet periods.
-
-## 38. VWAP
-
-VWAP schedules according expected/realized volume profile.
-
-Useful benchmark-following execution, but benchmark beating does not guarantee good investment decision.
-
-## 39. POV
-
-Percentage-of-Volume trades fixed share of market volume.
-
-Adaptive to activity but can trade more exactly when volatility/volume spike.
-
-## 40. Implementation-Shortfall Algorithm
-
-IS algos optimize trade-off between market impact and price-risk from waiting.
-
-High urgency front-loads execution; low urgency waits more for liquidity.
-
-## 41. Arrival-Price Benchmark
-
-Arrival price captures market when execution decision starts and is often appropriate for alpha-decay strategies.
-
-Benchmark must match economic decision, not chosen after results.
-
-## 42. Passive / Opportunistic Execution
-
-Some algorithms wait for favorable spread/liquidity conditions while respecting completion target.
-
-They can improve cost but increase non-fill/opportunity risk.
-
-## 43. Smart Order Routing
-
-SOR routes among venues based price, queue, fee/rebate and fill probability.
-
-Best displayed quote is not always best realized execution once fees/latency considered.
-
-# Phần VI — Adverse Selection và Information
-
-## 44. Adverse Selection
-
-Fill quality can be bad because other side trades when information favors them.
-
-Passive orders especially vulnerable around news or informed flow.
-
-## 45. Toxic Flow
-
-Liquidity providers call flow “toxic” when counterparties systematically trade before adverse price moves.
-
-Retail should interpret this as information/timing issue, not conspiracy.
-
-## 46. Liquidity Sweep
-
-Prior highs/lows cluster stops/breakout orders. Triggering them creates market-order burst.
-
-If opposing liquidity absorbs burst, reversal can occur. Order clustering alone can explain much of “stop hunt” behavior.
-
-## 47. Spoofing vs Normal Cancellation
-
-Displayed orders can be canceled for legitimate reasons; spoofing is manipulative conduct under market rules.
-
-Do not infer manipulation merely because visible depth disappears.
-
-# Phần VII — News, Gaps và Market Controls
-
-## 48. News Execution
-
-CPI, NFP, FOMC, earnings and geopolitics can widen spread and reduce depth.
-
-A strategy not designed for event conditions should model avoidance/reduced size rather than normal fills.
-
-## 49. Gap Risk
-
-Cash equities gap across sessions; derivatives can jump through stop levels despite extended hours.
-
-Sizing must account discontinuous moves.
-
-## 50. Circuit Breakers
-
-Halts can stop immediate trading but do not erase risk. Reopen may gap further.
-
-A stop is useless while market closed/halted.
-
-## 51. Price Limits
-
-Daily limits can trap positions with no opposite liquidity. This is particularly relevant in some Asian/commodity markets.
-
-Position sizing must include multi-session exit scenario.
-
-## 52. Liquidation Cascades
-
-Leveraged forced selling can create feedback:
+Một hệ thống tối thiểu gồm:
 
 ```text
-Price ↓ → Margin Breach → Forced Sell → Price ↓ further
+Signal Generation
+→ Risk Sizing
+→ Execution
 ```
 
-Crypto/futures/CFD markets can exhibit strong liquidation-driven overshoot.
+Nếu expectancy trước chi phí là `+0,12R` nhưng tổng spread, commission và slippage là `0,10R`, phần lớn edge đã biến mất.
 
-# Phần VIII — Latency và Systems
+Vì vậy thực thi lệnh không phải hậu cần; nó là một phần của kinh tế chiến lược.
 
-## 53. Latency
+## 2. Giá quyết định và giá thực thi
 
-Latency matters only relative strategy horizon. For swing trader, 200 ms irrelevant; for sub-second arbitrage, fatal.
+**Giá quyết định (decision price)** là mức giá khi chiến lược quyết định giao dịch.
 
-Choose edge matching infrastructure.
+**Giá thực thi (execution price)** là giá fill thực tế.
 
-## 54. Clock Synchronization
+Khoảng cách giữa hai mức có thể đến từ:
 
-Market data, signal, order and fill timestamps need synchronized clocks.
+- spread;
+- latency;
+- market impact;
+- delay;
+- missed fill;
+- market movement.
 
-Otherwise live-vs-backtest attribution and sequencing become unreliable.
+Đây là nền tảng của **implementation shortfall**.
 
-## 55. Market Data Quality
+# Phần II — Limit Order Book
 
-Stale quotes, dropped packets, bad ticks or wrong corporate adjustments can generate false signals/orders.
+## 3. Sổ lệnh
 
-Production system needs validation and fallback behavior.
-
-## 56. Broker/API State
-
-Order submission acknowledgement is not same as fill. Network timeout can leave unknown state.
-
-Always query broker state before retrying.
-
-## 57. Idempotency
-
-Client order IDs/idempotent workflow prevent duplicate orders after retry.
-
-This is basic production safety, not software luxury.
-
-## 58. Reconciliation
-
-Internal positions/cash/open orders must reconcile with broker after disconnect/restart.
-
-Broker/exchange state is source of truth for actual exposure.
-
-## 59. Order Reject Handling
-
-Reject reasons include margin, symbol status, price band, invalid quantity or market closed.
-
-System must define action for each category instead of assuming order exists.
-
-## 60. Kill Switch
-
-Predefine halt conditions: bad market data, duplicate orders, abnormal spread, broker outage, daily loss or risk-limit breach.
-
-Kill switch protects operational survival.
-
-# Phần IX — Trading Portfolio
-
-## 61. Portfolio Heat
-
-Portfolio heat aggregates planned stop losses but should adjust correlation/common factors.
-
-Five 0.5% trades all short USD are not independent 2.5% heat in economic sense; they may fail together.
-
-## 62. Net vs Gross Exposure
-
-Long-short book may have net beta near zero but gross leverage high.
-
-Gross drives funding, turnover, liquidity and gap risk. Monitor both.
-
-## 63. Factor Exposure
-
-Map trades to USD, rates, equity beta, growth, commodity, volatility, country and liquidity factors.
-
-This reveals hidden concentration better than pairwise correlation alone.
-
-## 64. Delta-Equivalent Exposure
-
-Options positions need delta-equivalent plus Gamma/Vega. Small premium can create large state-dependent exposure.
-
-Do not aggregate option book by premium paid.
-
-## 65. DV01 / Rate Exposure
-
-Rates/fixed-income trades should aggregate DV01 and key-rate DV01.
-
-Notional netting can hide curve bets.
-
-## 66. Volatility Exposure
-
-Short options, carry strategies and certain mean-reversion systems may all be short volatility even if instruments differ.
-
-Vol factor should be explicit portfolio bucket.
-
-## 67. Liquidity Factor
-
-Small caps, high-yield credit, altcoins and crowded futures may all become illiquid simultaneously in stress.
-
-Liquidity correlation often rises when funding tightens.
-
-## 68. Correlation Instability
-
-Historical correlations change by regime and increase during deleveraging.
-
-Use scenario correlations, not only sample covariance.
-
-## 69. Volatility Targeting
-
-Scale positions to stabilize expected risk, but beware procyclicality: low vol can encourage leverage before shock, high vol forces deleverage after selloff.
-
-Apply caps/floors and stress overlays.
-
-## 70. Risk Parity across Trades
-
-Equalizing volatility contribution can prevent one market dominating, but equal vol ≠ equal tail risk.
-
-Adjust for gaps, liquidity and nonlinearity.
-
-## 71. VaR
-
-VaR estimates loss threshold at confidence level under model.
-
-It does not describe losses beyond threshold and is weak for unseen jumps.
-
-## 72. Expected Shortfall
-
-Expected Shortfall averages tail losses beyond VaR threshold.
-
-Better tail metric, but still depends data/model. Scenario stress remains mandatory.
-
-## 73. Drawdown Control
-
-Risk reduction rules should be defined before drawdown and based on strategy distribution.
-
-They are safeguards against model/operational deterioration, not emotional response.
-
-## 74. Recovery Math
-
--10% needs +11.1%; -50% needs +100%.
-
-Deep drawdown damages geometric compounding nonlinearly.
-
-## 75. Pyramiding
-
-Adding to winners can exploit trends, but total stop risk after each add must stay within budget.
-
-Independent sizing of each add creates hidden leverage.
-
-## 76. Averaging Down
-
-Averaging down can be valid only if pre-specified strategy with total risk cap.
-
-Unplanned adding to avoid realizing loss is behavior, not system.
-
-# Phần X — TCA và Learning Loop
-
-## 77. MAE / MFE
-
-Maximum Adverse/Favorable Excursion helps study intratrade path.
-
-Use for diagnosis, not direct same-sample stop optimization without OOS validation.
-
-## 78. Execution Attribution
-
-Break performance gap into signal timing, size, spread, commissions, slippage, missed fills, market impact and discretionary intervention.
-
-Fix the correct layer.
-
-## 79. Transaction Cost Analysis
-
-TCA segments fills by benchmark, venue, order type, size, time, volatility and liquidity.
-
-Goal is systematic detection of leakage.
-
-## 80. Realized vs Expected Cost
-
-Cost model should produce expected spread/slippage. Live realized distribution should be compared regularly.
-
-Persistent deterioration can signal crowding, capacity problem or broker/market change.
-
-## 81. Fill Probability
-
-For passive strategies, track probability of fill conditional on signal quality.
-
-A strategy can look strong on filled trades while ignoring profitable signals that never filled.
-
-## 82. Adverse-Selection Score
-
-Measure price movement shortly after fill. Persistent negative post-fill move suggests passive execution is being selected adversely.
-
-This can guide urgency/order-type changes.
-
-## 83. Capacity Monitoring
-
-As AUM grows, cost should be analyzed vs participation rate and order size percentile.
-
-Scale slowly and verify realized impact remains within model.
-
-## 84. Pre-Trade Checklist
+Limit Order Book chứa các lệnh mua/bán đang chờ ở nhiều mức giá.
 
 ```text
-Signal valid?
-Position size?
-Factor overlap?
-Liquidity / spread?
-Event risk?
-Order type / urgency?
-Max slippage?
-Margin buffer?
-Exit logic?
-Portfolio heat?
+Best Bid = giá mua cao nhất
+Best Ask = giá bán thấp nhất
+Spread = Best Ask - Best Bid
 ```
 
-## 85. Post-Trade Checklist
+**Depth** cho biết lượng lệnh có sẵn ở nhiều mức giá.
 
-Record decision price, fills, spread/slippage, benchmark, MAE/MFE, market state, rule adherence and operational anomalies.
+Spread hẹp nhưng depth rất mỏng vẫn có thể gây slippage lớn cho lệnh lớn.
 
-Data discipline lets execution skill compound.
+## 4. Price-time priority
 
-## 86. Mental Model cuối cùng
+Nhiều venue ưu tiên:
+
+```text
+Giá tốt hơn trước
+→ nếu cùng giá, lệnh vào trước được ưu tiên trước
+```
+
+Do đó backtest giả định “giá chạm limit = chắc chắn fill” thường quá lạc quan.
+
+## 5. Queue position
+
+Xác suất fill phụ thuộc:
+
+- lượng lệnh đứng trước;
+- cancellation;
+- incoming market orders;
+- venue rules;
+- thời gian chờ.
+
+Với strategy rất ngắn hạn, queue position có thể quan trọng ngang signal.
+
+## 6. Maker và taker
+
+**Maker** cung cấp thanh khoản bằng lệnh chờ. **Taker** lấy thanh khoản bằng lệnh chủ động.
+
+Maker có thể tiết kiệm spread nhưng chịu:
+
+- non-fill risk;
+- adverse selection;
+- opportunity cost.
+
+Taker có khả năng fill nhanh hơn nhưng trả spread và có thể chịu impact.
+
+# Phần III — Các loại lệnh
+
+## 7. Market order
+
+Market order ưu tiên được thực thi, không bảo đảm giá.
+
+Trong thị trường mỏng hoặc khi có tin lớn, fill có thể xa mức nhìn thấy trước khi gửi lệnh.
+
+## 8. Marketable limit
+
+Marketable limit đi qua spread nhưng đặt giới hạn giá tệ nhất chấp nhận được.
+
+Nó giảm nguy cơ fill cực xấu nhưng có thể chỉ fill một phần trong thị trường chạy nhanh.
+
+## 9. Passive limit
+
+Passive limit kiểm soát giá nhưng có thể không được fill.
+
+Một vấn đề quan trọng là **adverse selection**: lệnh có thể được fill nhiều nhất đúng lúc giá sắp tiếp tục đi ngược vị thế.
+
+## 10. Stop order
+
+Stop chỉ kích hoạt lệnh khi đạt điều kiện; trigger price không phải giá fill bảo đảm.
+
+Gap có thể biến kế hoạch `-1R` thành lỗ lớn hơn đáng kể.
+
+## 11. Stop-limit
+
+Stop-limit kiểm soát giá tối đa chấp nhận được nhưng có nguy cơ không thoát được.
+
+Vì vậy nó không tự động “an toàn hơn” stop-market.
+
+## 12. Time-in-force
+
+Một số loại phổ biến:
+
+- DAY;
+- GTC;
+- IOC;
+- FOK.
+
+Time-in-force là một phần của logic execution, không chỉ là tùy chọn giao diện.
+
+## 13. Partial fill
+
+Lệnh chỉ fill một phần làm actual exposure khác intended exposure.
+
+Execution engine phải theo dõi:
+
+```text
+Requested Quantity
+Filled Quantity
+Remaining Quantity
+Actual Position
+```
+
+trước khi gửi lệnh thay thế.
+
+## 14. Multi-leg execution
+
+Option spread hoặc hedge nhiều chân có thể được giao dịch như package hoặc từng leg.
+
+Thực thi từng chân tạo **legging risk**: chân đầu đã fill nhưng chân sau chạy khỏi giá dự kiến.
+
+# Phần IV — Spread và thanh khoản
+
+## 15. Vì sao spread tồn tại?
+
+Spread bù cho liquidity provider các rủi ro như:
+
+- adverse selection;
+- inventory risk;
+- volatility;
+- capital usage;
+- venue fee.
+
+Khi uncertainty tăng, spread thường rộng hơn.
+
+## 16. Quoted spread và effective spread
+
+**Quoted spread** là bid–ask đang hiển thị.
+
+**Effective spread** đo chi phí thực tế so với midpoint hoặc benchmark.
+
+Price improvement có thể làm effective spread thấp hơn quote; fast market có thể làm nó cao hơn.
+
+## 17. Realized spread
+
+Realized spread đo phần spread còn thực sự giữ được sau một khoảng thời gian.
+
+Nó giúp phân biệt:
+
+```text
+Spread Earned
+và
+Loss from Adverse Selection
+```
+
+## 18. Liquidity là khái niệm nhiều chiều
+
+Cần nhìn cùng:
+
+- spread;
+- depth;
+- resilience;
+- turnover;
+- impact;
+- time-to-exit.
+
+Volume cao không bảo đảm một order lớn có thể thoát với chi phí thấp.
+
+## 19. Hidden và iceberg liquidity
+
+Một số lệnh chỉ hiển thị một phần quantity. Vì vậy visible book có thể thấp hơn liquidity thật.
+
+Ngược lại, displayed liquidity cũng có thể biến mất nhanh; snapshot không phải bảo đảm.
+
+## 20. Dark pool và off-exchange venue
+
+Dark venue giảm khả năng order lớn tự tiết lộ ý định trước giao dịch nhưng làm phân tích price discovery phức tạp hơn.
+
+## 21. Venue fragmentation
+
+Một security có thể giao dịch ở nhiều venue. Routing tốt phải cân nhắc:
+
+```text
+Price
+Fee / Rebate
+Queue
+Latency
+Fill Probability
+```
+
+Giá hiển thị tốt nhất chưa chắc tạo execution thực tế tốt nhất.
+
+# Phần V — Price discovery và auction
+
+## 22. Price discovery
+
+Price discovery là quá trình thông tin mới được phản ánh vào giá.
+
+Tùy thị trường, thông tin có thể xuất hiện trước ở:
+
+- futures;
+- ETF;
+- options;
+- FX;
+- cash market.
+
+Không nên dùng reference price đã stale như fair value hiện tại.
+
+## 23. Opening auction
+
+Phiên mở cửa gom thông tin qua đêm và lệnh chờ.
+
+Backtest “mua tại open” cần mô hình hóa gap và cơ chế auction thực tế.
+
+## 24. Closing auction
+
+Closing auction thường có volume lớn vì:
+
+- index funds;
+- benchmark tracking;
+- rebalance;
+- institutional flows.
+
+Official close không có nghĩa mọi trader đều có thể fill đúng giá đó.
+
+## 25. Intraday seasonality
+
+Volume và volatility có pattern theo thời gian trong ngày.
+
+Equity thường có volume cao hơn đầu/cuối phiên; FX chịu ảnh hưởng Asia/London/New York session.
+
+Cost model nên phản ánh time-of-day.
+
+# Phần VI — Slippage và market impact
+
+## 26. Slippage
+
+Slippage là chênh lệch giữa giá kỳ vọng và giá thực thi.
+
+Nó phụ thuộc:
+
+- volatility;
+- urgency;
+- size/depth;
+- latency;
+- order type;
+- event risk.
+
+Không nên dùng một con số slippage cố định cho mọi regime.
+
+## 27. Implementation shortfall
+
+Implementation shortfall đo khoảng cách giữa danh mục giả định tại decision price và kết quả thật sau execution.
+
+Nó có thể gồm:
+
+```text
+Commission
++ Spread
++ Delay Cost
++ Market Impact
++ Opportunity Cost
+```
+
+## 28. Opportunity cost
+
+Một passive order không fill có commission bằng 0 nhưng vẫn có cost nếu bỏ lỡ move có lợi.
+
+Chi phí “không giao dịch được” cũng là execution cost.
+
+## 29. Market impact
+
+Order của chính bạn có thể làm giá di chuyển.
+
+Impact thường tăng khi:
+
+- order lớn so với volume;
+- depth thấp;
+- urgency cao;
+- volatility cao.
+
+Capacity của strategy bị giới hạn bởi impact, không chỉ account balance.
+
+## 30. Temporary và permanent impact
+
+Temporary impact có thể hồi lại sau khi order hoàn tất.
+
+Permanent impact phản ánh thông tin hoặc signaling đã được market hấp thụ.
+
+Execution tốt cố giảm phần impact không cần thiết.
+
+## 31. Participation rate
+
+```text
+Participation Rate
+= Own Volume / Market Volume
+```
+
+Participation cao giúp hoàn tất nhanh nhưng thường làm impact và signaling risk lớn hơn.
+
+## 32. Capacity
+
+Capacity trả lời:
+
+```text
+Có thể chạy bao nhiêu vốn trước khi cost ăn hết edge?
+```
+
+Cần xem turnover, ADV, holding period, participation và stressed exit.
+
+# Phần VII — Execution algorithms
+
+## 33. TWAP
+
+TWAP chia lệnh tương đối đều theo thời gian.
+
+Đơn giản nhưng không thích nghi tốt với liquidity thay đổi.
+
+## 34. VWAP
+
+VWAP phân bổ execution theo profile volume dự kiến hoặc thực tế.
+
+Đánh bại VWAP không đồng nghĩa investment decision ban đầu tốt; nó chỉ đo execution relative to benchmark.
+
+## 35. POV
+
+Percentage-of-Volume giữ tỷ lệ tham gia gần cố định so với market volume.
+
+Nó thích nghi với activity nhưng có thể giao dịch nhiều hơn đúng lúc volume/volatility tăng mạnh.
+
+## 36. Implementation-shortfall algorithm
+
+Loại algorithm này cân bằng:
+
+```text
+Market Impact của giao dịch nhanh
+vs
+Price Risk của việc chờ
+```
+
+Urgency cao → front-load nhiều hơn.
+
+## 37. Arrival price
+
+Arrival price là giá lúc bắt đầu execution và phù hợp khi alpha có decay nhanh.
+
+Benchmark phải được chọn trước khi nhìn kết quả.
+
+## 38. Smart Order Routing
+
+SOR chọn venue dựa trên price, fee, queue, latency và fill probability.
+
+Mục tiêu là realized execution tốt hơn, không chỉ displayed price tốt hơn.
+
+# Phần VIII — Adverse selection
+
+## 39. Adverse selection
+
+Một passive order có thể chỉ được fill khi bên kia có thông tin tốt hơn hoặc khi market đang chuẩn bị di chuyển ngược bạn.
+
+Do đó “ăn spread” chưa chắc có lời.
+
+## 40. Toxic flow
+
+Liquidity provider dùng thuật ngữ toxic flow để chỉ dòng lệnh có xu hướng đến trước adverse price move.
+
+Đây là vấn đề timing/information, không nên diễn giải thành âm mưu.
+
+## 41. Liquidity sweep
+
+Stop và breakout orders thường tập trung quanh high/low rõ ràng.
+
+Khi vùng đó bị xuyên:
+
+```text
+Triggered Orders ↑
+→ Market-Order Burst
+→ Nếu có opposing liquidity hấp thụ
+→ Có thể reversal
+```
+
+Cơ chế này có thể giải thích nhiều hành vi thường được gọi là “stop hunt” mà không cần giả định thao túng.
+
+# Phần IX — News, gap và market controls
+
+## 42. News execution
+
+CPI, NFP, FOMC, earnings hoặc geopolitics có thể làm:
+
+- spread tăng;
+- depth giảm;
+- slippage tăng;
+- stop gap;
+- option IV thay đổi mạnh.
+
+Strategy không thiết kế cho event nên có rule giảm size hoặc tránh event.
+
+## 43. Gap risk
+
+Giá có thể nhảy qua stop level.
+
+Risk model phải tính discontinuous move thay vì giả định giá luôn đi qua mọi mức liên tục.
+
+## 44. Circuit breaker và halt
+
+Trading halt chỉ tạm dừng giao dịch; nó không xóa risk.
+
+Khi reopen, market vẫn có thể gap tiếp.
+
+## 45. Daily price limit
+
+Ở thị trường có biên độ ngày, position có thể bị kẹt nhiều phiên nếu không có opposite liquidity.
+
+Sizing cần tính cả multi-session exit scenario.
+
+## 46. Liquidation cascade
+
+```text
+Price ↓
+→ Margin Breach
+→ Forced Sell
+→ Price ↓ thêm
+```
+
+Đây là feedback thường thấy ở leveraged futures, CFD và crypto.
+
+# Phần X — Hệ thống và operational safety
+
+## 47. Latency
+
+Latency chỉ quan trọng so với horizon của strategy.
+
+Swing strategy không cần cạnh tranh microseconds; HFT thì cần.
+
+Không nên chọn strategy vượt khả năng infrastructure.
+
+## 48. Đồng bộ thời gian
+
+Market data, signal, order và fill timestamps phải dùng clock nhất quán.
+
+Sai thời gian làm attribution và live-vs-backtest comparison mất tin cậy.
+
+## 49. Data quality
+
+Stale quote, bad tick hoặc feed mất dữ liệu có thể tạo signal giả.
+
+Production system cần validation và fallback behavior.
+
+## 50. API state
+
+Order submit thành công không đồng nghĩa order đã fill.
+
+Nếu network timeout, phải query broker state trước khi retry để tránh duplicate.
+
+## 51. Idempotency
+
+Workflow idempotent giúp một request chạy lại không tạo thêm position ngoài ý muốn.
+
+## 52. Reconciliation
+
+Phải thường xuyên so:
+
+```text
+Internal Position
+vs
+Broker Position
+```
+
+Broker/exchange state là nguồn xác nhận exposure thật.
+
+## 53. Order reject
+
+Reject có thể do:
+
+- margin;
+- price band;
+- quantity;
+- market closed;
+- symbol state.
+
+Hệ thống phải có hành vi rõ cho từng nhóm lỗi.
+
+## 54. Kill switch
+
+Điều kiện dừng có thể gồm:
+
+- market data lỗi;
+- duplicate order;
+- broker outage;
+- spread bất thường;
+- daily loss limit;
+- position mismatch.
+
+Kill switch bảo vệ survival, không phải tính năng phụ.
+
+# Phần XI — Danh mục giao dịch
+
+## 55. Portfolio heat
+
+Portfolio heat tổng hợp risk của các trade nhưng phải điều chỉnh overlap.
+
+Năm trade mỗi trade 0,5% risk nhưng cùng short USD có thể cùng thua khi USD tăng mạnh.
+
+## 56. Gross và net exposure
+
+Long-short book có net beta thấp nhưng gross leverage cao.
+
+Gross exposure ảnh hưởng:
+
+- funding;
+- turnover;
+- margin;
+- liquidity;
+- gap risk.
+
+Phải theo dõi cả gross và net.
+
+## 57. Factor exposure
+
+Map position theo:
+
+```text
+USD
+Rates
+Equity Beta
+Growth
+Commodity
+Volatility
+Country
+Liquidity
+```
+
+Cách này phát hiện concentration tốt hơn chỉ nhìn ticker.
+
+## 58. Delta-equivalent exposure
+
+Option book không nên tổng hợp theo premium paid.
+
+Cần xem:
+
+- Delta;
+- Gamma;
+- Vega;
+- Theta;
+- state-dependent exposure.
+
+## 59. DV01
+
+Fixed-income book nên tổng hợp DV01 và key-rate DV01.
+
+Hai position notional bằng nhau chưa chắc rate risk bằng nhau.
+
+## 60. Volatility factor
+
+Short option, carry và một số mean-reversion strategy có thể cùng là short-vol dù instrument khác nhau.
+
+Volatility nên là một risk bucket riêng.
+
+## 61. Liquidity factor
+
+Small caps, high-yield credit và crowded futures có thể cùng mất liquidity khi funding stress.
+
+Correlation thanh khoản thường tăng trong crisis.
+
+## 62. Correlation instability
+
+Historical correlation không cố định.
+
+Trong deleveraging, nhiều asset trước đó ít tương quan có thể giảm cùng nhau.
+
+Nên dùng scenario correlation ngoài sample covariance.
+
+## 63. Volatility targeting
+
+Vol targeting giảm size khi vol tăng và tăng size khi vol giảm để giữ expected risk ổn định hơn.
+
+Nhược điểm là tính procyclical:
+
+```text
+Low Vol → Leverage ↑
+Shock → Vol ↑
+→ Forced Deleverage sau selloff
+```
+
+Cần cap/floor và stress overlay.
+
+## 64. Risk parity giữa các trade
+
+Equal risk contribution giúp một market không chi phối toàn book.
+
+Nhưng equal volatility không đồng nghĩa equal tail risk; vẫn phải điều chỉnh gap, liquidity và convexity.
+
+## 65. VaR và Expected Shortfall
+
+VaR ước tính threshold loss theo model tại confidence level.
+
+Expected Shortfall ước tính loss trung bình khi đã vượt threshold.
+
+Cả hai đều phụ thuộc dữ liệu/model và không thay thế scenario stress.
+
+## 66. Drawdown control
+
+Rule giảm risk phải được định nghĩa trước, không phải sau khi trader hoảng loạn.
+
+Mục tiêu là bảo vệ khi distribution hoặc operation có dấu hiệu khác model.
+
+# Phần XII — Position management
+
+## 67. Pyramiding
+
+Thêm position vào trade đang thắng có thể hợp lý với trend strategy, nhưng total stop risk sau mỗi lần thêm phải nằm trong budget.
+
+## 68. Averaging down
+
+Chỉ hợp lý khi là rule định trước với total risk cap.
+
+Thêm position chỉ để tránh thừa nhận trade sai là hành vi cảm xúc.
+
+## 69. MAE và MFE
+
+- MAE: mức bất lợi lớn nhất trong trade;
+- MFE: mức có lợi lớn nhất.
+
+Chúng hữu ích để nghiên cứu stop/exit nhưng phải validation OOS trước khi thay rule.
+
+# Phần XIII — Transaction Cost Analysis
+
+## 70. Execution attribution
+
+Phân rã performance gap thành:
+
+```text
+Signal Timing
+Position Size
+Spread
+Commission
+Slippage
+Missed Fill
+Market Impact
+Discretionary Override
+```
+
+Như vậy mới biết phải sửa signal hay execution.
+
+## 71. TCA
+
+Transaction Cost Analysis (TCA) phân nhóm fills theo:
+
+- benchmark;
+- venue;
+- order type;
+- size;
+- time-of-day;
+- volatility;
+- liquidity.
+
+Mục tiêu là tìm leakage có hệ thống.
+
+## 72. Expected vs realized cost
+
+Cost model nên tạo expected spread/slippage.
+
+Live result phải thường xuyên so với distribution dự kiến. Nếu cost xấu dần, nguyên nhân có thể là crowding, capacity hoặc broker/market change.
+
+## 73. Fill probability
+
+Passive strategy cần theo dõi xác suất fill và chất lượng fill.
+
+Fill rate cao không tốt nếu fills chủ yếu xảy ra trước adverse move.
+
+## 74. Adverse-selection diagnostic
+
+Có thể đo price move sau fill ở nhiều horizon.
+
+Nếu passive fills thường bị giá tiếp tục đi ngược ngay sau đó, spread capture có thể chỉ là ảo giác.
+
+# Phần XIV — Production review
+
+## 75. Live vs backtest
+
+So định kỳ:
+
+```text
+Signal Frequency
+Fill Rate
+Spread
+Slippage
+Holding Period
+Turnover
+PnL Distribution
+Drawdown
+Factor Exposure
+```
+
+Khác biệt lớn cần được giải thích.
+
+## 76. Capacity review
+
+Khi capital tăng, execution cost có thể tăng phi tuyến.
+
+Scale từng bước và đo realized cost thay vì giả định backtest scale vô hạn.
+
+## 77. Retirement rule
+
+Một strategy nên có điều kiện giảm hoặc dừng khi:
+
+- edge mất theo evidence;
+- cost vượt threshold;
+- market structure thay đổi;
+- operational risk không còn chấp nhận được.
+
+Không nên giữ strategy chỉ vì đã đầu tư nhiều công sức vào nó.
+
+## Kết luận
+
+Lợi nhuận thực tế là kết quả của cả **tín hiệu và cách tương tác với thị trường**.
+
+Chuỗi cần theo dõi là:
 
 ```text
 Signal
-→ Urgency
-→ Order Type
-→ Venue / Liquidity
-→ Fill / Slippage / Impact
-→ Position + Factor Aggregation
-→ Margin / Tail Stress
-→ TCA / Reconciliation
-→ Process Improvement
+→ Intended Position
+→ Order
+→ Fill
+→ Actual Exposure
+→ Portfolio Risk
+→ Realized P/L
+→ Attribution
+→ Improvement
 ```
 
-Trading edge only exists after costs and operational reality. Market microstructure is the bridge between a theoretical strategy and actual money.
+Một strategy có backtest tốt nhưng execution kém, capacity nhỏ hoặc operational control yếu vẫn có thể thất bại khi chạy thật.
