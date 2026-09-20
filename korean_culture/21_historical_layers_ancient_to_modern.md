@@ -84,6 +84,123 @@ Cuối thế kỷ XX và đầu XXI, Internet băng rộng, điện thoại di �
 
 Một cuộc họp có thể được tổ chức qua KakaoTalk, danh tiếng nhà hàng chịu ảnh hưởng của đánh giá, fandom hoạt động qua nền tảng toàn cầu, và một meme có thể tạo bối cảnh chung trong vài giờ. Ở đây công nghệ không chỉ là công cụ nằm ngoài văn hoá. Khi nó thay đổi **chi phí giao dịch (transaction cost)** của giao tiếp, tìm kiếm và phối hợp, nó trở thành một phần của hệ thống văn hoá.
 
+## Ký ức gia đình: lịch sử đi vào nhà qua câu chuyện, ảnh và sự im lặng
+
+Lịch sử quốc gia không chỉ đi vào đời sống qua sách giáo khoa. Nó còn đi qua **ký ức gia đình (family memory / 가족 기억)**: ông bà kể chuyện sơ tán, cha mẹ kể thời nhà máy hoặc khu phố cũ, album ảnh giữ hình ảnh nhà ở đã biến mất, còn một số chủ đề lại không được nhắc tới.
+
+Điểm quan trọng là **im lặng cũng là dữ liệu văn hoá**. Một gia đình có thể tránh nói về chiến tranh, nghèo đói, ly tán hoặc xung đột chính trị vì ký ức đau, vì sợ gây tranh cãi hoặc đơn giản vì thế hệ trẻ không hỏi. Khi một sự kiện không được truyền bằng lời, dấu vết vẫn có thể tồn tại trong cách gia đình đánh giá tiền bạc, an toàn, giáo dục hoặc ổn định nghề nghiệp.
+
+Do đó không nên đọc ký ức gia đình như bản ghi trung tính. Nó là một quá trình chọn lọc:
+
+```text
+sự kiện đã trải qua
+→ điều còn được nhớ
+→ điều có thể kể
+→ điều người trẻ hỏi
+→ điều được ghi lại
+```
+
+Mỗi bước đều có mất mát thông tin.
+
+## Hạ tầng ký ức: bảo tàng, tượng đài, ngày kỷ niệm và địa danh
+
+Một xã hội duy trì ký ức bằng **hạ tầng ký ức (memory infrastructure)**. Bảo tàng, đài tưởng niệm, bia, nghĩa trang, tên đường, ngày kỷ niệm, kho lưu trữ và sách giáo khoa đều làm một phần quá khứ dễ được nhìn thấy hơn phần khác.
+
+Điều này không có nghĩa mọi người diễn giải cùng một biểu tượng giống nhau. Cùng một nơi tưởng niệm có thể là không gian học lịch sử với người này, nơi đau buồn với gia đình khác, hoặc một điểm du lịch với khách trẻ.
+
+```text
+quá khứ
+→ lựa chọn cái gì được ghi nhớ công khai
+→ thiết kế không gian / nghi lễ
+→ thế hệ sau tiếp xúc
+→ diễn giải mới
+```
+
+Ký ức công cộng vì vậy vừa bảo tồn vừa tái tạo ý nghĩa.
+
+## Thành phố như bản thảo viết chồng: lớp cũ không biến mất hoàn toàn
+
+Seoul, Busan, Incheon và nhiều đô thị khác có thể đọc như một **bản thảo viết chồng (palimpsest)**. Tuyến đường cũ, chợ, khu công nghiệp, làng trên sườn đồi, khu tái phát triển và chung cư mới cùng tồn tại trong một không gian.
+
+Một khu vực có thể chuyển:
+
+```text
+làng / ruộng
+→ khu nhà lao động
+→ khu công nghiệp hoặc thương mại
+→ tái phát triển
+→ căn hộ / văn phòng / không gian văn hoá
+```
+
+Nhưng ký ức cũ có thể còn trong tên ga, tên chợ, nhà thờ, trường học hoặc câu chuyện cư dân. Vì vậy tái phát triển không chỉ thay vật liệu xây dựng; nó còn thay **khả năng truy cập ký ức tại chỗ**.
+
+Nếu mọi dấu vết vật lý biến mất, thế hệ sau phải phụ thuộc nhiều hơn vào kho lưu trữ và kể chuyện để biết nơi đó từng là gì.
+
+## Trường học, gia đình và truyền thông có thể kể cùng một quá khứ theo ba logic khác nhau
+
+**Lịch sử trong trường học** cần một cấu trúc đủ chung để hàng triệu học sinh cùng học. **Ký ức gia đình** lại rất cục bộ và cảm xúc. **Phim, truyền hình và webtoon** cần câu chuyện hấp dẫn, nhân vật rõ và nhịp kể.
+
+Ba kênh có mục tiêu khác nhau:
+
+```text
+trường học → chuẩn hoá kiến thức nền
+
+gia đình → truyền trải nghiệm và cảm xúc cục bộ
+
+truyền thông → tạo câu chuyện có khả năng thu hút và lưu thông
+```
+
+Khi ba kênh đồng thuận, một ký ức có thể trở nên cực kỳ mạnh. Khi khác nhau, người học dễ gặp cảm giác “sao câu chuyện nhà tôi khác sách/phim?”. Đây không nhất thiết là bằng chứng một bên hoàn toàn sai; trước hết cần kiểm tra phạm vi, nguồn và loại câu hỏi mỗi kênh đang trả lời.
+
+## Ký ức thế hệ: cùng một sự kiện nhưng không cùng vị trí quan sát
+
+Một người trải qua sự kiện khi là trẻ em, một người khi là công nhân, một người chỉ học qua sách sau nhiều thập kỷ sẽ có **vị trí ký ức (memory position)** khác nhau.
+
+Do đó khác biệt thế hệ không chỉ là khác tuổi. Nó còn là khác loại bằng chứng:
+
+- thế hệ trải nghiệm trực tiếp có ký ức cảm giác và đời thường;
+- thế hệ con cái nhận ký ức qua gia đình;
+- thế hệ sau nữa nhận qua trường học, bảo tàng và truyền thông số.
+
+Khi khoảng cách thời gian tăng, ký ức cá nhân giảm nhưng tài liệu lưu trữ có thể tăng khả năng tiếp cận nhờ số hoá. Lịch sử vì vậy chuyển từ **ký ức sống** sang **ký ức được trung gian hoá**.
+
+## Công nghiệp hoá và ký ức về thiếu thốn: vì sao tiết kiệm, học tập và ổn định có thể mang sắc thái đạo đức
+
+Những thế hệ trưởng thành trong thời thu nhập thấp, nhà ở thiếu và cơ hội giáo dục còn hạn chế có thể gắn tiết kiệm, việc làm ổn định hoặc học hành với cảm giác sinh tồn và tiến bộ. Thế hệ trẻ lớn lên trong xã hội giàu hơn nhưng tăng trưởng chậm, giá nhà cao và nghề nghiệp phân mảnh có thể đánh giá cùng hành vi bằng hệ quy chiếu khác.
+
+Đây là một nguồn của **lệch hệ quy chiếu thế hệ (generational reference-frame gap)**:
+
+```text
+cùng hành vi: đổi việc
+thế hệ A có thể đọc = mất ổn định
+thế hệ B có thể đọc = tối ưu nghề nghiệp
+```
+
+Không bên nào nhất thiết “không hiểu đời”. Họ đang tối ưu trong hai môi trường phần thưởng khác nhau.
+
+## Dân chủ hoá như ký ức công cộng, không chỉ một mục trong niên đại
+
+Các tư liệu của National Institute of Korean History và National Archives cho thấy phong trào dân chủ năm 1987, yêu cầu bầu cử tổng thống trực tiếp và quá trình sửa đổi hiến pháp là một phần quan trọng của lịch sử chính trị cuối thế kỷ XX. Trong văn hoá ký ức, điều đáng chú ý là các sự kiện như vậy tiếp tục tồn tại qua ngày kỷ niệm, kho lưu trữ, bảo tàng, phim tài liệu và giáo dục công dân.
+
+Chương này không dùng ký ức đó để đánh giá đảng phái hay lựa chọn chính trị hiện tại. Mục tiêu là chỉ ra một cơ chế: **khi một sự kiện được thể chế hoá thành ngày tưởng niệm, tư liệu lưu trữ và chương trình giáo dục, nó có khả năng tiếp tục định hình từ vựng công cộng của các thế hệ sau**.
+
+## Lịch sử số: số hoá làm quá khứ dễ truy cập hơn nhưng cũng dễ cắt khỏi bối cảnh
+
+Kho lưu trữ số, video cũ, báo chí số hoá và ảnh lịch sử cho phép người dùng tiếp cận tư liệu mà trước đây phải tới thư viện hoặc kho lưu trữ. Đây là bước giảm mạnh **chi phí truy cập nguồn sơ cấp (primary-source access cost)**.
+
+Nhưng khả năng cắt một ảnh, một câu hoặc một đoạn video ra khỏi tài liệu gốc cũng tăng. Vì vậy năng lực đọc lịch sử trong thời đại số cần thêm chuỗi kiểm tra:
+
+```text
+nguồn gốc là gì?
+ai tạo tài liệu?
+khi nào?
+cho mục đích nào?
+đoạn trước/sau nói gì?
+có nguồn độc lập nào đối chiếu không?
+```
+
+Ký ức số càng dễ lan, yêu cầu về **nguồn gốc tư liệu (provenance)** càng quan trọng.
+
 ## Liên hệ kiến thức: lịch sử như chuyển trạng thái
 
 Có thể mô hình hoá lịch sử bằng tư duy **chuyển trạng thái (상태 전이 / state transition)**. Tại thời điểm `t`, xã hội có một trạng thái gồm dân số, thiết chế, công nghệ, nguồn lực và niềm tin. Một sự kiện không xoá sạch trạng thái cũ mà tạo chuyển đổi sang trạng thái mới.
@@ -100,11 +217,25 @@ Trạng thái(t+1)
 
 Mô hình này giúp tránh lỗi “một nguyên nhân giải thích tất cả”. Công nghiệp hoá không tự động tạo thứ bậc; Nho giáo không tự động tạo chaebol; chiến tranh không tự động tạo `빨리빨리`. Hiện tượng thực tế thường là đầu ra của nhiều lớp tương tác.
 
-## Mô hình tư duy (Mental Model)
+## Liên hệ kiến thức: lịch sử có ba lớp khác nhau — sự kiện, ký ức và công dụng hiện tại
 
-> Hãy nhìn Hàn Quốc hiện đại như một thành phố được xây nhiều lần trên cùng một nền đất. Không thể giải thích đường phố hôm nay chỉ bằng bản thiết kế mới nhất, vì một con đường có thể vẫn đi theo ranh giới đã hình thành từ rất lâu. Văn hoá cũng vậy: mỗi thế hệ sửa một phần hệ thống nhưng hiếm khi đặt lại toàn bộ từ đầu.
+Khi gặp một tuyên bố lịch sử trong đời sống, nên tách ba câu hỏi:
 
-## Hiểu lầm phổ biến (Common Misconceptions)
+```text
+1. Sự kiện: điều gì có bằng chứng đã xảy ra?
+2. Ký ức: xã hội/nhóm nào đang nhớ và kể nó như thế nào?
+3. Công dụng hiện tại: câu chuyện này đang được dùng để giải thích hoặc biện minh cho điều gì hôm nay?
+```
+
+Ba lớp có liên hệ nhưng không đồng nhất. Một sự kiện lịch sử có thể được nhiều nhóm nhớ khác nhau; một ký ức đúng về trải nghiệm cá nhân vẫn chưa đủ để suy ra toàn bộ xã hội; một câu chuyện được dùng mạnh trong hiện tại không làm nó tự động trở thành mô tả đầy đủ của quá khứ.
+
+Đây là kỹ năng quan trọng để đọc văn hoá mà không biến lịch sử thành khẩu hiệu.
+
+## Mô hình tư duy
+
+> Hãy nhìn Hàn Quốc hiện đại như một thành phố được xây nhiều lần trên cùng một nền đất. Không thể giải thích đường phố hôm nay chỉ bằng bản thiết kế mới nhất, vì một con đường có thể vẫn đi theo ranh giới đã hình thành từ rất lâu. Văn hoá cũng vậy: mỗi thế hệ sửa một phần hệ thống nhưng hiếm khi đặt lại toàn bộ từ đầu. Đồng thời, điều còn được nhớ về hệ thống cũ cũng là một lớp văn hoá riêng.
+
+## Những hiểu lầm phổ biến
 
 ### “Hàn Quốc có một nền văn hoá liên tục, không đổi suốt hàng nghìn năm”
 
@@ -118,6 +249,24 @@ Công nghiệp hoá sau chiến tranh cực kỳ quan trọng, nhưng biết ch�
 
 Thực tế chúng thường lai hoá. Hanbok có thể xuất hiện trong kinh tế du lịch; nghi lễ tổ tiên được tổ chức trong căn hộ; Nho giáo được tranh luận trên YouTube; văn hoá người hâm mộ dùng đồng thời thứ bậc ngôn ngữ và công nghệ nền tảng toàn cầu.
 
+### “Ký ức của người từng trải qua sự kiện chính là toàn bộ lịch sử”
+
+Ký ức cá nhân là nguồn rất quý nhưng có góc nhìn, giới hạn và sự chọn lọc. Lịch sử cần đặt nhiều nguồn cạnh nhau.
+
+### “Bảo tàng hoặc phim lịch sử chỉ truyền lại quá khứ vốn có”
+
+Mọi cách trưng bày và kể chuyện đều phải lựa chọn cái gì xuất hiện, theo thứ tự nào và bằng ngôn ngữ nào. Điều đó không làm chúng vô giá trị; nó nhắc người học đọc cả nội dung lẫn cơ chế tuyển chọn.
+
+### “Nếu một nơi đã tái phát triển thì lịch sử địa phương không còn liên quan”
+
+Tái phát triển có thể xoá vật thể nhưng không tự động xoá ký ức, mạng gia đình, địa danh hay bất bình đẳng được tích luỹ trước đó.
+
+## Đọc tiếp
+
+Đọc cùng [`14_regions_jeju_local_identity_peninsula.md`](14_regions_jeju_local_identity_peninsula.md), [`15_contemporary_change_demography_migration.md`](15_contemporary_change_demography_migration.md), [`23_military_conscription_service_culture.md`](23_military_conscription_service_culture.md), [`25_civic_media_public_sphere_protest.md`](25_civic_media_public_sphere_protest.md) và thư viện [`../korean_history/`](../korean_history/README.md).
+
 ## Nguồn tham khảo định hướng
 
-Khi mở rộng chương này, ưu tiên National Institute of Korean History (국사편찬위원회), Academy of Korean Studies (한국학중앙연구원), National Archives of Korea (국가기록원), National Museum of Korea và UNESCO cho di sản. Với vấn đề lịch sử còn tranh luận, cần đối chiếu nhiều nguồn học thuật thay vì dựa vào một câu chuyện quốc gia duy nhất.
+Khi mở rộng chương này, ưu tiên National Institute of Korean History (`국사편찬위원회`), Academy of Korean Studies (`한국학중앙연구원`), National Archives of Korea (`국가기록원`), National Museum of Korea và UNESCO cho di sản. Với vấn đề lịch sử còn tranh luận, cần đối chiếu nhiều nguồn học thuật thay vì dựa vào một câu chuyện quốc gia duy nhất.
+
+Với lịch sử dân chủ hoá cuối thế kỷ XX, `우리역사넷` của National Institute of Korean History và hồ sơ của National Archives of Korea là các điểm bắt đầu tốt để kiểm tra niên đại, văn bản và tư liệu gốc trước khi diễn giải ý nghĩa văn hoá.
