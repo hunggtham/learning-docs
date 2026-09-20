@@ -10,7 +10,7 @@ Domain này chuyển từ việc “biết đọc báo cáo” sang khả năng 
 
 [03_VALUATION_DCF_AND_MULTIPLES.md](./03_VALUATION_DCF_AND_MULTIPLES.md) giải thích FCFF/FCFE DCF, mid-year convention, discount rate/country risk, working capital/capex/R&D reinvestment, SBC và dilution, growth/ROIC fade, terminal economics, sensitivity/tornado/Monte Carlo, P/E/P/B/EV multiples, reverse DCF, SOTP, NAV, replacement/liquidation value, bank/insurer/REIT/SaaS/commodity/biotech valuation, value-trap diagnostics và scenario-based expected return.
 
-[04_EARNINGS_QUALITY_MODELING_AND_FORENSICS.md](./04_EARNINGS_QUALITY_MODELING_AND_FORENSICS.md) đi sâu cash conversion, receivables, inventory, deferred revenue, capitalized costs, SBC, dilution, debt maturity, covenants, incremental ROIC, cohort/unit economics, three-statement modeling, scenario analysis và forensic red flags.
+[04_EARNINGS_QUALITY_MODELING_AND_FORENSICS.md](./04_EARNINGS_QUALITY_MODELING_AND_FORENSICS.md) chuyển accounting thành forensic/modeling workflow: cash conversion, DSO/DIO/DPO và CCC, accrual ratio, channel stuffing/revenue timing, returns/rebates/reserves, supplier finance/factoring, capitalized interest, tax effects, organic-growth và price-volume-mix bridges, gross/incremental-margin analysis, SBC/dilution, debt maturity/covenants/revolver, interest coverage, auditor/internal-control signals, consensus revisions, segment/geographic modeling, point-in-time data/versioning, sector-specific forensic checks và three-statement error controls.
 
 [05_SECTOR_SPECIFIC_ANALYSIS_BANKS_SEMICONDUCTORS_SAAS_RETAIL_REITS.md](./05_SECTOR_SPECIFIC_ANALYSIS_BANKS_SEMICONDUCTORS_SAAS_RETAIL_REITS.md) giải thích cách thay framework theo economic engine của từng ngành. Ngoài banks, semiconductors, SaaS, retail và REITs, file còn mở rộng sang insurance, internet platforms/marketplaces, industrials, construction, shipping, airlines, oil & gas/refining, utilities/power, telecom, biotech/pharma và mining/materials; mỗi sector được nối từ driver/KPI → accounting → cash flow → cycle → valuation.
 
@@ -18,6 +18,6 @@ Domain này chuyển từ việc “biết đọc báo cáo” sang khả năng 
 
 ## Sau domain này bạn cần làm được gì?
 
-Bạn cần có khả năng đọc ba báo cáo tài chính liên kết với nhau, phân biệt accounting result và economic result, map value chain và profit pool, xác định moat mechanism bằng evidence thay vì adjective, chọn đúng KPI theo business model, phân biệt structural growth với cyclical growth, xây driver-based base/bull/bear case, đọc valuation dưới góc implied expectations và đánh giá liệu management có thật sự chuyển business quality thành per-share shareholder value hay không.
+Bạn cần có khả năng đọc ba báo cáo tài chính liên kết với nhau, phân biệt accounting result và economic result, kiểm tra earnings có chuyển thành cash bền vững hay chỉ được hỗ trợ bởi accrual/working-capital/estimate, map value chain và profit pool, xác định moat mechanism bằng evidence thay vì adjective, chọn đúng KPI theo business model, phân biệt structural growth với cyclical growth, xây driver-based three-statement base/bull/bear case, đọc valuation dưới góc implied expectations và đánh giá liệu management có thật sự chuyển business quality thành per-share shareholder value hay không.
 
 Khi đã làm được điều đó, chuyển sang [04_economics](../04_economics/README.md) để hiểu environment bên ngoài doanh nghiệp.
