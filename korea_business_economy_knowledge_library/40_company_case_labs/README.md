@@ -1,78 +1,78 @@
-# Company Case Labs — thực hành phân tích doanh nghiệp Hàn Quốc
+# Phòng thực hành phân tích doanh nghiệp Hàn Quốc (Company Case Labs)
 
-Folder này là lớp **application** của Korea Business & Economy Knowledge Library. Các chapter trước xây mental model về lịch sử, macro, industry, accounting, governance và capital market; các case lab ở đây buộc người đọc dùng những mental model đó trên một company hoặc business structure cụ thể.
+Thư mục này là lớp **thực hành (application)** của bộ tài liệu về doanh nghiệp và kinh tế Hàn Quốc. Các chương trước xây dựng mô hình tư duy (mental model) về lịch sử, kinh tế vĩ mô (macro), ngành, kế toán (accounting), quản trị doanh nghiệp (corporate governance) và thị trường vốn (capital market). Các bài thực hành ở đây buộc người đọc dùng những mô hình đó trên một doanh nghiệp hoặc một cấu trúc kinh doanh cụ thể.
 
-Mục tiêu không phải đưa ra khuyến nghị mua/bán hay target price. Mỗi case được thiết kế như một phòng thí nghiệm: bắt đầu từ legal entity và production function, dựng driver tree, tìm nơi economic profit được tạo ra, nối driver với financial statements, sau đó stress-test balance sheet, governance, funding và valuation assumptions.
+Mục tiêu không phải đưa ra khuyến nghị mua/bán hay giá mục tiêu (target price). Mỗi bài được thiết kế như một phòng thí nghiệm: bắt đầu từ pháp nhân (legal entity) và hàm sản xuất (production function), dựng cây động lực (driver tree), xác định nơi lợi nhuận kinh tế (economic profit) được tạo ra, nối các động lực với báo cáo tài chính (financial statements), rồi kiểm tra sức chịu đựng (stress test) của bảng cân đối kế toán, cơ cấu quản trị, nguồn vốn và các giả định định giá.
 
-## Cách dùng case lab
+## Cách sử dụng các bài thực hành
 
-Không nên đọc case như một bài giới thiệu công ty. Trước mỗi section, hãy tự trả lời câu hỏi rồi mới đọc phần giải thích. Khi gặp số liệu snapshot, luôn giữ ngày tham chiếu. Một con số đúng ở FY2025 không phải structural truth của FY2027.
+Không nên đọc một bài như bài giới thiệu công ty. Trước mỗi phần, hãy tự trả lời câu hỏi rồi mới đọc lời giải thích. Khi gặp số liệu tại một thời điểm (snapshot), luôn giữ ngày tham chiếu. Một con số đúng ở năm tài chính 2025 (FY2025) không phải là sự thật cấu trúc bất biến cho FY2027.
 
-Workflow chung:
+Quy trình chung:
 
 ```text
-Entity resolution
-→ Business architecture / production function
-→ Revenue / cost driver tree
-→ Industry position
-→ Accounting translation
-→ Cash conversion
-→ Balance-sheet capacity
-→ Governance / capital allocation
-→ Macro transmission
-→ Scenario / stress test
-→ Valuation logic
-→ Thesis breakers
+Xác định đúng pháp nhân
+→ Hiểu kiến trúc kinh doanh và hàm sản xuất
+→ Dựng cây động lực doanh thu và chi phí
+→ Xác định vị thế trong ngành
+→ Chuyển cơ chế kinh tế thành số liệu kế toán
+→ Theo dõi quá trình chuyển lợi nhuận thành tiền mặt
+→ Đánh giá sức chịu đựng của bảng cân đối kế toán
+→ Phân tích quản trị và phân bổ vốn
+→ Theo dõi tác động truyền dẫn từ kinh tế vĩ mô
+→ Xây dựng kịch bản và kiểm tra sức chịu đựng
+→ Hiểu logic định giá
+→ Xác định điều kiện làm giả thuyết đầu tư không còn đúng
 ```
 
-Các file sử dụng ba loại dữ liệu. **Structural fact** là đặc điểm tương đối bền như memory semiconductor có fixed-cost intensity cao. **Snapshot fact** là dữ liệu có ngày như revenue một fiscal year cụ thể. **Stylized assumption** là số giả định phục vụ bài tập và luôn phải được nhận diện là giả định.
+Các file sử dụng ba loại dữ liệu. **Sự thật cấu trúc (structural fact)** là đặc điểm tương đối bền, chẳng hạn ngành bộ nhớ bán dẫn có cường độ chi phí cố định (fixed-cost intensity) cao. **Số liệu tại thời điểm (snapshot fact)** là dữ liệu có ngày cụ thể như doanh thu của một năm tài chính. **Giả định mô phỏng (stylized assumption)** là con số được đặt ra để phục vụ bài tập và phải luôn được nhận diện rõ là giả định.
 
-## Case Map
+## Bản đồ các bài thực hành
 
-| Case | Production function trung tâm | Skill chính |
+| Bài thực hành | Cơ chế kinh tế trung tâm | Kỹ năng chính |
 |---|---|---|
-| [Samsung Electronics](./00_samsung_electronics_semiconductor_cycle_case.md) | Multi-segment electronics + semiconductor | segment decomposition, cycle, CAPEX |
-| [SK hynix](./01_sk_hynix_hbm_memory_case.md) | Memory/HBM capacity | ASP, mix, yield, wafer allocation |
-| [Hyundai Motor](./02_hyundai_motor_auto_finance_ev_case.md) | Auto platform + captive finance | units, mix, incentives, finance, transition |
-| [NAVER](./03_naver_platform_ai_cloud_case.md) | Digital platform | users, monetization, GMV/TPV, AI/cloud |
-| [Korean SME supplier](./04_korean_sme_supplier_case.md) | B2B component supplier | customer concentration, working capital |
-| [LG CNS](./05_lg_cns_si_sm_cloud_case.md) | SI/SM + cloud/managed service | utilization, billing, project risk, recurring mix |
-| [Shinhan Financial Group](./06_shinhan_financial_group_bank_case.md) | Financial holding / banking | NIM, credit cost, RWA, CET1, capital allocation |
-| [LG Energy Solution](./07_lg_energy_solution_battery_case.md) | Battery capacity | GWh, utilization, yield, pass-through, CAPEX |
-| [Hanwha Aerospace](./08_hanwha_aerospace_defense_backlog_case.md) | Long-cycle defense contracts | backlog conversion, procurement, working capital |
-| [Coupang](./09_coupang_commerce_logistics_case.md) | Commerce + fulfillment network | density, membership, inventory, contribution economics |
-| [Construction & PF](./10_korean_construction_pf_case.md) | Project development / construction finance | bridge→본PF, presales, guarantees, refinancing |
+| [Samsung Electronics](./00_samsung_electronics_semiconductor_cycle_case.md) | Điện tử đa phân khúc + bán dẫn | tách phân khúc, chu kỳ, chi tiêu vốn (CAPEX) |
+| [SK hynix](./01_sk_hynix_hbm_memory_case.md) | Công suất bộ nhớ/HBM | giá bán bình quân (ASP), cơ cấu sản phẩm, tỷ lệ thành phẩm đạt chuẩn (yield), phân bổ wafer |
+| [Hyundai Motor](./02_hyundai_motor_auto_finance_ev_case.md) | Nền tảng ô tô + tài chính nội bộ | sản lượng, cơ cấu sản phẩm, ưu đãi bán hàng, tài chính, chuyển đổi EV |
+| [NAVER](./03_naver_platform_ai_cloud_case.md) | Nền tảng số | người dùng, kiếm tiền (monetization), GMV/TPV, AI và đám mây |
+| [Nhà cung cấp SME Hàn Quốc](./04_korean_sme_supplier_case.md) | Nhà cung cấp linh kiện B2B | tập trung khách hàng, vốn lưu động (working capital) |
+| [LG CNS](./05_lg_cns_si_sm_cloud_case.md) | SI/SM + đám mây và dịch vụ quản lý | tỷ lệ sử dụng nhân lực, đơn giá tính phí, rủi ro dự án, doanh thu lặp lại |
+| [Shinhan Financial Group](./06_shinhan_financial_group_bank_case.md) | Tập đoàn tài chính/ngân hàng | biên lãi ròng (NIM), chi phí tín dụng, RWA, CET1, phân bổ vốn |
+| [LG Energy Solution](./07_lg_energy_solution_battery_case.md) | Công suất pin | GWh, tỷ lệ sử dụng công suất, yield, cơ chế chuyển giá nguyên liệu, CAPEX |
+| [Hanwha Aerospace](./08_hanwha_aerospace_defense_backlog_case.md) | Hợp đồng quốc phòng dài hạn | chuyển đơn hàng tồn đọng thành doanh thu, mua sắm quốc phòng, vốn lưu động |
+| [Coupang](./09_coupang_commerce_logistics_case.md) | Thương mại + mạng lưới hoàn tất đơn hàng | mật độ mạng lưới, thành viên, tồn kho, lợi nhuận đóng góp |
+| [Xây dựng và PF](./10_korean_construction_pf_case.md) | Phát triển dự án + tài trợ dự án | khoản vay cầu nối → 본PF, bán trước, bảo lãnh, tái cấp vốn |
 
-## Vì sao cần nhiều case khác nhau?
+## Vì sao cần nhiều mô hình doanh nghiệp khác nhau?
 
-Không có một template tài chính duy nhất phù hợp mọi business.
+Không có một mẫu tài chính duy nhất phù hợp với mọi doanh nghiệp. Mỗi loại hình tạo doanh thu, chi phí và dòng tiền theo một cơ chế khác nhau.
 
 ```text
-Semiconductor
-→ capacity × utilization × yield × ASP
+Bán dẫn
+→ công suất × tỷ lệ sử dụng × yield × ASP
 
-Bank
-→ earning assets × NIM - credit cost, constrained by capital
+Ngân hàng
+→ tài sản sinh lãi × NIM - chi phí tín dụng, trong giới hạn vốn an toàn
 
-Platform
-→ users × engagement × monetization
+Nền tảng số
+→ người dùng × mức độ tương tác × khả năng kiếm tiền
 
 SI/SM
-→ billable resources × utilization × rate + recurring service
+→ nhân lực có thể tính phí × tỷ lệ sử dụng × đơn giá + dịch vụ lặp lại
 
-Defense
-→ backlog × conversion × margin × cash timing
+Quốc phòng
+→ đơn hàng tồn đọng × tốc độ chuyển đổi × biên lợi nhuận × thời điểm thu/chi tiền
 
-Commerce/logistics
-→ customers × orders × contribution/order, constrained by density
+Thương mại/logistics
+→ khách hàng × số đơn hàng × lợi nhuận đóng góp mỗi đơn, phụ thuộc mật độ mạng lưới
 
-Construction/PF
-→ project sales - project cost - financing, amplified by leverage/guarantees
+Xây dựng/PF
+→ doanh thu dự án - chi phí dự án - chi phí tài chính, khuếch đại bởi đòn bẩy và bảo lãnh
 ```
 
-Điều cần học không phải thuộc lòng formula. Hãy nhận ra **production function** của company rồi chọn đúng accounting và valuation lens.
+Điều cần học không phải thuộc lòng công thức. Hãy nhận ra **hàm sản xuất (production function)** của doanh nghiệp rồi chọn đúng cách đọc kế toán và định giá.
 
-## Reading Path 1 — Manufacturing và export economy
+## Lộ trình 1 — Sản xuất và nền kinh tế xuất khẩu
 
 ```text
 Samsung Electronics
@@ -82,9 +82,9 @@ Samsung Electronics
 → Hanwha Aerospace
 ```
 
-Path này cho thấy Korean manufacturing không phải một homogeneous sector. Memory có commodity/technology cycle; auto có product mix và captive finance; battery có capacity ramp; defense có procurement/backlog.
+Lộ trình này cho thấy sản xuất Hàn Quốc không phải một khu vực đồng nhất. Bộ nhớ có chu kỳ hàng hóa–công nghệ; ô tô chịu tác động của cơ cấu sản phẩm và tài chính nội bộ; pin phụ thuộc quá trình tăng công suất; quốc phòng phụ thuộc mua sắm công và đơn hàng tồn đọng.
 
-## Reading Path 2 — Digital và service economy
+## Lộ trình 2 — Kinh tế số và dịch vụ
 
 ```text
 NAVER
@@ -92,83 +92,71 @@ NAVER
 → LG CNS
 ```
 
-NAVER giúp hiểu asset-light-ish digital monetization nhưng vẫn có AI/cloud CAPEX. Coupang cho thấy digital company có thể trở thành physical logistics network. LG CNS cho thấy enterprise IT lại phụ thuộc human utilization, project contracts và recurring managed services.
+NAVER giúp hiểu cách một nền tảng số chuyển quy mô người dùng thành doanh thu, đồng thời vẫn phải đầu tư CAPEX cho AI và đám mây. Coupang cho thấy một công ty số có thể đồng thời là một mạng lưới logistics vật lý rất lớn. LG CNS cho thấy doanh nghiệp CNTT cho khách hàng doanh nghiệp lại phụ thuộc mạnh vào tỷ lệ sử dụng nhân lực, hợp đồng dự án và dịch vụ quản lý có tính lặp lại.
 
-## Reading Path 3 — Financial system và leverage
+## Lộ trình 3 — Hệ thống tài chính và đòn bẩy
 
 ```text
 Shinhan Financial Group
-→ Construction & PF
-→ Korean SME supplier
+→ Xây dựng & PF
+→ Nhà cung cấp SME Hàn Quốc
 ```
 
-Bank case cho thấy credit được tạo và priced thế nào. PF case cho thấy credit đi vào project và có thể quay lại financial system qua refinancing/guarantees. SME case cho thấy working capital và bank funding tác động real company ra sao.
+Bài về ngân hàng cho thấy tín dụng được tạo ra và định giá như thế nào. Bài PF cho thấy tín dụng đi vào dự án và có thể quay trở lại hệ thống tài chính thông qua tái cấp vốn hoặc bảo lãnh. Bài SME cho thấy vốn lưu động và vốn vay ngân hàng tác động trực tiếp đến một doanh nghiệp sản xuất như thế nào.
 
-## Reading Path 4 — Nếu mục tiêu là hiểu company nơi mình làm việc
+## Lộ trình 4 — Hiểu doanh nghiệp nơi mình làm việc
 
-Nếu company là Korean SI/SM, supplier hoặc subsidiary của business group:
+Nếu doanh nghiệp thuộc SI/SM, là nhà cung cấp hoặc là công ty con của một tập đoàn Hàn Quốc, có thể đọc theo chuỗi:
 
 ```text
-LG CNS case
-→ Korean SME supplier case
-→ relevant parent-group / industry case
+LG CNS
+→ Nhà cung cấp SME Hàn Quốc
+→ Case về tập đoàn mẹ hoặc ngành tương ứng
 → 12_labor
 → 13_business_culture
 → 05_group_structure
 → 08_governance
 ```
 
-Đừng chỉ hỏi company “lớn hay nhỏ”. Hãy hỏi vị trí của legal entity trong value chain, ai là customer, ai quyết định budget, revenue recurring hay project-based, company có pricing power không và skill/career capital được tích lũy ở layer nào.
+Đừng chỉ hỏi doanh nghiệp “lớn hay nhỏ”. Hãy hỏi pháp nhân đó nằm ở đâu trong chuỗi giá trị (value chain), ai là khách hàng, ai quyết định ngân sách, doanh thu mang tính lặp lại hay theo dự án, doanh nghiệp có quyền định giá (pricing power) hay không và năng lực nghề nghiệp được tích lũy ở tầng nào.
 
-## Quan hệ với các chapter khác
+## Quan hệ với các chương khác
 
-Trước khi làm case nên đọc [20_how_to_analyze_a_korean_company](../20_how_to_analyze_a_korean_company.md) và [39_practical_company_analysis_workbook_and_case_patterns](../39_practical_company_analysis_workbook_and_case_patterns.md). Khi cần accounting quay lại [09_disclosure_accounting_dart_kind](../09_disclosure_accounting_dart_kind.md) và [38_forensic_accounting_red_flags_and_earnings_quality](../38_forensic_accounting_red_flags_and_earnings_quality.md). Khi cần hiểu funding, debt và downside, dùng [11_banks_finance_and_corporate_funding](../11_banks_finance_and_corporate_funding.md) cùng [36_credit_ratings_bonds_default_and_restructuring](../36_credit_ratings_bonds_default_and_restructuring.md).
+Trước khi làm bài thực hành nên đọc [cách phân tích một công ty Hàn Quốc](../20_how_to_analyze_a_korean_company.md) và [workbook phân tích doanh nghiệp](../39_practical_company_analysis_workbook_and_case_patterns.md). Khi cần đọc kế toán, quay lại [DART/KIND và báo cáo tài chính](../09_disclosure_accounting_dart_kind.md) cùng [chất lượng lợi nhuận và dấu hiệu cảnh báo](../38_forensic_accounting_red_flags_and_earnings_quality.md). Khi cần hiểu nguồn vốn, nợ và rủi ro giảm giá trị, dùng [ngân hàng và tài trợ doanh nghiệp](../11_banks_finance_and_corporate_funding.md) cùng [xếp hạng tín dụng, trái phiếu và tái cơ cấu](../36_credit_ratings_bonds_default_and_restructuring.md).
 
-Industry dependencies:
+## Khung chung để tự tạo bài thực hành mới
 
-```text
-Semiconductor → 14
-Auto/Battery → 15
-Platform/Commerce → 17 + 33
-Construction/PF → 18
-Defense → 32
-IT/SI/SM → 34
-Financial group → 35
-```
-
-## Một framework chung để tự tạo case thứ 12
-
-Khi gặp company chưa có trong folder, đừng copy case gần nhất một cách máy móc. Hãy tự dựng:
+Khi gặp một doanh nghiệp chưa có trong thư mục, không nên sao chép máy móc bài gần nhất. Hãy tự dựng mô hình bằng các câu hỏi sau:
 
 ```text
-1. Legal entity là gì?
-2. Customer trả tiền cho cái gì?
-3. Unit kinh tế tự nhiên là gì? car, wafer, GWh, user, loan, project hay developer-day?
-4. Revenue = activity × monetization nào?
-5. Cost nào variable, cost nào fixed?
-6. Asset/capital nào bắt buộc để scale?
-7. Working capital hoạt động ra sao?
-8. Debt/capital constraint nằm ở đâu?
-9. Macro variable nào truyền trực tiếp nhất?
-10. Accounting line nào dễ che economic reality?
-11. Scenario nào có causal coherence?
-12. Evidence nào sẽ falsify thesis?
+1. Pháp nhân (legal entity) thực sự đang phân tích là gì?
+2. Khách hàng trả tiền cho điều gì?
+3. Đơn vị kinh tế tự nhiên là gì: xe, wafer, GWh, người dùng, khoản vay, dự án hay ngày công lập trình viên?
+4. Doanh thu = mức hoạt động × khả năng kiếm tiền nào?
+5. Chi phí nào biến đổi, chi phí nào cố định?
+6. Tài sản hoặc vốn nào bắt buộc để mở rộng quy mô?
+7. Vốn lưu động vận hành ra sao?
+8. Giới hạn về nợ hoặc vốn nằm ở đâu?
+9. Biến số kinh tế vĩ mô nào truyền tác động trực tiếp nhất?
+10. Khoản mục kế toán nào dễ che khuất thực tế kinh tế?
+11. Kịch bản nào có chuỗi nguyên nhân–kết quả hợp lý?
+12. Bằng chứng nào sẽ bác bỏ giả thuyết ban đầu?
 ```
 
-Nếu trả lời được 12 câu này, bạn đã có skeleton của một company-analysis model.
+Nếu trả lời được các câu này, ta đã có bộ khung của một mô hình phân tích doanh nghiệp.
 
-## Quy tắc quan trọng nhất
+## Mental Model — Mô hình tư duy
 
-Một company case không kết thúc ở câu “doanh nghiệp này tốt/xấu”. Output tốt hơn là một causal model có thể bị falsify:
+> Học phân tích doanh nghiệp không phải học thuộc danh sách công ty. Ta đang học một **từ vựng về các cơ chế tạo giá trị (production functions)**. Khi nhận ra doanh nghiệp thuộc loại “cỗ máy kinh tế” nào, ta biết nên nhìn động lực, kế toán, rủi ro và dòng tiền ở đâu.
+
+Một bài phân tích tốt không kết thúc bằng câu “doanh nghiệp này tốt/xấu”. Nó kết thúc bằng một mô hình nhân quả có thể bị kiểm chứng hoặc bác bỏ:
 
 ```text
 Nếu A xảy ra
-→ driver B thay đổi
-→ margin/cash C thay đổi
-→ balance sheet hoặc valuation D thay đổi.
+→ động lực B thay đổi
+→ biên lợi nhuận hoặc dòng tiền C thay đổi
+→ bảng cân đối hoặc định giá D thay đổi.
 
-Nếu evidence E không xuất hiện trong thời gian T
-→ giả thuyết ban đầu phải được sửa hoặc bỏ.
+Nếu bằng chứng E không xuất hiện trong khoảng thời gian T
+→ giả thuyết ban đầu phải được sửa hoặc loại bỏ.
 ```
-
-> **Mental Model:** học company analysis không phải học danh sách công ty. Ta đang học một vocabulary của production functions. Khi nhận ra company thuộc loại economic machine nào, ta biết nên nhìn driver, accounting, risk và cash flow ở đâu.
