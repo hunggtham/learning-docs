@@ -24,8 +24,16 @@ Tập trung vào ownership, dispatch, actor reentrancy, performance, UIKit/Swift
 
 Tập trung vào migration Swift 5→6.x, Swift 6.4, ABI/library evolution, macros, systems/memory-safety APIs, rendering identity, offline sync, observability, performance/energy budget, App Extensions, WidgetKit, ActivityKit, App Intents, StoreKit, CloudKit, release engineering, distributed-version migration, multi-platform/cross-platform Swift và production-readiness audit.
 
+### 5. [Production Reference & Completion Guide](05_swift_ios_production_reference.md)
+
+Đọc sau bốn level chính hoặc dùng như reference khi làm project. File này hoàn thiện các mảng xuyên cấp thường bị thiếu trong tutorial: closure lifetime/`@Sendable`, numeric correctness, HTTP semantics, tolerant Codable, retry/backoff/idempotency, Core Data legacy, background transfer, ownership mới, generated code, observability, memory graph, extension process boundary, supply-chain security, ADR/version matrix, disaster recovery, release artifact testing và Definition of Done theo risk.
+
 ## Nguyên tắc version
 
 Một API được compiler biết chưa chắc chạy được trên deployment target cũ. Luôn tách **Xcode version**, **Swift compiler/language mode**, **SDK version** và **deployment target**. Với runtime API mới, dùng availability check; với source khác theo platform/build mode, dùng conditional compilation.
 
 Tài liệu ưu tiên API hiện đại nhưng không xóa UIKit, Combine, Objective-C interop, Core Data và các pattern legacy quan trọng, bởi codebase production thực tế thường tồn tại qua nhiều thế hệ framework.
+
+## Cách dùng bộ tài liệu
+
+Lần đầu hãy đọc Beginner theo thứ tự và tự code lại ví dụ. Intermediate nên học song song với một app có network + persistence + authentication mock + deep link. Advanced/Senior dùng để refactor app đó về concurrency, modularization, profiling, testing và CI/CD. Master dùng để audit migration/version, security, release và observability. `05_swift_ios_production_reference.md` là bước completion cuối để nối các failure mode production thành một mental model thống nhất.
