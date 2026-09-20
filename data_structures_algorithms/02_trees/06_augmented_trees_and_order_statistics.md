@@ -52,3 +52,72 @@ trong `O(1)`, balanced BST update thường vẫn `O(log n)` vì chỉ `O(log n)
 ## Mental Model
 
 > Augmentation là lưu **summary của subtree** để một query có thể loại cả subtree mà không inspect từng node.
+
+## Ví dụ: k-th smallest bằng subtree size
+
+Giả sử mỗi node có `size`. Với rank `k` tính từ 1:
+
+```java
+Node kth(Node root, int k) {
+    Node cur = root;
+
+    while (cur != null) {
+        int leftSize = cur.left == null ? 0 : cur.left.size;
+
+        if (k == leftSize + 1) return cur;
+
+        if (k <= leftSize) {
+            cur = cur.left;
+        } else {
+            k -= leftSize + 1;
+            cur = cur.right;
+        }
+    }
+
+    return null;
+}
+```
+
+Ta không cần inorder traversal toàn tree. `leftSize` cho biết có chính xác bao nhiêu keys nhỏ hơn current key trong subtree hiện tại. Trên balanced tree, mỗi bước đi xuống một level nên query `O(log n)`.
+
+Rank query làm chiều ngược lại: khi đi right, toàn bộ left subtree và current node chắc chắn nhỏ hơn target, nên cộng `leftSize + 1`.
+
+## Interval overlap không chỉ là “range query”
+
+Hai intervals `[a,b]` và `[c,d]` overlap theo closed-interval semantics khi:
+
+\[
+a \le d \land c \le b
+\]
+
+Nếu domain dùng half-open interval `[a,b)`, điều kiện boundary khác. Data structure chỉ đúng khi semantics interval được xác định trước.
+
+Interval tree thường order nodes theo `start`. Metadata `maxEnd` giúp prune: nếu `left.maxEnd < query.start`, không interval nào ở left có thể chạm query.
+
+## Augmentation và prefix/range structures
+
+Augmented BST và Segment Tree đều lưu summary, nhưng solve mutation models khác nhau. Segment tree có coordinate/range hierarchy gần cố định; augmented BST giữ dynamic ordered keys. Nếu keys insert/delete động và cần rank/predecessor, augmented balanced BST tự nhiên hơn. Nếu index domain ổn định và cần range aggregate mạnh, segment tree thường đơn giản hơn.
+
+## Một nguyên tắc thiết kế tổng quát
+
+Khi muốn thêm query mới vào tree, hãy hỏi:
+
+> “Có summary nào của một subtree giúp tôi quyết định bỏ qua toàn subtree đó không?”
+
+Nếu summary có thể combine từ children trong `O(1)`, augmentation thường giữ update `O(log n)` trên balanced tree. Nếu summary cần nhìn toàn subtree mỗi lần rotation/update, lợi thế biến mất.
+
+## Common failure: cập nhật metadata không đúng thứ tự
+
+Sau rotation, phải recompute node thấp hơn trước rồi node mới ở trên. Nếu tính parent bằng metadata child cũ, BST ordering vẫn đúng nhưng rank/interval query sai âm thầm.
+
+Vì vậy augmented tree nên có một hàm duy nhất kiểu:
+
+```text
+pull(node)
+```
+
+để tái tính mọi metadata từ local data và children sau mỗi structural change.
+
+## Mental Model mở rộng
+
+> Balanced tree quyết định **đi đâu** bằng key order. Augmentation thêm đủ summary để quyết định **có cần đi vào subtree đó không** hoặc **subtree đó đóng góp bao nhiêu vào câu trả lời**.
