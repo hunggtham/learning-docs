@@ -1,5 +1,19 @@
 # 05 — Trading & Derivatives
 
-`00_MASTER_TRADING_FOREX_RISK.md` giữ giáo trình tổng hợp trading/Forex/risk. `01_DERIVATIVES_FUTURES_OPTIONS_CFD.md` tách riêng futures, options, CFD và hedging. `02_SYSTEMATIC_RISK_BACKTEST_EXECUTION.md` đi sâu vào expectancy, drawdown, portfolio heat, Monte Carlo, overfitting, execution và review process.
+Domain này tập trung vào trading như một hệ thống xác suất có execution cost và portfolio risk, không phải một bộ pattern vào lệnh. Bạn sẽ học từ Forex/risk management tới futures/options/CFD, backtest, execution microstructure và quản trị nhiều vị thế.
 
-Trading không phải bước bắt buộc của investing. Nếu mục tiêu chính là tích lũy tài sản dài hạn, bạn có thể học folder này sau. Nếu dùng leverage, futures, Forex hoặc options, folder này là phần bắt buộc trước khi dùng tiền thật.
+## Thứ tự đọc
+
+[00_MASTER_TRADING_FOREX_RISK.md](./00_MASTER_TRADING_FOREX_RISK.md) là bản tổng quan dài về chart, market structure, Forex, leverage, margin, position sizing, expectancy, XAUUSD, backtest và journal.
+
+[01_DERIVATIVES_FUTURES_OPTIONS_CFD.md](./01_DERIVATIVES_FUTURES_OPTIONS_CFD.md) giải thích futures, basis, contango/backwardation, options, Greeks, implied volatility, CFD, leverage và hedging.
+
+[02_SYSTEMATIC_RISK_BACKTEST_EXECUTION.md](./02_SYSTEMATIC_RISK_BACKTEST_EXECUTION.md) nâng sang system design, sample size, overfitting, walk-forward logic, Monte Carlo, MAE/MFE, Sharpe/Sortino/Calmar và risk-of-ruin thinking.
+
+[03_EXECUTION_MICROSTRUCTURE_AND_TRADING_PORTFOLIO.md](./03_EXECUTION_MICROSTRUCTURE_AND_TRADING_PORTFOLIO.md) đi sâu order book, maker/taker, queue priority, spread, slippage, market impact, adverse selection, broker execution, portfolio heat, factor concentration, volatility targeting, expected shortfall và implementation shortfall.
+
+## Sau domain này bạn cần làm được gì?
+
+Bạn cần có khả năng tính position size trước khi vào lệnh, phân biệt signal edge và execution edge, đánh giá một backtest bằng expectancy/drawdown chứ không chỉ win rate, nhận ra các lệnh correlated và quản trị tổng risk của trading book. Bạn cũng cần hiểu khi nào không nên trade vì liquidity, news, broker hoặc system conditions bất thường.
+
+Để gắn trading với market cụ thể, chuyển sang [06_markets_korea_vietnam](../06_markets_korea_vietnam/README.md).
