@@ -1,397 +1,571 @@
-# Derivatives — Futures, Options, Swaps, CFD và hedging
+# Derivatives — Futures, Options, Swaps, CFD và Hedging
 
-> Derivative là contract whose value depends on an underlying. Nó có thể dùng để hedge, tạo exposure hiệu quả hoặc speculate, nhưng leverage, margin, collateral và nonlinear payoff khiến risk khác cash assets. Chapter này xây nền tảng rộng trước khi sang file options/volatility chuyên sâu.
+> Derivative là contract whose value depends on an underlying hoặc một risk factor. Nó cho phép transfer risk, tạo exposure capital-efficient hoặc hedge existing positions. Nhưng leverage, margin, collateral, basis, optionality và counterparty mechanics khiến derivative risk khác cash assets. Chapter này xây nền **contract-level** trước khi sang options/volatility chuyên sâu.
 
-## 1. Derivative không đồng nghĩa ownership
+## 1. Derivative không đồng nghĩa Ownership
 
-Mua common stock thường tạo ownership/residual claim. Futures, options, forwards, swaps hay CFD chủ yếu tạo contractual exposure.
+Mua stock thường tạo residual ownership. Futures, forwards, options, swaps và CFD tạo contractual exposure.
 
-Điều này thay đổi legal rights, margin, counterparty, settlement và cash-flow timing. Trước trade phải biết underlying, contract type, notional, multiplier, expiry, settlement, margin, financing, collateral và worst-case path.
+Vì vậy investor phải hiểu legal rights, notional, settlement, margin, collateral, expiry, exercise, financing và counterparty. Price direction chỉ là một layer.
 
-## 2. Derivative tồn tại vì transfer risk
+## 2. Derivative tồn tại để Transfer Risk
 
-Derivative cho phép một participant chuyển risk cho participant khác. Farmer có thể hedge crop price; airline hedge fuel; importer hedge FX; fund hedge beta/duration.
+Farmer hedge crop price; airline hedge fuel; exporter hedge FX; pension fund hedge duration; market maker intermediate order flow.
 
-Speculator nhận risk vì kỳ vọng được compensated. Market maker intermediate flow và hedge residual exposure. Derivative không tạo risk từ hư không; nó repackage và redistribute risk, dù leverage có thể amplify system exposure.
+Speculator nhận risk vì kỳ vọng compensation. Derivatives không tạo risk từ hư không nhưng leverage và interconnected collateral can amplify systemic consequences.
 
-## 3. Forward
+## 3. Underlying và Reference Rate
 
-Forward là OTC agreement mua/bán underlying ở future date với price fixed today. Terms customizable nhưng counterparty risk lớn hơn standardized exchange futures.
+Underlying có thể là equity, index, bond, rate, FX, commodity, credit event hoặc volatility.
 
-Professional forwards thường operate under master agreements và collateral terms. Retail FX forward-like products có thể được embedded trong broker structure.
+Một contract có thể reference price nhưng settle cash rather than deliver asset. Luôn phân biệt **reference exposure** và **legal deliverable**.
 
-## 4. Futures
+## 4. Notional vs Market Value
 
-Futures standardized bởi exchange: contract size, tick, expiry và settlement rules cố định. Clearing house đứng giữa participants và mark-to-market P/L thường xuyên.
+Notional measures economic scale; market value là current contract value.
 
-Standardization tăng liquidity nhưng tạo basis/roll requirement nếu exact underlying/timing của hedge khác contract.
+Futures notional:
 
-## 5. Notional value
+```text
+Notional = Futures Price × Contract Multiplier
+```
 
-`Notional = Futures Price × Contract Multiplier`
+Margin 5% không nghĩa risk = 5%. Market risk gần notional sensitivity.
 
-Margin posted không phải position size. Contract margin 5% của notional vẫn expose trader gần 100% notional price movement.
+## 5. Gross Notional và Net Exposure
 
-Risk calculations phải bắt đầu từ notional/sensitivity, không từ margin deposit.
+Portfolio có thể có gross notional rất lớn nhưng net directional exposure nhỏ nếu offsetting positions.
 
-## 6. Tick size và tick value
+Gross vẫn matter cho liquidity, counterparty, margin và basis risk. Net-only view có thể hide operational leverage.
 
-Tick size là minimum quoted price change. Tick value = tick size × contract multiplier.
+# Phần I — Forwards và Futures
 
-Nếu tick 0,25 và multiplier 50, one tick = 12,5 currency units.
+## 6. Forward
 
-Stop measured in points/ticks chỉ meaningful khi convert thành money risk.
+Forward là customized OTC agreement exchange asset/currency at future date at price agreed now.
 
-## 7. Initial margin và maintenance margin
+Customization useful nhưng creates bilateral counterparty/legal risk. Professional market thường dùng master agreements và collateralization.
 
-Initial margin là collateral needed open/maintain position. Maintenance margin là minimum threshold.
+## 7. Futures
 
-Exchange/clearing/broker có thể raise margin khi volatility tăng. Margin requirement itself therefore procyclical: risk capital demanded nhiều nhất lúc market stressed.
+Futures standardized bởi exchange và centrally cleared. Contract size, tick, expiry, trading hours và settlement rules predefined.
 
-## 8. Variation margin và path dependence
+Standardization improves liquidity nhưng hedge may imperfect if timing/grade/location không match actual exposure.
 
-Futures gains/losses marked to market. Intermediate losses reduce account equity even if contract later recovers.
+## 8. Tick Size và Tick Value
 
-Trader có thể bị liquidated before thesis ultimately proves right. Đây là path risk unique to leveraged marked-to-market instruments.
+Tick size là minimum quote increment; tick value = tick size × multiplier.
 
-## 9. Margin waterfall
+Trader phải convert points/ticks thành currency loss before choosing position size.
 
-Risk process có nhiều layers: customer margin, broker capital, clearing member resources, clearing house default fund và other protections depending market.
+## 9. Initial Margin
 
-Retail trader không cần memorize legal waterfall, nhưng nên hiểu broker failure/clearing stress là separate risk layer beyond market P/L.
+Initial margin là collateral to open/maintain exposure, không phải purchase price.
 
-## 10. Futures fair value và carry
+Exchange/broker can raise margin when volatility rises. Therefore leverage available thường giảm đúng lúc market stressed.
 
-Financial futures fair-value intuition:
+## 10. Maintenance Margin
 
-`Futures ≈ Spot + financing/carry - distributions/benefits`
+If account equity falls below maintenance threshold, participant may need add funds or face liquidation.
 
-Exact formula depends compounding, dividends, borrow cost và time. Basis changes khi expected dividends, funding hoặc borrow availability change.
+Path matters: position can ultimately recover but trader may be liquidated before recovery.
 
-## 11. Basis
+## 11. Variation Margin
 
-Basis = futures price relative spot/reference asset. Hedger can be right on underlying but hedge imperfect because basis moves.
+Futures are marked to market. Gains/losses settled periodically, usually daily and sometimes intraday depending system.
 
-Basis risk is central across commodity grade/location, bond cheapest-to-deliver, FX forward points và index composition differences.
+This reduces accumulated counterparty exposure but creates liquidity need. A profitable long-term hedge can still require cash during adverse interim moves.
 
-## 12. Convergence near expiry
+## 12. Margin Buffer
 
-Near expiry, futures và settlement reference should converge under contract rules/arbitrage. Before expiry, basis can vary substantially.
+Professional risk management separates required margin from **liquidity buffer**.
 
-Understanding convergence prevents mistaking normal carry for mispricing.
+Using nearly all available margin leaves no room for volatility-driven requirement increase. Safe leverage should survive stress, not normal-day requirement.
 
-## 13. Cash vs physical settlement
+## 13. Futures Fair Value
 
-Index contracts thường cash-settled. Commodity contracts may allow/require physical delivery.
+For financial assets:
 
-Know first notice day, last trading day, delivery rules và broker forced-liquidation policy. Holding deliverable futures too near expiry without understanding can create operational disaster.
+```text
+Futures ≈ Spot + Financing Carry - Income / Benefits
+```
 
-## 14. Commodity term structure
+Exact relation depends dividends, borrow, rates and time. Fair value changes when expected dividends/funding change.
 
-Commodity futures curve reflects storage, financing, inventories, seasonality và convenience yield.
+## 14. Basis
 
-Contango/backwardation are not simple bullish/bearish labels. Curve shape changes with scarcity and logistics.
+Basis is futures relative to spot/reference price. Hedger may be correct on underlying but lose due basis change.
 
-## 15. Roll yield
+Basis risk appears in index composition, commodity grade/location, bond cheapest-to-deliver and cross-hedges.
 
-Continuous exposure requires rolling expiries. In contango, buying more-expensive next contract can drag return. In backwardation, roll may help.
+## 15. Convergence
 
-Total futures return includes spot/reference move, roll, collateral return and sometimes active contract-selection effects.
+As expiry approaches, futures converges toward settlement reference under arbitrage and contract rules.
 
-## 16. Calendar spreads
+Understanding convergence prevents confusing normal carry/basis with mispricing.
 
-Calendar spread long one expiry/short another expresses curve view rather than pure directional view.
+## 16. Contango và Backwardation
 
-It is sensitive to inventory, storage, seasonality and temporary bottlenecks. Spread can gap sharply even when outright commodity price moves little.
+Commodity term structure reflects storage, financing, inventory scarcity, seasonality and convenience yield.
 
-## 17. Open interest
+Contango/backwardation are curve states, not automatically bearish/bullish signals.
 
-Open interest is outstanding contracts; volume is traded contracts during period. Rising price + rising OI can indicate new positions entering, but interpretation is not deterministic.
+## 17. Roll Yield
 
-OI is positioning context, not a direct forecast.
+Continuous exposure requires selling expiring contract and buying next one.
 
-## 18. Options: quyền và nghĩa vụ
+Total return roughly includes:
 
-Call buyer has right to buy at strike; put buyer right to sell. Buyer pays premium; seller accepts obligation under contract rules.
+```text
+Spot / Reference Move
++ Roll Effect
++ Collateral Return
+- Trading Costs
+```
 
-Standalone long option usually limits loss to premium. Short options can create much larger losses and margin expansion.
+Commodity fund return can diverge materially from spot headline.
 
-## 19. Strike, expiry và moneyness
+## 18. Calendar Spread
 
-ITM/ATM/OTM describe spot vs strike relationship, not trade profitability after premium.
+Long one expiry/short another expresses relative curve view.
 
-A call can finish ITM but still produce loss if intrinsic value below premium paid.
+Spread can be driven by inventory, storage constraints, seasonality and supply disruption even when outright price stable.
 
-## 20. Intrinsic và extrinsic value
+## 19. Open Interest
 
-Call intrinsic = `max(S-K,0)`; put intrinsic = `max(K-S,0)`.
+Open interest measures outstanding contracts; volume measures transactions during period.
 
-Extrinsic value reflects time, implied volatility, rates, dividends/borrow and supply-demand. It decays to zero by expiry, but nonlinear.
+Price/OI combinations offer positioning context but not deterministic forecasts.
 
-## 21. American vs European exercise
+## 20. Physical Delivery
 
-American-style generally can exercise before expiry; European only at expiry. Early exercise decision depends remaining time value, dividends, rates và borrow.
+Some futures permit delivery. Key dates include first notice day, last trading day and delivery period.
 
-Short sellers must understand assignment risk, particularly around ex-dividend dates.
+Retail trader should know broker auto-close policy. “Tôi sẽ đóng trước expiry” is not operational plan without dates.
 
-## 22. Put-call parity
+## 21. Cash Settlement
+
+Index/rate contracts often settle against specified index/fixing. Settlement methodology can create basis around expiry.
+
+Know whether final price uses close, auction, average or other reference.
+
+## 22. Cheapest-to-Deliver
+
+Bond futures often allow delivery of multiple eligible bonds. Short chooses **cheapest-to-deliver (CTD)** after conversion factors.
+
+This creates basis and delivery-option complexity. Hedging Treasury duration with futures requires understanding CTD/DV01, not only contract notional.
+
+## 23. Futures Curve Positioning
+
+Front-month exposure, deferred-month exposure and calendar spreads can behave differently under same macro thesis.
+
+A commodity supply shock may steepen backwardation rather than move all contracts equally.
+
+# Phần II — Options Core
+
+## 24. Option là State-Contingent Contract
+
+Call gives right to buy; put gives right to sell at strike under terms. Buyer pays premium; seller assumes obligation.
+
+Payoff depends not only direction but timing, magnitude and volatility.
+
+## 25. Intrinsic và Extrinsic Value
+
+```text
+Call Intrinsic = max(S-K,0)
+Put Intrinsic  = max(K-S,0)
+```
+
+Extrinsic value reflects time, IV, rates, dividends/borrow and supply-demand.
+
+## 26. ITM / ATM / OTM
+
+Moneyness describes relation between spot/forward and strike, not profitability after premium.
+
+An option can expire ITM but still generate negative return to buyer.
+
+## 27. Exercise Style
+
+American options may exercise early; European only at expiry. Other contracts may have custom Bermudan-style dates.
+
+Early exercise depends dividends, rates and remaining time value.
+
+## 28. Assignment
+
+Short option can be assigned. Assignment can create unexpected stock/cash obligations.
+
+Understand broker cutoffs, settlement and ex-dividend risk.
+
+## 29. Put-Call Parity
 
 Under simplifying assumptions:
 
-`Call - Put ≈ Spot - PV(Strike)`
+```text
+Call - Put ≈ Spot - PV(Strike)
+```
 
-Adjust for dividends/carry. Parity connects options, underlying và financing and explains synthetic positions.
+Parity explains synthetic forwards and arbitrage relations.
 
-## 23. Greeks
+## 30. Greeks as Local Sensitivities
 
-Delta, Gamma, Theta, Vega và Rho describe local sensitivities.
+Delta, Gamma, Theta, Vega and Rho summarize local risk. They are not full scenario analysis for jumps or large moves.
 
-Portfolio delta-neutral can still be massively short gamma/vega. Greeks are not full scenario P/L under jumps; they are local approximations.
+A delta-neutral book can still be massively short gamma/vega.
 
-## 24. Implied volatility
+## 31. Implied Volatility
 
-IV is model input making model price equal market price. It embeds risk premium and supply-demand; not objective forecast.
+IV is model input consistent with market price, not guaranteed future realized volatility.
 
-Options trader must compare priced distribution with expected realized distribution, not only predict direction.
+Option decision should compare **priced distribution** with your expected distribution, not direction alone.
 
-## 25. Event volatility và IV crush
+## 32. Event Volatility
 
-Near earnings/CPI/FOMC, near-term IV can rise. After event, uncertainty disappears and IV often drops.
+Earnings/CPI/FOMC can elevate short-dated IV. After event, IV often collapses.
 
-Long option may lose despite correct direction if move smaller than priced and vol/time decay dominates.
+Long call can lose despite stock rising if move smaller than market priced.
 
-## 26. Vertical spreads
+## 33. Option Structures
 
-Vertical spreads buy one strike and sell another same expiry. They trade premium reduction for capped payoff.
+Vertical spreads, straddles, strangles, collars and covered calls reshape payoff.
 
-Defined-risk structure can simplify sizing but still has assignment/liquidity risk before expiry.
+Structure does not create edge by itself. It only chooses which states you buy/sell.
 
-## 27. Straddles và strangles
+## 34. Short-Volatility Risk
 
-Long straddle/strangle express long-vol/large-move view. Short versions earn premium when realized movement smaller than priced but carry convex tail risk.
+Selling options often produces frequent small gains and rare large losses.
 
-Win rate alone is misleading; payoff distribution matters.
+High win rate is not proof of positive expectancy. Margin requirement can expand during same crash that creates mark-to-market loss.
 
-## 28. Covered call
+## 35. Defined Risk vs Realized Risk
 
-Covered call = long underlying + short call. It collects premium but sells upside convexity.
+A vertical spread may have contractual max loss, but execution/assignment/early-close path can still create temporary margin or liquidity issues.
 
-Income label can hide opportunity cost during strong rallies.
+Know broker treatment rather than relying on expiry payoff diagram only.
 
-## 29. Protective put và collar
+# Phần III — Swaps
 
-Protective put buys downside insurance. Collar finances part of protection by selling upside call.
+## 36. Swap là Exchange of Cash-Flow Rules
 
-Insurance has cost; hedge design always trades protection, participation and carry.
+Swap counterparties exchange cash flows according formula, usually on notional that may never be exchanged directly.
 
-## 30. Short option tail risk
+Main categories include interest-rate, FX/cross-currency, total-return and credit swaps.
 
-Naked short options can show many small wins then rare huge losses. Margin often rises when volatility spikes, exactly when mark-to-market losses appear.
+## 37. Interest-Rate Swap
 
-Never size by premium received.
+Plain-vanilla IRS commonly exchanges fixed rate for floating reference.
 
-## 31. Swaps overview
+Pay-fixed/receive-floating generally reduces duration; receive-fixed/pay-floating increases duration, all else equal.
 
-Swap exchanges cash-flow streams according formula. Common examples: interest-rate swap, FX swap/cross-currency swap, total-return swap and credit-default swap.
+## 38. Swap Curve
 
-Swaps are usually OTC/institutional and rely heavily on legal agreements, collateral and counterparty management.
+Swap rates form term structure distinct from government bond curve.
 
-## 32. Interest-rate swap
+Swap spread versus government yields reflects credit, collateral, supply-demand and balance-sheet technicals.
 
-Plain-vanilla interest-rate swap commonly exchanges fixed rate vs floating reference on notional principal.
+## 39. DV01 of Swaps
 
-A borrower with floating debt can pay fixed/receive floating to reduce rate uncertainty. A bond investor can use swaps to alter duration without selling cash bonds.
+Swap risk should be measured by DV01/key-rate sensitivities, not notional.
 
-## 33. Swap DV01 và duration
+Long-maturity swap can carry much more rate risk per unit notional than short swap.
 
-Rate swap risk should be measured by sensitivity such as DV01/PV01 rather than notional alone.
+## 40. Overnight Indexed Swap
 
-Large notional short-maturity swap can have less rate sensitivity than smaller long-duration swap.
+OIS references overnight rate compounded over period. OIS curve is important for policy expectations and collateralized discounting in many markets.
 
-## 34. Cross-currency swap
+Central-bank meeting pricing is often inferred from short OIS/futures structures.
 
-Cross-currency swaps exchange principal/cash flows in different currencies. They can hedge both FX and interest-rate mismatch.
+## 41. FX Swap
 
-Cross-currency basis can deviate from textbook covered-interest parity due balance-sheet/funding constraints.
+FX swap exchanges currencies spot and reverses at forward date. It is major short-term funding tool, not same as directional FX spot trade.
 
-## 35. Total Return Swap
+Funding stress can appear in swap points/basis.
 
-Total Return Swap (*TRS*) transfers economic return of asset/index without direct ownership. Receiver gets price appreciation + income and pays financing/spread, depending contract.
+## 42. Cross-Currency Swap
 
-TRS creates leverage/counterparty exposure and can hide economic ownership from simple cash-security view.
+Cross-currency swap exchanges cash flows/principal in different currencies, allowing institutions hedge long-term FX + rate mismatch.
 
-## 36. Credit Default Swap
+Cross-currency basis deviates from textbook parity when balance-sheet/funding constraints matter.
 
-Credit Default Swap (*CDS*) transfers credit risk. Protection buyer pays premium; protection seller compensates upon defined credit event subject to contract settlement.
+## 43. Total Return Swap
 
-CDS spread is market price of credit protection, not exact default probability. Recovery, liquidity and risk premium matter.
+TRS transfers total economic return of asset/index without direct ownership.
 
-## 37. CDS basis
+Receiver gets price + income return and pays financing/spread. TRS creates leverage, counterparty exposure and sometimes opacity about economic ownership.
 
-Cash bond spread and CDS spread can differ because funding, deliverability, liquidity, counterparty and technical flows.
+# Phần IV — Credit Derivatives
 
-Basis trade is not risk-free even if theoretical relation suggests convergence.
+## 44. Credit Default Swap
 
-## 38. Variance/volatility swaps intuition
+CDS protection buyer pays periodic premium; seller compensates upon defined credit event.
 
-Institutional derivatives can exchange realized variance against fixed strike. They offer purer volatility exposure than options but have nonlinear tail behavior and OTC complexity.
+CDS spread is market price of protection, not pure default probability. Recovery, liquidity and risk premium matter.
 
-Retail learner mainly needs understand volatility itself can be underlying risk factor.
+## 45. CDS Notional và Jump-to-Default
 
-## 39. CFD mechanics
+Credit book may look low-vol until default event causes sudden loss.
 
-CFD is bilateral contract with broker based on price change; client usually does not own underlying.
+**Jump-to-default** risk should be stressed independently of daily spread volatility.
 
-Economics include spread/commission, financing, dividend adjustments, margin, stop-out and broker execution policy.
+## 46. CDS Basis
 
-## 40. Overnight financing
+Cash bond spread and CDS spread can diverge due funding, liquidity, deliverability and technical demand.
 
-CFD/leveraged spot positions accrue financing. Directionally correct long-horizon trade can underperform badly after carry.
+Basis trade has convergence/counterparty/funding risk; not arbitrage-free in real world.
 
-Always compare with cash asset/futures alternative.
+## 47. Credit Index Derivatives
 
-## 41. Broker/counterparty risk
+CDS indices allow hedge/bet on basket credit more liquidly than many single-name bonds.
 
-For OTC products, broker is legal counterparty/intermediary. Check entity, regulator, client-money segregation, negative-balance rules, execution policy and withdrawal process.
+They reduce idiosyncratic exposure but introduce index composition/basis vs actual portfolio.
 
-Marketing labels such as ECN/STP do not replace legal due diligence.
+# Phần V — Volatility and Other Institutional Derivatives
 
-## 42. Central clearing vs bilateral exposure
+## 48. Variance Swap Intuition
 
-Exchange futures/options generally clear centrally; many OTC derivatives may also be centrally cleared depending product/regulation, while others remain bilateral.
+Variance swaps exchange realized variance vs fixed variance strike.
 
-Clearing reduces bilateral counterparty complexity but concentrates risk into clearing system and margin mechanisms.
+They provide more direct volatility exposure than options but have nonlinear tail economics and OTC collateral complexity.
 
-## 43. Collateral
+## 49. Volatility as an Underlying Risk Factor
 
-Collateral protects against counterparty default but creates liquidity demand. Haircuts determine how much value counts.
+Volatility can itself carry risk premium. Short-vol strategies earn premium in calm periods but are exposed to convex crisis loss.
 
-In stress, collateral requirements/haircuts can rise, forcing cash raising and asset sales. Thus “hedged” derivative can still create liquidity risk.
+Portfolio factor mapping should include vol exposure, not only delta/beta.
 
-## 44. Netting
+# Phần VI — CFD và Leveraged OTC Products
 
-Master agreements may allow offsetting positive/negative derivative values with same counterparty upon default.
+## 50. CFD Mechanics
 
-Netting reduces gross credit exposure, but enforceability depends legal agreement/jurisdiction. Retail accounts may have simpler broker-level netting rules.
+CFD is bilateral contract with broker on price change. Client usually does not own underlying.
 
-## 45. Counterparty wrong-way risk
+Costs include spread, commission, financing, dividend adjustments and potential conversion fees.
 
-Wrong-way risk occurs when counterparty becomes weaker exactly when exposure to it rises.
+## 51. Overnight Financing
 
-Example: buying protection from institution whose credit quality deteriorates in same systemic crisis you hedge against.
+CFD held for long periods can accumulate significant financing. Directional thesis may be right but economics poor after carry.
 
-## 46. Hedging beta bằng index futures
+Compare CFD with futures/cash asset before choosing implementation.
 
-Approx hedge contracts:
+## 52. Broker Counterparty
 
-`Contracts ≈ Portfolio Value × Beta / Futures Notional`
+Legal entity, regulator, client-money treatment, execution policy and withdrawal process matter.
 
-But beta changes and sector composition creates basis risk. Hedge should be monitored, not set-and-forget.
+“ECN/STP” marketing language does not replace legal/execution due diligence.
 
-## 47. FX hedging
+## 53. Stop-Out Mechanics
 
-FX forwards/futures reduce foreign-currency exposure but create carry/roll/basis costs.
+Broker can liquidate positions when margin level breaches rule. Liquidation may occur at unfavorable price and order sequence.
 
-Hedge ratio should reflect liability currency and desired volatility, not automatically 100%.
+Know formula, threshold and whether protection against negative balance applies under your entity.
 
-## 48. Duration hedging
+# Phần VII — Collateral và Counterparty Risk
 
-Bond exposure can be hedged with rate futures/swaps by matching DV01/key-rate sensitivities rather than nominal values.
+## 54. Central Clearing
 
-Curve twists mean one-duration number can be insufficient.
+CCP interposes between buyers/sellers, reducing bilateral complexity through margining/netting.
 
-## 49. Commodity hedging
+But risk becomes concentrated in clearing ecosystem; participant still faces broker/clearing-member operational risk.
 
-Producer can short futures; consumer long futures. Grade, location and timing mismatch create basis risk.
+## 55. Bilateral OTC Exposure
 
-Airline hedging crude does not perfectly hedge jet fuel crack spread.
+Non-cleared OTC trades depend master agreement, collateral annex, netting and counterparty limits.
 
-## 50. Equity-option hedge
+Legal documentation is part of economic risk.
 
-Protective puts/put spreads can cap downside but cost premium. Index future short removes beta linearly but also removes upside.
+## 56. Collateral
 
-Choice depends whether risk to hedge is linear beta, tail loss or event-specific.
+Collateral reduces unsecured exposure but creates liquidity requirement.
 
-## 51. Hedge ratio
+When volatility rises, variation margin/haircuts can increase, forcing cash raising and asset sales.
 
-Hedge ratio can be notional-based, beta-based, DV01-based, delta-based or statistical.
+## 57. Initial vs Variation Margin
 
-Mathematically optimized hedge may fail if correlation changes. Objective must be defined first: reduce variance, cap tail, match liability or protect a specific scenario?
+Initial margin protects against future liquidation gap after default; variation margin settles current mark-to-market.
 
-## 52. Basis risk
+Both consume liquidity but serve different purposes.
 
-Perfect hedge rarely exists because hedge instrument differs from exposure in grade, timing, index composition or liquidity.
+## 58. Netting
 
-Basis risk should be treated as residual position, not ignored.
+Close-out netting offsets positive and negative positions with same counterparty after default where legally enforceable.
 
-## 53. Cross-hedging
+Gross derivative notionals can be huge while net current exposure much smaller, but legal enforceability is crucial.
 
-When direct hedge absent, use correlated instrument. Example small exporter hedging via broader FX/index proxy.
+## 59. Wrong-Way Risk
 
-Cross-hedge effectiveness depends stable relationship; stress can break correlation.
+Wrong-way risk occurs when counterparty quality worsens exactly when exposure to it increases.
 
-## 54. Derivative P/L attribution
+Example: buying crisis protection from institution highly exposed to same crisis.
 
-Separate P/L into underlying move, carry/roll, volatility, financing, basis and execution.
+## 60. Collateral Currency Mismatch
 
-Without attribution, trader may think directional thesis worked while return actually came from favorable carry, or vice versa.
+Derivative P/L may be in one currency while eligible collateral/liquidity sits in another.
 
-## 55. Position sizing bằng scenario loss
+FX move can therefore create margin stress beyond market thesis.
 
-Do not size by margin. Size based on loss under invalidation and stress scenario.
+# Phần VIII — Hedging
 
-If one contract can lose $1,000 in plausible adverse move while risk budget is $200, one contract already too large regardless margin requirement.
+## 61. Hedge Objective trước Instrument
 
-## 56. Portfolio Greeks/notional aggregation
+Define objective: reduce beta, duration, FX, commodity input, tail drawdown or liability mismatch.
 
-Across derivatives, aggregate Delta-equivalent, Gamma, Vega, DV01, FX notionals and credit exposure.
+A hedge cannot be evaluated without objective.
 
-Ten small trades may create one huge common factor exposure.
+## 62. Equity Beta Hedge
 
-## 57. Liquidity risk
+```text
+Contracts ≈ Portfolio Value × Beta / Futures Notional
+```
 
-Derivative liquidity can vanish around events/limit moves. Quoted spread/depth in normal markets may not represent exit cost in stress.
+Beta instability and composition mismatch create residual risk.
 
-Options far OTM, deferred commodity expiries and small contracts can be especially fragile.
+## 63. Duration Hedge
 
-## 58. Expiry clustering
+Match DV01/key-rate DV01 using futures/swaps rather than nominal.
 
-Portfolio with many contracts expiring same date has operational and market concentration. Roll periods can create large execution need.
+Curve twists can leave residual risk even if total duration matched.
 
-Stagger expiries when appropriate and maintain calendar of notice/exercise dates.
+## 64. FX Hedge
 
-## 59. Corporate actions
+Forward/futures hedge foreign asset currency. Return impact includes rate differential, basis and transaction cost.
 
-Equity options/futures can be adjusted for splits, mergers, special dividends or spin-offs. Contract deliverable may change.
+Hedge ratio should connect to liability currency, not only FX forecast.
 
-Never assume old multiplier/strike remains economically identical after action; read exchange notice.
+## 65. Commodity Hedge
 
-## 60. Tax/accounting/regulatory layer
+Producer short futures; consumer long futures. Grade/location/timing mismatch creates basis risk.
 
-Derivative tax, reporting and eligibility vary by jurisdiction/account. Economic exposure may be same but after-tax result different.
+Hedging crude for jet fuel leaves crack-spread risk.
 
-For real-money decisions, verify current broker/exchange/tax rules rather than rely static note.
+## 66. Cross-Hedge
 
-## 61. Contract-spec checklist
+If direct instrument unavailable, correlated proxy can be used. Effectiveness depends relationship stability.
 
-Verify underlying, multiplier, tick, trading hours, expiry, notice dates, settlement, margin, price limits, exercise style, assignment, corporate-action adjustment, financing, tax và counterparty.
+Crisis correlation breakdown can make cross-hedge fail exactly when needed.
 
-Unknown spec = no trade.
+## 67. Hedge Slippage
 
-## 62. Common mistakes
+Hedge ratio is only theoretical until executed. Spread, impact, roll and rebalancing alter realized protection.
 
-Frequent errors: sizing by margin, forgetting multiplier, ignoring roll/carry, holding deliverable contract too long, treating CFD as ownership, buying option solely for direction, selling premium because win rate high, ignoring collateral calls, assuming hedge perfect, and stacking correlated derivatives.
+Hedge cost attribution should separate market and implementation.
 
-## 63. Derivatives trong portfolio
+## 68. Over-Hedging
 
-Three broad roles: hedge existing risk, obtain efficient/temporary exposure, or speculate within defined risk budget.
+Hedge larger than underlying exposure creates net speculative position.
 
-Derivative should solve portfolio problem or express tested edge. Leverage is implementation tool, not alpha source.
+As underlying size/beta changes, hedge should be recalibrated or deliberately left with known residual.
 
-## 64. Mental model cuối cùng
+# Phần IX — Portfolio Risk và Lifecycle
 
-Analyze every derivative through:
+## 69. Aggregate Sensitivities
 
-`Underlying → Contract payoff → Notional/sensitivity → Margin/collateral path → Carry/roll/basis → Liquidity/expiry → Counterparty/settlement → Portfolio interaction`
+Derivative book nên aggregate:
 
-Nếu không giải thích được tất cả layers này, chưa nên dùng contract đó.
+```text
+Delta-equivalent notional
+Gamma
+Vega
+DV01 / Key-rate DV01
+FX notionals
+Credit spread DV01
+Jump-to-default
+Margin requirement
+```
+
+Ticket count is meaningless if many contracts share same factor.
+
+## 70. Gross vs Net Derivative Exposure
+
+Low net delta with huge gross options positions can still have large gamma/vega/liquidity risk.
+
+Report both net and gross dimensions.
+
+## 71. Basis Book
+
+Maintain map of direct exposure vs hedge instrument, expected relationship and failure scenario.
+
+Basis is a position; it should have risk limit.
+
+## 72. Expiry Calendar
+
+Concentrated expiries create roll/settlement risk. Maintain calendar of last trade, notice, exercise and corporate-action dates.
+
+Operational discipline prevents avoidable losses.
+
+## 73. Corporate Actions
+
+Equity derivative strikes/multipliers/deliverables may adjust after split, special dividend, merger or spin-off.
+
+Read exchange notice; do not assume contract unchanged.
+
+## 74. Roll Management
+
+Rolling contracts means close old + open new. Track spread, liquidity, carry and tax/account effects.
+
+Roll should be planned before liquidity migrates away from expiring contract.
+
+## 75. P/L Attribution
+
+Derivative P/L should separate:
+
+```text
+Underlying Move
+Carry / Roll
+Volatility
+Rates
+Basis
+Financing
+FX
+Execution
+```
+
+Without attribution, strategy improvement becomes guesswork.
+
+## 76. Scenario-Based Position Sizing
+
+Never size by margin posted. Size by plausible adverse P/L and liquidity/margin consequences.
+
+If one contract can lose 1,000 under normal stress while budget is 200, contract is too large regardless of 100 margin.
+
+## 77. Margin Stress Test
+
+Stress both price and requirement increase. Example price loss consumes 30% buffer while exchange doubles initial margin.
+
+A strategy can survive P/L but fail funding.
+
+## 78. Liquidity Stress
+
+Quoted spread/depth can vanish around events or limit moves.
+
+Stress wider spread, partial fills and inability to close all positions simultaneously.
+
+## 79. Counterparty Stress
+
+Ask what happens if broker/issuer becomes unavailable while market moves. Keep records, backup liquidity and avoid concentration where possible.
+
+## 80. Tax / Regulatory / Account Layer
+
+Eligibility, taxation, reporting and margin rules vary by jurisdiction/account and change over time.
+
+Permanent notes explain concepts; real-money use requires current verification.
+
+## 81. Contract-Spec Checklist
+
+Before trade know: underlying, notional, multiplier, tick, hours, expiry, settlement, margin, price limits, exercise, assignment, corporate-action treatment, financing, tax, legal counterparty and worst-case path.
+
+Unknown specification = no trade.
+
+## 82. Mental Model cuối cùng
+
+```text
+Underlying Risk
+→ Contract Payoff
+→ Notional / Sensitivities
+→ Carry / Basis / Roll
+→ Margin / Collateral
+→ Liquidity / Expiry
+→ Counterparty / Settlement
+→ Hedge / Portfolio Interaction
+→ Stress / Attribution
+```
+
+Derivative sophistication không nằm ở dùng cấu trúc phức tạp. Nó nằm ở việc hiểu đầy đủ lifecycle của contract và biết risk nào đang được transfer, leverage hoặc giữ lại.
