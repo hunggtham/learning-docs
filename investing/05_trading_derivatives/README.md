@@ -22,4 +22,8 @@ Bạn cần có khả năng đọc một derivative bằng `underlying → payof
 
 Với options, bạn cần đọc position bằng `direction + volatility + time + convexity + liquidity + margin`, hiểu vì sao delta-neutral không đồng nghĩa low-risk, và stress P/L trên nhiều spot/IV/time states trước khi giao dịch.
 
+## Case studies để áp dụng
+
+Đọc [CPI Shock → Portfolio](../07_integrated_case_studies/01_INFLATION_SHOCK_FROM_CPI_TO_PORTFOLIO.md) để luyện event execution, hedge matching, option-IV risk và post-event attribution. Đọc [Credit & Liquidity Crisis](../07_integrated_case_studies/02_CREDIT_LIQUIDITY_CRISIS_TRANSMISSION.md) để luyện margin/collateral stress, forced deleveraging, liquidity hierarchy và execution under stress.
+
 Để gắn research/trading với market cụ thể, chuyển sang [06_markets_korea_vietnam](../06_markets_korea_vietnam/README.md).
