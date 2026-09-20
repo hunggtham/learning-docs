@@ -1,50 +1,49 @@
 # Biology Knowledge Library — Thư viện kiến thức Sinh học
 
-Sinh học (Biology / 생물학) thường bị học thành nhiều mảng tách rời: tế bào ở một chương, DNA ở chương khác, cơ thể người ở phần khác, rồi evolution và ecology dường như là một môn mới. Cấu trúc đó thuận tiện cho syllabus nhưng không thuận tiện cho việc **hiểu bản chất**.
+Sinh học (Biology / 생물학) nghiên cứu **sự sống như một hệ thống vật chất có tổ chức**: hệ này lấy và chuyển năng lượng, lưu/đọc thông tin, duy trì boundary, điều chỉnh trạng thái, sinh sản và thay đổi qua tiến hóa. Thư viện này được viết cho người có thể đã quên gần như toàn bộ Sinh học phổ thông; vì vậy các chapter không giả định người đọc đã nhớ Hóa học, DNA, tế bào hay các hệ cơ quan.
 
-Knowledge Library này được viết lại theo một dòng reasoning liên tục:
+Đây không phải một Master Book khổng lồ và cũng không phải collection note rời. Mỗi file là một chapter có mental model riêng, nhưng chapter trước **tạo ra câu hỏi bắt buộc** dẫn sang chapter sau. Nếu đọc theo dependency, toàn thư viện trở thành một dòng reasoning từ atom tới biosphere.
 
-> **Vật chất có những property nào → các molecule tự tổ chức ra sao → cell tạo boundary và chuyển năng lượng thế nào → cell lưu và đọc information ra sao → information được truyền và biến đổi qua generation thế nào → multicellular organism phối hợp hàng tỷ cell ra sao → organism tương tác thành population/community/ecosystem thế nào → con người đo và can thiệp các hệ đó bằng biotechnology/computation ra sao.**
+> **Mental model trung tâm:** sự sống duy trì organization bằng ba dòng — **vật chất, năng lượng và thông tin**. Boundary tạo difference; difference tạo flow; feedback điều chỉnh flow; variation tạo possibility; selection/history định hình form qua thời gian.
 
-Mỗi file vẫn là một chapter độc lập đủ để đọc riêng, nhưng không còn được viết như một note đứng một mình. Đầu chapter nhắc lại vấn đề mà chapter trước để lại; cuối chapter đặt ra câu hỏi khiến chapter tiếp theo cần tồn tại.
+---
 
 ## 1. Knowledge graph tổng thể
 
 ```mermaid
 flowchart TD
-A[Scientific thinking, scale, models]
-A --> B[What is life?]
+A[Scientific thinking / scale] --> B[What is life?]
 B --> C[Chemistry, water, energy]
 C --> D[Biomolecules, enzymes, ATP]
-D --> E[Cells, membranes, transport]
-E --> F[Metabolism: respiration & photosynthesis]
-F --> G[Cell signaling & cell cycle]
-G --> H[DNA, genes & gene expression]
-H --> I[Inheritance, variation & mutation]
-I --> J[Genomics, epigenetics & regulation]
-J --> K[Evolution & population genetics]
-K --> L[Phylogeny, taxonomy & biodiversity]
-L --> M[Microorganisms & viruses]
-M --> N[Plant biology]
-N --> O[Animal physiology & homeostasis]
-O --> P[Nervous, endocrine & immune systems]
-P --> Q[Reproduction & development]
-Q --> R[Population, community & behavior]
-R --> S[Ecosystems & biogeochemical cycles]
-S --> T[Biotechnology & bioinformatics]
-T --> U[Math, computation & cross-scale connections]
-
-E --> O
-G --> P
+D --> E[Cell architecture, membrane, transport]
+E --> F[Metabolism, respiration, photosynthesis]
+F --> G[Signaling, cell cycle]
+G --> H[DNA, genes, expression]
+H --> I[Inheritance, variation, mutation]
+I --> J[Genomics, epigenetics, regulation]
+I --> K[Evolution, population genetics]
+K --> L[Phylogeny, taxonomy, biodiversity]
+L --> M[Microorganisms, viruses]
+E --> N[Plant biology]
+E --> O[Animal physiology & homeostasis]
+O --> P[Nervous, endocrine, immune]
+G --> Q[Reproduction & development]
 H --> Q
-K --> R
-M --> S
-H --> T
+K --> R[Population, community, behavior]
+N --> R
+O --> R
+R --> S[Ecosystems, cycles, conservation]
+J --> T[Biotechnology, bioinformatics, systems biology]
+M --> T
+S --> U[Math, computation, scale connections]
+T --> U
 ```
 
-Các arrow phụ thể hiện một điều quan trọng: knowledge graph không hoàn toàn tuyến tính. Ví dụ physiology cần quay lại membrane transport và metabolism; development cần gene regulation; ecology cần evolution; biotechnology quay lại DNA chemistry và microbial defense.
+Sơ đồ này không biểu diễn difficulty level. Nó biểu diễn **dependency**: muốn hiểu proton gradient trong mitochondria thì cần membrane/ion gradient trước; muốn hiểu natural selection thì cần inheritance/variation; muốn hiểu development thì cần signaling + gene regulation; muốn hiểu ecosystem thì cần population/community interaction.
 
-## 2. Cấu trúc thư mục
+---
+
+## 2. Cấu trúc thư viện
 
 ```text
 biology/
@@ -89,178 +88,214 @@ biology/
 └── COVERAGE_AUDIT.md
 ```
 
-Prefix trong `00_foundations` giữ nguyên để không phá các link đã tồn tại, nhưng **thứ tự đọc chuẩn** là:
+---
+
+## 3. Nếu bắt đầu từ số 0, hãy đọc theo tuyến này
+
+### Chặng 1 — học cách nhìn một hệ sống
+
+Bắt đầu với [`00_scientific_thinking_scale_and_models.md`](./00_foundations/00_scientific_thinking_scale_and_models.md). Chapter này dạy cách phân biệt observation với mechanism, model với reality, correlation với causation; đồng thời giới thiệu scale, structure–function, feedback, gradient, network và ba dòng matter–energy–information.
+
+Sau đó đọc [`00_what_is_life.md`](./00_foundations/00_what_is_life.md). Câu hỏi lúc này không còn là “sinh vật có những bộ phận nào?”, mà là “một hệ vật chất phải có boundary, metabolism, information, regulation và heredity như thế nào để duy trì được trạng thái sống?”.
+
+Kết thúc chặng này, bạn chưa biết chi tiết cell nhưng phải có mental model: **life là process được duy trì liên tục chứ không phải một danh sách chất**.
+
+### Chặng 2 — giảm sự sống xuống chemistry rồi xây lại
+
+[`01_chemistry_energy_and_water.md`](./00_foundations/01_chemistry_energy_and_water.md) xây atom, electron, bond, polarity, water, pH, redox, free energy, diffusion và equilibrium. Mỗi khái niệm đều được nối trực tiếp tới phenomenon Sinh học, ví dụ hydrophobic effect → membrane, pH → enzyme, electron transfer → respiration.
+
+[`02_biomolecules_enzymes_and_energy.md`](./00_foundations/02_biomolecules_enzymes_and_energy.md) dùng nền đó để dựng carbohydrate, lipid, protein, nucleic acid, enzyme, ATP và electron carrier. Đây là nơi chemistry trở thành biochemistry.
+
+Câu hỏi cuối chặng: **nếu đã có đầy đủ molecule, làm thế nào tổ chức chúng thành một unit sống?**
+
+### Chặng 3 — cell như một system
+
+[`00_cells_membranes_and_transport.md`](./01_cell_biology/00_cells_membranes_and_transport.md) xây cell từ boundary, selective permeability, diffusion, osmosis, active transport, electrochemical gradient, organelle và cytoskeleton.
+
+[`01_metabolism_respiration_photosynthesis.md`](./01_cell_biology/01_metabolism_respiration_photosynthesis.md) dùng chính membrane/gradient vừa học để giải thích glycolysis, TCA, electron transport, chemiosmosis, ATP synthase và photosynthesis.
+
+[`02_cell_signaling_and_cell_cycle.md`](./01_cell_biology/02_cell_signaling_and_cell_cycle.md) thêm control layer: receptor, kinase, second messenger, feedback, cell cycle, checkpoint, mitosis, meiosis và apoptosis.
+
+Câu hỏi cuối chặng: **cell điều chỉnh protein nhanh được rồi; nhưng chương trình dài hạn được lưu và thay đổi ở đâu?**
+
+### Chặng 4 — information và inheritance
+
+[`00_dna_genes_and_gene_expression.md`](./02_genetics_molecular_biology/00_dna_genes_and_gene_expression.md) đi từ DNA structure tới replication, transcription, RNA processing, translation, protein targeting và gene regulation.
+
+[`01_inheritance_variation_and_mutation.md`](./02_genetics_molecular_biology/01_inheritance_variation_and_mutation.md) nối meiosis với Mendel, probability, linkage, recombination, mutation, quantitative trait và gene–environment interaction.
+
+[`02_genomics_epigenetics_and_regulation.md`](./02_genetics_molecular_biology/02_genomics_epigenetics_and_regulation.md) zoom ra genome scale: chromatin, enhancer, epigenetics, omics, GWAS, single-cell và regulatory network.
+
+Câu hỏi cuối chặng: **nếu population chứa variation di truyền, distribution đó đổi qua generation như thế nào?**
+
+### Chặng 5 — evolution và lịch sử của life
+
+[`00_evolution_and_population_genetics.md`](./03_evolution_and_diversity/00_evolution_and_population_genetics.md) xây Hardy–Weinberg như null model rồi thêm selection, drift, mutation, gene flow, recombination, speciation và coevolution.
+
+[`01_phylogeny_taxonomy_and_biodiversity.md`](./03_evolution_and_diversity/01_phylogeny_taxonomy_and_biodiversity.md) dùng branching history để học cách đọc phylogenetic tree, phân biệt homology/convergence và hiểu classification hiện đại.
+
+[`02_microorganisms_and_viruses.md`](./03_evolution_and_diversity/02_microorganisms_and_viruses.md) dùng tất cả cell biology + genetics + evolution để hiểu bacteria, archaea, metabolism microbial, microbiome, antibiotic resistance, virus, phage và CRISPR.
+
+### Chặng 6 — multicellular organism
+
+[`00_plant_biology.md`](./04_organismal_biology/00_plant_biology.md) xem plant như hệ hydraulic–photosynthetic: root, xylem, phloem, stomata, water potential, hormone, growth và reproduction.
+
+[`01_animal_physiology_and_homeostasis.md`](./04_organismal_biology/01_animal_physiology_and_homeostasis.md) xem animal body như network transport/control: circulation, respiration, digestion, kidney, acid–base, temperature và muscle.
+
+[`02_nervous_endocrine_and_immune_systems.md`](./04_organismal_biology/02_nervous_endocrine_and_immune_systems.md) so sánh ba information system: nervous nhanh và wired, endocrine broadcast lâu dài, immune recognition + memory.
+
+[`03_reproduction_and_development.md`](./04_organismal_biology/03_reproduction_and_development.md) giải thích một zygote tạo multicellular body qua cell fate, morphogen, gene regulatory network, tissue mechanics, stem cell và developmental constraint.
+
+### Chặng 7 — organism bước vào ecological network
+
+[`00_population_community_and_behavior.md`](./05_ecology/00_population_community_and_behavior.md) xây exponential/logistic growth, life history, behavior, niche, competition, predator–prey, cooperation và food web.
+
+[`01_ecosystems_biogeochemical_cycles_and_conservation.md`](./05_ecology/01_ecosystems_biogeochemical_cycles_and_conservation.md) theo dõi energy flow, carbon/nitrogen/phosphorus/water cycle, disturbance, resilience, climate effect và conservation.
+
+Đến đây scale đã đi từ nanomet tới biosphere.
+
+### Chặng 8 — đo, sửa và mô hình hóa life
+
+[`00_biotechnology_bioinformatics_and_systems_biology.md`](./06_biotechnology_computation/00_biotechnology_bioinformatics_and_systems_biology.md) xây PCR, electrophoresis, cloning, sequencing, alignment, assembly, RNA-seq, single-cell, CRISPR, synthetic biology, machine learning và systems biology.
+
+[`00_biology_math_computation_and_scale.md`](./90_connections/00_biology_math_computation_and_scale.md) sau cùng gom lại các motif xuyên lĩnh vực: rate, logarithm, gradient, probability, feedback, graph, optimization, dynamics, stochasticity và algorithm.
+
+---
+
+## 4. Các “sợi chỉ” chạy xuyên toàn thư viện
+
+### Gradient
+
+Gradient xuất hiện ở diffusion → membrane potential → mitochondrial proton gradient → action potential → water potential ở plant → morphogen trong embryo → oxygen/nutrient gradient ở biofilm.
+
+Đừng học các trường hợp này như sáu khái niệm tách biệt. Chúng là cùng một idea: **khác biệt theo không gian tạo khả năng flow hoặc encode positional information**.
+
+### Feedback
+
+Feedback xuất hiện ở enzyme pathway → signaling → cell cycle → endocrine → temperature/glucose control → population density → ecosystem resilience.
+
+Một người hiểu negative/positive feedback ở cell có thể transfer mental model lên organism và ecosystem.
+
+### Information
+
+DNA sequence → RNA/protein → signaling → cell identity → development → inheritance → evolution → phylogeny → sequencing/bioinformatics.
+
+Information luôn cần substrate vật lý, mechanism đọc và context.
+
+### Energy
+
+Redox → NADH → proton gradient → ATP → muscle/transport → organism metabolism → primary productivity → food web.
+
+Energy không “cycle” giống matter; nó flow và dissipate dưới dạng heat.
+
+### Variation và selection
+
+Mutation/recombination → population selection; B/T-cell receptor diversity → clonal selection; tumor clone → somatic evolution; microbial variation → antibiotic selection.
+
+Logic variation–filter–expansion xuất hiện lặp lại dù mechanism khác.
+
+---
+
+## 5. Keyword Việt — English — Korean
+
+Thuật ngữ quan trọng ở lần xuất hiện đầu được ưu tiên theo format:
 
 ```text
-00_scientific_thinking_scale_and_models
-        ↓
-00_what_is_life
-        ↓
-01_chemistry_energy_and_water
-        ↓
-02_biomolecules_enzymes_and_energy
-```
-
-## 3. Cách đọc từ số 0
-
-Nếu bạn gần như không nhớ Sinh học ở trường, nên đọc theo tuyến dưới đây. Không cần tra cứu trước một textbook khác; những concept nền cần thiết được giải thích lại tại nơi chúng bắt đầu có ý nghĩa.
-
-### Chặng 1 — Học cách nhìn một hệ sống
-
-Bắt đầu ở [`00_scientific_thinking_scale_and_models.md`](./00_foundations/00_scientific_thinking_scale_and_models.md).
-
-Chapter này chưa bắt bạn nhớ organelle hay DNA. Nó xây các pattern sẽ dùng suốt library: scale, causal reasoning, structure–function, feedback, gradient, flow of matter/energy/information và model.
-
-Khi đã có framework đó, [`00_what_is_life.md`](./00_foundations/00_what_is_life.md) dùng nó để trả lời câu hỏi “life là gì?” thông qua boundary → metabolism → homeostasis → information → reproduction → evolution.
-
-Câu hỏi chapter này để lại là: nếu life vẫn tuân physics/chemistry, các interaction molecular nào làm những process trên khả thi?
-
-### Chặng 2 — Từ atom tới biomolecule
-
-[`01_chemistry_energy_and_water.md`](./00_foundations/01_chemistry_energy_and_water.md) không phải một khóa Hóa học thu nhỏ. Nó chỉ xây chemistry cần để hiểu biology: bond, polarity, water, hydrophobic effect, diffusion, ion, pH, buffer, free energy, activation energy và redox.
-
-Chapter đó cố tình dẫn thẳng tới [`02_biomolecules_enzymes_and_energy.md`](./00_foundations/02_biomolecules_enzymes_and_energy.md), nơi carbohydrate, lipid, protein, enzyme, ATP và nucleic acid được giải thích như lời giải cho các bài toán của hệ sống.
-
-Sau hai chapter này, “membrane” không còn là fact phải nhớ: bạn đã biết vì sao amphipathic lipid trong water có thể tự tạo bilayer.
-
-### Chặng 3 — Từ molecule tới cell
-
-[`00_cells_membranes_and_transport.md`](./01_cell_biology/00_cells_membranes_and_transport.md) hỏi: trộn biomolecule lại chưa tạo life; vậy organization cần gì?
-
-Từ đó xuất hiện boundary, selective permeability, diffusion, osmosis, electrochemical gradient, compartment, organelle, cytoskeleton và endosymbiosis.
-
-Sau khi có architecture, [`01_metabolism_respiration_photosynthesis.md`](./01_cell_biology/01_metabolism_respiration_photosynthesis.md) cho energy chạy qua architecture đó: nutrient → electron carrier → electron transport → proton gradient → ATP; light → electron flow → ATP/NADPH → carbon fixation.
-
-Metabolism cần regulation, nên chapter tự nhiên dẫn tới [`02_cell_signaling_and_cell_cycle.md`](./01_cell_biology/02_cell_signaling_and_cell_cycle.md), nơi receptor, kinase, second messenger, feedback, checkpoint, mitosis, meiosis và cancer được hiểu như control system của cell.
-
-### Chặng 4 — Từ cell control tới genetic information
-
-Cell response dài hạn thường cần đổi gene expression. Vì vậy [`00_dna_genes_and_gene_expression.md`](./02_genetics_molecular_biology/00_dna_genes_and_gene_expression.md) bắt đầu từ information problem rồi xây DNA structure → replication → transcription → RNA processing → translation → regulation.
-
-[`01_inheritance_variation_and_mutation.md`](./02_genetics_molecular_biology/01_inheritance_variation_and_mutation.md) không tách Mendel khỏi molecular genetics; chromosome segregation trong meiosis được dùng để giải thích segregation probability, linkage, recombination và variation.
-
-[`02_genomics_epigenetics_and_regulation.md`](./02_genetics_molecular_biology/02_genomics_epigenetics_and_regulation.md) sau đó mở rộng từ một gene sang genome, chromatin, transcriptome, omics và GWAS.
-
-Chặng này kết thúc bằng allele frequency trong population — chính là điểm đầu của evolution.
-
-### Chặng 5 — Từ inheritance tới evolution và diversity
-
-[`00_evolution_and_population_genetics.md`](./03_evolution_and_diversity/00_evolution_and_population_genetics.md) xây evolution như change in allele frequency do selection, drift, mutation và gene flow. Hardy–Weinberg được dùng như null model chứ không phải công thức phải thuộc.
-
-Divergence qua thời gian dẫn tới [`01_phylogeny_taxonomy_and_biodiversity.md`](./03_evolution_and_diversity/01_phylogeny_taxonomy_and_biodiversity.md): cách đọc tree, homology, clade, molecular phylogeny và biodiversity.
-
-Sau đó [`02_microorganisms_and_viruses.md`](./03_evolution_and_diversity/02_microorganisms_and_viruses.md) là điểm hội tụ: metabolism, horizontal gene transfer, resistance evolution, microbiome, virus và CRISPR cùng xuất hiện trong một domain.
-
-### Chặng 6 — Từ một cell tự trị tới cơ thể đa bào
-
-[`00_plant_biology.md`](./04_organismal_biology/00_plant_biology.md) đặt câu hỏi: một organism cố định tại chỗ lấy resource từ đất và không khí rồi transport qua toàn cơ thể thế nào?
-
-[`01_animal_physiology_and_homeostasis.md`](./04_organismal_biology/01_animal_physiology_and_homeostasis.md) chuyển sang animal: circulation, gas exchange, digestion, kidney, acid–base balance, thermoregulation và muscle được nối quanh một câu hỏi chung — làm sao giữ extracellular environment phù hợp cho cell?
-
-[`02_nervous_endocrine_and_immune_systems.md`](./04_organismal_biology/02_nervous_endocrine_and_immune_systems.md) là control layer của whole organism: electrical signaling, hormone và immune recognition.
-
-[`03_reproduction_and_development.md`](./04_organismal_biology/03_reproduction_and_development.md) cuối cùng giải thích cách một zygote dùng gene-regulatory network, morphogen, cell movement và apoptosis để tạo body plan.
-
-### Chặng 7 — Từ organism tới ecosystem
-
-[`00_population_community_and_behavior.md`](./05_ecology/00_population_community_and_behavior.md) chuyển từ một organism sang nhiều cá thể: exponential/logistic growth, life history, behavior, niche, competition, predator–prey và food web.
-
-[`01_ecosystems_biogeochemical_cycles_and_conservation.md`](./05_ecology/01_ecosystems_biogeochemical_cycles_and_conservation.md) thêm abiotic environment để tạo ecosystem: productivity, trophic transfer, carbon/nitrogen/phosphorus cycle, disturbance, resilience, fragmentation, climate response và conservation.
-
-Ở đây photosynthesis học ở chloroplast quay trở lại dưới tên primary productivity, còn microbial metabolism trở thành nitrogen/carbon cycle. Đây chính là mục tiêu cross-scale của library.
-
-### Chặng 8 — Từ hiểu biết sang đo lường và can thiệp
-
-[`00_biotechnology_bioinformatics_and_systems_biology.md`](./06_biotechnology_computation/00_biotechnology_bioinformatics_and_systems_biology.md) tái sử dụng những mechanism trước đó:
-
-DNA replication → PCR.
-
-Base pairing → sequencing/alignment.
-
-Microbial defense → CRISPR.
-
-Genome → bioinformatics data.
-
-Regulatory network → systems biology.
-
-### Chặng 9 — Nhìn lại các pattern xuyên toàn bộ Sinh học
-
-Cuối cùng đọc [`00_biology_math_computation_and_scale.md`](./90_connections/00_biology_math_computation_and_scale.md).
-
-File này không tóm tắt từng chapter. Nó chỉ ra rằng gradient, feedback, exponential growth, saturation, probability, Bayes, differential equation, network, information theory và optimization lặp lại từ molecular biology đến ecosystem.
-
-## 4. Một ví dụ để thấy toàn library thực sự liên kết
-
-Hãy lấy câu hỏi: **vì sao khi chạy nhanh ta thở gấp và tim đập nhanh?**
-
-Ở molecular scale, actin–myosin tiêu thụ ATP.
-
-Ở cell metabolism, ATP demand làm respiration tăng.
-
-Ở chemistry, respiration tạo CO₂; CO₂ ảnh hưởng acid–base equilibrium.
-
-Ở physiology, chemoreceptor nhận thay đổi CO₂/pH, nervous system tăng ventilation và heart output.
-
-Ở circulation, oxygen delivery tăng tới muscle.
-
-Ở thermoregulation, heat production tăng nên skin blood flow và sweating đổi.
-
-Ở endocrine scale, fuel mobilization đổi.
-
-Nếu luyện tập lâu dài, gene expression và tissue adaptation thay đổi.
-
-Một hiện tượng đời thường đã đi qua chemistry → cell → signaling → physiology → gene regulation. Đó là cách library này muốn người đọc suy nghĩ.
-
-## 5. Quy tắc thuật ngữ
-
-Khi thuật ngữ quan trọng xuất hiện lần đầu trong chapter, format ưu tiên là:
-
-```text
-Tiếng Việt (English / 한국어)
+Tên tiếng Việt (English term / 한국어 용어)
 ```
 
 Ví dụ:
 
-`Cân bằng nội môi (Homeostasis / 항상성)`
+- Cân bằng nội môi (Homeostasis / 항상성)
+- Khuếch tán (Diffusion / 확산)
+- Chọn lọc tự nhiên (Natural selection / 자연선택)
+- Biểu hiện gene (Gene expression / 유전자 발현)
+- Quần thể (Population / 개체군)
 
-`Khuếch tán (Diffusion / 확산)`
+Korean term được giữ vì chúng thường xuất hiện trong textbook đại học Hàn Quốc, bài báo khoa học phổ thông và technical/medical document tại Hàn.
 
-`Chọn lọc tự nhiên (Natural selection / 자연선택)`
+---
 
-English term được giữ vì phần lớn textbook, paper, software và documentation dùng tiếng Anh. Korean term được giữ để nhận diện khi học/làm việc tại Hàn Quốc.
+## 6. Cách đọc công thức
 
-## 6. Cách đọc một công thức trong library
+Công thức trong library không được dùng như “công thức để thế số”. Mỗi equation cần được đọc bằng bốn câu hỏi:
 
-Công thức không được dùng như thứ phải thuộc trước khi hiểu.
+1. variable đại diện cho đại lượng nào;
+2. unit là gì;
+3. relationship giả định điều gì;
+4. khi assumption vỡ thì model sai ở đâu.
 
-Khi gặp:
+Ví dụ logistic equation không phải “law universal của mọi population”; Michaelis–Menten không mô tả mọi enzyme mechanism; Hardy–Weinberg là null model chứ không phải population thật lý tưởng.
 
-\[
-\frac{dN}{dt}=rN
-\]
+---
 
-hãy đọc bằng lời trước:
+## 7. Cách sử dụng connection với Toán và IT
 
-> Tốc độ thay đổi population tại một thời điểm tỷ lệ với population hiện có.
+Library không ép mọi topic phải liên hệ programming. Connection chỉ xuất hiện khi nó thực sự làm mental model tốt hơn.
 
-Sau đó mới hỏi assumption nào khiến relationship này hợp lý và khi nào nó thất bại.
+Các connection quan trọng nhất gồm:
 
-Cách đọc tương tự được áp dụng cho pH, Michaelis–Menten, Hardy–Weinberg, cardiac output và logistic growth.
+- logarithm ↔ pH;
+- derivative ↔ rate of change;
+- differential equation ↔ population/biochemical dynamics;
+- probability ↔ inheritance, diagnostics, drift;
+- graph ↔ metabolic network, food web, genome assembly;
+- dynamic programming ↔ sequence alignment;
+- control theory ↔ homeostasis;
+- machine learning ↔ omics/image/sequence prediction;
+- versioned/reproducible pipeline ↔ bioinformatics workflow.
 
-## 7. Mental model trung tâm của toàn library
+---
 
-Có thể nén toàn bộ Sinh học thành bốn câu:
+## 8. Tiêu chuẩn nội dung hiện tại
 
-> **Structure tạo constraint và khả năng.**
->
-> **Gradient và reaction điều khiển dòng vật chất–năng lượng.**
->
-> **Information và feedback điều khiển state.**
->
-> **Variation + inheritance + selection làm các hệ thay đổi qua thời gian.**
+Mỗi chapter hiện được viết theo nguyên tắc:
 
-Nếu giữ được bốn idea này, hàng nghìn fact riêng lẻ sẽ có chỗ để gắn vào.
+```text
+câu hỏi / constraint
+    ↓
+mechanism nền
+    ↓
+structure hoặc model
+    ↓
+quantitative relationship nếu cần
+    ↓
+case study / real-world phenomenon
+    ↓
+misconception
+    ↓
+bridge sang chapter tiếp theo
+```
 
-## 8. Audit
+Nội dung chính sử dụng paragraph liên tục. Bullet chỉ dùng khi bản chất thật sự là list. Các chapter cố tránh kiểu “Definition / Why / How / Application” lặp máy móc.
 
-Xem [`COVERAGE_AUDIT.md`](./COVERAGE_AUDIT.md) để kiểm tra không chỉ topic coverage mà cả **continuity audit**: chapter trước truyền dependency gì cho chapter sau, concept nào được reuse và phần chuyên sâu nào chủ động không mở rộng trong core library.
+---
+
+## 9. Thư viện này không cố trở thành giáo trình chuyên khoa
+
+Core Biology cần xây mental model toàn lĩnh vực. Những domain sau đủ lớn để sau này có thể tách thành Knowledge Library riêng:
+
+- Biochemistry/Structural Biology
+- Neuroscience
+- Immunology
+- Microbiology/Virology
+- Human Anatomy & Pathophysiology
+- Bioinformatics/Computational Biology
+- Plant Science
+- Ecology & Earth Systems
+
+Trong Biology core, các topic này được cover đến mức dependency và mechanism chung đủ vững để người đọc bước sang specialization mà không bị “mất nền”.
+
+---
+
+## 10. Sau khi đọc xong, người đọc nên nhìn Sinh học thế nào?
+
+Không phải:
+
+> “Tôi nhớ tế bào có ty thể, DNA có A-T-G-C, ecosystem có food chain.”
+
+Mà là:
+
+> “Tôi hiểu vì sao cell cần boundary và gradient; vì sao electron flow được chuyển thành ATP; vì sao gene chỉ có meaning trong regulatory context; vì sao variation ở individual scale trở thành evolution ở population scale; vì sao organism cần transport/control khi size tăng; và vì sao ecosystem phải được hiểu qua cả energy flow lẫn matter cycle.”
+
+Đó là mục tiêu của Knowledge Library này: **knowledge graph thay vì collection of facts**.
