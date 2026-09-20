@@ -199,29 +199,136 @@ Chi phí có thể thực sự giảm nhờ tự động hoá và mật độ ca
 
 Điều này giúp phân tích `빨리빨리` mà không biến nó thành tính cách dân tộc. Tốc độ là kết quả của **vốn + hạ tầng + lao động + kỳ vọng**.
 
-## Mô hình tổng hợp: 5 lớp để đọc một hiện tượng văn hoá
+## Liên hệ 24: 평생교육 ↔ kỹ năng mất giá ↔ thị trường lao động
 
-Khi gặp một hiện tượng mới, hãy lần lượt hỏi năm nhóm câu hỏi.
+Khi công nghệ thay đổi nhanh, giáo dục không còn là pha chuẩn bị diễn ra trước sự nghiệp mà trở thành quá trình lặp lại trong suốt sự nghiệp. Kỹ năng nền và kỹ năng công cụ có tốc độ mất giá khác nhau.
 
-### 1. Lớp vật chất (material layer) — điều kiện vật chất nào làm nó khả thi?
+```text
+kỹ năng lõi bền
++ kỹ năng theo nghề
++ công cụ hiện hành
+→ năng lực nghề nghiệp tại một thời điểm
+```
+
+Khi lớp công cụ đổi, người lao động không nhất thiết phải “học lại từ đầu” nếu phần lõi và kỹ năng theo nghề còn chuyển giao được. Đây là lý do **kỹ năng chuyển giao (transferable skill)** quan trọng hơn danh sách công cụ đã dùng.
+
+Văn hoá chứng chỉ chỉ là một phần. Thị trường còn cần bằng chứng rằng tri thức có thể chuyển thành đầu ra.
+
+## Liên hệ 25: Tên ↔ định danh số ↔ quyền riêng tư
+
+Tên, tuổi, chức danh và năm sinh giúp phối hợp xã hội, nhưng khi đi vào cơ sở dữ liệu chúng trở thành tài sản thông tin. Một dữ liệu hữu ích trong hội thoại không tự động là dữ liệu cần thu thập trong mọi ứng dụng.
+
+```text
+siêu dữ liệu nhiều hơn
+→ xác thực / cá nhân hoá dễ hơn
+nhưng
+→ rủi ro rò rỉ / lạm dụng lớn hơn
+```
+
+Đây là điểm giao giữa văn hoá quan hệ và **tối thiểu hoá dữ liệu (data minimization)**. Hệ thống hiện đại phải phân biệt tên pháp lý, tên hiển thị, danh xưng và danh tính số thay vì ép chúng thành một trường duy nhất.
+
+## Liên hệ 26: Trẻ ốm ↔ độ bền của gia đình ↔ độ bền của tổ chức
+
+Ngày bình thường, lịch chăm trẻ có thể vận hành tốt; trẻ ốm mới cho thấy hệ thống có dự phòng hay không. Cùng một cú sốc lan từ gia đình sang công ty:
+
+```text
+trẻ ốm
+→ cha/mẹ cần đổi lịch
+→ nhóm phải tái phân bổ công việc
+→ chất lượng bàn giao quyết định mức gián đoạn
+```
+
+Vì vậy chính sách gia đình và thiết kế tổ chức có cùng một khái niệm: **khả năng chống chịu (resilience)**. Hệ thống bền không phải hệ thống không bao giờ gián đoạn, mà là hệ thống chuyển trạng thái mà không sụp đổ.
+
+## Liên hệ 27: Campus ↔ ghép nối ↔ địa lý nhà ở
+
+Giá trị đại học không chỉ nằm trong giờ học. Nó còn nằm ở việc ghép sinh viên với bạn học, cố vấn, phòng nghiên cứu, thực tập và nhà tuyển dụng. Nhưng khả năng tham gia mạng ghép nối phụ thuộc thời gian có mặt tại campus.
+
+```text
+nhà ở xa
+→ đi lại dài
+→ ít thời gian cho câu lạc bộ / học nhóm / sự kiện
+→ ít liên kết yếu
+→ ít cơ hội tình cờ
+```
+
+Đây là ví dụ **địa lý tác động tới vốn xã hội**. Hai sinh viên cùng trường không nhất thiết nhận cùng “giá trị mạng lưới” từ trường.
+
+## Liên hệ 28: Già hoá ↔ hợp đồng thế hệ ↔ di cư
+
+Già hoá làm nhu cầu chăm sóc tăng trong khi số người ở độ tuổi lao động tương đối giảm. Xã hội có thể phản ứng bằng tăng năng suất, kéo dài thời gian làm việc, tái thiết kế chăm sóc, dùng công nghệ hoặc thu hút lao động di cư.
+
+Không giải pháp nào đứng riêng. Di cư bổ sung lao động nhưng cũng cần nhà ở, ngôn ngữ và hội nhập; công nghệ giảm một số việc nhưng không thay toàn bộ lao động cảm xúc; gia đình có thể chăm nhưng bị giới hạn bởi thời gian.
+
+Đây là bài toán phân bổ rủi ro trong **hợp đồng giữa các thế hệ (intergenerational contract)**.
+
+## Liên hệ 29: Chỉ số ↔ chính sách ↔ chuỗi nhân quả
+
+Một chỉ số cuối cùng như TFR, điểm thi, giá nhà hoặc lượt khám thường cách xa can thiệp chính sách qua nhiều bước trung gian. Nếu chỉ nhìn đầu vào và kết quả cuối, ta khó biết cơ chế nào hoạt động.
+
+```text
+chính sách
+→ mức tiếp cận
+→ hành vi trung gian
+→ thay đổi chi phí / động lực
+→ kết quả cuối
+```
+
+Đây là **chuỗi nhân quả chính sách (policy causal chain)**. Tư duy này giúp tránh hai lỗi: thấy chỉ số chưa đổi rồi kết luận chính sách vô dụng; hoặc thấy chỉ số đổi rồi mặc định chính sách là nguyên nhân duy nhất.
+
+## Liên hệ 30: Tải quản lý vô hình ↔ 업무분장 ↔ kinh tế chăm sóc
+
+Trong gia đình, một người có thể không làm mọi thao tác nhưng vẫn phải nhớ lịch, đặt hẹn, kiểm tra đồ dùng và dự đoán vấn đề. Trong công sở, người `담당자` cũng giữ trạng thái và theo dõi việc ngay cả khi nhiều người cùng thực hiện.
+
+Cả hai là **lao động điều phối (coordination labour)**.
+
+```text
+thao tác nhìn thấy
++ theo dõi trạng thái
++ nhắc việc
++ dự đoán ngoại lệ
+= tổng tải công việc
+```
+
+Nếu chỉ đo thao tác nhìn thấy, ta đánh giá thấp người giữ trạng thái hệ thống. Liên hệ này giúp giải thích vì sao phân chia “mỗi người làm một nửa việc nhà” vẫn có thể bất bình đẳng nếu một người giữ toàn bộ tải quản lý.
+
+## Mô hình tổng hợp: 6 lớp để đọc một hiện tượng văn hoá
+
+Khi gặp một hiện tượng mới, hãy lần lượt hỏi sáu nhóm câu hỏi.
+
+### 1. Lớp vật chất — điều kiện vật chất nào làm nó khả thi?
 
 Khí hậu, nhà ở, công nghệ thực phẩm, giao thông, điện thoại, tiền và hệ thống nơi làm việc có vai trò gì?
 
-### 2. Lớp thiết chế (institutional layer) — quy tắc và động lực nào duy trì nó?
+### 2. Lớp thiết chế — quy tắc và động lực nào duy trì nó?
 
 Luật, trường học, công ty, gia đình, thị trường hay tôn giáo phân phối quyền và lợi ích ra sao?
 
-### 3. Lớp quan hệ (relational layer) — ai đang ở quan hệ nào?
+### 3. Lớp quan hệ — ai đang ở quan hệ nào?
 
 Tuổi, chức vụ, mức thân thiết, họ hàng, thâm niên và vai trò có ý nghĩa gì?
 
-### 4. Lớp biểu tượng (symbolic layer) — người tham gia hiểu hành vi này là gì?
+### 4. Lớp biểu tượng — người tham gia hiểu hành vi này là gì?
 
 Nó biểu thị tôn trọng, quan tâm, địa vị, ký ức, bản sắc hay vui chơi?
 
-### 5. Lớp lịch sử (historical layer) — vì sao cấu trúc này tồn tại hôm nay?
+### 5. Lớp lịch sử — vì sao cấu trúc này tồn tại hôm nay?
 
 Nông nghiệp, Nho giáo, lịch sử thuộc địa, chiến tranh, công nghiệp hoá, dân chủ hoá hay nền tảng số đã tác động như thế nào?
+
+### 6. Lớp đo lường — ta đang biết điều này bằng dữ liệu nào?
+
+Quan sát cá nhân, khảo sát, thống kê hành chính, bình luận trực tuyến hay chỉ số nền tảng có phạm vi đại diện khác nhau. Cần hỏi:
+
+```text
+mẫu là ai?
+đơn vị đo là gì?
+thời điểm nào?
+chỉ số đo trực tiếp hay dùng biến đại diện?
+điều gì không được quan sát?
+```
+
+Lớp thứ sáu đặc biệt quan trọng vì một mô hình văn hoá đúng về cơ chế vẫn có thể bị áp sai nếu dữ liệu đầu vào thiên lệch.
 
 Một lời giải thích mạnh thường dùng ít nhất hai hoặc ba lớp, thay vì dừng ở câu “vì truyền thống”.
 
@@ -262,6 +369,10 @@ Không nhất thiết. Tiện lợi có thể đến từ tự động hoá làm
 ### “Một thực hành nhìn rất phổ biến thì chắc là quy tắc toàn quốc”
 
 Không đúng. Quy tắc căn hộ, lịch phân loại rác, vận hành childcare, văn hoá campus và chính sách dịch vụ có thể khác theo địa phương, tổ chức và thế hệ.
+
+### “Có một con số thì tranh luận đã kết thúc”
+
+Không đúng. Con số còn phụ thuộc định nghĩa, mẫu, cách đo và thời điểm. Thống kê tốt giúp thu hẹp bất định; nó không xoá nhu cầu hiểu cơ chế.
 
 ## Một phương pháp quan sát thực tế
 
