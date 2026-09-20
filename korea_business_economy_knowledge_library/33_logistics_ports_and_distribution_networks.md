@@ -1,161 +1,505 @@
 # Logistics, cảng biển và mạng phân phối Hàn Quốc (Logistics, Ports & Distribution / 물류·항만·유통망)
 
-Một nền kinh tế export-oriented không thể tồn tại chỉ với factories. Value phải di chuyển: raw materials vào Korea, intermediate goods giữa plants, finished products ra ports, parcels tới household. Logistics (물류) là connective tissue giữa manufacturing và market.
+Một nền kinh tế export-oriented không thể tồn tại chỉ với factories. Raw materials phải vào Korea, components phải di chuyển giữa plants, finished goods phải ra ports/airports, và parcels phải tới household. **Logistics / 물류** là connective tissue nối manufacturing với market.
 
-## Logistics không chỉ là transportation
+Điểm quan trọng nhất: logistics không tối ưu “shipping cost thấp nhất”. Nó tối ưu **total landed cost + time + reliability + working capital + service level**.
 
-Logistics gồm inventory, warehousing, transport, order processing, customs và information flow. Mục tiêu không phải “ship rẻ nhất” mà tối ưu total landed cost và service level.
+## Logistics là physical flow + information flow
 
-Một simplified total cost:
+A complete logistics system includes:
+
+- transport;
+- warehousing;
+- inventory;
+- customs;
+- order processing;
+- routing;
+- tracking;
+- returns.
+
+Physical flow without information flow creates uncertainty; uncertainty forces higher safety stock.
+
+A useful total-cost mental model:
 
 \[
-Total\ Logistics\ Cost = Transport + Warehousing + Inventory\ Carrying + Stockout + Handling
+Total\ Logistics\ Cost = Transport + Warehousing + Inventory\ Carrying + Handling + Stockout + Delay\ Cost
 \]
 
-Nếu dùng sea freight rẻ hơn nhưng lead time tăng 20 ngày, inventory carrying cost có thể lớn hơn shipping saving.
+Sea freight may be cheaper than air, but if lead time adds 30 days of inventory or causes production delay, total cost can be higher.
 
-## Korea geography: peninsula nhưng trade bằng sea/air
+## Korea geography: peninsula but trade is overwhelmingly sea/air dependent
 
-Political division làm overland connection với Eurasia limited, nên ports và airports có vai trò rất lớn. Busan là global container hub; Incheon hỗ trợ capital-region logistics và air/sea connection; Ulsan/Gwangyang/Pohang gắn bulk industrial cargo.
+Because overland connection through the peninsula is constrained, ports and airports are strategically important.
 
-Port specialization phản ánh industrial geography. Steel, petrochemicals, automobiles và containers có handling requirement khác nhau.
+Different logistics nodes specialize:
 
-## Busan: transshipment economics
+- Busan: container hub/transshipment;
+- Incheon: capital-region cargo + air/sea connectivity;
+- Ulsan/Gwangyang/Pohang: industrial/bulk cargo;
+- Incheon Airport: high-value time-sensitive air cargo.
 
-Transshipment port không chỉ phục vụ domestic cargo mà chuyển containers giữa shipping routes. Network effect xuất hiện: càng nhiều routes gọi cảng, càng hấp dẫn carriers/cargo; càng nhiều cargo, càng justify frequency.
+Port geography reflects industrial geography.
 
-Nhưng hub position phụ thuộc port efficiency, automation, labor, hinterland connection và competition với China/Japan/other Asian ports.
+Steel, petrochemicals, autos, containers and semiconductors require different infrastructure.
 
-## Containerization thay đổi trade economics
+## Containerization: standardized interface of physical trade
 
-Standard container giảm handling cost và damage, cho phép intermodal transport ship–rail–truck. Đây là technology có enormous economic impact vì nó giảm transaction/friction cost, giống API standard trong software.
+Standard container transformed global logistics by reducing handling time, damage and intermodal friction.
 
-> Mental model: container là “standardized interface” của physical supply chain.
+Container acts like an **API standard for physical goods**: ship, truck, rail and crane can interact with same standardized unit.
 
-## Inventory: cash bị khóa trong hàng hóa
+This dramatically lowered transaction cost and enabled complex global value chains.
 
-Inventory không chỉ là operational object mà là working capital. Days Inventory Outstanding (DIO):
+## Port economics: throughput, network and fixed infrastructure
+
+Port/terminal has large fixed assets: berths, cranes, yards, IT systems and dredging/infrastructure.
+
+Revenue often relates to throughput and services.
+
+Scale matters because fixed assets spread across more containers/cargo.
+
+But congestion can create diseconomies: waiting time rises, yard fills, truck turnaround slows.
+
+Therefore port efficiency is not just maximum volume; it is high volume with reliable flow.
+
+## Busan and transshipment network effects
+
+A transshipment hub handles cargo that may not originate/end locally; containers transfer between services.
+
+Network effect:
+
+```text
+More shipping routes
+→ More connection options
+→ More transshipment cargo
+→ More reason for carriers to call
+→ Higher route frequency
+```
+
+But hub status is contestable. Carriers compare cost, productivity, schedule reliability and regional alternatives.
+
+Port automation, labor relations and hinterland connection therefore matter.
+
+## Port operator vs shipping carrier: same containers, different economics
+
+A port terminal earns handling/terminal fees and depends on throughput/utilization.
+
+A container shipping carrier owns/charters vessels and faces freight-rate/bunker/vessel-supply cycles.
+
+Same trade volume can produce very different earnings volatility.
+
+Do not analyze “shipping/logistics” as one industry.
+
+# Container shipping / 해운
+
+## Freight rate is determined by demand against slow-moving vessel supply
+
+Short-term vessel supply is relatively inelastic because building new ships takes years.
+
+When trade demand suddenly rises or capacity is disrupted, freight rates can spike.
+
+High rates then induce new ship orders. Years later many ships deliver, supply increases and rates can fall even if global trade still grows.
+
+This creates long lag:
+
+```text
+Freight rate ↑
+→ Carrier profit ↑
+→ New ship orders ↑
+→ 2–3+ year lag
+→ Fleet supply ↑
+→ Rate pressure
+```
+
+This connects shipping with shipbuilding cycle but with time shift.
+
+## Operating leverage and charter exposure
+
+Carrier economics depend whether vessel is owned or chartered.
+
+Charter contracts lock cost for period; spot/contract freight revenue can move differently.
+
+A carrier that locked expensive charters at cycle peak can suffer even after freight rates fall.
+
+Thus fleet ownership/charter maturity structure matters.
+
+## Bunker fuel
+
+Fuel is major variable cost.
+
+Profit depends on:
+
+```text
+Freight rate
+- bunker fuel
+- charter/depreciation
+- port/canal cost
+- operating overhead
+```
+
+Carrier may use bunker surcharge or hedging, but pass-through timing varies.
+
+## Slow steaming: fuel vs capacity/time trade-off
+
+Ships can reduce speed to save fuel.
+
+But slower voyage means vessel is tied up longer, reducing effective fleet capacity.
+
+Thus operational decision affects both cost and supply.
+
+Environmental regulation can make slow steaming economically attractive.
+
+## Shipping as strategic infrastructure
+
+A large national carrier can have strategic relevance because exporter access to container capacity matters during disruption.
+
+This explains why shipping can receive policy attention beyond its direct GDP share.
+
+But strategic value does not erase brutal freight-rate cyclicality.
+
+# Freight forwarder and 3PL / 포워더·3PL
+
+## Freight forwarder sells coordination rather than vessels
+
+Forwarder books capacity, handles documents, customs and routing without necessarily owning ships/aircraft.
+
+This can be asset-light, but margin depends on procurement scale, customer relation and rate volatility.
+
+When carrier spot rates rise faster than forwarder can reprice customer contract, margin compresses.
+
+## 3PL combines coordination and physical assets
+
+**Third-party logistics / 제3자물류** may operate warehouses/trucks/fulfillment plus information systems.
+
+Economics depend on:
+
+- warehouse utilization;
+- labor productivity;
+- route density;
+- contract duration;
+- customer concentration.
+
+Low margin can still produce good ROIC if asset turnover high.
+
+# Inventory and working capital
+
+## Inventory is cash in physical form
+
+Inventory consumes capital.
+
+**DIO (Days Inventory Outstanding)**:
 
 \[
 DIO = \frac{Average\ Inventory}{COGS}\times365
 \]
 
-Nếu shipping disruption làm company giữ thêm 30 ngày inventory, cash conversion cycle dài hơn. Resilience có financial cost.
+If shipping disruption forces firm to hold 30 extra days of components, cash conversion cycle increases.
 
-Xem [11_banks_finance_and_corporate_funding](./11_banks_finance_and_corporate_funding.md).
+This is the financial cost of resilience.
 
-## Just-in-time và resilience
+Xem [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md).
 
-Just-in-time giảm inventory nhưng tăng sensitivity với disruption. Sau pandemic, chip shortage và geopolitical risk, nhiều firms chuyển sang “just-in-case” cho critical components.
+## Safety stock is insurance
 
-Optimal buffer phụ thuộc shortage cost. A cheap screw nếu thiếu có thể stop entire assembly line; economic value của buffer không tỷ lệ với purchase price.
+Inventory buffer seems inefficient until stockout would stop whole factory.
 
-## Cold chain và specialized logistics
+Optimal inventory compares:
 
-Biopharma, food và chemicals cần temperature/control compliance. Cold chain failure có thể destroy product value even if transport arrives on time.
+```text
+Carrying cost of extra stock
+vs
+Expected stockout/disruption loss
+```
 
-High-regulation logistics tạo entry barrier qua certifications, equipment, tracking và quality system.
+A $2 component can justify large safety stock if its absence stops a $100m line.
 
-## E-commerce last mile
+Inventory importance is not proportional to unit purchase price.
 
-Coupang và Korean e-commerce ecosystem cho thấy warehouse density, routing software và delivery network có thể trở thành moat. Last-mile cost cao vì parcel phải đi từ shared network tới individual door.
+## Just-in-time vs just-in-case
 
-Route density giảm unit cost: nếu driver giao nhiều packages trong cùng apartment complex, cost/order thấp hơn sparse rural route. Đây là **density economics**.
+**JIT** minimizes inventory under predictable supply.
 
-## Logistics automation và IT
+**Just-in-case** adds buffer for critical nodes.
 
-Warehouse Management System (WMS), Transportation Management System (TMS), barcode/RFID, routing algorithms và robotics biến logistics thành data problem.
+Post-pandemic supply-chain design often uses segmentation:
 
-Shortest-path, vehicle-routing và inventory optimization liên hệ trực tiếp graph theory và operations research. Software quality có impact physical cost: bad demand forecast tạo excess inventory hoặc stockout.
+- commodity/easy substitute → lean inventory;
+- critical/long lead → larger buffer or dual source.
 
-## Shipping rates và exporter margin
+One inventory philosophy for all items is suboptimal.
 
-Exporter quote terms theo Incoterms quyết định ai chịu freight/risk ở từng stage. Nếu ocean freight tăng, impact margin phụ thuộc contract terms và pricing power.
+# Customs and trade operations
 
-Không nên thấy shipping index tăng rồi kết luận mọi exporter margin giảm như nhau.
+## Customs is operational capability
 
-## Air cargo và semiconductors
+Cross-border shipment requires:
 
-High-value, low-weight products như chips phù hợp air cargo hơn bulk commodities. Time value cao hơn transport cost. Incheon airport vì vậy là logistics infrastructure quan trọng cho advanced manufacturing.
+- HS classification;
+- customs valuation;
+- origin documentation;
+- permits;
+- duties/taxes;
+- security rules.
 
-## 3PL và contract logistics
+Error can delay cargo or trigger penalties.
 
-Third-party logistics (3PL / 제3자물류) cho phép firm outsource warehousing/transport. 3PL economics phụ thuộc network scale, utilization, customer concentration và labor/automation.
+For FTA, correct rules-of-origin documentation determines tariff benefit.
 
-A logistics provider có low margin nhưng high asset turnover có thể vẫn tạo acceptable ROIC. Vì vậy margin alone không đủ.
+Therefore customs competence can create real cost advantage.
 
-## Mental Model
+## Bonded logistics
 
-> Logistics tối ưu **time + reliability + working capital + transport cost**, không chỉ distance. Trong export economy, supply-chain design là một phần của competitive advantage.
+Bonded warehouse allows goods stored/processed under customs control before duties are finalized/paid depending structure.
 
-## Common misconceptions
+Useful for transshipment, re-export and inventory hubs.
 
-Inventory càng thấp không phải lúc nào càng tốt; stockout risk có thể lớn hơn carrying cost.
+This reduces cash/tax friction in global networks.
 
-Port lớn không chỉ vì domestic economy lớn; transshipment/network position matter.
+## Incoterms: allocation of delivery cost/risk
 
-Fast delivery không miễn phí. Cost có thể nằm trong margin, membership fee, seller fee hoặc labor intensity.
+FOB, CIF, DDP and other **Incoterms** specify delivery responsibilities/risk/cost allocation.
 
-## Connections
+They do not alone determine ownership/payment terms.
 
-Đọc cùng [02_trade_export_and_global_value_chains](./02_trade_export_and_global_value_chains.md), [16_shipbuilding_steel_chemicals_heavy_industry](./16_shipbuilding_steel_chemicals_heavy_industry.md), [17_platform_telecom_content_retail_services](./17_platform_telecom_content_retail_services.md) và [24_regional_clusters_and_industrial_geography](./24_regional_clusters_and_industrial_geography.md).
+Exporter freight exposure must be read with Incoterm.
 
-## Shipping company economics khác port economics
+Two companies selling same FOB/CIF revenue may carry different logistics risk.
 
-Container shipping carrier sở hữu/charter vessels và chịu freight-rate cycle, bunker fuel và vessel supply. Port operator kiếm fee từ throughput/terminal services. Cùng container volume nhưng earnings volatility khác.
+# Air cargo / 항공화물
 
-Shipping supply rất inelastic short-term vì build ship mất years. Khi demand jump, freight rate có thể spike; khi many new ships deliver, rates fall even if trade still grows.
+## High-value, low-weight products justify air freight
 
-## HMM và national shipping capability
+Semiconductors, electronics, pharmaceuticals and urgent parts can have high time value.
 
-Korean shipping history cho thấy container line có strategic value cho export economy nhưng business economics cực cyclical. Financial distress của carrier lớn có spillover tới exporters, ports và trade finance.
+Air freight is expensive per kg but minimizes lead time/inventory and disruption cost.
 
-Điều này giải thích vì sao shipping đôi khi nhận policy attention cao hơn normal industry of similar GDP share.
+Incheon Airport therefore functions as infrastructure for advanced manufacturing, not just passenger travel.
 
-## Bunker fuel và IMO regulation
+## Yield and capacity
 
-Vessel economics chịu fuel price và environmental rules. Slow steaming giảm fuel consumption nhưng tăng transit time/capacity tied up.
+Air cargo rates depend on dedicated freighter capacity plus belly cargo on passenger flights.
 
-Sulfur/carbon rules có thể làm modern efficient fleet more valuable, nhưng require capex/new fuels.
+Passenger travel disruption can reduce belly capacity, making cargo rates spike.
 
-## Freight forwarder vs carrier
+Thus passenger aviation and cargo markets interact.
 
-Freight forwarder không nhất thiết own ships/trucks; họ coordinate capacity, documentation và routing. Asset-light model có lower capex nhưng margin phụ thuộc procurement scale và customer relationships.
+# Cold chain / 콜드체인
 
-3PL có thể combine asset-heavy warehouses với asset-light coordination.
+Biopharma, vaccines, food and some chemicals require controlled temperature/humidity.
 
-## Customs và bonded logistics
+A shipment arriving on time but outside temperature range may be worthless.
 
-Goods crossing border cần classification, valuation, origin và documentation. Error có thể delay shipment or trigger duties/penalties.
+Cold-chain economics include:
 
-Bonded warehouse cho phép goods stored before duties paid/clearance, useful for re-export/transshipment. Customs competence là operational capability, not admin afterthought.
+- specialized containers;
+- sensors;
+- qualification;
+- monitoring;
+- backup procedures.
 
-## Incoterms: ai chịu cost và risk?
+Compliance capability creates entry barrier.
 
-FOB, CIF, DDP và các Incoterms phân allocation của transport cost, insurance/risk và customs responsibility. Incoterm không xác định ownership/payment alone; nó xác định delivery obligations.
+Xem [`31_biohealth_pharma_medical_devices_and_kbeauty.md`](./31_biohealth_pharma_medical_devices_and_kbeauty.md).
 
-Khi compare exporter margins, shipping cost exposure phải đọc cùng Incoterm.
+# E-commerce fulfillment and last mile
 
-## Parcel density và Korean apartment geography
+## Front-end digital, back-end physical
 
-Korea high urban density/apartment concentration tạo favorable last-mile route economics. Driver có thể deliver many parcels per stop/building relative low-density suburbs.
+E-commerce may look like software but fulfillment requires warehouses, labor, vehicles and inventory coordination.
 
-Đây là geographic source của delivery speed, not software alone. Software routing + dense housing combine thành moat.
+Business can be asset-heavy even if order interface is digital.
 
-## Fulfillment center economics
+## Density economics
 
-Warehouse automation có high fixed capex. Return phụ thuộc throughput. Peak season cần excess capacity; off-season utilization thấp.
+Last-mile cost/order falls when route density rises:
 
-Robotics investment rational khi labor saving + throughput + error reduction exceed depreciation/maintenance.
+\[
+Delivery\ Cost\ per\ Order \downarrow \quad as \quad Stops/Route\ Density \uparrow
+\]
+
+Korea’s dense urban/apartment geography can make delivery economics attractive because driver can deliver many parcels per building/area.
+
+This is geographic advantage combined with routing software.
+
+## Fulfillment-center economics
+
+Warehouse has fixed capex and labor/automation cost.
+
+Return depends on throughput/utilization.
+
+Peak season requires spare capacity; off-season lower utilization.
+
+Automation is rational when labor saving + throughput + accuracy benefit exceed depreciation/maintenance.
+
+## WMS/TMS and software
+
+**WMS (Warehouse Management System)** controls inventory/location/picking.
+
+**TMS (Transportation Management System)** helps planning/routes/carrier allocation.
+
+Routing, forecasting and slotting connect logistics to operations research/graph algorithms.
+
+Bad software forecast creates physical consequences: overstock, stockout or empty truck miles.
 
 ## Reverse logistics
 
-E-commerce returns tạo reverse flow: pickup, inspection, refurbish/disposal và refund. Fashion returns especially high có thể erase front-end gross margin.
+Returns create reverse flow:
 
-A company reporting GMV growth nhưng return rate rising có lower economic quality.
+```text
+Customer pickup
+→ transport
+→ inspection
+→ restock/refurbish/disposal
+→ refund
+```
 
-## Supply-chain visibility
+Fashion/e-commerce return rate can be high enough to erase front-end margin.
 
-Digital tracking giúp firm know location/status inventory. Visibility không prevent disruption, nhưng reduce reaction time and safety stock uncertainty.
+GMV growth with worsening returns may be low-quality growth.
 
-For software analogy, supply chain without visibility giống distributed system without observability: failure occurs, nhưng team không biết node nào broken.
+# Supply-chain visibility and observability
+
+Tracking does not prevent disruption but reduces uncertainty/reaction time.
+
+Software analogy:
+
+> Supply chain without visibility resembles distributed system without observability: failure occurs, but team cannot identify broken node quickly.
+
+Visibility can reduce safety-stock uncertainty and improve customer communication.
+
+## Control tower and event-driven logistics
+
+Modern logistics systems combine shipment events, inventory, weather/port status and orders to re-route or reprioritize.
+
+Economic benefit is not dashboard itself; it is avoided stockout/delay and lower buffer.
+
+# Logistics and industrial clusters
+
+Port/airport/warehouse proximity influences location economics.
+
+Heavy bulk cargo benefits port adjacency. Semiconductor high-value cargo values airport and supplier speed. E-commerce fulfillment values household density/highway access.
+
+Therefore “best logistics location” depends product physics.
+
+Xem [`24_regional_clusters_and_industrial_geography.md`](./24_regional_clusters_and_industrial_geography.md).
+
+# Resilience and multi-sourcing
+
+Dual sourcing reduces single-point failure but can sacrifice volume discount/quality learning.
+
+Resilience strategy should segment components by:
+
+- criticality;
+- substitutability;
+- lead time;
+- geopolitical exposure.
+
+Not every screw requires second supplier; some critical chips do.
+
+# Shipping-rate impact on exporter depends contract
+
+Freight rate rise affects company differently depending:
+
+- Incoterm;
+- long-term carrier contract;
+- product margin;
+- pricing power;
+- transport mode.
+
+Therefore shipping index should not be mechanically plugged into every exporter margin.
+
+# How to analyze a logistics company
+
+## Container carrier
+
+```text
+Freight rates
+Volume
+Fleet capacity
+Orderbook/new vessel deliveries
+Bunker fuel
+Owned vs chartered fleet
+Contract vs spot revenue
+Net debt
+```
+
+## Port/terminal
+
+```text
+Throughput
+Transshipment share
+Utilization
+Fee structure
+Capex
+Productivity/turnaround time
+```
+
+## 3PL/fulfillment
+
+```text
+Customer concentration
+Warehouse utilization
+Route density
+Labor cost
+Automation capex
+Contract margin
+```
+
+## E-commerce logistics
+
+```text
+Orders/day
+Delivery cost/order
+Fulfillment utilization
+Return rate
+Membership/subsidy
+Geographic density
+```
+
+# Stress tests
+
+- freight rate -40% after new vessels deliver;
+- bunker fuel +30%;
+- port congestion;
+- critical route closure;
+- lead time +20 days;
+- fulfillment order density -15%;
+- return rate +5pt.
+
+Always connect operational shock to working capital and cash.
+
+# Mental Model
+
+> Logistics optimizes **time + reliability + inventory + transport + information**. Cheapest freight is not necessarily cheapest supply chain.
+
+A compact loop:
+
+```text
+Demand forecast
+   ↓
+Inventory position
+   ↓
+Transport / Warehouse decision
+   ↓
+Lead time / Service level
+   ↓
+Cash conversion + Customer experience
+```
+
+# Common misconceptions
+
+**“Inventory thấp luôn tốt.”** Sai. Stockout/disruption cost can exceed carrying cost.
+
+**“Port lớn vì domestic economy lớn.”** Transshipment/network position matter.
+
+**“Fast delivery is free digital feature.”** It requires density, labor, warehouse and transport capital.
+
+**“Shipping rates rise → every exporter margin falls.”** Contract/Incoterm/pricing power differ.
+
+**“Automation always lowers logistics cost.”** Only if throughput/utilization justifies fixed investment.
+
+**“Visibility prevents supply shock.”** It improves response; does not eliminate physical constraints.
+
+# Connections
+
+Đọc cùng [`02_trade_export_and_global_value_chains.md`](./02_trade_export_and_global_value_chains.md), [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md), [`16_shipbuilding_steel_chemicals_heavy_industry.md`](./16_shipbuilding_steel_chemicals_heavy_industry.md), [`17_platform_telecom_content_retail_services.md`](./17_platform_telecom_content_retail_services.md), [`24_regional_clusters_and_industrial_geography.md`](./24_regional_clusters_and_industrial_geography.md) và [`31_biohealth_pharma_medical_devices_and_kbeauty.md`](./31_biohealth_pharma_medical_devices_and_kbeauty.md).
