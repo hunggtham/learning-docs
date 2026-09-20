@@ -1,58 +1,68 @@
-# Glossary, Formula Conventions và Research Standards
+# Thuật ngữ, quy ước công thức và tiêu chuẩn nghiên cứu
 
-> File này là lớp chuẩn hóa dùng chung cho toàn bộ `investing/`. Mục tiêu không phải thay thế các chapter chuyên sâu mà giúp người đọc dùng cùng một ngôn ngữ, cùng convention công thức và cùng cách phân biệt fact, estimate, assumption và thesis. Khi một khái niệm được giải thích sâu ở domain khác, file này chỉ giữ định nghĩa ngắn và dẫn sang chapter tương ứng.
+> File này là lớp chuẩn hóa dùng chung cho toàn bộ `investing/`. Mục tiêu là giúp người đọc dùng cùng một hệ thuật ngữ, cùng quy ước công thức và cùng cách phân biệt dữ kiện, ước tính, giả định và luận điểm đầu tư. Phần giải thích luôn ưu tiên tiếng Việt; thuật ngữ tiếng Anh chỉ được giữ như từ khóa bổ sung để tra cứu tài liệu gốc.
 
-## 1. Cách đọc terminology trong thư viện
+## 1. Quy tắc ngôn ngữ của thư viện
 
-Các thuật ngữ tài chính thường được giữ bằng **English keyword** ở lần xuất hiện đầu tiên vì phần lớn báo cáo doanh nghiệp, broker research, terminal và academic literature dùng English. Phần giải thích chính viết bằng tiếng Việt. Khi nhiều thuật ngữ gần nghĩa nhưng không hoàn toàn giống nhau, thư viện ưu tiên giữ nguyên từ gốc thay vì dịch thành một từ Việt chung làm mất khác biệt.
+Phần giải thích phải được viết tự nhiên bằng tiếng Việt. Khi một thuật ngữ chuyên môn quan trọng xuất hiện lần đầu, viết tiếng Việt trước rồi đặt từ tiếng Anh trong ngoặc.
 
-Ví dụ, `yield`, `return`, `coupon` và `income` không được dùng thay thế tùy ý. `Coupon` là cash flow theo hợp đồng của bond. `Yield` là một rate được suy ra từ price/cash flows theo convention nhất định. `Return` là kết quả đầu tư thực tế trong một period. `Income` chỉ là một thành phần của total return.
+Ví dụ:
 
-Tương tự, `risk` không đồng nghĩa `volatility`. Volatility chỉ đo dispersion của returns quanh mean; risk còn gồm permanent capital loss, default, liquidity, leverage, concentration, operational và behavioral failure.
+- câu hỏi (question)
+- lợi suất (return)
+- lợi suất đến ngày đáo hạn (yield to maturity, YTM)
+- rủi ro thanh khoản (liquidity risk)
+- dòng tiền tự do (free cash flow, FCF)
+- vốn lưu động (working capital)
+- quyền định giá (pricing power)
 
-## 2. Fact, Estimate, Assumption, Scenario và Thesis
+Không viết một câu kiểu `Portfolio risk depends on correlation and liquidity`. Hãy viết: **Rủi ro của danh mục phụ thuộc vào tương quan (correlation) và tính thanh khoản (liquidity).**
 
-Một research note phải phân biệt rõ năm lớp thông tin.
+Các tên chuẩn và viết tắt đã phổ biến như ETF, ETN, CPI, GDP, ROIC, FCFF, FCFE, WACC, DV01, VaR, KOSPI hay VN30 có thể giữ nguyên, nhưng ý nghĩa phải được giải thích bằng tiếng Việt ở lần xuất hiện đầu tiên.
 
-**Fact** là dữ liệu đã xảy ra và có nguồn xác minh, ví dụ revenue quý vừa rồi, policy rate hiện tại hoặc số shares outstanding trong filing.
+## 2. Dữ kiện, ước tính, giả định, kịch bản và luận điểm đầu tư
 
-**Estimate** là con số dự báo từ analyst/company/market, ví dụ consensus EPS năm sau. Estimate phải ghi nguồn và thời điểm vì nó thay đổi.
+Một ghi chú nghiên cứu (research note) phải phân biệt rõ năm lớp thông tin.
 
-**Assumption** là input do chính người phân tích đặt vào model, ví dụ gross margin 35% trong base case.
+**Dữ kiện (fact)** là thông tin đã xảy ra và có nguồn xác minh, ví dụ doanh thu quý vừa rồi, lãi suất chính sách hiện tại hoặc số cổ phiếu đang lưu hành.
 
-**Scenario** là một tập assumptions nhất quán về economic path, ví dụ recession + easing + credit spread widening.
+**Ước tính (estimate)** là con số dự báo của doanh nghiệp, nhà phân tích hoặc thị trường, ví dụ EPS đồng thuận (consensus EPS) cho năm sau. Ước tính luôn phải gắn với nguồn và thời điểm.
 
-**Thesis** là claim có thể kiểm chứng về khoảng cách giữa market expectation và outcome bạn cho là có xác suất khác. Thesis không phải câu “company tốt” hoặc “kinh tế xấu”; nó phải nêu driver, catalyst, risk và invalidation.
+**Giả định (assumption)** là đầu vào do người phân tích chủ động đặt vào mô hình, ví dụ biên lợi nhuận gộp (gross margin) 35% trong kịch bản cơ sở.
 
-Một template tối thiểu:
+**Kịch bản (scenario)** là một tập hợp giả định nhất quán về đường đi của nền kinh tế hoặc doanh nghiệp.
+
+**Luận điểm đầu tư (thesis)** là một nhận định có thể kiểm chứng về khoảng cách giữa kỳ vọng đang được thị trường phản ánh vào giá và kết quả bạn cho rằng có xác suất xảy ra cao hơn hoặc thấp hơn.
+
+Chuỗi tối thiểu nên là:
 
 ```text
-Fact → Interpretation → Assumption → Scenario → Valuation/Expected Return → Position → Invalidation
+Dữ kiện → Diễn giải → Giả định → Kịch bản → Định giá / Lợi suất kỳ vọng → Vị thế → Điều kiện vô hiệu hóa
 ```
 
-## 3. Nominal và Real
+## 3. Giá trị danh nghĩa và giá trị thực
 
-**Nominal** là giá trị chưa điều chỉnh inflation. **Real** là purchasing-power-adjusted value.
+**Danh nghĩa (nominal)** là giá trị chưa điều chỉnh lạm phát. **Thực (real)** là giá trị đã điều chỉnh theo sức mua.
 
-Real return chính xác gần:
+Lợi suất thực chính xác gần:
 
 ```text
 Real Return = (1 + Nominal Return) / (1 + Inflation) - 1
 ```
 
-Với tỷ lệ nhỏ có thể dùng approximation:
+Với tỷ lệ nhỏ có thể dùng xấp xỉ:
 
 ```text
 Real Return ≈ Nominal Return - Inflation
 ```
 
-Không nên so salary, GDP, bond yield hay portfolio return dài hạn chỉ bằng nominal numbers khi inflation regimes khác nhau.
+Không nên so lương, GDP, lợi suất trái phiếu hay kết quả danh mục dài hạn chỉ bằng số danh nghĩa khi các giai đoạn lạm phát khác nhau.
 
-## 4. Arithmetic Return và Geometric Return
+## 4. Lợi suất số học và lợi suất hình học
 
-Arithmetic average tính trung bình các period returns. Geometric return phản ánh compounding thực tế.
+**Lợi suất trung bình số học (arithmetic return)** là trung bình các mức lợi suất theo từng kỳ. **Lợi suất hình học (geometric return)** phản ánh tác động của lãi kép.
 
-Nếu capital đi từ 100 → 150 → 100, arithmetic return hai period là `(+50% - 33.3%)/2 ≈ 8.3%`, nhưng geometric total return bằng 0. Đây là lý do volatility làm giảm compound growth.
+Nếu vốn đi từ 100 → 150 → 100, lợi suất số học trung bình hai kỳ vẫn dương, nhưng tổng tài sản quay lại đúng 100. Đây là lý do độ biến động có thể làm giảm tốc độ tăng trưởng kép.
 
 CAGR:
 
@@ -60,53 +70,51 @@ CAGR:
 CAGR = (Ending Value / Beginning Value)^(1/n) - 1
 ```
 
-Với wealth building, geometric return thường quan trọng hơn arithmetic expected return.
+Trong quá trình tích lũy tài sản, lợi suất hình học thường quan trọng hơn lợi suất trung bình số học.
 
-## 5. Volatility, Variance và Standard Deviation
+## 5. Độ biến động, phương sai và độ lệch chuẩn
 
-Variance đo average squared deviation quanh mean. Standard deviation là square root của variance và thường được dùng làm volatility.
+**Phương sai (variance)** đo độ lệch bình phương trung bình quanh giá trị trung bình. **Độ lệch chuẩn (standard deviation)** là căn bậc hai của phương sai và thường được dùng làm thước đo độ biến động (volatility).
 
-Annualization gần đúng khi returns độc lập tương đối:
+Quy đổi gần đúng sang năm:
 
 ```text
 Annual Volatility ≈ Period Volatility × √Periods Per Year
 ```
 
-Nhưng financial returns có volatility clustering và fat tails, nên square-root-of-time chỉ là approximation chứ không phải law bất biến.
+Tuy nhiên lợi suất tài chính thường có hiện tượng cụm biến động (volatility clustering) và đuôi phân phối dày (fat tails), nên công thức căn bậc hai theo thời gian chỉ là xấp xỉ.
 
-## 6. Covariance và Correlation
+## 6. Hiệp phương sai và tương quan
 
-Covariance đo hai assets biến động cùng nhau theo đơn vị của returns. Correlation chuẩn hóa covariance về khoảng `-1` tới `+1`.
+**Hiệp phương sai (covariance)** đo mức hai tài sản biến động cùng nhau. **Tương quan (correlation)** chuẩn hóa hiệp phương sai về khoảng từ `-1` đến `+1`.
 
 ```text
 Correlation(A,B) = Cov(A,B) / (σA × σB)
 ```
 
-Correlation thấp không tự động tạo diversification nếu hai assets cùng crash trong stress. Vì vậy thư viện thường kết hợp average correlation với downside correlation, factor exposure và scenario stress.
+Tương quan thấp trong thời kỳ bình thường không đảm bảo đa dạng hóa tốt trong khủng hoảng. Vì vậy nên kết hợp tương quan trung bình với tương quan khi thị trường giảm, mức phơi nhiễm nhân tố (factor exposure) và kiểm thử kịch bản.
 
-## 7. Portfolio Variance
+## 7. Phương sai của danh mục
 
-Với hai assets:
+Với hai tài sản:
 
 ```text
 σp² = w1²σ1² + w2²σ2² + 2w1w2Cov(1,2)
 ```
 
-Ý nghĩa quan trọng nhất không phải nhớ công thức, mà hiểu portfolio risk phụ thuộc cả standalone volatility và interaction giữa assets.
+Điều quan trọng không phải học thuộc công thức, mà hiểu rủi ro danh mục phụ thuộc cả rủi ro riêng của từng tài sản và cách chúng tương tác với nhau.
 
-Một asset có volatility cao vẫn có thể giảm total portfolio risk nếu correlation đủ thấp với phần còn lại.
+Một tài sản có độ biến động cao vẫn có thể làm giảm rủi ro tổng thể nếu tương quan với phần còn lại đủ thấp.
 
 ## 8. Beta và Alpha
 
-Beta gần đúng đo sensitivity của asset so benchmark:
+**Beta** đo gần đúng độ nhạy của tài sản so với chỉ số tham chiếu (benchmark).
 
 ```text
 Beta = Cov(Rasset, Rbenchmark) / Var(Rbenchmark)
 ```
 
-Alpha là residual return sau khi account benchmark/factor model. Alpha chỉ meaningful nếu benchmark/model phù hợp và period đủ dài.
-
-Một portfolio outperform market vì nắm nhiều small-cap/value không nên gọi toàn bộ excess return là manager alpha nếu factor exposure giải thích được.
+**Alpha** là phần lợi suất còn lại sau khi đã tính đến chỉ số tham chiếu hoặc mô hình nhân tố phù hợp. Không nên gọi toàn bộ phần vượt trội là alpha nếu nó chỉ đến từ việc nắm nhiều cổ phiếu giá trị, vốn hóa nhỏ hoặc một nhân tố quen thuộc khác.
 
 ## 9. Sharpe, Sortino và Information Ratio
 
@@ -116,63 +124,61 @@ Sharpe Ratio:
 Sharpe = (Portfolio Return - Risk-Free Return) / Portfolio Volatility
 ```
 
-Sortino thay total volatility bằng downside deviation. Information Ratio dùng active return so tracking error:
+Sortino thay tổng độ biến động bằng độ lệch giảm giá (downside deviation). Information Ratio so lợi suất chủ động với sai lệch bám chỉ số (tracking error):
 
 ```text
 IR = Active Return / Tracking Error
 ```
 
-Các ratios này hữu ích để so process nhưng không thay thế drawdown, tail risk, liquidity và path analysis.
+Các tỷ lệ này hữu ích để đánh giá quy trình nhưng không thay thế phân tích mức suy giảm, rủi ro đuôi, tính thanh khoản và đường đi của kết quả.
 
-## 10. Drawdown
+## 10. Mức suy giảm và toán phục hồi
 
-Drawdown đo percentage decline từ prior peak:
+**Mức suy giảm (drawdown)** đo mức giảm từ đỉnh trước đó:
 
 ```text
 Drawdown = Current Value / Previous Peak - 1
 ```
 
-Recovery nonlinear:
+Khả năng phục hồi là phi tuyến:
 
 ```text
-Loss 10% → cần +11.1%
-Loss 20% → cần +25%
-Loss 50% → cần +100%
+Mất 10% → cần tăng 11,1%
+Mất 20% → cần tăng 25%
+Mất 50% → cần tăng 100%
 ```
 
-Đây là lý do portfolio construction chú trọng survival và geometric compounding chứ không chỉ average return.
+Vì vậy quản trị danh mục phải chú trọng khả năng sống sót và tăng trưởng kép, không chỉ lợi suất trung bình.
 
-## 11. Value at Risk và Expected Shortfall
+## 11. VaR và Expected Shortfall
 
-**VaR** hỏi loss threshold tại confidence level trong một horizon. **Expected Shortfall** hỏi average loss khi đã vượt threshold đó.
+**Giá trị chịu rủi ro (Value at Risk, VaR)** ước lượng ngưỡng tổn thất tại một mức tin cậy và khoảng thời gian nhất định. **Tổn thất kỳ vọng vượt ngưỡng (Expected Shortfall)** đo mức lỗ trung bình khi đã vượt ngưỡng VaR.
 
-Không metric nào là “maximum loss”. Cả hai phụ thuộc distribution/model/data và thường đánh giá thấp jump, liquidity và regime-break risk nếu dùng máy móc.
+Không chỉ số nào là “mức lỗ tối đa”. Chúng đều phụ thuộc mô hình, dữ liệu và giả định phân phối, đồng thời có thể đánh giá thấp các cú nhảy giá hoặc sự đứt gãy thanh khoản.
 
-## 12. Present Value và Discounting
+## 12. Giá trị hiện tại và chiết khấu
 
-Core valuation principle:
+Nguyên tắc cơ bản của định giá:
 
 ```text
 PV = Future Cash Flow / (1 + Discount Rate)^t
 ```
 
-Value của asset là present value của future cash flows hoặc economic benefits phù hợp với legal claim. Discount rate tăng làm distant cash flows giảm giá trị nhiều hơn, tạo concept duration ở cả bonds lẫn long-duration equities.
+Giá trị của tài sản là giá trị hiện tại (present value, PV) của các dòng tiền hoặc lợi ích kinh tế phù hợp với quyền lợi pháp lý của người nắm giữ. Tỷ lệ chiết khấu càng cao thì các dòng tiền ở xa càng mất giá mạnh.
 
-## 13. Enterprise Value và Equity Value
+## 13. Giá trị doanh nghiệp và giá trị vốn chủ sở hữu
 
-Một convention đơn giản:
+Một cầu nối đơn giản:
 
 ```text
 Enterprise Value = Equity Value + Net Debt + Other Senior Claims - Non-operating Assets
 ```
 
-Exact bridge phụ thuộc leases, pension deficits, minority interests, investments và industry.
+Giá trị doanh nghiệp (Enterprise Value, EV) và giá trị vốn chủ sở hữu (Equity Value) không thể dùng thay thế cho nhau. FCFF được chiết khấu bằng WACC để đi tới EV; FCFE được chiết khấu bằng chi phí vốn chủ sở hữu (cost of equity) để đi tới Equity Value.
 
-FCFF được discount bằng WACC để ra Enterprise Value. FCFE được discount bằng Cost of Equity để ra Equity Value. Không mix cash flow và discount rate sai layer.
+## 14. Dòng tiền tự do
 
-## 14. Free Cash Flow
-
-Một simplified operating definition:
+Một công thức vận hành đơn giản cho dòng tiền tự do của doanh nghiệp (FCFF):
 
 ```text
 FCFF ≈ EBIT × (1 - Tax Rate)
@@ -181,58 +187,49 @@ FCFF ≈ EBIT × (1 - Tax Rate)
        - Change in Net Working Capital
 ```
 
-FCFE có thêm debt flows. Công thức cụ thể phải phù hợp business model; banks và insurers cần framework khác industrial companies.
+Vốn lưu động ròng (net working capital) phải được hiểu theo mô hình kinh doanh. Ngân hàng và công ty bảo hiểm cần cách tiếp cận khác với doanh nghiệp công nghiệp.
 
-## 15. ROIC và Reinvestment
+## 15. ROIC và tái đầu tư
 
-Một intuition quan trọng:
+Một trực giác quan trọng:
 
 ```text
 Growth ≈ Reinvestment Rate × Return on Incremental Capital
 ```
 
-Nếu company reinvest nhiều nhưng incremental ROIC dưới cost of capital, growth có thể phá shareholder value. Growth tốt cần cả runway và unit economics.
+Nếu doanh nghiệp tái đầu tư nhiều nhưng lợi suất trên vốn tăng thêm thấp hơn chi phí vốn, tăng trưởng có thể phá hủy giá trị cổ đông. Tăng trưởng chất lượng cần cả dư địa phát triển và hiệu quả trên đơn vị kinh tế.
 
-## 16. Bond Price, Duration và DV01
+## 16. Giá trái phiếu, duration và DV01
 
-Bond price là PV của coupon + principal. Rate sensitivity gần:
+Giá trái phiếu là giá trị hiện tại của coupon và tiền gốc. Độ nhạy gần đúng với lợi suất:
 
 ```text
 %ΔPrice ≈ -Modified Duration × ΔYield
 ```
 
-Với move lớn hơn cần convexity.
+**Thời hạn điều chỉnh (modified duration)** đo độ nhạy theo tỷ lệ phần trăm. **DV01/PV01** đo thay đổi tiền tệ khi lợi suất thay đổi 1 điểm cơ bản (basis point).
 
-DV01/PV01 đo P/L monetary khi yield đổi 1 basis point. Fixed-income portfolio nên được nhìn qua rate duration, curve/key-rate exposure và spread duration, không chỉ notional.
+Danh mục trái phiếu nên được nhìn qua thời hạn lãi suất, độ nhạy theo từng đoạn đường cong và độ nhạy với chênh lệch tín dụng, không chỉ qua giá trị danh nghĩa.
 
-## 17. Yield Conventions
+## 17. Các loại lợi suất của trái phiếu
 
-`Coupon`, `current yield`, `YTM`, `yield-to-call`, `yield-to-worst`, `distribution yield` và money-market quoted yield là các khái niệm khác nhau.
+Coupon, lợi suất hiện tại (current yield), lợi suất đến đáo hạn (YTM), lợi suất đến ngày được mua lại sớm (yield to call), lợi suất xấu nhất (yield to worst) và lợi suất phân phối của quỹ là các khái niệm khác nhau.
 
-Trước khi so hai yields, luôn kiểm tra:
+Trước khi so sánh hai mức lợi suất, cần kiểm tra cách tính dòng tiền, quy ước số ngày, cách ghép lãi, giả định đáo hạn hoặc mua lại sớm, rủi ro tín dụng, tính thanh khoản, quyền chọn và đồng tiền.
 
-```text
-Cash-flow convention
-Day-count convention
-Compounding convention
-Maturity / call assumption
-Credit / liquidity / optionality
-Currency
-```
+## 18. Tổn thất tín dụng kỳ vọng
 
-## 18. Credit Expected Loss
-
-Simplified:
+Công thức đơn giản:
 
 ```text
 Expected Loss ≈ PD × LGD × Exposure
 ```
 
-Trong đó PD = Probability of Default, LGD = Loss Given Default. Credit spread còn chứa risk premium, liquidity premium và technical effects; không được đọc spread như pure default probability.
+Trong đó PD là xác suất vỡ nợ (probability of default), LGD là tỷ lệ tổn thất khi vỡ nợ (loss given default). Chênh lệch tín dụng (credit spread) còn chứa phần bù rủi ro và phần bù thanh khoản, nên không thể đọc nó như xác suất vỡ nợ thuần túy.
 
-## 19. FX Return Decomposition
+## 19. Phân rã lợi suất ngoại tệ
 
-Home-currency return chính xác:
+Lợi suất quy về đồng tiền cơ sở:
 
 ```text
 Home Return = (1 + Local Asset Return) × (1 + FX Return) - 1
@@ -241,210 +238,167 @@ Home Return = (1 + Local Asset Return) × (1 + FX Return) - 1
 Cần phân biệt:
 
 ```text
-Trading Currency
-Underlying Economic Currency
-Reporting Currency
-Liability Currency
+Đồng tiền giao dịch (Trading Currency)
+Đồng tiền kinh tế của tài sản (Underlying Economic Currency)
+Đồng tiền báo cáo (Reporting Currency)
+Đồng tiền nghĩa vụ tương lai (Liability Currency)
 ```
 
-Listing bằng KRW không có nghĩa underlying USD exposure biến mất.
+Một ETF niêm yết bằng KRW không có nghĩa rủi ro USD của tài sản cơ sở biến mất.
 
-## 20. Futures Notional và Margin
+## 20. Giá trị danh nghĩa và ký quỹ của hợp đồng tương lai
 
 ```text
 Futures Notional = Futures Price × Contract Multiplier
 ```
 
-Margin là collateral, không phải capital-at-risk. Position sizing phải dựa scenario loss, notional/sensitivity và margin path chứ không dựa số tiền broker yêu cầu để mở lệnh.
+Ký quỹ (margin) chỉ là tài sản bảo đảm, không phải toàn bộ vốn có thể mất. Quy mô vị thế phải dựa trên giá trị danh nghĩa, độ nhạy, mức lỗ trong kịch bản bất lợi và đường đi của yêu cầu ký quỹ.
 
-## 21. Options Payoff và Greeks
+## 21. Quyền chọn và các độ nhạy Greek
 
-Basic expiry payoff:
+Giá trị tại đáo hạn:
 
 ```text
 Call = max(S - K, 0)
 Put  = max(K - S, 0)
 ```
 
-Trước expiry, option value còn chịu time, implied volatility, rates, dividends/borrow và surface dynamics.
+Trước ngày đáo hạn, quyền chọn còn chịu ảnh hưởng của thời gian, biến động ngụ ý (implied volatility), lãi suất, cổ tức và cấu trúc bề mặt biến động.
 
-Delta, Gamma, Theta, Vega, Rho là local sensitivities; chúng không thay thế full scenario grid khi market jump.
+Delta, Gamma, Theta, Vega và Rho là các độ nhạy cục bộ; chúng không thay thế kiểm thử nhiều kịch bản khi thị trường có cú nhảy lớn.
 
-## 22. Position Sizing theo Risk Budget
+## 22. Quy mô vị thế theo ngân sách rủi ro
 
-Một framework cơ bản:
+Một khung cơ bản:
 
 ```text
 Position Size ≈ Allowed Loss / Loss Per Unit Under Invalidation
 ```
 
-Allowed loss phải được xét cùng portfolio heat, correlation/factor overlap, liquidity, gap risk và leverage. Stop distance không phải một con số technical tách khỏi portfolio context.
+Mức lỗ cho phép phải được xem cùng tổng rủi ro đang mở của danh mục, mức trùng lặp nhân tố, thanh khoản, rủi ro nhảy giá và đòn bẩy.
 
-## 23. Expectancy
+## 23. Kỳ vọng toán học
 
 ```text
 Expectancy = Win Rate × Average Win - Loss Rate × Average Loss
 ```
 
-Win rate cao không đảm bảo positive expectancy. Một short-vol strategy có thể thắng 90% nhưng mất rất lớn ở tail.
+Tỷ lệ thắng cao không đảm bảo kỳ vọng dương. Một chiến lược bán biến động (short-volatility strategy) có thể thắng thường xuyên nhưng chịu một số khoản lỗ rất lớn ở phần đuôi phân phối.
 
-Trading research phải nhìn distribution, drawdown, costs, capacity và robustness.
+## 24. Chỉ số tham chiếu
 
-## 24. Benchmark Convention
+Chỉ số tham chiếu (benchmark) phải được chọn trước khi đánh giá kết quả và phải phù hợp với tập cơ hội đầu tư.
 
-Benchmark phải được chọn **trước khi** đánh giá performance, phù hợp opportunity set và investable.
+Một benchmark tốt giúp phân biệt kết quả đến từ beta thị trường, nghiêng nhân tố, phân bổ tài sản, lựa chọn chứng khoán, tiền tệ hay chất lượng thực thi lệnh.
 
-Một benchmark tốt phải giúp trả lời: return đến từ market beta, factor tilt, asset allocation, security selection, currency hay execution?
+Không thay benchmark sau khi chiến lược hoạt động kém chỉ để làm thành tích trông tốt hơn.
 
-Không đổi benchmark sau khi strategy underperform để làm kết quả đẹp hơn.
+## 25. Kỷ luật dữ liệu đúng thời điểm
 
-## 25. Time Convention và Point-in-Time Discipline
-
-Mọi research sử dụng historical data phải phân biệt:
+Mọi nghiên cứu lịch sử phải phân biệt:
 
 ```text
-Observation Date
-Publication Date
-Revision Date
-Decision Time
-Execution Time
+Ngày quan sát (Observation Date)
+Ngày công bố (Publication Date)
+Ngày sửa đổi dữ liệu (Revision Date)
+Thời điểm ra quyết định (Decision Time)
+Thời điểm thực thi (Execution Time)
 ```
 
-Data được revise sau này không được đưa ngược vào model như thể investor đã biết tại thời điểm quyết định. Đây là core principle chống look-ahead bias.
+Không được dùng dữ liệu đã được sửa đổi về sau như thể nhà đầu tư đã biết nó tại thời điểm quyết định. Đây là nguyên tắc chống thiên lệch nhìn trước (look-ahead bias).
 
-## 26. Source Hierarchy
+## 26. Thứ bậc nguồn dữ liệu
 
-Thứ tự ưu tiên chung:
+Ưu tiên chung:
 
 ```text
-Official regulator / exchange / central bank / statistics
-→ Audited filing / company disclosure
-→ Company IR / transcript
-→ High-quality data provider
-→ Broker / research synthesis
-→ News
-→ Social / community discussion
+Cơ quan quản lý / Sở giao dịch / Ngân hàng trung ương / Cơ quan thống kê
+→ Báo cáo kiểm toán / Công bố chính thức của doanh nghiệp
+→ Tài liệu quan hệ nhà đầu tư (IR) / Biên bản cuộc họp
+→ Nhà cung cấp dữ liệu chất lượng cao
+→ Báo cáo phân tích của công ty chứng khoán
+→ Tin tức
+→ Thảo luận cộng đồng
 ```
 
-Higher layer không phải luôn đúng tuyệt đối, nhưng fact nên được neo bằng primary source khi có thể.
+Nguồn ở tầng cao hơn không phải luôn đúng tuyệt đối, nhưng dữ kiện quan trọng nên được neo bằng nguồn sơ cấp khi có thể.
 
-## 27. Timestamp Rule cho dữ liệu động
+## 27. Quy tắc thời điểm cho dữ liệu động
 
-Policy rate, tax rule, settlement cycle, index membership, foreign-room rule, market-access regulation và product specification có thể thay đổi.
+Lãi suất chính sách, thuế, chu kỳ thanh toán, thành phần chỉ số, giới hạn sở hữu nước ngoài, quy định tiếp cận thị trường và thông số sản phẩm có thể thay đổi.
 
-Mọi snapshot động nên ghi rõ `as of YYYY-MM-DD` hoặc period. Nếu không có timestamp, người đọc dễ nhầm dữ liệu lịch sử thành rule hiện tại.
+Mọi dữ liệu động nên ghi rõ `tính đến YYYY-MM-DD` hoặc kỳ tham chiếu. Nếu không có thời điểm, người đọc rất dễ nhầm dữ liệu lịch sử thành quy định hiện hành.
 
-## 28. Base / Bull / Bear không phải ±20% tùy ý
+## 28. Kịch bản cơ sở, tích cực và tiêu cực
 
-Các scenarios phải khác nhau ở **drivers**.
+Ba kịch bản không nên chỉ là cộng hoặc trừ 20% một cách tùy ý. Chúng phải khác nhau ở các động lực kinh tế chính.
 
-Ví dụ company semiconductor:
+Ví dụ với doanh nghiệp bán dẫn:
 
 ```text
-Base: ASP recovery vừa phải + utilization cải thiện
-Bull: HBM mix tăng nhanh + supply discipline kéo dài
-Bear: capacity ramp nhanh + demand miss → ASP giảm
+Cơ sở: ASP phục hồi vừa phải + công suất sử dụng cải thiện
+Tích cực: tỷ trọng HBM tăng nhanh + kỷ luật nguồn cung được duy trì
+Tiêu cực: công suất mới tăng nhanh + nhu cầu hụt kỳ vọng → ASP giảm
 ```
 
-Sau đó mới translate drivers thành revenue, margin, cash flow và valuation.
+Sau đó mới chuyển các động lực thành doanh thu, biên lợi nhuận, dòng tiền và định giá.
 
-## 29. Catalyst và Invalidation
+## 29. Chất xúc tác và điều kiện vô hiệu hóa
 
-**Catalyst** là event/data có thể khiến market cập nhật expectation. **Invalidation** là evidence làm thesis không còn đúng.
+**Chất xúc tác (catalyst)** là sự kiện hoặc dữ liệu có thể khiến thị trường cập nhật kỳ vọng. **Điều kiện vô hiệu hóa (invalidation)** là bằng chứng cho thấy luận điểm đầu tư không còn đúng.
 
-Catalyst không phải điều kiện bắt buộc để một asset có value, nhưng giúp hiểu path và timing. Invalidation bắt buộc phải có để tránh thesis trở thành niềm tin không thể kiểm chứng.
+Luận điểm không được biến thành niềm tin không thể kiểm chứng. Nếu cơ chế cốt lõi đã sai, phải cập nhật hoặc loại bỏ luận điểm.
 
-## 30. Ex-Ante và Ex-Post
+## 30. Trước quyết định và sau kết quả
 
-Ex-ante là những gì biết/ước tính trước quyết định. Ex-post là outcome sau đó.
+**Trước quyết định (ex-ante)** là những gì có thể biết hoặc ước tính trước khi hành động. **Sau kết quả (ex-post)** là kết quả thực tế sau đó.
 
-Một decision tốt có thể có outcome xấu do uncertainty. Một decision tệ có thể kiếm tiền do luck. Review process phải tách decision quality khỏi outcome bias.
+Một quyết định tốt vẫn có thể dẫn đến kết quả xấu do bất định. Một quyết định tệ vẫn có thể kiếm tiền do may mắn. Khi đánh giá, phải tách chất lượng quyết định khỏi thiên lệch theo kết quả.
 
-## 31. Performance Attribution Convention
+## 31. Phân rã kết quả đầu tư
 
-Một review nên tách tối thiểu:
+Một lần đánh giá nên tách ít nhất:
 
 ```text
-Market / Benchmark
-Asset Allocation
-Factor Exposure
-Security Selection
-Currency
-Carry / Income
-Execution Costs
-Fees / Tax
-Behavioral Overrides
-Residual
+Tác động thị trường / Beta
+Phân bổ tài sản
+Lựa chọn chứng khoán
+Nhân tố
+Tiền tệ
+Thu nhập
+Phí và chênh lệch mua bán
+Trượt giá / Tác động thị trường
+Chi phí vốn / Chi phí vay
+Thuế
+Sai lệch hành vi
 ```
 
-Tùy strategy có thể thêm duration, curve, spread, volatility hoặc sector effects.
+Mục tiêu là biết phần nào đến từ kỹ năng, phần nào đến từ rủi ro đã nhận và phần nào chỉ là may mắn.
 
-## 32. Cross-Domain Causal Chain
+## 32. Quy tắc viết ghi chú nghiên cứu
 
-Khi đọc một event, thư viện ưu tiên causal chain thay vì slogan:
+Một ghi chú nghiên cứu tốt cần trả lời theo thứ tự:
 
 ```text
-Event / Surprise
-→ Growth & Inflation Expectations
-→ Central-bank Reaction Function
-→ Yield Curve / Real Yields
-→ USD / Local FX
-→ Credit / Liquidity
-→ Sector Economics
-→ Company Earnings
-→ Valuation Multiple
-→ Flows / Positioning
-→ Asset Price
-→ Portfolio P/L
+Tôi đang phân tích điều gì?
+→ Dữ kiện nào đã biết?
+→ Thị trường đang kỳ vọng điều gì?
+→ Động lực nào quyết định kết quả?
+→ Kịch bản nào có thể xảy ra?
+→ Giá hiện tại đòi hỏi điều gì?
+→ Tôi đang nhận rủi ro gì?
+→ Điều gì làm luận điểm sai?
+→ Tôi sẽ đánh giá lại khi nào?
 ```
 
-Không phải mọi bước đều cùng direction hoặc cùng timing. Đây là lý do cùng một headline có thể tạo outcome khác nhau ở Korea, Vietnam, bonds, equities và FX.
+Viết câu hoàn chỉnh bằng tiếng Việt trước. Chỉ giữ từ tiếng Anh trong ngoặc khi nó là thuật ngữ chuẩn cần tra cứu.
 
-## 33. Research Note Minimum Standard
+## 33. Nguyên tắc cuối cùng
 
-Một note đủ tốt để lưu lâu dài nên trả lời:
+Mục tiêu của thư viện không phải là nhét càng nhiều thuật ngữ tiếng Anh càng tốt. Mục tiêu là hiểu bản chất bằng tiếng Việt nhưng vẫn nhận ra thuật ngữ gốc khi đọc báo cáo, tài liệu học thuật hoặc dữ liệu quốc tế.
+
+Quy tắc mặc định:
 
 ```text
-1. Tôi đang phân tích claim nào?
-2. Return driver chính là gì?
-3. Data nào là fact, estimate và assumption?
-4. Market đang price điều gì?
-5. Base/bull/bear path khác nhau ở driver nào?
-6. Balance sheet/liquidity có chịu được bear case không?
-7. Valuation/expected return có đủ bù risk không?
-8. Position này duplicate factor nào trong portfolio?
-9. Catalyst và invalidation là gì?
-10. Review cadence là gì?
+Tiếng Việt để hiểu → Tiếng Anh trong ngoặc để tra cứu → Viết tắt để dùng thực tế
 ```
-
-## 34. Quy tắc liên kết giữa các chapter
-
-Khi một chapter dùng concept đã được giải thích ở nơi khác, ưu tiên link sang file gốc thay vì viết lại toàn bộ. Master notes giữ vai trò overview/bridge; chapter chuyên sâu là source of truth cho detailed mechanics.
-
-Ví dụ:
-
-- duration/credit → `02_asset_classes/02_BONDS_RATES_AND_CREDIT.md`;
-- accounting/modeling → `03_company_analysis/01...` và `04_EARNINGS...`;
-- macro event reaction → `04_economics/03_MACRO_DATA_PLAYBOOK.md`;
-- execution → `05_trading_derivatives/03_EXECUTION...`;
-- Korea/Vietnam transmission → `06_markets_korea_vietnam/03_CROSS_MARKET_GLOBAL_SHOCKS.md`.
-
-## 35. Mental model chung
-
-Toàn thư viện có thể được rút về một chuỗi duy nhất:
-
-```text
-Legal Claim
-→ Cash-flow / Return Driver
-→ Economic Regime
-→ Market Expectations
-→ Valuation
-→ Risk & Liquidity
-→ Position Size
-→ Execution
-→ Outcome
-→ Attribution
-→ Thesis Update
-```
-
-Nếu một investment idea không thể đi qua đầy đủ chuỗi này, phần còn thiếu chính là nơi research nên tiếp tục.
