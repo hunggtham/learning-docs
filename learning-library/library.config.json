@@ -31,6 +31,30 @@
       "category": "English",
       "language": "en-vi",
       "rights": "author-confirmed"
+    },
+    {
+      "path": "biology",
+      "category": "Biology",
+      "language": "vi-en",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "korean_culture",
+      "category": "Korean culture",
+      "language": "vi-ko-en",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "korean_history",
+      "category": "Korean history",
+      "language": "vi-ko-en",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "mathematics",
+      "category": "Mathematics",
+      "language": "vi-en-ko",
+      "rights": "author-confirmed"
     }
   ],
   "allowedDocuments": [
