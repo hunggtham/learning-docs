@@ -375,6 +375,110 @@ Mẫu này mạnh ở thế hệ, vùng, tầng lớp hay tổ chức nào? Ai k
 
 Nếu trả lời được bảy câu này, lời giải thích thường mạnh hơn định kiến.
 
+## So sánh văn hoá: luôn tìm nhóm đối chứng trước khi nói “đặc trưng Hàn Quốc”
+
+Một hiện tượng dễ thấy ở Hàn Quốc chưa chắc đặc trưng riêng của Hàn Quốc. Làm thêm giờ, cạnh tranh giáo dục, áp lực nhà ở, giao hàng nhanh hay văn hoá fandom đều tồn tại ở nhiều xã hội với mức độ và cơ chế khác nhau.
+
+Muốn gọi một hiện tượng là “đặc trưng”, cần ít nhất ba bước:
+
+```text
+1. xác định hiện tượng cụ thể
+2. chọn nhóm hoặc xã hội so sánh hợp lý
+3. kiểm tra khác biệt về mức độ, cơ chế và bối cảnh
+```
+
+Nếu không có bước 2, ta chỉ biết “hiện tượng tồn tại ở Hàn Quốc”, chưa biết nó có đặc biệt hay không.
+
+Đây là **phương pháp so sánh (comparative method)**. Nhóm so sánh không nhất thiết phải là “phương Tây”; đôi khi Nhật Bản, Đài Loan, Singapore, Việt Nam hoặc một nhóm đô thị có cấu trúc tương tự cho phép so sánh tốt hơn tuỳ câu hỏi.
+
+## Tương quan không đủ để kết luận nguyên nhân
+
+Giả sử khu vực có nhiều học viện tư cũng có giá nhà cao. Ta chưa thể kết luận học viện làm giá nhà tăng. Có thể cả hai cùng do thu nhập cao, trường học tốt, vị trí trung tâm hoặc nhu cầu gia đình.
+
+Đây là vấn đề **biến gây nhiễu (confounder)**.
+
+```text
+A đi cùng B
+≠
+A gây ra B
+```
+
+Khi phân tích văn hoá, câu “xã hội có X nên người dân làm Y” thường chứa giả định nhân quả rất mạnh. Nên hỏi cơ chế trung gian nào nối X với Y, và liệu có lời giải thích thay thế nào hợp lý hơn.
+
+## Phản thực tế: điều gì sẽ xảy ra nếu cơ chế ta nghi ngờ không tồn tại?
+
+Một cách kiểm tra lời giải thích là đặt câu hỏi **phản thực tế (counterfactual)**.
+
+Ví dụ, nếu cho rằng giao hàng nhanh chủ yếu do “tính nóng vội”, hãy hỏi: tại vùng mật độ thấp với cùng người tiêu dùng nhưng hạ tầng logistics thưa hơn, tốc độ có còn giống nhau không? Nếu tốc độ giảm mạnh, hạ tầng và mật độ có vai trò lớn.
+
+Nếu cho rằng kính ngữ chỉ do niềm tin Nho giáo, hãy hỏi: trong công ty quốc tế với nhân viên Hàn nhưng chức danh phẳng và giao tiếp tiếng Anh, cách biểu hiện thứ bậc thay đổi ra sao? Sự thay đổi cho thấy thiết chế và ngôn ngữ cùng tham gia.
+
+Phản thực tế không tự chứng minh nguyên nhân, nhưng nó buộc mô hình phải tạo dự đoán có thể bị sai.
+
+## Cấp độ phân tích: quốc gia, vùng, tổ chức, nhóm và cá nhân
+
+Một trong những lỗi lớn nhất khi học văn hoá là lấy dữ liệu ở một cấp để suy trực tiếp sang cấp khác.
+
+```text
+quốc gia
+→ vùng
+→ thành phố
+→ tổ chức
+→ nhóm
+→ cá nhân
+```
+
+Một công ty có văn hoá làm thêm giờ không chứng minh cả quốc gia giống vậy. Một khảo sát quốc gia cũng không cho phép đoán chắc một người cụ thể. Ngược lại, trải nghiệm cá nhân tích cực trong một công ty không phủ định một khuynh hướng có thể tồn tại ở dữ liệu lớn hơn.
+
+Lỗi suy từ đặc điểm nhóm sang cá nhân gọi là **ngụy biện sinh thái (ecological fallacy)**. Lỗi ngược lại — lấy một vài cá nhân rồi phủ định hoặc khẳng định mẫu nhóm — là vấn đề lấy mẫu quá nhỏ.
+
+## Thời gian cũng là một biến: đừng trộn thế hệ với tuổi và thời kỳ
+
+Nếu người 60 tuổi và người 25 tuổi có hành vi khác nhau, có ít nhất ba khả năng:
+
+- **hiệu ứng tuổi (age effect)**: con người thay đổi khi lớn tuổi;
+- **hiệu ứng thế hệ (cohort effect)**: họ lớn lên trong điều kiện lịch sử khác nhau;
+- **hiệu ứng thời kỳ (period effect)**: một sự kiện hiện tại tác động đồng thời lên nhiều nhóm tuổi.
+
+Ba hiệu ứng này dễ bị trộn. Ví dụ người cao tuổi dùng ứng dụng ít hơn có thể do tuổi, lịch sử tiếp xúc công nghệ hoặc thiết kế ứng dụng hiện tại. Vì vậy câu “thế hệ này bản chất là…” cần được dùng rất thận trọng.
+
+## Thiên lệch chọn mẫu: thứ dễ nhìn thấy không nhất thiết là thứ phổ biến nhất
+
+Khách du lịch nhìn nhiều khu trung tâm, người học K-pop nhìn nhiều fandom, nhân viên công nghệ nhìn nhiều văn hoá công ty tri thức. Mỗi vị trí quan sát tạo một mẫu riêng.
+
+Có thể mô tả:
+
+```text
+thế giới thật
+→ cơ chế chọn mẫu
+→ thứ ta nhìn thấy
+→ câu chuyện ta kể
+```
+
+Nếu không phân tích cơ chế chọn mẫu, người quan sát dễ biến Gangnam thành toàn Seoul, Seoul thành toàn Hàn Quốc, hoặc nội dung viral thành ý kiến số đông.
+
+## Tam giác hoá: một nguồn hiếm khi đủ
+
+Để kiểm tra một tuyên bố văn hoá, nên kết hợp ít nhất hai hoặc ba loại bằng chứng khi có thể:
+
+```text
+thống kê / khảo sát
++ tài liệu lịch sử / pháp lý
++ quan sát thực địa / nghiên cứu định tính
+```
+
+Mỗi nguồn có điểm mù. Thống kê cho độ rộng nhưng có thể thiếu nghĩa; phỏng vấn cho chiều sâu nhưng mẫu nhỏ; tài liệu chính thức cho quy tắc nhưng không đảm bảo hành vi thực tế giống quy tắc.
+
+Kết hợp nguồn giúp giảm nguy cơ một điểm mù chi phối toàn bộ kết luận.
+
+## Khi nào không nên dùng “văn hoá” làm nguyên nhân chính?
+
+Nếu hành vi được giải thích tốt hơn bằng giá, luật, thời gian, cấu trúc công việc hoặc thiết kế giao diện, không cần thêm “văn hoá” như một biến mơ hồ.
+
+Ví dụ một người dùng kiosk vì quầy người đóng không nhất thiết phản ánh sở thích số. Một nhân viên trả lời tin nhắn cuối tuần vì đang trực không nhất thiết phản ánh “văn hoá làm việc Hàn Quốc”.
+
+Nguyên tắc **tiết kiệm lời giải thích (parsimony)** là: dùng cơ chế đủ để giải thích dữ liệu, không thêm bản chất dân tộc nếu không cần.
+
 ## Mô hình tư duy
 
 > Hãy nhìn văn hoá Hàn Quốc hiện đại như **nhiều lớp lịch sử chạy đồng thời trên cùng một hạ tầng xã hội**: sinh thái bán đảo, làng và nông nghiệp, nhà nước Phật giáo–Nho giáo, thân tộc, đứt gãy thuộc địa và chiến tranh, công nghiệp hoá, dân chủ hoá, kinh tế căn hộ–giáo dục, băng thông rộng–điện thoại thông minh, toàn cầu hoá và biến đổi dân số. Một hành vi hiện tại thường là kết quả của nhiều lớp chồng lên nhau, không phải sản phẩm của một “truyền thống Hàn Quốc” duy nhất.
@@ -392,6 +496,10 @@ Nếu trả lời được bảy câu này, lời giải thích thường mạnh
 “Seoul = Hàn Quốc” là lỗi lấy mẫu. `수도권` có ảnh hưởng rất lớn nhưng các hệ thống vùng vẫn khác nhau.
 
 “Văn hoá giải thích mọi hành vi” là sai. Thu nhập, luật, tính cách, nghề nghiệp, tổ chức và động lực tình huống có thể mạnh hơn nền tảng văn hoá.
+
+“Một quan sát cá nhân đủ để kết luận về toàn xã hội” là sai. Trải nghiệm cá nhân là dữ liệu có giá trị nhưng cần biết nó được chọn từ môi trường nào.
+
+“Có tương quan nghĩa là đã biết nguyên nhân” là sai. Không có cơ chế, nhóm so sánh hoặc thiết kế nghiên cứu phù hợp thì kết luận nhân quả vẫn yếu.
 
 ## Đọc tiếp
 
