@@ -1,6 +1,6 @@
 # 02 — Asset Classes
 
-Domain này giải thích từng nhóm tài sản theo bản chất kinh tế, nguồn lợi nhuận, rủi ro và cách chúng phản ứng trong các economic regime khác nhau. Mục tiêu không phải thuộc tên sản phẩm, mà biết mình đang mua quyền sở hữu, khoản nợ, real asset hay derivative exposure nào.
+Domain này giải thích từng nhóm tài sản theo bản chất kinh tế, nguồn lợi nhuận, rủi ro và cách chúng phản ứng trong các economic regime khác nhau. Mục tiêu không phải thuộc tên sản phẩm, mà biết mình đang mua quyền sở hữu, khoản nợ, real asset, cash-like claim, private asset hay derivative exposure nào.
 
 ## Thứ tự đọc
 
@@ -14,8 +14,10 @@ Domain này giải thích từng nhóm tài sản theo bản chất kinh tế, n
 
 [05_MULTI_ASSET_HEDGING_CURRENCY_AND_REGIME_ALLOCATION.md](./05_MULTI_ASSET_HEDGING_CURRENCY_AND_REGIME_ALLOCATION.md) nối các asset classes thành portfolio thực tế: growth/inflation regimes, hidden duration, credit-equity linkage, FX return decomposition, hedged/unhedged exposure, liability currency, futures/options hedging, inflation/deflation hedges, risk parity, 60/40, volatility targeting, liquidity hierarchy và regime allocation.
 
+[06_CASH_MONEY_MARKETS_STRUCTURED_PRODUCTS_AND_PRIVATE_MARKETS.md](./06_CASH_MONEY_MARKETS_STRUCTURED_PRODUCTS_AND_PRIVATE_MARKETS.md) bổ sung các nhóm thường bị bỏ qua: cash, deposits, MMF, Treasury bills, commercial paper, repo, structured products, ETN, autocallables, private equity, venture capital, private credit, infrastructure, illiquidity premium, capital calls và liquidity mismatch.
+
 ## Sau domain này bạn cần làm được gì?
 
-Bạn cần có khả năng nhìn một sản phẩm và xác định return driver, underlying exposure, duration/credit/FX/factor risk, hiểu vì sao hai ETF cùng tên theme vẫn khác nhau, nhận ra hidden concentration giữa nhiều asset classes và biết asset nào đang đóng vai trò growth, income, liquidity, hedge hay diversification trong portfolio.
+Bạn cần có khả năng nhìn một sản phẩm và xác định return driver, legal claim, liquidity, duration/credit/FX/factor risk, hiểu vì sao hai ETF cùng theme vẫn khác nhau, nhận ra hidden concentration giữa nhiều asset classes, đánh giá embedded option/counterparty risk của structured product và hiểu private-market NAV không đồng nghĩa economic risk thấp.
 
 Sau đó chuyển sang [03_company_analysis](../03_company_analysis/README.md) nếu muốn chọn cổ phiếu, hoặc [04_economics](../04_economics/README.md) nếu muốn đi sâu macro trước.
