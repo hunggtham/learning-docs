@@ -22,6 +22,8 @@
 | 후배 | Junior | Hậu bối; người vào sau | 02, 30 |
 | 갑질 | Abuse of superior position | Lạm dụng vị thế mạnh | 02, 24 |
 | 꼰대 | Kkondae | Người áp đặt thâm niên hoặc kinh nghiệm một cách giáo điều | 06 |
+| 정당성 | Legitimacy | Tính chính danh; mức độ quyền lực được xem là hợp lý/chấp nhận được | 02 |
+| 관계주의 | Relationalism | Cách nhìn nhấn mạnh quyết định phụ thuộc vào quan hệ cụ thể | 02 |
 
 ## Gia đình, chăm sóc và vòng đời
 
@@ -101,6 +103,12 @@
 | 야근 | Overtime | Làm thêm muộn, làm đêm | 06 |
 | 재택근무 | Remote work | Làm việc tại nhà/từ xa | 06 |
 | 하이브리드근무 | Hybrid work | Làm việc kết hợp từ xa và tại văn phòng | 06 |
+| 담당자 | Person in charge | Người phụ trách trực tiếp một việc | 06 |
+| 업무분장 | Division of duties | Phân công phạm vi công việc và trách nhiệm | 06 |
+| 책임소재 | Accountability locus | Nơi xác định trách nhiệm khi có vấn đề | 06 |
+| 인수인계 | Handover | Bàn giao công việc, trạng thái và bối cảnh | 06 |
+| 장애 | Incident/outage | Sự cố hoặc gián đoạn hệ thống | 06 |
+| 사후회고 | Postmortem/retrospective | Hậu kiểm sau sự cố hoặc sự kiện để rút bài học | 06 |
 
 ## Ăn uống, nhà ở và khu dân cư
 
@@ -149,6 +157,9 @@
 | 천주교 | Catholicism | Công giáo | 09 |
 | 풍수지리 | Geomancy | Phong thuỷ địa lý | 09 |
 | 사주 | Four Pillars | Tứ trụ, bói theo ngày giờ sinh | 09 |
+| 무종교 | No religious affiliation | Không tự nhận thuộc tôn giáo có tổ chức | 09 |
+| 봉사 | Volunteering | Hoạt động tình nguyện/phục vụ cộng đồng | 09, 20 |
+| 헌금 | Offering/donation | Tiền dâng hoặc đóng góp trong một số cộng đồng Kitô giáo | 09 |
 | 판소리 | Pansori | Hát kể chuyện sử thi | 10 |
 | 아리랑 | Arirang | Truyền thống dân ca Arirang | 10 |
 | 농악 | Nongak | Nhạc–múa cộng đồng nông nghiệp | 10 |
@@ -181,6 +192,8 @@
 | 카공족 | Cafe-study people | Người học hoặc làm việc lâu ở quán cà phê | 12 |
 | 교통약자 | Mobility-vulnerable traveller | Người gặp hạn chế khi sử dụng giao thông | 12 |
 | 디지털 접근성 | Digital accessibility | Khả năng tiếp cận dịch vụ và giao diện số | 12, 26 |
+| 우회경로 | Alternate route | Đường hoặc phương án thay thế khi tuyến chính lỗi | 12 |
+| 재난문자 | Emergency alert message | Tin nhắn cảnh báo khẩn cấp/thảm hoạ | 12 |
 | 사계절 | Four seasons | Bốn mùa | 32 |
 | 벚꽃 | Cherry blossom | Hoa anh đào | 32 |
 | 꽃놀이 | Flower viewing | Đi ngắm hoa | 32 |
@@ -213,6 +226,8 @@
 | 기프티콘 | Mobile gift coupon | Phiếu quà tặng trên điện thoại | 33 |
 | 알바 | Part-time job | Việc làm thêm | 33 |
 | 컴플레인 | Complaint | Khiếu nại hoặc phản ánh dịch vụ | 33 |
+| 예약 | Reservation | Đặt chỗ/đặt lịch trước | 33 |
+| 노쇼 | No-show | Đã đặt nhưng không đến và không huỷ đúng quy tắc | 33 |
 
 ## Hallyu và biến đổi xã hội
 
@@ -224,6 +239,9 @@
 | 웹툰 | Webtoon | Truyện tranh dọc trên nền tảng số | 13 |
 | 저작권 | Copyright | Quyền tác giả/quyền đối với tác phẩm theo phạm vi pháp lý | 13 |
 | 크레딧 | Credit | Ghi công đóng góp | 13 |
+| 2차적저작물 | Derivative work | Tác phẩm phái sinh/chuyển thể theo phạm vi pháp lý | 13 |
+| 현지화 | Localization | Bản địa hoá nội dung cho thị trường/ngôn ngữ cụ thể | 13 |
+| 카탈로그 | Catalog | Kho/danh mục nội dung có thể tiếp tục được khai thác | 13 |
 | 초고령사회 | Super-aged society | Xã hội siêu già | 15 |
 | 저출산 | Low fertility | Mức sinh thấp | 15, 29 |
 | 다문화가정 | Multicultural family | Gia đình đa văn hoá | 15 |
@@ -289,6 +307,8 @@
 | 건강검진 | Health screening | Khám sức khoẻ định kỳ | 26 |
 | 완화의료 | Palliative care | Chăm sóc giảm nhẹ | 26 |
 | 호스피스 | Hospice | Chăm sóc cuối đời theo mô hình hospice | 26 |
+| 건강문해력 | Health literacy | Năng lực tìm, hiểu và dùng thông tin sức khoẻ | 26 |
+| 의뢰서 | Referral document | Giấy giới thiệu/chuyển tuyến trong bối cảnh phù hợp | 26 |
 | 익명성 | Anonymity | Tính ẩn danh | 27, 30 |
 | 단톡방 | Group chat room | Phòng chat nhóm | 27, 30 |
 | 읽씹 | Read-and-ignore | Đã đọc nhưng không trả lời | 27, 33 |
@@ -296,13 +316,14 @@
 | 신조어 | Neologism | Từ mới | 27 |
 | 밈 | Meme | Meme, mẫu nội dung lan truyền | 27 |
 | 악플 | Malicious comment | Bình luận ác ý | 27 |
+| 티켓팅 | Ticketing race/process | Quá trình săn/mua vé trực tuyến trong điều kiện khan hiếm | 20 |
 
 ## Các khái niệm phân tích xuyên chương
 
 | Khái niệm | English | Ý nghĩa sử dụng trong bộ sách | Chương tiêu biểu |
 |---|---|---|---|
 | vòng phản hồi | Feedback loop | Đầu ra quay lại làm thay đổi điều kiện tạo đầu ra tiếp theo | 05, 12, 13, 16 |
-| bất cân xứng thông tin | Information asymmetry | Một bên có nhiều hoặc tốt hơn thông tin bên kia | 05, 12, 24 |
+| bất cân xứng thông tin | Information asymmetry | Một bên có nhiều hoặc tốt hơn thông tin bên kia | 05, 12, 13, 19, 24, 26 |
 | tác động ngoại biên | Externality | Chi phí/lợi ích của hành động rơi sang người khác | 12, 20, 31 |
 | phụ thuộc đường đi lịch sử | Path dependence | Quyết định và hạ tầng cũ làm một số lựa chọn sau dễ hơn lựa chọn khác | 01, 16 |
 | kỹ năng chuyển giao | Transferable skill | Kỹ năng giữ giá trị khi chuyển vai trò hoặc công cụ | 05 |
@@ -313,6 +334,17 @@
 | tối thiểu hoá dữ liệu | Data minimization | Chỉ thu thập dữ liệu cần cho mục đích xác định | 22 |
 | ghép nối | Matching | Chức năng nối người với cơ hội, mạng lưới hoặc tổ chức | 30 |
 | độ trễ thiết chế | Institutional lag | Thiết chế thay đổi chậm hơn cấu trúc xã hội hoặc công nghệ | 15 |
+| tính chính danh | Legitimacy | Mức độ quyền lực/quy tắc được nhìn nhận là hợp lý và đáng tuân theo | 02, 06, 16 |
+| phản thực tế | Counterfactual | Hỏi điều gì sẽ xảy ra nếu cơ chế nghi ngờ không tồn tại hoặc thay đổi | 01, 16 |
+| biến gây nhiễu | Confounder | Yếu tố thứ ba làm hai biến đi cùng nhau mà chưa chắc có quan hệ nhân quả trực tiếp | 01 |
+| thiên lệch chọn mẫu | Selection bias | Mẫu quan sát bị chọn theo cơ chế khiến nó không đại diện đầy đủ | 01, 13, 19, 27 |
+| điểm lỗi duy nhất | Single point of failure | Một nút hỏng có thể làm phần lớn hệ thống dừng | 06, 12, 16 |
+| suy giảm có kiểm soát | Graceful degradation | Hệ thống giảm chức năng nhưng vẫn giữ được chức năng cốt lõi khi lỗi | 12 |
+| đường thay thế | Fallback | Phương án thay thế khi đường chính không dùng được | 12, 16, 33 |
+| năng lực sức khoẻ | Health literacy | Khả năng hiểu thông tin, rủi ro và lựa chọn để tham gia quyết định chăm sóc | 26 |
+| đồng thuận có hiểu biết | Informed consent | Đồng ý sau khi đã hiểu đủ mục tiêu, lựa chọn, rủi ro và giới hạn | 19, 26 |
+| lợi thế tích luỹ | Cumulative advantage | Lợi thế ban đầu tạo thêm nguồn lực làm lợi thế tiếp tục tăng | 13, 16, 24 |
+| vòng đời nội dung | Content lifecycle | Quá trình từ phát triển, sản xuất, phát hành đến tái khai thác/lưu trữ | 13 |
 
 ## Bản đồ nguồn: nên dùng gì khi mở rộng
 
@@ -342,6 +374,10 @@ Nguồn chính thức mạnh ở số liệu, tình trạng pháp lý và mô t�
 
 Khi viết về `태교`, `산후조리`, thực hành sức khoẻ truyền thống hoặc sức khoẻ môi trường, phải tách **ý nghĩa văn hoá** khỏi **bằng chứng y khoa/khoa học**. Khi viết về đánh giá trực tuyến, cộng đồng mạng hoặc cộng đồng phụ huynh, phải tách **mức độ dễ nhìn thấy** khỏi **tính đại diện**.
 
+Với nội dung Hallyu và nền tảng, cần tách **độ phổ biến**, **khả năng hiển thị do thuật toán**, **quyền sở hữu IP**, **dữ liệu hành vi** và **doanh thu thực nhận**; năm lớp này không đồng nhất.
+
+Với công sở, cần phân biệt **chức danh**, **quyền quyết định**, **quyền đánh giá**, **quyền sở hữu thông tin** và **chuyên môn**. Một sơ đồ chức danh không đủ để mô tả quyền lực thực tế.
+
 ## Quy ước cập nhật bộ sách
 
 Khi cập nhật số liệu, luôn ghi **năm dữ liệu** và **ngày báo cáo**, vì hai thứ có thể khác nhau. Ví dụ một báo cáo công bố năm 2025 có thể mô tả dữ liệu của năm 2024. Không ghi chung chung “hiện nay” nếu con số có mốc thời gian cụ thể.
@@ -349,3 +385,5 @@ Khi cập nhật số liệu, luôn ghi **năm dữ liệu** và **ngày báo c�
 Đối với chuẩn mực xã hội, ưu tiên câu như “phổ biến trong bối cảnh X”, “trong lịch sử”, “ở một số tổ chức”, thay vì “người Hàn luôn...”. Đây không chỉ là phép lịch sự mà là yêu cầu về độ chính xác.
 
 Với quy tắc đời sống như tái chế, quản lý căn hộ, vận hành trường học, childcare hoặc chính sách dịch vụ, phải phân biệt **quy tắc cấp quốc gia**, **cách triển khai địa phương**, **quy tắc riêng của tổ chức** và **chuẩn mực không chính thức**. Bốn lớp này thường bị trộn khi người nước ngoài hỏi “ở Hàn Quốc phải làm thế nào?”.
+
+Khi một chapter sử dụng mô hình phân tích như phản thực tế, hàng đợi, độ tin cậy hay lợi thế tích luỹ, phải giữ rõ rằng đó là **công cụ tư duy**, không phải bằng chứng tự thân. Mô hình chỉ có giá trị khi giả định và dữ liệu đầu vào phù hợp.
