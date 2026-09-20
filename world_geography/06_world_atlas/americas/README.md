@@ -1,21 +1,21 @@
-# Americas — Inventory theo UN M49
+# Americas — World Atlas
 
-M49 chia châu Mỹ thành Latin America and the Caribbean cùng Northern America. Trong Latin America and the Caribbean có Caribbean, Central America và South America.
+Atlas dùng phân vùng thống kê UN M49. Trong M49, `Americas` gồm `Northern America` và `Latin America and the Caribbean`; nhóm sau lại gồm Caribbean, Central America và South America. `North America` trong M49 là nhóm rộng gồm Northern America + Caribbean + Central America, nên không hoàn toàn trùng cách dùng phổ thông trong mọi sách.
 
-## Caribbean
-
-Anguilla (AIA), Antigua and Barbuda (ATG), Aruba (ABW), Bahamas (BHS), Barbados (BRB), Bonaire, Sint Eustatius and Saba (BES), British Virgin Islands (VGB), Cayman Islands (CYM), Cuba (CUB), Curaçao (CUW), Dominica (DMA), Dominican Republic (DOM), Grenada (GRD), Guadeloupe (GLP), Haiti (HTI), Jamaica (JAM), Martinique (MTQ), Montserrat (MSR), Puerto Rico (PRI), Saint Barthélemy (BLM), Saint Kitts and Nevis (KNA), Saint Lucia (LCA), Saint Martin — French Part (MAF), Saint Vincent and the Grenadines (VCT), Sint Maarten — Dutch part (SXM), Trinidad and Tobago (TTO), Turks and Caicos Islands (TCA), United States Virgin Islands (VIR).
-
-## Central America
-
-Belize (BLZ), Costa Rica (CRI), El Salvador (SLV), Guatemala (GTM), Honduras (HND), Mexico (MEX), Nicaragua (NIC), Panama (PAN).
-
-## South America
-
-Argentina (ARG), Bolivia — Plurinational State of (BOL), Bouvet Island (BVT), Brazil (BRA), Chile (CHL), Colombia (COL), Ecuador (ECU), Falkland Islands (Malvinas) (FLK), French Guiana (GUF), Guyana (GUY), Paraguay (PRY), Peru (PER), South Georgia and the South Sandwich Islands (SGS), Suriname (SUR), Uruguay (URY), Venezuela — Bolivarian Republic of (VEN).
+Bắt đầu bằng [Các mẫu địa lý cấp châu lục](./00_regional_patterns.md) để hiểu mountain spine, mega-basins, ocean gateways, climate gradient và urban corridors trước khi đọc từng profile.
 
 ## Northern America
+[Bermuda](./northern_america/BMU_bermuda.md) · [Canada](./northern_america/CAN_canada.md) · [Greenland](./northern_america/GRL_greenland.md) · [Saint Pierre and Miquelon](./northern_america/SPM_saint_pierre_miquelon.md) · [United States](./northern_america/USA_united_states.md)
 
-Bermuda (BMU), Canada (CAN), Greenland (GRL), Saint Pierre and Miquelon (SPM), United States of America (USA).
+## Central America
+[Belize](./central_america/BLZ_belize.md) · [Costa Rica](./central_america/CRI_costa_rica.md) · [El Salvador](./central_america/SLV_el_salvador.md) · [Guatemala](./central_america/GTM_guatemala.md) · [Honduras](./central_america/HND_honduras.md) · [Mexico](./central_america/MEX_mexico.md) · [Nicaragua](./central_america/NIC_nicaragua.md) · [Panama](./central_america/PAN_panama.md)
 
-Lưu ý: trong M49, “North America” ở cấp continental grouping gồm Northern America + Caribbean + Central America; vì vậy thuật ngữ này không hoàn toàn trùng cách dùng phổ thông trong mọi sách giáo khoa.
+## Caribbean
+Caribbean có 28 country/area với geography rất đa dạng từ low carbonate islands đến steep volcanic islands. Xem [Caribbean index](./caribbean/README.md).
+
+## South America
+South America có 16 country/area trong baseline M49. Xem [South America index](./south_america/README.md).
+
+## Cách đọc
+
+Không dùng country profile như bảng fact. Với mỗi nơi, hãy hỏi: relief chia không gian ra sao; water đến từ đâu; population tập trung ở node nào; production zone nối port bằng corridor nào; và hazard trở thành risk qua exposure/vulnerability như thế nào.

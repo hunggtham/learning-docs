@@ -31,27 +31,32 @@ Tài liệu này theo dõi **profile thực sự đã được viết**, không 
 
 **Western Europe:** Austria, Belgium, France, Germany, Liechtenstein, Luxembourg, Monaco, Netherlands, Switzerland.
 
-**Supplemental Europe:** Kosovo đã có hồ sơ địa lý riêng với ghi chú classification trung tính.
+**Supplemental Europe:** Kosovo có hồ sơ địa lý riêng với ghi chú classification trung tính.
 
 ## Africa — hoàn thành coverage M49
 
-**Northern Africa:** Algeria, Egypt, Libya, Morocco, Sudan, Tunisia, Western Sahara.
+Northern, Eastern, Middle, Southern và Western Africa đều đã có profile cho toàn bộ country/area trong inventory M49, gồm cả island/overseas areas và Western Sahara theo đúng tên entry thống kê. Đây là baseline coverage; một số profile ngắn sẽ tiếp tục được nâng sâu ở pass sau.
 
-**Eastern Africa:** British Indian Ocean Territory, Burundi, Comoros, Djibouti, Eritrea, Ethiopia, French Southern Territories, Kenya, Madagascar, Malawi, Mauritius, Mayotte, Mozambique, Réunion, Rwanda, Seychelles, Somalia, South Sudan, Uganda, United Republic of Tanzania, Zambia, Zimbabwe.
+## Americas — hoàn thành coverage M49
 
-**Middle Africa:** Angola, Cameroon, Central African Republic, Chad, Congo, Democratic Republic of the Congo, Equatorial Guinea, Gabon, Sao Tome and Principe.
+**Northern America:** Bermuda, Canada, Greenland, Saint Pierre and Miquelon, United States of America.
 
-**Southern Africa:** Botswana, Eswatini, Lesotho, Namibia, South Africa.
+**Central America:** Belize, Costa Rica, El Salvador, Guatemala, Honduras, Mexico, Nicaragua, Panama.
 
-**Western Africa:** Benin, Burkina Faso, Cabo Verde, Côte d’Ivoire, Gambia, Ghana, Guinea, Guinea-Bissau, Liberia, Mali, Mauritania, Niger, Nigeria, Saint Helena, Senegal, Sierra Leone, Togo.
+**Caribbean:** toàn bộ 28 country/area trong M49 đã có profile, từ Greater Antilles tới Lesser Antilles và các low carbonate archipelagos.
 
-## Chưa viết profile chi tiết
+**South America:** toàn bộ 16 country/area trong M49 đã có profile, bao gồm French Guiana, Falkland Islands (Malvinas), Bouvet Island và South Georgia and the South Sandwich Islands theo tên M49.
 
-- Americas: inventory đã có, profile chi tiết chưa triển khai.
-- Oceania: inventory đã có, profile chi tiết chưa triển khai.
+Ngoài country/area profiles, Americas có chapter tổng hợp continental patterns để nối mountain systems, basins, urban corridors, trade gateways và climate teleconnections.
+
+## Chưa hoàn thành baseline profile
+
+- Oceania: inventory đã có, profile chi tiết chưa hoàn thành.
 - Antarctica: mới có entry định hướng, chưa có chapter atlas sâu.
 - Supplemental: sẽ tiếp tục bổ sung khi cần cho các không gian địa lý không tách thành entry M49 chính.
 
 ## Definition of Done cho mỗi profile
 
 Một profile chỉ chuyển sang trạng thái hoàn thành khi có đủ: khung không gian; địa hình/kiến tạo; khí hậu–nước; dân cư/đô thị; kinh tế không gian; mạng giao thông–liên kết; rủi ro; mental model; cross-link. Những area rất nhỏ có thể gộp một số mục nhưng vẫn phải giải thích cơ chế thay vì chỉ liệt kê facts.
+
+Sau khi baseline toàn cầu hoàn thành, pass thứ hai sẽ ưu tiên nâng các profile compact thành textbook chapter sâu hơn, thay vì tiếp tục mở rộng số lượng file.
