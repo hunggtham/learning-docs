@@ -1,5 +1,21 @@
 # 04 — Economics
 
-Đây là domain lớn nhất vì nó nối doanh nghiệp với nền kinh tế và thị trường thế giới. `00_BRIDGE_COMPANY_TO_MACRO.md` giữ master note cũ về company + macro. `01_MICRO_MACRO_ADVANCED.md` là giáo trình vi mô/vĩ mô chuyên sâu. `02_GLOBAL_ECONOMY_CAPITAL_FLOWS_AND_CRISIS.md` mở rộng sang thương mại, USD, global funding, địa chính trị và khủng hoảng. `03_MACRO_DATA_PLAYBOOK.md` biến lý thuyết thành quy trình đọc CPI, employment, PMI, yields, credit spreads và central-bank meetings.
+Domain này nối doanh nghiệp với nền kinh tế và hệ thống tài chính toàn cầu. Mục tiêu không phải học thuộc GDP/CPI/Fed, mà hiểu các kênh truyền dẫn từ household/company decisions tới rates, credit, FX, trade, liquidity và asset prices.
 
-Nếu chỉ đọc tin tức mà không hiểu consensus, surprise, reaction function và transmission channel, bạn rất dễ kết luận sai. Folder này được thiết kế để sửa điểm đó.
+## Thứ tự đọc
+
+[00_BRIDGE_COMPANY_TO_MACRO.md](./00_BRIDGE_COMPANY_TO_MACRO.md) là cầu nối từ doanh nghiệp sang macro: earnings, sector cycle, inflation, rates, Fed, bond yields, USD, oil, tariff và geopolitical shocks.
+
+[01_MICRO_MACRO_ADVANCED.md](./01_MICRO_MACRO_ADVANCED.md) đi sâu từ scarcity, marginal thinking, market structure và game theory tới AD–AS, output gap, fiscal multiplier, Phillips curve, productivity, demographics và open-economy trilemma.
+
+[02_GLOBAL_ECONOMY_CAPITAL_FLOWS_AND_CRISIS.md](./02_GLOBAL_ECONOMY_CAPITAL_FLOWS_AND_CRISIS.md) giải thích trade, current account, global value chains, reserve currency, offshore dollar system, capital flows, sudden stop, sovereign/banking crisis, commodity chokepoints, sanctions, tariffs và geoeconomic fragmentation.
+
+[03_MACRO_DATA_PLAYBOOK.md](./03_MACRO_DATA_PLAYBOOK.md) chuyển theory thành cách đọc CPI/PCE, NFP, wages, PMI, GDP, central-bank meetings, 2Y/10Y yields, credit spreads, FX và commodities.
+
+[04_MONETARY_SYSTEM_LIQUIDITY_AND_CRISIS_TRANSMISSION.md](./04_MONETARY_SYSTEM_LIQUIDITY_AND_CRISIS_TRANSMISSION.md) đi sâu monetary plumbing: reserves, repo, collateral, TGA, money-market funds, RRP, dealer balance sheets, NBFIs, dollar funding, QE/QT, bank liquidity/capital và crisis transmission.
+
+## Sau domain này bạn cần làm được gì?
+
+Bạn cần có khả năng nhận một sự kiện kinh tế và tự xây chuỗi `shock → prices/income → policy → financial conditions → earnings → assets`, phân biệt inflation shock với growth/credit/liquidity shock, đọc central-bank policy theo reaction function và biết vì sao cùng một data point có thể tạo phản ứng khác nhau ở từng regime.
+
+Sau đó chuyển sang [05_trading_derivatives](../05_trading_derivatives/README.md) nếu muốn dùng kiến thức macro trong trading, hoặc [06_markets_korea_vietnam](../06_markets_korea_vietnam/README.md) để áp dụng trực tiếp vào Hàn Quốc và Việt Nam.
