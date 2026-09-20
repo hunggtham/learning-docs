@@ -1,408 +1,361 @@
-# Case Study 02 — Credit và Liquidity Crisis Transmission
+# Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản
 
-> Case này phân biệt ba thứ thường bị trộn thành một: **market loss**, **liquidity stress** và **solvency problem**. Mục tiêu là theo dõi cách một shock nhỏ ở collateral/funding có thể biến thành forced deleveraging, credit contraction, earnings decline và cuối cùng tác động tới real economy.
+> Tình huống này phân biệt ba khái niệm thường bị trộn lẫn: **tổn thất thị trường (market loss)**, **căng thẳng thanh khoản (liquidity stress)** và **mất khả năng thanh toán về vốn (solvency problem)**. Mục tiêu là theo dõi cách một cú sốc nhỏ ở tài sản thế chấp hoặc nguồn vốn có thể biến thành giảm đòn bẩy cưỡng bức, co hẹp tín dụng, suy giảm lợi nhuận và cuối cùng tác động tới nền kinh tế thực.
 
 ## 1. Bối cảnh giả định
 
-Giả sử một nhóm financial institutions nắm lượng lớn long-duration securities funded bằng short-term liabilities. Policy rates đã tăng mạnh trong thời gian dài. Mark-to-market losses tăng nhưng chưa tạo default vì assets vẫn trả cash flow nếu held to maturity.
+Giả sử một nhóm tổ chức tài chính nắm lượng lớn chứng khoán duration dài nhưng tài trợ bằng các nghĩa vụ ngắn hạn. Lãi suất chính sách đã tăng mạnh trong thời gian dài. Giá trị thị trường của tài sản giảm nhưng chưa nhất thiết tạo vỡ nợ vì dòng tiền hợp đồng vẫn có thể được thu nếu giữ tới đáo hạn.
 
-Sau đó deposit outflow hoặc margin/collateral demand tăng bất ngờ.
+Sau đó, tiền gửi bị rút nhanh hoặc nhu cầu bổ sung ký quỹ/tài sản thế chấp tăng đột ngột.
 
-Câu hỏi quan trọng không phải “assets có lỗ không?” mà là:
-
-```text
-Có đủ liquidity để sống tới khi assets mature không?
-```
-
-Đây là khác biệt giữa **mark-to-market loss** và **forced realization loss**.
-
-## 2. Liquidity vs Solvency
-
-**Liquidity problem**: entity có assets có thể đủ giá trị dài hạn nhưng không có cash ngay để đáp ứng withdrawal/collateral.
-
-**Solvency problem**: fair/economic value của assets thấp hơn liabilities đủ lớn để equity bị wipe out.
-
-Một liquidity problem có thể biến thành solvency problem nếu forced selling xảy ra ở fire-sale prices.
+Câu hỏi trọng tâm không phải “tài sản đang lỗ bao nhiêu?”, mà là:
 
 ```text
-Liquidity Stress
-→ Forced Sales
-→ Lower Asset Prices
-→ Larger Mark-to-Market Loss
-→ Confidence Loss
-→ More Withdrawals
-→ Solvency Risk
+Có đủ tiền mặt và tài sản thanh khoản để sống tới khi tài sản đáo hạn không?
 ```
 
-Đọc thêm: [Monetary System, Liquidity and Crisis Transmission](../04_economics/04_MONETARY_SYSTEM_LIQUIDITY_AND_CRISIS_TRANSMISSION.md).
+Đây là khác biệt giữa lỗ theo giá thị trường và lỗ bị buộc phải hiện thực hóa.
 
-## 3. Duration Mismatch
+## 2. Thanh khoản và khả năng thanh toán
 
-Một institution funded ngắn nhưng asset duration dài chịu mismatch.
+**Vấn đề thanh khoản (liquidity problem)** xảy ra khi tổ chức có tài sản có thể đủ giá trị trong dài hạn nhưng không có đủ tiền ngay để đáp ứng rút tiền, thanh toán hoặc yêu cầu bổ sung tài sản bảo đảm.
 
-Ví dụ:
+**Vấn đề khả năng thanh toán (solvency problem)** xảy ra khi giá trị kinh tế của tài sản thấp hơn nghĩa vụ đủ lớn để vốn chủ sở hữu bị xóa mòn.
+
+Một vấn đề thanh khoản có thể biến thành vấn đề khả năng thanh toán nếu tổ chức buộc phải bán tài sản ở mức giá rất thấp:
 
 ```text
-Liability: demand deposits / short funding
-Asset: 10Y fixed-rate bonds / long mortgages
+Căng thẳng thanh khoản
+→ Bán cưỡng bức
+→ Giá tài sản giảm
+→ Lỗ theo giá thị trường tăng
+→ Niềm tin suy giảm
+→ Rút tiền tăng
+→ Rủi ro mất khả năng thanh toán tăng
 ```
 
-Khi rates tăng, asset market value giảm. Nếu liabilities stable, institution có thể chờ. Nếu funding chạy đi, loss bị crystallized.
+Đọc thêm: [Hệ thống tiền tệ, thanh khoản và truyền dẫn khủng hoảng](../04_economics/04_MONETARY_SYSTEM_LIQUIDITY_AND_CRISIS_TRANSMISSION.md).
 
-Duration risk vì vậy có thể trở thành liquidity risk.
+## 3. Chênh lệch kỳ hạn
 
-## 4. Deposit Flight và Confidence
-
-Deposit run có thể bắt đầu từ concerns về uninsured balances, social information cascade hoặc visible mark-to-market losses.
-
-Digital banking làm withdrawal speed nhanh hơn historical bank-run intuition. Vì vậy liquidity buffer và funding concentration rất quan trọng.
-
-Một bank có diversified sticky deposits khác bank phụ thuộc vài corporate/wealth clients lớn.
-
-## 5. Repo và Haircut Spiral
-
-Trong secured funding, lender áp haircut lên collateral.
-
-Nếu collateral price giảm hoặc volatility tăng:
+Một tổ chức tài trợ ngắn hạn nhưng nắm tài sản duration dài chịu chênh lệch kỳ hạn (duration mismatch).
 
 ```text
-Haircut ↑
-→ Borrower phải post thêm collateral/cash
-→ Asset sales ↑
-→ Price ↓ thêm
-→ Haircut ↑ thêm
+Nghĩa vụ: tiền gửi có thể rút ngay / nguồn vốn ngắn hạn
+Tài sản: trái phiếu 10 năm / khoản vay thế chấp dài hạn
 ```
 
-Đây là **margin/haircut spiral**.
+Khi lãi suất tăng, giá trị thị trường của tài sản giảm. Nếu nguồn vốn ổn định, tổ chức có thể chờ. Nếu nguồn vốn rút đi, khoản lỗ phải được hiện thực hóa. Vì vậy rủi ro lãi suất có thể chuyển thành rủi ro thanh khoản.
 
-Đọc thêm: [Cash, Money Markets, Structured and Private Markets](../02_asset_classes/06_CASH_MONEY_MARKETS_STRUCTURED_PRODUCTS_AND_PRIVATE_MARKETS.md).
+## 4. Rút tiền gửi và niềm tin
 
-## 6. Dealer Balance Sheet Constraint
+Rút tiền gửi hàng loạt (deposit flight) có thể bắt đầu từ lo ngại về tiền gửi không được bảo hiểm, hiệu ứng lan truyền thông tin hoặc các khoản lỗ theo giá thị trường trở nên rõ ràng.
 
-Ngay cả khi asset “cheap”, dealer/intermediary có thể không absorb inventory vì capital, funding hoặc risk limits.
+Ngân hàng số làm tốc độ rút tiền nhanh hơn nhiều so với trực giác về các cuộc rút tiền truyền thống. Vì vậy bộ đệm thanh khoản và mức tập trung nguồn tiền gửi rất quan trọng.
 
-Khi balance-sheet capacity giảm, bid-ask spreads widen và market depth giảm. Price có thể overshoot fundamentals vì intermediary constraint.
+## 5. Repo và vòng xoáy haircut
 
-Liquidity không chỉ là property của asset; nó còn phụ thuộc balance sheet của người tạo market.
+Trong tài trợ có tài sản bảo đảm, bên cho vay thường áp dụng tỷ lệ chiết khấu tài sản thế chấp (haircut).
 
-## 7. Credit Spread Widening
-
-Khi uncertainty tăng, corporate spreads widen vì:
+Nếu giá tài sản giảm hoặc biến động tăng:
 
 ```text
-Expected default loss ↑
-Risk premium ↑
-Liquidity premium ↑
-Funding uncertainty ↑
+Haircut tăng
+→ Người vay phải bổ sung tiền mặt/tài sản thế chấp
+→ Bán tài sản tăng
+→ Giá giảm thêm
+→ Haircut tiếp tục tăng
 ```
 
-Spread widening làm debt refinancing đắt hơn, tạo second-round effect lên corporate cash flows.
+Đây là vòng xoáy ký quỹ/haircut.
 
-## 8. Maturity Wall
+Đọc thêm: [Tiền mặt, thị trường tiền tệ và sản phẩm cấu trúc](../02_asset_classes/06_CASH_MONEY_MARKETS_STRUCTURED_PRODUCTS_AND_PRIVATE_MARKETS.md).
 
-Company có low current leverage nhưng large maturity wall gần có thể stress mạnh khi market access đóng.
+## 6. Giới hạn bảng cân đối của nhà tạo lập
 
-Research cần map:
+Ngay cả khi một tài sản có vẻ rất rẻ, nhà tạo lập hoặc trung gian tài chính có thể không đủ khả năng hấp thụ vì giới hạn vốn, nguồn tài trợ hoặc hạn mức rủi ro.
+
+Khi năng lực bảng cân đối giảm, chênh lệch mua bán mở rộng và độ sâu thị trường suy yếu. Giá có thể đi xa khỏi giá trị cơ bản vì trung gian không còn khả năng cung cấp thanh khoản.
+
+Thanh khoản không chỉ là thuộc tính của tài sản; nó còn phụ thuộc vào sức khỏe bảng cân đối của những người tạo thị trường.
+
+## 7. Chênh lệch tín dụng mở rộng
+
+Khi bất định tăng, chênh lệch tín dụng (credit spread) có thể mở rộng do:
 
 ```text
-Cash
-Revolver
-Free Cash Flow
-Debt Maturities
-Secured Capacity
-Covenant Headroom
-Refinancing Rate
+Tổn thất vỡ nợ kỳ vọng tăng
+Phần bù rủi ro tăng
+Phần bù thanh khoản tăng
+Bất định nguồn vốn tăng
 ```
 
-Đọc thêm: [Earnings Quality, Modeling and Forensics](../03_company_analysis/04_EARNINGS_QUALITY_MODELING_AND_FORENSICS.md).
+Chênh lệch tín dụng rộng hơn làm tái cấp vốn đắt hơn, từ đó gây tác động vòng hai lên dòng tiền doanh nghiệp.
 
-## 9. Financial Accelerator
+## 8. Bức tường đáo hạn nợ
 
-Credit conditions ảnh hưởng economy qua feedback loop:
+Một doanh nghiệp có đòn bẩy hiện tại chưa cao vẫn có thể chịu căng thẳng nếu lượng lớn nợ đáo hạn trong thời gian ngắn.
+
+Cần lập bản đồ:
 
 ```text
-Asset Prices ↓
-→ Collateral Value ↓
-→ Lending Standards Tighten
-→ Borrowing / Investment ↓
-→ Growth ↓
-→ Earnings ↓
-→ Credit Quality ↓
-→ Lending Tightens More
+Tiền mặt
+Hạn mức tín dụng dự phòng
+Dòng tiền tự do
+Lịch đáo hạn nợ
+Khả năng vay có bảo đảm
+Khoảng đệm covenant
+Lãi suất tái cấp vốn
 ```
 
-Đây là **financial accelerator**.
+Đọc thêm: [Chất lượng lợi nhuận, mô hình và phân tích điều tra](../03_company_analysis/04_EARNINGS_QUALITY_MODELING_AND_FORENSICS.md).
 
-Một shock financial có thể trở thành macro recession dù initial problem ở một niche market.
+## 9. Cơ chế khuếch đại tài chính
 
-## 10. Bank Capital vs Liquidity
-
-Capital absorbs losses. Liquidity meets cash outflows. Hai vấn đề khác nhau.
-
-Bank có high capital ratio nhưng vẫn fail nếu funding run cực nhanh và assets illiquid. Ngược lại, central-bank liquidity có thể giúp bank liquid nhưng không sửa economic insolvency nếu asset losses vượt equity.
-
-Policy response phải diagnose đúng problem.
-
-## 11. Central-Bank Liquidity Facilities
-
-Central bank có thể cung cấp funding against eligible collateral, giảm need fire-sale.
-
-Mechanism:
+Điều kiện tín dụng có thể khuếch đại chu kỳ qua vòng phản hồi:
 
 ```text
-Collateral accepted
-→ Cash liquidity supplied
-→ Forced sale pressure giảm
-→ Funding market stabilize
+Giá tài sản giảm
+→ Giá trị tài sản thế chấp giảm
+→ Tiêu chuẩn cho vay chặt hơn
+→ Vay vốn và đầu tư giảm
+→ Tăng trưởng giảm
+→ Lợi nhuận giảm
+→ Chất lượng tín dụng xấu đi
+→ Cho vay tiếp tục bị siết
 ```
 
-Nhưng liquidity support không tự động xóa credit loss. Nếu underlying borrowers default, economic loss vẫn tồn tại.
+Đây là cơ chế khuếch đại tài chính (financial accelerator). Một cú sốc ban đầu ở một thị trường nhỏ vẫn có thể trở thành suy thoái rộng hơn nếu nó đi qua kênh tín dụng.
 
-## 12. Lender of Last Resort vs Bailout
+## 10. Vốn ngân hàng và thanh khoản ngân hàng
 
-**Lender of last resort** thường nhằm cung cấp temporary liquidity against collateral.
+Vốn dùng để hấp thụ tổn thất. Thanh khoản dùng để đáp ứng dòng tiền ra. Hai vấn đề khác nhau.
 
-**Bailout/recapitalization** injects loss-absorbing capital hoặc transfers risk.
+Một ngân hàng có tỷ lệ vốn cao vẫn có thể gặp khủng hoảng nếu dòng tiền rút quá nhanh và tài sản khó bán. Ngược lại, ngân hàng trung ương có thể cung cấp thanh khoản nhưng không thể xóa tổn thất kinh tế nếu giá trị tài sản thực sự thấp hơn nợ.
 
-Hai actions có distributional/fiscal implications khác nhau. Research note nên phân biệt thay vì gọi mọi intervention là “QE” hoặc “money printing”.
+## 11. Công cụ hỗ trợ thanh khoản của ngân hàng trung ương
 
-## 13. Sovereign–Bank Nexus
-
-Banks thường nắm sovereign bonds; sovereign dựa banks để finance economy. Trong stress:
+Ngân hàng trung ương có thể cho vay dựa trên tài sản đủ điều kiện để giảm nhu cầu bán tháo:
 
 ```text
-Sovereign Risk ↑
-→ Bank Asset Value ↓
-→ Bank Funding Cost ↑
-→ Credit ↓
-→ Economy ↓
-→ Fiscal Position ↓
-→ Sovereign Risk ↑
+Chấp nhận tài sản thế chấp
+→ Cung cấp tiền mặt
+→ Giảm nhu cầu bán cưỡng bức
+→ Ổn định thị trường nguồn vốn
 ```
 
-Đây là **sovereign-bank doom loop**.
+Nhưng hỗ trợ thanh khoản không xóa rủi ro tín dụng. Nếu người vay cuối cùng vỡ nợ, tổn thất kinh tế vẫn tồn tại.
 
-## 14. Credit vs Government Bonds
+## 12. Người cho vay cuối cùng và cứu trợ vốn
 
-Trong classic recessionary credit crisis, government yields có thể fall vì easing/flight to quality, trong khi corporate spreads widen mạnh.
+**Người cho vay cuối cùng (lender of last resort)** chủ yếu cung cấp thanh khoản tạm thời dựa trên tài sản thế chấp.
 
-Corporate bond return gần:
+**Cứu trợ hoặc tái cấp vốn (bailout/recapitalization)** bổ sung vốn hấp thụ lỗ hoặc chuyển rủi ro sang khu vực công.
+
+Hai biện pháp có tác động phân phối và tài khóa khác nhau. Không nên gọi mọi can thiệp là QE hoặc “in tiền”.
+
+## 13. Vòng xoáy ngân hàng–chính phủ
+
+Ngân hàng thường nắm trái phiếu chính phủ, trong khi chính phủ dựa vào hệ thống ngân hàng để tài trợ nền kinh tế. Trong căng thẳng:
 
 ```text
-Rate Effect + Spread Effect + Carry + Default/Recovery
+Rủi ro chính phủ tăng
+→ Giá trị tài sản ngân hàng giảm
+→ Chi phí vốn ngân hàng tăng
+→ Tín dụng giảm
+→ Kinh tế yếu đi
+→ Tình hình tài khóa xấu hơn
+→ Rủi ro chính phủ tiếp tục tăng
 ```
 
-Treasury rally không guarantee corporate bond rally.
+Đây là vòng xoáy ngân hàng–chính phủ (sovereign-bank doom loop).
 
-Đọc thêm: [Bonds, Rates and Credit](../02_asset_classes/02_BONDS_RATES_AND_CREDIT.md).
+## 14. Trái phiếu doanh nghiệp và trái phiếu chính phủ
 
-## 15. Equity Transmission
+Trong khủng hoảng tín dụng đi kèm suy thoái, lợi suất trái phiếu chính phủ có thể giảm do kỳ vọng nới lỏng và nhu cầu trú ẩn, trong khi chênh lệch tín dụng doanh nghiệp mở rộng mạnh.
 
-Financial stocks thường bị hit trực tiếp qua funding/credit losses. Nhưng second-order effects lan tới:
-
-- property qua refinancing;
-- industrials qua capex cut;
-- consumer qua tighter credit;
-- small caps qua funding dependence;
-- brokers qua lower turnover/margin liquidation.
-
-Sector map phải dựa balance-sheet sensitivity, không chỉ beta history.
-
-## 16. Earnings Transmission
-
-Company stress thường đi qua sequence:
+Lợi suất trái phiếu doanh nghiệp có thể phân rã gần đúng thành:
 
 ```text
-Revenue slowdown
-→ Margin pressure
-→ Working-capital deterioration
-→ CFO ↓
-→ Interest expense ↑
-→ Covenant headroom ↓
-→ Capex cut / Asset sale / Dilution
+Tác động lãi suất
++ Tác động chênh lệch tín dụng
++ Thu nhập nắm giữ
++ Vỡ nợ / Thu hồi
 ```
 
-Accounting can lag liquidity stress. Balance sheet thường cho early warning hơn EPS.
+Trái phiếu chính phủ tăng giá không đảm bảo trái phiếu doanh nghiệp cũng tăng.
 
-## 17. Private Credit và Valuation Lag
+## 15. Truyền dẫn sang cổ phiếu
 
-Private credit/private equity NAV có thể chưa mark down nhanh như public markets.
+Cổ phiếu tài chính thường chịu tác động trực tiếp qua nguồn vốn và tổn thất tín dụng. Tác động vòng hai có thể lan sang bất động sản qua tái cấp vốn, doanh nghiệp công nghiệp qua giảm capex, tiêu dùng qua tín dụng chặt hơn, doanh nghiệp nhỏ qua phụ thuộc nguồn vốn và công ty chứng khoán qua thanh khoản/margin.
 
-Reported smoothness không có nghĩa economic risk thấp. Warning signals:
+Lập bản đồ ngành phải dựa trên độ nhạy bảng cân đối chứ không chỉ beta lịch sử.
+
+## 16. Truyền dẫn vào lợi nhuận doanh nghiệp
+
+Một chuỗi thường gặp:
 
 ```text
-PIK interest ↑
-Amend-and-extend ↑
-EBITDA add-backs ↑
-Covenant resets
-Secondary discounts
-Delayed exits
+Doanh thu chậm lại
+→ Biên lợi nhuận giảm
+→ Vốn lưu động xấu đi
+→ Dòng tiền hoạt động giảm
+→ Chi phí lãi vay tăng
+→ Khoảng đệm covenant giảm
+→ Cắt capex / Bán tài sản / Pha loãng vốn
 ```
 
-## 18. Forced Deleveraging
+Kế toán có thể phản ánh chậm hơn căng thẳng thanh khoản. Bảng cân đối thường cho cảnh báo sớm hơn EPS.
 
-Leveraged funds/traders có thể sell unrelated assets để meet margin calls.
+## 17. Tín dụng tư nhân và độ trễ định giá
 
-Vì vậy safe/good assets đôi khi giảm cùng risky assets trong early crisis. Correlation spike có thể phản ánh funding need, không change in fundamentals.
+NAV của tín dụng tư nhân hoặc vốn cổ phần tư nhân có thể chưa giảm nhanh như tài sản niêm yết. Đường giá “mượt” không có nghĩa rủi ro kinh tế thấp.
 
-## 19. Gold và Cash trong Liquidity Shock
+Các tín hiệu cần chú ý gồm PIK tăng, gia hạn và sửa điều khoản, EBITDA add-back tăng, nới covenant, mức chiết khấu trên thị trường thứ cấp và thời gian thoái vốn kéo dài.
 
-Gold có safe-haven narrative nhưng có thể giảm tạm thời khi investors need cash. USD và T-bills có thể benefit from liquidity demand, tùy shock origin.
+## 18. Giảm đòn bẩy cưỡng bức
 
-Không dùng một-day reaction để kết luận hedge “không hoạt động”. Phải phân biệt first-stage liquidation và later policy response.
+Quỹ hoặc nhà giao dịch dùng đòn bẩy có thể phải bán cả tài sản không liên quan để đáp ứng margin call. Vì vậy tài sản chất lượng tốt đôi khi cũng giảm mạnh ở giai đoạn đầu khủng hoảng.
 
-## 20. Korea Transmission
+Tương quan tăng đột biến có thể phản ánh nhu cầu tiền mặt, không nhất thiết phản ánh thay đổi cơ bản của mọi tài sản.
 
-Một global dollar/credit squeeze có thể đi nhanh qua Korea:
+## 19. Vàng và tiền mặt trong cú sốc thanh khoản
+
+Vàng có vai trò trú ẩn nhưng vẫn có thể giảm tạm thời khi nhà đầu tư cần tiền mặt. USD và T-bill có thể hưởng lợi từ nhu cầu thanh khoản tùy nguồn gốc cú sốc.
+
+Không nên dùng phản ứng một ngày để kết luận một công cụ phòng vệ “không hoạt động”. Cần phân biệt giai đoạn bán tháo đầu tiên và giai đoạn phản ứng chính sách sau đó.
+
+## 20. Truyền dẫn tới Hàn Quốc
+
+Một cú siết nguồn vốn USD toàn cầu có thể truyền nhanh qua Hàn Quốc:
 
 ```text
-USD Funding Stress
-→ USD/KRW ↑
-→ Foreign Risk Reduction
-→ Equity/credit pressure
-→ Corporate funding tighter
+Căng thẳng nguồn vốn USD
+→ USD/KRW tăng
+→ Nhà đầu tư nước ngoài giảm rủi ro
+→ Cổ phiếu và tín dụng chịu áp lực
+→ Điều kiện huy động vốn doanh nghiệp chặt hơn
 ```
 
-Exporters có USD revenue nhưng financing/working-capital effects vary. Highly leveraged domestic sectors có thể chịu indirect pressure.
+Doanh nghiệp xuất khẩu có doanh thu USD nhưng tác động lên vốn lưu động và tài trợ khác nhau theo từng công ty.
 
-Đọc thêm: [Korea Market Playbook](../06_markets_korea_vietnam/01_KOREA_MARKET_PLAYBOOK.md).
+## 21. Truyền dẫn tới Việt Nam
 
-## 21. Vietnam Transmission
-
-Vietnam có channel khác:
+Việt Nam có kênh khác:
 
 ```text
-Global Risk-Off / USD ↑
-→ VND pressure
-→ Policy room tighter
-→ Domestic liquidity expectations weaker
-→ Property / Broker / Bank risk repriced
+Tâm lý tránh rủi ro toàn cầu / USD tăng
+→ VND chịu áp lực
+→ Dư địa chính sách giảm
+→ Kỳ vọng thanh khoản nội địa yếu đi
+→ Bất động sản / Chứng khoán / Ngân hàng bị định giá lại
 ```
 
-Domestic bank credit, property bond refinancing và retail margin can dominate local market even when direct global wholesale funding exposure differs Korea.
+Tín dụng ngân hàng trong nước, tái cấp vốn trái phiếu bất động sản và margin bán lẻ có thể chi phối thị trường nội địa.
 
-Đọc thêm: [Vietnam Market Playbook](../06_markets_korea_vietnam/02_VIETNAM_MARKET_PLAYBOOK.md).
+## 22. Đánh giá các tầng thanh khoản của danh mục
 
-## 22. Liquidity Bucket Review
-
-Portfolio stress test không chỉ hỏi mark-to-market loss. Hỏi:
+Kiểm thử danh mục không chỉ hỏi lỗ theo giá thị trường. Cần hỏi:
 
 ```text
-Cash needed next 1 month?
-Margin calls under stress?
-Which assets can sell same day?
-Which can gap/limit down?
-Which are private/locked?
-Which foreign transfers can delay?
+Cần bao nhiêu tiền mặt trong 1 tháng tới?
+Margin call có thể lớn tới đâu?
+Tài sản nào bán được trong ngày?
+Tài sản nào có thể gap hoặc bị khóa giá sàn?
+Tài sản nào bị khóa hoặc thuộc thị trường tư nhân?
+Chuyển tiền xuyên biên giới có thể chậm ở đâu?
 ```
 
-Liquidity hierarchy là part of risk budget.
+Thanh khoản phải là một phần của ngân sách rủi ro.
 
-## 23. Reverse Stress Test
+## 23. Kiểm thử căng thẳng ngược
 
-Thay vì hỏi “portfolio mất bao nhiêu nếu stocks -20%?”, hỏi:
+Thay vì chỉ hỏi “danh mục mất bao nhiêu nếu cổ phiếu giảm 20%?”, hãy hỏi:
 
 > Điều gì phải xảy ra để tôi buộc phải bán tài sản tốt ở đáy?
 
-Possible triggers:
+Các nguyên nhân có thể gồm mất thu nhập, margin call, trả nợ, gọi vốn từ quỹ tư nhân, lệch tiền tệ hoặc sự cố môi giới/lưu ký.
+
+## 24. Thiết kế phòng vệ
+
+Nếu rủi ro là duration lãi suất, cần công cụ phòng vệ duration. Nếu rủi ro là chênh lệch tín dụng tăng mạnh, chỉ phòng vệ bằng trái phiếu chính phủ sẽ không bù hết tổn thất. Nếu rủi ro là khủng hoảng thanh khoản, giữ tiền mặt hoặc T-bill có thể có giá trị hơn một cấu trúc phái sinh phức tạp cần bổ sung ký quỹ.
+
+Một công cụ phòng vệ có thể thất bại về vận hành ngay cả khi hướng kinh tế đúng.
+
+## 25. Quyền chọn bảo hiểm trong khủng hoảng
+
+Put mua trước có độ lồi giúp bảo vệ đuôi, nhưng biến động ngụ ý thường rất đắt sau khi căng thẳng đã bắt đầu. Mua bảo hiểm khi “đám cháy” đã bùng lên thường tốn kém.
+
+Phòng vệ đuôi nên được xem như ngân sách bảo hiểm định kỳ của danh mục, không phải một giao dịch ứng biến ở đỉnh hoảng loạn.
+
+## 26. Thực thi trong căng thẳng
+
+Đặc điểm thực thi khi thị trường căng thẳng:
 
 ```text
-Job/income loss
-Margin call
-Debt repayment
-Capital call
-Currency mismatch
-Broker/custody interruption
+Chênh lệch mua bán rộng hơn
+Độ sâu thấp hơn
+Trượt giá lớn hơn
+Tương quan cao hơn
+Stop có thể gap
+Yêu cầu ký quỹ tăng
 ```
 
-Reverse stress test giúp phát hiện structural fragility.
+Quy mô vị thế trước khủng hoảng quan trọng hơn việc cố tìm một điểm thoát hoàn hảo trong khủng hoảng.
 
-## 24. Hedge Design
+## 27. Điều gì đã nằm trong giá?
 
-Nếu risk là rate duration, use duration hedge. Nếu credit spread blowout, Treasury hedge không cover all loss. Nếu liquidity crisis, having cash/T-bills may be more valuable than complex hedge requiring margin.
+Phân tích khủng hoảng tín dụng phải so mức chênh lệch hiện tại và giá cổ phiếu với đường đi tổn thất mà thị trường đang kỳ vọng.
 
-A hedge can fail operationally even if economic direction correct.
+Một doanh nghiệp có thể rất yếu nhưng trái phiếu đã phản ánh xác suất vỡ nợ sâu. Một doanh nghiệp khác có vẻ ổn định nhưng chênh lệch tín dụng vẫn ở mức quá hẹp. Lợi thế nằm ở phân phối kết quả so với giá, không nằm ở nhãn “tốt/xấu”.
 
-## 25. Option Hedge trong Crisis
-
-Long puts gain convexity nhưng option IV often expensive after stress begins. Buying insurance after fire starts can be costly.
-
-Tail hedge should be evaluated as recurring portfolio insurance budget, not emergency trade improvised at peak panic.
-
-## 26. Execution under Stress
-
-Stress execution features:
+## 28. Dòng thời gian khủng hoảng
 
 ```text
-Spread wider
-Depth thinner
-Slippage larger
-Correlation higher
-Stops gap
-Margin requirements rise
+Giai đoạn 1: Tích tụ đòn bẩy / lệch kỳ hạn
+Giai đoạn 2: Tác nhân kích hoạt
+Giai đoạn 3: Căng thẳng nguồn vốn / thanh khoản
+Giai đoạn 4: Bán cưỡng bức / chênh lệch tín dụng mở rộng
+Giai đoạn 5: Co hẹp tín dụng
+Giai đoạn 6: Lợi nhuận / việc làm suy yếu
+Giai đoạn 7: Phản ứng chính sách
+Giai đoạn 8: Sửa chữa bảng cân đối / tái cấp vốn / vỡ nợ
 ```
 
-Position sizing before crisis matters more than perfect exit during crisis.
+Các tài sản tạo đáy ở những giai đoạn khác nhau. Giá thị trường thường đi trước dữ liệu kế toán.
 
-Đọc thêm: [Execution & Microstructure](../05_trading_derivatives/03_EXECUTION_MICROSTRUCTURE_AND_TRADING_PORTFOLIO.md).
+## 29. Phân rã sau khủng hoảng
 
-## 27. What Is Priced?
-
-Credit crisis analysis must compare current spreads and equity prices with expected loss path.
-
-A company can be economically weak but bond already price deep default probability. Another can look stable but spread still near cycle tights.
-
-Investment edge lies in distribution vs price, not headline quality alone.
-
-## 28. Crisis Timeline
-
-Một useful framework:
+Cần đánh giá lại:
 
 ```text
-Stage 1: Hidden leverage / maturity mismatch builds
-Stage 2: Trigger
-Stage 3: Funding / liquidity stress
-Stage 4: Forced sales / spread widening
-Stage 5: Credit contraction
-Stage 6: Earnings / employment deterioration
-Stage 7: Policy response
-Stage 8: Repair / recapitalization / defaults
+Có nhận ra kênh nguồn vốn đủ sớm không?
+Có nhầm thanh khoản với khả năng thanh toán không?
+Chỉ báo bảng cân đối nào đi trước giá cổ phiếu?
+Công cụ phòng vệ nào thực sự hiệu quả sau chi phí và ký quỹ?
+Đa dạng hóa có thất bại vì các nhân tố hội tụ không?
+Phản ứng chính sách có lớn hoặc nhanh hơn dự kiến không?
 ```
 
-Assets bottom at different stages. Market price usually leads accounting data.
-
-## 29. Post-Crisis Attribution
-
-Review questions:
+## 30. Checklist dùng lại
 
 ```text
-Did we identify funding channel early?
-Did we confuse liquidity with solvency?
-Which balance-sheet indicators led equity price?
-Which hedges worked after cost/margin?
-Did diversification fail because factors converged?
-Was policy response larger/faster than expected?
-```
-
-## 30. Reusable Crisis Checklist
-
-```text
-Trigger
-Funding source
-Collateral
-Haircuts / Margin
-Liquidity buffer
-Capital buffer
-Maturity wall
-Credit spreads
-Bank lending standards
-FX funding
-Policy facilities
-Fiscal capacity
-Forced sellers
-Portfolio liquidity
+Tác nhân kích hoạt
+Nguồn vốn
+Tài sản thế chấp
+Haircut / Ký quỹ
+Bộ đệm thanh khoản
+Bộ đệm vốn
+Lịch đáo hạn
+Chênh lệch tín dụng
+Tiêu chuẩn cho vay ngân hàng
+Nguồn vốn FX
+Công cụ chính sách
+Dư địa tài khóa
+Bên bán cưỡng bức
+Thanh khoản danh mục
 ```
 
 ## Kết luận
 
-Credit crisis không bắt đầu và kết thúc ở “bank xấu”. Nó là một network problem giữa leverage, collateral, funding, confidence và policy. Investor cần nhìn balance sheets và cash-flow timing trước khi nhìn headline P/E. Trong crisis, **survival, liquidity và optionality** thường quan trọng hơn việc tối đa hóa expected return.
+Khủng hoảng tín dụng không bắt đầu và kết thúc ở một “ngân hàng xấu”. Nó là vấn đề mạng lưới giữa đòn bẩy, tài sản thế chấp, nguồn vốn, niềm tin và chính sách. Nhà đầu tư cần nhìn bảng cân đối và thời điểm dòng tiền trước khi nhìn P/E tiêu đề. Trong khủng hoảng, **khả năng sống sót, thanh khoản và quyền lựa chọn** thường quan trọng hơn việc tối đa hóa lợi suất kỳ vọng.
