@@ -5,7 +5,7 @@ Library này mở rộng từ [foundation Computation & Information](../../basic
 Roadmap dự kiến:
 
 1. [Formal models, reductions và computability](./00_formal_models_reductions_and_computability.md)
-2. Automata hierarchy, grammars và language recognition
+2. [Automata hierarchy, grammars và language recognition](./01_automata_hierarchy_grammars_and_language_recognition.md)
 3. Rice's theorem, semantic properties và static-analysis limits
 4. Kolmogorov complexity, compression và incompressibility intuition
 5. Information theory, coding bounds và noisy channels

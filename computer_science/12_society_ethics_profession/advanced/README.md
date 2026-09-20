@@ -3,7 +3,7 @@
 Roadmap:
 
 1. [Privacy threat models, governance và accountability](./00_privacy_threat_models_governance_and_accountability.md)
-2. Data minimization, purpose limitation và retention engineering
+2. [Data minimization, purpose limitation và retention engineering](./01_data_minimization_purpose_limitation_and_retention_engineering.md)
 3. De-identification, linkage risk và differential privacy intuition
 4. Algorithmic impact assessment và evidence quality
 5. Fairness metrics, incompatibilities và measurement boundaries
@@ -14,3 +14,5 @@ Roadmap:
 10. Open-source/commercial licensing strategy and compliance systems
 11. Professional responsibility, escalation và safety-critical judgment
 12. Platform power, interoperability và social infrastructure
+
+Phần privacy hiện đi từ threat/governance sang engineering lifecycle cụ thể: minimization, purpose, copies, retention, deletion và observability.
