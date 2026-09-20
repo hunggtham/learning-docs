@@ -1,325 +1,238 @@
-# Corporate governance, ownership và control tại doanh nghiệp Hàn Quốc (Corporate Governance / 기업지배구조·소유·지배)
+# Quản trị doanh nghiệp, quyền sở hữu và quyền kiểm soát tại Hàn Quốc (Corporate Governance / 기업지배구조·소유·지배)
 
-Corporate governance (Quản trị công ty / 기업지배구조) tồn tại vì **người cung cấp vốn, người có quyền kiểm soát và người điều hành không phải lúc nào cũng là cùng một người**. Khi quyền quyết định tách khỏi quyền hưởng lợi kinh tế, incentive có thể lệch nhau. Governance là tập hợp các cơ chế nhằm trả lời: ai có quyền quyết định, ai giám sát, ai hưởng upside, ai chịu downside và ai có thể challenge một quyết định gây xung đột lợi ích.
+**Quản trị doanh nghiệp (corporate governance / 기업지배구조)** tồn tại vì người cung cấp vốn, người có quyền kiểm soát và người điều hành không phải lúc nào cũng là cùng một người. Khi quyền quyết định tách khỏi quyền hưởng lợi kinh tế, động cơ của các bên có thể lệch nhau. Quản trị doanh nghiệp là tập hợp cơ chế nhằm trả lời: ai có quyền quyết định, ai giám sát, ai hưởng phần tăng giá trị, ai chịu phần thiệt hại và ai có khả năng phản đối một quyết định gây xung đột lợi ích.
 
-Trong Korea, governance phải được đọc ở cả **company level** và **business-group level**. Đây là điểm quan trọng nhất để tránh áp nguyên textbook US vào chaebol một cách máy móc.
+Tại Hàn Quốc, quản trị phải được đọc đồng thời ở **cấp công ty** và **cấp tập đoàn doanh nghiệp**. Đây là điểm rất quan trọng vì cấu trúc chaebol khác đáng kể mô hình công ty có sở hữu phân tán thường xuất hiện trong sách giáo khoa Mỹ.
 
-## Hai loại agency problem cần phân biệt
+## Hai loại vấn đề đại diện cần phân biệt
 
-Textbook corporate finance thường bắt đầu với **Type I agency problem**: dispersed shareholders (principal) thuê managers (agent), nhưng manager có thể ưu tiên compensation, empire building, perks hoặc job security hơn shareholder return.
+Tài chính doanh nghiệp thường bắt đầu với **vấn đề đại diện loại I (Type I agency problem)**: cổ đông phân tán là người ủy quyền, còn ban điều hành là người đại diện. Nhà quản lý có thể ưu tiên lương thưởng, mở rộng đế chế, đặc quyền cá nhân hoặc an toàn nghề nghiệp hơn lợi ích của cổ đông.
 
-Trong family-controlled business group, còn một dạng rất quan trọng: **Type II agency problem** giữa controlling shareholder (지배주주) và minority shareholders (소수주주).
+Trong tập đoàn gia đình, một vấn đề khác rất quan trọng là **vấn đề đại diện loại II (Type II agency problem)** giữa **cổ đông kiểm soát (controlling shareholder / 지배주주)** và **cổ đông thiểu số (minority shareholder / 소수주주)**.
 
-Controlling shareholder có thể có incentive tối ưu lợi ích của family hoặc toàn group, trong khi minority investor chỉ sở hữu một specific legal entity.
+Cổ đông kiểm soát có thể tối ưu lợi ích của gia đình hoặc toàn tập đoàn, trong khi cổ đông thiểu số chỉ sở hữu một pháp nhân cụ thể. Một giao dịch có thể tốt cho tập đoàn A nói chung nhưng khiến công ty B đang niêm yết chịu phần chi phí không tương xứng.
 
-Ví dụ, transaction có thể tốt cho Group A tổng thể nhưng làm Company B listed chịu cost disproportionate. Đây là reason analyst phải luôn tách **group interest** và **entity-level shareholder interest**.
+Vì vậy khi phân tích quản trị, luôn phải tách **lợi ích cấp tập đoàn** và **lợi ích cổ đông tại từng pháp nhân**.
 
-## Ownership khác control
+## Quyền sở hữu khác quyền kiểm soát
 
-Ownership (소유) trả lời ai có economic claim; control (지배) trả lời ai thực sự có power over strategic decisions.
+**Quyền sở hữu (ownership / 소유)** trả lời ai có quyền lợi kinh tế. **Quyền kiểm soát (control / 지배)** trả lời ai thực sự có quyền lực đối với các quyết định chiến lược.
 
-Hai thứ thường liên quan nhưng không identical.
-
-Nếu Family owns 30% Company A, A owns 40% B, and B owns 50% C, indirect economic exposure của family tới C qua một path xấp xỉ:
+Giả sử gia đình sở hữu 30% công ty A, A sở hữu 40% B và B sở hữu 50% C. Phần sở hữu kinh tế gián tiếp của gia đình tại C theo một chuỗi chỉ khoảng:
 
 \[
 0.30 \times 0.40 \times 0.50 = 6\%
 \]
 
-Nhưng control influence có thể lớn hơn 6% nếu each intermediate stake đủ để control next entity và remaining shareholders are dispersed.
+Nhưng ảnh hưởng kiểm soát có thể lớn hơn nhiều nếu mỗi tỷ lệ sở hữu trung gian đủ để kiểm soát pháp nhân tiếp theo và các cổ đông còn lại bị phân tán.
 
-Đây là **control leverage / 지배력 레버리지**.
+Đây là **đòn bẩy kiểm soát (control leverage / 지배력 레버리지)**. Bản thân nó không tự động xấu. Rủi ro xuất hiện khi người kiểm soát hưởng lợi ích riêng trong khi phần thiệt hại được chia cho cổ đông thiểu số.
 
-Control leverage không tự động xấu. Nó cho phép group coordinate capital với less direct ownership. Risk xuất hiện khi controller hưởng private benefit while downside shared with minority holders.
+## Sơ đồ sở hữu quan trọng hơn bảng cổ đông của một công ty
 
-## Ownership graph: cách đọc group đúng hơn shareholder table
-
-Top-shareholder table của one company không đủ cho chaebol analysis.
-
-Need map:
+Bảng cổ đông lớn của một pháp nhân không đủ để hiểu chaebol. Cần lập **sơ đồ sở hữu (ownership graph)** ít nhất như sau:
 
 ```text
-Controlling person / family
+Cá nhân/gia đình kiểm soát
           ↓
-       Company A
+       Công ty A
        ↙      ↘
-  Company B   Company C
+ Công ty B   Công ty C
       ↓          ↓
-  Subsidiary D  Affiliate E
+ Công ty D   Công ty E
 ```
 
-Mỗi edge cần ghi:
+Mỗi cạnh nên ghi tỷ lệ sở hữu, quyền biểu quyết, công ty nào hợp nhất công ty nào, giao dịch với bên liên quan và các khoản bảo lãnh hoặc cho vay quan trọng.
 
-- stake percentage;
-- voting rights;
-- whether entity consolidates another;
-- related-party relationships;
-- material guarantees/loans.
+Sơ đồ cho thấy quyền kiểm soát di chuyển như thế nào và nơi nào quyền lợi kinh tế khác với quyền quyết định.
 
-Graph reveals where control travels and where economic exposure differs.
+Đọc cùng [`05_group_structure_affiliates_holding_companies.md`](./05_group_structure_affiliates_holding_companies.md).
 
-This is why [05_group_structure_affiliates_holding_companies](./05_group_structure_affiliates_holding_companies.md) is a direct dependency.
+## Hội đồng quản trị: không thể đánh giá chỉ bằng số giám đốc bên ngoài
 
-## Board of Directors: governance không chỉ là số outside directors
+**Hội đồng quản trị (Board of Directors / 이사회)** phê duyệt các quyết định chiến lược–tài chính quan trọng và giám sát ban điều hành theo luật và điều lệ.
 
-Board of Directors (이사회) approves major strategic and financial decisions and oversees management according to law/articles.
+**Giám đốc bên ngoài (outside director / 사외이사)** được thiết kế để tăng giám sát độc lập, nhưng tính độc lập có cả hình thức và thực chất. Một hội đồng có thể đáp ứng yêu cầu pháp lý mà vẫn yếu nếu thành viên thiếu kiến thức ngành, thiếu thông tin hoặc không sẵn sàng chất vấn ban điều hành.
 
-**Outside directors / 사외이사** are designed to bring independent oversight, but independence has both **form** and **substance**.
+Khi đánh giá hội đồng, nên xem ai đề cử thành viên, chuyên môn của họ, thời gian nhiệm kỳ, tỷ lệ tham dự, vị trí trong các ủy ban, các phiếu phản đối và quan hệ với cổ đông kiểm soát hoặc ban quản lý.
 
-A board may formally satisfy independence requirement yet remain weak if directors lack industry knowledge, information access or willingness to challenge management.
+Chức danh không tự động chứng minh chất lượng giám sát.
 
-Useful questions include:
+## `대표이사`, CEO và quyền lực thực tế
 
-- Who nominated directors?
-- What expertise do they have?
-- How long have they served?
-- Attendance rate?
-- Committee membership?
-- Any dissenting votes?
-- Do they have ties to controlling shareholders or management?
+`대표이사` là **giám đốc đại diện theo pháp luật (representative director)**. Chức danh CEO bằng tiếng Anh không phải lúc nào cũng trùng hoàn toàn với tư cách đại diện pháp lý.
 
-Board quality cannot be inferred from title alone.
+Chủ tịch, phó chủ tịch, CEO và giám đốc đại diện có thể nắm mức quyền lực chính thức và phi chính thức khác nhau. Vì vậy phân tích quản trị phải kết hợp bốn lớp: chức danh pháp lý, ghế hội đồng quản trị, quyền sở hữu–kiểm soát và ảnh hưởng chiến lược thực tế.
 
-## Representative director, CEO và actual power
+Sơ đồ tổ chức chính thức không phải lúc nào cũng là bản đồ quyền lực đầy đủ.
 
-`대표이사` is statutory representative director. CEO in English title may or may not map perfectly to legal representative status.
+## Ủy ban kiểm toán và kiểm soát nội bộ
 
-A chairman, vice chairman, CEO and representative director can hold different formal/informal influence.
+Báo cáo tài chính tồn tại **bất cân xứng thông tin (information asymmetry)** rất lớn giữa ban điều hành và nhà đầu tư. Vì vậy ủy ban kiểm toán, kiểm toán viên bên ngoài và hệ thống kiểm soát nội bộ là các cơ chế quản trị cốt lõi.
 
-Therefore governance analysis should combine:
+Ý kiến kiểm toán không đảm bảo doanh nghiệp khỏe về kinh tế, nhưng kiểm soát nội bộ yếu hoặc vấn đề kiểm toán nghiêm trọng có thể là tín hiệu rủi ro báo cáo và quản trị.
 
-1. statutory roles;
-2. board seats;
-3. ownership/control;
-4. actual strategic influence.
+Đây là lý do quản trị liên kết trực tiếp với [`09_disclosure_accounting_dart_kind.md`](./09_disclosure_accounting_dart_kind.md).
 
-Formal org chart is not always full power map.
+## Giao dịch bên liên quan: nội bộ không đồng nghĩa xấu
 
-## Audit Committee and internal control
+Tập đoàn tự nhiên có các giao dịch nội bộ như dịch vụ CNTT, logistics, thuê bất động sản, khoản vay, bảo lãnh, mua sắm và các dịch vụ hỗ trợ.
 
-Financial reporting has severe information asymmetry, so audit committee, external auditor and internal-control system are core governance mechanisms.
+**Giao dịch bên liên quan (related-party transaction / 특수관계자 거래)** có thể hiệu quả nếu giảm chi phí giao dịch hoặc tận dụng năng lực chuyên môn trong tập đoàn. Vấn đề xuất hiện khi điều khoản khác đáng kể so với giao dịch độc lập và làm dịch chuyển giá trị về phía người kiểm soát hoặc một pháp nhân được ưu ái.
 
-Audit opinion does not guarantee company is economically strong, but weak internal controls or serious audit issues can reveal reporting/governance risk.
+Cần hỏi: giao dịch có cần thiết không; phương án thị trường có tốt hơn không; giá có gần điều kiện độc lập không; quá trình phê duyệt có độc lập không; thông tin có được công bố đủ không; ai hưởng lợi và ai chịu rủi ro.
 
-Governance therefore connects directly to [09_disclosure_accounting_dart_kind](./09_disclosure_accounting_dart_kind.md).
+## Tunneling: phải nhìn cơ chế chuyển giá trị, không chỉ gắn nhãn
 
-## Related-party transactions: không phải cứ nội bộ là xấu
+**Tunneling (터널링)** là việc chuyển giá trị ra khỏi một pháp nhân về phía lợi ích của người kiểm soát thông qua những cơ chế như bán tài sản bất lợi, hợp đồng ưu đãi, chuyển cơ hội kinh doanh hoặc tài trợ không công bằng.
 
-Business group naturally has internal transactions: IT affiliate, logistics affiliate, property lease, loans, guarantees, procurement and services.
+Không thể kết luận có tunneling chỉ vì hai công ty cùng tập đoàn giao dịch với nhau. Phải có bằng chứng rằng giá trị bị chuyển đi.
 
-Related-party transaction can be efficient if it reduces transaction cost or uses specialized group capability.
+Phân tích nghiêm túc cần so sánh điều kiện giao dịch với phương án thị trường và xác định bên hưởng lợi cuối cùng.
 
-Problem arises when terms differ materially from arm’s-length economics and transfer value toward controller or favored entity.
+## Chuyển cơ hội kinh doanh
 
-Key questions:
+Một rủi ro tinh vi xảy ra khi cơ hội đáng ra thuộc về công ty A lại được chuyển sang công ty tư nhân hoặc công ty B dưới cùng người kiểm soát.
 
-- Is transaction necessary?
-- Could market alternative be cheaper/better?
-- Is pricing arm’s length?
-- Was approval independent?
-- Is disclosure sufficient?
-- Who gains and who bears risk?
+Tiền mặt có thể không rời A ngay lập tức nhưng giá trị tương lai của cổ đông A vẫn bị chuyển đi. Vì vậy quy tắc về cơ hội doanh nghiệp và công bố giao dịch liên quan đặc biệt quan trọng trong tập đoàn gia đình.
 
-## Tunneling: mechanism, not label
+## Phân bổ vốn: quản trị cuối cùng thể hiện trong con số
 
-**Tunneling / 터널링** means transferring value away from an entity toward controlling interests through mechanisms such as unfavorable asset sale, preferential contract, opportunity diversion or financing.
+Quản trị không chỉ là bê bối hoặc số lượng giám đốc bên ngoài. Kết quả bền vững nhất của quản trị nằm ở **phân bổ vốn (capital allocation / 자본배분)**.
 
-Do not diagnose tunneling simply because two affiliates transact.
-
-Need evidence of value transfer.
-
-A rigorous analysis compares transaction terms with market alternatives and traces beneficiary.
-
-## Business opportunity diversion
-
-A subtle governance risk occurs when valuable opportunity could belong to Company A but is routed to private/affiliate Company B under same controller.
-
-Even without cash leaving A directly, shareholder value may be diverted.
-
-This is why corporate opportunity rules and related-party disclosure matter in family groups.
-
-## Capital allocation: governance becomes visible in numbers
-
-Governance is not only scandals and board composition. The most persistent governance outcome is **capital allocation / 자본배분**.
-
-Operating cash can go to:
+Dòng tiền hoạt động có thể được sử dụng cho:
 
 ```text
-Maintenance CAPEX
-Growth CAPEX
+CAPEX duy trì
+CAPEX tăng trưởng
 R&D
 M&A
-Debt repayment
-Dividend
-Buyback / cancellation
-Cash accumulation
-Affiliate investment
+Trả nợ
+Cổ tức
+Mua lại / hủy cổ phiếu
+Tích lũy tiền mặt
+Đầu tư vào công ty thành viên
 ```
 
-Management creates value if retained capital earns returns above opportunity cost.
+Ban điều hành tạo giá trị khi phần vốn giữ lại tạo lợi suất cao hơn chi phí cơ hội của vốn.
 
-A core metric:
+Một chỉ số cốt lõi là:
 
 \[
 ROIC = \frac{NOPAT}{Invested\ Capital}
 \]
 
-If company continually reinvests at ROIC below cost of capital, accounting assets grow while economic value can shrink.
+Nếu doanh nghiệp liên tục tái đầu tư với ROIC thấp hơn chi phí vốn, tài sản kế toán có thể tăng nhưng giá trị kinh tế vẫn giảm.
 
-Board quality eventually shows up in these choices.
+Chất lượng hội đồng quản trị cuối cùng sẽ phản ánh qua các quyết định này.
 
-## Cash-rich company can still have governance problem
+## Công ty nhiều tiền mặt vẫn có thể có vấn đề quản trị
 
-Large cash balance is not automatically shareholder-friendly.
+Tiền mặt lớn không tự động có nghĩa thân thiện với cổ đông. Cần hỏi tiền được giữ để làm gì, có phải dự phòng hoạt động hợp lý hay vốn nhàn rỗi, tiền có bị khóa tại công ty con hay không, ban điều hành có kế hoạch M&A lợi suất thấp không và chính sách hoàn vốn cho cổ đông có hợp lý không.
 
-Need ask:
+Quản trị vì vậy phải nối số dư tiền với cách sử dụng tiền trong tương lai, không chỉ với độ an toàn thanh khoản.
 
-- Why is cash held?
-- Is it operating buffer or idle capital?
-- Is cash trapped in subsidiaries?
-- Is management planning low-return acquisition?
-- Is shareholder return policy rational?
+## Cổ tức và mua lại cổ phiếu: cơ chế sử dụng vốn quan trọng
 
-Governance analysis therefore connects cash balance to future allocation, not just liquidity safety.
+Cổ tức chuyển tiền trực tiếp cho cổ đông. Mua lại cổ phiếu làm giảm lượng cổ phiếu lưu hành bên ngoài hoặc tạo cổ phiếu quỹ.
 
-## Dividend and buyback: return capital, but mechanism matters
+Tác động kinh tế phụ thuộc cổ phiếu mua lại có được hủy, tiếp tục nắm giữ, dùng để trả thưởng hay dùng trong tái cấu trúc hay không.
 
-Dividend is direct cash transfer to shareholders. Buyback reduces public float or creates treasury shares.
+Nếu công ty mua cổ phiếu dưới giá trị nội tại và hủy chúng, cổ đông còn lại có thể hưởng lợi. Nếu công ty chỉ tích lũy cổ phiếu quỹ vô thời hạn, tác động khác hẳn.
 
-Economic effect depends on whether shares are cancelled, held, reused for compensation or used in corporate transactions.
+Không nên gắn nhãn mọi chương trình mua lại là “hoàn vốn cho cổ đông” nếu chưa đọc mục đích và cách xử lý sau đó.
 
-If company buys stock below intrinsic value and cancels it, remaining shareholders can benefit. If buyback simply accumulates treasury shares indefinitely, effect differs.
+## Cổ phiếu quỹ (Treasury Shares / 자기주식)
 
-Do not label every buyback “shareholder return” without reading purpose and treatment.
+Cổ phiếu quỹ là cổ phiếu do chính công ty mua lại. Việc nắm giữ, hủy, bán hoặc sử dụng chúng trong giao dịch doanh nghiệp có thể ảnh hưởng tới tỷ lệ sở hữu và động lực kiểm soát.
 
-## Treasury shares (자기주식)
+Khi phân tích cần kiểm tra lượng cổ phiếu mua lại, kế hoạch hủy, đối tượng nhận khi bán lại, mục đích trả thưởng và cách sử dụng trong M&A hoặc tái cấu trúc.
 
-Treasury shares are company’s repurchased shares. Governance implications can involve voting/control, restructuring and future disposition depending on legal treatment.
+## Kế nhiệm: nơi quản trị, thuế và thị trường vốn gặp nhau
 
-Analyst should check:
+Kế nhiệm gia đình có thể kéo theo quy hoạch thuế thừa kế–tặng cho, chuyển cổ phần, sáp nhập, chia tách, tái tổ chức công ty nắm giữ, bán cổ phần công ty thành viên hoặc thay đổi chính sách cổ tức.
 
-- amount repurchased;
-- cancellation plan;
-- disposal recipients;
-- compensation use;
-- M&A/restructuring use;
-- disclosure changes.
+Kế nhiệm không chỉ là sự kiện gia đình. Nó có thể làm thay đổi sơ đồ sở hữu và cách phân phối giá trị giữa các công ty niêm yết.
 
-This is especially relevant in Korea because treasury-share policy has been an area of capital-market reform attention.
+Khi tái cấu trúc được công bố, cần vẽ sơ đồ sở hữu trước–sau và hỏi: quyền biểu quyết của người kiểm soát thay đổi thế nào; phần lợi ích kinh tế có thay đổi không; pháp nhân niêm yết nào chuyển giao hoặc nhận tài sản; tỷ lệ định giá–hoán đổi nào được dùng; cổ đông thiểu số có được đối xử cân xứng không.
 
-## Succession: governance, tax and capital markets collide
+## Chia tách: `인적분할` và `물적분할`
 
-Family succession can trigger:
+`인적분할` thường chia công ty theo cách cổ đông hiện hữu nhận quyền sở hữu tương ứng tại công ty được tách, tùy cấu trúc giao dịch cụ thể.
 
-- inheritance/gift tax planning;
-- stake transfer;
-- mergers;
-- spin-offs;
-- holding-company reorganization;
-- affiliate stake sales;
-- dividend policy changes.
+`물적분할` thường tạo một công ty con mới mà công ty mẹ tiếp tục sở hữu. Cổ đông hiện hữu của công ty mẹ nắm mảng mới một cách gián tiếp.
 
-Succession is not merely family event. It can alter ownership graph and distribution of economic value among listed entities.
+Hệ quả quản trị có thể rất khác nếu mảng tăng trưởng được đưa xuống công ty con rồi sau đó gọi vốn bên ngoài hoặc niêm yết riêng.
 
-When restructuring is announced, analyst should draw **before/after ownership graph** and ask:
+Do đó phân tích chia tách không nên dừng ở câu “tập trung vào ngành cốt lõi”; cần hỏi **ai sẽ sở hữu tài sản tăng trưởng tương lai sau giao dịch**.
 
-1. Does controller voting power change?
-2. Does economic ownership change?
-3. Which listed entity gives/receives assets?
-4. What valuation/exchange ratio is used?
-5. Are minority shareholders treated symmetrically?
+## Sáp nhập và tỷ lệ hoán đổi
 
-## Spin-offs: 인적분할 và 물적분할
+Một sáp nhập có thể có logic công nghiệp hợp lý nhưng vẫn phân phối lại giá trị tùy **tỷ lệ hoán đổi (exchange ratio)**.
 
-`인적분할` generally separates a company such that existing shareholders receive proportional ownership in separated entity according to structure.
+Cần tách ba câu hỏi: giao dịch có logic chiến lược không; định giá và tỷ lệ hoán đổi có công bằng không; và quyền kiểm soát thay đổi như thế nào.
 
-`물적분할` generally creates a subsidiary retained under parent ownership.
+Ba câu hỏi này không giống nhau. Hiệp lực có thể tồn tại nhưng cổ đông của một bên vẫn bị thiệt nếu tỷ lệ định giá bất lợi.
 
-The governance consequence can differ substantially if growth business is moved into subsidiary and later raises outside capital or lists separately.
+## Nhà đầu tư tổ chức và stewardship
 
-Therefore spin-off analysis should not stop at “focus strategy”; ask **who owns the future growth asset after transaction?**
+Quỹ hưu trí, công ty quản lý tài sản và nhà đầu tư nước ngoài có thể tác động tới quản trị thông qua bỏ phiếu và đối thoại với doanh nghiệp.
 
-## Mergers and exchange ratios
+Sở hữu tổ chức làm tăng khả năng giám sát, nhưng nắm giữ thụ động không tự động đồng nghĩa với quản trị chủ động. Phải xem hành vi bỏ phiếu, chính sách tham gia quản trị và mức độ tập trung sở hữu thực tế.
 
-A merger can have valid industrial logic but still redistribute value depending on valuation ratio.
+## Hoạt động cổ đông chủ động
 
-Suppose A shareholders receive too few shares in combined entity relative to A’s fair value; synergy may exist yet minority holders of A still lose relative value.
+**Hoạt động cổ đông chủ động (shareholder activism)** có thể yêu cầu tăng cổ tức, mua lại cổ phiếu, thay hội đồng quản trị, bán tài sản hoặc cải cách quản trị.
 
-Governance analysis therefore separates:
+Hoạt động này có thể tăng kỷ luật vốn nhưng không phải mọi đề xuất của nhà đầu tư chủ động đều tối đa hóa giá trị. Nhu cầu đầu tư dài hạn của doanh nghiệp có thể xung đột với mục tiêu ngắn hạn của một số cổ đông.
 
-- strategic rationale;
-- valuation/fairness;
-- control consequence.
+Đánh giá đề xuất phải dựa trên kinh tế của phương án, không dựa trên danh tính người đề xuất.
 
-These are three different questions.
+## Quản trị và “Korea discount”
 
-## Institutional investors and stewardship
+Thảo luận về định giá cổ phiếu Hàn Quốc thường nhắc tới quản trị, cổ đông kiểm soát, phân bổ vốn và hoàn vốn cho cổ đông như một phần nguyên nhân của **Korea discount**.
 
-Pension funds, asset managers and foreign institutions can influence governance through voting and engagement.
+Tuy nhiên, mức chiết khấu định giá không có một nguyên nhân duy nhất. Cơ cấu ngành, tính chu kỳ, rủi ro địa chính trị, triển vọng tăng trưởng và lãi suất cũng ảnh hưởng định giá.
 
-Institutional ownership increases potential monitoring, but passive holding does not automatically mean active governance.
+Vì vậy quản trị là một thành phần của lợi suất yêu cầu và kỳ vọng phân phối dòng tiền, chứ không phải lời giải thích duy nhất cho mọi cổ phiếu P/E thấp.
 
-Need observe actual voting, engagement policies and concentration of ownership.
+## Vì sao bối cảnh sở hữu quyết định loại vấn đề đại diện
 
-## Activism: governance pressure as capital-market mechanism
+Trong công ty sở hữu phân tán, rủi ro chính có thể là ban quản lý mở rộng đế chế. Trong công ty có cổ đông kiểm soát mạnh, ban quản lý có thể được kỷ luật tốt hơn nhưng cổ đông thiểu số lại đối mặt rủi ro người kiểm soát thu lợi ích riêng.
 
-Shareholder activists may demand dividends, buybacks, board changes, asset sales or governance reform.
+Giải pháp quản trị phải phù hợp với loại vấn đề đại diện. Áp dụng nguyên mẫu quản trị của một quốc gia mà bỏ qua cấu trúc sở hữu của quốc gia khác rất dễ dẫn đến kết luận sai.
 
-Activism can improve capital discipline but not every activist proposal is automatically value-maximizing. Short horizon and long-term investment needs can conflict.
+## Quy trình thẩm định quản trị
 
-Evaluate proposal by economics, not by identity of proposer.
+1. Xác định đúng pháp nhân và tình trạng niêm yết.
+2. Lập bản đồ cổ đông lớn và bên liên quan.
+3. Vẽ sơ đồ sở hữu tập đoàn ít nhất một–hai tầng.
+4. Kiểm tra hội đồng quản trị và các ủy ban.
+5. Kiểm tra cổ phiếu quỹ và cổ phần ưu đãi.
+6. Đọc giao dịch bên liên quan và bảo lãnh.
+7. Rà các tái cấu trúc, M&A và chia tách lớn.
+8. Xem lịch sử phân bổ vốn 5–10 năm.
+9. So sánh ROIC với tốc độ tái đầu tư.
+10. Kiểm tra động cơ của người kiểm soát có phù hợp với cổ đông của pháp nhân hay không.
 
-## Governance and “Korea discount”
+## Mental Model — mô hình tư duy
 
-Korean equity valuation discussions often mention governance, controlling-shareholder structure, capital allocation and shareholder return as contributors to valuation discounts.
+> Quản trị doanh nghiệp là **hệ điều hành của quyền lực trong công ty**. Báo cáo tài chính cho biết điều gì đã xảy ra; quản trị giúp giải thích ai có quyền và động cơ để đưa ra những quyết định đó. Trong tập đoàn Hàn Quốc, luôn hỏi cả **ai sở hữu** và **ai kiểm soát thông qua mạng lưới**.
 
-But valuation discount is not one variable with one cause. Sector mix, cyclicality, geopolitical exposure, growth outlook and interest rates also matter.
+## Những nhầm lẫn thường gặp
 
-Therefore governance is one component of required return and expected cash-flow distribution, not a magic explanation for every low P/E.
+**“Người sáng lập sở hữu dưới 50% thì không thể kiểm soát.”** Sai.
 
-## Type I vs Type II agency: why country context matters
+**“Có giám đốc bên ngoài thì chắc chắn độc lập.”** Sai. Tính độc lập thực chất còn phụ thuộc thông tin, chuyên môn và hành vi.
 
-In a company with dispersed ownership, main concern may be manager empire building.
+**“Giao dịch bên liên quan = tunneling.”** Sai. Phải chứng minh cơ chế chuyển giá trị.
 
-In controlled group, manager may be disciplined by controller, but minority shareholder faces different risk: controller may extract private benefit.
+**“Cổ tức cao luôn là quản trị tốt.”** Sai nếu công ty có cơ hội tái đầu tư lợi suất rất cao.
 
-Governance solution must match agency structure.
+**“Cổ tức thấp luôn xấu.”** Sai nếu lợi nhuận giữ lại tạo ROIC cao và được phân bổ tốt.
 
-This is why importing one-country governance template without ownership context is dangerous.
+**“Hiệp lực cấp tập đoàn cho phép chuyển giá trị khỏi cổ đông thiểu số.”** Sai. Hiệp lực tổng thể và công bằng tại từng pháp nhân là hai câu hỏi riêng.
 
-## Governance due diligence workflow
+## Liên kết
 
-A practical workflow:
-
-1. Identify exact legal entity and listing.
-2. Map top shareholders and related parties.
-3. Draw group ownership graph at least one–two levels.
-4. Review board and committees.
-5. Check treasury shares and preferred shares.
-6. Read related-party transactions and guarantees.
-7. Review major restructurings/M&A/spin-offs.
-8. Study 5–10 years of capital allocation.
-9. Compare ROIC with reinvestment rate.
-10. Check whether controller incentives align with entity shareholders.
-
-## Mental Model
-
-> Governance is the **operating system of corporate power**. Financial statements show what happened; governance explains who had authority and incentive to make those decisions. In Korean groups, always ask both `who owns?` and `who controls through the network?`.
-
-## Common misconceptions
-
-Founder ownership below 50% does not mean founder has no control.
-
-Outside directors do not guarantee substantive independence.
-
-Related-party transaction is not automatically tunneling.
-
-High dividend is not always “good governance” if company has high-return reinvestment opportunity.
-
-Low dividend is not always bad if retained earnings compound at strong ROIC.
-
-Group-level synergy does not automatically justify transferring value away from minority shareholders of a specific listed affiliate.
-
-## Connections
-
-Read [05_group_structure_affiliates_holding_companies](./05_group_structure_affiliates_holding_companies.md) first for ownership graphs, then [09_disclosure_accounting_dart_kind](./09_disclosure_accounting_dart_kind.md) to locate governance evidence in filings, and [20_how_to_analyze_a_korean_company](./20_how_to_analyze_a_korean_company.md) for end-to-end application.
+Đọc [`05_group_structure_affiliates_holding_companies.md`](./05_group_structure_affiliates_holding_companies.md) trước để hiểu sơ đồ sở hữu, sau đó đọc [`09_disclosure_accounting_dart_kind.md`](./09_disclosure_accounting_dart_kind.md) để tìm bằng chứng trong hồ sơ công bố và [`20_how_to_analyze_a_korean_company.md`](./20_how_to_analyze_a_korean_company.md) để áp dụng toàn bộ quy trình.
