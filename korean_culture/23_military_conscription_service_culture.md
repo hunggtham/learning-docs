@@ -66,7 +66,7 @@ Vì nghĩa vụ quân sự về lịch sử tập trung mạnh vào nam giới, 
 
 Nhưng từ đó suy ra “mọi đàn ông Hàn đều có cùng tính cách quân đội” là ngụy biện sinh thái. Thiết chế chung có thể tạo từ vựng chung nhưng không tạo tính cách giống hệt nhau.
 
-## 여성, 군과 tranh luận giới
+## Phụ nữ, quân đội và tranh luận về giới
 
 Vai trò của phụ nữ trong quân đội và các tranh luận rộng hơn về nghĩa vụ quân sự là chủ đề xã hội có nhiều quan điểm. Một tài liệu văn hoá nên mô tả cấu trúc thiết chế và diễn ngôn xã hội thay vì biến tranh luận đó thành một kết luận chuẩn tắc duy nhất.
 
