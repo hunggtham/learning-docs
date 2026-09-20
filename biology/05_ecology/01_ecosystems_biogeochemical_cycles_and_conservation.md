@@ -1,263 +1,220 @@
-# Hệ sinh thái, dòng năng lượng và chu trình vật chất — Ecosystems, Biogeochemical Cycles and Conservation (생태계, 생지화학적 순환과 보전)
+# Hệ sinh thái, chu trình vật chất và bảo tồn — Ecosystems, Biogeochemical Cycles and Conservation (생태계, 생지화학적 순환과 보전)
 
-Community ecology xem species tương tác với nhau. **Ecosystem (hệ sinh thái / 생태계)** thêm môi trường vật lý: light, water, temperature, soil, atmosphere và chemical nutrient. Khi đó hai dòng phải được theo dõi riêng: **energy chảy qua hệ**, còn **matter được tái tuần hoàn**.
+Community ecology cho ta biết species tương tác với nhau. Nhưng organism không chỉ tương tác với organism; chúng còn trao đổi vật chất và năng lượng với không khí, nước, đất và ánh sáng. Khi đưa cả yếu tố sinh học lẫn phi sinh học vào cùng một system, ta có **ecosystem (hệ sinh thái / 생태계)**.
 
-Đây là distinction quan trọng nhất của ecosystem ecology.
+Chương này nối metabolism ở cell với carbon cycle ở planet scale. Một electron đi qua photosystem trong chloroplast cuối cùng có thể ảnh hưởng productivity của ecosystem; respiration của hàng tỷ organism trở thành flux CO₂ toàn cầu. Đây là nơi scale nhỏ và scale lớn thực sự nối lại.
 
-## Energy flow và matter cycle không giống nhau
+## 1. Energy flow và matter cycle không giống nhau
 
-Energy đi vào phần lớn ecosystem dưới dạng sunlight, được producer giữ lại một phần thành chemical energy, truyền qua food web rồi cuối cùng phần lớn dissipate thành heat.
+Một distinction nền tảng:
 
-Matter thì khác. Carbon atom có thể từ atmosphere → plant → animal → decomposer → atmosphere rồi tiếp tục cycle. Nitrogen, phosphorus và water cũng được tái sử dụng.
+**Matter cycles. Energy flows.**
 
-> **Mental model:** energy có hướng và bị degrade thành heat; atom không biến mất mà chuyển reservoir và chemical form.
+Carbon atom có thể đi từ atmosphere → plant → animal → decomposer → atmosphere rồi tiếp tục cycle.
 
-## Primary production — cổng energy của ecosystem
+Energy từ sunlight được producer capture, truyền qua food web, nhưng ở mỗi conversion một phần lớn phân tán dưới dạng heat. Heat không được ecosystem recycle trở lại thành chemical energy hữu dụng theo cùng cách.
 
-**Primary producer (sinh vật sản xuất / 생산자)** như plant, algae và nhiều microorganism tạo organic carbon từ inorganic carbon.
+```text
+Sunlight
+   ↓
+Producers
+   ↓
+Consumers
+   ↓
+Decomposers
+   ↓
+Heat dissipated
+```
 
-**Gross primary production (GPP)** là total carbon fixed/energy captured trước khi trừ respiration của producer.
+Trong khi carbon có vòng:
 
-**Net primary production (NPP)** là phần còn lại sau producer respiration:
+```text
+CO2 ↔ organic carbon ↔ decomposed carbon ↔ CO2
+```
 
-\[
-NPP = GPP - R
-\]
+Nếu trộn hai concept này, ecology rất dễ rối.
 
-NPP gần với biomass/energy available cho growth và consumer trophic level.
+## 2. Primary production: photosynthesis trở thành quantity ở ecosystem scale
 
-Nếu forest photosynthesize mạnh nhưng plant respiration cũng cao, GPP lớn không có nghĩa biomass accumulation bằng GPP.
+Plant, algae và cyanobacteria biến light + CO₂ thành organic carbon.
 
-## Trophic level và ecological efficiency
+**Gross primary productivity (GPP)** là tổng carbon fixation.
 
-Producer ở trophic level nền. Herbivore ăn producer; carnivore ăn consumer khác.
+Producer cũng respiration, nên một phần carbon được dùng lại để tạo ATP.
 
-Energy transfer giữa trophic level không bao giờ 100%. Nhiều energy dùng cho metabolism, movement và mất dưới dạng heat/waste.
-
-Textbook đôi khi dùng “10% rule”, nhưng 10% chỉ approximation. **Ecological efficiency** thay đổi rộng tùy ecosystem và organism.
-
-Điểm quan trọng là energy giảm mạnh khi đi lên food chain, giải thích vì sao top predator thường ít biomass/number hơn producer.
-
-## Ecological pyramid
-
-**Energy pyramid** luôn giảm upward nếu tính energy flow theo time.
-
-Biomass pyramid có thể inverted trong một số aquatic system vì phytoplankton turnover rất nhanh: standing biomass thấp nhưng production rate cao.
-
-Đây là example cho việc snapshot biomass khác flow rate.
-
-## Decomposer — vòng vật chất sẽ dừng nếu thiếu phân giải
-
-Dead organism và waste vẫn chứa carbon, nitrogen, phosphorus. **Decomposer (sinh vật phân giải / 분해자)** như bacteria và fungi phân giải organic material, giải phóng nutrient trở lại environment.
-
-Nếu decomposition không xảy ra, nutrient sẽ bị lock trong dead biomass và producer dần thiếu resource.
-
-Decomposer vì thế là core infrastructure của ecosystem, không phải “bộ phận dọn rác” phụ.
-
-# Carbon cycle
-
-Carbon di chuyển giữa atmosphere, ocean, organism, soil và rock.
-
-## Photosynthesis và respiration
-
-Photosynthesis chuyển atmospheric/aquatic CO₂ thành organic carbon.
-
-Respiration oxidize organic carbon và release CO₂.
-
-Hai process nối biological carbon cycle.
-
-## Ocean carbon
-
-CO₂ dissolve vào ocean và tham gia equilibrium carbonate:
+**Net primary productivity (NPP)** gần bằng:
 
 \[
-CO_2 + H_2O \leftrightarrow H_2CO_3 \leftrightarrow H^+ + HCO_3^- \leftrightarrow 2H^+ + CO_3^{2-}
+NPP = GPP - R_{producer}
 \]
 
-Tăng dissolved CO₂ có thể tăng H⁺ và làm pH giảm, gọi là **ocean acidification (해양 산성화)**.
+NPP là phần organic matter còn lại để growth/reproduction và làm resource cho consumer.
 
-“Acidification” không có nghĩa ocean biến thành acid mạnh; nó nghĩa pH giảm so với baseline alkaline condition.
+Một process chloroplast-level giờ trở thành nền của food web.
 
-Carbonate availability ảnh hưởng organism tạo calcium carbonate structure.
+## 3. Trophic transfer và ecological efficiency
 
-## Long-term carbon storage
+Khi herbivore ăn plant, không phải toàn bộ plant biomass trở thành herbivore biomass. Một phần không được ăn, không tiêu hóa, dùng cho respiration hoặc mất dưới dạng waste.
 
-Carbon có thể được chôn trong sediment, soil và fossil carbon reservoir qua geological time. Weathering, volcanism và tectonics tham gia cycle dài hơn biological timescale.
+Vì vậy energy/biomass thường giảm qua trophic level.
 
-Burning fossil fuel chuyển carbon đã lưu geological time trở lại atmosphere rất nhanh relative to natural long-term flux.
+“10% rule” đôi khi được dùng như approximation giáo khoa, nhưng efficiency thật thay đổi mạnh theo ecosystem và organism.
 
-# Nitrogen cycle
+Mental model đúng là: **mỗi trophic transfer có loss lớn**, không phải chính xác 10% mọi nơi.
 
-Nitrogen cần cho amino acid, nucleotide và nhiều molecule nhưng atmospheric N₂ khó sử dụng trực tiếp.
+## 4. Decomposer hoàn tất vòng vật chất
 
-## Nitrogen fixation
+Nếu dead organic matter không được phân giải, nutrient sẽ bị khóa lại.
 
-Một số microorganism chuyển N₂ thành ammonia/ammonium.
+Fungi và bacteria phân giải polymer, sử dụng carbon cho metabolism và trả mineral nutrient về soil/water.
 
-## Nitrification
+Decomposer vì thế không phải “phần cuối ít quan trọng” của food chain. Chúng là module giúp material trở lại vòng tuần hoàn.
 
-Microorganism oxidize ammonium thành nitrite rồi nitrate.
+## 5. Carbon cycle: nối photosynthesis, respiration, ocean và geology
 
-## Assimilation
+Atmospheric CO₂ được photosynthesis fixation. Respiration và decomposition trả CO₂ lại.
 
-Plant/microbe uptake inorganic nitrogen và đưa vào organic molecule. Animal nhận nitrogen qua food.
+Ocean dissolve CO₂ và trao đổi với atmosphere. Một phần carbon bị chôn vùi trong sediment hoặc lưu lâu trong biomass/soil.
 
-## Ammonification
+Human combustion fossil carbon chuyển carbon geological reservoir sang atmosphere rất nhanh so với nhiều natural geological process.
 
-Decomposer chuyển organic nitrogen từ dead matter/waste về ammonium.
+Carbon cycle vì thế có reservoir với residence time rất khác nhau.
 
-## Denitrification
+## 6. Nitrogen cycle: có N₂ không có nghĩa organism dùng trực tiếp được
 
-Một số microorganism dùng nitrate làm electron acceptor và trả nitrogen về dạng gas như N₂/N₂O tùy pathway.
+Atmosphere chứa rất nhiều N₂ nhưng triple bond rất bền. Hầu hết organism không tự convert N₂ thành usable nitrogen.
 
-Nitrogen cycle là example cho thấy microbial metabolism điều khiển planetary chemistry.
+**Nitrogen fixation** do một số bacteria/archaea chuyển N₂ thành ammonia-related form.
 
-# Phosphorus cycle
+Nitrification chuyển reduced nitrogen sang nitrite/nitrate. Denitrification có thể trả nitrogen về N₂.
 
-Phosphorus cần cho ATP, nucleic acid và phospholipid.
+Plant hấp thu inorganic nitrogen để tổng hợp amino acid/nucleotide; consumer nhận nitrogen qua food.
 
-Không giống carbon/nitrogen, phosphorus cycle không có major atmospheric gas phase trong normal biological cycle.
+Một lần nữa microbial metabolism ở chapter trước trở thành global cycle.
 
-Weathering rock release phosphate; organism uptake; decomposition trả phosphate về soil/water; sedimentation đưa phosphorus vào long-term reservoir.
+## 7. Phosphorus cycle khác nitrogen ở điểm nào?
 
-Phosphorus thường là limiting nutrient trong freshwater ecosystem.
+Phosphorus cần cho ATP, DNA, RNA và phospholipid.
 
-## Eutrophication
+Khác nitrogen, phosphorus cycle không có atmospheric gas phase lớn tương đương. Weathering rock, soil, water và sediment đóng role quan trọng.
 
-Nếu excessive nitrogen/phosphorus vào water body, algae/phytoplankton có thể bloom.
+Vì phosphorus có thể limiting, fertilizer addition có thể đổi productivity mạnh.
 
-Khi biomass chết, decomposition consume dissolved oxygen, gây **hypoxia** và ảnh hưởng aquatic animal.
+## 8. Limiting nutrient và Liebig-style reasoning
 
-Eutrophication vì vậy không đơn giản “nhiều nutrient = ecosystem tốt hơn”. Resource imbalance có thể làm network mất ổn định.
+Growth không chỉ phụ thuộc tổng resource; nó có thể bị giới hạn bởi resource thiếu nhất relative to demand.
 
-# Water cycle
+Nếu nitrogen đã rất dư nhưng phosphorus thiếu, thêm nitrogen không tăng production nhiều.
 
-Solar energy drive evaporation. Water vapor condense, precipitation đưa water xuống land/ocean. Runoff, infiltration, groundwater và transpiration nối reservoir.
+Điều này giống bottleneck trong engineering system: throughput bị giới hạn bởi constraint chính, không phải tổng capacity của mọi component.
 
-Plant không chỉ dùng water; vegetation ảnh hưởng local hydrology qua transpiration, soil structure và canopy interception.
+## 9. Eutrophication: nutrient nhiều không phải lúc nào cũng tốt
 
-## Evapotranspiration
+Khi nitrogen/phosphorus quá nhiều vào lake/coastal water, algae bloom có thể tăng mạnh.
 
-**Evapotranspiration (증발산)** kết hợp evaporation từ surface và transpiration từ plant.
+Sau đó biomass chết và bị decomposer phân giải, respiration tiêu thụ dissolved oxygen. Hypoxia có thể làm fish/invertebrate chết.
 
-Trong ecology/agriculture, water balance thường xét:
+Causal chain:
 
-\[
-\Delta Storage = Precipitation - Evapotranspiration - Runoff \pm Groundwater\ flow
-\]
+```text
+nutrient input ↑
+   ↓
+primary production ↑
+   ↓
+organic matter decomposition ↑
+   ↓
+oxygen consumption ↑
+   ↓
+hypoxia risk ↑
+```
 
-Đây là conservation-of-mass thinking áp dụng ở landscape scale.
+Một intervention tưởng như “thêm nutrient giúp growth” có indirect effect qua food web và decomposition.
 
-# Biome — climate tạo constraint lớn
+## 10. Ecosystem disturbance và resilience
 
-**Biome (quần xã sinh vật lớn / 생물군계)** là broad ecological region liên quan climate và vegetation pattern, ví dụ tropical rainforest, desert, temperate forest, tundra.
+Fire, storm, flood, drought hoặc human activity có thể thay system.
 
-Temperature và precipitation mạnh mẽ giới hạn water availability, growing season và decomposition rate.
+**Resistance** mô tả mức system ít đổi trước disturbance.
 
-Nhưng biome boundary không phải line tuyệt đối; elevation, soil, disturbance và local history tạo variation.
+**Resilience** mô tả khả năng phục hồi function/state sau disturbance.
 
-## Aquatic ecosystem
+Hai concept khác nhau. Grassland có thể thay composition sau fire nhưng productivity hồi nhanh — resilience cao dù resistance không nhất thiết cao.
 
-Freshwater và marine ecosystem chịu constraint khác terrestrial.
+## 11. Alternative stable states và threshold
 
-Light giảm theo depth, nutrient có thể stratify, oxygen phụ thuộc mixing/photosynthesis/decomposition.
+Một số ecosystem có feedback làm system ổn định quanh nhiều state khác nhau.
 
-Ocean upwelling đưa nutrient từ deep water lên surface, thường tạo high productivity region.
+Ví dụ clear-water lake và turbid lake có thể được duy trì bởi feedback khác nhau. Khi crossing threshold, system có thể shift nhanh và khó quay lại ngay khi pressure giảm.
 
-# Disturbance và resilience
+Đây là nonlinear dynamics ở ecology, tương tự switch/positive feedback trong cell signaling nhưng ở scale lớn hơn.
 
-**Disturbance (nhiễu động / 교란)** như fire, storm, flood hoặc biological outbreak thay structure ecosystem.
+## 12. Biodiversity và ecosystem function
 
-Disturbance không nhất thiết “xấu”; nhiều ecosystem evolved với periodic fire/flood và phụ thuộc chúng để maintain diversity.
+Species diversity có thể tăng functional redundancy và resource complementarity trong một số system, nhưng relationship không universal đơn giản.
 
-**Resistance** là khả năng ít thay đổi khi disturbance xảy ra.
+Quan trọng hơn, mất species có effect phụ thuộc role trong network. Mất keystone species có thể mạnh hơn mất một species redundant về function.
 
-**Resilience** là khả năng recover function/structure sau disturbance.
+Vì vậy conservation không thể chỉ đếm số species; cần hiểu interaction network và genetic diversity.
 
-Hai concept khác nhau: một ecosystem có thể bị thay mạnh nhưng recover nhanh.
+## 13. Island biogeography: area và isolation ảnh hưởng species richness
 
-## Alternative stable states
+Theory of island biogeography mô hình hóa balance giữa colonization và extinction.
 
-Một ecosystem có thể có nhiều state tương đối stable. Feedback có thể giữ hệ ở clear-water hoặc turbid-water state, forest hoặc grassland state tùy context.
+Island lớn thường có extinction rate thấp hơn vì population lớn/habitat đa dạng. Island gần source có colonization rate cao hơn.
 
-Do đó recovery không phải lúc nào chỉ cần “đưa pressure về mức cũ”; hysteresis có thể làm path trở lại khác path đi tới degradation.
+Concept này được áp dụng cẩn thận cho habitat fragment: forest patch cô lập có thể giống “island” trong matrix khác habitat.
 
-Đây là systems-thinking connection rất quan trọng.
+## 14. Habitat fragmentation nối ecology với population genetics
 
-# Conservation biology — giữ process, không chỉ giữ species list
+Khi habitat bị chia nhỏ, population bị tách.
 
-**Conservation biology (sinh học bảo tồn / 보전생물학)** dùng ecology, genetics và population biology để giảm biodiversity loss và duy trì ecosystem function.
+Gene flow giảm, effective population size có thể giảm, drift/inbreeding tăng.
 
-## Small population problem
+Do đó landscape change không chỉ giảm area sống; nó còn đổi evolutionary dynamics.
 
-Population nhỏ chịu drift mạnh, inbreeding tăng và demographic randomness lớn.
+Ecology và population genetics nối trực tiếp.
 
-Mất genetic diversity có thể giảm adaptive potential. Nhưng genetic rescue/migration cần context cẩn thận vì local adaptation và disease risk cũng có thể quan trọng.
+## 15. Climate change và range shift
 
-## Habitat fragmentation
+Species có physiological tolerance. Khi temperature/precipitation pattern đổi, suitable climate zone có thể dịch chuyển.
 
-Một habitat lớn bị chia thành patch làm population nhỏ hơn và gene flow giảm.
+Species có thể migrate, adapt hoặc decline tùy dispersal ability, generation time, genetic variation và habitat connectivity.
 
-Edge condition cũng thay: light, temperature, predator và invasive species có thể khác interior.
+Không phải species nào cũng phản ứng giống nhau, nên community interaction cũng có thể bị reshuffle.
 
-Corridor có thể tăng connectivity, nhưng design phải xét species behavior và landscape.
+## 16. Phenology mismatch
 
-## Minimum viable population không phải một magic number
+Nếu flowering time, insect emergence và bird migration respond khác nhau với warming, timing interaction có thể lệch.
 
-Risk extinction phụ thuộc generation time, variance reproduction, environment, genetic diversity và catastrophe. Vì vậy không có một universal number đảm bảo safety.
+Đây là ví dụ climate effect không cần trực tiếp “giết” organism; nó có thể phá temporal synchronization giữa species.
 
-Population viability analysis dùng model stochastic để estimate risk dưới assumption cụ thể.
+## 17. Conservation biology là applied systems biology ở scale lớn
 
-## Ecosystem service
+Conservation cần kết hợp:
 
-Human phụ thuộc ecosystem process như pollination, water purification, soil formation, carbon storage và coastal protection.
+- population size và demography;
+- genetic diversity;
+- habitat quality/connectivity;
+- species interaction;
+- disturbance regime;
+- socioeconomic constraint.
 
-**Ecosystem services (생태계 서비스)** là framework nối ecology với economics/policy, nhưng không nên khiến ta chỉ coi species có giá trị khi tạo monetary benefit. Intrinsic, cultural và evolutionary value là dimension khác.
+Chỉ bảo vệ một species mà bỏ habitat/network có thể không đủ.
 
-# Climate change như một ecological forcing
+## 18. Ecosystem service và human system
 
-Temperature, precipitation, seasonality, ocean chemistry và extreme event thay đổi sẽ dịch niche và phenology.
+Ecosystem cung cấp pollination, water purification, soil formation, carbon storage và nhiều function khác.
 
-Species có thể migrate, acclimate, adapt evolutionarily hoặc decline tùy tốc độ change và connectivity.
+Nhưng framing “service” là một cách nhìn human-centered. Conservation còn có giá trị vì biodiversity và evolutionary history tự thân, tùy ethical framework.
 
-Interaction làm prediction khó: nếu flower shift timing nhưng pollinator không shift cùng, mismatch xuất hiện.
+Điều quan trọng khoa học là hiểu mechanism, trade-off và uncertainty trước khi ra quyết định.
 
-Climate effect vì vậy không chỉ là “nóng hơn”; nó tái cấu trúc timing, distribution và network interaction.
+## 19. Từ ecology sang biotechnology: con người bắt đầu can thiệp có chủ đích
 
-## Phenology
+Đến đây library đã đi từ molecule tới biosphere. Bước còn lại là nhìn cách con người **đo, chỉnh sửa và mô hình hóa** những system này.
 
-**Phenology (계절생물학)** nghiên cứu timing seasonal event: flowering, migration, breeding, leaf-out.
+PCR khai thác DNA replication chemistry. CRISPR khai thác bacterial defense. Sequencing chuyển genome thành data. Bioinformatics dùng algorithm để reconstruct information. Systems biology dùng network model để hiểu interaction nhiều tầng.
 
-Long-term phenology dataset là indicator nhạy với climate change.
+Biotechnology vì thế không phải “ứng dụng thêm” ở cuối sách. Nó là việc tái sử dụng các mechanism đã học.
 
-# Mathematical and computational ecology
-
-Ecology dùng differential equation cho population dynamics, matrix model cho age structure, network analysis cho food web, GIS/remote sensing cho landscape và Bayesian model cho uncertain observation.
-
-Remote sensing satellite có thể estimate vegetation index, land-cover change và ocean productivity trên scale không thể survey thủ công.
-
-Modern ecology do đó là field observation + experiment + statistics + computation.
-
-## Common misconceptions
-
-### “Energy được recycle như nutrient”
-
-Không. Matter cycle; usable energy cuối cùng dissipate thành heat và cần input mới, chủ yếu solar.
-
-### “10% rule là định luật cố định”
-
-Không. Đây là heuristic; trophic transfer efficiency thay đổi.
-
-### “Conservation chỉ là cứu loài hiếm”
-
-Conservation còn liên quan habitat, connectivity, ecosystem process và genetic diversity.
-
-### “Disturbance luôn phá ecosystem”
-
-Nhiều ecosystem cần disturbance regime tự nhiên. Vấn đề phụ thuộc frequency, intensity và historical adaptation.
-
-## Mental Model
-
-> Ecosystem là network transformation: producer đưa energy và carbon vào biological web, consumer chuyển chúng, decomposer trả atom về pool, microorganism đổi chemical form, climate và geology đặt constraint. Conservation muốn duy trì network và evolutionary potential, không chỉ đóng băng một snapshot hiện tại.
-
-Từ đây [[../06_biotechnology_computation/00_biotechnology_bioinformatics_and_systems_biology]] sẽ chuyển sang cách con người đo, thao tác và tính toán trên biological information.
+Tiếp tục với [[../06_biotechnology_computation/00_biotechnology_bioinformatics_and_systems_biology]].
