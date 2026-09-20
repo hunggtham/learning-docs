@@ -1,39 +1,39 @@
-# Văn hóa, ngôn ngữ, tôn giáo và landscape con người
+# Văn hóa, ngôn ngữ, tôn giáo và cảnh quan con người
 
-## Culture có geography vì ideas cũng di chuyển
+## Văn hóa cũng có địa lý vì ý tưởng có thể di chuyển
 
-**Cultural geography (문화지리학)** nghiên cứu cách language, religion, identity, practice và meaning phân bố và biến đổi theo không gian. Culture không phải lớp “trang trí” trên nền vật lý; nó ảnh hưởng settlement, architecture, food, calendar, political boundary và migration network.
+**Địa lý văn hóa (cultural geography / 문화지리학)** nghiên cứu cách ngôn ngữ, tôn giáo, bản sắc, thực hành và ý nghĩa phân bố rồi biến đổi theo không gian. Văn hóa không phải lớp “trang trí” phủ lên nền vật lý; nó ảnh hưởng khu định cư, kiến trúc, thực phẩm, lịch, biên giới chính trị và mạng lưới di cư.
 
-## Diffusion
+## Sự khuếch tán
 
-Ideas/innovation lan theo nhiều mechanism. **Contagious diffusion** lan qua contact gần; **hierarchical diffusion** lan qua city, institution hoặc influencer; **relocation diffusion** xảy ra khi people mang practice tới nơi mới.
+Ý tưởng và đổi mới lan truyền qua nhiều cơ chế. **Khuếch tán tiếp xúc (contagious diffusion)** lan qua tiếp xúc gần; **khuếch tán phân cấp (hierarchical diffusion)** lan qua thành phố, thể chế hoặc người có ảnh hưởng; **khuếch tán do di chuyển (relocation diffusion)** xảy ra khi con người mang thực hành đến nơi mới.
 
-Internet làm distance friction giảm với information, nhưng không xóa geography. Language, platform regulation, time zone và social network vẫn tạo spatial clustering.
+Internet làm ma sát khoảng cách đối với thông tin giảm mạnh nhưng không xóa địa lý. Ngôn ngữ, quy định nền tảng, múi giờ và mạng xã hội vẫn tạo ra các cụm không gian.
 
-## Language geography
+## Địa lý ngôn ngữ
 
-Language family phản ánh historical divergence và migration. Political boundary không trùng language boundary; một country có thể multilingual và một language trải qua nhiều state.
+Họ ngôn ngữ phản ánh sự phân hóa lịch sử và các dòng di cư. Biên giới chính trị không trùng hoàn toàn với ranh giới ngôn ngữ; một quốc gia có thể đa ngôn ngữ và một ngôn ngữ có thể trải qua nhiều quốc gia.
 
-**Lingua franca** giúp communication giữa groups. English có global role lớn trong science/business, nhưng local language tiếp tục quan trọng cho identity, administration và market access.
+**Ngôn ngữ chung (lingua franca)** giúp giao tiếp giữa các nhóm khác nhau. Tiếng Anh có vai trò toàn cầu lớn trong khoa học và kinh doanh, nhưng ngôn ngữ địa phương vẫn rất quan trọng đối với bản sắc, hành chính và tiếp cận thị trường.
 
-## Religion và sacred geography
+## Tôn giáo và không gian thiêng
 
-Religion tạo sacred sites, pilgrimage routes, dietary landscapes và calendar rhythms. Nhưng tránh suy rằng religion “quyết định” toàn bộ behavior của region; secular institutions, class, urbanization và individual variation cùng quan trọng.
+Tôn giáo tạo địa điểm thiêng, tuyến hành hương, cảnh quan ẩm thực và nhịp lịch. Tuy nhiên không nên suy rằng tôn giáo “quyết định” toàn bộ hành vi của một vùng; thể chế thế tục, giai tầng, đô thị hóa và khác biệt cá nhân cũng rất quan trọng.
 
-## Cultural landscape
+## Cảnh quan văn hóa
 
-Carl Sauer popularized idea rằng human culture transform natural landscape. Rice terrace, hedgerow, temple complex, industrial town và apartment superblock đều là records của human-environment interaction.
+Nhà địa lý Carl Sauer phổ biến quan niệm rằng văn hóa con người biến đổi cảnh quan tự nhiên. Ruộng bậc thang, hàng rào đồng ruộng, quần thể đền, thị trấn công nghiệp hay các khu chung cư quy mô lớn đều là dấu vết của tương tác giữa con người và môi trường.
 
-## Identity và territory
+## Bản sắc và lãnh thổ
 
-Identity có thể attach vào place. Place name, monument và boundary vì vậy có political meaning. Dispute về toponym không chỉ là từ vựng mà thường liên quan sovereignty, memory và recognition.
+Bản sắc có thể gắn mạnh với nơi chốn. Vì vậy tên địa danh, tượng đài và ranh giới có ý nghĩa chính trị. Tranh chấp về **địa danh (toponym)** không chỉ là vấn đề từ vựng mà thường liên quan chủ quyền, ký ức và sự công nhận.
 
-## Common Misconceptions
+## Những hiểu lầm phổ biến
 
-Một region không có “một culture” đồng nhất. National average dễ che urban/rural, class, generation và minority differences. Culture cũng không static; diaspora, media và trade liên tục hybridize practice.
+Một vùng không có “một nền văn hóa” hoàn toàn đồng nhất. Trung bình quốc gia dễ che khác biệt đô thị–nông thôn, giai tầng, thế hệ và nhóm thiểu số. Văn hóa cũng không tĩnh; kiều dân, truyền thông và thương mại liên tục tạo các hình thức pha trộn mới.
 
-## Mental Model
+## Mô hình tư duy
 
-Hãy coi culture như **information + practice + institution** lan qua network nhưng bị shape bởi place. Nó vừa tạo spatial pattern, vừa phản ứng với boundary và mobility.
+Hãy coi văn hóa như **thông tin + thực hành + thể chế** lan truyền qua mạng lưới nhưng luôn chịu ảnh hưởng của nơi chốn. Văn hóa vừa tạo mẫu không gian, vừa phản ứng với biên giới và khả năng di chuyển.
 
-Xem tiếp: [Political geography](./04_political_geography_borders.md), [Migration](./01_migration.md), [Regional geography](../03_regions/00_how_to_read_regions.md).
+Xem tiếp: [Địa lý chính trị](./04_political_geography_borders.md), [Di cư](./01_migration.md), [Địa lý vùng](../03_regions/00_how_to_read_regions.md).

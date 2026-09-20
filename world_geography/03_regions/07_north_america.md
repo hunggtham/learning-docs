@@ -1,57 +1,45 @@
 # Bắc Mỹ
 
-## Continental scale và strong north–south barriers/corridors
+## Một lục địa của các gradient lớn
 
-North America có Rocky Mountains ở west, broad interior plains, Appalachian system ở east và extensive coast. Physical scale lớn tạo strong continental climate gradient; ocean influence mạnh hơn coast.
+Bắc Mỹ trải dài từ Bắc Cực đến vĩ độ nhiệt đới và từ các dãy núi ven Thái Bình Dương qua đồng bằng nội địa đến rìa Đại Tây Dương. Dãy Rocky nằm ở phía tây, đồng bằng rộng ở trung tâm và Appalachia ở phía đông. Quy mô lớn tạo gradient khí hậu lục địa mạnh; ảnh hưởng đại dương rõ hơn ở ven biển.
 
-## Great Lakes–St. Lawrence và Mississippi systems
+Đây là nơi có thể quan sát rõ **tính lục địa (continentality)**: vùng nội địa có biên độ nhiệt năm lớn hơn vùng ven biển vì đất nóng và nguội nhanh hơn đại dương. Rocky Mountains còn tạo rào cản địa hình lớn và bóng mưa ở nhiều khu vực phía khuất gió.
 
-Great Lakes–St. Lawrence tạo freshwater-navigation-industrial corridor lớn. Mississippi basin kết nối vast agricultural/interior regions xuống Gulf coast. River geography ảnh hưởng agriculture, freight và flood risk.
+## Hệ Mississippi–Missouri
 
-## Metropolitan form và automobile geography
+Lưu vực Mississippi gom nước từ phần rất lớn nội địa rồi đổ ra Vịnh Mexico. Hệ sông hỗ trợ nông nghiệp và vận tải sà lan, cho thấy thủy văn có thể trở thành hạ tầng logistics. Ngũ cốc từ nội địa có thể đi bằng sông tới cảng xuất khẩu với chi phí thấp hơn trong nhiều trường hợp so với chỉ dùng đường bộ.
 
-Nhiều metropolitan areas, đặc biệt ở United States và Canada, mở rộng theo highway/suburban model trong thế kỷ 20. Low-density development tạo high car dependence và long commute ở nhiều regions, trong khi older cores/transit-oriented cities có form khác.
+Rủi ro lũ cũng là một phần của cùng hệ thống: đồng bằng ngập lũ tạo đất màu mỡ và tuyến vận tải thuận lợi nhưng đồng thời làm người và tài sản phơi lộ với lũ.
 
-## Agricultural belts
+## Great Lakes–St. Lawrence và địa lý công nghiệp
 
-Large mechanized agriculture phản ánh flat land, climate zones, fertile soils và transport infrastructure. “Corn Belt”, wheat regions hay California specialty agriculture là examples của environmental + market specialization, không phải fixed natural law.
+Hệ Great Lakes–St. Lawrence kết hợp nước ngọt, vận tải và vị trí giữa Hoa Kỳ–Canada để tạo một hành lang công nghiệp lịch sử lớn. Sản xuất ở đây hình thành không chỉ nhờ nguyên liệu mà còn nhờ vận tải đường thủy, lao động, thị trường và mạng đường sắt.
 
-## Resource and energy regions
+## Hình thái đô thị và “địa lý ô tô”
 
-Oil/gas, hydroelectric, minerals, timber và renewable potential phân bố rất uneven. Energy boom có thể làm local city grow nhanh rồi volatile khi price đổi.
+Nhiều vùng đô thị, đặc biệt tại Hoa Kỳ và Canada, mở rộng theo cao tốc và ngoại ô trong thế kỷ XX. Phát triển mật độ thấp làm khoảng cách đi lại tăng và khiến giao thông công cộng khó phục vụ hơn, tạo một vòng phản hồi: hạ tầng ô tô khuyến khích phân tán; phân tán lại làm phụ thuộc ô tô tăng.
 
-## Cross-border integration
+Tuy nhiên các lõi đô thị cũ và thành phố định hướng giao thông công cộng có cấu trúc khác, nên không nên coi “đô thị Bắc Mỹ” là một mô hình duy nhất.
 
-United States, Canada và Mexico tạo highly integrated manufacturing/food/energy chains. Border vẫn tạo legal friction, nhưng supply networks cross border nhiều lần trong production process.
+## Các vành đai nông nghiệp
 
-## Hazard geography
+Great Plains, Central Valley của California, Corn Belt và Canadian Prairies là ví dụ về chuyên môn hóa nông nghiệp theo đất, khí hậu, tưới tiêu và hạ tầng thị trường. Những tên như **Corn Belt** không phải ranh giới cứng; chúng là **vùng chức năng mờ (fuzzy functional region)** thay đổi theo giá cây trồng, công nghệ và khí hậu.
 
-West Coast seismic/fire risk, Gulf/Atlantic hurricane, interior tornado/severe storm, drought và flood cho thấy hazard differs strongly by region.
+## Tài nguyên và năng lượng
 
-Xem thêm: [Natural hazards](../01_physical_geography/07_natural_hazards_risk.md), [Economic geography](../02_human_geography/05_economic_geography.md).
+Dầu khí, thủy điện, khoáng sản, rừng và tiềm năng tái tạo phân bố rất không đều. Bùng nổ năng lượng có thể làm thành phố địa phương tăng nhanh rồi biến động mạnh khi giá thay đổi.
 
-## Một continent của các gradient lớn
+## Hội nhập xuyên biên giới
 
-North America trải dài từ Arctic tới tropical latitudes và từ Pacific mountain chains qua interior plains tới Atlantic margin. Đây là điều kiện để quan sát rõ **continentality**: interior areas có annual temperature range lớn hơn coastal areas vì land heating/cooling nhanh hơn ocean.
+Hoa Kỳ, Canada và Mexico tạo các chuỗi sản xuất, thực phẩm và năng lượng tích hợp cao. Biên giới vẫn tạo ma sát pháp lý, nhưng linh kiện có thể qua biên giới nhiều lần trong cùng một quá trình sản xuất.
 
-Rocky Mountains tạo major topographic barrier và ảnh hưởng precipitation distribution. Khi moist air nâng lên windward side và mất moisture, leeward side có thể khô hơn — một cơ chế rain shadow quan trọng ở western interior.
+## Địa lý hiểm họa
 
-## Mississippi–Missouri như continental drainage network
+Bờ Tây có động đất và cháy; Vịnh Mexico và Đại Tây Dương có bão; nội địa có lốc xoáy, giông mạnh, hạn và lũ. Điều này cho thấy cấu trúc hiểm họa thay đổi mạnh theo tiểu vùng.
 
-Mississippi basin gom water từ một phần rất lớn của interior và đổ ra Gulf of Mexico. River system này hỗ trợ agriculture và barge transport, cho thấy hydrology có thể trở thành logistics infrastructure. Grain từ interior có thể đi bằng river tới export terminal với cost thấp hơn nếu chỉ dùng road.
+Xem thêm: [Thiên tai và rủi ro](../01_physical_geography/07_natural_hazards_risk.md), [Địa lý kinh tế](../02_human_geography/05_economic_geography.md).
 
-## Great Lakes–St. Lawrence industrial geography
+## Mô hình tư duy
 
-Great Lakes kết hợp freshwater resource, transport và proximity giữa U.S.–Canada tạo một historical manufacturing belt. Industrial geography ở đây hình thành không chỉ bởi raw material mà bởi access tới water transport, labor, market và rail network.
-
-## Metropolitan corridors và suburban form
-
-North American urbanization nổi bật với automobile-oriented expansion ở nhiều metropolitan areas. Low-density suburb làm travel distance tăng và public transit khó phục vụ hơn, tạo feedback: car infrastructure khuyến khích dispersion; dispersion lại làm car dependence tăng. Đây là spatial feedback loop quan trọng trong urban geography.
-
-## Agriculture theo climate và market
-
-Great Plains, California Central Valley, Corn Belt và Canadian Prairies là examples cho agriculture specialization theo soil, climate, irrigation và market infrastructure. Region name như “Corn Belt” không phải hard boundary; nó là fuzzy functional region thay đổi theo crop price, technology và climate.
-
-## Mental Model
-
-> North America có thể được đọc như một tập hợp **coast–mountain–plain–river corridors** liên kết bằng transport network quy mô continental. Functional region thường quan trọng hơn administrative line.
+> Bắc Mỹ có thể được đọc như một tập hợp **bờ biển – núi – đồng bằng – hành lang sông** được liên kết bằng mạng giao thông quy mô lục địa. Vùng chức năng thường quan trọng hơn ranh giới hành chính khi phân tích nền kinh tế và dòng lưu chuyển.

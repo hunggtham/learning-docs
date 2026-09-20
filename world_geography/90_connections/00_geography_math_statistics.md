@@ -1,71 +1,61 @@
-# Địa lý kết nối với Toán và Statistics
+# Địa lý kết nối với Toán học và Thống kê
 
-## Geometry là ngôn ngữ của vị trí
+## Hình học là ngôn ngữ của vị trí
 
-Coordinates, distance, area, direction và projection đều là geometry. Trên small local plane, Euclidean geometry đủ; trên global surface, spherical/ellipsoidal geometry cần thiết. Việc chọn geometry sai có thể làm distance/area sai dù code chạy đúng.
+Tọa độ, khoảng cách, diện tích, phương hướng và phép chiếu đều là các khái niệm hình học. Ở phạm vi địa phương nhỏ có thể xem gần như mặt phẳng, hình học Euclid thường đủ tốt; trên bề mặt toàn cầu cần hình học cầu hoặc ellipsoid. Chọn sai mô hình hình học có thể làm khoảng cách hoặc diện tích sai dù mã chương trình chạy đúng.
 
-## Scale và dimensional thinking
-
-Map scale là ratio. Density là quantity/area. Gradient là change/distance. Đây là dimensional reasoning: nếu population tăng gấp đôi nhưng area cũng gấp đôi, density không đổi. Units giúp phát hiện sai lầm.
-
-## Spatial statistics khác statistics thường ở dependence
-
-Classical statistical intuition thường assume observations independent. Geographic observations gần nhau thường similar do shared process, gọi là **spatial autocorrelation (공간 자기상관)**. Nếu bỏ qua, standard errors và significance có thể sai.
-
-Moran’s I là một measure global spatial autocorrelation. Ý tưởng cốt lõi: so similarity giữa observation với weighted neighbors. Weight matrix \(W\) encode adjacency/distance; vì vậy result phụ thuộc definition “neighbor”.
-
-## Regression và spatial confounding
-
-Nếu outcome và predictor cùng có spatial trend vì third factor, regression có thể tìm association misleading. Map residuals là diagnostic quan trọng: nếu residual còn cluster, model bỏ sót spatial structure.
-
-## Probability và hazard
-
-Return period, flood probability và forecast đều cần probability. Với event annual probability \(p\), probability ít nhất một lần trong \(n\) năm là:
-
-\[
-1-(1-p)^n
-\]
-
-Điều này giải thích vì sao “100-year flood” vẫn có thể xảy ra hai năm gần nhau.
-
-## Optimization
-
-Facility location, route planning và service coverage là optimization. Ví dụ **p-median** tìm vị trí p facilities giảm tổng demand-weighted distance; **set covering** tìm số facility tối thiểu để cover demand trong threshold. Đây là bridge trực tiếp tới Operations Research.
-
-## Graph theory
-
-Road, airline, river và trade networks có thể model bằng graph. Degree, betweenness, shortest path và community detection giúp đo hub/chokepoint. Geography bổ sung edge weight thực tế như travel time, border cost và capacity.
-
-## Mental Model
-
-Math cung cấp **representation và constraint**; geography cung cấp **meaning of space**. Đừng dùng công thức distance, regression hay network metric trước khi xác định spatial unit, CRS, scale và process.
-
-Xem thêm: [GIS](../00_foundations/04_geospatial_data_gis_remote_sensing.md), [Transport networks](../02_human_geography/08_transport_trade_globalization.md).
-
-
-## Distance không chỉ có một định nghĩa
-
-Trong plane geometry, Euclidean distance giữa hai điểm là
+Khoảng cách Euclid trên mặt phẳng giữa hai điểm là:
 
 \[
 d=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}
 \]
 
-Nhưng geographic problem có thể cần great-circle distance trên sphere/ellipsoid, network distance theo road, travel time hoặc cost distance. Chọn metric sai có thể làm analysis sai dù calculation hoàn toàn chính xác.
+Nhưng bài toán địa lý có thể cần khoảng cách vòng tròn lớn trên mặt cầu, khoảng cách theo mạng đường, thời gian di chuyển hoặc **khoảng cách chi phí (cost distance)**. Hai điểm cách nhau 20 km đường thẳng nhưng bị núi ngăn có thể mất nhiều thời gian di chuyển hơn hai điểm cách 50 km dọc cao tốc. Vì vậy thước đo phải phản ánh cơ chế thực của hiện tượng.
 
-Ví dụ hai điểm cách nhau 20 km straight-line nhưng bị ngăn bởi mountain và chỉ có một pass; travel time có thể dài hơn một cặp điểm cách 50 km dọc expressway. Vì vậy metric phải phản ánh mechanism của phenomenon.
+## Quy mô và tư duy về đơn vị
 
-## Spatial autocorrelation
+Tỷ lệ bản đồ là một tỷ số. Mật độ là lượng trên diện tích. Gradient là mức thay đổi trên khoảng cách. Đây là **suy luận thứ nguyên (dimensional reasoning)**: nếu dân số tăng gấp đôi nhưng diện tích cũng tăng gấp đôi, mật độ không đổi. Theo dõi đơn vị giúp phát hiện nhiều sai lầm trước cả khi tính toán.
 
-Trong statistics thông thường, observation thường được giả định independent. Spatial data hay vi phạm assumption này: nearby places thường giống nhau hơn distant places do shared environment, diffusion hoặc clustering. Hiện tượng đó gọi là **spatial autocorrelation (tự tương quan không gian / 공간 자기상관)**.
+## Thống kê không gian khác thống kê thông thường ở tính phụ thuộc
 
-Điều này quan trọng trong ML và econometrics. Nếu train/test split random trên spatial samples, model có thể “nhìn thấy” gần-neighbor information và đánh giá performance quá optimistic. Spatial cross-validation tách vùng địa lý có thể realistic hơn.
+Trực giác thống kê cổ điển thường giả định các quan sát độc lập. Dữ liệu địa lý thường vi phạm giả định này vì những nơi gần nhau có xu hướng giống nhau hơn do cùng môi trường, quá trình khuếch tán hoặc sự tập cụm. Hiện tượng đó gọi là **tự tương quan không gian (spatial autocorrelation / 공간 자기상관)**.
 
-## Scale và aggregation
+**Moran’s I** là một chỉ số đo tự tương quan không gian toàn cục. Ý tưởng cốt lõi là so sánh mức giống nhau giữa một quan sát và các láng giềng có trọng số. Ma trận trọng số \(W\) mã hóa quan hệ kề hoặc khoảng cách, nên kết quả phụ thuộc cách định nghĩa “láng giềng”.
 
-Average income, disease rate hoặc election result có thể thay đổi interpretation khi đổi spatial unit. **MAUP — Modifiable Areal Unit Problem** mô tả việc statistical result phụ thuộc cách chia zone và level of aggregation. Đây là lý do map theo province có thể kể câu chuyện khác map theo district dù raw events giống nhau.
+## Hồi quy và nhiễu không gian
 
-## Geometry như constraint model
+Nếu biến kết quả và biến giải thích cùng có xu hướng không gian do một yếu tố thứ ba, hồi quy có thể cho liên hệ gây hiểu lầm. Lập bản đồ phần dư là một bước chẩn đoán quan trọng: nếu phần dư vẫn tập thành cụm, mô hình có thể đã bỏ sót cấu trúc không gian.
 
-Buffer, intersection, Voronoi diagram và shortest path không chỉ là GIS operations; chúng encode assumptions. Buffer 500 m quanh station giả định proximity radial có meaning; network service area 10 phút giả định travel along graph. Mathematical object nên được chọn theo real process chứ không theo tool convenience.
+Điều này cũng quan trọng trong học máy và kinh tế lượng. Nếu chia ngẫu nhiên mẫu không gian thành tập huấn luyện–kiểm tra, mô hình có thể hưởng lợi từ thông tin của các điểm rất gần nhau và cho kết quả quá lạc quan. **Kiểm định chéo theo không gian (spatial cross-validation)** thường thực tế hơn khi mục tiêu là dự báo sang vùng mới.
 
+## Xác suất và hiểm họa
+
+Chu kỳ lặp lại, xác suất lũ và dự báo đều cần xác suất. Nếu một sự kiện có xác suất hằng năm \(p\), xác suất xảy ra ít nhất một lần trong \(n\) năm là:
+
+\[
+1-(1-p)^n
+\]
+
+Điều này giải thích vì sao “lũ 100 năm” vẫn có thể xảy ra trong hai năm gần nhau; thuật ngữ đó mô tả xác suất theo năm chứ không phải lịch hẹn chính xác.
+
+## Quy mô tổng hợp và MAUP
+
+Thu nhập trung bình, tỷ lệ bệnh hoặc kết quả bầu cử có thể đổi cách diễn giải khi đổi đơn vị không gian. **Vấn đề đơn vị không gian có thể thay đổi (MAUP — Modifiable Areal Unit Problem)** mô tả việc kết quả thống kê phụ thuộc cách chia vùng và mức tổng hợp. Bản đồ theo tỉnh có thể kể câu chuyện khác bản đồ theo quận dù các sự kiện gốc không đổi.
+
+## Tối ưu hóa vị trí
+
+Chọn vị trí cơ sở, lập tuyến và vùng phục vụ là các bài toán tối ưu hóa. Ví dụ **p-median** tìm vị trí của \(p\) cơ sở để giảm tổng khoảng cách có trọng số theo nhu cầu; **set covering** tìm số cơ sở tối thiểu để phủ nhu cầu trong một ngưỡng. Đây là cầu nối trực tiếp với **Nghiên cứu vận hành (Operations Research)**.
+
+## Lý thuyết đồ thị
+
+Đường bộ, hàng không, sông và mạng thương mại có thể được mô hình hóa bằng đồ thị. Bậc nút, tính trung gian, đường đi ngắn nhất và phát hiện cộng đồng giúp nhận diện trung tâm hoặc điểm nghẽn. Địa lý bổ sung trọng số thực như thời gian đi, chi phí biên giới và công suất.
+
+## Hình học như một mô hình ràng buộc
+
+Vùng đệm, giao nhau, sơ đồ Voronoi và đường đi ngắn nhất không chỉ là thao tác GIS; chúng mã hóa giả định. Vùng đệm 500 m quanh ga giả định khoảng cách hướng tâm có ý nghĩa; vùng phục vụ 10 phút theo mạng giả định người di chuyển dọc hệ đường. Đối tượng toán học phải được chọn theo quá trình thực chứ không theo sự tiện lợi của công cụ.
+
+## Mô hình tư duy
+
+> Toán học cung cấp **cách biểu diễn và các ràng buộc**; địa lý cung cấp **ý nghĩa của không gian**. Đừng áp dụng công thức khoảng cách, hồi quy hoặc chỉ số mạng trước khi xác định đơn vị không gian, hệ quy chiếu, quy mô và quá trình đang nghiên cứu.
+
+Xem thêm: [GIS](../00_foundations/04_geospatial_data_gis_remote_sensing.md), [Mạng giao thông](../02_human_geography/08_transport_trade_globalization.md).

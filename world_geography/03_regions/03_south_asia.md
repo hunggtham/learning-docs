@@ -1,59 +1,39 @@
 # Nam Á
 
-## Himalaya–plain–peninsula system
+## Hệ Himalaya–đồng bằng–bán đảo
 
-South Asia có một physical structure rất rõ: Himalayan–Tibetan highlands ở north, Indo-Gangetic plains rộng lớn, Deccan/peninsular uplands và Indian Ocean margins. Collision giữa Indian và Eurasian plates tạo Himalaya và vẫn liên quan earthquake hazard.
+Nam Á có cấu trúc tự nhiên rất rõ: vùng núi Himalaya–Thanh Tạng ở phía bắc, đồng bằng Ấn–Hằng rộng lớn, cao nguyên và bán đảo Deccan, cùng rìa Ấn Độ Dương. Va chạm giữa mảng Ấn Độ và Á–Âu tạo dãy Himalaya và vẫn liên quan trực tiếp đến hiểm họa động đất.
 
-## Monsoon dependence
+Ba thành phần **Himalaya – gió mùa Nam Á – các đồng bằng phù sa của Indus, Ganges và Brahmaputra** liên kết chặt chẽ. Himalaya nâng địa hình rất cao, ảnh hưởng hoàn lưu khí quyển và tạo các **tháp nước tự nhiên (water tower)** từ tuyết, băng và mưa núi. Hệ thống sông sau đó vận chuyển nước và trầm tích xuống các vùng thấp có mật độ dân cư cực lớn.
 
-South Asian monsoon là engine water–agriculture quan trọng. Seasonal rainfall nuôi crop và reservoir, nhưng variability có thể gây drought/flood. Himalaya vừa là barrier atmospheric vừa là headwater source cho major rivers.
+Điều quan trọng là không tách núi khỏi đồng bằng. Xói mòn ở núi, mưa gió mùa và bồi tích ở đồng bằng ngập lũ là các bước của cùng một hệ vận chuyển vật chất.
 
-## Dense plains
+## Gió mùa như một hệ thống kinh tế
 
-Indo-Gangetic plain có soil, water và long agricultural history hỗ trợ population density cao. Nhưng high density làm water quality, groundwater depletion, air pollution và flood exposure trở thành system-scale issues.
+Gió mùa Nam Á là động cơ nước–nông nghiệp quan trọng. Khi phần lớn mưa tập trung theo mùa, **thời điểm** có giá trị gần như tổng lượng mưa. Gió mùa đến muộn có thể trì hoãn gieo trồng; mưa quá lớn gây lũ; thiếu mưa làm tăng bơm nước ngầm. Vì vậy một độ lệch giáng thủy có thể truyền từ khí quyển sang nông nghiệp, giá thực phẩm, thu nhập nông thôn và nhu cầu điện.
 
-## Urban corridors
+Tưới tiêu và khai thác nước ngầm đã làm sản xuất bớt phụ thuộc trực tiếp vào mưa, nhưng tạo một đánh đổi: khả năng chống chịu ngắn hạn có thể dẫn tới suy giảm tầng chứa nước dài hạn nếu khai thác vượt bổ cập.
 
-Delhi, Mumbai, Bengaluru, Dhaka, Karachi, Kolkata và other large cities nằm trong network chức năng khác nhau: political center, port, tech/service cluster, manufacturing hoặc river delta. Rapid growth làm infrastructure provision luôn chạy theo demand.
+## Đồng bằng mật độ cao và chuyển đổi đô thị
 
-## Agriculture và groundwater
+Đồng bằng Ấn–Hằng có đất, nước và lịch sử nông nghiệp lâu dài, hỗ trợ mật độ dân số cao. Nhưng mật độ lớn cũng khiến chất lượng nước, suy giảm nước ngầm, ô nhiễm không khí và phơi lộ lũ trở thành vấn đề quy mô hệ thống.
 
-Irrigation và groundwater pumping đã tăng production ở nhiều nơi, nhưng over-extraction có thể hạ aquifer. Water–energy nexus xuất hiện rõ khi electricity subsidy làm pumping cheap, dẫn tới extraction mạnh hơn.
+Delhi, Mumbai, Bengaluru, Dhaka, Karachi và Kolkata có vai trò khác nhau: trung tâm chính trị, cảng, cụm công nghệ–dịch vụ, công nghiệp hoặc đô thị châu thổ. Đô thị hóa chuyển một phần dân số vào các hệ thống đô thị lớn, nhưng nông thôn vẫn rất quan trọng vì lương thực, lao động di cư, nước và năng lượng tiếp tục nối thành phố với vùng hậu phương.
 
-## Indian Ocean connectivity
+## Hướng ra Ấn Độ Dương
 
-South Asia nằm trên sea lanes giữa Middle East/Africa và Southeast/East Asia. Port development, energy imports và diaspora flows vì thế gắn region với wider Indian Ocean system.
+Nam Á có bờ biển dài hướng ra Ấn Độ Dương và nằm gần các tuyến biển nối Tây Á, châu Phi với Đông Nam Á và Đông Á. Địa lý cảng vì thế quan trọng đối với thương mại, nhập khẩu năng lượng và logistics container. Có bờ biển dài không đồng nghĩa kết nối biển hiệu quả; giao thông từ nội địa ra cảng vẫn có thể là điểm nghẽn.
 
-## Demographic diversity
+## Núi, biên giới và khả năng tiếp cận
 
-Region không có một demographic profile duy nhất: fertility, age structure và migration khác mạnh giữa countries và states/provinces. Vì vậy macro label cần được zoom down khi policy analysis.
+Biên giới phía bắc có địa hình gồ ghề. Núi có thể là rào cản giao thông nhưng không phải bức tường tuyệt đối. Đèo, thung lũng và hành lang đường bộ tạo **tính thấm có chọn lọc (selective permeability)**: di chuyển tập trung vào số ít tuyến khả thi. Đây là mẫu thường gặp trong địa lý chính trị vùng núi.
 
-Xem thêm: [Monsoon](../01_physical_geography/02_atmosphere_weather_climate.md), [Water–food–energy nexus](../04_global_systems/01_water_food_energy_nexus.md).
+## Đa dạng nhân khẩu
 
-## Himalaya–monsoon–plain: bộ khung của South Asia
+Nam Á không có một hồ sơ nhân khẩu duy nhất. Mức sinh, cơ cấu tuổi và di cư khác mạnh giữa quốc gia, bang hoặc tỉnh. Vì vậy nhãn quy mô vùng cần được thu nhỏ khi phân tích chính sách cụ thể.
 
-South Asia có thể được hiểu từ ba thành phần vật lý liên kết chặt: **Himalaya**, **South Asian monsoon** và các **alluvial plains** của Indus–Ganges–Brahmaputra. Himalaya nâng địa hình lên rất cao, tác động circulation khí quyển và cung cấp snow/glacier-fed headwaters. Các river systems sau đó vận chuyển water và sediment xuống những lowland có mật độ dân cư cực lớn.
+Xem thêm: [Gió mùa](../01_physical_geography/02_atmosphere_weather_climate.md), [Mối liên hệ nước–lương thực–năng lượng](../04_global_systems/01_water_food_energy_nexus.md).
 
-Điều quan trọng là không tách mountain khỏi plain. Erosion ở mountain, rainfall trong monsoon và sedimentation ở floodplain là các bước của cùng một mass-transfer system.
+## Mô hình tư duy
 
-## Monsoon như một hệ thống kinh tế
-
-Khi phần lớn rain tập trung theo mùa, timing có giá trị gần như lượng mưa tổng. Monsoon đến muộn có thể trì hoãn sowing; rainfall quá lớn gây flood; rainfall thiếu làm groundwater extraction tăng. Vì vậy precipitation anomaly có thể đi từ atmosphere sang agriculture, food price, rural income và electricity demand.
-
-India đã phát triển irrigation và groundwater use quy mô lớn để giảm dependence trực tiếp vào rainfall, nhưng điều này tạo một trade-off: resilience ngắn hạn có thể dẫn tới aquifer depletion dài hạn nếu extraction vượt recharge.
-
-## Population density và urban transition
-
-Dense settlement trên Indo-Gangetic Plain phản ánh fertile soil, water access và lịch sử agricultural civilization. Hiện nay, urbanization chuyển một phần population vào metropolitan systems như Delhi, Mumbai, Bengaluru, Dhaka và Karachi. Nhưng urbanization không có nghĩa rural geography mất importance; food, labor migration, water và energy vẫn kết nối city với hinterland.
-
-## Indian Ocean orientation
-
-South Asia có coastline dài hướng ra Indian Ocean và nằm gần các sea routes nối Middle East, Africa và Southeast Asia. Port geography vì vậy quan trọng đối với trade, energy import và container logistics. Một nước có coastline dài vẫn có thể gặp bottleneck nếu hinterland transport kém, cho thấy “có biển” khác với “kết nối hiệu quả với biển”.
-
-## Mountain border và accessibility
-
-Northern frontier có rugged terrain. Mountain có thể tạo barrier cho transport nhưng không phải wall tuyệt đối. Pass, valley và road corridor tạo selective permeability: movement tập trung vào một số tuyến khả thi. Đây là pattern thường gặp trong political geography của mountain regions.
-
-## Mental Model
-
-> South Asia là một hệ thống **mountain water tower → monsoon rainfall → alluvial plain → dense agrarian settlement → megacity and ocean network**. Muốn hiểu region phải theo dõi water, sediment, people và trade qua chuỗi này.
+> Nam Á là một chuỗi liên kết **tháp nước vùng núi → mưa gió mùa → đồng bằng phù sa → khu định cư nông nghiệp dày đặc → siêu đô thị và mạng Ấn Độ Dương**. Muốn hiểu vùng phải theo dõi nước, trầm tích, con người và thương mại xuyên suốt chuỗi này.

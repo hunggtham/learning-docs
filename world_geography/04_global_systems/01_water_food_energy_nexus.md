@@ -1,59 +1,43 @@
-# Water–Food–Energy Nexus
+# Mối liên hệ Nước – Lương thực – Năng lượng
 
-## Vì sao ba hệ này không thể tối ưu riêng lẻ?
+## Vì sao ba hệ không thể được tối ưu riêng lẻ?
 
-Water, food và energy thường được quản lý bởi agencies khác nhau, nhưng physical system gắn chặt. Pump/clean/desalinate water cần energy; thermal power và hydropower cần water; agriculture dùng phần lớn freshwater withdrawal ở nhiều regions; fertilizer và machinery cần energy.
+Nước, lương thực và năng lượng thường do các cơ quan khác nhau quản lý, nhưng về vật lý chúng liên kết rất chặt. Bơm, làm sạch hoặc khử mặn nước cần năng lượng; nhà máy nhiệt điện và thủy điện cần nước; nông nghiệp chiếm tỷ trọng lớn trong khai thác nước ngọt ở nhiều vùng; phân bón, máy móc, làm lạnh và vận tải thực phẩm đều cần năng lượng.
 
-Nếu tối ưu một sector mà bỏ sector khác, externality xuất hiện. Ví dụ electricity subsidy rẻ cho irrigation pump có thể tăng farm income ngắn hạn nhưng thúc đẩy groundwater over-extraction.
+**Mối liên hệ Nước–Lương thực–Năng lượng (Water–Food–Energy Nexus / 물-식량-에너지 연계)** là cách xem những quan hệ phụ thuộc này như một hệ thống thay vì ba ngành tách rời.
 
-## Water for energy
+Nếu tối ưu một ngành mà bỏ qua ngành khác, **tác động ngoại vi (externality)** dễ xuất hiện. Ví dụ trợ giá điện cho máy bơm tưới có thể tăng thu nhập nông nghiệp ngắn hạn nhưng đồng thời thúc đẩy khai thác nước ngầm quá mức.
 
-Thermal plants cần cooling; hydropower phụ thuộc reservoir inflow; fossil extraction/processing dùng water; hydrogen production cần water tùy pathway. Drought có thể giảm both hydropower output và cooling availability.
+## Nước cho năng lượng
 
-## Energy for water
+Nhà máy nhiệt điện cần nước làm mát; thủy điện phụ thuộc dòng vào hồ; khai thác và chế biến nhiên liệu cũng có thể dùng nhiều nước. Hạn hán vì vậy có thể đồng thời làm giảm sản lượng thủy điện và hạn chế nước làm mát cho các nhà máy khác.
 
-Groundwater càng sâu thì pumping head càng lớn và energy cost tăng. Desalination tạo freshwater từ seawater nhưng cần significant energy và brine management. Vì vậy water scarcity có thể chuyển thành energy demand.
+## Năng lượng cho nước
 
-## Food for energy, energy for food
+Mực nước ngầm càng sâu thì cột áp bơm càng lớn và chi phí năng lượng càng tăng. Khử mặn có thể tạo nước ngọt từ nước biển nhưng cần lượng năng lượng đáng kể và phải xử lý nước muối đậm đặc sau quá trình. Vì vậy thiếu nước có thể chuyển hóa thành nhu cầu năng lượng lớn hơn.
 
-Biofuel dùng crop/land/water để sản xuất energy, tạo land competition với food/ecosystem. Ngược lại fertilizer synthesis, cold chain và transport làm food system phụ thuộc energy price.
+Giả sử một thành phố ven biển khô hạn mở rộng khử mặn. Ràng buộc nước giảm, nhưng nhu cầu điện tăng. Nếu điện đến từ nhiên liệu hóa thạch, phát thải có thể tăng; nếu lưới điện tái tạo còn hạn chế, thành phố cần thêm nguồn phát và lưu trữ. Vấn đề không biến mất mà chuyển từ **ràng buộc nước** sang **ràng buộc năng lượng và chi phí**.
 
-## Nexus ở city
+## Lương thực cho năng lượng, năng lượng cho lương thực
 
-City import water, food và energy từ hinterland; waste/heat/export flows đi ra. Urban sustainability vì vậy không thể chỉ nhìn administrative footprint. Một city có low local emissions nhưng consume imported goods chứa embodied energy/water ở nơi khác.
+Nhiên liệu sinh học dùng cây trồng, đất và nước để sản xuất năng lượng, vì thế có thể cạnh tranh với sản xuất lương thực và hệ sinh thái. Ngược lại, tổng hợp phân bón, chuỗi lạnh và vận tải khiến hệ lương thực phụ thuộc giá năng lượng.
 
-## Virtual water
+## Mối liên hệ trong đô thị
 
-Khi country import wheat hoặc meat, họ gián tiếp import water embodied trong production. **Virtual water** không có nghĩa water physically đi trong cargo nhiều; nó là accounting concept về water used upstream.
+Thành phố nhập nước, lương thực và năng lượng từ vùng hậu phương; chất thải, nhiệt và các dòng đầu ra lại đi ra ngoài. Vì vậy tính bền vững đô thị không thể chỉ nhìn trong ranh giới hành chính. Một thành phố có phát thải tại chỗ thấp nhưng tiêu thụ hàng hóa chứa nhiều năng lượng hoặc nước “ẩn” được sử dụng ở nơi sản xuất.
 
-## Mental Model
+## Nước ảo
 
-Nexus là **coupled resource system**. Mỗi policy nên hỏi: input nào chuyển sang sector khác, bottleneck nào mới xuất hiện, và externality bị đẩy sang nơi nào?
+Khi một quốc gia nhập lúa mì, thịt hoặc bông, họ gián tiếp nhập lượng nước đã dùng để tạo ra sản phẩm. Khái niệm này gọi là **nước ảo (virtual water / 가상수)**. Nó không có nghĩa nước vật lý được vận chuyển trong container, mà là lượng nước sử dụng ở khâu sản xuất được tính gắn với hàng hóa.
 
-Xem thêm: [Hydrology](../01_physical_geography/04_hydrology_rivers_groundwater.md), [Food systems](../02_human_geography/06_agriculture_food_systems.md), [Energy](../02_human_geography/07_industry_energy_resources.md).
+Điều này giúp giải thích vì sao quốc gia khô hạn có thể giảm áp lực lên nước địa phương bằng nhập khẩu thực phẩm, nhưng đổi lại tăng phụ thuộc vào mạng thương mại và biến động giá.
 
+## Ranh giới hệ thống quyết định kết luận
 
-## Vì sao gọi là nexus?
+Một chính sách có thể trông hiệu quả nếu chỉ đo trong ranh giới thành phố nhưng kém hiệu quả nếu tính cả năng lượng ở thượng nguồn hoặc chi phí môi trường ở hạ nguồn. Vì vậy phân tích nexus luôn phải xác định **ranh giới hệ thống (system boundary)**. Đây là mối liên hệ trực tiếp với kỹ thuật hệ thống và phân tích vòng đời.
 
-Water, food và energy thường được quản lý như ba sector riêng, nhưng vật lý của chúng liên kết chặt. Agriculture cần water và energy cho pumping, fertilizer, machinery và cold chain. Power generation cần water trong hydropower hoặc cooling. Water supply lại cần energy cho pumping, treatment và desalination. **Water–Food–Energy Nexus (물-식량-에너지 연계)** là cách nhìn những coupling này như một system.
+## Mô hình tư duy
 
-## Một quyết định có thể dịch chuyển scarcity
+> Nước, lương thực và năng lượng giống ba tài khoản được nối bằng các dòng chuyển. Tăng nguồn cung ở một tài khoản thường cần rút tài nguyên ở tài khoản khác. Hãy tìm quan hệ phụ thuộc trước khi tối ưu từng ngành riêng lẻ.
 
-Giả sử một dry coastal city mở rộng desalination để tăng water supply. Water scarcity giảm, nhưng electricity demand tăng. Nếu electricity đến từ fossil fuel, emission có thể tăng; nếu renewable grid hạn chế, city phải đầu tư generation/storage. Vấn đề không biến mất — nó được chuyển từ water constraint sang energy/cost constraint.
-
-Tương tự, biofuel có thể giảm một phần fossil-fuel use nhưng cạnh tranh land và water với food production. Nexus thinking buộc planner hỏi: “solution của sector A tạo pressure ở sector B ở đâu và khi nào?”.
-
-## Virtual water
-
-Khi một nước import wheat, beef hoặc cotton, nó gián tiếp import lượng water đã được dùng để sản xuất các hàng hóa đó. Concept này gọi là **virtual water (nước ảo / 가상수)**. Nó không có nghĩa water vật lý được vận chuyển trong container, mà là water use được embedded trong production geography.
-
-Điều này giúp giải thích tại sao dry countries có thể giảm pressure lên local water bằng food import, nhưng đổi lại tăng dependence vào trade network và price volatility.
-
-## System boundary quyết định kết luận
-
-Một policy có thể trông efficient nếu chỉ đo trong city boundary nhưng inefficient nếu tính upstream energy hoặc downstream environmental cost. Vì vậy nexus analysis luôn phải xác định **system boundary**. Đây là connection trực tiếp với systems engineering và life-cycle analysis.
-
-## Mental Model
-
-> Water, food và energy là ba tài khoản nối bằng transfer. Tăng supply ở một tài khoản thường cần rút resource ở tài khoản khác. Hãy tìm coupling trước khi tối ưu từng sector riêng lẻ.
-
+Xem thêm: [Thủy văn](../01_physical_geography/04_hydrology_rivers_groundwater.md), [Hệ thống lương thực](../02_human_geography/06_agriculture_food_systems.md), [Năng lượng](../02_human_geography/07_industry_energy_resources.md).

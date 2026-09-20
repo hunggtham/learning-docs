@@ -1,43 +1,43 @@
 # Đại dương, dòng biển và bờ biển
 
-## Ocean là phần chính của climate và trade system
+## Đại dương là phần chính của hệ khí hậu và thương mại
 
-Ocean phủ phần lớn surface Earth và là reservoir heat, water và carbon lớn. Geography của ocean ảnh hưởng climate, fishery, shipping, cable, energy và geopolitics.
+Đại dương phủ phần lớn bề mặt Trái Đất và là kho chứa lớn của nhiệt, nước và carbon. Địa lý đại dương ảnh hưởng khí hậu, ngư nghiệp, vận tải biển, cáp thông tin, năng lượng và địa chính trị.
 
-## Salinity và density
+## Độ mặn và mật độ
 
-Seawater density phụ thuộc temperature và salinity. Cold/salty water thường dense hơn. Evaporation tăng salinity; precipitation, river input và ice melt giảm salinity. Density differences góp phần tạo stratification và deep circulation.
+Mật độ nước biển phụ thuộc nhiệt độ và độ mặn. Nước lạnh hoặc mặn thường có mật độ lớn hơn. Bốc hơi làm tăng độ mặn; mưa, nước sông và băng tan làm giảm độ mặn. Chênh lệch mật độ góp phần tạo **phân tầng nước (stratification)** và hoàn lưu sâu.
 
-## Surface currents
+## Dòng biển bề mặt
 
-Large gyres hình thành từ wind stress, Coriolis và continent boundaries. Western boundary currents như Gulf Stream và Kuroshio thường mạnh, hẹp và warm; eastern boundary currents thường rộng, chậm và cool.
+Các **hoàn lưu vòng lớn (gyre)** hình thành từ ứng suất gió, hiệu ứng Coriolis và ranh giới lục địa. Những dòng biên phía tây như Gulf Stream và Kuroshio thường mạnh, hẹp và ấm; các dòng biên phía đông thường rộng, chậm và lạnh hơn.
 
-## Upwelling
+## Nước trồi
 
-Khi wind và Ekman transport làm surface water rời coast hoặc divergence zone, cold nutrient-rich deep water rise. Upwelling regions thường có high marine productivity và important fisheries. Nếu circulation/anomaly thay đổi, fishery cũng có thể biến động.
+Khi gió và **vận chuyển Ekman (Ekman transport)** làm nước bề mặt rời xa bờ hoặc một vùng phân kỳ, nước sâu lạnh và giàu dinh dưỡng trồi lên. Những vùng **nước trồi (upwelling)** thường có năng suất sinh học biển cao và là ngư trường quan trọng. Khi hoàn lưu hoặc dao động khí hậu thay đổi, nguồn lợi cá cũng có thể biến động.
 
-## Waves và tides
+## Sóng và thủy triều
 
-Wave chủ yếu truyền energy chứ không vận chuyển toàn bộ water mass cùng tốc độ như crest. Tides do gravitational interaction Earth–Moon–Sun và basin geometry. Spring tide xảy ra gần alignment, neap tide khi forcing partially offset.
+Sóng chủ yếu truyền năng lượng chứ không mang toàn bộ khối nước đi cùng tốc độ với đỉnh sóng. Thủy triều hình thành do tương tác hấp dẫn giữa Trái Đất–Mặt Trăng–Mặt Trời cùng hình học từng bồn biển. **Triều cường thiên văn (spring tide)** xảy ra khi ba thiên thể gần thẳng hàng; **triều kém (neap tide)** khi tác động hấp dẫn phần nào triệt tiêu nhau.
 
-## Coastal sediment budget
+## Ngân sách trầm tích ven bờ
 
-Beach tồn tại nếu sediment input và loss tương đối cân bằng. River dam, harbor structure và sand mining có thể làm budget thiếu hụt. Longshore drift vận chuyển sediment dọc coast; groyne giữ sand một phía nhưng có thể làm downstream thiếu sediment.
+Bãi biển tồn tại tương đối ổn định khi lượng trầm tích bổ sung và lượng mất đi gần cân bằng. Đập sông, công trình cảng và khai thác cát có thể làm ngân sách thiếu hụt. **Dòng vận chuyển dọc bờ (longshore drift)** đưa trầm tích dọc bờ; mỏ hàn giữ cát ở một phía nhưng có thể làm khu vực phía hạ dòng thiếu trầm tích.
 
-## Sea level
+## Mực nước biển
 
-Local relative sea level phụ thuộc global ocean volume, thermal expansion, ice mass, land uplift/subsidence và ocean dynamics. Vì vậy “mực nước biển toàn cầu tăng X” không có nghĩa mọi coast trải nghiệm cùng X.
+**Mực nước biển tương đối tại địa phương (local relative sea level)** phụ thuộc thể tích đại dương toàn cầu, giãn nở nhiệt, khối lượng băng, nâng hoặc sụt đất và động lực đại dương. Vì vậy “mực nước biển trung bình toàn cầu tăng X” không có nghĩa mọi bờ biển đều trải nghiệm chính xác cùng mức X.
 
-## Shipping và chokepoints
+## Vận tải biển và điểm nghẽn
 
-Ocean geography định hình trade routes. Strait và canal rút ngắn khoảng cách; khi một chokepoint bị gián đoạn, shipping phải reroute làm tăng distance, time, fuel và insurance cost. Đây là nơi physical geography nối trực tiếp với supply chain.
+Địa lý đại dương định hình tuyến thương mại. Eo biển và kênh đào rút ngắn khoảng cách; khi một **điểm nghẽn chiến lược (chokepoint)** bị gián đoạn, tàu phải đi vòng, làm tăng khoảng cách, thời gian, nhiên liệu và chi phí bảo hiểm. Đây là nơi địa lý tự nhiên nối trực tiếp với chuỗi cung ứng.
 
-## Submarine cables
+## Cáp biển
 
-Phần lớn intercontinental data traffic đi qua fiber-optic submarine cables, không phải satellite. Cable routes chịu seafloor terrain, landing station, political risk và repair accessibility. Geography vì vậy nằm ngay dưới “cloud”.
+Phần lớn lưu lượng dữ liệu liên lục địa đi qua **cáp quang biển (fiber-optic submarine cable)**, không phải vệ tinh. Tuyến cáp chịu ảnh hưởng của địa hình đáy biển, vị trí trạm cập bờ, rủi ro chính trị và khả năng tiếp cận khi sửa chữa. Địa lý vì thế nằm ngay bên dưới cái gọi là “đám mây” (cloud).
 
-## Mental Model
+## Mô hình tư duy
 
-Ocean là **heat reservoir + conveyor + resource zone + transport surface**. Coast là boundary động; thay đổi ở river sediment, sea level, storm regime hoặc infrastructure đều có thể làm shoreline shift.
+Đại dương là **kho nhiệt + hệ vận chuyển + vùng tài nguyên + bề mặt giao thông**. Bờ biển là ranh giới động; thay đổi ở trầm tích sông, mực nước biển, chế độ bão hoặc cơ sở hạ tầng đều có thể làm đường bờ dịch chuyển.
 
-Xem tiếp: [Geopolitics chokepoints](../04_global_systems/02_geopolitics_chokepoints_resources.md), [Global trade](../02_human_geography/08_transport_trade_globalization.md).
+Xem tiếp: [Địa chính trị và các điểm nghẽn](../04_global_systems/02_geopolitics_chokepoints_resources.md), [Thương mại toàn cầu](../02_human_geography/08_transport_trade_globalization.md).

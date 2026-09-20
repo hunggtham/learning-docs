@@ -1,35 +1,35 @@
 # Phát triển, bất bình đẳng và không gian
 
-## Development không thể nén thành GDP
+## Phát triển không thể nén thành GDP
 
-GDP per capita đo output/income average, nhưng không cho biết distribution, health, education, security hay environmental quality. Human development analysis thường kết hợp income với longevity và education, nhưng mọi index đều là model chọn weights.
+GDP bình quân đầu người đo sản lượng hoặc thu nhập trung bình nhưng không cho biết cách phân phối, sức khỏe, giáo dục, an ninh hay chất lượng môi trường. Phân tích **phát triển con người (human development)** thường kết hợp thu nhập với tuổi thọ và giáo dục, nhưng mọi chỉ số tổng hợp đều là mô hình có lựa chọn biến và trọng số.
 
-## Spatial inequality
+## Bất bình đẳng không gian
 
-Inequality tồn tại giữa countries, giữa regions trong một country, giữa urban–rural và ngay trong city. National average có thể che “islands of prosperity” và deprived zones.
+Bất bình đẳng tồn tại giữa quốc gia, giữa các vùng trong cùng quốc gia, giữa đô thị–nông thôn và ngay bên trong một thành phố. Trung bình quốc gia có thể che những “đảo thịnh vượng” và các khu vực thiếu thốn nghiêm trọng.
 
-## Path dependence
+## Phụ thuộc đường đi
 
-Infrastructure, colonial history, land tenure, institution và earlier industrialization tạo path dependence. Khi network/cluster đã hình thành, advantage có thể self-reinforce. Nhưng path dependence không phải inevitability; policy và technology có thể tạo new path.
+Hạ tầng, lịch sử thuộc địa, chế độ đất đai, thể chế và công nghiệp hóa sớm tạo **phụ thuộc đường đi (path dependence)**. Khi mạng lưới và cụm kinh tế đã hình thành, lợi thế có thể tự củng cố. Tuy nhiên điều này không phải tất yếu tuyệt đối; chính sách và công nghệ có thể mở ra quỹ đạo mới.
 
-## Accessibility as development
+## Khả năng tiếp cận như một phần của phát triển
 
-Road, broadband, electricity và transit làm market/service accessible. Nhưng infrastructure alone không đảm bảo development nếu education, institution hoặc demand thiếu. Một highway có thể kết nối periphery với market hoặc làm local firm mất market vào core competitor.
+Đường bộ, băng rộng, điện và giao thông công cộng làm thị trường và dịch vụ dễ tiếp cận hơn. Nhưng chỉ xây hạ tầng không đảm bảo phát triển nếu giáo dục, thể chế hoặc nhu cầu thiếu. Một đường cao tốc có thể nối ngoại vi với thị trường nhưng cũng có thể khiến doanh nghiệp địa phương mất thị phần vào đối thủ ở trung tâm.
 
-## Poverty line và cost of living
+## Chuẩn nghèo và chi phí sinh hoạt
 
-Income threshold phải contextualize purchasing power và household need. Urban resident income cao hơn rural không tự động có higher welfare nếu housing/transport cost cao.
+Ngưỡng thu nhập phải được đặt trong bối cảnh sức mua và nhu cầu hộ gia đình. Cư dân đô thị có thu nhập cao hơn nông thôn không tự động có mức sống cao hơn nếu chi phí nhà ở và đi lại cũng cao hơn nhiều.
 
-## Gender và spatial access
+## Giới và khả năng tiếp cận không gian
 
-Safety, care burden, transport design và property right có thể làm spatial mobility khác theo gender. Geographic analysis giúp thấy inequality không chỉ nằm ở wage mà ở ability to reach school, job và healthcare.
+An toàn, gánh nặng chăm sóc, thiết kế giao thông và quyền sở hữu tài sản có thể làm khả năng di chuyển khác nhau theo giới. Phân tích địa lý giúp thấy bất bình đẳng không chỉ nằm ở tiền lương mà còn ở khả năng đến trường, nơi làm việc và cơ sở y tế.
 
-## Digital divide
+## Khoảng cách số
 
-Internet coverage, device affordability và digital literacy tạo spatial inequality mới. “Có signal” không bằng meaningful connectivity nếu bandwidth/price không đủ cho study/work.
+Phủ sóng Internet, khả năng mua thiết bị và **năng lực số (digital literacy)** tạo một dạng bất bình đẳng không gian mới. “Có tín hiệu” không đồng nghĩa có **kết nối có ý nghĩa (meaningful connectivity)** nếu băng thông hoặc giá dịch vụ không đủ cho học tập và làm việc.
 
-## Mental Model
+## Mô hình tư duy
 
-Development là **capability to convert resources and connectivity into human outcomes**. Geography ảnh hưởng access và opportunity, nhưng institutions quyết định nhiều về cách advantage được phân phối.
+Phát triển là **khả năng chuyển tài nguyên và kết nối thành kết quả tốt cho con người**. Địa lý ảnh hưởng khả năng tiếp cận và cơ hội, còn thể chế ảnh hưởng mạnh cách lợi ích và nguồn lực được phân phối.
 
-Xem tiếp: [Population](./00_population_demography.md), [Regional geography](../03_regions/00_how_to_read_regions.md).
+Xem tiếp: [Dân số](./00_population_demography.md), [Địa lý vùng](../03_regions/00_how_to_read_regions.md).

@@ -1,59 +1,47 @@
-# Môi trường, sustainability và giới hạn hệ thống
+# Môi trường, tính bền vững và giới hạn hệ thống
 
-## Sustainability là bài toán stocks, flows và intergenerational trade-off
+## Tính bền vững là bài toán về lượng tích lũy, dòng chuyển và đánh đổi giữa các thế hệ
 
-**Sustainability (tính bền vững / 지속가능성)** không đơn giản là “thân thiện môi trường”. Nó hỏi một system có thể duy trì human well-being mà không làm suy giảm critical natural/social capital đến mức future options bị co lại hay không.
+**Tính bền vững (sustainability / 지속가능성)** không đơn giản là “thân thiện với môi trường”. Nó hỏi một hệ thống có thể duy trì phúc lợi con người mà không làm suy giảm các dạng vốn tự nhiên và xã hội quan trọng đến mức thu hẹp lựa chọn của các thế hệ tương lai hay không.
 
-## Renewable không có nghĩa unlimited
+Một cách làm khái niệm này bớt mơ hồ là phân biệt **lượng tích lũy (stock)** và **dòng chuyển (flow)**. Sinh khối rừng, lượng nước ngầm và chất hữu cơ trong đất là stock; khai thác, bổ cập, xói mòn và ô nhiễm là flow. Một hệ bền vững dài hạn khi dòng khai thác không liên tục vượt khả năng tái tạo, và chất thải không vượt khả năng hấp thụ của môi trường.
 
-Forest có thể renewable nếu harvest ≤ regeneration trong relevant timescale; groundwater có thể effectively nonrenewable nếu recharge mất hàng thế kỷ. Fishery renewable nhưng collapse nếu extraction vượt reproduction.
+Nếu bơm nước ngầm 120 đơn vị/năm trong khi bổ cập chỉ 80, nguồn cung có thể vẫn dồi dào vài năm nhờ kho nước lớn, nhưng hệ đang thâm hụt 40 đơn vị mỗi năm. Vì vậy ảnh chụp “hiện còn nhiều tài nguyên” không cho biết hệ có bền vững hay không.
 
-## Pollution as spatial flow
+## Tái tạo không có nghĩa vô hạn
 
-Pollution source và impact có thể cách nhau xa. Air pollutant transport theo wind; nutrient runoff đi downstream tạo eutrophication; plastic theo river/ocean current. Governance theo administrative border dễ lệch với environmental flow boundary.
+Rừng có thể tái tạo nếu khai thác không vượt phục hồi trong thang thời gian phù hợp. Nước ngầm có thể về lý thuyết được bổ cập nhưng gần như không tái tạo trong đời người nếu chu kỳ kéo dài hàng thế kỷ. Nguồn cá có thể phục hồi nhưng vẫn sụp giảm nếu khai thác vượt khả năng sinh sản.
 
-## Externality
+## Ô nhiễm là một dòng có không gian
 
-Nếu cost ô nhiễm không nằm trong producer/consumer decision, market price không phản ánh full social cost. Geography xác định ai chịu externality: upstream vs downstream, upwind vs downwind, center vs periphery.
+Nguồn ô nhiễm và nơi chịu tác động có thể cách xa nhau. Chất ô nhiễm không khí theo gió; dinh dưỡng chảy xuống hạ lưu gây phú dưỡng; nhựa theo sông và dòng biển. Quản trị theo ranh giới hành chính vì vậy thường không khớp ranh giới của dòng môi trường.
 
-## Circular economy
+## Tác động ngoại vi có địa lý
 
-Circularity cố giữ material value qua reuse, repair, recycling. Nhưng recycling cũng cần energy và logistics; material quality suy giảm với một số stream. Vì vậy circular economy giảm virgin extraction nhưng không magical closed loop.
+Nếu chi phí ô nhiễm không nằm trong quyết định của người sản xuất hoặc tiêu dùng, giá thị trường không phản ánh đầy đủ chi phí xã hội. **Ngoại tác môi trường (environmental externality / 환경 외부효과)** có cấu trúc không gian: nơi nhận lợi ích và nơi chịu chi phí có thể khác nhau.
 
-## Life-cycle thinking
+Một nhà máy tạo việc làm ở một nơi nhưng cộng đồng hạ lưu nhận nước ô nhiễm; người dùng điện trong thành phố có thể gắn với phát thải từ nhà máy điện ở xa. Địa lý giúp xác định ai chịu tác động: thượng nguồn–hạ nguồn, đầu gió–cuối gió, trung tâm–ngoại vi.
 
-Một EV không có tailpipe emission nhưng battery/material/electricity có upstream footprint. Life-cycle assessment tránh shifting impact từ use phase sang production region. Spatial origin của electricity mix rất quan trọng.
+## Sức chứa không phải con số cố định
 
-## Environmental justice
+**Sức chứa môi trường (carrying capacity / 환경수용력)** phụ thuộc công nghệ, kiểu tiêu dùng, thương mại và trạng thái hệ sinh thái. Một thành phố có thể hỗ trợ dân số vượt năng lực sản xuất lương thực tại chỗ nhờ nhập khẩu, nhưng khi đó dấu chân sinh thái được mở rộng sang vùng khác. Ranh giới hệ thống một lần nữa quyết định cách diễn giải.
 
-Hazardous facility, heat exposure hoặc poor air quality thường phân bố không đều. Analysis cần combine environmental layer với demographic/social vulnerability, nhưng phải tránh suy causal chỉ từ correlation map.
+## Kinh tế tuần hoàn và giới hạn vật lý
 
-## Mental Model
+**Kinh tế tuần hoàn (circular economy)** cố giữ giá trị vật liệu qua tái sử dụng, sửa chữa và tái chế. Tuy nhiên tái chế cũng cần năng lượng và logistics; một số vật liệu mất chất lượng sau mỗi vòng và không thể quay vòng 100% vô hạn do tạp nhiễm, hao hụt và chi phí năng lượng.
 
-Sustainability là **giữ stocks quan trọng không bị depletion nhanh hơn khả năng phục hồi, đồng thời không đẩy waste vượt assimilation capacity**. Geography cho biết stock ở đâu, flow đi đâu và burden rơi vào ai.
+Vì vậy tính bền vững không nên dựa trên mô hình tư duy “vật liệu quay vòng hoàn hảo”. Luôn có thất thoát và nhu cầu năng lượng.
 
-Xem thêm: [Earth system](../00_foundations/01_earth_as_system.md), [Development](../02_human_geography/09_development_inequality.md).
+## Tư duy vòng đời
 
+Một xe điện không có khí thải ống xả nhưng pin, vật liệu và điện vẫn có dấu chân ở thượng nguồn. **Đánh giá vòng đời (life-cycle assessment)** giúp tránh chuyển tác động từ giai đoạn sử dụng sang vùng sản xuất. Nguồn điện của từng nơi vì thế rất quan trọng.
 
-## Sustainability là bài toán stock và flow
+## Công bằng môi trường
 
-Một cách tránh định nghĩa sustainability quá mơ hồ là phân biệt **stock** và **flow**. Forest biomass, groundwater storage và soil organic matter là stocks; harvesting, recharge, erosion và pollution là flows. Một system bền vững dài hạn khi outflow/extraction không liên tục vượt regeneration hoặc khi waste không vượt assimilation capacity.
+Cơ sở nguy hại, phơi lộ nhiệt hoặc không khí kém chất lượng thường không phân bố đều. Phân tích cần kết hợp lớp môi trường với dữ liệu dân số và tính dễ tổn thương xã hội, nhưng phải tránh suy quan hệ nhân quả chỉ từ tương quan trên bản đồ.
 
-Nếu groundwater pumping là 120 unit/year trong khi recharge chỉ 80, supply có thể vẫn ổn vài năm nhờ stock lớn, nhưng system đang chạy deficit 40. Đây là lý do snapshot abundance không cho biết sustainability.
+## Mô hình tư duy
 
-## Externality có geography
+> Tính bền vững là quản lý **lượng tích lũy, dòng chuyển và tác động ngoại vi** qua thời gian. Hãy hỏi: lượng tích lũy đang tăng hay giảm, dòng nào tạo thâm hụt, và chi phí đang bị chuyển sang nơi hoặc nhóm nào khác?
 
-Pollution thường tách nơi benefit khỏi nơi cost. Factory tạo employment tại một location nhưng downstream community nhận polluted water; electricity consumer ở city có thể liên quan emission ở remote power plant. **Environmental externality (ngoại tác môi trường / 환경 외부효과)** vì vậy có spatial structure.
-
-## Carrying capacity không phải con số cố định
-
-**Carrying capacity (sức chứa môi trường / 환경수용력)** phụ thuộc technology, consumption pattern, trade và ecosystem condition. Một city có thể support population vượt local food capacity nhờ import, nhưng lúc đó ecological footprint được mở rộng sang other regions. System boundary một lần nữa quyết định interpretation.
-
-## Circularity và entropy constraint
-
-Circular economy có thể giảm virgin material demand bằng reuse, repair và recycling, nhưng recycling không đạt 100% vô hạn do contamination, quality loss và energy cost. Sustainability không nên dựa trên mental model “material quay vòng hoàn hảo”; luôn có loss và energy requirement.
-
-## Mental Model
-
-> Sustainability = quản lý **stocks, flows và externalities** qua thời gian. Hỏi ba câu: stock đang tăng hay giảm, flow nào gây deficit, và cost đang bị chuyển tới nơi/nhóm nào khác?
-
+Xem thêm: [Hệ Trái Đất](../00_foundations/01_earth_as_system.md), [Phát triển](../02_human_geography/09_development_inequality.md).

@@ -1,65 +1,47 @@
 # Đông Á
 
-## Một region nơi coast, mountain và monsoon gặp industrial networks
+## Nơi bờ biển, núi, gió mùa và mạng lưới công nghiệp gặp nhau
 
-East Asia thường được phân tích quanh China, Korean Peninsula, Japan, Mongolia và Taiwan trong nhiều context địa lý, nhưng boundary khái niệm thay theo nguồn. Physical geography của vùng có contrast rất mạnh: plateau và desert nội lục, mountain belts, alluvial plains, peninsula và island arcs.
+Đông Á thường được phân tích quanh Trung Quốc, bán đảo Triều Tiên, Nhật Bản, Mông Cổ và Đài Loan trong nhiều tài liệu địa lý, nhưng ranh giới khái niệm có thể thay đổi theo nguồn. Địa lý tự nhiên của vùng có tương phản rất mạnh: cao nguyên và hoang mạc nội lục, các dãy núi, đồng bằng phù sa, bán đảo và chuỗi đảo.
 
-## Tectonic edge của Pacific
+## Rìa kiến tạo của Thái Bình Dương
 
-Japan, Taiwan và phần rìa phía đông region nằm gần complex convergent boundaries, nên earthquake và volcano là structural feature của geography chứ không phải ngoại lệ. Korean Peninsula tương đối stable hơn về tectonics so với Japanese archipelago, nhưng vẫn chịu regional seismic hazard.
+Nhật Bản, Đài Loan và nhiều khu vực phía đông nằm gần các ranh giới hội tụ phức tạp, nên động đất và núi lửa là đặc điểm cấu trúc của vùng chứ không phải ngoại lệ. Bán đảo Triều Tiên tương đối ổn định hơn về kiến tạo so với quần đảo Nhật Bản, nhưng vẫn chịu rủi ro địa chấn trong bối cảnh khu vực.
 
-## Monsoon và gradient đông–tây
+## Gió mùa và gradient đông–tây
 
-East Asian monsoon mang seasonal moisture từ ocean vào continent. East/coastal areas thường ẩm hơn interior, trong khi Mongolia và northwest China chịu continental aridity mạnh. Mountain chains và plateau làm circulation, rain shadow và river headwaters phức tạp.
+**Gió mùa Đông Á (East Asian monsoon / 동아시아 몬순)** mang ẩm theo mùa từ đại dương vào lục địa. Phía đông và vùng ven biển thường ẩm hơn nội địa, trong khi Mông Cổ và tây bắc Trung Quốc chịu tính lục địa và khô hạn mạnh. Các dãy núi và cao nguyên làm hoàn lưu khí quyển, bóng mưa và vùng đầu nguồn sông trở nên phức tạp.
 
-## River basins và civilization corridors
+Gió mùa không đơn giản là “mùa mưa”. Nó là một hệ hoàn lưu quy mô lục địa. Một năm mưa đến muộn, dồn dập hoặc lệch vùng có thể đồng thời ảnh hưởng nông nghiệp, thủy điện, thoát nước đô thị và giá hàng hóa.
 
-Large river systems tạo agricultural plains, transport corridors và dense settlement. Flood control, irrigation, dam và sediment management vì thế gắn chặt với state capacity và urban growth trong lịch sử.
+## Lưu vực sông và các hành lang văn minh
 
-## Coastal urban-industrial belt
+Những hệ thống sông lớn tạo đồng bằng nông nghiệp, hành lang giao thông và khu định cư mật độ cao. Kiểm soát lũ, tưới tiêu, đập và quản lý trầm tích vì thế gắn chặt với năng lực nhà nước và quá trình đô thị hóa trong lịch sử.
 
-Modern population và production tập trung mạnh ở coastal/metropolitan corridors. Port access kết hợp manufacturing clusters, supplier networks và dense transport giúp region trở thành một trong các trung tâm trade–manufacturing lớn nhất thế giới.
+Phía tây Trung Quốc là hệ cao nguyên và núi rất lớn, nổi bật là **cao nguyên Thanh Tạng (Tibetan Plateau / 티베트 고원)**, trong khi phía đông mở ra các đồng bằng và dải duyên hải nơi phần lớn dân cư tập trung. Các sông như Hoàng Hà và Trường Giang không chỉ là đường nước; chúng nối chênh lệch độ cao nội địa với biển và tạo các hành lang định cư kéo dài hàng nghìn năm.
 
-Seoul Capital Area, Tokyo metropolitan region, Yangtze River Delta và Pearl River Delta khác về governance và history nhưng cùng minh họa agglomeration: labor, firm, university, finance và infrastructure reinforce lẫn nhau.
+## Sự tập trung dân cư và công nghiệp ven biển
 
-## Demographic transition
+Một đặc điểm quan trọng của Đông Á hiện đại là dân số và sản xuất tập trung mạnh trong các **hành lang đô thị–công nghiệp ven biển**. Vùng thủ đô Seoul, Tokyo, châu thổ Trường Giang, châu thổ Châu Giang và vùng đô thị Đài Bắc khác nhau về quản trị và lịch sử nhưng cùng minh họa **kinh tế tập tụ (agglomeration economies / 집적경제)**: lao động, doanh nghiệp, đại học, tài chính, nhà cung cấp và hạ tầng củng cố lẫn nhau.
 
-Nhiều economy Đông Á trải qua fertility decline và aging nhanh. Geographic consequence là gap giữa major metropolitan area và peripheral/rural area có thể tăng: youth move toward job centers trong khi small city face school closure và service consolidation.
+Ở Nhật Bản, bán đảo Triều Tiên và Đài Loan, đồng bằng có diện tích hạn chế trong khi mật độ dân cư cao. Khi đất bằng trở thành tài nguyên khan hiếm, giá đất, hình thái đô thị, mạng đường sắt và hoạt động lấn biển đều chịu ảnh hưởng. Một ràng buộc tự nhiên vì thế có thể chuyển hóa thành cấu trúc kinh tế–đô thị.
 
-## Energy và resource geography
+## Chuyển đổi nhân khẩu học
 
-Industrial density cao nhưng domestic fossil fuel/resource endowment không đồng đều làm maritime imports và energy security quan trọng. Đây là lý do port, LNG terminal, oil route và regional grid discussion có geographic significance.
+Nhiều nền kinh tế Đông Á trải qua mức sinh giảm và già hóa nhanh. Hệ quả địa lý là khoảng cách giữa các vùng đô thị lớn và vùng ngoại vi hoặc nông thôn có thể tăng: người trẻ dịch về trung tâm việc làm trong khi thành phố nhỏ đối mặt đóng trường học và hợp nhất dịch vụ.
 
-## Knowledge Connection
+Cùng một xu hướng giảm dân số có thể tạo hai thực tế trái ngược: nông thôn thu hẹp và vùng thủ đô vẫn có giá nhà cao do nhu cầu tập trung.
 
-East Asia là case study tốt để nối [plate tectonics](../01_physical_geography/00_plate_tectonics_geologic_time.md), [monsoon](../01_physical_geography/02_atmosphere_weather_climate.md), [agglomeration](../02_human_geography/05_economic_geography.md) và [aging population](../02_human_geography/00_population_demography.md).
+## Năng lượng, tài nguyên và không gian chiến lược
 
-## Không gian tự nhiên tạo ra các lõi dân cư khác nhau
+Mật độ công nghiệp cao trong khi tài nguyên nhiên liệu hóa thạch nội địa phân bố không đều khiến nhập khẩu bằng đường biển và an ninh năng lượng có ý nghĩa lớn. Cảng, trạm LNG, tuyến dầu và thảo luận về lưới điện khu vực đều có nền tảng địa lý rõ ràng.
 
-Đông Á không phải một mặt phẳng đồng nhất. Phía tây của Trung Quốc là hệ thống cao nguyên và núi rất lớn, nổi bật là **Tibetan Plateau (cao nguyên Thanh Tạng / 티베트 고원)**, trong khi phía đông mở ra các đồng bằng, bồn địa và dải duyên hải nơi phần lớn dân cư tập trung. Sự chênh lệch địa hình này ảnh hưởng trực tiếp đến khí hậu, mạng lưới sông, nông nghiệp và khả năng xây dựng hạ tầng. Các sông lớn như Yellow River và Yangtze không chỉ là đường nước; chúng là kết quả của chênh lệch độ cao giữa nội địa và biển, đồng thời tạo ra các hành lang định cư kéo dài hàng nghìn năm.
+Bán đảo Triều Tiên, eo biển Đài Loan, biển Hoa Đông và các chuỗi đảo cho thấy địa lý chính trị luôn dựa trên không gian vật lý. Tuyến hàng hải, vùng đặc quyền kinh tế, tiếp cận cảng và khoảng cách giữa các nút quân sự–kinh tế ảnh hưởng tính toán chiến lược. Tuy nhiên địa lý chỉ tạo ràng buộc và cơ hội; kết quả chính trị còn phụ thuộc công nghệ, thể chế, liên minh và chính sách.
 
-Japan, Korean Peninsula và Taiwan lại thuộc một cấu trúc địa lý khác: diện tích đồng bằng hạn chế, mật độ dân cư cao và phần lớn hoạt động kinh tế tập trung dọc coast. Khi flat land trở thành scarce resource, giá đất, hình thái đô thị, rail network và land reclamation đều chịu tác động. Đây là lý do geographic constraint có thể biến thành economic structure thay vì chỉ là một đặc điểm tự nhiên.
+## Kết nối kiến thức
 
-## Monsoon, seasonality và nông nghiệp
+Đông Á là ví dụ tốt để nối [kiến tạo mảng](../01_physical_geography/00_plate_tectonics_geologic_time.md), [gió mùa](../01_physical_geography/02_atmosphere_weather_climate.md), [kinh tế tập tụ](../02_human_geography/05_economic_geography.md) và [già hóa dân số](../02_human_geography/00_population_demography.md).
 
-**East Asian monsoon (gió mùa Đông Á / 동아시아 몬순)** hình thành do tương phản nhiệt giữa lục địa rộng lớn và Thái Bình Dương. Mùa đông, lục địa lạnh nhanh và hình thành high pressure; mùa hè, lục địa nóng lên và hút khối không khí ẩm từ biển. Cơ chế này tạo seasonality rõ rệt cho precipitation và ảnh hưởng lớn đến rice cultivation, flood risk, water storage và energy demand.
+## Mô hình tư duy
 
-Không nên hiểu monsoon đơn giản là “mùa mưa”. Nó là một circulation system có quy mô lục địa. Một năm rainfall đến muộn, dồn dập hoặc lệch vùng có thể đồng thời tác động tới agriculture, hydropower, urban drainage và commodity prices.
-
-## Coastal concentration và chuỗi đô thị công nghiệp
-
-Một đặc điểm quan trọng của Đông Á hiện đại là sự tập trung rất mạnh của dân số và sản xuất tại các coastal corridors. Tokyo–Yokohama, Seoul–Incheon, Beijing–Tianjin, Yangtze River Delta, Pearl River Delta và Taipei metropolitan region là các node kết nối port, airport, manufacturing, finance và digital infrastructure.
-
-Về network geography, lợi thế của các vùng này đến từ **agglomeration economies (lợi thế tập trung / 집적경제)**: supplier, labor, university, capital và logistics cùng nằm gần nhau, làm giảm transaction cost. Vì vậy một khu vực nhỏ về diện tích có thể chiếm tỷ trọng rất lớn trong GDP và trade của cả quốc gia.
-
-## Demography như một biến địa lý
-
-Japan, South Korea và một số khu vực của China đang đối diện aging và low fertility. Đây không chỉ là vấn đề demographic. Khi population distribution thay đổi, rural settlement suy giảm, school và hospital network phải tái cấu trúc, public transport mất demand, trong khi metropolitan housing demand vẫn có thể cao. Cùng một xu hướng giảm dân số có thể tạo ra hai reality trái ngược: shrinking countryside và expensive capital region.
-
-## Peninsula, island và strategic space
-
-Korean Peninsula, Taiwan Strait, East China Sea và các island chains cho thấy political geography luôn dựa trên physical space. Sea lane, exclusive economic zone, port access và distance giữa các military/economic nodes đều ảnh hưởng tới strategic calculation. Tuy nhiên không nên suy từ geography sang một kết quả chính trị “tất yếu”: geography tạo constraints và opportunities, còn outcome phụ thuộc technology, institutions, alliances và policy.
-
-## Mental Model
-
-> Hãy đọc Đông Á như một hệ thống trong đó **mountain–river–coast tạo khung vật lý**, **monsoon tạo nhịp thời gian**, còn **dense urban-industrial corridors tạo network power**. Geographic importance thường nằm ở các node kết nối nhiều flow hơn là ở diện tích lãnh thổ.
+> Hãy đọc Đông Á như một hệ thống trong đó **núi–sông–bờ biển tạo khung vật lý**, **gió mùa tạo nhịp thời gian**, còn **các hành lang đô thị–công nghiệp mật độ cao tạo sức mạnh mạng lưới**. Tầm quan trọng địa lý thường nằm ở các nút kết nối nhiều dòng hơn là ở diện tích lãnh thổ đơn thuần.

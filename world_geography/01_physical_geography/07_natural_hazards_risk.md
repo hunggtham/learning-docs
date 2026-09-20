@@ -1,51 +1,51 @@
-# Thiên tai, hazard, exposure và risk
+# Thiên tai, hiểm họa, mức độ phơi lộ và rủi ro
 
-## Natural hazard không tự động là disaster
+## Hiểm họa tự nhiên không tự động trở thành thảm họa
 
-Một earthquake lớn giữa vùng không người có thể là hazard nhưng gây ít disaster loss. **Risk (rủi ro / 위험)** thường được conceptualize từ hazard, exposure và vulnerability:
+Một trận động đất lớn giữa vùng không người có thể là **hiểm họa (hazard)** nhưng gây ít tổn thất. **Rủi ro (risk / 위험)** thường được khái quát từ ba thành phần: hiểm họa, mức độ phơi lộ và tính dễ tổn thương:
 
 \[
 Risk \approx f(Hazard, Exposure, Vulnerability)
 \]
 
-Đây không phải universal numeric formula mà là framework. Hazard mô tả physical event; exposure là people/assets nằm trong vùng ảnh hưởng; vulnerability là mức dễ bị thiệt hại.
+Đây không phải công thức số học áp dụng phổ quát mà là một **khung phân tích (framework)**. Hiểm họa mô tả hiện tượng vật lý; **mức độ phơi lộ (exposure)** cho biết con người và tài sản nào nằm trong vùng ảnh hưởng; **tính dễ tổn thương (vulnerability)** cho biết chúng dễ bị thiệt hại đến mức nào.
 
-## Hazard frequency và magnitude
+## Tần suất và độ lớn của hiểm họa
 
-Extreme event thường rare hơn moderate event. Return period 100 năm không có nghĩa đúng 100 năm mới lặp một lần; nó thường tương ứng annual exceedance probability khoảng 1% trong stationarity assumption. Trong 30 năm, probability có ít nhất một event 1%/năm lớn hơn 1% rất nhiều:
+Hiện tượng cực đoan thường hiếm hơn hiện tượng mức trung bình. **Chu kỳ lặp lại (return period)** 100 năm không có nghĩa đúng 100 năm mới xảy ra một lần; trong giả định phân bố ổn định theo thời gian, nó thường tương ứng xác suất vượt ngưỡng khoảng 1% mỗi năm. Trong 30 năm, xác suất có ít nhất một lần xảy ra sự kiện 1%/năm là:
 
 \[
 P(\ge1)=1-(1-0.01)^{30}\approx 26\%
 \]
 
-Nếu climate/nonstationarity làm distribution đổi, historical return period có thể không còn ổn định.
+Nếu khí hậu hoặc các điều kiện nền thay đổi khiến phân bố không còn ổn định, chu kỳ lặp lại tính từ lịch sử có thể không còn phản ánh tốt tương lai.
 
-## Earthquake risk
+## Rủi ro động đất
 
-Hazard phụ thuộc fault và ground motion. Vulnerability phụ thuộc building code, construction, soil amplification và preparedness. Soft sediment basin có thể amplify shaking; liquefaction xảy ra khi saturated loose sediment mất strength tạm thời dưới cyclic loading.
+Hiểm họa phụ thuộc đứt gãy và chuyển động nền đất. Tính dễ tổn thương phụ thuộc tiêu chuẩn xây dựng, chất lượng thi công, khuếch đại nền đất và mức chuẩn bị. Bồn trầm tích mềm có thể khuếch đại rung lắc; **hóa lỏng đất (liquefaction)** xảy ra khi trầm tích rời, bão hòa nước tạm thời mất sức kháng dưới tải lặp do động đất.
 
-## Volcanic risk
+## Rủi ro núi lửa
 
-Different hazards gồm lava, ash, pyroclastic flow, lahar và gas. Ash có thể ảnh hưởng aviation rất xa vent. Vì vậy hazard footprint không chỉ là circle quanh volcano.
+Núi lửa tạo nhiều loại hiểm họa như dung nham, tro, **dòng mạt vụn núi lửa (pyroclastic flow)**, **dòng bùn núi lửa (lahar)** và khí. Tro có thể ảnh hưởng hàng không ở rất xa miệng phun. Vì vậy phạm vi nguy hiểm không thể chỉ vẽ thành một vòng tròn quanh núi lửa.
 
-## Tropical cyclone
+## Xoáy thuận nhiệt đới
 
-Cyclone damage đến từ wind, storm surge và rainfall/flooding. Category dựa chủ yếu wind không mô tả toàn bộ flood risk. Coastal shape và bathymetry ảnh hưởng surge.
+Thiệt hại do xoáy thuận đến từ gió, nước dâng do bão và mưa gây ngập. Cấp bão chủ yếu dựa trên gió nên không mô tả đầy đủ rủi ro lũ. Hình dạng bờ biển và địa hình đáy biển nông cũng ảnh hưởng mạnh đến nước dâng.
 
-## Heatwave
+## Nắng nóng cực đoan
 
-Heat risk phụ thuộc humidity, urban heat island, housing, age structure và access to cooling. City center với concrete và ít vegetation có night-time heat retention cao, làm cơ thể khó recover.
+Rủi ro nhiệt phụ thuộc độ ẩm, đảo nhiệt đô thị, điều kiện nhà ở, cơ cấu tuổi và khả năng tiếp cận làm mát. Trung tâm đô thị nhiều bê tông và ít cây có thể giữ nhiệt ban đêm mạnh, khiến cơ thể khó phục hồi sau nhiều ngày nóng liên tục.
 
-## Risk reduction
+## Giảm thiểu rủi ro
 
-Risk management gồm avoidance, structural protection, building code, early warning, insurance, evacuation và redundancy. Không strategy nào xóa risk hoàn toàn. Levee có thể giảm frequent flood nhưng tạo false sense of security và concentrate loss nếu overtopping/failure.
+Quản lý rủi ro gồm tránh xây ở vùng nguy hiểm, công trình bảo vệ, tiêu chuẩn xây dựng, cảnh báo sớm, bảo hiểm, sơ tán và dự phòng. Không chiến lược nào xóa rủi ro hoàn toàn. Đê có thể giảm lũ thường xuyên nhưng cũng tạo **cảm giác an toàn sai (false sense of security)** và tập trung thiệt hại nếu nước vượt đê hoặc đê hỏng.
 
-## Resilience
+## Khả năng chống chịu và phục hồi
 
-**Resilience (khả năng chống chịu/phục hồi / 회복탄력성)** không chỉ là quay lại trạng thái cũ; đôi khi adaptation tốt là rebuild differently để giảm future risk.
+**Khả năng chống chịu và phục hồi (resilience / 회복탄력성)** không chỉ là quay về trạng thái cũ; đôi khi thích ứng tốt hơn là tái thiết theo cách khác để giảm rủi ro trong tương lai.
 
-## Mental Model
+## Mô hình tư duy
 
-Disaster là **physical process gặp social system**. Hỏi ba lớp: event mạnh thế nào, ai/cái gì ở nơi đó, và system đó chịu đựng/phục hồi ra sao.
+Thảm họa là điểm gặp giữa **quá trình vật lý và hệ thống xã hội**. Hãy hỏi ba lớp: hiện tượng mạnh đến đâu, ai hoặc tài sản nào nằm trong vùng ảnh hưởng, và hệ thống đó chịu đựng–phục hồi ra sao.
 
-Xem tiếp: [Political geography](../02_human_geography/04_political_geography_borders.md), [Climate change](../04_global_systems/00_climate_change.md).
+Xem tiếp: [Địa lý chính trị](../02_human_geography/04_political_geography_borders.md), [Biến đổi khí hậu](../04_global_systems/00_climate_change.md).

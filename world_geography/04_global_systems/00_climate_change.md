@@ -1,65 +1,55 @@
 # Biến đổi khí hậu như một hệ thống địa lý toàn cầu
 
-## Climate change không phân bố đồng đều
+## Biến đổi khí hậu không phân bố đồng đều
 
-Global warming là global-scale signal, nhưng impact luôn có geography. Land thường warming nhanh hơn ocean; high latitudes có amplification mạnh; precipitation change khác nhau theo circulation; sea-level effect thay đổi theo land motion và ocean dynamics. Vì vậy một global mean không đủ để lập kế hoạch local.
+Sự ấm lên toàn cầu là tín hiệu ở quy mô toàn cầu, nhưng tác động luôn có tính địa lý. Đất liền thường ấm lên nhanh hơn đại dương; vĩ độ cao có mức khuếch đại lớn; thay đổi lượng mưa khác nhau theo hoàn lưu; tác động mực nước biển thay đổi theo chuyển động của đất và động lực đại dương. Vì vậy một giá trị trung bình toàn cầu không đủ để lập kế hoạch cho một địa phương cụ thể.
 
-## Forcing, response và feedback
+## Cưỡng bức, phản ứng và phản hồi
 
-Climate system thay đổi khi energy balance bị forcing. Anthropogenic greenhouse gases làm outgoing infrared balance thay đổi. Surface warming là response; water vapor, ice-albedo và cloud processes tạo feedback. Ocean hấp thụ heat làm response chậm và tạo thermal inertia.
+Hệ khí hậu thay đổi khi cân bằng năng lượng bị tác động bởi **cưỡng bức khí hậu (forcing)**. Khí nhà kính do con người làm thay đổi cân bằng bức xạ hồng ngoại phát ra. Bề mặt ấm lên là **phản ứng (response)**; hơi nước, băng–suất phản chiếu và mây tạo các **phản hồi (feedback)**. Đại dương hấp thụ nhiệt làm phản ứng của toàn hệ chậm hơn và tạo **quán tính nhiệt (thermal inertia)**.
 
-Điểm quan trọng là **delay không có nghĩa absence of effect**. Hệ có memory; hôm nay stabilizing forcing không làm temperature/ocean state lập tức quay về quá khứ.
+Điểm quan trọng là **phản ứng chậm không có nghĩa tác động không tồn tại**. Hệ khí hậu có “trí nhớ”; ngay cả khi tác động mới được ổn định, nhiệt độ và trạng thái đại dương cũng không lập tức trở về quá khứ.
 
-## Attribution và event probability
+## Từ hiệu ứng nhà kính đến tác động không gian
 
-Climate science không cần tuyên bố “một event do climate change 100%” để phân tích. Event attribution hỏi forcing đã làm probability hoặc intensity của loại event thay đổi bao nhiêu, dùng observations và model counterfactual. Đây là probabilistic reasoning, giống hỏi smoking làm risk tăng thay vì nói từng case bệnh có một cause duy nhất.
+**Hiệu ứng nhà kính (greenhouse effect / 온실효과)** là một phần tự nhiên của cân bằng năng lượng Trái Đất. Khí quyển tương đối trong suốt với phần lớn bức xạ sóng ngắn từ Mặt Trời nhưng một số khí hấp thụ và phát lại bức xạ hồng ngoại sóng dài từ bề mặt. Khi nồng độ khí nhà kính tăng, cân bằng bức xạ đi ra thay đổi; hệ phải đạt một trạng thái nhiệt độ mới để năng lượng ra lại cân bằng năng lượng vào.
 
-## Sea-level rise
+Điều quan trọng về mặt địa lý là sự ấm lên không phân bố đều. Đất liền thường ấm nhanh hơn đại dương, Bắc Cực ấm mạnh, còn mẫu mưa và cực trị thay đổi theo hoàn lưu. Vì vậy “nhiệt độ trung bình toàn cầu” là chỉ báo tổng hợp chứ không phải nhiệt độ mà mọi nơi cùng trải nghiệm.
 
-Global mean sea level tăng qua thermal expansion và mass addition từ land ice. Local relative sea level còn phụ thuộc subsidence/uplift. Delta city có groundwater extraction gây subsidence có thể trải nghiệm relative rise nhanh hơn global mean.
+## Quy kết nguyên nhân và xác suất sự kiện
 
-## Adaptation và mitigation
+Khoa học khí hậu không cần tuyên bố “một sự kiện do biến đổi khí hậu gây ra 100%” mới có thể phân tích. **Quy kết sự kiện (event attribution)** hỏi tác động khí hậu đã làm xác suất hoặc cường độ của một loại sự kiện thay đổi bao nhiêu, bằng cách dùng quan trắc và các mô hình phản thực tế (counterfactual). Đây là suy luận xác suất: tương tự việc hỏi hút thuốc làm rủi ro bệnh tăng bao nhiêu thay vì đòi mỗi ca bệnh chỉ có một nguyên nhân duy nhất.
 
-**Mitigation (giảm nguyên nhân / 완화)** giảm greenhouse gas emissions hoặc tăng sinks. **Adaptation (thích ứng / 적응)** giảm damage từ impacts đã hoặc sẽ xảy ra. Hai chiến lược bổ sung nhau; adaptation không thay thế mitigation vì có limits, còn mitigation không loại bỏ hết near-term impacts do inertia.
+## Hiểm họa, mức phơi lộ và tính dễ tổn thương
 
-## Spatial planning
-
-Heat maps, flood zones, wildfire exposure và water stress projections giúp urban/infra planning. Nhưng future map luôn có scenario và uncertainty; không nên dùng một pixel projection như deterministic forecast.
-
-## Climate migration
-
-Climate stress có thể ảnh hưởng migration qua agriculture, water, hazard và livelihood, nhưng migration decision còn phụ thuộc income, conflict, policy và network. Claim “X triệu climate migrants chính xác vào năm Y” cần đọc kỹ assumption.
-
-## Mental Model
-
-Biến đổi khí hậu là **shift của probability distribution**, không phải weather switch. Mean đổi, variance/extremes có thể đổi, và mỗi place có exposure/vulnerability riêng.
-
-Xem thêm: [Hệ khí hậu](../01_physical_geography/03_global_climate_system.md), [Thiên tai và risk](../01_physical_geography/07_natural_hazards_risk.md).
-
-## Từ greenhouse effect tới spatial impact
-
-**Greenhouse effect (hiệu ứng nhà kính / 온실효과)** là một phần tự nhiên của Earth energy balance. Atmosphere tương đối transparent với phần lớn shortwave solar radiation nhưng một số gases hấp thụ và phát lại longwave infrared radiation từ surface. Khi concentration của greenhouse gases tăng, outgoing radiation balance thay đổi; system phải đạt một temperature state mới để energy out cân bằng energy in.
-
-Điều quan trọng trong geography là warming không phân bố đều. Land thường warming nhanh hơn ocean; Arctic warming mạnh; precipitation pattern và extremes thay đổi theo circulation. Vì vậy “global mean temperature” là một aggregate indicator, không phải temperature experienced giống nhau ở mọi nơi.
-
-## Hazard, exposure và vulnerability
-
-Climate risk không bằng climate hazard. Có thể biểu diễn mental model:
+Rủi ro khí hậu không đồng nghĩa với hiểm họa khí hậu. Có thể dùng mô hình tư duy:
 
 \[
 Risk \approx Hazard \times Exposure \times Vulnerability
 \]
 
-Đây không phải universal physical law mà là conceptual model. Một heatwave có hazard tương tự nhưng mortality khác nhau nếu housing quality, age structure, cooling access và health system khác. Geography của adaptation vì vậy phải map cả social system chứ không chỉ climate variable.
+Đây không phải định luật vật lý phổ quát mà là mô hình khái niệm. Cùng một đợt nắng nóng có thể gây tử vong rất khác nếu chất lượng nhà ở, cơ cấu tuổi, khả năng làm mát và hệ thống y tế khác nhau. Vì vậy địa lý thích ứng phải lập bản đồ cả hệ xã hội, không chỉ biến khí hậu.
 
-## Sea-level rise là relative problem
+## Mực nước biển dâng là vấn đề tương đối
 
-Local sea-level impact phụ thuộc **relative sea level**, nghĩa là ocean level so với land. Nếu land subsides do groundwater extraction hoặc sediment compaction, relative rise có thể lớn hơn global mean. Nếu land uplift do glacial isostatic adjustment, local relative rise có thể nhỏ hơn hoặc thậm chí negative trong một số period.
+Mực nước biển trung bình toàn cầu tăng do giãn nở nhiệt và lượng nước bổ sung từ băng trên đất liền. Tuy nhiên tác động địa phương phụ thuộc **mực nước biển tương đối (relative sea level)**, nghĩa là mực đại dương so với mặt đất tại chỗ. Nếu đất sụt do khai thác nước ngầm hoặc nén trầm tích, mức dâng tương đối có thể lớn hơn trung bình toàn cầu. Nếu đất nâng do điều chỉnh đẳng tĩnh hậu băng hà, mức dâng địa phương có thể nhỏ hơn hoặc thậm chí âm trong một số giai đoạn.
 
-## Adaptation và mitigation là hai spatial problems khác nhau
+## Giảm nhẹ và thích ứng
 
-**Mitigation (giảm phát thải / 완화)** nhắm vào nguyên nhân bằng giảm net greenhouse-gas emissions. **Adaptation (thích ứng / 적응)** giảm damage từ impacts đã hoặc sẽ xảy ra. Mitigation benefit thường global và delayed; adaptation benefit thường local/regional và trực tiếp hơn. Điều này tạo governance challenge vì cost và benefit xảy ra ở different places và times.
+**Giảm nhẹ (mitigation / 완화)** nhắm vào nguyên nhân bằng cách giảm phát thải khí nhà kính ròng hoặc tăng bể hấp thụ. **Thích ứng (adaptation / 적응)** nhắm vào giảm thiệt hại từ những tác động đã hoặc sẽ xảy ra. Hai chiến lược bổ sung nhau: thích ứng không thể thay thế giảm nhẹ vì khả năng thích ứng có giới hạn; giảm nhẹ cũng không loại bỏ toàn bộ tác động ngắn hạn do quán tính của hệ khí hậu.
 
-## Knowledge Connection
+Lợi ích giảm nhẹ thường mang tính toàn cầu và xuất hiện chậm hơn; lợi ích thích ứng thường rõ ở quy mô địa phương hoặc khu vực. Điều này tạo thách thức quản trị vì chi phí và lợi ích xảy ra ở những nơi và thời điểm khác nhau.
 
-Climate change nối trực tiếp [energy geography](../02_human_geography/07_industry_energy_resources.md), [urbanization](../02_human_geography/02_settlement_urbanization.md), [hazards](../01_physical_geography/07_natural_hazards_risk.md) và [GIS](../00_foundations/04_geospatial_data_gis_remote_sensing.md). GIS thường được dùng để overlay future hazard scenarios với population, infrastructure và land-use layers để xác định adaptation priority.
+## Quy hoạch không gian và độ bất định
+
+Bản đồ nhiệt, vùng ngập, phơi lộ cháy rừng và dự báo căng thẳng nước hỗ trợ quy hoạch đô thị và hạ tầng. Tuy nhiên mọi bản đồ tương lai đều gắn với kịch bản và độ bất định; không nên coi một điểm ảnh dự báo như kết quả chắc chắn.
+
+Căng thẳng khí hậu cũng có thể ảnh hưởng di cư thông qua nông nghiệp, nước, hiểm họa và sinh kế, nhưng quyết định di cư còn phụ thuộc thu nhập, xung đột, chính sách và mạng lưới. Các tuyên bố đưa ra một con số di cư khí hậu chính xác cho một năm xa trong tương lai luôn cần đọc kỹ giả định.
+
+## Kết nối kiến thức
+
+Biến đổi khí hậu nối trực tiếp [địa lý năng lượng](../02_human_geography/07_industry_energy_resources.md), [đô thị hóa](../02_human_geography/02_settlement_urbanization.md), [thiên tai](../01_physical_geography/07_natural_hazards_risk.md) và [GIS](../00_foundations/04_geospatial_data_gis_remote_sensing.md). GIS thường chồng các kịch bản hiểm họa tương lai với lớp dân số, hạ tầng và sử dụng đất để xác định ưu tiên thích ứng.
+
+## Mô hình tư duy
+
+> Biến đổi khí hậu là **sự dịch chuyển của phân bố xác suất**, không phải một công tắc thời tiết. Giá trị trung bình có thể đổi, độ biến thiên và cực trị cũng có thể đổi, còn mỗi nơi có mức phơi lộ và tính dễ tổn thương riêng.

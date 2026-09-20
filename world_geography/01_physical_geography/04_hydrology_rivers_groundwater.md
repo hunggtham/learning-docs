@@ -1,55 +1,55 @@
 # Nước, lưu vực, sông và nước ngầm
 
-## Water cycle nhìn theo hệ thống lưu trữ–dòng chảy
+## Chu trình nước nhìn như hệ thống lưu trữ–dòng chảy
 
-**Hydrology (thủy văn học / 수문학)** nghiên cứu water storage và flow trên, dưới và phía trên surface. Một watershed có precipitation input; outputs gồm evapotranspiration và streamflow; storage nằm trong soil, snow, lake và groundwater.
+**Thủy văn học (hydrology / 수문학)** nghiên cứu cách nước được lưu trữ và di chuyển trên bề mặt, dưới lòng đất và trong khí quyển. Một lưu vực nhận đầu vào chủ yếu từ giáng thủy; đầu ra gồm bốc thoát hơi nước và dòng chảy; lượng nước lưu trữ nằm trong đất, tuyết, hồ và nước ngầm.
 
-Water balance đơn giản:
+Cân bằng nước đơn giản:
 
 \[
 P = ET + Q + \Delta S
 \]
 
-với \(P\) là precipitation, \(ET\) evapotranspiration, \(Q\) runoff/streamflow và \(\Delta S\) thay đổi storage. Đây là accounting identity ở scale và time period phù hợp, nhưng measurement uncertainty có thể lớn.
+Trong đó \(P\) là giáng thủy (precipitation), \(ET\) là bốc thoát hơi nước (evapotranspiration), \(Q\) là dòng chảy mặt hoặc dòng sông và \(\Delta S\) là thay đổi lượng nước lưu trữ. Đây là một đẳng thức cân bằng khi chọn đúng không gian và khoảng thời gian phân tích, nhưng sai số đo trong thực tế có thể lớn.
 
-## Watershed
+## Lưu vực
 
-**Drainage basin/watershed (lưu vực / 유역)** là vùng mà nước chảy về cùng outlet. Boundary thường theo ridge topography. Đây là natural functional region quan trọng hơn administrative boundary cho flood, water quality và reservoir management.
+**Lưu vực (drainage basin/watershed / 유역)** là vùng mà nước có xu hướng chảy về cùng một cửa thoát. Ranh giới thường theo đường phân thủy trên các sống địa hình. Đây là một vùng chức năng tự nhiên quan trọng hơn ranh giới hành chính khi phân tích lũ, chất lượng nước và vận hành hồ chứa.
 
-## Infiltration và runoff
+## Thấm và dòng chảy mặt
 
-Rainfall trở thành runoff khi intensity vượt infiltration capacity hoặc soil đã saturated. Urban impervious surface giảm infiltration và storage, làm hydrograph peak cao/nhanh hơn. Storm sewer có thể chuyển nước nhanh hơn về channel, đôi khi tăng downstream flood risk.
+Mưa trở thành dòng chảy mặt khi cường độ mưa vượt **khả năng thấm (infiltration capacity)** hoặc khi đất đã bão hòa. Bề mặt không thấm trong đô thị làm giảm thấm và giảm khả năng trữ tạm thời, khiến đỉnh **đường quá trình lũ (hydrograph)** cao hơn và đến nhanh hơn. Hệ thống cống thoát nước có thể chuyển nước nhanh về sông, đôi khi làm tăng rủi ro lũ ở hạ lưu.
 
-## River discharge
+## Lưu lượng sông
 
-Discharge:
+Lưu lượng có thể viết:
 
 \[
 Q = A v
 \]
 
-trong đó \(A\) là cross-sectional area và \(v\) là mean velocity. Đơn vị thường m³/s. Formula đơn giản nhưng measurement velocity field thực tế phức tạp.
+trong đó \(A\) là diện tích mặt cắt ngang và \(v\) là vận tốc trung bình. Đơn vị thường là m³/s. Công thức đơn giản nhưng trường vận tốc thực tế trong lòng sông có thể rất phức tạp.
 
-## Groundwater
+## Nước ngầm
 
-Water infiltrate có thể xuống **aquifer (tầng chứa nước / 대수층)**. Groundwater không phải underground river ở mọi nơi; thường flow chậm qua pore/fracture theo hydraulic gradient. **Water table** là boundary nơi pore pressure bằng atmospheric pressure trong unconfined aquifer.
+Nước thấm xuống có thể đi vào **tầng chứa nước (aquifer / 대수층)**. Nước ngầm không phải lúc nào cũng là “sông ngầm”; thường nó chảy chậm qua lỗ rỗng hoặc khe nứt theo **gradient thủy lực (hydraulic gradient)**. **Mực nước ngầm (water table)** là bề mặt mà áp suất nước trong lỗ rỗng bằng áp suất khí quyển trong tầng chứa nước không áp.
 
-Pumping quá mức có thể hạ water table, gây land subsidence và saltwater intrusion ở coast. Groundwater recharge có timescale từ mùa đến hàng nghìn năm, nên “nước dưới đất còn nhiều” không đồng nghĩa renewable nhanh.
+Khai thác quá mức có thể làm hạ mực nước ngầm, gây sụt lún đất và xâm nhập mặn ở ven biển. Thời gian bổ cập nước ngầm có thể từ một mùa đến hàng nghìn năm, nên “dưới đất còn nhiều nước” không đồng nghĩa nguồn đó tái tạo nhanh.
 
-## Flood
+## Lũ
 
-Flood hazard phụ thuộc rainfall, snowmelt, basin size, soil, topography và channel; disaster impact còn phụ thuộc exposure và vulnerability. Một floodplain có thể xây được nhưng cần chấp nhận/mitigate risk.
+Hiểm họa lũ phụ thuộc lượng mưa, tuyết tan, kích thước lưu vực, đất, địa hình và lòng sông; thiệt hại còn phụ thuộc mức độ phơi lộ và tính dễ tổn thương của con người. Đồng bằng ngập lũ có thể được xây dựng nhưng phải chấp nhận và giảm thiểu rủi ro tương ứng.
 
-## Drought
+## Hạn hán
 
-Drought không chỉ là ít mưa. Meteorological drought nói precipitation deficit; agricultural drought liên quan soil moisture; hydrological drought liên quan river/reservoir/groundwater. Một region có thể hết meteorological drought nhưng reservoir vẫn chưa recover.
+Hạn hán không chỉ là ít mưa. **Hạn khí tượng (meteorological drought)** nói về thiếu hụt giáng thủy; **hạn nông nghiệp (agricultural drought)** liên quan độ ẩm đất; **hạn thủy văn (hydrological drought)** liên quan sông, hồ chứa và nước ngầm. Một vùng có thể đã hết hạn khí tượng nhưng hồ chứa vẫn chưa phục hồi.
 
-## Transboundary rivers
+## Sông xuyên biên giới
 
-River basin vượt border tạo water politics. Upstream dam thay đổi timing, sediment và flow downstream; nhưng impact cụ thể cần data, operating rule và hydrology, không thể suy chỉ từ vị trí upstream/downstream.
+Lưu vực vượt qua biên giới quốc gia tạo ra bài toán chính trị nước. Đập thượng nguồn có thể thay đổi thời điểm dòng chảy, lượng trầm tích và chế độ nước ở hạ lưu; nhưng tác động cụ thể cần dữ liệu, quy tắc vận hành và mô hình thủy văn, không thể chỉ suy ra từ vị trí thượng nguồn–hạ lưu.
 
-## Mental Model
+## Mô hình tư duy
 
-Hãy coi watershed như **network có input, storage, routing và outlet**. Flood là vấn đề timing và capacity, không chỉ total rain. Groundwater là storage lớn nhưng thường slow recharge.
+Hãy coi lưu vực như **một mạng có đầu vào, kho lưu trữ, đường truyền và cửa thoát**. Lũ là vấn đề về thời điểm và năng lực thoát nước, không chỉ tổng lượng mưa. Nước ngầm là kho chứa lớn nhưng thường được bổ cập chậm.
 
-Xem tiếp: [Oceans và coast](./05_oceans_coasts.md), [Water–food–energy nexus](../04_global_systems/01_water_food_energy_nexus.md).
+Xem tiếp: [Đại dương và bờ biển](./05_oceans_coasts.md), [Mối liên hệ nước–lương thực–năng lượng](../04_global_systems/01_water_food_energy_nexus.md).

@@ -1,31 +1,35 @@
 # Mỹ Latinh và Caribbean
 
-## Andes, Amazon và coastal concentration
+## Andes, Amazon và sự tập trung dân cư
 
-Latin America có physical contrasts cực lớn: Andes mountain chain, Amazon basin, Brazilian Highlands, Pampas, deserts và Caribbean islands. Andes tạo altitude-based climate/ecology; Amazon là major water/forest system; many populations concentrate on coasts/highlands rather than deep interior.
+Mỹ Latinh có tương phản tự nhiên rất lớn: dãy Andes, lưu vực Amazon, cao nguyên Brazil, Pampas, hoang mạc và các đảo Caribbean. Andes tạo phân hóa khí hậu và sinh thái theo độ cao; Amazon là hệ nước–rừng quy mô rất lớn; dân cư ở nhiều quốc gia tập trung ven biển hoặc trên cao nguyên hơn là sâu trong nội địa.
 
-## Altitudinal zonation
+## Phân tầng theo độ cao
 
-Ở tropics, elevation có thể thay climate nhanh hơn latitude. Highland city có cooler climate dù gần Equator. Agriculture historically phân tầng theo elevation; modern transport làm specialization linh hoạt hơn nhưng biophysical gradient vẫn quan trọng.
+Ở vùng nhiệt đới, thay đổi độ cao có thể làm khí hậu đổi nhanh hơn thay đổi vĩ độ. Thành phố vùng cao có thể mát hơn nhiều dù nằm gần Xích đạo. Nông nghiệp trong lịch sử thường phân tầng theo độ cao; giao thông hiện đại làm chuyên môn hóa linh hoạt hơn nhưng gradient sinh–vật lý vẫn quan trọng.
 
-## Amazon system
+## Hệ Amazon
 
-Amazon basin có immense river discharge và rainforest evapotranspiration. Forest recycling moisture ảnh hưởng regional rainfall; deforestation không chỉ là local land-cover change mà có potential feedback lên water cycle.
+Lưu vực Amazon có lưu lượng sông cực lớn và mức bốc thoát hơi nước cao từ rừng. Rừng tái tuần hoàn độ ẩm và ảnh hưởng lượng mưa khu vực; vì vậy phá rừng không chỉ là thay đổi lớp phủ đất cục bộ mà còn có thể tạo **phản hồi lên chu trình nước (water-cycle feedback)**.
 
-## Urban primacy
+## Tính vượt trội của đô thị chính
 
-Nhiều countries có capital/leading city chiếm tỷ trọng economic/political rất lớn. Buenos Aires, Lima, Santiago, Mexico City, São Paulo/Rio systems cho thấy varying degrees of primacy and polycentricity.
+Ở nhiều quốc gia, thủ đô hoặc thành phố dẫn đầu chiếm tỷ trọng kinh tế–chính trị rất lớn. Khái niệm **tính vượt trội đô thị (urban primacy)** giúp mô tả hiện tượng này, nhưng mức độ khác nhau giữa Buenos Aires, Lima, Santiago, Mexico City hay hệ São Paulo–Rio.
 
-## Commodity geography
+## Địa lý hàng hóa
 
-Soy, beef, copper, lithium, oil, coffee và other commodities link region với global markets. Price cycle có spatial effect lên mining town, port, railway và fiscal revenue.
+Đậu tương, thịt bò, đồng, lithium, dầu, cà phê và nhiều hàng hóa khác nối vùng với thị trường toàn cầu. Chu kỳ giá có tác động không gian rõ: thành phố mỏ, cảng, đường sắt và thu ngân sách của địa phương có thể cùng tăng hoặc giảm theo chu kỳ hàng hóa.
 
-## Caribbean islands
+## Các đảo Caribbean
 
-Small-island geography tạo high coastal exposure, limited land/water resources và trade dependence. Tourism có thể dominate economy nhưng cũng làm demand seasonal và vulnerability to hurricane/global travel shock cao.
+Địa lý đảo nhỏ tạo mức phơi lộ ven biển cao, diện tích đất và nước hạn chế và phụ thuộc thương mại lớn. Du lịch có thể chiếm tỷ trọng kinh tế cao nhưng cũng làm nhu cầu mang tính mùa và tăng mức dễ tổn thương với bão hoặc cú sốc du lịch toàn cầu.
 
-## Inequality and informality
+## Bất bình đẳng và tính phi chính thức
 
-Urban inequality thường biểu hiện rất rõ spatially: gated high-income zones gần informal settlements hoặc peripheral low-access housing. Transport time trở thành inequality mechanism.
+Bất bình đẳng đô thị thường thể hiện rất rõ trong không gian: khu thu nhập cao có cổng kiểm soát có thể nằm gần khu định cư phi chính thức hoặc khu nhà ở ngoại vi khó tiếp cận. Thời gian đi lại vì thế có thể trở thành một cơ chế của bất bình đẳng.
 
-Xem thêm: [Climate systems](../01_physical_geography/03_global_climate_system.md), [Development](../02_human_geography/09_development_inequality.md).
+Xem thêm: [Hệ khí hậu](../01_physical_geography/03_global_climate_system.md), [Phát triển](../02_human_geography/09_development_inequality.md).
+
+## Mô hình tư duy
+
+> Hãy đọc Mỹ Latinh và Caribbean qua **địa hình cực tương phản + lưu vực lớn + đô thị hóa tập trung + chuỗi hàng hóa toàn cầu + tính dễ tổn thương ven biển**. Cùng một nhãn vùng chứa nhiều quỹ đạo rất khác nhau nên luôn cần thu nhỏ quy mô phân tích.

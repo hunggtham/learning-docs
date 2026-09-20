@@ -1,29 +1,29 @@
 # Cách đọc một vùng địa lý
 
-## Region là một model phân tích
+## Vùng là một mô hình phân tích
 
-Một region không phải hộp tự nhiên có ranh giới bất biến. Ta chia thế giới thành East Asia, Southeast Asia, Europe, Sahel hay Arctic vì mỗi grouping làm một pattern trở nên dễ thấy. Vì vậy trước khi học một region, cần hỏi: **tiêu chí grouping là physical, historical, economic, cultural hay political?**
+Một **vùng (region)** không phải chiếc hộp tự nhiên có ranh giới bất biến. Ta chia thế giới thành Đông Á, Đông Nam Á, châu Âu, Sahel hay Bắc Cực vì mỗi cách nhóm làm một mẫu không gian trở nên dễ quan sát hơn. Vì vậy trước khi học một vùng, cần hỏi: **tiêu chí phân vùng dựa trên tự nhiên, lịch sử, kinh tế, văn hóa hay chính trị?**
 
-## Khung đọc region
+## Khung đọc một vùng
 
-Một region nên được đọc theo các lớp có quan hệ nhân quả. Physical base gồm latitude, topography, coast, climate, river và resource. Human layer gồm population, settlement, language, institutions và historical path. Network layer gồm transport corridors, ports, trade, migration và information flow. Cuối cùng là pressures như aging, water stress, hazard, inequality hay climate change.
+Một vùng nên được đọc theo các lớp có quan hệ nhân quả. Nền tự nhiên gồm vĩ độ, địa hình, bờ biển, khí hậu, sông và tài nguyên. Lớp con người gồm dân số, khu định cư, ngôn ngữ, thể chế và quỹ đạo lịch sử. Lớp mạng lưới gồm hành lang giao thông, cảng, thương mại, di cư và dòng thông tin. Cuối cùng là những áp lực như già hóa, thiếu nước, hiểm họa, bất bình đẳng hoặc biến đổi khí hậu.
 
-Đừng học country theo danh sách capital–population. Hãy tìm **spatial pattern**. Ví dụ tại sao nhiều megacity Đông Á nằm ở coastal plain? Tại sao settlement Bắc Phi tập trung mạnh dọc Mediterranean coast và Nile? Tại sao Australia có population rất coastal? Những câu hỏi này tạo knowledge graph bền hơn trivia.
+Đừng học các quốc gia chỉ bằng danh sách thủ đô–dân số. Hãy tìm **mẫu không gian (spatial pattern)**. Ví dụ: tại sao nhiều siêu đô thị Đông Á nằm trên đồng bằng ven biển? Tại sao dân cư Bắc Phi tập trung mạnh dọc Địa Trung Hải và sông Nile? Tại sao dân số Australia tập trung gần bờ biển? Những câu hỏi như vậy tạo mạng kiến thức bền hơn việc nhớ các dữ kiện rời rạc.
 
 ## So sánh mà không đồng nhất hóa
 
-Regional label giúp reasoning nhưng dễ tạo stereotype. “Africa”, “Europe”, “Middle East” hay “Latin America” đều chứa diversity rất lớn. Một statement đúng ở macro scale có thể sai ở subregion. Khi một chapter nói “region thường…”, hãy hiểu đó là pattern có exception, không phải property của mọi place.
+Nhãn vùng giúp suy luận nhưng dễ tạo định kiến. “Châu Phi”, “châu Âu”, “Trung Đông” hay “Mỹ Latinh” đều chứa mức đa dạng rất lớn. Một nhận định đúng ở quy mô lục địa có thể sai khi thu hẹp xuống tiểu vùng. Khi một chapter viết “vùng này thường…”, hãy hiểu đó là một mẫu có ngoại lệ chứ không phải đặc tính của mọi nơi.
 
-## Five-layer method
+## Phương pháp năm lớp
 
-Có thể dùng năm lớp để đọc bất kỳ region nào:
+Có thể dùng năm lớp để đọc bất kỳ vùng nào:
 
-1. **Physical frame:** tectonics, terrain, climate, water, coast.
-2. **Population frame:** density, age, migration, city system.
-3. **Production frame:** agriculture, industry, service, energy/resource.
-4. **Network frame:** port, corridor, trade, digital connectivity.
-5. **Constraint/transition frame:** hazard, climate, demographic, institutional và geopolitical pressure.
+1. **Khung tự nhiên:** kiến tạo, địa hình, khí hậu, nước, bờ biển.
+2. **Khung dân số:** mật độ, cơ cấu tuổi, di cư, hệ thống đô thị.
+3. **Khung sản xuất:** nông nghiệp, công nghiệp, dịch vụ, năng lượng và tài nguyên.
+4. **Khung mạng lưới:** cảng, hành lang, thương mại, kết nối số.
+5. **Khung ràng buộc và chuyển đổi:** hiểm họa, khí hậu, nhân khẩu, thể chế và áp lực địa chính trị.
 
-Các chapter sau dùng logic này nhưng không lặp thành template máy móc.
+Các chapter sau dùng logic này nhưng không lặp lại thành khuôn mẫu máy móc.
 
-Xem thêm: [Tư duy địa lý](../00_foundations/00_geographical_thinking.md), [Kinh tế địa lý](../02_human_geography/05_economic_geography.md).
+Xem thêm: [Tư duy địa lý](../00_foundations/00_geographical_thinking.md), [Địa lý kinh tế](../02_human_geography/05_economic_geography.md).

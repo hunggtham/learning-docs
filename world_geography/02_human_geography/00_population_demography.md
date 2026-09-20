@@ -2,11 +2,11 @@
 
 ## Dân số không chỉ là một con số tổng
 
-**Demography (nhân khẩu học / 인구학)** nghiên cứu population size, structure và change thông qua fertility, mortality và migration. Geography thêm câu hỏi: population nằm ở đâu, density và settlement pattern thế nào, và environment/infrastructure tương tác với population ra sao.
+**Nhân khẩu học (demography / 인구학)** nghiên cứu quy mô, cơ cấu và sự biến đổi dân số thông qua sinh, tử và di cư. Địa lý bổ sung câu hỏi: dân số nằm ở đâu, mật độ và kiểu định cư ra sao, môi trường và hạ tầng tương tác với dân số như thế nào.
 
-Một quốc gia 50 triệu dân phân bố đều rất khác một quốc gia 50 triệu dân tập trung vào vài metropolitan corridors. Vì vậy population count phải đi cùng density, age structure, urbanization và mobility.
+Một quốc gia 50 triệu dân phân bố tương đối đều rất khác một quốc gia 50 triệu dân tập trung trong vài hành lang đô thị lớn. Vì vậy tổng dân số phải được đọc cùng mật độ, cơ cấu tuổi, mức đô thị hóa và khả năng di chuyển.
 
-## Population change
+## Biến động dân số
 
 Ở mức đơn giản:
 
@@ -14,40 +14,40 @@ Một quốc gia 50 triệu dân phân bố đều rất khác một quốc gia 
 \Delta P = B - D + I - E
 \]
 
-trong đó \(B\) là births, \(D\) deaths, \(I\) immigration và \(E\) emigration. Natural increase là births minus deaths; net migration là immigration minus emigration.
+Trong đó \(B\) là số sinh, \(D\) là số tử, \(I\) là nhập cư và \(E\) là xuất cư. **Gia tăng tự nhiên (natural increase)** bằng số sinh trừ số tử; **di cư ròng (net migration)** bằng nhập cư trừ xuất cư.
 
-## Fertility và replacement
+## Mức sinh và mức sinh thay thế
 
-**Total Fertility Rate (TFR / 합계출산율)** là average number of children một woman sẽ sinh nếu trải qua age-specific fertility rates hiện tại. Replacement level không phải luôn đúng 2.0; nó thường quanh 2.1 ở low-mortality population nhưng thay đổi theo survival và sex ratio.
+**Tổng tỷ suất sinh (TFR — Total Fertility Rate / 합계출산율)** là số con trung bình một phụ nữ sẽ sinh nếu trải qua các mức sinh theo tuổi hiện tại trong suốt thời kỳ sinh sản. Mức sinh thay thế không phải lúc nào cũng đúng 2,0; ở quần thể có tử vong thấp thường khoảng 2,1 nhưng còn phụ thuộc khả năng sống sót và tỷ số giới tính.
 
-TFR thấp không làm population giảm ngay vì **population momentum**: nếu cohort trẻ vẫn lớn, số births có thể còn cao dù fertility đã giảm. Ngược lại, age structure già khiến population decline có thể tiếp tục ngay cả nếu fertility nhích lên.
+TFR thấp không làm dân số giảm ngay vì **quán tính dân số (population momentum)**. Nếu nhóm tuổi trẻ vẫn rất đông, số trẻ sinh ra có thể còn cao dù mức sinh đã giảm. Ngược lại, cơ cấu tuổi già khiến dân số có thể tiếp tục giảm ngay cả khi mức sinh nhích lên.
 
-## Age structure
+## Cơ cấu tuổi
 
-Population pyramid là visualization age–sex structure. Base rộng thường gợi ý high recent fertility; top rộng hơn phản ánh aging. Nhưng migration có thể tạo bulge ở working age.
+**Tháp dân số (population pyramid)** trực quan hóa cơ cấu tuổi–giới tính. Đáy rộng thường gợi ý mức sinh gần đây cao; phần trên rộng hơn phản ánh già hóa. Tuy nhiên di cư có thể tạo chỗ phình lớn ở nhóm tuổi lao động.
 
-Age structure ảnh hưởng school demand, labor market, pension, healthcare và housing. Hai nước cùng population size nhưng median age khác nhau sẽ có economic constraints khác.
+Cơ cấu tuổi ảnh hưởng nhu cầu trường học, thị trường lao động, lương hưu, y tế và nhà ở. Hai nước có cùng quy mô dân số nhưng tuổi trung vị khác nhau sẽ đối mặt các ràng buộc kinh tế–xã hội rất khác.
 
-## Demographic transition
+## Chuyển đổi nhân khẩu học
 
-**Demographic Transition Model (인구변천모형)** mô tả historical pattern từ high birth/death rates đến low birth/death rates khi societies industrialize và urbanize. Model hữu ích như abstraction nhưng không phải universal law; timing, institutions, culture, migration và policy tạo trajectory khác nhau.
+**Mô hình chuyển đổi nhân khẩu học (Demographic Transition Model / 인구변천모형)** mô tả một mẫu lịch sử thường gặp: xã hội chuyển từ mức sinh và tử cao sang mức sinh và tử thấp trong quá trình công nghiệp hóa và đô thị hóa. Đây là mô hình khái quát hữu ích chứ không phải định luật phổ quát; thời điểm, thể chế, văn hóa, di cư và chính sách tạo ra quỹ đạo khác nhau.
 
-## Density và carrying capacity
+## Mật độ và sức chứa
 
-**Arithmetic density** = population / total area. Nhưng mountain/desert làm denominator misleading. **Physiological density** so population với arable land, cho insight khác về pressure lên agricultural land.
+**Mật độ số học (arithmetic density)** bằng dân số chia tổng diện tích. Tuy nhiên núi hoặc hoang mạc có thể làm mẫu số gây hiểu lầm. **Mật độ sinh lý (physiological density)** so dân số với diện tích đất canh tác, cho một góc nhìn khác về áp lực lên đất nông nghiệp.
 
-“Carrying capacity” ở human geography không phải fixed biological number. Technology, trade, diet, energy và institutions thay đổi khả năng support population. City có thể nuôi hàng triệu người nhờ food/energy import từ xa.
+**Sức chứa (carrying capacity)** trong địa lý con người không phải một con số sinh học cố định. Công nghệ, thương mại, chế độ ăn, năng lượng và thể chế làm thay đổi số người mà một vùng có thể hỗ trợ. Thành phố có thể nuôi hàng triệu người nhờ nhập lương thực và năng lượng từ xa.
 
-## Population data và bias
+## Dữ liệu dân số và sai lệch
 
-Census, registration và survey đều có error. Undocumented migration, nomadic population, conflict và weak administration làm undercount. Khi compare countries, cần kiểm tra definition và reference year.
+Điều tra dân số, đăng ký hành chính và khảo sát đều có sai số. Di cư không giấy tờ, dân du mục, xung đột và năng lực hành chính yếu có thể làm thiếu đếm. Khi so sánh giữa các quốc gia, cần kiểm tra định nghĩa và năm tham chiếu của số liệu.
 
-## Connection với IT và business
+## Liên hệ với IT và kinh doanh
 
-Location intelligence dùng demographic raster/census tract để site selection, market sizing, delivery network và public service planning. Nhưng aggregation có privacy risk và ecological fallacy: “khu vực thu nhập cao” không có nghĩa mọi resident đều thu nhập cao.
+**Phân tích vị trí (location intelligence)** dùng dữ liệu điều tra dân số hoặc raster dân số để chọn địa điểm kinh doanh, ước lượng thị trường, thiết kế mạng giao hàng và lập kế hoạch dịch vụ công. Tuy nhiên dữ liệu tổng hợp có rủi ro riêng tư và có thể dẫn đến **ngụy biện sinh thái (ecological fallacy)**: “khu vực thu nhập cao” không có nghĩa mọi cư dân đều có thu nhập cao.
 
-## Mental Model
+## Mô hình tư duy
 
-Population là **stock**; birth, death và migration là **flows**. Age structure là memory của past flows. Muốn hiểu tương lai population, đừng chỉ nhìn current growth rate; hãy nhìn cohort structure và migration regime.
+Dân số là một **lượng tích lũy (stock)**; sinh, tử và di cư là các **dòng thay đổi (flow)**. Cơ cấu tuổi là dấu vết của những dòng trong quá khứ. Muốn hiểu tương lai dân số, đừng chỉ nhìn tốc độ tăng hiện tại; hãy nhìn cấu trúc thế hệ và chế độ di cư.
 
-Xem tiếp: [Migration](./01_migration.md), [Urbanization](./02_settlement_urbanization.md), [Development](./09_development_inequality.md).
+Xem tiếp: [Di cư](./01_migration.md), [Đô thị hóa](./02_settlement_urbanization.md), [Phát triển](./09_development_inequality.md).

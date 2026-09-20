@@ -1,55 +1,45 @@
-# Arctic và Antarctica
+# Bắc Cực và Nam Cực
 
 ## Hai vùng cực không giống nhau
 
-Arctic chủ yếu là ocean surrounded by continents; Antarctica là continent surrounded by ocean. Geometry này tạo climate, ice và geopolitics khác nhau.
+**Bắc Cực (Arctic)** chủ yếu là đại dương được bao quanh bởi các lục địa; **Nam Cực (Antarctica)** là một lục địa cao được bao quanh bởi đại dương. Hình học đối lập này làm khí hậu, băng, hoàn lưu và địa chính trị khác nhau rõ rệt.
 
-## Polar energy balance
+Bắc Cực có các cộng đồng bản địa và nhiều khu định cư thường trú. Nam Cực không có dân cư dân sự thường trú theo nghĩa thông thường, mà chủ yếu có các trạm nghiên cứu hoạt động theo mùa hoặc quanh năm.
 
-Low solar angle và long polar night làm energy input thấp. Snow/ice high albedo phản xạ radiation. Temperature inversion phổ biến vì surface rất cold.
+## Cân bằng năng lượng vùng cực
 
-## Sea ice và land ice
+Góc chiếu Mặt Trời thấp và đêm cực kéo dài làm đầu vào năng lượng nhỏ. Tuyết và băng có **suất phản chiếu (albedo)** cao nên phản xạ nhiều bức xạ. Khi băng giảm, bề mặt tối hơn hấp thụ nhiều năng lượng hơn, tạo **phản hồi băng–suất phản chiếu (ice–albedo feedback)** và có thể khuếch đại xu hướng ấm lên.
 
-Melting **sea ice** không trực tiếp nâng sea level nhiều theo Archimedes vì đã nổi; melting **land ice** thêm water vào ocean và làm sea level tăng. Tuy nhiên sea-ice loss ảnh hưởng albedo, ecosystem và ocean-atmosphere exchange.
+## Băng biển khác băng trên đất liền
 
-## Arctic amplification
+Băng biển đang nổi khi tan không trực tiếp làm mực nước biển tăng đáng kể theo nguyên lý Archimedes, vì nó đã chiếm chỗ trong nước. Ngược lại, băng trên đất liền ở Greenland hoặc Nam Cực khi mất đi sẽ bổ sung nước vào đại dương và làm mực nước biển tăng.
 
-Arctic warming nhanh hơn global average do feedback liên quan sea ice, lapse rate và heat transport. Consequence gồm permafrost thaw, ecosystem shift và navigation season change.
+Mất băng biển vẫn rất quan trọng vì ảnh hưởng suất phản chiếu, hệ sinh thái và trao đổi đại dương–khí quyển.
 
-## Permafrost
+## Khuếch đại Bắc Cực
 
-Permafrost là ground ≤0°C ít nhất hai năm liên tiếp; active layer trên cùng thaw theo mùa. Thaw làm foundation/road/pipeline unstable và có thể release greenhouse gases từ stored carbon.
+Bắc Cực đang ấm lên nhanh hơn trung bình toàn cầu do nhiều phản hồi liên quan băng biển, cấu trúc nhiệt khí quyển và vận chuyển nhiệt. Hệ quả gồm tan băng vĩnh cửu, thay đổi hệ sinh thái và mùa hàng hải dài hơn ở một số nơi.
 
-## Antarctica
+## Băng vĩnh cửu
 
-Antarctic ice sheet chứa phần lớn freshwater ice trên Earth. Ice flow dynamics, ice shelves và ocean interaction quyết định mass balance. Interior cực khô dù covered ice — polar desert là reminder rằng desert = low precipitation, không phải heat.
+**Băng vĩnh cửu (permafrost)** là nền đất duy trì ở 0°C hoặc thấp hơn ít nhất hai năm liên tiếp. Lớp hoạt động phía trên tan theo mùa. Khi permafrost tan, nền móng, đường và đường ống có thể mất ổn định; carbon tích trữ trong đất cũng có thể được giải phóng dưới dạng khí nhà kính.
 
-## Research and logistics
+## Nam Cực
 
-Extreme distance, cold và seasonal daylight làm science station phụ thuộc sophisticated logistics. Polar remote sensing đặc biệt quan trọng vì ground observations sparse.
+Tấm băng Nam Cực chứa phần lớn băng nước ngọt trên Trái Đất. Dòng chảy băng, thềm băng và tương tác với đại dương quyết định cân bằng khối lượng. Nội địa Nam Cực cực kỳ khô dù phủ băng — nhắc lại rằng **hoang mạc được xác định bởi lượng mưa thấp, không phải nhiệt độ cao**.
 
-Xem thêm: [Earth system](../00_foundations/01_earth_as_system.md), [Climate change](../04_global_systems/00_climate_change.md).
+## Khả năng tiếp cận thay đổi theo mùa
 
-## Polar geography bắt đầu từ energy balance
+Tuyến vùng cực không có mức tiếp cận cố định. Băng biển, thời tiết, ánh sáng theo mùa và hạ tầng làm chi phí đi lại biến động mạnh trong năm. Vì vậy khoảng cách trên bản đồ không đủ nếu bỏ qua chiều thời gian.
 
-Arctic và Antarctica nhận solar energy thấp do sun angle nhỏ và seasonal darkness. Snow/ice có albedo cao nên phản xạ nhiều radiation, tạo feedback với temperature. Khi ice giảm, darker surface hấp thụ nhiều energy hơn, làm warming dễ tiếp tục — gọi là **ice–albedo feedback (피드백 / phản hồi băng–suất phản chiếu)**.
+## Khoa học và địa chính trị
 
-## Arctic và Antarctica không giống nhau
+Khoảng cách lớn, lạnh và ánh sáng theo mùa khiến các trạm nghiên cứu phụ thuộc logistics phức tạp. Viễn thám đặc biệt quan trọng vì quan trắc mặt đất thưa.
 
-Arctic chủ yếu là ocean được bao quanh bởi continents; Antarctica là continent cao được bao quanh bởi ocean. Geometry này làm atmospheric/ocean circulation, ice dynamics và human geography khác nhau rõ rệt. Arctic có permanent indigenous populations và nhiều settlements; Antarctica không có permanent civilian population theo nghĩa thông thường.
+Vùng cực cũng quan trọng với nghiên cứu khí hậu, hoàn lưu đại dương, tài nguyên và vận tải. Tuy nhiên việc một tuyến biển “mở hơn” về vật lý không đồng nghĩa nó tự động cạnh tranh kinh tế; bảo hiểm, cảng hỗ trợ, điều kiện băng, quy định và độ dài mùa khai thác đều quyết định tính khả thi.
 
-## Sea ice khác land ice
+Xem thêm: [Hệ Trái Đất](../00_foundations/01_earth_as_system.md), [Biến đổi khí hậu](../04_global_systems/00_climate_change.md).
 
-Melting floating sea ice không trực tiếp làm sea level tăng đáng kể vì nó đã displacement water, trong khi land ice loss từ Greenland hoặc Antarctic ice sheet chuyển additional water vào ocean. Đây là một misconception phổ biến cần phân biệt bằng Archimedes principle.
+## Mô hình tư duy
 
-## Accessibility thay đổi theo season
-
-Polar route không có accessibility cố định. Sea ice, weather, daylight và infrastructure làm travel cost biến động mạnh theo season. Vì vậy map distance ít hữu ích nếu không thêm temporal dimension.
-
-## Science và geopolitics
-
-Polar regions quan trọng cho climate observation, ocean circulation, resource access và shipping. Nhưng physical opening của route không đồng nghĩa route sẽ tự động economically competitive; insurance, port support, ice condition, regulatory framework và season length đều quyết định viability.
-
-## Mental Model
-
-> Polar geography là **energy balance + ice dynamics + seasonal accessibility**. Đây là nơi thay đổi nhỏ trong climate system có thể gây spatial consequences rất lớn.
+> Địa lý vùng cực là **cân bằng năng lượng + động lực băng + khả năng tiếp cận theo mùa**. Đây là nơi thay đổi tương đối nhỏ trong hệ khí hậu có thể tạo hệ quả không gian rất lớn.

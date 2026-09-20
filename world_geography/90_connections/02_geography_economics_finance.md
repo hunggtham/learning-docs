@@ -1,57 +1,49 @@
-# Địa lý kết nối với Economics và Finance
+# Địa lý kết nối với Kinh tế học và Tài chính
 
-## Location tạo basis risk và market segmentation
+## Vị trí tạo phân khúc thị trường và rủi ro cơ sở
 
-Two assets cùng loại có value khác nếu accessibility, hazard, tax, school district hoặc zoning khác. Real estate là geographic asset rõ nhất: location không thể replicate hoàn toàn.
+Hai tài sản cùng loại có thể có giá trị rất khác nếu khả năng tiếp cận, hiểm họa, thuế, khu trường học hoặc quy hoạch khác nhau. Bất động sản là ví dụ rõ nhất về một **tài sản địa lý**: vị trí không thể sao chép hoàn toàn.
 
-## Land rent
+## Địa tô và giá đất
 
-Land price capitalizes expected future accessibility và permissible use. Metro station mới có thể tăng value nearby, nhưng effect phụ thuộc walking distance, noise, zoning và broader market. Đây là spatial causal inference problem, không chỉ simple before/after price comparison.
+Giá đất phản ánh một phần kỳ vọng về khả năng tiếp cận trong tương lai và mục đích sử dụng được phép. Ga metro mới có thể làm giá trị gần đó tăng nhưng mức tác động phụ thuộc khoảng cách đi bộ, tiếng ồn, quy hoạch và thị trường rộng hơn. Đây là bài toán **suy luận nhân quả không gian (spatial causal inference)**, không chỉ là so giá đơn giản trước và sau.
 
-## Regional business cycle
+## Lý thuyết vị trí và bề mặt chi phí
 
-Commodity region nhạy với global price khác service city. National GDP growth có thể che local recession. Finance/credit analysis doanh nghiệp nên hiểu regional demand và supply-chain geography.
+Hoạt động kinh tế chọn vị trí bằng cách cân bằng chi phí đất, lao động, vận chuyển, tiếp cận thị trường và lợi ích tập tụ. Kho gần thành phố giảm thời gian giao chặng cuối nhưng đất đắt; kho xa thành phố có đất rẻ nhưng chi phí vận chuyển cao. Đây là bài toán tối ưu hóa có ràng buộc không gian.
 
-## Currency và trade geography
+## Tập tụ và tắc nghẽn
 
-Exporter revenue và importer cost phụ thuộc exchange rate, nhưng physical route, tariff và shipping cost quyết định pass-through. Currency shock có spatial effect khác theo sector cluster.
+Khi doanh nghiệp tập trung, họ hưởng mạng nhà cung cấp, nguồn lao động kỹ năng và lan tỏa tri thức. Nhưng mật độ cũng tạo tắc nghẽn, giá thuê cao và ô nhiễm. Kinh tế đô thị thường cân bằng hai lực: **lợi ích tập tụ (agglomeration benefit)** tăng khi mức tập trung tăng, trong khi **chi phí tắc nghẽn (congestion cost)** cũng tăng.
 
-## Insurance
+## Chu kỳ kinh doanh theo vùng
 
-Property insurance pricing dùng hazard maps cho flood, wildfire, storm và earthquake. Risk không chỉ hazard: building characteristics và mitigation matter. Climate nonstationarity làm historical loss data ít reliable hơn nếu dùng một mình.
+Vùng phụ thuộc hàng hóa cơ bản nhạy với giá toàn cầu theo cách khác thành phố dịch vụ. Tăng trưởng GDP quốc gia có thể che suy thoái địa phương. Phân tích tín dụng doanh nghiệp vì vậy nên hiểu cầu khu vực và địa lý chuỗi cung ứng.
 
-## Portfolio diversification và geography
+## Tỷ giá và địa lý thương mại
 
-Hai investments ở different countries không nhất thiết geographically diversified nếu cùng phụ thuộc một commodity route, supplier hoặc climate phenomenon. True diversification cần nhìn shared exposure network.
+Doanh thu nhà xuất khẩu và chi phí nhà nhập khẩu phụ thuộc tỷ giá, nhưng tuyến vật lý, thuế quan và chi phí vận tải quyết định mức **truyền dẫn (pass-through)** vào giá. Cú sốc tỷ giá vì thế có tác động không gian khác nhau theo cụm ngành.
 
-## Supply-chain finance
+## Địa lý của phần bù rủi ro
 
-Working capital và inventory policy chịu lead time. Chokepoint disruption tăng transit days, làm cash conversion cycle và inventory requirement thay đổi. Geography đi thẳng vào finance model.
+Tài chính thường mô hình hóa rủi ro bằng các con số, nhưng rủi ro nền có vị trí. Phơi lộ đồng bằng ngập lũ, vùng cháy, gián đoạn biên giới hoặc phụ thuộc cảng có thể ảnh hưởng phí bảo hiểm, định giá tài sản và tài trợ chuỗi cung ứng. Dữ liệu không gian ngày càng được dùng để chuyển phơi lộ vật lý thành rủi ro tài chính.
 
-## Mental Model
+## Bảo hiểm
 
-Economics đo incentive và trade-off; geography thêm **where cost/benefit xảy ra và flow qua network nào**. Finance risk tốt cần map common spatial dependencies, không chỉ correlation lịch sử.
+Định giá bảo hiểm tài sản dùng bản đồ hiểm họa cho lũ, cháy, bão và động đất. Rủi ro không chỉ là hiểm họa; đặc tính công trình và biện pháp giảm thiểu cũng quan trọng. Khi khí hậu thay đổi làm phân bố không còn ổn định, dữ liệu tổn thất lịch sử trở nên kém tin cậy nếu dùng một mình.
 
-Xem thêm: [Economic geography](../02_human_geography/05_economic_geography.md), [Geopolitics chokepoints](../04_global_systems/02_geopolitics_chokepoints_resources.md).
+## Đa dạng hóa có chiều không gian
 
+Hai khoản đầu tư ở hai quốc gia khác nhau chưa chắc đã đa dạng nếu cùng phụ thuộc một tuyến hàng hóa, nhà cung cấp hoặc hiện tượng khí hậu. Hai nhà máy ở hai thành phố khác nhau cũng có thể cùng phụ thuộc một lưới điện, cảng hoặc lưu vực.
 
-## Location theory và cost surface
+Khả năng chống chịu thực sự đòi hỏi hiểu **phụ thuộc chung (shared dependency)**. Đây là tương đương địa lý của các tài sản có tương quan trong lý thuyết danh mục đầu tư.
 
-Economic activity chọn location dựa trên trade-off giữa land cost, labor, transport, market access và agglomeration. Một warehouse gần city giảm last-mile time nhưng land expensive; warehouse xa city có land rẻ nhưng transport cost cao. Đây là một optimization problem có spatial constraints.
+## Tài chính chuỗi cung ứng
 
-## Agglomeration và congestion
+Vốn lưu động và chính sách tồn kho chịu ảnh hưởng thời gian giao hàng. Gián đoạn điểm nghẽn làm số ngày vận chuyển tăng, từ đó thay đổi chu kỳ chuyển đổi tiền mặt và nhu cầu tồn kho. Địa lý đi trực tiếp vào mô hình tài chính.
 
-Khi firms cluster, họ hưởng supplier network, skilled labor pool và knowledge spillover. Nhưng density cũng tạo congestion, high rent và pollution. Urban economy thường cân bằng hai forces: **agglomeration benefit** tăng khi concentration tăng, trong khi **congestion cost** cũng tăng.
+## Mô hình tư duy
 
-## Geography của risk premium
+> Kinh tế học đo động cơ và đánh đổi; địa lý bổ sung **chi phí và lợi ích xảy ra ở đâu, dòng đi qua mạng nào**. Phân tích rủi ro tài chính tốt cần lập bản đồ các phụ thuộc không gian chung, không chỉ nhìn tương quan lịch sử.
 
-Finance thường model risk dưới dạng number, nhưng underlying risk có location. Floodplain exposure, wildfire zone, political border disruption hoặc port dependence đều có thể ảnh hưởng insurance premium, asset valuation và supply-chain financing. Spatial data ngày càng được dùng để translate physical exposure thành financial risk.
-
-## Diversification có spatial dimension
-
-Hai factories ở hai cities khác nhau chưa chắc diversified nếu cùng phụ thuộc một power grid, port hoặc river basin. True resilience cần hiểu shared dependency. Đây là geographic analogue của correlated assets trong portfolio theory.
-
-## Mental Model
-
-> Economic geography hỏi không chỉ “bao nhiêu value được tạo ra” mà còn “value nằm ở đâu, phụ thuộc corridor nào, và shock từ đâu có thể truyền tới nó”.
-
+Xem thêm: [Địa lý kinh tế](../02_human_geography/05_economic_geography.md), [Địa chính trị và điểm nghẽn](../04_global_systems/02_geopolitics_chokepoints_resources.md).

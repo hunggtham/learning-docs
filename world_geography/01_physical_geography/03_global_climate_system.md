@@ -1,45 +1,45 @@
 # Hệ khí hậu toàn cầu
 
-## Từ thời tiết riêng lẻ đến climate system
+## Từ thời tiết riêng lẻ đến hệ khí hậu
 
-Climate không chỉ là average weather. Nó là kết quả lâu dài của interaction giữa atmosphere, ocean, cryosphere, land surface và biosphere. Ocean lưu trữ heat lớn, ice thay đổi albedo, vegetation kiểm soát evapotranspiration, còn greenhouse gases ảnh hưởng radiative balance.
+Khí hậu không chỉ là “thời tiết trung bình”. Nó là kết quả lâu dài của sự tương tác giữa khí quyển, đại dương, băng quyển, bề mặt đất và sinh quyển. Đại dương lưu trữ lượng nhiệt lớn, băng thay đổi suất phản chiếu, thảm thực vật kiểm soát bốc thoát hơi nước, còn khí nhà kính ảnh hưởng cân bằng bức xạ.
 
-## Energy balance
+## Cân bằng năng lượng
 
-Ở mức toàn cầu dài hạn, energy absorbed từ Sun phải gần cân bằng outgoing longwave radiation nếu mean temperature ổn định. Greenhouse gases hấp thụ và phát lại infrared radiation, làm effective emission level lên cao hơn và surface cần ấm hơn để system đạt energy balance.
+Ở quy mô toàn cầu và trong thời gian đủ dài, năng lượng Trái Đất hấp thụ từ Mặt Trời phải gần cân bằng với bức xạ sóng dài phát ra ngoài không gian nếu nhiệt độ trung bình ổn định. Khí nhà kính hấp thụ và phát lại bức xạ hồng ngoại, làm độ cao hiệu dụng mà Trái Đất phát nhiệt ra không gian tăng lên; bề mặt vì thế phải ấm hơn để toàn hệ đạt cân bằng năng lượng mới.
 
-**Greenhouse effect (hiệu ứng nhà kính / 온실효과)** là natural phenomenon cần thiết cho habitable climate. Climate change hiện đại liên quan việc con người tăng concentration greenhouse gases, làm radiative forcing thay đổi. Không nên nhầm “greenhouse effect tồn tại” với “mọi warming đều do cùng một cause”.
+**Hiệu ứng nhà kính (greenhouse effect / 온실효과)** là hiện tượng tự nhiên cần thiết để Trái Đất có khí hậu phù hợp cho sự sống như hiện nay. Biến đổi khí hậu hiện đại liên quan việc con người làm tăng nồng độ khí nhà kính, từ đó thay đổi **cưỡng bức bức xạ (radiative forcing)**. Không nên nhầm “hiệu ứng nhà kính tồn tại” với “mọi sự ấm lên đều có cùng một nguyên nhân”.
 
-## Ocean heat transport
+## Vận chuyển nhiệt của đại dương
 
-Ocean currents chuyển heat từ tropics đến higher latitudes. Surface gyres chịu wind và Coriolis; density differences do temperature và salinity góp phần vào deep overturning circulation. Vì water có high heat capacity, coast thường có temperature range nhỏ hơn inland ở cùng latitude.
+Các dòng biển chuyển nhiệt từ vùng nhiệt đới về vĩ độ cao hơn. Hoàn lưu bề mặt chịu ảnh hưởng của gió và Coriolis; chênh lệch mật độ do nhiệt độ và độ mặn góp phần tạo hoàn lưu sâu. Vì nước có nhiệt dung cao, vùng ven biển thường có biên độ nhiệt nhỏ hơn vùng sâu trong lục địa ở cùng vĩ độ.
 
 ## ENSO
 
-**El Niño–Southern Oscillation (ENSO / 엘니뇨·남방진동)** là coupled ocean-atmosphere variability ở tropical Pacific. Bình thường trade winds duy trì warm water phía west Pacific và upwelling lạnh phía east. Trong El Niño, pattern suy yếu/thay đổi; warm water và convection dịch đông hơn, gây teleconnection tới rainfall và temperature nhiều vùng.
+**El Niño–Dao động phương Nam (ENSO — El Niño–Southern Oscillation / 엘니뇨·남방진동)** là biến động liên kết giữa đại dương và khí quyển ở vùng nhiệt đới Thái Bình Dương. Trong điều kiện bình thường, gió tín phong duy trì nước ấm về phía tây Thái Bình Dương và nước lạnh trồi lên ở phía đông. Trong El Niño, cấu trúc này suy yếu hoặc thay đổi; vùng nước ấm và đối lưu dịch về phía đông hơn, tạo **liên hệ từ xa (teleconnection)** tới mưa và nhiệt độ ở nhiều vùng.
 
-ENSO không phải global warming. Nó là internal variability có timescale vài năm, nhưng ảnh hưởng global mean temperature và extreme events từng năm.
+ENSO không phải hiện tượng nóng lên toàn cầu. Nó là **dao động nội tại (internal variability)** có thang thời gian vài năm, nhưng có thể ảnh hưởng nhiệt độ trung bình toàn cầu và mức độ cực đoan của một số hiện tượng trong từng năm.
 
-## Climate classification
+## Phân loại khí hậu
 
-Classification như Köppen dùng temperature và precipitation pattern để group climates gần ecological pattern. Nó hữu ích vì compress complexity, nhưng boundary là threshold do con người chọn; climate thực tế continuous.
+Các hệ phân loại như Köppen dùng mẫu nhiệt độ và giáng thủy để nhóm những khí hậu có đặc điểm gần nhau về sinh thái. Cách làm này hữu ích vì giúp nén sự phức tạp thành các nhóm dễ phân tích, nhưng ranh giới là các ngưỡng do con người quy ước; khí hậu thực tế biến thiên liên tục.
 
-## Continentality, latitude, altitude và ocean influence
+## Tính lục địa, vĩ độ, độ cao và ảnh hưởng đại dương
 
-Latitude ảnh hưởng solar geometry nhưng không đủ để dự đoán climate. Altitude làm temperature thường giảm theo height; ocean moderates temperature; current có thể warming/cooling coast; mountain tạo rain shadow; land cover ảnh hưởng surface flux.
+Vĩ độ ảnh hưởng hình học bức xạ Mặt Trời nhưng không đủ để dự đoán khí hậu. Độ cao làm nhiệt độ thường giảm theo chiều cao; đại dương điều hòa nhiệt; dòng biển có thể làm ấm hoặc lạnh bờ biển; núi tạo bóng mưa; lớp phủ mặt đất ảnh hưởng dòng năng lượng và nước.
 
-Ví dụ Western Europe có winter mild hơn nhiều vùng Canada ở latitude tương tự nhờ Atlantic influence, atmospheric circulation và oceanic heat transport.
+Ví dụ Tây Âu có mùa đông ôn hòa hơn nhiều vùng Canada ở vĩ độ tương tự nhờ ảnh hưởng Đại Tây Dương, hoàn lưu khí quyển và vận chuyển nhiệt của đại dương.
 
-## Climate normals và anomaly
+## Chuẩn khí hậu và độ lệch
 
-Climate analysis thường dùng baseline period để tính **anomaly**: value hiện tại trừ normal. Anomaly giúp so sánh giữa nơi có climatology khác nhau. +2°C anomaly ở tropics và high latitude có contextual meaning khác nhau, nhưng cùng là departure khỏi local baseline.
+Phân tích khí hậu thường dùng một giai đoạn cơ sở để tính **độ lệch (anomaly)**: giá trị hiện tại trừ giá trị chuẩn. Độ lệch giúp so sánh giữa các nơi có khí hậu nền khác nhau. Độ lệch +2°C ở vùng nhiệt đới và vĩ độ cao có ý nghĩa bối cảnh khác nhau, nhưng cùng biểu thị mức lệch khỏi nền khí hậu địa phương.
 
-## Paleoclimate
+## Khí hậu cổ
 
-Để hiểu variability ngoài record instrument ngắn, science dùng proxy như ice core, tree ring, sediment. Proxy không phải thermometer trực tiếp; nó cần calibration và interpretation, nên uncertainty được quantified.
+Để hiểu biến động khí hậu vượt ra ngoài giai đoạn quan trắc bằng thiết bị, khoa học dùng **chỉ thị gián tiếp (proxy)** như lõi băng, vòng cây và trầm tích. Proxy không phải nhiệt kế trực tiếp; nó cần hiệu chuẩn và diễn giải, vì vậy độ bất định phải được định lượng.
 
-## Mental Model
+## Mô hình tư duy
 
-Climate system là **heat-and-water redistribution machine** có memory. Atmosphere phản ứng nhanh; ocean và ice tạo memory dài hơn. Khi forcing thay đổi, response không đồng bộ vì mỗi component có timescale khác.
+Hệ khí hậu là một **cỗ máy phân phối lại nhiệt và nước có trí nhớ**. Khí quyển phản ứng nhanh; đại dương và băng tạo trí nhớ dài hơn. Khi tác động bên ngoài thay đổi, các thành phần phản ứng không đồng bộ vì mỗi thành phần có thang thời gian khác nhau.
 
-Xem tiếp: [Climate change](../04_global_systems/00_climate_change.md), [Biomes](./06_soils_biomes_ecosystems.md), [Water–food–energy nexus](../04_global_systems/01_water_food_energy_nexus.md).
+Xem tiếp: [Biến đổi khí hậu](../04_global_systems/00_climate_change.md), [Quần xã sinh vật](./06_soils_biomes_ecosystems.md), [Mối liên hệ nước–lương thực–năng lượng](../04_global_systems/01_water_food_energy_nexus.md).
