@@ -1,5 +1,19 @@
 # 02 — Asset Classes
 
-Folder này tách riêng từng lớp tài sản để tránh học cổ phiếu, bond, ETF và vàng như những ticker giống nhau trên app. `01_STOCKS_ETF_AND_FUNDS.md` giải thích ownership và fund wrapper. `02_BONDS_RATES_AND_CREDIT.md` đi từ lending tới yield curve, duration và credit spread. `03_REAL_ASSETS_AND_ALTERNATIVES.md` giải thích REIT, vàng, commodities, crypto và vai trò của real assets trong portfolio.
+Domain này giải thích từng nhóm tài sản theo bản chất kinh tế, nguồn lợi nhuận, rủi ro và cách chúng phản ứng trong các economic regime khác nhau. Mục tiêu không phải thuộc tên sản phẩm, mà biết mình đang mua quyền sở hữu, khoản nợ, real asset hay derivative exposure nào.
 
-Sau folder này, hãy chuyển sang `03_company_analysis/` nếu muốn chọn cổ phiếu riêng lẻ, hoặc `04_economics/` nếu muốn hiểu macro driver của các asset classes.
+## Thứ tự đọc
+
+[01_STOCKS_ETF_AND_FUNDS.md](./01_STOCKS_ETF_AND_FUNDS.md) giải thích cổ phiếu, market cap, shareholder economics, index, ETF, NAV, tracking, physical/synthetic replication, currency hedge và leveraged/inverse structures.
+
+[02_BONDS_RATES_AND_CREDIT.md](./02_BONDS_RATES_AND_CREDIT.md) xây nền về coupon, yield, duration, yield curve, real yield, credit spread, default risk và bond funds.
+
+[03_REAL_ASSETS_AND_ALTERNATIVES.md](./03_REAL_ASSETS_AND_ALTERNATIVES.md) đi qua REIT, real estate exposure, gold, commodities, crypto, private credit và các tài sản thay thế.
+
+[04_FACTORS_INDEXING_AND_MULTI_ASSET_BEHAVIOR.md](./04_FACTORS_INDEXING_AND_MULTI_ASSET_BEHAVIOR.md) nâng lên tầng portfolio: market-cap vs equal weight, value, quality, momentum, low volatility, size, smart beta, index methodology, factor crowding, FX exposure và cách correlation thay đổi theo inflation/growth/liquidity regime.
+
+## Sau domain này bạn cần làm được gì?
+
+Bạn cần có khả năng nhìn một sản phẩm và xác định return driver, underlying exposure, duration/credit/FX/factor risk, hiểu vì sao hai ETF cùng tên theme vẫn khác nhau và biết asset class nào đang đóng vai trò growth, income, liquidity hay diversification trong portfolio.
+
+Sau đó chuyển sang [03_company_analysis](../03_company_analysis/README.md) nếu muốn chọn cổ phiếu, hoặc [04_economics](../04_economics/README.md) nếu muốn đi sâu macro trước.
