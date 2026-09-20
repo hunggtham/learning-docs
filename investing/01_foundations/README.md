@@ -1,27 +1,27 @@
-# 01 — Foundations
+# 01 — Nền tảng đầu tư (Foundations)
 
-Domain này xây mental model nền tảng trước khi học từng tài sản hoặc chọn cổ phiếu. Mục tiêu là hiểu hệ thống tài chính, cách giá được hình thành, portfolio risk, cách vận hành một kế hoạch đầu tư trong nhiều năm và cách đánh giá kết quả mà không học sai từ may mắn hoặc market beta.
+Lĩnh vực này xây nền tảng tư duy trước khi học từng loại tài sản hoặc chọn cổ phiếu. Mục tiêu là hiểu hệ thống tài chính, cách giá được hình thành, rủi ro danh mục, cách vận hành một kế hoạch đầu tư nhiều năm và cách đánh giá kết quả mà không nhầm may mắn hoặc beta thị trường với kỹ năng.
 
 ## Thứ tự đọc
 
 [00_MASTER_FOUNDATIONS_AND_PORTFOLIO.md](./00_MASTER_FOUNDATIONS_AND_PORTFOLIO.md) là bản tổng quan dài, dùng để hình thành bản đồ toàn lĩnh vực.
 
-[01_MONEY_FINANCIAL_SYSTEM_AND_MARKET_MECHANICS.md](./01_MONEY_FINANCIAL_SYSTEM_AND_MARKET_MECHANICS.md) đi sâu vào money/deposits/reserves, capital structure, primary/secondary markets, exchange/OTC, broker/custody/clearing/CCP, order book, auctions, liquidity, ETF creation-redemption, securities lending, short selling, settlement và execution risk.
+[01_MONEY_FINANCIAL_SYSTEM_AND_MARKET_MECHANICS.md](./01_MONEY_FINANCIAL_SYSTEM_AND_MARKET_MECHANICS.md) đi sâu về tiền, tiền gửi, dự trữ ngân hàng, cấu trúc vốn, thị trường sơ cấp/thứ cấp, sở giao dịch và thị trường phi tập trung (OTC), môi giới, lưu ký, thanh toán bù trừ, đối tác bù trừ trung tâm (CCP), sổ lệnh, đấu giá, thanh khoản, cơ chế tạo–mua lại ETF, cho vay chứng khoán, bán khống, thanh toán giao dịch và rủi ro thực thi.
 
-[02_PORTFOLIO_RISK_ALLOCATION_AND_BEHAVIOR.md](./02_PORTFOLIO_RISK_ALLOCATION_AND_BEHAVIOR.md) giải thích risk tolerance/capacity/requirement, liability matching, covariance/correlation, risk contribution, factor/concentration risk, strategic/tactical allocation, sequence risk, leverage, risk budgets, behavioral biases, IPS, decision journal và stress testing.
+[02_PORTFOLIO_RISK_ALLOCATION_AND_BEHAVIOR.md](./02_PORTFOLIO_RISK_ALLOCATION_AND_BEHAVIOR.md) giải thích mức chịu đựng rủi ro, khả năng chịu rủi ro, mức rủi ro cần thiết, khớp tài sản với nghĩa vụ, hiệp phương sai, tương quan, đóng góp rủi ro, tập trung nhân tố, phân bổ chiến lược/chiến thuật, rủi ro thứ tự lợi suất, đòn bẩy, ngân sách rủi ro, thiên lệch hành vi, IPS, nhật ký quyết định và kiểm thử căng thẳng.
 
-[03_LIFECYCLE_ALLOCATION_REBALANCING_AND_INVESTMENT_OPERATIONS.md](./03_LIFECYCLE_ALLOCATION_REBALANCING_AND_INVESTMENT_OPERATIONS.md) đưa kiến thức sang vận hành thực tế: human capital, liability matching, strategic/tactical allocation, rebalancing, sequence risk, tax location, custody, transaction cost và portfolio review.
+[03_LIFECYCLE_ALLOCATION_REBALANCING_AND_INVESTMENT_OPERATIONS.md](./03_LIFECYCLE_ALLOCATION_REBALANCING_AND_INVESTMENT_OPERATIONS.md) đưa kiến thức sang vận hành thực tế: vốn con người (human capital), khớp nghĩa vụ, phân bổ chiến lược và chiến thuật, tái cân bằng, rủi ro thứ tự lợi suất, vị trí thuế của tài sản, lưu ký, chi phí giao dịch và đánh giá danh mục.
 
-[04_RISK_MEASUREMENT_PORTFOLIO_ANALYTICS_AND_DECISION_RULES.md](./04_RISK_MEASUREMENT_PORTFOLIO_ANALYTICS_AND_DECISION_RULES.md) xây lớp định lượng: arithmetic/geometric/log/real return, volatility và clustering, covariance/correlation, beta/alpha/factors, tracking error, Sharpe/Sortino/Calmar, skew/kurtosis, VaR/Expected Shortfall, liquidity/gap/leverage risk, efficient frontier, robust optimization, risk contribution, stress/scenario analysis và decision thresholds.
+[04_RISK_MEASUREMENT_PORTFOLIO_ANALYTICS_AND_DECISION_RULES.md](./04_RISK_MEASUREMENT_PORTFOLIO_ANALYTICS_AND_DECISION_RULES.md) xây lớp định lượng: lợi suất số học, hình học, log và lợi suất thực; độ biến động; hiệp phương sai; tương quan; beta; alpha; nhân tố; sai lệch bám chỉ số; Sharpe, Sortino, Calmar; VaR; Expected Shortfall; rủi ro thanh khoản, nhảy giá và đòn bẩy; biên hiệu quả; tối ưu hóa bền vững; đóng góp rủi ro; phân tích kịch bản và ngưỡng quyết định.
 
-[05_PERFORMANCE_ATTRIBUTION_FEES_TAX_AND_BEHAVIORAL_REVIEW.md](./05_PERFORMANCE_ATTRIBUTION_FEES_TAX_AND_BEHAVIORAL_REVIEW.md) hoàn thiện feedback loop bằng cách phân rã performance thành market beta, allocation, selection, factors, currency, income, fees, spread/slippage/funding, tax và behavior; đồng thời xây forecast calibration, decision journal, monthly/quarterly review và annual portfolio audit.
+[05_PERFORMANCE_ATTRIBUTION_FEES_TAX_AND_BEHAVIORAL_REVIEW.md](./05_PERFORMANCE_ATTRIBUTION_FEES_TAX_AND_BEHAVIORAL_REVIEW.md) hoàn thiện vòng phản hồi bằng cách phân rã kết quả thành beta thị trường, phân bổ tài sản, lựa chọn chứng khoán, nhân tố, tiền tệ, thu nhập, phí, chênh lệch mua bán, trượt giá, chi phí vốn, thuế và hành vi; đồng thời xây quy trình hiệu chỉnh dự báo, nhật ký quyết định và đánh giá theo tháng/quý/năm.
 
-## Sau domain này bạn cần làm được gì?
+## Sau lĩnh vực này bạn cần làm được gì?
 
-Bạn cần có khả năng giải thích tiền của mình đang đi qua hệ thống nào khi mua chứng khoán, phân biệt market/liquidity/counterparty/operational risk, xây allocation theo mục tiêu thay vì ticker, đo concentration và risk contribution, viết IPS, stress-test portfolio và phân tích portfolio lời/lỗ vì đâu thay vì chỉ nhìn tổng return.
+Bạn cần có khả năng giải thích tiền của mình đi qua hệ thống nào khi mua chứng khoán, phân biệt rủi ro thị trường, thanh khoản, đối tác và vận hành; xây phân bổ theo mục tiêu thay vì theo mã chứng khoán; đo mức tập trung và đóng góp rủi ro; viết IPS; kiểm thử danh mục và phân tích vì sao danh mục lời hoặc lỗ thay vì chỉ nhìn tổng lợi suất.
 
-## Case studies để áp dụng
+## Bài tập tích hợp
 
-Sau khi học xong domain này, có thể đọc [CPI Shock → Portfolio](../07_integrated_case_studies/01_INFLATION_SHOCK_FROM_CPI_TO_PORTFOLIO.md) để luyện stress testing, factor mapping, hedge và attribution; sau đó đọc [Credit & Liquidity Crisis](../07_integrated_case_studies/02_CREDIT_LIQUIDITY_CRISIS_TRANSMISSION.md) để thấy liquidity buffer, leverage, margin, collateral và survival risk tương tác với nhau ra sao.
+Đọc [Cú sốc CPI → Danh mục](../07_integrated_case_studies/01_INFLATION_SHOCK_FROM_CPI_TO_PORTFOLIO.md) để luyện kiểm thử căng thẳng, lập bản đồ nhân tố, phòng vệ và phân rã kết quả. Sau đó đọc [Khủng hoảng tín dụng và thanh khoản](../07_integrated_case_studies/02_CREDIT_LIQUIDITY_CRISIS_TRANSMISSION.md) để thấy bộ đệm thanh khoản, đòn bẩy, ký quỹ, tài sản thế chấp và rủi ro sống sót tương tác như thế nào.
 
-Sau khi hoàn thành, chuyển sang [02_asset_classes](../02_asset_classes/README.md).
+Sau khi hoàn thành, chuyển sang [02 — Các nhóm tài sản](../02_asset_classes/README.md).
