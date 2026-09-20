@@ -141,6 +141,135 @@ Công nghệ không chỉ “truyền tôn giáo”; nó thay kinh tế của qu
 
 Các tổ chức tôn giáo ở Hàn Quốc đôi khi tham gia hoạt động xã hội và chính trị như ở nhiều nền dân chủ khác. Khi phân tích, cần phân biệt giáo lý chính thức, phát biểu của lãnh đạo và hành vi của thành viên. Không nên suy khuynh hướng chính trị của cá nhân chỉ từ tôn giáo.
 
+## Tôn giáo như một thiết chế cung cấp dịch vụ xã hội
+
+Một tổ chức tôn giáo không chỉ tổ chức nghi lễ. Chùa, nhà thờ, giáo xứ và các hội nhóm có thể vận hành bếp ăn, quyên góp, chăm sóc người cao tuổi, hỗ trợ khẩn cấp, học bổng, tư vấn hoặc hoạt động tình nguyện.
+
+Điểm quan trọng là tách hai lớp:
+
+```text
+niềm tin / nghi lễ
+và
+năng lực tổ chức / mạng hỗ trợ
+```
+
+Ngay cả người không chia sẻ toàn bộ niềm tin vẫn có thể tiếp xúc với dịch vụ xã hội do tổ chức tôn giáo cung cấp.
+
+Về xã hội học, đây là **vốn xã hội tổ chức (organizational social capital)**: cộng đồng gặp đều, có lãnh đạo, có địa điểm, có kênh quyên góp và mạng tình nguyện nên có khả năng huy động nhanh khi có nhu cầu.
+
+## 봉사, 기부, 헌금, 보시: cho đi nhưng không cùng một logic
+
+`봉사` thường chỉ hoạt động tình nguyện; `기부` là quyên góp; `헌금` gắn mạnh với đóng góp trong bối cảnh Kitô giáo; `보시` là khái niệm bố thí/cúng dường trong Phật giáo.
+
+Các hành vi đều chuyển nguồn lực, nhưng ý nghĩa có thể khác:
+
+```text
+trách nhiệm tôn giáo
+≠ thiện nguyện công dân
+≠ giúp người quen
+≠ hoạt động gây quỹ có tổ chức
+```
+
+Nếu chỉ đo tổng số tiền hoặc số giờ, ta bỏ mất động lực và cấu trúc quan hệ phía sau.
+
+Điều này cũng cho thấy một nghi lễ kinh tế có thể đồng thời tạo bản sắc: người đóng góp không chỉ “mất tiền”, họ có thể đang khẳng định tư cách thành viên trong một cộng đồng.
+
+## 무종교 và thế tục hoá: không tôn giáo không đồng nghĩa không có thế giới quan
+
+`무종교` thường được hiểu là không có tôn giáo chính thức. Nhưng người không tôn giáo vẫn có quan niệm về đúng–sai, cái chết, gia đình, tổ tiên và ý nghĩa cuộc sống. Vì vậy **thế tục hoá (secularization)** không nên được hiểu đơn giản là “tôn giáo biến mất”.
+
+Có ít nhất ba quá trình khác nhau:
+
+```text
+ít người tự nhận thành viên tôn giáo hơn
+≠
+nghi lễ biến mất
+≠
+ngôn ngữ đạo đức / biểu tượng tôn giáo biến mất
+```
+
+Một gia đình có thể giảm đi lễ nhà thờ hoặc chùa nhưng vẫn giữ nghi thức tang lễ, thăm mộ hoặc cách nói về hiếu và tổ tiên.
+
+Đây là lý do dữ liệu “có/không tôn giáo” chỉ đo một lát cắt của thế giới quan.
+
+## 종교 공동체 như một mạng lưới quan hệ mạnh và yếu
+
+Cộng đồng tôn giáo có thể tạo cả **liên kết mạnh** — bạn thân, người cùng nhóm nhỏ — và **liên kết yếu** — người quen biết qua sinh hoạt chung. Liên kết yếu đặc biệt quan trọng vì chúng đưa thông tin và cơ hội ra ngoài vòng gia đình gần.
+
+Một người chuyển tới thành phố mới có thể dùng nhà thờ, chùa hoặc nhóm tôn giáo để nhanh chóng xây mạng xã hội. Với người di cư, sinh viên quốc tế hoặc người cao tuổi sống một mình, chức năng cộng đồng đôi khi quan trọng không kém nội dung giáo lý.
+
+Nhưng mạng dày cũng có mặt trái: áp lực đồng thuận, khó rời nhóm hoặc danh tiếng lan rất nhanh. Mật độ quan hệ cao tăng hỗ trợ đồng thời tăng chi phí xã hội của bất đồng.
+
+## Quyền lực tôn giáo: lòng tin tạo năng lực nhưng cũng cần trách nhiệm
+
+Người lãnh đạo tôn giáo thường nhận mức độ tin cậy cao vì họ xử lý các chủ đề nhạy cảm như đau buồn, hôn nhân, tội lỗi, bệnh tật hoặc ý nghĩa cuộc sống. Lòng tin giúp cộng đồng phối hợp, nhưng cũng tạo **bất cân xứng quyền lực (power asymmetry)**.
+
+Một nguyên tắc phân tích hữu ích:
+
+```text
+uy tín tinh thần
+không tự động
+= chuyên môn y khoa / pháp lý / tài chính
+```
+
+Khi lời khuyên vượt sang lĩnh vực có rủi ro cao, cần phân biệt thẩm quyền nghi lễ với chuyên môn được đào tạo cho lĩnh vực đó.
+
+Điều này không nhằm đánh giá một truyền thống cụ thể; nó là quy tắc chung để hiểu mọi tổ chức dựa mạnh vào niềm tin.
+
+## Nghi lễ vòng đời như hạ tầng chuyển trạng thái
+
+Sinh, trưởng thành, kết hôn, bệnh nặng và cái chết đều là những giai đoạn có bất định cao. Nghi lễ giúp biến một thay đổi khó nắm bắt thành chuỗi hành động có tên gọi, vai trò và người chứng kiến.
+
+```text
+trạng thái cũ
+→ giai đoạn chuyển tiếp
+→ nghi thức xác nhận
+→ trạng thái xã hội mới
+```
+
+Điều này gần với khái niệm **nghi thức chuyển tiếp (rite of passage)**. Điểm quan trọng không nằm ở việc mọi gia đình làm cùng một nghi lễ; mà ở chỗ xã hội thường cần một cơ chế công nhận rằng “vai trò đã thay đổi”.
+
+Khi gia đình đa tôn giáo hoặc ít tôn giáo hơn, chức năng này có thể được thay bằng lễ dân sự, nhà tang lễ, tiệc gia đình hoặc nghi thức cá nhân hoá.
+
+## Tôn giáo số: tiếp cận tăng nhưng cộng đồng thay đổi cấu trúc
+
+Bài giảng trực tuyến, phát trực tiếp nghi lễ, nhóm chat, quyên góp điện tử và tư vấn từ xa làm giảm chi phí tham gia về khoảng cách. Người bệnh, người cao tuổi hoặc người sống xa vẫn có thể theo dõi hoạt động cộng đồng.
+
+Nhưng tham gia số không hoàn toàn thay thế hiện diện trực tiếp. Nghi lễ phụ thuộc âm thanh, cơ thể, không gian, mùi, nhịp tập thể và tương tác sau buổi lễ. Vì vậy số hoá thường tạo **mô hình lai** hơn là thay thế toàn bộ.
+
+Ngoài ra, thuật toán đề xuất có thể làm người dùng tiếp xúc chủ yếu với người giảng hoặc nội dung phù hợp niềm tin sẵn có. Điều này tạo cùng vấn đề đã thấy ở các cộng đồng trực tuyến khác: mức độ dễ nhìn thấy không đồng nghĩa mức đại diện.
+
+## Đo lường tôn giáo: câu hỏi khảo sát quyết định câu trả lời
+
+Nếu khảo sát chỉ hỏi `종교가 있습니까?` — “có tôn giáo không?” — ta đo danh tính tự khai. Nếu hỏi tần suất đi lễ, cầu nguyện, tham gia nghi lễ tổ tiên hoặc niềm tin siêu nhiên, ta đang đo các biến khác.
+
+```text
+thuộc về tổ chức
+≠ thực hành
+≠ niềm tin
+≠ mức độ quan trọng trong đời sống
+```
+
+Vì vậy hai khảo sát tôn giáo có thể cho hình ảnh khác nhau mà không nhất thiết mâu thuẫn; chúng có thể đang đo các khái niệm khác.
+
+Đây là bài học về **giá trị đo lường (measurement validity)**: trước khi so con số, phải hỏi chỉ số đang đại diện cho biến nào.
+
+## Khi niềm tin gặp sức khoẻ và tài chính: ranh giới rủi ro
+
+Một nghi lễ có thể đem lại ý nghĩa hoặc hỗ trợ cảm xúc, nhưng nếu được dùng để thay hoàn toàn chẩn đoán y khoa trong tình trạng nguy hiểm, rủi ro thay đổi bản chất. Tương tự, một lời dự đoán về tài chính hoặc pháp lý không có giá trị chỉ vì người đưa ra có uy tín trong cộng đồng tôn giáo.
+
+Có thể dùng quy tắc phân tầng:
+
+```text
+ý nghĩa / an ủi / nghi lễ
+→ có thể cùng tồn tại với nhiều hệ niềm tin
+
+chẩn đoán y khoa / quyết định pháp lý / đầu tư tài chính
+→ cần bằng chứng và chuyên môn phù hợp lĩnh vực
+```
+
+Tách hai lớp này giúp tôn trọng ý nghĩa văn hoá mà không đánh đồng với bằng chứng chuyên môn.
+
 ## Liên hệ kiến thức: nghi lễ như máy trạng thái
 
 Một nghi lễ thường có chuỗi trạng thái rõ: chuẩn bị → bước vào → dâng cúng → cúi lạy → chuyển bước → kết thúc. Người tham gia biết mình đang ở bước nào nhờ vật dụng, cử chỉ và lời nói.
@@ -158,13 +287,14 @@ lớp danh tính
 lớp gia đình
 lớp thiết chế
 lớp thị trường / nền tảng
+lớp hỗ trợ xã hội
 ```
 
 Hai người cùng làm một nghi lễ có thể giống nhau ở hành vi nhưng khác hoàn toàn ở niềm tin. Đây là lý do khảo sát chỉ hỏi “có tôn giáo không?” không nắm hết văn hoá tôn giáo.
 
 ## Mô hình tư duy (Mental Model)
 
-> Đừng hỏi “người Hàn tin tôn giáo nào?” như thể có một biến duy nhất. Hãy tách niềm tin, nghi lễ, thiết chế, danh tính và thực hành gia đình. Một người có thể không là thành viên tôn giáo nhưng vẫn sống trong hệ biểu tượng được định hình bởi Phật giáo, Nho giáo, shaman giáo và Kitô giáo.
+> Đừng hỏi “người Hàn tin tôn giáo nào?” như thể có một biến duy nhất. Hãy tách niềm tin, nghi lễ, thiết chế, danh tính, mạng hỗ trợ và thực hành gia đình. Một cộng đồng tôn giáo vừa có thể là hệ ý nghĩa, nơi thực hiện nghi lễ, mạng quan hệ và nhà cung cấp dịch vụ xã hội. Hiểu sâu cần nhìn cả chức năng lẫn giới hạn quyền lực của thiết chế.
 
 ## Hiểu lầm phổ biến (Common Misconceptions)
 
@@ -177,3 +307,7 @@ Hai người cùng làm một nghi lễ có thể giống nhau ở hành vi như
 “Không có tôn giáo = không tham gia nghi lễ” là sai; danh tính và thực hành có thể tách nhau.
 
 “Temple stay nghĩa là người tham gia đã trở thành Phật tử” cũng sai; động cơ có thể là tâm linh, văn hoá, du lịch hoặc nghỉ ngơi.
+
+“Cộng đồng tôn giáo chỉ cung cấp niềm tin” bỏ qua mạng hỗ trợ, hoạt động thiện nguyện và khả năng huy động nguồn lực.
+
+“Người có uy tín tôn giáo chắc chắn có chuyên môn ở mọi lĩnh vực” là sai; uy tín tinh thần và chuyên môn y khoa, pháp lý hoặc tài chính là các loại năng lực khác nhau.
