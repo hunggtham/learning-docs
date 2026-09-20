@@ -16,8 +16,10 @@ Domain này áp dụng toàn bộ kiến thức trước đó vào hai thị tr�
 
 [05_CROSS_BORDER_INVESTING_CURRENCY_TAX_WRAPPERS_AND_MARKET_ACCESS.md](./05_CROSS_BORDER_INVESTING_CURRENCY_TAX_WRAPPERS_AND_MARKET_ACCESS.md) bổ sung framework cho nhà đầu tư đa quốc gia: trading/underlying/liability currency, FX decomposition, hedged/unhedged products, local wrappers, tax location, withholding, settlement, holiday/time-zone mismatch, foreign room, VND/KRW exposure, repatriation, brokerage entity risk và cross-border IPS.
 
+[06_SECTOR_DEEP_DIVES_KOREA_VIETNAM.md](./06_SECTOR_DEEP_DIVES_KOREA_VIETNAM.md) đi từ macro xuống sector economics cụ thể. Phần Korea đào sâu semiconductor/HBM/equipment, autos, batteries, shipbuilding, banks, insurance, platforms, gaming, biotech, construction, refining, utilities và retail. Phần Vietnam đi sâu banks, securities companies, property, industrial parks, export manufacturing, retail, consumer staples, aviation, ports/logistics, oil & gas, power, construction materials, technology và insurance; mỗi ngành đều gắn với KPI, cycle, margin driver, valuation và macro sensitivity.
+
 ## Sau domain này bạn cần làm được gì?
 
-Bạn cần có khả năng mở một Korean/Vietnamese stock và xác định đúng business driver, sector cycle, macro sensitivities, valuation context, liquidity risk, currency layer và primary sources cần kiểm tra. Bạn cũng cần phân biệt index move với breadth, technical foreign flow với fundamental flow, local wrapper với underlying exposure và biết khi nào global shock truyền khác nhau sang Korea và Vietnam.
+Bạn cần có khả năng mở một Korean/Vietnamese stock và xác định đúng business driver, sector cycle, macro sensitivities, valuation context, liquidity risk, currency layer và primary sources cần kiểm tra. Bạn cũng cần phân biệt index move với breadth, technical foreign flow với fundamental flow, local wrapper với underlying exposure, hiểu transmission từ macro tới từng sector và biết khi nào global shock truyền khác nhau sang Korea và Vietnam.
 
-Sau domain này, thay vì chỉ tiếp tục đọc, nên bắt đầu xây research notebook cho 5–10 mã, theo dõi cả currency/account structure và cập nhật theo weekly/monthly cadence.
+Sau domain này, thay vì chỉ tiếp tục đọc, nên bắt đầu xây research notebook cho 5–10 mã, theo dõi cả sector dashboard, currency/account structure và cập nhật theo weekly/monthly cadence.
