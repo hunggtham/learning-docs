@@ -1,87 +1,87 @@
-# Time/space complexity và asymptotic analysis
+# Độ phức tạp thời gian, không gian và phân tích tiệm cận
 
-Nếu hai algorithms đều đúng, ta cần biết chúng scale thế nào khi input lớn. Computational complexity (계산 복잡도 / độ phức tạp tính toán) xây một model đủ đơn giản để bỏ qua chi tiết máy cụ thể nhưng vẫn giữ được tốc độ tăng chi phí theo input size.
+Nếu hai thuật toán đều đúng, câu hỏi tiếp theo là chi phí của chúng tăng như thế nào khi đầu vào lớn dần. **Độ phức tạp tính toán (computational complexity / 계산 복잡도)** xây một mô hình đủ đơn giản để bỏ qua chi tiết của từng máy cụ thể nhưng vẫn giữ được tốc độ tăng chi phí theo kích thước đầu vào.
 
-## Input size là gì?
+## Kích thước đầu vào là gì?
 
-Trước khi nói `O(n)`, phải định nghĩa `n`. Với array, thường `n` là số elements. Với integer `N`, input size theo theory thường là số bits cần biểu diễn `N`, xấp xỉ `log₂N`, không phải giá trị N. Một loop từ 1 đến N vì vậy exponential theo bit-length input nếu N được nhập ở binary.
+Trước khi nói `O(n)`, phải định nghĩa `n`. Với mảng, `n` thường là số phần tử. Với một số nguyên `N`, trong lý thuyết độ phức tạp kích thước đầu vào thường là số bit cần để biểu diễn `N`, xấp xỉ `log₂N`, chứ không phải chính giá trị `N`. Vì vậy một vòng lặp từ 1 tới `N` có thể là hàm mũ theo độ dài bit nếu `N` được nhập ở dạng nhị phân.
 
-Đây là chi tiết dễ bị bỏ qua và có thể làm classification sai hoàn toàn.
+Chi tiết này dễ bị bỏ qua nhưng có thể làm phân loại độ phức tạp sai hoàn toàn.
 
-## Cost model
+## Mô hình chi phí
 
-RAM model thường giả định các primitive operations như read/write một machine word hay arithmetic cơ bản có constant cost. Đây là approximation. Big integer arithmetic, cache miss, disk I/O, network RTT không thực sự constant.
+Mô hình RAM thường giả định các thao tác cơ bản như đọc hoặc ghi một từ máy và phép số học đơn giản có chi phí hằng số. Đây là một phép xấp xỉ. Số nguyên lớn, trượt cache, I/O đĩa và vòng khứ hồi mạng không thật sự có chi phí hằng số.
 
-Model không “sai”; nó có scope. Khi algorithmic growth là bottleneck, RAM model rất hữu ích. Khi performance phụ thuộc memory hierarchy hoặc I/O, ta cần richer model.
+Mô hình không “sai”; nó chỉ có phạm vi áp dụng. Khi tốc độ tăng của thuật toán là yếu tố chính, mô hình RAM rất hữu ích. Khi hiệu năng phụ thuộc mạnh vào phân cấp bộ nhớ hoặc I/O, cần mô hình giàu chi tiết hơn.
 
 ## Big O, Big Theta và Big Omega
 
-Big O mô tả asymptotic upper bound. `T(n) ∈ O(f(n))` nếu tồn tại constants `c, n₀` sao cho `T(n) ≤ c f(n)` với mọi `n ≥ n₀`.
+Big O mô tả **cận trên tiệm cận (asymptotic upper bound)**. `T(n) ∈ O(f(n))` nếu tồn tại các hằng số `c, n₀` sao cho `T(n) ≤ c f(n)` với mọi `n ≥ n₀`.
 
-Big Ω là lower bound; Big Θ là tight bound khi cả upper và lower cùng bậc. Vì vậy nói merge sort worst-case `Θ(n log n)` chính xác hơn chỉ nói `O(n log n)`, dù trong engineering Big O thường được dùng lỏng để chỉ order of growth.
+Big Ω mô tả cận dưới; Big Θ mô tả cận chặt khi cận trên và cận dưới cùng bậc. Vì vậy nói merge sort ở trường hợp xấu nhất có `Θ(n log n)` chính xác hơn chỉ nói `O(n log n)`, dù trong kỹ thuật thực tế Big O thường được dùng rộng để nói về bậc tăng trưởng.
 
-Constants và lower-order terms bị bỏ qua vì asymptotic analysis quan tâm shape khi n lớn. `3n² + 10n + 100` thuộc `Θ(n²)`.
+Các hệ số và hạng bậc thấp bị bỏ qua vì phân tích tiệm cận quan tâm hình dạng khi `n` lớn. `3n² + 10n + 100` thuộc `Θ(n²)`.
 
-## Những growth rates thường gặp
+## Các tốc độ tăng thường gặp
 
-`O(1)` không có nghĩa “một instruction”; nó nghĩa cost không tăng theo n trong model. `O(log n)` thường xuất hiện khi mỗi step giảm search space theo factor. `O(n)` quét input một lần. `O(n log n)` phổ biến ở comparison sorting tối ưu. `O(n²)` xuất hiện khi xét mọi cặp. Exponential `O(2^n)` và factorial tăng cực nhanh.
+`O(1)` không có nghĩa là “một lệnh”; nó nghĩa chi phí không tăng theo `n` trong mô hình đang dùng. `O(log n)` thường xuất hiện khi mỗi bước giảm không gian tìm kiếm theo một tỷ lệ cố định. `O(n)` thường là quét đầu vào một lần. `O(n log n)` phổ biến ở sắp xếp dựa trên so sánh tối ưu. `O(n²)` xuất hiện khi xét mọi cặp. Hàm mũ `O(2^n)` và giai thừa tăng cực nhanh.
 
-Logarithm xuất hiện tự nhiên khi liên tục chia đôi. Nếu sau k bước còn `n/2^k = 1`, thì `k = log₂n`.
+Logarithm xuất hiện tự nhiên khi liên tục chia đôi. Nếu sau `k` bước còn `n/2^k = 1`, thì `k = log₂n`.
 
 Xem toán sâu hơn tại [Algorithms, Complexity và Logarithms](../../mathematics/07_discrete_cs/01_algorithms_complexity_and_logarithms.md).
 
-## Worst, average và best case
+## Trường hợp xấu nhất, trung bình và tốt nhất
 
-Worst-case guarantee quan trọng trong latency-sensitive hoặc adversarial context. Average-case cần probability distribution của inputs; nếu distribution assumption sai, kết luận có thể vô nghĩa. Best case thường ít hữu ích cho guarantee nhưng giúp hiểu behavior.
+Bảo đảm trường hợp xấu nhất quan trọng trong hệ thống nhạy độ trễ hoặc có đầu vào đối kháng. Trường hợp trung bình cần một phân bố xác suất của đầu vào; nếu giả định về phân bố sai, kết luận có thể không còn ý nghĩa. Trường hợp tốt nhất ít hữu ích cho bảo đảm nhưng vẫn giúp hiểu hành vi.
 
-Hash table lookup có expected/amortized gần `O(1)` dưới assumptions hash tốt và load factor hợp lý, nhưng worst case có thể `O(n)`. Balanced BST cho `O(log n)` worst-case lookup. Lựa chọn phụ thuộc cần guarantee nào.
+Tra cứu bảng băm có chi phí kỳ vọng hoặc khấu hao gần `O(1)` khi hàm băm tốt và hệ số tải hợp lý, nhưng trường hợp xấu nhất có thể là `O(n)`. Cây tìm kiếm cân bằng có thể bảo đảm tra cứu `O(log n)`. Lựa chọn phụ thuộc loại bảo đảm mà hệ thống cần.
 
-## Amortized analysis
+## Phân tích khấu hao
 
-Một operation đôi khi đắt nhưng hiếm. Dynamic array `append` thường constant; khi hết capacity phải allocate array lớn hơn và copy nhiều elements. Nếu capacity tăng theo factor, tổng copy qua n appends vẫn `O(n)`, nên amortized cost mỗi append là `O(1)`.
+Một thao tác có thể đôi lúc rất đắt nhưng xảy ra hiếm. Thêm phần tử vào mảng động thường có chi phí hằng số; khi hết dung lượng phải cấp mảng lớn hơn và sao chép nhiều phần tử. Nếu dung lượng tăng theo một hệ số cố định, tổng số phần tử được sao chép qua `n` lần thêm vẫn là `O(n)`, nên chi phí khấu hao cho mỗi lần thêm là `O(1)`.
 
-Amortized không phải average theo random input. Nó là guarantee trung bình trên sequence operations, thường không cần probability.
+**Phân tích khấu hao (amortized analysis)** không phải trung bình theo đầu vào ngẫu nhiên. Nó là bảo đảm trung bình trên một chuỗi thao tác và thường không cần giả định xác suất.
 
-## Space complexity và time-space trade-off
+## Độ phức tạp không gian và đánh đổi thời gian–bộ nhớ
 
-Memoization dùng thêm memory để tránh tính lại. Hash index dùng storage để giảm query time. Cache dùng RAM để giảm I/O. Bloom filter dùng probabilistic false positives để tiết kiệm space.
+Ghi nhớ kết quả (memoization) dùng thêm bộ nhớ để tránh tính lại. Chỉ mục băm dùng dung lượng lưu trữ để giảm thời gian truy vấn. Cache dùng RAM để giảm I/O. Bloom filter chấp nhận xác suất dương tính giả để tiết kiệm không gian.
 
-Vì vậy time và space không độc lập. Nhiều design thực tế là chuyển chi phí từ resource này sang resource khác.
+Vì vậy thời gian và không gian không độc lập. Nhiều thiết kế thực tế chỉ là chuyển chi phí từ tài nguyên này sang tài nguyên khác.
 
-## Lower bounds
+## Cận dưới
 
-Không phải cứ code thông minh là vượt mọi bound. Comparison sorting có lower bound `Ω(n log n)` trong comparison model vì cần phân biệt `n!` possible orderings và mỗi binary comparison cung cấp tối đa một bit branch information.
+Không phải cứ viết mã thông minh hơn là vượt được mọi giới hạn. Sắp xếp dựa trên so sánh có cận dưới `Ω(n log n)` trong mô hình so sánh vì phải phân biệt `n!` thứ tự có thể có, trong khi mỗi phép so sánh nhị phân chỉ cung cấp lượng thông tin hữu hạn.
 
-Nhưng counting sort có thể `O(n+k)` vì nó không bị giới hạn bởi comparison model; nó khai thác keys trong finite range. Lower bound luôn gắn với assumptions/model.
+Counting sort có thể đạt `O(n+k)` vì nó không bị giới hạn bởi mô hình so sánh; nó khai thác việc khóa nằm trong một miền hữu hạn. Vì vậy cận dưới luôn gắn với giả định và mô hình cụ thể.
 
-## Complexity và actual performance
+## Độ phức tạp và hiệu năng thực tế
 
-Một linked list insert có theoretical `O(1)` nếu đã có pointer, nhưng traversal và poor locality có thể làm nó chậm hơn array-based structure. `O(n)` contiguous scan có thể cực nhanh nhờ cache/prefetch. Database `O(log n)` B-tree lookup có thể bị disk/network latency chi phối.
+Chèn vào danh sách liên kết có thể là `O(1)` nếu đã có con trỏ đúng vị trí, nhưng việc duyệt và tính cục bộ kém có thể khiến nó chậm hơn cấu trúc dựa trên mảng. Quét liên tục `O(n)` có thể rất nhanh nhờ cache và nạp trước. Tra cứu B-tree `O(log n)` trong cơ sở dữ liệu có thể bị độ trễ đĩa hoặc mạng chi phối.
 
-Asymptotic analysis trả lời “growth”. Benchmarking trả lời “trên implementation/workload/hardware này”. Cả hai cần nhau.
+Phân tích tiệm cận trả lời “chi phí tăng theo quy mô thế nào”. Đo hiệu năng trả lời “trên cách triển khai, tải và phần cứng này nhanh đến đâu”. Cả hai đều cần thiết.
 
-## Complexity của recursive algorithms
+## Độ phức tạp của thuật toán đệ quy
 
-Recurrence mô tả cost qua subproblems. Merge sort:
+Quan hệ truy hồi mô tả chi phí qua các bài toán con. Với merge sort:
 
 \[
 T(n)=2T(n/2)+\Theta(n)
 \]
 
-Hai subproblems n/2 và merge linear dẫn tới `Θ(n log n)`. Có thể reasoning bằng recursion tree: mỗi level tổng work ~n, có log n levels.
+Hai bài toán con kích thước `n/2` và bước trộn tuyến tính dẫn tới `Θ(n log n)`. Có thể hình dung bằng cây đệ quy: mỗi tầng có tổng lượng công việc xấp xỉ `n`, và có khoảng `log n` tầng.
 
-## Mental Model
+## Mô hình tư duy
 
-> Complexity là **shape của cost khi scale**, không phải stopwatch. Luôn hỏi: `n` là gì, cost model là gì, case nào đang nói, và assumptions nào làm bound đúng?
+> Độ phức tạp mô tả **hình dạng của chi phí khi quy mô tăng**, không phải đồng hồ bấm giờ. Luôn hỏi: `n` là gì, mô hình chi phí là gì, đang nói trường hợp nào và giả định nào làm cận đó đúng?
 
-## Common Misconceptions
+## Những hiểu nhầm thường gặp
 
-**“O(1) luôn nhanh hơn O(n).”** Với n nhỏ hoặc constants/hardware khác nhau, không nhất thiết. Big O nói asymptotic growth.
+**“O(1) luôn nhanh hơn O(n).”** Không nhất thiết khi `n` nhỏ hoặc hệ số và phần cứng khác nhau. Big O nói về tốc độ tăng tiệm cận.
 
-**“O(n) nghĩa chính xác n operations.”** Không. Nó là upper-order growth class.
+**“O(n) nghĩa chính xác n thao tác.”** Không đúng. Nó mô tả lớp tăng trưởng bậc tuyến tính.
 
-**“Average O(1) hash lookup nghĩa worst case O(1).”** Không; collisions và adversarial inputs có thể làm chain/probe dài.
+**“Tra cứu hash trung bình O(1) nghĩa trường hợp xấu nhất cũng O(1).”** Không đúng. Va chạm và đầu vào đối kháng có thể làm chuỗi hoặc quá trình dò dài.
 
 ## Kết nối
 
-Complexity giải thích algorithmic scaling; [memory layout](./02_memory_models_and_data_layout.md) giải thích constant factors và locality; [performance/capacity](../08_software_systems/02_performance_capacity_and_scalability.md) mở rộng từ một algorithm sang end-to-end system với queues, I/O và concurrency.
+[Phân bố bộ nhớ](./02_memory_models_and_data_layout.md) giải thích hệ số thực tế và tính cục bộ; [hiệu năng và năng lực xử lý](../08_software_systems/02_performance_capacity_and_scalability.md) mở rộng từ một thuật toán sang hệ thống đầu-cuối có hàng đợi, I/O và đồng thời.
