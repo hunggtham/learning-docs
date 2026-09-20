@@ -20,4 +20,8 @@ Domain này giải thích từng nhóm tài sản theo bản chất kinh tế, n
 
 Bạn cần có khả năng nhìn một product và xác định `economic claim → return source → duration/credit/FX/factor exposure → liquidity → leverage/optionality → wrapper → total cost → portfolio role`. Với fixed income, bạn phải tách carry/roll-down/rate/spread/default; với factors phải phân biệt label và implementation; với multi-asset phải nhìn risk contribution/currency/liability chứ không chỉ capital weight; với complex/private products phải nhìn xuyên headline yield hoặc smoothed NAV tới legal claim, leverage, cash-flow timing và stressed liquidity.
 
+## Case studies để áp dụng
+
+Đọc [CPI Shock → Portfolio](../07_integrated_case_studies/01_INFLATION_SHOCK_FROM_CPI_TO_PORTFOLIO.md) để thấy duration, real yield, FX, equity beta và hedging tương tác trong cùng một shock. Đọc [Credit & Liquidity Crisis](../07_integrated_case_studies/02_CREDIT_LIQUIDITY_CRISIS_TRANSMISSION.md) để luyện fixed-income spread, collateral, repo, private-market smoothing và liquidity hierarchy trong stress.
+
 Sau đó chuyển sang [03_company_analysis](../03_company_analysis/README.md) nếu muốn chọn cổ phiếu, hoặc [04_economics](../04_economics/README.md) nếu muốn đi sâu macro trước.
