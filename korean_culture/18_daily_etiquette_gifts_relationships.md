@@ -205,9 +205,169 @@ Mức thể hiện tình cảm công khai, đồ đôi, photo booth và đăng m
 
 Photo booth như `인생네컷` và các studio tự chụp trở thành nghi lễ xã hội mới: bạn bè hoặc cặp đôi chụp theo khung rồi chia sẻ trực tuyến. Đây là ví dụ một giao diện thương mại trở thành thực hành lưu giữ ký ức.
 
+## Quan hệ cũng có một ngân sách hữu hạn
+
+Một quan hệ được duy trì bằng nhiều nguồn lực: **thời gian, sự chú ý, tiền, khả năng có mặt và năng lượng cảm xúc**. Có thể gọi tổng này là **ngân sách quan hệ (relationship budget)**.
+
+```text
+ngân sách quan hệ
+= thời gian gặp nhau
++ thời gian nhắn tin
++ quà / chi phí sự kiện
++ công sức hỗ trợ
++ năng lượng cảm xúc
+```
+
+Không phải quan hệ càng quan trọng thì mọi thành phần càng phải cao. Hai người bạn thân có thể ít nhắn nhưng khi cần vẫn giúp nhau mạnh; đồng nghiệp có thể gặp hằng ngày nhưng mức riêng tư thấp.
+
+Điểm quan trọng là mỗi cá nhân có ngân sách hữu hạn. Khi số nhóm chat, đám cưới, cuộc hẹn, công việc và nghĩa vụ gia đình tăng, **chi phí duy trì mạng quan hệ** cũng tăng. Vì vậy việc từ chối một lời mời không tự động đồng nghĩa coi nhẹ quan hệ; đôi khi đó là quản lý năng lực hữu hạn.
+
+## 강한 연결 và 약한 연결: bạn thân và người quen có chức năng khác nhau
+
+Trong lý thuyết mạng xã hội, **liên kết mạnh (strong tie)** thường có mức tin cậy, tần suất tương tác và hỗ trợ cao; **liên kết yếu (weak tie)** có thể ít thân hơn nhưng mở ra thông tin và mạng mới.
+
+`절친` có thể là liên kết mạnh; `지인`, cựu đồng nghiệp, người cùng câu lạc bộ có thể hoạt động như liên kết yếu. Hai loại không phải tốt–xấu. Liên kết mạnh giúp vượt khủng hoảng; liên kết yếu giúp tìm việc, biết cơ hội hoặc tiếp xúc với nhóm mới.
+
+Một mạng chỉ có bạn rất thân có thể sâu nhưng hẹp; một mạng chỉ có người quen rộng nhưng thiếu hỗ trợ khi gặp khó. Vốn xã hội thường cần cả hai.
+
+## 관계의 장부: có đi có lại không nhất thiết là “tính toán sòng phẳng”
+
+Quà tặng, tiền mừng, mời ăn và giúp đỡ tạo trí nhớ về sự có đi có lại. Nhưng có hai mô hình rất khác:
+
+```text
+sổ kế toán chính xác:
+tôi cho 50 → bạn phải trả 50
+
+cân bằng quan hệ dài hạn:
+qua nhiều lần tương tác, hai bên đều cảm thấy có cho và nhận
+```
+
+Quan hệ thân thường hoạt động gần mô hình thứ hai hơn. Việc ghi `축의금` có thể phục vụ trí nhớ và công bằng mạng lưới, nhưng nếu mọi hành động đều bị quy đổi tức thời thành số tiền, quan hệ có thể mất ý nghĩa tình cảm.
+
+Điểm phân tích là tách **có đi có lại (reciprocity)** khỏi **giao dịch tức thời (immediate exchange)**.
+
+## 거절: nói “không” là một phần của quan hệ, không phải phá huỷ quan hệ
+
+Trong môi trường coi trọng hài hoà, từ chối trực tiếp có thể được làm mềm bằng lý do hoặc phương án thay thế. Ví dụ, thay vì một `안 돼요` trống, người nói có thể nói `그날은 일정이 있어서 어려울 것 같아요. 다음 주는 괜찮습니다.`
+
+Cơ chế là giảm chi phí thể diện, không phải xoá quyền từ chối.
+
+Một quan hệ lành mạnh cần cho phép cả hai bên nói không. Nếu mọi lời mời đều bị hiểu là nghĩa vụ, mạng xã hội trở thành **hệ thống cưỡng chế mềm**: người tham gia tiếp tục vì sợ chi phí rút lui hơn vì muốn gắn kết.
+
+Do đó khi học phép lịch sự Hàn Quốc, cần học đồng thời **cách giữ quan hệ** và **cách đặt ranh giới**.
+
+## 친절과 의무: sự tử tế mất ý nghĩa khi bị mặc định là bắt buộc
+
+Một đồng nghiệp mua cà phê, người lớn tuổi trả bữa ăn hoặc bạn bè giúp chuyển nhà có thể là sự tử tế. Nhưng nếu hành vi được xem như nghĩa vụ tuyệt đối theo tuổi hoặc vai trò, người thực hiện mất quyền lựa chọn.
+
+Đây là ranh giới giữa **chuẩn mực mô tả** và **chuẩn mực áp đặt**.
+
+Phân tích văn hoá nên nói “hành vi này thường được hiểu là lịch sự trong bối cảnh X”, không nói “người ở vai trò X bắt buộc phải làm”. Cách thứ hai biến mô tả xã hội thành mệnh lệnh đạo đức.
+
+## 관계 피로: mệt mỏi quan hệ là đầu ra của quá nhiều kênh duy trì
+
+Điện thoại làm việc duy trì quan hệ dễ hơn nhưng cũng làm quan hệ có thể chạm tới ta mọi lúc. Tin nhắn, nhóm chat, mạng xã hội, lời mời, `경조사` và thông báo cộng đồng tạo **mệt mỏi quan hệ (relationship fatigue / 관계 피로)**.
+
+```text
+nhiều kênh liên lạc
+→ nhiều tín hiệu cần đọc
+→ nhiều kỳ vọng phản hồi
+→ ít thời gian không bị gián đoạn
+→ năng lượng xã hội giảm
+```
+
+Phản ứng có thể là tắt thông báo, trả lời theo lô, thu hẹp nhóm, chuyển một số quan hệ sang gặp định kỳ thay vì chat liên tục. Đây không nhất thiết là “lạnh lùng hơn”; nó có thể là chiến lược chống quá tải.
+
+## 관계의 감쇠: quan hệ có thể yếu dần khi tần suất tương tác giảm
+
+Sau khi tốt nghiệp, đổi công ty hoặc chuyển nhà, nhiều quan hệ không có xung đột nhưng vẫn yếu đi vì **cơ hội tiếp xúc tình cờ** biến mất.
+
+```text
+không gian chung biến mất
+→ gặp ngẫu nhiên giảm
+→ ít cập nhật nhỏ
+→ bối cảnh chung giảm
+→ chi phí bắt đầu lại cuộc trò chuyện tăng
+```
+
+Điều này giải thích vì sao trường học, công ty và khu dân cư không chỉ tạo quan hệ bằng “tính cách”, mà bằng việc đặt con người cạnh nhau lặp lại.
+
+Duy trì quan hệ từ xa cần chủ động hơn vì hạ tầng tình cờ đã mất.
+
+## 관계 중첩: một người có thể đồng thời là đồng nghiệp, tiền bối và bạn
+
+Quan hệ xã hội không luôn nằm trong một nhãn. Một người có thể là `선배`, đồng nghiệp cùng dự án và bạn uống cà phê riêng. Mỗi lớp tạo kỳ vọng khác nhau.
+
+Xung đột xuất hiện khi vai trò chồng lấp:
+
+```text
+vai trò công việc → cần phản biện thẳng
+vai trò tiền bối–hậu bối → có khoảng cách
+vai trò bạn bè → kỳ vọng thân mật
+```
+
+Nếu không tách bối cảnh, phản hồi công việc có thể bị đọc như phản bội tình bạn, hoặc yêu cầu cá nhân bị đưa vào giờ làm.
+
+Kỹ năng quan hệ trưởng thành là biết **vai trò nào đang hoạt động trong tình huống này**.
+
+## 사과와 관계회복: xin lỗi hiệu quả không chỉ nằm ở từ “미안해”
+
+Khi quan hệ bị tổn thương, lời xin lỗi có nhiều thành phần:
+
+```text
+nhận diện hành vi
+→ thừa nhận tác động
+→ chịu trách nhiệm phù hợp
+→ sửa chữa nếu có thể
+→ thay đổi để giảm tái diễn
+```
+
+Một lời xin lỗi dài nhưng phủ nhận tác động có thể kém hiệu quả hơn lời ngắn nhưng rõ trách nhiệm. Ngược lại, yêu cầu ai đó nhận trách nhiệm cho điều họ không làm chỉ để “giữ hoà khí” cũng không tạo phục hồi thật.
+
+Trong môi trường có thể diện cao, xin lỗi đôi khi được diễn đạt gián tiếp hơn, nhưng cơ chế phục hồi vẫn cần tín hiệu rằng người kia đã hiểu điều gì gây tổn thương.
+
+## 선물 선택: quà tặng là bài toán tín hiệu dưới bất định
+
+Người tặng thường không biết chính xác người nhận muốn gì. Vì vậy quà là bài toán **tín hiệu dưới bất định**.
+
+Quà quá rẻ trong dịp rất quan trọng có thể bị hiểu là thiếu quan tâm; quà quá đắt có thể tạo áp lực đáp lại hoặc khó xử. Quà số nhỏ như cà phê hoạt động tốt trong nhiều quan hệ vì chi phí thấp và ít tạo nghĩa vụ.
+
+Có thể hình dung mục tiêu không phải tối đa giá tiền mà là:
+
+```text
+phù hợp dịp
++ phù hợp mức quan hệ
++ ít gây gánh nặng
++ thể hiện đã nghĩ tới người nhận
+```
+
+Đây là lý do một món thực dụng đúng lúc có thể được đánh giá cao hơn món đắt nhưng sai bối cảnh.
+
+## 경조사와 기회비용: “có mặt” cũng là một dạng tài nguyên
+
+Tham dự đám cưới, tang lễ, tân gia hoặc sự kiện nhóm tiêu tốn thời gian di chuyển, tiền và năng lượng. Với người có gia đình nhỏ, làm ca hoặc sống xa, chi phí có mặt có thể rất cao.
+
+Vì vậy mức tham dự không thể dùng như thước đo tuyệt đối của tình cảm. Quà hoặc lời nhắn có thể là cách thay thế khi hiện diện vật lý quá đắt.
+
+Khi xã hội di động hơn và mạng quan hệ phân tán địa lý, nghi thức cũng phải thích nghi với **chi phí cơ hội của sự hiện diện (opportunity cost of presence)**.
+
+## 디지털 친밀감: thân mật số không phải bản sao nghèo hơn của gặp trực tiếp
+
+Một số quan hệ được duy trì bằng meme, ảnh, reaction, cuộc gọi ngắn và tin nhắn vụn. Các tương tác này có giá trị vì tạo **cập nhật trạng thái nhỏ nhưng thường xuyên**.
+
+Gặp trực tiếp cho băng thông cao hơn nhưng có chi phí lịch lớn; nhắn tin có băng thông thấp hơn nhưng ma sát thấp. Quan hệ bền thường kết hợp nhiều kênh.
+
+```text
+nhắn tin ngắn → duy trì liên tục
+cuộc gọi → xử lý cảm xúc phức tạp hơn
+gặp trực tiếp → băng thông cao + ký ức chung mạnh
+```
+
+Không nên xếp một kênh là “thật” còn kênh kia là “ảo”; câu hỏi là kênh nào phù hợp loại tương tác nào.
+
 ## Mô hình tư duy
 
-> Phép lịch sự hằng ngày là một **giao thức băng thông thấp** dùng cử chỉ, thời điểm, danh xưng, trao đổi nhỏ và tín hiệu nền tảng để cập nhật trạng thái quan hệ. Khi quan hệ rõ và thân, giao thức nhẹ đi; khi bất định hoặc thứ bậc cao, nghi thức trang trọng hơn. Trong không gian công cộng, phép lịch sự chuyển từ quản lý quan hệ sang quản lý tác động ngoại biên.
+> Phép lịch sự hằng ngày là một **giao thức duy trì mạng quan hệ**. Cử chỉ, thời điểm, quà, việc có mặt và phản hồi số đều tiêu tốn một phần ngân sách quan hệ. Khi quan hệ rõ và thân, nghi thức có thể nhẹ đi; khi bất định hoặc thứ bậc cao, giao thức trang trọng hơn. Quan hệ bền không đòi phản hồi tối đa mọi lúc mà cần cân bằng giữa có đi có lại, ranh giới, sửa chữa xung đột và khả năng duy trì lâu dài.
 
 ## Những hiểu lầm phổ biến
 
@@ -222,3 +382,13 @@ Photo booth như `인생네컷` và các studio tự chụp trở thành nghi l�
 “Đã đọc mà không trả lời ngay = ghét bạn” là diễn giải quá mức từ trạng thái đọc.
 
 “Phép lịch sự Hàn Quốc là một bộ nghi thức truyền thống cố định” là sai; ứng dụng, căn hộ, mô hình lao động và thế hệ đang liên tục tạo ra phép lịch sự mới.
+
+“Quan hệ tốt nghĩa là phải luôn nhận mọi lời mời” là sai; ranh giới là một phần của quan hệ bền.
+
+“Có đi có lại nghĩa là phải trả đúng bằng giá trị đã nhận” nhầm cân bằng dài hạn với kế toán tức thời.
+
+“Ít nhắn hơn nghĩa là quan hệ chắc chắn kém đi” bỏ qua loại quan hệ, kênh liên lạc và chất lượng hỗ trợ khi cần.
+
+## Đọc tiếp
+
+Đọc cùng [`03_language_honorifics_nunchi_jeong_face.md`](03_language_honorifics_nunchi_jeong_face.md), [`06_workplace_organization_hoesik.md`](06_workplace_organization_hoesik.md), [`22_names_age_identity_social_metadata.md`](22_names_age_identity_social_metadata.md), [`27_internet_communities_messaging_slang_memes.md`](27_internet_communities_messaging_slang_memes.md) và [`33_service_customer_review_quick_response_culture.md`](33_service_customer_review_quick_response_culture.md).
