@@ -1,69 +1,219 @@
-# Genomics, epigenetics và điều hòa gene — Genomics, Epigenetics and Regulation (유전체학·후성유전학·유전자 조절)
+# Genome, điều hòa gene và epigenetics — Genomics, Gene Regulation and Epigenetics (유전체, 유전자 조절, 후성유전학)
 
-Nếu genetics cổ điển thường hỏi “một gene ảnh hưởng trait này như thế nào?”, genomics (Genomics / 유전체학) mở rộng câu hỏi sang toàn bộ genome và interaction giữa hàng nghìn locus. Epigenetics (Epigenetics / 후성유전학) nghiên cứu những thay đổi bền tương đối trong gene activity không đòi hỏi thay đổi DNA sequence, còn gene regulation nghiên cứu cách cell quyết định khi nào và mức độ nào một gene được sử dụng.
+Nếu gần như mọi cell trong cơ thể có cùng DNA, tại sao neuron khác liver cell? Tại sao một cell chỉ tạo insulin còn cell khác tạo antibody? Câu trả lời không nằm chủ yếu ở việc mỗi cell “có gene khác”, mà ở việc **gene nào được dùng, dùng bao nhiêu, vào lúc nào và trong bối cảnh nào**.
 
-## Genome không chỉ là danh sách gene
+Đây là lĩnh vực của gene regulation, epigenetics và genomics.
 
-Genome (Genome / 유전체) bao gồm toàn bộ DNA của một organism. Ở eukaryote, phần lớn genome không trực tiếp mã hóa protein. Nó chứa regulatory sequence, intron, repetitive DNA, transposable element và nhiều vùng có function vẫn đang được nghiên cứu.
+## Genome lớn hơn rất nhiều so với danh sách gene
 
-Vì vậy việc biết sequence chưa tương đương với việc hiểu system. Cần biết region nào được transcribe, chromatin mở hay đóng, protein nào binding, transcript nào được tạo và cell context nào đang xét.
+**Genome (유전체)** là toàn bộ genetic material của organism/cell.
 
-## Chromatin là lớp organization và regulation
+Trong human genome, protein-coding region chỉ chiếm một phần nhỏ. Phần còn lại gồm intron, regulatory element, noncoding RNA gene, repetitive sequence, transposable element và region có chức năng chưa hoàn toàn rõ.
 
-DNA eukaryote quấn quanh histone tạo nucleosome. Chromatin không chỉ để “nén DNA cho vừa nucleus”; mức độ đóng gói ảnh hưởng khả năng transcription machinery tiếp cận sequence.
+Vì vậy “đã sequence genome” không có nghĩa “đã hiểu organism”. Sequence giống data layer; biological meaning phụ thuộc organization và context.
 
-Histone modification như acetylation, methylation và phosphorylation có thể liên quan đến trạng thái transcription khác nhau. Không nên học shortcut “acetylation = bật, methylation = tắt” như luật tuyệt đối, vì effect phụ thuộc residue, location và protein đọc dấu hiệu đó.
+## Gene regulation giải quyết bài toán tiết kiệm và specialization
 
-## DNA methylation
+Một cell không cần biểu hiện mọi gene cùng mức. Việc đó vừa lãng phí energy vừa phá identity.
 
-DNA methylation thường xảy ra ở cytosine trong CpG context ở vertebrate. Methylation ở promoter có thể liên hệ với gene silencing, nhưng relation phụ thuộc locus và cell type.
+Gene regulation có thể xảy ra ở nhiều tầng:
 
-Epigenetic mark có thể được duy trì qua cell division, giúp liver cell tiếp tục giữ identity khác neuron dù genome gần như giống nhau.
+```text
+chromatin accessibility
+      ↓
+transcription initiation
+      ↓
+RNA processing
+      ↓
+RNA stability/localization
+      ↓
+translation
+      ↓
+protein modification/degradation
+```
 
-> Mental model: genome là source code; epigenome không đơn giản là config file, mà giống runtime state và access-control layer quyết định vùng nào của source có thể được dùng trong từng cell.
+Mỗi tầng là một control point.
 
-## Enhancer và regulatory logic
+## Bacterial regulation — operon như một control module
 
-Enhancer có thể nằm xa promoter trên linear DNA nhưng được đưa gần nhau trong 3D chromatin. Nhiều transcription factor phối hợp tạo combinatorial regulation.
+Ở bacteria, các gene liên quan cùng function có thể nằm trong **operon (오페론)**.
 
-Một gene vì vậy hiếm khi có một “công tắc” duy nhất. Expression level thường là output của một regulatory network gồm activator, repressor, chromatin state, RNA stability và signaling pathway.
+Ví dụ kinh điển là **lac operon**, liên quan sử dụng lactose.
 
-## Alternative splicing và post-transcriptional regulation
+Nếu lactose không có, repressor có thể block transcription. Khi lactose/derivative xuất hiện, repression giảm. Đồng thời glucose level ảnh hưởng cAMP signaling, nên cell preferentially dùng glucose khi sẵn có.
 
-Một pre-mRNA có thể được splice theo nhiều cách, tạo transcript khác nhau. miRNA có thể binding mRNA và làm giảm translation hoặc tăng degradation. RNA-binding protein cũng kiểm soát localization, stability và translation.
+Điểm đáng hiểu: operon không chỉ là “on khi có lactose”. Nó integrate nhiều information về nutrient availability.
 
-Điều này giải thích vì sao gene count của organism không trực tiếp tương ứng với complexity. Information processing nằm nhiều ở regulation và combinatorial reuse.
+Đây là một early example của biological logic gate.
 
-## Genomics hiện đại đo gì?
+## Eukaryotic regulation — nhiều layer và khoảng cách lớn
 
-Whole-genome sequencing đọc DNA sequence. Exome sequencing tập trung vùng exon. RNA-seq đo transcript abundance và isoform. ChIP-seq khảo sát DNA region gắn với protein hoặc histone mark. ATAC-seq đánh giá chromatin accessibility. Single-cell RNA-seq cho phép đo gene-expression profile ở từng cell thay vì trung bình cả tissue.
+Eukaryotic genome được đóng gói trong chromatin, nên trước khi RNA polymerase đọc DNA, region phải accessible đủ mức.
 
-Các technique này tạo dataset rất lớn, đưa biology sang vùng giao nhau với statistics và computer science.
+### Promoter
 
-## Variant, association và causality
+Promoter là region gần transcription start site, nơi transcription machinery assemble.
 
-Genome-wide association study (GWAS / 전장유전체연관분석) tìm association giữa genetic variant và trait trong population. Một association mạnh không tự động chứng minh variant đó là causal. Variant có thể chỉ linkage với causal locus hoặc bị confounding bởi population structure.
+### Enhancer
 
-Khi đọc GWAS cần chú ý effect size, sample size, multiple-testing correction và replication. Vì kiểm tra hàng triệu variant, ngưỡng significance phải nghiêm ngặt hơn so với một hypothesis đơn lẻ.
+**Enhancer (인핸서)** là regulatory DNA có thể ở xa gene. Transcription factor bind enhancer; DNA looping đưa complex lại gần promoter.
 
-## Epigenetic inheritance: cần phân biệt các nghĩa
+Một gene có thể chịu ảnh hưởng nhiều enhancer, và một enhancer có thể hoạt động chỉ trong cell type hoặc developmental stage nhất định.
 
-Epigenetic state có thể được truyền qua mitotic cell division khá phổ biến. Transgenerational epigenetic inheritance qua nhiều thế hệ organism phức tạp hơn và bằng chứng phụ thuộc loài, mechanism và trait.
+Điều này giúp giải thích cell-specific expression.
 
-Một lỗi phổ biến là dùng “epigenetics” để nói rằng mọi trải nghiệm của bố mẹ đều được ghi vào gene và truyền ổn định cho con cháu. Claim như vậy thường vượt quá evidence.
+## Transcription factor — protein đọc regulatory state
 
-## Genome như một dynamic system
+**Transcription factor (yếu tố phiên mã / 전사인자)** là protein bind DNA motif và ảnh hưởng transcription.
 
-Transposable element có thể di chuyển hoặc để lại dấu tích trong genome. Gene duplication tạo raw material để một copy giữ function cũ còn copy khác có thể diverge. Structural variant thay đổi copy number hoặc architecture của chromosome.
+Không phải mỗi factor đơn độc quyết định on/off. Nhiều factor kết hợp, interact với coactivator/corepressor và chromatin machinery.
 
-Genome vì vậy không phải document bất biến mà là hệ có lịch sử tiến hóa.
+Gene expression vì thế giống computation trên nhiều input hơn là một switch đơn giản.
+
+## Chromatin — DNA packaging cũng là regulation
+
+DNA quấn quanh histone tạo **nucleosome (뉴클레오솜)**. Nucleosome tiếp tục tổ chức thành chromatin.
+
+Nếu DNA region packed chặt, transcription machinery khó access hơn. Nếu chromatin open hơn, transcription thường dễ hơn.
+
+Hai trạng thái textbook thường gọi **euchromatin** (thường accessible hơn) và **heterochromatin** (thường condensed hơn), nhưng real chromatin là continuum động.
+
+## Epigenetics thực sự là gì?
+
+**Epigenetics (biểu sinh / 후성유전학)** thường nói đến stable hoặc heritable change trong gene regulation/state không do thay đổi DNA sequence trực tiếp.
+
+Hai mechanism nổi bật là DNA methylation và histone modification, nhưng epigenetic regulation rộng hơn và context-dependent.
+
+### DNA methylation
+
+Ở vertebrate, methyl group thường được thêm vào cytosine trong CpG context. Methylation ở promoter region thường liên quan transcriptional repression, nhưng interpretation phụ thuộc location và context.
+
+### Histone modification
+
+Histone tail có thể acetylation, methylation và nhiều modification khác.
+
+Acetylation thường liên quan chromatin accessibility tăng trong nhiều context vì làm giảm interaction giữa histone và DNA, nhưng không nên biến thành rule “acetyl = on, methyl = off” quá đơn giản. Histone methylation có thể activate hoặc repress tùy residue.
+
+## Epigenetic không có nghĩa “mọi trải nghiệm được truyền cho con cháu”
+
+Đây là misconception phổ biến.
+
+Environment có thể ảnh hưởng gene expression và epigenetic mark. Một số mark có thể tồn tại qua cell division; một số trường hợp transgenerational inheritance tồn tại ở vài organism/context.
+
+Nhưng ở mammal, nhiều epigenetic mark được reset mạnh trong gametogenesis và early embryo. Vì vậy claim rằng một lifestyle event cụ thể chắc chắn “ghi vào epigenome và truyền nhiều thế hệ” cần evidence rất cẩn thận.
+
+## X-chromosome inactivation — ví dụ epigenetic ở cấp chromosome
+
+Female mammal thường có hai X chromosome. Nếu cả hai active hoàn toàn, dosage của X-linked gene sẽ cao hơn nhiều so với male có một X.
+
+Một X chromosome trong mỗi somatic cell thường bị largely inactivated sớm trong development.
+
+Process này liên quan long noncoding RNA XIST và chromatin modification.
+
+Kết quả là body female là mosaic: cell khác nhau có thể active X khác nhau.
+
+## Genomic imprinting
+
+Ở một số gene, expression phụ thuộc allele đến từ mother hay father. Đây gọi là **genomic imprinting (유전체 각인)**.
+
+Một allele có thể bị epigenetically silenced theo parent-of-origin.
+
+Imprinting cho thấy hai allele có sequence tương tự nhưng regulatory history khác nhau có thể hoạt động khác nhau.
+
+## Noncoding RNA — RNA không chỉ là messenger
+
+Ngoài mRNA, cell dùng nhiều RNA regulatory.
+
+**microRNA (miRNA)** có thể bind mRNA và làm giảm translation hoặc tăng degradation.
+
+**long noncoding RNA (lncRNA)** có nhiều role trong chromatin, transcription và organization; function rất đa dạng và không phải mọi lncRNA đều đã hiểu rõ.
+
+RNA vì thế là cả information carrier lẫn regulatory molecule.
+
+## Genome sequencing — từ molecule thành data
+
+**Sequencing (giải trình tự / 염기서열 분석)** xác định order nucleotide.
+
+Early sequencing đọc fragment tương đối ngắn; modern high-throughput sequencing có thể tạo hàng triệu/billion reads.
+
+Nhưng raw read chưa phải genome hoàn chỉnh. Bioinformatics phải quality-control, align hoặc assemble, rồi variant calling và annotation.
+
+Đây là chỗ Biology nối trực tiếp với Computer Science.
+
+## Reference genome và individual genome
+
+Một **reference genome** là coordinate framework đại diện, không phải “genome chuẩn tuyệt đối của loài”.
+
+Individual có hàng triệu variant so với reference, phần lớn không gây disease.
+
+Khi nói “mutation so với reference”, cần phân biệt variant bình thường trong population với pathogenic variant.
+
+## SNP, indel và structural variant
+
+**SNP/SNV** là difference một nucleotide.
+
+**Indel** là insertion/deletion nhỏ.
+
+**Structural variant** có thể là deletion, duplication, inversion, translocation hoặc rearrangement lớn.
+
+Genome variation vì vậy không chỉ là thay một “chữ”.
+
+## Genome-wide association study — liên kết variant với trait
+
+**GWAS (전장유전체 연관분석)** so sánh variant frequency với phenotype trong large population.
+
+Nếu variant gần một locus xuất hiện thường hơn ở group có trait, ta có statistical association.
+
+Nhưng association không tự động chứng minh causation. Variant marker có thể chỉ linked với causal variant; population structure và confounder cũng phải được kiểm soát.
+
+P-value nhỏ không nói effect lớn. Nhiều common variant có effect size rất nhỏ nhưng cộng lại ảnh hưởng polygenic trait.
+
+## Polygenic score — prediction chứ không phải destiny
+
+**Polygenic score (다유전자 점수)** kết hợp effect estimate của nhiều variant để ước lượng genetic propensity cho trait trong population phù hợp.
+
+Score phụ thuộc training population, phenotype definition và statistical model. Transfer giữa ancestry group có thể giảm accuracy.
+
+Vì vậy polygenic score không phải “mã số định mệnh” của cá nhân.
+
+## Single-cell genomics — tại sao bulk average che mất biology?
+
+Nếu nghiền cả tissue và đo average RNA, signal của rare cell type có thể biến mất.
+
+**Single-cell RNA sequencing (scRNA-seq / 단일세포 RNA 시퀀싱)** đo transcriptome của từng cell, giúp cluster cell type và infer cell state.
+
+Nhưng data rất sparse/noisy; clustering và dimensionality reduction là model, không phải ground truth tuyệt đối.
+
+Đây là ví dụ rõ rằng modern biology vừa là wet lab vừa là data science.
+
+## Systems biology — gene không hoạt động một mình
+
+**Systems biology (hệ thống sinh học / 시스템 생물학)** nghiên cứu network interaction giữa gene, protein, metabolite và signal.
+
+Một gene có thể regulate nhiều target; target feedback lại regulator. Vì vậy phenotype có thể xuất hiện từ network dynamics.
+
+Graph theory dùng node–edge để mô tả gene regulatory network hoặc protein interaction network. Differential equation có thể mô tả concentration thay đổi theo time.
 
 ## Common misconceptions
 
-“Non-coding DNA = junk DNA” là quá đơn giản. Một phần non-coding DNA có regulatory hoặc structural function, một phần có thể gần như neutral. Ngược lại, việc một sequence được transcribe không tự động chứng minh nó có function quan trọng.
+### “Epigenetics thay đổi DNA”
 
-“Epigenetics thay thế genetics” cũng sai. Epigenetic mechanism hoạt động trên substrate là genome và thường phụ thuộc protein do gene mã hóa; genetics và epigenetics là các lớp tương tác.
+Epigenetic regulation thường không thay base sequence trực tiếp. Nó thay accessibility/expression state.
 
-## Kết nối
+### “Gene bị methyl hóa thì luôn off”
 
-Foundation molecular nằm ở [[00_dna_genes_and_gene_expression]]. Inheritance và mutation nằm ở [[01_inheritance_variation_and_mutation]]. Population genomics nối trực tiếp sang [[../03_evolution_and_diversity/00_evolution_and_population_genetics]], còn phương pháp phân tích sequencing được nối với [[../06_biotechnology_computation/00_biotechnology_bioinformatics_and_systems_biology]].
+Không. Effect phụ thuộc genomic location và context.
+
+### “Genome sequence cho biết chính xác tương lai sức khỏe”
+
+Không. Phần lớn trait complex là probabilistic và phụ thuộc environment, age, development, interaction giữa nhiều gene.
+
+### “Noncoding DNA là junk”
+
+Một số noncoding region có function quan trọng; một số có thể ít/no known function. Không nên suy từ “không mã hóa protein” thành “vô dụng”.
+
+## Mental Model
+
+> Genome là storage lớn; chromatin quyết định vùng nào accessible; regulatory DNA và transcription factor quyết định khi nào gene được đọc; RNA layer tinh chỉnh message; genome variation tạo khác biệt giữa individual; genomics dùng computation để đọc pattern trên quy mô lớn.
+
+Từ đây genetics đã đủ nền để bước sang [[../03_evolution_and_diversity/00_evolution_and_population_genetics]]: nếu allele frequency thay đổi qua nhiều thế hệ thì population sẽ tiến hóa như thế nào?
