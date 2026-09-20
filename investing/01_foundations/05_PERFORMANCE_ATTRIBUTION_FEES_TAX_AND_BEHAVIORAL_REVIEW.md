@@ -1,395 +1,397 @@
-# 05 — Performance Attribution, Fees, Tax và Behavioral Review
+# Phân rã kết quả đầu tư, chi phí, thuế và đánh giá hành vi
 
-> Mục tiêu của chapter này là trả lời câu hỏi mà rất nhiều nhà đầu tư bỏ qua: **portfolio tăng hoặc giảm vì lý do gì?** Nếu không tách performance thành market beta, allocation, security selection, currency, income, fees, tax, execution và behavior, người đầu tư rất dễ học sai bài học từ chính kết quả của mình.
+> Danh mục tăng 15% không tự động nghĩa chiến lược tốt; danh mục giảm 8% cũng không tự động nghĩa quyết định sai. Chương này xây vòng phản hồi để trả lời: kết quả đến từ đâu, bao nhiêu là beta thị trường, bao nhiêu là lựa chọn chủ động, bao nhiêu bị mất bởi chi phí/thuế và liệu quy trình ra quyết định có thật sự tốt lên hay không.
 
-Portfolio review không chỉ là “lời bao nhiêu phần trăm”. Nó là một feedback system giúp phân biệt skill, luck, structural exposure và process error.
+## 1. Kết quả đầu tư phải được đặt cạnh mục tiêu
 
-## 1. Outcome tốt chưa chắc decision tốt
+Một danh mục 10% có thể tốt nếu mục tiêu là 6% với rủi ro thấp, nhưng kém nếu benchmark phù hợp tăng 20% với rủi ro tương đương.
 
-Mua một stock mà không nghiên cứu rồi tình cờ +50% có thể là outcome tốt từ process kém. Ngược lại, decision hợp lý với sizing đúng vẫn có thể loss vì future outcomes are probabilistic.
-
-Vì vậy phải tách **decision quality** khỏi **outcome quality**. Nếu không, luck dễ được reinforcement thành bad habit.
-
-## 2. Process–Outcome Matrix
-
-Có bốn combinations: good process/good outcome; good process/bad outcome; bad process/good outcome; bad process/bad outcome.
-
-Nguy hiểm nhất cho learning đôi khi là bad process/good outcome, vì nó khiến investor tin sai method có edge.
-
-## 3. Total Return
-
-Total return gồm price change cộng cash distributions và các adjustments relevant:
-
-`Total Return = (Ending Price - Beginning Price + Distributions) / Beginning Price`
-
-Với foreign asset, home-currency total return còn có FX interaction.
-
-## 4. Price return vs total return
-
-Price index bỏ dividends; total-return index reinvest distributions. Long horizons có thể tạo gap lớn.
-
-Khi benchmark fund, phải dùng đúng total-return benchmark nếu distributions được reinvest.
-
-## 5. Portfolio return với nhiều holdings
-
-Một-period portfolio return gần bằng weighted sum of constituent returns nếu weights measured appropriately.
-
-Multi-period attribution phức tạp hơn vì weights change, contributions and cash flows compound. Spreadsheet đơn giản cần consistency hơn sophistication.
-
-## 6. Return contribution
-
-**Contribution to return** cho biết mỗi holding/sector đóng bao nhiêu percentage points vào portfolio result.
-
-Một 2% position tăng 100% đóng khoảng +2 percentage points, không phải portfolio +100%. Điều này giúp chống headline bias.
-
-## 7. Benchmark selection
-
-Benchmark phải phù hợp mandate, geography, asset mix và currency. Comparing KRW global balanced portfolio with Nasdaq alone không meaningful.
-
-Có thể dùng policy benchmark constructed from target asset-class weights thay vì một index duy nhất.
-
-## 8. Active Return
-
-`Active Return = Portfolio Return - Benchmark Return`
-
-Positive active return không tự động nghĩa skill; cần attribution xem source.
-
-## 9. Allocation Effect
-
-Allocation effect đến từ overweight/underweight asset class, country hoặc sector so benchmark.
-
-Nếu semiconductor sector outperform và portfolio overweight semis, contribution là allocation decision nhiều hơn stock-picking skill.
-
-## 10. Selection Effect
-
-Selection effect đến từ choosing securities better/worse than segment benchmark.
-
-Nếu sector weight same benchmark nhưng holdings outperform sector index, selection contributed.
-
-## 11. Interaction Effect
-
-Classical Brinson attribution có allocation, selection và interaction. Interaction reflects combination of active weight và relative security performance.
-
-Retail investor không cần memorize formula ngay, nhưng nên hiểu active return có multiple layers.
-
-## 12. Factor Attribution
-
-A stock portfolio can outperform because of market beta, size, value, momentum, quality or low-vol exposures.
-
-Factor attribution prevents calling systematic exposure “alpha”.
-
-## 13. Currency Attribution
-
-For home-currency investor:
-
-`Home Return = (1 + Local Asset Return)(1 + FX Return) - 1`
-
-Approximation:
-
-`≈ Asset Return + FX Return`
-
-Interaction term matters more when moves are large.
-
-## 14. Hedging Attribution
-
-Currency-hedged portfolios need separate hedge P/L, carry/forward points and underlying return.
-
-A hedge can lose money while doing its job if foreign currency appreciates. Judge hedge by risk-policy objective, not standalone P/L.
-
-## 15. Income Attribution
-
-Dividends, coupons, interest, option premium and securities-lending income should be separated from price return when useful.
-
-Stable income may be offset by capital loss; headline yield alone can mislead.
-
-## 16. Bond Attribution
-
-Bond return can be decomposed into carry/coupon, yield-curve move, roll-down, credit spread change and FX.
-
-A bond fund gaining because yields fell is different from earning recurring carry.
-
-## 17. Equity Attribution
-
-Long-run equity return can be thought roughly as earnings/cash-flow growth + shareholder distributions + valuation multiple change + FX for foreign investors.
-
-Short-term returns may be dominated by multiple repricing even if earnings stable.
-
-## 18. Fee Drag
-
-Fees compound negatively. Expense ratio, advisory fee, brokerage, exchange fees and platform costs reduce net return.
-
-A 1% annual drag over decades can create large wealth difference because lost capital also loses future compounding.
-
-## 19. Spread Cost
-
-Bid–ask spread is implicit trading cost. Frequent trading in illiquid products can dwarf headline management fee.
-
-Estimate half-spread or actual execution vs mid depending methodology.
-
-## 20. Slippage
-
-Slippage is difference between expected/reference price and actual execution. It tends to worsen in volatility and low liquidity.
-
-Track slippage separately from signal performance so execution problems are visible.
-
-## 21. Market Impact
-
-Large orders move market. Institutional attribution often separates implementation shortfall from investment decision.
-
-Even retail traders can experience impact in microcaps or thin derivatives.
-
-## 22. FX Conversion Cost
-
-Foreign investing can incur currency conversion spread/commission repeatedly. Small FX costs matter with high turnover.
-
-Compare broker conversion method and whether cash can remain in foreign currency between trades.
-
-## 23. Funding and Borrow Costs
-
-Margin interest, CFD overnight financing, futures basis, option financing effects and short borrow fees belong in net performance.
-
-Gross trading return before funding can be economically meaningless for leveraged strategies.
-
-## 24. Implementation Shortfall
-
-Implementation shortfall compares theoretical decision price with actual executed portfolio outcome.
-
-It includes delay, spread, impact, missed trades and fees. This bridges research alpha and realized alpha.
-
-## 25. Gross vs net return
-
-Always separate gross strategy return from net-of-cost return. A strategy with gross 12% and costs 7% is not a 12% strategy.
-
-Net economics determine usefulness.
-
-## 26. Tax Drag
-
-Tax can apply differently to interest, dividends, realized capital gains and foreign income. Rules vary by jurisdiction and change over time.
-
-Framework:
-
-`Pre-tax return → income type → realization timing → account wrapper → withholding/tax → after-tax return`
-
-Do not hard-code rates in permanent notes without date/jurisdiction context.
-
-## 27. Tax deferral
-
-Even if eventual tax rate same, deferring realization can preserve more capital for compounding.
-
-High-turnover strategies lose this advantage relative to low-turnover investing in taxable accounts.
-
-## 28. Realized vs unrealized gains
-
-Unrealized gains may defer tax but still represent economic exposure. Refusing to sell solely to avoid tax can create excessive concentration.
-
-Tax is a cost input, not the only decision criterion.
-
-## 29. Tax-loss harvesting intuition
-
-Realizing losses may offset taxable gains where rules permit, but wash-sale/local anti-avoidance rules vary.
-
-Economic exposure, transaction costs and legal rules must be considered together.
-
-## 30. Tax Location
-
-Different assets can be more suitable in tax-advantaged vs taxable wrappers depending income type and turnover.
-
-Asset allocation and account allocation are related but separate decisions.
-
-## 31. Turnover
-
-Turnover increases commissions, spread, slippage and potentially tax realization.
-
-Measure whether higher turnover actually adds net alpha.
-
-## 32. Capacity and cost drift
-
-As capital grows, execution cost can rise. Historical return from small account may not scale.
-
-Performance review should watch cost per unit turnover over time.
-
-## 33. Behavioral Attribution
-
-Some underperformance is caused not by strategy but by investor behavior: FOMO entries, panic exits, doubling after wins, averaging losers outside rules or abandoning strategy at drawdown lows.
-
-Tag trades/changes as rule-based or discretionary.
-
-## 34. Behavior Gap
-
-**Behavior gap** is difference between return of investment product/strategy and return actually captured by investor because cash-flow timing or switching decisions.
-
-Chasing past winners often creates negative gap.
-
-## 35. Outcome Bias
-
-Outcome bias judges process from result. One winning speculation can receive false praise; one losing high-quality decision can be abandoned.
-
-Review must reconstruct information available at decision time.
-
-## 36. Hindsight Bias
-
-After events, outcomes feel obvious. “Everyone knew rates would rise” is often hindsight rewriting.
-
-Decision journal preserves pre-event uncertainty.
-
-## 37. Confirmation Bias
-
-Investor tends to search information supporting current holdings. During review, explicitly collect disconfirming evidence.
-
-Ask: what would a skeptical analyst say?
-
-## 38. Attribution Bias
-
-People often attribute wins to skill and losses to external bad luck. Structured attribution forces symmetry.
-
-If macro beta drove gains, record it even if stock selection felt smart.
-
-## 39. Decision Journal
-
-Before major decision, record thesis, valuation, expected drivers, probability ranges, key risks, invalidation, horizon, size and alternatives.
-
-Journal need not be long; it must freeze the original information set.
-
-## 40. Forecast Calibration
-
-If you repeatedly assign 70% probability to events, roughly 70% should occur over sufficiently large comparable sample for good calibration.
-
-Calibration teaches uncertainty better than binary right/wrong scoring.
-
-## 41. Brier-score intuition
-
-Probability forecasts can be scored with squared error. You do not need formal scoring daily, but concept rewards calibrated confidence and punishes overconfidence.
-
-“100% certain” should be rare.
-
-## 42. Base Rates
-
-Before attributing success to unique insight, ask what base outcome was. If broad sector rose 60%, your stock +65% contains substantial beta.
-
-Base-rate thinking protects ego from false alpha.
-
-## 43. Monthly Review
-
-Monthly portfolio review should check weights, risk contributions, drawdown, FX, liquidity, cost and rule violations.
-
-It is an observation process, not automatic reason to trade.
-
-## 44. Quarterly Thesis Review
-
-Quarterly review can update earnings, balance sheet, sector cycle, valuation and expected return.
-
-The question is “would I allocate this capital today?” not “am I above/below purchase price?”.
-
-## 45. Annual Portfolio Audit
-
-Annual audit revisits goals, liabilities, income stability, horizon, IPS, tax wrappers and strategic allocation.
-
-Life changes justify policy changes more than recent performance.
-
-## 46. Attribution by sleeve
-
-Core, satellite, trading and liquidity sleeves should be reviewed separately because objectives differ.
-
-Judging emergency cash against equity benchmark is meaningless.
-
-## 47. Contribution to risk vs contribution to return
-
-A position can contribute little return but huge risk, or strong return with modest risk contribution.
-
-Review both dimensions to decide whether capital use was efficient.
-
-## 48. Expected vs realized return
-
-Compare realized outcome with pre-trade/holding expected range. One period outside range does not necessarily invalidate thesis, but systematic misses reveal model weakness.
-
-Track forecast errors.
-
-## 49. Thesis Attribution
-
-For each major position, identify which assumption drove result: volume, price, margin, FX, rates, valuation multiple, regulation or execution.
-
-This produces better learning than “stock went down because market bad”.
-
-## 50. Macro vs idiosyncratic attribution
-
-Separate market-wide shock from company-specific issue. If all banks fall on rate shock, that differs from one bank falling due credit scandal.
-
-Response and thesis update should differ.
-
-## 51. Performance in different regimes
-
-Review returns under inflation shocks, recession, low-vol bull markets and risk-off episodes. Strategy average may hide regime dependence.
-
-This helps portfolio diversification decisions.
-
-## 52. Rolling performance
-
-Use rolling 12m/36m return, volatility, Sharpe or alpha carefully to detect drift. Rolling windows overlap and are not independent, so avoid overinterpreting small changes.
-
-## 53. Peer comparison
-
-Peer comparison can identify whether company/fund result is idiosyncratic or sector-wide. But peer set must be economically comparable.
-
-Different leverage or business mix can make naive comparison misleading.
-
-## 54. Benchmark drift
-
-If portfolio strategy changes over time, original benchmark may become inappropriate. Change benchmark only for genuine mandate change, not to make performance look better.
-
-Document benchmark changes prospectively.
-
-## 55. Survivorship in self-review
-
-Do not review only current winners. Keep records of sold positions and abandoned strategies. Otherwise personal track record becomes survivorship-biased.
-
-Closed mistakes are often most valuable learning material.
-
-## 56. Attribution Template
+Trước khi đánh giá phải xác định:
 
 ```text
-Portfolio return:
-Policy benchmark return:
-Active return:
-Market/beta contribution:
-Allocation contribution:
-Selection contribution:
-Factor contribution:
-Currency contribution:
-Income contribution:
-Fees/spread/slippage/funding:
-Tax impact:
-Largest positive thesis driver:
-Largest negative thesis driver:
-Rule violations:
-Forecast errors:
-Process lesson:
-Action justified by evidence:
+Mục tiêu
+Benchmark
+Đồng tiền báo cáo
+Khoảng thời gian
+Lợi suất trước hay sau phí/thuế
 ```
 
-The template should lead to a small number of measurable conclusions.
+Không thay benchmark sau khi đã biết kết quả.
 
-## 57. When should strategy change?
+## 2. Lợi suất tuyệt đối và lợi suất chủ động
 
-Change strategy when economic premise changes, robust evidence suggests edge degradation, implementation cost makes edge uneconomic, risk exceeds capacity or objectives change.
+Lợi suất tuyệt đối là lợi suất của chính danh mục. Lợi suất chủ động (active return) là phần chênh so với benchmark:
 
-Do not change simply because last few outcomes hurt emotionally.
+```text
+Active Return = Portfolio Return - Benchmark Return
+```
 
-## 58. When should nothing change?
+Nếu danh mục tăng 8% nhưng benchmark tăng 12%, lợi suất tuyệt đối dương nhưng lợi suất chủ động âm.
 
-“No action” is valid when performance falls within expected distribution, allocation remains within bands and thesis is intact.
+## 3. Time-Weighted Return và Money-Weighted Return
 
-Review discipline includes resisting unnecessary optimization.
+Time-Weighted Return (TWR) đánh giá chiến lược không phụ thuộc thời điểm dòng tiền của nhà đầu tư.
 
-## 59. Learning loop
+Money-Weighted Return (MWR/IRR) phản ánh trải nghiệm thực vì tính cả thời điểm nạp/rút tiền.
 
-Good process is:
+Nếu nhà đầu tư đổ nhiều tiền vào sau khi thị trường tăng và rút sau khi giảm, MWR có thể kém xa TWR của cùng quỹ.
 
-`Decision → Record → Outcome → Attribution → Error diagnosis → Controlled process change`
+## 4. Phân rã theo phân bổ và lựa chọn
 
-Skipping attribution produces random strategy hopping.
+Một khung phổ biến tách kết quả thành:
 
-## 60. Kết luận
+```text
+Tác động phân bổ (allocation effect)
+Tác động lựa chọn chứng khoán (selection effect)
+Tác động tương tác (interaction effect)
+```
 
-A mature investor asks more than “how much did I make?”. The important questions are: what generated the return, what risk funded it, what costs reduced it, what behavior changed it, what part is repeatable and what part was luck.
+Phân bổ trả lời: bạn tăng/giảm tỷ trọng đúng nhóm tài sản hoặc ngành chưa?
 
-Performance attribution turns investing from a sequence of memories into a measurable learning system.
+Lựa chọn trả lời: trong cùng nhóm, bạn chọn chứng khoán tốt hơn benchmark chưa?
+
+## 5. Phân rã theo nhân tố
+
+Một danh mục có thể vượt benchmark vì mang nhiều beta giá trị, động lượng, vốn hóa nhỏ, chất lượng hoặc duration.
+
+Do đó nên hỏi:
+
+```text
+Bao nhiêu lợi suất đến từ nhân tố có hệ thống?
+Bao nhiêu là alpha còn lại sau khi đã tính nhân tố?
+```
+
+Nếu toàn bộ phần vượt trội đến từ một nhân tố quen thuộc, không nên gọi tất cả là kỹ năng lựa chọn chứng khoán.
+
+## 6. Phân rã tiền tệ
+
+Với tài sản nước ngoài, lợi suất theo đồng tiền cơ sở gồm lợi suất tài sản và FX.
+
+```text
+Home Return = (1 + Local Return) × (1 + FX Return) - 1
+```
+
+Đánh giá nên tách:
+
+```text
+Lợi suất tài sản bằng đồng tiền địa phương
+Tác động FX
+Chi phí phòng vệ FX
+Tương tác giữa hai phần
+```
+
+Điều này đặc biệt quan trọng khi so quỹ có phòng vệ và không phòng vệ.
+
+## 7. Phân rã thu nhập
+
+Tổng lợi suất có thể đến từ:
+
+```text
+Cổ tức
+Coupon
+Lãi tiền mặt
+Carry
+Lợi nhuận vốn
+Thay đổi định giá
+```
+
+Nhà đầu tư cần biết phần nào có thể lặp lại. Một năm tốt do hệ số định giá mở rộng không giống một năm tốt do dòng tiền/cổ tức tăng.
+
+## 8. Phí quản lý
+
+Phí nhỏ nhưng kéo dài nhiều năm có tác động lớn do ghép lãi.
+
+Sự khác biệt 0,5% mỗi năm giữa hai sản phẩm có thể trở thành khoảng cách đáng kể sau hàng chục năm.
+
+Nhưng phí thấp không tự động tốt nếu sản phẩm bám chỉ số kém, spread rộng hoặc cấu trúc thuế bất lợi.
+
+## 9. Chênh lệch mua bán và trượt giá
+
+Chi phí thực thi gồm chênh lệch mua bán, phí môi giới, trượt giá và tác động thị trường.
+
+Một chiến lược có lợi thế trước chi phí 30 điểm cơ bản mỗi giao dịch nhưng mất 25 điểm cơ bản cho thực thi chỉ còn rất ít biên an toàn.
+
+Cần đo chi phí thực tế theo quy mô, thời điểm và điều kiện thanh khoản.
+
+## 10. Implementation Shortfall
+
+Thiếu hụt thực thi (implementation shortfall) so sánh kết quả thực tế với giá quyết định lý thuyết.
+
+Nó có thể bao gồm:
+
+```text
+Độ trễ từ quyết định tới gửi lệnh
+Spread
+Slippage
+Tác động thị trường
+Lệnh không khớp
+Chi phí cơ hội
+```
+
+Nếu chiến lược tốt trên giấy nhưng kém khi triển khai, đây thường là nơi cần kiểm tra đầu tiên.
+
+## 11. Chi phí vốn và vay chứng khoán
+
+Vị thế dùng đòn bẩy, CFD, short hoặc phái sinh có thể chịu chi phí vốn.
+
+Bán khống còn có phí vay chứng khoán và rủi ro phí tăng đột biến.
+
+Một giao dịch đúng hướng nhưng giữ lâu có thể bị carry âm làm mất phần lớn lợi nhuận.
+
+## 12. Thuế kéo lùi lợi suất
+
+Thuế có thể tác động qua:
+
+```text
+Cổ tức / lãi
+Lãi vốn thực hiện
+Khấu trừ tại nguồn
+Thời điểm hiện thực hóa
+Tài khoản ưu đãi thuế
+```
+
+Vì quy định thay đổi theo quốc gia và thời điểm, thư viện chỉ giữ logic. Trước quyết định thật cần kiểm tra nguồn chính thức.
+
+## 13. Lợi suất sau thuế là thứ nhà đầu tư sử dụng được
+
+Hai chiến lược cùng lợi suất trước thuế có thể khác lớn về kết quả sau thuế nếu một chiến lược quay vòng nhiều và tạo thu nhập chịu thuế thường xuyên.
+
+Đối với mục tiêu dài hạn, trì hoãn thuế có thể có giá trị nhờ tiếp tục ghép lãi trên phần chưa nộp.
+
+## 14. Turnover là một biến kinh tế
+
+Vòng quay (turnover) cao không tự động xấu, nhưng phải được biện minh bằng lợi thế đủ lớn.
+
+```text
+Lợi thế gộp
+- Spread
+- Slippage
+- Phí
+- Thuế
+- Tác động thị trường
+= Lợi thế ròng
+```
+
+Nếu lợi thế ròng rất nhỏ, chiến lược khó bền vững khi quy mô tăng hoặc thanh khoản xấu đi.
+
+## 15. Phân rã theo quyết định
+
+Ngoài phân rã theo tài sản, có thể phân rã theo loại quyết định:
+
+```text
+Chọn tài sản
+Chọn thời điểm
+Quy mô vị thế
+Tái cân bằng
+Phòng vệ
+Thực thi
+Thoát vị thế
+```
+
+Điều này giúp phát hiện ví dụ: ý tưởng phân tích thường đúng nhưng sizing quá lớn làm kết quả xấu.
+
+## 16. Phân rã luận điểm đầu tư
+
+Mỗi vị thế chủ động nên có cây nguyên nhân:
+
+```text
+Động lực doanh thu
+Biên lợi nhuận
+Bảng cân đối
+Định giá
+Chất xúc tác
+```
+
+Khi kết quả khác dự kiến, phải xác định node nào sai. Không nên kết luận chung chung “thị trường vô lý”.
+
+## 17. Điều chỉnh dự báo và hiệu chỉnh xác suất
+
+Nếu thường xuyên dự báo xác suất 70% nhưng chỉ đúng khoảng 50%, bạn đang quá tự tin.
+
+Ghi lại xác suất trước sự kiện và so với kết quả qua nhiều quyết định giúp cải thiện hiệu chỉnh (calibration).
+
+Mục tiêu không phải đúng mọi lần mà là xác suất được ước lượng hợp lý.
+
+## 18. Outcome bias
+
+Một vị thế lời không chứng minh quyết định tốt. Một vị thế lỗ không chứng minh quyết định tệ.
+
+Cần đánh giá:
+
+```text
+Thông tin khi ra quyết định có đủ không?
+Giả định có hợp lý không?
+Xác suất có được hiệu chỉnh không?
+Quy mô có phù hợp không?
+Quy trình có được tuân thủ không?
+```
+
+Sau đó mới dùng kết quả để cập nhật.
+
+## 19. Hindsight bias
+
+Sau khi sự kiện xảy ra, não dễ nghĩ “rõ ràng phải thế”. Điều này làm ta học sai vì xóa mất bất định đã tồn tại trước quyết định.
+
+Nhật ký ex-ante nên được khóa hoặc lưu phiên bản để có thể xem lại mình thực sự biết gì tại thời điểm đó.
+
+## 20. Behavior Gap
+
+Khoảng cách hành vi (behavior gap) là chênh lệch giữa lợi suất sản phẩm và lợi suất nhà đầu tư do thời điểm mua bán, hoảng loạn, FOMO hoặc bỏ kế hoạch.
+
+Một quỹ tốt không giúp ích nếu người dùng liên tục mua ở đỉnh và bán ở đáy.
+
+Thiết kế danh mục phải phù hợp tâm lý thực của người sở hữu, không phải “phiên bản lý tưởng” của họ.
+
+## 21. Nhật ký quyết định
+
+Trước quyết định, ghi:
+
+```text
+Dữ kiện
+Ước tính
+Giả định
+Kịch bản
+Điều thị trường đang kỳ vọng
+Định giá
+Quy mô
+Chất xúc tác
+Điều kiện vô hiệu hóa
+```
+
+Sau quyết định, không sửa phần cũ. Chỉ thêm kết quả và đánh giá để tránh viết lại lịch sử.
+
+## 22. Đánh giá hàng tháng
+
+Đánh giá tháng nên ngắn và thiên về vận hành:
+
+```text
+Lợi suất tuyệt đối và tương đối
+Dòng tiền vào/ra
+Vi phạm tỷ trọng
+Rủi ro tập trung
+Phí / thuế / giao dịch lớn
+Sự kiện cần theo dõi
+```
+
+Không nên biến mỗi tháng thành lý do thay đổi toàn bộ chiến lược dài hạn.
+
+## 23. Đánh giá hàng quý
+
+Hàng quý có thể đi sâu hơn:
+
+```text
+Phân rã theo nhóm tài sản
+Phân rã theo nhân tố
+Phân rã tiền tệ
+Luận điểm chủ động
+Sai số dự báo
+Chất lượng thực thi
+```
+
+Đây là nhịp phù hợp để kiểm tra liệu các giả định kinh tế của danh mục còn đúng hay không.
+
+## 24. Kiểm toán danh mục hàng năm
+
+Hàng năm nên xem lại toàn hệ thống:
+
+```text
+Mục tiêu
+Thu nhập / nợ
+Nghĩa vụ
+IPS
+Khung thuế
+Sản phẩm / môi giới
+Chi phí
+Tỷ trọng chiến lược
+Giới hạn tập trung
+Quy trình ra quyết định
+```
+
+Mục tiêu là thay đổi khi cuộc sống hoặc cấu trúc thị trường thay đổi thật sự, không phải theo biến động ngắn hạn.
+
+## 25. Khi nào nên thay chiến lược?
+
+Nên xem xét thay đổi khi:
+
+```text
+Cơ chế tạo lợi suất không còn tồn tại
+Chi phí tăng làm lợi thế ròng âm
+Quy mô vượt khả năng thị trường
+Đặc điểm rủi ro thay đổi ngoài dự kiến
+Mục tiêu / nghĩa vụ cá nhân thay đổi
+```
+
+Không nên đổi chỉ vì một giai đoạn ngắn hoạt động kém nhưng vẫn nằm trong phân phối dự kiến.
+
+## 26. Benchmark phải phù hợp
+
+Benchmark nên phản ánh tập cơ hội đầu tư và có thể đầu tư được.
+
+Danh mục cổ phiếu Hàn Quốc không nên so với tiền gửi để tuyên bố “alpha”. Danh mục đa tài sản cũng không nên chỉ so với một chỉ số cổ phiếu nếu mục tiêu và rủi ro khác hẳn.
+
+## 27. Phân rã lợi suất trái phiếu
+
+Với thu nhập cố định, có thể tách:
+
+```text
+Thu nhập / Carry
+Roll-down
+Thay đổi lợi suất phi rủi ro
+Thay đổi đường cong
+Thay đổi credit spread
+Vỡ nợ / thu hồi
+FX
+```
+
+Điều này giúp biết “trái phiếu lời” vì income, vì duration hay vì spread nén lại.
+
+## 28. Phân rã lợi suất cổ phiếu
+
+Một trực giác đơn giản:
+
+```text
+Lợi suất cổ phiếu
+≈ Tăng trưởng lợi nhuận
++ Cổ tức / Mua lại ròng
++ Thay đổi hệ số định giá
++ FX nếu có
+```
+
+Trong ngắn hạn hệ số định giá có thể chi phối; dài hạn tăng trưởng lợi nhuận trên mỗi cổ phiếu quan trọng hơn.
+
+## 29. Phân rã quỹ ETF
+
+ETF nên được đánh giá qua:
+
+```text
+Lợi suất chỉ số
+Sai lệch bám chỉ số
+Phí
+Thuế
+FX hedge
+Securities lending
+Spread / Premium / Discount khi giao dịch
+```
+
+Không chỉ nhìn expense ratio.
+
+## 30. Attribution không phải để tự khen hoặc tự trách
+
+Mục tiêu của phân rã kết quả không phải tìm một câu chuyện dễ chịu, mà tìm biến nào thật sự tạo ra lợi suất và biến nào đang làm quy trình rò rỉ.
+
+Nếu phần lớn kết quả đến từ beta thị trường, hãy thừa nhận. Nếu ý tưởng đúng nhưng chi phí thực thi quá cao, sửa thực thi. Nếu sizing sai, sửa ngân sách rủi ro.
+
+## 31. Vòng phản hồi hoàn chỉnh
+
+```text
+Quyết định
+→ Ghi lại dữ kiện và giả định
+→ Kết quả
+→ Phân rã kết quả
+→ So với xác suất dự báo
+→ Xác định lỗi quy trình
+→ Thay đổi quy tắc nếu có bằng chứng
+→ Quyết định tiếp theo
+```
+
+Đây là cách biến đầu tư thành quá trình học có kỷ luật thay vì chuỗi câu chuyện được viết lại sau khi giá đã chạy.
