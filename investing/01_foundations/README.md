@@ -16,6 +16,8 @@ Lĩnh vực này xây nền tảng tư duy trước khi học từng loại tài
 
 [05_PERFORMANCE_ATTRIBUTION_FEES_TAX_AND_BEHAVIORAL_REVIEW.md](./05_PERFORMANCE_ATTRIBUTION_FEES_TAX_AND_BEHAVIORAL_REVIEW.md) hoàn thiện vòng phản hồi bằng cách phân rã kết quả thành beta thị trường, phân bổ tài sản, lựa chọn chứng khoán, nhân tố, tiền tệ, thu nhập, phí, chênh lệch mua bán, trượt giá, chi phí vốn, thuế và hành vi; đồng thời xây quy trình hiệu chỉnh dự báo, nhật ký quyết định và đánh giá theo tháng/quý/năm.
 
+[06_ADVANCED_PORTFOLIO_DESIGN_STRESS_AND_DECISION_LAB.md](./06_ADVANCED_PORTFOLIO_DESIGN_STRESS_AND_DECISION_LAB.md) là lớp học sâu: chuyển mục tiêu và nghĩa vụ thành bảng cân đối kinh tế, ngân sách rủi ro, MCTR, tương quan theo trạng thái, tầng thanh khoản, kiểm thử cú sốc kết hợp, kiểm thử ngược, quy tắc tái cân bằng và nhật ký quyết định.
+
 ## Sau lĩnh vực này bạn cần làm được gì?
 
 Bạn cần có khả năng giải thích tiền của mình đi qua hệ thống nào khi mua chứng khoán, phân biệt rủi ro thị trường, thanh khoản, đối tác và vận hành; xây phân bổ theo mục tiêu thay vì theo mã chứng khoán; đo mức tập trung và đóng góp rủi ro; viết IPS; kiểm thử danh mục và phân tích vì sao danh mục lời hoặc lỗ thay vì chỉ nhìn tổng lợi suất.
@@ -23,5 +25,7 @@ Bạn cần có khả năng giải thích tiền của mình đi qua hệ thốn
 ## Bài tập tích hợp
 
 Đọc [Cú sốc CPI → Danh mục](../07_integrated_case_studies/01_INFLATION_SHOCK_FROM_CPI_TO_PORTFOLIO.md) để luyện kiểm thử căng thẳng, lập bản đồ nhân tố, phòng vệ và phân rã kết quả. Sau đó đọc [Khủng hoảng tín dụng và thanh khoản](../07_integrated_case_studies/02_CREDIT_LIQUIDITY_CRISIS_TRANSMISSION.md) để thấy bộ đệm thanh khoản, đòn bẩy, ký quỹ, tài sản thế chấp và rủi ro sống sót tương tác như thế nào.
+
+Để chuyển từ đọc sang tự làm, hoàn thành **Module 1 — Foundations** trong [Advanced Practice Workbook](../ADVANCED_PRACTICE_WORKBOOK.md). Đầu ra tối thiểu phải có `portfolio_ips.md`, ma trận căng thẳng và một kiểm thử ngược chỉ ra điều kiện làm kế hoạch thất bại.
 
 Sau khi hoàn thành, chuyển sang [02 — Các nhóm tài sản](../02_asset_classes/README.md).
