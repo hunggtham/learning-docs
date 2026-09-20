@@ -52,9 +52,9 @@ Trong đại học, `학번` là năm/mã nhập học và có thể hoạt đ�
 
 Trong môi trường tốt, 선배 có thể truyền **tri thức ngầm (tacit knowledge)** — kiến thức khó ghi hết thành tài liệu — và giúp 후배 tránh lỗi. Trong môi trường xấu, quan hệ này có thể biến thành áp lực phục tùng. Cùng một cấu trúc có thể tạo cố vấn hoặc lạm dụng tuỳ động lực và trách nhiệm giải trình.
 
-Điều này giống quá trình review mã hoặc học nghề. Thâm niên hữu ích khi nó phản ánh kinh nghiệm tích luỹ; nó trở thành vấn đề khi thâm niên được dùng thay cho bằng chứng.
+Điều này giống quá trình rà soát mã (code review) hoặc học nghề. Thâm niên hữu ích khi nó phản ánh kinh nghiệm tích luỹ; nó trở thành vấn đề khi thâm niên được dùng thay cho bằng chứng.
 
-## 왜 사람들은 관계를 먼저 xác định?
+## Vì sao con người thường xác định quan hệ trước? (왜 사람들은 관계를 먼저 확인할까?)
 
 Khi hai người mới gặp, bất định lớn: nên dùng sắc thái lời nói nào, ai trả tiền, ai quyết định, mức trực tiếp nào phù hợp? Siêu dữ liệu như tuổi, vai trò và người quen chung giúp giảm không gian tìm kiếm.
 
@@ -90,7 +90,7 @@ Từ đây ta hiểu tại sao việc “có mặt” ở sự kiện quan trọ
 
 Một thứ bậc bền không chỉ dựa vào cưỡng chế. Người ở trên thường cần giữ hình ảnh có năng lực, rộng lượng hoặc có trách nhiệm. Nếu quản lý liên tục làm mất mặt cấp dưới, nhận công của nhóm và đổ lỗi khi sai, quyền lực chính thức có thể còn nhưng tính chính danh giảm.
 
-Đây là lý do `체면` hoạt động hai chiều. Người junior có thể tránh phản biện công khai để giữ thể diện cho senior; người senior cũng cần bảo vệ phẩm giá của junior nếu muốn niềm tin dài hạn.
+Đây là lý do `체면` hoạt động hai chiều. Người cấp dưới có thể tránh phản biện công khai để giữ thể diện cho người cấp trên; người cấp trên cũng cần bảo vệ phẩm giá của người cấp dưới nếu muốn niềm tin dài hạn.
 
 Thứ bậc do đó không chỉ là “ai ra lệnh cho ai”, mà còn là một nền kinh tế của sự công nhận.
 
@@ -122,7 +122,7 @@ Cách giải không nhất thiết xoá mọi chức danh; có thể tách “ai
 
 Trong hệ thống phân tán, kiến trúc tập trung giúp quyết định nhất quán nhưng có thể tạo điểm nghẽn và điểm lỗi đơn. Kiến trúc phân tán linh hoạt hơn nhưng tốn phối hợp. Tổ chức con người cũng đối mặt đánh đổi tương tự.
 
-Thứ bậc có thể làm rõ trách nhiệm và tăng tốc quyết định trong khủng hoảng. Nhưng nếu mọi quyết định nhỏ đều cần phê duyệt từ trên, hệ thống có độ trễ cao. Nhiều công ty Hàn hiện đại thử làm phẳng chức danh hoặc dùng nhóm agile, nhưng nếu quyền ngân sách và đánh giá vẫn tập trung, kiến trúc thực tế chưa hoàn toàn thay đổi.
+Thứ bậc có thể làm rõ trách nhiệm và tăng tốc quyết định trong khủng hoảng. Nhưng nếu mọi quyết định nhỏ đều cần phê duyệt từ trên, hệ thống có độ trễ cao. Nhiều công ty Hàn hiện đại thử làm phẳng chức danh hoặc dùng nhóm phát triển linh hoạt (agile), nhưng nếu quyền ngân sách và đánh giá vẫn tập trung, kiến trúc thực tế chưa hoàn toàn thay đổi.
 
 ## Quyền lực chính thức và quyền lực thực tế không phải cùng một thứ
 
@@ -249,11 +249,11 @@ Khi quan sát gia đình, trường học hoặc công sở, có thể hỏi:
 
 Một hệ thống có thứ bậc không tự động xấu. Vấn đề nằm ở việc quyền có đi cùng trách nhiệm, thông tin có đi tới người quyết định và người bị ảnh hưởng có kênh phản hồi hay không.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model)
 
 > Đừng chỉ ghi nhớ “Hàn Quốc coi trọng thứ bậc”. Hãy ghi nhớ rằng nhiều môi trường Hàn Quốc truyền thống dùng **quan hệ** như cơ chế phân phối nghĩa vụ, sự công nhận và quyền. Tuổi, chức vụ, thâm niên, nhóm gia nhập và mức thân thiết là siêu dữ liệu giúp mọi người xác định giao thức. Xã hội hiện đại đang giữ lại một phần siêu dữ liệu này nhưng tranh luận mạnh hơn về việc nó có nên quyết định quyền lực hay không. Khi phân tích sâu hơn, phải tách quyền chính thức, chuyên môn, thông tin, tài nguyên và tính chính danh thay vì giả định tất cả cùng nằm ở một người.
 
-## Hiểu lầm phổ biến (Common Misconceptions)
+## Hiểu lầm phổ biến (common misconceptions)
 
 “Người nhỏ tuổi phải nghe người lớn tuổi” là đơn giản hoá nguy hiểm. Trong luật, công sở và chuyên môn, quyền hạn không chỉ đến từ tuổi. Người lớn tuổi cũng có nghĩa vụ tôn trọng vai trò của người khác.
 
