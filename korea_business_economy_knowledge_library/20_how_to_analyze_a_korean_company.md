@@ -1,196 +1,536 @@
 # Cách phân tích một công ty Hàn Quốc từ đầu đến cuối (Company Analysis Framework / 한국 기업 분석 프레임워크)
 
-File này là “entry point thực hành”. Khi gặp một company mới—dù là supplier, nơi định ứng tuyển, đối tác dự án hay cổ phiếu—đừng bắt đầu bằng chart giá hoặc review trên cộng đồng. Hãy xây mental model từ legal identity đến economics.
+File này là entry point thực hành của toàn library. Khi gặp một company mới—dù là nơi định ứng tuyển, supplier, đối tác dự án hay cổ phiếu—đừng bắt đầu bằng stock chart hoặc reputation. Hãy đi từ **legal identity → business model → industry/value chain → financial machine → governance → capital allocation → risk/valuation**.
 
-## 1. Xác định đúng entity
+Mục tiêu không phải tạo một checklist cơ học. Mục tiêu là xây một **causal model** đủ rõ để trả lời: company kiếm tiền bằng cách nào, điều gì làm economics tốt/xấu đi, và điều kiện nào khiến thesis sai.
 
-Ghi chính xác Korean corporate name, corporation code nếu có, listing code, parent group và status listed/unlisted. Tìm DART/KIND. Nếu company thuộc group, vẽ parent–subsidiary relationship tối thiểu một tầng lên và xuống.
+## Bước 0 — Đặt company vào lịch sử và ecosystem
 
-Câu hỏi đầu tiên: **company này thật sự bán gì và ai trả tiền cho nó?**
+Hỏi company sinh ra trong phase nào của Korean economy.
 
-## 2. Hiểu revenue engine
+Một construction/industrial group hình thành trong reconstruction/HCI era thường có asset base, debt habit và supplier network khác platform sinh trong broadband era. Một IT service affiliate của chaebol có captive demand khác startup SaaS.
 
-Tách revenue theo product, segment, geography và customer type nếu disclosure có. Với mỗi segment hỏi:
+Historical origin không quyết định tương lai, nhưng giúp giải thích organizational DNA.
+
+Nếu thuộc major group, đọc [`00_history/08_company_genealogies.md`](./00_history/08_company_genealogies.md) và [`04_chaebol_and_large_business_groups.md`](./04_chaebol_and_large_business_groups.md).
+
+## Bước 1 — Xác định đúng legal entity
+
+Brand không phải legal entity.
+
+Ghi rõ:
+
+- Korean corporate name;
+- listed/unlisted;
+- stock code nếu listed;
+- parent/group;
+- major subsidiaries;
+- DART corporation code nếu cần;
+- consolidated hay separate reporting perimeter.
+
+Nếu thuộc business group, vẽ tối thiểu một tầng lên và xuống:
+
+```text
+Controller / Parent
+        ↓
+Target company
+        ↓
+Major subsidiaries
+```
+
+Câu hỏi đầu tiên luôn là: **entity nào thật sự ký contract, vay debt và tạo profit?**
+
+## Bước 2 — Revenue engine: ai trả tiền, vì cái gì?
+
+Tách revenue theo segment, geography, customer type và product nếu disclosure cho phép.
+
+Base identity:
 
 \[
 Revenue = Volume \times Price
 \]
 
-Sau đó mở rộng: volume do market growth hay share gain? price do product mix hay inflation? recurring hay one-off?
+Sau đó hỏi:
 
-Đối với platform, volume có thể là users/transactions; bank là loan/assets; construction là progress recognition; shipbuilding là order execution.
+- volume tăng vì market growth hay share gain?
+- price tăng vì pricing power hay inflation?
+- mix shift có làm margin đổi không?
+- revenue recurring hay one-off?
+- customer concentration cao không?
 
-## 3. Vẽ value chain
+Không phải mọi industry dùng “volume” theo cùng cách.
 
-Xác định key inputs → company process → customers. Đánh dấu supplier concentration, customer concentration và substitute.
+Platform: users/transactions.
 
-Nếu không biết company đứng ở đâu trong chain, rất khó hiểu margin.
+Bank: loans/assets/deposits/fees.
 
-## 4. Tìm moat
+Construction: project progress/backlog.
 
-Moat (Economic Moat / 경제적 해자) có thể đến từ scale, switching cost, network effect, technology/yield, brand, regulation, distribution hoặc cost advantage. Mỗi moat cần một mechanism cụ thể.
+Shipbuilding: order execution.
 
-“Company có công nghệ tốt” chưa đủ. Hỏi: technology đó làm customer tiết kiệm bao nhiêu? khó replicate vì patent, know-how hay capex? advantage có thể monetize thành price/margin không?
+SaaS: subscriptions/ARR.
 
-## 5. Đọc 3 statements cùng nhau
+## Bước 3 — Vẽ value chain và bargaining power
 
-Income statement cho profit, balance sheet cho resources/claims, cash flow cho movement của cash. Kiểm tra:
-
-- revenue và operating margin trend;
-- receivables/inventory so với revenue;
-- operating cash flow so với net income;
-- capex và free cash flow;
-- debt maturity và interest expense;
-- share issuance/buyback/dividend.
-
-## 6. Tách cycle khỏi structure
-
-Nếu profit tăng, hỏi do cycle hay moat. Semiconductor price recovery, shipbuilding high-price backlog và FX tailwind có thể nâng earnings mà không đồng nghĩa competitive advantage tăng.
-
-Ngược lại, company đầu tư capacity mới có thể temporarily depress FCF dù long-term economics tốt.
-
-## 7. Governance
-
-Xem largest shareholders, related parties, board, treasury shares và major transactions. Với group affiliate, hỏi decision này có lợi cho entity hay chủ yếu cho group.
-
-## 8. Capital allocation
-
-Lập bảng mental:
+Vẽ:
 
 ```text
-Operating Cash Flow
-  ├─ Maintenance CAPEX
-  ├─ Growth CAPEX
-  ├─ M&A / Investments
-  ├─ Debt repayment
-  ├─ Dividend
-  └─ Buyback
+Key inputs → Company process → Customer → End demand
 ```
 
-Management quality được thể hiện ở cách capital đi qua cây này qua nhiều năm.
+Sau đó đánh dấu:
 
-## 9. Valuation
+- supplier concentration;
+- customer concentration;
+- switching cost;
+- substitutes;
+- regulation;
+- logistics/geography;
+- pricing power.
 
-Valuation chỉ có nghĩa sau khi hiểu business. Chọn metric phù hợp: P/E cho stable earnings, P/B/ROE cho financials, EV/EBITDA cho capital structure comparison, DCF khi có khả năng model cash flow.
+Gross margin thường chỉ hiểu được khi biết company đứng ở đâu trong chain.
 
-DCF core:
+Một component supplier có technology tốt nhưng nếu only one customer và buyer dễ switch, pricing power vẫn yếu.
 
-\[
-Enterprise\ Value=\sum_{t=1}^{n}\frac{FCF_t}{(1+WACC)^t}+\frac{Terminal\ Value}{(1+WACC)^n}
-\]
+## Bước 4 — Xác định unit economics
 
-DCF không tạo certainty; nó ép ta làm assumptions explicit. Sensitivity table thường có giá trị hơn một target price duy nhất.
+Company-level revenue/profit có thể che economics của một unit.
 
-## 10. Stress test
+Tìm “unit” phù hợp:
 
-Tạo ít nhất ba shock phù hợp business: demand -10%, FX move, input cost +20%, rate +100bp, customer loss, delay factory ramp hoặc regulation change. Xem variable nào làm thesis gãy.
+- semiconductor: wafer/bit/yield/ASP;
+- airline: passenger-km/load factor/yield;
+- platform: transaction/user/take rate;
+- SaaS: customer/ARR/churn;
+- retailer: store/same-store sales;
+- bank: loan/NIM/credit cost;
+- construction: project margin/PF exposure.
 
-## 11. Employment due diligence
+Nếu không tìm được unit economics, analysis thường vẫn còn quá aggregate.
 
-Nếu mục tiêu là ứng tuyển, thêm layer: revenue stability của business unit, headcount trend, turnover, promotion/pay system, project pipeline, outsourcing ratio và skill portability. Một company financially strong chưa chắc role phù hợp career.
+## Bước 5 — Moat phải có mechanism
 
-## 0. Đặt company vào historical context
+**Economic Moat / 경제적 해자** có thể đến từ:
 
-Trước bước “xác định entity”, hãy hỏi company này sinh ra trong phase nào của Korean economy. Một construction group từ reconstruction era có organizational DNA khác platform sinh sau smartphone. Historical origin thường giải thích asset base, debt habit, supplier network và ownership structure hiện tại.
+- cost advantage;
+- scale;
+- technology/yield;
+- network effect;
+- switching cost;
+- brand;
+- regulation/license;
+- distribution;
+- data/process know-how.
 
-Đọc [00_history/08_company_genealogies](./00_history/08_company_genealogies.md) nếu company thuộc major group.
+Không viết “technology tốt” như conclusion. Hỏi:
 
-## 12. Normalize earnings
-
-Korean cyclicals có thể có peak profit làm P/E nhìn rất thấp. Hãy estimate normalized margin/earnings qua cycle thay vì dùng một năm. Với semiconductor, shipbuilding, chemicals, steel, construction và battery, cycle normalization là bắt buộc.
-
-## 13. Kiểm tra segment và geography
-
-Consolidated revenue che differences. Tách segment, customer, country và currency. Nếu 60% profit đến từ một segment dù chỉ 30% revenue, đó mới là economic engine.
-
-## 14. Đọc footnotes trước khi kết luận debt thấp
-
-Leases, guarantees, PF commitments, factoring và unconsolidated affiliates có thể tạo economic leverage ngoài headline borrowings. Related-party receivables cũng có thể là quasi-financing.
-
-## 15. Reverse-engineer management narrative
-
-IR deck nói “AI, EV, green, global” chưa đủ. Chuyển narrative thành measurable variables: capex bao nhiêu, capacity khi nào online, customer contract nào, utilization giả định gì, target ROIC bao nhiêu. Nếu narrative không map được sang cash flow, hãy coi đó là hypothesis chứ không fact.
-
-## 16. So sánh với competitor đúng tầng value chain
-
-Đừng so Samsung Electronics toàn bộ với TSMC chỉ vì đều semiconductor. So foundry với foundry, memory với memory, device với device. Tương tự battery cell maker không compare trực tiếp với cathode-material producer bằng same margin benchmark.
-
-## 17. Thesis breaker
-
-Mỗi analysis nên có 2–4 conditions khiến thesis sai. Ví dụ “HBM share không tăng”, “PF guarantee crystallizes”, “customer concentration loss”, “new plant utilization <60%”. Thesis breaker giúp chống confirmation bias.
-
-## Mental Model
-
-> Phân tích công ty là quá trình chuyển **tên thương hiệu → legal entity → business model → value chain → financial machine → governance → valuation/risk**.
-
-## Một template ngắn để tái sử dụng
-
-```markdown
-# Company
-
-## Identity & Group Structure
-## Revenue Engine
-## Value Chain & Customers
-## Competitive Advantage
-## Financial Quality
-## Balance Sheet & Funding
-## Governance
-## Capital Allocation
-## Industry & Macro Exposure
-## Valuation
-## Key Risks / Thesis Breakers
-## Employment View (nếu cần)
-## Sources: DART / KIND / IR / KFTC / KRX
+```text
+Technology tạo value gì cho customer?
+↓
+Customer có willing to pay không?
+↓
+Competitor khó copy vì sao?
+↓
+Advantage có hiện trong margin/share/retention không?
 ```
 
-## Connections
+Moat không monetize được có thể chỉ là technical excellence.
 
-Hầu như toàn bộ library converge vào file này. Nếu gặp điểm chưa rõ, quay lại đúng domain file thay vì search rời rạc.
+## Bước 6 — Đọc Income Statement, Balance Sheet và Cash Flow cùng nhau
 
-## 18. Build một historical financial bridge
+Income statement cho profitability. Balance sheet cho resources/claims. Cash flow cho cash movement.
 
-Ít nhất 5 năm, normalize revenue, operating profit, capex, free cash flow, debt và share count. Sau đó annotate major events: acquisition, spin-off, cycle peak/trough, accounting change.
+Một minimum review:
 
-Mục tiêu không phải spreadsheet đẹp mà distinguish structural vs temporary change.
+- revenue growth;
+- gross/operating margin;
+- receivables/inventory;
+- operating cash flow vs net income;
+- capex;
+- debt and maturity;
+- interest expense;
+- share count;
+- dividends/buybacks.
 
-## 19. Reconcile profit với cash
+Ba statements phải reconcile. Profit tăng nhưng cash giảm liên tục cần explanation.
 
-Nếu net income tăng nhưng operating cash flow giảm liên tục, hỏi receivables/inventory/contract assets. Accrual earnings có thể lead cash legitimately, nhưng persistent divergence cần explanation.
+## Bước 7 — Reconcile earnings với cash
+
+Accrual accounting có thể ghi revenue trước cash collection.
+
+Nếu net income tăng nhưng CFO yếu, kiểm tra:
+
+- receivables;
+- inventory;
+- contract assets;
+- one-off gains;
+- provisions;
+- capitalization.
+
+Một approximation:
 
 \[
 Free\ Cash\ Flow \approx CFO - Capex
 \]
 
-Definition có thể adjust theo industry; luôn ghi convention.
+Nhưng definition phải adjust theo industry. Với bank/insurer, traditional FCF không dùng giống industrial firm.
 
-## 20. Calculate return on incremental capital
+## Bước 8 — Build 5–10 year financial bridge
 
-Company growth chỉ tạo value nếu return trên vốn mới đủ cao.
+Một năm có thể là peak/trough. Tối thiểu hãy normalize nhiều năm:
+
+```text
+Revenue
+Operating profit
+Margin
+CFO
+Capex
+FCF
+Debt
+Share count
+ROIC/ROE
+```
+
+Annotate major events:
+
+- acquisition;
+- spin-off;
+- factory opening;
+- cycle peak/trough;
+- accounting change;
+- major regulation.
+
+Mục tiêu là distinguish **structural change** và **temporary noise**.
+
+## Bước 9 — Cycle vs structure
+
+Korean corporates có nhiều cyclicals: semiconductors, chemicals, steel, shipbuilding, construction, batteries.
+
+Peak earnings có thể làm P/E rất thấp đúng lúc cycle sắp giảm.
+
+Hãy estimate **normalized earnings / 정상화 이익** thay vì extrapolate một year.
+
+Câu hỏi:
+
+```text
+Profit tăng vì:
+Cycle?
+FX?
+Input cost?
+Market share?
+Technology?
+Capacity?
+Pricing power?
+```
+
+Mỗi driver có persistence khác nhau.
+
+## Bước 10 — Balance sheet và hidden leverage
+
+Headline borrowings chưa chắc là total economic leverage.
+
+Đọc footnotes về:
+
+- leases;
+- guarantees;
+- PF commitments;
+- factoring;
+- derivatives;
+- unconsolidated affiliates;
+- pension obligations;
+- related-party receivables.
+
+Một company có debt thấp nhưng large guarantees vẫn có tail risk.
+
+Xem [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md).
+
+## Bước 11 — Governance: entity interest có trùng group interest không?
+
+Xem:
+
+- controlling shareholder;
+- related parties;
+- board composition;
+- treasury shares;
+- mergers/spin-offs;
+- intercompany transactions;
+- succession issues.
+
+Với chaebol affiliate, câu hỏi đặc biệt quan trọng:
+
+> Decision này tối ưu lợi ích của target entity hay chủ yếu phục vụ group/control architecture?
+
+Không mặc định conflict; chỉ cần tách hai levels.
+
+## Bước 12 — Capital allocation
+
+Operating cash flow có thể đi vào:
+
+```text
+Maintenance CAPEX
+Growth CAPEX
+R&D
+M&A
+Debt repayment
+Dividend
+Buyback
+Cash reserve
+```
+
+Management quality thể hiện rõ qua pattern nhiều năm.
+
+Growth chỉ tạo value nếu return trên capital mới vượt cost of capital.
+
+Một approximation:
 
 \[
 ROIIC \approx \frac{\Delta NOPAT}{\Delta Invested\ Capital}
 \]
 
-Nếu company reinvest 1 nghìn tỷ và after-tax operating profit chỉ tăng rất ít, growth có thể destroy value despite revenue record.
+Nếu company reinvest rất nhiều nhưng incremental NOPAT thấp, revenue growth có thể destroy value.
 
-## 21. Map management incentives
+## Bước 13 — Management narrative phải convert thành measurable variables
 
-Xem controlling shareholder, executive compensation, stock options, succession và related-party exposure. Incentive không chứng minh behavior, nhưng giúp predict likely capital-allocation preference.
+IR deck nói “AI, EV, green, global” chỉ là narrative.
 
-## 22. Separate narrative, evidence và inference
+Chuyển thành variables:
 
-Research note nên phân loại:
+```text
+Capex bao nhiêu?
+Capacity bao nhiêu?
+Ramp khi nào?
+Customer nào?
+Utilization giả định?
+ASP / margin?
+Required ROIC?
+```
 
-**Fact**: filing nói capex 5 nghìn tỷ.
+Nếu narrative không map được vào cash flow, coi nó là **hypothesis**, không phải fact.
 
-**Management claim**: capex sẽ tạo leadership.
+## Bước 14 — Tách Fact, Management Claim và Inference
 
-**Inference**: utilization phải đạt X để return attractive.
+Research note nên đánh dấu ba tầng:
 
-Trộn ba tầng này là nguồn bias lớn.
+**Fact:** filing nói capex 5 nghìn tỷ KRW.
 
-## 23. Pre-mortem
+**Management claim:** capex sẽ tạo leadership.
 
-Giả sử thesis sai sau hai năm. Những nguyên nhân plausible nào? Cycle reversal, customer loss, regulation, capex overrun, governance, technology substitution hay FX?
+**Inference:** utilization phải đạt X để project return vượt hurdle rate.
 
-Pre-mortem buộc analyst tìm downside trước khi bị sunk-cost attachment vào thesis.
+Trộn ba tầng này là nguồn confirmation bias lớn.
+
+## Bước 15 — Compare đúng peer và đúng tầng value chain
+
+Không compare whole Samsung Electronics với TSMC chỉ vì đều “semiconductor”.
+
+Compare:
+
+- memory với memory;
+- foundry với foundry;
+- cathode producer với cathode producer;
+- cell maker với cell maker;
+- SI vendor với SI vendor;
+- internet bank với relevant bank/fintech peers.
+
+Peer comparison chỉ có meaning khi economics tương đồng.
+
+## Bước 16 — Macro exposure matrix
+
+Map company với:
+
+- KRW/USD;
+- BOK rate;
+- oil/commodity;
+- China/US demand;
+- household debt;
+- housing;
+- semiconductor cycle;
+- regulation.
+
+Không cần tất cả. Chọn variables có causal link.
+
+Xem [`21_economy_to_company_transmission.md`](./21_economy_to_company_transmission.md).
+
+## Bước 17 — Valuation sau khi hiểu economics
+
+Không có metric universal.
+
+**P/E** hữu ích khi earnings tương đối normalized/stable.
+
+**P/B + ROE** thường relevant cho financials.
+
+**EV/EBITDA** giúp compare operating assets với capital structures khác nhau.
+
+**DCF** phù hợp khi có thể model cash flows với assumptions explicit.
+
+\[
+EV = \sum_{t=1}^{n}\frac{FCF_t}{(1+WACC)^t} + \frac{Terminal\ Value}{(1+WACC)^n}
+\]
+
+DCF không tạo certainty. Value lớn nhất là buộc assumptions lộ ra.
+
+Sensitivity table thường hữu ích hơn một target price duy nhất.
+
+## Bước 18 — Reverse valuation
+
+Thay vì hỏi “giá hợp lý bao nhiêu?”, có thể hỏi:
+
+> Current market price đang imply growth/margin/ROIC bao nhiêu?
+
+Đây là **reverse DCF / 역산 DCF**.
+
+Nếu market price yêu cầu margin tăng đến level chưa từng đạt, thesis cần evidence mạnh.
+
+Valuation tốt là test expectation, không chỉ tính number.
+
+## Bước 19 — Stress test
+
+Tạo shocks phù hợp:
+
+```text
+Demand -10%
+ASP -15%
+Input cost +20%
+Rate +150bp
+KRW move 10%
+Customer lost
+Plant ramp delay
+PF guarantee crystallizes
+```
+
+Rồi trace tới cash, covenant và capital raise need.
+
+Stress test nên tập trung variable làm thesis **đổi sign**, không chỉ làm EPS giảm 2%.
+
+## Bước 20 — Thesis breakers
+
+Mỗi analysis nên ghi 2–5 conditions làm thesis sai.
+
+Ví dụ:
+
+- HBM share không tăng;
+- new fab utilization <60%;
+- top customer chuyển supplier;
+- PF guarantee trở thành actual liability;
+- regulatory approval fail;
+- churn vượt threshold.
+
+Thesis breaker chống sunk-cost/confirmation bias.
+
+## Bước 21 — Pre-mortem
+
+Giả sử sau hai năm analysis sai hoàn toàn.
+
+Hỏi: plausible causes là gì?
+
+```text
+Cycle reversal?
+Technology substitution?
+Customer loss?
+Capital misallocation?
+Governance?
+Regulation?
+Funding crisis?
+Execution delay?
+```
+
+Pre-mortem giúp tìm tail risk trước khi nó thành headline.
+
+## Bước 22 — Employment due diligence nếu mục tiêu là career
+
+Nếu company là nơi định ứng tuyển, thêm layer:
+
+- business-unit stability;
+- headcount trend;
+- turnover;
+- compensation structure;
+- promotion system;
+- outsourcing ratio;
+- project pipeline;
+- skill portability;
+- manager quality;
+- role breadth/depth.
+
+Company financially strong chưa chắc role tốt cho career; company nhỏ chưa chắc learning kém.
+
+Đọc [`12_labor_titles_compensation_and_workplace.md`](./12_labor_titles_compensation_and_workplace.md) và [`13_business_culture_decision_making_and_communication.md`](./13_business_culture_decision_making_and_communication.md).
+
+## Research source hierarchy
+
+Ưu tiên evidence theo thứ tự tương đối:
+
+```text
+DART audited filing
+↓
+KIND / KRX notice
+↓
+Company IR / earnings call
+↓
+Regulator / government data
+↓
+Industry data
+↓
+News
+↓
+Community/review
+```
+
+Không có nghĩa lower source vô dụng. Employee reviews có thể tốt cho culture signal; news tốt cho context. Nhưng financial fact nên quay về primary source.
+
+## Một reusable research template
+
+```markdown
+# Company Name
+
+## 1. Identity & Group Structure
+## 2. Historical Context
+## 3. Revenue Engine
+## 4. Value Chain / Customers / Suppliers
+## 5. Unit Economics
+## 6. Competitive Advantage
+## 7. Financial History
+## 8. Cash Flow & Working Capital
+## 9. Balance Sheet & Funding
+## 10. Governance / Related Parties
+## 11. Capital Allocation
+## 12. Industry & Macro Exposure
+## 13. Valuation / Implied Expectations
+## 14. Risks / Stress Test
+## 15. Thesis Breakers / Pre-mortem
+## 16. Employment View (optional)
+## Sources
+```
+
+## Mental Model
+
+> Company analysis là process chuyển **brand → legal entity → economic engine → financial machine → governance → expectations**.
+
+Một chain ngắn:
+
+```text
+Who controls it?
+What does it sell?
+Why does customer pay?
+Why can't competitor copy?
+Where does cash go?
+What can break?
+What does current price/job offer assume?
+```
+
+## Common misconceptions
+
+**“Revenue growth = business tốt hơn.”** Không nếu margin/capital intensity/customer concentration xấu đi.
+
+**“Low P/E = cheap.”** Không nếu earnings đang ở cycle peak.
+
+**“Cash lớn = shareholder value.”** Không nếu capital allocation kém.
+
+**“Chaebol affiliate = parent guarantees everything.”** Sai. Legal entity matters.
+
+**“Good company = good stock.”** Không nếu valuation already prices unrealistic expectations.
+
+**“Good company = good job.”** Không nhất thiết; role/manager/skill path matter.
+
+## Connections
+
+Hầu như toàn bộ library converge vào file này. Khi một assumption chưa rõ, quay lại chapter domain tương ứng thay vì search rời rạc: macro `01`, trade `02`, chaebol `04–05`, SME `06`, governance `08`, disclosure `09`, funding `11`, industries `14–18`, policy `26`, demographics/productivity/innovation `27–29`.
