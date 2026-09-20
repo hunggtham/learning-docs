@@ -1,75 +1,75 @@
-# Kernel, system call và OS abstractions
+# Nhân hệ điều hành, lời gọi hệ thống và các lớp trừu tượng OS
 
-Operating System — OS (운영체제 / hệ điều hành) giải quyết một mâu thuẫn cơ bản: nhiều programs muốn dùng cùng CPU, memory, storage và devices, nhưng nếu mỗi program điều khiển hardware trực tiếp thì isolation, portability và sharing gần như không thể quản lý. OS đặt một privileged kernel giữa applications và hardware, rồi cung cấp abstractions ổn định như process, virtual memory, file và socket.
+**Hệ điều hành (Operating System — OS / 운영체제)** giải quyết một mâu thuẫn cơ bản: nhiều chương trình muốn dùng chung CPU, bộ nhớ, lưu trữ và thiết bị, nhưng nếu mỗi chương trình điều khiển phần cứng trực tiếp thì việc cô lập, chia sẻ và hỗ trợ nhiều loại phần cứng gần như không thể quản lý. Hệ điều hành đặt một **nhân có đặc quyền (privileged kernel)** giữa ứng dụng và phần cứng, sau đó cung cấp các lớp trừu tượng ổn định như tiến trình, bộ nhớ ảo, tệp và socket.
 
-## Kernel là phần có quyền đặc biệt
+## Nhân hệ điều hành là phần có quyền đặc biệt
 
-Kernel (커널) chạy ở CPU privilege level cao, quản lý page tables, interrupts, device drivers, scheduling và protected resources. User applications chạy ở user mode với quyền hạn chế.
+**Nhân hệ điều hành (kernel / 커널)** chạy ở mức đặc quyền CPU cao, quản lý bảng trang, ngắt, trình điều khiển thiết bị, lập lịch và các tài nguyên được bảo vệ. Ứng dụng thông thường chạy ở **chế độ người dùng (user mode)** với quyền hạn chế.
 
-Boundary này được hardware enforce. Nếu một process bình thường có thể sửa page table hoặc đọc arbitrary physical memory, process isolation sẽ không tồn tại.
+Ranh giới này được phần cứng cưỡng chế. Nếu một tiến trình bình thường có thể tự sửa bảng trang hoặc đọc tùy ý bộ nhớ vật lý thì sự cô lập giữa các tiến trình sẽ không còn tồn tại.
 
-Kernel design có nhiều dạng. Monolithic kernels như Linux đặt nhiều subsystems/drivers trong kernel space. Microkernel philosophy đẩy nhiều services ra user space và giữ kernel nhỏ hơn. Hybrid systems pha trộn. Trade-off liên quan performance, fault isolation và complexity.
+Thiết kế kernel có nhiều dạng. Kernel nguyên khối như Linux đặt nhiều hệ thống con và trình điều khiển trong không gian kernel. Triết lý **vi nhân (microkernel)** đưa nhiều dịch vụ ra không gian người dùng và giữ kernel nhỏ hơn. Hệ thống lai kết hợp cả hai. Mỗi cách đánh đổi giữa hiệu năng, khả năng cô lập lỗi và độ phức tạp.
 
-## System call
+## Lời gọi hệ thống
 
-System call (시스템 호출) là controlled entry từ user mode vào kernel để yêu cầu operation privileged: `read`, `write`, `open`, `mmap`, `fork`, `socket`... API language/library có thể wrap syscall; không phải mọi library call đều tạo syscall.
+**Lời gọi hệ thống (system call / syscall / 시스템 호출)** là lối vào có kiểm soát từ chế độ người dùng sang kernel để yêu cầu thao tác cần đặc quyền, ví dụ `read`, `write`, `open`, `mmap`, `fork` hoặc `socket`. API của ngôn ngữ hoặc thư viện có thể bao bọc syscall; không phải mọi lời gọi thư viện đều tạo syscall.
 
-Ví dụ `printf` có thể format hoàn toàn trong user space rồi cuối cùng buffer được flush qua `write`. Memory allocation `malloc` có thể phục vụ từ user-space heap pool và chỉ thỉnh thoảng xin thêm pages từ OS.
+Ví dụ `printf` có thể định dạng dữ liệu hoàn toàn trong không gian người dùng rồi chỉ gọi `write` khi bộ đệm cần được đẩy ra. Tương tự, `malloc` có thể cấp phát từ vùng heap đã có và chỉ thỉnh thoảng xin thêm trang bộ nhớ từ hệ điều hành.
 
-System call có overhead vì privilege transition, validation và kernel work, nhưng modern kernels/runtimes tối ưu batching, shared memory và async interfaces để giảm crossings.
+Syscall có chi phí do chuyển mức đặc quyền, kiểm tra đầu vào và thực hiện công việc trong kernel. Các kernel và môi trường thực thi hiện đại giảm chi phí này bằng gom nhóm thao tác (batching), bộ nhớ chia sẻ và giao diện I/O bất đồng bộ.
 
-## File descriptor và handle
+## Bộ mô tả tệp và handle
 
-Unix-like OS dùng file descriptor — integer index vào per-process table của open resources. Files, sockets, pipes và devices có thể cùng dùng read/write-like interface. Đây là abstraction mạnh: “everything is a file” không hoàn toàn literal, nhưng uniform I/O interface làm composition dễ hơn.
+Hệ điều hành kiểu Unix dùng **bộ mô tả tệp (file descriptor)**, tức một số nguyên làm chỉ mục vào bảng tài nguyên đang mở của từng tiến trình. Tệp, socket, pipe và thiết bị có thể cùng sử dụng giao diện gần giống `read`/`write`. Câu “mọi thứ là tệp” không hoàn toàn đúng theo nghĩa đen, nhưng giao diện I/O thống nhất giúp các thành phần dễ kết hợp hơn.
 
-Windows dùng handles rộng hơn. Principle chung là user code giữ opaque reference thay vì trực tiếp nắm kernel object.
+Windows dùng khái niệm **handle** rộng hơn. Nguyên tắc chung là mã ở không gian người dùng giữ một tham chiếu không trong suốt (opaque reference) thay vì trực tiếp nắm đối tượng nội bộ của kernel.
 
-## Process abstraction
+## Trừu tượng tiến trình
 
-Process cho program cảm giác có CPU execution context và address space riêng. Thực tế scheduler multiplex CPU cores giữa many runnable tasks; virtual memory maps private-looking addresses tới physical pages có thể shared/copy-on-write.
+**Tiến trình (process)** tạo cảm giác rằng một chương trình có ngữ cảnh thực thi CPU và không gian địa chỉ riêng. Trong thực tế, bộ lập lịch chia thời gian CPU giữa nhiều tác vụ có thể chạy, còn bộ nhớ ảo ánh xạ các địa chỉ trông như riêng tư sang các trang vật lý có thể được chia sẻ hoặc sao chép khi ghi.
 
-OS vì vậy là **resource multiplexer + isolation layer**.
+Vì vậy có thể xem hệ điều hành như **bộ phân phối tài nguyên và lớp cô lập**.
 
-## Virtualization của time và space
+## Ảo hóa thời gian và không gian
 
-CPU virtualization: scheduling làm mỗi process có vẻ đang tiến triển.
+Ảo hóa CPU: bộ lập lịch làm nhiều tiến trình cùng có cảm giác đang tiến triển.
 
-Memory virtualization: mỗi process thấy virtual address space riêng.
+Ảo hóa bộ nhớ: mỗi tiến trình nhìn thấy không gian địa chỉ ảo riêng.
 
-Storage virtualization: filesystem biến raw blocks thành named hierarchical files.
+Ảo hóa lưu trữ: hệ thống tệp biến các khối thô thành cây tệp có tên.
 
-Network virtualization: sockets cung cấp endpoint abstraction trên NIC packets.
+Ảo hóa mạng: socket cung cấp điểm cuối giao tiếp trên các gói tin của card mạng.
 
-Abstraction biến hardware details thành contracts hữu dụng nhưng không xóa constraints. CPU vẫn finite, RAM vẫn finite, disk/network vẫn có latency.
+Lớp trừu tượng biến chi tiết phần cứng thành hợp đồng dễ sử dụng nhưng không xóa giới hạn vật lý. CPU, RAM, đĩa và mạng vẫn có dung lượng hữu hạn và độ trễ thực tế.
 
-## User space và kernel space
+## Không gian người dùng và không gian kernel
 
-“Kernel space” có thể nói về privileged address region/execution context; “user space” là environment của ordinary processes. Data crossing boundary thường cần validation/copy hoặc shared mapping.
+**Không gian kernel (kernel space)** thường chỉ vùng địa chỉ hoặc ngữ cảnh thực thi có đặc quyền; **không gian người dùng (user space)** là môi trường của các tiến trình thông thường. Dữ liệu đi qua ranh giới này thường cần được kiểm tra, sao chép hoặc chia sẻ thông qua ánh xạ bộ nhớ được kiểm soát.
 
-Zero-copy techniques cố tránh redundant copies bằng mmap, sendfile, DMA buffers hoặc scatter/gather, nhưng semantics và security vẫn cần kiểm soát ownership/lifetime.
+Các kỹ thuật **không sao chép hoặc giảm sao chép (zero-copy)** như `mmap`, `sendfile`, bộ đệm DMA hoặc scatter/gather cố tránh những lần sao chép dư thừa, nhưng hệ thống vẫn phải kiểm soát quyền sở hữu và vòng đời dữ liệu.
 
-## Interrupt, exception và syscall
+## Ngắt, ngoại lệ và syscall
 
-Cả ba đều có thể chuyển control vào kernel nhưng nguyên nhân khác. Hardware interrupt đến từ device/timer; exception từ instruction hiện tại như page fault; syscall là intentional request của user program theo defined convention.
+Cả ba đều có thể chuyển quyền điều khiển vào kernel nhưng nguyên nhân khác nhau. **Ngắt phần cứng (interrupt)** đến từ thiết bị hoặc bộ định thời. **Ngoại lệ CPU (exception)** phát sinh từ lệnh hiện tại, ví dụ lỗi trang. **Syscall** là yêu cầu có chủ đích của chương trình người dùng theo quy ước đã định.
 
-Phân biệt này giúp debugging: page fault có thể normal demand paging, segmentation fault là policy reaction khi address invalid, còn syscall failure thường trả error code.
+Phân biệt này hữu ích khi gỡ lỗi. Lỗi trang có thể là một phần bình thường của cơ chế phân trang theo nhu cầu; segmentation fault thường là phản ứng khi truy cập địa chỉ không hợp lệ; còn syscall thất bại thường trả về mã lỗi.
 
-## Boot và initialization ở mức mental model
+## Khởi động hệ điều hành ở mức mô hình tư duy
 
-Firmware khởi tạo hardware cơ bản, bootloader load kernel, kernel setup memory/interrupts/drivers rồi start user-space init/service manager. Không cần thuộc chi tiết để hiểu rằng OS itself cũng là software phải được loaded và granted control trước khi applications chạy.
+Firmware khởi tạo phần cứng cơ bản, bootloader nạp kernel, kernel thiết lập bộ nhớ, ngắt và trình điều khiển rồi khởi chạy tiến trình `init` hoặc trình quản lý dịch vụ ở không gian người dùng. Điểm quan trọng là bản thân hệ điều hành cũng là phần mềm cần được nạp và trao quyền điều khiển trước khi ứng dụng chạy.
 
-## Mental Model
+## Mô hình tư duy
 
-> OS là **mediator có đặc quyền**. Nó multiplex finite resources, enforce isolation và expose stable abstractions. System call là cửa có kiểm soát qua boundary user ↔ kernel.
+> Hệ điều hành là **bộ trung gian có đặc quyền**. Nó phân phối tài nguyên hữu hạn, cưỡng chế sự cô lập và cung cấp các lớp trừu tượng ổn định. Syscall là cánh cửa có kiểm soát qua ranh giới người dùng ↔ kernel.
 
-## Common Misconceptions
+## Những hiểu lầm thường gặp
 
-**“Mọi function I/O đều là syscall.”** Runtime/library buffering có thể gom nhiều operations trước khi syscall.
+**“Mọi hàm I/O đều là syscall.”** Bộ đệm của thư viện hoặc runtime có thể gom nhiều thao tác trước khi gọi syscall.
 
-**“Process có CPU riêng.”** Đó là abstraction; scheduler chia cores theo time và policy.
+**“Mỗi tiến trình có CPU riêng.”** Đó là lớp trừu tượng; bộ lập lịch chia các lõi CPU theo thời gian và chính sách.
 
-**“Kernel là toàn bộ hệ điều hành.”** OS distribution còn có user-space libraries, daemons, shells, GUI và tools; kernel là privileged core.
+**“Kernel là toàn bộ hệ điều hành.”** Một hệ điều hành hoàn chỉnh còn có thư viện không gian người dùng, daemon, shell, GUI và công cụ; kernel là lõi có đặc quyền.
 
 ## Kết nối
 
-CPU privilege trong [CPU/ISA](../02_computer_architecture/01_cpu_isa_and_instruction_cycle.md) cho kernel quyền enforce. [Process/thread scheduling](./01_processes_threads_and_scheduling.md), [virtual memory](./03_virtual_memory_and_address_spaces.md) và [filesystem](./04_filesystems_storage_and_io.md) là ba abstractions lớn tiếp theo.
+Cơ chế đặc quyền CPU trong [CPU/ISA](../02_computer_architecture/01_cpu_isa_and_instruction_cycle.md) cho kernel khả năng cưỡng chế ranh giới. [Lập lịch tiến trình/luồng](./01_processes_threads_and_scheduling.md), [bộ nhớ ảo](./03_virtual_memory_and_address_spaces.md) và [hệ thống tệp](./04_filesystems_storage_and_io.md) là ba lớp trừu tượng lớn tiếp theo.
