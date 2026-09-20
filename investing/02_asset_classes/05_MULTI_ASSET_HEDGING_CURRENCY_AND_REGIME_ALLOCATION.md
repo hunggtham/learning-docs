@@ -1,456 +1,380 @@
-# 05 — Multi-Asset, Hedging, Currency và Regime Allocation
+# Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế
 
-> Multi-asset investing không phải mua thật nhiều sản phẩm. Nó là quá trình phân bổ **economic exposures** giữa growth, inflation, duration, credit, liquidity, FX, commodities và volatility sao cho portfolio có thể sống qua nhiều states của thế giới. Chapter này nối asset-class knowledge với portfolio construction, hedging, liability matching, stress testing và regime-aware allocation.
+> Chương này nối các nhóm tài sản riêng lẻ thành một danh mục thực tế. Mục tiêu là hiểu vì sao cùng một tài sản hữu ích trong chế độ này nhưng gây hại trong chế độ khác, vì sao tiền tệ có thể quyết định phần lớn kết quả của nhà đầu tư quốc tế và vì sao phòng vệ phải được xem là công cụ quản trị rủi ro chứ không phải cách “xóa biến động miễn phí”.
 
-## 1. Multi-Asset khác Multi-Product
+## 1. Đa tài sản không có nghĩa chỉ là mua nhiều sản phẩm
 
-Portfolio có 12 ETFs vẫn có thể rất concentrated nếu tất cả cùng long US growth, long duration hoặc long USD.
-
-Diversification thật cần nhìn xuyên product label tới economic driver. Một semiconductor ETF, Nasdaq ETF và growth fund có thể là ba tickers nhưng gần như cùng risk factor.
-
-Vì vậy bước đầu luôn là **look-through exposure**, không phải đếm số positions.
-
-## 2. Portfolio là một hệ thống Sensitivities
-
-Có thể map mỗi sleeve theo các dimensions:
+Một danh mục đa tài sản không chỉ là danh sách cổ phiếu, trái phiếu, vàng và tiền mặt. Quan trọng hơn là mỗi tài sản mang những mức phơi nhiễm kinh tế nào:
 
 ```text
-Growth beta
-Inflation beta
-Real-rate duration
-Credit beta
-FX exposure
-Commodity exposure
-Liquidity sensitivity
-Volatility / convexity
+Tăng trưởng
+Lạm phát
+Lãi suất / Duration
+Tín dụng
+Thanh khoản
+FX
+Hàng hóa
+Biến động
 ```
 
-Cùng một asset có thể mang nhiều sensitivities. REIT vừa là equity beta, vừa rate-sensitive, vừa property/funding exposure.
+Một danh mục có mười sản phẩm nhưng tất cả cùng hưởng lợi khi lợi suất thực giảm vẫn có thể rất tập trung.
 
-## 3. Growth–Inflation Matrix
+## 2. Khung tăng trưởng–lạm phát
 
-Một framework đơn giản là hai trục growth và inflation.
+Một bản đồ đơn giản dùng hai trục tăng trưởng và lạm phát.
 
-Growth ↑ / Inflation ổn thường thuận cho equities/credit. Growth ↓ / Inflation ↓ thường thuận cho high-quality duration. Growth ↑ / Inflation ↑ có thể thuận cyclicals/commodities nhưng gây pressure discount rate. Growth ↓ / Inflation ↑ là stagflation, thường khó cho cả stocks lẫn long bonds.
+- tăng trưởng tăng, lạm phát ổn định: cổ phiếu và tín dụng thường thuận lợi hơn;
+- tăng trưởng giảm, lạm phát giảm: trái phiếu chính phủ chất lượng cao thường hữu ích hơn;
+- tăng trưởng tăng, lạm phát tăng: hàng hóa và nhóm chu kỳ có thể hưởng lợi tương đối;
+- tăng trưởng giảm, lạm phát cao: đình lạm thường khó cho cả cổ phiếu và trái phiếu dài hạn.
 
-Framework này không phải signal cơ học. Starting valuation, policy response và shock source luôn quan trọng.
+Đây không phải luật cơ học. Định giá ban đầu, vị thế thị trường, phản ứng chính sách và nguyên nhân cú sốc có thể làm kết quả khác lý thuyết.
 
-## 4. Regime là Probability Distribution
+## 3. Chế độ kinh tế là phân phối xác suất, không phải nhãn cố định
 
-Không nên nói “đang ở stagflation” như một certainty. Regime allocation tốt hơn khi dùng probability distribution giữa soft landing, reacceleration, recession, inflation resurgence hoặc liquidity shock.
-
-Allocation vì vậy thường là **tilt quanh strategic policy**, không phải all-in theo một forecast.
-
-## 5. Duration xuyên Asset Classes
-
-Duration không chỉ tồn tại trong bonds. Growth equities, long-lease assets, infrastructure và một số private assets cũng có long-duration economics.
-
-Khi real yields tăng mạnh, long Treasuries và expensive growth stocks có thể giảm cùng lúc. Đây là hidden concentration phổ biến của “60/40-like” portfolios.
-
-## 6. Credit beta không chỉ nằm trong Bonds
-
-High-yield credit, leveraged loans, private credit, REITs và highly leveraged equities đều nhạy với refinancing conditions.
-
-Trong downturn, risky credit thường behave equity-like vì spread widening và default expectations dominate falling risk-free rates.
-
-Một defensive allocation phải phân biệt **sovereign duration** với **corporate credit**.
-
-## 7. Inflation Exposure phải phân loại Shock
-
-Demand-driven inflation và supply-driven inflation cho asset reactions khác nhau.
-
-Commodity producers có thể hưởng demand boom, nhưng supply shock có thể làm economy yếu hơn. TIPS hedge inflation index nhưng vẫn chịu real-yield duration. Gold nhạy real yields/USD. REITs cần rent pass-through nhanh hơn financing cost.
-
-Không có một universal inflation hedge.
-
-## 8. Liquidity là một Asset Class-like Resource
-
-Cash không chỉ là low-return asset. Nó là khả năng thanh toán liabilities, margin calls và rebalance khi others bị forced sellers.
-
-Liquidity có option value: một portfolio không bị buộc bán ở đáy có thể compound tốt hơn portfolio có expected return cao nhưng liquidity thấp.
-
-## 9. Cash Optionality và Opportunity Cost
-
-Cash chịu inflation drag và opportunity cost trong bull markets, nhưng giúp portfolio survive. Tỷ trọng cash hợp lý phụ thuộc near-term liabilities, funding uncertainty và rebalancing policy.
-
-Cash held vì plan khác cash held vì panic. Strategic liquidity phải được định nghĩa trước crisis.
-
-## 10. Currency là một Exposure độc lập
-
-Home-currency return:
+Thay vì khẳng định “đang đình lạm”, nên nghĩ theo xác suất của nhiều đường đi:
 
 ```text
-(1 + Local Asset Return) × (1 + FX Return) - 1
+Tăng trưởng phục hồi
+Hạ cánh mềm
+Suy thoái
+Lạm phát quay lại
+Khủng hoảng tín dụng
 ```
 
-Korean investor mua US equity unhedged đang long US equity + long USD/KRW. Nếu KRW mạnh, FX có thể erase phần lớn USD asset gain.
+Phân bổ bền vững không phụ thuộc hoàn toàn vào một dự báo duy nhất.
 
-## 11. Trading, Underlying, Reporting và Liability Currency
+## 4. Duration tồn tại ở nhiều nhóm tài sản
 
-Trading currency là currency giao dịch. Underlying currency là currency của economic cash flows. Reporting currency là currency app dùng hiển thị. Liability currency là currency bạn cần để chi tiêu tương lai.
+Duration không chỉ thuộc trái phiếu. Cổ phiếu tăng trưởng có phần lớn dòng tiền ở xa cũng nhạy với tỷ lệ chiết khấu.
 
-Nhầm bốn khái niệm này là nguồn lỗi lớn trong cross-border allocation.
+Danh mục chứa long Treasury và cổ phiếu tăng trưởng đắt có thể trông đa dạng nhưng cùng chịu cú sốc lợi suất thực tăng.
 
-## 12. Natural Hedge
+## 5. Tín dụng và cổ phiếu liên kết qua cấu trúc vốn
 
-Nếu future liability bằng USD, USD assets có thể tự nhiên hedge liability. Nếu goal là mua nhà ở Korea, near-term KRW liabilities nên được matched bằng KRW liquid assets nhiều hơn.
+High-yield, leveraged loans, private credit và cổ phiếu đều chịu áp lực khi giá trị doanh nghiệp giảm và khả năng tái cấp vốn xấu đi.
 
-Natural hedge thường tốt hơn speculative FX timing vì nó trực tiếp giảm mismatch.
+Trong khủng hoảng, chênh lệch tín dụng có thể mở rộng trước khi lợi nhuận doanh nghiệp sụp rõ ràng. Tín dụng là cầu nối quan trọng giữa vĩ mô và cổ phiếu.
 
-## 13. Hedged vs Unhedged Foreign Assets
+## 6. Tiền mặt có giá trị quyền lựa chọn
 
-Currency hedge giảm một phần FX volatility nhưng tạo forward/carry/basis/transaction costs.
+Tiền mặt có độ thanh khoản cao và duration gần như rất thấp. Nó giúp tránh bán cưỡng bức và tạo khả năng tái cân bằng khi thị trường căng thẳng.
 
-Unhedged exposure có thể diversify domestic currency risk, đặc biệt khi USD mạnh trong global risk-off. Vì vậy “hedged luôn an toàn hơn” là sai.
+Nhưng tiền mặt chịu mất sức mua do lạm phát và chi phí cơ hội. Tỷ trọng nên gắn với nghĩa vụ và lãi suất ngắn hạn hiện tại.
 
-## 14. Covered Interest Parity và Forward Points
+## 7. Bốn loại tiền tệ cần phân biệt
 
-FX forwards phản ánh interest-rate differential theo arbitrage logic, cộng basis/frictions.
-
-Hedge cost không phải simple fee. Khi US rates cao hơn Korea rates, rolling USD hedge back to KRW có economics khác hẳn khi rate differential đảo chiều.
-
-Đây là lý do hedged vs unhedged ETF relative return thay đổi theo rate regime.
-
-## 15. Strategic Hedge Ratio
-
-Hedge ratio có thể 0%, 50%, 100% hoặc dynamic. Strategic ratio nên dựa liability currency, horizon và tolerance với FX volatility.
-
-Near-term known liabilities thường justify higher hedge ratio; long-horizon growth assets có thể để unhedged nhiều hơn nếu currency diversification có giá trị.
-
-## 16. Dynamic FX Hedging
-
-Dynamic hedge thay ratio theo valuation, volatility hoặc macro. Nó có thể giảm risk nhưng cũng tạo turnover/model risk và nguy cơ timing sai.
-
-Nếu process không rõ, static policy + rebalancing bands thường robust hơn discretionary FX forecasting.
-
-## 17. Equity Beta Hedging bằng Futures
-
-Approximate hedge:
+Trong đầu tư xuyên biên giới nên tách:
 
 ```text
-Contracts ≈ Portfolio Value × Portfolio Beta / Futures Notional
+Đồng tiền giao dịch (Trading Currency)
+Đồng tiền kinh tế của tài sản (Underlying Economic Currency)
+Đồng tiền báo cáo (Reporting Currency)
+Đồng tiền của nghĩa vụ (Liability Currency)
 ```
 
-Nhưng beta thay đổi theo regime; sector mismatch tạo basis risk. Hedge broad index cho concentrated sector book không neutralize idiosyncratic/sector risk.
+ETF niêm yết bằng KRW không có nghĩa tài sản USD bên trong đã mất rủi ro USD.
 
-## 18. Options Hedging
-
-Protective put giữ upside nhưng có premium drag. Put spread giảm cost nhưng protection bị capped. Collar tài trợ put bằng bán call và từ bỏ một phần upside.
-
-Hedge design phải trả lời: cần giảm variance, cap max loss hay protect một event cụ thể?
-
-## 19. Tail Hedging
-
-Tail hedge có negative carry trong normal periods nhưng convex payoff trong crash.
-
-Đánh giá tail hedge ở portfolio level: nếu nó giúp tránh forced selling hoặc giữ khả năng rebalance, value của hedge lớn hơn standalone hedge P/L.
-
-## 20. Hedge Budget
-
-Insurance không miễn phí. Có thể định nghĩa annual hedge budget, ví dụ phần trăm NAV tối đa dành cho option premium.
-
-Budget buộc investor so protection quality với bleed cost và tránh mua expensive protection sau volatility spike.
-
-## 21. Hedge Effectiveness
-
-Một hedge tốt phải được đo bằng change in portfolio risk, không bằng “hedge riêng có lời không”.
-
-Metrics có thể gồm beta reduction, drawdown reduction, Expected Shortfall reduction hoặc liability mismatch reduction.
-
-Nếu hedge gain +5% nhưng underlying loss -20%, câu hỏi là total portfolio có đáp ứng objective không.
-
-## 22. Basis Risk
-
-Hedge hiếm khi match hoàn hảo underlying. Korean semiconductor basket hedge bằng KOSPI futures còn residual sector risk. Jet fuel hedge bằng crude futures còn crack-spread risk.
-
-Basis risk phải được xem như remaining position.
-
-## 23. 60/40 Portfolio
-
-60/40 dựa equity growth + bond duration diversification. Nó hoạt động tốt nhất khi growth shocks dominate và stock-bond correlation thấp/âm.
-
-Trong inflation shock, both can decline. Lesson là correlation regime changes, không phải framework luôn sai.
-
-## 24. Risk Parity
-
-Risk parity phân bổ theo risk contribution thay vì capital. Vì bonds có volatility thấp, portfolio có thể leverage duration để equalize risk.
-
-Weakness xuất hiện khi bond volatility/correlation jump. Leverage biến “low-vol asset” thành major loss contributor.
-
-## 25. Equal Risk Contribution
-
-Nếu portfolio volatility là `σ_p`, risk contribution của asset phụ thuộc weight, covariance và total volatility.
-
-Một 10% commodity allocation có thể đóng góp nhiều risk hơn 30% bonds. Vì vậy capital weight không đủ để hiểu portfolio construction.
-
-## 26. Marginal Risk Contribution
-
-**Marginal Risk Contribution (MRC)** hỏi total risk thay đổi bao nhiêu nếu tăng một chút weight asset đó.
-
-Nó hữu ích để phát hiện asset tưởng nhỏ nhưng covariance với portfolio rất cao.
-
-Portfolio review nên nhìn both weight và risk contribution.
-
-## 27. Diversification Ratio
-
-Một intuition useful:
+## 8. Phân rã lợi suất ngoại tệ
 
 ```text
-Diversification Ratio ≈ Weighted Average Asset Vol / Portfolio Vol
+Home Return = (1 + Local Asset Return) × (1 + FX Return) - 1
 ```
 
-Ratio cao hơn cho thấy covariance structure đang giúp giảm total risk. Nhưng historical covariance có thể break trong stress, nên ratio chỉ là one diagnostic.
+Nhà đầu tư KRW mua cổ phiếu Mỹ chịu đồng thời biến động tài sản bằng USD và USD/KRW.
 
-## 28. Correlation Regime
+FX có thể khuếch đại hoặc bù bớt lợi suất tài sản.
 
-Average correlation che giấu downside correlation. Stocks và bonds có thể correlation âm trong disinflation regime nhưng dương trong inflation tightening.
+## 9. Tiền tệ có thể là công cụ đa dạng hóa
 
-Stress correlations nên được estimated/assumed riêng cho crisis scenarios.
+USD đôi khi mạnh khi thị trường toàn cầu tránh rủi ro và có thể bù một phần cho tài sản KRW. Nhưng nếu nghĩa vụ tương lai là KRW, nắm USD quá lớn vẫn tạo lệch nghĩa vụ.
 
-## 29. Correlation Breakdown do Deleveraging
+Cần đánh giá ở cấp bảng cân đối hộ gia đình.
 
-Trong margin shock, unrelated assets có thể bị bán để raise cash. Correlations tăng không phải vì fundamentals giống nhau mà vì funding constraint chung.
+## 10. Phòng vệ và không phòng vệ FX
 
-Liquidity/funding factor vì vậy là một hidden common factor trong diversified portfolios.
+Sản phẩm phòng vệ tiền tệ dùng forward, futures hoặc swap để giảm biến động FX.
 
-## 30. Trend Following như Crisis Diversifier
+Phòng vệ không miễn phí. Chi phí kinh tế phụ thuộc chênh lệch lãi suất, basis, chi phí giao dịch và roll.
 
-Trend strategies có thể long hoặc short equities, bonds, FX, commodities. Chúng có potential diversify persistent bear moves.
+Không phòng vệ cũng không luôn “rủi ro hơn”, vì tiền tệ nước ngoài có thể đóng vai trò đa dạng hóa ở một số giai đoạn.
 
-Nhưng sudden reversal/range market gây whipsaw. Trend không phải instant hedge; nó cần time để detect and position.
+## 11. Forward Points và cơ sở hoán đổi
 
-## 31. Carry như Risk Premium
+Giá kỳ hạn ngoại hối phản ánh chênh lệch lãi suất theo logic không chênh lệch giá. Ngoài ra, cơ sở hoán đổi tiền tệ (cross-currency basis) có thể lệch khỏi quan hệ lý thuyết do nhu cầu nguồn vốn và giới hạn bảng cân đối.
 
-FX carry, credit carry, commodity roll carry và short-vol premium thường earn small gains in stable regimes nhưng suffer during stress.
+Do đó chi phí phòng vệ không phải một khoản phí cố định.
 
-Nếu nhiều sleeves đều earn carry, portfolio có thể hidden short-volatility dù asset labels khác nhau.
+## 12. Tỷ lệ phòng vệ
 
-## 32. Gold
+Phòng vệ không nhất thiết 0% hoặc 100%.
 
-Gold exposure thường liên quan real yields, USD, central-bank demand và monetary/geopolitical confidence.
+Tỷ lệ phòng vệ nên phụ thuộc thời hạn, độ chắc chắn của nghĩa vụ và khả năng chấp nhận biến động FX. Nghĩa vụ ngắn hạn bằng KRW thường cần tỷ lệ khớp tiền tệ cao hơn tài sản tăng trưởng dài hạn.
 
-Nó có thể diversify some crises nhưng không luôn rise immediately; liquidity stress có thể cause temporary selling.
+## 13. Phòng vệ chiến lược và phòng vệ động
 
-Portfolio role của gold nên được defined as monetary/real-yield diversifier, không là “asset luôn tăng khi stock giảm”.
+Phòng vệ chiến lược giữ tỷ lệ tương đối ổn định. Phòng vệ động thay tỷ lệ theo định giá, biến động hoặc quan điểm vĩ mô.
 
-## 33. Commodities
+Phòng vệ động thêm rủi ro mô hình, turnover và timing. Nếu không có lợi thế rõ, quy tắc đơn giản thường dễ duy trì hơn.
 
-Commodity futures provide inflation/supply-shock sensitivity nhưng return gồm spot change + roll + collateral yield.
+## 14. Phòng vệ beta bằng futures
 
-Broad commodity basket có sector weights và methodology riêng. Energy-heavy index khác diversified index rất nhiều.
-
-## 34. REIT và Infrastructure
-
-REITs có real-asset cash flows nhưng listed-equity beta và financing sensitivity. Infrastructure có long contracts nhưng regulatory/capex/rate risk.
-
-Asset label “real asset” không remove duration/refinancing risk.
-
-## 35. Private Markets và Stale Pricing
-
-Private equity/credit/real estate NAVs update slowly. Reported volatility và correlation thường understated.
-
-Portfolio optimization dùng raw private NAV data có thể overallocate illiquid assets vì model mistakenly treats stale marks as stability.
-
-## 36. Liquidity-Adjusted Allocation
-
-Risk budget cần thêm liquidity dimension. Một asset chỉ có 5% volatility nhưng không bán được 3 tháng có thể nguy hiểm hơn liquid asset 12% volatility nếu liability đến trong 2 tuần.
-
-Liquidity buckets nên map time-to-cash under stress.
-
-## 37. Leverage Overlay
-
-Portfolio leverage làm small estimation errors trở nên lớn. Risk parity, futures overlays hoặc margin borrowing cần stress funding rate, margin increase và correlation jump.
-
-Leverage policy nên có hard limits và liquidity buffer trước khi dùng.
-
-## 38. Volatility Targeting
-
-Vol targeting scale exposure inverse với estimated volatility để stabilize total risk.
-
-Weakness: vol estimate lagging. Calm market trước shock có thể imply maximum leverage đúng lúc risk sắp tăng. Sau crash, model de-risk muộn và có thể sell low.
-
-## 39. Strategic Asset Allocation
-
-Strategic allocation phản ánh goals, horizon, liabilities và long-run risk tolerance/capacity.
-
-Nó nên thay đổi chậm. Strategic policy là anchor để investor không chase recent winners.
-
-## 40. Tactical Asset Allocation
-
-Tactical allocation thay weights quanh allowed ranges dựa valuation, macro, positioning hoặc market dislocation.
-
-Tactical decision chỉ hợp lý nếu process, horizon và evidence rõ. Nếu không, nó dễ trở thành disguised market timing.
-
-## 41. Regime Probability Allocation
-
-Thay vì một forecast, assign probabilities cho multiple states. Ví dụ soft landing 45%, recession 30%, inflation resurgence 25%.
-
-Portfolio có thể tilt toward base case nhưng maintain protection for alternatives. Objective là robustness, không phải maximum payoff if one forecast happens.
-
-## 42. Valuation Overlay
-
-Macro regime đúng nhưng valuation quá expensive vẫn có poor expected return.
-
-Allocation cần kết hợp:
+Một ước lượng gần đúng:
 
 ```text
-Regime Probability
-× Expected Cash Flows
-× Starting Valuation
-× Portfolio Role
+Số hợp đồng ≈ Giá trị danh mục × Beta / Giá trị danh nghĩa mỗi futures
 ```
 
-Valuation là bridge giữa macro view và expected return.
+Nhưng beta thay đổi và cấu trúc ngành tạo rủi ro cơ sở. Hedge phải được theo dõi chứ không đặt rồi quên.
 
-## 43. Expected Return Building Blocks
+## 15. Phòng vệ bằng quyền chọn
 
-Equity expected return có thể decompose earnings growth + shareholder yield + multiple change. Bonds: carry + roll + rate/spread move. Commodities: spot + roll + collateral yield. FX: spot + carry.
+Put bảo vệ cho phép giữ upside nhưng phải trả premium. Collar giảm chi phí bằng cách bán call, đổi lại giới hạn upside. Put spread giảm chi phí nhưng bảo vệ chỉ trong một vùng.
 
-Building-block forecasts buộc assumptions minh bạch hơn black-box optimization.
+Không có cấu trúc bảo hiểm miễn phí; luôn có đánh đổi giữa chi phí, mức bảo vệ và khả năng tham gia đà tăng.
 
-## 44. Optimization và Estimation Error
+## 16. Ngân sách phòng vệ
 
-Mean-variance optimization cực nhạy với expected-return assumptions. Small change in input có thể tạo huge weight differences.
-
-Covariance estimates cũng unstable. Optimization output nên được constrained/shrunk và dùng như decision support, không oracle.
-
-## 45. Robust Portfolio Construction
-
-Robust methods có thể dùng weight caps, minimum diversification, shrinkage covariance, scenario stress và qualitative risk limits.
-
-Goal không phải mathematically optimal portfolio trên historical sample mà portfolio survivable khi inputs sai.
-
-## 46. Rebalancing Bands
-
-Threshold/band rebalancing giảm turnover so calendar-only approach. Example target 20% với allowed 17–23%.
-
-Band size nên reflect volatility, transaction cost, tax và liquidity.
-
-New cash flows có thể rebalance mà không cần sell assets.
-
-## 47. Rebalancing Premium và Limits
-
-Rebalancing có thể buy low/sell high trong mean-reverting relative moves, nhưng không guaranteed premium.
-
-Nếu asset structurally impaired, mechanical buy-down can compound loss. Rebalancing rule cần governance: distinguish price move from thesis break.
-
-## 48. Liability-Driven Investing
-
-Portfolio không tồn tại độc lập với obligations. Near-term tuition, housing deposit hay debt repayment nên được matched bằng currency, duration và liquidity phù hợp.
-
-Growth assets phục vụ long horizon; liability-matching assets phục vụ certainty. Mixing hai objectives gây forced selling.
-
-## 49. Human Capital
-
-Career income là implicit asset. Developer trong tech/finance có human capital correlated với tech/financial cycle.
-
-Financial portfolio có thể diversify away from employer/industry risk thay vì double down cùng factor.
-
-## 50. Household Balance Sheet
-
-Real estate, pension, debt, salary và family liabilities đều là portfolio exposures.
-
-Nếu household wealth đã concentrated Korea real estate + KRW income, global assets có diversification value. Nếu future liabilities mostly KRW, foreign allocation vẫn cần FX policy.
-
-## 51. Multi-Country Liabilities
-
-Household có goals ở Korea và Vietnam cần currency buckets riêng. Liability matching có thể giảm FX risk mà không cần forecast VND/KRW.
-
-Policy nên define minimum assets/liquidity theo từng goal currency.
-
-## 52. Stress Testing
-
-Stress ít nhất:
+Phòng vệ nên có ngân sách giống bảo hiểm. Cần xác định:
 
 ```text
-Inflation Shock
-Recession / Deflation
-USD Spike
-Rate +200 bps
-Credit Spread Blowout
-Commodity Supply Shock
-Stock-Bond Correlation +0.7
-Liquidity Freeze
-FX +15% against Home Currency
+Rủi ro nào cần giảm?
+Mức lỗ tối đa mong muốn?
+Chi phí bảo hiểm mỗi năm chấp nhận được?
+Khi nào tái tục / giảm hedge?
 ```
 
-Stress test phải include margin/collateral and time-to-liquidate, không chỉ price P/L.
+Đánh giá hedge riêng lẻ chỉ bằng P/L dễ sai vì mục tiêu của nó là cải thiện phân phối của toàn danh mục.
 
-## 53. Reverse Stress Test
+## 17. Hiệu quả phòng vệ
 
-Reverse stress hỏi: “Portfolio phải gặp combination shock nào để drawdown 25% hoặc violate liquidity requirement?”
+Hiệu quả phòng vệ (hedge effectiveness) đo mức công cụ phòng vệ thật sự giảm biến động hoặc tổn thất của exposure cần bảo vệ.
 
-Cách này giúp phát hiện hidden risk mà normal scenario set bỏ sót.
+Một hedge có correlation cao trong thời bình nhưng sụp trong stress có thể không hữu ích khi cần nhất.
 
-## 54. Scenario Probability không phải Precision
+## 18. Bảo vệ đuôi
 
-Gán probability giúp explicit thinking, nhưng 35% không scientific hơn 30% nếu evidence yếu.
+Phòng vệ đuôi (tail hedge) được thiết kế để chi trả lớn trong sự kiện cực đoan nhưng thường hao phí trong giai đoạn bình thường.
 
-Quan trọng là identify outcomes, transmissions và portfolio sensitivity, không tạo false precision.
+Giá trị của nó nằm ở khả năng giảm forced selling, margin call và hoảng loạn hành vi.
 
-## 55. Performance Attribution
+## 19. Phòng vệ lạm phát phải xác định loại lạm phát
 
-Sau period, tách return thành strategic allocation, tactical tilts, security/product selection, FX, hedges, fees và rebalancing.
+Lạm phát do cầu mạnh khác cú sốc nguồn cung. Hàng hóa, vàng, TIPS và bất động sản phản ứng khác nhau.
 
-Nếu portfolio outperform chỉ vì unhedged USD mạnh, đừng nhầm với stock-selection skill.
+Không có một “tài sản chống lạm phát” luôn thắng. Cần hỏi lạm phát đến từ đâu, phản ứng chính sách ra sao và thời hạn bao lâu.
 
-## 56. Risk Attribution
+## 20. Phòng vệ giảm phát
 
-Return attribution nhìn backward; risk attribution nhìn forward. Asset đóng góp ít return nhưng nhiều Expected Shortfall có thể không đáng giữ.
+Trong suy thoái giảm phát với uy tín chính phủ ổn định, tiền mặt và trái phiếu chính phủ chất lượng cao thường hữu ích vì lãi suất giảm và sức mua tiền danh nghĩa tăng tương đối.
 
-Review both return contribution và risk contribution theo sleeve/factor.
+Nếu giảm phát đi kèm khủng hoảng chủ quyền hoặc tiền tệ, kết quả có thể khác.
 
-## 57. Product Implementation
+## 21. Hàng hóa trong danh mục đa tài sản
 
-Sau khi quyết định exposure mới chọn ETF, fund, futures hoặc direct securities.
+Lợi suất futures hàng hóa phụ thuộc giá, roll và lợi suất tài sản bảo đảm. Do đó nó không giống trực tiếp giá spot.
 
-Implementation checklist: tracking, expense, spread, taxes, FX conversion, leverage reset, collateral, securities lending và counterparty.
+Hàng hóa có thể giúp trong cú sốc lạm phát nguồn cung nhưng cũng chịu biến động lớn và rủi ro đường cong.
 
-Economic thesis tốt vẫn có thể bị wrapper tệ làm giảm realized return.
+## 22. Vàng trong danh mục
 
-## 58. Governance của Portfolio
+Vàng có thể đa dạng hóa rủi ro tiền tệ, địa chính trị và lợi suất thực. Nhưng trong khủng hoảng thanh khoản giai đoạn đầu, vàng vẫn có thể bị bán để tạo tiền mặt.
 
-IPS nên define strategic weights/ranges, hedge policy, liquidity floor, leverage cap, rebalancing rules và decision authority.
+Vai trò nên được đánh giá qua nhiều giai đoạn, không phải một vài ngày.
 
-Predefined governance giảm behavior drift khi market volatile.
+## 23. REIT và bất động sản
 
-## 59. Portfolio Construction Workflow
+REIT có thể hưởng lợi từ tăng tiền thuê nhưng chịu cap rate và tái cấp vốn. Lạm phát cao không tự động có lợi nếu lãi suất tăng nhanh hơn NOI.
+
+Loại tài sản bất động sản quyết định độ nhạy: data center, logistics, văn phòng, nhà ở và bán lẻ có động lực khác nhau.
+
+## 24. 60/40
+
+Danh mục 60/40 dựa trên cổ phiếu cho tăng trưởng và trái phiếu cho duration/phòng thủ.
+
+Nó hoạt động tốt hơn khi tương quan cổ phiếu–trái phiếu thấp hoặc âm. Trong cú sốc lạm phát, hai nhóm có thể cùng giảm.
+
+Bài học không phải “60/40 chết”, mà là tương quan phụ thuộc chế độ và lợi suất ban đầu quan trọng.
+
+## 25. Risk Parity
+
+Risk parity phân bổ theo đóng góp rủi ro thay vì tỷ trọng vốn. Vì trái phiếu thường ít volatility hơn cổ phiếu, chiến lược có thể dùng đòn bẩy để nâng rủi ro duration.
+
+Điểm yếu xuất hiện khi tương quan cổ phiếu–trái phiếu chuyển dương hoặc cú sốc lãi suất rất lớn.
+
+## 26. Đóng góp rủi ro cận biên
+
+Đóng góp rủi ro cận biên (Marginal Risk Contribution) cho biết tăng một ít tỷ trọng tài sản sẽ làm rủi ro tổng thay đổi bao nhiêu.
+
+Kết hợp với tỷ trọng có thể tính đóng góp rủi ro thành phần và nhận ra tài sản vốn nhỏ nhưng đang chi phối rủi ro.
+
+## 27. Equal Risk Contribution
+
+Phân bổ đóng góp rủi ro bằng nhau (Equal Risk Contribution, ERC) cố làm các nhóm tài sản đóng góp rủi ro tương đương.
+
+Nó không bảo đảm đa dạng hóa trong mọi cú sốc vì các tương quan có thể thay đổi cùng lúc.
+
+## 28. Tỷ lệ đa dạng hóa
+
+Tỷ lệ đa dạng hóa (diversification ratio) so volatility có trọng số của từng tài sản với volatility thực của danh mục.
+
+Nó cho biết tương quan giúp giảm rủi ro bao nhiêu nhưng vẫn phụ thuộc dữ liệu lịch sử.
+
+## 29. Mục tiêu biến động
+
+Chiến lược mục tiêu biến động (volatility targeting) giảm exposure khi volatility tăng và tăng exposure khi volatility thấp.
+
+Nhược điểm là có thể giảm rủi ro sau khi thị trường đã giảm và tăng đòn bẩy sau giai đoạn yên tĩnh ngay trước cú sốc.
+
+## 30. Theo xu hướng
+
+Managed futures hoặc chiến lược theo xu hướng có thể long/short cổ phiếu, lãi suất, FX và hàng hóa.
+
+Nó có thể đa dạng hóa trong khủng hoảng kéo dài nhưng chịu whipsaw khi thị trường đảo chiều liên tục.
+
+## 31. Carry
+
+Carry xuất hiện ở FX, bonds, commodities và volatility. Carry thường tạo lợi suất đều trong trạng thái bình thường nhưng có thể chịu tháo chạy mạnh trong stress.
+
+Danh mục phải nhận diện exposure bán biến động ẩn nếu nhiều sleeve cùng kiếm tiền từ carry.
+
+## 32. Thanh khoản theo tầng
+
+Có thể xếp gần đúng:
 
 ```text
-Goals
-→ Liabilities
-→ Liquidity Floor
-→ Strategic Exposures
-→ Risk Budgets
-→ Currency Policy
-→ Stress Tests
-→ Product Selection
-→ Rebalancing Rules
-→ Performance/Risk Attribution
-→ Annual Review
+Tiền mặt
+→ T-bill / MMF
+→ Trái phiếu chính phủ lớn
+→ ETF lớn
+→ Cổ phiếu nhỏ / High Yield
+→ Private Credit
+→ Private Equity / Bất động sản
 ```
 
-Bắt đầu từ goals giúp tránh portfolio trở thành collection của market narratives.
+Danh mục cần đủ tài sản ở tầng thanh khoản cao để đáp ứng nghĩa vụ và ký quỹ mà không phải bán tài sản kém thanh khoản.
 
-## 60. Checklist trước khi thêm Asset
+## 33. Định giá mượt của tài sản tư nhân
 
-Hỏi: return driver là gì; factor nào duplicate; hedge risk nào; stress loss; liquidity; currency; cost; tax; expected return; rebalancing rule; invalidation condition.
+NAV tài sản tư nhân thường cập nhật chậm. Volatility báo cáo thấp có thể chỉ phản ánh định giá cũ.
 
-Nếu không thể giải thích portfolio role trong một đoạn ngắn, position có thể không cần thiết.
+Không nên kết luận private equity hoặc private real estate tạo diversification mạnh chỉ vì chuỗi NAV ít biến động.
 
-## 61. Mental Model cuối cùng
+## 34. Phân bổ chiến lược và chiến thuật
+
+Phân bổ chiến lược dựa mục tiêu dài hạn. Phân bổ chiến thuật điều chỉnh quanh phạm vi theo định giá, vĩ mô hoặc vị thế.
+
+Quyết định chiến thuật cần lợi thế kỳ vọng rõ; nếu không, dễ trở thành đuổi theo hiệu suất.
+
+## 35. Định giá trong phân bổ
+
+Chế độ kinh tế không đủ. Tài sản bắt đầu từ định giá quá cao có thể cho lợi suất kém dù môi trường thuận lợi.
+
+Một quyết định phân bổ nên kết hợp:
 
 ```text
-Economic Regimes
-→ Asset Sensitivities
-→ Liabilities
-→ Risk Contributions
-→ Currency / Liquidity Policy
-→ Hedging
-→ Strategic + Tactical Allocation
-→ Implementation
-→ Stress / Attribution
-→ Governance
+Chế độ kinh tế
++ Định giá / Lợi suất kỳ vọng
++ Vai trò trong danh mục
 ```
 
-Multi-asset investing là quản lý một system of risks, không phải chọn nhiều tickers. Portfolio tốt không cần đúng mọi forecast; nó cần đủ robust để survive khi forecast sai.
+## 36. Xây lợi suất kỳ vọng
+
+Lợi suất kỳ vọng có thể được phân rã thành các thành phần kinh tế thay vì dự báo một con số duy nhất.
+
+Ví dụ cổ phiếu:
+
+```text
+Tăng trưởng lợi nhuận
++ Cổ tức / Mua lại
++ Thay đổi định giá
+```
+
+Trái phiếu:
+
+```text
+Carry
++ Roll-down
++ Thay đổi lợi suất / Spread
+- Default
+```
+
+Cách này giúp thấy giả định nào đang chi phối dự báo.
+
+## 37. Tối ưu hóa bền vững
+
+Tối ưu hóa mean-variance rất nhạy với đầu vào. Thay vì tin một nghiệm chính xác, có thể dùng ràng buộc, shrinkage, khoảng bất định và nhiều kịch bản.
+
+Mục tiêu là danh mục đủ tốt trong nhiều tương lai chứ không tối ưu tuyệt đối cho một bộ giả định.
+
+## 38. Kiểm thử căng thẳng
+
+Nên có ít nhất:
+
+```text
+Cú sốc lạm phát
+Suy thoái
+USD tăng mạnh
+Lợi suất tăng
+Credit spread mở rộng
+Cú sốc hàng hóa
+Cổ phiếu và trái phiếu cùng giảm
+```
+
+Mục tiêu là tìm tập trung ẩn và vấn đề thanh khoản.
+
+## 39. Kiểm thử ngược
+
+Hỏi:
+
+> Cú sốc nào khiến danh mục không đáp ứng nghĩa vụ, bị margin call hoặc phải bán tài sản tư nhân ở mức chiết khấu lớn?
+
+Sau đó điều chỉnh thanh khoản, đòn bẩy hoặc cấu trúc tài sản để giảm khả năng rơi vào trạng thái đó.
+
+## 40. Bảng cân đối hộ gia đình
+
+Danh mục đầu tư chỉ là một phần tổng tài sản. Lương, nhà ở, quỹ hưu trí, nợ và đồng tiền của thu nhập đều là exposure ngầm.
+
+Một kỹ sư công nghệ có thu nhập nhạy với chu kỳ công nghệ có thể không muốn toàn bộ tài sản tài chính cũng tập trung công nghệ.
+
+## 41. Nghĩa vụ đa quốc gia
+
+Nếu có chi tiêu tương lai ở Hàn Quốc và Việt Nam, KRW và VND phải được đưa vào chính sách tiền tệ của danh mục.
+
+Khớp tài sản với nghĩa vụ có thể giảm rủi ro mà không cần dự báo FX.
+
+## 42. Quy trình xây danh mục
+
+```text
+Mục tiêu
+→ Nghĩa vụ
+→ Thanh khoản
+→ Exposure chiến lược
+→ Ngân sách rủi ro
+→ Chính sách tiền tệ
+→ Chọn sản phẩm
+→ Tái cân bằng
+→ Đánh giá
+```
+
+Nếu bắt đầu từ “ETF nào đang hot”, danh mục dễ trở thành tập hợp câu chuyện thay vì một hệ thống.
+
+## 43. Phân rã kết quả và rủi ro
+
+Sau mỗi giai đoạn, tách:
+
+```text
+Lợi suất theo asset class
+Lợi suất FX
+Carry
+Factor tilts
+Hedge P/L và chi phí
+Rebalancing
+Fees / Tax
+```
+
+Đồng thời xem lại đóng góp rủi ro để biết danh mục có dần tập trung vào một nhân tố nào không.
+
+## Kết luận
+
+Đầu tư đa tài sản là quản lý một tập hợp **độ nhạy kinh tế**, không phải sưu tầm nhiều mã. Đa dạng hóa thật sự đến từ các nguồn lợi suất khác nhau, với thanh khoản và tiền tệ phù hợp nghĩa vụ. Phòng vệ, phân bổ theo chế độ và tái cân bằng chỉ hữu ích khi phục vụ một thiết kế danh mục rõ ràng.
