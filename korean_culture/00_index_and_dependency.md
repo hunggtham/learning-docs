@@ -21,33 +21,43 @@ graph TD
     A[Địa lý + lịch sử bán đảo] --> A2[Các lớp lịch sử cổ đại → hiện đại]
     A2 --> B[Nho giáo + nhà nước + quan hệ]
     A2 --> C[Chiến tranh + công nghiệp hoá + dân chủ hoá]
+    A --> Y[Mùa + khí hậu + môi trường]
     B --> D[Ngôn ngữ kính ngữ + tuổi + vai trò]
     D --> D2[Tên + tuổi + social metadata]
     B --> E[Gia đình + nghi lễ + giáo dục]
+    E --> V[Tuổi thơ + parenting + care institutions]
     B --> F[Tổ chức + công sở + giao tiếp]
     C --> G[Đô thị hoá + căn hộ + giao thông + tiêu dùng]
+    G --> X[Apartment + neighbourhood + moving + recycling]
     C --> H[Kinh tế + chaebol + job competition + housing]
     C --> Q[Nghĩa vụ quân sự + service lifecycle]
     D --> I[눈치 + 정 + 체면 + high-context]
     E --> J[Lễ Tết + hôn nhân + tang lễ + tổ tiên]
     G --> K[PC bang + cafe + delivery + smartphone]
     K --> K2[Messenger + community + slang + meme]
+    K --> Z[Service + review + quick-response culture]
     H --> L[Education credential + social mobility]
+    L --> W[Campus + youth + cohort + job preparation]
     H --> M[Consumption + status + asset inequality]
     C --> N[Civil society + media + protest + public sphere]
     A --> O[Tôn giáo + shamanism + Phật giáo + Kitô giáo]
     A --> P[Nghệ thuật + âm nhạc + thủ công + di sản]
     J --> R[Ẩm thực + kimjang + rượu + bàn ăn]
-    G --> S[Health access + wellness + environmental health]
+    Y --> R
+    Y --> S[Health access + wellness + environmental health]
+    G --> S
     K --> T[Hallyu + platform + fandom]
-    L --> U[Biến đổi thế hệ + 1-person household + migration]
+    V --> U[Biến đổi thế hệ + 1-person household + migration]
+    L --> U
     M --> U
     N --> U
     Q --> U
     T --> U
+    X --> U
+    Z --> U
 ```
 
-Dependency này thể hiện logic hiểu biết, không phải thứ tự “dễ → khó”. Chẳng hạn, muốn hiểu vì sao một nhân viên trẻ vẫn dùng `존댓말` với đồng nghiệp lớn tuổi dù công ty quảng bá văn hoá phẳng, ta cần đồng thời hiểu lịch sử trật tự quan hệ, metadata tuổi–vai trò, ngữ pháp kính ngữ và logic của tổ chức hiện đại.
+Dependency này thể hiện logic hiểu biết, không phải thứ tự “dễ → khó”. Chẳng hạn, muốn hiểu vì sao một nhân viên trẻ vẫn dùng `존댓말` với đồng nghiệp lớn tuổi dù công ty quảng bá văn hoá phẳng, ta cần đồng thời hiểu lịch sử trật tự quan hệ, metadata tuổi–vai trò, ngữ pháp kính ngữ và logic của tổ chức hiện đại. Tương tự, muốn hiểu vì sao delivery nhanh hoặc parenting pressure lại trở thành “văn hoá”, ta phải nối infrastructure, labour, household schedule, market incentive và expectation xã hội thay vì quy về tính cách dân tộc.
 
 ## Lộ trình đọc khuyến nghị
 
@@ -56,13 +66,13 @@ Không bắt buộc đọc theo số file. Nếu muốn xây model từ nền t�
 ```text
 01 → 21 → 02 → 22 → 03
                 ↓
-04 → 05 → 06 → 23 → 24
+04 → 29 → 05 → 30 → 06 → 23 → 24
                 ↓
-07 → 08 → 09 → 10 → 11
+07 → 32 → 08 → 31 → 09 → 10 → 11
                 ↓
-12 → 27 → 13 → 18 → 19 → 20 → 26
+12 → 33 → 27 → 13 → 18 → 19 → 20 → 26
                 ↓
-14 → 15 → 25 → 16 → 17
+14 → 15 → 25 → 16 → 17 → 28
 ```
 
 `16_connections_mental_models_misconceptions.md` nên đọc lại nhiều lần sau các nhóm chương lớn. Nó đóng vai trò “knowledge graph bằng văn xuôi” chứ không phải summary cuối sách.
@@ -77,16 +87,21 @@ Không bắt buộc đọc theo số file. Nếu muốn xây model từ nền t�
 | [`22_names_age_identity_social_metadata.md`](22_names_age_identity_social_metadata.md) | Tên, 본관, 항렬자, 만 나이, năm sinh, 동갑 và identity infrastructure |
 | [`03_language_honorifics_nunchi_jeong_face.md`](03_language_honorifics_nunchi_jeong_face.md) | Kính ngữ, 눈치, 정, 체면, 한 và giao tiếp ngữ cảnh cao |
 | [`04_family_kinship_gender_life_cycle.md`](04_family_kinship_gender_life_cycle.md) | Gia đình, họ tộc, hôn nhân, giới, sinh con, tang lễ và tổ tiên |
+| [`29_childhood_parenting_care_institutions.md`](29_childhood_parenting_care_institutions.md) | 태교, 산후조리, 백일, 육아, childcare, grandparents, parent communities và care economy |
 | [`05_education_exams_credentials.md`](05_education_exams_credentials.md) | Giáo dục, 수능, 학원, credentialism, cạnh tranh và mobility |
+| [`30_school_university_youth_campus_culture.md`](30_school_university_youth_campus_culture.md) | 학번, 새내기, 선후배, 동아리, MT, 휴학, 취준생 và youth/campus socialization |
 | [`06_workplace_organization_hoesik.md`](06_workplace_organization_hoesik.md) | Công sở, 직급, 보고, 결재, 회식, 회의, 조직문화 và biến đổi thế hệ |
 | [`23_military_conscription_service_culture.md`](23_military_conscription_service_culture.md) | Nghĩa vụ quân sự, 입대–전역, 선임–후임, reserve và ảnh hưởng lên civilian timeline |
 | [`24_economy_chaebol_housing_status_mobility.md`](24_economy_chaebol_housing_status_mobility.md) | 재벌, đại doanh nghiệp–SME, 스펙, apartment, 전세, 청약, housing và social mobility |
 | [`07_food_table_fermentation_drinking.md`](07_food_table_fermentation_drinking.md) | Bữa ăn, 밥, 반찬, kimchi, fermentation, rượu và phép bàn ăn |
+| [`32_seasons_climate_environment_daily_rhythm.md`](32_seasons_climate_environment_daily_rhythm.md) | 사계절, 벚꽃, 장마, 폭염, 복날, 단풍, winter culture, fine dust và climate adaptation |
 | [`08_home_space_hanok_clothing_aesthetics.md`](08_home_space_hanok_clothing_aesthetics.md) | 한옥, 온돌, căn hộ, 한복, thẩm mỹ, không gian và cơ thể |
+| [`31_apartment_neighborhood_moving_recycling_everyday_life.md`](31_apartment_neighborhood_moving_recycling_everyday_life.md) | 이사, 손 없는 날, 관리사무소, 층간소음, 택배, 분리수거, 주차 và digital neighbourhood |
 | [`09_religion_ritual_worldview.md`](09_religion_ritual_worldview.md) | Shamanism, Phật giáo, Nho giáo nghi lễ, Kitô giáo và thế giới quan |
 | [`10_arts_music_performance_craft.md`](10_arts_music_performance_craft.md) | Pansori, Arirang, nongak, talchum, gốm, giấy và di sản sống |
 | [`11_holidays_rites_games_memory.md`](11_holidays_rites_games_memory.md) | 설날, 추석, 제사, 세배, trò chơi và ký ức tập thể |
 | [`12_city_consumption_digital_life.md`](12_city_consumption_digital_life.md) | Seoul, subway, convenience store, cafe, delivery, PC bang, Kakao và payment |
+| [`33_service_customer_review_quick_response_culture.md`](33_service_customer_review_quick_response_culture.md) | 서비스, 고객님, 감정노동, 리뷰, 배송, 반품, 기프티콘, 팝업 và low-latency service culture |
 | [`27_internet_communities_messaging_slang_memes.md`](27_internet_communities_messaging_slang_memes.md) | Online communities, KakaoTalk, read receipt, 초성체, slang, meme và reputation systems |
 | [`13_hallyu_media_platforms.md`](13_hallyu_media_platforms.md) | K-pop, drama, film, webtoon, game, platform economy và global Hallyu |
 | [`18_daily_etiquette_gifts_relationships.md`](18_daily_etiquette_gifts_relationships.md) | Etiquette hằng ngày, quà tặng, bạn bè, dating và messaging culture |
@@ -98,6 +113,7 @@ Không bắt buộc đọc theo số file. Nếu muốn xây model từ nền t�
 | [`25_civic_media_public_sphere_protest.md`](25_civic_media_public_sphere_protest.md) | Civil society, media, portal, comment, assembly, protest và digital public sphere |
 | [`16_connections_mental_models_misconceptions.md`](16_connections_mental_models_misconceptions.md) | Knowledge connections, causal models, mental models và các hiểu lầm phổ biến |
 | [`17_glossary_and_reference_map.md`](17_glossary_and_reference_map.md) | Glossary Korean–English–Vietnamese và bản đồ nguồn tham khảo |
+| [`28_naming_translation_conventions.md`](28_naming_translation_conventions.md) | Quy ước tên riêng Việt–Hàn–Anh, romanization và cách tránh dịch sai tên lịch sử |
 
 ## Một mental model xuyên suốt: văn hoá là giao thức xã hội
 
@@ -127,8 +143,23 @@ Observed behaviour
 
 Không phải hiện tượng nào cũng đi qua đủ mọi layer, nhưng model này buộc người đọc tìm mechanism trước khi gắn nhãn “đó là văn hoá Hàn”.
 
+## Một mental model thứ ba: convenience luôn có cost map
+
+Một phần văn hoá Hàn Quốc đương đại được trải nghiệm qua tốc độ và tiện lợi: delivery nhanh, parcel dày đặc, app realtime, childcare service, apartment management, mobile gift và customer support. Tuy nhiên, **friction giảm ở phía người dùng không có nghĩa cost biến mất**. Cost có thể được chuyển sang logistics worker, caregiver, management office, server infrastructure hoặc household khác.
+
+Vì vậy khi gặp một hiện tượng “rất tiện”, hãy hỏi thêm:
+
+```text
+Ai đang nhận convenience?
+Ai đang hấp thụ labour/time/capital cost?
+Technology nào làm việc đó scale được?
+Expectation mới nào được tạo ra sau khi convenience trở thành bình thường?
+```
+
+Câu hỏi này giúp nối culture với economics, labour và engineering thay vì chỉ mô tả bề mặt.
+
 ## Nguyên tắc chống stereotype
 
 Khi đọc những từ như `빨리빨리`, `정`, `눈치`, `유교`, `군대문화`, `재벌`, không nên chuyển chúng thành câu kiểu “người Hàn luôn...”. Câu hỏi tốt hơn là: **chuẩn mực hoặc pattern này được hình thành trong điều kiện lịch sử nào, được củng cố bởi thiết chế nào, xuất hiện mạnh trong bối cảnh nào, nhóm nào không tuân theo và đang thay đổi ra sao?**
 
-Một mô tả cultural tốt phải luôn chừa chỗ cho variance. Seoul không phải toàn Hàn Quốc. Comment online không phải public opinion. Một K-drama không phải ethnography. Một công ty hierarchy cao không đại diện mọi workplace. Một người Hàn không có nghĩa vụ “hành xử đúng như sách”.
+Một mô tả cultural tốt phải luôn chừa chỗ cho variance. Seoul không phải toàn Hàn Quốc. Comment online không phải public opinion. Một K-drama không phải ethnography. Một công ty hierarchy cao không đại diện mọi workplace. Một gia đình dùng `산후조리원` không đại diện mọi household. Một apartment complex có rule phân loại rác cụ thể không có nghĩa toàn quốc dùng đúng cùng implementation. Một người Hàn không có nghĩa vụ “hành xử đúng như sách”.
