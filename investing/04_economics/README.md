@@ -1,31 +1,31 @@
-# 04 — Economics
+# 04 — Kinh tế học và vĩ mô (Economics)
 
-Domain này nối doanh nghiệp với nền kinh tế và hệ thống tài chính toàn cầu. Mục tiêu không phải học thuộc GDP/CPI/Fed, mà hiểu các kênh truyền dẫn từ household/company decisions tới rates, credit, FX, trade, liquidity, fiscal policy, debt sustainability, demographics, productivity và asset prices.
+Lĩnh vực này nối doanh nghiệp với nền kinh tế và hệ thống tài chính toàn cầu. Mục tiêu không phải học thuộc GDP, CPI hay Fed, mà hiểu các kênh truyền dẫn từ quyết định của hộ gia đình và doanh nghiệp tới lãi suất, tín dụng, ngoại hối, thương mại, thanh khoản, chính sách tài khóa, tính bền vững của nợ, nhân khẩu học, năng suất và giá tài sản.
 
 ## Thứ tự đọc
 
-[00_BRIDGE_COMPANY_TO_MACRO.md](./00_BRIDGE_COMPANY_TO_MACRO.md) là cầu nối từ doanh nghiệp sang macro: earnings, sector cycle, inflation, rates, Fed, bond yields, USD, oil, tariff và geopolitical shocks.
+[00_BRIDGE_COMPANY_TO_MACRO.md](./00_BRIDGE_COMPANY_TO_MACRO.md) là cầu nối từ doanh nghiệp sang vĩ mô: lợi nhuận doanh nghiệp, chu kỳ ngành, lạm phát, lãi suất, Fed, lợi suất trái phiếu, USD, dầu, thuế quan và cú sốc địa chính trị.
 
-[01_MICRO_MACRO_ADVANCED.md](./01_MICRO_MACRO_ADVANCED.md) đi từ scarcity, marginal thinking, elasticity, market structure và game theory tới AD–AS, output gap, Phillips curve, fiscal/monetary transmission, productivity, demographics và open-economy trilemma.
+[01_MICRO_MACRO_ADVANCED.md](./01_MICRO_MACRO_ADVANCED.md) đi từ khan hiếm, tư duy cận biên, độ co giãn, cấu trúc thị trường và lý thuyết trò chơi tới tổng cầu–tổng cung, khoảng cách sản lượng, đường Phillips, kênh truyền dẫn tài khóa/tiền tệ, năng suất, nhân khẩu học và bộ ba bất khả thi của nền kinh tế mở.
 
-[02_GLOBAL_ECONOMY_CAPITAL_FLOWS_AND_CRISIS.md](./02_GLOBAL_ECONOMY_CAPITAL_FLOWS_AND_CRISIS.md) giải thích trade, current account, global value chains, reserve currency, offshore dollar system, cross-border banking, sudden stop, sovereign/banking crisis, commodity chokepoints, sanctions, tariffs và geoeconomic fragmentation.
+[02_GLOBAL_ECONOMY_CAPITAL_FLOWS_AND_CRISIS.md](./02_GLOBAL_ECONOMY_CAPITAL_FLOWS_AND_CRISIS.md) giải thích thương mại, tài khoản vãng lai, chuỗi giá trị toàn cầu, tiền tệ dự trữ, hệ thống USD ngoài nước Mỹ, ngân hàng xuyên biên giới, hiện tượng dừng vốn đột ngột (sudden stop), khủng hoảng nợ chính phủ/ngân hàng, điểm nghẽn hàng hóa, trừng phạt, thuế quan và phân mảnh địa kinh tế.
 
-[03_MACRO_DATA_PLAYBOOK.md](./03_MACRO_DATA_PLAYBOOK.md) chuyển theory thành cách đọc actual vs consensus vs pricing: CPI/PCE/PPI, labor, wages/productivity, PMI, consumption, housing, GDP/GDI, central-bank meetings, nominal/real yields, breakevens, term premium, credit, FX, commodities, positioning và event review.
+[03_MACRO_DATA_PLAYBOOK.md](./03_MACRO_DATA_PLAYBOOK.md) chuyển lý thuyết thành cách đọc số thực tế so với đồng thuận và kỳ vọng thị trường: CPI/PCE/PPI, lao động, tiền lương/năng suất, PMI, tiêu dùng, nhà ở, GDP/GDI, họp ngân hàng trung ương, lợi suất danh nghĩa/thực, kỳ vọng lạm phát hòa vốn, phần bù kỳ hạn, tín dụng, FX, hàng hóa, vị thế thị trường và đánh giá sau sự kiện.
 
-[04_MONETARY_SYSTEM_LIQUIDITY_AND_CRISIS_TRANSMISSION.md](./04_MONETARY_SYSTEM_LIQUIDITY_AND_CRISIS_TRANSMISSION.md) đi sâu monetary plumbing: reserves, repo, collateral/haircut, Treasury cash balance, money-market funds, reverse repo, dealer balance sheets, NBFIs, global dollar funding, QE/QT, bank liquidity/capital và collateral-driven crisis transmission.
+[04_MONETARY_SYSTEM_LIQUIDITY_AND_CRISIS_TRANSMISSION.md](./04_MONETARY_SYSTEM_LIQUIDITY_AND_CRISIS_TRANSMISSION.md) đi sâu cơ chế vận hành tiền tệ: dự trữ ngân hàng, repo, tài sản thế chấp và haircut, tài khoản tiền mặt Kho bạc, quỹ thị trường tiền tệ, reverse repo, bảng cân đối của nhà tạo lập, NBFI, nguồn vốn USD toàn cầu, QE/QT, vốn và thanh khoản ngân hàng cùng cơ chế khủng hoảng qua tài sản thế chấp.
 
-[05_MACRO_REGIMES_POLICY_HISTORY_AND_CRISIS_CASES.md](./05_MACRO_REGIMES_POLICY_HISTORY_AND_CRISIS_CASES.md) xây regime thinking và library of mechanisms qua Goldilocks, overheating, stagflation, deflationary bust, policy error, 1970s inflation, Japan, Asian Financial Crisis, dot-com, GFC, Eurozone, COVID, banking stress, sovereign debt và commodity/currency shocks.
+[05_MACRO_REGIMES_POLICY_HISTORY_AND_CRISIS_CASES.md](./05_MACRO_REGIMES_POLICY_HISTORY_AND_CRISIS_CASES.md) xây tư duy theo chế độ kinh tế và thư viện cơ chế qua Goldilocks, quá nóng, đình lạm, suy giảm giảm phát, sai lầm chính sách, lạm phát thập niên 1970, Nhật Bản, Khủng hoảng Tài chính châu Á, dot-com, GFC, Eurozone, COVID, căng thẳng ngân hàng, nợ chính phủ và cú sốc hàng hóa/tiền tệ.
 
-[06_FISCAL_MONETARY_INTERACTION_DEBT_DEMOGRAPHICS_AND_PRODUCTIVITY.md](./06_FISCAL_MONETARY_INTERACTION_DEBT_DEMOGRAPHICS_AND_PRODUCTIVITY.md) hoàn thiện lớp structural macro: consolidated public-sector balance sheet, primary/structural balance, debt-to-GDP dynamics, effective funding rate, gross financing need, maturity/currency mismatch, investor base, fiscal multiplier/impulse, automatic stabilizers, fiscal dominance, QE/QT fiscal link, Treasury issuance/term premium, external balance, demographics, participation, human capital, capital efficiency, TFP, misallocation, AI/productivity, r-star, fiscal credibility và country-risk dashboard.
+[06_FISCAL_MONETARY_INTERACTION_DEBT_DEMOGRAPHICS_AND_PRODUCTIVITY.md](./06_FISCAL_MONETARY_INTERACTION_DEBT_DEMOGRAPHICS_AND_PRODUCTIVITY.md) hoàn thiện lớp vĩ mô cấu trúc: bảng cân đối khu vực công hợp nhất, cán cân sơ cấp/cơ cấu, động lực nợ trên GDP, lãi suất tài trợ hiệu dụng, nhu cầu tài trợ gộp, lệch kỳ hạn/tiền tệ, cơ sở nhà đầu tư, số nhân và xung lực tài khóa, bộ ổn định tự động, ưu thế tài khóa, liên kết QE/QT với tài khóa, phát hành trái phiếu chính phủ và phần bù kỳ hạn, cán cân đối ngoại, nhân khẩu học, tỷ lệ tham gia lao động, vốn con người, hiệu quả phân bổ vốn, TFP, phân bổ sai nguồn lực, AI/năng suất, lãi suất trung tính và độ tin cậy tài khóa.
 
-## Sau domain này bạn cần làm được gì?
+## Sau lĩnh vực này bạn cần làm được gì?
 
-Bạn cần có khả năng nhận một shock và tự xây chuỗi `shock → income/prices → policy → yields/FX/credit → sector/company earnings → valuation`, phân biệt demand/supply/credit/liquidity/fiscal shocks, đọc central-bank reaction function, tách front-end rate khỏi term-premium move, phân tích debt sustainability bằng primary balance + r-g + maturity/currency structure và nối demographics/productivity tới potential growth, tax base, neutral rates và long-run asset valuation.
+Bạn cần có khả năng nhận một cú sốc và tự xây chuỗi `cú sốc → thu nhập/giá cả → chính sách → lợi suất/FX/tín dụng → lợi nhuận ngành/doanh nghiệp → định giá`; phân biệt cú sốc cầu, cung, tín dụng, thanh khoản và tài khóa; đọc hàm phản ứng của ngân hàng trung ương; tách biến động đầu ngắn của đường cong khỏi phần bù kỳ hạn; phân tích tính bền vững của nợ bằng cán cân sơ cấp, chênh lệch r-g và cấu trúc kỳ hạn/tiền tệ; nối nhân khẩu học và năng suất với tăng trưởng tiềm năng, cơ sở thuế, lãi suất trung tính và định giá dài hạn.
 
-Bạn cũng cần biết khi nào headline data chỉ là cyclical noise và khi nào balance sheet, debt structure hoặc productivity trend đang thay đổi structural regime.
+Bạn cũng cần biết khi nào dữ liệu tiêu đề chỉ là nhiễu chu kỳ và khi nào bảng cân đối, cấu trúc nợ hoặc xu hướng năng suất đang làm thay đổi chế độ cấu trúc.
 
-## Case studies để áp dụng
+## Bài tập tích hợp
 
-Đọc [CPI Shock → Portfolio](../07_integrated_case_studies/01_INFLATION_SHOCK_FROM_CPI_TO_PORTFOLIO.md) để luyện `actual → surprise → reaction function → curve/FX/credit → earnings/valuation`. Sau đó đọc [Credit & Liquidity Crisis](../07_integrated_case_studies/02_CREDIT_LIQUIDITY_CRISIS_TRANSMISSION.md) để nối monetary plumbing, collateral, bank balance sheet và financial accelerator vào real economy.
+Đọc [Cú sốc CPI → Danh mục](../07_integrated_case_studies/01_INFLATION_SHOCK_FROM_CPI_TO_PORTFOLIO.md) để luyện chuỗi `số thực tế → mức bất ngờ → hàm phản ứng → đường cong/tỷ giá/tín dụng → lợi nhuận/định giá`. Sau đó đọc [Khủng hoảng tín dụng và thanh khoản](../07_integrated_case_studies/02_CREDIT_LIQUIDITY_CRISIS_TRANSMISSION.md) để nối cơ chế tiền tệ, tài sản thế chấp, bảng cân đối ngân hàng và cơ chế khuếch đại tài chính vào nền kinh tế thực.
 
-Sau đó chuyển sang [05_trading_derivatives](../05_trading_derivatives/README.md) nếu muốn dùng macro trong trading, hoặc [06_markets_korea_vietnam](../06_markets_korea_vietnam/README.md) để áp dụng trực tiếp vào Hàn Quốc và Việt Nam.
+Sau đó chuyển sang [05 — Giao dịch và phái sinh](../05_trading_derivatives/README.md) hoặc [06 — Thị trường Hàn Quốc và Việt Nam](../06_markets_korea_vietnam/README.md).
