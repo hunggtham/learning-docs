@@ -1,536 +1,351 @@
-# Disclosure, accounting, DART và KIND: cách biến một công ty thành dữ liệu có thể kiểm chứng (기업공시·회계·DART·KIND)
+# Công bố thông tin, kế toán, DART và KIND: biến doanh nghiệp thành dữ liệu có thể kiểm chứng (기업공시·회계·DART·KIND)
 
-Muốn đi từ “nghe nói company này tốt” sang analysis có thể kiểm chứng, phải biết **company bắt buộc hoặc tự nguyện công bố gì, ở đâu, theo accounting boundary nào và bằng wording pháp lý nào**.
+Muốn đi từ “nghe nói công ty này tốt” sang một phân tích có thể kiểm chứng, phải biết **doanh nghiệp bắt buộc hoặc tự nguyện công bố điều gì, ở đâu, theo phạm vi kế toán nào và bằng ngôn ngữ pháp lý nào**.
 
-Ở Korea, hai infrastructure quan trọng nhất là **DART (전자공시시스템)** của Financial Supervisory Service và **KIND (한국거래소 기업공시채널)** của Korea Exchange. Đây không chỉ là websites để đọc report; chúng là public information infrastructure của capital market.
+Tại Hàn Quốc, hai hạ tầng quan trọng là **DART (전자공시시스템)** của Cơ quan Giám sát Tài chính và **KIND (한국거래소 기업공시채널)** của Sở Giao dịch Chứng khoán Hàn Quốc. Đây không chỉ là website đọc báo cáo; chúng là hạ tầng thông tin công khai của thị trường vốn.
 
-## Disclosure tồn tại vì information asymmetry
+## Công bố thông tin tồn tại vì bất cân xứng thông tin
 
-Management biết nhiều hơn investor, lender, employee, supplier và public. Đây là **information asymmetry / 정보비대칭**.
+Ban điều hành biết nhiều hơn nhà đầu tư, chủ nợ, nhân viên, nhà cung cấp và công chúng. Đây là **bất cân xứng thông tin (information asymmetry / 정보비대칭)**.
 
-Nếu outsider không thể verify revenue, debt hay related-party transaction, cost of capital tăng vì uncertainty và adverse-selection risk.
+Nếu người bên ngoài không thể kiểm tra doanh thu, nợ hoặc giao dịch bên liên quan, chi phí vốn sẽ tăng vì mức bất định và rủi ro lựa chọn bất lợi cao hơn.
 
-Disclosure reduces this gap by creating:
+Công bố thông tin giúp giảm khoảng cách này bằng yêu cầu hồ sơ chuẩn hóa, thời hạn nộp, trách nhiệm pháp lý, dấu vết kiểm toán, khả năng so sánh lịch sử và dữ liệu có cấu trúc trong một số hệ thống.
 
-- standardized filing requirements;
-- deadlines;
-- legal responsibility;
-- audit trails;
-- historical comparability;
-- machine-readable structures in some datasets.
+Tuy nhiên công bố thông tin không loại bỏ hoàn toàn gian lận hay phán đoán chủ quan. Nó tạo ra **bằng chứng có cấu trúc** để người đọc có thể đối chiếu và chất vấn.
 
-Disclosure does **not** eliminate fraud or judgment. It creates evidence that can be challenged and reconciled.
+> Mental model: hồ sơ công bố không phải “máy phát chân lý”; nó là một tuyên bố có cấu trúc được đặt dưới trách nhiệm pháp lý và kế toán.
 
-> Mental model: filing is not “truth oracle”; it is a structured claim under legal/accounting accountability.
+## DART và KIND giải quyết những câu hỏi khác nhau
 
-## DART và KIND giải quyết problem khác nhau
+**DART** là kho công bố doanh nghiệp rộng, đặc biệt hữu ích cho báo cáo kinh doanh, báo cáo tài chính, thay đổi sở hữu, huy động vốn, M&A, sự kiện trọng yếu và lịch sử hồ sơ.
 
-**DART** is broad repository for corporate filings under FSS. It is especially useful for business reports, financial statements, ownership changes, financing, M&A, major events and historical filing search.
+**KIND** là kênh công bố của KRX, tập trung nhiều hơn vào công ty niêm yết, thông tin niêm yết, sự kiện giao dịch và bối cảnh thị trường.
 
-**KIND** is KRX disclosure channel focused on listed-company market disclosures, listing information, trading-related notices and exchange context.
+Đối với công ty niêm yết, quy trình tốt không phải “DART hay KIND” mà là **DART + KIND + IR của công ty**. DART cho chiều sâu pháp lý–tài chính, KIND cho dòng sự kiện trên sàn, còn IR cho cách ban điều hành diễn giải hoạt động.
 
-For listed company research, best workflow is not `DART or KIND`; it is **DART + KIND + company IR**.
+## Mỗi loại hồ sơ trả lời câu hỏi nào?
 
-DART gives legal/financial depth; KIND gives exchange-event flow; IR gives management narrative.
+### `사업보고서` — báo cáo kinh doanh thường niên
 
-## Filing hierarchy: document nào trả lời câu hỏi nào?
+Đây là tài liệu gần nhất với một “ảnh chụp cơ sở dữ liệu” của công ty trong năm. Nó có thể bao gồm lịch sử doanh nghiệp, các phân khúc kinh doanh, sản phẩm–dịch vụ, kênh bán, nguyên vật liệu, năng lực sản xuất, công ty con, nhân viên, thành viên quản trị, cổ đông, bên liên quan, tranh chấp, nghĩa vụ tiềm tàng, báo cáo tài chính và thuyết minh.
 
-### 사업보고서 — Annual Business Report
+Không nên chỉ mở bảng tài chính. Với doanh nghiệp công nghiệp, phần công suất và nguyên vật liệu đôi khi giải thích biên lợi nhuận tốt hơn con số lợi nhuận tổng.
 
-This is the closest thing to an annual company “database snapshot”. It can include:
+### `반기보고서` / `분기보고서`
 
-- company history;
-- business segments;
-- major products/services;
-- sales channels;
-- raw materials;
-- production capacity;
-- subsidiaries;
-- employees;
-- directors;
-- shareholders;
-- related parties;
-- litigation/contingencies;
-- financial statements and notes.
+Báo cáo bán niên và quý cập nhật dữ liệu kinh doanh–tài chính giữa hai báo cáo thường niên. Chúng đặc biệt quan trọng với ngành chu kỳ vì điều kiện kinh doanh có thể thay đổi nhanh hơn chu kỳ báo cáo năm.
 
-Do not open only financial tables. For industrial company, capacity/raw-material section may explain margin better than headline earnings.
+### `주요사항보고서` và các công bố trọng yếu
 
-### 반기보고서 / 분기보고서
+Nhóm này có thể bao gồm tăng vốn, phát hành trái phiếu, mua bán tài sản lớn, M&A, tái cấu trúc, hợp đồng lớn, bảo lãnh hoặc sự kiện huy động vốn tùy quy định.
 
-Half-year and quarterly reports update financial and business data between annual filings.
+Nếu câu chuyện doanh nghiệp thay đổi đột ngột, hãy tìm công bố sự kiện trọng yếu thay vì chờ báo cáo năm.
 
-They are essential for cycle analysis because industrial conditions can move far faster than annual reporting.
+### Công bố sở hữu
 
-### 주요사항보고서 and material disclosures
+Thay đổi sở hữu của cổ đông lớn hoặc lãnh đạo có thể cho thấy chuyển quyền kiểm soát, bước đi kế nhiệm hoặc giao dịch nội bộ. Đây là nguồn đặc biệt quan trọng khi phân tích chaebol.
 
-These can cover material events such as:
+## Nguyên tắc đầu tiên: xác định đúng phạm vi kế toán
 
-- capital increase;
-- bond issuance;
-- major asset acquisition/disposal;
-- M&A;
-- restructuring;
-- major contracts;
-- guarantees or financing events depending on rules.
+Trước khi đọc bất kỳ con số nào, phải hỏi: **đây là pháp nhân nào và phạm vi báo cáo nào?**
 
-If company story changes sharply, search material-event filings rather than waiting for annual report.
+Một tập đoàn có thể có báo cáo riêng, báo cáo hợp nhất, công ty con, công ty liên kết theo phương pháp vốn chủ sở hữu và liên doanh.
 
-### Ownership filings
+Cùng một thương hiệu có thể xuất hiện nhiều con số doanh thu–lợi nhuận hợp lệ khác nhau tùy phạm vi. Đây không phải mâu thuẫn kế toán; đó là các câu hỏi khác nhau.
 
-Large-shareholder and officer ownership changes can reveal control changes, succession steps or insider transactions.
+## Báo cáo riêng và báo cáo hợp nhất
 
-Ownership disclosure is especially important for chaebol/group analysis.
+**Báo cáo tài chính riêng (separate financial statements / 별도재무제표)** mô tả một pháp nhân. **Báo cáo tài chính hợp nhất (consolidated financial statements / 연결재무제표)** coi công ty mẹ và các công ty con do nó kiểm soát như một đơn vị kinh tế báo cáo, đồng thời loại trừ giao dịch nội bộ.
 
-## First principle: identify the correct accounting boundary
+Giả sử công ty mẹ bán linh kiện trị giá 100 cho công ty con, rồi công ty con bán sản phẩm hoàn chỉnh ra ngoài với giá 150. Nếu cộng hai báo cáo riêng sẽ ra 250, nhưng doanh thu hợp nhất với bên ngoài chỉ là 150 sau khi loại bỏ giao dịch nội bộ 100.
 
-Before reading any number, ask: **which entity and which scope?**
+Đó là lý do kế toán hợp nhất tồn tại.
 
-A group may have:
+## Hợp nhất không có nghĩa công ty mẹ sở hữu 100%
 
-- standalone/separate statements (별도재무제표);
-- consolidated statements (연결재무제표);
-- subsidiaries;
-- associates under equity method;
-- joint ventures.
+Nếu công ty mẹ sở hữu 70% công ty con nhưng vẫn kiểm soát nó, báo cáo hợp nhất có thể ghi 100% tài sản và doanh thu của công ty con. Phần quyền lợi thuộc cổ đông bên ngoài được trình bày dưới dạng **lợi ích cổ đông không kiểm soát (Non-Controlling Interest / NCI / 비지배지분)**.
 
-Same brand can produce multiple valid revenue/profit numbers depending on boundary.
+Vì vậy cần phân biệt lợi nhuận ròng hợp nhất, lợi nhuận thuộc cổ đông công ty mẹ và lợi nhuận thuộc NCI.
 
-This is not accounting inconsistency. It is different question scope.
+Nếu dùng 100% EBITDA của công ty con nhưng bỏ qua phần sở hữu của cổ đông thiểu số, định giá cho cổ đông công ty mẹ có thể bị phóng đại.
 
-## Separate vs consolidated statements
+## Bảng cân đối kế toán: nguồn lực và nghĩa vụ tại một thời điểm
 
-**Separate statements / 별도재무제표** describe one legal entity.
-
-**Consolidated statements / 연결재무제표** treat parent and controlled subsidiaries as one economic reporting group and eliminate intra-group transactions.
-
-Suppose Parent sells components worth 100 to Subsidiary, then Subsidiary sells finished product 150 to external customer.
-
-Naively adding standalone revenue gives 250, but consolidated external revenue should reflect 150 after eliminating internal 100.
-
-This is why consolidated accounting exists.
-
-## Consolidation does not mean parent owns 100%
-
-If Parent owns 70% of Subsidiary but controls it, consolidated statements may include 100% of subsidiary assets/revenue, with outside ownership represented as **Non-Controlling Interest (NCI / 비지배지분)**.
-
-Therefore analyst must distinguish:
-
-- consolidated net income;
-- net income attributable to owners of parent;
-- net income attributable to NCI.
-
-Using 100% of subsidiary EBITDA while ignoring minority ownership can overstate parent-shareholder value.
-
-## The balance sheet: stock of economic resources and claims
-
-Statement of Financial Position (재무상태표) follows basic identity:
+**Bảng cân đối kế toán (Statement of Financial Position / 재무상태표)** tuân theo đẳng thức:
 
 \[
-Assets = Liabilities + Equity
+Tài\ sản = Nợ\ phải\ trả + Vốn\ chủ\ sở\ hữu
 \]
 
-But analysis is not about checking equation. Need ask quality of each line.
+Phân tích không dừng ở việc phương trình cân bằng; cần đánh giá chất lượng từng khoản mục.
 
-### Cash
+### Tiền mặt
 
-Is cash unrestricted? Is it held at subsidiaries? Does company also have large debt?
+Tiền có bị hạn chế sử dụng không? Nó đang nằm tại công ty con nào? Công ty có đồng thời mang nợ lớn không? Tiền mặt hợp nhất không tự động là tiền tự do ở công ty mẹ.
 
-Gross cash alone does not equal parent-level free cash.
+### Khoản phải thu
 
-### Receivables
+Khoản phải thu tăng nhanh hơn doanh thu có thể phản ánh thu tiền chậm, khách hàng gặp khó khăn hoặc chính sách ghi nhận doanh thu tích cực hơn.
 
-Receivables rising faster than revenue can mean slower collections, customer stress or aggressive recognition.
-
-Useful metric:
+Một chỉ số phổ biến là:
 
 \[
-DSO = \frac{Average\ Receivables}{Revenue} \times 365
+DSO = \frac{Khoản\ phải\ thu\ bình\ quân}{Doanh\ thu}\times365
 \]
 
-Compare over time and against business model.
+Phải so sánh theo thời gian và theo mô hình kinh doanh.
 
-### Inventory
+### Hàng tồn kho
 
-Inventory can be strategic buffer or warning sign.
+Tồn kho có thể là bộ đệm chiến lược hoặc tín hiệu cảnh báo. Trong bán dẫn, tồn kho tăng có thể đi trước áp lực giá; trong bán lẻ, hàng cũ có thể phải giảm giá; trong đóng tàu, sản phẩm dở dang có cấu trúc khác hẳn.
 
-In semiconductor, inventory build may precede price pressure. In retail, old inventory may require markdown. In shipbuilding, work-in-progress economics differ again.
+Tồn kho phải được đọc theo ngành.
 
-Need interpret inventory by industry.
+### Tài sản cố định hữu hình
 
-### Property, plant and equipment
+**PP&E (Property, Plant and Equipment)** phản ánh năng lực vật chất tích lũy nhưng không đảm bảo tài sản tạo lợi nhuận tốt. Một fab mới làm tài sản và khấu hao tăng; nếu công suất sử dụng thấp, cùng khoản đầu tư đó có thể kéo ROIC xuống.
 
-PP&E shows accumulated physical capacity but not necessarily productive value.
+### Tài sản vô hình và goodwill
 
-A new fab increases assets and future depreciation. If utilization stays low, same capex can destroy return on capital.
+M&A có thể tạo **lợi thế thương mại (goodwill)**. Goodwill không tự động xấu, nhưng suy giảm giá trị sau này có thể cho thấy giả định mua lại ban đầu quá lạc quan.
 
-### Intangibles and goodwill
+## Báo cáo kết quả kinh doanh: dòng hiệu quả trong một kỳ
 
-M&A can create goodwill. Goodwill is not automatically bad, but future impairment may reveal acquisition assumptions were too optimistic.
-
-## Income statement: flow of economic performance
-
-A simplified bridge:
+Một cầu nối đơn giản:
 
 ```text
-Revenue
-- Cost of sales
-= Gross profit
-- Operating expenses
-= Operating profit
-± Finance / other items
-= Profit before tax
-- Tax
-= Net income
+Doanh thu
+- Giá vốn
+= Lợi nhuận gộp
+- Chi phí hoạt động
+= Lợi nhuận hoạt động
+± Tài chính / khoản khác
+= Lợi nhuận trước thuế
+- Thuế
+= Lợi nhuận ròng
 ```
 
-Different industries present details differently, but logic remains.
+Chi tiết trình bày khác nhau theo ngành nhưng logic cơ bản không đổi.
 
-## Revenue growth decomposition
+## Phân rã tăng trưởng doanh thu
 
-Revenue increase can come from:
+Doanh thu có thể tăng do sản lượng, giá hoặc cơ cấu sản phẩm:
 
 \[
-Revenue = Volume \times Price \times Mix\ Effect
+Doanh\ thu \approx Sản\ lượng \times Giá \times Hiệu\ ứng\ cơ\ cấu
 \]
 
-For platform, replace volume with transactions/users; for bank, revenue logic differs; for construction, recognition depends project progress.
+Với nền tảng, “sản lượng” có thể là giao dịch hoặc người dùng; với ngân hàng logic doanh thu khác; với xây dựng, ghi nhận phụ thuộc tiến độ dự án. Vì vậy phải tìm cơ chế đứng sau con số tăng trưởng.
 
-Therefore headline growth needs mechanism.
+## Lợi nhuận hoạt động và lợi nhuận ròng
 
-## Operating profit vs net income
+**Lợi nhuận hoạt động (operating profit / 영업이익)** tập trung nhiều hơn vào hoạt động cốt lõi. **Lợi nhuận ròng (net income / 당기순이익)** còn bao gồm chi phí tài chính, thuế và nhiều khoản ngoài hoạt động.
 
-**Operating profit / 영업이익** focuses more on core operations.
+Một công ty có thể báo lợi nhuận ròng cao nhờ bán tài sản trong khi hoạt động cốt lõi yếu đi. Ngược lại, chi phí lãi vay lớn có thể kéo lợi nhuận ròng xuống dù vận hành vẫn ổn định.
 
-**Net income / 당기순이익** includes financing cost, taxes and many non-operating effects.
+Phải nối hai con số thay vì chọn con số nào trông đẹp hơn.
 
-A company can report high net income from asset sale while operating business weakens.
+## Kế toán dồn tích: lợi nhuận không phải tiền mặt theo thiết kế
 
-Conversely high interest expense can depress net income even when operations stable.
+**Kế toán dồn tích (accrual accounting / 발생주의 회계)** ghi nhận hoạt động kinh tế khi doanh thu được tạo ra hoặc chi phí phát sinh theo nguyên tắc kế toán, không chỉ khi tiền mặt di chuyển.
 
-Always bridge the two rather than selecting whichever looks better.
+Nếu hàng được giao hôm nay nhưng khách trả sau 60 ngày, doanh thu có thể được ghi nhận trước tiền mặt và tạo khoản phải thu.
 
-## Accrual accounting: profit is not cash by design
+Kế toán dồn tích cần thiết để đo hiệu quả từng kỳ, nhưng nó cũng tạo không gian cho phán đoán về thời điểm và ước tính.
 
-Accounting recognizes economic activity when earned/incurred under rules, not only when cash moves.
+## Báo cáo lưu chuyển tiền tệ: nơi thực tế thanh khoản xuất hiện
 
-Suppose product ships today but customer pays after 60 days. Revenue can be recognized before cash arrives, creating accounts receivable.
+Dòng tiền được chia thành **dòng tiền hoạt động (Operating Cash Flow / CFO / 영업활동현금흐름)**, **dòng tiền đầu tư (Investing Cash Flow / 투자활동현금흐름)** và **dòng tiền tài chính (Financing Cash Flow / 재무활동현금흐름)**.
 
-This is **accrual accounting / 발생주의 회계**.
+Lợi nhuận ròng và CFO khác nhau do khấu hao, vốn lưu động, dự phòng và các khoản không dùng tiền mặt.
 
-Accrual is necessary for meaningful period performance, but it creates room for timing and estimation judgments.
-
-## Cash Flow Statement: where liquidity reality appears
-
-Cash flow is grouped into:
-
-- Operating Cash Flow (영업활동현금흐름);
-- Investing Cash Flow (투자활동현금흐름);
-- Financing Cash Flow (재무활동현금흐름).
-
-Net income and CFO differ because of depreciation, working capital, provisions and non-cash items.
-
-A useful reconciliation mindset:
+Một cách đối chiếu:
 
 ```text
-Net income
-+ non-cash expenses
-± working-capital changes
-± other adjustments
-= Operating cash flow
+Lợi nhuận ròng
++ chi phí không dùng tiền mặt
+± thay đổi vốn lưu động
+± điều chỉnh khác
+= dòng tiền hoạt động
 ```
 
-If net income grows for years while CFO consistently lags without clear reason, investigate.
+Nếu lợi nhuận tăng nhiều năm nhưng CFO liên tục thấp hơn mà không có lý do rõ ràng, cần điều tra sâu.
 
-## Working capital: growth consumes cash
+## Vốn lưu động: tăng trưởng có thể hút tiền
 
-Fast-growing company often needs inventory and receivables before customer cash arrives.
+Doanh nghiệp tăng nhanh thường phải tăng tồn kho và khoản phải thu trước khi thu được tiền khách hàng.
 
-Cash Conversion Cycle:
+**Chu kỳ chuyển đổi tiền mặt (Cash Conversion Cycle / CCC)**:
 
 \[
 CCC = DIO + DSO - DPO
 \]
 
-where DIO = inventory days, DSO = receivable days, DPO = payable days.
+Một công ty có thể có lợi nhuận nhưng vẫn khát tiền nếu CCC kéo dài. Đây là vấn đề đặc biệt quan trọng với nhà xuất khẩu, nhà bán lẻ, nhà sản xuất và doanh nghiệp dự án.
 
-A company can be profitable but cash-hungry because CCC expands.
+## CAPEX và dòng tiền tự do
 
-This is particularly important for exporters, retailers, manufacturers and project businesses.
-
-## CAPEX and Free Cash Flow
-
-Capital expenditure often appears in investing cash flow.
-
-A simple analyst definition:
+**Chi tiêu vốn (CAPEX)** thường nằm trong dòng tiền đầu tư. Một định nghĩa đơn giản cho **dòng tiền tự do (Free Cash Flow / FCF)** là:
 
 \[
 FCF \approx CFO - CAPEX
 \]
 
-But FCF is not a statutory line and definitions vary.
+FCF không phải khoản mục kế toán bắt buộc và cách tính có thể khác nhau. Cần phân biệt **CAPEX duy trì** và **CAPEX tăng trưởng**.
 
-Need distinguish:
+FCF âm vì đầu tư tăng trưởng có thể hợp lý nếu ROIC tương lai cao. FCF âm vì hoạt động yếu là một vấn đề hoàn toàn khác.
 
-- maintenance CAPEX;
-- growth CAPEX.
+## Khấu hao: không dùng tiền mặt hôm nay nhưng không phải “miễn phí”
 
-Negative FCF from growth capex can be healthy if future ROIC strong. Negative FCF from weak operations is different problem.
+Khấu hao không dùng tiền mặt trong kỳ hiện tại vì tiền đã được chi khi mua tài sản. Tuy nhiên, bỏ qua khấu hao hoàn toàn là sai vì nó phản ánh việc tài sản sản xuất bị tiêu hao qua thời gian.
 
-## Depreciation: non-cash today, but not “free”
+Doanh nghiệp thâm dụng vốn có thể tạm thời tạo nhiều tiền mặt nếu trì hoãn thay thế thiết bị, nhưng cơ sở sản xuất sẽ già đi. Vì vậy EBITDA có thể gây hiểu lầm trong bán dẫn, viễn thông, điện lực hoặc công nghiệp nặng.
 
-Depreciation is non-cash in current period because cash was spent when asset purchased.
+## Báo cáo theo phân khúc: tổng hợp có thể che giấu động cơ lợi nhuận
 
-But treating depreciation as irrelevant is wrong. It represents consumption of capital asset over time.
+Tập đoàn lớn thường có nhiều phân khúc với biên lợi nhuận và cường độ vốn rất khác nhau. Cần lập bảng doanh thu phân khúc, lợi nhuận hoạt động, tài sản/CAPEX, địa lý và khách hàng lớn nếu được công bố.
 
-Capital-intensive firm that ignores replacement investment can report cash temporarily while productive base ages.
+Nếu 30% doanh thu tạo 70% lợi nhuận, phân khúc đó mới là động cơ kinh tế chính. Số trung bình toàn tập đoàn có thể che cả mảng tăng trưởng lẫn mảng phá hủy giá trị.
 
-This is why EBITDA alone is dangerous in semiconductor, telecom, utility or heavy industry.
+## Công ty liên kết theo phương pháp vốn chủ sở hữu
 
-## Segment reporting: consolidated total can hide economics
+Nếu nhà đầu tư có ảnh hưởng đáng kể nhưng không kiểm soát, khoản đầu tư có thể được hạch toán theo **phương pháp vốn chủ sở hữu (equity method / 지분법)** thay vì hợp nhất toàn bộ.
 
-Large Korean groups often have multiple segments with radically different margins and capital intensity.
+Nhà đầu tư có thể ghi nhận phần lợi nhuận tương ứng mà không đưa toàn bộ doanh thu của công ty liên kết vào báo cáo hợp nhất. Vì vậy một doanh nghiệp có thể có phần kinh tế quan trọng không thể nhìn thấy chỉ qua doanh thu hợp nhất.
 
-Need map:
+## Thuyết minh: nơi nhiều rủi ro kinh tế thật sự nằm
 
-```text
-Segment Revenue
-Segment Operating Profit
-Segment Assets / CAPEX
-Geography
-Major customers if disclosed
-```
+Thuyết minh có thể cho biết lịch đáo hạn nợ, bảo lãnh, phái sinh, số dư với bên liên quan, nghĩa vụ hưu trí, kiện tụng, nợ thuê, cam kết, tiếp xúc PF, ước tính kế toán và chính sách ghi nhận doanh thu.
 
-If 30% of revenue creates 70% of profit, that segment is economic engine.
+Bảng cân đối nhìn đơn giản nhưng thuyết minh có thể chứa nghĩa vụ tiềm tàng lớn. Với xây dựng, bảo lãnh có thể quan trọng hơn nợ đã ghi nhận; với nhà xuất khẩu, hợp đồng phòng hộ có thể thay đổi độ nhạy tỷ giá.
 
-Group-level average can hide both growth business and value-destroying segment.
+## Nghĩa vụ tiềm tàng: rủi ro trước khi trở thành nợ kế toán
 
-## Equity-method associates
-
-If investor has significant influence but not control, investment may be accounted using equity method rather than full consolidation.
-
-This affects presentation: investor may recognize share of profit without including associate’s full revenue.
-
-Therefore company can have economically important business not visible in consolidated revenue.
-
-Read notes to avoid missing such exposure.
-
-## Footnotes: where economic risk often lives
-
-Notes may reveal:
-
-- debt maturity;
-- guarantees;
-- derivatives;
-- related-party balances;
-- pension obligations;
-- litigation;
-- lease liabilities;
-- commitments;
-- construction/PF exposure;
-- accounting estimates;
-- revenue-recognition policies.
-
-Headline balance sheet can look simple while notes contain substantial contingent obligations.
-
-For construction, guarantees can matter more than recognized borrowing. For exporter, hedge contracts can change FX sensitivity.
-
-## Contingent liability: risk before recognition
-
-A guarantee may not yet be recognized as full debt if trigger has not occurred, but economically it can become future cash obligation.
-
-This creates distinction:
+Một bảo lãnh có thể chưa được ghi nhận thành toàn bộ khoản nợ nếu điều kiện kích hoạt chưa xảy ra, nhưng về kinh tế nó vẫn có thể trở thành nghĩa vụ tiền mặt trong kịch bản xấu.
 
 ```text
-Accounting liability today
+Nợ kế toán hôm nay
         ≠
-Maximum economic exposure under stress
+Mức tiếp xúc kinh tế tối đa khi căng thẳng
 ```
 
-Stress-test both.
+Phân tích rủi ro phải kiểm tra cả hai.
 
-## Revenue recognition in long-duration projects
+## Ghi nhận doanh thu trong dự án dài hạn
 
-Construction, shipbuilding and some SI projects recognize revenue over time when accounting criteria are met.
+Xây dựng, đóng tàu và một số dự án SI có thể ghi nhận doanh thu theo tiến độ khi đáp ứng điều kiện kế toán.
 
-Profit depends on estimates of total cost and progress.
+Lợi nhuận phụ thuộc ước tính tổng chi phí và mức hoàn thành. Nếu chi phí dự kiến của dự án tăng, biên lợi nhuận có thể phải điều chỉnh trước khi giao hàng hoàn tất.
 
-If expected total project cost rises, margin can be revised before delivery.
+Vì vậy tài sản/nợ hợp đồng và thay đổi ước tính là những mục cần chú ý.
 
-Therefore contract asset/liability and estimate revisions deserve attention.
+## Doanh nghiệp tài chính cần một mô hình kế toán khác
 
-## Financial-company accounting requires different mental model
+Ngân hàng, bảo hiểm và chứng khoán không nên bị ép vào cùng khung với công ty công nghiệp.
 
-Banks, insurers and securities firms cannot be analyzed with industrial-company template alone.
+Với ngân hàng, khoản cho vay là tài sản sinh lãi và tiền gửi là nguồn vốn. Biên lãi, chi phí tín dụng và an toàn vốn quan trọng hơn tồn kho hoặc CAPEX. Với bảo hiểm, kỳ hạn nghĩa vụ và danh mục đầu tư lại đặc biệt quan trọng.
 
-For banks, loans are earning assets and deposits are funding liabilities. Interest margin, credit loss and capital adequacy matter more than classic inventory/capex.
+Phải dùng logic kế toán theo ngành.
 
-For insurers, liability duration and investment assets matter.
+## Ý kiến kiểm toán nói gì và không nói gì?
 
-Use industry-specific accounting rather than forcing one ratio system on all firms.
+Kiểm toán độc lập đánh giá liệu báo cáo tài chính có được trình bày hợp lý trên các khía cạnh trọng yếu theo chuẩn áp dụng hay không.
 
-## Audit opinion: what it means and what it does not
+Các tín hiệu nghiêm trọng gồm ý kiến ngoại trừ, ý kiến trái ngược hoặc từ chối đưa ý kiến. Tuy nhiên, **ý kiến chấp nhận toàn phần không đảm bảo doanh nghiệp tốt về kinh tế và cũng không loại bỏ hoàn toàn rủi ro gian lận**.
 
-External audit assesses whether financial statements are presented fairly in material respects under applicable accounting framework.
+Kiểm toán mang lại mức đảm bảo hợp lý chứ không phải toàn tri. Khi có, nên đọc thêm **các vấn đề kiểm toán trọng yếu (Key Audit Matters)** để biết khu vực nào đòi hỏi nhiều phán đoán.
 
-Possible serious signals include qualified, adverse or disclaimer opinions.
+## Công bố sửa đổi (Restatement / 정정공시)
 
-But **unqualified opinion does not guarantee business quality or eliminate fraud risk**. Audit provides reasonable assurance, not omniscience.
+Doanh nghiệp có thể nộp hồ sơ sửa đổi. Không nên chỉ đọc con số mới nhất rồi bỏ qua lịch sử thay đổi.
 
-Also inspect Key Audit Matters where available to see areas requiring significant judgment.
+Cần hỏi điều gì được sửa, vì sao, mức ảnh hưởng có trọng yếu không, xu hướng hoặc covenant có thay đổi không, và đây là lỗi hành chính, thay đổi ước tính hay thất bại kiểm soát.
 
-## Restatement / 정정공시
+Việc phải sửa báo cáo tự nó cũng là dữ liệu về chất lượng báo cáo.
 
-Companies can issue corrected filings.
+## DART như một cơ sở dữ liệu: bắt đầu bằng câu hỏi
 
-Never read only latest corrected number and ignore change history. Ask:
+Đừng duyệt DART ngẫu nhiên. Hãy bắt đầu bằng câu hỏi.
 
-- What was corrected?
-- Why?
-- Is effect material?
-- Does correction change trend or covenant?
-- Was it clerical, estimation or control failure?
+- Ai kiểm soát công ty? → hồ sơ sở hữu + báo cáo năm.
+- Vì sao nợ tăng? → công bố tài trợ + thuyết minh nợ.
+- Mảng nào thật sự tạo lợi nhuận? → thuyết minh phân khúc.
+- Điều gì xảy ra với công ty con? → bảng công ty con + hồ sơ M&A/tái cấu trúc.
 
-Restatement itself is data about reporting quality.
+Nghiên cứu nhanh hơn khi lựa chọn tài liệu dựa trên câu hỏi.
 
-## DART as database: build query habit
+## OPEN DART và XBRL: nơi kế toán gặp lập trình
 
-Do not browse DART randomly. Start with a question.
+**XBRL (eXtensible Business Reporting Language / 확장성 경영보고언어)** gắn thẻ các khái niệm tài chính để phần mềm có thể phân tích dữ liệu có cấu trúc.
 
-If question is `Who controls company?` → ownership filings + annual report.
+Điều này cho phép trích xuất chuỗi thời gian, so sánh nhiều công ty, sàng lọc, phát hiện bất thường và tự động tính tỷ số.
 
-If `Why debt jumped?` → financing/major-event filings + notes.
+Tuy nhiên khả năng so sánh thẻ không hoàn hảo; doanh nghiệp có thể dùng thẻ mở rộng và chính sách kế toán khác nhau. Dữ liệu lấy bằng chương trình vẫn cần đối chiếu với hồ sơ gốc.
 
-If `What business actually earns profit?` → segment notes.
+## Hồ sơ tiếng Hàn và tiếng Anh
 
-If `What happened to subsidiary?` → consolidation/subsidiary tables + M&A filings.
+Bản tiếng Anh hữu ích để tiếp cận nhanh, nhưng khi cần độ chính xác pháp lý hoặc sắc thái kỹ thuật nên ưu tiên hồ sơ tiếng Hàn. Bản dịch có thể rút gọn hoặc chỉ được cung cấp tự nguyện.
 
-Research becomes faster when document choice follows question.
+Vì vậy tài liệu này giữ keyword tiếng Hàn và tiếng Anh ở những khái niệm quan trọng nhưng phần giải thích chính bằng tiếng Việt.
 
-## OPEN DART and XBRL: accounting meets programming
+## Dòng thời gian sự kiện và dòng thời gian báo cáo
 
-Structured data allows automated analysis.
-
-XBRL (eXtensible Business Reporting Language / 확장성 경영보고언어) tags financial concepts so software can parse them.
-
-This enables:
-
-- time-series extraction;
-- cross-company comparison;
-- screening;
-- anomaly detection;
-- automated ratio calculation.
-
-But tag comparability is not perfect. Companies can use extension tags and accounting policies differ.
-
-Programmatic data must still be validated against original filing.
-
-## Korean vs English filing
-
-English disclosure may be useful for access, but Korean filing should be preferred when legal accuracy or nuance matters.
-
-Translation can omit detail or be voluntary in scope. For technical/legal term, check original Korean phrase.
-
-This library therefore often notes Korean keywords alongside English/Vietnamese.
-
-## Filing chronology: event time vs reporting time
-
-A business event happens at time `t`, management may disclose immediately or later depending rule, quarterly financial effect may appear at `t+1`, cash effect may appear later.
-
-Analyst must align timeline.
-
-Example:
+Một sự kiện kinh doanh xảy ra tại thời điểm `t`; doanh nghiệp có thể công bố ngay hoặc sau đó tùy quy định; tác động lên báo cáo quý có thể xuất hiện ở `t+1`; tiền mặt có thể đến muộn hơn nữa.
 
 ```text
-Contract signed
+Ký hợp đồng
    ↓
-Material disclosure
+Công bố trọng yếu
    ↓
-Production starts
+Bắt đầu sản xuất
    ↓
-Revenue recognized
+Ghi nhận doanh thu
    ↓
-Cash collected
+Thu tiền
 ```
 
-Do not equate contract announcement with earnings or cash.
+Không được coi công bố ký hợp đồng đồng nghĩa với lợi nhuận hoặc tiền mặt đã phát sinh.
 
-## Practical workflow for a new Korean company
+## Quy trình thực hành cho một công ty Hàn Quốc mới
 
-### Step 1 — Resolve identity
+1. Xác định đúng tên pháp lý tiếng Hàn, mã cổ phiếu, mã công ty, tập đoàn và phạm vi hợp nhất.
+2. Đọc `사업보고서` mới nhất, bắt đầu từ hoạt động kinh doanh, phân khúc và công ty con trước bảng tài chính.
+3. Lập cầu nối 5 năm cho doanh thu, lợi nhuận hoạt động, lợi nhuận ròng, CFO, CAPEX, nợ, tiền mặt và số cổ phiếu.
+4. Đối chiếu lợi nhuận với tiền mặt qua khoản phải thu, tồn kho và vốn lưu động.
+5. Đọc thuyết minh về đáo hạn nợ, bảo lãnh, bên liên quan, phái sinh và cam kết.
+6. Tìm công bố trọng yếu về M&A, tăng vốn, tái cấu trúc và hợp đồng lớn.
+7. Dùng KIND để kiểm tra bối cảnh niêm yết, giao dịch và hành động doanh nghiệp.
+8. So sánh câu chuyện IR với bằng chứng trong hồ sơ.
 
-Confirm exact Korean legal name, ticker, corporation code, group and consolidation boundary.
+## Các dấu hiệu cần điều tra sâu hơn
 
-### Step 2 — Read latest 사업보고서
+Khoản phải thu tăng nhanh hơn doanh thu, CFO liên tục thấp hơn lợi nhuận, số dư bên liên quan lớn, tăng vốn nhiều lần dù công ty tuyên bố có lãi, sửa báo cáo thường xuyên, bảo lãnh khó hiểu, thay đổi chính sách kế toán đột ngột, tồn kho tăng không có giải thích nhu cầu, lợi nhuận lớn từ khoản một lần hoặc goodwill cao sau M&A đều là tín hiệu cần đọc sâu hơn.
 
-Start with business, segments and subsidiaries before financial tables.
+Không dấu hiệu nào tự động chứng minh gian lận.
 
-### Step 3 — Build 5-year financial bridge
+## Mental Model — mô hình tư duy
 
-Extract revenue, operating profit, net income, CFO, CAPEX, debt, cash and share count.
+> Công bố thông tin là **API công khai của doanh nghiệp**. Báo cáo tài chính là đầu ra có cấu trúc; thuyết minh là metadata; công bố trọng yếu là nhật ký sự kiện; kiểm toán là một lớp xác nhận; DART/KIND là hạ tầng truy xuất. Phân tích tốt là quá trình đối chiếu dữ liệu giữa tất cả các lớp, không phải đọc một tỷ số tiêu đề.
 
-### Step 4 — Reconcile profit and cash
+## Những nhầm lẫn thường gặp
 
-Track receivables, inventory and working capital.
+**Doanh thu tăng ≠ dòng tiền tăng.**
 
-### Step 5 — Read notes
+**Lợi nhuận ròng ≠ dòng tiền.**
 
-Debt maturity, guarantees, related parties, derivatives, commitments.
+**EBITDA ≠ dòng tiền tự do.**
 
-### Step 6 — Search major-event filings
+**Tiền mặt hợp nhất ≠ tiền tự do của công ty mẹ.**
 
-M&A, financing, capital increase, restructuring, large contracts.
+**Nợ ghi nhận thấp ≠ đòn bẩy kinh tế thấp**, nếu bảo lãnh và cam kết lớn.
 
-### Step 7 — Use KIND
+**Ý kiến kiểm toán chấp nhận toàn phần ≠ công ty là khoản đầu tư tốt.**
 
-Check listing/trading/corporate-action context.
+DART là nguồn bằng chứng chính, nhưng kế toán vẫn chứa ước tính và phán đoán.
 
-### Step 8 — Compare with IR narrative
+## Liên kết và nguồn thực hành
 
-Treat management presentation as hypothesis and reconcile with filing evidence.
+Đọc [`08_corporate_governance_ownership_and_control.md`](./08_corporate_governance_ownership_and_control.md) cho câu hỏi sở hữu–quản trị, [`10_capital_markets_kospi_kosdaq_konex.md`](./10_capital_markets_kospi_kosdaq_konex.md) cho cách thị trường phản ánh thông tin và [`20_how_to_analyze_a_korean_company.md`](./20_how_to_analyze_a_korean_company.md) cho quy trình đầu cuối.
 
-## Red flags that deserve investigation, not automatic conviction
-
-Potential red flags include:
-
-- receivables growing much faster than revenue;
-- persistent CFO below earnings;
-- large related-party balances;
-- repeated capital raises despite claimed profitability;
-- frequent accounting corrections;
-- opaque guarantees;
-- sudden changes in accounting policy;
-- inventory build without demand explanation;
-- major profit from one-off items;
-- large goodwill after aggressive M&A.
-
-None proves fraud. They signal need for deeper work.
-
-## Mental Model
-
-> Disclosure is the **public API of a corporation**. Financial statements are structured outputs; footnotes are metadata; material filings are event logs; audit is a validation layer; DART/KIND are the retrieval infrastructure. Good company analysis is data reconciliation across all layers, not reading one headline ratio.
-
-## Common misconceptions
-
-Revenue growth does not prove cash growth.
-
-Net income is not cash flow.
-
-EBITDA is not free cash flow.
-
-Consolidated cash is not automatically freely available to parent shareholder.
-
-Low recognized debt does not mean low economic leverage if guarantees/commitments are large.
-
-Unqualified audit opinion does not mean company is a good investment.
-
-DART filing is primary evidence, but accounting still contains estimates and judgment.
-
-## Connections
-
-Use [08_corporate_governance_ownership_and_control](./08_corporate_governance_ownership_and_control.md) for ownership/governance questions, [10_capital_markets_kospi_kosdaq_konex](./10_capital_markets_kospi_kosdaq_konex.md) for market interpretation and [20_how_to_analyze_a_korean_company](./20_how_to_analyze_a_korean_company.md) as end-to-end workflow.
-
-### Nguồn thực hành
-
-- DART: https://dart.fss.or.kr/
-- English DART: https://englishdart.fss.or.kr/
-- KIND: https://kind.krx.co.kr/
+Nguồn thực hành chính: DART, English DART và KIND.
