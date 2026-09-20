@@ -1,491 +1,333 @@
-# Platform, telecom, content, retail và dịch vụ Hàn Quốc (Services / 서비스 산업·플랫폼·통신·콘텐츠·유통)
+# Nền tảng, viễn thông, nội dung, bán lẻ và dịch vụ Hàn Quốc (Services / 서비스 산업·플랫폼·통신·콘텐츠·유통)
 
-Kinh tế Hàn Quốc không chỉ là semiconductor, autos và shipbuilding. Phần lớn employment nằm trong services, từ telecom, finance và software đến restaurants, retail, healthcare, education và entertainment. Vì vậy nếu manufacturing giải thích phần lớn export strength, **service economy giải thích phần lớn everyday employment, household demand và productivity challenge**.
+Kinh tế Hàn Quốc không chỉ là bán dẫn, ô tô và đóng tàu. Phần lớn việc làm nằm trong khu vực dịch vụ, từ viễn thông, tài chính và phần mềm tới nhà hàng, bán lẻ, y tế, giáo dục và giải trí. Nếu sản xuất giải thích phần lớn sức mạnh xuất khẩu thì **kinh tế dịch vụ giải thích phần lớn việc làm hàng ngày, nhu cầu hộ gia đình và thách thức năng suất**.
 
-Service business có production function khác factory. Asset quan trọng có thể là customer relationship, brand, data, social graph, IP library, store network hoặc distribution density. Do đó cùng một concept như “scale” hay “fixed cost” phải được diễn giải khác nhau theo business model.
+Doanh nghiệp dịch vụ có **hàm sản xuất (production function)** khác nhà máy. Tài sản quan trọng có thể là quan hệ khách hàng, thương hiệu, dữ liệu, đồ thị xã hội, thư viện IP, mạng lưới cửa hàng hoặc mật độ phân phối. Vì vậy các khái niệm như “quy mô” hay “chi phí cố định” phải được diễn giải theo từng mô hình kinh doanh.
 
-# Phần I — Platform economics / 플랫폼 경제
+# Phần I — Kinh tế nền tảng (Platform Economics / 플랫폼 경제)
 
-## Platform không chỉ là app; nó là market architecture
+## Nền tảng không chỉ là ứng dụng; nó là kiến trúc thị trường
 
-**Platform / 플랫폼** tạo infrastructure để hai hoặc nhiều nhóm users tương tác.
-
-Examples:
+**Nền tảng (platform / 플랫폼)** tạo hạ tầng để hai hoặc nhiều nhóm người dùng tương tác.
 
 ```text
-Buyer ↔ Seller
-Advertiser ↔ Audience
-Driver ↔ Rider
-Creator ↔ Viewer
-Merchant ↔ Payment user
+Người mua ↔ Người bán
+Nhà quảng cáo ↔ Khán giả
+Tài xế ↔ Hành khách
+Người sáng tạo ↔ Người xem
+Nhà bán hàng ↔ Người dùng thanh toán
 ```
 
-Platform tạo value bằng cách giảm **search, matching và transaction cost**.
+Nền tảng tạo giá trị bằng cách giảm **chi phí tìm kiếm, ghép nối và giao dịch**. Một doanh nghiệp có ứng dụng nhưng không kết nối nhiều phía hoặc không tạo hệ sinh thái chưa chắc là nền tảng theo nghĩa kinh tế.
 
-Một business có app nhưng không connect multiple sides hoặc create ecosystem chưa chắc là platform theo economic meaning.
+## Hiệu ứng mạng lưới: thêm người dùng làm hệ thống tốt hơn thế nào?
 
-## Network effect: thêm user làm network tốt hơn như thế nào?
+**Hiệu ứng mạng lưới (network effect / 네트워크 효과)** tồn tại khi giá trị của mạng tăng khi số người tham gia tăng.
 
-**Network Effect / 네트워크 효과** tồn tại khi value của network tăng khi user participation tăng.
+Có thể phân biệt **hiệu ứng trực tiếp**, khi thêm người dùng cùng phía làm dịch vụ có giá trị hơn, và **hiệu ứng chéo hai phía**, khi nhiều người bán thu hút người mua rồi người mua lại thu hút thêm người bán.
 
-Có hai forms chính:
+Nhưng hiệu ứng mạng không phải “hào kinh tế ma thuật”. Nếu người dùng dễ **dùng nhiều nền tảng cùng lúc (multi-home)**, chi phí chuyển đổi thấp và xu hướng “người thắng lấy tất cả” yếu hơn.
 
-**Direct network effect:** user A có benefit khi nhiều users cùng side tham gia, như messaging/social graph.
+Cần hỏi người dùng có dùng đối thủ song song không, dữ liệu và danh tính có dễ chuyển không, chi phí chuyển đổi thật nằm ở đâu và mật độ mạng có mang tính địa phương hay toàn quốc.
 
-**Cross-side network effect:** nhiều sellers thu hút buyers và buyers thu hút sellers.
+## Thanh khoản của thị trường nền tảng
 
-Nhưng network effect không phải magic moat.
+Marketplace có nhiều người dùng nhưng nếu người mua không tìm được sản phẩm phù hợp hoặc người bán không nhận được đơn thì mạng vẫn kém hiệu quả.
 
-Nếu users dễ **multi-home**—dùng nhiều apps cùng lúc—switching cost thấp và winner-take-all tendency yếu hơn.
+**Thanh khoản marketplace (marketplace liquidity)** có thể quan sát qua tỷ lệ chuyển đổi, thời gian ghép nối, tỷ lệ lấp đầy hoặc tần suất giao dịch tùy ngành.
 
-Therefore ask:
+Số người dùng chỉ là đầu vào; giao dịch thành công mới là đầu ra kinh tế.
 
-```text
-User có dùng competitor đồng thời không?
-Data/identity có portable không?
-Switching cost thật ở đâu?
-Network density có local hay national?
-```
+## GMV không phải doanh thu
 
-## Liquidity: network effect phải biến thành successful matches
+**GMV (Gross Merchandise Value / 총거래액)** đo tổng giá trị giao dịch đi qua nền tảng.
 
-Marketplace có nhiều users nhưng nếu buyer không tìm được product relevant hoặc seller không nhận order, network không liquid.
-
-**Marketplace liquidity** có thể được nhìn qua conversion, time-to-match, fill rate hoặc transaction frequency tùy market.
-
-User count là input; successful transaction mới là economic output.
-
-## GMV không phải revenue
-
-**GMV (Gross Merchandise Value / 총거래액)** đo total transaction value đi qua platform.
-
-Nếu take rate là `t`:
+Nếu **tỷ lệ thu phí (take rate)** là `t`:
 
 \[
-Marketplace\ Revenue \approx GMV \times t + Ads + Subscription + Other
+Doanh\ thu\ nền\ tảng
+\approx
+GMV \times t + Quảng\ cáo + Thuê\ bao + Khác
 \]
 
-Platform xử lý 100 nghìn tỷ KRW GMV nhưng take 3% không có revenue 100 nghìn tỷ.
+Nền tảng xử lý 100 nghìn tỷ KRW GMV với take rate 3% không có doanh thu 100 nghìn tỷ KRW.
 
-GMV growth mạnh mà take rate giảm có thể làm revenue tăng chậm.
+GMV tăng mạnh nhưng take rate giảm vẫn có thể làm doanh thu tăng chậm hơn.
 
-## Take rate: pricing power hay ecosystem tax?
-
-**Take Rate**:
+## Take rate: quyền định giá hay “thuế” lên hệ sinh thái?
 
 \[
-Take\ Rate = \frac{Platform\ Revenue}{Gross\ Transaction\ Value}
+Take\ Rate = \frac{Doanh\ thu\ nền\ tảng}{Tổng\ giá\ trị\ giao\ dịch}
 \]
 
-Tăng take rate giúp revenue short term nhưng có thể làm sellers leave hoặc pass cost to consumers.
+Tăng take rate giúp doanh thu ngắn hạn nhưng có thể khiến người bán rời đi hoặc chuyển chi phí sang người tiêu dùng.
 
-Sustainable take rate phụ thuộc value platform tạo cho merchants.
-
-If seller cannot access same demand elsewhere, platform bargaining power stronger. But overly aggressive monetization can invite multi-homing, direct sales or regulation.
+Mức take rate bền vững phụ thuộc nền tảng tạo bao nhiêu giá trị cho merchant. Nếu nhà bán không thể tiếp cận cùng lượng cầu ở nơi khác, quyền thương lượng của nền tảng mạnh hơn. Nhưng kiếm tiền quá quyết liệt có thể khuyến khích multi-homing, bán trực tiếp hoặc khiến cơ quan quản lý can thiệp.
 
 ## CAC, retention và LTV
 
-Consumer platform có thể buy growth bằng marketing/subsidies.
+Nền tảng tiêu dùng có thể “mua tăng trưởng” bằng marketing và trợ giá.
 
-**CAC (Customer Acquisition Cost)** đo cost acquire customer.
-
-**LTV (Lifetime Value)** approximates contribution margin over relationship life:
+**Chi phí thu hút khách hàng (Customer Acquisition Cost / CAC)** đo chi phí để có khách hàng mới. **Giá trị vòng đời khách hàng (Lifetime Value / LTV)** nên dựa trên lợi nhuận đóng góp trong thời gian khách hàng còn ở lại.
 
 \[
-LTV \approx Contribution\ Margin\ per\ User \times Expected\ Retention\ Duration
+LTV \approx Lợi\ nhuận\ đóng\ góp\ mỗi\ kỳ \times Thời\ gian\ duy\ trì\ kỳ\ vọng
 \]
 
-For sustainable economics:
+Để kinh tế bền vững, về nguyên tắc `LTV > CAC`. Nhưng công thức này dễ gây hiểu lầm nếu giả định **giữ chân khách hàng (retention)** quá lạc quan.
 
-\[
-LTV > CAC
-\]
+Lượt tải hoặc MAU mà không có dữ liệu retention và khả năng kiếm tiền là chưa đủ.
 
-But formula can mislead if retention assumption too optimistic.
+## Biên đóng góp: sau trợ giá còn tạo giá trị không?
 
-Download count/MAU without retention/monetization is incomplete.
+Với giao hàng hoặc thương mại điện tử, cần trừ phí thanh toán, chi phí giao–hoàn tất đơn, khuyến mại, chăm sóc khách hàng, hoàn tiền và gian lận để đi từ doanh thu tới **lợi nhuận đóng góp (contribution profit)**.
 
-## Contribution margin: growth sau subsidy có còn economic không?
+Một nền tảng có thể tăng lợi nhuận gộp nhưng vẫn lỗ trên từng đơn tăng thêm nếu trợ giá quá cao. Vì vậy phải kiểm tra **kinh tế đơn vị (unit economics)** trước khi kết luận quy mô mạng tạo lợi nhuận.
 
-Revenue minus variable transaction costs gives contribution.
+## Tập trung nền tảng khác tập trung chaebol
 
-For delivery/e-commerce platform, subtract:
+Quyền lực của chaebol truyền thống thường đến từ vốn, tài sản vật chất, công ty thành viên và mạng lưới nhà cung cấp. Quyền lực nền tảng số có thể đến từ hiệu ứng mạng, dữ liệu, thuật toán xếp hạng, vị trí mặc định và tích hợp hệ sinh thái.
 
-- payment fees;
-- delivery/fulfillment variable cost;
-- promotions;
-- customer service;
-- refunds/fraud.
-
-A platform can show gross-profit growth while still losing money on each incremental order if subsidies high.
-
-Unit economics must be checked before claiming network-effect scale.
-
-## Platform concentration khác chaebol concentration
-
-Traditional chaebol power often comes from capital, physical assets, affiliates and supplier networks.
-
-Digital platform power can come from:
-
-- network effects;
-- data;
-- ranking/algorithm;
-- default position;
-- ecosystem integration.
-
-Therefore competition policy questions differ: self-preferencing, interoperability, seller dependency, data portability and app/payment rules become important.
+Do đó câu hỏi cạnh tranh cũng khác: tự ưu tiên dịch vụ của mình, khả năng tương tác, phụ thuộc của nhà bán, khả năng chuyển dữ liệu và quy tắc app/thanh toán trở thành vấn đề quan trọng.
 
 Xem [`04_chaebol_and_large_business_groups.md`](./04_chaebol_and_large_business_groups.md).
 
-# Phần II — Telecom / 통신
+# Phần II — Viễn thông (Telecom / 통신)
 
-## Telecom là network utility-like business với technology cycle
+## Viễn thông là hạ tầng mạng có doanh thu thuê bao nhưng vẫn có chu kỳ công nghệ
 
-Telecom combines recurring subscriptions with large fixed network investment.
-
-Core economics:
+Viễn thông kết hợp doanh thu lặp lại với đầu tư mạng cố định rất lớn.
 
 ```text
-Subscribers × ARPU
+Số thuê bao × ARPU
         ↓
-Service revenue
+Doanh thu dịch vụ
         ↓
-Network opex + depreciation + spectrum + marketing
+OPEX mạng + khấu hao + phổ tần + marketing
 ```
 
-**ARPU (Average Revenue Per User / 가입자당평균매출)** and **churn / 해지율** are central.
+**ARPU (Average Revenue Per User / 가입자당평균매출)** và **tỷ lệ rời mạng (churn / 해지율)** là các chỉ số trung tâm.
 
-## Low churn is economically valuable
+## Churn thấp có giá trị kinh tế lớn
 
-Replacing subscriber costs marketing/device subsidy/sales commission.
+Thay thế một thuê bao đã mất thường cần marketing, trợ giá thiết bị hoặc hoa hồng bán hàng. Vì vậy giảm churn làm LTV tăng ngay cả khi ARPU tháng không đổi.
 
-Therefore lowering churn increases LTV even if monthly ARPU unchanged.
+Trong thị trường đã bão hòa thuê bao, nhà mạng ngày càng cạnh tranh bằng ARPU, gói dịch vụ và khả năng giữ khách hàng thay vì chỉ tăng số thuê bao.
 
-A market with high penetration has limited subscriber growth; operators increasingly compete on ARPU, bundling and retention.
+## Phổ tần: tài sản vô hình nhưng có hệ quả vật lý
 
-## Spectrum: intangible asset with physical consequence
+**Phổ tần (spectrum)** là tài nguyên vô tuyến khan hiếm được phân bổ theo giấy phép hoặc quy định. Nhà mạng có thể phải trả phí lớn rồi tiếp tục đầu tư trạm gốc và thiết bị mạng.
 
-Spectrum is scarce radio resource allocated under regulation/licensing.
+Điều này tạo rào cản gia nhập cao và góp phần giải thích cấu trúc thiểu số nhà cung cấp lớn.
 
-Operator may pay substantial spectrum fees and then invest in base stations/network equipment.
+## 5G/6G: nâng cấp kỹ thuật không đảm bảo kiếm tiền tốt hơn
 
-This creates high entry barrier and explains oligopolistic structure.
+Nâng cấp mạng tăng tốc độ và công suất nhưng người tiêu dùng không chắc sẵn sàng trả thêm tương ứng.
 
-## 5G/6G: technology upgrade does not guarantee monetization
+Giá trị mới có thể đến từ mạng doanh nghiệp, mạng riêng, IoT hoặc dịch vụ mới, nhưng mô hình thương mại phải được chứng minh. Năng lực kỹ thuật và lợi suất tài chính là hai câu hỏi khác nhau.
 
-Network upgrade increases speed/capacity, but consumer willingness to pay may not rise proportionally.
+## Viễn thông như hạ tầng số
 
-Value can come from enterprise/private networks, IoT or new services, but commercial model must be proven.
+Giá trị nhà mạng ngày càng mở rộng sang trung tâm dữ liệu, cloud, mạng doanh nghiệp, an ninh mạng và hạ tầng AI.
 
-Therefore technical superiority and financial return are separate questions.
+Nhưng đa dạng hóa phải được đánh giá bằng ROIC và dòng tiền chứ không chỉ câu chuyện chiến lược.
 
-## Telecom as digital infrastructure
+# Phần III — Nội dung, giải trí và game (콘텐츠·엔터테인먼트·게임)
 
-Operator value extends beyond subscriptions: data centers, cloud, enterprise networks, cybersecurity and AI infrastructure can become adjacent businesses.
+## Nội dung có chi phí tạo ban đầu cao nhưng chi phí phân phối biên thấp
 
-But diversification must be evaluated through ROIC, not strategic narrative alone.
+Sản xuất phim, game hoặc dự án âm nhạc cần chi phí sáng tạo–sản xuất đáng kể trước khi phát hành. Sau khi nội dung đã tồn tại, phân phối số tới thêm người xem thường có chi phí biên tương đối thấp.
 
-# Phần III — Content, entertainment và gaming / 콘텐츠·엔터테인먼트·게임
+Điều này tạo **đòn bẩy hoạt động (operating leverage)** rất mạnh khi một sản phẩm thành hit toàn cầu.
 
-## Content is high fixed-cost, low marginal-distribution-cost business
+Nhưng phân phối kết quả cũng rất lệch: nhiều dự án sinh lợi vừa phải hoặc thấp, trong khi vài hit tạo lợi nhuận cực lớn. Đây là **rủi ro phụ thuộc hit (hit-driven risk)**.
 
-Producing a drama, game or music project has upfront creative/production cost.
+## Mức nổi tiếng và khả năng giữ lại giá trị là hai chuyện khác nhau
 
-Once created, digital distribution to additional viewers can have relatively low marginal cost.
+Một bộ phim Hàn có thể nổi tiếng toàn cầu nhưng kinh tế của nhà sản xuất phụ thuộc hợp đồng.
 
-This creates operating leverage when a hit scales globally.
+Các cấu trúc có thể gồm phí sản xuất/cấp phép cố định, chia doanh thu, nhà sản xuất giữ IP hoặc chuyển IP cho nền tảng phân phối.
 
-But success distribution is highly skewed: many projects earn moderate/low return while a few hits generate outsized economics.
+Nếu nhà sản xuất bán toàn bộ IP để nhận phí trước, mức độ nổi tiếng có thể tạo ít giá trị tài chính dài hạn hơn nhiều.
 
-This is **hit-driven risk**.
+Vì vậy luôn phải hỏi: **ai sở hữu quyền?**
 
-## Popularity and value capture are different
+## “Thác” khai thác IP
 
-A Korean drama can be globally famous but producer economics depend contract.
+Một IP có thể kiếm tiền qua phát sóng/streaming, âm nhạc, sự kiện trực tiếp, merchandise, quảng cáo, game, chuyển thể webtoon, cấp phép và thậm chí tác động du lịch.
 
-Possible structures:
+Sở hữu IP có thể tái sử dụng tạo **giá trị quyền chọn (option value)** vượt xa lần phát hành đầu tiên.
 
-```text
-Fixed production/license fee
-Revenue share
-IP retained by producer
-IP transferred to distributor/platform
-```
+## Kinh tế công ty K-pop
 
-If producer gives away IP for upfront fee, fame may create less long-tail financial upside.
+Doanh thu có thể đến từ album/streaming, concert, merchandise, quảng cáo–đại diện thương hiệu và nền tảng fan.
 
-Therefore always ask **who owns rights?**
+Rủi ro nhân sự chủ chốt cao nếu một nghệ sĩ hoặc nhóm đóng góp phần lớn doanh thu. Gia hạn hợp đồng nghệ sĩ vì vậy gần giống việc gia hạn quyền kiểm soát một tài sản vô hình quan trọng.
 
-## IP waterfall
+Đa dạng hóa danh mục nghệ sĩ giúp giảm rủi ro tập trung.
 
-One IP can monetize through:
+## Game: kinh tế dịch vụ trực tiếp kéo dài
 
-```text
-Streaming / Broadcasting
-Music
-Live events
-Merchandise
-Advertising
-Games
-Webtoon adaptation
-Licensing
-Tourism spillover
-```
+Game cần chi phí R&D và nội dung lớn trước khi ra mắt, nhưng game online thành công có thể kiếm tiền nhiều năm qua vật phẩm hoặc thuê bao.
 
-Owning reusable IP creates option value beyond first release.
+Các chỉ số quan trọng gồm người dùng hoạt động, tỷ lệ người trả tiền, ARPU/ARPPU, retention, nhịp cập nhật nội dung và cơ cấu khu vực.
 
-## K-pop agency economics
+Một đợt ra mắt tăng mạnh rồi churn nhanh rất khác một **nhượng quyền live-service** bền vững.
 
-Revenue can include albums/streaming, concerts, merchandise, endorsements and fan platforms.
+# Phần IV — Bán lẻ và thương mại (유통·커머스)
 
-Key-person risk is high when one artist/group contributes major revenue.
+## Bán lẻ là biên lợi nhuận × tốc độ quay vòng
 
-Artist contract renewal can therefore be analogous to renewing a critical intangible asset.
+Bán lẻ có thể có biên lợi nhuận thấp nhưng lợi suất vốn cao nếu tồn kho quay nhanh.
 
-Roster diversification matters.
-
-## Gaming: live-service economics
-
-Game production has upfront R&D/content cost but online games can monetize over years through items/subscriptions.
-
-Metrics include:
-
-- active users;
-- payer conversion;
-- ARPU/ARPPU;
-- retention;
-- content update cadence;
-- regional mix.
-
-A launch spike followed by rapid churn is different from durable live-service franchise.
-
-# Phần IV — Retail và commerce / 유통·커머스
-
-## Retail is margin × turnover
-
-Retail margins can be low but capital returns strong if inventory turns quickly.
-
-A rough DuPont-style insight:
+Một trực giác kiểu DuPont:
 
 \[
-ROIC \sim Operating\ Margin \times Asset\ Turnover
+ROIC \sim Biên\ hoạt\ động \times Vòng\ quay\ tài\ sản
 \]
 
-Low margin alone does not imply bad business.
+Biên thấp không tự động nghĩa doanh nghiệp xấu.
 
-## Inventory is capital
+## Tồn kho chính là vốn
 
-Retailer often buys inventory before sale.
+Nhà bán lẻ thường mua hàng trước khi bán. Tồn kho chậm tạo khóa vốn lưu động, rủi ro markdown, lỗi thời và chi phí kho.
 
-Slow inventory creates:
+Vì vậy **vòng quay tồn kho (inventory turnover)** có thể quan trọng không kém biên gộp.
 
-- working-capital lockup;
-- markdown risk;
-- obsolescence;
-- storage cost.
+## Điều khoản nhà cung cấp có thể tài trợ nhà bán lẻ
 
-Therefore **inventory turnover** can matter as much as gross margin.
+Nếu nhà bán lẻ trả nhà cung cấp sau khi đã bán hàng, `DPO` có thể lớn hơn số ngày tồn kho và vốn lưu động trở nên thuận lợi.
 
-## Supplier terms can finance retailer
+Nhà bán lẻ mạnh có thể nhận tín dụng thương mại từ nhà cung cấp, tức dùng khoản phải trả để tài trợ hoạt động. Đây là quyền thương lượng thể hiện trực tiếp trong dòng tiền.
 
-If retailer pays supplier after selling inventory, `DPO` can exceed inventory days and working capital may be structurally favorable.
+## Marketplace và mô hình tự nắm tồn kho
 
-Strong retailer can receive supplier credit, effectively financing operations with trade payables.
+Trong **marketplace**, người bán sở hữu hàng, nền tảng chủ yếu thu hoa hồng. Rủi ro tồn kho thấp nhưng mức kiểm soát cũng thấp hơn.
 
-This is bargaining power expressed through cash flow.
+Trong **bán lẻ tự nắm tồn kho (inventory-led retail)**, nhà bán lẻ mua hàng trước, chịu vốn lưu động cao hơn nhưng kiểm soát giá và khả năng có hàng tốt hơn.
 
-## Marketplace vs inventory-led commerce
+Mô hình **fulfillment lai** có thể không sở hữu sản phẩm nhưng vẫn sở hữu hạ tầng logistics.
 
-**Marketplace model:** seller owns inventory; platform earns commission. Lower inventory risk but less control.
+Mỗi mô hình có cường độ tài sản khác nhau.
 
-**Inventory-led retail:** retailer buys stock; higher working capital but more control over availability/price.
+## Mật độ logistics tạo lợi thế quy mô địa phương
 
-**Fulfillment hybrid:** platform may not own product but owns logistics infrastructure.
-
-Each model has different asset intensity.
-
-## Logistics density creates local scale economy
-
-Same-day/next-day delivery becomes cheaper per order when many orders cluster geographically.
-
-Simplified:
+Giao trong ngày hoặc ngày hôm sau rẻ hơn trên mỗi đơn khi nhiều đơn tập trung trong cùng khu vực.
 
 \[
-Delivery\ Cost\ per\ Order \downarrow \quad as \quad Route\ Density \uparrow
+Chi\ phí\ giao\ trên\ đơn \downarrow
+\quad khi \quad
+Mật\ độ\ tuyến\ giao \uparrow
 \]
 
-This creates **density economics / 밀도경제**.
+Đây là **kinh tế mật độ (density economics / 밀도경제)**.
 
-Expanding to a new region can initially lose money until order density crosses threshold.
-
-This explains why e-commerce can be digital at front-end but infrastructure-heavy at back-end.
+Mở sang khu vực mới có thể lỗ cho tới khi mật độ đơn vượt ngưỡng. Vì vậy thương mại điện tử có thể rất “số” ở phía người dùng nhưng lại thâm dụng hạ tầng ở phía sau.
 
 Xem [`33_logistics_ports_and_distribution_networks.md`](./33_logistics_ports_and_distribution_networks.md).
 
-## Store formats have different economics
+## Các định dạng cửa hàng có kinh tế khác nhau
 
-Department store, convenience store, supermarket and duty-free should not be analyzed together.
+Department store, convenience store, siêu thị và duty-free không nên được gộp vào cùng một mô hình.
 
-Convenience store may use franchise model and high-frequency local demand.
+Convenience store có thể dùng franchise và nhu cầu địa phương tần suất cao. Department store phụ thuộc thương hiệu cao cấp, hoa hồng từ tenant và lưu lượng vị trí. Duty-free nhạy với du lịch, tỷ giá và quy định đi lại.
 
-Department store depends premium brands/tenant commissions and location traffic.
+Nhãn “bán lẻ” che giấu các động lực cầu rất khác nhau.
 
-Duty-free exposed to tourism/FX/travel regulation.
+# Phần V — Năng suất dịch vụ (Service Productivity / 서비스업 생산성)
 
-Business label “retail” hides different demand drivers.
+## Dịch vụ vẫn là sản xuất giá trị
 
-# Phần V — Service productivity / 서비스업 생산성
+Dịch vụ không tạo tồn kho vật lý nhưng tạo tiện ích: điều trị y tế, giáo dục, vận tải, tài chính, phần mềm hoặc sự tiện lợi.
 
-## Service is production of utility
+Đo năng suất dịch vụ khó hơn vì chất lượng rất quan trọng. Một y tá phục vụ gấp đôi bệnh nhân không có nghĩa đầu ra hữu ích tăng gấp đôi nếu chất lượng chăm sóc giảm.
 
-Service does not produce physical inventory, but it produces value: healthcare treatment, education, transport, finance, software or convenience.
+Đó là lý do số liệu năng suất dịch vụ phải được diễn giải thận trọng.
 
-Productivity measurement is harder because quality matters.
+## Bệnh chi phí Baumol
 
-A nurse serving twice as many patients may not mean double useful output if care quality falls.
+Một số dịch vụ vốn cần thời gian con người. Cắt tóc, biểu diễn trực tiếp hoặc chăm sóc cá nhân không thể tự động hóa vô hạn.
 
-This is one reason service productivity data needs interpretation.
+Lương vẫn tăng theo toàn nền kinh tế dù năng suất vật lý của các dịch vụ này tăng chậm, làm chi phí tăng. Đây là **bệnh chi phí Baumol (Baumol cost disease)**.
 
-## Baumol cost disease
+Tuy nhiên, dịch vụ số có thể phá một phần giới hạn đó vì cùng phần mềm hoặc IP phục vụ hàng triệu người.
 
-Some services inherently require human time. Haircut, live performance or personal care cannot be automated infinitely.
+## Thách thức cấu trúc của Hàn Quốc: việc làm dịch vụ nhưng năng suất sản xuất cao hơn
 
-Wages still rise with economy-wide labor market, causing cost to increase even if physical productivity grows slowly.
+Tỷ trọng lớn người lao động Hàn Quốc làm trong dịch vụ, trong khi sản xuất tuyến đầu có năng suất cao hơn nhiều.
 
-This is **Baumol cost disease**.
-
-But digital services can break some constraints by serving millions with same software/IP.
-
-## Korea’s structural challenge: service employment vs manufacturing productivity
-
-Large share of Korean workers are in services, while frontier manufacturing has much higher productivity.
-
-Therefore long-run growth cannot rely only on export champions. Service productivity diffusion matters for national wages and growth.
+Do đó tăng trưởng dài hạn không thể chỉ dựa vào doanh nghiệp xuất khẩu đầu tàu. Việc lan tỏa năng suất sang dịch vụ rất quan trọng cho tiền lương và tăng trưởng quốc gia.
 
 Xem [`28_productivity_services_and_economic_dualism.md`](./28_productivity_services_and_economic_dualism.md).
 
-## Digitalization and AI: not automatic productivity
+## Số hóa và AI: năng suất không tự xuất hiện
 
-AI can automate document processing, customer service, analytics and coding.
+AI có thể tự động hóa xử lý tài liệu, chăm sóc khách hàng, phân tích và lập trình. Nhưng lợi ích năng suất cần thiết kế lại quy trình.
 
-But productivity gain requires process redesign.
+Nhà hàng thêm tablet gọi món chỉ tiết kiệm lao động nếu luồng bếp và đặt món cũng được thay đổi. Ngân hàng triển khai AI mà không tích hợp dữ liệu lõi có thể chỉ thêm một màn hình mới.
 
-A restaurant adding tablet orders may save labor only if kitchen/order flow changes accordingly. A bank deploying AI without integrating core data may simply add another screen.
+Công nghệ là phần bổ trợ cho tổ chức, không phải chất thay thế cho thiết kế quy trình.
 
-Technology is complement to organization.
-
-# Company-analysis metrics by model
+# Chỉ số phân tích theo mô hình
 
 ## Platform
 
-```text
-MAU / transaction frequency
-GMV
-Take rate
-CAC
-Retention / churn
-Contribution margin
-Seller concentration / multi-homing
-```
+Theo dõi MAU/tần suất giao dịch, GMV, take rate, CAC, retention/churn, biên đóng góp, mức tập trung nhà bán và khả năng multi-home.
 
-## Telecom
+## Viễn thông
 
-```text
-Subscribers
-ARPU
-Churn
-Network capex
-Depreciation
-Spectrum cost
-Enterprise/digital-service mix
-```
+Theo dõi số thuê bao, ARPU, churn, CAPEX mạng, khấu hao, chi phí phổ tần và tỷ trọng dịch vụ doanh nghiệp/số.
 
-## Content / Entertainment
+## Nội dung / giải trí
 
-```text
-IP ownership
-Hit concentration
-Artist/creator concentration
-Contract renewal
-Content pipeline
-License terms
-Global revenue mix
-```
+Theo dõi sở hữu IP, mức tập trung hit, tập trung nghệ sĩ/người sáng tạo, gia hạn hợp đồng, pipeline nội dung, điều khoản cấp phép và tỷ trọng doanh thu quốc tế.
 
-## Retail / E-commerce
+## Bán lẻ / thương mại điện tử
+
+Theo dõi doanh thu cửa hàng tương đương, biên gộp, vòng quay tồn kho, markdown, điều khoản nhà cung cấp, mật độ đơn, chi phí fulfillment trên đơn và CAC/retention nếu kinh doanh số.
+
+# Stress test
+
+Với nền tảng, thử take rate giảm, multi-homing của người bán tăng, CAC +30% hoặc quy định hạn chế bundling.
+
+Với viễn thông, thử ARPU đi ngang trong khi CAPEX tăng, phí phổ tần tăng hoặc churn tăng.
+
+Với nội dung, thử nghệ sĩ chính không gia hạn, tỷ lệ hit giảm hoặc hợp đồng nền tảng làm khả năng giữ giá trị thấp hơn.
+
+Với bán lẻ, thử chi tiêu tiêu dùng -10%, vòng quay tồn kho chậm hoặc mật độ giao hàng xuống dưới điểm hòa vốn.
+
+# Mental Model — mô hình tư duy
+
+> Sản xuất tối ưu **vật liệu + công suất**. Dịch vụ và nền tảng tối ưu **quan hệ + sự chú ý + thông tin + mạng lưới + phân phối**. Cả hai cuối cùng vẫn phải tuân theo kinh tế đơn vị và kỷ luật phân bổ vốn.
 
 ```text
-Same-store sales
-Gross margin
-Inventory turns
-Markdowns
-Supplier terms
-Order density
-Fulfillment cost/order
-CAC/retention if digital
+Sự chú ý / nhu cầu khách hàng
+        ↓
+Mạng lưới / thương hiệu / phân phối
+        ↓
+Giao dịch / thuê bao / nội dung
+        ↓
+Biên đóng góp
+        ↓
+Retention + sử dụng lặp lại
+        ↓
+Giá trị vòng đời khách hàng
 ```
 
-# Stress tests
+# Những nhầm lẫn thường gặp
 
-Platform:
+**“Tăng người dùng = tăng trưởng có lợi nhuận.”** Sai. CAC, retention và biên đóng góp mới quyết định.
 
-- take rate cut;
-- seller multi-homing rises;
-- CAC +30%;
-- regulation limits bundling.
+**“Platform nhẹ tài sản nên không có CAPEX.”** Không luôn đúng; logistics và trung tâm dữ liệu có thể làm mô hình thâm dụng tài sản.
 
-Telecom:
+**“K-content nổi tiếng = nhà sản xuất lời lớn.”** Sai. Hợp đồng và quyền IP quyết định khả năng giữ giá trị.
 
-- ARPU flat but capex ↑;
-- spectrum fee ↑;
-- churn ↑.
+**“Viễn thông có thuê bao nên không có chu kỳ.”** Sai. CAPEX, cạnh tranh và quy định vẫn thay đổi.
 
-Content:
+**“Biên bán lẻ thấp = doanh nghiệp kém.”** Sai. Vòng quay và vốn lưu động có thể tạo lợi suất vốn rất tốt.
 
-- major artist not renew;
-- content hit rate falls;
-- platform contract lowers value capture.
+**“AI tự động giải quyết năng suất dịch vụ.”** Sai. Quy trình và mức chấp nhận thực tế quyết định lợi ích.
 
-Retail:
-
-- consumer spending -10%;
-- inventory turns slow;
-- delivery density below breakeven.
-
-# Mental Model
-
-> Manufacturing optimizes **material + capacity**. Services/platforms optimize **relationship + attention + information + network + distribution**. Both still obey unit economics and capital allocation.
-
-A simple map:
-
-```text
-Customer attention/demand
-        ↓
-Network / Brand / Distribution
-        ↓
-Transaction / Subscription / Content
-        ↓
-Contribution margin
-        ↓
-Retention + Repeat usage
-        ↓
-Lifetime value
-```
-
-# Common misconceptions
-
-**“User growth = profitable growth.”** Sai. CAC, retention and contribution matter.
-
-**“Platform asset-light = no capex.”** Not always; logistics/data centers can make it asset-heavy.
-
-**“K-content popularity = producer profit.”** Rights/IP contracts determine value capture.
-
-**“Telecom subscription = no cycle.”** Capex, competition and regulation still matter.
-
-**“Low retail margin = bad business.”** Turnover and working capital can produce strong returns.
-
-**“AI automatically solves service productivity.”** Process and adoption determine realized gain.
-
-# Connections
+# Liên kết
 
 Đọc cùng [`01_macro_economy_and_business_cycle.md`](./01_macro_economy_and_business_cycle.md), [`07_startups_venture_and_scaleups.md`](./07_startups_venture_and_scaleups.md), [`20_how_to_analyze_a_korean_company.md`](./20_how_to_analyze_a_korean_company.md), [`28_productivity_services_and_economic_dualism.md`](./28_productivity_services_and_economic_dualism.md), [`33_logistics_ports_and_distribution_networks.md`](./33_logistics_ports_and_distribution_networks.md) và [`34_digital_fintech_cloud_and_it_services.md`](./34_digital_fintech_cloud_and_it_services.md).
