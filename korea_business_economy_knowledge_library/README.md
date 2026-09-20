@@ -6,11 +6,13 @@ Nguyên tắc trung tâm là: **cấu trúc doanh nghiệp Hàn Quốc hiện t�
 
 > **Mental model trung tâm:** nền kinh tế Hàn Quốc là một network gồm **nhà nước – thị trường – ngân hàng – thị trường vốn – business groups – SME – labor – household – technology – energy – logistics – global value chains**. Muốn hiểu một company, phải biết nó đứng ở node nào và những edge nào truyền capital, information, risk và demand tới nó.
 
+Library hiện gồm **50 Markdown files**, trong đó có 9 chapter lịch sử trong `00_history/`, các chapter nền tảng và ngành tại root, cùng một practical layer mới về financial sector, credit/default, corporate actions, forensic accounting và company-analysis workbook.
+
 ---
 
-## Thư viện này được viết như thế nào?
+# Thư viện này được viết như thế nào?
 
-Mỗi chapter cố gắng trả lời cùng một family of questions:
+Mỗi chapter cố gắng trả lời cùng một family of questions.
 
 **Khái niệm là gì?** Không chỉ dịch thuật ngữ mà xác định object thực sự đang nói tới.
 
@@ -60,25 +62,21 @@ New industrial structure
 New constraint
 ```
 
-Nhờ vậy, chronology không trở thành danh sách sự kiện mà thành causal model.
+Nhờ vậy chronology không trở thành danh sách sự kiện mà thành causal model.
 
 ---
 
 ## Phase B — Từ lịch sử sang nền kinh tế Hàn Quốc hiện tại
 
-Sau khi hiểu historical arc, chuyển sang ba chapter làm cầu nối tới current system:
-
 1. [Từ lịch sử đến mô hình kinh tế thị trường Hàn Quốc hiện nay](./00_economic_model_and_history.md)
 2. [Kinh tế vĩ mô và chu kỳ kinh doanh Hàn Quốc](./01_macro_economy_and_business_cycle.md)
 3. [Thương mại, xuất khẩu và Global Value Chains](./02_trade_export_and_global_value_chains.md)
 
-Ba chapter này giải thích các biến nền như GDP/GDI, potential growth, inflation, rates, KRW, household credit, export cycles, terms of trade, domestic value added, FTA/rules of origin, supply-chain resilience và geopolitics.
+Ba chapter này giải thích GDP/GDI, potential growth, inflation, rates, KRW, household credit, export cycles, terms of trade, domestic value added, FTA/rules of origin, supply-chain resilience và geopolitics.
 
 ---
 
-## Phase C — Công ty Hàn Quốc được tổ chức và tài trợ như thế nào?
-
-Sau macro/trade, đi từ legal entity tới ownership, finance và accounting:
+## Phase C — Công ty Hàn Quốc được tổ chức, kiểm soát và tài trợ như thế nào?
 
 1. [Company forms và size classes tại Hàn Quốc](./03_company_forms_and_size_classes.md)
 2. [Chaebol và large business groups](./04_chaebol_and_large_business_groups.md)
@@ -89,19 +87,27 @@ Sau macro/trade, đi từ legal entity tới ownership, finance và accounting:
 7. [Disclosure, accounting, DART và KIND](./09_disclosure_accounting_dart_kind.md)
 8. [Capital markets: KOSPI, KOSDAQ và KONEX](./10_capital_markets_kospi_kosdaq_konex.md)
 9. [Banks, corporate finance và funding](./11_banks_finance_and_corporate_funding.md)
+10. [Securities, insurance, asset management và non-bank finance](./35_financial_sector_securities_insurance_asset_management.md)
+11. [Credit rating, corporate bonds, default và restructuring](./36_credit_ratings_bonds_default_and_restructuring.md)
+12. [Corporate actions, M&A, merger, spin-off và capital actions](./37_corporate_actions_mna_mergers_spin_offs_and_capital_actions.md)
+13. [Forensic accounting, earnings quality và accounting red flags](./38_forensic_accounting_red_flags_and_earnings_quality.md)
 
-Đây là cụm quan trọng nhất nếu mục tiêu là đọc một Korean company thật. Flow logic:
+Flow logic của cụm này:
 
 ```text
 Legal entity
    ↓
 Ownership / control
    ↓
-Business group relationships
+Business-group relationships
    ↓
 Disclosure / accounting boundary
    ↓
-Equity + debt funding
+Equity + debt + market funding
+   ↓
+Credit risk / maturity / covenant
+   ↓
+Corporate actions / restructuring
    ↓
 Capital allocation
    ↓
@@ -112,18 +118,14 @@ Shareholder / creditor outcomes
 
 ## Phase D — Con người và organizational operating system
 
-Doanh nghiệp không chỉ là balance sheet. Hai chapter sau giải thích con người, HR structure, incentives và communication:
-
 1. [Labor, titles, compensation và workplace structure](./12_labor_titles_compensation_and_workplace.md)
 2. [Business culture, decision making và communication](./13_business_culture_decision_making_and_communication.md)
 
-Hai file này đi sâu vào `직무`, `직급`, `직책`, employment types, total compensation, performance evaluation, seniority, promotion, outsourcing layers, `보고`, `결재`, hierarchy, escalation, high-context communication, SI/SM coordination và Korea–Vietnam bridge roles.
+Hai file đi sâu vào `직무`, `직급`, `직책`, employment types, total compensation, performance evaluation, seniority, promotion, outsourcing layers, `보고`, `결재`, hierarchy, escalation, high-context communication, SI/SM coordination và Korea–Vietnam bridge roles.
 
 ---
 
 ## Phase E — Các industry engines của nền kinh tế
-
-Khi foundation đã chắc, đọc economics riêng của từng ngành. Mỗi industry có production function và accounting khác nhau nên không thể dùng một template duy nhất.
 
 1. [Semiconductors, electronics và display](./14_semiconductors_electronics_display.md)
 2. [Automotive, battery và mobility](./15_automotive_battery_mobility.md)
@@ -152,39 +154,40 @@ Một useful mental model là mỗi industry phải được đọc bằng đún
 | Biohealth | scientific success → approval → reimbursement → adoption |
 | Defense | backlog, qualification, learning curve, localization, lifecycle support |
 | IT/SI/SM | utilization, scope, billing model, maintenance recurring revenue, legacy integration |
+| Financials | spread/fee/underwriting, asset quality, capital adequacy, liquidity |
 
 ---
 
-## Phase F — Áp dụng toàn bộ knowledge vào group/company analysis
-
-Sau khi đọc foundation và industries, dùng các chapter sau như practical bridge:
+## Phase F — Áp dụng knowledge vào group/company analysis
 
 1. [Major Korean business-group case studies](./19_major_groups_case_studies.md)
 2. [Cách phân tích một Korean company từ đầu đến cuối](./20_how_to_analyze_a_korean_company.md)
 3. [Macro-to-company transmission](./21_economy_to_company_transmission.md)
+4. [Practical Company Analysis Workbook](./39_practical_company_analysis_workbook_and_case_patterns.md)
 
-`20` là chapter nên quay lại nhiều lần. Nó buộc analysis đi qua:
+`20` là framework tổng quát; `39` là workbook thực hành. Khi dùng cùng nhau, process sẽ đi qua:
 
 ```text
 Historical context
 → Legal entity
 → Revenue engine
+→ Driver tree
 → Value chain
 → Unit economics
 → Financial statements
-→ Funding / balance sheet
-→ Governance
-→ Capital allocation
+→ Earnings quality
+→ Funding / credit
+→ Governance / corporate actions
 → Macro exposure
-→ Valuation
-→ Stress test / thesis breakers
+→ Bear / Base / Bull
+→ Valuation / implied expectations
+→ Thesis breakers
+→ Decision memo
 ```
 
 ---
 
-## Phase G — Institution, regulation và những structural constraints của Korea hiện đại
-
-Các chapter sau giúp nhìn economy rộng hơn một company cụ thể:
+## Phase G — Institution, regulation và structural constraints của Korea hiện đại
 
 1. [Tax, regulation và competition policy](./22_tax_regulation_and_competition.md)
 2. [Foreign-invested companies và Korea market entry](./23_foreign_invested_companies_and_korea_entry.md)
@@ -195,15 +198,7 @@ Các chapter sau giúp nhìn economy rộng hơn một company cụ thể:
 7. [Productivity, services và economic dualism](./28_productivity_services_and_economic_dualism.md)
 8. [Innovation, R&D, education và human capital](./29_innovation_rnd_education_and_human_capital.md)
 
-Cụm này trả lời những câu khó hơn như:
-
-- Vì sao Korea có global manufacturers rất mạnh nhưng SME/service productivity gap vẫn lớn?
-- Aging truyền vào growth, labor supply và domestic demand như thế nào?
-- Industrial policy hiện đại khác HCI 1970s ở đâu?
-- Regulation có thể vừa là cost vừa là moat như thế nào?
-- Vì sao Seoul/capital region concentration tự củng cố?
-- Vì sao public enterprise không thể chỉ được đánh giá bằng ROE?
-- R&D spending khác innovation output như thế nào?
+Cụm này trả lời các câu khó hơn: vì sao manufacturing mạnh nhưng service/SME productivity gap còn lớn; aging truyền vào labor, growth và demand như thế nào; regulation vừa là cost vừa là moat ra sao; capital-region concentration tự củng cố thế nào; R&D spending khác innovation output ở đâu.
 
 ---
 
@@ -239,6 +234,10 @@ graph TD
     GOV --> DISC[DART / accounting]
     DISC --> CM[Capital markets]
     CM --> FUND[Corporate funding]
+    FUND --> NBF[Non-bank financial sector]
+    FUND --> CREDIT[Credit / default / restructuring]
+    GOV --> CA[Corporate actions / M&A / split]
+    DISC --> FORENSIC[Forensic accounting]
 
     CF --> LAB[Labor / organization]
     LAB --> CULT[Business culture]
@@ -249,10 +248,13 @@ graph TD
 
     IND --> CASE[Group case studies]
     DISC --> ANALYZE[Company analysis]
+    FORENSIC --> ANALYZE
+    CREDIT --> ANALYZE
+    CA --> ANALYZE
     M --> TRANS[Macro-to-company transmission]
     T --> TRANS
-    CASE --> ANALYZE
     TRANS --> ANALYZE
+    ANALYZE --> WORKBOOK[Practical workbook / scenarios / decision memo]
 
     INST --> REG[Tax / regulation]
     T --> FDI[FDI / foreign firms]
@@ -270,7 +272,7 @@ graph TD
 
 # Reading Paths theo mục tiêu
 
-Không phải lúc nào cũng cần đọc toàn bộ 45 file theo thứ tự. Dưới đây là những đường đọc hợp lý tùy mục tiêu.
+Không phải lúc nào cũng cần đọc toàn bộ 50 file theo thứ tự.
 
 ## Nếu mục tiêu là hiểu nền kinh tế Hàn Quốc từ gốc
 
@@ -297,6 +299,7 @@ Sau đó chọn industry chapters.
 → 05_group_structure
 → 08_governance
 → 09_DART/accounting
+→ 37_corporate_actions
 → 19_case_studies
 ```
 
@@ -308,12 +311,51 @@ Sau đó chọn industry chapters.
 → 09_DART/accounting
 → 10_capital_markets
 → 11_funding
+→ 38_forensic_accounting
+→ 36_credit/default
 → relevant industry chapter
 → 20_company_analysis
 → 21_macro_transmission
+→ 39_practical_workbook
 ```
 
 Không bắt đầu bằng chart giá. Bắt đầu bằng entity, business model và filings.
+
+## Nếu mục tiêu là đọc DART/KIND như analyst
+
+```text
+09_DART/accounting
+→ 38_forensic_accounting
+→ 11_funding
+→ 36_credit/default
+→ 37_corporate_actions
+→ 20_company_analysis
+→ 39_workbook
+```
+
+Flow thực hành:
+
+```text
+Filing facts
+→ accounting quality
+→ hidden obligations / liquidity
+→ ownership / corporate event
+→ scenarios
+→ thesis breakers
+→ decision memo
+```
+
+## Nếu mục tiêu là hiểu financial sector Hàn Quốc
+
+```text
+01_macro
+→ 10_capital_markets
+→ 11_funding
+→ 35_nonbank_finance
+→ 36_credit/default
+→ 34_fintech/cloud
+→ 26_institutions
+```
 
 ## Nếu mục tiêu là hiểu workplace/career tại Korean company
 
@@ -324,6 +366,7 @@ Không bắt đầu bằng chart giá. Bắt đầu bằng entity, business mode
 → 13_business_culture
 → 19_group_cases
 → relevant industry chapter
+→ 39_workbook career layer
 ```
 
 Nếu làm trong SI/SM hoặc enterprise IT, thêm [Digital economy, fintech, cloud và IT services](./34_digital_fintech_cloud_and_it_services.md).
@@ -405,11 +448,16 @@ Nếu làm trong SI/SM hoặc enterprise IT, thêm [Digital economy, fintech, cl
 | [27 Demographics/Households](./27_demographics_households_and_consumption.md) | Aging, fertility, household balance sheets, housing and consumption |
 | [28 Productivity/Dualism](./28_productivity_services_and_economic_dualism.md) | Manufacturing vs service productivity, SME gap, TFP and management |
 | [29 R&D/Human Capital](./29_innovation_rnd_education_and_human_capital.md) | R&D portfolio, education, IP, skills and frontier innovation |
-| [30 Energy](./30_energy_security_power_market_and_transition.md) | Import dependency, KEPCO/power market, nuclear, LNG, renewables, grid |
+| [30 Energy](./30_energy_security_power_market_and_transition.md) | Import dependency, power market, nuclear, LNG, renewables, grid |
 | [31 Biohealth](./31_biohealth_pharma_medical_devices_and_kbeauty.md) | Drug discovery, biosimilars, CDMO, medical devices, K-Beauty |
 | [32 Defense/Aerospace](./32_defense_aerospace_and_strategic_industries.md) | Backlog, procurement, learning curves, localization, lifecycle support |
 | [33 Logistics](./33_logistics_ports_and_distribution_networks.md) | Ports, shipping, inventory, 3PL, customs, last-mile density |
 | [34 Digital/Fintech/Cloud/IT](./34_digital_fintech_cloud_and_it_services.md) | Platforms, fintech, cloud, data centers, SI/SM, SaaS, AI and cybersecurity |
+| [35 Non-bank Financial Sector](./35_financial_sector_securities_insurance_asset_management.md) | Securities firms, IB, asset management, insurance, pensions, credit ratings |
+| [36 Credit/Default/Restructuring](./36_credit_ratings_bonds_default_and_restructuring.md) | Bonds, spread, rating, maturity, covenant, default, workout, recovery |
+| [37 Corporate Actions](./37_corporate_actions_mna_mergers_spin_offs_and_capital_actions.md) | M&A, merger ratio, spin-off, rights issue, buyback, tender, JV |
+| [38 Forensic Accounting](./38_forensic_accounting_red_flags_and_earnings_quality.md) | Earnings quality, accruals, working capital, provisions, hidden leverage, red flags |
+| [39 Practical Workbook](./39_practical_company_analysis_workbook_and_case_patterns.md) | Driver trees, case patterns, scenarios, risk register, thesis breakers, decision memo |
 
 ---
 
@@ -417,13 +465,9 @@ Nếu làm trong SI/SM hoặc enterprise IT, thêm [Digital economy, fintech, cl
 
 ## 1. Structural knowledge và current snapshot được tách riêng
 
-Một concept như `foreign-exchange constraint`, `operating leverage` hay `agency problem` có thể dùng lâu dài.
-
-Một forecast GDP 2026 hoặc tax rate cụ thể có thể thay đổi.
+Một concept như `foreign-exchange constraint`, `operating leverage`, `agency problem`, `credit spread` hay `earnings quality` có thể dùng lâu dài. Một forecast GDP, tax rate, regulation hoặc company structure cụ thể có thể thay đổi.
 
 Library cố ghi rõ **year/date** khi dùng data hiện hành để người đọc không nhầm snapshot với structural truth.
-
-Current snapshot không được dùng để rewrite historical explanation theo hindsight.
 
 ## 2. Primary/official sources được ưu tiên cho rule và data hiện hành
 
@@ -440,49 +484,40 @@ Source hierarchy chính:
 - **NTS** — corporate tax rules;
 - **Invest KOREA/KOTRA** — FDI and foreign-business setup;
 - **MSIT** — R&D/ICT policy;
-- **IEA and Korean energy institutions** — energy-system context;
-- **KHIDI** — biohealth industry data;
+- official energy/biohealth/industry institutions;
 - official corporate histories/disclosures for company genealogy.
 
-Secondary articles can help discover a question, but important factual claims should be traced back to primary/official evidence where practical.
+Secondary articles có thể giúp discover a question, nhưng important factual claims nên quay lại primary/official evidence khi practical.
 
 ## 3. Company narrative và evidence không được trộn
 
-Khi phân tích company, tách ba tầng:
+Khi phân tích company, tách:
 
-**Fact:** DART says CAPEX is X.
+**Fact:** filing nói CAPEX là X.
 
-**Management claim:** management says CAPEX will create leadership.
+**Management claim:** management nói CAPEX sẽ tạo leadership.
 
-**Inference:** utilization must reach Y for ROIC to be attractive.
+**Inference:** utilization phải đạt Y để ROIC đủ hấp dẫn.
 
-This separation reduces narrative bias.
+Workbook `39` khuyến nghị tag `F/M/I/E` để giữ distinction này trong research notes.
 
 ## 4. Group và legal entity luôn được tách
 
-“Samsung”, “Hyundai”, “SK” hay “LG” are group/brand concepts.
+“Samsung”, “Hyundai”, “SK” hay “LG” là group/brand concepts. Financial statements thuộc legal entities. Không transfer group prestige, guarantees hoặc cash sang affiliate nếu legal/economic relationship chưa được chứng minh.
 
-Financial statements belong to legal entities.
+## 5. Historical claims được đối xử như mechanisms, không phải success mythology
 
-Never transfer group prestige, guarantees or cash to affiliate unless legal/economic relationship is demonstrated.
+Industrial policy, HCI, chaebol concentration, colonial legacy và 1997 crisis đều có academic/political debate. Library ưu tiên mechanism, incentives, trade-offs, evidence boundaries và alternative causal channels thay vì single-cause story.
 
-## 5. Historical claims are treated as mechanisms, not success mythology
+## 6. Red flag không phải accusation
 
-Topics such as colonial legacy, industrial policy, HCI, chaebol concentration and 1997 crisis contain real academic/political debate.
-
-Library avoids single-cause explanations. It emphasizes:
-
-- mechanism;
-- incentives;
-- trade-offs;
-- evidence boundaries;
-- alternative causal channels.
+Receivables tăng, goodwill lớn, related-party deal hoặc rating downgrade là **signal để hỏi sâu hơn**, không phải bằng chứng fraud hay wrongdoing. Forensic analysis chỉ meaningful khi nối accounting signal với business mechanism và supporting evidence.
 
 ---
 
 # Cách học để nhớ lâu
 
-Đừng cố memorize 45 files. Hãy giữ một số mental models có thể tái sử dụng.
+Đừng cố memorize 50 files. Hãy giữ một số mental models có thể tái sử dụng.
 
 ### Economy
 
@@ -535,26 +570,50 @@ Shock
 → CAPEX / hiring / valuation
 ```
 
-### Productivity
+### Credit
 
 ```text
-Machines alone ≠ productivity
-
-Productivity = Technology
-             + Human capital
-             + Process
-             + Management
-             + Institutions
+Business volatility
+× leverage
+× maturity concentration
+× liquidity
+× market access
+→ default/restructuring risk
 ```
 
-Nếu các mental model này rõ, new facts có chỗ để gắn vào thay vì trở thành dữ kiện rời.
+### Forensic accounting
+
+```text
+Reported earnings
+→ balance-sheet changes
+→ cash flow
+→ footnotes
+→ economic reality
+```
+
+### Practical analysis
+
+```text
+Entity
+→ Business engine
+→ Driver tree
+→ Financial statements
+→ Earnings quality
+→ Funding
+→ Governance
+→ Scenario
+→ Expectations
+→ Decision
+```
+
+Nếu các mental models này rõ, new facts có chỗ để gắn vào thay vì trở thành dữ kiện rời.
 
 ---
 
 # Mốc rà soát
 
-Library này đã được **deep-refactor và consistency review đến 20/09/2026**.
+Library đã được **deep-refactor và consistency review đến 20/09/2026**.
 
-Các chapter lịch sử, macro, trade, corporate structure, finance/accounting, labor/culture, industry economics, policy, demographics, productivity, R&D, energy, biohealth, defense, logistics và digital/IT đã được viết lại theo cùng tiêu chuẩn causal/textbook thay vì append facts ở cuối file.
+Pass hiện tại bổ sung practical layer từ chapter `35` tới `39`, đưa library từ mức hiểu cấu trúc kinh tế/doanh nghiệp sang mức có thể thực hành phân tích **financial institutions, credit/default, M&A/corporate actions, earnings quality và scenario-based company analysis**.
 
-Số liệu, regulation, tax, forecasts và company structures có thể thay đổi sau mốc trên; khi dùng cho quyết định thực tế, hãy kiểm tra filing/rule/data mới nhất.
+Số liệu, regulation, tax, forecasts, ratings và company structures có thể thay đổi sau mốc trên; khi dùng cho quyết định thực tế, hãy kiểm tra filing/rule/data mới nhất.
