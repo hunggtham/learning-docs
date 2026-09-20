@@ -1,596 +1,451 @@
 # Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng
 
-> Chương này đi sâu vào “đường ống” của hệ thống tài chính: tiền gửi, dự trữ, repo, collateral, dealer balance sheet, quỹ thị trường tiền tệ, USD funding và các cơ chế làm một cú sốc nhỏ biến thành stress lớn. Mục tiêu là phân biệt rõ **tiền**, **thanh khoản**, **vốn**, **tài sản bảo đảm** và **khả năng trả nợ**.
+> Chương này giải thích “đường ống” của hệ thống tài chính bằng tiếng Việt. Các thuật ngữ tiếng Anh chỉ được giữ như từ khóa tra cứu ở lần xuất hiện cần thiết. Mục tiêu là phân biệt rõ tiền, tín dụng, thanh khoản, vốn, tài sản bảo đảm, nguồn vốn và khả năng thanh toán để hiểu vì sao một cú sốc nhỏ có thể bị khuếch đại thành khủng hoảng.
 
 # Phần I — Các lớp tiền khác nhau
 
-## 1. Tiền mặt, tiền gửi và dự trữ
+## 1. Tiền mặt, tiền gửi và dự trữ ngân hàng
 
 Ba khái niệm này không giống nhau.
 
-**Tiền mặt (cash/banknotes):** tiền giấy do ngân hàng trung ương phát hành.
+**Tiền mặt (cash/banknotes)** là tiền giấy và tiền xu do cơ quan tiền tệ phát hành.
 
-**Tiền gửi ngân hàng (bank deposits):** nghĩa vụ của ngân hàng thương mại với khách hàng.
+**Tiền gửi ngân hàng (bank deposits)** là nghĩa vụ của ngân hàng thương mại đối với khách hàng. Phần lớn giao dịch hằng ngày trong nền kinh tế hiện đại sử dụng lớp tiền này.
 
-**Dự trữ ngân hàng (bank reserves):** tài sản của ngân hàng thương mại tại ngân hàng trung ương, chủ yếu dùng cho thanh toán giữa các ngân hàng và đáp ứng yêu cầu hệ thống.
+**Dự trữ ngân hàng (bank reserves)** là tài sản của ngân hàng thương mại tại ngân hàng trung ương, chủ yếu dùng cho thanh toán liên ngân hàng và vận hành hệ thống tiền tệ. Nhà đầu tư cá nhân không trực tiếp sở hữu dự trữ ngân hàng.
 
-Nhà đầu tư cá nhân không trực tiếp giữ reserves.
+## 2. Khi ngân hàng cấp tín dụng
 
-## 2. Khi ngân hàng cho vay
-
-Khi ngân hàng cấp một khoản vay, nó thường đồng thời tạo:
+Khi ngân hàng cấp một khoản vay, bảng cân đối thường đồng thời xuất hiện:
 
 ```text
-Asset: Loan
-Liability: Deposit
+Tài sản: khoản cho vay
+Nợ phải trả: tiền gửi của khách hàng
 ```
 
-Do đó tín dụng ngân hàng có thể mở rộng sức mua trong nền kinh tế mà không cần ngân hàng trung ương in một lượng tiền giấy tương ứng.
+Vì vậy tín dụng ngân hàng có thể mở rộng sức mua mà không cần lượng tiền giấy vật lý tăng tương ứng. Đây là lý do khi phân tích “cung tiền” phải phân biệt tiền mặt, tiền gửi, tín dụng và dự trữ.
 
 ## 3. Bảng cân đối ngân hàng trung ương
 
 Một bảng cân đối đơn giản có thể gồm:
 
 ```text
-Assets:
-Government Bonds
-Loans / Facilities
-FX Reserves
+Tài sản:
+Trái phiếu chính phủ
+Khoản cho vay / chương trình hỗ trợ
+Dự trữ ngoại hối
 
-Liabilities:
-Bank Reserves
-Currency in Circulation
-Government Deposits
+Nợ phải trả:
+Dự trữ của ngân hàng thương mại
+Tiền mặt lưu hành
+Tiền gửi của chính phủ
 ```
 
-QE, QT hoặc lending facility thay đổi các dòng này theo cơ chế khác nhau.
+Nới lỏng định lượng (Quantitative Easing, QE), thắt chặt định lượng (Quantitative Tightening, QT) và các chương trình cho vay khẩn cấp làm thay đổi bảng cân đối theo các cơ chế khác nhau.
 
 # Phần II — Hệ thống lãi suất ngắn hạn
 
-## 4. Policy rate không phải mọi lãi suất
+## 4. Lãi suất chính sách không phải mọi lãi suất trong nền kinh tế
 
-Ngân hàng trung ương kiểm soát hoặc định hướng một lãi suất ngắn hạn mục tiêu.
-
-Sau đó chính sách truyền qua:
+Ngân hàng trung ương trực tiếp kiểm soát hoặc định hướng một lãi suất ngắn hạn. Từ đó tác động được truyền qua:
 
 ```text
-Policy Rate
-→ Money-Market Rates
-→ Bank Funding
-→ Bond Yields
-→ Mortgage / Corporate Rates
+Lãi suất chính sách
+→ lãi suất thị trường tiền tệ
+→ chi phí nguồn vốn ngân hàng
+→ lợi suất trái phiếu
+→ lãi vay doanh nghiệp / thế chấp
+→ tiêu dùng và đầu tư
 ```
 
-## 5. Floor system và corridor system
+Cùng một mức lãi suất chính sách có thể tạo điều kiện tài chính rất khác nếu chênh lệch tín dụng, tỷ giá hoặc tiêu chuẩn cho vay thay đổi.
 
-Trong **hệ thống sàn (floor system)**, lượng reserves thường dồi dào và lãi trả trên reserves giúp đặt sàn cho lãi suất ngắn hạn.
+## 5. Hệ thống sàn và hệ thống hành lang
 
-Trong **hệ thống hành lang (corridor system)**, lãi vay và lãi gửi tại ngân hàng trung ương tạo vùng mục tiêu để thị trường tiền tệ giao dịch bên trong.
+Trong **hệ thống sàn (floor system)**, dự trữ thường tương đối dồi dào và lãi trả trên dự trữ giúp tạo mức sàn cho lãi suất ngắn hạn.
 
-Không cần học thuộc từng tên chương trình; điều quan trọng là hiểu ngân hàng trung ương điều khiển giá của funding ngắn hạn như thế nào.
+Trong **hệ thống hành lang (corridor system)**, lãi suất cho vay và lãi suất nhận tiền gửi tại ngân hàng trung ương tạo một vùng để lãi suất thị trường dao động bên trong.
 
-# Phần III — Repo và collateral
+Điểm cần hiểu là cách ngân hàng trung ương truyền tín hiệu chính sách tới giá của nguồn vốn ngắn hạn, không phải học thuộc tên từng chương trình.
 
-## 6. Repo là gì?
+# Phần III — Giao dịch mua lại và tài sản bảo đảm
 
-Repo về kinh tế gần với khoản vay có bảo đảm.
+## 6. Giao dịch mua lại — repo
+
+Giao dịch mua lại (repurchase agreement, repo) về bản chất kinh tế gần với khoản vay có tài sản bảo đảm.
 
 ```text
-Borrower giao collateral
-→ nhận cash
-→ sau đó mua lại collateral với giá cao hơn
+Bên vay giao tài sản bảo đảm
+→ nhận tiền mặt
+→ cam kết mua lại tài sản sau một khoảng thời gian
 ```
 
-Chênh lệch giá phản ánh lãi repo.
+Chênh lệch giữa giá bán và giá mua lại phản ánh chi phí vốn của giao dịch.
 
-## 7. Collateral
+## 7. Tài sản bảo đảm
 
-Tài sản bảo đảm (collateral) không chỉ giảm rủi ro tín dụng. Nó còn quyết định khả năng một tổ chức có thể vay bao nhiêu.
+**Tài sản bảo đảm (collateral)** không chỉ giảm rủi ro tín dụng mà còn quyết định khả năng vay vốn. Tài sản có chất lượng cao, dễ định giá và dễ bán thường cho phép vay nhiều hơn.
 
-Tài sản có thanh khoản và chất lượng cao thường cho phép vay với haircut thấp hơn.
+Trong hệ thống tài chính, chất lượng của tài sản bảo đảm có thể quan trọng gần ngang lượng tiền mặt vì nhiều giao dịch tài trợ phụ thuộc vào nó.
 
-## 8. Haircut
+## 8. Tỷ lệ chiết trừ tài sản bảo đảm
 
-Haircut là phần giá trị collateral không được tính khi cho vay.
+**Tỷ lệ chiết trừ (haircut)** là phần giá trị của tài sản bảo đảm không được tính vào khả năng vay.
 
 Ví dụ:
 
 ```text
-Collateral value = 100
+Giá trị tài sản bảo đảm = 100
 Haircut = 10%
-Borrowing capacity ≈ 90
+Khả năng vay ≈ 90
 ```
 
-Nếu haircut tăng lên 20%, khả năng vay chỉ còn khoảng 80 dù giá tài sản chưa đổi.
+Nếu tỷ lệ này tăng lên 20%, khả năng vay giảm xuống khoảng 80 ngay cả khi giá tài sản chưa đổi.
 
-## 9. Haircut spiral
+## 9. Vòng xoáy tăng haircut
 
-Trong stress:
+Trong giai đoạn căng thẳng:
 
 ```text
-Volatility ↑
+Biến động ↑
 → Haircut ↑
-→ Cần thêm collateral / cash
-→ Forced Selling ↑
-→ Giá ↓
-→ Haircut ↑ thêm
+→ nhu cầu tiền mặt / tài sản bảo đảm ↑
+→ bán cưỡng bức ↑
+→ giá tài sản ↓
+→ Haircut tiếp tục ↑
 ```
 
-Đây là một cơ chế khuếch đại khủng hoảng.
+Đây là một trong các cơ chế khiến cú sốc tài chính tự khuếch đại.
 
-# Phần IV — Dealer và market-making
+# Phần IV — Nhà tạo lập và khả năng trung gian thị trường
 
-## 10. Dealer balance sheet
+## 10. Bảng cân đối nhà tạo lập
 
-Dealer giúp kết nối người mua và người bán, giữ inventory và cung cấp market-making.
+Nhà tạo lập hoặc trung gian giao dịch (dealer) kết nối người mua và người bán, tạm thời giữ tài sản và cung cấp thanh khoản. Nhưng khả năng này bị giới hạn bởi:
 
-Nhưng dealer có giới hạn về:
+- vốn;
+- nguồn tài trợ;
+- đòn bẩy;
+- giới hạn rủi ro;
+- quy định.
 
-- capital;
-- funding;
-- leverage;
-- risk limit.
+Khi khả năng sử dụng bảng cân đối giảm, độ sâu thị trường có thể giảm dù tài sản đã trở nên “rẻ”.
 
-Khi balance-sheet capacity giảm, market depth có thể giảm ngay cả khi tài sản “rẻ”.
+## 11. Thanh khoản thị trường thay đổi theo trạng thái hệ thống
 
-## 11. Thanh khoản thị trường không phải đặc tính cố định
+Thanh khoản không phải đặc tính cố định. Một tài sản bình thường dễ giao dịch có thể trở nên khó bán khi:
 
-Một tài sản bình thường có thể rất thanh khoản nhưng trở nên khó giao dịch khi:
+- biến động tăng;
+- các trung gian giảm tồn kho;
+- nhiều người cùng muốn bán;
+- giá trị tài sản bảo đảm giảm;
+- nguồn vốn trở nên khan hiếm.
 
-- volatility tăng;
-- dealer giảm inventory;
-- mọi người cùng muốn bán;
-- collateral value giảm.
+Vì vậy phải phân biệt **thanh khoản của tài sản** với **thanh khoản của hệ thống tài chính**.
 
-Do đó liquidity phụ thuộc cả tài sản và hệ thống trung gian.
-
-# Phần V — Money-market funds và cash management
+# Phần V — Quỹ thị trường tiền tệ và quản lý tiền mặt
 
 ## 12. Quỹ thị trường tiền tệ
 
-Money-market fund (MMF) đầu tư vào tài sản ngắn hạn như Treasury bills, repo hoặc giấy tờ có độ an toàn cao.
+Quỹ thị trường tiền tệ (Money Market Fund, MMF) đầu tư vào tài sản ngắn hạn như tín phiếu kho bạc, giao dịch repo và giấy tờ có độ an toàn tương đối cao.
 
-Dòng tiền vào/ra MMF có thể thay đổi nhu cầu đối với repo và short-term government debt.
+Dòng tiền chuyển giữa tiền gửi ngân hàng, MMF, tín phiếu kho bạc và các công cụ repo có thể làm thay đổi phân bố thanh khoản trong hệ thống.
 
-## 13. Treasury cash balance
+## 13. Tài khoản tiền của chính phủ
 
-Tài khoản tiền của chính phủ tại ngân hàng trung ương thường được gọi là Treasury General Account (TGA) ở Mỹ.
+Tại Mỹ, tài khoản tiền của Bộ Tài chính tại ngân hàng trung ương thường được gọi là **Treasury General Account (TGA)**.
 
-Khi chính phủ tăng mạnh số dư này, reserves của hệ thống ngân hàng có thể giảm nếu các yếu tố khác giữ nguyên.
+Nếu chính phủ tăng mạnh số dư tại đây, dự trữ của hệ thống ngân hàng có thể giảm nếu các yếu tố khác giữ nguyên. Khi chính phủ chi tiêu từ tài khoản, dự trữ có thể quay lại hệ thống.
 
-Khi chính phủ chi tiêu từ tài khoản, reserves có thể quay lại hệ thống.
+## 14. Công cụ repo đảo chiều
 
-## 14. Reverse repo facility
+Công cụ repo đảo chiều (reverse repo facility) cho phép các tổ chức đủ điều kiện gửi tiền mặt đổi lấy tài sản bảo đảm.
 
-Reverse repo facility có thể hấp thụ tiền mặt từ các tổ chức đủ điều kiện đổi lấy tài sản bảo đảm.
+Dòng tiền giữa MMF, công cụ repo đảo chiều, tín phiếu kho bạc và tiền gửi có thể thay đổi mạnh mà không có nghĩa nền kinh tế “thiếu tiền” theo nghĩa đơn giản.
 
-Dòng tiền giữa MMF, RRP, Treasury bills và deposits có thể thay đổi phân bổ thanh khoản ngắn hạn mà không đồng nghĩa nền kinh tế “thiếu tiền” theo nghĩa đơn giản.
+# Phần VI — Phát hành nợ chính phủ và phần bù kỳ hạn
 
-# Phần VI — Treasury issuance và term premium
+## 15. Cơ cấu phát hành nợ
 
-## 15. Chính phủ phát hành nợ
+Chính phủ có thể tài trợ bằng tín phiếu ngắn hạn, trái phiếu trung hạn và trái phiếu dài hạn. Cơ cấu kỳ hạn quyết định lượng **rủi ro thời hạn (duration)** mà khu vực tư nhân phải hấp thụ.
 
-Nhu cầu tài trợ của chính phủ có thể được đáp ứng qua bills, notes và bonds.
+## 16. Phần bù kỳ hạn
 
-Cơ cấu kỳ hạn phát hành ảnh hưởng lượng duration mà khu vực tư nhân phải nắm.
+**Phần bù kỳ hạn (term premium)** là phần lợi suất nhà đầu tư yêu cầu để chịu rủi ro nắm trái phiếu dài hạn ngoài kỳ vọng lãi suất ngắn hạn tương lai.
 
-## 16. Term premium
-
-Nếu thị trường phải hấp thụ nhiều duration hơn trong lúc uncertainty cao, term premium có thể tăng.
+Một cơ chế có thể là:
 
 ```text
-Long-Term Issuance ↑
-+ Demand không tăng tương ứng
-→ Term Premium ↑
-→ Long Yield ↑
+Phát hành dài hạn ↑
++ nhu cầu không tăng tương ứng
+→ phần bù kỳ hạn ↑
+→ lợi suất dài hạn ↑
 ```
 
-Điều này có thể thắt financial conditions dù policy rate không đổi.
+Khi đó điều kiện tài chính có thể thắt chặt dù ngân hàng trung ương không nâng lãi suất chính sách.
 
-# Phần VII — Bank capital và bank liquidity
+# Phần VII — Vốn và thanh khoản ngân hàng
 
-## 17. Capital và liquidity khác nhau
+## 17. Vốn và thanh khoản khác nhau
 
-**Vốn (capital)** hấp thụ lỗ.
+**Vốn (capital)** là lớp hấp thụ tổn thất.
 
-**Thanh khoản (liquidity)** giúp đáp ứng dòng tiền cần chi ngay.
+**Thanh khoản (liquidity)** là khả năng đáp ứng nghĩa vụ tiền mặt đúng thời điểm.
 
-Một ngân hàng có vốn cao vẫn có thể thất bại nếu deposit run quá nhanh và tài sản không bán được.
+Một ngân hàng có vốn kế toán tốt vẫn có thể gặp khủng hoảng nếu dòng tiền rút quá nhanh và tài sản không thể chuyển thành tiền kịp thời.
 
-Ngược lại, một ngân hàng có thanh khoản tạm thời nhưng tài sản mất giá lớn hơn equity có thể về bản chất mất khả năng thanh toán.
+## 18. Khả năng thanh toán dài hạn
 
-## 18. Solvency
+**Khả năng thanh toán dài hạn (solvency)** hỏi liệu giá trị kinh tế của tài sản có đủ lớn so với nghĩa vụ hay không.
 
-**Khả năng thanh toán dài hạn (solvency)** hỏi giá trị kinh tế của tài sản có đủ lớn so với nghĩa vụ hay không.
+Hỗ trợ thanh khoản có thể giải quyết vấn đề thời điểm dòng tiền, nhưng không tự động sửa một bảng cân đối đã mất khả năng thanh toán.
 
-Liquidity support không tự động sửa insolvency.
+## 19. Dòng tiền gửi rút ra nhanh
 
-## 19. Deposit flight
-
-Tiền gửi có thể rút nhanh do:
+Tiền gửi có thể rời ngân hàng vì:
 
 - mất niềm tin;
-- uninsured concentration;
-- lãi suất sản phẩm khác hấp dẫn hơn;
-- tin tức lan nhanh qua digital banking.
+- khách hàng gửi tiền lớn tập trung;
+- sản phẩm khác có lãi suất hấp dẫn hơn;
+- tin tức lan nhanh qua ngân hàng số.
 
-Tốc độ rút tiền hiện đại có thể nhanh hơn mô hình bank run truyền thống.
+Tốc độ rút tiền hiện đại có thể lớn hơn nhiều so với mô hình khủng hoảng ngân hàng truyền thống.
 
-## 20. Funding concentration
+## 20. Rủi ro tập trung nguồn vốn
 
-Ngân hàng có hàng triệu retail deposit nhỏ khác hẳn ngân hàng phụ thuộc vài khách hàng doanh nghiệp lớn.
+Ngân hàng có hàng triệu khoản tiền gửi nhỏ khác hẳn ngân hàng phụ thuộc vài khách hàng doanh nghiệp lớn. **Tập trung nguồn vốn (funding concentration)** là một nguồn rủi ro độc lập.
 
-Funding concentration là một risk factor độc lập.
+# Phần VIII — Lệch kỳ hạn trên bảng cân đối ngân hàng
 
-# Phần VIII — Duration mismatch trong ngân hàng
+## 21. Tài sản dài hạn, nguồn vốn ngắn hạn
 
-## 21. Tài sản dài hạn, nghĩa vụ ngắn hạn
-
-Một cấu trúc điển hình:
+Một cấu trúc thường gặp:
 
 ```text
-Liability:
-deposits / short-term funding
+Nguồn vốn:
+tiền gửi / vay ngắn hạn
 
-Asset:
-long-duration bonds / mortgages
+Tài sản:
+trái phiếu dài hạn / khoản thế chấp dài hạn
 ```
 
-Khi lãi suất tăng, giá thị trường của tài sản dài hạn giảm.
+Khi lãi suất tăng, giá thị trường của tài sản dài hạn giảm. Nếu người gửi tiền ổn định, ngân hàng có thể tiếp tục nắm giữ. Nếu tiền gửi rút nhanh, ngân hàng có thể buộc phải bán và hiện thực hóa lỗ.
 
-Nếu tiền gửi ổn định, ngân hàng có thể giữ tài sản tới đáo hạn. Nếu người gửi rút nhanh, ngân hàng có thể phải bán và hiện thực hóa lỗ.
+## 22. Từ lỗ chưa thực hiện tới lỗ thực hiện
 
-## 22. Mark-to-market loss và forced realization
-
-Lỗ đánh dấu theo thị trường chưa chắc làm mất tiền mặt ngay.
-
-Nhưng khi tài sản buộc phải bán:
+Lỗ đánh dấu theo thị trường chưa nhất thiết làm mất tiền mặt ngay. Nhưng khi tài sản phải bán:
 
 ```text
-Unrealized Loss
-→ Realized Loss
-→ Capital ↓
+Lỗ chưa thực hiện
+→ lỗ thực hiện
+→ vốn giảm
 ```
 
-Đây là cầu nối từ duration risk sang liquidity và solvency risk.
+Đây là cầu nối giữa rủi ro duration, thanh khoản và khả năng thanh toán.
 
-# Phần IX — Credit creation và financial accelerator
+# Phần IX — Tạo tín dụng và cơ chế khuếch đại tài chính
 
-## 23. Credit không chỉ phụ thuộc policy rate
+## 23. Tín dụng không chỉ phụ thuộc lãi suất chính sách
 
 Ngân hàng quyết định cho vay dựa trên:
 
-- capital;
-- funding;
-- collateral;
-- expected loss;
-- regulation;
-- risk appetite.
+- vốn;
+- nguồn vốn;
+- tài sản bảo đảm;
+- tổn thất kỳ vọng;
+- quy định;
+- khẩu vị rủi ro.
 
-Do đó policy rate giảm không bảo đảm credit tăng ngay.
+Do đó giảm lãi suất không bảo đảm tín dụng tăng ngay.
 
-## 24. Financial accelerator
+## 24. Cơ chế khuếch đại tài chính
+
+**Cơ chế khuếch đại tài chính (financial accelerator)** mô tả vòng phản hồi:
 
 ```text
-Asset Price ↓
-→ Collateral ↓
-→ Lending Standards Tighten
-→ Credit ↓
-→ Investment / Consumption ↓
-→ Earnings ↓
-→ Credit Quality ↓
+Giá tài sản ↓
+→ giá trị tài sản bảo đảm ↓
+→ tiêu chuẩn cho vay chặt hơn
+→ tín dụng ↓
+→ đầu tư / tiêu dùng ↓
+→ lợi nhuận doanh nghiệp ↓
+→ chất lượng tín dụng ↓
 ```
 
-Vòng này có thể biến stress tài chính thành suy thoái thực.
+Một cú sốc tài chính vì vậy có thể truyền sang nền kinh tế thực.
 
-# Phần X — Non-bank financial institutions
+# Phần X — Tổ chức tài chính phi ngân hàng
 
 ## 25. NBFI
 
-NBFI gồm funds, insurers, pension funds, finance companies và các tổ chức tài chính không phải ngân hàng truyền thống.
+**Tổ chức tài chính phi ngân hàng (Non-Bank Financial Institution, NBFI)** gồm quỹ đầu tư, công ty bảo hiểm, quỹ hưu trí, công ty tài chính và các tổ chức khác ngoài ngân hàng truyền thống.
 
-Rủi ro tín dụng hoặc đòn bẩy có thể chuyển khỏi bank balance sheet sang hệ thống này.
+Rủi ro tín dụng hoặc đòn bẩy có thể chuyển khỏi bảng cân đối ngân hàng sang khu vực này thay vì biến mất.
 
-## 26. Leverage ẩn
+## 26. Đòn bẩy ẩn
 
-Derivatives, repo hoặc structured products có thể tạo exposure lớn hơn capital bỏ ra.
+Phái sinh, repo và sản phẩm cấu trúc có thể tạo mức phơi nhiễm lớn hơn số vốn ban đầu. Khi biến động tăng, yêu cầu bổ sung ký quỹ có thể buộc tổ chức bán tài sản khác để lấy tiền mặt.
 
-Khi volatility tăng, margin call có thể buộc các tổ chức bán tài sản khác để lấy cash.
+# Phần XI — Hệ thống nguồn vốn USD toàn cầu
 
-# Phần XI — Global dollar system
+## 27. Nhu cầu USD ngoài nước Mỹ
 
-## 27. USD funding ngoài Mỹ
+Doanh nghiệp và ngân hàng ngoài Mỹ có thể vay USD để tài trợ thương mại, đầu tư hoặc tài sản bằng USD.
 
-Doanh nghiệp và ngân hàng ngoài Mỹ vay USD để tài trợ thương mại hoặc tài sản.
-
-Khi USD funding khan hiếm:
+Khi nguồn vốn USD trở nên khan hiếm:
 
 ```text
-USD Funding Cost ↑
-→ FX Hedge Cost ↑
-→ Deleveraging ↑
-→ Global Credit Tightens
+Chi phí vốn USD ↑
+→ chi phí phòng vệ tỷ giá ↑
+→ giảm đòn bẩy ↑
+→ tín dụng toàn cầu thắt chặt
 ```
 
-## 28. Cross-currency basis
+## 28. Cơ sở hoán đổi tiền tệ
 
-Cross-currency basis phản ánh chi phí hoặc mất cân bằng khi đổi funding giữa các đồng tiền qua swap.
+**Cơ sở hoán đổi tiền tệ (cross-currency basis)** phản ánh phần chi phí hoặc mất cân bằng khi đổi nguồn vốn giữa hai đồng tiền thông qua hoán đổi.
 
-Basis căng có thể là tín hiệu nhu cầu USD lớn hơn bình thường.
+Mức cơ sở căng bất thường có thể cho thấy nhu cầu USD hoặc giới hạn bảng cân đối của trung gian đang tăng.
 
 # Phần XII — QE và QT
 
-## 29. QE
+## 29. Nới lỏng định lượng
 
-Nới lỏng định lượng (Quantitative Easing, QE) thường là ngân hàng trung ương mua tài sản dài hạn và tạo reserves.
+Nới lỏng định lượng (QE) thường là việc ngân hàng trung ương mua tài sản dài hạn và tạo thêm dự trữ ngân hàng.
 
 Các kênh tác động có thể gồm:
 
-- giảm duration supply cho khu vực tư nhân;
-- giảm term premium;
-- hỗ trợ market functioning;
-- portfolio rebalancing.
+- giảm lượng duration khu vực tư nhân phải nắm;
+- giảm phần bù kỳ hạn;
+- hỗ trợ khả năng vận hành của thị trường;
+- thúc đẩy tái cân bằng danh mục.
 
-QE không tương đương phát tiền trực tiếp cho hộ gia đình.
+QE không đồng nghĩa trực tiếp với việc phát tiền mặt cho hộ gia đình.
 
-## 30. QT
+## 30. Thắt chặt định lượng
 
-Thắt chặt định lượng (Quantitative Tightening, QT) làm balance sheet ngân hàng trung ương giảm khi tài sản đáo hạn hoặc được bán.
+Thắt chặt định lượng (QT) làm bảng cân đối ngân hàng trung ương giảm khi tài sản đáo hạn mà không được tái đầu tư hoặc được bán.
 
-Ảnh hưởng phụ thuộc:
+Ảnh hưởng thực tế phụ thuộc tốc độ QT, số dư tiền của chính phủ, dòng tiền khỏi công cụ repo đảo chiều, nhu cầu dự trữ và cơ cấu phát hành nợ.
 
-- tốc độ QT;
-- TGA;
-- RRP;
-- reserve demand;
-- Treasury issuance.
+## 31. Dự trữ dồi dào không bảo đảm mọi thị trường đều thanh khoản
 
-## 31. Reserves dồi dào nhưng liquidity vẫn có thể kém
+Căng thẳng có thể nằm ở:
 
-Nhiều reserves không bảo đảm mọi market đều liquid.
+- chất lượng tài sản bảo đảm;
+- khả năng trung gian của nhà tạo lập;
+- một thị trường nguồn vốn cụ thể;
+- lo ngại đối tác;
+- giới hạn bảng cân đối.
 
-Stress có thể nằm ở:
+Do đó không nên dùng một chỉ số dự trữ duy nhất để kết luận toàn hệ thống đang “thừa thanh khoản”.
 
-- collateral;
-- dealer capacity;
-- specific funding market;
-- counterparty concern.
+# Phần XIII — Công cụ hỗ trợ khẩn cấp
 
-# Phần XIII — Emergency facilities
+## 32. Người cho vay cuối cùng
 
-## 32. Lender of last resort
+Ngân hàng trung ương có thể đóng vai trò **người cho vay cuối cùng (lender of last resort)** bằng cách cung cấp thanh khoản tạm thời cho tổ chức đủ điều kiện dựa trên tài sản bảo đảm.
 
-Ngân hàng trung ương có thể cung cấp thanh khoản tạm thời chống lại collateral đủ chuẩn.
+Mục tiêu là ngăn thiếu tiền mặt ngắn hạn biến thành bán tháo tài sản không cần thiết.
 
-Mục tiêu là giảm forced selling do thiếu cash.
-
-## 33. Liquidity facility không phải recapitalization
-
-Cho vay thanh khoản khác với bơm vốn hấp thụ lỗ.
+## 33. Hỗ trợ thanh khoản khác tái cấp vốn chủ sở hữu
 
 ```text
-Liquidity Facility
-→ giải quyết timing/funding
+Hỗ trợ thanh khoản
+→ giải quyết vấn đề thời điểm và nguồn vốn
 
-Recapitalization
-→ bổ sung loss-absorbing capital
+Tái cấp vốn chủ sở hữu
+→ bổ sung lớp vốn hấp thụ tổn thất
 ```
 
-Không nên gọi mọi hỗ trợ là “QE” hoặc “bailout”.
+Không nên gọi mọi hình thức hỗ trợ là QE hoặc “cứu trợ”.
 
-# Phần XIV — Các loại khủng hoảng
+# Phần XIV — Các dạng khủng hoảng
 
-## 34. Banking crisis
+## 34. Khủng hoảng ngân hàng
 
 Có thể bắt đầu từ:
 
-- credit loss;
-- duration loss;
-- funding run;
-- fraud;
-- property crash.
+- tổn thất tín dụng;
+- tổn thất duration;
+- rút tiền gửi;
+- gian lận;
+- bất động sản giảm mạnh;
+- mất niềm tin vào khả năng thanh toán.
 
-Cơ chế và policy response phụ thuộc nguồn gốc.
+## 35. Khủng hoảng tín dụng
 
-## 35. Sovereign crisis
+Chênh lệch tín dụng mở rộng, thị trường phát hành đóng lại và doanh nghiệp yếu không thể tái cấp vốn. Tác động thường lan qua đầu tư, việc làm và lợi nhuận.
 
-Nợ chính phủ có thể trở thành vấn đề khi:
+## 36. Khủng hoảng tiền tệ
 
-- debt service tăng nhanh;
-- investor demand giảm;
-- debt bằng foreign currency;
-- growth yếu;
-- fiscal credibility xấu.
+Một nền kinh tế dễ tổn thương khi có nợ ngoại tệ lớn, dự trữ thấp, thâm hụt đối ngoại và niềm tin chính sách yếu. Đồng tiền mất giá có thể làm gánh nợ ngoại tệ tăng thêm.
 
-## 36. Currency crisis
+## 37. Khủng hoảng chủ quyền
 
-FX shock có thể truyền qua:
+Nợ công mất bền vững có thể kéo lợi suất tăng, làm hệ thống ngân hàng yếu nếu ngân hàng nắm nhiều trái phiếu chính phủ. Đây là cơ chế liên kết giữa nhà nước và ngân hàng.
 
-```text
-Currency ↓
-→ Imported Inflation ↑
-→ FX Debt Burden ↑
-→ Rate Pressure ↑
-→ Growth ↓
-```
+# Phần XV — Khung phân tích căng thẳng hệ thống
 
-## 37. Inflation crisis
-
-Nếu inflation expectations mất neo, ngân hàng trung ương có thể phải giữ policy chặt dù tăng trưởng yếu.
-
-Đây là trade-off khác hoàn toàn liquidity crisis.
-
-# Phần XV — Fiscal dominance
-
-## 38. Khi monetary và fiscal bắt đầu xung đột
-
-Nếu chi phí tài trợ chính phủ tăng mạnh, tightening monetary có thể làm debt service tăng.
-
-**Fiscal dominance** mô tả tình huống ràng buộc tài khóa làm khả năng ưu tiên ổn định giá của ngân hàng trung ương bị hạn chế.
-
-Không phải mọi mức nợ cao đều đồng nghĩa fiscal dominance.
-
-# Phần XVI — Market indicators
-
-## 39. Dashboard thanh khoản
-
-Có thể theo dõi:
+Khi xuất hiện một sự kiện tài chính, hãy đi theo thứ tự:
 
 ```text
-Policy Rate
-Repo Rates
-SOFR / Money-Market Rates
-Bank Reserves
-TGA
-RRP
-Treasury Issuance
-Credit Spreads
-Cross-Currency Basis
-Bank Funding Spreads
-USD
+1. Tổn thất nằm ở tài sản nào?
+2. Ai đang nắm tài sản đó?
+3. Họ dùng bao nhiêu đòn bẩy?
+4. Nguồn vốn của họ có ổn định không?
+5. Tài sản bảo đảm có bị giảm giá không?
+6. Có yêu cầu bổ sung ký quỹ không?
+7. Ai có thể cung cấp thanh khoản?
+8. Vấn đề là thiếu thanh khoản hay mất khả năng thanh toán?
+9. Cú sốc có truyền sang tín dụng thực không?
+10. Chính sách xử lý phần nào của vấn đề?
 ```
 
-## 40. Dashboard stress
+## 38. Bảng theo dõi thanh khoản
+
+Một bảng theo dõi thực tế có thể gồm:
+
+- lãi suất qua đêm và repo;
+- chênh lệch tín dụng;
+- biến động trái phiếu và cổ phiếu;
+- mức cơ sở hoán đổi tiền tệ;
+- phát hành nợ chính phủ;
+- số dư tiền của chính phủ;
+- dòng tiền quỹ thị trường tiền tệ;
+- tiêu chuẩn cho vay ngân hàng;
+- mức sử dụng công cụ khẩn cấp;
+- độ sâu thị trường và chênh lệch giá mua–bán.
+
+Không một chỉ số nào đủ để kết luận “thanh khoản tốt” hay “thanh khoản xấu”.
+
+## 39. Cầu nối sang tài sản đầu tư
 
 ```text
-Bid-Ask Spread
-Market Depth
-Haircut
-Margin Requirement
-Volatility
-Dealer Inventory
-Funding Spread
-Credit Default Swap
+Nguồn vốn căng
+→ đòn bẩy giảm
+→ thanh khoản thị trường giảm
+→ chênh lệch tín dụng tăng
+→ doanh nghiệp tái cấp vốn khó hơn
+→ lợi nhuận / đầu tư giảm
+→ định giá tài sản thay đổi
 ```
 
-Không một chỉ số đơn lẻ đủ để kết luận hệ thống stress.
+Với cổ phiếu, tác động đi qua cả lợi nhuận và hệ số định giá. Với trái phiếu doanh nghiệp, tác động đi trực tiếp qua chênh lệch tín dụng và khả năng tái cấp vốn. Với FX, tác động phụ thuộc nhu cầu tiền tệ an toàn và cấu trúc nợ ngoại tệ.
 
-# Phần XVII — Chuỗi truyền dẫn khủng hoảng
+## 40. Kết luận
 
-## 41. Cú sốc funding
+Cơ chế truyền dẫn khủng hoảng thường không bắt đầu bằng câu hỏi “cung tiền tăng hay giảm”, mà bằng chuỗi:
 
 ```text
-Funding Cost ↑
-→ Leverage ↓
-→ Asset Sales ↑
-→ Price ↓
-→ Collateral ↓
-→ Funding Capacity ↓
+Bảng cân đối
+→ nguồn vốn
+→ tài sản bảo đảm
+→ ký quỹ
+→ bán cưỡng bức
+→ thanh khoản
+→ tín dụng
+→ kinh tế thực
 ```
 
-## 42. Cú sốc ngân hàng
-
-```text
-Asset Loss
-→ Capital Concern
-→ Deposit Outflow
-→ Liquidity Need
-→ Asset Sale / Central-Bank Facility
-→ Credit Tightening
-→ Real Economy
-```
-
-## 43. Cú sốc USD
-
-```text
-USD ↑
-→ Foreign-Currency Debt Burden ↑
-→ Hedge Cost ↑
-→ Deleveraging
-→ EM / Global Credit Tightening
-```
-
-# Phần XVIII — Cách dùng trong đầu tư
-
-## 44. Giá của tiền và lượng thanh khoản là hai lớp khác nhau
-
-Policy rate là **giá của funding ngắn hạn**.
-
-Nhưng điều kiện tài chính còn phụ thuộc:
-
-- lượng funding có sẵn;
-- collateral;
-- distribution của liquidity;
-- willingness to lend.
-
-## 45. Đừng nhầm reserves với broad liquidity
-
-Reserves cao không đồng nghĩa mọi doanh nghiệp hoặc hộ gia đình dễ vay.
-
-Kênh truyền dẫn qua bank capital, credit standards và collateral vẫn rất quan trọng.
-
-## 46. Đừng nhầm central-bank liquidity với solvency repair
-
-Cho vay emergency có thể cho một tổ chức thêm thời gian nhưng không loại bỏ economic loss nếu tài sản thực sự không đủ giá trị.
-
-## 47. Đọc crisis theo bảng cân đối
-
-Khi có stress, hãy hỏi:
-
-```text
-Ai đang thiếu cash?
-Ai đang thiếu capital?
-Ai đang giữ collateral nào?
-Ai có maturity mismatch?
-Ai có currency mismatch?
-Ai là forced seller?
-Ai có thể cung cấp liquidity?
-```
-
-## 48. Reverse stress test
-
-Thay vì chỉ hỏi “asset giảm 20% thì sao?”, hãy hỏi:
-
-```text
-Điều gì có thể buộc một tổ chức bán tài sản tốt ở đáy?
-```
-
-Câu trả lời thường liên quan margin, funding, collateral hoặc redemption.
-
-# Phần XIX — Checklist nghiên cứu
-
-## 49. Trước khi kết luận “liquidity đang tốt”
-
-Kiểm tra:
-
-```text
-Reserves
-Bank Funding
-Repo
-Collateral
-Dealer Capacity
-Credit Spreads
-Lending Standards
-FX Funding
-Market Depth
-```
-
-## 50. Trước khi kết luận “central bank đã cứu hệ thống”
-
-Hỏi:
-
-```text
-Facility giải quyết liquidity hay capital?
-Collateral được định giá thế nào?
-Ai chịu ultimate credit loss?
-Credit creation có phục hồi không?
-```
-
-## Kết luận
-
-Hệ thống tiền tệ không thể được hiểu bằng một câu “ngân hàng trung ương bơm tiền” hay “liquidity tăng”.
-
-Cần tách rõ:
-
-```text
-Money
-Reserves
-Deposits
-Funding
-Collateral
-Capital
-Credit
-Market Liquidity
-```
-
-Khủng hoảng thường xuất hiện khi một trong các mắt xích này làm các tổ chức phải bán tài sản, giảm tín dụng hoặc thay đổi hành vi theo cách khuếch đại cú sốc ban đầu.
+Khi hiểu chuỗi này, các thuật ngữ như repo, haircut, QE, QT hay cơ sở hoán đổi chỉ còn là tên của các mắt xích cụ thể, không phải những từ tiếng Anh phải ghi nhớ mà chưa hiểu bản chất.
