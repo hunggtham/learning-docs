@@ -1,176 +1,479 @@
 # 06 — Cash, Money Markets, Structured Products và Private Markets
 
-> Khi nói về asset classes, người mới thường nghĩ ngay tới stock, bond, gold và crypto. Nhưng trong một portfolio thật, **cash-like instruments**, short-term funding instruments, structured products và private assets cũng có vai trò quan trọng. Chapter này giải thích chúng theo bản chất kinh tế thay vì theo tên thương mại.
+Khi nói asset classes, người mới thường nghĩ tới stocks, bonds, gold và crypto. Nhưng portfolio thực tế còn chứa cash-like instruments, money-market claims, repo, structured notes và private assets. Những sản phẩm này thường trông “ổn định” hơn vì maturity ngắn hoặc price ít cập nhật, nhưng stability bề mặt không có nghĩa không có credit, liquidity, counterparty hay embedded-option risk.
 
-## 1. Cash không phải là “không đầu tư”
+Chapter này tập trung vào **economic substance**: ai nợ ai, cash flow đến từ đâu, collateral là gì, liquidity thực sự ra sao và yield cao đang bù cho risk nào.
 
-Cash có expected return thấp hơn risky assets trong dài hạn, nhưng đổi lại nó cung cấp liquidity, optionality và stability. Với investor có liability ngắn hạn, cash có thể là asset phù hợp nhất dù return danh nghĩa thấp.
+# Phần I — Cash và Money Markets
 
-Cash còn đóng vai trò “dry powder”, nhưng cần cẩn thận với market timing. Giữ cash có chủ đích vì liability hoặc risk budget khác hoàn toàn với giữ cash vì sợ hãi sau khi market đã giảm mạnh.
+## 1. Cash không phải “không đầu tư”
 
-## 2. Deposit, Savings Account và Deposit Insurance
+Cash cung cấp liquidity, optionality và principal stability tương đối. Với liability ngắn hạn, cash có thể là asset hợp lý nhất dù expected real return thấp.
 
-Bank deposit về bản chất là khoản nợ của ngân hàng đối với depositor. Deposit thường có nominal principal ổn định nhưng vẫn mang inflation risk và institutional risk. Deposit insurance giảm một phần credit risk nhưng có coverage limit và jurisdiction-specific rules.
+Holding cash vì goal/liability khác holding cash do panic sau crash. Purpose matters.
 
-Investor cần phân biệt ngân hàng đang giữ tiền với broker đang custody securities. Đây là hai legal relationship khác nhau.
+## 2. Currency cash cũng có risk
 
-## 3. Money Market Fund
+Cash bằng KRW ổn định nominal theo KRW nhưng chịu inflation. USD cash của Korean investor thêm USD/KRW risk khi đo wealth bằng KRW.
 
-**Money Market Fund (MMF)** đầu tư vào short-duration, high-quality instruments như Treasury bills, commercial paper hoặc repo tùy loại quỹ. MMF thường được sử dụng để quản lý cash nhưng không nên mặc định nó giống insured bank deposit.
+“Cash” luôn phải nói rõ currency và institution.
 
-NAV stability, liquidity rules, underlying credit quality và fund structure đều quan trọng.
+## 3. Bank deposit là liability của bank
 
-## 4. Treasury Bills
+Deposit là claim đối với bank. Deposit insurance có thể giảm credit risk trong giới hạn luật/jurisdiction, nhưng không nên assume mọi balance đều insured.
 
-Treasury bill là government debt ngắn hạn, thường phát hành dưới par và đáo hạn ở par hoặc theo discount yield convention tùy thị trường.
+Broker custody account và bank deposit có legal structure khác nhau.
 
-Short maturity khiến duration risk thấp hơn long bond, nhưng reinvestment risk lại cao hơn: khi bill đáo hạn, rate mới có thể thấp hơn đáng kể.
+## 4. Demand deposit vs time deposit
 
-## 5. Commercial Paper
+Demand deposits có liquidity cao. Time deposits đổi liquidity lấy yield và có early-withdrawal conditions.
 
-**Commercial Paper (CP)** là unsecured short-term debt do doanh nghiệp phát hành. Yield cao hơn government bill thường phản ánh credit và liquidity risk cao hơn.
+Rate comparison phải account penalty, insurance coverage, tax và reinvestment opportunity.
 
-Một lỗi phổ biến là nhìn maturity ngắn rồi nghĩ risk thấp. Credit event có thể xảy ra trước maturity, vì vậy short duration không đồng nghĩa zero credit risk.
+## 5. Money Market Fund
 
-## 6. Certificate of Deposit và Short-term Bank Funding
+MMF invests short-duration instruments. Types can differ: government-only, Treasury, prime/credit or jurisdiction-specific structures.
 
-Certificate of Deposit, negotiable CD và các công cụ funding khác của ngân hàng nằm giữa deposit và marketable debt tùy cấu trúc. Investor cần hiểu issuer, maturity, liquidity và legal claim thay vì chỉ nhìn headline yield.
+MMF is fund share, not automatically insured deposit. Underlying credit, liquidity rules, NAV mechanics and sponsor structure matter.
 
-## 7. Repo như một Cash Instrument có Collateral
+## 6. Treasury Bills
 
-Repo là giao dịch vay ngắn hạn có collateral. Với investor chuyên nghiệp, repo market là phần cốt lõi của liquidity system.
+T-bills are short-term sovereign obligations. They often trade at discount to face value or quote yields under market conventions.
 
-Repo rate, collateral quality và haircut ảnh hưởng trực tiếp tới funding conditions. Điều này liên kết với domain Economics về monetary plumbing.
+Short maturity means low duration, not zero price risk. Selling before maturity can still create small gain/loss.
 
-## 8. Cash Ladder
+## 7. Discount yield vs investment yield intuition
 
-Một **cash ladder** chia tiền cần sử dụng trong tương lai thành các maturity bucket. Ví dụ tiền cần trong 3 tháng, 6 tháng và 12 tháng có thể được giữ trong các instruments có maturity tương ứng.
+Money-market instruments may use quote conventions different from bond yield. Discount yield can divide discount by face value rather than purchase price and use 360-day basis.
 
-Đây là cách đơn giản để giảm duration mismatch và reinvestment uncertainty.
+Do not compare quoted yields across products without understanding convention.
 
-## 9. Cash Drag
+## 8. Reinvestment risk
 
-Cash giúp giảm volatility nhưng cũng có opportunity cost. Nếu long-term portfolio giữ quá nhiều cash trong nhiều năm, compound return có thể thấp hơn đáng kể.
+T-bill held to maturity returns principal, but future rate may be much lower. For a one-year cash need, rolling one-month bills exposes repeated reinvestment uncertainty.
 
-Vì vậy câu hỏi không phải “cash tốt hay xấu” mà là “cash phục vụ liability, optionality hay tactical view nào?”.
+Match maturity with liability when possible.
 
-## 10. Structured Product là gì?
+## 9. Commercial Paper
 
-**Structured Product** kết hợp bond/deposit-like component với derivative component để tạo payoff tùy chỉnh. Product có thể quảng cáo coupon hấp dẫn, principal protection có điều kiện hoặc payoff liên quan equity index, FX, rates hay commodities.
+CP is short-term unsecured corporate debt. Yield spread over government bills compensates credit/liquidity risk.
 
-Điểm quan trọng là coupon cao không tự sinh ra. Nó thường là compensation cho việc investor đang bán một option hoặc chịu một tail risk nào đó.
+Short maturity does not remove default risk; company can fail before maturity.
 
-## 11. Autocallable / ELS logic
+## 10. Certificate of Deposit
 
-Một autocallable có thể trả coupon nếu underlying không giảm quá mức và được early redeemed nếu đạt observation condition. Nhưng downside có thể tăng nhanh khi barrier bị phá hoặc underlying giảm sâu.
+Tradable CDs are bank liabilities with market value. Their risk depends bank credit, deposit-insurance treatment, maturity and liquidity.
 
-Economic intuition thường là investor đang nhận premium để bán downside convexity. Vì vậy yield cao đi cùng path-dependent risk.
+A high yield may simply reflect higher issuer/funding risk.
 
-## 12. Principal Protection cần đọc điều kiện
+## 11. Bankers' acceptances and other short claims
 
-Tên “principal protected” chỉ có ý nghĩa nếu hiểu issuer credit risk, maturity condition, early redemption condition và protection mechanics. Một note được bảo vệ principal tại maturity vẫn có thể có mark-to-market loss lớn trước maturity hoặc chịu issuer default risk.
+Some money markets include trade-finance or bank-guaranteed instruments. Names vary across jurisdictions.
 
-## 13. ETN và Issuer Credit Risk
+Always identify ultimate obligor/guarantor and secondary-market depth.
 
-ETN là unsecured debt của issuer có payoff liên kết một index hoặc strategy. Khác ETF nắm underlying pool hoặc derivative collateralized structure, ETN thêm trực tiếp issuer credit exposure.
+## 12. Repo
 
-Vì vậy ETN analysis phải xem cả exposure lẫn issuer.
+A **repurchase agreement** economically resembles collateralized short-term lending: one party sells security and agrees to repurchase later.
 
-## 14. Private Equity
+Collateral reduces but does not eliminate counterparty risk.
 
-Private equity đầu tư vào companies không niêm yết hoặc mua lại public company rồi đưa private. Return kỳ vọng cao thường đi cùng illiquidity, leverage, governance intervention và long holding period.
+## 13. Repo rate
 
-Reported NAV trong private assets thường smoothed hơn public market price vì valuation không mark-to-market mỗi giây. Volatility nhìn thấp hơn không có nghĩa economic risk thấp hơn.
+Repo rate is funding rate against specific collateral. It can diverge across collateral types and market stress.
 
-## 15. Venture Capital
+Repo is central to dealer financing and monetary plumbing.
 
-Venture capital có return distribution cực kỳ skewed. Một số ít winners có thể tạo phần lớn return của fund. Failure rate cao là đặc tính cấu trúc chứ không phải exception.
+## 14. Haircut
 
-Vì vậy diversification trong venture cần được hiểu khác diversification trong public equities.
+Haircut means lender provides less cash than collateral market value. A 5% haircut on 100 collateral supports 95 cash.
 
-## 16. Private Credit
+Higher volatility/credit concern raises haircut, forcing borrower to post more collateral or deleverage.
 
-Private credit cung cấp loans ngoài public bond market. Yield cao có thể đến từ illiquidity premium, borrower complexity, covenant package hoặc higher credit risk.
+## 15. General collateral vs special collateral
 
-Investor cần xem leverage, seniority, collateral, covenant, default/recovery assumptions và fund liquidity terms.
+Some securities are in high borrowing demand and trade “special” in repo, making funding economics different from generic collateral.
 
-## 17. Real Estate Private Funds
+This shows collateral has convenience/liquidity value beyond coupon.
 
-Private real estate funds thường có leverage, appraisal-based NAV, redemption limits và asset-specific operating risk. Office, logistics, residential, data center và hotel có economics rất khác nhau.
+## 16. Secured does not mean risk-free
 
-Không nên coi “real estate” là một factor duy nhất.
+Collateral price can gap, legal enforcement can be delayed and counterparty default can occur. Margining/haircuts reduce expected loss but do not eliminate operational/legal risk.
 
-## 18. Infrastructure
+## 17. Money-market yield curve
 
-Infrastructure có thể bao gồm utilities, toll roads, airports, pipelines, renewable projects, data centers và digital infrastructure. Cash flow có thể dài hạn nhưng chịu regulatory, political và refinancing risk.
+Short rates reflect central-bank policy expectations, liquidity and credit. Overnight, 1m, 3m and 1y instruments may price different future paths.
 
-Một asset có contract dài không tự động nghĩa low risk; counterparty quality và inflation linkage rất quan trọng.
+Cash allocation can therefore have duration/reinvestment choices even at short maturities.
 
-## 19. Illiquidity Premium
+## 18. Cash ladder
 
-Private asset thường được kỳ vọng trả **illiquidity premium**, tức compensation cho việc khó bán nhanh. Nhưng illiquidity cũng có behavioral benefit: investor không nhìn price mỗi phút nên ít panic sell.
+A cash ladder matches maturity buckets to future needs, for example 3m/6m/12m.
 
-Không nên nhầm behavioral smoothing với genuine risk reduction.
+It reduces both unnecessary duration and reinvestment concentration.
 
-## 20. Liquidity Mismatch
+## 19. Cash buffer and liquidity tiering
 
-Một open-ended fund hứa daily/weekly liquidity trong khi underlying private assets mất nhiều tháng để bán có thể tạo liquidity mismatch. Khi redemption tăng, fund có thể gate withdrawals hoặc bán liquid assets trước.
+Portfolio can separate immediate cash, near-term T-bills/MMF and longer-term defensive assets.
 
-Đây là một risk rất quan trọng trong private credit và real-estate vehicles.
+This prevents every “safe” asset being treated as equally liquid.
 
-## 21. Valuation Lag
+## 20. Cash drag
 
-Private market NAV thường phản ứng chậm với public-market repricing. Khi public comparable giảm 30%, private valuation có thể chỉ giảm từ từ qua nhiều quarter.
+Cash lowers volatility but can reduce long-run return. Opportunity cost is larger when risk assets offer high expected return and cash rates are low.
 
-Do đó correlation measured bằng reported NAV có thể thấp giả tạo.
+Cash weight should have explicit role.
 
-## 22. Vintage Risk
+# Phần II — Structured Products
 
-Private funds đầu tư theo **vintage year**. Fund triển khai capital ở valuation peak có thể có economics khác fund đầu tư sau recession.
+## 21. Structured product là gì?
 
-Vì capital bị locked nhiều năm, timing của vintage có ảnh hưởng lớn.
+Structured product combines debt/deposit-like claim with derivatives to manufacture payoff linked to equity, index, FX, rates or commodities.
 
-## 23. J-Curve
+Marketing coupon is not free yield. It usually compensates investor for selling optionality, accepting issuer credit or giving up liquidity/upside.
 
-Private equity fund thường có **J-curve**: giai đoạn đầu return âm vì fees và investment chưa mature; sau đó gain có thể xuất hiện khi portfolio companies tăng giá trị và exits xảy ra.
+## 22. Decompose before evaluating
 
-Điều này làm liquidity planning rất quan trọng.
+Ask whether product can be approximated as:
 
-## 24. Capital Calls và Unfunded Commitments
+`Zero-coupon bond + option positions`
 
-Investor private market có thể commit 100 nhưng fund chỉ gọi capital dần. Phần **unfunded commitment** vẫn là liability tiềm ẩn.
+Decomposition reveals where coupon comes from.
 
-Nếu market stress xảy ra đúng lúc capital calls tăng, investor phải có liquidity reserve đủ lớn.
+## 23. Principal protection
 
-## 25. Structured Product vs Direct Portfolio
+“Principal protected” may mean only if held to maturity and issuer remains solvent. Before maturity, mark-to-market can be below par.
 
-Structured product có thể hữu ích khi investor cần payoff rất cụ thể, nhưng complexity làm khó định giá và so phí. Nhiều payoff có thể được tái tạo gần đúng bằng bond + options.
+Read conditions, not product name.
 
-Nếu không hiểu embedded derivative, investor khó biết mình đang trả bao nhiêu cho convenience.
+## 24. Capital-at-risk notes
 
-## 26. Khi nào Cash-like Asset quan trọng nhất?
+Some notes pay high coupons while exposing investor to large downside if reference asset breaches barrier.
 
-Cash-like assets quan trọng khi horizon ngắn, liability chắc chắn, risk capacity thấp hoặc portfolio cần liquidity buffer. Chúng cũng hữu ích để rebalance trong stress mà không buộc phải bán risky assets ở mức giá bất lợi.
+High coupon often means investor is effectively short put-like risk.
 
-## 27. Khi nào Private Asset phù hợp?
+## 25. Autocallable / ELS
 
-Private asset phù hợp hơn khi investor có horizon dài, stable liquidity, hiểu capital-call structure và chấp nhận opacity/illiquidity. Nó không phù hợp chỉ vì chart NAV nhìn “êm”.
+Autocallable observes underlying periodically. If conditions met, it redeems early with coupon. If not, exposure continues and barrier conditions can create nonlinear downside.
 
-## 28. Framework đọc bất kỳ sản phẩm phức tạp nào
+Path matters, not just final price.
 
-Hãy luôn hỏi:
+## 26. Barrier risk
 
-```text
-Underlying là gì?
-Legal claim của tôi là gì?
-Return đến từ đâu?
-Ai trả tiền cho tôi?
-Rủi ro nào tạo ra yield cao?
-Liquidity thật sự là bao nhiêu?
-Có leverage hay embedded option không?
-Counterparty/issuer là ai?
-Mark-to-market được tính thế nào?
-Kịch bản xấu nhất là gì?
-```
+Knock-in/knock-out barriers can make payoff change discontinuously. Near barrier, hedging demand and gamma exposure may become large.
 
-Nếu không trả lời được các câu này, sản phẩm chưa đủ rõ để đưa vào portfolio.
+Retail investor should understand exact trigger convention: intraday, closing, observation dates or maturity only.
+
+## 27. Worst-of structures
+
+Basket note may depend on worst-performing underlying rather than average. Diversifying across multiple names can paradoxically increase probability one performs badly enough to trigger loss.
+
+Correlation assumptions matter.
+
+## 28. Callable notes
+
+Issuer call feature means investor may not control maturity. Product can be redeemed when it is favorable for issuer.
+
+Yield comparison should consider call probability, not headline maturity yield only.
+
+## 29. Range accrual
+
+Coupon may accrue only when reference rate/index stays within range. Higher coupon compensates path dependence and conditional payment.
+
+Need scenario simulation, not simple yield-to-maturity thinking.
+
+## 30. Reverse convertible
+
+Reverse convertible often pays high coupon while investor accepts downside equity exposure below threshold.
+
+Economically similar to bond plus short put in simplified form.
+
+## 31. ETN
+
+ETN is unsecured issuer debt linked to index/strategy. Investor faces both reference-index risk and issuer credit risk.
+
+ETF and ETN are not interchangeable wrappers.
+
+## 32. Embedded leverage
+
+Some structured products have payoff multiplier, leveraged downside or capped upside. Leverage can be hidden because investor only sees coupon/participation rate.
+
+Draw payoff diagram before investing.
+
+## 33. Mark-to-market opacity
+
+Structured notes may have dealer model pricing and wide secondary-market spreads. Exit before maturity can be expensive.
+
+Quoted indicative value is not guaranteed executable price.
+
+## 34. Issuer margin and distribution cost
+
+Complex products can embed structuring/distribution margin not obvious as annual expense ratio.
+
+Compare to DIY components where possible.
+
+## 35. Counterparty risk
+
+If payoff is contract with issuer, even perfect underlying performance does not guarantee payment after issuer default.
+
+Legal seniority matters.
+
+## 36. Suitability framework
+
+Structured product makes sense only if investor understands payoff, can hold through liquidity constraints and specifically wants that payoff distribution.
+
+High headline coupon alone is not reason.
+
+# Phần III — Private Equity và Venture Capital
+
+## 37. Private Equity
+
+PE funds buy private companies or take public companies private, often using leverage and operational change.
+
+Return sources may include revenue/margin growth, deleveraging and exit multiple. Multiple expansion is less controllable than operational improvement.
+
+## 38. Leveraged Buyout
+
+LBO uses debt at portfolio company level. Equity return can be amplified if enterprise value grows and debt is repaid.
+
+But leverage increases downside and refinancing risk.
+
+## 39. Management fees and carried interest
+
+Private funds often charge management fee plus carried interest on profits subject to terms such as hurdle/preferred return and catch-up.
+
+Fee structure strongly affects LP net return.
+
+## 40. Commitment vs invested capital
+
+LP commits capital but fund calls it over time. Uncalled capital is **unfunded commitment**, an economic liability.
+
+Liquidity planning must reserve for calls.
+
+## 41. J-curve
+
+Early fund years may show negative return because fees/costs arrive before exits. Later value creation and realizations can turn curve positive.
+
+Comparing young funds with mature funds requires vintage awareness.
+
+## 42. Vintage year
+
+Funds deploying capital during expensive boom face different entry valuations than recession vintages.
+
+Diversifying commitments over vintages can reduce timing concentration.
+
+## 43. IRR
+
+Private funds commonly report **Internal Rate of Return (IRR)**, which is sensitive to cash-flow timing.
+
+Fast early distributions can boost IRR even if total multiple moderate.
+
+## 44. MOIC/TVPI
+
+**MOIC** or **TVPI** measures total value relative invested capital. It complements IRR by showing multiple of money.
+
+A high IRR with low MOIC over short period and lower IRR with high MOIC over long period describe different outcomes.
+
+## 45. DPI and RVPI
+
+**DPI** = distributions / paid-in capital; it measures realized cash returned. **RVPI** = residual value / paid-in capital; it is unrealized NAV.
+
+`TVPI = DPI + RVPI`
+
+High TVPI driven mostly RVPI is less realized than high DPI.
+
+## 46. Valuation marks
+
+Private company NAV relies models, comparables and financing rounds. Marks can lag public-market repricing.
+
+Reported smoothness should not be confused with low economic volatility.
+
+## 47. Subscription credit lines
+
+Funds may use short-term credit facilities before calling LP capital. This can delay capital calls and mechanically improve reported IRR timing.
+
+Analyze cash economics and not IRR alone.
+
+## 48. Venture Capital
+
+VC return distribution is power-law-like: few winners drive fund return. Failure is common.
+
+Access, ownership dilution, follow-on funding and exit markets are key.
+
+## 49. Follow-on reserves
+
+VC funds reserve capital to support winners. Failure to follow pro rata can dilute ownership in strongest companies.
+
+Portfolio construction includes initial bets and follow-on strategy.
+
+# Phần IV — Private Credit
+
+## 50. Private credit economics
+
+Private credit lends outside public bond markets. Yield may reflect illiquidity, borrower complexity, covenant package and higher risk.
+
+Direct lending can offer floating-rate income but rising rates may stress borrower coverage.
+
+## 51. Seniority
+
+First-lien senior debt has priority over second-lien, mezzanine and equity. Recovery expectations differ substantially.
+
+Headline yield must be viewed together with capital structure position.
+
+## 52. Covenants
+
+Maintenance covenants can detect deterioration early and give lender negotiation leverage. Covenant-lite loans reduce these protections.
+
+Terms matter as much as coupon.
+
+## 53. Interest coverage
+
+Coverage ratios compare earnings/cash flow with interest. Floating-rate debt can deteriorate rapidly when benchmark rates rise.
+
+Stress coverage using lower EBITDA and higher rates simultaneously.
+
+## 54. PIK interest
+
+**Payment-in-Kind (PIK)** interest capitalizes rather than paying cash. Reported yield increases but cash realization is delayed and debt burden compounds.
+
+High PIK dependence can indicate borrower stress.
+
+## 55. Recovery and collateral
+
+Collateral appraisal may prove optimistic in default. Recovery depends asset liquidity, legal priority and restructuring process.
+
+Do not treat collateral book value as guaranteed recovery.
+
+## 56. Fund-level leverage
+
+Private-credit fund can leverage its loan portfolio, magnifying both income and losses.
+
+Distinguish borrower leverage from fund leverage.
+
+## 57. Redemption mismatch
+
+Open-ended vehicle offering frequent redemptions while owning illiquid loans can face gates or suspension.
+
+Liquidity promise deserves separate due diligence from asset quality.
+
+# Phần V — Private Real Estate và Infrastructure
+
+## 58. Private real estate
+
+Return comes from NOI growth, leverage, cap-rate change and development. Appraisal-based NAV can lag market.
+
+Property type and geography matter.
+
+## 59. Leverage
+
+Real estate debt magnifies equity return but refinancing rates and LTV covenant matter.
+
+Falling property values can breach covenants even if property still occupied.
+
+## 60. Infrastructure
+
+Infrastructure includes utilities, roads, airports, pipelines, renewable assets and digital infrastructure.
+
+Long contracts can stabilize revenue but regulatory/counterparty/concession risk remains.
+
+## 61. Inflation linkage
+
+Some contracts have CPI-linked escalators. This creates inflation sensitivity but caps/floors and regulatory lag determine effectiveness.
+
+## 62. Political/regulatory risk
+
+Tariffs, concession rules and allowed returns can change. Infrastructure is physical but cash flows often policy-dependent.
+
+# Phần VI — Illiquidity và Secondary Markets
+
+## 63. Illiquidity premium
+
+Expected extra return for locking capital is not guaranteed. If investors overpay private assets, future illiquidity premium can disappear.
+
+Illiquidity is cost, not source of magic alpha.
+
+## 64. Behavioral benefit of illiquidity
+
+Not seeing daily prices can reduce panic selling, but this is behavioral smoothing—not risk reduction.
+
+Economic value can still fall sharply.
+
+## 65. Secondary private markets
+
+LP interests or private shares can sometimes be sold in secondary markets, often at discount/premium to reported NAV.
+
+Secondary price reveals liquidity conditions and confidence in marks.
+
+## 66. Denominator effect
+
+When public markets fall quickly but private NAV lags, private assets become larger share of total portfolio mechanically.
+
+Institutional investors may need sell private interests or reduce new commitments to restore allocation.
+
+## 67. Capital-call stress
+
+Market crisis can combine public asset losses with private capital calls. Investor may need liquidity exactly when public assets are down.
+
+This is why unfunded commitments belong in portfolio stress tests.
+
+# Phần VII — Product Due Diligence
+
+## 68. Legal claim
+
+First question: am I depositor, fund shareholder, unsecured creditor, limited partner or derivative counterparty?
+
+Legal claim defines recovery and rights.
+
+## 69. Return source
+
+Coupon/yield should map to economic source: short rates, credit spread, option premium, leverage, illiquidity or manager skill.
+
+If source unclear, risk likely unclear.
+
+## 70. Liquidity
+
+Ask normal liquidity and stressed liquidity. Daily NAV does not guarantee daily executable exit for all products.
+
+## 71. Valuation
+
+Is price exchange-traded, dealer-quoted, model-based or appraisal-based? How often updated? Who controls assumptions?
+
+Valuation governance matters.
+
+## 72. Counterparty
+
+Identify issuer, custodian, collateral agent, GP/manager and derivative counterparties.
+
+Structure can have multiple failure points.
+
+## 73. Leverage
+
+Leverage may exist at investor, fund, portfolio-company or derivative layer simultaneously.
+
+Look through all layers.
+
+## 74. Fees
+
+Include management, performance/carry, structuring, distribution, financing, FX, spread and exit fees.
+
+Headline management fee can understate total cost.
+
+## 75. Worst-case scenario
+
+Do not ask only “expected return?”. Ask what happens under issuer default, barrier breach, redemption run, capital call during crash or refinancing failure.
+
+Scenario clarity is prerequisite to sizing.
+
+## 76. Final framework
+
+Before allocating to any complex product, answer in writing:
+
+`Underlying → Legal Claim → Cash-flow Source → Liquidity → Leverage → Counterparty → Valuation → Fees → Tax → Stress Scenario → Portfolio Role`
+
+If one layer is missing, due diligence is incomplete.
+
+## 77. Kết luận
+
+Cash-like products, structured notes and private markets are not exotic side topics. They expose core concepts of finance very clearly: time value, credit, collateral, optionality, liquidity and legal priority.
+
+The more complex the wrapper, the more important it is to strip the product back to those basic economic building blocks.
