@@ -281,6 +281,74 @@ Gia đình cũng đổi vai trò: từ tự chăm hoàn toàn sang phối hợp 
 
 Khi dân số già và gia đình nhỏ, lao động chăm sóc trở thành điểm nghẽn xã hội. Văn hoá sức khoẻ phải tính cả gánh nặng người chăm sóc, không chỉ tương tác bác sĩ–bệnh nhân.
 
+## 장애와 접근성: khuyết tật không chỉ nằm trong cơ thể
+
+Một cách nhìn cũ xem khuyết tật chủ yếu là “vấn đề y khoa của cá nhân”. Cách nhìn rộng hơn tách **khiếm khuyết hoặc giới hạn chức năng** khỏi **rào cản do môi trường tạo ra**. Một người dùng xe lăn gặp ít hạn chế hơn trong toà nhà có đường dốc, thang máy, cửa đủ rộng và nhà vệ sinh phù hợp so với cùng người đó trong không gian chỉ có cầu thang.
+
+Vì vậy mức độ tham gia xã hội có thể được mô tả đơn giản:
+
+```text
+khả năng cá nhân
+× khả năng tiếp cận của môi trường
+→ mức tham gia thực tế
+```
+
+Đây là lý do **khả năng tiếp cận (accessibility / 접근성)** không phải tiện ích “thêm vào sau”, mà là một phần của thiết kế y tế, giao thông, ứng dụng và không gian công cộng.
+
+### Khả năng tiếp cận trong y tế
+
+Một cơ sở y tế có thể dễ tiếp cận về vật lý nhưng khó tiếp cận về thông tin. Người khiếm thính có thể cần phụ đề hoặc cách giao tiếp phù hợp; người khiếm thị cần giao diện đọc được bằng công nghệ hỗ trợ; người có khó khăn nhận thức cần thông tin rõ, ít bước và đủ thời gian.
+
+Do đó “bệnh viện ở gần” chưa đủ để kết luận dịch vụ dễ dùng. Khả năng tiếp cận có ít nhất bốn lớp:
+
+```text
+vật lý → đi vào, di chuyển, sử dụng thiết bị
+thông tin → đọc, nghe, hiểu hướng dẫn
+số → đặt lịch, kiosk, ứng dụng, xác thực
+xã hội → được giao tiếp tôn trọng và không bị kỳ thị
+```
+
+## 완화의료·호스피스: mục tiêu chăm sóc thay đổi khi chữa khỏi không còn là mục tiêu duy nhất
+
+**Chăm sóc giảm nhẹ (완화의료 / palliative care)** tập trung giảm đau, khó chịu, căng thẳng và hỗ trợ chất lượng sống cho người mắc bệnh nghiêm trọng. **Hospice (호스피스)** thường liên quan giai đoạn cuối đời hơn, nhưng hai khái niệm không nên bị đồng nhất hoàn toàn.
+
+Điểm văn hoá quan trọng là y tế không chỉ có một mục tiêu “kéo dài thời gian bằng mọi giá”. Trong một số tình huống, mục tiêu có thể chuyển sang:
+
+```text
+kiểm soát triệu chứng
++ giữ phẩm giá
++ hỗ trợ giao tiếp trong gia đình
++ giảm gánh nặng người chăm sóc
++ tôn trọng giá trị và mong muốn của bệnh nhân
+```
+
+Đây không phải lời khuyên điều trị cho cá nhân; quyết định cụ thể phải dựa trên đội ngũ y tế, pháp luật hiện hành và mong muốn của người bệnh.
+
+## 연명의료 và việc nói trước về mong muốn cuối đời
+
+Các quyết định về điều trị duy trì sự sống dễ trở nên khó khăn nếu gia đình chỉ bắt đầu thảo luận khi bệnh nhân không còn khả năng giao tiếp. Vì vậy khái niệm **lập kế hoạch chăm sóc trước (advance care planning)** có giá trị như một cơ chế giảm bất định.
+
+Câu hỏi cốt lõi không phải “gia đình yêu người bệnh đến đâu” mà là: người bệnh muốn ưu tiên điều gì, ai có thẩm quyền quyết định, thông tin y khoa đã được hiểu chưa và lựa chọn pháp lý nào áp dụng trong trường hợp đó.
+
+Trong văn hoá gia đình coi trách nhiệm chăm sóc là giá trị lớn, việc lựa chọn giảm can thiệp có thể tạo cảm giác tội lỗi nếu bị hiểu sai thành “từ bỏ”. Do đó giao tiếp rõ giữa bệnh nhân, gia đình và đội ngũ y tế là một phần của chăm sóc chứ không phải chuyện phụ.
+
+## 사별과 애도: chăm sóc không kết thúc ở thời điểm tử vong
+
+Sau khi người thân mất, người chăm sóc có thể trải qua đau buồn, kiệt sức hoặc khoảng trống vai trò. Nghi thức tang lễ giúp cộng đồng thừa nhận mất mát, nhưng không phải ai cũng hồi phục theo cùng nhịp.
+
+Có thể xem tang lễ và chăm sóc giảm nhẹ là hai hệ thống nối nhau:
+
+```text
+bệnh nặng
+→ chăm sóc người bệnh
+→ quyết định cuối đời
+→ tử vong
+→ tang lễ / nghi thức
+→ đau buồn và tái tổ chức đời sống của gia đình
+```
+
+Điều này nối trực tiếp chương gia đình và tang lễ [`04_family_kinship_gender_life_cycle.md`](04_family_kinship_gender_life_cycle.md).
+
 ## 건강정보와 유튜브: dư thừa thông tin tạo vấn đề mới
 
 Trước đây bệnh nhân thiếu thông tin; hiện nay vấn đề có thể là quá nhiều nội dung với chất lượng khác nhau. Thuật toán thưởng sự chú ý chứ không thưởng độ chính xác.
@@ -310,20 +378,21 @@ Nhưng tiếp thị quốc tế không thay thế giấy phép, đồng thuận 
 
 ## Liên hệ kiến thức: y tế như hệ thống quyết định nhiều lớp
 
-Một quyết định sức khoẻ có thể đọc qua bốn lớp:
+Một quyết định sức khoẻ có thể đọc qua năm lớp:
 
 ```text
 Sinh học: cơ thể thực sự có gì?
 Bằng chứng: can thiệp hiệu quả và có rủi ro ra sao?
 Thiết chế: tiếp cận, bảo hiểm, cơ sở cung cấp và chi phí thế nào?
-Văn hoá: triệu chứng được hiểu và giao tiếp ra sao?
+Môi trường: không gian và công nghệ có tạo rào cản tham gia hay không?
+Văn hoá: triệu chứng, chăm sóc và quyết định được hiểu/giao tiếp ra sao?
 ```
 
 Sai lầm xảy ra khi dùng một lớp trả lời câu hỏi của lớp khác, ví dụ dùng “truyền thống lâu đời” để chứng minh hiệu quả, hoặc dùng “nghiên cứu cho thấy có tác dụng” để suy rằng mọi người bắt buộc phải thích can thiệp đó.
 
 ## Mô hình tư duy (Mental Model)
 
-> Văn hoá sức khoẻ Hàn Quốc là đầu ra của **cơ thể + bảo hiểm/khả năng tiếp cận + mạng cơ sở y tế + kỳ vọng gia đình + thị trường tiêu dùng + thông tin số**. Đừng hỏi “người Hàn chữa bệnh thế nào?” như thể có một phương pháp duy nhất; hãy hỏi con đường nào dễ tiếp cận, niềm tin nào ảnh hưởng lựa chọn và tuyên bố nào cần bằng chứng khoa học.
+> Văn hoá sức khoẻ Hàn Quốc là đầu ra của **cơ thể + bảo hiểm/khả năng tiếp cận + mạng cơ sở y tế + môi trường vật lý/số + kỳ vọng gia đình + thị trường tiêu dùng + thông tin số**. Đừng hỏi “người Hàn chữa bệnh thế nào?” như thể có một phương pháp duy nhất; hãy hỏi con đường nào dễ tiếp cận, rào cản nào đang tồn tại, niềm tin nào ảnh hưởng lựa chọn và tuyên bố nào cần bằng chứng khoa học.
 
 ## Hiểu lầm phổ biến (Common Misconceptions)
 
@@ -339,6 +408,10 @@ Sai lầm xảy ra khi dùng một lớp trả lời câu hỏi của lớp khá
 
 “Thực phẩm bổ sung phổ biến = mọi người đều cần” là sai; nhu cầu phụ thuộc chế độ ăn, thiếu hụt, bệnh lý và bằng chứng.
 
+“Khuyết tật chỉ là vấn đề nằm trong cơ thể cá nhân” bỏ qua vai trò của môi trường và thiết kế tiếp cận.
+
+“Chăm sóc cuối đời chỉ bắt đầu khi không còn gì để làm” là cách hiểu hẹp; giảm triệu chứng, giao tiếp và hỗ trợ gia đình đều là công việc chăm sóc thực sự.
+
 ## Nguồn tham khảo định hướng
 
-Với thiết chế: National Health Insurance Service, Ministry of Health and Welfare và hướng dẫn chính thức về hệ thống y tế. Với điều trị/chẩn đoán: hướng dẫn lâm sàng, hội chuyên môn, tổng quan hệ thống và nghiên cứu gốc phù hợp. Với sản phẩm sức khoẻ tiêu dùng: đọc nhãn, tuyên bố được phê duyệt và bằng chứng thay vì chỉ dựa vào người ảnh hưởng/quảng cáo.
+Với thiết chế: National Health Insurance Service, Ministry of Health and Welfare và hướng dẫn chính thức về hệ thống y tế. Với điều trị/chẩn đoán: hướng dẫn lâm sàng, hội chuyên môn, tổng quan hệ thống và nghiên cứu gốc phù hợp. Với sản phẩm sức khoẻ tiêu dùng: đọc nhãn, tuyên bố được phê duyệt và bằng chứng thay vì chỉ dựa vào người ảnh hưởng/quảng cáo. Với chăm sóc giảm nhẹ, điều trị duy trì sự sống và quyền người bệnh, cần kiểm tra quy định và hướng dẫn hiện hành của cơ quan y tế Hàn Quốc trước khi áp dụng thực tế.
