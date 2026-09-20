@@ -1,61 +1,55 @@
 # Bridges, Articulation Points và Biconnectivity
 **Bridges, Articulation Points & Biconnectivity / 단절선, 단절점, 이중 연결성**
 
-Một connected graph có thể chứa những edges hoặc vertices đóng vai trò **single point of failure**. Nếu xóa một edge làm số connected components tăng, edge đó là **bridge / 단절선**. Nếu xóa một vertex và các incident edges của nó làm số components tăng, vertex đó là **articulation point / 단절점**.
+Một connected graph có thể trông “dày”, nhưng chỉ cần hỏng đúng một edge hoặc một vertex là topology bị tách đôi. **Bridge / 단절선** là edge mà khi xóa làm số connected components tăng. **Articulation Point / 단절점** là vertex mà khi xóa cùng incident edges làm số components tăng.
 
-Các khái niệm này mô hình hóa reliability rất trực tiếp: đường truyền nào bị đứt sẽ tách network? Router nào hỏng sẽ chia hệ thống thành nhiều vùng? Thành phần nào cần redundancy?
+Đây là cách graph theory diễn tả **single point of failure**. Trong mạng, bridge có thể là đường truyền duy nhất; articulation point có thể là router/hub trung tâm. Nhưng mục tiêu của chapter này không chỉ là học công thức `low[v] > tin[u]`; quan trọng hơn là hiểu **low-link value đang tóm tắt khả năng escape khỏi một DFS subtree như thế nào**.
 
 ## 1. Tại sao DFS tree chưa đủ?
 
-Nếu chạy DFS trên undirected graph, ta tạo một DFS tree. Một tree edge `(u,v)` nhìn bề ngoài có vẻ quan trọng vì nó là đường DFS đã dùng để vào subtree `v`.
+Khi chạy DFS trên undirected graph, mỗi vertex lần đầu được discover qua một tree edge. Nếu chỉ nhìn DFS tree, mọi parent-child edge dường như đều “quan trọng”, vì subtree child treo dưới parent.
 
-Nhưng graph gốc có thể có **back edge** từ subtree của `v` quay lên `u` hoặc một ancestor cao hơn. Khi đó dù xóa `(u,v)`, subtree vẫn có route khác ra ngoài.
+Nhưng graph gốc có thể có edge khác từ subtree quay lên một ancestor. Edge đó tạo alternate route. Vì vậy câu hỏi thật sự là:
 
-Vì vậy để biết edge/vertex nào thật sự là điểm cắt, ta phải biết subtree có thể “leo ngược” lên cao đến đâu ngoài parent edge.
+> Subtree của child có thể thoát ra ngoài mà không cần dùng lại parent edge hay không?
 
-Đó là vai trò của `low` value.
+`low` chính là summary cho câu hỏi này.
 
-## 2. Discovery Time `tin`
+## 2. `tin[u]`: thời điểm discover
 
-Khi DFS visit vertex `u`, gán:
-
-```text
-tin[u] = thời điểm u được discover
-```
-
-`tin` tạo thứ tự ancestor-descendant theo DFS tree. Ancestor được discover trước descendant.
-
-Ta dùng một counter tăng dần:
+Khi DFS vào `u`:
 
 ```text
 tin[u] = low[u] = timer++
 ```
 
-ban đầu `low[u]` chính là `tin[u]`, vì chắc chắn u reachable từ chính nó.
+`tin` tạo thứ tự discover. Ancestor trong DFS tree luôn có `tin` nhỏ hơn descendant.
 
-## 3. Low-link Value `low[u]`
+`low[u]` ban đầu bằng `tin[u]` vì chắc chắn subtree của `u` reachable tới chính `u`.
 
-`low[u]` biểu diễn discovery time nhỏ nhất của một vertex có thể reachable từ `u` hoặc subtree của `u` bằng cách đi xuống các tree edges và dùng một back edge lên ancestor theo formulation chuẩn của undirected DFS.
+## 3. Meaning của `low[u]`
 
-Khi DFS từ `u` xuống child `v` hoàn tất:
+Trong undirected DFS chuẩn, `low[u]` là discovery time nhỏ nhất của vertex có thể reachable từ `u` hoặc descendants bằng cách đi xuống zero/more tree edges rồi dùng tối đa một back edge lên ancestor theo structure relevant.
 
-\[
-low[u] = \min(low[u], low[v])
-\]
+Update rules:
 
-Nếu gặp edge `(u,v)` tới một vertex đã visited không phải parent edge:
+Khi child `v` xong:
 
 \[
-low[u] = \min(low[u], tin[v])
+low[u]=\min(low[u],low[v])
 \]
 
-Điểm rất quan trọng là với back edge, ta dùng `tin[v]`, không dùng `low[v]` tùy tiện. `low[v]` có thể encode paths đi qua tree relationships không phù hợp với edge classification hiện tại.
+Khi gặp visited neighbor `v` qua một edge không phải parent edge:
+
+\[
+low[u]=\min(low[u],tin[v])
+\]
+
+Điểm quan trọng: với back edge dùng `tin[v]`, không tùy tiện dùng `low[v]`, vì low của một visited vertex có thể encode đường đi không tương ứng với edge classification hiện tại.
 
 ## 4. Bridge Condition
 
-Xét DFS tree edge từ parent `u` xuống child `v`.
-
-Nếu:
+Với DFS tree edge `(u,v)`:
 
 \[
 low[v] > tin[u]
@@ -63,21 +57,23 @@ low[v] > tin[u]
 
 thì `(u,v)` là bridge.
 
-Lý do: subtree của `v` không có back edge tới `u` hoặc bất kỳ ancestor của `u`. Đường duy nhất nối subtree đó với phần graph phía trên trong DFS structure là edge `(u,v)`.
+Nếu subtree `v` không thể reach `u` hoặc ancestor của `u` bằng route khác, parent edge là cửa duy nhất ra ngoài. Xóa nó làm subtree tách khỏi phần còn lại.
 
-Nếu xóa edge, subtree bị tách.
+## 5. Vì sao là `>` chứ không phải `>=`?
 
-## 5. Vì sao điều kiện Bridge là `>` chứ không phải `>=`?
+Nếu:
 
-Nếu `low[v] == tin[u]`, nghĩa là subtree của `v` có một back edge quay lại chính `u`. Khi xóa tree edge `(u,v)`, vẫn còn một route khác từ subtree về `u` qua back edge đó.
+\[
+low[v]=tin[u]
+\]
 
-Do đó equality không đủ để edge là bridge.
+nghĩa là subtree có back edge quay lại chính `u`. Khi xóa tree edge `(u,v)`, alternate route đó vẫn nối subtree với `u`. Vì vậy edge không phải bridge.
 
-Đây là một chi tiết nhỏ nhưng là nguồn off-by-one-like bug logic rất phổ biến.
+Equality đủ cứu edge, nhưng không đủ cứu vertex như articulation condition phía dưới.
 
 ## 6. Articulation Point cho non-root
 
-Với non-root vertex `u`, nếu tồn tại DFS child `v` sao cho:
+Với non-root `u`, nếu tồn tại child `v`:
 
 \[
 low[v] \ge tin[u]
@@ -85,41 +81,37 @@ low[v] \ge tin[u]
 
 thì `u` là articulation point.
 
-Tại sao ở đây lại là `>=`?
+Nếu equality xảy ra, subtree `v` có thể quay về `u`, nhưng xóa chính `u` thì route đó cũng biến mất. Subtree không reach được ancestor cao hơn.
 
-Nếu `low[v] == tin[u]`, subtree của `v` có thể quay về `u`, nhưng nếu xóa chính `u`, route đó cũng biến mất. Subtree không thể vượt qua u để tới ancestor cao hơn.
-
-Vì vậy equality vẫn khiến u là điểm cắt.
+Đây là lý do articulation dùng `>=` còn bridge dùng `>`.
 
 ## 7. Root là case đặc biệt
 
-DFS root không có parent/ancestor phía trên. Condition `low[child] >= tin[root]` gần như luôn true theo structure nên không thể dùng trực tiếp.
+DFS root không có ancestor phía trên. Root là articulation point khi có **ít nhất hai DFS tree children**.
 
-Root là articulation point nếu nó có **ít nhất hai DFS tree children độc lập**.
+Nếu root chỉ có một child, toàn bộ phần reachable nằm trong một subtree; xóa root không làm phần còn lại tách thành nhiều components mới hơn theo definition chuẩn.
 
-Nếu root chỉ có một DFS child, toàn bộ reachable graph nằm dưới một subtree; xóa root không nhất thiết làm số components tăng theo articulation definition chuẩn cho connected component đó.
+Nếu root có hai children, DFS từ child thứ nhất đã không thể reach child thứ hai trước khi return, nên root là điểm nối duy nhất giữa chúng trong DFS structure.
 
-Nếu root có hai hoặc nhiều children, vì DFS từ một child không reach được child khác trước khi quay về root, bỏ root tách các child subtrees.
+## 8. Edge ID bắt buộc khi có parallel edges
 
-## 8. Edge IDs rất quan trọng với Multi-edge
-
-Trong undirected graph có parallel edges giữa u và v, chỉ kiểm tra:
+Trong multigraph, check:
 
 ```text
-if (v == parent) continue;
+if (v == parent) continue
 ```
 
-có thể sai. Một edge là tree parent edge, nhưng parallel edge còn lại là một legitimate back connection và phải được xét.
+có thể sai. Giữa `u` và parent có thể tồn tại hai edge song song: một edge là tree edge, edge còn lại là alternate back connection.
 
-Cách an toàn là gắn unique edge ID, truyền `parentEdgeId`, và skip đúng edge vật lý đã dùng để đi xuống:
+Cách robust là mỗi physical edge có unique ID, và DFS nhận `parentEdgeId`:
 
 ```java
-if (e.id == parentEdge) continue;
+if (e.id == parentEdgeId) continue;
 ```
 
-Đây là representation detail trực tiếp ảnh hưởng correctness.
+Representation detail này ảnh hưởng trực tiếp correctness.
 
-## 9. Java implementation core
+## 9. Java core implementation
 
 ```java
 void dfs(int u, int parentEdge) {
@@ -155,150 +147,281 @@ void dfs(int u, int parentEdge) {
 }
 ```
 
-Nếu graph disconnected, phải gọi DFS từ mọi unvisited vertex, không chỉ vertex 0.
+Disconnected graph cần DFS từ mọi unvisited vertex.
 
 ## 10. Complexity
 
-Mỗi vertex được visit một lần, mỗi undirected edge xuất hiện hai adjacency entries và được xử lý constant number of times.
-
-Time:
+Mỗi vertex visit một lần, mỗi undirected edge xuất hiện hai adjacency entries và được xử lý constant number of times:
 
 \[
 O(V+E)
 \]
 
-Space gồm adjacency structure, arrays `tin`, `low`, `seen`, recursion stack hoặc explicit stack:
+Space gồm graph, arrays và DFS stack. Recursive implementation có depth `O(V)` trên path graph và có thể stack overflow.
 
-\[
-O(V+E)
-\]
+## 11. Iterative low-link DFS khó hơn DFS thường
 
-Graph rất sâu có thể làm recursive DFS stack overflow; iterative low-link implementation có thể tránh nhưng phức tạp hơn vì phải mô phỏng postorder state.
+Recursive call tự động tạo postorder event: child hoàn tất rồi mới update `low[parent]`.
 
-## 11. Bridge Tree / 2-edge-connected Components
+Iterative DFS phải explicit frame:
 
-Nếu remove tất cả bridges, graph tách thành các components mà bên trong không có bridge. Đây là **2-edge-connected components** theo nghĩa relevant.
+```text
+vertex
+parentEdge
+nextAdjIndex
+numberOfChildren
+```
 
-Coalesce mỗi component thành một super-node, rồi nối bằng original bridges. Kết quả tạo một tree/forest thường gọi là **bridge tree**.
+Khi frame child pop, parent mới có thể apply:
 
-Tại sao là tree? Nếu super-nodes connected bằng bridges tạo cycle, một edge trên cycle sẽ không còn là bridge vì có alternate route.
+```text
+low[parent] = min(low[parent], low[child])
+```
 
-Bridge tree giúp nhiều queries về vulnerability trở thành tree queries.
+Đây là ví dụ rõ rằng recursion frame lưu continuation state, không chỉ vertex ID.
 
-## 12. Vertex-Biconnected Components
+## 12. Characterization: bridge iff edge không thuộc cycle
 
-Với articulation points, decomposition tinh tế hơn vì một articulation vertex có thể thuộc nhiều blocks.
+Trong undirected graph:
 
-Một **biconnected component/block** là maximal subgraph không bị tách bởi xóa một single vertex nội bộ theo định nghĩa chuẩn tương ứng.
+> Edge là bridge khi và chỉ khi nó không thuộc bất kỳ cycle nào.
 
-Tarjan-style DFS có thể dùng stack của edges. Khi `low[v] >= tin[u]`, ta biết một block boundary và pop edges cho tới edge `(u,v)`.
+Nếu thuộc cycle, phần còn lại của cycle tạo alternate route. Nếu không thuộc cycle, edge là link duy nhất giữa hai phía theo topology tương ứng.
 
-Kết quả có thể được biểu diễn bằng **block-cut tree**: articulation vertices và biconnected blocks trở thành hai loại nodes trong một bipartite tree/forest.
+Low-link DFS là cách tìm tất cả bridge cùng lúc thay vì kiểm tra từng edge riêng lẻ.
 
-## 13. Block-Cut Tree
+## 13. Naive remove-and-test vì sao đắt?
 
-Trong block-cut tree, một articulation point node nối với các block nodes mà nó thuộc.
-
-Structure này biến một graph có articulation complexity thành tree, giúp reason về paths qua cut vertices và connectivity queries.
-
-Đây là pattern rất phổ biến trong graph algorithms: decompose graph thành robust components rồi contract thành simpler tree/DAG.
-
-## 14. Reliability Interpretation
-
-Bridge là link mà failure một mình disconnects một phần system.
-
-Articulation point là router/server/hub mà failure một mình disconnects topology.
-
-2-edge-connectivity nghĩa là giữa relevant vertices có redundancy về edges; 2-vertex-connectivity mạnh hơn vì chịu được mất một vertex.
-
-Menger's theorem cung cấp connection sâu hơn giữa số disjoint paths và minimum cut sets.
-
-## 15. Bridge và Edge-disjoint Paths
-
-Một edge `(u,v)` là bridge nếu không có alternate path giữa u và v sau khi bỏ edge đó. Nói cách khác, edge không nằm trong bất kỳ cycle nào.
-
-Đây là một characterization rất trực quan:
-
-> Trong undirected graph, một edge là bridge **iff** nó không thuộc cycle nào.
-
-Nếu edge nằm trong cycle, phần còn lại của cycle tạo route thay thế. Nếu không nằm trong cycle, removal disconnects endpoints trong component.
-
-Low-link DFS là cách tìm tất cả bridges cùng lúc trong linear time thay vì test-remove từng edge.
-
-## 16. Articulation và Vertex-disjoint Paths
-
-Articulation point thể hiện thiếu vertex-level redundancy. Nếu hai regions chỉ nối qua u, mọi path giữa chúng phải đi qua u.
-
-Biconnectivity liên quan việc có multiple internally vertex-disjoint paths giữa pairs theo các theorem chuẩn.
-
-Vì vậy low-link values thực chất đang đo khả năng subtree escape qua alternate connections.
-
-## 17. Why Not Remove Each Edge/Vertex and Re-run DFS?
-
-Naive bridge test: với mỗi edge, remove rồi DFS/BFS kiểm tra connectivity. Nếu có E edges, complexity có thể:
+Với mỗi edge, remove rồi DFS/BFS:
 
 \[
 O(E(V+E))
 \]
 
-Articulation naive tương tự `O(V(V+E))`.
+Với articulation:
 
-Low-link algorithm nén toàn bộ information về alternate ancestor reachability vào một DFS pass `O(V+E)`.
+\[
+O(V(V+E))
+\]
 
-Đây là ví dụ tuyệt vời của algorithmic reuse: thay vì recompute connectivity sau từng deletion, ta infer vulnerability từ DFS structure.
+Low-link nén toàn bộ alternate-connectivity information vào một DFS linear-time. Đây là một ví dụ điển hình của **precompute summary thay recompute toàn problem cho từng candidate**.
 
-## 18. Directed Graph không dùng cùng condition đơn giản
+## 14. 2-edge-connected components và Bridge Tree
 
-Bridge/articulation formulation ở đây dành cho undirected graph.
+Nếu remove tất cả bridges, graph tách thành components mà bên trong không còn bridge.
 
-Directed graph có strongly connected components, dominators và strong articulation/bridge notions phức tạp hơn. Không thể copy công thức `low[v] > tin[u]` sang directed graph một cách mù quáng.
+Contract mỗi component thành một super-node, original bridges trở thành edges giữa super-nodes. Kết quả là một tree/forest gọi là **bridge tree**.
 
-Graph direction thay đổi connectivity semantics căn bản.
+Tại sao không thể có cycle giữa super-nodes? Nếu có cycle, bridge trên cycle có alternate route, mâu thuẫn nó là bridge.
 
-## 19. Low-link và SCC dễ bị nhầm
+Bridge tree biến graph vulnerability problem thành tree problem.
 
-Tarjan SCC algorithm cũng dùng discovery indices và low-link-like values, nhưng meaning/invariant không giống hoàn toàn bridge DFS trên undirected graph.
+## 15. Queries sau khi build Bridge Tree
 
-Trong SCC, stack membership và reachability trong directed graph đóng vai trò khác. Dùng cùng tên `low` không có nghĩa công thức interchangeable.
-
-Khi học graph algorithms, luôn ghi rõ `low` đang đại diện cho cái gì trong algorithm cụ thể.
-
-## 20. Testing các corner cases
-
-Một path graph:
+Sau decomposition, nhiều queries dễ hơn:
 
 ```text
-0 - 1 - 2 - 3
+bao nhiêu bridge trên path giữa u và v?
+edge failure nào tách hai nodes?
+components nào nằm hai phía của bridge?
 ```
 
-mọi edge là bridge; internal vertices 1,2 là articulation points.
+Map original vertices sang bridge-component rồi dùng LCA/prefix depth trên tree để trả lời path queries.
 
-Một simple cycle không có bridge/articulation point.
+Một expensive graph preprocessing có thể đổi nhiều online queries thành tree arithmetic nhanh.
 
-Hai cycles nối bằng một edge: edge nối là bridge, endpoints thường articulation theo topology.
+## 16. Vertex-biconnected components
 
-Parallel edges giữa hai vertices: không edge nào riêng lẻ là bridge nếu có alternate parallel edge.
+Articulation decomposition tinh tế hơn vì articulation vertex có thể thuộc nhiều blocks.
 
-Single vertex và two-vertex graph giúp kiểm tra root logic.
+Một **biconnected component / block** là maximal subgraph không bị tách bởi removal một internal single vertex theo definition tương ứng.
 
-## 21. Recursion và state initialization
+Tarjan-style algorithm giữ stack of edges. Khi child `v` thỏa:
 
-`timer` phải tăng global/component-wide đủ để discovery times unique. `tin`/`low` arrays phải reset đúng giữa independent runs.
+\[
+low[v] \ge tin[u]
+\]
 
-Nếu graph có many vertices path-like, Java/JavaScript recursion có thể overflow. Production code cần explicit stack hoặc stack-size strategy phù hợp.
+thì edge stack từ `(u,v)` trở lên tạo một block mới.
 
-## 22. Application beyond literal networks
+## 17. Block-Cut Tree
 
-Dependency graph undirected abstractions, circuit connectivity, road/rail topology, social/communication backbones và game maps đều có thể cần tìm articulation/bridge.
+Ta tạo hai loại nodes:
 
-Trong software architecture, service dependency graph thường directed và richer than this model, nhưng articulation intuition vẫn hữu ích để nghĩ về single points of failure trước khi chọn model chính xác hơn.
+```text
+block nodes
+articulation-vertex nodes
+```
+
+Nối articulation node với block node nếu articulation thuộc block đó. Kết quả là bipartite tree/forest gọi là **block-cut tree**.
+
+Structure này hỗ trợ reasoning kiểu:
+
+```text
+path giữa hai regions phải đi qua articulation nào?
+bao nhiêu single-vertex failure points trên route structural?
+```
+
+## 18. Edge connectivity vs vertex connectivity
+
+Bridge liên quan **edge redundancy**. Articulation liên quan **vertex redundancy**.
+
+Một graph có thể không có bridge nhưng vẫn có articulation point. Ví dụ hai cycles chia sẻ một vertex: không edge đơn lẻ nào làm graph disconnect, nhưng xóa vertex chung sẽ tách hai cycles.
+
+Vì vậy “network có nhiều alternate edges” chưa đủ chứng minh node-level fault tolerance.
+
+## 19. Menger's Theorem connection
+
+Menger cho một connection sâu giữa:
+
+```text
+minimum cut size
+number of disjoint paths
+```
+
+Bridge nghĩa edge connectivity giữa một số regions bằng 1. Articulation point nghĩa vertex connectivity ở nơi đó bằng 1.
+
+Low-link algorithm là specialized linear-time detector cho những cut size 1 cases.
+
+Nếu cần minimum cut lớn hơn 1/general capacities, ta tiến sang flow/min-cut algorithms.
+
+## 20. Bridge Tree và reliability scoring
+
+Có thể xem mỗi bridge là một failure domain boundary. Size của subtree sau khi root bridge tree cho biết bao nhiêu vertices bị cô lập nếu bridge hỏng.
+
+Nếu muốn rank “impact” của bridge, một metric đơn giản có thể dựa trên số pairs bị disconnect:
+
+\[
+size \cdot (N-size)
+\]
+
+với `size` là số original vertices ở một phía.
+
+Đây là ví dụ biến structural decomposition thành risk metric, nhưng production model có thể cần weights/traffic/capacity thực tế.
+
+## 21. Articulation impact không chỉ boolean
+
+Biết `u` là articulation point mới là bước đầu. Một câu hỏi sâu hơn là xóa `u` tạo bao nhiêu components và sizes ra sao.
+
+Mỗi DFS child với:
+
+\[
+low[child] \ge tin[u]
+\]
+
+trở thành một separated region khi xóa `u`. Phần ancestors/outside subtree tạo thêm một region nếu `u` không phải DFS root.
+
+Có thể augment DFS với subtree sizes để tính impact.
+
+## 22. Online/dynamic graph khác hẳn static low-link
+
+Nếu edges được add/remove liên tục, chạy Tarjan lại sau mỗi update có thể đắt.
+
+Incremental/dynamic connectivity và dynamic biconnectivity là advanced topics cần data structures phức tạp hơn. Low-link là giải pháp static graph rất mạnh nhưng không tự hỗ trợ arbitrary updates.
+
+Đây là pattern quan trọng: một linear preprocessing algorithm chưa chắc phù hợp online workload.
+
+## 23. Directed graph không dùng cùng công thức
+
+Standard bridge/articulation chapter này là undirected graph. Directed graph có:
+
+```text
+strong bridges
+strong articulation points
+dominators
+SCC-based structure
+```
+
+và algorithms khác. Copy `low[v] > tin[u]` sang directed graph là sai model.
+
+## 24. Low-link của Bridge algorithm và Tarjan SCC không interchangeable
+
+Cả hai dùng biến tên `low`, nhưng invariant khác.
+
+Bridge low-link nói về escape từ undirected DFS subtree lên ancestor qua back edge.
+
+Tarjan SCC low-link liên quan earliest reachable discovery index trong active DFS stack/SCC context.
+
+Tên biến giống nhau không có nghĩa update rule giống nhau.
+
+## 25. Self-loops và parallel edges
+
+Self-loop không thể là bridge vì bỏ nó không thay connectivity giữa vertices. Nó có thể ảnh hưởng adjacency processing nhưng không làm alternate component connection.
+
+Parallel edges khiến hai endpoints có alternate edge trực tiếp, nên từng edge riêng lẻ không phải bridge nếu có ít nhất hai parallel connections.
+
+Test multigraph là cách rất tốt để phát hiện code dùng `parent vertex` thay vì `parent edge id`.
+
+## 26. Testing bằng graph families
+
+Các cases quan trọng:
+
+```text
+path: mọi edge bridge, internal vertex articulation
+simple cycle: không bridge/articulation
+star: mọi spoke bridge, center articulation
+clique: thường không bridge/articulation
+hai cycles nối bằng bridge
+hai cycles share một vertex
+parallel-edge pair
+self-loop
+single vertex
+disconnected graph
+```
+
+Random graph nhỏ có thể verify bridge bằng brute-force remove edge + BFS, articulation bằng remove vertex + BFS.
+
+Differential testing kiểu này rất mạnh vì oracle đơn giản dù chậm.
+
+## 27. Invariant testing của `tin/low`
+
+Sau DFS:
+
+```text
+low[u] <= tin[u]
+```
+
+cho mọi visited vertex.
+
+Với child tree edge, parent update phải làm `low[parent] <= low[child]` không nhất thiết luôn đúng vì parent có back edge riêng, nhưng `low[parent]` phải bằng min của relevant contributions.
+
+Một validator/debug implementation có thể recompute low-like reachability trên graph nhỏ để so result.
+
+## 28. Systems interpretation và limitation
+
+Bridge/articulation model dùng topology binary: connected hay disconnected. Nhưng production reliability còn có:
+
+```text
+capacity
+latency
+traffic volume
+failure probability
+shared physical conduit
+availability zones
+```
+
+Hai logical edges có thể đi chung một cable vật lý; graph nhìn redundant nhưng failure domain thực tế không redundant.
+
+Algorithm chỉ đúng với model. Reliability engineering bắt đầu từ graph abstraction chính xác.
+
+## 29. Connection với spanning tree
+
+Mọi bridge phải xuất hiện trong **mọi spanning tree** của connected graph, vì bỏ bridge làm graph disconnect nên không có alternate edge set nối hai phía.
+
+Ngược lại edge không bridge có thể hoặc không xuất hiện trong một spanning tree tùy choices.
+
+Connection này liên kết low-link connectivity với MST/spanning-tree theory.
+
+## 30. Connection với Eulerian graph
+
+Một connected undirected Eulerian graph mà mọi vertex có even degree không thể có bridge nếu có ít nhất một edge trong component Eulerian cycle covering all edges: mọi edge nằm trên cycle của Euler tour.
+
+Đây là một cách thấy các graph properties không độc lập; degree/cycle structure ảnh hưởng cut vulnerability.
 
 ## Mental Model
 
-> `low[u]` trả lời: **subtree này có thể thoát lên ancestor cao đến đâu mà không cần quay qua parent edge?**
+> `low[u]` là một **compressed escape certificate** của DFS subtree: subtree này có alternate route lên ancestor cao đến đâu mà không quay lại parent edge?
 
-Nếu child subtree không thể đi lên tới parent hoặc cao hơn, parent edge là bridge. Nếu subtree chỉ có thể quay lại chính parent nhưng không vượt qua parent, xóa parent vertex sẽ cắt subtree và parent là articulation point.
+Nếu child không escape tới parent, parent edge là bridge. Nếu child chỉ escape tới chính parent nhưng không vượt parent, xóa parent vertex sẽ cô lập child subtree. Từ local summary `low`, ta suy ra global vulnerability trong `O(V+E)`.
 
-Low-link không phải magic formula; nó là compressed summary của alternate connectivity được tính trong postorder DFS.
-
-Xem thêm: [Graph Traversal BFS/DFS](./01_graph_traversal_bfs_dfs.md), [SCC & DAG](./04_dag_topological_sort_and_scc.md), [Network Flow & Disjoint Paths](./08_network_flow_and_matching.md).
+Xem thêm: [Graph Traversal](./01_graph_traversal_bfs_dfs.md), [MST](./03_minimum_spanning_trees.md), [SCC](./04_dag_topological_sort_and_scc.md), [Network Flow](./08_network_flow_and_matching.md).

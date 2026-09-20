@@ -1,115 +1,181 @@
 # Eulerian Paths và Cycles
 **Đường đi Euler và chu trình Euler / Eulerian Path & Cycle / 오일러 경로와 회로**
 
-Bài toán Eulerian hỏi một câu rất cụ thể: **có thể đi qua mỗi edge đúng một lần hay không?** Đây là bài toán về edge usage, khác bản chất với Hamiltonian path, nơi mục tiêu là thăm mỗi vertex đúng một lần.
+Eulerian problems hỏi một câu rất cụ thể: **có thể đi qua mỗi edge đúng một lần hay không?** Đây là bài toán về edge usage, khác hoàn toàn Hamiltonian path/cycle nơi mỗi **vertex** phải được thăm đúng một lần.
 
-Sự khác biệt này cực kỳ quan trọng. Eulerian path/cycle có characterization bằng degree và có thể xây trong thời gian tuyến tính theo kích thước graph. Hamiltonian path nói chung lại thuộc nhóm bài toán khó hơn rất nhiều. Hai bài nhìn giống nhau ở bề mặt nhưng cấu trúc toán học hoàn toàn khác.
+Sự khác biệt này quyết định độ khó. Eulerian path có characterization rất đẹp bằng degree/balance và có thể xây trong `O(V+E)`. Hamiltonian path nói chung không có local criterion đơn giản tương tự và thuộc lớp bài toán khó hơn nhiều.
 
-## 1. Từ bài toán Königsberg đến graph model
+## 1. Abstraction từ Königsberg
 
-Nguồn gốc kinh điển của Eulerian reasoning là bài toán các cây cầu ở Königsberg: liệu có thể đi qua mỗi cây cầu đúng một lần hay không. Khi bỏ hình dạng địa lý và chỉ giữ land regions thành vertices, bridges thành edges, bài toán trở thành graph problem.
+Bài toán các cây cầu Königsberg nổi tiếng vì Euler bỏ hình dạng địa lý cụ thể và chỉ giữ:
 
-Insight quan trọng là hình học cụ thể không còn cần thiết. Điều quyết định là mỗi vertex có bao nhiêu edge incident và graph có connected hay không. Đây là một ví dụ lịch sử rất rõ về **abstraction**: loại bỏ chi tiết domain để giữ cấu trúc quyết định bài toán.
+```text
+land regions -> vertices
+bridges      -> edges
+```
 
-## 2. Eulerian path, Eulerian trail và Eulerian cycle
+Question “đi qua mỗi bridge đúng một lần” trở thành graph problem. Đây là một ví dụ lịch sử điển hình của algorithmic modeling: bỏ detail không ảnh hưởng feasibility và giữ structure quyết định bài toán.
 
-Trong nhiều tài liệu, **Eulerian trail/path** là một walk sử dụng mỗi edge đúng một lần. Nếu điểm bắt đầu và kết thúc giống nhau, đó là **Eulerian circuit/cycle**.
+## 2. Trail, path, circuit và terminology
 
-Vertex có thể xuất hiện nhiều lần. Điều bị cấm lặp là edge. Đây là chỗ dễ nhầm với simple path.
+Trong nhiều tài liệu:
 
-Nếu graph có 10 edges, một Eulerian trail phải dùng đúng 10 edges. Số vertex xuất hiện trong route có thể lớn hơn số vertex khác nhau vì cùng vertex có thể được quay lại nhiều lần.
+- **trail**: không lặp edge;
+- **path**: thường không lặp vertex theo graph-theory strict terminology;
+- **Eulerian trail/path**: đi qua mọi edge đúng một lần, vertex có thể lặp;
+- **Eulerian circuit/cycle**: Eulerian trail có start = end.
 
-## 3. Điều kiện trong undirected graph
+Competitive-programming material đôi khi dùng “Euler path” cho trail. Khi đọc tài liệu, hãy nhìn semantics thay vì chỉ tên.
 
-Bỏ qua các isolated vertices có degree 0, phần graph chứa edges phải connected.
+## 3. Undirected graph: parity condition
+
+Bỏ qua isolated vertices degree 0, phần graph chứa edges phải connected.
 
 Eulerian cycle tồn tại khi **mọi vertex có degree chẵn**.
 
-Eulerian path nhưng không phải cycle tồn tại khi **đúng hai vertices có degree lẻ**. Hai vertex lẻ này bắt buộc là start và end.
+Open Eulerian trail tồn tại khi **đúng hai vertices có degree lẻ**; chúng là hai endpoints.
 
-Nếu số vertex degree lẻ khác 0 hoặc 2, Eulerian trail không tồn tại.
+Nếu số odd-degree vertices khác 0 hoặc 2, không tồn tại Eulerian trail.
 
-### Vì sao parity quyết định?
+## 4. Vì sao parity là điều kiện cần?
 
-Hãy nhìn một vertex trung gian trên route. Mỗi lần route đi vào vertex qua một unused edge, nó phải đi ra qua một unused edge khác. Hai edge này ghép thành một cặp. Vì vậy mọi edge incident ở intermediate vertex phải ghép cặp được, dẫn tới degree chẵn.
+Ở một vertex trung gian, mỗi lần route đi vào qua một unused edge, nó phải đi ra qua một unused edge khác. Incident edges được consume theo cặp:
 
-Start của open Euler trail có thể có một edge “đi ra” không được ghép với edge “đi vào”, còn end có một edge “đi vào” không có edge “đi ra”. Vì vậy hai endpoints có degree lẻ.
+```text
+in + out
+in + out
+...
+```
 
-Đây không chỉ là mẹo nhớ; nó là proof intuition của degree condition.
+nên degree phải chẵn.
 
-## 4. Connectivity không được bỏ qua
+Start của open trail có thể có một outgoing edge dư, end có một incoming edge dư, tạo đúng hai odd vertices.
 
-Có thể mọi vertex đều degree chẵn nhưng graph gồm hai component tách rời, mỗi component có edges. Không có một trail duy nhất đi qua edges của cả hai component vì ta không thể teleport giữa chúng.
+Handshaking lemma cũng nói số odd-degree vertices trong undirected graph luôn chẵn, nên “1 odd vertex” vốn đã bất khả thi.
 
-Do đó degree condition là cần nhưng chưa đủ. Ta phải kiểm tra connectivity trên subgraph gồm các vertex có degree > 0.
+## 5. Vì sao parity chưa đủ?
 
-Một graph không có edge thường được xử lý như case đặc biệt tùy API/problem statement. Nếu chỉ hỏi có Eulerian cycle hay không, empty edge set có thể được coi là trivial; nhưng implementation phải xác định semantics rõ ràng.
+Hai cycles tách rời có mọi degree chẵn nhưng không thể có một tour duy nhất dùng edges của cả hai components. Ta không thể teleport.
 
-## 5. Directed graph: cân bằng indegree và outdegree
+Vì vậy cần connectivity của **subgraph chứa nonzero-degree vertices**.
 
-Trong directed graph, mỗi lần đi vào vertex qua một directed edge, ta cần một outgoing edge để tiếp tục. Vì vậy điều kiện không còn là parity mà là balance.
+Isolated vertices không ảnh hưởng edge-covering trail vì không có edge cần dùng ở đó.
 
-Eulerian cycle yêu cầu với mọi relevant vertex:
+## 6. Directed graph: indegree/outdegree balance
+
+Với directed graph, parity được thay bằng balance.
+
+Eulerian cycle:
 
 ```text
 indegree(v) == outdegree(v)
 ```
 
-và các edges phải nằm trong connectivity structure phù hợp.
+cho mọi relevant vertex, kèm connectivity condition thích hợp.
 
-Eulerian path mở có thể có đúng một start thỏa:
-
-```text
-outdegree = indegree + 1
-```
-
-và đúng một end thỏa:
+Open trail:
 
 ```text
-indegree = outdegree + 1
+start: out = in + 1
+end:   in  = out + 1
+others: in == out
 ```
 
-các vertex còn lại phải cân bằng.
+Flow intuition rất rõ: intermediate vertex phải consume incoming/outgoing edges theo cặp.
 
-### Connectivity trong directed graph
+## 7. Connectivity trong directed graph
 
-Với cycle, một cách phát biểu mạnh là các vertex có nonzero degree phải thuộc cùng strongly connected component khi xét khả năng đi theo directed edges phù hợp. Trong implementation contest phổ biến, người ta cũng có thể kiểm tra connectivity của underlying undirected graph kết hợp degree-balance conditions cho Eulerian trail/cycle theo theorem thích hợp.
+Degree balance một mình không đủ. Với Eulerian cycle, các vertices có nonzero degree phải nằm trong một directed connectivity structure đủ mạnh để mọi edges thuộc cùng traversable component.
 
-Điểm quan trọng là không được chỉ kiểm tra indegree/outdegree rồi kết luận. Degree balance không nối các component lại với nhau.
+Một cách reasoning chuẩn là kiểm tra strongly connected trên relevant vertices sau khi xử lý start/end conditions thích hợp, hoặc dùng theorem tương đương với underlying undirected connectivity cộng degree constraints cho Eulerian trail trong formulation cụ thể.
 
-## 6. Hierholzer's algorithm: ý tưởng cốt lõi
+Điểm cốt lõi: **balance không nối các components**.
 
-Giả sử graph thỏa điều kiện Euler. Bắt đầu từ một vertex hợp lệ và liên tục đi qua unused edge cho tới khi không còn edge để đi tiếp.
+## 8. Start vertex selection
 
-Nếu đang tìm cycle và mọi degree cân bằng đúng, route cục bộ này sẽ quay về nơi bắt đầu. Nhưng có thể vẫn còn unused edges ở một vertex đã xuất hiện trong cycle. Khi đó ta bắt đầu một cycle mới từ vertex đó rồi **splice** cycle mới vào cycle cũ.
+Undirected:
 
-Hierholzer cho thấy một Eulerian cycle lớn có thể được xây bằng cách ghép các cycle nhỏ.
+```text
+0 odd vertices -> start bất kỳ vertex degree > 0
+2 odd vertices -> start phải là một odd vertex
+```
 
-Một implementation rất tiện dùng stack. Ta đi sâu bằng unused edges. Khi một vertex không còn edge unused, ta pop nó và append vào output. Vì append diễn ra khi “quay lui”, output cuối phải reverse.
+Directed:
 
-## 7. Vì sao thuật toán đúng?
+```text
+open trail -> start có out = in + 1
+cycle      -> start bất kỳ vertex có outgoing edge
+```
 
-Khi một vertex được đưa vào output, nghĩa là tất cả edge còn khả dụng từ vertex đó đã được tiêu thụ. Ta không còn cần quay lại để mở rộng route từ nó.
+Start sai có thể làm traversal kết thúc sớm dù graph có Eulerian trail hợp lệ.
 
-Trong graph thỏa Euler conditions, việc đi theo unused edge không thể “phá hỏng” solution vĩnh viễn theo kiểu greedy dead-end thông thường, vì balance/parity đảm bảo structure cho phép splice các phần route lại.
+## 9. Hierholzer's Algorithm
 
-Residual unused edges nếu tồn tại phải nối với một vertex trên route đã có, nếu phần graph có edges connected. Vì vậy ta có thể tiếp tục tour từ đó và ghép vào.
+Hierholzer xây route bằng cách đi qua unused edges cho tới khi current vertex không còn edge unused. Khi dead-end, vertex được đưa vào output và ta backtrack.
 
-## 8. Complexity và representation
+Stack view:
 
-Nếu mỗi edge được xử lý constant number of times, Hierholzer chạy:
+```text
+while stack not empty:
+    u = top
+    if u còn unused edge:
+        consume edge (u,v)
+        push v
+    else:
+        path.push(pop stack)
+reverse(path)
+```
 
-\[
-O(V+E)
-\]
+Output được tạo theo reverse finishing order.
 
-hoặc thực tế gần `O(E)` sau khi adjacency structure đã được xây.
+## 10. Vì sao Hierholzer không bị “greedy dead-end”?
 
-Nhưng representation quyết định bạn có thực sự đạt bound đó hay không. Nếu mỗi lần tìm unused edge lại scan toàn adjacency list từ đầu, edge có thể bị xem lại nhiều lần. Một kỹ thuật phổ biến là giữ pointer/index hiện tại cho mỗi vertex hoặc pop edges khỏi adjacency list.
+Trong graph thỏa Euler conditions, balance/parity đảm bảo một route đang đi không thể mắc kẹt ở vertex “sai” trừ endpoint hợp lệ. Nếu tour cục bộ đóng lại nhưng vẫn còn unused edges, connectivity đảm bảo unused region gắn vào một vertex đã xuất hiện trong tour. Ta có thể bắt đầu sub-tour ở đó và splice vào route cũ.
 
-Với undirected graph, mỗi logical edge xuất hiện hai lần trong adjacency lists. Vì vậy nên gắn **edge id** và một `used[edgeId]` flag để đảm bảo edge chỉ được tiêu thụ một lần.
+Đây là khác biệt với arbitrary path search: graph structure bảo đảm local edge consumption có thể ghép thành global solution.
 
-## 9. JavaScript implementation bằng edge IDs
+## 11. Splicing view
+
+Classic proof thường hình dung:
+
+1. xây một cycle;
+2. tìm vertex trên cycle còn unused edge;
+3. xây cycle khác từ vertex đó;
+4. splice cycle mới vào cycle cũ;
+5. lặp tới khi hết edges.
+
+Stack implementation chính là cách thực hiện việc splice này implicit và gọn hơn.
+
+## 12. Representation quyết định complexity thật
+
+Nếu mỗi lần ở `u` ta scan adjacency list từ đầu để tìm edge unused, cùng edge có thể bị xem lại nhiều lần.
+
+Một implementation linear nên giữ:
+
+```text
+ptr[u] = vị trí adjacency tiếp theo cần xét
+```
+
+hoặc destructively pop edges khỏi cuối list.
+
+Mỗi adjacency entry được advance constant number of times, nên total `O(V+E)`.
+
+## 13. Undirected graph cần Edge ID
+
+Mỗi undirected logical edge thường xuất hiện hai adjacency entries. Nếu chỉ mark `(u,v)` theo endpoints, parallel edges bị nhầm.
+
+Dùng:
+
+```text
+edge id
+used[id]
+```
+
+để đảm bảo mỗi physical edge consume đúng một lần.
+
+Self-loop cũng cần edge ID; trong undirected graph nó góp 2 vào degree.
+
+## 14. JavaScript implementation
 
 ```js
 function eulerUndirected(n, edges, start) {
@@ -142,66 +208,200 @@ function eulerUndirected(n, edges, start) {
     }
   }
 
-  return path.reverse();
+  path.reverse();
+  return path;
 }
 ```
 
-Nếu graph connected theo phần edges và start được chọn đúng, path trả về phải có `edges.length + 1` vertices. Đây là một postcondition rất hữu ích để phát hiện graph không thỏa assumptions hoặc implementation bỏ sót edge.
+Postcondition mạnh:
 
-## 10. Chọn start vertex đúng
+```text
+path.length == E + 1
+```
 
-Trong undirected graph có Eulerian cycle, có thể bắt đầu tại bất kỳ vertex có degree > 0. Nếu graph có exactly two odd-degree vertices, phải bắt đầu ở một trong hai vertex lẻ.
+nếu một Eulerian trail hợp lệ đã dùng hết `E` edges.
 
-Trong directed graph có open Euler trail, start phải là vertex có `outdegree = indegree + 1`. Nếu tất cả cân bằng, chọn bất kỳ vertex có outgoing edge.
+## 15. Validate output thay vì chỉ tin algorithm
 
-Start sai có thể khiến traversal kết thúc sớm dù graph có Eulerian trail hợp lệ.
+Một validator có thể kiểm tra:
 
-## 11. Multigraph, parallel edges và self-loops
+```text
+route có E+1 vertices
+mỗi bước route tương ứng một edge thật
+mỗi edge id dùng đúng một lần
+start/end đúng degree conditions
+```
 
-Eulerian algorithms phải xử lý được parallel edges. Vì vậy đánh dấu edge bằng cặp `(u,v)` là không đủ; hai edges khác nhau có thể nối cùng hai vertices. Edge ID là representation an toàn hơn.
+Với parallel edges, validator cũng phải match edge identities, không chỉ endpoint pairs.
 
-Self-loop đóng góp 2 vào degree trong undirected graph vì nó vừa đi ra vừa quay vào cùng vertex. Trong directed graph, self-loop đóng góp 1 indegree và 1 outdegree. Nó không phá balance.
+## 16. Fleury's Algorithm và vì sao Hierholzer tốt hơn
 
-Những chi tiết này là lý do nên reason từ graph definitions thay vì dựa vào trực giác hình vẽ.
+Fleury chọn edge không phải bridge nếu còn lựa chọn khác. Conceptually đẹp vì cố tránh làm phần graph còn lại disconnect.
 
-## 12. Eulerian vs Hamiltonian
+Nhưng nếu mỗi bước phải recompute bridge, naive complexity cao. Hierholzer đạt linear time mà không cần dynamic bridge detection.
 
-Eulerian problem quan tâm mỗi **edge** đúng một lần và có characterization degree rõ ràng. Hamiltonian problem quan tâm mỗi **vertex** đúng một lần và nói chung không có local degree condition đơn giản để giải quyết toàn bài.
+Bài học: một greedy rule trực quan chưa chắc là implementation tốt nhất dù correctness dễ hình dung.
 
-Một graph có thể Eulerian nhưng không Hamiltonian, hoặc ngược lại. Đừng dùng DFS “thử mọi đường” cho Eulerian problem nếu degree theorem + Hierholzer giải được tuyến tính.
+## 17. Eulerian graph và Bridges
 
-## 13. De Bruijn graph và sequence reconstruction
+Trong một connected Eulerian graph có edges, mọi edge nằm trên một cycle của Euler tour, nên không edge nào là bridge.
 
-Một connection rất quan trọng là **de Bruijn graph**. Giả sử có nhiều substrings/k-mers và muốn ghép lại một sequence. Có thể biểu diễn prefix/suffix overlap thành vertices và mỗi fragment thành edge. Khi đó reconstruct sequence tương ứng với việc tìm Eulerian path qua mỗi fragment edge đúng một lần.
+Nếu graph có bridge, đi qua bridge sang một region rồi muốn quay lại sẽ cần dùng bridge lần hai, trừ open trail endpoint structure rất đặc biệt. Parity/cycle perspective giải thích mối liên hệ này.
 
-Ý tưởng này xuất hiện trong bioinformatics và cả các bài tạo shortest string chứa mọi pattern độ dài cố định.
+Graph properties không tồn tại độc lập; bridge/cycle/degree constraints tương tác với nhau.
 
-Trong de Bruijn sequence construction, vertices có thể là strings độ dài `k-1`, edges là strings độ dài `k`. Một Eulerian cycle đi qua mọi edge đúng một lần cho ta sequence chứa mọi k-length pattern đúng theo cấu trúc cần thiết.
+## 18. Eulerization
 
-## 14. Route planning và Chinese Postman connection
+Nếu graph chưa Eulerian nhưng muốn route qua mọi edge, ta có thể thêm/duplicate edges để làm odd-degree vertices trở thành even.
 
-Nếu một người giao thư phải đi qua **mỗi edge ít nhất một lần** và muốn tổng cost nhỏ nhất, đó là Chinese Postman Problem. Nếu graph đã Eulerian, answer chính là Eulerian cycle. Nếu không, ta cần duplicate một số edges tối ưu để biến degree conditions thành Eulerian rồi mới traverse.
+Trong undirected graph, số odd vertices luôn chẵn. Bài toán chọn pairs odd vertices để duplicate shortest paths tối ưu dẫn tới **Chinese Postman Problem**.
 
-Connection này cho thấy Eulerian theory là building block của routing, không chỉ một bài graph isolated.
+Eulerian tour là building block sau khi graph được Eulerize.
 
-## 15. Euler tour trên tree là khái niệm liên quan nhưng khác
+## 19. Chinese Postman Problem
 
-Trong tree algorithms, cụm “Euler tour” đôi khi chỉ traversal sequence ghi lại thời điểm enter/exit node, dùng để flatten tree thành array cho subtree query. Đây không nhất thiết là Eulerian path theo nghĩa “mỗi graph edge đúng một lần”.
+Objective:
 
-Tên gọi gần nhau có thể gây nhầm. Khi đọc tài liệu, phải nhìn semantics cụ thể: edge-covering trail hay DFS traversal encoding.
+> Đi qua mọi edge ít nhất một lần với tổng cost nhỏ nhất.
 
-## 16. Các lỗi implementation phổ biến
+Nếu graph Eulerian, answer là Euler tour trực tiếp.
 
-Một lỗi phổ biến là xóa phần tử đầu adjacency list bằng operation có cost cao như `shift()` trong JavaScript, khiến complexity thực tế xấu đi. Tốt hơn dùng pointer hoặc pop cuối.
+Nếu không, phải duplicate một số routes sao cho mọi degree trở thành chẵn với extra cost nhỏ nhất. Weighted version liên quan shortest paths + minimum-weight matching trên odd vertices.
 
-Một lỗi khác là với undirected graph, đánh dấu chỉ một bản sao adjacency entry mà không đánh dấu edge đối diện. Edge IDs giải quyết vấn đề này.
+Đây là ví dụ rõ về cách một theorem structural trở thành primitive của optimization problem lớn hơn.
 
-Cũng cần kiểm tra connectivity của vertices có edge, chọn start hợp lệ và xác nhận route cuối sử dụng đủ `E` edges.
+## 20. De Bruijn Graph
+
+K-mers/string fragments có thể được model:
+
+```text
+vertex = prefix/suffix length k-1
+edge   = k-mer
+```
+
+Một Eulerian path qua mọi fragment edge reconstruct sequence sử dụng mọi k-mer đúng một lần theo model.
+
+Connection này xuất hiện trong genome assembly intuition và de Bruijn sequence construction.
+
+## 21. De Bruijn Sequence
+
+Muốn sequence chứa mọi string length `k` trên alphabet đúng một lần theo cyclic window, xây graph:
+
+```text
+vertices = strings length k-1
+edges = strings length k
+```
+
+Eulerian cycle đi qua mỗi edge exactly once, và đọc labels tạo de Bruijn sequence.
+
+Một problem string tưởng rất khác lại trở thành edge-covering graph problem.
+
+## 22. Itinerary Reconstruction
+
+Một family bài phổ biến: tickets là directed edges, cần dùng tất cả tickets một lần và đôi khi chọn lexical-smallest valid itinerary.
+
+Graph có thể có parallel edges. Hierholzer vẫn là core, nhưng adjacency cần ordering phù hợp — thường sort reverse rồi pop cuối hoặc dùng priority queue.
+
+Complexity lúc này thêm sorting:
+
+\[
+O(E\log E)
+\]
+
+hoặc sum per-vertex sort costs.
+
+## 23. Lexicographically smallest Eulerian trail
+
+Nếu nhiều valid trails, muốn lexical-smallest route cần định nghĩa order của outgoing edges.
+
+Một cách là sort adjacency và Hierholzer luôn consume smallest edge. Nhưng phải reasoning cẩn thận về output reversal; implementation thường sort descending và pop smallest-from-end hoặc dùng min-heap.
+
+Tie-breaking là thêm output constraint, nên cost model khác pure Eulerian existence.
+
+## 24. Euler Tour trên tree là khái niệm khác
+
+Trong tree algorithms, “Euler tour” thường là DFS sequence ghi enter/exit node để flatten subtree hoặc solve LCA/RMQ.
+
+Nó không nhất thiết là Eulerian trail “mỗi edge đúng một lần”. Một tree DFS đi xuống và quay lên thường traverse physical edge hai lần.
+
+Tên giống nhau nhưng abstraction khác; hãy nhìn definition.
+
+## 25. Directed edge labels và duplicate tickets
+
+Nếu two edges có cùng `(u,v)` nhưng đại diện hai tickets/items khác nhau, dùng endpoint pair làm key có thể gộp nhầm. Edge ID hoặc multiset count là bắt buộc.
+
+Nếu chỉ cần route vertices, count representation có thể compact hơn explicit edge object khi rất nhiều duplicate edges.
+
+## 26. Empty Graph và degenerate cases
+
+Graph không có edge có thể được coi là Eulerian một cách trivial tùy definition/API. Route có thể là empty hoặc một chosen vertex.
+
+Single self-loop là Eulerian cycle. Two parallel edges giữa hai vertices tạo cycle length 2 theo multigraph semantics.
+
+Corner cases cần được định nghĩa trước, không để implementation vô tình quyết định semantics.
+
+## 27. Complexity theo output
+
+Euler trail output có `E+1` vertices/edge identifiers, nên riêng việc emit solution đã cần `Ω(E)`.
+
+Hierholzer `O(V+E)` vì thế asymptotically optimal theo input/output size trong adjacency representation thông thường.
+
+Đây là ví dụ đẹp của output-sensitive lower bound.
+
+## 28. Memory layout và destructive traversal
+
+Nếu algorithm được phép phá adjacency lists, có thể `pop()` edges để giảm extra `ptr[]`. Nhưng caller sẽ mất graph original.
+
+Non-destructive implementation giữ `ptr`/used state. Đây là trade-off mutation contract vs extra memory.
+
+Trong C/JavaScript, destructive pop cuối thường cache-friendly và đơn giản; trong shared graph structure, copy toàn graph có thể đắt hơn một pointer array.
+
+## 29. Streaming/online limitation
+
+Eulerian trail là global property. Nếu edges arrive online và ta phải output route ngay mà không biết future edges, local choice có thể không đủ vì future degree/connectivity chưa biết.
+
+Static Hierholzer giả định graph đã biết. Dynamic Eulerian maintenance là problem khác, thường cần maintain degree parity/connectivity và chưa chắc cho phép emit final route incrementally đơn giản.
+
+## 30. Testing
+
+Test families:
+
+```text
+simple cycle
+path graph with exactly 2 odd vertices
+star with >2 odd vertices -> impossible
+disconnected even-degree components -> impossible
+parallel edges
+self-loops
+directed balanced cycle
+directed open trail
+duplicate tickets
+empty graph
+```
+
+Trên graph nhỏ, brute-force backtracking over edge IDs có thể làm oracle để verify existence/path của Hierholzer.
+
+## 31. Common implementation failures
+
+Các lỗi điển hình:
+
+```text
+quên connectivity check
+start sai
+mark adjacency entry thay vì physical edge
+không hỗ trợ parallel edges
+shift() đầu JS array gây cost xấu
+output không reverse
+không verify E edges đã dùng
+nhầm Eulerian với Hamiltonian
+```
+
+Một implementation trả route ngắn hơn `E+1` thường là dấu hiệu graph không thỏa assumptions hoặc traversal bỏ sót component/edge.
 
 ## Mental Model
 
-> Eulerian reasoning là reasoning về **flow của edge qua vertex**. Mỗi intermediate visit cần một edge vào và một edge ra, nên undirected graph xuất hiện parity còn directed graph xuất hiện indegree/outdegree balance.
+> Eulerian reasoning là **flow balance của edges qua vertices**. Intermediate vertex cần ghép edge vào với edge ra; undirected graph biểu hiện bằng parity, directed graph biểu hiện bằng indegree/outdegree balance.
 
-Khi degree/balance và connectivity đúng, Hierholzer không cần thử mọi khả năng. Nó sử dụng structure của graph để xây route trong thời gian tuyến tính, cho thấy một characterization toán học tốt có thể biến bài toán tưởng như combinatorial search thành một traversal đơn giản.
+Khi balance + connectivity đúng, Hierholzer biến local edge consumption thành global route bằng reverse finishing/splicing. Đây là lý do Eulerian problems có linear-time structure đẹp trong khi vertex-covering Hamiltonian problems không có cùng property.
 
-Xem thêm: [Graph Modeling](./00_graph_modeling_and_representation.md), [BFS/DFS](./01_graph_traversal_bfs_dfs.md), [Network Flow](./08_network_flow_and_matching.md).
+Xem thêm: [Graph Modeling](./00_graph_modeling_and_representation.md), [Bridges](./06_bridges_articulation_and_biconnectivity.md), [Network Flow](./08_network_flow_and_matching.md).
