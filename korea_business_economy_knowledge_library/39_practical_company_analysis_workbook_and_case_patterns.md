@@ -1,841 +1,365 @@
-# Practical Company Analysis Workbook — từ filing tới thesis, scenario và decision (실전 기업분석 워크북)
+# Workbook thực hành phân tích doanh nghiệp — từ báo cáo đến giả thuyết, kịch bản và quyết định (실전 기업분석 워크북)
 
-Các chapter trước giải thích lịch sử, macro, industry, accounting, governance và funding. File này biến toàn bộ knowledge đó thành một **workbook thực hành**. Mục tiêu là khi gặp một Korean company mới, bạn có thể mở DART/KIND/IR, tự dựng economic model, phát hiện missing questions và viết một research note có thể kiểm chứng.
+Các chương trước giải thích lịch sử, kinh tế vĩ mô, ngành, kế toán, quản trị và nguồn vốn. Chương này biến các kiến thức đó thành một **bài thực hành tổng hợp (workbook)**. Mục tiêu là khi gặp một công ty Hàn Quốc mới, người đọc có thể mở DART/KIND/IR, tự dựng mô hình kinh tế, phát hiện những câu hỏi còn thiếu và viết một ghi chú nghiên cứu có thể kiểm chứng.
 
-Đây không phải checklist để tick cho xong. Nó là sequence giúp chuyển dữ liệu rời rạc thành causal model.
+Đây không phải danh sách để đánh dấu cho xong. Nó là một trình tự giúp chuyển dữ liệu rời rạc thành **mô hình nhân quả (causal model)**.
 
-## 1. Output cuối cùng của một company analysis nên là gì?
+## 1. Kết quả cuối cùng của một bài phân tích nên là gì?
 
-Một analysis tốt không cần dài hàng trăm trang. Nó cần trả lời rõ năm câu:
+Một bài phân tích tốt không nhất thiết dài hàng trăm trang. Nó cần trả lời rõ năm câu hỏi: doanh nghiệp thực sự kiếm tiền bằng cơ chế nào; những biến nào quyết định lợi nhuận và dòng tiền; bảng cân đối có chịu được kịch bản xấu hay không; quản trị và phân bổ vốn có bảo vệ giá trị cho cổ đông/chủ nợ không; và điều kiện nào khiến nhận định hiện tại sai.
 
-1. Company thật sự kiếm tiền bằng engine nào?
-2. Những variable nào quyết định profit và cash?
-3. Balance sheet có chịu nổi downside không?
-4. Governance/capital allocation có giữ value cho shareholder/creditor không?
-5. Điều kiện nào khiến view hiện tại sai?
+Nếu chưa trả lời được năm câu này, thu thập thêm dữ liệu có thể chỉ làm tăng lượng thông tin chứ chưa tăng mức độ hiểu.
 
-Nếu không trả lời được năm câu này, việc thu thập thêm data có thể chỉ tăng information mà không tăng understanding.
+## 2. Tạo hồ sơ nhận dạng một trang
 
-## 2. Tạo một one-page identity sheet
-
-Trước khi model, ghi:
+Trước khi mô hình hóa, ghi lại:
 
 ```text
-Legal name:
-Ticker:
-Group / parent:
-Main subsidiaries:
-Main segments:
-Main geography:
-Top customers if disclosed:
-Key inputs:
-Key competitors:
-Listing market:
-Reporting perimeter:
-Fiscal year:
+Tên pháp nhân:
+Mã chứng khoán:
+Tập đoàn / công ty mẹ:
+Công ty con chính:
+Phân khúc chính:
+Khu vực địa lý chính:
+Khách hàng lớn nếu có công bố:
+Đầu vào quan trọng:
+Đối thủ chính:
+Thị trường niêm yết:
+Phạm vi hợp nhất báo cáo:
+Năm tài chính:
 ```
 
-Đừng bắt đầu bằng valuation. Sai legal entity sẽ làm toàn bộ analysis sau đó sai.
+Không bắt đầu bằng định giá. Nếu xác định sai pháp nhân, toàn bộ phân tích phía sau có thể sai theo.
 
-## 3. Viết company trong một câu
+## 3. Mô tả doanh nghiệp trong một câu
 
-Cố gắng viết:
+Cố gắng hoàn thành câu:
 
-> Công ty X kiếm tiền bằng cách ___ cho ___, profitability chủ yếu phụ thuộc vào ___ và balance-sheet risk lớn nhất là ___.
+> Công ty X kiếm tiền bằng cách ___ cho ___; khả năng sinh lời chủ yếu phụ thuộc vào ___ và rủi ro bảng cân đối lớn nhất là ___.
 
-Ví dụ generic:
+Ví dụ, một nhà sản xuất bộ nhớ bán DRAM/NAND cho khách hàng thiết bị và trung tâm dữ liệu; lợi nhuận phụ thuộc vào ASP × lượng bit xuất bán × chi phí mỗi bit, còn rủi ro lớn nằm ở chu kỳ, CAPEX và chuyển đổi công nghệ.
 
-> Một memory-chip producer kiếm tiền bằng bán DRAM/NAND cho device/cloud customers; profit phụ thuộc ASP × bit shipment × cost per bit, còn risk lớn là cycle + CAPEX + technology transition.
+Nếu vẫn không viết được câu này một cách cụ thể, nghĩa là chưa hiểu mô hình kinh doanh đủ sâu.
 
-Nếu câu này vẫn mơ hồ, bạn chưa hiểu business đủ sâu.
+## 4. Vẽ cỗ máy kinh tế của doanh nghiệp
 
-## 4. Vẽ economic engine
-
-Một template chung:
+Khung chung:
 
 ```text
-Demand driver
+Động lực nhu cầu
     ↓
-Volume / activity
+Sản lượng / mức hoạt động
     ×
-Price / monetization
+Giá / khả năng kiếm tiền
     ↓
-Revenue
-    - variable cost
-    - fixed cost
+Doanh thu
+    - chi phí biến đổi
+    - chi phí cố định
     ↓
-Operating profit
-    ± working capital
-    - capex
+Lợi nhuận hoạt động
+    ± thay đổi vốn lưu động
+    - CAPEX
     ↓
-Cash flow
+Dòng tiền
 ```
 
-Sau đó thay variables theo industry.
+Sau đó thay các biến bằng chỉ tiêu phù hợp với từng ngành.
 
-## 5. Case Pattern A — Semiconductor
+## 5. Mẫu A — Bán dẫn
 
-Một semiconductor model nên đi từ:
+Một mô hình bán dẫn nên đi theo chuỗi:
 
 ```text
-End demand
-→ bit demand
-→ supply growth / capacity
-→ utilization
+Nhu cầu cuối cùng
+→ nhu cầu bit
+→ tăng trưởng nguồn cung / công suất
+→ tỷ lệ sử dụng công suất
 → ASP
-→ revenue
-→ gross margin
-→ CAPEX / depreciation
-→ FCF
+→ doanh thu
+→ biên lợi nhuận gộp
+→ CAPEX / khấu hao
+→ dòng tiền tự do
 ```
 
-### Key questions
+Cần hỏi cơ cấu nhu cầu AI/server/mobile/PC thay đổi thế nào; đối thủ thêm bao nhiêu công suất; yield thay đổi ra sao; chuyển đổi công nghệ ảnh hưởng chi phí mỗi bit thế nào; giá hợp đồng và giá giao ngay có bền không; và doanh nghiệp đang đầu tư ngược chu kỳ hay chạy theo đỉnh nhu cầu.
 
-**Demand:** AI/server/mobile/PC mix thay đổi ra sao?
+Một kịch bản cơ sở có thể giả định lượng bit xuất bán tăng 15%, ASP tăng 5% và chi phí mỗi bit giảm 10%. Kịch bản xấu có thể là lượng bit chỉ tăng 5%, ASP giảm 20% và chi phí mỗi bit chỉ giảm 5%.
 
-**Supply:** competitors thêm capacity bao nhiêu và yield thế nào?
+Do chi phí cố định và khấu hao lớn, lợi nhuận hoạt động có thể biến động mạnh hơn doanh thu. Đây là **đòn bẩy hoạt động (operating leverage)**. Xem [bán dẫn](./14_semiconductors_electronics_display.md).
 
-**Technology:** node/process/product transition ảnh hưởng cost per bit ra sao?
+## 6. Mẫu B — Ô tô
 
-**Pricing:** contract/spot direction có sustain không?
-
-**CAPEX:** company đang invest counter-cyclical hay chase peak demand?
-
-### Simple scenario
-
-Base:
+Cơ chế kinh tế cơ bản:
 
 ```text
-Bit shipment +15%
-ASP +5%
-Cost/bit -10%
+Số xe bán
+× ASP / cơ cấu sản phẩm
+= Doanh thu
+- nguyên vật liệu
+- lao động
+- ưu đãi bán hàng
+- bảo hành
+= Lợi nhuận hoạt động ô tô
+± kết quả của công ty tài chính nội bộ
 ```
 
-Bear:
+Không chỉ nhìn số xe. Một doanh nghiệp bán ít xe hơn nhưng chuyển cơ cấu sang SUV hoặc xe cao cấp vẫn có thể tăng biên lợi nhuận. Ngược lại, sản lượng tăng nhờ ưu đãi bán hàng lớn có thể làm biên lợi nhuận giảm.
+
+Các biến cần theo dõi gồm sản lượng toàn cầu, ASP/cơ cấu, ưu đãi, tỷ lệ sử dụng nhà máy, nguyên vật liệu, tỷ giá, bảo hành/triệu hồi, tổn thất tín dụng của công ty tài chính và CAPEX cho chuyển đổi EV.
+
+Một bài kiểm tra sức chịu đựng có thể giả định sản lượng giảm 10%, ưu đãi tăng tương đương 2% ASP, KRW mạnh lên 8% và chi phí bảo hành tăng 30%, rồi lần theo tác động đến biên hoạt động, tiền mặt và công ty tài chính. Xem [ô tô và pin](./15_automotive_battery_mobility.md).
+
+## 7. Mẫu C — Nền tảng số / Internet
+
+Không nên chỉ nhìn số người dùng hoạt động hằng tháng (MAU). Chuỗi kinh tế phù hợp hơn là:
 
 ```text
-Bit shipment +5%
-ASP -20%
-Cost/bit -5%
+Người dùng
+× mức độ tương tác
+× giao dịch hoặc lượng quảng cáo có thể bán
+× tỷ lệ kiếm tiền
+= Doanh thu
+- chi phí thu hút lưu lượng
+- nội dung / hoàn tất đơn hàng / thanh toán / đám mây
+- R&D / bán hàng
+= Lợi nhuận hoạt động
 ```
 
-Do fixed cost/depreciation lớn, operating profit có thể move mạnh hơn revenue.
+Cần phân biệt tăng trưởng người dùng với tăng khả năng kiếm tiền; xem tỷ lệ giữ chân; đánh giá việc tăng tỷ lệ thu phí có làm người bán hoặc người dùng phản ứng không; xác định hiệu ứng mạng lưới có thật hay người dùng dễ dùng nhiều nền tảng cùng lúc; và xem các mảng mới đang được trợ cấp bởi cỗ máy tạo tiền cốt lõi trong bao lâu.
 
-Đây là operating leverage.
+Một dấu hiệu cảnh báo là doanh thu tăng cao nhưng chi phí marketing phải tăng nhanh hơn chỉ để giữ tốc độ tăng trưởng. Đó có thể là **tăng trưởng mua bằng tiền (paid growth)** chứ chưa phải hiệu ứng mạng lưới mạnh hơn. Xem [nền tảng và dịch vụ](./17_platform_telecom_content_retail_services.md).
 
-Xem [`14_semiconductors_electronics_display.md`](./14_semiconductors_electronics_display.md).
+## 8. Mẫu D — SI/SM và CNTT doanh nghiệp
 
-## 6. Case Pattern B — Automotive
+Đây là mô hình đặc biệt quan trọng trong hệ sinh thái doanh nghiệp Hàn Quốc. Một công ty SI/SM thường có hỗn hợp gồm tích hợp hệ thống (SI), vận hành/bảo trì hệ thống (SM), đám mây và dịch vụ quản lý, cùng các dự án phần mềm, dữ liệu hoặc AI.
 
-Auto company economics:
-
-```text
-Units sold
-× ASP / mix
-= Revenue
-- materials
-- labor
-- incentives
-- warranty
-= Automotive operating profit
-+/- finance affiliate economics
-```
-
-### Không chỉ nhìn units
-
-Một company bán ít xe hơn nhưng mix chuyển SUV/luxury có thể tăng margin.
-
-Ngược lại, volume tăng nhờ incentives mạnh có thể làm margin giảm.
-
-### Variables
-
-- global unit sales;
-- ASP/mix;
-- incentives;
-- utilization;
-- raw materials;
-- FX;
-- warranty/recall;
-- captive-finance credit losses;
-- EV transition CAPEX.
-
-### Stress test
-
-```text
-Units -10%
-Incentive +2% of ASP
-KRW strengthens 8%
-Warranty cost +30%
-```
-
-Trace tới operating margin, cash và finance subsidiary.
-
-Xem [`15_automotive_battery_mobility.md`](./15_automotive_battery_mobility.md).
-
-## 7. Case Pattern C — Platform / Internet
-
-Platform model cần tránh chỉ nhìn MAU.
-
-Economic chain:
-
-```text
-Users
-× engagement
-× transactions/ad inventory
-× monetization rate
-= Revenue
-- traffic acquisition
-- content / fulfillment / payment / cloud cost
-- R&D / sales
-= Operating profit
-```
-
-### Questions
-
-- user growth hay monetization growth?
-- retention?
-- take rate tăng có gây merchant/user backlash?
-- network effect thật hay multi-homing dễ?
-- regulation ảnh hưởng ads/payment/data thế nào?
-- new businesses đang subsidized bởi core cash engine bao lâu?
-
-### Red flag
-
-Revenue growth cao nhưng marketing spend phải tăng nhanh hơn để giữ growth có thể chỉ là paid growth, không phải strengthening network effect.
-
-Xem [`17_platform_telecom_content_retail_services.md`](./17_platform_telecom_content_retail_services.md).
-
-## 8. Case Pattern D — SI/SM và enterprise IT
-
-Đây là model quan trọng với Korean enterprise ecosystem.
-
-SI/SM company thường có mix:
-
-```text
-System Integration (SI)
-+ System Management / Maintenance (SM)
-+ Cloud / managed service
-+ software/license/data/AI projects
-```
-
-### Revenue engine
-
-Project SI:
+Với dự án tính theo nguồn lực:
 
 \[
-Revenue \approx Billable\ Resources \times Utilization \times Billing\ Rate
+Doanh\ thu \approx Nhân\ lực\ có\ thể\ tính\ phí \times Tỷ\ lệ\ sử\ dụng \times Đơn\ giá
 \]
 
-hoặc fixed-price contract theo milestones.
+Một số hợp đồng lại có giá cố định theo mốc bàn giao. SM/bảo trì thường có phần doanh thu lặp lại ổn định hơn.
 
-SM/maintenance có recurring component ổn định hơn.
+Cần theo dõi tỷ lệ nhu cầu nội bộ tập đoàn, tỷ lệ khách hàng bên ngoài, tỷ lệ sử dụng lập trình viên, tỷ lệ thầu phụ, hợp đồng giá cố định so với tính theo thời gian–nguồn lực, đơn hàng tồn đọng, tài sản hợp đồng, lạm phát chi phí nhân sự, cơ cấu chuyển sang cloud và đóng góp của phần mềm/IP có biên cao.
 
-### Key economics
+Bẫy lớn là dự án giá cố định. Nếu dự án dự kiến doanh thu 100 và chi phí 85 thì lợi nhuận là 15. Nhưng nếu phạm vi công việc tăng khiến chi phí lên 105, kinh tế của cả dự án đổi dấu. Vì vậy cần đọc tài sản hợp đồng, dự phòng, lao động thuê ngoài và dự phòng lỗ dự án.
 
-- internal/captive group demand;
-- external customer ratio;
-- developer utilization;
-- subcontractor ratio;
-- fixed-price vs time-and-material;
-- backlog;
-- contract asset;
-- labor cost inflation;
-- cloud migration mix;
-- high-margin software/IP contribution.
+Nếu phân tích để chọn nơi làm việc, cần thêm các câu hỏi về phát triển cốt lõi hay điều phối, dự án nội bộ hay khách hàng ngoài, SI xây mới hay SM bảo trì, công nghệ hiện đại hay legacy, tầng thầu phụ, quyền ra quyết định và hệ thống đánh giá/thăng tiến. Xem [dịch vụ CNTT](./34_digital_fintech_cloud_and_it_services.md), [lao động](./12_labor_titles_compensation_and_workplace.md) và [văn hóa doanh nghiệp](./13_business_culture_decision_making_and_communication.md).
 
-### Project margin trap
+## 9. Mẫu E — Nhà cung cấp SME
 
-Fixed-price project estimate 100 revenue, 85 cost → margin 15.
-
-Nếu scope creep làm cost thành 105, entire project economics đảo sign.
-
-Do đó SI company cần đọc contract assets, provisions, outsourced labor và project loss reserves.
-
-### Career layer
-
-Nếu phân tích company để ứng tuyển, thêm:
+Một nhà cung cấp SME Hàn Quốc có thể có lợi nhuận kế toán nhưng quyền thương lượng thấp.
 
 ```text
-Core dev hay coordination?
-Captive project hay external client?
-SI build hay SM maintenance?
-Tech stack modern hay legacy?
-Subcontracting layer?
-Decision authority?
-Promotion / evaluation?
+Sản lượng của khách hàng
+× giá trị linh kiện trên mỗi đơn vị
+× giá bán
+= doanh thu
+- nguyên vật liệu
+- lao động
+- khấu hao
+= lợi nhuận hoạt động
+± điều khoản thanh toán
+= dòng tiền
 ```
 
-Company economics và career economics liên quan nhưng không giống nhau.
+Cần hỏi tỷ trọng doanh thu từ khách hàng lớn nhất, khả năng thay thế nhà cung cấp, áp lực giảm giá hằng năm, cơ chế chuyển giá nguyên liệu, gánh nặng khuôn/CAPEX, thời hạn thanh toán, quyền sở hữu công nghệ và rủi ro khách hàng chuyển nhà máy sang nước khác.
 
-Xem [`34_digital_fintech_cloud_and_it_services.md`](./34_digital_fintech_cloud_and_it_services.md), [`12_labor_titles_compensation_and_workplace.md`](./12_labor_titles_compensation_and_workplace.md) và [`13_business_culture_decision_making_and_communication.md`](./13_business_culture_decision_making_and_communication.md).
+Một insight quan trọng: doanh thu tăng có thể tốt nhưng nhu cầu vốn lưu động tăng nhanh hơn nếu khách hàng thanh toán chậm. **Tăng trưởng có thể tiêu thụ tiền mặt.** Xem [SME và hệ sinh thái thầu phụ](./06_sme_mid_sized_and_subcontracting_ecosystem.md).
 
-## 9. Case Pattern E — SME supplier
+## 10. Mẫu F — Xây dựng và PF
 
-Một Korean SME supplier có thể profitable nhưng bargaining power thấp.
-
-Model:
+Cần tách biên lợi nhuận xây dựng cốt lõi khỏi rủi ro PF có điều kiện.
 
 ```text
-Customer production volume
-× supplier content per unit
-× price
-= revenue
-- raw materials
-- labor
-- depreciation
-= operating profit
-± payment terms
-= cash flow
+Đơn hàng
+→ đơn hàng tồn đọng
+→ tiến độ xây dựng
+→ ghi nhận doanh thu
+→ tài sản hợp đồng / khoản phải thu
+→ thu tiền
 ```
 
-### Questions
-
-- top customer % revenue?
-- single-source hay replaceable?
-- annual price-down pressure?
-- raw-material pass-through?
-- tooling/capex burden?
-- payment terms?
-- technology ownership?
-- customer relocation risk?
-
-### Key insight
-
-Supplier revenue growth có thể tốt nhưng working-capital need tăng nhanh nếu customer payment term dài.
-
-Growth có thể consume cash.
-
-Xem [`06_sme_mid_sized_and_subcontracting_ecosystem.md`](./06_sme_mid_sized_and_subcontracting_ecosystem.md).
-
-## 10. Case Pattern F — Construction / PF
-
-Construction company cần tách core construction margin và contingent PF exposure.
+Song song là chuỗi tài trợ:
 
 ```text
-Orders
-→ backlog
-→ construction progress
-→ revenue recognition
-→ contract assets/receivables
-→ cash collection
+Chủ đầu tư / SPV
+→ bảo lãnh hoặc hỗ trợ tín dụng
+→ tái cấp vốn
+→ bán trước
 ```
 
-Parallel:
+Một sổ đơn hàng khỏe không xóa được rủi ro bảo lãnh. Kịch bản xấu có thể gồm bán trước chậm, chi phí dự án tăng 15%, chênh lệch lãi suất tái cấp vốn tăng 300 điểm cơ bản, chậm hoàn thành sáu tháng và bảo lãnh trở thành nghĩa vụ thực tế. Xem [xây dựng và PF](./18_construction_real_estate_and_project_finance.md).
+
+## 11. Mẫu G — Doanh nghiệp tài chính
+
+Không nên dùng dòng tiền tự do kiểu doanh nghiệp công nghiệp cho ngân hàng hoặc bảo hiểm.
+
+Với ngân hàng:
 
 ```text
-Developer / SPV funding
-→ guarantee / credit support
-→ refinancing
-→ presales
-```
-
-A healthy order book không neutralize guarantee risk.
-
-### Stress
-
-- presales slow;
-- project cost +15%;
-- refinancing spread +300bp;
-- completion delayed 6 months;
-- guarantee crystallizes.
-
-Xem [`18_construction_real_estate_and_project_finance.md`](./18_construction_real_estate_and_project_finance.md).
-
-## 11. Case Pattern G — Financial company
-
-Không dùng industrial FCF cho bank/insurer như bình thường.
-
-### Bank
-
-```text
-Loan/deposit base
+Nền khoản vay / tiền gửi
 × NIM
-- operating cost
-- credit loss
-= earnings
+- chi phí vận hành
+- tổn thất tín dụng
+= lợi nhuận
 ```
 
-### Securities company
+Với công ty chứng khoán, cần nhìn phí môi giới, phí ngân hàng đầu tư, kết quả giao dịch/cấu trúc sản phẩm, chi phí vốn và tổn thất tín dụng. Với bảo hiểm, cần tách kết quả dịch vụ bảo hiểm và kết quả đầu tư. Luôn đọc lợi nhuận cùng mức đủ vốn. Xem [khu vực tài chính ngoài ngân hàng](./35_financial_sector_securities_insurance_asset_management.md).
 
-```text
-Brokerage fees
-+ IB fees
-+ trading/structured result
-- funding/operating cost
-- credit loss
-```
+## 12. Lập bảng tài chính 5 năm
 
-### Insurer
+Thay vì đọc từng báo cáo năm riêng lẻ, tạo một bảng:
 
-```text
-Premium/service result
-+ investment result
-- claims/expenses
-```
-
-Always pair return with capital adequacy.
-
-Xem [`35_financial_sector_securities_insurance_asset_management.md`](./35_financial_sector_securities_insurance_asset_management.md).
-
-## 12. Five-year financial table
-
-Tạo bảng riêng thay vì đọc từng annual report rời rạc:
-
-| Metric | Y-4 | Y-3 | Y-2 | Y-1 | Y0 |
+| Chỉ tiêu | Y-4 | Y-3 | Y-2 | Y-1 | Y0 |
 |---|---:|---:|---:|---:|---:|
-| Revenue | | | | | |
-| Operating Profit | | | | | |
-| Operating Margin | | | | | |
-| Net Income | | | | | |
+| Doanh thu | | | | | |
+| Lợi nhuận hoạt động | | | | | |
+| Biên hoạt động | | | | | |
+| Lợi nhuận ròng | | | | | |
 | CFO | | | | | |
 | CAPEX | | | | | |
 | FCF | | | | | |
-| Debt | | | | | |
-| Cash | | | | | |
-| Shares | | | | | |
+| Nợ | | | | | |
+| Tiền mặt | | | | | |
+| Số cổ phiếu | | | | | |
 
-Đánh dấu event bên cạnh: acquisition, spin-off, factory launch, crisis, major customer win/loss.
+Đánh dấu các sự kiện như mua lại, chia tách, mở nhà máy, khủng hoảng hoặc mất/giành khách hàng lớn. Mô hình nhiều năm quan trọng hơn một ảnh chụp tại một thời điểm.
 
-Pattern nhiều năm quan trọng hơn snapshot.
+## 13. Dựng cây động lực
 
-## 13. Build driver tree
-
-Mỗi company nên có một driver tree.
-
-Ví dụ:
+Mỗi doanh nghiệp nên có một **cây động lực (driver tree)**:
 
 ```text
-Operating Profit
-├─ Revenue
-│  ├─ Volume
-│  └─ Price / Mix
-└─ Cost
-   ├─ Variable cost
-   ├─ Labor
-   ├─ Depreciation
-   └─ Other fixed cost
+Lợi nhuận hoạt động
+├─ Doanh thu
+│  ├─ Sản lượng
+│  └─ Giá / cơ cấu
+└─ Chi phí
+   ├─ Chi phí biến đổi
+   ├─ Lao động
+   ├─ Khấu hao
+   └─ Chi phí cố định khác
 ```
 
-Sau đó map macro variable vào driver.
+Sau đó nối biến kinh tế vĩ mô vào đúng nhánh: KRW tác động giá xuất khẩu/biên lợi nhuận; lãi suất tác động chi phí lãi và nhu cầu; dầu tác động logistics/nguyên liệu; nhu cầu Trung Quốc tác động sản lượng. Đây là cầu nối với [cơ chế truyền dẫn vĩ mô](./21_economy_to_company_transmission.md).
 
-```text
-KRW → export ASP/margin
-Rate → interest + demand
-Oil → logistics/material
-China demand → volume
-```
+## 14. Xây ba kịch bản xấu–cơ sở–tốt
 
-Đây là bridge giữa [`21_economy_to_company_transmission.md`](./21_economy_to_company_transmission.md) và company model.
+Kịch bản không nhằm dự báo chính xác tuyệt đối mà để kiểm tra doanh nghiệp phụ thuộc vào biến nào.
 
-## 14. Build bull/base/bear scenario
-
-Scenario không phải forecast precision. Nó là test dependency.
-
-| Driver | Bear | Base | Bull |
+| Động lực | Xấu | Cơ sở | Tốt |
 |---|---:|---:|---:|
-| Volume | -10% | +3% | +10% |
-| Price | -8% | 0% | +5% |
-| Margin | 5% | 8% | 11% |
-| CAPEX | high | normal | controlled |
+| Sản lượng | -10% | +3% | +10% |
+| Giá | -8% | 0% | +5% |
+| Biên lợi nhuận | 5% | 8% | 11% |
+| CAPEX | cao | bình thường | kiểm soát tốt |
 
-Khi scenario chạy, observe FCF, debt và valuation.
+Khi chạy kịch bản, theo dõi FCF, nợ và định giá. Không nên tạo kịch bản xấu bằng cách cho mọi thứ cùng giảm 50%. Một kịch bản tốt phải có **tính nhất quán nhân quả (causal coherence)**.
 
-## 15. Không dùng scenario vô lý
+Ví dụ khi bán dẫn suy giảm, ASP và tỷ lệ sử dụng công suất có thể giảm; sau một độ trễ, doanh nghiệp cũng có thể cắt CAPEX. Các biến phải kể được cùng một câu chuyện kinh tế.
 
-Bear case không phải “mọi thứ cùng xấu 50%”.
+## 15. Dùng bảng độ nhạy thay vì một giá mục tiêu duy nhất
 
-Scenario cần causal coherence.
-
-Ví dụ semiconductor downturn có thể đi với ASP giảm và utilization giảm, nhưng lower demand cũng có thể khiến CAPEX cut sau một lag.
-
-A coherent scenario kể được câu chuyện kinh tế.
-
-## 16. Sensitivity table
-
-Nếu valuation phụ thuộc mạnh vào margin và growth, tạo matrix thay vì một target price.
+Nếu định giá phụ thuộc mạnh vào tăng trưởng và biên lợi nhuận, tạo ma trận:
 
 ```text
-             Margin
-Growth       6%   8%   10%
-  1%         ...  ...  ...
-  3%         ...  ...  ...
-  5%         ...  ...  ...
+                 Biên lợi nhuận
+Tăng trưởng      6%     8%     10%
+1%               ...    ...    ...
+3%               ...    ...    ...
+5%               ...    ...    ...
 ```
 
-Mục tiêu là biết assumption nào dominate value.
+Mục tiêu là biết giả định nào chi phối giá trị mạnh nhất.
 
-## 17. Reverse-engineer market expectations
+## 16. Đọc ngược kỳ vọng của thị trường
 
-Thay vì chỉ forecast, hỏi current valuation imply gì.
+Thay vì chỉ dự báo, hãy hỏi mức định giá hiện tại đang ngầm giả định điều gì. Nếu vốn hóa thị trường chỉ hợp lý khi biên lợi nhuận tăng từ 5% lên 12% trong ba năm, cần tìm bằng chứng doanh nghiệp thực sự có con đường tới 12%.
 
-Ví dụ nếu market cap chỉ justified khi margin tăng 5% → 12% trong ba năm, analyst phải tìm evidence company có path thực tế tới 12%.
+Đây là **định giá ngược (reverse valuation / 역산 가치평가)**.
 
-Đây là **reverse valuation / 역산 가치평가**.
+## 17. Kiến trúc của một giả thuyết tốt
 
-## 18. Thesis architecture
-
-Một thesis tốt có structure:
+Một giả thuyết nghiên cứu nên có cấu trúc:
 
 ```text
-Observation
-→ Mechanism
-→ Evidence
-→ Financial impact
-→ What market may be missing
-→ Catalyst / timeline
-→ Thesis breaker
+Quan sát
+→ Cơ chế
+→ Bằng chứng
+→ Tác động tài chính
+→ Điều thị trường có thể đang bỏ sót
+→ Chất xúc tác / thời gian
+→ Điều kiện bác bỏ giả thuyết
 ```
 
-Không viết:
+Không nên viết “công ty tốt vì AI tăng trưởng”. Cách tốt hơn là: nhu cầu AI làm tăng lượng HBM; nếu yield và công suất tăng đúng kế hoạch, cơ cấu sản phẩm sẽ nâng ASP và biên lợi nhuận; giả thuyết sai nếu chứng nhận sản phẩm bị chậm hoặc nguồn cung đối thủ tăng nhanh hơn nhu cầu.
 
-> “Company tốt vì AI growth.”
+## 18. Gắn nhãn bằng chứng
 
-Viết:
+Mỗi ghi chú nên phân biệt:
 
-> AI demand tăng HBM volume; nếu yield và capacity ramp đạt X, mix shift nâng blended ASP/margin. Thesis fail nếu qualification delay hoặc competitor supply tăng nhanh hơn demand.
-
-Mechanism giúp thesis falsifiable.
-
-## 19. Evidence hierarchy
-
-Tag mỗi note:
-
-- **F — Fact:** audited filing/regulatory filing.
-- **M — Management Claim:** IR, earnings call.
-- **I — Inference:** analyst reasoning.
-- **E — External:** industry/government/third-party evidence.
+- **F — Sự thật (Fact):** báo cáo đã kiểm toán hoặc hồ sơ pháp lý.
+- **M — Tuyên bố của quản lý (Management Claim):** IR hoặc cuộc gọi kết quả kinh doanh.
+- **I — Suy luận (Inference):** lập luận của người phân tích.
+- **E — Bằng chứng bên ngoài (External Evidence):** dữ liệu ngành, chính phủ hoặc bên thứ ba.
 
 Ví dụ:
 
 ```text
-[F] CAPEX = 5T
-[M] Management expects new line to improve competitiveness
-[I] At <60% utilization, project ROIC likely below target
+[F] CAPEX = 5 nghìn tỷ KRW
+[M] Ban quản lý kỳ vọng dây chuyền mới cải thiện năng lực cạnh tranh
+[I] Nếu tỷ lệ sử dụng dưới 60%, ROIC dự án có thể thấp hơn mục tiêu
 ```
 
-Tagging này chống việc biến management narrative thành fact.
+Cách gắn nhãn này giúp tránh biến câu chuyện của ban quản lý thành sự thật đã được chứng minh.
 
-## 20. Build source log
+## 19. Lập nhật ký nguồn
 
-Research note nên có source log:
-
-| Date | Source | What it supports | Confidence |
+| Ngày | Nguồn | Dùng để chứng minh điều gì | Độ tin cậy |
 |---|---|---|---|
-| | DART annual report | debt maturity | High |
-| | IR deck | management target | Medium |
-| | Industry source | market growth | Medium |
+| | Báo cáo năm DART | lịch đáo hạn nợ | Cao |
+| | Tài liệu IR | mục tiêu của ban quản lý | Trung bình |
+| | Nguồn ngành | tăng trưởng thị trường | Trung bình |
 
-Nếu conclusion quan trọng nhưng source weak, đó là research gap.
+Nếu một kết luận quan trọng dựa trên nguồn yếu, đó là khoảng trống nghiên cứu cần bổ sung.
 
-## 21. Read DART theo sequence
+## 20. Đọc DART theo câu hỏi, không đọc như tiểu thuyết
 
-Đừng đọc annual report từ page 1 tới cuối như novel.
-
-Một efficient order:
+Một thứ tự hiệu quả thường là:
 
 ```text
-1. Company/segment overview
-2. Consolidated financial statements
-3. Cash flow
-4. Segment note
-5. Debt/maturity
-6. Related parties
-7. Commitments/guarantees
-8. Major contracts / capex
-9. Shareholder/control
-10. Auditor/corrections
+1. Tổng quan công ty và phân khúc
+2. Báo cáo tài chính hợp nhất
+3. Báo cáo lưu chuyển tiền tệ
+4. Thuyết minh phân khúc
+5. Nợ và lịch đáo hạn
+6. Bên liên quan
+7. Cam kết và bảo lãnh
+8. Hợp đồng lớn / CAPEX
+9. Cổ đông và quyền kiểm soát
+10. Kiểm toán / điều chỉnh số liệu
 ```
 
-Sau đó quay lại accounting policy nơi cần.
+Sau đó quay lại chính sách kế toán ở đúng nơi cần thiết. Không cần ghi nhớ mọi thuyết minh. Nếu CFO yếu, mở khoản phải thu, tồn kho và tài sản hợp đồng. Nếu nợ cao, mở lịch đáo hạn, điều khoản nợ và bảo lãnh.
 
-## 22. Read footnote bằng question, không bằng patience
+## 21. Kết quả cuối cùng nên là một mô hình có thể bác bỏ
 
-Không cần memorize mọi note.
-
-Nếu CFO weak → mở receivable/inventory/contract asset.
-
-Nếu debt high → mở maturity/covenant/guarantee.
-
-Nếu acquisition lớn → goodwill/PPA.
-
-Nếu group complex → related parties/subsidiaries.
-
-Question-driven reading hiệu quả hơn linear reading.
-
-## 23. Forensic cross-check
-
-Dùng [`38_forensic_accounting_red_flags_and_earnings_quality.md`](./38_forensic_accounting_red_flags_and_earnings_quality.md) để kiểm tra:
+Một nghiên cứu tốt không kết thúc bằng “tôi thích công ty này”. Nó phải có dạng:
 
 ```text
-Earnings vs CFO
-Revenue vs receivables
-Sales vs inventory
-CFO vs payables
-Adjusted profit vs audited profit
-Debt vs guarantees
-Buyback vs net share count
+Nếu A xảy ra
+→ động lực B thay đổi
+→ lợi nhuận / dòng tiền C thay đổi
+→ bảng cân đối hoặc định giá D thay đổi.
+
+Nếu bằng chứng E không xuất hiện trong khoảng thời gian T
+→ giả thuyết phải được sửa hoặc bỏ.
 ```
 
-Single red flag không đủ; cluster mới đáng chú ý.
+## Mental Model — Mô hình tư duy
 
-## 24. Credit cross-check
+> Workbook này không dạy cách điền đủ mọi ô. Nó dạy cách biến một doanh nghiệp thành một **cỗ máy kinh tế có thể quan sát được**: nhu cầu đi vào đâu, doanh thu hình thành thế nào, chi phí và vốn bị tiêu ở đâu, lợi nhuận có chuyển thành tiền hay không, ai kiểm soát quyết định và điều gì có thể làm cỗ máy đó hỏng.
 
-Dùng [`36_credit_ratings_bonds_default_and_restructuring.md`](./36_credit_ratings_bonds_default_and_restructuring.md):
-
-```text
-Debt amount
-→ maturity ladder
-→ interest rate
-→ rating/spread
-→ covenant
-→ liquidity sources
-→ downside scenario
-```
-
-Equity thesis tốt nhưng liquidity không survive bear case là dangerous thesis.
-
-## 25. Corporate-action cross-check
-
-Nếu company đang merger/split/issue shares:
-
-- ownership before/after;
-- issue/exchange ratio;
-- related party;
-- use of proceeds;
-- share count;
-- debt;
-- minority shareholder effect.
-
-Xem [`37_corporate_actions_mna_mergers_spin_offs_and_capital_actions.md`](./37_corporate_actions_mna_mergers_spin_offs_and_capital_actions.md).
-
-## 26. Write a risk register
-
-Không dùng generic list “competition, regulation, macro”.
-
-Risk register nên link mechanism:
-
-| Risk | Trigger | Financial transmission | Leading indicator |
-|---|---|---|---|
-| Customer loss | contract not renewed | volume↓, utilization↓ | customer concentration |
-| Rate shock | refinancing | interest↑, FCF↓ | maturity/spread |
-| Scope creep | project delay | labor cost↑ | contract asset/provision |
-
-Risk tốt là measurable.
-
-## 27. Thesis breakers
-
-Thesis breaker phải cụ thể:
-
-```text
-Utilization < 60% for 4 quarters
-Top customer share drops by half
-Net debt/EBITDA > 4x
-FCF negative despite normalized cycle
-New product fails qualification
-```
-
-Nếu breaker xảy ra, re-underwrite thesis từ đầu.
-
-## 28. Pre-mortem
-
-Giả sử ba năm sau investment/job/company view sai hoàn toàn.
-
-Viết trước 5 plausible causes.
-
-Ví dụ SI company:
-
-1. captive demand giảm;
-2. cloud shift commoditizes legacy SI;
-3. labor cost rises faster than billing rate;
-4. fixed-price projects incur losses;
-5. key engineers leave.
-
-Pre-mortem bắt bạn nhìn beyond current narrative.
-
-## 29. Career decision workbook
-
-Khi company analysis phục vụ career, thêm matrix:
-
-| Dimension | Questions |
-|---|---|
-| Business quality | stable/growing? |
-| Team importance | core or support? |
-| Skill accumulation | portable skills? |
-| Project type | build/maintenance/coordination? |
-| Decision rights | ownership or execution only? |
-| Compensation | fixed/bonus/overtime? |
-| Promotion | criteria/timing? |
-| Organizational risk | restructuring/outsourcing? |
-
-Một company mạnh không guarantee role mạnh. Role-level economics phải được model riêng.
-
-## 30. Supplier/partner decision workbook
-
-Nếu company là vendor/customer:
-
-- payment terms;
-- creditworthiness;
-- concentration;
-- contract duration;
-- SLA/penalty;
-- bargaining power;
-- switching cost;
-- data/IP ownership;
-- dependency on key person.
-
-Company analysis phục vụ commercial decision khác stock analysis.
-
-## 31. Research note template hoàn chỉnh
-
-```markdown
-# Company — Research Note
-
-## 1. One-sentence economic identity
-## 2. Legal entity / group map
-## 3. Historical origin
-## 4. Revenue engine
-## 5. Driver tree
-## 6. Value chain / customers / suppliers
-## 7. Unit economics
-## 8. Moat / competitive position
-## 9. 5-year financial bridge
-## 10. Earnings quality
-## 11. Balance sheet / liquidity / credit
-## 12. Governance / related parties
-## 13. Corporate actions
-## 14. Capital allocation
-## 15. Macro exposure
-## 16. Bear / Base / Bull scenarios
-## 17. Valuation / implied expectations
-## 18. Risk register
-## 19. Thesis breakers
-## 20. Pre-mortem
-## 21. Career / supplier view if relevant
-## 22. Source log
-```
-
-## 32. Minimum viable analysis trong 30–60 phút
-
-Khi không có nhiều thời gian, làm version rút gọn:
-
-```text
-10 min — entity + segments + group
-10 min — financial trend + cash
-10 min — debt + ownership + major risk
-10 min — industry drivers
-10 min — valuation / scenario
-10 min — write what you still don't know
-```
-
-Quan trọng nhất là cuối session phải có **unknowns list**.
-
-## 33. Deep analysis trong nhiều ngày
-
-Deep work khác ở độ evidence, không phải số lượng headings.
-
-Bạn sẽ:
-
-- rebuild 5–10 year data;
-- compare peers;
-- read multiple filings;
-- reconstruct corporate actions;
-- normalize cycle;
-- scenario test;
-- review external industry sources;
-- challenge thesis.
-
-## 34. Unknowns list
-
-Research tốt kết thúc bằng questions chưa trả lời.
-
-Ví dụ:
-
-```text
-How much of growth is price vs volume?
-What % capex is maintenance?
-Is customer concentration increasing?
-What is actual hedge ratio?
-How much cash is restricted?
-What is parent-level debt maturity?
-```
-
-Unknowns list quyết định research tiếp theo.
-
-## 35. Stop condition
-
-Bạn không cần know everything.
-
-Analysis có thể dừng khi:
-
-1. economic engine rõ;
-2. main sensitivities rõ;
-3. downside survivability được test;
-4. valuation/job/commercial decision assumptions explicit;
-5. remaining unknowns không material hoặc đã bounded.
-
-Without stop condition, research dễ biến thành collection trivia.
-
-## 36. Final one-page decision memo
-
-Sau deep dive, viết lại chỉ một page:
-
-```text
-What company is
-Why economics work
-3 key drivers
-3 key risks
-Balance-sheet view
-Governance view
-Base scenario
-Bear scenario
-What current expectations seem to assume
-3 thesis breakers
-Open questions
-```
-
-Nếu không compress được analysis về một page causal logic, bạn có thể đang giữ quá nhiều facts nhưng chưa có model.
-
-## Mental Model
-
-> Practical company analysis là quá trình **nén hàng nghìn dòng disclosure thành một vài causal equations và decision-relevant risks**.
-
-Flow chuẩn:
-
-```text
-Entity
-→ Business engine
-→ Drivers
-→ Financial statements
-→ Cash conversion
-→ Funding
-→ Governance
-→ Scenario
-→ Expectations
-→ Decision
-```
-
-Điểm cuối không phải “biết nhiều về company”, mà là biết **variable nào cần theo dõi để biết view của mình còn đúng hay đã sai**.
-
-## Common mistakes khi thực hành
-
-**Đọc news trước filing.** News cho narrative, filing cho base facts.
-
-**Model revenue trước khi hiểu unit economics.** Forecast sẽ chỉ là extrapolation.
-
-**Dùng một valuation metric cho mọi industry.** Bank, semiconductor và SaaS không có cùng economics.
-
-**Chỉ có base case.** Không biết downside nghĩa là chưa biết risk.
-
-**Không track share count/debt.** Company growth không đồng nghĩa per-share value growth.
-
-**Không viết thesis breakers.** View sẽ dễ bị confirmation bias giữ lại quá lâu.
-
-## Liên kết học tiếp
-
-- [`19_major_groups_case_studies.md`](./19_major_groups_case_studies.md) — group-level patterns.
-- [`20_how_to_analyze_a_korean_company.md`](./20_how_to_analyze_a_korean_company.md) — framework tổng quát.
-- [`21_economy_to_company_transmission.md`](./21_economy_to_company_transmission.md) — macro transmission.
-- [`35_financial_sector_securities_insurance_asset_management.md`](./35_financial_sector_securities_insurance_asset_management.md) — financial companies.
-- [`36_credit_ratings_bonds_default_and_restructuring.md`](./36_credit_ratings_bonds_default_and_restructuring.md) — credit.
-- [`37_corporate_actions_mna_mergers_spin_offs_and_capital_actions.md`](./37_corporate_actions_mna_mergers_spin_offs_and_capital_actions.md) — corporate actions.
-- [`38_forensic_accounting_red_flags_and_earnings_quality.md`](./38_forensic_accounting_red_flags_and_earnings_quality.md) — earnings quality.
+Khi đã dựng được mô hình đó, các chỉ số như P/E, ROE, FCF hay NIM không còn là những con số rời rạc; chúng trở thành kết quả của một cơ chế mà người đọc có thể giải thích và kiểm chứng.
