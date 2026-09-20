@@ -1,293 +1,680 @@
-# Macro Data Playbook — từ số liệu tới asset reaction
+# Cẩm nang đọc dữ liệu vĩ mô: từ số liệu tới phản ứng tài sản
 
-> Macro data chỉ hữu ích khi nó làm thay đổi xác suất về growth, inflation, policy, liquidity hoặc credit. Mục tiêu của chapter này là biến lịch kinh tế từ danh sách headline thành một quy trình: trước release biết market đang kỳ vọng gì, sau release hiểu surprise nằm ở đâu, rồi theo dõi bond/FX/credit để xem market thực sự diễn giải data như thế nào.
+> Dữ liệu vĩ mô chỉ hữu ích khi nó làm thay đổi xác suất về tăng trưởng, lạm phát, chính sách, thanh khoản hoặc tín dụng. Mục tiêu của chương này là biến lịch kinh tế từ một danh sách headline thành một quy trình đọc dữ liệu có hệ thống.
 
-## 1. Đừng đọc data bằng headline
+Khung tổng quát:
 
-Market không phản ứng đơn giản với “CPI cao”, “NFP tốt” hay “GDP mạnh”. Price phản ứng với chênh lệch giữa actual và expectation, revisions, composition, positioning và implication cho future policy.
+```text
+Mốc nền
+→ Dự báo đồng thuận
+→ Kỳ vọng đã phản ánh trong giá
+→ Số liệu thực tế
+→ Mức bất ngờ
+→ Cấu phần
+→ Hàm phản ứng chính sách
+→ Yields / FX / Credit
+→ Equities / Commodities
+```
 
-Framework cơ bản:
+# Phần I — Cách đọc một release
 
-`Baseline → Consensus → Market pricing → Actual → Surprise → Composition → Reaction function → Yields/FX/Credit → Equities/Commodities`
+## 1. Không đọc headline một cách cơ học
 
-Nếu bỏ qua consensus, bạn có thể thấy data mạnh nhưng market rally vì data “ít mạnh hơn priced”. Nếu bỏ qua positioning, bạn có thể thấy bullish data nhưng asset sell off vì investors đã quá long trước release.
+Thị trường không phản ứng đơn giản với “CPI cao”, “NFP tốt” hay “GDP mạnh”. Giá phản ứng với:
 
-## 2. Baseline, consensus và market pricing là ba thứ khác nhau
+- số thực tế so với dự báo;
+- revisions;
+- cấu phần;
+- positioning;
+- ý nghĩa đối với chính sách tương lai.
 
-Baseline là view của chính bạn trước event. Consensus là survey forecast của economists/analysts. Market pricing là expectation embedded trong prices, ví dụ policy futures, yield curve, options implied move hoặc positioning proxies.
+Một dữ liệu tốt có thể khiến thị trường giảm nếu nó vẫn thấp hơn điều đã được price trước.
 
-Consensus có thể nói central bank sẽ cut 25 bps, nhưng market pricing có thể imply meaningful chance của 50 bps. Khi decision là 25 bps, headline “đúng consensus” vẫn có thể hawkish relative to market pricing.
+## 2. Baseline, consensus và market pricing
 
-Do đó trước major event, luôn ghi cả consensus và observable market pricing nếu available.
+Ba khái niệm này khác nhau.
+
+**Baseline:** nhận định riêng của bạn trước sự kiện.
+
+**Consensus:** dự báo đồng thuận của economist hoặc analyst.
+
+**Market pricing:** kỳ vọng được phản ánh trong futures, yield curve, options hoặc giá tài sản.
+
+Ví dụ consensus dự báo cut 25bp nhưng futures đã phản ánh xác suất đáng kể của 50bp. Nếu ngân hàng trung ương chỉ cut 25bp, quyết định “đúng consensus” vẫn có thể bị xem là hawkish so với giá thị trường.
 
 ## 3. Surprise không chỉ là Actual - Forecast
 
-Simple surprise = actual - forecast, nhưng economic interpretation phụ thuộc sign và variable. Higher CPI thường hawkish; higher unemployment thường dovish, nhưng regime matters.
+Bất ngờ thống kê cần đọc cùng revisions và xu hướng.
 
-Revisions cũng quan trọng. Payroll headline +200k nhưng prior months revised -120k tạo different message so clean +200k. Retail sales beat với prior month sharply revised lower cũng có weaker underlying path.
+```text
+Headline Payroll +200k
+nhưng
+2 tháng trước bị revise -120k
+```
 
-Một release phải được đọc như time series, không phải isolated number.
+khác hoàn toàn một bản +200k không có revision xấu.
 
-## 4. CPI: headline, core và composition
+Một release nên được đọc như chuỗi thời gian, không phải một điểm đơn lẻ.
 
-Consumer Price Index (*CPI*) đo price changes của consumption basket theo methodology. Headline gồm food/energy; core thường exclude them vì volatility cao. Nhưng “core” không đồng nghĩa underlying inflation hoàn hảo.
+# Phần II — Lạm phát
 
-Investor nên tách goods, shelter/housing-related components và services. Goods inflation chịu supply chains, commodity/input prices và inventory cycles. Shelter có measurement lag. Services inflation thường liên quan wages, demand và labor intensity hơn.
+## 4. CPI
 
-YoY rate dễ bị *base effects*. Vì vậy cần nhìn MoM và annualized short-run trends:
+CPI đo thay đổi giá của một giỏ hàng tiêu dùng theo phương pháp thống kê cụ thể.
 
-`3-month annualized ≈ (1 + cumulative 3m change)^4 - 1`
+Cần tách:
 
-`6-month annualized ≈ (1 + cumulative 6m change)^2 - 1`
+```text
+Headline
+Core
+Goods
+Shelter
+Services
+Food
+Energy
+```
 
-Short-run annualization noisy nhưng hữu ích để phát hiện momentum turning trước YoY.
+Core loại food và energy vì biến động cao nhưng không đồng nghĩa “lạm phát thật”.
 
-## 5. Shelter lag và “supercore” caveat
+## 5. MoM, YoY và base effect
 
-Official rent/shelter measures thường adjust chậm hơn new-market rents. Khi market rents đã cool, shelter CPI có thể còn sticky. Ngược lại new rents turn up có thể chưa xuất hiện ngay trong official data.
+YoY dễ bị ảnh hưởng bởi mức so sánh năm trước.
 
-Analysts đôi khi nhìn services ex housing hay “supercore” để đánh giá underlying pressure. Không có một measure thần kỳ. Central bank reaction function có thể thay đổi trọng tâm tùy period, nên investor phải biết policymakers đang nhấn metric nào và vì sao.
+Do đó cần nhìn thêm MoM và xu hướng ngắn hạn.
 
-## 6. PCE inflation
+Ví dụ annualized gần đúng:
 
-Personal Consumption Expenditures price index (*PCE*) có weights/methodology khác CPI và thường là important reference cho Fed-style analysis. Core PCE loại food/energy nhưng vẫn cần đọc composition.
+```text
+3-month annualized
+≈ (1 + cumulative 3m change)^4 - 1
+```
 
-PCE release đôi khi chứa information partly inferable từ prior CPI/PPI data, nên market surprise có thể nhỏ hơn headline change. Một event calendar không nên assume mọi release có equal information content.
+Tốc độ ngắn hạn nhiễu hơn nhưng có thể phát hiện điểm ngoặt sớm hơn YoY.
 
-## 7. PPI, import prices và inflation pipeline
+## 6. Shelter lag
 
-Producer Price Index (*PPI*) đo price pressures ở production stages. Import/export prices cho cross-border price dynamics. Những indicators này có thể giúp infer pipeline pressure nhưng pass-through tới consumer prices không one-to-one.
+Chỉ số nhà ở chính thức thường phản ứng chậm hơn giá thuê mới ngoài thị trường.
 
-Company margins matter: higher input costs có thể được absorbed, passed to consumers hoặc offset by productivity. Vì vậy PPI up không mechanical imply CPI up cùng magnitude.
+Do đó shelter CPI có thể còn cao ngay cả khi new-market rent đã giảm.
 
-## 8. Inflation expectations
+Khi đọc cần hiểu độ trễ của phương pháp đo.
 
-Survey expectations và market breakevens cung cấp different views. Short-term expectations có thể nhạy gasoline/food prices; long-term expectations quan trọng với wage/price setting và central-bank credibility.
+## 7. Services ex housing
 
-Breakeven inflation = nominal yield - inflation-linked real yield là useful market measure nhưng chứa inflation risk premium và liquidity effects. Đừng gọi nó “market forecast” theo nghĩa pure expectation.
+Một số analyst dùng dịch vụ ngoài nhà ở, đôi khi gọi không chính thức là “supercore”, để đánh giá áp lực dịch vụ.
 
-## 9. Payrolls: establishment và household perspectives
+Không có chỉ số thần kỳ. Điều quan trọng là biết ngân hàng trung ương đang chú ý chỉ số nào và vì sao.
 
-US-style payroll report có establishment survey và household survey với methodologies khác. Headline nonfarm payrolls đến từ establishment side; unemployment rate thường từ household survey.
+## 8. PCE
 
-Divergence có thể kéo dài. Investor không nên cherry-pick survey phù hợp thesis mà cần hiểu sample, revisions và trend.
+PCE có trọng số và phương pháp khác CPI và thường là thước đo quan trọng trong phân tích Fed.
 
-## 10. Unemployment rate, participation và underemployment
+PCE không nên được đọc tách khỏi cấu phần. Một phần thông tin PCE còn có thể được suy ra trước từ CPI/PPI nên mức bất ngờ thị trường không phải lúc nào cũng lớn.
 
-Unemployment rate có thể tăng vì layoffs hoặc vì labor-force participation tăng nhanh hơn employment. Hai cases có different interpretation.
+## 9. PPI và giá nhập khẩu
 
-Participation rate cho biết share population tham gia labor force. Broader underemployment measures có thể capture part-time-for-economic-reasons và marginal attachment. Labor market health là multi-dimensional, không phải một unemployment number.
+PPI và import prices giúp theo dõi áp lực giá ở upstream.
 
-## 11. Wages, productivity và unit labor costs
+Nhưng pass-through tới CPI không 1:1 vì doanh nghiệp có thể:
 
-Average hourly earnings cho wage trend nhưng mix effects có thể distort. Employment Cost Index hoặc other compensation measures có different strengths.
+- hấp thụ chi phí;
+- tăng giá bán;
+- cải thiện năng suất;
+- đổi nhà cung cấp.
 
-Wages tăng không automatically inflationary nếu productivity tăng tương ứng. *Unit Labor Cost* gần với compensation growth trừ productivity growth. Nếu wages +5% nhưng productivity +3%, unit labor pressure khác wages +5% với zero productivity.
+## 10. Kỳ vọng lạm phát
 
-Đây là cầu nối giữa labor data và sustainable services inflation.
+Kỳ vọng có thể đến từ survey hoặc market breakeven.
 
-## 12. Jobless claims
+Breakeven gần đúng:
 
-Initial claims là high-frequency indicator của new unemployment-insurance filings; continuing claims cho persistence. Weekly data noisy và seasonal adjustment quan trọng, nên nhìn moving trend hơn một print.
+```text
+Nominal Yield - Real Yield
+```
 
-Claims thường turn nhanh hơn unemployment rate nhưng không capture toàn labor market. Chúng hữu ích cho inflection monitoring.
+nhưng nó chứa cả inflation risk premium và liquidity premium, nên không phải “dự báo lạm phát thuần”.
 
-## 13. JOLTS: openings, hires và quits
+# Phần III — Thị trường lao động
 
-Job Openings and Labor Turnover Survey (*JOLTS*) cung cấp vacancies, hires, quits và layoffs. Openings-to-unemployed ratio cho labor demand relative to supply; quits có thể proxy worker confidence/wage bargaining.
+## 11. Payrolls
 
-Openings data noisy và revisions lớn, nên direction qua nhiều months quan trọng hơn one print.
+Báo cáo việc làm Mỹ thường có establishment survey và household survey.
 
-## 14. PMI/ISM: diffusion indices
+Nonfarm payrolls đến từ establishment side; unemployment rate chủ yếu từ household side.
 
-Purchasing Managers' Index (*PMI*) là diffusion index. Level >50 thường expansion relative to prior period; <50 contraction, nhưng tốc độ và components matter.
+Hai survey có thể phân kỳ trong một thời gian vì phương pháp khác nhau.
 
-New orders thường forward-looking hơn headline. Production/output cho current activity. Employment cho labor demand. Prices paid cho cost pressure. Supplier deliveries phải đọc cẩn thận: slower deliveries có thể signal strong demand hoặc supply disruption.
+## 12. Unemployment rate
 
-Manufacturing PMI đặc biệt relevant cho export/manufacturing economies như Korea; services measures quan trọng hơn với consumption-heavy economies.
+Tỷ lệ thất nghiệp tăng có thể do:
 
-## 15. New orders vs inventories
+- việc làm giảm;
+- hoặc nhiều người quay lại labor force nhanh hơn tốc độ tạo việc làm.
 
-New orders rising while inventories low có thể signal future production recovery. Inventories high while new orders fall có thể signal destocking pressure.
+Hai trường hợp có ý nghĩa khác nhau.
 
-Đối với semiconductor, manufacturing và shipping cycles, orders/inventory relationship thường informative hơn headline PMI alone.
+## 13. Participation và underemployment
 
-## 16. Retail sales và consumption
+Nên xem thêm:
 
-Retail sales là high-frequency nominal spending measure. Inflation có thể làm nominal sales tăng dù real volume flat/down. Composition cũng quan trọng: autos/gasoline volatile; some control-group concepts better map into GDP consumption estimates.
+- participation rate;
+- employment-population ratio;
+- underemployment;
+- hours worked.
 
-Consumption sustainability nên đọc cùng real disposable income, savings rate, household balance sheets, credit-card growth và delinquencies.
+Một tỷ lệ unemployment duy nhất không mô tả đầy đủ labor market.
 
-## 17. Personal income, savings và credit
+## 14. Wage và productivity
 
-Household spending có thể tăng nhờ wage income, fiscal transfers, asset wealth hoặc borrowing. Spending funded by real-income growth bền hơn spending dựa vào rapidly rising debt, all else equal.
+Tăng lương không tự động tạo lạm phát nếu năng suất tăng tương ứng.
 
-Savings rate thấp không automatically bearish; context matters. But persistent consumption above income financed by credit can increase future sensitivity to rates/job losses.
+Một trực giác:
 
-## 18. Housing data
+```text
+Unit Labor Cost
+≈ Wage Growth - Productivity Growth
+```
 
-Housing là rate-sensitive sector. Useful indicators gồm building permits, housing starts, new/existing home sales, inventories, house prices, mortgage rates và affordability.
+Đây là cầu nối tốt hơn giữa dữ liệu lương và áp lực giá dịch vụ.
 
-Permits often lead construction; starts are physical activity; completions influence supply. Existing-home turnover affects brokers/furnishings differently from new construction.
+## 15. Jobless claims
 
-Housing also transmits monetary policy through mortgages, collateral and household wealth.
+Initial claims là chỉ báo tần suất cao về người mới xin trợ cấp thất nghiệp. Continuing claims cho biết tình trạng kéo dài.
 
-## 19. GDP: đừng chỉ nhìn headline annualized growth
+Dữ liệu tuần rất nhiễu nên nên nhìn xu hướng nhiều tuần.
 
-GDP identity:
+## 16. JOLTS
 
-`GDP = C + I + G + (X - M)`
+JOLTS gồm:
 
-Headline growth cần phân rã consumption, fixed investment, inventories, government và net exports. Inventory build can boost GDP even if final demand weaker. Imports subtract mechanically in identity but strong imports may reflect strong domestic demand, nên không đơn giản “imports xấu”.
+- job openings;
+- hires;
+- quits;
+- layoffs.
 
-Real Final Sales hoặc domestic final demand measures giúp tách inventory/noisy trade effects.
+Openings-to-unemployed cho biết nhu cầu lao động so với nguồn cung. Quits có thể phản ánh tự tin của người lao động.
 
-## 20. GDP, GDI và revisions
+# Phần IV — PMI và chu kỳ sản xuất
 
-Gross Domestic Income (*GDI*) theoretically measures same economy from income side nhưng diverges due measurement. Looking at average/trend can add signal.
+## 17. PMI/ISM là diffusion index
 
-GDP undergoes multiple revisions. Market may react more to current high-frequency indicators than stale GDP if quarter already passed. Data hierarchy depends timing.
+PMI trên 50 thường nghĩa hoạt động tăng so với kỳ trước; dưới 50 thường nghĩa giảm.
 
-## 21. Central-bank meeting: đọc nhiều layer
+Nhưng cần đọc components:
 
-Một policy event gồm decision, statement, economic projections, rate-path/dot-like guidance if applicable, vote split và press conference. One-line “hike/cut/hold” is insufficient.
+- new orders;
+- production;
+- employment;
+- prices paid;
+- inventories;
+- supplier deliveries.
 
-Decision can be hawkish cut or dovish hike depending guidance. Central bank may cut because inflation normalized (supportive) or because crisis risk surged (negative macro signal).
+## 18. New orders và inventories
 
-Read reaction function: policymakers đang overweight inflation, labor, growth, FX hay financial stability? What data would make them change path?
+Một quan hệ hữu ích:
 
-## 22. Policy path vs current policy rate
+```text
+New Orders ↑ + Inventories thấp
+→ Production có thể phục hồi
+```
 
-Assets discount future rates, not just today's policy rate. A hold with expectation of three future hikes can tighten financial conditions more than one hike accompanied by clear end-of-cycle guidance.
+Ngược lại:
 
-Front-end futures/OIS and 2Y yields often reveal path repricing. Investor should compare post-event path with pre-event pricing.
+```text
+New Orders ↓ + Inventories cao
+→ Destocking Risk ↑
+```
 
-## 23. Nominal yields, real yields và breakevens
+Điều này đặc biệt hữu ích với manufacturing, semiconductor và shipping.
 
-Nominal yields can move because expected policy, expected inflation, real growth or term premium changes. Inflation-linked bonds help separate real yield/breakeven components, though not perfectly.
+# Phần V — Tiêu dùng và hộ gia đình
 
-Equity valuation tends to be more sensitive when real yields move. Commodity/gold reaction may differ when nominal yield rise is mostly inflation compensation vs mostly real yield.
+## 19. Retail sales
 
-## 24. 2Y, 10Y và yield curve
+Retail sales là số danh nghĩa, vì vậy doanh thu tăng có thể chỉ do giá tăng chứ không phải volume.
 
-2Y yield is highly sensitive to expected near-term policy. 10Y embeds longer growth/inflation and term premium. Curve spreads such as 2s10s help track cycle expectations but must be combined with absolute yield moves.
+Cần đọc cùng:
 
-CPI hot causing 2Y +15 bps and 10Y +5 bps is different from fiscal supply shock causing 10Y +20 bps and 2Y little changed. Both raise yields, but source/risk transmission differ.
+- inflation;
+- real disposable income;
+- savings;
+- credit-card growth;
+- delinquency.
 
-## 25. Term premium
+## 20. Income, savings và credit
 
-Long yield is not simply average expected policy rates. *Term premium* compensates investors for uncertainty of holding duration. Fiscal issuance, inflation uncertainty, central-bank balance sheet and demand from pensions/foreign reserves can influence it.
+Chi tiêu có thể được tài trợ bằng:
 
-A long-end selloff driven by term premium can pressure equities/mortgages even without hawkish central-bank repricing.
+- wage income;
+- fiscal transfer;
+- asset wealth;
+- borrowing.
 
-## 26. Credit spreads
+Tăng chi tiêu nhờ real income thường bền hơn tăng chi tiêu nhờ nợ tăng nhanh.
 
-Investment-grade and high-yield spreads reveal compensation for credit/liquidity risk. Spread widening alongside falling government yields can signal growth/credit deterioration.
+# Phần VI — Housing
 
-High-yield spreads, default expectations and refinancing calendars are useful because monetary tightening often hits weak balance sheets with lag.
+## 21. Housing là sector nhạy lãi suất
 
-## 27. Bank lending standards
+Các dữ liệu quan trọng:
 
-Bank surveys on lending standards/demand help bridge policy rate and real economy. If banks tighten underwriting and loan demand falls, credit impulse can weaken even before defaults rise.
+- mortgage rates;
+- permits;
+- starts;
+- completions;
+- new-home sales;
+- existing-home sales;
+- inventory;
+- affordability.
 
-This is why “central bank stopped hiking” does not immediately mean financial conditions easy; existing tightening continues through refinancing and bank behavior.
+Permits thường đi trước hoạt động xây dựng; starts cho biết activity hiện tại; completions ảnh hưởng nguồn cung.
 
-## 28. Financial conditions
+## 22. Housing truyền policy sang nền kinh tế
 
-Financial conditions combine rates, credit spreads, equity prices, FX and sometimes lending measures. Two economies with same policy rate can face different effective conditions depending market moves.
+Lãi suất mortgage ảnh hưởng:
 
-Investor should think transmission, not just policy setting:
+```text
+Affordability
+→ Home Sales
+→ Construction
+→ Furnishing / Broker Activity
+→ Household Wealth
+```
 
-`Policy → market rates → credit → FX/equities/property → spending/investment → inflation/growth`
+# Phần VII — GDP
 
-## 29. FX is always relative
+## 23. GDP theo chi tiêu
 
-Currency pair compares two economies. Strong Korea data may not strengthen KRW if US surprise is even more hawkish for Fed path. Framework:
+```text
+GDP = C + I + G + (X - M)
+```
 
-`Relative rates + relative growth + external balance + carry + positioning/risk flows`
+Cần phân rã headline tăng trưởng thành:
 
-Current account, commodity imports/exports, foreign liabilities and reserve adequacy become more important during stress.
+- consumption;
+- fixed investment;
+- inventories;
+- government;
+- net exports.
 
-## 30. Carry và funding currencies
+## 24. Inventory có thể làm GDP nhiễu
 
-Higher-yield currency can attract carry when volatility low, but carry positions may unwind violently during risk-off. Funding currency strength during deleveraging can surprise those who only track rate differentials.
+Inventory build có thể đẩy GDP lên dù final demand yếu.
 
-Thus FX analysis needs volatility and positioning alongside macro differentials.
+Imports trừ trong công thức GDP nhưng nhập khẩu mạnh đôi khi phản ánh domestic demand mạnh, nên không thể kết luận “imports cao là xấu”.
 
-## 31. Oil: supply shock khác demand shock
+## 25. GDP và GDI
 
-Oil rising because global demand strong can coincide with cyclicals rally and higher yields. Oil rising because geopolitical supply disruption can raise inflation while lowering expected real growth, creating stagflationary pressure.
+GDP đo từ phía sản lượng; GDI đo từ phía thu nhập. Về lý thuyết chúng phản ánh cùng nền kinh tế nhưng thực tế có measurement error.
 
-Always ask: demand, supply, inventory or risk premium? Same price move, different macro message.
+Cần nhìn xu hướng và revisions.
 
-## 32. Metals và industrial commodities
+# Phần VIII — Central bank meeting
 
-Copper/industrial metals often reflect manufacturing, China demand, inventories and supply constraints. But financial/speculative positioning can move prices too.
+## 26. Một cuộc họp có nhiều lớp
 
-Commodity prices are both economic signals and direct input costs; transmission differs by country depending importer/exporter status.
+Cần đọc:
 
-## 33. Gold
+```text
+Decision
+Statement
+Economic Projections
+Rate Path / Dots
+Vote Split
+Press Conference
+```
 
-Gold has no contractual yield. Important drivers include real yields, USD, central-bank/reserve demand, geopolitical risk and confidence in monetary/fiscal regimes.
+Không nên chỉ nhìn “hike/cut/hold”.
 
-“Inflation up = gold up” is not a reliable rule. If inflation surprise causes real yields/USD to rise sharply, gold can fall despite higher CPI.
+## 27. Hawkish cut và dovish hike
 
-## 34. Data revisions, seasonality và measurement error
+Một lần cut có thể hawkish nếu guidance cho thấy ít cut hơn về sau.
 
-Economic data are estimates, not ground truth measured without error. Seasonal adjustment, benchmark revisions and survey response rates affect interpretation.
+Một lần hike có thể dovish nếu ngân hàng trung ương ám chỉ chu kỳ tăng đã gần kết thúc.
 
-A robust investor does not overfit thesis to one month. Look for confirmation across independent series and acknowledge confidence level.
+## 28. Current rate và expected path
 
-## 35. Base effects
+Tài sản chiết khấu lãi suất tương lai, không chỉ policy rate hôm nay.
 
-YoY data compares current level with same month last year. If last year's comparison base was unusually high/low, YoY can move sharply without a similar change in current momentum.
+2Y yield và OIS/futures thường giúp đọc repricing ở đầu đường cong.
 
-Whenever YoY changes dramatically, inspect MoM and recent annualized rates before declaring regime shift.
+# Phần IX — Bond market
 
-## 36. Positioning và reflexivity
+## 29. Nominal yield, real yield và breakeven
 
-Price reaction depends on who is already positioned. Bearish news can produce rally if market was even more bearish. A crowded long can sell off on merely “good but not great” data.
+Nominal yield có thể thay đổi do:
 
-Options dealer hedging, CTA/systematic positioning and leveraged carry can amplify moves. You do not need perfect positioning data; simply distinguish fundamental surprise from positioning response.
+- expected policy;
+- expected inflation;
+- real growth;
+- term premium.
 
-## 37. Regime matrix
+Real yield đặc biệt quan trọng với định giá tài sản duration dài.
 
-A useful 2×2 starts with growth surprise and inflation surprise. Growth up/inflation down resembles Goldilocks; growth up/inflation up can push yields higher; growth down/inflation down favors easing/long duration; growth down/inflation up is stagflationary.
+## 30. 2Y và 10Y
 
-But credit/liquidity can override the simple matrix. A benign inflation print during banking panic does not erase financial-stability stress.
+2Y nhạy với expected policy gần hạn.
 
-## 38. Market-reaction map sau release
+10Y phản ánh nhiều hơn:
 
-Immediately after major release, look first at the market closest to the economic variable. For US policy expectations, front-end yields are often informative. Then check long yields, FX, credit and equities.
+- long-run growth;
+- inflation;
+- term premium;
+- Treasury supply.
 
-Example:
+Một CPI nóng làm 2Y +15bp, 10Y +5bp khác hẳn một fiscal shock làm 10Y +20bp nhưng 2Y gần như không đổi.
 
-`Hot CPI → 2Y ↑ sharply → USD ↑ → real yields ↑ → long-duration equities ↓`
+## 31. Yield curve
 
-If actual reaction differs, do not force textbook. Investigate composition, pricing, positioning or concurrent news.
+Đường cong không chỉ được đọc qua độ dốc mà còn cần biết toàn bộ yield đang tăng hay giảm.
 
-## 39. Pre-event template
+```text
+Bull Steepening
+Bull Flattening
+Bear Steepening
+Bear Flattening
+```
 
-Before event record: current macro regime, consensus, prior value/revisions, market-implied policy path, key composition expected, major positioning risk and what outcome would invalidate your current view.
+Tên gọi chỉ hữu ích khi hiểu nguyên nhân kinh tế phía sau.
 
-Write scenarios rather than single forecast: hot/base/cool CPI; strong/base/weak payrolls; hawkish/base/dovish central-bank communication.
+## 32. Term premium
 
-## 40. Post-event template
+Phần bù kỳ hạn (term premium) là phần bù cho việc nắm duration dài trong bất định.
 
-After release record actual, revision and which subcomponents caused surprise. At 5–15 minutes record 2Y/10Y, FX and relevant commodity. At close record equities by sector and credit. A few days later assess whether move held.
+Nó có thể tăng do:
 
-This separates knee-jerk liquidity from durable repricing.
+- fiscal issuance;
+- inflation uncertainty;
+- QT;
+- giảm nhu cầu từ người mua lớn.
 
-## 41. Weekly macro dashboard
+Long-end yield tăng vì term premium có thể thắt financial conditions dù Fed không hawkish hơn.
 
-A practical weekly dashboard can include growth momentum, inflation momentum, labor, policy pricing, nominal/real yields, curve, credit spreads, DXY/major FX, oil/gold, financial conditions and positioning notes.
+# Phần X — Credit
 
-Do not maximize indicators. Use a stable set and ask which changed enough to alter probability distribution.
+## 33. Credit spread
 
-## 42. Từ data tới investment thesis
+Spread tăng có thể phản ánh:
 
-Macro data should not directly output “buy/sell ticker”. Final chain is:
+- default risk;
+- liquidity risk;
+- risk aversion;
+- technical selling.
 
-`Data → expectations → policy/financial conditions → sector/company cash flows → discount rate → valuation → position size`
+Government yield giảm nhưng high-yield spread tăng mạnh thường là tín hiệu tăng trưởng/tín dụng xấu đi.
 
-The more layers between data and asset, the less deterministic the relationship. This is why disciplined macro analysis uses probabilities and scenarios rather than slogans.
+## 34. Refinancing calendar
+
+Tác động lãi suất thường có độ trễ vì nợ cố định chỉ repricing khi đáo hạn.
+
+Cần xem maturity wall chứ không chỉ policy rate.
+
+## 35. Bank lending standards
+
+Khảo sát lending standards giúp nối policy tới real economy.
+
+Nếu bank tightening và loan demand cùng giảm, credit impulse có thể yếu ngay cả khi central bank đã dừng hike.
+
+# Phần XI — Financial conditions
+
+## 36. Financial conditions rộng hơn policy rate
+
+Điều kiện tài chính gồm:
+
+- rates;
+- credit spreads;
+- equity prices;
+- FX;
+- lending standards;
+- property prices.
+
+Hai nền kinh tế cùng policy rate vẫn có thể có financial conditions rất khác.
+
+# Phần XII — FX
+
+## 37. FX luôn là tương đối
+
+Một đồng tiền mạnh hay yếu phải so với đồng còn lại.
+
+Khung cơ bản:
+
+```text
+Relative Rates
++ Relative Growth
++ External Balance
++ Carry
++ Risk Flow
++ Positioning
+```
+
+## 38. Carry và funding currency
+
+Carry tốt khi volatility thấp nhưng có thể đảo chiều mạnh trong risk-off.
+
+Funding currency đôi khi tăng trong deleveraging dù lãi suất thấp.
+
+# Phần XIII — Commodities
+
+## 39. Oil: demand shock và supply shock
+
+Dầu tăng vì demand mạnh có thể đi cùng growth tốt.
+
+Dầu tăng vì geopolitics hoặc supply disruption có thể tạo:
+
+```text
+Inflation ↑
+Growth ↓
+```
+
+và mang tính stagflationary.
+
+## 40. Industrial metals
+
+Copper và metals chịu ảnh hưởng của:
+
+- China;
+- manufacturing;
+- inventories;
+- mine supply;
+- positioning.
+
+Giá hàng hóa vừa là chỉ báo kinh tế vừa là input cost.
+
+## 41. Gold
+
+Các biến chính:
+
+- real yields;
+- USD;
+- central-bank demand;
+- geopolitics;
+- confidence in policy regime.
+
+Không dùng quy tắc cơ học “inflation ↑ → gold ↑”.
+
+# Phần XIV — Lỗi đọc dữ liệu phổ biến
+
+## 42. Revision
+
+Dữ liệu kinh tế thường được sửa đổi.
+
+Không nên xây thesis lớn trên một print đầu tiên nếu series vốn có revision lớn.
+
+## 43. Seasonality
+
+Seasonal adjustment không hoàn hảo. Các kỳ nghỉ, thời tiết hoặc lịch Tết có thể làm dữ liệu méo.
+
+## 44. Base effect
+
+Khi YoY thay đổi mạnh, luôn kiểm tra mốc so sánh năm trước và momentum gần đây.
+
+## 45. Measurement error
+
+Dữ liệu survey là ước tính, không phải đo toàn bộ nền kinh tế với độ chính xác tuyệt đối.
+
+Nên tìm xác nhận từ nhiều series độc lập.
+
+# Phần XV — Positioning và phản hồi giá
+
+## 46. Positioning
+
+Tin xấu có thể làm thị trường tăng nếu nhà đầu tư đã còn bi quan hơn trước release.
+
+Tin tốt có thể làm thị trường giảm nếu positioning quá crowded long.
+
+## 47. Reflexivity
+
+Giá tài sản có thể quay lại ảnh hưởng economy:
+
+```text
+Equity / Property ↑
+→ Wealth / Collateral ↑
+→ Spending / Credit ↑
+```
+
+và chiều ngược lại.
+
+# Phần XVI — Regime matrix
+
+## 48. Growth và inflation surprise
+
+Một ma trận đơn giản:
+
+```text
+Growth ↑ / Inflation ↓
+→ Goldilocks-like
+
+Growth ↑ / Inflation ↑
+→ Overheating risk
+
+Growth ↓ / Inflation ↓
+→ Easing / Deflationary risk
+
+Growth ↓ / Inflation ↑
+→ Stagflationary risk
+```
+
+Credit và liquidity có thể làm ma trận này mất tác dụng nếu hệ thống tài chính đang stress.
+
+# Phần XVII — Quy trình đọc một sự kiện
+
+## 49. Trước release
+
+Ghi lại:
+
+```text
+Consensus
+Prior / Revision Risk
+Market Pricing
+Yield Curve
+FX
+Positioning
+Option Implied Move
+Your Baseline
+```
+
+## 50. Ngay sau release
+
+Đừng chỉ nhìn headline. Kiểm tra:
+
+```text
+Actual vs Consensus
+Composition
+Revisions
+2Y
+10Y
+Real Yield
+USD
+Credit Spread
+Equity Breadth
+```
+
+## 51. Sau vài giờ / cuối ngày
+
+Hỏi:
+
+```text
+Market đang diễn giải release thành growth shock,
+inflation shock hay policy shock?
+```
+
+Theo dõi xem phản ứng ban đầu có được xác nhận bởi nhiều tài sản hay không.
+
+## 52. Sau vài ngày
+
+Kiểm tra:
+
+- analyst revisions;
+- policy communication;
+- credit conditions;
+- sector performance;
+- whether positioning reversed.
+
+## 53. Event note chuẩn
+
+```text
+Event:
+Consensus:
+Actual:
+Revision:
+Composition:
+What was priced:
+Reaction function change:
+2Y / 10Y / Real Yield:
+FX:
+Credit:
+Equities:
+Commodities:
+My interpretation:
+What would invalidate it:
+```
+
+# Phần XVIII — Chuỗi nhân quả cốt lõi
+
+## 54. Inflation event
+
+```text
+CPI Surprise
+→ Persistence Assessment
+→ Reaction Function
+→ Expected Policy Path
+→ 2Y / Real Yield
+→ USD
+→ Equity Multiple / Credit
+```
+
+## 55. Growth event
+
+```text
+Growth Surprise
+→ Earnings Expectation
+→ Policy Expectation
+→ Yields / FX
+→ Cyclicals vs Defensives
+```
+
+## 56. Credit event
+
+```text
+Funding Stress
+→ Spread Widening
+→ Lending Tightening
+→ Growth Revision
+→ Policy Response
+```
+
+## Kết luận
+
+Đọc macro data tốt không phải đoán headline. Mục tiêu là hiểu **thông tin mới đã thay đổi phân phối xác suất như thế nào** và thị trường đang phản ánh sự thay đổi đó qua bond, FX, credit và equity ra sao.
+
+Chuỗi quan trọng nhất cần ghi nhớ là:
+
+```text
+Actual
+→ Surprise
+→ Composition
+→ Reaction Function
+→ Yields / FX / Credit
+→ Earnings / Valuation
+→ Asset Reaction
+```
