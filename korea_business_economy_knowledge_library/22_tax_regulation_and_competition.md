@@ -1,412 +1,275 @@
-# Thuế doanh nghiệp, regulation và chính sách cạnh tranh tại Hàn Quốc (Tax & Regulation / 법인세·규제·공정거래)
+# Thuế doanh nghiệp, quy định và chính sách cạnh tranh tại Hàn Quốc (Tax & Regulation / 법인세·규제·공정거래)
 
-Doanh nghiệp không vận hành chỉ bằng contract giữa private parties. Nhà nước xác định **tax base, disclosure duties, competition rules, labor floors, environmental constraints, licensing requirements và giới hạn đối với ownership/market conduct**.
+Doanh nghiệp không vận hành chỉ bằng hợp đồng giữa các bên tư nhân. Nhà nước xác định **cơ sở tính thuế, nghĩa vụ công bố, quy tắc cạnh tranh, mức sàn lao động, giới hạn môi trường, giấy phép và giới hạn đối với sở hữu hoặc hành vi thị trường**.
 
-Vì vậy regulation không phải appendix pháp lý nằm ngoài business model. Trong nhiều ngành — finance, telecom, energy, healthcare, platform, defense — regulation trực tiếp quyết định revenue, cost, entry barrier và capital requirement.
+Vì vậy quy định không phải một phụ lục pháp lý nằm ngoài mô hình kinh doanh. Trong nhiều ngành như tài chính, viễn thông, năng lượng, y tế, nền tảng số và quốc phòng, quy định trực tiếp quyết định doanh thu, chi phí, rào cản gia nhập và yêu cầu vốn.
 
-> Mental model: policy/regulation là một **economic variable** giống interest rate, FX hay raw-material price. Nó thay payoff của business decisions.
+> Mental model: chính sách và quy định là **biến kinh tế (economic variable)** giống lãi suất, tỷ giá hay giá nguyên liệu. Nó thay đổi lợi ích và chi phí của quyết định kinh doanh.
 
-## Corporate income tax: taxable income không phải revenue
+## Thuế thu nhập doanh nghiệp đánh trên thu nhập chịu thuế, không phải doanh thu
 
-Corporate Income Tax (법인세) đánh trên **taxable income / 과세표준**, không phải đơn giản trên revenue hay accounting operating profit.
+**Thuế thu nhập doanh nghiệp (Corporate Income Tax / 법인세)** đánh trên **thu nhập chịu thuế (taxable income / 과세표준)** chứ không đơn giản trên doanh thu hay lợi nhuận hoạt động kế toán.
 
-Accounting profit và taxable income có thể khác vì:
+Lợi nhuận kế toán và thu nhập chịu thuế có thể khác do quy tắc khấu hao, ưu đãi thuế, lỗ được chuyển kỳ, chi phí không được khấu trừ, thu nhập/thuế nước ngoài, khác biệt thời điểm và các chương trình khuyến khích.
 
-- depreciation rules;
-- tax credits;
-- loss carryforwards;
-- non-deductible expenses;
-- foreign income/tax;
-- timing differences;
-- tax incentives.
-
-A simplified bridge:
+Một cầu nối đơn giản:
 
 ```text
-Accounting profit before tax
-± permanent differences
-± timing/tax adjustments
-= taxable income
+Lợi nhuận kế toán trước thuế
+± chênh lệch vĩnh viễn
+± điều chỉnh thời điểm / thuế
+= thu nhập chịu thuế
 ```
 
-Therefore analyst should not multiply financial-statement profit by headline statutory rate and expect exact tax expense.
+Vì vậy không thể chỉ lấy lợi nhuận kế toán nhân với thuế suất luật định rồi kỳ vọng ra đúng chi phí thuế.
 
-## 2026 corporate tax brackets
+## Các bậc thuế doanh nghiệp năm 2026
 
-For fiscal years beginning on or after 1 January 2026, Korea’s National Tax Service lists the basic corporate income-tax rates for ordinary for-profit corporations as:
+Với năm tài chính bắt đầu từ 1/1/2026, mức thuế suất cơ bản do National Tax Service công bố cho công ty vì lợi nhuận thông thường gồm:
 
-| Taxable income | Basic rate |
+| Thu nhập chịu thuế | Thuế suất cơ bản |
 |---|---:|
-| up to 200 million KRW | 10% |
-| over 200 million to 20 billion KRW | 20% |
-| over 20 billion to 300 billion KRW | 22% |
-| over 300 billion KRW | 25% |
+| đến 200 triệu KRW | 10% |
+| trên 200 triệu đến 20 tỷ KRW | 20% |
+| trên 20 tỷ đến 300 tỷ KRW | 22% |
+| trên 300 tỷ KRW | 25% |
 
-These are statutory brackets. Actual tax expense/cash tax can differ materially.
+Đây là thuế suất luật định. Chi phí thuế kế toán và số tiền thuế thực trả có thể khác đáng kể. Khi ra quyết định giao dịch thực tế, phải kiểm tra quy định hiện hành với NTS hoặc chuyên gia thuế.
 
-Current legal details should always be checked with NTS or professional tax advice before transaction decisions.
+## Thuế suất luật định, thuế suất hiệu dụng và thuế tiền mặt khác nhau
 
-## Statutory rate, effective rate và cash tax khác nhau
+**Thuế suất luật định (statutory tax rate)** là mức theo luật.
 
-Three concepts:
-
-**Statutory tax rate** — rate under tax law.
-
-**Effective Tax Rate (ETR)**:
+**Thuế suất hiệu dụng (Effective Tax Rate / ETR)** có thể ước tính:
 
 \[
-ETR \approx \frac{Income\ Tax\ Expense}{Pre-tax\ Accounting\ Income}
+ETR \approx \frac{Chi\ phí\ thuế\ thu\ nhập}{Lợi\ nhuận\ kế\ toán\ trước\ thuế}
 \]
 
-**Cash tax** — actual tax cash paid in period.
+**Thuế tiền mặt (cash tax)** là lượng tiền thực tế đã nộp trong kỳ.
 
-One-time tax credit can lower ETR; deferred tax can move expense across periods; tax-loss carryforward can reduce current cash tax.
+Một khoản ưu đãi thuế một lần có thể làm ETR giảm; thuế hoãn lại có thể chuyển chi phí giữa các kỳ; lỗ chuyển tiếp có thể làm thuế tiền mặt thấp hơn. Vì vậy một năm thuế thấp chưa chứng minh lợi thế thuế mang tính cấu trúc.
 
-Therefore one low-tax year does not prove structural tax advantage.
+## Thuế hoãn lại: khác biệt thời điểm tạo tài sản hoặc nợ kế toán
 
-## Deferred tax: timing creates accounting asset/liability
+Kế toán và luật thuế có thể ghi nhận doanh thu hoặc chi phí ở thời điểm khác nhau. Điều này tạo **tài sản/nợ thuế hoãn lại (deferred tax asset/liability / 이연법인세자산·부채)**.
 
-Accounting and tax rules may recognize revenue/expense at different times.
+Ví dụ khấu hao kế toán và khấu hao thuế khác nhau. Tổng thuế trong toàn vòng đời có thể gần nhau nhưng thời điểm ghi nhận khác.
 
-This creates **deferred tax asset/liability / 이연법인세자산·부채**.
+Tài sản thuế hoãn lại chỉ có giá trị nếu công ty có khả năng tạo đủ thu nhập chịu thuế trong tương lai để sử dụng. DTA lớn ở doanh nghiệp lỗ kéo dài cần được xem xét kỹ.
 
-Example: accounting depreciation and tax depreciation differ. Total lifetime tax may be similar, but timing differs.
+## Lỗ thuế: giá trị kinh tế phụ thuộc lợi nhuận tương lai
 
-Deferred tax asset is valuable only if company is likely to generate taxable income to use it. Large DTA in persistently loss-making firm deserves scrutiny.
+Lỗ trong quá khứ có thể được dùng để giảm thu nhập chịu thuế tương lai theo quy định, nhưng **lỗ chuyển tiếp (tax-loss carryforward)** không phải tiền mặt hiện tại.
 
-## Tax losses: economic value depends on future profit
+Giá trị của nó phụ thuộc lợi nhuận chịu thuế tương lai, giới hạn sử dụng/thời hạn, quy tắc thay đổi sở hữu hoặc tái cấu trúc và từng khu vực pháp lý.
 
-Past losses can sometimes reduce future taxable income under rules.
+Có thể coi đây như một quyền chọn: chỉ hữu ích khi công ty tạo lợi nhuận sau này.
 
-But tax-loss carryforward is not cash today. Its value depends on:
+## Ưu đãi thuế và khuyến khích đầu tư
 
-- future taxable profits;
-- expiry/usage restrictions;
-- ownership/restructuring rules;
-- jurisdiction.
+Chính phủ có thể khuyến khích R&D hoặc CAPEX chiến lược bằng tín dụng thuế và khấu trừ.
 
-This is similar to financial option: useful only if future profit exists.
-
-## Tax credit and investment incentive
-
-Government may encourage R&D or strategic CAPEX through tax credits/deductions.
-
-Economically, investment credit changes project NPV:
+Về kinh tế, ưu đãi làm thay đổi NPV dự án:
 
 \[
-NPV = PV(After-tax\ Cash\ Flows) - Effective\ Initial\ Cost
+NPV = PV(Dòng\ tiền\ sau\ thuế) - Chi\ phí\ đầu\ tư\ hiệu\ dụng
 \]
 
-Tax credit can lower effective cost and move marginal project from negative to positive NPV.
+Ưu đãi thuế có thể làm chi phí đầu tư hiệu dụng giảm và biến một dự án biên từ NPV âm thành dương. Đây là lý do chính sách bán dẫn và pin tác động trực tiếp tới phân bổ vốn doanh nghiệp.
 
-This is why semiconductor/battery investment policy affects real corporate capital allocation.
+Nhưng hỗ trợ không đảm bảo ROIC dương; một dự án kém vẫn có thể kém sau trợ cấp.
 
-But subsidy/tax credit does not guarantee positive ROIC. Bad project can remain bad even after support.
+## VAT: thuế giao dịch khác thuế lợi nhuận
 
-## VAT: transaction tax is different from profit tax
+**Thuế giá trị gia tăng (Value Added Tax / VAT / 부가가치세)** là thuế ở tầng giao dịch–tiêu dùng.
 
-Value Added Tax (VAT / 부가가치세) is consumption/transaction-layer tax.
+Doanh nghiệp thường thu VAT đầu ra và khấu trừ VAT đầu vào đủ điều kiện theo quy định. Phần VAT thu hộ nhà nước không nên bị nhầm với doanh thu kinh tế.
 
-Business generally collects output VAT and claims eligible input VAT under rules.
+Khi so hóa đơn khách hàng với doanh số doanh nghiệp phải xác định số tiền có bao gồm VAT hay không.
 
-VAT collected on behalf of government should not be confused with economic revenue.
+## Gánh nặng thuế: người nộp theo luật và người chịu về kinh tế có thể khác nhau
 
-When comparing customer invoice amount with company sales, understand whether VAT is included/excluded.
+Thuế được áp lên công ty về mặt pháp lý nhưng gánh nặng kinh tế có thể được chia qua giá bán cao hơn, lương thấp hơn, giá mua từ nhà cung cấp thấp hơn hoặc lợi suất cổ đông thấp hơn.
 
-## Tax incidence: legal payer and economic bearer can differ
+Ai cuối cùng chịu thuế phụ thuộc độ co giãn và quyền lực thị trường. Đây là **phân bổ gánh nặng thuế (tax incidence / 조세귀착)**.
 
-Suppose tax is legally imposed on company. Economic burden can still be shared through:
+Vì vậy phân tích chính sách phải hỏi không chỉ “ai nộp thuế?” mà còn “ai có thể chuyển chi phí đó cho bên khác?”.
 
-- higher prices;
-- lower wages;
-- lower supplier prices;
-- lower shareholder returns.
+## Thuế quốc tế và định giá chuyển giao
 
-Who ultimately bears burden depends on elasticity and market power.
+Tập đoàn đa quốc gia giao dịch giữa các công ty thành viên về linh kiện, dịch vụ, bản quyền, tài trợ và IP.
 
-This is **tax incidence / 조세귀착**.
+**Định giá chuyển giao (transfer pricing / 이전가격)** quyết định mức giá nội bộ và cách phân bổ lợi nhuận chịu thuế giữa các công ty. Cơ quan thuế sử dụng nguyên tắc **giao dịch độc lập (arm’s-length)** và các quy định liên quan để hạn chế chuyển lợi nhuận nhân tạo.
 
-Therefore policy analysis should ask not only “who remits tax?” but “who can pass cost onward?”
+Với nhà phân tích, biên lợi nhuận của công ty con địa phương có thể phản ánh cách tập đoàn phân bổ chức năng toàn cầu chứ không chỉ chất lượng vận hành tại Hàn Quốc.
 
-## International tax and transfer pricing
+Xem [`23_foreign_invested_companies_and_korea_entry.md`](./23_foreign_invested_companies_and_korea_entry.md).
 
-Multinational groups transact across affiliates for components, services, royalties, financing and IP.
+## Quy định là một phần của kiến trúc kinh doanh
 
-**Transfer pricing / 이전가격** determines intra-group price and allocation of taxable profit.
+Nhiều ngành không thể hoạt động chỉ vì có sản phẩm tốt. Ngân hàng cần giấy phép; bảo hiểm chịu quy tắc vốn; viễn thông cần phổ tần; dược và thiết bị y tế cần phê duyệt; nhà máy cần giấy phép môi trường; quốc phòng cần phê duyệt xuất khẩu; điện lực chịu quy tắc thị trường.
 
-Tax authorities apply arm’s-length principles and related rules to prevent artificial profit shifting.
+Quy định tạo hai tác động trái chiều.
 
-For analyst, local subsidiary margin can reflect global functional allocation, not only local operational quality.
+**Là chi phí:** doanh nghiệp cần luật sư, hệ thống, báo cáo, vốn và kiểm toán.
 
-See [23_foreign_invested_companies_and_korea_entry](./23_foreign_invested_companies_and_korea_entry.md).
+**Là hào cạnh tranh:** doanh nghiệp đã có giấy phép, hạ tầng tuân thủ và lịch sử hoạt động khiến người mới phải chịu cùng chi phí cố định để vào thị trường.
 
-## Regulation as business architecture
+Do đó quy định vừa có thể bảo vệ khách hàng vừa tạo rào cản gia nhập.
 
-Some industries cannot operate freely without licenses/permissions.
+## Chi phí tuân thủ cố định và quy mô doanh nghiệp
 
-Examples:
+Giả sử quy định yêu cầu hệ thống tuân thủ tốn 5 tỷ KRW/năm.
 
-- bank license;
-- insurance rules;
-- telecom spectrum;
-- pharmaceutical approval;
-- medical-device approval;
-- environmental permits;
-- defense export approval;
-- electricity-market rules.
+Với doanh nghiệp doanh thu 5 nghìn tỷ, chi phí chỉ 0,1%. Với startup doanh thu 50 tỷ, nó tương đương 10% doanh thu.
 
-This creates two opposite effects.
+Cùng một quy định vì vậy có thể vô tình ưu ái quy mô lớn. Đây là lý do “quy định nhiều hơn = quyền lực thị trường thấp hơn” không phải lúc nào cũng đúng.
 
-### Regulation as cost
+## KFTC và chính sách cạnh tranh
 
-Compliance requires lawyers, systems, reporting, capital and audits.
+Ủy ban Thương mại Công bằng Hàn Quốc **KFTC (공정거래위원회)** phụ trách nhiều lĩnh vực như cạnh tranh, tập đoàn doanh nghiệp lớn, giao dịch không công bằng và bảo vệ người tiêu dùng.
 
-### Regulation as moat
+Khi phân tích chaebol, KFTC đặc biệt quan trọng vì cơ quan quản lý nhìn vượt một pháp nhân để xem **tập đoàn dưới quyền kiểm soát kinh tế chung (기업집단)**.
 
-Once incumbent has license, compliance infrastructure and track record, new entrant must bear same fixed cost.
+Khung chỉ định tập đoàn lớn đặt ra nghĩa vụ công bố và hạn chế khác nhau theo tiêu chí luật định. Ngưỡng có thể thay đổi nên phân tích hiện hành phải dùng dữ liệu KFTC mới nhất.
 
-Thus regulation can simultaneously protect customers **and** raise entry barrier.
+## Chính sách cạnh tranh: quy mô lớn tự nó không phải hành vi vi phạm
 
-## Fixed compliance cost and firm size
+Thị phần lớn có thể đến từ đổi mới, hiệu quả hoặc hiệu ứng mạng. Vấn đề cạnh tranh xuất hiện khi quyền lực thị trường được sử dụng theo cách làm giảm khả năng cạnh tranh hoặc gây hại cho đối tác–người tiêu dùng theo luật.
 
-Suppose regulation requires 5 billion KRW annual compliance system.
+Các khái niệm chính gồm cartel/thông đồng, lạm dụng vị thế thống lĩnh, hành vi loại trừ, giao dịch không công bằng, M&A làm giảm cạnh tranh và thầu phụ không công bằng.
 
-For company with 5 trillion revenue, cost is 0.1%.
+Không nên thay phân tích kinh tế–pháp lý bằng công thức “lớn = xấu”.
 
-For startup with 50 billion revenue, cost is 10%.
+## Xác định thị trường liên quan
 
-Same rule can therefore favor scale.
+Thị phần chỉ có nghĩa sau khi xác định **thị trường liên quan (relevant market / 관련시장)**.
 
-This is why “more regulation = less market power” is not always true.
+Cần hỏi sản phẩm nào thay thế được nhau, phạm vi địa lý nào, khách hàng có thể chuyển sau khi giá tăng không, nền tảng có nhiều phía hay không và chi phí chuyển đổi có cao không.
 
-Policy design must consider fixed-cost effects.
+Một công ty có 80% thị phần trong một danh mục hẹp vẫn có thể chịu cạnh tranh mạnh từ công nghệ lân cận. Cách xác định thị trường thường quyết định kết luận cạnh tranh.
 
-## KFTC and competition policy
+## Chỉ số tập trung: hữu ích nhưng chưa đủ
 
-Korea Fair Trade Commission (공정거래위원회) covers competition, large business groups, unfair transactions, consumer issues and related areas.
+Mức tập trung có thể được ước tính bằng thị phần các công ty lớn hoặc chỉ số kiểu HHI. Nhưng thị phần tĩnh không phản ánh rào cản gia nhập, tốc độ đổi mới, chi phí chuyển đổi, cạnh tranh tiềm năng và quyền lực người mua.
 
-For chaebol analysis, KFTC is important because regulator often looks beyond one corporation to **economic control group / 기업집단**.
+Tập trung cao trong thiết bị bán dẫn có rào cản R&D khổng lồ khác về kinh tế với tập trung tạm thời trong một xu hướng thời trang.
 
-Large-group designation frameworks impose different disclosure/restriction obligations depending on statutory criteria. Thresholds and designations can change, so use current KFTC data for live analysis.
+## Kiểm soát M&A: hiệp lực cổ đông và cạnh tranh xã hội là hai câu hỏi khác nhau
 
-## Competition policy: company size itself is not violation
+Doanh nghiệp có thể đề xuất M&A vì hiệp lực làm giảm chi phí hoặc mở rộng thị trường. Cơ quan quản lý hỏi một câu khác: giao dịch có làm giảm cạnh tranh đáng kể hay không?
 
-Large market share can arise from innovation, efficiency or network effects.
+Hai mục tiêu có thể khác nhau. Một thương vụ có thể tạo giá trị cho cổ đông nhưng làm cạnh tranh yếu đi; hoặc tạo hiệu quả mà không gây hại đáng kể.
 
-Competition problem appears when market power is used in ways that reduce contestability or harm trading partners/consumers under law.
+Phân tích M&A cần xem thị trường liên quan, mức tập trung, rào cản gia nhập, hiệu quả kinh tế, quyền lực người mua và tác động đổi mới.
 
-Key concepts include:
+## Quy định chaebol: rủi ro ở cấp tập đoàn
 
-- cartel/collusion;
-- abuse of dominance/market power;
-- exclusionary conduct;
-- unfair trade practices;
-- anti-competitive merger;
-- unfair subcontracting.
+Tập đoàn lớn tạo lợi ích qua quy mô, thị trường vốn nội bộ và R&D nhưng cũng có thể tạo đòn bẩy kiểm soát qua sở hữu chéo, ưu ái bên liên quan, hỗ trợ nội bộ không công bằng, phụ thuộc nhà cung cấp và tập trung quyền lực kinh tế.
 
-Do not replace legal/economic analysis with “big = bad”.
+Hàn Quốc vì vậy có khung công bố và cạnh tranh ở cấp tập đoàn bên cạnh luật công ty thông thường.
 
-## Relevant market definition
+Xem [`04_chaebol_and_large_business_groups.md`](./04_chaebol_and_large_business_groups.md).
 
-Market share has meaning only after defining **relevant market / 관련시장**.
+## Quy định thầu phụ: quyền lực người mua trong chuỗi cung ứng
 
-Need ask:
+Người mua lớn có thể tác động nhà cung cấp qua điều khoản thanh toán, giảm giá, thông tin thiết kế–công nghệ, thay đổi tiêu chuẩn một chiều, chậm nghiệm thu hoặc tập trung sản lượng.
 
-- Which products are substitutes?
-- Geographic scope?
-- Can customers switch after price increase?
-- Are platforms multi-sided?
-- Are switching costs high?
+Quy định thầu phụ công bằng cố gắng hạn chế lạm dụng nhưng bảo vệ pháp lý không loại bỏ phụ thuộc kinh tế. Nhà cung cấp vẫn cần đa dạng hóa khách hàng và bảng cân đối vốn lưu động khỏe.
 
-A company can have 80% share of narrow category but face strong substitute from adjacent technology.
+Xem [`06_sme_mid_sized_and_subcontracting_ecosystem.md`](./06_sme_mid_sized_and_subcontracting_ecosystem.md).
 
-Market definition often determines competition conclusion.
+## Cạnh tranh nền tảng: dịch vụ giá 0 làm trực giác chống độc quyền phức tạp hơn
 
-## Concentration metrics: useful but incomplete
+Nhiều nền tảng thu người dùng giá bằng 0 hoặc rất thấp rồi kiếm tiền từ quảng cáo, nhà bán hoặc dịch vụ tài chính. Câu hỏi truyền thống “giá có tăng không?” vì vậy không đủ.
 
-Industry concentration can be approximated by top-firm shares or HHI-type measures.
+Cần xem hiệu ứng mạng, lợi thế dữ liệu, multi-homing, tự ưu tiên, bundling, phụ thuộc nhà bán, khả năng tương tác và chi phí chuyển đổi.
 
-But static share does not capture:
+Nền tảng là thị trường nhiều phía; can thiệp một phía có thể thay đổi phía khác.
 
-- entry barriers;
-- innovation rate;
-- switching costs;
-- potential competition;
-- buyer power.
+## Quy định tài chính: yêu cầu vốn thay đổi mô hình kinh doanh
 
-High concentration in semiconductor equipment with huge R&D barriers differs economically from temporary concentration in fashion trend.
+Ngân hàng không thể tối đa hóa đòn bẩy như công ty công nghiệp vì phải duy trì bộ đệm vốn và thanh khoản.
 
-## Merger control: shareholder synergy vs social competition
+Yêu cầu vốn cao hơn có thể làm ROE thấp hơn nhưng khả năng chống chịu cao hơn. Vì vậy so ROE ngân hàng với ROE phần mềm mà bỏ qua quy định vốn là vô nghĩa.
 
-Company may propose M&A because synergy lowers cost or expands market.
+## Quy định y tế: giấy phép là một phần của sản phẩm
 
-Regulator asks different question: does transaction materially reduce competition?
+Thuốc hoặc thiết bị y tế không thể thương mại hóa chỉ vì công nghệ hoạt động; nó còn phải vượt phê duyệt và thường cả quy trình hoàn trả bảo hiểm.
 
-These objectives can diverge.
-
-A merger can create shareholder value while harming competition, or improve efficiency without meaningful harm.
-
-Merger analysis therefore needs:
-
-- market definition;
-- concentration;
-- entry barriers;
-- efficiencies;
-- buyer power;
-- innovation effect.
-
-## Chaebol regulation: group-level risks
-
-Large business groups can create economic benefits through scale, internal capital and R&D.
-
-But group structure can also create:
-
-- cross-shareholding/control leverage;
-- related-party favoritism;
-- unfair internal support;
-- supplier dependency;
-- concentration of economic power.
-
-Korea therefore has group-specific disclosure and competition framework beyond normal company law.
-
-See [04_chaebol_and_large_business_groups](./04_chaebol_and_large_business_groups.md).
-
-## Subcontracting regulation: buyer power in supply chains
-
-A large buyer can influence supplier through:
-
-- payment terms;
-- price reduction;
-- design/technology information;
-- unilateral specification changes;
-- delayed acceptance;
-- volume concentration.
-
-Fair-subcontracting rules attempt to limit abuse, but legal protection does not eliminate economic dependency.
-
-Supplier still needs customer diversification and working-capital strength.
-
-See [06_sme_mid_sized_and_subcontracting_ecosystem](./06_sme_mid_sized_and_subcontracting_ecosystem.md).
-
-## Platform competition: zero-price service breaks simple antitrust intuition
-
-Many digital platforms charge user zero or low price while monetizing advertising, sellers or financial services.
-
-Traditional “price increased?” test is insufficient.
-
-Need inspect:
-
-- network effects;
-- data advantage;
-- multi-homing;
-- self-preferencing;
-- tying/bundling;
-- seller dependency;
-- interoperability;
-- switching costs.
-
-Platform is multi-sided market, so intervention on one side can change another side.
-
-## Financial regulation: capital requirement changes business model
-
-Bank cannot maximize leverage like ordinary industrial firm because regulation requires capital/liquidity buffers.
-
-Higher capital requirement can reduce ROE but increase resilience.
-
-Thus regulation changes both return and risk.
-
-Comparing bank ROE to software ROE without regulatory context is meaningless.
-
-## Healthcare regulation: permission is part of product
-
-Drug or medical device cannot monetize solely because technology works; it must pass regulatory approval and often reimbursement processes.
-
-Regulatory capability becomes intangible asset.
-
-This is why bio company value chain is:
+Năng lực quy định trở thành tài sản vô hình. Chuỗi giá trị của doanh nghiệp bio vì vậy là:
 
 ```text
-Science → Clinical evidence → Approval → Reimbursement → Commercial adoption
+Khoa học
+→ bằng chứng lâm sàng
+→ phê duyệt
+→ hoàn trả bảo hiểm
+→ chấp nhận thương mại
 ```
 
-Regulation is embedded in product-market fit.
+Quy định nằm trực tiếp trong **mức phù hợp sản phẩm–thị trường**.
 
-## Environmental regulation and transition cost
+## Quy định môi trường và chi phí chuyển đổi
 
-Steel, chemicals, energy and transport face emission rules, permits and carbon constraints.
+Thép, hóa chất, năng lượng và vận tải chịu quy tắc phát thải, giấy phép và carbon. Chính sách có thể tạo chi phí hiện tại nhưng đồng thời tạo thị trường cho công nghệ sạch hơn.
 
-Policy can create cost today but also market for cleaner technology.
+Doanh nghiệp có cơ sở tài sản cũ có thể chịu rủi ro tài sản mắc kẹt; công ty công nghệ mới có thể hưởng cầu mới. Quy định vì thế phân phối lại giá trị giữa các ngành.
 
-Incumbent with old asset base may face stranded-asset risk; new technology firm may gain demand.
+## Bất định chính sách và quyền chọn thực
 
-Regulation therefore reallocates value across sectors.
+Nếu doanh nghiệp chuẩn bị đầu tư nhà máy 10 nghìn tỷ KRW không thể đảo ngược nhưng quy định trợ cấp hoặc thuế quan sắp thay đổi, chờ đợi có thể có giá trị.
 
-## Policy uncertainty and real options
+Đây là logic **quyền chọn thực (real option)**. Bất định có thể khiến doanh nghiệp trì hoãn CAPEX, tăng tỷ suất tối thiểu, giữ nhiều tiền mặt hơn, chia dự án thành nhiều giai đoạn hoặc đa dạng hóa địa điểm.
 
-If company plans irreversible 10-trillion-KRW plant but subsidy/tariff rule may change soon, waiting can have value.
+Vì vậy chỉ một thông báo chính sách cũng có thể thay đổi đầu tư trước khi quy định chính thức có hiệu lực.
 
-This is real-option logic.
+## Tuân thủ ngày càng là bài toán phần mềm và hạ tầng
 
-Uncertainty can cause:
+Quy định hiện đại cần hệ thống giám sát giao dịch, audit log, kiểm soát riêng tư, dữ liệu kế toán, an ninh mạng và báo cáo.
 
-- delayed CAPEX;
-- higher hurdle rate;
-- more cash retention;
-- phased investment;
-- geographic diversification.
+Chi phí tuân thủ vì thế không chỉ là nhân sự pháp lý mà trở thành kiến trúc CNTT doanh nghiệp. Với công ty SI/SM Hàn Quốc, chính quy định tạo ra một phần nhu cầu dự án hệ thống.
 
-Therefore policy announcement affects investment before rule becomes effective.
+Xem [`34_digital_fintech_cloud_and_it_services.md`](./34_digital_fintech_cloud_and_it_services.md).
 
-## Compliance as software/infrastructure problem
+## Cách lập bản đồ quy định của một công ty Hàn Quốc
 
-Modern regulation increasingly requires systems: transaction monitoring, audit logs, privacy controls, accounting data, cybersecurity and reporting.
-
-Compliance cost is therefore not only legal staff; it becomes enterprise-IT architecture.
-
-For Korean SI/SM companies, regulation itself generates demand for system projects.
-
-This connects law directly to [34_digital_fintech_cloud_and_it_services](./34_digital_fintech_cloud_and_it_services.md).
-
-## How to analyze regulatory exposure of a Korean company
-
-Create a regulation map:
-
-| Layer | Questions |
+| Lớp | Câu hỏi |
 |---|---|
-| Tax | statutory/effective/cash tax? credits? |
-| Market entry | license/permit/certification required? |
-| Pricing | free price or regulated tariff/reimbursement? |
-| Competition | dominant position, merger, group restrictions? |
-| Labor | overtime/employment obligations? |
-| Environment | emissions/permit/carbon exposure? |
-| Data/security | privacy, financial/security standards? |
-| Trade | tariff, origin, export controls? |
+| Thuế | thuế suất luật định/hiệu dụng/tiền mặt? ưu đãi? |
+| Gia nhập thị trường | cần giấy phép/chứng nhận gì? |
+| Giá | định giá tự do hay tariff/hoàn trả bị quản lý? |
+| Cạnh tranh | vị thế thống lĩnh, M&A, hạn chế tập đoàn? |
+| Lao động | nghĩa vụ giờ làm/việc làm? |
+| Môi trường | phát thải, giấy phép, carbon? |
+| Dữ liệu/an ninh | riêng tư, chuẩn tài chính/an ninh? |
+| Thương mại | thuế quan, xuất xứ, kiểm soát xuất khẩu? |
 
-Then identify which rule directly changes cash flow.
+Sau đó xác định quy định nào thật sự đi thẳng vào dòng tiền.
 
-## Mental Model
+## Mental Model — mô hình tư duy
 
-> Tax and regulation define the **feasible strategy space** of a company. A business model is not just product + customer; it is product + customer + law + tax + licenses + competition structure. If profit depends on a rule, that rule belongs inside valuation and risk model.
+> Thuế và quy định xác định **không gian chiến lược khả thi** của doanh nghiệp. Mô hình kinh doanh không chỉ là sản phẩm + khách hàng; nó còn là sản phẩm + khách hàng + luật + thuế + giấy phép + cấu trúc cạnh tranh. Nếu lợi nhuận phụ thuộc một quy định, quy định đó phải nằm trong mô hình định giá và rủi ro.
 
-## Common misconceptions
+## Những nhầm lẫn thường gặp
 
-Statutory tax rate ≠ effective tax rate ≠ cash tax.
+**Thuế suất luật định ≠ thuế suất hiệu dụng ≠ thuế tiền mặt.**
 
-Regulation is not always negative for incumbent; it can create moat.
+**Quy định không phải lúc nào cũng xấu cho doanh nghiệp hiện hữu.** Nó có thể tạo hào cạnh tranh.
 
-Large company is not automatically anti-competitive.
+**Doanh nghiệp lớn không tự động phản cạnh tranh.**
 
-High market share alone does not prove dominance abuse.
+**Thị phần cao không tự động chứng minh lạm dụng vị thế.**
 
-Government support does not erase project economics.
+**Hỗ trợ chính phủ không xóa kinh tế dự án.**
 
-A policy announcement is not realized cash flow until eligibility, amount and timing are clear.
+**Thông báo chính sách không phải dòng tiền thật** cho tới khi điều kiện, số tiền và thời điểm rõ ràng.
 
-## Connections
+## Liên kết
 
-Read [04_chaebol_and_large_business_groups](./04_chaebol_and_large_business_groups.md) for group regulation, [08_corporate_governance_ownership_and_control](./08_corporate_governance_ownership_and_control.md) for internal power, [23_foreign_invested_companies_and_korea_entry](./23_foreign_invested_companies_and_korea_entry.md) for cross-border tax and [26_economic_institutions_and_policy_making](./26_economic_institutions_and_policy_making.md) for policy formation.
+Đọc [`04_chaebol_and_large_business_groups.md`](./04_chaebol_and_large_business_groups.md) cho quy định tập đoàn, [`08_corporate_governance_ownership_and_control.md`](./08_corporate_governance_ownership_and_control.md) cho quyền lực nội bộ, [`23_foreign_invested_companies_and_korea_entry.md`](./23_foreign_invested_companies_and_korea_entry.md) cho thuế xuyên biên giới và [`26_economic_institutions_and_policy_making.md`](./26_economic_institutions_and_policy_making.md) cho quá trình hình thành chính sách.
 
 ### Nguồn hiện hành
 
-- National Tax Service, corporate-tax rates: https://nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7746&mi=2372
-- Korea Fair Trade Commission, large business group policy: https://www.ftc.go.kr/www/contents.do?key=696
+- National Tax Service: thuế suất thuế thu nhập doanh nghiệp.
+- Korea Fair Trade Commission: chính sách về tập đoàn doanh nghiệp lớn.
