@@ -1,290 +1,289 @@
 # Lễ Tết, nghi lễ, trò chơi và ký ức tập thể
 
-## Calendar biến thời gian thành văn hoá
+## Lịch biến thời gian thành văn hoá
 
-Con người trải nghiệm time liên tục, nhưng society chia time thành ngày làm việc, cuối tuần, lễ, anniversary và season. **Cultural calendar / 문화 달력** là một hệ thống synchronization. Khi hàng triệu người cùng nghỉ, di chuyển và làm nghi lễ, calendar trở thành infrastructure.
+Con người trải nghiệm thời gian liên tục, nhưng xã hội chia thời gian thành ngày làm việc, cuối tuần, ngày lễ, ngày kỷ niệm và mùa. **Lịch văn hoá (cultural calendar / 문화 달력)** là một hệ thống đồng bộ hoá (synchronization). Khi hàng triệu người cùng nghỉ, di chuyển và thực hiện nghi lễ, lịch trở thành một dạng hạ tầng xã hội.
 
-Ở Hàn Quốc, `설날` và `추석` là hai dịp lớn nhất gắn family reunion, food, ancestors và travel. Modern transport network phải xử lý demand spike; ticketing, highway và delivery đều bị ảnh hưởng. Một festival vì vậy vừa là symbolic event vừa là load test của infrastructure.
+Ở Hàn Quốc, `설날` và `추석` là hai dịp lớn gắn với đoàn tụ gia đình, đồ ăn, tổ tiên và việc di chuyển. Mạng lưới giao thông hiện đại phải xử lý mức tăng đột biến về nhu cầu; vé tàu, đường cao tốc và giao hàng đều bị ảnh hưởng. Vì vậy một ngày lễ vừa là sự kiện mang ý nghĩa biểu tượng, vừa giống một bài kiểm tra tải (load test) đối với hạ tầng.
 
-Mental model:
+### Mô hình tư duy
 
 ```text
-calendar date
-→ shared expectation
-→ synchronized behaviour
-→ traffic / food / gifts / ritual / media demand
+ngày trên lịch
+→ kỳ vọng chung
+→ hành vi được đồng bộ
+→ nhu cầu giao thông / thực phẩm / quà / nghi lễ / truyền thông tăng
 ```
 
-Lịch không chỉ “nói hôm nay là ngày nào”; nó điều phối xã hội.
+Lịch không chỉ cho biết “hôm nay là ngày nào”; nó còn điều phối hành vi xã hội.
 
 ## Âm lịch và dương lịch cùng tồn tại
 
-Daily administration dùng solar/Gregorian calendar, nhưng nhiều lễ truyền thống vẫn dựa vào **lunar calendar / 음력**. Vì vậy cùng một household có thể dùng hai hệ thời gian song song.
+Hành chính hằng ngày chủ yếu dùng dương lịch Gregorian, nhưng nhiều lễ truyền thống vẫn dựa vào **âm lịch (lunar calendar / 음력)**. Vì vậy trong cùng một gia đình có thể tồn tại song song hai hệ lịch.
 
-Birthday `생일` cũng có variation. Nhiều người hiện dùng ngày dương lịch, nhưng một số thế hệ hoặc gia đình vẫn nhắc `음력 생일`. Điều này tạo một hiện tượng thú vị: identity event có thể cần conversion calendar mỗi năm.
+Sinh nhật `생일` cũng có biến thể. Nhiều người hiện dùng ngày dương lịch, nhưng một số thế hệ hoặc gia đình vẫn nhắc `음력 생일`, tức sinh nhật theo âm lịch. Điều này tạo ra một hiện tượng thú vị: một sự kiện định danh cá nhân có thể phải chuyển đổi lịch mỗi năm.
 
-Trong computer systems, đây giống việc cùng một timestamp được render theo nhiều timezone/calendar convention. Event không đổi nhưng representation thay.
+Trong hệ thống máy tính, điều này gần giống việc cùng một mốc thời gian được biểu diễn theo nhiều múi giờ hoặc quy ước lịch khác nhau. Sự kiện không đổi nhưng cách biểu diễn thay đổi.
 
-## 설날: năm mới âm lịch và tái thiết lập quan hệ
+## 설날: Tết âm lịch và tái khẳng định quan hệ
 
-**Seollal / 설날** là Tết âm lịch. Các practice có thể gồm `세배`, ăn `떡국`, thăm gia đình, trò chơi và nghi lễ tổ tiên tuỳ household.
+**Seollal (설날)** là Tết âm lịch. Tuỳ gia đình, các hoạt động có thể gồm `세배`, ăn `떡국`, thăm người thân, chơi trò chơi hoặc thực hiện nghi lễ tưởng nhớ tổ tiên.
 
-**Sebae / 세배** là cú lạy chúc năm mới, thường từ người trẻ tới người lớn. Người lớn có thể cho `세뱃돈`. Đây không chỉ là transaction tiền. Gesture tái khẳng định generational relation; tiền vừa là blessing vừa là resource transfer.
+**Sebae (세배)** là nghi thức lạy chúc năm mới, thường do người trẻ thực hiện với người lớn tuổi. Người lớn có thể cho `세뱃돈`. Đây không chỉ là giao dịch tiền bạc. Động tác lạy tái khẳng định quan hệ giữa các thế hệ, còn tiền vừa mang ý nghĩa chúc phúc vừa là một dạng chuyển giao nguồn lực.
 
-`떡국` — soup bánh gạo — gắn biểu tượng “thêm tuổi”. Trong quá khứ, tuổi theo hệ tính Hàn truyền thống và New Year có relation văn hoá phức tạp; hiện nay administrative age và ritual language không nên bị đồng nhất hoàn toàn.
+`떡국` là canh bánh gạo, thường gắn với hình ảnh “thêm một tuổi”. Trong quá khứ, cách tính tuổi truyền thống của Hàn Quốc và thời điểm năm mới có liên hệ văn hoá phức tạp; hiện nay không nên đồng nhất cách tính tuổi hành chính với ngôn ngữ nghi lễ truyền thống.
 
-## 덕담: lời chúc như social scripting
+## 덕담: lời chúc như một kịch bản giao tiếp xã hội
 
-`덕담` là lời chúc tốt lành đầu năm. Nó có thể nhắc sức khoẻ, học tập, việc làm, hôn nhân hoặc family wellbeing.
+`덕담` là lời chúc tốt lành đầu năm. Nội dung có thể liên quan sức khoẻ, học tập, công việc, hôn nhân hoặc hạnh phúc gia đình.
 
-Lời chúc có function social mạnh vì nó cho phép người nói biểu thị care trong format được chấp nhận. Nhưng cùng một câu có thể gây pressure nếu người nghe không muốn marriage, childbearing hoặc career path đó.
+Lời chúc có chức năng xã hội mạnh vì nó tạo một khuôn mẫu được chấp nhận để người nói thể hiện sự quan tâm. Tuy nhiên cùng một câu có thể gây áp lực nếu người nghe không muốn kết hôn, sinh con hoặc đi theo con đường nghề nghiệp được nhắc tới.
 
-Đây là ví dụ chuẩn mực thay đổi nhanh hơn phrase formula: script cũ vẫn tồn tại, nhưng meaning được negotiate lại giữa generation.
+Đây là ví dụ cho thấy chuẩn mực có thể thay đổi nhanh hơn công thức ngôn ngữ. Kịch bản cũ vẫn tồn tại, nhưng ý nghĩa của nó được thương lượng lại giữa các thế hệ.
 
-## 세뱃돈 và intergenerational transfer
+## 세뱃돈: chuyển giao nguồn lực giữa các thế hệ
 
-`세뱃돈` thường được hiểu là tiền may mắn cho trẻ, nhưng về abstract level nó là **intergenerational resource transfer** đi kèm ritual.
+`세뱃돈` thường được hiểu là tiền may mắn dành cho trẻ em, nhưng ở mức khái quát hơn nó là một dạng **chuyển giao nguồn lực giữa các thế hệ (intergenerational resource transfer)** đi kèm nghi lễ.
 
-Một envelope tiền không chỉ có monetary value. Timing, giver, lời chúc và bow làm nó khác transfer ngân hàng thông thường. Ritual “gắn metadata” vào money.
+Một phong bao tiền không chỉ có giá trị tiền tệ. Thời điểm, người trao, lời chúc và nghi thức lạy khiến nó khác với một lần chuyển khoản ngân hàng thông thường. Có thể nói nghi lễ đã “gắn siêu dữ liệu (metadata)” vào tiền.
 
-## 귀성·귀경: holiday tạo hai làn migration ngược nhau
+## 귀성·귀경: hai làn di chuyển ngược nhau trong dịp lễ
 
-`귀성` là về quê/gia đình vào dịp lễ; `귀경` thường chỉ quay lại vùng đô thị/thủ đô sau kỳ nghỉ. Hai từ này cho thấy urbanization đã được encode vào holiday vocabulary.
+`귀성` là việc trở về quê hoặc về với gia đình trong dịp lễ; `귀경` thường chỉ việc quay trở lại khu vực đô thị hoặc thủ đô sau kỳ nghỉ. Hai từ này phản ánh quá trình đô thị hoá đã đi vào chính từ vựng của đời sống lễ Tết.
 
-Khi nhiều household có origin ngoài 수도권 nhưng làm việc tại Seoul/Gyeonggi/Incheon, holiday tạo mass movement theo chu kỳ.
-
-Đây là một temporal network problem:
+Khi nhiều gia đình có nguồn gốc ngoài vùng thủ đô nhưng làm việc tại Seoul, Gyeonggi hoặc Incheon, ngày lễ tạo ra các đợt di chuyển hàng loạt theo chu kỳ.
 
 ```text
-same roads
-+ same rail capacity
-+ synchronized demand
-= congestion spike
+cùng hệ thống đường bộ
++ cùng năng lực đường sắt
++ nhu cầu xuất hiện cùng lúc
+= ùn tắc tăng mạnh
 ```
 
-Vì vậy booking ticket, khởi hành sớm và theo dõi traffic trở thành một phần thực tế của “văn hoá lễ”.
+Vì vậy đặt vé, khởi hành sớm và theo dõi giao thông cũng trở thành một phần rất thực tế của “văn hoá ngày lễ”.
 
 ## 추석: mùa thu, tổ tiên và quê nhà
 
-**Chuseok / 추석** diễn ra vào rằm tháng 8 âm lịch và gắn harvest, ancestors, family reunion. `송편`, grave visit `성묘` và ancestral ritual `차례` là những hình ảnh quen thuộc, nhưng practice khác nhau theo gia đình.
+**Chuseok (추석)** diễn ra vào rằm tháng 8 âm lịch, gắn với mùa thu hoạch, tổ tiên và đoàn tụ gia đình. `송편`, viếng mộ `성묘` và nghi lễ `차례` là những hình ảnh quen thuộc, nhưng mức độ thực hiện khác nhau theo từng gia đình.
 
-Ở xã hội đô thị, “về quê” tạo mass migration. Khái niệm hometown `고향` vì thế không chỉ geographic coordinate mà là memory node của kinship. Với thế hệ sinh hoàn toàn ở Seoul, meaning của `고향` có thể yếu hoặc chuyển sang quê của cha mẹ.
+Trong xã hội đô thị, “về quê” tạo ra những đợt di chuyển lớn. Khái niệm quê hương `고향` vì vậy không chỉ là một toạ độ địa lý mà còn là một nút ký ức của quan hệ thân tộc. Với thế hệ sinh và lớn lên hoàn toàn ở Seoul, ý nghĩa của `고향` có thể yếu hơn hoặc chuyển thành quê của cha mẹ.
 
-## 송편: food như seasonal memory
+## 송편: món ăn như mốc neo ký ức theo mùa
 
-`송편` là rice cake đặc trưng của Chuseok. Điều đáng học không chỉ là “Chuseok ăn songpyeon”, mà là mechanism của seasonal food.
+`송편` là loại bánh gạo đặc trưng của Chuseok. Điều đáng học không chỉ là “Chuseok ăn songpyeon”, mà là cơ chế của món ăn theo mùa.
 
-Một món lặp lại đúng thời điểm mỗi năm trở thành **memory anchor**. Smell, texture và family labour làm event dễ recall. Trong cognitive psychology, repeated cue-context pairing tăng khả năng retrieval.
+Một món ăn lặp lại đúng thời điểm mỗi năm có thể trở thành **mốc neo ký ức (memory anchor)**. Mùi, kết cấu, việc cùng gia đình chuẩn bị món ăn và bối cảnh ngày lễ tạo thành các tín hiệu gợi nhớ. Trong tâm lý học nhận thức, việc lặp lại cùng tín hiệu và bối cảnh giúp tăng khả năng truy hồi ký ức.
 
-Food vì vậy là một phần của calendar memory system.
+Vì vậy thức ăn có thể trở thành một phần của hệ thống ký ức gắn với lịch.
 
-## 벌초와 성묘: landscape, ancestor và maintenance labour
+## 벌초와 성묘: cảnh quan, tổ tiên và lao động bảo trì
 
-`성묘` là thăm mộ tổ tiên; `벌초` là dọn/cắt cỏ quanh mộ, thường được nhắc trước Chuseok trong một số family.
+`성묘` là thăm mộ tổ tiên; `벌초` là dọn hoặc cắt cỏ quanh mộ, thường được nhắc tới trước Chuseok trong một số gia đình.
 
-Những practice này cho thấy ancestor memory không chỉ là symbolic thought mà gắn với physical landscape. Grave cần location, travel và maintenance.
+Những thực hành này cho thấy ký ức về tổ tiên không chỉ tồn tại ở mức biểu tượng mà còn gắn với cảnh quan vật lý. Một ngôi mộ cần vị trí, thời gian di chuyển và công việc bảo trì.
 
-Khi descendants sống xa, outsourcing service hoặc simplified memorial practice có thể tăng. Đây là một ví dụ khác của cultural function được giữ nhưng labour model đổi.
+Khi con cháu sống xa, dịch vụ thuê ngoài hoặc những hình thức tưởng niệm đơn giản hơn có thể tăng. Đây là ví dụ về việc chức năng văn hoá được giữ lại trong khi mô hình lao động thay đổi.
 
-## 차례 và 제사: đừng đồng nhất mọi ancestral rite
+## 차례 và 제사: không nên đồng nhất mọi nghi lễ tổ tiên
 
-`차례` thường chỉ ancestral ritual vào dịp lễ như Seollal/Chuseok, trong khi `제사` thường rộng hơn, bao gồm memorial rite vào ngày mất. Trong daily speech usage có thể linh hoạt.
+`차례` thường chỉ nghi lễ tưởng nhớ tổ tiên vào các dịp lớn như Seollal hoặc Chuseok, trong khi `제사` có phạm vi rộng hơn và thường bao gồm nghi lễ vào ngày mất. Trong ngôn ngữ đời thường, cách dùng có thể linh hoạt.
 
-Điều quan trọng là nghi thức đang thay đổi: food table đơn giản hơn, gender division được thương lượng lại, một số family chuyển sang memorial meeting không formal ritual.
+Điều quan trọng là nghi thức đang thay đổi. Bàn lễ có thể đơn giản hơn, việc phân chia công việc theo giới được thương lượng lại, và một số gia đình chuyển sang buổi tưởng niệm thay vì thực hiện đầy đủ nghi lễ hình thức.
 
-Không có một “bàn cúng chuẩn quốc gia” áp dụng cho mọi nhà. Nhiều quy tắc viral trên Internet là local/family convention hoặc later standardization.
+Không tồn tại một “bàn cúng chuẩn quốc gia” áp dụng cho mọi gia đình. Nhiều quy tắc lan truyền trên Internet thực chất là quy ước của từng vùng, từng họ hoặc là kết quả của quá trình chuẩn hoá về sau.
 
-## 명절증후군: holiday cũng có cost
+## 명절증후군: ngày lễ cũng tạo ra chi phí
 
-`명절증후군` — “holiday syndrome” — là cách nói phổ biến về stress thể chất/tâm lý quanh dịp lễ: travel, cooking, family expectation, gift cost và conflict.
+`명절증후군`, thường được gọi nôm na là “hội chứng ngày lễ”, mô tả căng thẳng thể chất hoặc tâm lý quanh dịp lễ do di chuyển, nấu nướng, kỳ vọng gia đình, chi phí quà cáp và xung đột quan hệ.
 
-Khái niệm này quan trọng vì nó chống romanticization. Cùng một holiday có thể mang:
-
-```text
-belonging + memory + rest
-và đồng thời
-labour + expense + social pressure
-```
-
-Văn hoá không phải chỉ meaning đẹp; nó còn phân phối workload.
-
-## 명절 노동과 gender: ai tạo ra “không khí lễ”?
-
-Một holiday meal không tự xuất hiện. Shopping, cooking, cleaning, serving và dishwashing là labour. Historically, phần lớn domestic ritual labour có thể rơi nhiều lên phụ nữ/con dâu trong một số family.
-
-Khi norm gender thay đổi, family thương lượng lại task: mua đồ sẵn, ăn nhà hàng, chia việc hoặc bỏ một số ritual. Điều này làm holiday culture đổi từ bên trong household chứ không cần “tradition biến mất”.
-
-## 선물세트: retail industry đóng gói ritual
-
-Dịp Seollal/Chuseok, `선물세트` — gift set — xuất hiện mạnh trong supermarket, department store và e-commerce. Food, fruit, health product hoặc household item được package theo holiday.
-
-Retail đang làm một việc rất thú vị: **standardize care into purchasable form**. Người mua không cần tự sản xuất món quà; market cung cấp format có sẵn để biểu thị relationship.
-
-Nhưng quà càng standardized, personalization càng giảm. Vì vậy premium packaging, brand và message được dùng để khôi phục differentiation.
-
-## 단오 và seasonal festival
-
-**Dano / 단오** là festival truyền thống vào ngày 5 tháng 5 âm lịch, từng gắn seasonal ritual, games và community events. **Gangneung Danoje / 강릉단오제** là một ví dụ nổi tiếng của festival địa phương được bảo tồn như heritage.
-
-Festival này cho thấy national culture chứa local system. Một lễ tại Gangneung vừa là Korean heritage vừa là regional identity cụ thể.
-
-## 정월대보름: trăng rằm đầu năm
-
-**Jeongwol Daeboreum / 정월대보름** là rằm tháng Giêng âm lịch, gắn các custom về food, fire và community. Ritual theo lunar calendar phản ánh society từng phụ thuộc mạnh vào agriculture và seasonal cycle.
-
-Khi industrial clock thay agricultural clock, festival có thể mất practical function nhưng giữ symbolic function.
-
-## 부럼, 오곡밥 và food-symbol system
-
-Các món như `오곡밥` hay custom `부럼` được nhắc quanh Jeongwol Daeboreum. Điều đáng học không phải memorise toàn bộ symbolic dictionary, mà hiểu mechanism:
+Khái niệm này quan trọng vì nó giúp tránh lý tưởng hoá ngày lễ. Cùng một kỳ nghỉ có thể đồng thời tạo ra:
 
 ```text
-seasonal scarcity / health concern
-→ food practice
-→ symbolic explanation
-→ repeated ritual
+cảm giác thuộc về + ký ức + nghỉ ngơi
+và
+lao động + chi phí + áp lực xã hội
 ```
 
-Qua thời gian, practical và symbolic meanings có thể hòa vào nhau.
+Văn hoá không chỉ tạo ý nghĩa đẹp; nó cũng phân phối khối lượng công việc và chi phí giữa những người tham gia.
 
-## 어린이날, 어버이날, 스승의날: modern calendar of relationships
+## Lao động ngày lễ và giới: ai tạo ra “không khí lễ”?
 
-Không phải mọi ngày văn hoá quan trọng đều là ancient festival. Modern Korean calendar có các ngày nhấn mạnh role relationship như `어린이날` (Children's Day), `어버이날` (Parents' Day) và `스승의날` (Teachers' Day).
+Một bữa ăn ngày lễ không tự xuất hiện. Mua sắm, nấu ăn, dọn dẹp, phục vụ và rửa bát đều là lao động. Trong lịch sử, ở một số gia đình, phần lớn lao động nghi lễ trong nhà có thể rơi nhiều hơn vào phụ nữ hoặc con dâu.
 
-Các ngày này cho thấy modern state, school và commercial market cùng tham gia tạo ritual. Flower, card, outing và gift trở thành social script mới.
+Khi chuẩn mực giới thay đổi, gia đình thương lượng lại cách phân chia việc: mua đồ chế biến sẵn, ăn ở nhà hàng, chia đều công việc hoặc bỏ bớt một số nghi lễ. Như vậy văn hoá ngày lễ có thể thay đổi từ bên trong gia đình mà không cần “truyền thống biến mất”.
 
-Calendar culture vì vậy là layered system:
+## 선물세트: ngành bán lẻ đóng gói nghi lễ thành sản phẩm
+
+Vào Seollal và Chuseok, `선물세트` — các bộ quà tặng — xuất hiện dày đặc tại siêu thị, cửa hàng bách hoá và thương mại điện tử. Thực phẩm, trái cây, sản phẩm sức khoẻ hoặc đồ gia dụng được đóng gói theo chủ đề ngày lễ.
+
+Bán lẻ ở đây thực hiện một việc đáng chú ý: **chuẩn hoá sự quan tâm thành một hình thức có thể mua được**. Người mua không cần tự sản xuất món quà; thị trường cung cấp một khuôn mẫu để biểu thị mối quan hệ.
+
+Tuy nhiên, món quà càng được chuẩn hoá thì mức cá nhân hoá càng giảm. Vì vậy bao bì cao cấp, thương hiệu và thông điệp riêng được dùng để tạo lại sự khác biệt.
+
+## 단오: lễ hội theo mùa và bản sắc địa phương
+
+**Dano (단오)** là lễ truyền thống vào ngày 5 tháng 5 âm lịch, từng gắn với nghi lễ theo mùa, trò chơi và hoạt động cộng đồng. **Gangneung Danoje (강릉단오제)** là ví dụ nổi tiếng về một lễ hội địa phương được bảo tồn như di sản.
+
+Lễ hội này cho thấy văn hoá quốc gia luôn chứa những hệ thống địa phương. Một sự kiện tại Gangneung vừa thuộc di sản Hàn Quốc, vừa mang bản sắc vùng cụ thể.
+
+## 정월대보름: rằm tháng Giêng âm lịch
+
+**Jeongwol Daeboreum (정월대보름)** là rằm tháng Giêng âm lịch, gắn với nhiều tập quán về thực phẩm, lửa và sinh hoạt cộng đồng. Nghi lễ theo âm lịch phản ánh thời kỳ xã hội phụ thuộc mạnh vào nông nghiệp và nhịp mùa.
+
+Khi đồng hồ công nghiệp thay thế phần lớn nhịp thời gian nông nghiệp, lễ hội có thể mất một phần chức năng thực dụng nhưng vẫn giữ chức năng biểu tượng.
+
+## 부럼, 오곡밥 và hệ thống biểu tượng qua thực phẩm
+
+Các món như `오곡밥` hoặc tập quán `부럼` thường được nhắc quanh Jeongwol Daeboreum. Điều cần hiểu không phải là thuộc lòng một “từ điển biểu tượng”, mà là cơ chế hình thành:
 
 ```text
-traditional lunar festival
-+ modern national commemoration
-+ school/family day
-+ commercial event
+thiếu hụt theo mùa / mối quan tâm về sức khoẻ
+→ thực hành ăn uống
+→ giải thích mang tính biểu tượng
+→ nghi lễ được lặp lại
 ```
 
-## 생일 và 미역국: individual calendar gặp food memory
+Qua thời gian, ý nghĩa thực dụng và ý nghĩa biểu tượng có thể hòa vào nhau.
 
-Birthday `생일` ở Hàn thường gắn với `미역국`. Món này cũng liên hệ postpartum food trong cultural practice, nên birthday meal nối memory của birth và mother-care.
+## 어린이날, 어버이날, 스승의날: lịch hiện đại của các quan hệ xã hội
 
-Một món ăn do đó bridge hai chapter: lifecycle family và annual personal calendar.
+Không phải mọi ngày văn hoá quan trọng đều là lễ cổ truyền. Lịch Hàn Quốc hiện đại còn có các ngày nhấn mạnh quan hệ xã hội như `어린이날` — Ngày Thiếu nhi (Children's Day), `어버이날` — Ngày Cha Mẹ (Parents' Day), và `스승의날` — Ngày Nhà giáo (Teachers' Day).
+
+Những ngày này cho thấy nhà nước hiện đại, trường học và thị trường thương mại cùng tham gia tạo nghi lễ. Hoa, thiệp, đi chơi và quà tặng trở thành những kịch bản xã hội mới.
+
+Có thể hình dung văn hoá lịch như nhiều lớp chồng lên nhau:
+
+```text
+lễ âm lịch truyền thống
++ ngày kỷ niệm quốc gia hiện đại
++ ngày dành cho gia đình / trường học
++ sự kiện thương mại
+```
+
+## 생일 và 미역국: lịch cá nhân gặp ký ức thực phẩm
+
+Sinh nhật `생일` ở Hàn Quốc thường gắn với `미역국`. Món canh rong biển cũng liên quan đến thực phẩm sau sinh trong đời sống truyền thống, vì vậy bữa ăn sinh nhật nối ký ức về việc sinh ra với sự chăm sóc của người mẹ.
+
+Một món ăn do đó có thể nối hai lĩnh vực: vòng đời gia đình và lịch cá nhân hằng năm.
 
 Đọc thêm tại [`29_childhood_parenting_care_institutions.md`](29_childhood_parenting_care_institutions.md).
 
-## 빼빼로데이 và commercial ritual
+## 빼빼로데이: nghi lễ thương mại hiện đại
 
-`빼빼로데이` là ví dụ modern commercial/date ritual. Dù origin và mức tham gia khác traditional holiday, mechanism rất giống:
-
-```text
-recognizable date
-→ media/retail repetition
-→ social expectation
-→ gift exchange
-→ stronger date salience
-```
-
-Khi đủ nhiều người cùng biết một date, nó trở thành coordination point dù không có religious/historical depth như Seollal.
-
-## 윷놀이: trò chơi như mô hình xác suất
-
-**Yutnori / 윷놀이** dùng bốn que `윷` để tạo outcomes như `도`, `개`, `걸`, `윷`, `모`, rồi di chuyển quân trên board. Đây là dịp thú vị để nối culture với probability.
-
-Nếu bốn que là independent và hai mặt có xác suất bằng nhau thì distribution sẽ liên quan binomial coefficient. Nhưng que yut thực có hình dạng không đối xứng hoàn hảo và rule local có thể khác, nên empirical probability khác model ideal.
-
-Bài học first-principles là: model probability bắt đầu từ assumptions. Nếu object không fair, không dùng `p=0.5` chỉ vì tiện.
-
-## 윷놀이 như social game, không chỉ probability
-
-Yutnori thường chơi theo team. Strategy không chỉ là random throw mà còn chọn quân nào di chuyển, khi nào stack, khi nào chase opponent.
-
-Như vậy game kết hợp:
+`빼빼로데이` là ví dụ về một nghi lễ thương mại gắn với ngày tháng. Dù nguồn gốc và mức độ tham gia khác xa ngày lễ truyền thống, cơ chế lan rộng khá giống nhau:
 
 ```text
-chance + strategy + team coordination + emotional interaction
+ngày dễ nhận biết
+→ truyền thông và bán lẻ lặp lại
+→ hình thành kỳ vọng xã hội
+→ trao quà
+→ ngày đó càng nổi bật hơn
 ```
 
-Đây là lý do một folk game có thể sống lâu: rule đủ đơn giản cho family, nhưng social dynamic tạo replay value.
+Khi đủ nhiều người cùng biết một ngày, nó trở thành điểm phối hợp xã hội dù không có chiều sâu tôn giáo hoặc lịch sử như Seollal.
 
-## 씨름: thể thao, cơ thể và identity
+## 윷놀이: trò chơi dân gian và mô hình xác suất
 
-**Ssireum / 씨름** là wrestling truyền thống, với competitors nắm sash `샅바`. Physics của ssireum xoay quanh center of mass, torque, friction và leverage.
+**Yutnori (윷놀이)** dùng bốn que `윷` để tạo các kết quả như `도`, `개`, `걸`, `윷`, `모`, sau đó di chuyển quân trên bàn chơi. Đây là ví dụ thú vị để nối văn hoá với xác suất.
+
+Nếu giả sử bốn que độc lập và hai mặt có xác suất bằng nhau, phân bố kết quả sẽ liên quan đến hệ số nhị thức (binomial coefficient). Tuy nhiên que yut thật không đối xứng hoàn toàn và quy tắc địa phương có thể khác, vì vậy xác suất thực nghiệm có thể khác mô hình lý tưởng.
+
+Bài học theo tư duy từ nguyên lý đầu tiên (first-principles thinking) là: mô hình xác suất luôn bắt đầu từ giả định. Nếu vật thể không công bằng thì không thể đặt `p=0.5` chỉ vì thuận tiện.
+
+## 윷놀이 như một trò chơi xã hội, không chỉ là xác suất
+
+Yutnori thường chơi theo đội. Chiến lược không chỉ nằm ở lần tung ngẫu nhiên mà còn ở việc chọn quân nào di chuyển, khi nào gộp quân và khi nào đuổi quân đối thủ.
+
+```text
+may rủi
++ chiến lược
++ phối hợp đội
++ tương tác cảm xúc
+```
+
+Đây là lý do một trò chơi dân gian có thể tồn tại lâu: luật đủ đơn giản để cả gia đình tham gia, nhưng tương tác xã hội tạo giá trị chơi lại.
+
+## 씨름: thể thao, cơ thể và cơ học
+
+**Ssireum (씨름)** là môn vật truyền thống, trong đó người thi đấu nắm dây `샅바`. Cơ học của ssireum liên quan trực tiếp đến trọng tâm (center of mass), mô-men xoắn (torque), ma sát (friction) và lợi thế đòn bẩy (leverage).
 
 ```math
 \tau = rF\sin\theta
 ```
 
-Torque `τ` phụ thuộc lực `F`, khoảng cách đòn bẩy `r` và góc `θ`. Culture sport và mechanics gặp nhau trực tiếp ở cơ thể.
+Mô-men xoắn `τ` phụ thuộc lực `F`, khoảng cách đòn bẩy `r` và góc `θ`. Văn hoá thể thao và cơ học gặp nhau trực tiếp ở chuyển động của cơ thể.
 
-Trong holiday broadcast và local festival, ssireum cũng là media heritage — practice được truyền không chỉ ở sân làng mà qua television và organized competition.
+Trong các chương trình ngày lễ hoặc lễ hội địa phương, ssireum còn là một dạng di sản truyền qua truyền thông: môn chơi không chỉ tồn tại ở sân làng mà còn qua truyền hình và thi đấu có tổ chức.
 
-## 연날리기, 제기차기, 팽이치기 và embodied knowledge
+## 연날리기, 제기차기, 팽이치기 và tri thức cơ thể
 
-**Kite flying / 연날리기**, **jegichagi / 제기차기**, spinning top `팽이치기` và board games từng tạo seasonal play. Những trò này rèn coordination, timing và embodied skill mà không cần formal instruction.
+Thả diều `연날리기`, đá jegi `제기차기`, quay con quay `팽이치기` và nhiều trò chơi bàn cờ từng là hoạt động theo mùa. Chúng rèn khả năng phối hợp, căn thời điểm và kỹ năng cơ thể mà không nhất thiết cần hướng dẫn chính quy.
 
-Trong modern society, một phần được chuyển vào school festival, folk village và holiday program. Khi practice rời daily life sang “cultural event”, transmission mode thay đổi.
+Trong xã hội hiện đại, một phần các hoạt động này chuyển vào lễ hội trường học, làng dân gian hoặc chương trình ngày lễ. Khi một thực hành rời khỏi đời sống hằng ngày để trở thành “sự kiện văn hoá”, cách truyền dạy cũng thay đổi.
 
-## 전통놀이의 박물관화: khi practice thành exhibit
+## Khi trò chơi truyền thống trở thành hiện vật trưng bày
 
-Một cultural practice có thể trải qua ba state:
+Một thực hành văn hoá có thể đi qua ba trạng thái:
 
 ```text
-daily practice
-→ seasonal/occasional practice
-→ demonstration/heritage practice
+thực hành hằng ngày
+→ thực hành theo mùa / thỉnh thoảng
+→ trình diễn / thực hành di sản
 ```
 
-State cuối không có nghĩa tradition “chết”. Nhưng participant role đổi: từ người chơi tự nhiên sang learner/audience.
+Trạng thái cuối không có nghĩa truyền thống đã “chết”. Tuy nhiên vai trò của người tham gia thay đổi: từ người chơi tự nhiên thành người học hoặc khán giả.
 
-Preservation tốt cần giữ **participation knowledge**, không chỉ costume và object.
+Bảo tồn tốt phải giữ được **tri thức tham gia (participation knowledge)** chứ không chỉ giữ trang phục và đồ vật.
 
 ## 기념일 và ký ức quốc gia
 
-Ngoài lunar festivals, modern Korea có national commemorative days gắn với historical events và state memory. Calendar vì thế cũng là memory architecture.
+Ngoài các lễ theo âm lịch, Hàn Quốc hiện đại còn có nhiều ngày kỷ niệm quốc gia gắn với sự kiện lịch sử và ký ức nhà nước. Vì vậy lịch cũng là một kiến trúc của ký ức (memory architecture).
 
-**Collective memory / 집단기억** không đồng nghĩa mọi cá nhân nhớ cùng cách. Textbook, memorial, film và family story có thể tạo emphasis khác nhau.
+**Ký ức tập thể (collective memory / 집단기억)** không có nghĩa mọi cá nhân nhớ cùng một cách. Sách giáo khoa, đài tưởng niệm, phim ảnh và câu chuyện gia đình có thể nhấn mạnh các góc nhìn khác nhau.
 
-Đối với các sự kiện lịch sử hoặc chính trị có diễn giải tranh luận, nên dùng thư viện [`../korean_history/README.md`](../korean_history/README.md) để đọc chronology và historiography kỹ hơn thay vì học từ holiday slogan.
+Với những sự kiện lịch sử hoặc chính trị có nhiều diễn giải, nên dùng thư viện [`../korean_history/README.md`](../korean_history/README.md) để xem niên đại và cách viết sử chi tiết hơn thay vì học lịch sử qua khẩu hiệu ngày lễ.
 
-## Memorialization và database của xã hội
+## Tưởng niệm như “cơ sở dữ liệu” của xã hội
 
-Một society chọn event nào để memorialize giống việc chọn log nào phải giữ lâu dài. Không thể lưu mọi event với cùng salience; ceremony, museum và holiday là indexing system giúp retrieval collective memory.
+Việc một xã hội chọn sự kiện nào để tưởng niệm có thể hình dung giống việc chọn bản ghi nào cần lưu lâu dài. Không thể giữ mọi sự kiện với cùng mức độ nổi bật; nghi lễ, bảo tàng và ngày kỷ niệm đóng vai trò như hệ thống lập chỉ mục giúp xã hội truy hồi ký ức chung.
 
-Nhưng index luôn mang perspective. Vì vậy historical literacy cần so nguồn và nhận ra memory không bằng history itself.
+Tuy nhiên, mọi chỉ mục đều có góc nhìn. Vì vậy hiểu biết lịch sử đòi hỏi so sánh nguồn và nhận ra rằng ký ức không đồng nhất với bản thân lịch sử.
 
-## Media ritual: TV special, traffic news và holiday content
+## Nghi lễ qua truyền thông
 
-Holiday hiện đại được trải nghiệm qua media: special program, rerun, family movie, highway traffic report, cooking content và online shopping campaign.
+Ngày lễ hiện đại còn được trải nghiệm qua chương trình truyền hình đặc biệt, phim chiếu lại, bản tin giao thông, nội dung nấu ăn và chiến dịch mua sắm trực tuyến.
 
-Điều này tạo **second-order ritual**: không chỉ làm holiday practice, mà còn xem người khác làm/nhắc về holiday qua media.
+Điều này tạo ra một **nghi lễ bậc hai (second-order ritual)**: không chỉ thực hiện ngày lễ, mà còn xem và nghe toàn xã hội nói về ngày lễ qua truyền thông.
 
-Một người không về quê vẫn có thể cảm nhận “đây là Chuseok” vì toàn bộ interface xung quanh đổi theme.
+Một người không về quê vẫn có thể cảm thấy “đây là Chuseok” vì giao diện, nội dung và nhịp sinh hoạt xung quanh đều đổi chủ đề.
 
-## Knowledge Connection: festival như distributed synchronization
+## Liên hệ kiến thức: lễ hội như đồng bộ hoá phân tán
 
-Trong distributed systems, clock synchronization giúp node phối hợp. Society không có một clock server duy nhất cho meaning, nhưng calendar tạo shared trigger.
+Trong hệ thống phân tán (distributed systems), đồng bộ đồng hồ giúp các nút phối hợp. Xã hội không có một máy chủ thời gian duy nhất quyết định ý nghĩa, nhưng lịch tạo ra một tín hiệu chung.
 
 ```text
-date arrives
-→ school/company schedule changes
-→ transport demand changes
-→ household routine changes
-→ retail/media changes
-→ symbolic meaning được reinforce
+ngày lễ tới
+→ lịch trường học / công ty thay đổi
+→ nhu cầu giao thông thay đổi
+→ nhịp sinh hoạt gia đình thay đổi
+→ bán lẻ và truyền thông thay đổi
+→ ý nghĩa biểu tượng được củng cố
 ```
 
-Festival tồn tại mạnh khi nhiều subsystem cùng phản ứng.
+Một lễ hội trở nên mạnh khi nhiều hệ thống con cùng phản ứng với nó.
 
-## Mental Model
+## Mô hình tư duy
 
-> Lễ hội là **công nghệ đồng bộ hoá**. Nó làm household, transport, food market, media và family network cùng đổi trạng thái trong một khoảng thời gian. Khi xã hội thay đổi, practical function có thể giảm nhưng synchronization, memory và identity vẫn tạo giá trị.
+> Lễ hội là một **công nghệ đồng bộ hoá xã hội**. Nó khiến gia đình, giao thông, thị trường thực phẩm, truyền thông và mạng lưới quan hệ cùng đổi trạng thái trong một khoảng thời gian. Khi xã hội thay đổi, chức năng thực dụng có thể giảm nhưng sự đồng bộ, ký ức và bản sắc vẫn tiếp tục tạo giá trị.
 
-## Common Misconceptions
+## Những hiểu lầm phổ biến
 
-“Ngày lễ truyền thống ai cũng làm giống nhau” sai.
+“Ngày lễ truyền thống thì gia đình nào cũng làm giống nhau” là sai.
 
-“차례 bắt buộc có một cách bày mâm duy nhất” sai.
+“`차례` bắt buộc phải có một cách bày mâm duy nhất” là sai.
 
-“Trò chơi dân gian chỉ là entertainment” bỏ qua embodied knowledge, probability, mechanics và community function.
+“Trò chơi dân gian chỉ để giải trí” bỏ qua tri thức cơ thể, xác suất, cơ học và chức năng cộng đồng.
 
-“Holiday chỉ là thời gian nghỉ” bỏ qua labour, travel và coordination cost phía sau.
+“Ngày lễ chỉ là thời gian nghỉ” bỏ qua lao động, di chuyển và chi phí phối hợp phía sau.
 
-“Commercial holiday là giả còn traditional holiday là thật” là binary quá đơn giản; cả hai đều có thể tạo meaning thật cho participant, chỉ khác history và institution.
+“Ngày lễ thương mại là giả còn ngày lễ truyền thống mới là thật” là một đối lập quá đơn giản. Cả hai đều có thể tạo ý nghĩa thật cho người tham gia; khác biệt nằm ở lịch sử, thiết chế và cơ chế hình thành.
