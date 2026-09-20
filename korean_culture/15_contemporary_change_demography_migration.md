@@ -60,7 +60,7 @@ P(\text{birth})=\sigma(\beta_0+\beta_1H+\beta_2J+\beta_3C+\beta_4G+\beta_5E+\cdo
 
 Ở đây `H` đại diện nhà ở, `J` độ ổn định việc làm, `C` chăm trẻ, `G` gánh nặng chăm sóc theo giới, `E` chi phí giáo dục dự kiến. Mô hình tư duy này giúp tránh cách giải thích một nguyên nhân như “giới trẻ không thích trẻ con”.
 
-## 왜 결혼과 출산이 연결되어 있는가?
+## Vì sao hôn nhân và sinh con liên kết chặt với nhau? (왜 결혼과 출산이 연결되어 있는가?)
 
 Ở Hàn Quốc, sinh con trong lịch sử gắn chặt với hôn nhân về chuẩn mực xã hội và kỳ vọng thiết chế. Vì vậy khi kết hôn bị trì hoãn hoặc giảm, sinh con cũng bị ảnh hưởng mạnh. Điều này khác những xã hội nơi sinh con ngoài hôn nhân phổ biến hơn.
 
