@@ -6,18 +6,18 @@ Domain này xây mental model nền tảng trước khi học từng tài sản 
 
 [00_MASTER_FOUNDATIONS_AND_PORTFOLIO.md](./00_MASTER_FOUNDATIONS_AND_PORTFOLIO.md) là bản tổng quan dài, dùng để hình thành bản đồ toàn lĩnh vực.
 
-[01_MONEY_FINANCIAL_SYSTEM_AND_MARKET_MECHANICS.md](./01_MONEY_FINANCIAL_SYSTEM_AND_MARKET_MECHANICS.md) đi sâu vào tiền, ngân hàng, primary/secondary market, exchange, broker, custody, bid/ask, spread, liquidity, settlement và price discovery.
+[01_MONEY_FINANCIAL_SYSTEM_AND_MARKET_MECHANICS.md](./01_MONEY_FINANCIAL_SYSTEM_AND_MARKET_MECHANICS.md) đi sâu vào money/deposits/reserves, capital structure, primary/secondary markets, exchange/OTC, broker/custody/clearing/CCP, order book, auctions, liquidity, ETF creation-redemption, securities lending, short selling, settlement và execution risk.
 
-[02_PORTFOLIO_RISK_ALLOCATION_AND_BEHAVIOR.md](./02_PORTFOLIO_RISK_ALLOCATION_AND_BEHAVIOR.md) giải thích diversification, correlation, drawdown, risk contribution, behavioral bias và Investment Policy Statement.
+[02_PORTFOLIO_RISK_ALLOCATION_AND_BEHAVIOR.md](./02_PORTFOLIO_RISK_ALLOCATION_AND_BEHAVIOR.md) giải thích risk tolerance/capacity/requirement, liability matching, covariance/correlation, risk contribution, factor/concentration risk, strategic/tactical allocation, sequence risk, leverage, risk budgets, behavioral biases, IPS, decision journal và stress testing.
 
 [03_LIFECYCLE_ALLOCATION_REBALANCING_AND_INVESTMENT_OPERATIONS.md](./03_LIFECYCLE_ALLOCATION_REBALANCING_AND_INVESTMENT_OPERATIONS.md) đưa kiến thức sang vận hành thực tế: human capital, liability matching, strategic/tactical allocation, rebalancing, sequence risk, tax location, custody, transaction cost và portfolio review.
 
-[04_RISK_MEASUREMENT_PORTFOLIO_ANALYTICS_AND_DECISION_RULES.md](./04_RISK_MEASUREMENT_PORTFOLIO_ANALYTICS_AND_DECISION_RULES.md) bổ sung lớp định lượng và ra quyết định: geometric return, volatility, drawdown, covariance/correlation, portfolio variance, beta/alpha, tracking error, Sharpe/Sortino/Calmar, VaR/Expected Shortfall, efficient frontier, risk contribution, stress testing và decision rules.
+[04_RISK_MEASUREMENT_PORTFOLIO_ANALYTICS_AND_DECISION_RULES.md](./04_RISK_MEASUREMENT_PORTFOLIO_ANALYTICS_AND_DECISION_RULES.md) xây lớp định lượng: arithmetic/geometric/log/real return, volatility và clustering, covariance/correlation, beta/alpha/factors, tracking error, Sharpe/Sortino/Calmar, skew/kurtosis, VaR/Expected Shortfall, liquidity/gap/leverage risk, efficient frontier, robust optimization, risk contribution, stress/scenario analysis và decision thresholds.
 
-[05_PERFORMANCE_ATTRIBUTION_FEES_TAX_AND_BEHAVIORAL_REVIEW.md](./05_PERFORMANCE_ATTRIBUTION_FEES_TAX_AND_BEHAVIORAL_REVIEW.md) hoàn thiện vòng lặp đầu tư bằng cách phân rã performance thành market beta, allocation, selection, currency, income, fees, tax và behavior; đồng thời xây decision journal, monthly review, quarterly thesis review và annual portfolio audit.
+[05_PERFORMANCE_ATTRIBUTION_FEES_TAX_AND_BEHAVIORAL_REVIEW.md](./05_PERFORMANCE_ATTRIBUTION_FEES_TAX_AND_BEHAVIORAL_REVIEW.md) hoàn thiện feedback loop bằng cách phân rã performance thành market beta, allocation, selection, factors, currency, income, fees, spread/slippage/funding, tax và behavior; đồng thời xây forecast calibration, decision journal, monthly/quarterly review và annual portfolio audit.
 
 ## Sau domain này bạn cần làm được gì?
 
-Bạn cần có khả năng giải thích tiền của mình đang đi qua hệ thống nào khi mua chứng khoán, phân biệt market risk với liquidity/counterparty/operational risk, xây allocation theo mục tiêu thay vì theo ticker, đo concentration/risk ở cấp portfolio, viết Investment Policy Statement và phân tích được portfolio lời/lỗ vì đâu thay vì chỉ nhìn tổng return.
+Bạn cần có khả năng giải thích tiền của mình đang đi qua hệ thống nào khi mua chứng khoán, phân biệt market/liquidity/counterparty/operational risk, xây allocation theo mục tiêu thay vì ticker, đo concentration và risk contribution, viết IPS, stress-test portfolio và phân tích portfolio lời/lỗ vì đâu thay vì chỉ nhìn tổng return.
 
 Sau khi hoàn thành, chuyển sang [02_asset_classes](../02_asset_classes/README.md).
