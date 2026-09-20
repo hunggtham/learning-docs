@@ -84,4 +84,4 @@ Cách nhìn này quan trọng trong practice: difficulty không chỉ phụ thu�
 
 ## Kết nối
 
-Đọc cùng [asymptotic analysis](./01_complexity_and_asymptotic_analysis.md), [algorithmic strategies](./08_algorithmic_strategies.md) và [randomized/approximation algorithms](./10_randomized_approximation_and_online_algorithms.md). Nền logic/computability nằm tại [Computability](../00_computation_information/04_computability_and_limits.md) và [Automata/Formal Languages](../../mathematics/07_discrete_cs/07_automata_formal_languages_and_computability.md).
+Đọc cùng [asymptotic analysis](./01_complexity_and_asymptotic_analysis.md), [algorithmic strategies](./08_algorithmic_strategies.md) và [randomized/approximation algorithms](./10_randomized_approximation_and_online_algorithms.md). Nền logic/computability nằm tại [Computability](../00_computation_information/04_computability_and_limits.md) và [Automata/Formal Languages](../../../mathematics/07_discrete_cs/07_automata_formal_languages_and_computability.md).
