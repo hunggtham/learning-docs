@@ -130,6 +130,65 @@ Read receipt là một feature nhỏ nhưng làm trạng thái `đã xem` trở 
 
 Tần suất đi clinic, screening hay dùng health product không thể giải thích chỉ bằng “người Hàn quan tâm sức khoẻ”. Insurance coverage, clinic density, workplace screening và consumer market làm transaction cost khác đi. Khi cost structure thay đổi, behaviour rationally thay đổi theo.
 
+## Connection 19: Parenting ↔ workplace ↔ fertility
+
+Quyết định có con không nằm riêng trong chapter family. `육아` phụ thuộc giờ làm, commute, childcare schedule, housing và expectation về education. Nếu workplace kết thúc muộn hơn childcare, household phải tự tạo buffer bằng grandparents, paid care hoặc một người giảm work hours.
+
+Feedback loop có thể được mô tả:
+
+```text
+high parenting standard
+→ time/cost per child tăng
+→ perceived capacity sinh con giảm
+→ family size nhỏ hơn
+→ investment kỳ vọng trên mỗi child tiếp tục tăng
+```
+
+Loop này không phải explanation duy nhất của low fertility, nhưng nó cho thấy vì sao culture, labour và demography không thể tách thành ba silo.
+
+## Connection 20: Campus ↔ military ↔ workplace onboarding
+
+`학번`, `선배–후배`, `동아리`, `MT`, `군휴학`, `복학` và `취준생` cùng tạo một transition layer giữa school và workplace. Một người có thể học cách đọc seniority, tham gia group chat, nhận handover, tổ chức event và networking trước khi có full-time job.
+
+Campus vì vậy giống staging environment của organizational life. Nhưng causal direction không chỉ một chiều: workplace language quay ngược vào campus qua internship, recruitment và alumni network.
+
+## Connection 21: Apartment ↔ shared infrastructure ↔ conflict externality
+
+`층간소음`, parking, parcel, recycling và elevator etiquette có chung structure: household tạo action private nhưng effect đi vào shared space.
+
+```text
+private action
+→ shared infrastructure
+→ externality lên neighbour
+→ rule / etiquette / management response
+```
+
+Điều này giải thích vì sao một behaviour nhỏ dễ trở thành moral issue. Khi cost được người khác absorb, discussion nhanh chuyển từ “sở thích cá nhân” sang “ý thức cộng đồng”.
+
+## Connection 22: Mùa ↔ food ↔ architecture ↔ calendar
+
+`김장`, `복날`, `단풍`, `벚꽃`, `온돌`, `장마` và `여름휴가` trông như các chủ đề khác nhau nhưng đều được đồng bộ bởi seasonality.
+
+Mùa hoạt động như external clock. Climate trigger clothing và food; institution trigger school/holiday cycle; market trigger travel và product. Vì vậy seasonal culture là coupling giữa ecology và social calendar.
+
+Khi climate baseline thay đổi, cultural event không biến mất ngay nhưng timing, meaning và logistics có thể phải update.
+
+## Connection 23: Convenience ↔ labour ↔ hidden cost
+
+Delivery, `산후조리원`, full-service moving, parcel locker, fast return và customer support đều có một logic chung: giảm friction ở phía user bằng cách chuyển coordination sang organization hoặc worker.
+
+Mental model quan trọng:
+
+```text
+user friction ↓
+≠
+system cost = 0
+```
+
+Cost có thể được giảm thực sự nhờ automation và density, nhưng cũng có thể chỉ được chuyển sang warehouse worker, rider, caregiver, call-center employee hoặc management office.
+
+Điều này giúp phân tích `빨리빨리` mà không biến nó thành tính cách dân tộc. Tốc độ là result của capital + infrastructure + labour + expectation.
+
 ## Mental Model tổng hợp: 5 lớp để đọc một hiện tượng văn hoá
 
 Khi gặp một hiện tượng mới, hãy chạy năm câu hỏi:
@@ -186,6 +245,14 @@ Drama là curated narrative. Nó có thể phản ánh real concern nhưng selec
 
 Income, gender, age, occupation, personality, law và organization có thể giải thích mạnh hơn cultural background trong nhiều tình huống.
 
+### “Càng tiện thì xã hội càng ít phải lao động”
+
+Không nhất thiết. Convenience có thể đến từ automation làm tổng cost giảm, nhưng cũng có thể đến từ việc chuyển friction sang worker hoặc infrastructure mà consumer không nhìn thấy.
+
+### “Một practice nhìn rất phổ biến thì chắc là national rule”
+
+Không đúng. Apartment rule, recycling schedule, childcare operation, campus culture và service policy có thể khác theo municipality, organization và generation.
+
 ## Một phương pháp quan sát thực tế
 
 Khi sống hoặc làm việc ở Hàn Quốc, thay vì ghi “họ làm thế này”, hãy ghi theo cấu trúc:
@@ -212,6 +279,19 @@ Implicit expectation: urgency được hiểu từ project context.
 Mechanism: high-context team + shared release schedule.
 Alternative explanation: deadline đã nói trong meeting trước.
 Evidence needed: hỏi team hoặc xem ticket/history.
+```
+
+Có thể áp dụng cùng template cho đời sống ngoài công sở:
+
+```text
+Observation: cư dân phân loại một loại rác theo cách khác khu tôi từng sống.
+Context: apartment complex mới.
+Actors: household + management office + municipality.
+Explicit rule: chưa kiểm tra.
+Implicit expectation: mọi người làm giống notice ở khu này.
+Possible mechanism: local implementation khác nhau.
+Alternative explanation: tôi đang hiểu sai category.
+Evidence needed: notice của 관리사무소 hoặc local-government guide.
 ```
 
 Cách ghi này biến cultural learning từ stereotype thành hypothesis testing.
