@@ -69,3 +69,76 @@ Khi luyện implementation C, AddressSanitizer/UndefinedBehaviorSanitizer có gi
 ## Mental Model
 
 > Trong C, representation, algorithm và ownership là một khối. Data structure chỉ đúng khi **logical invariant + memory lifetime invariant** đều đúng.
+
+## API design: caller cần biết điều gì?
+
+Một container C tốt nên làm rõ:
+
+```text
+ai tạo và ai hủy container?
+container có copy element hay giữ pointer?
+operation nào invalidates pointer/iterator?
+failure được báo bằng bool, enum hay NULL?
+```
+
+Dynamic array `realloc` có thể đổi base address, nên mọi pointer tới element cũ có thể invalid sau growth. Đây là semantic consequence trực tiếp của representation.
+
+## `const` và mutation boundary
+
+Nếu function chỉ đọc structure, dùng `const` khi API phù hợp:
+
+```c
+const Node *find(const Tree *tree, int key);
+```
+
+`const` không chứng minh toàn bộ immutability nhưng làm contract dễ thấy hơn và giúp compiler phát hiện một số mutation ngoài ý muốn.
+
+## Layout: array of structs hay struct of arrays?
+
+Array of Structs:
+
+```c
+typedef struct {
+    float x, y, z;
+    int id;
+} Point;
+
+Point points[n];
+```
+
+Struct of Arrays:
+
+```c
+float x[n], y[n], z[n];
+int id[n];
+```
+
+Nếu algorithm chỉ quét `x`, SoA có thể sử dụng cache/SIMD tốt hơn vì không kéo fields không cần. Nếu thường cần toàn record cùng lúc, AoS có thể tự nhiên hơn.
+
+Đây là ví dụ cost model thấp tầng ảnh hưởng data-structure design.
+
+## Arena/pool allocation
+
+Node-heavy trees/graphs có thể tạo rất nhiều `malloc` calls. Arena/pool allocator cấp block lớn rồi carve nodes nhỏ, giúp giảm allocator overhead và cải thiện locality. Trade-off là lifetime thường được gom chung và việc free từng node riêng khó hơn.
+
+## Error-safe mutation
+
+Giả sử grow vector cần allocation mới. Structure chỉ nên đổi `data/capacity` sau khi allocation thành công. Nếu mutation một nửa rồi return failure, invariant có thể hỏng.
+
+Một pattern tốt là:
+
+```text
+prepare resources
+validate success
+commit structural change
+```
+
+gần với transactional thinking.
+
+## Debugging invariant
+
+Trong debug build có thể viết `validate_tree`, `validate_heap`, `validate_list` để scan structure và assert invariants sau random operations. Với C, đây rất hữu ích vì memory corruption có thể biểu hiện xa điểm gây lỗi.
+
+## Mental Model mở rộng
+
+> C buộc ta nhìn thấy rằng data structure có hai topology cùng lúc: topology logic của nodes/edges và topology vật lý của allocations/bytes. Performance và safety phụ thuộc cả hai.
