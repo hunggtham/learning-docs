@@ -1,481 +1,611 @@
-# 05 — Macro Regimes, Policy History và các case khủng hoảng
+# Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng
 
-Tài liệu này dùng lịch sử để xây một **library of mechanisms** thay vì một danh sách năm tháng. Mục tiêu là hiểu những cấu trúc thường lặp lại: credit boom, inflation shock, policy error, currency mismatch, maturity mismatch, collateral spiral, sovereign-bank loop, balance-sheet recession và recovery. Lịch sử không lặp lại hoàn toàn, nhưng incentives, leverage và balance sheets thường tạo ra những mẫu hình tương tự.
+> Lịch sử kinh tế hữu ích khi được dùng như một **thư viện cơ chế**, không phải danh sách năm và sự kiện để học thuộc. Chương này tổ chức các giai đoạn lớn theo cách: điều gì đã tích tụ, cú sốc nào kích hoạt, bảng cân đối nào chịu áp lực, policy phản ứng thế nào và giá tài sản truyền dẫn ra sao.
+
+# Phần I — Tư duy theo chế độ vĩ mô
 
 ## 1. Regime là gì?
 
-Một **macro regime** là môi trường trong đó growth, inflation, liquidity, credit, policy và risk premia tương tác theo một cấu trúc tương đối ổn định. Khi regime đổi, correlation giữa assets và hiệu quả của strategies cũng có thể đổi.
+**Chế độ vĩ mô (macro regime)** là một trạng thái tương đối bền của tăng trưởng, lạm phát, policy và credit.
 
-Ví dụ disinflation kéo dài thường thuận lợi hơn cho long-duration assets. Inflation shock có thể làm stocks và bonds cùng giảm. Vì vậy một strategy được học từ một regime dài có thể thất bại khi reaction function thay đổi.
+Một bản đồ đơn giản dùng hai trục:
 
-## 2. Regime phải được nhìn theo probability
+```text
+Growth: tăng / giảm
+Inflation: tăng / giảm
+```
 
-Không nên nói “economy đang ở regime X” như một fact hoàn toàn chắc chắn. Thực tế data noisy và turning points chỉ rõ sau này.
+Từ đó có thể hình thành bốn trạng thái trực giác.
 
-Một framework tốt gán xác suất cho vài paths: growth reacceleration, soft landing, recession, inflation resurgence, liquidity stress. Khi evidence thay đổi, probability cập nhật.
+## 2. Goldilocks
 
-## 3. Goldilocks
+```text
+Growth ổn hoặc cải thiện
+Inflation giảm / ổn định
+```
 
-Goldilocks là growth đủ tốt nhưng inflation không gây pressure lớn. Earnings tăng trong khi central bank không cần tightening mạnh. Equities và credit thường được hỗ trợ, volatility có thể thấp.
+Trạng thái này thường dễ chịu cho tài sản rủi ro vì earnings có thể tốt trong khi discount rate không chịu áp lực lớn.
 
-Rủi ro của Goldilocks nằm ở chính thành công của nó: low volatility khuyến khích leverage, compressed spreads và valuation expansion. Khi shock đến, positioning crowded có thể làm unwind mạnh.
+Nhưng valuation và positioning vẫn quyết định kết quả thực tế.
 
-## 4. Overheating
+## 3. Overheating
 
-Overheating xảy ra khi demand vượt supply capacity, labor market tight, wage growth mạnh và inflation broadening. Central bank có xu hướng tightening.
+```text
+Growth ↑
+Inflation ↑
+```
 
-Ban đầu cyclicals và commodities có thể tốt. Nhưng nếu policy rates và real yields tăng đủ mạnh, financial conditions siết và growth cuối cùng chậm lại.
+Nhu cầu mạnh nhưng áp lực giá tăng có thể buộc central bank hawkish hơn.
 
-## 5. Stagflation
+Tài sản có thể trải qua mâu thuẫn:
 
-Stagflation kết hợp growth yếu và inflation cao. Đây là regime khó vì central bank đối mặt trade-off giữa price stability và output/employment.
+```text
+Earnings ↑
+nhưng
+Discount Rate ↑
+```
 
-Long-duration bonds và expensive growth equities thường chịu pressure. Commodity producers có thể hưởng lợi nếu shock xuất phát từ supply shortage, nhưng downstream consumers lại chịu margin squeeze.
+## 4. Stagflation
 
-## 6. Deflationary bust
+```text
+Growth ↓
+Inflation ↑
+```
 
-Khi credit contraction và demand collapse, inflation có thể giảm nhanh. Cash và high-quality sovereign bonds thường được hỗ trợ nếu sovereign credibility ổn.
+Đây là trạng thái khó cho policy vì nới lỏng hỗ trợ tăng trưởng có thể làm inflation xấu hơn, trong khi tightening chống inflation làm growth yếu thêm.
 
-Equities và credit chịu pressure vì earnings, defaults và refinancing. Nếu debt burden lớn, falling prices còn làm real debt burden tăng, tạo debt-deflation spiral.
+## 5. Deflationary bust
 
-## 7. Soft landing, hard landing và no landing
+```text
+Growth ↓ mạnh
+Inflation ↓
+Credit ↓
+```
 
-**Soft landing** là inflation giảm mà recession sâu không xảy ra. **Hard landing** là tightening hoặc shock làm economy suy yếu rõ rệt. **No landing** mô tả trường hợp growth/inflation vẫn nóng, forcing tighter policy lâu hơn.
+Trong trạng thái này, deleveraging và demand destruction có thể quan trọng hơn mức policy rate ban đầu.
 
-Market thường price các probabilities này qua 2Y yields, curve, credit spreads và cyclical/defensive rotations.
+# Phần II — Soft landing và hard landing
 
-## 8. Policy error
+## 6. Soft landing
 
-Policy error không chỉ nghĩa central bank “làm sai”. Nó có thể là tightening quá muộn, quá nhanh, easing quá sớm hoặc dựa trên model không phù hợp regime.
+Soft landing là kịch bản inflation giảm mà unemployment và output không suy yếu quá mạnh.
 
-Một policy có thể hợp lý ex ante nhưng xấu ex post vì shock bất ngờ. Khi đọc history cần tránh hindsight bias.
+Nó thường yêu cầu:
 
-# Phần I — Inflation, expectations và policy credibility
+- supply normalization;
+- demand giảm vừa phải;
+- labor cooling có trật tự;
+- credit không đổ vỡ.
 
-## 9. 1970s inflation
+## 7. Hard landing
 
-Thập niên 1970 cho thấy inflation có thể bắt đầu từ supply shocks nhưng trở nên persistent khi expectations và wage setting thích nghi.
+Hard landing xảy ra khi tightening truyền tới:
 
-Oil shocks tăng input costs. Nếu workers đòi wage tăng để bù giá, firms lại tăng giá để bảo vệ margin, second-round effects xuất hiện.
+```text
+Credit
+→ Investment
+→ Employment
+→ Consumption
+→ Earnings
+```
 
-## 10. Expectations anchoring
+mạnh hơn dự kiến.
 
-Central-bank credibility quan trọng vì households và firms quyết định wages/prices dựa trên expected inflation. Nếu expectations de-anchor, cùng một supply shock có thể kéo inflation lâu hơn.
+## 8. No landing
 
-Breakevens, surveys và wage contracts chỉ là proxies; không measure expectations hoàn hảo.
+“No landing” thường được dùng khi growth tiếp tục rất mạnh và inflation không giảm đủ, khiến policy phải giữ chặt lâu hơn.
 
-## 11. Volcker tightening
+Đây là cách mô tả thị trường, không phải một khái niệm kinh tế chính thức.
 
-Đầu thập niên 1980, Fed dưới Paul Volcker tightening rất mạnh để tái neo inflation expectations. Cost là recession và unemployment cao.
+# Phần III — Policy error
 
-Case này cho thấy đôi khi central bank chấp nhận short-term economic pain để khôi phục credibility dài hạn.
+## 9. Policy error không nên được kết luận bằng hindsight
 
-## 12. Financial repression
+Một quyết định chỉ nên được đánh giá bằng thông tin có tại thời điểm đó.
 
-Governments có thể giảm real debt burden thông qua negative real rates, regulations favoring government debt hoặc inflation cao hơn nominal yields.
+Cần hỏi:
 
-Nhưng financial repression chuyển cost sang savers và có thể distort capital allocation. Nó không phải free solution cho high debt.
+```text
+Data khi đó nói gì?
+Uncertainty ra sao?
+Reaction function hợp lý không?
+Policy transmission có độ trễ nào?
+```
 
-# Phần II — Japan: bubble, deleveraging và lowflation
+Không nên dùng outcome sau này để giả định quyết định lúc trước “rõ ràng sai”.
 
-## 13. Japan asset bubble
+## 10. Tightening quá ít
 
-Cuối thập niên 1980, Japanese equity và real-estate valuations tăng mạnh cùng credit expansion. Collateral values cao cho phép thêm borrowing, tạo positive feedback.
+Nếu policy quá dễ trong khi demand vượt capacity:
 
-Khi bubble vỡ, asset prices giảm làm balance sheets yếu và private sector chuyển từ expansion sang debt repayment.
+```text
+Inflation Persistence ↑
+→ Expectations Risk ↑
+→ Later Tightening phải mạnh hơn
+```
 
-## 14. Balance-sheet recession
+## 11. Tightening quá nhiều
 
-Trong balance-sheet recession, corporations/households ưu tiên trả nợ hơn borrow/invest dù interest rates thấp.
+Nếu policy giữ chặt quá lâu:
 
-Điều này giải thích tại sao monetary easing có thể mất potency: bank sẵn sàng lend nhưng private sector không muốn leverage.
+```text
+Refinancing Cost ↑
+→ Credit ↓
+→ Employment ↓
+→ Recession Risk ↑
+```
 
-## 15. Deflation và zero-rate trap
+# Phần IV — Lạm phát thập niên 1970
 
-Low nominal rates không bảo đảm demand mạnh. Debt overhang, demographics, weak expectations và low nominal growth có thể giữ economy trong lowflation.
+## 12. Cơ chế chính
 
-Real rates có thể vẫn cao nếu inflation quá thấp dù nominal rates gần zero.
+Thập niên 1970 kết hợp:
 
-## 16. QE và portfolio balance
+- oil shock;
+- supply constraints;
+- wage-price dynamics;
+- inflation expectations;
+- policy credibility issues.
 
-Khi policy rate chạm lower bound, central bank có thể mua long-duration assets để giảm term premium và nới financial conditions.
+Bài học quan trọng là inflation supply-driven vẫn có thể trở nên bền nếu kỳ vọng và wage setting thích nghi.
 
-QE transmission đi qua yields, portfolio rebalancing, wealth effects và signaling, nhưng effectiveness phụ thuộc banking/credit demand.
+## 13. Volcker tightening
 
-# Phần III — Asian Financial Crisis 1997
+Fed dưới Paul Volcker chấp nhận tightening mạnh để khôi phục credibility.
 
-## 17. Currency mismatch
+Chi phí là recession và unemployment cao, nhưng inflation expectations cuối cùng giảm.
 
-Banks và corporates vay USD nhưng earn cash flow bằng local currency. Khi local currency depreciation mạnh, debt burden bằng local currency tăng đột ngột.
+Bài học: policy credibility có giá trị kinh tế nhưng việc khôi phục nó có thể rất đau đớn.
 
-Đây là balance-sheet effect khiến FX depreciation không chỉ là export competitiveness story.
+# Phần V — Nhật Bản sau bong bóng tài sản
 
-## 18. Short-term external debt
+## 14. Bong bóng cuối thập niên 1980
 
-Nếu external debt ngắn hạn lớn hơn liquid FX reserves hoặc refinancing capacity, confidence shock có thể biến thành funding crisis nhanh.
+Property và equity prices tăng mạnh cùng credit expansion.
 
-Maturity mismatch quan trọng ngang total debt.
+Khi bubble vỡ:
 
-## 19. Fixed exchange rate pressure
+```text
+Asset Price ↓
+→ Collateral ↓
+→ Balance Sheet Weakens
+→ Credit / Investment ↓
+```
 
-Khi market nghi peg không bền, capital outflows làm reserves giảm. Central bank có thể tăng rates để defend currency, nhưng high rates làm domestic borrowers yếu hơn.
+## 15. Balance-sheet recession
 
-Đây là policy trilemma dưới stress.
+Doanh nghiệp ưu tiên trả nợ thay vì tối đa hóa lợi nhuận hoặc đầu tư mới.
 
-## 20. Sudden stop
+Ngay cả lãi suất thấp cũng không tạo credit demand mạnh nếu private sector đang deleverage.
 
-**Sudden stop** là capital inflow đảo chiều nhanh. Current-account deficit từng dễ finance bỗng trở thành vulnerability.
+## 16. Deflation
 
-Adjustment thường gồm currency depreciation, import compression, recession và deleveraging.
+Deflation làm real debt burden tăng và có thể khuyến khích trì hoãn spending.
 
-## 21. Lessons cho emerging markets
+Bài học là lãi suất danh nghĩa gần 0 không tự động nghĩa policy đủ dễ.
 
-Theo dõi current account, reserves, FX debt, short-term external debt, banking leverage và domestic credit growth.
+# Phần VI — Asian Financial Crisis 1997
 
-Stable currency nhiều năm không chứng minh FX risk đã biến mất; đôi khi stability làm participants tăng unhedged borrowing.
+## 17. Cấu trúc trước khủng hoảng
 
-# Phần IV — Dot-com bubble
+Nhiều nền kinh tế có:
 
-## 22. Innovation thật nhưng valuation vẫn có thể sai
+- short-term foreign debt;
+- currency mismatch;
+- fixed/managed FX;
+- reserve constraints;
+- credit growth cao.
 
-Internet revolution là real structural change. Nhưng rất nhiều companies không có sustainable economics hoặc được valued trên unrealistic growth.
+## 18. Trigger và feedback
 
-Một technology thesis đúng không đảm bảo stock price đúng.
+```text
+Capital Outflow
+→ FX Pressure
+→ Reserve Loss
+→ Currency Devaluation
+→ USD Debt Burden ↑
+→ Corporate / Bank Stress ↑
+```
 
-## 23. Capital-market discipline
+Đây là ví dụ điển hình của sudden stop và balance-sheet effect.
 
-Khi funding abundant, weak business models có thể survive bằng issuance. Khi liquidity rút, cash burn và unit economics trở thành constraint ngay.
+## 19. Bài học
 
-Đây là reason valuation và funding conditions có thể thay đổi industry structure.
+Không chỉ nhìn current-account deficit. Cần xem:
 
-## 24. Narrative reflexivity
+- debt currency;
+- maturity;
+- reserve adequacy;
+- banking exposure;
+- foreign investor base.
 
-Rising stock prices giúp firms raise capital, spend marketing/capex và reinforce narrative. Khi prices collapse, reverse reflexivity làm financing khó và fundamentals deteriorate.
+# Phần VII — Dot-com bubble
 
-Market price đôi khi ảnh hưởng fundamentals chứ không chỉ phản ánh fundamentals.
+## 20. Công nghệ đúng không đồng nghĩa valuation đúng
 
-# Phần V — Global Financial Crisis 2008
+Internet thật sự thay đổi nền kinh tế, nhưng nhiều tài sản vẫn bị định giá quá cao.
 
-## 25. Housing credit boom
+Bài học:
 
-Low underwriting standards, rising house prices và leverage tạo feedback: rising collateral → more credit → higher house prices.
+```text
+Structural Growth có thể đúng
+nhưng
+Price Paid vẫn có thể sai
+```
 
-Khi prices stop rising, refinance assumptions và collateral coverage cùng fail.
+## 21. Narrative và capital cycle
 
-## 26. Securitization
+Khi capital quá dễ:
 
-Securitization biến loans thành tradable securities. Concept không inherently bad, nhưng complexity và incentive problems làm underwriting deterioration khó nhìn.
+- nhiều công ty mới xuất hiện;
+- capacity tăng;
+- competition tăng;
+- future returns giảm.
 
-Risk được “phân tán” nhưng lại concentrated ở leveraged institutions giữ correlated exposures.
+Một narrative đúng có thể tự tạo supply làm return kém đi.
 
-## 27. Maturity mismatch
+# Phần VIII — Global Financial Crisis 2008
 
-Long-term illiquid assets được finance bằng short-term wholesale funding. Khi lenders refuse rollover, institution gặp liquidity crisis dù asset losses chưa fully realized.
+## 22. Housing và leverage
 
-Liquidity và solvency tương tác mạnh trong crisis.
+Credit dễ, underwriting yếu và housing collateral tăng giá tạo leverage lớn.
 
-## 28. Repo và collateral spiral
+## 23. Securitization
 
-Haircuts tăng làm borrowers phải post thêm collateral hoặc deleverage. Forced sales hạ giá collateral, prompting higher haircuts tiếp theo.
+Mortgage loans được đóng gói thành securities và phân phối rộng.
 
-Đây là **margin spiral** hoặc collateral feedback loop.
+Rủi ro không biến mất; nó được chuyển và đôi khi trở nên khó nhìn hơn.
 
-## 29. Shadow banking
+## 24. Short-term funding
 
-Money-market funds, securitization vehicles, broker-dealers và repo chains thực hiện credit intermediation ngoài traditional deposits.
+Nhiều tổ chức giữ tài sản dài hạn nhưng phụ thuộc funding ngắn hạn.
 
-Crisis cho thấy liquidity guarantees implicit có thể quay trở lại banking system đúng lúc stress.
+Khi confidence giảm:
 
-## 30. Counterparty network
+```text
+Funding Stops
+→ Forced Sale
+→ Price ↓
+→ Collateral ↓
+→ More Funding Stress
+```
 
-Một institution failure có thể truyền qua derivatives, repo, funding và asset sales. Vì vậy systemic risk không thể đánh giá từng balance sheet riêng biệt.
+## 25. Financial accelerator
 
-Network topology matters.
+Housing decline truyền tới bank capital, lending standards, household wealth và investment.
 
-## 31. Policy response 2008
+Khủng hoảng tài chính trở thành recession thực.
 
-Central banks cung cấp liquidity, cut rates và mở emergency facilities. Governments recapitalize banks hoặc guarantee liabilities ở nhiều jurisdictions.
+## 26. Policy response
 
-Lesson là lender-of-last-resort và fiscal backstop có thể ngăn liquidity crisis thành total collapse, nhưng tạo moral-hazard debate.
+Phản ứng gồm:
 
-# Phần VI — Eurozone sovereign crisis
+- lender-of-last-resort facilities;
+- bank recapitalization;
+- guarantees;
+- rate cuts;
+- QE;
+- fiscal support.
 
-## 32. Sovereign-bank doom loop
+Mỗi công cụ giải quyết một phần vấn đề khác nhau.
 
-Banks giữ nhiều domestic sovereign bonds. Sovereign spreads tăng làm bank balance sheets yếu; government support cho banks lại làm fiscal position xấu.
+# Phần IX — Eurozone sovereign crisis
 
-Đây là feedback loop giữa sovereign và banking risk.
+## 27. Một currency, nhiều sovereign
 
-## 33. Monetary union constraint
+Các nước dùng cùng EUR nhưng không chia sẻ hoàn toàn fiscal balance sheet.
 
-Member states dùng chung currency nhưng fiscal positions khác nhau. Quốc gia stress không thể tự devalue currency hay independently print reserve currency.
+Điều này tạo rủi ro spread giữa sovereigns.
 
-Adjustment vì vậy dễ rơi vào fiscal austerity, internal devaluation và recession.
+## 28. Sovereign–bank doom loop
 
-## 34. Fragmentation risk
+```text
+Sovereign Risk ↑
+→ Bank Bond Holdings ↓ value
+→ Bank Capital / Funding ↓
+→ Credit ↓
+→ Economy ↓
+→ Fiscal Position ↓
+```
 
-Same policy rate không đảm bảo same borrowing conditions nếu sovereign spreads khác mạnh. Monetary transmission bị fragmented.
+## 29. Fragmentation
 
-Central bank communication/backstop có thể quan trọng để stabilize spreads.
+Nếu lãi suất truyền dẫn khác nhau quá lớn giữa các quốc gia, monetary policy chung khó hoạt động đồng nhất.
 
-# Phần VII — COVID 2020
+# Phần X — COVID shock
 
-## 35. Simultaneous demand và supply shock
+## 30. Giai đoạn đầu
 
-Lockdowns làm services demand collapse trong khi supply chains gián đoạn. Một số goods demand lại tăng vì consumption chuyển từ services sang goods.
+COVID tạo đồng thời:
 
-Đây là unusual composition shock, không phải normal recession đơn giản.
+- supply shutdown;
+- demand collapse ở dịch vụ;
+- liquidity stress;
+- global trade disruption.
 
-## 36. Fiscal transfers và monetary easing
+## 31. Policy response
 
-Large fiscal transfers bảo vệ household income trong khi monetary policy nới mạnh financial conditions.
+Monetary easing kết hợp fiscal transfer rất lớn giúp household income và market liquidity phục hồi nhanh hơn nhiều cuộc suy thoái trước.
 
-Khi reopening gặp constrained supply, demand phục hồi nhanh hơn capacity, góp phần tạo inflation pressure.
+## 32. Reopening
 
-## 37. Policy changed the cycle
+Khi demand quay lại nhanh hơn supply:
 
-Initial shock không đủ để forecast outcome. Fiscal transfers, credit guarantees, central-bank intervention và health policy thay đổi transmission.
+```text
+Goods Demand ↑
++ Supply Bottleneck
++ Labor Constraint
+→ Inflation ↑
+```
 
-Macro analysis luôn phải theo cả shock lẫn policy response.
+## 33. Bài học
 
-# Phần VIII — Inflation shock 2021–2023
+Một cú sốc có thể thay đổi bản chất theo thời gian. Phân tích phải cập nhật regime thay vì giữ nguyên narrative ban đầu.
 
-## 38. Transitory debate
+# Phần XI — Inflation shock 2021–2023
 
-Ban đầu inflation được nhìn nhiều qua bottlenecks và base effects. Sau đó price pressure lan rộng hơn vào housing, services và wages.
+## 34. Từ “temporary” tới persistence
 
-Lesson là regime shifts làm historical relationships và forecasts dễ fail.
+Ban đầu inflation tập trung ở goods và supply chain, nhưng sau đó mở rộng sang services và wages.
 
-## 39. Rapid tightening
+Khi composition thay đổi, reaction function cũng thay đổi.
 
-Fast hiking cycle repriced bonds, mortgages, venture funding, real estate và growth valuations.
+## 35. Rapid hikes
 
-Policy works with lags, nên financial stress có thể xuất hiện sau nhiều tháng tightening.
+Central banks tăng lãi suất nhanh để kéo demand và expectations xuống.
 
-## 40. Real yields và valuation reset
+Tác động truyền không đồng đều do nhiều khoản nợ fixed rate chỉ repricing khi đáo hạn.
 
-Khi real yields tăng, discount rate cho distant cash flows tăng. High-duration equities chịu multiple compression ngay cả khi near-term earnings chưa giảm.
+# Phần XII — Banking stress do duration
 
-Bond duration losses cũng lớn vì starting yields thấp.
+## 36. Duration loss
 
-# Phần IX — Banking stress và duration mismatch
+Nếu ngân hàng giữ long-duration bonds khi rates tăng mạnh, market value giảm.
 
-## 41. Unrealized losses
+Lỗ chưa thực hiện trở thành vấn đề lớn khi deposit outflow buộc bán tài sản.
 
-Fixed-rate bond prices giảm khi yields tăng. Nếu bank hold-to-maturity không cần bán, loss có thể chưa realized economically in accounting terms, nhưng deposit outflow có thể buộc sale.
+## 37. Deposit concentration
 
-Liquidity shock biến duration loss thành capital problem.
+Bank có nhiều uninsured corporate deposits có risk run khác retail bank phân tán.
 
-## 42. Deposit concentration
+Digital banking làm tốc độ run nhanh hơn.
 
-Large uninsured deposits có thể chạy nhanh hơn sticky retail deposits, đặc biệt trong digital banking era.
+## 38. Liquidity vs solvency
 
-Funding composition vì vậy quan trọng không kém asset quality.
+Central-bank facility có thể giải quyết cash timing nhưng không xóa economic loss nếu tài sản thực sự không đủ giá trị.
 
-## 43. Asset-liability duration mismatch
+# Phần XIII — Sovereign debt stress
 
-Nếu assets fixed-rate long duration nhưng liabilities short duration và reprice nhanh, rising rates squeeze economics.
+## 39. Debt level không đủ
 
-Bank NIM headline ban đầu có thể improve trước khi deposit beta catch up.
+Cần xem:
 
-# Phần X — Sovereign debt crises
+```text
+Debt/GDP
+Primary Balance
+r - g
+Maturity
+Currency
+Investor Base
+Gross Financing Need
+```
 
-## 44. Debt dynamics
+## 40. Maturity tạo độ trễ
 
-Debt/GDP chịu ảnh hưởng của primary balance, nominal growth và effective interest rate. Gần đúng, debt pressure tăng khi effective interest rate vượt nominal growth và primary deficits kéo dài.
+Nợ dài fixed-rate làm chi phí lãi tăng chậm hơn khi market yield tăng.
 
-Maturity structure và currency denomination cũng rất quan trọng.
+Nợ ngắn làm pressure truyền nhanh.
 
-## 45. Local-currency vs foreign-currency debt
+## 41. Domestic vs foreign currency debt
 
-Country vay bằng own currency có constraint khác country vay USD. Local-currency issuer có thể avoid nominal default dễ hơn nhưng inflation/currency depreciation risk cao hơn.
+Quốc gia vay bằng đồng tiền mình kiểm soát có risk structure khác quốc gia nợ nhiều bằng foreign currency.
 
-Foreign-currency debt tạo harder external constraint.
+Không nên dùng một debt/GDP threshold cho mọi quốc gia.
 
-## 46. Fiscal dominance
+# Phần XIV — Commodity shock
 
-Fiscal dominance xảy ra khi monetary policy bị constrained bởi government financing needs. Nếu rate hikes threaten debt sustainability, central bank trade-off khó hơn.
+## 42. Terms-of-trade shock
 
-Không nên gắn label này chỉ vì debt cao; cần xem institutional context và market credibility.
+Commodity exporter có thể hưởng income boost khi giá hàng hóa tăng.
 
-# Phần XI — Commodity shocks
+Importer có thể chịu:
 
-## 47. Demand shock vs supply shock
+```text
+Trade Balance ↓
+Inflation ↑
+Real Income ↓
+FX Pressure ↑
+```
 
-Oil tăng vì global growth mạnh khác oil tăng vì war. Demand-driven commodity rally thường đi cùng strong activity; supply shock dễ tạo stagflation.
+## 43. Oil shock và stagflation
 
-Asset reaction phải bắt đầu từ shock source.
+Supply-driven oil shock có thể kéo inflation lên nhưng growth xuống, tạo policy trade-off khó.
 
-## 48. Terms of trade
+# Phần XV — China property và rebalancing
 
-Commodity exporters hưởng income transfer khi export prices tăng; importers chịu trade-balance deterioration và inflation.
+## 44. Property-led growth
 
-Korea là ví dụ economy export manufacturing nhưng nhập nhiều energy, nên oil shock có mixed channels.
+Property ảnh hưởng:
 
-## 49. Food và fertilizer shocks
+- household wealth;
+- local-government finance;
+- construction;
+- steel/cement;
+- bank credit.
 
-Food inflation có distributional impact lớn vì low-income households dành share income cao hơn cho food. Political/policy response vì vậy có thể mạnh hơn headline weight alone gợi ý.
+## 45. Deleveraging
 
-Fertilizer and energy prices truyền vào agricultural supply với lag.
+Khi developers giảm nợ và housing demand yếu:
 
-# Phần XII — China growth model
+```text
+Land Sales ↓
+→ Local Fiscal Pressure
+→ Construction ↓
+→ Commodity Demand ↓
+```
 
-## 50. Property-led model
+## 46. Rebalancing
 
-Property, infrastructure và local-government financing từng đóng vai trò lớn trong growth. Land sales, developer leverage và household property wealth tạo complex feedback loops.
+Chuyển từ property/investment sang consumption hoặc high-tech manufacturing có thể thay đổi các nước và ngành hưởng lợi từ China growth.
 
-Deleveraging property có thể truyền sang steel, cement, banks, household confidence và local fiscal revenue.
+# Phần XVI — Regime checklist
 
-## 51. Local-government financing
+## 47. Growth
 
-Infrastructure investment có thể được finance qua vehicles ngoài traditional budget. Debt transparency và cash-flow quality vì vậy quan trọng.
+Hỏi:
 
-A project boosting GDP không đồng nghĩa project generates enough cash to service debt.
+```text
+Growth đang tăng hay giảm?
+Above hay below potential?
+Demand nội địa hay external?
+```
 
-## 52. Rebalancing toward consumption/high tech
+## 48. Inflation
 
-Chuyển từ property/investment-led growth sang consumption, services và advanced manufacturing là structural process dài.
+```text
+Goods hay Services?
+Demand hay Supply?
+Expectations anchored không?
+```
 
-Quarterly GDP không đủ để measure success; cần xem household income, consumption share, private investment và productivity.
+## 49. Policy
 
-# Phần XIII — Currency crises
+```text
+Policy level?
+Expected path?
+Reaction function?
+Fiscal impulse?
+```
 
-## 53. Classic currency-crisis ingredients
+## 50. Credit
 
-Common ingredients gồm overvalued FX, current-account deficit, low reserves, external debt, weak banks và loss of confidence.
+```text
+Loan Growth
+Lending Standards
+Credit Spread
+Default / Delinquency
+```
 
-Không phải mọi yếu tố đều cần xuất hiện, nhưng combination làm vulnerability tăng.
+## 51. Liquidity
 
-## 54. Self-fulfilling dynamics
+```text
+Funding Market
+Collateral
+Market Depth
+Dealer Capacity
+USD Funding
+```
 
-Nếu investors fear devaluation và withdraw capital, reserve loss có thể làm devaluation thực sự xảy ra. Expectations vì vậy đôi khi có causal power.
+## 52. Valuation và positioning
 
-Strong balance sheets và credible backstops giúp giảm self-fulfilling risk.
+Một regime thuận lợi không bảo đảm asset tăng nếu valuation đã quá cao hoặc positioning quá crowded.
 
-# Phần XIV — Credit cycles
+# Phần XVII — Cách sử dụng lịch sử
 
-## 55. Minsky-style progression
+## 53. Không tìm “mẫu giống hệt”
 
-Credit booms thường đi từ conservative financing tới increasingly speculative financing khi participants extrapolate stability.
+Không có hai khủng hoảng hoàn toàn giống nhau.
 
-Low defaults làm lenders relax standards; relaxed standards lại fuel asset prices và leverage.
+Thay vì hỏi:
 
-## 56. Refinancing wall
+```text
+“2026 có giống 2008 không?”
+```
 
-Debt problem không chỉ phụ thuộc debt amount mà maturity timing. Nếu large amount matures when rates high and markets closed, liquidity problem xuất hiện.
+hãy hỏi:
 
-Track maturity wall, fixed/floating mix và covenants.
+```text
+Leverage nằm ở đâu?
+Funding structure là gì?
+Collateral là gì?
+Policy space khác thế nào?
+```
 
-## 57. Default cycle
+## 54. Tách trigger và vulnerability
 
-Defaults thường lag tightening. Credit spreads có thể widen trước defaults vì market anticipates refinancing stress.
+Một cú sốc nhỏ chỉ tạo khủng hoảng lớn nếu hệ thống đã có vulnerability.
 
-Equity investors nên theo credit even khi không mua bonds.
+```text
+Vulnerability
++ Trigger
++ Feedback Loop
+= Crisis Severity
+```
 
-# Phần XV — Liquidity crises
+## 55. Tách first-order và second-order effect
 
-## 58. Market liquidity vs funding liquidity
+First-order là tác động trực tiếp. Second-order là phản ứng của người khác với tác động đó.
 
-Market liquidity là khả năng trade assets without large price impact. Funding liquidity là khả năng borrow/roll financing.
+Ví dụ:
 
-Hai loại reinforce nhau: funding stress buộc asset sale, asset sale làm market liquidity xấu, lower prices damage collateral.
+```text
+Oil ↑
+→ airline cost ↑
 
-## 59. Dash for cash
+Second order:
+airline tăng giá vé
+→ demand thay đổi
+→ wage / CPI / policy phản ứng
+```
 
-Trong severe stress, even safe assets có thể bị bán để raise cash. Vì vậy temporary price action không luôn phản ánh fundamental credit deterioration.
+# Phần XVIII — Mẫu phân tích regime
 
-Central-bank facilities often target this liquidity dysfunction.
+## 56. Bản đồ hiện tại
 
-# Phần XVI — Regime identification framework
+```text
+Growth:
+Inflation:
+Labor:
+Policy:
+Yield Curve:
+Credit:
+Liquidity:
+Fiscal:
+FX:
+Commodity:
+```
 
-## 60. Growth
+## 57. Kịch bản
 
-Growth đang accelerating hay decelerating? Leading indicators, PMIs, new orders, labor và earnings revisions có confirm không?
+```text
+Base:
+Cơ chế chính là gì?
 
-## 61. Inflation
+Bull:
+Điều gì phải cải thiện?
 
-Inflation broad hay concentrated? Goods, housing, services, wages và expectations đang hướng nào?
+Bear:
+Điều gì có thể phá vỡ hệ thống?
+```
 
-## 62. Policy
+## 58. Dấu hiệu chuyển regime
 
-Central bank priority là inflation, growth hay financial stability? Fiscal stance supportive hay restrictive?
+Regime thay đổi khi nhiều biến cùng xác nhận, không phải vì một release đơn lẻ.
 
-## 63. Credit
+Ví dụ:
 
-Lending standards, spreads, defaults, bank surveys và refinancing conditions đang nới hay siết?
+```text
+PMI ↓
+Claims ↑
+Credit Spread ↑
+Lending Standards ↑
+Earnings Revisions ↓
+```
 
-## 64. Liquidity
+có ý nghĩa mạnh hơn một dữ liệu đơn lẻ.
 
-Repo, funding markets, collateral, dealer balance sheets và money markets có stress không?
+## Kết luận
 
-## 65. Positioning và valuation
+Lịch sử vĩ mô nên được dùng để nhận diện cơ chế:
 
-Market đã price regime nào? Nếu everyone positioned for soft landing, even mildly worse data có thể move markets mạnh.
+```text
+Leverage
+Funding
+Collateral
+Inflation Expectations
+Policy Credibility
+Currency Mismatch
+Credit Cycle
+```
 
-Correct macro view không guarantee investment return nếu already priced.
-
-# Phần XVII — Crisis-analysis template
-
-## 66. Step 1: tìm leverage
-
-Ai đang levered? Households, banks, corporates, government hay funds? Debt amount chỉ là bước đầu.
-
-## 67. Step 2: tìm funding structure
-
-Funding ngắn hay dài, fixed hay floating, local hay foreign currency, secured hay unsecured?
-
-## 68. Step 3: tìm collateral
-
-Collateral là houses, sovereign bonds, equities hay commodities? Price sensitivity của collateral quyết định margin spiral risk.
-
-## 69. Step 4: tìm maturity mismatch
-
-Assets long và liabilities short là classic fragility. Maturity transformation tạo economic value nhưng cũng tạo run risk.
-
-## 70. Step 5: tìm policy backstop
-
-Ai có balance sheet đủ lớn để stop run? Central bank, treasury, deposit insurer hay supranational institution?
-
-Backstop credibility có thể quyết định crisis path.
-
-## 71. Step 6: phân biệt liquidity và solvency
-
-Liquidity problem là cash timing; solvency problem là asset value insufficient relative liabilities.
-
-Emergency lending có thể giải liquidity, nhưng không tự sửa insolvency.
-
-## 72. Step 7: map cross-asset transmission
-
-Từ crisis source, theo chain: funding → credit spreads → currency → yields → earnings → asset prices.
-
-Điều này giúp tránh nhìn mỗi equity index.
-
-# Phần XVIII — Lessons cho investor
-
-## 73. Do not fight balance-sheet math
-
-Narrative có thể kéo dài nhưng debt service, collateral và cash flow cuối cùng đặt constraint.
-
-Khi leverage cao, small price/rate changes có nonlinear effects.
-
-## 74. Price can move before data
-
-Markets discount future regime. Equity bottom có thể xảy ra trước GDP trough; bonds có thể rally trước official easing.
-
-Headline data thường lag turning points.
-
-## 75. Policy reaction is part of thesis
-
-Một shock economic giống nhau có thể tạo asset outcome khác nếu policy response khác. Crisis với credible backstop khác crisis nơi policy constrained.
-
-## 76. Historical analogy phải dùng cẩn thận
-
-Nói “đây là 2008 lần nữa” thường quá đơn giản. Hãy so leverage location, funding, collateral, policy space và institutional structure.
-
-History nên cung cấp mechanisms, không phải copy-paste forecast.
-
-## 77. Kết luận
-
-Lịch sử hữu ích nhất khi nó giúp bạn trả lời năm câu hỏi: leverage ở đâu, funding bằng gì, collateral là gì, policy response có thể thế nào và losses truyền qua balance sheets ra sao.
-
-Khi hiểu các cơ chế này, bạn có thể phân tích một shock mới ngay cả khi nó chưa từng xảy ra với hình thức giống hệt trong quá khứ.
+Mục tiêu không phải nói “lần này giống 1970s” hay “giống 2008”, mà xác định **vulnerability nào đang tồn tại, trigger nào có thể kích hoạt và feedback nào có thể khuếch đại cú sốc**.
