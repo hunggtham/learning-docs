@@ -20,4 +20,8 @@ Domain này xây mental model nền tảng trước khi học từng tài sản 
 
 Bạn cần có khả năng giải thích tiền của mình đang đi qua hệ thống nào khi mua chứng khoán, phân biệt market/liquidity/counterparty/operational risk, xây allocation theo mục tiêu thay vì ticker, đo concentration và risk contribution, viết IPS, stress-test portfolio và phân tích portfolio lời/lỗ vì đâu thay vì chỉ nhìn tổng return.
 
+## Case studies để áp dụng
+
+Sau khi học xong domain này, có thể đọc [CPI Shock → Portfolio](../07_integrated_case_studies/01_INFLATION_SHOCK_FROM_CPI_TO_PORTFOLIO.md) để luyện stress testing, factor mapping, hedge và attribution; sau đó đọc [Credit & Liquidity Crisis](../07_integrated_case_studies/02_CREDIT_LIQUIDITY_CRISIS_TRANSMISSION.md) để thấy liquidity buffer, leverage, margin, collateral và survival risk tương tác với nhau ra sao.
+
 Sau khi hoàn thành, chuyển sang [02_asset_classes](../02_asset_classes/README.md).
