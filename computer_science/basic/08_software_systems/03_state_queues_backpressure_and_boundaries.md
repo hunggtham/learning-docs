@@ -1,69 +1,69 @@
-# State, queues, backpressure và system boundaries
+# Trạng thái, hàng đợi, áp lực ngược và ranh giới hệ thống
 
-Many production systems can be understood as producers, queues/buffers and consumers moving state/events across boundaries. Queue smooths bursts and decouples rates, but it does not create capacity. Without backpressure or load shedding, overload only moves into memory/latency.
+Nhiều hệ thống thực tế có thể được hiểu bằng ba thành phần: bên tạo công việc, hàng đợi hoặc bộ đệm, và bên xử lý công việc. Dữ liệu hoặc sự kiện di chuyển giữa các thành phần qua những ranh giới rõ ràng. **Hàng đợi (queue)** giúp hấp thụ tải tăng đột biến và tách tốc độ của bên gửi khỏi bên nhận, nhưng nó không tự tạo thêm năng lực xử lý. Nếu không có **áp lực ngược (backpressure)** hoặc cơ chế giảm tải, tình trạng quá tải chỉ bị chuyển thành độ trễ và lượng dữ liệu chờ ngày càng lớn.
 
-## Why queues exist
+## Tại sao cần hàng đợi?
 
-Producer may create work faster temporarily than consumer processes. Queue stores temporal difference. It also decouples availability: producer can enqueue while downstream temporarily unavailable if broker durable enough.
+Bên tạo công việc có thể tạm thời tạo dữ liệu nhanh hơn bên xử lý. Hàng đợi lưu phần chênh lệch theo thời gian. Nó cũng tách một phần tính sẵn sàng: nếu broker đủ bền vững, bên gửi vẫn có thể đưa thông điệp vào hàng đợi trong lúc hệ thống phía sau tạm thời không hoạt động.
 
-But for sustained arrival `λ > μ` service rate, queue grows without bound. Stable system requires long-term service capacity exceed admitted load or rejection/degradation.
+Tuy nhiên, nếu tốc độ đến `λ` liên tục lớn hơn tốc độ phục vụ `μ`, hàng đợi sẽ tăng không giới hạn. Một hệ thống ổn định cần năng lực xử lý dài hạn lớn hơn tải được chấp nhận, hoặc phải có chính sách từ chối hay giảm chất lượng dịch vụ.
 
-## Bounded vs unbounded queue
+## Hàng đợi có giới hạn và không giới hạn
 
-Unbounded queue converts overload into ever-growing latency and eventually memory/disk exhaustion. Bounded queue forces explicit policy: block producer, reject new, drop oldest/newest, prioritize or spill elsewhere.
+Hàng đợi không giới hạn biến quá tải thành độ trễ ngày càng lớn và cuối cùng có thể làm cạn bộ nhớ hoặc dung lượng đĩa. **Hàng đợi có giới hạn (bounded queue)** buộc hệ thống phải có chính sách rõ ràng: chặn bên gửi, từ chối công việc mới, bỏ dữ liệu cũ hoặc mới, ưu tiên một số loại công việc hoặc chuyển sang nơi lưu trữ khác.
 
-Choice is business semantics: dropping metrics may be acceptable; dropping payment command not.
+Lựa chọn phụ thuộc ngữ nghĩa nghiệp vụ. Mất một số metric có thể chấp nhận được; mất lệnh thanh toán thường không thể chấp nhận.
 
-## Backpressure
+## Áp lực ngược
 
-Backpressure propagates signal upstream that consumer cannot keep up. TCP receive/congestion windows, Reactive Streams demand, bounded channels and thread-pool queues are forms.
+**Áp lực ngược (backpressure)** truyền tín hiệu ngược lên phía trước rằng bên xử lý không theo kịp. Cửa sổ nhận và điều khiển tắc nghẽn của TCP, cơ chế yêu cầu dữ liệu của Reactive Streams, channel có giới hạn và hàng đợi của thread pool đều là các ví dụ.
 
-If upstream ignores signal and buffers locally, system has not solved overload. Backpressure must extend through chain or termination policy apply.
+Nếu tầng phía trước bỏ qua tín hiệu rồi tự tích dữ liệu trong bộ nhớ, vấn đề quá tải chưa được giải quyết. Áp lực ngược cần lan đủ xa trong chuỗi xử lý hoặc phải kết thúc bằng một chính sách giới hạn, từ chối hay loại bỏ rõ ràng.
 
-## Messaging semantics
+## Ngữ nghĩa truyền thông điệp
 
-At-most-once may lose but no retry duplicates; at-least-once retries but duplicates possible; exactly-once effects require stronger coordination/deduplication and scope definition.
+**Tối đa một lần (at-most-once)** có thể làm mất thông điệp nhưng tránh bản sao do thử lại. **Ít nhất một lần (at-least-once)** cho phép thử lại nên có thể tạo thông điệp trùng. Hiệu ứng **chính xác một lần (exactly-once)** đòi hỏi phối hợp hoặc loại trùng mạnh hơn và luôn phải xác định phạm vi bảo đảm.
 
-Message broker delivery acknowledgement is not same as business transaction completion. Consumer may commit DB then crash before ack → redelivery; idempotent handler/outbox/inbox patterns handle.
+Việc broker xác nhận đã giao thông điệp không đồng nghĩa giao dịch nghiệp vụ đã hoàn thành. Ví dụ consumer có thể ghi dữ liệu vào cơ sở dữ liệu rồi bị lỗi trước khi gửi `ack`; thông điệp sẽ được giao lại. Bộ xử lý lũy đẳng (idempotent handler), outbox và inbox là các mẫu thường dùng để xử lý tình huống này.
 
-## Ordering
+## Thứ tự
 
-Global total order expensive and often unnecessary. Partitioned logs provide order within partition/key. If business invariant requires per-account order, partition by account may suffice.
+Thứ tự toàn cục tuyệt đối có chi phí cao và thường không cần thiết. Nhật ký được phân vùng có thể bảo đảm thứ tự trong từng partition hoặc khóa. Nếu bất biến nghiệp vụ chỉ yêu cầu các thao tác của cùng một tài khoản theo thứ tự, phân vùng theo tài khoản có thể đã đủ.
 
-Concurrency can reorder completion even if dequeue order fixed. Ordering contract must specify enqueue, delivery, processing or commit order.
+Xử lý đồng thời còn có thể làm thứ tự hoàn thành khác thứ tự lấy thông điệp. Vì vậy hợp đồng về thứ tự phải nói rõ đang bảo đảm thứ tự đưa vào hàng, thứ tự giao, thứ tự xử lý hay thứ tự commit.
 
-## State placement
+## Vị trí của trạng thái
 
-State can live client, application memory, cache, database, log or external service. Placement affects availability, scaling and recovery. Local in-memory session makes horizontal scaling need sticky routing/replication; external session store adds network dependency.
+Trạng thái có thể nằm ở client, bộ nhớ ứng dụng, cache, cơ sở dữ liệu, nhật ký hoặc dịch vụ bên ngoài. Vị trí này ảnh hưởng trực tiếp tới tính sẵn sàng, khả năng mở rộng và phục hồi. Phiên người dùng nằm trong bộ nhớ cục bộ khiến việc mở rộng ngang cần định tuyến dính (sticky routing) hoặc sao chép; kho phiên bên ngoài lại thêm một phụ thuộc mạng.
 
-“Stateless service” usually means durable/user session state externalized, not literally no temporary state.
+Một **dịch vụ không trạng thái (stateless service)** thường chỉ có nghĩa trạng thái bền vững hoặc trạng thái phiên đã được đưa ra ngoài, chứ không phải tiến trình hoàn toàn không có trạng thái tạm thời.
 
-## Event log and state
+## Nhật ký sự kiện và trạng thái
 
-Event-sourcing stores sequence of domain events as source; current state derived by replay/folding. It enables history/audit but schema evolution, replay cost, event correctness and external side effects complex. Not every system needs it.
+**Event sourcing** lưu chuỗi sự kiện miền làm nguồn dữ liệu chính và dựng trạng thái hiện tại bằng cách phát lại hoặc gấp các sự kiện. Cách này hỗ trợ lịch sử và kiểm toán nhưng làm tiến hóa schema, chi phí phát lại, tính đúng đắn của sự kiện và hiệu ứng phụ bên ngoài trở nên phức tạp. Không phải hệ thống nào cũng cần event sourcing.
 
-Change Data Capture streams database changes to downstream indexes/analytics; consistency lag must be accepted/monitored.
+**Change Data Capture (CDC)** phát các thay đổi trong cơ sở dữ liệu tới chỉ mục, hệ thống phân tích hoặc dịch vụ phía sau. Độ trễ nhất quán phát sinh từ quá trình này phải được chấp nhận và quan sát.
 
-## Backpressure vs rate limiting
+## Áp lực ngược và giới hạn tốc độ
 
-Rate limiter protects boundary by limiting admitted request rate per identity/system. Backpressure is dynamic downstream pressure. Both may coexist: limiter prevents abuse/overload; backpressure reacts current capacity.
+**Giới hạn tốc độ (rate limiting)** bảo vệ ranh giới bằng cách giới hạn lượng yêu cầu được nhận từ một danh tính hoặc toàn hệ thống. Backpressure phản ánh áp lực động từ phía xử lý. Hai cơ chế có thể cùng tồn tại: rate limiter ngăn lạm dụng và tải vượt ngưỡng; backpressure phản ứng với năng lực hiện tại của hệ thống phía sau.
 
-## Queueing and retry storms
+## Hàng đợi và bão thử lại
 
-If dependency slows, queues grow; timeout triggers retries; retries increase arrival rate; overload worsens. Circuit breaker, retry budget, bounded queues and deadlines break feedback loop.
+Khi một phụ thuộc chậm lại, hàng đợi tăng. Timeout có thể kích hoạt thử lại; thử lại làm tốc độ yêu cầu tăng; tải tăng lại khiến phụ thuộc chậm hơn. Đây là vòng phản hồi có thể tạo **bão thử lại (retry storm)**. Circuit breaker, ngân sách thử lại, hàng đợi có giới hạn và deadline giúp cắt vòng phản hồi này.
 
-## Mental Model
+## Mô hình tư duy
 
-> Queue is **stored waiting time**. It absorbs burst, not sustained capacity deficit. Every queue should have capacity, admission policy, failure semantics, ordering scope and observability.
+> Hàng đợi là **thời gian chờ được lưu lại**. Nó hấp thụ tải tăng đột biến, không giải quyết thiếu năng lực kéo dài. Mỗi hàng đợi cần có giới hạn dung lượng, chính sách nhận tải, ngữ nghĩa lỗi, phạm vi thứ tự và khả năng quan sát.
 
-## Common Misconceptions
+## Những hiểu lầm thường gặp
 
-**“Async queue makes system faster.”** It changes when caller waits and smooths load; total work/capacity unchanged.
+**“Hàng đợi bất đồng bộ làm hệ thống nhanh hơn.”** Nó thay đổi thời điểm bên gọi phải chờ và làm tải mượt hơn; tổng lượng công việc và năng lực xử lý không tự tăng.
 
-**“Kafka/RabbitMQ guarantees exactly once everywhere.”** Broker guarantees have scope; external DB/API side effects need coordination/idempotency.
+**“Kafka hoặc RabbitMQ bảo đảm exactly-once cho mọi thứ.”** Bảo đảm của broker luôn có phạm vi; hiệu ứng phụ trên cơ sở dữ liệu hoặc API bên ngoài vẫn cần phối hợp hoặc tính lũy đẳng.
 
-**“Unbounded queue is safer because không reject.”** It often fails later with worse latency/resource exhaustion.
+**“Hàng đợi không giới hạn an toàn hơn vì không từ chối.”** Nó thường chỉ trì hoãn lỗi cho tới khi độ trễ hoặc tài nguyên bị cạn kiệt.
 
 ## Kết nối
 
-[Linear queues](../01_algorithms_data_structures/03_linear_data_structures.md) are local abstraction; [TCP backpressure](../06_networks_distributed_systems/02_transport_tcp_udp_and_congestion.md) network example; [fault tolerance](../07_security_reliability/05_fault_tolerance_observability_and_reliability.md) uses load shedding/circuit breakers; next [time/idempotency](./04_time_serialization_and_idempotency.md) handles retry effects.
+[Hàng đợi tuyến tính](../01_algorithms_data_structures/03_linear_data_structures.md) là lớp trừu tượng cục bộ; [áp lực ngược trong TCP](../06_networks_distributed_systems/02_transport_tcp_udp_and_congestion.md) là ví dụ ở tầng mạng; [khả năng chịu lỗi](../07_security_reliability/05_fault_tolerance_observability_and_reliability.md) sử dụng giảm tải và circuit breaker; phần [thời gian và tính lũy đẳng](./04_time_serialization_and_idempotency.md) giải thích cách xử lý hiệu ứng của việc thử lại.
