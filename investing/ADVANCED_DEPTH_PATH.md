@@ -21,6 +21,8 @@ Lộ trình khuyến nghị:
 ↓
 06 — Korea / Vietnam Market Thesis
 ↓
+Advanced Practice Workbook
+↓
 07 — Full Investment Process Capstone
 ```
 
@@ -31,14 +33,14 @@ Lộ trình khuyến nghị:
 Trọng tâm:
 
 ```text
-Personal balance sheet
-→ liability matching
-→ risk budget
+Bảng cân đối cá nhân
+→ khớp nghĩa vụ
+→ ngân sách rủi ro
 → MCTR
-→ state-dependent correlation
-→ stress test
-→ reverse stress test
-→ decision journal
+→ tương quan theo trạng thái
+→ kiểm thử căng thẳng
+→ kiểm thử ngược
+→ nhật ký quyết định
 ```
 
 Sau phần này, người đọc phải trả lời được không chỉ “danh mục có bao nhiêu cổ phiếu”, mà **rủi ro thật đang đến từ đâu và kế hoạch thất bại trong tình huống nào**.
@@ -50,16 +52,16 @@ Sau phần này, người đọc phải trả lời được không chỉ “dan
 Trọng tâm:
 
 ```text
-Cash flow
-→ expected return decomposition
+Dòng tiền
+→ phân rã lợi suất kỳ vọng
 → duration
 → carry / roll-down
-→ liquidity premium
-→ regime behavior
-→ portfolio role
+→ phần bù thanh khoản
+→ hành vi theo chế độ kinh tế
+→ vai trò trong danh mục
 ```
 
-Mục tiêu là so được cổ phiếu, trái phiếu, vàng, REIT, hàng hóa và private assets bằng cùng một ngôn ngữ kinh tế.
+Mục tiêu là so được cổ phiếu, trái phiếu, vàng, REIT, hàng hóa và tài sản tư nhân bằng cùng một ngôn ngữ kinh tế.
 
 ## 03 — Mô hình doanh nghiệp tích hợp
 
@@ -68,16 +70,16 @@ Mục tiêu là so được cổ phiếu, trái phiếu, vàng, REIT, hàng hóa
 Trọng tâm:
 
 ```text
-Business model
-→ revenue drivers
-→ margin bridge
-→ working capital
+Mô hình kinh doanh
+→ động lực doanh thu
+→ cầu nối biên lợi nhuận
+→ vốn lưu động
 → capex
-→ debt schedule
-→ three statements
+→ lịch nợ
+→ ba báo cáo
 → ROIC
-→ valuation
-→ thesis monitoring
+→ định giá
+→ theo dõi luận điểm
 ```
 
 Mục tiêu là chuyển từ đọc ratio sang hiểu **cơ chế tạo tiền và tạo giá trị trên mỗi cổ phiếu**.
@@ -89,14 +91,14 @@ Mục tiêu là chuyển từ đọc ratio sang hiểu **cơ chế tạo tiền 
 Trọng tâm:
 
 ```text
-Data
-→ surprise
-→ policy reaction
-→ yield curve
-→ FX / credit
-→ financial conditions
-→ earnings
-→ valuation
+Dữ liệu
+→ mức bất ngờ
+→ phản ứng chính sách
+→ đường cong lợi suất
+→ FX / tín dụng
+→ điều kiện tài chính
+→ lợi nhuận
+→ định giá
 ```
 
 Sau phần này, người đọc phải tránh được cách suy luận cơ học kiểu “CPI tăng → cổ phiếu giảm”.
@@ -108,15 +110,15 @@ Sau phần này, người đọc phải tránh được cách suy luận cơ h�
 Trọng tâm:
 
 ```text
-Hypothesis
-→ point-in-time data
+Giả thuyết
+→ dữ liệu đúng thời điểm
 → backtest
-→ robustness
-→ sizing
-→ execution
-→ live monitoring
+→ kiểm tra độ bền
+→ quy mô vị thế
+→ thực thi
+→ giám sát live
 → kill switch
-→ retirement
+→ dừng chiến lược
 ```
 
 Mục tiêu là hiểu chiến lược giao dịch như **một hệ thống sản xuất**, không phải một setup vào lệnh.
@@ -128,18 +130,38 @@ Mục tiêu là hiểu chiến lược giao dịch như **một hệ thống s�
 Trọng tâm:
 
 ```text
-Global regime
-→ country balance sheet
-→ policy constraint
-→ FX / credit / liquidity
-→ sector
-→ company
-→ valuation
-→ market access
-→ position
+Chế độ toàn cầu
+→ bảng cân đối quốc gia
+→ ràng buộc chính sách
+→ FX / tín dụng / thanh khoản
+→ ngành
+→ doanh nghiệp
+→ định giá
+→ tiếp cận thị trường
+→ vị thế
 ```
 
 Mục tiêu là tránh đọc KOSPI hay VN-Index chỉ bằng headline hoặc một biến vĩ mô duy nhất.
+
+## Advanced Practice Workbook — Biến kiến thức thành sản phẩm phân tích
+
+[ADVANCED_PRACTICE_WORKBOOK.md](./ADVANCED_PRACTICE_WORKBOOK.md)
+
+Workbook này là bước bắt buộc nếu muốn tăng chiều sâu thực sự. Sáu module tương ứng sáu domain chính và mỗi module đều yêu cầu:
+
+```text
+Dữ liệu / giả định
+→ mô hình hoặc bảng phân tích
+→ kịch bản
+→ phản ví dụ
+→ điều kiện vô hiệu hóa
+→ đầu ra Markdown cụ thể
+→ tự chấm theo rubric
+```
+
+Các bài gồm thiết kế IPS và reverse stress test, so sánh asset class bằng nguồn lợi suất và duration, xây driver-based company model, lập macro surprise map/nowcast, đặc tả và kiểm thử một trading system, cùng xây dashboard Korea–Vietnam theo shock/sector/liquidity.
+
+Đọc lab mà không tạo được đầu ra trong workbook mới chỉ đạt mức hiểu khái niệm, chưa đạt mức vận dụng.
 
 ## 07 — Capstone: quy trình đầu tư hoàn chỉnh
 
@@ -148,23 +170,23 @@ Mục tiêu là tránh đọc KOSPI hay VN-Index chỉ bằng headline hoặc m�
 Trọng tâm:
 
 ```text
-Question
-→ Research
-→ Model
-→ Valuation
-→ Position
-→ Execution
-→ Monitoring
-→ Attribution
-→ Post-mortem
-→ Process improvement
+Câu hỏi
+→ nghiên cứu
+→ mô hình
+→ định giá
+→ vị thế
+→ thực thi
+→ theo dõi
+→ phân rã kết quả
+→ post-mortem
+→ cải thiện quy trình
 ```
 
 Đây là phần kiểm tra cuối: nếu có thể hoàn thành capstone cho một doanh nghiệp thực tế, người đọc đã bắt đầu sử dụng library như **một hệ thống nghiên cứu và ra quyết định**, không chỉ như tài liệu đọc.
 
 ## Chuẩn đầu ra sau mỗi Advanced Lab
 
-Mỗi lab nên tạo ra một artifact cụ thể:
+Mỗi lab nên tạo ra một sản phẩm cụ thể:
 
 ```text
 Portfolio lab      → IPS + stress matrix
@@ -173,6 +195,7 @@ Company lab        → integrated model + one-page thesis
 Macro lab          → nowcast dashboard + scenario table
 Trading lab        → strategy specification + test report
 Market lab         → country/sector thesis dashboard
+Workbook           → bộ bài thực hành có số liệu + self-review
 Capstone           → complete investment dossier
 ```
 
@@ -190,16 +213,29 @@ Giải thích cơ chế
 → cập nhật quyết định khi dữ liệu mới xuất hiện
 ```
 
+Có thể tự đánh giá theo năm mức trong workbook:
+
+```text
+1. Biết thuật ngữ
+2. Áp dụng cơ học
+3. Phân tích nhiều biến
+4. Phản biện và kiểm tra điều kiện sai
+5. Vận hành một quy trình lặp lại
+```
+
 ## Kết luận
 
-Toàn bộ thư viện Investing hiện có thể được dùng theo hai tầng:
+Toàn bộ thư viện Investing hiện có thể được dùng theo ba tầng:
 
 ```text
 Tầng 1 — Domain Knowledge
 01 → 06
 
 Tầng 2 — Advanced Application
-Advanced Labs → Capstone
+Advanced Labs
+
+Tầng 3 — Deliberate Practice
+Workbook → Capstone
 ```
 
-Nếu tầng đầu giúp trả lời **“khái niệm này là gì?”**, tầng Advanced phải giúp trả lời **“tôi sẽ dùng nó thế nào trong một quyết định thật và làm sao biết mình đang sai?”**.
+Nếu tầng đầu giúp trả lời **“khái niệm này là gì?”**, tầng Advanced giúp trả lời **“cơ chế hoạt động thế nào?”**, còn Workbook và Capstone phải giúp trả lời **“tôi sẽ dùng nó trong một quyết định thật ra sao và làm sao biết mình đang sai?”**.
