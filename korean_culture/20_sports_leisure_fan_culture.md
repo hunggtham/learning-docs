@@ -264,6 +264,113 @@ Sự kiện thể thao/hoà nhạc nổi tiếng thường có nhu cầu lớn h
 
 Trải nghiệm `티켓팅` trở thành câu chuyện văn hoá chung vì công nghệ quyết định ai có quyền tiếp cận một tài nguyên khan hiếm.
 
+## 티켓 리셀: thị trường thứ cấp và câu hỏi về công bằng
+
+Khi vé khan hiếm, thị trường mua đi bán lại có thể xuất hiện. Một phía xem giá cao là cơ chế phân bổ cho người sẵn sàng trả nhiều; phía khác xem việc mua số lượng lớn để bán lại là làm giảm công bằng tiếp cận.
+
+Cần tách ba câu hỏi:
+
+```text
+vé có được phân bổ công bằng không?
+thị trường thứ cấp có tuân quy định không?
+giá cao có phản ánh nhu cầu hay quyền lực của người trung gian?
+```
+
+Thiết kế bán vé có thể dùng giới hạn số vé, xác thực danh tính, hàng đợi, bốc thăm hoặc quy tắc chuyển nhượng. Mỗi cơ chế giảm một loại lạm dụng nhưng tạo ma sát khác.
+
+## 관중 흐름: đám đông là bài toán luồng, không chỉ số người
+
+Một sân vận động có sức chứa lớn nhưng an toàn phụ thuộc **dòng người (crowd flow)**: lối vào, cửa soát vé, hành lang, cầu thang, nhà vệ sinh, quầy đồ ăn và lối thoát.
+
+Nếu nhiều người cùng tới một nút hẹp, mật độ tăng dù tổng số người chưa vượt sức chứa toàn khu.
+
+```text
+lượng người đến
+> năng lực xử lý tại nút
+→ hàng chờ dài
+→ mật độ tăng
+→ tốc độ di chuyển giảm
+→ rủi ro tăng
+```
+
+Vì vậy quản trị sự kiện cần nhìn từng điểm nghẽn chứ không chỉ hỏi “đã bán bao nhiêu vé”.
+
+## 입장·퇴장: vào sân và rời sân là hai bài toán khác nhau
+
+Lúc vào, người xem đến phân tán theo thời gian; sau trận hoặc concert, rất nhiều người có thể rời đi gần như cùng lúc. Vì thế **thoát người (egress)** có thể khó hơn nhập场.
+
+Thiết kế tốt cần:
+
+- nhiều lối thoát đủ rõ;
+- biển chỉ dẫn dễ đọc;
+- nhân viên hướng dẫn;
+- giao thông công cộng hấp thụ được lượng người sau sự kiện;
+- phương án cho người cần thang máy hoặc hỗ trợ di chuyển;
+- thông tin khi một cửa hoặc tuyến bị đóng.
+
+Khả năng rời sự kiện an toàn là một phần của trải nghiệm, không phải việc diễn ra sau khi “sự kiện đã kết thúc”.
+
+## 군중안전: cảm giác vui và rủi ro vật lý có thể cùng tồn tại
+
+Đám đông đồng bộ tạo cảm giác mạnh về thuộc về, nhưng cùng lúc có thể làm người tham gia khó quan sát toàn cảnh. Khi mật độ cao, quyết định của cá nhân ít tác dụng hơn vì chuyển động bị ràng buộc bởi người xung quanh.
+
+Vì vậy an toàn đám đông không thể dựa hoàn toàn vào lời khuyên “mỗi người hãy cẩn thận”. Thiết kế lối đi, giới hạn mật độ, phân luồng, giám sát và phản ứng khẩn cấp là trách nhiệm hệ thống.
+
+Đây là một ví dụ quan trọng của nguyên tắc:
+
+> **Rủi ro cá nhân có thể được tạo hoặc giảm mạnh bởi cấu trúc môi trường.**
+
+## 행사 운영: sự kiện là một hệ thống tạm thời
+
+Một trận đấu, lễ hội hoặc concert dựng lên một “thành phố tạm thời” với nhiều hệ thống:
+
+```text
+vé
++ an ninh
++ giao thông
++ y tế
++ nhà vệ sinh
++ thực phẩm
++ thông tin
++ xử lý đồ thất lạc
++ ứng phó thời tiết
+```
+
+Vì chỉ hoạt động trong thời gian ngắn, hệ thống phải được chuẩn bị trước khi biết chính xác mọi tình huống. Đây là lý do kế hoạch dự phòng, diễn tập và phân quyền tại chỗ quan trọng.
+
+## 날씨와 야외행사: giải trí ngoài trời phụ thuộc khí hậu
+
+Bóng chày, chạy bộ, lễ hội, leo núi và cắm trại đều nhạy với mưa, nắng nóng, lạnh, bụi mịn hoặc bão. Khi khí hậu thay đổi, lịch sự kiện và ngưỡng huỷ/hoãn phải thích nghi.
+
+Một ngày “vẫn tổ chức được” về kỹ thuật chưa chắc an toàn cho mọi nhóm. Trẻ em, người cao tuổi, vận động viên, nhân viên ngoài trời và người có bệnh nền có mức dễ tổn thương khác nhau.
+
+Điều này nối trực tiếp với [`32_seasons_climate_environment_daily_rhythm.md`](32_seasons_climate_environment_daily_rhythm.md).
+
+## 커뮤니티 운영: cộng đồng sở thích cũng cần quản trị
+
+Nhóm chạy, câu lạc bộ, cộng đồng game hoặc fandom có thể bắt đầu rất không chính thức, nhưng khi lớn lên cần quy tắc về lịch, tiền quỹ, hành vi, quyền quản trị và xử lý xung đột.
+
+Một cộng đồng chỉ dựa vào một người tổ chức có rủi ro cao: khi người đó bận hoặc rời nhóm, hoạt động có thể dừng. Vì vậy cộng đồng bền cần **phân phối công việc tổ chức** và cơ chế thay thế người phụ trách.
+
+Đây là cùng bài toán với tổ chức công việc: cộng đồng giải trí cũng có tải điều phối vô hình.
+
+## 신규 참가자: một cộng đồng sống lâu phải giảm chi phí gia nhập
+
+Nhóm lâu năm thường có từ vựng, bạn bè và nghi thức riêng. Điều đó làm thành viên cũ gắn kết nhưng có thể khiến người mới cảm thấy khó tham gia.
+
+Một cộng đồng bền thường có:
+
+```text
+thông tin rõ cho người mới
++ hoạt động nhập môn
++ quy tắc an toàn
++ người hướng dẫn
++ không gian đặt câu hỏi
++ mức cam kết ban đầu thấp
+```
+
+Nếu chi phí gia nhập quá cao, nhóm có thể già hoá hoặc thu hẹp dù thành viên cũ rất trung thành.
+
 ## Phép ứng xử khi cổ vũ và ranh giới
 
 Fandom tạo cảm giác thuộc về nhưng cũng có quy tắc: khu ghế, thời điểm cổ vũ, tôn trọng đối thủ, quy định camera và hành vi với vận động viên. Khi danh tính nhóm mạnh, xung đột giữa các nhóm cũng có thể tăng.
@@ -284,6 +391,22 @@ Vì vậy bảng tin mạng xã hội đầy du lịch, golf và quán cà phê 
 
 Phân tích văn hoá luôn phải hỏi mẫu số: ai không xuất hiện trên bảng tin?
 
+## 여가 측정: tham gia được đo thế nào?
+
+Một môn nhìn rất phổ biến trên mạng chưa chắc có tỷ lệ tham gia cao trong toàn dân. Có thể đo bằng nhiều biến khác nhau:
+
+```text
+số người từng thử
+≠ số người tham gia hàng tuần
+≠ thời lượng trung bình
+≠ chi tiêu
+≠ lượng nội dung đăng lên mạng
+```
+
+Mỗi thước đo trả lời câu hỏi khác nhau. Một nhóm nhỏ nhưng rất tích cực có thể tạo lượng nội dung lớn và làm hoạt động trông phổ biến hơn thực tế.
+
+Do đó khi đọc “xu hướng giải trí”, cần hỏi dữ liệu đo **hành vi thực**, **chi tiêu**, **lượt truy cập** hay chỉ **độ hiển thị truyền thông**.
+
 ## Liên hệ kiến thức: tham gia giải trí là đầu ra của chi phí giao dịch
 
 Xác suất tham gia một hoạt động có thể hình dung như sau:
@@ -300,9 +423,25 @@ mạng bạn bè cùng tham gia tăng
 
 Núi gần tàu điện → leo núi dễ. Screen golf gần nhà → chơi golf dễ. Nhóm chạy bộ có phòng chat → chi phí xã hội khi tham gia lần đầu giảm. Hạ tầng làm phân phối hoạt động giải trí thay đổi.
 
+## Liên hệ kiến thức: sự kiện như hệ thống hàng đợi và khả năng phục hồi
+
+Một sự kiện thành công không chỉ cần nội dung hay. Nó cần xử lý nhu cầu theo thời gian:
+
+```text
+người đến
+→ kiểm tra vé
+→ vào khu vực
+→ dùng dịch vụ
+→ theo dõi sự kiện
+→ rời đi
+→ kết nối giao thông
+```
+
+Mỗi bước có công suất riêng. Nếu một bước quá yếu, trải nghiệm toàn chuỗi suy giảm. Đây là cùng logic với dịch vụ đô thị và hệ thống phần mềm: **điểm nghẽn thường nằm ở mắt xích yếu nhất, không phải ở trung bình toàn hệ thống**.
+
 ## Mô hình tư duy (Mental Model)
 
-> Giải trí ở Hàn Quốc là nơi **địa lý, ngân sách thời gian, khả năng cơ thể, công nghệ, thị trường và danh tính** gặp nhau. Núi tạo điều kiện cho leo núi; băng rộng tạo thể thao điện tử; mật độ đô thị tạo screen golf và địa điểm sở thích; thiết kế tiếp cận quyết định ai có thể dùng không gian; nền tảng tạo nhóm; fandom biến người xem thành người tham gia. Đừng coi thời gian rảnh là phần “nằm ngoài hệ thống xã hội”.
+> Giải trí ở Hàn Quốc là nơi **địa lý, ngân sách thời gian, khả năng cơ thể, công nghệ, thị trường, quản trị sự kiện và danh tính** gặp nhau. Núi tạo điều kiện cho leo núi; băng rộng tạo thể thao điện tử; mật độ đô thị tạo screen golf và địa điểm sở thích; thiết kế tiếp cận quyết định ai có thể dùng không gian; nền tảng tạo nhóm; fandom biến người xem thành người tham gia. Khi hoạt động có quy mô lớn, văn hoá người hâm mộ còn phụ thuộc vào hàng đợi, an toàn đám đông, lối thoát, giao thông và năng lực quản trị.
 
 ## Hiểu lầm phổ biến (Common Misconceptions)
 
@@ -319,3 +458,7 @@ Núi gần tàu điện → leo núi dễ. Screen golf gần nhà → chơi golf
 “Có sân thể thao là mọi người đều có thể tham gia” bỏ qua lối vào, thiết bị, thông tin, chi phí, sức khoẻ và thiết kế tiếp cận.
 
 “Giải trí người cao tuổi chỉ là hoạt động thụ động” bỏ qua vai trò của vận động, cộng đồng, tình nguyện và việc duy trì mạng quan hệ.
+
+“Bán đúng số vé theo sức chứa nghĩa là đám đông tự động an toàn” là sai; luồng người, điểm nghẽn, lối thoát và giao thông sau sự kiện mới quyết định rủi ro thực tế.
+
+“Hàng đợi mua vé chỉ là vấn đề mạng nhanh/chậm” bỏ qua quy tắc phân bổ, xác thực, chống đầu cơ và thiết kế công bằng của nền tảng.
