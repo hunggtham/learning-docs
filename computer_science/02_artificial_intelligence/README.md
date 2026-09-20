@@ -72,8 +72,8 @@ Modern AI application thường thêm external retrieval, tools, memory, verific
 ├── 10_agents_and_ai_systems/               ✅ complete
 ├── 11_reinforcement_learning/              ✅ complete
 ├── 12_computer_vision/                     ✅ complete
-├── 13_speech_audio_and_multimodal/         ← next
-├── 14_data_for_ai/
+├── 13_speech_audio_and_multimodal/         ✅ complete
+├── 14_data_for_ai/                         ← next
 ├── 15_ai_engineering/
 ├── 16_mlops_and_llmops/
 ├── 17_ai_compute_and_infrastructure/
@@ -100,6 +100,9 @@ RL                  ≠ RLHF
 Classification      ≠ Detection
 Detection           ≠ Segmentation
 Image               ≠ Physical World
+Speech              ≠ Text In Audio Form
+Shared Embedding    ≠ Perfect Grounding
+More Modalities     ≠ Better Answer
 Prompt              ≠ Security Boundary
 Model Probability   ≠ Truth Probability
 Vector Similarity   ≠ Semantic Truth
@@ -110,7 +113,7 @@ Model says “done”   ≠ Verified completion
 
 ## Terminology convention
 
-Thuật ngữ quan trọng giữ English term, giải thích bằng tiếng Việt và thêm 한국어 용어 khi hữu ích trong môi trường Hàn Quốc, ví dụ `inference (추론 / suy luận)`, `training (학습 / huấn luyện)`, `embedding (임베딩 / biểu diễn vector)`, `retrieval (검색 / truy xuất)`, `agent (에이전트 / tác nhân)`, `reward (보상 / phần thưởng)`, `object detection (객체 탐지 / phát hiện đối tượng)`.
+Thuật ngữ quan trọng giữ English term, giải thích bằng tiếng Việt và thêm 한국어 용어 khi hữu ích trong môi trường Hàn Quốc, ví dụ `inference (추론 / suy luận)`, `training (학습 / huấn luyện)`, `embedding (임베딩 / biểu diễn vector)`, `retrieval (검색 / truy xuất)`, `agent (에이전트 / tác nhân)`, `reward (보상 / phần thưởng)`, `speech recognition (음성 인식 / nhận dạng tiếng nói)`, `multimodal (멀티모달 / đa phương thức)`.
 
 ## Learning principle
 
