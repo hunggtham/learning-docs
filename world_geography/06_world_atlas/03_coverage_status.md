@@ -39,13 +39,21 @@ Antarctica có chapter riêng phù hợp một polar continent thay vì ép vào
 
 Điều này không có nghĩa mọi chapter đã đạt độ sâu cuối cùng. Từ đây library chuyển sang **Depth Pass**.
 
-## Depth Pass — thứ tự ưu tiên
+## Depth Pass — đang triển khai
 
-1. Nâng các profile hiện còn compact, đặc biệt Africa và một số Asia/Europe entries được tạo ở batch đầu.
-2. Chuẩn hóa mỗi profile theo causal chain: physical base → settlement → economy → network → hazard.
-3. Bổ sung misconception, comparative geography và cross-links.
-4. Thêm các chapter comparison theo pattern: landlocked states, archipelagos, megadeltas, mountain states, desert states, global city-states, polar/subpolar territories.
-5. Giữ số liệu thay đổi nhanh ra khỏi narrative chính hoặc ghi rõ thời điểm/nguồn khi thật sự cần.
+### Africa — major profiles đã nâng lên mức textbook
+
+Nigeria, Ethiopia, Kenya, Democratic Republic of the Congo, South Africa, Algeria, Egypt, Morocco, Sudan, Tanzania, Uganda, Angola, Cameroon, Ghana và Senegal đã được mở rộng từ summary ngắn thành chapter theo causal chain.
+
+Các chapter này hiện có các lớp: physical structure → water/climate → settlement/urban hierarchy → production geography → transport/corridor → hazard/exposure → misconception → mental model.
+
+### Ưu tiên tiếp theo
+
+1. Tiếp tục Africa: Libya, Tunisia, Mozambique, Madagascar, Zambia, Zimbabwe, Côte d’Ivoire, Mali, Niger và các profile còn compact.
+2. Asia depth pass: ưu tiên các country profile 9–15 dòng ở Central, Southern và Western Asia.
+3. Europe depth pass: nâng các profile mini-state/territory và các nước được tạo ở batch đầu.
+4. Americas/Oceania: chuẩn hóa các profile nhỏ và bổ sung comparative geography.
+5. Thêm các chapter comparison theo pattern: landlocked states, archipelagos, megadeltas, mountain states, desert states, global city-states, polar/subpolar territories.
 
 ## Definition of Done nâng cao
 
