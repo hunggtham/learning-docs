@@ -1,61 +1,149 @@
-# 1945–1961: giải phóng, chiến tranh, cải cách ruộng đất và sự hình thành thị trường hậu chiến (Reconstruction & Early Firms / 해방·전쟁·전후 복구)
+# 1945–1961: giải phóng, chiến tranh, cải cách ruộng đất và sự hình thành nền kinh tế hậu chiến (Reconstruction & Early Firms / 해방·전쟁·전후 복구)
 
-Nếu giai đoạn trước 1945 để lại một hệ thống bị chia cắt, thì 1945–1961 là thời kỳ phải xây lại gần như mọi institution nền tảng của nền kinh tế miền Nam: quyền sở hữu, tiền tệ, thương mại, ngân sách, ngân hàng, thị trường lao động và sản xuất hàng tiêu dùng. Nhiều công ty lớn ngày nay bắt đầu hoặc tái định hình chính trong giai đoạn này.
+Giai đoạn 1945–1961 thường bị xem như một đoạn “chuyển tiếp” trước khi Korea cất cánh vào thập niên 1960. Cách nhìn đó bỏ qua một điều quan trọng: đây là lúc South Korea phải xây lại gần như toàn bộ **institutional operating system** của một nền kinh tế — quyền sở hữu, tiền tệ, đất đai, ngân hàng, trade, thuế, sản xuất, logistics và labor market — trong điều kiện division và war.
 
-## Liberation shock: khi quyền sở hữu thay đổi đột ngột
+Nếu thập niên 1960 là thời kỳ export engine được bật lên, thì 1945–1961 là lúc engine block, fuel line và transmission được lắp lại.
 
-Sau giải phóng, tài sản do người Nhật sở hữu hoặc kiểm soát trở thành một vấn đề lớn. Việc xử lý và phân phối các tài sản này ảnh hưởng trực tiếp đến ai có thể bước vào sản xuất công nghiệp, thương mại và tài chính. Trong kinh tế học thể chế, **property rights / 재산권** không chỉ là câu hỏi ai đứng tên tài sản; nó quyết định ai có incentive bảo trì, đầu tư và dùng tài sản làm collateral.
+## Liberation shock: asset tồn tại nhưng ownership thay đổi
 
-Trong một nền kinh tế đang chuyển chế độ, nếu property right không rõ ràng, asset có thể tồn tại nhưng investment bị trì hoãn. Vì vậy quá trình chuyển giao quyền sở hữu sau 1945 là một phần của sự hình thành giới doanh nghiệp hậu chiến.
+Sau 1945, nhiều assets từng thuộc Japanese individuals hoặc companies không còn owner cũ. Câu hỏi “ai được quyền sử dụng, quản lý, mua hoặc bán tài sản này?” trở thành câu hỏi kinh tế trung tâm.
 
-## Cải cách ruộng đất và thay đổi cấu trúc xã hội
+**Property rights / 재산권** quan trọng vì investment là quyết định bỏ resource hiện tại để nhận future return. Nếu owner không chắc mình có giữ được future return, incentive bảo trì và capex yếu đi. Vì vậy việc xử lý former Japanese assets ảnh hưởng trực tiếp đến capital formation và cấu trúc doanh nhân hậu chiến.
 
-Cải cách ruộng đất (Land Reform / 농지개혁) vào cuối thập niên 1940 và đầu thập niên 1950 làm giảm mạnh mô hình địa chủ–tá điền cũ. Tác động của nó không chỉ nằm ở nông nghiệp. Khi quyền sở hữu đất được phân tán hơn, cấu trúc quyền lực kinh tế nông thôn thay đổi và một bộ phận dân cư có khả năng giữ lại nhiều hơn thu nhập từ sản xuất.
+Một factory không thể được coi là productive chỉ vì building còn đứng đó. Firm cần legal control, working capital, imported inputs, managers, electricity và customers. Chính vì vậy post-liberation economy phải tái thiết **institutional coordination**, không chỉ xây lại physical assets.
 
-Không nên đơn giản hóa rằng land reform “trực tiếp tạo ra chaebol”. Cơ chế hợp lý hơn là nó góp phần thay đổi phân phối tài sản, giảm ràng buộc phong kiến trong nông thôn và tạo môi trường xã hội khác cho đô thị hóa, giáo dục và công nghiệp hóa sau đó.
+## Land reform: thay đổi asset distribution và rural incentives
 
-## Korean War: phá hủy capital stock và đồng thời tăng nhu cầu tái thiết
+Cải cách ruộng đất (Land Reform / 농지개혁) cuối 1940s–đầu 1950s làm suy yếu mạnh old landlord–tenant structure. Cơ chế kinh tế không nên được hiểu đơn giản là “chia đất rồi mọi người giàu lên”. Tác động sâu hơn nằm ở distribution of property rights và political economy.
 
-Chiến tranh Triều Tiên 1950–1953 phá hủy cơ sở hạ tầng và sản xuất, gây di chuyển dân cư khổng lồ và làm nguồn lực quốc gia lệch mạnh sang survival. Một cách đọc kinh tế quan trọng là phân biệt **stock** và **flow**. Factory, bridge, housing và machinery là capital stock; sản lượng hằng năm là flow. Khi chiến tranh phá capital stock, flow sau chiến tranh bị giới hạn cho đến khi stock được xây lại.
+Khi cultivator sở hữu nhiều hơn phần land mình canh tác, incentive đầu tư và giữ output có thể tăng. Đồng thời, concentration of landed power giảm, tạo một social structure khác với nhiều developing economies nơi landed elites tiếp tục kiểm soát rural capital và politics.
 
-Nhưng tái thiết cũng tạo demand đặc biệt lớn cho xây dựng, logistics, vật liệu, thực phẩm, dệt may và hàng tiêu dùng. Đây là môi trường trong đó những doanh nghiệp có khả năng tổ chức supply, vận tải và construction có thể lớn lên nhanh.
+Land reform không trực tiếp tạo chaebol. Nhưng nó góp phần tạo environment nơi industrialization sau này diễn ra trên một nền tảng asset distribution và rural social order khác. Urban migration và education expansion cũng xảy ra trong context đó.
 
-## Viện trợ và nền kinh tế 1950s
+## Korean War: destruction của capital stock và network
 
-Trong thập niên 1950, Hàn Quốc phụ thuộc mạnh vào viện trợ nước ngoài, đặc biệt từ Hoa Kỳ. Aid cung cấp ngoại tệ, nguyên liệu và hàng hóa mà nền kinh tế trong nước chưa sản xuất được. Nó giúp duy trì consumption và reconstruction, nhưng đồng thời tạo một cấu trúc incentive phức tạp: doanh nghiệp nào tiếp cận được ngoại tệ, giấy phép nhập khẩu hoặc nguyên liệu viện trợ có thể có lợi thế lớn.
+Korean War 1950–1953 phá hủy housing, roads, bridges, factories và commercial networks, đồng thời tạo refugee flows và population displacement lớn.
 
-Khái niệm **foreign-exchange constraint / 외환제약** rất quan trọng. Một quốc gia có thể có nhu cầu đầu tư nhưng không thể nhập máy móc hoặc dầu nếu không có ngoại tệ. Vì xuất khẩu khi đó còn nhỏ, viện trợ đóng vai trò lấp khoảng trống ngoại tệ. Bài toán này giải thích vì sao về sau tăng xuất khẩu trở thành ưu tiên sống còn chứ không chỉ là mục tiêu prestige.
+Để hiểu economic damage, cần phân biệt **stock** và **flow**. Factory, machinery và housing là capital stock; annual production và income là flow. Khi stock bị phá hủy, future flow giảm cho tới khi capacity được rebuilt.
 
-## Import substitution và doanh nghiệp hàng tiêu dùng
+Nhưng chiến tranh còn phá **relationships**. Supplier mất customer, worker mất workplace, company mất records và banks mất borrower information. Đây là một dạng destruction khó nhìn hơn physical bomb damage nhưng ảnh hưởng productivity rất lớn.
 
-Thập niên 1950 thường gắn với **công nghiệp hóa thay thế nhập khẩu (import substitution / 수입대체)**. Logic rất đơn giản: nếu quốc gia đang nhập đường, bột mì, hàng dệt, hóa chất tiêu dùng và các sản phẩm cơ bản, doanh nghiệp trong nước có thể sản xuất thay thế để tiết kiệm ngoại tệ.
+> Mental model: war làm mất cả machine lẫn organizational memory.
 
-Đây là bối cảnh giúp hiểu CJ và LG. CheilJedang, tiền thân của CJ, được thành lập năm 1953 và sản xuất đường trong nước. Lucky Chemical, tiền thân của LG, bắt đầu từ 1947 với sản phẩm hóa chất tiêu dùng rồi mở rộng; GoldStar sau đó bước vào điện tử. Những công ty này không bắt đầu bằng semiconductor hay entertainment. Họ bắt đầu từ những goods mà một nền kinh tế nghèo nhưng đang đô thị hóa cần hàng ngày.
+## Reconstruction demand: destruction cũng tạo một loại market mới
 
-> Mental model: trước khi một nền kinh tế có thể xuất khẩu smartphone, nó thường phải học cách sản xuất ổn định những thứ cơ bản mà trước đó phải nhập.
+Sau war, demand cho cement, construction, transportation, food, textiles, housing và basic consumer goods tăng mạnh. Firms có khả năng procurement và project execution có thể lớn nhanh trong environment này.
 
-## Hyundai và reconstruction economy
+Hyundai Construction là example quan trọng. Capability về managing labor, materials, deadlines và large projects được tích lũy trong reconstruction/construction trước khi Hyundai mở rộng sâu sang automobile và shipbuilding.
 
-Hyundai Construction được thành lập sau giải phóng và lớn lên trong môi trường tái thiết, xây dựng cơ sở hạ tầng và sau đó tham gia các dự án lớn hơn. Điều này giải thích một pattern xuyên lịch sử Hyundai: khả năng project execution, construction và scale-up có trước automobile. Hyundai Motor chỉ được thành lập năm 1967. Vì thế nếu nhìn Hyundai ngày nay chỉ như “hãng xe”, ta bỏ qua DNA tổ chức hình thành trong construction và industrial projects.
+Điều này cho thấy một idea xuyên suốt lịch sử Korean groups: **organizational capability precedes industry diversification**. Group không nhất thiết có technology mới ngay từ đầu; nó có thể mang capability về execution sang sector mới rồi học technology dần.
 
-SK lại có một genealogy khác. Tiền thân SK bắt đầu với Sunkyong Textiles năm 1953, trong bối cảnh hậu chiến khi dệt may là ngành có nhu cầu lớn và phù hợp với lợi thế lao động của Hàn Quốc. Sau này SK đi theo con đường vertical integration từ textile sang fiber, petrochemical, energy và telecommunications.
+## Aid economy: vì sao foreign exchange là bottleneck
 
-Samsung có nguồn gốc thương mại từ 1938, nhưng sau chiến tranh cũng tái định hình mạnh sang manufacturing và financial services trước khi electronics trở thành lõi.
+Trong 1950s, South Korea phụ thuộc mạnh vào foreign aid, đặc biệt từ United States. Aid cung cấp food, raw materials, capital goods và — quan trọng nhất về macro — external purchasing power.
 
-## Vì sao 1950s không thể bị coi là “giai đoạn chờ 1960s”
+Một country có thể muốn industrialize nhưng không thể import machinery, oil, fertilizer hoặc industrial inputs nếu không có dollars. Đây là **foreign-exchange constraint / 외환제약**.
 
-Nếu chỉ nhìn growth rate, thập niên 1950 có vẻ kém ấn tượng hơn thời kỳ sau. Nhưng về institution, đây là giai đoạn hình thành nhiều điều kiện ban đầu: land ownership mới, urban migration, reconstruction capability, consumer manufacturing, lớp doanh nhân hậu chiến và kinh nghiệm xử lý foreign exchange.
+Ta có thể hình dung đơn giản:
 
-Đồng thời, mô hình 1950s có giới hạn rõ: export quá nhỏ, economy phụ thuộc aid, productivity thấp và domestic market nhỏ. Chính những giới hạn đó tạo pressure cho một chiến lược phát triển mới đầu thập niên 1960.
+\[
+Import\ Capacity \approx Export\ Earnings + Aid + Foreign\ Borrowing + Other\ FX\ Inflows
+\]
+
+Trong 1950s, export earnings còn nhỏ nên aid giữ vai trò lớn. Đây chính là lý do export trong 1960s không chỉ là một policy fashionable; nó là cách thay aid bằng một source foreign exchange bền vững hơn.
+
+## Aid tạo cả relief lẫn distortion
+
+Aid giúp economy survive và rebuild, nhưng nó cũng thay relative prices và tạo rents quanh allocation. Nếu imported materials hoặc foreign currency được phân bổ qua administrative channels, access to permits và networks có thể trở thành competitive advantage.
+
+Vì vậy aid economy tạo một bài học institutional quan trọng: khi resource khan hiếm được phân bổ hành chính, **who gets access** có thể quan trọng không kém **who is productive**. Đây là một reason Korea sau đó chú trọng hơn vào export performance như một measurable criterion để discipline firms.
+
+## Import substitution: học sản xuất những thứ trước đây phải nhập
+
+Thập niên 1950 chứng kiến growth của **import-substituting industries / 수입대체산업**. Nếu Korea đang nhập sugar, textiles, household chemicals hoặc processed food, domestic production có thể tiết kiệm foreign exchange và tạo industrial experience.
+
+CheilJedang, tiền thân CJ, bắt đầu với sugar năm 1953. Lucky Chemical, predecessor của LG, bắt đầu với consumer chemical products; GoldStar bước vào electronics. Sunkyong Textiles, lineage của SK, bắt đầu từ textiles.
+
+Các firms này không bắt đầu bằng AI, semiconductor hay media platform. Họ học **mass production, procurement, quality, distribution và cash-cycle management** từ basic goods.
+
+Đây là first step của industrial upgrading:
+
+```text
+Imported basic goods
+        ↓
+Domestic substitution
+        ↓
+Stable mass production
+        ↓
+Process learning
+        ↓
+Export capability / new industries
+```
+
+## Inflation, money và macro instability
+
+Postwar economy không chỉ thiếu factories; nó còn gặp monetary instability và inflation pressure. Khi goods khan hiếm nhưng money supply và fiscal demand tăng, prices có thể tăng nhanh. Inflation làm accounting, savings và long-term contracting khó hơn.
+
+Đối với doanh nghiệp, high inflation có hai mặt. Inventory holder có thể thấy nominal profits, nhưng working-capital requirement cũng tăng. Price volatility làm planning khó và credit relationship yếu đi.
+
+Đây là reminder rằng industrialization cần **monetary and fiscal stability** đủ để firms có thể plan beyond survival horizon.
+
+## Banking system và credit allocation
+
+Capital market hiện đại chưa phát triển, nên banks và policy-linked finance giữ vai trò đặc biệt. Credit không chỉ là “tiền cho vay”; nó là quyền được kéo future resources vào investment hiện tại.
+
+Khi domestic savings thấp, allocation của scarce credit ảnh hưởng mạnh company survival và growth. Firms có collateral, political/administrative access hoặc performance tốt có advantage lớn hơn.
+
+Pattern này phát triển mạnh hơn trong 1960s directed-credit system. Vì vậy 1950s là nơi ta thấy early connection giữa **state, banks và firms** hình thành.
+
+## Education và human-capital foundation
+
+South Korea sau war vẫn nghèo về physical capital, nhưng literacy và education expansion dần tạo pool workers có thể học industrial skills. Human capital không lập tức biến thành productivity nếu thiếu factories, nhưng khi investment tăng trong 1960s–1970s, workforce có basic education trở thành complement quan trọng.
+
+Đây là một point thường bị bỏ qua khi giải thích growth: machine imported từ abroad có thể được mua trong vài tháng; organizational skill và educated workforce cần nhiều năm tích lũy.
+
+## Early corporate genealogies: firms không lớn lên theo một route duy nhất
+
+Samsung có trading origin từ 1938 rồi tái định hình sau war. Hyundai xây project-execution capability qua construction. LG đi từ chemicals sang electronics. SK đi từ textile sang synthetic fiber và petrochemical. CJ đi từ food processing sang broader consumer/bio/content businesses sau nhiều thập niên.
+
+Điều common không phải founding industry, mà là ability **reinvest, learn và reallocate capital** khi economy đổi stage.
+
+Xem [08_company_genealogies](./08_company_genealogies.md) để theo dõi các lineages này dài hơn.
+
+## Vì sao 1950s model không đủ để tiếp tục tăng trưởng?
+
+Đến cuối 1950s, constraints vẫn rõ:
+
+- export base nhỏ;
+- aid dependence lớn;
+- productivity thấp;
+- domestic market hạn chế;
+- foreign exchange thiếu;
+- investment financing còn yếu;
+- industrial structure tập trung basic/light manufacturing.
+
+Import substitution có thể tiết kiệm FX, nhưng nếu domestic demand nhỏ, firm nhanh chóng chạm ceiling. Muốn scale vượt ceiling này, Korea phải bán ra external markets.
+
+Đó là bridge logic sang 1960s.
 
 ## Mental Model
 
-> Hãy nhìn 1950s như thời kỳ “bootstrapping economy”: Hàn Quốc dùng viện trợ và nguồn lực hạn chế để tái lập capital stock, tạo hàng tiêu dùng cơ bản và xây lớp doanh nghiệp có khả năng tổ chức sản xuất. Điểm nghẽn lớn nhất vẫn là ngoại tệ và năng suất.
+> 1945–1961 là giai đoạn South Korea chuyển từ **disrupted post-colonial economy** sang một **bootstrapped postwar market economy**. Aid cung cấp external lifeline; land reform và asset transfer thay property structure; reconstruction tạo firms và capabilities; import substitution dạy mass production; nhưng FX shortage vẫn là binding constraint.
+
+## Common misconceptions
+
+“1950s không có growth story nên không quan trọng” là sai. Nhiều institution và corporate capabilities cần cho later industrialization được hình thành trong giai đoạn này.
+
+“Aid tự động tạo growth” cũng sai. Aid chỉ trở thành productive capacity khi economy có institution và firms biến imported resources thành sustained output.
+
+“Land reform trực tiếp tạo industrial champions” là quá đơn giản. Nó thay asset distribution và social structure; industrial growth vẫn cần finance, technology, education, trade và corporate capability.
 
 ## Connections
 
-Tiếp theo: [02_1960s_export_industrialization_and_business_formation](./02_1960s_export_industrialization_and_business_formation.md). Để xem các tập đoàn cụ thể phát triển từ những nền tảng này như thế nào, đọc [08_company_genealogies](./08_company_genealogies.md).
+Tiếp theo đọc [02_1960s_export_industrialization_and_business_formation](./02_1960s_export_industrialization_and_business_formation.md). Để theo dõi individual groups từ basic goods sang advanced industries, đọc [08_company_genealogies](./08_company_genealogies.md).
 
-### Nguồn nền để đọc thêm
+### Nguồn nền
 
-KDI, *The Korean Economy: Six Decades of Growth and Development*; KDI, *The Role of the Foreign Sector and Aid in Korea's Development*; lịch sử chính thức của LG, SK, CJ và Hyundai.
+- KDI, *The Korean Economy: Six Decades of Growth and Development*.
+- KDI, *The Role of the Foreign Sector and Aid in Korea's Development*.
+- Official histories của LG, SK, CJ, Hyundai và Samsung, dùng như company-level evidence bên cạnh macro history.
