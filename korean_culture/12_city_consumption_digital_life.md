@@ -272,7 +272,131 @@ Một số khu đô thị có nhà hàng, cửa hàng tiện lợi, giao hàng v
 
 Nhưng không nên biến “Hàn Quốc không bao giờ ngủ” thành sự thật phổ quát. Khu vực, ngày trong tuần, loại hình kinh doanh và thay đổi sau đại dịch đều làm nhịp đêm khác nhau.
 
-# Liên hệ kiến thức: đô thị như một chuỗi hệ thống phụ thuộc nhau
+# Độ tin cậy đô thị: thành phố tốt không chỉ nhanh khi mọi thứ hoạt động
+
+Một hệ thống đô thị có chất lượng không chỉ được đánh giá trong trạng thái bình thường. Câu hỏi khó hơn là: **khi một thành phần hỏng, người dân còn hoàn thành hành trình bằng cách nào?**
+
+Một dịch vụ có thể rất nhanh 99% thời gian nhưng gây gián đoạn lớn ở 1% còn lại nếu không có đường thay thế. Vì vậy tốc độ và độ tin cậy là hai chiều khác nhau.
+
+Có thể phân biệt:
+
+```text
+hiệu suất bình thường
+≠ độ tin cậy
+≠ khả năng phục hồi
+```
+
+**Độ tin cậy (reliability)** hỏi hệ thống có hoạt động ổn định không. **Khả năng phục hồi (resilience)** hỏi khi đã hỏng, hệ thống có hấp thụ cú sốc và khôi phục được không.
+
+## 단일 장애점: điểm lỗi duy nhất trong đời sống đô thị
+
+Một **điểm lỗi duy nhất (single point of failure)** là thành phần mà nếu hỏng thì toàn hành trình dừng.
+
+Ví dụ:
+
+```text
+chỉ một thang máy có thể dùng
+→ thang máy hỏng
+→ người dùng xe lăn không thể chuyển tuyến
+```
+
+Hoặc:
+
+```text
+chỉ một phương thức xác thực
+→ hệ thống xác thực lỗi
+→ không thể đăng nhập / thanh toán / đặt dịch vụ
+```
+
+Một thành phố thuận tiện có thể vô tình tạo phụ thuộc rất sâu vào một vài nền tảng hoặc thiết bị. Vì vậy thiết kế tốt cần nhận diện điểm lỗi duy nhất trước khi xảy ra sự cố.
+
+## 중복성: dự phòng nhìn có vẻ lãng phí cho tới khi cần dùng
+
+**Dự phòng (redundancy)** nghĩa có thêm một tuyến, một thiết bị, một nguồn điện hoặc một kênh phục vụ để hệ thống tiếp tục hoạt động khi thành phần chính lỗi.
+
+Trong trạng thái bình thường, dự phòng có thể trông như chi phí thừa. Nhưng khi xảy ra sự cố, nó mua lại khả năng tiếp tục hoạt động.
+
+```text
+hiệu quả tối đa
+→ ít dư thừa
+→ chi phí thường ngày thấp hơn
+nhưng
+→ dễ tổn thương hơn khi có cú sốc
+```
+
+Đây là đánh đổi nền tảng giữa **hiệu quả** và **khả năng chống chịu**.
+
+## 점진적 성능 저하: thất bại tốt là thất bại có kiểm soát
+
+Không phải hệ thống chỉ có hai trạng thái “hoạt động hoàn hảo” và “tắt hoàn toàn”. Thiết kế tốt có thể cho phép **suy giảm chức năng có kiểm soát (graceful degradation)**.
+
+Ví dụ, khi một chức năng tự động lỗi, hệ thống có thể chuyển sang xử lý thủ công; khi thanh toán di động lỗi, vẫn có thẻ vật lý hoặc kênh khác; khi ứng dụng bản đồ không cập nhật, biển chỉ dẫn vật lý vẫn tồn tại.
+
+```text
+hệ chính lỗi
+→ chức năng giảm
+→ đường thay thế hoạt động
+→ dịch vụ cốt lõi vẫn tiếp tục
+```
+
+Đây là lý do xoá mọi kênh “cũ” không phải lúc nào cũng là hiện đại hoá tốt.
+
+## 정전·통신장애: sự cố hạ tầng có thể lan theo chuỗi
+
+Mất điện hoặc gián đoạn mạng không chỉ ảnh hưởng một thiết bị. Một sự cố có thể lan qua nhiều lớp:
+
+```text
+điện
+→ trạm mạng / thang máy / thanh toán
+→ cửa hàng / giao thông / xác thực
+→ hành trình hằng ngày
+```
+
+Hệ thống càng tích hợp số, lợi ích bình thường càng lớn nhưng **rủi ro phụ thuộc chéo** cũng tăng.
+
+Vì vậy khả năng phục hồi đô thị cần nhìn cả nguồn điện dự phòng, kênh thông báo, ưu tiên khôi phục và cách người dùng hành động khi ứng dụng quen thuộc không dùng được.
+
+## 대체 경로: đường vòng là một phần của thiết kế, không phải phương án sau cùng
+
+Trong giao thông, **đường thay thế (fallback route)** có thể là tuyến tàu khác, xe buýt, taxi hoặc đi bộ. Trong dịch vụ số, nó có thể là quầy người thật, gọi điện hoặc giấy tờ thay thế.
+
+Đường vòng có ba điều kiện:
+
+```text
+phải tồn tại
++ người dùng phải biết nó tồn tại
++ phải dùng được trong trạng thái sự cố
+```
+
+Một số hệ thống có “phương án dự phòng” trên giấy nhưng người dùng không tìm thấy khi cần. Vì vậy khả năng quan sát và hướng dẫn trong lúc lỗi cũng là một phần của thiết kế.
+
+## 재난문자 và giao tiếp khẩn cấp: thông tin phải đến đúng lúc, đúng người
+
+Thông báo khẩn cấp qua điện thoại giúp nhà chức trách truyền cảnh báo nhanh về thời tiết, tai nạn hoặc rủi ro. Nhưng hệ thống cảnh báo phải cân bằng giữa **độ nhạy** và **mệt mỏi cảnh báo (alert fatigue)**.
+
+Nếu cảnh báo quá nhiều, người dùng có thể bỏ qua; nếu quá ít, thông tin quan trọng đến muộn. Câu hỏi vận hành không chỉ là “có gửi cảnh báo không?” mà còn:
+
+```text
+ai cần nhận?
+khi nào?
+ở khu vực nào?
+mức khẩn ra sao?
+hành động khuyến nghị là gì?
+```
+
+Thông tin tốt phải giúp người dùng chuyển từ biết rủi ro sang biết phải làm gì.
+
+## 오프라인 대안: khả năng tiếp cận số cần cả phương án không số
+
+Số hoá giúp giảm chi phí cho đa số người dùng, nhưng một hệ thống công cộng hoàn toàn phụ thuộc ứng dụng có thể loại trừ người không có điện thoại, tài khoản, phương thức xác thực hoặc kỹ năng số.
+
+Vì vậy một câu hỏi quan trọng là:
+
+> Nếu điện thoại hết pin, mạng lỗi hoặc người dùng không thể xác thực, họ còn hoàn thành dịch vụ thiết yếu bằng cách nào?
+
+Đối với dịch vụ không thiết yếu, phương án thay thế có thể ít quan trọng hơn. Với giao thông, y tế, thanh toán hoặc dịch vụ công, đường lui có giá trị lớn hơn nhiều.
+
+## Liên hệ kiến thức: đô thị như một chuỗi hệ thống phụ thuộc nhau
 
 Một thành phố có thể đọc qua các lớp:
 
@@ -303,7 +427,7 @@ Một mắt xích thất bại có thể làm toàn bộ hành trình thất b�
 
 ## Mô hình tư duy (Mental Model)
 
-> Đời sống đô thị Hàn Quốc là một **hệ thống xã hội–kỹ thuật có độ trễ thấp (low-latency socio-technical system)**. Mật độ giúp đầu tư hạ tầng có hiệu quả; hạ tầng giúp nền tảng mở rộng; nền tảng làm dịch vụ nhanh; dịch vụ nhanh nâng kỳ vọng. Nhưng chất lượng đô thị không chỉ được đo bằng tốc độ trung bình — nó còn được đo bằng việc người có tuổi, khả năng cơ thể, ngôn ngữ và kỹ năng số khác nhau có thể hoàn thành cùng hành trình đến mức nào.
+> Đời sống đô thị Hàn Quốc là một **hệ thống xã hội–kỹ thuật có độ trễ thấp (low-latency socio-technical system)**. Mật độ giúp đầu tư hạ tầng có hiệu quả; hạ tầng giúp nền tảng mở rộng; nền tảng làm dịch vụ nhanh; dịch vụ nhanh nâng kỳ vọng. Nhưng một đô thị mạnh không chỉ nhanh trong trạng thái bình thường. Nó còn phải có dự phòng, đường thay thế, khả năng suy giảm có kiểm soát và kênh thông tin để người có tuổi, khả năng cơ thể, ngôn ngữ và kỹ năng số khác nhau vẫn hoàn thành hành trình khi một phần hệ thống gặp lỗi.
 
 ## Hiểu lầm phổ biến (Common Misconceptions)
 
@@ -320,3 +444,7 @@ Một mắt xích thất bại có thể làm toàn bộ hành trình thất b�
 “Dịch vụ số hoá hoàn toàn thì ai cũng dùng được nhanh hơn” bỏ qua người gặp khó khăn về ngôn ngữ, thị lực, thao tác, xác thực hoặc thanh toán.
 
 “Seoul = Korea” vẫn là một trong những lỗi lấy mẫu quan trọng nhất khi học đời sống đô thị Hàn Quốc.
+
+“Hệ thống nhanh thì chắc chắn đáng tin” là sai; tốc độ bình thường và khả năng chịu sự cố là hai thuộc tính khác nhau.
+
+“Có phương án dự phòng trên giấy nghĩa là hệ thống có khả năng phục hồi” là sai nếu người dùng không biết đường thay thế hoặc đường đó cũng phụ thuộc cùng điểm lỗi.
