@@ -1,203 +1,283 @@
-# Vi sinh vật và virus — Microorganisms and Viruses (미생물과 바이러스)
+# Vi sinh vật và Virus — Microorganisms and Viruses (미생물과 바이러스)
 
-Phylogeny cho thấy phần lớn diversity của life không nằm ở những organism lớn ta dễ nhìn thấy. Microbial world là nơi nhiều nguyên lý đã học hội tụ: cell nhỏ cần membrane và metabolism; genome nhỏ nhưng rất linh hoạt; population lớn tiến hóa nhanh; gene có thể truyền ngang; và activity của microorganism ảnh hưởng toàn ecosystem.
+Sau evolution và phylogeny, microbes là nơi nhiều principle trở nên đặc biệt rõ: generation time ngắn, population lớn, metabolism đa dạng, horizontal gene transfer mạnh và interaction với environment diễn ra ở tốc độ cao. Virus lại đặt ra câu hỏi boundary của life: có genome và evolution nhưng phụ thuộc host cell cho replication.
 
-Vì vậy microbiology không nên học như “một danh sách bacteria và virus”. Nó là case study cực tốt để thấy cell biology, genetics, evolution và ecology hoạt động cùng nhau.
+> **Mental model:** microbes không phải “phiên bản đơn giản của organism lớn”. Chúng là những hệ sống có strategy riêng, còn virus là genetic replicator khai thác machinery của cell. Cả hai đều là lực lớn định hình evolution, ecology, medicine và biotechnology.
 
-## 1. Microorganism là một category theo scale, không phải một clade duy nhất
+## 1. “Microorganism” là category theo kích thước, không phải một clade duy nhất
 
-**Microorganism (vi sinh vật / 미생물)** là organism quá nhỏ để quan sát rõ bằng mắt thường. Category này có thể gồm bacteria, archaea, nhiều protist, microscopic fungi và một số algae.
+Microorganism bao gồm nhiều bacteria, archaea, unicellular eukaryote và microscopic fungi/algae. Chúng không tạo một nhánh evolution đơn nhất.
 
-Chúng không nhất thiết có common ancestor gần nhau chỉ vì đều nhỏ.
+Điểm chung thực dụng là kích thước nhỏ và thường cần microscopy/culture/molecular method để nghiên cứu.
 
-Đây là reminder rằng classification theo appearance và classification theo phylogeny là hai việc khác nhau.
+## 2. Bacterial cell architecture
 
-## 2. Bacteria: nhỏ nhưng metabolic diversity rất lớn
+Bacteria thường có plasma membrane, cytoplasm, ribosome, nucleoid và nhiều species có cell wall peptidoglycan.
 
-Bacteria là prokaryote, không có nucleus membrane-bound. Nhưng chúng có membrane, ribosome, DNA, enzyme và signaling system.
+Một số có capsule, flagellum, pili hoặc specialized membrane system.
 
-Một số lấy energy từ light; một số oxidize inorganic compound; một số dùng organic carbon; một số sống có oxygen, một số không.
+Không có nucleus không có nghĩa “không tổ chức”. Transcription và translation có thể coupling trong cytoplasm; chromosome được spatially organize; protein localization vẫn có pattern.
 
-Metabolic diversity của bacteria vượt xa cách chia “có lợi/có hại”.
+## 3. Gram-positive và Gram-negative
 
-Nhiều global biogeochemical cycle phụ thuộc microbial metabolism.
+Gram stain phản ánh cell-envelope architecture.
 
-## 3. Archaea: nhìn giống bacteria nhưng evolutionary khác
+Gram-positive thường có thick peptidoglycan layer và không có outer membrane kiểu Gram-negative. Gram-negative có thinner peptidoglycan giữa inner/outer membrane; outer membrane chứa lipopolysaccharide.
 
-Archaea cũng là prokaryote nhưng membrane lipid chemistry, transcription machinery và nhiều molecular feature khác bacteria.
+Khác biệt này ảnh hưởng permeability, immune recognition và antibiotic susceptibility.
 
-Một số archaea sống ở extreme environment, nhưng nhiều loài sống ở ocean, soil và microbiome bình thường.
+Nhưng Gram category không mô tả toàn diversity bacteria; có ngoại lệ như Mycobacterium với waxy envelope đặc biệt.
 
-Việc từng gọi chúng là “extremophile đặc biệt” rồi sau đó phát hiện chúng phổ biến hơn là ví dụ cách scientific picture thay đổi khi sampling tốt hơn.
+## 4. Archaea khác bacteria ở molecular level
 
-## 4. Growth của bacterial population
+Archaea cũng prokaryotic nhưng membrane lipid chemistry, cell wall và information-processing machinery khác bacteria.
 
-Bacteria có thể divide bằng binary fission.
+Một số archaeal membrane dùng ether-linked lipid, bền trong extreme environment. Nhiều transcription/translation component có relation evolution gần eukaryote hơn bacteria.
 
-Nếu condition lý tưởng và generation time cố định, population có thể tăng exponential:
+Morphology đơn giản không phản ánh deep ancestry.
+
+## 5. Microbial metabolism: diversity lớn hơn animal/plant rất nhiều
+
+Human chủ yếu dùng organic carbon và oxygen-based respiration; microbes có range metabolism rộng.
+
+Chúng có thể lấy energy từ light, oxidation inorganic compound, organic molecule; carbon từ CO₂ hoặc organic source; electron acceptor có thể oxygen, nitrate, sulfate và chất khác.
+
+Classification theo energy/carbon source giúp hiểu ecological role tốt hơn “bacteria ăn gì”.
+
+## 6. Aerobe, anaerobe và fermentation
+
+**Obligate aerobe** cần oxygen; **obligate anaerobe** có thể bị oxygen gây độc; **facultative anaerobe** đổi strategy tùy oxygen.
+
+Anaerobic respiration vẫn dùng electron transport chain nhưng final electron acceptor khác oxygen. Fermentation thì không dựa ETC kiểu respiration để regenerate redox carrier.
+
+Phân biệt này nối trực tiếp metabolism chapter.
+
+## 7. Growth curve trong culture
+
+Batch culture thường có lag, exponential, stationary và death phase.
+
+Trong exponential phase:
 
 \[
-N(t)=N_0 2^{t/g}
+N(t)=N_0e^{rt}
 \]
 
-với \(g\) là generation time.
+Nếu generation time ngắn, population tăng cực nhanh.
 
-Nhưng culture thật không tăng exponential mãi. Nutrient cạn, waste tích lũy và space hạn chế, dẫn tới stationary phase rồi decline.
+Stationary phase xuất hiện khi nutrient cạn/waste tích tụ; cell physiology đổi, không đơn giản “ngừng sống”.
 
-Đây là bridge trực tiếp từ cell metabolism sang population ecology.
+Growth curve là bridge sang ecology population growth.
 
-## 5. Biofilm: bacteria sống như community
+## 8. Biofilm: microbe không luôn sống đơn lẻ
 
-Trong tự nhiên, nhiều bacteria không sống đơn lẻ mà tạo **biofilm (생물막)** trên surface.
+**Biofilm (생물막)** là community microbial bám surface và embedded trong extracellular matrix.
 
-Cell tiết extracellular matrix, tạo structure giữ water và molecule, đồng thời tạo microenvironment khác nhau.
+Biofilm tạo gradient oxygen/nutrient, cell state khác nhau và tăng tolerance với stress/antibiotic trong nhiều case.
 
-Trong biofilm, diffusion limitation làm oxygen/nutrient không phân bố đều. Một số cell grow chậm, làm antibiotic targeting fast-growing cell kém hiệu quả hơn.
+Dental plaque, catheter infection và natural stream biofilm đều là examples.
 
-Biofilm cho thấy property ở community level không thể suy chỉ từ một bacterium isolated.
+Microbial life có community structure, không chỉ planktonic single cell.
 
-## 6. Quorum sensing: population density trở thành signal
+## 9. Quorum sensing
 
-Một số bacteria tiết signal molecule. Khi population density tăng, signal concentration tăng. Khi vượt threshold, nhiều cell đồng thời đổi gene expression.
+Microbe có thể release signal molecule; khi density tăng, signal concentration đạt threshold và gene expression collective thay đổi.
 
-Đây là **quorum sensing (정족수 감지)**.
+**Quorum sensing (정족수 감지)** điều phối biofilm, virulence factor, luminescence hoặc behavior khác.
 
-Logic này nối signaling với population behavior:
+Đây là cell signaling ở population scale.
 
-```text
-individual cells release signal
-      ↓
-population density rises
-      ↓
-signal accumulates
-      ↓
-receptor threshold crossed
-      ↓
-coordinated gene expression
-```
+## 10. Horizontal gene transfer
 
-Các behavior như biofilm formation hoặc virulence factor production có thể được coordinate theo cách này.
+Bacteria trao đổi DNA qua:
 
-## 7. Horizontal gene transfer: information không chỉ đi parent → offspring
+- transformation: uptake DNA môi trường;
+- transduction: bacteriophage transfer DNA;
+- conjugation: direct transfer qua contact/plasmid system.
 
-Bacteria có thể nhận DNA qua ba route kinh điển.
+Horizontal transfer giúp gene như antibiotic resistance lan giữa lineage nhanh hơn inheritance dọc qua parent-offspring.
 
-**Transformation**: uptake DNA tự do từ environment.
+Tree evolution vì vậy có network component.
 
-**Transduction**: bacteriophage mang DNA giữa bacteria.
+## 11. Plasmid
 
-**Conjugation**: DNA, thường plasmid, được truyền qua cell-cell contact.
+**Plasmid (플라스미드)** là DNA molecule ngoài chromosome chính, thường circular ở bacteria và có independent replication origin.
 
-Những mechanism này làm gene flow ở microbial world rất nhanh.
+Plasmid có thể mang resistance, virulence hoặc metabolic gene. Không phải plasmid nào cũng beneficial mọi condition; carrying plasmid có cost.
 
-Đây là lý do một resistance gene có thể lan giữa lineage mà không chờ mutation độc lập xuất hiện ở từng species.
+Biotechnology dùng plasmid làm vector vì dễ manipulate.
 
-## 8. Antibiotic resistance như một chain causal đầy đủ
+## 12. Antibiotic hoạt động bằng cách nhắm target bacterial khác host
 
-Hãy nối từ molecular đến population scale.
+Antibiotic class khác nhau target cell wall synthesis, ribosome, DNA replication, metabolic enzyme hoặc membrane.
 
-Một mutation đổi target protein hoặc một plasmid mang enzyme phá antibiotic. Cell có resistance phenotype. Khi antibiotic hiện diện, susceptible cell bị inhibited mạnh hơn. Resistant cell có relative fitness cao hơn. Sau nhiều generation, resistance gene frequency tăng.
+Selective toxicity dựa difference giữa bacterial và human cell.
 
-```text
-DNA variant
-  ↓
-protein / pathway change
-  ↓
-cell survives drug better
-  ↓
-differential reproduction
-  ↓
-population evolves
-```
+Ví dụ beta-lactam nhắm peptidoglycan cell-wall synthesis; human cell không có wall này.
 
-Đây là toàn bộ genetics → phenotype → selection chain trong một example thực tế.
+## 13. Resistance mechanism
 
-## 9. Microbiome: host là một ecosystem
+Resistance có thể đến từ:
 
-**Microbiome (마이크로바이옴)** thường dùng để chỉ microbial community cùng genetic material trong một environment như gut, skin hoặc soil.
+- target modification;
+- drug-inactivating enzyme;
+- efflux pump;
+- permeability change;
+- bypass pathway;
+- biofilm/tolerance state.
 
-Host cung cấp habitat và nutrient; microbe có thể metabolize compound host không tự xử lý, cạnh tranh pathogen hoặc tạo metabolite ảnh hưởng host signaling.
+Genetic resistance và physiological tolerance không hoàn toàn giống nhau.
 
-Nhưng association microbiome–disease rất dễ bị overinterpreted. Diet, medication và disease state có thể đồng thời đổi microbiome. Do đó correlation không tự động thành causation.
+## 14. Evolution của resistance
 
-Causal reasoning ở chapter đầu tiếp tục cần thiết ở đây.
+Antibiotic không “tạo ra” resistance có mục tiêu. Variation có trước hoặc phát sinh ngẫu nhiên; treatment tạo selection.
 
-## 10. Virus: information system phụ thuộc host
+Population lớn và generation ngắn làm adaptation nhanh.
 
-**Virus (바이러스)** thường gồm genome DNA hoặc RNA nằm trong protein coat, đôi khi có lipid envelope.
+Horizontal gene transfer còn cho phép resistance gene nhảy qua lineage.
 
-Virus không có independent metabolism hoàn chỉnh. Nó dùng host machinery để replicate.
+## 15. Microbiome: organism là host + microbial ecosystem
 
-Một viral lifecycle có logic:
+**Microbiome (마이크로바이옴)** thường nói tới community microorganism và genetic/ecological context ở một habitat như gut, skin, soil.
+
+Gut microbiome tham gia fiber fermentation, metabolite production, immune interaction và colonization resistance.
+
+Nhưng microbiome research có nhiều confounder; association microbiome–disease không tự chứng minh causation.
+
+Diet, medication, age, geography và host genetics đều ảnh hưởng community.
+
+## 16. Symbiosis không chỉ mutualism
+
+**Symbiosis (공생)** là close interaction giữa species; outcome có thể mutualism, commensalism hoặc parasitism tùy definition/context.
+
+Relationship cũng có thể thay theo environment. Một microbe harmless trong gut có thể pathogenic nếu đi vào bloodstream.
+
+Context quyết định phenotype interaction.
+
+## 17. Pathogen và virulence
+
+**Pathogen** có khả năng gây disease. **Virulence** mô tả mức độ harm trong context host/pathogen.
+
+Virulence factor có thể giúp adhesion, invasion, toxin production hoặc immune evasion.
+
+Disease severity không chỉ property pathogen; host immune state và dose cũng quan trọng.
+
+## 18. Koch’s postulates và giới hạn
+
+Classical Koch’s postulates giúp establish microbial causation disease, nhưng không phù hợp hoàn toàn cho unculturable microbe, polymicrobial disease, asymptomatic carrier hoặc microbiome effect.
+
+Modern molecular epidemiology và experiment mở rộng causal toolkit.
+
+Đây là scientific-thinking principle quay lại.
+
+## 19. Virus structure
+
+Virus thường gồm genetic material DNA hoặc RNA, protein capsid và đôi khi lipid envelope.
+
+Virus không có ribosome và metabolism độc lập kiểu cell. Chúng phải dùng host machinery để replicate.
+
+Genome có thể single/double stranded, linear/circular, segmented/nonsegmented — diversity rất lớn.
+
+## 20. Viral life cycle
+
+Một cycle tổng quát:
 
 ```text
 attachment
- ↓
-entry
- ↓
-genome replication / expression
- ↓
-assembly
- ↓
-release
+→ entry
+→ uncoating
+→ genome replication + gene expression
+→ assembly
+→ release
 ```
 
-Mỗi step có molecular target khác nhau cho antiviral intervention.
+Mỗi virus family dùng mechanism khác nhau, nhưng logic là chiếm dụng resource host để chuyển genome thành progeny virion.
 
-## 11. Virus và câu hỏi “có sống không?”
+## 21. Tropism: tại sao virus chỉ infect một số cell/species?
 
-Virus có genome, mutation và evolution nhưng không tự metabolism/reproduction bên ngoài host.
+**Tropism (향성)** phụ thuộc receptor entry, intracellular factor, immune barrier và temperature/tissue condition.
 
-Vì vậy virus nằm ở boundary của definition life.
+Có receptor phù hợp chưa chắc đủ; replication machinery của virus còn cần host factor.
 
-Case này quan trọng hơn debate semantic: nó cho thấy properties của life có thể modular, không nhất thiết xuất hiện tất cả trong một entity độc lập.
+Tropism giải thích tissue specificity và host range.
 
-## 12. RNA virus tiến hóa nhanh vì sao?
+## 22. RNA virus và mutation rate
 
-Nhiều RNA virus dùng polymerase có proofreading kém hơn DNA replication system, nên mutation rate cao hơn.
+Nhiều RNA virus có polymerase proofreading kém hơn DNA system, nên mutation rate cao. Population virus tạo cloud variant nhanh.
 
-Population size lớn và generation nhanh làm variation xuất hiện nhanh.
+Nhưng mutation rate quá cao cũng có cost; genome stability và adaptability có trade-off.
 
-Nhưng mutation rate quá cao cũng có cost vì nhiều genome bị damage.
+Evolution virus là population process cực nhanh.
 
-Evolution luôn cân bằng variation và fidelity.
+## 23. Retrovirus
 
-## 13. Bacteriophage và CRISPR: arms race ở molecular scale
+Retrovirus có RNA genome nhưng dùng reverse transcriptase tạo DNA, rồi integrate vào host genome.
 
-Bacteriophage infect bacteria. Bacteria có defense; phage evolution counter-defense.
+HIV là example. Integration tạo provirus và khiến eradication phức tạp.
 
-CRISPR-Cas system ở nhiều bacteria/archaea lưu fragment từ invader genome như molecular memory, rồi dùng RNA guide để nhận diện sequence tương tự lần sau.
+Reverse transcription cho thấy central dogma cần hiểu nuanced chứ không phải “RNA không bao giờ về DNA”.
 
-Biotechnology sau này tái sử dụng logic này thành gene-editing tool.
+## 24. Bacteriophage
 
-Đây là ví dụ tuyệt vời: một mechanism evolution từ microbial defense trở thành technology của con người.
+**Phage (박테리오파지)** infect bacteria. Lytic cycle tạo virion rồi lyse host; temperate phage có thể integrate genome thành prophage.
 
-## 14. Microbe và global nutrient cycle
+Phage ảnh hưởng bacterial evolution, horizontal gene transfer và ecosystem microbial mortality.
 
-Nitrogen fixation biến N₂ thành form sinh vật dùng được. Nitrification và denitrification tiếp tục chuyển nitrogen giữa chemical form.
+Phage therapy cũng được nghiên cứu như strategy chống bacteria, đặc biệt resistance context.
 
-Decomposer phân hủy organic matter, trả carbon và nutrient về environment.
+## 25. CRISPR là dấu vết arms race bacteria–phage
 
-Một microorganism rất nhỏ nhưng collective activity ở planet scale có thể đổi atmospheric composition và soil fertility.
+Bacteria/Archaea có CRISPR-Cas system lưu spacer từ invasive genetic element và dùng RNA guide để nhận diện sequence tương ứng.
 
-Scale nhỏ không đồng nghĩa impact nhỏ.
+Biotechnology đã biến mechanism defense này thành genome-editing tool.
 
-## 15. Pathogen, virulence và host không phải quan hệ đơn giản
+Một concept nối microbiology → evolution → molecular biology → engineering.
 
-Pathogen success không nhất thiết tối đa khi gây disease nặng nhất. Nếu host chết quá nhanh hoặc không truyền pathogen, virulence quá cao có thể giảm transmission.
+## 26. Innate và adaptive immunity nhìn từ pathogen pressure
 
-Evolution của virulence phụ thuộc trade-off giữa replication, transmission và host damage.
+Pathogen recognition dựa conserved molecular pattern; adaptive immune system tạo receptor diversity và memory.
 
-Điều này nối microbiology với ecology và evolutionary game.
+Microbial evolution liên tục chọn variant escape immune pressure, trong khi host immune system cũng evolve.
 
-## 16. Từ microbial world sang organism đa bào
+Đây là coevolution ở timescale khác nhau.
 
-Microorganism cho ta một phiên bản rất cô đọng của life: một cell tự làm gần như mọi việc.
+## 27. One Health: human, animal và environment nối nhau
 
-Nhưng multicellular organism chọn strategy khác: cell specialization và division of labor. Điều này tạo efficiency nhưng đồng thời tạo bài toán mới — các cell phụ thuộc nhau và cần transport, communication, defense và homeostasis ở scale lớn.
+Pathogen có thể move giữa wildlife, livestock, human; antibiotic use trong agriculture/environment ảnh hưởng resistance ecology.
 
-Vì vậy bước tiếp theo là chuyển từ single-cell autonomy sang multicellular coordination.
+**One Health** nhìn health như network human–animal–environment.
 
-Ta sẽ bắt đầu với plant như một giải pháp đặc biệt cho bài toán lấy light, water và mineral từ hai môi trường khác nhau, rồi sang animal physiology.
+Vi sinh học vì vậy không dừng ở clinic; nó nối ecology và evolution.
 
-Tiếp tục với [[../04_organismal_biology/00_plant_biology]].
+## 28. Case study: yogurt fermentation
+
+Lactic-acid bacteria metabolize sugar và tạo lactic acid. pH giảm làm milk protein property thay đổi và hạn chế nhiều competing microbe.
+
+Food technology ở đây là controlled microbial ecology + metabolism.
+
+## 29. Case study: gut fiber và short-chain fatty acid
+
+Human enzyme không tiêu hóa một số dietary fiber. Gut microbe ferment fiber, tạo short-chain fatty acid có thể được host absorb và ảnh hưởng colon physiology/signaling.
+
+Nutrient path thực tế có thể đi qua microbial metabolism trước khi tới host.
+
+## 30. Common misconceptions
+
+“Bacteria = bệnh” sai; đa số bacteria không pathogen và nhiều loại beneficial/essential.
+
+“Antibiotic trị virus” sai vì target bacterial machinery không tồn tại trong virus.
+
+“Virus tự sinh sản như cell” sai; virus phụ thuộc host machinery.
+
+“Microbiome association = microbiome gây disease” sai.
+
+“Resistance xuất hiện vì bacteria cố thích nghi” sai.
+
+“Sterile = không có mọi microbe ở mọi context” cần cẩn thận; body surface bình thường có resident microbiota.
+
+## 31. Bridge: từ microbial cell tới multicellular organism
+
+Microbe cho thấy cell tự đủ có thể giải quyết life process trong một unit. Nhưng multicellular organism tạo bài toán mới: hàng triệu–nghìn tỷ cell phải chia việc, vận chuyển resource xa, truyền signal và duy trì common internal environment.
+
+[[../04_organismal_biology/00_plant_biology]] sẽ xem thực vật giải bài toán này bằng root–shoot architecture, vascular tissue và stomata. [[../04_organismal_biology/01_animal_physiology_and_homeostasis]] sẽ xem động vật dùng circulation, respiration, kidney và feedback.
+
+> **Mental model cuối chapter:** microbes cho thấy life có thể extremely small nhưng metabolically/evolutionarily sophisticated; virus cho thấy information system có thể tồn tại sát boundary của life. Hiểu microbes đòi hỏi dùng đồng thời cell biology, genetics, evolution và ecology.
