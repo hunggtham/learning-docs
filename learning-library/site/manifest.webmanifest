@@ -1,0 +1,11 @@
+{
+  "name": "Study Shelf",
+  "short_name": "Study Shelf",
+  "description": "Personal Markdown and PDF study library",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f5f1",
+  "theme_color": "#111827",
+  "lang": "vi"
+}

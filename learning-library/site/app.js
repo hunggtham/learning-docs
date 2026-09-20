@@ -6,6 +6,25 @@ const escapeHtml = value => String(value).replace(/[&<>'"]/g, char => ({ '&':'&a
 const fileUrl = path => `./library/files/${path.split('/').map(encodeURIComponent).join('/')}`;
 const titleOf = doc => doc.title || doc.path.split('/').pop().replace(/\.[^.]+$/, '');
 const bookmarkKey = doc => `study-shelf-bookmark:${doc.path}`;
+const memoryStorage = new Map();
+let persistentStorage = true;
+
+function storageGet(key) {
+  try { return window.localStorage.getItem(key); }
+  catch { persistentStorage = false; return memoryStorage.get(key) || null; }
+}
+function storageSet(key, value) {
+  try { window.localStorage.setItem(key, value); return true; }
+  catch { persistentStorage = false; memoryStorage.set(key, value); return false; }
+}
+function storageRemove(key) {
+  try { window.localStorage.removeItem(key); }
+  catch { persistentStorage = false; memoryStorage.delete(key); }
+}
+function bookmarkStatus(saved) {
+  if (!saved) return persistentStorage ? 'Bookmark lưu trên trình duyệt này.' : 'Safari đang không cho lưu lâu dài; bookmark chỉ giữ trong phiên hiện tại.';
+  return `${persistentStorage ? 'Đã lưu' : 'Đã lưu tạm trong phiên'} ${new Date(saved.savedAt).toLocaleString()}`;
+}
 
 function formatSize(bytes) { return bytes < 1024 * 1024 ? `${Math.ceil(bytes / 1024)} KB` : `${(bytes / 1024 / 1024).toFixed(1)} MB`; }
 function folderLabel(folder) { return folder ? `📁 ${folder}` : 'Tất cả thư mục'; }
@@ -86,7 +105,7 @@ function markdownToHtml(markdown) {
 }
 
 function readBookmark(doc) {
-  try { return JSON.parse(localStorage.getItem(bookmarkKey(doc)) || 'null'); } catch { return null; }
+  try { return JSON.parse(storageGet(bookmarkKey(doc)) || 'null'); } catch { return null; }
 }
 function writeRouteSection(path, sectionId) {
   const suffix = sectionId ? `?section=${encodeURIComponent(sectionId)}` : '';
@@ -121,17 +140,17 @@ async function renderReader(path, sectionId = '') {
 
     const saved = readBookmark(doc);
     const toolbar = document.querySelector('#reader-toolbar');
-    toolbar.innerHTML = `<button id="save-bookmark" class="bookmark-button" type="button">🔖 Lưu vị trí hiện tại</button><button id="restore-bookmark" class="bookmark-button" type="button" ${saved ? '' : 'disabled'}>↩ Khôi phục vị trí${saved ? '' : ' (chưa lưu)'}</button><button id="clear-bookmark" class="bookmark-button secondary" type="button" ${saved ? '' : 'disabled'}>Xóa bookmark</button><span id="bookmark-status" class="bookmark-status">${saved ? `Đã lưu ${new Date(saved.savedAt).toLocaleString()}` : 'Bookmark chỉ lưu trên trình duyệt này.'}</span>`;
+    toolbar.innerHTML = `<button id="save-bookmark" class="bookmark-button" type="button">🔖 Lưu vị trí hiện tại</button><button id="restore-bookmark" class="bookmark-button" type="button" ${saved ? '' : 'disabled'}>↩ Khôi phục vị trí${saved ? '' : ' (chưa lưu)'}</button><button id="clear-bookmark" class="bookmark-button secondary" type="button" ${saved ? '' : 'disabled'}>Xóa bookmark</button><span id="bookmark-status" class="bookmark-status">${escapeHtml(bookmarkStatus(saved))}</span>`;
     const save = () => {
       const active = [...headings].reverse().find(heading => heading.getBoundingClientRect().top <= 150) || headings[0];
       const bookmark = { headingId: active?.id || '', scrollY: Math.round(window.scrollY), savedAt: new Date().toISOString() };
-      localStorage.setItem(bookmarkKey(doc), JSON.stringify(bookmark));
+      const persisted = storageSet(bookmarkKey(doc), JSON.stringify(bookmark));
       document.querySelector('#restore-bookmark').disabled = false;
       document.querySelector('#clear-bookmark').disabled = false;
-      document.querySelector('#bookmark-status').textContent = `Đã lưu ${new Date(bookmark.savedAt).toLocaleString()}`;
+      document.querySelector('#bookmark-status').textContent = persisted ? bookmarkStatus(bookmark) : 'Đã lưu tạm trong phiên này; Safari chưa cho lưu lâu dài.';
     };
     const restore = () => { const bookmark = readBookmark(doc); if (!bookmark) return; if (bookmark.headingId) scrollToHeading(bookmark.headingId); else window.scrollTo({ top: bookmark.scrollY, behavior: 'smooth' }); };
-    const clear = () => { localStorage.removeItem(bookmarkKey(doc)); document.querySelector('#restore-bookmark').disabled = true; document.querySelector('#clear-bookmark').disabled = true; document.querySelector('#bookmark-status').textContent = 'Đã xóa bookmark.'; };
+    const clear = () => { storageRemove(bookmarkKey(doc)); document.querySelector('#restore-bookmark').disabled = true; document.querySelector('#clear-bookmark').disabled = true; document.querySelector('#bookmark-status').textContent = 'Đã xóa bookmark.'; };
     document.querySelector('#save-bookmark').onclick = save;
     document.querySelector('#restore-bookmark').onclick = restore;
     document.querySelector('#clear-bookmark').onclick = clear;
@@ -155,7 +174,7 @@ async function start() {
   catch { app.innerHTML = '<p class="empty">Không tìm thấy danh sách tài liệu. Hãy chạy <code>npm run build:library</code> trước.</p>'; return; }
   route();
 }
-document.querySelector('#theme-toggle').onclick = () => { document.documentElement.classList.toggle('dark'); localStorage.setItem('study-shelf-theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light'); };
-if (localStorage.getItem('study-shelf-theme') === 'dark') document.documentElement.classList.add('dark');
+document.querySelector('#theme-toggle').onclick = () => { document.documentElement.classList.toggle('dark'); storageSet('study-shelf-theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light'); };
+if (storageGet('study-shelf-theme') === 'dark') document.documentElement.classList.add('dark');
 window.addEventListener('hashchange', route);
 start();
