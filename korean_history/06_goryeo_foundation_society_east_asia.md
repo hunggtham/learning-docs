@@ -1,8 +1,8 @@
-# Goryeo: tái thống nhất, Phật giáo và một East Asian state
+# Cao Ly (고려 / Goryeo): tái thống nhất, Phật giáo và một East Asian state
 
 ## Foundation như coalition building
 
-Cao Ly (고려 / Goryeo) thường được nhớ vì tên “Korea” bắt nguồn từ Goryeo. Nhưng về institution, điều quan trọng là triều đại này phải integrate local elites sau thời fragmentation. Wang Geon kết hợp appointment, marriage và recognition of local power thay vì chỉ thay toàn bộ elite cũ.
+Cao Ly (고려 / Goryeo, 918–1392) thường được nhớ vì tên “Korea” bắt nguồn từ Goryeo. Nhưng về institution, điều quan trọng là triều đại này phải integrate local elites sau thời fragmentation. Vương Kiến (왕건 / Wang Geon) kết hợp appointment, marriage và recognition of local power thay vì chỉ thay toàn bộ elite cũ.
 
 ## State structure và aristocratic order
 
@@ -18,7 +18,7 @@ Goryeo không sống trong binary “China–Korea”. Nó tương tác với So
 
 ## Material culture: celadon như engineering
 
-Goryeo celadon (고려청자) không chỉ là “đồ đẹp”. Glaze chemistry, kiln temperature, reducing atmosphere, clay quality và skilled labor phải đồng thời đạt control cao. Art history ở đây nối trực tiếp với materials science và production organization.
+Thanh từ Cao Ly (Goryeo celadon / 고려청자) không chỉ là “đồ đẹp”. Glaze chemistry, kiln temperature, reducing atmosphere, clay quality và skilled labor phải đồng thời đạt control cao. Art history ở đây nối trực tiếp với materials science và production organization.
 
 ## Mental Model
 
@@ -38,5 +38,5 @@ Woodblocks của Tripitaka Koreana được khắc với high accuracy. Từ per
 
 ## Goryeo women và family relation
 
-Compared with later Joseon, inheritance và post-marital residence trong Goryeo thường cho women elite vị trí property/kinship linh hoạt hơn. Điều này quan trọng vì nó chứng minh family norm không phải “Korean constant”. Neo-Confucian patrilineality mạnh của later Joseon là historical development, không phải timeless default.
+Compared with later nhà Triều Tiên (조선 / Joseon), inheritance và post-marital residence trong Goryeo thường cho women elite vị trí property/kinship linh hoạt hơn. Điều này quan trọng vì nó chứng minh family norm không phải “Korean constant”. Neo-Confucian patrilineality mạnh của later Joseon là historical development, không phải timeless default.
 

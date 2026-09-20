@@ -1,57 +1,48 @@
-# Developmental state và industrialization, 1961–1979
+# Developmental state và công nghiệp hoá, 1961–1979
 
-## Developmental state là gì?
+## Growth không đến từ một biến duy nhất
 
-**Developmental state (nhà nước kiến tạo phát triển / 발전국가)** mô tả một state có bureaucracy tương đối mạnh, sử dụng credit, industrial policy, export targets và coordination với firms để đẩy structural transformation. South Korea dưới Tổng thống Park Chung-hee (박정희 / Park Chung-hee) là case nổi bật, nhưng growth không thể giải thích bằng một variable duy nhất.
+**Developmental state (nhà nước kiến tạo phát triển / 발전국가)** mô tả một state có bureaucracy tương đối mạnh, sử dụng credit, industrial policy, export targets và coordination với firms để đẩy structural transformation. South Korea dưới Park Chung-hee (박정희 / Park Chung-hee) là case nổi bật, nhưng growth không thể giải thích bằng một variable duy nhất.
 
-## Export-led industrialization
+Cold War aid/security, land reform, education, global demand, labor discipline, exchange rate policy, entrepreneurship và technology transfer đều góp phần.
 
-Five-Year Economic Development Plans, exchange-rate policy, state-directed finance và export incentives giúp firms chuyển từ light industry sang heavy and chemical industry. Export tạo foreign exchange để nhập machinery và energy. Model có feedback loop:
+## Export-oriented industrialization
 
-```text
-export → foreign exchange → machinery/imported inputs
-      → productivity/capacity → more export
-```
+State ưu tiên export vì foreign exchange là bottleneck để nhập machine, oil và intermediate goods. Export target làm firm phải học quality, cost và delivery discipline. Success mở access to credit; failure có thể mất support.
 
-Nếu loop được quản lý tốt, growth accelerates; nếu debt và misallocation tăng quá nhanh, vulnerability cũng tăng.
+## Heavy and Chemical Industry
 
-## Chaebol
-
-Large business groups như Samsung, Hyundai, LG phát triển mạnh qua access to credit, state projects và export success. State–business relation vừa cooperation vừa discipline: successful exporters được reward, nhưng political connection cũng tạo rent-seeking risk.
-
-## Rural transformation và Saemaul
-
-Phong trào Làng mới (새마을운동 / Saemaul Undong, New Village Movement) đầu 1970s nhằm cải thiện rural infrastructure và mobilization. Nó có material achievement ở nhiều nơi nhưng cũng gắn với top-down mobilization và authoritarian political environment. Historical evaluation cần giữ cả hai dimension.
+1970s, policy chuyển mạnh vào steel, shipbuilding, petrochemicals, machinery và electronics. Strategy này tạo industrial depth nhưng cũng concentration risk và debt. Chaebol trở thành partner lớn của state vì scale cần thiết cho capital-intensive projects.
 
 ## Labor và human cost
 
-Rapid growth dựa vào long working hours, low wages trong nhiều sector và restricted labor rights. Female workers trong light manufacturing đóng vai trò lớn nhưng thường ít được nhắc trong growth narrative.
+High growth đi cùng long working hours, weak labor rights và authoritarian control. Rural-to-urban migration cung cấp factory labor. Women workers đặc biệt quan trọng trong light manufacturing nhưng thường bị trả lương thấp hơn và ít power hơn.
 
 ## Yushin system
 
-1972 Yushin Constitution củng cố presidential power và hạn chế political competition. Economic performance không xoá câu hỏi về repression; ngược lại, repression không khiến industrialization “không xảy ra”. Historical analysis phải tách descriptive outcome khỏi normative justification.
+1972 Yushin Constitution tăng mạnh presidential power, hạn chế political competition và civil liberties. Không nên kể development history chỉ bằng GDP chart; institutional cost và distribution of voice là một phần của history.
 
-## 1979 transition
+## Assassination và transition
 
 Park Chung-hee bị ám sát October 1979. Political vacuum sau đó không tự động dẫn đến democracy; military power struggle tiếp tục và dẫn vào crisis 1980.
 
-## Bureaucratic coordination
+## Mental Model
 
-Economic Planning Board and related agencies coordinated budgets, foreign loans and planning. State capacity mattered because industrial policy requires credible monitoring: if subsidized firm never exports or upgrades, government must decide whether to cut support. Without discipline, policy degenerates into patronage.
+> Developmental state là coordination engine. Nó có thể giảm market coordination failure trong catch-up industrialization, nhưng concentration of economic và political power cũng tạo capture, inequality và suppression risk.
 
-## Foreign capital and geopolitics
+## Why exports mattered
 
-Growth financed partly through foreign loans, US alliance environment, normalization with Japan in 1965 and overseas earnings, including construction in Middle East later. Domestic “self-help” narrative alone cannot explain capital accumulation; international Cold War and global demand were important constraints/opportunities.
+Domestic market của poor postwar Korea nhỏ. Exporting exposed firms to larger demand and forced foreign-currency earning. Foreign exchange was constraint because machines/oil could not be bought with won internationally. Export target therefore linked factory performance to macro balance of payments.
 
-## Heavy and Chemical Industry drive
+## Chaebol-state reciprocal dependence
 
-1970s push into steel, shipbuilding, petrochemicals and machinery required huge fixed capital. Scale economy means average cost falls as output rises, but initial risk is high. State credit socialized some risk to allow firms enter sectors private capital alone might avoid.
+State needed firms with scale to execute large projects; firms needed cheap credit, licenses and protection. This is reciprocal but asymmetric network. If performance discipline weakens, support becomes rent. If discipline too harsh or opaque, private risk-taking can be distorted.
 
-## Seoul concentration
+## Rural modernization
 
-Industrial and administrative growth pulled population into capital region. Urbanization created apartment construction, commute systems and land-price dynamics. Regional imbalance is thus not a recent accident; it has deep connection to developmental geography.
+Saemaul Undong (새마을운동) mobilized rural infrastructure/community projects in 1970s. It improved some roads, roofs, local facilities and income opportunities, but also operated within authoritarian mobilization. Evaluation should separate material outcomes from political context.
 
-## Learning by doing
+## Education-to-industry pipeline
 
-Korean firms often began with imported technology, licensing and OEM production, then improved process through repeated production. **Learning curve** means unit cost can fall as cumulative output rises. Catch-up is not simply “copying”; it requires absorptive capacity, engineers and organizational feedback.
+Industrial upgrading needs engineers, technicians and managers. Expansion of secondary/higher education and vocational training reduced skill bottleneck. Human capital does not cause growth alone, but without matching jobs investment in education may not translate into productivity.
 

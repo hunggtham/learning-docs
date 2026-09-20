@@ -1,38 +1,40 @@
-# Unified Silla và Balhae: “thống nhất” có nghĩa gì?
+# Tân La Thống nhất (통일신라 / Unified Silla) và Bột Hải (발해 / Balhae): “thống nhất” có nghĩa gì?
 
 ## War of unification và giới hạn của từ “unified”
 
-Silla liên minh với Tang để đánh Baekje năm 660 và Goguryeo năm 668, sau đó chiến đấu với Tang để giữ phần lớn bán đảo phía nam. Vì vậy **Unified Silla (통일신라)** là tên hữu ích nhưng dễ gây nhầm nếu hiểu là toàn bộ historical space trước đó đã nằm trong một nhà nước duy nhất.
+Tân La (신라 / Silla) liên minh với Tang để đánh Bách Tế (백제 / Baekje) năm 660 và Cao Câu Ly (고구려 / Goguryeo) năm 668, sau đó chiến đấu với Tang để giữ phần lớn bán đảo phía nam. Vì vậy **Tân La Thống nhất (통일신라 / Unified Silla)** là tên periodization hữu ích nhưng không nên hiểu là toàn bộ historical space của Goguryeo đã nằm trong một state duy nhất.
 
-Ở phía bắc, **Bột Hải (발해 / Balhae)** được thành lập năm 698 và phát triển trên phần lớn lãnh thổ cũ của Goguryeo cùng vùng Manchuria. Sử học Hàn Quốc thường gọi giai đoạn này là **Northern and Southern States Period (남북국시대)** để nhấn mạnh Silla và Balhae cùng tồn tại.
+## Bột Hải (발해 / Balhae) và mô hình Nam–Bắc quốc
 
-## Silla sau chiến tranh: integration problem
+Balhae được thành lập năm 698 ở vùng former Goguryeo/Manchuria. Korean historiography hiện thường dùng **Northern and Southern States Period (Nam–Bắc quốc / 남북국시대)** để đặt Unified Silla và Balhae trong cùng frame.
 
-Chiếm territory dễ hơn tích hợp territory. Silla phải quản lý former Baekje/Goguryeo populations, local elites và tax base. Capital Gyeongju (경주 / Gyeongju) trở thành trung tâm aristocratic culture nhưng sự tập trung quyền lực và bone-rank rigidity cũng tạo giới hạn.
+Balhae có population đa dạng, gồm groups gắn với former Goguryeo và Mohe. Identity của Balhae là chủ đề có historiographical sensitivity vì modern national narratives có thể project backward. Cần tách evidence về state composition khỏi modern territorial claim.
 
-Buddhist monasteries, trade với Tang và maritime routes kết nối Silla với East Asia. Figures như Jang Bogo (장보고) cho thấy commerce và naval security có thể tạo power ngoài court hierarchy.
+## Unified Silla: capital concentration và bone rank
 
-## Balhae như multi-ethnic polity
+Gyeongju trở thành capital cực lớn theo tiêu chuẩn thời đó. Aristocratic elite, temple và long-distance trade tạo cultural florescence. Nhưng bone-rank constraint và concentration của land/status tạo rigidity.
 
-Balhae có elite liên hệ với Goguryeo legacy và population đa dạng, trong đó có các nhóm Mohe/Malgal. Việc cố ép Balhae vào một category “thuần dân tộc” hiện đại làm mất tính phức tạp của frontier society.
+## Trade và maritime East Asia
 
-## Knowledge Connection: integration sau merger
+Silla merchants/monks đi Tang China và Japan. Jang Bogo (장보고) xây maritime network tại Cheonghaejin trong thế kỷ IX, cho thấy sea power có thể tạo economic-political node ngoài capital.
 
-Trong software merger, hai codebase không tự hợp nhất chỉ vì repository được gộp. Cần reconcile schema, identity, access control và operational practice. Political unification cũng vậy: conquest chỉ là event; integration là process kéo dài.
+## Mental Model
 
-## Common Misconceptions
+“Unification” là property cần định nghĩa domain. Nếu set cần thống nhất là ba kingdom ở phần lớn peninsula, statement có ý nghĩa. Nếu set là toàn bộ former Goguryeo space, statement không còn đầy đủ. Trong mathematics/software, trước khi nói system “complete”, phải định nghĩa universe; lịch sử cũng vậy.
 
-“668 = Korea hoàn toàn thống nhất” là cách nói quá đơn giản. 668 kết thúc Goguryeo nhưng sau đó còn Silla–Tang wars và sự hình thành Balhae. Một chronology đúng phải phân biệt military victory, territorial control và political integration.
+## Capital Gyeongju như concentration effect
 
-## Bone rank và structural ceiling
+Khi political elite, temples, artisans và tribute tập trung vào capital, cultural production có network effect. Artisan cần patron; monk cần text/network; ruler cần monument. Concentration tăng output nhưng cũng tăng center–periphery imbalance.
 
-Bone-rank system không chỉ quyết định title; nó ảnh hưởng office ceiling, marriage và đôi khi cả material display. Khi capability của individual không thể vượt birth category, system hy sinh allocative efficiency để đổi lấy predictable hierarchy. Trong short term điều này có thể stabilize aristocratic coalition; trong long term nó làm talented actors bên ngoài top rank khó tích hợp.
+## Land và aristocratic power
 
-## Buddhist culture và transregional mobility
+Nếu elite có land/revenue base hereditary mạnh, central throne phụ thuộc coalition với aristocracy. Bone-rank giới hạn promotion càng làm talented lower-status groups khó enter top offices. Rigidity giảm capacity adapt khi external conditions đổi.
 
-Monks như Wonhyo và Uisang cho thấy intellectual exchange không bị giới hạn bởi political border. Buddhist doctrine, pilgrimage và texts tạo một scholarly network gần giống “international research community” premodern. Knowledge có thể move theo people và manuscript routes trước khi có nation-state university.
+## Balhae administration và Tang influence
 
-## Balhae và diplomatic complexity
+Balhae adopted administrative forms influenced by Tang while maintaining own court. Borrowing institution không đồng nghĩa lack of autonomy. Software analogy: using foreign framework không khiến application belong to framework creator; implementation/local governance vẫn riêng.
 
-Balhae giao thiệp với Tang, Japan và neighboring peoples. Khi historical source về Balhae ít hơn Silla, historian phải combine Chinese/Japanese records với archaeology. Đây là reminder rằng archive survival bias ảnh hưởng độ chi tiết của narrative: society để lại nhiều text thường trông “quan trọng hơn” chỉ vì ta thấy nó rõ hơn.
+## Evidence problem
+
+Balhae history có fewer surviving internal sources than Silla, và nhiều records đến từ neighbors. Đây là reminder rằng archive survival bias ảnh hưởng độ chi tiết của narrative: society để lại nhiều text thường trông “quan trọng hơn” chỉ vì ta thấy nó rõ hơn.
 

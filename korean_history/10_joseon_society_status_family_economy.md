@@ -1,4 +1,4 @@
-# Xã hội Joseon: status, family, land và economic life
+# Xã hội nhà Triều Tiên (조선 / Joseon): status, family, land và economic life
 
 ## Status system không phải bốn hộp bất biến
 
@@ -12,7 +12,7 @@ Nobi thường được dịch là slave, nhưng institution thay đổi theo th
 
 ## Family chuyển sang patrilineal order mạnh hơn
 
-Early Joseon vẫn kế thừa một số pattern Goryeo như inheritance tương đối cân bằng hơn và post-marital residence linh hoạt. Qua nhiều thế kỷ, Neo-Confucian ritual và lineage organization làm patrilineal principle mạnh hơn: eldest-son role, ancestral rites, genealogy và inheritance practice thay đổi.
+Early Joseon vẫn kế thừa một số pattern Cao Ly (고려 / Goryeo) như inheritance tương đối cân bằng hơn và post-marital residence linh hoạt. Qua nhiều thế kỷ, Neo-Confucian ritual và lineage organization làm patrilineal principle mạnh hơn: eldest-son role, ancestral rites, genealogy và inheritance practice thay đổi.
 
 Đây là ví dụ institution có thể **diffuse gradually**. State không chỉ ban một law rồi society lập tức đổi; ritual manual, education, elite imitation và local pressure cùng tạo change.
 
@@ -39,4 +39,3 @@ State cần commerce để goods circulate nhưng Confucian political thought th
 ## Status erosion
 
 Late Joseon chứng kiến mua bán/claim yangban status rộng hơn, nobi population/legal status thay đổi và formal hereditary boundary suy yếu. Nhưng inequality không biến mất; nó chuyển mechanism từ birth category thuần sang combination của wealth, education, network và symbolic capital.
-

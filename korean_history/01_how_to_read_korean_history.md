@@ -12,11 +12,11 @@ Một lịch sử tốt không chỉ trả lời “chuyện gì xảy ra”. N�
 
 ## Periodization là model chứ không phải tự nhiên
 
-Tên như “Three Kingdoms”, “Unified Silla”, “Late Joseon” là **periodization (phân kỳ lịch sử / 시대구분)**. Chúng giúp compress lượng dữ liệu lớn thành model, giống cách software engineer chia system thành module. Nhưng boundary của module có thể che khuất quá trình chuyển tiếp. Năm 1392 rất quan trọng vì triều Joseon được thành lập, nhưng không phải mọi cấu trúc xã hội Goryeo biến mất vào ngày hôm đó.
+Tên như “Three Kingdoms”, “Tân La Thống nhất (통일신라 / Unified Silla)”, “Late Joseon” là **periodization (phân kỳ lịch sử / 시대구분)**. Chúng giúp compress lượng dữ liệu lớn thành model, giống cách software engineer chia system thành module. Nhưng boundary của module có thể che khuất quá trình chuyển tiếp. Năm 1392 rất quan trọng vì triều nhà Triều Tiên (조선 / Joseon) được thành lập, nhưng không phải mọi cấu trúc xã hội Cao Ly (고려 / Goryeo) biến mất vào ngày hôm đó.
 
 ## Peninsula ≠ Republic of Korea
 
-Trước 1945, “lịch sử Hàn Quốc” chủ yếu là lịch sử của các cộng đồng và nhà nước trên bán đảo cùng những vùng liên quan. Sau 1945, cần phân biệt **bán đảo Triều Tiên (한반도 / Korean Peninsula)**, **Đại Hàn Dân Quốc/Hàn Quốc (대한민국 / Republic of Korea)** và **Cộng hòa Dân chủ Nhân dân Triều Tiên (조선민주주의인민공화국 / Democratic People's Republic of Korea)**. Đọc quá khứ như thể mọi thứ tất yếu dẫn tới biên giới hiện nay là một dạng **teleology (mục đích luận / 목적론)**.
+Trước 1945, “lịch sử Hàn Quốc” chủ yếu là lịch sử của các cộng đồng và nhà nước trên bán đảo cùng những vùng liên quan. Sau 1945, cần phân biệt **Korean Peninsula (bán đảo Triều Tiên / 한반도)**, **Republic of Korea (Đại Hàn Dân Quốc / 대한민국)** và **Democratic People's Republic of Korea (CHDCND Triều Tiên / 조선민주주의인민공화국)**. Đọc quá khứ như thể mọi thứ tất yếu dẫn tới biên giới hiện nay là một dạng **teleology (mục đích luận / 목적론)**.
 
 ## Causal graph như một mental model
 

@@ -10,43 +10,33 @@ Khi surplus có thể được lưu trữ, xã hội xuất hiện bài toán m�
 
 Bronze (đồng thanh / 청동) đắt và khó sản xuất hơn stone. Vì vậy bronze dagger, mirror hay ritual object thường không chỉ là tool; chúng có thể signal status. Dolmen (고인돌) cũng cho thấy một cộng đồng có khả năng huy động lao động lớn để xây mộ. Archaeology ở đây cho phép suy luận về organization từ material remains, nhưng cần tránh suy diễn quá mức từ một loại hiện vật.
 
-## Gojoseon và vấn đề giữa myth với state formation
+## Cổ Triều Tiên (고조선 / Gojoseon) và vấn đề giữa myth với state formation
 
-**Cổ Triều Tiên (고조선 / Gojoseon)** là nhà nước sớm quan trọng trong lịch sử bán đảo và vùng Liêu Đông. Truyền thống gắn nguồn gốc với Dangun, nhưng sử học phân biệt origin narrative với reconstruction từ archaeology và written sources. Gojoseon dần xuất hiện như một polity có lãnh thổ, elite và khả năng ngoại giao/chiến tranh trong các nguồn cổ.
+**Cổ Triều Tiên (고조선 / Gojoseon)** là nhà nước sớm quan trọng trong lịch sử bán đảo và vùng Liêu Đông. Truyền thống gắn nguồn gốc với Đàn Quân (단군 / Dangun), nhưng sử học phân biệt origin narrative với reconstruction từ archaeology và written sources. Gojoseon dần xuất hiện như một polity có lãnh thổ, elite và khả năng ngoại giao/chiến tranh trong các nguồn cổ.
 
-Giai đoạn **Wiman Joseon (위만조선)** cho thấy early Korean history không phải một container dân tộc khép kín. Migration, trade và political competition xuyên biên giới diễn ra liên tục. Khi nhà Hán đánh bại Vệ Mãn Cổ Triều Tiên năm 108 BCE và thiết lập commanderies, vùng này trở thành interface phức tạp giữa local societies và imperial administration.
+Giai đoạn **Vệ Mãn Triều Tiên (Wiman Joseon / 위만조선)** cho thấy early Korean history không phải một container dân tộc khép kín. Migration, trade và political competition xuyên biên giới diễn ra liên tục. Khi nhà Hán đánh bại Wiman Joseon năm 108 BCE và thiết lập commanderies, vùng này trở thành interface phức tạp giữa local societies và imperial administration.
 
 ## Buyeo, Okjeo, Dongye và Samhan
 
-Sau và song song với Gojoseon tồn tại nhiều political communities như Buyeo (부여), Okjeo (옥저), Dongye (동예), và Samhan (삼한: Mahan, Jinhan, Byeonhan). Không nên coi chúng chỉ là “bản nháp” của các vương quốc sau. Mỗi cộng đồng có ecology, trade network và political structure riêng.
-
-Chính từ môi trường nhiều polity cạnh tranh này, Goguryeo, Baekje, Silla và Gaya (가야 / Gaya) dần phát triển. **State formation (hình thành nhà nước / 국가 형성)** là process: consolidation of chiefs, taxation, warfare, law, ritual legitimacy và territorial administration.
-
-## Knowledge Connection: complexity và scale
-
-Khi population tăng, coordination cost tăng không tuyến tính. Một village vài chục người có thể dựa nhiều vào face-to-face trust; một polity hàng trăm nghìn người cần rule, record, tax unit và official hierarchy. Đây là vấn đề tương tự distributed systems: scale buộc system chuyển từ informal coordination sang protocol rõ hơn.
+Các polity như Buyeo (부여), Okjeo (옥저), Dongye (동예), Mahan, Jinhan, Byeonhan không phải footnote. Chúng cho thấy state formation là branching process: nhiều political form cạnh tranh và merge, không phải một line duy nhất từ Dangun đến hiện đại.
 
 ## Mental Model
 
-> Nhà nước không xuất hiện chỉ vì có “một vị vua đầu tiên”. Nó xuất hiện khi một network cộng đồng được kết nối đủ chặt bằng extraction, coercion, exchange và legitimacy để quyền lực có thể hoạt động vượt ra ngoài quan hệ cá nhân trực tiếp.
+> State formation xảy ra khi một network cộng đồng có thể duy trì extraction, authority và coordination trên quy mô lớn hơn local village. Bronze weapon hay royal myth chỉ là visible output; phía sau là food surplus, labor organization, warfare và legitimacy.
 
-## Common Misconceptions
+## Archaeology và inference
 
-“Gojoseon = toàn bộ Korea hiện đại” là projection ngược biên giới quốc gia hiện nay vào ancient world. Ngược lại, nói “vì truyền thuyết Dangun không thể kiểm chứng literal nên Gojoseon không quan trọng” cũng sai: polity và narrative là hai câu hỏi khác nhau.
+Không có text không có nghĩa “không có lịch sử”. Settlement size, burial differentiation, imported objects, agricultural remains và fortification đều là variables. Nếu burial A có labor cost lớn hơn burial B nhiều orders of magnitude, ta có evidence về inequality—but chưa đủ để biết exact title của người nằm trong mộ. Đây là difference giữa measurement và interpretation.
 
-## Archaeology đang suy luận điều gì?
+## Rice agriculture và coordination
 
-Một pot, stone tool hay tomb không tự nói “xã hội có giai cấp”. Archaeologist phải infer từ pattern. Nếu một số grave có grave goods nhiều hơn hẳn, nếu settlement có defensive wall, nếu bronze object concentrated trong một số burial, ta có evidence cho unequal resource access và coordination. Nhưng mỗi inference có uncertainty. Một grave giàu có thể phản ánh ritual choice, không nhất thiết là exact income ranking.
+Wet-rice agriculture ở một số vùng cần seasonal timing và water control. Nó không mechanically tạo state, nhưng có thể tăng payoff của cooperation và conflict over irrigation. Geography + technology làm thay đổi incentive structure.
 
-Điều này giống reverse engineering: ta nhìn output còn sót lại và cố khôi phục hidden system đã sinh ra output. Vì source incomplete, multiple models có thể fit same evidence; model tốt hơn là model giải thích được nhiều evidence hơn với ít assumption tùy tiện hơn.
+## Iron và military-economic transition
 
-## Agriculture không tự động tạo civilization
+Iron tools/weapons rẻ và scalable hơn bronze khi production network mature. Agricultural productivity và military equipment có thể expand; political competition intensifies. Technology change ở đây giống platform shift: component mới rẻ hơn làm possible scale mới, nhưng outcome phụ thuộc institution.
 
-Agriculture tăng khả năng tạo surplus nhưng cũng tăng risk: crop failure, disease transmission trong settlement đông, conflict về land. Nhà nước sớm xuất hiện khi cộng đồng tìm cách quản lý và khai thác surplus ở scale lớn hơn, chứ không chỉ vì “biết trồng lúa”. Với Korean peninsula, wet-rice agriculture trở nên ngày càng quan trọng nhưng regional ecology khiến millet, barley và fishing vẫn giữ vai trò lớn.
+## Chinese commanderies như interface zone
 
-## Lelang Commandery và vấn đề contact zone
-
-Sau 108 BCE, Lelang (낙랑군) và các Han commanderies trở thành contact zones nơi imperial administration, local population và long-distance trade gặp nhau. Archaeological objects mang style Han không có nghĩa người sử dụng đều “người Hán” theo modern ethnic concept. Material culture có thể được imported, imitated hoặc appropriated.
-
-Đây là lý do ancient identity phải được xử lý thận trọng. Ethnicity, polity membership, language và material style không phải một biến duy nhất.
+Sau 108 BCE, Han commanderies đặc biệt Lelang trở thành node trade, administration và cultural exchange. Không nên model chúng như simple “foreign block” tách khỏi local world. Frontier zone thường có mixed population, bilingual mediation và economic interdependence.
 

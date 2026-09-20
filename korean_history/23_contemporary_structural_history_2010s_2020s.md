@@ -24,7 +24,7 @@ Large-scale candlelight demonstrations giữa 2016–2017 cho thấy offline mas
 
 COVID-19 period làm visible relation giữa public health infrastructure, digital tracing, privacy debate, small-business burden và remote work. Pandemic là external shock tương tự những shock lịch sử trước: nó không tạo mọi trend từ zero nhưng accelerate trend đã có.
 
-## Hallyu thành global cultural infrastructure
+## Làn sóng Hàn Quốc (한류 / Hallyu, Korean Wave) thành global cultural infrastructure
 
 By 2020s, Korean content không còn chỉ là niche regional export. K-pop, film, drama, webtoon và beauty operate qua global platform networks. Historical significance nằm ở việc Korea chuyển từ primarily technology/manufacturing exporter sang major symbolic-content producer.
 

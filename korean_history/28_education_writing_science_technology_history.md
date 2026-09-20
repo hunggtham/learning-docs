@@ -1,42 +1,54 @@
-# Lịch sử giáo dục, chữ viết, khoa học và công nghệ
-
-## Knowledge system thay đổi state capacity
-
-Một society lưu knowledge bằng oral tradition, manuscript, printed book hay digital database sẽ có replication cost khác nhau. Korean history đặc biệt thú vị vì nhiều information revolutions chồng lên nhau: Classical Chinese literacy, woodblock/movable type, Hangul, mass schooling, broadband và smartphone.
+# Education, Writing, Science và Technology trong lịch sử Hàn Quốc
 
 ## Classical learning và examination
 
-Goryeo và Joseon dùng examination để tuyển officials nhưng curriculum dựa heavily on Confucian classics. Examination biến textual knowledge thành credential, tạo powerful incentive cho elite education.
+Cao Ly (고려 / Goryeo) và nhà Triều Tiên (조선 / Joseon) dùng examination để tuyển officials nhưng curriculum dựa heavily on Confucian classics. Examination biến textual mastery thành political credential, tạo demand for schooling và book production.
 
-## Hangul
+## Writing systems
 
-Hangul hạ barrier biểu diễn Korean speech, nhưng social prestige của Hanja khiến full transition kéo dài. Female readers và vernacular literature đóng vai trò quan trọng trong diffusion. Twentieth century mass education mới đưa Hangul literacy tới scale toàn dân.
+Classical Chinese/Hanja là medium elite trong nhiều thế kỷ. Idu, hyangchal và gugyeol là adaptations để map Korean language/functions lên Chinese characters. Hangul thế kỷ XV giảm encoding complexity cho spoken Korean.
+
+Writing technology định nghĩa ai có thể participate trong written public sphere. Literacy cost thấp hơn không automatically tạo equality, nhưng nó mở possibility.
 
 ## Printing
 
-Korea có long tradition woodblock và metal movable type. Technology quan trọng, nhưng printing revolution chỉ xảy ra khi có paper, demand, distribution và institutions. Tool không tự tạo mass literacy.
+Woodblock và metal movable type có lịch sử dài. Printing giúp replicate Buddhist/Confucian texts và state documents. Information replication cần standard text, proofreading và distribution—not just printing machine.
 
-## Modern school system
+## Astronomy, calendar, measurement
 
-Late nineteenth-century reform, missionary schools, colonial schools và post-1945 mass education tạo layered system. Postwar governments đầu tư mạnh vào primary/secondary expansion; university credential trở thành key mobility mechanism trong industrial economy.
+Premodern state cần calendar cho agriculture/ritual; astronomical observation và timekeeping vì vậy là governance technology. Rain gauge, land survey, map và census đều chuyển world thành measurement.
 
-## Science and engineering state
+## Modern education
 
-Industrialization cần engineers, technicians và research institutions. Science policy, chaebol R&D và university expansion giúp Korea chuyển từ technology import/learning sang semiconductor, telecom, shipbuilding, automobile và digital platform capability.
+Late nineteenth-century new schools, colonial education, post-1945 mass schooling và university expansion tạo human-capital transition. Education từ elite privilege trở thành mass institution, nhưng competition shifts từ access sang prestige/credential.
 
-## Mental Model
+## Industrial technology
 
-> Công nghệ không chỉ là máy móc. Một society có thể coi school, examination, writing system và standard measurement cũng là “information technology” vì chúng thay đổi cách knowledge được encode, verified và distributed.
+Post-1960 technology transfer ban đầu dựa imported machinery/licensing, rồi firms tăng domestic R&D. Shipbuilding, electronics, semiconductor cần cumulative learning. “Technology transfer” không phải tải file; tacit knowledge đòi people, practice và quality systems.
 
-## Credential system as allocation algorithm
+## Digitalization
 
-Examination converts multidimensional person into score/rank so organization can allocate scarce seats. This reduces some nepotism but compresses information. Every scoring algorithm has objective function; if society optimizes too heavily for test score, coaching and strategic behavior increase.
+Broadband, semiconductor, smartphone và platform economy đặt Korea trong global technology network. Historical line từ woodblock → printing → Hangul → mass education → broadband không phải deterministic, nhưng tất cả đều liên quan **cost of storing, copying and transmitting information**.
 
-## Hangul to digital encoding
+## Knowledge Connection
 
-Modern computing requires standardized character encoding. Korean text passed through multiple keyboard/encoding standards before Unicode made cross-platform representation easier. Historical writing system and modern computer encoding solve analogous problem at different layers: how to map language units to reproducible symbols.
+Shannon information theory không dùng để giải thích meaning của Hangul, nhưng mental model chung hữu ích:
 
-## Research and development
+```text
+message → encoding → medium → transmission → decoding
+```
 
-As catch-up narrows, copying existing process yields less gain; frontier innovation needs original R&D. Korea’s rising R&D intensity and university–industry research therefore mark transition from adoption economy toward knowledge creation economy, though sectoral dependence and basic-research balance remain questions.
+Mỗi historical information technology thay đổi cost hoặc error ở một stage của pipeline.
+
+## School as synchronization institution
+
+Mass school synchronizes age cohorts, calendar and curriculum. Before mass schooling, education path highly heterogeneous; modern school creates standardized stages and credentials. Standardization enables mass administration but also enables ranking at scale.
+
+## R&D catch-up
+
+Early industrializers invent frontier technology; late industrializers can import and imitate but must develop absorptive capacity. Engineers need enough scientific/technical knowledge to understand, adapt and improve imported process. Education and industrial policy are complements.
+
+## Semiconductor learning curve
+
+Yield improvement comes from reducing defects across millions/billions of process steps. Small defect-rate gains compound economically. This is statistical process control as history: national industry capability emerges from countless local measurement-feedback loops.
 

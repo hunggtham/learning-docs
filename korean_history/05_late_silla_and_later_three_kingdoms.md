@@ -1,4 +1,4 @@
-# Late Silla và Later Three Kingdoms: khi center mất khả năng giữ network
+# Late Tân La (신라 / Silla) và Later Three Kingdoms: khi center mất khả năng giữ network
 
 ## Vì sao một nhà nước suy yếu?
 
@@ -6,11 +6,11 @@ Một state không sụp đổ chỉ vì “vua yếu”. Nếu center không th
 
 Cuối Silla, aristocratic conflict, local powerful families (호족) và peasant uprisings cùng làm authority phân mảnh. Đây là ví dụ của **principal–agent problem**: center ra lệnh nhưng local agent có resource và information riêng nên không còn tuân thủ hoàn toàn.
 
-## Later Baekje và Later Goguryeo/Taebong
+## Later Bách Tế (백제 / Baekje) và Later Cao Câu Ly (고구려 / Goguryeo)/Taebong
 
-Chân Huyên (견훤 / Gyeon Hwon) lập Later Baekje; Cung Duệ (궁예 / Gung Ye) xây Later Goguryeo rồi Taebong. Điều đáng chú ý là các regime mới dùng historical names cũ. Past identity trở thành political resource: claim legacy giúp tạo legitimacy cho coalition mới.
+Gyeon Hwon (견훤) lập Later Baekje; Gung Ye (궁예) xây Later Goguryeo rồi Taebong. Điều đáng chú ý là các regime mới dùng historical names cũ. Past identity trở thành political resource: claim legacy giúp tạo legitimacy cho coalition mới.
 
-## Wang Geon và Goryeo
+## Vương Kiến (왕건 / Wang Geon) và Cao Ly (고려 / Goryeo)
 
 Vương Kiến (왕건 / Wang Geon) lật Gung Ye năm 918, lập Goryeo và thống nhất Later Three Kingdoms năm 936. Thành công không chỉ nhờ battlefield. Ông dùng marriage alliances, accommodation với local elites và symbolic continuity để giảm cost của conquest.
 
@@ -26,7 +26,7 @@ Một central state suy yếu khi tax collector trên giấy không còn chuyể
 
 ## Buddhism và new legitimacy
 
-Late Silla không chỉ có political breakdown mà còn intellectual change. Seon Buddhism (선종) phát triển qua mountain monasteries, nhiều khi gắn với local elites. Religious network có thể cung cấp legitimacy và connectivity cho regional power ngoài capital Gyeongju (경주 / Gyeongju).
+Late Silla không chỉ có political breakdown mà còn intellectual change. Seon Buddhism (선종) phát triển qua mountain monasteries, nhiều khi gắn với local elites. Religious network có thể cung cấp legitimacy và connectivity cho regional power ngoài capital Gyeongju.
 
 ## Goryeo thắng bằng integration cost thấp hơn
 

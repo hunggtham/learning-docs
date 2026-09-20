@@ -1,14 +1,14 @@
-# Chiến tranh Nhâm Thìn, các cuộc xâm lược Mãn Châu và bài toán tái thiết
+# Chiến tranh Nhâm Thìn (임진왜란 / Imjin War), Manchu invasions và bài toán tái thiết
 
 ## 1592: chiến tranh như system shock
 
-Quân của Toyotomi Hideyoshi xâm lược **nhà Triều Tiên (조선 / Joseon)** năm 1592, mở cuộc chiến thường gọi **Chiến tranh Nhâm Thìn (임진왜란 / Imjin War)**, kéo dài với phase thứ hai đến 1598. Early Joseon defense bộc lộ weakness về preparedness và command coordination; nhà Minh can thiệp, trong khi naval warfare dưới **Đô đốc Lý Thuấn Thần (이순신 / Admiral Yi Sun-sin)** làm Japanese supply lines chịu áp lực lớn.
+Toyotomi Hideyoshi's forces invaded nhà Triều Tiên (조선 / Joseon) in 1592, mở cuộc chiến thường gọi **Imjin War (임진왜란)**, kéo dài với phase thứ hai đến 1598. Early Joseon defense bộc lộ weakness về preparedness và command coordination; Ming China can thiệp, trong khi naval warfare dưới Lý Thuấn Thần (이순신 / Yi Sun-sin) làm Japanese supply lines chịu áp lực lớn.
 
 War logistics là điểm then chốt. Army không chỉ cần thắng battle; hàng chục nghìn người phải được cấp grain, weapon và transport. Nếu supply chain bị cắt, tactical superiority không bảo đảm strategic success.
 
 ## Righteous armies và local mobilization
 
-**Nghĩa binh (의병 / Uibyeong)** cho thấy non-state actors có thể tham gia defense. Nhưng romanticize toàn bộ resistance sẽ che đi sự đa dạng motivation và mức độ organization. Historical analysis cần nhìn cả local elite, monks, peasants, regular army và allied forces.
+**Uibyeong (의병)** cho thấy non-state actors có thể tham gia defense. Nhưng romanticize toàn bộ resistance sẽ che đi sự đa dạng motivation và mức độ organization. Historical analysis cần nhìn cả local elite, monks, peasants, regular army và allied forces.
 
 ## Manchu invasions và trật tự East Asia mới
 
@@ -16,7 +16,7 @@ Joseon tiếp tục gặp Manchu invasions năm 1627 và 1636. Sau 1636, Joseon 
 
 ## Reconstruction
 
-War phá farmland, population registry, local administration và cultural property. Reconstruction cần restore tax base, military system và production. **Luật Đại Đồng (대동법 / Daedong Law)**, triển khai dần trong thế kỷ XVII, cải cách tribute taxation theo hướng standardized payment hơn, cho thấy war shock có thể accelerate institutional change nhưng reform vẫn cần nhiều thập kỷ.
+War phá farmland, population registry, local administration và cultural property. Reconstruction cần restore tax base, military system và production. **Daedong law (대동법)**, triển khai dần trong thế kỷ XVII, cải cách tribute taxation theo hướng standardized payment hơn, cho thấy war shock có thể accelerate institutional change nhưng reform vẫn cần nhiều thập kỷ.
 
 ## Mental Model
 

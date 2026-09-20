@@ -14,7 +14,7 @@ Population growth và land concentration tạo tension. Reforms như Daedong law
 
 ## New religions và social thought
 
-Catholicism (천주교) vào Joseon qua books và scholar networks trước khi missionary network phát triển mạnh. Nó thách thức ancestral ritual và cosmological assumptions, dẫn đến persecution. Donghak (동학), được Choe Je-u (최제우 / Choe Je-u) phát triển từ 1860, kết hợp religious và social critique, sau này trở thành lực lượng quan trọng trong 1894.
+Catholicism (천주교) vào nhà Triều Tiên (조선 / Joseon) qua books và scholar networks trước khi missionary network phát triển mạnh. Nó thách thức ancestral ritual và cosmological assumptions, dẫn đến persecution. Donghak (동학), được Choe Je-u phát triển từ 1860, kết hợp religious và social critique, sau này trở thành lực lượng quan trọng trong 1894.
 
 ## Knowledge Connection: institutional lag
 
@@ -35,4 +35,3 @@ Sau khi Qing trở nên powerful, một số scholars quan sát commercial/techn
 ## Peasant protest và state information failure
 
 Local corruption có thể tồn tại lâu nếu center nhận report đã filtered. Uprising là extreme signal rằng ordinary feedback channel không hoạt động. Trong control theory, system không có sensor tốt sẽ correction quá muộn và cần intervention mạnh hơn.
-

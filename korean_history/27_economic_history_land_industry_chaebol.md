@@ -2,7 +2,7 @@
 
 ## Land là production system đầu tiên
 
-Trong premodern Korea, land tax là core state revenue. Ai kiểm soát land, labor và tax rights có political consequence. Goryeo/Joseon reforms thường xoay quanh land distribution vì fiscal state không thể tách khỏi agrarian production.
+Trong premodern Korea, land tax là core state revenue. Ai kiểm soát land, labor và tax rights có political consequence. Cao Ly (고려 / Goryeo)/nhà Triều Tiên (조선 / Joseon) reforms thường xoay quanh land distribution vì fiscal state không thể tách khỏi agrarian production.
 
 ## Marketization
 

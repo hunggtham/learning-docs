@@ -1,24 +1,24 @@
-# Thế kỷ XIX: mở cửa, Donghak, Gabo Reform và Korean Empire
+# Thế kỷ XIX: mở cửa, Donghak, Cải cách Giáp Ngọ (갑오개혁 / Gabo Reform) và Korean Empire
 
 ## “Opening” không phải lựa chọn trong môi trường bình đẳng
 
-Joseon thế kỷ XIX đối mặt fiscal strain, elite factionalism, peasant unrest và imperial expansion ở East Asia. Hiệp ước Ganghwa (강화도조약 / Treaty of Ganghwa) năm 1876 mở ports cho Japan trong một asymmetric context. Từ đây modernization, sovereignty và imperial competition gắn chặt với nhau.
+nhà Triều Tiên (조선 / Joseon) thế kỷ XIX đối mặt fiscal strain, elite factionalism, peasant unrest và imperial expansion ở East Asia. Treaty of Ganghwa năm 1876 mở ports cho Japan trong một asymmetric context. Từ đây modernization, sovereignty và imperial competition gắn chặt với nhau.
 
 ## Reform conflict
 
-Các nhóm reform không đồng nhất. Một số muốn gradual strengthening; một số chịu ảnh hưởng Meiji Japan và Western institutions. Binh biến Nhâm Ngọ (임오군란 / Imo Mutiny) và Chính biến Giáp Thân (갑신정변 / Gapsin Coup) cho thấy reform vừa là policy dispute vừa là struggle về coalition và foreign influence.
+Các nhóm reform không đồng nhất. Một số muốn gradual strengthening; một số chịu ảnh hưởng Meiji Japan và Western institutions. Imo Mutiny (1882) và Gapsin Coup (1884) cho thấy reform vừa là policy dispute vừa là struggle về coalition và foreign influence.
 
-## Donghak Peasant Movement 1894
+## Phong trào nông dân Đông Học (동학농민운동 / Donghak Peasant Movement) 1894
 
-Phong trào nông dân Đông Học (동학농민운동 / Donghak Peasant Movement) kết hợp grievance về local exploitation, social inequality và foreign pressure. Uprising tạo crisis khiến Qing và Japan đưa quân vào Korea, rồi Sino-Japanese War bùng nổ. Đây là ví dụ local conflict bị embedded trong international power competition.
+Donghak Peasant Movement (동학농민운동) kết hợp grievance về local exploitation, social inequality và foreign pressure. Uprising tạo crisis khiến Qing và Japan đưa quân vào Korea, rồi Sino-Japanese War bùng nổ. Đây là ví dụ local conflict bị embedded trong international power competition.
 
 ## Gabo Reforms
 
-Cải cách Giáp Ngọ (갑오개혁 / Gabo Reform) thay đổi status, administration, tax và legal institutions, bao gồm bãi bỏ nhiều privilege của hereditary status order. Nhưng reform diễn ra trong môi trường Japanese influence mạnh và domestic political instability, nên không thể đọc như “modernization package” trung tính.
+Gabo Reforms (갑오개혁) thay đổi status, administration, tax và legal institutions, bao gồm bãi bỏ nhiều privilege của hereditary status order. Nhưng reform diễn ra trong môi trường Japanese influence mạnh và domestic political instability, nên không thể đọc như “modernization package” trung tính.
 
 ## Korean Empire
 
-Năm 1897, Vua Gojong (고종 / King Gojong) tuyên bố **Đại Hàn Đế Quốc (대한제국 / Korean Empire)**. Việc dùng emperor title là claim sovereignty trong international system, không đơn giản là đổi tên. Regime thúc đẩy một số modernization về military, infrastructure, education và administration nhưng bị giới hạn bởi internal capacity và imperial pressure.
+Năm 1897, Gojong tuyên bố **Đế quốc Đại Hàn (Korean Empire / 대한제국)**. Việc dùng emperor title là claim sovereignty trong international system, không đơn giản là đổi tên. Regime thúc đẩy một số modernization về military, infrastructure, education và administration nhưng bị giới hạn bởi internal capacity và imperial pressure.
 
 Japan thiết lập protectorate năm 1905 và annex Korea năm 1910. Để hiểu path tới annexation, cần nhìn cả Russo-Japanese War, great-power diplomacy, military imbalance và erosion of Korean sovereignty.
 
@@ -45,4 +45,3 @@ Abolition of formal status distinctions, reform of examination and administratio
 ## Rail, telegraph và time-space compression
 
 Late nineteenth/early twentieth-century infrastructure như telegraph và railway giảm communication/transport time. Political control, military response và market integration vì vậy operate at new speed. Modernity có một physical meaning: distance measured in hours rather than days.
-

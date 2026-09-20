@@ -1,10 +1,12 @@
-# Từ IMF crisis tới digital Korea và Hallyu
+# 1997 IMF crisis, số hoá và Làn sóng Hàn Quốc (한류 / Hallyu, Korean Wave)
 
-## 1997 như institutional shock
+## Asian Financial Crisis như stress test
 
-South Korea ký rescue package với IMF cuối 1997 giữa foreign-exchange crisis. “IMF era” (IMF 시대) trong everyday memory không chỉ là macroeconomics; nó gắn với layoffs, restructuring, household insecurity và thay đổi employment norm.
+1997 crisis làm exposed weakness trong short-term foreign debt, corporate leverage và financial supervision. South Korea nhận IMF-led rescue package với reform conditions. Exchange rate, bankruptcies và unemployment tạo social shock lớn.
 
-Corporate restructuring, financial reform và labor-market flexibility tăng. Lifetime employment expectation suy yếu trong nhiều sector; irregular employment trở nên visible hơn. Vì vậy post-1997 culture of competition và credential pressure có economic history cụ thể.
+## Corporate restructuring và labor market
+
+Chaebol restructuring, financial reform và labor-market flexibility tăng. Lifetime employment expectation suy yếu trong nhiều sector; irregular employment trở nên visible hơn. Vì vậy post-1997 culture of competition và credential pressure có economic history cụ thể.
 
 ## Broadband infrastructure
 
@@ -14,7 +16,7 @@ Network effect làm online portal, gaming và messenger ecosystem phát triển.
 
 ## Hallyu
 
-Korean Wave (한류) ban đầu nổi ở East Asia qua television drama rồi mở rộng sang K-pop, film, games, webtoon, beauty và food. Làn sóng Hàn Quốc (한류 / Hallyu, Korean Wave) không thể giải thích chỉ bằng “government made it”. Entertainment firms, training system, broadband, platform distribution, diaspora, fan labor và global media shifts đều tham gia.
+Korean Wave (한류) ban đầu nổi ở East Asia qua television drama rồi mở rộng sang K-pop, film, games, webtoon, beauty và food. Hallyu không thể giải thích chỉ bằng “government made it”. Entertainment firms, training system, broadband, platform distribution, diaspora, fan labor và global media shifts đều tham gia.
 
 ## 2002 World Cup
 

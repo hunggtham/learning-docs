@@ -6,7 +6,7 @@ Dynasty change không cho biết một farmer ăn gì, woman có property right 
 
 ## Family
 
-Goryeo và early Joseon có marriage/inheritance pattern khác late Joseon. Patrilineal lineage mạnh lên dần, không phải invariant “Korean tradition”. Twentieth century industrialization lại kéo family từ extended rural network sang nuclear urban household; twenty-first century one-person households tăng nhanh.
+Cao Ly (고려 / Goryeo) và early nhà Triều Tiên (조선 / Joseon) có marriage/inheritance pattern khác late Joseon. Patrilineal lineage mạnh lên dần, không phải invariant “Korean tradition”. Twentieth century industrialization lại kéo family từ extended rural network sang nuclear urban household; twenty-first century one-person households tăng nhanh.
 
 ## Gender
 

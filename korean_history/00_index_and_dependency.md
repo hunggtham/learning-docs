@@ -1,5 +1,13 @@
 # Mục lục và Knowledge Dependency — Lịch sử Hàn Quốc
 
+## Quy ước tên riêng Việt – Hàn – Anh
+
+Trong toàn bộ library, tên người, địa danh, triều đại, công trình, sự kiện, tác phẩm và các danh xưng lịch sử quan trọng được ghi theo nguyên tắc **tiếng Việt trước, tiếng Hàn gốc thứ hai, English/Romanization thứ ba** ở lần xuất hiện đầu tiên trong mỗi tài liệu. Ví dụ: **Cung Cảnh Phúc (경복궁 / Gyeongbokgung Palace)**, **Đại vương Thế Tông (세종대왕 / King Sejong the Great)**, **Cao Ly (고려 / Goryeo)** và **Lý Thuấn Thần (이순신 / Yi Sun-sin)**.
+
+Với tên lịch sử có Hán tự và đã có cách đọc Hán–Việt hữu ích, tài liệu ưu tiên dạng Việt hoá để người đọc hiểu nghĩa và liên hệ với sử liệu Việt Nam/Đông Á. Với tên người và địa danh hiện đại mà tiếng Việt không có tên dịch ổn định, tài liệu giữ romanization quốc tế làm tên chính, đồng thời ghi nguyên bản tiếng Hàn; không ép dịch Hán–Việt nếu cách gọi đó khiến tên trở nên xa lạ hoặc dễ gây nhầm. Tên file vẫn dùng tiếng Anh/romanization để URL, Git và cross-link ổn định.
+
+Các tên có thể mang nhiều convention khác nhau trong tiếng Việt sẽ được ghi chú ở glossary. Mục tiêu của quy ước này không phải thay thế tên Hàn Quốc bằng tên Hán–Việt, mà giúp người đọc nhận ra rằng **Cung Cảnh Phúc – Gyeongbokgung – 경복궁** là cùng một thực thể.
+
 ## Bản đồ toàn bộ thư viện
 
 ```text
@@ -7,17 +15,17 @@
    ↓
 02 Tiền sử & các nhà nước sớm
    ↓
-03 Tam Quốc & Gaya
+03 Tam Quốc & Già Da (가야 / Gaya)
    ↓
-04 Unified Silla & Balhae
+04 Tân La Thống nhất (통일신라 / Unified Silla) & Bột Hải (발해 / Balhae)
    ↓
-05 Late Silla & Later Three Kingdoms
+05 Late Tân La (신라 / Silla) & Later Three Kingdoms
    ↓
 06 Goryeo hình thành
    ↓
 07 Goryeo quân nhân & Mongol/Yuan
    ↓
-08 Joseon đầu kỳ & nhà nước Nho giáo
+08 nhà Triều Tiên (조선 / Joseon) đầu kỳ & nhà nước Nho giáo
    ├── 09 Hangul, khoa học & information system
    └── 10 xã hội, thân phận, gia đình, kinh tế
           ↓
@@ -32,7 +40,7 @@
           ↓
 16 Giải phóng, chia cắt, lập hai nhà nước 1945–1950
    ↓
-17 Korean War 1950–1953
+17 Chiến tranh Triều Tiên (한국전쟁 / Korean War) 1950–1953
    ↓
 18 Tái thiết & First Republic
    ↓
@@ -42,7 +50,7 @@
    ↓
 21 Dân chủ hoá, toàn cầu hoá 1987–1997
    ↓
-22 IMF crisis, số hoá, Hallyu 1997–2010s
+22 IMF crisis, số hoá, Làn sóng Hàn Quốc (한류 / Hallyu, Korean Wave) 1997–2010s
    ↓
 23 Những chuyển đổi cấu trúc 2010s–2020s
 ```
@@ -109,5 +117,3 @@ graph TD
 ## Liên kết với bộ Văn hoá Hàn Quốc
 
 Bộ này tập trung vào **historical process**. Khi cần giải thích sâu về `유교`, `눈치`, `정`, `회식`, `아파트`, `재벌`, `한류` hoặc đời sống đương đại, xem thư mục anh em [`../korean_culture/`](../korean_culture/).
-
-- [`32_naming_translation_conventions.md`](32_naming_translation_conventions.md) — quy ước tên riêng Việt–Hàn–Anh.

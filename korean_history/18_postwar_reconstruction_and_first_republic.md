@@ -10,11 +10,11 @@ Land reform cuối 1940s–đầu 1950s làm giảm landlordism lớn và mở r
 
 ## First Republic và political conflict
 
-Tổng thống Syngman Rhee (이승만 / Syngman Rhee) government xây anti-communist state trong Cold War và duy trì strong presidency. Electoral/political conflict tăng, culminating in protests after disputed March 1960 election. **Cách mạng 19 tháng 4 (4·19혁명 / April Revolution)** buộc Rhee từ chức.
+Syngman Rhee (이승만 / Syngman Rhee) government xây anti-communist state trong Cold War và duy trì strong presidency. Electoral/political conflict tăng, culminating in protests after disputed March 1960 election. **April Revolution (4·19 혁명)** buộc Rhee từ chức.
 
 ## Second Republic và 1961 coup
 
-Second Republic chuyển sang parliamentary system nhưng tồn tại ngắn. May 16, 1961 military coup do Tổng thống Park Chung-hee (박정희 / Park Chung-hee) và associates lãnh đạo kết thúc giai đoạn này. Đây là transition từ postwar political instability sang developmental authoritarianism.
+Second Republic chuyển sang parliamentary system nhưng tồn tại ngắn. May 16, 1961 military coup do Park Chung-hee (박정희 / Park Chung-hee) và associates lãnh đạo kết thúc giai đoạn này. Đây là transition từ postwar political instability sang developmental authoritarianism.
 
 ## Mental Model
 
@@ -30,9 +30,5 @@ Even under poverty, schooling expanded rapidly. Household willingness to invest 
 
 ## Urban refugees and informal economy
 
-Seoul and other cities absorbed war-displaced populations. Housing shortage produced informal settlements, street commerce and precarious work. “Miracle on the sông Hán (한강 / Han River)” imagery can obscure this low-income urban base from which later growth emerged.
-
-## April Revolution as generational politics
-
-Students were central actors in 1960 protests. Expansion of education created a population with literacy, organizational networks and political expectations. Education can therefore strengthen state capacity and simultaneously increase capacity to challenge state.
+Seoul and other cities absorbed war-displaced populations. Housing shortage produced informal settlements, street commerce and precarious work. “Miracle on the Han River” imagery can obscure this low-income urban foundation.
 

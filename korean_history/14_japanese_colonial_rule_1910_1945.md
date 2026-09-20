@@ -47,4 +47,3 @@ Sau full-scale Sino-Japanese War 1937 và Pacific War, empire tăng mobilization
 ## Demographic displacement
 
 Labor migration sang Japan, Manchuria, Sakhalin và elsewhere tạo diaspora patterns kéo dài sau 1945. Liberation không tự động đưa mọi người về quê; citizenship, repatriation và property problems tiếp tục qua nhiều thập kỷ.
-

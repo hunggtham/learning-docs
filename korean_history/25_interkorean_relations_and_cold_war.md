@@ -16,9 +16,9 @@ Trong nhiều thập kỷ, Seoul và Bình Nhưỡng (평양 / Pyongyang) đều
 
 Hai bên gia nhập UN năm 1991 và ký Basic Agreement, một bước institutionalization quan trọng. Tuy nhiên nuclear issue và alliance/security dynamics sau đó tiếp tục tạo tension.
 
-## Sunshine Policy, summits và Kaesong
+## Sunshine Policy, summits và Khai Thành (개성 / Kaesong)
 
-Late 1990s–2000s engagement policy tạo 2000 summit, later 2007 summit và projects như Kaesong (개성 / Kaesong) Industrial Complex. Economic cooperation nhằm tạo interdependence, nhưng interdependence chỉ giảm conflict nếu political trust và security conditions đủ ổn định.
+Late 1990s–2000s engagement policy tạo 2000 summit, later 2007 summit và projects như Kaesong Industrial Complex. Economic cooperation nhằm tạo interdependence, nhưng interdependence chỉ giảm conflict nếu political trust và security conditions đủ ổn định.
 
 ## 2018 và giới hạn của summit diplomacy
 
