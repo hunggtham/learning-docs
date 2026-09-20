@@ -1,49 +1,51 @@
 # Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành
 
-> Mục tiêu của chương này là biến kiến thức thành **quy trình nghiên cứu có thể lặp lại**. Thay vì đọc tin rồi phản ứng cảm tính, người đọc bắt đầu từ câu hỏi, chọn nguồn dữ liệu phù hợp, phân biệt fact/estimate/opinion, xây driver tree và cập nhật thesis theo lịch rõ ràng.
+> Mục tiêu của chương này là biến kiến thức thành một **quy trình nghiên cứu có thể lặp lại**. Thay vì đọc tin rồi phản ứng cảm tính, người đọc bắt đầu từ câu hỏi, chọn nguồn dữ liệu phù hợp, phân biệt dữ kiện, ước tính và ý kiến, xây cây động lực rồi cập nhật luận điểm theo lịch rõ ràng. Thuật ngữ tiếng Anh chỉ được giữ trong ngoặc hoặc dưới dạng viết tắt chuẩn khi cần tra cứu.
 
 # Phần I — Bắt đầu bằng câu hỏi
 
-## 1. Question tree
+## 1. Cây câu hỏi
 
 Một nghiên cứu tốt bắt đầu bằng câu hỏi có thể kiểm chứng.
 
-Ví dụ thay vì:
+Thay vì hỏi:
 
 ```text
-“Semiconductor Hàn Quốc có tốt không?”
+“Bán dẫn Hàn Quốc có tốt không?”
 ```
 
-hãy hỏi:
+hãy tách thành:
 
 ```text
-HBM demand có đang tăng nhanh hơn effective supply không?
+Nhu cầu HBM có tăng nhanh hơn nguồn cung hiệu dụng không?
 → ASP có được hỗ trợ không?
-→ utilization và margin có tiếp tục tăng không?
-→ consensus đã phản ánh bao nhiêu?
+→ tỷ lệ sử dụng công suất và biên lợi nhuận có tiếp tục tăng không?
+→ dự báo đồng thuận đã phản ánh bao nhiêu?
 ```
+
+**Cây câu hỏi (question tree)** biến một chủ đề rộng thành chuỗi câu hỏi có dữ liệu trả lời.
 
 ## 2. Câu hỏi phải dẫn tới dữ liệu
 
-Nếu một câu hỏi không chỉ ra dữ liệu nào có thể xác nhận hoặc bác bỏ, nó còn quá mơ hồ.
+Nếu một câu hỏi không chỉ ra dữ liệu nào có thể xác nhận hoặc bác bỏ, nó vẫn quá mơ hồ.
 
 # Phần II — Thứ tự ưu tiên nguồn
 
-## 3. Source hierarchy
+## 3. Thứ bậc nguồn
 
-Một thứ tự chung:
+Một thứ tự tham khảo:
 
 ```text
 Cơ quan quản lý / Sở giao dịch / Ngân hàng trung ương / Cơ quan thống kê
-→ Filing / Công bố doanh nghiệp
-→ IR / Transcript
-→ Data provider chất lượng cao
-→ Broker / Research
-→ News
-→ Social / Community
+→ Báo cáo pháp lý / công bố doanh nghiệp
+→ Quan hệ nhà đầu tư / biên bản cuộc gọi
+→ Nhà cung cấp dữ liệu chất lượng cao
+→ Báo cáo môi giới / nghiên cứu tổng hợp
+→ Tin tức
+→ Mạng xã hội / cộng đồng
 ```
 
-Nguồn cấp dưới vẫn hữu ích cho idea discovery nhưng fact quan trọng nên quay lại nguồn gốc nếu có thể.
+Nguồn phía dưới vẫn hữu ích để tìm ý tưởng, nhưng dữ kiện quan trọng nên được kiểm tra lại ở nguồn gốc khi có thể.
 
 ## 4. Hàn Quốc
 
@@ -53,8 +55,8 @@ Các nhóm nguồn thường dùng:
 - BOK;
 - FSC/FSS;
 - cơ quan thống kê và thương mại;
-- DART/company filings;
-- company IR.
+- DART và báo cáo doanh nghiệp;
+- trang quan hệ nhà đầu tư.
 
 ## 5. Việt Nam
 
@@ -64,459 +66,446 @@ Các nhóm nguồn thường dùng:
 - HOSE/HNX/VSDC;
 - SBV;
 - cơ quan thống kê;
-- hải quan/thương mại;
-- company filings/IR.
+- hải quan và cơ quan thương mại;
+- báo cáo doanh nghiệp và quan hệ nhà đầu tư.
 
-Tên endpoint hoặc quy định cụ thể có thể thay đổi; cần kiểm tra nguồn chính thức hiện hành.
+Tên cổng dữ liệu hoặc quy định cụ thể có thể thay đổi, nên phải kiểm tra nguồn chính thức hiện hành.
 
-# Phần III — Fact, estimate và opinion
+# Phần III — Dữ kiện, ước tính, ý kiến và giả định
 
-## 6. Fact
+## 6. Dữ kiện
 
-Fact là thông tin đã xảy ra và có thể xác minh, ví dụ doanh thu quý, policy rate hoặc số cổ phiếu.
+**Dữ kiện (fact)** là thông tin đã xảy ra và có thể xác minh, ví dụ doanh thu quý, lãi suất chính sách hoặc số cổ phiếu lưu hành.
 
-## 7. Estimate
+## 7. Ước tính
 
-Estimate là dự báo của analyst, công ty hoặc market consensus.
+**Ước tính (estimate)** là dự báo của nhà phân tích, doanh nghiệp hoặc đồng thuận thị trường.
 
-Estimate phải có timestamp vì nó thay đổi liên tục.
+Ước tính phải có thời điểm vì nó thay đổi liên tục.
 
-## 8. Opinion
+## 8. Ý kiến
 
-Opinion là cách diễn giải.
+**Ý kiến (opinion)** là cách diễn giải dữ liệu. Một ghi chú nghiên cứu tốt không trình bày ý kiến như thể là dữ kiện.
 
-Một note tốt không trộn opinion thành fact.
+## 9. Giả định
 
-## 9. Assumption
-
-Assumption là đầu vào do chính người nghiên cứu đặt vào model.
+**Giả định (assumption)** là đầu vào do người nghiên cứu tự đặt vào mô hình.
 
 Ví dụ:
 
 ```text
-Base case gross margin = 35%
+Kịch bản cơ sở: biên gộp = 35%
 ```
 
-không phải fact nếu chưa xảy ra.
+Đây không phải dữ kiện nếu chưa xảy ra.
 
-# Phần IV — Driver tree
+# Phần IV — Cây động lực
 
-## 10. Company driver tree
+## 10. Cây động lực của doanh nghiệp
 
 Ví dụ bán dẫn:
 
 ```text
-End Demand
-→ Inventory
+Nhu cầu cuối
+→ tồn kho
 → ASP
-→ Utilization
-→ Product Mix
-→ Gross Margin
+→ tỷ lệ sử dụng công suất
+→ cơ cấu sản phẩm
+→ biên gộp
 → EPS / FCF
 ```
 
-## 11. Bank driver tree
+## 11. Cây động lực ngân hàng
 
 ```text
-Deposit Cost / CASA
+Chi phí tiền gửi / CASA
 → NIM
-→ Loan Growth
-→ Pre-Provision Profit
-→ Credit Cost
-→ Net Income
-→ ROE / Book Value
+→ tăng trưởng tín dụng
+→ lợi nhuận trước dự phòng
+→ chi phí tín dụng
+→ lợi nhuận ròng
+→ ROE / giá trị sổ sách
 ```
 
-## 12. Property driver tree
+## 12. Cây động lực bất động sản
 
 ```text
-Legal Progress
-→ Presales
-→ Collection
-→ Construction
-→ Handover
-→ Revenue / Cash
-→ Debt Service
+Tiến độ pháp lý
+→ bán trước
+→ thu tiền
+→ xây dựng
+→ bàn giao
+→ doanh thu / tiền mặt
+→ khả năng trả nợ
 ```
 
-# Phần V — Leading và lagging indicators
+# Phần V — Chỉ báo sớm và chỉ báo trễ
 
-## 13. Leading indicator
+## 13. Chỉ báo sớm
 
-Leading indicator có xu hướng thay đổi trước earnings hoặc economy.
+**Chỉ báo sớm (leading indicator)** thường thay đổi trước lợi nhuận hoặc hoạt động kinh tế.
 
 Ví dụ:
 
-- orders;
-- inventory;
-- deposit rates;
-- margin balance;
-- export data;
-- presales.
+- đơn hàng;
+- tồn kho;
+- lãi suất tiền gửi;
+- dư nợ ký quỹ;
+- dữ liệu xuất khẩu;
+- bán trước bất động sản.
 
-## 14. Lagging indicator
+## 14. Chỉ báo trễ
 
-Lagging indicator thường xác nhận điều đã diễn ra.
+**Chỉ báo trễ (lagging indicator)** thường xác nhận điều đã xảy ra.
 
-Ví dụ NPL hoặc reported EPS có thể đi sau credit/inventory turning point.
+Ví dụ NPL hoặc EPS báo cáo có thể xuất hiện sau điểm đảo chiều của tín dụng hoặc tồn kho.
 
-## 15. Không mặc định indicator luôn dẫn
+## 15. Không mặc định chỉ báo luôn dẫn
 
-Lead/lag có thể thay đổi theo regime, nên cần kiểm tra lịch sử và cơ chế kinh tế.
+Quan hệ dẫn–trễ có thể thay đổi theo chế độ, vì vậy phải kiểm tra cả lịch sử lẫn cơ chế kinh tế.
 
-# Phần VI — Expectations và revisions
+# Phần VI — Kỳ vọng và điều chỉnh dự báo
 
 ## 16. Giá phản ứng với thay đổi kỳ vọng
 
-Một doanh nghiệp báo EPS rất cao vẫn có thể giảm nếu guidance thấp hơn kỳ vọng.
+Một doanh nghiệp báo EPS cao vẫn có thể giảm nếu hướng dẫn tương lai thấp hơn kỳ vọng.
 
-## 17. Revision breadth
+## 17. Độ rộng điều chỉnh dự báo
 
-Không chỉ nhìn một company. Nếu nhiều analyst cùng nâng EPS ở nhiều doanh nghiệp trong sector, cycle có thể đang mở rộng.
+Không chỉ nhìn một doanh nghiệp. Nếu nhiều nhà phân tích đồng thời nâng EPS ở nhiều công ty trong cùng ngành, chu kỳ có thể đang mở rộng.
 
-## 18. What was priced?
+## 18. Điều gì đã được phản ánh trong giá?
 
-Trước event cần ghi:
+Trước sự kiện cần ghi:
 
-- valuation;
-- consensus;
-- recent performance;
-- positioning proxy;
-- option implied move nếu có.
+- định giá;
+- dự báo đồng thuận;
+- diễn biến giá gần đây;
+- tín hiệu về vị thế nhà đầu tư;
+- mức biến động hàm ý của quyền chọn nếu có.
 
-# Phần VII — Sector map Hàn Quốc
+# Phần VII — Bản đồ ngành Hàn Quốc
 
-## 19. Semiconductor
+## 19. Bán dẫn
 
 Theo dõi:
 
 ```text
 ASP
-Inventory
+Tồn kho
 HBM
-Utilization
-Capex
-Exports
+Tỷ lệ sử dụng công suất
+Chi tiêu vốn
+Xuất khẩu
 USD/KRW
-EPS Revisions
+Điều chỉnh dự báo EPS
 ```
 
-## 20. Autos / EV
+## 20. Ô tô và xe điện
 
 ```text
-Global Unit Sales
-Mix
-Incentives
-FX
-Inventory
-Battery Cost
+Sản lượng bán toàn cầu
+Cơ cấu sản phẩm
+Ưu đãi bán hàng
+Tỷ giá
+Tồn kho
+Chi phí pin
 ```
 
-## 21. Batteries
+## 21. Pin
 
 ```text
-EV Demand
-Utilization
-Raw Materials
-Customer Contracts
-Capacity Expansion
+Nhu cầu xe điện
+Tỷ lệ sử dụng công suất
+Nguyên liệu
+Hợp đồng khách hàng
+Mở rộng công suất
 ```
 
-## 22. Shipbuilding / Industrials
+## 22. Đóng tàu và công nghiệp
 
 ```text
-Orderbook
-Newbuild Price
-Steel / Labor Cost
-Delivery
-FX
+Sổ đơn hàng
+Giá tàu mới
+Chi phí thép / lao động
+Lịch giao hàng
+Tỷ giá
 ```
 
-## 23. Financials
+## 23. Tài chính
 
 ```text
 NIM
-Credit Cost
-Capital
-PF Exposure
-Turnover / Brokerage
+Chi phí tín dụng
+Vốn
+Mức phơi nhiễm PF
+Giá trị giao dịch / môi giới
 ```
 
-## 24. Platforms / Gaming / Biotech
+## 24. Nền tảng, trò chơi và công nghệ sinh học
 
-Cần theo dõi user/monetization, title pipeline hoặc clinical milestone tùy sector.
+Tùy ngành cần theo dõi mức sử dụng và khả năng kiếm tiền, danh mục sản phẩm mới hoặc cột mốc thử nghiệm lâm sàng.
 
-# Phần VIII — Sector map Việt Nam
+# Phần VIII — Bản đồ ngành Việt Nam
 
-## 25. Banks
+## 25. Ngân hàng
 
 ```text
-Credit Growth
+Tăng trưởng tín dụng
 NIM
 CASA
-Group-2 / NPL
-Provision Coverage
-Capital
-Property Exposure
+Nợ nhóm 2 / NPL
+Bao phủ dự phòng
+Vốn
+Mức phơi nhiễm bất động sản
 ```
 
-## 26. Property
+## 26. Bất động sản
 
 ```text
-Legal
-Presales
-Cash Collection
-Debt Maturity
-Bond Refinancing
-Handover
+Pháp lý
+Bán trước
+Tiền thu thực tế
+Lịch đáo hạn nợ
+Tái cấp vốn trái phiếu
+Bàn giao
 ```
 
-## 27. Securities companies
+## 27. Công ty chứng khoán
 
 ```text
-Turnover
-Margin Lending
-Funding Cost
-Proprietary Book
-IB
+Giá trị giao dịch
+Cho vay ký quỹ
+Chi phí nguồn vốn
+Danh mục tự doanh
+Ngân hàng đầu tư
 ```
 
-## 28. Industrial parks
+## 28. Khu công nghiệp
 
 ```text
 FDI
-Occupancy
-Lease Price
-Land Bank
-Infrastructure
+Tỷ lệ lấp đầy
+Giá thuê
+Quỹ đất
+Hạ tầng
 ```
 
-## 29. Consumer
+## 29. Tiêu dùng
 
 ```text
-Income
-Traffic
-Ticket
-Same-Store Sales
-Inventory
-Margin
+Thu nhập
+Lượng khách
+Giá trị hóa đơn
+Tăng trưởng cửa hàng hiện hữu
+Tồn kho
+Biên lợi nhuận
 ```
 
-## 30. Public investment / materials
+## 30. Đầu tư công và vật liệu
 
 ```text
-Budget
-Disbursement
-Project Progress
-Steel / Cement Demand
-Input Cost
+Ngân sách
+Giải ngân
+Tiến độ dự án
+Nhu cầu thép / xi măng
+Chi phí đầu vào
 ```
 
-# Phần IX — FX, flow và breadth dashboard
+# Phần IX — Bảng theo dõi tỷ giá, dòng vốn và độ rộng
 
-## 31. FX
+## 31. Tỷ giá
 
 Theo dõi USD/KRW và USD/VND cùng nguyên nhân:
 
-- rates;
-- external balance;
-- oil;
-- flows;
-- policy.
+- lãi suất;
+- cán cân đối ngoại;
+- dầu;
+- dòng vốn;
+- chính sách.
 
-## 32. Foreign flow
+## 32. Dòng vốn nước ngoài
 
 Phân biệt:
 
 ```text
-Passive Flow
-Active Allocation
-Risk-Off Reduction
-FX Hedge Effect
+Dòng vốn thụ động
+Phân bổ chủ động
+Giảm rủi ro toàn cầu
+Ảnh hưởng phòng vệ tỷ giá
 ```
 
-## 33. Breadth
+## 33. Độ rộng thị trường
 
-Index tăng nhưng breadth giảm có thể cho thấy leadership hẹp.
+Chỉ số tăng nhưng độ rộng giảm có thể cho thấy nhóm dẫn dắt quá hẹp.
 
-## 34. Liquidity
+## 34. Thanh khoản
 
-Theo dõi turnover, spread và margin/credit conditions phù hợp từng market.
+Theo dõi giá trị giao dịch, chênh lệch mua–bán và điều kiện ký quỹ/tín dụng phù hợp từng thị trường.
 
-# Phần X — Earnings workflow
+# Phần X — Quy trình quanh báo cáo lợi nhuận
 
-## 35. Trước earnings
+## 35. Trước khi công bố
 
 Ghi:
 
 ```text
-Consensus Revenue / EPS
-Key KPI Expectation
-Valuation
-Recent Revisions
-Important Questions
+Doanh thu / EPS đồng thuận
+Kỳ vọng KPI chính
+Định giá
+Điều chỉnh dự báo gần đây
+Câu hỏi quan trọng
 ```
 
-## 36. Khi earnings ra
+## 36. Khi kết quả được công bố
 
 Tách:
 
 ```text
-Reported Number
-vs Consensus
-vs Prior Guidance
+Số báo cáo
+so với Đồng thuận
+so với Hướng dẫn trước đó
 ```
 
-Sau đó đi vào driver.
+Sau đó đi vào các động lực tạo chênh lệch.
 
-## 37. Sau earnings
+## 37. Sau báo cáo
 
 Cập nhật:
 
-- model;
-- valuation;
-- catalyst;
-- invalidation;
-- confidence level.
+- mô hình;
+- định giá;
+- chất xúc tác;
+- điều kiện vô hiệu hóa;
+- mức độ tin cậy.
 
-# Phần XI — Central-bank workflow
+# Phần XI — Quy trình quanh sự kiện ngân hàng trung ương
 
-## 38. BOK / SBV event
+## 38. BOK / SBV
 
-Trước event:
-
-```text
-Current Policy
-Consensus
-FX
-Inflation
-Growth
-Market Pricing
-```
-
-Sau event:
+Trước sự kiện:
 
 ```text
-Decision
-Statement
-Guidance
-Rates
-FX
-Sector Reaction
+Chính sách hiện tại
+Đồng thuận
+Tỷ giá
+Lạm phát
+Tăng trưởng
+Kỳ vọng đã phản ánh trong giá
 ```
 
-# Phần XII — Fiscal / regulatory workflow
+Sau sự kiện:
 
-## 39. Announcement không bằng implementation
+```text
+Quyết định
+Thông cáo
+Định hướng
+Lãi suất thị trường
+Tỷ giá
+Phản ứng theo ngành
+```
+
+# Phần XII — Quy trình với chính sách tài khóa và quy định
+
+## 39. Thông báo không đồng nghĩa thực thi
 
 Một chính sách tích cực cần đi qua:
 
 ```text
-Announcement
-→ Legal Rule
-→ Implementation
-→ Company-Level Effect
-→ Cash Flow
+Thông báo
+→ quy định pháp lý
+→ triển khai
+→ ảnh hưởng cấp doanh nghiệp
+→ dòng tiền
 ```
 
-## 40. Timestamp rule
+## 40. Quy tắc ghi thời điểm
 
-Regulation phải ghi ngày hiệu lực và nguồn.
+Quy định phải ghi ngày hiệu lực và nguồn. Không dùng ghi chú cũ như thể đó là quy tắc hiện hành nếu chưa kiểm tra.
 
-Không dùng knowledge note cũ như current rule nếu chưa kiểm tra.
+# Phần XIII — Chất xúc tác và điều kiện vô hiệu hóa
 
-# Phần XIII — Catalyst và invalidation
+## 41. Chất xúc tác
 
-## 41. Catalyst
+**Chất xúc tác (catalyst)** là sự kiện hoặc dữ liệu có thể khiến thị trường thay đổi kỳ vọng.
 
-Catalyst là event/data có thể khiến market thay đổi expectation.
+## 42. Điều kiện vô hiệu hóa
 
-## 42. Invalidation
+**Điều kiện vô hiệu hóa (invalidation)** là bằng chứng cho thấy cơ chế của luận điểm không còn đúng.
 
-Invalidation là evidence làm mechanism của thesis sai.
+Giá đi ngược vài phiên chưa chắc là bằng chứng vô hiệu hóa.
 
-Price đi ngược vài phiên chưa chắc là invalidation.
+# Phần XIV — Danh sách theo dõi
 
-# Phần XIV — Watchlist
+## 43. Danh sách theo dõi không chỉ là mã cổ phiếu
 
-## 43. Watchlist không chỉ là ticker list
-
-Mỗi entry nên có:
+Mỗi mục nên có:
 
 ```text
-Ticker / Sector
-Thesis
-Key Driver
-Valuation
-Catalyst
-Invalidation
-Next Data Point
+Mã / ngành
+Luận điểm
+Động lực chính
+Định giá
+Chất xúc tác
+Điều kiện vô hiệu hóa
+Dữ liệu tiếp theo cần chờ
 ```
 
-## 44. Priority
+## 44. Mức ưu tiên
 
-Chia theo:
+Có thể chia:
 
-- active research;
-- waiting for trigger;
-- monitoring;
-- rejected thesis.
+- đang nghiên cứu chủ động;
+- chờ tín hiệu;
+- chỉ theo dõi;
+- luận điểm đã loại.
 
-# Phần XV — Daily / weekly / monthly / quarterly cadence
+# Phần XV — Nhịp cập nhật hằng ngày, tuần, tháng và quý
 
-## 45. Daily
+## 45. Hằng ngày
 
-Chỉ cập nhật dữ liệu tần suất cao:
+Chỉ cập nhật dữ liệu tần suất cao như giá, tỷ giá, dòng vốn, tin lớn và kết quả sự kiện. Không viết lại toàn bộ luận điểm mỗi ngày.
 
-- price/FX;
-- flows;
-- major news;
-- event outcomes.
+## 46. Hằng tuần
 
-Không viết lại thesis mỗi ngày.
+Đánh giá:
 
-## 46. Weekly
+- độ rộng;
+- ngành dẫn dắt;
+- điều chỉnh dự báo lợi nhuận;
+- hàng hóa / tỷ giá quan trọng;
+- chất xúc tác sắp tới.
 
-Review:
+## 47. Hằng tháng
 
-- breadth;
-- sector leadership;
-- earnings revisions;
-- key commodity/FX;
-- upcoming catalysts.
+Đánh giá vĩ mô, định giá, tín dụng, thanh khoản và bảng theo dõi ngành.
 
-## 47. Monthly
+## 48. Hằng quý
 
-Review macro, valuation, credit/liquidity và sector dashboard.
+Đi sâu báo cáo doanh nghiệp, mô hình lợi nhuận, bảng cân đối và phân bổ vốn.
 
-## 48. Quarterly
-
-Đi sâu filings, earnings model, balance sheet và capital allocation.
-
-# Phần XVI — Decision log
+# Phần XVI — Nhật ký quyết định
 
 ## 49. Trước quyết định
 
 Ghi:
 
 ```text
-Information Set
-Thesis
-Expected Return Distribution
-Main Risk
-Position Size Logic
-Invalidation
+Tập thông tin đang có
+Luận điểm
+Phân phối lợi suất kỳ vọng
+Rủi ro chính
+Logic xác định quy mô vị thế
+Điều kiện vô hiệu hóa
 ```
 
 ## 50. Sau quyết định
 
-Review decision quality riêng với outcome.
+Đánh giá chất lượng quyết định riêng với kết quả. Không viết lại lý do sau khi đã biết giá tăng hay giảm.
 
-Không sửa lại lý do sau khi biết kết quả.
+# Phần XVII — Sổ nghiên cứu
 
-# Phần XVII — Research notebook
-
-## 51. Cấu trúc cho một security
+## 51. Cấu trúc cho một chứng khoán
 
 ```text
 01_business.md
@@ -527,88 +516,88 @@ Không sửa lại lý do sau khi biết kết quả.
 06_thesis_log.md
 ```
 
-Có thể áp dụng trong Obsidian hoặc repository Markdown.
+Tên file có thể giữ tiếng Anh để tương thích hệ thống, nhưng nội dung giải thích nên dùng tiếng Việt.
 
-## 52. Country dashboard
+## 52. Bảng theo dõi quốc gia
 
-Tách Korea và Vietnam thành dashboard riêng nhưng có một bảng global variables chung.
+Tách Hàn Quốc và Việt Nam thành bảng riêng, đồng thời duy trì một bảng biến toàn cầu chung để thấy cùng một cú sốc truyền khác nhau ra sao.
 
-# Phần XVIII — Bias và data hygiene
+# Phần XVIII — Thiên lệch và vệ sinh dữ liệu
 
-## 53. Confirmation bias
+## 53. Thiên lệch xác nhận
 
-Chủ động tìm evidence chống thesis.
+Chủ động tìm bằng chứng chống lại luận điểm, không chỉ dữ liệu ủng hộ.
 
-## 54. Recency bias
+## 54. Thiên lệch gần đây
 
-Một quarter tốt không tự động thay structural economics.
+Một quý tốt không tự động thay đổi kinh tế cấu trúc dài hạn.
 
-## 55. Source copying
+## 55. Sao chép câu chuyện từ báo cáo môi giới
 
-Không biến broker narrative thành fact nếu chưa kiểm tra dữ liệu gốc.
+Không biến câu chuyện phân tích của bên khác thành dữ kiện nếu chưa kiểm tra dữ liệu gốc.
 
-## 56. Stale data
+## 56. Dữ liệu cũ
 
-Mọi dữ liệu động phải có thời điểm.
+Mọi dữ liệu động phải có thời điểm. Quy định, lãi suất, thành phần chỉ số và giới hạn sở hữu đều có thể thay đổi.
 
-# Phần XIX — Research tới position size
+# Phần XIX — Từ nghiên cứu tới quy mô vị thế
 
-## 57. Confidence không đủ
+## 57. Mức độ tin tưởng không đủ
 
-Position size phải xét:
+Quy mô vị thế phải xét:
 
-- downside;
-- liquidity;
-- balance sheet;
-- factor overlap;
-- uncertainty;
-- portfolio exposure.
+- mức giảm bất lợi;
+- thanh khoản;
+- bảng cân đối;
+- trùng lặp nhân tố;
+- bất định;
+- mức phơi nhiễm toàn danh mục.
 
-## 58. Thesis quality và liquidity quality là hai thứ khác nhau
+## 58. Chất lượng luận điểm và chất lượng thanh khoản là hai việc khác nhau
 
-Một thesis rất tốt ở cổ phiếu illiquid vẫn có thể chỉ phù hợp size nhỏ.
+Một luận điểm rất tốt ở cổ phiếu kém thanh khoản vẫn có thể chỉ phù hợp với vị thế nhỏ.
 
-# Phần XX — Template research chuẩn
+# Phần XX — Mẫu nghiên cứu chuẩn
 
-## 59. Company note
+## 59. Ghi chú doanh nghiệp
 
 ```text
-Business:
-Sector Driver:
-Leading Indicators:
-Financial Quality:
-Balance Sheet:
-Valuation:
-What is priced:
-Catalyst:
-Invalidation:
-Position Risk:
-Next Review:
+Mô hình kinh doanh:
+Động lực ngành:
+Chỉ báo sớm:
+Chất lượng tài chính:
+Bảng cân đối:
+Định giá:
+Điều gì đã được phản ánh trong giá:
+Chất xúc tác:
+Điều kiện vô hiệu hóa:
+Rủi ro vị thế:
+Lần đánh giá tiếp theo:
 ```
 
-## 60. Country / sector note
+## 60. Ghi chú quốc gia hoặc ngành
 
 ```text
-Macro Regime:
-Rates / FX:
-Credit / Liquidity:
-Flow / Breadth:
-Earnings Revision:
-Valuation:
-Main Scenario:
-Alternative Scenario:
+Chế độ vĩ mô:
+Lãi suất / tỷ giá:
+Tín dụng / thanh khoản:
+Dòng vốn / độ rộng:
+Điều chỉnh dự báo lợi nhuận:
+Định giá:
+Kịch bản chính:
+Kịch bản thay thế:
 ```
 
 ## Kết luận
 
-Research tốt không được đo bằng số lượng tin đã đọc mà bằng khả năng trả lời:
+Nghiên cứu tốt không được đo bằng số lượng tin đã đọc mà bằng khả năng trả lời:
 
 ```text
-Tôi đang cố chứng minh điều gì?
+Tôi đang cố kiểm chứng điều gì?
 Dữ liệu nào thực sự liên quan?
 Nguồn nào đáng tin nhất?
-Điều gì đã được price?
-Evidence nào sẽ làm tôi đổi ý?
+Điều gì đã được phản ánh trong giá?
+Bằng chứng nào sẽ làm tôi đổi ý?
 ```
 
-Khi quy trình này được lặp lại đều đặn, knowledge library trở thành một **hệ thống ra quyết định** thay vì kho tài liệu thụ động.
+Khi quy trình này được lặp lại đều đặn, thư viện kiến thức trở thành một hệ thống hỗ trợ ra quyết định thay vì chỉ là kho tài liệu.
