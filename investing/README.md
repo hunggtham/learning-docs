@@ -1,47 +1,59 @@
 # Investing Knowledge Library
 
-Bộ `investing/` được tổ chức theo **domain kiến thức** thay vì để một số master note rất lớn nằm ngang. Mục tiêu là vẫn giữ được tài liệu tổng hợp để đọc liền mạch, nhưng đồng thời có các chapter chuyên sâu đủ nhỏ để học, tra cứu và liên kết trên GitHub Pages.
+Bộ tài liệu này được tổ chức theo domain thay vì một master book khổng lồ. Mỗi folder có một mục tiêu học rõ ràng, tài liệu core và một chapter nâng cao để chuyển kiến thức sang phân tích thực tế.
 
-## Cấu trúc
+## Cấu trúc domain
 
 ### 01 — Foundations
 
 [01_foundations/README.md](./01_foundations/README.md)
 
-Bắt đầu từ tiền, lạm phát, hệ thống tài chính, cách thị trường khớp lệnh, return/risk, compounding, asset allocation, diversification, risk budgeting, behavior và Investment Policy Statement. Folder này trả lời câu hỏi: **đầu tư là gì và phải tổ chức vốn như thế nào trước khi chọn sản phẩm?**
+Học tiền, hệ thống tài chính, market mechanics, portfolio risk, allocation, behavioral finance, lifecycle investing, rebalancing, custody và investment operations. Đây là prerequisite cho toàn bộ thư viện.
 
 ### 02 — Asset Classes
 
 [02_asset_classes/README.md](./02_asset_classes/README.md)
 
-Đi sâu riêng từng nhóm tài sản: cổ phiếu, ETF/quỹ, trái phiếu và credit, REIT, vàng, commodities, crypto và alternative assets. Folder này tập trung vào **cơ chế tạo return, cách định giá sơ bộ, nguồn rủi ro và vị trí của từng tài sản trong portfolio**.
+Học stocks, ETF/funds, bonds/credit, real assets, commodities, alternatives, factor investing, smart beta, index methodology, FX exposure và multi-asset regimes.
 
 ### 03 — Company Analysis
 
 [03_company_analysis/README.md](./03_company_analysis/README.md)
 
-Dành cho việc đọc một doanh nghiệp từ báo cáo tài chính tới moat, economics của ngành, capital allocation và valuation. Sau folder này, mục tiêu là có thể tự xây một investment thesis có bull/base/bear case thay vì mua cổ phiếu chỉ vì chart hoặc tin tức.
+Học financial statements, accounting, business quality, moat, industry structure, valuation, DCF, earnings quality, working capital, unit economics, three-statement modeling và forensic analysis.
 
 ### 04 — Economics
 
 [04_economics/README.md](./04_economics/README.md)
 
-Bao gồm kinh tế vi mô, vĩ mô, ngân hàng trung ương, lãi suất, fiscal policy, balance of payments, kinh tế thế giới, dòng vốn, thương mại, khủng hoảng và macro-data playbook. Đây là folder giải thích **tại sao Fed, CPI, employment, oil, tariff, USD và chiến tranh truyền sang asset prices**.
+Học microeconomics, macroeconomics, global economy, capital flows, banking/sovereign crises, macro data, central banking, monetary plumbing, repo/collateral, dollar funding và financial-conditions transmission.
 
 ### 05 — Trading & Derivatives
 
 [05_trading_derivatives/README.md](./05_trading_derivatives/README.md)
 
-Trading được xây từ xác suất và quản trị vốn trước khi đi tới chart. Folder này bao phủ market structure, Forex, futures, options, CFD, leverage, position sizing, backtest, execution, regime, portfolio heat và journal.
+Học Forex, futures, options, CFD, leverage/margin, technical structure, position sizing, expectancy, backtest, execution, order-book microstructure và trading-portfolio risk.
 
 ### 06 — Korea & Vietnam Markets
 
 [06_markets_korea_vietnam/README.md](./06_markets_korea_vietnam/README.md)
 
-Áp dụng toàn bộ framework vào Hàn Quốc và Việt Nam: KRX/KOSPI/KOSDAQ, Korean ETF/ETN, KRW, BOK, semiconductor cycle, HOSE/HNX/UPCoM, banks/property, VND, SBV, derivatives và foreign-flow mechanics.
+Áp dụng toàn bộ framework vào KRX/KOSPI/KOSDAQ và HOSE/HNX/UPCoM, với sector maps, KRW/VND, BOK/SBV, semiconductor, banks, property, FDI, foreign flows, cross-market shocks và workflow research thực tế.
 
-## Hai lộ trình đọc
+## Lộ trình học khuyến nghị
 
-Nếu mục tiêu là **bắt đầu đầu tư thực tế**, nên đi theo `01 → 02 → 03 → 04 → 06`, sau đó học `05` nếu muốn trading hoặc derivatives. Nếu mục tiêu là **xây nền tài chính và kinh tế thật chắc**, nên đi `01 → 02 → 03 → 04 → 05 → 06`.
+Nếu bắt đầu gần như từ số 0, đọc theo thứ tự `01 → 02 → 03 → 04 → 05 → 06`. Cách này đi từ hiểu tiền và sản phẩm, sang doanh nghiệp, rồi mở rộng ra nền kinh tế trước khi học trading và áp dụng theo thị trường.
 
-Các file bắt đầu bằng `00_MASTER` là tài liệu tổng hợp đã được giữ lại từ phiên bản cũ. Các file tiếp theo chia nhỏ từng mảng và mở rộng thêm kiến thức để dễ học hơn. Khi một nội dung có dữ liệu thời điểm như lãi suất, tax, regulation hoặc market classification, hãy ưu tiên nguồn chính thức và snapshot mới nhất thay vì coi con số trong note là vĩnh viễn đúng.
+Nếu mục tiêu chính là đầu tư dài hạn, ưu tiên `01 → 02 → 03 → 04 → 06`; trading/derivatives có thể học sau.
+
+Nếu mục tiêu là macro/Forex, ưu tiên `01 → 02 → 04 → 05 → 06`, nhưng vẫn nên học company analysis để hiểu earnings channel và equity-market reaction.
+
+## Cách học để không biến thành đọc thụ động
+
+Sau mỗi domain, chọn một case thật để áp dụng. Sau Foundations, tự viết Investment Policy Statement. Sau Asset Classes, phân tích một ETF và một bond ETF. Sau Company Analysis, model một company với base/bull/bear case. Sau Economics, theo dõi một CPI/FOMC/BOK event từ consensus tới market reaction. Sau Trading, backtest một setup duy nhất và tính expectancy. Sau Korea/Vietnam, tạo research notebook cho một stock Hàn và một stock Việt Nam.
+
+## Quy tắc cập nhật
+
+Các nguyên lý nền tảng, accounting, valuation, portfolio theory và market microstructure có thể dùng lâu dài. Các phần về policy rates, tax, settlement, foreign-access rules, index classification và regulation phải được kiểm tra lại theo nguồn chính thức trước khi ra quyết định thật.
+
+Snapshot macro trong các master note hiện được ghi rõ theo thời điểm để tránh biến dữ liệu hiện tại thành kiến thức vĩnh viễn.
