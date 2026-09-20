@@ -20,4 +20,8 @@ Domain này chuyển từ việc “biết đọc báo cáo” sang khả năng 
 
 Bạn cần có khả năng đọc ba báo cáo tài chính liên kết với nhau, phân biệt accounting result và economic result, kiểm tra earnings có chuyển thành cash bền vững hay chỉ được hỗ trợ bởi accrual/working-capital/estimate, map value chain và profit pool, xác định moat mechanism bằng evidence thay vì adjective, chọn đúng KPI theo business model, phân biệt structural growth với cyclical growth, xây driver-based three-statement base/bull/bear case, đọc valuation dưới góc implied expectations và đánh giá liệu management có thật sự chuyển business quality thành per-share shareholder value hay không.
 
+## Case studies để áp dụng
+
+Đọc [Korea Semiconductor Cycle](../07_integrated_case_studies/03_SEMICONDUCTOR_CYCLE_KOREA_CASE.md) để luyện driver tree, inventory/ASP/utilization, earnings revisions, normalized valuation và capital-allocation analysis. Đọc [Vietnam Property–Bank Credit Cycle](../07_integrated_case_studies/04_VIETNAM_PROPERTY_BANK_CREDIT_CASE.md) để luyện balance-sheet survival, refinancing, accounting quality, governance và sector-specific valuation.
+
 Khi đã làm được điều đó, chuyển sang [04_economics](../04_economics/README.md) để hiểu environment bên ngoài doanh nghiệp.
