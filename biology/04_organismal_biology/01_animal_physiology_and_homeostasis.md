@@ -1,266 +1,242 @@
 # Sinh lý động vật và cân bằng nội môi — Animal Physiology and Homeostasis (동물생리학과 항상성)
 
-Một multicellular animal có hàng tỷ đến hàng nghìn tỷ cell. Mỗi cell cần oxygen, nutrient, water, ion và môi trường pH phù hợp; đồng thời waste phải được loại. Nhưng hầu hết cell nằm sâu bên trong body, không tiếp xúc trực tiếp air hay food.
+Plant giải bài toán vận chuyển và điều hòa bằng xylem, phloem, stomata và hormone. Animal đối mặt cùng bài toán nhưng thường có metabolic demand cao hơn và movement nhanh hơn. Khi muscle hoạt động, oxygen phải đến nhanh; CO₂ và heat phải được đưa đi; ion, pH, glucose và water phải được giữ trong vùng thích hợp.
 
-Vì vậy physiology có thể được hiểu như một bài toán **internal logistics + control**: làm sao đưa vật chất đến cell, lấy waste đi, giữ temperature/pH/osmolarity trong range và phối hợp organ thành một whole system.
+Vì vậy animal physiology không nên học như một danh sách “hệ tuần hoàn, hô hấp, tiêu hóa, bài tiết”. Tất cả các hệ này là những module phối hợp để bảo vệ **internal environment** của cell.
 
-## Tissue → organ → organ system
+## 1. Homeostasis là bài toán trung tâm
 
-Cell cùng loại hoặc phối hợp tạo **tissue (mô / 조직)**. Nhiều tissue tạo **organ (cơ quan / 기관)**. Nhiều organ phối hợp tạo **organ system (hệ cơ quan / 기관계)**.
+Một cell chỉ hoạt động tốt trong range nhất định của temperature, pH, ion, oxygen và nutrient. Nhưng external environment thay đổi liên tục.
 
-Ở animal, bốn tissue category cơ bản thường dùng:
+**Homeostasis (cân bằng nội môi / 항상성)** là khả năng duy trì variable sinh lý trong range phù hợp nhờ sensing, control và response.
 
-- epithelial tissue tạo surface/barrier;
-- connective tissue support và connect;
-- muscle tissue tạo force;
-- nervous tissue truyền information.
-
-Đây là classification rộng; mỗi tissue có rất nhiều subtype.
-
-## Internal environment — vì sao blood không chỉ là “chất vận chuyển”
-
-Cell trong body sống trong extracellular fluid. Blood plasma và interstitial fluid tạo một **internal environment** mà body cố giữ tương đối ổn định.
-
-Claude Bernard từng nhấn mạnh stability của internal milieu là điều kiện cho free life của organism; sau đó Walter Cannon phát triển concept **homeostasis (항상성)**.
-
-Homeostasis không giữ mọi variable cố định, mà giữ trong functional range bằng feedback.
-
-## Negative feedback — control loop điển hình
-
-Một control loop đơn giản:
+Ta có generic loop:
 
 ```text
-variable thay đổi
-→ sensor detect
-→ control center integrate
-→ effector respond
-→ variable trở về range
+controlled variable
+      ↓
+sensor
+      ↓
+integrating center
+      ↓
+effector
+      ↓
+negative feedback
 ```
 
-Ví dụ body temperature tăng: thermoreceptor và brain detect; skin blood flow/sweating thay đổi; heat loss tăng.
+Ví dụ blood glucose tăng sau bữa ăn. Pancreatic beta cell sense glucose, insulin tăng, tissue uptake/storage glucose tăng, blood glucose hạ.
 
-Control system biological phức tạp hơn thermostat vì nhiều sensor, hormone, nervous input và behavior cùng tham gia.
+Đây không phải một exception. Cùng control logic xuất hiện ở blood pressure, body temperature, osmolality và pH.
 
-# Digestion — biến food thành molecule hấp thu được
+## 2. Internal environment là extracellular fluid
 
-Food chứa macromolecule quá lớn để đi nguyên vẹn qua intestinal epithelium. **Digestive system (hệ tiêu hóa / 소화계)** phải phá chúng thành unit nhỏ.
+Cell trong body đa bào không trực tiếp tiếp xúc external world. Chúng được bathing trong **extracellular fluid**.
 
-Carbohydrate → monosaccharide.
+Circulatory system, lung, intestine và kidney cùng nhau điều chỉnh composition của fluid này.
 
-Protein → amino acid/peptide nhỏ.
+Ta có thể xem physiology như logistics system:
 
-Lipid → fatty acid, monoglyceride và product khác.
+```text
+external environment
+   ↓ intestine / lung
+blood and extracellular fluid
+   ↓
+body cells
+   ↓
+waste
+   ↓ lung / kidney / liver
+external environment
+```
 
-## Mechanical và chemical digestion
+Điểm này giúp nối các organ system thay vì học tách riêng.
 
-Chewing và stomach mixing tăng surface area, giúp enzyme tiếp cận substrate.
+## 3. Circulation: vì diffusion một mình không đủ
 
-Chemical digestion dùng enzyme hydrolysis.
+Diffusion hiệu quả ở distance ngắn. Khi organism lớn, oxygen từ lung không thể diffusion trực tiếp vài chục centimet tới muscle đủ nhanh.
 
-Salivary amylase bắt đầu carbohydrate digestion. Stomach acid denature protein và hỗ trợ pepsin. Pancreas đưa digestive enzyme vào small intestine. Bile từ liver/gallbladder emulsify fat thành droplet nhỏ, tăng area cho lipase.
+Circulatory system giải quyết bằng **bulk flow**: heart tạo pressure gradient, blood mang substance đi xa, rồi diffusion chỉ cần xử lý đoạn cuối từ capillary tới cell.
 
-Bile không phải enzyme; nó hỗ trợ physical dispersion của lipid.
+Đây là ví dụ classic cho việc organism kết hợp hai transport mode:
 
-## Small intestine — thiết kế cho absorption
+```text
+long distance: bulk flow
+short distance: diffusion
+```
 
-Small intestine có fold, **villi (nhung mao / 융모)** và **microvilli (미세융모)**, tăng surface area rất mạnh.
+## 4. Heart là pump tạo pressure gradient
 
-Epithelial cell dùng transporter để hấp thu nutrient. Glucose/amino acid vào capillary; lipid product được reassembled và nhiều lipid đi qua lymphatic lacteal trước khi vào bloodstream.
+Heart không “đẩy oxygen” trực tiếp. Nó tạo pressure difference làm blood flow.
 
-Structure–function relationship ở đây rất rõ: exchange tissue thường thin + high surface area + rich transport network.
-
-# Circulation — giải quyết giới hạn của diffusion
-
-Diffusion rất hiệu quả ở micrometer scale nhưng quá chậm cho organism lớn. **Circulatory system (hệ tuần hoàn / 순환계)** dùng bulk flow để đưa material nhanh qua khoảng cách dài, rồi diffusion xử lý đoạn ngắn từ capillary đến cell.
-
-## Heart như pressure generator
-
-Heart tạo pressure difference làm blood flow.
-
-Flow conceptually tuân theo:
-
-\[
-Flow \approx \frac{\Delta P}{Resistance}
-\]
-
-Pressure difference lớn hơn tăng flow; resistance lớn hơn giảm flow.
-
-Resistance trong vessel rất nhạy với radius. Trong simplified Poiseuille model:
+Một relationship đơn giản:
 
 \[
-R \propto \frac{1}{r^4}
+Flow \approx \frac{\Delta P}{R}
 \]
 
-Vì vậy thay đổi nhỏ vessel radius có thể thay blood flow lớn. Đây là reason arteriole constriction/dilation rất powerful.
+Flow tăng khi pressure difference tăng và giảm khi resistance tăng.
 
-## Artery, capillary và vein
+Resistance vessel phụ thuộc mạnh radius; vì vậy arteriole nhỏ có thể regulation flow bằng constriction/dilation.
 
-**Artery (động mạch / 동맥)** đưa blood rời heart, không nhất thiết luôn giàu oxygen.
+Điều này nối anatomy vessel với physics của fluid flow.
 
-**Vein (tĩnh mạch / 정맥)** đưa blood về heart, không nhất thiết luôn nghèo oxygen.
+## 5. Cardiac output nối heart rate và stroke volume
 
-Pulmonary artery mang deoxygenated blood tới lung; pulmonary vein mang oxygenated blood về heart.
-
-**Capillary (mao mạch / 모세혈관)** có wall rất mỏng và tổng cross-sectional area lớn, phù hợp exchange.
-
-## Blood components
-
-Plasma vận chuyển water, ion, protein, nutrient, hormone và waste.
-
-Red blood cell chứa **hemoglobin**, protein bind O₂.
-
-White blood cell tham gia immunity.
-
-Platelet và clotting factor tham gia hemostasis.
-
-# Respiration — gas exchange từ atmosphere đến mitochondria
-
-Trong physiology, respiration có nhiều level:
-
-- ventilation: air ra/vào lung;
-- gas exchange: O₂/CO₂ diffuse qua surface;
-- gas transport: blood vận chuyển;
-- cellular respiration: mitochondria dùng O₂.
-
-Tách level giúp tránh nhầm “breathing = cellular respiration”.
-
-## Alveolus — surface exchange cực lớn
-
-Human lung có millions alveoli tạo surface area rất lớn. Alveolar wall và capillary wall mỏng, diffusion distance ngắn.
-
-O₂ partial pressure cao hơn trong alveolar air so với venous blood nên net diffusion vào blood. CO₂ đi hướng ngược.
-
-## Partial pressure
-
-Trong gas mixture, mỗi gas góp một **partial pressure (분압)**.
-
-Gas diffuse theo partial-pressure gradient, không đơn giản theo total pressure.
-
-Điều này quan trọng ở lung và high altitude.
-
-## Hemoglobin và cooperative binding
-
-Hemoglobin có bốn subunit. Khi một O₂ bind, affinity của các site còn lại thay đổi, tạo **cooperative binding**.
-
-Oxygen dissociation curve dạng sigmoid cho phép hemoglobin load O₂ tốt ở lung và unload hiệu quả ở tissue.
-
-pH, CO₂, temperature và metabolite có thể shift affinity, giúp active tissue nhận O₂ nhiều hơn.
-
-# Excretion và kidney — giữ composition của internal fluid
-
-Metabolism tạo nitrogenous waste, acid và thay đổi water/ion. Kidney không chỉ “lọc chất bẩn”; nó là organ điều chỉnh composition extracellular fluid.
-
-## Nephron — functional unit của kidney
-
-**Nephron (네프론)** gồm glomerulus và tubule.
-
-Process lớn:
-
-1. filtration: plasma water và small solute đi vào filtrate;
-2. reabsorption: molecule cần thiết quay về blood;
-3. secretion: một số substance được đưa từ blood vào tubule;
-4. excretion: phần cuối thành urine.
-
-Nếu kidney chỉ lọc rồi thải tất cả, body sẽ mất glucose, ion và water rất nhanh. Selective reabsorption mới là core logic.
-
-## Countercurrent mechanism
-
-Loop of Henle và medullary gradient giúp kidney concentrate urine.
-
-Ascending và descending limb có permeability khác nhau. Flow ngược chiều tạo **countercurrent multiplication**, xây osmotic gradient ở medulla.
-
-ADH làm collecting duct tăng water permeability, cho phép water được reabsorbed theo gradient khi body cần giữ nước.
-
-## RAAS và blood pressure
-
-Renin–angiotensin–aldosterone system (RAAS) điều phối kidney, blood vessel và adrenal hormone để ảnh hưởng sodium retention, water balance và blood pressure.
-
-Đây là example tốt cho việc physiology không chia thật sự thành các “hệ” độc lập; cardiovascular, renal và endocrine kết nối thành network.
-
-# Osmoregulation
-
-**Osmoregulation (điều hòa áp suất thẩm thấu / 삼투조절)** giữ water và solute balance.
-
-Nếu plasma osmolarity tăng, osmoreceptor góp phần kích thích thirst và ADH release. Kidney giữ water nhiều hơn, giúp osmolarity trở về range.
-
-Water balance không đơn thuần “uống đủ 2 lít”. Nhu cầu phụ thuộc size, diet, activity, temperature, kidney function và hormone.
-
-# Acid–base balance
-
-Blood pH được giữ trong range hẹp nhờ buffer, lungs và kidney.
-
-CO₂ hòa tan liên quan carbonic acid/bicarbonate:
-
-\[
-CO_2 + H_2O \leftrightarrow H_2CO_3 \leftrightarrow H^+ + HCO_3^-
-\]
-
-Lungs thay CO₂ nhanh qua ventilation. Kidney thay H⁺ excretion và bicarbonate handling chậm hơn nhưng mạnh về dài hạn.
-
-Đây là một control system đa organ.
-
-# Thermoregulation — heat balance
-
-Body temperature phụ thuộc heat production và heat loss.
-
-Heat production đến từ metabolism và muscle activity. Heat loss qua radiation, convection, conduction và evaporation.
-
-Skin vessel dilation tăng heat transfer ra surface; constriction giảm. Sweating tăng evaporative cooling. Shivering tăng heat production.
-
-Behavior — mặc áo, tìm shade, uống nước — cũng là phần physiology mở rộng.
-
-## Endotherm và ectotherm
-
-**Endotherm** dùng metabolic heat lớn để regulate body temperature.
-
-**Ectotherm** dựa nhiều hơn external heat source và behavior.
-
-Điều này không đồng nghĩa endotherm “cao cấp” hơn. Mỗi strategy có energy cost và ecological advantage khác nhau.
-
-# Exercise — nhiều hệ phối hợp cùng lúc
-
-Khi chạy, muscle ATP demand tăng. Respiration rate tăng, heart output tăng, blood flow redistribute, heat production tăng, sweating tăng, glycogen/fat metabolism thay đổi.
-
-Đây là example rất tốt để thấy organ system không hoạt động độc lập.
-
-Cardiac output:
+Lượng blood heart bơm mỗi phút:
 
 \[
 CO = HR \times SV
 \]
 
-Heart rate tăng và stroke volume có thể tăng, làm blood pumped mỗi phút tăng.
+Trong đó HR là heart rate, SV là stroke volume.
 
-Nhưng performance không do một variable đơn lẻ; lung diffusion, blood O₂ capacity, cardiac output, muscle mitochondria và nervous control cùng liên quan.
+Khi exercise, sympathetic signal tăng heart rate và contractility; muscle vessel dilate; venous return tăng. Whole system điều chỉnh để oxygen delivery match metabolic demand.
 
-# Allostasis — đôi khi body thay setpoint/context
+Từ metabolism ở muscle, ta đã đi lên cardiovascular response.
 
-Homeostasis thường gợi ý quay về một setpoint. **Allostasis (알로스타시스)** nhấn mạnh body có thể chủ động thay regulatory state theo demand, circadian rhythm hoặc stress.
+## 6. Gas exchange: diffusion qua surface mỏng
 
-Cortisol, heart rate và metabolism có thể thay đổi dự đoán challenge.
+Lung alveoli tạo diện tích bề mặt rất lớn với barrier mỏng.
 
-Chronic regulatory demand có thể tạo **allostatic load**, khái niệm dùng trong physiology/stress research.
+Oxygen diffuse từ alveolar air vào blood theo partial-pressure gradient. CO₂ đi chiều ngược.
 
-## Common misconceptions
+Hemoglobin trong red blood cell bind oxygen, làm blood mang lượng O₂ lớn hơn rất nhiều so với chỉ hòa tan trong plasma.
 
-### “Artery luôn mang blood giàu O₂”
+Structure–function lại xuất hiện: thin membrane + huge area + dense capillary network = efficient gas exchange.
 
-Sai. Artery được định nghĩa theo direction rời heart.
+## 7. Hemoglobin: binding phải vừa đủ mạnh
 
-### “Kidney lọc độc tố rồi giữ phần còn lại”
+Nếu hemoglobin bind O₂ quá yếu, lung không load tốt. Nếu quá mạnh, tissue không nhận O₂.
 
-Quá đơn giản. Kidney lọc rộng rồi selectively reabsorb/secrete để regulate fluid composition.
+Oxygen-binding curve có tính cooperative: binding một O₂ làm các site còn lại dễ bind hơn.
 
-### “Homeostasis nghĩa là mọi chỉ số không thay đổi”
+Ở tissue có CO₂ cao và pH thấp, hemoglobin affinity với O₂ giảm, hỗ trợ release. Đây là **Bohr effect**.
 
-Không. Healthy physiology là dynamic regulation quanh range.
+Một molecule protein vì thế phản ứng với local metabolic condition để cải thiện whole-body delivery.
 
-### “Một organ có một chức năng”
+## 8. CO₂, bicarbonate và pH nối lung với kidney
 
-Liver, kidney, lung, gut và skin đều có nhiều function và signaling role.
+CO₂ trong blood tham gia equilibrium:
 
-## Mental Model
+\[
+CO_2 + H_2O \leftrightarrow H_2CO_3 \leftrightarrow H^+ + HCO_3^-
+\]
 
-> Animal physiology là mạng logistics và feedback. Circulation tạo bulk flow, lung trao đổi gas, gut đưa nutrient vào, kidney chỉnh fluid composition, skin/lung/kidney trao đổi với environment, còn nervous/endocrine system điều phối toàn network.
+Nếu CO₂ tăng, equilibrium có thể tăng H⁺, làm pH giảm.
 
-File [[02_nervous_endocrine_and_immune_systems]] giải thích hệ điều khiển và defense: neuron truyền signal nhanh, hormone điều phối xa, immune system phân biệt threat và tissue bình thường.
+Lung điều chỉnh CO₂ nhanh bằng ventilation. Kidney điều chỉnh H⁺ và bicarbonate chậm hơn nhưng mạnh trong long-term acid–base balance.
+
+Một equation hóa học ở foundation giờ trở thành phối hợp giữa hai organ system.
+
+## 9. Digestion: biến food thành molecule cell có thể dùng
+
+Food chứa polymer và molecule lớn. Intestine không thể absorb nguyên protein hoặc starch hiệu quả như vậy.
+
+Digestion dùng enzyme để breakdown carbohydrate thành monosaccharide, protein thành amino acid/peptide, lipid thành fatty acid/monoglyceride.
+
+Sau đó transporter đưa nutrient qua intestinal epithelium.
+
+Microvilli tăng surface area — lại là surface-area-to-volume principle.
+
+## 10. Liver là metabolic hub
+
+Nutrient từ intestine thường đi qua liver trước khi phân phối rộng.
+
+Liver store glycogen, regulate blood glucose, process lipid/amino acid, detoxify many compound và produce plasma protein.
+
+Vì vậy liver nối digestion với metabolism và circulation.
+
+Không nên xem organ system như module kín. Liver là điểm giao của nhiều system.
+
+## 11. Kidney: filter không có nghĩa bỏ tất cả
+
+Kidney nhận blood, filter plasma ở glomerulus rồi selective reabsorption và secretion dọc nephron.
+
+Nếu chỉ “lọc rồi thải”, body sẽ mất glucose, amino acid, ion và water. Logic thật là:
+
+```text
+filter broadly
+   ↓
+reabsorb what should be kept
+   ↓
+secrete additional waste/ions
+   ↓
+excrete final urine
+```
+
+Đây là strategy khác membrane selectivity ở cell nhưng cùng principle control exchange.
+
+## 12. Nephron và gradient
+
+Loop of Henle góp phần tạo osmotic gradient trong kidney medulla. Gradient cho phép collecting duct reabsorb water tùy hormone signal.
+
+ADH tăng water permeability ở collecting duct, giúp conserve water khi body cần.
+
+Ta lại gặp motif: **tạo gradient trước, sau đó regulation permeability để khai thác gradient**.
+
+## 13. Osmoregulation: water và salt phải được điều chỉnh cùng nhau
+
+Water movement phụ thuộc solute concentration. Nếu body mất water nhiều hơn salt, plasma osmolality tăng. Osmoreceptor detect change; thirst và ADH tăng.
+
+Điều này nối osmosis từ cell biology với behavior (“khát”) và endocrine physiology.
+
+## 14. Thermoregulation: balance giữa heat production và heat loss
+
+Metabolism tạo heat. Exercise tăng heat production.
+
+Body trao đổi heat qua radiation, convection, conduction và evaporation.
+
+Khi nóng, skin blood flow tăng và sweating tăng. Khi lạnh, vasoconstriction giảm heat loss, shivering tăng heat production.
+
+Negative feedback giữ core temperature trong range phù hợp enzyme function.
+
+## 15. Muscle: ATP biến thành mechanical work
+
+Muscle contraction dựa trên actin–myosin sliding.
+
+Myosin hydrolyze ATP để cycle giữa binding state. Ca²⁺ signal expose binding site trên actin regulatory system.
+
+Một contraction vì vậy nối:
+
+```text
+nerve signal
+ ↓
+Ca2+ release
+ ↓
+actin–myosin interaction
+ ↓
+ATP hydrolysis
+ ↓
+force
+```
+
+Molecular energy conversion trở thành movement ở organism scale.
+
+## 16. Exercise như bài toán tích hợp nhiều hệ
+
+Khi chạy:
+
+Muscle ATP demand tăng → respiration tăng → O₂ consumption và CO₂ production tăng → ventilation tăng → heart output tăng → skin blood flow và sweating thay đổi → liver và hormone điều chỉnh fuel availability.
+
+Không một organ system nào “chịu trách nhiệm” cho exercise response. Đây là integrated physiology.
+
+## 17. Disease thường là failure của regulation, không chỉ hỏng một bộ phận
+
+Hypertension có thể liên quan vessel resistance, kidney salt handling, nervous/endocrine regulation và vascular remodeling.
+
+Diabetes liên quan insulin production/action, glucose metabolism và long-term vessel/tissue damage.
+
+Physiology giúp hiểu disease như network dysregulation thay vì chỉ tên organ.
+
+## 18. Tại sao bước tiếp theo là nervous, endocrine và immune system?
+
+Ta đã mô tả nhiều response: heart rate đổi, vessel constrict, ADH tăng, insulin release, immune defense. Nhưng system nào coordinate những thay đổi này?
+
+Animal cần ít nhất ba mạng control lớn:
+
+- nervous system: nhanh, spatially precise;
+- endocrine system: hormone đi xa, thường chậm hơn nhưng kéo dài;
+- immune system: nhận diện threat và điều phối defense.
+
+Ba mạng này cross-talk liên tục.
+
+Tiếp tục với [[02_nervous_endocrine_and_immune_systems]].
