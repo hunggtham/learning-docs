@@ -21,7 +21,7 @@ tham gia lặp lại
 
 `워라밸` — cân bằng công việc–đời sống — không chỉ là khẩu hiệu nhân sự. Nó phản ánh việc thời gian ngoài công việc ngày càng được coi rõ là tài nguyên cá nhân. Nếu thế hệ trước có thể xem làm thêm giờ như đầu tư vào tổ chức, thế hệ sau có thể coi giờ tan làm ổn định là điều kiện để tập thể thao, học thêm, gặp bạn hoặc nghỉ ngơi.
 
-Thay đổi này không diễn ra đồng đều giữa các ngành. Tuy nhiên khi giá trị của thời gian rảnh tăng, thị trường cho phòng gym, du lịch, lớp sở thích, nhóm chạy bộ và hoạt động với thú cưng cũng mở rộng.
+Thay đổi này không diễn ra đồng đều giữa các ngành. Tuy nhiên khi giá trị của thời gian rảnh tăng, thị trường cho phòng tập, du lịch, lớp sở thích, nhóm chạy bộ và hoạt động với thú cưng cũng mở rộng.
 
 ## 야구: sân vận động như một hệ thống nghi thức
 
@@ -114,13 +114,13 @@ Nhưng **golf mô phỏng (스크린골프 / screen golf)** mở rộng khả n�
 
 ## 스크린골프: mô phỏng không chỉ là bản sao
 
-Mô phỏng thay môi trường vật lý, nhịp chơi và bối cảnh xã hội. Người dùng có thể chơi buổi tối, gần nhà và khi thời tiết xấu. Do đó screen golf không chỉ là “golf rẻ hơn”; nó là định dạng mới có chuẩn mực xã hội riêng.
+Mô phỏng thay môi trường vật lý, nhịp chơi và bối cảnh xã hội. Người dùng có thể chơi buổi tối, gần nhà và khi thời tiết xấu. Do đó golf mô phỏng không chỉ là “golf rẻ hơn”; nó là định dạng mới có chuẩn mực xã hội riêng.
 
 Bài học rộng hơn: phiên bản số của một hoạt động thường tạo văn hoá riêng thay vì chỉ đổi địa điểm.
 
 ## 헬스장, PT: tập luyện như một hoạt động được lên lịch và đo lường
 
-Phòng gym `헬스장` và huấn luyện cá nhân `PT` biến vận động thành lịch hẹn + hệ thống chỉ số. Cân nặng, thành phần cơ thể, hiệp tập, số lần lặp và ảnh tiến triển tạo vòng phản hồi.
+Phòng tập `헬스장` và huấn luyện cá nhân `PT` biến vận động thành lịch hẹn + hệ thống chỉ số. Cân nặng, thành phần cơ thể, hiệp tập, số lần lặp và ảnh tiến triển tạo vòng phản hồi.
 
 Điều này nối giải trí với `자기관리`: thời gian rảnh không nhất thiết chỉ là nghỉ thụ động mà có thể được dùng như dự án cải thiện bản thân.
 
@@ -166,7 +166,7 @@ Nhưng nhãn `힐링` không chứng minh một hoạt động có hiệu quả 
 
 ## e스포츠: trò chơi trở thành hệ thống thể thao chuyên nghiệp để xem
 
-Thể thao điện tử Hàn Quốc phát triển nhờ băng rộng, PC bang, giải đấu, truyền hình/phát sóng và văn hoá game. Khi trò chơi có xếp hạng, đội chuyên nghiệp, tài trợ, phát sóng và người hâm mộ, nó sở hữu nhiều đặc điểm thiết chế của thể thao.
+Thể thao điện tử Hàn Quốc phát triển nhờ băng rộng, PC bang, giải đấu, truyền hình/phát sóng và văn hoá trò chơi. Khi trò chơi có xếp hạng, đội chuyên nghiệp, tài trợ, phát sóng và người hâm mộ, nó sở hữu nhiều đặc điểm thiết chế của thể thao.
 
 Thành tích cạnh tranh phụ thuộc:
 
@@ -175,7 +175,7 @@ Thành tích cạnh tranh phụ thuộc:
 - giao tiếp nhóm;
 - khối lượng luyện tập;
 - độ ổn định mạng;
-- kiến thức về phiên bản game và chiến thuật đang thịnh hành.
+- kiến thức về phiên bản trò chơi và chiến thuật đang thịnh hành.
 
 Đây là hệ sinh thái kỹ năng, không chỉ là “chơi game nhiều”.
 
@@ -237,26 +237,26 @@ Không nên suy rằng mọi người cao tuổi thích cùng loại hoạt đ�
 
 Một dịch vụ có thể rất hiện đại nhưng giảm khả năng tham gia nếu không còn kênh thay thế. Vì vậy số hoá giải trí cần đi cùng thiết kế tiếp cận, không chỉ tối ưu tốc độ cho người dùng trung bình.
 
-## 팬덤: thể thao, idol và game dùng kiến trúc người hâm mộ tương tự
+## 팬덤: thể thao, thần tượng và trò chơi dùng kiến trúc người hâm mộ tương tự
 
 Văn hoá người hâm mộ có thể nhìn như một chồng lớp:
 
 ```text
 Danh tính: đội / cầu thủ / nghệ sĩ
-Biểu tượng: màu / logo / light stick / áo đội
+Biểu tượng: màu / logo / gậy cổ vũ phát sáng (light stick) / áo đội
 Giao tiếp: cộng đồng / phòng chat / nền tảng
-Phối hợp: cổ vũ / mua vé / streaming / bình chọn
+Phối hợp: cổ vũ / mua vé / phát trực tuyến (streaming) / bình chọn
 Kinh tế: vé / hàng lưu niệm / tài trợ
-Vật lý: sân vận động / nhà thi đấu / concert / PC bang
+Vật lý: sân vận động / nhà thi đấu / buổi hoà nhạc / PC bang
 ```
 
 Cùng kiến trúc nhưng ý nghĩa khác theo lĩnh vực.
 
 ## 굿즈: hàng lưu niệm như danh tính có thể mang theo
 
-Áo đội, khăn, photocard, light stick và sản phẩm hợp tác biến fandom trừu tượng thành đồ vật. Hàng lưu niệm vừa có giá trị sử dụng, giá trị ký ức và tín hiệu thành viên.
+Áo đội, khăn, thẻ ảnh (photocard), gậy cổ vũ phát sáng và sản phẩm hợp tác biến cộng đồng người hâm mộ trừu tượng thành đồ vật. Hàng lưu niệm vừa có giá trị sử dụng, giá trị ký ức và tín hiệu thành viên.
 
-Phiên bản giới hạn tạo khan hiếm. Khan hiếm có thể tăng giá trị cảm nhận nhưng cũng tạo mua đi bán lại và đầu cơ. Vì vậy tiêu dùng fandom cần nhìn cả cảm xúc lẫn cơ chế thị trường.
+Phiên bản giới hạn tạo khan hiếm. Khan hiếm có thể tăng giá trị cảm nhận nhưng cũng tạo mua đi bán lại và đầu cơ. Vì vậy tiêu dùng của người hâm mộ cần nhìn cả cảm xúc lẫn cơ chế thị trường.
 
 ## 티켓팅: hàng đợi số cho quyền tiếp cận khan hiếm
 
@@ -297,7 +297,7 @@ Vì vậy quản trị sự kiện cần nhìn từng điểm nghẽn chứ khô
 
 ## 입장·퇴장: vào sân và rời sân là hai bài toán khác nhau
 
-Lúc vào, người xem đến phân tán theo thời gian; sau trận hoặc concert, rất nhiều người có thể rời đi gần như cùng lúc. Vì thế **thoát người (egress)** có thể khó hơn nhập场.
+Lúc vào, người xem đến phân tán theo thời gian; sau trận hoặc buổi hoà nhạc, rất nhiều người có thể rời đi gần như cùng lúc. Vì thế **thoát người (egress)** có thể khó hơn quá trình vào sân.
 
 Thiết kế tốt cần:
 
@@ -322,7 +322,7 @@ Vì vậy an toàn đám đông không thể dựa hoàn toàn vào lời khuyê
 
 ## 행사 운영: sự kiện là một hệ thống tạm thời
 
-Một trận đấu, lễ hội hoặc concert dựng lên một “thành phố tạm thời” với nhiều hệ thống:
+Một trận đấu, lễ hội hoặc buổi hoà nhạc dựng lên một “thành phố tạm thời” với nhiều hệ thống:
 
 ```text
 vé
@@ -348,7 +348,7 @@ Một ngày “vẫn tổ chức được” về kỹ thuật chưa chắc an t
 
 ## 커뮤니티 운영: cộng đồng sở thích cũng cần quản trị
 
-Nhóm chạy, câu lạc bộ, cộng đồng game hoặc fandom có thể bắt đầu rất không chính thức, nhưng khi lớn lên cần quy tắc về lịch, tiền quỹ, hành vi, quyền quản trị và xử lý xung đột.
+Nhóm chạy, câu lạc bộ, cộng đồng trò chơi hoặc cộng đồng người hâm mộ có thể bắt đầu rất không chính thức, nhưng khi lớn lên cần quy tắc về lịch, tiền quỹ, hành vi, quyền quản trị và xử lý xung đột.
 
 Một cộng đồng chỉ dựa vào một người tổ chức có rủi ro cao: khi người đó bận hoặc rời nhóm, hoạt động có thể dừng. Vì vậy cộng đồng bền cần **phân phối công việc tổ chức** và cơ chế thay thế người phụ trách.
 
@@ -373,13 +373,13 @@ Nếu chi phí gia nhập quá cao, nhóm có thể già hoá hoặc thu hẹp d
 
 ## Phép ứng xử khi cổ vũ và ranh giới
 
-Fandom tạo cảm giác thuộc về nhưng cũng có quy tắc: khu ghế, thời điểm cổ vũ, tôn trọng đối thủ, quy định camera và hành vi với vận động viên. Khi danh tính nhóm mạnh, xung đột giữa các nhóm cũng có thể tăng.
+Cộng đồng người hâm mộ tạo cảm giác thuộc về nhưng cũng có quy tắc: khu ghế, thời điểm cổ vũ, tôn trọng đối thủ, quy định camera và hành vi với vận động viên. Khi danh tính nhóm mạnh, xung đột giữa các nhóm cũng có thể tăng.
 
 Văn hoá người hâm mộ lành mạnh cần ranh giới giữa tham gia nhiệt tình và quấy rối/xâm phạm đời tư.
 
 ## 자기계발형 여가: khi thời gian rảnh vẫn phải “có ích”
 
-Lớp ngoại ngữ, học chứng chỉ, câu lạc bộ sách, gym hoặc dự án lập trình phụ có thể vừa là giải trí vừa là đầu tư. `자기계발` làm thời gian rảnh mang một phần logic năng suất.
+Lớp ngoại ngữ, học chứng chỉ, câu lạc bộ sách, phòng tập hoặc dự án lập trình phụ có thể vừa là giải trí vừa là đầu tư. `자기계발` làm thời gian rảnh mang một phần logic năng suất.
 
 Điều này không có nghĩa người Hàn “không biết nghỉ”. Một người có thể thật sự thích sở thích mang tính phát triển bản thân. Câu hỏi là hoạt động xuất phát từ niềm vui nội tại, áp lực bên ngoài hay cả hai.
 
@@ -421,7 +421,7 @@ khả năng tiếp cận địa điểm tăng
 mạng bạn bè cùng tham gia tăng
 ```
 
-Núi gần tàu điện → leo núi dễ. Screen golf gần nhà → chơi golf dễ. Nhóm chạy bộ có phòng chat → chi phí xã hội khi tham gia lần đầu giảm. Hạ tầng làm phân phối hoạt động giải trí thay đổi.
+Núi gần tàu điện → leo núi dễ. Golf mô phỏng gần nhà → chơi golf dễ. Nhóm chạy bộ có phòng chat → chi phí xã hội khi tham gia lần đầu giảm. Hạ tầng làm phân phối hoạt động giải trí thay đổi.
 
 ## Liên hệ kiến thức: sự kiện như hệ thống hàng đợi và khả năng phục hồi
 
@@ -439,15 +439,15 @@ người đến
 
 Mỗi bước có công suất riêng. Nếu một bước quá yếu, trải nghiệm toàn chuỗi suy giảm. Đây là cùng logic với dịch vụ đô thị và hệ thống phần mềm: **điểm nghẽn thường nằm ở mắt xích yếu nhất, không phải ở trung bình toàn hệ thống**.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model)
 
-> Giải trí ở Hàn Quốc là nơi **địa lý, ngân sách thời gian, khả năng cơ thể, công nghệ, thị trường, quản trị sự kiện và danh tính** gặp nhau. Núi tạo điều kiện cho leo núi; băng rộng tạo thể thao điện tử; mật độ đô thị tạo screen golf và địa điểm sở thích; thiết kế tiếp cận quyết định ai có thể dùng không gian; nền tảng tạo nhóm; fandom biến người xem thành người tham gia. Khi hoạt động có quy mô lớn, văn hoá người hâm mộ còn phụ thuộc vào hàng đợi, an toàn đám đông, lối thoát, giao thông và năng lực quản trị.
+> Giải trí ở Hàn Quốc là nơi **địa lý, ngân sách thời gian, khả năng cơ thể, công nghệ, thị trường, quản trị sự kiện và danh tính** gặp nhau. Núi tạo điều kiện cho leo núi; băng rộng tạo thể thao điện tử; mật độ đô thị tạo golf mô phỏng và địa điểm sở thích; thiết kế tiếp cận quyết định ai có thể dùng không gian; nền tảng tạo nhóm; cộng đồng người hâm mộ biến người xem thành người tham gia. Khi hoạt động có quy mô lớn, văn hoá người hâm mộ còn phụ thuộc vào hàng đợi, an toàn đám đông, lối thoát, giao thông và năng lực quản trị.
 
-## Hiểu lầm phổ biến (Common Misconceptions)
+## Hiểu lầm phổ biến (common misconceptions)
 
 “Leo núi chỉ là sở thích của người già” là sai; người tham gia thuộc nhiều thế hệ dù người lớn tuổi dễ thấy hơn.
 
-“Thể thao điện tử chỉ là game nên không có thiết chế” bỏ qua lao động chuyên nghiệp, giải đấu, phát sóng và kinh tế người hâm mộ.
+“Thể thao điện tử chỉ là trò chơi nên không có thiết chế” bỏ qua lao động chuyên nghiệp, giải đấu, phát sóng và kinh tế người hâm mộ.
 
 “Văn hoá người hâm mộ là phi lý” bỏ qua danh tính, cộng đồng và ký ức tập thể; đồng thời niềm đam mê không hợp thức hoá quấy rối.
 
