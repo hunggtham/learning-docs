@@ -73,8 +73,8 @@ Modern AI application thường thêm external retrieval, tools, memory, verific
 ├── 11_reinforcement_learning/              ✅ complete
 ├── 12_computer_vision/                     ✅ complete
 ├── 13_speech_audio_and_multimodal/         ✅ complete
-├── 14_data_for_ai/                         ← next
-├── 15_ai_engineering/
+├── 14_data_for_ai/                         ✅ complete
+├── 15_ai_engineering/                      ← next
 ├── 16_mlops_and_llmops/
 ├── 17_ai_compute_and_infrastructure/
 ├── 18_evaluation_reliability_interpretability/
@@ -97,6 +97,10 @@ State               ≠ Conversation Transcript
 Reward              ≠ True Goal
 State               ≠ Observation
 RL                  ≠ RLHF
+Dataset             ≠ Reality
+Label               ≠ Ground Truth by Definition
+Available in DB     ≠ Available at Prediction Time
+Synthetic Data      ≠ Privacy Guarantee
 Classification      ≠ Detection
 Detection           ≠ Segmentation
 Image               ≠ Physical World
@@ -113,10 +117,10 @@ Model says “done”   ≠ Verified completion
 
 ## Terminology convention
 
-Thuật ngữ quan trọng giữ English term, giải thích bằng tiếng Việt và thêm 한국어 용어 khi hữu ích trong môi trường Hàn Quốc, ví dụ `inference (추론 / suy luận)`, `training (학습 / huấn luyện)`, `embedding (임베딩 / biểu diễn vector)`, `retrieval (검색 / truy xuất)`, `agent (에이전트 / tác nhân)`, `reward (보상 / phần thưởng)`, `speech recognition (음성 인식 / nhận dạng tiếng nói)`, `multimodal (멀티모달 / đa phương thức)`.
+Thuật ngữ quan trọng giữ English term, giải thích bằng tiếng Việt và thêm 한국어 용어 khi hữu ích trong môi trường Hàn Quốc, ví dụ `inference (추론 / suy luận)`, `training (학습 / huấn luyện)`, `embedding (임베딩 / biểu diễn vector)`, `retrieval (검색 / truy xuất)`, `agent (에이전트 / tác nhân)`, `reward (보상 / phần thưởng)`, `data leakage (데이터 누수 / rò rỉ dữ liệu)`, `data governance (데이터 거버넌스 / quản trị dữ liệu)`.
 
 ## Learning principle
 
-Không học framework trước mechanism. PyTorch, Hugging Face, vector databases hoặc agent frameworks có thể thay đổi nhanh; các concept như probability, representation, attention, retrieval, state, planning, evaluation và security bền vững hơn.
+Không học framework trước mechanism. PyTorch, Hugging Face, vector databases hoặc agent frameworks có thể thay đổi nhanh; các concept như probability, representation, attention, retrieval, state, planning, data lineage, evaluation và security bền vững hơn.
 
 Mỗi layer vì vậy đi từ problem → mechanism → assumptions → examples → limitations → system connections.
