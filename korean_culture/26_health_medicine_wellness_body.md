@@ -376,15 +376,187 @@ Da liễu, thủ thuật thẩm mỹ và khám sức khoẻ thu hút khách nư�
 
 Nhưng tiếp thị quốc tế không thay thế giấy phép, đồng thuận đầy đủ và bằng chứng chuyên môn.
 
+# Năng lực sức khoẻ và tính liên tục của chăm sóc
+
+## 건강문해력: hiểu thông tin sức khoẻ không phải chỉ biết đọc chữ
+
+**Năng lực sức khoẻ (건강문해력 / health literacy)** là khả năng tìm, hiểu, đánh giá và sử dụng thông tin để ra quyết định phù hợp. Một người đọc tiếng Hàn tốt vẫn có thể gặp khó nếu đơn thuốc, xác suất rủi ro hoặc hướng dẫn xuất viện quá phức tạp.
+
+Có thể tách thành bốn bước:
+
+```text
+tìm được thông tin
+→ hiểu nghĩa
+→ đánh giá độ tin cậy
+→ áp dụng đúng vào tình huống của mình
+```
+
+Hệ thống y tế tốt không đẩy toàn bộ trách nhiệm sang bệnh nhân. Thiết kế biểu mẫu, ngôn ngữ đơn giản, nhắc lại thông tin và xác nhận người bệnh đã hiểu đều có thể giảm lỗi.
+
+## teach-back: “đã giải thích” chưa chắc “đã được hiểu”
+
+Một cách giao tiếp hữu ích là yêu cầu bệnh nhân diễn đạt lại kế hoạch bằng lời của mình. Mục tiêu không phải kiểm tra trí nhớ mà kiểm tra chất lượng truyền thông.
+
+```text
+bác sĩ giải thích
+→ bệnh nhân diễn đạt lại
+→ phát hiện chỗ hiểu sai
+→ sửa lại trước khi rời cơ sở
+```
+
+Điều này giống giao tiếp vòng kín trong công việc: thông tin chỉ hoàn tất khi bên nhận đã giải mã đúng, không phải khi bên gửi đã nói xong.
+
+## shared decision-making: quyết định y khoa không chỉ là “bác sĩ chọn” hoặc “bệnh nhân tự chọn”
+
+**Ra quyết định chung (shared decision-making)** đặc biệt quan trọng khi có nhiều lựa chọn hợp lý với đánh đổi khác nhau.
+
+Bác sĩ mang kiến thức về bệnh, xác suất và lựa chọn điều trị; bệnh nhân mang thông tin về giá trị, ưu tiên, khả năng chi trả, lịch sống và mức chấp nhận rủi ro.
+
+```text
+bằng chứng chuyên môn
++ giá trị của bệnh nhân
++ hoàn cảnh thực tế
+→ quyết định phù hợp hơn
+```
+
+Tôn trọng chuyên môn không có nghĩa người bệnh không được hỏi; tự chủ bệnh nhân cũng không có nghĩa phải tự giải quyết mọi bất định mà không có hỗ trợ chuyên môn.
+
+## 상대위험 và 절대위험: cách trình bày rủi ro có thể đổi cảm nhận
+
+Một can thiệp được mô tả là “giảm rủi ro 50%” nghe rất lớn, nhưng ý nghĩa phụ thuộc nguy cơ nền.
+
+Ví dụ minh hoạ:
+
+```text
+nguy cơ nền: 2 trên 100
+sau can thiệp: 1 trên 100
+
+rủi ro tương đối giảm: 50%
+rủi ro tuyệt đối giảm: 1 điểm phần trăm
+```
+
+Hai con số đều đúng nhưng trả lời câu hỏi khác nhau. Năng lực sức khoẻ tốt cần hỏi cả **rủi ro tương đối (relative risk)** và **rủi ro tuyệt đối (absolute risk)** khi phù hợp.
+
+## 진료연속성: bệnh mạn tính cần chuỗi chăm sóc chứ không phải các lần khám rời rạc
+
+**Tính liên tục của chăm sóc (continuity of care)** quan trọng với tăng huyết áp, đái tháo đường, bệnh tim, sức khoẻ tinh thần và nhiều bệnh mạn tính. Một lần khám riêng lẻ có thể đúng, nhưng nếu mỗi lần ở một cơ sở khác và thông tin không nối được, kế hoạch dài hạn có thể bị đứt.
+
+Tính liên tục có ít nhất ba lớp:
+
+```text
+liên tục thông tin → hồ sơ và thuốc hiện tại được biết
+liên tục quản lý → kế hoạch dài hạn không bị mâu thuẫn
+liên tục quan hệ → người bệnh có nơi quen để trao đổi theo thời gian
+```
+
+Không phải ai cũng cần một bác sĩ duy nhất cho mọi vấn đề, nhưng hệ thống phải tránh để người bệnh trở thành người duy nhất giữ toàn bộ trạng thái của mình.
+
+## 의뢰·회송: chuyển tuyến tốt cần cả chiều đi và chiều về
+
+Khi một cơ sở gửi bệnh nhân tới chuyên khoa hoặc bệnh viện lớn hơn, giá trị không chỉ nằm ở việc “đã giới thiệu”. Cần chuyển đủ lý do, kết quả đã có và câu hỏi cần giải quyết.
+
+Sau chuyên khoa, thông tin cũng cần quay về nơi quản lý tiếp theo.
+
+```text
+cơ sở A
+→ lý do chuyển + dữ liệu
+→ cơ sở B
+→ đánh giá / điều trị
+→ kế hoạch tiếp theo
+→ quay lại A hoặc cơ sở khác
+```
+
+Nếu vòng thông tin không khép kín, xét nghiệm có thể lặp, thuốc có thể xung đột và trách nhiệm theo dõi trở nên mơ hồ.
+
+## 복약조정: danh sách thuốc là một hệ thống trạng thái
+
+Người cao tuổi hoặc người có nhiều bệnh có thể dùng thuốc từ nhiều khoa. **Đối chiếu thuốc (medication reconciliation)** là việc kiểm tra người bệnh thực sự đang dùng gì, liều nào, ai kê và có trùng hoặc tương tác không.
+
+Danh sách thuốc không chỉ là dữ liệu tĩnh. Nó thay đổi khi nhập viện, xuất viện, đổi bác sĩ hoặc thêm thực phẩm bổ sung.
+
+```text
+thuốc cũ
++ thuốc mới
++ thuốc không kê đơn
++ thực phẩm bổ sung
+→ cần một danh sách thống nhất
+```
+
+Đây là ví dụ rõ về quản lý trạng thái trong y tế: lỗi có thể xuất hiện không phải vì từng bác sĩ “sai”, mà vì thông tin giữa các nút không đồng bộ.
+
+## 퇴원: xuất viện là điểm chuyển giao rủi ro cao
+
+Khi rời bệnh viện, môi trường chuyển từ nơi có nhân viên theo dõi liên tục sang nhà. Người bệnh và gia đình phải hiểu:
+
+```text
+thuốc nào tiếp tục / dừng
+vết thương hoặc triệu chứng nào cần theo dõi
+lịch tái khám
+hoạt động nào cần hạn chế
+khi nào phải quay lại ngay
+ai là đầu mối liên hệ
+```
+
+Nếu hướng dẫn xuất viện dài nhưng khó hiểu, thông tin tồn tại trên giấy mà không trở thành hành động. Vì vậy chất lượng chuyển tiếp phụ thuộc cả nội dung lẫn khả năng hiểu.
+
+## 환자안전: lỗi y tế thường là lỗi hệ thống nhiều lớp
+
+An toàn bệnh nhân không chỉ dựa vào “bác sĩ cẩn thận”. Hệ thống dùng nhiều lớp bảo vệ: xác minh danh tính, kiểm tra dị ứng, quy trình thuốc, cảnh báo, xác nhận trước thủ thuật và giao tiếp bàn giao.
+
+Mô hình **Swiss cheese** giúp hình dung: mỗi lớp bảo vệ có lỗ hổng; tai nạn lớn xảy ra khi nhiều lỗ tạm thời thẳng hàng.
+
+```text
+lỗi nhỏ ở lớp 1
++ không phát hiện ở lớp 2
++ bàn giao thiếu ở lớp 3
++ cảnh báo bị bỏ qua
+→ sự cố tới bệnh nhân
+```
+
+Vì vậy cải tiến an toàn thường tập trung vào thiết kế quy trình chứ không chỉ yêu cầu cá nhân “chú ý hơn”.
+
+## 외국인 환자: ngôn ngữ và hệ thống hành chính có thể trở thành rủi ro lâm sàng
+
+Với người nước ngoài, khó khăn không chỉ là dịch tên bệnh. Cách mô tả triệu chứng, tiền sử, dị ứng, thuốc đang dùng và mức độ đau có thể bị mất nghĩa khi chuyển ngôn ngữ.
+
+Ngoài ra còn có đăng ký, bảo hiểm, xác thực danh tính và hiểu quy trình chuyển tuyến.
+
+Một hệ thống hỗ trợ tốt cần phân biệt:
+
+```text
+dịch hội thoại thông thường
+≠ phiên dịch y tế chính xác
+≠ hiểu quy trình hành chính
+```
+
+Sai nghĩa ở y tế có thể ảnh hưởng an toàn, nên những tình huống quan trọng cần ưu tiên cách giao tiếp rõ và xác nhận lại thay vì chỉ dựa vào đoán ngữ cảnh.
+
+## 만성질환 관리: quản lý bệnh mạn tính là công việc lặp lại
+
+Bệnh cấp tính thường có câu chuyện dễ hiểu: xuất hiện → điều trị → hồi phục. Bệnh mạn tính khác hơn:
+
+```text
+đo lường
+→ dùng thuốc / thay đổi hành vi
+→ theo dõi
+→ điều chỉnh
+→ lặp lại trong thời gian dài
+```
+
+Khó khăn lớn không chỉ là biết “phải làm gì”, mà là duy trì hành vi trong đời sống thật: giờ làm, chi phí, bữa ăn, chăm con, giấc ngủ và khả năng đến cơ sở y tế.
+
+Vì vậy tuân thủ điều trị không nên bị giải thích đơn giản bằng “ý chí”. Thiết kế lịch, nhắc thuốc, đơn giản hoá phác đồ và hỗ trợ gia đình có thể thay đổi kết quả.
+
 ## Liên hệ kiến thức: y tế như hệ thống quyết định nhiều lớp
 
-Một quyết định sức khoẻ có thể đọc qua năm lớp:
+Một quyết định sức khoẻ có thể đọc qua sáu lớp:
 
 ```text
 Sinh học: cơ thể thực sự có gì?
 Bằng chứng: can thiệp hiệu quả và có rủi ro ra sao?
 Thiết chế: tiếp cận, bảo hiểm, cơ sở cung cấp và chi phí thế nào?
 Môi trường: không gian và công nghệ có tạo rào cản tham gia hay không?
+Thông tin: dữ liệu có theo người bệnh xuyên cơ sở và thời gian hay không?
 Văn hoá: triệu chứng, chăm sóc và quyết định được hiểu/giao tiếp ra sao?
 ```
 
@@ -392,7 +564,7 @@ Sai lầm xảy ra khi dùng một lớp trả lời câu hỏi của lớp khá
 
 ## Mô hình tư duy (Mental Model)
 
-> Văn hoá sức khoẻ Hàn Quốc là đầu ra của **cơ thể + bảo hiểm/khả năng tiếp cận + mạng cơ sở y tế + môi trường vật lý/số + kỳ vọng gia đình + thị trường tiêu dùng + thông tin số**. Đừng hỏi “người Hàn chữa bệnh thế nào?” như thể có một phương pháp duy nhất; hãy hỏi con đường nào dễ tiếp cận, rào cản nào đang tồn tại, niềm tin nào ảnh hưởng lựa chọn và tuyên bố nào cần bằng chứng khoa học.
+> Văn hoá sức khoẻ Hàn Quốc là đầu ra của **cơ thể + bảo hiểm/khả năng tiếp cận + mạng cơ sở y tế + môi trường vật lý/số + tính liên tục thông tin + kỳ vọng gia đình + thị trường tiêu dùng + thông tin số**. Đừng chỉ hỏi “đi đâu chữa bệnh?”. Hãy hỏi thông tin có đi cùng người bệnh không, ai đang giữ kế hoạch dài hạn, người bệnh có hiểu lựa chọn và rủi ro không, và điểm chuyển giao nào dễ làm trạng thái bị mất.
 
 ## Hiểu lầm phổ biến (Common Misconceptions)
 
@@ -411,6 +583,12 @@ Sai lầm xảy ra khi dùng một lớp trả lời câu hỏi của lớp khá
 “Khuyết tật chỉ là vấn đề nằm trong cơ thể cá nhân” bỏ qua vai trò của môi trường và thiết kế tiếp cận.
 
 “Chăm sóc cuối đời chỉ bắt đầu khi không còn gì để làm” là cách hiểu hẹp; giảm triệu chứng, giao tiếp và hỗ trợ gia đình đều là công việc chăm sóc thực sự.
+
+“Bác sĩ đã nói nghĩa là bệnh nhân đã hiểu” là sai; thông tin chỉ hữu ích khi người bệnh có thể diễn giải và hành động đúng.
+
+“Đi nhiều chuyên khoa nghĩa là chăm sóc chắc chắn tốt hơn” bỏ qua nguy cơ mất tính liên tục, trùng xét nghiệm và xung đột thuốc.
+
+“Tuân thủ điều trị chỉ phụ thuộc ý chí bệnh nhân” bỏ qua lịch sống, chi phí, độ phức tạp của phác đồ và chất lượng hỗ trợ.
 
 ## Nguồn tham khảo định hướng
 
