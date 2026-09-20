@@ -1,225 +1,297 @@
-# DNA, gene và biểu hiện gene — DNA, Genes and Gene Expression (DNA, 유전자와 유전자 발현)
+# DNA, Gene và Biểu hiện gene — DNA, Genes and Gene Expression (DNA, 유전자와 유전자 발현)
 
-Cell signaling cho thấy một response dài hạn thường cần thay đổi protein mà cell sản xuất. Điều đó dẫn tới câu hỏi trung tâm của molecular genetics: **cell lưu thông tin để tạo protein ở đâu, copy thông tin đó ra sao, và đọc nó như thế nào?**
+Cell signaling ở chapter trước có thể đổi activity của protein trong vài giây, nhưng nhiều response dài hạn cần thay đổi **gene expression**. Điều đó đưa ta tới câu hỏi nền tảng: **information sinh học được lưu dưới dạng nào, được copy ra sao, và làm thế nào sequence vật lý trong DNA trở thành protein/function?**
 
-Câu trả lời thường được nén thành “DNA → RNA → protein”, nhưng nếu chỉ thuộc mũi tên này ta sẽ bỏ lỡ gần như toàn bộ reasoning. Chương này xây từng bước: vì sao DNA phù hợp để lưu information, replication giải bài toán copy như thế nào, transcription và translation biến sequence thành function ra sao, và regulation quyết định gene nào được dùng.
+Chapter này xây causal chain từ nucleotide → DNA → gene → RNA → protein → phenotype. Mục tiêu không phải thuộc “central dogma” như một mũi tên, mà hiểu machinery và limitation ở từng bước.
 
-## 1. Information trong biology là gì?
+> **Mental model:** DNA không phải “mệnh lệnh trực tiếp”. Nó là kho sequence được cell đọc có chọn lọc. Phenotype xuất hiện từ interaction giữa sequence, regulatory state, cellular machinery và environment.
 
-Khi nói DNA “chứa thông tin”, ta không có nghĩa DNA hiểu ý nghĩa như con người. Information nằm trong **sequence** các base.
+## 1. Genome, chromosome và gene khác nhau thế nào?
 
-Một DNA molecule có sugar-phosphate backbone tương đối lặp lại, trong khi order của A, T, G, C thay đổi. Chính phần có thể thay đổi này mang information.
+**Genome (bộ gene / 유전체)** là toàn bộ genetic material của một organism/cell. Ở eukaryote, genome chủ yếu nằm trong nhiều **chromosome (nhiễm sắc thể / 염색체)** trong nucleus, cùng genome nhỏ ở mitochondria/chloroplast.
 
-Nếu protein sequence cần một order amino acid nhất định để fold và function, cell cần một mapping từ nucleotide sequence sang amino-acid sequence. Genetic system giải bài toán đó bằng genetic code.
+Chromosome là một DNA molecule rất dài kết hợp với protein. **Gene (유전자)** là một region DNA có functional product hoặc tham gia tạo functional RNA/protein theo regulatory context.
 
-## 2. DNA double helix: structure phục vụ copying
+Không nên hình dung chromosome như “xâu gene liên tiếp không có khoảng trống”. Eukaryotic genome có promoter, enhancer, intron, repeat, noncoding RNA gene, structural region và nhiều sequence regulatory.
 
-DNA gồm hai strand chạy antiparallel. Base pair theo rule A–T và G–C.
+## 2. DNA structure: chemistry tạo khả năng copy information
 
-Complementarity không chỉ làm helix ổn định; nó tạo **template logic**. Nếu biết sequence một strand, về principle có thể suy ra strand còn lại.
+DNA là polymer nucleotide. Mỗi nucleotide có deoxyribose, phosphate và base A/T/G/C.
 
-Ví dụ:
+DNA thường tạo double helix gồm hai strand antiparallel. A pair T; G pair C qua hydrogen bond và base stacking góp phần ổn định helix.
 
-```text
-5' - A T G C C A - 3'
-3' - T A C G G T - 5'
-```
+Complementarity tạo một property rất mạnh: **mỗi strand có thể làm template để tạo strand đối ứng**.
 
-Vì vậy double-stranded DNA vừa lưu information vừa có built-in redundancy để copy và repair.
+Đây là lý do chemistry của DNA phù hợp cho heredity.
 
-> **Mental model:** DNA không giống một cuộn băng chỉ đọc. Hai strand bổ sung nhau khiến mỗi strand có thể giúp reconstruct strand kia.
+## 3. Directionality 5′ → 3′ không phải ký hiệu trang trí
 
-## 3. Gene không phải lúc nào cũng là “một đoạn DNA tạo một protein”
+DNA strand có direction do phosphate-sugar backbone. Polymerase thêm nucleotide vào 3′-OH nên synthesis mới diễn ra 5′ → 3′.
 
-**Gene (유전자)** là một unit genomic có sản phẩm functional, thường là RNA hoặc protein thông qua RNA intermediate.
+Khi two strand antiparallel, restriction này tạo **leading strand** và **lagging strand** trong replication.
 
-Cách nói “one gene–one protein” quá đơn giản. Một gene có thể tạo nhiều transcript qua alternative splicing; một số gene tạo RNA không được translate; protein có thể được modified sau translation.
+Một detail hóa học nhỏ dẫn đến architecture replication fork.
 
-Do đó relationship thực tế gần hơn với:
+## 4. DNA replication: copy genome trước khi cell divide
 
-```text
-genomic region
-   ↓ regulated transcription
-RNA transcript(s)
-   ↓ processing / translation
-protein isoform(s) or functional RNA
-   ↓
-cellular effect
-```
+Replication là **semi-conservative**: mỗi daughter DNA có một old strand và một new strand.
 
-## 4. Chromosome: vấn đề packing và organization
+Process gồm:
 
-Genome eukaryote dài hơn kích thước nucleus rất nhiều. DNA phải được package.
+1. helicase mở double helix;
+2. single-strand binding protein giữ strand tách;
+3. primase tạo primer;
+4. DNA polymerase kéo dài strand;
+5. lagging strand được tạo thành Okazaki fragment;
+6. primer được thay và ligase nối fragment.
 
-DNA quấn quanh histone tạo nucleosome; nucleosome tổ chức thành chromatin. Packing không chỉ để tiết kiệm không gian. Mức chromatin accessibility ảnh hưởng transcription.
+Danh sách enzyme chỉ có ý nghĩa khi nhìn theo problem: strand phải được mở, polymerase cần starting point, synthesis có directionality, fragment cần nối.
 
-Do đó physical organization của DNA trở thành một layer regulation.
+## 5. Proofreading và repair: information system phải quản lý error
 
-Ta sẽ quay lại sâu hơn ở [[02_genomics_epigenetics_and_regulation]].
+DNA polymerase có proofreading giúp giảm error. Sau replication, mismatch repair và nhiều repair pathway sửa damage khác như base modification, strand break.
 
-## 5. Replication: copy một polymer dài mà vẫn giữ độ chính xác
+Không có system nào hoàn hảo. Error rất hiếm vẫn xảy ra và trở thành mutation.
 
-Trước cell division, genome phải được copy.
+Điểm sâu ở đây là life cần hai mục tiêu hơi mâu thuẫn:
 
-DNA replication là **semiconservative**: mỗi daughter DNA có một old strand và một new strand.
+- đủ fidelity để organism hoạt động và heredity ổn định;
+- vẫn có variation để evolution xảy ra.
 
-Helicase mở double helix. Single-strand binding protein giữ strand tách. Primase tạo primer. DNA polymerase kéo dài chain mới.
+## 6. Mutation không phải lúc nào cũng do replication error
 
-Nhưng có một constraint hóa học: DNA polymerase thêm nucleotide vào đầu 3', nên synthesis luôn 5'→3'. Vì hai template antiparallel, một strand được tổng hợp liên tục, strand kia thành Okazaki fragments rồi được ligase nối.
+DNA có thể bị damage bởi UV, reactive chemical, oxidation hoặc spontaneous chemistry. Cell repair phần lớn damage; mutation là change sequence được giữ lại sau replication/repair outcome.
 
-Đây là ví dụ đẹp cho cách một constraint molecular tạo architecture của cả process.
+Mutation có thể là substitution, insertion, deletion, duplication, inversion hoặc larger chromosome rearrangement.
 
-## 6. Proofreading và repair: fidelity không đến từ một enzyme hoàn hảo
-
-DNA polymerase có proofreading, nhưng error vẫn có thể xảy ra. Cell còn có mismatch repair và nhiều pathway repair damage.
-
-Điểm quan trọng là genomic stability xuất hiện từ **nhiều layer error correction**.
-
-Nếu error rate bằng zero tuyệt đối, evolution mất nguồn mutation. Nếu error rate quá cao, genome mất function. Life tồn tại trong một vùng cân bằng giữa fidelity và variation.
+Effect phụ thuộc vị trí và context, không chỉ “loại mutation”.
 
 ## 7. Từ DNA sang RNA: transcription
 
-**Transcription (phiên mã / 전사)** dùng DNA làm template để tổng hợp RNA.
+**Transcription (phiên mã / 전사)** là synthesis RNA dùng DNA template.
 
-RNA polymerase bind promoter với sự hỗ trợ của transcription factor, mở local DNA và polymerize RNA.
+RNA polymerase nhận biết promoter cùng transcription factor và tạo RNA 5′ → 3′.
 
-Chỉ một strand làm template cho một transcript cụ thể.
+Chỉ một portion genome được transcribed ở cell/context cụ thể. Đây là điểm quan trọng: tất cả cell có gần cùng genome nhưng không đọc cùng gene.
 
-RNA sequence tương ứng coding strand của DNA ngoại trừ U thay T.
+Gene expression bắt đầu từ regulation của accessibility và transcription initiation.
 
-Transcription là điểm control mạnh vì cell không cần produce mọi RNA cùng lúc.
+## 8. Promoter và enhancer: gene cần địa chỉ và logic control
 
-## 8. RNA processing: eukaryote không dùng transcript thô ngay
+**Promoter (프로모터)** là region gần transcription start site nơi transcription machinery assemble.
 
-Pre-mRNA thường được thêm 5' cap, poly-A tail và trải qua splicing.
+**Enhancer (인핸서)** có thể nằm xa gene và bind transcription factor; DNA looping đưa regulatory complex lại gần promoter.
 
-**Intron** được loại, **exon** được nối.
+Một gene có thể tích hợp nhiều signal qua nhiều regulatory element. Gene expression vì vậy giống logic circuit hơn simple on/off switch.
 
-Alternative splicing có thể nối exon theo pattern khác, cho một gene tạo nhiều RNA isoform.
+## 9. RNA processing: eukaryotic transcript chưa phải mRNA hoàn chỉnh
 
-Điều này làm relationship gene → protein trở thành network nhiều hơn một mũi tên 1:1.
+Primary transcript thường được processing:
 
-## 9. Genetic code: từ alphabet 4 chữ sang alphabet 20 amino acid
+- 5′ cap;
+- poly(A) tail;
+- splicing bỏ intron và nối exon.
 
-Ribosome đọc mRNA theo nhóm ba nucleotide gọi là **codon (코돈)**.
+**Alternative splicing** cho phép cùng gene tạo nhiều transcript/protein isoform tùy cell/context.
 
-Với 4 loại base và triplet, có \(4^3=64\) codon. Nhiều codon encode cùng amino acid, nên genetic code có redundancy.
+Điều này phá mental model “một gene = một protein”. Relationship thực tế phức tạp hơn.
 
-Start codon thường AUG; stop codon báo kết thúc translation.
+## 10. Intron và exon: đừng hiểu exon = coding hoàn toàn
 
-Điểm cần hiểu: genetic code là mapping convention được evolution giữ lại rất rộng, không phải property bắt buộc duy nhất của chemistry.
+**Exon** là sequence được giữ trong mature RNA; exon có thể chứa untranslated region. **Intron** bị splice ra khỏi transcript mature điển hình.
 
-## 10. tRNA: adapter nối hai ngôn ngữ
+Splicing phải rất chính xác; mutation tại splice site có thể làm transcript khác thường.
 
-tRNA giải bài toán: nucleotide codon không tự “gắn” amino acid đúng.
+Gene architecture là một phần của regulation.
 
-Một đầu tRNA có anticodon pair với mRNA codon; đầu khác mang amino acid.
+## 11. RNA có nhiều role hơn messenger
 
-Aminoacyl-tRNA synthetase là enzyme gắn đúng amino acid vào tRNA.
+mRNA mang coding information tới ribosome. tRNA mang amino acid và đọc codon qua anticodon. rRNA là core structural/catalytic component của ribosome.
 
-Nhờ vậy system chuyển từ information ở nucleotide space sang sequence ở amino-acid space.
+Ngoài ra còn microRNA, long noncoding RNA, small nuclear RNA và nhiều RNA regulator.
 
-## 11. Ribosome: machine biến information thành polymer
+RNA vì vậy vừa là message, adapter, catalyst, scaffold và regulator.
 
-Ribosome gồm rRNA và protein. Nó giữ mRNA và tRNA đúng position, xúc tác peptide bond và di chuyển codon-by-codon.
+## 12. Genetic code: sequence base được ánh xạ sang amino acid
 
-Flow:
+Ribosome đọc mRNA theo **codon** gồm ba nucleotide. Mỗi codon tương ứng amino acid hoặc stop signal.
 
-```text
-mRNA codon
-   ↓ recognized by
-tRNA anticodon
-   ↓ brings
-amino acid
-   ↓
-ribosome builds
-polypeptide
-```
+Vì 4³ = 64 codon nhưng chỉ khoảng 20 amino acid phổ biến, code có redundancy: nhiều codon có thể encode cùng amino acid.
 
-Sau translation, polypeptide phải fold và đôi khi được modified hoặc transported tới organelle phù hợp.
+Đây là lý do một số substitution là **synonymous** và không đổi amino acid, dù vẫn có thể ảnh hưởng splicing, RNA stability hoặc translation efficiency trong context tertentu.
 
-Do đó “protein được tạo” chưa phải cuối process; function cần đúng shape và location.
+## 13. Translation: ribosome biến sequence thành polypeptide
 
-## 12. Central dogma: useful map nhưng không phải mọi luồng information
+Ribosome đọc mRNA 5′ → 3′. tRNA mang amino acid phù hợp codon. Peptide bond được hình thành và chain kéo dài.
 
-Central dogma thường viết:
+Translation gồm initiation, elongation, termination.
+
+Nhưng protein mới tạo chưa chắc functional. Nó cần folding, modification, localization và đôi khi assembly với subunit khác.
+
+Central dogma vì vậy không kết thúc ở “protein được tạo”.
+
+## 14. Protein targeting: tạo đúng protein nhưng gửi sai chỗ vẫn có thể mất function
+
+Signal peptide có thể hướng protein tới ER, mitochondria, nucleus hoặc organelle khác. Vesicle system tiếp tục sort cargo.
+
+Nếu protein membrane bị giữ trong ER do folding sai, function ở cell surface mất dù coding sequence chỉ thay một amino acid.
+
+Gene → phenotype luôn đi qua cell architecture.
+
+## 15. Central dogma nên hiểu thế nào cho đúng?
+
+Mô hình cơ bản:
 
 ```text
 DNA → RNA → Protein
 ```
 
-Đây là map cực hữu ích cho flow sequence information.
+Mũi tên biểu diễn flow sequence information phổ biến từ DNA qua RNA đến protein.
 
-Nhưng có exception về route: retrovirus dùng reverse transcription RNA → DNA; RNA virus có thể copy RNA → RNA. Ngoài ra protein state và environment có thể ảnh hưởng gene expression mà không “viết ngược sequence protein thành DNA”.
+Nhưng có reverse transcription RNA → DNA ở retrovirus; RNA có function trực tiếp; DNA không phải mọi information trong cell.
 
-Vì vậy central dogma không có nghĩa “DNA đơn phương quyết định mọi thứ”.
+Central dogma không nói “mọi thứ chỉ đi một chiều đơn giản”; nó nhấn mạnh sequence information không thường được truyền từ protein trở lại nucleic-acid sequence theo cách template.
 
-## 13. Gene expression regulation: genome giống nhau, cell type khác nhau
+## 16. Gene regulation ở bacteria: operon cho thấy economy của unicellular life
 
-Neuron và liver cell có gần như cùng genome. Khác biệt chính nằm ở **gene expression program**.
+Bacteria có thể tổ chức nhiều gene cùng function thành **operon**.
 
-Regulation có nhiều layer:
+Lac operon ở E. coli là example kinh điển: gene cần cho lactose utilization được regulation theo lactose/glucose availability.
 
-```text
-chromatin accessibility
-      ↓
-transcription initiation
-      ↓
-RNA processing / stability
-      ↓
-translation
-      ↓
-protein modification / degradation
+Logic này cho thấy gene expression gắn trực tiếp metabolism và environment.
+
+Cell không muốn sản xuất enzyme tốn energy khi substrate không có.
+
+## 17. Gene regulation ở eukaryote: nhiều layer hơn vì multicellularity
+
+Eukaryotic gene regulation có thể diễn ra ở:
+
+- chromatin accessibility;
+- transcription initiation;
+- RNA processing;
+- RNA stability;
+- translation;
+- protein modification;
+- protein degradation.
+
+Các layer tạo khả năng control chính xác theo cell type, development và signal.
+
+## 18. Chromatin: DNA phải được đóng gói nhưng vẫn cần đọc
+
+Eukaryotic DNA quấn quanh histone tạo nucleosome. Chromatin compaction giúp genome dài fit trong nucleus nhưng cũng ảnh hưởng accessibility.
+
+Histone modification, chromatin remodeler và DNA methylation có thể liên quan state expression.
+
+Không nên nghĩ “DNA methylation = gene tắt” trong mọi context; effect phụ thuộc vị trí và system.
+
+## 19. Epigenetic regulation: cùng sequence, khác state
+
+**Epigenetics (후성유전학)** nghiên cứu change regulation có thể duy trì qua cell division mà không cần đổi DNA sequence, thường liên quan chromatin/DNA modification.
+
+Trong development, liver cell và neuron có gần cùng DNA nhưng stable gene-expression program khác nhau.
+
+Điều này giải thích multicellular differentiation.
+
+Epigenetics không có nghĩa environment “viết lại gene tùy ý” và mọi acquired trait đều truyền qua generation. Transgenerational inheritance ở mammals có limitation và cần evidence cụ thể.
+
+## 20. Gene expression là dynamic response, không phải identity cố định
+
+Một cell có stable identity nhưng expression vẫn thay đổi theo nutrient, stress, hormone, circadian rhythm và signal.
+
+Vì vậy transcriptome là snapshot trạng thái, không phải bản định nghĩa cố định của cell.
+
+Điều này rất quan trọng khi đọc RNA-seq data.
+
+## 21. Mutation → protein → phenotype: causal chain phải có intermediate
+
+Ví dụ mutation làm codon đổi amino acid. Side chain mới có property khác. Protein folding hoặc active site thay đổi. Enzyme flux đổi. Cell physiology đổi. Tissue/function đổi.
+
+Nhưng nhiều mutation không đi theo chain này vì:
+
+- nằm vùng noncoding;
+- synonymous;
+- gene redundant;
+- compensatory pathway;
+- effect chỉ trong context đặc biệt.
+
+Genotype–phenotype mapping không đơn giản một-một.
+
+## 22. Hemoglobin và sickle-cell như case study structure–function–evolution
+
+Một substitution trong beta-globin thay glutamate bằng valine ở vị trí đặc biệt. Under low oxygen, hemoglobin S có tendency polymerize, làm red blood cell biến dạng.
+
+Điều đó ảnh hưởng blood flow, cell lifetime và clinical phenotype.
+
+Nhưng allele có population pattern thú vị vì heterozygote có protection tương đối trước severe malaria ở một số environment.
+
+Một molecular change nối protein chemistry, physiology và natural selection.
+
+## 23. Gene dosage: số copy cũng quan trọng
+
+Không chỉ sequence; copy number ảnh hưởng expression.
+
+Duplication gene tạo material cho evolution: một copy giữ function cũ, copy khác có thể accumulate change và diverge.
+
+Ở chromosome level, extra/missing chromosome làm dosage của hàng trăm gene đổi đồng thời, tạo systemic effect.
+
+## 24. Mitochondrial DNA: heredity không chỉ trong nucleus
+
+Mitochondria có genome riêng và ở humans thường inherited chủ yếu qua maternal line.
+
+Một cell có nhiều mitochondria và nhiều mtDNA copy, nên mutation proportion (**heteroplasmy**) có thể ảnh hưởng severity/tissue pattern.
+
+Đây là ví dụ làm Mendelian model đơn giản không đủ cho mọi inheritance.
+
+## 25. Gene network: phenotype thường là output của nhiều gene tương tác
+
+Transcription factor regulation tạo network. Một gene có thể regulate nhiều target; nhiều regulator converge lên một gene.
+
+```mermaid
+flowchart TD
+A[Signal] --> B[TF1]
+C[Cell state] --> D[TF2]
+B --> E[Gene X]
+D --> E
+E --> F[Protein]
+F -. feedback .-> B
 ```
 
-Mỗi layer cho system một điểm control khác nhau về speed, energy cost và reversibility.
+Network có feedback, redundancy và threshold. Vì vậy knockout một gene đôi khi effect nhỏ vì pathway compensate; trong trường hợp khác effect rất lớn nếu gene là bottleneck.
 
-## 14. Promoter, enhancer và transcription factor
+## 26. Genomics và sequencing: làm sao đọc genome?
 
-Promoter là vùng gần transcription start site cần cho initiation.
+Modern sequencing đọc hàng triệu/billion fragment rồi computational method map/assemble sequence.
 
-**Enhancer** có thể nằm xa và bind transcription factor. DNA looping đưa regulatory protein tới transcription machinery.
+Một DNA sequence thô chưa tự giải thích biology. Ta cần annotation, comparative genomics, expression data và experiment để gán function.
 
-Một gene có thể integrate nhiều signal vì enhancer chứa binding site cho nhiều factor.
+Bioinformatics vì vậy không tách khỏi molecular biology; nó là công cụ xử lý scale information quá lớn cho manual analysis.
 
-Đây là nơi cell signaling nối trực tiếp tới gene expression: kinase pathway có thể activate transcription factor, transcription factor bind DNA và đổi RNA production.
+## 27. CRISPR như ví dụ từ basic biology tới technology
 
-## 15. Mutation: khi information thay đổi
+CRISPR ban đầu được hiểu từ bacterial/archaeal adaptive defense. Guide RNA giúp protein Cas target nucleic-acid sequence tương ứng.
 
-**Mutation (đột biến / 돌연변이)** là thay đổi sequence DNA.
+Biotechnology tận dụng recognition này để edit genome.
 
-Point mutation có thể silent, missense hoặc nonsense tùy codon effect. Insertion/deletion có thể gây frameshift nếu không theo bội số ba.
+Một discovery từ microbiology → molecular mechanism → engineering tool. Đây là pattern xuyên library: hiểu mechanism mở đường cho technology.
 
-Nhưng effect của mutation phụ thuộc context. Mutation ở regulatory region có thể đổi amount expression; mutation trong intron có thể không có effect hoặc ảnh hưởng splicing; mutation coding region có thể từ neutral đến severe.
+## 28. Common misconceptions
 
-Ta không thể suy phenotype chỉ từ label “mutation”. Cần trace mechanism.
+“Gene là đoạn DNA luôn encode một protein” quá đơn giản; gene có thể tạo functional RNA, alternative isoform và regulatory complexity.
 
-## 16. Genotype → phenotype không phải đường thẳng
+“Một gene quyết định một trait” thường sai; trait có thể polygenic và environment-dependent.
 
-Một useful diagram:
+“Noncoding DNA là junk” sai; nhiều noncoding region có regulatory/structural function, dù không phải mọi sequence đều có selected function.
 
-```text
-genotype
-   ↓
-gene expression
-   ↓
-protein / RNA function
-   ↓
-cellular state
-   ↓
-tissue / organism phenotype
-   ↑
-environment + development + stochastic effects
-```
+“Epigenetics thay thế genetics” sai; epigenetic state hoạt động trên nền genome và molecular machinery.
 
-Environment có thể tác động ở nhiều điểm. Nutrition đổi metabolism; hormone đổi expression; temperature ảnh hưởng protein function.
+“Mutation luôn xấu” sai; effect có thể deleterious, neutral hoặc beneficial tùy context.
 
-Do đó phenotype là product của interaction giữa genotype và context.
+## 29. Bridge: information được truyền giữa generation như thế nào?
 
-## 17. Từ molecular information sang inheritance
+Ta đã hiểu DNA được copy và gene được expression. Nhưng organism diploid có hai allele; meiosis shuffle chromosome; fertilization kết hợp genome từ hai parent. Làm sao điều đó tạo Mendelian ratio? Recombination tạo variation ra sao? Trait continuous được giải thích thế nào?
 
-Ta đã hiểu một genome được copy và expression. Nhưng sexual reproduction đặt thêm câu hỏi: organism diploid có hai chromosome set; khi tạo gamete phải phân phối thế nào? Vì sao trait có probability pattern như Mendel quan sát? Recombination tạo variation ra sao?
+Đó là nội dung của [[01_inheritance_variation_and_mutation]].
 
-Đây là nơi molecular genetics phải nối sang chromosome behavior và probability.
+Sau đó [[02_genomics_epigenetics_and_regulation]] sẽ zoom trở lại genome-scale để hiểu regulatory architecture, omics và variation trên hàng nghìn/millions locus.
 
-Tiếp tục với [[01_inheritance_variation_and_mutation]].
+> **Mental model cuối chapter:** DNA là persistent information medium; gene expression là process context-dependent biến sequence thành functional molecule; phenotype là output của một chain nhiều tầng. Genetics chỉ trở nên dễ hiểu khi luôn theo dõi chain DNA → RNA → protein/network → cell → organism.
