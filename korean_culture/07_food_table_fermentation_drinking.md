@@ -184,17 +184,234 @@ Quá trình này tạo **ẩm thực lai (hybrid cuisine)**. Một món có th�
 
 Vì vậy “ẩm thực Hàn Quốc” không phải một danh sách đóng. Nó là một hệ thống tiếp tục hấp thụ nguyên liệu, công nghệ bảo quản, nền tảng giao hàng và dân số mới.
 
+## Chuỗi cung ứng thực phẩm: món ăn bắt đầu rất lâu trước căn bếp
+
+Một món ăn trên bàn là đầu ra của một chuỗi dài hơn nhiều so với “đầu bếp nấu món”. Có thể tách hệ thống thành:
+
+```text
+nông nghiệp / đánh bắt / nhập khẩu
+→ thu mua
+→ chợ đầu mối / trung tâm phân phối
+→ kho / chuỗi lạnh
+→ siêu thị / nhà hàng / bếp trung tâm
+→ người tiêu dùng
+→ rác / tái chế / xử lý
+```
+
+Mỗi mắt xích tạo ràng buộc cho mắt xích sau. Nếu rau bị mất nước ở khâu vận chuyển, đầu bếp không thể “nấu giỏi” để khôi phục hoàn toàn chất lượng. Nếu giá nhiên liệu hoặc chi phí lạnh tăng, giá món ăn có thể đổi dù công thức không đổi.
+
+Vì vậy văn hoá ẩm thực không chỉ nằm ở khẩu vị; nó phụ thuộc **hạ tầng hậu cần (logistics infrastructure)**.
+
+## Chợ đầu mối và phân phối: nơi giá cả gặp khối lượng
+
+Chợ bán buôn, trung tâm phân phối và đấu giá nông sản giải quyết bài toán ghép lượng lớn người bán với lượng lớn người mua. Nhà hàng nhỏ khó ký hợp đồng trực tiếp với hàng trăm nông hộ; hệ thống trung gian gom hàng, phân loại và tạo giá tham chiếu.
+
+Trung gian làm tăng một số chi phí nhưng cũng giảm **chi phí tìm kiếm và phối hợp (search and coordination cost)**. Do đó câu “bỏ hết trung gian thì thực phẩm sẽ rẻ hơn” không phải lúc nào cũng đúng; cần hỏi trung gian đang tạo giá trị gì và mức cạnh tranh trong khâu đó ra sao.
+
+## Chuỗi lạnh: nhiệt độ là một phần của chất lượng
+
+Thực phẩm tươi, thịt, cá và nhiều sản phẩm chế biến phụ thuộc **chuỗi lạnh (cold chain / 콜드체인)**. Nhiệt độ không chỉ ảnh hưởng cảm giác tươi mà còn tốc độ phản ứng hoá học và sinh trưởng vi sinh vật.
+
+Một trực giác đơn giản là nhiều quá trình sinh học tăng tốc khi nhiệt độ tăng trong phạm vi phù hợp. Vì vậy thời gian một sản phẩm ở ngoài điều kiện kiểm soát có thể quan trọng không kém ngày sản xuất.
+
+```text
+sản phẩm tốt tại nguồn
++ chuỗi lạnh ổn định
+→ chất lượng tới người dùng được giữ tốt hơn
+
+sản phẩm tốt tại nguồn
++ nhiệt độ dao động nhiều
+→ suy giảm chất lượng / tăng rủi ro
+```
+
+Điều này giải thích vì sao siêu thị, giao sáng sớm và thương mại thực phẩm trực tuyến cần đầu tư kho lạnh, thùng cách nhiệt và theo dõi thời gian.
+
+## An toàn thực phẩm: “ngon” và “an toàn” là hai chiều khác nhau
+
+Một món có thể ngon nhưng quy trình vệ sinh kém; một món được xử lý an toàn chưa chắc hợp khẩu vị. **An toàn thực phẩm (food safety / 식품안전)** phụ thuộc kiểm soát nguyên liệu, nhiệt độ, nhiễm chéo, thời gian lưu trữ và vệ sinh thiết bị.
+
+Trong bếp chuyên nghiệp, việc tách dao/thớt, quản lý thực phẩm sống–chín và thời gian bảo quản là một loại **quản trị rủi ro (risk management)**. Người dùng thường chỉ nhìn sản phẩm cuối nên khó quan sát các quy trình phía sau.
+
+Đây là **bất cân xứng thông tin**: nhà hàng biết nhiều hơn khách về quy trình thật. Quy định, kiểm tra và danh tiếng giúp giảm bất cân xứng đó nhưng không xoá hoàn toàn.
+
+## 원산지 và truy xuất nguồn gốc: thực phẩm còn mang dữ liệu
+
+Thông tin xuất xứ, ngày sản xuất, hạn dùng và thành phần là **siêu dữ liệu của thực phẩm**. Khi người tiêu dùng quan tâm nguồn gốc, chất lượng hoặc dị ứng, dữ liệu này trở thành một phần của sản phẩm.
+
+Có thể nhìn truy xuất nguồn gốc như một chuỗi:
+
+```text
+lô nguyên liệu
+→ nhà cung cấp
+→ cơ sở chế biến
+→ lô sản phẩm
+→ điểm bán
+```
+
+Nếu phát hiện vấn đề, hệ thống càng truy ngược tốt thì phạm vi thu hồi càng chính xác. Đây là cùng logic với theo dõi phiên bản phần mềm: biết chính xác phiên bản nào bị lỗi tốt hơn thu hồi toàn bộ hệ thống.
+
+## Giá thực phẩm và tính mùa vụ: không phải mọi biến động đều là “nhà hàng tăng giá”
+
+Rau, trái cây, hải sản và nhiều nguyên liệu có nguồn cung phụ thuộc thời tiết, mùa, dịch bệnh và nhập khẩu. Giá có thể biến động mạnh hơn hàng công nghiệp tiêu chuẩn hoá.
+
+Nhà hàng đối mặt với bài toán:
+
+```text
+chi phí nguyên liệu tăng
++ tiền thuê
++ lao động
++ phí nền tảng
++ năng lượng
+→ biên lợi nhuận giảm
+```
+
+Họ có thể tăng giá, giảm phần, đổi nguyên liệu, rút món hoặc chấp nhận lợi nhuận thấp hơn. Vì vậy thay đổi thực đơn cũng là phản ứng kinh tế, không chỉ thay đổi “gu”.
+
+## Nhà hàng như hệ thống công suất hữu hạn
+
+Một nhà hàng có số bàn, số bếp, số đầu bếp và thời gian phục vụ hữu hạn. Khi khách tăng nhanh, điểm nghẽn xuất hiện.
+
+Có thể mô tả đơn giản:
+
+```text
+công suất bếp < tốc độ đơn vào
+→ hàng đợi tăng
+→ thời gian chờ tăng
+→ sai sót tăng
+→ đánh giá xấu có thể tăng
+```
+
+Đây là lý do `웨이팅`, đặt bàn, menu giới hạn hoặc giới hạn thời gian bàn xuất hiện ở một số nơi. Chúng là công cụ quản lý tải, không chỉ là “văn hoá xếp hàng”.
+
+Một quán viral trên mạng có thể gặp **cú sốc cầu**: lượng khách tăng nhanh hơn khả năng tuyển người hoặc mở rộng bếp. Thành công truyền thông vì vậy có thể làm trải nghiệm giảm tạm thời.
+
+## Bếp trung tâm và chuẩn hoá: cùng hương vị ở nhiều nơi có chi phí và lợi ích
+
+Chuỗi nhà hàng hoặc cửa hàng tiện lợi có thể dùng **bếp trung tâm (central kitchen / 중앙주방)** để chuẩn bị sốt, sơ chế hoặc bán thành phẩm. Điều này tăng tính nhất quán, an toàn và lợi thế quy mô.
+
+Nhưng chuẩn hoá cũng có đánh đổi: món dễ ổn định hơn nhưng khó phản ánh biến thiên địa phương hoặc kỹ năng riêng của đầu bếp tại điểm bán.
+
+```text
+chuẩn hoá cao
+→ nhất quán + quy mô
+
+cá nhân hoá cao
+→ khác biệt + linh hoạt
+```
+
+Không có mức tối ưu duy nhất; mô hình kinh doanh quyết định.
+
+## Giao hàng làm món ăn phải được thiết kế cho hành trình
+
+Một món ngon tại bàn chưa chắc ngon sau 30 phút trong hộp. `배달` buộc nhà hàng thiết kế thêm cho **thời gian vận chuyển**.
+
+Khoai chiên mất độ giòn, mì hút nước, món lạnh tăng nhiệt, món nóng giảm nhiệt, nước sốt có thể tách. Vì vậy bao bì, tách sốt, lỗ thoát hơi và trình tự đóng gói trở thành một phần của thiết kế món.
+
+```text
+chất lượng tại bếp
+→ đóng gói
+→ chờ tài xế
+→ rung/lắc khi di chuyển
+→ thời gian giao
+→ mở hộp
+```
+
+Ẩm thực giao hàng là một định dạng riêng, không chỉ “nhà hàng mang đi”.
+
+## Bao bì và ngoại ứng môi trường
+
+Giao hàng và suất một người tăng sự tiện lợi nhưng thường tăng số hộp, túi, dụng cụ dùng một lần và vật liệu giữ nhiệt. Chi phí môi trường không luôn hiện trong giá món.
+
+Đây là **tác động ngoại biên (externality)**:
+
+```text
+người dùng nhận tiện lợi
+→ nhà hàng giao món
+→ rác phát sinh
+→ hộ gia đình / chính quyền / hệ tái chế xử lý
+```
+
+Nếu chỉ nhìn giá đơn hàng, một phần chi phí hệ thống bị ẩn. Thiết kế bao bì tốt phải cân bằng vệ sinh, chất lượng món, khối lượng và khả năng tái chế.
+
+## 음식물쓰레기: lãng phí thực phẩm bắt đầu từ dự báo sai
+
+Rác thực phẩm không chỉ là phần thừa sau ăn. Nó có thể xuất hiện từ dự báo nhu cầu sai, mua quá nhiều, chuẩn bị dư, hỏng trong kho hoặc phần ăn lớn hơn nhu cầu.
+
+Có thể tách nguyên nhân:
+
+```text
+dự báo sai
++ biến động khách
++ tiêu chuẩn thẩm mỹ
++ khẩu phần
++ bảo quản kém
+→ lãng phí
+```
+
+Một bữa nhiều `반찬` tạo cảm giác phong phú nhưng cũng có thể làm quản lý tồn kho phức tạp hơn. Nhà hàng phải cân bằng trải nghiệm bàn ăn với chi phí phế phẩm.
+
+## Nhập khẩu và khả năng phục hồi của hệ thực phẩm
+
+Không hệ thống thực phẩm hiện đại nào hoàn toàn tự cung tự cấp. Nguyên liệu, thức ăn chăn nuôi, gia vị và năng lượng có thể đi qua thương mại quốc tế.
+
+Nhập khẩu giúp đa dạng hoá nguồn cung và làm thực phẩm trái mùa sẵn hơn, nhưng tạo phụ thuộc vào tỷ giá, vận tải và cú sốc bên ngoài.
+
+**Khả năng phục hồi (resilience)** không có nghĩa chỉ dùng hàng nội địa. Nó có thể đến từ nhiều nguồn cung, tồn kho hợp lý, khả năng thay thế nguyên liệu và hạ tầng phân phối linh hoạt.
+
+```text
+một nguồn rất rẻ
+→ hiệu quả cao khi bình thường
+→ dễ tổn thương nếu nguồn đó đứt
+
+nhiều nguồn hơn
+→ có thể đắt hơn
+→ nhưng chịu cú sốc tốt hơn
+```
+
+Đây là đánh đổi giữa hiệu quả và dự phòng.
+
+## Tủ lạnh gia đình và kiến trúc bữa ăn
+
+Tủ lạnh lớn, hộ một người, giao hàng và thực phẩm chế biến làm bữa ăn gia đình không còn phụ thuộc cùng nhịp như trước. Một người có thể ăn đồ giao, người khác hâm `반찬`, người thứ ba ăn ngoài.
+
+Hạ tầng lưu trữ làm **thời gian ăn** tách khỏi **thời gian nấu**. Đây là thay đổi quan trọng:
+
+```text
+nấu và ăn gần như cùng lúc
+→ lưu trữ lạnh
+→ chuẩn bị trước / mua sẵn
+→ hâm lại khi cần
+```
+
+Khi thời gian các thành viên gia đình không đồng bộ, công nghệ bảo quản giúp duy trì bữa ăn nhưng có thể làm bữa chung ít bắt buộc hơn.
+
 ## Liên hệ kiến thức: lên men như hệ sinh thái được kiểm soát
 
 Một hũ lên men là **vi hệ sinh thái (micro-ecosystem)**. Ta không “tạo” từng phân tử hương vị trực tiếp; ta điều chỉnh **điều kiện biên (boundary conditions)** — muối, nhiệt độ, oxy, cơ chất — để cộng đồng vi sinh tự vận hành.
 
 Điều này giống DevOps: thay vì sửa từng sự kiện lúc chạy, ta thiết kế môi trường và ràng buộc. Nếu môi trường sai, hệ thống sẽ trôi khỏi trạng thái mong muốn.
 
-## Mô hình tư duy (Mental Model)
+## Liên hệ kiến thức: món ăn là đầu ra của chuỗi vật chất + chuỗi thông tin
 
-> Ẩm thực Hàn Quốc là kết quả của năm tầng: **sinh thái quyết định nguyên liệu; công nghệ bảo quản biến nguyên liệu qua mùa; giao thức xã hội biến ăn uống thành quan hệ; dân số và di cư làm đa dạng nhu cầu; nền tảng/logistics hiện đại biến cách món ăn được tìm, gọi và giao**. Kimchi chỉ hiểu trọn khi nhìn cùng vi sinh vật, mùa đông, lao động gia đình và ký ức vị giác.
+Một đĩa thức ăn có hai chuỗi song song:
 
-## Hiểu lầm phổ biến (Common Misconceptions)
+```text
+chuỗi vật chất:
+nguyên liệu → vận chuyển → chế biến → phục vụ
+
+chuỗi thông tin:
+xuất xứ → thành phần → hạn dùng → đánh giá → thương hiệu
+```
+
+Người tiêu dùng đưa quyết định bằng cả hai. Một sản phẩm vật lý tốt nhưng thông tin không đáng tin có thể khó bán; một thương hiệu mạnh nhưng chất lượng vật lý suy giảm cũng không bền.
+
+Đây là lý do ẩm thực hiện đại cần đồng thời logistics, an toàn, dữ liệu và danh tiếng.
+
+## Mô hình tư duy
+
+> Ẩm thực Hàn Quốc là kết quả của nhiều tầng liên kết: **sinh thái quyết định nguyên liệu; công nghệ bảo quản biến nguyên liệu qua mùa; chuỗi cung ứng đưa nguyên liệu đến đô thị; bếp và nhà hàng biến chúng thành món; giao thức xã hội biến ăn uống thành quan hệ; dân số và di cư làm đa dạng nhu cầu; nền tảng số quyết định cách món được tìm, gọi, đánh giá và giao; hệ thống rác xử lý phần còn lại**. Muốn hiểu một món, đừng chỉ nhìn công thức — hãy nhìn cả đường đi của nguyên liệu, thông tin và lao động.
+
+## Những hiểu lầm phổ biến
 
 “Đồ Hàn đều cay” là sai; nhiều món truyền thống nhẹ vị hoặc không cay.
 
@@ -208,7 +425,18 @@ Một hũ lên men là **vi hệ sinh thái (micro-ecosystem)**. Ta không “t�
 
 “Không có thịt nhìn thấy thì chắc chắn là món chay hoặc halal” là suy luận không an toàn vì nước dùng, sốt và quy trình chế biến cũng quan trọng.
 
+“Giá món tăng chỉ vì nhà hàng muốn lời nhiều hơn” bỏ qua nguyên liệu, lao động, tiền thuê, năng lượng, phí nền tảng và biến động chuỗi cung ứng.
+
+“Đồ giao hàng chỉ là món nhà hàng đặt vào hộp” bỏ qua việc món phải được thiết kế lại cho thời gian, nhiệt độ và rung lắc khi di chuyển.
+
+“Thực phẩm nội địa luôn bền vững hơn nhập khẩu” quá đơn giản; cần xét mùa, năng suất, năng lượng, vận tải, khả năng thay thế và mức rủi ro của từng chuỗi.
+
+## Đọc tiếp
+
+Đọc cùng [`12_city_consumption_digital_life.md`](12_city_consumption_digital_life.md), [`15_contemporary_change_demography_migration.md`](15_contemporary_change_demography_migration.md), [`31_apartment_neighborhood_moving_recycling_everyday_life.md`](31_apartment_neighborhood_moving_recycling_everyday_life.md), [`32_seasons_climate_environment_daily_rhythm.md`](32_seasons_climate_environment_daily_rhythm.md) và [`33_service_customer_review_quick_response_culture.md`](33_service_customer_review_quick_response_culture.md).
+
 ## Nguồn tham khảo
 
 - UNESCO Intangible Cultural Heritage: Kimjang (2013); tri thức và thực hành làm jang (2024).
 - Korea.net: tư liệu về `소반` và lịch sử phép tắc trên bàn ăn.
+- Với an toàn thực phẩm, ghi nhãn, xuất xứ và quy định hiện hành, ưu tiên Ministry of Food and Drug Safety (`식품의약품안전처`) và các nguồn chính thức thay vì học cứng từ ví dụ văn hoá.
