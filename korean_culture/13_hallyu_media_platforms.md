@@ -1,421 +1,383 @@
 # Hallyu, công nghiệp nội dung và văn hoá nền tảng
 
-## 한류: không phải một genre mà là một quá trình lưu thông
+## 한류: không phải một thể loại mà là một quá trình lưu thông
 
-**Korean Wave / Hallyu / 한류** chỉ sự lan rộng quốc tế của Korean cultural content và associated lifestyle/products. Nếu chỉ equate Hallyu với K-pop, ta bỏ qua drama, film, webtoon, games, food, beauty, literature và language learning.
+**Làn sóng Hàn Quốc (Korean Wave / Hallyu / 한류)** chỉ sự lan rộng quốc tế của nội dung văn hoá Hàn Quốc cùng các lối sống và sản phẩm liên quan. Nếu chỉ đồng nhất Hallyu với K-pop, ta sẽ bỏ qua phim truyền hình, điện ảnh, webtoon, trò chơi, ẩm thực, mỹ phẩm, văn học và việc học tiếng Hàn.
 
-MCST công bố khảo sát Overseas Hallyu Survey 2025 dựa trên dữ liệu cuối 2024 với 26.400 người đã trải nghiệm Korean cultural content ở 28 khu vực. Khi được hỏi thứ đầu tiên nghĩ đến khi nghe “Korea”, K-pop đứng đầu 17,8%, sau đó Korean food 11,8% và drama 8,7%. Con số không phải “toàn thế giới nghĩ vậy”, vì sample chỉ gồm người đã tiếp xúc Korean content; population definition cần được giữ rõ.
+MCST công bố khảo sát Overseas Hallyu Survey 2025 dựa trên dữ liệu cuối năm 2024 với 26.400 người đã từng trải nghiệm nội dung văn hoá Hàn Quốc ở 28 khu vực. Khi được hỏi điều đầu tiên nghĩ tới khi nghe “Korea”, K-pop đứng đầu với 17,8%, sau đó là ẩm thực Hàn Quốc 11,8% và phim truyền hình 8,7%. Không nên diễn giải con số này thành “toàn thế giới nghĩ như vậy”, vì mẫu khảo sát chỉ gồm những người đã từng tiếp xúc với nội dung Hàn Quốc; định nghĩa quần thể khảo sát cần được giữ rõ.
 
-Một báo cáo MCST công bố tháng 2/2026 về xu hướng Hallyu 2025 phân tích lượng lớn bài báo và social-media items từ nhiều quốc gia, cho thấy discourse ngày càng mở rộng sang literature, film, tourism và consumption. Điều quan trọng hơn con số cụ thể là mechanism: **Hallyu hoạt động như ecosystem hơn là single product category**.
+Một báo cáo MCST công bố tháng 2/2026 về xu hướng Hallyu năm 2025 phân tích lượng lớn bài báo và nội dung mạng xã hội tại nhiều quốc gia, cho thấy thảo luận ngày càng mở rộng sang văn học, điện ảnh, du lịch và tiêu dùng. Điều quan trọng hơn con số riêng lẻ là cơ chế: **Hallyu vận hành như một hệ sinh thái (ecosystem), không phải một nhóm sản phẩm duy nhất**.
 
-## Từ content tới circulation system
+## Từ nội dung đến hệ thống lưu thông
 
-Một bài hát, drama hay webtoon chỉ trở thành “wave” khi nó đi qua distribution network.
+Một bài hát, phim truyền hình hay webtoon chỉ trở thành một “làn sóng” khi nó đi qua mạng lưới phân phối.
 
 ```text
-creator / studio
-→ publisher / label / broadcaster
-→ platform
-→ recommendation / search
-→ fan / viewer
-→ sharing / translation / remix
-→ new audience
+người sáng tạo / studio
+→ nhà xuất bản / hãng giải trí / đài truyền hình
+→ nền tảng
+→ đề xuất / tìm kiếm
+→ người hâm mộ / người xem
+→ chia sẻ / dịch / biến đổi
+→ khán giả mới
 ```
 
-Nếu content quality cao nhưng distribution friction lớn, global reach vẫn thấp. Ngược lại, platform có reach lớn nhưng content không giữ attention thì wave cũng không bền.
+Nếu chất lượng nội dung cao nhưng ma sát phân phối (distribution friction) lớn, khả năng tiếp cận toàn cầu vẫn thấp. Ngược lại, nền tảng có độ phủ lớn nhưng nội dung không giữ được sự chú ý thì làn sóng cũng không bền.
 
-Hallyu vì vậy phải được đọc như interaction giữa **production, distribution, discovery và community**.
+Vì vậy Hallyu nên được hiểu như tương tác giữa **sản xuất, phân phối, khám phá nội dung và cộng đồng**.
 
-## K-pop: music + training + visual system + fandom infrastructure
+## K-pop: âm nhạc + đào tạo + hình ảnh + hạ tầng fandom
 
-**K-pop / 케이팝** là label quốc tế rộng hơn một genre âm nhạc cụ thể. Idol system kết hợp trainee pipeline, music production, choreography, styling, video, social media và fandom management.
+**K-pop (케이팝)** là nhãn quốc tế rộng hơn một thể loại âm nhạc cụ thể. Hệ thống thần tượng kết hợp quá trình đào tạo thực tập sinh, sản xuất âm nhạc, vũ đạo, tạo hình, video, mạng xã hội và quản lý fandom.
 
-Một song thành công không chỉ do melody. Attention economy có nhiều layer:
+Một ca khúc thành công không chỉ phụ thuộc giai điệu. Nền kinh tế chú ý (attention economy) có nhiều lớp:
 
 ```text
 teaser
-→ concept photo
+→ ảnh concept
 → music video
-→ music show / performance
-→ short-form challenge
-→ fan content
-→ album / merchandise
+→ sân khấu / chương trình âm nhạc
+→ thử thách video ngắn
+→ nội dung của fan
+→ album / hàng lưu niệm
 → concert / fan meeting
 ```
 
-Agency có thể xem idol group như product architecture gồm reusable components: member identity, sonic brand, visual concept, fandom name, light stick, content cadence và community channel. Cách nói này không phủ nhận artistry; nó giải thích industrial coordination quanh artistry.
+Công ty giải trí có thể xem một nhóm thần tượng như một kiến trúc sản phẩm (product architecture) gồm các thành phần tái sử dụng được: bản sắc từng thành viên, phong cách âm thanh, concept hình ảnh, tên fandom, light stick, nhịp phát hành nội dung và kênh cộng đồng. Cách nhìn này không phủ nhận tính nghệ thuật; nó giúp giải thích mức độ phối hợp công nghiệp bao quanh quá trình sáng tạo.
 
-## 기획사: agency không chỉ là “công ty quản lý”
+## 기획사: công ty giải trí không chỉ là “công ty quản lý”
 
-`기획사` hoặc entertainment company có thể tham gia casting, training, A&R, production, choreography, styling, marketing, fan communication, schedule và IP licensing.
+`기획사` hoặc công ty giải trí có thể tham gia tuyển chọn, đào tạo, A&R, sản xuất, vũ đạo, tạo hình, tiếp thị, giao tiếp với fan, sắp lịch và cấp phép tài sản trí tuệ (IP licensing).
 
-Nó giống một **systems integrator** hơn là một manager cá nhân. Một comeback cần nhiều specialist đồng bộ deadline: composer, lyricist, choreographer, stylist, photographer, video team, PR, distribution và performance staff.
+Nó gần với một **đơn vị tích hợp hệ thống (systems integrator)** hơn là một người quản lý cá nhân. Một đợt comeback cần nhiều chuyên gia đồng bộ thời hạn: nhạc sĩ, người viết lời, biên đạo, stylist, nhiếp ảnh gia, đội video, PR, phân phối và nhân sự sân khấu.
 
-Khi một output trông seamless, thường có hidden coordination cost rất lớn phía sau.
+Khi sản phẩm cuối nhìn liền mạch, thường có chi phí phối hợp ẩn rất lớn ở phía sau.
 
-## 연습생: training pipeline và selection
+## 연습생: đường ống đào tạo và sàng lọc
 
-**Trainee / 연습생** system đào tạo vocal, dance, language và performance. Pipeline có high attrition: nhiều người training nhưng ít debut. Đây giống tournament labour market, nơi reward tập trung ở top outcome.
+Hệ thống **thực tập sinh (trainee / 연습생)** đào tạo hát, nhảy, ngoại ngữ và biểu diễn. Tỷ lệ rời khỏi hệ thống cao: nhiều người được đào tạo nhưng chỉ số ít ra mắt. Đây gần với thị trường lao động kiểu giải đấu (tournament labour market), nơi phần thưởng tập trung vào nhóm đầu ra thành công nhất.
 
-Selection pressure có thể tạo skill level cao nhưng cũng tạo physical/psychological cost. Văn hoá fandom hiện đại ngày càng thảo luận labour condition, contract và mental wellbeing của artist.
+Áp lực sàng lọc có thể tạo trình độ kỹ năng cao nhưng cũng tạo chi phí thể chất và tâm lý. Văn hoá fandom hiện đại ngày càng thảo luận nhiều hơn về điều kiện lao động, hợp đồng và sức khoẻ tinh thần của nghệ sĩ.
 
-Một trainee không chỉ học “hát hay”. Idol work còn yêu cầu camera awareness, variety sense, language, teamwork và ability giữ performance ổn định dưới fatigue.
+Một thực tập sinh không chỉ học “hát hay”. Công việc thần tượng còn cần nhận thức trước camera, khả năng tham gia chương trình giải trí, ngoại ngữ, làm việc nhóm và duy trì phong độ khi mệt mỏi.
 
-## 데뷔와 컴백: release trở thành social event
+## 데뷔와 컴백: phát hành trở thành một sự kiện xã hội
 
-`데뷔` là debut; `컴백` trong K-pop không nhất thiết nghĩa artist “đã biến mất rất lâu” như English everyday meaning. Nó thường chỉ một release/promotion cycle mới.
+`데뷔` là ra mắt. `컴백` trong K-pop không nhất thiết có nghĩa nghệ sĩ đã biến mất rất lâu như nghĩa thông thường của “comeback” trong tiếng Anh; nó thường chỉ một chu kỳ phát hành và quảng bá mới.
 
-Mỗi comeback tạo temporary coordination window cho fandom:
-
-```text
-announcement
-→ pre-order
-→ teaser schedule
-→ release
-→ streaming / voting / music show
-→ fan-sign / content
-→ concert / next cycle
-```
-
-Vì cycle lặp lại, fandom culture có nhịp gần giống software release train: build anticipation, ship version mới, observe metrics, then prepare next iteration.
-
-## 앨범: music carrier thành collectible object
-
-Trong streaming era, physical album không còn cần thiết để nghe nhạc. Vậy tại sao album vẫn có value?
-
-Album K-pop thường package photobook, random photocard, concept variant và collectible. Physical object chuyển function từ **audio storage** sang **identity + collection + participation token**.
-
-Đây là classic example của product redefinition:
+Mỗi comeback tạo một khoảng thời gian phối hợp tạm thời cho fandom:
 
 ```text
-old function: store music
-new functions: collect, display, support artist, access event, trade
+thông báo
+→ đặt trước
+→ lịch teaser
+→ phát hành
+→ streaming / voting / chương trình âm nhạc
+→ fan-sign / nội dung bổ sung
+→ concert / chu kỳ tiếp theo
 ```
 
-Random photocard tạo scarcity và secondary exchange market. Behavioral economics có thể giải thích appeal qua variable reward và completion desire.
+Vì chu kỳ này lặp lại, văn hoá fandom có nhịp khá giống một chu kỳ phát hành phần mềm (release train): tạo kỳ vọng, phát hành phiên bản mới, theo dõi chỉ số rồi chuẩn bị vòng tiếp theo.
 
-## 포토카드: micro-collectible và social exchange
+## 앨범: vật mang âm nhạc trở thành đồ sưu tầm
 
-`포토카드` là photocard, thường có member variation. Fan có thể trade để lấy bias/member mong muốn.
+Trong thời đại streaming, album vật lý không còn cần thiết để nghe nhạc. Tuy vậy album K-pop vẫn có giá trị vì thường đi kèm photobook, photocard ngẫu nhiên, nhiều phiên bản concept và vật phẩm sưu tầm.
 
-Một card nhỏ tạo social economy gồm:
+Chức năng của vật thể chuyển từ **lưu trữ âm thanh** sang **thể hiện bản sắc + sưu tầm + biểu thị tham gia**.
 
-- unboxing;
-- probability;
-- collection set;
-- trade;
-- resale;
-- identity display.
+```text
+chức năng cũ: lưu nhạc
+chức năng mới: sưu tầm, trưng bày, ủng hộ nghệ sĩ, tham gia sự kiện, trao đổi
+```
 
-Object value không chỉ nằm ở paper/material cost mà ở **scarcity + fandom meaning + network demand**.
+Photocard ngẫu nhiên tạo độ khan hiếm và thị trường trao đổi thứ cấp. Kinh tế học hành vi có thể giải thích sức hút này qua phần thưởng biến đổi (variable reward) và mong muốn hoàn thành bộ sưu tập.
+
+## 포토카드: vật sưu tầm nhỏ và nền kinh tế trao đổi
+
+`포토카드` là photocard, thường có nhiều phiên bản theo thành viên. Fan có thể trao đổi để lấy thành viên mình yêu thích.
+
+Một tấm thẻ nhỏ có thể tạo ra cả một nền kinh tế xã hội gồm mở hộp, xác suất, hoàn thành bộ, trao đổi, bán lại và thể hiện bản sắc. Giá trị của vật thể không chỉ nằm ở chi phí giấy in mà nằm trong **độ khan hiếm + ý nghĩa fandom + nhu cầu mạng lưới**.
 
 ## 응원봉 và concert như đồng bộ tập thể
 
-`응원봉` — light stick — là visual identity của fandom. Khi hàng nghìn người đồng bộ màu/nhịp trong concert, audience trở thành một phần của stage design.
+`응원봉` — light stick — là biểu tượng thị giác của fandom. Khi hàng nghìn người đồng bộ màu và nhịp trong concert, khán giả trở thành một phần của thiết kế sân khấu.
 
-Đây là **distributed display system**: mỗi fan giữ một pixel/node; toàn venue tạo pattern lớn. Công nghệ Bluetooth/control có thể biến crowd thành programmable visual surface.
+Có thể xem đây là một **hệ thống hiển thị phân tán (distributed display system)**: mỗi fan giữ một điểm ảnh hoặc một nút, còn toàn bộ địa điểm tạo thành mẫu lớn. Công nghệ Bluetooth hoặc điều khiển tập trung có thể biến đám đông thành một bề mặt hiển thị có thể lập trình.
 
-Khi đó “fan participation” không còn metaphor; audience thực sự là component của performance system.
+Vì vậy “fan tham gia” không chỉ là ẩn dụ; khán giả thực sự trở thành một thành phần của hệ thống biểu diễn.
 
-## 팬덤: fandom như distributed organization
+## 팬덤: fandom như tổ chức phân tán
 
-K-pop fandom có translation team, streaming guide, donation, birthday project và community moderation. Đây là remarkable example của **distributed coordination / 분산 협업**.
+Fandom K-pop có đội dịch, hướng dẫn streaming, quyên góp, dự án sinh nhật và quản trị cộng đồng. Đây là ví dụ rõ của **phối hợp phân tán (distributed coordination / 분산 협업)**.
 
-Không có một manager duy nhất điều khiển hàng triệu fan, nhưng shared goal, hashtag, spreadsheet và platform tool tạo collective action. Trong open-source software, contributors tự organize quanh repo; fandom cũng có governance, norm và conflict tương tự ở abstract level.
+Không có một người quản lý duy nhất điều khiển hàng triệu fan, nhưng mục tiêu chung, hashtag, bảng tính và công cụ nền tảng có thể tạo hành động tập thể. Tương tự phần mềm mã nguồn mở, cộng đồng fandom cũng có quy tắc quản trị, chuẩn mực và xung đột riêng.
 
-## 최애, 입덕, 탈덕: fandom có state vocabulary riêng
+## 최애, 입덕, 탈덕: fandom có từ vựng trạng thái riêng
 
-Một số vocabulary cho thấy fandom là identity process:
+Một số từ cho thấy fandom là một quá trình định danh:
 
-- `최애`: member/artist yêu thích nhất.
+- `최애`: thành viên hoặc nghệ sĩ yêu thích nhất.
 - `입덕`: bước vào fandom.
-- `덕질`: hoạt động fan.
+- `덕질`: các hoạt động của fan.
 - `탈덕`: rời fandom.
 
-Khi community đặt tên cho state transition, participant dễ nói về experience hơn. Đây giống domain-specific language trong software: vocabulary chung làm coordination nhanh.
+Khi cộng đồng đặt tên cho những chuyển trạng thái này, người tham gia dễ nói về trải nghiệm hơn. Đây giống một ngôn ngữ chuyên biệt theo lĩnh vực (domain-specific language) trong phần mềm: từ vựng chung làm phối hợp nhanh hơn.
 
 ## 팬싸인회 và fan meeting: giảm khoảng cách có kiểm soát
 
-`팬사인회` và fan meeting tạo interaction trực tiếp hoặc semi-direct giữa artist và fan. Giá trị đến từ perceived rarity và personal recognition.
+`팬사인회` và fan meeting tạo tương tác trực tiếp hoặc bán trực tiếp giữa nghệ sĩ và fan. Giá trị đến từ độ hiếm cảm nhận được và cảm giác được nghệ sĩ nhận biết.
 
-Nhưng interaction này được thiết kế trong boundary: thời gian, queue, security, rules. Intimacy được **productize nhưng không hoàn toàn fake**; emotion của fan có thể thật trong một interaction được institutionally structured.
+Nhưng tương tác này luôn được thiết kế trong giới hạn: thời gian, hàng chờ, an ninh và quy tắc. Sự gần gũi được thương mại hoá (productize) nhưng không vì thế mà cảm xúc của fan trở thành “giả”.
 
-Đây là điểm cần phân biệt giữa authenticity và infrastructure. Một cảm xúc được platform không vì thế tự động trở thành “không thật”.
+Điểm quan trọng là phân biệt tính chân thực của cảm xúc với hạ tầng tổ chức tạo điều kiện cho tương tác đó.
 
-## Parasocial relationship: gần gũi một chiều nhưng có feedback
+## Quan hệ cận xã hội: gần gũi một chiều nhưng có phản hồi
 
-**Parasocial relationship / 준사회적 관계** chỉ cảm giác gần gũi với media figure dù relationship không cân xứng như friendship đời thực.
+**Quan hệ cận xã hội (parasocial relationship / 준사회적 관계)** chỉ cảm giác gần gũi với nhân vật truyền thông dù quan hệ không cân xứng như tình bạn ngoài đời.
 
-K-pop làm relation này phức tạp hơn vì live stream, paid messaging và fan platform tạo feedback nhỏ. Fan có thể nhận message thường xuyên, nhưng artist vẫn không có quan hệ cá nhân tương đương với từng fan.
-
-Mental model tốt:
+K-pop làm mối quan hệ này phức tạp hơn vì livestream, tin nhắn trả phí và nền tảng fan tạo ra một lượng phản hồi nhỏ. Fan có thể nhận tin thường xuyên, nhưng nghệ sĩ vẫn không có quan hệ cá nhân tương đương với từng người hâm mộ.
 
 ```text
-high perceived intimacy
+cảm giác gần gũi cao
 ≠
-mutual private relationship
+quan hệ riêng tư hai chiều tương đương tình bạn
 ```
 
-Hiểu distinction này giúp tránh cả hai cực: coi fandom emotion là “giả” hoặc coi celebrity interaction như friendship cá nhân đầy đủ.
+Hiểu khác biệt này giúp tránh hai cực: coi cảm xúc fandom là giả, hoặc coi tương tác với người nổi tiếng như một tình bạn riêng tư đầy đủ.
 
-## 팬 플랫폼: community được platform hoá
+## 팬 플랫폼: cộng đồng được nền tảng hoá
 
-Các fan platform tập trung post, live stream, membership, merchandise và paid interaction. Khi community chuyển từ forum phân tán sang platform owned/managed, governance cũng đổi.
+Các nền tảng fan tập trung bài viết, livestream, membership, merchandise và tương tác trả phí. Khi cộng đồng chuyển từ diễn đàn phân tán sang nền tảng do doanh nghiệp sở hữu hoặc quản lý, cách quản trị cũng thay đổi.
 
-Platform quyết định:
+Nền tảng quyết định mức độ hiển thị, kiểm duyệt, kiếm tiền, thông báo, tầng quyền truy cập và thu thập dữ liệu. Fandom vì vậy không chỉ là nhóm xã hội; nó còn là một phần của **nền kinh tế nền tảng (platform economy)**.
 
-- visibility;
-- moderation;
-- monetization;
-- notification;
-- access tiers;
-- data collection.
+## 알고리즘과 바이럴: khả năng hiển thị do thuật toán
 
-Fandom vì vậy không chỉ là social group; nó còn là **platform economy**.
-
-## 알고리즘과 바이럴: algorithmic visibility
-
-YouTube, TikTok, Spotify và short-form platform quyết định một phần distribution. Content có retention cao, replay, engagement hoặc network spread có thể được recommend mạnh hơn.
-
-Điều này tạo feedback:
+YouTube, TikTok, Spotify và nền tảng video ngắn quyết định một phần việc nội dung được phân phối. Nội dung có tỷ lệ xem tiếp cao, phát lại nhiều, tương tác mạnh hoặc lan qua mạng lưới có thể được đề xuất nhiều hơn.
 
 ```text
-initial exposure
-→ engagement
-→ algorithmic recommendation
-→ more exposure
-→ more engagement
+tiếp xúc ban đầu
+→ tương tác
+→ thuật toán đề xuất
+→ tiếp xúc nhiều hơn
+→ tương tác nhiều hơn
 ```
 
-Nhưng viral không hoàn toàn engineered. Algorithm proprietary, audience heterogeneous và timing uncertain. “Công ty chỉ cần marketing là tạo hit” là simplification.
+Đây là vòng phản hồi (feedback loop). Tuy nhiên hiện tượng lan truyền không thể được thiết kế hoàn toàn. Thuật toán là độc quyền, khán giả không đồng nhất và thời điểm khó dự đoán. Vì vậy câu “công ty chỉ cần tiếp thị là tạo được hit” là quá đơn giản.
 
-## Challenge culture và choreography tối ưu cho short-form
+## Văn hoá challenge và vũ đạo cho video ngắn
 
-Khi dance challenge trở thành discovery channel, choreography có thể chứa đoạn dễ nhận diện trong vài giây. Điều này không có nghĩa mọi choreography được “làm cho TikTok”, nhưng platform constraint có thể ảnh hưởng creative decision.
+Khi thử thách nhảy trở thành một kênh khám phá nội dung, vũ đạo có thể chứa những đoạn dễ nhận diện trong vài giây. Điều này không có nghĩa mọi vũ đạo đều “làm cho TikTok”, nhưng ràng buộc của nền tảng (platform constraint) có thể ảnh hưởng quyết định sáng tạo.
 
-Medium shape form. Giống responsive design, content được tối ưu cho viewport/distribution channel đang dominant.
+Môi trường truyền thông định hình hình thức. Tương tự thiết kế web đáp ứng (responsive design), nội dung có thể được tối ưu theo khung hiển thị và kênh phân phối đang chiếm ưu thế.
 
-## Chart, streaming và proxy problem
+## Bảng xếp hạng, streaming và vấn đề biến đại diện
 
-Chart và streaming count giúp đo attention, nhưng metric không đồng nhất với artistic quality. Khi ranking có prestige, fandom có incentive tối ưu streaming/voting.
-
-Đây lại là Goodhart-like effect:
+Bảng xếp hạng và số lượt nghe giúp đo mức chú ý, nhưng chỉ số không đồng nhất với chất lượng nghệ thuật. Khi thứ hạng mang uy tín, fandom có động lực tối ưu việc streaming và bình chọn.
 
 ```text
-metric measures popularity
-→ metric becomes target
-→ users organize to maximize metric
-→ metric captures both natural demand and strategic action
+chỉ số đo mức phổ biến
+→ chỉ số trở thành mục tiêu
+→ người dùng tổ chức để tối đa hoá chỉ số
+→ chỉ số phản ánh cả nhu cầu tự nhiên lẫn hành động chiến lược
 ```
 
-Điều này không làm chart “vô nghĩa”, nhưng cần hiểu data-generating process trước khi diễn giải.
+Đây là một hiệu ứng gần với Luật Goodhart. Nó không làm bảng xếp hạng “vô nghĩa”, nhưng buộc ta hiểu quá trình tạo dữ liệu trước khi diễn giải.
 
-## K-drama: format, streaming và emotional grammar
+## K-drama: định dạng, streaming và ngữ pháp cảm xúc
 
-**K-drama / 한국 드라마** từng phát triển mạnh qua terrestrial/cable television, sau đó streaming thay distribution và financing. Global platform giảm geographic friction: subtitle, simultaneous release và recommendation đưa content tới audience không cần Korean TV channel.
+**Phim truyền hình Hàn Quốc (K-drama / 한국 드라마)** từng phát triển mạnh qua truyền hình mặt đất và truyền hình cáp, sau đó streaming làm thay đổi phân phối và tài chính sản xuất. Nền tảng toàn cầu giảm ma sát địa lý: phụ đề, phát hành gần đồng thời và hệ thống đề xuất đưa nội dung đến khán giả không cần tiếp cận kênh truyền hình Hàn Quốc.
 
-Drama thường được nhận diện qua pacing, genre blending, family relation và emotional intensity, nhưng không có một formula duy nhất. Industry diversity từ romance, sageuk, thriller tới social satire.
+Phim Hàn thường được nhận diện qua nhịp kể, cách trộn thể loại, quan hệ gia đình và cường độ cảm xúc, nhưng không tồn tại một công thức duy nhất. Ngành có độ đa dạng lớn từ tình cảm, cổ trang, giật gân tới châm biếm xã hội.
 
-Streaming data có thể feedback vào production: completion rate, regional demand và genre preference. Đây là nơi creative culture gặp data science.
+Dữ liệu streaming có thể phản hồi ngược vào sản xuất: tỷ lệ xem hết, nhu cầu theo vùng và sở thích thể loại có thể ảnh hưởng quyết định đầu tư. Đây là nơi văn hoá sáng tạo gặp khoa học dữ liệu.
 
-## 편성에서 온디맨드까지: appointment viewing → on-demand
+## 편성에서 온디맨드까지: từ lịch phát sóng đến xem theo yêu cầu
 
-Broadcast television tạo `편성` — schedule cố định. Streaming cho viewer chọn time. Khi control chuyển từ broadcaster sang viewer, cultural routine đổi.
-
-Broadcast era:
+Truyền hình phát sóng tạo `편성`, tức lịch cố định. Streaming cho phép người xem chọn thời gian. Khi quyền kiểm soát chuyển từ đài sang người xem, thói quen văn hoá cũng thay đổi.
 
 ```text
-20:00 show starts
-→ household synchronizes
+thời truyền hình phát sóng:
+20:00 chương trình bắt đầu
+→ cả gia đình đồng bộ thời gian
+
+thời streaming:
+nội dung luôn sẵn
+→ cá nhân tự chọn thời gian / thiết bị / tốc độ xem
 ```
 
-Streaming era:
+Xem liên tục nhiều tập (binge watching) xuất hiện một phần vì giao diện và khả năng truy cập tập phim thay đổi, không chỉ vì người xem “thiếu kiên nhẫn”.
+
+## OTT và rủi ro sản xuất
+
+`OTT` trong thảo luận truyền thông Hàn Quốc thường chỉ nền tảng video trực tuyến. OTT mở rộng phân phối toàn cầu nhưng cũng làm thay đổi ngân sách sản xuất, đàm phán bản quyền và mức cạnh tranh.
+
+Một nền tảng có thể tài trợ dự án với khán giả toàn cầu ngay từ đầu; nhà sản xuất có thể lựa chọn diễn viên hoặc chủ đề khác; phụ đề và lồng tiếng trở thành một phần của kiến trúc phát hành (release architecture) từ sớm.
+
+Mô hình phân phối vì vậy phản hồi ngược vào cách nội dung được sản xuất.
+
+## 영화: từ điện ảnh nội địa tới sự công nhận toàn cầu
+
+Điện ảnh Hàn Quốc phát triển qua chính sách, liên hoan phim, mạng lưới rạp, văn hoá đạo diễn và thị trường khán giả nội địa. Thành công quốc tế của một số phim không nên khiến ta nhìn ngược và coi toàn bộ điện ảnh Hàn Quốc là “sản phẩm Hallyu”. Ngành điện ảnh có lịch sử và nhiều dòng sáng tạo riêng.
+
+Điểm quan trọng là thị trường sáng tạo không chỉ do thị hiếu quyết định; tài chính, mạng lưới rạp, liên hoan, quy định và nền tảng đều định hình nguồn cung.
+
+## 예능: chương trình giải trí như định dạng có thể xuất khẩu
+
+`예능` là chương trình giải trí hoặc variety show. Văn hoá chương trình giải trí Hàn Quốc tạo nhiều định dạng dựa vào tương tác giữa dàn cast, luật trò chơi, phụ đề biên tập và nhân vật lặp lại.
+
+Điều thú vị là một định dạng có thể được xuất khẩu không chỉ dưới dạng tập phim, mà dưới dạng **quy tắc sản xuất (production rule)**. Quốc gia khác có thể mua quyền và làm lại với dàn cast địa phương.
+
+Ở đây, tài sản trí tuệ không chỉ là video cuối cùng mà còn là **hệ thống tạo ra video**.
+
+## 자막: phụ đề như một lớp ngữ pháp sáng tạo
+
+Các chương trình giải trí Hàn Quốc nổi tiếng với `자막` dày đặc trên màn hình, hiệu ứng âm thanh và cảnh phát lại. Phụ đề không chỉ phục vụ khả năng tiếp cận; nó bình luận, nhấn trò đùa, giải thích bối cảnh và điều khiển sự chú ý.
+
+Nó gần giống một lớp giao diện (UI overlay) trong trò chơi: sự kiện thô xảy ra, sau đó giao diện thêm siêu dữ liệu để người xem diễn giải theo một hướng nhất định.
+
+## 웹툰: hình thức sinh ra từ màn hình
+
+**Webtoon (웹툰)** khác với truyện tranh giấy đơn giản được quét lên web. Cuộn dọc, đọc trên điện thoại, phát hành theo tập và bình luận nền tảng cùng định hình cách kể chuyện.
+
+Hình thức đi theo giao diện. Khi màn hình theo chiều dọc, cách chuyển khung và nhịp kể thay đổi. Điều này giống thiết kế web đáp ứng: môi trường không chỉ chứa nội dung mà còn thay đổi “ngữ pháp” của nội dung.
+
+Webtoon có thể chuyển thể thành phim truyền hình, phim điện ảnh hoặc trò chơi. Vì vậy nền tảng còn là một cỗ máy khám phá tài sản trí tuệ (IP discovery engine).
+
+## 웹소설: đường ống tài sản trí tuệ bắt đầu từ văn bản
+
+`웹소설` — tiểu thuyết web — là nguồn IP quan trọng. Văn bản có chi phí sản xuất thấp hơn live-action; phản hồi sớm của độc giả giúp nhà xuất bản nhìn thấy nhu cầu trước khi đầu tư vào chuyển thể đắt tiền.
 
 ```text
-content available
-→ individual chooses time/device/speed
-```
-
-Binge watching là behaviour sinh ra khi episode availability và interface đổi, không chỉ vì người xem “thiếu kiên nhẫn”.
-
-## OTT và production risk
-
-`OTT` trong Korean media discourse thường chỉ online video streaming platform. OTT mở global distribution nhưng cũng làm production budget, rights negotiation và competition đổi.
-
-Một platform có thể finance project với audience global in mind; producer có thể chọn cast/topic khác; subtitle/dubbing trở thành part của release architecture từ sớm.
-
-Distribution model vì vậy feedback ngược vào content production.
-
-## 영화: từ domestic cinema tới global recognition
-
-Korean film phát triển qua policy, festival, screen industry, director culture và domestic audience. Global success của một số film không nên khiến ta retroactively xem mọi Korean cinema là “Hallyu product”. Film industry có history riêng và nhiều dòng artistic khác.
-
-Điểm quan trọng là creative market không chỉ do taste; financing, theater network, festival, regulation và platform cùng shape supply.
-
-## 예능: variety show như format export
-
-`예능` là entertainment/variety programming. Korean variety culture tạo nhiều format dựa vào cast chemistry, game rule, editing caption và recurring character.
-
-Điều thú vị là format có thể export không chỉ dưới dạng episode mà dưới dạng **production rule**. Một quốc gia khác có thể mua/remake format với local cast.
-
-Ở đây, IP không phải final video mà là **system tạo video**.
-
-## 자막: caption là một lớp creative grammar
-
-Korean variety show nổi tiếng với on-screen caption `자막` dày, sound effect và replay. Caption không chỉ accessibility; nó bình luận, nhấn joke, giải thích context và điều khiển attention.
-
-Đây gần với UI overlay trong game: raw event xảy ra, interface thêm metadata để viewer interpret event theo cách mong muốn.
-
-## 웹툰: form sinh ra từ màn hình
-
-**Webtoon / 웹툰** khác comic scanned lên web. Vertical scrolling, smartphone reading, episodic release và platform comment đều định hình storytelling.
-
-Form follows interface. Khi screen vertical, panel transition và pacing đổi. Đây giống responsive web design: medium không chỉ chứa content; medium thay grammar của content.
-
-Webtoon IP có thể chuyển sang drama, film, game. Vì vậy platform trở thành IP discovery engine.
-
-## 웹소설: text-first IP pipeline
-
-`웹소설` — web novel — là một nguồn IP quan trọng. Text có production cost thấp hơn live-action; audience response sớm giúp publisher nhìn thấy demand trước khi adaptation.
-
-Một pipeline có thể là:
-
-```text
-web novel
+tiểu thuyết web
 → webtoon
-→ drama / film
-→ game / merchandise
+→ phim truyền hình / điện ảnh
+→ trò chơi / hàng lưu niệm
 ```
 
-Đây là **option value** của IP. Một story thành công ở medium rẻ hơn tạo signal trước khi invest vào medium đắt hơn.
+Đây là **giá trị quyền chọn (option value)** của IP. Một câu chuyện thành công ở phương tiện rẻ hơn cung cấp tín hiệu trước khi đầu tư vào phương tiện có chi phí lớn hơn.
 
 ## 게임 và esports
 
-Hàn Quốc là một centre lớn của online gaming và esports. Broadband, PC bang, competitive ladder, broadcasting và professional league cùng tạo ecosystem.
+Hàn Quốc là một trung tâm lớn của trò chơi trực tuyến và thể thao điện tử. Băng thông rộng, PC bang, hệ thống xếp hạng cạnh tranh, phát sóng và giải đấu chuyên nghiệp cùng tạo hệ sinh thái.
 
-Skill game online phụ thuộc both individual mechanics và network condition. Ranking system biến performance thành rating, tạo incentive lặp lại. Gamification sau đó lan sang app, education và commerce.
+Kỹ năng trong trò chơi trực tuyến phụ thuộc cả cơ học cá nhân lẫn điều kiện mạng. Hệ thống xếp hạng biến thành tích thành điểm số, từ đó tạo động lực lặp lại. Sau đó tư duy trò chơi hoá (gamification) lan sang ứng dụng, giáo dục và thương mại.
 
-Gaming culture cũng tạo spectator identity: người xem theo team/player, thảo luận patch/meta và xem competition như sport.
+Văn hoá game còn tạo bản sắc khán giả: người xem theo đội hoặc tuyển thủ, thảo luận bản cập nhật, chiến thuật meta và theo dõi thi đấu như một môn thể thao.
 
-## 게임방송 và streamer economy
+## 게임방송 và nền kinh tế streamer
 
-Streaming game mở route mới giữa player và broadcaster. Một streamer có thể tạo community, donation/subscription revenue và influence game discovery.
+Phát trực tiếp trò chơi mở ra một con đường mới giữa người chơi và người phát sóng. Một streamer có thể xây cộng đồng, nhận doanh thu từ quyên góp hoặc đăng ký và ảnh hưởng việc người xem khám phá trò chơi.
 
-Điều này làm boundary giữa “người chơi”, “người xem” và “creator” mờ hơn. Hallyu digital vì vậy không chỉ là studio → audience; audience có thể trở thành creator downstream.
+Điều này làm ranh giới giữa “người chơi”, “người xem” và “người sáng tạo” mờ hơn. Hallyu số vì vậy không chỉ là studio → khán giả; chính khán giả cũng có thể trở thành người sáng tạo ở tầng sau.
 
-## 한식, K-beauty và spillover
+## 한식, K-beauty và hiệu ứng lan toả
 
-Cultural content tạo **spillover / 파급효과** sang food, cosmetics, tourism và language learning. Khi viewer thấy dish trong drama, search demand có thể tăng; celebrity endorsement giảm uncertainty về brand.
+Nội dung văn hoá tạo **hiệu ứng lan toả (spillover / 파급효과)** sang ẩm thực, mỹ phẩm, du lịch và học ngôn ngữ. Khi người xem thấy một món trong phim, nhu cầu tìm kiếm có thể tăng; người nổi tiếng quảng bá sản phẩm có thể làm giảm bất định về thương hiệu.
 
-Nhưng causality khó đo vì nhiều campaign xảy ra đồng thời. Survey favorability chỉ là correlation/perception, không phải proof rằng một drama trực tiếp tăng GDP.
+Tuy nhiên quan hệ nhân quả khó đo vì nhiều chiến dịch diễn ra đồng thời. Mức thiện cảm trong khảo sát chỉ là tương quan hoặc nhận thức, không phải bằng chứng rằng một bộ phim trực tiếp làm GDP tăng.
 
-## 촬영지 tourism: narrative biến place thành destination
+## 촬영지 관광: câu chuyện biến địa điểm thành điểm đến
 
-Một location bình thường có thể trở thành tourism node khi xuất hiện trong drama/music video. Viewer không chỉ muốn “xem cảnh”; họ muốn đứng vào narrative memory.
-
-Place value vì vậy có thể tăng qua symbolic layer:
+Một địa điểm bình thường có thể trở thành điểm du lịch khi xuất hiện trong phim hoặc music video. Người xem không chỉ muốn “xem cảnh”; họ muốn đứng vào nơi chứa ký ức của câu chuyện.
 
 ```text
-physical location
-+ screen story
-+ fan memory
-= media pilgrimage destination
+địa điểm vật lý
++ câu chuyện trên màn ảnh
++ ký ức của fan
+= điểm hành hương truyền thông
 ```
 
-Nhưng tourism surge cũng có externality lên resident, congestion và local business mix.
+Nhưng làn sóng du lịch cũng có thể tạo tác động ngoại biên (externality) lên cư dân, giao thông và cơ cấu kinh doanh địa phương.
 
-## 한국어 học như spillover cultural
+## Học tiếng Hàn như hiệu ứng lan toả văn hoá
 
-Hallyu có thể tạo motivation học tiếng Hàn. Ban đầu learner muốn hiểu lyrics/subtitle, sau đó language learning mở access tới content không dịch, community và travel.
-
-Đây là positive feedback:
+Hallyu có thể tạo động lực học tiếng Hàn. Ban đầu người học muốn hiểu lời bài hát hoặc phụ đề; sau đó ngôn ngữ mở quyền truy cập vào nội dung chưa dịch, cộng đồng và du lịch.
 
 ```text
-content interest
-→ language study
-→ lower access barrier
-→ more content consumed
-→ stronger cultural familiarity
+hứng thú với nội dung
+→ học ngôn ngữ
+→ rào cản tiếp cận giảm
+→ tiêu thụ nhiều nội dung hơn
+→ mức quen thuộc văn hoá tăng
 ```
 
-Language vì vậy vừa là barrier vừa là gateway.
+Ngôn ngữ vì vậy vừa là rào cản vừa là cổng vào.
 
-## Localisation và cultural translation
+## Bản địa hoá và dịch văn hoá
 
-Khi content đi quốc tế, subtitle phải giải quyết honorifics, food names, jokes và kinship terms. Dịch `오빠` thành “brother” thường sai context romantic/fandom; giữ nguyên Korean word lại đòi audience học context.
+Khi nội dung đi quốc tế, phụ đề phải xử lý kính ngữ, tên món ăn, trò đùa và từ thân tộc. Dịch `오빠` thành “brother” thường sai trong bối cảnh tình cảm hoặc fandom; giữ nguyên từ Hàn lại đòi hỏi khán giả học thêm bối cảnh.
 
-Translation vì vậy là **lossy compression**. Không thể giữ mọi semantic feature với cùng độ dài. Translator chọn feature nào critical cho scene.
+Dịch vì vậy gần với **nén có mất mát (lossy compression)**. Không thể giữ mọi đặc điểm ngữ nghĩa với cùng độ dài; người dịch phải chọn yếu tố nào quan trọng nhất cho cảnh.
 
-## Fansub: translation như volunteer infrastructure
+## Fansub: dịch thuật như hạ tầng tình nguyện
 
-Trước khi official subtitle mở rộng, fan translation đóng vai trò lớn trong circulation của một số content. Volunteer translator không chỉ dịch text mà giải culture note, nickname và wordplay.
+Trước khi phụ đề chính thức mở rộng, dịch phụ đề do fan thực hiện đóng vai trò lớn trong việc lưu thông một số nội dung. Người dịch tình nguyện không chỉ dịch chữ mà còn giải thích ghi chú văn hoá, biệt danh và chơi chữ.
 
-Đây là hidden infrastructure của global fandom: unpaid or semi-formal labour làm giảm language friction.
+Đây là hạ tầng ẩn của fandom toàn cầu: lao động không lương hoặc bán chính thức làm giảm ma sát ngôn ngữ.
 
-Nhưng fansub cũng liên quan copyright và quality variation. Community contribution không tự động thay thế professional localisation.
+Tuy nhiên fansub cũng liên quan bản quyền và chênh lệch chất lượng. Đóng góp cộng đồng không tự động thay thế bản địa hoá chuyên nghiệp.
 
 ## Soft power và giới hạn của khái niệm
 
-**Soft power / 소프트파워** là khả năng tạo attraction thay vì coercion. Hallyu thường được nói trong khung này. Nhưng không phải mọi artist làm content để “quảng bá quốc gia”, và audience có thể yêu music nhưng không đồng ý mọi policy của Korean state.
+**Sức mạnh mềm (soft power / 소프트파워)** là khả năng tạo sức hấp dẫn thay vì cưỡng ép. Hallyu thường được thảo luận trong khung này. Nhưng không phải mọi nghệ sĩ sáng tạo nội dung để “quảng bá quốc gia”, và một khán giả có thể yêu âm nhạc Hàn Quốc nhưng không đồng ý với mọi chính sách của nhà nước Hàn Quốc.
 
-National image, commercial success và artistic value là ba layers có overlap nhưng không đồng nhất.
+Hình ảnh quốc gia, thành công thương mại và giá trị nghệ thuật là ba lớp có giao nhau nhưng không đồng nhất.
 
-## Chính phủ, doanh nghiệp, creator và fan: đừng gom thành một actor
+## Chính phủ, doanh nghiệp, người sáng tạo và fan: không nên gom thành một chủ thể
 
-Khi Hallyu thành công, narrative đôi khi gán toàn bộ success cho “Korea strategy”. Thực tế actor có incentive khác nhau:
+Khi Hallyu thành công, câu chuyện phổ biến đôi khi quy toàn bộ thành công cho một “chiến lược Hàn Quốc”. Thực tế các chủ thể có động lực khác nhau:
 
-- government có thể quan tâm cultural diplomacy/tourism/export;
-- company quan tâm revenue/IP;
-- creator quan tâm artistic/career goal;
-- fan quan tâm attachment/community;
-- platform quan tâm engagement/subscription.
+- chính phủ có thể quan tâm ngoại giao văn hoá, du lịch và xuất khẩu;
+- doanh nghiệp quan tâm doanh thu và IP;
+- người sáng tạo quan tâm mục tiêu nghệ thuật và sự nghiệp;
+- fan quan tâm cảm xúc gắn bó và cộng đồng;
+- nền tảng quan tâm tương tác và thuê bao.
 
-Ecosystem hoạt động vì các incentive có lúc align, không phải vì một central controller thiết kế tất cả.
+Hệ sinh thái vận hành vì các động lực đôi lúc cùng hướng, không phải vì một bộ điều khiển trung tâm thiết kế mọi thứ.
 
-## Copyright và IP: wave càng lớn, rights càng quan trọng
+## Bản quyền và IP: làn sóng càng lớn, quyền càng quan trọng
 
-Global circulation làm copy/remix dễ nhưng IP ownership trở nên có giá trị lớn hơn. Music master, publishing right, adaptation right, image right và merchandise licensing có thể tách nhau.
+Lưu thông toàn cầu làm sao chép và biến đổi nội dung dễ hơn, đồng thời làm giá trị quyền sở hữu trí tuệ tăng. Quyền bản ghi âm, quyền xuất bản, quyền chuyển thể, quyền hình ảnh và cấp phép hàng lưu niệm có thể thuộc các chủ thể khác nhau.
 
-Một franchise có thể mạnh vì cùng IP được monetise qua nhiều medium. Đây là **IP graph**, không phải một product đơn lẻ.
+Một thương hiệu nội dung có thể mạnh vì cùng một IP được kiếm tiền qua nhiều phương tiện. Có thể hình dung đây là một **đồ thị IP (IP graph)** chứ không phải một sản phẩm đơn lẻ.
 
-## Hallyu backlash và saturation
+## Phản ứng ngược và bão hoà của Hallyu
 
-Wave không tăng mãi tuyến tính. Audience có thể mệt vì formula, local industry có thể phản ứng, geopolitical event có thể làm distribution khó hơn, hoặc platform algorithm thay đổi.
+Một làn sóng không tăng mãi theo đường thẳng. Khán giả có thể mệt với công thức lặp lại, ngành nội địa ở nước khác có thể phản ứng, biến động địa chính trị có thể làm phân phối khó hơn hoặc nền tảng thay thuật toán.
 
-Vì vậy Hallyu nên được model như dynamic system có growth, saturation và adaptation chứ không phải “Korean content sẽ ngày càng mạnh mãi”.
+Vì vậy Hallyu nên được mô hình hoá như một hệ thống động có tăng trưởng, bão hoà và thích nghi, không phải “nội dung Hàn Quốc chắc chắn sẽ ngày càng mạnh mãi”.
 
-## Knowledge Connection: Hallyu như protocol stack
-
-Có thể hình dung:
+## Liên hệ kiến thức: Hallyu như một chồng giao thức
 
 ```text
-Creative layer: song / story / game
-Production layer: agency / studio
-Distribution layer: platform / broadcaster
-Discovery layer: algorithm / search / social
-Community layer: fandom / translation / remix
-Commerce layer: album / ticket / merch / tourism
+lớp sáng tạo: bài hát / câu chuyện / trò chơi
+lớp sản xuất: công ty giải trí / studio
+lớp phân phối: nền tảng / đài truyền hình
+lớp khám phá: thuật toán / tìm kiếm / mạng xã hội
+lớp cộng đồng: fandom / dịch / biến đổi
+lớp thương mại: album / vé / hàng lưu niệm / du lịch
 ```
 
-Failure ở một layer có thể chặn value của layer khác. Một great song không discoverable sẽ không globalize; fandom mạnh nhưng ticketing tệ tạo frustration; platform reach lớn nhưng weak retention không bền.
+Lỗi ở một lớp có thể chặn giá trị của lớp khác. Một ca khúc rất hay nhưng không được khám phá sẽ khó toàn cầu hoá; fandom mạnh nhưng hệ thống bán vé tệ sẽ tạo thất vọng; nền tảng có độ phủ lớn nhưng khả năng giữ người xem yếu thì không bền.
 
-## Mental Model
+## Mô hình tư duy
 
-> Hallyu là **network effect giữa content, platform, fandom và adjacent industries**. K-pop hay drama là payload; YouTube/OTT là distribution protocol; fandom là amplification network; language, food, beauty và tourism là spillover nodes. Muốn hiểu wave phải nhìn cả stack, không chỉ nhìn celebrity.
+> Hallyu là **hiệu ứng mạng lưới giữa nội dung, nền tảng, fandom và các ngành lân cận**. K-pop hoặc drama là tải nội dung; YouTube và OTT là giao thức phân phối; fandom là mạng khuếch đại; ngôn ngữ, thực phẩm, làm đẹp và du lịch là các nút lan toả. Muốn hiểu một “làn sóng”, phải nhìn toàn bộ hệ thống chứ không chỉ người nổi tiếng.
 
-## Common Misconceptions
+## Những hiểu lầm phổ biến
 
-“Hallyu do chính phủ tạo ra” quá đơn giản. Policy có thể hỗ trợ infrastructure và promotion, nhưng private firms, creators, fans và global platforms là actor độc lập lớn.
+“Hallyu do chính phủ tạo ra” là quá đơn giản. Chính sách có thể hỗ trợ hạ tầng và quảng bá, nhưng doanh nghiệp tư nhân, người sáng tạo, fan và nền tảng toàn cầu là các chủ thể độc lập lớn.
 
-“K-pop = toàn bộ âm nhạc Hàn” sai; indie, hip-hop, trot, ballad, traditional fusion và nhiều scene khác tồn tại.
+“K-pop = toàn bộ âm nhạc Hàn Quốc” là sai; indie, hip-hop, trot, ballad, nhạc truyền thống kết hợp hiện đại và nhiều cảnh âm nhạc khác vẫn tồn tại.
 
-“Một survey Hallyu đại diện toàn dân thế giới” sai nếu sample chỉ gồm người đã tiếp xúc Korean content.
+“Một khảo sát Hallyu đại diện cho toàn dân thế giới” là sai nếu mẫu chỉ gồm người đã từng tiếp xúc với nội dung Hàn Quốc.
 
-“Streaming cao = chất lượng nghệ thuật cao” nhầm measurement với value judgment.
+“Lượt streaming cao = chất lượng nghệ thuật cao” là nhầm chỉ số đo lường với phán đoán giá trị.
 
-“Fan chỉ là consumer thụ động” sai; fandom hiện đại có thể là translator, promoter, organizer, fundraiser và secondary creator.
+“Fan chỉ là người tiêu dùng thụ động” là sai; fandom hiện đại có thể dịch, quảng bá, tổ chức, gây quỹ và tạo nội dung thứ cấp.
 
-“Global success xoá cultural barrier” sai; localisation, language và context vẫn quyết định cách content được hiểu.
+“Thành công toàn cầu xoá hết rào cản văn hoá” là sai; bản địa hoá, ngôn ngữ và bối cảnh vẫn quyết định cách nội dung được hiểu.
 
 ## Nguồn tham khảo cập nhật
 
