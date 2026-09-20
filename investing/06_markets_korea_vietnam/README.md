@@ -1,6 +1,6 @@
 # 06 — Korea & Vietnam Markets
 
-Domain này áp dụng toàn bộ kiến thức trước đó vào hai thị trường cụ thể. Mục tiêu là hiểu cấu trúc sàn, sector map, currency, central-bank policy, dòng vốn và cách nghiên cứu một mã thật ở Hàn Quốc hoặc Việt Nam.
+Domain này áp dụng toàn bộ kiến thức trước đó vào hai thị trường cụ thể. Mục tiêu là hiểu cấu trúc sàn, sector map, currency, central-bank policy, dòng vốn, market access và cách nghiên cứu một mã thật ở Hàn Quốc hoặc Việt Nam.
 
 ## Thứ tự đọc
 
@@ -14,8 +14,10 @@ Domain này áp dụng toàn bộ kiến thức trước đó vào hai thị tr�
 
 [04_MARKET_RESEARCH_WORKFLOW_DATA_SOURCES_AND_SECTOR_MAPS.md](./04_MARKET_RESEARCH_WORKFLOW_DATA_SOURCES_AND_SECTOR_MAPS.md) chuyển tất cả thành workflow thực tế: source hierarchy, sector dashboards, FX dashboards, foreign flow, breadth, margin, earnings workflow, central-bank workflow, watchlist, weekly/monthly review và thesis update.
 
+[05_CROSS_BORDER_INVESTING_CURRENCY_TAX_WRAPPERS_AND_MARKET_ACCESS.md](./05_CROSS_BORDER_INVESTING_CURRENCY_TAX_WRAPPERS_AND_MARKET_ACCESS.md) bổ sung framework cho nhà đầu tư đa quốc gia: trading/underlying/liability currency, FX decomposition, hedged/unhedged products, local wrappers, tax location, withholding, settlement, holiday/time-zone mismatch, foreign room, VND/KRW exposure, repatriation, brokerage entity risk và cross-border IPS.
+
 ## Sau domain này bạn cần làm được gì?
 
-Bạn cần có khả năng mở một Korean/Vietnamese stock và xác định đúng business driver, sector cycle, macro sensitivities, valuation context, liquidity risk và primary sources cần kiểm tra. Bạn cũng cần phân biệt index move với breadth, technical foreign flow với fundamental flow và biết khi nào global shock truyền khác nhau sang Korea và Vietnam.
+Bạn cần có khả năng mở một Korean/Vietnamese stock và xác định đúng business driver, sector cycle, macro sensitivities, valuation context, liquidity risk, currency layer và primary sources cần kiểm tra. Bạn cũng cần phân biệt index move với breadth, technical foreign flow với fundamental flow, local wrapper với underlying exposure và biết khi nào global shock truyền khác nhau sang Korea và Vietnam.
 
-Sau domain này, thay vì chỉ tiếp tục đọc, nên bắt đầu xây research notebook cho 5–10 mã và cập nhật theo weekly/monthly cadence.
+Sau domain này, thay vì chỉ tiếp tục đọc, nên bắt đầu xây research notebook cho 5–10 mã, theo dõi cả currency/account structure và cập nhật theo weekly/monthly cadence.
