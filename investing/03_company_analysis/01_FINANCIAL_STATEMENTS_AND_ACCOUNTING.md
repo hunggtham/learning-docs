@@ -1,265 +1,374 @@
-# Financial statements và accounting cho investor
+# Báo cáo tài chính và kế toán dành cho nhà đầu tư
 
-> Accounting là ngôn ngữ chuyển hoạt động kinh doanh thành dữ liệu tài chính. Mục tiêu của investor không phải trở thành kế toán viên, mà phải đủ hiểu để nối transaction thật của business với Income Statement, Balance Sheet, Cash Flow Statement và cuối cùng với valuation. Nếu không hiểu accounting mechanics, một DCF rất đẹp vẫn có thể chỉ là mô hình hóa sai dữ liệu.
+> Mục tiêu của chương này không phải học kế toán để ghi sổ, mà để đọc doanh nghiệp như một hệ thống dòng tiền. Ba báo cáo tài chính phải được hiểu cùng nhau: báo cáo kết quả kinh doanh cho biết doanh nghiệp ghi nhận lợi nhuận như thế nào; bảng cân đối cho biết tài sản và nguồn vốn đang nằm ở đâu; báo cáo lưu chuyển tiền tệ cho biết tiền thật sự đi vào và đi ra ra sao.
 
-## 1. Ba báo cáo là ba góc nhìn của cùng một business
+## 1. Phương trình kế toán
 
-Income Statement cho biết performance trong một period: doanh thu nào được recognized, cost nào được ghi nhận và cuối cùng company tạo accounting profit bao nhiêu. Balance Sheet là snapshot resources và obligations tại một thời điểm. Cash Flow Statement giải thích cash balance thay đổi vì operations, investing hay financing.
+```text
+Tài sản = Nợ phải trả + Vốn chủ sở hữu
+```
 
-Ba báo cáo liên kết chặt. Revenue growth có thể đi cùng accounts receivable tăng; inventory purchase làm cash giảm trước khi COGS được recognized; debt issuance làm cash tăng nhưng không tạo revenue; depreciation làm profit giảm nhưng không phải cash outflow trong kỳ hiện tại.
+Mọi giao dịch phải giữ phương trình này cân bằng. Nếu doanh nghiệp vay thêm 100 tiền mặt, tài sản tiền mặt tăng 100 và nợ tăng 100. Nếu dùng tiền mua máy móc, tiền mặt giảm nhưng tài sản cố định tăng.
 
-Một investor mạnh không đọc từng statement như ba document độc lập. Họ hỏi một transaction đi qua cả ba báo cáo như thế nào.
+Hiểu cơ chế này giúp nối các báo cáo thay vì học từng chỉ tiêu riêng lẻ.
 
-## 2. Accounting equation: Assets = Liabilities + Equity
+## 2. Kế toán dồn tích
 
-Balance sheet được xây quanh:
+Kế toán dồn tích (accrual accounting) ghi nhận doanh thu và chi phí khi hoạt động kinh tế phát sinh, không nhất thiết khi tiền được nhận hoặc trả.
 
-`Assets = Liabilities + Shareholders' Equity`
+Điều này cần thiết để ghép doanh thu với chi phí của cùng kỳ, nhưng cũng tạo khoảng cách giữa lợi nhuận kế toán và dòng tiền.
 
-Nếu company vay 100, cash asset tăng 100 và debt liability tăng 100. Equity chưa thay đổi. Nếu company dùng 60 cash mua machine, cash giảm 60 và PPE tăng 60; total assets chưa đổi ngay. Khi machine được depreciated, expense đi qua Income Statement, accumulated depreciation giảm book value asset, và retained earnings giảm thông qua lower net income.
+Nhà đầu tư phải luôn hỏi:
 
-Understanding double-entry intuition giúp investor không nhầm financing cash inflow với value creation hoặc asset purchase với immediate expense.
+```text
+Lợi nhuận này đã chuyển thành tiền chưa?
+Nếu chưa, tiền đang nằm ở khoản phải thu, tồn kho hay tài sản nào?
+```
 
-## 3. Accrual accounting và cash accounting
+## 3. Báo cáo kết quả kinh doanh
 
-Financial reporting chủ yếu dùng *accrual accounting*: revenue và expenses được recognized khi economic activity xảy ra theo rules, không nhất thiết khi cash đổi tay.
+Cấu trúc cơ bản:
 
-Company có thể sell hàng hôm nay, record revenue và receivable nhưng thu cash 60 ngày sau. SaaS company có thể thu subscription cash trước một năm nhưng recognize revenue dần theo service period. Vì vậy net income và cash flow hợp lý khi khác nhau; vấn đề là phải hiểu vì sao.
+```text
+Doanh thu
+- Giá vốn hàng bán
+= Lợi nhuận gộp
+- Chi phí hoạt động
+= Lợi nhuận hoạt động
+± Thu nhập / chi phí ngoài hoạt động
+- Thuế
+= Lợi nhuận ròng
+```
 
-Cash conversion yếu một quarter chưa phải red flag. Cash conversion yếu có hệ thống trong nhiều năm trong khi reported earnings mạnh mới đáng điều tra sâu.
+Mỗi tầng biên lợi nhuận trả lời một câu hỏi kinh tế khác nhau.
 
-## 4. Revenue recognition: câu hỏi đầu tiên của earnings quality
+## 4. Ghi nhận doanh thu
 
-Revenue là starting point của model nên recognition policy cực kỳ quan trọng. Investor cần biết performance obligation là gì, lúc nào control/service được transferred và company đang acting as principal hay agent.
+Doanh thu chỉ nên được ghi nhận khi doanh nghiệp đã đáp ứng điều kiện kế toán đối với hàng hóa hoặc dịch vụ đã chuyển cho khách hàng.
 
-Một marketplace có thể report gross merchandise value rất lớn nhưng accounting revenue chỉ là commission. Một software vendor có license, maintenance và cloud services với recognition timing khác nhau. Construction/long-term project company có thể recognize revenue theo progress estimates.
+Cần hiểu:
 
-Các concepts quan trọng gồm contract asset, accounts receivable và contract liability/deferred revenue. Receivable nghĩa revenue đã recognized nhưng cash chưa thu. Deferred revenue thường nghĩa company đã nhận cash nhưng còn nghĩa vụ cung cấp service trong tương lai.
+```text
+Hợp đồng có nghĩa vụ gì?
+Khi nào nghĩa vụ được hoàn thành?
+Giá giao dịch được phân bổ thế nào?
+Có quyền trả lại / rebate / biến phí không?
+```
 
-## 5. Organic growth, acquisition và FX translation
+Doanh thu kế toán có thể đi trước hoặc đi sau dòng tiền tùy mô hình.
 
-Revenue growth phải được phân rã thành volume, price, mix, acquisition/divestiture và FX. 20% reported growth có thể chỉ gồm 3% organic growth cộng acquisition và currency benefit.
+## 5. Tăng trưởng doanh thu: sản lượng, giá và cơ cấu
 
-Organic growth giúp đo health của existing operations. Acquisition-driven growth có thể tốt nếu return on acquired capital cao, nhưng investor phải đưa purchase price, goodwill, debt và integration cost vào analysis.
+Không nên dừng ở con số doanh thu tăng 15%.
 
-Với multinational, constant-currency growth giúp tách operating trend khỏi translation effect, nhưng cuối cùng shareholders vẫn nhận reported cash flows trong actual currencies.
+Có thể phân rã:
 
-## 6. COGS, gross profit và gross margin
+```text
+Tăng trưởng doanh thu
+≈ Sản lượng
++ Giá bán
++ Cơ cấu sản phẩm / khách hàng
++ Mua bán sáp nhập
++ Tỷ giá
+```
 
-Cost of Goods Sold (*COGS*) hoặc cost of revenue là direct/closely associated cost để tạo revenue. Gross profit = revenue - COGS; gross margin = gross profit / revenue.
+Tăng trưởng nhờ tăng giá trên nền sản lượng giảm có chất lượng khác tăng trưởng do nhu cầu thực tăng.
 
-Gross margin chứa nhiều thông tin: pricing power, product mix, input costs, utilization và competitive intensity. Semiconductor gross margin có thể tăng mạnh khi ASP và fab utilization cải thiện; retailer gross margin chịu markdown, shrinkage và sourcing costs; SaaS gross margin chịu hosting/support costs.
+## 6. Doanh thu hữu cơ và doanh thu mua lại
 
-Một margin improvement do temporary commodity decline khác structural improvement do mix shift sang high-margin products.
+Nếu doanh nghiệp mua nhiều công ty, tăng trưởng báo cáo có thể cao nhưng phần hữu cơ yếu.
 
-## 7. Operating expenses: SG&A, R&D và economics thật
+Cần tách doanh thu từ hoạt động hiện hữu khỏi doanh thu do M&A để đánh giá động cơ kinh tế thật.
 
-Selling, General & Administrative (*SG&A*) gồm selling, corporate overhead và administrative expenses. R&D thường expense ngay trong nhiều accounting frameworks dù về economics một phần có thể tạo intangible asset tương lai.
+## 7. Giá vốn và lợi nhuận gộp
 
-Điều này tạo challenge khi so mature company với high-R&D company. Nếu capitalizing R&D cho analytical purpose, investor phải làm nhất quán và amortize estimated research asset; không thể chỉ cộng R&D lại vào profit để làm earnings đẹp hơn.
+Giá vốn hàng bán (Cost of Goods Sold, COGS) gồm chi phí trực tiếp để tạo sản phẩm/dịch vụ theo cách phân loại của doanh nghiệp.
 
-Operating leverage xuất hiện khi revenue thay đổi nhanh hơn relatively fixed costs. High fixed-cost business có profit sensitivity lớn cả upcycle lẫn downcycle.
+Biên lợi nhuận gộp:
 
-## 8. Depreciation, amortization, EBIT và EBITDA
+```text
+Gross Margin = Gross Profit / Revenue
+```
 
-Depreciation phân bổ cost của tangible asset qua useful life. Amortization làm tương tự với một số intangible assets. Chúng là non-cash charges trong current period nhưng phản ánh consumption của prior capital expenditure.
+Biên gộp phản ánh quyền định giá, chi phí đầu vào, cơ cấu sản phẩm, công suất sử dụng và cường độ cạnh tranh.
 
-EBIT approximates operating profit before interest/tax. EBITDA cộng D&A trở lại. EBITDA hữu ích để so businesses với capital structures khác nhau nhưng không phải cash flow. Một capital-intensive business có EBITDA lớn nhưng phải reinvest phần lớn cash vào maintenance capex.
+## 8. SG&A và R&D
 
-Câu “D&A là non-cash nên bỏ qua” nguy hiểm nếu assets thực sự hao mòn và phải thay thế.
+Chi phí bán hàng, quản lý và hành chính (SG&A) hỗ trợ hoạt động kinh doanh. R&D đầu tư vào sản phẩm/công nghệ tương lai.
 
-## 9. Interest, taxes và net income
+Một doanh nghiệp giảm R&D có thể làm lợi nhuận hiện tại đẹp hơn nhưng làm suy yếu khả năng cạnh tranh tương lai. Vì vậy không phải mọi “cắt chi phí” đều tạo giá trị.
 
-Interest expense phản ánh financing structure. Rising interest expense có thể do debt tăng, floating rates reset hoặc refinancing ở yields cao hơn. Vì thế net income sensitivity với rates khác nhau giữa firms dù operating business giống nhau.
+## 9. Operating Leverage
 
-Tax expense không luôn bằng cash tax. Temporary differences tạo deferred tax assets (*DTA*) hoặc deferred tax liabilities (*DTL*). Investor không cần master toàn bộ tax accounting nhưng cần biết tax rate quá thấp bất thường có sustainable không và deferred tax items có thể reverse thế nào.
+Đòn bẩy vận hành (operating leverage) xuất hiện khi doanh nghiệp có chi phí cố định lớn. Khi doanh thu tăng, lợi nhuận có thể tăng nhanh hơn vì chi phí cố định được phân bổ trên doanh thu lớn hơn.
 
-Net income là bottom line accounting profit, không phải automatically owner cash flow.
+Ngược lại khi doanh thu giảm, lợi nhuận có thể giảm rất nhanh.
 
-## 10. Basic EPS và diluted EPS
+Bán dẫn, hàng không, phần mềm và công nghiệp có dạng đòn bẩy vận hành khác nhau.
 
-Basic EPS = net income attributable to common shareholders / weighted-average common shares. Diluted EPS giả định potential dilutive securities như options, RSUs hoặc convertibles theo applicable rules.
+## 10. EBITDA, EBIT và lợi nhuận ròng
 
-Share count là denominator nên per-share economics có thể xấu dù total profit tăng. Company tăng net income 10% nhưng diluted share count tăng 15% tạo EPS decline.
+EBITDA bỏ qua khấu hao và phân bổ, lãi vay và thuế. EBIT gần hơn với lợi nhuận hoạt động sau khấu hao.
 
-Stock-based compensation (*SBC*) là expense và cũng có dilution economics. Buybacks chỉ offset SBC khi shares outstanding thực sự không tăng; cash dùng để offset dilution vẫn là shareholder cost.
+EBITDA không phải dòng tiền vì doanh nghiệp vẫn phải chi capex và vốn lưu động.
 
-## 11. Treasury-stock-method intuition
+Lợi nhuận ròng còn chịu cấu trúc vốn, thuế và khoản ngoài hoạt động.
 
-Employee options chỉ dilutive khi economically in-the-money theo accounting method. Treasury stock method giả định proceeds từ option exercise được dùng repurchase shares ở average market price, tạo incremental diluted shares.
+## 11. EPS cơ bản và pha loãng
 
-Investor không cần tính manual từng grant mỗi quarter, nhưng phải hiểu fully diluted share count có thể cao hơn current basic shares, đặc biệt ở tech companies với large equity compensation.
+```text
+EPS = Net Income Available to Common / Weighted Average Shares
+```
 
-## 12. Balance Sheet: current và non-current
+EPS pha loãng tính thêm cổ phiếu tiềm năng từ option, RSU, convertible và công cụ khác.
 
-Current assets/liabilities thường liên quan operating cycle hoặc khoảng thời gian ngắn; non-current items dài hạn hơn. Nhưng classification chỉ là starting point.
+Nếu lợi nhuận tăng 10% nhưng số cổ phiếu pha loãng tăng 8%, giá trị trên mỗi cổ phiếu chỉ tăng rất ít.
 
-Cash có thể unrestricted hoặc restricted. Marketable securities có duration/price risk khác cash. Receivables phụ thuộc collectability. Inventory có obsolescence risk. PPE cần maintenance. Intangibles và goodwill cần impairment judgment. Lease assets/liabilities tạo contractual obligations dù debt presentation khác traditional borrowing.
+## 12. Bảng cân đối kế toán
 
-Balance sheet quality phải được đọc theo ability to meet obligations và generate future returns, không chỉ book value size.
+Bảng cân đối là ảnh chụp tại một thời điểm:
 
-## 13. Accounts receivable và DSO
+```text
+Tài sản
+- Tiền / đầu tư ngắn hạn
+- Khoản phải thu
+- Tồn kho
+- Tài sản cố định
+- Goodwill / tài sản vô hình
 
-Accounts receivable tăng khi company recognizes sales trước cash collection. *Days Sales Outstanding* (*DSO*) gần đúng:
+Nợ phải trả
+- Khoản phải trả
+- Nợ vay
+- Doanh thu chưa thực hiện
+- Nghĩa vụ khác
 
-`DSO = Average Receivables / Revenue × Days`
+Vốn chủ sở hữu
+```
 
-Nếu DSO tăng liên tục trong khi peers ổn định, có thể do weaker customers, longer payment terms hoặc aggressive revenue recognition. Nhưng seasonality và business mix phải được kiểm soát trước khi kết luận.
+Nhà đầu tư nên đọc bảng cân đối như bản đồ về thanh khoản, vốn đã đầu tư và nghĩa vụ tương lai.
 
-Allowance for doubtful accounts cho biết management estimate uncollectible receivables. Provision quá thấp trong worsening credit environment có thể inflate earnings tạm thời.
+## 13. Khoản phải thu
 
-## 14. Inventory và DIO
+Khoản phải thu tăng cùng doanh thu là bình thường, nhưng nếu tăng nhanh hơn nhiều trong thời gian dài cần điều tra.
 
-Inventory thường gồm raw materials, work-in-process và finished goods. *Days Inventory Outstanding* (*DIO*) giúp theo dõi inventory relative to COGS.
+Số ngày thu tiền (Days Sales Outstanding, DSO):
 
-Inventory build có thể bullish nếu company chuẩn bị cho confirmed demand, hoặc bearish nếu product không bán được. Semiconductor inventory, fashion retail inventory và real-estate inventory có economics rất khác nhau.
+```text
+DSO ≈ Average Receivables / Revenue × Days
+```
 
-Write-down inventory giảm earnings khi realizable value thấp hơn carrying amount theo applicable rules. Investor nên theo inventory growth, reserves và gross margin cùng nhau.
+DSO tăng có thể phản ánh điều khoản tín dụng nới lỏng hoặc thu tiền chậm.
 
-## 15. Accounts payable và DPO
+## 14. Hàng tồn kho
 
-Accounts payable là amounts owed to suppliers. *Days Payable Outstanding* (*DPO*) cao có thể giúp working capital nhưng cũng có thể báo liquidity stress nếu company kéo dài thanh toán bất thường.
+Tồn kho có thể gồm nguyên liệu, sản phẩm dở dang và thành phẩm.
 
-Cash Conversion Cycle (*CCC*) thường được mô tả:
+Số ngày tồn kho (DIO) tăng có thể là chuẩn bị cho nhu cầu mạnh hoặc dấu hiệu hàng không bán được. Cần đọc theo ngành.
 
-`CCC = DSO + DIO - DPO`
+Trong bán dẫn, tồn kho là chỉ báo chu kỳ. Trong bán lẻ, cơ cấu tồn kho và rủi ro giảm giá quan trọng.
 
-CCC giảm thường cải thiện cash efficiency, nhưng negative CCC không tự động là moat. Retail/platform businesses có thể naturally collect from customers trước khi trả suppliers; industrial companies có economics khác.
+## 15. Khoản phải trả
 
-## 16. PPE, capex và depreciation
+Khoản phải trả là tiền còn nợ nhà cung cấp. Kéo dài thời gian trả có thể cải thiện dòng tiền tạm thời nhưng không phải nguồn tiền bền vững vô hạn.
 
-Property, Plant & Equipment (*PPE*) là installed capital base của nhiều industrial businesses. Capex cash outflow đi qua investing cash flow và được capitalized; depreciation expense được recognized qua useful life.
+Số ngày phải trả (DPO) tăng mạnh cùng dấu hiệu căng thẳng nhà cung cấp có thể là cảnh báo.
 
-Maintenance capex duy trì existing earning capacity; growth capex mở rộng capacity hoặc productivity. Financial statements thường không tách hoàn hảo hai loại, nên investor phải infer từ capacity data, management guidance và historical reinvestment.
+## 16. Chu kỳ chuyển đổi tiền mặt
 
-Nếu model FCF bằng CFO - total capex, đó là conservative simple measure. Nếu muốn normalized owner earnings, maintenance/growth distinction trở nên quan trọng.
+```text
+CCC = DSO + DIO - DPO
+```
 
-## 17. Intangible assets và goodwill
+Chu kỳ chuyển đổi tiền mặt (Cash Conversion Cycle, CCC) ước lượng thời gian vốn bị khóa từ khi trả nhà cung cấp tới khi thu tiền khách hàng.
 
-Acquired patents, customer relationships hoặc brands có thể được recognized intangible assets. Goodwill thường phát sinh khi acquisition purchase price vượt fair value của identifiable net assets.
+CCC thấp hoặc âm có thể là lợi thế nếu đến từ mô hình kinh doanh thật, ví dụ khách hàng trả trước.
 
-Goodwill không tự động xấu. Nó trở thành vấn đề khi company repeatedly overpays for acquisitions. Impairment là accounting recognition rằng expected economics đã deteriorated, nhưng market thường price problem trước impairment announcement.
+## 17. Doanh thu chưa thực hiện
 
-Acquisition-heavy company cần track goodwill growth, acquired intangibles, restructuring charges và organic performance.
+Doanh thu chưa thực hiện (deferred revenue) xuất hiện khi doanh nghiệp đã nhận tiền nhưng chưa đủ điều kiện ghi doanh thu.
 
-## 18. Leases
+Trong SaaS, khoản này có thể là nguồn tài trợ tốt và chỉ báo nhu cầu, nhưng phải hiểu thời hạn hợp đồng và tỷ lệ gia hạn.
 
-Leases tạo right-of-use assets và lease liabilities theo modern accounting standards trong nhiều cases. Retailers, airlines và restaurants có thể có large lease obligations.
+## 18. Tài sản cố định và capex
 
-Khi so leverage, investor nên xem lease-adjusted debt nếu leases economically debt-like. EBITDA treatment cũng có thể khác across standards/companies, nên EV/EBITDA comparisons cần consistency.
+Tài sản cố định hữu hình (Property, Plant & Equipment, PP&E) tăng khi doanh nghiệp đầu tư capex và giảm dần qua khấu hao hoặc thanh lý.
 
-## 19. Debt: gross, net, fixed, floating và maturity ladder
+Capex tăng có thể là đầu tư tăng trưởng hoặc chỉ là duy trì công suất hiện tại. Hai loại có ý nghĩa kinh tế rất khác.
 
-Gross debt là contractual borrowing. Net debt thường = gross debt - cash/cash equivalents, nhưng không phải toàn cash necessarily available to repay debt.
+## 19. Khấu hao
 
-Fixed-rate debt ổn định coupon tới reset/maturity; floating debt reprices nhanh. Maturity ladder cho biết principal due mỗi năm. Company với manageable net leverage vẫn có liquidity risk nếu near-term maturities lớn và market access yếu.
+Khấu hao là phân bổ kế toán của chi phí tài sản theo thời gian. Nó không nhất thiết bằng capex duy trì thật.
 
-Investor nên kết hợp Debt/EBITDA, interest coverage, FCF/debt, maturity wall và covenant headroom.
+Máy móc cũ có thể đã khấu hao gần hết nhưng vẫn cần thay mới với chi phí cao hơn. Vì vậy dùng D&A làm proxy cho maintenance capex cần thận trọng.
 
-## 20. Shareholders' equity và retained earnings
+## 20. Tài sản vô hình và goodwill
 
-Equity gồm contributed capital, retained earnings, accumulated OCI và other components tùy standards. Retained earnings tích lũy historical accounting profits trừ dividends và adjustments; nó không phải cash account.
+Tài sản vô hình có thể gồm bằng sáng chế, phần mềm, thương hiệu hoặc quan hệ khách hàng mua lại.
 
-Negative retained earnings có thể đến từ long losses hoặc distributions; large retained earnings không đảm bảo cash còn trong company vì earnings có thể đã reinvested vào PPE, inventory hoặc acquisitions.
+Goodwill phát sinh khi giá mua doanh nghiệp vượt giá trị tài sản thuần có thể nhận diện.
 
-## 21. Other Comprehensive Income — OCI
+Goodwill không tự động xấu, nhưng chuỗi M&A lớn tạo goodwill tăng nhanh có thể che tăng trưởng hữu cơ yếu.
 
-Một số valuation changes hoặc FX translation items đi qua *Other Comprehensive Income* thay vì net income ngay lập tức. Accumulated OCI nằm trong equity.
+## 21. Nợ và cấu trúc kỳ hạn
 
-Với banks/insurers và multinational companies, OCI có thể material. Investor nên biết total economic changes không phải lúc nào cũng xuất hiện trong current net income.
+Không chỉ xem tổng nợ. Cần xem:
 
-## 22. Cash Flow Statement theo indirect method
+```text
+Nợ cố định / thả nổi
+Nợ có bảo đảm / không bảo đảm
+Lịch đáo hạn
+Lãi suất bình quân
+Covenant
+Khả năng tái cấp vốn
+```
 
-CFO thường bắt đầu từ net income rồi điều chỉnh non-cash items và working capital. Depreciation được cộng lại vì đã giảm profit nhưng không dùng current cash. Increase in receivables thường trừ cash because revenue was recognized without collection. Increase in payables thường add cash because expenses/purchases chưa được paid.
+Một doanh nghiệp có nợ vừa phải nhưng đáo hạn tập trung gần vẫn có rủi ro thanh khoản lớn.
 
-CFI chứa capex, acquisitions, asset sales và investment transactions. CFF chứa debt issuance/repayment, equity issuance, buybacks và dividends.
+## 22. Hợp đồng thuê
 
-Một company có positive CFO nhưng negative total cash change vì massive capex/debt repayment; điều đó không automatically tốt hay xấu, mà phải hiểu capital allocation.
+Nghĩa vụ thuê dài hạn có tính chất giống nợ ở nhiều mô hình kinh doanh. Kế toán hiện đại thường ghi nhận tài sản quyền sử dụng và nghĩa vụ thuê trên bảng cân đối.
 
-## 23. Free Cash Flow, FCFF và FCFE
+Nhà bán lẻ hoặc hãng hàng không có nghĩa vụ thuê lớn cần được đánh giá cùng nợ vay.
 
-Simple FCF thường = CFO - capex. *Free Cash Flow to Firm* (*FCFF*) là cash available to all capital providers trước debt payments; *Free Cash Flow to Equity* (*FCFE*) là cash theoretically available to equity after debt-related flows.
+## 23. Vốn chủ sở hữu
 
-Một common FCFF formulation:
+Vốn chủ sở hữu kế toán gồm vốn góp, lợi nhuận giữ lại, cổ phiếu quỹ và các khoản điều chỉnh khác.
 
-`FCFF = EBIT × (1 - tax rate) + D&A - Capex - ΔNWC`
+Book value không phải giá trị nội tại; nó chỉ phản ánh lịch sử kế toán của tài sản và nghĩa vụ.
 
-FCFE có thể bắt đầu từ net income rồi adjust D&A, capex, working capital và net borrowing.
+Ngành tài chính dùng book value nhiều hơn các doanh nghiệp dựa trên tài sản vô hình.
 
-Valuation phải pair cash flow và discount rate correctly: FCFF discount bằng WACC để ra enterprise value; FCFE discount bằng cost of equity để ra equity value.
+## 24. Other Comprehensive Income
 
-## 24. Accruals và earnings quality
+Thu nhập toàn diện khác (Other Comprehensive Income, OCI) ghi một số thay đổi giá trị chưa đi qua lợi nhuận ròng, ví dụ một số thay đổi chứng khoán hoặc chuyển đổi ngoại tệ.
 
-Accrual accounting là cần thiết nhưng management estimates tạo room for judgment. Receivable allowances, useful lives, warranty reserves, capitalization policies và provisions có thể shift earnings across periods.
+Nhà đầu tư cần biết khoản lỗ/lãi đang nằm ở đâu trong vốn chủ sở hữu thay vì chỉ nhìn net income.
 
-Một high-quality earnings pattern thường có sustainable revenue economics, reasonable cash conversion và limited dependence on recurring “one-offs”. Nhưng CFO vượt net income không always superior: subscription prepayments hoặc working-capital timing có business-model effects.
+## 25. Báo cáo lưu chuyển tiền tệ
 
-Investor phải normalize through-cycle rather than reward any single ratio mechanically.
+Ba nhóm chính:
 
-## 25. Adjusted EBITDA và non-GAAP metrics
+```text
+Dòng tiền hoạt động (CFO)
+Dòng tiền đầu tư (CFI)
+Dòng tiền tài trợ (CFF)
+```
 
-Management-defined metrics có thể hữu ích để remove truly non-recurring items, nhưng repeated exclusions deserve skepticism. Nếu restructuring charge xuất hiện mỗi năm, economically nó có thể là recurring cost.
+CFO cho biết hoạt động kinh doanh tạo/tiêu tiền ra sao. CFI chứa capex, mua bán doanh nghiệp và đầu tư. CFF chứa vay/trả nợ, phát hành/mua lại cổ phiếu và cổ tức.
 
-SBC, acquisition costs và impairment are sometimes excluded from adjusted results. Investor nên maintain bridge từ GAAP/IFRS-like reported number tới adjusted number và tự quyết định adjustments nào economic.
+## 26. Phương pháp gián tiếp của CFO
 
-## 26. Taxes và deferred taxes
+CFO thường bắt đầu từ lợi nhuận ròng rồi điều chỉnh:
 
-Book tax expense và cash taxes khác vì permanent/temporary differences. DTA có thể represent future tax benefit from losses/deductions; DTL có thể represent taxes deferred to future periods.
+```text
++ Chi phí không dùng tiền
+± Thay đổi vốn lưu động
+± Các khoản dồn tích khác
+```
 
-DTA value phụ thuộc ability to generate taxable income. If company may never earn enough, tax asset quality lower. Effective tax rate should be analyzed over multiple years, not one quarter with discrete benefit.
+Đây là nơi nhà đầu tư thấy vì sao lợi nhuận khác tiền mặt.
 
-## 27. Foreign-currency translation
+## 27. Dòng tiền tự do
 
-Multinational company may sell in USD, KRW, VND, EUR and other currencies. Transaction exposure affects actual receivables/costs; translation exposure converts foreign subsidiaries' statements into reporting currency.
+Một định nghĩa đơn giản:
 
-FX can move revenue and equity without identical cash economics. Constant-currency disclosure can help isolate operations, but investor should still model currencies that materially affect margin and cash flow.
+```text
+FCF = CFO - Capex
+```
 
-## 28. Acquisition accounting và purchase-price allocation
+Nhưng để định giá cần phân biệt FCFF và FCFE.
 
-When company acquires another, purchase price is allocated among identifiable assets/liabilities; remainder becomes goodwill. Acquired intangible amortization, step-ups and integration charges can affect later earnings.
+```text
+FCFF ≈ NOPAT + D&A - Capex - ΔNWC
+```
 
-Serial acquirers require special caution because reported revenue/EPS growth may partly be bought with debt/equity. True question is return on incremental invested capital after full acquisition cost.
+FCFE còn tính dòng nợ ròng.
 
-## 29. Industry accounting khác nhau
+## 28. NOPAT và vốn đầu tư
 
-Banks do not analyze working capital/EBITDA like industrial companies; loans and deposits are core operating assets/liabilities. SaaS companies care about deferred revenue, contract acquisition costs, ARR/NRR and SBC. Retailers care inventory and leases. Semiconductor companies care inventory cycle, depreciation, capex and utilization.
+NOPAT là lợi nhuận hoạt động sau thuế giả định không phụ thuộc cấu trúc nợ. ROIC:
 
-Accounting ratios only make sense in business context. Applying generic “low debt, high FCF” checklist to banks or early infrastructure build-out can mislead.
+```text
+ROIC = NOPAT / Invested Capital
+```
 
-## 30. Một ví dụ liên kết ba báo cáo
+Đây là cầu nối giữa kế toán và kinh tế doanh nghiệp.
 
-Giả sử company sells product for 100 on credit, product cost 60. On Income Statement, revenue +100, COGS +60, pre-tax profit +40 before other expenses. On Balance Sheet, receivables +100, inventory -60 and retained earnings eventually increase by after-tax profit. CFO initially does not receive 100 cash; indirect cash flow subtracts increase in receivables.
+## 29. Thuế tiền mặt và thuế kế toán
 
-When customer pays later, cash +100 and receivable -100. No new revenue is recognized because economic sale was already recorded. This simple example shows why cash receipt and revenue recognition are separate events.
+Chi phí thuế trên báo cáo không luôn bằng tiền thuế trả trong kỳ vì có thuế hoãn lại, ưu đãi và chênh lệch thời điểm.
 
-## 31. Normalized earnings
+Khi định giá dài hạn, cần hướng tới mức thuế kinh tế bền vững thay vì lấy một năm bất thường.
 
-Investor should estimate earnings power under normal conditions, not blindly annualize peak or trough quarter. For cyclical businesses, normalize volume, price, utilization and margins. For growth companies, separate current investment spending from steady-state economics carefully.
+## 30. Thuế hoãn lại
 
-Normalized earnings are not permission to ignore bad current data. Assumptions must connect to competitive capacity and cycle evidence.
+Tài sản/nợ thuế hoãn lại phát sinh khi thời điểm ghi nhận kế toán và thuế khác nhau.
 
-## 32. Forensic red flags
+Chúng có thể đảo ngược trong tương lai, nên phải hiểu nguyên nhân thay vì coi như tiền mặt hoặc nợ vay thông thường.
 
-Important warning signals include receivables growing much faster than sales, inventory build without demand support, repeated one-off adjustments, aggressive capitalization, large related-party balances, unexplained cash/debt coexistence, frequent equity issuance, acquisitions masking organic weakness, weak auditor signals and major divergence between profit and cash over time.
+## 31. SBC và pha loãng
 
-No single red flag proves fraud. The correct response is deeper reading of footnotes, accounting policies, related-party disclosures and cash movements.
+Chi trả bằng cổ phiếu (Stock-Based Compensation, SBC) là chi phí kinh tế dù không dùng tiền ngay.
 
-## 33. Từ historical statements sang forecast
+Doanh nghiệp có thể cộng SBC lại khi trình bày FCF điều chỉnh, nhưng cổ đông vẫn chịu pha loãng nếu cổ phiếu mới được phát hành.
 
-Model nên bắt đầu từ operational drivers: units/customers × price, gross margin drivers, headcount/opex, working-capital ratios, capex/capacity, debt schedule and tax. Forecasting each line as arbitrary percentage of revenue often hides economics.
+## 32. Mua bán sáp nhập và kế toán mua lại
 
-Three-statement model should close: ending cash from Cash Flow Statement must reconcile Balance Sheet; retained earnings should roll with net income/dividends; debt and interest should be linked; PPE and depreciation should roll forward.
+M&A có thể làm tài sản vô hình và goodwill tăng; chi phí tái cấu trúc, earn-out và purchase accounting làm so sánh theo thời gian khó hơn.
 
-## 34. Checklist trước khi valuation
+Cần tách tăng trưởng hữu cơ, tăng trưởng do mua lại và chất lượng vốn đã bỏ ra.
 
-Trước khi dùng P/E hay DCF, trả lời: revenue recognized thế nào; organic growth là bao nhiêu; gross/operating margin drivers là gì; working capital trend có hợp lý không; maintenance/growth capex ra sao; share dilution thế nào; debt maturity/interest burden ra sao; taxes normalized bao nhiêu; accounting adjustments nào recurring; và reported profit convert thành cash ra sao.
+## 33. Ngoại tệ: giao dịch và chuyển đổi
 
-Nếu chưa trả lời được, valuation precision chỉ là false precision.
+Doanh nghiệp quốc tế chịu hai lớp FX:
 
-## 35. Mental model cuối cùng
+- tác động giao dịch: doanh thu/chi phí bằng đồng tiền khác;
+- tác động chuyển đổi: báo cáo công ty con nước ngoài được quy đổi về đồng tiền báo cáo.
 
-Đọc financial statements theo flow:
+Hai tác động không giống nhau về dòng tiền.
 
-`Business activity → Accounting recognition → Balance-sheet consequence → Cash consequence → Per-share economics → Valuation`
+## 34. Ba báo cáo phải liên kết
 
-Accounting giỏi đối với investor không phải thuộc mọi rule. Đó là khả năng phát hiện economic reality phía sau reported numbers và biết statement nào phải thay đổi khi assumption của business thay đổi.
+Một mô hình đúng phải đảm bảo:
+
+```text
+Lợi nhuận ròng
+→ Lợi nhuận giữ lại
+Capex
+→ PP&E
+Khấu hao
+→ P&L + PP&E
+Vốn lưu động
+→ Bảng cân đối + CFO
+Nợ
+→ Tiền + Lãi vay
+Cổ tức / Buyback
+→ Tiền + Vốn chủ sở hữu
+```
+
+Nếu mô hình cho tiền âm nhưng vẫn ghi thu nhập lãi tăng, liên kết đang sai.
+
+## 35. Những chỉ số khác nhau theo ngành
+
+Ngân hàng không có vốn lưu động giống công ty công nghiệp. REIT dùng FFO/AFFO. SaaS cần ARR, NRR, churn và SBC. Bán lẻ cần same-store sales, tồn kho và vòng quay.
+
+Không áp một bộ tỷ lệ giống nhau cho mọi ngành.
+
+## 36. Checklist đọc báo cáo
+
+```text
+Doanh thu tăng do đâu?
+Biên lợi nhuận thay đổi vì gì?
+Lợi nhuận có chuyển thành CFO không?
+Vốn lưu động đang giải phóng hay hút tiền?
+Capex là duy trì hay tăng trưởng?
+Nợ đáo hạn khi nào?
+Số cổ phiếu pha loãng có tăng không?
+Thuế và khoản bất thường có làm EPS méo không?
+Related parties / goodwill / leases có đáng chú ý không?
+FCF trên mỗi cổ phiếu đang đi hướng nào?
+```
+
+## Kết luận
+
+Báo cáo tài chính không phải ba bảng độc lập. Chúng là ba góc nhìn của cùng một hệ thống kinh tế. Nhà đầu tư cần theo dòng từ **doanh thu → lợi nhuận → vốn lưu động → tài sản/nợ → dòng tiền → vốn trên mỗi cổ phiếu**. Khi chuỗi này nhất quán, kế toán trở thành công cụ hiểu doanh nghiệp thay vì tập hợp các tỷ lệ rời rạc.
