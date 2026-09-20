@@ -7,7 +7,7 @@ Bộ tài liệu học Kotlin cho Android theo lộ trình:
 3. `03_kotlin_advanced_senior.md` — coroutine/Flow internals, Compose runtime, modularization, offline-first, performance, security, Java interop và production design.
 4. `04_kotlin_master.md` — Kotlin 1.x→2.x, K2, bytecode awareness, large-scale architecture/build/release, KMP awareness, observability và master heuristics.
 
-Bốn file chính là **learning spine**: chúng giữ thứ tự Beginner → Intermediate → Advanced/Senior → Master. Các phần bổ sung nằm trong `deep_dive/` để tăng chiều sâu mà không biến file chính thành tài liệu khổng lồ khó đọc. Sau khi đã hiểu từng concept riêng lẻ, `production_casebook/` nối chúng thành các hệ thống end-to-end và hạ xuống cả Android platform/runtime để người học thấy state, lifecycle, data, network, security, UI system, hardware capability, process và release tương tác với nhau trong production như thế nào.
+Bốn file chính là **learning spine**: chúng giữ thứ tự Beginner → Intermediate → Advanced/Senior → Master. Các phần bổ sung nằm trong `deep_dive/` để tăng chiều sâu mà không biến file chính thành tài liệu khổng lồ khó đọc. Sau khi đã hiểu từng concept riêng lẻ, `production_casebook/` nối chúng thành các hệ thống end-to-end và hạ xuống cả Android platform/runtime/build/distribution để người học thấy state, lifecycle, data, network, security, UI system, hardware capability, process, compiler, native layer và artifact release tương tác với nhau trong production như thế nào.
 
 ## Deep dives theo từng level
 
@@ -36,6 +36,12 @@ Sau level Master, đọc [`production_casebook/README.md`](production_casebook/R
 12. [`production_casebook/12_media_camera_location_bluetooth_files.md`](production_casebook/12_media_camera_location_bluetooth_files.md) — CameraX, Media3/media session, audio focus, microphone, SAF/Photo Picker/MediaStore, location/geofence, BLE/GATT, NFC/sensor, WebView và device-resource ownership.
 13. [`production_casebook/13_production_quality_device_matrix.md`](production_casebook/13_production_quality_device_matrix.md) — device/OS/OEM matrix, upgrade/rollback testing, localization/timezone/RTL/font scale, battery/network/thermal, privacy, observability, feature flag và release readiness.
 14. [`production_casebook/14_system_surfaces_services_receivers_widgets.md`](production_casebook/14_system_surfaces_services_receivers_widgets.md) — Service, BroadcastReceiver, ContentProvider, notification/PendingIntent, App Widget, shortcut, Quick Settings Tile, cold-start entry point và exported-component security.
+15. [`production_casebook/15_gradle_agp_build_system_variants.md`](production_casebook/15_gradle_agp_build_system_variants.md) — Gradle/AGP/Kotlin plugin, build type/flavor/variant, source-set precedence, manifest/resource merge, dependency visibility, convention plugin, configuration/build cache, D8/R8, signing và CI build governance.
+16. [`production_casebook/16_aab_play_delivery_distribution.md`](production_casebook/16_aab_play_delivery_distribution.md) — AAB, split APK, `bundletool`, dynamic feature/Play Feature Delivery, app size, signing, rollout/rollback, distribution channel và artifact provenance.
+17. [`production_casebook/17_ndk_jni_abi_native_memory.md`](production_casebook/17_ndk_jni_abi_native_memory.md) — NDK/JNI, ABI, native `.so`, CMake, reference/thread ownership, native memory, symbolication/sanitizer, 16 KB page size và native release validation.
+18. [`production_casebook/18_android_compatibility_api_levels_sdk_extensions.md`](production_casebook/18_android_compatibility_api_levels_sdk_extensions.md) — `minSdk`/`compileSdk`/`targetSdk`, all-app vs target-gated behavior changes, compatibility framework, API guard, desugaring, SDK Extensions, non-SDK restrictions và platform migration playbook.
+19. [`production_casebook/19_app_startup_initialization_cold_start.md`](production_casebook/19_app_startup_initialization_cold_start.md) — cold/warm/hot start, Application/provider initialization, lazy/eager work, SplashScreen, App Startup, Compose first frame, Baseline Profile, Macrobenchmark, Perfetto và startup budget.
+20. [`production_casebook/20_android_library_sdk_authoring.md`](production_casebook/20_android_library_sdk_authoring.md) — AAR/library/SDK authoring, public API/ABI, Java/Kotlin interop, resource/manifest contract, consumer R8 rules, lint, publishing, SemVer và migration compatibility.
 
 ## Baseline version
 
@@ -47,7 +53,7 @@ Sau level Master, đọc [`production_casebook/README.md`](production_casebook/R
 - Google Play target requirement từ 2026-08-31: app/update Android thông thường phải target **Android 16 / API 36+**, với ngoại lệ riêng cho một số form factor.
 - UI direction: Jetpack Compose cho code hiện đại; XML/View system và API legacy quan trọng vẫn được cover để đọc, maintain và migrate project cũ.
 
-Version ở đây là snapshot để đọc project tại thời điểm biên soạn, không phải con số phải copy cứng mãi mãi. Khi upgrade cần đọc compatibility matrix và release notes của Kotlin, Android Studio/AGP, Android platform và từng Jetpack library.
+Version ở đây là snapshot để đọc project tại thời điểm biên soạn, không phải con số phải copy cứng mãi mãi. Khi upgrade cần đọc compatibility matrix và release notes của Kotlin, Android Studio/AGP, Android platform, Google Play policy và từng Jetpack/library dependency.
 
 ## Cách học
 
@@ -69,15 +75,16 @@ Một vòng học hoàn chỉnh là:
 → deep_dive/04
 → Production Casebook 01 → 08: architecture + compiler/runtime
 → Production Casebook 09 → 14: Android platform + device/system integration
-→ tự thiết kế một production blueprint và giải thích các trade-off
+→ Production Casebook 15 → 20: build + distribution + native + compatibility + startup + SDK authoring
+→ tự thiết kế, build, package, release và giải thích trade-off của một production app
 ```
 
-Khi học Casebook, không nên chỉ copy code. Với mỗi case hãy tự trả lời: state owner là ai; source of truth ở đâu; process/thread/lifecycle nào đang chạy; failure nào retry được; permission/capability nào có thể biến mất; dữ liệu nào nhạy cảm; operation nào cần idempotency; test nào chứng minh invariant; release gặp lỗi thì rollback hoặc disable bằng cách nào. Khi gặp issue “magic” ở Kotlin/Gradle/runtime, dùng Case 08–09 để hạ xuống tầng compiler/JVM/ART/Binder thay vì đoán.
+Khi học Casebook, không nên chỉ copy code. Với mỗi case hãy tự trả lời: state owner là ai; source of truth ở đâu; process/thread/lifecycle nào đang chạy; failure nào retry được; permission/capability nào có thể biến mất; artifact nào thật sự tới device; native/resource/build boundary nào có thể leak; dữ liệu nào nhạy cảm; operation nào cần idempotency; test nào chứng minh invariant; release gặp lỗi thì rollback hoặc disable bằng cách nào. Khi gặp issue “magic” ở Kotlin/Gradle/runtime, dùng Case 08–09 và 15–18 để hạ xuống tầng compiler/JVM/ART/Binder/build/artifact/platform contract thay vì đoán.
 
 ## Phạm vi đã cover
 
-Bộ tài liệu không chỉ dạy syntax Kotlin. Nó nối Kotlin language với Android runtime, lifecycle, Compose lẫn XML/View, Gradle/AGP, coroutine/Flow, persistence/networking, DI, navigation, background work, testing, performance, security, build/release, legacy migration, system components, hardware capability và production architecture.
+Bộ tài liệu không chỉ dạy syntax Kotlin. Nó nối Kotlin language với Android runtime, lifecycle, Compose lẫn XML/View, Gradle/AGP, coroutine/Flow, persistence/networking, DI, navigation, background work, testing, performance, security, build/release, AAB/delivery, native NDK/JNI, platform compatibility, startup, library authoring, legacy migration, system components, hardware capability và production architecture.
 
-Các gap thường bị tutorial bỏ qua đã được cover rõ hơn: process death, Activity Result API, Context lifetime, storage/URI, serialization boundary, coroutine cancellation, Flow backpressure, Compose Snapshot/identity/effect, retry/idempotency, token refresh race, R8/signing, API-level migration, foreground/background policy, database migration, offline mutation queue, conflict resolution, backup/privacy, dependency governance, SBOM, observability, performance budget, staged rollout/rollback, Kotlin/JVM abstraction leak, Android process/Binder/MessageQueue, permission/capability migration, adaptive/accessibility UI, camera/media/BLE integration, cold-start system surface và long-term maintenance.
+Các gap thường bị tutorial bỏ qua đã được cover rõ hơn: process death, Activity Result API, Context lifetime, storage/URI, serialization boundary, coroutine cancellation, Flow backpressure, Compose Snapshot/identity/effect, retry/idempotency, token refresh race, R8/signing, source-set/manifest merge, API-level migration, foreground/background policy, database migration, offline mutation queue, conflict resolution, backup/privacy, dependency governance, SBOM, observability, performance budget, staged rollout/rollback, Kotlin/JVM abstraction leak, Android process/Binder/MessageQueue, permission/capability migration, adaptive/accessibility UI, camera/media/BLE integration, cold-start system surface, split delivery, ABI/page-size compatibility, startup critical path, SDK binary compatibility và long-term maintenance.
 
-Mục tiêu cuối cùng của bộ note không phải để người đọc nhớ mọi API, mà để khi gặp một requirement mới có thể tự suy luận theo các trục **lifetime → ownership → source of truth → execution context → capability → concurrency → failure → compatibility → security → observability → release**, và khi cần có thể hạ xuống tầng compiler/runtime/platform để giải thích behavior thay vì dựa vào “magic”.
+Mục tiêu cuối cùng của bộ note không phải để người đọc nhớ mọi API, mà để khi gặp một requirement mới có thể tự suy luận theo các trục **lifetime → ownership → source of truth → execution context → capability → build variant → artifact → concurrency → failure → compatibility → security → observability → distribution/release**, và khi cần có thể hạ xuống tầng compiler/runtime/platform/native/build system để giải thích behavior thay vì dựa vào “magic”.
