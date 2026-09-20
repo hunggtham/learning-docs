@@ -1,294 +1,341 @@
-# Chuyển hóa, hô hấp và quang hợp — Metabolism, Respiration and Photosynthesis (대사, 세포호흡과 광합성)
+# Chuyển hóa, Hô hấp tế bào và Quang hợp — Metabolism, Respiration and Photosynthesis (대사, 세포호흡과 광합성)
 
-Chương trước đã xây cell như một system có boundary, compartment và gradient. Nhưng một cell được tổ chức tốt vẫn không thể sống nếu không liên tục cung cấp energy và nguyên liệu. Câu hỏi bây giờ là: **cell lấy energy ở đâu, chuyển nó qua những dạng trung gian nào, và dùng architecture của membrane để biến energy thành ATP ra sao?**
+Chapter trước cho thấy cell phải tiêu năng lượng liên tục để giữ ion gradient, vận chuyển cargo, sửa cấu trúc và tổng hợp molecule. Vì vậy câu hỏi tự nhiên tiếp theo là: **ATP được tái tạo bằng cách nào, và năng lượng đi vào mạng lưới sống từ đâu?**
 
-Đây là nơi nhiều người bắt đầu học thuộc pathway. Cách đó rất dễ quên. Thay vào đó, ta sẽ theo một dòng xuyên suốt: **electron đi đâu, proton gradient được tạo như thế nào, và ATP xuất hiện từ đâu**.
+Câu trả lời không nằm ở một reaction duy nhất. Cell tổ chức energy conversion thành chuỗi nhiều bước: fuel hoặc light → electron carrier → membrane gradient → ATP → cellular work. Chapter này xây chuỗi đó từ first principles và cho thấy hô hấp tế bào với quang hợp thực ra là hai hướng bổ sung của cùng một logic redox–gradient.
 
-## 1. Metabolism là network chứ không phải một reaction
+> **Mental model:** metabolism là một mạng lưới chuyển đổi matter và free energy. Respiration lấy electron từ fuel và “thả” chúng xuống mức energy thấp để tạo ATP. Photosynthesis dùng photon nâng electron lên mức energy cao rồi dùng chúng để xây reduced carbon.
 
-**Metabolism (chuyển hóa / 대사)** là toàn bộ reaction hóa học trong cell. Nhưng nói “toàn bộ reaction” vẫn còn quá trừu tượng. Cách nghĩ hữu ích hơn là xem metabolism như một network gồm nhiều pathway nối với nhau.
+## 1. Metabolism là network, không phải một “đường phản ứng”
 
-Một pathway lấy substrate làm input, qua chuỗi enzyme tạo intermediate, rồi cho product. Product này có thể trở thành input của pathway khác.
+**Chuyển hóa (metabolism / 대사)** gồm hàng nghìn reaction liên kết. Một molecule trung gian có thể đi sang nhiều pathway khác nhau tùy state của cell.
 
-```text
-glucose
-  ↓
-glycolysis intermediates
-  ├── ATP
-  ├── NADH
-  ├── biosynthesis precursors
-  └── pyruvate
-        ↓
-   acetyl-CoA
-        ↓
- citric-acid cycle
-```
+Glucose không nhất thiết “đi thẳng tới ATP”. Nó có thể:
 
-Như vậy glucose không chỉ “được đốt để lấy năng lượng”. Carbon skeleton của nó còn có thể được rẽ sang synthesis amino acid, lipid hay nucleotide.
+- đi vào glycolysis;
+- tạo glycogen để storage;
+- cung cấp carbon skeleton cho amino acid;
+- đi vào pentose-phosphate pathway để tạo NADPH và ribose;
+- được chuyển thành lipid khi energy dư.
 
-## 2. Catabolism và anabolism phải được coupled
+Vì vậy metabolism nên nhìn như **network có branch và feedback**, không phải conveyor belt một chiều.
 
-**Catabolism** phá molecule và thường giải phóng free energy. **Anabolism** xây molecule và cần free energy.
+## 2. Catabolism và anabolism cần được nối bằng energy coupling
 
-Cell giải bài toán này bằng coupling. Catabolic pathway tạo ATP và reduced electron carrier như NADH. Sau đó ATP và reducing power được dùng cho anabolic process.
+**Catabolism (이화작용)** phân giải molecule và thường tạo ATP/reducing equivalents. **Anabolism (동화작용)** xây molecule mới và cần ATP/reducing power.
 
-Ta có thể hình dung như economy:
+Hai chiều liên kết qua currency như ATP, NADH/NADPH và precursor.
 
-```text
-energy-yielding reactions
-       ↓
-ATP + reducing power
-       ↓
-energy-requiring reactions
-```
+Nếu catabolism chạy mà anabolism không dùng material, resource có thể tích tụ hoặc bị thải. Nếu anabolism chạy mà không có energy source, process dừng. Cell phải cân bằng flux theo nutrient và demand.
 
-Nếu catabolism và anabolism không được coordinate, cell có thể rơi vào “futile cycle”: vừa xây vừa phá cùng một molecule, waste energy.
+## 3. Oxidation state: vì sao molecule giàu C–H thường là fuel tốt?
 
-Vì vậy metabolism luôn gắn với regulation.
+Carbon gắn nhiều hydrogen thường ở trạng thái reduced hơn; khi bị oxidized về CO₂, electron được chuyển sang acceptor electronegative hơn như oxygen. Chênh lệch này giải phóng free energy.
 
-## 3. Redox: theo dõi electron thay vì thuộc pathway
+Fatty acid có nhiều C–H bond nên energy density cao. Đây là một lý do lipid là long-term energy storage tốt hơn carbohydrate theo khối lượng.
 
-Trong cellular respiration, energy lớn nằm trong electron giàu năng lượng của nutrient.
+Nhưng cell không “đốt” fuel như lửa. Nó chia oxidation thành nhiều enzyme-controlled step để capture energy.
 
-Khi molecule **bị oxy hóa (oxidized)**, nó mất electron. Khi molecule **bị khử (reduced)**, nó nhận electron.
+## 4. Glycolysis: bước đầu tách glucose trong cytosol
 
-NAD⁺ nhận electron và proton để thành NADH. FAD thành FADH₂.
+**Glycolysis (đường phân / 해당과정)** xảy ra trong cytosol và không trực tiếp cần oxygen.
 
-Những carrier này giống “xe chở electron” hơn là kho energy lâu dài. Chúng đưa electron tới electron transport chain.
+Một glucose 6-carbon được chuyển thành hai pyruvate 3-carbon. Pathway có investment phase dùng ATP và payoff phase tạo ATP/NADH.
 
-Nếu theo dõi electron, respiration trở nên logic hơn:
-
-```text
-nutrient carbon
-   ↓ oxidation
-NADH / FADH2
-   ↓
-electron transport chain
-   ↓
-O2 receives electrons
-```
-
-## 4. Glycolysis: tại sao pathway đầu tiên nằm trong cytosol?
-
-**Glycolysis (đường phân / 해당과정)** phân một glucose 6-carbon thành hai pyruvate 3-carbon.
-
-Process diễn ra trong cytosol và không cần mitochondria. Điều này quan trọng về evolutionary history: glycolysis có thể đã xuất hiện rất sớm trước khi eukaryote có mitochondria.
-
-Glycolysis gồm phase đầu tiêu tốn ATP để “activate” glucose, rồi phase sau thu lại nhiều ATP hơn và tạo NADH.
-
-Net per glucose trong model đơn giản:
+Net đơn giản:
 
 \[
-2 ATP + 2 NADH + 2 pyruvate
+Glucose + 2NAD^+ + 2ADP + 2P_i
+\rightarrow 2Pyruvate + 2NADH + 2ATP + ...
 \]
 
-Điểm cần hiểu là ATP ở glycolysis được tạo bằng **substrate-level phosphorylation**: phosphate được chuyển trực tiếp từ intermediate sang ADP.
+Điểm cần hiểu không phải thuộc từng enzyme ngay từ đầu, mà là logic:
 
-Đây khác cơ chế ATP synthase ở mitochondria.
+1. phosphorylate glucose để giữ/activate carbon trong cell;
+2. split 6C thành hai unit 3C;
+3. oxidize intermediate và capture electron vào NADH;
+4. transfer phosphate trực tiếp để tạo ATP.
 
-## 5. Tại sao cần đầu tư ATP trước khi thu ATP?
+Tạo ATP bằng direct phosphate transfer gọi là **substrate-level phosphorylation**.
 
-Việc cell dùng ATP ở đầu glycolysis có vẻ nghịch lý. Nhưng phosphorylation glucose giúp molecule trở nên reactive hơn và giữ nó trong cell vì charged molecule khó qua membrane tự do.
+## 5. Glycolysis là pathway cổ và linh hoạt
 
-Đây là pattern phổ biến: system bỏ một khoản energy nhỏ để tạo intermediate có potential cho downstream process lớn hơn.
+Glycolysis diễn ra trong cytosol và có ở gần như mọi domain of life, gợi ý pathway rất cổ trong evolutionary history.
 
-## 6. Pyruvate là điểm rẽ
+Nó cũng cung cấp intermediate cho biosynthesis, không chỉ ATP. Vì vậy nếu chỉ nhìn glycolysis như “10 bước tạo 2 ATP”, ta bỏ mất vai trò central hub của nó.
 
-Sau glycolysis, pyruvate có nhiều fate tùy organism, oxygen và tissue.
+## 6. Pyruvate là ngã rẽ metabolic
 
-Trong aerobic respiration ở eukaryote, pyruvate vào mitochondria, được chuyển thành **acetyl-CoA**, giải phóng CO₂ và tạo NADH.
+Sau glycolysis, pyruvate có nhiều fate.
 
-Acetyl-CoA không chỉ từ glucose; fatty acid và một số amino acid cũng có thể converged vào đây. Vì vậy acetyl-CoA là metabolic hub.
+Khi oxidative respiration phù hợp, pyruvate vào mitochondrion và chuyển thành acetyl-CoA. Khi electron transport không tái oxidize NADH đủ nhanh, cell có thể dùng fermentation để regenerate NAD⁺ cho glycolysis.
 
-## 7. Citric-acid cycle: mục tiêu chính không phải ATP trực tiếp
+Pyruvate cũng có thể đi vào biosynthetic pathway.
 
-**Citric acid cycle / Krebs cycle / TCA cycle (시트르산 회로)** xảy ra chủ yếu trong mitochondrial matrix.
+Metabolism chọn route dựa trên oxygen, enzyme expression, energy demand và tissue context.
 
-Acetyl group 2-carbon được oxidized hoàn toàn thành CO₂. Cycle tạo một ít ATP/GTP nhưng output quan trọng hơn là NADH và FADH₂.
+## 7. Fermentation: mục tiêu chính là tái sinh NAD⁺
 
-Vì sao? Vì electron carrier này sẽ cung cấp electron cho stage tạo phần lớn ATP.
+Một misconception phổ biến là fermentation “để tạo thêm ATP”. Thực tế ATP trong fermentation chủ yếu đến từ glycolysis. Vai trò quan trọng của fermentation là **regenerate NAD⁺** để glycolysis tiếp tục.
 
-Nếu chỉ đếm ATP ngay trong TCA, ta sẽ bỏ lỡ mục đích thực của cycle: **thu electron có năng lượng cao vào carrier**.
+Trong lactic fermentation:
 
-## 8. Electron transport chain: biến redox energy thành proton gradient
+\[
+Pyruvate + NADH \rightarrow Lactate + NAD^+
+\]
 
-Electron transport chain nằm ở inner mitochondrial membrane.
+Trong yeast alcohol fermentation, pyruvate cuối cùng tạo ethanol và CO₂ đồng thời regenerate NAD⁺.
 
-Electron từ NADH và FADH₂ đi qua nhiều protein complex. Mỗi transfer đi theo hướng giảm free energy. Một phần energy được dùng để pump proton H⁺ từ matrix ra intermembrane space.
+Khi exercise intense, lactate production tăng không đơn giản vì “thiếu oxygen hoàn toàn”; nó phản ánh balance giữa glycolytic flux, mitochondrial oxidation và redox state.
 
-Kết quả là proton concentration bên ngoài cao hơn bên trong, đồng thời có charge separation.
+## 8. Acetyl-CoA: junction giữa carbohydrate, fat và amino acid
 
-Ta đã tạo **proton-motive force**.
+Pyruvate oxidation tạo **acetyl-CoA**, CO₂ và NADH. Fatty acid beta-oxidation cũng tạo acetyl-CoA. Một số amino acid có thể feed vào acetyl-CoA hoặc TCA intermediate.
 
-Điều kỳ diệu về mặt logic là cell chưa tạo ATP ở bước này. Nó chuyển energy từ electron thành gradient.
+Vì vậy acetyl-CoA là metabolic junction nối nhiều nutrient.
+
+Điều này giải thích tại sao các macronutrient không tồn tại như ba “đường năng lượng” hoàn toàn tách biệt.
+
+## 9. Citric acid cycle: mục tiêu lớn là lấy electron, không phải tạo nhiều ATP trực tiếp
+
+**Chu trình citric acid/TCA/Krebs (시트르산 회로)** oxy hóa acetyl group thành CO₂ và chuyển electron sang NADH/FADH₂.
+
+Mỗi vòng tạo nhiều reduced carrier nhưng chỉ ít ATP/GTP trực tiếp. Vì vậy nếu hỏi “TCA tạo bao nhiêu ATP?”, cần nhớ phần lớn ATP tới sau qua oxidative phosphorylation.
+
+TCA còn cung cấp intermediate cho amino acid, heme và biosynthesis khác. Khi intermediate bị rút ra, anaplerotic reaction bổ sung chúng.
+
+Một lần nữa, pathway là network intersection chứ không phải chỉ energy line.
+
+## 10. Electron transport chain: electron đi xuống “bậc thang” energy
+
+NADH và FADH₂ mang electron tới **electron transport chain, ETC (전자전달계)** ở inner mitochondrial membrane.
+
+Electron được transfer qua series complex. Free energy từ transfer được dùng để pump H⁺ từ matrix sang intermembrane space.
+
+Kết quả: electron flow được chuyển thành **proton-motive force** gồm pH gradient và electrical potential.
 
 ```text
-electron energy
-    ↓
-protein complexes
-    ↓
-proton pumping
-    ↓
-electrochemical gradient
+NADH/FADH2
+   ↓ electron
+ETC complexes
+   ↓ energy coupling
+H+ pumped across membrane
+   ↓
+proton-motive force
 ```
 
-## 9. Chemiosmosis: gradient trở thành ATP
+Membrane chapter đã cho ta active transport và electrochemical gradient. Bây giờ ta thấy gradient được dùng như energy intermediate.
 
-Proton muốn quay về matrix theo electrochemical gradient. Nhưng inner membrane không cho proton tự do đi qua dễ dàng. Route chính là **ATP synthase**.
+## 11. Oxygen là final electron acceptor, không phải “nguyên liệu tạo ATP trực tiếp”
 
-Proton flow qua enzyme làm phần protein quay và thay đổi conformation, thúc đẩy:
+Ở aerobic respiration, oxygen nhận electron cuối ETC và cùng H⁺ tạo water.
+
+Nếu không có oxygen, electron chain bị backlog, NADH khó được oxidize về NAD⁺ và upstream pathway bị ảnh hưởng.
+
+Vì vậy oxygen cần thiết cho high-yield oxidative metabolism không phải vì ATP synthase “ăn oxygen”, mà vì oxygen giữ electron flow tiếp tục.
+
+## 12. Chemiosmosis: một trong những idea thống nhất mạnh nhất của Biology
+
+**Chemiosmosis (화학삼투)** là coupling giữa ion gradient và ATP synthesis.
+
+H⁺ đã được pump ra một phía membrane có tendency quay về theo electrochemical gradient. ATP synthase cho proton đi qua và dùng energy để phosphorylate ADP:
 
 \[
 ADP + P_i \rightarrow ATP
 \]
 
-Đây là **oxidative phosphorylation**.
+ATP synthase là molecular rotary machine: proton flow drive rotation/conformational change.
 
-Mental model quan trọng:
+> **Mental model:** ETC không “tạo ATP” trực tiếp. ETC tạo gradient; gradient chạy ATP synthase; ATP synthase tạo ATP.
 
-> Mitochondria không “đốt glucose để phun ATP ra”. Nó dùng oxidation để tạo electron flow, electron flow tạo proton gradient, và proton gradient lái ATP synthase.
+Logic này xuất hiện cả respiration và photosynthesis.
 
-## 10. Vì sao oxygen cần thiết?
+## 13. Oxidative phosphorylation và số ATP không phải hằng số tuyệt đối
 
-Oxygen là **terminal electron acceptor** ở cuối electron transport chain trong aerobic respiration.
+Textbook đôi khi cho con số ATP/glucose cố định. Thực tế yield phụ thuộc shuttle system, proton leak, coupling efficiency và cellular condition.
 
-Nếu không có acceptor cuối, electron chain bị nghẽn. NADH không được oxidized trở lại NAD⁺ đủ nhanh. Nếu NAD⁺ thiếu, glycolysis và TCA không thể tiếp tục bình thường.
+Điều quan trọng hơn là understanding architecture:
 
-Do đó oxygen không phải “nguyên liệu trực tiếp để tạo ATP” theo kiểu ATP chứa oxygen. Vai trò chính là giữ dòng electron tiếp tục.
-
-## 11. Fermentation: giải pháp khi electron chain không chạy
-
-Khi oxygen thiếu hoặc organism không dùng aerobic respiration, cell vẫn cần regenerate NAD⁺ để glycolysis tiếp tục.
-
-**Fermentation (lên men / 발효)** chuyển electron từ NADH sang organic molecule, tái tạo NAD⁺.
-
-Ở muscle trong intense exercise, pyruvate có thể thành lactate. Ở yeast, pyruvate có thể thành ethanol + CO₂.
-
-Fermentation tạo ít ATP hơn respiration vì phần lớn energy của glucose vẫn còn trong product hữu cơ.
-
-## 12. Fat metabolism: tại sao fat giàu energy hơn carbohydrate?
-
-Fatty acid chứa nhiều reduced carbon và hydrogen. **Beta oxidation** cắt fatty acid thành acetyl-CoA đồng thời tạo NADH và FADH₂.
-
-Vì fatty acid rất reduced, oxidation giải phóng nhiều electron, cuối cùng tạo nhiều ATP hơn trên mỗi carbon so với carbohydrate.
-
-Điều này nối chemistry của lipid với physiology: fat là compact long-term energy store.
-
-## 13. Photosynthesis: đảo chiều câu hỏi về nguồn electron và carbon
-
-Animal lấy carbon và energy từ organic food. Plant có thể lấy carbon từ CO₂ và energy từ light.
-
-**Photosynthesis (quang hợp / 광합성)** không đơn giản là “plant tạo oxygen”. Nó giải hai bài toán:
-
-1. chuyển light energy thành chemical energy;
-2. dùng energy đó để reduce carbon từ CO₂ thành organic molecule.
-
-## 14. Light reaction: photon tạo electron flow
-
-Trong chloroplast, light được hấp thụ bởi pigment như chlorophyll.
-
-Photon kích thích electron lên energy state cao hơn. Electron này được truyền qua electron transport chain ở thylakoid membrane.
-
-Flow electron lại được dùng để pump proton và tạo gradient. ATP synthase dùng proton gradient để tạo ATP — cùng motif chemiosmosis đã gặp ở mitochondria.
-
-Nhưng photosynthesis còn tạo NADPH, cung cấp reducing power.
-
-```text
-light
- ↓
-excited electron
- ↓
-electron transport
- ↓
-proton gradient
- ↓
-ATP
-+
-NADPH
+```mermaid
+flowchart LR
+A[Glucose/Fat] --> B[NADH FADH2]
+B --> C[ETC]
+C --> D[H+ gradient]
+D --> E[ATP synthase]
+E --> F[ATP]
 ```
 
-## 15. Water và oxygen trong photosynthesis
+Biology thường ưu tiên correct mechanism hơn memorizing một integer dễ thay đổi theo assumption.
 
-Photosystem II lấy electron từ water:
+## 14. Mitochondria vừa là power hub vừa là signaling hub
+
+Mitochondria không chỉ tạo ATP. Chúng tham gia apoptosis, calcium handling, ROS signaling và biosynthetic metabolism.
+
+Reactive oxygen species có thể gây damage khi quá mức nhưng cũng có signaling role ở concentration thấp.
+
+Mitochondrial function vì vậy gắn với aging, metabolism và cell death, nhưng không nên giản hóa thành “mitochondria là nhà máy năng lượng”.
+
+## 15. Fat metabolism: vì sao fasting và exercise dài dùng nhiều lipid hơn?
+
+Triglyceride được breakdown thành fatty acid và glycerol. Fatty acid vào mitochondria và qua **beta-oxidation** tạo acetyl-CoA, NADH, FADH₂.
+
+Vì fatty acid rất reduced, oxidation cho nhiều electron carrier và ATP.
+
+Nhưng fuel selection phụ thuộc intensity, hormonal state, oxygen delivery và tissue. Exercise physiology không thể tóm gọn bằng một câu “đốt mỡ sau X phút”.
+
+## 16. Photosynthesis: energy của biosphere đi vào chemical network như thế nào?
+
+Hầu hết ecosystem phụ thuộc trực tiếp hoặc gián tiếp vào photosynthetic organisms.
+
+**Quang hợp (photosynthesis / 광합성)** không đơn giản là “cây tạo oxygen”. Nó dùng light energy để tạo ATP và reducing power, sau đó dùng chúng để reduce CO₂ thành organic carbon.
+
+Hai phần lớn:
+
+1. light reactions ở thylakoid membrane;
+2. carbon fixation/Calvin cycle ở stroma.
+
+## 17. Photon và chlorophyll: light được capture như thế nào?
+
+**Chlorophyll (엽록소)** hấp thụ photon ở một số wavelength. Photon làm electron trong pigment chuyển lên trạng thái energy cao hơn.
+
+Excited electron được transfer vào electron transport pathway. Pigment không “biến light thành glucose trực tiếp”; nó khởi động electron flow.
+
+Photosystem được tổ chức thành antenna pigment và reaction center, tăng khả năng capture energy.
+
+## 18. Photosystem II và water splitting
+
+Ở oxygenic photosynthesis, Photosystem II lấy electron từ water:
 
 \[
 2H_2O \rightarrow O_2 + 4H^+ + 4e^-
 \]
 
-Oxygen ta thở phần lớn có nguồn từ water splitting, không trực tiếp từ CO₂.
+Oxygen mà plant release đến từ water, không trực tiếp từ CO₂.
 
-Đây là một misconception phổ biến.
+Electron sau đó đi qua transport chain; energy được dùng tạo proton gradient across thylakoid membrane.
 
-## 16. Calvin cycle: carbon fixation cần ATP và reducing power
+Lại là cùng architecture membrane–gradient.
 
-Light reaction tạo ATP và NADPH. **Calvin cycle** dùng chúng để cố định CO₂ thành carbohydrate precursor.
+## 19. Photosystem I và NADPH
 
-Enzyme Rubisco gắn CO₂ vào molecule acceptor. Qua chuỗi reaction, carbon được chuyển vào organic form.
+Electron đến Photosystem I được photon kích thích lần nữa và cuối cùng góp phần reduce NADP⁺ thành NADPH.
 
-Điểm quan trọng là photosynthesis tách hai việc:
+NADPH mang reducing power cho carbon fixation.
 
-- light reaction tạo energy currency và reducing power;
-- carbon fixation dùng chúng để xây carbon skeleton.
+Light reaction do đó tạo hai resource chính: ATP và NADPH.
 
-## 17. Respiration và photosynthesis không phải hai “phương trình ngược nhau” đơn giản
+## 20. Photophosphorylation: ATP synthase xuất hiện lại
 
-Ta thường viết:
+Proton concentration cao trong thylakoid lumen tạo gradient. H⁺ đi qua chloroplast ATP synthase về stroma, drive ATP production.
 
-\[
-6CO_2+6H_2O \rightarrow C_6H_{12}O_6+6O_2
-\]
+Mechanism tương tự mitochondria nhưng orientation và source electron khác.
 
-và respiration theo chiều ngược.
+Đây là một trong những evidence đẹp cho idea conserved molecular mechanism qua evolution.
 
-Nhưng trong cell, hai process không phải reverse pathway của nhau. Chúng dùng enzyme, compartment và intermediate khác nhau.
+## 21. Calvin cycle: CO₂ được đưa vào organic molecule
 
-Điều giống nhau sâu hơn nằm ở **energy logic**: cả hai đều dùng membrane electron transport và proton gradient.
+**Calvin cycle (캘빈 회로)** dùng ATP và NADPH để fix CO₂ vào carbon skeleton.
 
-Đây là một connection quan trọng hơn việc thuộc hai equation tổng quát.
+Enzyme Rubisco catalyze bước carboxylation. Product được processing qua nhiều step để tạo triose phosphate; một phần carbon rời cycle để xây carbohydrate và molecule khác, phần còn lại regenerate RuBP.
 
-## 18. Metabolism nối với ecology như thế nào?
+Điểm quan trọng: plant “lấy khối lượng” chủ yếu từ carbon dioxide, không phải từ đất. Soil cung cấp mineral/water; carbon skeleton lớn đến từ atmospheric CO₂.
 
-Photosynthesis đưa energy ánh sáng và carbon vô cơ vào biosphere dưới dạng chemical energy và organic carbon. Respiration trả carbon về CO₂ và giải phóng energy để organism hoạt động.
+## 22. Rubisco và photorespiration: evolution làm việc với constraint lịch sử
 
-Ở ecosystem scale:
+Rubisco có thể bind O₂ thay CO₂, đặc biệt trong condition nóng/CO₂ thấp, dẫn đến **photorespiration** và giảm efficiency carbon fixation.
+
+Tại sao evolution không tạo enzyme hoàn hảo? Vì adaptation bị ràng buộc bởi history, trade-off và existing structure.
+
+C4 và CAM plants phát triển strategy giúp concentrate CO₂ hoặc tách timing để giảm photorespiration/water loss.
+
+Đây là nơi metabolism nối evolution và ecology.
+
+## 23. Respiration và photosynthesis không phải hai equation “đối nghịch” hoàn toàn
+
+Ở mức tổng quát, photosynthesis lưu energy trong reduced carbon; respiration lấy energy từ reduced carbon. Nhưng mechanism không đơn giản đảo ngược.
+
+Cả hai dùng:
+
+- electron transport chain;
+- membrane;
+- proton gradient;
+- ATP synthase;
+- redox carrier.
+
+Điều này gợi ý common evolutionary origin của chemiosmotic energy conversion.
+
+## 24. Metabolic regulation: cell biết lúc nào cần tạo ATP?
+
+ATP demand thay đổi liên tục. Pathway được regulation bởi substrate availability, allosteric enzyme, phosphorylation, hormone và gene expression.
+
+Khi ATP/energy charge cao, một số catabolic pathway giảm. Khi ADP/AMP tăng, energy-generating pathway được stimulate.
+
+Ở organism scale, insulin, glucagon, adrenaline và thyroid hormone phối hợp metabolic state giữa tissue.
+
+Cellular metabolism vì vậy nằm trong larger control network.
+
+## 25. Fed state và fasting state: cùng network nhưng flux đổi hướng
+
+Sau meal, insulin favor glucose uptake/storage, glycogen synthesis và lipogenesis ở context thích hợp. Khi fasting, glucagon và other signal thúc đẩy glycogen breakdown, gluconeogenesis và mobilization fuel.
+
+Không có “metabolism mode” cố định. Cùng pathway network đổi flux theo signal và resource.
+
+Đây là reason signaling chapter phải đến ngay sau metabolism.
+
+## 26. Cancer metabolism: growth đổi yêu cầu metabolic network
+
+Rapidly proliferating cell cần không chỉ ATP mà còn nucleotide, lipid, amino acid và reducing power để xây biomass.
+
+Một số cancer cell tăng glycolytic flux ngay cả khi oxygen có, pattern thường liên hệ Warburg effect. Nhưng không nên hiểu đơn giản “cancer chỉ dùng glycolysis”; mitochondrial metabolism vẫn quan trọng ở nhiều cancer.
+
+Điểm lesson là metabolic phenotype phản ánh **mục tiêu của cell**: maintenance khác growth.
+
+## 27. Case study: cyanide nguy hiểm vì đánh vào electron flow
+
+Cyanide ức chế cytochrome c oxidase trong mitochondrial ETC. Electron flow tới oxygen bị chặn, proton pumping giảm, oxidative phosphorylation collapse.
+
+Blood có thể vẫn mang oxygen nhưng cell không sử dụng electron acceptor pathway bình thường.
+
+Chuỗi causal:
 
 ```text
-Sunlight
-  ↓
-primary producers
-  ↓ organic matter
-consumers + decomposers
-  ↓
-respiration
-  ↓
-CO2 + heat
+ETC inhibited
+→ proton gradient falls
+→ ATP production falls
+→ energy-dependent process fail
+→ organ dysfunction
 ```
 
-Energy flow một chiều, trong khi matter như carbon được cycle.
+Mechanism giải thích toxicity tốt hơn câu “cyanide làm thiếu oxygen”.
 
-Một pathway ở chloroplast vì thế cuối cùng trở thành global carbon cycle.
+## 28. Case study: uncoupling và heat
 
-## 19. Metabolism nối với physiology như thế nào?
+Nếu proton quay về matrix mà không qua ATP synthase, gradient energy bị dissipate thành heat. Brown adipose tissue có uncoupling protein giúp thermogenesis.
 
-Khi chạy, muscle ATP consumption tăng. Phosphocreatine, glycolysis và oxidative phosphorylation đóng góp theo time scale khác nhau. Heart và lung phải tăng oxygen delivery và CO₂ removal. Liver có thể duy trì glucose availability.
+Vì vậy same gradient có thể được channel vào ATP production hoặc heat depending protein architecture.
 
-Vì vậy metabolic demand ở cell scale gây response ở whole-body scale.
+Structure và energy flow gặp nhau.
 
-Đây là lý do physiology không thể học tách khỏi cellular metabolism.
+## 29. Common misconceptions
 
-## 20. Tại sao metabolism phải được regulation?
+“Respiration = breathing” sai. Breathing đưa gas ở organism scale; cellular respiration là metabolic process.
 
-Nếu ATP cao, cell thường không cần tiếp tục chạy catabolic pathway tối đa. Nếu substrate thiếu, pathway phải chậm lại. Nếu hormone báo trạng thái fasting, liver metabolism đổi khác trạng thái fed.
+“Oxygen được dùng trong glycolysis” sai; glycolysis không trực tiếp cần oxygen.
 
-Regulation có thể xảy ra qua:
+“Fermentation tạo nhiều ATP thay respiration” sai; fermentation yield ATP thấp và chủ yếu regenerate NAD⁺.
 
-- allosteric enzyme control;
-- phosphorylation;
-- substrate availability;
-- compartment transport;
-- gene expression;
-- hormone signaling.
+“Plant chỉ photosynthesize, animal mới respire” sai; plant cell cũng có mitochondria và cellular respiration.
 
-Như vậy câu hỏi tiếp theo xuất hiện tự nhiên: **cell biết trạng thái bên ngoài và bên trong bằng cách nào, rồi truyền thông tin đó tới enzyme và gene ra sao?**
+“ATP là long-term storage” sai; lipid/glycogen là storage lớn hơn, ATP là rapidly cycling currency.
 
-Đó là nội dung của [[02_cell_signaling_and_cell_cycle]].
+“CO₂ trong plant chỉ là waste” sai; CO₂ là carbon source cho photosynthesis.
+
+## 30. Bridge: có energy rồi, ai quyết định khi nào pathway chạy?
+
+Cell không thể để mọi enzyme, transporter, growth pathway và division machinery chạy tự do. Nó cần sense nutrient, damage, signal từ neighboring cell và internal energy state.
+
+Điều đó dẫn tới [[02_cell_signaling_and_cell_cycle]]. Receptor sẽ chuyển information từ outside vào signaling network; kinase/phosphatase đổi activity protein; feedback giữ control; cell-cycle checkpoint quyết định có divide hay không.
+
+Sau đó, câu hỏi sâu hơn sẽ xuất hiện: signaling thay đổi protein nhanh, nhưng cell đổi chương trình dài hạn bằng cách nào? Câu trả lời sẽ dẫn sang gene expression trong genetics.
+
+> **Mental model cuối chapter:** energy conversion của life dựa trên một architecture lặp lại — electron flow tạo ion gradient, gradient drive molecular machine. Metabolism không phải bảng reaction độc lập; nó là network được regulation và được nối với signaling, physiology, ecology và evolution.
