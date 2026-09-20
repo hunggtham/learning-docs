@@ -1,479 +1,457 @@
 # Cú sốc toàn cầu và cơ chế truyền dẫn sang Hàn Quốc – Việt Nam
 
-> Cùng một cú sốc toàn cầu có thể tạo kết quả rất khác ở Hàn Quốc và Việt Nam vì cấu trúc xuất khẩu, tiền tệ, tín dụng, ngành và dòng vốn khác nhau. Chương này xây một framework để phân tích **shock → transmission → policy response → earnings → valuation → flows** thay vì dùng khẩu quyết.
+> Cùng một cú sốc toàn cầu có thể tạo kết quả rất khác ở Hàn Quốc và Việt Nam vì cấu trúc xuất khẩu, tiền tệ, tín dụng, ngành và dòng vốn khác nhau. Chương này dùng tiếng Việt để xây một khung phân tích từ **cú sốc → truyền dẫn → phản ứng chính sách → lợi nhuận → định giá → dòng vốn**, thay vì dùng khẩu quyết. Thuật ngữ tiếng Anh chỉ giữ trong ngoặc khi cần tra cứu.
 
 # Phần I — Khung chung
 
 ## 1. Chuỗi truyền dẫn cốt lõi
 
 ```text
-Global Shock
-→ Growth / Inflation
-→ Central-Bank Response
-→ Bond Yields / USD
-→ KRW / VND / Credit
-→ Sector Earnings
-→ Valuation
-→ Flows
-→ Asset Price
+Cú sốc toàn cầu
+→ Tăng trưởng / Lạm phát
+→ Phản ứng của ngân hàng trung ương
+→ Lợi suất trái phiếu / USD
+→ KRW / VND / Tín dụng
+→ Lợi nhuận theo ngành
+→ Định giá
+→ Dòng vốn
+→ Giá tài sản
 ```
 
-Mỗi bước cần kiểm tra bằng dữ liệu.
+Mỗi mắt xích phải được kiểm tra bằng dữ liệu thay vì mặc định đúng.
 
-## 2. Surprise quan trọng hơn headline
+## 2. Mức bất ngờ quan trọng hơn tiêu đề
 
-Một sự kiện chỉ tạo market shock khi khác điều thị trường đã kỳ vọng.
+Một sự kiện chỉ trở thành cú sốc nếu khác đáng kể so với điều thị trường đã kỳ vọng.
 
 Luôn hỏi:
 
 ```text
-Actual là gì?
-Consensus là gì?
-Market đã price bao nhiêu?
-Positioning trước event ra sao?
+Kết quả thực tế là gì?
+Đồng thuận trước đó là gì?
+Giá thị trường đã phản ánh bao nhiêu?
+Vị thế trước sự kiện ra sao?
 ```
 
-## 3. Stock và flow
+## 3. Mức tồn tại và dòng thay đổi
 
-Phải phân biệt:
+Cần phân biệt **mức tồn tại (stock)** và **dòng thay đổi (flow)**.
 
-- stock: mức tích lũy hiện tại;
-- flow: thay đổi trong kỳ.
+Ví dụ nợ là một mức tích lũy, còn tăng trưởng tín dụng là dòng thay đổi. Tỷ lệ sở hữu nước ngoài là mức tồn tại, còn mua ròng nước ngoài là dòng.
 
-Ví dụ debt là stock, credit growth là flow; foreign ownership là stock, foreign net buying là flow.
-
-# Phần II — Fed hawkish shock
+# Phần II — Cú sốc Fed thiên về thắt chặt
 
 ## 4. Cơ chế toàn cầu
 
 ```text
-Fed Path Higher
-→ US 2Y / Real Yield ↑
+Đường đi lãi suất Fed cao hơn kỳ vọng
+→ lợi suất 2Y / lợi suất thực Mỹ ↑
 → USD ↑
-→ Global Financial Conditions Tighten
+→ điều kiện tài chính toàn cầu thắt chặt
 ```
 
 ## 5. Hàn Quốc
 
-Một chain khả dĩ:
+Một chuỗi khả dĩ:
 
 ```text
-US Yield ↑
+Lợi suất Mỹ ↑
 → USD/KRW ↑
-→ Foreign Flow Pressure
-→ KOSDAQ / Long-Duration Multiple ↓
+→ áp lực lên dòng vốn nước ngoài
+→ hệ số định giá KOSDAQ / cổ phiếu duration dài ↓
 ```
 
-Nhưng exporters có thể có FX translation benefit nếu global demand vẫn tốt.
+Doanh nghiệp xuất khẩu có thể được lợi về quy đổi tỷ giá nếu nhu cầu toàn cầu vẫn tốt, nên không nên nhìn KRW riêng lẻ.
 
 ## 6. Việt Nam
 
 ```text
 USD ↑
-→ VND Pressure
-→ SBV Easing Room ↓
-→ Domestic Liquidity Expectation ↓
-→ Property / Broker / Leveraged Sectors nhạy hơn
+→ VND chịu áp lực
+→ dư địa nới lỏng của SBV giảm
+→ kỳ vọng thanh khoản nội địa yếu đi
+→ bất động sản / chứng khoán / ngành dùng đòn bẩy nhạy hơn
 ```
 
-Tuy nhiên domestic credit và policy có thể dominate sau một thời gian.
+Sau một thời gian, tín dụng trong nước và phản ứng chính sách có thể trở thành biến quan trọng hơn cú sốc ban đầu.
 
-# Phần III — Fed dovish shock
+# Phần III — Cú sốc Fed thiên về nới lỏng
 
-## 7. Không phải mọi dovish shock đều tốt
+## 7. Không phải mọi tín hiệu nới lỏng đều tốt
 
-Fed dovish vì inflation hạ nhiệt trong soft landing khác Fed dovish vì recession hoặc financial crisis.
+Fed nới lỏng vì lạm phát giảm trong hạ cánh mềm rất khác Fed nới lỏng vì suy thoái hoặc khủng hoảng tài chính.
 
 ## 8. Hàn Quốc
 
-Dovish + growth stable có thể hỗ trợ KRW và growth multiple.
-
-Dovish + recession có thể làm exporters yếu dù rate giảm.
+Nới lỏng cùng tăng trưởng ổn định có thể hỗ trợ KRW và hệ số định giá cổ phiếu tăng trưởng. Nới lỏng do suy thoái lại có thể làm doanh nghiệp xuất khẩu yếu dù lãi suất giảm.
 
 ## 9. Việt Nam
 
-USD yếu hơn có thể tăng policy room, nhưng nếu nguyên nhân là global recession thì export demand và FDI sentiment có thể yếu.
+USD yếu hơn có thể mở rộng dư địa chính sách, nhưng nếu nguyên nhân là suy thoái toàn cầu thì xuất khẩu và tâm lý FDI có thể yếu.
 
-# Phần IV — China cycle
+# Phần IV — Chu kỳ Trung Quốc
 
-## 10. China stimulus cần tách thành phần
+## 10. Kích thích của Trung Quốc phải tách thành phần
 
 ```text
-Property Stimulus
-Infrastructure Stimulus
-Consumer Support
-Advanced Manufacturing Support
+Kích thích bất động sản
+Kích thích hạ tầng
+Hỗ trợ tiêu dùng
+Hỗ trợ sản xuất công nghệ cao
 ```
 
-Mỗi loại truyền sang Korea/Vietnam khác nhau.
+Mỗi loại truyền sang Hàn Quốc và Việt Nam qua kênh khác nhau.
 
-## 11. Korea
+## 11. Hàn Quốc
 
-Property/infrastructure stimulus có thể hỗ trợ chemicals, machinery và commodities demand.
+Kích thích bất động sản hoặc hạ tầng có thể hỗ trợ hóa chất, máy móc và nhu cầu hàng hóa. Hỗ trợ sản xuất công nghệ cao vừa có thể tạo nhu cầu vừa làm cạnh tranh với doanh nghiệp Hàn Quốc mạnh hơn.
 
-Technology/manufacturing stimulus có thể vừa tạo demand vừa tăng competition với Korean firms.
+## 12. Việt Nam
 
-## 12. Vietnam
+Phục hồi Trung Quốc có thể hỗ trợ thương mại khu vực và du lịch nhưng đồng thời làm cạnh tranh xuất khẩu tăng. Xu hướng China+1 không phải dòng lợi ích một chiều.
 
-China recovery có thể hỗ trợ regional trade và tourism nhưng cũng ảnh hưởng cạnh tranh xuất khẩu.
+# Phần V — Cú sốc dầu
 
-China+1 FDI không phải một chiều nếu chính China competitiveness thay đổi.
+## 13. Dầu tăng do cầu mạnh
 
-# Phần V — Oil shock
+Nếu dầu tăng vì kinh tế toàn cầu mạnh, các ngành chu kỳ có thể cùng hưởng lợi và lợi suất trái phiếu tăng vì kỳ vọng tăng trưởng.
 
-## 13. Demand-driven oil increase
-
-Nếu oil tăng vì global demand mạnh, cyclicals có thể đồng thời hưởng lợi.
-
-## 14. Supply-driven oil shock
+## 14. Dầu tăng do thiếu nguồn cung
 
 ```text
-Oil ↑
-→ Imported Inflation ↑
-→ Household Real Income ↓
-→ Policy Trade-off khó hơn
+Dầu ↑
+→ lạm phát nhập khẩu ↑
+→ thu nhập thực hộ gia đình ↓
+→ đánh đổi chính sách khó hơn
 ```
 
-## 15. Korea
+## 15. Hàn Quốc
 
-Là energy importer lớn, Korea có thể chịu terms-of-trade pressure; airlines, chemicals và utilities có sensitivities khác nhau.
+Là nước nhập khẩu năng lượng lớn, Hàn Quốc có thể chịu áp lực **điều kiện thương mại (terms of trade)**. Hàng không, hóa chất, lọc dầu và tiện ích có độ nhạy khác nhau.
 
-## 16. Vietnam
+## 16. Việt Nam
 
-Tác động cần tách upstream producer, transport, airlines, utilities và domestic pricing mechanism.
+Cần tách nhà sản xuất thượng nguồn, vận tải, hàng không, tiện ích và cơ chế giá trong nước vì giá dầu tác động khác nhau lên từng nhóm.
 
-# Phần VI — AI và semiconductor boom
+# Phần VI — Bùng nổ AI và bán dẫn
 
-## 17. Global AI capex
+## 17. Chi tiêu vốn AI toàn cầu
 
 ```text
-Hyperscaler Capex
-→ GPU / Accelerator
-→ Networking
+Chi tiêu của hyperscaler
+→ GPU / bộ tăng tốc
+→ mạng
 → HBM
-→ Foundry / Packaging
-→ Equipment / Materials
+→ foundry / đóng gói
+→ thiết bị / vật liệu
 ```
 
-## 18. Korea
+## 18. Hàn Quốc
 
-Korea có exposure trực tiếp qua memory/HBM và chuỗi supplier.
+Hàn Quốc có mức phơi nhiễm trực tiếp qua bộ nhớ, HBM và chuỗi cung ứng. Cần tách **ảnh hưởng lên lợi nhuận** khỏi **ảnh hưởng lên hệ số định giá** nếu lợi suất thực đồng thời tăng.
 
-Cần tách earnings effect khỏi multiple effect nếu real yields tăng cùng lúc.
+## 19. Việt Nam
 
-## 19. Vietnam
+Tác động trực tiếp tới cổ phiếu niêm yết nhỏ hơn Hàn Quốc nhưng có thể đi qua FDI sản xuất, dịch vụ công nghệ, điện, trung tâm dữ liệu và tái bố trí chuỗi cung ứng.
 
-Tác động trực tiếp tới listed equities thường nhỏ hơn Korea nhưng có thể đi qua FDI manufacturing, technology services, power/data-center infrastructure và supply-chain relocation.
+# Phần VII — Suy thoái toàn cầu
 
-# Phần VII — Global recession
+## 20. Hàn Quốc
 
-## 20. Korea
+Chu kỳ xuất khẩu yếu có thể kéo giảm nhu cầu bán dẫn, ô tô, công nghiệp và KRW. BOK có thể muốn nới lỏng nhưng vẫn chịu ràng buộc bởi tỷ giá và lạm phát.
 
-Export cycle yếu có thể kéo:
+## 21. Việt Nam
 
-- semiconductor demand;
-- autos;
-- industrials;
-- KRW.
+Xuất khẩu và sản xuất có thể yếu trong khi đầu tư công hoặc tín dụng nội địa được dùng để bù một phần. Chất lượng tài sản ngân hàng thường phản ứng trễ hơn tăng trưởng.
 
-BOK có thể muốn easing nhưng FX/inflation constraint vẫn quan trọng.
+# Phần VIII — Chiến tranh thương mại và thuế quan
 
-## 21. Vietnam
+## 22. Tác động bậc một
 
-Exports và manufacturing có thể yếu trong khi public investment/domestic credit được dùng để bù một phần.
+Thuế quan thay đổi giá nhập khẩu và sức cạnh tranh.
 
-Bank asset quality thường phản ứng trễ hơn growth slowdown.
-
-# Phần VIII — Trade war và tariffs
-
-## 22. First-order effect
-
-Tariff làm thay đổi giá nhập khẩu và competitiveness.
-
-## 23. Second-order effect
+## 23. Tác động bậc hai
 
 Doanh nghiệp có thể:
 
 - chuyển nhà máy;
-- đổi supplier;
+- đổi nhà cung cấp;
 - tăng giá;
-- hấp thụ margin;
-- reroute trade.
+- hấp thụ biên lợi nhuận;
+- đổi tuyến thương mại.
 
-## 24. Korea
+## 24. Hàn Quốc
 
-Export-heavy sectors phải map revenue geography và supply chain.
+Các ngành xuất khẩu cần lập bản đồ doanh thu theo khu vực và chuỗi cung ứng thay vì chỉ nhìn quốc gia niêm yết.
 
-## 25. Vietnam
+## 25. Việt Nam
 
-Có thể hưởng FDI relocation nhưng cũng chịu scrutiny về origin rules, logistics capacity và input dependence.
+Việt Nam có thể hưởng lợi từ dịch chuyển FDI nhưng đồng thời chịu kiểm tra xuất xứ, giới hạn logistics và phụ thuộc đầu vào nhập khẩu.
 
-# Phần IX — Export controls
+# Phần IX — Kiểm soát xuất khẩu công nghệ
 
-## 26. Semiconductor controls
+## 26. Tác động lên bán dẫn
 
-Technology control có thể ảnh hưởng:
+Kiểm soát công nghệ có thể ảnh hưởng:
 
-- addressable market;
-- equipment access;
-- customer mix;
-- localization competition;
-- capex location.
+- quy mô thị trường có thể tiếp cận;
+- khả năng mua thiết bị;
+- cơ cấu khách hàng;
+- cạnh tranh nội địa hóa;
+- vị trí đầu tư công suất mới.
 
-Policy risk tác động future economics, không chỉ doanh thu hiện tại.
+Rủi ro chính sách thay đổi kinh tế tương lai, không chỉ doanh thu hiện tại.
 
-# Phần X — Shipping và geopolitical disruption
+# Phần X — Vận tải biển và gián đoạn địa chính trị
 
-## 27. Route disruption
+## 27. Gián đoạn tuyến vận tải
 
-Rerouting làm ton-miles tăng và freight rates thay đổi dù final demand không đổi.
+Đổi tuyến có thể làm quãng đường vận tải tăng và cước thay đổi dù nhu cầu cuối không đổi.
 
-## 28. Korea
+## 28. Hàn Quốc
 
-Shipbuilding có thể hưởng order cycle dài hơn nhưng exporters chịu logistics cost.
+Đóng tàu có thể hưởng lợi từ chu kỳ đặt hàng dài hơn trong khi doanh nghiệp xuất khẩu chịu chi phí logistics tăng.
 
-## 29. Vietnam
+## 29. Việt Nam
 
-Export manufacturers và ports/logistics chịu tác động khác nhau tùy route và contract terms.
+Doanh nghiệp xuất khẩu, cảng và logistics chịu tác động khác nhau tùy tuyến, hợp đồng và khả năng chuyển chi phí.
 
-# Phần XI — Banking / liquidity stress
+# Phần XI — Căng thẳng ngân hàng và thanh khoản
 
-## 30. Global dollar squeeze
+## 30. Thiếu nguồn vốn USD toàn cầu
 
 ```text
-USD Funding Stress
+Nguồn vốn USD căng
 → USD ↑
-→ Cross-Border Credit Tightens
-→ Risk Assets ↓
+→ tín dụng xuyên biên giới thắt chặt
+→ tài sản rủi ro ↓
 ```
 
-## 31. Korea
+## 31. Hàn Quốc
 
-KRW và foreign flows thường phản ứng nhanh; leveraged domestic sectors có thể chịu second-order effect.
+KRW và dòng vốn nước ngoài thường phản ứng nhanh. Các ngành nội địa dùng đòn bẩy cao có thể chịu tác động vòng hai.
 
-## 32. Vietnam
+## 32. Việt Nam
 
-Direct wholesale USD funding structure khác Korea, nhưng FX pressure có thể giảm policy room và kéo local liquidity expectation xuống.
+Cấu trúc nguồn vốn USD khác Hàn Quốc, nhưng áp lực tỷ giá vẫn có thể làm giảm dư địa chính sách và kỳ vọng thanh khoản trong nước.
 
-# Phần XII — Fiscal shock
+# Phần XII — Cú sốc tài khóa
 
-## 33. US fiscal / Treasury supply
+## 33. Phát hành nợ Kho bạc Mỹ
 
-Treasury issuance hoặc term premium tăng có thể đẩy long yields lên dù Fed không hawkish hơn.
+Nguồn cung trái phiếu hoặc phần bù kỳ hạn tăng có thể đẩy lợi suất dài hạn lên ngay cả khi Fed không trở nên cứng rắn hơn.
 
-Điều này ảnh hưởng global discount rates.
+Điều này làm tỷ lệ chiết khấu toàn cầu tăng.
 
-## 34. Korea/Vietnam
+## 34. Hàn Quốc và Việt Nam
 
-Long-duration equities chịu valuation pressure, nhưng FX và domestic policy response quyết định mức độ.
+Cổ phiếu có dòng tiền xa chịu áp lực định giá; mức tác động cuối cùng còn phụ thuộc tỷ giá và phản ứng chính sách trong nước.
 
-# Phần XIII — FX regimes
+# Phần XIII — Tiền tệ vừa phản ánh vừa truyền cú sốc
 
-## 35. Currency không chỉ là output
+## 35. Tỷ giá không chỉ là kết quả
 
-FX vừa phản ánh shock vừa truyền shock trở lại economy qua:
+Tỷ giá còn truyền cú sốc trở lại nền kinh tế qua:
 
-- import prices;
-- foreign debt;
-- capital flows;
-- corporate earnings.
+- giá nhập khẩu;
+- nợ ngoại tệ;
+- dòng vốn;
+- lợi nhuận doanh nghiệp.
 
 ## 36. USD/KRW
 
-Đọc cùng exports, oil, Fed/BOK differential và foreign flow.
+Đọc cùng xuất khẩu, dầu, chênh lệch Fed–BOK và dòng vốn nước ngoài.
 
 ## 37. USD/VND
 
-Đọc cùng external balance, reserve conditions, domestic rates và policy objective.
+Đọc cùng cán cân đối ngoại, dự trữ, lãi suất trong nước và mục tiêu chính sách.
 
-# Phần XIV — Dominant variable
+# Phần XIV — Biến thống trị
 
-## 38. Một thời điểm thường có một vài biến thống trị
+## 38. Mỗi giai đoạn thường chỉ có vài biến thống trị
 
-Ví dụ market có thể đang quan tâm chủ yếu:
+Ví dụ thị trường có thể quan tâm chủ yếu tới:
 
-- real yield;
-- semiconductor earnings;
-- domestic liquidity;
-- property refinancing.
+- lợi suất thực;
+- lợi nhuận bán dẫn;
+- thanh khoản trong nước;
+- tái cấp vốn bất động sản.
 
 Không phải mọi biến đều có trọng số ngang nhau.
 
-## 39. Dominant variable có thể thay đổi
+## 39. Biến thống trị có thể thay đổi
 
-Một tháng Korea market có thể trade theo AI/HBM revisions; tháng khác theo Fed/real yield.
+Một tháng thị trường Hàn Quốc có thể giao dịch theo điều chỉnh dự báo HBM; tháng khác lại theo Fed và lợi suất thực.
 
-Research phải update trọng số thay vì giữ model cố định.
+Quy trình nghiên cứu phải cập nhật trọng số thay vì giữ mô hình cố định.
 
-# Phần XV — Balance-sheet sensitivity
+# Phần XV — Độ nhạy bảng cân đối
 
-## 40. Cùng sector nhưng khác bảng cân đối
+## 40. Cùng ngành nhưng bảng cân đối khác nhau
 
-Một company net cash phản ứng rate shock khác company có maturity wall gần.
+Một doanh nghiệp tiền mặt ròng phản ứng với cú sốc lãi suất khác doanh nghiệp có lượng nợ lớn sắp đáo hạn.
 
-## 41. Currency mismatch
+## 41. Lệch tiền tệ
 
-Doanh nghiệp revenue nội tệ nhưng debt USD có sensitivity khác exporter có USD revenue tự nhiên.
+Doanh nghiệp có doanh thu nội tệ nhưng nợ USD chịu rủi ro khác doanh nghiệp xuất khẩu có nguồn thu USD tự nhiên.
 
-# Phần XVI — Policy space
+# Phần XVI — Dư địa chính sách
 
-## 42. Policy room không giống nhau
+## 42. Dư địa không giống nhau giữa các nước
 
-Khả năng cắt lãi hoặc kích thích phụ thuộc:
+Khả năng giảm lãi suất hoặc kích thích phụ thuộc:
 
-- inflation;
-- FX;
-- debt;
-- banking stability;
-- credibility.
+- lạm phát;
+- tỷ giá;
+- nợ;
+- ổn định ngân hàng;
+- uy tín chính sách.
 
-## 43. Korea
+## 43. Hàn Quốc
 
-BOK phải cân bằng domestic slowdown với KRW và household debt.
+BOK phải cân bằng suy yếu trong nước với KRW và nợ hộ gia đình.
 
-## 44. Vietnam
+## 44. Việt Nam
 
-SBV phải cân bằng growth/credit với VND và banking liquidity.
+SBV phải cân bằng tăng trưởng và tín dụng với VND và thanh khoản ngân hàng.
 
-# Phần XVII — Global vs domestic liquidity
+# Phần XVII — Thanh khoản toàn cầu và thanh khoản trong nước
 
-## 45. Korea
+## 45. Hàn Quốc
 
-Global flow có thể tác động nhanh qua large-cap equity, futures và KRW.
+Dòng vốn toàn cầu có thể truyền nhanh qua cổ phiếu vốn hóa lớn, futures và KRW.
 
-## 46. Vietnam
+## 46. Việt Nam
 
-Domestic liquidity, deposit rate, margin và retail turnover có thể chi phối local path ngay cả khi global shock ban đầu giống nhau.
+Lãi suất tiền gửi, ký quỹ, thanh khoản nhà đầu tư cá nhân và tín dụng nội địa có thể chi phối đường đi thị trường ngay cả khi cú sốc toàn cầu ban đầu giống Hàn Quốc.
 
-# Phần XVIII — Cross-asset confirmation
+# Phần XVIII — Xác nhận chéo giữa nhiều tài sản
 
-## 47. Không đọc equity một mình
+## 47. Không đọc cổ phiếu một mình
 
-Sau shock, kiểm tra:
+Sau cú sốc, kiểm tra:
 
 ```text
-US 2Y / 10Y
-Real Yield
+Lợi suất Mỹ 2Y / 10Y
+Lợi suất thực
 USD
 USD/KRW
 USD/VND
-Credit Spread
-Oil
-Gold
+Chênh lệch tín dụng
+Dầu
+Vàng
 KOSPI / KOSDAQ
-VN-Index Breadth
+Độ rộng VN-Index
 ```
 
-## 48. Narrative phải phù hợp nhiều tài sản
+## 48. Câu chuyện phải phù hợp với nhiều tín hiệu
 
-Nếu nói “hawkish repricing” nhưng 2Y không tăng và USD giảm, narrative cần xem lại.
+Nếu nói “thị trường định giá Fed cứng rắn hơn” nhưng lợi suất 2Y không tăng và USD lại giảm, câu chuyện cần được xem lại.
 
-# Phần XIX — Earnings vs multiple
+# Phần XIX — Lợi nhuận và hệ số định giá
 
-## 49. Phân rã stock return
+## 49. Phân rã lợi suất cổ phiếu
 
 Một cách trực giác:
 
 ```text
-Stock Return
-≈ Earnings Revision
-+ Multiple Change
-+ Dividend
+Lợi suất cổ phiếu
+≈ Điều chỉnh kỳ vọng lợi nhuận
++ Thay đổi hệ số định giá
++ Cổ tức
 ```
 
-## 50. Korea example
+## 50. Ví dụ Hàn Quốc
 
-Semiconductor EPS có thể tăng nhưng P/E giảm do real yields tăng.
+EPS bán dẫn có thể tăng nhưng P/E giảm do lợi suất thực tăng. Giá cổ phiếu phụ thuộc hai lực cùng lúc.
 
-## 51. Vietnam example
+## 51. Ví dụ Việt Nam
 
-Property/broker stock có thể tăng nhờ liquidity/multiple trước khi earnings phục hồi.
+Cổ phiếu bất động sản hoặc chứng khoán có thể tăng nhờ thanh khoản và mở rộng hệ số định giá trước khi lợi nhuận phục hồi.
 
-# Phần XX — Horizon matrix
+# Phần XX — Ma trận theo thời hạn
 
-## 52. Tác động theo thời gian
+## 52. Tác động thay đổi theo thời gian
 
 ```text
-Minutes / Hours:
-Rates, FX, Futures, Large-Cap Flow
+Phút / giờ:
+lãi suất, tỷ giá, futures, dòng vốn vốn hóa lớn
 
-Days / Weeks:
-Sector Rotation, Positioning, Revisions
+Ngày / tuần:
+luân chuyển ngành, vị thế, điều chỉnh dự báo
 
-Months:
-Credit, Earnings, Capex, Policy Transmission
+Tháng:
+tín dụng, lợi nhuận, chi tiêu vốn, truyền dẫn chính sách
 ```
 
-Không nên dùng reaction 30 phút để kết luận tác động 12 tháng.
+Không nên dùng phản ứng 30 phút để kết luận tác động 12 tháng.
 
-# Phần XXI — Pre-mortem
+# Phần XXI — Kiểm tra trước khi luận điểm thất bại
 
-## 53. Trước khi vào thesis
+## 53. Trước khi mở vị thế
 
-Hỏi:
+Hãy hỏi:
 
 ```text
-Nếu thesis sai, nguyên nhân có thể là gì?
-Shock nào tôi chưa tính?
-Policy response có thể khác thế nào?
-Position có hidden factor nào?
+Nếu luận điểm sai, nguyên nhân có thể là gì?
+Cú sốc nào chưa được tính?
+Phản ứng chính sách có thể khác thế nào?
+Vị thế đang chứa nhân tố ẩn nào?
 ```
 
-# Phần XXII — Post-event attribution
+Đây là cách dùng **pre-mortem** để tìm điểm yếu trước khi sự kiện xảy ra.
+
+# Phần XXII — Phân rã sau sự kiện
 
 ## 54. Sau sự kiện
 
-Phân rã:
+Tách từng lớp:
 
 ```text
-Macro View đúng/sai?
-Rates Reaction đúng/sai?
-FX đúng/sai?
-Sector Mapping đúng/sai?
-Earnings Revision đúng/sai?
-Position Size?
-Execution?
+Quan điểm vĩ mô đúng hay sai?
+Phản ứng lãi suất đúng hay sai?
+Tỷ giá đúng hay sai?
+Ánh xạ ngành đúng hay sai?
+Điều chỉnh lợi nhuận đúng hay sai?
+Quy mô vị thế có phù hợp?
+Thực thi có tốt?
 ```
 
-## 55. Probability updating
+## 55. Cập nhật xác suất
 
-Thesis nên được cập nhật theo evidence mới thay vì đổi hoàn toàn sau mỗi price move.
+Luận điểm nên được cập nhật theo bằng chứng mới, không thay đổi hoàn toàn chỉ vì một biến động giá ngắn hạn.
 
-# Phần XXIII — Mẫu phân tích shock
-
-## 56. Template
+# Phần XXIII — Mẫu phân tích cú sốc
 
 ```text
-Shock:
-What was priced:
-Growth effect:
-Inflation effect:
-Fed/global policy:
-BOK / SBV response:
+Cú sốc:
+Điều gì đã được định giá trước:
+Tác động tăng trưởng:
+Tác động lạm phát:
+Phản ứng Fed / chính sách toàn cầu:
+Phản ứng BOK / SBV:
 USD/KRW / USD/VND:
-Credit / Liquidity:
-Korea sectors:
-Vietnam sectors:
-Earnings effect:
-Multiple effect:
-Flows:
-Invalidation:
+Tín dụng / thanh khoản:
+Ngành Hàn Quốc:
+Ngành Việt Nam:
+Tác động lợi nhuận:
+Tác động hệ số định giá:
+Dòng vốn:
+Điều kiện vô hiệu hóa:
 ```
 
 ## Kết luận
 
-Cùng một cú sốc không tạo cùng một kết quả ở mọi quốc gia.
-
-Phân tích tốt cần nối:
+Cùng một cú sốc không tạo cùng một kết quả ở mọi quốc gia. Phân tích tốt cần nối:
 
 ```text
-Shock
-→ Local Transmission
-→ Policy Constraint
-→ Balance Sheet
-→ Earnings
-→ Valuation
-→ Flow
+Cú sốc
+→ cơ chế truyền dẫn địa phương
+→ giới hạn chính sách
+→ bảng cân đối
+→ lợi nhuận
+→ định giá
+→ dòng vốn
 ```
 
-và luôn hỏi phần nào của chuỗi đã được phản ánh trong giá trước khi quyết định exposure.
+và luôn hỏi phần nào của chuỗi đã được phản ánh trong giá trước khi thay đổi mức phơi nhiễm.
