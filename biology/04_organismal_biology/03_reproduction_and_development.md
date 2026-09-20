@@ -1,73 +1,211 @@
-# Sinh sản và phát triển — Reproduction and Development (생식·발생)
+# Sinh sản và phát triển — Reproduction and Development (생식과 발생)
 
-Sinh sản (Reproduction / 생식) tạo ra thế hệ mới; phát triển (Development / 발생) biến một zygote thành organism có cấu trúc, tissue và cell type khác nhau. Câu hỏi nền tảng là: làm thế nào nhiều cell mang gần như cùng genome lại có thể tạo neuron, muscle, blood, skin và cơ quan với hình dạng ổn định?
+Một fertilized egg chỉ là một cell. Vậy bằng cách nào một cell có thể tạo ra organism gồm hàng nghìn tỷ cell với neuron, muscle, skin, blood và organ nằm đúng vị trí?
 
-## Sexual và asexual reproduction
+Developmental biology trả lời bằng một idea quan trọng: **cell không cần genome khác nhau để trở thành cell khác nhau; chúng cần nhận signal khác nhau và biểu hiện những phần genome khác nhau theo đúng không gian và thời gian**.
 
-Sinh sản vô tính tạo offspring từ một parent và thường giữ genome tương đối giống parent, ngoại trừ mutation. Sinh sản hữu tính kết hợp genetic material từ hai gamete, tạo variation thông qua meiosis, recombination và fertilization.
+## Asexual và sexual reproduction
 
-Sexual reproduction có cost: phải tìm mate, chỉ truyền một phần genome cho mỗi offspring, và quá trình phức tạp hơn. Tuy nhiên nó tạo genetic combinations mới nhanh, có thể hữu ích trong môi trường thay đổi và trong cuộc chạy tiến hóa với parasite.
+**Asexual reproduction (sinh sản vô tính / 무성생식)** tạo offspring mà không fusion gamete. Nó có thể nhanh và giữ genotype gần parent, nhưng variation mới chủ yếu đến từ mutation.
 
-## Meiosis và gamete
+**Sexual reproduction (sinh sản hữu tính / 유성생식)** kết hợp genetic material từ gamete, tạo recombination và variation lớn hơn.
 
-Meiosis giảm chromosome number từ diploid xuống haploid. Sau một lần DNA replication có hai lần division. Homologous chromosomes pairing và crossing over trong meiosis I; sister chromatids tách ở meiosis II.
+Sexual reproduction có cost: phải tạo gamete, tìm mate ở nhiều species và chỉ truyền một phần genome mỗi offspring. Tuy vậy recombination có thể giúp lineage đối phó changing environment, parasite và deleterious mutation theo nhiều evolutionary hypothesis.
 
-Independent assortment và crossing over làm gamete khác nhau về genotype. Fertilization sau đó kết hợp hai haploid genome thành zygote diploid.
+## Gametogenesis — tạo sperm và egg
 
-## Fertilization
+**Gametogenesis (sự tạo giao tử / 배우자형성)** dùng meiosis để tạo haploid gamete.
 
-Fertilization không chỉ là sperm “chui vào egg”. Nó gồm recognition, membrane interaction, fusion và cơ chế ngăn polyspermy. Sau fusion, egg được activated và developmental program bắt đầu.
+Ở male mammal, spermatogenesis tạo nhiều small motile sperm từ precursor.
 
-Ở mammal, early embryo trải qua cleavage nhưng tổng volume chưa tăng nhiều. Các division chia cytoplasm thành blastomere nhỏ hơn.
+Ở female mammal, oogenesis phân chia cytoplasm bất đối xứng, tạo một large ovum và polar body. Egg cần đủ organelle, RNA và nutrient để support early development.
 
-## Từ một cell đến nhiều tissue
+Sự khác biệt này phản ánh function chứ không phải một meiosis “đúng” và một meiosis “lệch”.
 
-Differentiation (Cell Differentiation / 세포 분화) xảy ra khi cell có gene-expression program khác nhau. Vì phần lớn cell giữ cùng genome, difference chủ yếu đến từ regulatory network, epigenetic state và extracellular signal.
+## Fertilization — nhiều hơn việc cộng hai bộ chromosome
 
-Morphogen là molecule tạo concentration gradient và giúp cell suy ra position. Một cell có thể phản ứng khác nhau tùy threshold concentration, tạo spatial pattern.
+**Fertilization (thụ tinh / 수정)** là fusion của gamete và activation developmental program.
 
-> Mental model: development là computation theo không gian và thời gian. Genome cung cấp rule; signal, geometry và cell interaction cung cấp context; tissue shape là output của network đó.
+Sperm phải nhận biết egg environment, fuse membrane và đưa genetic material vào. Egg có mechanism giảm polyspermy vì nhận nhiều sperm sẽ phá chromosome number.
 
-## Gene regulatory network
+Kết quả tạo **zygote (hợp tử / 접합자)** diploid.
 
-Transcription factor có thể kích hoạt hoặc ức chế gene khác, tạo feedback loop và stable cell state. Một số factor đóng vai trò master regulator trong context nhất định, nhưng không nên hiểu rằng một gene đơn lẻ “điều khiển toàn bộ” development.
+Zygote có genome mới, nhưng early development còn phụ thuộc molecule maternal đã được nạp trong egg trước fertilization.
 
-Development thường dựa trên combinatorial control: nhiều signal cùng quyết định fate.
+## Cleavage — tăng cell number mà chưa tăng size nhiều
 
-## Pattern formation
+Sau fertilization, zygote trải qua rapid mitotic division gọi là **cleavage (분할)**.
 
-Embryo cần xác định body axis, segment và organ position. Hox gene là ví dụ nổi tiếng về gene regulatory system liên quan body plan dọc anterior–posterior axis ở nhiều animal lineage.
+Cell nhỏ dần vì overall embryo size ban đầu không tăng tương ứng. Những cell này gọi là blastomere.
 
-Conservation của Hox gene cho thấy deep evolutionary homology: cùng một toolkit gene có thể được reuse trong body plan rất khác nhau.
+Ở mammal, embryo đi qua morula rồi blastocyst. Blastocyst có inner cell mass và outer trophoblast lineage, mở đầu specialization.
 
-## Stem cell
+## Gastrulation — tạo body plan cơ bản
 
-Stem cell (줄기세포) có khả năng self-renew và differentiation. Totipotent cell có thể tạo toàn organism cùng supporting tissue; pluripotent cell tạo nhiều cell type của cơ thể; multipotent cell bị giới hạn hơn.
+**Gastrulation (낭배형성)** là process cell move và reorganize thành germ layer.
 
-Induced pluripotent stem cell (iPSC) cho thấy differentiated cell có thể được reprogram trở lại trạng thái pluripotent bằng một tập transcription factor. Điều này chứng minh cell identity là regulatory state, không phải genome bị thay đổi hoàn toàn.
+Ba germ layer ở triploblastic animal:
 
-## Apoptosis trong development
+- ectoderm;
+- mesoderm;
+- endoderm.
 
-Programmed cell death (Apoptosis / 세포자멸사) không chỉ liên quan disease. Nó là phần bình thường của development, ví dụ giúp tách các ngón tay/ngón chân trong embryo.
+Ectoderm tạo nervous system và epidermis trong broad pattern. Mesoderm góp muscle, bone, blood và nhiều connective tissue. Endoderm góp lining của digestive/respiratory tract và nhiều associated organ.
 
-Development vì vậy không chỉ xây structure bằng growth mà còn sculpt structure bằng controlled cell death.
+Danh sách derivative có nhiều detail, nhưng mental model quan trọng là gastrulation chuyển embryo từ ball/sheet cell thành spatial body plan.
 
-## Sex determination và development
+## Cell differentiation — cùng DNA, khác identity
 
-Cơ chế xác định sex rất đa dạng giữa species. Mammal thường dùng chromosome system XX/XY và gene SRY tham gia pathway phát triển testis. Bird dùng ZW, nhiều reptile chịu ảnh hưởng temperature, và một số fish có thể đổi sex theo social context.
+**Differentiation (biệt hóa / 분화)** là process cell trở nên specialized.
 
-Điều này nhắc rằng “biological sex determination” không có một cơ chế duy nhất cho toàn bộ life.
+Neuron và liver cell gần như có cùng DNA sequence, nhưng transcription factor và epigenetic state khác làm expression pattern khác.
 
-## Aging như phần tiếp nối của development
+Một cell identity được duy trì bởi gene regulatory network: factor A activate B, B reinforce A, đồng thời repress alternative fate.
 
-Aging liên quan accumulation của damage, altered gene regulation, mitochondrial dysfunction, cellular senescence, stem-cell exhaustion và nhiều process khác. Không có một “đồng hồ lão hóa” đơn giản duy nhất giải thích tất cả.
+Vì vậy differentiation giống việc cell đi vào một stable regulatory state hơn là “mất các gene không cần”.
 
-Evolutionary theory of aging cho rằng selection yếu dần với effect xuất hiện muộn sau reproductive age, tạo điều kiện cho trade-off và deleterious late-life effect tồn tại.
+## Determination và competence
+
+Một cell có thể dần bị **determined**, nghĩa fate trở nên constrained dù chưa biểu hiện full morphology.
+
+**Competence** là khả năng phản ứng với một developmental signal. Một signal chỉ có effect nếu cell có receptor và regulatory context phù hợp.
+
+Điều này nối trực tiếp với principle ở cell signaling: signal không tự mang meaning; receiving state matter.
+
+## Morphogen — concentration gradient mang positional information
+
+Một **morphogen (형태형성물질)** là signaling molecule có thể tạo concentration gradient và gây response khác nhau theo concentration.
+
+Giả sử source tiết morphogen ở một edge. Diffusion và degradation tạo gradient:
+
+```text
+source  ████████▓▓▓▒▒░░  far away
+```
+
+Cell gần source nhận high signal và activate gene set A; cell ở intermediate activate B; cell xa activate C.
+
+Như vậy continuous concentration được convert thành discrete spatial fate.
+
+Đây là một biological use của threshold và gradient.
+
+## Induction — tissue nói chuyện với tissue
+
+**Induction (cảm ứng / 유도)** xảy ra khi một cell group gửi signal làm neighboring group đổi developmental fate.
+
+Eye development, limb formation và organogenesis phụ thuộc nhiều reciprocal induction.
+
+Embryo không được build bởi mỗi cell đọc coordinate cố định trong DNA; pattern emerge từ repeated local signaling interaction.
+
+## Hox gene — positional identity dọc body axis
+
+**Hox genes (혹스 유전자)** mã hóa transcription factor giúp xác định regional identity dọc anterior–posterior axis ở nhiều animal.
+
+Hox gene thường nằm thành cluster, và order trên chromosome liên quan pattern expression theo body axis trong nhiều species.
+
+Conservation của Hox gene giữa fly và vertebrate là evidence sâu về common ancestry của developmental toolkit.
+
+## Organogenesis — pattern thành organ
+
+Sau germ layer và body axis, tissue tiếp tục fold, migrate, proliferate và die có chương trình để tạo organ.
+
+Heart tube fold và chamber specialize; neural tube tạo central nervous system; limb bud phát triển qua signaling center và growth gradient.
+
+**Apoptosis** cũng là constructive process. Ví dụ cell death giúp sculpt interdigital region trong nhiều vertebrate limb development.
+
+Development vì vậy là combination của cell proliferation + differentiation + migration + mechanical force + programmed death.
+
+## Stem cell — self-renewal và potency
+
+**Stem cell (tế bào gốc / 줄기세포)** có hai property chính: self-renewal và khả năng tạo differentiated progeny.
+
+### Totipotent
+
+Có thể tạo toàn organism và extraembryonic tissue trong context phù hợp, như zygote/very early blastomere.
+
+### Pluripotent
+
+Có thể tạo gần như mọi body cell type nhưng không toàn bộ extraembryonic structure cần cho organism hoàn chỉnh.
+
+### Multipotent
+
+Tạo nhiều cell type trong một lineage/tissue, như hematopoietic stem cell tạo blood cell lineage.
+
+Potency không giống proliferation rate; một cancer cell divide mạnh không tự động là pluripotent stem cell.
+
+## Regeneration
+
+Một số animal như planarian hoặc salamander regenerate structure đáng kể; mammal có regenerative capacity hạn chế hơn tùy tissue.
+
+Regeneration cần wound response, proliferation, positional information và differentiation.
+
+Liver có khả năng phục hồi mass mạnh nhưng chủ yếu qua proliferation/hypertrophy của existing cell hơn là tái tạo nguyên whole organ architecture từ một fragment theo cách salamander limb.
+
+## Human reproductive endocrine axis
+
+Hypothalamus release GnRH; pituitary release LH/FSH; gonad produce sex steroid và gamete-supporting signal.
+
+Feedback giữa hormone điều khiển cycle và gametogenesis.
+
+Ở menstrual cycle, follicular development, ovulation và luteal phase xuất hiện từ changing interaction giữa FSH, LH, estrogen và progesterone.
+
+Không nên học cycle như bốn hormone tăng giảm độc lập; nó là coupled feedback system.
+
+## Pregnancy — maternal và fetal physiology tương tác
+
+Sau implantation, placenta phát triển như exchange/endocrine organ giữa maternal và fetal circulation.
+
+Hai blood supply thường không trộn trực tiếp hoàn toàn; gas, nutrient, waste và signal trao đổi qua placental interface.
+
+Placenta release hormone làm maternal metabolism/circulation thích nghi pregnancy.
+
+Đây là example organism-level physiology được tái cấu hình để support development.
+
+## Sex determination và differentiation
+
+Sex determination mechanism rất đa dạng giữa species: chromosome, temperature hoặc environmental factor khác có thể tham gia.
+
+Ở human, SRY trên Y chromosome thường trigger testis-development pathway, nhưng sex development là cascade gồm gene, hormone, receptor và tissue response. Biological variation có thể xuất hiện ở nhiều step.
+
+Vì vậy textbook XX/XY là useful baseline cho human genetics nhưng không phải toàn bộ biology của sex determination across life.
+
+## Aging — development không kết thúc ở adulthood
+
+**Aging (lão hóa / 노화)** là progressive change trong function và risk theo time, không có một cause duy nhất.
+
+Mechanism được nghiên cứu gồm genomic instability, telomere attrition, epigenetic alteration, loss of proteostasis, mitochondrial dysfunction, cellular senescence, stem-cell exhaustion và altered intercellular communication.
+
+Các “hallmarks” là framework research, không phải một single pathway đã giải thích hoàn toàn aging.
+
+Evolutionary perspective cũng quan trọng: selection thường yếu hơn với effect chỉ xuất hiện sau reproductive age, và trade-off giữa early-life benefit với late-life cost có thể tồn tại.
+
+## Development và evolution — evo-devo
+
+**Evolutionary developmental biology (evo-devo / 진화발생생물학)** hỏi variation trong developmental program tạo morphological diversity như thế nào.
+
+Evolution không cần tạo mỗi structure từ gene hoàn toàn mới. Change timing, location hoặc level expression của conserved developmental gene có thể tạo phenotype lớn.
+
+Đây là connection mạnh giữa gene regulation, development và evolution.
 
 ## Common misconceptions
 
-“Embryo là người lớn thu nhỏ” là sai; development tạo structure mới qua patterning, differentiation và morphogenesis. “Mỗi cell type có DNA khác hẳn nhau” cũng sai trong phần lớn somatic cell; khác biệt chính là gene expression và epigenetic state.
+### “Mỗi cell type có gene riêng”
 
-## Kết nối
+Đa số somatic cell giữ gần như cùng genome; difference chủ yếu do expression/regulation.
 
-Meiosis và inheritance nối với [[../02_genetics_molecular_biology/01_inheritance_variation_and_mutation]]. Gene regulation nối với [[../02_genetics_molecular_biology/02_genomics_epigenetics_and_regulation]]. Cell signaling và apoptosis nối với [[../01_cell_biology/02_cell_signaling_and_cell_cycle]].
+### “Development chỉ là cell division”
+
+Không. Nếu chỉ tăng cell number, embryo sẽ là mass cell. Spatial pattern, migration, differentiation và mechanical remodeling mới tạo body.
+
+### “Stem cell có thể tự động biến thành bất cứ cell nào”
+
+Potency khác nhau, và differentiation cần signal/context phù hợp.
+
+### “Gene quyết định sẵn từng chi tiết anatomy”
+
+Genome mã hóa component và regulatory logic; final structure emerge từ gene expression, signaling, mechanics và environment.
+
+## Mental Model
+
+> Development là computation phân tán bằng cell: gene regulatory network lưu state, signaling truyền information giữa cell, morphogen tạo positional cue, mechanics thay shape, feedback ổn định fate. Từ một genome gần như chung, spatial context tạo nhiều cell type và organ.
+
+Sau organismal biology, [[../05_ecology/00_population_community_and_behavior]] đưa scale lên population và community: individual behavior và interaction giữa species tạo pattern ở environment như thế nào.
