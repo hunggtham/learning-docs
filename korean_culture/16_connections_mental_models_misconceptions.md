@@ -292,9 +292,90 @@ thao tác nhìn thấy
 
 Nếu chỉ đo thao tác nhìn thấy, ta đánh giá thấp người giữ trạng thái hệ thống. Liên hệ này giúp giải thích vì sao phân chia “mỗi người làm một nửa việc nhà” vẫn có thể bất bình đẳng nếu một người giữ toàn bộ tải quản lý.
 
-## Mô hình tổng hợp: 6 lớp để đọc một hiện tượng văn hoá
+## Liên hệ 31: Quyền lực ↔ thông tin ↔ trách nhiệm
 
-Khi gặp một hiện tượng mới, hãy lần lượt hỏi sáu nhóm câu hỏi.
+Một người có quyền quyết định nhưng không có thông tin thực địa dễ đưa ra quyết định yếu. Ngược lại, người có thông tin nhưng không có kênh lên tiếng dễ trở thành nút bị nghẽn.
+
+```text
+quyền quyết định
++ thông tin phù hợp
++ trách nhiệm hậu quả
+→ chất lượng quản trị cao hơn
+```
+
+Khi ba yếu tố tách quá xa nhau, tổ chức có thể xuất hiện hiện tượng “người quyết định không biết, người biết không được quyết định, người chịu hậu quả không có tiếng nói”. Đây là liên hệ giữa `02` và `06`.
+
+## Liên hệ 32: Bus factor ↔ chăm sóc gia đình ↔ khả năng chống chịu
+
+Trong công sở, một hệ thống phụ thuộc duy nhất vào người lâu năm có `bus factor` thấp. Trong gia đình, nếu toàn bộ lịch khám, trường học và giấy tờ chỉ một người nắm, hệ chăm sóc cũng có cùng rủi ro.
+
+```text
+tri thức tập trung ở một người
+→ hiệu quả ngắn hạn có thể cao
+→ nhưng khả năng gián đoạn tăng khi người đó vắng mặt
+```
+
+Tài liệu hoá, bàn giao và phân chia trạng thái giúp cả tổ chức lẫn gia đình tăng khả năng chống chịu.
+
+## Liên hệ 33: Độ tin cậy đô thị ↔ phục hồi dịch vụ ↔ đường thay thế
+
+Một thành phố và một dịch vụ khách hàng có chung logic: người dùng không chỉ cần đường chạy bình thường, họ cần hệ thống vẫn dùng được khi một phần bị lỗi.
+
+```text
+đường chính lỗi
+→ phát hiện
+→ thông báo
+→ chuyển sang phương án thay thế
+→ phục hồi
+```
+
+Tàu điện, thanh toán số, kiosk, tổng đài và giao hàng đều cần **đường thay thế (fallback)**. Một hệ thống nhanh nhưng không có fallback có thể rất mong manh.
+
+## Liên hệ 34: Fandom ↔ hàng đợi ↔ tài nguyên khan hiếm
+
+Vé concert, sự kiện thể thao, fan-sign và pop-up đều có cầu có thể vượt cung. Khi đó văn hoá người hâm mộ gặp trực tiếp lý thuyết hàng đợi và cơ chế phân bổ.
+
+```text
+nhu cầu > công suất
+→ hàng đợi / bốc thăm / đặt trước / giá thứ cấp
+→ cảm nhận công bằng
+→ danh tiếng tổ chức
+```
+
+Do đó trải nghiệm fandom không chỉ nằm ở cảm xúc; nó còn phụ thuộc kiến trúc phân bổ tài nguyên.
+
+## Liên hệ 35: Health literacy ↔ bất cân xứng thông tin ↔ đồng thuận
+
+Bệnh nhân thường có ít kiến thức chuyên môn hơn người cung cấp dịch vụ. Khoảng cách này tương tự bất cân xứng thông tin trong tài chính, làm đẹp và nền tảng nội dung.
+
+Năng lực sức khoẻ không có nghĩa bệnh nhân phải trở thành bác sĩ. Nó giúp người bệnh đặt câu hỏi, hiểu lựa chọn, nhận biết bất định và xác nhận lại kế hoạch.
+
+```text
+thông tin chuyên môn
+→ giải thích dễ hiểu
+→ kiểm tra người bệnh đã hiểu
+→ quyết định chung
+```
+
+Đây là cơ chế biến thông tin thành **đồng thuận có hiểu biết (informed consent)** thay vì chỉ ký vào biểu mẫu.
+
+## Liên hệ 36: IP ↔ dữ liệu ↔ vốn ↔ lợi thế tích luỹ
+
+Một tài sản trí tuệ thành công có thể tạo doanh thu, dữ liệu người dùng và danh tiếng. Các nguồn lực này lại giúp chủ sở hữu tài trợ dự án mới hoặc đàm phán điều kiện tốt hơn.
+
+```text
+IP thành công
+→ dữ liệu + vốn + danh tiếng
+→ quyền thương lượng cao hơn
+→ khả năng giữ quyền / phân phối tốt hơn
+→ cơ hội cho IP tiếp theo
+```
+
+Đây là **lợi thế tích luỹ (cumulative advantage)**. Hallyu vì vậy không chỉ là vòng lan truyền văn hoá mà còn là vòng tích luỹ quyền lực kinh tế.
+
+## Mô hình tổng hợp: 7 lớp để đọc một hiện tượng văn hoá
+
+Khi gặp một hiện tượng mới, hãy lần lượt hỏi bảy nhóm câu hỏi.
 
 ### 1. Lớp vật chất — điều kiện vật chất nào làm nó khả thi?
 
@@ -328,7 +409,9 @@ chỉ số đo trực tiếp hay dùng biến đại diện?
 điều gì không được quan sát?
 ```
 
-Lớp thứ sáu đặc biệt quan trọng vì một mô hình văn hoá đúng về cơ chế vẫn có thể bị áp sai nếu dữ liệu đầu vào thiên lệch.
+### 7. Lớp phản thực tế — nếu cơ chế ta nghi ngờ biến mất thì chuyện gì sẽ đổi?
+
+Câu hỏi phản thực tế giúp phân biệt nguyên nhân với thứ chỉ đi kèm. Nếu thay đổi hạ tầng, luật, giá hoặc quyền lực mà hành vi không đổi, lời giải thích ban đầu có thể chưa đúng.
 
 Một lời giải thích mạnh thường dùng ít nhất hai hoặc ba lớp, thay vì dừng ở câu “vì truyền thống”.
 
@@ -374,6 +457,14 @@ Không đúng. Quy tắc căn hộ, lịch phân loại rác, vận hành childc
 
 Không đúng. Con số còn phụ thuộc định nghĩa, mẫu, cách đo và thời điểm. Thống kê tốt giúp thu hẹp bất định; nó không xoá nhu cầu hiểu cơ chế.
 
+### “Có chức danh cao nghĩa là có mọi loại quyền lực”
+
+Không đúng. Quyền hành chính, chuyên môn, thông tin, ngân sách và khả năng ảnh hưởng mạng quan hệ có thể nằm ở các chủ thể khác nhau.
+
+### “Hệ thống chạy nhanh trong ngày bình thường thì chắc chắn đáng tin”
+
+Không đúng. Độ tin cậy còn phụ thuộc cách hệ thống xử lý lỗi, dự phòng và phục hồi.
+
 ## Một phương pháp quan sát thực tế
 
 Khi sống hoặc làm việc ở Hàn Quốc, thay vì ghi “họ làm thế này”, hãy ghi theo cấu trúc:
@@ -387,6 +478,7 @@ Kỳ vọng ngầm:
 Cơ chế lịch sử / thiết chế có thể có:
 Lời giải thích thay thế:
 Bằng chứng cần kiểm tra:
+Phản thực tế:
 ```
 
 Ví dụ:
@@ -400,6 +492,7 @@ Kỳ vọng ngầm: mức khẩn được hiểu từ bối cảnh dự án.
 Cơ chế có thể có: nhóm ngữ cảnh cao + cùng biết lịch phát hành.
 Lời giải thích thay thế: hạn đã được nói trong cuộc họp trước.
 Bằng chứng cần kiểm tra: hỏi nhóm hoặc xem ticket/lịch sử trao đổi.
+Phản thực tế: nếu người mới không biết lịch phát hành, họ có phản ứng giống vậy không?
 ```
 
 Có thể áp dụng cùng khuôn này cho đời sống ngoài công sở:
@@ -413,6 +506,7 @@ Kỳ vọng ngầm: mọi người làm theo thông báo của khu này.
 Cơ chế có thể có: cách triển khai địa phương khác nhau.
 Lời giải thích thay thế: tôi đang hiểu sai loại rác.
 Bằng chứng cần kiểm tra: thông báo của 관리사무소 hoặc hướng dẫn của địa phương.
+Phản thực tế: nếu chuyển sang địa phương khác, quy tắc có giữ nguyên không?
 ```
 
 Cách ghi này biến việc học văn hoá từ gán nhãn thành **kiểm định giả thuyết (hypothesis testing)**.
