@@ -1,133 +1,367 @@
 # Startup, venture và scale-up Hàn Quốc (Startup & Venture / 스타트업·벤처기업·스케일업)
 
-Startup thường bị trộn với SME vì cả hai có thể nhỏ. Nhưng mental model khác nhau. SME là một category về quy mô/pháp lý; startup là tổ chức đang tìm hoặc mở rộng một **mô hình kinh doanh có khả năng tăng trưởng nhanh (scalable business model / 확장 가능한 사업모델)** trong điều kiện bất định.
+Startup thường bị trộn với SME vì cả hai có thể nhỏ, ít nhân viên và chưa niêm yết. Nhưng logic kinh tế của hai loại rất khác. **SME / 중소기업** là phân loại quy mô hoặc policy/legal category; **startup / 스타트업** là tổ chức đang tìm hoặc mở rộng một business model có khả năng scale nhanh trong điều kiện uncertainty cao.
 
-## Từ uncertainty đến product-market fit
+Một small restaurant có thể là SME nhưng không phải venture startup. Một software company 30 người có thể là startup nếu product có thể phục vụ 100.000 customers mà cost không tăng gần tuyến tính theo headcount.
 
-Một doanh nghiệp truyền thống có thể mở nhà hàng thứ hai bằng cách lặp lại quy trình đã biết. Startup thường chưa biết chắc sản phẩm nào, price point nào hoặc acquisition channel nào sẽ scale. Vì vậy keyword quan trọng là **product-market fit (PMF / 제품-시장 적합성)**: sản phẩm giải quyết nhu cầu đủ mạnh để khách hàng quay lại hoặc sẵn sàng trả tiền.
+## Startup là bài toán uncertainty, không chỉ size
 
-Venture capital không chỉ tài trợ “ý tưởng hay”; nó tài trợ một portfolio nơi một số ít winner có thể bù nhiều failure. Điều này dẫn đến logic valuation và governance khác ngân hàng.
+Doanh nghiệp truyền thống thường đã biết khá rõ mình bán gì, ai mua và margin khoảng bao nhiêu. Startup thường chưa chắc product, pricing, acquisition channel, customer segment hoặc distribution model nào sẽ work.
 
-## Equity financing vs debt
+Vì vậy early-stage startup ưu tiên **learning speed / 학습속도** hơn optimization tuyệt đối.
 
-Startup chưa có stable cash flow khó trả principal + interest đều đặn. Vì vậy equity financing hợp với risk profile hơn. Investor nhận ownership upside nếu công ty tăng giá trị.
+Một useful sequence:
 
-Các vòng như Seed, Series A/B/C là market convention, không phải level cứng. Vòng sau thường yêu cầu bằng chứng mạnh hơn về retention, unit economics, revenue scale hoặc expansion.
+```text
+Problem hypothesis
+      ↓
+Prototype / MVP
+      ↓
+Customer behavior
+      ↓
+Retention / willingness to pay
+      ↓
+Product-market fit
+      ↓
+Repeatable acquisition
+      ↓
+Scale-up
+```
+
+Nếu company scale spending trước khi product-market fit, nó có thể scale acquisition cost và losses thay vì scale value.
+
+## Product-market fit: customer behavior quan trọng hơn founder conviction
+
+**Product-Market Fit (PMF / 제품-시장 적합성)** nghĩa là product giải problem đủ mạnh để customer repeatedly use, pay, recommend hoặc resist switching.
+
+PMF không có một official metric duy nhất. Evidence có thể gồm:
+
+- retention curve flattening;
+- repeat purchase;
+- organic referrals;
+- declining churn;
+- strong usage intensity;
+- willingness to pay;
+- improving sales efficiency.
+
+Downloads hoặc sign-ups chỉ đo curiosity. Startup khỏe phải chứng minh **persistent customer value**.
+
+## MVP: mục tiêu là học, không phải làm product “rẻ”
+
+Minimum Viable Product (MVP / 최소기능제품) thường bị hiểu là “version sơ sài nhất”. Mental model tốt hơn: MVP là **phiên bản nhỏ nhất có thể kiểm tra một uncertainty quan trọng**.
+
+Nếu uncertainty là “customer có trả tiền không?”, MVP phải test payment. Nếu uncertainty là technical feasibility, prototype có thể không cần polished UX.
+
+Do đó MVP design phải bắt đầu từ hypothesis, không phải từ list features.
+
+## Why venture capital exists
+
+Startup có three characteristics làm bank debt less suitable ở early stage:
+
+1. cash flow chưa ổn định;
+2. collateral hữu hình ít;
+3. distribution outcome rất skewed — many failures, few huge winners.
+
+Bank earns limited upside from loan interest but bears default downside. Venture investor accepts equity risk because upside is uncapped.
+
+Venture capital therefore fits **power-law outcomes / 멱법칙형 수익구조** better than normal lending.
+
+## Equity financing và dilution
+
+When startup issues new shares, old owners' percentage falls unless they invest proportionally.
+
+Nếu founder owns 100%, then two rounds each sell 20% post-money:
+
+\[
+1.0 \times 0.8 \times 0.8 = 64\%
+\]
+
+Không phải 60%, vì dilution compounds multiplicatively.
+
+Option pool, convertible securities, SAFE-like instruments where applicable, preferred shares và warrants can make fully diluted ownership more complex.
+
+Headline founder stake therefore should be read from **fully diluted cap table**, not basic shares only.
+
+## Pre-money và post-money valuation
+
+Nếu investor invests 20 billion KRW at 80 billion pre-money valuation:
+
+\[
+Post\ Money = 80 + 20 = 100
+\]
+
+Investor owns roughly:
+
+\[
+\frac{20}{100}=20\%
+\]
+
+Valuation is an implied transaction price for equity; it is **not cash in the bank**. Company receives only financing amount, not full post-money valuation.
+
+This is one of the most common startup misunderstandings.
+
+## Preferred shares: cùng percentage nhưng rights khác nhau
+
+Venture investors often receive preferred shares with rights such as:
+
+- liquidation preference;
+- conversion rights;
+- anti-dilution protection;
+- information rights;
+- veto/consent rights;
+- board rights.
+
+Therefore “Investor owns 20%” does not fully describe economics.
+
+At exit, liquidation preference can change payout order. A company may sell for a seemingly high amount but common shareholders receive far less if preference stack is large.
+
+This is why term sheet matters as much as valuation headline.
 
 ## Burn rate và runway
 
-**Burn rate / 현금 소진율** là lượng cash startup tiêu mỗi tháng. Nếu có cash 12 tỷ KRW và net burn 1 tỷ/tháng, runway đơn giản là khoảng 12 tháng:
+**Net burn / 순현금소진** measures how much cash company loses per period after cash inflows.
 
 \[
-Runway \approx \frac{Cash}{Monthly\ Net\ Burn}
+Runway\ (months) \approx \frac{Cash}{Monthly\ Net\ Burn}
 \]
 
-Công thức đơn giản nhưng mental model mạnh: một startup có revenue tăng nhanh vẫn có thể chết nếu cash conversion và financing timing không phù hợp.
+If cash = 12 billion KRW and net burn = 1 billion/month, simple runway ≈ 12 months.
 
-## Korean venture ecosystem
+But runway is dynamic. Revenue growth, hiring, marketing, capex and working capital can change burn quickly.
 
-Hàn Quốc có policy support, accelerators, venture funds, corporate venture capital và tech clusters. Ministry of SMEs and Startups vận hành nhiều chương trình hỗ trợ, và pháp lý venture investment được cập nhật định kỳ. Tuy nhiên, policy funding không thay thế customer demand. Một startup có grant nhưng không có PMF vẫn không có sustainable business.
+A startup can be “growing fast” and still die because next financing arrives after cash runs out.
 
-## Exit: IPO và M&A
+## Funding round ≠ business milestone
 
-Investor venture cần liquidity event. IPO trên KOSDAQ là một route quan trọng ở Hàn Quốc; M&A là route khác. Vì KOSDAQ được thiết kế như growth market cho SMEs, tech và venture companies, capital-market structure gắn trực tiếp với startup ecosystem. Xem [10_capital_markets_kospi_kosdaq_konex](./10_capital_markets_kospi_kosdaq_konex.md).
+Seed, Series A, B, C are market conventions, not standardized operating levels.
 
-## Platform startup và network effects
+Series A does not guarantee PMF; Series C does not guarantee profitability. Financing round only proves investors agreed to provide capital under particular terms.
 
-Nhiều startup digital theo đuổi **network effects / 네트워크 효과**: càng nhiều user, sản phẩm càng có giá trị. Tuy nhiên growth user không tự động thành moat. Nếu switching cost thấp và multi-homing dễ, network effect yếu hơn tưởng tượng.
+Good analysis separates:
 
-## Startup Korea hình thành từ IT infrastructure và policy ecosystem
+```text
+Financing Event ≠ Operating Performance
+```
 
-Sau 1997, Korea khuyến khích venture activity như một nguồn growth mới ngoài chaebol. Broadband expansion, engineering talent và KOSDAQ tạo environment cho internet/game companies. Sau smartphone era, startup ecosystem mở rộng sang fintech, commerce, mobility, biotech và AI.
+A large round may increase survival time while underlying unit economics remain weak.
 
-Nhưng “venture company / 벤처기업” trong Korea còn có legal/policy meaning nhất định, không hoàn toàn trùng Silicon Valley usage của startup. Khi đọc subsidy hoặc certification, phải kiểm tra statutory definition.
+## Revenue quality and contribution margin
 
-## Cap table và dilution
+Startup revenue growth must be decomposed.
 
-Startup fundraising không chỉ là valuation headline. Nếu founder sở hữu 100% rồi raise successive rounds, ownership bị dilute. Ví dụ mỗi round bán 20% post-money hai lần, founder còn 64%, không phải 60%:
+For transaction business:
 
 \[
-1.0\times0.8\times0.8=0.64
+Revenue = Transactions \times Revenue\ per\ Transaction
 \]
 
-Employee option pool, convertible securities và preferred shares làm fully diluted ownership phức tạp hơn. Vì vậy cap table là governance document, không chỉ finance spreadsheet.
+But revenue is not economic profit. Need subtract variable costs to calculate **contribution margin / 공헌이익**.
 
-## Preferred shares và downside protection
+A useful ladder:
 
-Venture investors thường dùng preferred shares với liquidation preference, conversion rights và anti-dilution. Headline valuation có thể giống common equity nhưng economic rights khác.
+```text
+Revenue
+- directly variable COGS
+= Gross Profit
+- payment / fulfillment / support / incentives
+= Contribution Profit
+```
 
-Một startup exit ở valuation “không thấp” vẫn có thể để common shareholders nhận ít nếu preference stack lớn. Đây là lý do founder phải hiểu term sheet chứ không chỉ pre-money valuation.
+If each incremental order has negative contribution margin, scaling increases losses before fixed cost even enters.
 
-## Growth quality
+## CAC, LTV và payback period
 
-GMV, MAU và download là activity metrics, không phải economics. Growth tốt cần cohort retention, contribution margin và improving unit economics. Nếu mỗi customer mới tạo negative lifetime value, scale chỉ làm loss nhanh hơn.
-
-Một mental model hữu ích là:
+Customer Acquisition Cost:
 
 \[
-LTV > CAC + Cost\ to\ Serve
+CAC = \frac{Sales\ and\ Marketing\ Spend}{New\ Customers\ Acquired}
 \]
 
-nhưng LTV phải discount churn và uncertainty, không dùng optimistic lifetime vô hạn.
+Lifetime Value should be based on contribution profit, not revenue:
 
-## Scale-up bottleneck tại Korea
+\[
+LTV \approx Contribution\ Margin\ per\ Period \times Expected\ Customer\ Lifetime
+\]
 
-Korea tạo nhiều startups nhưng scale globally khó vì domestic market tương đối nhỏ, language/localization và regulation khác. Vì vậy successful scale-up thường phải chọn: dominate Korean niche với high monetization hoặc internationalize sớm.
+But lifetime cannot be assumed infinite. Churn, cohort behavior and discounting matter.
 
-Overseas expansion lại làm CAC, compliance và organization complexity tăng trước revenue. Đây là “second product-market fit”: product phải fit market mới, không chỉ translate app.
+Useful question is not only `LTV > CAC` but **how long does CAC pay back?** If payback is 36 months and company runs out of cash in 10 months, theoretical LTV does not solve liquidity problem.
 
-## Exit không phải mục tiêu duy nhất
+## Cohort analysis: average user metrics có thể đánh lừa
 
-IPO và M&A cung cấp liquidity, nhưng sustainable company có thể tiếp tục private nếu cash flow mạnh. Policy discussion thường nhấn mạnh exit market vì recycled capital giúp ecosystem, nhưng founder strategy vẫn phải dựa business model.
+Suppose MAU rises every month because marketing brings new users, while old users leave quickly. Aggregate MAU can look healthy even though retention is poor.
+
+Cohort analysis groups users by acquisition month and observes behavior over time.
+
+A retention curve that stabilizes at non-trivial level is often stronger PMF evidence than cumulative downloads.
+
+This is analogous to survival analysis in statistics: we care not only who arrived, but how long they stay.
+
+## Network effects: không phải mọi platform đều có moat
+
+A product has network effect when value to each participant rises as network grows.
+
+Examples include marketplace liquidity, social graph and payment acceptance.
+
+But need distinguish:
+
+- **direct network effect**: more users directly increase value;
+- **cross-side effect**: more sellers attract buyers and vice versa;
+- **data effect**: usage improves algorithm/product;
+- **density effect**: local service improves with route/activity concentration.
+
+Network effect weakens if users can **multi-home / 멀티호밍** easily across multiple platforms.
+
+Therefore user count alone is not proof of defensibility.
+
+## Korea venture ecosystem: why 1997 matters
+
+After Asian Financial Crisis, Korea sought new growth engines beyond traditional chaebol-led expansion. Venture policy, KOSDAQ, broadband infrastructure and IT talent helped internet/game/software companies emerge.
+
+Later smartphone penetration expanded opportunities in fintech, commerce, mobility, content and platforms. Biotech, deep tech and AI added new venture categories.
+
+This historical sequence matters because startup ecosystem is partly a response to mature-economy challenge: **how can new firms create growth when incumbent industrial structure is already concentrated?**
+
+## `벤처기업` can be a legal/policy status
+
+In Korean policy context, `벤처기업` may refer to firms meeting statutory/certification criteria; it is not always identical to colloquial “startup”.
+
+When reading subsidy, tax program or statistics, always check definition. A legal venture company may be relatively mature; a young startup may not hold that specific certification.
+
+This is another example of why business vocabulary must be mapped to exact regulatory context.
+
+## Government support: useful capital but not customer demand
+
+Korea has accelerators, policy funds, TIPS-type programs, credit guarantees, R&D support and government-backed venture vehicles.
+
+These can reduce financing constraint or technology risk.
+
+But subsidy does not create PMF. If customers do not value product, policy capital only delays failure.
+
+Good policy support should ideally solve **market failure** — e.g., externality, information asymmetry or financing gap — rather than permanently subsidize weak unit economics.
+
+## Corporate Venture Capital (CVC)
+
+Large Korean groups invest in startups through CVC or strategic funds.
+
+Strategic investor may bring distribution, manufacturing, data or enterprise customers. But it can also create dependency if startup becomes tied too closely to one corporate ecosystem.
+
+Startup should ask whether corporate investor creates **strategic option** or limits future partners.
+
+## Scale-up: different problem from startup formation
+
+Early startup asks “can product work?” Scale-up asks “can organization grow without breaking?”
+
+At scale, bottleneck moves to:
+
+- management layers;
+- hiring senior leaders;
+- process standardization;
+- security/compliance;
+- international sales;
+- infrastructure reliability;
+- capital efficiency.
+
+Founder intuition alone cannot coordinate hundreds or thousands of employees.
+
+Scale-up is organizational engineering.
+
+## Korea-specific scale-up constraint: domestic market size
+
+Korea has sophisticated consumers but smaller home market than US/China/EU. Some startups can dominate domestic niche and become highly profitable; others must internationalize to reach large TAM.
+
+Internationalization is not translation. Product-market fit must be rediscovered around local regulation, pricing, distribution and culture.
+
+This creates **second PMF problem**.
+
+## Down round and signaling
+
+If new financing occurs below prior valuation, this is a **down round / 다운라운드**.
+
+Effects can include:
+
+- stronger dilution;
+- anti-dilution adjustments;
+- employee morale issues;
+- weaker market signal;
+- pressure to reset option strike prices or expectations.
+
+But down round is not necessarily death. If company still has strong underlying business, recapitalization may extend runway and reset unrealistic past pricing.
+
+## IPO, M&A and liquidity
+
+Venture investors eventually need liquidity.
+
+Common routes:
+
+- IPO, often KOSDAQ for growth/technology firms;
+- strategic M&A;
+- secondary share sale;
+- partial liquidity while company stays private.
+
+Exit matters at ecosystem level because returns recycle into new funds and founders/employees become future angel investors.
+
+But founder should not optimize business solely for IPO. IPO is financing/liquidity event, not business model.
+
+## KOSDAQ and the startup–capital-market bridge
+
+KOSDAQ provides public market access to smaller/growth/technology firms. Successful listing can fund expansion and give investor liquidity.
+
+But public market changes governance regime. Quarterly/periodic disclosure, shareholder scrutiny and price volatility increase.
+
+Startup going public shifts from **venture narrative discipline** to **public-market evidence discipline**.
+
+Xem [10_capital_markets_kospi_kosdaq_konex](./10_capital_markets_kospi_kosdaq_konex.md).
+
+## Startup failure: classify before learning
+
+Not all failures mean “bad idea”. Failure can arise from different mechanisms:
+
+- no real customer pain;
+- PMF but CAC too high;
+- unit economics negative;
+- financing mismatch;
+- regulation blocks scaling;
+- founder/team conflict;
+- technical execution failure;
+- market timing too early/late;
+- competitor with stronger distribution wins.
+
+Learning improves only when failure cause is diagnosed precisely.
+
+## How to analyze a Korean startup
+
+Use a practical sequence:
+
+1. What exact problem is being solved?
+2. Who pays and why now?
+3. What is retention/repeat behavior?
+4. What are gross and contribution margins?
+5. CAC, payback and LTV assumptions?
+6. Current runway and next funding dependency?
+7. Cap table and investor rights?
+8. Regulatory/policy dependency?
+9. Domestic vs global TAM?
+10. What operational capability is required to scale?
+
+For pre-revenue deep tech, replace classic CAC/retention with technical milestones, IP, regulatory path, pilot customers and funding runway.
 
 ## Mental Model
 
-> SME hỏi: “làm sao vận hành business ổn định?” Startup hỏi thêm: “business model này có thể tăng quy mô nhanh mà cost không tăng tỷ lệ tương ứng không?”
+> Startup is a machine for converting **uncertainty into evidence**. Venture capital buys time to learn; product-market fit proves customer value; unit economics prove scale can create economic value; organizational capability determines whether scale-up survives.
 
 ## Common misconceptions
 
-Startup ≠ company mới thành lập. Một công ty mới mở nhưng model hoàn toàn truyền thống có thể là new business nhưng không mang economic characteristics của venture startup.
+Startup ≠ young company. Age alone does not imply scalable venture economics.
 
-Valuation ≠ cash trong tài khoản. Post-money valuation là giá trị implied từ financing round, không phải amount công ty có thể rút ra chi tiêu.
+Valuation ≠ company cash. Valuation is implied equity price; funding amount is actual cash raised.
+
+User growth ≠ moat. Retention, switching cost, network structure and monetization matter.
+
+Revenue growth ≠ healthy growth. Contribution margin and cash burn can deteriorate while revenue rises.
+
+Government funding ≠ business validation. Customer demand remains separate evidence.
 
 ## Connections
 
-Xem [10_capital_markets_kospi_kosdaq_konex](./10_capital_markets_kospi_kosdaq_konex.md), [11_banks_finance_and_corporate_funding](./11_banks_finance_and_corporate_funding.md) và [17_platform_telecom_content_retail_services](./17_platform_telecom_content_retail_services.md).
-
-## Funding round không phải revenue
-
-Series A/B/C là financing events, không phải operating performance. Valuation tăng sau round có thể phản ánh investor expectation dù business chưa profitable.
-
-Cash runway:
-
-\[
-Runway\ (months)=\frac{Cash}{Monthly\ Net\ Burn}
-\]
-
-Nếu growth slows nhưng burn unchanged, next funding dependency tăng.
-
-## Contribution margin trước EBITDA
-
-Startup có thể gross-margin positive nhưng contribution-margin negative sau variable fulfillment/payment/support cost.
-
-Unit economics nên đi từ revenue/user → gross profit → variable operating cost → contribution. Nếu mỗi new customer làm loss lớn hơn, scaling chỉ scale losses.
-
-## Cohort retention
-
-Average MAU có thể che churn. Cohort analysis xem users acquired cùng thời điểm còn active/spending sau n tháng.
-
-Retention curve flattening là signal product-market fit mạnh hơn headline downloads.
-
-## Preference stack trong liquidation
-
-Preferred shareholders có liquidation preference. Khi exit value thấp, founder/common shareholder có thể nhận ít dù headline valuation từng rất cao.
-
-Cap table vì thế cần đọc economic rights, không chỉ percentage ownership.
-
-## Down round và signaling
-
-Round mới valuation thấp hơn previous round gây dilution và signal weaker expectations. Anti-dilution clauses có thể shift pain giữa investors/founders/employees.
-
-## Scale-up problem Korea
-
-Challenge không chỉ seed funding mà international sales, senior management, M&A market và late-stage capital. Startup ecosystem trưởng thành khi firms có multiple exit/scale pathways, không chỉ IPO.
+Read with [06_sme_mid_sized_and_subcontracting_ecosystem](./06_sme_mid_sized_and_subcontracting_ecosystem.md) to contrast SME scaling, [10_capital_markets_kospi_kosdaq_konex](./10_capital_markets_kospi_kosdaq_konex.md) for exit/public markets, [11_banks_finance_and_corporate_funding](./11_banks_finance_and_corporate_funding.md) for financing mechanics and [17_platform_telecom_content_retail_services](./17_platform_telecom_content_retail_services.md) for platform unit economics.
