@@ -28,6 +28,10 @@ Cú sốc / Câu hỏi
 
 [04_VIETNAM_PROPERTY_BANK_CREDIT_CASE.md](./04_VIETNAM_PROPERTY_BANK_CREDIT_CASE.md) dùng chuỗi bất động sản–ngân hàng–chứng khoán–thanh khoản tại Việt Nam để học cách lập bản đồ tiến độ pháp lý, bán trước, trái phiếu doanh nghiệp, mức phơi nhiễm của ngân hàng, NPL/dự phòng, thanh khoản margin, dư địa chính sách của SBV, định giá và khả năng sống sót của bảng cân đối.
 
+Trước khi làm capstone cuối, hoàn thành ít nhất một vòng trong [Advanced Practice Workbook](../ADVANCED_PRACTICE_WORKBOOK.md). Workbook buộc người học tạo IPS, ma trận tài sản, mô hình doanh nghiệp, bảng nowcast, báo cáo backtest và dashboard Korea/Vietnam thay vì chỉ đọc case study.
+
+[05_FULL_INVESTMENT_PROCESS_FROM_THESIS_TO_REVIEW.md](./05_FULL_INVESTMENT_PROCESS_FROM_THESIS_TO_REVIEW.md) là capstone cuối cùng. File này nối câu hỏi nghiên cứu → nguồn dữ liệu → giả định → macro/sector/company model → định giá → phân phối lợi suất kỳ vọng → quy mô vị thế → thực thi → theo dõi → phân rã kết quả → post-mortem. Đây là bài kiểm tra xem người đọc đã có thể vận hành toàn bộ thư viện như một hệ thống nghiên cứu hay chưa.
+
 ## Cách sử dụng tình huống
 
 Không đọc như một câu chuyện để ghi nhớ hướng giá. Hãy dừng trước từng bước và tự trả lời ba câu hỏi:
@@ -53,6 +57,8 @@ Phân rã kết quả sau sự kiện
 Bài học rút ra
 ```
 
+Với capstone cuối, mở rộng thành một hồ sơ đầu tư hoàn chỉnh gồm cả nguồn dữ liệu, mô hình, định giá, sizing, execution, monitoring và post-mortem template.
+
 ## Liên kết với các lĩnh vực trước
 
 Các bài tập giả định bạn đã đọc ít nhất:
@@ -63,6 +69,23 @@ Các bài tập giả định bạn đã đọc ít nhất:
 - [04 — Kinh tế học và vĩ mô](../04_economics/README.md)
 
 Nếu tình huống có giao dịch hoặc phòng vệ, xem thêm [05 — Giao dịch và phái sinh](../05_trading_derivatives/README.md). Nếu liên quan Hàn Quốc/Việt Nam, xem [06 — Thị trường Hàn Quốc và Việt Nam](../06_markets_korea_vietnam/README.md).
+
+Nếu muốn học theo lớp nâng cao thay vì theo domain, sử dụng [Advanced Depth Path](../ADVANCED_DEPTH_PATH.md).
+
+## Tiêu chuẩn hoàn thành
+
+Không coi một case là “đã học” nếu chỉ đọc hết file. Tối thiểu phải tự tạo:
+
+```text
+Một giả thuyết có thể bị bác bỏ
+Một bảng kịch bản
+Một điều kiện vô hiệu hóa
+Một phép kiểm thử bảng cân đối / thanh khoản
+Một đánh giá định giá hoặc lợi suất kỳ vọng
+Một quy tắc sizing
+Một kế hoạch theo dõi
+Một post-mortem template
+```
 
 ## Mục tiêu cuối cùng
 
