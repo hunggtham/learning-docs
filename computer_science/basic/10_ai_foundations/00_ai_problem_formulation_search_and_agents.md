@@ -78,4 +78,4 @@ Chapter ML/RL sâu hơn có thể thành library riêng; ở đây trọng tâm 
 
 ## Kết nối
 
-Xem [graph algorithms](../01_algorithms_data_structures/06_graphs_and_graph_algorithms.md), [complexity](../01_algorithms_data_structures/11_complexity_reductions_and_np.md), [probability](../../mathematics/06_probability_statistics/01_probability_foundations.md) và [ML foundations](./02_machine_learning_foundations.md).
+Xem [graph algorithms](../01_algorithms_data_structures/06_graphs_and_graph_algorithms.md), [complexity](../01_algorithms_data_structures/11_complexity_reductions_and_np.md), [probability](../../../mathematics/06_probability_statistics/01_probability_foundations.md) và [ML foundations](./02_machine_learning_foundations.md).

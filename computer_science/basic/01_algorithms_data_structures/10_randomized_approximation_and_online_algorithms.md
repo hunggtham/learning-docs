@@ -74,4 +74,4 @@ Nhưng pseudo-randomness cho performance khác cryptographic randomness. Securit
 
 ## Kết nối
 
-Nền probability xem tại [Probability Foundations](../../mathematics/06_probability_statistics/01_probability_foundations.md). Complexity và NP-hardness được mở rộng tại [Complexity, reductions và NP](./11_complexity_reductions_and_np.md). Các applications hệ thống xuất hiện trong [cache/scalability](../08_software_systems/02_performance_capacity_and_scalability.md) và [reliability](../07_security_reliability/05_fault_tolerance_observability_and_reliability.md).
+Nền probability xem tại [Probability Foundations](../../../mathematics/06_probability_statistics/01_probability_foundations.md). Complexity và NP-hardness được mở rộng tại [Complexity, reductions và NP](./11_complexity_reductions_and_np.md). Các applications hệ thống xuất hiện trong [cache/scalability](../08_software_systems/02_performance_capacity_and_scalability.md) và [reliability](../07_security_reliability/05_fault_tolerance_observability_and_reliability.md).

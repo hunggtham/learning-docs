@@ -77,4 +77,4 @@ Tăng parameters/data/compute có thể cải thiện performance nhưng cost en
 
 ## Kết nối
 
-Đọc [linear algebra](../../mathematics/04_vectors_linear_algebra/01_matrices_and_linear_systems.md), [matrix calculus/autodiff](../../mathematics/04_vectors_linear_algebra/09_matrix_calculus_jacobian_hessian_and_autodiff.md), [gradient descent](../../mathematics/08_optimization_numerical/01_gradient_descent_and_convexity.md) và [ML foundations](./02_machine_learning_foundations.md).
+Đọc [linear algebra](../../../mathematics/04_vectors_linear_algebra/01_matrices_and_linear_systems.md), [matrix calculus/autodiff](../../../mathematics/04_vectors_linear_algebra/09_matrix_calculus_jacobian_hessian_and_autodiff.md), [gradient descent](../../../mathematics/08_optimization_numerical/01_gradient_descent_and_convexity.md) và [ML foundations](./02_machine_learning_foundations.md).

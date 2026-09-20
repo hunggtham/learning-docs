@@ -70,4 +70,4 @@ Model metrics có thể cực cao nhưng production fail. Split strategy phải 
 
 ## Kết nối
 
-Xem [statistics/inference](../../mathematics/06_probability_statistics/05_descriptive_and_inferential_statistics.md), [optimization](../../mathematics/08_optimization_numerical/00_optimization.md), [neural networks](./03_neural_networks_and_representation_learning.md) và [AI evaluation](./04_ai_evaluation_data_and_responsibility.md).
+Xem [statistics/inference](../../../mathematics/06_probability_statistics/05_descriptive_and_inferential_statistics.md), [optimization](../../../mathematics/08_optimization_numerical/00_optimization.md), [neural networks](./03_neural_networks_and_representation_learning.md) và [AI evaluation](./04_ai_evaluation_data_and_responsibility.md).

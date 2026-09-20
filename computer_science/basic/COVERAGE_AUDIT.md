@@ -1,6 +1,6 @@
-# Coverage Audit — Computer Science Foundations
+# Coverage Audit — Computer Science Basic Foundations
 
-Tài liệu này kiểm tra coverage và conceptual boundaries để `computer_science/` không trở thành collection chapter ngẫu nhiên. Sau vòng comprehensive expansion, library có **100 topic chapters** trong **14 nhóm conceptual**, cộng `README.md`, glossary Việt–Anh–Hàn và audit này.
+Tài liệu này kiểm tra coverage và conceptual boundaries để `computer_science/basic/` không trở thành collection chapter ngẫu nhiên. Sau vòng comprehensive expansion, foundation library có **100 topic chapters** trong **14 nhóm conceptual**, cộng `README.md`, glossary Việt–Anh–Hàn và audit này.
 
 ## 1. Computation & Information — 5 chapters
 
@@ -9,6 +9,8 @@ Tài liệu này kiểm tra coverage và conceptual boundaries để `computer_s
 ## 2. Algorithms & Data Structures — 12 chapters
 
 Đã cover specification/correctness/termination; asymptotic, amortized, worst/average/lower bounds; memory locality/layout; arrays/lists/stacks/queues/deques; hashing; trees/B-tree/heaps/tries; graphs; sorting/search/selection; recursion/divide-and-conquer/greedy/backtracking/DP; string algorithms/KMP/rolling hash/suffix structures; randomized/approximation/online/streaming algorithms; reductions, P/NP/NP-hard/NP-complete và parameterized-complexity intuition.
+
+Các chapter này đóng vai trò **foundation DSA** cho các domain khác. Những cấu trúc, proofs, variants và implementation chuyên sâu hơn được tách sang library Data Structures & Algorithms advanced thay vì tiếp tục phình `basic/`.
 
 ## 3. Computer Architecture — 8 chapters
 
@@ -66,11 +68,11 @@ Các chapter mới cross-link trực tiếp vào những connection này thay v�
 
 ## Coverage đối chiếu với một curriculum CS rộng
 
-Library hiện đã có foundational coverage cho các knowledge areas lớn thường xuất hiện trong chương trình Computer Science: algorithmic foundations, architecture, operating systems, programming languages, data management, networking/distributed computing, security, software development/systems, software engineering, AI, HCI, graphics/interactive systems và social/professional issues. Mathematical/statistical foundations nằm trong dedicated `mathematics/` library và được cross-reference thay vì copy.
+Foundation library hiện đã có coverage cho các knowledge areas lớn thường xuất hiện trong chương trình Computer Science: algorithmic foundations, architecture, operating systems, programming languages, data management, networking/distributed computing, security, software development/systems, software engineering, AI, HCI, graphics/interactive systems và social/professional issues. Mathematical/statistical foundations nằm trong dedicated `mathematics/` library và được cross-reference thay vì copy.
 
-## Các domain cố ý không nhồi vào foundation library
+## Các domain cố ý không nhồi vào Basic library
 
-Các domain sau đủ lớn để tạo Knowledge Library riêng: advanced compiler construction/backend optimization; kernel internals/device-driver programming chuyên sâu; formal methods/model checking/theorem proving chuyên sâu; cryptographic protocol proofs; robotics; NLP/CV chuyên sâu; MLOps/foundation-model engineering; cloud-provider/platform engineering; computer graphics engine/game engine chuyên sâu; quantum computing; scientific/HPC computing; embedded/real-time hardware chuyên sâu.
+Các domain sau đủ lớn để tạo Knowledge Library riêng: advanced Data Structures & Algorithms; advanced compiler construction/backend optimization; kernel internals/device-driver programming chuyên sâu; formal methods/model checking/theorem proving chuyên sâu; cryptographic protocol proofs; robotics; NLP/CV chuyên sâu; MLOps/foundation-model engineering; cloud-provider/platform engineering; computer graphics engine/game engine chuyên sâu; quantum computing; scientific/HPC computing; embedded/real-time hardware chuyên sâu.
 
 Việc không tạo 20–50 files cho mỗi specialization là **conceptual boundary**, không phải missing foundational topic.
 
@@ -82,4 +84,6 @@ Vòng comprehensive expansion tập trung xử lý ba loại gap: concept có m�
 
 ## Maintenance rule
 
-Khi mở rộng tiếp, không thêm chapter chỉ vì technology phổ biến. Chỉ thêm khi topic có mental model riêng, là dependency quan trọng cho nhiều domains, hoặc một specialization mới được tách thành library riêng. `computer_science/` phải tiếp tục trả lời câu hỏi: **“Computation và software systems hoạt động từ information tới human/societal impact như thế nào, và constraints/trade-offs nào lặp lại xuyên các layers?”**
+Khi mở rộng tiếp, không thêm chapter chỉ vì technology phổ biến. Chỉ thêm khi topic có mental model riêng, là dependency quan trọng cho nhiều domains, hoặc một specialization mới được tách thành library riêng. `computer_science/basic/` phải tiếp tục trả lời câu hỏi: **“Computation và software systems hoạt động từ information tới human/societal impact như thế nào, và constraints/trade-offs nào lặp lại xuyên các layers?”**
+
+Các nội dung advanced không nên được copy ngược vào `basic/`; `basic/` chỉ cung cấp prerequisite, mental model và bridge cần thiết rồi cross-reference sang library chuyên sâu.

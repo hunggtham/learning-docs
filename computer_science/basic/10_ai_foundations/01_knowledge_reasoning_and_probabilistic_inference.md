@@ -74,4 +74,4 @@ AI/data systems ra decision cần cẩn thận không coi prediction correlation
 
 ## Kết nối
 
-Đọc [logic/proof](../../mathematics/00_foundations/01_logic_and_proof.md), [conditional probability/Bayes](../../mathematics/06_probability_statistics/02_conditional_probability_and_bayes.md) và [AI search/agents](./00_ai_problem_formulation_search_and_agents.md).
+Đọc [logic/proof](../../../mathematics/00_foundations/01_logic_and_proof.md), [conditional probability/Bayes](../../../mathematics/06_probability_statistics/02_conditional_probability_and_bayes.md) và [AI search/agents](./00_ai_problem_formulation_search_and_agents.md).

@@ -58,7 +58,7 @@ Compression (nén / 압축) tận dụng structure và redundancy. Lossless comp
 
 Không phải mọi dữ liệu đều nén được nhiều. Nếu một chuỗi đã gần random, nó có ít redundancy để khai thác. Về information theory, entropy đặt ra giới hạn cho average code length của lossless compression dưới một model xác suất.
 
-Xem thêm: [Information Theory](../../mathematics/07_discrete_cs/06_information_theory_and_coding.md).
+Xem thêm: [Information Theory](../../../mathematics/07_discrete_cs/06_information_theory_and_coding.md).
 
 ## Error detection và correction
 

@@ -78,4 +78,4 @@ Transparency phức tạp hơn vì blending phụ thuộc order; simple z-buffer
 
 ## Kết nối
 
-Đọc [vectors/linear algebra](../../mathematics/04_vectors_linear_algebra/00_vectors.md), [linear transformations](../../mathematics/04_vectors_linear_algebra/02_linear_transformations.md), [GPU architecture](../02_computer_architecture/05_parallel_computer_architecture.md) và [raster/color/rendering](./03_images_color_rasterization_and_rendering.md).
+Đọc [vectors/linear algebra](../../../mathematics/04_vectors_linear_algebra/00_vectors.md), [linear transformations](../../../mathematics/04_vectors_linear_algebra/02_linear_transformations.md), [GPU architecture](../02_computer_architecture/05_parallel_computer_architecture.md) và [raster/color/rendering](./03_images_color_rasterization_and_rendering.md).

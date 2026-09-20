@@ -78,4 +78,4 @@ JPEG dùng transform/quantization phù hợp photographs nhưng artifacts ở te
 
 ## Kết nối
 
-Đọc [graphics pipeline](./02_computer_graphics_pipeline_and_geometry.md), [information encoding](../00_computation_information/01_information_bits_and_encoding.md) và [Fourier/signals](../../mathematics/09_connections/05_fourier_signals_and_frequency.md).
+Đọc [graphics pipeline](./02_computer_graphics_pipeline_and_geometry.md), [information encoding](../00_computation_information/01_information_bits_and_encoding.md) và [Fourier/signals](../../../mathematics/09_connections/05_fourier_signals_and_frequency.md).
