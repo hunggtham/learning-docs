@@ -9,26 +9,37 @@ Tài liệu này theo dõi **profile thực sự đã được viết**, không 
 - Profile template: hoàn thành.
 - Supplemental policy cho các không gian không là entry M49 chính: hoàn thành.
 
-## Asia
+## Asia — hoàn thành coverage M49
 
-**Central Asia:** hoàn thành Kazakhstan, Kyrgyzstan, Tajikistan, Turkmenistan, Uzbekistan.
+**Central Asia:** Kazakhstan, Kyrgyzstan, Tajikistan, Turkmenistan, Uzbekistan.
 
-**Eastern Asia:** hoàn thành China, Hong Kong SAR, Macao SAR, Democratic People's Republic of Korea, Japan, Mongolia, Republic of Korea. Supplemental geographic profile cho Taiwan đã được tạo.
+**Eastern Asia:** China, Hong Kong SAR, Macao SAR, Democratic People's Republic of Korea, Japan, Mongolia, Republic of Korea. Supplemental geographic profile cho Taiwan đã được tạo.
 
-**South-eastern Asia:** hoàn thành Brunei Darussalam, Cambodia, Indonesia, Lao People's Democratic Republic, Malaysia, Myanmar, Philippines, Singapore, Thailand, Timor-Leste, Viet Nam.
+**South-eastern Asia:** Brunei Darussalam, Cambodia, Indonesia, Lao People's Democratic Republic, Malaysia, Myanmar, Philippines, Singapore, Thailand, Timor-Leste, Viet Nam.
 
-**Southern Asia:** hoàn thành Afghanistan, Bangladesh, Bhutan, India, Iran, Maldives, Nepal, Pakistan, Sri Lanka.
+**Southern Asia:** Afghanistan, Bangladesh, Bhutan, India, Iran, Maldives, Nepal, Pakistan, Sri Lanka.
 
-**Western Asia:** hoàn thành Armenia, Azerbaijan, Bahrain, Cyprus, Georgia, Iraq, Israel, Jordan, Kuwait, Lebanon, Oman, Qatar, Saudi Arabia, State of Palestine, Syrian Arab Republic, Türkiye, United Arab Emirates, Yemen.
+**Western Asia:** Armenia, Azerbaijan, Bahrain, Cyprus, Georgia, Iraq, Israel, Jordan, Kuwait, Lebanon, Oman, Qatar, Saudi Arabia, State of Palestine, Syrian Arab Republic, Türkiye, United Arab Emirates, Yemen.
+
+## Europe — hoàn thành coverage M49
+
+**Eastern Europe:** Belarus, Bulgaria, Czechia, Hungary, Poland, Republic of Moldova, Romania, Russian Federation, Slovakia, Ukraine.
+
+**Northern Europe:** Åland Islands, Denmark, Estonia, Faroe Islands, Finland, Guernsey, Iceland, Ireland, Isle of Man, Jersey, Latvia, Lithuania, Norway, Svalbard and Jan Mayen Islands, Sweden, United Kingdom.
+
+**Southern Europe:** Albania, Andorra, Bosnia and Herzegovina, Croatia, Gibraltar, Greece, Holy See, Italy, Malta, Montenegro, North Macedonia, Portugal, San Marino, Serbia, Slovenia, Spain.
+
+**Western Europe:** Austria, Belgium, France, Germany, Liechtenstein, Luxembourg, Monaco, Netherlands, Switzerland.
+
+**Supplemental Europe:** Kosovo đã có hồ sơ địa lý riêng với ghi chú classification trung tính.
 
 ## Chưa viết profile chi tiết
 
-- Europe: inventory đã có, profile chi tiết chưa triển khai.
 - Africa: inventory đã có, profile chi tiết chưa triển khai.
 - Americas: inventory đã có, profile chi tiết chưa triển khai.
 - Oceania: inventory đã có, profile chi tiết chưa triển khai.
 - Antarctica: mới có entry định hướng, chưa có chapter atlas sâu.
-- Supplemental: Kosovo chưa viết profile chi tiết.
+- Supplemental: sẽ tiếp tục bổ sung khi cần cho các không gian địa lý không tách thành entry M49 chính.
 
 ## Definition of Done cho mỗi profile
 
