@@ -1,6 +1,6 @@
 # 04 — Economics
 
-Domain này nối doanh nghiệp với nền kinh tế và hệ thống tài chính toàn cầu. Mục tiêu không phải học thuộc GDP/CPI/Fed, mà hiểu các kênh truyền dẫn từ household/company decisions tới rates, credit, FX, trade, liquidity và asset prices.
+Domain này nối doanh nghiệp với nền kinh tế và hệ thống tài chính toàn cầu. Mục tiêu không phải học thuộc GDP/CPI/Fed, mà hiểu các kênh truyền dẫn từ household/company decisions tới rates, credit, FX, trade, liquidity, fiscal policy, productivity và asset prices.
 
 ## Thứ tự đọc
 
@@ -16,8 +16,10 @@ Domain này nối doanh nghiệp với nền kinh tế và hệ thống tài ch�
 
 [05_MACRO_REGIMES_POLICY_HISTORY_AND_CRISIS_CASES.md](./05_MACRO_REGIMES_POLICY_HISTORY_AND_CRISIS_CASES.md) thêm góc nhìn regime và lịch sử: Goldilocks, overheating, stagflation, deflationary bust, policy error, 1970s inflation, Japan, Asian Financial Crisis, dot-com, GFC 2008, Eurozone, COVID, banking stress, sovereign debt và commodity shocks.
 
+[06_FISCAL_MONETARY_INTERACTION_DEBT_DEMOGRAPHICS_AND_PRODUCTIVITY.md](./06_FISCAL_MONETARY_INTERACTION_DEBT_DEMOGRAPHICS_AND_PRODUCTIVITY.md) hoàn thiện bức tranh dài hạn bằng government budget constraint, primary balance, debt/GDP dynamics, Treasury issuance, term premium, fiscal dominance, financial repression, demographics, dependency ratio, labor force, productivity, TFP, capital deepening, AI/productivity, institutions, zombie firms, neutral rate và policy mix.
+
 ## Sau domain này bạn cần làm được gì?
 
-Bạn cần có khả năng nhận một sự kiện kinh tế và tự xây chuỗi `shock → prices/income → policy → financial conditions → earnings → assets`, phân biệt inflation shock với growth/credit/liquidity shock, đọc central-bank policy theo reaction function, nhận diện macro regime hiện tại và biết vì sao cùng một data point có thể tạo phản ứng khác nhau ở từng regime.
+Bạn cần có khả năng nhận một sự kiện kinh tế và tự xây chuỗi `shock → prices/income → policy → financial conditions → earnings → assets`, phân biệt inflation shock với growth/credit/liquidity shock, đọc central-bank policy theo reaction function, nhận diện macro regime, phân tích debt sustainability theo rate-growth/fiscal structure và hiểu vì sao demographics/productivity có thể thay đổi potential growth và neutral-rate environment trong nhiều năm.
 
 Sau đó chuyển sang [05_trading_derivatives](../05_trading_derivatives/README.md) nếu muốn dùng kiến thức macro trong trading, hoặc [06_markets_korea_vietnam](../06_markets_korea_vietnam/README.md) để áp dụng trực tiếp vào Hàn Quốc và Việt Nam.
