@@ -32,8 +32,24 @@ computer_science/
     └── COVERAGE_AUDIT.md
 ```
 
-## Advanced / Specialized
+## Specialized Knowledge Libraries
 
-Các library chuyên sâu nên được giữ tách khỏi `basic/`. Ví dụ bộ **Data Structures & Algorithms chuyên sâu** đang được phát triển riêng ở branch `feat/dsa-knowledge-library` trong folder `data_structures_algorithms/`. Khi hợp nhất vào `main`, library đó vẫn nên giữ vai trò advanced/specialized thay vì thay thế các chapter DSA nền tảng trong `basic/`.
+Các library chuyên sâu được giữ tách khỏi `basic/`. `basic/` cung cấp conceptual foundation cần thiết để hiểu Computer Science như một whole system; các library specialized mở rộng một domain thành nhiều textbook-like chapters với nhiều mechanism, implementation, mathematical reasoning, optimization và edge cases hơn.
 
-Nguyên tắc phân chia là: `basic/` trả lời *một computer system và các nguyên lý CS cốt lõi hoạt động như thế nào*; các library advanced đi sâu vào một domain cụ thể với nhiều algorithms, implementation, proof, optimization và edge cases hơn.
+### Data Structures & Algorithms
+
+Bộ **Data Structures & Algorithms** chuyên sâu nằm tại:
+
+**[Data Structures & Algorithms Knowledge Library](./01_algorithms_data_structures/README.md)**
+
+Library này đi sâu vào data structures, algorithmic reasoning, implementation và complexity thay vì thay thế các chapter DSA nền tảng trong `basic/`.
+
+### Artificial Intelligence
+
+Bộ **Artificial Intelligence Knowledge Library** đang được phát triển tại:
+
+**[Artificial Intelligence Knowledge Library](./02_artificial_intelligence/README.md)**
+
+Library AI được tổ chức theo conceptual dependency thay vì Beginner → Advanced. Nội dung bắt đầu từ bản chất của intelligence, agents, problem representation và AI system architecture; sau đó nối tới mathematical foundations, search/planning, knowledge reasoning, Machine Learning, Deep Learning, Transformer, LLM, RAG, Agents, Reinforcement Learning, Computer Vision, multimodal AI, AI Engineering, MLOps/LLMOps, infrastructure, evaluation, safety và governance.
+
+Nguyên tắc phân chia là: `basic/` trả lời *một computer system và các nguyên lý CS cốt lõi hoạt động như thế nào*; các library chuyên sâu trả lời *một domain cụ thể vận hành từ first principles tới production system như thế nào*.
