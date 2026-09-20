@@ -1,114 +1,175 @@
-# Biology Connections — Toán học, tính toán và các pattern xuyên scale (생물학의 연결 구조)
+# Biology × Mathematics × Computation × Scale — Các kết nối xuyên lĩnh vực (생물학 × 수학 × 계산)
 
-Nếu đọc từng chapter riêng lẻ, ta có thể thấy diffusion, feedback, exponential growth, graph, probability hay gradient xuất hiện nhiều lần mà không nhận ra chúng thực chất là **cùng một kiểu cấu trúc lý luận được tái sử dụng ở scale khác nhau**. File này không phải summary. Nó là bản đồ nối các idea đã học, giúp chuyển kiến thức từ domain này sang domain khác.
+Nếu đọc từng chapter riêng, ta có thể thấy nhiều khái niệm khác tên: diffusion, enzyme kinetics, population growth, action potential, gene network, food web, sequencing. Nhưng khi lùi lại một bước, các hệ này lặp lại một số **mathematical and computational motifs** giống nhau: rate, gradient, feedback, probability, network, optimization và information.
 
-## 1. Scale không đổi luật nền, nhưng đổi cách mô tả
+Chapter này không phải summary môn Sinh học. Nó là bản đồ các pattern tái xuất hiện ở nhiều scale, giúp người đọc transfer reasoning từ chapter này sang chapter khác.
 
-Ở molecular scale, thermal motion và chemical interaction chi phối. Ở cellular scale, membrane và reaction network xuất hiện. Ở organism scale, transport system và feedback control trở nên cần thiết. Ở population scale, birth/death và probability tạo dynamics. Ở ecosystem scale, energy flow và matter cycle thống trị.
+> **Mental model:** một concept sâu thường đáng nhớ vì nó tái xuất ở nhiều scale. Gradient không chỉ thuộc membrane; feedback không chỉ thuộc hormone; graph không chỉ thuộc computer science. Đây là “grammar” chung của complex systems.
 
-Các scale không độc lập. Một mutation nhỏ có thể đổi protein; protein đổi cell physiology; physiology đổi fitness; fitness đổi allele frequency; allele-frequency change lâu dài đổi community interaction.
+## 1. Scale thay đổi câu hỏi, không thay vật lý nền
 
-Ngược lại, climate shift ở ecosystem scale có thể đổi selection pressure, hormone stress và gene expression trong individual.
+Atom → molecule → cell → tissue → organism → population → ecosystem là các scale lồng nhau.
 
-> **Mental model:** biology là một stack nhiều tầng, trong đó causal arrow có thể đi từ dưới lên lẫn từ context lớn xuống trạng thái của subsystem.
+Ở scale nhỏ, thermal motion và molecular collision quan trọng. Ở scale organism, bulk flow/pressure quan trọng. Ở scale population, probability và demographic rate quan trọng.
 
-## 2. Gradient: một pattern từ molecule đến organism
+Không có scale nào “thật hơn”. Model phù hợp phụ thuộc câu hỏi.
 
-Gradient nghĩa là một đại lượng khác nhau theo space.
+## 2. Surface-area-to-volume ratio
 
-Concentration gradient → diffusion.
-
-Electrochemical gradient → ion transport và membrane potential.
-
-Proton gradient → ATP synthesis.
-
-Morphogen gradient → cell fate trong embryo.
-
-Water-potential gradient → xylem transport.
-
-Partial-pressure gradient → gas exchange ở lung.
-
-Cùng một logic toán học: flux xuất hiện vì difference theo space.
-
-Fick-style relationship:
+Nếu size đặc trưng là \(L\):
 
 \[
-J \propto -\frac{dC}{dx}
+Area\propto L^2,\qquad Volume\propto L^3
 \]
 
-Không cần dùng cùng equation cho mọi phenomenon, nhưng mental model “difference drives flow” tái xuất liên tục.
+nên:
 
-## 3. Feedback: từ enzyme đến climate–ecosystem
+\[
+\frac{Area}{Volume}\propto \frac{1}{L}
+\]
 
-Negative feedback ổn định state.
+Điều này giải thích:
 
-Enzyme end-product inhibition, blood-glucose control, thermoregulation và density-dependent population growth đều dùng logic:
+- cell nhỏ;
+- microvilli/alveoli/cristae tăng surface;
+- organism lớn cần circulation;
+- leaf/root architecture ưu tiên interface.
 
-```text
-variable deviates
-   ↓
-response opposes deviation
-   ↓
-variable returns toward range
-```
+Một equation geometry tạo consequences ở nhiều chapter.
 
-Positive feedback khuếch đại state transition: action potential, blood clotting, childbirth, một số cell-cycle switch.
+## 3. Rate of change
 
-Ở ecosystem, positive feedback có thể góp phần tạo regime shift.
+Biology quan tâm không chỉ amount mà **rate**:
 
-Nhận ra feedback giúp ta không phải học từng case từ đầu.
+\[
+\frac{dx}{dt}
+\]
 
-## 4. Exponential growth: cùng equation, nhiều context
+Heart rate, reaction rate, growth rate, transcription rate và species decline đều là rate.
+
+Derivative trong calculus mô tả instantaneous rate. Khi ta nói \(dN/dt=rN\), ta không hỏi population size là bao nhiêu mà hỏi nó đang thay đổi nhanh thế nào tại state hiện tại.
+
+## 4. Exponential growth
+
+Nếu growth rate proportional current amount:
 
 \[
 \frac{dN}{dt}=rN
+\Rightarrow N(t)=N_0e^{rt}
 \]
 
-xuất hiện khi rate change tỷ lệ amount hiện tại.
+Pattern này xuất hiện trong:
 
-Bacterial growth, early epidemic spread trong model đơn, PCR amplification và compound population process đều có thể gần exponential trong range nhất định.
+- bacterial growth;
+- early population expansion;
+- PCR lý tưởng theo cycle (discrete doubling);
+- compound interest analogies;
+- epidemic early phase ở model đơn giản.
 
-Nhưng biological system hiếm khi exponential mãi vì resource/space/control tạo saturation.
+Exponential process counterintuitive vì absolute increment tăng cùng state.
 
-Do đó exponential model thường là **local approximation**, sau đó cần logistic hoặc model phức tạp hơn.
+## 5. Logistic growth và saturation
 
-## 5. Saturation: receptor, enzyme và ecology chia sẻ một shape
-
-Michaelis–Menten enzyme rate tăng với substrate rồi bão hòa.
-
-Receptor occupancy cũng có saturation.
-
-Transporter có maximal rate.
-
-Population growth bị carrying capacity limit.
-
-Dù mechanism khác nhau, mathematical shape có cùng intuition: system có finite capacity.
-
-Điều này giúp khi nhìn graph mới, ta hỏi: **capacity nào đang bị saturate?**
-
-## 6. Probability: từ meiosis tới sequencing
-
-Probability xuất hiện vì biological event có randomness hoặc vì ta không biết toàn bộ state.
-
-Mendelian inheritance dùng probability của gamete.
-
-Genetic drift là sampling randomness.
-
-Mutation là rare event.
-
-Sequencing read có error probability.
-
-Diagnostic test và GWAS dùng conditional probability/statistics.
-
-Một principle quan trọng là phân biệt:
+Resource/capacity hữu hạn tạo saturation:
 
 \[
-P(A|B) \neq P(B|A)
+\frac{dN}{dt}=rN\left(1-\frac{N}{K}\right)
 \]
 
-Ví dụ probability có disease khi test positive không bằng sensitivity của test. Bayes theorem giúp nối hai chiều này.
+Saturation motif cũng xuất hiện enzyme kinetics:
 
-## 7. Bayes: từ prior knowledge tới updated belief
+\[
+v=\frac{V_{max}[S]}{K_m+[S]}
+\]
+
+Hai equation không mô tả cùng mechanism, nhưng share idea: response gần linear khi input thấp rồi chạm ceiling do limiting capacity.
+
+Recognize motif giúp transfer intuition mà không đánh đồng system.
+
+## 6. Logarithm
+
+pH:
+
+\[
+pH=-\log_{10}[H^+]
+\]
+
+Decibel, information measure, fold-change visualization và some population statistics cũng dùng log.
+
+Log hữu ích khi quantity span nhiều order of magnitude. Nó biến multiplicative difference thành additive scale.
+
+Ví dụ pH 6 và 7 khác khoảng 10 lần [H⁺], không phải “1 unit nhỏ”.
+
+## 7. Gradient
+
+Gradient là spatial change. Diffusion flux:
+
+\[
+J=-D\nabla C
+\]
+
+Trong 1D thành \(-D dC/dx\).
+
+Gradient xuất hiện ở:
+
+- concentration across membrane;
+- voltage/electrochemical gradient;
+- proton gradient mitochondria/chloroplast;
+- morphogen gradient embryo;
+- oxygen/nutrient gradient biofilm;
+- water potential gradient plant.
+
+Một principle: **difference can store direction/potential**. Living system tiêu energy để tạo difference, rồi khai thác difference để làm work hoặc encode information.
+
+## 8. Flow = driving force / resistance
+
+Circulation gần dạng:
+
+\[
+Q=\frac{\Delta P}{R}
+\]
+
+Electrical current có analogous form \(I=V/R\). Diffusion cũng có driving gradient và resistance/permeability.
+
+Không nên nói blood vessel “y như circuit”, nhưng analogy giúp hiểu: tăng driving pressure tăng flow; tăng resistance giảm flow.
+
+## 9. Feedback
+
+Negative feedback:
+
+```text
+variable lệch
+→ sensor
+→ response
+→ deviation giảm
+```
+
+Xuất hiện ở:
+
+- glucose–insulin;
+- body temperature;
+- enzyme feedback inhibition;
+- endocrine axis;
+- gene regulation;
+- population density dependence.
+
+Positive feedback xuất hiện blood clotting, childbirth, switch-like gene circuit.
+
+Control theory cung cấp vocabulary sensor, controller, actuator, gain, delay, stability.
+
+## 10. Delay có thể tạo oscillation
+
+Nếu feedback response đến chậm, system có thể overshoot/oscillate.
+
+Predator–prey cycle, endocrine pulse, circadian rhythm và gene oscillator đều có delay/nonlinearity.
+
+Stable feedback không chỉ cần “negative”; timing và gain cũng quan trọng.
+
+## 11. Probability
+
+Meiosis là random sampling allele; mutation stochastic; receptor binding probabilistic; disease risk probabilistic.
+
+Product rule và conditional probability xuất hiện genetics/diagnostics.
 
 Bayes theorem:
 
@@ -116,214 +177,275 @@ Bayes theorem:
 P(H|D)=\frac{P(D|H)P(H)}{P(D)}
 \]
 
-Trong genetics, prior allele frequency ảnh hưởng interpretation của variant.
+được dùng khi update belief từ prior + evidence.
 
-Trong diagnostic testing, disease prevalence ảnh hưởng positive predictive value.
+Medical testing là example: positive test probability disease phụ thuộc disease prevalence, sensitivity và specificity.
 
-Trong phylogenetics, Bayesian method update probability của tree/model từ sequence data.
+## 12. Base rate và medical test
 
-Đây là một mathematical pattern xuyên nhiều domain.
+Nếu disease hiếm, false positive từ population healthy lớn có thể khiến positive predictive value thấp hơn intuition.
 
-## 8. Rate of change và calculus
+Điều này cho thấy “test accuracy 99%” chưa đủ; cần conditional probability.
 
-Physiology và ecology thường quan tâm **rate**, không chỉ amount.
+Biology và statistics không thể tách trong diagnostic reasoning.
 
-Heart rate, glucose clearance, reaction velocity, population growth và drug concentration change đều là rate.
+## 13. Sampling và uncertainty
 
-Derivative:
+Experiment dùng sample để infer population. Sample mean có uncertainty; replicate giúp estimate variance.
 
-\[
-\frac{dx}{dt}
-\]
+Small sample dễ bị noise/outlier. Biological variability là signal về system heterogeneity, không chỉ nuisance.
 
-đo instantaneous rate of change.
+Confidence interval và effect size thường quan trọng hơn chỉ p-value.
 
-Differential equation mô tả system khi rate phụ thuộc current state.
+## 14. Hypothesis testing và multiple comparisons
 
-Không cần trở thành mathematician để học biology, nhưng hiểu derivative như “tốc độ thay đổi tại thời điểm” giúp đọc model tự nhiên hơn.
+Omics test hàng nghìn gene; nếu dùng threshold 0.05 naïve, false positive nhiều.
 
-## 9. Conservation law: vật chất không biến mất trong model
+False discovery rate correction quản lý expected proportion false discovery.
 
-Mass balance có dạng:
+Scale data lớn buộc statistics thay đổi cách làm khoa học.
 
-\[
-\text{change} = \text{input} - \text{output} + \text{production} - \text{consumption}
-\]
+## 15. Correlation vs causation
 
-Population balance: birth/death/migration.
+Correlation matrix trong gene expression hay microbiome có thể tìm pattern nhưng không chứng minh direction.
 
-Metabolic flux: substrate in/product out.
+Causal inference cần intervention, temporal order, instrument hoặc mechanistic evidence.
 
-Kidney physiology: filtered, reabsorbed, secreted, excreted.
+Directed acyclic graph (DAG) giúp reason confounder/mediator.
 
-Carbon cycle: reservoir + flux.
+Scientific thinking chapter quay lại bằng formal model.
 
-Cùng accounting logic hoạt động ở rất nhiều scale.
+## 16. Graph theory
 
-## 10. Network và graph theory
+Graph gồm node và edge.
 
-Nhiều biological system không phải chain mà là network.
+Biological mapping:
 
-Gene regulatory network: gene/protein là node, regulation là edge.
+- protein interaction network;
+- gene-regulatory network;
+- metabolic network;
+- neural network;
+- food web;
+- phylogenetic tree (special graph structure);
+- genome assembly graph.
 
-Metabolic network: metabolite/reaction tạo graph.
+Degree, path, centrality và community structure có thể mô tả network.
 
-Neural network: neuron/synapse.
+Nhưng high centrality không tự chứng minh biological importance; representation/data bias matter.
 
-Food web: species/trophic interaction.
+## 17. Trees
 
-Phylogenetic tree là special graph dạng tree.
+Phylogenetic tree, cell lineage tree và decision tree đều là tree nhưng semantic khác.
 
-Assembly graph trong genomics reconstruct sequence từ overlap.
+Tree useful khi process branching và no recombination assumption phù hợp. Horizontal gene transfer/sexual recombination có thể cần network thay tree.
 
-Graph theory cho language để nói degree, path, connectivity, community, centrality và robustness.
+Representation phải match mechanism.
 
-## 11. Information theory và biology
+## 18. Information theory
 
-DNA sequence có information theo statistical sense. Neural signal và sensory coding cũng liên quan information transfer.
+DNA sequence có alphabet; entropy có thể đo uncertainty/distribution symbols. Sequence conservation gợi ý constraint; motif có information content.
 
-Entropy trong information theory:
+Neural coding và signaling cũng có channel/noise perspective.
 
-\[
-H=-\sum_i p_i\log p_i
-\]
+Nhưng “biological information” không nên bị tách khỏi physical substrate. Information phải được encoded, transmitted và decoded bằng molecule/cell.
 
-đo uncertainty của distribution.
+## 19. Algorithms và sequence comparison
 
-Concept này không giống hoàn toàn thermodynamic entropy nhưng có mathematical relation sâu trong statistical physics.
-
-Trong sequencing, information content và base quality cũng được biểu diễn bằng logarithmic score.
-
-## 12. Logarithm xuất hiện vì biology trải nhiều bậc độ lớn
-
-pH dùng \(-\log_{10}[H^+]\).
-
-Phylogenetic likelihood thường dùng log-likelihood để tránh số cực nhỏ.
-
-Fold change gene expression thường log-transform.
-
-Population và microbial count có thể trải nhiều orders of magnitude.
-
-Log transform biến multiplication thành addition:
+Alignment dynamic programming giải optimization:
 
 \[
-\log(ab)=\log a + \log b
+score(i,j)=\max
+\begin{cases}
+score(i-1,j-1)+match/mismatch\\
+score(i-1,j)+gap\\
+score(i,j-1)+gap
+\end{cases}
 \]
 
-và nén range lớn, nên rất hữu ích trong biological data.
+Bioinformatics biến evolutionary assumption thành scoring rule và computation.
 
-## 13. Optimization và trade-off
+Algorithm complexity quyết định data scale nào khả thi.
 
-Evolutionary system không “solve global optimum” theo engineering sense, nhưng trade-off có thể được phân tích bằng optimization framework.
+## 20. Optimization và biological trade-off
 
-Organism phân bổ energy giữa growth/reproduction.
+Evolution không tối ưu một objective duy nhất. Trait thường trade-off:
 
-Plant cân bằng CO₂ uptake với water loss.
+- reproduction vs maintenance;
+- water loss vs CO₂ uptake;
+- immune sensitivity vs autoimmunity;
+- speed vs accuracy;
+- growth vs stress resistance.
 
-Hemoglobin cân bằng loading/release oxygen.
+Engineering optimization thường có objective rõ; biological “fitness landscape” context-dependent và historical constraint.
 
-Immune system cân bằng defense và tissue damage.
+## 21. Energy landscape
 
-Drug dosing cân bằng efficacy/toxicity.
+Protein folding có thể hình dung energy landscape với nhiều conformation. Developmental cell fate đôi khi dùng metaphor landscape state; evolution có fitness landscape.
 
-Tư duy optimization giúp hỏi objective và constraint, nhưng phải nhớ evolution bị history và local constraint giới hạn.
+Các “landscape” không cùng mathematical object, nhưng share idea system state move trong space có basin/barrier.
 
-## 14. Control theory và physiology
+Cần tránh kéo analogy quá xa.
 
-Control system có sensor, set/reference, controller, actuator và feedback.
+## 22. Dimensional analysis
 
-Thermoregulation, glucose control, blood pressure và endocrine axis đều có architecture tương tự.
+Trước khi tin equation, kiểm tra unit.
 
-Tuy nhiên biological control thường decentralized, nonlinear và adaptive hơn engineering controller đơn giản.
+Nếu flow = volume/time, right side cũng phải cho volume/time. Unit mismatch thường lộ lỗi model/calc.
 
-Comparison hữu ích để xây mental model nhưng không nên ép organism thành máy thermostat đơn giản.
+Biology có nhiều unit: mol/L, mmHg, mV, J/mol, cells/mL, kg/m². Dimensional thinking giảm memorization formula.
 
-## 15. Signal processing và nervous system
+## 23. Normalization
 
-Neuron integrate input theo time và space. Sensory receptor filter stimulus. Neural circuit transform signal.
+RNA-seq count, qPCR, microscopy intensity và metabolomics đều cần normalization vì raw measurement phụ thuộc library size, loading hay instrument.
 
-Concept threshold, gain, noise, adaptation và frequency coding đều có analogue trong signal processing.
+Normalization không phải cosmetic; nó xác định “so sánh công bằng” nghĩa là gì.
 
-Đây là bridge tự nhiên giữa neuroscience và electrical/computer engineering.
+Sai normalization có thể tạo pattern giả.
 
-## 16. Database và versioning trong genomics
+## 24. Machine learning
 
-Genome data phụ thuộc reference build. Variant coordinate trên build khác nhau có thể không map trực tiếp.
+ML thường tìm function:
 
-Pipeline bioinformatics cần version package, parameter và raw-data provenance.
+\[
+f(X)\rightarrow y
+\]
 
-Đây là software-engineering principle: **reproducibility requires explicit state**.
+Trong biology, X có thể gene expression/image/sequence; y có thể cell type/risk/property.
 
-Biology hiện đại vì thế không chỉ wet lab; data engineering là một phần scientific method.
+Prediction tốt không tự cho mechanism. Feature association có thể do confounder.
 
-## 17. Machine learning: high-dimensional pattern nhưng không tự tạo causality
+Train/validation/test split và external validation quan trọng để tránh overfitting.
 
-Omics có nhiều feature hơn sample. ML giúp compression, classification và prediction.
+## 25. Overfitting và biological dataset nhỏ
 
-Nhưng model predictive tốt không đồng nghĩa mechanism đúng.
+Model quá flexible có thể memorize sample. Genomics thường có p variables rất lớn nhưng n sample nhỏ.
 
-Nếu batch effect correlate disease label, model có thể “học máy sequencing” thay vì biology.
+Regularization, cross-validation và independent cohort giúp, nhưng không thay biological design.
 
-Do đó train/test split, external validation và experimental intervention cực quan trọng.
+Data quantity theo feature không đồng nghĩa information quantity theo independent sample.
 
-## 18. Causal graph: nối lại chapter đầu
+## 26. Dynamical systems
 
-Ta bắt đầu library bằng causal reasoning và kết thúc bằng cùng principle.
+General ODE:
 
-Một causal graph biểu diễn variable và directed relationship.
+\[
+\frac{d\mathbf{x}}{dt}=\mathbf{f}(\mathbf{x},\mathbf{u})
+\]
 
-Nếu A và B correlation vì cùng chịu C, intervention lên A có thể không đổi B.
+State vector có thể là concentration gene/protein/population. Fixed point là state không đổi theo model; stability hỏi perturbation có quay lại không.
 
-Biology data rất dễ confounded bởi age, ancestry, diet, batch, environment.
+Homeostasis, ecosystem resilience và gene circuit đều có thể dùng language này.
 
-Do đó hiểu mechanism luôn quan trọng hơn chỉ tìm association.
+## 27. Stochastic systems
 
-## 19. Một knowledge graph thống nhất
+Khi molecule number thấp, randomness đáng kể. Gene transcription có burst; ion channel open probabilistically; population drift stochastic.
 
-Có thể nén library bằng các đường nối sau:
+Deterministic ODE dùng average có thể bỏ mất variability.
+
+Stochastic simulation như Gillespie phù hợp một số molecular network.
+
+## 28. Scale separation
+
+Một signaling phosphorylation xảy ra seconds, gene expression minutes-hours, development days-years, evolution generations, geological cycle millennia.
+
+Model thường tách fast/slow process để đơn giản.
+
+Nhưng khi timescale overlap, interaction tạo behavior phức tạp.
+
+## 29. Data structure và database
+
+Sequence, tree, graph, matrix, time series và image là data type khác nhau.
+
+Chọn representation đúng quyết định algorithm có thể làm gì. Genome variant thường table; expression là matrix; phylogeny là tree; protein contact là graph.
+
+Computer science skill không chỉ code; nó là thiết kế representation phù hợp domain.
+
+## 30. Simulation
+
+Khi analytic solution khó, simulation thử rule nhiều step để xem emergent behavior.
+
+Agent-based model có thể mô phỏng individual cell/organism; finite-difference model mô phỏng diffusion; Monte Carlo dùng random sampling.
+
+Simulation không tự chứng minh world hoạt động như model. Nó chỉ cho biết **nếu rule/parameter đúng thì outcome nào xuất hiện**.
+
+## 31. One motif xuyên toàn thư viện: difference → flow → feedback
+
+Ta có thể nén rất nhiều Biology vào ba bước:
+
+1. system tạo/nhận một **difference**: concentration, voltage, pressure, information state;
+2. difference tạo **flow/change**;
+3. feedback điều chỉnh difference/flow.
+
+Ví dụ:
+
+- proton gradient → H⁺ flow → ATP → feedback metabolism;
+- blood pressure → blood flow → tissue oxygen → cardiovascular feedback;
+- prey abundance → predator growth → prey decline → coupled feedback;
+- gene-expression difference → cell-state transition → regulatory feedback.
+
+Đây là mental model powerful vì dùng được từ nanomet đến ecosystem.
+
+## 32. Một motif thứ hai: variation → selection/filter → memory
+
+- mutation/recombination → natural selection → allele-frequency memory;
+- B-cell receptor diversity → antigen selection → immune memory;
+- neural synaptic variation/activity → plasticity selection → memory trace;
+- CRISPR spacer acquisition → target recognition → microbial immune memory.
+
+Mechanism khác nhau nhưng logic information selection xuất hiện lặp lại.
+
+## 33. Một motif thứ ba: modularity + network
+
+Cell dùng organelle; gene network dùng module; organism dùng organ; ecosystem dùng trophic guild.
+
+Modularity giúp system complexity manageable và damage local hơn, nhưng module vẫn phải communicate qua network.
+
+Software engineering cũng dùng module/API vì problem tương tự: complexity management.
+
+## 34. Khi connection với IT thực sự hữu ích
+
+Biology và IT không giống nhau literal. Nhưng một số analogy productive:
+
+- DNA ~ persistent sequence store, nhưng không phải executable code độc lập;
+- receptor ~ input interface;
+- signaling network ~ event-processing network;
+- feedback control ~ control system;
+- gene regulatory network ~ state machine/network;
+- immune repertoire ~ distributed pattern-recognition system;
+- phylogeny ~ branching version history (nhưng recombination làm khác Git tree);
+- bioinformatics pipeline ~ data engineering pipeline.
+
+Analogy tốt khi giúp hỏi đúng câu, không khi ép biology thành computer.
+
+## 35. Cách dùng chapter này khi học lại
+
+Khi gặp một concept khó, hãy thử map nó vào các motif:
+
+**scale nào? state variable là gì? gradient/driving force là gì? flow/rate là gì? feedback ở đâu? uncertainty ở đâu? network node/edge là gì? constraint/trade-off nào?**
+
+Nếu trả lời được, concept thường trở nên ít rời rạc hơn.
+
+## 36. Final mental model
+
+Toàn Biology Knowledge Library có thể được nhìn như một knowledge graph:
 
 ```mermaid
 flowchart TD
-Chem[Chemistry & water] --> BioM[Biomolecules]
-BioM --> Mem[Membranes & cells]
-Mem --> Met[Metabolism]
-Met --> Sig[Signaling]
-Sig --> Gene[Gene expression]
-Gene --> Inh[Inheritance]
-Inh --> Evo[Evolution]
-Evo --> Phy[Phylogeny]
-Mem --> Phys[Physiology]
-Sig --> Phys
-Gene --> Dev[Development]
-Phys --> Eco[Ecology]
-Evo --> Eco
-Phy --> Micro[Microbiology]
-Micro --> Eco
-Gene --> BioTech[Biotechnology]
-BioTech --> Comp[Computation]
-Eco --> Earth[Earth systems]
+A[Chemistry] --> B[Biomolecules]
+B --> C[Cell boundary & gradients]
+C --> D[Metabolism & signaling]
+D --> E[Gene expression]
+E --> F[Inheritance & variation]
+F --> G[Evolution]
+G --> H[Biodiversity]
+D --> I[Physiology & development]
+H --> J[Ecology]
+I --> J
+E --> K[Biotechnology & bioinformatics]
+G --> K
+J --> L[Earth systems & conservation]
 ```
 
-Mỗi arrow không chỉ là “nên đọc file A trước B”. Nó là dependency lý luận.
+Điều quan trọng không phải nhớ sơ đồ, mà thấy mỗi arrow là một causal dependency.
 
-Chemistry giải thích molecular interaction. Molecular interaction tạo membrane và enzyme. Membrane/energy tạo cell process. Cell process cần regulation. Regulation dùng gene expression. Gene được truyền tạo variation. Variation trong population tạo evolution. Evolution tạo diversity. Organism interaction tạo ecology. Và technology tái sử dụng tất cả mechanism đó.
-
-## 20. Cách dùng connection này khi gặp vấn đề mới
-
-Khi gặp một câu hỏi sinh học mới, thay vì cố nhớ fact, hãy đi theo chuỗi:
-
-**Scale nào?** Molecular, cell, organism hay population?
-
-**Dòng nào?** Matter, energy hay information?
-
-**Gradient hay feedback nào?** Có force hoặc control loop nào?
-
-**Constraint nào?** Resource, geometry, time, history hay trade-off?
-
-**Variation ở đâu?** Individual khác nhau vì gì?
-
-**Mechanism nối cause tới effect?** Có bước trung gian nào?
-
-Nếu trả lời được các câu này, phần lớn “fact mới” sẽ có chỗ gắn vào knowledge graph thay vì trở thành kiến thức rời rạc.
-
-> **Mental model cuối:** Sinh học là khoa học về các network sống được tổ chức qua nhiều scale. Các chapter khác nhau không phải những môn riêng; chúng là những góc nhìn khác nhau lên cùng các dòng vật chất, năng lượng và thông tin.
+> **Mental model cuối library:** life là complex adaptive system được xây từ matter, chạy bằng energy gradient, tổ chức bằng information, ổn định bằng feedback, đa dạng nhờ variation và được định hình qua selection/history. Mathematics cung cấp language của relationship; computation cung cấp cách xử lý scale; Biology cung cấp mechanism và meaning.
