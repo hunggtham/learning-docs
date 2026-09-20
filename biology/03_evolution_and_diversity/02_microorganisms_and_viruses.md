@@ -1,208 +1,203 @@
 # Vi sinh vật và virus — Microorganisms and Viruses (미생물과 바이러스)
 
-Phần lớn lịch sử sự sống trên Trái Đất là lịch sử của sinh vật rất nhỏ. Vi khuẩn và archaea đã tồn tại hàng tỷ năm trước khi động vật xuất hiện, và ngày nay chúng vẫn chi phối nhiều chu trình carbon, nitrogen, sulfur cũng như sống cộng sinh trong cơ thể chúng ta.
+Phylogeny cho thấy phần lớn diversity của life không nằm ở những organism lớn ta dễ nhìn thấy. Microbial world là nơi nhiều nguyên lý đã học hội tụ: cell nhỏ cần membrane và metabolism; genome nhỏ nhưng rất linh hoạt; population lớn tiến hóa nhanh; gene có thể truyền ngang; và activity của microorganism ảnh hưởng toàn ecosystem.
 
-“Microorganism” không phải một clade duy nhất. Đây là cách gọi dựa trên kích thước và cách quan sát. Bacteria, Archaea, nhiều protist, microscopic fungi và một số algae đều có thể nằm trong microbiology. Virus thậm chí không phải cell, nhưng không thể hiểu modern biology nếu bỏ qua chúng.
+Vì vậy microbiology không nên học như “một danh sách bacteria và virus”. Nó là case study cực tốt để thấy cell biology, genetics, evolution và ecology hoạt động cùng nhau.
 
-## Bacteria — một cell có thể làm được rất nhiều việc
+## 1. Microorganism là một category theo scale, không phải một clade duy nhất
 
-**Bacteria (vi khuẩn / 세균)** là prokaryote: không có nucleus membrane-bound, nhưng có plasma membrane, DNA, ribosome và metabolic machinery.
+**Microorganism (vi sinh vật / 미생물)** là organism quá nhỏ để quan sát rõ bằng mắt thường. Category này có thể gồm bacteria, archaea, nhiều protist, microscopic fungi và một số algae.
 
-Bacterial chromosome thường là một DNA molecule circular chính, dù có nhiều ngoại lệ. Ngoài chromosome, bacteria có thể mang **plasmid (플라스미드)** — DNA molecule nhỏ tự replicate.
+Chúng không nhất thiết có common ancestor gần nhau chỉ vì đều nhỏ.
 
-Plasmid có thể mang gene liên quan metabolism, stress response hoặc antibiotic resistance và có thể transfer giữa cell trong một số điều kiện.
+Đây là reminder rằng classification theo appearance và classification theo phylogeny là hai việc khác nhau.
 
-## Bacterial shape không chỉ là tên gọi
+## 2. Bacteria: nhỏ nhưng metabolic diversity rất lớn
 
-Textbook thường chia shape thành cocci (cầu), bacilli (que) và spiral. Nhưng shape có functional consequence.
+Bacteria là prokaryote, không có nucleus membrane-bound. Nhưng chúng có membrane, ribosome, DNA, enzyme và signaling system.
 
-Surface-area-to-volume ratio, motility, nutrient diffusion và interaction với environment có thể khác theo shape.
+Một số lấy energy từ light; một số oxidize inorganic compound; một số dùng organic carbon; một số sống có oxygen, một số không.
 
-Cell wall giúp bacteria chịu osmotic pressure và duy trì morphology.
+Metabolic diversity của bacteria vượt xa cách chia “có lợi/có hại”.
 
-## Gram-positive và Gram-negative
+Nhiều global biogeochemical cycle phụ thuộc microbial metabolism.
 
-**Gram staining (nhuộm Gram / 그람염색)** chia nhiều bacteria thành hai group dựa trên cell-envelope structure.
+## 3. Archaea: nhìn giống bacteria nhưng evolutionary khác
 
-Gram-positive bacteria thường có peptidoglycan layer dày và không có outer membrane kiểu Gram-negative.
+Archaea cũng là prokaryote nhưng membrane lipid chemistry, transcription machinery và nhiều molecular feature khác bacteria.
 
-Gram-negative bacteria có peptidoglycan mỏng hơn nằm giữa inner và outer membrane; outer membrane chứa lipopolysaccharide.
+Một số archaea sống ở extreme environment, nhưng nhiều loài sống ở ocean, soil và microbiome bình thường.
 
-Classification này quan trọng vì envelope structure ảnh hưởng permeability, immune recognition và sensitivity với một số antimicrobial treatment. Nhưng Gram status không phải phylogenetic tree hoàn chỉnh.
+Việc từng gọi chúng là “extremophile đặc biệt” rồi sau đó phát hiện chúng phổ biến hơn là ví dụ cách scientific picture thay đổi khi sampling tốt hơn.
 
-## Archaea — nhìn giống bacteria nhưng evolutionary khác sâu
+## 4. Growth của bacterial population
 
-**Archaea (cổ khuẩn / 고세균)** cũng prokaryotic nhưng membrane lipid, transcription machinery và nhiều molecular feature khác bacteria.
+Bacteria có thể divide bằng binary fission.
 
-Một số archaea sống ở extreme environment như high salt hoặc high temperature, nhưng nhiều archaea sống ở ocean, soil và microbiome bình thường.
+Nếu condition lý tưởng và generation time cố định, population có thể tăng exponential:
 
-Vì vậy “Archaea = extremophile” là misconception.
+\[
+N(t)=N_0 2^{t/g}
+\]
 
-## Microbial metabolism — diversity vượt xa plant và animal
+với \(g\) là generation time.
 
-Human chủ yếu lấy energy từ organic food và dùng oxygen. Microorganism có metabolic diversity lớn hơn nhiều.
+Nhưng culture thật không tăng exponential mãi. Nutrient cạn, waste tích lũy và space hạn chế, dẫn tới stationary phase rồi decline.
 
-Một số dùng light; một số oxidize inorganic compound; một số dùng oxygen; một số dùng nitrate, sulfate hoặc molecule khác làm electron acceptor.
+Đây là bridge trực tiếp từ cell metabolism sang population ecology.
 
-Hai trục hữu ích:
+## 5. Biofilm: bacteria sống như community
 
-- energy source: light (phototroph) hoặc chemical reaction (chemotroph);
-- carbon source: CO₂/inorganic carbon (autotroph) hoặc organic carbon (heterotroph).
+Trong tự nhiên, nhiều bacteria không sống đơn lẻ mà tạo **biofilm (생물막)** trên surface.
 
-Kết hợp hai trục tạo photolithoautotroph, chemoorganoheterotroph và nhiều strategy khác.
+Cell tiết extracellular matrix, tạo structure giữ water và molecule, đồng thời tạo microenvironment khác nhau.
 
-Điều này giúp hiểu ecosystem: microorganism mở rộng những chemical pathway mà biosphere có thể khai thác.
+Trong biofilm, diffusion limitation làm oxygen/nutrient không phân bố đều. Một số cell grow chậm, làm antibiotic targeting fast-growing cell kém hiệu quả hơn.
 
-## Nitrogen fixation — vì sao microorganism quan trọng cho toàn biosphere?
+Biofilm cho thấy property ở community level không thể suy chỉ từ một bacterium isolated.
 
-Atmospheric N₂ rất nhiều nhưng phần lớn organism không trực tiếp sử dụng được vì N≡N bond rất bền.
+## 6. Quorum sensing: population density trở thành signal
 
-Một số bacteria và archaea có enzyme **nitrogenase** có thể chuyển N₂ thành ammonia/ammonium usable hơn.
+Một số bacteria tiết signal molecule. Khi population density tăng, signal concentration tăng. Khi vượt threshold, nhiều cell đồng thời đổi gene expression.
 
-**Nitrogen fixation (cố định đạm / 질소고정)** đưa atmospheric nitrogen vào biological cycle.
+Đây là **quorum sensing (정족수 감지)**.
 
-Plant sau đó lấy inorganic nitrogen từ soil; animal lấy nitrogen qua food. Vì vậy protein trong body gián tiếp phụ thuộc microbial process ở planetary scale.
-
-## Microbiome — “cơ thể” không chỉ gồm human cell
-
-**Microbiome (마이크로바이옴)** nói đến community microorganism và thường cả genetic/material context của chúng trong habitat như gut, skin hoặc soil.
-
-Gut microbiome tham gia digestion, metabolite production, immune interaction và colonization resistance.
-
-Nhưng microbiome science có variation lớn giữa individual và nhiều correlation chưa phải causation. Claim kiểu “một species bacteria quyết định mood/weight/disease” thường quá đơn giản nếu thiếu mechanistic evidence.
-
-## Symbiosis — không phải mọi microbe đều là pathogen
-
-**Symbiosis (cộng sinh theo nghĩa rộng / 공생)** mô tả interaction lâu dài giữa species.
-
-**Mutualism**: hai bên cùng benefit.
-
-**Commensalism**: một bên benefit, bên kia ít bị ảnh hưởng trong model đơn giản.
-
-**Parasitism**: một bên benefit làm host chịu cost.
-
-Relationship có thể đổi theo context. Một microbe bình thường ở gut có thể gây problem nếu vào bloodstream hoặc host immune state thay đổi.
-
-## Horizontal gene transfer — gene không chỉ đi từ cha mẹ xuống con
-
-Bacteria có thể nhận genetic material ngoài vertical inheritance.
-
-Ba mechanism kinh điển:
-
-**Transformation**: uptake DNA từ environment.
-
-**Transduction**: bacteriophage chuyển DNA giữa bacteria.
-
-**Conjugation**: DNA transfer qua cell-to-cell contact, thường liên quan plasmid.
-
-Horizontal gene transfer làm microbial evolution nhanh và khiến gene history đôi khi khác species history.
-
-## Antibiotic resistance — evolution có thể quan sát trực tiếp
-
-Antibiotic tạo selection pressure. Nếu population có variation giúp một số cell survive better, những lineage đó có thể tăng frequency.
-
-Resistance có thể đến từ mutation hoặc gene acquired qua horizontal transfer.
-
-Mental model quan trọng là **antibiotic không dạy bacteria kháng thuốc**. Nó thay environment, từ đó selection thay composition population.
-
-Việc dùng antibiotic không cần thiết hoặc không đúng chỉ định tạo thêm selection opportunity cho resistant lineage; đây là reason antimicrobial stewardship quan trọng.
-
-# Virus — biological information package phụ thuộc host
-
-**Virus (바이러스)** không phải cell. Virus thường gồm genetic material (DNA hoặc RNA) được đóng trong protein coat **capsid**, đôi khi có lipid envelope lấy từ host membrane.
-
-Virus không có metabolism đầy đủ và không tự translation protein. Nó phải sử dụng host cell machinery.
-
-## Viral life cycle ở mức khái niệm
-
-Mặc dù virus rất đa dạng, một abstraction chung là:
+Logic này nối signaling với population behavior:
 
 ```text
-attachment → entry → genome expression/replication → assembly → release
+individual cells release signal
+      ↓
+population density rises
+      ↓
+signal accumulates
+      ↓
+receptor threshold crossed
+      ↓
+coordinated gene expression
 ```
 
-### Attachment
+Các behavior như biofilm formation hoặc virulence factor production có thể được coordinate theo cách này.
 
-Viral surface protein bind receptor hoặc surface molecule của host. Điều này góp phần quyết định **host range** và tissue tropism.
+## 7. Horizontal gene transfer: information không chỉ đi parent → offspring
 
-### Entry
+Bacteria có thể nhận DNA qua ba route kinh điển.
 
-Genome hoặc particle đi vào host cell bằng fusion, endocytosis hoặc mechanism khác tùy virus.
+**Transformation**: uptake DNA tự do từ environment.
 
-### Replication và expression
+**Transduction**: bacteriophage mang DNA giữa bacteria.
 
-Virus phải tạo genome copy và protein component. Strategy khác nhau tùy genome là DNA, positive-sense RNA, negative-sense RNA hay retroviral RNA.
+**Conjugation**: DNA, thường plasmid, được truyền qua cell-cell contact.
 
-### Assembly và release
+Những mechanism này làm gene flow ở microbial world rất nhanh.
 
-New component tự assemble thành virion. Virus có envelope thường bud qua membrane; virus khác có thể release qua cell lysis hoặc pathway khác.
+Đây là lý do một resistance gene có thể lan giữa lineage mà không chờ mutation độc lập xuất hiện ở từng species.
 
-## DNA virus, RNA virus và retrovirus
+## 8. Antibiotic resistance như một chain causal đầy đủ
 
-Genome type quyết định nhiều step replication.
+Hãy nối từ molecular đến population scale.
 
-RNA-dependent RNA polymerase cần cho nhiều RNA virus vì human cell không có enzyme chung để copy RNA từ RNA.
+Một mutation đổi target protein hoặc một plasmid mang enzyme phá antibiotic. Cell có resistance phenotype. Khi antibiotic hiện diện, susceptible cell bị inhibited mạnh hơn. Resistant cell có relative fitness cao hơn. Sau nhiều generation, resistance gene frequency tăng.
 
-**Retrovirus** dùng **reverse transcriptase (역전사효소)** tạo DNA từ RNA, rồi DNA có thể integrate vào host genome.
+```text
+DNA variant
+  ↓
+protein / pathway change
+  ↓
+cell survives drug better
+  ↓
+differential reproduction
+  ↓
+population evolves
+```
 
-Điều này là một exception quan trọng đối với simplified “DNA → RNA → protein” flow, nhưng không phá central dogma ở meaning gốc về sequence information không đi từ protein ngược về nucleic acid.
+Đây là toàn bộ genetics → phenotype → selection chain trong một example thực tế.
 
-## Virus có sống không?
+## 9. Microbiome: host là một ecosystem
 
-Virus có genome, mutation và evolution nhưng không tự duy trì metabolism hay reproduction ngoài host.
+**Microbiome (마이크로바이옴)** thường dùng để chỉ microbial community cùng genetic material trong một environment như gut, skin hoặc soil.
 
-Vì vậy nhiều definition không coi virus là organism living độc lập. Tuy nhiên câu hỏi không có một boundary hoàn toàn sạch, và chính ambiguity này giúp hiểu rằng life là set of interacting properties.
+Host cung cấp habitat và nutrient; microbe có thể metabolize compound host không tự xử lý, cạnh tranh pathogen hoặc tạo metabolite ảnh hưởng host signaling.
 
-## Bacteriophage — virus của bacteria
+Nhưng association microbiome–disease rất dễ bị overinterpreted. Diet, medication và disease state có thể đồng thời đổi microbiome. Do đó correlation không tự động thành causation.
 
-**Bacteriophage (thực khuẩn thể / 박테리오파지)** infect bacteria.
+Causal reasoning ở chapter đầu tiếp tục cần thiết ở đây.
 
-Một số phage theo lytic cycle, replicate rồi làm host lyse. Một số có thể integrate genome vào host và ở trạng thái dormant/lysogenic trước khi activate.
+## 10. Virus: information system phụ thuộc host
 
-Phage rất quan trọng trong microbial ecology và gene transfer.
+**Virus (바이러스)** thường gồm genome DNA hoặc RNA nằm trong protein coat, đôi khi có lipid envelope.
 
-## Virus evolution
+Virus không có independent metabolism hoàn chỉnh. Nó dùng host machinery để replicate.
 
-Virus population có thể tiến hóa nhanh vì generation time ngắn, population lớn và ở nhiều RNA virus, replication error rate tương đối cao.
+Một viral lifecycle có logic:
 
-Selection, drift, recombination hoặc reassortment có thể tạo lineage mới tùy viral system.
+```text
+attachment
+ ↓
+entry
+ ↓
+genome replication / expression
+ ↓
+assembly
+ ↓
+release
+```
 
-Khi thảo luận variant, cần tách ba khái niệm:
+Mỗi step có molecular target khác nhau cho antiviral intervention.
 
-- mutation: change sequence;
-- variant/lineage: population mang combination mutation;
-- phenotype: effect thực tế như transmissibility, immune escape hoặc severity, phải đo bằng evidence.
+## 11. Virus và câu hỏi “có sống không?”
 
-Không thể suy phenotype chỉ từ số mutation.
+Virus có genome, mutation và evolution nhưng không tự metabolism/reproduction bên ngoài host.
 
-## Innate và adaptive immunity nhìn virus như thế nào?
+Vì vậy virus nằm ở boundary của definition life.
 
-Host có receptor nhận pattern viral và activate innate response, ví dụ interferon pathway. Adaptive immunity dùng antibody và T cell để nhận specific antigen.
+Case này quan trọng hơn debate semantic: nó cho thấy properties của life có thể modular, không nhất thiết xuất hiện tất cả trong một entity độc lập.
 
-Virus có thể evolve mechanism né immune response, nhưng host immune system cũng là dynamic selective environment.
+## 12. RNA virus tiến hóa nhanh vì sao?
 
-Phần immunity được xây chi tiết trong [[../04_organismal_biology/02_nervous_endocrine_and_immune_systems]].
+Nhiều RNA virus dùng polymerase có proofreading kém hơn DNA replication system, nên mutation rate cao hơn.
 
-## Common misconceptions
+Population size lớn và generation nhanh làm variation xuất hiện nhanh.
 
-### “Bacteria = germ = disease”
+Nhưng mutation rate quá cao cũng có cost vì nhiều genome bị damage.
 
-Sai. Phần lớn bacterial interaction không nhất thiết gây disease; nhiều bacteria cần cho ecosystem và host physiology.
+Evolution luôn cân bằng variation và fidelity.
 
-### “Antibiotic chữa virus”
+## 13. Bacteriophage và CRISPR: arms race ở molecular scale
 
-Antibiotic nhắm bacterial structure/process, không có target tương ứng ở virus. Antiviral drug cần mechanism khác.
+Bacteriophage infect bacteria. Bacteria có defense; phage evolution counter-defense.
 
-### “Virus luôn muốn giết host”
+CRISPR-Cas system ở nhiều bacteria/archaea lưu fragment từ invader genome như molecular memory, rồi dùng RNA guide để nhận diện sequence tương tự lần sau.
 
-Virus không có ý chí. Virulence là phenotype tiến hóa trong trade-off transmission, replication và host interaction.
+Biotechnology sau này tái sử dụng logic này thành gene-editing tool.
 
-### “Microbiome tốt càng đa dạng càng tốt trong mọi trường hợp”
+Đây là ví dụ tuyệt vời: một mechanism evolution từ microbial defense trở thành technology của con người.
 
-Diversity có thể useful indicator trong một số context nhưng không có rule universal. Function và composition matter.
+## 14. Microbe và global nutrient cycle
 
-## Mental Model
+Nitrogen fixation biến N₂ thành form sinh vật dùng được. Nitrification và denitrification tiếp tục chuyển nitrogen giữa chemical form.
 
-> Microorganism cho thấy một cell nhỏ có thể khai thác chemistry cực kỳ đa dạng; virus cho thấy information có thể tiến hóa ngay cả khi không tạo thành living cell độc lập. Cả hai làm rõ rằng evolution, ecology và molecular biology không thể tách rời.
+Decomposer phân hủy organic matter, trả carbon và nutrient về environment.
 
-Từ đây thư viện chuyển sang organismal biology: cell phối hợp thành tissue và organ như thế nào, rồi toàn cơ thể duy trì homeostasis ra sao.
+Một microorganism rất nhỏ nhưng collective activity ở planet scale có thể đổi atmospheric composition và soil fertility.
+
+Scale nhỏ không đồng nghĩa impact nhỏ.
+
+## 15. Pathogen, virulence và host không phải quan hệ đơn giản
+
+Pathogen success không nhất thiết tối đa khi gây disease nặng nhất. Nếu host chết quá nhanh hoặc không truyền pathogen, virulence quá cao có thể giảm transmission.
+
+Evolution của virulence phụ thuộc trade-off giữa replication, transmission và host damage.
+
+Điều này nối microbiology với ecology và evolutionary game.
+
+## 16. Từ microbial world sang organism đa bào
+
+Microorganism cho ta một phiên bản rất cô đọng của life: một cell tự làm gần như mọi việc.
+
+Nhưng multicellular organism chọn strategy khác: cell specialization và division of labor. Điều này tạo efficiency nhưng đồng thời tạo bài toán mới — các cell phụ thuộc nhau và cần transport, communication, defense và homeostasis ở scale lớn.
+
+Vì vậy bước tiếp theo là chuyển từ single-cell autonomy sang multicellular coordination.
+
+Ta sẽ bắt đầu với plant như một giải pháp đặc biệt cho bài toán lấy light, water và mineral từ hai môi trường khác nhau, rồi sang animal physiology.
+
+Tiếp tục với [[../04_organismal_biology/00_plant_biology]].
