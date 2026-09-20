@@ -14,7 +14,7 @@ Domain này chuyển từ việc “biết đọc báo cáo” sang khả năng 
 
 [05_SECTOR_SPECIFIC_ANALYSIS_BANKS_SEMICONDUCTORS_SAAS_RETAIL_REITS.md](./05_SECTOR_SPECIFIC_ANALYSIS_BANKS_SEMICONDUCTORS_SAAS_RETAIL_REITS.md) giải thích cách thay framework theo economic engine của từng ngành. Ngoài banks, semiconductors, SaaS, retail và REITs, file còn mở rộng sang insurance, internet platforms/marketplaces, industrials, construction, shipping, airlines, oil & gas/refining, utilities/power, telecom, biotech/pharma và mining/materials; mỗi sector được nối từ driver/KPI → accounting → cash flow → cycle → valuation.
 
-[06_GOVERNANCE_CAPITAL_ALLOCATION_MA_AND_MANAGEMENT_QUALITY.md](./06_GOVERNANCE_CAPITAL_ALLOCATION_MA_AND_MANAGEMENT_QUALITY.md) hoàn thiện company analysis bằng management quality, incremental ROIC, maintenance/growth capex, dividends, buybacks, dilution, debt repayment, M&A, goodwill, organic vs acquired growth, board structure, controlling-shareholder risk, executive incentives, related-party transactions và capital-allocation scorecard.
+[06_GOVERNANCE_CAPITAL_ALLOCATION_MA_AND_MANAGEMENT_QUALITY.md](./06_GOVERNANCE_CAPITAL_ALLOCATION_MA_AND_MANAGEMENT_QUALITY.md) hoàn thiện company analysis bằng operating-vs-capital-allocation skill, incremental ROIC, maintenance/growth capex, R&D/marketing investment, dividends, buybacks, dilution/SBC, debt/maturity management, M&A/synergies/goodwill/roll-ups, divestitures/spin-offs, board architecture, controlling shareholders, related-party transactions, executive incentives, governance red flags và per-share capital-allocation scorecard.
 
 ## Sau domain này bạn cần làm được gì?
 
