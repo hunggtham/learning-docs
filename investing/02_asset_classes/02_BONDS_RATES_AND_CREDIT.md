@@ -1,205 +1,444 @@
-# Trái phiếu, lãi suất và credit
+# Trái phiếu, lãi suất và Credit
 
-> Trái phiếu thường bị mô tả như “sản phẩm an toàn trả lãi cố định”. Cách hiểu đó quá đơn giản. Bond là một tập hợp contractual cash flows chịu đồng thời rate risk, inflation risk, credit risk, liquidity risk, optionality và đôi khi FX risk. Chapter này xây bond analysis từ nguyên lý định giá đến cách đọc yield curve, credit spread và bond ETF.
+> Trái phiếu không phải chỉ là “sản phẩm an toàn trả coupon”. Một bond là chuỗi **contractual cash flows** chịu đồng thời lãi suất (*interest-rate risk*), lạm phát (*inflation risk*), tín dụng (*credit risk*), thanh khoản (*liquidity risk*), optionality, reinvestment risk và đôi khi cả FX risk. Chapter này xây fixed-income thinking từ present value tới yield curve, carry/roll-down, spread, default/recovery, securitized credit và portfolio implementation.
 
-## 1. Bond là hợp đồng cho vay
+## 1. Bond là một hợp đồng cho vay
 
-Bond holder cho issuer vay capital và nhận các cash flows theo hợp đồng. *Face value* hay *par value* là principal tham chiếu; *coupon* là khoản interest theo terms; *maturity* là ngày principal được hoàn trả nếu issuer không default.
+Bond holder cho issuer vay capital và nhận cash flows theo hợp đồng. **Face value / par value** là principal tham chiếu, **coupon** là interest payment, còn **maturity** là thời điểm principal được hoàn trả nếu issuer không default.
 
-Một bond 5 năm face value 1.000, coupon 4% trả annual có thể trả 40 mỗi năm rồi 1.000 ở maturity. Nhưng market price hôm nay không nhất thiết bằng 1.000. Giá phụ thuộc discount rate mà market yêu cầu cho toàn bộ future cash flows.
+Một bond 5 năm face value 1.000, coupon 4% có thể trả 40 mỗi năm và 1.000 ở maturity. Nhưng market price hôm nay không nhất thiết bằng 1.000 vì investor discount toàn bộ future cash flows bằng yield phù hợp với maturity, credit, liquidity và optionality.
 
-Bond holder khác equity holder ở claim. Equity nhận residual value sau creditors; bond holder có contractual priority cao hơn nhưng upside thường bị giới hạn vào coupon/principal, trừ instruments có embedded equity option như convertible bond.
+Bond holder đứng cao hơn common equity trong capital structure, nhưng upside thường bị giới hạn vào contractual payments. Vì vậy bond analysis tập trung nhiều vào **khả năng tránh mất vốn** hơn equity analysis.
 
-## 2. Bond price là present value của cash flows
+## 2. Bond price là present value của future cash flows
 
-Logic định giá cơ bản:
+Khung định giá cơ bản:
 
-`Bond Price = Σ Coupon_t / (1 + y)^t + Face Value / (1 + y)^T`
+```text
+Bond Price = Σ Coupon_t / (1 + y)^t + Face Value / (1 + y)^T
+```
 
-Trong đó `y` là discount rate/yield phù hợp với maturity, credit và liquidity của bond. Khi required yield tăng, present value của fixed future cash flows giảm; vì vậy price và yield thường di chuyển ngược chiều.
+Khi required yield tăng, present value của fixed cash flows giảm nên price giảm. Đây là lý do government bond vẫn có thể drawdown mạnh dù issuer không hề default.
 
-Điều này giải thích tại sao government bond không default vẫn có thể giảm mạnh. Investor không mất vì issuer không trả; investor mất mark-to-market vì market discount rate đã tăng.
+Phải phân biệt **credit safety** và **price stability**. Treasury dài hạn có credit quality cao nhưng duration rất lớn, nên vẫn có thể biến động mạnh khi yields thay đổi.
 
-## 3. Coupon, current yield và yield-to-maturity không giống nhau
+## 3. Coupon, Current Yield và Yield to Maturity
 
-Coupon rate là contractual interest dựa trên face value. *Current yield* gần đúng bằng annual coupon chia current market price. *Yield to Maturity* (*YTM*) là internal rate of return khiến present value của contractual cash flows bằng market price, với các assumptions nhất định như reinvestment và không default.
+**Coupon rate** dựa trên par value. **Current yield** gần đúng bằng annual coupon chia current market price. **Yield to Maturity (YTM)** là internal rate khiến present value của các contractual cash flows bằng market price dưới một số assumptions.
 
-Ví dụ bond coupon 3% nhưng price giảm xuống dưới par có YTM cao hơn 3%. Ngược lại bond coupon 7% giao dịch premium có YTM thấp hơn coupon rate.
+YTM không phải realized return được đảm bảo. Nếu investor bán trước maturity, issuer default, cash flows được reinvest ở rate khác hoặc bond bị call, realized return sẽ khác.
 
-YTM không phải guaranteed realized return. Nếu bạn bán trước maturity, issuer default, cash flows được reinvest ở rate khác hoặc bond có call option, realized return có thể khác đáng kể.
+Khi so bonds, không chỉ hỏi “coupon bao nhiêu?”, mà phải hỏi “yield nào phản ánh price hiện tại và các quyền embedded trong contract?”.
 
-## 4. Yield-to-call và optionality
+## 4. Yield to Call và Yield to Worst
 
-Callable bond cho issuer quyền redeem bond sớm theo terms. Khi rates giảm mạnh, issuer có incentive refinance debt cũ coupon cao bằng debt mới rẻ hơn, nên investor có thể mất upside mong đợi.
+Callable bond cho issuer quyền redeem bond sớm. Nếu rates giảm, issuer có incentive refinance coupon cao bằng debt mới rẻ hơn. Investor khi đó mất một phần upside kỳ vọng.
 
-Vì vậy callable bond cần nhìn *yield-to-call*, *yield-to-worst* và call schedule, không chỉ YTM. Putable bond ngược lại cho investor một số quyền bán lại. Convertible bond thêm option đổi debt thành equity, khiến valuation vừa có bond floor vừa có equity optionality.
+Vì vậy callable bond cần xem **Yield to Call (YTC)** và **Yield to Worst (YTW)**. YTW là yield thấp nhất trong các redemption scenarios hợp lệ, hữu ích để tránh bị headline YTM đánh lừa.
 
-Một principle quan trọng: khi một fixed-income product trả yield cao bất thường, hãy hỏi investor đang short option nào hoặc chịu risk nào mà headline yield không nói ra.
+Nguyên tắc quan trọng: yield cao bất thường thường là compensation cho một risk hoặc một option mà investor đang bán.
 
-## 5. Duration: đo độ nhạy với lãi suất
+## 5. Clean Price, Dirty Price và Accrued Interest
 
-*Macaulay duration* có thể hiểu như weighted-average timing của cash flows. *Modified duration* chuyển khái niệm đó thành sensitivity gần đúng của price đối với yield.
+Bond thường quote theo **clean price**, chưa bao gồm accrued interest từ coupon period hiện tại. Amount thanh toán thực tế thường là **dirty price = clean price + accrued interest**.
 
-Nếu modified duration bằng 7, yield tăng 1 percentage point thì price có thể giảm gần 7%, trước khi xét convexity:
+Điều này quan trọng khi so price chart với transaction cash. Bond có thể “tăng giá” về dirty price đơn giản vì coupon accrual tích lũy, rồi giảm vào ex-coupon date mà không có thay đổi economic value tương đương.
 
-`%ΔPrice ≈ -Modified Duration × ΔYield`
+## 6. Macaulay Duration và Modified Duration
 
-Bond maturity dài, coupon thấp và yield thấp thường có duration cao hơn. Đây là lý do long-duration government bonds có thể biến động mạnh dù credit quality cao.
+**Macaulay duration** là weighted-average timing của cash flows. **Modified duration** chuyển nó thành sensitivity gần đúng của price với yield:
 
-## 6. DV01/PV01: một basis point đáng giá bao nhiêu?
+```text
+%ΔPrice ≈ -Modified Duration × ΔYield
+```
 
-*DV01* hay *PV01* đo thay đổi value xấp xỉ khi yield move 1 basis point, tức 0,01 percentage point. Nó hữu ích hơn duration khi quản lý portfolio bằng currency amount thay vì percentage.
+Bond duration 7 có thể giảm khoảng 7% nếu yield tăng 100 bps, trước convexity. Duration cao thường đi cùng maturity dài, coupon thấp và yield thấp.
 
-Nếu portfolio có DV01 lớn, một movement nhỏ của yields cũng tạo P/L đáng kể. Professional rate-risk management thường nói bằng duration và DV01 thay vì chỉ bằng notional amount.
+Duration vì vậy là đơn vị tốt hơn maturity khi quản lý rate risk.
 
-## 7. Convexity: tại sao duration chỉ là xấp xỉ tuyến tính
+## 7. DV01 / PV01
 
-Price-yield relationship là curve chứ không phải straight line. *Convexity* đo curvature này. Với plain bond có positive convexity, price tăng do yield giảm thường lớn hơn price giảm do yield tăng cùng magnitude, so với approximation tuyến tính.
+**DV01** hoặc **PV01** đo dollar/currency change trong value nếu yield move 1 basis point.
 
-Khi rate move lớn, duration-only estimate kém chính xác. Optionality còn có thể làm convexity thay đổi: mortgage-backed securities có thể có negative convexity trong một số regimes vì prepayment behavior.
+Ví dụ portfolio DV01 = 2 triệu KRW nghĩa yield parallel shift +1 bp có thể làm value giảm khoảng 2 triệu KRW. Professional rates desks dùng DV01 vì nó cho phép cộng/trừ sensitivities giữa bonds, swaps và futures.
 
-## 8. Key-rate duration và curve risk
+Notional không nói đủ. Hai bond có cùng 100 triệu notional nhưng DV01 rất khác nếu duration khác nhau.
 
-Một bond portfolio không chỉ chịu parallel shift của toàn curve. 2Y yield có thể tăng trong khi 10Y gần như không đổi; long end có thể sell off trong khi front end ổn định.
+## 8. Convexity
 
-*Key-rate duration* phân rã sensitivity theo maturity points. Điều này quan trọng với barbell, bullet hoặc liability-matching portfolios. Hai portfolios có cùng aggregate duration vẫn có curve exposure rất khác nhau.
+Price-yield relationship là curve chứ không tuyến tính. **Convexity** đo curvature.
 
-## 9. Yield curve là gì?
+Plain fixed-rate bond thường có positive convexity: khi yields giảm, price gain thường lớn hơn price loss khi yields tăng cùng magnitude so với linear duration approximation.
 
-Yield curve nối yields theo maturity. Front end thường nhạy với current/expected central-bank policy. Long end phản ánh expected future short rates, inflation risk, growth outlook, supply-demand và *term premium*.
+Optionality có thể đảo đặc tính này. Mortgage-backed securities có thể có negative convexity vì prepayment option của borrowers.
 
-Một decomposition hữu ích là:
+## 9. Effective Duration khi bond có option
 
-`Long-term yield ≈ expected path of short rates + term premium`
+Với callable bonds, MBS hoặc instruments có cash flows thay đổi khi rates đổi, traditional duration dựa contractual schedule có thể sai.
 
-Term premium là compensation mà investor yêu cầu để khóa vốn dài hạn trước uncertainty về inflation, rates và supply. Vì vậy 10Y yield có thể tăng dù market không kỳ vọng central bank hike thêm nếu term premium tăng.
+**Effective duration** dùng model để shock rates và re-estimate expected cash flows. Đây là cách phù hợp hơn khi borrower/issuer có quyền thay đổi timing của cash flows.
 
-## 10. Steepening và flattening phải đọc cùng direction của yields
+## 10. Key-Rate Duration
 
-Curve steepening chỉ nói gap long-short tăng; cần biết vì sao. *Bull steepener* thường xảy ra khi short yields giảm nhanh hơn long yields, có thể liên quan expectation easing/recession. *Bear steepener* xảy ra khi long yields tăng nhanh hơn, có thể do inflation, fiscal supply hoặc term premium.
+Yield curve hiếm khi dịch chuyển hoàn toàn parallel. **Key-rate duration** phân rã sensitivity theo 2Y, 5Y, 10Y, 30Y hoặc các maturities khác.
 
-Flattening cũng có bull/bear versions. Vì vậy không nên học thuộc “steepening tốt, inversion xấu”. Phải đọc front end, long end và macro shock cùng nhau.
+Hai portfolios có cùng total duration nhưng một portfolio concentrated ở 2–5Y và portfolio kia ở 20–30Y có curve risk rất khác.
 
-## 11. Inversion và recession signal
+Điều này quan trọng khi xây **barbell**, **bullet** hoặc liability-matching portfolio.
 
-Curve inversion xảy ra khi short yield cao hơn long yield ở một số maturities. Nó thường phản ánh restrictive current policy cùng expectation rằng rates sẽ thấp hơn trong tương lai.
+## 11. Yield Curve
 
-Historically, inversion có thông tin về cycle nhưng không cho exact timing. Market có thể invert lâu trước slowdown; curve có thể re-steepen vì recessionary cuts hoặc vì long-end inflation/fiscal risk. Hai dạng re-steepening này có asset implications rất khác nhau.
+Yield curve nối yields theo maturity. Front end nhạy policy-rate expectation; long end phản ánh expected future short rates, inflation, growth, fiscal supply và **term premium**.
 
-## 12. Nominal yield, real yield và breakeven inflation
+Một decomposition hữu ích:
 
-Nominal government yield có thể nghĩ gần đúng là real yield cộng expected inflation và premia. Inflation-linked securities như US TIPS cho market một reference cho real yield.
+```text
+Long Yield ≈ Expected Short-Rate Path + Term Premium
+```
 
-Breakeven inflation thường lấy nominal Treasury yield trừ TIPS real yield cùng maturity. Nhưng breakeven không phải pure expectation: inflation risk premium và liquidity differences cũng ảnh hưởng.
+10Y yield có thể tăng dù market không price thêm hikes nếu term premium tăng do inflation uncertainty hoặc Treasury supply.
 
-Real yield đặc biệt quan trọng với long-duration equities và gold. Real yield tăng làm discount rate cao hơn và opportunity cost của non-yielding gold lớn hơn, all else equal.
+## 12. Bull/Bear Steepener và Flattener
 
-## 13. Treasury, agency, corporate và các lớp fixed income
+Chỉ nói “curve steepening” là chưa đủ.
 
-Government securities thường là benchmark cho risk-free-ish rates trong currency đó, nhưng sovereign risk phụ thuộc monetary/fiscal structure. Agency hoặc quasi-government debt có support characteristics khác.
+**Bull steepener**: yields giảm nhưng short end giảm nhanh hơn, thường gắn với easing/recession expectations.
 
-Corporate debt thêm business/default risk. Secured debt có collateral claims; unsecured debt dựa nhiều hơn vào enterprise creditworthiness; senior debt đứng trên subordinated debt trong claim priority. Preferred securities và hybrids có thể nằm giữa debt và equity về economics.
+**Bear steepener**: long yields tăng nhanh hơn, thường liên quan inflation, fiscal supply hoặc term-premium shock.
 
-Không nên so two bonds chỉ bằng headline yield nếu seniority, collateral, maturity và embedded options khác nhau.
+**Bull flattener** và **bear flattener** cũng có mechanics khác nhau. Luôn nhìn direction từng point trên curve.
 
-## 14. Credit spread là compensation cho nhiều thứ
+## 13. Curve Inversion
 
-Credit spread là yield premium so benchmark government/risk-free curve. Nó compensation cho expected default loss, uncertainty, liquidity, risk aversion và technical supply-demand.
+Inversion thường xuất hiện khi current policy restrictive nhưng market kỳ vọng future rates thấp hơn.
 
-Expected loss có intuition:
+Nó có historical information về recession risk nhưng không cho timing chính xác. Quan trọng hơn là hiểu **tại sao curve đang re-steepen** sau inversion: vì front-end easing hay vì long-end inflation/fiscal stress.
 
-`Expected Credit Loss ≈ Probability of Default × Loss Given Default`
+## 14. Nominal Yield, Real Yield và Breakeven
 
-Nhưng market spread thường lớn hơn simple expected loss vì investor đòi risk premium và liquidity compensation.
+Nominal yield có thể phân tích gần đúng thành real yield + expected inflation + premia.
 
-## 15. Rating không thay thế credit analysis
+Breakeven inflation thường được suy ra từ nominal Treasury minus TIPS real yield. Nhưng breakeven không phải pure inflation forecast vì chịu liquidity và inflation-risk premium.
 
-Credit ratings tóm tắt agency assessment nhưng có thể lag market. Spread thường reprices nhanh hơn rating changes. Investment-grade bond vẫn có thể drawdown do spread widening, duration hoặc downgrade risk.
+Real yield là một cross-asset variable quan trọng: rising real yields thường pressure long-duration bonds, long-duration equities và gold all else equal.
 
-Credit analysis cần xem leverage, interest coverage, FCF, cyclicality, asset coverage, maturity schedule và access to capital. Một issuer EBITDA cao nhưng gần-term maturity wall lớn vẫn có refinancing risk nếu capital market đóng cửa.
+## 15. Carry trong Fixed Income
 
-## 16. Maturity wall và refinancing risk
+**Carry** là return investor nhận nếu market state không thay đổi đáng kể, thường gồm coupon/accrual và funding effects.
 
-Debt không cần default hôm nay để equity/bond holder gặp vấn đề. Nếu lượng lớn debt đáo hạn trong 12–24 tháng và refinancing rate cao hơn nhiều, interest burden tương lai có thể tăng mạnh.
+Một bond có yield cao hơn cash tạo positive carry, nhưng carry có thể bị xóa nhanh bởi rate/spread move bất lợi.
 
-Investor nên map từng maturity bucket, fixed/floating mix và secured/unsecured structure. “Net debt/EBITDA chỉ 3x” không đủ nếu EBITDA đang ở cycle peak hoặc major debt maturity đến trước cash recovery.
+Không nên coi carry là “free yield”. Nó thường là compensation cho duration, credit, liquidity hoặc optionality risk.
 
-## 17. Spread duration
+## 16. Roll-Down
 
-Corporate bond chịu hai sensitivity lớn: rate duration và spread duration. Treasury yields có thể giảm 100 bps nhưng credit spread widen 200 bps, khiến corporate bond vẫn giảm.
+Nếu yield curve upward sloping và bond aging từ maturity dài xuống maturity ngắn hơn, nó có thể “roll down” tới point có yield thấp hơn, tạo price appreciation nếu curve shape không đổi.
 
-Đây là lý do high-yield bonds thường behave partly like equities: trong recession, risk-free yields giảm nhưng spreads có thể explode. Portfolio diversification phải nhìn total economic exposure, không chỉ asset label “bond”.
+Fixed-income expected return thường được phân tích:
 
-## 18. Credit cycle
+```text
+Expected Return ≈ Carry + Roll-Down + Rate Move + Spread Move + Optionality + FX - Costs
+```
 
-Trong expansion, earnings tốt, defaults thấp và lending standards dễ; spreads thường compress. Leverage có thể tích tụ vì financing rẻ.
+Carry/roll-down là lý do một bond có thể tạo return ngay cả khi central bank không cut.
 
-Khi policy tightens, growth slows hoặc collateral values fall, weak borrowers gặp refinancing pressure. Lenders thắt standards, spreads widen, new issuance khó hơn và defaults tăng. Credit cycle vì thế khuếch đại business cycle.
+## 17. Reinvestment Risk
 
-Một useful sequence là:
+Coupon/principal nhận trước maturity phải được reinvest. Nếu rates giảm mạnh, future reinvestment return thấp hơn.
 
-`easy credit → leverage build-up → shock → spread widening → refinancing stress → defaults/deleveraging → credit repair`
+Investor cần phân biệt **price risk** và **reinvestment risk**. Long-duration zero-coupon bond có price risk cao nhưng reinvestment risk thấp; short bills có price risk thấp nhưng phải roll thường xuyên nên reinvestment risk cao.
 
-## 19. Floating-rate debt và rate resets
+## 18. Treasury, Agency và Corporate Credit
 
-Floating-rate instruments có lower duration to benchmark rates nhưng coupon resets làm borrower interest burden thay đổi nhanh. Investor giảm price sensitivity với rates nhưng có thể tăng indirect credit risk vì borrower phải trả interest cao hơn.
+Government debt thường làm benchmark curve cho currency đó. Agency/quasi-government securities có support structure riêng. Corporate debt thêm operating/default risk.
 
-Do đó floating-rate loan không đơn giản là “an toàn khi rates tăng”. Nếu rate rise làm debtor cash flow stress, credit losses có thể bù hết benefit từ higher coupons.
+Trong corporate capital structure, secured debt đứng trên unsecured; senior trên subordinated; hybrids/preferred nằm giữa debt và equity về economics.
 
-## 20. Inflation-linked bonds
+Yield comparison chỉ meaningful sau khi normalize seniority, collateral, maturity và embedded options.
 
-Inflation-linked bonds điều chỉnh principal/cash flows theo inflation index theo rules. Chúng hữu ích khi muốn real purchasing-power exposure, nhưng price vẫn chịu real-yield duration.
+## 19. Credit Spread
 
-Một investor có thể lỗ trên inflation-linked bond trong năm inflation cao nếu real yields tăng đủ mạnh. “Inflation bond” không có nghĩa price luôn tăng khi CPI tăng.
+Credit spread là premium trên benchmark government/risk-free curve. Nó bù cho expected default loss, uncertainty, liquidity, risk aversion và technical supply-demand.
 
-## 21. Mortgage-backed securities và negative convexity
+Simple intuition:
 
-Mortgage-backed securities (*MBS*) nhận cash flows từ pools of mortgages. Borrowers có prepayment option. Khi rates giảm, refinancing/prepayment có thể tăng, khiến investor nhận principal sớm đúng lúc muốn giữ high coupon. Khi rates tăng, prepayment chậm, duration kéo dài.
+```text
+Expected Credit Loss ≈ Probability of Default × Loss Given Default
+```
 
-Đây là *negative convexity* intuition. Investor không chỉ chịu rate direction mà còn borrower optionality.
+Market spread thường lớn hơn pure expected loss vì investor cần risk premium.
 
-## 22. Sovereign debt: local currency và foreign currency
+## 20. Spread Duration
 
-Sovereign phát hành debt bằng currency mà chính họ control có risk profile khác sovereign vay foreign currency. Local-currency sovereign có thể có lower nominal default risk nhưng investor vẫn chịu inflation/currency debasement risk.
+Corporate bond chịu cả rate duration và spread duration.
 
-Foreign-currency sovereign không thể tạo USD/EUR để repay, nên FX reserves, current account, external debt và access to international capital markets quan trọng hơn.
+Ví dụ Treasury yield -100 bps nhưng credit spread +200 bps vẫn có thể làm bond giảm. Đây là lý do high-yield bonds thường có downside giống equities trong recession.
 
-Foreign investor còn chịu translation risk. US Treasury tăng bằng USD nhưng KRW-based return có thể thấp hoặc âm nếu USD depreciates mạnh so KRW.
+Bond label không đảm bảo diversification; phải biết exposure là government duration hay risky credit.
 
-## 23. Bond ETF không giống individual bond
+## 21. Z-Spread và Option-Adjusted Spread
 
-Individual bond held to maturity có remaining maturity giảm dần và, nếu không default, price converges toward principal repayment. A perpetual bond ETF thường bán bonds khi chúng ra khỏi target maturity range và mua bonds mới để duy trì duration profile.
+**Z-spread** là spread cố định thêm vào spot curve để discount contractual cash flows tới market price.
 
-Vì vậy “cứ giữ bond ETF tới đáo hạn” thường là sai conceptual model. Target-maturity bond ETF khác vì fund có planned terminal date nhưng vẫn phải đọc methodology, default handling và reinvestment policy.
+Với bond có embedded option, **Option-Adjusted Spread (OAS)** cố gắng loại giá trị option để so pure credit/liquidity spread tốt hơn.
 
-## 24. Bond-fund liquidity
+OAS useful hơn raw yield spread cho callable bonds/MBS, nhưng phụ thuộc model assumptions về rates và prepayment.
 
-ETF share có thể liquid dù underlying bonds OTC và less liquid. Trong stress, ETF price có thể trade discount/premium so estimated NAV. Điều này không nhất thiết chứng minh ETF “broken”; đôi lúc ETF price đang price underlying market nhanh hơn stale dealer marks.
+## 22. Rating và Market-Implied Credit Risk
 
-Investor cần nhìn spread, fund AUM, underlying quality, duration và creation/redemption mechanism, không chỉ expense ratio.
+Rating agency opinion hữu ích nhưng có thể lag. Market spreads, CDS, equity volatility và funding access có thể phản ứng sớm hơn downgrade.
 
-## 25. Bond ladder và liability matching
+Credit analysis phải dựa leverage, interest coverage, FCF, cyclicality, asset coverage, maturity schedule và access to capital chứ không chỉ rating letter.
 
-Nếu bạn biết sẽ cần cash ở các dates cụ thể, laddering có thể giảm reinvestment concentration. Một ladder gồm bonds maturities trải theo thời gian, tạo scheduled principal cash flows.
+## 23. Gross Leverage, Net Leverage và Interest Coverage
 
-Liability matching tập trung vào việc asset cash flows/duration phù hợp obligations. Đây là tư duy khác “mua bond vì nghĩ rates sẽ giảm”. Một portfolio có thể dùng bond chủ yếu để bảo vệ khả năng chi trả tương lai hơn là để forecast market.
+**Gross leverage** nhìn debt/EBITDA; **net leverage** trừ cash. Nhưng cash có thể restricted hoặc cần cho operations.
 
-## 26. Khi nào long-duration bond diversifies equity?
+Interest coverage nên stress cả numerator và denominator: EBITDA có thể giảm đúng lúc refinancing rate tăng.
 
-Long government bonds thường diversifying tốt trong demand-driven recession/deflation khi growth và inflation expectations giảm, yields fall. Nhưng trong inflation shock, cả equities và long bonds có thể giảm cùng lúc vì discount rates và inflation uncertainty tăng.
+Một issuer 3x leverage ở cyclical peak có thể rủi ro hơn issuer 4x leverage với recurring contracted cash flows.
 
-Do đó stock-bond correlation là regime-dependent. Portfolio design phải stress both recession và inflation scenarios.
+## 24. Maturity Wall
 
-## 27. Checklist phân tích một bond hoặc bond ETF
+Map debt maturities theo từng năm. Refinancing concentration thường quan trọng hơn total debt headline.
 
-Trước khi mua, cần trả lời: issuer là ai, seniority/collateral ra sao, maturity/call date thế nào, coupon fixed hay floating, YTM/yield-to-worst bao nhiêu, duration/DV01 thế nào, spread so benchmark là bao nhiêu, rating và market-implied risk có phù hợp không, maturity wall/refinancing risk ra sao, currency exposure gì, liquidity thế nào và worst plausible scenario là gì.
+Nếu 60% debt đáo hạn trong 18 tháng khi market spreads rộng, company có thể phải refinance đắt, sell assets, issue equity hoặc restructure.
 
-Với bond ETF, thêm weighted duration, average credit quality, holdings concentration, underlying liquidity, distribution yield vs SEC-like yield methodology nếu có, tracking, fees và FX hedge.
+Bond investor nên hỏi: cash + FCF + committed facilities có đủ để bridge tới thời điểm capital markets bình thường hóa không?
 
-## 28. Mental model cuối cùng
+## 25. Liquidity Runway
 
-Bond return không thể rút gọn thành “nhận coupon”. Hãy tách:
+**Liquidity runway** gồm unrestricted cash, expected FCF, undrawn revolver và other committed sources so với debt maturities, capex và working-capital needs.
 
-`Income + rate movement + curve movement + credit-spread movement + optionality + FX + default/recovery + fees`
+Một credit có accounting solvency tốt nhưng liquidity runway ngắn vẫn có default/refinancing risk lớn.
 
-Một fixed-income position chỉ được hiểu đúng khi investor biết mỗi component đóng góp gì vào expected return và downside.
+## 26. Default Probability và Recovery
+
+Default không đồng nghĩa recovery = 0. Recovery phụ thuộc enterprise value, collateral, seniority, legal process và restructuring costs.
+
+Senior secured bond có thể recover đáng kể trong default trong khi subordinated debt gần như mất toàn bộ.
+
+Expected credit loss phải model cả **PD** và **LGD**, không chỉ probability of default.
+
+## 27. Fallen Angels và Rising Stars
+
+**Fallen angel** là issuer bị downgrade từ investment grade xuống high yield; technical forced selling có thể làm spread widen vượt fundamental deterioration.
+
+**Rising star** là high-yield issuer cải thiện lên investment grade. Rating migration tạo technical flow ngoài operating performance.
+
+Đây là ví dụ fixed-income market nơi mandate constraints tạo price pressure.
+
+## 28. Credit Cycle
+
+Một simplified sequence:
+
+```text
+Easy Credit
+→ Leverage Build-Up
+→ Shock / Policy Tightening
+→ Spread Widening
+→ Refinancing Stress
+→ Defaults / Deleveraging
+→ Balance-Sheet Repair
+→ Spread Compression
+```
+
+Credit thường lead hoặc amplify business cycle vì funding conditions thay đổi trước reported earnings.
+
+## 29. Loan Market và Floating-Rate Credit
+
+Leveraged loans/private credit thường floating-rate nên benchmark-duration thấp hơn fixed bond. Nhưng borrower interest burden reprices nhanh.
+
+Rate hike vì vậy chuyển risk từ investor duration sang borrower credit. “Floating rate” không đồng nghĩa defensive nếu company coverage collapse.
+
+## 30. Covenants
+
+Covenants có thể giới hạn leverage, require minimum coverage hoặc restrict asset transfers. **Maintenance covenants** test periodically; **incurrence covenants** trigger khi issuer muốn thực hiện action nhất định.
+
+Covenant-lite structure cho borrower flexibility hơn nhưng giảm early-warning/protection cho lender.
+
+## 31. Callable Bonds
+
+Callable issuer thường exercise khi rates/spreads giảm. Investor bị **negative selection**: bond bị trả lại khi nó trở nên hấp dẫn nhất.
+
+Callable credit vì vậy có upside cap và cần OAS/YTW analysis thay vì headline YTM.
+
+## 32. Convertible Bonds
+
+Convertible bond gồm debt floor + equity conversion option.
+
+Khi stock thấp, behavior giống bond/credit; khi stock tăng mạnh, delta lên và behavior giống equity hơn. Investor phải hiểu conversion ratio, call/put features, dilution và credit floor.
+
+## 33. Inflation-Linked Bonds
+
+TIPS hoặc local equivalents bảo vệ principal/coupon theo inflation index rules nhưng vẫn chịu real-yield duration.
+
+High CPI không guarantee positive total return nếu real yields tăng đủ mạnh.
+
+Phải phân biệt **inflation carry**, breakeven move và real-rate move.
+
+## 34. MBS và Prepayment Risk
+
+Mortgage borrowers sở hữu implicit prepayment option. Khi rates giảm, refinancing tăng và investor nhận principal sớm; khi rates tăng, prepayment chậm và duration extends.
+
+Đây là nguồn **negative convexity**.
+
+MBS hedging flows có thể amplify Treasury rate moves vì investors điều chỉnh duration khi prepayment expectation thay đổi.
+
+## 35. ABS và Securitized Credit
+
+Asset-Backed Securities (*ABS*) package loans/receivables như auto loans, credit cards hoặc other cash-flow pools.
+
+Analysis cần xem collateral quality, underwriting vintage, excess spread, subordination, waterfall và servicer quality.
+
+Securitization không xóa credit risk; nó redistribute risk giữa tranches.
+
+## 36. Tranche và Waterfall
+
+Senior tranche nhận cash trước junior tranche. Junior/equity tranche absorb losses trước để protect senior.
+
+Do đó same underlying pool có securities với risk profile rất khác nhau.
+
+Credit enhancement, overcollateralization và reserve accounts cần được hiểu trước khi nhìn rating.
+
+## 37. Sovereign Debt bằng Local Currency
+
+Sovereign phát hành bằng currency mình control có nominal-default dynamics khác company. Government có taxation và monetary capacity nhưng investor vẫn chịu inflation, financial repression hoặc currency depreciation.
+
+Fiscal credibility, institutional quality, debt maturity và local investor base matter.
+
+## 38. Foreign-Currency Sovereign Debt
+
+Nếu sovereign vay USD/EUR, họ không tự tạo foreign currency để repay. FX reserves, current account, export base, external debt và market access trở nên quan trọng.
+
+Currency mismatch có thể biến depreciation thành debt crisis vì local-currency value của foreign debt tăng.
+
+## 39. Bond ETFs khác Individual Bonds
+
+Individual bond held to maturity “rolls down” tới maturity và, absent default, principal repayment. Perpetual bond ETF liên tục replace holdings để giữ duration/maturity bucket.
+
+Vì vậy “giữ bond ETF tới đáo hạn” thường sai. Target-maturity ETFs là category khác và vẫn cần đọc methodology.
+
+## 40. ETF Price Discovery trong Stress
+
+Underlying corporate bonds có thể OTC và stale marks. ETF market price đôi khi move trước NAV estimates.
+
+Discount to NAV trong stress không tự động nghĩa arbitrage/free bargain. Nó có thể phản ánh price discovery thực nhanh hơn accounting/dealer marks.
+
+## 41. Bond Fund Distribution Yield vs Portfolio Yield
+
+Distribution yield phản ánh cash distributions gần đây; portfolio yield/YTM phản ánh current holdings economics. Hai số có thể khác do old coupons, capital gains distributions hoặc changing rates.
+
+Investor nên đọc yield methodology thay vì chọn fund theo highest displayed distribution yield.
+
+## 42. Bond Ladder
+
+Ladder chia maturities theo nhiều dates để tạo recurring principal cash flows và giảm concentration vào một reinvestment date.
+
+Ladder đặc biệt hữu ích khi goals có cash requirements định kỳ và investor không muốn forecast rates.
+
+## 43. Bullet và Barbell
+
+**Bullet** concentrates maturities quanh một target date. **Barbell** kết hợp short và long maturities để đạt average duration tương tự nhưng khác convexity/curve sensitivity.
+
+Không có structure luôn tốt hơn; choice phụ thuộc liabilities và curve view.
+
+## 44. Immunization và Liability Matching
+
+Portfolio immunization tìm cách match duration/PV của assets với liabilities để giảm sensitivity của funding ratio trước rate moves.
+
+Liability-driven investor quan tâm khả năng chi trả tương lai hơn việc beat bond index từng quý.
+
+Đây là cách fixed income khác hoàn toàn speculative rate trading.
+
+## 45. Rate Hedging bằng Futures/Swaps
+
+Bond portfolio có thể hedge duration bằng Treasury futures hoặc interest-rate swaps.
+
+Hedge nên match DV01/key-rate exposures, không match notional đơn giản. Futures còn có cheapest-to-deliver và basis risk; swaps có counterparty/collateral considerations.
+
+## 46. Credit Hedging
+
+Credit risk có thể hedge bằng CDS/index products hoặc short credit ETFs tùy market. Nhưng hedge basis giữa cash bond và CDS có thể thay đổi.
+
+Một hedge “theoretically correct” vẫn có residual liquidity/basis risk trong stress.
+
+## 47. Relative Value trong Fixed Income
+
+Relative-value analysis so bonds cùng issuer hoặc peers sau khi normalize maturity, seniority, option và liquidity.
+
+Spread rẻ hơn peer không tự động mispricing; có thể phản ánh lower recovery, weaker covenant hoặc supply technicals.
+
+## 48. Carry-to-Risk
+
+Yield cao phải được đặt cạnh duration, spread duration, default loss và liquidity.
+
+Một bond +150 bps carry nhưng 8-year spread duration có thể mất nhiều năm carry chỉ trong một spread shock nhỏ.
+
+Hãy hỏi “tôi được trả bao nhiêu carry cho mỗi unit risk?” thay vì chỉ “yield cao hay thấp?”.
+
+## 49. Scenario Analysis cho Bond Portfolio
+
+Stress ít nhất các scenarios:
+
+```text
+1. Policy +100 bps, curve parallel.
+2. Bull steepener recession.
+3. Bear steepener fiscal/inflation shock.
+4. Credit spread +200 bps.
+5. Rate down 100 bps nhưng spread +300 bps.
+6. FX -10% với foreign bond.
+7. Liquidity discount / margin shock.
+```
+
+Scenario P/L giúp nhìn interaction giữa rate và credit thay vì một duration number.
+
+## 50. Return Attribution
+
+Fixed-income P/L nên tách:
+
+```text
+Coupon / Accrual
++ Carry
++ Roll-Down
++ Risk-Free Rate Move
++ Curve Shape Move
++ Credit Spread Move
++ Optionality
++ FX
++ Default / Recovery
+- Fees / Execution
+```
+
+Nếu không attribution, investor dễ nhầm “bond selection skill” với tailwind từ falling rates.
+
+## 51. Khi nào Long Government Bonds Diversify Equity?
+
+Long sovereign bonds thường diversify tốt trong demand-led recession/disinflation khi yields fall.
+
+Trong inflation/fiscal shock, bonds và equities có thể cùng giảm. Vì vậy stock-bond correlation phải được stress theo regime chứ không dùng one historical average.
+
+## 52. Due-Diligence Checklist
+
+Với individual bond: issuer, seniority, collateral, maturity/call, coupon type, YTM/YTW, duration/DV01, spread/OAS, rating, leverage, coverage, maturity wall, liquidity runway, covenant, FX, liquidity và recovery case.
+
+Với bond ETF: thêm weighted duration, spread duration, credit-quality distribution, sector concentration, underlying liquidity, distribution-vs-portfolio yield, tracking, expense ratio, derivatives use và FX hedge.
+
+## 53. Mental Model cuối cùng
+
+Một fixed-income position nên được đọc theo chuỗi:
+
+```text
+Contractual Cash Flows
+→ Discount Curve
+→ Duration / Convexity
+→ Carry / Roll-Down
+→ Credit Spread
+→ Default / Recovery
+→ Optionality
+→ Liquidity / Funding
+→ FX
+→ Portfolio Role
+```
+
+Bond investing không phải chỉ “nhận coupon”. Nó là quản lý timing của cash flows, probability of repayment và sensitivity của present value dưới nhiều states của rates, credit và liquidity.
