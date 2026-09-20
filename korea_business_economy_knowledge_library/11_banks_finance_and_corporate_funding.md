@@ -1,227 +1,201 @@
 # Ngân hàng, tài chính và cách doanh nghiệp huy động vốn (Corporate Funding / 기업금융과 자금조달)
 
-Một doanh nghiệp có thể profitable trên paper nhưng vẫn phá sản nếu cash đến sai thời điểm. Vì vậy corporate finance không chỉ hỏi “business có lời không?” mà còn hỏi **business được tài trợ bằng nguồn vốn nào, kỳ hạn ra sao, lãi suất thế nào, currency nào và cash có về kịp trước khi nghĩa vụ đáo hạn hay không**.
+Một doanh nghiệp có thể **có lợi nhuận trên báo cáo nhưng vẫn phá sản nếu tiền mặt đến sai thời điểm**. Vì vậy tài chính doanh nghiệp không chỉ hỏi “hoạt động kinh doanh có lời không?”, mà còn hỏi doanh nghiệp được tài trợ bằng nguồn nào, kỳ hạn ra sao, lãi suất thế nào, bằng đồng tiền nào và tiền mặt có về trước khi nghĩa vụ đáo hạn hay không.
 
-Đây là distinction giữa **solvency (지급능력)** và **liquidity (유동성)**. Solvency hỏi tổng giá trị tài sản/business có đủ lớn để cover liabilities trong dài hạn không. Liquidity hỏi hôm nay company có đủ cash để trả payroll, supplier, interest và debt maturity không.
+Đây là sự khác biệt giữa **khả năng thanh toán dài hạn (solvency / 지급능력)** và **thanh khoản (liquidity / 유동성)**. Solvency hỏi giá trị tài sản và năng lực kinh doanh dài hạn có đủ bù nghĩa vụ hay không; liquidity hỏi hôm nay công ty có đủ tiền để trả lương, nhà cung cấp, lãi vay và khoản nợ đáo hạn hay không.
 
-Một company có thể solvent nhưng illiquid. Đây là lý do funding structure quan trọng ngang profitability.
+Một công ty có thể đủ khả năng thanh toán dài hạn nhưng vẫn thiếu thanh khoản. Vì vậy cấu trúc tài trợ quan trọng không kém khả năng sinh lời.
 
 ## Ba nguồn vốn cơ bản
 
-Nguồn vốn doanh nghiệp có thể nén thành ba nhóm: **equity (자기자본)**, **debt (부채)** và **retained earnings / operating cash flow (유보이익·영업현금흐름)**.
+Nguồn vốn doanh nghiệp có thể chia thành **vốn chủ sở hữu (equity / 자기자본)**, **nợ (debt / 부채)** và **lợi nhuận giữ lại / dòng tiền hoạt động (retained earnings / operating cash flow / 유보이익·영업현금흐름)**.
 
-Equity không có mandatory principal repayment nhưng làm dilute ownership. Debt giữ ownership nhưng tạo fixed claim: interest và principal phải trả bất kể business cycle. Retained earnings tránh issuance cost nhưng có opportunity cost vì cash đó lẽ ra có thể trả dividend hoặc buyback.
+Vốn chủ sở hữu không có nghĩa vụ hoàn trả gốc bắt buộc nhưng làm pha loãng quyền sở hữu. Nợ giữ nguyên tỷ lệ sở hữu nhưng tạo nghĩa vụ cố định về lãi và gốc dù chu kỳ kinh doanh tốt hay xấu. Lợi nhuận giữ lại không cần phát hành thêm chứng khoán nhưng vẫn có chi phí cơ hội vì tiền đó lẽ ra có thể được trả cổ tức hoặc mua lại cổ phiếu.
 
-Một capital structure hợp lý không phải debt thấp nhất. Nó là structure phù hợp với volatility, asset life, cash-flow visibility và growth option của business.
+Một **cấu trúc vốn (capital structure)** hợp lý không phải cấu trúc có ít nợ nhất, mà là cấu trúc phù hợp với độ biến động, vòng đời tài sản, khả năng dự đoán dòng tiền và cơ hội tăng trưởng của doanh nghiệp.
 
-## Match funding với asset life
+## Ghép kỳ hạn nguồn vốn với vòng đời tài sản
 
-Một nguyên tắc quan trọng là **maturity matching / 만기 대응**.
+Một nguyên tắc quan trọng là **phù hợp kỳ hạn (maturity matching / 만기 대응)**.
 
-Nếu company xây factory có useful life 20 năm nhưng finance bằng short-term loan 6 tháng, project có thể economically tốt nhưng company phải refinance liên tục. Nếu credit market đóng đúng lúc, liquidity crisis xuất hiện.
+Nếu công ty xây nhà máy có vòng đời 20 năm nhưng tài trợ bằng khoản vay 6 tháng, dự án có thể tốt về kinh tế nhưng doanh nghiệp phải tái cấp vốn liên tục. Nếu thị trường tín dụng đóng đúng thời điểm đó, khủng hoảng thanh khoản có thể xảy ra.
 
-Ngược lại, finance working capital 30 ngày bằng bond 10 năm có thể quá đắt và không cần thiết.
-
-Mental model:
+Ngược lại, tài trợ vốn lưu động 30 ngày bằng trái phiếu 10 năm có thể đắt và không cần thiết.
 
 ```text
-Short-lived asset → short funding có thể phù hợp
-Long-lived asset  → long funding thường an toàn hơn
+Tài sản ngắn hạn → nguồn vốn ngắn hạn có thể phù hợp
+Tài sản dài hạn  → nguồn vốn dài hạn thường an toàn hơn
 ```
 
-Mismatch giữa asset duration và liability maturity là một trong các cơ chế quan trọng từng làm corporate/financial crises nặng hơn.
+Sai lệch giữa vòng đời tài sản và kỳ hạn nghĩa vụ là một cơ chế quan trọng từng làm nhiều cuộc khủng hoảng tài chính trở nên nghiêm trọng hơn.
 
-## Bank loan và relationship banking
+## Vay ngân hàng và quan hệ tín dụng
 
-Bank lending vẫn rất quan trọng trong Hàn Quốc, đặc biệt với SMEs và private companies chưa access bond/equity market sâu.
+Vay ngân hàng vẫn rất quan trọng ở Hàn Quốc, đặc biệt với SME và doanh nghiệp tư nhân chưa tiếp cận sâu thị trường trái phiếu hoặc cổ phiếu.
 
-Bank đánh giá borrower qua cash flow, collateral, credit history, guarantees, sector outlook và management quality. Nhưng với SME, information asymmetry lớn hơn, nên collateral và relationship banking có weight cao.
+Ngân hàng đánh giá người vay thông qua dòng tiền, tài sản bảo đảm, lịch sử tín dụng, bảo lãnh, triển vọng ngành và chất lượng quản lý. Với SME, bất cân xứng thông tin lớn hơn nên tài sản bảo đảm và **quan hệ ngân hàng (relationship banking)** thường có vai trò lớn.
 
-Một khoản vay floating-rate thường có dạng:
+Lãi suất khoản vay thả nổi có thể nghĩ gần đúng như:
 
 \[
-Loan\ Rate = Reference\ Rate + Credit\ Spread
+Lãi\ suất\ vay = Lãi\ suất\ tham\ chiếu + Biên\ tín\ dụng
 \]
 
-Reference rate phản ánh market/monetary conditions; spread phản ánh borrower risk và bank pricing.
+Lãi suất tham chiếu phản ánh điều kiện thị trường và tiền tệ; **biên tín dụng (credit spread)** phản ánh rủi ro người vay và cách ngân hàng định giá.
 
-Nếu company debt 1 nghìn tỷ KRW và effective rate tăng 1 percentage point, annual interest burden tăng xấp xỉ 10 tỷ KRW trước hedging và repayment effects.
+Nếu doanh nghiệp có 1 nghìn tỷ KRW nợ và lãi suất hiệu dụng tăng 1 điểm phần trăm, chi phí lãi hằng năm tăng xấp xỉ 10 tỷ KRW trước tác động phòng hộ và trả nợ.
 
-## Fixed-rate vs floating-rate: cùng debt amount nhưng sensitivity khác nhau
+## Nợ lãi cố định và lãi thả nổi: cùng số nợ nhưng độ nhạy khác nhau
 
-Hai firms đều có 1 nghìn tỷ KRW debt nhưng risk có thể khác xa.
+Hai công ty cùng có 1 nghìn tỷ KRW nợ nhưng rủi ro có thể rất khác. Công ty A có 80% trái phiếu lãi cố định 5 năm; công ty B có 80% khoản vay thả nổi điều chỉnh mỗi 3 tháng.
 
-Firm A có 80% fixed-rate bond 5 năm. Firm B có 80% floating-rate bank loan repricing mỗi 3 tháng. Khi policy rate tăng, B chịu pressure gần như ngay; A chỉ chịu nhiều hơn khi issue/refinance debt mới.
+Khi lãi suất chính sách tăng, B chịu áp lực gần như ngay lập tức; A chỉ chịu tác động lớn hơn khi phát hành hoặc tái cấp vốn khoản nợ mới.
 
-Vì vậy monetary-policy transmission vào corporate earnings phụ thuộc **repricing schedule**, không chỉ total debt.
+Vì vậy tác động của chính sách tiền tệ lên lợi nhuận doanh nghiệp phụ thuộc **lịch điều chỉnh lãi suất (repricing schedule)** chứ không chỉ tổng số nợ.
 
 Xem [`01_macro_economy_and_business_cycle.md`](./01_macro_economy_and_business_cycle.md).
 
-## Corporate bond và credit spread
+## Trái phiếu doanh nghiệp và biên tín dụng
 
-Large companies có thể phát hành **corporate bonds / 회사채**. Yield investor yêu cầu thường có thể nghĩ như:
+Doanh nghiệp lớn có thể phát hành **trái phiếu doanh nghiệp (corporate bond / 회사채)**. Lợi suất nhà đầu tư yêu cầu có thể hình dung:
 
 \[
-Corporate\ Yield \approx Risk\ Free\ Benchmark + Credit\ Spread + Liquidity/Term\ Premium
+Lợi\ suất\ trái\ phiếu\ doanh\ nghiệp
+\approx
+Lợi\ suất\ chuẩn\ phi\ rủi\ ro
++ Biên\ tín\ dụng
++ Phần\ bù\ thanh\ khoản/kỳ\ hạn
 \]
 
-Credit spread tăng khi investor lo default hoặc liquidity. Vì vậy company funding cost có thể tăng dù central-bank rate không đổi.
+Biên tín dụng tăng khi nhà đầu tư lo ngại khả năng vỡ nợ hoặc thanh khoản. Vì vậy chi phí tài trợ có thể tăng ngay cả khi lãi suất của ngân hàng trung ương không đổi.
 
-**Credit rating (신용등급)** ảnh hưởng investor universe và coupon, nhưng rating không phải truth tuyệt đối. Nó là assessment có lag và methodology riêng.
+**Xếp hạng tín nhiệm (credit rating / 신용등급)** ảnh hưởng tới nhóm nhà đầu tư có thể mua trái phiếu và mức coupon, nhưng xếp hạng không phải chân lý tuyệt đối. Nó là một đánh giá có độ trễ và phương pháp riêng.
 
-Downgrade có thể tạo feedback loop:
+Một đợt hạ xếp hạng có thể tạo vòng phản hồi:
 
 ```text
-Weak cash flow
+Dòng tiền yếu
    ↓
-Rating pressure
+Áp lực xếp hạng
    ↓
-Higher funding cost
+Chi phí vốn cao hơn
    ↓
-Lower profit / harder refinancing
+Lợi nhuận thấp hơn / khó tái cấp vốn
    ↓
-More rating pressure
+Áp lực xếp hạng lớn hơn
 ```
 
-## Maturity wall và refinancing risk
+## “Bức tường đáo hạn” và rủi ro tái cấp vốn
 
-Một company có net debt moderate nhưng 70% debt đáo hạn trong 12 tháng vẫn riskier hơn firm debt lớn hơn nhưng maturity spread đều trong 7 năm.
+Một công ty có nợ ròng vừa phải nhưng 70% nợ đáo hạn trong 12 tháng có thể rủi ro hơn công ty nợ lớn hơn nhưng kỳ hạn trải đều trong 7 năm.
 
-Do đó phải đọc **maturity ladder / 만기구조**.
+Vì vậy phải đọc **cấu trúc đáo hạn (maturity ladder / 만기구조)**.
 
-Refinancing risk tăng khi:
+Rủi ro tái cấp vốn tăng khi thanh khoản thị trường giảm, xếp hạng tín nhiệm bị hạ, giá trị tài sản bảo đảm giảm, chu kỳ kinh doanh xấu đi, thị trường ngoại hối căng thẳng hoặc khẩu vị rủi ro của nhà đầu tư giảm.
 
-- market liquidity giảm;
-- rating bị downgrade;
-- collateral value giảm;
-- business cycle xấu;
-- FX market stress;
-- investor risk appetite giảm.
+Phân tích thanh khoản luôn cần một lịch thời gian, không chỉ một ảnh chụp bảng cân đối.
 
-Liquidity analysis luôn cần calendar, không chỉ balance-sheet snapshot.
+## Vốn lưu động: lợi nhuận không đồng nghĩa với tiền mặt
 
-## Working capital: profit không đồng nghĩa cash
-
-Operating cycle thường là:
+Chu kỳ hoạt động thường là:
 
 ```text
-Mua inventory
+Mua hàng tồn kho
    ↓
 Sản xuất / bán hàng
    ↓
-Ghi receivable
+Ghi nhận khoản phải thu
    ↓
-Thu cash
+Thu tiền
 ```
 
-Trong khi supplier và payroll có thể phải trả sớm hơn.
+Trong khi đó, nhà cung cấp và người lao động có thể phải được thanh toán sớm hơn.
 
-**Cash Conversion Cycle (CCC)**:
+**Chu kỳ chuyển đổi tiền mặt (Cash Conversion Cycle / CCC)**:
 
 \[
 CCC = DIO + DSO - DPO
 \]
 
-`DIO` là inventory days, `DSO` là receivable days, `DPO` là payable days.
+`DIO` là số ngày tồn kho, `DSO` là số ngày phải thu và `DPO` là số ngày phải trả.
 
-CCC dài hơn nghĩa cash bị khóa lâu hơn. Growth nhanh có thể làm funding need tăng vì inventory/receivable phình trước cash collection.
+CCC dài hơn nghĩa là tiền bị khóa lâu hơn. Tăng trưởng nhanh có thể làm nhu cầu tài trợ tăng vì tồn kho và khoản phải thu phình lên trước khi tiền khách hàng về.
 
-Đây là reason một fast-growing supplier có thể cần vay nhiều hơn dù profit tăng.
+Đó là lý do một nhà cung cấp tăng trưởng nhanh vẫn có thể phải vay nhiều hơn dù lợi nhuận tăng.
 
-## Working capital và bargaining power
+## Vốn lưu động và quyền thương lượng
 
-Payment term không chỉ là accounting detail; nó phản ánh bargaining power.
+Kỳ hạn thanh toán không chỉ là chi tiết kế toán; nó phản ánh **quyền thương lượng (bargaining power)**.
 
-Large buyer kéo DPO từ 45 lên 90 ngày có thể cải thiện cash flow của mình. Nhưng supplier phía kia thấy DSO tăng và phải vay thêm.
+Nếu một người mua lớn kéo thời hạn phải trả từ 45 lên 90 ngày, dòng tiền của người mua được cải thiện. Nhưng nhà cung cấp ở phía bên kia lại thấy số ngày phải thu tăng và phải vay thêm.
 
-Nói cách khác, strong buyer có thể “finance” một phần operation bằng balance sheet của supplier.
+Nói cách khác, người mua mạnh có thể dùng bảng cân đối của nhà cung cấp để tài trợ một phần hoạt động của mình.
 
-Đây là connection trực tiếp với [`06_sme_mid_sized_and_subcontracting_ecosystem.md`](./06_sme_mid_sized_and_subcontracting_ecosystem.md).
+Đây là liên kết trực tiếp với [`06_sme_mid_sized_and_subcontracting_ecosystem.md`](./06_sme_mid_sized_and_subcontracting_ecosystem.md).
 
-## Receivables financing, guarantees và policy finance
+## Tài trợ khoản phải thu, bảo lãnh và tài chính chính sách
 
-SME có thể dùng trade receivables làm funding base, hoặc nhận credit guarantees/policy finance để giảm collateral constraint.
+SME có thể dùng khoản phải thu làm cơ sở tài trợ hoặc nhận bảo lãnh tín dụng và vốn chính sách để giảm hạn chế tài sản thế chấp.
 
-Guarantee không xóa risk; nó chuyển risk sang guarantor nếu borrower default. Vì vậy policy guarantee nên được xem là **risk-sharing mechanism**, không phải free capital.
+Bảo lãnh không xóa rủi ro; nó chuyển rủi ro sang bên bảo lãnh nếu người vay vỡ nợ. Vì vậy bảo lãnh chính sách nên được hiểu là **cơ chế chia sẻ rủi ro (risk-sharing mechanism)**, không phải vốn miễn phí.
 
-Policy banks và guarantee institutions có rationale khi private lender underfund project do information asymmetry, strategic externality hoặc long duration. Nhưng nếu selection yếu, capital có thể bị giữ trong low-productivity firms.
+Ngân hàng chính sách và tổ chức bảo lãnh có lý do tồn tại khi người cho vay tư nhân tài trợ thiếu do bất cân xứng thông tin, ngoại tác chiến lược hoặc kỳ hạn quá dài. Nhưng nếu lựa chọn dự án yếu, vốn có thể bị giữ trong doanh nghiệp năng suất thấp.
 
-## Leverage: return amplifier và loss amplifier
+## Đòn bẩy: khuếch đại cả lợi nhuận lẫn thua lỗ
 
-Financial leverage giúp equity return tăng nếu asset return vượt cost of debt.
+**Đòn bẩy tài chính (financial leverage)** có thể nâng ROE khi lợi suất tài sản cao hơn chi phí nợ. Nhưng khi chu kỳ đảo chiều, lãi vẫn phải trả dù doanh thu giảm, nên cùng cơ chế đó khuếch đại thua lỗ.
 
-Ví dụ đơn giản:
-
-```text
-Asset return = 10%
-Debt cost    = 4%
-```
-
-Debt có thể nâng ROE vì shareholder bỏ ít equity hơn.
-
-Nhưng downturn đảo logic. Interest vẫn phải trả khi revenue giảm. Vì vậy leverage có **convex downside**.
-
-Một vài metrics:
+Một số chỉ số thường dùng:
 
 \[
-Net\ Debt = Debt - Cash
+Nợ\ ròng = Nợ - Tiền\ mặt
 \]
 
 \[
-Interest\ Coverage = \frac{EBIT}{Interest\ Expense}
+Khả\ năng\ trả\ lãi = \frac{EBIT}{Chi\ phí\ lãi}
 \]
 
 \[
-Net\ Debt/EBITDA
+Nợ\ ròng/EBITDA
 \]
 
-Không metric nào đủ một mình. EBITDA không phải cash; cash có thể restricted; EBIT có thể cyclical.
+Không chỉ số nào đủ khi đứng riêng. EBITDA không phải tiền mặt; tiền có thể bị hạn chế sử dụng; EBIT có thể ở đỉnh chu kỳ.
 
-## Covenant: debt contract có thể giới hạn management
+## Covenant: hợp đồng nợ có thể giới hạn ban quản lý
 
-Loan/bond có thể chứa **covenants / 재무약정** như maximum leverage, minimum coverage hoặc restrictions on asset sale/dividend.
+Khoản vay hoặc trái phiếu có thể chứa **điều khoản ràng buộc (covenant / 재무약정)** như trần đòn bẩy, mức bao phủ lãi tối thiểu hoặc hạn chế bán tài sản và trả cổ tức.
 
-Covenant breach không nhất thiết nghĩa company bankrupt, nhưng có thể trigger renegotiation, higher spread hoặc acceleration rights.
+Vi phạm covenant không tự động nghĩa doanh nghiệp phá sản, nhưng có thể kích hoạt đàm phán lại, tăng lãi suất hoặc quyền yêu cầu trả nợ sớm.
 
-Vì vậy analyst cần đọc notes về covenant chứ không chỉ headline debt amount.
+Vì vậy cần đọc thuyết minh covenant chứ không chỉ số nợ tiêu đề.
 
-## FX debt và currency mismatch
+## Nợ ngoại tệ và chênh lệch tiền tệ
 
-Company vay USD nhưng kiếm revenue KRW có **currency mismatch**. Khi KRW depreciates, debt quy đổi sang KRW tăng và interest burden có thể tăng.
+Doanh nghiệp vay USD nhưng tạo dòng tiền chủ yếu bằng KRW có **chênh lệch tiền tệ (currency mismatch)**. Khi KRW yếu, giá trị khoản nợ quy đổi sang KRW tăng và gánh nặng lãi có thể tăng.
 
-Ngược lại, exporter có USD revenue có thể natural hedge USD debt.
+Ngược lại, nhà xuất khẩu có doanh thu USD có thể tự tạo **phòng hộ tự nhiên (natural hedge)** cho nợ USD.
 
-Một mental model:
+Một nguyên tắc đơn giản là đồng tiền của khoản nợ nên tương đối gần đồng tiền của dòng tiền tạo ra. Nếu không, doanh nghiệp phải dùng phái sinh hoặc có đủ quyền định giá để hấp thụ biến động tỷ giá.
 
-```text
-Debt currency nên gần cash-flow currency
-```
+## Phòng hộ không xóa rủi ro miễn phí
 
-Nếu không, firm cần derivatives hoặc đủ pricing power để absorb FX movement.
+Hợp đồng kỳ hạn, hoán đổi và quyền chọn có thể giảm biến động lãi suất hoặc tỷ giá nhưng đều có chi phí.
 
-FX mismatch là một mechanism quan trọng trong historical financial crises và vẫn relevant với global funding ngày nay.
+Doanh nghiệp có thể phòng hộ 70% mức tiếp xúc USD và để 30% mở. Người phân tích cần biết tỷ lệ phòng hộ, kỳ hạn và cách hạch toán.
 
-## Hedging không xóa risk miễn phí
+Một tài sản phái sinh trên bảng cân đối không tự động là lợi nhuận “chất lượng cao”; nó có thể chỉ bù cho khoản lỗ ở mức tiếp xúc cơ sở.
 
-Forward, swap và option có thể giảm rate/FX volatility nhưng hedge có cost.
+## Phát hành vốn chủ sở hữu và pha loãng
 
-Company có thể hedge 70% USD exposure, còn 30% để open. Analyst cần biết hedge ratio, maturity và accounting treatment.
+Huy động bằng cổ phần không tạo nghĩa vụ trả gốc cố định nhưng làm cổ đông hiện tại bị pha loãng.
 
-Derivative asset trên balance sheet không đồng nghĩa profit “chất lượng cao”; nó có thể chỉ offset loss ở underlying exposure.
+Nếu công ty phát hành cổ phiếu mới ở giá thấp để cứu thanh khoản, doanh nghiệp có thể sống sót nhưng cổ đông cũ chịu chuyển giao giá trị. Ngược lại, phát hành cổ phiếu ở mức định giá cao để tài trợ dự án ROIC cao có thể tạo thêm giá trị.
 
-## Equity issuance và dilution
+Do đó câu “nợ xấu, vốn chủ tốt” là quá đơn giản. Câu hỏi thật sự là **chi phí vốn bao nhiêu và khoản vốn mới sẽ tạo lợi suất gì**.
 
-Equity funding không tạo fixed repayment nhưng existing shareholders bị dilution.
+## Chi phí vốn và tỷ suất tối thiểu
 
-Nếu company issue new shares ở price thấp hơn intrinsic value để cứu liquidity, company sống nhưng old shareholders chịu transfer.
-
-Ngược lại, issuing equity ở high valuation để fund high-return project có thể tạo value.
-
-Do đó “debt xấu, equity tốt” là simplification. Câu hỏi là **cost of capital và expected return của use of funds**.
-
-## Cost of capital và hurdle rate
-
-Project chỉ tạo value nếu expected return đủ cao so với risk-adjusted cost of funding.
+Một dự án chỉ tạo giá trị nếu lợi suất kỳ vọng đủ cao so với chi phí tài trợ đã điều chỉnh theo rủi ro.
 
 Một khái niệm trung tâm là **WACC (Weighted Average Cost of Capital / 가중평균자본비용)**:
 
@@ -229,122 +203,105 @@ Một khái niệm trung tâm là **WACC (Weighted Average Cost of Capital / 가
 WACC = w_e r_e + w_d r_d(1-T)
 \]
 
-Trong đó `w_e`, `w_d` là weights của equity/debt; `r_e`, `r_d` là cost; `T` là tax rate.
+Trong đó `w_e`, `w_d` là tỷ trọng vốn chủ và nợ; `r_e`, `r_d` là chi phí tương ứng; `T` là thuế suất.
 
-Management dùng hurdle rate để quyết định capex/M&A/R&D. Nếu funding cost tăng nhưng expected project return không đổi, NPV giảm.
+Ban điều hành dùng **tỷ suất tối thiểu (hurdle rate)** để đánh giá CAPEX, M&A hoặc R&D. Khi chi phí vốn tăng nhưng lợi suất kỳ vọng của dự án không đổi, NPV giảm.
 
 ## Project Finance (PF)
 
-**Project Finance / 프로젝트 파이낸싱** tách project vào SPV và dựa nhiều vào future project cash flow hơn sponsor balance sheet.
+**Tài trợ dự án (Project Finance / 프로젝트 파이낸싱)** thường tách dự án vào một pháp nhân dự án và dựa nhiều vào dòng tiền tương lai của chính dự án hơn bảng cân đối của nhà tài trợ.
 
-PF phù hợp với infrastructure/real estate project có cash-flow structure riêng, nhưng contract complexity cao. Lender phải nhìn completion risk, demand risk, collateral, guarantees và waterfall.
+PF phù hợp với hạ tầng hoặc bất động sản có dòng tiền riêng, nhưng cấu trúc hợp đồng rất phức tạp. Người cho vay phải nhìn rủi ro hoàn thành, nhu cầu, tài sản bảo đảm, bảo lãnh và thứ tự phân phối tiền.
 
-Korean real-estate PF có thêm bridge financing, presale và contractor credit support. Xem [`18_construction_real_estate_and_project_finance.md`](./18_construction_real_estate_and_project_finance.md).
+Bất động sản Hàn Quốc còn có bridge financing, presale và hỗ trợ tín dụng từ nhà thầu. Xem [`18_construction_real_estate_and_project_finance.md`](./18_construction_real_estate_and_project_finance.md).
 
-## Securities firms và non-bank finance
+## Công ty chứng khoán và tài chính phi ngân hàng
 
-Hệ thống funding không chỉ có banks. Securities firms có thể underwrite bonds, securitize assets, provide bridge finance hoặc structure products. Insurers và asset managers là institutional investors mua bonds/equity.
+Hệ thống tài trợ không chỉ có ngân hàng. Công ty chứng khoán có thể bảo lãnh phát hành trái phiếu, chứng khoán hóa tài sản, cung cấp bridge finance hoặc cấu trúc sản phẩm. Công ty bảo hiểm và quản lý tài sản là các nhà đầu tư tổ chức mua trái phiếu và cổ phiếu.
 
-Non-bank funding giúp diversify sources nhưng cũng có liquidity risk khác. Market-based funding thường nhạy với investor sentiment hơn relationship bank lending.
+Tài chính phi ngân hàng giúp đa dạng hóa nguồn vốn nhưng có kiểu rủi ro thanh khoản khác. Nguồn vốn dựa trên thị trường thường nhạy với tâm lý nhà đầu tư hơn quan hệ tín dụng ngân hàng.
 
-Khi market đóng, securities-based borrower có thể mất refinancing channel rất nhanh.
+Khi thị trường đóng, người vay phụ thuộc chứng khoán có thể mất kênh tái cấp vốn rất nhanh.
 
-## Securitization: biến cash flow thành security
+## Chứng khoán hóa: biến dòng tiền thành chứng khoán
 
-Receivables, mortgage hoặc loan pools có thể được securitize. Idea là tách cash flows khỏi originator và bán claims cho investors.
+Khoản phải thu, thế chấp hoặc nhóm khoản vay có thể được **chứng khoán hóa (securitization)**. Ý tưởng là tách dòng tiền khỏi bên khởi tạo rồi bán quyền nhận dòng tiền cho nhà đầu tư.
 
-Securitization giúp funding và risk transfer nhưng complexity làm risk khó nhìn. Quality của underlying assets và structure waterfall quan trọng hơn label rating.
+Chứng khoán hóa giúp huy động vốn và chuyển rủi ro nhưng cấu trúc phức tạp có thể che rủi ro. Chất lượng tài sản cơ sở và thứ tự phân phối dòng tiền quan trọng hơn nhãn xếp hạng.
 
-## Captive finance và industrial groups
+## Công ty tài chính captive trong tập đoàn công nghiệp
 
-Automotive groups thường dùng finance affiliates để support vehicle sales, lease và dealer inventory. Captive finance giúp demand nhưng làm group exposure sang credit cycle tăng.
+Tập đoàn ô tô thường có công ty tài chính riêng để hỗ trợ bán xe, cho thuê và tài trợ tồn kho đại lý. **Tài chính nội bộ tập đoàn (captive finance)** giúp tăng nhu cầu nhưng đồng thời làm cả tập đoàn nhạy hơn với chu kỳ tín dụng.
 
-Khi auto sales mạnh, finance affiliate hỗ trợ volume. Khi used-car prices hoặc borrower quality xấu, credit loss có thể tăng ngay cả nếu manufacturing margin chưa giảm.
+Khi bán xe tốt, công ty tài chính hỗ trợ sản lượng. Khi giá xe cũ hoặc chất lượng người vay xấu đi, chi phí tín dụng có thể tăng ngay cả khi biên lợi nhuận sản xuất chưa giảm.
 
-Do đó group analysis cần nhìn industrial và financial affiliates cùng nhau.
+Vì vậy cần đọc doanh nghiệp công nghiệp và công ty tài chính trong cùng bức tranh.
 
-## Cash không phải lúc nào cũng fungible
+## Tiền mặt không phải lúc nào cũng chuyển tự do được
 
-Một group có 20 nghìn tỷ KRW cash không có nghĩa parent có thể dùng toàn bộ.
+Một tập đoàn có 20 nghìn tỷ KRW tiền mặt không có nghĩa công ty mẹ sử dụng được toàn bộ. Tiền có thể nằm tại công ty con ở nước ngoài, công ty tài chính chịu quy định hoặc liên doanh; việc chuyển cổ tức còn chịu thuế và hạn chế pháp lý.
 
-Cash có thể nằm ở foreign subsidiaries, regulated financial affiliates hoặc JV. Dividend transfer có tax/regulatory restriction.
+Vì vậy luôn phải hỏi **tiền nằm ở pháp nhân nào**.
 
-Vì vậy analyst phải hỏi **cash nằm ở entity nào**.
+Xem [`05_group_structure_affiliates_holding_companies.md`](./05_group_structure_affiliates_holding_companies.md).
 
-Đây là connection với [`05_group_structure_affiliates_holding_companies.md`](./05_group_structure_affiliates_holding_companies.md).
+## Phân bổ vốn: huy động vốn chỉ là nửa đầu câu chuyện
 
-## Capital allocation: huy động vốn chỉ là nửa đầu câu chuyện
+Sau khi có vốn, ban điều hành phải phân bổ giữa CAPEX duy trì, CAPEX tăng trưởng, R&D, M&A, trả nợ, cổ tức, mua lại cổ phiếu và dự trữ tiền mặt.
 
-Sau khi có capital, management phải allocate giữa:
+Giá trị được tạo ra hay phá hủy phụ thuộc vào lợi suất của những quyết định này, không phụ thuộc việc doanh nghiệp “có nhiều tiền”. Một bảng cân đối mạnh vẫn có thể phá hủy giá trị nếu liên tục mua tài sản lợi suất thấp.
 
-```text
-Maintenance capex
-Growth capex
-R&D
-M&A
-Debt repayment
-Dividend
-Buyback
-Cash reserve
-```
+## Stress test tài trợ
 
-Value creation phụ thuộc return của allocation chứ không phụ thuộc company “có nhiều cash”.
-
-Một company có balance sheet mạnh nhưng repeatedly acquire low-return assets vẫn destroy value.
-
-## Stress test funding
-
-Một cách đọc practical là dựng scenario:
+Một cách đọc thực tế là dựng kịch bản:
 
 ```text
-Revenue -15%
-EBIT margin giảm 3pt
-Interest rate +150bp
+Doanh thu -15%
+Biên EBIT giảm 3 điểm %
+Lãi suất +150bp
 KRW yếu 10%
-Receivable days +20
-Bond market khó refinance
+Số ngày phải thu +20
+Thị trường trái phiếu khó tái cấp vốn
 ```
 
-Sau đó hỏi cash còn dương không, covenant có breach không và maturity nào trở thành critical.
+Sau đó hỏi tiền mặt còn dương không, covenant có bị vi phạm không và khoản nợ đáo hạn nào trở thành điểm nguy hiểm.
 
-Stress test hữu ích hơn một ratio duy nhất vì funding risk thường xuất hiện khi nhiều shocks xảy ra cùng lúc.
+Stress test hữu ích hơn một tỷ số duy nhất vì rủi ro tài trợ thường xuất hiện khi nhiều cú sốc xảy ra cùng lúc.
 
-## Mental Model
+## Mental Model — mô hình tư duy
 
-> Profitability trả lời **business có tạo value không**. Funding trả lời **business có sống đủ lâu để thu được value đó không**. Capital allocation trả lời **value tạo ra được tái đầu tư có hiệu quả không**.
-
-Một chain dễ nhớ:
+> Khả năng sinh lời trả lời **doanh nghiệp có tạo giá trị không**. Tài trợ trả lời **doanh nghiệp có sống đủ lâu để thu được giá trị đó không**. Phân bổ vốn trả lời **giá trị tạo ra có được tái đầu tư hiệu quả không**.
 
 ```text
-Operation
+Hoạt động kinh doanh
    ↓
-Working capital
+Vốn lưu động
    ↓
-Cash flow
+Dòng tiền
    ↓
-Debt / Equity funding
+Nợ / vốn chủ sở hữu
    ↓
-Maturity + Rate + Currency risk
+Rủi ro kỳ hạn + lãi suất + tiền tệ
    ↓
-Capital allocation
+Phân bổ vốn
    ↓
-Long-term value
+Giá trị dài hạn
 ```
 
-## Common misconceptions
+## Những nhầm lẫn thường gặp
 
-**“Debt thấp luôn tốt.”** Sai. Stable business có thể dùng moderate debt hiệu quả.
+**“Nợ thấp luôn tốt.”** Sai. Doanh nghiệp ổn định có thể dùng mức nợ vừa phải hiệu quả.
 
-**“Cash lớn luôn an toàn.”** Sai. Cash có thể restricted hoặc nằm sai entity.
+**“Tiền mặt lớn luôn an toàn.”** Sai. Tiền có thể bị hạn chế sử dụng hoặc nằm ở sai pháp nhân.
 
-**“Profit cao nghĩa liquidity tốt.”** Sai. Receivable/inventory có thể hút toàn bộ cash.
+**“Lợi nhuận cao nghĩa thanh khoản tốt.”** Sai. Khoản phải thu và tồn kho có thể hút hết tiền.
 
-**“Fixed-rate debt không có rate risk.”** Chỉ tạm thời. Refinancing vẫn chịu future rates.
+**“Nợ lãi cố định không có rủi ro lãi suất.”** Chỉ đúng tạm thời; tái cấp vốn vẫn chịu lãi suất tương lai.
 
-**“Credit rating cao nghĩa không default.”** Sai. Rating là assessment xác suất, không phải guarantee.
+**“Xếp hạng tín nhiệm cao nghĩa không thể vỡ nợ.”** Sai. Xếp hạng là đánh giá xác suất, không phải bảo đảm.
 
-**“Policy guarantee loại bỏ loss.”** Sai. Loss chỉ được chuyển sang party khác.
+**“Bảo lãnh chính sách loại bỏ thua lỗ.”** Sai. Thua lỗ chỉ được chuyển sang bên khác.
 
-## Connections
+## Liên kết
 
 Đọc cùng [`01_macro_economy_and_business_cycle.md`](./01_macro_economy_and_business_cycle.md), [`05_group_structure_affiliates_holding_companies.md`](./05_group_structure_affiliates_holding_companies.md), [`06_sme_mid_sized_and_subcontracting_ecosystem.md`](./06_sme_mid_sized_and_subcontracting_ecosystem.md), [`10_capital_markets_kospi_kosdaq_konex.md`](./10_capital_markets_kospi_kosdaq_konex.md), [`18_construction_real_estate_and_project_finance.md`](./18_construction_real_estate_and_project_finance.md) và [`21_economy_to_company_transmission.md`](./21_economy_to_company_transmission.md).
