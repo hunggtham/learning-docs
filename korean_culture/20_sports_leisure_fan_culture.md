@@ -1,271 +1,271 @@
-# Thể thao, leisure và fan culture
+# Thể thao, giải trí và văn hoá người hâm mộ
 
-## Leisure là cách xã hội phân bổ thời gian, tiền và không gian
+## Thời gian rảnh cho thấy xã hội phân bổ thời gian, tiền và không gian như thế nào
 
-**Leisure / 여가** không chỉ là “không làm việc”. Nó phụ thuộc work hours, income, household duty, age, transport và available infrastructure. Hai người có cùng sở thích nhưng một người commute 90 phút, người kia làm gần nhà sẽ có leisure budget rất khác.
+**Giải trí và thời gian rảnh (여가 / leisure)** không chỉ là “không làm việc”. Nó phụ thuộc giờ làm, thu nhập, trách nhiệm gia đình, tuổi, giao thông và hạ tầng sẵn có. Hai người có cùng sở thích nhưng một người đi làm 90 phút, người kia làm gần nhà sẽ có ngân sách thời gian rảnh rất khác.
 
-Vì vậy khi nói Hàn Quốc “thích hiking”, “mê baseball” hay “rất mạnh esports”, cần hỏi thêm: activity đó có venue ở đâu, access cost bao nhiêu, ai có thời gian, technology nào support, và identity nào được build quanh nó?
+Vì vậy khi nói Hàn Quốc “thích leo núi”, “mê bóng chày” hay “rất mạnh thể thao điện tử”, cần hỏi thêm: hoạt động đó có địa điểm ở đâu, chi phí tiếp cận bao nhiêu, ai có thời gian, công nghệ nào hỗ trợ và danh tính nào được xây quanh nó?
 
-Một activity trở thành cultural institution khi có:
-
-```text
-repeat participation
-+ shared vocabulary
-+ venue/infrastructure
-+ calendar
-+ community
-+ symbolic identity
-```
-
-## 워라밸 và leisure như một claim về quyền thời gian
-
-`워라밸` — work-life balance — không chỉ là slogan HR. Nó phản ánh việc thời gian ngoài công việc được coi ngày càng rõ là resource cá nhân. Nếu thế hệ trước xem overtime như investment vào organization, thế hệ sau có thể value predictable end time để tập gym, học, gặp bạn hoặc nghỉ.
-
-Thay đổi này không diễn ra đồng đều giữa industry. Nhưng khi leisure có value cao hơn, market cho gym, travel, hobby class, running crew và pet activity mở rộng.
-
-## 야구: stadium như một ritual system
-
-Professional baseball ở Hàn Quốc có fan culture mạnh với chant theo batter/player, team song, food, merchandise và away travel. Người xem không chỉ quan sát; họ **perform fandom**.
-
-Ritual ở stadium có state rõ:
+Một hoạt động trở thành **thiết chế văn hoá (cultural institution)** khi có:
 
 ```text
-entry
-→ seat/group identity
-→ player-specific chant
-→ scoring event
-→ synchronized reaction
-→ post-game memory/review
+tham gia lặp lại
++ từ vựng chung
++ địa điểm / hạ tầng
++ lịch hoạt động
++ cộng đồng
++ danh tính biểu tượng
 ```
 
-Repeated ritual biến stranger cùng team thành temporary in-group.
+## 워라밸: thời gian rảnh như một yêu cầu về quyền đối với thời gian cá nhân
 
-## 응원가와 떼창: synchrony tạo belonging
+`워라밸` — cân bằng công việc–đời sống — không chỉ là khẩu hiệu nhân sự. Nó phản ánh việc thời gian ngoài công việc ngày càng được coi rõ là tài nguyên cá nhân. Nếu thế hệ trước có thể xem làm thêm giờ như đầu tư vào tổ chức, thế hệ sau có thể coi giờ tan làm ổn định là điều kiện để tập thể thao, học thêm, gặp bạn hoặc nghỉ ngơi.
 
-`응원가` và collective singing làm hàng nghìn người đồng bộ hành vi. Synchrony giảm sense of individual isolation vì mọi người cùng nhịp, cùng nhìn một event và phản ứng gần đồng thời.
+Thay đổi này không diễn ra đồng đều giữa các ngành. Tuy nhiên khi giá trị của thời gian rảnh tăng, thị trường cho phòng gym, du lịch, lớp sở thích, nhóm chạy bộ và hoạt động với thú cưng cũng mở rộng.
 
-Mechanism tương tự xuất hiện ở concert, protest, military drill và religious chanting, dù meaning khác hoàn toàn. **Synchronization là form; culture quyết định content.**
+## 야구: sân vận động như một hệ thống nghi thức
 
-## 치맥 và spectator food
+Bóng chày chuyên nghiệp ở Hàn Quốc có văn hoá người hâm mộ mạnh với bài cổ vũ theo cầu thủ, bài hát đội, đồ ăn, hàng lưu niệm và đi cổ vũ sân khách. Người xem không chỉ quan sát; họ **thực hành vai trò người hâm mộ**.
 
-`치맥` — chicken + beer — nổi tiếng trong viewing culture, picnic và stadium/social setting. Pairing không phải tự nhiên; repeated media exposure, franchise supply và event association làm nó thành cultural shorthand.
+Nghi thức trên sân có trạng thái khá rõ:
 
-Food pairing hoạt động như memory cache: chỉ cần nói `치맥` là người nghe reconstruct cả setting casual, shared food và leisure.
+```text
+vào sân
+→ nhận diện chỗ ngồi / nhóm
+→ cổ vũ theo cầu thủ
+→ sự kiện ghi điểm
+→ phản ứng đồng bộ
+→ ghi nhớ / bàn luận sau trận
+```
 
-## 축구: league fandom và national-team moments
+Nghi thức lặp lại biến những người xa lạ cùng ủng hộ một đội thành nhóm tạm thời.
 
-Football có hai mode identity khác nhau. Club fandom là repeated local/season identity; national team tạo **episodic mass synchrony** khi tournament lớn diễn ra.
+## 응원가와 떼창: đồng bộ tạo cảm giác thuộc về
 
-Public viewing làm plaza, bar và household cùng react một event real-time. Nhưng national-team enthusiasm không thể dùng để suy political ideology hay nationalism của từng cá nhân; sports identity và political identity là dimensions khác.
+`응원가` và hát tập thể làm hàng nghìn người đồng bộ hành vi. Sự đồng bộ làm giảm cảm giác tách biệt cá nhân vì mọi người cùng nhịp, cùng nhìn một sự kiện và phản ứng gần như cùng lúc.
 
-## 등산: geography trở thành leisure infrastructure
+Cơ chế tương tự xuất hiện ở buổi hoà nhạc, nghi lễ tôn giáo, huấn luyện quân sự hoặc các cuộc tập hợp đông người, dù ý nghĩa của từng bối cảnh hoàn toàn khác. **Đồng bộ là hình thức; văn hoá quyết định nội dung**.
 
-Hàn Quốc có nhiều mountain trail gần city, đặc biệt Seoul có thể tiếp cận nhiều trail bằng subway/bus. Khi transaction cost thấp, hiking không đòi expedition planning lớn.
+## 치맥 và đồ ăn khi xem thể thao
 
-Physics cơ bản:
+`치맥` — gà + bia — nổi tiếng trong văn hoá xem thể thao, picnic và tụ tập. Sự kết hợp này không phải tự nhiên có sẵn; việc xuất hiện lặp lại trong truyền thông, chuỗi nhà hàng và sự kiện xã hội làm nó thành một ký hiệu văn hoá ngắn gọn.
+
+Một cụm như `치맥` hoạt động gần như bộ nhớ đệm: chỉ cần nói từ này là người nghe có thể hình dung cả không khí thoải mái, món ăn chia sẻ và thời gian nghỉ ngơi.
+
+## 축구: người hâm mộ câu lạc bộ và những khoảnh khắc đội tuyển quốc gia
+
+Bóng đá tạo hai kiểu danh tính khác nhau. Người hâm mộ câu lạc bộ có danh tính lặp theo địa phương/mùa giải; đội tuyển quốc gia tạo **sự đồng bộ đại chúng theo từng thời điểm (episodic mass synchrony)** khi giải lớn diễn ra.
+
+Xem chung ở quảng trường, quán bar hoặc gia đình làm nhiều người phản ứng với cùng sự kiện theo thời gian thực. Tuy nhiên nhiệt tình với đội tuyển quốc gia không thể dùng để suy ra quan điểm chính trị hay mức chủ nghĩa dân tộc của từng cá nhân; danh tính thể thao và danh tính chính trị là hai chiều khác nhau.
+
+## 등산: địa lý trở thành hạ tầng giải trí
+
+Hàn Quốc có nhiều đường núi gần thành phố; riêng Seoul có thể tiếp cận nhiều điểm leo núi bằng tàu điện ngầm hoặc xe buýt. Khi chi phí giao dịch thấp, leo núi không đòi chuẩn bị như một chuyến thám hiểm lớn.
+
+Về vật lý cơ bản:
 
 ```math
 \Delta U = mg\Delta h
 ```
 
-Cùng quãng đường ngang nhưng elevation gain cao làm energy requirement khác. Trail design, stair, rest point và transport therefore affect participation.
+Cùng quãng đường ngang nhưng chênh lệch độ cao lớn làm nhu cầu năng lượng khác. Thiết kế đường mòn, bậc thang, điểm nghỉ và giao thông vì vậy ảnh hưởng trực tiếp mức tham gia.
 
-Cultural layer nằm ở group hiking, mountain restaurant, gear market và weekend rhythm.
+Lớp văn hoá nằm ở nhóm leo núi, quán ăn quanh núi, thị trường trang phục–dụng cụ và nhịp cuối tuần.
 
-## 국립공원 và leisure có governance
+## 국립공원: giải trí cũng cần quản trị
 
-Mountain không phải open space vô hạn. Trail erosion, fire risk, litter và crowding cần management. Leisure culture vì vậy phụ thuộc environmental rule và public infrastructure.
+Núi không phải không gian mở vô hạn. Xói mòn đường mòn, nguy cơ cháy, rác và quá đông cần quản lý. Vì vậy văn hoá giải trí phụ thuộc quy định môi trường và hạ tầng công cộng.
 
-Một activity có thể “tự nhiên” nhưng access vẫn được institution thiết kế: parking, bus, trail closure, signage, rescue system.
+Một hoạt động trông “tự nhiên” vẫn có quyền tiếp cận do thiết chế thiết kế: bãi đỗ xe, xe buýt, đóng đường mòn, biển hướng dẫn và hệ thống cứu hộ.
 
-## 러닝크루: hobby trở thành urban micro-community
+## 러닝크루: sở thích trở thành cộng đồng đô thị quy mô nhỏ
 
-Running crew, cycling club và meetup group tạo weak ties ngoài family/company. App, Instagram và group chat giảm matching cost; public park/river path cung cấp physical venue.
+Nhóm chạy bộ, câu lạc bộ xe đạp và nhóm gặp gỡ tạo những **mối quan hệ yếu (weak ties)** ngoài gia đình/công ty. Ứng dụng, Instagram và phòng chat nhóm làm giảm chi phí tìm người cùng sở thích; công viên và đường ven sông cung cấp địa điểm vật lý.
 
-Flow:
-
-```text
-online discovery
-→ offline repetitive activity
-→ weak ties
-→ group identity
-→ event/merchandise/travel
-```
-
-Đây là một pattern lớn của leisure hiện đại: digital platform không thay offline community; nó giúp tạo community.
-
-## 한강: public space như leisure platform
-
-Han River parks ở Seoul cung cấp running, cycling, picnic, convenience store, delivery và festival infrastructure. Đây là ví dụ public space có thể host nhiều activity cùng lúc.
-
-Meaning của `한강 피크닉` không chỉ từ sông mà từ accessibility, flat path, transit, toilet, store và social visibility. Public-space quality làm một behaviour dễ trở thành norm.
-
-## 자전거 và mobility–leisure boundary
-
-Cycling có thể là transport, exercise hoặc hobby gear culture. Khi cùng object phục vụ nhiều use case, market segmentation xuất hiện: commuter bike, road bike, MTB, folding bike.
-
-Bike path network làm cycling safer/easier; gear community sau đó tạo identity và knowledge sharing.
-
-## 골프: status, networking và sport
-
-Golf ở Hàn Quốc có nhiều layer: sport skill, business networking, leisure và status. Field golf đòi time, land và cost, vì vậy historically có class signal mạnh hơn nhiều hobby khác.
-
-Nhưng **screen golf / 스크린골프** làm access rộng hơn bằng virtualization. Sensor đo ball speed, launch angle, spin; software mô phỏng trajectory. Một activity land-intensive được nén vào urban room.
-
-## 스크린골프: virtualization không chỉ là copy
-
-Simulation thay physics environment, pace và social setting. User có thể chơi tối, gần nhà và trong thời tiết xấu. Do đó screen golf không chỉ “golf rẻ hơn”; nó là format mới có own social norm.
-
-Đây là general lesson: digital twin của một activity thường tạo culture riêng thay vì chỉ thay venue.
-
-## 헬스장, PT và exercise như scheduled productivity
-
-Gym `헬스장` và personal training `PT` làm exercise trở thành appointment + metric system. Weight, body composition, sets, reps và progress photo tạo feedback loop.
-
-Điều này nối leisure với `자기관리`: thời gian rảnh không nhất thiết passive rest mà có thể được dùng như project cải thiện bản thân.
-
-Ranh giới giữa health, beauty và performance vì thế mờ; xem thêm [`19_beauty_fashion_body_culture.md`](19_beauty_fashion_body_culture.md) và [`26_health_medicine_wellness_body.md`](26_health_medicine_wellness_body.md).
-
-## 클라이밍 và indoor sport
-
-Indoor climbing/bouldering phù hợp city vì vertical space hiệu quả hơn large field. Activity vừa physical vừa puzzle-like: route problem cần strength, technique và planning.
-
-Urban sport growth thường đi theo pattern: specialized venue + booking/community app + social-media shareability.
-
-## 캠핑: nature nhưng với nhiều equipment
-
-Camping discourse thường nói “trở về thiên nhiên”, nhưng modern camping có thể extremely technology-heavy: tent, stove, cooler, power station, lighting, heating/cooling equipment.
-
-Hobby có visible equipment dễ tạo **gear identity**. Functional uncertainty làm user dựa vào review, brand và community knowledge. Khi entry cost tăng, class difference cũng rõ hơn.
-
-## 차박: car + leisure + micro-space
-
-`차박` — ngủ/nghỉ trong xe trong trip — trở nên visible vì car ownership, camping trend và desire for flexible travel. Nhưng legality, parking, waste và local resident conflict phụ thuộc location.
-
-Một leisure form có thể tạo externality nếu private enjoyment dùng public space without coordination.
-
-## 여행: domestic travel và regional branding
-
-Weekend/holiday travel nối leisure với local economy. Cities/regions brand food, festival, coast, mountain hoặc heritage để attract visitor.
-
-Social media làm destination discovery image-driven. Một cafe/viewpoint có thể viral và gây sudden demand spike, vượt capacity local road/parking.
-
-Tourism vì vậy có **algorithmic geography**: platform visibility thay visitor flow.
-
-## 찜질방 và 휴식: leisure không nhất thiết active
-
-`찜질방`, spa, cafe và `호캉스` cho thấy leisure còn là purchase của controlled rest environment. Khi home small, crowded hoặc shared, paid space có thể cung cấp privacy/comfort tốt hơn.
-
-“Rest” trong urban market có thể được commodified thành room, bath, view, scent và silence.
-
-## 힐링: từ clinical word thành cultural metaphor
-
-`힐링` trong Korean lifestyle discourse rộng hơn medical healing. Nó có thể chỉ travel, forest, music, pet, cafe, solo time. Popularity của từ phản ánh nhu cầu narrative cho recovery khỏi stress.
-
-Nhưng label `힐링` không chứng minh intervention có clinical effect; đây là cultural/emotional vocabulary.
-
-## e스포츠: game trở thành professional spectator system
-
-Esports Hàn phát triển nhờ broadband, PC bang, league, broadcasting và game culture. Khi game có ranking, professional team, sponsorship, broadcast và fanbase, nó sở hữu nhiều institutional feature của sport.
-
-Competitive performance phụ thuộc:
-
-- reaction time;
-- strategic decision;
-- team communication;
-- practice volume;
-- network stability;
-- patch/meta knowledge.
-
-Đây là skill ecosystem, không chỉ “chơi game nhiều”.
-
-## PC방 và esports pipeline
-
-PC bang từng giảm hardware/access barrier. Người chơi có venue affordable để practice và socialize. Broadband + venue density làm talent discovery pool lớn hơn.
-
-Infrastructure không tự tạo champion, nhưng nó tăng number of participants và quality of practice environment.
-
-## 학교체육 và elite sport
-
-School sports ở Hàn có thể chia giữa general physical education và elite athlete pathway. Elite sport historically có institutional training rất structured.
-
-Điểm cần tránh là equate national medal success với average population physical activity. Elite performance và public health là hai distribution khác nhau.
-
-## 팬덤: sport, idol và game share cùng architecture
-
-Fan culture có thể nhìn như protocol stack:
+Luồng thường là:
 
 ```text
-Identity: team / player / artist
-Symbol: color / logo / light stick / jersey
-Communication: community / group chat / platform
-Coordination: chant / ticket / streaming / voting
-Economic: ticket / merch / sponsorship
-Physical: stadium / arena / concert / PC bang
+phát hiện nhóm trực tuyến
+→ hoạt động ngoại tuyến lặp lại
+→ hình thành mối quan hệ yếu
+→ hình thành danh tính nhóm
+→ sự kiện / hàng lưu niệm / chuyến đi
 ```
 
-Cùng stack nhưng meaning khác theo domain.
+Đây là khuôn mẫu lớn của giải trí hiện đại: nền tảng số không thay cộng đồng ngoại tuyến; nó giúp cộng đồng hình thành.
 
-## 굿즈: merchandise như portable identity
+## 한강: không gian công cộng như nền tảng giải trí
 
-Jersey, scarf, photocard, light stick và collaboration product biến abstract fandom thành physical object. Merchandise vừa có use value, memory value và membership signal.
+Các công viên sông Hàn ở Seoul cung cấp hạ tầng cho chạy bộ, đạp xe, picnic, cửa hàng tiện lợi, giao đồ ăn và lễ hội. Đây là ví dụ không gian công cộng có thể chứa nhiều hoạt động cùng lúc.
 
-Limited edition tạo scarcity. Scarcity có thể tăng perceived value nhưng cũng tạo resale/speculation dynamic. Fan consumption vì vậy cần nhìn cả emotion và market mechanism.
+Ý nghĩa của `한강 피크닉` không chỉ đến từ con sông mà còn từ khả năng tiếp cận, đường phẳng, giao thông, nhà vệ sinh, cửa hàng và việc dễ nhìn thấy người khác đang cùng tham gia. Chất lượng không gian công cộng làm một hành vi dễ trở thành chuẩn mực.
 
-## 티켓팅: digital queue và scarce access
+## 자전거: ranh giới giữa di chuyển và giải trí
 
-Popular sports/concert event tạo demand lớn hơn seat supply. Online ticketing biến scarcity thành race theo latency, account readiness và platform queue.
+Đạp xe có thể là giao thông, tập luyện hoặc sở thích gắn với thiết bị. Khi cùng một vật phục vụ nhiều mục đích, thị trường phân thành xe đi làm, xe đường trường, MTB, xe gấp và nhiều nhóm khác.
 
-User experience của `티켓팅` trở thành shared cultural story vì technology quyết định who gets access.
+Mạng đường xe đạp làm hoạt động an toàn và dễ tiếp cận hơn; cộng đồng thiết bị sau đó tạo danh tính và chia sẻ kiến thức.
 
-## 응원 etiquette và boundary
+## 골프: địa vị, quan hệ và thể thao
 
-Fandom tạo belonging nhưng cũng có rule: seat section, chant timing, respect opponent, camera policy và behaviour với athlete. Khi identity mạnh, conflict giữa groups cũng có thể tăng.
+Golf ở Hàn Quốc có nhiều lớp: kỹ năng thể thao, giao lưu công việc, giải trí và tín hiệu địa vị. Golf sân thật cần nhiều thời gian, đất và chi phí nên trong lịch sử có tín hiệu tầng lớp mạnh hơn nhiều sở thích khác.
 
-Healthy fan culture cần boundary giữa passionate participation và harassment/invasion of privacy.
+Nhưng **golf mô phỏng (스크린골프 / screen golf)** mở rộng khả năng tiếp cận bằng số hoá không gian. Cảm biến đo tốc độ bóng, góc phóng, độ xoáy; phần mềm mô phỏng quỹ đạo. Một hoạt động cần diện tích rất lớn được nén vào phòng trong đô thị.
 
-## 자기계발형 여가: khi leisure vẫn phải “có ích”
+## 스크린골프: mô phỏng không chỉ là bản sao
 
-Language class, certificate study, book club, gym, coding side project có thể vừa leisure vừa investment. `자기계발` làm thời gian rảnh mang productivity logic.
+Mô phỏng thay môi trường vật lý, nhịp chơi và bối cảnh xã hội. Người dùng có thể chơi buổi tối, gần nhà và khi thời tiết xấu. Do đó screen golf không chỉ là “golf rẻ hơn”; nó là định dạng mới có chuẩn mực xã hội riêng.
 
-Điều này không có nghĩa người Hàn “không biết nghỉ”. Một người có thể thật sự enjoy productive hobby. Câu hỏi là activity do intrinsic enjoyment hay external pressure, hoặc cả hai.
+Bài học rộng hơn: phiên bản số của một hoạt động thường tạo văn hoá riêng thay vì chỉ đổi địa điểm.
 
-## Leisure inequality: time là resource không chia đều
+## 헬스장, PT: tập luyện như một hoạt động được lên lịch và đo lường
 
-Leisure inequality không chỉ từ income. Parent có childcare, shift worker, caregiver và long commuter có **time poverty** khác nhau.
+Phòng gym `헬스장` và huấn luyện cá nhân `PT` biến vận động thành lịch hẹn + hệ thống chỉ số. Cân nặng, thành phần cơ thể, hiệp tập, số lần lặp và ảnh tiến triển tạo vòng phản hồi.
 
-Vì vậy social media feed đầy travel, golf và cafe có thể overrepresent người có time/money để produce visible leisure.
+Điều này nối giải trí với `자기관리`: thời gian rảnh không nhất thiết chỉ là nghỉ thụ động mà có thể được dùng như dự án cải thiện bản thân.
 
-Culture analysis luôn phải hỏi denominator: ai không xuất hiện trong feed?
+Ranh giới giữa sức khoẻ, làm đẹp và thành tích vì thế khá mờ; xem thêm [`19_beauty_fashion_body_culture.md`](19_beauty_fashion_body_culture.md) và [`26_health_medicine_wellness_body.md`](26_health_medicine_wellness_body.md).
 
-## Knowledge Connection: leisure như output của transaction cost
+## 클라이밍: thể thao trong nhà như bài toán cơ thể
 
-Probability tham gia activity có thể được hình dung:
+Leo tường/bouldering trong nhà phù hợp đô thị vì không gian theo chiều đứng hiệu quả hơn sân rộng. Hoạt động vừa mang tính thể lực vừa giống giải đố: đường leo cần sức mạnh, kỹ thuật và lập kế hoạch.
+
+Sự phát triển của thể thao đô thị thường theo khuôn mẫu: địa điểm chuyên dụng + ứng dụng đặt lịch/cộng đồng + khả năng chia sẻ lên mạng xã hội.
+
+## 캠핑: “về thiên nhiên” nhưng dùng nhiều thiết bị
+
+Diễn ngôn cắm trại thường nói “trở về thiên nhiên”, nhưng cắm trại hiện đại có thể rất phụ thuộc công nghệ: lều, bếp, thùng lạnh, pin dự phòng, đèn, thiết bị sưởi/làm mát.
+
+Sở thích có thiết bị dễ nhìn thấy thường tạo **danh tính qua dụng cụ (gear identity)**. Khi chức năng sản phẩm khó đánh giá trực tiếp, người dùng dựa vào đánh giá, thương hiệu và kiến thức cộng đồng. Khi chi phí tham gia tăng, khác biệt tầng lớp cũng dễ thấy hơn.
+
+## 차박: xe + giải trí + không gian vi mô
+
+`차박` — ngủ/nghỉ trong xe trong chuyến đi — trở nên dễ thấy nhờ sở hữu xe, xu hướng cắm trại và mong muốn du lịch linh hoạt. Nhưng tính hợp pháp, đỗ xe, rác và xung đột với cư dân địa phương phụ thuộc địa điểm.
+
+Một hình thức giải trí có thể tạo **ngoại ứng (externality)** nếu hưởng thụ cá nhân sử dụng không gian công cộng mà không phối hợp với người khác.
+
+## 여행: du lịch trong nước và xây thương hiệu vùng
+
+Du lịch cuối tuần/ngày lễ nối thời gian rảnh với kinh tế địa phương. Thành phố/vùng xây thương hiệu quanh ẩm thực, lễ hội, bờ biển, núi hoặc di sản để thu hút khách.
+
+Mạng xã hội làm việc khám phá điểm đến dựa nhiều vào hình ảnh. Một quán cà phê hoặc điểm ngắm cảnh có thể lan truyền mạnh rồi tạo đột biến nhu cầu vượt khả năng đường sá/bãi đỗ địa phương.
+
+Vì vậy du lịch có một lớp **địa lý do thuật toán định hình (algorithmic geography)**: khả năng hiển thị trên nền tảng làm dòng khách đổi hướng.
+
+## 찜질방, 휴식: giải trí không nhất thiết phải vận động
+
+`찜질방`, spa, quán cà phê và `호캉스` cho thấy thời gian rảnh còn là việc mua một môi trường nghỉ ngơi được kiểm soát. Khi nhà nhỏ, đông người hoặc sống chung, không gian trả phí có thể cung cấp riêng tư và thoải mái tốt hơn.
+
+“Ngủ nghỉ” trong thị trường đô thị có thể được hàng hoá hoá thành phòng, bồn tắm, tầm nhìn, mùi hương và sự yên tĩnh.
+
+## 힐링: từ từ y học thành ẩn dụ văn hoá
+
+`힐링` trong diễn ngôn lối sống Hàn rộng hơn “chữa lành” theo nghĩa y khoa. Nó có thể chỉ du lịch, rừng, âm nhạc, thú cưng, quán cà phê hoặc thời gian một mình. Sự phổ biến của từ phản ánh nhu cầu có một ngôn ngữ để kể về việc hồi phục khỏi căng thẳng.
+
+Nhưng nhãn `힐링` không chứng minh một hoạt động có hiệu quả lâm sàng; đây chủ yếu là từ vựng văn hoá/cảm xúc.
+
+## e스포츠: trò chơi trở thành hệ thống thể thao chuyên nghiệp để xem
+
+Thể thao điện tử Hàn Quốc phát triển nhờ băng rộng, PC bang, giải đấu, truyền hình/phát sóng và văn hoá game. Khi trò chơi có xếp hạng, đội chuyên nghiệp, tài trợ, phát sóng và người hâm mộ, nó sở hữu nhiều đặc điểm thiết chế của thể thao.
+
+Thành tích cạnh tranh phụ thuộc:
+
+- thời gian phản ứng;
+- quyết định chiến thuật;
+- giao tiếp nhóm;
+- khối lượng luyện tập;
+- độ ổn định mạng;
+- kiến thức về phiên bản game và chiến thuật đang thịnh hành.
+
+Đây là hệ sinh thái kỹ năng, không chỉ là “chơi game nhiều”.
+
+## PC방 và đường phát triển của thể thao điện tử
+
+PC bang từng làm giảm rào cản phần cứng và khả năng tiếp cận. Người chơi có địa điểm tương đối phải chăng để luyện tập và giao lưu. Băng rộng + mật độ địa điểm làm số người tham gia lớn hơn và môi trường luyện tập tốt hơn.
+
+Hạ tầng không tự tạo nhà vô địch, nhưng nó tăng quy mô người tham gia và chất lượng môi trường thực hành.
+
+## 학교체육 và thể thao thành tích cao
+
+Thể thao trường học ở Hàn có thể chia giữa giáo dục thể chất phổ thông và lộ trình vận động viên thành tích cao. Thể thao đỉnh cao trong lịch sử có hệ thống đào tạo rất có cấu trúc.
+
+Điểm cần tránh là đồng nhất thành công huy chương quốc gia với mức vận động trung bình của toàn dân. Thành tích tinh hoa và sức khoẻ cộng đồng là hai phân phối khác nhau.
+
+## 팬덤: thể thao, idol và game dùng kiến trúc người hâm mộ tương tự
+
+Văn hoá người hâm mộ có thể nhìn như một chồng lớp:
 
 ```text
-Participation ↑ khi
-travel time ↓
-price ↓
-booking friction ↓
-social uncertainty ↓
-venue access ↑
-peer network ↑
+Danh tính: đội / cầu thủ / nghệ sĩ
+Biểu tượng: màu / logo / light stick / áo đội
+Giao tiếp: cộng đồng / phòng chat / nền tảng
+Phối hợp: cổ vũ / mua vé / streaming / bình chọn
+Kinh tế: vé / hàng lưu niệm / tài trợ
+Vật lý: sân vận động / nhà thi đấu / concert / PC bang
 ```
 
-Mountain gần subway → hiking dễ. Screen golf gần home → golf dễ. Running crew có group chat → entry social cost giảm. Infrastructure thay leisure distribution.
+Cùng kiến trúc nhưng ý nghĩa khác theo lĩnh vực.
 
-## Mental Model
+## 굿즈: hàng lưu niệm như danh tính có thể mang theo
 
-> Leisure Hàn Quốc là nơi **geography, time budget, technology, market và identity** gặp nhau. Núi tạo hiking affordance; broadband tạo esports; urban density tạo screen golf và hobby venue; platform tạo crew; fandom biến spectator thành participant. Đừng coi leisure là phần “ngoài hệ thống xã hội”.
+Áo đội, khăn, photocard, light stick và sản phẩm hợp tác biến fandom trừu tượng thành đồ vật. Hàng lưu niệm vừa có giá trị sử dụng, giá trị ký ức và tín hiệu thành viên.
 
-## Common Misconceptions
+Phiên bản giới hạn tạo khan hiếm. Khan hiếm có thể tăng giá trị cảm nhận nhưng cũng tạo mua đi bán lại và đầu cơ. Vì vậy tiêu dùng fandom cần nhìn cả cảm xúc lẫn cơ chế thị trường.
 
-“Hiking chỉ là hobby của người già” sai; participation đa thế hệ dù older hikers rất visible.
+## 티켓팅: hàng đợi số cho quyền tiếp cận khan hiếm
 
-“Esports chỉ là game nên không có institution” bỏ qua professional labour, league, broadcast và fan economy.
+Sự kiện thể thao/hoà nhạc nổi tiếng thường có nhu cầu lớn hơn số ghế. Bán vé trực tuyến biến khan hiếm thành cuộc đua về độ trễ mạng, chuẩn bị tài khoản và hàng đợi nền tảng.
 
-“Fan culture là irrational” bỏ qua identity, community và collective memory; đồng thời passion không hợp thức hoá harassment.
+Trải nghiệm `티켓팅` trở thành câu chuyện văn hoá chung vì công nghệ quyết định ai có quyền tiếp cận một tài nguyên khan hiếm.
 
-“Golf ở Hàn chỉ là status” quá hẹp; sport, networking, leisure và class signal có thể cùng tồn tại.
+## Phép ứng xử khi cổ vũ và ranh giới
 
-“Leisure trend trên Instagram đại diện toàn xã hội” là sampling bias.
+Fandom tạo cảm giác thuộc về nhưng cũng có quy tắc: khu ghế, thời điểm cổ vũ, tôn trọng đối thủ, quy định camera và hành vi với vận động viên. Khi danh tính nhóm mạnh, xung đột giữa các nhóm cũng có thể tăng.
+
+Văn hoá người hâm mộ lành mạnh cần ranh giới giữa tham gia nhiệt tình và quấy rối/xâm phạm đời tư.
+
+## 자기계발형 여가: khi thời gian rảnh vẫn phải “có ích”
+
+Lớp ngoại ngữ, học chứng chỉ, câu lạc bộ sách, gym hoặc dự án lập trình phụ có thể vừa là giải trí vừa là đầu tư. `자기계발` làm thời gian rảnh mang một phần logic năng suất.
+
+Điều này không có nghĩa người Hàn “không biết nghỉ”. Một người có thể thật sự thích sở thích mang tính phát triển bản thân. Câu hỏi là hoạt động xuất phát từ niềm vui nội tại, áp lực bên ngoài hay cả hai.
+
+## Bất bình đẳng thời gian rảnh: thời gian là tài nguyên không chia đều
+
+Bất bình đẳng giải trí không chỉ đến từ thu nhập. Cha mẹ có trách nhiệm chăm con, người làm ca, người chăm sóc và người đi làm xa có **nghèo thời gian (time poverty)** khác nhau.
+
+Vì vậy bảng tin mạng xã hội đầy du lịch, golf và quán cà phê có thể đại diện quá mức cho người có thời gian/tiền để tạo nội dung giải trí nhìn thấy được.
+
+Phân tích văn hoá luôn phải hỏi mẫu số: ai không xuất hiện trên bảng tin?
+
+## Liên hệ kiến thức: tham gia giải trí là đầu ra của chi phí giao dịch
+
+Xác suất tham gia một hoạt động có thể hình dung như sau:
+
+```text
+mức tham gia tăng khi
+thời gian di chuyển giảm
+giá giảm
+ma sát đặt chỗ giảm
+bất định xã hội giảm
+khả năng tiếp cận địa điểm tăng
+mạng bạn bè cùng tham gia tăng
+```
+
+Núi gần tàu điện → leo núi dễ. Screen golf gần nhà → chơi golf dễ. Nhóm chạy bộ có phòng chat → chi phí xã hội khi tham gia lần đầu giảm. Hạ tầng làm phân phối hoạt động giải trí thay đổi.
+
+## Mô hình tư duy (Mental Model)
+
+> Giải trí ở Hàn Quốc là nơi **địa lý, ngân sách thời gian, công nghệ, thị trường và danh tính** gặp nhau. Núi tạo điều kiện cho leo núi; băng rộng tạo thể thao điện tử; mật độ đô thị tạo screen golf và địa điểm sở thích; nền tảng tạo nhóm; fandom biến người xem thành người tham gia. Đừng coi thời gian rảnh là phần “nằm ngoài hệ thống xã hội”.
+
+## Hiểu lầm phổ biến (Common Misconceptions)
+
+“Leo núi chỉ là sở thích của người già” là sai; người tham gia thuộc nhiều thế hệ dù người lớn tuổi dễ thấy hơn.
+
+“Thể thao điện tử chỉ là game nên không có thiết chế” bỏ qua lao động chuyên nghiệp, giải đấu, phát sóng và kinh tế người hâm mộ.
+
+“Văn hoá người hâm mộ là phi lý” bỏ qua danh tính, cộng đồng và ký ức tập thể; đồng thời niềm đam mê không hợp thức hoá quấy rối.
+
+“Golf ở Hàn chỉ là địa vị” quá hẹp; thể thao, quan hệ công việc, giải trí và tín hiệu tầng lớp có thể cùng tồn tại.
+
+“Xu hướng giải trí trên Instagram đại diện toàn xã hội” là sai lệch lấy mẫu.
