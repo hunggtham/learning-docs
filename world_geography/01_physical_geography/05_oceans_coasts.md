@@ -1,43 +1,127 @@
-# Đại dương, dòng biển và bờ biển
+# Đại dương, hoàn lưu, bờ biển và mạng hàng hải
 
-## Đại dương là phần chính của hệ khí hậu và thương mại
+## Đại dương là kho nhiệt, hệ vận chuyển và không gian kinh tế
 
-Đại dương phủ phần lớn bề mặt Trái Đất và là kho chứa lớn của nhiệt, nước và carbon. Địa lý đại dương ảnh hưởng khí hậu, ngư nghiệp, vận tải biển, cáp thông tin, năng lượng và địa chính trị.
+Đại dương phủ phần lớn bề mặt Trái Đất và lưu trữ lượng nhiệt rất lớn. Nó vận chuyển nhiệt, carbon, dinh dưỡng và sinh vật; đồng thời là không gian của ngư nghiệp, vận tải, cáp biển và năng lượng.
 
-## Độ mặn và mật độ
+Muốn hiểu đại dương cần nối ba lớp: **vật lý nước biển → hệ sinh thái → mạng con người**.
 
-Mật độ nước biển phụ thuộc nhiệt độ và độ mặn. Nước lạnh hoặc mặn thường có mật độ lớn hơn. Bốc hơi làm tăng độ mặn; mưa, nước sông và băng tan làm giảm độ mặn. Chênh lệch mật độ góp phần tạo **phân tầng nước (stratification)** và hoàn lưu sâu.
+## Temperature, salinity và density
 
-## Dòng biển bề mặt
+Mật độ seawater phụ thuộc nhiệt độ, salinity và pressure. Nước lạnh và/hoặc mặn thường đặc hơn. Bốc hơi tăng salinity; precipitation, river input và ice melt làm giảm.
 
-Các **hoàn lưu vòng lớn (gyre)** hình thành từ ứng suất gió, hiệu ứng Coriolis và ranh giới lục địa. Những dòng biên phía tây như Gulf Stream và Kuroshio thường mạnh, hẹp và ấm; các dòng biên phía đông thường rộng, chậm và lạnh hơn.
+Chênh density tạo **phân tầng (stratification)**. Surface warm/light water có thể nằm trên deep cold/dense water, cản mixing vertical.
 
-## Nước trồi
+Stratification quan trọng với oxygen và nutrient vì biology ở surface cần nutrient từ dưới, còn decomposition ở depth cần oxygen từ trên.
 
-Khi gió và **vận chuyển Ekman (Ekman transport)** làm nước bề mặt rời xa bờ hoặc một vùng phân kỳ, nước sâu lạnh và giàu dinh dưỡng trồi lên. Những vùng **nước trồi (upwelling)** thường có năng suất sinh học biển cao và là ngư trường quan trọng. Khi hoàn lưu hoặc dao động khí hậu thay đổi, nguồn lợi cá cũng có thể biến động.
+## Mixed layer và thermocline
 
-## Sóng và thủy triều
+Gió và wave trộn lớp bề mặt thành **mixed layer**. Bên dưới có thể xuất hiện **thermocline** nơi temperature giảm nhanh theo depth.
 
-Sóng chủ yếu truyền năng lượng chứ không mang toàn bộ khối nước đi cùng tốc độ với đỉnh sóng. Thủy triều hình thành do tương tác hấp dẫn giữa Trái Đất–Mặt Trăng–Mặt Trời cùng hình học từng bồn biển. **Triều cường thiên văn (spring tide)** xảy ra khi ba thiên thể gần thẳng hàng; **triều kém (neap tide)** khi tác động hấp dẫn phần nào triệt tiêu nhau.
+Depth của mixed layer thay theo mùa và storm. Khi mixing sâu, nutrient có thể được đưa lên nhưng phytoplankton cũng bị trộn khỏi vùng ánh sáng tối ưu. Vì thế productivity phụ thuộc cả light và nutrient.
 
-## Ngân sách trầm tích ven bờ
+## Surface circulation: wind + Coriolis + basin geometry
 
-Bãi biển tồn tại tương đối ổn định khi lượng trầm tích bổ sung và lượng mất đi gần cân bằng. Đập sông, công trình cảng và khai thác cát có thể làm ngân sách thiếu hụt. **Dòng vận chuyển dọc bờ (longshore drift)** đưa trầm tích dọc bờ; mỏ hàn giữ cát ở một phía nhưng có thể làm khu vực phía hạ dòng thiếu trầm tích.
+Wind stress truyền momentum xuống mặt biển. Coriolis làm transport lệch khỏi hướng gió; kết hợp với continental boundary tạo **gyre**.
 
-## Mực nước biển
+Western boundary currents như Kuroshio/Gulf Stream thường hẹp, mạnh và vận chuyển nhiều nhiệt về vĩ độ cao. Eastern boundary currents thường rộng, chậm và liên quan upwelling ven bờ.
 
-**Mực nước biển tương đối tại địa phương (local relative sea level)** phụ thuộc thể tích đại dương toàn cầu, giãn nở nhiệt, khối lượng băng, nâng hoặc sụt đất và động lực đại dương. Vì vậy “mực nước biển trung bình toàn cầu tăng X” không có nghĩa mọi bờ biển đều trải nghiệm chính xác cùng mức X.
+## Ekman transport và upwelling
 
-## Vận tải biển và điểm nghẽn
+Do Coriolis, net **Ekman transport** của surface layer lệch so với wind. Khi transport đẩy nước surface ra xa bờ, nước sâu phải trồi lên thay thế.
 
-Địa lý đại dương định hình tuyến thương mại. Eo biển và kênh đào rút ngắn khoảng cách; khi một **điểm nghẽn chiến lược (chokepoint)** bị gián đoạn, tàu phải đi vòng, làm tăng khoảng cách, thời gian, nhiên liệu và chi phí bảo hiểm. Đây là nơi địa lý tự nhiên nối trực tiếp với chuỗi cung ứng.
+**Upwelling** mang nutrient lên photic zone, làm nhiều ngư trường có productivity cao. Nhưng nước trồi cũng có thể lạnh, ít oxygen hoặc giàu CO₂, nên tác động sinh thái không chỉ “nhiều cá hơn”.
 
-## Cáp biển
+## Deep circulation và water masses
 
-Phần lớn lưu lượng dữ liệu liên lục địa đi qua **cáp quang biển (fiber-optic submarine cable)**, không phải vệ tinh. Tuyến cáp chịu ảnh hưởng của địa hình đáy biển, vị trí trạm cập bờ, rủi ro chính trị và khả năng tiếp cận khi sửa chữa. Địa lý vì thế nằm ngay bên dưới cái gọi là “đám mây” (cloud).
+Ở một số vùng vĩ độ cao, cooling và salinity làm surface water đủ dense để sink, tạo **deep water mass**. Deep circulation nối các basin trong thời gian dài.
+
+Không nên hình dung “global conveyor belt” như một băng tải cứng với tốc độ cố định. Thực tế circulation gồm nhiều path, mixing và eddy; diagram conveyor chỉ là mental model đầu tiên.
+
+## Ocean heat content và climate memory
+
+Nước có heat capacity lớn nên ocean hấp thụ, lưu và giải phóng heat chậm hơn atmosphere. Vì vậy ocean tạo **thermal inertia** cho climate system.
+
+Sea-surface temperature anomaly có thể ảnh hưởng convection và weather pattern; ocean–atmosphere coupling tạo phenomena như ENSO.
+
+## Wave truyền năng lượng
+
+Surface wave chủ yếu truyền energy; water parcel dao động hơn là đi cùng wave crest trên quãng xa. Wave height phụ thuộc wind speed, duration và fetch.
+
+Khi wave vào vùng nước nông, speed và wavelength đổi, wave refract, shoal rồi break. Refraction tập trung energy tại headland và phân tán ở bay, góp phần tạo pattern erosion/deposition.
+
+## Tide: astronomy + basin resonance
+
+Tide đến từ gravity Earth–Moon–Sun nhưng local range phụ thuộc shape và resonance của basin. Vì vậy cùng forcing thiên văn, hai bờ có tidal range rất khác.
+
+**Spring tide** xảy ra khi Sun–Moon alignment làm tidal forcing lớn hơn; **neap tide** khi geometry làm range nhỏ hơn. “Spring” ở đây không liên quan mùa xuân.
+
+## Coastal sediment cell
+
+Bờ biển nên được quản lý như **sediment cell**: source, transport path và sink. River, cliff và offshore bank cấp sediment; wave/longshore current vận chuyển; beach, dune, delta là storage.
+
+Groyne hoặc seawall bảo vệ một đoạn có thể làm downstream thiếu sand. Đây là externality theo không gian.
+
+## Delta: cuộc đua giữa sediment và relative sea level
+
+Delta duy trì elevation khi sediment deposition và organic accumulation bù subsidence + relative sea-level rise. Dam giữ sediment upstream, groundwater pumping làm subsidence và levee ngăn flood deposition có thể cùng làm delta thiếu material.
+
+Vì vậy delta risk là kết quả **river engineering + land subsidence + ocean level**, không chỉ climate change.
+
+## Estuary: nơi river và ocean trộn
+
+**Estuary** có gradient salinity, tide và river flow. Stratification thay theo discharge và tidal mixing. Estuary thường là nursery habitat nhưng cũng nhận nutrient/pollution từ toàn basin.
+
+Urban port thường phát triển ở estuary vì sheltered water và access inland, tạo trade-off giữa ecology và navigation.
+
+## Storm surge và compound flooding
+
+Low pressure và wind của cyclone có thể đẩy seawater lên bờ tạo **storm surge**. Thiệt hại phụ thuộc bathymetry, coastal shape, tide timing và wave.
+
+Nếu surge trùng heavy rain và high river flow, drainage ra biển bị chặn và tạo **compound flooding**. Risk vì thế không thể đánh giá bằng từng hazard riêng lẻ.
+
+## Relative sea level
+
+Người dân trải nghiệm **relative sea level** so với land. Global ocean rise chỉ là một thành phần; subsidence, uplift, ocean dynamics và sediment compaction làm local rate khác nhau.
+
+Một city sinking nhanh do groundwater có thể thấy relative sea-level problem lớn hơn global mean nhiều dù forcing climate giống nơi khác.
+
+## Coral reef và mangrove như natural infrastructure
+
+Reef làm wave break offshore; mangrove tăng roughness và giữ sediment. Chúng không xóa risk nhưng có thể giảm wave energy và erosion.
+
+Natural infrastructure có giới hạn: nếu sea-level rise hoặc water quality vượt tolerance, ecosystem suy giảm. Conservation phải nối với basin pollution và coastal development.
+
+## Fisheries: biology gặp governance
+
+Fish stock di chuyển theo temperature, current và food. Fishing fleet di chuyển theo fuel cost, regulation và port access.
+
+Nếu stock vượt boundary jurisdiction, management cần coordination; nếu effort tăng nhanh hơn stock productivity, catch có thể giảm dù technology tốt hơn.
+
+## Maritime transport và port network
+
+Shipping tận dụng scale economy, nhưng cần port, channel depth và hinterland. Chokepoint quan trọng khi flow lớn và detour costly.
+
+Cảng là interface land–sea: hiệu quả quay vòng tàu không đủ nếu rail/truck phía sau congested.
+
+## Submarine cable: “internet” có địa hình đáy biển
+
+Cáp quang liên lục địa đi qua route được chọn để tránh slope instability, fishing/anchoring risk và để kết nối landing station. Redundancy phụ thuộc có nhiều tuyến độc lập thật sự hay chỉ nhiều cáp đi chung corridor.
+
+Một bản đồ cáp cho thấy digital geography vẫn rất vật lý.
+
+## Ocean observation và uncertainty
+
+Buoy, ship, satellite altimetry, SST remote sensing và Argo float đo các phần khác nhau. Satellite thấy surface tốt; deep ocean cần in-situ profile.
+
+Interpolation giữa observation tạo field estimate nhưng uncertainty cao hơn ở nơi sampling thưa. Khi đọc ocean map cần biết product là measurement trực tiếp hay model/reanalysis.
+
+## Những hiểu lầm phổ biến
+
+“Dòng biển là sông trong biển” quá đơn giản; boundary không cố định. “Sea-level rise giống nhau mọi nơi” bỏ land motion. “Seawall chỉ có lợi” bỏ sediment impact. “Upwelling luôn tốt” bỏ oxygen/acidification. “Bờ biển là đường cố định” bỏ sediment budget.
 
 ## Mô hình tư duy
 
-Đại dương là **kho nhiệt + hệ vận chuyển + vùng tài nguyên + bề mặt giao thông**. Bờ biển là ranh giới động; thay đổi ở trầm tích sông, mực nước biển, chế độ bão hoặc cơ sở hạ tầng đều có thể làm đường bờ dịch chuyển.
+> Đại dương là **fluid network lưu nhiệt và vận chuyển mass**, còn coast là **boundary động có sediment budget**. Hãy hỏi energy đến từ wind/tide ở đâu, density làm water mass di chuyển thế nào, và intervention ở river/coast đang chuyển sediment hoặc risk sang nơi nào.
 
-Xem tiếp: [Địa chính trị và các điểm nghẽn](../04_global_systems/02_geopolitics_chokepoints_resources.md), [Thương mại toàn cầu](../02_human_geography/08_transport_trade_globalization.md).
+Xem tiếp: [Hệ khí hậu](./03_global_climate_system.md), [Thủy văn](./04_hydrology_rivers_groundwater.md), [Điểm nghẽn và tài nguyên](../04_global_systems/02_geopolitics_chokepoints_resources.md).

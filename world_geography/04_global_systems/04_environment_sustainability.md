@@ -1,47 +1,119 @@
 # Môi trường, tính bền vững và giới hạn hệ thống
 
-## Tính bền vững là bài toán về lượng tích lũy, dòng chuyển và đánh đổi giữa các thế hệ
+## Sustainability là bài toán liên thế hệ về stock, flow và distribution
 
-**Tính bền vững (sustainability / 지속가능성)** không đơn giản là “thân thiện với môi trường”. Nó hỏi một hệ thống có thể duy trì phúc lợi con người mà không làm suy giảm các dạng vốn tự nhiên và xã hội quan trọng đến mức thu hẹp lựa chọn của các thế hệ tương lai hay không.
+**Tính bền vững (sustainability / 지속가능성)** hỏi liệu phúc lợi có thể duy trì mà không làm suy giảm các hệ tự nhiên và xã hội quan trọng đến mức thu hẹp lựa chọn tương lai hay không.
 
-Một cách làm khái niệm này bớt mơ hồ là phân biệt **lượng tích lũy (stock)** và **dòng chuyển (flow)**. Sinh khối rừng, lượng nước ngầm và chất hữu cơ trong đất là lượng tích lũy (stock); khai thác, bổ cập, xói mòn và ô nhiễm là dòng chuyển (flow). Một hệ bền vững dài hạn khi dòng khai thác không liên tục vượt khả năng tái tạo, và chất thải không vượt khả năng hấp thụ của môi trường.
+Nó không chỉ là “ít ô nhiễm”. Một hệ có thể giảm emission tại chỗ nhưng chuyển mining và waste sang nơi khác. Vì vậy cần đồng thời nhìn **stock**, **flow**, **boundary** và **distribution of cost/benefit**.
 
-Nếu bơm nước ngầm 120 đơn vị/năm trong khi bổ cập chỉ 80, nguồn cung có thể vẫn dồi dào vài năm nhờ kho nước lớn, nhưng hệ đang thâm hụt 40 đơn vị mỗi năm. Vì vậy ảnh chụp “hiện còn nhiều tài nguyên” không cho biết hệ có bền vững hay không.
+## Stock–flow: nền tảng của tư duy bền vững
 
-## Tái tạo không có nghĩa vô hạn
+Groundwater, forest biomass, soil organic carbon và fish stock là stock. Pumping, harvest, erosion, recharge và regeneration là flow.
 
-Rừng có thể tái tạo nếu khai thác không vượt phục hồi trong thang thời gian phù hợp. Nước ngầm có thể về lý thuyết được bổ cập nhưng gần như không tái tạo trong đời người nếu chu kỳ kéo dài hàng thế kỷ. Nguồn cá có thể phục hồi nhưng vẫn sụp giảm nếu khai thác vượt khả năng sinh sản.
+\[
+\Delta S=Inflow-Outflow
+\]
 
-## Ô nhiễm là một dòng có không gian
+Nếu outflow dài hạn lớn hơn inflow, stock giảm dù hiện tại còn rất lớn. Đây là lý do “reserve còn nhiều” không đủ để kết luận trajectory bền vững.
 
-Nguồn ô nhiễm và nơi chịu tác động có thể cách xa nhau. Chất ô nhiễm không khí theo gió; dinh dưỡng chảy xuống hạ lưu gây phú dưỡng; nhựa theo sông và dòng biển. Quản trị theo ranh giới hành chính vì vậy thường không khớp ranh giới của dòng môi trường.
+## Renewable không có nghĩa infinite
 
-## Tác động ngoại vi có địa lý
+Nguồn renewable chỉ bền khi extraction phù hợp regeneration và quality không suy giảm. Aquifer recharge rất chậm có thể gần như non-renewable ở timescale con người; fish stock có thể collapse nếu harvest vượt reproduction.
 
-Nếu chi phí ô nhiễm không nằm trong quyết định của người sản xuất hoặc tiêu dùng, giá thị trường không phản ánh đầy đủ chi phí xã hội. **Ngoại tác môi trường (environmental externality / 환경 외부효과)** có cấu trúc không gian: nơi nhận lợi ích và nơi chịu chi phí có thể khác nhau.
+Timescale phải luôn đi cùng nhãn renewable.
 
-Một nhà máy tạo việc làm ở một nơi nhưng cộng đồng hạ lưu nhận nước ô nhiễm; người dùng điện trong thành phố có thể gắn với phát thải từ nhà máy điện ở xa. Địa lý giúp xác định ai chịu tác động: thượng nguồn–hạ nguồn, đầu gió–cuối gió, trung tâm–ngoại vi.
+## Carrying capacity phụ thuộc technology và trade
 
-## Sức chứa không phải con số cố định
+**Sức chứa (carrying capacity)** không phải số người cố định do nature định. Irrigation, energy, fertilizer, import và waste treatment thay khả năng hỗ trợ population.
 
-**Sức chứa môi trường (carrying capacity / 환경수용력)** phụ thuộc công nghệ, kiểu tiêu dùng, thương mại và trạng thái hệ sinh thái. Một thành phố có thể hỗ trợ dân số vượt năng lực sản xuất lương thực tại chỗ nhờ nhập khẩu, nhưng khi đó dấu chân sinh thái được mở rộng sang vùng khác. Ranh giới hệ thống một lần nữa quyết định cách diễn giải.
+Nhưng technology thường chuyển constraint: desalination giảm water scarcity nhưng tăng electricity demand; import food giảm land pressure local nhưng tăng dependency bên ngoài.
 
-## Kinh tế tuần hoàn và giới hạn vật lý
+## Externality có hướng và khoảng cách
 
-**Kinh tế tuần hoàn (circular economy)** cố giữ giá trị vật liệu qua tái sử dụng, sửa chữa và tái chế. Tuy nhiên tái chế cũng cần năng lượng và hậu cần (logistics); một số vật liệu mất chất lượng sau mỗi vòng và không thể quay vòng 100% vô hạn do tạp nhiễm, hao hụt và chi phí năng lượng.
+Pollution đi theo wind, river, current hoặc supply chain. Người nhận benefit và người chịu cost có thể ở khác nơi.
 
-Vì vậy tính bền vững không nên dựa trên mô hình tư duy “vật liệu quay vòng hoàn hảo”. Luôn có thất thoát và nhu cầu năng lượng.
+Geography làm externality cụ thể bằng câu hỏi **upstream/downstream, upwind/downwind, producer/consumer**.
 
-## Tư duy vòng đời
+## System boundary có thể đảo kết luận
 
-Một xe điện không có khí thải ống xả nhưng pin, vật liệu và điện vẫn có dấu chân ở thượng nguồn. **Đánh giá vòng đời (life-cycle assessment)** giúp tránh chuyển tác động từ giai đoạn sử dụng sang vùng sản xuất. Nguồn điện của từng nơi vì thế rất quan trọng.
+Một city điện hóa bus sẽ giảm exhaust local; nếu electricity carbon-intensive thì emission upstream còn tồn tại. Một imported product làm local land use nhỏ nhưng footprint xuất hiện ở producing region.
 
-## Công bằng môi trường
+Phân biệt **territorial accounting** và **consumption-based accounting** giúp thấy displacement của impact.
 
-Cơ sở nguy hại, phơi lộ nhiệt hoặc không khí kém chất lượng thường không phân bố đều. Phân tích cần kết hợp lớp môi trường với dữ liệu dân số và tính dễ tổn thương xã hội, nhưng phải tránh suy quan hệ nhân quả chỉ từ tương quan trên bản đồ.
+Không có boundary “đúng tuyệt đối”; phải chọn phù hợp câu hỏi và công bố rõ.
+
+## Life-cycle thinking
+
+**Life-cycle assessment (LCA)** theo input/output từ extraction → manufacturing → transport → use → end-of-life. Mục tiêu là tránh **burden shifting** giữa stage.
+
+LCA nhạy với functional unit và allocation. So “một chiếc xe” ít ý nghĩa hơn so “một passenger-km trong điều kiện sử dụng xác định”.
+
+## Circular economy và giới hạn entropy
+
+Reuse, repair và recycle giữ material value lâu hơn, nhưng mỗi vòng có loss, contamination và energy cost. Không thể recycle 100% vô hạn.
+
+Circularity tốt cần product design, collection network, market cho secondary material và energy system; recycling rate đơn lẻ không đủ mô tả system.
+
+## Rebound effect
+
+Efficiency giảm resource per unit có thể làm service rẻ hơn và demand tăng. **Rebound effect** nghĩa total saving nhỏ hơn saving kỹ thuật dự kiến.
+
+Ví dụ xe tiết kiệm nhiên liệu hơn có thể khuyến khích đi xa hơn một phần. Rebound không phủ nhận efficiency; nó nhắc phải đo total system outcome.
+
+## Decoupling
+
+**Relative decoupling**: impact tăng chậm hơn GDP/output. **Absolute decoupling**: output tăng trong khi total impact giảm.
+
+Khi nói “economy xanh hơn” cần hỏi đang nói intensity hay absolute flow, và impact có bị outsource qua import không.
+
+## Ecosystem service nhưng không mọi giá trị đều quy được tiền
+
+Ecosystem cung cấp flood attenuation, pollination, carbon storage, recreation và habitat. Định giá có thể giúp policy thấy cost bị bỏ qua, nhưng không có nghĩa mọi ecological value có market price đầy đủ.
+
+Một số threshold và irreversibility làm cost–benefit tuyến tính không phù hợp.
+
+## Threshold, resilience và regime shift
+
+Hệ có thể hấp thụ disturbance tới một mức rồi chuyển state. Wetland mất dần area có thể vẫn hoạt động cho tới khi connectivity/hydrology vượt threshold.
+
+**Resilience** là khả năng hấp thụ shock và duy trì function hoặc chuyển đổi mà không mất core service, không chỉ “quay lại y hệt trước”.
+
+## Environmental justice
+
+Exposure không phân bố đều. Housing price, land-use history và political voice làm nhóm thu nhập thấp có thể ở gần pollution/flood/heat hơn.
+
+Analysis cần tách hazard, exposure và vulnerability; correlation map không tự chứng minh discrimination mechanism nhưng là điểm bắt đầu để điều tra.
+
+## Sustainable development gồm social, economic, environmental dimensions
+
+Sustainability không thể tối ưu environment bằng cách bỏ livelihood. Transition policy phải xét employment, affordability và access.
+
+Đây là lý do **just transition** là vấn đề địa lý: closure của mine/power plant tập trung cost ở community cụ thể trong khi climate benefit phân tán rộng.
+
+## Indicator và nguy cơ dashboard
+
+SDG, footprint, carbon intensity và biodiversity index giúp monitoring nhưng mỗi metric nén reality. Khi target một metric, actor có thể cải thiện số mà không cải thiện system thật.
+
+Audit tốt cần nhiều indicator nối causal chain: stock condition, pressure flow, exposure và outcome.
+
+## Scale mismatch trong governance
+
+Air pollution vượt city boundary; basin vượt tỉnh; fish stock vượt EEZ. Nếu institution boundary nhỏ hơn process boundary, coordination problem xuất hiện.
+
+**Fit giữa governance scale và ecological process** là một nguyên tắc lớn của environmental geography.
+
+## Technology không thay thế demand và institution
+
+Cleaner technology có thể giảm impact/unit, nhưng total impact còn phụ thuộc consumption volume, infrastructure lock-in và rule.
+
+Sustainability vì thế là socio-technical transition, không phải danh sách gadget xanh.
+
+## Những hiểu lầm phổ biến
+
+“Renewable = không giới hạn”, “recycling = zero waste”, “efficiency chắc chắn giảm total use”, “local clean = global clean”, “một sustainability score mô tả đủ hệ” đều bỏ stock–flow hoặc boundary.
 
 ## Mô hình tư duy
 
-> Tính bền vững là quản lý **lượng tích lũy, dòng chuyển và tác động ngoại vi** qua thời gian. Hãy hỏi: lượng tích lũy đang tăng hay giảm, dòng nào tạo thâm hụt, và chi phí đang bị chuyển sang nơi hoặc nhóm nào khác?
+> Tính bền vững là quản lý **stock + flow + threshold + externality + distribution qua thời gian**. Hãy hỏi: stock nào đang giảm, pressure flow đến từ đâu, boundary nào đang che impact, ai nhận benefit/cost, và system có buffer trước threshold không?
 
-Xem thêm: [Hệ Trái Đất](../00_foundations/01_earth_as_system.md), [Phát triển](../02_human_geography/09_development_inequality.md).
+Xem thêm: [Hệ Trái Đất](../00_foundations/01_earth_as_system.md), [Phát triển và bất bình đẳng](../02_human_geography/09_development_inequality.md), [Nước–Lương thực–Năng lượng](./01_water_food_energy_nexus.md).
