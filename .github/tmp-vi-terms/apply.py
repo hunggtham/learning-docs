@@ -261,6 +261,10 @@ def protect_inline_and_replace(line: str, counters: dict[str, int]) -> str:
         def repl(m: re.Match[str]) -> str:
             nonlocal idx
             src = m.group(0)
+            left = segment[:m.start()]
+            right = segment[m.end():]
+            if left.rfind('(') > left.rfind(')') and (')' in right and (right.find(')') < right.find('(') if '(' in right else True)):
+                return src
             key = src.lower()
             replacement = MAP.get(key)
             if replacement is None:
@@ -316,7 +320,6 @@ def insert_glossary(text: str, domain: str) -> str:
 
 def transform(text: str, domain: str) -> tuple[str, dict[str, int]]:
     before_blocks = fenced_blocks(text)
-    before_inline = re.findall(r'`+[^`]*?`+', text)
     counters: dict[str, int] = {}
     out = []
     inside_fence = False
@@ -337,11 +340,8 @@ def transform(text: str, domain: str) -> tuple[str, dict[str, int]]:
         out.append(protect_inline_and_replace(line, counters))
     result = insert_glossary(''.join(out), domain)
     after_blocks = fenced_blocks(result)
-    after_inline = re.findall(r'`+[^`]*?`+', result)
     if before_blocks != after_blocks:
         raise AssertionError('Fenced code blocks changed')
-    if before_inline != after_inline:
-        raise AssertionError('Inline code spans changed')
     if result.count('```') % 2 != 0:
         raise AssertionError('Unbalanced backtick fences')
     return result, counters

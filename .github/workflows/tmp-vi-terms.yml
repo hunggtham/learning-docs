@@ -2,7 +2,7 @@ name: Temporary Vietnamese terminology normalization
 
 on:
   push:
-    branches: [main]
+    branches: [tmp-vi-terms-style]
     paths:
       - '.github/workflows/tmp-vi-terms.yml'
 
@@ -32,5 +32,4 @@ jobs:
           git add -A
           git diff --cached --check
           git commit -m "Normalize Vietnamese technical terminology in CSS SCSS Tailwind notes"
-          git pull --rebase origin main
-          git push origin HEAD:main
+          git push origin HEAD:tmp-vi-terms-style
