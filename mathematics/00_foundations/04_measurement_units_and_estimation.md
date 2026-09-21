@@ -1,66 +1,200 @@
-# Đo lường, đơn vị và ước lượng
+# Đo lường, đơn vị và ước lượng: từ con số đến quantity có ý nghĩa
 
-Khi toán học chạm vào thế giới thật, number hầu như luôn đi cùng unit, uncertainty và scale. “5” một mình có rất ít nghĩa; `5 m`, `5 s`, `5%`, `5 requests/s` mô tả những loại quantity hoàn toàn khác nhau.
+Khi toán học chạm vào thế giới thật, một con số hiếm khi đủ. `5` có thể là 5 mét, 5 giây, 5%, 5 requests/s hoặc 5 triệu KRW. Những con số này nhìn giống nhau về mặt ký hiệu nhưng thuộc các loại quantity khác nhau, có cách cộng/trừ khác nhau, độ chính xác khác nhau và mức uncertainty khác nhau.
 
-## Quantity và unit
-
-Một measured quantity có thể conceptualize là
+Vì vậy một measurement nên được nghĩ theo ba lớp:
 
 ```text
-numerical value × unit
+quantity = numerical value × unit
+measurement = quantity + uncertainty
+model input = measurement + assumptions
 ```
 
-Ví dụ `3.2 km`.
+Đây là bridge từ arithmetic sang science, engineering, statistics và numerical computing.
 
-Nếu đổi sang meter:
+## 1. Quantity và unit: unit giống như type information
+
+Một đại lượng đo được (measured quantity / 측정량) thường có dạng
 
 ```math
-3.2\,km
-\times
-\frac{1000\,m}{1\,km}
-=
-3200\,m.
+Q=q\,[u]
 ```
 
-Conversion factor bằng 1 về physical quantity, nên quantity không đổi dù numerical representation đổi.
+trong đó `q` là numerical value và `[u]` là unit.
 
-## Dimensional analysis
+Ví dụ:
 
-Các base dimensions phổ biến gồm length `[L]`, mass `[M]`, time `[T]`.
+```text
+3.2 km
+```
+
+không chỉ là number `3.2`; nó là một length.
+
+Đổi unit:
+
+```math
+3.2\,km\times\frac{1000\,m}{1\,km}=3200\,m.
+```
+
+Conversion factor về physical meaning bằng 1, nên quantity không đổi, chỉ representation đổi.
+
+Mental model hữu ích trong programming là **unit ≈ type**. `5 m + 3 m` hợp lý, còn `5 m + 3 s` không hợp lý vì hai quantities khác loại. Những thư viện units-of-measure trong software cố encode chính rule này vào type system.
+
+## 2. Dimension khác unit
+
+**Thứ nguyên (dimension / 차원)** nói quantity thuộc loại cơ bản nào; **đơn vị (unit / 단위)** nói ta đo loại đó bằng thang nào.
+
+Ví dụ meter và kilometer là hai units của cùng dimension length `[L]`.
+
+Một số base dimensions thường dùng:
+
+```text
+length   [L]
+mass     [M]
+time     [T]
+current  [I]
+temperature [Θ]
+```
+
+Derived dimensions được tạo bằng multiplication/division.
 
 Velocity:
 
 ```math
-[v]=LT^{-1}.
+[v]=LT^{-1}
 ```
 
 Acceleration:
 
 ```math
-[a]=LT^{-2}.
+[a]=LT^{-2}
 ```
 
-Force từ `F=ma`:
+Force:
 
 ```math
 [F]=MLT^{-2}.
 ```
 
-Nếu hai vế của equation có different dimensions, equation chắc chắn sai về physical meaning.
+## 3. Dimensional consistency là type checker, không phải proof
 
-Ngược lại, dimensionally consistent không đảm bảo equation đúng. `s=vt` và `s=2vt` đều same dimensions; cần physics/model để chọn relationship.
+Một physical equation phải có dimensions compatible ở hai vế.
 
-## Significant figures
+Ví dụ:
 
-Chữ số có nghĩa (Significant figures / 유효숫자) truyền đạt precision của measurement.
+```math
+d=vt
+```
 
-Một length `12.3 cm` không nói rằng ta biết value tới `12.300000 cm`. Extra digits do calculator tạo ra không thêm information từ measurement ban đầu.
+vì
 
-Trong engineering, false precision có thể gây cảm giác certainty giả.
+```math
+[L]=[L][T]^{-1}[T].
+```
 
-## Absolute và relative error
+Còn
 
-Nếu true value là `x` và approximation là `\hat x`, absolute error:
+```math
+d=v+t
+```
+
+không hợp lệ vì velocity và time không thể cộng trực tiếp.
+
+Tuy nhiên dimensional consistency chỉ là **necessary condition**, không phải sufficient condition. Cả
+
+```math
+d=vt
+```
+
+và
+
+```math
+d=2vt
+```
+
+đều đúng dimension, nhưng coefficient 2 cần reasoning/evidence khác.
+
+Đây là một pattern quan trọng trong toán ứng dụng:
+
+> Một constraint có thể loại bỏ nhiều answer sai mà chưa đủ để xác định answer đúng.
+
+## 4. Buckingham-π intuition: vì sao dimensionless groups quan trọng?
+
+Một đại lượng không thứ nguyên (dimensionless quantity / 무차원량) xuất hiện khi units triệt tiêu.
+
+Ví dụ:
+
+```math
+\text{strain}=\frac{\Delta L}{L}
+```
+
+```math
+\text{probability}=\frac{\text{favorable mass}}{\text{total mass}}
+```
+
+```math
+\text{relative error}=\frac{|x-\hat x|}{|x|}.
+```
+
+Dimensionless groups thường cho phép so sánh systems khác scale. Đây là trực giác phía sau dimensional similarity trong physics/engineering và nhiều normalized metrics trong data science.
+
+Ta không cần formal Buckingham π theorem ở đây, nhưng nên nhớ idea: nếu model thực sự chỉ phụ thuộc vào một số independent dimensions, có thể tồn tại representation compact hơn bằng dimensionless combinations.
+
+## 5. Precision, accuracy và uncertainty không giống nhau
+
+**Precision** nói measurements lặp lại có gần nhau không hoặc representation có bao nhiêu resolution.
+
+**Accuracy** nói estimate có gần true value không.
+
+Một sensor có thể rất precise nhưng biased: luôn cho `10.00`, `10.01`, `9.99` trong khi true value là `11.2`.
+
+Ngược lại, measurements có thể noisy nhưng average lại gần true value.
+
+Điều này quan trọng trong ML/Statistics:
+
+```text
+low variance ≠ low bias
+precision ≠ accuracy
+```
+
+## 6. Significant figures và false precision
+
+Chữ số có nghĩa (significant figures / 유효숫자) biểu thị mức resolution/precision hợp lý của measurement.
+
+Nếu length được đo là
+
+```text
+12.3 cm
+```
+
+calculator không thể biến nó thành knowledge chính xác ở mức
+
+```text
+12.300000000 cm
+```
+
+chỉ bằng arithmetic.
+
+Giả sử area của square side `12.3 cm`:
+
+```math
+A=12.3^2=151.29\,cm^2.
+```
+
+Con số `151.29` là computational output, nhưng reporting có thể chỉ nên giữ precision tương thích với measurement ban đầu.
+
+Đây là distinction:
+
+```text
+computational precision
+≠ information precision
+```
+
+## 7. Absolute error và relative error trả lời hai câu hỏi khác nhau
+
+Cho true value `x` và approximation `\hat x`.
+
+Absolute error:
 
 ```math
 E_{abs}=|x-\hat x|.
@@ -69,145 +203,266 @@ E_{abs}=|x-\hat x|.
 Relative error:
 
 ```math
-E_{rel}=\frac{|x-\hat x|}{|x|}
+E_{rel}=\frac{|x-\hat x|}{|x|},\qquad x\ne0.
 ```
 
-khi `x≠0`.
+Absolute error trả lời “sai bao nhiêu unit?”. Relative error trả lời “sai lớn đến đâu so với scale của quantity?”.
 
-Một error `1 cm` có thể lớn nếu object dài `2 cm`, nhưng negligible nếu bridge dài `2 km`. Relative error capture scale.
+Ví dụ error `1 cm`:
 
-## Percentage error
+- object 2 cm → 50% error;
+- bridge 2 km → gần như negligible.
 
-```math
-100E_{rel}\%
-```
+Khi `x` gần 0, relative error có thể explode và trở nên không ổn định; lúc đó absolute tolerance hoặc problem-specific scale có thể phù hợp hơn.
 
-cho percentage error.
+## 8. Percentage, percentage point và denominator reasoning
 
-Nhưng percentage dễ bị lạm dụng. Increase từ 10 lên 20 là `100%`; decrease từ 20 xuống 10 là `50%`. Percentage changes không symmetric vì denominator khác.
-
-## Approximation order
-
-Một approximation có thể phụ thuộc vào small quantity `h`. Nếu error behaves approximately như
-
-```math
-E(h)\approx Ch^p,
-```
-
-thì giảm `h` một nửa làm error giảm khoảng
-
-```math
-2^p
-```
-
-lần.
-
-Đây là nền để hiểu numerical methods. Higher-order method không nhất thiết luôn tốt hơn thực tế vì computational cost, stability và floating-point error cũng quan trọng.
-
-## Order of magnitude
-
-Order of magnitude mô tả scale theo powers of ten. `3000≈3×10^3`; `0.004≈4×10^{-3}`.
-
-Nếu hai systems khác nhau 6 orders of magnitude, difference khoảng factor `10^6`, tức một triệu lần.
-
-Scientific notation làm scale rõ hơn và giảm lỗi đếm zero.
-
-## Fermi estimation
-
-Fermi estimate phân rã một question lớn thành factors có thể estimate.
-
-Ví dụ rough estimate requests/day:
+Nếu rate tăng từ 3% lên 4%:
 
 ```text
-users × sessions/user/day × requests/session
+increase = 1 percentage point
 ```
 
-Nếu có:
+nhưng relative increase là
+
+```math
+\frac{4-3}{3}\approx33.3\%.
+```
+
+Hai câu không mâu thuẫn; denominator khác nhau.
+
+Percentage luôn ngầm hỏi:
+
+> Phần trăm của base nào?
+
+Đây là lý do percentage change thường asymmetric. Tăng từ 80 lên 100 là 25%, nhưng giảm từ 100 về 80 là 20%.
+
+## 9. Propagation of uncertainty: output không thể chính xác hơn inputs một cách kỳ diệu
+
+Nếu output
+
+```math
+y=f(x_1,\ldots,x_n),
+```
+
+small input perturbations có first-order approximation:
+
+```math
+\Delta y\approx
+\sum_i\frac{\partial f}{\partial x_i}\Delta x_i.
+```
+
+Các partial derivatives đo sensitivity.
+
+Nếu errors ngẫu nhiên, độc lập và small, variance propagation thường dùng approximation:
+
+```math
+\operatorname{Var}(y)
+\approx
+\sum_i
+\left(\frac{\partial f}{\partial x_i}\right)^2
+\operatorname{Var}(x_i).
+```
+
+Đây là connection trực tiếp từ measurement sang multivariable calculus và statistics.
+
+### Worked example: area của rectangle
+
+```math
+A=LW.
+```
+
+First-order differential:
+
+```math
+dA=W\,dL+L\,dW.
+```
+
+Chia cho `A=LW`:
+
+```math
+\frac{dA}{A}
+\approx
+\frac{dL}{L}+\frac{dW}{W}.
+```
+
+Vì vậy relative uncertainty của product gần bằng tổng relative sensitivities ở first order.
+
+## 10. Order of magnitude là reasoning về scale
+
+Scientific notation:
+
+```math
+3.2\times10^6
+```
+
+làm scale rõ hơn `3,200,000`.
+
+Order of magnitude không hỏi exact value mà hỏi size regime.
+
+Nếu system A cần `10^3` operations và B cần `10^9`, khác biệt sáu orders of magnitude. Micro-optimization 20% không thể bù chênh lệch factor một triệu.
+
+Đây là lý do order-of-magnitude reasoning cực kỳ hữu ích trong system design và algorithm analysis.
+
+## 11. Fermi estimation: decomposition quan trọng hơn decimal precision
+
+Một Fermi estimate phân rã unknown lớn thành product/sum của quantities dễ estimate.
+
+Ví dụ rough traffic:
+
+```text
+users
+× sessions/user/day
+× requests/session
+÷ seconds/day
+```
+
+Giả sử:
 
 ```text
 100,000 users
 × 2 sessions/day
 × 30 requests/session
+= 6,000,000 requests/day
 ```
 
-thì khoảng
+Average:
+
+```math
+\frac{6,000,000}{86,400}\approx69.4\ requests/s.
+```
+
+Câu trả lời quan trọng đầu tiên không phải `69.444...`, mà là:
 
 ```text
-6,000,000 requests/day.
+order of magnitude ≈ 10^2 requests/s average
 ```
 
-Average requests/second:
+Peak factor, retries và burstiness là assumptions tiếp theo.
+
+## 12. Sanity check bằng upper/lower bounds
+
+Ước lượng tốt nên có bounds thô.
+
+Nếu business có tối đa 1 triệu users, mỗi user không thể tạo hơn 1000 requests/ngày theo product constraints, thì upper bound rough là:
 
 ```math
-\frac{6,000,000}{86,400}\approx69.4.
+10^6\times10^3=10^9\ requests/day.
 ```
 
-Peak load sẽ cao hơn average, nhưng estimate đầu tiên cho scale trước khi design infrastructure.
+Nếu một dashboard báo `10^13 requests/day`, trước khi debug code phức tạp ta nên hỏi liệu con số đã vi phạm sanity bound hay unit conversion không.
 
-## Ratio và dimensionless quantities
+Bounding là một trong những kỹ thuật reasoning rẻ nhưng mạnh nhất.
 
-Một ratio giữa quantities cùng unit thường dimensionless.
+## 13. Linear scale vs logarithmic scale
 
-Ví dụ efficiency:
+Linear scale bảo toàn differences; log scale bảo toàn ratios.
+
+Trên log10 axis:
+
+```text
+1, 10, 100, 1000
+```
+
+cách đều vì mỗi step nhân 10.
+
+Log scale hữu ích khi data trải nhiều orders of magnitude: latency tail, wealth distribution, frequency spectrum, pH, decibel, learning curves.
+
+Nhưng log transform thay meaning: difference trên log scale tương ứng ratio trên original scale.
+
+## 14. Units trong Finance, CS và AI
+
+Trong Finance:
+
+```text
+return → dimensionless ratio
+volatility → return per sqrt(time) theo convention/model
+interest rate → 1/time-ish scale trong continuous model
+```
+
+Trong CS:
+
+```text
+latency → ms/request
+throughput → requests/s
+bandwidth → bits/s
+storage → bytes
+```
+
+Trong AI:
+
+loss thường dimensionless hoặc phụ thuộc target scaling; gradient có units output-loss per parameter-unit. Feature scaling thay numerical geometry và do đó ảnh hưởng optimization.
+
+Unit reasoning không chỉ dành cho physics.
+
+## 15. Worked example: phát hiện unit bug
+
+Giả sử travel time được tính bằng:
+
+```text
+distance = 120 km
+speed = 60 m/s
+```
+
+Nếu code làm trực tiếp:
 
 ```math
-\eta=\frac{useful\ output}{input}.
+t=120/60=2
 ```
 
-Probability, percentage, many normalized metrics và cosine similarity đều dimensionless hoặc effectively normalized quantities.
+con số `2` vô nghĩa vì units chưa align.
 
-Dimensionless values dễ compare across systems nhưng context vẫn quan trọng. Accuracy `95%` trên heavily imbalanced classification có thể misleading.
-
-## Linear và logarithmic scales
-
-Linear scale coi equal differences là equal spacing. Logarithmic scale coi equal ratios là equal spacing.
-
-Trên log10 scale:
+Convert:
 
 ```math
-1,10,100,1000
+120\,km=120000\,m
 ```
 
-cách nhau đều vì mỗi step multiply by 10.
-
-Log scales hữu ích khi range spans many orders of magnitude. Decibel, pH, earthquake magnitude và log charts dùng idea này ở các contexts khác nhau.
-
-## Percentage point
-
-Nếu interest rate từ `3%` lên `4%`, increase là `1 percentage point`, nhưng relative increase là
+nên
 
 ```math
-\frac{4-3}{3}=33.3\%.
+t=\frac{120000\,m}{60\,m/s}=2000\,s\approx33.3\,min.
 ```
 
-Hai cách nói trả lời hai questions khác nhau.
+Unit algebra tự chỉ ra phép conversion cần thiết.
 
-## Uncertainty propagation trực giác
+## 16. Assumptions checklist khi đọc một con số
 
-Nếu measured quantities có uncertainty, result tính từ chúng cũng có uncertainty.
+Trước một metric hoặc estimate, hỏi:
 
-Nếu
-
-```math
-z=x+y,
+```text
+Quantity nào đang được đo?
+Unit là gì?
+Reference/base là gì?
+Precision thực sự đến đâu?
+Uncertainty đến từ đâu?
+Data có systematic bias không?
+Scale linear hay multiplicative?
+Có sanity bound nào không?
 ```
 
-small absolute errors ảnh hưởng theo additive scale.
+Đây là mathematical hygiene, không phải paperwork.
 
-Nếu
+## Knowledge Connection
 
-```math
-z=xy,
+Measurement nối trực tiếp với:
+
+```text
+units → dimensional analysis
+uncertainty → probability/statistics
+sensitivity → derivatives/Jacobian
+error propagation → covariance
+scale → logarithm/power law
+Fermi estimate → modeling/system design
+precision → numerical analysis/floating point
 ```
 
-relative errors thường là perspective tự nhiên hơn.
-
-Calculus sau này formalize bằng derivatives: sensitivity của output với input quyết định error propagation.
+Trong engineering và data science, nhiều lỗi lớn không đến từ calculus khó mà từ unit mismatch, denominator sai, false precision hoặc assumption scale sai.
 
 ## Mental Model
 
-> Number trả lời “bao nhiêu”, unit cho biết number đang đo “loại gì”, error cho biết ta tin nó đến đâu, scale cho biết nên so sánh nó theo additive hay multiplicative perspective.
+> Một measurement không phải “một number lấy từ thế giới”. Nó là quantity được biểu diễn trong một unit, với finite precision và uncertainty. Good quantitative reasoning luôn giữ bốn lớp cùng lúc: **value, unit, uncertainty, scale**.
 
 ## Common Misconceptions
 
-Nhiều decimal places không đồng nghĩa với accurate measurement. Percentage increase và percentage-point change không giống nhau. Unit không phải decoration có thể bỏ đi; trong scientific reasoning, unit hoạt động gần giống type information và có thể bắt được lỗi logic.
+Nhiều decimal places không đồng nghĩa accurate. Dimensionally correct không đồng nghĩa physically correct. Relative error không ổn khi reference gần zero. Log scale không “bóp méo dữ liệu” một cách tùy tiện; nó đổi câu hỏi từ additive difference sang multiplicative ratio. Một estimate thô có assumptions rõ thường hữu ích hơn một con số rất chính xác nhưng không biết denominator, unit hoặc uncertainty.

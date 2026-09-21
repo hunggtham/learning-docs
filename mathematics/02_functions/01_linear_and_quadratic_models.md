@@ -1,126 +1,496 @@
-# Mô hình tuyến tính và bậc hai
+# Mô hình tuyến tính và bậc hai: từ constant rate đến curvature
 
-Hai families function xuất hiện rất sớm vì chúng capture hai patterns cơ bản: constant rate of change và rate of change thay đổi tuyến tính.
+Linear và quadratic functions là hai families đầu tiên nên học thật sâu vì chúng tạo mental model cho phần lớn calculus sau này.
 
-## Linear function
+Linear model trả lời:
 
-Dạng quen thuộc:
+> Nếu input tăng một lượng cố định, output có thay đổi gần như cùng một lượng cố định không?
 
-```math
-y=mx+b
-```
+Quadratic model trả lời:
 
-`m` là slope (기울기), `b` là y-intercept.
+> Nếu bản thân rate of change đang thay đổi gần tuyến tính, shape của output sẽ ra sao?
 
-Slope giữa hai points:
+Đây không chỉ là hai graph cần nhớ. Chúng là hai mức structure khác nhau của change.
 
-```math
-m=\frac{\Delta y}{\Delta x}
-=\frac{y_2-y_1}{x_2-x_1}
-```
+## 1. Linear model bắt đầu từ constant rate of change
 
-Nó đo output thay đổi bao nhiêu trên một unit input. Unit của slope là unit-y chia unit-x.
-
-Nếu `y` là cost KRW và `x` là GB storage, slope có unit KRW/GB. Đây là rate, không chỉ geometric angle.
-
-## Affine vs linear theo linear algebra
-
-Trong school algebra, `mx+b` thường gọi linear. Trong linear algebra nghiêm ngặt, transformation tuyến tính phải bảo toàn origin nên form một chiều là `y=mx`. `mx+b` với `b≠0` gọi affine transformation.
-
-Sự khác biệt terminology này quan trọng khi đọc university textbook hoặc graphics documentation.
-
-## Interpolation và extrapolation
-
-Dùng line fit giữa observed points để estimate bên trong range là interpolation. Dự đoán ngoài range là extrapolation và rủi ro hơn vì assumption constant slope có thể không còn đúng.
-
-Một salary trend 3 năm không đảm bảo tiếp tục linear 30 năm.
-
-## Quadratic function
-
-Dạng
+Một affine function một biến có dạng
 
 ```math
-y=ax^2+bx+c,\qquad a\ne0
+y=mx+b.
 ```
 
-Graph là parabola. Derivative sau này cho
+Trong school algebra thường gọi đây là linear function. Trong linear algebra nghiêm ngặt, `mx+b` với `b\ne0` là affine; linear map phải giữ origin và có dạng `y=mx`.
+
+`m` là slope (기울기 / slope):
 
 ```math
-y'=2ax+b
+m=\frac{\Delta y}{\Delta x}.
 ```
 
-nên slope thay đổi tuyến tính theo `x`. Đây là lý do quadratic xuất hiện khi rate itself thay đổi constant.
+Điểm quan trọng không phải công thức mà là meaning:
 
-Trong physics, constant acceleration `a` dẫn tới position
+```text
+m = output change per input unit
+```
+
+Nếu `y` là KRW và `x` là GB:
+
+```text
+m unit = KRW/GB
+```
+
+Slope vì vậy là rate, không chỉ là “độ nghiêng của line”.
+
+## 2. Vì sao constant slope tạo đường thẳng?
+
+Nếu mọi increment `\Delta x` tạo cùng output increment
 
 ```math
-x(t)=x_0+v_0t+\frac12at^2
+\Delta y=m\Delta x,
 ```
 
-vì velocity thay đổi linear theo time và position tích lũy velocity.
-
-## Vertex form
-
-Completing square biến
+thì bắt đầu từ reference point `(x_0,y_0)`:
 
 ```math
-y=ax^2+bx+c
+y-y_0=m(x-x_0).
 ```
 
-thành
+Đó là point-slope equation.
+
+Chọn `x_0=0`, đặt `b=y_0`:
 
 ```math
-y=a(x-h)^2+k
+y=mx+b.
 ```
 
-với vertex `(h,k)`.
+Vì vậy line equation không phải arbitrary syntax. Nó là consequence của assumption **constant rate of change**.
 
-Trong optimization một biến, nếu `a>0`, vertex là global minimum; nếu `a<0`, global maximum.
+## 3. Intercept là baseline, nhưng chỉ khi baseline có meaning
 
-## Model fitting
-
-Hai points xác định unique line nếu x-values khác nhau. Ba generic points xác định quadratic. Nhưng fitting data thực không chỉ là “đi qua mọi point”; với noisy data, exact interpolation có thể overfit. Least squares chọn parameters minimize tổng squared residuals.
-
-## Residual
-
-Nếu observed value là `y_i` và model prediction `\hat y_i`, residual:
+Trong
 
 ```math
-r_i=y_i-\hat y_i
+y=mx+b,
 ```
 
-Residual structure cho biết model bỏ sót pattern nào. Nếu residuals có curve rõ, linear model có thể quá đơn giản.
+`b` là predicted output tại `x=0`.
+
+Nhưng mathematical intercept không tự động có real-world meaning.
+
+Ví dụ fit salary theo years of experience trên range 3–15 years. Intercept tại 0 years có thể là extrapolation ngoài data và không nên diễn giải mạnh.
+
+Do đó khi đọc parameter:
+
+```text
+coefficient meaning = formula + domain + model assumptions
+```
+
+## 4. Worked example: fixed cost + variable cost
+
+Cloud service:
+
+```text
+fixed fee = 30,000 KRW/month
+variable fee = 20 KRW/GB
+```
+
+Model:
+
+```math
+C(x)=20x+30000.
+```
+
+Slope:
+
+```text
+20 KRW/GB
+```
+
+là marginal rate trong model.
+
+Intercept:
+
+```text
+30,000 KRW
+```
+
+là baseline tại zero usage nếu pricing rule thực sự áp dụng ở zero.
+
+Nếu pricing có tiers, function trở thành piecewise linear chứ không còn một line duy nhất.
+
+## 5. Proportionality là special case của linear/affine behavior
+
+Direct proportionality:
+
+```math
+y=kx
+```
+
+đi qua origin.
+
+Nếu `x=0` thì `y=0`. Đây là stronger assumption so với affine model `mx+b`.
+
+Ví dụ cost proportional với quantity chỉ hợp lý nếu không có fixed fee.
+
+Rất nhiều lỗi modeling đến từ việc dùng proportionality khi thực tế có baseline.
+
+## 6. Interpolation và extrapolation khác nhau về assumption risk
+
+Interpolation dự đoán trong observed range.
+
+Extrapolation dự đoán ngoài range.
+
+Nếu data từ `x=10` đến `x=20`, prediction tại `x=15` dựa vào assumption local. Prediction tại `x=1000` yêu cầu assumption constant slope tồn tại xa ngoài evidence.
+
+Một line có thể fit tốt trong narrow region của một nonlinear process.
+
+Đây là bridge sang Taylor approximation: nonlinear functions thường gần linear locally dù global behavior khác hẳn.
+
+## 7. Residual cho biết model bỏ sót structure nào
+
+Observed value `y_i`, prediction `\hat y_i`:
+
+```math
+r_i=y_i-\hat y_i.
+```
+
+Nếu residuals random quanh zero, line có thể capture mean structure khá tốt.
+
+Nếu residuals tạo curve:
+
+```text
+positive → negative → positive
+```
+
+đó là dấu hiệu linear model đang bỏ sót curvature.
+
+Residual không chỉ là “error cần nhỏ”; pattern của residual là diagnostic signal.
+
+## 8. Quadratic model xuất hiện khi first-order rate không constant
+
+Quadratic function:
+
+```math
+y=ax^2+bx+c,
+\qquad a\ne0.
+```
+
+Derivative:
+
+```math
+y'=2ax+b.
+```
+
+Slope thay đổi tuyến tính theo `x`.
+
+Second derivative:
+
+```math
+y''=2a
+```
+
+constant.
+
+Vì vậy một mental model rất mạnh là:
+
+```text
+linear function       → constant first derivative
+quadratic function    → constant second derivative
+```
+
+Đây là lý do quadratic xuất hiện trong constant acceleration, local curvature và second-order optimization.
+
+## 9. Physics derivation: constant acceleration tạo quadratic position
+
+Nếu acceleration constant `a`:
+
+```math
+v(t)=v_0+at.
+```
+
+Position accumulation:
+
+```math
+x(t)=x_0+\int_0^t v(s)\,ds
+```
+
+nên
+
+```math
+x(t)=x_0+v_0t+\frac12at^2.
+```
+
+Quadratic không xuất hiện vì “projectile formula phải nhớ”. Nó xuất hiện vì tích phân của linear velocity là quadratic position.
+
+## 10. Ba representations của quadratic trả lời ba câu hỏi khác nhau
+
+Expanded form:
+
+```math
+f(x)=ax^2+bx+c
+```
+
+làm coefficients rõ.
+
+Factored form:
+
+```math
+f(x)=a(x-r_1)(x-r_2)
+```
+
+làm roots rõ.
+
+Vertex form:
+
+```math
+f(x)=a(x-h)^2+k
+```
+
+làm extremum và symmetry rõ.
+
+Không có representation “tốt nhất” universal. Good algebra thường là chọn representation phù hợp question.
+
+## 11. Completing the square là đổi representation, không phải trick
+
+Từ
+
+```math
+ax^2+bx+c,
+```
+
+factor `a` khỏi quadratic terms:
+
+```math
+=a\left(x^2+\frac ba x\right)+c.
+```
+
+Thêm/bớt square:
+
+```math
+x^2+\frac ba x
+=
+\left(x+\frac{b}{2a}\right)^2
+-
+\frac{b^2}{4a^2}.
+```
+
+Do đó
+
+```math
+f(x)=
+a\left(x+\frac{b}{2a}\right)^2
++
+\left(c-\frac{b^2}{4a}\right).
+```
+
+Vertex:
+
+```math
+h=-\frac{b}{2a}.
+```
+
+Điểm này cũng là nơi derivative bằng zero:
+
+```math
+2ax+b=0.
+```
+
+Algebra và calculus đang nói cùng một structure bằng hai ngôn ngữ.
+
+## 12. Discriminant encode root geometry
+
+Quadratic equation:
+
+```math
+ax^2+bx+c=0.
+```
+
+Discriminant:
+
+```math
+\Delta=b^2-4ac.
+```
+
+Nếu `\Delta>0`: hai real roots.
+
+Nếu `\Delta=0`: tangent touch, repeated root.
+
+Nếu `\Delta<0`: no real roots, nhưng có complex conjugate roots.
+
+Discriminant vì vậy không chỉ là symbol trong formula; nó tóm tắt intersection geometry của parabola với x-axis.
+
+## 13. Quadratic as local approximation
+
+Gần `x_0`, smooth function có Taylor approximation:
+
+```math
+f(x_0+h)
+\approx
+f(x_0)
++f'(x_0)h
++\frac12f''(x_0)h^2.
+```
+
+Linear term mô tả slope; quadratic term mô tả curvature.
+
+Optimization methods như Newton's method và second-order models dùng đúng viewpoint này.
+
+Một quadratic model không chỉ là school function family; nó là universal local model cấp hai cho smooth functions.
+
+## 14. Multivariable quadratic form
+
+Trong nhiều dimensions, quadratic structure viết:
+
+```math
+q(x)=x^TAx+b^Tx+c.
+```
+
+Matrix `A` encode curvature.
+
+Nếu `A` positive definite, bowl shape có unique minimum.
+
+Đây là bridge sang Hessian, least squares, optimization và Gaussian models.
+
+## 15. Linear regression vs exact line through points
+
+Hai points với different x xác định một exact line.
+
+Nhưng noisy data nhiều points thường không nằm trên một line. Khi đó regression solve:
+
+```math
+\min_{m,b}
+\sum_i
+(y_i-(mx_i+b))^2.
+```
+
+Đây là projection problem, không phải interpolation.
+
+Distinction:
+
+```text
+interpolation → pass through selected data exactly
+regression → estimate underlying relationship under noise
+```
+
+## 16. Quadratic fitting và overfitting intuition
+
+Thêm degree cho polynomial làm model flexible hơn. Training residual có thể giảm, nhưng generalization không chắc tốt hơn.
+
+Với few noisy samples, quadratic có thể fit apparent curvature chỉ do noise.
+
+Model choice cần:
+
+```text
+structure + data + validation
+```
+
+không chỉ “higher degree fits better”.
+
+## 17. Worked example: braking distance
+
+Nếu reaction distance scale roughly linear với speed `v`:
+
+```math
+d_r\propto v,
+```
+
+còn braking distance dưới simplified constant deceleration model scale như
+
+```math
+d_b\propto v^2,
+```
+
+thì total stopping distance có form gần
+
+```math
+d(v)=av+bv^2.
+```
+
+Doubling speed không chỉ double stopping distance vì quadratic term tăng factor 4.
+
+Đây là example tốt cho việc hiểu model terms bằng scaling.
+
+## 18. Finance connection: local linear vs convex exposure
+
+Một portfolio value có thể local approximate theo price change:
+
+```math
+\Delta V\approx \Delta\,\Delta S
+```
+
+(first-order sensitivity).
+
+Với nonlinear instruments, second-order term:
+
+```math
+\Delta V
+\approx
+\Delta\,\Delta S
++
+\frac12\Gamma(\Delta S)^2
+```
+
+cho curvature exposure.
+
+Không cần học option pricing ở chapter này; important connection là linear + quadratic terms tạo local sensitivity model.
+
+## 19. AI connection: linear layer nhưng nonlinear model
+
+Một layer thường viết:
+
+```math
+z=Wx+b.
+```
+
+đây là affine transformation.
+
+Nếu chỉ compose affine layers mà không activation nonlinear, toàn network vẫn collapse thành một affine transformation.
+
+Nonlinearity là thứ tạo richer function family.
+
+Điều này cho thấy linear model là building block nhưng không đủ cho arbitrary nonlinear structure.
+
+## 20. Assumptions checklist
+
+Khi dùng linear model, hỏi:
+
+```text
+rate có thực sự gần constant không?
+intercept có meaning không?
+range nào model valid?
+residual có pattern không?
+extrapolation có hợp lý không?
+```
+
+Khi dùng quadratic model, hỏi thêm:
+
+```text
+curvature có gần constant không?
+quadratic behavior là global hay chỉ local?
+vertex/root có nằm trong domain meaningful không?
+```
+
+## Knowledge Connection
+
+Linear/quadratic models nối:
+
+```text
+ratio/rate
+→ functions
+→ derivatives
+→ Taylor approximation
+→ least squares
+→ optimization
+→ physics motion
+→ AI affine layers
+→ Finance sensitivity
+```
 
 ## Mental Model
 
-> Linear model nói “mỗi bước input thêm cùng amount output”. Quadratic model nói “rate of change không còn constant, nhưng bản thân rate thay đổi đều”. Chọn model là chọn assumption về structure của change.
+> Linear model là **constant first-order change**. Quadratic model là **constant second-order change** hoặc **first-order rate thay đổi tuyến tính**. Đừng bắt đầu từ graph shape; bắt đầu từ structure của change mà model đang giả định.
 
 ## Common Misconceptions
 
-Linear correlation không chứng minh causal relationship. Một graph nhìn gần straight trong narrow range không có nghĩa underlying process thật sự linear. Quadratic formula giải roots, nhưng vertex form tốt hơn để hiểu extrema và geometry.
-
-## Worked Example: tách fixed cost và variable cost
-
-Giả sử một cloud service có fixed monthly cost 30,000 KRW và thêm 2,000 KRW cho mỗi 100 GB. Nếu đặt `x` là số block 100 GB, cost model:
-
-```math
-C(x)=2000x+30000
-```
-
-Slope 2,000 KRW/block nói marginal cost theo model; intercept 30,000 KRW là cost khi usage variable bằng zero. Nếu ta chỉ có hai observations và fit line, cần cẩn thận: intercept toán học có thể không có business meaning nếu `x=0` nằm ngoài range hoặc pricing có tiers.
-
-## Worked Example: projectile model
-
-Bỏ air resistance, vertical position:
-
-```math
-h(t)=h_0+v_0t-\frac12gt^2
-```
-
-đây là quadratic vì acceleration gravity constant `-g`. Vertex cho maximum height. Time của vertex:
-
-```math
-t_*=-\frac{b}{2a}=\frac{v_0}{g}
-```
-
-nếu viết coefficients theo standard quadratic. Đây là một ví dụ cho thấy vertex formula không phải trick đồ thị; nó encode thời điểm velocity vertical bằng zero.
+`y=mx+b` không phải linear map theo definition linear algebra nếu `b\ne0`. High `R^2` không chứng minh relationship truly linear hoặc causal. Vertex formula không phải mẹo; nó là nơi first derivative bằng zero. Quadratic fit tốt trong sample không có nghĩa process thật sự quadratic ngoài range. Một graph nhìn thẳng trên narrow interval có thể chỉ là local linearization của nonlinear function.
