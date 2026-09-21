@@ -1,45 +1,101 @@
-# Hệ quy chiếu toàn cầu và thế giới số
+# Hệ quy chiếu toàn cầu, datum và hạ tầng tọa độ
 
-## Một tọa độ chỉ có ý nghĩa trong một hệ quy chiếu
+## Tọa độ là kết quả của một quy ước đo lường
 
-Chuỗi `37.5665, 126.9780` trông giống một vị trí, nhưng để sử dụng chính xác cần biết thứ tự trục, đơn vị, datum và CRS. Trong phần lớn ứng dụng web, người ta ngầm hiểu WGS 84 latitude/longitude; trong kỹ thuật, ngầm hiểu như vậy có thể gây lỗi.
+Một chuỗi như `37.5665, 126.9780` chưa phải vị trí hoàn chỉnh. Ta còn cần biết đó là latitude–longitude hay longitude–latitude, đơn vị gì, datum nào, epoch nào và dữ liệu được kỳ vọng chính xác đến mức nào.
 
-**Hệ quy chiếu tọa độ (CRS)** mô tả cách ánh xạ tọa độ số sang vị trí trên/so với Trái Đất. CRS địa lý dùng góc; CRS chiếu phẳng dùng đơn vị tuyến tính như mét.
+Trong GIS, **hệ quy chiếu tọa độ (Coordinate Reference System, CRS)** đóng vai trò giống type system. Nó quy định cách con số liên hệ với không gian thật. Hai array giống nhau về cấu trúc nhưng khác CRS có thể đại diện cho hai nơi khác nhau.
 
-## Hệ quy chiếu toàn cầu và địa phương
+## Geographic CRS và projected CRS
 
-WGS 84 phù hợp làm hệ toàn cầu cho GNSS và trao đổi dữ liệu. Nhưng đo đạc địa phương có thể dùng datum hoặc phép chiếu tối ưu cho một quốc gia/vùng để giảm biến dạng. Không có CRS duy nhất tối ưu cho mọi bài toán.
+**Geographic CRS** dùng tọa độ góc trên ellipsoid, thường là latitude và longitude. **Projected CRS** dùng phép chiếu để biến bề mặt cong thành tọa độ phẳng, thường theo mét.
 
-Ví dụ, tính diện tích thửa đất nên dùng một hệ chiếu phù hợp vùng thay vì lấy công thức phẳng trực tiếp trên độ vĩ–kinh. Ngược lại, lưu vị trí người dùng toàn cầu trong một hệ địa phương sẽ bất tiện.
+Geographic CRS thuận tiện cho lưu trữ toàn cầu và trao đổi. Projected CRS thuận tiện cho nhiều phép đo cục bộ như diện tích, buffering và thiết kế kỹ thuật.
 
-## EPSG code là khóa tra cứu, không phải phép thuật
+Không có CRS duy nhất tối ưu cho mọi việc. Một hệ thống tốt tách CRS lưu trữ, CRS phân tích và CRS hiển thị khi cần.
 
-Mã EPSG giúp định danh CRS, nhưng hai lớp cùng EPSG vẫn có thể gặp vấn đề nếu dữ liệu bị gán nhãn sai từ đầu. `Assign CRS` và `Reproject` là hai thao tác khác nhau: thao tác đầu nói “các con số này đang thuộc hệ nào”; thao tác sau biến đổi con số giữa hai hệ.
+## Datum và reference frame
 
-Gán sai CRS rồi reproject có thể tạo kết quả rất sai nhưng vẫn sinh ra file hợp lệ về kỹ thuật.
+**Datum** gắn ellipsoid với Trái Đất. **Reference frame** là hiện thực hóa thực tế của hệ tham chiếu bằng mạng trạm, tọa độ và mô hình chuyển động.
 
-## Trục và thứ tự tọa độ
+Trong hệ tĩnh đơn giản, người dùng thường không phân biệt hai khái niệm. Nhưng ở trắc địa chính xác, frame và epoch là bắt buộc vì vỏ Trái Đất chuyển động.
 
-Một số tiêu chuẩn định nghĩa trục latitude–longitude, trong khi nhiều API web quen longitude–latitude hoặc `x,y`. Đây là nguồn bug kinh điển. Hệ thống nên ghi rõ contract thay vì dựa vào trí nhớ của lập trình viên.
+WGS 84 không nên được hiểu như một nhãn bất biến duy nhất cho mọi thời kỳ. Các realization của hệ toàn cầu được cập nhật để bám theo phép đo tốt hơn.
 
-## Thời gian là chiều thứ tư của hệ quy chiếu
+## Geocentric và Earth-fixed
 
-Mảng kiến tạo chuyển động và các datum động hiện đại có epoch. Với ứng dụng centimet-level, cùng một điểm vật lý có tọa độ thay đổi theo thời gian trong hệ cố định toàn cầu. Vì thế coordinate transformation có thể cần cả vận tốc và epoch.
+Một khung toàn cầu thường lấy tâm gần center of mass của Trái Đất và quay cùng hành tinh, tạo hệ **Earth-Centered, Earth-Fixed (ECEF)**. Tọa độ ECEF dùng ba trục Cartesian `X,Y,Z`.
 
-Đây là điểm giao giữa trắc địa và software engineering: dữ liệu không chỉ có schema không gian mà còn có **version/epoch**.
+GNSS tính vị trí thuận tiện trong khung ba chiều như vậy. Vĩ độ–kinh độ là một representation được suy ra từ tọa độ địa tâm và ellipsoid.
 
-## Hệ thống ô và chỉ mục toàn cầu
+Mental model này giải thích vì sao tọa độ địa lý không phải “đầu ra thô” của vệ tinh; chúng là một lớp chuyển đổi.
 
-Ngoài latitude/longitude, hệ thống số thường chia Trái Đất thành ô hoặc mã phân cấp như geohash, H3, S2 hay tile XYZ. Mục tiêu không phải thay CRS, mà giúp lập chỉ mục, tổng hợp và cache theo không gian.
+## EPSG code giúp định danh nhưng không sửa được metadata sai
 
-Ô càng nhỏ cho độ chi tiết cao nhưng tăng số lượng đối tượng. Một hệ lưới toàn cầu luôn có trade-off về hình dạng ô, diện tích, hàng xóm và độ méo.
+Registry EPSG cung cấp mã cho nhiều CRS và transformation. Mã như `EPSG:4326` giúp hệ thống trao đổi định nghĩa nhất quán.
 
-## Địa chỉ không phải tọa độ
+Nhưng mã không có phép thuật. Nếu file thực sự ở một CRS mà bị gán nhãn CRS khác, phần mềm sẽ xử lý sai một cách rất nhất quán.
 
-Địa chỉ là hệ thống xã hội. Nó thay đổi khi đường đổi tên, địa giới thay đổi hoặc quy tắc đánh số khác nhau. Geocoding là quá trình ánh xạ giữa hai hệ: **ngôn ngữ–hành chính của địa chỉ** và **hình học của tọa độ**. Vì vậy kết quả geocoder cần confidence và provenance, không nên coi như chân lý tuyệt đối.
+**Assign CRS** nghĩa “các con số hiện tại nên được diễn giải theo hệ này”. **Reproject** nghĩa “hãy biến đổi các con số để giữ cùng vị trí vật lý trong hệ khác”. Nhầm hai thao tác là lỗi kinh điển.
+
+## Coordinate transformation là phép biến đổi có điều kiện
+
+Chuyển giữa hai CRS có thể cần projection formula, datum transformation, grid correction và đôi khi epoch. Không phải mọi transformation đều có độ chính xác giống nhau.
+
+Nếu source datum và target datum khác, phần mềm có thể dùng transformation xấp xỉ khi thiếu grid file chính xác. Vì vậy pipeline kỹ thuật nên ghi transformation method và expected accuracy, đặc biệt khi dùng dữ liệu survey.
+
+## Vertical datum là một hệ riêng
+
+Tọa độ ngang đúng không bảo đảm cao độ đúng. Dữ liệu độ cao có thể dùng ellipsoid, geoid model hoặc vertical datum quốc gia dựa trên tide gauge/leveling network.
+
+Khi ghép DEM, GNSS và survey, cần kiểm tra vertical reference riêng. Một pipeline chỉ kiểm tra `EPSG` của horizontal CRS nhưng bỏ vertical datum vẫn có thể gây lỗi lớn.
+
+## Epoch và dynamic datum
+
+Ở độ chính xác cao, tọa độ thay đổi theo chuyển động mảng. **Dynamic datum/reference frame** lưu tọa độ kèm epoch và model vận tốc.
+
+Nếu dữ liệu năm 2010 được so với survey 2030 mà không propagate tọa độ về cùng epoch, sai khác có thể bị hiểu nhầm là biến dạng công trình dù thực chất là chuyển động frame.
+
+Đây là điểm ngày càng quan trọng khi smartphone, autonomous systems và precise positioning đạt độ chính xác cao hơn.
+
+## National grid và local engineering CRS
+
+Các quốc gia thường có national grid hoặc projected CRS tối ưu cho lãnh thổ. Korea và Vietnam đều có hệ thống tọa độ bản đồ/quốc gia phục vụ cadastral, survey và infrastructure.
+
+Dữ liệu web thường đến ở WGS84/Web Mercator, còn dữ liệu hành chính–kỹ thuật có thể ở national CRS. Vì vậy ETL geospatial thực tế phải xử lý transformation thay vì giả định mọi file dùng cùng hệ.
+
+## Global grid index không thay thế CRS
+
+Các hệ như geohash, H3, S2 hoặc tile XYZ chia bề mặt thành cell phân cấp. Chúng hữu ích cho spatial indexing, aggregation, caching và distributed processing.
+
+Nhưng chúng không loại bỏ nhu cầu hiểu datum và geometry. Một H3 cell là cách lập chỉ mục trên bề mặt; nó không tự biến mọi khoảng cách hay diện tích thành chính xác tuyệt đối.
+
+Khi aggregate dữ liệu theo grid, kích thước cell trở thành scale of analysis và có thể tạo MAUP dạng lưới.
+
+## Address, place name và coordinate là ba hệ khác nhau
+
+Địa chỉ là hệ quy ước xã hội; địa danh là lớp ngôn ngữ–lịch sử; tọa độ là representation hình học. **Geocoding** nối các hệ này nhưng luôn chứa ambiguity.
+
+Một tên địa danh có thể trùng ở nhiều nơi, một địa chỉ có thể đổi sau cải cách hành chính và một polygon địa giới có thể có nhiều version. Hệ geocoder tốt cần version, provenance và confidence.
+
+## Boundary dataset cũng cần reference system
+
+Biên giới hành chính và coastline không chỉ cần CRS mà còn cần thời điểm và nguồn. Cùng một nước có thể có polygon khác nhau giữa statistical dataset, cadastral dataset và generalized web map.
+
+Đối với khu vực tranh chấp, geometry còn có semantic khác nhau: claim line, control line hoặc administrative boundary. Không nên chỉ lưu một polygon mà không lưu loại boundary.
+
+## Geospatial interoperability
+
+Khi nhiều hệ thống trao đổi dữ liệu, cần nhất quán về CRS, geometry type, axis order, encoding, precision và time reference. OGC standards, GeoJSON, GeoPackage, WKT và các format khác giải quyết một phần bài toán này.
+
+Nhưng interoperability không chỉ là “file mở được”. Hai hệ có thể đọc cùng file nhưng hiểu khác semantics của field hoặc boundary. Data contract phải bao gồm cả meaning.
 
 ## Mô hình tư duy
 
-> Dữ liệu toàn cầu cần một **hợp đồng không gian**: datum/CRS, trục, đơn vị, epoch và quy tắc biến đổi. Sai một trong các lớp này có thể tạo lỗi lớn dù tất cả phép toán phía sau đều đúng.
+Một coordinate record đầy đủ có thể được hình dung như:
 
-Xem tiếp: [Địa lý + IT/GIS/Data](../90_connections/01_geography_it_gis_data.md), [Bản đồ và phép chiếu](../00_foundations/03_cartography_projections_scale.md).
+`geometry + CRS + datum/frame + axis/unit + vertical reference + epoch + accuracy + provenance`.
+
+Càng tăng yêu cầu chính xác, càng nhiều metadata trở thành dữ liệu cốt lõi thay vì phụ chú.
+
+Xem tiếp: [GIS và dữ liệu không gian](../00_foundations/04_geospatial_data_gis_remote_sensing.md), [Trắc địa](./00_earth_shape_size_geodesy.md), [Cartography](../00_foundations/03_cartography_projections_scale.md).

@@ -1,37 +1,83 @@
-# Trọng lực, geoid, từ trường và định vị
+# Trọng lực, geoid, từ trường và các trường vật lý của Trái Đất
 
-## “Xuống” không hoàn toàn giống nhau ở mọi nơi
+## Hành tinh không chỉ có hình dạng; nó còn có trường
 
-Hướng thẳng đứng địa phương được xác định bởi trường trọng lực, không đơn giản bởi đường nối hình học tới tâm ellipsoid. Phân bố khối lượng không đều trong vỏ, lớp phủ, núi, bồn trầm tích và nước làm trọng lực thay đổi nhỏ theo không gian.
+Một bản đồ hình học cho biết vật nằm ở đâu, nhưng nhiều quá trình địa lý phụ thuộc các **trường vật lý (physical fields)**. Trọng lực tạo khái niệm “xuống” và kiểm soát dòng vật chất. Từ trường ảnh hưởng la bàn, môi trường không gian và một phần lịch sử địa chất. Cả hai đều biến đổi theo không gian và thời gian.
 
-**Geoid** là bề mặt đẳng thế gắn với trường trọng lực. Vì vậy geoid có chỗ cao–thấp so với ellipsoid dù ta không nhìn thấy nó như địa hình. Khi đo độ cao chính xác, sự khác nhau này trở nên quan trọng.
+## Trọng lực khác gia tốc trọng trường hiệu dụng
 
-## Gia tốc trọng trường và chuyển động quay
+Theo hấp dẫn Newton, mọi khối lượng hút nhau. Nhưng giá trị mà ta cảm nhận trên bề mặt còn chịu ảnh hưởng của chuyển động quay Trái Đất và hình dạng hành tinh.
 
-Gia tốc trọng trường hiệu dụng thay đổi theo vĩ độ vì Trái Đất dẹt và quay. Gần Xích đạo, bán kính lớn hơn và hiệu ứng ly tâm mạnh hơn; gần cực, điểm đo gần tâm hơn và thành phần ly tâm nhỏ hơn. Khác biệt nhỏ nhưng có ý nghĩa trong trắc địa và vật lý chính xác.
+Gần Xích đạo, bán kính lớn hơn và thành phần ly tâm lớn hơn; gần cực, bán kính nhỏ hơn và ly tâm yếu hơn. Vì vậy **gia tốc trọng trường hiệu dụng** thay đổi theo vĩ độ.
 
-## Từ trường Trái Đất
+Ngoài xu hướng lớn này còn có **gravity anomaly** do phân bố khối lượng không đều: núi, bồn trầm tích, cấu trúc lớp phủ, mật độ đá và biến đổi khối lượng nước/băng.
 
-Chuyển động của kim loại dẫn điện trong lõi ngoài tạo **geodynamo**, sinh ra từ trường quy mô hành tinh. Từ trường bảo vệ một phần khí quyển khỏi hạt tích điện của gió Mặt Trời và tạo cực quang khi các hạt tương tác với khí quyển vùng cực.
+## Geoid là bề mặt đẳng thế
 
-Cực từ không trùng cực địa lý và dịch chuyển theo thời gian. Vì vậy **độ lệch từ (magnetic declination)** giữa bắc từ và bắc thật thay đổi theo vị trí và năm. La bàn tốt cho định hướng nhưng không phải hệ chỉ hướng bất biến tuyệt đối.
+Nếu một khối nước đứng yên hoàn toàn dưới tác dụng trọng lực và quay, mặt nước sẽ nằm trên một bề mặt đẳng thế. **Geoid** là khái niệm mở rộng bề mặt này quanh hành tinh.
 
-## Magnetic north và grid north
+Geoid không phải địa hình. Một nơi geoid cao hơn ellipsoid không có nghĩa mặt đất ở đó cao. Nó cho biết thế hấp dẫn tương ứng khác nhau do phân bố khối lượng bên trong Trái Đất.
 
-Trên bản đồ còn có **bắc lưới (grid north)** — hướng lên của lưới tọa độ phép chiếu. Tại nhiều nơi, bắc lưới khác bắc thật và bắc từ. Trong khảo sát, quân sự hoặc định hướng chính xác, phải biết đang dùng loại “bắc” nào.
+Độ cao kỹ thuật liên quan đến geoid vì nước chảy theo chênh lệch thế hấp dẫn, không theo khoảng cách hình học tới ellipsoid.
 
-## GNSS không dùng từ trường để xác định vị trí
+## Plumb line và vertical deflection
 
-Một hiểu lầm phổ biến là GPS tìm hướng và vị trí từ từ trường. Thực tế GNSS xác định vị trí từ thời gian truyền tín hiệu vệ tinh và mô hình quỹ đạo/đồng hồ; la bàn điện tử trên điện thoại dùng cảm biến từ riêng. Điện thoại kết hợp GNSS, gia tốc kế, con quay hồi chuyển và magnetometer để ước lượng trạng thái.
+Một dây dọi định hướng theo vector trọng lực địa phương. Hướng này có thể lệch nhẹ so với pháp tuyến của ellipsoid, tạo **độ lệch phương thẳng đứng (deflection of the vertical)**.
 
-## Trọng lực như công cụ quan sát
+Hiệu ứng nhỏ nhưng cho thấy “thẳng đứng” là khái niệm vật lý, còn trục tọa độ ellipsoid là khái niệm hình học.
 
-Vệ tinh đo biến thiên trọng lực có thể suy thay đổi khối lượng lớn như băng tan, nước ngầm hoặc trữ lượng nước lục địa. Đây là ý tưởng mạnh: thay vì đo trực tiếp từng giọt nước, ta đo cách phân bố khối lượng làm trường trọng lực thay đổi.
+## Đo trọng lực để suy khối lượng
 
-Tuy nhiên độ phân giải thô hơn nhiều so với ảnh quang học; mỗi loại cảm biến trả lời câu hỏi khác nhau.
+Nếu một vùng mất băng hoặc nước ngầm, phân bố khối lượng thay đổi và trường trọng lực thay đổi rất nhỏ. Vệ tinh trọng lực có thể đo những thay đổi này ở quy mô lớn.
+
+Đây là kiểu suy luận **inverse problem**: ta không quan sát trực tiếp toàn bộ khối lượng bên trong mà đo phản ứng của trường rồi suy phân bố nguồn. Inverse problem thường không có nghiệm duy nhất nếu thiếu ràng buộc, vì vậy cần mô hình và dữ liệu bổ sung.
+
+## Gravity anomaly và cấu trúc địa chất
+
+Trong thăm dò, gravity anomaly có thể gợi ý bồn trầm tích, intrusive body hoặc khác biệt mật độ. Tuy nhiên một anomaly không tự động xác định loại đá; nhiều cấu hình khối lượng có thể tạo tín hiệu tương tự.
+
+Đây là bài học chung cho remote sensing và geophysics: sensor đo tín hiệu, còn “đối tượng” là kết quả diễn giải dựa trên model.
+
+## Từ trường Trái Đất và geodynamo
+
+Từ trường hành tinh chủ yếu được tạo bởi chuyển động của sắt–niken dẫn điện trong lõi ngoài lỏng. Chuyển động đối lưu cùng rotation duy trì **geodynamo**.
+
+Trường ở bề mặt gần giống dipole ở quy mô lớn nhưng có nhiều thành phần phức tạp. Cực từ không trùng cực địa lý và dịch chuyển theo thời gian.
+
+## Declination, inclination và intensity
+
+La bàn chỉ hướng theo thành phần ngang của từ trường. Góc giữa bắc từ và bắc thật gọi là **độ lệch từ (magnetic declination)**. **Magnetic inclination** mô tả góc trường nghiêng xuống hoặc lên so với mặt phẳng ngang. Cường độ từ trường cũng thay đổi theo vị trí.
+
+Vì declination thay đổi theo thời gian, bản đồ hàng hải hoặc khảo sát từ cần model theo epoch. “Bắc từ” không phải một hướng cố định vĩnh viễn.
+
+## True north, grid north và magnetic north
+
+**Bắc thật (true north)** hướng về cực địa lý theo kinh tuyến. **Bắc lưới (grid north)** là hướng của trục y trên bản đồ chiếu. **Bắc từ (magnetic north)** là hướng la bàn.
+
+Ba hướng có thể khác nhau. Trong bản đồ địa hình và navigation chính xác, cần biết convergence của grid và magnetic declination trước khi chuyển bearing.
+
+## Paleomagnetism và bằng chứng kiến tạo mảng
+
+Khi dung nham nguội hoặc trầm tích hình thành, khoáng vật từ có thể ghi lại hướng từ trường tại thời điểm đó. **Cổ từ học (paleomagnetism)** cho phép suy vị trí vĩ độ cổ và lịch sử đảo cực từ.
+
+Các dải anomaly từ đối xứng hai bên sống núi giữa đại dương từng là bằng chứng mạnh cho sea-floor spreading: vỏ mới hình thành ghi polarity theo thời gian rồi dịch sang hai phía.
+
+Như vậy từ trường không chỉ giúp định hướng hiện tại mà còn là archive của geological time.
+
+## Magnetosphere và môi trường không gian
+
+Từ trường làm lệch nhiều hạt tích điện từ gió Mặt Trời, tạo **magnetosphere**. Một số hạt đi theo đường sức vào vùng cực và tạo aurora.
+
+Bão địa từ có thể ảnh hưởng truyền thông vô tuyến, GNSS, vệ tinh và lưới điện ở vĩ độ cao. Đây là ví dụ Earth system mở rộng lên tương tác Sun–Earth, nơi geography của hạ tầng quyết định mức phơi lộ.
+
+## GNSS không dùng từ trường để tính vị trí
+
+GNSS suy vị trí từ thời gian truyền tín hiệu và quỹ đạo vệ tinh. Điện thoại dùng magnetometer riêng để ước hướng. Khi ứng dụng map hiển thị mũi tên quay, nó có thể kết hợp GNSS, accelerometer, gyroscope và magnetometer bằng sensor fusion.
+
+Phân biệt sensor nào đo gì giúp tránh cách hiểu “GPS biết hướng vì vệ tinh nhìn điện thoại”.
 
 ## Mô hình tư duy
 
-> **Ellipsoid cho hình học, geoid cho “mực ngang” vật lý, từ trường cho hướng từ, GNSS cho vị trí hình học theo hệ quy chiếu.** Những hệ này liên quan nhưng không thay thế nhau.
+Ellipsoid mô tả hình học; geoid mô tả bề mặt thế hấp dẫn; gravimetry suy phân bố khối lượng; magnetic field cung cấp một trường định hướng và archive địa chất. Các lớp này khác nhau nhưng cùng giúp biến hành tinh vật lý thành dữ liệu đo được.
 
-Xem tiếp: [Hình dạng và trắc địa](./00_earth_shape_size_geodesy.md), [GIS và viễn thám](../00_foundations/04_geospatial_data_gis_remote_sensing.md).
+Xem tiếp: [Trắc địa](./00_earth_shape_size_geodesy.md), [Hệ quy chiếu](./06_global_reference_systems.md), [Kiến tạo mảng](../01_physical_geography/00_plate_tectonics_geologic_time.md).

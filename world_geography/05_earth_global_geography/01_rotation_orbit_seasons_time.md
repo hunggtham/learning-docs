@@ -1,43 +1,89 @@
-# Chuyển động quay, quỹ đạo, mùa và thời gian
+# Chuyển động quay, quỹ đạo, mùa và hệ thời gian
 
-## Hai chuyển động nền tảng
+## Hai chuyển động tạo khung thời gian địa lý
 
-Trái Đất vừa **tự quay quanh trục** vừa chuyển động quanh Mặt Trời. Chuyển động quay tạo chu kỳ ngày–đêm, ảnh hưởng Coriolis và là nền hình học của kinh độ–thời gian. Chuyển động quỹ đạo kết hợp với độ nghiêng trục tạo mùa.
+Trái Đất vừa **tự quay quanh trục (rotation)** vừa chuyển động quanh Mặt Trời theo **quỹ đạo (orbit)**. Chuyển động quay tạo chu kỳ ngày–đêm, định nghĩa nền hình học cho kinh độ và góp phần tạo hiệu ứng Coriolis. Quỹ đạo kết hợp với độ nghiêng trục tạo mùa và phân bố bức xạ theo năm.
 
-Một hiểu lầm phổ biến là mùa hè xảy ra vì Trái Đất “gần Mặt Trời hơn”. Nguyên nhân chính là **độ nghiêng trục (axial tilt)** khoảng 23,4° làm góc chiếu và thời lượng ban ngày thay đổi theo mùa. Khi Bắc bán cầu nghiêng về phía Mặt Trời, tia sáng tới trực diện hơn và ngày dài hơn; Nam bán cầu đồng thời trải qua mùa ngược lại.
+Đây không chỉ là kiến thức thiên văn. Nó là nền cho khí hậu, múi giờ, năng lượng Mặt Trời, hàng hải, định vị vệ tinh và lịch dân sự.
 
-Khoảng cách Trái Đất–Mặt Trời vẫn biến đổi vì quỹ đạo hơi elip, nhưng hiệu ứng này nhỏ hơn tác động của độ nghiêng đối với mùa ở vĩ độ trung bình và cao.
+## Mùa không chủ yếu do khoảng cách tới Mặt Trời
 
-## Ngày Mặt Trời và ngày sao
+Trục quay Trái Đất nghiêng khoảng 23,4° so với pháp tuyến mặt phẳng quỹ đạo. Khi một bán cầu nghiêng về phía Mặt Trời, nó nhận tia sáng trực diện hơn và thời lượng ban ngày dài hơn. Hai hiệu ứng này làm năng lượng trung bình ngày tăng và tạo mùa nóng.
 
-Nếu đo Trái Đất quay so với các sao xa, một vòng quay hoàn tất hơi ngắn hơn 24 giờ. Nhưng trong thời gian đó Trái Đất cũng đã đi một đoạn trên quỹ đạo, nên cần quay thêm một góc nhỏ để Mặt Trời trở lại cùng kinh tuyến. Khoảng 24 giờ dân sự gần với **ngày Mặt Trời trung bình (mean solar day)**.
+Khoảng cách Trái Đất–Mặt Trời thay đổi vì quỹ đạo hơi elip, nhưng đây không phải cơ chế chính của mùa. Thực tế perihelion hiện xảy ra khi Bắc bán cầu đang ở mùa đông, một phản ví dụ mạnh cho hiểu lầm “gần Mặt Trời hơn = mùa hè”.
 
-Sự khác nhau này cho thấy thời gian không tách rời hình học thiên văn. Hệ giờ hiện đại dùng đồng hồ nguyên tử và UTC để tạo thang thời gian ổn định, trong khi chuyển động quay thực của Trái Đất có dao động nhỏ.
+## Góc chiếu và độ dài ngày cùng quan trọng
 
-## Vĩ độ và độ dài ngày
+Cùng một lượng năng lượng Mặt Trời đi tới có thể được trải trên diện tích lớn hơn nếu góc chiếu thấp. Ở vĩ độ cao vào mùa đông, không chỉ ngày ngắn mà Mặt Trời còn thấp trên đường chân trời, làm năng lượng trên mỗi đơn vị diện tích giảm.
 
-Gần Xích đạo, độ dài ngày ít thay đổi trong năm. Càng về cực, biên độ mùa của thời lượng chiếu sáng càng lớn. Trong vòng cực có thể xuất hiện **ngày cực** và **đêm cực**. Điều này ảnh hưởng nhiệt, sinh thái, nhịp sống, thiết kế năng lượng Mặt Trời và mùa du lịch.
+Ở gần Xích đạo, độ dài ngày ít thay đổi trong năm. Càng gần cực, biên độ thay đổi càng lớn, dẫn đến ngày cực và đêm cực trong vòng cực.
 
-Cùng lượng bức xạ ngày không có nghĩa cùng nhiệt độ tức thời. Đại dương, tuyết–băng, mây và nhiệt dung bề mặt làm hệ có quán tính; vì thế thời điểm nóng nhất thường trễ hơn hạ chí và lạnh nhất trễ hơn đông chí.
+## Solstice, equinox và thermal lag
 
-## Kinh độ, giờ địa phương và múi giờ
+**Hạ chí/đông chí (solstice)** là thời điểm độ lệch Mặt Trời đạt cực trị theo mùa. **Xuân phân/thu phân (equinox)** là thời điểm Mặt Trời đi qua mặt phẳng Xích đạo thiên cầu gần như làm ngày và đêm tương đương về hình học.
 
-Về hình học, 360° quay trong khoảng 24 giờ tương ứng gần 15° kinh độ mỗi giờ. Nhưng **múi giờ dân sự** là sản phẩm của cả địa lý và thể chế: ranh giới được điều chỉnh theo quốc gia, vùng hành chính và nhu cầu kinh tế. Vì vậy không thể suy múi giờ chính xác chỉ từ kinh độ.
+Nhiệt độ cực đại và cực tiểu thường không trùng chính xác các ngày thiên văn này vì hệ có **quán tính nhiệt (thermal inertia)**. Đại dương, đất, tuyết và khí quyển cần thời gian để tích hoặc mất nhiệt. Đây là cùng logic hệ thống xuất hiện trong khí hậu và hydrology: forcing thay đổi trước, state variable phản ứng trễ sau.
 
-**Đường đổi ngày quốc tế** cũng là quy ước. Nó gần kinh tuyến 180° nhưng uốn để tránh chia cắt một số lãnh thổ và nhóm đảo. Khi vượt đường này, nhãn ngày thay đổi dù thời gian vật lý không “nhảy”.
+## Ngày sao và ngày Mặt Trời
 
-## Tiến động và các chu kỳ dài
+Nếu đo một vòng quay so với các sao xa, Trái Đất hoàn thành **ngày sao (sidereal day)** trong thời gian hơi ngắn hơn 24 giờ. Nhưng trong thời gian đó Trái Đất cũng đã đi một đoạn quanh Mặt Trời, nên phải quay thêm một góc nhỏ để Mặt Trời trở lại cùng kinh tuyến.
 
-Trục quay không giữ hướng tuyệt đối mãi mãi. **Tiến động (precession)** làm hướng trục thay đổi chậm trong hàng chục nghìn năm; độ nghiêng và độ lệch tâm quỹ đạo cũng biến đổi. Các chu kỳ thiên văn này thay đổi phân bố bức xạ theo mùa và vĩ độ, góp phần vào biến thiên khí hậu dài hạn khi tương tác với băng, carbon và đại dương.
+Khoảng 24 giờ của đời sống gần với **ngày Mặt Trời trung bình (mean solar day)**. Sự khác nhau này minh họa rằng “một ngày” là khái niệm gắn với vật mốc tham chiếu.
 
-Điều này không mâu thuẫn với biến đổi khí hậu hiện đại: thang thời gian và cơ chế cưỡng bức khác nhau. Học địa lý cần luôn đặt một cơ chế vào đúng **thang thời gian (timescale)**.
+## Tốc độ quay không hoàn toàn cố định
 
-## Liên hệ với hệ thống số
+Trái Đất trao đổi mô-men động lượng với khí quyển, đại dương và Mặt Trăng, nên tốc độ quay có dao động nhỏ. Để hệ thời gian nguyên tử vẫn gần với thời gian dựa trên quay Trái Đất, các hệ quốc tế phải theo dõi chênh lệch giữa nhiều thang thời gian.
 
-Phần mềm phân tán thường lưu timestamp theo UTC và chuyển sang giờ địa phương khi hiển thị. Lịch sử múi giờ và quy tắc giờ mùa hè làm chuyển đổi phức tạp; không nên hard-code offset cố định như “Seoul luôn +9” cho mọi địa điểm và mọi thời kỳ. Cơ sở dữ liệu múi giờ IANA tồn tại vì quy tắc dân sự thay đổi theo không gian và thời gian.
+Trong ứng dụng phổ thông, ta chỉ cần UTC. Trong geodesy, thiên văn và GNSS, cần phân biệt rõ các time scale khác nhau vì sai vài microsecond đã có thể biến thành sai số khoảng cách đáng kể khi tín hiệu truyền với tốc độ ánh sáng.
+
+## UTC, UT1 và thời gian nguyên tử
+
+**TAI (International Atomic Time)** dựa trên mạng đồng hồ nguyên tử. **UT1** phản ánh góc quay thực của Trái Đất. **UTC** được xây để dùng dân sự toàn cầu, dựa trên thời gian nguyên tử nhưng giữ gần UT1 theo quy ước quốc tế.
+
+Người học địa lý không cần thuộc chi tiết điều hành đồng hồ, nhưng nên hiểu nguyên lý: thời gian hiện đại là giao điểm giữa **vật lý nguyên tử** và **chuyển động quay hành tinh**.
+
+## Kinh độ và giờ Mặt Trời địa phương
+
+Vì Trái Đất quay 360° trong xấp xỉ 24 giờ, mỗi 15° kinh độ tương ứng gần một giờ chênh lệch giờ Mặt Trời. Trước thời đường sắt và viễn thông, nhiều thành phố dùng giờ địa phương riêng.
+
+Khi mạng giao thông và kinh tế mở rộng, xã hội cần chuẩn hóa thời gian. Múi giờ vì thế là sản phẩm của cả hình học và tổ chức xã hội.
+
+## Timezone là thể chế không gian
+
+Ranh giới timezone có thể uốn theo biên giới quốc gia hoặc đơn vị hành chính. Một số quốc gia dùng một timezone trên lãnh thổ rất rộng để đơn giản quản trị; một số nơi dùng offset nửa giờ hoặc 45 phút.
+
+Do đó timezone map là một dạng political geography. Nó cho thấy con người áp một hệ chuẩn lên một quá trình tự nhiên để tối ưu phối hợp xã hội.
+
+## Đường đổi ngày quốc tế và nhãn ngày
+
+Khi đi vòng Trái Đất theo kinh độ, tổng chênh lệch giờ tích lũy sẽ đạt khoảng 24 giờ. **Đường đổi ngày quốc tế** là quy ước giúp lịch toàn cầu đóng vòng nhất quán.
+
+Đường này gần 180° nhưng uốn quanh nhiều đảo và lãnh thổ. Vượt nó làm nhãn ngày thay đổi, không làm thời gian vật lý bị gián đoạn.
+
+## Tiến động, độ nghiêng và độ lệch tâm
+
+Trục quay không giữ hướng cố định vĩnh viễn. **Tiến động (precession)**, thay đổi **độ nghiêng trục (obliquity)** và **độ lệch tâm quỹ đạo (eccentricity)** diễn ra trên thang hàng chục nghìn đến hàng trăm nghìn năm.
+
+Các chu kỳ này thay đổi phân bố bức xạ theo mùa và vĩ độ, thường được gọi chung trong ngữ cảnh **chu kỳ Milankovitch**. Chúng có vai trò trong biến thiên khí hậu dài hạn khi tương tác với băng, khí nhà kính và đại dương.
+
+Điều này không giải thích tốc độ ấm lên hiện đại. Cơ chế và timescale của forcing thiên văn khác với forcing khí nhà kính do con người. Một nguyên tắc quan trọng trong khoa học Trái Đất là luôn so sánh **độ lớn + hướng + timescale** của cơ chế.
+
+## Orbit và vệ tinh quan sát Trái Đất
+
+Quỹ đạo vệ tinh quyết định khả năng quan sát. Vệ tinh quỹ đạo cực hoặc gần cực có thể bao phủ phần lớn bề mặt khi Trái Đất quay bên dưới. **Sun-synchronous orbit** được thiết kế để vệ tinh đi qua một nơi ở gần cùng local solar time, giúp ảnh giữa các ngày dễ so sánh về điều kiện chiếu sáng.
+
+Vệ tinh địa tĩnh (geostationary) quay với chu kỳ phù hợp và nằm trên Xích đạo, nên trông gần như đứng yên trên một kinh độ. Chúng phù hợp quan sát thời tiết liên tục trên một phần bán cầu nhưng kém thuận lợi ở vùng cực.
+
+Đây là ví dụ trực tiếp: orbital mechanics trở thành geospatial data architecture.
+
+## Từ thời gian thiên văn đến phần mềm
+
+Trong hệ thống phân tán, nên phân biệt **instant** với **local civil time**. Một instant có thể lưu ở UTC; cùng instant đó được hiển thị khác nhau theo timezone. Nhưng sự kiện theo lịch địa phương, như “9 giờ sáng mỗi thứ Hai tại Seoul”, nên giữ timezone để quy tắc dân sự được áp đúng.
+
+Không nên hard-code offset nếu dữ liệu phải tồn tại lâu. Timezone database là dataset địa lý–lịch sử có version, tương tự boundary dataset.
 
 ## Mô hình tư duy
 
-> **Tự quay** tổ chức ngày, hướng chuyển động và kinh độ; **quỹ đạo + độ nghiêng trục** tổ chức mùa; **thể chế** biến thời gian thiên văn thành múi giờ dân sự. Khi xử lý thời gian toàn cầu, phải giữ cả ba lớp này trong đầu.
+Rotation tạo ngày và nền cho kinh độ; orbit + axial tilt tạo mùa; Earth orientation làm timekeeping chính xác phức tạp; thể chế biến local solar time thành timezone; orbital geometry quyết định cách vệ tinh quan sát hành tinh.
 
-Xem tiếp: [Hệ tọa độ và thời gian](../00_foundations/02_coordinates_time_maps.md), [Khí quyển và khí hậu](../01_physical_geography/02_atmosphere_weather_climate.md).
+Xem tiếp: [Hệ tọa độ và thời gian](../00_foundations/02_coordinates_time_maps.md), [Hệ khí hậu toàn cầu](../01_physical_geography/03_global_climate_system.md), [Viễn thám](../00_foundations/04_geospatial_data_gis_remote_sensing.md).
