@@ -1,25 +1,63 @@
-# United Kingdom
+# Vương quốc Anh (United Kingdom) — island gateway, London centrality và post-industrial network
 
-## Quần đảo ở rìa thềm lục địa châu Âu
+## Thesis không gian
 
-United Kingdom gồm Great Britain và phần đông bắc đảo Ireland cùng nhiều đảo nhỏ. Địa hình cao hơn tập trung ở Scotland, Wales và northern England; đông và đông nam England nhìn chung thấp và bằng phẳng hơn.
+United Kingdom là **island state gần continental Europe**, có maritime access mạnh, lịch sử công nghiệp dựa coal/port và hiện nay service economy tập trung cao ở London cùng các regional cities.
 
-## Khí hậu hải dương và west–east gradient
+## Island geography
 
-Gió tây mang ẩm từ Atlantic làm phía tây đón gió mưa nhiều hơn, trong khi phía đông khuất gió tương đối khô. Địa hình vì vậy khuếch đại gradient mưa trên khoảng cách không lớn.
+English Channel và North Sea tách UK khỏi continent nhưng khoảng cách ngắn, nên island không đồng nghĩa isolation.
 
-## London và hệ đô thị
+Ferry, Channel Tunnel, air và submarine cable làm effective distance thấp. Trade vẫn phụ thuộc port/crossing capacity.
 
-London là global city và nút giao thông vượt trội ở southeast England. Midlands, northern England, Scotland, Wales và Northern Ireland có các hệ đô thị riêng như Birmingham, Manchester–Liverpool, Glasgow–Edinburgh, Cardiff và Belfast.
+## Relief và climate
 
-## Đường bờ và cảng
+West/north upland ẩm hơn; east/southeast thấp và khô hơn tương đối do prevailing westerly và rain shadow.
 
-Tính đảo tạo lịch sử hàng hải sâu; cảng, eo Dover, North Sea và Atlantic đều có vai trò. Channel Tunnel làm thay đổi địa lý tiếp cận bằng cách tạo kết nối đường sắt cố định với continental Europe.
+Settlement/agriculture tập trung mạnh ở lowland England, trong khi Scotland/Wales upland có lower density.
 
-## Năng lượng
+## River/port history
 
-Than lịch sử gắn với nhiều vùng công nghiệp; North Sea oil and gas tái định hình các cảng phía đông và Scotland. Offshore wind hiện khai thác lợi thế gió và thềm biển nông.
+Thames estuary hỗ trợ London port/urban development. Mersey, Tyne, Clyde và other estuary từng gắn industrial/shipbuilding city.
 
-## Mô hình tư duy
+Containerization và ship size thay đổi port geography, làm old dock chuyển chức năng và deep-water terminal dịch vị trí.
 
-> United Kingdom là **quần đảo hải dương + gradient địa hình tây–đông + London vượt trội + mạng cảng–năng lượng biển**, nơi lịch sử công nghiệp chồng lên lợi thế hàng hải.
+## Industrial revolution legacy
+
+Coal field, canal, rail và port định hình Midlands/northern industrial cities. Deindustrialization để lại brownfield, skill transition và regional inequality.
+
+Manchester/Birmingham/Leeds/Glasgow và others tái cấu trúc sang service/education/advanced manufacturing với success khác nhau.
+
+## London as global city
+
+London tập trung finance, law, media, government, culture và international transport. Agglomeration benefit rất mạnh nhưng housing cost và regional imbalance lớn.
+
+Commuter rail mở functional metropolitan region rộng hơn administrative London.
+
+## Energy geography
+
+North Sea oil/gas có historical role; offshore wind mở spatial system mới. Generation offshore/north cần grid tới southern demand.
+
+Island grid connection với continental Europe tăng balancing/interdependence.
+
+## Food và land
+
+UK nhập phần thực phẩm đáng kể nhưng domestic agriculture vẫn quan trọng theo region. Upland livestock khác lowland cereal/horticulture.
+
+Food security vì thế là domestic production + trade + port/logistics.
+
+## Transport
+
+Dense road/rail ở England nhưng north–south capacity và London radiality tạo bottleneck. Aviation hub quanh London tăng global connectivity.
+
+Island economy phụ thuộc port/airport redundancy.
+
+## Regional role
+
+UK là Atlantic maritime node gần continental market; London global service centrality vượt physical size của country.
+
+## Mental model
+
+UK = **near-continent island + maritime gateways + industrial legacy + London-centered service network + offshore energy transition**.
+
+Xem thêm: [Europe](../../../03_regions/05_europe.md), [Global cities](../../../04_global_systems/03_global_cities_networks.md), [Industry & energy](../../../02_human_geography/07_industry_energy_resources.md).
