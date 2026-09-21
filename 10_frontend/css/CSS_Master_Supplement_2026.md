@@ -1,10 +1,10 @@
 # CSS Master Supplement 2026
-## Những phần còn thiếu sau `CSS_Beginner_to_Senior_2026_v2.md`
+## Những phần chuyên sâu sau `CSS_Beginner_to_Senior_2026.md`
 
-> **Mục tiêu:** file này **không lặp lại** handbook V2.  
+> **Mục tiêu:** file này **không lặp lại** handbook canonical Beginner → Senior.  
 > Nó bổ sung những phần cần thiết để chuyển từ **“senior CSS thực chiến”** sang **“master CSS / hiểu browser-level behavior”**.
 >
-> Hãy đọc file này **sau** `CSS_Beginner_to_Senior_2026_v2.md`.
+> Hãy đọc file này **sau** `CSS_Beginner_to_Senior_2026.md`.
 >
 > Ký hiệu:
 > - **[MUST]**: senior/master phải hiểu.
@@ -16,7 +16,7 @@
 > Mental model:
 >
 > ```text
-> V2
+> Canonical Beginner → Senior
 > ├─ biết CSS language
 > ├─ layout
 > ├─ component patterns
@@ -36,7 +36,7 @@
 
 ---
 
-# 0. V2 đã đủ đến đâu?
+# 0. Canonical Beginner → Senior đã đủ đến đâu?
 
 # 0A. Master trace: từ selector matching đến rendering
 
@@ -47,7 +47,7 @@ Performance cũng nên được hiểu theo invalidation scope. Thay class ở a
 Khi review CSS production, hãy trả lời được bốn câu: declaration nào thắng, box/formatting context nào được tạo, layout algorithm nào quyết định geometry, và thay đổi này invalidate phần nào của rendering pipeline. Khi bốn câu đó rõ, phần lớn CSS edge case trở thành behavior có thể dự đoán.
 
 
-## V2 đã cover rất tốt
+## Canonical Beginner → Senior đã cover rất tốt
 
 ```text
 selectors
@@ -119,6 +119,18 @@ design patterns
 27. CSS linting / dead-CSS strategy
 28. Performance profiling methodology
 ```
+
+---
+
+---
+
+# 0B. Priority order của Master Supplement
+
+Supplement này tiếp tục đúng trục của canonical note nhưng chỉ mở sâu những chỗ quyết định khả năng debug production. Ưu tiên đầu tiên vẫn là cascade: origin, importance, layer, specificity, scope proximity và source order phải được đọc như một decision system. Sau đó mới tới property value lifecycle, formatting tree, intrinsic sizing và layout algorithms. Flex/Grid nâng cao chỉ có ý nghĩa khi bạn đã xác định đúng containing block, available size và automatic minimum constraints.
+
+Responsive ở mức master là vấn đề ownership: viewport condition thuộc page/environment; container condition thuộc reusable component; user preferences thuộc accessibility/environment. Modern CSS được chọn theo khả năng thay thế complexity cũ chứ không theo độ mới. Performance được đánh giá bằng style/layout/paint/composite invalidation và accessibility được coi là một constraint của layout/state, không phải audit sau cùng.
+
+Khi đọc bất kỳ chapter nào trong supplement, hãy luôn trả lời bốn câu: browser đang quyết định value ở stage nào, box nào/formatting context nào đang chịu trách nhiệm, API hiện đại có giảm complexity hay chỉ đổi syntax, và behavior này có ảnh hưởng tới keyboard/zoom/rendering cost không.
 
 ---
 
@@ -269,7 +281,7 @@ Nhưng fallback chỉ dùng nếu custom property:
 
 # 3. Cascade Origins — Full Mental Model [MUST]
 
-V2 nói cascade nhưng master cần hiểu **origin precedence**.
+Canonical note đã giải thích cascade; ở mức master cần hiểu **origin precedence**.
 
 Nguồn CSS:
 
@@ -879,7 +891,7 @@ không chiếm full width như block.
 
 # 23. Automatic Minimum Size in Flex/Grid [MUST]
 
-V2 đã có `min-width:0`.
+Canonical note đã có `min-width:0`.
 
 Master cần hiểu **vì sao**.
 
@@ -1124,7 +1136,7 @@ Common:
 
 # 33. Form State Pseudo-classes mở rộng [ADV]
 
-Ngoài V2:
+Ngoài canonical Beginner → Senior:
 
 ```text
 :user-valid
@@ -2444,7 +2456,7 @@ Hiểu tree này giúp:
 
 # 82. Anchor Positioning — Deeper Model [ADV]
 
-V2 giới thiệu anchor positioning.
+Canonical note giới thiệu anchor positioning.
 
 Master cần biết ecosystem:
 
@@ -2521,7 +2533,7 @@ Component behavior có thể phụ thuộc semantic style state của ancestor, 
 
 # 85. `@supports selector()` [ADV]
 
-V2 có `@supports` nhưng master cần function query.
+Canonical note có `@supports`; ở mức master cần hiểu function query.
 
 ```css
 @supports selector(:has(*)) {
@@ -4537,7 +4549,7 @@ CSS MASTER
 
 Sau khi học:
 
-1. `CSS_Beginner_to_Senior_2026_v2.md`
+1. `CSS_Beginner_to_Senior_2026.md`
 2. `CSS_Master_Supplement_2026.md`
 
 thì phần kiến thức lý thuyết đã **gần đầy đủ cho CSS từ beginner → senior → specialist/master**.
@@ -4560,13 +4572,13 @@ Read
 Mốc thực tế:
 
 ```text
-V2
+Canonical Beginner → Senior
 → đủ để làm senior production CSS
 
-V2 + Supplement
+Canonical Beginner → Senior + Supplement
 → đủ knowledge map để hướng tới CSS specialist/master
 
-V2 + Supplement + 20–30 advanced labs + project thật
+Canonical Beginner → Senior + Supplement + 20–30 advanced labs + project thật
 → mastery thực tế
 ```
 
@@ -4620,7 +4632,7 @@ V2 + Supplement + 20–30 advanced labs + project thật
 
 # Kết luận ngắn
 
-Nếu chỉ đọc V2:
+Nếu chỉ đọc canonical Beginner → Senior:
 
 ```text
 Beginner → Senior: YES

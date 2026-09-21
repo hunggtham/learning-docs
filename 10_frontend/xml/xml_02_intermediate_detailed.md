@@ -1316,3 +1316,217 @@ raw bytes
 Bạn cũng phải hiểu rằng namespace và schema là hai lớp riêng. Namespace định danh vocabulary; schema mô tả grammar/type của vocabulary.
 
 Ở phần Senior, chúng ta sẽ thêm transformation, XQuery, schema evolution, streaming architecture, XXE, XML Catalog, canonicalization và XML Signature.
+
+---
+
+# PHẦN BỔ SUNG SAU AUDIT — VALIDATION, NAMESPACE VÀ PARSER Ở MỨC THỰC CHIẾN
+
+## 63. `xmlns=""`: reset default namespace trong subtree
+
+Default namespace có scope và có thể được reset. Ví dụ:
+
+```xml
+<root xmlns="urn:outer">
+  <item>Outer</item>
+
+  <legacy xmlns="">
+    <item>Inner without namespace</item>
+  </legacy>
+</root>
+```
+
+`root` và `item` đầu thuộc `urn:outer`. Khi `legacy` khai báo `xmlns=""`, default namespace bị xóa cho subtree đó, nên `legacy` và `item` bên trong không còn namespace.
+
+Đây là một source bug rất khó nhìn bằng mắt vì local names vẫn giống nhau. Khi DOM/XPath/schema báo không match, hãy inspect namespace URI thực thay vì chỉ nhìn tag text.
+
+---
+
+## 64. `attributeFormDefault` và local attributes
+
+Ngoài `elementFormDefault`, XSD còn có `attributeFormDefault`. Nó ảnh hưởng việc local attributes có phải namespace-qualified hay không.
+
+Nếu schema có target namespace nhưng một local attribute vẫn unqualified, instance có thể trông như:
+
+```xml
+<o:order
+  xmlns:o="urn:order"
+  id="123">
+```
+
+thay vì:
+
+```xml
+<o:order
+  xmlns:o="urn:order"
+  o:id="123">
+```
+
+Hai forms có expanded-name khác nhau. Khi validator báo attribute “không được phép” dù spelling `id` có vẻ đúng, hãy kiểm tra declaration là global/local và `attributeFormDefault`/`form` override của attribute.
+
+---
+
+## 65. Global element và local element không chỉ khác vị trí trong file XSD
+
+Element được khai báo trực tiếp dưới `xs:schema` là global declaration và có thể được reference/reuse theo schema rules. Element nằm trong `complexType`/model group thường là local declaration.
+
+Điều này ảnh hưởng namespace qualification, reuse, substitution, code generation và cách bạn đọc schema dependency graph. Khi debug Java generated classes, việc two elements cùng local name nhưng đến từ declarations khác nhau có thể dẫn tới types/annotations khác nhau.
+
+Senior schema reading vì vậy nên đi từ root/global declarations rồi follow type/reference graph, không đọc XSD như một file XML tuyến tính từ trên xuống.
+
+---
+
+## 66. XPath có static context và dynamic context
+
+Một XPath expression không tồn tại trong vacuum. Processor evaluate nó với **static context** và **dynamic context**.
+
+Static context chứa những thứ như namespace prefix bindings, available functions, default function namespace hoặc base URI tùy host/version. Dynamic context chứa context item/node, position, size, variable values và runtime data.
+
+Vì vậy cùng expression:
+
+```xpath
+book/title
+```
+
+có thể trả kết quả khác hoàn toàn nếu context node khác. Đây là lý do code gọi XPath trên `Document` và code gọi cùng expression trên một `Element` không nhất thiết tương đương.
+
+Khi debug XPath, đừng chỉ hỏi “expression đúng chưa?”. Hãy hỏi thêm “expression đang được evaluate từ node nào và namespace context nào?”.
+
+---
+
+## 67. `local-name()` không phải cách chữa namespace đúng mặc định
+
+Developer đôi khi gặp default-namespace bug rồi viết:
+
+```xpath
+//*[local-name()='book']
+```
+
+Expression này có thể làm query trả result, nhưng nó bỏ qua namespace identity. Nếu document trộn `urn:catalog:book` và `urn:malicious:book`, cả hai đều có local name `book`.
+
+Trong generic tooling, `local-name()` có use case thật. Nhưng business/security query nên bind namespace URI đúng và dùng qualified XPath. “Làm cho query chạy” không đồng nghĩa “query đúng semantic”.
+
+---
+
+## 68. SAX `characters()` có thể được gọi nhiều lần cho một đoạn text
+
+Một lỗi SAX rất phổ biến là nghĩ parser sẽ gọi `characters()` đúng một lần cho mỗi element text. API không đảm bảo như vậy. Text:
+
+```xml
+<name>Alice Wonderland</name>
+```
+
+có thể được deliver thành nhiều chunks tùy buffer/entity/parser implementation.
+
+Handler đúng thường accumulate text trong `StringBuilder` giữa `startElement` và `endElement`, rồi xử lý khi element kết thúc. Không viết business logic giả định một callback tương ứng một value hoàn chỉnh.
+
+Điểm này cho thấy streaming parser expose **events/chunks**, không expose object fields sẵn như binding framework.
+
+---
+
+## 69. StAX event model và namespace-aware reading
+
+Với StAX, application chủ động pull events như `START_ELEMENT`, `CHARACTERS`, `END_ELEMENT`. Khi gặp `START_ELEMENT`, hãy đọc `QName`/namespace URI/local part thay vì chỉ `getLocalName()` nếu vocabulary có namespace.
+
+Text cũng có thể cần accumulate qua nhiều character events. Whitespace events, comments hoặc CDATA representation có thể xuất hiện tùy reader API/config. Vì vậy một state machine tốt xác định rõ “đang ở element nào”, “đang thu field nào”, và chỉ finalize value khi gặp end element tương ứng.
+
+Streaming code có ít memory nhưng đổi lại bạn phải quản lý state chính xác hơn DOM.
+
+---
+
+## 70. XSD validation trong Java: `SchemaFactory` → `Schema` → `Validator`
+
+Mental model Java điển hình là compile XSD thành `Schema`, rồi tạo `Validator` cho validation operation:
+
+```java
+SchemaFactory factory =
+    SchemaFactory.newInstance(
+        XMLConstants.W3C_XML_SCHEMA_NS_URI
+    );
+
+Schema schema = factory.newSchema(xsdFile);
+Validator validator = schema.newValidator();
+
+validator.validate(new StreamSource(xmlFile));
+```
+
+`SchemaFactory` xử lý schema language/compilation. `Schema` đại diện compiled schema model có thể được reuse theo contract của implementation/API. `Validator` là object dùng để validate một source và thường không nên được share tùy tiện giữa concurrent operations nếu API không cam kết thread-safety.
+
+Production code còn phải kiểm soát external schema/DTD access và resolver; ví dụ code ngắn ở trên chỉ minh họa lifecycle, chưa phải security-hardening recipe hoàn chỉnh.
+
+---
+
+## 71. Validation error model: warning, error, fatal error và line/column
+
+XML APIs thường expose lỗi kèm locator information như line và column. Với SAX-style `ErrorHandler`, bạn có các mức như warning, error và fatal error theo parser/validator semantics.
+
+Well-formedness violation thường là fatal ở XML parsing layer: parser không thể tiếp tục như HTML browser error recovery. Schema validation error nghĩa document đã có thể parse XML nhưng không thỏa contract XSD/DTD.
+
+Khi đưa error ra application log/API response, nên preserve layer và location nếu an toàn:
+
+```text
+XML_PARSE_ERROR at line 12, column 18
+XSD_VALIDATION_ERROR at /order/item[3]/price
+```
+
+để developer không mất thời gian tìm lỗi schema trong khi document còn chưa well-formed. Với sensitive payload, log context vừa đủ chứ không dump toàn document.
+
+---
+
+## 72. Validation không nên bị trộn với business validation
+
+Một pipeline rõ ràng thường phân tầng:
+
+```text
+bytes / transport checks
+→ secure XML parsing
+→ namespace-aware processing
+→ XSD/DTD validation nếu contract yêu cầu
+→ object/domain mapping
+→ business validation
+→ authorization
+```
+
+XSD có thể kiểm tra `amount` là decimal, positive và đúng cardinality. Nhưng nó không biết account hiện tại có đủ balance hay user có quyền chuyển tiền. Ngược lại, business validator không nên phải tự kiểm tra XML tag đóng đúng hay namespace có đúng contract hay không.
+
+Phân tầng làm error message rõ hơn, test dễ hơn và giảm nguy cơ một layer “tin” dữ liệu mà layer trước chưa kiểm tra.
+
+---
+
+## 73. Validate trước mapping hay validate trong lúc mapping?
+
+Không có một pipeline duy nhất cho mọi library. Có hệ thống parse/validate rồi mới unmarshal; có binding framework tích hợp schema validation trong unmarshal; có streaming pipeline validate và consume gần như cùng lúc.
+
+Điều quan trọng là outcome phải rõ: **business layer chỉ nhận data sau khi structural contract cần thiết đã được kiểm tra**. Nếu performance khiến bạn tránh parse hai lần, hãy thiết kế pipeline streaming/Source/handler phù hợp thay vì bỏ validation mà không nhận ra.
+
+Với file cực lớn, việc build DOM chỉ để validate rồi build lần hai để process là dấu hiệu architecture cần xem lại.
+
+---
+
+## 74. Test XML parser/validator bằng negative cases, không chỉ happy path
+
+Một test suite tốt không chỉ có một file valid. Hãy có fixtures cho wrong namespace, missing required element, wrong order, invalid datatype, nil/empty/missing, duplicate ID, unexpected extension, malformed XML, huge text node, deep nesting và external-entity payload.
+
+Mục tiêu không phải “test XML Standard”, mà là verify **exact parser + exact configuration + exact schema version** của application xử lý boundary như bạn nghĩ. Parser defaults và implementation version khác nhau có thể thay behavior security/performance.
+
+---
+
+## 75. Mental model Intermediate sau audit
+
+Sau khi bổ sung các phần trên, flow nên được hiểu như sau:
+
+```text
+bytes
+→ decode
+→ well-formed XML parse
+→ namespace expansion
+→ optional DTD/schema resolution có kiểm soát
+→ optional structural/type validation
+→ DOM hoặc SAX/StAX event stream
+→ XPath/query với đúng context
+→ mapping/domain
+→ business validation
+```
+
+Namespace trả lời **node thuộc vocabulary nào**. Schema trả lời **vocabulary đó cho phép cấu trúc/type nào**. Parser model trả lời **application nhận tree hay stream events**. XPath trả lời **cách chọn/tính trên model đó**. Business validation trả lời **data hợp domain và quyền hay không**.
+
+Nếu bạn tách được năm câu hỏi này trong đầu, bạn đã qua được phần dễ nhầm nhất của XML Intermediate.

@@ -44,6 +44,20 @@ Cách đọc này giúp mỗi class có vị trí rõ thay vì trở thành hàn
 
 Spring có machinery cho singleton creation state và một số early references để xử lý historical setter/field circular dependencies. Điều này trở nên khó hơn khi auto-proxying tham gia vì reference sớm và final proxy không được mâu thuẫn. Dù framework có thể giải một số cycle, application không nên dựa vào circular dependency như design feature; cycle thường là tín hiệu boundary sai.
 
+<!-- SPRING_BATCH1_IOC_MASTER -->
+## Source trace: từ `getBean()` tới `doCreateBean()` và final exposed reference
+
+Khi muốn đọc Spring source thay vì chỉ dùng API, một trace có giá trị là bắt đầu từ `AbstractBeanFactory#doGetBean`. Lookup trước hết kiểm tra singleton cache; nếu chưa có instance, framework lấy merged BeanDefinition, bảo đảm dependencies cần tạo trước, rồi đi vào creation path phù hợp scope. Với singleton, singleton registry kiểm soát “create once” semantics và trạng thái currently-in-creation để phát hiện cycle.
+
+`AbstractAutowireCapableBeanFactory#createBean` và `doCreateBean` là nơi object creation pipeline trở nên rõ. Framework có cơ hội resolve class, cho `InstantiationAwareBeanPostProcessor` can thiệp trước instantiation, chọn constructor/factory method, instantiate bean, populate properties/injection points, chạy initialization callbacks rồi apply post-processors. Auto-proxy creator thường thay final exposed reference ở cuối lifecycle bằng proxy.
+
+Circular-reference support làm pipeline phức tạp vì framework có thể đăng ký một **singleton factory cho early reference** trước khi bean hoàn tất initialization. `SmartInstantiationAwareBeanPostProcessor#getEarlyBeanReference` cho phép auto-proxy infrastructure bảo đảm early reference tương thích với object sẽ được expose cuối. Đây là mechanism để hiểu source, không phải invitation xây graph dựa vào circular references.
+
+Khi đọc source, đừng biến tên method nội bộ thành public contract. Contract mà application có thể dựa vào nằm ở documented container semantics, lifecycle interfaces và API reference. Tên helper hoặc ordering implementation có thể đổi giữa Framework versions. Mastery là dùng internals để giải thích behavior, rồi quay lại public contract để thiết kế code ổn định.
+<!-- SPRING_BATCH1_IOC_MASTER_END -->
+
+---
+
 # 5. `ConfigurationClassPostProcessor`
 
 `@Configuration`, `@ComponentScan`, `@Import` và `@Bean` chỉ là metadata cho tới khi Spring parse chúng. `ConfigurationClassPostProcessor` chạy ở BeanFactory post-processing phase và mở rộng root configuration thành một graph definitions/imports/components. Khi startup có missing/duplicate definitions, hãy trace metadata expansion thay vì chỉ nhìn constructor injection.
@@ -109,6 +123,16 @@ Simplified:
 
 Transaction interceptor không trực tiếp biết JDBC/JPA implementation; nó đi qua transaction-manager abstraction.
 
+<!-- SPRING_BATCH3_TX_MASTER -->
+## Source trace: `TransactionInterceptor` → `TransactionAspectSupport` → transaction manager
+
+`TransactionInterceptor` là MethodInterceptor mỏng; phần orchestration chính nằm trong `TransactionAspectSupport#invokeWithinTransaction`. Framework lấy `TransactionAttributeSource`, xác định manager, tạo/join transaction rồi invoke callback tới target. Sau target, logic complete-after-throwing hoặc commit-after-returning chuyển control cho transaction manager. Đọc source theo flow này giúp bạn phân biệt AOP interception với actual resource implementation.
+
+Ở JDBC, `DataSourceTransactionManager` phối hợp `DataSourceUtils` và resource holder để cùng DataSource lookup nhận transaction-bound Connection. Ở JPA, `JpaTransactionManager` quản lý EntityManager/persistence context và có thể expose JDBC connection integration tùy setup. `TransactionSynchronizationManager` chỉ là context registry; business transaction semantics vẫn nằm trong manager + underlying resource.
+<!-- SPRING_BATCH3_TX_MASTER_END -->
+
+---
+
 # 13. `TransactionSynchronizationManager`
 
 Imperative transaction infrastructure cần bind resources/context với current execution thread: connection/session, transaction active/read-only/name/isolation và synchronization callbacks. `TransactionSynchronizationManager` là infrastructure trung tâm cho kiểu binding này. Business code hiếm khi nên gọi trực tiếp, nhưng hiểu nó giải thích vì sao spawn thread mới không tự mang imperative transaction theo.
@@ -116,6 +140,18 @@ Imperative transaction infrastructure cần bind resources/context với current
 # 14. Self-invocation nhìn từ proxy internals
 
 External call đi `caller → proxy → interceptor → target`. Internal `this.otherMethod()` chỉ là Java call trên target và không quay lại proxy. Vì vậy transaction/cache/security/async advice có thể bị bypass. Đây là consequence của proxy-based AOP, không phải bug riêng `@Transactional`.
+
+<!-- SPRING_BATCH3_PERSISTENCE_MASTER -->
+## Spring Data JPA proxy, query execution và entity state
+
+Spring Data tạo repository proxy từ repository metadata, repository fragments và store-specific base implementation. Query method có thể được resolve thành derived query, declared query hoặc custom implementation. Proxy vì vậy là dispatch layer; query parser/JPA provider/database mới quyết định SQL cuối cùng.
+
+Ở JPA, bốn trạng thái useful là transient, managed, detached và removed. Dirty checking chỉ áp dụng có ý nghĩa với managed entity trong persistence context. Khi transaction kết thúc và context đóng, entity trở detached; sửa field trên detached object không tự tạo SQL. `merge` không “reattach same object” theo cách đơn giản mà copy state vào managed instance và trả managed instance đó.
+
+Performance phải được reason bằng fetch plan và SQL count, không bằng số repository methods. Một repository call có thể tạo một SQL projection nhỏ hoặc hàng trăm lazy queries. Ngược lại, một fetch join quá lớn có thể tạo Cartesian multiplication. Spring Data abstraction không loại nhu cầu đọc generated SQL, execution plan và persistence-context behavior.
+<!-- SPRING_BATCH3_PERSISTENCE_MASTER_END -->
+
+---
 
 # 15. `DispatcherServlet` source flow
 
@@ -134,6 +170,18 @@ request
 
 `DispatcherServlet` là Front Controller phối hợp strategy interfaces thay vì hard-code mọi handler model.
 
+<!-- SPRING_BATCH2_REQUEST_MASTER -->
+## Source trace: `DispatcherServlet#doDispatch` thực sự phối hợp những strategy nào?
+
+Trong `doDispatch`, DispatcherServlet không trực tiếp gọi controller bằng reflection tùy ý. Nó lấy handler qua `getHandler`, chọn adapter qua `getHandlerAdapter`, rồi delegate việc invoke. Với annotated controller, `RequestMappingHandlerAdapter` tạo `ServletInvocableHandlerMethod`; argument resolution đi qua các composite resolver đã được đăng ký theo order. Một resolver chỉ tham gia khi `supportsParameter` trả true, sau đó mới resolve value. Return values đi qua một composite tương tự để chọn handler phù hợp.
+
+`RequestResponseBodyMethodProcessor` là một mắt xích quan trọng cho `@RequestBody` và response body: nó phối hợp message converters, content negotiation, validation/binding hooks và body advice. Vì vậy lỗi JSON deserialize, validation và media type xảy ra trước controller body execution trong nhiều case. Khi custom converter/resolver được thêm sai order, bạn đang thay dispatch algorithm của framework chứ không chỉ “thêm annotation hỗ trợ”.
+
+Exception resolution cũng là strategy chain. `ExceptionHandlerExceptionResolver` tìm `@ExceptionHandler`; `ResponseStatusExceptionResolver` xử lý status-oriented exceptions; default resolver map một số framework exceptions. Master-level extension nên chọn đúng strategy interface thay vì override DispatcherServlet hoặc viết filter bắt mọi Throwable làm mất semantics MVC.
+<!-- SPRING_BATCH2_REQUEST_MASTER_END -->
+
+---
+
 # 16. `RequestMappingHandlerMapping`
 
 Annotated mappings được đăng ký theo path, HTTP method, params, headers, consumes/produces và ở Framework 7 còn có API-version semantics. Ambiguous route là conflict trong mapping registry, không phải DispatcherServlet ngẫu nhiên chọn sai.
@@ -149,6 +197,18 @@ Framework 7 có `ApiVersionStrategy`, resolver/parser/validation/deprecation han
 # 19. Jackson 3 generation
 
 Boot 4 ưu tiên Jackson 3. Code chỉ dùng DTO + Boot auto-config thường migrate dễ. Code custom mapper/modules/polymorphic serialization phải review package changes và behavioral compatibility. `spring-boot-jackson2` tồn tại như deprecated stop-gap, không phải long-term target.
+
+<!-- SPRING_BATCH4_SECURITY_TEST_MASTER -->
+## Source trace Spring Security và TestContext
+
+`DelegatingFilterProxy` resolve filter bean từ ApplicationContext nhưng delegate security execution cho `FilterChainProxy`. `FilterChainProxy` chọn first matching `SecurityFilterChain` theo order rồi chạy list security filters. Authentication filters delegate tới `AuthenticationManager`; `ProviderManager` chọn `AuthenticationProvider`; authorization filter/interceptors dùng `AuthorizationManager`. `ExceptionTranslationFilter` chuyển security exceptions thành entry-point/access-denied responses ở servlet security layer. Trace theo các object này giúp debug 401/403 mà không cần bật debug log toàn hệ thống.
+
+Method security lại đi qua Spring AOP infrastructure. Advisor/interceptor được gắn vào bean method; call phải qua proxy. Điều này nối trực tiếp knowledge của container/AOP với Security: self-invocation có thể bypass method-security advice giống transaction/cache nếu call path không đi qua proxy.
+
+Ở testing, Spring TestContext tạo `MergedContextConfiguration` từ annotations/configuration/profiles/properties/context customizers rồi dùng nó như nền của cache key. Bean override annotations như `@MockitoBean` tham gia context customization, nên thay mock set có thể làm context không reuse. Hiểu cache key giúp tối ưu suite bằng architecture thay vì chỉ tăng CPU runner.
+<!-- SPRING_BATCH4_SECURITY_TEST_MASTER_END -->
+
+---
 
 # 20. Spring TestContext Framework
 
@@ -263,6 +323,18 @@ Official docs hiện liệt kê Framework 7.1.0-M1 và Boot 4.2.0-M1 là preview
 
 Default: để Boot quản lý versions. Override khi có security fix, vendor compatibility, required feature hoặc known bug fix, và phải test matrix. Platform coherence quan trọng hơn newest artifact number.
 
+<!-- SPRING_BATCH5_VERSION_MASTER -->
+## Migration graph: 2.7/5.3 → 3.5/6.2 → 4.1/7.0
+
+Migration nên được xem như chuỗi compatibility boundaries. Từ Boot 2.7 lên generation 3, boundary lớn là Java 17 + Jakarta namespace + portfolio major versions; hãy loại deprecated APIs ở latest 2.7 trước, update libraries tới bản Jakarta-compatible rồi mới đổi major. Từ Boot 3 lên 4, official strategy vẫn nên đưa application lên latest 3.5 trước để warnings/deprecations hiện rõ, sau đó mới xử lý Boot 4 modular starter graph, Framework 7, Jackson 3, Security 7 và test-module changes.
+
+Đừng migrate bằng cách chỉnh version rồi sửa compile errors cho tới khi xanh. Một upgrade matrix phải test startup/auto-config, HTTP serialization, Security authentication/authorization, database migrations/JPA queries, transaction rollback behavior, scheduled/async work, observability agents/exporters và packaging/native path nếu có. Binary linkage errors sau deploy thường là dấu hiệu runtime dependency graph khác graph compile, vì vậy inspect packaged artifact/BOM resolution.
+
+Tại thời điểm cập nhật này, baseline stable của bộ note là Boot 4.1.1 + Framework 7.0.9. Boot docs vẫn liệt kê 3.5.16 như maintenance line quan trọng. Framework 7.1.0-M1 và Boot 4.2.0-M1 vẫn preview. Spring Security docs liệt kê 7.1.1 là latest stable, cùng maintenance 7.0.7 và 6.5.11; Security 7.2.0-M1 là preview. Preview chỉ dùng để theo dõi direction, không được viết thành production baseline.
+<!-- SPRING_BATCH5_VERSION_MASTER_END -->
+
+---
+
 # 45. Source-reading roadmap
 
 ```text
@@ -304,7 +376,7 @@ Dùng `@NullMarked` ở package, `@Nullable` cho generic element/return và stat
 
 Sample phải có MVC, JPA, Security, Flyway và tests. Upgrade, ghi lại starter names, Jackson custom code, test dependencies, Security changes, nullability warnings và third-party compatibility. Đây là bài tập versioning thực tế hơn việc học changelog.
 
-# 51. Version snapshot — 2026-09-12
+# 51. Version snapshot — 2026-09-21
 
 ```text
 Stable current:

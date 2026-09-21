@@ -1,274 +1,210 @@
 # Dân số, hộ gia đình và nền kinh tế tiêu dùng Hàn Quốc (Demographics, Households & Consumption / 인구·가계·소비경제)
 
-Khi nhìn Hàn Quốc qua Samsung, Hyundai hay SK, rất dễ quên rằng phần lớn domestic demand cuối cùng vẫn quay về **household / 가계**. Con người đi làm, vay tiền, thuê hoặc mua nhà, nuôi con, tích lũy tài sản, nghỉ hưu và tiêu dùng. Dân số vì vậy không phải background statistic; nó định hình labor supply, housing demand, education, pension burden, healthcare, regional economy và strategy của doanh nghiệp.
+Khi nhìn Hàn Quốc qua Samsung, Hyundai hay SK, rất dễ quên rằng phần lớn nhu cầu nội địa cuối cùng vẫn quay về **hộ gia đình (household / 가계)**. Con người đi làm, vay tiền, thuê hoặc mua nhà, nuôi con, tích lũy tài sản, nghỉ hưu và tiêu dùng. Dân số vì vậy không phải một thống kê nền; nó định hình cung lao động, nhu cầu nhà ở, giáo dục, lương hưu, y tế, kinh tế vùng và chiến lược doanh nghiệp.
 
-Một economy có thể có exporters rất mạnh nhưng domestic consumption vẫn yếu nếu household income, debt service hoặc confidence xấu. Đây là lý do company analysis cho retail, bank, telecom, platform, construction và healthcare phải đọc household sector cùng macro data.
+Một nền kinh tế có thể có các nhà xuất khẩu rất mạnh nhưng tiêu dùng nội địa vẫn yếu nếu thu nhập hộ gia đình, gánh nặng trả nợ hoặc niềm tin tiêu dùng suy giảm. Vì vậy khi phân tích bán lẻ, ngân hàng, viễn thông, nền tảng số, xây dựng hoặc y tế, cần đọc khu vực hộ gia đình cùng dữ liệu vĩ mô.
 
-## Demographic transition: từ dividend sang constraint
+## Chuyển đổi dân số: từ lợi tức dân số sang ràng buộc dân số
 
-Trong giai đoạn công nghiệp hóa, Hàn Quốc hưởng lợi từ population trẻ, urbanization và labor-force expansion. Nhiều người chuyển từ agriculture sang manufacturing/services, nên GDP tăng không chỉ vì productivity tăng mà còn vì nhiều người hơn tham gia formal economy.
+Trong giai đoạn công nghiệp hóa, Hàn Quốc hưởng lợi từ dân số trẻ, đô thị hóa và lực lượng lao động tăng. Nhiều người chuyển từ nông nghiệp sang sản xuất và dịch vụ, nên GDP tăng không chỉ nhờ năng suất mà còn vì có nhiều người hơn tham gia nền kinh tế chính thức.
 
-Khi fertility thấp kéo dài và population già đi, cơ chế đảo chiều. Working-age population giảm trong khi elderly population tăng.
+Khi mức sinh thấp kéo dài và dân số già đi, cơ chế này đảo chiều. Số người trong độ tuổi lao động giảm trong khi người cao tuổi tăng.
 
-Một identity đơn giản:
+Một cách nhìn đơn giản:
 
 \[
-GDP = Workers \times Hours\ per\ Worker \times Output\ per\ Hour
+GDP = Số\ người\ làm\ việc \times Giờ\ làm\ việc\ bình\ quân \times Sản\ lượng\ mỗi\ giờ
 \]
 
-Nếu `Workers` giảm, economy phải bù qua higher participation, immigration hoặc productivity. Hours có giới hạn xã hội/sinh học; participation cũng có giới hạn. Vì vậy aging làm productivity trở thành biến trung tâm.
+Nếu số người làm việc giảm, nền kinh tế phải bù bằng tỷ lệ tham gia lao động cao hơn, nhập cư hoặc năng suất cao hơn. Số giờ làm việc có giới hạn về xã hội và sinh học, còn tỷ lệ tham gia cũng có trần. Vì vậy già hóa làm **năng suất (productivity / 생산성)** trở thành biến trung tâm.
 
-Theo projection chính thức 2022–2072 của Statistics Korea, working-age population 15–64 được dự báo giảm từ khoảng 36,74 triệu người năm 2022 xuống khoảng 16,58 triệu năm 2072, trong khi share của population 65+ tăng từ 17,4% lên 47,7%. Đây là projection, không phải outcome chắc chắn, nhưng nó cho thấy direction của pressure rất lớn.
+Các dự báo dân số dài hạn của Statistics Korea cho thấy lực lượng 15–64 tuổi có xu hướng giảm mạnh trong khi tỷ trọng dân số 65+ tăng đáng kể. Đây là dự báo chứ không phải kết quả chắc chắn, nhưng hướng áp lực là rất rõ.
 
-## Fertility thấp tác động economy theo nhiều horizon
+## Mức sinh thấp tác động theo nhiều khoảng thời gian
 
-Fertility thấp không chỉ nghĩa “ít trẻ em”. Effect xuất hiện theo từng wave.
+Mức sinh thấp không chỉ có nghĩa “ít trẻ em hơn”. Tác động xuất hiện theo từng lớp thời gian.
 
-Trong short run, demand cho childcare, baby products, schools và family housing thay đổi. Trong medium run, school-age population giảm làm competition giữa universities, academies và regional schools mạnh hơn. Trong long run, labor-market entrants giảm và tax/pension base thay đổi.
+Ngắn hạn, nhu cầu chăm trẻ, sản phẩm cho trẻ nhỏ, trường học và nhà ở cho gia đình thay đổi. Trung hạn, số học sinh giảm khiến trường đại học, học viện và cơ sở giáo dục địa phương cạnh tranh mạnh hơn. Dài hạn, số người gia nhập thị trường lao động giảm, kéo theo thay đổi trong nguồn thu thuế, lương hưu và cung nhân lực.
 
-Điểm quan trọng là **regional effect đến sớm hơn national effect**. Một city nhỏ có youth outflow có thể mất student, customer, clinic và retail demand nhiều năm trước khi national population decline trở nên dramatic.
+Tác động vùng thường xuất hiện sớm hơn tác động toàn quốc. Một thành phố nhỏ có thể mất sinh viên, khách hàng, bệnh viện hoặc bán lẻ nhiều năm trước khi tổng dân số cả nước giảm mạnh.
 
 Xem [`24_regional_clusters_and_industrial_geography.md`](./24_regional_clusters_and_industrial_geography.md).
 
-## Household count và household size quan trọng không kém total population
+## Số hộ gia đình quan trọng không kém tổng dân số
 
-Population không đổi nhưng số households vẫn có thể tăng nếu household size giảm. Single-person households tạo demand pattern khác family households.
+Tổng dân số có thể đi ngang trong khi số hộ vẫn tăng nếu quy mô hộ giảm. **Hộ một người (single-person household / 1인가구)** tạo mẫu tiêu dùng rất khác hộ gia đình truyền thống.
 
-Young single worker có thể tiêu nhiều hơn vào delivery, convenience, subscriptions, small appliances và rent. Elderly single household lại cần healthcare, mobility support và accessible housing.
+Người trẻ sống một mình có thể chi nhiều hơn cho giao đồ ăn, cửa hàng tiện lợi, thuê bao số, thiết bị nhỏ và tiền thuê nhà. Người cao tuổi sống một mình lại cần y tế, hỗ trợ di chuyển và nhà ở dễ tiếp cận hơn.
 
-Vì vậy doanh nghiệp không nên hỏi chỉ “population tăng hay giảm”, mà phải hỏi:
+Vì vậy doanh nghiệp không nên chỉ hỏi “dân số tăng hay giảm” mà cần nhìn thêm số hộ, quy mô hộ, cơ cấu tuổi, thu nhập, tài sản–nợ và vị trí địa lý.
 
-```text
-How many households?
-Household size?
-Age mix?
-Income?
-Assets/debt?
-Location?
-```
+## Bảng cân đối hộ gia đình: thu nhập chỉ là một phần sức mua
 
-Đây là reason convenience-store company và school operator có demographic exposure hoàn toàn khác nhau.
+Tiêu dùng không chỉ phụ thuộc vào lương tháng này. Hộ gia đình còn có tài sản, nợ và kỳ vọng.
 
-## Household balance sheet: income chỉ là một phần của purchasing power
-
-Consumption không chỉ phụ thuộc salary tháng này. Household có assets, debt và expectations.
-
-Một framework đơn giản:
+Có thể hình dung:
 
 \[
-Consumption \approx f(Income, Wealth, Debt, Rates, Expectations, Age)
+Tiêu\ dùng \approx f(Thu\ nhập, Tài\ sản, Nợ, Lãi\ suất, Kỳ\ vọng, Tuổi)
 \]
 
-Household Finance and Welfare Survey 2025 cho thấy tại cuối tháng 3/2025, average household assets khoảng **566,78 triệu KRW**, liabilities khoảng **95,34 triệu KRW**, net worth khoảng **471,44 triệu KRW**. Nhưng average che distribution rất lớn: 57% households có net worth dưới 300 triệu KRW, trong khi 11,8% có từ 1 tỷ KRW trở lên.
+Khảo sát tài chính và phúc lợi hộ gia đình năm 2025 cho thấy tài sản bình quân khoảng 566,78 triệu KRW, nợ khoảng 95,34 triệu KRW và tài sản ròng khoảng 471,44 triệu KRW vào thời điểm khảo sát. Tuy nhiên số bình quân che giấu phân phối rất lớn.
 
-Điều này nhắc rằng “average Korean household” hầu như không tồn tại như một economic agent thật. Distribution quyết định sensitivity với rate, housing và inflation.
+Điều này nhắc rằng “hộ gia đình Hàn Quốc trung bình” gần như không tồn tại như một tác nhân kinh tế thật. Nhóm sở hữu nhà, nhóm đi thuê, người trẻ mới đi làm, gia đình có con và người nghỉ hưu phản ứng với lãi suất và giá nhà rất khác nhau.
 
-## Real assets chiếm tỷ trọng lớn: housing trở thành macro channel
+## Tài sản thực chiếm tỷ trọng lớn: nhà ở trở thành kênh truyền dẫn vĩ mô
 
-Theo cùng survey, real assets chiếm khoảng 75,8% average household assets. Vì vậy housing price có tác động mạnh tới perceived wealth và leverage.
+Bất động sản chiếm tỷ trọng lớn trong tài sản hộ gia đình. Vì vậy giá nhà tác động mạnh tới cảm nhận giàu–nghèo và khả năng vay.
 
-Nhưng housing price tăng không làm mọi household giàu hơn như nhau.
+Nhưng giá nhà tăng không làm mọi hộ giàu lên như nhau. Chủ nhà có giá trị tài sản chưa thực hiện tăng; người thuê hoặc người mua nhà lần đầu lại phải đối mặt với chi phí gia nhập cao hơn. Người trẻ có thể phải dành nhiều tiền hơn cho tiền đặt cọc hoặc trả trước và giảm tiêu dùng khác.
 
-Homeowner có unrealized wealth tăng. Renter hoặc first-time buyer phải đối mặt entry cost cao hơn. Young household có thể phải save lâu hơn cho deposit/down payment, giảm consumption khác.
+Do đó một đợt tăng giá nhà tạo **tác động phân phối (distributional effect)** ngay cả khi tài sản ròng toàn khu vực hộ gia đình tăng.
 
-Do đó housing boom có **distributional effect** ngay cả khi aggregate household net worth tăng.
+## Hiệu ứng tài sản và hiệu ứng tài sản thế chấp
 
-## Wealth effect và collateral effect
+Giá nhà tăng có ít nhất hai kênh.
 
-Housing price tăng có ít nhất hai channels.
+**Hiệu ứng tài sản (wealth effect)**: chủ sở hữu cảm thấy bảng cân đối mạnh hơn và có thể tiêu nhiều hơn.
 
-**Wealth effect**: owner cảm thấy balance sheet mạnh hơn và có thể consume nhiều hơn.
+**Hiệu ứng tài sản thế chấp (collateral effect)**: giá trị nhà tăng có thể làm khả năng vay tăng nếu quy định cho phép.
 
-**Collateral effect**: property value cao hơn giúp borrowing capacity tăng nếu lending rules cho phép.
+Khi giá nhà giảm, hai kênh này đảo chiều. Hộ gia đình đòn bẩy cao có thể cắt tiêu dùng để sửa bảng cân đối. Đây là lý do nhà ở và nợ hộ gia đình có thể khuếch đại chu kỳ kinh doanh.
 
-Nhưng khi housing price giảm, hai channels đảo chiều. Household highly leveraged có thể cut consumption để repair balance sheet.
+## Jeonse: vừa là hợp đồng nhà ở vừa là công cụ tài chính
 
-Đây là lý do housing và household debt có thể amplify business cycle.
+**Jeonse (전세)** là một đặc điểm nổi bật của thị trường nhà ở Hàn Quốc. Người thuê đặt một khoản tiền rất lớn cho chủ nhà và thường trả ít hoặc không trả tiền thuê hàng tháng.
 
-## Jeonse: deposit vừa là housing contract vừa là financing instrument
+Về kinh tế, người thuê đang cung cấp nguồn vốn cho chủ nhà. Người thuê chịu chi phí cơ hội của khoản tiền đặt cọc và rủi ro đối tác; chủ nhà có thể dùng nguồn vốn đó để tài trợ bất động sản hoặc đầu tư.
 
-**Jeonse / 전세** là một feature đặc thù của Korean housing market. Tenant đưa landlord một deposit lớn và trả ít/no monthly rent.
+Vì vậy jeonse gần với **hợp đồng tài chính nhà ở (housing-finance contract)** hơn là chỉ “trả tiền thuê trước”. Khi lãi suất, giá nhà hoặc đòn bẩy của chủ nhà thay đổi, mức hấp dẫn tương đối giữa jeonse và `월세` cũng thay đổi.
 
-Về economics, tenant đang cung cấp funding cho landlord. Tenant chịu opportunity cost của deposit và counterparty risk; landlord có thể dùng capital đó cho property financing hoặc investment.
+Nếu giá trị bất động sản giảm xuống dưới tổng nghĩa vụ, rủi ro hoàn trả tiền đặt cọc tăng. Hệ thống thuê nhà vì vậy nối trực tiếp bảng cân đối người thuê với đòn bẩy của chủ nhà.
 
-Do đó jeonse không nên hiểu đơn giản là “rent trả trước”. Nó gần một **housing-finance contract**.
+## Nợ hộ gia đình và truyền dẫn chính sách tiền tệ
 
-Khi rate, home price hoặc landlord leverage thay đổi, relative attractiveness giữa jeonse và monthly rent (`월세`) cũng thay đổi.
-
-Nếu property value giảm dưới combined obligations, deposit-return risk tăng. Vì vậy housing rental system kết nối tenant balance sheet với landlord leverage.
-
-## Household debt và monetary-policy transmission
-
-Nếu household có floating-rate debt, policy rate tăng truyền nhanh vào disposable income.
+Nếu hộ gia đình có nhiều khoản vay lãi suất thả nổi, lãi suất chính sách tăng sẽ nhanh chóng tác động thu nhập khả dụng.
 
 \[
-Debt\ Service = Principal\ Repayment + Interest\ Payment
+Nghĩa\ vụ\ trả\ nợ = Gốc\ phải\ trả + Lãi\ phải\ trả
 \]
 
-Khi interest payment tăng, discretionary consumption thường bị cắt trước.
+Khi tiền lãi tăng, chi tiêu tùy ý thường bị cắt trước. Tuy nhiên tốc độ truyền dẫn phụ thuộc loại lãi suất, kỳ hạn, thu nhập người vay và tài sản thế chấp.
 
-Nhưng transmission phụ thuộc debt structure. Fixed-rate long-term mortgage reprices chậm hơn floating loan. Vì vậy central bank và regulators không chỉ nhìn total debt mà còn maturity, rate type, borrower income và collateral.
+Đây là lý do cơ quan tiền tệ và giám sát không chỉ nhìn tổng nợ mà còn nhìn cấu trúc nợ.
 
-Bank of Korea trong các Financial Stability Reports theo dõi housing và household loans vì monetary easing/tightening có thể tạo trade-off giữa growth và financial stability.
+## Chính sách an toàn vĩ mô: vì sao lãi suất không phải công cụ duy nhất?
 
-Tại Monetary Policy Report tháng 9/2026, BOK ghi nhận housing prices tại Seoul metropolitan area và household loan growth đang tăng nhanh, trong bối cảnh base rate đã được nâng lên 3,00%. Đây là **current snapshot tháng 9/2026**, không phải structural rule.
+Nếu chỉ dùng lãi suất để kiềm chế nợ hộ gia đình, toàn nền kinh tế — kể cả doanh nghiệp xuất khẩu và đầu tư sản xuất — cũng chịu chi phí.
 
-## Macroprudential policy: tại sao central bank rate không phải công cụ duy nhất?
+Vì vậy cơ quan quản lý dùng **công cụ an toàn vĩ mô (macroprudential policy / 거시건전성 정책)** như LTV, DSR hoặc giới hạn người vay để nhắm trực tiếp hơn vào nơi đòn bẩy hình thành.
 
-Nếu chỉ dùng policy rate để kiềm household debt, toàn economy—including exporters và productive investment—cũng chịu cost.
-
-Vì vậy regulators dùng **macroprudential tools / 거시건전성 정책** như LTV, DSR hoặc borrower restrictions để target leverage cụ thể hơn.
-
-Mental model:
+Có thể nhớ:
 
 ```text
-Monetary policy → economy-wide price of money
-Macroprudential policy → where/how much leverage can build
+Chính sách tiền tệ → giá vốn chung của nền kinh tế
+Chính sách an toàn vĩ mô → ai có thể vay bao nhiêu và theo điều kiện nào
 ```
 
-Hai policy tương tác. Rate thấp nhưng lending rules tight có outcome khác rate thấp và rules loose.
+Hai nhóm chính sách tương tác với nhau. Lãi suất thấp nhưng quy định cho vay chặt có kết quả rất khác lãi suất thấp và quy định lỏng.
 
-## Aging thay đổi consumption basket
+## Già hóa thay đổi cơ cấu tiêu dùng
 
-Population già hơn không chỉ làm aggregate demand giảm. Composition thay đổi.
+Dân số già hơn không chỉ làm tổng cầu chậm lại. Cơ cấu cầu cũng chuyển dịch.
 
-Healthcare, pharmaceuticals, caregiving, senior housing, mobility support, retirement finance và leisure cho seniors có thể tăng relative demand. Trong khi education, baby products hoặc first-home formation có thể đối mặt smaller cohort.
+Y tế, dược phẩm, chăm sóc người cao tuổi, nhà ở cho người già, dịch vụ di chuyển, tài chính hưu trí và giải trí cho người cao tuổi có thể tăng tỷ trọng. Ngược lại, giáo dục, sản phẩm trẻ em hoặc nhu cầu hình thành hộ gia đình mới có thể chịu áp lực từ quy mô thế hệ nhỏ hơn.
 
-Vì vậy demographics tạo **sector rotation** chứ không chỉ “growth thấp hơn”.
+Dân số vì vậy tạo **luân chuyển ngành theo nhân khẩu (sector rotation)** chứ không chỉ “tăng trưởng thấp hơn”.
 
 Xem [`31_biohealth_pharma_medical_devices_and_kbeauty.md`](./31_biohealth_pharma_medical_devices_and_kbeauty.md).
 
-## Pension và retirement: consumption hôm nay phụ thuộc expectation về tuổi già
+## Lương hưu và tiết kiệm: tiêu dùng hôm nay phụ thuộc kỳ vọng tuổi già
 
-Household quyết định saving dựa trên expectation future income. Nếu people lo pension không đủ hoặc retirement kéo dài, họ có incentive save nhiều hơn hiện tại.
+Hộ gia đình quyết định tiết kiệm dựa trên kỳ vọng thu nhập tương lai. Nếu lo lương hưu không đủ hoặc thời gian nghỉ hưu dài, họ có động lực tiết kiệm nhiều hơn ngay hôm nay.
 
-Đây là logic **life-cycle consumption**: young households borrow/save ít, middle-age accumulate assets, retired households draw down—dù reality khác theo wealth và family support.
+Đây là logic **tiêu dùng theo vòng đời (life-cycle consumption)**. Tuy nhiên hành vi thực tế khác nhau mạnh theo tài sản, nợ, hỗ trợ gia đình và tình trạng nhà ở.
 
-Aging society làm pension sustainability và retirement income trở thành macro variable vì nó ảnh hưởng national saving và consumption pattern.
+Xã hội già hóa khiến lương hưu và thu nhập nghỉ hưu trở thành biến vĩ mô vì chúng tác động mức tiết kiệm quốc gia và tiêu dùng.
 
-Một household 60 tuổi vẫn phải support adult child hoặc housing loan sẽ behave khác retiree debt-free có pension ổn định.
+## Lao động cao tuổi: kéo dài thời gian làm việc không tự động nâng năng suất
 
-## Elderly labor participation: retirement age và wage system matter
+Dân số trong độ tuổi lao động giảm không đồng nghĩa tổng cung lao động giảm cùng tỷ lệ nếu người cao tuổi tiếp tục làm việc lâu hơn. Nhưng chất lượng việc làm quan trọng.
 
-Working-age population giảm không tự động nghĩa labor supply giảm cùng magnitude nếu older workers stay employed lâu hơn.
+Nếu người lao động lớn tuổi rời công việc năng suất cao rồi chuyển sang việc tạm thời lương thấp, số người có việc làm vẫn cao nhưng năng suất chung tăng ít. Tuổi nghỉ hưu, hệ thống lương theo thâm niên và thiết kế lại công việc vì vậy liên kết chặt với dân số.
 
-Nhưng employment quality quan trọng. Nếu senior workers chỉ chuyển từ high-productivity career sang low-wage temporary jobs, headcount participation tăng nhưng aggregate productivity gain nhỏ.
+## Tỷ lệ tham gia lao động của phụ nữ và ràng buộc chăm sóc trẻ
 
-Retirement age, seniority wage system và job redesign vì vậy liên kết với demographics.
+Tăng tỷ lệ phụ nữ tham gia lao động có thể bù một phần lực lượng lao động giảm. Nhưng chi phí chăm trẻ, gián đoạn nghề nghiệp và độ linh hoạt nơi làm việc ảnh hưởng mạnh quyết định tham gia.
 
-Xem [`12_labor_titles_compensation_and_workplace.md`](./12_labor_titles_compensation_and_workplace.md).
+Đây là vấn đề hệ thống: chính sách lao động, giá nhà, cạnh tranh giáo dục và quyết định sinh con tương tác với nhau. Nếu một phụ nữ chuyên môn cao kỳ vọng mất nhiều cơ hội nghề nghiệp khi có con, quyết định sinh con và cung lao động có thể cùng bị ảnh hưởng.
 
-## Women’s labor participation và childcare constraint
+## Nhập cư: bổ sung lao động nhưng không phải giải pháp “cắm là chạy”
 
-Higher female labor participation có thể bù một phần shrinking workforce, nhưng childcare cost, career interruption và workplace flexibility ảnh hưởng participation.
+Nhập cư ròng có thể bù một phần dân số giảm, nhưng kỹ năng, ngôn ngữ, visa, nhà ở và mức hội nhập quyết định đóng góp kinh tế.
 
-Đây là system problem: labor policy, housing cost, education competition và fertility decision tương tác.
+Lao động nhập cư kỹ năng thấp giúp ngành thiếu nhân lực nhưng không tự động làm năng suất tăng. Nhân lực kỹ năng cao có thể bổ sung R&D và IT nhưng cạnh tranh quốc tế về nhân tài rất mạnh.
 
-Nếu professional woman kỳ vọng career penalty lớn khi có con, fertility và labor-supply decisions có thể cùng bị ảnh hưởng.
+Vì vậy chính sách nhập cư là một phần của **chiến lược vốn con người (human-capital strategy)**, không chỉ là chính sách tăng đầu người.
 
-Do đó demographic policy không thể tách khỏi workplace structure.
+## Chi phí giáo dục và vòng phản hồi với mức sinh
 
-## Immigration: bổ sung labor nhưng không phải plug-and-play solution
+Giáo dục được xem là công cụ di chuyển xã hội quan trọng tại Hàn Quốc. Chi tiêu giáo dục tư tạo nhu cầu cho hagwon, edtech và luyện thi nhưng đồng thời làm tăng chi phí cảm nhận khi nuôi con.
 
-Net migration có thể bù một phần population decline, nhưng skill matching, language, visa, housing và integration quyết định economic contribution.
-
-Low-skill migration giúp sectors thiếu labor nhưng không tự tăng productivity. High-skill migration có thể bổ sung R&D/IT capability nhưng competition quốc tế cho talent rất mạnh.
-
-Immigration policy vì vậy là một part của human-capital strategy chứ không chỉ headcount policy.
-
-## Education spending và feedback loop với fertility
-
-Education được xem là mobility mechanism mạnh ở Korea. Private education spending tạo demand cho hagwon, edtech và test-prep nhưng cũng tăng perceived child-rearing cost.
-
-Một feedback loop có thể xuất hiện:
+Một vòng phản hồi có thể hình dung:
 
 ```text
-Competition for good jobs
+Cạnh tranh việc làm tốt
       ↓
-Education spending tăng
+Chi tiêu giáo dục tăng
       ↓
-Cost per child tăng
+Chi phí trên mỗi con tăng
       ↓
-Fertility pressure
+Áp lực lên quyết định sinh con
       ↓
-Future labor force nhỏ hơn
+Lực lượng lao động tương lai nhỏ hơn
       ↓
-Competition for talent tăng
+Cạnh tranh nhân tài tăng
 ```
 
-Đây không phải claim một nguyên nhân duy nhất gây low fertility. Nó là một trong nhiều mechanisms liên kết household decision và labor market.
+Đây không phải một lời giải thích đơn nguyên cho mức sinh thấp, mà là một trong nhiều cơ chế liên kết hộ gia đình với thị trường lao động.
 
-## Regional depopulation và local fixed costs
+## Suy giảm dân số vùng và chi phí cố định của dịch vụ công
 
-School, hospital, bus network, water system và local government services có fixed cost. Khi population giảm, cost per resident tăng.
+Trường học, bệnh viện, xe buýt, cấp nước và dịch vụ chính quyền đều có chi phí cố định. Khi dân số giảm, chi phí trên mỗi người tăng. Nếu chất lượng dịch vụ giảm, thanh niên lại có thêm động lực rời đi, tạo vòng phản hồi âm.
 
-Do đó regional depopulation không chỉ làm retail demand giảm; nó làm public-service economics xấu đi.
+Vì vậy suy giảm dân số vùng không chỉ làm bán lẻ yếu mà còn làm kinh tế của hạ tầng công xấu đi.
 
-Nếu service quality giảm, youth outflow có thể tăng thêm, tạo negative feedback loop.
+## Cách đưa hộ gia đình vào phân tích doanh nghiệp
 
-## Domestic consumption và company analysis
+Với bán lẻ, ngân hàng, thẻ tín dụng, viễn thông, thực phẩm hoặc nền tảng số, nên theo dõi thu nhập thực, chất lượng việc làm, nghĩa vụ trả nợ, giao dịch–giá nhà, số hộ mới, cơ cấu tuổi và niềm tin tiêu dùng.
 
-Với retailer, bank, card company, telecom, food company hoặc platform, household dashboard nên gồm:
+Không phải doanh nghiệp nào cũng cần mọi chỉ số. Nhưng doanh thu chủ yếu từ Hàn Quốc mà bỏ qua bảng cân đối hộ gia đình thì phân tích thiếu một lớp rất quan trọng.
+
+## Cùng một xu hướng dân số có thể tạo người thắng và người thua khác nhau
+
+Giả sử dân số giảm nhưng số hộ vẫn tăng do quy mô hộ nhỏ lại. Nhu cầu căn hộ nhỏ, giao đồ ăn hoặc thuê bao có thể giữ tốt, trong khi nhu cầu trường học giảm.
+
+Vì vậy `dân số ↓` không thể trực tiếp suy ra `doanh thu ↓` cho mọi công ty. Doanh nghiệp phải được nối với **nhóm khách hàng (customer cohort)** cụ thể.
+
+## Mental Model — mô hình tư duy
+
+> Dân số quyết định **bao nhiêu người** có thể làm việc và tiêu dùng. Bảng cân đối hộ gia đình quyết định **họ có khả năng tài chính bao nhiêu**. Kỳ vọng quyết định **họ tiêu hôm nay hay để dành**. Nhà ở và nợ quyết định **cú sốc vĩ mô truyền vào tiêu dùng mạnh đến đâu**.
 
 ```text
-Real income
-Employment quality
-Debt service
-Housing transactions/prices
-Household formation
-Age mix
-Consumer confidence
+Cấu trúc dân số / hộ gia đình
+          ↓
+Thu nhập lao động + tài sản + nợ
+          ↓
+Thu nhập khả dụng / tài sản ròng
+          ↓
+Tiêu dùng + tiết kiệm
+          ↓
+Doanh thu doanh nghiệp nội địa
 ```
 
-Không cần mọi indicator cho mọi company. Nhưng revenue domestic mà bỏ household balance sheet thì analysis thiếu một layer quan trọng.
+## Những nhầm lẫn thường gặp
 
-## Scenario analysis: cùng một demographic trend tạo winners và losers khác nhau
+Dân số giảm không có nghĩa mọi thị trường giảm. Giá nhà tăng không làm mọi hộ giàu lên như nhau. Nợ hộ gia đình bình quân không đủ để đo rủi ro nếu không biết phân phối, loại lãi suất, thu nhập và tài sản thế chấp. Già hóa không chỉ là vấn đề lương hưu; nó còn tác động cung lao động, nhà ở, y tế, kinh tế vùng và cơ cấu tiêu dùng. Nhập cư cũng không giải thiếu lao động nếu kỹ năng và địa điểm không phù hợp.
 
-Giả sử population giảm 0,5%/năm nhưng household count vẫn tăng do smaller household size. Small-apartment demand có thể giữ tốt hơn large-family housing. Delivery/service subscriptions có thể tăng, trong khi school demand giảm.
+## Liên kết
 
-Do đó `population ↓` không thể trực tiếp suy ra `revenue ↓` cho mọi firm.
-
-Company phải được map theo **customer cohort**.
-
-## Mental Model
-
-> Demographics quyết định **bao nhiêu người** có thể làm việc và tiêu dùng. Household balance sheet quyết định **họ có capacity bao nhiêu**. Expectations quyết định **họ muốn tiêu hôm nay hay hoãn lại**. Housing và debt quyết định **shock macro truyền vào consumption mạnh đến đâu**.
-
-Một chain dễ nhớ:
-
-```text
-Population / Household structure
-          ↓
-Labor income + Assets + Debt
-          ↓
-Disposable income / Wealth
-          ↓
-Consumption + Saving
-          ↓
-Domestic company revenue
-```
-
-## Common misconceptions
-
-**“Population giảm = mọi market giảm.”** Sai. Healthcare, automation, senior services và productivity tools có thể tăng.
-
-**“Housing price tăng = household sector giàu hơn.”** Sai. Owner và renter có exposure khác nhau.
-
-**“Average household debt cho biết crisis risk.”** Không đủ. Distribution, rate type, income và collateral mới quyết định vulnerability.
-
-**“Aging chỉ là vấn đề pension.”** Sai. Nó tác động labor supply, housing, healthcare, regional economy và consumption mix.
-
-**“Immigration chỉ cần tăng số người là giải labor shortage.”** Sai. Skill/location/integration quyết định matching.
-
-## Connections
-
-Đọc cùng [`01_macro_economy_and_business_cycle.md`](./01_macro_economy_and_business_cycle.md), [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md), [`12_labor_titles_compensation_and_workplace.md`](./12_labor_titles_compensation_and_workplace.md), [`18_construction_real_estate_and_project_finance.md`](./18_construction_real_estate_and_project_finance.md), [`21_economy_to_company_transmission.md`](./21_economy_to_company_transmission.md), [`24_regional_clusters_and_industrial_geography.md`](./24_regional_clusters_and_industrial_geography.md) và [`28_productivity_services_and_economic_dualism.md`](./28_productivity_services_and_economic_dualism.md).
-
-### Nguồn nền
-
-- Statistics Korea, Population Projections for Korea 2022–2072: https://www.kostat.go.kr/board.es?act=view&bid=207&list_no=428476
-- Statistics Korea, 2025 Household Finance and Welfare Survey: https://www.kostat.go.kr/board.es?act=view&bid=215&list_no=439535
-- Bank of Korea, Financial Stability Reports: https://www.bok.or.kr/eng/main/contents.do?menuNo=400219
-- Bank of Korea, Monetary Policy Report, September 2026.
-
-Các số liệu household và policy-rate snapshot trong chapter có mốc thời gian rõ vì chúng thay đổi; structural mechanisms được viết để dùng lâu dài.
+Đọc cùng [`01_macro_economy_and_business_cycle.md`](./01_macro_economy_and_business_cycle.md), [`12_labor_titles_compensation_and_workplace.md`](./12_labor_titles_compensation_and_workplace.md), [`18_construction_real_estate_and_project_finance.md`](./18_construction_real_estate_and_project_finance.md), [`24_regional_clusters_and_industrial_geography.md`](./24_regional_clusters_and_industrial_geography.md), [`28_productivity_services_and_economic_dualism.md`](./28_productivity_services_and_economic_dualism.md) và [`31_biohealth_pharma_medical_devices_and_kbeauty.md`](./31_biohealth_pharma_medical_devices_and_kbeauty.md).

@@ -1,489 +1,280 @@
 # Năng lượng, an ninh điện và chuyển đổi carbon tại Hàn Quốc (Energy Security & Transition / 에너지안보·전력시장·탄소전환)
 
-Hàn Quốc là một nền kinh tế industrial, energy-intensive nhưng có ít domestic fossil resources và power grid gần như không kết nối với neighboring countries. Vì vậy energy đồng thời là **import dependency, industrial-cost issue, national-security variable và decarbonization challenge**.
+Hàn Quốc là một nền kinh tế công nghiệp có cường độ sử dụng năng lượng cao nhưng ít tài nguyên hóa thạch trong nước và lưới điện gần như không kết nối với các nước láng giềng. Vì vậy năng lượng đồng thời là **vấn đề phụ thuộc nhập khẩu, chi phí công nghiệp, an ninh quốc gia và chuyển đổi carbon**.
 
-Một semiconductor fab, steel mill hay AI data center không chỉ hỏi “điện bao nhiêu won/kWh?”. Nó còn hỏi grid connection có đủ không, outage risk thế nào, renewable procurement có khả thi không và policy/tariff có ổn định qua project life hay không.
+Một fab bán dẫn, nhà máy thép hay trung tâm dữ liệu AI không chỉ hỏi “điện bao nhiêu won/kWh?”. Doanh nghiệp còn phải hỏi khả năng đấu nối lưới, độ ổn định điện, chất lượng điện, khả năng mua điện tái tạo và mức độ ổn định của chính sách trong suốt vòng đời dự án.
 
-## Energy balance bắt đầu từ imports
+## Cân bằng năng lượng bắt đầu từ nhập khẩu
 
-Oil, LNG và coal phần lớn phải nhập khẩu. Local KRW cost phụ thuộc both world commodity price và FX:
-
-\[
-KRW\ Import\ Cost \approx USD\ Commodity\ Price \times KRW/USD
-\]
-
-Nếu oil price không đổi nhưng KRW mất giá 10%, local-currency import cost vẫn tăng gần tương ứng trước hedging/tax adjustments.
-
-Energy shock có thể truyền:
-
-```text
-Oil/LNG price ↑ or KRW weakens
-          ↓
-Import bill ↑
-          ↓
-Trade/GDI pressure
-          ↓
-Power/fuel/transport cost ↑
-          ↓
-Company margins + household real income ↓
-          ↓
-Inflation / policy response
-```
-
-Do đó energy và macro/FX không thể đọc tách nhau.
-
-## Energy security không đồng nghĩa self-sufficiency 100%
-
-Một resource-poor economy khó tự sản xuất toàn bộ oil/gas/minerals.
-
-**Energy Security / 에너지안보** tốt hơn nên hiểu là ability duy trì supply với acceptable cost trong shocks.
-
-Tools gồm:
-
-- diversified suppliers;
-- long-term contracts;
-- strategic reserves;
-- nuclear/renewable domestic generation;
-- grid resilience;
-- demand response;
-- storage;
-- efficient consumption.
-
-Absolute self-sufficiency có thể quá đắt; resilience is portfolio design.
-
-## Electricity khác oil: balance phải xảy ra gần real time
-
-Oil can be stored relatively easily. Electricity storage at national scale is harder/costlier.
-
-Power system must continuously balance:
+Dầu, LNG và than phần lớn phải nhập khẩu. Chi phí tính bằng KRW phụ thuộc đồng thời vào giá hàng hóa thế giới và tỷ giá:
 
 \[
-Generation = Demand + Losses
+Chi\ phí\ nhập\ khẩu\ bằng\ KRW \approx Giá\ hàng\ hóa\ bằng\ USD \times KRW/USD
 \]
 
-If supply insufficient, frequency/voltage stability deteriorates and outages can occur.
+Nếu giá dầu không đổi nhưng KRW mất giá 10%, chi phí nhập khẩu nội tệ vẫn tăng gần tương ứng trước khi tính hedge và thuế.
 
-Therefore system needs **reserve margin / 예비율** and dispatchable/flexible resources.
-
-## Reliability has economic value beyond tariff
-
-For ordinary household, short outage is inconvenience.
-
-For semiconductor fab, outage/voltage disturbance can ruin wafer batches and disrupt clean processes. Loss can exceed electricity bill by orders of magnitude.
-
-Thus industrial power competitiveness is:
+Một cú sốc năng lượng có thể truyền theo chuỗi:
 
 ```text
-Price + Reliability + Connection speed + Power quality
+Giá dầu/LNG tăng hoặc KRW yếu
+          ↓
+Hóa đơn nhập khẩu tăng
+          ↓
+Áp lực thương mại / GDI
+          ↓
+Chi phí điện, nhiên liệu, vận tải tăng
+          ↓
+Biên lợi nhuận doanh nghiệp + thu nhập thực hộ gia đình giảm
+          ↓
+Lạm phát / phản ứng chính sách
 ```
 
-not price alone.
+Vì vậy năng lượng, vĩ mô và tỷ giá không thể phân tích tách rời.
 
-## Korean power-market architecture
+## An ninh năng lượng không đồng nghĩa tự cung 100%
 
-KEPCO / 한국전력공사 remains central in transmission/distribution and retail structure, while generation includes public subsidiaries and independent producers.
+**An ninh năng lượng (energy security / 에너지안보)** nên được hiểu là khả năng duy trì nguồn cung với chi phí chấp nhận được khi xảy ra cú sốc.
 
-Wholesale power is settled through market mechanisms, while retail tariff is administratively structured rather than purely real-time market price.
+Công cụ có thể gồm đa dạng hóa nguồn nhập, hợp đồng dài hạn, dự trữ chiến lược, điện hạt nhân, năng lượng tái tạo trong nước, tăng độ bền của lưới, điều chỉnh nhu cầu, lưu trữ và tiết kiệm năng lượng.
 
-This creates possible gap between **wholesale generation cost** and **retail tariff**.
+Tự cung tuyệt đối có thể quá đắt. Cách tiếp cận hợp lý hơn là thiết kế **danh mục chống chịu (resilience portfolio)**.
 
-If fuel costs spike faster than tariff adjustments, economic cost does not disappear; it accumulates in utility financials or future tariff burden.
+## Điện khác dầu: cân bằng gần như theo thời gian thực
+
+Dầu có thể lưu trữ tương đối dễ. Điện trên quy mô quốc gia khó và đắt hơn nhiều nếu muốn lưu trữ lượng lớn.
+
+Hệ thống điện phải liên tục duy trì:
+
+\[
+Phát\ điện = Nhu\ cầu + Tổn\ thất
+\]
+
+Nếu cung không đủ, tần số và điện áp có thể mất ổn định. Vì vậy hệ thống cần **biên dự phòng (reserve margin / 예비율)** và nguồn điện có khả năng điều chỉnh linh hoạt.
+
+## Độ tin cậy có giá trị kinh tế lớn hơn hóa đơn điện
+
+Với hộ gia đình, mất điện ngắn có thể chỉ là bất tiện. Với fab bán dẫn, một lần sụt áp hoặc mất điện có thể làm hỏng nhiều wafer và gián đoạn quy trình sạch.
+
+Vì vậy khả năng cạnh tranh điện công nghiệp không chỉ là giá:
+
+```text
+Giá điện
++ độ tin cậy
++ tốc độ đấu nối
++ chất lượng điện
+```
+
+## Kiến trúc thị trường điện Hàn Quốc
+
+KEPCO (한국전력공사) vẫn giữ vai trò trung tâm trong truyền tải, phân phối và cấu trúc bán lẻ, trong khi phát điện đến từ các công ty phát điện công và nhà sản xuất điện độc lập.
+
+Giá bán buôn được hình thành qua cơ chế thị trường, còn giá bán lẻ có tính hành chính cao hơn và không phản ánh ngay từng biến động chi phí nhiên liệu.
+
+Điều này tạo khả năng chênh lệch giữa **chi phí phát điện bán buôn** và **giá bán lẻ**. Nếu giá nhiên liệu tăng nhanh hơn tốc độ điều chỉnh biểu giá, chi phí không biến mất mà chuyển sang bảng cân đối của doanh nghiệp điện lực hoặc giá tương lai.
 
 Xem [`25_public_enterprises_and_state_owned_companies.md`](./25_public_enterprises_and_state_owned_companies.md).
 
-## SMP: marginal cost concept
+## SMP và logic chi phí cận biên
 
-Korean wholesale market uses **System Marginal Price (SMP / 계통한계가격)** concepts.
+Thị trường bán buôn sử dụng khái niệm **System Marginal Price (SMP / 계통한계가격)**. Mô hình tư duy đơn giản là nguồn có chi phí cận biên thấp được huy động trước, sau đó bổ sung nguồn đắt hơn khi nhu cầu tăng; nhà máy cận biên ảnh hưởng giá thanh toán.
 
-Simplified merit-order logic:
+Do đó giá gas và nhiên liệu có thể tác động giá điện bán buôn ngay cả khi điện hạt nhân hoặc tái tạo có chi phí nhiên liệu thấp hơn.
 
-```text
-Low marginal-cost plants dispatched first
-        ↓
-Higher-cost plants added as demand rises
-        ↓
-Marginal accepted plant helps set settlement price
-```
+## Biểu giá bán lẻ vừa là giá vừa là công cụ chính sách
 
-Exact settlement has market-specific rules, but mental model useful: gas/fuel price can influence wholesale power price even if nuclear/renewables have lower fuel cost.
+Điện ảnh hưởng hộ gia đình, lạm phát và sức cạnh tranh công nghiệp. Nếu giá bán lẻ phản ánh ngay mọi biến động nhiên liệu, người dùng phải chịu biến động lớn. Nếu điều chỉnh bị trì hoãn, doanh nghiệp điện lực hấp thụ tổn thất trong thời gian đó.
 
-Therefore generation mix and marginal plant matter.
+Chính sách vì vậy quyết định **ai chịu chi phí và chịu vào lúc nào**, chứ không thể làm chi phí vật lý biến mất.
 
-## Retail tariff is policy as well as price
+## Điện hạt nhân: vốn ban đầu rất lớn, độ nhạy nhiên liệu thấp hơn
 
-Electricity tariff influences households, inflation and industrial competitiveness.
+Nhà máy hạt nhân cần CAPEX rất lớn và thời gian xây dài, nhưng chi phí nhiên liệu chiếm tỷ trọng thấp hơn nhiều nguồn nhiệt điện hóa thạch.
 
-If tariff fully follows volatile fuel cost immediately, households/firms face high volatility. If tariff adjustment is delayed, KEPCO/sector balance sheet absorbs loss temporarily.
+Phân tích vòng đời cần bao gồm xây dựng, chi phí tài chính trong quá trình xây, vận hành–bảo trì, nhiên liệu, nâng cấp an toàn, tháo dỡ và xử lý chất thải.
 
-So policy chooses **who bears cost and when**, not whether physical fuel cost exists.
+Đây là lý do chỉ so chi phí nhiên liệu sẽ đánh giá thiếu rủi ro vốn và thời gian.
 
-This is classic public-enterprise trade-off.
+## Trễ tiến độ làm chi phí tài chính tăng mạnh
 
-## Nuclear economics: high upfront capital, low fuel sensitivity
+Dự án hạt nhân kéo dài nhiều năm nên **lãi trong thời gian xây dựng (interest during construction)** là biến kinh tế lớn. Mỗi năm chậm không chỉ dời doanh thu mà còn làm chi phí vốn tích lũy thêm.
 
-Nuclear plants require enormous construction capital and long lead times, but fuel cost share is relatively low and output is stable.
+Vì vậy năng lực thực hiện dự án đúng tiến độ có giá trị tài chính trực tiếp.
 
-Full lifecycle economics include:
+## LNG: linh hoạt đổi lấy rủi ro nhập khẩu
 
-```text
-Construction
-Financing during construction
-Operations / maintenance
-Fuel
-Safety upgrades
-Decommissioning
-Waste management
-```
+Nhà máy gas có khả năng tăng giảm công suất linh hoạt hơn nhiều nguồn nền và hữu ích khi cân bằng điện tái tạo biến động. Nhưng Hàn Quốc nhập LNG nên hệ thống chịu rủi ro giá toàn cầu, vận tải, tỷ giá và điều khoản hợp đồng.
 
-Comparing only fuel cost understates capital/long-duration risk.
+LNG có thể có **giá trị hệ thống (system value)** lớn dù chi phí mỗi kWh không phải thấp nhất, bởi khả năng điều chỉnh giúp duy trì ổn định lưới.
 
-Korea has deep nuclear engineering/manufacturing capability, making nuclear not only domestic energy source but industrial/export ecosystem.
+## Than: tài sản cũ và áp lực chuyển đổi
 
-## Construction delay risk in nuclear
+Than từng cung cấp nguồn điện ổn định quy mô lớn nhưng phát thải carbon cao. Khi tỷ trọng than giảm, nhà máy cũ có thể bị sử dụng thấp hơn và trở thành **tài sản mắc kẹt (stranded asset / 좌초자산)** trước khi hết tuổi thọ vật lý.
 
-Because projects take years, financing cost compounds.
+Chuyển đổi phải vừa giảm phát thải vừa bảo đảm đủ công suất hệ thống.
 
-If initial capital `I` accrues financing cost `r` for years before operation, delay raises effective project cost materially.
+## Năng lượng tái tạo: nhiên liệu bằng 0 không có nghĩa chi phí hệ thống bằng 0
 
-This is **interest during construction**.
+Solar và wind không cần mua nhiên liệu khi vận hành, nhưng sản lượng biến động. Khi tỷ trọng tăng, hệ thống cần thêm truyền tải, lưu trữ, nguồn điện linh hoạt, dự báo, điều chỉnh nhu cầu và quản lý cắt giảm công suất.
 
-Therefore schedule execution is a major economic variable, not merely project-management detail.
+Vì vậy **LCOE** của riêng nhà máy không mô tả toàn bộ kinh tế hệ thống điện.
 
-## LNG: flexibility in exchange for import-price exposure
+Hàn Quốc còn có hạn chế riêng về mật độ dân số, đất, địa hình và lưới.
 
-Gas plants can ramp more flexibly than nuclear/coal and help balance variable renewables.
+## Điện gió ngoài khơi: tiềm năng lớn nhưng thực hiện phức tạp
 
-But Korea imports LNG, exposing system to:
+Điện gió ngoài khơi cần quyền sử dụng khu vực biển, giấy phép, turbine, móng, cáp ngầm, cảng, tàu chuyên dụng, đấu nối lưới và chấp thuận địa phương.
 
-- global LNG prices;
-- shipping;
-- FX;
-- contract structure.
+Về thực thi, nó giống một dự án hạ tầng–đóng tàu phức tạp hơn là “chỉ lắp turbine”. Năng lực công nghiệp nặng của Hàn Quốc có thể tạo cơ hội chuỗi cung ứng, nhưng hiệu quả vẫn phụ thuộc tài chính và triển khai.
 
-LNG can have high **system value** as flexible capacity even if energy-only cost is not lowest.
+## Công suất năng lượng và công suất khả dụng là hai khái niệm khác nhau
 
-This distinction matters in power economics: cheapest average kWh is not always most valuable plant for reliability.
+Một nhà máy solar có thể tạo nhiều MWh trong năm nhưng không chắc phát đúng lúc đỉnh nhu cầu buổi tối mùa đông.
 
-## Coal: legacy asset and transition pressure
-
-Coal historically provided large stable generation but has high carbon emissions and pollution externalities.
-
-As Korea reduces coal, remaining plants face utilization decline and potential stranded-asset economics.
-
-Transition must manage both emission goals and capacity adequacy.
-
-## Renewable power: zero fuel cost does not equal zero system cost
-
-Solar/wind require no fuel once built, but output is variable.
-
-As share rises, system needs:
-
-- transmission;
-- storage;
-- flexible generation;
-- forecasting;
-- demand response;
-- curtailment management.
-
-Thus renewable LCOE alone cannot describe full system economics.
-
-Korea additionally faces high population density, limited land, mountainous geography and grid constraints.
-
-## Offshore wind: resource potential nhưng execution heavy
-
-Offshore wind offers larger-scale renewable potential but needs:
-
-- seabed/site rights;
-- permitting;
-- turbines/foundations;
-- subsea cable;
-- port/vessels;
-- grid connection;
-- local acceptance.
-
-It resembles infrastructure/shipbuilding project as much as simple power plant.
-
-Korean heavy-industry capability may create supply-chain opportunity, but project economics still depend on financing and execution.
-
-## Capacity adequacy: energy and capacity are different
-
-A solar plant may generate many MWh annually but not necessarily during peak evening winter demand.
-
-Power system must have enough **firm/available capacity** when needed.
-
-Therefore planning asks both:
+Quy hoạch phải hỏi cả:
 
 ```text
-How much energy over year?
-How much dependable capacity at peak?
+Một năm tạo bao nhiêu điện?
+Tại giờ cao điểm có bao nhiêu công suất đáng tin cậy?
 ```
 
-This is why storage, nuclear, gas and demand response can have value beyond annual generation share.
+Đây là lý do lưu trữ, hạt nhân, gas và điều chỉnh nhu cầu có giá trị ngoài tỷ trọng sản lượng năm.
 
-## Grid bottleneck: generation without transmission is stranded supply
+## Nút thắt lưới: có nguồn phát mà không truyền được thì vẫn là công suất bị kẹt
 
-A project can have permits/finance but fail to produce economic value if grid connection delayed.
+Dự án có thể đủ giấy phép và vốn nhưng vẫn không tạo giá trị nếu đấu nối lưới chậm. Truyền tải thường mất nhiều năm vì quy hoạch tuyến, đất và chấp thuận cộng đồng.
 
-Transmission construction often takes years and faces siting/community issues.
+Ở phía nhu cầu, một cụm fab hoặc trung tâm dữ liệu cũng không thể mở rộng chỉ bằng việc công bố CAPEX nếu chưa bảo đảm điện và nước.
 
-For industrial clusters, same problem appears on demand side: factory announced capacity is not fully executable unless sufficient power/water connection secured.
+## Bán dẫn và AI làm nhu cầu điện tập trung hơn
 
-Grid queue becomes a real economic constraint.
+Fab cần điện liên tục với chất lượng cao. Trung tâm dữ liệu AI tạo tải rất lớn và mật độ công suất cao. Vì vậy chiến lược AI và bán dẫn nối trực tiếp với quy hoạch lưới điện.
 
-## Semiconductor and AI load growth
+Không khu vực nào có thể thu hút vô hạn data center hoặc fab chỉ bằng ưu đãi thuế nếu hạ tầng điện không theo kịp.
 
-Semiconductor fabs require high-quality continuous electricity. AI data centers add large, concentrated loads with high power density.
+## Độ nhạy của ngành với giá điện rất khác nhau
 
-Therefore Korea’s digital/AI strategy connects directly to grid planning.
+Nếu điện chiếm 5% tổng chi phí sản xuất, tăng giá điện 20% có thể làm tổng chi phí tăng khoảng 1 điểm phần trăm trước khi tính tiết kiệm hoặc chuyển giá.
 
-A region that lacks power infrastructure cannot simply attract unlimited data centers/fabs through tax incentives.
+Với ngành biên lợi nhuận mỏng, thay đổi đó có thể tác động EBIT đáng kể.
 
-Xem [`14_semiconductors_electronics_display.md`](./14_semiconductors_electronics_display.md) và [`34_digital_fintech_cloud_and_it_services.md`](./34_digital_fintech_cloud_and_it_services.md).
+Trung tâm dữ liệu có tải liên tục; lò điện rất thâm dụng điện; bán dẫn cần cả điện, nước và độ tin cậy; hóa chất có cấu trúc phức tạp giữa năng lượng và nguyên liệu đầu vào.
 
-## Industrial electricity and cost sensitivity
+## Mua điện tái tạo và RE100
 
-If electricity is 5% of total production cost, 20% tariff rise increases total cost roughly 1 percentage point before efficiency/pass-through effects.
+Khách hàng toàn cầu có thể yêu cầu nhà cung cấp sử dụng điện tái tạo. Doanh nghiệp xuất khẩu Hàn Quốc có thể dùng PPA, chứng chỉ hoặc các cơ chế khác theo quy định hiện hành.
 
-For thin-margin commodity industries, that can materially affect EBIT.
-
-Power intensity differs greatly:
-
-- data center: continuous electrical load;
-- electric furnace: highly power-intensive;
-- semiconductor: power + reliability + water;
-- chemical: energy/feedstock complexity.
-
-Therefore same tariff change produces different company impact.
-
-## Corporate renewable procurement and RE100
-
-Global customers/investors may require suppliers to use renewable electricity.
-
-Korean exporters can use mechanisms such as PPAs, green premiums/certificates depending rules.
-
-Availability/cost of clean power therefore affects export competitiveness even before carbon tax directly applies.
-
-This creates a link:
+Khả năng tiếp cận điện sạch vì vậy trở thành yếu tố cạnh tranh của hợp đồng xuất khẩu:
 
 ```text
-Customer ESG requirement
-→ renewable procurement need
-→ energy sourcing cost/site choice
-→ export contract competitiveness
+Yêu cầu ESG của khách hàng
+→ nhu cầu mua điện tái tạo
+→ chi phí năng lượng / lựa chọn địa điểm
+→ khả năng cạnh tranh hợp đồng
 ```
 
-## Carbon pricing: K-ETS turns emissions into financial cost
+## K-ETS: biến phát thải thành chi phí tài chính
 
-Korean Emissions Trading Scheme / 배출권거래제 places carbon cost on covered emitters.
-
-Simplified:
+**Hệ thống giao dịch phát thải Hàn Quốc (K-ETS / 배출권거래제)** tạo giá cho carbon đối với các doanh nghiệp thuộc diện áp dụng.
 
 \[
-Carbon\ Cost = Net\ Emissions\ Subject\ to\ Purchase \times Allowance\ Price
+Chi\ phí\ carbon = Phát\ thải\ ròng\ cần\ mua\ quyền \times Giá\ quyền\ phát\ thải
 \]
 
-Steel, chemicals, cement and power are especially exposed.
+Thép, hóa chất, xi măng và điện đặc biệt nhạy. Phân bổ miễn phí có thể giảm gánh nặng ngắn hạn nhưng không loại bỏ áp lực khử carbon dài hạn.
 
-Free allocation can reduce near-term burden but does not remove long-term decarbonization pressure.
+## Carbon ở biên giới biến phát thải trong nước thành biến xuất khẩu
 
-Carbon pricing changes marginal economics of process choices.
+Nếu thị trường nhập khẩu yêu cầu báo cáo hoặc tính chi phí carbon trong sản phẩm, phát thải của nhà máy Hàn Quốc ảnh hưởng trực tiếp khả năng tiếp cận và giá bán ở nước ngoài.
 
-## Carbon border measures: domestic emissions become export variable
+Doanh nghiệp xuất khẩu vì vậy phải quản lý cường độ carbon, khả năng truy xuất và yêu cầu của khách hàng, không chỉ tuân thủ quy định nội địa.
 
-If export destination charges embodied carbon or requires reporting, Korean industrial emissions affect market access/pricing abroad.
+## Thép và hóa chất là các ngành khó giảm phát thải
 
-Therefore carbon transition is no longer only domestic environmental policy.
+Giảm carbon trong lò cao hoặc feedstock hóa dầu khó hơn nhiều so với điện hóa xe cá nhân. Các lựa chọn có thể gồm hydro, lò điện, nguyên liệu tái chế, **thu giữ–sử dụng–lưu trữ carbon (CCUS)**, feedstock carbon thấp và điện sạch.
 
-Exporter must manage product carbon intensity, traceability and customer requirements.
+Các công nghệ này thường cần CAPEX lớn trong khi giá carbon và mức sẵn sàng trả thêm của khách hàng chưa chắc chắn. Vì vậy kinh tế chuyển đổi chứa đồng thời rủi ro công nghệ, chính sách và nhu cầu.
 
-## Steel/chemicals: hard-to-abate sectors
+## Hydro là chất mang năng lượng, không phải nguồn năng lượng miễn phí
 
-Electrifying passenger vehicles is easier than fully decarbonizing blast furnaces or petrochemical feedstock.
+Hydro phải được sản xuất bằng năng lượng khác. Hiệu quả kinh tế phụ thuộc phương pháp sản xuất, giá điện/gas, cường độ carbon, lưu trữ, vận chuyển, tổn thất chuyển đổi và giá trị sử dụng cuối.
 
-Options include:
+Không nên đánh giá “kinh tế hydro” chỉ từ chi phí sản xuất tại nhà máy mà phải nhìn cả chuỗi.
 
-- hydrogen-based processes;
-- electric furnaces;
-- recycled inputs;
-- CCUS;
-- low-carbon feedstocks;
-- clean electricity.
+## Ammonia là một phương tiện vận chuyển hydro
 
-Many options require huge new capex and infrastructure.
+Ammonia có thể dễ vận chuyển hơn hydro trong một số trường hợp, nhưng cần tổng hợp và có thể phải cracking trở lại thành hydro. Mỗi lần chuyển đổi làm mất năng lượng và cần thêm CAPEX.
 
-Thus transition economics involves **technology uncertainty + carbon-policy uncertainty + customer willingness to pay**.
+Đây là bài toán tối ưu hệ thống, không phải câu hỏi “chất mang nào rẻ hơn” đơn giản.
 
-## Hydrogen: carrier, not free primary energy
+## ESS: giá trị không chỉ là mua điện rẻ rồi bán điện đắt
 
-Hydrogen must be produced using energy.
+**Hệ thống lưu trữ năng lượng (Energy Storage System / ESS)** có thể cung cấp chênh lệch giá điện, điều tần, dự phòng, làm mượt tái tạo và giảm tắc nghẽn lưới.
 
-Economics depends:
+Giá trị kinh tế phụ thuộc thiết kế thị trường: hệ thống có được trả tiền cho các dịch vụ đó hay không.
 
-```text
-Production route
-Electricity/gas cost
-Carbon intensity
-Storage
-Transport
-Conversion losses
-End-use value
-```
+## Điều chỉnh nhu cầu: đôi khi công suất rẻ nhất là “không dùng điện lúc này”
 
-Hydrogen only makes sense where full-chain benefit beats alternatives.
+**Demand Response (수요반응)** trả tiền cho người dùng để dịch chuyển hoặc giảm tải khi hệ thống căng thẳng. Điều này có thể giảm nhu cầu xây nguồn đỉnh và giảm áp lực lưới.
 
-“Hydrogen economy” should never be assessed from production cost alone.
+Khả năng tham gia khác nhau theo ngành; fab liên tục có ít linh hoạt hơn một số tải thương mại hoặc data center có hệ thống dự phòng.
 
-## Ammonia as transport/storage vector
+## Hiệu quả năng lượng là “nguồn cung ảo”
 
-Ammonia can carry hydrogen more easily in some contexts but requires synthesis and potentially cracking back to hydrogen.
+Tiết kiệm 1 MWh có thể tương đương tạo thêm 1 MWh nếu chi phí đầu tư tiết kiệm thấp hơn chi phí xây nguồn mới. Hiệu quả năng lượng đồng thời giảm phụ thuộc nhập khẩu và giảm tải lưới.
 
-Every conversion loses energy and adds capex.
+Trong nền kinh tế trưởng thành, tối ưu quy trình và tòa nhà có thể rẻ hơn việc bổ sung phát điện cho mọi mức tăng nhu cầu.
 
-Therefore carrier choice is systems-engineering problem.
+## Chuyển đổi năng lượng là bài toán phân bổ vốn
 
-## ESS: value is more than buy-low sell-high
+Doanh nghiệp điện lực và công nghiệp phải quyết định vừa duy trì tài sản cũ vừa đầu tư công nghệ mới trong khi nhu cầu và chính sách chưa chắc chắn.
 
-Battery Energy Storage System can provide:
+Đầu tư quá ít tạo rủi ro thiếu công suất; đầu tư quá nhiều tạo tài sản sử dụng thấp hoặc mắc kẹt. Vì vậy cần tư duy danh mục thay vì đặt cược toàn bộ vào một công nghệ.
 
-- energy arbitrage;
-- frequency response;
-- reserve;
-- renewable smoothing;
-- congestion relief.
+## Kế hoạch điện là quỹ đạo chính sách, không phải kết quả chắc chắn
 
-Economic value depends market design: can storage be paid for these services?
+Các kế hoạch cung–cầu điện dài hạn cho biết hướng mong muốn về nuclear, renewables, coal và LNG. Nhưng kế hoạch chỉ trở thành sản lượng thực khi giấy phép, xây dựng, lưới, nhu cầu và chi phí được thực hiện thành công.
 
-Korea’s battery manufacturing capability creates industrial-policy link, but grid economics and battery manufacturing economics remain distinct.
+Nhà phân tích nên dùng kế hoạch làm kịch bản nền rồi theo dõi tiến độ thực tế.
 
-## Demand response: sometimes cheapest capacity is “not consuming now”
+## Xuất khẩu hạt nhân là một ngành công nghiệp phức hợp
 
-Industrial/commercial users can shift flexible demand away from peak if compensated.
+Năng lực hạt nhân của Hàn Quốc gồm kỹ thuật, EPC, linh kiện, vận hành và dịch vụ vòng đời. Dự án xuất khẩu còn liên quan ngoại giao, tín dụng chủ quyền và chu kỳ xây dựng dài.
 
-**Demand Response / 수요반응** reduces need for peaking capacity and grid stress.
+Vì vậy kinh tế xuất khẩu hạt nhân gần với hạ tầng nặng và quốc phòng hơn là kinh doanh hàng hóa năng lượng thông thường.
 
-For factories with inflexible continuous processes, ability is limited; data centers with backup/storage may have different flexibility.
+## Cách phân tích doanh nghiệp điện lực và doanh nghiệp thâm dụng điện
 
-## Energy efficiency: virtual supply
+Với doanh nghiệp điện lực, theo dõi giá nhiên liệu, chi phí mua điện, điều chỉnh biểu giá, cơ cấu phát điện, tỷ giá, chi phí lãi vay, nợ, CAPEX lưới và tăng trưởng nhu cầu.
 
-Saving 1 MWh can be economically similar to generating 1 MWh, if efficiency investment costs less.
+Với doanh nghiệp thâm dụng điện, cần hỏi tỷ trọng điện trong chi phí, loại biểu giá, hồ sơ phụ tải, độ nhạy mất điện, nghĩa vụ điện tái tạo, khả năng chuyển giá và công suất đấu nối đã được bảo đảm hay chưa.
 
-Efficiency reduces import exposure and grid load simultaneously.
+## Stress test
 
-In mature industrial economy, process optimization/building efficiency can be lower-cost than adding generation for every demand increase.
+Các kịch bản hữu ích gồm LNG +30%, KRW yếu 10%, giá điện công nghiệp +15%, đấu nối lưới chậm 2 năm, giá carbon tăng gấp đôi hoặc nhu cầu AI tăng nhanh hơn hạ tầng lưới.
 
-## Energy transition creates capital-allocation problem
+Quan trọng là đưa cú sốc xuống dòng tiền doanh nghiệp và bảng cân đối utility, không dừng ở tiêu đề năng lượng.
 
-Utilities and industrial firms must decide between maintaining old assets and investing new technology before demand/policy fully certain.
+## Mental Model — mô hình tư duy
 
-This creates risk of:
-
-- underinvestment → reliability shortages;
-- overinvestment → stranded/low-utilization assets.
-
-Portfolio approach is necessary.
-
-## 11th Basic Electricity Plan: plan vs realized outcome
-
-Korea’s 11th Basic Electricity Supply and Demand Plan points toward larger roles for nuclear and renewables, coal decline and continuing balancing role for LNG through planning horizon.
-
-A plan is **policy trajectory**, not guaranteed physical outcome.
-
-Realization depends on permits, construction, grid, demand and costs.
-
-Analyst should treat plan as scenario baseline, then track actual project execution.
-
-## Nuclear export as industrial business
-
-Korean nuclear capability includes engineering, EPC, components, operations and lifecycle services.
-
-Export projects combine industrial economics with government diplomacy, sovereign credit and long construction cycle.
-
-Thus nuclear export resembles heavy infrastructure/defense business as much as commodity energy.
-
-## How to analyze KEPCO/power-sector economics
-
-Monitor:
+> Hàn Quốc phải tối ưu đồng thời bốn mục tiêu: **an ninh nguồn cung, khả năng chi trả, độ tin cậy và khử carbon**. Không có một công nghệ duy nhất tối đa hóa cả bốn; chiến lược năng lượng là bài toán danh mục và tích hợp hệ thống.
 
 ```text
-Fuel purchase cost
-Wholesale power cost
-Retail tariff adjustments
-Generation mix
-FX
-Interest expense/debt
-Grid capex
-Demand growth
+Nhiên liệu nhập khẩu + nguồn điện trong nước
+              ↓
+Thị trường bán buôn / lưới
+              ↓
+Biểu giá bán lẻ + độ tin cậy
+              ↓
+Hộ gia đình / doanh nghiệp
+              ↓
+Lạm phát + sức cạnh tranh + đầu tư
 ```
 
-Profitability can improve because fuel cost falls even without tariff hike, or worsen because tariff lags input cost.
+## Những nhầm lẫn thường gặp
 
-## How to analyze power-intensive manufacturer
+Điện tái tạo có nhiên liệu bằng 0 nhưng hệ thống vẫn cần lưới và lưu trữ. Nuclear có chi phí nhiên liệu thấp nhưng dự án vẫn có rủi ro vốn và tiến độ. Giá điện thấp không chứng minh chi phí phát điện thấp. An ninh năng lượng không có nghĩa phải tự sản xuất mọi thứ. Có thêm nguồn phát không giải được thiếu điện nếu truyền tải bị nghẽn. Hydro nên được hiểu là chất mang năng lượng được sản xuất từ nguồn khác.
 
-Ask:
-
-1. Electricity share of cost?
-2. Tariff category?
-3. Load profile?
-4. Reliability sensitivity?
-5. Renewable procurement obligation?
-6. Power-price pass-through to customers?
-7. Site has secured grid capacity?
-
-A 10% tariff move can be trivial for software company but thesis-changing for electrochemical process.
-
-## Stress tests
-
-Useful scenarios:
-
-- LNG +30% and KRW -10%;
-- industrial tariff +15%;
-- grid connection delayed 2 years;
-- carbon allowance price doubles;
-- new nuclear/wind project delay;
-- AI/data-center load grows faster than grid.
-
-Trace impact into company cash flow and public utility balance sheets.
-
-## Mental Model
-
-> Korea must optimize four objectives simultaneously: **security, affordability, reliability and decarbonization**. No single technology maximizes all four; energy strategy is a portfolio and system-integration problem.
-
-A compact map:
-
-```text
-Imported fuels + Domestic generation
-              ↓
-Wholesale power / Grid
-              ↓
-Retail tariff + Reliability
-              ↓
-Households / Industry
-              ↓
-Inflation + Competitiveness + Investment
-```
-
-## Common misconceptions
-
-**“Renewables have zero fuel cost, so system cost is near zero.”** Sai. Grid/storage/balancing/capex matter.
-
-**“Nuclear has low fuel cost, so project risk is low.”** Sai. Construction/financing/schedule matter.
-
-**“Low tariff means cheap generation.”** Not necessarily; cost may sit in utility balance sheet.
-
-**“Energy independence means self-producing everything.”** Diversification/resilience matter more.
-
-**“More generation automatically solves industrial power shortage.”** Not if transmission/grid connection constrained.
-
-**“Hydrogen is an energy source.”** More accurately it is an energy carrier produced using other energy.
-
-## Connections
+## Liên kết
 
 Đọc cùng [`01_macro_economy_and_business_cycle.md`](./01_macro_economy_and_business_cycle.md), [`14_semiconductors_electronics_display.md`](./14_semiconductors_electronics_display.md), [`16_shipbuilding_steel_chemicals_heavy_industry.md`](./16_shipbuilding_steel_chemicals_heavy_industry.md), [`24_regional_clusters_and_industrial_geography.md`](./24_regional_clusters_and_industrial_geography.md), [`25_public_enterprises_and_state_owned_companies.md`](./25_public_enterprises_and_state_owned_companies.md), [`32_defense_aerospace_and_strategic_industries.md`](./32_defense_aerospace_and_strategic_industries.md) và [`34_digital_fintech_cloud_and_it_services.md`](./34_digital_fintech_cloud_and_it_services.md).
-
-### Nguồn nền
-
-- International Energy Agency, *Korea 2025*: https://www.iea.org/reports/korea-2025
-- IEA, Korea 11th Basic Electricity Supply and Demand Plan: https://www.iea.org/policies/28827-11th-basic-electricity-supply-and-demand-plan
-- Korean power/energy authorities and KEPCO disclosures for current tariff/market data.
-
-Energy mix, tariff and plan numbers change over time; re-check official current data before investment/legal decisions.

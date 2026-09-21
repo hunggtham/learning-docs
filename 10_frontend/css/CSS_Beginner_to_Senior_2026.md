@@ -13,9 +13,9 @@
 ---
 
 
-# Cách đọc từng phần trong bản V2
+# Cách đọc tài liệu canonical
 
-Từ bản này, mỗi nhóm kiến thức quan trọng được bổ sung theo 4 tầng tư duy:
+Mỗi nhóm kiến thức quan trọng được đọc theo 4 tầng tư duy:
 
 ```text
 Property / Syntax
@@ -5706,7 +5706,7 @@ Ngoài ra CSS-wide keyword thường có `initial`, `inherit`, `unset`, `revert`
 
 # 114. Property Index theo nhóm
 
-Đây là index để review nhanh. Không cần học thuộc tất cả trong một lần.
+Đây chỉ là appendix để tra cứu sau khi đã hiểu mental model ở các phần trước. Không dùng section này như learning path và không học thuộc property theo kiểu danh sách.
 
 ## Layout / Box
 
@@ -6507,7 +6507,7 @@ Khi dùng feature hiện đại, luôn kiểm tra **browser targets của projec
 
 ---
 
-# 124. Cheat Sheet cực ngắn
+# 124. Appendix — syntax recap cực ngắn
 
 ```css
 /* Reset */
@@ -7076,7 +7076,7 @@ Exception:
 .card[data-emphasis="high"] {}
 ```
 
-Không duplicate thành `.special-card-v2`.
+Không duplicate thành `.special-card-special`.
 
 ## 127.6 Theme-by-contract Pattern
 
@@ -7416,6 +7416,182 @@ Patterns cần thành thạo:
 
 ---
 
+---
+
+# 132. Cascade & Specificity — trace quyết định declaration thắng [CORE/SENIOR]
+
+Một trong những sai lầm phổ biến nhất khi học CSS là coi specificity như “định luật cao nhất”. Trên thực tế, browser chỉ so specificity sau khi đã loại những declaration không cùng precedence. Vì vậy một selector rất mạnh vẫn có thể thua rule ở origin/layer/importance khác. Mental model tốt hơn là coi cascade như một chuỗi bộ lọc.
+
+Giả sử cùng một `button` nhận nhiều rule từ reset, component CSS, utility layer và inline style. Browser trước tiên xét rule có relevant với element/media condition hay không. Sau đó nó xét origin và `!important`, rồi cascade layer. Chỉ những declaration còn cùng tầng precedence mới so specificity; nếu vẫn bằng nhau thì scope proximity có thể tham gia với `@scope`, cuối cùng mới đến source order.
+
+```text
+relevance
+→ origin + importance
+→ cascade layer
+→ specificity
+→ scoping proximity
+→ source order
+```
+
+Điểm thực tế quan trọng là `@layer` cho phép bạn thay đổi precedence mà không tăng selector strength. Nếu `components` đứng trước `utilities`, một utility selector đơn giản có thể override component rule dù component selector nhìn “dài” hơn. Đây là lý do architecture cascade tốt bền hơn việc nối thêm class/ID vào selector.
+
+Specificity của các pseudo-class hiện đại cũng cần hiểu theo cơ chế chứ không học số rời rạc. `:where()` luôn đóng góp specificity bằng 0, vì vậy rất phù hợp cho defaults. `:is()`, `:not()` và `:has()` lấy specificity từ selector có specificity cao nhất trong argument list. Điều này có thể làm một rule mạnh hơn bạn tưởng nếu vô tình đưa ID vào argument.
+
+```css
+/* phần :where(...) không tăng specificity */
+:where(.article) h2 {
+  margin-block: 2rem 1rem;
+}
+
+/* specificity chịu ảnh hưởng bởi #app trong :is(...) */
+:is(.page, #app) .title {
+  color: var(--heading);
+}
+```
+
+Khi cần override, hãy sửa đúng tầng. Nếu vấn đề là layer order, sửa `@layer`; nếu selector quá mạnh, giảm specificity; nếu state thuộc component, dùng attribute/variant rõ; nếu third-party CSS dùng `!important`, isolate nó vào layer hoặc integration boundary. `!important` không phải công cụ đầu tiên vì nó đổi một declaration sang một precedence class khác và dễ tạo cuộc chiến mới.
+
+Một production debugging trace nên bắt đầu trong DevTools: xác nhận selector match, xem declaration nào bị crossed-out, nhìn layer/origin, rồi mới tính specificity. Nếu bạn đang tính specificity trước khi biết layer nào đang thắng, bạn đang debug sai thứ tự.
+
+---
+
+# 133. Layout Mental Model — từ available space tới geometry [CORE/SENIOR]
+
+Layout không phải “đặt `width`, rồi browser vẽ đúng con số đó”. Browser phải giải một hệ constraints. Mỗi box có intrinsic contribution từ content, min/max constraints, preferred size, available space từ containing block và rules của formatting context. Flexbox và Grid chỉ là hai layout algorithms khác nhau chạy trên cùng những inputs cơ bản đó.
+
+Một cách đọc layout hữu ích là:
+
+```text
+box được tạo bởi display nào?
+→ formatting context nào đang quản lý children?
+→ containing block / available size là gì?
+→ intrinsic min/max-content contributions là gì?
+→ min/max/width/height/aspect-ratio giới hạn ra sao?
+→ algorithm phân phối free space như thế nào?
+→ overflow/clipping/scroll xảy ra ở đâu?
+```
+
+Ví dụ `width: 100%` không đảm bảo element vừa màn hình. Nếu parent có padding theo `content-box`, child có min-content lớn, hoặc child là flex/grid item với automatic minimum size, geometry cuối cùng có thể overflow. Ngược lại, một element không có explicit width vẫn có thể có size rất cụ thể do Grid track hoặc Flex algorithm quyết định.
+
+Normal flow là baseline. Block boxes thường xếp theo block flow; inline content tạo line boxes. Khi `display:flex` hoặc `display:grid` xuất hiện, children trực tiếp trở thành flex/grid items và sizing rules thay đổi. Khi `position:absolute` xuất hiện, box rời normal flow và geometry phụ thuộc containing block mới. Vì vậy “property nào đang sai?” thường là câu hỏi kém hơn “algorithm nào đang quyết định geometry này?”.
+
+Intrinsic sizing là chìa khóa của nhiều bug senior. `min-content` mô tả kích thước nhỏ nhất content có thể co theo wrapping rules; `max-content` mô tả size content muốn có nếu không wrap; `fit-content` nằm giữa intrinsic desire và available space. `minmax(0, 1fr)` trong Grid và `min-width:0` trong Flex đều là cách nói với browser rằng content được phép co nhỏ hơn automatic intrinsic minimum trong những context cụ thể.
+
+---
+
+# 134. Flexbox — đọc algorithm thay vì thuộc property [CORE/SENIOR]
+
+Flexbox giải bài toán một chiều. Browser xác định main axis từ `flex-direction`, lấy flex base size của từng item, so tổng hypothetical size với available main-axis space, rồi quyết định đang có positive free space hay negative free space. Sau đó `flex-grow` hoặc `flex-shrink` phân phối phần dư/thiếu theo factor và constraints.
+
+Vì thế `flex: 1` không đơn giản có nghĩa “chiếm 100%”. Nó thay grow/shrink/basis để item tham gia phân phối space. Hai item `flex:1` thường chia free space cân bằng, nhưng intrinsic min-size vẫn có thể chặn item co. Đây là lý do pattern production rất thường là:
+
+```css
+.row {
+  display: flex;
+  gap: 1rem;
+}
+
+.avatar {
+  flex: none;
+}
+
+.body {
+  flex: 1;
+  min-width: 0;
+}
+```
+
+`min-width:0` không phải mẹo Tailwind/CSS bí ẩn; nó thay automatic minimum constraint để flex item được phép co và để `overflow`, `text-overflow` hoặc child wrapping phát huy tác dụng.
+
+Cross-axis alignment được tính sau main-axis sizing và phụ thuộc `align-items`, `align-self`, baseline rules và available cross size. `justify-content` chỉ phân phối remaining free space trên main axis; nếu items đã grow lấp hết free space thì `justify-content:space-between` không tạo thêm “ma thuật”. Vì vậy khi alignment không như mong đợi, trước tiên xác định axis và free space có thật sự tồn tại hay không.
+
+Senior pattern là dùng Flex cho composition một chiều như toolbar, cluster, media object, action row. Nếu bạn bắt đầu điều khiển nhiều row/column alignment đồng thời bằng width calc, margin và order, hãy kiểm tra xem Grid có đúng mental model hơn không.
+
+---
+
+# 135. Grid — track sizing trước, placement sau [CORE/SENIOR]
+
+Grid mạnh vì browser giải tracks trước rồi đặt items vào hệ tracks đó. Bạn nên đọc Grid theo thứ tự: explicit grid được định nghĩa thế nào, implicit tracks nào có thể phát sinh, intrinsic contributions của items ảnh hưởng track sizing ra sao, sau đó mới nhìn item placement.
+
+`1fr` không đơn giản là “một phần trăm”. Fraction unit phân phối **free space còn lại** sau khi fixed/intrinsic constraints đã được giải. Vì Grid item có automatic minimum contribution, `1fr` đôi khi không co nhỏ như bạn kỳ vọng. `minmax(0, 1fr)` mở minimum xuống 0 và vì thế là pattern an toàn cho content area có thể chứa text dài hoặc nested layout.
+
+```css
+.shell {
+  display: grid;
+  grid-template-columns: 16rem minmax(0, 1fr);
+}
+```
+
+`repeat(auto-fit, minmax(min(100%, 18rem), 1fr))` là ví dụ rất tốt của intrinsic responsive design. Không cần đoán “tablet breakpoint”; browser tự tạo số track vừa với available space và collapse empty tracks. Đây là responsive layout do constraints quyết định, không phải do device categories.
+
+Grid placement (`grid-column`, named areas, spans) nên được dùng sau khi track system đã rõ. `grid-auto-flow:dense` có thể backfill visual gaps nhưng có thể làm visual order khác DOM order, nên không phù hợp khi thứ tự tương tác/đọc có ý nghĩa. Subgrid phù hợp khi nested component cần chia sẻ parent tracks thay vì duplicate width constants.
+
+---
+
+# 136. Responsive — quyết định bằng constraint, không bằng tên thiết bị [CORE/SENIOR]
+
+Responsive design tốt bắt đầu từ content và available space. Trước khi thêm media query, hãy xem layout có thể tự thích ứng bằng wrapping, intrinsic sizing, `min()`, `max()`, `clamp()`, `auto-fit` hoặc Flex/Grid hay không. Query nên xuất hiện khi **behavior cần đổi**, không phải vì viewport chạm một tên device.
+
+Media query phù hợp với page/environment-level concerns: viewport size, orientation, hover capability, pointer precision, reduced motion, color scheme hoặc print. Container query phù hợp khi một reusable component cần biết không gian nó thực sự nhận được trong sidebar, modal hoặc main content. Hai loại query có thể dùng cùng nhau nhưng ownership phải rõ: page shell thường theo viewport, component internals thường theo container.
+
+```css
+.dashboard {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (width >= 64rem) {
+  .dashboard {
+    grid-template-columns: 18rem minmax(0, 1fr);
+  }
+}
+
+.widget-host {
+  container-type: inline-size;
+}
+
+@container (width >= 32rem) {
+  .widget {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+}
+```
+
+Đừng quên responsive còn gồm zoom, translated text, user font size, coarse pointer, keyboard, reduced motion và dynamic viewport. Một layout chỉ đẹp ở ba screenshot width chưa thể gọi là robust responsive UI.
+
+---
+
+# 137. Modern CSS — adoption strategy thay vì chạy theo feature [ADV/MODERN]
+
+Modern CSS hiện đã có nhiều công cụ từng cần preprocessor hoặc JavaScript: native nesting, `:has()`, cascade layers, `@scope`, container queries, subgrid, logical properties, `@property`, anchor positioning, top layer, popover/dialog styling, scroll-driven animations và View Transitions. Cách học đúng không phải ghi nhớ release list mà hiểu **vấn đề cũ nào được thay thế**.
+
+Cascade layers thay specificity conventions; container queries giảm component breakpoints phụ thuộc viewport; `:has()` giảm state class chỉ để style DOM relationship; native nesting giảm một phần nhu cầu SCSS nesting; logical properties giảm hard-coded LTR assumptions; top layer giải nhiều stacking problems của modal/popover; anchor positioning giảm manual coordinate JS cho overlay trong browser support phù hợp.
+
+Production adoption nên chia feature thành ba nhóm. Nhóm critical-layout phải có browser baseline phù hợp hoặc fallback rõ. Nhóm enhancement như balanced text, visual transitions hay scroll-driven decoration có thể progressive enhance. Nhóm experimental/rapidly evolving phải được feature-query/test trước khi trở thành foundation của design system.
+
+`@supports` không phải công cụ để bọc mọi property mới. Nếu unsupported browser đơn giản ignore declaration và fallback tự nhiên vẫn usable, bạn không cần query. Dùng feature query khi cần thay **một strategy hoàn chỉnh** tùy support.
+
+---
+
+# 138. Performance + Accessibility là layout constraints, không phải bước cuối [SENIOR]
+
+Performance và accessibility thường bị đặt cuối checklist, nhưng chúng ảnh hưởng design decision từ đầu. Một fixed-height card có thể đẹp với sample text nhưng cắt content khi zoom 200%. Visual reorder bằng `order`/Grid placement có thể làm keyboard/screen-reader order khác visual order. `opacity:0` có thể giấu hình nhưng để focus target tồn tại. Heavy backdrop blur trên full viewport có thể đẹp nhưng tốn paint/composite cost trên mobile.
+
+Motion nên bắt đầu từ semantic state và có reduced-motion path. Interactive control phải có visible focus và target size phù hợp. Component phải chịu được long content, locale khác, forced colors/high contrast và font loading. Đây là functional correctness, không phải optional polish.
+
+Về performance, hãy đo invalidation. Thay đổi font metrics có thể gây layout; thay `width`/`height` trong animation thường kéo geometry recalculation; large shadows/filters tăng paint; quá nhiều promoted layers tăng memory. `transform`/`opacity` thường compositor-friendly nhưng không phải miễn phí. `contain`, `content-visibility` và `will-change` chỉ nên dùng khi bạn hiểu side effect và đã đo bottleneck.
+
+---
+
+# 139. Production Patterns — compose behavior từ primitives [SENIOR]
+
+Production CSS nên có một vocabulary nhỏ nhưng mạnh thay vì hàng trăm component rules trùng nhau. `Stack` biểu diễn vertical rhythm bằng column flex + gap. `Cluster` biểu diễn inline group có wrap. `Container` chịu horizontal constraint. `Sidebar` dùng Grid/Flex với một fixed/intrinsic region và `minmax(0,1fr)` cho content. `Media Object` giữ media không shrink và body có `min-width:0`. App shell vertical dùng `min-height:100dvh`, fixed header region và `min-height:0; overflow:auto` cho body.
+
+Overlay cũng cần ownership rõ. Decoration local dùng positioned ancestor + absolute child. Sticky controls dùng `position:sticky` và scroll container rõ. Modal/popover critical nên ưu tiên native top-layer primitives khi semantics phù hợp thay vì đẩy `z-index` lên vô hạn. Theme nên đi qua semantic custom properties để component không duplicate dark/light rules. Component state nên đi qua native pseudo-class, ARIA state hoặc `data-*` contract thay vì class tên theo từng combination.
+
+Một pattern chỉ đáng dùng khi nó làm constraints và ownership dễ đọc hơn. Nếu abstraction khiến developer phải mở ba file để biết `padding` cuối cùng đến từ đâu, hãy giảm abstraction. Senior CSS không tối đa số pattern; senior CSS tối đa khả năng dự đoán behavior.
+
+---
 
 # Kết luận
 

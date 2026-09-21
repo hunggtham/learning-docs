@@ -4651,6 +4651,62 @@ https://tailwindcss.com/docs/upgrade-guide
 
 ---
 
+---
+
+# PHẦN XXVIII — UNDERLYING CSS MAPPING VÀ VERSION EVOLUTION
+
+## 186. Đọc Tailwind theo CSS subsystem, không theo danh sách class
+
+Tailwind chỉ dễ master khi class names được quy về CSS subsystem bên dưới. Khi thấy `flex items-center gap-4`, đừng dịch từng token rồi dừng lại. Hãy đọc: element trở thành flex formatting context; direct children là flex items; cross-axis alignment dùng `align-items:center`; spacing giữa items do `gap`; main-axis behavior vẫn phụ thuộc `flex-direction`, item basis/grow/shrink và available space.
+
+Tương tự, `grid grid-cols-[16rem_minmax(0,1fr)]` không phải “hai class layout”. Nó tạo Grid formatting context và một explicit two-track template. Track thứ hai dùng `minmax(0,1fr)` để bỏ automatic intrinsic minimum của plain flexible track trong nhiều overflow cases. Nếu main content vẫn overflow, bạn tiếp tục kiểm nested grid/flex item min-size chứ không tìm “Tailwind overflow class” ngẫu nhiên.
+
+`relative`/`absolute` phải đọc bằng containing block. `sticky top-0` phải đọc bằng scroll container + sticky inset + available scroll range. `truncate` phải đọc như `overflow:hidden + text-overflow:ellipsis + white-space:nowrap`, và trong Flex/Grid bạn còn phải đảm bảo item có thể co, thường bằng `min-w-0`. `h-dvh` phải đọc như dynamic viewport sizing chứ không phải một Tailwind-specific full-screen mode.
+
+State variants cũng là CSS transformations. `hover:bg-*` tạo hover selector; `focus-visible:*` dùng pseudo-class cho keyboard-like focus indication; `group-hover:*` tạo ancestor-state selector relationship; `peer-invalid:*` dựa subsequent sibling relation; `has-*` dùng `:has()` relationship. Responsive variants tạo at-rule conditions: `md:*` là viewport media query, còn `@md:*` là container query. Khi variant không chạy, hãy debug relationship/condition trước khi đổi utility.
+
+## 187. Mapping production bug từ Tailwind về CSS
+
+Một bug Tailwind nên được phân loại thành hai nửa. Nếu class candidate không xuất hiện trong output, vấn đề nằm ở source detection, theme namespace, utility registration hoặc dynamic string construction. Nếu generated rule có mặt và declaration apply nhưng UI vẫn sai, vấn đề đã chuyển sang CSS/browser.
+
+```text
+Tailwind/build side
+candidate → source scan → resolver/theme/variant → generated rule
+
+Browser side
+generated rule → cascade → computed value → formatting context → layout → paint/composite
+```
+
+Ví dụ `z-50` có trong computed style nhưng dropdown vẫn nằm dưới header. Tailwind đã hoàn thành nhiệm vụ; root cause có thể là parent stacking context hoặc top-layer behavior. `w-full` apply nhưng panel vẫn quá rộng; root cause có thể là containing block, padding, min-content hoặc flex minimum. `md:flex-row` có CSS rule nhưng layout vẫn column; kiểm media condition, competing `flex-col`, layer/cascade và component state.
+
+Cách debug này giúp bạn không đổ mọi lỗi styling cho framework.
+
+## 188. Tailwind version evolution — thay đổi programming model, không chỉ thêm utility
+
+Tailwind đời đầu phổ biến utility-first như một authoring style nhưng generation vẫn gắn nhiều với pre-generated/configured stylesheet mindset. Sang thế hệ JIT, đặc biệt từ giai đoạn v2.x JIT rồi v3, Tailwind chuyển mạnh sang **generate utilities theo candidates thực sự xuất hiện trong source**. Hệ quả lập trình quan trọng là arbitrary values/variants trở nên practical hơn, build output dựa usage hơn, và complete static class strings trở thành contract giữa source code với compiler.
+
+Tailwind v3 đưa JIT engine thành mặc định và củng cố mental model `content → candidates → generated CSS`. Config vẫn chủ yếu JS-first qua `tailwind.config.js`, `content`, `theme.extend`, plugins và safelist. Nhiều codebase enterprise hiện tại vẫn ở generation này, nên bạn phải đọc được cả config-driven theme/plugin architecture.
+
+Tailwind v4 là thay đổi architecture lớn hơn syntax. Framework chuyển sang CSS-first configuration: `@import "tailwindcss"`, `@theme`, automatic source detection, `@source`, CSS-first `@utility`/`@custom-variant`, native cascade layer integration và theme variables trở thành CSS variables thực sự. Đây là thay đổi từ “JavaScript config điều khiển CSS generator” sang “CSS entrypoint vừa định nghĩa design vocabulary vừa điều khiển generator”. Khi migrate, bạn nên thiết kế lại ownership của theme/source/custom utilities thay vì giữ toàn bộ v3 mental model qua compatibility bridges.
+
+Tailwind v4.2 và v4.3 tiếp tục mở rộng API theo CSS platform thay vì đổi core mental model. v4.2 bổ sung logical property utilities, `font-features-*` và first-party webpack integration. v4.3 bổ sung scrollbar utilities, `@container-size`, `zoom-*`, `tab-*`, stacked/compound `@variant` và default values cho functional utilities. Tính đến 21/09/2026, Tailwind blog vẫn liệt kê **v4.3** là release framework mới nhất. Những feature này quan trọng vì chúng giảm custom plugin/CSS ở edge cases, nhưng cách học vẫn là utility → CSS mechanism → browser behavior.
+
+## 189. Migration v3 → v4 theo responsibility
+
+Đừng migrate bằng mapping syntax một-một. Hãy nhóm theo responsibility. Theme values/config chuyển dần sang `@theme`; source ownership chuyển từ `content` glob sang automatic detection + `@source` khi cần; simple custom utilities chuyển sang `@utility`; repeated selector conditions có thể trở thành `@custom-variant`; legacy JS plugins giữ lại qua compatibility mechanism chỉ khi chúng thật sự cần JS logic.
+
+Sau migration, kiểm generated CSS diff, Preflight behavior, theme variable output, source package scanning, arbitrary candidates, dark-mode strategy và visual regression. Một project “compile được” nhưng mất class từ shared package vẫn là migration fail.
+
+## 190. Production pattern: semantic component API, Tailwind là implementation detail
+
+Reusable component nên expose `variant="danger"`, `size="md"`, `density="compact"` thay vì `color="red-600"` hoặc `padding="p-4"`. Tailwind classes nằm trong static mapping để scanner nhìn thấy và để design implementation có thể thay đổi mà caller không đổi.
+
+Runtime values như progress width, user-selected color hoặc canvas coordinate nên đi qua CSS custom property với static Tailwind consumer. Điều này vừa scanner-safe vừa giữ CSS runtime đúng chỗ. Theme lớn nên dùng semantic CSS variables/tokens thay vì lặp `dark:*` cho mọi property trên mọi component khi number of themes tăng.
+
+Accessibility vẫn nằm ngoài utility syntax: native element/ARIA/state semantics phải đúng trước. Tailwind chỉ style `focus-visible`, `disabled`, `aria-*`, `motion-reduce` và forced-colors paths. Performance cũng phải đo unique candidates, source scan boundaries, duplicate entrypoints và browser rendering cost; utility-first không tự động làm app nhanh.
+
+---
+
 # KẾT LUẬN
 
 Cách học sai là:

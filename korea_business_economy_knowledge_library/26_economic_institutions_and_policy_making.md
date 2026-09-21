@@ -1,324 +1,223 @@
 # Thể chế kinh tế và cách chính sách được hình thành tại Hàn Quốc (Economic Institutions & Policy Making / 경제 제도와 정책결정)
 
-Một nền kinh tế thị trường không hoạt động chỉ bằng “cung và cầu”. Doanh nghiệp luôn ra quyết định bên trong một hệ thống gồm luật, ngân sách, central banking, financial supervision, competition policy, industrial policy, tax, public procurement và local implementation. Ở Hàn Quốc, layer này đặc biệt quan trọng vì lịch sử công nghiệp hóa gắn chặt với sự phối hợp giữa nhà nước, ngân hàng và doanh nghiệp.
+Một nền kinh tế thị trường không hoạt động chỉ bằng “cung và cầu”. Doanh nghiệp luôn ra quyết định trong một hệ thống gồm luật, ngân sách, ngân hàng trung ương, giám sát tài chính, chính sách cạnh tranh, chính sách công nghiệp, thuế, mua sắm công và chính quyền địa phương. Tại Hàn Quốc, tầng thể chế này đặc biệt quan trọng vì lịch sử công nghiệp hóa gắn chặt với sự phối hợp giữa nhà nước, ngân hàng và doanh nghiệp.
 
-Muốn đọc chính sách đúng, trước hết phải bỏ cách nghĩ “chính phủ Hàn Quốc” là một actor duy nhất. **Policy là output của nhiều institutions có mandate khác nhau**. Một ministry muốn thúc đầu tư, regulator muốn giảm systemic risk, competition authority muốn hạn chế abuse of market power, còn local government muốn có jobs và tax base. Những mục tiêu này có thể cùng hướng hoặc xung đột.
+Muốn đọc chính sách đúng, trước hết phải bỏ cách nghĩ “chính phủ Hàn Quốc” là một chủ thể duy nhất. **Chính sách là kết quả của nhiều cơ quan có nhiệm vụ khác nhau**. Một bộ muốn thúc đẩy đầu tư, cơ quan giám sát muốn giảm rủi ro hệ thống, cơ quan cạnh tranh muốn hạn chế lạm dụng quyền lực thị trường, còn chính quyền địa phương muốn tạo việc làm và nguồn thu thuế. Các mục tiêu này có thể cùng hướng hoặc xung đột.
 
-## Developmental state đã biến đổi chứ không biến mất
+## Nhà nước phát triển đã thay đổi chứ không biến mất
 
-Hàn Quốc thường được mô tả bằng khái niệm **Developmental State / 발전국가** trong giai đoạn công nghiệp hóa. Ý chính không phải nhà nước trực tiếp sở hữu mọi company, mà là nhà nước từng dùng kế hoạch, tín dụng, foreign exchange, trade policy và coordination để đẩy resources vào export industries và heavy industry.
+Hàn Quốc thường được mô tả bằng khái niệm **nhà nước phát triển (developmental state / 발전국가)** trong thời kỳ công nghiệp hóa. Ý chính không phải nhà nước trực tiếp sở hữu mọi công ty, mà là nhà nước từng dùng kế hoạch, tín dụng, ngoại tệ, chính sách thương mại và phối hợp để đẩy nguồn lực vào xuất khẩu và công nghiệp nặng.
 
-Khi capital market sâu hơn, WTO/FTA framework mở rộng và private conglomerates mạnh hơn, directed credit kiểu cũ giảm vai trò. Nhưng industrial policy không biến mất; nó đổi công cụ.
+Khi thị trường vốn sâu hơn, WTO/FTA mở rộng và các tập đoàn tư nhân trưởng thành, tín dụng chỉ đạo kiểu cũ giảm vai trò. Tuy nhiên **chính sách công nghiệp (industrial policy)** không biến mất mà chuyển sang các công cụ như ưu đãi thuế, tài trợ R&D, tài chính chính sách, mua sắm công, tiêu chuẩn–chứng nhận, hạ tầng, FTA, chính sách năng lượng và chương trình nhân lực.
 
-Policy hiện đại thường tác động qua:
+Nhà nước không cần trực tiếp “ra lệnh doanh nghiệp sản xuất gì” để ảnh hưởng đầu tư. Chỉ cần thay đổi **lợi suất tương đối và mức rủi ro** giữa các lựa chọn.
 
-```text
-Tax incentives
-R&D grants
-Policy finance
-Public procurement
-Standards / certification
-Infrastructure
-Trade agreements
-Competition rules
-Energy policy
-Workforce programs
-```
+## Chính sách tác động doanh nghiệp bằng cách thay đổi NPV
 
-Nói cách khác, nhà nước không cần “ra lệnh sản xuất gì” để ảnh hưởng investment. Chỉ cần thay **relative return và risk** giữa các choices.
-
-## Policy tác động doanh nghiệp bằng cách thay NPV
-
-Một project có thể được mô tả bằng Net Present Value:
+Một dự án có thể mô tả bằng **giá trị hiện tại ròng (Net Present Value / NPV)**:
 
 \[
 NPV = \sum_{t=1}^{T}\frac{CF_t}{(1+r)^t} - I_0
 \]
 
-Policy có thể tác động mọi term trong công thức.
+Chính sách có thể tác động mọi thành phần trong công thức. Ưu đãi thuế làm giảm chi phí đầu tư ban đầu; khoản vay ưu đãi làm giảm chi phí vốn; FTA có thể tăng dòng tiền kỳ vọng; quy định môi trường có thể làm CAPEX tăng nhưng giảm rủi ro bị phạt trong tương lai; mua sắm công có thể tạo khách hàng đầu tiên.
 
-Tax credit giảm effective `I_0`. Subsidized loan giảm discount/funding cost `r`. Export agreement tăng expected `CF_t`. Environmental rule có thể tăng capex nhưng giảm future penalty risk. Public procurement có thể tạo early demand.
+Vì vậy tiêu đề chính sách chỉ có ý nghĩa kinh tế khi chuyển được thành thay đổi cụ thể của dòng tiền, chi phí hoặc rủi ro doanh nghiệp.
 
-Do đó policy headline chỉ có ý nghĩa khi chuyển được thành thay đổi cụ thể trong cash flow, cost hoặc risk.
+## Cơ quan tài chính–kinh tế: tài khóa, thuế và điều phối vĩ mô
 
-## Bộ Tài chính và Kinh tế: fiscal policy, tax và macro coordination
+Cơ quan trung ương phụ trách tài khóa, thuế, ngân khố, tài chính quốc tế và điều phối vĩ mô là một nút quan trọng của hệ thống chính sách. Khi cơ quan này công bố chiến lược tăng trưởng hoặc kế hoạch kinh tế, đó không chỉ là dự báo mà còn thể hiện **những nút thắt nào nhà nước muốn ưu tiên xử lý**.
 
-Tính đến 2026, cơ quan trung ương mang tên **Ministry of Finance and Economy / 재정경제부**. Đây là một node trọng yếu của fiscal policy, tax, treasury, international finance và macro coordination.
+Chính sách tài khóa đi qua chi tiêu, thuế và chuyển giao. Một ngân sách hạ tầng có thể đi trực tiếp vào đơn hàng xây dựng, sau đó lan qua việc làm và nhà cung cấp. Ưu đãi thuế bán dẫn có thể làm giảm mức lợi suất tối thiểu mà dự án cần đạt.
 
-Khi ministry công bố **Economic Growth Strategy / 경제성장전략**, đó không phải forecast trung lập. Nó là policy document: government đang xác định bottleneck nào quan trọng và muốn thay incentive ở đâu.
+Điểm quan trọng là phân biệt **thông báo**, **phê duyệt ngân sách**, **hướng dẫn thực thi** và **chi tiền thực tế**. Bốn bước này không đồng nghĩa với nhau.
 
-Fiscal policy hoạt động qua spending, tax và transfers. Một infrastructure budget có direct effect vào construction/order book, sau đó indirect effect qua employment và suppliers. Tax credit cho semiconductor fab có thể làm hurdle rate của project thấp hơn.
+## Quốc hội: đề xuất chính sách chưa phải luật cuối cùng
 
-Điểm quan trọng là phải tách **announcement**, **budget authorization**, **implementation guideline** và **actual disbursement**. Bốn bước này không giống nhau.
+Thuế, luật lớn và ngân sách quốc gia cần đi qua quy trình thể chế có vai trò của **Quốc hội (National Assembly / 국회)**. Vì vậy đề xuất của một bộ chưa chắc trở thành quy tắc cuối cùng với nội dung y nguyên.
 
-## National Assembly: budget và law không chỉ là executive decision
-
-Tax law, major legislation và national budget cần đi qua institutional process có vai trò của **National Assembly / 국회**. Vì vậy một policy proposal từ ministry chưa chắc trở thành rule cuối cùng y nguyên.
-
-Đối với analyst, điều này có nghĩa phải hỏi policy đang ở stage nào:
+Khi đọc tin chính sách, nên xác định nó đang ở giai đoạn nào:
 
 ```text
-Idea / announcement
-→ Draft / proposal
-→ Legislative or budget process
-→ Final rule
-→ Enforcement decree / guideline
-→ Actual implementation
+Ý tưởng / thông báo
+→ dự thảo / đề xuất
+→ quy trình lập pháp hoặc ngân sách
+→ quy tắc cuối cùng
+→ nghị định / hướng dẫn
+→ triển khai thực tế
 ```
 
-Market đôi khi price headline ngay ở bước đầu, nhưng company cash flow chỉ thay khi rule thực sự có hiệu lực.
+Thị trường có thể phản ứng ngay ở bước đầu, nhưng dòng tiền doanh nghiệp chỉ thực sự thay đổi khi chính sách có hiệu lực và được triển khai.
 
-## Bank of Korea: monetary policy là một transmission system
+## Ngân hàng Trung ương Hàn Quốc: chính sách tiền tệ là một hệ truyền dẫn
 
-**Bank of Korea (BOK / 한국은행)** điều hành monetary policy và theo dõi price/financial stability. Policy rate không truyền vào economy như bật công tắc.
+**Bank of Korea (BOK / 한국은행)** điều hành chính sách tiền tệ và theo dõi ổn định giá cả–tài chính. Lãi suất chính sách không truyền vào nền kinh tế như một công tắc tức thời.
 
-Transmission đi qua nhiều channels:
+Chuỗi truyền dẫn có thể hình dung:
 
 ```text
-Policy rate
+Lãi suất chính sách
    ↓
-Money-market / bond yields
+Lãi suất thị trường tiền tệ / trái phiếu
    ↓
-Bank funding and loan rates
+Chi phí vốn của ngân hàng
    ↓
-Household + corporate debt service
+Lãi suất cho vay hộ gia đình và doanh nghiệp
    ↓
-Consumption / investment
+Tiêu dùng / đầu tư
 ```
 
-Song song, rate expectations ảnh hưởng FX và asset prices.
+Song song, kỳ vọng lãi suất tác động tỷ giá và giá tài sản. Ngân hàng thương mại cũng không điều chỉnh mọi khoản vay cùng mức vì chênh lệch tín dụng, lịch điều chỉnh lãi và cạnh tranh khác nhau.
 
-Commercial banks không nhất thiết thay mọi loan rate cùng magnitude vì spread, repricing frequency, competition và borrower risk khác nhau.
+Đây là lý do **độ trễ chính sách tiền tệ (monetary lag / 통화정책 시차)** rất quan trọng. Một lần tăng lãi suất hôm nay có thể chỉ tác động mạnh vài quý sau khi khoản vay tái định giá hoặc doanh nghiệp phải tái cấp vốn.
 
-Do đó **monetary lag / 통화정책 시차** rất quan trọng. Một rate hike hôm nay có thể tác động mạnh hơn vài quý sau khi loans reprice hoặc firms refinance.
+## FSC, FSS và KRX: làm chính sách, giám sát và vận hành thị trường là ba lớp khác nhau
 
-Xem [`01_macro_economy_and_business_cycle.md`](./01_macro_economy_and_business_cycle.md), [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md) và [`21_economy_to_company_transmission.md`](./21_economy_to_company_transmission.md).
+**Financial Services Commission (FSC / 금융위원회)** thiết kế và điều phối nhiều chính sách tài chính. **Financial Supervisory Service (FSS / 금융감독원)** thực hiện giám sát, thanh tra và vận hành DART. **Korea Exchange (KRX / 한국거래소)** vận hành hạ tầng niêm yết–giao dịch và kênh công bố KIND.
 
-## FSC, FSS và KRX: policy, supervision và market infrastructure là ba layer khác nhau
+Một cải cách thị trường vốn có thể cần chính sách từ FSC, giám sát từ FSS và quy tắc vận hành tại KRX. Vì vậy phải phân biệt **cơ quan làm quy tắc, cơ quan giám sát và cơ quan vận hành thị trường**.
 
-**Financial Services Commission (FSC / 금융위원회)** thiết kế và điều phối nhiều financial policies. **Financial Supervisory Service (FSS / 금융감독원)** thực hiện supervision/inspection và vận hành DART. **Korea Exchange (KRX / 한국거래소)** vận hành listing/trading infrastructure và disclosure channel KIND.
+## DART/KIND là hạ tầng giảm bất cân xứng thông tin
 
-Cùng một capital-market reform có thể cần policy từ FSC, supervision từ FSS và implementation rule tại KRX.
-
-Đây là lý do phải phân biệt **rule maker**, **supervisor** và **market operator**.
-
-## DART/KIND là thể chế giảm information asymmetry
-
-Disclosure không chỉ là “website tra báo cáo”. Nó là một phần market infrastructure.
-
-Investor không ngồi trong boardroom. Nếu financial statement, ownership, related-party transaction và material events được disclose chuẩn hóa, information asymmetry giảm và cost of capital có thể thấp hơn.
+Công bố thông tin không chỉ là “website đọc báo cáo”. Nó là một phần của hạ tầng thị trường vốn. Nhà đầu tư không ngồi trong phòng họp hội đồng quản trị; nếu báo cáo tài chính, sở hữu, giao dịch với bên liên quan và sự kiện trọng yếu được chuẩn hóa, **bất cân xứng thông tin (information asymmetry)** giảm và chi phí vốn có thể thấp hơn.
 
 Xem [`09_disclosure_accounting_dart_kind.md`](./09_disclosure_accounting_dart_kind.md).
 
-## KFTC: competition policy và business-group regulation
+## KFTC: cạnh tranh và điều tiết tập đoàn
 
-**Korea Fair Trade Commission (KFTC / 공정거래위원회)** xử lý competition, unfair transactions, business-group regulation, subcontracting và consumer issues.
+**Korea Fair Trade Commission (KFTC / 공정거래위원회)** phụ trách cạnh tranh, giao dịch không công bằng, nhóm doanh nghiệp lớn, thầu phụ và nhiều vấn đề bảo vệ người tiêu dùng.
 
-Ở Hàn Quốc cần tách hai dạng concentration:
+Cần phân biệt **mức tập trung thị trường** với **mức tập trung quyền sở hữu–kinh tế**. Một chaebol có thể rất lớn trên toàn nền kinh tế nhưng không thống trị một thị trường sản phẩm cụ thể. Ngược lại, một nền tảng số có thể thống trị một thị trường hẹp dù tổng tài sản nhỏ hơn nhiều tập đoàn truyền thống.
 
-**Market concentration** hỏi một product market có bao nhiêu competitors và market share ra sao.
+Phân tích cạnh tranh vì vậy phải xác định đúng **thị trường liên quan (relevant market / 관련시장)**.
 
-**Ownership/economic concentration** hỏi một business group kiểm soát bao nhiêu assets/entities và capital network ra sao.
+## Chính sách SME là một hệ thống riêng
 
-Một chaebol có thể rất lớn ở economy level nhưng không dominant trong một niche product. Một platform có thể dominant ở một specific market dù total assets nhỏ hơn conglomerate truyền thống.
+**Ministry of SMEs and Startups (MSS / 중소벤처기업부)** phụ trách nhiều chương trình về SME, startup, venture, hộ kinh doanh nhỏ, đổi mới công nghệ, nhân lực và xuất khẩu.
 
-Do đó competition analysis phải xuống đúng relevant market.
+Lý do cần một lớp chính sách riêng là SME thường gặp các nút thắt khác doanh nghiệp lớn: thiếu tài sản thế chấp, quyền thương lượng yếu, bất cân xứng thông tin và khó vượt ngưỡng quy mô.
 
-Xem [`04_chaebol_and_large_business_groups.md`](./04_chaebol_and_large_business_groups.md) và [`22_tax_regulation_and_competition.md`](./22_tax_regulation_and_competition.md).
+Tuy nhiên hỗ trợ luôn có đánh đổi. Nếu chính sách chỉ giúp doanh nghiệp tồn tại mà không nâng năng lực, vốn và lao động có thể bị giữ trong doanh nghiệp năng suất thấp. Chính sách tốt phải giúp doanh nghiệp **tốt nghiệp (graduation)** và **mở rộng quy mô (scale-up)**, không biến trạng thái SME thành điểm đến vĩnh viễn.
 
-## Ministry of SMEs and Startups: vì sao SME policy là một policy system riêng?
+## MSIT: R&D, AI và hạ tầng số
 
-**Ministry of SMEs and Startups (MSS / 중소벤처기업부)** phụ trách nhiều chương trình về SME, startups, venture, micro-enterprises, technology innovation, human resources và exports.
+**Ministry of Science and ICT (MSIT / 과학기술정보통신부)** phụ trách khoa học, R&D quốc gia, ICT, AI và chính sách số. Với doanh nghiệp, điều này có thể tác động tới tài trợ nghiên cứu, năng lực tính toán AI, cloud, chip AI, nhân lực và chương trình số hóa vùng.
 
-Lý do tồn tại một policy layer riêng là SMEs gặp market failures khác large firms: collateral constraint, weak bargaining power, information asymmetry và scale-up bottleneck.
+Nhưng cần phân biệt **chiến lược quốc gia** với **kinh tế của từng doanh nghiệp**. Nhà nước muốn tăng ứng dụng AI không có nghĩa mọi công ty AI đều có mô hình lợi nhuận tốt.
 
-Nhưng support luôn có trade-off. Nếu policy chỉ giúp firm tồn tại mà không nâng capability, resources có thể bị khóa trong low-productivity firms. Policy tốt phải hỗ trợ **graduation và scale-up**, không biến SME status thành permanent destination.
+## Chính sách công nghiệp là một danh mục nhiều cơ quan
 
-KDI 2026 nhấn mạnh scale-up cần tailored policy theo bottleneck thay vì một R&D-centric formula duy nhất.
+Một dự án bán dẫn có thể đồng thời chịu ảnh hưởng của thuế, thương mại, R&D, điện, lao động, môi trường, đất đai và kiểm soát xuất khẩu. Vì vậy “chính sách bán dẫn” thực tế là kết quả phối hợp của nhiều thể chế.
 
-Xem [`06_sme_mid_sized_and_subcontracting_ecosystem.md`](./06_sme_mid_sized_and_subcontracting_ecosystem.md).
-
-## Ministry of Science and ICT: R&D, AI và digital infrastructure
-
-**Ministry of Science and ICT (MSIT / 과학기술정보통신부)** phụ trách science, national R&D, ICT, AI và digital policy. Từ 2025–2026, AI transformation và computing infrastructure trở thành priority rất lớn; MSIT cũng được nâng vai trò trong science/AI policy coordination.
-
-Với company, điều này ảnh hưởng funding cho R&D, AI compute, cloud, AI semiconductors, talent và regional digital programs.
-
-Nhưng analyst nên phân biệt **national strategy** với firm economics. Government muốn AI adoption tăng không có nghĩa mọi AI company sẽ profitable.
-
-Xem [`29_innovation_rnd_education_and_human_capital.md`](./29_innovation_rnd_education_and_human_capital.md) và [`34_digital_fintech_cloud_and_it_services.md`](./34_digital_fintech_cloud_and_it_services.md).
-
-## Industrial policy là portfolio chứ không phải một ministry
-
-Semiconductor project có thể chịu ảnh hưởng đồng thời của tax, trade, R&D, electricity, labor, environment, land và export-control policy.
-
-Vì vậy “semiconductor policy” thực tế là output của nhiều institutions.
-
-Analyst nên vẽ **institution map**:
+Một bản đồ cơ quan hữu ích có thể gồm:
 
 ```text
-Tax / Fiscal
-Trade / Industry
-Science / R&D
-Energy
-Labor
-Environment
-Competition
-Finance
-Local government
+Thuế / tài khóa
+Thương mại / công nghiệp
+Khoa học / R&D
+Năng lượng
+Lao động
+Môi trường
+Cạnh tranh
+Tài chính
+Chính quyền địa phương
 ```
 
-Sau đó mới map company exposure.
+Sau đó mới nối từng chính sách xuống doanh nghiệp cụ thể.
 
-## Policy banks: khi fiscal objective gặp credit allocation
+## Ngân hàng chính sách: phân bổ rủi ro chứ không phải tiền miễn phí
 
-Korea Development Bank, Export-Import Bank of Korea và các policy-finance institutions hỗ trợ projects có long duration, strategic externality hoặc funding gap mà private market có thể không finance đủ.
+Các tổ chức tài chính chính sách có thể hỗ trợ dự án dài hạn, ngành chiến lược hoặc trường hợp thị trường tư nhân không cung cấp đủ vốn. Tài chính chính sách có thể giảm chi phí vốn và kéo thêm vốn tư nhân vào dự án.
 
-Policy finance có thể giảm cost of capital và crowd-in private lenders. Nhưng public purpose không làm credit risk biến mất.
+Nhưng mục tiêu công không làm rủi ro tín dụng biến mất. Nếu dự án không tạo được dòng tiền tương lai, tổn thất cuối cùng vẫn phải nằm ở người vay, chủ nợ hoặc bảng cân đối công. Vì vậy nên hiểu tài chính chính sách là **cơ chế phân bổ rủi ro (risk allocation)**, không phải “vốn miễn phí”.
 
-Nếu project không tạo future cash flow, loss cuối cùng vẫn phải nằm ở borrower, lender hoặc public balance sheet.
+## Mua sắm công: nhà nước vừa điều tiết vừa có thể là khách hàng
 
-Do đó policy finance cần được phân tích như **risk allocation**, không phải free money.
+Trong quốc phòng, IT công, hạ tầng, y tế và năng lượng, cơ quan công có thể là khách hàng lớn. Mua sắm công có thể giúp công nghệ mới vượt qua “thung lũng tử thần” bằng việc tạo khách hàng tham chiếu đầu tiên.
 
-## Public procurement: government vừa là regulator vừa có thể là customer
+Nhưng tiêu chí đấu thầu, yêu cầu hồ sơ quá khứ và chứng nhận cũng có thể trở thành rào cản gia nhập. Thiết kế mua sắm vì vậy có thể thúc đẩy đổi mới hoặc khóa thị trường vào nhà cung cấp cũ.
 
-Defense, public IT, infrastructure, healthcare và energy có nhiều cases government/public institution là large buyer.
+## Chính quyền địa phương: chính sách chỉ có giá trị khi triển khai được tại chỗ
 
-Public procurement có thể giúp new technology vượt valley of death vì tạo first customer. Nhưng tender requirements, past-performance criteria và certification cũng có thể thành entry barrier.
+Chiến lược quốc gia có thể được công bố ở trung ương, nhưng nhà máy hoặc trung tâm dữ liệu vẫn cần đất, giấy phép, nước, điện, đường, nhà ở và sự chấp thuận tại địa phương.
 
-Vì vậy procurement design có thể thúc innovation hoặc khóa market vào incumbent vendors.
+Chính quyền địa phương vì vậy là **nút thực thi (implementation node)** rất quan trọng. Một cụm công nghiệp chỉ thành công khi ưu đãi trung ương và hạ tầng địa phương khớp với nhau.
 
-## Local government: policy chỉ có nghĩa khi “chạm đất”
+## Quy định có thể nâng năng suất mà không cần phát minh công nghệ mới
 
-Central government có thể công bố national strategy nhưng factory/data center cần land, permits, water, power, roads, housing và local acceptance.
+Một thay đổi quy định có thể làm chi phí áp dụng công nghệ giảm mạnh. Công nghệ SaaS có thể đã tồn tại từ trước nhưng doanh nghiệp tài chính chỉ triển khai rộng khi quy định về mạng nội bộ, bảo mật và cloud cho phép.
 
-Local government vì vậy là implementation node cực kỳ quan trọng.
+Điểm quan trọng là: năng suất không chỉ đến từ phát minh. Nó còn đến từ **quyền được triển khai phát minh trong thể chế hiện hành**.
 
-Industrial cluster policy thành công khi national incentive và local infrastructure align. Nếu chỉ có subsidy nhưng grid/water/talent thiếu, project vẫn bị bottleneck.
+## Chu kỳ chính sách: từ vấn đề đến hành vi doanh nghiệp
 
-Xem [`24_regional_clusters_and_industrial_geography.md`](./24_regional_clusters_and_industrial_geography.md).
-
-## Regulation có thể thay productivity mà không cần technology mới
-
-Một rule thay đổi có thể làm adoption cost giảm ngay.
-
-Ví dụ năm 2026, financial-sector rules cho phép broader SaaS use trên internal networks dưới security conditions. Technology SaaS đã tồn tại; điều thay đổi là regulatory friction.
-
-Đây là point quan trọng: productivity không chỉ đến từ invention. Nó còn đến từ **institutional permission to deploy invention**.
-
-## Policy cycle: từ vấn đề tới firm behavior
-
-Một policy hoàn chỉnh thường trải qua:
+Một chính sách thường đi qua chuỗi:
 
 ```text
-Problem identification
-→ Research / consultation
-→ Proposal
-→ Budget / legislation / regulation
-→ Implementation guideline
-→ Firm response
-→ Outcome data
-→ Evaluation / revision
+Nhận diện vấn đề
+→ nghiên cứu / tham vấn
+→ đề xuất
+→ ngân sách / luật / quy định
+→ hướng dẫn triển khai
+→ doanh nghiệp phản ứng
+→ dữ liệu kết quả
+→ đánh giá / sửa đổi
 ```
 
-Nếu chỉ đọc announcement, ta bỏ qua nửa sau của cycle.
+Nếu chỉ đọc thông báo ban đầu, ta bỏ qua phần quan trọng nhất là thực thi và phản ứng của doanh nghiệp.
 
-Ví dụ subsidy 100 tỷ KRW có thể nghe lớn, nhưng cần hỏi:
+Khi thấy một gói hỗ trợ, cần hỏi quy mô hỗ trợ so với CAPEX của ngành, đó là grant hay loan, doanh nghiệp phải đối ứng bao nhiêu, điều kiện đủ rộng hay hẹp, ngân sách trải trong bao nhiêu năm và dự án có xảy ra dù không có hỗ trợ hay không.
 
-- ngành capex bao nhiêu;
-- subsidy là grant hay loan;
-- company phải co-invest bao nhiêu;
-- eligibility hẹp hay rộng;
-- budget dùng trong 1 năm hay 5 năm;
-- project có xảy ra dù không có subsidy không.
+## Crowding-in và crowding-out
 
-Magnitude luôn cần denominator.
+Nếu hỗ trợ công khiến vốn tư nhân cùng vào một dự án có ngoại tác tích cực, chính sách tạo **hiệu ứng kéo vốn tư nhân vào (crowding-in)**.
 
-## Industrial policy và crowding-in vs crowding-out
+Nếu trợ cấp chỉ thay thế vốn tư nhân vốn đã sẵn sàng đầu tư, hiệu quả bổ sung có thể thấp; đây là **hiệu ứng thay thế (crowding-out / replacement)**.
 
-Nếu public support khiến private capital cùng vào project có spillover lớn, policy **crowd in** investment.
+Vì vậy đánh giá chính sách phải hỏi câu phản thực: **nếu không có chính sách, doanh nghiệp sẽ làm gì?**
 
-Nếu government subsidy chỉ thay vốn private vốn đã sẵn sàng đầu tư, fiscal money tạo ít additional effect. Đây là **crowding out / replacement**.
+## Đánh đổi chính sách là bình thường
 
-Do đó đánh giá policy phải hỏi counterfactual: nếu không có policy, company sẽ làm gì?
+Giữ giá điện thấp giúp hộ gia đình và nhà sản xuất nhưng có thể làm doanh nghiệp điện lực yếu tài chính. Hỗ trợ SME bảo vệ việc làm nhưng có thể trì hoãn việc doanh nghiệp yếu rời thị trường. Quy định nền tảng có thể giảm lạm dụng nhưng làm chi phí tuân thủ tăng. Trợ cấp công nghiệp có thể tăng công suất nhưng cũng tạo nguy cơ dư cung.
 
-## Policy trade-off là rule, không phải exception
-
-Giữ electricity tariff thấp giúp household/manufacturer nhưng làm utility cash flow yếu. SME support giữ employment nhưng có thể trì hoãn exit. Platform regulation giảm abuse nhưng có thể tăng compliance cost. Industrial subsidy tăng capacity nhưng có risk overinvestment.
-
-Policy không thể tối ưu mọi objective cùng lúc.
-
-First-principles reasoning nên hỏi:
+Không có chính sách nào tối ưu mọi mục tiêu cùng lúc. Khi đọc một biện pháp, nên hỏi:
 
 ```text
-Market failure nào đang sửa?
-Incentive nào bị thay?
-Ai nhận benefit?
-Ai trả cost?
-Second-order effect là gì?
+Thất bại thị trường nào đang được sửa?
+Động lực nào bị thay đổi?
+Ai nhận lợi ích?
+Ai chịu chi phí?
+Tác động vòng hai là gì?
 ```
 
-## How to read a policy announcement như analyst
+## Cách đọc một thông báo chính sách như nhà phân tích
 
-Một workflow thực tế:
+Hãy xác định cơ quan ban hành, tình trạng pháp lý, đối tượng đủ điều kiện, quy mô hỗ trợ, thời gian thực thi và biến số doanh nghiệp nào bị thay đổi. Sau đó nối chính sách vào P&L, bảng cân đối, CAPEX hoặc chi phí vốn của công ty cụ thể.
 
-1. Xác định institution nào ban hành.
-2. Xác định instrument: tax, loan, guarantee, grant, regulation hay procurement.
-3. Kiểm tra stage: proposal hay final rule.
-4. Xác định denominator: policy lớn cỡ nào so với market/capex.
-5. Map beneficiaries trực tiếp và gián tiếp.
-6. Xác định cost bearer.
-7. Ước tính time lag.
-8. Tìm unintended incentives.
-9. Theo dõi data sau implementation.
+Một tiêu đề “hỗ trợ 1 nghìn tỷ KRW” gần như vô nghĩa nếu không biết quy mô CAPEX của ngành là 5 nghìn tỷ hay 500 nghìn tỷ KRW.
 
-Đây là cách biến policy news thành company analysis thay vì chỉ ghi headline.
+## Mental Model — mô hình tư duy
 
-## Mental Model
-
-> Hệ thống policy Hàn Quốc là một **multi-node incentive network**. Company outcome xuất hiện khi fiscal policy, monetary policy, regulation, industrial strategy, local implementation và market response tương tác với nhau.
-
-Một mental model ngắn:
+> Thể chế là **hệ điều hành của nền kinh tế**. Chính sách thay đổi phần thưởng, chi phí và ràng buộc của doanh nghiệp; doanh nghiệp phản ứng; tổng hợp các phản ứng đó lại trở thành kết quả vĩ mô mới.
 
 ```text
-Institution
-   ↓
-Rule / Budget / Incentive
-   ↓
-Relative cost & return
-   ↓
-Firm behavior
-   ↓
-Investment / Hiring / Pricing
-   ↓
-Macro outcome
-   ↓
-Policy feedback
+Thể chế
+  ↓
+Quy tắc / giá / ưu đãi
+  ↓
+Hành vi doanh nghiệp và hộ gia đình
+  ↓
+Đầu tư / tiêu dùng / tuyển dụng
+  ↓
+Kết quả kinh tế
+  ↓
+Dữ liệu mới → chính sách mới
 ```
 
-## Common misconceptions
+## Những nhầm lẫn thường gặp
 
-**“Government announced support” = cash đã vào company.** Sai. Còn budget, eligibility và implementation.
+Thông báo chính sách không đồng nghĩa tiền đã được chi. Trợ cấp không đảm bảo dự án tốt. Chính sách công nghiệp hiện đại không nhất thiết giống tín dụng chỉ đạo thời 1970s. Một cơ quan trung ương không thể một mình triển khai dự án nếu điện, đất và giấy phép địa phương thiếu. Chính sách tốt phải được đánh giá theo hành vi và kết quả thực tế, không chỉ theo quy mô ngân sách công bố.
 
-**“Free market” = không có policy.** Sai. Central bank, tax, competition law và infrastructure luôn định hình incentives.
+## Liên kết
 
-**“Industrial policy chọn winner thì winner chắc thắng.”** Sai. Market execution vẫn quyết định survival.
-
-**“Một ministry chịu trách nhiệm toàn bộ industry.”** Sai. Strategic industries thường chịu nhiều policy domains cùng lúc.
-
-**“Regulation chỉ tạo cost.”** Sai. Regulation có thể tạo trust, interoperability hoặc giảm systemic risk; nhưng thiết kế kém cũng có thể tạo entry barrier.
-
-## Connections
-
-Đọc cùng [`01_macro_economy_and_business_cycle.md`](./01_macro_economy_and_business_cycle.md), [`04_chaebol_and_large_business_groups.md`](./04_chaebol_and_large_business_groups.md), [`06_sme_mid_sized_and_subcontracting_ecosystem.md`](./06_sme_mid_sized_and_subcontracting_ecosystem.md), [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md), [`22_tax_regulation_and_competition.md`](./22_tax_regulation_and_competition.md), [`25_public_enterprises_and_state_owned_companies.md`](./25_public_enterprises_and_state_owned_companies.md), [`27_demographics_households_and_consumption.md`](./27_demographics_households_and_consumption.md), [`29_innovation_rnd_education_and_human_capital.md`](./29_innovation_rnd_education_and_human_capital.md) và [`30_energy_security_power_market_and_transition.md`](./30_energy_security_power_market_and_transition.md).
-
-### Nguồn nền và trạng thái institution hiện hành
-
-- Ministry of Finance and Economy, 2026 Economic Growth Strategy: https://english.moef.go.kr/
-- Bank of Korea: https://www.bok.or.kr/eng/main/main.do
-- Financial Services Commission: https://www.fsc.go.kr/eng/
-- Korea Fair Trade Commission: https://www.ftc.go.kr/
-- Ministry of SMEs and Startups: https://eng.mss.go.kr/
-- Ministry of Science and ICT: https://www.msit.go.kr/eng/
-
-Tên và cơ cấu institutions là thông tin có thể thay đổi theo government reorganization; chapter này dùng trạng thái công khai đến năm 2026 và nên re-check khi sử dụng cho legal/policy work sau này.
+Đọc cùng [`01_macro_economy_and_business_cycle.md`](./01_macro_economy_and_business_cycle.md), [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md), [`21_economy_to_company_transmission.md`](./21_economy_to_company_transmission.md), [`22_tax_regulation_and_competition.md`](./22_tax_regulation_and_competition.md), [`24_regional_clusters_and_industrial_geography.md`](./24_regional_clusters_and_industrial_geography.md) và [`29_innovation_rnd_education_and_human_capital.md`](./29_innovation_rnd_education_and_human_capital.md).

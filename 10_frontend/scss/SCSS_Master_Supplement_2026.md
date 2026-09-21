@@ -2727,6 +2727,20 @@ Official:
 
 ---
 
+---
+
+# 161. Module Graph Review — checklist ở mức library/tooling specialist
+
+Khi review một Sass package, hãy vẽ dependency graph thay vì chỉ nhìn folder tree. Mỗi node nên được phân loại: tool-only, style-emitting, configuration source hay facade/entry point. Cycle hoặc dependency ngược từ low-level token module lên component module là dấu hiệu boundary sai. Nếu một tool module cần component variable để hoạt động, ownership đang bị đảo.
+
+`@use` bảo đảm module được evaluate một lần theo canonical URL, nhưng canonicalization/importer behavior vẫn quan trọng trong library tooling. Hai URL khác nhau trỏ cùng logical module cần được importer canonicalize đúng để tránh duplicate module identities. Đây là lý do custom importer/package design thuộc master-level Sass chứ không chỉ syntax.
+
+Migration từ `@import` nên được làm theo graph: xác định globals thật sự là public config, globals nào là accidental coupling, tách facade, rồi mới chạy migrator/replace syntax. Chuyển máy móc `@import` thành `@use as *` giữ lại global namespace problem và bỏ lỡ phần lớn lợi ích module system.
+
+Generated CSS là acceptance test cuối cùng. Sau migration, diff selector count, declaration duplication, layer/source order và bundle bytes; compile success không đủ chứng minh behavior giữ nguyên.
+
+---
+
 # Kết luận
 
 “Master SCSS” không có nghĩa biến Sass thành programming language phức tạp nhất có thể.

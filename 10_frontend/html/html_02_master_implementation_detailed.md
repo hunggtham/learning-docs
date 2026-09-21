@@ -1120,6 +1120,235 @@ Một tag quan trọng vì nó tham gia một hoặc nhiều layers trong flow n
 
 ---
 
+# PHẦN 20 — AUDIT HOÀN THIỆN COVERAGE CÒN THIẾU
+
+Phần này khép những khoảng nhỏ còn lại sau khi audit toàn bộ canonical HTML notes theo document structure, semantics, metadata, tables, forms, validation, DOM, accessibility, performance, security, modern HTML và legacy HTML. Các mục dưới đây không phải danh sách thuộc lòng; mục tiêu vẫn là hiểu **meaning → browser processing → lúc dùng → semantic/accessibility implication**.
+
+## 73. `<colgroup>` và `<col>`: mô tả nhóm cột, không phải header thay thế
+
+Trong table, `colgroup` và `col` cho phép author mô tả hoặc style một nhóm cột mà không cần lặp class trên từng cell:
+
+```html
+<table>
+  <caption>Monthly sales</caption>
+
+  <colgroup>
+    <col>
+    <col class="money-column">
+  </colgroup>
+
+  <thead>
+    <tr>
+      <th scope="col">Product</th>
+      <th scope="col">Revenue</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row">Keyboard</th>
+      <td>$10,000</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+Browser dùng column model của table để áp dụng một số presentation/column properties phù hợp. Nhưng `col` không thay `th`: nó không tạo accessible header relationship cho data cells. Nếu column có meaning cần screen reader hiểu, vẫn dùng `th`, `scope`, và với table phức tạp có thể cần `headers`/`id` association. Senior review vì vậy phải tách **column structural grouping** khỏi **header semantics**.
+
+---
+
+## 74. Những `input type` dễ bị bỏ sót: `submit`, `reset`, `button`, `image`
+
+`<input type="submit">` tạo submit control tương tự submit button nhưng label đến từ `value`. `<input type="button">` tạo generic push button nhưng không có rich child content như `<button>`. `<input type="reset">` restore default form state, không phải “xóa tất cả về rỗng”. Với application UI hiện đại, `<button>` thường expressive hơn vì chứa được markup và text linh hoạt.
+
+`<input type="image">` là submit control dùng image. Nếu phải dùng, `alt` có accessibility meaning rất quan trọng vì image là label của control:
+
+```html
+<input
+  type="image"
+  src="/pay.png"
+  alt="Pay now">
+```
+
+Browser còn có thể submit click coordinates theo form semantics. Vì behavior khá đặc thù, đừng dùng `type="image"` chỉ để có một button đẹp; ordinary `<button>` + CSS thường rõ ràng hơn.
+
+---
+
+## 75. `form`, `novalidate`, `formnovalidate` và `accept-charset`
+
+`form="id"` cho phép một form-associated control thuộc form ngay cả khi nó không nằm trong subtree form đó. Browser resolve ID tới form owner, vì vậy visual layout và form ownership không nhất thiết trùng nhau.
+
+`novalidate` trên `<form>` tắt interactive constraint validation của browser cho submission đó:
+
+```html
+<form action="/save" method="post" novalidate>
+```
+
+`formnovalidate` trên submitter cho phép bỏ validation chỉ với một action, ví dụ “Save draft” trong khi “Publish” vẫn validate:
+
+```html
+<button type="submit">Publish</button>
+<button type="submit" formnovalidate>Save draft</button>
+```
+
+Hai attributes này không có nghĩa server được bỏ validation. Chúng chỉ thay đổi browser-side constraint-validation step.
+
+`accept-charset` mô tả encoding dùng cho form submission. Trong modern HTML, UTF-8 là encoding cần nghĩ tới; đừng xây architecture phụ thuộc legacy encodings nếu không có contract bắt buộc.
+
+---
+
+## 76. Native constraint validation thực sự hoạt động thế nào?
+
+Các attributes như `required`, `type="email"`, `min`, `max`, `step`, `pattern`, `minlength` và `maxlength` tham gia **constraint validation model**. Browser không chỉ “đọc attribute rồi đổi viền đỏ”; control có live validity state trong DOM.
+
+Ví dụ:
+
+```js
+const email = document.querySelector('#email');
+
+email.checkValidity();
+email.reportValidity();
+console.log(email.validity);
+console.log(email.validationMessage);
+```
+
+`checkValidity()` kiểm tra và trả boolean; `reportValidity()` còn có thể yêu cầu browser present validation UI. `ValidityState` cho biết lý do như `valueMissing`, `typeMismatch`, `patternMismatch`, `tooLong`, `rangeUnderflow` hoặc `stepMismatch` tùy control.
+
+Custom rule có thể dùng:
+
+```js
+email.setCustomValidity('Email is already registered');
+```
+
+Nhưng khi lỗi đã hết phải reset bằng empty string, nếu không control sẽ tiếp tục invalid. Accessibility-wise, native validation message không thay thế requirement làm error state rõ, associate helper/error text phù hợp và bảo đảm keyboard/screen-reader user hiểu lỗi. Server-side validation vẫn là authority cuối cùng.
+
+---
+
+## 77. `accept`, `list`, `size`, `placeholder`: hint, association và presentation khác nhau
+
+`accept` trên file input là hint cho file picker về MIME type/extension mong muốn:
+
+```html
+<input
+  type="file"
+  accept="image/png,image/jpeg">
+```
+
+Browser có thể lọc picker UI, nhưng attacker vẫn có thể gửi file khác bằng request thủ công, nên server phải inspect content/type/size độc lập.
+
+`list="id"` nối input với `datalist` để browser cung cấp suggestions. Nó không biến input thành closed enum; user vẫn có thể nhập value khác nếu validation không cấm.
+
+`size` ảnh hưởng kích thước hiển thị ở một số text/select controls nhưng không giới hạn độ dài dữ liệu; `maxlength` mới liên quan length constraint. `placeholder` là hint ngắn, không phải label. Các attributes trông giống “UI config”, nhưng mỗi cái tác động một layer khác nên không được dùng thay thế lẫn nhau.
+
+---
+
+## 78. `accesskey`, `autocapitalize` và `autocorrect`
+
+`accesskey` có thể gán shortcut activation/focus, nhưng actual key combination phụ thuộc browser và operating system. Shortcut tự chọn còn có thể conflict với browser, assistive technology hoặc user conventions. Vì vậy đây không phải attribute nên rải khắp application chỉ để “hỗ trợ keyboard”. Natural tab order và native controls quan trọng hơn.
+
+`autocapitalize` và `autocorrect` là hints cho supported input methods, đặc biệt mobile keyboards. Ví dụ username hoặc code field có thể không muốn automatic capitalization/correction, trong khi prose field có thể hưởng lợi. Chúng không validate content và không thay business normalization.
+
+---
+
+## 79. `loading="lazy"` trên iframe và trách nhiệm accessibility vẫn còn nguyên
+
+Không chỉ image, iframe phù hợp cũng có thể dùng lazy loading để trì hoãn fetch khi nó còn xa viewport:
+
+```html
+<iframe
+  src="https://example.com/embed"
+  title="Interactive map"
+  loading="lazy">
+</iframe>
+```
+
+Browser quyết định scheduling dựa trên heuristics. `loading="lazy"` là performance hint, không phải guarantee chính xác thời điểm request.
+
+Lazy loading không thay semantic requirement. Iframe vẫn cần `title` hữu ích; nếu third-party content critical cho task, phải test keyboard/focus/loading states và fallback UX. Đừng lazy-load content ngay đầu viewport nếu điều đó làm user chờ phần chính của page.
+
+---
+
+## 80. `meta name="theme-color"` và `link rel="manifest"`
+
+`theme-color` cho phép page gợi ý màu browser UI trong supporting environments:
+
+```html
+<meta
+  name="theme-color"
+  content="#ffffff">
+```
+
+Có thể dùng `media` trong relevant metadata scenarios để có value phù hợp light/dark preferences. Đây là browser-chrome metadata, không phải substitute cho CSS background hay accessible contrast trong page content.
+
+PWA/web-app metadata còn có thể liên kết manifest:
+
+```html
+<link rel="manifest" href="/site.webmanifest">
+```
+
+Browser fetch manifest như một external resource khi feature/platform cần. Manifest chứa app-level metadata như name, icons, display behavior; HTML `link` chỉ khai báo relationship. SEO không tự tốt hơn vì có manifest, và accessibility của page vẫn phụ thuộc markup/content thực tế.
+
+---
+
+## 81. `blocking="render"`: khi author chủ động đánh dấu render-blocking
+
+HTML hiện đại có `blocking` trên các element resource phù hợp như `link`, `script`, `style`; token hiện tại đáng quan tâm là `render`.
+
+Concept:
+
+```html
+<link
+  rel="stylesheet"
+  href="/critical.css"
+  blocking="render">
+```
+
+Attribute này tham gia browser rendering pipeline, không phải network priority flag chung. `blocking="render"` và `fetchpriority="high"` giải quyết hai concerns khác nhau: một cái liên quan việc operation nào có thể bị block chờ resource, cái kia là scheduling hint cho fetch.
+
+Không thêm `blocking="render"` bừa. Render-blocking resource kéo dài critical path nếu resource chậm. Chỉ dùng khi bạn hiểu chính xác vì sao page phải đợi resource đó trước rendering và đã đo performance.
+
+---
+
+## 82. Declarative Shadow DOM 2026: không chỉ có `shadowrootmode`
+
+Ngoài `shadowrootmode`, platform hiện còn định nghĩa thêm các attributes cho declarative shadow-root configuration. `shadowrootdelegatesfocus` liên quan focus delegation; `shadowrootclonable` cho biết shadow root có thể tham gia cloning behavior; `shadowrootserializable` liên quan việc shadow root có thể được serialize bởi các HTML serialization APIs phù hợp; `shadowrootslotassignment` chọn named hay manual slot assignment; `shadowrootcustomelementregistry` phục vụ architecture dùng custom-element registry gắn với shadow root.
+
+Ví dụ concept:
+
+```html
+<template
+  shadowrootmode="open"
+  shadowrootserializable
+  shadowrootclonable
+  shadowrootslotassignment="named">
+  <slot></slot>
+</template>
+```
+
+Đây là infrastructure-level HTML. Beginner không cần dùng, nhưng senior làm Web Components/SSR phải biết chúng tác động **browser-created ShadowRoot**, không phải chỉ là arbitrary data attributes. Browser/tooling support vẫn phải được kiểm tra theo target environment, đặc biệt với options mới hơn.
+
+---
+
+## 83. `interestfor`: hiểu hướng phát triển nhưng chưa coi là baseline production
+
+Interest invoker là một hướng mới cho phép control biểu diễn “interest” như hover/focus để target có thể phản ứng, thường kết hợp với `popover="hint"`. Một concept markup có thể trông như:
+
+```html
+<button interestfor="user-preview">
+  Alice
+</button>
+
+<div id="user-preview" popover="hint">
+  Profile preview
+</div>
+```
+
+Ý tưởng platform là browser có thể giúp chuẩn hóa hover/focus-interest relationship thay vì mỗi framework tự viết timers, pointer/focus coordination và tooltip state machine.
+
+Tuy nhiên ở thời điểm audit tháng 9/2026, `interestfor`/related DOM APIs vẫn cần được xem là **experimental/limited-availability** chứ không phải capability mà production code có thể assume cross-browser. Hãy dùng nó như kiến thức về hướng phát triển của platform; nếu triển khai thực tế, feature-detect/progressive-enhance và giữ fallback semantics hoạt động được.
+
+---
+
 # KẾT LUẬN
 
 HTML mastery không phải khả năng thuộc một danh sách 150 tags. Nó là khả năng giải thích **meaning → browser processing → use case → semantic consequence → accessibility/security/performance implication** của markup quan trọng.

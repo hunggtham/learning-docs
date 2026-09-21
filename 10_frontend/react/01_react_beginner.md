@@ -147,6 +147,14 @@ Một update đi qua `trigger → render → reconciliation → commit → brows
 
 State cũng không nằm trong biến local. `count` từ `useState` là snapshot của render hiện tại; React giữ state gắn với identity trong tree. Setter queue update chứ không mutate biến JavaScript. Class `this.state`/`this.setState` và Hooks khác API nhưng cùng invariant này. Mental model này giải thích immutable update, stale closure, preserve/reset state, batching và `key`.
 
+## 3B. Render tree, component call và DOM update là ba chuyện khác nhau
+
+Khi React render một component, React đang gọi component để lấy mô tả UI cho snapshot props/state hiện tại. Kết quả này tạo **render tree** gồm React elements và component boundaries; nó chưa đồng nghĩa browser DOM đã đổi. Parent render thường khiến React đi xuống render children để tính tree mới, nhưng sau reconciliation React chỉ commit host changes thực sự cần thiết. Vì vậy `console.log` trong component có thể chạy dù DOM cuối cùng không đổi.
+
+Điều này dẫn đến ba câu hỏi khác nhau khi debug: **vì sao component được render?**, **kết quả render mới khác tree cũ ở đâu?**, và **commit có thay DOM hay chạy Effect/ref nào không?**. Gộp ba câu hỏi thành “React render lại quá nhiều” thường dẫn tới tối ưu sai chỗ.
+
+Render cũng không phải lifecycle event để làm side effect. React hiện đại có thể gọi render nhiều lần để kiểm tra purity, hoặc chuẩn bị work rồi bỏ kết quả trước commit. Code trong render vì vậy phải có tính chất tính toán: cùng input phải cho output tương thích và không để lại mutation bên ngoài.
+
 ## 4. Tạo project React hiện đại
 
 Create React App không còn là lựa chọn khuyến nghị cho project mới. Với học React core hoặc SPA client-side, Vite là lựa chọn phổ biến:
@@ -840,6 +848,14 @@ const [items, setItems] = useState(() => createInitialItems());
 
 Setter thêm update vào hàng đợi. Nhiều `setCount(count + 1)` trong cùng handler đều đọc cùng snapshot; `setCount(c => c + 1)` nhận kết quả queued trước nên đúng khi state mới phụ thuộc state cũ. Class `setState(state => ...)` có cùng mục đích, nhưng object `setState` của class shallow-merge còn Hook setter replace value. React 18 với modern root mở rộng automatic batching sang nhiều async sources; correctness không nên dựa vào giả định mỗi setter render ngay một lần.
 
+## 9B. State ownership, minimal state và source of truth
+
+Một state tốt phải có **owner** rõ: component nào chịu trách nhiệm thay đổi nó và subtree nào cần đọc nó. Nếu hai sibling cần cùng một giá trị, thường nâng state lên nearest common owner thay vì tạo hai bản sao rồi dùng Effect để đồng bộ. Nếu giá trị có thể tính từ props/state hiện có, hãy derive trong render thay vì lưu thêm một source of truth.
+
+Ví dụ không nên lưu cả `items` lẫn `visibleItems` nếu `visibleItems` chỉ là `items.filter(...)`. Duplicate state tạo bài toán đồng bộ, còn derived value tự cập nhật theo render. Tương tự, state nên mô tả dữ liệu nghiệp vụ tối thiểu chứ không mô tả mọi biến trung gian của UI.
+
+State update phải được hiểu theo snapshot. Event handler của một render nhìn thấy snapshot của render đó; setter queue state cho render tiếp theo. Khi state mới phụ thuộc state cũ, updater function như `setCount(c => c + 1)` mô tả transition chính xác hơn việc đọc snapshot cũ nhiều lần. Đây là invariant chung dù syntax là class `setState` hay Hook setter.
+
 ## 10. Render, re-render và batching
 
 Component render lần đầu khi mount. Sau đó nó có thể render lại khi state thay đổi, parent render, context đọc được thay đổi hoặc các cơ chế liên quan khác kích hoạt update.
@@ -867,6 +883,27 @@ Không nên giả định mỗi setter tạo một render ngay lập tức.
 Reconciliation so tree mới với tree trước. Mental model dành cho application code là **type + position + key**. Cùng type ở cùng vị trí thường giữ local state khi props đổi; đổi type thường thay subtree và reset state. `key` thêm identity nghiệp vụ ngoài vị trí, nên `<Editor key={document.id} />` có thể chủ động reset draft khi đổi document mà không cần Effect chỉ để `setDraft('')`.
 
 React 16 đưa Fiber để render work có thể được chia và schedule linh hoạt hơn; application code không truy cập Fiber internals. Invariant xuyên React cũ và mới vẫn là render purity và identity qua type/position/key.
+
+## 10B. Reconciliation bằng ví dụ: type, position và key
+
+Reconciliation không phải “deep compare toàn bộ DOM”. Ở mức mental model, React dùng cấu trúc tree để quyết định identity. Nếu cùng component type tiếp tục xuất hiện ở cùng vị trí logic, React thường preserve local state. Nếu type đổi, subtree tương ứng thường được thay và state bên trong reset. `key` cho phép bạn nói rõ identity khi vị trí không đủ.
+
+Một lỗi khó thấy là khai báo component bên trong component khác:
+
+```jsx
+function Page() {
+  function Editor() {
+    const [text, setText] = useState('');
+    return <input value={text} onChange={e => setText(e.target.value)} />;
+  }
+
+  return <Editor />;
+}
+```
+
+Mỗi render của `Page` tạo một function component type mới, nên React có thể coi `Editor` là type khác và reset state. Hãy khai báo component ở module scope trừ khi bạn thật sự cần một function helper không phải component.
+
+`key` cũng không chỉ dành cho list. Nếu `documentId` đổi và draft phải bắt đầu như một editor instance mới, `<Editor key={documentId} />` biểu đạt reset identity trực tiếp. Ngược lại, dùng key ngẫu nhiên khiến subtree remount mỗi render, làm mất state, focus và có thể tăng chi phí DOM.
 
 ## 11. Conditional rendering
 
