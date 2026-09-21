@@ -73,7 +73,7 @@
       "rights": "author-confirmed"
     },
     {
-      "path": "10_frontend/css/CSS_Beginner_to_Senior_2026_v2.md",
+      "path": "10_frontend/css/CSS_Beginner_to_Senior_2026.md",
       "title": "CSS: Beginner to Senior",
       "category": "Frontend",
       "language": "vi-en",
@@ -101,15 +101,15 @@
       "rights": "author-confirmed"
     },
     {
-      "path": "10_frontend/tailwind/TailwindCSS_Beginner_to_Senior_2026_REWRITTEN.md",
-      "title": "Tailwind CSS: Beginner to Senior (rewritten)",
+      "path": "10_frontend/tailwind/TailwindCSS_Beginner_to_Senior_2026.md",
+      "title": "Tailwind CSS: Beginner to Senior",
       "category": "Frontend",
       "language": "vi-en",
       "rights": "author-confirmed"
     },
     {
-      "path": "10_frontend/tailwind/TailwindCSS_Master_Supplement_2026_REWRITTEN.md",
-      "title": "Tailwind CSS Master Supplement (rewritten)",
+      "path": "10_frontend/tailwind/TailwindCSS_Master_Supplement_2026.md",
+      "title": "Tailwind CSS Master Supplement",
       "category": "Frontend",
       "language": "vi-en",
       "rights": "author-confirmed"
