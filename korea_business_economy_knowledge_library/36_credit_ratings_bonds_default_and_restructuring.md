@@ -1,483 +1,471 @@
-# Credit rating, trái phiếu, default và restructuring tại doanh nghiệp Hàn Quốc (Credit Risk / 신용위험·회사채·구조조정)
+# Xếp hạng tín nhiệm, trái phiếu, vỡ nợ và tái cấu trúc tại doanh nghiệp Hàn Quốc (Credit Risk / 신용위험·회사채·구조조정)
 
-Một company có thể vẫn báo operating profit nhưng rơi vào crisis nếu debt maturity đến trước cash. Vì vậy muốn hiểu doanh nghiệp, đặc biệt là construction, heavy industry, airline, retail, leveraged holding company hoặc project-heavy business, phải tách **profitability risk** khỏi **credit risk / 신용위험**.
+Một doanh nghiệp có thể vẫn báo lợi nhuận hoạt động nhưng rơi vào khủng hoảng nếu nợ đáo hạn trước khi tiền mặt về. Vì vậy khi phân tích doanh nghiệp, đặc biệt là xây dựng, công nghiệp nặng, hàng không, bán lẻ, công ty mẹ có đòn bẩy cao hoặc doanh nghiệp dự án, phải tách **rủi ro lợi nhuận** khỏi **rủi ro tín dụng (credit risk / 신용위험)**.
 
-Credit analysis không hỏi trước tiên “company có tăng trưởng không?”. Nó hỏi: **company có đủ cash để trả đúng nghĩa vụ, đúng thời điểm, trong một range scenario hợp lý hay không?**
+Phân tích tín dụng không hỏi đầu tiên “doanh nghiệp có tăng trưởng không?”. Nó hỏi: **doanh nghiệp có đủ tiền để trả đúng nghĩa vụ, đúng thời điểm, trong một phạm vi kịch bản hợp lý hay không?**
 
-Chapter này nối accounting, corporate funding, bond market và restructuring thành một flow duy nhất.
+Chapter này nối kế toán, tài trợ doanh nghiệp, thị trường trái phiếu và tái cấu trúc thành một chuỗi duy nhất.
 
-## 1. Credit risk là gì?
+## 1. Rủi ro tín dụng là gì?
 
-**Credit risk / 신용위험** là risk borrower hoặc issuer không thực hiện đầy đủ nghĩa vụ contract: interest, principal hoặc payment khác.
+**Rủi ro tín dụng (credit risk / 신용위험)** là khả năng người vay hoặc tổ chức phát hành không thực hiện đầy đủ nghĩa vụ hợp đồng như trả lãi, gốc hoặc các khoản thanh toán khác.
 
 Ba khái niệm nên tách:
 
-- **Default probability (PD / 부도확률):** xác suất borrower default.
-- **Loss given default (LGD / 부도시손실률):** nếu default thì creditor mất bao nhiêu sau recovery.
-- **Exposure at default (EAD / 부도시익스포저):** exposure tại thời điểm default.
+- **Xác suất vỡ nợ (Probability of Default / PD / 부도확률):** xác suất người vay vỡ nợ.
+- **Mức tổn thất khi vỡ nợ (Loss Given Default / LGD / 부도시손실률):** nếu vỡ nợ thì chủ nợ mất bao nhiêu sau thu hồi.
+- **Dư nợ tại thời điểm vỡ nợ (Exposure at Default / EAD / 부도시익스포저):** mức phơi nhiễm tại thời điểm xảy ra vỡ nợ.
 
-Một approximation:
-
-\[
-Expected\ Credit\ Loss \approx PD \times LGD \times EAD
-\]
-
-Credit analyst không chỉ quan tâm whether default happens mà còn recovery value nếu nó xảy ra.
-
-## 2. Equity investor và creditor nhìn cùng company khác nhau thế nào?
-
-Equity holder hưởng upside sau khi mọi fixed claims được trả. Creditor thường chỉ nhận principal + interest như contract; upside bị giới hạn nhưng downside là loss nếu borrower fail.
-
-Vì vậy equity investor có thể thích aggressive expansion nếu expected upside lớn. Creditor thường quan tâm cash-flow stability, collateral, covenants và downside protection hơn.
-
-Một project có NPV dương nhưng volatility rất cao có thể attractive cho equity nhưng uncomfortable cho creditor nếu project làm leverage tăng mạnh.
-
-## 3. Corporate bond (회사채) hoạt động thế nào?
-
-Khi company phát hành **corporate bond / 회사채**, investor cho issuer vay theo terms đã định: face value, coupon, maturity, ranking và covenant.
-
-Bond price và yield di chuyển ngược chiều. Nếu market yêu cầu yield cao hơn do benchmark rate hoặc credit spread tăng, price của bond cũ giảm.
-
-Yield có thể hiểu gần đúng:
+Có thể gần đúng:
 
 \[
-Corporate\ Yield \approx Government\ Benchmark + Credit\ Spread + Liquidity\ Premium + Term\ Premium
+Tổn\ thất\ tín\ dụng\ kỳ\ vọng \approx PD \times LGD \times EAD
 \]
 
-Credit spread phản ánh compensation mà investor yêu cầu cho issuer-specific/default risk và uncertainty.
+Nhà phân tích tín dụng không chỉ quan tâm vỡ nợ có xảy ra hay không mà còn quan tâm giá trị thu hồi nếu nó xảy ra.
 
-## 4. Spread là một market signal, không phải diagnosis hoàn chỉnh
+## 2. Cổ đông và chủ nợ nhìn cùng một doanh nghiệp khác nhau thế nào?
 
-Nếu credit spread widen nhanh, market đang yêu cầu premium lớn hơn. Nhưng analyst vẫn phải hỏi nguyên nhân:
+Cổ đông hưởng phần tăng giá trị sau khi mọi nghĩa vụ cố định được trả. Chủ nợ thường chỉ nhận gốc và lãi theo hợp đồng; phần tăng giá trị bị giới hạn nhưng lại chịu tổn thất nếu doanh nghiệp không trả được nợ.
+
+Vì vậy cổ đông có thể thích mở rộng mạnh nếu kỳ vọng tăng trưởng lớn. Chủ nợ thường quan tâm nhiều hơn tới sự ổn định dòng tiền, tài sản bảo đảm, điều khoản nợ và khả năng bảo vệ trong kịch bản xấu.
+
+Một dự án có NPV dương nhưng biến động rất cao có thể hấp dẫn cổ đông nhưng không hấp dẫn chủ nợ nếu làm đòn bẩy tăng quá mạnh.
+
+## 3. Trái phiếu doanh nghiệp hoạt động thế nào?
+
+Khi doanh nghiệp phát hành **trái phiếu doanh nghiệp (corporate bond / 회사채)**, nhà đầu tư cho doanh nghiệp vay theo các điều khoản như mệnh giá, lãi suất coupon, ngày đáo hạn, thứ tự ưu tiên và covenant.
+
+Giá trái phiếu và lợi suất di chuyển ngược chiều. Nếu thị trường yêu cầu lợi suất cao hơn do lãi suất chuẩn hoặc chênh lệch tín dụng tăng, giá của trái phiếu cũ giảm.
+
+Có thể hình dung:
+
+\[
+Lợi\ suất\ trái\ phiếu\ doanh\ nghiệp \approx Lợi\ suất\ chuẩn\ chính\ phủ + Chênh\ lệch\ tín\ dụng + Phần\ bù\ thanh\ khoản + Phần\ bù\ kỳ\ hạn
+\]
+
+**Chênh lệch tín dụng (credit spread)** phản ánh phần bù mà nhà đầu tư yêu cầu cho rủi ro riêng của tổ chức phát hành, rủi ro vỡ nợ và bất định.
+
+## 4. Chênh lệch tín dụng là tín hiệu thị trường, không phải chẩn đoán hoàn chỉnh
+
+Nếu chênh lệch tín dụng tăng nhanh, thị trường đang yêu cầu phần bù cao hơn. Nhưng vẫn phải hỏi nguyên nhân:
 
 ```text
-Benchmark rate tăng?
-Sector risk tăng?
-Issuer leverage tăng?
-Liquidity giảm?
-Event risk?
-Market-wide risk-off?
+Lãi suất chuẩn tăng?
+Rủi ro ngành tăng?
+Đòn bẩy doanh nghiệp tăng?
+Thanh khoản thị trường giảm?
+Rủi ro sự kiện?
+Toàn thị trường chuyển sang né rủi ro?
 ```
 
-Spread có thể đi trước rating action, nhưng cũng có thể overshoot trong panic.
+Spread có thể phản ứng trước xếp hạng tín nhiệm, nhưng cũng có thể tăng quá mức trong giai đoạn hoảng loạn.
 
-## 5. Credit rating là gì? (신용등급)
+## 5. Xếp hạng tín nhiệm là gì?
 
-**Credit rating / 신용등급** là opinion có structure về relative creditworthiness. Rating agencies thường xem business risk, competitive position, financial policy, leverage, coverage, liquidity, group support và event risk.
+**Xếp hạng tín nhiệm (credit rating / 신용등급)** là đánh giá có cấu trúc về mức độ tín nhiệm tương đối. Tổ chức xếp hạng thường xem xét rủi ro kinh doanh, vị thế cạnh tranh, chính sách tài chính, đòn bẩy, khả năng trả lãi, thanh khoản, hỗ trợ của tập đoàn và rủi ro sự kiện.
 
-Rating không phải guarantee. Một AAA-like label không nghĩa loss probability bằng zero. Một low rating cũng không nghĩa default chắc chắn.
+Xếp hạng không phải bảo đảm. Nhãn AAA không có nghĩa xác suất tổn thất bằng 0; xếp hạng thấp cũng không có nghĩa chắc chắn sẽ vỡ nợ.
 
-Quan trọng hơn là **rating trajectory**:
+Điều quan trọng là **hướng đi của xếp hạng**:
 
 ```text
-Stable → Negative outlook → Downgrade
+Ổn định → triển vọng tiêu cực → hạ bậc
 ```
 
-hoặc
+hoặc:
 
 ```text
-Weak business → deleveraging → stronger coverage → upgrade potential
+Kinh doanh yếu → giảm nợ → khả năng trả nợ tốt hơn → có thể nâng bậc
 ```
 
-Direction đôi khi quan trọng hơn static letter grade.
+Hướng thay đổi đôi khi quan trọng hơn mức xếp hạng tại một thời điểm.
 
-## 6. Investment grade và speculative grade
+## 6. Hạng đầu tư và hạng đầu cơ
 
-Market thường phân biệt broad bucket giữa **investment grade** và **speculative/high-yield**. Boundary cụ thể tùy rating scale/methodology.
+Thị trường thường chia rộng giữa **hạng đầu tư (investment grade)** và **hạng đầu cơ/lợi suất cao (speculative grade / high yield)**. Ranh giới cụ thể phụ thuộc thang điểm và phương pháp xếp hạng.
 
-Khi issuer bị downgrade qua một threshold quan trọng, investor base có thể thay đổi. Một số institution mandate chỉ cho phép hold securities trên rating level nhất định. Vì vậy downgrade có thể làm spread widen mạnh hơn purely fundamental change.
+Khi tổ chức phát hành bị hạ qua một ngưỡng quan trọng, tập nhà đầu tư có thể thay đổi. Một số quỹ hoặc tổ chức chỉ được nắm chứng khoán từ mức xếp hạng nhất định trở lên. Vì vậy hạ bậc có thể làm spread tăng mạnh hơn mức thay đổi cơ bản của doanh nghiệp.
 
-Đây là **forced-seller effect**.
+Đây là **hiệu ứng bán bắt buộc (forced-seller effect)**.
 
-## 7. Interest coverage
+## 7. Khả năng trả lãi
 
-Một metric cơ bản:
-
-\[
-Interest\ Coverage = \frac{EBIT}{Interest\ Expense}
-\]
-
-Nếu EBIT = 300 tỷ KRW và interest = 100 tỷ, coverage = 3x.
-
-Nhưng 3x không phải universal safe threshold. Cyclical business cần buffer lớn hơn stable utility-like business. Ngoài ra EBIT không phải cash.
-
-Vì vậy cần xem CFO, working capital và capex.
-
-## 8. Net debt và leverage
+Một chỉ số cơ bản:
 
 \[
-Net\ Debt = Gross\ Debt - Cash
+Khả\ năng\ trả\ lãi = \frac{EBIT}{Chi\ phí\ lãi}
+\]
+
+Nếu EBIT = 300 tỷ KRW và chi phí lãi = 100 tỷ, tỷ lệ là 3 lần.
+
+Nhưng 3 lần không phải ngưỡng an toàn chung cho mọi ngành. Doanh nghiệp chu kỳ cần bộ đệm lớn hơn doanh nghiệp ổn định kiểu hạ tầng. Ngoài ra EBIT không phải tiền mặt.
+
+Vì vậy phải xem thêm CFO, vốn lưu động và CAPEX.
+
+## 8. Nợ ròng và đòn bẩy
+
+\[
+Nợ\ ròng = Tổng\ nợ - Tiền\ mặt
 \]
 
 \[
-Net\ Debt/EBITDA
+Nợ\ ròng/EBITDA
 \]
 
-Metric useful nhưng có trap.
+Các chỉ số này hữu ích nhưng có bẫy. Tiền mặt có thể bị hạn chế sử dụng. EBITDA có thể đang ở đỉnh chu kỳ. Nợ thuê hoặc bảo lãnh có thể chưa phản ánh đầy đủ.
 
-Cash có thể restricted. EBITDA có thể peak-cycle. Lease liabilities hoặc guarantees có thể chưa capture đầy đủ. Vì vậy net-debt ratio chỉ là starting point.
+Do đó tỷ lệ nợ ròng chỉ là điểm bắt đầu.
 
-## 9. Debt maturity ladder
+## 9. Lịch đáo hạn nợ
 
-Credit analysis phải có **maturity ladder / 만기구조**.
+Phân tích tín dụng phải có **thang đáo hạn (maturity ladder / 만기구조)**.
 
 Ví dụ:
 
 ```text
-Year 1: 1.2T KRW
-Year 2: 0.4T KRW
-Year 3: 0.3T KRW
-Year 4+: 2.0T KRW
+Năm 1: 1,2 nghìn tỷ KRW
+Năm 2: 0,4 nghìn tỷ KRW
+Năm 3: 0,3 nghìn tỷ KRW
+Năm 4+: 2,0 nghìn tỷ KRW
 ```
 
-Total debt = 3.9T nhưng immediate refinancing pressure chủ yếu nằm ở Year 1.
+Tổng nợ là 3,9 nghìn tỷ nhưng áp lực tái cấp vốn ngay lập tức tập trung chủ yếu ở năm 1.
 
-Hai companies có cùng leverage nhưng maturity concentration khác sẽ có liquidity risk rất khác.
+Hai doanh nghiệp có cùng đòn bẩy nhưng kỳ hạn tập trung khác nhau sẽ có rủi ro thanh khoản rất khác.
 
-## 10. Refinancing risk
+## 10. Rủi ro tái cấp vốn
 
-**Refinancing risk / 차환위험** xuất hiện khi company phụ thuộc vào issuing new debt để repay old debt.
+**Rủi ro tái cấp vốn (refinancing risk / 차환위험)** xuất hiện khi doanh nghiệp phụ thuộc vào phát hành nợ mới để trả nợ cũ.
 
-Refinancing bình thường không xấu. Mature companies thường roll debt. Problem xảy ra khi market access mất đúng thời điểm maturity wall lớn.
-
-Causal chain:
+Tái cấp vốn bình thường không xấu. Nhiều doanh nghiệp trưởng thành liên tục quay vòng nợ. Vấn đề xảy ra khi thị trường đóng đúng lúc doanh nghiệp có lượng nợ đáo hạn lớn.
 
 ```text
-Weak earnings
-→ rating concern
-→ spread rises
-→ refinancing cost rises
-→ coverage worsens
-→ investor confidence falls
-→ market access tightens
+Lợi nhuận yếu
+→ lo ngại xếp hạng
+→ spread tăng
+→ chi phí tái cấp vốn tăng
+→ khả năng trả lãi xấu đi
+→ niềm tin nhà đầu tư giảm
+→ khả năng tiếp cận thị trường bị thu hẹp
 ```
 
-Đây là self-reinforcing credit spiral.
+Đây là vòng xoáy tín dụng tự củng cố.
 
-## 11. Liquidity sources vs liquidity uses
+## 11. Nguồn thanh khoản và nhu cầu thanh khoản
 
-Một cách phân tích practical là dựng bảng 12–24 tháng.
+Một cách thực tế là dựng bảng 12–24 tháng.
 
-**Sources** có thể gồm cash, expected CFO, committed credit lines, asset sale, receivable collection.
+**Nguồn** có thể gồm tiền mặt, CFO kỳ vọng, hạn mức tín dụng cam kết, bán tài sản và thu hồi khoản phải thu.
 
-**Uses** gồm debt maturity, interest, capex, working capital, dividend và mandatory payments.
-
-Logic:
+**Nhu cầu** gồm nợ đáo hạn, lãi, CAPEX, vốn lưu động, cổ tức và các khoản bắt buộc khác.
 
 \[
-Liquidity\ Buffer = Available\ Sources - Near\ Term\ Uses
+Bộ\ đệm\ thanh\ khoản = Nguồn\ khả\ dụng - Nhu\ cầu\ ngắn\ hạn
 \]
 
-Nếu buffer chỉ dương trong base case nhưng âm khi revenue giảm 10%, company có liquidity fragility.
+Nếu bộ đệm chỉ dương trong kịch bản cơ sở nhưng âm khi doanh thu giảm 10%, doanh nghiệp có cấu trúc thanh khoản mong manh.
 
-## 12. Committed vs uncommitted credit line
+## 12. Hạn mức cam kết và không cam kết
 
-Không nên coi mọi unused credit line như cash.
+Không nên coi mọi hạn mức tín dụng chưa sử dụng như tiền mặt.
 
-**Committed line** thường chắc chắn hơn nhưng vẫn có conditions. **Uncommitted line** có thể bị lender giảm/cancel dễ hơn.
+**Hạn mức cam kết (committed line)** thường chắc chắn hơn nhưng vẫn có điều kiện. **Hạn mức không cam kết (uncommitted line)** có thể bị ngân hàng giảm hoặc hủy dễ hơn.
 
-Trong crisis, liquidity quality quan trọng hơn headline amount.
+Trong khủng hoảng, chất lượng nguồn thanh khoản quan trọng hơn con số tiêu đề.
 
 ## 13. Covenant
 
-**Covenant / 재무약정** là điều khoản bảo vệ creditor hoặc giới hạn borrower behavior.
+**Điều khoản bảo vệ chủ nợ (covenant / 재무약정)** giới hạn một số hành vi của người vay hoặc yêu cầu duy trì chỉ tiêu tài chính.
 
 Ví dụ:
 
-- maximum leverage;
-- minimum interest coverage;
-- minimum net worth;
-- restriction on additional debt;
-- restriction on dividend;
-- collateral requirement.
+- đòn bẩy tối đa;
+- khả năng trả lãi tối thiểu;
+- vốn chủ sở hữu tối thiểu;
+- giới hạn vay thêm;
+- giới hạn cổ tức;
+- yêu cầu tài sản bảo đảm.
 
-Nếu breach, outcome có thể từ waiver tới higher pricing, collateral demand hoặc acceleration.
+Nếu vi phạm, kết quả có thể từ miễn trừ tạm thời tới tăng lãi suất, bổ sung tài sản bảo đảm hoặc yêu cầu trả nợ sớm.
 
-Covenant breach không đồng nghĩa bankruptcy nhưng có thể làm negotiation power chuyển sang creditor.
+Vi phạm covenant không đồng nghĩa phá sản nhưng có thể làm quyền thương lượng chuyển sang chủ nợ.
 
-## 14. Secured vs unsecured debt
+## 14. Nợ có bảo đảm và không bảo đảm
 
-**Secured debt / 담보부채무** có claim lên collateral cụ thể. **Unsecured debt / 무담보채무** dựa nhiều hơn vào general creditworthiness.
+**Nợ có bảo đảm (secured debt / 담보부채무)** có quyền đối với tài sản cụ thể. **Nợ không bảo đảm (unsecured debt / 무담보채무)** dựa nhiều hơn vào năng lực tín dụng chung của doanh nghiệp.
 
-Trong default, recovery hierarchy phụ thuộc legal ranking, collateral value và restructuring terms.
+Khi vỡ nợ, mức thu hồi phụ thuộc thứ tự pháp lý, giá trị tài sản bảo đảm và điều khoản tái cấu trúc.
 
-Vì vậy debt amount phải được đọc cùng **priority / seniority / 변제순위**.
+Vì vậy phải đọc số nợ cùng **thứ tự ưu tiên (seniority / 변제순위)**.
 
-## 15. Senior, subordinated và mezzanine
+## 15. Nợ ưu tiên, nợ thứ cấp và mezzanine
 
-Senior debt được ưu tiên hơn subordinated debt. **Mezzanine** nằm giữa debt và equity về risk/return, thường có option-like terms hoặc higher coupon.
+Nợ ưu tiên được trả trước nợ thứ cấp. **Vốn mezzanine** nằm giữa nợ và vốn chủ sở hữu về mức rủi ro/lợi nhuận, thường có coupon cao hơn hoặc quyền chọn.
 
-Capital structure có thể hình dung:
+Có thể hình dung:
 
 ```text
-Senior secured
-Senior unsecured
-Subordinated / mezzanine
-Preferred equity
-Common equity
+Nợ ưu tiên có bảo đảm
+Nợ ưu tiên không bảo đảm
+Nợ thứ cấp / mezzanine
+Cổ phần ưu đãi
+Cổ phần phổ thông
 ```
 
-Càng xuống thấp, upside có thể lớn hơn nhưng protection khi distress yếu hơn.
+Càng xuống dưới, cơ hội tăng giá có thể lớn hơn nhưng mức bảo vệ khi doanh nghiệp gặp khó khăn yếu hơn.
 
-## 16. Convertible bond và bond with warrants
+## 16. Trái phiếu chuyển đổi và trái phiếu kèm quyền mua cổ phiếu
 
-**Convertible bond / CB / 전환사채** cho holder quyền convert bond thành equity theo terms nhất định. **Bond with warrants / BW / 신주인수권부사채** gắn quyền mua shares.
+**Trái phiếu chuyển đổi (Convertible Bond / CB / 전환사채)** cho người nắm giữ quyền chuyển trái phiếu thành cổ phiếu theo điều kiện nhất định. **Trái phiếu kèm quyền mua cổ phiếu (Bond with Warrants / BW / 신주인수권부사채)** gắn quyền mua cổ phiếu mới.
 
-Đây là hybrid securities: vừa có debt claim vừa có equity optionality.
+Đây là chứng khoán lai: vừa có quyền đòi nợ vừa có quyền chọn tăng giá của cổ phiếu.
 
-Issuer có thể dùng vì coupon thấp hơn ordinary debt hoặc vì investor muốn upside. Nhưng existing shareholders cần nhìn dilution potential.
+Doanh nghiệp có thể dùng chúng vì lãi suất coupon thấp hơn nợ thông thường hoặc vì nhà đầu tư muốn thêm cơ hội tăng giá. Nhưng cổ đông hiện hữu cần theo dõi khả năng pha loãng.
 
-## 17. Guarantees và contingent liabilities
+## 17. Bảo lãnh và nghĩa vụ tiềm tàng
 
-Một company có thể không show full economic leverage qua borrowings nếu đã guarantee debt cho subsidiary/SPV.
+Doanh nghiệp có thể không thể hiện đầy đủ đòn bẩy kinh tế chỉ qua nợ vay nếu đã bảo lãnh nợ cho công ty con hoặc SPV.
 
-Nếu guaranteed borrower fail, contingent obligation có thể trở thành actual cash outflow.
+Nếu bên được bảo lãnh không trả được nợ, nghĩa vụ tiềm tàng có thể trở thành dòng tiền ra thực tế.
 
-Vì vậy analyst phải đọc footnotes về:
+Vì vậy phải đọc thuyết minh về:
 
-- payment guarantees;
-- debt guarantees;
-- PF guarantees;
-- letters of credit;
-- commitments;
-- litigation.
+- bảo lãnh thanh toán;
+- bảo lãnh nợ;
+- bảo lãnh PF;
+- thư tín dụng;
+- cam kết;
+- kiện tụng.
 
 Xem [`09_disclosure_accounting_dart_kind.md`](./09_disclosure_accounting_dart_kind.md).
 
-## 18. Cross-default và acceleration
+## 18. Cross-default và yêu cầu trả nợ trước hạn
 
-Debt contracts có thể chứa **cross-default**: default ở một obligation có thể trigger default ở obligation khác.
+Hợp đồng nợ có thể chứa **điều khoản vỡ nợ chéo (cross-default)**: vi phạm ở một nghĩa vụ có thể kích hoạt vi phạm ở nghĩa vụ khác.
 
-**Acceleration** cho phép creditor yêu cầu payment sớm sau specified event.
+**Yêu cầu trả nợ trước hạn (acceleration)** cho phép chủ nợ đòi thanh toán sớm sau một sự kiện được quy định.
 
-Điều này khiến small default đôi khi lan thành liquidity crisis lớn.
+Điều này khiến một vi phạm nhỏ đôi khi lan thành khủng hoảng thanh khoản lớn.
 
-## 19. Technical default vs payment default
+## 19. Vỡ nợ kỹ thuật và vỡ nợ thanh toán
 
-Company có thể violate covenant dù vẫn trả interest đúng hạn. Đây là **technical default**.
+Doanh nghiệp có thể vi phạm covenant dù vẫn trả lãi đúng hạn. Đây là **vỡ nợ kỹ thuật (technical default)**.
 
-**Payment default** là không trả principal/interest đúng contract.
+**Vỡ nợ thanh toán (payment default)** là không trả gốc hoặc lãi đúng hợp đồng.
 
-Technical default vẫn nghiêm trọng vì lender có thể demand renegotiation hoặc additional protection.
+Vỡ nợ kỹ thuật vẫn nghiêm trọng vì bên cho vay có thể yêu cầu đàm phán lại hoặc bổ sung bảo vệ.
 
-## 20. Distress không đồng nghĩa immediate bankruptcy
+## 20. Khó khăn tài chính không đồng nghĩa phá sản ngay lập tức
 
-Khi company distress, nhiều path có thể xảy ra:
+Khi doanh nghiệp gặp khó khăn, có nhiều con đường:
 
 ```text
-Operational turnaround
-Asset sale
-Equity raise
-Debt extension
-Covenant waiver
-Debt-for-equity swap
+Cải thiện hoạt động
+Bán tài sản
+Tăng vốn chủ sở hữu
+Gia hạn nợ
+Xin miễn covenant
+Đổi nợ thành cổ phần
 Workout
-Court-led rehabilitation
-Liquidation
+Phục hồi theo tòa án
+Thanh lý
 ```
 
-Do đó từ “khó khăn” tới “bankruptcy” có nhiều intermediate states.
+Từ “khó khăn” tới “phá sản” có nhiều trạng thái trung gian.
 
 ## 21. Workout (워크아웃)
 
-**Workout / 워크아웃** thường là restructuring coordinated với creditors ngoài full liquidation process. Mục tiêu là giữ going-concern value nếu business core vẫn viable nhưng capital structure quá nặng.
+**Workout** thường là tái cấu trúc được phối hợp với chủ nợ ngoài quy trình thanh lý đầy đủ. Mục tiêu là giữ giá trị của doanh nghiệp đang hoạt động nếu hoạt động cốt lõi vẫn khả thi nhưng cấu trúc vốn quá nặng.
 
-Creditor có thể extend maturity, reduce rate, inject liquidity hoặc swap debt thành equity.
+Chủ nợ có thể gia hạn kỳ hạn, giảm lãi suất, cấp thêm thanh khoản hoặc đổi nợ thành cổ phần.
 
-Economic logic:
+> Nếu giá trị doanh nghiệp đang hoạt động lớn hơn giá trị thanh lý, tái cấu trúc có thể tốt hơn phá sản ngay.
 
-> Nếu going-concern value > liquidation value, restructuring có thể tốt hơn phá sản ngay.
+## 22. Phục hồi theo tòa án (회생절차)
 
-## 22. Court rehabilitation (회생절차)
+Quy trình phục hồi dưới sự giám sát của tòa giúp đóng băng hoặc phối hợp các yêu cầu của chủ nợ và xây kế hoạch để doanh nghiệp tiếp tục hoạt động trong khi nợ được tái cấu trúc.
 
-Court-led rehabilitation giúp freeze/coordinate claims và xây plan để company tiếp tục operate trong khi debt được restructure.
+Câu hỏi cốt lõi là **khả năng tồn tại (viability)**. Nếu hoạt động cốt lõi tạo tiền nhưng gánh nợ quá lớn, phục hồi có lý do kinh tế. Nếu mô hình kinh doanh đã mất khả năng tồn tại, tái cấu trúc chỉ trì hoãn thanh lý.
 
-Key question là **viability**. Nếu core business tạo cash nhưng debt burden quá lớn, rehabilitation có rationale. Nếu business model không còn viable, restructuring chỉ trì hoãn liquidation.
+## 23. Đổi nợ thành cổ phần
 
-## 23. Debt-for-equity swap
-
-Creditor đổi debt thành shares làm debt giảm nhưng ownership chuyển một phần sang creditors.
-
-Balance-sheet logic:
+Khi chủ nợ đổi nợ lấy cổ phiếu:
 
 ```text
-Debt ↓
-Equity ↑
-Interest burden ↓
-Old shareholder dilution ↑
+Nợ giảm
+Vốn chủ sở hữu tăng
+Chi phí lãi giảm
+Pha loãng cổ đông cũ tăng
 ```
 
-Company có thể sống khỏe hơn nhưng old shareholders không nhất thiết benefit tương ứng.
+Doanh nghiệp có thể khỏe hơn sau tái cấu trúc nhưng cổ đông cũ không nhất thiết được hưởng lợi tương ứng.
 
-## 24. Asset sale và deleveraging
+## 24. Bán tài sản và giảm đòn bẩy
 
-Sell non-core asset tạo cash để repay debt. Đây là simple restructuring tool nhưng có trade-off.
+Bán tài sản không cốt lõi tạo tiền để trả nợ. Đây là công cụ tái cấu trúc đơn giản nhưng có đánh đổi.
 
-Nếu bán high-quality asset ở distressed price, balance sheet tốt hơn ngắn hạn nhưng future earnings power giảm.
+Nếu phải bán tài sản chất lượng cao ở giá thấp trong khủng hoảng, bảng cân đối tốt hơn ngắn hạn nhưng khả năng tạo lợi nhuận tương lai giảm.
 
-Vì vậy deleveraging phải xét **asset quality sold** chứ không chỉ debt reduction.
+Vì vậy giảm đòn bẩy phải xét **chất lượng tài sản đã bán**, không chỉ số nợ giảm.
 
-## 25. Rights issue trong distress
+## 25. Tăng vốn khi doanh nghiệp gặp khó khăn
 
-Equity raise có thể cứu solvency/liquidity nhưng dilution lớn nếu issue price thấp.
+Phát hành thêm cổ phiếu có thể cứu khả năng thanh toán hoặc thanh khoản nhưng gây pha loãng lớn nếu giá phát hành thấp.
 
-Một company có thể survive while old equity value bị heavily impaired.
+Doanh nghiệp có thể sống sót trong khi giá trị của cổ đông cũ bị suy giảm mạnh.
 
-Đây là lý do credit recovery và equity return không giống nhau.
+Đây là lý do mức thu hồi của chủ nợ và lợi suất của cổ đông không giống nhau.
 
-## 26. Recovery analysis
+## 26. Phân tích mức thu hồi
 
-Khi default risk cao, hỏi:
+Khi rủi ro vỡ nợ cao, hãy hỏi:
 
 ```text
-Enterprise value trong distress?
-Collateral value?
-Priority của từng claim?
-Administrative/restructuring cost?
-Going-concern vs liquidation value?
+Giá trị doanh nghiệp trong trạng thái khó khăn?
+Giá trị tài sản bảo đảm?
+Thứ tự ưu tiên của từng quyền đòi?
+Chi phí hành chính / tái cấu trúc?
+Giá trị tiếp tục hoạt động so với giá trị thanh lý?
 ```
 
-Simple waterfall:
+Thứ tự đơn giản:
 
 ```text
-Distressed enterprise value
-→ secured creditors
-→ senior unsecured
-→ subordinated
-→ preferred
-→ common equity
+Giá trị doanh nghiệp khi khó khăn
+→ chủ nợ có bảo đảm
+→ nợ ưu tiên không bảo đảm
+→ nợ thứ cấp
+→ cổ phần ưu đãi
+→ cổ phần phổ thông
 ```
 
-Common equity chỉ nhận residual sau claims trước đó.
+Cổ phần phổ thông chỉ nhận phần còn lại sau các quyền đòi ưu tiên.
 
-## 27. Cyclical company và peak EBITDA trap
+## 27. Bẫy EBITDA ở đỉnh chu kỳ
 
-Nếu leverage = debt / peak EBITDA, ratio có thể trông thấp đúng lúc cycle tốt nhất.
+Nếu tính đòn bẩy bằng nợ chia EBITDA đang ở đỉnh chu kỳ, tỷ lệ có thể trông rất thấp đúng lúc điều kiện tốt nhất.
 
-Ví dụ debt = 4T, EBITDA peak = 2T → 2x. Nếu normalized EBITDA = 1T → 4x.
+Ví dụ nợ = 4T, EBITDA đỉnh = 2T → 2 lần. Nếu EBITDA chuẩn hóa = 1T → 4 lần.
 
-Credit analyst phải normalize cycle.
+Nhà phân tích tín dụng phải chuẩn hóa chu kỳ, đặc biệt với bán dẫn, hóa chất, vận tải biển, thép, xây dựng và hàng hóa cơ bản.
 
-Điều này đặc biệt quan trọng với semiconductors, chemicals, shipping, steel, construction và commodities.
+## 28. Cú sốc vốn lưu động
 
-## 28. Working-capital shock
+Khủng hoảng tín dụng không chỉ đến từ thua lỗ hoạt động.
 
-Credit crisis không chỉ đến từ operating loss.
-
-Nếu customer trả chậm, inventory tăng và suppliers yêu cầu cash sooner:
+Nếu khách hàng trả chậm, tồn kho tăng và nhà cung cấp đòi thanh toán sớm hơn:
 
 ```text
-DSO ↑
-DIO ↑
-DPO ↓
-→ cash conversion cycle lengthens
-→ funding need rises
+DSO tăng
+DIO tăng
+DPO giảm
+→ chu kỳ chuyển đổi tiền mặt dài hơn
+→ nhu cầu tài trợ tăng
 ```
 
-Company có thể report profit nhưng run out of cash.
+Doanh nghiệp có thể vẫn báo lãi nhưng hết tiền.
 
-## 29. Rating trigger và collateral trigger
+## 29. Ngưỡng xếp hạng và yêu cầu bổ sung tài sản bảo đảm
 
-Một số contract thay terms khi rating giảm: collateral requirement tăng, derivative margin tăng hoặc funding access giảm.
+Một số hợp đồng thay đổi điều khoản khi xếp hạng giảm: phải bổ sung tài sản bảo đảm, tăng ký quỹ phái sinh hoặc mất khả năng tiếp cận một số nguồn vốn.
 
-Do đó downgrade có thể tạo **nonlinear cash need**.
+Do đó hạ bậc có thể tạo **nhu cầu tiền mặt phi tuyến (nonlinear cash need)**.
 
-## 30. Group support: có nhưng không được mặc định
+## 30. Hỗ trợ từ tập đoàn: có thể có nhưng không được mặc định
 
-Subsidiary thuộc chaebol lớn có thể benefit từ implicit/explicit group support. Nhưng analyst phải phân biệt:
+Công ty con thuộc chaebol lớn có thể hưởng hỗ trợ ngầm hoặc chính thức từ tập đoàn. Nhưng phải phân biệt:
 
-- legal guarantee;
-- parent ownership;
-- strategic importance;
-- historical support;
-- regulatory restriction.
+- bảo lãnh pháp lý;
+- tỷ lệ sở hữu của công ty mẹ;
+- mức quan trọng chiến lược;
+- lịch sử hỗ trợ;
+- giới hạn pháp lý.
 
-Brand name không bằng guarantee.
+Tên thương hiệu lớn không đồng nghĩa có bảo lãnh.
 
-## 31. Public enterprise và quasi-sovereign perception
+## 31. Doanh nghiệp công và cảm nhận gần giống rủi ro quốc gia
 
-Một số public institutions có perceived support mạnh hơn private issuer, nhưng cũng cần đọc legal framework và actual support mechanism.
+Một số cơ quan công có mức kỳ vọng hỗ trợ cao hơn doanh nghiệp tư nhân, nhưng vẫn phải đọc khung pháp lý và cơ chế hỗ trợ thực tế.
 
-Không nên tự động coi every public-related entity = sovereign risk.
+Không nên tự động coi mọi tổ chức liên quan nhà nước là rủi ro quốc gia.
 
 Xem [`25_public_enterprises_and_state_owned_companies.md`](./25_public_enterprises_and_state_owned_companies.md).
 
-## 32. Stress test credit
+## 32. Kiểm tra sức chịu đựng tín dụng
 
-Một robust credit stress test có thể dùng:
+Một kịch bản có thể dùng:
 
 ```text
-Revenue -15%
-Margin -3pt
-DSO +20 days
-Rate +150bp
-Refinancing spread +250bp
-KRW depreciation 10%
-Asset-sale proceeds -30% vs book value
+Doanh thu -15%
+Biên lợi nhuận -3 điểm %
+DSO +20 ngày
+Lãi suất +150 bp
+Chênh lệch tái cấp vốn +250 bp
+KRW mất giá 10%
+Tiền bán tài sản thấp hơn giá sổ sách 30%
 ```
 
-Sau đó calculate:
+Sau đó tính:
 
 - CFO;
-- interest coverage;
-- debt/EBITDA;
-- liquidity buffer;
-- covenant headroom;
-- maturity gap.
+- khả năng trả lãi;
+- nợ/EBITDA;
+- bộ đệm thanh khoản;
+- khoảng an toàn covenant;
+- khoảng thiếu hụt đáo hạn.
 
-Mục tiêu không phải predict exact crisis mà tìm threshold nơi capital structure bắt đầu fail.
+Mục tiêu không phải dự đoán chính xác khủng hoảng mà tìm ngưỡng nơi cấu trúc vốn bắt đầu thất bại.
 
-## 33. Credit analysis workflow
-
-Một workflow practical:
+## 33. Quy trình phân tích tín dụng
 
 ```text
-1. Business stability
-2. Earnings cyclicality
-3. Cash conversion
-4. Debt amount + hidden obligations
-5. Maturity ladder
-6. Interest and currency sensitivity
-7. Liquidity sources
-8. Covenant / collateral
-9. Group support
-10. Stress scenario
-11. Recovery if default
+1. Độ ổn định kinh doanh
+2. Tính chu kỳ của lợi nhuận
+3. Chuyển đổi lợi nhuận thành tiền
+4. Nợ và nghĩa vụ ẩn
+5. Lịch đáo hạn
+6. Độ nhạy với lãi suất và tỷ giá
+7. Nguồn thanh khoản
+8. Covenant / tài sản bảo đảm
+9. Hỗ trợ tập đoàn
+10. Kịch bản căng thẳng
+11. Mức thu hồi nếu vỡ nợ
 ```
 
-## Mental Model
+## Mô hình tư duy
 
-> Equity analysis hỏi **upside còn bao nhiêu**. Credit analysis hỏi **downside tới đâu trước khi creditor mất tiền**.
+> Phân tích cổ phiếu hỏi **phần tăng giá còn bao nhiêu**. Phân tích tín dụng hỏi **mức giảm tới đâu trước khi chủ nợ bắt đầu mất tiền**.
 
-Credit risk là intersection của:
+Rủi ro tín dụng là giao điểm của:
 
 ```text
-Business volatility
-× leverage
-× maturity concentration
-× liquidity
-× market access
-× legal priority
+Biến động kinh doanh
+× đòn bẩy
+× mức tập trung kỳ hạn
+× thanh khoản
+× khả năng tiếp cận thị trường
+× thứ tự pháp lý
 ```
 
-Một company có good business nhưng bad capital structure vẫn có thể default. Một company mediocre nhưng debt thấp và liquidity mạnh có thể survive rất lâu.
+Một doanh nghiệp kinh doanh tốt nhưng cấu trúc vốn xấu vẫn có thể vỡ nợ. Một doanh nghiệp trung bình nhưng nợ thấp và thanh khoản mạnh có thể tồn tại rất lâu.
 
-## Common misconceptions
+## Những nhầm lẫn thường gặp
 
-**“Có lãi thì không default.”** Sai. Default là cash/timing problem.
+**“Có lãi thì không vỡ nợ.”** Sai. Vỡ nợ là vấn đề tiền mặt và thời điểm.
 
-**“Debt/EBITDA thấp là an toàn.”** Chưa đủ. EBITDA có thể peak-cycle và maturity có thể tập trung.
+**“Nợ/EBITDA thấp là an toàn.”** Chưa đủ. EBITDA có thể đang ở đỉnh chu kỳ và kỳ hạn nợ có thể tập trung.
 
-**“Rating agency đã đánh giá rồi nên không cần tự phân tích.”** Sai. Rating là input, không phải substitute cho analysis.
+**“Tổ chức xếp hạng đã đánh giá rồi nên không cần tự phân tích.”** Sai. Xếp hạng là đầu vào, không thay thế phân tích.
 
-**“Restructuring tốt cho company thì tốt cho shareholder.”** Không nhất thiết. Debt-for-equity swap hoặc rights issue có thể cứu company nhưng dilute old equity mạnh.
+**“Tái cấu trúc tốt cho doanh nghiệp thì tốt cho cổ đông.”** Không nhất thiết. Đổi nợ thành cổ phần hoặc phát hành thêm có thể cứu doanh nghiệp nhưng pha loãng cổ đông cũ rất mạnh.
 
-**“Parent group lớn sẽ luôn cứu affiliate.”** Không thể mặc định nếu không có legal/economic incentive rõ.
+**“Tập đoàn mẹ lớn sẽ luôn cứu công ty con.”** Không thể mặc định nếu không có động lực pháp lý hoặc kinh tế rõ ràng.
 
 ## Liên kết tiếp theo
 
-- [`09_disclosure_accounting_dart_kind.md`](./09_disclosure_accounting_dart_kind.md) — đọc obligations và footnotes.
-- [`10_capital_markets_kospi_kosdaq_konex.md`](./10_capital_markets_kospi_kosdaq_konex.md) — bond/equity market context.
-- [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md) — funding structure.
-- [`18_construction_real_estate_and_project_finance.md`](./18_construction_real_estate_and_project_finance.md) — PF risk.
-- [`20_how_to_analyze_a_korean_company.md`](./20_how_to_analyze_a_korean_company.md) — company-analysis framework.
+- [`09_disclosure_accounting_dart_kind.md`](./09_disclosure_accounting_dart_kind.md) — đọc nghĩa vụ và thuyết minh.
+- [`10_capital_markets_kospi_kosdaq_konex.md`](./10_capital_markets_kospi_kosdaq_konex.md) — bối cảnh thị trường trái phiếu/cổ phiếu.
+- [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md) — cấu trúc tài trợ.
+- [`18_construction_real_estate_and_project_finance.md`](./18_construction_real_estate_and_project_finance.md) — rủi ro PF.
+- [`20_how_to_analyze_a_korean_company.md`](./20_how_to_analyze_a_korean_company.md) — khung phân tích doanh nghiệp.
