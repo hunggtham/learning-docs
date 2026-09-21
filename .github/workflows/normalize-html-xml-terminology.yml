@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   normalize:
-    if: github.event.head_commit.message == 'chore: apply Vietnamese terminology normalization'
+    if: github.event.head_commit.message == 'chore: retry Vietnamese terminology normalization'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -19,8 +19,9 @@ jobs:
           fetch-depth: 0
 
       - name: Normalize prose terminology
-        shell: python
+        shell: bash
         run: |
+          python - <<'PY'
           from pathlib import Path
           import re
 
@@ -154,7 +155,6 @@ jobs:
           ]
 
           def replace_segment(segment, replacements):
-              # Longer phrases first. Avoid rewriting inside words.
               for src, dst in sorted(replacements, key=lambda x: len(x[0]), reverse=True):
                   pattern = r'(?<![A-Za-z0-9_-])' + re.escape(src) + r'(?![A-Za-z0-9_-])'
                   segment = re.sub(pattern, dst, segment)
@@ -171,7 +171,6 @@ jobs:
                   if fenced:
                       out.append(line)
                       continue
-                  # Preserve inline code spans exactly.
                   parts = re.split(r'(`[^`]*`)', line)
                   for i in range(0, len(parts), 2):
                       parts[i] = replace_segment(parts[i], replacements)
@@ -193,8 +192,8 @@ jobs:
                       text = glossary + text
               path.write_text(text, encoding='utf-8')
 
-          # Remove this temporary workflow from the resulting content commit.
           Path('.github/workflows/normalize-html-xml-terminology.yml').unlink()
+          PY
 
       - name: Commit canonical terminology update
         run: |
