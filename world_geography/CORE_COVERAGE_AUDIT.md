@@ -1,45 +1,100 @@
 # Core Coverage Audit — World Geography Knowledge Library
 
-## Mục đích của audit
+## Mục đích
 
-Tài liệu này theo dõi **độ sâu của Knowledge Library cốt lõi**, không đếm số file. Một chủ đề chỉ được xem là vững khi người đọc có thể đi từ khái niệm → cơ chế → mô hình → ví dụ → giới hạn → liên kết với chủ đề khác mà không phải dựa vào country profile ngắn.
+Audit này theo dõi **độ sâu của Knowledge Library cốt lõi**, không đếm số file. Một chủ đề chỉ được xem là vững khi người đọc có thể đi từ khái niệm → cơ chế → mô hình → ví dụ → giới hạn → liên kết mà không cần dựa vào country profile ngắn.
 
-Các trạng thái trong audit không phải điểm số. **Deep** nghĩa chapter đã có causal reasoning và đủ dùng như tài liệu học chính. **Solid** nghĩa nền tảng tốt nhưng vẫn còn một vài nhánh có thể mở rộng. **Depth pass completed** nghĩa chủ đề vừa được nâng đáng kể trong đợt audit này. Atlas không được dùng để bù cho lỗ hổng của core.
+Trạng thái dùng trong audit:
 
-## Audit 21 nhóm kiến thức
+- **Deep**: đủ làm chapter học chính, đã có causal reasoning, limitation và cross-link.
+- **Solid**: nền tảng tốt nhưng còn nhánh có thể làm sâu.
+- **Depth pass completed**: vừa được nâng đáng kể trong audit gần nhất.
+- **Planned/reference**: tồn tại để định vị hoặc roadmap, không tính completed learning content.
 
-| # | Nhóm | File chính | Trạng thái sau audit | Ghi chú chiều sâu |
-|---|---|---|---|---|
-| 1 | Geographical thinking | [Tư duy địa lý](./00_foundations/00_geographical_thinking.md) | **Depth pass completed** | Đã bổ sung pattern→process, relational location, scale–extent–resolution, accessibility, spatial autocorrelation, network/flow, path dependence, uncertainty và counterfactual reasoning. |
-| 2 | Maps, coordinates, projections, GIS, remote sensing | [Tọa độ](./00_foundations/02_coordinates_time_maps.md), [Cartography](./00_foundations/03_cartography_projections_scale.md), [GIS & remote sensing](./00_foundations/04_geospatial_data_gis_remote_sensing.md) | **Deep** | CRS, projection, MAUP, topology, spatial join/index, geodesic/network distance, raster resampling, remote-sensing pipeline, validation và privacy đã đủ thành một tuyến học liền mạch. |
-| 3 | Earth systems | [Trái Đất như một hệ thống](./00_foundations/01_earth_as_system.md), [Earth global geography](./05_earth_global_geography/README.md) | **Deep** | Stock–flow, feedback, dynamic equilibrium, threshold và spatial heterogeneity đã vững; folder 05 bổ sung geodesy, planetary relief, gravity và reference systems. |
-| 4 | Plate tectonics & geomorphology | [Plate tectonics](./01_physical_geography/00_plate_tectonics_geologic_time.md), [Geomorphology](./01_physical_geography/01_landforms_geomorphology.md) | **Deep** | Có plate driving forces, boundary processes, magma generation, geologic time, weathering–erosion–mass movement, fluvial/coastal/glacial/karst/desert landforms. |
-| 5 | Atmosphere, weather & climate | [Atmosphere/weather](./01_physical_geography/02_atmosphere_weather_climate.md), [Climate system](./01_physical_geography/03_global_climate_system.md) | **Deep** | Energy balance, pressure–wind–Coriolis, global circulation, humidity/cloud, fronts, monsoon, forecasting, ENSO, climate classification và paleoclimate đã có causal chain tốt. |
-| 6 | Hydrology | [Hydrology](./01_physical_geography/04_hydrology_rivers_groundwater.md) | **Depth pass completed** | Đã thêm residence time, hydrograph, baseflow, sediment budget, Darcy law, aquifer interaction, water quality, drought lags, reservoir trade-off và water security. |
-| 7 | Oceans | [Oceans & coasts](./01_physical_geography/05_oceans_coasts.md) | **Depth pass completed** | Đã mở rộng stratification, mixed layer, Ekman/upwelling, deep circulation, waves/tides, sediment cell, delta, estuary, compound flooding, fisheries, ports và submarine cables. |
-| 8 | Soils, biomes & ecosystems | [Soils, biomes & ecosystems](./01_physical_geography/06_soils_biomes_ecosystems.md) | **Deep** | CLORPT, soil profile/texture/structure, CEC/pH, nutrient cycling, disturbance, succession, fragmentation, island biogeography và degradation đã đủ sâu. |
-| 9 | Natural hazards | [Natural hazards & risk](./01_physical_geography/07_natural_hazards_risk.md) | **Deep** | Hazard–exposure–vulnerability, return period, cascading/compound risk, earthquake/volcano/tsunami/flood/heat/fire và resilience đã được nối thành risk framework. |
-| 10 | Population | [Population & demography](./02_human_geography/00_population_demography.md) | **Depth pass completed** | Đã thêm rate vs count, cohort vs period, momentum, dependency ratio limitations, density variants, census/registry/survey, gridded population và projection uncertainty. |
-| 11 | Migration | [Migration](./02_human_geography/01_migration.md) | **Depth pass completed** | Đã đi từ push–pull sang aspiration–capability–pathway, selectivity, gravity, intervening opportunities, network effect, displacement, climate pathway và migration data. |
-| 12 | Urbanization | [Settlement & urbanization](./02_human_geography/02_settlement_urbanization.md) | **Depth pass completed** | Settlement hierarchy, site/situation, bid-rent, transport–land-use feedback, polycentric region, housing, informal settlement, infrastructure dependency và urban hazards đã được mở rộng. |
-| 13 | Culture, language & religion | [Cultural geography](./02_human_geography/03_culture_language_religion.md) | **Depth pass completed** | Đã bổ sung diffusion mechanisms, language networks, sacred space, landscape memory, identity, hybridization, environmental interaction và classification bias. |
-| 14 | Economic geography | [Economic geography](./02_human_geography/05_economic_geography.md) | **Depth pass completed** | Location theory, agglomeration, scale/scope, labor-market geography, core–periphery, GVC, digital service, informal economy, finance và regional resilience đã có. |
-| 15 | Political geography | [Political geography](./02_human_geography/04_political_geography_borders.md) | **Depth pass completed** | State/nation/territory, border-making, border friction, state morphology, maritime zones, multi-level governance, geopolitics-as-constraint và map provenance đã được làm rõ. |
-| 16 | Agriculture & food systems | [Agriculture](./02_human_geography/06_agriculture_food_systems.md) | **Depth pass completed** | Agroecosystem, land tenure, intensification, irrigation, Von Thünen, cold chain, food security, virtual water, livestock/fisheries và climate risk đã được nối thành system. |
-| 17 | Industry, energy & resources | [Industry, energy & resources](./02_human_geography/07_industry_energy_resources.md) | **Depth pass completed** | Resource vs reserve, supplier tiers, industrial clusters, energy conversion/network, renewable deployment, critical-mineral value chain, resource corridor và just transition đã được mở rộng. |
-| 18 | Transport, trade & globalization | [Transport & globalization](./02_human_geography/08_transport_trade_globalization.md) | **Depth pass completed** | Generalized cost, modal choice, network capacity, hub-and-spoke, intermodal/container, ports/hinterland, border friction, supply-chain resilience và digital infrastructure đã sâu hơn. |
-| 19 | Development & inequality | [Development & inequality](./02_human_geography/09_development_inequality.md) | **Deep** | Human development, PPP/cost of living, spatial inequality, core–periphery, path dependence, accessibility, poverty traps, digital divide, gender/time geography và environment đã vững. |
-| 20 | Regional geography | [How to read regions](./03_regions/00_how_to_read_regions.md) + các chapter vùng | **Solid → next priority** | Khung đọc vùng đã rất sâu. Việc cần tiếp theo không phải thêm vùng mới mà chuẩn hóa độ sâu giữa các chapter, ưu tiên East Asia và Southeast Asia vì liên hệ trực tiếp Korea–Vietnam. |
-| 21 | Global systems | [Climate change](./04_global_systems/00_climate_change.md), [W–F–E nexus](./04_global_systems/01_water_food_energy_nexus.md), [Chokepoints/resources](./04_global_systems/02_geopolitics_chokepoints_resources.md), [Global cities](./04_global_systems/03_global_cities_networks.md), [Sustainability](./04_global_systems/04_environment_sustainability.md) | **Deep** | Climate và nexus đã sâu từ trước; đợt này mở rộng dependency graph/chokepoint, global-city network và sustainability bằng stock–flow, LCA, rebound, resilience và governance-scale reasoning. |
+## Foundations
+
+| Chủ đề | File chính | Trạng thái | Audit |
+|---|---|---|---|
+| Geographic thinking, scale, location | [Geographical thinking](./00_foundations/00_geographical_thinking.md) | **Deep** | Pattern→process, relational location, scale–extent–resolution, accessibility, network/flow, autocorrelation, path dependence và uncertainty đã có. |
+| Coordinates, time zones | [Coordinates & time](./00_foundations/02_coordinates_time_maps.md) | **Deep** | Latitude/longitude, geodesic, datum/CRS, UTC/time zone và date-line reasoning đã vững. |
+| Maps, cartography, projections | [Cartography](./00_foundations/03_cartography_projections_scale.md) | **Deep** | Scale/generalization, projection trade-off, choropleth, classification, MAUP và web-map tile đã có. |
+| GIS, geospatial data, remote sensing | [GIS & remote sensing](./00_foundations/04_geospatial_data_gis_remote_sensing.md) | **Deep** | Vector/raster, topology, spatial index/join, DEM, geocoding, uncertainty, remote-sensing measurement/validation đã đủ mạnh. |
+
+## Physical Geography
+
+| Chủ đề | File chính | Trạng thái | Audit |
+|---|---|---|---|
+| Earth systems | [Earth system](./00_foundations/01_earth_as_system.md) | **Deep** | Stock–flow, feedback, threshold, dynamic equilibrium và spatial heterogeneity. |
+| Geological time, plate tectonics | [Plate tectonics](./01_physical_geography/00_plate_tectonics_geologic_time.md) | **Deep** | Driving forces, boundaries, earthquake/volcanism, magma generation và deep time. |
+| Geomorphology | [Geomorphology](./01_physical_geography/01_landforms_geomorphology.md) | **Deep** | Weathering, erosion, mass movement, fluvial/coastal/glacial/karst/desert processes. |
+| Atmosphere, weather, climate | [Weather & atmosphere](./01_physical_geography/02_atmosphere_weather_climate.md), [Climate system](./01_physical_geography/03_global_climate_system.md) | **Deep** | Energy, pressure, Coriolis, circulation, moisture, monsoon, forecasting, ENSO, paleoclimate. |
+| Hydrology | [Hydrology](./01_physical_geography/04_hydrology_rivers_groundwater.md) | **Deep** | Basin balance, hydrograph, groundwater, Darcy, sediment, drought lag, reservoir trade-off, water security. |
+| Oceans, coasts | [Oceans & coasts](./01_physical_geography/05_oceans_coasts.md) | **Deep** | Stratification, Ekman/upwelling, circulation, sediment cell, delta/estuary, compound flood, fisheries, ports/cables. |
+| Soils, biomes, ecosystems | [Soils/biomes/ecosystems](./01_physical_geography/06_soils_biomes_ecosystems.md) | **Deep** | Soil formation/properties, nutrient cycling, disturbance, succession, fragmentation, degradation. |
+| Natural hazards, risk | [Hazards & risk](./01_physical_geography/07_natural_hazards_risk.md) | **Deep** | Hazard–exposure–vulnerability, return period, compound/cascading risk và resilience. |
+
+## Human Geography
+
+| Chủ đề | File chính | Trạng thái | Audit |
+|---|---|---|---|
+| Population | [Population](./02_human_geography/00_population_demography.md) | **Deep** | Cohort/period, momentum, density, data quality và projection uncertainty. |
+| Migration | [Migration](./02_human_geography/01_migration.md) | **Deep** | Aspiration–capability–pathway, selectivity, network, gravity, displacement, remittance và data. |
+| Urbanization | [Urbanization](./02_human_geography/02_settlement_urbanization.md) | **Deep** | Agglomeration, bid-rent, transport–land use, polycentric region, housing, informal settlement, infrastructure risk. |
+| Culture, language, religion | [Cultural geography](./02_human_geography/03_culture_language_religion.md) | **Deep** | Diffusion, language network, sacred space, cultural landscape, identity/hybridization và classification bias. |
+| Political geography, borders | [Political geography](./02_human_geography/04_political_geography_borders.md) | **Deep** | State/nation/territory, border friction, maritime zone, governance scale, geopolitics-as-constraint. |
+| Economic geography | [Economic geography](./02_human_geography/05_economic_geography.md) | **Deep** | Location, agglomeration, labor market, GVC, informal economy, finance, path dependence/resilience. |
+| Agriculture, food systems | [Agriculture](./02_human_geography/06_agriculture_food_systems.md) | **Deep** | Agroecosystem, land tenure, irrigation, Von Thünen, cold chain, food security, virtual water, fisheries/livestock. |
+| Industry, resources, energy | [Industry/Energy/Resources](./02_human_geography/07_industry_energy_resources.md) | **Deep** | Resource vs reserve, supplier tiers, energy conversion/grid, renewables, critical minerals, corridor, just transition. |
+| Transport, trade, globalization | [Transport/Trade](./02_human_geography/08_transport_trade_globalization.md) | **Deep** | Generalized cost, mode, node/capacity, container/intermodal, port–hinterland, border friction, resilience, digital infrastructure. |
+| Development, inequality | [Development](./02_human_geography/09_development_inequality.md) | **Deep** | Human development, PPP/cost, spatial inequality, accessibility, poverty trap, digital divide, gender/time geography. |
+
+## Regional Geography
+
+Khung [How to read regions](./03_regions/00_how_to_read_regions.md) là canonical methodology. Regional chapter không được đánh giá bằng số country được nhắc mà bằng khả năng nối causal chain.
+
+| Vùng | Trạng thái | Ghi chú |
+|---|---|---|
+| East Asia | **Deep** | Reference standard cho Korea/China/Japan, monsoon, coastal industrial corridors, demographic polarization và maritime networks. |
+| Southeast Asia | **Deep** | Reference standard cho Vietnam/ASEAN, archipelago–mainland contrast, monsoon/delta, manufacturing và chokepoints. |
+| South Asia | **Depth pass completed** | Bổ sung Indus/GBM, groundwater nexus, relative sea level, urban/value-chain, air pollution, migration và Indian Ocean role. |
+| Central Asia | **Depth pass completed** | Bổ sung endorheic basins, peak water, pastoral mobility, pipeline lock-in, rail friction và water–energy trade-off. |
+| West Asia | **Depth pass completed** | Bổ sung basin-scale water, fossil aquifer, Gulf urban system, energy/value chain, chokepoint resilience và migration. |
+| Europe | **Deep** | Physical–historical fragmentation, dense transport/urban networks, industrial/service core và integration logic đã đủ mạnh. |
+| Africa | **Deep** | Sahara–Sahel–Congo–Rift–coastal systems, resource/corridor và demographic/urban transformation đã có chiều sâu. |
+| North America | **Deep** | Continental scale, climate/relief, river/agriculture, urban belts, resource/transport networks. |
+| Latin America & Caribbean | **Deep** | Andes–Amazon–plateau–coast, commodity geography, urbanization, inequality và hazard. |
+| Oceania & Pacific | **Deep** | Australia–island systems, ocean distance, resource, climate and maritime connectivity. |
+| Polar regions | **Deep** | Cryosphere, albedo, ocean/atmosphere coupling, accessibility và climate feedback. |
+
+## Global Systems
+
+Climate change, Water–Food–Energy nexus, resources/chokepoints, global cities/trade networks và sustainability đều ở trạng thái **Deep**. Điểm mạnh là system-of-systems reasoning: stock/flow, dependency graph, chokepoint, resilience, LCA và governance scale.
+
+## Earth / Global Geography
+
+| Chủ đề | Trạng thái | Audit |
+|---|---|---|
+| Geodesy, Earth shape/size | **Deep** | Ellipsoid, geoid, datum/frame/epoch, height systems, Earth orientation và measurement systems. |
+| Rotation, orbit, seasons, time | **Deep** | Rotation/orbit geometry, seasons, solar time và planetary time relation. |
+| Reference systems | **Deep** | Global coordinate/reference frames nối trực tiếp GIS và geodesy. |
+| Continents, oceans, basin structure | **Depth pass completed** | Bổ sung crust vs continent, Wilson cycle, passive/active margin, shelf/slope/abyss, strait và bathymetric data provenance. |
+| Global relief, hypsometry | **Depth pass completed** | Bổ sung hypsometric reasoning, isostasy, base level, relief energy, DEM/DSM uncertainty, infrastructure cost và settlement relation. |
+| Planetary water–energy circulation | **Depth pass completed** | Bổ sung radiation budget, Hadley/eddy transport, gyre, Ekman/upwelling, overturning, residence time, teleconnection và observation systems. |
+| Gravity, geoid, magnetic field | **Deep** | Trường trọng lực và từ trường đã được nối với reference system, navigation và Earth structure. |
+| Human footprint | **Deep** | Planetary-scale land use, resource flows và anthropogenic footprint đã có. |
+
+## World Atlas
+
+Atlas **không được dùng để bù core**. Trạng thái hoàn chỉnh chỉ áp dụng cho learning profile đủ chiều sâu.
+
+Priority đã có profile sâu hoặc đang được ưu tiên giữ sâu gồm Korea, Vietnam, China, Japan, United States và nhóm major European economies đã depth-pass. Các country file compact/legacy còn lại phải ở trạng thái **planned/reference** cho tới khi được promote, merge hoặc remove.
+
+Xem [Atlas Coverage Status](./06_world_atlas/03_coverage_status.md).
 
 ## Kết luận audit
 
-Khoảng trống lớn nhất trước audit không nằm ở physical geography mà ở **human/economic geography** và cách Atlas được tính coverage. Sau depth pass này, core 1–21 đã có một trục học tương đối cân bằng hơn. Việc tiếp theo nên là **cross-link pass + regional depth pass**, không phải tiếp tục tăng số lượng country file.
+Core Geography hiện không còn lỗ hổng lớn kiểu “chưa có chapter”. Công việc tiếp theo nên tập trung vào:
 
-## Ưu tiên tiếp theo
+**cross-link consistency → comparative regional synthesis → selective high-value Atlas depth → cleanup legacy stubs**.
 
-Ưu tiên thứ nhất là chuẩn hóa [Đông Á](./03_regions/01_east_asia.md) và [Đông Nam Á](./03_regions/02_southeast_asia.md) để nối trực tiếp Korea–Vietnam với industry, trade, demographic transition, monsoon, river basin và maritime networks. Sau đó mới mở rộng các region còn mỏng.
-
-Ưu tiên thứ hai là rà lại các country file trong Atlas. File chỉ vài dòng phải được gộp về inventory/subregion note hoặc nâng thành learning profile thực sự; không được tính là “completed content”. Xem [World Atlas coverage status](./06_world_atlas/03_coverage_status.md).
-
-Ưu tiên thứ ba là một **cross-link audit**: mỗi chapter cốt lõi nên trỏ tới prerequisite và application chapter, để library hoạt động như knowledge graph thay vì tập hợp file độc lập.
+Metric quan trọng là khả năng giải thích relationship và transfer mental model sang case mới, không phải số file.

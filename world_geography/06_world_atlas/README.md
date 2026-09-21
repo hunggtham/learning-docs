@@ -1,46 +1,69 @@
 # World Atlas — Application Layer của Knowledge Library
 
-## Atlas không phải mục tiêu coverage theo số file
+## Atlas không phải dự án 100% country-file coverage
 
-World Atlas dùng quốc gia, vùng lãnh thổ và các không gian địa lý như **case study** để áp dụng kiến thức core. Nó không phải bảng tra “thủ đô–dân số–GDP”, cũng không phải dự án tạo một file cho mọi mã chỉ để đạt 100% file coverage.
+World Atlas dùng quốc gia, vùng lãnh thổ và các không gian địa lý như **case study** để áp dụng core Geography. Nó không phải bảng tra “thủ đô–dân số–GDP” và không tạo một file ngắn cho mỗi mã chỉ để đủ danh sách.
 
-Danh sách toàn cầu được giữ ở [Global inventory](./01_global_inventory.md). Inventory có thể đầy đủ mà profile học tập vẫn có tính chọn lọc.
+Danh sách toàn cầu được giữ ở [Global inventory](./01_global_inventory.md). Inventory có thể rộng trong khi learning-profile layer vẫn được curated.
 
-## Ba loại nội dung phải phân biệt
+## Bốn trạng thái nội dung
 
-**Inventory entry** chỉ đảm bảo một không gian không bị bỏ khỏi danh mục.
+**Inventory**: chỉ có tên/mã trong index; không có learning chapter riêng cũng hoàn toàn chấp nhận được.
 
-**Reference stub** là ghi chú ngắn từ các batch cũ. Nó có thể hữu ích để định vị nhưng **không được tính là chapter hoàn chỉnh** và không nằm trong learning route.
+**Planned**: được đánh dấu là đáng có profile sau này nhưng chưa đủ nội dung. Planned không được tính completion.
 
-**Learning profile** là tài liệu độc lập có causal reasoning và cross-link với core. Chỉ loại này được xem là nội dung Atlas đã hoàn thiện.
+**Reference**: file ngắn từ batch cũ có một số orientation/mental model. Nó có thể hỗ trợ navigation nhưng không phải chapter học hoàn chỉnh.
 
-Xem trạng thái: [Coverage status](./03_coverage_status.md).
+**Learning profile**: chapter đủ sâu, có causal reasoning và cross-link với core. Chỉ trạng thái này được tính là completed Atlas learning content.
+
+Xem [Coverage Status](./03_coverage_status.md).
 
 ## Khi nào một country đáng có profile riêng?
 
-Tạo hoặc giữ profile riêng khi territory cung cấp case học đáng giá: cấu trúc địa hình–khí hậu đặc biệt, demographic transition, global production network, major port/corridor, resource system, chokepoint, megadelta, landlocked dependency, city-state, archipelago hoặc liên hệ trực tiếp với Korea–Vietnam.
+Profile riêng chỉ có giá trị khi territory tạo một case học rõ, ví dụ:
 
-Nếu kiến thức chỉ lặp lại chapter vùng và không có cơ chế riêng đáng học, nên gộp vào regional/comparative chapter thay vì duy trì skeleton.
+- liên hệ trực tiếp Korea–Vietnam;
+- major economy hoặc manufacturing/value-chain node;
+- major port, chokepoint hoặc transport corridor;
+- resource/energy system có ảnh hưởng vượt biên giới;
+- megadelta, landlocked dependency, archipelago hoặc city-state;
+- physical–human relationship đặc biệt giúp transfer mental model sang nơi khác.
 
-## Phương pháp đọc profile
+Nếu kiến thức chỉ lặp region chapter và không có mechanism riêng đáng học, nên giữ ở inventory hoặc gộp vào comparative/subregional chapter.
 
-Bắt đầu bằng thesis không gian. Sau đó theo causal chain:
+## Causal chain bắt buộc
 
-**physical base → climate/water → settlement/population → production → transport/network → external dependencies → hazard/risk → transformation**.
+Learning profile không được viết như encyclopedia rời rạc. Cấu trúc giải thích phải làm rõ:
 
-Mục tiêu là có thể giải thích vì sao pattern xuất hiện, không phải nhớ danh sách fact.
+**physical geography → climate/water → resources → settlement/population → economy/production → transport/network → society/institutions → regional/global role → hazards/transformation**.
+
+Không cần mỗi profile có đúng cùng số heading, nhưng phải cho thấy các lớp ảnh hưởng nhau như thế nào.
+
+## Priority hiện tại
+
+### Tier 1 — trực tiếp với learning route
+
+**Republic of Korea, Viet Nam, China, Japan**.
+
+Đây là các case chính để nối East Asia/Southeast Asia với demographic transition, manufacturing GVC, maritime trade, urban concentration, resource dependency và climate/water risk.
+
+### Tier 2 — global economy
+
+**United States** và các major European economies đã được depth-pass như **Germany, France, United Kingdom, Italy, Netherlands**.
+
+Các profile này có giá trị vì market scale, industrial/service networks, ports, finance, energy transition và global value chains.
+
+### Tier 3 — trade/resource/geopolitical mechanisms
+
+Ưu tiên có chọn lọc các case như India, Singapore, Indonesia, Malaysia, Thailand, Philippines, Saudi Arabia, Iran, Türkiye, United Arab Emirates, Egypt, Panama, Brazil, Australia hoặc các nơi khác nếu có mechanism đủ mạnh.
+
+Tier 3 là roadmap, không phải yêu cầu tạo ngay tất cả profile.
 
 ## Nội dung bền vững trước snapshot
 
-Atlas ưu tiên địa hình, lưu vực, climate regime, network structure, urban hierarchy và corridor. Dân số, GDP, trade share, government hoặc current dispute thay đổi nhanh chỉ nên đưa vào khi có mục đích phân tích, kèm thời điểm và nguồn.
+Atlas ưu tiên địa hình, lưu vực, climate regime, urban hierarchy, resource/value chain, port/corridor và regional role. Population, GDP, trade share, government hoặc current dispute thay đổi nhanh chỉ nên thêm khi có mục đích phân tích, kèm thời điểm và nguồn.
 
 Với vấn đề chính trị/biên giới, cấu trúc file không phải tuyên bố về chủ quyền. Xem [Methodology](./00_methodology_and_coverage.md).
-
-## Vai trò của Korea và Vietnam trong route
-
-Vì library phục vụ việc học có liên hệ trực tiếp với Korea và Vietnam, East Asia và Southeast Asia là application priority. Các profile Korea–Vietnam–China–Japan và các node ASEAN quan trọng nên được nâng sâu trước khi mở rộng long tail.
-
-Country profile phải quay lại core chapter như population, migration, industry, trade, hydrology hoặc climate. Nếu profile có thể đọc mà không cần core, nó dễ biến thành encyclopedic fact sheet thay vì knowledge graph.
 
 ## Cấu trúc
 
@@ -59,4 +82,24 @@ Country profile phải quay lại core chapter như population, migration, indus
 └── supplemental/
 ```
 
-Atlas được đọc **sau** [Learning Route](../LEARNING_ROUTE.md), không phải trước.
+Các folder địa lý có thể chứa cả learning profile và legacy reference file. **Folder presence không biểu thị completion**.
+
+## Quy tắc cleanup
+
+Khi audit một subregion, mỗi legacy short file phải nhận một quyết định:
+
+**promote** → viết thành learning profile;
+
+**merge** → chuyển kiến thức có giá trị vào regional/comparative chapter;
+
+**reference/planned** → giữ để navigation nhưng không tính completed;
+
+**remove** → xóa nếu không còn giá trị ngoài inventory.
+
+Không tạo thêm legacy stub mới.
+
+## Cách dùng Atlas khi học
+
+Atlas được đọc **sau** [Learning Route](../LEARNING_ROUTE.md). Trước khi mở profile, hãy tự dự đoán physical constraint, water/resource, settlement, production corridor và external dependency. Sau đó dùng profile để kiểm tra reasoning.
+
+Nếu không thể giải thích concept như monsoon, agglomeration, demographic transition hay chokepoint, quay lại core chapter thay vì tìm thêm country fact.
