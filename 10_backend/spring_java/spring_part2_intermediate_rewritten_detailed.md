@@ -987,6 +987,18 @@ Nếu call không đi qua proxy, declarative transaction advice không chạy.
 
 ---
 
+<!-- SPRING_BATCH3_TX_INTERMEDIATE -->
+## `@Transactional` đi từ metadata tới Connection như thế nào?
+
+`@Transactional` được đọc thành `TransactionAttribute`. Khi call đi qua transactional proxy, `TransactionInterceptor` đi vào common transaction logic của `TransactionAspectSupport`: resolve transaction attribute, chọn `TransactionManager`, hỏi manager xem có transaction hiện tại không rồi tạo `TransactionStatus`. Với JDBC, `DataSourceTransactionManager` lấy Connection từ DataSource, configure auto-commit/isolation/read-only theo policy và bind resource holder với current execution context. Repository code dùng Spring-aware connection access có thể vì vậy nhận đúng connection đang thuộc transaction hiện tại thay vì tạo connection độc lập.
+
+`TransactionSynchronizationManager` giữ resource bindings và synchronization callbacks cho imperative transaction. Nó giải thích tại sao hai repository methods trên cùng thread có thể cùng dùng một transaction mà không truyền Connection qua mọi method signature. Nó cũng giải thích tại sao `new Thread(...)` hoặc arbitrary executor không tự mang transaction đi theo: thread mới không có resource binding cũ.
+
+Khi target method return, interceptor không tự “commit database” trực tiếp. Transaction manager quyết định commit hay rollback dựa `TransactionStatus`, rollback-only flag và exception rule. Cleanup sau đó unbind resource, restore state và release Connection về pool. Nếu code giữ transaction quá lâu, bạn đang giữ scarce connection/locks quá lâu; annotation không làm resource cost biến mất.
+<!-- SPRING_BATCH3_TX_INTERMEDIATE_END -->
+
+---
+
 # 39. PlatformTransactionManager
 
 Spring cung cấp transaction abstraction. Với JDBC có manager kiểu DataSource-based. Với JPA có JPA transaction manager. Application dùng common `@Transactional`, còn manager implementation biết cách điều khiển resource.

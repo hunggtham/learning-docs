@@ -123,6 +123,16 @@ Simplified:
 
 Transaction interceptor không trực tiếp biết JDBC/JPA implementation; nó đi qua transaction-manager abstraction.
 
+<!-- SPRING_BATCH3_TX_MASTER -->
+## Source trace: `TransactionInterceptor` → `TransactionAspectSupport` → transaction manager
+
+`TransactionInterceptor` là MethodInterceptor mỏng; phần orchestration chính nằm trong `TransactionAspectSupport#invokeWithinTransaction`. Framework lấy `TransactionAttributeSource`, xác định manager, tạo/join transaction rồi invoke callback tới target. Sau target, logic complete-after-throwing hoặc commit-after-returning chuyển control cho transaction manager. Đọc source theo flow này giúp bạn phân biệt AOP interception với actual resource implementation.
+
+Ở JDBC, `DataSourceTransactionManager` phối hợp `DataSourceUtils` và resource holder để cùng DataSource lookup nhận transaction-bound Connection. Ở JPA, `JpaTransactionManager` quản lý EntityManager/persistence context và có thể expose JDBC connection integration tùy setup. `TransactionSynchronizationManager` chỉ là context registry; business transaction semantics vẫn nằm trong manager + underlying resource.
+<!-- SPRING_BATCH3_TX_MASTER_END -->
+
+---
+
 # 13. `TransactionSynchronizationManager`
 
 Imperative transaction infrastructure cần bind resources/context với current execution thread: connection/session, transaction active/read-only/name/isolation và synchronization callbacks. `TransactionSynchronizationManager` là infrastructure trung tâm cho kiểu binding này. Business code hiếm khi nên gọi trực tiếp, nhưng hiểu nó giải thích vì sao spawn thread mới không tự mang imperative transaction theo.
@@ -130,6 +140,18 @@ Imperative transaction infrastructure cần bind resources/context với current
 # 14. Self-invocation nhìn từ proxy internals
 
 External call đi `caller → proxy → interceptor → target`. Internal `this.otherMethod()` chỉ là Java call trên target và không quay lại proxy. Vì vậy transaction/cache/security/async advice có thể bị bypass. Đây là consequence của proxy-based AOP, không phải bug riêng `@Transactional`.
+
+<!-- SPRING_BATCH3_PERSISTENCE_MASTER -->
+## Spring Data JPA proxy, query execution và entity state
+
+Spring Data tạo repository proxy từ repository metadata, repository fragments và store-specific base implementation. Query method có thể được resolve thành derived query, declared query hoặc custom implementation. Proxy vì vậy là dispatch layer; query parser/JPA provider/database mới quyết định SQL cuối cùng.
+
+Ở JPA, bốn trạng thái useful là transient, managed, detached và removed. Dirty checking chỉ áp dụng có ý nghĩa với managed entity trong persistence context. Khi transaction kết thúc và context đóng, entity trở detached; sửa field trên detached object không tự tạo SQL. `merge` không “reattach same object” theo cách đơn giản mà copy state vào managed instance và trả managed instance đó.
+
+Performance phải được reason bằng fetch plan và SQL count, không bằng số repository methods. Một repository call có thể tạo một SQL projection nhỏ hoặc hàng trăm lazy queries. Ngược lại, một fetch join quá lớn có thể tạo Cartesian multiplication. Spring Data abstraction không loại nhu cầu đọc generated SQL, execution plan và persistence-context behavior.
+<!-- SPRING_BATCH3_PERSISTENCE_MASTER_END -->
+
+---
 
 # 15. `DispatcherServlet` source flow
 

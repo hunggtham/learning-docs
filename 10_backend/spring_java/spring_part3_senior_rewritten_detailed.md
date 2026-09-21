@@ -259,6 +259,18 @@ Hiểu điều này giải thích vì sao transaction historically thread-bound 
 
 ---
 
+<!-- SPRING_BATCH3_TX_SENIOR -->
+## Suspend, resume, timeout và rollback-only là resource semantics chứ không phải annotation trivia
+
+Khi propagation yêu cầu transaction mới, manager có thể phải suspend resources/context của transaction hiện tại, bind resources mới, chạy inner scope rồi resume outer resources. `REQUIRES_NEW` vì vậy vừa tạo isolation boundary vừa tăng concurrent resource demand. Với local JDBC/JPA, “suspend” không biến outer transaction thành free; connection/locks của outer có thể vẫn tồn tại trong lúc inner transaction cần thêm capacity.
+
+Timeout cũng phải được nhìn từ resource layer. Spring transaction timeout có thể được truyền tới resource operations tùy manager/driver, nhưng nó không thay thế HTTP deadline, database statement timeout hay lock timeout ở mọi layer. Một use case có 2 giây budget nhưng remote client timeout 30 giây và DB lock wait 60 giây vẫn có thể phá latency SLO dù `@Transactional(timeout=5)` tồn tại.
+
+Rollback-only là trạng thái của logical/physical transaction, không phải exception decoration. Một inner participant có thể đánh dấu transaction không còn committable; outer method catch exception chỉ thay Java control flow, không xóa trạng thái resource. Đây là lý do senior code review phải xem exception taxonomy cùng propagation graph.
+<!-- SPRING_BATCH3_TX_SENIOR_END -->
+
+---
+
 # 11. Physical transaction và logical scopes
 
 Outer REQUIRED và inner REQUIRED có hai logical annotation scopes nhưng thường chia sẻ một physical DB transaction.
@@ -359,6 +371,20 @@ DB phát hiện cycle và abort một transaction.
 Application mitigation gồm consistent lock ordering, transaction ngắn, index đúng để tránh lock nhiều rows, retry carefully với idempotency.
 
 Đừng chỉ tăng timeout.
+
+---
+
+<!-- SPRING_BATCH3_JPA_SENIOR -->
+## Từ Spring Data repository tới EntityManager: persistence runtime thật sự nằm ở đâu?
+
+Spring Data repository interface thường được triển khai bằng proxy, nhưng proxy không phải database engine. Nó dịch repository invocation thành implementation/query execution dùng JPA `EntityManager`. `EntityManager` mà application inject thường là một shared proxy: mỗi call được route tới transaction-bound persistence context phù hợp. Vì vậy repository có thể trông stateless trong Java trong khi persistence context giữ managed entities và pending changes theo transaction.
+
+`save(entity)` cũng không đồng nghĩa “chạy INSERT ngay”. `SimpleJpaRepository` quyết định entity có mới hay không; entity mới thường đi `persist`, entity được xem là existing thường đi `merge`. `merge` trả về managed copy và object truyền vào không nhất thiết trở thành chính instance managed. SQL INSERT/UPDATE có thể chỉ xuất hiện ở flush/commit, do JPA write-behind. Vì vậy debugger nhìn thấy `save()` return chưa có nghĩa database đã commit.
+
+Flush là synchronization giữa persistence context và database transaction, còn commit là durable transaction boundary. Query có thể trigger flush tùy flush mode để bảo đảm query thấy changes. `saveAndFlush` ép synchronization sớm hơn nhưng vẫn không biến local transaction thành committed transaction. Dùng nó để “chắc chắn đã save” thường che việc chưa hiểu flush/commit semantics.
+
+Open Session/EntityManager in View giữ persistence context qua web request để lazy relation còn có thể load trong serialization/view. Nó giảm `LazyInitializationException` nhưng làm SQL có thể phát sinh rất muộn, khó thấy transaction/query ownership và dễ tạo N+1. Senior design nên chủ động fetch/projection ở application boundary thay vì dựa lazy loading trong serializer.
+<!-- SPRING_BATCH3_JPA_SENIOR_END -->
 
 ---
 
