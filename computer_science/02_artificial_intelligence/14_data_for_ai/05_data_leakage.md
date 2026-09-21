@@ -1,12 +1,12 @@
-# Rò rỉ Dữ liệu
+# Data Leakage
 
-**Rò rỉ dữ liệu (data leakage / 데이터 누수)** xảy ra khi training hoặc evaluation pipeline cho mô hình tiếp cận thông tin mà production inference thực tế sẽ không có, hoặc khi thông tin từ validation/test ảnh hưởng ngược trở lại training. Leakage tạo metric đẹp giả tạo và là một trong những failure nghiêm trọng nhất của hệ thống Machine Learning.
+**Data leakage (데이터 누수 / rò rỉ dữ liệu)** xảy ra khi training/evaluation pipeline cho model access information mà production inference sẽ không thực sự có, hoặc khi information từ validation/test ảnh hưởng training. Leakage tạo metrics đẹp giả tạo và thường là một trong những failure nghiêm trọng nhất của ML system.
 
 ## Target Leakage
 
-Feature chứa trực tiếp hoặc gián tiếp thông tin về target sau thời điểm cần prediction.
+Feature chứa trực tiếp hoặc gián tiếp information về target sau thời điểm prediction.
 
-Ví dụ cần dự đoán fraud ngay tại thời điểm giao dịch nhưng feature lại chứa:
+Ví dụ dự đoán fraud tại transaction time nhưng feature chứa:
 
 ```text
 chargeback_status
@@ -14,107 +14,98 @@ manual_investigation_result
 post-transaction dispute count
 ```
 
-Mô hình không hề “thông minh” hơn; nó chỉ đang nhìn thấy tương lai.
+Model không “thông minh”; nó nhìn tương lai.
 
 ## Temporal Leakage
 
-Feature aggregate vô tình sử dụng các event xảy ra sau prediction time.
+Feature aggregate vô tình include future events.
 
-Ví dụ cần dự đoán churn vào ngày 1/9 nhưng feature “số support ticket trong tháng 9” lại được tính bằng toàn bộ bảng của cả tháng.
+Ví dụ muốn predict churn ngày 1/9 nhưng tính “number of support tickets in September” bằng full-month table.
 
-Feature hợp lệ phải dùng truy vấn theo thời điểm:
+Correct feature cần as-of query:
 
 ```text
-chỉ dùng event có event_time <= prediction_time
+only events with event_time <= prediction_time
 ```
 
-## Nhiễm chéo giữa Train và Test
+## Train/Test Contamination
 
-Cùng một entity hoặc near-duplicate xuất hiện ở cả hai phía, ví dụ:
+Same or near-duplicate entity appears both sides:
 
-- frame từ cùng một video;
-- record của cùng bệnh nhân;
-- tài liệu web được copy;
-- nhiều transaction của cùng customer;
-- phiên bản augmented của cùng một ảnh.
+- frames từ same video;
+- records của same patient;
+- copied web documents;
+- repeated customer transactions;
+- augmented versions of same image.
 
-Random row split không đủ nếu các observation có correlation theo group.
+Random row split không đủ khi observations correlated by group.
 
 ## Preprocessing Leakage
 
-Nếu fit scaler, PCA, imputer hoặc vocabulary trên toàn dataset trước khi split:
+Fit scaler/PCA/imputer/vocabulary on full dataset trước split:
 
 \[
 \mu = mean(train+test)
 \]
 
-thì distribution của test đã ảnh hưởng transformation dùng cho train.
-
-Pattern đúng là:
+Test distribution ảnh hưởng transform training. Correct pattern:
 
 ```text
-fit transformation trên train
-→ đóng băng tham số
-→ áp dụng lên validation và test
+fit transform on train
+apply frozen transform to val/test
 ```
 
 ## Feature Selection Leakage
 
-Nếu chọn feature dựa trên correlation với target được tính bằng cả test set, test đã tham gia vào model design.
+Nếu chọn features dựa trên correlation với target computed over entire data including test, test đã influence model design.
 
-Feature selection và hyperparameter tuning phải nằm trong training/validation process, không được dùng final test làm tín hiệu cải tiến.
+Selection/hyperparameter tuning phải nằm trong training/validation process.
 
 ## Cross-Validation Leakage
 
-Nếu preprocessing được fit bên ngoài các cross-validation fold, thông tin giữa các fold có thể bị rò rỉ.
+Preprocessing outside CV folds leaks fold information. Pipeline phải refit transforms inside each training fold.
 
-Mỗi fold phải fit transformation trên phần training của chính fold đó rồi mới apply sang phần validation tương ứng.
+## Label Leakage Through Human Process
 
-## Leakage qua Quy trình Human Labeling
-
-Field do con người tạo có thể encode outcome một cách gián tiếp.
-
-Ví dụ analyst viết note sau khi case đã được giải quyết và note chứa câu “confirmed fraud”. Nếu model phải triage **trước** khi analyst xử lý, note này là một feature bất hợp lệ dù nó tồn tại trong database.
+Human-created fields may encode outcome indirectly. Example analyst writes note after resolving case; text contains “confirmed fraud”. If model is supposed to triage before analyst resolution, note is illegal feature.
 
 ## Proxy Leakage
 
-Một feature có thể technically tồn tại tại prediction time nhưng chỉ xuất hiện vì quy trình production hiện tại đã ngầm biết target.
+Feature itself technically available but only because current production process already uses target outcome.
 
-Ví dụ `queue=fraud_team` cho biết upstream rule đã đánh dấu case là đáng ngờ. Mô hình có thể đạt metric rất cao nhưng thực chất chỉ học lại routing logic cũ và sẽ dễ hỏng nếu quy trình routing thay đổi.
+Example `queue=fraud_team` indicates upstream rule already decided case suspicious. Model appears strong but adds no independent predictive power and may fail if routing logic changes.
 
 ## Identifier Leakage
 
-ID đôi khi encode time, source hoặc category ngoài ý muốn. Model có thể memorize entity hoặc batch thay vì học signal tổng quát.
+IDs can encode time/source/category unintentionally. Model memorizes entity or batch rather than general signal.
 
-Những high-cardinality ID cần được audit cẩn thận ngay cả khi nhìn bề ngoài chúng không liên quan target.
+High-cardinality IDs should be scrutinized even if not obvious target.
 
-## Duplicate Leakage trong Foundation Model
+## Duplicate Leakage in Foundation Models
 
-Text trong benchmark evaluation có thể đã xuất hiện nguyên văn hoặc dưới dạng paraphrase trong pretraining corpus. Khi đó benchmark score trộn lẫn generalization và memorization.
+Evaluation benchmark text may exist verbatim or paraphrased in pretraining corpus. Model score then mixes generalization and memorization.
 
-Contamination detection có thể dùng exact hash, n-gram similarity, semantic matching và source provenance, nhưng rất khó phát hiện hoàn hảo ở quy mô lớn.
+Contamination detection uses exact hashes, n-gram similarity, semantic matching and source provenance, but perfect detection is difficult.
 
-## Leakage trong Đánh giá RAG
+## RAG Evaluation Leakage
 
-Nếu gold answer được đưa thẳng vào indexed corpus theo cách không giống production, hệ thống RAG có thể retrieve đáp án quá trực tiếp và tạo score không thực tế.
-
-Evaluation corpus phải được xây sao cho phản ánh đúng dữ liệu mà deployment thật sự có.
+If evaluator answer is included in indexed corpus in an artificial way not representative production, RAG may retrieve gold answer directly. Need construct realistic retrieval corpus.
 
 ## Time-Based Split
 
-Với hệ thống dự đoán tương lai, cách chia **train quá khứ → validation/test tương lai** thường mô phỏng deployment tốt hơn:
+For future prediction systems, train past → validate/test future often best approximates deployment:
 
 ```text
-train: Jan–Jun
-validation: Jul
-test: Aug
+train: Jan-Jun
+val: Jul
+ test: Aug
 ```
 
-Tuy nhiên một time split duy nhất có thể chịu seasonality hoặc regime shift mạnh; rolling backtest giúp đánh giá ổn định hơn.
+But seasonality/regime shift can make one time split noisy; rolling backtests help.
 
 ## Group Split
 
-Toàn bộ observation của cùng một entity nên nằm trong cùng một split, ví dụ theo:
+Group all observations of entity into same split:
 
 ```text
 patient_id
@@ -124,88 +115,82 @@ device_id
 video_id
 ```
 
-Điều này giảm nguy cơ model memorize entity rồi “nhận lại” nó ở test.
+prevents memorization across correlated records.
 
 ## Spatial Leakage
 
-Trong dữ liệu địa lý, các điểm gần nhau thường correlation mạnh. Random point split có thể làm test quá dễ vì train đã chứa các vị trí lân cận.
+Geospatial data nearby locations correlated. Random points split can overestimate generalization to new regions. Spatial block split may be needed.
 
-Nếu mục tiêu là generalize sang vùng mới, có thể cần **spatial block split**.
+## Leakage Audit Questions
 
-## Câu hỏi Audit Leakage
+For each feature:
 
-Với mỗi feature, nên hỏi:
+1. feature được generated khi nào?
+2. source event xảy ra trước prediction time không?
+3. production path có compute được cùng logic không?
+4. target hoặc downstream decision có ảnh hưởng feature không?
+5. same entity/data derivative có xuất hiện test không?
 
-1. feature này được tạo ở thời điểm nào?
-2. source event có xảy ra trước prediction time không?
-3. production có thể compute cùng logic vào đúng thời điểm không?
-4. target hoặc downstream decision có ảnh hưởng ngược lên feature không?
-5. cùng entity hoặc derivative của dữ liệu có xuất hiện ở test không?
+## Feature Store Point-in-Time Join
 
-## Point-in-Time Join trong Feature Store
+Correct historical training join selects latest feature value available before event time, not current latest record.
 
-Khi tạo historical training set, join đúng phải chọn feature value mới nhất **có sẵn trước event time**, không phải record mới nhất ở hiện tại.
+This is core function of temporal feature stores.
 
-Đây là một chức năng cốt lõi của temporal feature store.
+## Hidden Leakage Through Aggregates
 
-## Hidden Leakage qua Aggregate
-
-Một monthly aggregate có thể mang timestamp là ngày đầu tháng nhưng thực tế chỉ được tính sau khi tháng kết thúc.
-
-Vì vậy timestamp field không đủ chứng minh feature đã available; lineage cần ghi cả **availability time**.
+A monthly aggregate may have timestamp first day of month nhưng calculated after month end. Timestamp field alone cannot prove availability; lineage must record **availability time**.
 
 ## Hyperparameter Overfitting
 
-Nếu team liên tục xem test score rồi chỉnh model, test set dần trở thành một validation set không chính thức. Final metric khi đó sẽ optimistic.
+Repeatedly inspect test score and adjust model turns test set into informal validation set. Final metric optimistic.
 
-Cần final holdout ẩn hoặc quy trình evaluation nghiêm ngặt hơn như nested validation khi tuning nhiều vòng.
+Need hidden final holdout or nested evaluation discipline.
 
 ## Early Stopping
 
-Dùng validation để early stopping là hợp lệ vì validation thuộc quá trình model selection.
+Using validation for early stopping is legitimate because validation is part of model selection. But final test must remain untouched until selection complete.
 
-Nhưng final test phải được giữ nguyên và chỉ dùng sau khi model selection hoàn tất.
+## Leakage Detection Signals
 
-## Dấu hiệu Gợi ý Leakage
+Suspicious signs:
 
-Một số tín hiệu đáng nghi:
+- unrealistically high metric;
+- one feature dominates importance;
+- test performance collapses in future split;
+- model works offline but not online;
+- feature correlation appears after outcome timestamp.
 
-- metric cao bất thường;
-- một feature áp đảo toàn bộ feature importance;
-- performance sụp mạnh khi dùng future split;
-- model rất tốt offline nhưng kém online;
-- feature correlation chỉ xuất hiện sau outcome timestamp.
+High performance is not proof of leakage, but deserves audit.
 
-Metric cao không chứng minh có leakage, nhưng là lý do chính đáng để audit kỹ.
+## Example: Credit Risk
 
-## Ví dụ: Credit Risk
+Feature `days_past_due_current` may be valid for predicting future 12-month default at current date, but invalid if goal is predict default at loan origination. Same field legality depends prediction timestamp.
 
-Feature `days_past_due_current` có thể hợp lệ khi dự đoán default trong 12 tháng tiếp theo ở thời điểm hiện tại, nhưng lại bất hợp lệ nếu mục tiêu là dự đoán default ngay tại thời điểm loan origination.
+Thus leakage is task-definition relative.
 
-Một feature có “hợp pháp” hay không phụ thuộc định nghĩa task và prediction timestamp.
+## Mental Model
 
-## Mô hình tư duy
+> **Leakage means model receives information from outside the information boundary that will exist at the moment of real decision.**
 
-> **Leakage nghĩa là mô hình nhận thông tin nằm ngoài ranh giới thông tin thực sự tồn tại tại thời điểm ra quyết định.**
+Think like time traveler/auditor, not like dataframe programmer.
 
-Hãy suy nghĩ như một auditor kiểm tra timeline, không chỉ như người thao tác dataframe.
+## Common Misconceptions
 
-## Những nhầm lẫn thường gặp
+### “Leakage chỉ là target column accidentally included”
 
-### “Leakage chỉ là vô tình đưa target column vào feature”
+Temporal aggregates, duplicates, human workflow and preprocessing are more subtle common forms.
 
-Không. Temporal aggregate, duplicate, human workflow và preprocessing leakage còn phổ biến và tinh vi hơn.
+### “Random split prevents leakage”
 
-### “Random split ngăn được leakage”
+Not for time/group/spatial correlated data.
 
-Không nếu dữ liệu có correlation theo time, group hoặc không gian.
+### “If feature exists in database, it is fair to use”
 
-### “Feature có trong database thì dùng được”
+It may not exist yet at prediction time.
 
-Không. Nó có thể chỉ xuất hiện sau prediction time hoặc chỉ được biết nhờ một downstream process.
+## Knowledge Connection
 
-## Liên kết kiến thức
+Leakage connects temporal databases, causal process understanding and evaluation design.
 
-Leakage nối Temporal Database, Causal Process Understanding và Evaluation Design.
-
-Xem tiếp: [Thiên lệch Dataset](./06_dataset_bias.md).
+Xem tiếp: [Dataset Bias](./06_dataset_bias.md).

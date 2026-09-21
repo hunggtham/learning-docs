@@ -1,12 +1,12 @@
-# Lịch sử và các trường phái AI
+# Lịch sử và các AI Paradigm
 
-Lịch sử **trí tuệ nhân tạo (Artificial Intelligence - AI / 인공지능)** không phải một đường thẳng đi từ “AI yếu” tới “AI mạnh”. Nó là chuỗi thay đổi trong cách con người trả lời câu hỏi: **trí thông minh nên được xây dựng bằng cơ chế nào?** Mỗi giai đoạn nhấn mạnh một giả định khác nhau. Có thời kỳ người ta xem logic là trung tâm của trí thông minh; có thời kỳ trọng tâm chuyển sang tìm kiếm (search); sau đó là học các mẫu thống kê từ dữ liệu; còn AI hiện đại dựa mạnh vào học biểu diễn quy mô lớn (large-scale representation learning), dữ liệu, năng lực tính toán và tối ưu hóa.
+Lịch sử Artificial Intelligence (AI / 인공지능) không phải một đường thẳng đi từ “AI yếu” tới “AI mạnh”. Nó giống một chuỗi thay đổi về **cách con người nghĩ rằng intelligence nên được xây dựng**. Mỗi giai đoạn nổi bật một assumption khác nhau: có lúc người ta tin intelligence chủ yếu là logic; có lúc trọng tâm là search; có lúc là học statistical pattern từ data; hiện nay phần lớn frontier systems dựa vào large-scale representation learning kết hợp data, compute, optimization và system engineering.
 
-Hiểu lịch sử theo **trường phái hoặc mô hình tiếp cận (paradigm)** hữu ích hơn học thuộc mốc thời gian, vì nhiều ý tưởng cũ vẫn xuất hiện trong hệ thống hiện đại dưới hình thức mới.
+Hiểu lịch sử theo paradigm hữu ích hơn học thuộc timeline, vì nhiều “ý tưởng cũ” vẫn xuất hiện trong system hiện đại dưới hình thức mới.
 
-## AI ký hiệu (Symbolic AI): trí thông minh như thao tác trên ký hiệu
+## Symbolic AI: intelligence như thao tác trên symbol
 
-Một trong những hướng tiếp cận đầu tiên là **AI ký hiệu (Symbolic AI / 기호 인공지능)**. Ý tưởng nền tảng là: nếu tri thức có thể được biểu diễn bằng ký hiệu và quy tắc, máy có thể thao tác các ký hiệu đó theo logic để suy luận.
+Một trong những cách tiếp cận đầu tiên là **Symbolic AI (기호 인공지능 / AI ký hiệu)**. Ý tưởng nền là: nếu knowledge có thể được biểu diễn bằng symbol và rule, máy có thể thao tác symbol theo logic để suy luận.
 
 Ví dụ:
 
@@ -17,172 +17,172 @@ Human(Socrates)
 Mortal(Socrates)
 ```
 
-Trong ví dụ này, hệ thống không học quy tắc từ dữ liệu. Tri thức được mã hóa trực tiếp. Ưu điểm của cách tiếp cận ký hiệu là quá trình suy luận tương đối rõ ràng, dễ kiểm tra và có ngữ nghĩa được định nghĩa tường minh.
+Ở đây system không “học” rule từ data. Knowledge được encode trực tiếp. Strength của symbolic approach là reasoning rõ ràng, dễ inspect và có semantics tương đối explicit.
 
-Vấn đề xuất hiện khi thế giới quá lớn, nhiều nhiễu hoặc khó mô tả bằng quy tắc. Một hệ thống nhận diện mèo từ ảnh khó có thể dựa vào hàng nghìn quy tắc thủ công kiểu “tai nhọn + ria + kết cấu lông + tư thế...”. Thế giới thực chứa sự mơ hồ, bất định và mức biến thiên rất lớn.
+Nhưng problem xuất hiện khi world quá lớn, noisy hoặc khó mô tả bằng rule. Một system nhận diện mèo từ ảnh không thể dễ dàng dựa vào hàng nghìn rule kiểu “tai nhọn + ria + texture + pose...”. Real world chứa ambiguity, uncertainty và enormous variability.
 
-Điều này tạo động lực cho **học thống kê (statistical learning)**.
+Điều này dẫn tới nhu cầu cho statistical learning.
 
-## Tìm kiếm và lập kế hoạch: trí thông minh như khám phá không gian khả năng
+## Search và planning: intelligence như exploration trong space of possibilities
 
-Nhiều bài toán có thể được biểu diễn thành **không gian trạng thái (state space)**. Cờ vua, tìm đường, giải câu đố hay lập lịch đều chứa rất nhiều khả năng, và hệ thống cần tìm một chuỗi hành động phù hợp.
+Nhiều problem có thể được biểu diễn thành state space. Chess, route planning, puzzle solving hoặc scheduling đều có nhiều khả năng, và system cần tìm sequence action phù hợp.
 
-Cách tiếp cận tìm kiếm không yêu cầu hệ thống phải “hiểu” thế giới giống con người. Nó cần biểu diễn được trạng thái, hành động, mục tiêu và một chiến lược khám phá không gian khả năng.
+Search paradigm không yêu cầu system phải “hiểu” thế giới giống con người. Nó cần representation của state, action, goal và một strategy để explore.
 
-Ví dụ, tìm đường có thể được mô hình hóa thành đồ thị. Một nút (node) là trạng thái, một cạnh (edge) là hành động, còn trọng số có thể biểu diễn chi phí di chuyển. Thuật toán A* sử dụng hàm ước lượng (heuristic) để ưu tiên những trạng thái có vẻ hứa hẹn.
+Ví dụ, path finding có thể được mô hình hóa thành graph. Một node là state, edge là action, cost là chi phí di chuyển. Algorithm như A* sử dụng heuristic để ưu tiên những state có vẻ hứa hẹn.
 
-Ý tưởng này vẫn rất quan trọng trong AI hiện đại. Tìm kiếm chùm (beam search) được dùng trong giải mã (decoding). Truy xuất (retrieval) là một dạng tìm kiếm trên không gian tài liệu hoặc vector. Tác nhân có thể lập kế hoạch bằng cách tìm một chuỗi hành động. Một số hệ thống suy luận kết hợp mô hình ngôn ngữ với cây tìm kiếm.
+Idea này vẫn còn rất sống trong AI hiện đại. Beam search được dùng trong decoding. Retrieval là một dạng search trên document/vector space. Planning agent tìm sequence action. Một số reasoning systems kết hợp language model với search tree.
 
-## AI xác suất: trí thông minh dưới sự bất định
+## Probabilistic AI: intelligence dưới uncertainty
 
-Thế giới thực hiếm khi hoàn toàn xác định. Cảm biến có nhiễu, chẩn đoán có mức không chắc chắn, hành vi người dùng thay đổi. Vì vậy **xác suất (probability)** trở thành một ngôn ngữ quan trọng của AI.
+Real world hiếm khi deterministic hoàn toàn. Sensor có noise. Diagnosis không chắc chắn. User behavior biến đổi. Vì vậy probability trở thành một language quan trọng của AI.
 
-Thay vì kết luận “bệnh chắc chắn xảy ra”, mô hình có thể biểu diễn:
+Thay vì nói “disease chắc chắn xảy ra”, model có thể biểu diễn:
 
 \[
 P(Disease \mid Symptoms)
 \]
 
-**Suy luận xác suất (probabilistic reasoning)** chuyển trọng tâm từ quy tắc tuyệt đối sang mức độ tin cậy và sự bất định. Mạng Bayes (Bayesian network), mô hình Markov ẩn (Hidden Markov Model - HMM) và mô hình đồ thị xác suất (probabilistic graphical model) là những ví dụ tiêu biểu.
+Probabilistic reasoning chuyển focus từ rule tuyệt đối sang degree of belief và uncertainty. Bayesian networks, hidden Markov models và probabilistic graphical models là những ví dụ lớn.
 
-Trường phái này tạo cầu nối mạnh giữa AI và thống kê.
+Paradigm này tạo cầu nối mạnh giữa AI và Statistics.
 
-## Học máy: thay vì viết toàn bộ quy tắc, hãy học ánh xạ từ dữ liệu
+## Machine Learning: thay vì viết rule, hãy học mapping từ data
 
-**Học máy (Machine Learning - ML / 기계학습)** thay đổi trung tâm của quá trình phát triển hệ thống. Thay vì lập trình viên định nghĩa trực tiếp mọi quy tắc ra quyết định, ta xây dựng mô hình với các tham số rồi dùng dữ liệu để điều chỉnh các tham số sao cho hàm mục tiêu tốt hơn.
+Machine Learning (ML / 기계학습 / học máy) thay đổi trung tâm của engineering process. Thay vì developer định nghĩa trực tiếp mọi decision rule, ta xây model với parameters và sử dụng data để điều chỉnh parameters sao cho objective tốt hơn.
 
-Ví dụ, hồi quy tuyến tính (linear regression) học hàm:
+Ví dụ linear regression học:
 
 \[
 \hat{y} = wx + b
 \]
 
-Quá trình huấn luyện (training) tìm `w` và `b` để dự đoán gần giá trị mục tiêu. Mạng nơ-ron mở rộng ý tưởng này thành hàng triệu hoặc hàng tỷ tham số.
+Training tìm `w` và `b` để prediction gần target. Neural network mở rộng idea này thành hàng triệu hoặc hàng tỷ parameters.
 
 Điểm bản chất là:
 
-> **Học không phải phép màu. Đó là quá trình dùng bằng chứng trong dữ liệu để lựa chọn một mô hình trong không gian giả thuyết (hypothesis space).**
+> Learning không phải magic. Nó là quá trình dùng evidence trong data để chọn một model trong hypothesis space.
 
-Từ đây xuất hiện các khái niệm như khả năng khái quát hóa (generalization), quá khớp (overfitting), thiên kiến quy nạp (inductive bias), chia tập huấn luyện/xác thực/kiểm thử và đánh giá mô hình.
+Điều này kéo theo các khái niệm generalization, overfitting, inductive bias, train/validation/test split và evaluation.
 
-## Thuyết liên kết và mạng nơ-ron
+## Connectionism và Neural Networks
 
-**Thuyết liên kết (connectionism)** xem trí thông minh như hành vi nổi lên từ mạng các đơn vị xử lý tương tác với nhau. Ý tưởng này lấy cảm hứng lỏng lẻo từ nơ-ron sinh học nhưng mạng nơ-ron nhân tạo không phải bản sao của bộ não.
+**Connectionism** xem intelligence như emergent behavior từ mạng các processing units tương tác, lấy cảm hứng lỏng lẻo từ neuron sinh học nhưng không phải bản sao brain.
 
-Mạng nơ-ron hiện đại sử dụng **đồ thị tính toán khả vi (differentiable computation graph)**. Dữ liệu đầu vào đi qua nhiều tầng, mô hình tạo dự đoán, hàm mất mát đo sai số, sau đó gradient được lan truyền ngược để cập nhật tham số.
+Neural network hiện đại sử dụng differentiable computation graph. Input đi qua nhiều layer, tạo prediction, loss đo error, rồi gradient được propagate ngược để update parameters.
 
-Học sâu (Deep Learning) phát triển mạnh nhờ ba yếu tố cùng xuất hiện:
+Deep Learning thành công mạnh vì ba yếu tố gặp nhau:
 
-1. lượng dữ liệu lớn hơn;
-2. năng lực tính toán mạnh hơn, đặc biệt là GPU;
-3. kiến trúc và kỹ thuật tối ưu hóa tốt hơn.
+1. data ở scale lớn hơn;
+2. compute mạnh hơn, đặc biệt GPU;
+3. architecture + optimization technique tốt hơn.
 
-Học sâu không chỉ đơn giản là “nhiều tầng hơn”. Điểm quan trọng là **học biểu diễn (representation learning)**: mô hình tự học các đặc trưng trung gian thay vì phụ thuộc hoàn toàn vào đặc trưng do con người thiết kế.
+Nó không chỉ là “nhiều layer hơn”. Deep network đặc biệt mạnh ở **representation learning**: model tự học intermediate features thay vì phụ thuộc hoàn toàn vào hand-crafted features.
 
-## Học biểu diễn: từ “đặc trưng nào?” sang “biểu diễn nào?”
+## Representation Learning: thay đổi câu hỏi từ “feature nào?” sang “representation nào?”
 
-Trong học máy cổ điển, kỹ sư thường tự thiết kế đặc trưng. Với ảnh, có thể dùng bộ phát hiện cạnh hoặc bộ mô tả được xây thủ công. Học sâu cho phép mô hình học biểu diễn trực tiếp từ dữ liệu gần với dạng thô ban đầu.
+Trong classical ML, engineer thường thiết kế feature. Với image, có thể dùng edge detector hoặc hand-crafted descriptor. Deep Learning cho phép model học representation trực tiếp từ raw-ish input.
 
-Một mô hình phân loại ảnh không chỉ học nhãn đầu ra; các tầng trung gian có thể học kết cấu, hình dạng, bộ phận và các mẫu trừu tượng hơn. Một mô hình ngôn ngữ học biểu diễn vector liên quan đến cú pháp, ngữ nghĩa và ngữ cảnh.
+Một image classifier không chỉ học output label; intermediate layers học texture, shape, part và higher-level pattern. Một language model học vector representation liên quan tới syntax, semantics và context.
 
-Đây là một bước chuyển quan trọng vì nhiều đột phá hiện đại đến từ việc học được biểu diễn phù hợp.
+Đây là bước chuyển rất quan trọng vì nhiều breakthrough hiện đại đến từ việc học được representation tốt.
 
-## Mô hình nền tảng và quy mô
+## Foundation Models và scale
 
-**Mô hình nền tảng (Foundation Model / 기반 모델)** là mô hình được tiền huấn luyện (pretraining) trên lượng dữ liệu rộng ở quy mô lớn, sau đó có thể được thích nghi cho nhiều nhiệm vụ phía sau (downstream task).
+**Foundation Model (기반 모델 / mô hình nền tảng)** là model được train trên broad data ở scale lớn, sau đó có thể adapt cho nhiều downstream tasks.
 
-**Mô hình ngôn ngữ lớn (Large Language Model - LLM)** là một dạng mô hình nền tảng cho ngôn ngữ và ngày càng được mở rộng sang dữ liệu đa phương thức (multimodal). Thay vì huấn luyện một mô hình hoàn toàn riêng cho từng nhiệm vụ, ta có thể tiền huấn luyện mô hình lớn rồi sử dụng lời nhắc (prompting), tinh chỉnh (fine-tuning), truy xuất hoặc công cụ.
+Large Language Model là một dạng foundation model cho language và ngày càng multimodal. Thay vì train một model riêng hoàn toàn cho từng task, ta pretrain một model lớn rồi sử dụng prompting, fine-tuning, retrieval hoặc tools.
 
-Cách tiếp cận này làm thay đổi kiến trúc phần mềm: mô hình trở thành một tầng năng lực có thể tái sử dụng.
+Paradigm này thay đổi software architecture: model trở thành một reusable capability layer.
 
-## AI tạo sinh
+## Generative AI
 
-Mô hình phân biệt (discriminative model) truyền thống thường học ánh xạ dạng:
+Traditional discriminative model thường học mapping kiểu:
 
 \[
 P(y \mid x)
 \]
 
-Trong khi đó, **mô hình tạo sinh (generative model)** cố học phân phối dữ liệu hoặc cơ chế sinh mẫu mới. Mô hình ngôn ngữ học xác suất của chuỗi token; mô hình khuếch tán (diffusion model) học quá trình khử nhiễu ngược để tạo ảnh; mô hình tự hồi quy (autoregressive model) sinh đầu ra từng bước.
+Generative modeling cố học distribution của data hoặc cách sinh sample mới. Language model học probability của token sequence; diffusion model học reverse denoising process để tạo image; autoregressive model sinh output từng bước.
 
-AI tạo sinh (Generative AI) trở nên nổi bật vì đầu ra không còn chỉ là một lớp hay một điểm số mà có thể là văn bản, ảnh, âm thanh, video, mã nguồn hoặc hành động có cấu trúc.
+Generative AI trở nên nổi bật vì output không còn chỉ là class hoặc score mà có thể là text, image, audio, video, code hoặc structured action.
 
-## AI lai và AI thần kinh-ký hiệu
+## Hybrid và Neuro-symbolic AI
 
-Không có lý do lý thuyết nào bắt buộc một hệ thống chỉ sử dụng một trường phái. Trong thực tế, hệ thống AI thường mang tính **lai (hybrid)**.
+Không có lý do theoretical bắt buộc một system chỉ dùng một paradigm. Production AI thường hybrid.
 
-Ví dụ:
+Một system có thể dùng:
 
 ```text
-Mô hình nơ-ron      → nhận thức / ngôn ngữ
-Quy tắc ký hiệu     → ràng buộc nghiệp vụ
-Tìm kiếm            → lập kế hoạch
-CSDL / truy xuất    → đối chiếu thông tin thực tế
-Bộ tối ưu           → phân bổ tài nguyên
+Neural model → perception / language
+Symbolic rules → business constraints
+Search → planning
+Database / retrieval → factual grounding
+Optimizer → resource allocation
 ```
 
-**AI thần kinh-ký hiệu (Neuro-symbolic AI / 신경기호 AI)** nghiên cứu cách kết hợp biểu diễn được học với suy luận tường minh hoặc tri thức có cấu trúc.
+**Neuro-symbolic AI (신경기호 AI)** nghiên cứu cách kết hợp learned representations với explicit reasoning hoặc structured knowledge.
 
-Điều này nhắc ta rằng câu chuyện “học sâu đã đánh bại AI ký hiệu” là quá đơn giản. Các cơ chế khác nhau phù hợp với các bài toán con khác nhau.
+Đây là reminder quan trọng rằng “deep learning thắng symbolic AI” là cách kể lịch sử quá đơn giản. Different mechanisms phù hợp different subproblems.
 
-## Mùa đông AI và bài học về kỳ vọng
+## AI winters và bài học về expectation
 
-Lịch sử AI có những giai đoạn nguồn vốn và kỳ vọng tăng mạnh rồi suy giảm khi hệ thống không đạt được điều đã hứa hẹn. Những giai đoạn đó thường được gọi là **mùa đông AI (AI winter)**.
+Lịch sử AI có các giai đoạn funding và optimism tăng mạnh, sau đó giảm khi system không đạt expectation. Những giai đoạn này thường được gọi là **AI winter**.
 
-Bài học không đơn giản là “AI luôn bị thổi phồng”. Cách nhìn hữu ích hơn là phân biệt:
+Bài học không phải “AI luôn hype”. Bài học tốt hơn là phân biệt:
 
-- năng lực đã được chứng minh;
-- kết quả trên bộ chuẩn đánh giá (benchmark);
-- độ tin cậy trong thế giới thực;
-- tính khả thi kinh tế;
-- các tuyên bố về tương lai.
+- capability đã được demonstrated;
+- benchmark performance;
+- real-world reliability;
+- economic feasibility;
+- claim về tương lai.
 
-Một mô hình có thể đạt điểm benchmark cao nhưng vẫn chưa sẵn sàng vận hành thực tế vì độ trễ, chi phí, độ bền vững hoặc an toàn.
+Một model có thể đạt benchmark cao nhưng vẫn chưa production-ready vì latency, cost, robustness hoặc safety.
 
-## Bản đồ các trường phái
+## Paradigm map
 
 ```mermaid
 flowchart TD
-    AI[Trí tuệ nhân tạo]
-    AI --> SYM[AI ký hiệu]
-    AI --> SEARCH[Tìm kiếm và lập kế hoạch]
-    AI --> PROB[AI xác suất]
-    AI --> ML[Học máy]
-    ML --> DL[Học sâu]
-    DL --> REP[Học biểu diễn]
-    REP --> FM[Mô hình nền tảng]
-    FM --> GEN[AI tạo sinh]
-    SYM --> HYB[AI lai / thần kinh-ký hiệu]
+    AI[Artificial Intelligence]
+    AI --> SYM[Symbolic AI]
+    AI --> SEARCH[Search & Planning]
+    AI --> PROB[Probabilistic AI]
+    AI --> ML[Machine Learning]
+    ML --> DL[Deep Learning]
+    DL --> REP[Representation Learning]
+    REP --> FM[Foundation Models]
+    FM --> GEN[Generative AI]
+    SYM --> HYB[Hybrid / Neuro-symbolic]
     FM --> HYB
 ```
 
-Sơ đồ này không phải một hệ phân cấp lịch sử tuyệt đối. Nhiều nhánh chồng lấn và cùng tồn tại.
+Sơ đồ này không phải hierarchy lịch sử tuyệt đối. Nhiều branch overlap và coexist.
 
-## Mô hình tư duy (mental model)
+## Mental Model
 
-Khi gặp một kỹ thuật AI mới, thay vì hỏi “đây có phải thế hệ mới nhất không?”, hãy hỏi bốn câu:
+Khi gặp một AI technique mới, thay vì hỏi “đây là generation mới nhất chưa?”, hãy hỏi bốn câu:
 
-1. **Tri thức nằm ở đâu?** Trong quy tắc, tham số, cơ sở dữ liệu, bộ nhớ hay môi trường?
-2. **Phép tính chính là gì?** Tìm kiếm, suy luận, tối ưu hóa, lấy mẫu hay phép toán ma trận?
-3. **Hệ thống học bằng tín hiệu nào?** Không học, tín hiệu có giám sát, mục tiêu tự giám sát hay phần thưởng?
-4. **Sự bất định được xử lý ra sao?** Bị bỏ qua, dùng quy tắc xác định, phân phối xác suất hay lấy mẫu?
+1. **Knowledge nằm ở đâu?** Trong rule, parameters, database, memory hay environment?
+2. **Computation chính là gì?** Search, inference, optimization, sampling hay matrix operations?
+3. **System học bằng gì?** Không học, supervised signal, self-supervised objective hay reward?
+4. **Uncertainty được xử lý ra sao?** Bỏ qua, rule deterministic, probability distribution hay sampling?
 
-Bốn câu này thường đủ để đặt một kỹ thuật mới vào bản đồ kiến thức.
+Bốn câu này thường đủ để đặt một technique mới vào knowledge graph.
 
-## Liên hệ với AI hiện đại
+## Connection với AI hiện đại
 
-Một ứng dụng LLM tưởng như rất mới nhưng có thể chứa nhiều trường phái cùng lúc:
+Một LLM application tưởng rất mới nhưng có thể chứa nhiều paradigm cùng lúc:
 
 ```text
-Tham số LLM          → biểu diễn thống kê đã học
-Truy xuất vector     → tìm kiếm
-Lời nhắc hệ thống    → chỉ dẫn tường minh
-Lược đồ công cụ      → cấu trúc ký hiệu
-Lập kế hoạch tác nhân→ tìm kiếm / lập kế hoạch
-Kiểm tra nghiệp vụ   → quy tắc xác định
-Phản hồi con người   → tín hiệu học
+LLM parameters          → learned statistical representation
+Vector retrieval        → search
+System prompt            → explicit instruction
+Tool schema              → symbolic structure
+Agent planning           → search / planning
+Business validation      → deterministic rules
+Human feedback           → learning signal
 ```
 
-Vì vậy, hiểu lịch sử các trường phái giúp nhìn hệ thống hiện đại rõ hơn: AI hiện đại không xóa bỏ các ý tưởng cũ mà thường **kết hợp lại chúng ở quy mô, biểu diễn và hạ tầng mới**.
+Vì vậy hiểu lịch sử paradigm giúp nhìn system hiện đại rõ hơn: modern AI không xóa sạch những idea cũ, mà thường recombine chúng ở scale và representation mới.
 
-Xem tiếp: [Trí thông minh, tác nhân và môi trường](./02_intelligence_agents_and_environments.md).
+Xem tiếp: [Intelligence, Agents and Environments](./02_intelligence_agents_and_environments.md).

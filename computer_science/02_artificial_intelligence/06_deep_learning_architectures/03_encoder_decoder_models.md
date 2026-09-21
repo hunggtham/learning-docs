@@ -1,211 +1,223 @@
-# Mô hình Encoder–Decoder: tách hiểu đầu vào và tạo đầu ra
+# Encoder–Decoder Models: tách hiểu input và tạo output
 
-**Encoder–Decoder (인코더–디코더 / bộ mã hóa–bộ giải mã)** là một mẫu kiến trúc dùng cho các bài toán mà đầu vào và đầu ra có cấu trúc hoặc độ dài khác nhau. Bộ mã hóa (encoder) biến đầu vào thành biểu diễn nội bộ; bộ giải mã (decoder) dùng biểu diễn đó để tạo đầu ra.
+Encoder–Decoder (인코더–디코더) là architectural pattern cho tasks nơi input và output có structures/lengths khác nhau. Encoder biến input thành internal representation; decoder dùng representation đó để tạo output.
 
-Mẫu này xuất hiện trong dịch máy, tóm tắt, nhận dạng tiếng nói, tạo chú thích ảnh, autoencoder và Transformer. `Encoder` và `decoder` không phải tên của một thuật toán duy nhất mà là hai vai trò trong một hệ thống tính toán.
+Pattern này xuất hiện trong translation, summarization, speech recognition, image captioning, autoencoders và Transformers. “Encoder” và “decoder” không phải một algorithm cụ thể; chúng là vai trò trong computation system.
 
-## Bài toán chuỗi sang chuỗi
+## Sequence-to-Sequence Problem
 
-Ví dụ dịch máy:
+Translation:
 
 ```text
-chuỗi tiếng Anh → chuỗi tiếng Hàn
+English sequence → Korean sequence
 ```
 
-Độ dài đầu vào có thể khác độ dài đầu ra, nên một bộ phân loại gán nhãn từng token theo vị trí tương ứng là không đủ.
+Input length khác output length. Per-token aligned classifier không đủ.
 
-Phân phối đầu ra có thể được phân rã tự hồi quy:
+Model factor output autoregressively:
 
 \[
 P(y_{1:T}\mid x)=\prod_{t=1}^{T}P(y_t\mid y_{<t},x)
 \]
 
-Bộ mã hóa xử lý `x`; bộ giải mã mô hình hóa phân phối có điều kiện của token tiếp theo.
+Encoder processes `x`; decoder models conditional next-token distribution.
 
-## Seq2Seq dùng RNN thời kỳ đầu
+## Early RNN Seq2Seq
 
-Bộ mã hóa RNN:
+Encoder RNN:
 
 \[
 h_t^{enc}=f(x_t,h_{t-1}^{enc})
 \]
 
-Trạng thái cuối:
+Final state:
 
 \[
 c=h_T^{enc}
 \]
 
-Bộ giải mã:
+Decoder:
 
 \[
 h_t^{dec}=g(y_{t-1},h_{t-1}^{dec},c)
 \]
 
-Trong thiết kế này, toàn bộ thông tin của chuỗi nguồn bị nén vào vector cố định `c`. Khi câu nguồn dài, đây trở thành một **nút thắt thông tin (information bottleneck)**.
+All source information compressed into fixed vector `c`.
 
-## Nút thắt ngữ cảnh
+For long sentences, this becomes information bottleneck.
 
-Hãy hình dung chuỗi nguồn có 100 token nhưng bộ giải mã chỉ nhận một vector duy nhất. Dù vector có nhiều chiều, nó vẫn phải giữ đủ mọi chi tiết cần thiết cho tất cả bước sinh đầu ra.
+## Context Bottleneck
 
-Hiệu năng thường giảm khi đầu vào dài. Đây là một động lực chính dẫn đến attention: ở mỗi bước, bộ giải mã có thể xây ngữ cảnh động từ toàn bộ trạng thái của bộ mã hóa thay vì phụ thuộc hoàn toàn vào một vector cuối.
+Imagine source 100 tokens nhưng decoder only gets one vector. Even high-dimensional vector must preserve all details needed at every output step.
 
-## Teacher Forcing trong bộ giải mã
+As input grows, performance degrades. This motivated attention: decoder at each step constructs context from all encoder states dynamically.
 
-Khi huấn luyện, bộ giải mã thường được cung cấp token đích đúng ở bước trước:
+## Teacher Forcing in Decoder
+
+Training usually conditions on ground-truth previous target:
 
 \[
 P(y_t\mid y_{<t}^{true},x)
 \]
 
-Khi suy luận, mô hình phải dựa vào chính các token đã sinh ra trước đó. Sự khác biệt này tạo ra **thiên lệch phơi nhiễm (exposure bias)**: một lỗi sớm có thể làm lịch sử đầu vào cho các bước sau khác với lịch sử mà mô hình thường thấy trong huấn luyện.
+Inference conditions on generated tokens.
 
-Dù vậy, **teacher forcing** vẫn là phương pháp huấn luyện chuẩn và hiệu quả cho nhiều mô hình tự hồi quy.
+Mismatch creates exposure bias, but teacher forcing remains computationally effective and standard.
 
-## Token bắt đầu và kết thúc
+## Start / End Tokens
 
-Bộ giải mã cần biết khi nào chuỗi bắt đầu và khi nào nên dừng. Hai token đặc biệt thường gặp là:
+Decoder needs know when generation begins/ends.
+
+Special tokens:
 
 ```text
-<BOS>  bắt đầu chuỗi (beginning of sequence)
-<EOS>  kết thúc chuỗi (end of sequence)
+<BOS> beginning of sequence
+<EOS> end of sequence
 ```
 
-Quá trình sinh dừng khi tạo `<EOS>` hoặc đạt giới hạn độ dài tối đa. Các giao thức chat hiện đại có nhiều token điều khiển phức tạp hơn, nhưng nguyên lý vẫn giống nhau: cấu trúc của cuộc hội thoại hoặc chuỗi được mã hóa bằng quy ước token.
+Generation stops when EOS emitted or max length reached.
 
-## Thuật toán giải mã
+Modern LLM chat protocols use richer special/control tokens but same idea: sequence structure encoded by token conventions.
 
-Ở mỗi bước, mô hình tạo một phân phối xác suất. Việc biến các phân phối từng bước thành một chuỗi cuối cùng là một bài toán tìm kiếm.
+## Decoding Algorithms
 
-### Giải mã tham lam (Greedy Decoding)
+At each step model outputs distribution. Choosing final sequence requires search.
+
+### Greedy Decoding
 
 \[
 y_t=\arg\max_kP(y_t=k\mid context)
 \]
 
-Cách này nhanh, nhưng lựa chọn tốt nhất tại một bước chưa chắc tạo ra chuỗi tốt nhất về tổng thể.
+Fast but locally best choice may cause poor global sequence.
 
-### Tìm kiếm chùm (Beam Search)
+### Beam Search
 
-Giữ `B` giả thuyết từng phần tốt nhất theo tổng log-xác suất:
+Keep top `B` partial hypotheses according cumulative log-probability.
 
 ```text
-bước 1: giữ B ứng viên
-bước 2: mở rộng từng ứng viên → giữ lại B ứng viên tốt nhất
+step 1: keep B candidates
+step 2: expand each → keep best B
 ...
 ```
 
-Beam Search là một dạng tìm kiếm heuristic trong không gian chuỗi. Thường cần chuẩn hóa theo độ dài vì tổng log-xác suất có xu hướng ưu tiên chuỗi ngắn.
+Beam search is heuristic search in sequence space.
 
-### Lấy mẫu (Sampling)
+Length normalization often needed because log probabilities sum negative values and may favor short sequences.
 
-Với sinh nội dung mở, có thể lấy mẫu từ phân phối thay vì luôn chọn token xác suất cao nhất. Các kỹ thuật như temperature, top-k và top-p sẽ được trình bày kỹ hơn trong phần LLM.
+### Sampling
 
-Dịch máy truyền thống thường ưu tiên Beam Search; sinh văn bản sáng tạo thường sử dụng lấy mẫu.
+For open-ended generation, sample from distribution. Temperature/top-k/top-p later discussed in LLM generation.
 
-## Kiến trúc chỉ có Encoder
+Translation historically favors beam; creative text often sampling.
 
-Nếu đầu ra là nhãn hoặc biểu diễn thay vì một chuỗi cần sinh, không nhất thiết phải có decoder.
+## Encoder-only Architecture
 
-Các mô hình kiểu BERT là **encoder-only**: self-attention hai chiều tạo biểu diễn theo ngữ cảnh để phục vụ phân loại, trích xuất hoặc các tác vụ hiểu ngôn ngữ.
+If output is label/representation, decoder unnecessary.
 
-## Kiến trúc chỉ có Decoder
+BERT-like models are encoder-only: bidirectional self-attention creates contextual representations for classification/extraction.
 
-Nếu bài toán là tiếp tục chuỗi dựa trên tiền tố, kiến trúc **decoder-only** là đủ. Các mô hình kiểu GPT sử dụng self-attention nhân quả:
+## Decoder-only Architecture
+
+If task is autoregressive continuation conditioned on prefix, decoder-only architecture sufficient.
+
+GPT-family uses causal self-attention:
 
 \[
 P(x_t\mid x_{<t})
 \]
 
-Prompt đóng vai trò chuỗi điều kiện ban đầu, nên không cần một module encoder riêng biệt.
+Input prompt itself acts conditioning prefix; no separate encoder.
 
-## Transformer Encoder–Decoder
+## Encoder–Decoder Transformer
 
-Trong Transformer gốc và các mô hình kiểu T5:
+Models like original Transformer/T5-style:
 
-- encoder dùng self-attention hai chiều trên chuỗi nguồn;
-- decoder dùng self-attention nhân quả trên chuỗi đích đang sinh;
-- cross-attention cho phép decoder truy cập biểu diễn từ encoder.
+- encoder: bidirectional self-attention over source;
+- decoder: causal self-attention over generated target;
+- cross-attention: decoder queries encoder representations.
 
-Cấu trúc này phù hợp tự nhiên với dịch máy và các bài toán sinh có điều kiện.
+This matches translation/conditional generation naturally.
 
 ## Cross-Attention
 
-Trạng thái của decoder tạo truy vấn (query), còn đầu ra của encoder tạo khóa (key) và giá trị (value):
+Decoder hidden state provides queries; encoder outputs provide keys/values:
 
 \[
 Attention(Q_{dec},K_{enc},V_{enc})
 \]
 
-Ở mỗi vị trí đầu ra, decoder có thể truy xuất phần thông tin nguồn phù hợp. Có thể xem **cross-attention** như một cơ chế truy xuất khả vi được học giữa các vị trí của hai chuỗi.
+At each target position, decoder retrieves relevant source information.
 
-## Không chỉ dành cho văn bản
+Cross-attention is learned differentiable retrieval across source positions.
 
-Tạo chú thích ảnh:
+## Beyond Text
+
+Image captioning:
 
 ```text
-bộ mã hóa ảnh → token/đặc trưng thị giác
+Image encoder → visual tokens/features
         ↓ cross-attention
-bộ giải mã văn bản → chú thích
+Text decoder → caption
 ```
 
-Dịch tiếng nói:
+Speech translation:
 
 ```text
-bộ mã hóa âm thanh → biểu diễn âm học
-bộ giải mã văn bản → văn bản đã dịch
+audio encoder → acoustic representation
+text decoder → translated text
 ```
 
-Nhiều mô hình đa phương thức hiện đại cũng dùng dạng bộ mã hóa hoặc projection cho modality đầu vào kết hợp với LLM dạng decoder.
+Multimodal models often use encoder/projection + LLM decoder patterns.
 
-## Autoencoder và nút thắt tiềm ẩn
+## Latent Bottleneck Autoencoders
 
-Autoencoder cũng có cấu trúc encoder–decoder:
+Autoencoder also encoder-decoder:
 
 \[
 x\xrightarrow{encoder}z\xrightarrow{decoder}\hat x
 \]
 
-Nhưng mục tiêu là tái tạo đầu vào, không phải dịch chuỗi có điều kiện. Cùng một mẫu kiến trúc có thể mang ý nghĩa xác suất và mục tiêu huấn luyện khác nhau.
+Nhưng goal là reconstruct input, not conditional sequence translation. Same architecture pattern, different objective/probabilistic semantics.
 
-## Phân loại kiến trúc bằng luồng thông tin
+## Information Flow là cách phân loại hữu ích
 
-Thay vì chỉ ghi nhớ tên mô hình, nên hỏi:
+Thay vì nhớ model names, hỏi:
 
 ```text
-Encoder được nhìn thấy những vị trí nào?
-Decoder được nhìn thấy những vị trí nào?
-Decoder truy cập nguồn ở đâu và bằng cơ chế nào?
-Quá trình sinh có nhân quả không?
-Có nút thắt biểu diễn nào không?
+Which positions can encoder see?
+Which positions can decoder see?
+Where can decoder access source?
+Is generation causal?
+What representation bottleneck exists?
 ```
 
-Mặt nạ attention và cấu trúc kết nối quyết định luồng thông tin của hệ thống.
+Attention mask/connectivity defines information flow.
 
-## Mô hình tư duy
+## Mental Model
 
-> Encoder trả lời “đầu vào nên được biểu diễn như thế nào?”. Decoder trả lời “từ biểu diễn đó và những đầu ra đã có, nên tạo phần tiếp theo như thế nào?”.
+> Encoder answers “input nên được biểu diễn như thế nào?”; decoder answers “từ representation + outputs trước đó, tạo output tiếp theo thế nào?”.
 
-Cross-attention loại bỏ yêu cầu phải ép mọi chi tiết của chuỗi nguồn vào một vector duy nhất.
+Cross-attention removes need to squeeze all source details into one fixed vector.
 
-## Những hiểu lầm thường gặp
+## Common Misconceptions
 
-### “Encoder chỉ là embedding layer, decoder chỉ là output layer”
+### “Encoder = embedding layer, decoder = output layer”
 
-Không. Cả encoder và decoder thường là các mạng nhiều tầng với quá trình tính toán phong phú.
+Không. Encoder/decoder thường là multi-layer networks with rich computation.
 
-### “Mọi Transformer đều có cả encoder và decoder”
+### “Every Transformer has encoder and decoder”
 
-Không. Có ba họ chính: encoder-only, decoder-only và encoder–decoder.
+Có encoder-only, decoder-only và encoder-decoder families.
 
-### “Beam Search đảm bảo tìm chuỗi có xác suất cao nhất”
+### “Beam search guarantees highest-probability sequence”
 
-Không. Beam hữu hạn là tìm kiếm heuristic; tìm kiếm chính xác trên toàn bộ không gian chuỗi thường không khả thi.
+Finite beam is heuristic; exact search over huge sequence space infeasible.
 
-### “LLM decoder-only không xử lý đầu vào vì không có encoder”
+### “Decoder-only LLM cannot process input because no encoder”
 
-Prompt được đưa qua chính các tầng Transformer nhân quả để tạo biểu diễn theo ngữ cảnh; không cần module encoder tách biệt.
+Prompt tokens are encoded through same causal Transformer stack; no separate encoder module required.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Encoder–Decoder nối [Tìm kiếm](../02_search_reasoning_and_planning/00_state_space_and_search.md), [Mô hình chuỗi](./01_sequence_models.md), [RNN/LSTM](./02_rnn_lstm_gru.md) và trực tiếp dẫn tới [Attention](./04_attention.md).
+Encoder–Decoder nối [Search](../02_search_reasoning_and_planning/00_state_space_and_search.md), [Sequence Models](./01_sequence_models.md), [RNN/LSTM](./02_rnn_lstm_gru.md) và trực tiếp dẫn tới [Attention](./04_attention.md).

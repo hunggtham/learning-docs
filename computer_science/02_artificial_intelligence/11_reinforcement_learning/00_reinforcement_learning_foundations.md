@@ -1,186 +1,153 @@
-# Nền tảng Reinforcement Learning
+# Reinforcement Learning Foundations
 
-**Học tăng cường (Reinforcement Learning — RL / 강화학습)** nghiên cứu cách một agent học cách hành động thông qua tương tác (interaction) với môi trường (environment) để tối đa hóa reward tích lũy theo thời gian. Khác với supervised learning, agent thường không nhận “đáp án đúng” cho từng action; nó quan sát consequence và reward, đôi khi reward chỉ xuất hiện sau nhiều bước.
+**Reinforcement Learning (RL / 강화학습 / học tăng cường)** nghiên cứu cách một agent học cách hành động qua interaction với environment để tối đa hóa reward tích lũy theo thời gian. Khác supervised learning, agent thường không nhận “đáp án đúng” cho từng action; nó nhận consequences và reward, đôi khi delayed nhiều bước.
 
 ```text
 state s_t
-→ agent chọn action a_t
-→ environment chuyển sang s_{t+1}
-→ nhận reward r_{t+1}
-→ lặp lại
+→ agent chooses action a_t
+→ environment transitions to s_{t+1}
+→ reward r_{t+1}
+→ repeat
 ```
 
-## Vì sao RL khác Supervised Learning?
+## Vì sao RL khác supervised learning?
 
-Supervised learning thường có dataset tương đối cố định gồm các cặp `(x,y)`. RL khó hơn ở ba điểm quan trọng:
+Supervised learning có dataset tương đối cố định `(x,y)`. RL có ba complication:
 
-1. phân phối dữ liệu phụ thuộc policy hiện tại;
-2. reward có thể bị trì hoãn nhiều bước;
+1. data distribution phụ thuộc policy hiện tại;
+2. reward có thể delayed;
 3. agent phải cân bằng exploration và exploitation.
 
-Nếu agent chọn action khác, nó sẽ đi qua trajectory khác và quan sát dữ liệu khác. Vì vậy data collection và learning không còn tách biệt hoàn toàn.
+Nếu agent chọn action khác, nó sẽ thấy data khác.
 
 ## Reward và Return
 
-Reward `r_t` là tín hiệu phản hồi tại một thời điểm. Objective thường không tối ưu một reward đơn lẻ mà tối ưu **return chiết khấu kỳ vọng (expected discounted return)**:
+Reward `r_t` là feedback tại một thời điểm. Objective thường là expected discounted return:
 
 \[
 G_t = r_{t+1}+\gamma r_{t+2}+\gamma^2 r_{t+3}+\cdots
 \]
 
-với **hệ số chiết khấu (discount factor)**:
+với discount factor:
 
 \[
 0\le \gamma <1
 \]
 
-`γ` điều khiển mức agent coi trọng reward gần so với reward xa. Trong nhiều bài toán horizon vô hạn, discount cũng giúp tổng reward hội tụ.
+`γ` điều khiển trade-off giữa reward gần và xa, đồng thời giúp infinite-horizon sum hội tụ trong nhiều setting.
 
 ## Policy
 
-**Policy (정책 / chính sách hành động)** mô tả cách agent chọn action tại một state:
+Policy mô tả cách agent chọn action:
 
 \[
 \pi(a\mid s)
 \]
 
-Policy xác định có thể viết `a=π(s)`. Policy ngẫu nhiên (stochastic policy) trả về một distribution trên các action.
-
-Policy là thành phần trung tâm vì mục tiêu cuối cùng của RL thường là tìm policy tạo return tốt.
+Deterministic policy có thể viết `a=π(s)`; stochastic policy trả distribution.
 
 ## Value
 
-**State-value function**:
+State-value:
 
 \[
 V^\pi(s)=\mathbb{E}_\pi[G_t\mid S_t=s]
 \]
 
-đo return kỳ vọng nếu đang ở state `s` và tiếp tục làm theo policy `π`.
-
-**Action-value function**:
+Action-value:
 
 \[
 Q^\pi(s,a)=\mathbb{E}_\pi[G_t\mid S_t=s,A_t=a]
 \]
 
-đo return kỳ vọng khi chọn action `a` tại state `s`, sau đó tiếp tục theo policy `π`.
+Value không phải immediate reward; nó ước lượng long-term consequence.
 
-Value không phải immediate reward. Nó ước lượng **hệ quả dài hạn (long-term consequence)**.
+## Model-Free vs Model-Based
 
-## Model-Free và Model-Based RL
+**Model-based RL** sử dụng/học transition/reward model để plan.
 
-**Model-based RL** sử dụng hoặc học một model của environment, chẳng hạn transition và reward, rồi dùng model đó để planning.
+**Model-free RL** học policy/value trực tiếp từ experience mà không cần explicit environment model.
 
-**Model-free RL** học value hoặc policy trực tiếp từ experience mà không cần một explicit environment model.
+Hai approach có thể kết hợp.
 
-Hai hướng này không loại trừ nhau. Một hệ thống có thể học model để planning nhưng vẫn dùng learned policy hoặc value function để ra quyết định.
+## Exploration vs Exploitation
 
-## Exploration và Exploitation
+Agent phải chọn giữa:
 
-Agent phải cân bằng hai mục tiêu:
+- exploitation: dùng action currently estimated best;
+- exploration: thử action để thu information.
 
-- **khai thác (exploitation)**: dùng action hiện được ước lượng là tốt nhất;
-- **khám phá (exploration)**: thử action để thu thêm thông tin.
+Nếu chỉ exploit sớm, agent có thể kẹt với policy suboptimal.
 
-Nếu chỉ exploit quá sớm, agent có thể mắc kẹt ở policy chưa tối ưu.
-
-Một strategy đơn giản là **epsilon-greedy**:
+Epsilon-greedy:
 
 ```text
-với xác suất ε: chọn action ngẫu nhiên
-ngược lại: chọn argmax Q(s,a)
+with probability ε: random action
+otherwise: argmax Q(s,a)
 ```
 
-Đây là baseline dễ hiểu, không phải chiến lược exploration tốt nhất cho mọi bài toán.
+là strategy đơn giản, không phải universally best.
 
-## On-Policy và Off-Policy
+## On-Policy vs Off-Policy
 
-**On-policy learning** học về chính policy đang tạo ra dữ liệu.
+On-policy học về policy đang generate data. Off-policy có thể học target policy khác behavior policy.
 
-**Off-policy learning** có thể học một target policy khác với behavior policy đang tương tác với environment.
-
-Q-learning là ví dụ kinh điển của off-policy method, trong khi SARSA là on-policy.
-
-Sự phân biệt này quan trọng vì nó ảnh hưởng cách sử dụng dữ liệu cũ, replay buffer và khả năng học từ behavior khác policy mục tiêu.
+Q-learning là classic off-policy method. SARSA là on-policy.
 
 ## Credit Assignment
 
-Nếu reward tốt chỉ xuất hiện ở cuối một episode dài, action nào ở trước đó thực sự xứng đáng nhận credit?
+Nếu reward cuối episode tốt, action nào trước đó deserve credit? Đây là temporal credit-assignment problem.
 
-Đây là **bài toán gán công trạng theo thời gian (temporal credit assignment)**.
-
-Bellman equation, Temporal-Difference learning và policy gradient cung cấp các cách khác nhau để truyền tín hiệu reward ngược về các decision trước đó.
+Bellman methods, TD learning và policy gradients đưa ra các cách khác nhau để propagate signal backward qua time.
 
 ## Reward Specification
 
-Reward chỉ là một **đại diện toán học (proxy)** cho mục tiêu thực. Nếu proxy được thiết kế sai, agent có thể tối ưu một hành vi không mong muốn — hiện tượng thường gọi là **reward hacking** hoặc **specification gaming**.
+Reward là mathematical proxy cho goal. Nếu proxy sai, agent có thể optimize theo cách không mong muốn — **reward hacking/specification gaming**.
 
-Ví dụ robot được reward cho “di chuyển nhanh” nhưng không bị phạt khi va chạm có thể học cách di chuyển nguy hiểm.
-
-Bài học tổng quát:
-
-> Optimizer tối ưu metric được định nghĩa, không tự hiểu ý định chưa được mã hóa của designer.
+Ví dụ robot được reward “di chuyển nhanh” nhưng không penalize va chạm có thể học behavior dangerous.
 
 ## Sparse Reward
 
-Nếu reward chỉ xuất hiện ở cuối một task dài, learning signal rất yếu. **Reward shaping** thêm intermediate reward để learning dễ hơn.
+Nếu chỉ có reward ở cuối long task, learning signal rất yếu. Reward shaping thêm intermediate signal nhưng có thể distort objective nếu design kém.
 
-Tuy nhiên shaping có thể làm lệch objective nếu reward phụ không thật sự phù hợp mục tiêu cuối.
+## Episodes và Continuing Tasks
 
-## Episode và Continuing Task
-
-**Episodic task** có terminal state rõ, ví dụ một ván game kết thúc.
-
-**Continuing task** chạy liên tục, ví dụ process control hoặc resource allocation lâu dài.
-
-Cách định nghĩa return, termination và evaluation có thể khác giữa hai loại.
+Episodic task có terminal state, như game. Continuing task chạy indefinite, như process control.
 
 ## Partial Observability
 
-Nếu observation hiện tại không đủ để xác định true state, bài toán gần với **Partially Observable Markov Decision Process (POMDP)**.
-
-Agent khi đó có thể cần memory, recurrent state hoặc belief state để tổng hợp information từ nhiều bước trước.
+Nếu observation không đủ xác định true state, problem trở thành POMDP-like. Agent có thể cần memory/belief state.
 
 ## Offline RL
 
-**Offline RL** hoặc **batch RL** học từ một fixed logged dataset mà không được tiếp tục exploration trong environment.
-
-Điểm khó là policy mới có thể chọn action nằm ngoài vùng được data hỗ trợ. Value function khi đó phải extrapolate sang vùng không có evidence và có thể trở nên rất không đáng tin.
-
-Offline RL vì vậy đặc biệt nhạy với distribution shift và coverage của behavior data.
+Offline/batch RL học từ fixed logged dataset mà không tương tác thêm environment. Khó vì policy mới có thể chọn actions ngoài data support, khiến value extrapolation unreliable.
 
 ## RL và LLM Alignment
 
-RL xuất hiện trong post-training của LLM, ví dụ RLHF. Tuy nhiên LLM alignment có cấu trúc riêng:
+RL xuất hiện trong alignment như RLHF, nhưng LLM post-training có đặc thù: action có thể là whole sequence/token decisions, reward đến từ preference model/human signal, và reference-policy constraints quan trọng.
 
-- action có thể là token hoặc cả sequence;
-- reward có thể đến từ human preference hoặc reward model;
-- reference-policy constraint thường quan trọng;
-- environment khác đáng kể so với robot hoặc game cổ điển.
+Không nên equate toàn bộ RL với RLHF.
 
-Không nên đồng nhất toàn bộ Reinforcement Learning với RLHF.
+## Mental Model
 
-## Mô hình tư duy
+> **Supervised learning hỏi “output nào đúng cho input này?”, RL hỏi “chuỗi action nào tạo long-term consequence tốt?”**
 
-> **Supervised learning hỏi “output nào đúng cho input này?”, còn RL hỏi “chuỗi action nào dẫn tới hệ quả dài hạn tốt?”**
+## Common Misconceptions
 
-## Những nhầm lẫn thường gặp
+### “Reward = mục tiêu thật”
 
-### “Reward chính là mục tiêu thật”
+Reward chỉ là encoded objective. Nếu encoding thiếu, optimizer có thể exploit gap.
 
-Không. Reward là encoded objective. Nếu encoding thiếu, optimizer có thể khai thác khoảng trống giữa reward và ý định thật.
+### “RL luôn cần robot/game”
 
-### “RL luôn cần robot hoặc game”
+RL áp dụng mọi sequential decision problem có feedback.
 
-Không. RL áp dụng cho mọi sequential decision problem có feedback phù hợp.
+### “More exploration luôn tốt”
 
-### “Exploration càng nhiều càng tốt”
+Exploration có cost/risk; real systems cần safe exploration.
 
-Không. Exploration có chi phí và rủi ro; real-world system thường cần **safe exploration**.
-
-## Liên kết kiến thức
+## Knowledge Connection
 
 RL nối [Agents](../10_agents_and_ai_systems/00_from_llm_to_agent.md), [Decision Making Under Uncertainty](../02_search_reasoning_and_planning/06_decision_making_under_uncertainty.md), Probability và Optimization.
 
-Xem tiếp: [Markov Decision Process](./01_markov_decision_processes.md).
+Xem tiếp: [Markov Decision Processes](./01_markov_decision_processes.md).

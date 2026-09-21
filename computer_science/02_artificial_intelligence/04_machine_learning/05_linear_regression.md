@@ -1,140 +1,138 @@
 # Linear Regression: từ quan hệ tuyến tính tới mô hình dự đoán
 
-**Linear Regression (선형 회귀 / hồi quy tuyến tính)** là một trong những mô hình đơn giản nhất của Machine Learning, nhưng giá trị của nó không nằm ở việc “dễ”. Đây là nơi nhiều ý tưởng nền tảng gặp nhau: biểu diễn bằng vector, hàm có tham số, hàm mất mát, tối ưu hóa, giả định xác suất, regularization, bias–variance và khả năng diễn giải.
+Linear Regression (선형 회귀 / hồi quy tuyến tính) là một trong những model đơn giản nhất trong Machine Learning, nhưng giá trị của nó không nằm ở việc “dễ”. Nó là nơi nhiều idea cốt lõi gặp nhau: representation bằng vector, parameterized function, loss, optimization, probabilistic assumptions, regularization, bias–variance và interpretability.
 
-Nếu hiểu Linear Regression từ bản chất, nhiều khái niệm của neural network sau này sẽ trở nên tự nhiên hơn, vì một layer neural cơ bản cũng bắt đầu từ một phép biến đổi tuyến tính.
+Nếu hiểu Linear Regression đúng bản chất, nhiều neural-network concept sau này sẽ trở nên tự nhiên hơn vì một layer neural cơ bản cũng bắt đầu bằng phép biến đổi tuyến tính.
 
 ## Bài toán: từ nhiều yếu tố tới một đại lượng cần dự đoán
 
-Giả sử muốn dự đoán giá nhà từ diện tích, tuổi ngôi nhà và khoảng cách tới ga tàu. Ta biểu diễn đầu vào bằng vector:
+Giả sử muốn dự đoán giá nhà từ diện tích, tuổi nhà và khoảng cách tới ga tàu. Ta biểu diễn input bằng vector:
 
 \[
 \mathbf{x}=[x_1,x_2,x_3]^T
 \]
 
-Mô hình giả định đầu ra có thể được xấp xỉ bằng tổng có trọng số:
+Model giả định output có thể được xấp xỉ bằng weighted sum:
 
 \[
 \hat y=\mathbf w^T\mathbf x+b
 \]
 
-Mỗi trọng số (weight) `w_j` mô tả mức dự đoán thay đổi khi feature `x_j` tăng một đơn vị trong điều kiện các feature còn lại được giữ cố định và các giả định của mô hình vẫn phù hợp.
+Mỗi weight `w_j` cho biết khi feature `x_j` thay đổi một đơn vị, prediction thay đổi bao nhiêu nếu giữ các feature khác cố định, trong phạm vi assumptions của model.
 
-Từ `linear` ở đây nói về **tính tuyến tính theo tham số và feature đã biểu diễn**, không có nghĩa quan hệ ngoài thế giới thật bắt buộc phải là một đường thẳng đơn giản. Nếu thêm feature `x^2`:
+Từ `linear` ở đây nói về **linear theo parameters/features đã biểu diễn**, không nhất thiết nói raw-world relationship phải là đường thẳng đơn giản. Nếu thêm feature `x^2`, model vẫn linear theo parameters:
 
 \[
 \hat y=w_0+w_1x+w_2x^2
 \]
 
-thì ta có polynomial regression, nhưng mô hình vẫn tuyến tính theo các tham số `w_0,w_1,w_2`.
+Đây là polynomial regression nhưng vẫn thuộc linear-model family.
 
-## Dạng ma trận
+## Matrix form
 
-Với `n` mẫu và `d` feature:
+Với `n` samples, `d` features:
 
 \[
 X\in\mathbb R^{n\times d},\qquad \mathbf w\in\mathbb R^d
 \]
 
-Dự đoán cho toàn bộ dataset có thể viết:
+Prediction toàn dataset:
 
 \[
 \hat{\mathbf y}=X\mathbf w+b\mathbf 1
 \]
 
-Nếu gộp bias vào một cột toàn số `1`, ta viết gọn:
+Nếu absorb bias vào một cột toàn `1`, ta viết gọn:
 
 \[
 \hat{\mathbf y}=X\boldsymbol\beta
 \]
 
-Cách nhìn bằng ma trận rất quan trọng vì training hiện đại xử lý cả batch bằng đại số tuyến tính vector hóa thay vì lặp thủ công qua từng dòng.
+Matrix view quan trọng vì training hiện đại xử lý batch bằng vectorized linear algebra thay vì loop từng row.
 
 ## Least Squares xuất hiện từ đâu?
 
-Ta thường tối thiểu hóa tổng bình phương sai số:
+Ta thường minimize sum of squared errors:
 
 \[
 J(\mathbf w)=\sum_{i=1}^n(y_i-\mathbf w^T\mathbf x_i)^2
 \]
 
-Vì sao lại bình phương?
+Tại sao bình phương?
 
-Về mặt tính toán, hàm này trơn và lồi nên gradient dễ tính và bài toán dễ tối ưu.
+Một lý do computational: hàm trơn và convex, gradient dễ tính.
 
-Về mặt thống kê, nếu giả định nhiễu độc lập và có phân phối Gaussian với phương sai cố định:
+Một lý do statistical sâu hơn: nếu assume noise Gaussian độc lập với variance cố định:
 
 \[
 y_i=\mathbf w^T\mathbf x_i+\epsilon_i,\qquad \epsilon_i\sim\mathcal N(0,\sigma^2)
 \]
 
-thì tối đa hóa likelihood của dữ liệu tương đương với tối thiểu hóa squared error.
+thì maximizing likelihood của data tương đương minimizing squared error.
 
-Vì vậy phương pháp bình phương tối thiểu (least squares) không phải một quy tắc tùy ý; nó gắn với một mô hình xác suất cụ thể.
+Vì vậy least squares không phải rule arbitrary; nó gắn với một probabilistic model.
 
-## Nghiệm dạng đóng
+## Closed-form solution
 
-Nếu `X^T X` khả nghịch, nghiệm của Ordinary Least Squares có dạng:
+Nếu `X^T X` invertible, nghiệm Ordinary Least Squares:
 
 \[
 \hat{\mathbf w}=(X^TX)^{-1}X^T\mathbf y
 \]
 
-Đây được gọi là **nghiệm dạng đóng (closed-form solution)** vì có thể biểu diễn trực tiếp bằng công thức thay vì phải lặp nhiều bước tối ưu.
+Công thức này đến từ việc đặt gradient của squared error bằng zero.
 
-Công thức thu được bằng cách đặt gradient của squared error bằng 0.
+Nhưng production code hiếm khi trực tiếp tính matrix inverse vì numerical stability. Thực tế thường dùng QR decomposition, SVD hoặc iterative optimization.
 
-Tuy nhiên code production hiếm khi trực tiếp tính ma trận nghịch đảo vì vấn đề ổn định số. Thực tế thường dùng QR decomposition, SVD hoặc các solver tuyến tính ổn định hơn. Với dataset rất lớn hoặc mô hình mở rộng, gradient descent cũng có thể phù hợp hơn.
+Với dataset lớn hoặc model mở rộng, gradient descent thường phù hợp hơn.
 
-## Cách hiểu hình học
+## Geometric interpretation
 
-Vector `Xw` luôn nằm trong không gian cột (column space) của `X`. Least Squares tìm điểm trong không gian con này gần `y` nhất.
+`Xw` nằm trong column space của `X`. Least squares tìm vector prediction gần `y` nhất trong subspace đó.
 
-Phần dư (residual):
+Residual:
 
 \[
 \mathbf r=\mathbf y-X\hat{\mathbf w}
 \]
 
-ở nghiệm tối ưu sẽ trực giao với column space:
+ở optimum trực giao với column space:
 
 \[
 X^T\mathbf r=0
 \]
 
-Đây là một bài toán chiếu hình học (projection). Cách nhìn này giúp hiểu Linear Regression như một vấn đề Đại số tuyến tính chứ không đơn thuần là “vẽ đường thẳng khớp dữ liệu nhất”.
+Đây là projection geometry. Nhìn như vậy giúp hiểu vì sao linear regression gắn chặt với Linear Algebra, không chỉ là “vẽ best-fit line”.
 
-## Chuẩn hóa feature và conditioning
+## Feature scaling và conditioning
 
-Về lý thuyết, nghiệm dạng đóng vẫn có thể xử lý các feature có scale khác nhau. Nhưng quá trình tối ưu và tính toán số lại nhạy với scale.
+Về lý thuyết closed-form regression có thể handle feature scales khác nhau. Nhưng optimization và numerical computation thường nhạy với scale.
 
-Nếu một feature nằm trong khoảng `0–1`, trong khi feature khác nằm trong khoảng `0–1,000,000`, bề mặt loss có thể bị kéo dài mạnh theo một số hướng, khiến gradient descent hội tụ chậm.
+Nếu một feature nằm khoảng `0–1`, feature khác khoảng `0–1,000,000`, gradient landscape có thể bị kéo dài theo các direction khác nhau, làm gradient descent chậm.
 
-Chuẩn hóa chuẩn:
+Standardization:
 
 \[
 z=\frac{x-\mu}{\sigma}
 \]
 
-không làm mô hình “thông minh hơn”, nhưng thường giúp bài toán tối ưu có điều kiện tốt hơn (better conditioning) và làm regularization giữa các feature dễ so sánh hơn.
+không làm model “thông minh hơn”, nhưng làm optimization dễ hơn và regularization comparable hơn giữa features.
 
-## Đa cộng tuyến
+## Multicollinearity
 
-Nếu hai feature gần như là tổ hợp tuyến tính của nhau, `X^T X` có thể trở nên **điều kiện kém (ill-conditioned)**.
+Nếu hai features gần như linear combination của nhau, `X^T X` trở nên ill-conditioned. Parameters có thể cực kỳ unstable: prediction vẫn khá ổn nhưng individual coefficients thay mạnh khi data thay nhẹ.
 
-Khi đó prediction tổng thể đôi khi vẫn tương đối ổn nhưng từng hệ số riêng lẻ có thể thay đổi rất mạnh chỉ vì dataset thay đổi nhẹ.
+Ví dụ `income_in_won` và `income_in_thousand_won` chứa gần như cùng information.
 
-Ví dụ `income_in_won` và `income_in_thousand_won` gần như chứa cùng một thông tin.
+Điểm cần phân biệt:
 
-Điểm cần phân biệt là:
+> Stable prediction và stable interpretation không phải cùng một property.
 
-> Dự đoán ổn định và diễn giải hệ số ổn định không phải cùng một thuộc tính.
-
-Regularization hoặc thiết kế lại feature thường giúp giảm vấn đề này.
+Regularization hoặc feature redesign thường giúp.
 
 ## Ridge Regression
 
-Ridge Regression thêm penalty L2:
+Ridge thêm L2 penalty:
 
 \[
 J(\mathbf w)=\|\mathbf y-X\mathbf w\|_2^2+\lambda\|\mathbf w\|_2^2
@@ -146,65 +144,65 @@ Nghiệm:
 \hat{\mathbf w}=(X^TX+\lambda I)^{-1}X^T\mathbf y
 \]
 
-Thành phần `λI` cải thiện conditioning và kéo các trọng số về gần 0 hơn.
+Term `λI` cải thiện conditioning và shrink weights.
 
-Ridge chấp nhận thêm một ít độ lệch (bias) để giảm phương sai (variance). Đây là ví dụ kinh điển của sự đánh đổi bias–variance.
+Ridge chấp nhận một ít bias để giảm variance — một example điển hình của bias–variance trade-off.
 
 ## Lasso Regression
 
-Lasso dùng penalty L1:
+Lasso dùng L1:
 
 \[
 J=\|\mathbf y-X\mathbf w\|_2^2+\lambda\|\mathbf w\|_1
 \]
 
-Hình học của L1 khiến nhiều hệ số có thể bị đẩy chính xác về 0, nên Lasso đôi khi đồng thời đóng vai trò lựa chọn feature.
+L1 có geometry khiến nhiều coefficients có thể bị đẩy chính xác về zero, nên đôi khi đóng vai trò feature selection.
 
-Tuy nhiên nếu nhiều feature tương quan mạnh, việc feature nào bị giữ lại hoặc loại bỏ có thể thiếu ổn định. Không nên diễn giải “coefficient bằng 0” như bằng chứng rằng biến đó hoàn toàn không liên quan tới outcome ngoài thực tế.
+Nhưng nếu features strongly correlated, việc chọn feature nào có thể unstable. Không nên interpret “coefficient zero” như proof rằng variable hoàn toàn không liên quan real-world outcome.
 
-## Tương tác và phi tuyến
+## Interaction và nonlinearity
 
-Nếu ảnh hưởng của `x1` phụ thuộc `x2`, Linear Regression đơn giản không tự biểu diễn interaction đó.
+Nếu ảnh hưởng của `x1` phụ thuộc `x2`, model tuyến tính đơn giản thiếu interaction.
 
-Có thể thêm feature:
+Ta có thể thêm:
 
 \[
 x_1x_2
 \]
 
-và mô hình trở thành:
+vào feature set:
 
 \[
 \hat y=w_0+w_1x_1+w_2x_2+w_3x_1x_2
 \]
 
-Mô hình vẫn tuyến tính theo tham số, nhưng biểu diễn quan hệ đã phong phú hơn.
+Model vẫn linear theo parameters nhưng biểu diễn relationship phong phú hơn.
 
-Điều này minh họa một nguyên lý chung:
+Điều này minh họa principle chung:
 
-> Khả năng biểu diễn của mô hình phụ thuộc cả họ hàm lẫn cách biểu diễn đầu vào.
+> Model capacity phụ thuộc cả function family lẫn representation.
 
-Deep Learning giảm nhu cầu phải thiết kế thủ công nhiều interaction bằng cách học representation qua nhiều layer.
+Deep Learning sau này giảm nhu cầu handcraft interaction bằng cách học representation.
 
-## Phân tích phần dư
+## Residual analysis
 
-Sau training, residual không chỉ dùng để tính RMSE. Cấu trúc trong phần dư có thể cho thấy mô hình đang bị đặc tả sai.
+Sau training, residual không chỉ là số để tính RMSE. Pattern trong residual có thể reveal model misspecification.
 
-Nếu residual tăng theo predicted value, phương sai có thể không cố định. Nếu residual có pattern theo thời gian, các quan sát có thể không độc lập. Nếu residual tạo hình cong theo một feature, dạng tuyến tính đang bỏ sót quan hệ phi tuyến.
+Nếu residual tăng theo fitted value, variance có thể không constant. Nếu residual có structure theo time, observations có thể không independent. Nếu residual cong theo feature, linear form đang bỏ lỡ nonlinearity.
 
-Phân tích phần dư (residual analysis) là cầu nối giữa mô hình thống kê và quá trình debug mô hình.
+Residual analysis là bridge giữa statistical modeling và model debugging.
 
-## Hệ số không tự động là tác động nhân quả
+## Causality: coefficient không tự động là causal effect
 
-Nếu `w_income > 0`, ta chỉ biết trong dữ liệu và mô hình hiện tại, `income` có liên hệ với đầu ra sau khi giữ các biến đã đưa vào mô hình cố định.
+Nếu coefficient `w_income > 0`, ta chỉ biết trong model/data, income có association với output sau khi conditioning trên included variables.
 
-Không thể tự động kết luận “tăng income sẽ gây output tăng”, vì có thể tồn tại confounding, selection bias hoặc reverse causality.
+Không thể tự động kết luận “tăng income gây output tăng” vì confounding, selection bias và reverse causality có thể tồn tại.
 
-Dự đoán và suy luận nhân quả là hai mục tiêu khác nhau.
+Prediction và causal inference là hai mục tiêu khác nhau.
 
-## Đánh giá mô hình hồi quy
+## Evaluation
 
-Các metric thường gặp:
+Common regression metrics:
 
 \[
 MAE=\frac1n\sum_i|y_i-\hat y_i|
@@ -222,11 +220,11 @@ RMSE=\sqrt{MSE}
 R^2=1-\frac{\sum_i(y_i-\hat y_i)^2}{\sum_i(y_i-\bar y)^2}
 \]
 
-`R²` đo mức cải thiện tương đối so với baseline luôn dự đoán giá trị trung bình trên cùng sample. Trên test data, `R²` có thể âm nếu mô hình còn tệ hơn baseline đó.
+`R²` đo improvement tương đối so với baseline predict mean trên cùng sample. Nó có thể âm trên test data nếu model tệ hơn baseline.
 
-Không nên chọn metric chỉ vì phổ biến; cần hiểu scale của lỗi có ý nghĩa gì với bài toán nghiệp vụ.
+Không nên dùng một metric mà không hiểu business meaning của error scale.
 
-## Liên hệ với Neural Network
+## Connection tới Neural Networks
 
 Một neural layer thường có dạng:
 
@@ -234,46 +232,46 @@ Một neural layer thường có dạng:
 \mathbf z=W\mathbf x+\mathbf b
 \]
 
-Nếu không có activation phi tuyến, nhiều layer tuyến tính liên tiếp vẫn có thể rút gọn thành một phép biến đổi tuyến tính duy nhất.
+Nếu không có activation/nonlinear composition, nhiều layer tuyến tính collapse thành một linear transformation duy nhất.
 
-Vì vậy Linear Regression là điểm xuất phát rất tự nhiên để hiểu tại sao neural network cần nonlinearity.
+Vì vậy Linear Regression là điểm xuất phát tự nhiên để hiểu tại sao neural network cần nonlinearity.
 
-## Mô hình tư duy
+## Mental Model
 
-Có thể nén Linear Regression thành:
+Linear Regression có thể được nén thành:
 
 ```text
-Biểu diễn đầu vào bằng feature
+Represent input as features
         ↓
-Tính tổng tuyến tính có trọng số
+Weighted linear combination
         ↓
-So sánh prediction với target
+Compare prediction with target
         ↓
-Tối thiểu hóa loss phù hợp
+Minimize squared / chosen loss
         ↓
-Kiểm tra generalization và cấu trúc residual
+Inspect generalization + residual structure
 ```
 
-## Các hiểu lầm thường gặp
+## Common Misconceptions
 
-### “Linear Regression chỉ dùng khi đồ thị là đường thẳng”
+### “Linear Regression chỉ dùng khi graph là đường thẳng”
 
-Không. Feature transformation và interaction có thể tạo quan hệ phi tuyến theo raw input trong khi mô hình vẫn tuyến tính theo tham số.
+Sai. Feature transformations và interactions có thể tạo nonlinear relationship theo raw input trong khi model vẫn linear theo parameters.
 
-### “Hệ số lớn nghĩa là feature quan trọng hơn”
+### “Coefficient lớn nghĩa feature quan trọng hơn”
 
-Không thể so trực tiếp nếu scale của feature khác nhau. Tương quan giữa các feature cũng làm việc diễn giải hệ số phức tạp hơn.
+Không thể so trực tiếp nếu feature scales khác nhau. Correlation giữa features cũng làm coefficient interpretation phức tạp.
 
-### “R² cao nghĩa là mô hình tốt”
+### “R² cao nghĩa model tốt”
 
-Không đủ. Leakage, overfitting, distribution shift hoặc target definition sai vẫn có thể tạo `R²` đẹp.
+Không đủ. Leakage, overfitting, distribution shift hoặc target definition sai vẫn có thể tạo R² đẹp.
 
-### “Closed-form luôn tốt hơn gradient descent vì chính xác”
+### “Closed-form luôn tốt hơn gradient descent vì exact”
 
-Không. Kích thước dataset, số chiều feature và numerical conditioning quyết định phương pháp thực tế phù hợp hơn.
+Không. Dataset size, numerical conditioning và feature dimension quyết định method thực tế.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Linear Regression nối [Đại số tuyến tính](../01_mathematical_foundations/01_linear_algebra_for_ai.md), [Xác suất](../01_mathematical_foundations/02_probability_for_ai.md), [Tối ưu hóa](../01_mathematical_foundations/06_optimization.md) và [Bias–Variance](./14_bias_variance_and_generalization.md).
+Linear Regression nối [Linear Algebra](../01_mathematical_foundations/01_linear_algebra_for_ai.md), [Probability](../01_mathematical_foundations/02_probability_for_ai.md), [Optimization](../01_mathematical_foundations/06_optimization.md) và [Bias–Variance](./14_bias_variance_and_generalization.md).
 
-Xem tiếp: [Logistic Regression](./06_logistic_regression.md), nơi cùng một linear score được biến thành bộ phân loại xác suất.
+Xem tiếp: [Logistic Regression](./06_logistic_regression.md), nơi cùng linear score được biến thành probabilistic classifier.

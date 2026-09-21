@@ -1,50 +1,57 @@
-# Gradient Descent và Optimizer trong Deep Learning
+# Gradient Descent và Optimizers trong Deep Learning
 
-Sau khi Backpropagation tính gradient, **optimizer** quyết định **các tham số sẽ thay đổi như thế nào**. Đây là phân biệt rất quan trọng: gradient chỉ cung cấp thông tin cục bộ về độ dốc, còn optimizer là chính sách sử dụng thông tin đó qua nhiều bước huấn luyện.
+Sau khi backpropagation tính gradient, optimizer quyết định **parameters sẽ thay đổi như thế nào**. Đây là distinction quan trọng: gradient chỉ là local information về slope; optimizer là policy sử dụng information đó qua time.
 
-Tối ưu Deep Learning khó vì objective thường phi lồi, số tham số rất lớn, gradient có nhiễu do mini-batch và độ cong của loss khác nhau theo từng hướng. Vì vậy Gradient Descent là nền để hiểu, nhưng training thực tế thường dùng SGD có momentum, Adam/AdamW và learning-rate schedule.
+Deep Learning optimization khó vì objective non-convex, scale parameters lớn, gradients noisy do mini-batches và curvature khác nhau theo directions. Vì vậy simple Gradient Descent là nền để hiểu, nhưng practical training thường dùng SGD with momentum, Adam/AdamW và learning-rate schedules.
 
 ## Gradient Descent
 
-Quy tắc cập nhật cơ bản:
+Update cơ bản:
 
 \[
 \theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t)
 \]
 
-`η` là **tốc độ học (learning rate)**.
+`η` là learning rate.
 
-Gradient chỉ hướng tăng nhanh nhất cục bộ theo chuẩn Euclid; gradient âm cho hướng giảm nhanh nhất nếu bước dịch chuyển vô cùng nhỏ. Với bước hữu hạn, learning rate quyết định update còn hữu ích hay đã đi quá xa và vượt qua vùng tốt.
+Gradient chỉ direction steepest increase under Euclidean norm locally; negative gradient giảm loss nhanh nhất cho infinitesimal step. Với finite step, learning rate quyết định update có còn useful hay overshoot.
 
 ## Full Batch, Stochastic và Mini-Batch
 
-Full-batch gradient dùng toàn bộ dataset:
+Full-batch gradient dùng toàn dataset:
 
 \[
 g=\frac1N\sum_i\nabla L_i
 \]
 
-nên estimate ổn định hơn nhưng chi phí lớn.
+accurate nhưng expensive.
 
-Stochastic Gradient Descent theo nghĩa chặt dùng một mẫu mỗi bước. Trong thực tế, “SGD” thường dùng **mini-batch**:
+Stochastic Gradient Descent theo nghĩa strict dùng một sample. Practical “SGD” thường dùng mini-batch:
 
 \[
 g_B=\frac1{|B|}\sum_{i\in B}\nabla L_i
 \]
 
-Mini-batch gradient là một ước lượng có nhiễu của full gradient. Nhiễu không chỉ là bất lợi; trong một số chế độ, nó còn giúp exploration và tạo implicit regularization.
+Mini-batch gradient là noisy estimator của full gradient. Noise không chỉ nuisance; nó có thể giúp exploration và implicit regularization.
 
-## Learning Rate là hyperparameter cực kỳ quan trọng
+## Learning Rate là hyperparameter critical
 
-Learning rate quá nhỏ làm training chậm và có thể mất rất lâu ở vùng phẳng.
+Quá nhỏ:
 
-Learning rate quá lớn có thể gây dao động, divergence hoặc NaN/Inf.
+- training chậm;
+- có thể stuck lâu ở flat regions.
 
-Trong thực tế, learning rate thường quan trọng hơn nhiều chi tiết nhỏ của optimizer.
+Quá lớn:
+
+- oscillation;
+- divergence;
+- NaN/Inf.
+
+Learning rate thường quan trọng hơn nhiều optimizer-detail khác.
 
 ## Momentum
 
-Momentum tích lũy hướng gradient qua thời gian:
+Momentum tích lũy direction qua steps:
 
 \[
 v_t=\beta v_{t-1}+g_t
@@ -54,21 +61,19 @@ v_t=\beta v_{t-1}+g_t
 \theta_{t+1}=\theta_t-\eta v_t
 \]
 
-Nó làm mượt gradient nhiễu, tăng tốc ở các hướng mà gradient liên tục cùng chiều và giảm zig-zag trong vùng có độ cong rất khác nhau theo các trục.
+Nó smooth noisy gradient và tăng tốc qua directions gradient consistently aligned, đồng thời giảm zig-zag trong ravine.
 
-Ẩn dụ “quán tính vật lý” hữu ích cho trực giác, nhưng `v_t` chỉ là trạng thái toán học của optimizer.
+Có analogy physical momentum nhưng đây là mathematical state, không phải vật lý thật.
 
 ## Nesterov Momentum
 
-Các phương pháp kiểu Nesterov nhìn trước theo hướng momentum rồi hiệu chỉnh dựa trên gradient ở vị trí dự kiến.
+Nesterov-style methods evaluate/look ahead theo momentum direction rồi correct. Ý tưởng là anticipate future position để update responsive hơn.
 
-Trực giác là optimizer cố dự đoán nơi tham số sắp tới để phản ứng sớm hơn.
-
-Công thức implementation có thể khác nhau giữa framework, nên nếu cần reproducibility phải kiểm tra chính xác convention được dùng.
+Implementation conventions khác nhau giữa frameworks; cần đọc exact formula nếu reproducibility quan trọng.
 
 ## AdaGrad
 
-AdaGrad điều chỉnh learning rate riêng cho từng tham số dựa trên tổng bình phương gradient tích lũy:
+AdaGrad scale learning rate per parameter bằng accumulated squared gradients:
 
 \[
 s_t=s_{t-1}+g_t^2
@@ -78,25 +83,23 @@ s_t=s_{t-1}+g_t^2
 \theta_{t+1}=\theta_t-\eta\frac{g_t}{\sqrt{s_t}+\epsilon}
 \]
 
-Tham số hiếm khi nhận gradient có thể giữ effective learning rate lớn hơn, hữu ích với feature thưa.
-
-Nhược điểm là `s_t` chỉ tăng, nên learning rate có thể giảm quá mạnh về sau.
+Parameters hiếm update có effective learning rate lớn hơn, useful cho sparse features. Nhưng accumulator chỉ tăng nên learning rate có thể decay quá mạnh.
 
 ## RMSProp
 
-RMSProp thay tổng tích lũy vô hạn của AdaGrad bằng trung bình trượt mũ:
+RMSProp dùng exponential moving average:
 
 \[
 s_t=\beta s_{t-1}+(1-\beta)g_t^2
 \]
 
-sau đó scale gradient theo `s_t`.
+rồi normalize gradient.
 
-Cách này giúp adaptive step không giảm mãi chỉ vì training kéo dài.
+Điều này tránh AdaGrad accumulator grow forever.
 
 ## Adam
 
-Adam kết hợp estimate moment bậc nhất và bậc hai:
+Adam kết hợp first-moment và second-moment estimates:
 
 \[
 m_t=\beta_1m_{t-1}+(1-\beta_1)g_t
@@ -106,44 +109,44 @@ m_t=\beta_1m_{t-1}+(1-\beta_1)g_t
 v_t=\beta_2v_{t-1}+(1-\beta_2)g_t^2
 \]
 
-Sau hiệu chỉnh bias:
+Bias correction:
 
 \[
 \hat m_t=\frac{m_t}{1-\beta_1^t},\qquad
 \hat v_t=\frac{v_t}{1-\beta_2^t}
 \]
 
-cập nhật:
+Update:
 
 \[
 \theta_{t+1}=\theta_t-\eta\frac{\hat m_t}{\sqrt{\hat v_t}+\epsilon}
 \]
 
-Adam thích nghi step riêng cho từng tham số và thường dễ dùng với Transformer.
+Adam adapts per-parameter step scale và thường easy-to-use cho Transformers.
 
 ## AdamW và Weight Decay
 
-L2 regularization và weight decay có thể tương đương trong vanilla SGD dưới một số formulation, nhưng không hoàn toàn tương đương khi dùng adaptive optimizer.
+L2 regularization và weight decay tương đương trong vanilla SGD dưới certain formulation, nhưng không hoàn toàn equivalent với adaptive optimizers.
 
-**AdamW** tách riêng weight decay khỏi adaptive gradient update:
+**AdamW** decouples weight decay from gradient-based adaptive update:
 
 \[
 \theta\leftarrow(1-\eta\lambda)\theta-\eta\cdot AdamUpdate
 \]
 
-Đây là một lý do AdamW trở thành lựa chọn rất phổ biến cho Transformer training và fine-tuning.
+Đây là reason AdamW trở thành default phổ biến cho Transformer training/fine-tuning.
 
-## Learning-Rate Schedule
+## Learning-Rate Schedules
 
-Giữ learning rate không đổi từ đầu tới cuối hiếm khi là lựa chọn tốt nhất với training dài.
+Constant LR hiếm là best cho long training.
 
 ### Warmup
 
-Bắt đầu với learning rate nhỏ rồi tăng dần. Ở giai đoạn đầu, activation, gradient và optimizer moment chưa ổn định; warmup giúp giảm nguy cơ update quá mạnh, đặc biệt với Transformer hoặc batch lớn.
+Bắt đầu LR nhỏ rồi tăng dần. Early training parameters/optimizer moments chưa stable; warmup giảm risk unstable updates, đặc biệt Transformers/large batch.
 
 ### Step / Exponential Decay
 
-Giảm learning rate theo milestone hoặc theo hàm mũ.
+Giảm LR theo milestones hoặc exponential schedule.
 
 ### Cosine Decay
 
@@ -152,19 +155,19 @@ Giảm learning rate theo milestone hoặc theo hàm mũ.
 \left(1+\cos\frac{\pi t}{T}\right)
 \]
 
-làm learning rate giảm mượt dần tới giá trị thấp.
+smoothly giảm tới low LR.
 
 ### One-Cycle
 
-Learning rate tăng rồi giảm trong một chu kỳ, thường kết hợp với schedule cho momentum.
+LR tăng rồi giảm theo cycle, often combined momentum schedule.
 
-Schedule là một phần của thuật toán tối ưu, không phải cấu hình trang trí.
+Schedule là part của optimization algorithm, không decorative config.
 
-## Weight Decay không nhất thiết áp dụng cho mọi tham số
+## Weight Decay và parameters không decay
 
-Training hiện đại thường không áp weight decay giống nhau cho bias hoặc scale của normalization layer.
+Modern training thường không apply weight decay cho mọi parameter như bias hoặc normalization scale. Exact parameter groups matter.
 
-Vì vậy muốn tái lập một recipe, chỉ ghi “AdamW, lr=1e-4” là chưa đủ. Còn cần parameter group, weight decay, warmup, batch size và schedule.
+Fine-tuning recipe reproduce không được nếu chỉ ghi “AdamW lr=1e-4” mà bỏ weight-decay groups, warmup, batch size và schedule.
 
 ## Gradient Clipping
 
@@ -174,111 +177,97 @@ Global norm clipping:
 g\leftarrow g\cdot\min(1,c/\|g\|)
 \]
 
-giới hạn update cực lớn bất thường.
+phòng rare exploding update. RNN/Transformer training thường dùng.
 
-RNN và Transformer thường sử dụng kỹ thuật này.
-
-Clipping là một cơ chế bảo vệ; nếu gradient liên tục bùng nổ, cần tìm nguyên nhân gốc ở learning rate, normalization, architecture hoặc numerical stability.
+Clipping không chữa root cause nếu gradient luôn explode; nó là safety mechanism.
 
 ## Batch Size và Learning Rate
 
-Batch lớn làm gradient ít nhiễu hơn và thường tận dụng hardware tốt hơn, nhưng dùng nhiều memory hơn.
+Larger batch giảm gradient noise và tăng hardware utilization nhưng dùng memory nhiều. Effective optimization behavior đổi theo batch size.
 
-Hành vi tối ưu cũng thay đổi khi batch size thay đổi.
+Linear scaling rule (`lr ∝ batch`) là heuristic under regimes, không universal law.
 
-Quy tắc tuyến tính `lr ∝ batch` chỉ là heuristic trong một số chế độ, không phải định luật chung.
+**Gradient accumulation** mô phỏng larger effective batch bằng nhiều micro-batches trước optimizer step.
 
-**Gradient accumulation** cho phép mô phỏng effective batch lớn bằng nhiều micro-batch trước khi gọi optimizer step.
-
-Nếu loss scaling hoặc averaging sai, độ lớn gradient tích lũy cũng sai theo.
+Nếu loss averaging/scaling sai, accumulated gradient magnitude cũng sai.
 
 ## Gradient Noise và Generalization
 
-Batch nhỏ tạo gradient nhiều nhiễu hơn và trong một số bài toán có thể hướng optimizer tới các vùng nghiệm bền hơn.
+Small batches tạo noise có thể bias optimizer toward flatter/wider regions và đôi khi improve generalization. Nhưng theory complex; không nên biến thành rule “small batch luôn generalize tốt hơn”.
 
-Tuy nhiên lý thuyết rất phức tạp; không nên biến điều này thành quy tắc “batch nhỏ luôn generalize tốt hơn”.
+Hardware throughput và normalization also matter.
 
-Throughput phần cứng và normalization cũng ảnh hưởng mạnh.
+## Non-Convex Landscape
 
-## Bề mặt loss phi lồi
+Deep network objective có saddle points, flat directions, symmetries và many equivalent minima.
 
-Objective của mạng sâu chứa saddle point, vùng phẳng, symmetry và nhiều minimum tương đương chức năng.
+Goal practical không phải tìm global minimum mathematically; ta cần solution low loss + good generalization under budget.
 
-Mục tiêu thực tế không phải tìm “global minimum tuyệt đối” về toán học; ta cần một nghiệm có loss thấp, generalization tốt và đạt được trong ngân sách compute.
-
-Do symmetry của tham số, nhiều điểm rất khác nhau trong parameter space vẫn biểu diễn gần như cùng một hàm.
+Parameter symmetries làm nhiều minima functionally equivalent.
 
 ## Sharpness và Flatness
 
-Trực giác phổ biến là nghiệm bền trước perturbation nhỏ của tham số có thể generalize tốt hơn.
+Intuition: solution robust với small parameter perturbations có thể generalize better. Nhưng raw sharpness phụ thuộc parameterization/scale, nên interpretation cần cẩn thận.
 
-Tuy nhiên sharpness thô phụ thuộc cách tham số hóa và scale, nên phải diễn giải cẩn thận.
-
-Các phương pháp như SAM tối ưu objective có xét neighborhood, nhưng không có một metric flatness duy nhất giải thích generalization cho mọi mô hình.
+Methods like SAM optimize neighborhood-aware objective, nhưng no single flatness metric explains generalization universally.
 
 ## Mixed Precision và Loss Scaling
 
-Với FP16, gradient nhỏ có thể underflow.
-
-**Loss scaling** nhân loss với hệ số `s` trước backward:
+FP16 gradients nhỏ có thể underflow. **Loss scaling** multiply loss trước backward:
 
 \[
 L'=sL
 \]
 
-Gradient được tính ở scale lớn hơn rồi chia lại trước optimizer update.
+compute gradients scaled, rồi divide before update. Dynamic loss scaling adjust `s` nếu overflow.
 
-Dynamic loss scaling tự thay đổi `s` nếu phát hiện overflow.
+BF16 có exponent range lớn hơn nên less underflow-sensitive, dù precision mantissa thấp.
 
-BF16 có exponent range lớn hơn nên ít nhạy với underflow hơn, dù mantissa có độ chính xác thấp hơn.
+## Optimizer State Memory
 
-## Bộ nhớ của Optimizer State
+Adam stores parameters + gradients + first moment + second moment, thường nhiều lần parameter memory. Với huge LLM, optimizer state cực lớn.
 
-Adam phải lưu parameter, gradient, first moment và second moment, nên optimizer state có thể chiếm nhiều lần dung lượng parameter.
+Distributed training dùng sharding (ZeRO/FSDP-style) để split states across devices.
 
-Với LLM rất lớn, đây là chi phí cực đáng kể.
+Optimization vì vậy nối trực tiếp với infrastructure.
 
-Distributed training dùng sharding kiểu ZeRO hoặc FSDP để chia các state này qua nhiều thiết bị.
+## Choosing Optimizer
 
-Tối ưu hóa vì vậy nối trực tiếp với hạ tầng tính toán.
+Không có universal winner.
 
-## Chọn Optimizer
+- SGD+momentum: strong in vision/classical deep nets, memory lower.
+- AdamW: common Transformer/default fine-tuning.
+- Adafactor/8-bit optimizer: reduce state memory in large models.
+- Specialized optimizers có trade-offs khác.
 
-Không tồn tại một lựa chọn thắng tuyệt đối.
+Recipe phải evaluate cùng architecture/data/schedule.
 
-- SGD + momentum: mạnh trong nhiều vision/classical deep network, dùng ít optimizer memory hơn.
-- AdamW: rất phổ biến với Transformer và fine-tuning.
-- Adafactor hoặc 8-bit optimizer: giảm bộ nhớ state cho mô hình lớn.
-- Optimizer chuyên biệt khác có các trade-off riêng.
-
-Recipe phải được đánh giá cùng architecture, data và schedule.
-
-## Mô hình tư duy
+## Mental Model
 
 ```text
-Backpropagation = đo độ dốc hiện tại
-Optimizer        = nhớ lịch sử + chính sách scale/cập nhật
-Scheduler        = thay đổi chính sách bước học theo thời gian
+Backprop = measure slope now
+Optimizer = remember history + scale/update policy
+Scheduler = change step policy over training time
 ```
 
-## Các hiểu lầm thường gặp
+## Common Misconceptions
 
-### “Adam luôn tốt hơn SGD vì hội tụ nhanh hơn”
+### “Adam luôn hội tụ nhanh hơn nên tốt hơn SGD”
 
-Không. Tốc độ hội tụ, generalization cuối cùng và loại task có thể khác nhau.
+Convergence speed, final generalization và task differ. Không universal.
 
 ### “Learning rate càng nhỏ càng an toàn”
 
-Không. Quá nhỏ có thể làm training quá chậm hoặc không tới được nghiệm tốt trong ngân sách hữu hạn.
+Quá nhỏ có thể training impractically slow hoặc converge poor under fixed budget.
 
-### “Weight decay chỉ là L2 đổi tên”
+### “Weight decay chỉ là L2 regularization đổi tên”
 
-Không hoàn toàn, đặc biệt với adaptive optimizer. Decoupled weight decay như AdamW có hành vi khác việc cộng trực tiếp L2 penalty vào gradient.
+Với adaptive optimizer, decoupled weight decay khác naive L2 gradient penalty.
 
-### “Optimizer tự xử lý exploding gradient”
+### “Optimizer tự xử lý exploding gradients”
 
-Không. Adaptive scaling không bảo đảm điều đó; clipping, initialization, normalization và architecture vẫn quan trọng.
+Adaptive scaling không đảm bảo; clipping/architecture/normalization vẫn cần.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Xem [Tối ưu hóa](../01_mathematical_foundations/06_optimization.md), [Backpropagation](./04_backpropagation.md), [Initialization và Normalization](./06_initialization_and_normalization.md) và [Training Dynamics](./09_deep_learning_training_dynamics.md).
+Xem [Optimization](../01_mathematical_foundations/06_optimization.md), [Backpropagation](./04_backpropagation.md), [Initialization and Normalization](./06_initialization_and_normalization.md) và [Training Dynamics](./09_deep_learning_training_dynamics.md).

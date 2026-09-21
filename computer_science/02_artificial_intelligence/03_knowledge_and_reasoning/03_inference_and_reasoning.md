@@ -1,22 +1,22 @@
-# Suy luận và lập luận trong Trí tuệ nhân tạo
+# Inference và Reasoning trong Artificial Intelligence
 
-Biểu diễn tri thức chỉ thật sự hữu ích khi hệ thống có thể tạo ra kết luận mới hoặc đưa ra quyết định dựa trên tri thức đã có. **Suy luận (inference / 추론)** là quá trình dẫn xuất thông tin từ các tiền đề theo một cơ chế xác định. **Lập luận (reasoning)** là khái niệm rộng hơn, bao gồm việc lựa chọn giả định, kết hợp bằng chứng, xử lý bất định, tìm kiếm chứng minh, suy luận về nguyên nhân và hành động, đồng thời đôi khi phải sửa lại niềm tin khi có thông tin mới.
+Knowledge Representation chỉ hữu ích khi system có thể tạo ra conclusion mới hoặc quyết định dựa trên knowledge. **Inference (추론 / suy luận)** là quá trình derive information từ premises theo một mechanism; **reasoning** rộng hơn, bao gồm chọn assumptions, combine evidence, resolve uncertainty, search proof, reason về causes/actions và sometimes revise beliefs.
 
-Không tồn tại một “thuật toán lập luận” duy nhất dùng cho mọi bài toán. Diễn dịch (deduction), quy nạp (induction), suy đoán lời giải thích (abduction), suy luận mặc định (default reasoning) và suy luận xác suất (probabilistic inference) trả lời những câu hỏi khác nhau và có mức bảo đảm khác nhau.
+Không có một “reasoning algorithm” universal. Deduction, induction, abduction, default reasoning và probabilistic inference trả lời different questions và có different guarantees.
 
-Xem trước: [Logic mệnh đề](./01_propositional_logic.md) và [Logic vị từ bậc nhất](./02_first_order_logic.md).
+Xem trước: [Propositional Logic](./01_propositional_logic.md) và [First-Order Logic](./02_first_order_logic.md).
 
-## Suy luận diễn dịch
+## Deduction
 
-Suy luận diễn dịch (deduction) có dạng:
+Deductive reasoning:
 
 ```text
-Quy tắc tổng quát + sự kiện
+General rule + facts
         ↓
-kết luận tất yếu
+necessary consequence
 ```
 
-Ví dụ:
+Example:
 
 \[
 \forall x\;Human(x)\rightarrow Mortal(x)
@@ -26,110 +26,116 @@ Ví dụ:
 Human(Socrates)
 \]
 
-suy ra:
+therefore:
 
 \[
 Mortal(Socrates)
 \]
 
-Nếu tiền đề đúng và phép suy luận hợp lệ thì kết luận bắt buộc phải đúng. Đây là đặc điểm **bảo toàn chân lý (truth-preserving)** của suy luận diễn dịch so với ngữ nghĩa hình thức đã chọn.
+If premises true and inference valid, conclusion must be true.
 
-## Suy luận quy nạp
+Deduction is truth-preserving relative to formal semantics.
 
-Suy luận quy nạp (induction) đi theo hướng:
+## Induction
+
+Inductive reasoning:
 
 ```text
-các ví dụ đã quan sát
+observed examples
         ↓
-mẫu hoặc giả thuyết tổng quát
+general pattern/hypothesis
 ```
 
-Ví dụ, hệ thống quan sát nhiều giao dịch rồi học một bộ phân loại để dự đoán gian lận.
+Example: observe many transactions and learn classifier predicting fraud.
 
-Kết luận quy nạp không được bảo đảm tuyệt đối. Một dữ liệu mới hoàn toàn có thể làm giả thuyết cũ trở nên sai. Phần lớn Machine Learning là quá trình quy nạp: từ một tập dữ liệu hữu hạn, hệ thống học một mô hình được kỳ vọng có khả năng khái quát hóa (generalization) sang dữ liệu chưa thấy.
+Conclusion not guaranteed. New examples can falsify pattern.
 
-Thống kê cung cấp khung lý thuyết để đánh giá mức bất định của quá trình này.
+Machine Learning is largely inductive: finite data → model expected to generalize.
 
-## Suy luận abduction
+Statistics provides framework to quantify uncertainty/generalization.
 
-**Abduction** tìm một lời giải thích có khả năng hợp lý cho quan sát hiện tại.
+## Abduction
+
+Abduction seeks plausible explanation for observation.
 
 ```text
-Quy tắc: Fire → Smoke
-Quan sát: Smoke
-Giả thuyết có thể: Fire
+Rule: Fire → Smoke
+Observe: Smoke
+Possible explanation: Fire
 ```
 
-Kết luận “có lửa” không phải là diễn dịch hợp lệ vì khói có thể đến từ nhiều nguyên nhân khác.
+This is not deductively valid because other causes can produce smoke.
 
-Chẩn đoán y khoa thường mang tính abduction: từ triệu chứng suy ra một tập nguyên nhân có thể xảy ra. Sau đó xác suất, kiến thức nhân quả hoặc kiểm tra bổ sung được dùng để xếp hạng các giả thuyết.
+Medical diagnosis often abductive: symptoms → candidate causes.
 
-## Diễn dịch, quy nạp và abduction phối hợp với nhau
+Abduction generates hypotheses; probability/causal knowledge ranks them.
 
-Một chu trình nghiên cứu hoặc AI có thể diễn ra như sau:
+## Deduction, induction, abduction together
+
+Scientific/AI workflow often cycles:
 
 ```text
-Abduction  → đề xuất lời giải thích hoặc mô hình
-Induction  → học và khái quát hóa từ dữ liệu
-Deduction  → suy ra hệ quả có thể kiểm tra
-Quan sát   → so sánh với thực tế
+Abduction: propose explanation/model
+Induction: learn/generalize from data
+Deduction: derive testable consequences
+Observation: compare with reality
 ```
 
-Ba cơ chế này bổ sung cho nhau thay vì loại trừ nhau.
+These are complementary, not competing schools.
 
-## Tính đúng đắn của hệ suy luận
+## Soundness
 
-Một thủ tục suy luận là **đúng đắn (soundness / 건전성)** nếu:
+Inference procedure is **sound (건전성)** if:
 
 \[
 KB\vdash\alpha\Rightarrow KB\models\alpha
 \]
 
-Nghĩa là bất kỳ kết luận nào hệ thống chứng minh được cũng phải thật sự được suy ra về mặt ngữ nghĩa từ cơ sở tri thức.
+Everything it proves is semantically entailed.
 
-Một bộ chứng minh đúng đắn không tự tạo ra kết luận logic không hợp lệ so với hệ hình thức mà nó đang làm việc.
+A sound theorem prover does not invent invalid proof conclusions relative to formal system.
 
-## Tính đầy đủ
+## Completeness
 
-Một thủ tục là **đầy đủ (completeness / 완전성)** nếu:
+Procedure is **complete (완전성)** if:
 
 \[
 KB\models\alpha\Rightarrow KB\vdash\alpha
 \]
 
-Tức là mọi hệ quả ngữ nghĩa đều có thể được chứng minh về nguyên tắc.
+Every semantic consequence can in principle be proved.
 
-Tuy nhiên đúng đắn và đầy đủ không đồng nghĩa với nhanh. Việc tìm một chứng minh có thể cần không gian tìm kiếm khổng lồ hoặc thậm chí không kết thúc trong các hệ logic có tính biểu đạt cao.
+Soundness and completeness do not imply efficiency. Search for proof can be enormous or non-terminating in expressive logics.
 
-## Tính đúng đắn và khả năng xử lý thực tế
+## Correctness vs tractability
 
-Khi thiết kế hệ suy luận, cần cân bằng:
-
-```text
-tính biểu đạt
-đúng đắn / đầy đủ
-thời gian chạy
-bộ nhớ
-khả năng bảo trì
-```
-
-Một ngôn ngữ quy tắc bị giới hạn nhưng có hành vi suy luận dễ dự đoán đôi khi phù hợp với hệ thống sản xuất hơn FOL đầy đủ.
-
-## Suy diễn tiến
-
-Suy diễn tiến (forward chaining) là cách suy luận dựa trên dữ liệu:
+AI reasoning design balances:
 
 ```text
-các sự kiện đã biết
-    ↓
-tìm quy tắc có tiền đề phù hợp
-    ↓
-thêm kết luận mới
-    ↓
-lặp lại
+expressiveness
+soundness/completeness
+runtime
+memory
+maintainability
 ```
 
-Ví dụ:
+A restricted rule language may be preferable to full FOL because predictable inference matters in production.
+
+## Forward chaining
+
+Data-driven reasoning:
+
+```text
+known facts
+    ↓
+find rules whose premises match
+    ↓
+add conclusions
+    ↓
+repeat to fixed point
+```
+
+Example:
 
 ```text
 Employee(Alice)
@@ -137,322 +143,351 @@ Employee(x) → HasBadge(x)
 HasBadge(x) → CanEnterLobby(x)
 ```
 
-Hệ thống có thể suy ra Alice có thẻ và được vào sảnh.
+Derive badge and access.
 
-Suy diễn tiến phù hợp khi dữ liệu liên tục được bổ sung và hệ thống có nhiều loại truy vấn cần phục vụ.
+Forward chaining useful when facts arrive and many conclusions may be queried.
 
-## Suy diễn lùi
+## Backward chaining
 
-Suy diễn lùi (backward chaining) bắt đầu từ mục tiêu:
-
-```text
-truy vấn
- ↓
-quy tắc nào có thể sinh kết luận này?
- ↓
-chứng minh các tiền đề
- ↓
-lặp đệ quy
-```
-
-Muốn chứng minh `CanEnterLobby(Alice)`, hệ thống có thể chuyển thành yêu cầu chứng minh `HasBadge(Alice)`, rồi tiếp tục chuyển thành `Employee(Alice)`.
-
-Cách này hiệu quả khi truy vấn hẹp so với toàn bộ tập hệ quả có thể tạo ra.
-
-## Ghi nhớ kết quả suy luận
-
-Suy diễn lùi có thể phải giải lại cùng một mục tiêu con nhiều lần. Ta có thể lưu:
+Goal-driven:
 
 ```text
-mục tiêu con → đã chứng minh / thất bại / các câu trả lời
+query
+ ↓
+which rule could conclude it?
+ ↓
+prove premises
+ ↓
+recursively continue
 ```
 
-Kỹ thuật **tabling** trong lập trình logic tránh vòng lặp và lặp tính toán, đồng thời cải thiện tính đầy đủ trong một số loại chương trình.
+To prove `CanEnterLobby(Alice)`, reduce to `HasBadge(Alice)`, then `Employee(Alice)`.
 
-Đây cũng chính là ý tưởng của lập trình động (dynamic programming): lưu lại bài toán con đã giải.
+Efficient when query narrow compared with all possible consequences.
 
-## Suy luận theo điểm cố định
+## Memoization
 
-Các hệ kiểu Datalog có thể áp dụng quy tắc cho tới khi không còn sự kiện mới.
+Backward reasoning can repeatedly solve same subgoal. Cache result:
 
-Gọi phép biến đổi tri thức là:
+```text
+subgoal → proven/failed/answers
+```
+
+Tabling in logic programming avoids loops/repeated computation and can improve completeness properties for certain programs.
+
+This is same dynamic-programming idea across AI.
+
+## Fixed-point reasoning
+
+Datalog-style rules can be evaluated until no new facts:
 
 \[
-T(K)=K\cup\{\text{các hệ quả mới}\}
+T(K)=K\cup\{\text{new consequences}\}
 \]
 
-Ta lặp:
+Repeatedly:
 
 \[
 K_{i+1}=T(K_i)
 \]
 
-cho tới khi:
+until:
 
 \[
 K_{i+1}=K_i
 \]
 
-Trạng thái này được gọi là điểm cố định (fixed point). Điểm cố định nhỏ nhất là cơ sở ngữ nghĩa cho nhiều chương trình quy tắc dương và đệ quy.
+This least fixed point defines semantics for many positive recursive rule programs.
 
-## Xung đột giữa các quy tắc
+## Rule conflict
 
-Cơ sở quy tắc thực tế có thể sinh ra kết luận mâu thuẫn.
+Real rule bases may derive conflicting conclusions.
 
-Ví dụ:
+Example:
 
 ```text
 PremiumCustomer(x) → Approve(x)
 FraudFlag(x) → Reject(x)
 ```
 
-Nếu Alice thỏa cả hai điều kiện, hệ thống cần chính sách xử lý xung đột, chẳng hạn ưu tiên quy tắc, ưu tiên quy tắc cụ thể hơn, chính sách từ chối có độ ưu tiên cao hơn, xét nguồn gốc tri thức hoặc dùng logic phi đơn điệu.
+Alice satisfies both.
 
-Chính sách này phải được mô tả rõ trong ngữ nghĩa hệ thống thay vì để hành vi phụ thuộc tình cờ vào thứ tự chạy.
+Need conflict policy:
 
-## Suy luận đơn điệu
+- priority;
+- specificity;
+- deny-overrides;
+- provenance/trust;
+- non-monotonic logic.
 
-Trong logic đơn điệu (monotonic logic), nếu:
+Formal rule semantics should specify this explicitly.
+
+## Monotonic reasoning
+
+In monotonic logic:
 
 \[
 KB\models\alpha
 \]
 
-thì khi thêm tiền đề mới, kết luận cũ vẫn giữ nguyên:
+then adding more premises keeps entailment:
 
 \[
 KB\cup\{\beta\}\models\alpha
 \]
 
-Logic cổ điển là đơn điệu.
+Classical logic monotonic.
 
-Tuy nhiên tri thức đời thực thường không như vậy.
+Real-world default reasoning often not.
 
-## Suy luận phi đơn điệu
+## Non-monotonic reasoning
 
-Giả sử:
+Suppose:
 
 ```text
 Bird(Tweety)
 Normally Bird(x) → Flies(x)
 ```
 
-Ta tạm suy ra `Flies(Tweety)`.
+Infer `Flies(Tweety)`.
 
-Sau đó có thêm:
+Later learn:
 
 ```text
 Penguin(Tweety)
 Penguin(x) → ¬Flies(x)
 ```
 
-Hệ thống phải rút lại kết luận mặc định trước đó.
+Need retract previous default conclusion.
 
-Suy luận phi đơn điệu (non-monotonic reasoning) cho phép các kết luận được sửa đổi khi xuất hiện bằng chứng mới.
+Non-monotonic reasoning models revisable conclusions.
 
-## Logic mặc định
+## Default logic
 
-Một quy tắc mặc định có ý nghĩa gần như:
+Default rule conceptually:
 
 ```text
-Nếu Bird(x), và chưa có bằng chứng cho thấy đây là trường hợp bất thường,
-thì tạm giả định Flies(x).
+If Bird(x), and no evidence abnormal,
+assume Flies(x)
 ```
 
-Cơ chế này khác hoàn toàn với một phép kéo theo nghiêm ngặt trong FOL.
+This differs from strict implication.
 
-Nhiều quy tắc nghiệp vụ thực tế có bản chất mặc định; nếu mô hình hóa chúng như chân lý tuyệt đối sẽ tạo ra rất nhiều ngoại lệ khó quản lý.
+Many business rules implicitly use defaults; encoding them as strict FOL creates exceptions problem.
 
 ## Circumscription
 
-Circumscription là một cách hình thức hóa ý tưởng “chỉ coi những gì thật sự cần thiết là bất thường”.
+Circumscription minimizes extension of abnormality predicates.
 
-Ví dụ:
+Example:
 
 ```text
 Bird(x) ∧ ¬Abnormal(x) → Flies(x)
 ```
 
-Hệ thống cố giữ tập `Abnormal` nhỏ nhất nhưng vẫn nhất quán với tri thức hiện có.
+Assume as few objects abnormal as possible consistent with knowledge.
 
-Đây là một cách hình thức hóa trực giác “mọi thứ bình thường trừ khi có bằng chứng ngược lại”.
+It formalizes “things are normal unless evidence otherwise”.
 
-## Suy luận theo giả định thế giới đóng
+## Closed-world inference
 
-Các hệ giống cơ sở dữ liệu đôi khi sử dụng quy tắc:
+Database-like systems often infer false from inability to prove:
 
 ```text
-không chứng minh được P → tạm coi ¬P
+not Known(P) → assume ¬P
 ```
 
-Cách này chỉ an toàn khi cơ sở tri thức được xem là đầy đủ đối với vị từ đang xét.
+This is safe only when knowledge base intended complete for predicate.
 
-Ví dụ trong hồ sơ y tế, không có chẩn đoán không có nghĩa bệnh nhân chắc chắn không mắc bệnh. Vì vậy giả định thế giới đóng nên được áp dụng có chủ đích theo từng miền, không phải như một mặc định chung.
+For medical records, absence of diagnosis may not mean patient does not have disease.
 
-## Hệ duy trì chân lý
+Closed-world policy should be predicate/domain-specific, not universal habit.
 
-Khi dữ liệu hoặc quy tắc thay đổi, các kết luận đã dẫn xuất có thể phải bị thu hồi.
+## Truth maintenance
 
-**Hệ duy trì chân lý (Truth Maintenance System)** lưu lại quan hệ phụ thuộc:
+When facts/rules change, derived conclusions may need retract/update.
+
+Truth Maintenance System tracks justifications/dependencies:
 
 ```text
-Sự kiện A + Quy tắc R → Kết luận C
+Fact A + Rule R → Conclusion C
 ```
 
-Nếu A bị xóa, C cũng có thể phải xóa nếu không còn một đường chứng minh khác.
+If A removed, C may need removal unless another justification exists.
 
-Ý tưởng này rất gần với lineage và tính toán gia tăng trong các pipeline dữ liệu hiện đại.
+Modern data pipelines similarly need lineage/incremental recomputation.
 
-## Giải thích kết luận
+## Explanation
 
-Suy luận ký hiệu có thể tạo ra một vết chứng minh thật sự:
+Symbolic inference can produce proof trace:
 
 ```text
-Alice được vào sảnh vì:
+Alice can enter because:
 Employee(Alice)
 Employee → HasBadge
 HasBadge → CanEnterLobby
 ```
 
-Loại giải thích này mạnh hơn một giải thích hậu nghiệm kiểu “feature importance”, vì nó chính là đường dẫn suy luận đã được dùng để tạo kết luận.
+This is stronger than post-hoc “feature importance” because explanation is actual derivation path under rule system.
 
-Tuy nhiên chất lượng giải thích vẫn phụ thuộc vào tính đúng đắn của các quy tắc và tiền đề ban đầu.
+But explanation only as good as rules/premises.
 
-## Suy luận khi tri thức mâu thuẫn
+## Reasoning under inconsistent knowledge
 
-Trong logic cổ điển, mâu thuẫn có thể dẫn tới hiện tượng “bùng nổ”, tức từ mâu thuẫn có thể suy ra bất kỳ mệnh đề nào.
+Classical logic with contradiction can explode.
 
-**Logic cận nhất quán (paraconsistent logic)** cho phép tồn tại mâu thuẫn mà không làm toàn bộ hệ suy luận sụp đổ.
+**Paraconsistent logic** allows contradictions without deriving arbitrary everything.
 
-Trong hệ thống sản xuất, một cách thực dụng khác là giữ rõ nguồn gốc của từng sự kiện và không hợp nhất các nguồn xung đột thành một “sự thật duy nhất” không có provenance.
+Production knowledge integration may need conflict-tolerant approaches because sources disagree.
 
-## Suy luận dưới bất định
+Another engineering approach: preserve provenance and avoid merging conflicts into single unquestioned truth.
 
-Quy tắc nghiêm ngặt:
+## Reasoning under uncertainty
+
+Strict rule:
 
 \[
 Symptom(x)\rightarrow Disease(x)
 \]
 
-thường không phù hợp với y tế hoặc thế giới thực.
+is often unrealistic.
 
-Suy luận xác suất sử dụng:
+Probabilistic reasoning assigns:
 
 \[
 P(Disease\mid Symptom)
 \]
 
-hoặc các mô hình như Bayesian Network và factor graph.
+or factor graph/Bayesian network.
 
-Khi đó bài toán chuyển từ “chứng minh đúng/sai” sang “tính mức tin cậy hậu nghiệm”.
+This changes entailment from binary proof to posterior belief computation.
 
-Xem: [Suy luận xác suất](./04_probabilistic_reasoning.md).
+See [Probabilistic Reasoning](./04_probabilistic_reasoning.md).
 
-## Suy luận nhân quả
+## Causal reasoning
 
-Quan hệ thống kê thường được viết:
+Statistical association:
 
 \[
 P(Y\mid X)
 \]
 
-Suy luận nhân quả lại quan tâm tới can thiệp:
+Causal reasoning asks:
 
 \[
 P(Y\mid do(X=x))
 \]
 
-Quan sát rằng `X` và `Y` đi cùng nhau không giống với việc chủ động thay đổi `X` rồi xem `Y` thay đổi ra sao.
+Intervention differs observation.
 
-Một quy tắc `Rain→WetRoad` có thể mang hàm ý nhân quả trong mô hình, nhưng phép kéo theo logic tự nó không tạo ra ngữ nghĩa nhân quả. Mô hình nhân quả cấu trúc (Structural Causal Model) biểu diễn cơ chế này rõ hơn.
+A rule like `Rain→WetRoad` may encode causal relation, but material implication alone does not.
 
-## Suy luận phản thực
+Causal graphs and structural causal models explicitly represent mechanisms/interventions.
 
-Một câu hỏi phản thực (counterfactual) có dạng:
+## Counterfactual reasoning
 
-> Điều gì sẽ xảy ra nếu hành động A đã không được thực hiện?
+Counterfactual:
 
-Trả lời câu hỏi này cần một mô hình của thế giới thay thế nhưng vẫn chia sẻ các yếu tố nền với thế giới thực, chứ không chỉ cần xác suất có điều kiện thông thường.
+> What would have happened if action A had not occurred?
 
-Suy luận phản thực quan trọng trong giải thích, phân tích chính sách và gán công lao cho hành động (credit assignment).
+Requires model of alternate world sharing background factors, not just conditional probability.
 
-## Lập luận dựa trên trường hợp
+Counterfactuals matter for explanation, policy analysis and credit assignment.
 
-Thay vì học một bộ quy tắc tổng quát, hệ thống có thể truy xuất các trường hợp quá khứ tương tự rồi điều chỉnh lời giải:
+## Case-based reasoning
 
-```text
-truy xuất trường hợp tương tự
-→ tái sử dụng lời giải
-→ điều chỉnh theo ngữ cảnh mới
-→ lưu lại kinh nghiệm mới
-```
+Instead of general rules, retrieve similar past cases and adapt solution.
 
-Đây là tư tưởng của **Case-Based Reasoning**. Nó có nét gần với hệ truy xuất hiện đại, dù RAG thường truy xuất văn bản hoặc ngữ cảnh thay vì thực hiện đầy đủ cơ chế thích nghi trường hợp.
-
-## Lập luận tương tự
-
-Lập luận tương tự (analogical reasoning) ánh xạ cấu trúc quan hệ từ một miền nguồn sang miền đích.
-
-Ví dụ có thể dùng dòng nước để giải thích dòng điện. Cách này hữu ích cho học tập và giải thích, nhưng sẽ gây sai nếu cấu trúc tương đồng chỉ đúng ở một số điểm rồi bị kéo quá xa.
-
-LLM có khả năng sinh phép tương tự rất tốt về ngôn ngữ, nhưng các phép tương tự kỹ thuật vẫn cần kiểm chứng.
-
-## Suy luận đời thường
-
-Tri thức đời thường bao gồm mặc định, quy luật vật lý, kỳ vọng xã hội và tri thức theo thời gian.
-
-Các thách thức chính là phạm vi cực rộng, nhiều ngoại lệ, phụ thuộc ngữ cảnh, rất nhiều giả định không được nói ra và tri thức luôn không đầy đủ.
-
-Mã hóa toàn bộ bằng ký hiệu rất khó; mô hình thống kê thuần túy lại có thể thiếu nhất quán. Đây là lý do các hướng tiếp cận lai vẫn là một chủ đề nghiên cứu quan trọng.
-
-## Suy luận nhiều bước như một bài toán tìm kiếm
-
-Tìm chứng minh có thể được nhìn như tìm kiếm trên không gian trạng thái:
+Workflow:
 
 ```text
-trạng thái = các sự kiện hoặc mục tiêu hiện tại
-toán tử    = quy tắc suy luận
-trạng thái kế = kết luận hoặc mục tiêu con mới
-mục tiêu   = chứng minh hoặc phản ví dụ
+retrieve similar case
+reuse solution
+revise for new context
+retain new experience
 ```
 
-Các bộ chứng minh hiện đại thường sử dụng heuristic để ưu tiên mệnh đề hoặc nhánh có triển vọng.
+This is ancestor-like idea to retrieval-based systems, though modern RAG usually retrieves text/context rather than formal case adaptation.
 
-Điều này nối biểu diễn tri thức quay lại với [Tìm kiếm heuristic](../02_search_reasoning_and_planning/02_heuristic_search.md).
+## Analogical reasoning
 
-## Độ phức tạp của tìm kiếm chứng minh
+Map relational structure from source domain to target domain.
 
-Ngay cả khi từng quy tắc suy luận rất đơn giản, số đường dẫn suy luận có thể tăng bùng nổ.
+Example electrical circuit analogy to water flow.
 
-Một hệ suy luận thực tế thường cần chỉ mục, thứ tự quy tắc, loại bỏ mệnh đề dư thừa, ghi nhớ kết quả, cắt nhánh và heuristic.
+Useful for learning/explanation but analogy can mislead when structural mapping breaks.
 
-Đúng về mặt hình thức không đồng nghĩa với khả thi về mặt tính toán.
+LLMs are good at linguistic analogy generation but need verification for technical transfer.
 
-## Cơ sở dữ liệu suy diễn
+## Commonsense reasoning
 
-Datalog kết hợp sự kiện quan hệ với quy tắc cho phép truy vấn đệ quy.
+Commonsense involves defaults, physical constraints, social expectations and temporal knowledge.
 
-Ví dụ tính quan hệ có thể đi tới:
+Challenges:
+
+- enormous breadth;
+- exceptions;
+- context dependence;
+- unstated assumptions;
+- incomplete knowledge.
+
+Pure symbolic encoding difficult; pure statistical model can be inconsistent. Hybrid approaches remain active research area.
+
+## Multi-step reasoning as search
+
+Proof reasoning can be modeled as search:
+
+```text
+state = current facts/goals
+operator = inference rule
+successor = new derived statement/subgoal
+objective = proof/counterexample
+```
+
+Heuristic theorem proving prioritizes promising clauses.
+
+This connects Knowledge Reasoning back to [Heuristic Search](../02_search_reasoning_and_planning/02_heuristic_search.md).
+
+## Proof search complexity
+
+Even if each inference rule simple, number possible derivations explodes.
+
+Reasoning system needs:
+
+- indexing;
+- rule ordering;
+- subsumption;
+- memoization;
+- pruning;
+- heuristics.
+
+Formal correctness does not imply computational practicality.
+
+## Deductive databases
+
+Datalog + relational facts enables recursive queries.
+
+Transitive closure example:
 
 ```text
 Reach(x,y) :- Edge(x,y).
 Reach(x,z) :- Edge(x,y), Reach(y,z).
 ```
 
-Các quy tắc này tính bao đóng bắc cầu (transitive closure) của đồ thị.
+This computes graph reachability through logical rules.
 
-Cơ sở dữ liệu và logic có quan hệ rất sâu; ngay cả bộ tối ưu truy vấn cũng có thể được xem như một hệ lập kế hoạch trên nhiều phương án thực thi.
+Databases and logic are deeply connected; query optimizer is a reasoning/planning engine over execution alternatives.
 
-## Suy luận trong Knowledge Graph
+## Inference in Knowledge Graphs
 
-Ví dụ quy tắc:
+Rules:
 
 ```text
 parentOf(x,y) ∧ parentOf(y,z)
 → grandparentOf(x,z)
 ```
 
-Hoặc suy luận ontology:
+Ontology inference:
 
 ```text
 Doctor subClassOf MedicalProfessional
@@ -460,104 +495,114 @@ Alice type Doctor
 → Alice type MedicalProfessional
 ```
 
-Trong khi đó, mô hình embedding cho Knowledge Graph thường dự đoán cạnh còn thiếu bằng một điểm số thống kê. Một cơ chế tạo **hệ quả logic**, cơ chế kia tạo **mức khả tín dự đoán**. Hai kết quả không nên bị nhầm lẫn.
+Embedding-based KG completion instead predicts likely missing edges statistically. One gives logical entailment, other probabilistic score.
 
-## Chứng minh định lý có hỗ trợ neural
+## Neural theorem proving
 
-Một mô hình neural có thể xếp hạng hoặc chọn bước chứng minh, trong khi kernel ký hiệu kiểm tra từng bước.
+Neural model can score/select proof steps while symbolic kernel verifies each step.
 
-Kiến trúc này chia vai trò rõ ràng:
+Advantages:
 
 ```text
-neural  → heuristic linh hoạt trên không gian tìm kiếm lớn
-symbolic → bảo đảm tính hợp lệ của bước chứng minh được chấp nhận
+neural → flexible heuristic over huge search
+symbolic → correctness guarantee of accepted proof
 ```
 
-Đây là một mẫu thiết kế điển hình của AI neuro-symbolic.
+This is canonical neuro-symbolic architecture.
 
-## Lập luận LLM và kiểm chứng
+## LLM reasoning và verification
 
-Chuỗi lập luận do LLM sinh ra có thể trôi chảy nhưng vẫn sai.
+LLM-generated chain of thought may be fluent but invalid.
 
-Một kiến trúc đáng tin cậy hơn là tạo ra hiện vật trung gian có thể kiểm tra:
+Reliable architecture can externalize verifiable intermediate artifact:
 
 ```text
-LLM đề xuất SQL / code / proof / plan
+LLM proposes SQL / code / proof / plan
       ↓
-parser / type checker / solver kiểm tra hoặc thực thi
+parser/type checker/solver executes or verifies
       ↓
-phản hồi kết quả cho mô hình
+feedback to model
       ↓
-sửa lại nếu cần
+repair
 ```
 
-Bộ kiểm chứng phải kiểm tra thuộc tính thực sự của miền bài toán, không chỉ kiểm tra câu chữ có vẻ hợp lý.
+The verifier should check domain property, not just text style.
 
-## Tự nhất quán
+## Self-consistency
 
-Một chiến lược ở thời điểm suy luận là sinh nhiều đường lập luận rồi chọn câu trả lời theo đa số hoặc theo một bộ chấm điểm.
+Generate multiple reasoning paths and select majority/final answer can improve some tasks statistically.
 
-Cách này có thể cải thiện một số nhiệm vụ về mặt thống kê, nhưng sự đồng thuận không phải là chứng minh. Nhiều mẫu có thể cùng mắc một lỗi hệ thống.
+But agreement is not proof. Many samples can share same systematic error.
 
-Tự nhất quán (self-consistency) là một chiến lược lấy mẫu, không phải bảo đảm nhất quán logic.
+Self-consistency is an inference-time sampling strategy, not formal logical consistency guarantee.
 
-## Chain-of-thought và dẫn xuất hình thức
+## Chain-of-thought vs formal derivation
 
-Lập luận bằng ngôn ngữ tự nhiên linh hoạt, dễ đọc nhưng mơ hồ và có thể bỏ qua bước.
+Natural-language reasoning:
 
-Dẫn xuất hình thức có cú pháp chính xác và kiểm tra được, nhưng bị giới hạn trong miền đã mô hình hóa và có thể tốn chi phí xây dựng.
+- flexible;
+- readable;
+- ambiguous;
+- may omit steps.
 
-Một hệ thống hiện đại có thể dùng ngôn ngữ tự nhiên để đề xuất và biểu diễn hình thức để kiểm chứng.
+Formal derivation:
 
-## Nguồn gốc của vết suy luận
+- precise syntax;
+- checkable;
+- domain-limited;
+- potentially expensive to construct.
 
-Trong AI doanh nghiệp, đầu ra có thể cần kèm theo:
+Modern systems can use natural language for proposal and formal representation for verification.
+
+## Reasoning trace provenance
+
+For enterprise AI, useful output may include:
 
 ```text
-câu trả lời
-nguồn hỗ trợ
-quy tắc đã sử dụng
-kết quả tính toán / công cụ
-mức bất định
+answer
+supporting sources
+rules used
+calculations/tool outputs
+uncertainty
 ```
 
-Cách này dễ kiểm toán hơn một câu trả lời cuối cùng không có dấu vết.
+This is more auditable than opaque final answer.
 
-Thông tin nguồn gốc phải phản ánh quá trình thật sự, không phải một lời giải thích được tạo ra sau đó nhưng không liên quan tới cách kết luận được sinh ra.
+Provenance should reflect actual process, not fabricated explanation.
 
-## Mô hình tư duy
+## Mental Model
 
 ```text
-Deduction     = tiền đề bảo đảm kết luận
-Induction     = ví dụ gợi ra mẫu tổng quát
-Abduction     = quan sát gợi ra lời giải thích
-Default       = tạm giả định bình thường cho tới khi có ngoại lệ
-Probabilistic = xếp hạng niềm tin dưới bất định
-Causal        = suy luận về can thiệp
-Search        = khám phá các đường dẫn chứng minh hoặc kế hoạch
-Verification  = kiểm tra ứng viên bằng quy tắc rõ ràng
+Deduction  = premises guarantee conclusion
+Induction  = examples suggest general pattern
+Abduction  = observation suggests explanation
+Default    = assume normal until exception
+Probabilistic = rank beliefs under uncertainty
+Causal     = reason about intervention
+Search     = explore possible derivations/plans
+Verification = check candidate against explicit rules
 ```
 
-## Các hiểu lầm thường gặp
+## Common Misconceptions
 
-### “Lập luận chỉ là diễn dịch”
+### “Reasoning = deduction”
 
-Không. AI thực tế còn dùng quy nạp, abduction, xác suất, nhân quả và lý thuyết quyết định.
+Deduction chỉ một family. Real AI uses induction, abduction, probabilistic and decision reasoning.
 
-### “Có chứng minh hình thức nghĩa là tiền đề cũng đúng”
+### “Formal proof means premise is true”
 
-Không. Chứng minh chỉ bảo đảm kết luận theo từ tiền đề; tính đúng của nguồn dữ liệu và mô hình hóa là vấn đề riêng.
+Proof only guarantees relation from premises; source/model validity separate.
 
-### “Giải thích do LLM tạo ra là bằng chứng câu trả lời đúng”
+### “LLM explanation is proof of its answer”
 
-Không. Lời giải thích có thể sai hoặc được tạo hậu nghiệm. Kiểm chứng độc lập vẫn cần thiết.
+Generated rationale can be post-hoc or erroneous. Independent verification matters.
 
-### “Càng nhiều quy tắc thì bộ suy luận càng mạnh”
+### “More rules always improve reasoner”
 
-Không nhất thiết. Thêm quy tắc có thể tạo mâu thuẫn, vòng lặp và bùng nổ không gian tìm kiếm. Chất lượng kỹ thuật tri thức quan trọng hơn số lượng.
+More rules can create conflicts, cycles and explosion. Knowledge engineering quality matters.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Suy luận là nơi biểu diễn tri thức trở thành một hệ thống hoạt động. Nó nối Logic với Search, Xác suất, Suy luận nhân quả và các hệ LLM có công cụ hỗ trợ. Phần Agent sau này sẽ sử dụng lại đúng mẫu kiến trúc này: đề xuất → kiểm tra qua môi trường hoặc công cụ → cập nhật trạng thái → lập kế hoạch lại.
+Inference is where KR becomes active. It connects Logic to Search, Probability, Causal Reasoning and modern tool-backed LLM systems. Later the Agent section will reuse the same architecture: proposal → environment/tool verification → state update → replanning.
 
-Xem tiếp: [Suy luận xác suất](./04_probabilistic_reasoning.md).
+Xem tiếp: [Probabilistic Reasoning](./04_probabilistic_reasoning.md).

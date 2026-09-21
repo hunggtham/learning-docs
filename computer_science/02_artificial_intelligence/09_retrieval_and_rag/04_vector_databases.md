@@ -1,10 +1,10 @@
-# Cơ sở dữ liệu vector trong RAG
+# Vector Databases trong RAG
 
-**Cơ sở dữ liệu vector (Vector Database / 벡터 데이터베이스)** là hệ thống dữ liệu được thiết kế để lưu, lập chỉ mục và truy vấn vector cùng metadata ở quy mô production. Nó không chỉ là một thuật toán ANN. Một vector database production thường phải đồng thời giải quyết lưu trữ bền vững, filtering, cập nhật, multi-tenancy, replication, access control và observability.
+**Vector Database (벡터 데이터베이스)** là data system được thiết kế để lưu, index và truy vấn vectors cùng metadata ở scale production. Nó không chỉ là một ANN algorithm. Production vector DB thường phải giải đồng thời persistence, filtering, updates, multi-tenancy, replication, access control và observability.
 
-## Mô hình bản ghi
+## Record Model
 
-Một bản ghi đã được index thường có dạng:
+Một indexed record thường có dạng:
 
 ```json
 {
@@ -20,42 +20,42 @@ Một bản ghi đã được index thường có dạng:
 }
 ```
 
-Trong nhiều hệ thống, raw text có thể nằm ở object store hoặc database khác, còn vector database chỉ lưu pointer và metadata cần thiết.
+Trong nhiều systems, raw text có thể ở object store/database khác và vector DB chỉ lưu pointer + metadata.
 
-## Nguồn dữ liệu gốc
+## Source of Truth
 
-Vector database không nên mặc định là nguồn có thẩm quyền (source of truth). Nguồn gốc thường là document store, CMS, relational database hoặc object storage.
+Vector DB không nên mặc định là authoritative source. Thường source of truth là document store, CMS, relational DB hoặc object storage.
 
-Pipeline thường là:
+Pipeline:
 
 ```text
-Nguồn dữ liệu gốc
+Source of Truth
 → ingestion
-→ parse / chunk
+→ parse/chunk
 → embedding
 → vector index
 ```
 
-Nếu vector record bị hỏng hoặc mất, hệ thống nên có khả năng rebuild từ source.
+Nếu vector record corrupt/lost, system nên có khả năng rebuild từ source.
 
-## CRUD và tái lập chỉ mục
+## CRUD và Reindexing
 
-Tạo hoặc cập nhật một document không chỉ là update một row. Một document có thể sinh nhiều chunk, và khi nội dung đổi thì ranh giới chunk cũng có thể thay đổi.
+Create/update document không chỉ là update một row. Một document có thể tạo nhiều chunks. Update content có thể làm chunk boundaries thay đổi.
 
-Một pattern an toàn là dùng chunk bất biến có version:
+Safe pattern thường dùng immutable versioned chunks:
 
 ```text
-version document mới
-→ tạo chunk và index mới
-→ chuyển trạng thái active sang version mới một cách nguyên tử
-→ ngừng version cũ
+new document version
+→ generate new chunks/index
+→ atomically mark new version active
+→ retire old version
 ```
 
-Cách này giảm khoảng thời gian search có thể trộn chunk cũ và mới.
+Điều này giảm window nơi search mix old/new chunks.
 
-## Metadata filter
+## Metadata Filters
 
-Metadata hỗ trợ các constraint mà vector similarity không thể biểu diễn đáng tin:
+Metadata hỗ trợ constraints mà vector similarity không encode reliable:
 
 ```text
 product
@@ -67,160 +67,160 @@ security_scope
 tenant
 ```
 
-Semantics của filter nên được thiết kế như truy vấn database, không phải một gợi ý tùy chọn trong prompt.
+Filter semantics nên được design như database query, không phải optional prompt hint.
 
 ## Multi-Tenancy
 
-Nếu nhiều khách hàng dùng chung hạ tầng vector, cách ly tenant rất quan trọng.
+Nếu nhiều customers dùng same vector infra, tenant isolation rất quan trọng.
 
-Hai thiết kế phổ biến:
+Hai designs:
 
 ```text
-index dùng chung + tenant filter nghiêm ngặt
-namespace / index tách riêng theo tenant
+shared index + strict tenant filter
+separate namespace/index per tenant
 ```
 
-Index dùng chung tiết kiệm tài nguyên nhưng bug filter có thể rò dữ liệu chéo tenant. Index riêng cách ly tốt hơn nhưng tăng chi phí vận hành.
+Shared index efficient nhưng filter bug có thể leak cross-tenant data. Separate indexes isolate tốt hơn nhưng operational overhead lớn.
 
 ## Authorization
 
-Quyền truy cập của người dùng có thể phụ thuộc group hoặc ACL của document. Retrieval layer phải filter trước khi evidence được đưa vào LLM.
+User access có thể phụ thuộc group/document ACL. Retrieval layer phải filter trước khi evidence tới LLM.
 
-Không được retrieve secret chunk rồi chỉ yêu cầu LLM “đừng tiết lộ”. Khi secret đã vào context, ranh giới bảo mật đã bị phá vỡ.
+Không được retrieve secret chunk rồi yêu cầu LLM “đừng tiết lộ”. Khi secret đã vào context, security boundary đã bị vi phạm.
 
-## Tính nhất quán
+## Consistency
 
-Update vector database có thể bất đồng bộ. Sau khi write, query ngay có thể chưa nhìn thấy record tùy consistency model.
+Vector DB update có thể asynchronous. Sau write, query ngay có thể chưa thấy record tùy consistency model.
 
-Ứng dụng cần biết rõ:
+Application cần biết:
 
 ```text
-có read-after-write mạnh không?
-hay eventual consistency?
-index refresh interval là bao lâu?
+strong/read-after-write?
+eventual consistency?
+index refresh interval?
 ```
 
-Điều này đặc biệt quan trọng với cập nhật tri thức và xóa dữ liệu.
+Đặc biệt important cho knowledge updates và deletion.
 
-## Semantics của xóa dữ liệu
+## Deletion Semantics
 
-Khi xóa source document, thao tác phải lan tới chunk, index và cache. Nếu chỉ xóa text còn vector vẫn searchable, mô hình vẫn có thể đưa nội dung đã xóa hoặc lỗi thời vào context.
+Delete source document cần propagate tới chunks/index/cache. Nếu chỉ delete text nhưng vector vẫn searchable, model có thể expose stale/deleted content.
 
-Data lineage nên theo được:
+Data lineage cần track:
 
 ```text
 source_id → chunk_ids → embedding version → index records
 ```
 
-## Versioning cho index
+## Index Versioning
 
-Khi nâng cấp embedding model, vector mới thường không tương thích với không gian cũ. Kiến trúc tốt tạo index version mới:
+Khi upgrade embedding model, new vectors không compatible với old space. Good architecture tạo new index version:
 
 ```text
 index_v1 = embedding_model_A
 index_v2 = embedding_model_B
 ```
 
-Sau đó backfill, shadow evaluation, chuyển traffic rồi mới retire index cũ.
+Backfill, shadow evaluate, switch traffic, then retire old index.
 
-## Tìm kiếm lai
+## Hybrid Search
 
-Nhiều vector database hỗ trợ sparse/BM25 cùng dense vector query. Nếu không, ứng dụng có thể query lexical engine và vector engine riêng rồi hợp nhất thứ hạng.
+Nhiều vector databases support sparse/BM25 + dense vector query. Nếu không, application có thể query separate lexical engine và vector engine rồi fuse rankings.
 
-“Vector database” không có nghĩa hệ thống chỉ nên dùng vector.
+“Vector database” không có nghĩa system chỉ nên dùng vectors.
 
-## Bố cục lưu trữ
+## Storage Layout
 
-Raw float vector có kích thước lớn. Hệ thống có thể lưu representation nén trong index và giữ full vector ở storage khác để rerank hoặc phục vụ tác vụ cần độ chính xác cao hơn.
+Raw float vectors large. Systems có thể store compressed representations in index và full vectors separately for reranking/reconstruction.
 
-Đánh đổi phụ thuộc:
+Trade-offs depend on:
 
-- kích thước corpus;
-- tần suất query;
-- ngân sách memory;
-- tần suất cập nhật;
-- yêu cầu recall.
+- corpus size;
+- query rate;
+- memory budget;
+- update frequency;
+- recall requirement.
 
-## Replication và tính sẵn sàng cao
+## Replication và High Availability
 
-Search production cần replica và shard. Replica lag, leader failover và thời gian rebuild index ảnh hưởng availability.
+Production search needs replicas/shards. Replica lag, leader failover và index rebuild time ảnh hưởng availability.
 
-Kiến trúc RAG nên có fallback khi vector service không hoạt động: lexical search, cached answer, lỗi rõ ràng hoặc no-answer; không nên bịa câu trả lời để che lỗi hạ tầng.
+RAG architecture nên có fallback khi vector service unavailable: lexical search, cached answer, graceful error hoặc no-answer — không fabricate.
 
-## Backup
+## Backups
 
-Nếu index có thể rebuild từ source, chiến lược backup có thể tập trung vào source và pipeline configuration. Tuy nhiên rebuild index hàng tỷ vector có thể tốn thời gian lớn, nên snapshot index vẫn có giá trị vận hành.
+Nếu index rebuildable from source, backup strategy có thể focus source + pipeline config. Nhưng rebuild billion-vector index có thể mất nhiều thời gian, nên index snapshots vẫn valuable.
 
 ## Observability
 
-Không chỉ theo dõi CPU/RAM. Metric retrieval quan trọng gồm:
+Monitor không chỉ CPU/RAM. Retrieval-specific metrics:
 
 ```text
-query latency p50 / p95 / p99
+query latency p50/p95/p99
 zero-result rate
 filter selectivity
 index size
 freshness lag
-ANN recall trên mẫu
+ANN recall sample
 top-k score distribution
 embedding/version mix
 ```
 
-Sự thay đổi phân bố score có thể báo query distribution thay đổi hoặc model/index không tương thích.
+Score distribution shift có thể signal query distribution change hoặc model mismatch.
 
-## Mô hình chi phí
+## Cost Model
 
-Chi phí vector database gồm memory, storage, compute, network và chi phí embedding khi ingestion.
+Vector DB cost gồm memory, storage, compute, network và embedding ingestion cost.
 
-Số chiều lớn, quá nhiều chunk và replication cao có thể làm chi phí tăng rất nhanh.
+Large `d`, many chunks và aggressive replicas tăng cost nhanh.
 
-Do đó chunking strategy có ảnh hưởng trực tiếp tới kinh tế hạ tầng.
+Chunking strategy therefore has direct infrastructure economics.
 
-## Managed và Self-Hosted
+## Managed vs Self-Hosted
 
-Dịch vụ managed giảm công sức vận hành nhưng có thể tạo vấn đề data residency hoặc vendor lock-in. Self-hosted tăng quyền kiểm soát nhưng đội ngũ phải tự xử lý tuning index, scaling, backup và upgrade.
+Managed services reduce operations but may introduce data residency/vendor lock-in. Self-hosted gives control but requires index tuning, scaling, backups and upgrades.
 
-Quyết định nên dựa trên security, SLA và năng lực vận hành, không dựa trên xu hướng.
+Decision should come from security/SLA/team capability, not trend.
 
-## Cơ sở dữ liệu SQL có vector extension
+## SQL Databases with Vector Extensions
 
-Relational database ngày càng hỗ trợ vector column và vector index. Với corpus vừa phải và metadata join quan trọng, giữ vector trong database hiện có có thể làm kiến trúc đơn giản hơn.
+Relational databases increasingly support vector columns/indexes. Với corpus vừa và metadata joins quan trọng, keeping vectors in existing DB can simplify architecture.
 
-Dedicated vector database phù hợp khi scale, latency hoặc tính năng vector search là điểm nghẽn chính.
+Dedicated vector DB hữu ích khi vector search scale/latency/features dominate.
 
-Không cần thêm một database mới chỉ vì tutorial RAG sử dụng nó.
+Không cần thêm new database chỉ vì RAG tutorial dùng một cái.
 
 ## Cache
 
-Embedding cache tránh tính lại vector cho query trùng. Cache kết quả retrieval hữu ích với query lặp và knowledge ổn định, nhưng invalidation khó khi source thay đổi.
+Embedding cache tránh recompute duplicate query vectors. Retrieval-result cache useful cho repeated stable queries nhưng invalidation hard when knowledge changes.
 
-Cache key nên chứa model version, index version và filter version cần thiết.
+Cache key cần include model/index/filter versions.
 
-## Sự cố trộn embedding version
+## Disaster Scenario: Mixed Embedding Versions
 
-Nếu ingestion job nâng cấp embedding model nhưng query service vẫn dùng model cũ, vector có thể cùng dimension nhưng thuộc hai semantic space khác nhau. Search có thể âm thầm giảm chất lượng mà không báo lỗi shape.
+Nếu ingestion job upgrade embedding model nhưng query service vẫn model cũ, vectors share dimension maybe same nhưng semantic space khác. Search silently fails.
 
-Metadata và validation theo version phải ngăn việc trộn vector không tương thích.
+Metadata/version checks nên prevent mixing incompatible embeddings.
 
-## Mô hình tư duy
+## Mental Model
 
-> Vector database là **hạ tầng dữ liệu định hướng tìm kiếm** dành cho biểu diễn học được. Semantic relevance đến từ embedding/retrieval model; correctness, security và freshness đến từ kiến trúc dữ liệu và hệ thống xung quanh.
+> Vector DB là **search-oriented data infrastructure** cho learned representations. Semantic relevance đến từ embedding/retrieval model; correctness, security và freshness đến từ data/system architecture xung quanh.
 
-## Những hiểu lầm thường gặp
+## Common Misconceptions
 
-### “Mọi RAG đều bắt buộc cần vector database”
+### “Vector DB là requirement của mọi RAG”
 
-Không. Corpus nhỏ có thể brute-force; SQL hoặc Elasticsearch cũng có thể đủ.
+Không. Small corpus có thể brute-force; SQL/Elasticsearch may suffice.
 
 ### “Lưu vector rồi không cần source document nữa”
 
-Sai. Vector là biểu diễn mất mát và không phải nguồn provenance.
+Sai. Vector là lossy representation và không phải provenance source.
 
 ### “Tenant filter trong prompt là đủ”
 
-Không. Authorization phải được cưỡng chế trước retrieval và context assembly.
+Không. Authorization phải enforced trước retrieval/context assembly.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
 Vector database kết nối ANN search, database systems, security và data engineering.
 

@@ -1,94 +1,94 @@
-# Biểu diễn tri thức và suy luận
+# Knowledge Representation and Reasoning
 
-Folder này xây lớp **tri thức + suy luận** nằm giữa giải quyết vấn đề cổ điển và AI dựa trên học máy. Mục tiêu là hiểu cách một hệ thống biểu diễn sự kiện, quan hệ và quy tắc; suy luận bằng logic hoặc xác suất; tổ chức tri thức bằng đồ thị; và kết hợp cơ chế ký hiệu với mô hình neural.
+Folder này xây lớp **knowledge + inference** nằm giữa problem solving cổ điển và learning-based AI. Mục tiêu là hiểu cách một system biểu diễn facts/relations/rules, suy luận bằng logic hoặc probability, tổ chức tri thức bằng graph, và kết hợp symbolic mechanisms với neural models.
 
-## Các chương
+## Chapters
 
-1. [Biểu diễn tri thức](./00_knowledge_representation.md) — thực thể, quan hệ, ontology, giả định thế giới mở/đóng, provenance, tri thức theo thời gian và biểu diễn ký hiệu so với biểu diễn phân tán.
-2. [Logic mệnh đề](./01_propositional_logic.md) — cú pháp/ngữ nghĩa, entailment, proof, CNF, resolution, Horn rule, SAT/CDCL và liên hệ với SMT.
-3. [Logic vị từ bậc nhất](./02_first_order_logic.md) — predicate, quantifier, unification, resolution, Datalog, Description Logic, vấn đề thời gian/frame và semantic parsing hình thức.
-4. [Suy luận và lập luận](./03_inference_and_reasoning.md) — deduction, induction, abduction, forward/backward chaining, suy luận phi đơn điệu, suy luận nhân quả/phản thực và verification.
-5. [Suy luận xác suất](./04_probabilistic_reasoning.md) — cập nhật Bayes, biến ẩn, factorization, suy luận chính xác/xấp xỉ, HMM, Kalman Filter và bất định trong AI hiện đại.
-6. [Mạng Bayes](./05_bayesian_networks.md) — DAG factorization, độc lập có điều kiện, d-separation, variable elimination, học cấu trúc/tham số và giới hạn khi diễn giải nhân quả.
-7. [Đồ thị tri thức](./06_knowledge_graphs.md) — thực thể/quan hệ, ontology, provenance, thời gian, graph query, embedding/GNN, KG-RAG và chất lượng dữ liệu production.
-8. [AI ký hiệu và AI Neuro-Symbolic](./07_symbolic_neurosymbolic_ai.md) — điểm mạnh/giới hạn của symbolic và neural AI, cùng kiến trúc proposer → verifier → executor.
+1. [Knowledge Representation](./00_knowledge_representation.md) — entities, relations, ontology, open/closed world, provenance, temporal knowledge, symbolic vs distributed representation.
+2. [Propositional Logic](./01_propositional_logic.md) — syntax/semantics, entailment, proof, CNF, resolution, Horn rules, SAT/CDCL và SMT connection.
+3. [First-Order Logic](./02_first_order_logic.md) — predicates, quantifiers, unification, resolution, Datalog/Description Logics, temporal/frame problem và formal semantic parsing.
+4. [Inference and Reasoning](./03_inference_and_reasoning.md) — deduction, induction, abduction, forward/backward chaining, non-monotonic reasoning, causal/counterfactual reasoning và verification.
+5. [Probabilistic Reasoning](./04_probabilistic_reasoning.md) — Bayesian update, latent variables, factorization, exact/approximate inference, HMM/Kalman và uncertainty in modern AI.
+6. [Bayesian Networks](./05_bayesian_networks.md) — DAG factorization, conditional independence, d-separation, variable elimination, learning và causal caveats.
+7. [Knowledge Graphs](./06_knowledge_graphs.md) — entities/relations, ontology, provenance/time, graph queries, embeddings/GNNs, KG-RAG và production data quality.
+8. [Symbolic and Neuro-Symbolic AI](./07_symbolic_neurosymbolic_ai.md) — strengths/limits của symbolic vs neural AI và architectures proposer → verifier → executor.
 
-## Sơ đồ phụ thuộc
+## Dependency map
 
 ```mermaid
 flowchart TD
-    KR[00 Biểu diễn tri thức] --> PL[01 Logic mệnh đề]
-    PL --> FOL[02 Logic vị từ bậc nhất]
-    PL --> IR[03 Suy luận & lập luận]
+    KR[00 Knowledge Representation] --> PL[01 Propositional Logic]
+    PL --> FOL[02 First-Order Logic]
+    PL --> IR[03 Inference & Reasoning]
     FOL --> IR
-    PR[Nền tảng xác suất] --> PROB[04 Suy luận xác suất]
+    PR[Probability Foundations] --> PROB[04 Probabilistic Reasoning]
     IR --> PROB
-    PROB --> BN[05 Mạng Bayes]
-    KR --> KG[06 Đồ thị tri thức]
+    PROB --> BN[05 Bayesian Networks]
+    KR --> KG[06 Knowledge Graphs]
     FOL --> KG
-    IR --> NS[07 AI Neuro-Symbolic]
+    IR --> NS[07 Neuro-Symbolic AI]
     BN --> NS
     KG --> NS
     NS --> ML[Machine Learning]
-    KG --> RAG[RAG / Agent ở phần sau]
+    KG --> RAG[RAG / Agents later]
 ```
 
-## Chân lý hình thức và chân lý ngoài thế giới thực
+## Formal truth và real-world truth
 
-Một nguyên tắc xuyên suốt folder này là:
+Một principle xuyên suốt folder:
 
-> **Một bộ máy suy luận có thể hoàn toàn đúng so với biểu diễn đã cho, nhưng chính biểu diễn đó vẫn có thể sai hoặc thiếu so với thực tế.**
+> **Một inference engine có thể hoàn toàn đúng relative to representation nhưng representation vẫn có thể sai hoặc thiếu so với real world.**
 
-Bộ chứng minh logic chỉ chứng minh định lý từ các tiền đề. Solver chỉ xác nhận các ràng buộc đã được mã hóa. Knowledge Graph chỉ trả lại những sự kiện đã lưu hoặc những hệ quả mà ontology cho phép suy ra. Không cơ chế nào tự động bảo đảm tri thức đầu vào phản ánh đúng thế giới thật.
+Logic prover chứng minh theorem từ premises; solver xác nhận constraints; KG query trả facts stored. Không mechanism nào tự đảm bảo input knowledge phản ánh đúng reality.
 
-Vì vậy một hệ AI đáng tin cậy phải phân biệt rõ:
+Vì vậy reliable AI cần phân biệt:
 
 ```text
-độ đúng của biểu diễn
-độ đúng của suy luận
-chất lượng nguồn / provenance
-mức bất định
-kiểm chứng ngoài thế giới thực
+representation correctness
+inference correctness
+source/provenance quality
+uncertainty
+real-world validation
 ```
 
-## Suy luận ký hiệu và suy luận xác suất
+## Symbolic và probabilistic reasoning
 
 ```text
 Logic
-→ đúng / sai dưới ngữ nghĩa hình thức
-→ entailment / proof chính xác
+→ true/false under formal semantics
+→ exact entailment/proof
 
 Probability
-→ phân phối trên nhiều khả năng
-→ cập nhật niềm tin khi có bằng chứng
+→ distribution over possibilities
+→ update beliefs under uncertainty
 ```
 
-Hệ thống thực tế thường cần cả hai. Quy tắc phân quyền cứng nên được xử lý xác định; điểm rủi ro gian lận lại phù hợp hơn với xác suất.
+Real systems thường cần cả hai. Hard access-control rule nên deterministic; fraud risk có thể probabilistic.
 
-## Liên hệ với AI hiện đại
+## Connection với Modern AI
 
-Lớp kiến thức này vẫn rất quan trọng vì nhiều khái niệm quay lại trực tiếp trong Generative AI:
+Layer này được giữ lại vì concepts của nó quay lại trực tiếp trong Generative AI:
 
 ```text
-Knowledge Graph      → retrieval có cấu trúc / GraphRAG
-Ontology / schema    → chuẩn hóa thực thể / hợp đồng tool
-SAT / SMT / CP solver→ lập kế hoạch / xếp lịch có kiểm chứng
-Formal proof         → verification cho theorem/coding agent
-Probabilistic belief → quyết định có nhận thức bất định
-Neural heuristic     → hướng dẫn symbolic search
-LLM                  → giao diện ngôn ngữ tự nhiên / proposer
+Knowledge Graph      → structured retrieval / GraphRAG
+Ontology/schema      → entity normalization / tool contracts
+SAT/SMT/CP solver    → verified planning / scheduling
+Formal proof         → theorem/coding agent verification
+Probabilistic belief → uncertainty-aware decisions
+Neural heuristic     → guide symbolic search
+LLM                  → natural-language interface / proposer
 ```
 
-Một kiến trúc sẽ xuất hiện nhiều lần ở các phần sau là:
+Một kiến trúc recurring trong library sau này là:
 
 ```text
-mô hình học được đề xuất
+learned model proposes
         ↓
-biểu diễn có cấu trúc
+structured representation
         ↓
-công cụ xác định / hình thức kiểm tra hoặc thực thi
+deterministic / formal tool verifies or executes
         ↓
-kết quả thật trở thành trạng thái mới
+actual result becomes new state
 ```
 
-Đây là nền tảng để hiểu RAG và Agent như **hệ AI hợp thành (composed AI system)**, chứ không phải một mô hình duy nhất làm mọi thứ.
+Đây là nền để hiểu RAG và Agent systems như **composed AI systems**, không phải một model duy nhất làm mọi thứ.

@@ -1,38 +1,23 @@
-# Công cụ và Function Calling
+# Tools và Function Calling
 
-LLM sinh token; công cụ tạo **năng lực thực thi (capability)** và đôi khi tạo side effect. **Function calling / tool calling (도구 호출 / gọi công cụ)** là giao thức biến ý định xác suất của mô hình thành một yêu cầu có cấu trúc để runtime có thể kiểm tra, phân quyền, thực thi và ghi vết.
+LLM sinh token; tool tạo side effect. **Function calling / tool calling (도구 호출)** là protocol biến intent của model thành structured request mà runtime có thể validate rồi thực thi.
 
-Mô hình tư duy:
-
-```text
-mục tiêu bằng ngôn ngữ tự nhiên
-→ model đề xuất tool + arguments
-→ runtime kiểm schema/semantics/quyền
-→ tool thực thi
-→ kết quả có cấu trúc
-→ model tiếp tục reasoning
-```
-
-Mô hình thường không trực tiếp “gọi API” theo nghĩa networking. Nó sinh một object phù hợp schema; orchestration/runtime mới thực sự thực thi.
-
-## Kiến thức cần có trước
-
-Nên đọc [LLM và Context Engineering](../08_large_language_models/11_prompting_and_context_engineering.md), [RAG](../09_retrieval_and_rag/README.md), [AI System Architecture](../00_foundations/04_ai_system_architecture.md), [Secure AI System Design](../19_ai_safety_security_alignment/08_secure_ai_system_design.md) và [Reliability Engineering](../18_evaluation_reliability_interpretability/07_reliability_engineering.md).
-
-## Tool Calling giải quyết bài toán gì?
-
-LLM giỏi ánh xạ ngôn ngữ sang cấu trúc có ý nghĩa nhưng không nên tự sở hữu quyền truy cập hệ thống. Tool calling tách hai phần:
+Mental model:
 
 ```text
-model  → đề xuất hành động
-runtime → quyết định hành động có hợp lệ và được phép hay không
+Natural-language goal
+→ model chooses tool + arguments
+→ runtime validates
+→ tool executes
+→ structured result
+→ model continues reasoning
 ```
 
-Đây là ranh giới quan trọng giữa **suy luận xác suất** và **quyền thực thi xác định**.
+Model không trực tiếp “gọi API” theo nghĩa networking. Nó thường sinh object conform schema; orchestration layer mới thực thi.
 
-## Vì sao cần công cụ có cấu trúc?
+## Vì sao structured tools cần tồn tại?
 
-Nếu model chỉ trả prose kiểu `hãy gọi weather API với Seoul`, application phải parse text dễ vỡ. Schema có cấu trúc tạo boundary rõ:
+Nếu yêu cầu model trả prose như `hãy gọi weather API với Seoul`, application phải parse text brittle. Structured schema làm boundary rõ:
 
 ```json
 {
@@ -41,22 +26,23 @@ Nếu model chỉ trả prose kiểu `hãy gọi weather API với Seoul`, appli
 }
 ```
 
-Runtime có thể kiểm type, permission và field bắt buộc trước execution.
+Runtime có thể kiểm type, permission và required fields trước execution.
 
-## Tool Schema là hợp đồng API
+## Tool schema là một API contract
 
 Một tool tốt cần:
 
-- tên phản ánh đúng hành động;
-- mô tả rõ semantics;
-- argument có type;
+- tên phản ánh action;
+- description nói rõ semantics;
+- arguments typed;
 - required/optional rõ;
 - enum khi domain hữu hạn;
-- result schema ổn định;
-- taxonomy lỗi rõ;
-- version rõ nếu contract có thể tiến hóa.
+- result structure ổn định;
+- error taxonomy rõ.
 
-`update_user(data)` quá rộng. Tốt hơn:
+Schema mơ hồ gây model error dù model mạnh.
+
+Ví dụ `update_user(data)` quá rộng. Tốt hơn có các action hẹp:
 
 ```text
 update_shipping_address(user_id, address)
@@ -65,110 +51,47 @@ set_notification_preference(user_id, channel, enabled)
 
 Action hẹp dễ authorize, test và audit hơn.
 
-## Mô hình thực thi Tool Call
+## Read tools và Write tools
 
-Một tool call production nên đi qua pipeline:
-
-```text
-MODEL_PROPOSAL
-→ PARSE
-→ SCHEMA_VALIDATE
-→ SEMANTIC_VALIDATE
-→ AUTHORIZE
-→ POLICY_CHECK
-→ BUDGET_CHECK
-→ EXECUTE
-→ VERIFY_RESULT
-→ PERSIST_EVENT
-→ RETURN_OBSERVATION
-```
-
-Không nên bỏ qua bước vì model “có vẻ hiểu đúng”.
-
-## Schema Validation khác Semantic Validation
-
-`amount = -1000` có thể đúng type `number` nhưng vô nghĩa với API thanh toán.
-
-Do đó cần hai tầng:
+Tách read-only và side-effecting tools.
 
 ```text
-schema validation   → shape/type đúng?
-semantic validation → giá trị có hợp domain/business rule không?
+READ: search, fetch, inspect, query
+WRITE: create, update, delete, send, deploy
 ```
 
-Sau đó mới tới authorization và policy.
+Write tools cần stricter approval, idempotency và audit.
 
-## Tool đọc và Tool ghi
+## Validation trước execution
 
-Nên tách:
+Không tin arguments chỉ vì chúng parse được.
+
+Validation layers:
 
 ```text
-READ  → search, fetch, inspect, query
-WRITE → create, update, delete, send, deploy
+schema validation
+→ semantic validation
+→ authorization
+→ policy/risk check
+→ rate/budget check
+→ execution
 ```
 
-Write tool cần approval, idempotency, concurrency control và audit chặt hơn.
+`amount: -1000` có thể đúng type number nhưng sai business semantics.
 
-## Authorization phải xảy ra tại thời điểm thực thi
+## Idempotency
 
-Không nên chỉ kiểm quyền khi agent bắt đầu task rồi tin rằng quyền vẫn còn nguyên. User có thể bị revoke permission giữa workflow dài.
+Agent retry là bình thường. Với side effects, retry có thể tạo duplicate email/payment/job.
 
-Pattern tốt:
-
-```text
-model proposes action
-→ runtime resolve current identity/context
-→ authorize action trên resource cụ thể
-→ execute
-```
-
-Đây là cách giảm lỗi **time-of-check to time-of-use (TOCTOU)** giữa bước lập kế hoạch và bước thực thi.
-
-## Quyền tối thiểu
-
-Agent chỉ nên thấy tool cần cho task; credential cũng phải được scope tối thiểu.
-
-Agent chỉ cần đọc invoice không nên có `delete_invoice`. Nếu workflow chỉ cần tạo draft email thì không nên cấp quyền gửi thật.
-
-Prompt “đừng xóa dữ liệu” không thay thế việc **không cấp capability xóa**.
-
-## Idempotency và ảo tưởng Exactly-Once
-
-Retry là bình thường trong distributed system. Với side effect, retry có thể tạo payment/email/job trùng.
-
-Write tool nên nhận **khóa idempotency (idempotency key)**:
+Tool write nên hỗ trợ idempotency key khi khả thi:
 
 ```text
 create_payment(request_id="task-123-step-4", ...)
 ```
 
-Nếu cùng logical request lặp lại, service trả cùng logical result thay vì tạo action mới.
+Nếu same request lặp lại, service trả same result thay vì tạo action mới.
 
-Không nên giả định mạng cung cấp “exactly once”. Thực tế thường là:
-
-```text
-at-least-once delivery
-+ idempotent effect
-≈ exactly-once behavior ở mức nghiệp vụ
-```
-
-Đây là distinction quan trọng cho agent có side effect.
-
-## Optimistic Concurrency Control
-
-Nếu agent đọc resource version 42 rồi user khác cập nhật thành 43, write dựa trên state cũ không nên âm thầm ghi đè.
-
-Tool có thể yêu cầu:
-
-```text
-update_resource(id, expected_version=42, ...)
-```
-
-Nếu version đã đổi, trả `CONFLICT` để agent re-read hoặc escalate.
-
-Cơ chế này giảm lost update trong workflow stateful.
-
-## Kết quả Tool nên đọc được bằng máy
+## Tool Result nên machine-readable
 
 Tránh chỉ trả:
 
@@ -187,11 +110,13 @@ Tốt hơn:
 }
 ```
 
-Agent cần observation cụ thể để cập nhật state và verify outcome.
+Agent cần concrete observation để update state.
 
-## Phân loại lỗi
+## Error taxonomy
 
-Tool error không nên chỉ là một string chung.
+Tool error không nên là một string chung.
+
+Phân biệt:
 
 ```text
 INVALID_ARGUMENT
@@ -201,83 +126,47 @@ CONFLICT
 RATE_LIMITED
 TRANSIENT_FAILURE
 TIMEOUT
-DEPENDENCY_FAILURE
 ```
 
-Recovery phụ thuộc loại lỗi:
+Mỗi loại dẫn tới recovery khác nhau. `TRANSIENT_FAILURE` có thể retry; `PERMISSION_DENIED` không nên loop retry.
+
+## Timeout và cancellation
+
+Tool lâu cần timeout rõ. Agent runtime cũng cần khả năng cancel để không để action orphaned.
+
+Tool result có thể ở trạng thái:
 
 ```text
-TRANSIENT_FAILURE → retry có backoff
-RATE_LIMITED      → chờ hoặc giảm tải
-CONFLICT          → đọc state mới rồi quyết định lại
-PERMISSION_DENIED → không retry mù
-INVALID_ARGUMENT  → sửa request hoặc dừng
+PENDING → SUCCEEDED / FAILED / CANCELLED
 ```
 
-## Timeout, Deadline và Cancellation
+Long-running tools nên trả operation ID rồi poll/event-driven update.
 
-Tool cần timeout riêng nhưng phải nằm trong end-to-end deadline.
+## Least Privilege
 
-Ví dụ request có budget 5 giây thì một downstream timeout 30 giây là cấu hình sai.
+Agent chỉ nên thấy tool cần cho task. Tool credential cũng phải scope tối thiểu.
 
-Runtime nên truyền deadline:
+Một agent chỉ cần đọc invoice không nên có `delete_invoice`.
 
-```text
-request deadline
-→ orchestrator remaining budget
-→ tool timeout <= remaining budget
-```
+Security boundary nên nằm ngoài prompt. “Đừng xóa dữ liệu” trong system prompt không mạnh bằng không expose delete permission.
 
-Tool chạy dài cần cancellation hoặc operation ID.
+## Tool selection
 
-## Công cụ bất đồng bộ
+Model phải quyết định không chỉ arguments mà cả **có cần tool không**.
 
-Một số operation không thể hoàn tất trong một HTTP call:
+Failure modes:
 
-```text
-start_export(...)
-→ {operation_id: "op-123", status: "PENDING"}
-```
-
-Sau đó:
-
-```text
-get_operation("op-123")
-→ RUNNING / SUCCEEDED / FAILED / CANCELLED
-```
-
-Agent state phải lưu operation ID; không nên “nhớ” nó chỉ trong prose transcript.
-
-## Chọn Tool
-
-Mô hình phải quyết định cả **có cần dùng tool hay không**.
-
-Failure mode gồm:
-
-- bịa tool không tồn tại;
+- hallucinate tool không tồn tại;
 - dùng tool không cần thiết;
 - chọn tool gần nghĩa nhưng sai semantics;
-- gọi nhiều tool dư thừa;
-- không gọi tool khi cần dữ liệu live;
-- dùng retrieval khi cần action hoặc ngược lại.
+- gọi nhiều tool redundant;
+- không gọi tool khi factual grounding cần thiết.
 
-Mô tả tool, tên field và ví dụ ảnh hưởng mạnh tới routing behavior.
+Tool descriptions và examples ảnh hưởng routing behavior.
 
-## Tool Selection như bài toán phân loại có điều kiện
+## Parallel tool calls
 
-Có thể hình dung model đang ước lượng:
-
-\[
-P(tool, arguments\mid context)
-\]
-
-Runtime không cần biết xác suất nội bộ chính xác, nhưng intuition này giải thích vì sao tool schema chồng lấn làm routing khó hơn.
-
-Nếu hai tool gần như cùng semantics, entropy lựa chọn tăng và error dễ xuất hiện. Thiết kế capability rõ ràng thường tốt hơn thêm prompt dài để phân biệt hai API mơ hồ.
-
-## Gọi Tool song song
-
-Các read operation độc lập có thể chạy song song:
+Independent read operations có thể chạy song song:
 
 ```text
 search CRM ─┐
@@ -285,13 +174,27 @@ search docs ├─→ combine
 search logs ─┘
 ```
 
-Nhưng write action có dependency thường phải tuần tự hoặc có transaction semantics.
+Nhưng write actions có dependency cần serialize.
 
-Parallelism giảm latency nhưng tăng complexity về ordering, partial failure và aggregation context.
+Parallelism giảm latency nhưng tăng complexity về ordering, errors và context aggregation.
 
-## Transaction và Compensating Action
+## Tool output là untrusted input
 
-Task nhiều bước:
+Web page, email hoặc document tool có thể chứa malicious instruction. Đây là **indirect prompt injection**.
+
+Runtime không nên coi tool content là authority ngang system policy.
+
+Mental separation:
+
+```text
+instructions from trusted policy
+≠
+data returned by tool
+```
+
+## Transactions
+
+Multi-step write task có consistency problem:
 
 ```text
 reserve inventory
@@ -299,27 +202,11 @@ charge payment
 create shipment
 ```
 
-Nếu bước 3 lỗi, không phải lúc nào rollback database transaction xuyên nhiều service cũng khả thi. Khi đó workflow cần **hành động bù (compensating action)** đã được định nghĩa trước, ví dụ refund hoặc release reservation.
+Nếu bước 2 fail sau bước 1, cần rollback/compensating action. Agent reasoning không thay thế transactional design.
 
-Agent planner không nên tự phát minh compensation cho nghiệp vụ nhạy cảm; workflow/tool contract phải chỉ ra action nào hợp lệ.
+## Tool abstraction level
 
-## Tool Output là dữ liệu không đáng tin
-
-Web page, email, document hoặc API text có thể chứa malicious instruction. Đây là **indirect prompt injection**.
-
-Runtime phải phân biệt:
-
-```text
-trusted policy/instruction
-≠
-untrusted tool data
-```
-
-Delimiter hoặc JSON giúp cấu trúc context nhưng không tạo security boundary.
-
-## Mức trừu tượng của Tool
-
-Quá thấp:
+Too low-level:
 
 ```text
 http_request(method,url,body)
@@ -327,160 +214,68 @@ http_request(method,url,body)
 
 linh hoạt nhưng khó secure.
 
-Quá cao:
+Too high-level:
 
 ```text
 run_company()
 ```
 
-mơ hồ và khó verify.
+mơ hồ, khó inspect.
 
-Tool tốt nên phản ánh business operation có contract rõ, đủ hẹp để authorize và đủ cao để model không phải điều khiển protocol chi tiết.
+Tốt nhất tool phản ánh meaningful business operation với contract rõ.
 
-## Tool Schema Evolution
+## Example: database assistant
 
-Tool contract thay đổi có thể làm model behavior regression dù model không đổi.
-
-Các thay đổi nguy hiểm:
-
-```text
-đổi tên field
-đổi enum semantics
-field optional thành required
-đổi đơn vị
-đổi error taxonomy
-đổi permission requirement
-```
-
-Nên version schema và giữ compatibility hoặc migration rõ. LLMOps phải coi tool schema là một phần của **behavior bundle**.
-
-## Tool Discovery và Capability Surface
-
-Không nên đưa hàng trăm tool vào context nếu task chỉ cần vài tool. Tool set lớn:
-
-- tăng token cost;
-- tăng nhầm lẫn routing;
-- mở rộng attack surface;
-- khó đánh giá hơn.
-
-Có thể dùng routing tầng trước để chọn một subset capability phù hợp với task và user permission.
-
-## Ví dụ: trợ lý cơ sở dữ liệu
-
-Không nên cấp raw production SQL write toàn quyền. Có thể expose:
+Không nên cho model raw production SQL write toàn quyền. Có thể expose:
 
 ```text
 find_customer(customer_id)
 list_open_cases(customer_id)
-create_case_note(case_id, text, expected_version)
+create_case_note(case_id, text)
 ```
 
-Authorization nằm ở service layer, không ở prompt.
+với authorization ở service layer.
 
 ## Observability
 
-Mỗi tool call nên ghi:
+Mỗi tool call nên log:
 
 ```text
 trace_id
 agent/task id
-tool name + schema version
-arguments đã redaction dữ liệu nhạy cảm
-authorization result
-approval event
+tool name
+sanitized args
 result/error
 latency
-retry count
-resource/version bị thay đổi
-idempotency key
+cost
+approval event
+side-effect resource/version
 ```
 
-Không nên log secret hoặc PII tùy tiện.
+Không log secret/PII tùy tiện.
 
-## Đánh giá Tool Calling
+## Mental Model
 
-Eval suite nên có:
+> **Tool calling là typed boundary giữa probabilistic decision và deterministic capability.**
 
-```text
-tool selection
-argument schema
-argument semantics
-permission enforcement
-retry behavior
-idempotency
-conflict handling
-async operation recovery
-injection qua tool output
-unnecessary call rate
-```
+LLM đề xuất; runtime kiểm soát; tool thực thi; result trở thành observation.
 
-Cần test cả case “không được gọi tool”. Một model luôn gọi tool có thể tạo cost hoặc side effect không cần thiết.
-
-## Failure mode thường gặp
-
-**Schema đúng nhưng semantics sai.** `customer_id` tồn tại nhưng thuộc người khác.
-
-**Authorization chỉ kiểm đầu workflow.** Quyền bị revoke nhưng action sau vẫn chạy.
-
-**Retry gây duplicate side effect.** Không có idempotency key.
-
-**Concurrent write ghi đè.** Không có version check.
-
-**Tool schema đổi âm thầm.** Prompt/model cũ tiếp tục sinh argument theo contract cũ.
-
-**Async operation bị mất state.** Agent crash rồi không biết job nào đang chạy.
-
-**Tool output chiếm quyền điều khiển.** Indirect prompt injection được coi như instruction đáng tin.
-
-**Tool quá generic.** Model có capability vượt nhu cầu task.
-
-## Production usage pattern
-
-Một execution path an toàn:
-
-```text
-LLM proposal
-→ parse + schema validation
-→ semantic validation
-→ current authorization
-→ policy/risk gate
-→ approval nếu cần
-→ execute với idempotency/concurrency control
-→ verify result
-→ persist event/state
-→ return structured observation
-```
-
-Đây là pattern nền cho reliable agent.
-
-## Mô hình tư duy
-
-> **Tool calling là ranh giới có kiểu giữa quyết định xác suất và capability xác định. LLM đề xuất; runtime kiểm soát authority; service thực thi; observation quay lại agent.**
-
-## Những hiểu lầm thường gặp
+## Common Misconceptions
 
 ### “JSON đúng schema nghĩa là action đúng”
 
-Không. Schema chỉ kiểm shape; semantic correctness và authorization vẫn cần validation.
+Schema chỉ kiểm shape. Semantic correctness và authorization vẫn phải validate.
 
-### “Prompt đủ để bảo vệ tool nguy hiểm”
+### “Prompt đủ để bảo vệ dangerous tools”
 
 Không. Security cần permission boundary, sandbox, approval và server-side policy.
 
-### “Retry đơn giản là gọi lại”
-
-Không với side effect. Retry cần idempotency và hiểu error class.
-
 ### “Tool càng generic càng tốt”
 
-Không. Tool quá generic tăng flexibility nhưng giảm verifiability và safety.
+Generic tool tăng flexibility nhưng giảm verifiability và safety.
 
-### “Tool schema chỉ là tài liệu cho model”
+## Knowledge Connection
 
-Không. Schema/version là một phần của runtime contract và behavior bundle production.
-
-## Liên kết kiến thức
-
-Tool calling nối [LLM](../08_large_language_models/README.md) và [RAG](../09_retrieval_and_rag/README.md) với [Agent Loop](./02_agent_loop.md), [Agent State](./05_agent_state_and_context.md), [Agent Evaluation](./09_agent_evaluation.md), [Reliability Engineering](../18_evaluation_reliability_interpretability/07_reliability_engineering.md), [LLMOps](../16_mlops_and_llmops/08_llmops.md) và [Secure AI System Design](../19_ai_safety_security_alignment/08_secure_ai_system_design.md).
+Tool calling nối [AI System Architecture](../00_foundations/04_ai_system_architecture.md) với agent runtime. Chapter tiếp theo mô tả loop điều phối nhiều tool calls qua time.
 
 Xem tiếp: [Agent Loop](./02_agent_loop.md).

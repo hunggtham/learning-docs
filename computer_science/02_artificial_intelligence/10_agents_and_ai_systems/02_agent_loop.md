@@ -1,141 +1,141 @@
-# Vòng lặp Agent
+# Agent Loop
 
-**Vòng lặp Agent (agent loop)** là cơ chế biến một mục tiêu lớn thành chuỗi quan sát–quyết định–hành động lặp lại. Không có loop, tool calling thường chỉ là một lần gọi hàm; khi có loop, hệ thống phải quản lý state, điều kiện dừng, retry, budget và verification qua nhiều bước.
+Agent loop là cơ chế biến một goal lớn thành chuỗi observation–decision–action lặp lại. Không có loop, tool calling thường chỉ là một lần gọi hàm; có loop, system phải quản lý state, termination, retries, budgets và verification qua nhiều bước.
 
 Một loop cơ bản:
 
 ```text
-khởi tạo trạng thái tác vụ
-while chưa hoàn thành:
-    quan sát(state)
-    quyết định(next_action)
-    kiểm tra(action)
-    thực thi(action)
-    ghi lại(result)
-    xác minh tiến độ
+initialize task state
+while not done:
+    observe(state)
+    decide(next_action)
+    validate(action)
+    execute(action)
+    record(result)
+    verify(progress)
 ```
 
-## Quan sát
+## Observe
 
-Observation không chỉ là output cuối từ tool. Nó có thể gồm:
+Observation không chỉ là tool output cuối. Nó có thể gồm:
 
-- structured state hiện tại;
-- kết quả tool mới nhất;
-- subtask chưa hoàn thành;
-- failure trước đó;
+- current structured state;
+- latest tool result;
+- outstanding subtasks;
+- previous failures;
 - budget còn lại;
-- trạng thái approval;
-- thay đổi của environment.
+- approval status;
+- environment changes.
 
-Nếu observation thiếu hoặc lỗi thời, quyết định tiếp theo có thể sai dù logic reasoning của model tốt.
+Nếu observation thiếu hoặc stale, decision sau sai dù reasoning logic tốt.
 
-## Quyết định
+## Decide
 
-Mô hình có thể chọn:
+Model có thể chọn:
 
 ```text
-gọi tool
-hỏi người dùng
-sửa plan
-retry với argument khác
+call tool
+ask user
+revise plan
+retry with changed arguments
 verify
-kết thúc
+finish
 ```
 
-Không gian quyết định nên rõ. Nếu chỉ prompt “hãy tiếp tục”, stopping behavior sẽ khó kiểm soát.
+Decision space nên explicit. Nếu model chỉ được prompt “hãy tiếp tục”, stopping behavior khó kiểm soát.
 
-## Hành động
+## Act
 
-Việc thực thi action phải đi qua control plane. Agent không nên có khả năng vượt policy chỉ bằng cách encode hành động trong free-form text.
+Action execution phải qua control plane. Agent không nên tự bypass policy bằng cách encode action trong free-form text.
 
-## Xác minh
+## Verify
 
-Sau khi thực thi, hệ thống cần kiểm tra tiến độ bằng evidence.
+Sau execution, system cần kiểm progress dựa trên evidence.
 
-Ví dụ coding agent không nên dừng chỉ vì model nói “đã sửa xong”; nó phải chạy test, kiểm diff hoặc đối chiếu acceptance criteria.
+Ví dụ coding agent không nên dừng vì model nói “đã sửa xong”; phải chạy test, inspect diff hoặc check acceptance criteria.
 
 ```text
-claim thành công ≠ thành công đã được xác minh
+claim of success ≠ verified success
 ```
 
-## Điều kiện dừng
+## Termination
 
-Stop condition có thể gồm:
+Stop conditions có thể gồm:
 
-- success criterion đã thỏa;
-- đạt số bước tối đa;
-- vượt token hoặc cost budget;
-- cùng một failure lặp lại;
-- lỗi không thể phục hồi;
-- cần human approval;
-- bằng chứng không đủ.
+- success criterion satisfied;
+- max steps reached;
+- token/cost budget exceeded;
+- repeated identical failure;
+- unrecoverable error;
+- human approval required;
+- confidence/evidence insufficient.
 
-Không có stop rule, agent có thể loop vô hạn.
+Không có stop rule, agent có thể loop indefinitely.
 
-## Mô hình ReAct
+## ReAct mental model
 
-Một pattern phổ biến là xen kẽ reasoning, action và observation. Dù implementation không cần hiển thị chain-of-thought, chu kỳ khái niệm vẫn hữu ích:
+Một common pattern là alternating reasoning/action/observation. Dù implementation không expose chain-of-thought, conceptual cycle vẫn hữu ích:
 
 ```text
-đánh giá state → chọn action → nhận observation → đánh giá lại
+assess state → choose action → receive observation → reassess
 ```
 
-Điểm cốt lõi không nằm ở format prompt mà ở **điều khiển vòng kín (closed-loop control)**.
+Điểm quan trọng không phải format prompt mà là closed-loop control.
 
-## Chính sách Retry
+## Retry policy
 
-Retry phải phụ thuộc loại lỗi:
+Retry phải phụ thuộc error class.
 
 ```text
-TIMEOUT → retry với backoff
-RATE_LIMIT → chờ / backoff
-INVALID_ARGUMENT → sửa arguments
-PERMISSION_DENIED → dừng / escalate
-CONFLICT → đọc lại state rồi quyết định
+TIMEOUT → retry with backoff
+RATE_LIMIT → wait/backoff
+INVALID_ARGUMENT → revise arguments
+PERMISSION_DENIED → stop/escalate
+CONFLICT → refetch state then decide
 ```
 
-Retry mù vừa tốn chi phí vừa có thể tạo side effect trùng.
+Blind retry vừa tốn cost vừa có thể tạo side effect duplicate.
 
-## Backoff và Jitter
+## Backoff và jitter
 
-Tool phân tán thường cần exponential backoff:
+Distributed tools thường cần exponential backoff:
 
 \[
 t_k=\min(t_{max},t_0 2^k)+\epsilon
 \]
 
-`ε` là jitter để tránh nhiều worker retry cùng lúc.
+`ε` là jitter để tránh nhiều workers retry đồng thời.
 
-## Phát hiện Loop
+## Loop detection
 
-Agent có thể lặp cùng chuỗi action.
+Agent có thể lặp cùng thought/action sequence.
 
-Các tín hiệu gồm:
+Detection signals:
 
-- cùng tool + cùng argument lặp lại;
+- same tool + same args repeated;
 - state hash không đổi;
-- cùng error xuất hiện nhiều lần;
-- progress metric không cải thiện.
+- same error lặp lại;
+- no improvement in progress metric.
 
-Runtime có thể buộc replanning hoặc terminate.
+Runtime có thể force replanning hoặc terminate.
 
-## Checkpoint
+## Checkpointing
 
-Task dài cần checkpoint được lưu bền vững:
+Long task cần checkpoint persisted:
 
 ```text
-các bước đã hoàn thành
-artifact hiện tại
-ID tài nguyên bên ngoài
-approval đang chờ
-hành động dự định tiếp theo
+completed steps
+current artifacts
+external resource ids
+pending approvals
+next intended action
 ```
 
 Nhờ đó process restart không cần replay toàn bộ conversation.
 
-## Event Sourcing
+## Event sourcing
 
-Một pattern robust là ghi event bất biến theo thứ tự:
+Một robust pattern là append immutable events:
 
 ```text
 TaskCreated
@@ -147,120 +147,120 @@ ApprovalGranted
 TaskCompleted
 ```
 
-State hiện tại có thể được dựng lại từ event log, hỗ trợ audit, replay và debugging.
+Current state có thể derive từ event log. Điều này hỗ trợ audit, replay và debugging.
 
 ## Concurrency
 
-Nếu agent chạy nhiều subtask song song, shared state cần chiến lược consistency.
+Nếu agent chạy nhiều subtasks song song, shared state cần consistency strategy.
 
-Hai worker có thể cùng sửa một resource. Cần optimistic locking, version check hoặc coordinator.
+Hai workers có thể cùng update same resource. Cần optimistic locking, version check hoặc coordinator.
 
-Agent orchestration không làm biến mất các bài toán distributed systems.
+Agent orchestration không loại bỏ distributed-systems problems.
 
-## Budget như biến điều khiển
+## Budget như một control variable
 
 Budget có thể gồm:
 
 ```text
-số model call tối đa
-số token tối đa
-thời gian tối đa
-chi phí tool tối đa
-số write action tối đa
+max model calls
+max tokens
+max wall-clock time
+max tool cost
+max external writes
 ```
 
-Policy có thể đổi model hoặc giảm search depth khi budget gần cạn.
+Policy có thể thay đổi model hoặc search depth khi budget gần cạn.
 
-## Phục hồi
+## Recovery
 
-Recovery không phải lúc nào cũng là retry. Có thể:
+Recovery không phải luôn “retry”. Có thể:
 
 - rollback;
-- chạy compensating action;
-- đổi tool/provider;
-- giảm scope;
-- hỏi user;
-- tiếp tục từ phần đã thành công.
+- compensate;
+- switch tool/provider;
+- reduce scope;
+- ask user;
+- continue from partial success.
 
-## Lớp xác định bao quanh lõi xác suất
+## Deterministic shell quanh probabilistic core
 
-Một thiết kế mạnh là:
+Một design mạnh:
 
 ```text
-Runtime xác định quản lý:
+Deterministic runtime owns:
 state
-permission
-budget
-retry
+permissions
+budgets
+retries
 logging
 termination
 
-LLM quản lý:
-hiểu ngữ nghĩa
-đề xuất plan
-chọn next action trong không gian được phép
+LLM owns:
+semantic interpretation
+planning suggestion
+next-action choice within allowed space
 ```
 
-Đây là cách tách trách nhiệm quan trọng.
+Đây là separation of concerns quan trọng.
 
-## Ví dụ: Research Agent
+## Example: research agent
 
-Task: so sánh ba vendor.
+Task: so sánh 3 vendors.
 
-Loop có thể là:
+Loop có thể:
 
 ```text
-1. phân tích tiêu chí
-2. search vendor A / B / C
-3. lấy primary source
-4. phát hiện tiêu chí còn thiếu
-5. search evidence cụ thể
-6. tạo bảng so sánh có cấu trúc
-7. verify citation
-8. hoàn thành
+1. parse evaluation criteria
+2. search vendor A/B/C
+3. fetch primary sources
+4. detect missing criterion
+5. search targeted evidence
+6. build structured comparison
+7. verify citations
+8. finalize
 ```
 
-Nếu bước 4 phát hiện thiếu pricing, agent nên quay lại retrieval thay vì bịa từ memory.
+Nếu step 4 phát hiện thiếu pricing, agent cần loop retrieval thay vì generate từ memory.
 
-## Ví dụ: Coding Agent
+## Example: coding agent
 
 ```text
-đọc issue
-→ search code liên quan
-→ đọc test
-→ sửa code
-→ chạy focused test
-→ đọc failure
-→ sửa tiếp
-→ chạy broader test
-→ kiểm diff
-→ kết thúc
+inspect issue
+→ search relevant code
+→ read tests
+→ edit
+→ run focused tests
+→ inspect failure
+→ revise
+→ run broader tests
+→ inspect diff
+→ finish
 ```
 
-Verification là một phần của loop, không phải post-processing tùy chọn.
+Verification actions là một phần của loop, không phải post-processing tùy chọn.
 
-## Mô hình tư duy
+## Mental Model
 
-> **Agent loop là bộ điều khiển phản hồi cho một policy không hoàn hảo.**
+> **Agent loop là feedback controller cho một policy không hoàn hảo.**
 
-Plan vòng hở giả định thế giới diễn ra đúng dự kiến; agent vòng kín liên tục quan sát và điều chỉnh.
+Open-loop plan giả định world diễn ra đúng dự kiến; closed-loop agent liên tục quan sát và điều chỉnh.
 
-## Những hiểu lầm thường gặp
+## Common Misconceptions
 
-### “Lập plan một lần rồi chạy hết là agent tốt”
+### “Plan một lần rồi execute hết là agent tốt”
 
-Không. Environment thay đổi và tool có thể lỗi; replanning theo observation mới thường cần thiết.
+Environment thay đổi và tool có thể fail. Replanning dựa observation mới thường cần thiết.
 
-### “Nhiều bước hơn nghĩa thông minh hơn”
+### “More steps means more intelligence”
 
-Không. Nhiều bước có thể chỉ là đi vòng. Chất lượng nằm ở progress mỗi bước và verification.
+Nhiều bước có thể chỉ là dithering. Quality nằm ở progress per step và verification.
 
 ### “Conversation history chính là state”
 
-Transcript có thể chứa state nhưng structured persisted state đáng tin và dễ query hơn.
+Transcript có thể chứa state, nhưng structured persisted state đáng tin và queryable hơn.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Agent loop nối trực giác control theory, state machine, distributed systems và classical agent architecture.
+Agent loop nối control theory intuition, state machines, distributed systems và classical agent architecture. Phần tiếp theo tập trung vào cách phân rã goal thành plan có thể thực thi.
 
 Xem tiếp: [Planning and Task Decomposition](./03_planning_and_task_decomposition.md).

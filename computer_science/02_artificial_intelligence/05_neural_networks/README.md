@@ -1,16 +1,16 @@
 # Neural Networks Knowledge Layer
 
-Folder này giải thích Neural Network (신경망 / mạng nơ-ron) như một **hệ tính toán khả vi có tham số (parameterized differentiable computation system)**, không phải như một tập API của framework. Nó nối trực tiếp Machine Learning, Đại số tuyến tính, Giải tích và Tối ưu hóa với các kiến trúc Deep Learning ở phần sau.
+Folder này giải thích Neural Networks (신경망 / mạng nơ-ron) như một **parameterized differentiable computation system**, không như một collection framework APIs. Nó nối trực tiếp Machine Learning, Linear Algebra, Calculus và Optimization với Deep Learning architectures phía sau.
 
-## Sơ đồ phụ thuộc
+## Dependency map
 
 ```mermaid
 flowchart TD
-    A[00 Từ mô hình tuyến tính tới Neural Network] --> B[01 Neuron, Perceptron & MLP]
-    B --> C[02 Hàm kích hoạt]
-    C --> D[03 Lan truyền tiến]
+    A[00 From Linear Models to Neural Networks] --> B[01 Neuron, Perceptron & MLP]
+    B --> C[02 Activation Functions]
+    C --> D[03 Forward Propagation]
     D --> E[04 Backpropagation]
-    E --> F[05 Gradient Descent & Optimizer]
+    E --> F[05 Gradient Descent & Optimizers]
     C --> G[06 Initialization & Normalization]
     E --> G
     F --> G
@@ -22,48 +22,48 @@ flowchart TD
     I --> J
 ```
 
-## Các chương
+## Chapters
 
-**[00 — Từ mô hình tuyến tính tới Neural Network](./00_from_linear_models_to_neural_networks.md)** giải thích vì sao nhiều linear layer không có tính phi tuyến vẫn rút gọn thành một linear transformation duy nhất, từ đó dẫn tới XOR và động lực của representation learning.
+**[00 — From Linear Models to Neural Networks](./00_from_linear_models_to_neural_networks.md)** giải thích vì sao stack linear layers không có nonlinearity vẫn collapse thành một linear transformation, XOR và representation learning motivation.
 
-**[01 — Neuron, Perceptron và MLP](./01_neuron_perceptron_and_mlp.md)** đi từ tổng có trọng số + activation tới biểu diễn nhiều layer, shape tensor, số lượng tham số và ý nghĩa của output head.
+**[01 — Neuron, Perceptron & MLP](./01_neuron_perceptron_and_mlp.md)** đi từ weighted sum + activation tới multilayer representation, tensor shape, parameter count và output-head semantics.
 
-**[02 — Hàm kích hoạt](./02_activation_functions.md)** giải thích sigmoid, tanh, ReLU, GELU, SiLU và SwiGLU qua khả năng biểu diễn, saturation, gradient flow và ngữ cảnh kiến trúc.
+**[02 — Activation Functions](./02_activation_functions.md)** giải thích sigmoid/tanh/ReLU/GELU/SiLU/SwiGLU qua expressivity, saturation, gradient flow và architecture context.
 
-**[03 — Lan truyền tiến](./03_forward_propagation.md)** xem mô hình như một computation graph, bao gồm batching, broadcasting, khác biệt train/eval, activation memory, checkpointing và mixed precision.
+**[03 — Forward Propagation](./03_forward_propagation.md)** xem model như computational graph, bao gồm batching, broadcasting, train/eval behavior, activation memory, checkpointing và mixed precision.
 
-**[04 — Backpropagation](./04_backpropagation.md)** giải thích Chain Rule, reverse-mode automatic differentiation, vector-Jacobian product, gradient accumulation, vanishing/exploding gradient và residual gradient path.
+**[04 — Backpropagation](./04_backpropagation.md)** derivation chain rule/reverse-mode AD, vector-Jacobian products, gradient accumulation, vanishing/exploding gradient và residual gradient paths.
 
-**[05 — Gradient Descent và Optimizer](./05_gradient_descent_and_optimizers.md)** nối SGD, momentum, Adam/AdamW, learning-rate schedule, warmup, batch size, clipping và bộ nhớ của optimizer state.
+**[05 — Gradient Descent & Optimizers](./05_gradient_descent_and_optimizers.md)** nối SGD, momentum, Adam/AdamW, schedules, warmup, batch size, clipping và optimizer-state memory.
 
-**[06 — Initialization và Normalization](./06_initialization_and_normalization.md)** giải thích Xavier/He, BatchNorm, LayerNorm, RMSNorm, Pre-Norm/Post-Norm và cách giữ thống kê tín hiệu ổn định.
+**[06 — Initialization & Normalization](./06_initialization_and_normalization.md)** giải thích Xavier/He, BatchNorm, LayerNorm, RMSNorm, Pre-Norm/Post-Norm và signal statistics.
 
-**[07 — Regularization](./07_regularization.md)** bao gồm weight decay, dropout, early stopping, augmentation, label smoothing, inductive bias từ architecture, pretraining và LoRA như một dạng adaptation bị ràng buộc.
+**[07 — Regularization](./07_regularization.md)** cover weight decay, dropout, early stopping, augmentation, label smoothing, architecture bias, pretraining và LoRA như constrained adaptation.
 
-**[08 — Representation Learning](./08_representation_learning.md)** đi từ embedding geometry, contrastive learning, metric learning, autoencoder, transfer, representation collapse, invariance/equivariance tới representation drift trong production.
+**[08 — Representation Learning](./08_representation_learning.md)** đi từ embedding geometry, contrastive learning, metric learning, autoencoder, transfer, collapse, invariance/equivariance tới representation drift trong production.
 
-**[09 — Training Dynamics](./09_deep_learning_training_dynamics.md)** tổng hợp learning curve, diagnostic từ update/gradient/activation, curriculum, data mixture, catastrophic forgetting, checkpointing, distributed batch và quy trình debug có hệ thống.
+**[09 — Training Dynamics](./09_deep_learning_training_dynamics.md)** tổng hợp learning curves, update/gradient/activation diagnostics, curriculum/data mixture, catastrophic forgetting, checkpointing, distributed batch và systematic debugging.
 
-## Mô hình tư duy của toàn layer
+## Mental model của toàn layer
 
 ```text
-Biểu diễn đầu vào
+Input representation
       ↓
-Computation graph có tham số
+Parameterized computation graph
       ↓ forward
 Prediction / loss
       ↓ backward
-Gradient
+Gradients
       ↓ optimizer + schedule
-Tham số được cập nhật
-      ↓ lặp qua kinh nghiệm
-Biểu diễn bên trong được học
+Updated parameters
+      ↓ repeated experience
+Learned internal representation
 ```
 
-Architecture quyết định graph và inductive bias. Loss quyết định tín hiệu học. Backpropagation tính tín hiệu trách nhiệm cho từng tham số. Optimizer quyết định quỹ đạo cập nhật. Data distribution quyết định loại kinh nghiệm mô hình được tiếp xúc. Khả năng khái quát hóa vẫn phải được chứng minh bằng evaluation ngoài training set.
+Architecture quyết định graph và inductive bias. Loss quyết định signal. Backprop tính credit/blame. Optimizer quyết định update trajectory. Data distribution quyết định experience. Generalization vẫn phải được chứng minh bằng evaluation ngoài training set.
 
 ## Chuyển tiếp sang Deep Learning Architectures
 
-`06_deep_learning_architectures/` sẽ trả lời câu hỏi: nếu MLP có khả năng biểu diễn rộng như vậy, vì sao vẫn cần CNN, RNN, Attention, Transformer, Autoencoder, VAE, GAN và Diffusion?
+`06_deep_learning_architectures/` sẽ trả lời câu hỏi: nếu MLP general-purpose như vậy, vì sao cần CNN, RNN, attention, Transformer, Autoencoder, VAE, GAN và Diffusion?
 
-Câu trả lời nằm ở **cấu trúc và thiên lệch quy nạp (structure and inductive bias)**. Ảnh có cấu trúc không gian cục bộ; chuỗi có phụ thuộc thứ tự; generative modeling cần những objective và cơ chế sinh dữ liệu khác nhau. Các kiến trúc mới không loại bỏ những cơ chế Neural Network nền tảng ở folder này; chúng tổ chức computation graph theo các giả định phù hợp hơn với từng loại dữ liệu và bài toán.
+Câu trả lời là **structure và inductive bias**. Image có local spatial structure; sequence có temporal/order dependency; generative modeling cần probabilistic/data-generation objectives khác nhau. Các architecture mới không bỏ core neural-network mechanics ở folder này; chúng tổ chức computation graph theo những assumptions hiệu quả hơn.

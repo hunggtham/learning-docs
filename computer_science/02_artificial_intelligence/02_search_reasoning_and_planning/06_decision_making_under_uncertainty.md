@@ -1,123 +1,123 @@
-# Ra quyết định dưới bất định
+# Decision Making Under Uncertainty
 
-Tìm kiếm cổ điển và lập kế hoạch xác định thường giả định hành động dẫn tới trạng thái kế tiếp khá rõ ràng. Thế giới thực hiếm khi như vậy. Cảm biến có nhiễu, hành động có thể thất bại, hành vi người dùng mang tính ngẫu nhiên, nhu cầu tương lai chưa biết và ta thường không quan sát đầy đủ trạng thái ẩn.
+Classical search và deterministic planning giả định action dẫn tới successor state khá rõ ràng. Real world hiếm khi như vậy. Sensor noisy, action có thể fail, user behavior stochastic, future demand unknown, và ta thường không quan sát đầy đủ hidden state.
 
-**Ra quyết định dưới bất định (Decision Making Under Uncertainty / 불확실성 하의 의사결정)** đặt câu hỏi:
+**Decision Making Under Uncertainty (불확실성 하의 의사결정)** hỏi:
 
-> Khi không biết chắc trạng thái hoặc kết quả, nên chọn hành động nào nếu mỗi kết quả có xác suất và hậu quả khác nhau?
+> Khi không biết chắc state hoặc outcome, action nào nên chọn nếu mỗi outcome có probability và consequence khác nhau?
 
-Đây là nơi xác suất, độ hữu dụng, lập kế hoạch và học tăng cường bắt đầu gặp nhau.
+Đây là nơi Probability, Utility, Planning và Reinforcement Learning bắt đầu gặp nhau.
 
-Xem trước: [Xác suất cho AI](../01_mathematical_foundations/02_probability_for_ai.md) và [Lập kế hoạch](./05_planning.md).
+Xem trước: [Probability for AI](../01_mathematical_foundations/02_probability_for_ai.md) và [Planning](./05_planning.md).
 
-## Xác suất chưa đủ để ra quyết định
+## Probability chưa đủ để ra quyết định
 
-Giả sử mô hình dự đoán:
+Suppose model predicts:
 
 \[
 P(fraud\mid x)=0.20
 \]
 
-Có nên chặn giao dịch không?
+Có block transaction không?
 
-Chỉ xác suất chưa đủ để trả lời. Cần biết chi phí hoặc độ hữu dụng của hậu quả:
+Probability một mình không trả lời. Cần cost/utility:
 
-- chặn nhầm có thể làm mất niềm tin khách hàng;
-- bỏ sót gian lận gây thiệt hại tiền;
-- kiểm tra thủ công có chi phí và giới hạn năng lực xử lý.
+- false block làm mất customer trust;
+- missed fraud mất money;
+- manual review có cost và capacity.
 
-Lý thuyết quyết định tách hai thành phần:
+Decision Theory tách hai components:
 
 ```text
-niềm tin về điều có thể xảy ra
+belief about what may happen
         +
-giá trị / chi phí của hậu quả
+value/cost of consequences
         ↓
-lựa chọn hành động
+action choice
 ```
 
-## Độ hữu dụng
+## Utility
 
-**Hàm hữu dụng (utility function)**:
+Utility function:
 
 \[
 U(o)
 \]
 
-gán giá trị cho kết quả `o`.
+gán value cho outcome `o`.
 
-Nếu hành động `a` có nhiều kết quả `o` có thể xảy ra:
+Nếu action `a` có possible outcomes `o`:
 
 \[
 EU(a)=\sum_o P(o\mid a)U(o)
 \]
 
-Nguyên lý **độ hữu dụng kỳ vọng (expected utility)** chọn:
+Expected Utility principle chọn:
 
 \[
 a^*=\arg\max_a EU(a)
 \]
 
-Độ hữu dụng không nhất thiết là tiền. Nó có thể mã hóa an toàn, thời gian, mức hài lòng hoặc tổ hợp nhiều mục tiêu.
+Điều này không nói utility phải là money. Nó có thể encode safety, time, satisfaction hoặc combination.
 
-## Phân loại có xét chi phí
+## Cost-sensitive classification
 
-Một quyết định nhị phân có thể dùng ma trận chi phí:
+Binary decision có cost matrix:
 
-| Thực tế / Hành động | Dự đoán âm | Dự đoán dương |
+| Actual / Action | Predict Negative | Predict Positive |
 |---|---:|---:|
-| Âm | 0 | `C_FP` |
-| Dương | `C_FN` | 0 |
+| Negative | 0 | `C_FP` |
+| Positive | `C_FN` | 0 |
 
-Nếu xác suất dương đã được hiệu chuẩn là `p`, ta chọn hành động có chi phí kỳ vọng thấp hơn.
+Nếu calibrated probability positive là `p`, choose positive khi expected cost thấp hơn.
 
-Chi phí kỳ vọng khi dự đoán dương:
+Expected cost predict positive:
 
 \[
 (1-p)C_{FP}
 \]
 
-Chi phí kỳ vọng khi dự đoán âm:
+Expected cost predict negative:
 
 \[
 pC_{FN}
 \]
 
-Chọn dương nếu:
+Choose positive if:
 
 \[
 (1-p)C_{FP}<pC_{FN}
 \]
 
-suy ra ngưỡng:
+which implies threshold:
 
 \[
 p>\frac{C_{FP}}{C_{FP}+C_{FN}}
 \]
 
-Ngưỡng `0.5` chỉ tự nhiên khi hai loại chi phí đối xứng.
+Threshold 0.5 only natural when costs symmetric.
 
-## Trung lập rủi ro và nhạy cảm rủi ro
+## Risk neutrality vs risk sensitivity
 
-Chỉ tối ưu giá trị kỳ vọng tương ứng với cách nhìn **trung lập rủi ro (risk-neutral)** khi độ hữu dụng tuyến tính theo phần thưởng số.
+Expected value alone corresponds to risk-neutral treatment of numerical payoff under linear utility.
 
-Con người hoặc doanh nghiệp có thể né tránh rủi ro. Mất 100.000 USD với xác suất 1% có thể được đánh giá khác với “mức mất kỳ vọng 1.000 USD” vì rủi ro đuôi, quy định hoặc khả năng sống còn của tổ chức.
+Humans/businesses may be risk-averse. Losing $100k with 1% probability can matter differently from expected $1k loss due to tail risk, regulation or survival constraints.
 
-Hàm hữu dụng lõm mô hình hóa giá trị biên giảm dần:
+Concave utility models diminishing marginal value:
 
 \[
 U(\mathbb{E}[X])\ge\mathbb{E}[U(X)]
 \]
 
-với `U` lõm theo bất đẳng thức Jensen.
+for concave `U` via Jensen's inequality.
 
-Hệ thống AI có thể cần đại lượng rủi ro tường minh thay vì chỉ tối đa phần thưởng trung bình.
+AI systems may need explicit risk measures rather than average reward only.
 
-## Giá trị của thông tin
+## Value of information
 
-Thông tin chỉ hữu ích nếu nó có khả năng thay đổi quyết định đủ để cải thiện độ hữu dụng kỳ vọng.
+Information is useful if it can change decision enough to improve expected utility.
 
-**Giá trị kỳ vọng của thông tin hoàn hảo (Expected Value of Perfect Information - EVPI)** có thể nhìn gần đúng như:
+**Expected Value of Perfect Information (EVPI)** roughly compares:
 
 \[
 \mathbb{E}[\max_a U(a,\theta)]
@@ -125,103 +125,105 @@ Thông tin chỉ hữu ích nếu nó có khả năng thay đổi quyết địn
 \max_a \mathbb{E}[U(a,\theta)]
 \]
 
-Nó đặt cận trên cho số tiền hoặc tài nguyên đáng chi để biết hoàn hảo biến bất định `θ`.
+It bounds how much one should pay for perfect information about uncertain variable `θ`.
 
-Ví dụ, hệ thống y tế có nên yêu cầu thêm một xét nghiệm trước khi khuyến nghị hành động? Xét nghiệm chỉ có giá trị nếu mức cải thiện quyết định kỳ vọng lớn hơn chi phí và độ trễ của xét nghiệm.
+Practical example: should medical AI request another test before recommending action? Test is valuable only if expected decision improvement exceeds test cost/delay.
 
-## Quyết định tuần tự
+## Sequential decisions
 
-Độ hữu dụng kỳ vọng một bước không đủ khi hành động làm thay đổi trạng thái tương lai.
+One-shot expected utility is insufficient when actions affect future states.
 
-Ta có trạng thái `s_t`, hành động `a_t`, trạng thái kế tiếp `s_{t+1}`.
+State `s_t`, action `a_t`, next state `s_{t+1}`.
 
-Hành động ảnh hưởng cả phần thưởng tức thời lẫn các cơ hội tương lai.
+Action changes both immediate reward and future opportunities.
 
-Điều này dẫn tới **Quá trình quyết định Markov (Markov Decision Process - MDP / 마르코프 결정 과정)**.
+This leads to **Markov Decision Process (MDP / 마르코프 결정 과정)**.
 
-## Tính Markov
+## Markov property
 
-Một quá trình có tính Markov nếu trạng thái hiện tại chứa đủ thông tin để phân phối tương lai không còn phụ thuộc trực tiếp vào toàn bộ lịch sử:
+A process is Markov if current state contains enough information that future conditional distribution does not depend on full history:
 
 \[
 P(s_{t+1}\mid s_t,a_t,s_{t-1},...)=P(s_{t+1}\mid s_t,a_t)
 \]
 
-Đây là thuộc tính của cách biểu diễn trạng thái đã chọn, không phải tính chất “tự nhiên” của mọi thế giới.
+This is property of chosen state representation, not magical property of world.
 
-Nếu trạng thái bỏ mất lịch sử liên quan, giả định Markov không còn đúng.
+If state omits relevant history, Markov assumption fails.
 
-Ví dụ, nếu xác suất hỏng máy phụ thuộc tổng số giờ sử dụng nhưng trạng thái chỉ lưu nhiệt độ hiện tại, biểu diễn trạng thái là chưa đủ.
+Example: if machine failure probability depends on accumulated usage but state stores only current temperature, state is insufficient.
 
-## Các thành phần của MDP
+## MDP components
 
-Một MDP thường được viết:
+An MDP typically:
 
 \[
 \mathcal{M}=(S,A,P,R,\gamma)
 \]
 
-trong đó:
+where:
 
-- `S`: tập trạng thái;
-- `A`: tập hành động;
-- `P(s'|s,a)`: xác suất chuyển trạng thái;
-- `R(s,a,s')`: phần thưởng;
-- `γ`: hệ số chiết khấu.
+- `S`: states;
+- `A`: actions;
+- `P(s'|s,a)`: transition probabilities;
+- `R(s,a,s')`: reward;
+- `γ`: discount factor.
 
-Một **chính sách (policy)**:
+A **policy**:
 
 \[
 \pi(a\mid s)
 \]
 
-ánh xạ trạng thái sang phân phối hành động.
+maps state to action distribution.
 
-Mục tiêu là tìm chính sách tối đa hóa tổng phần thưởng kỳ vọng dài hạn.
+Goal: find policy maximizing expected return.
 
-## Tổng phần thưởng hồi quy
+## Return
 
-**Tổng phần thưởng chiết khấu (discounted return)**:
+Discounted return:
 
 \[
 G_t=\sum_{k=0}^{\infty}\gamma^k r_{t+k+1}
 \]
 
-`0≤γ<1` thường giúp tổng hữu hạn và làm phần thưởng gần hiện tại có trọng số cao hơn.
+`0≤γ<1` often ensures finite sum and weights near rewards more.
 
-Chiết khấu có thể biểu diễn ưu tiên thời gian, bất định về việc quá trình còn tiếp tục hay đơn giản là thuận tiện toán học. Cách diễn giải phụ thuộc miền.
+Discounting can represent time preference, uncertainty about continuation or mathematical convenience. Interpretation depends domain.
 
-Với chân trời hữu hạn, đôi khi không cần chiết khấu.
+For finite horizon, discount may be unnecessary.
 
-## Hàm giá trị trạng thái
+## State value
 
-Giá trị của chính sách `π`:
+Value of policy `π`:
 
 \[
 V^\pi(s)=\mathbb{E}_\pi[G_t\mid s_t=s]
 \]
 
-trả lời:
+It answers:
 
-> Nếu bắt đầu ở trạng thái này và tiếp tục theo chính sách `π`, tổng phần thưởng dài hạn kỳ vọng là bao nhiêu?
+> Nếu bắt đầu ở state này và tiếp tục theo policy π, expected long-term return là bao nhiêu?
 
-## Hàm giá trị hành động
+## Action value
 
 \[
 Q^\pi(s,a)=\mathbb{E}_\pi[G_t\mid s_t=s,a_t=a]
 \]
 
-Nó đánh giá việc thực hiện `a` trước, rồi tiếp tục theo `π`.
+It evaluates taking action `a` first, then following `π`.
 
-Nếu muốn chính sách tham lam xác định:
+Decision:
 
 \[
 \pi(s)=\arg\max_a Q(s,a)
 \]
 
-## Phương trình Bellman
+if deterministic greedy policy desired.
 
-Giá trị có thể phân rã đệ quy:
+## Bellman equation
+
+Value decomposes recursively:
 
 \[
 V^\pi(s)=\sum_a\pi(a\mid s)
@@ -229,393 +231,393 @@ V^\pi(s)=\sum_a\pi(a\mid s)
 [R(s,a,s')+\gamma V^\pi(s')]
 \]
 
-Phương trình Bellman nói rằng:
+Bellman equation states:
 
 ```text
-giá trị hiện tại
-= phần thưởng tức thời kỳ vọng
-+ giá trị tương lai kỳ vọng đã chiết khấu
+value now
+= expected immediate reward
++ discounted expected value later
 ```
 
-Đây là một trong những cấu trúc quan trọng nhất của học tăng cường.
+This recursion is one of most important structures in Reinforcement Learning.
 
-## Phương trình tối ưu Bellman
+## Bellman optimality
 
-Giá trị tối ưu:
+Optimal value:
 
 \[
 V^*(s)=\max_a\sum_{s'}P(s'\mid s,a)
 [R(s,a,s')+\gamma V^*(s')]
 \]
 
-Giá trị hành động tối ưu:
+Optimal Q:
 
 \[
 Q^*(s,a)=\sum_{s'}P(s'\mid s,a)
 [R(s,a,s')+\gamma\max_{a'}Q^*(s',a')]
 \]
 
-Có thể xem đây là tổng quát hóa ngẫu nhiên của quy hoạch động cho đường đi ngắn nhất.
+This is stochastic generalization of shortest-path dynamic programming.
 
-## Lặp giá trị
+## Value iteration
 
-Khởi tạo `V_0`, rồi lặp phép cập nhật tối ưu Bellman:
+Initialize `V_0`. Repeatedly apply Bellman optimality backup:
 
 \[
 V_{k+1}(s)=\max_a\sum_{s'}P(s'\mid s,a)
 [R+\gamma V_k(s')]
 \]
 
-Trong MDP hữu hạn có chiết khấu, tính co giúp bảo đảm hội tụ tới `V*` dưới các điều kiện chuẩn.
+Under discounted finite MDP conditions, contraction property gives convergence to `V*`.
 
-Sau đó suy ra chính sách bằng cách chọn hành động tham lam theo giá trị.
+Then derive policy by greedy action selection.
 
-## Lặp chính sách
+## Policy iteration
 
-**Lặp chính sách (policy iteration)** xen kẽ:
+Alternate:
 
-1. **đánh giá chính sách** — tính `V^π`;
-2. **cải thiện chính sách** — chọn hành động tốt hơn theo giá trị hiện tại.
+1. **Policy evaluation** — compute `V^π`.
+2. **Policy improvement** — choose action better according to current values.
 
-Lặp tới khi chính sách ổn định.
+Repeat until policy stable.
 
-Phương pháp có thể cần ít vòng ngoài hơn lặp giá trị nhưng bước đánh giá chính sách có thể tốn kém.
+Policy iteration can converge in fewer outer iterations but evaluation step costly.
 
-## Tìm kiếm và MDP
+## Search vs MDP
 
-Đường đi ngắn nhất xác định có thể xem là trường hợp đặc biệt khi xác suất chuyển trạng thái dồn toàn bộ vào một trạng thái kế tiếp.
+Deterministic shortest path can be seen as special case where transition probability concentrated on one successor.
 
-Chi phí còn lại trong tìm kiếm có vai trò gần với âm của giá trị dài hạn.
+Search node cost-to-go resembles negative value.
 
-A* dùng heuristic ước lượng chi phí còn lại; RL dùng hàm giá trị ước lượng phần thưởng tương lai.
+A* heuristic approximates remaining cost; RL value function approximates expected future return.
 
-Liên hệ:
-
-```text
-heuristic h(s) → ước lượng chi phí còn lại
-value V(s)     → ước lượng phần thưởng tương lai kỳ vọng
-```
-
-Dấu và hàm mục tiêu khác nhau nhưng vai trò cấu trúc tương tự.
-
-## Khi mô hình chuyển trạng thái chưa biết
-
-Lập kế hoạch MDP cổ điển giả định `P` và `R` đã biết.
-
-**Học tăng cường (Reinforcement Learning - RL)** trở nên cần thiết khi mô hình môi trường chưa biết hoặc quá đắt để mô tả, và tác nhân phải học giá trị hoặc chính sách từ trải nghiệm.
-
-Do đó:
+Connection:
 
 ```text
-biết mô hình + tối ưu chính sách → lập kế hoạch trong MDP
-không biết mô hình + học từ trải nghiệm → học tăng cường
+heuristic h(s)       ↔ estimated cost-to-go
+value V(s)           ↔ expected return-to-go
 ```
 
-RL dựa trên mô hình học hoặc ước lượng mô hình; RL không mô hình học giá trị/chính sách mà không cần mô hình chuyển trạng thái tường minh.
+Signs/objectives differ, but structural role similar.
 
-## Quan sát một phần
+## Unknown transition model
 
-Nếu tác nhân không quan sát trực tiếp trạng thái `s`, nó chỉ nhận quan sát `o`.
+Classical MDP planning assumes `P` and `R` known.
 
-**Quá trình quyết định Markov quan sát một phần (Partially Observable MDP - POMDP / 부분 관찰 마르코프 결정 과정)** bổ sung mô hình quan sát.
+Reinforcement Learning begins when environment model unknown or too expensive, and agent learns value/policy from experience.
 
-Tác nhân duy trì **niềm tin (belief)**:
+Thus:
+
+```text
+known model + optimize policy → planning in MDP
+unknown model + experience    → RL
+```
+
+Model-based RL learns/estimates model; model-free RL learns value/policy without explicit transition model.
+
+## Partial observability
+
+If agent cannot observe state `s`, it receives observation `o`.
+
+A **POMDP (부분 관찰 마르코프 결정 과정)** adds observation model.
+
+Agent maintains belief:
 
 \[
 b(s)=P(s\mid history)
 \]
 
-Niềm tin là phân phối xác suất trên các trạng thái có thể xảy ra.
+Belief state is a probability distribution over possible states.
 
-Về khái niệm, POMDP có thể biến thành MDP trên không gian niềm tin, nhưng không gian này liên tục và rất nhiều chiều nên khó giải.
+POMDP can be transformed conceptually into MDP over belief space, but belief space continuous/high-dimensional and difficult.
 
-## Cập nhật niềm tin
+## Belief update
 
-Sau hành động `a` và quan sát `o`, lọc Bayes cập nhật:
+After action `a` and observation `o`, Bayesian filtering updates belief:
 
 \[
 b'(s')\propto P(o\mid s')\sum_s P(s'\mid s,a)b(s)
 \]
 
-Có thể tách thành hai bước:
+Two steps:
 
 ```text
-dự đoán phân phối trạng thái kế tiếp
+predict next state distribution
         ↓
-điều kiện hóa theo quan sát mới
+condition on new observation
 ```
 
-Đây là định lý Bayes hoạt động theo chuỗi thời gian.
+This is Bayes theorem operating sequentially.
 
-## Ước lượng trạng thái
+## State estimation
 
-**Bộ lọc Kalman (Kalman Filter)** giải hiệu quả bài toán ước lượng trạng thái tuyến tính-Gaussian.
+Kalman Filter solves linear-Gaussian state estimation efficiently.
 
-Động lực trạng thái ẩn:
+Hidden state dynamics:
 
 \[
 x_t=Ax_{t-1}+Bu_t+w_t
 \]
 
-Quan sát:
+Observation:
 
 \[
 z_t=Hx_t+v_t
 \]
 
-với nhiễu Gaussian.
+with Gaussian noises.
 
-Extended Kalman Filter và Unscented Kalman Filter xử lý các xấp xỉ phi tuyến; particle filter dùng các mẫu để biểu diễn phân phối tổng quát hơn.
+Extended/Unscented Kalman variants handle nonlinear approximations; particle filters use samples for more general distributions.
 
-Robotics phụ thuộc mạnh vào ước lượng trạng thái trước khi lập kế hoạch và điều khiển.
+Robotics perception/control relies heavily on state estimation before planning.
 
-## Ra quyết định khi mô hình cũng bất định
+## Decision under model uncertainty
 
-Ngay cả khi đã mô hình hóa ngẫu nhiên của môi trường, bản thân các tham số mô hình vẫn có thể chưa chắc chắn.
+Even if environment stochasticity known, model parameters themselves may be uncertain.
 
-Ra quyết định Bayes tích phân trên phân phối hậu nghiệm:
+Bayesian decision making integrates over posterior:
 
 \[
 EU(a)=\int U(a,\theta)p(\theta\mid D)d\theta
 \]
 
-Trong thực tế tích phân chính xác thường bất khả thi và cần xấp xỉ.
+In practice exact integration often intractable, requiring approximation.
 
-Bỏ qua bất định tri thức có thể khiến hệ thống quá tự tin khi gặp dữ liệu ngoài phân phối.
+Ignoring epistemic uncertainty can make system overconfident out-of-distribution.
 
-## Ra quyết định bền vững
+## Robust decision making
 
-Thay vì tin một mô hình xác suất duy nhất, **tối ưu bền vững (robust optimization)** xem xét một tập mô hình có thể xảy ra:
+Instead of trust one estimated distribution, robust optimization considers set of possible models:
 
 \[
 \max_\pi \min_{P\in\mathcal{P}} J(\pi,P)
 \]
 
-Cách này bảo vệ trường hợp xấu nhất trong tập bất định nhưng có thể quá bảo thủ.
+This protects worst-case within uncertainty set but may be conservative.
 
-**Tối ưu bền vững theo phân phối (Distributionally Robust Optimization)** tối ưu trước các phân phối nằm gần phân phối thực nghiệm theo một thước đo đã chọn.
+Distributionally Robust Optimization similarly optimizes against distributions near empirical one according to chosen distance/divergence.
 
-## Ràng buộc xác suất
+## Chance constraints
 
-Một ràng buộc có thể chỉ cần đúng với xác suất đủ cao:
+Constraint may need hold with high probability:
 
 \[
 P(g(x,\xi)\le0)\ge1-\alpha
 \]
 
-Ví dụ hệ thống tự hành yêu cầu rủi ro va chạm nhỏ hơn ngưỡng.
+Example autonomous system: collision-risk constraint < threshold.
 
-**Ràng buộc xác suất (chance constraint)** biến bất định thành yêu cầu an toàn xác suất, nhưng chỉ đáng tin nếu mô hình bất định đủ chính xác.
+Chance constraints convert uncertainty into probabilistic safety requirements, but require trustworthy uncertainty model.
 
-## CVaR và rủi ro đuôi
+## CVaR and tail risk
 
-Mất mát kỳ vọng có thể che khuất các trường hợp hiếm nhưng thảm họa.
+Expected loss can hide catastrophic tail.
 
-Value-at-Risk mô tả một phân vị của mất mát. **Conditional Value-at-Risk (CVaR)** đo trung bình phần mất mát ở vùng đuôi vượt ngưỡng theo định nghĩa phù hợp.
+Value-at-Risk gives quantile; Conditional Value-at-Risk (CVaR) averages losses beyond tail threshold under definitions.
 
-RL nhạy cảm rủi ro có thể tối ưu mục tiêu kiểu CVaR khi hậu quả hiếm nhưng nghiêm trọng quan trọng hơn hiệu năng trung bình.
+Risk-sensitive RL can optimize CVaR-like objectives when rare catastrophic outcomes matter more than mean performance.
 
-## Khám phá và khai thác
+## Exploration vs exploitation
 
-Khi kết quả hành động chưa chắc chắn vì chưa thử đủ, hành động có hai loại giá trị:
+When action outcomes uncertain because we have not tried them, action has two values:
 
-1. phần thưởng ngay lập tức;
-2. thông tin thu được để ra quyết định tốt hơn về sau.
+1. immediate reward;
+2. information gained for future decisions.
 
-**Bài toán bandit nhiều tay (multi-armed bandit)** là dạng đơn giản nhất của tình huống này.
+Multi-armed bandit captures this simplest setting.
 
-Mỗi “tay” có phân phối phần thưởng chưa biết. Tác nhân phải cân bằng **khai thác (exploitation)** lựa chọn tốt nhất hiện biết và **khám phá (exploration)** lựa chọn chưa chắc chắn để học thêm.
+Each arm has unknown reward distribution. Agent chooses whether exploit best-known arm or explore uncertain arm.
 
-Đây là giá trị thông tin trong một quá trình tuần tự.
+This is sequential Value of Information.
 
-## Bandit nhiều tay
+## Multi-Armed Bandit
 
-Giả sử tay `a` có trung bình chưa biết `μ_a`.
+Suppose arm `a` has unknown mean `μ_a`.
 
-**Hối tiếc (regret)** sau `T` bước:
+Regret after `T` steps:
 
 \[
 R_T=T\mu^*-\sum_{t=1}^{T}\mu_{a_t}
 \]
 
-Mục tiêu là giảm hối tiếc, không chỉ tối đa hóa phần thưởng quan sát ngay lập tức.
+Goal minimize regret rather than simply maximize immediate observed reward.
 
-Các thuật toán gồm ε-greedy, UCB và Thompson Sampling.
+Algorithms include ε-greedy, UCB, Thompson Sampling.
 
-Bandit có ứng dụng trong hệ thống gợi ý, quảng cáo và thử nghiệm trực tuyến.
+Bandits are relevant for recommendation, ads and online experimentation.
 
 ## Upper Confidence Bound
 
-UCB chọn:
+UCB chooses:
 
 \[
 a_t=\arg\max_a\left[\hat\mu_a+c\sqrt{\frac{\ln t}{N_a}}\right]
 \]
 
-Hạng đầu đại diện cho khai thác. Hạng sau là phần thưởng khám phá theo nguyên lý “lạc quan dưới bất định”: tay ít được thử sẽ có phần thưởng bổ sung lớn hơn.
+First term exploitation. Second optimism under uncertainty: less-tried arms get exploration bonus.
 
-Ý tưởng này cũng xuất hiện trong lựa chọn nút của MCTS.
+This idea also appeared in MCTS selection.
 
 ## Thompson Sampling
 
-Duy trì phân phối hậu nghiệm cho tham số của từng tay. Ở mỗi bước, lấy một mẫu tham số từ hậu nghiệm rồi hành động tham lam theo “thế giới” vừa được lấy mẫu.
+Maintain posterior over each arm parameter. Sample one parameter from posterior and act greedily under sampled world.
 
-Tay chưa chắc chắn tự nhiên được khám phá nhiều hơn vì hậu nghiệm rộng hơn.
+Uncertain arms get naturally explored because posterior wide.
 
-Đây là cách chuyển bất định Bayes thành lựa chọn hành động ngẫu nhiên.
+It converts Bayesian uncertainty into stochastic action selection.
 
-## Bandit theo ngữ cảnh
+## Contextual bandits
 
-Trong hệ thống gợi ý, phần thưởng còn phụ thuộc người dùng hoặc ngữ cảnh `x`:
+Recommendation depends user/context `x`:
 
 \[
 P(r\mid x,a)
 \]
 
-Hệ thống chọn hành động theo ngữ cảnh nhưng chỉ quan sát phần thưởng cho hành động đã chọn.
+Choose action based on context, observe reward only for chosen action.
 
-Điều này tạo **phản hồi một phần (partial feedback)**: ta không biết điều gì sẽ xảy ra nếu chọn những gợi ý khác.
+This introduces **partial feedback**: we do not see what reward unchosen recommendations would have produced.
 
-Vì vậy đánh giá phản thực trở nên quan trọng.
+Counterfactual evaluation becomes important.
 
-## Đánh giá khác chính sách
+## Off-policy evaluation
 
-Giả sử nhật ký được tạo bởi chính sách hành vi `μ` nhưng ta muốn ước lượng chính sách mục tiêu `π` mà chưa triển khai.
+If logs generated by behavior policy `μ`, want estimate target policy `π` without deploying.
 
-Một ý tưởng của **lấy mẫu tầm quan trọng (importance sampling)** là dùng trọng số:
+Importance sampling idea weights observations:
 
 \[
 w=\frac{\pi(a\mid s)}{\mu(a\mid s)}
 \]
 
-Dưới các giả định phù hợp, có thể tái trọng số dữ liệu từ chính sách hành vi sang phân phối mục tiêu.
+Under assumptions, reweight behavior data to target distribution.
 
-Nhưng phương sai có thể rất lớn nếu chính sách mục tiêu chọn những hành động mà chính sách cũ hiếm khi thực hiện.
+But high variance when target chooses actions behavior rarely chose.
 
-Đây là điểm giao giữa thống kê, suy luận nhân quả và đánh giá RL.
+This connects Statistics, Causal Inference and RL evaluation.
 
-## Thiết kế phần thưởng
+## Reward design
 
-Phần thưởng không phải chính thực tế; nó chỉ là tín hiệu đại diện.
+Reward is not reality. It is a proxy signal.
 
-Nếu tối ưu số lần nhấp, tác nhân có thể học hành vi tăng lượt nhấp ngắn hạn nhưng làm giảm mức hài lòng dài hạn.
+If optimize engagement clicks, agent may learn behavior increasing short-term clicks but harming long-term satisfaction.
 
-Tối ưu tuần tự làm vấn đề đặc tả phần thưởng nghiêm trọng hơn vì chính sách chủ động thay đổi dữ liệu và trạng thái tương lai.
+Sequential optimization amplifies reward misspecification because policy actively changes future data/state.
 
-Đây là cầu nối trực tiếp tới căn chỉnh AI.
+This is direct bridge to AI Alignment.
 
-## Hậu quả đến muộn
+## Delayed consequences
 
-Một hành động có thể cho phần thưởng tức thời thấp nhưng giá trị dài hạn cao.
+Action may have low immediate reward but high long-term value.
 
-Ví dụ, mở thêm máy chủ tốn chi phí ngay nhưng giúp tránh sự cố về sau.
+Example server autoscaling: spinning instance costs now but avoids outage later.
 
-Ra quyết định thiển cận chỉ tối đa phần thưởng ngay lập tức sẽ thất bại.
+Myopic decision maximizing immediate reward fails.
 
-Đệ quy Bellman xử lý hậu quả trì hoãn thông qua giá trị tương lai.
+Bellman recursion handles delayed consequences by future value.
 
-## Gán công trạng
+## Credit assignment
 
-Nếu phần thưởng chỉ xuất hiện sau một chuỗi hành động dài, hành động nào trước đó nên được ghi nhận là nguyên nhân đóng góp?
+If reward arrives after long action sequence, which earlier actions deserve credit?
 
-Đây là **bài toán gán công trạng (credit assignment)** cốt lõi của RL.
+This is core RL difficulty.
 
-Temporal Difference learning truyền thông tin giá trị ngược qua trải nghiệm thay vì chỉ chờ kết quả cuối.
+Temporal Difference learning propagates value backward over experience rather than wait only final outcome.
 
-Đánh giá tác nhân LLM cũng gặp vấn đề tương tự: nhiệm vụ thất bại sau 20 lần gọi công cụ không trực tiếp cho biết quyết định nào gây lỗi.
+LLM agent evaluation also faces credit assignment: task success/failure after 20 tool calls does not directly identify which decision caused outcome.
 
-## Lập kế hoạch dưới bất định cho tác nhân
+## Planning under uncertainty for agents
 
-Tác nhân dùng công cụ có thể gặp:
-
-```text
-API có thể lỗi
-kết quả tìm kiếm không đầy đủ
-ý định người dùng chưa rõ
-trạng thái bên ngoài thay đổi
-```
-
-Một mẫu đáng tin cậy:
+Tool agent may face:
 
 ```text
-ước lượng trạng thái / niềm tin
-    ↓
-chọn hành động ít rủi ro nhưng giàu thông tin
-    ↓
-quan sát kết quả
-    ↓
-cập nhật trạng thái
-    ↓
-tiếp tục / lập kế hoạch lại
+API may fail
+search results incomplete
+user intent partially specified
+external state changes
 ```
 
-Đôi khi hành động tốt nhất tiếp theo là hỏi thêm thông tin thay vì vội thực hiện kế hoạch.
-
-## Hành động khó đảo ngược
-
-Thanh toán, xóa dữ liệu, gửi thông điệp hay triển khai mã đều có hậu quả lớn.
-
-Hệ thống ra quyết định nên phân biệt hành động có thể đảo ngược và khó đảo ngược.
-
-Ví dụ chính sách:
+Reliable pattern:
 
 ```text
-rủi ro thấp, dễ đảo ngược → có thể tự động
-rủi ro cao, khó đảo ngược → kiểm tra mạnh hơn / yêu cầu xác nhận
+belief/state estimate
+    ↓
+choose low-risk informative action
+    ↓
+observe result
+    ↓
+update state
+    ↓
+continue/replan
 ```
 
-Đây là lập kế hoạch có xét độ hữu dụng và rủi ro, không chỉ là quy ước giao diện.
+Sometimes best next action is asking for missing information rather than committing to plan.
 
-## Bất định mô hình và tính ngẫu nhiên của môi trường
+## Irreversible actions
 
-Nhắc lại:
+Actions like payment, deletion, sending message or deploying code have high downside.
 
-- **bất định ngẫu nhiên (aleatoric uncertainty)**: ngẫu nhiên vốn có;
-- **bất định tri thức (epistemic uncertainty)**: mô hình hoặc hệ thống chưa biết đủ.
+Decision system should distinguish reversible vs irreversible actions.
 
-Chiến lược quyết định cho hai loại khác nhau. Dữ liệu mới có thể giảm bất định tri thức nhưng không loại bỏ nhiễu không thể giảm.
-
-Khám phá nhằm giảm bất định tri thức; chính sách bền vững bảo vệ trước mô hình chưa chắc chắn; hàm hữu dụng nhạy cảm rủi ro phản ánh mức nghiêm trọng của hậu quả.
-
-## Độ hữu dụng kỳ vọng không phải đạo đức
-
-Mã hóa hàm hữu dụng đòi hỏi quyết định kết quả của ai được tính và các đánh đổi được đo thế nào. Toán học tối ưu hàm hữu dụng được cung cấp; nó không tự định nghĩa giá trị đạo đức.
-
-Với AI ảnh hưởng cao tới xã hội, mô hình hữu dụng, ràng buộc công bằng và quản trị là các lựa chọn chuẩn tắc cần con người và thể chế quyết định.
-
-## Mô hình tư duy (mental model)
+Possible policy:
 
 ```text
-Xác suất      = điều gì có thể xảy ra?
-Độ hữu dụng   = hậu quả quan trọng đến mức nào?
-Chính sách    = chọn hành động nào ở mỗi trạng thái / niềm tin?
-Giá trị       = độ hữu dụng tương lai kỳ vọng từ đây
-MDP           = quyết định tuần tự với chuyển trạng thái ngẫu nhiên
-POMDP         = trạng thái bị ẩn một phần; suy luận bằng niềm tin
-Khám phá      = hành động một phần để học thêm
-Rủi ro        = quan tâm cả phân phối và phần đuôi, không chỉ trung bình
+low-risk reversible → autonomous
+high-risk irreversible → stronger validation / confirmation
 ```
 
-## Các hiểu lầm thường gặp
+This is utility/risk-aware planning, not just UX convention.
 
-### “Kết quả có xác suất cao nhất nên quyết định hành động”
+## Model uncertainty vs environment randomness
 
-Không. Hành động phụ thuộc hậu quả. Một sự kiện xác suất thấp nhưng thảm họa có thể chi phối lựa chọn kỳ vọng hoặc nhạy cảm rủi ro.
+Recall:
 
-### “Trạng thái MDP chỉ là quan sát hiện tại”
+- **aleatoric uncertainty**: inherent stochasticity;
+- **epistemic uncertainty**: ignorance/model uncertainty.
 
-Trạng thái phải đủ thông tin để thỏa tính Markov. Quan sát có thể chỉ là một phần.
+Decision strategy differs. More data may reduce epistemic uncertainty but not irreducible noise.
 
-### “Tối đa phần thưởng kỳ vọng nghĩa là chính sách an toàn nhất”
+Exploration targets epistemic uncertainty; robust policy protects against uncertain model; risk-sensitive utility handles consequence structure.
 
-Không nhất thiết. Mục tiêu trung bình có thể chấp nhận tổn thất hiếm nhưng thảm họa nếu rủi ro chưa được mã hóa.
+## Expected utility is not morality
 
-### “Có tác nhân thì tức là đang dùng RL”
+Encoding utility requires deciding whose outcomes count and how trade-offs measured. Mathematics optimizes provided utility; it does not define ethical values.
 
-Nếu mô hình chuyển và phần thưởng đã biết, chính sách có thể được giải bằng quy hoạch động; đó là lập kế hoạch trong MDP. RL đặc biệt học từ tương tác hoặc dữ liệu khi mô hình, giá trị hoặc chính sách chưa biết.
+For social/high-impact AI, utility model, fairness constraints and governance are normative design choices requiring human institutions.
 
-## Liên kết kiến thức
+## Mental Model
 
-Ra quyết định dưới bất định hoàn tất cầu nối từ tìm kiếm/lập kế hoạch cổ điển sang học tăng cường. Tìm kiếm xử lý lựa chọn xác định; MDP thêm chuyển trạng thái ngẫu nhiên và giá trị dài hạn; POMDP thêm trạng thái ẩn; RL học hành vi khi mô hình hoặc giá trị chưa biết.
+```text
+Probability = what may happen?
+Utility     = how much do outcomes matter?
+Policy      = what action to take in each state/belief?
+Value       = expected future utility from here
+MDP         = sequential decisions with stochastic transitions
+POMDP       = state partially hidden; reason with beliefs
+Exploration = act partly to learn
+Risk        = care about distribution/tails, not mean only
+```
 
-Sau phần Biểu diễn tri thức và Học máy, thư viện sẽ quay lại MDP và phương trình Bellman sâu hơn trong `11_reinforcement_learning/`.
+## Common Misconceptions
+
+### “Highest probability outcome should determine action”
+
+Decision depends consequences. Low-probability catastrophic event can dominate expected/risk-sensitive choice.
+
+### “MDP state is just current observation”
+
+State must be Markov-sufficient. Observation may be partial.
+
+### “Expected reward maximum means safest policy”
+
+Not necessarily. Mean objective can tolerate rare catastrophic loss unless risk encoded.
+
+### “RL begins whenever there is an agent”
+
+If transition/reward model known and policy solved by DP, it is planning in an MDP. RL specifically learns from interaction/data when relevant model/value/policy unknown.
+
+## Knowledge Connection
+
+Decision Making Under Uncertainty completes bridge from Classical Search/Planning to Reinforcement Learning. Search handles deterministic alternatives; MDP adds stochastic transitions and long-term value; POMDP adds hidden state; RL learns behavior when model/value unknown.
+
+Sau phần Knowledge Representation và Machine Learning, library sẽ quay lại MDP/Bellman equations sâu hơn trong `11_reinforcement_learning/`.

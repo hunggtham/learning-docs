@@ -1,185 +1,206 @@
-# Sequence-to-Sequence NLP: từ dịch máy tới học Text-to-Text
+# Sequence-to-Sequence NLP: từ Translation tới Text-to-Text Learning
 
-**Sequence-to-Sequence (Seq2Seq / 시퀀스-투-시퀀스)** trong NLP xử lý những bài toán mà đầu vào là một chuỗi và đầu ra là một chuỗi khác, có thể khác về độ dài và không có căn chỉnh một-một theo vị trí. Dịch máy, tóm tắt, sửa ngữ pháp, tạo câu hỏi và nhiều tác vụ structured-to-text thuộc họ này.
+Sequence-to-Sequence (Seq2Seq / 시퀀스-투-시퀀스) NLP xử lý tasks nơi input là một sequence và output là một sequence khác có thể khác length/alignment. Translation, summarization, grammatical correction, question generation và many structured-to-text tasks thuộc family này.
 
-Kiến trúc cơ bản đã được giải thích ở [Encoder–Decoder Models](../06_deep_learning_architectures/03_encoder_decoder_models.md); chapter này tập trung vào cách huấn luyện, giải mã và đánh giá đặc thù của NLP.
+Architecture đã được giải thích ở [Encoder–Decoder Models](../06_deep_learning_architectures/03_encoder_decoder_models.md); chapter này tập trung vào NLP-specific training, decoding và evaluation implications.
 
-## Mô hình hóa ngôn ngữ có điều kiện
+## Conditional Language Modeling
 
-Với chuỗi nguồn `x` và chuỗi đích `y`:
+Given source `x`, output sequence `y`:
 
 \[
 P(y\mid x)=\prod_{t=1}^{T}P(y_t\mid y_{<t},x)
 \]
 
-Huấn luyện tối thiểu hóa negative log-likelihood có điều kiện:
+Training minimize conditional negative log-likelihood:
 
 \[
 L=-\sum_t\log P(y_t^{true}\mid y_{<t}^{true},x)
 \]
 
-Điểm khác với mô hình ngôn ngữ tiếp diễn không điều kiện là mọi dự đoán đầu ra còn phụ thuộc chuỗi nguồn `x`.
+Source condition distinguishes seq2seq from unconditional/autoregressive LM continuation.
 
 ## Neural Machine Translation
 
-Dịch máy thống kê truyền thống sử dụng bảng cụm từ, mô hình căn chỉnh và mô hình ngôn ngữ. **Neural Machine Translation (NMT)** thay thế nhiều thành phần rời rạc bằng một mô hình có điều kiện được học end-to-end.
+Classical statistical MT used phrase tables, alignment models and language models. Neural MT learned end-to-end conditional model.
 
-Lịch sử phát triển đi từ RNN encoder–decoder, tới attention để loại nút thắt một-vector, rồi Transformer trở thành kiến trúc chủ đạo.
+RNN encoder-decoder first, then attention removed fixed-vector bottleneck, then Transformer became dominant.
 
-Dịch tốt không chỉ là thay từ vì thứ tự từ, hình thái, thành ngữ, ngữ dụng và cấu trúc diễn ngôn khác nhau giữa các ngôn ngữ.
+Translation quality requires more than word substitution because word order, morphology, idioms and discourse differ languages.
 
 ## Alignment
 
-Trọng số attention thường có tương quan với căn chỉnh nguồn–đích nhưng không đảm bảo là một bản alignment ngôn ngữ tường minh.
+Attention weights often correlate source-target alignment but are not guaranteed explicit linguistic alignments.
 
-Trong mô hình cổ điển, alignment hỏi từ nguồn nào tương ứng với từ đích nào. Trong mô hình neural, thông tin có thể được phân tán qua nhiều hidden state, head và layer.
+Traditional alignment asks which source word generated target word. Neural seq2seq may distribute source information across states/heads.
 
-Nếu cần căn chỉnh có khả năng giải thích hoặc ràng buộc nghiệp vụ, nên dùng cơ chế extraction hoặc constraint riêng thay vì suy ra trực tiếp từ attention map.
+For explainable translation, dedicated alignment extraction/constraints may be needed.
 
-## Copy Mechanism và Pointer Network
+## Copy Mechanism / Pointer Networks
 
-Một số nhiệm vụ cần sao chép chính xác tên riêng, số, mã hoặc thực thể từ nguồn. **Cơ chế sao chép (copy mechanism)** kết hợp phân bố sinh từ vocabulary với phân bố sao chép dựa trên attention:
+Some tasks require reproduce names/numbers/entities not well generated from fixed vocabulary.
+
+Pointer/copy mechanism mixes generation distribution with attention-based copying from source.
+
+Concept:
 
 \[
 P(token)=p_{gen}P_{vocab}+(1-p_{gen})P_{copy}
 \]
 
-Cách này hữu ích cho tóm tắt, data-to-text và dữ liệu có nhiều thực thể. Subword LM hiện đại giảm vấn đề OOV nhưng nhu cầu sao chép chính xác vẫn còn.
+Useful summarization, data-to-text and entity-heavy tasks.
 
-## Tóm tắt
+Modern subword LMs reduce OOV but exact copying still important.
 
-**Tóm tắt trích xuất (extractive summarization)** chọn câu hoặc đoạn trực tiếp từ nguồn.
+## Summarization
 
-**Tóm tắt sinh mới (abstractive summarization)** tạo cách diễn đạt mới.
+**Extractive** summarization selects source spans/sentences.
 
-Mô hình abstractive có nguy cơ hallucination vì mục tiêu sinh thưởng cho văn bản tóm tắt có xác suất cao chứ không trực tiếp bảo đảm mọi mệnh đề được nguồn hỗ trợ.
+**Abstractive** summarization generates new wording.
 
-Vì vậy **độ trung thành (faithfulness)** phải được đánh giá tách khỏi độ trôi chảy và mức bao phủ nội dung.
+Abstractive models risk hallucinating facts because generation objective rewards likely summary text, not strict entailment.
+
+Faithfulness evaluation therefore separate from fluency/coverage.
 
 ## Teacher Forcing và Exposure Bias
 
-Trong huấn luyện, decoder nhìn token đích đúng ở bước trước; trong suy luận, nó nhìn chính token đã sinh. Sự khác biệt này tạo exposure bias và lỗi có thể lan truyền dọc chuỗi.
+Training sees correct previous target. Inference sees own generated history.
 
-Các phương pháp tối ưu ở cấp chuỗi như minimum-risk training hoặc reinforcement learning đã được nghiên cứu, nhưng token-level maximum likelihood vẫn là nền tảng vì ổn định và dễ mở rộng.
+Sequence-level training approaches such as minimum risk training or reinforcement learning have been explored, but token-level MLE remains foundation due stability/scalability.
 
 ## Beam Search
 
-Beam Search giữ `B` chuỗi ứng viên từng phần có điểm tốt nhất theo tổng log-xác suất.
+Beam keeps top `B` partial translations according cumulative score.
 
-Log-xác suất thô thường ưu tiên chuỗi ngắn, vì vậy có thể dùng chuẩn hóa độ dài:
+Raw log probability biases short sequences. Length normalization:
 
 \[
 score(y)=\frac{\log P(y\mid x)}{len(y)^\alpha}
 \]
 
-hoặc các dạng penalty khác.
+or other penalties balance length.
 
-Beam lớn hơn không phải lúc nào cũng cải thiện chất lượng theo đánh giá con người; phân bố mô hình đôi khi ưu tiên giả thuyết ngắn hoặc chung chung.
+Larger beam does not always improve human quality; model probability may prefer generic/short hypotheses.
 
 ## Coverage
 
-Mô hình Seq2Seq có thể bỏ sót phần nguồn hoặc lặp nội dung. Các cơ chế **coverage** theo dõi mức độ mỗi vị trí nguồn đã được attention để giảm bỏ sót và lặp.
+Seq2seq may under-translate/repeat source. Coverage mechanisms track how much attention each source position received.
 
-Transformer hiện đại giảm một số vấn đề so với kiến trúc cũ nhưng không loại bỏ hoàn toàn lỗi thiếu hoặc lặp thông tin.
+Modern Transformers reduce but do not eliminate omissions/repetitions.
 
-## Hợp nhất tác vụ theo Text-to-Text
+## Text-to-Text Unification
 
-Các mô hình kiểu T5 đưa nhiều bài toán về cùng khuôn dạng:
+T5-style framing casts tasks as:
 
 ```text
-văn bản đầu vào + chỉ dẫn tác vụ → văn bản đầu ra
+input text + task prefix → output text
 ```
 
-Ví dụ:
+Examples:
 
 ```text
 translate English to German: ...
 summarize: ...
 ```
 
-Một kiến trúc sinh có điều kiện có thể xử lý phân loại, QA, dịch và tóm tắt. Đây là tiền đề trực tiếp cho LLM instruction-tuned, nơi chỉ dẫn bằng ngôn ngữ tự nhiên xác định tác vụ.
+One conditional generation architecture handles classification, QA, translation, summarization.
+
+This foreshadows instruction-tuned LLMs where natural language defines task.
 
 ## Denoising Seq2Seq Pretraining
 
-Có thể làm hỏng một phần đầu vào rồi huấn luyện mô hình khôi phục văn bản gốc:
+Corrupt input spans and train model reconstruct original:
 
 ```text
-văn bản bị làm hỏng → encoder
-                     → decoder → văn bản gốc
+corrupted text → encoder
+               → decoder → original text
 ```
 
-Cách này cho phép encoder–decoder học cấu trúc ngôn ngữ từ corpus không gán nhãn trước khi fine-tuning có giám sát. BART và T5 là những ví dụ tiêu biểu của họ mục tiêu denoising này.
+This lets encoder-decoder learn language from unlabeled corpora before supervised fine-tuning.
 
-## Giải mã có ràng buộc
+BART/T5-style objectives are examples.
 
-Một số ứng dụng yêu cầu đầu ra phải tuân theo định dạng hoặc thuật ngữ cụ thể.
+## Constrained Decoding
 
-Constrained Beam Search có thể bắt buộc cụm từ, token schema hoặc quy tắc ngữ pháp. Với JSON hoặc output có cấu trúc, hệ thống hiện đại có thể giới hạn token hợp lệ theo grammar/schema thay vì chỉ hi vọng prompt tạo chuỗi đúng.
+Some applications require output format/terminology constraints.
 
-Điều này nối sinh ngôn ngữ với tìm kiếm và bài toán thỏa ràng buộc cổ điển.
+Constrained beam search can force phrases, schema tokens or grammar.
 
-## Dịch đa ngôn ngữ
+For structured JSON generation, modern systems may constrain next-token choices by grammar/schema rather than hope prompt alone produces valid structure.
 
-Một mô hình có thể xử lý nhiều cặp ngôn ngữ bằng tag hoặc instruction. Transfer giữa các ngôn ngữ giúp cặp ít dữ liệu, nhưng chênh lệch dữ liệu có thể làm ngôn ngữ tài nguyên cao chi phối dung lượng mô hình.
+This connects language generation with classical search/constraint satisfaction.
 
-Reweighting hoặc lấy mẫu theo temperature thường được dùng để cân bằng nguồn dữ liệu.
+## Multilingual Translation
 
-Dịch zero-shot giữa cặp không được huấn luyện trực tiếp có thể xuất hiện nhưng chất lượng thay đổi mạnh theo ngôn ngữ và corpus.
+One model can handle many language pairs with language tags/instructions.
 
-## Đánh giá bằng BLEU
+Transfer helps low-resource pairs, but capacity/data imbalance can cause interference. Sampling temperature/reweighting often used so high-resource English does not dominate.
 
-BLEU so độ trùng n-gram với bản tham chiếu và dùng brevity penalty:
+Zero-shot translation may emerge between pairs not directly trained, but quality varies.
+
+## Evaluation: BLEU
+
+BLEU compares n-gram precision against references with brevity penalty.
+
+Simplified:
 
 \[
 BLEU=BP\cdot\exp\left(\sum_nw_n\log p_n\right)
 \]
 
-BLEU hữu ích ở cấp corpus trong dịch máy, nhưng có nhiều giới hạn: một câu có nhiều bản dịch hợp lệ, metric không nhạy tốt với mọi khác biệt ngữ nghĩa hoặc factuality, tokenization ảnh hưởng mạnh và điểm cấp câu không ổn định.
+Useful corpus-level MT benchmark, but limitations:
 
-Các metric neural như COMET hoặc BERTScore sử dụng biểu diễn học được nhưng mang theo thiên lệch của chính mô hình đánh giá. Đánh giá con người vẫn quan trọng cho độ đầy đủ, trôi chảy và trung thành.
+- multiple valid translations;
+- weak semantic/factual sensitivity;
+- tokenization matters;
+- sentence-level unstable.
 
-## Lỗi ở cấp chuỗi
+Neural metrics like COMET/BERTScore use learned representations but introduce model bias.
 
-Một lỗi sớm khi giải mã có thể đổi toàn bộ lịch sử phía sau. Vì vậy token accuracy không phản ánh đầy đủ chất lượng chuỗi.
+Human evaluation remains important for adequacy/fluency/faithfulness.
 
-Error analysis nên xem các nhóm như:
+## Sequence-Level Error
+
+A single early decoding error changes subsequent history. Token accuracy does not capture global coherence.
+
+Evaluation should inspect:
 
 ```text
-bỏ sót
-thêm thông tin / hallucination
-dịch sai
-sai thực thể hoặc con số
-sai hòa hợp ngữ pháp
-không nhất quán thuật ngữ
-lặp nội dung
+omission
+addition/hallucination
+mistranslation
+entity/number errors
+agreement
+terminology consistency
+repetition
 ```
 
-## Thích ứng Domain
+## Domain Adaptation
 
-Mô hình dịch tổng quát có thể xử lý kém thuật ngữ pháp lý, y tế hoặc nội bộ công ty. Fine-tuning, adapter, terminology constraint và retrieval từ translation memory có thể giúp.
+General MT may fail legal/medical/company terminology. Fine-tuning/adapters, terminology constraints and retrieval of translation memory can help.
 
-Tuy nhiên thích ứng quá hẹp có thể gây catastrophic forgetting, nên cần kiểm soát learning rate, trộn dữ liệu tổng quát và đánh giá ngoài domain.
+But domain adaptation can cause catastrophic forgetting general language; mixing/general data and controlled fine-tuning matter.
 
-## Mô hình tư duy
+## Mental Model
 
-> Seq2Seq NLP = mô hình ngôn ngữ có điều kiện + cơ chế truy cập thông tin nguồn + thủ tục giải mã/tìm kiếm.
+> Seq2Seq NLP is conditional language modeling plus a source-information access mechanism and a decoding/search procedure.
 
-Kiến trúc tạo phân bố xác suất; thuật toán giải mã quyết định cách biến phân bố đó thành chuỗi cuối cùng.
+Architecture gives probability distribution; decoding turns distribution into final sequence.
 
-## Những hiểu lầm thường gặp
+## Common Misconceptions
 
-### “Beam Search tìm chính xác bản dịch tốt nhất”
+### “Beam search tìm exact best translation”
 
-Không. Beam hữu hạn là heuristic và chuỗi xác suất cao nhất theo mô hình chưa chắc là bản dịch con người đánh giá tốt nhất.
+Finite beam is heuristic and model's highest-probability sequence may not be best human translation.
 
-### “BLEU cao nghĩa tóm tắt trung thành sự thật”
+### “High BLEU means factually faithful summary”
 
-Không. Độ trùng n-gram không đủ để phát hiện mọi hallucination.
+BLEU overlap cannot reliably detect hallucinated facts.
 
-### “Seq2Seq lỗi thời sau decoder-only LLM”
+### “Seq2Seq became obsolete after decoder-only LLMs”
 
-Không. Encoder–decoder vẫn tự nhiên và hiệu quả cho nhiều phép biến đổi có điều kiện; decoder-only thống nhất nhiều tác vụ qua prompting nhưng không tối ưu tuyệt đối cho mọi trường hợp.
+Encoder-decoder remains efficient/natural for conditional transformation and widely used; decoder-only unifies via prompting but not universally optimal.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Seq2Seq kết hợp [Language Model](./02_language_models.md), [Encoder–Decoder](../06_deep_learning_architectures/03_encoder_decoder_models.md), [Attention](../06_deep_learning_architectures/04_attention.md) và liên hệ trực tiếp với tìm kiếm cổ điển thông qua quá trình giải mã.
+Seq2Seq combines [Language Models](./02_language_models.md), [Encoder–Decoder](../06_deep_learning_architectures/03_encoder_decoder_models.md), [Attention](../06_deep_learning_architectures/04_attention.md), and connects classical search via decoding.

@@ -1,178 +1,168 @@
-# Từ mô hình ngôn ngữ tới mô hình ngôn ngữ lớn
+# Từ Language Models tới Large Language Models
 
-**Mô hình ngôn ngữ lớn (Large Language Model — LLM / 대규모 언어 모델)** không phải một loại mô hình xác suất hoàn toàn mới. Cốt lõi vẫn là **mô hình hóa ngôn ngữ (language modeling)**: ước lượng phân bố của token dựa trên ngữ cảnh. Điều thay đổi chủ yếu là **quy mô (scale)** của mô hình, dữ liệu, năng lực tính toán và quá trình hậu huấn luyện (post-training), nhờ đó mô hình học được các biểu diễn có thể tái sử dụng và năng lực rộng hơn nhiều tác vụ đơn lẻ.
+Large Language Model (LLM / 대규모 언어 모델) không phải một loại probability model hoàn toàn mới. Core vẫn là language modeling: estimate distribution của token dựa trên context. Điều thay đổi là **scale của model, data, compute và post-training**, khiến model học reusable representations và capabilities rộng hơn nhiều task cụ thể.
 
-Một LLM dạng chỉ-bộ-giải-mã (decoder-only) thường vẫn tối ưu:
+Một decoder-only LLM thường vẫn tối ưu:
 
 \[
 P(x_{1:T})=\prod_{t=1}^{T}P(x_t\mid x_{<t})
 \]
 
-bằng kiến trúc Transformer. Tuy nhiên khi được mở rộng đủ lớn, mô hình tiền huấn luyện (pretrained model) có thể trở thành **mô hình nền tảng (foundation model)** và thích ứng qua prompt, ví dụ trong ngữ cảnh, tinh chỉnh (fine-tuning), tối ưu sở thích (preference optimization) và công cụ (tools).
+với Transformer. Nhưng scale làm pretrained model trở thành **foundation model** có thể adapt qua prompt, examples, fine-tuning, preference optimization và tools.
 
-## “Large” không có một ngưỡng cố định
+## “Large” không có một threshold cố định
 
-Không có một số lượng tham số chính thức mà tại đó mô hình ngôn ngữ đột nhiên trở thành LLM. Thuật ngữ này mô tả một chế độ thực tế: mô hình đủ lớn và được huấn luyện trên phạm vi đủ rộng để hỗ trợ nhiều tác vụ và năng lực phía sau.
+Không có parameter count chính thức nơi language model đột nhiên thành LLM. Term phản ánh practical regime: model đủ lớn, trained đủ broad để support many downstream tasks/capabilities.
 
-Chỉ số lượng tham số là chưa đủ. Chất lượng dữ liệu, tổng số token đã huấn luyện, kiến trúc, độ dài ngữ cảnh và hậu huấn luyện đều ảnh hưởng mạnh tới năng lực.
+Parameter count alone không đủ. Data quality, tokens trained, architecture, context length và post-training quyết định capability.
 
-Một mô hình nhỏ hơn nhưng được huấn luyện tốt có thể vượt một mô hình lớn hơn nhưng được huấn luyện kém trên miền mục tiêu cụ thể.
+Một smaller well-trained model có thể outperform larger poorly trained model trên target domain.
 
-## Tiền huấn luyện tạo mô hình cơ sở
+## Pretraining tạo base model
 
-Kho dữ liệu tiền huấn luyện (pretraining corpus) có thể rất lớn, chẳng hạn:
+Pretraining corpus rất lớn:
 
 ```text
 web
-sách
-mã nguồn
-bài báo khoa học
-diễn đàn
-văn bản đa ngôn ngữ
-dữ liệu tổng hợp hoặc đã tuyển chọn
+books
+code
+papers
+forums
+multilingual text
+synthetic/curated data
 ```
 
-Mô hình thường học bằng mục tiêu tự giám sát (self-supervised objective), chẳng hạn dự đoán token tiếp theo.
+Model train next-token prediction/self-supervised objective.
 
-Kết quả là **mô hình cơ sở (base model)** có khả năng tiếp tục chuỗi văn bản tốt nhưng chưa chắc tuân theo chỉ dẫn của người dùng một cách ổn định.
+Result **base model** giỏi continuation nhưng chưa chắc follow user instructions reliably.
 
-Trong dữ liệu tiền huấn luyện đã tồn tại nhiều phong cách và dạng tác vụ, vì vậy mô hình có thể hình thành các năng lực tiềm ẩn. Tuy nhiên hành vi mặc định của mô hình cơ sở vẫn gần với việc “tiếp tục chuỗi có xác suất hợp lý”.
+Base model sees many styles/tasks embedded in text and may learn latent capabilities, nhưng interface default vẫn “continue likely text”.
 
-## Mô hình nền tảng
+## Foundation Model
 
-**Mô hình nền tảng (foundation model)** là mô hình được tiền huấn luyện trên phạm vi rộng và có thể thích ứng cho nhiều tác vụ phía sau.
+Foundation model là pretrained broad model có thể adapt nhiều downstream tasks.
 
-LLM thường là mô hình nền tảng tập trung vào văn bản và mã nguồn. Mô hình nền tảng đa phương thức (multimodal foundation model) bổ sung hình ảnh, âm thanh hoặc các dạng dữ liệu khác.
+LLM thường là text/code-centered foundation model. Multimodal foundation model adds vision/audio etc.
 
-Tính “nền tảng” đến từ khả năng tái sử dụng biểu diễn và năng lực trên nhiều tác vụ, chứ không chỉ từ kích thước.
+Foundation status comes from reusable representation/capability, not only size.
 
-## Hậu huấn luyện
+## Post-Training
 
-Hành vi của trợ lý hiện đại thường được hình thành qua **hậu huấn luyện (post-training)**:
+Modern assistant behavior thường đến từ post-training:
 
 ```text
-Mô hình cơ sở đã tiền huấn luyện
-→ tinh chỉnh có giám sát / theo chỉ dẫn
-→ tối ưu sở thích như RLHF, DPO...
-→ tinh chỉnh an toàn hoặc theo miền
-→ huấn luyện sử dụng công cụ
+Pretrained base model
+→ supervised/instruction fine-tuning
+→ preference optimization / RLHF / DPO-like stages
+→ safety/domain tuning
+→ tool-use training
 ```
 
-Hậu huấn luyện thay đổi phân bố hành vi của mô hình mà không nhất thiết bổ sung lượng tri thức thế giới rộng ngang với giai đoạn tiền huấn luyện.
+Post-training changes behavior distribution without necessarily adding broad world knowledge comparable pretraining scale.
 
-## Năng lực và hành vi
+## Capability vs Behavior
 
-Một mô hình cơ sở có thể đã có năng lực trả lời một loại câu hỏi nhưng chưa mặc định chọn cách phản hồi hữu ích. **Tinh chỉnh theo chỉ dẫn (instruction tuning)** dạy mô hình thể hiện và sử dụng năng lực theo hành vi mong muốn hơn.
+Base model may possess capability to answer question but not default choose useful response format. Instruction tuning teaches behavior to expose/use capabilities.
 
-Ngược lại, một tập hậu huấn luyện nhỏ khó tạo ra tri thức sâu hoàn toàn mới nếu biểu diễn và dữ liệu tiền huấn luyện không cung cấp nền tảng cần thiết.
+Conversely post-training cannot reliably create deep knowledge absent from representation/data with tiny dataset.
 
-Một mô hình tư duy hữu ích là:
+Useful distinction:
 
 ```text
-tiền huấn luyện
-→ biểu diễn, tri thức và năng lực tổng quát
-
-hậu huấn luyện
-→ cách, thời điểm và mức ưu tiên khi thể hiện các hành vi
+pretraining → broad representations/knowledge/capabilities
+post-training → how/when to express and prioritize behaviors
 ```
 
-Đây không phải ranh giới tuyệt đối, nhưng giúp phân tích hệ thống rõ hơn.
+not absolute, but good mental model.
 
-## Học trong ngữ cảnh
+## In-Context Learning
 
-Trong lúc suy luận, prompt có thể chứa mô tả tác vụ và các ví dụ. Trọng số không thay đổi, nhưng hành vi của mô hình thay đổi dựa trên ngữ cảnh. Cơ chế này gọi là **học trong ngữ cảnh (in-context learning)**.
+At inference, prompt includes task description/examples. Weights remain fixed, yet behavior changes based on context.
 
 ```text
-Ví dụ trong prompt
-→ Transformer xử lý mẫu quan hệ
-→ phần tiếp tục tuân theo tác vụ được suy ra
+Examples in prompt
+→ Transformer processes pattern
+→ continuation follows inferred task
 ```
 
-Điều này khác tinh chỉnh:
+This differs fine-tuning:
 
-- học trong ngữ cảnh: tạm thời, chỉ tồn tại trong context hiện tại, không cập nhật trọng số;
-- tinh chỉnh: thay đổi tham số và ảnh hưởng được lưu lại trong mô hình.
+- in-context: temporary, context-bound, no weight update;
+- fine-tuning: parameter changes persist.
 
-## Năng lực xuất hiện theo quy mô
+## Emergent Capabilities
 
-Một số năng lực có vẻ xuất hiện đột ngột khi quy mô tăng nếu ta đo bằng metric rời rạc. Tuy nhiên một phần hiện tượng **năng lực nổi lên (emergent capabilities)** có thể đến từ cách đo theo ngưỡng; năng lực tiềm ẩn hoặc loss bên dưới có thể cải thiện liên tục hơn.
+Some capabilities appear sharply as scale increases under discrete metrics. But apparent “emergence” can partly result thresholded measurement; underlying loss/capability may improve smoothly.
 
-Do đó không nên diễn giải hiện tượng này theo hướng huyền bí. Cải thiện liên tục về mô hình có thể tạo thay đổi định tính trong thực tế khi vượt qua ngưỡng để một tác vụ trở nên khả thi.
+Avoid mystical interpretation. Scaling can create qualitative practical changes when smooth improvements cross task viability thresholds.
 
-## Tri thức của LLM trong tham số
+## LLM Knowledge in Parameters
 
-Tiền huấn luyện nén cấu trúc thống kê của dữ liệu vào trọng số. Các fact không được lưu như những bản ghi cơ sở dữ liệu có nguồn gốc rõ ràng, mà được phân tán trong tham số và biểu diễn.
+Pretraining compresses statistical structure into weights. Facts are distributed, not records with explicit provenance.
 
-Hệ quả là:
+Consequences:
 
-- việc nhớ lại có tính xác suất;
-- nguồn của một fact không tự động được lưu dưới dạng có thể truy xuất;
-- cập nhật tri thức thường cần huấn luyện lại, chỉnh sửa mô hình hoặc truy xuất ngoài;
-- các fact hiếm hoặc mâu thuẫn kém ổn định hơn;
-- tri thức có thể lỗi thời theo mốc dữ liệu huấn luyện.
+- recall probabilistic;
+- source not inherently stored/retrievable;
+- updates require retraining/editing/retrieval;
+- conflicts/rare facts unreliable;
+- temporal cutoff/staleness.
 
-RAG giải quyết một phần vấn đề này bằng cách đưa tri thức bên ngoài, có thể cập nhật, vào ngữ cảnh.
+RAG externalizes updateable knowledge.
 
-## Ngữ cảnh là thông tin làm việc tạm thời
+## Context as Temporary Working Input
 
-**Cửa sổ ngữ cảnh (context window)** chứa prompt, tài liệu, lịch sử hội thoại và kết quả công cụ. Nó đóng vai trò thông tin làm việc tạm thời mà attention có thể truy cập, khác với trạng thái dài hạn đã được học trong tham số.
+Context window holds prompt, documents, conversation, tool outputs. It acts like temporary information accessible by attention, distinct parameterized long-term learned state.
 
-Có thể tách bốn loại trạng thái như sau:
+Useful system distinction:
 
 ```text
-Trọng số
-→ tri thức và hành vi thống kê đã học, tồn tại lâu dài
-
-Ngữ cảnh
-→ thông tin làm việc dành riêng cho request hiện tại
-
-Truy xuất / công cụ
-→ tri thức hoặc trạng thái bên ngoài, có thể thay đổi
-
-Hệ thống bộ nhớ
-→ trạng thái người dùng / tác vụ được ứng dụng lưu bền vững
+Weights  → persistent learned statistical knowledge/behavior
+Context  → request-specific working information
+Retrieval/tool → external dynamic knowledge/state
+Memory system → persisted application-level user/task state
 ```
 
-## LLM không tự động là tác nhân
+## LLM không tự động là Agent
 
-LLM ánh xạ ngữ cảnh thành token hoặc biểu diễn cho lời gọi công cụ. **Tác nhân (agent)** cần thêm vòng lặp tương tác:
+LLM maps context to tokens/tool-call representation. Agent adds loop:
 
 ```text
-mục tiêu
-→ mô hình quyết định
-→ công cụ / hành động
-→ kết quả từ môi trường
-→ cập nhật trạng thái
-→ lặp lại
+goal
+→ model decision
+→ tool/action
+→ environment result
+→ updated state
+→ repeat
 ```
 
-LLM có thể là thành phần lập luận hoặc lập kế hoạch, nhưng tác nhân cần lớp điều phối hệ thống (orchestration) bao quanh.
+LLM can be reasoning/planning component but agent requires system orchestration.
 
 ## LLM không tự động là RAG
 
-**RAG (Retrieval-Augmented Generation)** bổ sung bước truy xuất tri thức bên ngoài trước hoặc trong quá trình sinh. Một LLM chỉ trả lời từ tham số của nó không phải là RAG.
+RAG adds external retrieval before/during generation. A plain LLM answering from parameters is not RAG.
 
-Chất lượng RAG phụ thuộc retriever, cách chia đoạn (chunking), xếp hạng lại (reranking), cách xây context và khả năng sử dụng tài liệu của mô hình, chứ không chỉ phụ thuộc LLM.
+RAG quality depends retriever/chunking/reranking/context usage, not only model.
 
-## Vì sao kiến trúc decoder-only phổ biến?
+## Decoder-Only Dominance
 
-Kiến trúc chỉ-bộ-giải-mã (decoder-only) trở thành lựa chọn phổ biến cho trợ lý tổng quát vì cùng một giao diện sinh nhân quả có thể xử lý:
+Decoder-only architecture became common general assistant model because one causal interface handles:
 
 ```text
-hoàn thành văn bản
-hội thoại
-phân loại dưới dạng sinh
-mã nguồn
-đầu ra có cấu trúc
-lời gọi công cụ
-few-shot task
+completion
+chat
+classification-as-generation
+code
+structured output
+tool calls
+few-shot tasks
 ```
 
-Tuy vậy mô hình encoder hoặc encoder–decoder vẫn có thể hiệu quả hơn cho nhiều tác vụ chuyên biệt.
+Encoder/encoder-decoder models remain more efficient for many specialized tasks.
 
-## Mô hình chat là một giao thức trên chuỗi token
+## Chat Model là protocol trên token sequence
 
-Hội thoại thường được tuần tự hóa bằng token hoặc template đặc biệt:
+Conversation usually serialized with special tokens/template:
 
 ```text
 <system> ...
@@ -180,54 +170,54 @@ Hội thoại thường được tuần tự hóa bằng token hoặc template �
 <assistant> ...
 ```
 
-Mô hình cuối cùng vẫn nhận một chuỗi token. Các vai trò có ý nghĩa vì hậu huấn luyện dạy mô hình phản ứng khác nhau tùy marker và cấu trúc hội thoại.
+Model still sees one token sequence. Roles matter because post-training teaches behavior conditional on those markers.
 
-Thay đổi **chat template** có thể ảnh hưởng đáng kể tới chất lượng và độ an toàn.
+Changing chat template can materially affect quality/safety.
 
-## LLM dưới góc nhìn hệ thống
+## LLM stack như một system
 
 ```text
-Người dùng / Ứng dụng
+User/Application
 ↓
-Bộ xây prompt và context
+Prompt / context builder
 ↓
 Tokenizer
 ↓
-Suy luận Transformer
+Transformer inference
 ↓
-Logit / sampling / structured decoding
+Logits / sampling / structured decoding
 ↓
-Công cụ / truy xuất / validation nếu có
+Optional tools/retrieval/validation
 ↓
-Đầu ra
+Output
 ```
 
-Trong production, điểm nghẽn chất lượng thường nằm ở xây context, lỗi công cụ, quyền truy cập, độ trễ và đánh giá chứ không chỉ ở mô hình.
+Production quality often limited by context construction, tool errors, permissions, latency and evaluation — not model alone.
 
-## Mô hình tư duy
+## Mental Model
 
-> LLM là bộ dự đoán chuỗi được tiền huấn luyện ở quy mô lớn, có biểu diễn đủ rộng để tái sử dụng và thích ứng cho nhiều tác vụ ngôn ngữ và mã nguồn; hành vi trợ lý là kết quả của hậu huấn luyện và kiến trúc hệ thống xây trên mô hình đó.
+> LLM = large-scale pretrained sequence predictor whose learned representations are broad enough to be reused/adapted for many language/code tasks; assistant behavior is a post-trained system built on top.
 
-## Những hiểu lầm thường gặp
+## Common Misconceptions
 
-### “LLM khác mô hình ngôn ngữ vì nó suy luận thay vì dự đoán token”
+### “LLM khác language model vì nó reasoning thay vì predict token”
 
-Suy luận vẫn được thực hiện thông qua việc dự đoán token. Tuy nhiên phép tính bên trong Transformer có thể hỗ trợ những hành vi giống lập luận phức tạp.
+Inference vẫn implemented through token prediction; richer computation inside Transformer can support reasoning-like behavior.
 
-### “Nhiều tham số hơn nghĩa là tri thức tăng tuyến tính”
+### “More parameters means more knowledge linearly”
 
-Năng lực phụ thuộc dữ liệu, cách huấn luyện và kiến trúc; số tham số không phải số lượng tri thức.
+Capability depends data/training/architecture; parameter count alone not knowledge count.
 
-### “Một mô hình kiểu ChatGPT chỉ là mô hình ngôn ngữ đã tiền huấn luyện”
+### “ChatGPT-like model is just pretrained LM”
 
-Hành vi hội thoại hữu ích còn cần hậu huấn luyện, giao thức prompt, lớp an toàn và tích hợp hệ thống.
+Useful chat behavior requires post-training, prompting/protocol, safety and system integration.
 
-### “Bộ nhớ của LLM chính là cửa sổ ngữ cảnh”
+### “LLM memory is its context window”
 
-Ngữ cảnh là đầu vào tạm thời; bộ nhớ bền vững của ứng dụng là một hệ thống khác.
+Context is temporary input; persistent application memory is separate system.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Nên đọc trước: [Language Models](../07_natural_language_processing/02_language_models.md), [Transformer](../06_deep_learning_architectures/05_transformer.md) và [NLP tokenization](../07_natural_language_processing/01_text_normalization_and_tokenization.md).
+Prerequisites: [Language Models](../07_natural_language_processing/02_language_models.md), [Transformer](../06_deep_learning_architectures/05_transformer.md), [NLP tokenization](../07_natural_language_processing/01_text_normalization_and_tokenization.md).
 
-Xem tiếp: [LLM Tokenization](./01_llm_tokenization.md), sau đó là embedding, nội bộ Transformer, tiền huấn luyện và hậu huấn luyện.
+Xem tiếp: [LLM Tokenization](./01_llm_tokenization.md), then embeddings/Transformer internals, pretraining and post-training.

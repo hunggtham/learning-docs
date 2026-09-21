@@ -1,50 +1,50 @@
-# Nền tảng truy xuất thông tin
+# Information Retrieval Foundations
 
-**Truy xuất thông tin (Information Retrieval — IR / 정보 검색)** nghiên cứu cách tìm các tài liệu hoặc item liên quan từ một collection lớn dựa trên query. RAG hiện đại dựa trực tiếp trên IR, vì trước khi LLM có thể trả lời bằng tri thức bên ngoài, hệ thống phải tìm đúng bằng chứng.
+**Information Retrieval (IR / 정보 검색 / truy xuất thông tin)** nghiên cứu cách tìm những document hoặc item liên quan từ một collection lớn dựa trên một query. RAG hiện đại dựa trực tiếp trên IR, vì trước khi LLM có thể trả lời dựa trên external knowledge, system phải tìm đúng evidence.
 
-## Retrieval không phải tra cứu cơ sở dữ liệu
+## Retrieval không phải Database Lookup
 
-Database lookup thường có khóa hoặc predicate chính xác:
+Database lookup thường có key hoặc predicate chính xác:
 
 ```sql
 SELECT * FROM policy WHERE policy_id = 'A-102';
 ```
 
-Information Retrieval xử lý những query mơ hồ hơn, chẳng hạn:
+Information retrieval xử lý query mơ hồ hơn:
 
 ```text
 "quy định hoàn tiền khi hủy dịch vụ"
 ```
 
-Không có exact key rõ ràng; hệ thống phải ước lượng **mức liên quan (relevance)** giữa query và tài liệu.
+Không có exact key rõ ràng. System phải estimate relevance giữa query và documents.
 
-## Corpus, Query và Relevance
+## Corpus, Query, Relevance
 
-Một bài toán retrieval có:
+Một retrieval problem có:
 
 ```text
 Corpus D = {d1, d2, ..., dn}
 Query q
-Điểm liên quan s(q, d)
+Relevance score s(q, d)
 ```
 
-Hệ thống xếp hạng tài liệu theo score.
+System rank documents theo score.
 
-Điểm khó là relevance không phải thuộc tính tuyệt đối của document. Nó phụ thuộc query, ý định người dùng, thời gian và tác vụ.
+Điểm khó là **relevance không phải property tuyệt đối của document**. Nó phụ thuộc query, user intent, time và task.
 
-Một tài liệu nói đúng chủ đề nhưng không chứa đáp án cụ thể có thể liên quan về chủ đề nhưng không đủ để trả lời.
+Một document nói đúng chủ đề nhưng không chứa answer cụ thể có thể topical relevant nhưng answer-irrelevant.
 
 ## Boolean Retrieval
 
-Cách đơn giản nhất dùng khớp term:
+Cách đơn giản nhất dùng term matching:
 
 ```text
 refund AND cancellation
 ```
 
-Boolean retrieval rất chính xác khi vocabulary ổn định nhưng dễ thất bại với synonym, morphology và natural-language query.
+Boolean retrieval rất precise khi vocabulary ổn định, nhưng brittle với synonym, morphology và natural-language query.
 
-Nó vẫn hữu ích trong enterprise search vì filter constraint thường mang tính xác định:
+Nó vẫn hữu ích trong enterprise search vì filter constraints thường deterministic:
 
 ```text
 product = eKYC
@@ -52,14 +52,14 @@ AND version = current
 AND language = ko
 ```
 
-Hệ thống hiện đại thường kết hợp semantic ranking với metadata filter.
+Modern retrieval thường kết hợp semantic ranking với metadata filters.
 
-## Chỉ mục đảo
+## Inverted Index
 
-Search engine không quét toàn bộ document cho mỗi query mà xây **chỉ mục đảo (inverted index / 역색인)**:
+Search engine không scan mọi document cho mỗi query. Nó xây **inverted index (역색인)**:
 
 ```text
-term → danh sách document chứa term
+term → list of documents containing term
 ```
 
 Ví dụ:
@@ -69,13 +69,15 @@ refund → [doc2, doc8, doc20]
 cancel → [doc2, doc3, doc20]
 ```
 
-Query chỉ cần đọc những posting list liên quan. Đây là nền tảng của lexical search như BM25.
+Query chỉ cần inspect postings lists liên quan.
 
-## Tần suất term và tần suất document
+Đây là foundation của lexical search như BM25.
 
-Một term xuất hiện nhiều trong document có thể quan trọng với document đó, nhưng term xuất hiện trong gần mọi document lại ít khả năng phân biệt.
+## Term Frequency và Document Frequency
 
-TF-IDF biểu diễn trực giác này:
+Một term xuất hiện nhiều trong document có thể quan trọng cho document đó, nhưng term phổ biến trong gần mọi document mang ít discriminative value.
+
+TF-IDF captures intuition:
 
 \[
 TFIDF(t,d)=TF(t,d)\cdot IDF(t)
@@ -87,53 +89,53 @@ với:
 IDF(t)=\log\frac{N}{df(t)}
 \]
 
-`df(t)` là số document chứa term.
+`df(t)` là số documents chứa term.
 
-Các term hiếm nhưng có tính thông tin được gán trọng số cao hơn từ phổ biến.
+Rare informative terms được weight cao hơn common words.
 
 ## BM25
 
-BM25 là một hàm xếp hạng lexical rất mạnh. Dạng rút gọn:
+BM25 là lexical ranking function rất mạnh. Simplified form:
 
 \[
 score(q,d)=\sum_{t\in q} IDF(t)\cdot \frac{tf(t,d)(k_1+1)}{tf(t,d)+k_1(1-b+b\frac{|d|}{avgdl})}
 \]
 
-Nó thêm saturation cho term frequency và chuẩn hóa theo độ dài document.
+Nó thêm saturation cho term frequency và length normalization.
 
-Mô hình tư duy:
+Mental model:
 
-> Một term quan trọng khi nó khớp query, hiếm trong corpus và xuất hiện đủ mạnh trong document, nhưng việc lặp lại không được thưởng vô hạn.
+> Một term quan trọng nếu nó match query, hiếm trong corpus và xuất hiện đủ mạnh trong document, nhưng repetition không được reward vô hạn.
 
-BM25 vẫn rất cạnh tranh trong enterprise RAG, đặc biệt với product code, ID, thuật ngữ pháp lý và tên chính xác.
+BM25 vẫn competitive trong enterprise RAG, đặc biệt cho product codes, IDs, legal terms và exact names.
 
 ## Precision và Recall trong Retrieval
 
-**Precision** hỏi: trong các item đã retrieve, bao nhiêu item thực sự relevant?
+**Precision** hỏi: trong items retrieved, bao nhiêu thực sự relevant?
 
 \[
 Precision=\frac{Relevant\ Retrieved}{Retrieved}
 \]
 
-**Recall** hỏi: trong toàn bộ item relevant, hệ thống retrieve được bao nhiêu?
+**Recall** hỏi: trong tất cả relevant items, retrieve được bao nhiêu?
 
 \[
 Recall=\frac{Relevant\ Retrieved}{All\ Relevant}
 \]
 
-RAG thường ưu tiên recall ở retrieval tầng đầu rồi dùng reranker để tăng precision.
+RAG thường ưu tiên recall ở first-stage retrieval rồi dùng reranker để tăng precision.
 
-Nếu bằng chứng đúng không lọt vào candidate set, LLM phía sau không thể sử dụng nó.
+Nếu correct evidence không vào candidate set, LLM phía sau không thể sử dụng nó.
 
-## Metric xếp hạng
+## Ranking Metrics
 
 ### Recall@k
 
-Đo khả năng item relevant xuất hiện trong top `k`.
+Có relevant document trong top `k` không?
 
 ### MRR
 
-**Mean Reciprocal Rank (MRR)** thưởng việc kết quả relevant đầu tiên xuất hiện sớm:
+Mean Reciprocal Rank reward relevant result xuất hiện sớm:
 
 \[
 RR=\frac{1}{rank_{first\ relevant}}
@@ -141,50 +143,50 @@ RR=\frac{1}{rank_{first\ relevant}}
 
 ### nDCG
 
-**Normalized Discounted Cumulative Gain (nDCG)** cho phép relevance nhiều mức và giảm trọng số khi kết quả xuất hiện ở vị trí thấp.
+Normalized Discounted Cumulative Gain cho phép graded relevance và discount rank thấp.
 
-RAG retrieval eval không nên chỉ đo câu trả lời cuối, vì generator đôi khi có thể đoán đúng dù retrieval sai.
+RAG retrieval eval không nên chỉ đo final answer, vì final model có thể đoán đúng dù retrieval sai.
 
-## Ý định query
+## Query Intent
 
-Một query có thể mang tính:
+Một query có thể là:
 
-- điều hướng: tìm document cụ thể;
+- navigational: tìm document cụ thể;
 - factual: tìm fact;
-- khám phá: nghiên cứu chủ đề;
-- giao dịch: tìm thông tin để hành động.
+- exploratory: nghiên cứu topic;
+- transactional: tìm information để hành động.
 
-Chiến lược retrieval nên khác nhau. Query `API response code EKYC001` cần exact lexical match hơn câu `lỗi xác thực khuôn mặt thường do đâu?`.
+Retrieval strategy nên khác nhau. Query “API response code EKYC001” cần exact lexical match hơn query “lỗi xác thực khuôn mặt thường do đâu?”.
 
-## Lệch từ vựng
+## Vocabulary Mismatch
 
-Lexical search thất bại khi query và document dùng từ khác nhau:
+Lexical search fail khi query và document dùng different words:
 
 ```text
 query: "nghỉ việc"
 document: "chấm dứt hợp đồng lao động"
 ```
 
-Dense retrieval giải quyết một phần bằng biểu diễn ngữ nghĩa học được.
+Dense retrieval giải một phần bằng learned semantic representations.
 
-Ngược lại semantic retrieval có thể yếu với identifier chính xác. Vì vậy hybrid retrieval rất quan trọng.
+Nhưng semantic retrieval có thể fail exact identifiers. Vì vậy hybrid retrieval rất quan trọng.
 
-## Độ mịn của document
+## Document Granularity
 
-Tìm toàn document có thể quá thô; tìm từng câu có thể quá nhỏ. RAG thường index **chunk**.
+Search whole document có thể quá coarse; search sentence quá fine. RAG thường index chunks.
 
-Đánh đổi:
+Granularity trade-off:
 
 ```text
-chunk nhỏ → khớp chính xác nhưng dễ thiếu context
-chunk lớn → đủ context nhưng nhiều nhiễu và tốn token
+small chunk → precise match nhưng thiếu context
+large chunk → đủ context nhưng noisy và tốn tokens
 ```
 
-Chunking là quyết định retrieval chứ không chỉ là tiện ích tiền xử lý.
+Chunking là retrieval design, không chỉ preprocessing convenience.
 
-## Mở rộng query
+## Query Expansion
 
-Hệ thống có thể mở rộng query bằng synonym, alias hoặc các cách diễn đạt thay thế được sinh tự động.
+System có thể expand query bằng synonyms, aliases hoặc generated alternatives.
 
 Ví dụ:
 
@@ -195,11 +197,11 @@ Ví dụ:
 → 신분증 검증
 ```
 
-Mở rộng query tăng recall nhưng cũng có thể làm ý định bị trôi (query drift).
+Expansion tăng recall nhưng có thể introduce drift.
 
-## Filter và Metadata
+## Filters và Metadata
 
-Metadata filter rất mạnh:
+Metadata filters rất powerful:
 
 ```text
 version=current
@@ -208,50 +210,50 @@ product=mobile_banking
 access_level<=user_clearance
 ```
 
-Embedding similarity không nên thay thế constraint tường minh.
+Embedding similarity không nên replace explicit constraints.
 
-## Retrieval như bước tạo candidate
+## Retrieval as Candidate Generation
 
-Search hiện đại thường dùng hai tầng:
+Modern search thường two-stage:
 
 ```text
-retriever nhanh → top 100 candidate
-reranker đắt hơn → top 5–10
+fast retriever → top 100 candidates
+expensive reranker → top 5–10
 ```
 
-Tầng đầu ưu tiên recall và latency; reranker tối ưu mức liên quan tinh hơn.
+First stage optimize recall/latency. Reranker optimize fine relevance.
 
 ## IR và RAG
 
-RAG thực chất phải trả lời hai câu hỏi riêng:
+RAG pipeline fundamentally asks:
 
 ```text
-Có retrieve được bằng chứng cần thiết cho q không?
-Generator có sử dụng bằng chứng đó trung thực không?
+Can we retrieve evidence needed to answer q?
+Can generator use that evidence faithfully?
 ```
 
-Hai câu hỏi phải được đánh giá riêng.
+Hai questions cần eval riêng.
 
-## Mô hình tư duy
+## Mental Model
 
-> Information Retrieval là **tìm kiếm dưới relevance không hoàn hảo**, không phải tra cứu chính xác. Chất lượng RAG đã bị giới hạn bởi candidate evidence trước khi LLM bắt đầu sinh.
+> Information Retrieval là **search over imperfect relevance**, không phải exact lookup. RAG quality bị giới hạn bởi evidence candidate set trước khi LLM bắt đầu generate.
 
-## Những hiểu lầm thường gặp
+## Common Misconceptions
 
-### “Vector search thay thế hoàn toàn search engine truyền thống”
+### “Vector search thay thế search engine truyền thống”
 
-Không. Lexical search vẫn rất mạnh với exact term và ID.
+Không. Lexical search vẫn rất mạnh cho exact terms/IDs.
 
-### “Cosine similarity cao nhất là bằng chứng đúng”
+### “Top cosine similarity = correct evidence”
 
-Similarity chỉ là tín hiệu retrieval, không phải sự thật ngữ nghĩa.
+Similarity chỉ là retrieval signal, không semantic truth.
 
 ### “LLM có thể bù retrieval kém”
 
-Mô hình có thể đoán, nhưng điều đó làm hệ thống grounded kém đáng tin hơn.
+Nó có thể guess, nhưng đó làm grounded system kém đáng tin hơn.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-IR nối [NLP Information Retrieval](../07_natural_language_processing/08_search_and_information_retrieval.md), [Embeddings](../08_large_language_models/02_embeddings_and_semantic_space.md) và kiến trúc RAG.
+IR nối [NLP Information Retrieval](../07_natural_language_processing/08_search_and_information_retrieval.md), [Embeddings](../08_large_language_models/02_embeddings_and_semantic_space.md) và RAG architecture.
 
 Xem tiếp: [Sparse and Dense Retrieval](./01_sparse_and_dense_retrieval.md).

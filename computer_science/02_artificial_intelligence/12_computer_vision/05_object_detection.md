@@ -1,28 +1,28 @@
 # Object Detection
 
-**Phát hiện vật thể (Object Detection / 객체 탐지)** vừa phải nhận biết object class, vừa phải xác định vị trí của nhiều instance trong cùng image. Output thường là một set:
+**Object Detection (객체 탐지)** vừa phải nhận biết object class, vừa phải localize nhiều instances trong cùng image. Output thường là set:
 
 \[
 \{(b_i,c_i,s_i)\}_{i=1}^N
 \]
 
-với bounding box `b_i`, class `c_i` và confidence score `s_i`.
+với bounding box `b_i`, class `c_i`, confidence `s_i`.
 
-## Vì sao Detection khó hơn Classification?
+## Tại sao detection khó hơn classification?
 
-Classification chỉ cần quyết định class ở mức toàn image. Detection phải xử lý thêm nhiều unknown:
+Classification biết toàn image thuộc class nào. Detection không biết trước:
 
 - có bao nhiêu object;
-- object nằm ở đâu;
-- kích thước như thế nào;
-- object overlap hoặc occlusion ra sao;
-- background có thể chiếm phần lớn image.
+- object ở đâu;
+- kích thước ra sao;
+- overlaps/occlusion;
+- background chiếm phần lớn image.
 
-Do đó model phải đồng thời giải localization, classification và variable-length output.
+Do đó model phải solve localization + classification + variable-length output.
 
-## Bounding Box
+## Bounding Boxes
 
-Box có thể được biểu diễn bằng:
+Box có thể represent:
 
 ```text
 (x_min, y_min, x_max, y_max)
@@ -34,235 +34,173 @@ hoặc:
 (center_x, center_y, width, height)
 ```
 
-Khi resize hoặc crop image, label coordinate phải được transform nhất quán. Box-format mismatch là nguồn bug rất phổ biến.
+Coordinate normalization và image resizing phải transform labels nhất quán.
 
 ## Intersection over Union
 
-**Intersection over Union (IoU / 교집합-합집합 비율)** đo mức overlap giữa hai box:
+**IoU (Intersection over Union / 교집합-합집합 비율)** đo overlap:
 
 \[
 IoU(A,B)=\frac{|A\cap B|}{|A\cup B|}
 \]
 
-- `IoU = 1`: overlap hoàn hảo;
-- `IoU = 0`: không overlap.
+IoU=1 perfect overlap; 0 no overlap.
 
-IoU được dùng cả trong matching prediction với ground truth và trong evaluation.
+IoU dùng cho matching predictions-ground truth và evaluation.
 
-## Two-Stage Detector
+## Two-Stage Detectors
 
-Family R-CNN dùng pipeline:
-
-```text
-image
-→ backbone feature
-→ region proposal
-→ classify và refine từng region
-```
-
-Faster R-CNN học **Region Proposal Network (RPN)** để sinh proposal.
-
-Two-stage detector thường có accuracy mạnh trong scene phức tạp, đổi lại latency và implementation cost có thể cao hơn.
-
-## One-Stage Detector
-
-YOLO hoặc SSD-style model dự đoán box và class trực tiếp trên dense feature map trong một forward pass:
+Family R-CNN:
 
 ```text
-feature map
-→ dense box / class prediction
+image → backbone features
+→ region proposals
+→ classify/refine each region
 ```
 
-Cách này thường phù hợp hơn với real-time hoặc edge deployment.
+Faster R-CNN learns Region Proposal Network. Two-stage methods historically strong accuracy, especially complex scenes.
 
-## Anchor
+## One-Stage Detectors
 
-Anchor-based detector đặt trước nhiều box template với scale và aspect ratio khác nhau. Model dự đoán offset và objectness/class tương đối với anchor.
+YOLO/SSD-style models predict classes/boxes densely in one pass:
 
-Anchor design tạo thêm hyperparameter và matching complexity.
+```text
+feature maps → dense box/class predictions
+```
 
-Anchor-free detector cố dự đoán center, corner hoặc distance trực tiếp, giảm một phần handcrafted assumption.
+Thường faster and simpler deployment.
+
+## Anchors
+
+Anchor-based detectors place predefined boxes of different scales/aspect ratios. Model predicts offsets + objectness/classes relative anchors.
+
+Anchor design introduces hyperparameters and matching complexity.
+
+Anchor-free detectors predict centers/corners/distances directly, reducing handcrafted anchor assumptions.
 
 ## Objectness
 
-Nhiều detector tách câu hỏi:
+Model often estimates probability location contains object independent of class. Final score may combine objectness + class probability.
 
-```text
-“vị trí này có object không?”
-```
+## Matching During Training
 
-khỏi câu hỏi class cụ thể.
+Many candidate predictions must be assigned to ground-truth boxes. Assignment rule strongly affects optimization.
 
-Objectness score có thể được kết hợp với class probability để tạo final detection score.
-
-## Matching khi Training
-
-Model thường tạo rất nhiều candidate prediction, trong khi ground truth chỉ có một số box.
-
-Training phải xác định prediction nào chịu trách nhiệm cho ground-truth object nào.
-
-Approach cổ điển dùng IoU threshold. Modern detector có thể dùng dynamic matching hoặc cost-based assignment.
-
-Assignment rule ảnh hưởng mạnh optimization vì nó xác định positive/negative sample.
+Old approaches use IoU thresholds; modern detectors may use dynamic matching/cost-based assignment.
 
 ## Box Regression Loss
 
-L1 hoặc Smooth-L1 trên coordinate không trực tiếp tối ưu overlap geometry.
-
-IoU-based loss gồm:
+Coordinate L1/Smooth-L1 losses do not directly optimize overlap geometry. IoU-based losses:
 
 - IoU loss;
 - GIoU;
 - DIoU;
 - CIoU.
 
-Các loss này thêm thông tin về overlap, center distance hoặc aspect ratio để box learning phù hợp geometry hơn.
+They incorporate spatial overlap/distance/aspect considerations.
 
 ## Class Imbalance
 
-Dense detector tạo số lượng background candidate rất lớn so với positive object.
-
-**Focal Loss** giảm weight của easy example:
+Dense detectors generate huge background negatives. **Focal Loss** downweights easy examples:
 
 \[
 FL(p_t)=-(1-p_t)^\gamma\log p_t
 \]
 
-nhờ đó gradient tập trung nhiều hơn vào hard positive và hard negative.
+helping training focus hard positives/negatives.
 
 ## Non-Maximum Suppression
 
-Dense detector có thể output nhiều box overlap cho cùng một object.
+Dense detector may output many overlapping boxes for same object. **NMS**:
 
-**Non-Maximum Suppression (NMS)** thường:
+1. sort boxes by score;
+2. keep highest;
+3. remove lower-score boxes with IoU above threshold;
+4. repeat.
 
-1. sort box theo score;
-2. giữ box score cao nhất;
-3. loại box score thấp có IoU quá cao với box đã giữ;
-4. lặp lại.
+NMS is post-processing, not semantic reasoning.
 
-NMS là post-processing heuristic, không phải semantic reasoning.
+Soft-NMS decays scores instead of hard removal.
 
-Soft-NMS giảm score dần thay vì xóa cứng prediction.
+## Detection Transformers
 
-## Detection Transformer
+DETR reframes detection as **set prediction**. Transformer decoder uses object queries and bipartite matching (Hungarian algorithm) between predicted set and ground truth.
 
-DETR chuyển detection thành **set prediction**.
+This reduces need for anchors/NMS in core formulation, though training/variants have their own complexity.
 
-Transformer decoder dùng object query và bipartite matching bằng Hungarian algorithm để ghép predicted set với ground truth.
+## Multi-Scale Features
 
-Formulation này giảm sự phụ thuộc vào anchor và NMS truyền thống, nhưng đem lại các challenge riêng về training speed, query design và small-object performance.
+Small and large objects need different resolutions. Feature Pyramid Networks combine high-level semantics with higher spatial resolution.
 
-## Multi-Scale Feature
-
-Small và large object cần feature ở resolution khác nhau.
-
-Feature Pyramid Network kết hợp high-level semantic feature với feature map có spatial resolution cao hơn.
-
-Small-object detection đặc biệt nhạy với downsampling vì object có thể chỉ còn vài cell trên feature map.
+Small-object detection is especially sensitive to downsampling.
 
 ## Mean Average Precision
 
-Detection thường dùng AP hoặc mAP.
+Detection metric usually AP/mAP. Precision-recall is computed under IoU criterion; COCO-style mAP averages over multiple IoU thresholds, rewarding localization quality more strictly.
 
-Precision–recall được tính với một IoU criterion. COCO-style mAP average qua nhiều IoU threshold, vì vậy localization chính xác được thưởng nhiều hơn.
+A detector can have high classification confidence but poor box localization.
 
-Một detector có thể classification rất tự tin nhưng box localization vẫn kém.
+## NMS Threshold Trade-off
 
-## Trade-off của NMS Threshold
+Threshold too low → suppress neighboring distinct objects.
 
-Threshold quá thấp:
+Too high → duplicate detections remain.
 
-```text
-→ dễ xóa nhầm hai object gần nhau
-```
+Crowded scenes require careful handling.
 
-Threshold quá cao:
+## Small Objects
 
-```text
-→ nhiều duplicate detection còn lại
-```
+If object becomes only a few feature-map cells, information nearly lost. Solutions:
 
-Crowded scene làm trade-off này khó hơn đáng kể.
+- larger input resolution;
+- feature pyramids;
+- tiling;
+- small-object focused augmentation/data.
 
-## Small Object
-
-Nếu object chỉ chiếm vài pixel hoặc vài feature-map cell, information gần như bị mất.
-
-Các hướng xử lý gồm:
-
-- input resolution cao hơn;
-- feature pyramid;
-- tiling image;
-- data hoặc augmentation tập trung small object.
-
-Tất cả đều có cost về memory hoặc latency.
+Compute cost rises significantly.
 
 ## Occlusion
 
-Object bị che một phần tạo evidence không đầy đủ.
-
-Context có thể giúp infer object, nhưng cũng tạo risk model dựa quá nhiều vào background shortcut thay vì object feature.
+Partial object evidence can be ambiguous. Context may help, but model can over-rely on background/context shortcuts.
 
 ## Data Annotation
 
-Bounding-box annotation rẻ hơn pixel mask nhưng vẫn có ambiguity:
-
-```text
-có tính shadow không?
-box có bao gồm phần object bị cắt khỏi frame không?
-object bị che quá nhiều có label không?
-```
-
-Annotation guideline cần nhất quán để model không học target mâu thuẫn.
+Box labels cheaper than pixel masks but still subjective: should box include shadow? truncated object? heavily occluded instance? Annotation policy must be consistent.
 
 ## Real-Time Detection
 
-Latency production gồm:
+Latency includes preprocessing + model + NMS + transfer, not model FLOPs alone. Batch size 1 latency matters edge/interactive systems.
 
-```text
-preprocessing
-+ model inference
-+ NMS/post-processing
-+ memory transfer
-```
+## Tracking Connection
 
-Không nên chỉ nhìn FLOPs của model. Với interactive hoặc edge system, batch-size-1 latency thường quan trọng hơn throughput benchmark.
-
-## Liên hệ với Tracking
-
-Detection trên mỗi frame chỉ tạo object độc lập theo thời gian.
-
-Multi-object tracking bổ sung identity consistency giữa frame bằng motion, appearance embedding hoặc assignment algorithm.
+Detection per frame gives objects independently. Multi-object tracking adds identity consistency across time using motion/appearance association.
 
 ## Open-Vocabulary Detection
 
-Vision-language pretraining cho phép detector nhận text label ngoài một fixed closed-set taxonomy.
+Vision-language pretrained models enable detection conditioned on text labels beyond fixed closed-set taxonomy. Challenge remains localization and calibration for unseen concepts.
 
-Challenge vẫn gồm localization, calibration và khả năng generalize tới concept chưa thấy trong training.
+## Mental Model
 
-## Mô hình tư duy
+> **Object Detection = classification over candidate regions + geometry estimation + duplicate/set resolution.**
 
-> **Object Detection = classification trên candidate region + geometry estimation + cơ chế giải quyết duplicate hoặc set prediction.**
+Different detector families mainly differ in how they generate candidates, represent queries and assign predictions.
 
-Các detector family khác nhau chủ yếu ở cách chúng tạo candidate, biểu diễn query và gán prediction với target.
+## Common Misconceptions
 
-## Những nhầm lẫn thường gặp
+### “High mAP means every object reliably detected”
 
-### “mAP cao nghĩa mọi object đều được detect đáng tin”
+Average metric hides class/size/subgroup failures.
 
-Không. Average metric có thể che lỗi theo class, object size hoặc subgroup.
+### “NMS is part of learning”
 
-### “NMS là một phần của learning”
+Traditional NMS is post-processing heuristic, though some modern systems learn/set-predict to avoid it.
 
-Traditional NMS là post-processing heuristic. Một số modern architecture dùng set prediction để giảm hoặc loại bỏ nó.
+### “Higher input resolution always solves small objects”
 
-### “Tăng resolution luôn giải quyết small object”
+It helps but increases compute/memory; sensor detail may already be absent.
 
-Không. Resolution cao hơn giúp nếu sensor còn information, nhưng làm compute/memory tăng mạnh và không thể khôi phục detail đã mất từ acquisition.
+## Knowledge Connection
 
-## Liên kết kiến thức
-
-Object Detection kết hợp CNN/Transformer feature, geometry, matching algorithm và set prediction. Segmentation ở chapter tiếp theo chuyển từ bounding box sang cấu trúc ở cấp pixel.
+Detection combines CNN/Transformer features, geometry, matching algorithms and set prediction. Segmentation moves from boxes to pixel-level structure.
 
 Xem tiếp: [Image Segmentation](./06_image_segmentation.md).

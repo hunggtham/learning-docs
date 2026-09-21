@@ -1,19 +1,19 @@
-# Information Extraction: biến văn bản tự do thành cấu trúc có thể sử dụng
+# Information Extraction: biến text tự do thành structure có thể dùng
 
-**Trích xuất thông tin (Information Extraction — IE / 정보 추출)** chuyển văn bản phi cấu trúc thành span, thực thể, quan hệ, sự kiện hoặc trường dữ liệu có cấu trúc. Đây là cầu nối trực tiếp giữa NLP với cơ sở dữ liệu, Knowledge Graph và quy trình nghiệp vụ.
+Information Extraction (IE / 정보 추출 / trích xuất thông tin) chuyển unstructured text thành structured facts/spans/relations/events. Đây là cầu nối giữa NLP và database/knowledge graph/business workflow.
 
-Thay vì hỏi mơ hồ “mô hình có hiểu câu không?”, IE định nghĩa schema đầu ra rõ ràng: thực thể nào xuất hiện, thuộc loại gì, có quan hệ nào giữa chúng, sự kiện nào xảy ra và trường nào cần điền.
+Thay vì hỏi “model hiểu câu không?”, IE đặt output schema rõ: entity nào xuất hiện, thuộc loại gì, relation nào giữa chúng, event nào xảy ra, field nào cần điền.
 
 ## Named Entity Recognition
 
-**Nhận dạng thực thể có tên (Named Entity Recognition — NER)** gán loại cho các span:
+NER gán spans types:
 
 ```text
 Shinhan Bank opened an office in Seoul.
 [Shinhan Bank]ORG ... [Seoul]LOC
 ```
 
-Gán nhãn token cổ điển thường dùng BIO:
+Classical token tagging dùng BIO labels:
 
 ```text
 Shinhan B-ORG
@@ -23,49 +23,56 @@ opened  O
 Seoul   B-LOC
 ```
 
-Subword tokenization làm việc căn chỉnh nhãn phức tạp hơn. Vì vậy đánh giá nên ưu tiên cấp span/thực thể thay vì chỉ dùng accuracy trên token.
+Subword tokenization complicates alignment; evaluation nên entity-span level thay token accuracy.
 
-## Loại thực thể phụ thuộc Domain
+## Entity Types phụ thuộc domain
 
-NER tổng quát thường có PERSON, ORG, LOCATION.
+General NER: PERSON, ORG, LOCATION.
 
-Trong tài chính có thể cần ACCOUNT, PRODUCT, TRANSACTION, AMOUNT. Trong y tế có thể cần DISEASE, DRUG, DOSAGE.
+Finance: ACCOUNT, PRODUCT, TRANSACTION, AMOUNT.
 
-Schema quyết định “trích xuất đúng” nghĩa là gì. Schema quá rộng mất giá trị sử dụng; quá chi tiết lại làm annotator khó thống nhất.
+Medical: DISEASE, DRUG, DOSAGE.
 
-## Gán nhãn chuỗi
+Schema design defines what “correct extraction” means. Too broad loses utility; too granular creates annotation inconsistency.
 
-Transformer encoder tạo `h_i`; classifier dự đoán nhãn cho từng token.
+## Sequence Labeling
 
-Nếu dùng softmax độc lập theo token, mô hình có thể tạo chuỗi nhãn không hợp lệ như `I-PER` xuất hiện mà không có `B-PER`. **Conditional Random Field (CRF)** có thể mô hình hóa ràng buộc chuyển nhãn giữa các vị trí.
+Transformer encoder gives `h_i`; classifier predicts label each token.
 
-Encoder lớn hiện đại thường hoạt động tốt ngay cả khi không có CRF, nhưng structured decoding vẫn có ích trong một số bài toán nhỏ hoặc chuyên domain.
+Independent token softmax may produce invalid sequences (`I-PER` without `B-PER`). CRF layer models transition constraints jointly.
 
-## Trích xuất quan hệ
+Modern large encoders often perform well without CRF, but structured decoding can still help small/domain tasks.
 
-Sau khi xác định thực thể, mô hình có thể dự đoán quan hệ giữa chúng:
+## Relation Extraction
+
+Given entities, predict relation:
 
 ```text
 [Company A] acquired [Company B]
 ```
 
-Schema có thể tạo cạnh `ACQUIRED` hoặc `ACQUIRED_BY` tùy hướng đã quy ước.
+→ `ACQUIRED_BY/ACQUIRED` edge depending schema.
 
-Các hướng triển khai gồm phân loại cặp thực thể bằng contextual representation, chấm điểm cặp span, trích xuất entity+relation đồng thời hoặc sinh structured output.
+Methods:
 
-Hướng của quan hệ phải được định nghĩa rõ; đảo subject/object có thể tạo một fact hoàn toàn khác.
+- classify entity pair using contextual representation;
+- span-pair scoring;
+- joint entity+relation extraction;
+- generative structured output.
 
-## Trích xuất sự kiện
+Relation direction matters.
 
-Một sự kiện thường có **trigger** và các đối số có vai trò riêng.
+## Event Extraction
 
-Ví dụ:
+Event has trigger + arguments.
+
+Example:
 
 ```text
 Samsung acquired X for $2B in 2025.
 ```
 
-có thể được chuẩn hóa thành:
+Event:
 
 ```json
 {
@@ -77,7 +84,7 @@ có thể được chuẩn hóa thành:
 }
 ```
 
-Event extraction vì vậy không chỉ nhận thực thể mà còn phải gán đúng vai trò và đôi khi cần ngữ cảnh xuyên nhiều câu.
+Event extraction needs role assignment and sometimes cross-sentence context.
 
 ## Coreference Resolution
 
@@ -85,15 +92,15 @@ Event extraction vì vậy không chỉ nhận thực thể mà còn phải gán
 Alice joined Acme. She became CTO.
 ```
 
-`She` tham chiếu tới Alice.
+`She` refers Alice.
 
-**Giải đồng tham chiếu (coreference resolution)** gom nhiều mention cùng chỉ một thực thể thành một cụm. Điều này đặc biệt quan trọng với trích xuất tri thức ở cấp tài liệu.
+Coreference creates entity clusters across mentions, essential for document-level knowledge extraction.
 
-LLM có thể xử lý nhiều trường hợp nhờ context lớn, nhưng đánh giá coreference tường minh vẫn cần thiết nếu đây là yêu cầu hệ thống.
+LLMs handle many cases via context but formal coreference evaluation still useful.
 
 ## Slot Filling
 
-Tài liệu nghiệp vụ thường cần trích các trường cụ thể:
+Business documents often need fields:
 
 ```text
 invoice_number
@@ -103,77 +110,78 @@ total_amount
 due_date
 ```
 
-Đây là dạng **điền trường (slot filling)** có ràng buộc. Với tài liệu scan, hệ thống có thể cần OCR, layout và NLP cùng lúc.
+This is constrained extraction. OCR/layout + NLP may be needed for scanned documents.
 
-Trong production, schema đúng và validation thường quan trọng hơn khả năng tạo câu trả lời tự do.
+Structured schema + validation often more important than open-ended answer quality.
 
-## Trích xuất Extractive và Generative
+## Extractive vs Generative IE
 
-Mô hình extractive chọn span trực tiếp từ nguồn, nhờ đó dễ grounding và giữ nguyên văn bản gốc.
+Extractive model selects spans from source, naturally grounded and preserves exact text.
 
-Mô hình generative có thể tạo JSON hoặc giá trị đã chuẩn hóa linh hoạt hơn nhưng có nguy cơ sinh giá trị không có trong nguồn.
+Generative model outputs JSON/text fields, flexible normalization but can hallucinate values not present.
 
-Một pipeline an toàn hơn cho dữ liệu quan trọng thường là:
+For high-stakes pipeline, combine:
 
 ```text
-LLM đề xuất structured extraction
-→ kiểm tra schema
-→ đối chiếu evidence/span nguồn
-→ áp dụng business rule xác định
-→ human review nếu cần
+LLM proposes structured extraction
+→ schema validation
+→ source-span evidence check
+→ deterministic business rules / human review
 ```
 
 ## Entity Linking
 
-NER có thể phát hiện mention `Apple`; **liên kết thực thể (entity linking)** ánh xạ mention đó tới thực thể chuẩn:
+NER detects mention `Apple`; linking maps to canonical entity:
 
 ```text
 Apple → Apple Inc. (company)
-không phải apple (fruit)
+not apple (fruit)
 ```
 
-Quá trình này thường gồm tạo candidate và phân giải mơ hồ dựa trên context hoặc knowledge base.
+Entity linking requires candidate generation + disambiguation using context/knowledge base.
 
-Canonical ID giúp fact được trích xuất có thể join với cơ sở dữ liệu hoặc Knowledge Graph.
+Canonical IDs let extracted facts join databases/knowledge graphs.
 
-## Chuẩn hóa giá trị
+## Normalization
 
-Chuỗi được trích thường cần chuyển thành dạng chuẩn:
+Extracted string may need normalized value:
 
 ```text
 "Sep 20, 2026" → 2026-09-20
 "₩1.2 million" → {currency: KRW, amount: 1200000}
 ```
 
-Khi có thể, bước chuẩn hóa nên dùng logic xác định và vẫn giữ chuỗi gốc cùng provenance để kiểm tra lại.
+Normalization should be deterministic when possible and retain original text/provenance.
 
-## Bố cục tài liệu
+## Document Layout
 
-Hợp đồng, hóa đơn và biểu mẫu mang ý nghĩa trong vị trí ô bảng, header và tọa độ. OCR thuần văn bản có thể làm mất quan hệ này.
+Contracts/invoices forms contain meaning in layout: table cells, headers, coordinates.
 
-Mô hình **layout-aware** kết hợp văn bản với bounding box hoặc đặc trưng hình ảnh. Document AI vì vậy thường là bài toán đa phương thức thay vì NLP thuần túy.
+Plain OCR text can lose relation. Layout-aware models encode bounding boxes/visual features plus text.
+
+Multimodal document AI combines vision + NLP.
 
 ## Weak Supervision
 
-Gán nhãn IE thủ công rất tốn chi phí. **Weak supervision** dùng rule, heuristic, knowledge base hoặc mô hình ngoài để tạo nhãn nhiễu ở quy mô lớn.
+Manual IE annotation expensive. Weak supervision uses rules/distant KB matches/heuristics to create noisy labels.
 
-Huấn luyện phải tính đến label noise và vẫn cần một tập gold sạch để đánh giá thực sự.
+Need model/techniques account label noise; evaluation still requires clean gold set.
 
 ## Distant Supervision
 
-Nếu knowledge base có fact `(CompanyA, acquired, CompanyB)`, hệ thống có thể coi những câu chứa cả hai thực thể là ví dụ dương cho quan hệ mua lại.
+If knowledge base says `(CompanyA, acquired, CompanyB)`, sentences containing both entities are treated positive relation examples. But sentence may not express relation, creating false labels.
 
-Nhưng một câu chứa hai thực thể chưa chắc thật sự biểu đạt quan hệ đó. Distant supervision đánh đổi chi phí gán nhãn lấy nhiễu có hệ thống.
+This trades annotation scale for noise.
 
-## Precision và Recall trong trích xuất
+## Precision vs Recall in Extraction
 
-Nếu fact sau trích xuất được ghi tự động vào database, hệ thống thường cần precision cao. Nếu con người sẽ review toàn bộ candidate, recall cao có thể quan trọng hơn.
+High precision may be preferred when extracted facts automatically enter DB. High recall may be preferred when humans review candidates.
 
-Ngưỡng và workflow phải phản ánh chi phí downstream chứ không chỉ tối ưu F1 chung.
+Threshold and workflow should reflect downstream cost.
 
-## Đánh giá
+## Evaluation
 
-Precision/Recall/F1 ở cấp entity span:
+Entity-level exact-match precision/recall/F1:
 
 \[
 Precision=\frac{correct\ predicted\ spans}{predicted\ spans}
@@ -183,61 +191,61 @@ Precision=\frac{correct\ predicted\ spans}{predicted\ spans}
 Recall=\frac{correct\ predicted\ spans}{gold\ spans}
 \]
 
-Span chồng một phần có thể được phân tích riêng nhưng không nên tự động tính là exact match.
+Partial overlaps can be separately analyzed but should not silently count as exact.
 
-Đánh giá relation/event còn yêu cầu thực thể, loại, quan hệ và vai trò cùng đúng; lỗi ở bước trước có thể lan sang bước sau.
+Relation/event metrics require entities + labels + roles correct; error propagation matters.
 
-## Xây Knowledge Graph
+## Knowledge Graph Construction
 
-Pipeline điển hình:
+IE pipeline:
 
 ```text
-Tài liệu
-→ trích xuất thực thể
+Documents
+→ entity extraction
 → entity linking
-→ trích xuất quan hệ / sự kiện
-→ chuẩn hóa
-→ gắn provenance
+→ relation/event extraction
+→ canonicalization
+→ provenance
 → Knowledge Graph
 ```
 
-Mỗi cạnh lý tưởng nên giữ nguồn bằng chứng, thời gian và mức tin cậy thay vì chỉ lưu triple trần.
+Every edge should ideally carry source evidence/time/confidence, not only triple.
 
-## Structured Extraction bằng LLM
+## LLM Structured Extraction
 
-LLM cho phép few-shot extraction cho schema mới rất nhanh. Nhưng production đáng tin cậy cần thêm:
+LLMs can few-shot extract new schemas quickly. But robust production needs:
 
-- constrained decoding theo JSON/schema;
-- quy ước rõ cho null/unknown;
-- evidence span hoặc trích dẫn nguồn;
-- đánh giá theo từng field;
-- phòng prompt injection trong tài liệu không tin cậy;
-- validation xác định.
+- JSON/schema constrained decoding;
+- null/unknown behavior;
+- evidence quotes/spans;
+- field-level confidence/evaluation;
+- prompt-injection handling for untrusted docs;
+- deterministic validation.
 
-“JSON hợp lệ” chỉ chứng minh cú pháp đúng, không chứng minh dữ liệu trích xuất đúng.
+“Valid JSON” is not same as “correct extraction”.
 
-## Mô hình tư duy
+## Mental Model
 
-> Information Extraction biến ngôn ngữ thành các claim có kiểu và gắn chúng với bằng chứng nguồn. Provenance là một phần của dữ liệu, không phải metadata tùy chọn.
+> Information Extraction converts language into typed claims tied to source evidence. The source/provenance is part of the data, not optional metadata.
 
-## Những hiểu lầm thường gặp
+## Common Misconceptions
 
-### “NER chỉ là tìm danh từ riêng”
+### “NER is just find proper nouns”
 
-Không. Schema có thể bao gồm ngày, số tiền, sản phẩm, bệnh, mã hợp đồng và nhiều loại khác.
+Entity schema can include dates, amounts, products, diseases; context decides types.
 
-### “LLM tạo field trông hợp lý nghĩa là extraction thành công”
+### “LLM generated field looks plausible, so extraction succeeded”
 
-Không. Giá trị có thể bị bịa; extraction cần đối chiếu nguồn.
+It may fabricate; extraction should be grounded to source.
 
-### “Token accuracy đủ cho NER”
+### “Token accuracy is enough for NER”
 
-Không. Nhãn `O` thường chiếm đa số; entity-span F1 có ý nghĩa hơn.
+`O` dominates; entity-span F1 more meaningful.
 
-### “Có thể xây Knowledge Graph bằng cách lưu mọi triple LLM trích ra”
+### “Knowledge graph can be built by storing every extracted triple”
 
-Không. Còn cần entity resolution, thời gian, provenance, confidence và xử lý mâu thuẫn.
+Need entity resolution, temporal/provenance/confidence and contradiction handling.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Information Extraction nối [Knowledge Graphs](../03_knowledge_and_reasoning/06_knowledge_graphs.md), [Transformer NLP](./06_transformer_nlp.md), Database/Data Engineering và các workflow RAG/Agent về sau.
+IE connects [Knowledge Graphs](../03_knowledge_and_reasoning/06_knowledge_graphs.md), [Transformer NLP](./06_transformer_nlp.md), Database/Data Engineering and later LLM tool/RAG workflows.

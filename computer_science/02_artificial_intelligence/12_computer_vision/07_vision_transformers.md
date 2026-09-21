@@ -1,29 +1,29 @@
-# Vision Transformer
+# Vision Transformers
 
-**Vision Transformer (ViT / 비전 트랜스포머)** áp dụng Transformer lên image bằng cách biến ảnh thành một sequence các **patch token**. Ý tưởng cốt lõi là giảm bớt inductive bias mạnh của convolution và dùng self-attention để học relation giữa các vùng ảnh ở phạm vi toàn cục.
+**Vision Transformer (ViT / 비전 트랜스포머)** áp dụng Transformer lên images bằng cách biến image thành sequence của patch tokens. Ý tưởng cốt lõi là thay inductive bias convolution mạnh bằng self-attention có khả năng model interactions toàn cục.
 
 ## Patch Tokenization
 
-Với image kích thước `H×W×C`, chia ảnh thành các patch `P×P`.
+Với image `H×W×C`, chia thành patches `P×P`.
 
-Số patch:
+Số patches:
 
 \[
 N=\frac{HW}{P^2}
 \]
 
-Mỗi patch được flatten thành vector kích thước `P^2C`, sau đó đi qua linear projection:
+Mỗi patch flatten thành vector size `P^2C`, sau đó linear projection:
 
 \[
 z_i = x_i W_E + b
 \]
 
-để tạo embedding dimension `D`.
+thành embedding dimension `D`.
 
 ```text
 image
-→ patch
-→ patch embedding
+→ patches
+→ patch embeddings
 → positional information
 → Transformer encoder
 → task head
@@ -31,15 +31,15 @@ image
 
 ## Vì sao cần Positional Information?
 
-Self-attention nguyên bản không tự biết patch nào nằm ở góc trên trái, giữa ảnh hay góc dưới phải nếu không có thông tin vị trí.
+Self-attention nguyên bản không biết patch nào ở top-left hay bottom-right nếu không encode position.
 
-**Positional embedding** bổ sung spatial order cho sequence patch. Có thể dùng learned absolute position, relative position hoặc các biến thể 2D.
+Positional embeddings thêm spatial order. Có thể learned absolute, relative hoặc 2D variants.
 
 ## CLS Token
 
-ViT nguyên bản thêm một learnable `[CLS]` token vào đầu sequence. Sau Transformer encoder, representation của token này được dùng cho classification.
+Original ViT thêm learnable `[CLS]` token vào sequence. Sau encoder, representation của token này dùng cho classification.
 
-Một số architecture khác không dùng `[CLS]` mà dùng global average pooling trên patch feature.
+Alternatives dùng global average pooling trên patch features.
 
 ## Self-Attention trong Image
 
@@ -49,189 +49,149 @@ Attention:
 A=softmax\left(\frac{QK^T}{\sqrt{d_k}}\right)
 \]
 
-cho phép mỗi patch tổng hợp information từ các patch khác.
+cho mỗi patch aggregate information từ mọi patch khác.
 
-Điểm mạnh là long-range interaction có thể xuất hiện ngay trong một layer, thay vì cần stack nhiều local convolution để receptive field dần mở rộng.
+Điểm mạnh: long-range interactions accessible ngay một layer, không cần stack many local convs để receptive field lan rộng.
 
 ## Complexity
 
-Memory và compute của full attention tăng gần theo:
+Attention memory/compute theo số tokens gần:
 
 \[
 O(N^2)
 \]
 
-với `N` là số token.
+Nếu patch size nhỏ hoặc high-resolution image, `N` tăng nhanh.
 
-Nếu patch nhỏ hoặc image resolution cao, `N` tăng rất nhanh.
+Ví dụ doubling both H and W → patches ~4× → attention matrix ~16×.
 
-Ví dụ khi tăng gấp đôi cả `H` và `W`, số patch tăng khoảng 4 lần, còn attention matrix có thể tăng khoảng 16 lần.
+Do đó high-resolution ViT cần hierarchical/windowed/sparse attention variants.
 
-Do đó high-resolution ViT thường cần hierarchical, windowed hoặc sparse-attention variant.
+## CNN vs ViT Inductive Bias
 
-## Inductive Bias của CNN và ViT
-
-CNN hard-code nhiều prior hơn:
+CNN hard-code:
 
 - locality;
 - translation weight sharing;
 - hierarchical spatial processing.
 
-ViT hard-code ít hơn và để model học relation từ data nhiều hơn. Điều này từng khiến ViT cần large-scale pretraining để cạnh tranh với CNN khi data hạn chế.
-
-Modern training recipe, augmentation và hybrid architecture đã thu hẹp khoảng cách này.
+ViT hard-code ít hơn, cho model learn relations from data. Điều này từng khiến ViT cần large-scale pretraining hơn CNN, nhưng modern training/augmentation architectures thu hẹp gap.
 
 ## Data Scale
 
-Inductive bias yếu hơn đồng nghĩa model có thể cần nhiều data và regularization hơn để tự khám phá structure hữu ích.
+Weaker inductive bias means model may need more data/regularization to discover useful structure. Large pretraining giúp ViT shine.
 
-Đây là một nguyên lý ML tổng quát:
+Đây là example của general ML principle:
 
-> Prior mạnh thường giúp sample efficiency tốt hơn; prior yếu hơn có thể linh hoạt hơn khi data và compute đủ lớn.
+> stronger prior → potentially better sample efficiency; weaker prior → more flexibility if data/compute abundant.
 
-## Hierarchical Vision Transformer
+## Hierarchical Vision Transformers
 
-Model như Swin Transformer xử lý local window rồi merge patch qua nhiều stage:
+Models như Swin process local windows và merge patches over stages:
 
 ```text
-patch chi tiết
+fine patches
 → local attention
 → patch merging
-→ feature hierarchy thô hơn
+→ coarser feature hierarchy
 ```
 
-Cách này khôi phục multi-scale structure hữu ích cho detection và segmentation, đồng thời giảm quadratic cost của global attention.
+Điều này recover multi-scale structure useful detection/segmentation và reduce quadratic cost.
 
 ## Windowed Attention
 
-Thay vì cho mọi token attend mọi token khác, attention chỉ hoạt động trong local window.
+Attention chỉ trong local windows giảm complexity. Shifted windows allow cross-window communication across layers.
 
-**Shifted window** thay đổi vị trí window qua layer để thông tin có thể truyền giữa các vùng.
+Trade-off gần CNN: locality introduced lại để gain efficiency.
 
-Đây là một trade-off gần với CNN: locality được đưa trở lại để tăng efficiency.
+## Hybrid Models
 
-## Hybrid Model
+CNN stem + Transformer body hoặc convolution inside transformer block kết hợp local bias và global attention.
 
-Một architecture có thể dùng:
-
-```text
-CNN stem + Transformer body
-```
-
-hoặc thêm convolution bên trong Transformer block.
-
-Mục tiêu là kết hợp local bias của convolution với global interaction của attention.
-
-Modern vision architecture không còn đơn giản là “CNN hoặc Transformer”; nhiều hệ thống kết hợp cả hai.
+Modern vision architectures không còn binary CNN vs Transformer; ideas mix widely.
 
 ## Masked Image Modeling
 
-ViT rất phù hợp với masked-patch pretraining.
+ViT naturally supports masked-patch pretraining. Hide large fraction patches, train reconstruct pixels/features/latent targets.
 
-Pipeline có thể:
-
-```text
-che một phần lớn patch
-→ encode phần còn lại
-→ dự đoán pixel / feature / latent target bị che
-```
-
-Ý tưởng có nét giống masked language modeling, nhưng image có spatial redundancy lớn nên masking ratio và reconstruction objective thường khác NLP.
+This resembles masked language modeling nhưng image patches have high redundancy, nên masking ratios/objectives khác NLP.
 
 ## Distillation
 
-Teacher model có thể truyền class prediction hoặc representation signal sang ViT student.
+Teacher model can transfer class/representation signals to ViT, improving data efficiency.
 
-Distillation giúp cải thiện data efficiency và đôi khi giúp model nhỏ giữ được phần capability của model lớn hơn.
+## Detection with Transformers
 
-## Detection với Transformer
+DETR uses CNN/ViT-like features + Transformer encoder-decoder + learned object queries. Detection becomes set prediction rather than anchor/NMS pipeline.
 
-DETR kết hợp visual feature với Transformer encoder–decoder và learned object query.
+## Segmentation with Transformers
 
-Detection được formulation thành **set prediction** thay vì pipeline dựa mạnh vào anchor và NMS truyền thống.
+Patch features can be decoded into masks. Global context helps scene parsing; multi-scale/hierarchical features important boundary/detail.
 
-## Segmentation với Transformer
+## Position Resolution Transfer
 
-Patch feature có thể được decode thành mask.
+Fine-tuning at different image resolution may require interpolate positional embeddings if using absolute positions.
 
-Global context hỗ trợ scene parsing, trong khi multi-scale hoặc hierarchical feature vẫn cần thiết để giữ boundary và fine detail.
+This is an implementation consequence of learned positional table.
 
-## Transfer sang Resolution khác
+## Attention Maps
 
-Nếu model dùng learned absolute positional embedding, fine-tuning ở image resolution khác có thể cần interpolate positional table.
+Visualizing attention weights can show token interaction but should not be treated as exact causal explanation. Multiple heads/layers and residual pathways contribute.
 
-Đây là một consequence trực tiếp của việc position được lưu bằng learned lookup thay vì công thức có thể extrapolate tùy ý.
+## Patch Size Trade-off
 
-## Attention Map
-
-Visualization attention weight có thể cho thấy token nào tương tác mạnh với token nào.
-
-Tuy nhiên attention map không phải causal explanation hoàn chỉnh. Prediction còn phụ thuộc nhiều head, nhiều layer, MLP và residual pathway.
-
-## Trade-off của Patch Size
-
-Patch lớn:
+Large patch:
 
 ```text
-ít token hơn
-compute thấp hơn
-fine detail kém hơn
+fewer tokens
+lower compute
+less fine detail
 ```
 
-Patch nhỏ:
+Small patch:
 
 ```text
-nhiều token hơn
-compute cao hơn
-local granularity tốt hơn
+more tokens
+higher compute
+better local granularity
 ```
 
-Patch size phù hợp phụ thuộc task, input resolution và hardware budget.
+Task and hardware determine sweet spot.
 
 ## Vision Transformer và Multimodal AI
 
-Khi image được biến thành sequence embedding, representation của vision trở nên dễ kết nối với text token processing hơn.
+Once image becomes sequence of embeddings, architecture aligns naturally with text token processing. Multimodal models can:
 
-Multimodal model có thể:
+- encode image separately then project into LLM space;
+- concatenate visual tokens with text tokens;
+- use cross-attention between modalities.
 
-- encode image riêng rồi project visual feature vào LLM space;
-- concatenate visual token với text token;
-- dùng cross-attention giữa các modality.
+ViT therefore is a core bridge to vision-language models.
 
-ViT vì vậy là một bridge quan trọng giữa Computer Vision và vision-language model.
+## Foundation Vision Models
 
-## Foundation Vision Model
+Large pretrained visual encoders learn representations transferable across classification, detection, segmentation and multimodal alignment. Pretraining objectives may be supervised, contrastive, masked or multimodal.
 
-Large pretrained visual encoder có thể học representation tái sử dụng cho classification, detection, segmentation và multimodal alignment.
+## Mental Model
 
-Pretraining objective có thể là:
+> **ViT xem image như một set/sequence patches cần học relation toàn cục; CNN xem image như một spatial signal nơi local pattern sharing được hard-code mạnh hơn.**
 
-- supervised classification;
-- contrastive learning;
-- masked image modeling;
-- image-text alignment;
-- multimodal objective.
-
-## Mô hình tư duy
-
-> **ViT xem image như một sequence patch cần học relation ở nhiều khoảng cách; CNN xem image như spatial signal nơi locality và weight sharing được encode mạnh ngay trong architecture.**
-
-## Những nhầm lẫn thường gặp
+## Common Misconceptions
 
 ### “ViT không có spatial bias”
 
-Không đúng. Patch layout, positional encoding, augmentation và architecture variant vẫn encode spatial structure.
+Patch layout, positional encoding, augmentations và architecture variants vẫn encode spatial structure.
 
-### “Global attention luôn tốt hơn convolution”
+### “Attention global nên luôn tốt hơn convolution”
 
-Không. Global attention đắt và không phải task nào cũng cần mọi token tương tác toàn cục ở mọi layer.
+Global attention expensive và không phải mọi task cần global relation ở mọi layer.
 
-### “Transformer đã thay thế CNN hoàn toàn”
+### “Transformer đã thay CNN hoàn toàn”
 
-Không. Modern vision system vẫn dùng CNN, Transformer và nhiều hybrid design.
+Modern systems sử dụng cả hai families và hybrid designs.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Vision Transformer tái sử dụng [Attention](../06_deep_learning_architectures/04_attention.md) và [Transformer](../06_deep_learning_architectures/05_transformer.md) trong spatial domain.
+Vision Transformer reuses [Attention](../06_deep_learning_architectures/04_attention.md) và [Transformer](../06_deep_learning_architectures/05_transformer.md) trong spatial domain.
 
 Xem tiếp: [Modern Visual Representation](./08_modern_visual_representation.md).

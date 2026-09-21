@@ -1,23 +1,23 @@
-# Retrieval, xếp hạng và xếp hạng lại
+# Retrieval, Ranking và Reranking
 
-Một hệ thống retrieval tốt thường không cố dùng một model duy nhất để vừa tìm toàn corpus vừa đánh giá relevance rất chi tiết. Kiến trúc phổ biến là **xếp hạng nhiều tầng (multi-stage ranking)**: retriever tầng đầu tạo candidate set nhanh, sau đó reranker đắt hơn tinh chỉnh thứ tự.
+Một retrieval system tốt thường không cố dùng một model duy nhất để vừa search toàn corpus vừa đánh giá relevance rất tinh. Thay vào đó, architecture phổ biến là **multi-stage ranking**: first-stage retriever tạo candidate set nhanh, sau đó reranker đắt hơn refine order.
 
-## Tạo tập ứng viên
+## Candidate Generation
 
-Mục tiêu của tầng đầu thường ưu tiên **recall**:
+First-stage objective ưu tiên **recall**:
 
 ```text
-hàng triệu chunk
-→ retrieve top 50–200 candidate
+millions of chunks
+→ retrieve top 50–200 candidates
 ```
 
-Sparse, dense hoặc hybrid retriever phù hợp vì có thể search nhanh.
+Sparse, dense hoặc hybrid retrievers phù hợp vì search nhanh.
 
-Nếu evidence đúng không xuất hiện trong candidate set, reranker phía sau không thể cứu.
+Nếu correct evidence không xuất hiện trong candidates, reranker phía sau không thể cứu.
 
-## Xếp hạng lại
+## Reranking
 
-Reranker chấm query và candidate bằng tương tác sâu hơn.
+Reranker score query và candidate với interaction sâu hơn.
 
 Cross-encoder:
 
@@ -25,189 +25,193 @@ Cross-encoder:
 [query ; chunk] → Transformer → relevance score
 ```
 
-Nó đọc query và chunk cùng lúc nên hiểu khớp tinh hơn bi-encoder.
+Nó đọc query và chunk cùng lúc nên hiểu fine-grained match tốt hơn bi-encoder.
 
-Chi phí tăng gần theo số candidate × độ dài document, vì vậy thường chỉ dùng sau first-stage retrieval.
+Cost gần proportional số candidates × document length, vì vậy chỉ dùng sau first-stage retrieval.
 
-## Các dạng relevance
+## Relevance Types
 
-Reranker có thể cần phân biệt:
+Reranker cần học distinction:
 
 ```text
-mức liên quan chủ đề
-mức liên quan trực tiếp tới câu trả lời
-độ mới
-độ có thẩm quyền
-phạm vi truy cập của người dùng
+topical relevance
+answer relevance
+freshness
+authority
+user scope
 ```
 
-Một document cùng chủ đề nhưng là version cũ không nên xếp trên document hiện hành có thẩm quyền.
+Một document cùng topic nhưng old version không nên rank cao hơn current authoritative document.
 
-Một số yếu tố như quyền, version và authority thường phù hợp với metadata hoặc business rule hơn là để reranker tự suy ra.
+Some factors tốt hơn xử lý explicit metadata/business rules thay vì learned reranker.
 
-## Hợp nhất kết quả lai
+## Hybrid Fusion
 
-Kết quả sparse và dense có thể hợp nhất bằng RRF hoặc learned fusion.
+Sparse/dense result sets có thể merge bằng RRF hoặc learned fusion.
 
-Ví dụ:
+Example:
 
 ```text
 BM25 top 50
 Dense top 50
 → union
 → reranker
-→ top 8 chunk cho context
+→ top 8 context chunks
 ```
 
-Union tăng recall; reranker giải quyết xung đột thứ hạng.
+Union increases recall; reranker resolves conflicts.
 
-## Viết lại Query
+## Query Rewriting
 
-Trước retrieval, query có thể được rewrite để:
+Before retrieval, query có thể được rewrite để:
 
-- giải quyết đại từ và lịch sử hội thoại;
-- mở rộng abbreviation;
-- dịch ngôn ngữ;
-- phân rã câu hỏi nhiều phần.
+- resolve pronouns/history;
+- expand abbreviations;
+- translate language;
+- decompose multi-part question.
 
-Bản thân rewrite cũng phải được đánh giá vì có thể làm mất qualifier quan trọng.
+Rewrite itself must be evaluated because it can remove important qualifiers.
 
-## Phân rã Query
+## Query Decomposition
 
-Câu hỏi:
+Question:
 
 ```text
 "So sánh phí và điều kiện hủy của gói A và B"
 ```
 
-có thể tách thành:
+có thể decompose:
 
 ```text
-phí của A
-điều kiện hủy của A
-phí của B
-điều kiện hủy của B
+A fees
+A cancellation conditions
+B fees
+B cancellation conditions
 ```
 
-Sau đó retrieve từng subquery rồi tổng hợp. Cách này hữu ích cho câu hỏi nhiều khía cạnh.
+Retrieve each subquery then synthesize.
 
-## Retrieval nhiều bước
+Useful for multi-hop questions.
 
-Một số câu hỏi cần chuỗi bằng chứng:
+## Multi-Hop Retrieval
+
+Some questions require evidence chain:
 
 ```text
-entity A → relation → entity B → property của B
+entity A → relation → entity B → property of B
 ```
 
-Query ban đầu có thể không chứa term cần cho bước hai. **Multi-hop retrieval** dùng evidence bước trước để tạo query tiếp theo.
+One-shot query may not contain terms needed for second hop. Iterative retrieval uses first evidence to formulate next query.
 
-Khi đó retrieval bắt đầu gần với agentic search.
+This begins to resemble agentic search.
 
-## Huấn luyện Reranker
+## Reranker Training
 
-Dữ liệu huấn luyện cần query, positive chunk và hard negative. Hard negative nên hợp lý nhưng sai, chẳng hạn:
+Training examples need query, positive chunk và hard negatives. Hard negatives should be plausible but wrong:
 
 ```text
-cùng sản phẩm, sai version
-cùng policy, sai quốc gia
-cùng chủ đề, thiếu điều kiện quan trọng
+same product, wrong version
+same policy, wrong country
+same topic, missing condition
 ```
 
-Những ví dụ này dạy các ranh giới tinh tế có giá trị trong production.
+These cases teach fine distinctions relevant production.
 
-## Rank và hiệu chỉnh Score
+## Rank vs Score Calibration
 
-Reranker score thường chỉ có ý nghĩa để sắp thứ tự trong cùng một query, không tự động là xác suất relevance tuyệt đối.
+Reranker score often only meaningful for ordering within query, not absolute probability of relevance.
 
-Nếu dùng threshold để abstain, cần calibration trên dữ liệu có nhãn.
+If using threshold to abstain, calibrate on labeled data.
 
-## Đa dạng hóa kết quả
+## Diversification
 
-Top result có thể toàn bản gần trùng của cùng một paragraph. **Maximal Marginal Relevance (MMR)** cân bằng relevance và diversity:
+Top results may all duplicate same paragraph. **Maximal Marginal Relevance (MMR)** balances relevance and diversity:
 
 \[
 MMR=\lambda Sim(q,d)-(1-\lambda)\max_{d'\in S}Sim(d,d')
 \]
 
-Cách này hữu ích khi câu hỏi cần nhiều khía cạnh, nhưng có thể làm giảm chất lượng nếu user chỉ cần một fact chính xác duy nhất.
+Useful when query needs multiple aspects.
 
-## Chọn Context
+But diversity can hurt if user only needs one exact fact.
 
-Sau rerank, không nên luôn lấy top-k một cách mù quáng. Context builder có thể cân nhắc:
+## Context Selection
+
+After rerank, do not blindly take top-k. Context builder may consider:
 
 ```text
 relevance
-đa dạng nguồn
-version / authority
-ngân sách token
-mức trùng lặp
+source diversity
+version/authority
+token budget
+redundancy
 neighbor context
 ```
 
-Đây là một bài toán chọn có ràng buộc.
+This is a constrained selection problem.
 
-## Hiệu ứng Lost-in-the-Middle
+## Lost-in-the-Middle Effect
 
-LLM có thể sử dụng long context không đồng đều. Evidence quan trọng nằm giữa nhiều distractor có thể bị khai thác kém.
+LLMs may attend unevenly to long contexts. Critical evidence placed among many distractors can be underused.
 
-Thứ tự context vì vậy quan trọng. Có thể đặt evidence mạnh nhất sớm hoặc nhóm theo từng subquestion.
+Context ordering matters. Common patterns place strongest evidence early or group by subquestion.
 
-## Loại bản trùng
+## Duplicate Suppression
 
-Near-duplicate chunk lãng phí token và có thể khiến mô hình hiểu sai rằng một fact được nhiều nguồn độc lập xác nhận.
+Near-duplicate chunks waste tokens and can bias model as if repeated fact were stronger evidence.
 
-Candidate set nên được dedup bằng content hash hoặc semantic similarity khi phù hợp.
+Dedup candidate set using content hash or semantic similarity.
 
-## Ưu tiên độ mới
+## Freshness Boost
 
-Với corpus nhạy thời gian, ranking có thể kết hợp relevance với freshness:
+For time-sensitive corpora, ranking can combine relevance with freshness:
 
 \[
 score = relevance + \alpha \cdot freshness
 \]
 
-Tuy nhiên document mới nhất chưa chắc authoritative. Nếu có metadata trạng thái version, nó thường là tín hiệu tốt hơn.
+But newest document is not always authoritative. Version status is better signal when available.
 
-## Ưu tiên nguồn có thẩm quyền
+## Authority Boost
 
-Hệ thống có thể định nghĩa hierarchy rõ:
+Policy hierarchy can be explicit:
 
 ```text
-quy định chính thức > internal wiki > ghi chú chat
+official regulation > internal wiki > chat note
 ```
 
-Nên mã hóa authority bằng metadata thay vì kỳ vọng embedding model tự suy ra.
+Encode source authority metadata rather than hoping embedding model infer it.
 
-## Chi phí Reranking
+## Reranking Cost
 
-Nếu 100 candidate × 1000 token đều đi qua cross-encoder, latency có thể chi phối pipeline. Có thể giảm bằng:
+If 100 candidates × 1000 tokens each go through cross-encoder, latency may dominate. Options:
 
 ```text
-giảm số candidate
-rút ngắn chunk
-dùng reranker nhỏ hơn
+reduce candidates
+shorten chunks
+use smaller reranker
 batch scoring
 late interaction
-cache query lặp
+cache repeated queries
 ```
 
-Quality/cost curve phải được đo thực tế.
+Quality/cost curve must be measured.
 
-## Reranking bằng LLM
+## LLM Reranking
 
-LLM có thể rerank bằng cách đọc query và candidate summary. Nó xử lý tiêu chí tinh tế nhưng đắt và có thể có position bias.
+LLM can rerank by reading candidate summaries and query. It handles nuanced criteria but is expensive and can be position-biased.
 
-Phù hợp hơn khi candidate ít và giá trị tác vụ cao, đồng thời cần ID và thứ tự đầu vào ổn định.
+Use when candidate count small and value high, with deterministic ordering/IDs.
 
-## Độ tin cậy của Retrieval
+## Retrieval Confidence
 
-Top score thấp hoặc phân bố score phẳng có thể báo không có evidence tốt. Hệ thống có thể mở rộng search, fallback sang lexical retrieval, hỏi làm rõ hoặc abstain.
+Low top scores or flat score distribution may indicate no good evidence. System can broaden search, fallback lexical, ask clarification or abstain.
 
-Cách này tốt hơn ép mô hình luôn phải trả lời.
+This is better than always force answer.
 
-## Đánh giá Offline
+## Offline Evaluation
 
-Cần cặp query → relevant chunk/document có nhãn. Metric phổ biến:
+Need labeled query→relevant chunk/document pairs. Metrics:
 
 ```text
 Recall@k
@@ -216,34 +220,34 @@ nDCG
 Precision@k
 ```
 
-Nên đo từng tầng:
+Compare stages:
 
 ```text
-recall của first-stage retriever
-nDCG sau rerank
-recall của context cuối
+first-stage recall
+reranked nDCG
+final context recall
 ```
 
-## Mô hình tư duy
+## Mental Model
 
-> Retrieval pipeline giống một funnel: **mở rộng recall ở đầu, tăng độ chính xác ở giữa, áp ràng buộc context ở cuối**.
+> Retrieval pipeline giống funnel: **wide recall first, precise relevance later, context constraints cuối**.
 
-## Những hiểu lầm thường gặp
+## Common Misconceptions
 
-### “Reranker có thể sửa lỗi retriever bỏ sót evidence”
+### “Reranker có thể sửa retriever bỏ sót evidence”
 
-Không nếu evidence chưa vào candidate set.
+Không nếu evidence không vào candidate set.
 
 ### “Top-k càng lớn càng tốt”
 
-Không. Nhiễu và token cost cũng tăng.
+Không. Noise và token cost tăng.
 
-### “Document mới nhất luôn đúng nhất”
+### “Newest = most correct”
 
-Không nếu đó là draft hoặc nguồn ít thẩm quyền hơn.
+Không nếu draft/newer document không authoritative.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Ranking nối metric IR, cross-encoder NLP, optimization và context engineering.
+Ranking connects IR metrics, cross-encoder NLP, optimization và context engineering.
 
 Xem tiếp: [Advanced RAG](./08_advanced_rag.md).

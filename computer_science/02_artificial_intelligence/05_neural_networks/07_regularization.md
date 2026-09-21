@@ -1,28 +1,28 @@
-# Regularization trong Neural Network
+# Regularization trong Neural Networks
 
-**Regularization (điều chuẩn)** là tập hợp các cơ chế khiến quá trình training ưu tiên những nghiệm có khả năng khái quát hóa tốt hơn thay vì chỉ giảm training loss thấp nhất có thể. Trong Neural Network, regularization không phải một “mẹo chống overfitting” riêng lẻ; nó xuất hiện trong objective, architecture, dữ liệu, tính ngẫu nhiên và quá trình tối ưu.
+Regularization (규제 / 정규화라는 표현도 쓰이지만 normalization과 구분 필요 / điều chuẩn) là các mechanisms bias training về những solutions có khả năng generalize tốt hơn, thay vì chỉ minimize training loss. Trong neural networks, regularization không phải một “mẹo chống overfitting” riêng lẻ; nó xuất hiện qua objective, architecture, data, stochasticity và optimization.
 
-Cần phân biệt `regularization` với `normalization`. Normalization chủ yếu kiểm soát scale và thống kê tín hiệu; regularization kiểm soát độ phức tạp hiệu dụng hoặc preference giữa nhiều nghiệm cùng fit dữ liệu.
+Cần phân biệt `regularization` với `normalization`. Normalization kiểm soát statistics/scale; regularization kiểm soát effective complexity hoặc preference among solutions.
 
 ## L2 Penalty và Weight Decay
 
-Objective có L2:
+L2-regularized objective:
 
 \[
 J(\theta)=\hat R(\theta)+\lambda\|\theta\|_2^2
 \]
 
-khuyến khích tham số có độ lớn nhỏ hơn.
+khuyến khích parameters magnitude nhỏ.
 
-Với vanilla SGD, gradient từ L2:
+Với vanilla SGD, L2 gradient term:
 
 \[
 2\lambda\theta
 \]
 
-tạo hiệu ứng co tham số tương tự weight decay. Với adaptive optimizer, **weight decay tách rời (decoupled weight decay)** như AdamW khác với việc thêm L2 penalty trực tiếp vào gradient.
+tạo shrinkage tương tự weight decay. Với adaptive optimizers, decoupled weight decay (AdamW) khác naive L2 penalty.
 
-Weight decay có thể cải thiện generalization và giúp kiểm soát scale, nhưng giá trị phù hợp phụ thuộc learning rate, batch size, architecture và thời lượng training.
+Weight decay có thể improve generalization và stabilize scale, nhưng optimal value phụ thuộc learning rate, batch size, architecture và training length.
 
 ## L1 Regularization
 
@@ -30,60 +30,62 @@ Weight decay có thể cải thiện generalization và giúp kiểm soát scale
 J=\hat R+\lambda\|\theta\|_1
 \]
 
-khuyến khích nghiệm thưa (sparse).
+encourage sparsity. Với large neural networks, pure L1 ít là default hơn L2/weight decay nhưng useful khi muốn sparse solution hoặc specific constraints.
 
-Trong mạng lớn, L1 thuần túy ít là lựa chọn mặc định hơn L2 hoặc weight decay, nhưng vẫn hữu ích khi muốn sparsity hoặc ràng buộc cụ thể.
-
-Nếu mục tiêu là tăng tốc thật trên hardware, **structured sparsity** theo channel, head hoặc block thường hữu ích hơn các số 0 rời rạc mà kernel không tận dụng được.
+Structured sparsity có thể target whole channels/heads/blocks để actual hardware speedup; random individual zeros không luôn tăng speed nếu kernels không exploit sparsity.
 
 ## Dropout
 
-Trong training, Dropout tạo mask ngẫu nhiên trên activation:
+Trong training, dropout random mask activations:
 
 \[
 \tilde h_i=\frac{m_i}{1-p}h_i,
 \qquad m_i\sim Bernoulli(1-p)
 \]
 
-`p` là xác suất drop. Hệ số `1/(1-p)` giữ expected activation gần tương đương.
+`p` là drop probability. Scaling `1/(1-p)` giữ expected activation roughly same.
 
-Dropout làm các unit khó phụ thuộc quá mức vào một pattern đồng xuất hiện cố định và tạo hiệu ứng gần giống ensemble ngẫu nhiên.
+Dropout ngăn units phụ thuộc quá mạnh vào exact co-adaptation và tạo stochastic ensemble-like effect.
 
-Khi inference, Dropout thường được tắt.
+Inference thường disable dropout.
 
 ## Dropout không phải luôn cần
 
-Mô hình hiện đại rất lớn với dataset lớn, normalization, augmentation và weight decay có thể dùng Dropout rất thấp hoặc bằng 0 trong pretraining.
+Large modern models với huge data, normalization, augmentation và weight decay có thể dùng dropout rất thấp hoặc zero trong pretraining. Fine-tuning small data có thể lại benefit.
 
-Ngược lại, khi fine-tuning trên dataset nhỏ, Dropout có thể hữu ích hơn.
-
-Cường độ regularization phải phù hợp với quan hệ giữa quy mô dữ liệu, model capacity và task.
+Regularization strength phải match data/model regime.
 
 ## Early Stopping
 
-Nếu validation performance bắt đầu xấu đi trong khi training loss vẫn tiếp tục giảm, có thể dừng tại checkpoint tốt nhất.
+Nếu validation performance bắt đầu worsen trong khi training loss tiếp tục giảm, stop tại checkpoint tốt nhất.
 
-Early stopping hoạt động như một dạng regularization vì giới hạn quỹ đạo tối ưu trước khi mô hình có thời gian fit quá sâu vào pattern đặc thù của training sample.
+Early stopping acts như regularization vì giới hạn optimization trajectory; model chưa có thời gian fit finer sample-specific patterns.
 
-Tuy nhiên nếu learning-rate schedule chưa hợp lý, dừng sớm có thể chỉ đang che giấu một optimization recipe kém.
+Nhưng nếu training schedule chưa tuned, stop sớm có thể chỉ mask bad learning rate.
 
 ## Data Augmentation
 
-Augmentation tạo các phiên bản biến đổi mà label hoặc semantics được giả định là giữ nguyên.
+Augmentation tạo transformed examples mà label/semantics nên preserve:
 
-Ảnh có thể dùng crop, flip, color jitter hoặc rotation nếu task cho phép.
+Image:
 
-Âm thanh có thể thêm noise, time masking hoặc frequency masking.
+```text
+crop, flip, color jitter, rotation (nếu task invariant)
+```
 
-Văn bản khó hơn vì chỉ một thay đổi nhỏ về từ ngữ cũng có thể đổi nghĩa.
+Audio:
 
-Augmentation quan trọng không chỉ vì “tăng số mẫu”, mà vì nó mã hóa **giả định bất biến (invariance assumption)**.
+```text
+noise, time masking, frequency masking
+```
 
-Ví dụ lật ngang hợp lý cho nhận diện nhiều loại vật thể nhưng có thể sai với chữ viết hoặc ảnh y khoa có phân biệt trái/phải.
+Text augmentation khó hơn vì small wording change có thể đổi meaning.
+
+Augmentation encode **invariance assumptions**. Horizontal flip hợp object recognition nhưng có thể sai với text image hoặc medical laterality.
 
 ## Mixup
 
-Mixup tạo tổ hợp lồi của hai sample:
+Mixup tạo convex combinations:
 
 \[
 \tilde x=\lambda x_i+(1-\lambda)x_j
@@ -93,127 +95,121 @@ Mixup tạo tổ hợp lồi của hai sample:
 \tilde y=\lambda y_i+(1-\lambda)y_j
 \]
 
-Cách này khuyến khích mô hình thay đổi đầu ra mượt hơn giữa các sample và giảm việc ghi nhớ quá sắc các điểm riêng lẻ.
+Nó encourage smoother behavior giữa examples và giảm sharp memorization.
 
-CutMix trong ảnh ghép một vùng từ ảnh khác rồi trộn label theo tỷ lệ diện tích.
+CutMix cho images paste region từ image khác và mix labels proportional area.
 
 ## Label Smoothing
 
-One-hot target được làm mềm:
+One-hot target thay bằng slightly softened distribution:
 
 \[
 y'_k=(1-\epsilon)y_k+\frac{\epsilon}{K}
 \]
 
-hoặc một biến thể phân phối một phần probability mass cho các class sai.
+hoặc variant distribute mass among incorrect classes.
 
-Label smoothing làm giảm động lực đẩy logit tới độ tự tin cực đoan và có thể cải thiện generalization hoặc calibration trong một số chế độ.
+Label smoothing giảm incentive đẩy logits tới extreme confidence, có thể improve generalization/calibration trong regimes.
 
-Tuy nhiên nó cũng làm thay đổi representation và confidence behavior, nên không nên áp dụng máy móc.
+Nhưng nó cũng có trade-offs, ví dụ representations cho distillation/calibration có thể thay đổi; không nên apply blindly.
 
 ## Noise Injection
 
-Thêm nhiễu vào input, activation, weight hoặc gradient có thể tạo regularization.
+Thêm noise vào inputs, activations, weights hoặc gradients có regularization effect. Dropout là một form structured multiplicative noise.
 
-Dropout chính là một dạng nhiễu nhân có cấu trúc.
+Stochastic Gradient Descent mini-batch noise cũng tạo implicit regularization.
 
-Nhiễu từ mini-batch của SGD cũng tạo implicit regularization.
+## Architectural Regularization
 
-## Regularization từ kiến trúc
+Convolution weight sharing giảm degrees of freedom so với dense layer.
 
-Convolution weight sharing giảm số bậc tự do so với dense layer.
+Bottlenecks giới hạn representation capacity.
 
-Bottleneck giới hạn capacity của representation.
+Low-rank adapters constrain fine-tuning updates vào low-rank subspace.
 
-LoRA giới hạn update fine-tuning trong một low-rank subspace.
+Sparse attention/routing constrain interactions.
 
-Sparse attention hoặc routing giới hạn kiểu tương tác.
-
-Vì vậy architecture tự nó cũng là một regularizer thông qua inductive bias.
+Architecture itself is regularizer through inductive bias.
 
 ## Parameter Sharing
 
-RNN dùng lại cùng weight qua nhiều timestep; CNN dùng cùng kernel ở nhiều vị trí; Transformer dùng cùng projection matrix cho mọi token trong một layer.
+RNN reuse same weights across timesteps; CNN reuse kernel across locations; Transformer reuse same projection matrices across token positions within layer.
 
-Chia sẻ tham số làm giảm số degree of freedom và mã hóa symmetry hoặc invariance cụ thể.
+Sharing reduces parameter count và encodes symmetry/invariance assumptions.
 
-## BatchNorm như implicit regularization
+## Batch Normalization as implicit regularization
 
-BatchNorm dùng batch statistics nên tạo một lượng nhiễu phụ thuộc vào các sample cùng batch. Điều này có thể tạo hiệu ứng regularization.
+Batch statistics introduce noise depending on co-samples. This can regularize. With very large batch or synchronized stats, effect changes.
 
-Khi batch cực lớn hoặc dùng synchronized statistics, hiệu ứng này thay đổi.
+Do not treat normalization and regularization as identical, but acknowledge interactions.
 
-Normalization và regularization không phải cùng một khái niệm, nhưng chúng có thể tương tác mạnh.
+## Pretraining as Regularization / Prior
 
-## Pretraining như một prior đã học
+Fine-tuning pretrained model starts from parameters encoding broad structure. Small task dataset only nudges solution around pretrained region.
 
-Fine-tuning mô hình pretrained bắt đầu từ tham số đã chứa cấu trúc rộng của dữ liệu trước đó.
+This acts like a strong data-driven prior compared with training from random initialization.
 
-Dataset task nhỏ chỉ điều chỉnh mô hình quanh vùng tham số đã học thay vì bắt đầu từ random initialization.
-
-Điều này hoạt động giống một **prior học từ dữ liệu** và thay đổi mạnh bài toán bias–variance.
+Transfer learning therefore changes bias–variance landscape dramatically.
 
 ## Parameter-Efficient Fine-Tuning
 
-LoRA giới hạn update:
+LoRA models update:
 
 \[
 \Delta W=BA
 \]
 
-với rank nhỏ `r`:
+with low rank `r`:
 
 \[
 A\in R^{r\times d_{in}},
 B\in R^{d_{out}\times r}
 \]
 
-Thay vì cho `ΔW` thay đổi hoàn toàn tự do, update bị giới hạn vào low-rank subspace.
+Instead of full arbitrary `ΔW`, updates constrained low-rank. This reduces memory and can regularize small-data adaptation.
 
-Điều này giảm memory và đôi khi cũng giúp hạn chế overfitting khi dữ liệu fine-tuning nhỏ.
+LoRA will return in LLM fine-tuning chapters.
 
 ## Regularization và Memorization
 
-Neural Network đủ lớn có thể ghi nhớ cả nhãn ngẫu nhiên, cho thấy model capacity tự nó không ép mô hình phải generalize.
+Neural networks can memorize random labels with enough capacity, showing architecture capacity alone doesn't force generalization.
 
-Generalization trên dữ liệu tự nhiên đến từ sự kết hợp giữa cấu trúc dữ liệu, optimization bias, regularization, augmentation và quy mô.
+Real generalization comes from combination of structure in natural data, optimization bias, regularization, augmentation and scale.
 
-Memorization và generalization cũng có thể cùng tồn tại: mô hình có thể ghi nhớ một số example hiếm nhưng vẫn khái quát hóa tốt ở phần lớn distribution.
+Memorization and generalization can coexist; model may memorize rare examples while still generalizing broadly.
 
-## Regularization dưới Distribution Shift
+## Regularization under Distribution Shift
 
-Một kỹ thuật giúp IID test tốt hơn không nhất thiết giúp robustness khi domain thay đổi.
+Regularization improving IID test may not improve robustness to domain shift. Data augmentation aligned with expected shift can help more than generic weight decay.
 
-Augmentation được thiết kế đúng với loại shift dự kiến có thể hữu ích hơn một weight decay chung chung.
+Robustness requires evaluate on shifted/stress distributions, not infer from regularization alone.
 
-Robustness phải được đánh giá trực tiếp trên shifted hoặc stress distribution.
+## Mental Model
 
-## Mô hình tư duy
+> Regularization is preference: trong rất nhiều parameter settings fit training data, ta muốn learning procedure ưu tiên những solutions đơn giản/stable/invariant hoặc gần useful prior hơn.
 
-> Regularization là một preference: trong rất nhiều cấu hình tham số có thể fit training data, ta muốn quá trình học ưu tiên những nghiệm đơn giản hơn, ổn định hơn, bất biến phù hợp hơn hoặc gần một prior hữu ích hơn.
+## Common Misconceptions
 
-## Các hiểu lầm thường gặp
+### “More regularization always means less overfitting and therefore better”
 
-### “Regularization càng mạnh càng ít overfit nên càng tốt”
+Quá mạnh gây underfitting hoặc erase useful task adaptation.
 
-Không. Quá mạnh sẽ gây underfitting hoặc làm mất adaptation hữu ích cho task.
+### “Dropout phải có trong mọi neural network”
 
-### “Dropout bắt buộc phải có trong mọi Neural Network”
+Không. Need depends data scale/architecture/training regime.
 
-Không. Nhu cầu phụ thuộc dataset, architecture và chế độ training.
+### “Data augmentation chỉ tăng số lượng samples”
 
-### “Data augmentation chỉ để tăng số sample”
-
-Không. Vai trò quan trọng hơn là mã hóa invariance.
+Nó quan trọng hơn ở việc encode invariances.
 
 ### “Weight decay làm model sparse”
 
-Không theo nghĩa tạo nhiều giá trị đúng bằng 0. L2/weight decay chủ yếu thu nhỏ magnitude; L1 hoặc structured pruning phù hợp hơn nếu mục tiêu là sparsity.
+L2/weight decay shrink magnitude nhưng không thường tạo exact zeros như L1/structured pruning.
 
-### “Fine-tuning ít tham số chỉ để tiết kiệm VRAM”
+### “Fine-tuning ít parameters chỉ để tiết kiệm VRAM”
 
-Không. Việc giới hạn không gian update cũng làm thay đổi inductive bias và đôi khi giảm overfitting.
+Parameter constraints cũng thay inductive bias và có thể reduce overfitting.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Xem [Bias–Variance và Generalization](../04_machine_learning/14_bias_variance_and_generalization.md), [AdamW](./05_gradient_descent_and_optimizers.md), [Initialization và Normalization](./06_initialization_and_normalization.md), và tiếp theo [Representation Learning](./08_representation_learning.md).
+Xem [Bias–Variance and Generalization](../04_machine_learning/14_bias_variance_and_generalization.md), [AdamW](./05_gradient_descent_and_optimizers.md), [Initialization and Normalization](./06_initialization_and_normalization.md), và tiếp theo [Representation Learning](./08_representation_learning.md).

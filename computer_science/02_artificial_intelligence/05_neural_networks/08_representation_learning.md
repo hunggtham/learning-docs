@@ -1,26 +1,26 @@
 # Representation Learning: học cách biểu diễn dữ liệu
 
-**Học biểu diễn (Representation Learning / 표현 학습)** là một trong những ý tưởng trung tâm nhất của Deep Learning. Thay vì chỉ học ánh xạ trực tiếp `input → output`, network học các không gian trung gian nơi những yếu tố liên quan tới task được sắp xếp theo một hình học dễ xử lý hơn.
+Representation Learning (표현 학습 / học biểu diễn) là một trong những ý tưởng trung tâm nhất của Deep Learning. Thay vì chỉ học mapping trực tiếp `input → output`, network học intermediate spaces trong đó những factors relevant cho task được sắp xếp theo geometry dễ xử lý hơn.
 
-Một representation tốt không có nghĩa “vector nhìn đẹp”. Nó phải làm computation phía sau đơn giản hơn, bền vững hơn hoặc dễ chuyển sang task mới hơn.
+Một representation tốt không có nghĩa “vector nhìn đẹp”. Nó phải làm downstream computation đơn giản, robust hoặc transferable hơn.
 
 ## Representation là gì?
 
-Đối tượng thô có thể rất phức tạp:
+Raw object có thể rất phức tạp:
 
-- ảnh: pixel;
-- văn bản: chuỗi token;
-- âm thanh: waveform;
-- người dùng: lịch sử tương tác;
-- phân tử: graph.
+- image: pixels;
+- text: token sequence;
+- audio: waveform;
+- user: interaction history;
+- molecule: graph.
 
-Encoder tạo vector hoặc tensor:
+Encoder tạo vector/tensor:
 
 \[
 z=f_\theta(x)
 \]
 
-`z` là **biểu diễn học được (learned representation)**.
+`z` là learned representation.
 
 Downstream head:
 
@@ -28,64 +28,70 @@ Downstream head:
 \hat y=g_\phi(z)
 \]
 
-Nếu `z` tổ chức thông tin liên quan tới task tốt, `g` có thể rất đơn giản.
+Nếu `z` organize task-relevant information tốt, `g` có thể rất simple.
 
-## Linear Probe như một phép kiểm tra
+## Linear Probe như một test
 
-Nếu đóng băng representation `z` rồi một linear classifier vẫn đạt performance cao, ta nói thông tin về target đã trở nên **truy cập tuyến tính (linearly accessible)**.
+Nếu frozen representation `z` cho phép linear classifier đạt performance cao, ta nói target information **linearly accessible**.
 
-Linear probe không đo toàn bộ sự phong phú ngữ nghĩa, nhưng là một diagnostic hữu ích để kiểm tra feature extractor đã “gỡ rối” task tới mức nào.
+Linear probe không đo toàn bộ semantic richness, nhưng là useful diagnostic: feature extractor đã “untangle” task đến mức nào?
 
-## Biểu diễn phân tán
+## Distributed Representation
 
-One-hot symbol đặt mỗi category trên một trục trực giao và không biểu diễn similarity.
+One-hot symbol đặt mỗi category ở orthogonal axis; không encode similarity.
 
-Embedding dày đặc được học:
+Dense learned embedding:
 
 \[
 z\in R^d
 \]
 
-có thể mã hóa nhiều yếu tố phân tán trên các dimension hoặc direction.
+có thể encode multiple factors distributed across dimensions/directions.
 
-Quan hệ similarity xuất hiện do training objective, không phải vì bản thân định dạng vector tự mang ý nghĩa.
+Similarity relation xuất hiện từ training objective, không từ vector format tự thân.
 
-## Hình học của Embedding
+## Embedding Geometry
 
-Nếu contrastive training kéo các cặp liên quan lại gần và đẩy các cặp không liên quan ra xa:
+Nếu contrastive training kéo related pairs gần nhau và đẩy unrelated pairs xa:
 
 ```text
-đối tượng liên quan ngữ nghĩa → vùng / hướng gần nhau
-đối tượng không liên quan      → xa nhau hơn
+semantically related objects → nearby directions/regions
+unrelated objects → farther apart
 ```
 
-thì cosine similarity hoặc dot-product retrieval trở nên có ý nghĩa.
+thì cosine/dot-product retrieval becomes meaningful.
 
-Nhưng geometry phụ thuộc objective. Embedding tốt cho semantic search chưa chắc tốt cho sentiment clustering hay recommendation.
+Nhưng geometry objective-specific. Embedding tốt cho semantic search chưa chắc tốt cho sentiment clustering hoặc recommendation.
 
 ## Supervised Representation Learning
 
-Trong classifier neural, hidden representation được học vì task loss cuối cùng backpropagate xuyên qua encoder.
+Classifier network learn hidden representation vì final task loss backprop through encoder.
 
-Các hidden layer giữ lại thông tin hữu ích cho target và có thể loại bỏ variation không liên quan.
+Hidden layers retain information useful cho target và có thể discard nuisance factors.
 
-Nếu target quá hẹp, representation cũng có thể trở nên quá chuyên biệt và transfer kém.
+Nếu target narrow, representation cũng có thể narrow và transfer kém.
 
 ## Self-Supervised Representation Learning
 
-**Học tự giám sát (self-supervised learning)** tạo tín hiệu huấn luyện từ chính raw data.
+Self-supervision tạo learning signal từ raw data.
 
-Ví dụ gồm dự đoán token tiếp theo, khôi phục token hoặc patch bị che, đối chiếu hai view của cùng ảnh, dự đoán đoạn tương lai hoặc tái tạo input bị làm nhiễu.
+Examples:
 
-Mục tiêu là tận dụng lượng dữ liệu chưa gán nhãn rất lớn để học cấu trúc có thể tái sử dụng.
+- predict next token;
+- reconstruct masked token/patch;
+- contrast views of same image;
+- predict future segment;
+- reconstruct corrupted input.
 
-Foundation model hiện đại chủ yếu dựa trên self-supervised pretraining rồi mới thích nghi với downstream task.
+Mục tiêu là exploit abundant unlabeled data để learn reusable structure.
+
+Foundation models largely rely on self-supervised pretraining rồi adapt downstream.
 
 ## Contrastive Learning
 
-Với cặp positive `(x,x⁺)` và negative `x⁻`, objective khuyến khích similarity của cặp positive cao hơn negative.
+Given positive pair `(x,x⁺)` and negatives `x⁻`, objective encourage similarity positive > negatives.
 
-Một dạng InfoNCE:
+InfoNCE-style loss:
 
 \[
 L=-\log
@@ -95,9 +101,7 @@ L=-\log
 
 `τ` là temperature.
 
-Cách chọn positive pair chính là định nghĩa invariance.
-
-Ví dụ hai crop của cùng ảnh được xem là cùng semantic object. Nếu augmentation làm mất thông tin quan trọng cho task, representation cũng sẽ học sai invariance.
+Choice positive pairs defines invariance. Image augmentations say two crops/color variants should represent same semantic object. Wrong augmentation can erase task-relevant information.
 
 ## Metric Learning
 
@@ -107,159 +111,133 @@ Triplet loss:
 L=\max(0,d(a,p)-d(a,n)+m)
 \]
 
-ép anchor–positive gần nhau hơn anchor–negative ít nhất một margin `m`.
+push anchor-positive closer than anchor-negative by margin `m`.
 
-**Hard-negative mining** rất quan trọng: negative quá dễ gần như không tạo gradient; negative giả lại có thể phá geometry ngữ nghĩa.
+Hard-negative mining is critical: easy negatives produce little gradient; false negatives can damage semantic geometry.
 
-## Representation từ Autoencoder
+## Autoencoder Representation
 
-Encoder–decoder:
+Encoder-decoder:
 
 \[
 x\to z\to\hat x
 \]
 
-Reconstruction objective buộc `z` giữ thông tin cần để tái tạo input.
+Reconstruction objective forces `z` to preserve input information needed for reconstruction.
 
-Tuy nhiên tái tạo pixel hoàn hảo có thể ưu tiên chi tiết cấp thấp hơn semantics.
+But pixel-perfect reconstruction may prioritize low-level detail not semantics. Bottleneck/denoising/variational constraints alter learned factors.
 
-Bottleneck, denoising hoặc variational constraint thay đổi loại factor mà latent representation phải giữ.
-
-Objective quyết định “thông tin quan trọng” thực sự nghĩa là gì.
+Thus objective determines what “important information” means.
 
 ## Bottleneck và Compression
 
-Một `z` có số chiều thấp hơn buộc hệ thống nén thông tin.
+A lower-dimensional `z` forces compression. Under an Information Bottleneck intuition, representation should keep information useful for target while discarding irrelevant variation.
 
-Theo trực giác Information Bottleneck, representation tốt nên giữ thông tin hữu ích cho target trong khi loại bỏ variation không liên quan.
+Formal Information Bottleneck studies trade-off between `I(X;Z)` and `I(Z;Y)`, but practical deep networks do not always directly optimize this formula.
 
-Lý thuyết hình thức nghiên cứu sự đánh đổi giữa:
-
-\[
-I(X;Z)
-\]
-
-và:
-
-\[
-I(Z;Y)
-\]
-
-Nhưng Neural Network thực tế không phải lúc nào cũng tối ưu trực tiếp đúng hai đại lượng này.
-
-Trực giác vẫn hữu ích: representation tốt lọc nuisance nhưng giữ predictive structure.
+Mental idea remains useful: good representation filters nuisance while preserving predictive structure.
 
 ## Invariance và Equivariance
 
-Representation **bất biến (invariant)** khi phép biến đổi đầu vào không nên đổi representation hoặc output.
+**Invariant** representation: transformation of input should not change representation/output.
 
-Ví dụ classification ảnh thường mong muốn mức bất biến nhất định với dịch chuyển.
+Example image classification may want translation invariance.
 
-Representation **đồng biến (equivariant)** khi output thay đổi theo một quy luật tương ứng với transformation của input.
+**Equivariant** representation: output changes predictably with input transformation.
 
-Segmentation hoặc pose estimation cần giữ thông tin vị trí, nên khi ảnh dịch chuyển, output cũng phải dịch chuyển theo.
+For segmentation/pose, spatial shift should shift output correspondingly, not erase location.
 
-Architecture và augmentation chính là nơi mã hóa những giả định này.
+Architecture and augmentation encode these assumptions.
 
 ## Transfer Learning
 
-Encoder pretrained học representation rộng, sau đó task mới có thể dùng bằng các cách:
+Pretrained encoder learns broad representation, then downstream task uses:
 
-- đóng băng feature rồi train head mới;
-- fine-tuning một phần;
-- fine-tuning toàn bộ;
-- adapter hoặc LoRA.
+- frozen features + new head;
+- partial fine-tuning;
+- full fine-tuning;
+- adapters/LoRA.
 
-Transfer hiệu quả khi representation từ pretraining chứa các factor liên quan tới downstream task.
+Transfer works when pretraining representation covers factors relevant downstream.
 
-Nếu source và target lệch quá nhiều, có thể xảy ra **negative transfer**.
+Negative transfer occurs when source biases/objective mismatch target.
 
 ## Representation Collapse
 
-Một số self-supervised objective có nguy cơ ánh xạ mọi input vào gần cùng một vector hằng.
+Some self-supervised objectives risk all inputs map to same constant vector. Then similarity trivial nhưng no information.
 
-Khi đó similarity trở nên vô nghĩa vì representation không còn giữ thông tin.
+Contrastive negatives, stop-gradient asymmetry, predictor architecture, variance/covariance regularizers or teacher-student dynamics prevent collapse in different methods.
 
-Các phương pháp khác nhau ngăn collapse bằng negative sample, stop-gradient bất đối xứng, predictor riêng, regularization variance/covariance hoặc teacher–student dynamics.
-
-Hiểu collapse giúp thấy vì sao thiết kế self-supervised objective rất quan trọng.
+Understanding collapse clarifies why self-supervised loss design matters.
 
 ## Disentanglement
 
-Representation “disentangled” lý tưởng cố tách những yếu tố sinh dữ liệu như rotation, lighting hay identity thành các factor tương đối độc lập.
+Idealized disentangled representation assigns distinct latent factors to independent generative causes. Example rotation, lighting, identity separated.
 
-Trong thực tế, disentanglement khó và thường không thể xác định duy nhất nếu thiếu inductive bias hoặc supervision bổ sung.
+In practice disentanglement is difficult and often not identifiable without inductive bias/supervision. Do not assume latent dimensions map cleanly to human concepts.
 
-Không nên giả định mỗi latent dimension tự nhiên tương ứng với một khái niệm con người.
+## Sparse vs Dense Representations
 
-## Biểu diễn thưa và biểu diễn dày đặc
+Sparse representation activates few components; dense uses many.
 
-**Sparse representation** chỉ kích hoạt một số ít thành phần; **dense representation** dùng nhiều dimension cùng lúc.
+Sparse can improve interpretability/storage/retrieval properties. Dense embeddings are compact and differentiable.
 
-Sparse representation có thể thuận lợi hơn cho interpretability hoặc retrieval kiểu lexical. Dense embedding gọn và phù hợp với gradient-based learning.
-
-Modern retrieval thường kết hợp sparse lexical signal với dense semantic embedding vì hai loại representation bổ sung nhau.
+Modern retrieval increasingly combines sparse lexical and dense semantic representations because they capture complementary structure.
 
 ## Representation Drift
 
-Khi encoder được retrain, geometry của embedding thay đổi.
+When encoder is retrained, embedding geometry changes. Stored vectors in vector database generated by old encoder may become incompatible.
 
-Các vector cũ trong vector database có thể không còn tương thích với query embedding từ model mới.
-
-Hệ quả production:
+Production consequence:
 
 ```text
-đổi phiên bản embedding model
-→ tạo lại embedding cho corpus
-→ rebuild / revalidate index
+embedding model version change
+→ re-embed corpus
+→ rebuild/revalidate index
 ```
 
-Versioning representation vì vậy là vấn đề LLMOps và Data Engineering, không chỉ lý thuyết mô hình.
+Representation versioning is an LLMOps/data-engineering concern, not just model theory.
 
-## Probe và Interpretability
+## Probing và Interpretability
 
-Probe classifier có thể cho thấy một loại thông tin có thể được giải mã từ representation.
+Probe classifiers can detect whether information exists in representation, but high probe accuracy does not prove base model actually uses that information causally.
 
-Nhưng probe accuracy cao **không** chứng minh base model thực sự dùng thông tin đó để tạo prediction.
+Interventions/ablation are needed for stronger claims.
 
-Muốn đưa ra kết luận mạnh hơn cần intervention hoặc ablation.
+Representation interpretability must distinguish **decodability** from **causal use**.
 
-Phải phân biệt **khả năng giải mã (decodability)** với **mức sử dụng nhân quả (causal use)**.
+## LLM Hidden States Preview
 
-## Preview Hidden State của LLM
+Transformer converts token embeddings through layers into contextual representations. Same token can have different hidden vector depending context.
 
-Transformer biến token embedding qua nhiều layer thành contextual representation.
+Final hidden state feeds output projection/softmax for next-token prediction. Intermediate layers may encode syntax, semantic, factual and task structure in distributed form.
 
-Cùng một token có thể có hidden vector khác nhau tùy context.
+This chapter therefore directly prepares embeddings/Transformer/LLM sections.
 
-Hidden state cuối được đưa qua output projection và softmax để dự đoán token tiếp theo. Các layer trung gian có thể mã hóa cấu trúc cú pháp, ngữ nghĩa, factual pattern và task feature theo dạng phân tán.
+## Mental Model
 
-Chương này vì vậy chuẩn bị trực tiếp cho các phần Embedding, Transformer và LLM.
+> Representation learning = học một coordinate system nơi relationships relevant cho objective trở nên dễ tính hơn.
 
-## Mô hình tư duy
+Raw space không nhất thiết có useful geometry; training bends/reorganizes space.
 
-> Representation Learning là quá trình học một hệ tọa độ nơi những mối quan hệ quan trọng đối với objective trở nên dễ tính toán hơn.
+## Common Misconceptions
 
-Raw space không nhất thiết có geometry hữu ích; training tái tổ chức không gian đó.
+### “Embedding gần nhau nghĩa objects giống nhau tuyệt đối”
 
-## Các hiểu lầm thường gặp
-
-### “Embedding gần nhau nghĩa hai đối tượng giống nhau tuyệt đối”
-
-Không. Chúng chỉ gần nhau theo geometry được tạo bởi model, data và objective cụ thể.
+Chúng gần theo geometry/objective/model/data cụ thể.
 
 ### “Latent dimension 42 chắc chắn đại diện một concept”
 
-Không. Thông tin thường phân tán trên nhiều dimension hoặc subspace.
+Information thường distributed/subspace-based.
 
-### “Self-supervised không có label nên objective trung lập”
+### “Self-supervised model không cần labels nên objective neutral”
 
-Không. Pretext task, augmentation và sampling chính là inductive bias rất mạnh.
+Pretext task, augmentation và sampling chính là inductive bias mạnh.
 
-### “Nếu thông tin giải mã được từ hidden state thì model đang dùng nó”
+### “Nếu information decodable từ hidden state thì model đang dùng nó”
 
-Không. Decodability không chứng minh causal reliance.
+Decodability không chứng minh causal reliance.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Representation Learning nối [Giảm chiều](../04_machine_learning/12_dimensionality_reduction.md), [Lý thuyết thông tin](../01_mathematical_foundations/05_information_theory.md), [Regularization](./07_regularization.md) và sau này [Embedding](../08_large_language_models/02_embeddings_and_semantic_space.md), [RAG](../09_retrieval_and_rag/05_rag_fundamentals.md).
+Representation Learning nối [Dimensionality Reduction](../04_machine_learning/12_dimensionality_reduction.md), [Information Theory](../01_mathematical_foundations/05_information_theory.md), [Regularization](./07_regularization.md) và sau này [Embeddings](../08_large_language_models/02_embeddings_and_semantic_space.md), [RAG](../09_retrieval_and_rag/05_rag_fundamentals.md).

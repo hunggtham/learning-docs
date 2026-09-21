@@ -1,6 +1,6 @@
-# Value Function và Bellman Equation
+# Value Functions và Bellman Equations
 
-Trong Reinforcement Learning, immediate reward không đủ để đánh giá một state hoặc action vì quyết định hiện tại còn ảnh hưởng toàn bộ future trajectory. **Hàm giá trị (value function / 가치 함수)** nén expected long-term return thành một đại lượng có thể học và tối ưu.
+Trong Reinforcement Learning, immediate reward không đủ để đánh giá một state/action vì action hiện tại ảnh hưởng cả future. **Value function (가치 함수 / hàm giá trị)** nén expected long-term return thành một quantity có thể học và optimize.
 
 State value:
 
@@ -14,9 +14,9 @@ Action value:
 Q^\pi(s,a)=\mathbb E_\pi[G_t\mid S_t=s,A_t=a]
 \]
 
-## Phân rã Bellman
+## Bellman decomposition
 
-Return có cấu trúc đệ quy:
+Return có recursive structure:
 
 \[
 G_t=R_{t+1}+\gamma G_{t+1}
@@ -28,33 +28,31 @@ Do đó:
 V^\pi(s)=\mathbb E_\pi[R_{t+1}+\gamma V^\pi(S_{t+1})\mid S_t=s]
 \]
 
-Đây là **Bellman expectation equation**.
+Đây là Bellman expectation equation.
 
-Nếu transition và reward model đã biết:
+Nếu transition/reward known:
 
 \[
 V^\pi(s)=\sum_a\pi(a|s)\sum_{s'}P(s'|s,a)[R(s,a,s')+\gamma V^\pi(s')]
 \]
 
-Bellman equation không phải heuristic. Nó xuất phát trực tiếp từ định nghĩa đệ quy của discounted return.
+Bellman equation không phải một heuristic; nó đến trực tiếp từ recursive definition của discounted return.
 
-## Bellman Equation cho Q-function
+## Q-function Bellman equation
 
 \[
 Q^\pi(s,a)=\mathbb E[R_{t+1}+\gamma\mathbb E_{a'\sim\pi}[Q^\pi(S_{t+1},a')]]
 \]
 
-Nếu Q-function được ước lượng tốt, agent có thể so sánh trực tiếp các action tại cùng state.
+Nếu biết Q tốt, policy có thể chọn action value cao.
 
-## Optimal Value
-
-Optimal state value:
+## Optimal value
 
 \[
 V^*(s)=\max_\pi V^\pi(s)
 \]
 
-Bellman optimality equation:
+Optimal Bellman equation:
 
 \[
 V^*(s)=\max_a\mathbb E[R_{t+1}+\gamma V^*(S_{t+1})]
@@ -66,19 +64,19 @@ và:
 Q^*(s,a)=\mathbb E[R_{t+1}+\gamma\max_{a'}Q^*(S_{t+1},a')]
 \]
 
-Operator `max` chuyển bài toán từ đánh giá một policy cố định sang **control problem**: chọn action tốt nhất.
+`max` biến policy evaluation thành control problem.
 
 ## Bootstrapping
 
-Nếu value estimate mới được tính một phần từ estimate cũ hoặc estimate của next state:
+Nếu estimate value dựa trên estimate khác:
 
 ```text
-ước lượng hiện tại ← reward + γ × ước lượng value ở state tiếp theo
+current estimate ← reward + γ × next value estimate
 ```
 
-ta gọi đó là **bootstrapping**.
+đó là **bootstrapping**.
 
-Dynamic Programming và Temporal-Difference learning dùng bootstrapping. Monte Carlo thường dùng sampled return thực tế tới cuối episode thay vì dựa vào next-state estimate.
+Dynamic Programming và Temporal Difference dùng bootstrapping. Monte Carlo dùng actual sampled return tới cuối episode thay vì bootstrap.
 
 ## Bellman Backup
 
@@ -88,108 +86,103 @@ Một update dạng:
 V(s)\leftarrow R+\gamma V(s')
 \]
 
-được gọi là **Bellman backup**. Trong bài toán stochastic, update thường diễn ra dần bằng learning rate thay vì ghi đè hoàn toàn.
+được gọi là backup. Trong stochastic problems thường update gradual bằng learning rate.
 
-## Bellman Error và TD Error
+## Bellman Error
 
-Nếu function approximator `V_θ` chưa nhất quán với target Bellman, one-step residual là:
+Nếu function approximator `V_θ` không satisfy Bellman consistency, residual:
 
 \[
 \delta = R+\gamma V_\theta(s')-V_\theta(s)
 \]
 
-Đây chính là **Temporal-Difference error (TD error)** trong one-step setting.
+là TD error trong one-step setting.
 
-- `δ > 0`: outcome quan sát được tốt hơn current estimate;
-- `δ < 0`: outcome tệ hơn current estimate.
+Positive δ nghĩa outcome tốt hơn current estimate; negative δ nghĩa tệ hơn.
 
-TD error trở thành learning signal trực tiếp cho nhiều thuật toán RL.
+## Value như compressed future
 
-## Value như bản tóm tắt của tương lai
+Value function là một prediction model về future return. Thay vì simulate toàn future mỗi decision, agent consult value estimate.
 
-Value function có thể được xem là một prediction model về future return. Thay vì simulate toàn bộ future mỗi lần ra quyết định, agent dùng value estimate để ước lượng consequence dài hạn.
+Đây tương tự heuristic trong search: cả hai compress future consequence thành scalar estimate. Nhưng value được defined bởi reward/policy/environment dynamics.
 
-Có thể liên hệ với heuristic trong search: cả hai đều nén thông tin tương lai thành một scalar estimate. Khác biệt là value được định nghĩa cụ thể bởi reward, policy và environment dynamics.
+## Policy Evaluation và Improvement
 
-## Policy Evaluation và Policy Improvement
+Policy iteration dựa hai ideas:
 
-Policy iteration dựa trên hai bước:
+1. evaluate `V^π`;
+2. improve policy greedily theo value/Q.
 
-1. **policy evaluation**: ước lượng `V^π` hoặc `Q^π`;
-2. **policy improvement**: tạo policy tốt hơn dựa trên value hiện tại.
+Repeated evaluation + improvement có thể converge tới optimal policy trong finite MDP under standard assumptions.
 
-Lặp evaluation và improvement có thể hội tụ tới optimal policy trong finite MDP dưới các giả định chuẩn.
+## Advantage
 
-## Advantage Function
-
-**Advantage** đo một action tốt hơn baseline state value bao nhiêu:
+Advantage đo action tốt hơn baseline state value bao nhiêu:
 
 \[
 A^\pi(s,a)=Q^\pi(s,a)-V^\pi(s)
 \]
 
-Nếu `A > 0`, action tốt hơn mức trung bình của policy tại state đó; nếu `A < 0`, action tệ hơn baseline.
+Nó rất quan trọng trong policy-gradient/actor-critic vì giảm variance và tập trung vào relative quality của action.
 
-Advantage đặc biệt quan trọng trong policy gradient và actor–critic vì giúp giảm variance và tập trung update vào **chất lượng tương đối của action**.
+## Why value estimation is hard
 
-## Vì sao ước lượng Value khó?
-
-Value phụ thuộc đồng thời vào:
+Value depends on:
 
 - policy;
-- cách định nghĩa reward;
+- reward definition;
 - transition dynamics;
-- distribution của future state;
+- future state distribution;
 - approximation error.
 
-Khi policy thay đổi, target value cũng thay đổi. RL vì vậy có target không hoàn toàn cố định như supervised learning thông thường.
+Policy thay đổi thì target value cũng thay đổi.
 
 ## Function Approximation
 
-Trong tabular setting, có thể lưu một value cho mỗi state. Nhưng với state space lớn hoặc liên tục, ta cần function approximator:
+Tabular value có one entry per state. Large/continuous state cần approximator:
 
 \[
 V_\theta(s)
 \]
 
-Neural network giúp generalize giữa các state tương tự. Tuy nhiên tổ hợp **bootstrapping + off-policy learning + nonlinear function approximation** có thể gây instability, thường được gọi là một phần của “deadly triad” trong RL.
+Neural network generalizes across states, nhưng bootstrapping + off-policy + nonlinear approximation có thể gây instability.
 
 ## Overestimation Bias
 
-Trong Q-learning, operator `max` trên các estimate có noise có thể tạo **overestimation bias**:
+Trong Q-learning, max trên noisy estimates có thể overestimate:
 
 \[
 \mathbb E[\max_a \hat Q(a)] \ge \max_a \mathbb E[\hat Q(a)]
 \]
 
-Double Q-learning và các biến thể Double DQN tách action selection khỏi action evaluation để giảm bias này.
+Double Q-learning/DQN variants tách selection/evaluation để giảm bias.
 
-## Reward-to-Go và Credit Assignment
+## Reward-to-Go và Credit
 
-Value function truyền thông tin của delayed reward ngược về các state trước đó. Đây là cơ chế giúp giải temporal credit assignment mà không cần một label trực tiếp cho từng action.
+Value functions propagate delayed reward backward qua states. Đây là cơ chế giải temporal credit assignment mà không cần mỗi action có direct label.
 
-## Mô hình tư duy
+## Mental Model
 
-> **Bellman equation nói rằng giá trị của hiện tại = reward nhận ngay + discounted value của tương lai.**
+> **Bellman equation nói: giá trị của hiện tại = reward ngay bây giờ + discounted value của tương lai.**
 
-Quan hệ đệ quy này là xương sống của phần lớn Reinforcement Learning cổ điển.
+Recursive relation này là xương sống của large part of RL.
 
-## Những nhầm lẫn thường gặp
+## Common Misconceptions
 
-### “Value là xác suất thắng”
+### “Value là probability thắng”
 
-Chỉ đúng trong một số reward setup đặc biệt. Nói chung value là expected return.
+Chỉ trong reward setup đặc biệt. General value là expected return.
 
-### “Bellman equation cho ra value ngay lập tức”
+### “Bellman equation cho biết value ngay lập tức”
 
-Không. Nó là một consistency relation. Ta vẫn phải solve hoặc estimate value bằng Dynamic Programming, sampling hoặc function approximation.
+Nó là consistency relation. Ta vẫn cần solve/estimate qua DP, sampling hoặc function approximation.
 
-### “Q-value và reward giống nhau”
+### “Q và reward giống nhau”
 
-Không. Q chứa expected long-term return, không chỉ immediate reward.
+Q chứa long-term expected return, không chỉ immediate reward.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Bellman equation nối recursive algorithm, Dynamic Programming và bootstrapping. Chapter tiếp theo dùng environment model đã biết để tính value và policy một cách hệ thống.
+Bellman equations nối recursive algorithms, Dynamic Programming và bootstrapping. Chapter tiếp theo dùng known model để compute values systematically.
 
 Xem tiếp: [Dynamic Programming](./03_dynamic_programming.md).

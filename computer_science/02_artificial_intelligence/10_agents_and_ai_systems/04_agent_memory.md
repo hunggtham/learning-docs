@@ -1,86 +1,86 @@
-# Bộ nhớ của Agent
+# Agent Memory
 
-Agent thực hiện task dài hoặc quay lại qua nhiều session cần cơ chế nhớ có cấu trúc. **Bộ nhớ (memory / 메모리)** trong agent không phải một feature duy nhất và cũng không đồng nghĩa với vector database. Nó là tập hợp các cơ chế lưu trữ, truy xuất và cập nhật giúp agent giữ thông tin hữu ích theo thời gian.
+Agent làm task dài hoặc quay lại nhiều session cần một cơ chế nhớ có cấu trúc. **Memory (메모리 / bộ nhớ)** trong agent không phải một feature duy nhất và cũng không đồng nghĩa vector database. Nó là family của storage + retrieval + update policies giúp agent giữ thông tin hữu ích qua time.
 
 Một taxonomy thực dụng:
 
 ```text
 Working memory       → thông tin đang dùng cho task hiện tại
 Episodic memory      → lịch sử sự kiện / trải nghiệm
-Semantic memory      → fact / tri thức đã tổng hợp
+Semantic memory      → facts/knowledge đã tổng hợp
 Procedural memory    → cách làm, policy, workflow
-External artifacts   → file, DB row, ticket, code, document
+External artifacts   → files, DB rows, tickets, code, documents
 ```
 
 ## Working Memory
 
-Working memory là trạng thái ngắn hạn cần cho reasoning hiện tại:
+Working memory là state ngắn hạn đang cần cho reasoning hiện tại:
 
 ```text
-mục tiêu hiện tại
-plan hiện tại
-kết quả tool mới nhất
-subtask đang chờ
-constraint
+current goal
+current plan
+latest tool results
+pending subtasks
+constraints
 ```
 
-Nó thường được đưa vào context window, nhưng source of truth nên có thể nằm trong structured state store.
+Nó thường được inject vào context window, nhưng source of truth nên có thể nằm trong structured state store.
 
-Context window không phải durable memory. Khi context bị cắt, thông tin biến mất nếu chưa được persist.
+Context window không phải durable memory. Khi context bị truncate, thông tin biến mất nếu không persisted.
 
 ## Episodic Memory
 
 Episodic memory lưu “đã xảy ra gì”. Ví dụ:
 
 ```text
-2026-09-20: lần deploy thất bại vì migration lock bị timeout
+2026-09-20: deploy attempt failed because migration lock timed out
 ```
 
-Nó hữu ích để học từ lần thử trước, audit và personalization.
+Nó hữu ích cho learning from previous attempts, audit và personalization.
 
-Tuy nhiên raw event log có thể rất lớn, nên retrieval hoặc summarization policy cần chọn episode relevant.
+Nhưng raw event log có thể rất lớn, nên retrieval/summarization policy cần chọn episode relevant.
 
 ## Semantic Memory
 
-Semantic memory lưu fact đã được trừu tượng hóa khỏi event cụ thể:
+Semantic memory lưu facts đã abstraction khỏi event cụ thể:
 
 ```text
-Service A yêu cầu Java 21
-User thích giải thích tiếng Hàn ngắn gọn
-API X giới hạn 100 request/phút
+Service A requires Java 21
+User prefers concise Korean explanations
+API X rate limit is 100 requests/minute
 ```
 
-Fact nên có provenance, version và khoảng hiệu lực thời gian khi có thể. Tri thức lỗi thời là một failure mode của memory.
+Fact nên có provenance/version/time validity nếu có thể. Knowledge stale là một memory failure mode.
 
 ## Procedural Memory
 
-Procedural memory mô tả “cách thực hiện”. Có thể là:
+Procedural memory mô tả “cách làm”. Có thể là:
 
 - runbook;
 - workflow definition;
-- pattern dùng tool;
+- tool usage pattern;
 - policy;
-- checklist tái sử dụng.
+- reusable checklist.
 
-Trong enterprise agent, tri thức thủ tục thường nên nằm trong document hoặc workflow tường minh thay vì chỉ “ẩn” trong prompt.
+Trong enterprise agent, procedural knowledge thường nên ở explicit docs/workflows thay vì chỉ “ẩn” trong prompt.
 
-## Chính sách ghi Memory
+## Memory Write Policy
 
 Không nên lưu mọi thứ.
 
-Trước khi ghi memory cần hỏi:
+Memory write cần hỏi:
 
-- thông tin này có ích dài hạn không?
-- có nhạy cảm hoặc riêng tư không?
+- thông tin này có ích lâu dài không?
+- có sensitive/private không?
 - đã có fact tương đương chưa?
-- confidence và provenance có đủ không?
-- retention policy có cho phép không?
+- confidence/provenance đủ không?
+- retention policy cho phép không?
 
-Nếu mô hình tự lưu mọi câu user nói thành fact vĩnh viễn, memory sẽ nhanh chóng bị ô nhiễm.
+Nếu model tự lưu mọi câu user nói thành permanent fact, memory nhanh chóng ô nhiễm.
 
-## Chính sách truy xuất Memory
+## Memory Retrieval Policy
 
-Khi đưa memory vào context, có thể xếp hạng theo:
+Khi cần context, retrieve dựa trên:
 
 ```text
 relevance
@@ -91,7 +91,7 @@ scope
 permission
 ```
 
-Vector similarity chỉ giải quyết relevance theo embedding space, không tự xử lý freshness hoặc authorization.
+Vector similarity chỉ giải quyết relevance theo embedding space, không tự giải quyết freshness hoặc authorization.
 
 ## Vector Memory
 
@@ -101,7 +101,7 @@ Embedding memory hỗ trợ semantic retrieval:
 q = embed(query),\quad score_i = sim(q,m_i)
 \]
 
-Nhưng vẫn cần metadata filter:
+Nhưng cần metadata filter:
 
 ```text
 user_id
@@ -111,93 +111,93 @@ memory type
 access level
 ```
 
-Không được truy xuất chéo user ngoài permission scope.
+Không nên cross-user retrieval ngoài permission scope.
 
-## Memory bằng tóm tắt
+## Summarization Memory
 
-Lịch sử dài có thể được nén thành summary. Tuy nhiên tóm tắt là phép biến đổi mất mát.
+Long history có thể được compress thành summary. Nhưng summary là lossy transformation.
 
-Rủi ro:
+Risk:
 
 ```text
-raw events → model summary → future agent coi summary là sự thật
+raw events → model summary → future agent treats summary as truth
 ```
 
-Nếu summary sai, lỗi trở thành trạng thái bền vững. Fact quan trọng nên lưu thành structured record hoặc kèm link provenance.
+Nếu summary sai, error persistent. Vì vậy critical facts nên lưu structured records hoặc link provenance.
 
-## Quên cũng là một Feature
+## Forgetting là feature
 
-Memory không nên tăng vô hạn. Expiration và forgetting giúp:
+Memory không nên grow forever. Forgetting/expiration giúp:
 
-- giảm nhiễu;
-- loại fact lỗi thời;
-- tuân thủ retention và privacy;
-- giảm chi phí retrieval.
+- giảm noise;
+- loại stale facts;
+- comply retention/privacy;
+- giảm retrieval cost.
 
-TTL có thể khác nhau theo loại memory.
+TTL có thể khác nhau theo memory type.
 
-## Giải quyết xung đột
+## Conflict Resolution
 
 Memory có thể mâu thuẫn:
 
 ```text
-cũ: customer timezone = UTC
-mới: customer timezone = Asia/Seoul
+old: customer timezone = UTC
+new: customer timezone = Asia/Seoul
 ```
 
-Hệ thống cần semantics về version và thời gian. Không nên chỉ retrieve cả hai rồi để LLM tự đoán.
+System cần version/time semantics. Không nên đơn giản retrieve cả hai rồi mong LLM tự đoán.
 
 ## Memory và Database
 
-Database vốn đã là hệ thống nhớ theo nghĩa rộng. Agent không cần copy structured fact vào vector database nếu relational lookup chính xác hơn.
+Database đã là memory system theo nghĩa broad. Một agent không cần duplicate structured facts vào vector DB nếu relational lookup chính xác hơn.
 
-Chọn storage theo kiểu truy vấn:
+Chọn storage theo query pattern:
 
 ```text
-state chính xác      → relational / KV DB
-text ngữ nghĩa       → vector / search index
-artifact lớn         → object / document store
-lịch sử event        → log / event store
+exact state      → relational/KV DB
+semantic text    → vector/search index
+large artifacts  → object/document store
+event history    → log/event store
 ```
 
 ## Memory và RAG
 
-RAG thường retrieve tri thức từ document bên ngoài. Agent memory retrieve lịch sử task, user hoặc system. Cơ chế có thể giống nhau nhưng semantics khác nhau.
+RAG thường retrieve external knowledge documents. Agent memory retrieve task/user/system history. Mechanism có thể giống nhau, semantics khác nhau.
 
-## User Memory và Task Memory
+## User Memory vs Task Memory
 
-Cần tách scope:
+Tách scope:
 
 ```text
-Task memory   → chỉ phục vụ execution hiện tại
-User memory   → preference / fact qua nhiều session
-Team memory   → tri thức domain dùng chung
-System memory → policy / runbook
+Task memory  → chỉ cho execution hiện tại
+User memory  → preferences/facts across sessions
+Team memory  → shared domain knowledge
+System memory→ policies/runbooks
 ```
 
-Ranh giới scope cũng là ranh giới bảo mật.
+Scope boundary là security boundary.
 
 ## Memory Poisoning
 
-Nếu attacker khiến nội dung độc hại được lưu lâu dài, các task tương lai có thể bị ảnh hưởng. Đây là phiên bản bền vững của prompt injection.
+Nếu attacker khiến malicious content được lưu lâu dài, future tasks có thể bị ảnh hưởng. Đây là persistence version của prompt injection.
 
-Write path cần validation và trust level; retrieval path phải coi memory là dữ liệu, không phải authority tuyệt đối.
+Write path cần validation/trust level; retrieval path cần treat memory as data, không authority tuyệt đối.
 
-## Ví dụ: Coding Agent
+## Example: coding agent
 
 Một coding agent có thể lưu:
 
 ```text
-working: file đang sửa + test failure
-episodic: cách thử trước đã thất bại
-semantic: repo dùng Java 21 + Gradle
+working: files đang sửa + test failures
+episodic: previous failed approach
+semantic: repo uses Java 21 + Gradle
 procedural: contribution workflow
-artifact: diff / commit thật
+artifact: actual diff/commit
 ```
 
-Codebase vẫn là source of truth; memory chỉ hỗ trợ navigation và reasoning.
+Actual codebase vẫn là source of truth; memory chỉ hỗ trợ navigation/reasoning.
 
-## Metric chất lượng Memory
+## Memory Quality Metrics
 
 Có thể đánh giá:
 
@@ -205,33 +205,33 @@ Có thể đánh giá:
 - stale-memory rate;
 - contradiction rate;
 - useful-memory rate;
-- unauthorized retrieval incident;
-- số token context bị tiêu thụ.
+- unauthorized retrieval incidents;
+- context tokens consumed.
 
-“Agent nhớ nhiều” không phải metric chất lượng.
+“Agent nhớ nhiều” không phải metric tốt.
 
-## Mô hình tư duy
+## Mental Model
 
-> **Memory là trạng thái bên ngoài được quản lý, không phải transcript vô hạn.**
+> **Memory là managed external state, không phải một transcript vô hạn.**
 
-Kiến trúc memory tốt quyết định cái gì cần lưu, lưu ở đâu, bao lâu, ai được đọc và khi nào retrieve.
+Good memory architecture quyết định cái gì cần lưu, ở đâu, bao lâu, ai được đọc và khi nào retrieve.
 
-## Những hiểu lầm thường gặp
+## Common Misconceptions
 
 ### “Vector DB = agent memory”
 
-Không. Vector DB chỉ là một kỹ thuật lưu và retrieval phù hợp với một số loại memory.
+Vector DB chỉ là một storage/retrieval technique cho một số memory types.
 
 ### “Long context thay thế memory”
 
-Không. Context vẫn hữu hạn, tốn chi phí và không giải quyết persistence, query hay versioning.
+Long context vẫn finite, costly và không giải quyết persistence/query/versioning.
 
 ### “Memory càng nhiều agent càng thông minh”
 
-Không. Nhiễu, fact cũ và xung đột có thể làm hiệu năng kém hơn.
+Noise, stale facts và conflict có thể làm performance tệ hơn.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Memory nối database, information retrieval, privacy, event sourcing và context engineering.
+Memory nối databases, information retrieval, privacy, event sourcing và context engineering. Phần tiếp theo phân biệt memory với state và context.
 
 Xem tiếp: [Agent State and Context](./05_agent_state_and_context.md).

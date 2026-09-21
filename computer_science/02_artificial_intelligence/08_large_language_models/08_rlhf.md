@@ -1,156 +1,158 @@
-# Học tăng cường từ phản hồi con người (RLHF)
+# Reinforcement Learning from Human Feedback (RLHF)
 
-**Học tăng cường từ phản hồi con người (Reinforcement Learning from Human Feedback — RLHF / 인간 피드백 기반 강화학습)** là một nhóm phương pháp hậu huấn luyện dùng tín hiệu sở thích của con người để làm đầu ra của mô hình phù hợp hơn với hành vi mong muốn. Mục tiêu không phải “con người nói fact nào đúng rồi mô hình học thuộc”, mà thường là học **thứ tự ưu tiên (preference ordering)** giữa nhiều phản hồi ứng viên và dùng tín hiệu đó để cập nhật policy.
+**RLHF (Reinforcement Learning from Human Feedback / 인간 피드백 기반 강화학습)** là một family of post-training methods dùng human preference signal để làm model outputs phù hợp hơn với desired behavior. Mục tiêu không phải “human cho biết fact nào đúng rồi model học thuộc”. RLHF thường học **preference ordering giữa candidate responses** và dùng signal đó để update policy.
 
 ## Vì sao SFT chưa đủ?
 
-SFT cần một phản hồi mục tiêu cụ thể. Tuy nhiên nhiều prompt có thể có nhiều câu trả lời đều chấp nhận được nhưng chất lượng khác nhau. Ta thường quan tâm những preference mềm như:
+SFT cần một target response cụ thể. Nhưng nhiều prompts có nhiều answers đều acceptable ở mức khác nhau. Ta thường quan tâm preference mềm:
 
 ```text
-phản hồi A hữu ích hơn B
+response A hữu ích hơn B
 A chính xác hơn B
-A ít gây hại hơn B
-A ngắn gọn và đúng trọng tâm hơn B
+A ít harmful hơn B
+A concise hơn B
 ```
 
-Dữ liệu xếp hạng của con người chứa thông tin mà việc bắt chước một target duy nhất không thể biểu diễn đầy đủ.
+Human ranking chứa information mà single-target imitation không thể biểu diễn đầy đủ.
 
-## Pipeline RLHF cổ điển
+## Pipeline cổ điển
 
-Một pipeline phổ biến gồm ba giai đoạn:
+Một RLHF pipeline phổ biến gồm ba giai đoạn:
 
 ```text
-1. có policy đã SFT
-2. thu thập cặp preference → huấn luyện reward model
-3. tối ưu policy theo reward model bằng RL
+1. SFT policy
+2. collect preference pairs → train reward model
+3. optimize policy against reward model with RL
 ```
 
-### Dữ liệu preference
+### Preference data
 
-Với prompt `x`, mô hình tạo các candidate `y_a`, `y_b`. Người đánh giá chọn phản hồi được ưu tiên:
+Với prompt `x`, model tạo candidates `y_a`, `y_b`. Human label chọn response preferred:
 
 \[
 y_w \succ y_l
 \]
 
-trong đó `w` là phản hồi thắng và `l` là phản hồi thua.
+trong đó `w` là winner và `l` là loser.
 
-### Mô hình phần thưởng
+### Reward model
 
-**Mô hình phần thưởng (reward model)** `r_\phi(x,y)` học một score sao cho câu trả lời được ưu tiên có reward cao hơn. Một objective thường gặp:
+Reward model `r_\phi(x,y)` học score sao cho preferred answer có reward cao hơn. Một objective điển hình:
 
 \[
 \mathcal L_{RM}=-\log\sigma(r_\phi(x,y_w)-r_\phi(x,y_l))
 \]
 
-Reward model không phải “máy tiên tri về sự thật”. Nó chỉ xấp xỉ phân bố sở thích thể hiện trong dữ liệu annotation.
+Reward model không phải oracle truth. Nó approximates preference distribution trong annotation data.
 
-## Tối ưu policy
+## Policy optimization
 
-LLM đóng vai policy được tối ưu để tăng reward đã học. Nếu chỉ tối đa reward model một cách trực tiếp, policy có thể khai thác những điểm yếu của reward model. Vì vậy objective thường có thêm penalty giữ policy gần mô hình tham chiếu:
+Policy LLM sau đó được optimized để maximize learned reward, nhưng nếu chỉ maximize reward model trực tiếp, model có thể exploit its imperfections. Vì vậy objective thường thêm penalty giữ policy gần reference model:
 
 \[
 \max_\theta \; \mathbb E[r_\phi(x,y)] - \beta D_{KL}(\pi_\theta\|\pi_{ref})
 \]
 
-Term KL hạn chế policy trôi quá xa khỏi mô hình tham chiếu vốn đã có chất lượng ngôn ngữ tốt.
+KL term hạn chế policy drift quá xa khỏi model đã có language quality tốt.
 
-## Trực giác về PPO
+## PPO intuition
 
-**Proximal Policy Optimization (PPO)** từng là thuật toán phổ biến cho RLHF. PPO hạn chế update quá lớn giữa policy mới và cũ để huấn luyện ổn định hơn.
+**Proximal Policy Optimization (PPO)** từng là algorithm phổ biến cho RLHF. PPO giới hạn update quá lớn giữa policy mới và cũ để training ổn định hơn.
 
-Trong LLM, “hành động” là token được sinh và trajectory là cả chuỗi phản hồi. Reward thường đến ở cuối sequence hoặc từ một tín hiệu học được.
+Trong LLM setting, “action” là generated token và trajectory là response sequence. Reward thường đến ở cuối sequence hoặc qua learned signal.
 
-Điều này làm **gán công (credit assignment)** khó: một reward tổng cho cả câu trả lời không chỉ rõ token hoặc quyết định nào đã đóng góp bao nhiêu.
+Điều này làm credit assignment khó: reward tổng cho cả response không nói rõ token nào đóng góp bao nhiêu.
 
-## Khai thác hàm thưởng
+## Reward hacking
 
-Nếu reward model có blind spot, policy có thể tìm đầu ra đạt score cao nhưng người thật không thực sự thích. Hiện tượng này gọi là **khai thác phần thưởng (reward hacking)** hoặc **chơi theo đặc tả (specification gaming)**.
+Nếu reward model có blind spot, policy có thể tìm output score cao nhưng human không thực sự thích. Đây là **reward hacking / specification gaming**.
 
-Ví dụ nếu reward model vô tình liên hệ độ dài với sự hữu ích, policy có thể sinh câu trả lời dài không cần thiết để lấy reward cao.
+Ví dụ nếu reward model correlate verbosity với helpfulness, policy có thể tạo answer dài không cần thiết chỉ để tăng reward.
 
-Bài học chung của tối ưu hóa là:
+Đây là general lesson của optimization:
 
-> Optimizer sẽ tối ưu đại lượng được cung cấp, không phải mục tiêu chỉ tồn tại trong ý định của người thiết kế.
+> Optimizer sẽ tối ưu **metric được cho**, không phải mục tiêu trong đầu designer.
 
-## Sở thích không đồng nghĩa sự thật
+## Preference không bằng truth
 
-Người đánh giá có thể bất đồng, thiếu chuyên môn hoặc bị ảnh hưởng bởi cách diễn đạt. Reward model phản ánh cả quy trình annotation.
+Human annotators có thể disagree, thiếu domain expertise hoặc bị ảnh hưởng wording. Reward model phản ánh annotation process.
 
-Do đó RLHF có thể cải thiện helpfulness, phong cách hoặc xu hướng thừa nhận giới hạn, nhưng không bảo đảm factual correctness.
+Vì vậy RLHF có thể cải thiện helpfulness/style nhưng không guarantee factual correctness.
 
 Grounding, retrieval và verification vẫn cần thiết.
 
-## Thiết kế hướng dẫn annotation
+## Annotation design
 
-Hướng dẫn preference ảnh hưởng hành vi mô hình rất mạnh. Nếu labeler được yêu cầu ưu tiên phản hồi ngắn gọn, mô hình sẽ học preference đó. Nếu policy an toàn mơ hồ, nhãn có thể thiếu nhất quán.
+Preference guideline ảnh hưởng model behavior rất mạnh. Nếu labelers được yêu cầu ưu tiên concise answers, model sẽ học concise preference. Nếu safety policy mơ hồ, labels inconsistent.
 
-Mức bất đồng giữa người gán nhãn là thông tin hữu ích: tác vụ có thể mang tính chủ quan hoặc guideline chưa đủ rõ.
+Inter-annotator disagreement là signal quan trọng: problem có thể subjective hoặc guideline chưa đủ rõ.
 
-## Helpful, Honest, Harmless là bài toán đa mục tiêu
+## Helpful, Honest, Harmless là multi-objective
 
-Một trợ lý thường phải cân bằng nhiều objective. Tính hữu ích và vô hại đôi khi xung đột; tính trung thực có thể yêu cầu mô hình thừa nhận không chắc chắn thay vì trả lời dứt khoát.
+Một assistant thường phải balance nhiều objectives. Helpfulness và harmlessness đôi khi conflict; honesty có thể yêu cầu model thừa nhận uncertainty thay vì đưa answer decisive.
 
-Không có một scalar reward hoàn hảo biểu diễn mọi giá trị. Hệ thống thực tế thường dùng mixture dữ liệu, policy riêng và nhiều bộ đánh giá độc lập.
+Không có một scalar reward hoàn hảo biểu diễn mọi value. Practical systems dùng mixtures, policies và separate evaluations.
 
-## Tối ưu preference online và offline
+## Online vs offline preference optimization
 
-RLHF cổ điển có thể cho policy liên tục sinh trajectory mới trong vòng lặp huấn luyện, nên phân bố dữ liệu thay đổi theo policy. Đây gần với thiết lập online hoặc on-policy.
+Classical RLHF có model generate new trajectories trong loop, nên distribution thay đổi khi policy update. Đây là online/on-policy flavor.
 
-Các phương pháp như DPO có thể tối ưu trực tiếp trên cặp preference offline mà không cần reward model tách riêng và vòng PPO đầy đủ.
+Các methods như DPO có thể optimize trực tiếp trên offline preference pairs mà không cần explicit reward-model + PPO loop.
 
 Xem tiếp: [Preference Optimization and DPO](./09_preference_optimization_and_dpo.md).
 
-## RLHF và an toàn
+## RLHF và safety
 
-Dữ liệu preference về safety có thể dạy từ chối, phản hồi an toàn và tuân thủ policy. Tuy nhiên mô hình vẫn có thể bị jailbreak vì dữ liệu huấn luyện không thể bao phủ mọi prompt đối kháng.
+Safety preference data có thể dạy refusal, safe completion và policy adherence. Nhưng model vẫn có thể bị jailbreak vì training distribution không cover mọi adversarial prompt.
 
-Defense ở runtime, filter đầu vào/đầu ra, ranh giới quyền của tool và red teaming vẫn là các lớp hệ thống bổ sung.
+Runtime defenses, input/output filters, tool permission boundaries và red teaming là system-level layers bổ sung.
 
-## KL penalty như ràng buộc ổn định
+## KL penalty như stability constraint
 
-Nếu tối ưu reward quá mạnh, mô hình có thể mất độ trôi chảy hoặc hội tụ về đầu ra kỳ lạ nhưng reward cao. KL penalty giữ phân bố gần reference.
+Nếu reward optimization quá mạnh, model có thể mất fluency hoặc collapse vào weird high-reward outputs. KL penalty giữ distribution gần reference.
 
-`β` lớn làm policy bảo thủ hơn; `β` nhỏ cho phép policy di chuyển mạnh hơn theo reward.
+`β` lớn → policy conservative.
 
-Đây là một đánh đổi giống **trust region** giữa cải thiện reward và giữ hành vi nền.
+`β` nhỏ → policy có thể move aggressively theo reward.
 
-## Tối ưu quá mức reward model
+Đây là một trust-region-like trade-off.
 
-Khi policy ngày càng tối ưu mạnh đối với một reward model cố định, preference thật của con người có thể tăng ở giai đoạn đầu rồi giảm khi policy bắt đầu khai thác sai số của reward model.
+## Reward model overoptimization
 
-Vì vậy reward-model score không nên là metric duy nhất sau huấn luyện.
+Khi optimize policy ngày càng mạnh against fixed reward model, actual human preference có thể tăng lúc đầu rồi giảm khi policy exploit imperfections.
 
-## Mô hình tư duy
+Do đó reward-model score không nên là only evaluation after training.
+
+## Mental Model
 
 ```text
-Sở thích con người
+Human preferences
       ↓
-tín hiệu preference được học
+learned preference signal
       ↓
-tối ưu policy
+optimize policy
       ↓
-hành vi trợ lý thay đổi
+assistant behavior shifts
 ```
 
-RLHF là **điều chỉnh hành vi dưới phép đo preference không hoàn hảo**, không phải “nạp toàn bộ giá trị con người vào mô hình”.
+RLHF là **behavior alignment under imperfect preference measurement**, không phải “upload human values vào model”.
 
-## Những hiểu lầm thường gặp
+## Common Misconceptions
 
-### “RLHF làm mô hình biết fact đúng hơn”
+### “RLHF làm model biết facts đúng hơn”
 
-Nó có thể gián tiếp cải thiện sự trung thực, nhưng tri thức factual chủ yếu đến từ pretraining và retrieval; reward optimization không biến preference label thành world model đầy đủ.
+Có thể gián tiếp cải thiện honesty, nhưng factual knowledge chủ yếu đến từ pretraining/retrieval; reward optimization không biến preference labels thành complete world model.
 
-### “Reward model chính là phán đoán của con người”
+### “Reward model chính là human judgment”
 
-Không. Nó là một mô hình xấp xỉ có bias và error.
+Không. Nó là learned approximation có bias/error.
 
 ### “RLHF = PPO”
 
-PPO chỉ là một lựa chọn tối ưu. RLHF là khái niệm rộng hơn và có nhiều phương pháp preference optimization khác.
+PPO là một optimization choice. RLHF rộng hơn và preference optimization có nhiều alternatives.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-RLHF ứng dụng các ý tưởng của [Reinforcement Learning](../11_reinforcement_learning/00_reinforcement_learning_foundations.md) và [Optimization](../01_mathematical_foundations/06_optimization.md), nhưng hậu huấn luyện LLM có cấu trúc riêng vì action space là chuỗi token và reward được học từ preference.
+RLHF là ứng dụng của [Reinforcement Learning](../11_reinforcement_learning/00_reinforcement_learning_foundations.md) và [Optimization](../01_mathematical_foundations/06_optimization.md), nhưng practical LLM post-training có structure riêng vì action space là token sequences và reward learned from preferences.
 
 Xem tiếp: [DPO](./09_preference_optimization_and_dpo.md).

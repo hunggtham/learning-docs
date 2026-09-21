@@ -1,46 +1,46 @@
-# Tối ưu hóa cho Trí tuệ nhân tạo
+# Optimization cho Artificial Intelligence
 
-**Tối ưu hóa (Optimization / 최적화)** là quá trình tìm giá trị của các biến để một **hàm mục tiêu (objective function)** trở nên tốt hơn. Trong học máy, kiến trúc xác định lớp hàm mà mô hình có thể biểu diễn, dữ liệu cung cấp các mẫu quan sát, hàm mất mát định nghĩa hành vi nào được xem là tốt, còn **bộ tối ưu (optimizer)** tìm các tham số phù hợp với mục tiêu đó.
+Optimization (최적화 / tối ưu hóa) là quá trình tìm giá trị của variables để một objective trở nên tốt hơn. Trong Machine Learning, architecture xác định class of functions model có thể biểu diễn, data cung cấp examples, loss function định nghĩa behavior nào được coi là tốt, còn optimizer tìm parameters phù hợp objective đó.
 
-Một hiểu lầm phổ biến là “huấn luyện = hạ gradient”. Chính xác hơn, huấn luyện là một quá trình học rộng hơn; tối ưu hóa là cơ chế tìm tham số; còn các phương pháp dựa trên gradient chỉ là một họ thuật toán. Quan trọng hơn, tối ưu rất tốt một mục tiêu sai vẫn có thể tạo ra hệ thống tệ. Vì vậy tối ưu hóa phải luôn được học cùng **thiết kế mục tiêu, ràng buộc và đánh giá**.
+Một misconception phổ biến là “training = gradient descent”. Chính xác hơn, training là learning process rộng hơn; optimization là mechanism tìm parameters; gradient-based methods chỉ là một family algorithms. Hơn nữa, optimize rất tốt một objective sai vẫn có thể tạo system tệ. Vì vậy Optimization phải luôn được học cùng **objective design, constraints và evaluation**.
 
-Xem trước: [Giải tích cho AI](./04_calculus_for_ai.md).
+Xem trước: [Calculus for AI](./04_calculus_for_ai.md).
 
-## Hàm mục tiêu
+## Objective function
 
-Một bài toán tối ưu tổng quát có dạng:
+General optimization problem:
 
 \[
 \theta^*=\arg\min_\theta J(\theta)
 \]
 
-Trong học có giám sát:
+Trong supervised learning:
 
 \[
 J(\theta)=\frac{1}{n}\sum_{i=1}^{n}L(f_\theta(x_i),y_i)+\lambda\Omega(\theta)
 \]
 
-Hạng đầu đo mức độ mô hình khớp dữ liệu. `Ω(θ)` đóng vai trò điều chuẩn tham số hoặc hành vi. `λ` kiểm soát mức đánh đổi giữa các thành phần.
+Term đầu đo fit với data. `Ω(θ)` regularize parameters hoặc behavior. `λ` kiểm soát trade-off.
 
-Nếu muốn tối đa hóa phần thưởng `R`, ta có thể tương đương tối thiểu hóa `-R`. `argmin` và `argmax` chỉ vị trí đạt cực trị, không phải chính giá trị cực trị.
+Nếu maximize reward `R`, ta có thể equivalently minimize `-R`. `argmin` và `argmax` nói về location của optimum, không phải value minimum/maximum.
 
-## Hàm mất mát, hàm mục tiêu và chỉ số đánh giá khác nhau
+## Loss, objective và metric khác nhau
 
-**Hàm mất mát (loss function / 손실 함수)** thường là đại lượng khả vi mà bộ tối ưu giảm trên các mẫu dữ liệu.
+**Loss function (손실 함수)** thường là differentiable quantity optimizer minimize trên examples.
 
-**Hàm mục tiêu (objective)** có thể gồm hàm mất mát cộng với điều chuẩn, hình phạt hoặc ràng buộc.
+**Objective** có thể gồm loss + regularization + constraints/penalties.
 
-**Chỉ số đánh giá (evaluation metric)** là đại lượng ta thực sự báo cáo hoặc quan tâm, ví dụ độ chính xác, F1, doanh thu hoặc tỷ lệ vi phạm an toàn.
+**Evaluation metric** là quantity ta thực sự report hoặc care about, ví dụ accuracy, F1, revenue, safety violation rate.
 
-Chỉ số đánh giá không nhất thiết khả vi. Ta có thể tối ưu entropy chéo nhưng đánh giá bằng độ chính xác.
+Metric không nhất thiết differentiable. Ta có thể optimize cross-entropy nhưng evaluate accuracy.
 
-Đây là vai trò của **hàm mất mát thay thế (surrogate loss)**: tối ưu một đại lượng dễ xử lý có quan hệ với mục tiêu thực.
+Đây là idea của **surrogate loss**: optimize quantity tractable có relationship với target metric.
 
-Nếu hàm thay thế và mục tiêu thật lệch nhau, hàm mất mát huấn luyện có thể tiếp tục giảm trong khi kết quả sản phẩm không tốt hơn.
+Nếu surrogate và real objective misaligned, training loss giảm nhưng product outcome có thể không tốt hơn.
 
-## Tối ưu hóa có ràng buộc
+## Constraint optimization
 
-Không phải mọi bài toán đều chỉ là tối thiểu hóa một số vô hướng không ràng buộc.
+Không phải objective chỉ là minimize một scalar unconstrained.
 
 Ví dụ:
 
@@ -48,29 +48,29 @@ Ví dụ:
 \min_\theta L(\theta)
 \]
 
-với điều kiện:
+subject to:
 
 \[
 C(\theta)\le c
 \]
 
-Ràng buộc có thể là độ trễ, bộ nhớ, giới hạn công bằng, ngân sách năng lượng hoặc ngưỡng rủi ro.
+Constraint có thể là latency, memory, fairness bound, energy budget hoặc risk limit.
 
-AI trong production thường là bài toán đa mục tiêu hoặc có nhiều ràng buộc:
+Production AI thường là multi-objective/constraint problem:
 
 ```text
-chất lượng ↑
-độ trễ ↓
-chi phí ↓
-rủi ro riêng tư ↓
-vi phạm an toàn ↓
+quality ↑
+latency ↓
+cost ↓
+privacy risk ↓
+safety violations ↓
 ```
 
-Không tồn tại một mô hình “tốt nhất” độc lập với bối cảnh; thường chỉ có các phương án đánh đổi trên **biên Pareto (Pareto frontier)**.
+Không có một model “best” độc lập context; có Pareto trade-offs.
 
-## Tính lồi
+## Convexity
 
-Một hàm `f` là **lồi (convex)** nếu với `0≤λ≤1`:
+Function `f` convex nếu line segment giữa hai points trên graph nằm trên/above graph theo convexity inequality:
 
 \[
 f(\lambda x+(1-\lambda)y)
@@ -78,60 +78,62 @@ f(\lambda x+(1-\lambda)y)
 \lambda f(x)+(1-\lambda)f(y)
 \]
 
-Tối ưu lồi hấp dẫn vì dưới các điều kiện phù hợp, cực tiểu cục bộ cũng là cực tiểu toàn cục.
+với `0≤λ≤1`.
 
-Hồi quy tuyến tính với hàm mất mát bình phương là lồi theo tham số. Hồi quy logistic với hàm mất mát lồi chuẩn cũng có tính lồi.
+Convex optimization hấp dẫn vì local minimum cũng là global minimum dưới suitable conditions.
 
-Mạng nơ-ron sâu nói chung không lồi vì phép hợp thành nhiều tầng và tương tác giữa tham số tạo ra bề mặt tối ưu phức tạp.
+Linear regression với squared loss là convex theo parameters. Logistic regression với standard convex loss cũng convex.
 
-## Cực tiểu cục bộ, điểm yên ngựa và vùng phẳng
+Deep neural networks generally non-convex vì composition và parameter interactions tạo complex landscape.
 
-Trong bề mặt không lồi, gradient bằng 0 có thể là:
+## Local minima, saddle points và flat regions
 
-- cực tiểu cục bộ;
-- cực đại cục bộ;
-- **điểm yên ngựa (saddle point)**;
-- vùng phẳng.
+Trong non-convex landscape, gradient bằng zero có thể là:
 
-Mạng nơ-ron nhiều chiều có rất nhiều hướng yên ngựa hoặc gần phẳng. Vì vậy không nên hình dung tối ưu hóa chỉ như “quả bóng lăn xuống một cái bát”.
+- local minimum;
+- local maximum;
+- saddle point;
+- flat plateau.
 
-Bề mặt tối ưu còn phụ thuộc vào cách tham số hóa và các đối xứng. Hai bộ tham số khác nhau có thể biểu diễn cùng một hàm.
+High-dimensional neural networks có rất nhiều saddle/flat directions. Optimization behavior không nên được tưởng tượng chỉ như “quả bóng lăn xuống một cái bát”.
 
-## Hạ gradient
+Landscape phụ thuộc parameterization và symmetries. Hai parameter sets khác nhau có thể represent same function.
 
-**Hạ gradient toàn bộ lô (full-batch gradient descent)** cập nhật:
+## Gradient descent
+
+Full-batch gradient descent:
 
 \[
 \theta_{t+1}=\theta_t-\eta\nabla J(\theta_t)
 \]
 
-trong đó `η` là tốc độ học.
+`η` là learning rate.
 
-Nếu `η` quá nhỏ, tiến trình chậm. Nếu quá lớn, cập nhật có thể vượt quá vùng tốt hoặc phân kỳ.
+Nếu `η` quá nhỏ, progress chậm. Nếu quá lớn, updates có thể overshoot hoặc diverge.
 
-Xét hàm bậc hai một chiều:
+Một quadratic 1D:
 
 \[
 J(w)=\frac{1}{2}aw^2
 \]
 
-Gradient:
+có gradient:
 
 \[
 J'(w)=aw
 \]
 
-Cập nhật:
+update:
 
 \[
 w_{t+1}=(1-\eta a)w_t
 \]
 
-Từ đây có thể thấy độ ổn định của tốc độ học phụ thuộc vào độ cong `a`. Một tốc độ học phù hợp ở hướng phẳng có thể quá lớn ở hướng dốc.
+Từ đây thấy learning rate stability phụ thuộc curvature `a`. Một learning rate phù hợp direction flat có thể quá lớn ở direction steep.
 
-## Hạ gradient ngẫu nhiên
+## Stochastic Gradient Descent
 
-Với tập dữ liệu lớn, tính gradient trên toàn bộ dữ liệu ở mỗi bước rất tốn kém. **Hạ gradient ngẫu nhiên (Stochastic Gradient Descent - SGD)** thường dùng một mẫu hoặc một **lô nhỏ (mini-batch)**:
+Dataset lớn khiến compute full gradient expensive. SGD dùng one sample hoặc mini-batch:
 
 \[
 g_t=\frac{1}{B}\sum_{i\in\mathcal{B}_t}\nabla L_i(\theta_t)
@@ -141,36 +143,36 @@ g_t=\frac{1}{B}\sum_{i\in\mathcal{B}_t}\nabla L_i(\theta_t)
 \theta_{t+1}=\theta_t-\eta g_t
 \]
 
-`g_t` là một ước lượng có nhiễu của gradient đầy đủ.
+`g_t` là noisy estimate của full gradient.
 
-Nhiễu không chỉ là nhược điểm. Nó giúp giảm chi phí mỗi lần cập nhật, có thể giúp khám phá bề mặt tối ưu và đôi khi tạo hiệu ứng điều chuẩn ngầm.
+Noise không chỉ là drawback. Nó giảm compute/update, có thể giúp exploration landscape và tạo implicit regularization effects.
 
-Trong thực hành hiện đại, “SGD” thường chỉ mini-batch SGD chứ không nhất thiết đúng một mẫu mỗi bước.
+Modern “SGD” trong practice thường nghĩa mini-batch SGD, không phải exactly one sample.
 
-## Đánh đổi của kích thước lô
+## Batch size trade-off
 
-**Kích thước lô (batch size)** lớn thường:
+Larger batch:
 
-- tạo ước lượng gradient ít nhiễu hơn;
-- tận dụng phần cứng tốt hơn;
-- cần nhiều bộ nhớ hơn;
-- tạo ít lần cập nhật tham số hơn trong mỗi epoch;
-- có thể làm thay đổi động lực huấn luyện và khả năng khái quát hóa.
+- gradient estimate ít noisy hơn;
+- hardware utilization có thể tốt hơn;
+- memory demand cao hơn;
+- ít parameter updates trên mỗi epoch;
+- generalization/training dynamics có thể đổi.
 
-Lô nhỏ thường:
+Small batch:
 
-- tạo gradient nhiều nhiễu hơn;
-- có nhiều lần cập nhật hơn;
-- dùng ít bộ nhớ hơn;
-- có thể làm thông lượng phần cứng kém nếu quá nhỏ.
+- noisy gradients hơn;
+- nhiều updates hơn;
+- memory nhẹ hơn;
+- hardware throughput có thể kém nếu quá nhỏ.
 
-Không có kích thước lô tối ưu cho mọi trường hợp. Nó tương tác với tốc độ học, bộ tối ưu, mô hình, phần cứng và quy mô dữ liệu.
+Không có batch size universally optimal. Nó tương tác learning rate, optimizer, model, hardware và dataset scale.
 
-## Động lượng
+## Momentum
 
-SGD cơ bản dễ dao động trong những vùng có độ cong rất khác nhau theo các trục.
+Vanilla SGD dễ oscillate trong ravine có curvature khác nhau theo axes.
 
-**Động lượng (momentum)** duy trì một biến vận tốc:
+Momentum giữ velocity:
 
 \[
 v_t=\beta v_{t-1}+g_t
@@ -180,49 +182,49 @@ v_t=\beta v_{t-1}+g_t
 \theta_{t+1}=\theta_t-\eta v_t
 \]
 
-Mô hình tư duy: các gradient có hướng nhất quán qua nhiều bước được tích lũy, còn dao động đổi dấu qua lại bị triệt tiêu một phần.
+Mental model: gradients consistent qua nhiều steps accumulate, oscillation alternating directions partly cancel.
 
-Đây chỉ là phép tương tự với động lượng vật lý, không phải mô hình vật lý chính xác.
+Momentum không phải physical momentum exact, nhưng analogy hữu ích vừa phải.
 
-## Động lượng Nesterov
+## Nesterov momentum
 
-Các biến thể Nesterov đánh giá gradient ở một điểm đã dịch theo hướng động lượng trong một số cách xây dựng phổ biến. Chúng có lợi thế lý thuyết trong một số bài toán lồi và cũng có các biến thể thực dụng.
+Nesterov-style method evaluates/look-ahead gradient relative to momentum-shifted point trong một formulation phổ biến. Nó có theoretical advantages trong convex settings và variants practical.
 
-Các framework có thể triển khai công thức hơi khác nhau, nên khi tái lập kết quả cần kiểm tra định nghĩa chính xác thay vì chỉ nhìn tên bộ tối ưu.
+Framework implementations có conventions khác nhau, nên khi reproduce result cần check exact optimizer definition thay vì chỉ name.
 
-## Tốc độ học thích nghi
+## Adaptive learning rates
 
 ### AdaGrad
 
-AdaGrad tích lũy bình phương gradient:
+AdaGrad accumulate squared gradients:
 
 \[
 s_t=s_{t-1}+g_t^2
 \]
 
-và chuẩn hóa cập nhật:
+và scale update:
 
 \[
 \theta\leftarrow\theta-\eta\frac{g_t}{\sqrt{s_t}+\epsilon}
 \]
 
-Các tham số từng có gradient lớn sẽ nhận tốc độ học hiệu dụng nhỏ hơn.
+Parameters có historical large gradients nhận smaller effective learning rate.
 
-AdaGrad hữu ích với đặc trưng thưa, nhưng mẫu số chỉ tăng nên tốc độ học có thể giảm quá mạnh về sau.
+Useful cho sparse features nhưng accumulated denominator chỉ tăng, có thể làm learning rate decay quá mạnh.
 
 ### RMSProp
 
-RMSProp dùng trung bình động hàm mũ:
+RMSProp dùng exponential moving average:
 
 \[
 s_t=\beta s_{t-1}+(1-\beta)g_t^2
 \]
 
-nhờ đó tránh tích lũy vô hạn như AdaGrad.
+tránh accumulation không giới hạn của AdaGrad.
 
 ### Adam
 
-Adam kết hợp ước lượng moment bậc nhất và bậc hai:
+Adam combine first moment và second moment estimates:
 
 \[
 m_t=\beta_1m_{t-1}+(1-\beta_1)g_t
@@ -232,289 +234,289 @@ m_t=\beta_1m_{t-1}+(1-\beta_1)g_t
 v_t=\beta_2v_{t-1}+(1-\beta_2)g_t^2
 \]
 
-Sau hiệu chỉnh độ chệch:
+Sau bias correction:
 
 \[
 \hat m_t=\frac{m_t}{1-\beta_1^t},\quad
 \hat v_t=\frac{v_t}{1-\beta_2^t}
 \]
 
-Cập nhật:
+update:
 
 \[
 \theta_{t+1}=
 \theta_t-\eta\frac{\hat m_t}{\sqrt{\hat v_t}+\epsilon}
 \]
 
-Adam phổ biến vì hoạt động ổn định trong nhiều bài toán, nhưng không tự động là lựa chọn tốt nhất cho mọi trường hợp.
+Adam phổ biến vì robust across many tasks, nhưng không automatically best mọi setting.
 
-## AdamW và suy giảm trọng số
+## AdamW và weight decay
 
-Điều chuẩn L2 và **suy giảm trọng số (weight decay)** tương đương trong một số thiết lập SGD đơn giản, nhưng với bộ tối ưu thích nghi chúng không nhất thiết tương đương.
+L2 regularization và weight decay có equivalence trong simple SGD settings, nhưng với adaptive optimizer chúng không necessarily equivalent.
 
-AdamW tách suy giảm trọng số khỏi việc chuẩn hóa gradient theo Adam:
+AdamW decouples weight decay khỏi gradient-based adaptive scaling:
 
 \[
-\theta\leftarrow (1-\eta\lambda)\theta-\text{AdamUpdate}
+\theta\leftarrow (1-\eta\lambda)\theta-	ext{AdamUpdate}
 \]
 
-Đây là một lý do AdamW phổ biến trong huấn luyện Transformer.
+Đây là reason AdamW phổ biến trong Transformer training.
 
-## Lịch tốc độ học
+## Learning-rate schedule
 
-Tốc độ học hiếm khi giữ nguyên từ đầu đến cuối một quá trình huấn luyện lớn.
+Learning rate hiếm khi giữ constant từ đầu tới cuối large training.
 
-Một số kiểu lịch thường gặp:
+Common patterns:
 
-- **giai đoạn tăng dần ban đầu (warmup)**;
-- giảm theo bậc;
-- giảm theo hàm mũ;
-- giảm theo cosine;
-- lịch kiểu one-cycle.
+- warmup;
+- step decay;
+- exponential decay;
+- cosine decay;
+- one-cycle-like schedules.
 
-Warmup tăng tốc độ học từ nhỏ lên mức mục tiêu trong những bước đầu. Với Transformer, giai đoạn đầu có thể không ổn định khi thống kê moment và mức kích hoạt chưa ổn định.
+**Warmup** tăng learning rate từ nhỏ lên target trong early steps. Với Transformer, early optimization có thể unstable khi moments/activations chưa settled.
 
-Lịch cosine:
+Cosine schedule giảm smoothly:
 
 \[
 \eta_t=\eta_{min}+\frac{1}{2}(\eta_{max}-\eta_{min})
 \left(1+\cos\frac{\pi t}{T}\right)
 \]
 
-Lịch tốc độ học là một phần của thuật toán tối ưu, không chỉ là tùy chọn trang trí.
+Schedule là part của optimization algorithm, không phải cosmetic config.
 
-## Khởi tạo trọng số và tối ưu hóa
+## Weight initialization và optimization
 
-Nếu trọng số quá lớn, giá trị kích hoạt và gradient có thể bùng nổ hoặc rơi vào vùng bão hòa. Nếu quá nhỏ, tín hiệu có thể biến mất.
+Nếu weights quá lớn, activations/gradients có thể explode hoặc saturate. Quá nhỏ, signals có thể vanish.
 
-Khởi tạo Xavier/Glorot cân bằng phương sai theo số đầu vào và đầu ra, thường phù hợp với một số hàm kích hoạt.
+Xavier/Glorot initialization cân variance theo fan-in/fan-out, useful với certain activations.
 
-Khởi tạo He/Kaiming điều chỉnh tốt hơn cho các hàm kiểu ReLU.
+He/Kaiming initialization điều chỉnh cho ReLU-like activations.
 
-Khởi tạo không chỉ là “hạt giống ngẫu nhiên”; nó đặt hình học ban đầu và thang tín hiệu cho quá trình tối ưu.
+Initialization không chỉ “random seed”; nó đặt starting geometry và signal scale cho optimization.
 
-## Chuẩn hóa và khả năng huấn luyện
+## Normalization và trainability
 
-BatchNorm, LayerNorm và các biến thể chuẩn hóa giá trị kích hoạt theo những trục khác nhau.
+BatchNorm, LayerNorm và variants normalize activations theo different axes.
 
-Ngoài tác dụng điều chuẩn, chuẩn hóa còn giúp cải thiện mức điều kiện và ổn định thang tín hiệu.
+Ngoài regularization effects, normalization cải thiện optimization conditioning và signal scales.
 
-Transformer thường dùng LayerNorm hoặc RMSNorm vì cấu trúc chuỗi và batch khác CNN.
+Transformer thường dùng LayerNorm/RMSNorm-like mechanisms vì sequence/batch semantics khác CNN.
 
-Vị trí chuẩn hóa, ví dụ **pre-norm** hay **post-norm**, ảnh hưởng trực tiếp tới dòng gradient và độ ổn định của Transformer sâu.
+Normalization placement (`pre-norm` vs `post-norm`) ảnh hưởng gradient flow và deep Transformer stability.
 
-## Mức điều kiện của bài toán
+## Conditioning
 
-Một bài toán được xem là **điều kiện kém (ill-conditioned)** khi độ cong khác nhau quá mạnh giữa các hướng.
+Optimization problem **ill-conditioned** khi curvature khác nhau rất mạnh theo directions.
 
-Với bài toán bậc hai có trị riêng Hessian từ `λ_min` tới `λ_max`, **số điều kiện (condition number)**:
+Với quadratic Hessian eigenvalues từ `λ_min` tới `λ_max`, condition number:
 
 \[
 \kappa=\frac{\lambda_{max}}{\lambda_{min}}
 \]
 
-Nếu `κ` lớn, hạ gradient dễ đi zig-zag và phải dùng tốc độ học thận trọng.
+large `κ` khiến gradient descent zig-zag và require conservative learning rate.
 
-Chuẩn hóa đặc trưng, chuẩn hóa kích hoạt, tiền điều kiện và các phương pháp thích nghi đều cố cải thiện mức điều kiện hiệu dụng.
+Feature scaling, normalization, preconditioning và adaptive methods cố improve effective conditioning.
 
-## Phương pháp tối ưu bậc hai
+## Second-order methods
 
-Cập nhật Newton:
+Newton update:
 
 \[
 \theta_{t+1}=\theta_t-H^{-1}\nabla J
 \]
 
-sử dụng thông tin độ cong từ Hessian.
+uses Hessian curvature.
 
-Nếu hàm mục tiêu gần bậc hai, Newton có thể hội tụ rất nhanh gần nghiệm tối ưu. Tuy nhiên Hessian của mạng nơ-ron lớn quá khổng lồ để lưu và nghịch đảo trực tiếp.
+Nếu objective locally quadratic, Newton can converge fast near optimum. Nhưng neural-network Hessian khổng lồ, storage/inversion impossible trực tiếp.
 
-Các phương pháp gần Newton như BFGS và L-BFGS xấp xỉ độ cong và hữu ích ở bài toán nhỏ hơn, nhưng học sâu quy mô lớn chủ yếu dựa trên phương pháp bậc nhất.
+Quasi-Newton methods như BFGS/L-BFGS approximate curvature và useful ở smaller problems, nhưng large-scale stochastic Deep Learning chủ yếu dùng first-order methods.
 
-## Cắt gradient
+## Gradient clipping
 
-**Cắt gradient (gradient clipping)** theo chuẩn toàn cục:
+Global norm clipping:
 
 \[
 g\leftarrow g\cdot\min\left(1,\frac{c}{\|g\|}\right)
 \]
 
-khi chuẩn gradient vượt ngưỡng `c`.
+nếu gradient norm vượt threshold `c`.
 
-Cắt gradient giúp tránh một lần cập nhật cực lớn, đặc biệt trong mô hình chuỗi. Nhưng nếu việc cắt xảy ra liên tục, đó có thể là dấu hiệu của tốc độ học không phù hợp, chuẩn hóa kém hoặc bất ổn số khác.
+Clipping giúp prevent catastrophic huge update, đặc biệt sequence models. Nhưng nếu clipping xảy ra liên tục, có thể là symptom learning rate, normalization hoặc numerical instability khác.
 
-## Điều chuẩn và tối ưu hóa không hoàn toàn tách rời
+## Regularization và optimization không hoàn toàn tách rời
 
-Hình phạt L2 làm thay đổi hàm mục tiêu.
+L2 penalty thay objective.
 
-Dropout làm thay đổi động lực huấn luyện ngẫu nhiên.
+Dropout thay stochastic training dynamics.
 
-Dừng sớm giới hạn quỹ đạo tối ưu trước khi mô hình khớp hoàn toàn tập huấn luyện.
+Early stopping dừng optimization trước khi fully fit training set.
 
-Tăng cường dữ liệu làm thay đổi phân phối thực nghiệm mà bộ tối ưu nhìn thấy.
+Data augmentation thay empirical distribution optimizer sees.
 
-Vì vậy khả năng khái quát hóa là kết quả tương tác giữa hàm mục tiêu, dữ liệu và quỹ đạo tối ưu.
+Do đó generalization behavior là interaction giữa objective, data và optimization trajectory.
 
-## Dừng sớm
+## Early stopping
 
-Hàm mất mát xác thực có thể bắt đầu tăng dù hàm mất mát huấn luyện vẫn giảm. **Dừng sớm (early stopping)** chọn checkpoint trước khi quá khớp trở nên nghiêm trọng.
+Validation loss có thể bắt đầu tăng dù training loss tiếp tục giảm. Early stopping chọn checkpoint trước overfitting.
 
-Đây là một dạng điều chuẩn ngầm: ta giới hạn số bước tối ưu.
+Đây là implicit regularization: ta giới hạn number of optimization steps.
 
-Tuy nhiên chỉ số xác thực nhiều nhiễu có thể khiến dừng quá sớm; hệ thống thực tế thường dùng khoảng kiên nhẫn (patience), làm mượt và chiến lược checkpoint.
+Nhưng noisy validation metric có thể khiến stop quá sớm; practical systems dùng patience/smoothing/checkpoint strategy.
 
-## Siêu tham số như một bài toán tối ưu bên ngoài
+## Hyperparameters như outer optimization
 
-Tham số `θ` được bộ tối ưu học từ dữ liệu huấn luyện. **Siêu tham số (hyperparameter)** như `λ`, tốc độ học, độ sâu kiến trúc hoặc kích thước lô thường được chọn bằng tập xác thực.
+Parameters `θ` được optimizer học từ training data. Hyperparameters `λ`, learning rate, architecture depth, batch size thường được chọn bằng validation process.
 
-Có thể nhìn thành hai vòng:
+Có thể nhìn:
 
 ```text
-vòng trong: học θ
-vòng ngoài: chọn siêu tham số h
+inner loop: train θ
+outer loop: choose hyperparameters h
 ```
 
-Tìm kiếm lưới, tìm kiếm ngẫu nhiên, tối ưu Bayes và phương pháp dựa trên quần thể là các chiến lược cho vòng ngoài.
+Grid search, random search, Bayesian optimization và population-based methods là strategies cho outer problem.
 
-Nếu tinh chỉnh quá nhiều trên cùng tập xác thực, quá khớp tập xác thực cũng có thể xảy ra.
+Nếu tune quá nhiều trên một validation set, validation overfitting cũng xảy ra.
 
-## Tối ưu đa mục tiêu
+## Multi-objective optimization
 
-Giả sử hệ thống cần tăng chất lượng `Q` và giảm độ trễ `C`:
+Suppose system cần maximize quality `Q` và minimize latency `C`:
 
 \[
 \max Q(\theta),\quad \min C(\theta)
 \]
 
-Có thể gộp thành:
+Một scalarized objective:
 
 \[
 J=-Q+\lambda C
 \]
 
-nhưng việc chọn `λ` phản ánh yêu cầu sản phẩm hoặc đánh đổi giá trị, không phải điều toán học tự quyết định.
+encode trade-off qua `λ`, nhưng choice `λ` là value judgment/business requirement, không phải mathematics tự quyết định.
 
-**Biên Pareto (Pareto frontier)** chứa các nghiệm mà không thể cải thiện một mục tiêu mà không làm xấu ít nhất một mục tiêu khác.
+Pareto frontier chứa solutions không thể improve một objective mà không worsen objective khác.
 
-Hệ thống AI thực tế thường chọn một điểm trên biên này theo ràng buộc sản phẩm.
+AI deployment thường chọn point trên frontier theo product constraints.
 
-## Tối ưu có ràng buộc và hàm Lagrange
+## Constrained optimization và Lagrangian
 
-Bài toán:
+Problem:
 
 \[
 \min_x f(x)\quad \text{s.t.}\quad g(x)\le0
 \]
 
-Hàm Lagrange:
+Lagrangian:
 
 \[
 \mathcal{L}(x,\lambda)=f(x)+\lambda g(x)
 \]
 
-với `λ≥0` cho ràng buộc bất đẳng thức.
+với `λ≥0` trong inequality setting.
 
-Hệ số Lagrange có thể được diễn giải như “giá bóng” của ràng buộc: chi phí biên của việc siết ràng buộc thêm một chút.
+Lagrange multipliers có interpretation shadow price: cost marginal của constraint.
 
-Ý tưởng này xuất hiện trong ràng buộc công bằng, phân bổ tài nguyên và học tăng cường có ràng buộc.
+Idea này xuất hiện trong fairness constraints, resource allocation và Reinforcement Learning constrained objectives.
 
-## Tối ưu hóa trong học tăng cường
+## Optimization trong Reinforcement Learning
 
-Học tăng cường tối ưu tổng phần thưởng kỳ vọng:
+RL tối ưu expected cumulative reward:
 
 \[
 J(\theta)=\mathbb{E}_{\tau\sim\pi_\theta}[R(\tau)]
 \]
 
-Gradient khó hơn học có giám sát vì hành động được lấy mẫu ảnh hưởng trạng thái và phần thưởng tương lai.
+Gradient khó hơn supervised learning vì action sampling influence future states và reward.
 
-Định lý policy gradient dẫn tới ước lượng:
+Policy gradient theorem cho gradient estimator dựa trên log-policy:
 
 \[
 \nabla_\theta J
 =\mathbb{E}[R\nabla_\theta\log\pi_\theta(a\mid s)]
 \]
 
-Phương sai thường lớn, từ đó dẫn tới baseline, actor-critic và nhiều phương pháp tối ưu nâng cao.
+Noise/variance rất lớn, dẫn tới baselines, actor-critic và advanced optimization methods.
 
-## Tối ưu hóa trong tiền huấn luyện LLM
+## Optimization trong LLM pretraining
 
-Hàm mục tiêu tiền huấn luyện LLM thường là entropy chéo dự đoán token tiếp theo trên tập văn bản cực lớn.
+LLM pretraining objective thường next-token cross-entropy trên huge token corpus.
 
-Quy mô tạo thêm nhiều thách thức:
+Scale tạo challenges:
 
-- tổng hợp gradient phân tán;
-- băng thông bộ nhớ;
-- độ chính xác hỗn hợp;
-- bộ nhớ trạng thái của optimizer;
-- lịch tốc độ học;
-- cắt gradient;
-- checkpoint;
-- thứ tự dữ liệu.
+- distributed gradient aggregation;
+- memory bandwidth;
+- mixed precision;
+- optimizer state memory;
+- learning-rate schedule;
+- gradient clipping;
+- checkpointing;
+- data ordering.
 
-Vì vậy tối ưu hóa ở quy mô lớn không chỉ là phương trình toán; nó còn là bài toán hệ thống phân tán.
+Optimization không chỉ là equation; nó là distributed systems problem ở large scale.
 
-## Tối ưu hóa trong căn chỉnh mô hình
+## Optimization trong alignment
 
-Tinh chỉnh theo chỉ dẫn vẫn là tối ưu có giám sát trên câu trả lời đã được tuyển chọn.
+Instruction tuning vẫn supervised optimization trên curated responses.
 
-Tối ưu theo sở thích dùng dữ liệu ưu tiên từ con người hoặc mô hình. RLHF, PPO và DPO tương ứng với những cách xây dựng hàm mục tiêu khác nhau.
+Preference optimization dùng human/model preference data. RLHF, PPO-style objectives, DPO-like methods encode different optimization formulations.
 
-Điểm quan trọng là bộ tối ưu không hiểu “hữu ích” hay “an toàn” theo nghĩa con người. Nó chỉ nhìn thấy hàm toán học được xây từ dữ liệu, phần thưởng và sở thích.
+Quan trọng: optimizer không biết “helpful” hay “safe” theo human sense. Nó chỉ thấy mathematical objective constructed from data/rewards/preferences.
 
-> **Bộ tối ưu rất giỏi tìm thứ mà hàm mục tiêu thưởng, chứ không tự hiểu ý định mơ hồ của người thiết kế.**
+> An optimizer is powerful at finding what the objective rewards, not what the designer vaguely intended.
 
-Đây là liên kết cốt lõi với vấn đề căn chỉnh.
+Connection này là core của specification gaming và alignment.
 
-## Khai thác phần thưởng và lách đặc tả
+## Reward hacking / specification gaming
 
-Nếu mục tiêu đại diện không khớp hoàn toàn với kết quả mong muốn, tác nhân hoặc mô hình có thể khai thác kẽ hở. Đây thường được gọi là **khai thác phần thưởng (reward hacking)** hoặc **lách đặc tả (specification gaming)**.
+Nếu objective proxy không exactly match desired outcome, agent/model có thể exploit loophole.
 
-Ví dụ, một tác nhân được thưởng theo “số vật được nhặt” có thể liên tục nhặt rồi thả cùng một vật nếu môi trường cho phép và định nghĩa phần thưởng không ngăn việc đó.
+Ví dụ simple agent rewarded “number of items picked” có thể repeatedly pick/drop same item nếu environment allows và reward definition không prevent.
 
-Trong sản phẩm học máy, tối ưu chỉ tỷ lệ nhấp có thể khuyến khích nội dung gây sốc dù mức hài lòng dài hạn của người dùng giảm.
+Trong ML product, optimizing click-through rate alone có thể encourage sensational content dù long-term user satisfaction giảm.
 
-Tối ưu hóa có thể khuếch đại sai lầm trong cách thiết kế chỉ số.
+Optimization amplifies metric design mistakes.
 
-## Trực giác “không có thuật toán tốt nhất cho mọi bài toán”
+## No Free Lunch intuition
 
-Không có bộ tối ưu hoặc mô hình nào tốt nhất trên mọi bài toán có thể có. Hiệu năng phụ thuộc vào cấu trúc và thiên kiến quy nạp của lớp nhiệm vụ.
+Không optimizer hoặc model universally best trên mọi possible problem. Performance dựa vào structural assumptions/inductive biases về class of tasks.
 
-Adam mạnh trong nhiều bài toán học sâu, nhưng không có định lý rằng “Adam luôn tốt nhất”. Giá trị mặc định của siêu tham số cũng chỉ là kiến thức tiên nghiệm theo miền, không phải hằng số phổ quát.
+Adam mạnh trong nhiều Deep Learning tasks, nhưng không có theorem “Adam always best”. Hyperparameter defaults cũng là domain priors, không universal constants.
 
-## Mô hình tư duy (mental model)
+## Mental Model
 
 ```text
-Kiến trúc mô hình  → những hàm có thể biểu diễn
-Hàm mất mát/mục tiêu → hành vi nào được thưởng
-Gradient           → tín hiệu hướng cục bộ
-Bộ tối ưu          → quy tắc biến tín hiệu thành cập nhật tham số
-Lịch học           → độ lớn cập nhật thay đổi theo thời gian
-Điều chuẩn         → ưu tiên ngoài việc khớp dữ liệu huấn luyện
-Ràng buộc          → giới hạn hệ thống không được vượt
-Đánh giá           → mục tiêu toán học có thật sự khớp kết quả mong muốn không
+Model architecture → những functions nào có thể represent
+Loss/objective      → behavior nào được rewarded
+Gradient            → local direction signal
+Optimizer           → rule biến signal thành parameter updates
+Schedule            → update scale thay đổi theo thời gian
+Regularization      → preference ngoài pure training fit
+Constraints         → boundaries system không được vượt
+Evaluation          → objective có thực sự map tới desired outcome không
 ```
 
-## Các hiểu lầm thường gặp
+## Common Misconceptions
 
-### “Hàm mất mát càng thấp thì mô hình càng tốt”
+### “Loss càng thấp thì model càng tốt”
 
-Chỉ đúng đối với hàm mục tiêu và tập dữ liệu đang tối ưu. Khả năng khái quát hóa, hiệu chuẩn, an toàn và chỉ số sản phẩm có thể khác.
+Chỉ trên objective/dataset đang optimize. Generalization, calibration, safety và product metrics có thể khác.
 
 ### “Adam luôn tốt hơn SGD vì hiện đại hơn”
 
-Lựa chọn optimizer phụ thuộc vào nhiệm vụ, cách tinh chỉnh và mục tiêu. SGD với momentum vẫn rất mạnh trong nhiều bài toán thị giác; Adam/AdamW phổ biến với Transformer.
+Optimizer choice phụ thuộc task, tuning và goal. SGD với momentum vẫn mạnh trong nhiều vision settings; Adam/AdamW phổ biến cho Transformers.
 
-### “Luôn phải tìm cực tiểu toàn cục”
+### “Global minimum luôn cần thiết”
 
-Trong học sâu, một nghiệm có khả năng khái quát hóa tốt quan trọng hơn cực tiểu toán học tuyệt đối của hàm mất mát huấn luyện. Nhiều bộ tham số khác nhau có thể đạt mất mát gần 0.
+Trong Deep Learning, solution có good generalization quan trọng hơn mathematical global minimum của training loss. Nhiều parameter solutions có near-zero loss.
 
-### “Mô hình đủ mạnh thì tối ưu hóa sẽ tự tìm hành vi đúng”
+### “Optimization tự tìm đúng behavior nếu model đủ mạnh”
 
-Không. Bộ tối ưu trung thành với tín hiệu được cung cấp; mục tiêu đặc tả sai sẽ khuyến khích hành vi sai lệch.
+Không. Optimizer faithfully follows provided signal; mis-specified objectives tạo misaligned behavior.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Tối ưu hóa nối [Giải tích](./04_calculus_for_ai.md) với huấn luyện học máy và nối trực tiếp tới an toàn AI thông qua việc đặc tả mục tiêu. SGD và AdamW sẽ quay lại trong mạng nơ-ron; tối ưu có ràng buộc và tối ưu chính sách sẽ xuất hiện trong học tăng cường; mục tiêu sở thích sẽ xuất hiện trong căn chỉnh LLM.
+Optimization nối [Calculus](./04_calculus_for_ai.md) với Machine Learning training và nối trực tiếp tới AI Safety qua objective specification. Sau này SGD/AdamW sẽ quay lại trong Neural Networks; constrained and policy optimization quay lại trong Reinforcement Learning; preference objectives quay lại trong LLM Alignment.
 
-Khi huấn luyện thất bại, đừng chỉ đổi optimizer. Hãy kiểm tra **hàm mục tiêu, quy mô dữ liệu, chuẩn hóa, thống kê gradient, lịch tốc độ học, kích thước lô, khởi tạo và độ chính xác số như một hệ thống liên kết**.
+Khi training fails, đừng chỉ đổi optimizer. Hãy kiểm tra objective, data scale, normalization, gradient statistics, learning-rate schedule, batch size, initialization và numerical precision như một coupled system.

@@ -1,189 +1,190 @@
-# Trí thông minh, tác nhân và môi trường
+# Intelligence, Agents và Environments
 
-Một trong những cách mạnh nhất để hiểu **trí tuệ nhân tạo (Artificial Intelligence - AI)** là không hỏi “máy có giống con người không?”, mà hỏi: **một hệ thống quan sát môi trường, lựa chọn hành động và đạt mục tiêu như thế nào?** Cách nhìn này dẫn tới khái niệm **tác nhân (agent / 에이전트)**.
+Một trong những cách mạnh nhất để hiểu Artificial Intelligence là không hỏi “máy có giống người không?”, mà hỏi: **một system quan sát môi trường, lựa chọn hành động và đạt mục tiêu như thế nào?** Cách nhìn này dẫn tới khái niệm **agent (에이전트 / tác nhân)**.
 
-Tác nhân là một thực thể nhận thông tin về **môi trường (environment)** thông qua quan sát hoặc cảm biến, duy trì **trạng thái nội bộ (internal state)** hoặc biểu diễn khi cần, sau đó chọn **hành động (action)** để tác động trở lại môi trường.
+Agent là một entity nhận information về environment thông qua observation hoặc sensor, duy trì một internal state hoặc representation khi cần, sau đó chọn action ảnh hưởng trở lại environment.
 
 ```mermaid
 flowchart LR
-    E[Môi trường] -->|Quan sát| A[Tác nhân]
-    A -->|Hành động| E
+    E[Environment] -->|Observation| A[Agent]
+    A -->|Action| E
 ```
 
-Đây là một phép trừu tượng hóa rất rộng. Bộ điều nhiệt đơn giản có thể được xem là tác nhân theo nghĩa tối thiểu. Máy chơi cờ, robot, chính sách học tăng cường và tác nhân LLM đều có thể được mô tả bằng cùng khung tư duy, dù độ phức tạp khác nhau rất lớn.
+Đây là một abstraction rất rộng. Thermostat đơn giản có thể được xem là agent theo nghĩa tối thiểu. Chess engine, robot, reinforcement-learning policy và LLM agent đều có thể được mô tả bằng cùng framework, dù complexity khác nhau rất lớn.
 
-## Tại sao khái niệm tác nhân quan trọng?
+## Tại sao abstraction agent quan trọng?
 
-Nếu chỉ nhìn AI như một hàm mô hình `y = f(x)`, ta dễ bỏ qua ngữ cảnh, phản hồi, trạng thái và hành động. Nhưng nhiều bài toán thực tế không kết thúc sau một dự đoán duy nhất.
+Nếu chỉ nhìn AI như một model function `y = f(x)`, ta dễ bỏ qua context, feedback, state và action. Nhưng nhiều bài toán thực không kết thúc sau một prediction duy nhất.
 
 Ví dụ robot giao hàng phải lặp lại:
 
 ```text
-quan sát → ước lượng trạng thái → quyết định → hành động → quan sát lại
+observe → estimate state → decide → act → observe again
 ```
 
-Một tác nhân LLM cũng có vòng lặp tương tự:
+Một LLM agent cũng tương tự:
 
 ```text
-đọc nhiệm vụ → suy luận trên ngữ cảnh → gọi công cụ
-→ nhận kết quả → cập nhật trạng thái → tiếp tục
+read task → reason over context → call tool → receive result → update state → continue
 ```
 
-Vì vậy, phép trừu tượng tác nhân nối AI cổ điển với các hệ thống tác nhân hiện đại (agentic systems).
+Vì vậy agent abstraction nối classical AI với modern agentic systems.
 
-## Tác nhân hợp lý (rational agent)
+## Rational Agent
 
-Trong giáo trình AI cổ điển, **tác nhân hợp lý (rational agent / 합리적 에이전트)** thường được mô tả là tác nhân chọn hành động có kỳ vọng tối ưu theo tiêu chí đánh giá, dựa trên những quan sát, tri thức và hành động mà nó có thể sử dụng.
+Trong textbook AI, một **rational agent (합리적 에이전트)** thường được mô tả là agent chọn action kỳ vọng tối ưu performance measure dựa trên observations, knowledge và available actions.
 
-“Hợp lý” ở đây không có nghĩa tác nhân phải biết mọi thứ hoặc luôn tạo ra kết quả hoàn hảo. Nó có nghĩa tác nhân hành động hợp lý theo thông tin và ràng buộc đang có.
+“Rational” ở đây không có nghĩa agent phải biết mọi thứ hoặc luôn đưa ra outcome hoàn hảo. Nó có nghĩa agent hành động hợp lý theo information và constraints nó có.
 
-Một tác nhân vẫn có thể thất bại dù lựa chọn hợp lý nếu:
+Một agent có thể rational nhưng vẫn thất bại vì:
 
-- môi trường có tính ngẫu nhiên;
-- quan sát không đầy đủ;
-- mô hình thế giới bị sai;
-- ngân sách tính toán bị giới hạn;
-- không gian hành động quá lớn;
-- phần thưởng hoặc hàm mục tiêu không phản ánh đúng mục tiêu thực.
+- environment stochastic;
+- observation không đầy đủ;
+- model của world sai;
+- compute budget giới hạn;
+- action space quá lớn;
+- reward/objective không phản ánh đúng mục tiêu thật.
 
-Điểm này rất quan trọng trong hệ thống AI vận hành thực tế: thất bại không nhất thiết chứng minh thuật toán “ngu”, mà có thể xuất phát từ quan sát, cách biểu diễn trạng thái, hàm mục tiêu hoặc giả định sai về môi trường.
+Điểm này rất quan trọng trong production AI: failure không nhất thiết chứng minh algorithm “ngu”, mà có thể nằm ở observation, state representation, objective hoặc environment assumption.
 
-## PEAS: mô tả môi trường nhiệm vụ
+## PEAS: mô tả task environment
 
-Một khung cổ điển để mô tả nhiệm vụ của tác nhân là **PEAS**:
+Một framework cổ điển để mô tả agent task là **PEAS**:
 
-- **Tiêu chí đánh giá (Performance measure)**: hệ thống được xem là tốt khi nào.
-- **Môi trường (Environment)**: nơi tác nhân hoạt động.
-- **Bộ chấp hành (Actuators)**: cách tác nhân tác động lên môi trường.
-- **Cảm biến (Sensors)**: cách tác nhân nhận thông tin.
+- **Performance measure**: tiêu chí đánh giá.
+- **Environment**: môi trường agent hoạt động.
+- **Actuators**: cách agent hành động.
+- **Sensors**: cách agent quan sát.
 
-Ví dụ với xe tự hành:
+Ví dụ với autonomous taxi:
 
 | Thành phần | Ví dụ |
 |---|---|
-| Tiêu chí đánh giá | an toàn, thời gian, chi phí, độ thoải mái |
-| Môi trường | đường, xe khác, người đi bộ, luật giao thông |
-| Bộ chấp hành | vô lăng, ga, phanh, đèn tín hiệu |
-| Cảm biến | camera, lidar, GPS, cảm biến tốc độ |
+| Performance | an toàn, thời gian, chi phí, comfort |
+| Environment | đường, xe khác, pedestrian, traffic rules |
+| Actuators | steering, throttle, brake, signals |
+| Sensors | camera, lidar, GPS, speed sensors |
 
-Với tác nhân phần mềm, bộ chấp hành không phải động cơ mà có thể là gọi API, ghi cơ sở dữ liệu, gửi email hoặc gọi công cụ.
+Với software agent, actuator không phải motor mà có thể là API call, database write, email action hoặc tool invocation.
 
-## Quan sát đầy đủ và quan sát một phần
+## Observable và Partially Observable
 
-Nếu tác nhân luôn biết toàn bộ trạng thái liên quan của môi trường, nhiệm vụ gần với **quan sát đầy đủ (fully observable)**. Bàn cờ vua là một ví dụ gần đúng: cả hai bên đều nhìn thấy trạng thái bàn cờ.
+Nếu agent luôn biết full state của environment, task được gọi là **fully observable**. Chess board là ví dụ gần đúng: cả hai bên nhìn thấy board state.
 
-Trong nhiều bài toán thế giới thực, tác nhân chỉ nhận được **quan sát một phần (partially observable / 부분 관측)**. Robot có điểm mù. Hệ thống gợi ý không biết chính xác sở thích thật của người dùng. Tác nhân LLM có thể không nhìn thấy toàn bộ trạng thái của hệ thống bên ngoài.
+Trong nhiều real-world problems, agent chỉ có partial observation. Robot có blind spots. Recommendation system không biết chính xác preference thật của user. LLM agent có thể không thấy toàn bộ state của external systems.
 
-Khi môi trường chỉ quan sát được một phần, tác nhân thường cần duy trì **trạng thái niềm tin (belief state)** hoặc trạng thái nội bộ để ước lượng những gì chưa thể quan sát trực tiếp.
+Khi environment **partially observable (부분 관측)**, agent thường cần duy trì **belief state** hoặc internal state để ước lượng điều chưa quan sát trực tiếp.
 
-Đây là liên kết trực tiếp tới xác suất, suy luận Bayes, mô hình trạng thái ẩn và **quá trình quyết định Markov quan sát một phần (POMDP)**.
+Đây là connection trực tiếp với probability, Bayesian inference, hidden-state models và POMDP.
 
-## Môi trường xác định và môi trường ngẫu nhiên
+## Deterministic và Stochastic
 
-Trong **môi trường xác định (deterministic environment)**, một hành động tại một trạng thái xác định rõ trạng thái tiếp theo.
+Trong deterministic environment, một action tại state xác định next state rõ ràng.
 
-Trong **môi trường ngẫu nhiên (stochastic environment)**:
+Trong stochastic environment:
 
 \[
 P(s_{t+1} \mid s_t, a_t)
 \]
 
-mô tả phân phối của trạng thái tiếp theo thay vì một kết quả duy nhất.
+mô tả distribution của next state thay vì một kết quả duy nhất.
 
-Trò chơi dùng xúc xắc, thị trường tài chính hoặc robot di chuyển trên bề mặt trơn đều chứa tính ngẫu nhiên.
+Ví dụ game xúc xắc, financial market hoặc robot di chuyển trên bề mặt trơn đều chứa stochasticity.
 
-Khi có bất định, lập kế hoạch không thể chỉ hỏi “hành động nào chắc chắn dẫn tới mục tiêu?”, mà phải hỏi “hành động nào có kết quả kỳ vọng tốt nhất?”.
+Khi uncertainty tồn tại, planning không thể chỉ hỏi “action nào dẫn chắc chắn tới goal?” mà phải hỏi “action nào có expected outcome tốt nhất?”.
 
-## Nhiệm vụ độc lập từng lượt và nhiệm vụ tuần tự
+## Episodic và Sequential
 
-Một mô hình phân loại ảnh gần với **nhiệm vụ độc lập từng lượt (episodic task)**: dự đoán hiện tại thường ít phụ thuộc vào hành động trước đó.
+Một image classifier thường gần với **episodic task**: prediction hiện tại ít phụ thuộc vào action trước.
 
-Lái xe, cờ vua, hội thoại và luồng công việc của tác nhân là **nhiệm vụ tuần tự (sequential task)**: quyết định hiện tại ảnh hưởng tới trạng thái tương lai.
+Driving, chess, dialogue và agent workflows là **sequential**: quyết định hiện tại ảnh hưởng states tương lai.
 
-Điều này khiến lập kế hoạch dài hạn khó hơn nhiều. Một hành động có phần thưởng ngắn hạn tốt có thể dẫn tới trạng thái xấu trong tương lai. Đây là vấn đề trung tâm của học tăng cường (Reinforcement Learning - RL).
+Điều này làm long-horizon planning khó hơn rất nhiều. Một action có reward ngắn hạn tốt có thể gây state xấu sau này. Đây chính là vấn đề central trong Reinforcement Learning.
 
-## Môi trường tĩnh và môi trường động
+## Static và Dynamic
 
-Nếu môi trường không thay đổi trong lúc tác nhân suy nghĩ, nó gần với **môi trường tĩnh (static)**. Trò chơi ô chữ là ví dụ điển hình.
+Nếu environment không đổi trong lúc agent suy nghĩ, nó gần static. Crossword puzzle là ví dụ.
 
-Nếu môi trường vẫn tiếp tục thay đổi, như giao thông hoặc xử lý sự cố an ninh mạng, tác nhân phải cân bằng thời gian tính toán và độ trễ hành động.
+Nếu environment tiếp tục thay đổi, như traffic hoặc cybersecurity incident response, agent phải cân bằng computation time và action latency.
 
-Vì vậy tác nhân trong môi trường thực tế cần giới hạn thời gian (timeout), khả năng hủy, phát hiện trạng thái đã cũ và lập kế hoạch lại, chứ không chỉ cần suy luận tốt.
+Production agent vì vậy cần timeout, cancellation, stale-state detection và re-planning, chứ không chỉ reasoning tốt.
 
-## Không gian rời rạc và liên tục
+## Discrete và Continuous
 
-Cờ vua có trạng thái và hành động rời rạc. Điều khiển robot có thể sử dụng vị trí, vận tốc và giá trị bộ chấp hành liên tục.
+Chess có discrete state/action. Robot control có thể có continuous position, velocity và actuator values.
 
-Không gian liên tục thường đòi hỏi phương pháp số, tối ưu hóa và xấp xỉ hàm. Đây là lý do lý thuyết điều khiển, giải tích và học tăng cường thường gặp nhau trong robotics.
+Continuous space thường đòi hỏi numerical methods, optimization và function approximation. Đây là lý do control theory, calculus và reinforcement learning thường gặp nhau trong robotics.
 
-## Một tác nhân và nhiều tác nhân
+## Single-Agent và Multi-Agent
 
-Trong **môi trường một tác nhân (single-agent)**, hệ thống tối ưu mục tiêu mà không cần mô hình hóa hành vi chiến lược của tác nhân khác.
+Trong single-agent setting, system tối ưu objective mà không cần model strategic behavior của agent khác.
 
-**Môi trường nhiều tác nhân (multi-agent)** phức tạp hơn vì mỗi tác nhân có chính sách riêng. Trò chơi, mô phỏng thị trường, giao thông và thương lượng phân tán đều có dạng này.
+Multi-agent environment phức tạp hơn vì mỗi agent có policy riêng. Games, market simulation, traffic và distributed negotiation đều có dạng này.
 
-Các tác nhân có thể hợp tác, cạnh tranh hoặc vừa hợp tác vừa cạnh tranh.
+Một environment có thể cooperative, competitive hoặc mixed.
 
-## Trạng thái, quan sát, hành động và chính sách
+## State, Observation, Action, Policy
 
-Bốn thuật ngữ này xuất hiện xuyên suốt AI.
+Bốn keyword này xuất hiện xuyên suốt AI.
 
-**Trạng thái (state, `s`)** là biểu diễn tình trạng hiện tại mà mô hình coi là đủ để ra quyết định hoặc suy luận.
+**State (`s`)** là representation của tình trạng hiện tại mà model coi là đủ để reasoning.
 
-**Quan sát (observation, `o`)** là thông tin tác nhân thực sự nhận được. Quan sát có thể chỉ phản ánh một phần trạng thái thật.
+**Observation (`o`)** là information agent thực sự nhận được. Observation có thể chỉ là một phần của state thật.
 
-**Hành động (action, `a`)** là lựa chọn tác nhân có thể thực hiện.
+**Action (`a`)** là lựa chọn agent có thể thực hiện.
 
-**Chính sách (policy, `π`)** là ánh xạ từ trạng thái hoặc quan sát sang phân phối hành động:
+**Policy (`π`)** là mapping từ state/observation sang action distribution:
 
 \[
 \pi(a \mid s)
 \]
 
-Với chính sách xác định, mỗi trạng thái ánh xạ tới một hành động. Với chính sách ngẫu nhiên, chính sách trả về một phân phối xác suất trên các hành động.
+Trong deterministic policy, mỗi state map tới một action. Trong stochastic policy, policy trả distribution.
 
-Tác nhân LLM có thể được xem như một chính sách ở mức trừu tượng cao: ngữ cảnh hiện tại dẫn tới phân phối trên token hoặc hành động công cụ tiếp theo. Tuy nhiên, hệ thống thực tế thường thêm lớp điều phối (orchestration) bên ngoài mô hình.
+LLM agent có thể được nhìn như policy ở level cao: context hiện tại → distribution over next token/tool action. Tuy nhiên production agent thường thêm orchestration logic ngoài model.
 
-## Mục tiêu, độ hữu dụng và phần thưởng
+## Goal, Utility và Reward
 
-**Tác nhân dựa trên mục tiêu (goal-based agent)** đánh giá trạng thái dựa trên việc mục tiêu đã đạt hay chưa.
+Một **goal-based agent** đánh giá state dựa trên việc có đạt goal hay không.
 
-**Tác nhân dựa trên độ hữu dụng (utility-based agent)** dùng hàm hữu dụng để phân biệt nhiều kết quả cùng đạt mục tiêu nhưng có chất lượng khác nhau.
+Một **utility-based agent** dùng utility function để phân biệt nhiều outcome cùng đạt goal nhưng chất lượng khác nhau.
 
-Trong học tăng cường, **phần thưởng (reward / 보상)** là tín hiệu nhận được trong quá trình tương tác. Phần thưởng không nhất thiết bằng mục tiêu thật. Nếu phần thưởng được thiết kế sai, tác nhân có thể tối ưu đúng chỉ số nhưng làm sai ý định ban đầu.
+Trong Reinforcement Learning, **reward (보상)** là signal được nhận trong quá trình interaction. Reward không nhất thiết bằng true objective. Nếu reward thiết kế sai, agent có thể tối ưu metric nhưng làm sai ý định.
 
-Ví dụ, nếu bot hỗ trợ chỉ được thưởng theo “số yêu cầu đã đóng”, nó có thể đóng yêu cầu thật nhanh thay vì giải quyết đúng vấn đề. Đây là **đặc tả sai phần thưởng (reward misspecification)**.
+Ví dụ nếu support bot được thưởng chỉ theo “số ticket đóng”, nó có thể đóng ticket nhanh thay vì giải quyết đúng vấn đề. Đây là một dạng **reward misspecification**.
 
-## Tác nhân có mô hình và không có mô hình
+## Model-Based và Model-Free
 
-**Tác nhân dựa trên mô hình (model-based agent)** có mô hình về cách môi trường chuyển trạng thái:
+Một **model-based agent** có model về cách environment chuyển state:
 
 \[
 P(s' \mid s,a)
 \]
 
-Nhờ đó nó có thể mô phỏng hậu quả trước khi hành động.
+và có thể simulate consequence trước khi hành động.
 
-**Tác nhân không dựa trên mô hình (model-free agent)** học trực tiếp chính sách hoặc hàm giá trị mà không cần một mô hình chuyển trạng thái tường minh đầy đủ.
+Một **model-free agent** học policy hoặc value trực tiếp mà không cần explicit transition model đầy đủ.
 
-Trong tác nhân LLM hiện đại, mô hình ngôn ngữ đôi khi đóng vai trò như một mô hình thế giới xấp xỉ ở mức ngữ nghĩa. Tuy nhiên, không nên mặc định rằng LLM có mô hình thực thi chính xác của hệ thống bên ngoài. Phản hồi từ công cụ vẫn rất quan trọng.
+Trong modern LLM agents, language model đôi khi đóng vai trò một approximate world model ở mức semantic, nhưng không nên mặc định rằng nó có accurate executable model của external system. Tool feedback vẫn rất quan trọng.
 
-## Tác nhân AI cổ điển và tác nhân LLM
+## Classical Agent và LLM Agent
 
-| AI cổ điển | Tác nhân LLM hiện đại |
+Có thể nối hai thế giới như sau:
+
+| Classical AI | LLM Agent hiện đại |
 |---|---|
-| Môi trường | ứng dụng, web, API, cơ sở dữ liệu |
-| Quan sát | cảm biến / trạng thái | lời nhắc, kết quả công cụ, ngữ cảnh truy xuất |
-| Trạng thái | trạng thái ký hiệu hoặc số rõ ràng | hội thoại + kho trạng thái có cấu trúc |
-| Chính sách | quy tắc / bộ lập kế hoạch / chính sách đã học | LLM + logic điều phối |
-| Hành động | di chuyển / điều khiển | gọi hàm, gọi API, gửi thông điệp, thực thi mã |
-| Mục tiêu | điều kiện đích | chỉ dẫn nhiệm vụ / mục tiêu luồng công việc |
+| Environment | app, web, APIs, databases |
+| Observation | sensor/state | prompt, tool result, retrieved context |
+| State | explicit symbolic/numeric state | conversation + structured state store |
+| Policy | rule/planner/learned policy | LLM + orchestration logic |
+| Action | move/control | function call, API call, message, code execution |
+| Goal | goal condition | task instruction / workflow objective |
 
-Khác biệt lớn là tác nhân LLM có giao diện ngôn ngữ rất linh hoạt, nhưng tính linh hoạt không tự động tạo ra độ tin cậy.
+Điểm khác lớn là modern LLM agent có language interface rất flexible, nhưng flexibility không tự động tạo reliability.
 
-## Vòng lặp tác nhân (agent loop)
+## Agent Loop
 
-Một vòng lặp tối giản:
+Một loop tối giản:
 
 ```text
 while not done:
@@ -193,38 +194,38 @@ while not done:
     result = execute(action)
 ```
 
-Trong hệ thống thực tế, vòng lặp này cần thêm kiểm tra hợp lệ, quyền hạn, thử lại, giới hạn thời gian, ngân sách, nhật ký và điều kiện dừng.
+Trong production, loop này cần thêm validation, permission, retry, timeout, budget, logging và stop conditions.
 
-Nếu không có điều kiện dừng, tác nhân có thể lặp vô hạn. Nếu quyền công cụ quá rộng, một dự đoán sai có thể biến thành hành động gây thiệt hại. Vì vậy **kỹ nghệ tác nhân (agent engineering)** là bài toán thiết kế hệ thống, không chỉ là viết lời nhắc.
+Nếu không có stop condition, agent có thể loop. Nếu tool permission quá rộng, một prediction sai có thể trở thành destructive action. Vì vậy agent engineering là system design problem, không chỉ prompting.
 
-## Mô hình tư duy (mental model)
+## Mental Model
 
-Hãy nghĩ tác nhân như một **bộ điều khiển phản hồi (feedback controller)** có biểu diễn và chính sách ra quyết định:
+Hãy nghĩ agent như một **feedback controller có representation và decision policy**:
 
 ```text
-Thế giới → Quan sát → Biểu diễn → Quyết định → Hành động → Thế giới
-                       ↑                      ↓
-                       └────── Phản hồi ──────┘
+World → Observe → Represent → Decide → Act → World
+                 ↑               ↓
+                 └── Feedback ───┘
 ```
 
-Nếu tác nhân thất bại, hãy kiểm tra theo vòng này: quan sát có đủ không, biểu diễn có đúng không, quy tắc quyết định có hợp lý không, hành động có thực thi được không, và phản hồi có được ghi nhận không.
+Nếu agent thất bại, hãy kiểm tra theo vòng này: observation có đủ không, representation có đúng không, decision rule có hợp lý không, action có executable không, feedback có được capture không.
 
-## Các hiểu lầm thường gặp
+## Common Misconceptions
 
-### “Agent = LLM gọi công cụ”
+### “Agent = LLM gọi tool”
 
-Gọi công cụ (tool calling) là một cơ chế quan trọng nhưng chưa đủ. Tác nhân còn cần trạng thái, mục tiêu, chính sách hành động, vòng phản hồi và điều kiện kết thúc. Một luồng công việc gọi công cụ theo chuỗi cố định có thể không phải tác nhân tự chủ.
+Tool calling là một mechanism quan trọng nhưng không đủ. Agent còn cần state, goal, action policy, feedback loop và termination condition. Một workflow gọi tool theo sequence cố định có thể không phải autonomous agent.
 
-### “Tự chủ càng nhiều luôn càng tốt”
+### “More autonomy luôn tốt hơn”
 
-Mức tự chủ cao làm tăng tính linh hoạt nhưng cũng mở rộng không gian tìm kiếm, tăng độ trễ, chi phí và rủi ro. Nhiều quy trình nghiệp vụ đáng tin cậy hơn khi dùng luồng công việc xác định ở những bước có quy tắc rõ, và chỉ dùng mô hình ở nơi có độ bất định cao.
+Autonomy tăng flexibility nhưng cũng tăng search space, latency, cost và risk. Nhiều business process đáng tin cậy hơn khi dùng deterministic workflow ở những bước có rule rõ và chỉ dùng model ở những điểm uncertainty cao.
 
-### “Bộ nhớ tác nhân giống trí nhớ con người”
+### “Agent memory giống human memory”
 
-Bộ nhớ tác nhân thường chỉ là một cơ chế kỹ thuật: cửa sổ ngữ cảnh, cơ sở dữ liệu, kho vector, nhật ký sự kiện hoặc kho trạng thái có cấu trúc. Dùng chung từ “bộ nhớ” không có nghĩa cơ chế đó giống trí nhớ sinh học.
+Agent memory thường chỉ là engineering mechanism: context window, database, vector store, episodic log hoặc structured state. Gọi chung là memory không có nghĩa mechanism giống biological memory.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Khái niệm tác nhân kết nối trực tiếp với tìm kiếm, lập kế hoạch, học tăng cường, lý thuyết điều khiển, xác suất, hệ thống phân tán và kỹ nghệ phần mềm. Đây là một trong những phép trừu tượng quan trọng nhất của AI vì nó giúp giải thích từ robot cổ điển tới hệ thống LLM sử dụng công cụ bằng cùng một ngôn ngữ khái niệm.
+Agent framework kết nối trực tiếp tới Search, Planning, Reinforcement Learning, Control Theory, Probability, Distributed Systems và Software Engineering. Đây là một trong những abstraction quan trọng nhất của AI vì nó giúp giải thích từ robot cổ điển tới modern tool-using LLM systems bằng cùng language.
 
-Xem tiếp: [Biểu diễn bài toán](./03_problem_representation.md).
+Xem tiếp: [Problem Representation](./03_problem_representation.md).

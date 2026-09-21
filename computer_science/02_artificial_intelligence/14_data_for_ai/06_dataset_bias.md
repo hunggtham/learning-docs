@@ -1,226 +1,211 @@
-# Thiên lệch Dataset
+# Dataset Bias
 
-**Thiên lệch dữ liệu (dataset bias / 데이터 편향)** là sự lệch có hệ thống giữa dữ liệu được quan sát và phenomenon hoặc population mà mô hình thực sự cần phục vụ. Bias không chỉ là “class imbalance”; nó có thể đến từ sampling, measurement, label, quyết định lịch sử và feedback loop sau deployment.
+**Dataset bias (데이터 편향 / thiên lệch dữ liệu)** là systematic mismatch giữa data được quan sát và phenomenon/population mà model intended serve. Bias không chỉ là “class imbalance”; nó có thể đến từ sampling, measurement, labels, historical decisions và deployment feedback loops.
 
 ## Selection Bias
 
-Các example được đưa vào dataset không được chọn ngẫu nhiên so với target population.
+Examples được include không random relative target population.
 
-Ví dụ một hospital dataset chỉ chứa những người đã tới khám. Nếu dùng dataset đó để ước lượng disease prevalence cho toàn population, model có thể overestimate vì nhóm đi viện khác population chung.
+Ví dụ hospital dataset chỉ chứa people who sought care. Model trained to estimate disease prevalence từ dataset đó may overestimate relative general population.
 
 ## Sampling Bias
 
-Một số subgroup bị đại diện quá ít, ví dụ:
+Some subgroups underrepresented:
 
 ```text
-camera device
-ngôn ngữ
-khu vực
-nhóm tuổi
-class hiếm
+camera devices
+languages
+regions
+age groups
+rare classes
 ```
 
-Mô hình vẫn có thể đạt aggregate performance cao nhưng reliability rất kém trên các subgroup nhỏ.
+Model may have high aggregate performance but weak subgroup reliability.
 
 ## Measurement Bias
 
-Chất lượng đo feature hoặc label khác nhau giữa các group.
+Feature/label measurement quality differs across groups. Example image quality lower on certain devices, or diagnostic test sensitivity differs.
 
-Ví dụ image quality thấp hơn trên một số thiết bị, hoặc sensitivity của diagnostic test khác nhau giữa population. Khi đó một phần “bias của model” thực ra bắt nguồn từ measurement system.
+Same model may appear “biased” partly because sensor quality differs.
 
 ## Historical Bias
 
-Dữ liệu phản ánh quyết định của con người và hệ thống trong quá khứ.
+Data reflects historical human/system decisions. Hiring records encode who was hired under previous policy, not objective “true talent”.
 
-Ví dụ hiring record ghi lại ai từng được tuyển theo policy cũ, không phải một thước đo khách quan về “true talent”. Nếu học trực tiếp từ historical outcome, mô hình có thể tái tạo bất công cũ.
+Learning historical outcome can reproduce past inequity.
 
 ## Label Bias
 
-Human label có thể khác nhau có hệ thống giữa các subgroup. Ví dụ đánh giá toxicity hoặc moderation có thể chịu ảnh hưởng dialect và bối cảnh văn hóa.
+Human labels may systematically differ by subgroup. Moderation/toxicity judgments can reflect dialect/cultural bias.
 
-Nên audit agreement và error rate theo subgroup, không chỉ global average.
+Need audit annotator agreement by subgroup, not only global.
 
 ## Representation Bias
 
-Group phổ biến chiếm phần lớn dữ liệu nên representation được học tốt hơn. Ngôn ngữ, accent hoặc domain hiếm có thể nhận embedding hoặc ASR quality kém dù label ban đầu không sai.
+Common groups dominate feature learning. Rare language/accent may have poorer embeddings/ASR even if labels themselves correct.
 
 ## Aggregation Bias
 
-Một global model giả định cùng một mapping áp dụng cho population không đồng nhất.
+One global model assumes same mapping for heterogeneous populations. If mechanisms differ, pooled model can hurt some groups.
 
-Nếu mechanism thực sự khác giữa các subgroup, pooled model có thể làm một số nhóm bị thiệt. Separate model hoặc group-aware feature đôi khi hữu ích, nhưng phải xem xét thêm fairness, privacy và legal constraint.
+Separate models or group-aware features may help, but must consider fairness/privacy/legal constraints.
 
 ## Evaluation Bias
 
-Benchmark bản thân có thể không đại diện cho deployment population.
-
-Nếu team tối ưu quá mạnh theo một benchmark hẹp, model sẽ giỏi trên phần được đo nhưng chưa chắc giỏi trong thế giới thật mà hệ thống cần phục vụ.
+Benchmark itself unrepresentative. Model optimized to benchmark becomes good at measured slice, not intended world.
 
 ## Survivorship Bias
 
-Dataset chỉ giữ lại entity còn tồn tại hoặc thành công, trong khi churned hoặc failed case biến mất khỏi dữ liệu sau đó.
+Only successful/remaining entities observed. Churned or failed cases disappear from later data, distorting conclusions.
 
-Điều này dễ tạo kết luận quá lạc quan về behavior hoặc outcome.
+## Feedback Loops
 
-## Feedback Loop
-
-Model decision ảnh hưởng dữ liệu tương lai:
+Model decisions affect future data:
 
 ```text
-xếp item phổ biến lên cao
-→ item nhận thêm click
-→ dữ liệu mới cho thấy item càng phổ biến
-→ model tiếp tục ưu tiên item đó
+rank popular item higher
+→ gets more clicks
+→ appears even more popular
 ```
 
-Vòng lặp này có thể khuếch đại popularity bias và giảm exposure diversity.
+Popularity reinforcement can reduce exposure diversity.
 
-## Proxy Variable
+## Proxy Variables
 
-Ngay cả khi loại protected attribute trực tiếp, các feature khác như postcode, school hoặc language có thể là proxy mạnh.
+Even if protected attribute removed, other features (postcode, school, language) may strongly proxy it.
 
-Vì vậy **fairness through unawareness** — chỉ bỏ field nhạy cảm — thường không đủ.
+“Fairness through unawareness” is insufficient.
 
 ## Simpson’s Paradox
 
-Quan hệ nhìn ở aggregate có thể đảo chiều khi phân tích theo subgroup.
+Aggregate relationship can reverse within subgroups. Always inspect relevant conditional slices before causal/fairness conclusions.
 
-Trước khi đưa ra kết luận causal hoặc fairness, cần kiểm tra các conditional slice có ý nghĩa thay vì chỉ nhìn average toàn dataset.
+## Fairness Metrics Trade-offs
 
-## Trade-off giữa các Fairness Metric
-
-Nhiều định nghĩa fairness có thể xung đột khi base rate khác nhau, ví dụ:
+Different fairness definitions can conflict when base rates differ:
 
 - demographic parity;
-- equal opportunity hoặc TPR parity;
+- equal opportunity/TPR parity;
 - equalized odds;
 - calibration.
 
-Không có metric nào đúng cho mọi bài toán. Lựa chọn phụ thuộc bối cảnh xã hội, pháp lý và loại decision đang được tự động hóa.
+No metric universally correct; choice depends social/legal decision context.
 
-## Dataset Bias và Bias–Variance
+## Bias vs Variance
 
-“Bias” trong dataset bias là khái niệm về sampling, measurement và social process, khác với **bias–variance trade-off** trong Machine Learning.
-
-Cùng một từ nhưng mô tả hai hiện tượng khác nhau.
+Dataset bias here is social/statistical sampling concept, distinct from ML **bias–variance trade-off**. Same word, different meanings.
 
 ## Reweighting
 
-Nếu biết target distribution, có thể dùng importance weight:
+If target population distribution known, importance weights:
 
 \[
 w(x)=\frac{P_{target}(x)}{P_{train}(x)}
 \]
 
-để điều chỉnh training hoặc evaluation trong một số assumption về covariate shift.
+can adjust training/evaluation under covariate shift assumptions.
 
-Tuy nhiên weight quá lớn làm variance tăng và không thể sửa vùng hoàn toàn không có support, tức `P_train(x)=0`.
+But high weights increase variance and cannot fix missing support where `P_train(x)=0`.
 
 ## Resampling
 
-Oversampling group hoặc class hiếm làm tăng exposure trong training. Undersampling majority giảm imbalance nhưng làm mất dữ liệu.
+Oversampling minority groups/classes increases training exposure. Undersampling majority reduces imbalance but discards data.
 
-Synthetic oversampling có thể giúp trong một số trường hợp nhưng cũng có thể khuếch đại artifact nếu generator không phản ánh đúng subgroup thật.
+Synthetic oversampling may interpolate examples but can amplify artifacts.
 
-## Thu thập Dữ liệu có Mục tiêu
+## Targeted Data Collection
 
-Nhiều khi cách sửa tốt nhất là thu thêm dữ liệu thực từ slice yếu thay vì xây weighting scheme ngày càng phức tạp.
+Often best fix is collect more real data in weak slices rather than complex reweighting.
 
-Error analysis nên trực tiếp dẫn hướng ưu tiên data collection.
+Model error analysis should drive collection priorities.
 
 ## Slice-Based Evaluation
 
-Nên đo metric riêng theo những slice có ý nghĩa operational, ví dụ:
+Define metrics per subgroup/context:
 
 ```text
-ngôn ngữ
-khu vực
-skin tone khi phù hợp về đạo đức/pháp lý
+language
+region
+skin tone (when ethically/legally appropriate)
 device
-điều kiện ánh sáng
-band giá trị giao dịch
-user mới so với user cũ
+lighting
+transaction amount band
+new vs existing users
 ```
 
-Không cần tạo vô hạn combination; slice nên gắn với risk thực tế.
+Slices should correspond real risk, not endless arbitrary combinations.
 
 ## Intersectionality
 
-Bias đôi khi chỉ xuất hiện ở giao của nhiều thuộc tính, ví dụ language + age + device.
+Bias can appear only at intersection of groups, e.g. language + age + device. Data sparsity makes intersection analysis statistically hard.
 
-Phân tích intersection khó hơn vì sample nhanh chóng trở nên nhỏ, nên cần confidence interval và minimum-sample rule.
+Need confidence intervals/minimum sample rules.
 
-## Trực giác về Counterfactual Fairness
+## Counterfactual Fairness Intuition
 
-Một câu hỏi hữu ích là: decision có thay đổi nếu protected characteristic thay đổi trong khi các yếu tố nền liên quan được giữ nhất quán hay không?
+Ask whether decision would change if protected characteristic changed while relevant underlying factors held appropriately constant. Formal causal definitions require causal model and strong assumptions.
 
-Formal counterfactual fairness cần causal model và assumption mạnh, nên không thể chỉ kiểm bằng correlation đơn giản.
+## Bias in Foundation Models
 
-## Bias trong Foundation Model
+Web-scale text/image data reflects societal stereotypes and uneven language/geographic representation.
 
-Web-scale text và image data phản ánh stereotype xã hội và mất cân bằng mạnh về language, geography và topic.
+Filtering can reduce harmful content but also erase minority dialects/topics if classifiers biased.
 
-Filtering có thể giảm harmful content nhưng cũng có thể vô tình loại dialect hoặc topic thiểu số nếu classifier dùng cho filtering bản thân đã bias.
+## Synthetic Data and Bias
 
-## Synthetic Data và Bias
+Generating synthetic data from biased model can reproduce or amplify bias. Synthetic balancing only helps if generator accurately represents target subgroup.
 
-Nếu generator ban đầu đã bias, synthetic data có thể lặp lại hoặc khuếch đại cùng bias.
+## Label Policy as Value Choice
 
-Việc “cân bằng số lượng” bằng synthetic sample chỉ hữu ích khi generator thực sự mô hình hóa đúng target subgroup.
+Moderation/helpfulness/safety labels encode normative choices. Dataset documentation should make these policies explicit.
 
-## Label Policy cũng là một Value Choice
+## Dataset Documentation
 
-Các label như moderation, helpfulness hoặc safety không chỉ là technical category; chúng encode lựa chọn chuẩn tắc.
+Datasheets/model cards style documentation can include:
 
-Dataset documentation nên làm rõ policy nào đã được dùng để tạo label.
-
-## Tài liệu hóa Dataset
-
-Một datasheet hoặc model-card-style documentation có thể mô tả:
-
-- mục tiêu;
+- motivation;
 - composition;
 - collection process;
 - preprocessing;
-- use case và limitation;
-- coverage theo geography/demographic;
-- license;
-- known bias.
+- uses/limitations;
+- demographic/geographic coverage;
+- licensing;
+- known biases.
 
-Documentation không loại bỏ bias nhưng giúp assumption trở nên có thể kiểm tra.
+Documentation does not remove bias but makes assumptions inspectable.
 
-## Các Layer giảm Bias
+## Bias Mitigation Layers
 
-Mitigation có thể xảy ra ở nhiều tầng:
+Mitigation can happen:
 
 ```text
-pre-processing  → thu thập thêm / reweight dữ liệu
-in-processing   → constraint hoặc loss riêng
-post-processing → threshold / calibration / policy
+pre-processing → data collection/reweighting
+in-processing  → constraints/loss
+post-processing→ thresholds/calibration/policy
 ```
 
-Sửa vấn đề từ data-generating process thường bền vững hơn chỉ patch threshold ở cuối pipeline.
+Fixing dataset/process source is often more durable than post-hoc threshold hacks.
 
-## Mô hình tư duy
+## Mental Model
 
-> **Dataset bias đặt câu hỏi: dữ liệu này đang đại diện cho thực tế của ai, bỏ sót ai, và cơ chế selection hoặc measurement nào đã tạo ra sự lệch đó?**
+> **Bias asks whose reality dataset represents, whose it misses, và cơ chế selection/measurement nào tạo ra mismatch đó.**
 
-## Những nhầm lẫn thường gặp
+## Common Misconceptions
 
-### “Class count cân bằng nghĩa là dataset không bias”
+### “Balanced class counts = unbiased dataset”
 
-Không. Bias vẫn có thể nằm ở subgroup coverage, measurement hoặc label.
+Bias can remain in subgroup coverage, measurement and labels.
 
-### “Bỏ protected attribute là model sẽ fair”
+### “Remove protected attribute = fair model”
 
-Không. Proxy feature và historical outcome vẫn có thể encode cùng thông tin.
+Proxy features and historical outcomes still encode it.
 
-### “Fairness có một metric toán học đúng duy nhất”
+### “Fairness has one correct mathematical metric”
 
-Không. Các metric encode những tiêu chí chuẩn tắc khác nhau và đôi khi không thể đồng thời thỏa mãn.
+Metrics encode different normative criteria and can conflict.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Dataset bias nối Sampling Theory, Causal Inference, Fairness, Social Systems và feedback sau deployment.
+Dataset bias connects sampling theory, causal inference, fairness, social systems and deployment feedback.
 
-Xem tiếp: [Dữ liệu Tổng hợp](./07_synthetic_data.md).
+Xem tiếp: [Synthetic Data](./07_synthetic_data.md).

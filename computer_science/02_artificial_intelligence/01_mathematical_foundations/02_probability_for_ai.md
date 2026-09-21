@@ -1,112 +1,112 @@
-# Xác suất cho Trí tuệ nhân tạo
+# Probability cho Artificial Intelligence
 
-**Xác suất (Probability / 확률)** là ngôn ngữ để suy luận khi thông tin không đầy đủ, kết quả không chắc chắn hoặc quá trình có tính ngẫu nhiên. AI gần như luôn hoạt động trong những điều kiện như vậy: ảnh có thể mơ hồ, cảm biến có nhiễu, hành vi người dùng không hoàn toàn xác định, dữ liệu huấn luyện chỉ là một mẫu của thế giới, và mô hình ngôn ngữ không biết chắc token tiếp theo.
+Probability (확률 / xác suất) là ngôn ngữ để reasoning khi thông tin không đầy đủ, outcome không chắc chắn hoặc process có randomness. AI gần như luôn sống trong điều kiện như vậy: image có thể ambiguous, sensor có noise, user behavior không deterministic, training data chỉ là sample của world, và language model không biết chắc token tiếp theo.
 
-Điểm cốt lõi không phải “mô hình trả 0.8 nên chắc chắn đúng 80%”. Xác suất cần được hiểu như một hệ thống biểu diễn niềm tin, tần suất hoặc sự bất định dưới những giả định cụ thể. Nếu không phân biệt các cách diễn giải này, ta rất dễ đọc sai đầu ra của mô hình.
+Điểm cốt lõi không phải “model trả về 0.8 nên đúng 80%”. Probability cần được hiểu như một hệ thống để biểu diễn belief, frequency hoặc uncertainty dưới assumptions cụ thể. Nếu không phân biệt những interpretation này, ta rất dễ đọc sai model output.
 
-Xem trước: [Toán học cho AI](./00_mathematics_for_ai.md).
+Xem trước: [Mathematics for AI](./00_mathematics_for_ai.md).
 
-## Tại sao AI cần xác suất?
+## Tại sao AI cần probability?
 
-Giả sử camera nhìn thấy một hình mờ. Không đủ thông tin để khẳng định chắc chắn đó là mèo hay chó. Một quy tắc xác định buộc hệ thống chọn ngay một nhãn sẽ che mất sự bất định. Phân phối xác suất cho phép biểu diễn:
+Giả sử camera thấy một hình mờ. Không có đủ information để nói chắc chắn đó là mèo hay chó. Một deterministic rule buộc system chọn ngay một label sẽ che mất uncertainty. Probability distribution cho phép biểu diễn:
 
 \[
 P(cat\mid x)=0.65,\quad P(dog\mid x)=0.30,\quad P(other\mid x)=0.05
 \]
 
-Phân phối giữ lại nhiều thông tin hơn một nhãn cứng. Hệ thống phía sau có thể quyết định rằng `0.65` chưa đủ để tự động hành động và cần con người xem xét.
+Distribution giữ nhiều information hơn một hard label. Downstream system có thể quyết định rằng `0.65` chưa đủ để tự động hành động và cần human review.
 
-Vì vậy xác suất không chỉ là phần trang trí toán học; nó ảnh hưởng trực tiếp đến thiết kế hệ thống và quản lý rủi ro.
+Probability vì vậy không chỉ là mathematical decoration; nó ảnh hưởng trực tiếp system design và risk management.
 
-## Không gian mẫu, biến cố và biến ngẫu nhiên
+## Sample space, event và random variable
 
-**Không gian mẫu (sample space / 표본공간)** `Ω` là tập các kết quả có thể xảy ra.
+Một **sample space (표본공간)** `Ω` là tập các outcome có thể xảy ra.
 
-Ví dụ tung đồng xu:
+Ví dụ tung coin:
 
 \[
 \Omega=\{H,T\}
 \]
 
-Một **biến cố (event / 사건)** là một tập con của không gian mẫu.
+Một **event (사건)** là subset của sample space.
 
-Một **biến ngẫu nhiên (random variable / 확률변수)** ánh xạ kết quả thành một giá trị. Nếu `X` là số lần xuất hiện mặt ngửa trong hai lần tung đồng xu, `X` có thể nhận các giá trị `0,1,2`.
+Một **random variable (확률변수 / biến ngẫu nhiên)** map outcome thành một value. Nếu `X` là số lần ra head trong hai lần tung coin, `X` có thể nhận `0,1,2`.
 
-Trong học máy, nhãn `Y`, đặc trưng `X`, nhiễu `ε` hoặc token tiếp theo đều thường được mô hình hóa như biến ngẫu nhiên.
+Trong ML, label `Y`, feature `X`, noise `ε` hoặc token tiếp theo đều thường được modeling như random variables.
 
-## Phân phối xác suất
+## Probability distribution
 
-Với biến ngẫu nhiên rời rạc `X`, **hàm khối xác suất (probability mass function)**:
+Với discrete random variable `X`, **probability mass function**:
 
 \[
 P(X=x)
 \]
 
-gán xác suất cho từng giá trị.
+gán probability cho từng value.
 
-Với biến ngẫu nhiên liên tục, ta dùng **hàm mật độ xác suất (probability density function)** `p(x)`. Xác suất tại đúng một giá trị thực có thể bằng 0; đại lượng có ý nghĩa là diện tích trên một khoảng:
+Với continuous random variable, ta dùng **probability density function** `p(x)`. Probability tại đúng một real value có thể bằng 0; meaningful quantity là area trên interval:
 
 \[
 P(a\le X\le b)=\int_a^b p(x)dx
 \]
 
-Phân biệt khối xác suất và mật độ giúp tránh hiểu lầm rằng “mật độ lớn hơn 1 là không thể”. Mật độ có thể lớn hơn 1 miễn tích phân toàn miền bằng 1.
+Phân biệt mass và density giúp tránh câu “density lớn hơn 1 là impossible”. Density có thể lớn hơn 1 miễn total integral bằng 1.
 
-## Xác suất đồng thời, biên và có điều kiện
+## Joint, marginal và conditional probability
 
-**Xác suất đồng thời (joint probability)**:
+**Joint probability**:
 
 \[
 P(X,Y)
 \]
 
-mô tả hai biến cùng lúc.
+mô tả hai variables cùng nhau.
 
-**Xác suất biên (marginal probability)** loại một biến bằng cách cộng hoặc tích phân theo biến còn lại:
+**Marginal probability** lấy một variable ra bằng cách sum/integrate variable còn lại:
 
 \[
 P(X)=\sum_y P(X,Y=y)
 \]
 
-**Xác suất có điều kiện (conditional probability)**:
+**Conditional probability**:
 
 \[
 P(Y\mid X)=\frac{P(X,Y)}{P(X)}
 \]
 
-mô tả phân phối của `Y` khi đã biết `X`.
+mô tả distribution của `Y` khi đã biết `X`.
 
-Học có giám sát thường cố xấp xỉ:
+Supervised learning thường cố approximate:
 
 \[
 P(Y\mid X=x)
 \]
 
-Còn mô hình ngôn ngữ xấp xỉ:
+Language modeling approximate:
 
 \[
 P(x_t\mid x_1,\ldots,x_{t-1})
 \]
 
-Xác suất có điều kiện là một trong những cầu nối quan trọng nhất giữa lý thuyết xác suất và học máy.
+Conditional probability là một trong những bridge quan trọng nhất giữa probability theory và ML.
 
-## Quy tắc nhân và quy tắc chuỗi của xác suất
+## Product rule và chain rule of probability
 
-Từ định nghĩa xác suất có điều kiện:
+Từ conditional probability:
 
 \[
 P(X,Y)=P(X)P(Y\mid X)
 \]
 
-Với một chuỗi:
+Với sequence:
 
 \[
 P(x_1,\ldots,x_n)=\prod_{t=1}^{n}P(x_t\mid x_{<t})
 \]
 
-Đây là nền tảng của **mô hình ngôn ngữ tự hồi quy (autoregressive language modeling)**. LLM không cần gán xác suất cho cả câu trong một phép tính duy nhất; nó phân rã xác suất chung thành chuỗi xác suất của token tiếp theo có điều kiện trên các token trước.
+Đây là foundation của autoregressive language modeling. Một LLM không cần assign probability cho cả sentence “một lần”. Nó factorize joint probability thành next-token conditionals.
 
-Ví dụ đơn giản theo mức từ:
+Ví dụ:
 
 ```text
 P("I love AI")
@@ -115,11 +115,11 @@ P("I love AI")
 × P("AI" | "I love")
 ```
 
-Tokenization thực tế phức tạp hơn ví dụ này, nhưng cơ chế xác suất vẫn như vậy.
+Tokenization thực tế phức tạp hơn word-level example, nhưng probabilistic mechanism vẫn vậy.
 
-## Tính độc lập
+## Independence
 
-Hai biến cố `A` và `B` **độc lập (independent)** nếu:
+Hai events `A` và `B` independent nếu:
 
 \[
 P(A,B)=P(A)P(B)
@@ -131,17 +131,17 @@ Tương đương:
 P(A\mid B)=P(A)
 \]
 
-khi xác suất được định nghĩa.
+khi probability defined.
 
-**Độc lập có điều kiện (conditional independence)** đặc biệt hữu ích trong AI. `X` và `Y` có thể phụ thuộc nhau khi nhìn tổng thể nhưng trở nên độc lập nếu đã biết `Z`.
+**Conditional independence** mạnh hơn về utility trong AI. `X` và `Y` có thể dependent overall nhưng independent khi biết `Z`.
 
-Mạng Bayes khai thác tính độc lập có điều kiện để phân rã phân phối chung hiệu quả.
+Bayesian networks khai thác conditional independence để factorize joint distribution hiệu quả.
 
-Một lỗi phổ biến là giả định độc lập chỉ vì tương quan thấp. Tương quan bằng 0 không đồng nghĩa độc lập, ngoại trừ một số phân phối đặc biệt như Gaussian đồng thời.
+Một lỗi common là assume independence chỉ vì correlation thấp. Zero correlation không đồng nghĩa independence, ngoại trừ một số distribution đặc biệt như jointly Gaussian.
 
-## Định lý Bayes
+## Bayes' theorem
 
-Định lý Bayes:
+Bayes' theorem:
 
 \[
 P(H\mid E)=\frac{P(E\mid H)P(H)}{P(E)}
@@ -149,27 +149,27 @@ P(H\mid E)=\frac{P(E\mid H)P(H)}{P(E)}
 
 Trong đó:
 
-- `H` là **giả thuyết (hypothesis)**;
-- `E` là **bằng chứng (evidence)**;
-- `P(H)` là **xác suất tiên nghiệm (prior)**;
-- `P(E|H)` là **khả năng xảy ra dữ liệu theo giả thuyết (likelihood)**;
-- `P(H|E)` là **xác suất hậu nghiệm (posterior)**.
+- `H` là hypothesis;
+- `E` là evidence;
+- `P(H)` là prior;
+- `P(E|H)` là likelihood;
+- `P(H|E)` là posterior.
 
-### Ví dụ xét nghiệm y tế
+### Ví dụ medical-test style
 
-Giả sử tỷ lệ mắc bệnh trong quần thể là 1%:
+Giả sử disease prevalence là 1%:
 
 \[
 P(D)=0.01
 \]
 
-Xét nghiệm có độ nhạy 99%:
+Test có sensitivity 99%:
 
 \[
 P(+\mid D)=0.99
 \]
 
-và tỷ lệ dương tính giả 5%:
+và false-positive rate 5%:
 
 \[
 P(+\mid \neg D)=0.05
@@ -181,330 +181,330 @@ Ta có:
 P(D\mid +)=\frac{0.99\times0.01}{0.99\times0.01+0.05\times0.99}
 \]
 
-xấp xỉ `0.167`.
+xấp xỉ 0.167.
 
-Một xét nghiệm có độ nhạy cao không có nghĩa người nhận kết quả dương tính có 99% khả năng mắc bệnh. **Tỷ lệ nền (base rate)** của bệnh rất quan trọng.
+Một positive test rất accurate không tự động có nghĩa patient có 99% chance mắc bệnh. Base rate matters.
 
-Trong phát hiện bất thường, gian lận và an ninh, bỏ qua tỷ lệ nền là một kiểu sai lầm nghiêm trọng.
+Trong anomaly detection, fraud detection và security, base-rate neglect là failure mode cực kỳ quan trọng.
 
-## Tiên nghiệm, likelihood và hậu nghiệm trong học máy
+## Prior, likelihood và posterior trong Machine Learning
 
-Theo góc nhìn Bayes đối với tham số `θ`:
+Bayesian view cho parameter `θ`:
 
 \[
 p(\theta\mid D)=\frac{p(D\mid\theta)p(\theta)}{p(D)}
 \]
 
-`p(θ)` biểu diễn niềm tin tiên nghiệm. `p(D|θ)` đo mức độ tham số giải thích dữ liệu quan sát tốt đến đâu. Phân phối hậu nghiệm kết hợp cả hai.
+`p(θ)` encode prior belief. `p(D|θ)` đo parameters giải thích observed data tốt đến đâu. Posterior combine cả hai.
 
-**Ước lượng hợp lý cực đại (Maximum Likelihood Estimation - MLE)** chọn:
+**Maximum Likelihood Estimation (MLE)** chọn:
 
 \[
 \theta_{MLE}=\arg\max_\theta p(D\mid\theta)
 \]
 
-**Ước lượng hậu nghiệm cực đại (Maximum A Posteriori - MAP)** chọn:
+**Maximum A Posteriori (MAP)** chọn:
 
 \[
 \theta_{MAP}=\arg\max_\theta p(D\mid\theta)p(\theta)
 \]
 
-Lấy log biến tích thành tổng:
+Log transform biến product thành sum:
 
 \[
 \theta_{MLE}=\arg\max_\theta \log p(D\mid\theta)
 \]
 
-Đây là lý do **âm log-likelihood (negative log-likelihood)** xuất hiện tự nhiên dưới dạng hàm mất mát.
+Đây là lý do negative log-likelihood xuất hiện tự nhiên như loss function.
 
-## Kỳ vọng
+## Expectation
 
-Giá trị kỳ vọng của biến ngẫu nhiên rời rạc:
+Expected value của discrete random variable:
 
 \[
 \mathbb{E}[X]=\sum_x xP(X=x)
 \]
 
-Với biến liên tục:
+Continuous case:
 
 \[
 \mathbb{E}[X]=\int xp(x)dx
 \]
 
-Giá trị kỳ vọng không nhất thiết là một kết quả có thể xảy ra. Kỳ vọng của một lần tung xúc xắc là `3.5` dù không thể tung ra `3.5`.
+Expectation không nhất thiết là outcome có thể xảy ra. Expected dice roll là 3.5 dù không thể tung ra 3.5.
 
-Trong học máy, **rủi ro kỳ vọng (expected risk)**:
+Trong ML, expected risk:
 
 \[
 R(\theta)=\mathbb{E}_{(X,Y)\sim P}[L(f_\theta(X),Y)]
 \]
 
-là mục tiêu lý tưởng trên phân phối dữ liệu thật. Tập huấn luyện chỉ cung cấp một xấp xỉ thực nghiệm.
+là objective lý tưởng trên true data distribution. Training dataset chỉ cho empirical approximation.
 
-## Phương sai, hiệp phương sai và tương quan
+## Variance và covariance
 
-**Phương sai (variance)**:
+Variance:
 
 \[
 Var(X)=\mathbb{E}[(X-\mathbb{E}[X])^2]
 \]
 
-đo mức phân tán quanh trung bình.
+đo spread quanh mean.
 
-**Hiệp phương sai (covariance)**:
+Covariance:
 
 \[
 Cov(X,Y)=\mathbb{E}[(X-\mu_X)(Y-\mu_Y)]
 \]
 
-đo xu hướng hai biến thay đổi cùng nhau theo nghĩa tuyến tính.
+đo tendency hai variables move cùng nhau theo linear sense.
 
-Ma trận hiệp phương sai:
+Covariance matrix:
 
 \[
 \Sigma_{ij}=Cov(X_i,X_j)
 \]
 
-là đối tượng trung tâm trong thống kê nhiều biến, phân phối Gaussian và PCA.
+là object central trong multivariate statistics, Gaussian distributions và PCA.
 
-**Tương quan (correlation)** chuẩn hóa hiệp phương sai:
+Correlation normalize covariance:
 
 \[
 \rho_{XY}=\frac{Cov(X,Y)}{\sigma_X\sigma_Y}
 \]
 
-Tương quan không suy ra quan hệ nhân quả, và tương quan thấp không có nghĩa không tồn tại quan hệ phi tuyến.
+Correlation không imply causation, và correlation thấp không có nghĩa không có nonlinear dependency.
 
-## Phân phối Bernoulli và Nhị thức
+## Bernoulli và Binomial distribution
 
-Biến Bernoulli `X∈{0,1}` với:
+Bernoulli variable `X∈{0,1}` với:
 
 \[
 P(X=1)=p
 \]
 
-có kỳ vọng `p` và phương sai `p(1-p)`.
+có expectation `p` và variance `p(1-p)`.
 
-Mục tiêu phân loại nhị phân thường được mô hình hóa bằng Bernoulli.
+Binary classification target thường được modeled như Bernoulli.
 
-Nếu có `n` phép thử Bernoulli độc lập cùng tham số `p`, số lần thành công có **phân phối Nhị thức (Binomial distribution)**:
+Nếu có `n` independent Bernoulli trials cùng parameter `p`, count successes có Binomial distribution:
 
 \[
 P(K=k)=\binom{n}{k}p^k(1-p)^{n-k}
 \]
 
-## Phân phối phân loại (categorical distribution)
+## Categorical distribution
 
-Phân phối categorical mở rộng Bernoulli sang `K` lớp:
+Categorical distribution generalize Bernoulli sang `K` classes:
 
 \[
 P(Y=k)=p_k,\quad \sum_k p_k=1
 \]
 
-Đầu ra softmax thường tham số hóa phân phối này:
+Softmax output thường parameterize categorical distribution:
 
 \[
 p_k=\frac{e^{z_k}}{\sum_j e^{z_j}}
 \]
 
-Trong mô hình ngôn ngữ, từ vựng có thể gồm hàng chục nghìn token; mỗi bước sinh tạo một phân phối categorical trên toàn bộ từ vựng.
+Trong language model, vocabulary có thể có hàng chục nghìn token; mỗi generation step tạo categorical distribution trên vocabulary.
 
-## Phân phối Gaussian
+## Gaussian distribution
 
-Phân phối chuẩn hay Gaussian:
+Normal/Gaussian distribution:
 
 \[
 p(x)=\frac{1}{\sqrt{2\pi\sigma^2}}\exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)
 \]
 
-xuất hiện nhiều vì thuận tiện về toán và liên hệ với Định lý Giới hạn Trung tâm. Tuy nhiên, không nên mặc định mọi đại lượng thế giới thực đều tuân theo Gaussian.
+xuất hiện nhiều vì mathematical convenience và Central Limit Theorem, nhưng không nên assume mọi real-world quantity là Gaussian.
 
-Gaussian nhiều biến:
+Multivariate Gaussian:
 
 \[
 \mathbf{x}\sim\mathcal{N}(\boldsymbol\mu,\Sigma)
 \]
 
-được xác định bởi vector trung bình và ma trận hiệp phương sai.
+được xác định bởi mean vector và covariance matrix.
 
-Giả định Gaussian xuất hiện trong mô hình tuyến tính, bộ lọc Kalman, mô hình xác suất và các phương pháp biến tiềm ẩn.
+Gaussian assumptions xuất hiện trong linear models, Kalman filters, probabilistic modeling và latent-variable methods.
 
-## Softmax không phải “máy chuyển đổi thành xác suất” kỳ diệu
+## Softmax không phải magic probability converter
 
-Softmax biến logit thành các giá trị dương được chuẩn hóa:
+Softmax map logits thành positive normalized values:
 
 \[
 softmax(z_i)=\frac{e^{z_i}}{\sum_j e^{z_j}}
 \]
 
-Nếu cộng cùng hằng số `c` vào mọi logit:
+Nếu cộng cùng constant `c` vào mọi logit:
 
 \[
 softmax(z_i+c)=softmax(z_i)
 \]
 
-nên softmax phụ thuộc vào quan hệ tương đối giữa các logit.
+nên softmax phụ thuộc relative logits.
 
-Với **nhiệt độ (temperature)** `T`:
+Temperature `T`:
 
 \[
 p_i=softmax\left(\frac{z_i}{T}\right)
 \]
 
-`T<1` làm phân phối sắc hơn, còn `T>1` làm phân phối phẳng hơn.
+với `T<1` làm distribution sharper, `T>1` làm flatter.
 
-Trong sinh văn bản bằng LLM, temperature thay đổi phân phối lấy mẫu; nó không trực tiếp “làm mô hình thông minh hơn” hay bảo đảm tăng độ đúng sự thật.
+Trong LLM generation, temperature thay đổi sampling distribution, không “làm model thông minh hơn” hoặc trực tiếp tăng factual accuracy.
 
 ## Odds và log-odds
 
-Với xác suất `p`, **odds** là:
+Với probability `p`, odds là:
 
 \[
 \frac{p}{1-p}
 \]
 
-Log-odds hay logit:
+Log-odds hoặc logit:
 
 \[
 \log\frac{p}{1-p}
 \]
 
-Hồi quy logistic mô hình hóa log-odds như một hàm tuyến tính:
+Logistic regression modeling log-odds như linear function:
 
 \[
 \log\frac{p}{1-p}=\mathbf{w}^T\mathbf{x}+b
 \]
 
-Dùng sigmoid để đổi ngược về xác suất:
+Invert bằng sigmoid:
 
 \[
 p=\sigma(z)=\frac{1}{1+e^{-z}}
 \]
 
-Điều này giải thích vì sao sigmoid không phải hàm kích hoạt được chọn tùy ý trong hồi quy logistic; nó xuất hiện tự nhiên từ cách mô hình hóa log-odds.
+Điều này giải thích sigmoid không phải arbitrary activation trong logistic regression; nó phát sinh từ modeling log-odds.
 
-## Kỳ vọng có điều kiện và ra quyết định
+## Conditional expectation và decision making
 
-Nếu hành động `a` có độ hữu dụng `U(a,Y)`, quyết định hợp lý dưới bất định có thể chọn hành động tối đa hóa **độ hữu dụng kỳ vọng (expected utility)**:
+Nếu action `a` có utility `U(a,Y)`, rational decision under uncertainty có thể chọn action maximize expected utility:
 
 \[
 a^*=\arg\max_a \mathbb{E}[U(a,Y)\mid X]
 \]
 
-Mô hình phân loại và quyết định nghiệp vụ là hai thứ khác nhau. Mô hình có thể ước lượng xác suất gian lận, còn hệ thống phải quyết định chặn giao dịch hay yêu cầu xác minh dựa trên chi phí của dương tính giả và âm tính giả.
+Một classifier và một business decision không giống nhau. Model có thể estimate probability fraud, còn system phải quyết định block transaction hay request verification dựa trên cost false positive/negative.
 
-Vì vậy **mô hình xác suất** và **chính sách ra quyết định (decision policy)** cần được tách rõ.
+Probability model và decision policy cần được tách rõ.
 
-## Bất định ngẫu nhiên và bất định tri thức
+## Aleatoric và epistemic uncertainty
 
-**Bất định ngẫu nhiên (aleatoric uncertainty)** đến từ tính ngẫu nhiên hoặc nhiễu vốn có của quá trình. Ví dụ, trong cùng ngữ cảnh người dùng vẫn có thể chọn nhiều hành động khác nhau.
+**Aleatoric uncertainty** đến từ intrinsic randomness/noise của process. Ví dụ cùng context, user vẫn có thể chọn nhiều action khác nhau.
 
-**Bất định tri thức (epistemic uncertainty)** đến từ việc mô hình hoặc hệ thống thiếu tri thức/dữ liệu, và có thể giảm khi có thêm dữ liệu hữu ích.
+**Epistemic uncertainty** đến từ thiếu knowledge/data về model hoặc environment và có thể giảm khi có thêm informative data.
 
-Trong thực tế hai loại này không phải lúc nào cũng tách hoàn toàn, nhưng sự phân biệt giúp suy luận về nguyên nhân thất bại.
+Trong practice hai loại này không luôn tách cleanly, nhưng distinction hữu ích để reasoning về failure.
 
-Một mô hình có entropy đầu ra cao có thể vì đầu vào thực sự mơ hồ hoặc vì mô hình chưa từng thấy miền dữ liệu đó. Hai trường hợp cần cách xử lý khác nhau.
+Một model có output entropy cao có thể vì input thực sự ambiguous hoặc vì model chưa từng thấy domain đó. Hai trường hợp cần response khác nhau.
 
-## Hiệu chuẩn (calibration)
+## Calibration
 
-Nếu mô hình dự đoán xác suất `0.8` cho 1.000 trường hợp tương tự, một mô hình được hiệu chuẩn tốt lý tưởng sẽ đúng khoảng 80% trong nhóm đó.
+Nếu model dự đoán probability 0.8 cho 1,000 cases tương tự, một calibrated model lý tưởng sẽ đúng khoảng 80% trong nhóm đó.
 
-Hiệu chuẩn khác với khả năng phân biệt. Một mô hình có AUC hoặc khả năng xếp hạng tốt vẫn có thể cho ước lượng xác suất kém hiệu chuẩn.
+Calibration khác discrimination. Một model có ranking/AUC tốt vẫn có thể probability estimates kém calibrated.
 
-Biểu đồ độ tin cậy, Expected Calibration Error và các phương pháp như **temperature scaling** có thể được dùng để đánh giá hoặc cải thiện vấn đề này.
+Các tool như reliability diagram, Expected Calibration Error và calibration methods như temperature scaling giúp evaluate/fix vấn đề này.
 
-Trong AI rủi ro cao, xác suất không được hiệu chuẩn dễ dẫn tới ngưỡng quyết định sai.
+Trong high-stakes AI, probability không calibrated dễ dẫn đến decision threshold sai.
 
-## Lấy mẫu
+## Sampling
 
-Nếu phân phối là `p(x)`, **lấy mẫu (sampling)** tạo ra một kết quả ngẫu nhiên theo phân phối đó.
+Nếu distribution là `p(x)`, **sampling** tạo random outcome theo distribution đó.
 
-Sinh văn bản bằng LLM có thể sử dụng:
+LLM generation thường không đơn giản chọn token probability cao nhất. Có thể dùng:
 
-- giải mã tham lam (greedy decoding);
-- lấy mẫu theo temperature;
-- lấy mẫu top-k;
-- lấy mẫu top-p, còn gọi là nucleus sampling.
+- greedy decoding;
+- temperature sampling;
+- top-k sampling;
+- top-p/nucleus sampling.
 
-Chiến lược lấy mẫu thay đổi độ đa dạng và kiểu lỗi mà không thay đổi tham số mô hình.
+Sampling strategy thay đổi diversity và failure behavior mà không thay model parameters.
 
-Giải mã tham lam là xác định, nhưng không nhất thiết tạo ra chuỗi có xác suất toàn cục cao nhất vì lựa chọn tốt nhất ở từng bước không bảo đảm tối ưu toàn cục.
+Greedy decoding là deterministic nhưng không nhất thiết tạo globally most probable sequence vì local best choice không guarantee global optimum.
 
-## Ý tưởng Monte Carlo
+## Monte Carlo idea
 
-Khi kỳ vọng khó tính trực tiếp:
+Khi expectation khó tính analytically:
 
 \[
 \mathbb{E}[f(X)]
 \]
 
-ta có thể lấy mẫu:
+ta có thể sample:
 
 \[
 X_1,\ldots,X_N\sim p(x)
 \]
 
-và xấp xỉ:
+và approximate:
 
 \[
 \mathbb{E}[f(X)]\approx\frac{1}{N}\sum_{i=1}^{N}f(X_i)
 \]
 
-Phương pháp Monte Carlo xuất hiện trong suy luận Bayes, học tăng cường, ước lượng bất định và mô phỏng.
+Monte Carlo methods xuất hiện trong Bayesian inference, Reinforcement Learning, uncertainty estimation và simulation.
 
-## Xác suất trong mô hình tạo sinh
+## Probability trong generative modeling
 
-Mô hình tạo sinh cố mô hình hóa phân phối dữ liệu hoặc một phân phối có điều kiện.
+Generative model cố modeling data distribution hoặc một conditional distribution.
 
-Mô hình tự hồi quy:
+Autoregressive model:
 
 \[
 p(x)=\prod_t p(x_t\mid x_{<t})
 \]
 
-Mô hình biến phân dùng biến tiềm ẩn:
+Variational models dùng latent variable:
 
 \[
 p(x)=\int p(x\mid z)p(z)dz
 \]
 
-Mô hình khuếch tán học cách đảo ngược một quá trình thêm nhiễu ngẫu nhiên.
+Diffusion models học cách reverse một stochastic noising process.
 
-Dù cơ chế khác nhau, xác suất vẫn là ngôn ngữ chung để mô tả quá trình sinh.
+Dù mechanisms khác nhau, probability là language chung để mô tả generation.
 
-## Mô hình tư duy (mental model)
+## Mental Model
 
 ```text
-Phân phối          = các kết quả có thể xảy ra và mức tin tương đối
-Xác suất có điều kiện = niềm tin sau khi biết ngữ cảnh
-Bayes              = cập nhật niềm tin bằng bằng chứng
-Kỳ vọng            = giá trị trung bình dưới phân phối
-Phương sai         = mức phân tán / bất định
-Likelihood         = dữ liệu phù hợp tham số đến đâu
-Lấy mẫu            = biến phân phối thành một kết quả cụ thể
-Hiệu chuẩn         = xác suất đầu ra có khớp tần suất quan sát hay không
+Distribution      = những outcome nào có thể xảy ra và mức belief tương đối
+Conditional P     = belief sau khi biết context
+Bayes             = update belief bằng evidence
+Expectation       = average quantity dưới distribution
+Variance          = mức spread / uncertainty
+Likelihood        = data phù hợp parameters đến đâu
+Sampling          = biến distribution thành một outcome cụ thể
+Calibration       = probability output có khớp observed frequency không
 ```
 
-## Các hiểu lầm thường gặp
+## Common Misconceptions
 
-### “Xác suất 0.9 nghĩa là mô hình chắc chắn đúng 90%”
+### “Probability 0.9 nghĩa là model chắc chắn 90% đúng”
 
-Chỉ có thể diễn giải như vậy khi đầu ra được hiệu chuẩn và biến cố được định nghĩa phù hợp. Điểm softmax của mạng nơ-ron có thể quá tự tin.
+Chỉ có interpretation như vậy khi output được calibrated và event definition phù hợp. Neural network softmax score có thể overconfident.
 
-### “Hai biến không tương quan thì độc lập”
+### “Nếu hai variables không correlated thì independent”
 
-Không đúng nói chung. Tương quan chủ yếu đo quan hệ tuyến tính; quan hệ phi tuyến vẫn có thể tồn tại.
+Không đúng nói chung. Correlation chỉ đo linear relation; nonlinear dependency vẫn có thể tồn tại.
 
-### “Bayes là chủ quan, frequentist là khách quan”
+### “Bayesian = subjective, frequentist = objective”
 
-Đây là cách đơn giản hóa quá mức. Hai khung thống kê khác nhau ở cách mô hình hóa bất định và suy luận; cả hai đều cần giả định và lựa chọn mô hình.
+Đây là oversimplification. Hai frameworks khác nhau về cách modeling uncertainty và inference; cả hai vẫn cần assumptions và modeling choices.
 
-### “Lấy mẫu làm mô hình bịa”
+### “Sampling làm model bịa”
 
-Ảo giác mô hình (hallucination) không chỉ do lấy mẫu. Giải mã tham lam vẫn có thể tạo lỗi thực tế nếu phân phối đã học hoặc ngữ cảnh không được đối chiếu với sự thật.
+Hallucination không chỉ do sampling. Greedy decoding cũng có thể sinh factual error vì learned distribution hoặc context không grounded vào truth.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Xác suất là nền trực tiếp cho [Thống kê cho AI](./03_statistics_for_ai.md) và [Lý thuyết thông tin](./05_information_theory.md). Nó cũng quay lại trong phân loại, mô hình tạo sinh, mạng Bayes, học tăng cường, mô hình ngôn ngữ, hiệu chuẩn và các hệ thống nhận biết bất định.
+Probability là prerequisite trực tiếp cho [Statistics for AI](./03_statistics_for_ai.md) và [Information Theory](./05_information_theory.md). Nó cũng quay lại trong classification, generative models, Bayesian networks, Reinforcement Learning, language modeling, calibration và uncertainty-aware systems.
 
-Khi gặp một xác suất trong AI, hãy hỏi: biến ngẫu nhiên là gì, phân phối đang có điều kiện trên thông tin nào, xác suất này là ước lượng của mô hình hay tần suất quan sát, và quyết định phía sau sẽ dùng nó như thế nào.
+Khi gặp một probability trong AI, hãy hỏi: random variable là gì, distribution conditional trên thông tin nào, probability này là model estimate hay observed frequency, và downstream decision sẽ dùng nó thế nào.

@@ -1,34 +1,34 @@
-# Dữ liệu, đặc trưng và nhãn trong Machine Learning
+# Data, Features và Labels trong Machine Learning
 
-Machine Learning học từ dữ liệu, nhưng “dữ liệu” không phải một vật liệu trung tính. Một dataset là kết quả của quá trình đo lường, ghi log, lấy mẫu, gán nhãn và áp dụng chính sách. Nếu những quá trình này sai hoặc lệch, mô hình có thể tối ưu rất tốt trên một phiên bản méo mó của thực tế.
+Machine Learning học từ data, nhưng “data” không phải một material trung tính. Dataset là kết quả của measurement, logging, sampling, labeling và policy. Nếu những process này sai, model có thể tối ưu rất tốt một representation méo của reality.
 
-Vì vậy trước khi chọn thuật toán, cần hiểu rõ **mỗi dòng dữ liệu đại diện điều gì, đặc trưng có thật sự tồn tại tại thời điểm dự đoán hay không, nhãn được tạo như thế nào, nhóm đối tượng nào bị bỏ sót và dữ liệu có phụ thuộc theo người dùng, thời gian hoặc nhóm hay không**.
+Vì vậy trước khi chọn algorithm, cần hiểu **mỗi row/example đại diện điều gì, feature có available tại prediction time không, label được tạo như thế nào, population nào bị bỏ sót và data có dependency theo user/time/group hay không**.
 
-## Đơn vị quan sát
+## Unit of observation
 
-Trước hết phải xác định một mẫu dữ liệu (example) đại diện cho điều gì.
+Trước tiên xác định một example là gì.
 
-Trong phát hiện gian lận:
-
-```text
-một dòng = một giao dịch?
-một tài khoản trong một ngày?
-một phiên sử dụng?
-```
-
-Trong dự đoán churn:
+Fraud detection:
 
 ```text
-một dòng = trạng thái của một khách hàng tại ngày tham chiếu
+one row = one transaction?
+one account-day?
+one user-session?
 ```
 
-Nếu đơn vị quan sát (unit of observation) không rõ, ranh giới thời gian của feature và label rất dễ bị sai và gây leakage.
+Churn:
 
-## Đặc trưng
+```text
+one customer snapshot at reference date
+```
 
-**Đặc trưng (feature / 특성)** là phần thông tin được đo hoặc biểu diễn để mô hình sử dụng.
+Nếu unit không rõ, feature/label time boundaries rất dễ leak.
 
-Ví dụ:
+## Feature
+
+Feature (특성 / 특징량) là measurable representation used by model.
+
+Examples:
 
 ```text
 age
@@ -38,139 +38,147 @@ embedding(document)
 image pixels
 ```
 
-Feature không nhất thiết phải mang ý nghĩa nhân quả hoặc con người dễ hiểu. Trong Deep Learning, nhiều feature trung gian được mô hình tự học.
+Feature is not necessarily causal or human-interpretable. Deep models learn internal features automatically.
 
-## Nhãn và mục tiêu
+## Target / Label
 
-**Nhãn (label / 레이블)** là đầu ra mục tiêu dùng trong supervised learning.
+Label (레이블 / 정답) là desired outcome used in supervised training.
 
-Ví dụ:
-
-```text
-có gian lận trong 30 ngày tới
-khách hàng đã churn
-giá bán căn nhà
-token tiếp theo
-```
-
-Định nghĩa label phải bao gồm cả ý nghĩa sự kiện và khoảng thời gian.
-
-Ví dụ “churn” có thể được định nghĩa là không đăng nhập 30 ngày, hủy hợp đồng hoặc không thanh toán 90 ngày. Mỗi định nghĩa tạo ra một bài toán khác nhau.
-
-## Thời điểm dự đoán và mốc cắt dữ liệu
-
-Mỗi mẫu nên có một thời điểm `t0` đại diện cho lúc dự đoán thật sự được đưa ra.
-
-Mọi feature hợp lệ phải có sẵn trước hoặc tại `t0`.
-
-Label có thể được xác định trong một cửa sổ tương lai:
+Examples:
 
 ```text
-feature: lịch sử <= t0
-label: sự kiện trong (t0, t0+30 ngày]
+fraud within 30 days
+customer churned
+house sale price
+next token
 ```
 
-Chỉ cần vẽ rõ timeline này đã có thể ngăn rất nhiều lỗi leakage.
+Label definition must include time horizon and event semantics.
 
-## Rò rỉ đặc trưng
+“Churn” can mean no login 30 days, contract cancellation, or no payment 90 days. Different definitions create different tasks.
 
-Một feature bị **rò rỉ (feature leakage)** nếu nó chứa thông tin mà tại thời điểm dự đoán thực tế hệ thống chưa thể biết hợp lệ.
+## Prediction time / cutoff
 
-Ví dụ dự đoán khoản vay có vỡ nợ hay không nhưng lại dùng cột `collection_status` chỉ được ghi sau khi quá trình thu hồi nợ bắt đầu.
+For each sample define timestamp `t0` when prediction would be made.
 
-Metric có thể tăng rất cao vì mô hình đang nhìn thấy hậu quả của chính target.
+Valid features must be available by `t0`.
 
-Leakage thường không dễ phát hiện bằng code review vì tên cột có thể trông bình thường. Cần hiểu lineage và timestamp mang ý nghĩa nghiệp vụ.
-
-## Leakage trong tiền xử lý
-
-Ngay cả một phép biến đổi không trực tiếp dùng label vẫn có thể làm test set rò rỉ vào training.
-
-Cách sai:
+Label may use future window after `t0`:
 
 ```text
-fit scaler trên toàn bộ dữ liệu
-sau đó mới chia train/test
+features: history <= t0
+label: event in (t0, t0+30d]
 ```
 
-Cách đúng:
+This simple timeline prevents many leakage bugs.
+
+## Feature leakage
+
+A feature leaks if it contains information unavailable legitimately at prediction time.
+
+Example predicting loan default using `collection_status` recorded after default.
+
+Model metric becomes artificially high because it sees consequence of target.
+
+Leakage often survives code review because column looks innocuous; semantic timestamp lineage matters.
+
+## Preprocessing leakage
+
+Even label-free transformation can leak test distribution.
+
+Wrong:
 
 ```text
-chia dữ liệu trước
-fit scaler chỉ trên train
-áp dụng scaler đó lên validation/test
+fit scaler on all data
+then split train/test
 ```
 
-Nguyên tắc tương tự áp dụng cho imputation, feature selection, PCA, target encoding và mọi bước tiền xử lý cần “fit”.
+Correct:
 
-Pipeline abstraction giúp bảo đảm các phép biến đổi chỉ được học trên training fold.
+```text
+split
+fit scaler on train only
+apply same scaler to validation/test
+```
 
-## Leakage qua feature tổng hợp
+Same rule for imputation, feature selection, PCA, target encoding and any fitted preprocessing.
 
-Giả sử feature “tổng chi tiêu suốt vòng đời khách hàng” được tính bằng cả dữ liệu phát sinh sau ngày dự đoán. Dù không trực tiếp chứa label, nó vẫn nhìn thấy tương lai.
+Use pipeline abstraction to ensure transformations fit only training folds.
 
-Mọi phép tổng hợp theo thời gian cần có mốc cắt:
+## Label leakage via aggregates
+
+Suppose feature “customer lifetime spend” is computed using data after prediction date. Even if label column absent, future information leaks.
+
+Every aggregate needs temporal cutoff:
 
 ```sql
 SUM(amount)
 WHERE transaction_time < prediction_time
 ```
 
-Đây là lý do feature store trong production thường nhấn mạnh tính đúng theo thời điểm (point-in-time correctness).
+Production feature stores often encode point-in-time correctness specifically for this reason.
 
-## Feature đại diện gián tiếp
+## Proxy features
 
-Một feature có thể vô tình làm đại diện (proxy) cho biến khác.
+Feature may indirectly reveal target.
 
-Ví dụ mã khoa bệnh viện có thể là proxy cho mức độ nặng của bệnh. ZIP code có thể gián tiếp phản ánh cấu trúc kinh tế-xã hội hoặc nhóm dân cư.
+Hospital ward code may proxy disease severity. ZIP code may proxy socioeconomic/racial structure.
 
-Proxy có thể rất hữu ích về mặt dự đoán nhưng tạo rủi ro về fairness, privacy hoặc robustness.
+A proxy can be technically legitimate predictor but create fairness, privacy or robustness concerns.
 
-Vì vậy cần review ý nghĩa của feature, không chỉ xem correlation.
+Feature review must consider semantics, not just correlation.
 
-## Đặc trưng số
+## Numerical features
 
-Đặc trưng liên tục có thể là tuổi, giá hoặc nhiệt độ.
+Continuous:
 
-Đặc trưng đếm rời rạc có thể là số lần đăng nhập.
+```text
+age, price, temperature
+```
 
-Scale ảnh hưởng mạnh tới thuật toán dựa trên khoảng cách hoặc gradient, nhưng thường không ảnh hưởng decision tree theo cùng cách.
+Discrete counts:
 
-Chuẩn hóa chuẩn (standardization):
+```text
+number_of_logins
+```
+
+Scaling matters for distance/gradient-based algorithms but not usually tree split ordering in same way.
+
+Standardization:
 
 \[
 z=\frac{x-\mu}{\sigma}
 \]
 
-Trong đó `μ` và `σ` phải được fit chỉ từ training data.
+fit `μ,σ` on training data only.
 
-## Đặc trưng phân loại
+## Categorical features
 
-Các category không có thứ tự tự nhiên:
+Nominal categories have no inherent order:
 
 ```text
 country, browser, product_category
 ```
 
-One-hot encoding tránh tạo một thứ tự số giả.
+One-hot encoding avoids fake numeric order.
 
-Với category có cardinality rất lớn, one-hot tạo vector thưa cực lớn. Các phương án khác gồm hashing, embedding học được hoặc target encoding có regularization chặt.
+High-cardinality categories create huge sparse vectors; alternatives include hashing, learned embeddings or carefully regularized target/statistical encoding.
 
-## Đặc trưng thứ bậc
+## Ordinal features
 
-Một số category có thứ tự:
+Categories have order:
 
 ```text
 low < medium < high
 ```
 
-Có thể mã hóa bằng số, nhưng khoảng cách giữa các mức không nhất thiết bằng nhau.
+Encoding numeric order may be appropriate, but distance between levels need not equal.
 
-Cách mã hóa có hợp lý hay không phụ thuộc giả định của mô hình phía sau.
+Model assumptions determine whether ordinal integer representation is safe.
 
 ## One-hot encoding
 
-Category có `K` giá trị được chuyển thành vector:
+Category with K values becomes vector:
 
 ```text
 red   → [1,0,0]
@@ -178,343 +186,396 @@ green → [0,1,0]
 blue  → [0,0,1]
 ```
 
-Cách này không tạo thứ tự giả nhưng làm tăng số chiều.
+No artificial ordering, but dimensionality increases.
 
-Category chưa từng thấy trong training cũng phải có chiến lược xử lý rõ khi inference.
+Unknown category at inference requires explicit handling.
 
 ## Target encoding
 
-Target encoding thay mỗi category bằng một thống kê của target:
+Replace category with statistic of target:
 
 \[
 TE(c)=E[Y\mid category=c]
 \]
 
-Cách này rất mạnh nhưng cực kỳ dễ leakage.
+Very powerful but extremely leakage-prone. Must compute out-of-fold/training-only statistics and smooth rare categories.
 
-Thống kê cần được tính theo kiểu out-of-fold hoặc training-only và phải smoothing cho category hiếm.
+A category appearing once with positive label should not receive perfect 1.0 signal blindly.
 
-Một category chỉ xuất hiện một lần với nhãn dương không nên được gán tín hiệu hoàn hảo `1.0` một cách mù quáng.
+## Missing data
 
-## Dữ liệu thiếu
-
-Giá trị thiếu có thể mang nhiều ý nghĩa:
+Missingness can mean different things:
 
 ```text
-chưa đo
-không áp dụng
-cảm biến lỗi
-người dùng không muốn trả lời
-không đồng nghĩa với số 0
+not measured
+not applicable
+sensor failed
+user chose not to answer
+value genuinely zero? no
 ```
 
-Thay tất cả missing value bằng `0` có thể phá hỏng ngữ nghĩa.
+Replacing every missing value with 0 destroys semantics.
 
-Các chiến lược gồm category “missing” riêng, median/mean imputation, mô hình xử lý missing trực tiếp, thêm cờ missing hoặc dùng cách bù theo tri thức miền.
+Strategies:
 
-## MCAR, MAR và MNAR
+- explicit missing category;
+- median/mean imputation;
+- model-native missing handling;
+- missing indicator;
+- domain-specific imputation.
 
-**Missing Completely At Random (MCAR)**: việc thiếu dữ liệu không liên quan tới giá trị.
+## MCAR, MAR, MNAR intuition
 
-**Missing At Random (MAR)**: khả năng bị thiếu có thể được giải thích bằng các biến đã quan sát.
+Missing Completely At Random: missing unrelated to values.
 
-**Missing Not At Random (MNAR)**: việc bị thiếu phụ thuộc vào chính giá trị chưa quan sát hoặc yếu tố chưa biết.
+Missing At Random: missingness explainable by observed variables.
 
-Những giả định này ảnh hưởng trực tiếp tính hợp lệ của phân tích thống kê. Dữ liệu thực tế thường có nhiều tình huống gần MNAR.
+Missing Not At Random: missingness depends on unobserved/missing value itself.
 
-## Ngoại lệ dữ liệu
+These assumptions affect statistical validity. Real data often MNAR-like.
 
-Một outlier có thể là lỗi dữ liệu, sự kiện hiếm nhưng hợp lệ, hoặc chính fraud/anomaly mà ta muốn phát hiện.
+## Outliers
 
-Xóa hoặc clipping outlier một cách tự động có thể loại bỏ tín hiệu quan trọng nhất của bài toán.
+Outlier can be:
 
-Cần điều tra nguồn gốc và ý nghĩa nghiệp vụ trước.
+- data error;
+- rare valid event;
+- fraud/anomaly we actually care about.
 
-Với heavy tail, có thể dùng phép biến đổi hoặc loss bền vững hơn.
+Blind clipping/removal may erase target signal.
 
-## Biến đổi log
+Investigate source and task semantics first.
 
-Với feature dương có phân phối lệch mạnh như transaction amount, có thể dùng:
+Robust transformations/losses may handle heavy tails better.
+
+## Log transformation
+
+Positive skewed feature like transaction amount may be transformed:
 
 \[
 x'=\log(1+x)
 \]
 
-Phép biến đổi này nén các giá trị rất lớn và đôi khi làm quan hệ dạng nhân trở nên gần tuyến tính hơn.
+This compresses large values and can make multiplicative relations more linear.
 
-Tuy nhiên đây cũng là một giả định mô hình hóa và phải giữ khả năng diễn giải hoặc inverse transform nếu cần.
+Transformation encodes assumption; preserve interpretation/inverse transform where needed.
 
-## Feature tương tác
+## Interaction features
 
-Mô hình tuyến tính không tự biểu diễn interaction nếu không thêm thành phần:
+Linear model cannot naturally express interaction unless feature included:
 
 \[
 y=\beta_1x_1+\beta_2x_2+\beta_3x_1x_2
 \]
 
-Decision tree và neural network có thể học interaction tự động ở những mức độ khác nhau.
+Trees/neural networks can learn interactions automatically to differing degrees.
 
-Feature engineering một phần chính là chọn một cơ sở biểu diễn khiến bài toán trở nên đơn giản hơn.
+Feature engineering is partly choosing basis where task becomes simpler.
 
-## Biểu diễn văn bản
+## Text representation
 
-Các cách truyền thống gồm bag-of-words, TF-IDF và n-gram.
+Traditional:
 
-Cách hiện đại gồm token ID, embedding học được và contextual representation từ Transformer.
+- bag-of-words;
+- TF-IDF;
+- n-grams.
 
-Các bước như lowercasing hay stemming có thể làm mất thông tin tùy ngôn ngữ và mô hình, vì vậy không nên dùng như công thức mặc định.
+Modern:
 
-## Biểu diễn hình ảnh
+- token IDs;
+- learned embeddings;
+- contextual transformer representations.
 
-Ảnh được biểu diễn bằng tensor pixel.
+Text preprocessing such as lowercasing/stemming can remove useful information depending language/model.
 
-Các bước thường gặp gồm resize, crop, chuẩn hóa channel và augmentation.
+## Image representation
 
-Augmentation phải giữ đúng ngữ nghĩa của label.
+Pixels are tensors. Common processing:
 
-Ảnh y khoa hoặc viễn thám cần đặc biệt chú ý hướng ảnh, độ phân giải và metadata.
+- resize/crop;
+- normalize channels;
+- augmentation.
 
-## Feature chuỗi thời gian
+Augmentation must preserve label semantics.
 
-Một dòng tại thời điểm `t` có thể dùng độ trễ:
+Medical/remote-sensing images need domain-specific care around orientation, resolution and metadata.
+
+## Time-series features
+
+A row at time `t` may use lags:
 
 \[
 x_{t-1},x_{t-7}
 \]
 
-hoặc rolling statistics:
+rolling statistics:
 
 \[
 mean(x_{t-6:t})
 \]
 
-Không được dùng giá trị tương lai.
+Never include future values.
 
-Random split thường không phù hợp với time series vì dễ làm thông tin tương lai rò về quá khứ.
+Random train/test split often invalid because future leaks into past distribution.
 
-## Dữ liệu theo nhóm
+## Grouped data
 
-Nhiều dòng từ cùng một người dùng, bệnh nhân hoặc thiết bị thường tương quan.
+Multiple rows from same user/patient/device are correlated.
 
-Nếu dữ liệu của một người xuất hiện cả trong train và test, mô hình có thể ghi nhớ pattern theo danh tính thay vì generalize.
+If one user's rows appear in both train and test, model may memorize identity-specific patterns.
 
-Nếu mục tiêu triển khai là người dùng hoàn toàn mới, cần group-aware split.
+Use group-aware split when deployment target is unseen entities.
 
-Ranh giới evaluation phải giống cách hệ thống thực tế được sử dụng.
+Evaluation boundary should match actual use case.
 
-## Dữ liệu trùng lặp
+## Duplicate data
 
-Ảnh hoặc tài liệu gần trùng nhau giữa train và test làm metric bị thổi phồng.
+Near-duplicate images/documents in train/test inflate metrics.
 
-Dataset web-scale thường chứa rất nhiều duplicate.
+Web-scale datasets have substantial duplicates. Deduplication reduces memorization leakage and contamination.
 
-Hash phát hiện bản sao chính xác; perceptual hash, MinHash hoặc embedding có thể dùng để phát hiện near-duplicate.
+Exact hashes catch exact duplicates; perceptual/minhash/embedding methods can catch near duplicates.
 
 ## Dataset contamination
 
-Ví dụ benchmark hoặc test data xuất hiện trong training corpus sẽ làm benchmark không còn đo generalization sạch.
+Benchmark/test examples may appear in training corpus.
 
-Với foundation model, contamination detection và phân tách theo thời gian hoặc nguồn dữ liệu rất quan trọng.
+Then benchmark performance no longer clean measure of generalization.
 
-## Nhiễu nhãn
+Foundation model evaluation must consider contamination detection and temporal/source separation.
 
-Label có thể sai vì annotator không đồng ý, định nghĩa mơ hồ hoặc outcome đến trễ.
+## Label noise
 
-Nếu 10% nhãn bị sai ngẫu nhiên, hàm mục tiêu huấn luyện chứa mâu thuẫn không thể loại bỏ hoàn toàn.
+Labels can be wrong due to annotator disagreement, ambiguous definition or delayed outcome.
 
-Các biện pháp gồm relabel mẫu quan trọng, dùng nhiều annotator, robust loss, confidence label hoặc review những mẫu mà mô hình và nhãn không đồng thuận.
+If 10% labels random wrong, training objective contains irreducible conflict.
 
-## Mức đồng thuận giữa annotator
+Strategies:
 
-Với task chủ quan, disagreement không chỉ là “noise”; nó có thể phản ánh bản chất mơ hồ của bài toán.
+- relabel high-impact examples;
+- consensus/multiple annotators;
+- robust losses;
+- confidence labels;
+- model disagreement review.
 
-Các metric như Cohen's kappa hoặc Krippendorff's alpha đo mức đồng thuận trong những thiết lập nhất định.
+## Inter-Annotator Agreement
 
-Nếu agreement thấp, việc ép mọi dữ liệu thành một “gold label” duy nhất có thể che mất bất định thực tế.
+For subjective tasks, disagreement is information, not simply noise.
+
+Metrics like Cohen's kappa or Krippendorff's alpha quantify agreement under specific settings.
+
+Low agreement may mean task definition inherently ambiguous; forcing one “gold label” hides uncertainty.
 
 ## Weak supervision
 
-Trong **weak supervision**, label được tạo bởi heuristic, rule hoặc mô hình bên ngoài thay vì được con người gán trực tiếp.
+Labels generated by heuristics/rules/external models rather than manual ground truth.
 
-Ví dụ:
-
-```text
-email chứa URL độc hại đã biết → weak spam label
-```
-
-Cách này mở rộng quy mô nhanh nhưng tạo label noise có hệ thống.
-
-Nhiều labeling function có thể được kết hợp bằng mô hình thống kê thay vì coi mọi rule là đúng tuyệt đối.
-
-## Positive–Unlabeled Learning
-
-Có những bài toán chỉ biết chắc positive, còn tập unlabeled chứa cả positive lẫn negative.
-
-Ví dụ các case fraud đã được xác nhận so với toàn bộ giao dịch chưa điều tra.
-
-Nếu coi tất cả unlabeled là negative, mô hình sẽ bị lệch. Các phương pháp PU-learning cố mô hình hóa cơ chế lấy mẫu này.
-
-## Mất cân bằng lớp
-
-Ví dụ fraud chỉ chiếm:
+Example:
 
 ```text
-0.1%
+email containing known malicious URL → weak spam label
 ```
 
-thì accuracy trở nên rất dễ gây hiểu nhầm.
+Weak supervision scales but introduces systematic label noise. Multiple labeling functions can be combined probabilistically.
 
-Có thể dùng class weighting, resampling, focal-like loss hoặc anomaly framing trong training.
+## Positive-Unlabeled data
 
-Tuy nhiên evaluation thường nên giữ prevalence thật của production nếu mục tiêu là đo hiệu quả thực tế.
+Sometimes positive labels reliable but negatives absent; unlabeled set mixes positives and negatives.
 
-## Lưu ý khi resampling
+Example known fraud cases vs all uninvestigated transactions.
 
-Oversampling positive làm thay đổi phân phối training.
+Treating all unlabeled as negative biases model. PU-learning methods model this sampling process.
 
-Do đó xác suất đầu ra có thể không còn calibration đúng với base rate thực tế và cần hiệu chỉnh lại threshold hoặc calibration.
+## Class imbalance
 
-Cũng không được oversample trước khi chia train/test vì có thể làm bản sao của cùng một mẫu xuất hiện ở cả hai phía.
+Rare class example:
 
-## Lựa chọn đặc trưng
+```text
+fraud = 0.1%
+```
 
-Có thể giảm feature để giảm noise/overfitting, giảm latency và cost, tăng interpretability, hạn chế dữ liệu riêng tư hoặc xử lý dữ liệu quá nhiều chiều.
+Accuracy becomes misleading.
 
-Các nhóm phương pháp gồm filter statistics, wrapper method và embedded method như L1 hoặc tree importance.
+Training options include:
 
-Feature selection cũng phải diễn ra bên trong training fold để tránh leakage.
+- class weighting;
+- resampling;
+- focal-like losses;
+- anomaly framing.
 
-## Feature importance không đồng nghĩa feature hợp lệ
+But evaluation should preserve real prevalence unless intentionally testing scenario.
 
-Một feature có thể rất “quan trọng” vì nó đang leakage hoặc đóng vai trò proxy không mong muốn.
+## Resampling caveats
 
-Feature importance chỉ nói mô hình phụ thuộc vào feature đó tới mức nào, không trả lời liệu ta có nên sử dụng nó hay không.
+Oversampling positive class changes training distribution. Probability output may become miscalibrated relative to real base rate.
 
-Vẫn cần review nghiệp vụ và governance.
+Decision threshold/calibration may need correction.
+
+Never duplicate samples across train/test due to oversampling before split.
+
+## Feature selection
+
+Reasons to select features:
+
+- reduce noise/overfitting;
+- latency/cost;
+- interpretability;
+- missingness/privacy;
+- high-dimensional classical model constraints.
+
+Methods:
+
+- filter statistics;
+- wrapper methods;
+- embedded methods (L1/tree importance).
+
+Selection must occur inside training folds to avoid leakage.
+
+## Feature importance is not feature validity
+
+A feature can be highly important because it leaks target or encodes undesirable proxy.
+
+Importance answers model dependence, not whether feature should be used.
+
+Governance review still necessary.
 
 ## Feature store
 
-Feature store giúp tái sử dụng cùng định nghĩa feature giữa training và serving.
+Production feature store helps reuse feature definitions and maintain consistency between training/serving.
 
-Một vấn đề quan trọng là **độ lệch giữa training và serving (training-serving skew)**.
+Key challenge: **training-serving skew**.
 
-Nếu offline SQL và online service tính cùng feature theo hai cách khác nhau, distribution tại production sẽ không còn giống training.
+If offline SQL computes feature differently from online service, model sees different distribution after deployment.
 
-Dùng transformation chung và point-in-time retrieval giúp giảm rủi ro này.
+Shared transformations/point-in-time retrieval reduce skew.
 
-## Version dữ liệu
+## Data versioning
 
-Để tái lập một mô hình cần lưu:
+To reproduce model, record:
 
 ```text
-data snapshot / version
+data snapshot/version
 schema
-định nghĩa label
-code tạo feature
-tham số preprocessing
-ID của các split
+label definition
+feature code
+preprocessing parameters
+split IDs
 ```
 
-Chỉ lưu model artifact mà không có data lineage thì chưa đủ để reproducibility.
+Model artifact without data lineage is not reproducible.
 
-## Các chiều chất lượng dữ liệu
+## Data quality dimensions
 
-Chất lượng dữ liệu không phải trạng thái “sạch/bẩn” nhị phân. Các chiều thường gồm completeness, validity, consistency, uniqueness, freshness, accuracy và representativeness.
+Useful dimensions:
 
-Một dataset có thể rất đầy đủ nhưng hoàn toàn không đại diện cho population triển khai.
+- completeness;
+- validity;
+- consistency;
+- uniqueness;
+- freshness;
+- accuracy;
+- representativeness.
 
-## Sai lệch lấy mẫu
+“Clean data” is not binary.
 
-Dataset có thể không đại diện cho population thật.
+## Sampling bias
 
-Ví dụ người chịu trả lời khảo sát có thể khác đáng kể người không trả lời.
+Dataset sample may not represent deployment population.
 
-Tăng sample size không tự sửa được sampling bias có hệ thống.
+Example survey users who respond differ from non-responders.
 
-Cần hiểu cơ chế thu thập và đôi khi phải dùng weighting hoặc thay đổi cách tuyển mẫu.
+Large sample size does not fix systematic sampling bias.
+
+Need understand collection mechanism and sometimes weighting/recruitment changes.
 
 ## Survivorship bias
 
-Nếu chỉ những entity thành công còn tồn tại trong dữ liệu, distribution sẽ bị méo.
+Only successful entities remain in records.
 
-Ví dụ dự đoán thành công startup nhưng dataset chỉ chứa công ty còn hoạt động sẽ bỏ mất phần lớn thất bại.
+Predicting startup success using only surviving companies creates distorted distribution.
 
-Luôn hỏi những trường hợp nào đã biến mất trước khi dữ liệu được ghi nhận.
+Always ask which failed/absent cases disappeared from dataset.
 
-## Vòng phản hồi
+## Feedback loops
 
-Triển khai mô hình làm thay đổi dữ liệu tương lai.
+Model deployment changes future data.
 
-Recommender quyết định người dùng thấy nội dung nào, rồi lại học từ click trên chính nội dung đã chọn.
+Recommender chooses what users see, then learns from clicks on shown content.
 
 ```mermaid
 flowchart LR
-    M[Model] --> A[Hành động / Gợi ý]
+    M[Model] --> A[Actions / Recommendations]
     A --> E[Exposure]
     E --> F[Feedback]
-    F --> D[Dữ liệu huấn luyện tiếp theo]
+    F --> D[Next Training Data]
     D --> M
 ```
 
-Dữ liệu log vì vậy phụ thuộc vào policy hiện tại, không phải quan sát trung lập của toàn bộ thế giới.
+Logged data is policy-dependent, not neutral.
 
-## Quyền riêng tư
+## Privacy
 
-Feature có thể chứa thông tin nhận dạng cá nhân hoặc thông tin nhạy cảm được suy ra.
+Features may contain PII or sensitive inferred information.
 
-Cần quan tâm tới tối thiểu hóa dữ liệu, access control, retention policy, encryption và consent hoặc cơ sở pháp lý khi áp dụng.
+Need:
 
-Chuyển văn bản nhạy cảm thành embedding không tự động làm dữ liệu trở nên vô danh.
+- minimization;
+- access control;
+- retention policy;
+- encryption;
+- consent/legal basis where applicable.
 
-## Tài liệu hóa dataset
+Embedding sensitive text does not automatically anonymize it.
 
-Dataset card hoặc data sheet có thể ghi:
+## Data documentation
+
+Dataset card/data sheet can record:
 
 ```text
-nguồn dữ liệu
-thời gian thu thập
+source
+collection period
 population
-quy trình gán nhãn
-giới hạn đã biết
+labeling process
+known limitations
 license
-thuộc tính nhạy cảm
-mục đích sử dụng khuyến nghị
+sensitive attributes
+recommended uses
 ```
 
-Tài liệu hóa giúp các nhóm sau này hiểu rõ giới hạn của dữ liệu và tránh dùng sai mục đích.
+Documentation improves future evaluation and governance.
 
-## Mô hình tư duy
+## Mental Model
 
 ```text
-Example       = đơn vị mà mô hình học hoặc dự đoán
-Feature       = thông tin hợp lệ tại thời điểm dự đoán
-Label         = định nghĩa vận hành của mục tiêu
-Cutoff time   = ranh giới ngăn thông tin tương lai bị rò rỉ
-Sampling      = lý do những mẫu này xuất hiện trong dataset
-Preprocessing = phép biến đổi chỉ được fit trên training data
-Data lineage  = nguồn gốc của từng giá trị
+Example       = unit model learns/predicts about
+Feature       = information available at prediction time
+Label         = operational definition of target
+Cutoff time   = boundary preventing future leakage
+Sampling      = why these examples entered dataset
+Preprocessing = learned transformation fit on training only
+Data lineage  = where every value came from
 ```
 
-## Các hiểu lầm thường gặp
+## Common Misconceptions
 
-### “Càng nhiều feature càng tốt”
+### “More features always improve model”
 
-Không. Feature không liên quan, bị leakage hoặc nhiều noise có thể làm generalization, latency và governance tệ hơn.
+Irrelevant/leaky/noisy features can hurt generalization, latency and governance.
 
-### “Missing value nghĩa là 0”
+### “Missing value = 0”
 
-Không. Missing có ngữ nghĩa riêng; 0 có thể là một giá trị hoàn toàn hợp lệ.
+Missingness has semantics; zero may be valid value.
 
-### “Random split luôn đúng”
+### “Random split is always correct”
 
-Không. Dữ liệu theo thời gian, người dùng hoặc nhóm thường cần split chuyên biệt.
+Time/group/entity dependencies often require specialized split.
 
-### “Label chính là ground truth”
+### “Label is ground truth”
 
-Không hoàn toàn. Label là kết quả đo lường và định nghĩa, có thể noisy, chủ quan hoặc phụ thuộc policy.
+Labels are measurements/definitions and can be noisy, subjective or policy-dependent.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Thiết kế dữ liệu quyết định Machine Learning có thể học được điều gì. Mô hình phức tạp không thể phục hồi thông tin chưa từng có trong feature và cũng không thể tự sửa một định nghĩa label sai về bản chất.
+Data design determines what statistical learning can discover. Model sophistication cannot recover information absent from features or correct a fundamentally wrong label definition.
 
-Xem tiếp: [Huấn luyện, validation và testing](./03_training_validation_and_testing.md).
+Xem tiếp: [Training, Validation and Testing](./03_training_validation_and_testing.md).

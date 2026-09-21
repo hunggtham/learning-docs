@@ -1,24 +1,24 @@
-# Attention: truy cập thông tin theo mức độ liên quan
+# Attention: cho model truy cập thông tin theo relevance
 
-**Attention (어텐션 / 주의 메커니즘 / cơ chế chú ý)** giải quyết một hạn chế quan trọng của các mô hình chuỗi-sang-chuỗi thời kỳ đầu: bộ giải mã không nên bị buộc phải nén toàn bộ chuỗi nguồn vào một vector có kích thước cố định. Thay vào đó, tại mỗi bước tạo đầu ra, mô hình có thể tính **mức độ liên quan (relevance)** giữa truy vấn hiện tại và nhiều vị trí bộ nhớ, rồi tổng hợp phần thông tin phù hợp.
+Attention (어텐션 / 주의 메커니즘) giải quyết một limitation quan trọng của early sequence-to-sequence models: decoder không nên bị buộc nén toàn bộ source sequence vào một fixed-size vector. Thay vào đó, tại mỗi output step, model có thể **tính relevance giữa query hiện tại và nhiều memory positions**, rồi tổng hợp information phù hợp.
 
-Self-attention hiện đại mở rộng ý tưởng này: mỗi token có thể truy cập những token khác dựa trên mối quan hệ phụ thuộc nội dung được mô hình học từ dữ liệu.
+Modern self-attention mở rộng idea này: mỗi token có thể truy cập các token khác dựa trên learned content-dependent relationships.
 
-## Từ ngữ cảnh cố định tới ngữ cảnh động
+## Từ fixed context tới dynamic context
 
-Bộ mã hóa RNN tạo các trạng thái:
+RNN encoder cho states:
 
 \[
 h_1,h_2,...,h_T
 \]
 
-Thay vì chỉ đưa `h_T` cho decoder, attention xây vector ngữ cảnh tại bước `t`:
+Thay vì chỉ đưa `h_T` cho decoder, attention tạo context tại decoder step `t`:
 
 \[
 c_t=\sum_i\alpha_{t,i}h_i
 \]
 
-Trọng số `α` phụ thuộc trạng thái decoder và trạng thái encoder:
+Weights `α` phụ thuộc decoder state và encoder state:
 
 \[
 e_{t,i}=score(s_{t-1},h_i)
@@ -28,11 +28,13 @@ e_{t,i}=score(s_{t-1},h_i)
 \alpha_{t,i}=softmax(e_{t,i})
 \]
 
-Nhờ đó decoder có thể quay lại tham chiếu động tới các vị trí nguồn khác nhau ở từng bước sinh.
+Decoder vì vậy “look back” source dynamically.
 
-## Query, Key và Value
+## Query, Key, Value
 
-Transformer chuẩn hóa cơ chế truy xuất này thành ba vai trò. Với ma trận biểu diễn `X`:
+Transformer formalizes memory lookup bằng ba roles.
+
+Given representation matrix `X`:
 
 \[
 Q=XW_Q,
@@ -40,13 +42,13 @@ Q=XW_Q,
 \quad V=XW_V
 \]
 
-Có thể dùng mô hình tư duy sau:
+Mental model:
 
-- **truy vấn (Query — Q / 쿼리)**: vị trí hiện tại đang tìm loại thông tin nào?
-- **khóa (Key — K / 키)**: mỗi mục mô tả mức độ nó phù hợp với truy vấn ra sao?
-- **giá trị (Value — V / 값)**: nếu mục được chọn, nội dung nào sẽ được truyền đi?
+- **Query (Q / 쿼리)**: tôi đang tìm loại information nào?
+- **Key (K / 키)**: mỗi item “advertise” nó match query thế nào?
+- **Value (V / 값)**: nếu item được attend, content nào được truyền?
 
-Đây chỉ là phép so sánh để hiểu cơ chế, không phải thao tác tra cứu key–value database theo nghĩa đen.
+Đây là analogy, không literal database key-value lookup.
 
 ## Scaled Dot-Product Attention
 
@@ -54,76 +56,83 @@ Có thể dùng mô hình tư duy sau:
 Attention(Q,K,V)=softmax\left(\frac{QK^T}{\sqrt{d_k}}\right)V
 \]
 
-Công thức này có thể được tách thành năm bước.
+Hãy unpack từng step.
 
-### 1. Tính điểm tương đồng
+### 1. Similarity Scores
 
 \[
 S=QK^T
 \]
 
-Nếu độ dài chuỗi là `T`, trong self-attention ta có `S∈R^{T×T}`. Phần tử `S_{ij}` đo mức phù hợp giữa query của token `i` và key của token `j`.
+Nếu sequence length `T`, `S∈R^{T×T}` trong self-attention. Entry `S_{ij}` đo alignment giữa query token `i` và key token `j`.
 
-Tích vô hướng thường tăng độ lớn khi số chiều tăng. Nếu các thành phần của Q/K có phương sai xấp xỉ `1`, phương sai của tích vô hướng tăng theo khoảng `d_k`.
+Dot product có magnitude tăng với dimension. Nếu Q/K components variance roughly 1, dot-product variance scale ~`d_k`.
 
-### 2. Chia tỷ lệ
+### 2. Scale
 
 \[
 \frac{S}{\sqrt{d_k}}
 \]
 
-Việc chia cho `√d_k` giúp giữ thang điểm ổn định hơn khi số chiều tăng. Nếu bỏ bước này, softmax dễ trở nên quá nhọn, rơi vào vùng bão hòa và làm gradient yếu đi.
+keeps score scale more stable as dimension grows. Without scaling, softmax may become extremely peaked; gradients shrink because distribution saturates.
 
-### 3. Áp dụng mặt nạ
+### 3. Mask
 
-Trước softmax, những vị trí không được phép truy cập được gán giá trị `-∞` hoặc một số âm rất lớn trong tính toán số.
+Before softmax, forbidden positions get `-∞` (large negative numerically).
 
-Mặt nạ nhân quả (causal mask):
+Causal mask:
 
 ```text
-token i chỉ được attention tới token j nếu j ≤ i
+token i can attend j only if j ≤ i
 ```
 
-Mặt nạ padding loại bỏ những token đệm không mang nội dung thật.
+Padding mask excludes pad tokens.
 
-### 4. Chuẩn hóa bằng Softmax
+### 4. Softmax
 
 \[
 A=softmax(S_{masked})
 \]
 
-Mỗi hàng ứng với một query và trở thành tập trọng số dương có tổng bằng `1`.
+Each query row becomes positive weights sum 1.
 
-### 5. Trộn các Value
+### 5. Weighted Values
 
 \[
 O=AV
 \]
 
-Biểu diễn đầu ra ở mỗi vị trí là tổ hợp có trọng số của các vector value.
+Each output representation is weighted mixture of value vectors.
 
-## Trọng số attention không phải xác suất sự thật
+## Attention không “copy probability of truth”
 
-Trọng số attention là các hệ số định tuyến thông tin được học cho mục tiêu của mô hình. Trọng số `0.8` không có nghĩa “token này có 80% xác suất là nguyên nhân” hoặc “nội dung này đúng với xác suất 80%”.
+Attention weights are routing coefficients learned for task. A weight `0.8` does not mean “80% probability token j is causally responsible” or factual confidence.
 
-Việc dùng bản đồ attention như lời giải thích duy nhất có nhiều giới hạn vì value đã là biểu diễn được biến đổi, nhiều head và nhiều layer tương tác với nhau, đường residual có thể bỏ qua attention và nhiều phân bố attention khác nhau đôi khi tạo đầu ra gần giống nhau.
+Interpretability based solely attention maps is limited because:
+
+- values contain transformed information;
+- multiple heads/layers compose;
+- residual paths bypass attention;
+- alternative attention distributions may yield similar output.
 
 ## Self-Attention
 
-Trong **self-attention**, Q, K và V đều được tạo từ cùng một chuỗi biểu diễn `X`. Mỗi vị trí cập nhật biểu diễn của chính nó dựa trên những vị trí khác.
+Q/K/V đều từ same sequence representation `X`.
 
-Ví dụ từ `bank` có thể nhận ngữ cảnh khác nhau:
+Each position contextualizes itself based on others.
+
+Example word `bank`:
 
 ```text
-river bank → liên hệ mạnh với river / water
-bank loan  → liên hệ mạnh với loan / money
+river bank → attends river/water context
+bank loan  → attends loan/money context
 ```
 
-Cùng một token ban đầu có thể trở thành biểu diễn theo ngữ cảnh (contextual representation) khác nhau.
+Same initial token embedding becomes different contextual representation.
 
 ## Cross-Attention
 
-Trong **cross-attention**, query đến từ một chuỗi hoặc modality, còn key/value đến từ chuỗi hoặc modality khác:
+Queries from one sequence/modality, keys/values from another:
 
 \[
 Q=H_{decoder}W_Q
@@ -134,172 +143,178 @@ K=H_{encoder}W_K,
 V=H_{encoder}W_V
 \]
 
-Cơ chế này thường xuất hiện trong Transformer encoder–decoder và hệ thống đa phương thức.
+Used encoder-decoder translation and multimodal fusion.
 
 ## Multi-Head Attention
 
-Thay vì chỉ có một attention duy nhất:
+Instead of one attention:
 
 \[
 head_i=Attention(QW_i^Q,KW_i^K,VW_i^V)
 \]
 
-Các head được ghép lại:
+Concatenate:
 
 \[
 MHA=Concat(head_1,...,head_h)W_O
 \]
 
-Mỗi head có thể học một không gian chiếu và mẫu tương tác khác nhau. Nếu tổng chiều mô hình là `d_model`, thiết kế phổ biến dùng:
+Different heads can learn different interaction patterns/subspaces.
+
+Head dimension usually:
 
 \[
 d_{head}=d_{model}/h
 \]
 
-Tuy nhiên nhiều mô hình hiện đại không nhất thiết dùng cùng số lượng query head và key/value head.
+But modern variants may use different Q-head/KV-head counts.
 
-## Multi-Query Attention và Grouped-Query Attention
+## Multi-Query và Grouped-Query Attention
 
-Trong suy luận tự hồi quy, bộ nhớ KV cache có thể rất lớn. **Multi-Query Attention (MQA)** chia sẻ một cặp key/value cho nhiều query head. **Grouped-Query Attention (GQA)** sử dụng số key/value head ít hơn số query head nhưng nhiều hơn một.
+Autoregressive inference KV cache memory lớn. **Multi-Query Attention (MQA)** shares one K/V head across many query heads. **Grouped-Query Attention (GQA)** uses fewer K/V heads than Q heads.
 
-Mục tiêu là giảm kích thước KV cache và áp lực băng thông bộ nhớ trong khi giữ phần lớn chất lượng của multi-head attention. Nhiều LLM hiện đại sử dụng GQA vì sự đánh đổi này.
+Trade-off: reduce KV cache/memory bandwidth while retain much multi-head quality. Many modern LLMs use GQA.
 
-## Thông tin vị trí
+## Positional Information
 
-Self-attention thuần túy dựa trên nội dung, nên bản thân nó không biết thứ tự token. Cần bổ sung thiên lệch hoặc mã hóa vị trí, chẳng hạn:
+Self-attention score without position depends content, not order inherently.
 
-- mã hóa vị trí hình sin (sinusoidal position encoding);
-- embedding vị trí học được;
-- độ lệch vị trí tương đối (relative position bias);
-- **Rotary Position Embedding (RoPE)**;
-- **ALiBi**.
+Need inject/order bias:
 
-### Trực giác về RoPE
+- sinusoidal position encoding;
+- learned absolute embeddings;
+- relative position bias;
+- Rotary Position Embedding (RoPE);
+- ALiBi.
 
-RoPE quay các cặp thành phần của vector Q/K theo góc phụ thuộc vị trí. Nhờ vậy tích vô hướng giữa Q và K mang thông tin về chênh lệch vị trí tương đối.
+### RoPE intuition
 
-Nó không đơn giản là cộng một “số thứ tự vị trí” vào embedding, mà thay đổi hình học của phép tương tác giữa Q và K.
+RoPE rotates Q/K vector pairs by position-dependent angles. Dot product then naturally depends on relative position differences.
 
-## Độ phức tạp của Attention
+It does not simply “add position number”; it modifies geometry of Q/K interaction.
 
-Self-attention cơ bản tạo ma trận điểm kích thước `T×T`:
+## Attention Complexity
+
+Vanilla self-attention builds `T×T` score matrix:
 
 \[
 O(T^2d)
 \]
 
-Do đó chi phí của phần attention tăng bậc hai theo độ dài chuỗi `T`. Với ngữ cảnh dài, đây là nút thắt lớn về tính toán và bộ nhớ.
+compute/memory scales quadratically with sequence length `T` for attention component.
 
-Các hướng tối ưu gồm:
+For long context this becomes expensive. Techniques:
 
-- **FlashAttention**: tính attention chính xác bằng cách tổ chức truy cập bộ nhớ hiệu quả hơn;
-- attention thưa hoặc cục bộ;
-- cửa sổ trượt (sliding window);
-- xấp xỉ low-rank hoặc kernel;
-- mô hình hồi quy hoặc mô hình không gian trạng thái.
+- FlashAttention: exact attention with IO-aware tiling, not approximation;
+- sparse/local attention;
+- sliding window;
+- low-rank/kernel approximations;
+- state-space/recurrent alternatives.
 
-Cần phân biệt rõ: FlashAttention không phải phương pháp xấp xỉ attention; mục tiêu chính của nó là giảm truy cập bộ nhớ và tránh vật chất hóa các ma trận trung gian khổng lồ.
+Important distinction: FlashAttention reduces memory traffic/intermediate storage but mathematical attention result remains exact within numerical considerations.
 
 ## Causal Attention
 
-Trong mô hình ngôn ngữ decoder-only:
+For decoder-only language model:
 
 \[
 A_{ij}=0\quad j>i
 \]
 
-Token hiện tại không được nhìn thấy token tương lai. Dù toàn bộ chuỗi huấn luyện có thể được xử lý song song, mặt nạ vẫn bảo toàn phân rã tự hồi quy.
+Token cannot access future token during training. Despite processing full sequence in parallel, mask preserves autoregressive factorization.
 
-Đây là một ưu thế quan trọng của Transformer so với RNN: song song hóa nhiều vị trí trong huấn luyện mà vẫn giữ ràng buộc nhân quả.
+This is one key Transformer advantage over RNN: training all positions parallel while maintaining causal information constraint.
 
 ## KV Cache
 
-Khi sinh tự hồi quy, các key/value của token cũ không cần tính lại ở mỗi bước. Chúng được lưu trong **KV cache**:
+During autoregressive generation, previous keys/values need not recompute each token. Store them:
 
 ```text
-bước t:
-tính Q/K/V cho token mới
-→ tái sử dụng K/V của token 1...t-1
-→ attention trên K/V đã lưu
+step t:
+compute Q/K/V for new token
+reuse K/V of tokens 1...t-1
+attend over cached K/V
 ```
 
-Bộ nhớ KV cache tăng theo số layer, độ dài chuỗi, số KV head, chiều mỗi head và kiểu dữ liệu. Khi context rất dài, suy luận có thể bị giới hạn bởi băng thông bộ nhớ hơn là số FLOP thuần túy.
+KV cache memory scales with layers × sequence length × KV heads × head dimension × dtype.
 
-## Attention sink và vấn đề ngữ cảnh dài
+Long context inference often becomes memory-bandwidth/cache problem, not just FLOPs.
 
-Context window lớn không đồng nghĩa mô hình khai thác đồng đều mọi token. Có thể xuất hiện suy giảm khi ngoại suy vị trí, phân tán attention, truy xuất thất bại hoặc hiện tượng **lost in the middle** — thông tin ở giữa context dài được sử dụng kém hơn.
+## Attention Sink / Long Context Issues
 
-Độ dài context là giới hạn dung lượng, không phải cam kết rằng mọi vị trí đều được nhớ và dùng tốt như nhau.
+Long context does not guarantee model uses all tokens effectively. Position extrapolation, attention dilution, retrieval failures and lost-in-the-middle behavior can occur.
+
+Context-window size is capacity limit, not proof of uniform usable memory.
 
 ## Sparse Attention
 
-Nếu mỗi query chỉ truy cập một tập con vị trí, chi phí có thể giảm đáng kể. Cửa sổ cục bộ phù hợp khi ngữ cảnh gần chiếm ưu thế; token toàn cục hoặc mẫu kết nối có cấu trúc giúp giữ các liên hệ xa.
+If each query attends subset positions, complexity can reduce. Local window works when nearby context dominates; global tokens/structured patterns preserve long-range access.
 
-Mẫu attention thưa chính là một dạng **thiên lệch quy nạp (inductive bias)**: nó tăng hiệu quả nhưng có thể vô tình chặn một liên hệ quan trọng.
+Sparse pattern is inductive bias: efficient but may block relevant connection.
 
-## Attention như truy xuất khả vi
+## Attention as Differentiable Retrieval
 
-Có thể hình dung:
+A powerful mental connection:
 
 ```text
-vector truy vấn
-→ so sánh với các key
-→ chuẩn hóa thành trọng số
-→ lấy tổ hợp có trọng số của các value
+Query vector
+→ similarity against keys
+→ normalized scores
+→ weighted retrieval of values
 ```
 
-Cấu trúc này giống truy xuất, nhưng các vector bộ nhớ nằm bên trong quá trình tính toán của mạng và toàn bộ phép toán khả vi.
+This resembles retrieval, but all memory vectors live inside current neural computation and operation is differentiable.
 
-RAG về sau thực hiện **truy xuất bên ngoài (external retrieval)** từ kho tài liệu. Attention thực hiện **truy xuất khả vi bên trong (internal differentiable retrieval)** từ token hoặc hidden state.
+RAG later performs **external retrieval** over document index. Attention performs **internal differentiable retrieval** over tokens/hidden states.
 
-## Vì sao Attention cải thiện Seq2Seq?
+## Why Attention improved seq2seq
 
-Đường truyền giữa hai token xa nhau trong self-attention có thể chỉ đi qua một tầng, thay vì qua nhiều bước hồi quy. Các vị trí chuỗi có thể được tính song song trong huấn luyện, đồng thời ngữ cảnh động loại bỏ nút thắt một-vector của Seq2Seq RNN thời kỳ đầu.
+Path length between distant tokens in self-attention is one layer instead of many recurrent steps. Training parallelizes across sequence positions. Dynamic context removes fixed bottleneck.
 
-Đổi lại, attention đầy đủ phải trả chi phí tương tác cặp bậc hai theo độ dài chuỗi.
+Trade-off is quadratic pairwise interaction cost.
 
-## Attention và truyền thông điệp trên đồ thị
+## Attention and graph message passing
 
-Có thể xem self-attention như một đồ thị đầy đủ, trong đó mỗi token là một nút và các nút gửi thông tin cho nhau với trọng số cạnh được tính động từ độ tương thích Q/K.
+Self-attention can be viewed as fully connected graph where each token node sends message to others with learned edge weights based on Q/K compatibility.
 
-Trực giác này liên hệ Transformer với Graph Neural Network, dù cách tham số hóa và cơ chế tính toán cụ thể khác nhau.
+This connects Transformer to Graph Neural Network intuition, though exact parameterization differs.
 
-## Ổn định số
+## Numerical Stability
 
-Softmax nên được tính bằng kỹ thuật trừ giá trị lớn nhất để tránh tràn số. Các kernel attention cũng phải xử lý cẩn thận mặt nạ `-inf`, kiểu số độ chính xác thấp và phép tích lũy.
+Softmax should use max subtraction. Attention kernels also carefully handle mask `-inf`, low precision, accumulation.
 
-FlashAttention tính softmax theo từng block với chuẩn hóa trực tuyến, nhờ đó không cần giữ toàn bộ ma trận điểm trong bộ nhớ và vẫn duy trì ổn định số.
+FlashAttention computes softmax in blocks using online normalization to avoid materializing full matrix and maintain stability.
 
-## Mô hình tư duy
+## Mental Model
 
-> Attention là cơ chế định tuyến phụ thuộc nội dung. Query đặt câu hỏi, các key cạnh tranh về mức phù hợp, value mang thông tin và softmax quyết định tỷ lệ thông tin được truyền.
+> Attention = content-dependent routing. Query asks, keys compete for relevance, values carry information, softmax determines routing weights.
 
-Self-attention cho phép mỗi token viết lại biểu diễn của chính nó dựa trên những token khác mà mô hình đánh giá là liên quan.
+Self-attention lets every token rewrite its representation using other tokens selected by learned relevance.
 
-## Những hiểu lầm thường gặp
+## Common Misconceptions
 
-### “Trọng số attention chính là độ quan trọng hay lời giải thích”
+### “Attention weight = importance/explanation”
 
-Không. Đó là hệ số định tuyến, không phải bảo đảm về quan hệ nhân quả hoặc giải thích đầy đủ.
+It is routing coefficient, not guaranteed causal explanation.
 
-### “Attention giải quyết hoàn toàn trí nhớ dài hạn”
+### “Attention solves long-term memory completely”
 
-Không. Nó cho phép truy cập trực tiếp trong context window nhưng vẫn chịu giới hạn về chi phí và khả năng sử dụng context.
+It enables direct access within context window, but long context still has compute and utilization limits.
 
-### “Mỗi head có một vai trò được định nghĩa trước”
+### “Multi-head means each head has a predefined role”
 
-Không. Vai trò được học, có thể trùng lặp, phân tán và khác nhau giữa các tầng hoặc mô hình.
+Roles are learned, may be redundant/distributed and vary layers/models.
 
-### “FlashAttention xấp xỉ Attention”
+### “FlashAttention approximates attention”
 
-Không. Các phiên bản FlashAttention chuẩn tính cùng cơ chế attention chính xác nhưng tổ chức phép tính và truy cập bộ nhớ hiệu quả hơn.
+No. Standard FlashAttention algorithms compute exact attention more IO-efficiently.
 
-### “RAG và Attention là một”
+### “RAG and attention are same”
 
-Không. Cả hai có trực giác truy xuất, nhưng attention định tuyến biểu diễn nội bộ còn RAG truy xuất tài liệu hoặc chunk từ nguồn ngoài.
+Both retrieval-like, but attention routes internal hidden values; RAG retrieves external documents/chunks before/around generation.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Attention kết hợp [Đại số tuyến tính](../01_mathematical_foundations/01_linear_algebra_for_ai.md), [Softmax và xác suất](../01_mathematical_foundations/02_probability_for_ai.md), [Tính toán số](../01_mathematical_foundations/07_numerical_computation.md) và [Encoder–Decoder](./03_encoder_decoder_models.md).
+Attention combines [Linear Algebra](../01_mathematical_foundations/01_linear_algebra_for_ai.md), [Probability-like Softmax](../01_mathematical_foundations/02_probability_for_ai.md), [Numerical Computation](../01_mathematical_foundations/07_numerical_computation.md), [Encoder–Decoder](./03_encoder_decoder_models.md).
 
-Xem tiếp: [Transformer](./05_transformer.md), nơi attention được kết hợp với residual stream, chuẩn hóa và mạng feed-forward thành một kiến trúc có khả năng mở rộng lớn.
+Xem tiếp: [Transformer](./05_transformer.md), nơi attention được ghép với residual stream, normalization và feed-forward blocks thành scalable architecture.

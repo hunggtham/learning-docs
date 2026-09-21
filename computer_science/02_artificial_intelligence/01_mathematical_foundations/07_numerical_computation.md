@@ -1,118 +1,120 @@
-# Tính toán số cho Trí tuệ nhân tạo
+# Numerical Computation cho Artificial Intelligence
 
-Toán học trên giấy thường giả định số thực có độ chính xác vô hạn. Máy tính thì không. AI chạy trên bộ nhớ hữu hạn, độ chính xác hữu hạn và các kernel phần cứng cụ thể. Vì vậy một công thức đúng về toán vẫn có thể bị **tràn số (overflow)**, **hụt số (underflow)**, mất độ chính xác hoặc tạo `NaN` khi triển khai.
+Mathematics trên giấy giả định real numbers có precision vô hạn. Computer thì không. AI chạy trên finite memory, finite precision và hardware kernels cụ thể. Vì vậy một công thức mathematically correct vẫn có thể overflow, underflow, lose precision hoặc produce NaN khi implementation.
 
-**Tính toán số (Numerical Computation / 수치 계산)** nghiên cứu cách biến mô hình toán thành phép tính ổn định và hiệu quả. Với học sâu hiện đại, đây không phải chủ đề phụ: độ chính xác hỗn hợp, softmax ổn định, mức điều kiện của ma trận, lượng tử hóa và phép cộng dồn phân tán đều ảnh hưởng trực tiếp đến khả năng huấn luyện và triển khai mô hình.
+Numerical Computation (수치 계산 / tính toán số) nghiên cứu cách biến mathematical models thành computation stable và efficient. Với Deep Learning hiện đại, đây không phải topic phụ: mixed precision, softmax stability, matrix conditioning, quantization và distributed accumulation ảnh hưởng trực tiếp khả năng train/deploy model.
 
-Xem trước: [Đại số tuyến tính cho AI](./01_linear_algebra_for_ai.md) và [Tối ưu hóa](./06_optimization.md).
+Xem trước: [Linear Algebra for AI](./01_linear_algebra_for_ai.md) và [Optimization](./06_optimization.md).
 
-## Số dấu phẩy động không phải số thực lý tưởng
+## Floating-point numbers không phải real numbers
 
-Máy tính thường dùng chuẩn IEEE-754 cho **số dấu phẩy động (floating-point number)**. Một số được biểu diễn gần dạng:
+Computer thường dùng IEEE-754 floating point. Một number được represented gần dạng:
 
 \[
 (-1)^s\times m\times2^e
 \]
 
-với bit dấu, phần định trị và số mũ.
+với sign, significand/mantissa và exponent.
 
-Chỉ có một tập hữu hạn các số có thể biểu diễn chính xác. Nhiều số thập phân như `0.1` không có biểu diễn nhị phân hữu hạn chính xác.
+Chỉ finite set numbers representable. Nhiều decimal như `0.1` không represent exact trong binary floating point.
 
-Vì vậy:
+Do đó:
 
 ```python
 0.1 + 0.2 == 0.3
 ```
 
-có thể cho kết quả `False` trong nhiều ngôn ngữ lập trình.
+có thể false trong common languages.
 
-Trong phần mềm thông thường, sai số này thường rất nhỏ. Nhưng khi cộng dồn hàng triệu phép tính hoặc dùng công thức kém ổn định, sai số nhỏ có thể bị khuếch đại.
+Trong normal software, error này nhỏ. Trong repeated large-scale accumulation hoặc unstable formula, small errors có thể amplify.
 
-## Các định dạng độ chính xác trong AI
+## Precision formats trong AI
 
 ### FP32
 
-FP32 dùng 32 bit và có độ chính xác phần định trị đủ cho nhiều phép tính học máy. Trong thời gian dài đây là định dạng mặc định cho huấn luyện.
+32-bit floating point có khoảng 24 bits significand precision including hidden bit và exponent range đủ rộng cho nhiều ML computations. Nó từng là default training format.
 
 ### FP16
 
-FP16 dùng ít bộ nhớ hơn và có thể tăng thông lượng trên bộ tăng tốc, nhưng miền số mũ và độ chính xác nhỏ hơn nên dễ tràn hoặc hụt số hơn.
+FP16 dùng ít memory và tăng accelerator throughput nhưng exponent/mantissa nhỏ hơn, dễ overflow/underflow hơn.
 
 ### BF16
 
-BFloat16 giữ miền số mũ gần FP32 nhưng phần định trị ngắn hơn. Nó đánh đổi độ chính xác để giữ **miền động (dynamic range)** rộng, phù hợp với nhiều khối lượng công việc học sâu.
+BFloat16 giữ exponent range tương tự FP32 nhưng mantissa ngắn hơn. Nó hy sinh precision để giữ dynamic range, phù hợp nhiều Deep Learning workloads.
 
-### FP8 và độ chính xác thấp hơn
+### FP8 và lower precision
 
-Các bộ tăng tốc hiện đại hỗ trợ định dạng kiểu FP8 trong một số đường huấn luyện hoặc suy luận. Độ chính xác thấp hơn có thể tăng thông lượng và giảm bộ nhớ nhưng đòi hỏi cơ chế co giãn, hiệu chuẩn và kernel phù hợp.
+Modern accelerators hỗ trợ FP8-like formats trong selected training/inference paths. Lower precision tăng throughput và giảm memory nhưng đòi hỏi scaling, calibration và kernel support cẩn thận.
 
-### Lượng tử hóa số nguyên
+### Integer quantization
 
-Các định dạng như INT8 hoặc INT4 thường dùng cho suy luận để giảm bộ nhớ và băng thông. **Lượng tử hóa (quantization)** không chỉ là đổi kiểu dữ liệu; nó cần ánh xạ giá trị thực vào một tập mức rời rạc.
+INT8/INT4-like formats thường dùng inference để giảm memory bandwidth và compute. Quantization không chỉ “convert type”; cần map real values sang discrete levels.
 
-## Epsilon máy
+## Machine epsilon
 
-**Epsilon máy (machine epsilon)** mô tả khoảng cách tương đối nhỏ quanh 1 mà định dạng dấu phẩy động còn phân biệt được theo một quy ước nhất định.
+Machine epsilon là khoảng cách relative nhỏ nhất quanh 1 mà floating-point có thể distinguish theo format/convention.
 
-Trực giác quan trọng: khi độ lớn của số tăng, khoảng cách giữa các số có thể biểu diễn cũng tăng. Độ chính xác mang tính tương đối, không đồng đều tuyệt đối trên toàn miền.
+Intuition: khi numbers rất lớn, spacing giữa representable numbers cũng lớn hơn. Precision là relative, không uniform absolute trên toàn range.
 
-Vì vậy cộng một số rất nhỏ vào một số cực lớn có thể không làm thay đổi kết quả lưu trữ:
+Do đó adding tiny number vào huge number có thể không thay result:
 
 \[
 large + tiny \approx large
 \]
 
-## Sai số làm tròn
+trong floating point.
 
-Phép cộng chính xác `a+b` có thể được lưu thành số dấu phẩy động gần nhất:
+## Rounding error
+
+Operation exact `a+b` có thể được stored thành nearest representable floating-point number:
 
 \[
 fl(a+b)=(a+b)(1+\delta)
 \]
 
-với `δ` nhỏ dưới các giả định phù hợp.
+với small `δ` dưới assumptions.
 
-Sai số của một phép tính có thể rất nhỏ, nhưng thuật toán gồm hàng triệu phép tính vẫn cần xét cách sai số tích lũy và mức điều kiện của bài toán.
+Một operation error nhỏ, nhưng algorithm với millions operations cần consider accumulation and conditioning.
 
-## Triệt tiêu nghiêm trọng
+## Catastrophic cancellation
 
-Khi trừ hai số lớn gần bằng nhau:
+Khi subtract hai gần-equal large numbers:
 
 \[
 x-y
 \]
 
-các chữ số có nghĩa đầu có thể triệt tiêu, khiến sai số tương đối của kết quả tăng mạnh. Hiện tượng này gọi là **triệt tiêu nghiêm trọng (catastrophic cancellation)**.
+leading significant digits cancel, relative error của result có thể rất lớn.
 
-Ví dụ tính phương sai theo:
+Ví dụ computation variance bằng:
 
 \[
 E[X^2]-E[X]^2
 \]
 
-có thể kém ổn định khi hai hạng rất gần nhau.
+có thể unstable nếu hai terms rất gần nhau.
 
-Các thuật toán ổn định hơn như phương pháp Welford cập nhật trung bình và phương sai từng bước để giảm vấn đề triệt tiêu.
+Stable algorithms như Welford's method update mean/variance incrementally để giảm cancellation issues.
 
-## Tràn số và hụt số
+## Overflow và underflow
 
-**Tràn số (overflow)** xảy ra khi độ lớn vượt giá trị lớn nhất có thể biểu diễn, thường dẫn tới `Inf` hoặc hành vi lỗi.
+**Overflow** xảy ra khi magnitude vượt representable max → `Inf` hoặc error behavior.
 
-**Hụt số (underflow)** xảy ra khi độ lớn quá nhỏ, trở thành số dưới chuẩn hoặc 0.
+**Underflow** khi magnitude quá nhỏ, thành subnormal hoặc zero.
 
-Các phép mũ và tích nhiều xác suất nhỏ đặc biệt dễ gặp hai vấn đề này.
+Exponentials/log probabilities rất dễ gặp vấn đề này.
 
-## Softmax ổn định
+## Stable softmax
 
-Softmax trực tiếp:
+Naive softmax:
 
 \[
 softmax(z_i)=\frac{e^{z_i}}{\sum_j e^{z_j}}
 \]
 
-Nếu `z=[1000,1001]`, `e^{1001}` có thể tràn trong nhiều định dạng.
+Nếu `z=[1000,1001]`, `e^{1001}` overflow trong nhiều formats.
 
-Softmax không đổi khi trừ cùng một hằng số khỏi mọi logit:
+Softmax invariant khi subtract same constant:
 
 \[
 softmax(z_i)=\frac{e^{z_i-c}}{\sum_j e^{z_j-c}}
@@ -124,19 +126,19 @@ Chọn:
 c=\max_j z_j
 \]
 
-làm số mũ lớn nhất thành `e^0=1`, nhờ đó tránh tràn số.
+làm largest exponent bằng `e^0=1`, tránh overflow.
 
-Đây là ví dụ kinh điển của **ổn định số (numerical stability)**: hai công thức tương đương về toán có thể có hành vi tính toán hoàn toàn khác nhau.
+Đây là canonical example của numerical stability: mathematically equivalent formulas có radically different computational behavior.
 
-## Mẹo log-sum-exp
+## Log-sum-exp trick
 
-Ta thường cần tính:
+Ta thường cần:
 
 \[
 \log\sum_i e^{x_i}
 \]
 
-Dạng ổn định hơn là:
+Stable form:
 
 \[
 \log\sum_i e^{x_i}=m+\log\sum_i e^{x_i-m}
@@ -148,19 +150,19 @@ với:
 m=\max_i x_i
 \]
 
-**Log-sum-exp** xuất hiện trong likelihood, softmax, CRF và nhiều mô hình xác suất.
+Log-sum-exp xuất hiện trong log-likelihood, softmax, CRF, probabilistic models.
 
-Framework thường cung cấp phép toán nguyên thủy ổn định; nên dùng chúng thay vì tự ghép `log(sum(exp(x)))`.
+Frameworks thường cung cấp primitive stable; nên dùng thay vì tự compose `log(sum(exp(x)))`.
 
-## Tính xác suất trong miền log
+## Tính probability trong log space
 
-Tích của nhiều xác suất nhỏ:
+Product nhiều probabilities nhỏ:
 
 \[
 \prod_i p_i
 \]
 
-có thể hụt về 0.
+có thể underflow về zero.
 
 Lấy log:
 
@@ -168,312 +170,312 @@ Lấy log:
 \log\prod_i p_i=\sum_i\log p_i
 \]
 
-biến phép nhân thành phép cộng và ổn định hơn.
+biến multiplication thành addition và stable hơn.
 
-Đây là lý do likelihood của chuỗi thường được tính dưới dạng tổng log-xác suất.
+Đây là lý do sequence likelihood thường computed as sum of log-probabilities.
 
-## Mức điều kiện khác với độ ổn định số
+## Conditioning khác stability
 
-**Mức điều kiện (conditioning)** là thuộc tính của bài toán toán học: nhiễu nhỏ ở đầu vào có thể làm đầu ra thay đổi bao nhiêu.
+**Conditioning** là property của mathematical problem: input perturb nhỏ có thể làm output đổi bao nhiêu.
 
-**Độ ổn định số (numerical stability)** là thuộc tính của thuật toán: cách tính có làm tăng sai số quá mức cần thiết hay không.
+**Numerical stability** là property của algorithm: computation có introduce error lớn hơn inherent conditioning hay không.
 
-Một bài toán vốn điều kiện kém không thể được “sửa hoàn toàn” chỉ bằng thuật toán tốt; thuật toán ổn định chủ yếu tránh tạo thêm sai số không cần thiết.
+Một problem ill-conditioned không thể magically fix hoàn toàn bằng algorithm; stable algorithm chỉ tránh thêm unnecessary error.
 
-Ví dụ, giải hệ tuyến tính với ma trận gần suy biến vốn đã rất nhạy.
+Ví dụ solving linear system với nearly singular matrix inherently sensitive.
 
-## Số điều kiện
+## Condition number
 
-Với ma trận khả nghịch `A`, **số điều kiện (condition number)** theo một chuẩn là:
+Cho invertible matrix `A`, condition number theo norm:
 
 \[
 \kappa(A)=\|A\|\|A^{-1}\|
 \]
 
-`κ` lớn nghĩa sai số nhỏ của đầu vào hoặc làm tròn có thể bị khuếch đại mạnh trong nghiệm.
+Large `κ` nghĩa small input/rounding errors có thể amplify mạnh trong solution.
 
-Trong tối ưu hóa, Hessian điều kiện kém làm hạ gradient đi zig-zag và hội tụ chậm.
+Trong optimization, ill-conditioned Hessian dẫn gradient descent zig-zag và slow convergence.
 
-Co giãn đặc trưng và chuẩn hóa có thể cải thiện mức điều kiện hiệu dụng.
+Feature scaling và normalization có thể improve effective conditioning.
 
-## Không nên tính nghịch đảo khi không cần
+## Không nên tính inverse khi không cần
 
-Biểu thức:
+Expression:
 
 \[
 x=A^{-1}b
 \]
 
-đúng về toán, nhưng đại số tuyến tính số thường dùng bộ giải hoặc phép phân rã thay vì tính tường minh `A^{-1}`.
+mathematically valid, nhưng numerical linear algebra thường dùng solver/factorization thay vì explicitly compute inverse.
 
-Ví dụ, bài toán bình phương tối thiểu nên dùng QR, SVD hoặc bộ giải tối ưu thay vì trực tiếp tính:
+Ví dụ least squares nên dùng QR/SVD hoặc optimized solver thay vì:
 
 \[
 (X^TX)^{-1}X^Ty
 \]
 
-vì tạo `X^TX` có thể làm số điều kiện xấu đi đáng kể.
+vì forming `X^TX` có thể square condition number và worsen stability.
 
-Nguyên tắc thực hành:
+Rule engineering:
 
-> **Hãy giải hệ phương trình; đừng tự động tạo ma trận nghịch đảo nếu không cần.**
+> Solve the system; do not automatically form the inverse.
 
-## Sai số khi cộng dồn
+## Summation error
 
-Tổng hàng triệu số dấu phẩy động có thể phụ thuộc vào thứ tự vì phép cộng dấu phẩy động không có tính kết hợp tuyệt đối:
+Sum millions floating-point values depends order vì floating-point addition không associative:
 
 \[
 (a+b)+c\neq a+(b+c)
 \]
 
-trên máy tính.
+exactly.
 
-Cộng theo cặp hoặc thuật toán Kahan có thể giảm sai số.
+Pairwise summation hoặc Kahan summation có thể reduce error.
 
-Phép rút gọn song song trên GPU thay đổi thứ tự phép cộng, vì vậy cùng mã nguồn vẫn có thể có sai khác số nhỏ tùy kernel và cách lập lịch.
+Parallel GPU reductions change operation order, nên identical code/hardware settings vẫn có slight nondeterminism depending kernels.
 
-## Tính xác định và khả năng tái lập
+## Determinism và reproducibility
 
-Kết quả học sâu có thể thay đổi do:
+Deep Learning result có thể khác do:
 
-- khởi tạo ngẫu nhiên;
-- thứ tự các lô dữ liệu;
+- random initialization;
+- shuffled batches;
 - dropout;
-- thứ tự cộng dồn song song;
-- kernel CUDA không hoàn toàn xác định;
-- thời điểm truyền thông trong huấn luyện phân tán.
+- parallel reduction order;
+- nondeterministic CUDA kernels;
+- distributed communication timing.
 
-Đặt cùng seed không bảo đảm kết quả giống từng bit nếu kernel bên dưới không xác định.
+Setting seed không guarantee bitwise determinism nếu kernel nondeterministic.
 
-Để tái lập, cần ghi lại phiên bản phần mềm, phần cứng, seed, cấu hình, phiên bản dữ liệu và các tùy chọn xác định khi cần.
+Reproducibility cần record software versions, hardware, seeds, configs, dataset version và deterministic settings khi required.
 
-## Huấn luyện độ chính xác hỗn hợp
+## Mixed-precision training
 
-**Độ chính xác hỗn hợp (mixed precision)** dùng định dạng thấp hơn cho các phép toán cần thông lượng cao nhưng giữ một số đại lượng quan trọng ở độ chính xác cao hơn.
+Mixed precision dùng lower precision cho high-throughput operations nhưng giữ selected quantities ở higher precision.
 
-Một mẫu điển hình:
+Typical pattern:
 
 ```text
-Nhân ma trận FP16/BF16
+FP16/BF16 matrix multiply
         ↓
-Cộng dồn hoặc trọng số chính ở độ chính xác cao hơn khi cần
+higher-precision accumulation / master weights where needed
         ↓
-Cập nhật bộ tối ưu
+optimizer update
 ```
 
-Chi tiết chính xác phụ thuộc phần cứng và framework.
+Exact behavior phụ thuộc hardware/framework.
 
-Mục tiêu là giảm bộ nhớ và tăng thông lượng mà không phá hỏng tín hiệu huấn luyện.
+Goal là giảm memory + tăng throughput mà không destroy training signal.
 
-## Co giãn hàm mất mát
+## Loss scaling
 
-Với FP16, gradient rất nhỏ có thể hụt về 0. **Co giãn hàm mất mát (loss scaling)** nhân mất mát với hệ số `S`:
+Với FP16, small gradients có thể underflow. Loss scaling multiply loss bởi factor `S`:
 
 \[
 L'=SL
 \]
 
-Gradient trở thành:
+Gradient:
 
 \[
 \nabla L'=S\nabla L
 \]
 
-Sau lan truyền ngược, chia gradient cho `S` trước khi cập nhật tham số.
+sau backward, divide gradient by `S` trước optimizer update.
 
-Co giãn động điều chỉnh `S` khi phát hiện tràn số.
+Dynamic loss scaling adjust `S` khi detect overflow.
 
-BF16 có miền số mũ rộng hơn nên thường ít phụ thuộc vào loss scaling hơn FP16.
+BF16 exponent range rộng hơn nên often less dependent on loss scaling.
 
-## Gỡ lỗi gradient tràn và NaN
+## Gradient overflow và NaN debugging
 
-`NaN` có thể xuất phát từ:
+NaN có thể xuất phát từ:
 
-- chia cho 0;
-- lấy log của giá trị không hợp lệ hoặc bằng 0;
-- căn bậc hai giá trị âm do sai số số;
-- giá trị kích hoạt hoặc gradient bùng nổ;
-- phép mũ bị tràn;
-- thống kê chuẩn hóa không hợp lệ.
+- divide by zero;
+- log of invalid/zero value;
+- sqrt negative due to numerical noise;
+- exploding activation/gradient;
+- overflow exponential;
+- invalid normalization statistics.
 
-Một luồng gỡ lỗi hữu ích:
+Debug flow useful:
 
 ```text
-hàm mất mát còn hữu hạn?
+loss finite?
   ↓
-giá trị kích hoạt từng tầng còn hữu hạn?
+activations finite per layer?
   ↓
-gradient còn hữu hạn?
+gradients finite?
   ↓
-trạng thái optimizer còn hữu hạn?
+optimizer states finite?
   ↓
-kiểm tra tốc độ học / co giãn / dữ liệu đầu vào
+learning rate / scaling / input values
 ```
 
-Cơ chế phát hiện bất thường của framework giúp tìm phép toán đầu tiên sinh giá trị lỗi nhưng thường làm chậm chương trình.
+Framework anomaly detection giúp locate first invalid operation, nhưng có performance cost.
 
-## Chuẩn hóa ổn định
+## Stable normalization
 
-Công thức phương sai:
+Variance computation:
 
 \[
 \sigma^2=E[x^2]-E[x]^2
 \]
 
-có thể chịu triệt tiêu số. Triển khai thực tế dùng phép giảm ổn định và thêm epsilon:
+có thể suffer cancellation. Implementations dùng stable reductions và add epsilon:
 
 \[
 \hat x=\frac{x-\mu}{\sqrt{\sigma^2+\epsilon}}
 \]
 
-`ε` không chỉ tránh chia 0; nó còn ảnh hưởng hành vi khi phương sai rất nhỏ.
+`ε` không chỉ tránh divide by zero; nó ảnh hưởng behavior khi variance rất nhỏ.
 
-Các lớp chuẩn hóa khác nhau chọn các trục khác nhau, từ đó thay đổi cả thống kê lẫn hành vi số.
+Different normalization layers choose axes differently, affecting both statistics and numerical behavior.
 
-## Lượng tử hóa
+## Quantization
 
-**Lượng tử hóa (quantization)** ánh xạ giá trị liên tục hoặc dấu phẩy động thành các mức số nguyên rời rạc.
+Quantization map continuous/floating values thành discrete integer levels.
 
-Ví dụ lượng tử hóa affine đơn giản:
+Simple affine quantization:
 
 \[
 q=round(x/s)+z
 \]
 
-với thang `s` và điểm 0 `z`.
+với scale `s` và zero-point `z`.
 
-Khôi phục gần đúng:
+Dequantize approximate:
 
 \[
 x\approx s(q-z)
 \]
 
-Sai số lượng tử hóa là chênh lệch giữa giá trị gốc và giá trị tái tạo.
+Quantization error là difference giữa original và reconstructed value.
 
-## Lượng tử hóa đối xứng và bất đối xứng
+## Symmetric vs asymmetric quantization
 
-Lượng tử hóa đối xứng thường đặt điểm 0 gần 0 và miền giá trị đối xứng quanh 0. Nó đơn giản và có thể nhanh hơn trên một số phần cứng.
+Symmetric quantization thường set zero-point near 0 và range symmetric quanh zero. Simpler/faster trên some hardware.
 
-Lượng tử hóa bất đối xứng dùng điểm 0 để khớp tốt hơn với phân phối không đối xứng.
+Asymmetric quantization dùng zero-point để fit non-symmetric range tốt hơn.
 
-Lựa chọn phụ thuộc vào phân phối trọng số/kích hoạt và kernel phần cứng.
+Choice depends weights/activations distribution và hardware kernels.
 
-## Theo tensor và theo kênh
+## Per-tensor vs per-channel quantization
 
-**Lượng tử hóa theo tensor (per-tensor)** dùng một hệ số thang cho toàn tensor.
+**Per-tensor**: một scale cho toàn tensor.
 
-**Lượng tử hóa theo kênh (per-channel)** dùng thang riêng cho từng kênh, thường giảm sai số khi các kênh có miền giá trị khác nhau nhưng tăng độ phức tạp.
+**Per-channel**: mỗi output/input channel có scale riêng, thường giảm error khi ranges khác nhau nhưng metadata/implementation phức tạp hơn.
 
-Lượng tử hóa trọng số LLM còn thường dùng nhóm trọng số, tức mỗi nhóm có một hệ số thang riêng.
+LLM weight quantization còn dùng group-wise schemes: một scale per group of weights.
 
-## PTQ và QAT
+## Post-training quantization và quantization-aware training
 
-**Lượng tử hóa sau huấn luyện (Post-Training Quantization - PTQ)** lượng tử hóa mô hình đã huấn luyện, đôi khi dùng dữ liệu hiệu chuẩn.
+**Post-Training Quantization (PTQ)** quantize trained model sau training, dùng calibration data khi cần.
 
-**Huấn luyện nhận biết lượng tử hóa (Quantization-Aware Training - QAT)** mô phỏng tác động lượng tử hóa trong quá trình huấn luyện để mô hình thích nghi.
+**Quantization-Aware Training (QAT)** simulate quantization effects trong training để model thích nghi.
 
-PTQ đơn giản hơn; QAT có thể giữ chất lượng tốt hơn khi giảm bit mạnh nhưng cần thêm chi phí huấn luyện.
+PTQ dễ hơn; QAT có thể preserve quality tốt hơn ở aggressive low precision nhưng tốn training effort.
 
-## Lượng tử hóa LLM
+## LLM quantization
 
-Tham số LLM chiếm nhiều bộ nhớ. Xấp xỉ bộ nhớ chỉ tính trọng số thô:
+LLM parameters chiếm memory lớn. Approx memory chỉ tính raw weights:
 
 \[
 Memory\approx N_{params}\times bits/parameter
 \]
 
-Ví dụ mô hình 7B tham số:
+Ví dụ 7B parameters:
 
-- FP16 ≈ 14 GB trọng số thô;
+- FP16 ≈ 14 GB raw weights;
 - INT8 ≈ 7 GB;
-- 4-bit ≈ 3.5 GB.
+- 4-bit ≈ 3.5 GB;
 
-Bộ nhớ thực tế còn cần metadata, KV cache, kích hoạt, vùng làm việc và chi phí bộ cấp phát.
+Actual runtime cần thêm metadata, KV cache, activations, workspace và allocator overhead.
 
-Mức suy giảm chất lượng phụ thuộc thuật toán lượng tử hóa, cách xử lý ngoại lệ, kích thước nhóm và kiến trúc mô hình.
+Quality impact phụ thuộc quantization algorithm, outlier handling, group size và model architecture.
 
-## KV cache và độ chính xác
+## KV cache và precision
 
-Suy luận Transformer tự hồi quy lưu Key/Value của token trước trong **KV cache** để không phải tính lại toàn bộ chuỗi ở mỗi bước.
+Autoregressive Transformer inference cache Key/Value của previous tokens để không recompute toàn sequence.
 
-Bộ nhớ KV cache tăng xấp xỉ theo:
+KV cache memory grows roughly với:
 
 ```text
-kích thước lô × độ dài chuỗi × số tầng × số KV head × chiều head × số byte
+batch × sequence length × layers × KV heads × head dimension × bytes
 ```
 
-Ngữ cảnh dài có thể khiến KV cache chiếm phần lớn bộ nhớ. Lượng tử hóa KV cache hoặc dùng grouped-query/multi-query attention giúp giảm áp lực bộ nhớ nhưng có thể ảnh hưởng chất lượng.
+Long context có thể khiến KV cache dominate memory. Quantizing KV cache hoặc using grouped-query/multi-query attention giảm memory pressure, nhưng may affect quality.
 
-## Độ chính xác cộng dồn trong nhân ma trận
+## Accumulation precision trong matrix multiplication
 
-Đầu vào có thể là FP16/BF16 nhưng phép cộng dồn nhiều tích có thể dùng độ chính xác kiểu FP32 tùy phần cứng và kernel.
+Inputs có thể FP16/BF16 nhưng accumulation nhiều products ở FP32-like precision tùy hardware/kernel.
 
-Với tích vô hướng:
+Dot product:
 
 \[
 s=\sum_i a_ib_i
 \]
 
-nếu toàn bộ phép cộng dồn dùng độ chính xác thấp, sai số làm tròn tăng theo số hạng.
+nếu accumulate hoàn toàn low precision, rounding error tăng theo many terms.
 
-Thiết kế bộ tăng tốc thường tách định dạng đầu vào khỏi định dạng cộng dồn.
+Accelerator design thường separate input format và accumulation format.
 
-## Kernel hợp nhất
+## Fused kernels
 
-Một chuỗi như:
+Một expression như:
 
 ```text
 linear → bias → activation
 ```
 
-nếu thực hiện từng phép riêng sẽ phải ghi và đọc tensor trung gian từ bộ nhớ nhiều lần.
+nếu thực hiện từng operation riêng cần write/read intermediate tensors từ memory.
 
-**Hợp nhất kernel (kernel fusion)** gộp các phép toán để giảm lưu lượng bộ nhớ và đôi khi cải thiện hành vi số vì tránh làm tròn ở các trung gian.
+Kernel fusion combine operations để giảm memory traffic và sometimes improve numerical behavior by avoiding rounding between intermediates.
 
-FlashAttention là ví dụ sâu hơn: nó tổ chức lại phép tính attention để giảm truy cập HBM mà vẫn tính attention chính xác theo công thức, trong giới hạn số dấu phẩy động, mà không cần vật chất hóa toàn bộ ma trận attention theo cách ngây thơ.
+FlashAttention là example sâu hơn: restructure attention computation để reduce HBM memory traffic và compute exact attention up to floating-point behavior without materializing full attention matrix in naive way.
 
-Như vậy, việc viết lại thuật toán có thể đồng thời cải thiện cả hiệu suất phần cứng lẫn độ ổn định.
+Numerical algorithm và hardware efficiency có thể cùng được cải thiện bằng reformulation.
 
-## Băng thông bộ nhớ và FLOPs
+## Memory bandwidth vs FLOPs
 
-Hiệu năng AI không chỉ phụ thuộc số phép toán dấu phẩy động. Một phép tính có thể bị giới hạn bởi năng lực tính toán hoặc bởi băng thông bộ nhớ.
+AI performance không chỉ phụ thuộc số floating-point operations. Operation có thể **compute-bound** hoặc **memory-bound**.
 
-**Cường độ số học (arithmetic intensity)** xấp xỉ:
+Arithmetic intensity roughly:
 
 \[
 \frac{FLOPs}{bytes\ moved}
 \]
 
-Nhân ma trận lớn có cường độ số học cao và phù hợp GPU. Phép toán theo từng phần tử thường dễ bị giới hạn bởi bộ nhớ.
+Matrix multiplication lớn có high arithmetic intensity và phù hợp GPU. Elementwise operation có thể memory-bound.
 
-Đây là lý do vector hóa và hợp nhất kernel quan trọng, và cũng là lý do kiến trúc AI cùng tiến hóa với phần cứng.
+Đây là lý do vectorization/fusion quan trọng, và tại sao architecture AI co-evolve với hardware.
 
-## Tính toán thưa
+## Sparse computation
 
-Nếu tensor có nhiều số 0, biểu diễn thưa có thể tiết kiệm tính toán và bộ nhớ. Tuy nhiên tính thưa chỉ hữu ích nếu phần cứng và phần mềm thực sự khai thác được mẫu thưa đó.
+Nếu tensor có nhiều zeros, sparse representation có thể tiết kiệm compute/memory. Nhưng sparsity chỉ có lợi nếu hardware/software exploit pattern.
 
-Tính thưa ngẫu nhiên không cấu trúc có thể tốn chi phí lập chỉ mục cao; tính thưa có cấu trúc dễ tăng tốc hơn.
+Unstructured random sparsity có overhead indexing cao; structured sparsity dễ accelerate hơn.
 
-“90% trọng số bằng 0” không tự động nghĩa suy luận nhanh gấp 10 lần.
+“90% weights zero” không tự động nghĩa inference nhanh 10×.
 
-## Tách lỗi mô hình và lỗi số
+## Approximation error và model error
 
-Cần phân biệt:
+Cần tách:
 
 ```text
-sai số mô hình hóa
-+ sai số thống kê
-+ sai số tối ưu hóa
-+ sai số số học
+modeling error
++ statistical error
++ optimization error
++ numerical error
 ```
 
-Dự đoán sai có thể do lớp mô hình không phù hợp, dữ liệu thiếu, bộ tối ưu chưa hội tụ hoặc độ chính xác số không đủ.
+Model prediction sai có thể do model class không đủ, data thiếu, optimizer chưa converge hoặc numerical precision.
 
-Không nên đổ lỗi cho dấu phẩy động trước khi kiểm tra các nguồn lỗi lớn hơn, nhưng ở quy mô lớn vấn đề số học là một kiểu thất bại thực tế.
+Không nên blame floating point trước khi kiểm tra larger sources, nhưng ở scale lớn numerical issues là real failure mode.
 
-## Sigmoid và binary cross-entropy ổn định
+## Stable sigmoid và binary cross-entropy
 
-Nếu tính trực tiếp:
+Naively computing:
 
 \[
 \sigma(z)=1/(1+e^{-z})
@@ -485,66 +487,66 @@ rồi:
 -y\log\sigma(z)-(1-y)\log(1-\sigma(z))
 \]
 
-công thức có thể kém ổn định khi logit rất lớn hoặc rất nhỏ.
+có thể unstable cho extreme logits.
 
-Framework thường cung cấp hàm kiểu `binary_cross_entropy_with_logits` với công thức hợp nhất ổn định. Nguyên tắc thực hành là **ưu tiên primitive loss ổn định do framework cung cấp thay vì tự ghép qua xác suất nếu không cần**.
+Frameworks cung cấp `binary_cross_entropy_with_logits`-like fused stable formulation. Engineering rule: use numerically stable loss primitives từ framework thay vì manually compose probabilities nếu possible.
 
-## Tích lũy gradient
+## Gradient accumulation
 
-Nếu GPU không đủ bộ nhớ cho lô lớn, có thể tích lũy gradient qua nhiều lô siêu nhỏ:
+Nếu GPU memory không đủ batch lớn, có thể accumulate gradients qua micro-batches:
 
 ```text
 microbatch 1 → gradient
-microbatch 2 → cộng thêm gradient
+microbatch 2 → add gradient
 ...
 optimizer.step()
 ```
 
-Nếu chuẩn hóa và co giãn hàm mất mát đúng, lô hiệu dụng có thể gần tương đương lô lớn.
+Nếu loss scaling/normalization đúng, effective batch có thể approximate large batch.
 
-Tuy nhiên các lớp như BatchNorm hoặc trạng thái ngẫu nhiên có thể khiến ngữ nghĩa khác với một lô lớn thật sự.
+Nhưng BatchNorm-like layers và stochastic state có thể làm semantics khác true large batch.
 
-## Hành vi số trong huấn luyện phân tán
+## Distributed numerical behavior
 
-Huấn luyện phân tán tổng hợp gradient qua các phép như all-reduce. Thứ tự và độ chính xác truyền thông ảnh hưởng đến làm tròn.
+Distributed training aggregate gradients qua all-reduce. Order và precision communication ảnh hưởng rounding.
 
-Nén gradient, truyền thông độ chính xác thấp và sharding giúp tiết kiệm băng thông hoặc bộ nhớ nhưng tạo thêm đánh đổi.
+Gradient compression, reduced-precision communication và sharding tiết kiệm bandwidth/memory nhưng introduce trade-offs.
 
-Ở quy mô lớn, phân tích số và kỹ nghệ hệ thống phân tán hòa vào nhau.
+At scale, numerical analysis merge với distributed-systems engineering.
 
-## Mô hình tư duy (mental model)
+## Mental Model
 
 ```text
-Công thức số thực       ≠ phép tính dấu phẩy động
-Công thức ổn định       = cùng toán học, đường tính an toàn hơn
-Mức điều kiện           = bài toán nhạy với sai số đầu vào đến đâu
-Độ chính xác            = biểu diễn giá trị chi tiết đến mức nào
-Miền động               = biểu diễn được độ lớn/nhỏ tới đâu
-Độ chính xác hỗn hợp    = dùng định dạng phù hợp cho từng phép toán
-Lượng tử hóa            = đổi độ trung thực số lấy bộ nhớ/thông lượng
-Thiết kế kernel         = tổ chức lại phép tính theo phần cứng và độ ổn định
+Real-number formula ≠ floating-point computation
+Stable formula       = same mathematics, safer numerical path
+Conditioning         = problem sensitive đến input error mức nào
+Precision            = represent values chi tiết đến đâu
+Dynamic range        = represent magnitude lớn/nhỏ đến đâu
+Mixed precision      = dùng format phù hợp cho từng operation
+Quantization         = trade numerical fidelity for memory/throughput
+Kernel design        = reformulate computation for hardware + stability
 ```
 
-## Các hiểu lầm thường gặp
+## Common Misconceptions
 
 ### “FP16 chỉ kém chính xác hơn FP32 một chút”
 
-FP16 vừa có độ chính xác thấp hơn vừa có miền số mũ nhỏ hơn FP32 đáng kể, nên hành vi tràn/hụt số khác nhiều. BF16 lại có một kiểu đánh đổi khác.
+Nó có cả lower precision và much smaller exponent range than FP32; overflow/underflow behavior khác đáng kể. BF16 trade-off lại khác.
 
-### “Lượng tử hóa 4-bit làm mô hình nhỏ và nhanh đúng 4 lần”
+### “Quantization 4-bit làm model nhỏ chính xác 4× và nhanh 4×”
 
-Dung lượng trọng số thô có thể giảm gần 4 lần so với FP16, nhưng bộ nhớ chạy còn KV cache, metadata và vùng làm việc; tốc độ còn phụ thuộc kernel và phần cứng.
+Raw weight storage có thể giảm ~4× so với FP16, nhưng runtime memory còn KV cache/metadata và speed phụ thuộc kernel/hardware.
 
-### “NaN là lỗi framework”
+### “NaN là bug framework”
 
-Có thể là lỗi phần mềm, nhưng thường cũng có thể do hàm mục tiêu kém ổn định, tràn số, tốc độ học quá lớn, đầu vào không hợp lệ hoặc co giãn sai.
+Có thể là bug, nhưng thường cũng có thể do unstable objective, overflow, huge learning rate, invalid input hoặc scaling.
 
-### “Hai công thức tương đương về toán sẽ chạy giống nhau”
+### “Công thức mathematically equivalent sẽ chạy giống nhau”
 
-Không đúng trong dấu phẩy động. Softmax ổn định và log-sum-exp là hai ví dụ điển hình.
+Không trong floating point. Softmax và log-sum-exp là examples điển hình.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Tính toán số nối toán học với [Kiến trúc hệ thống AI](../00_foundations/04_ai_system_architecture.md), tối ưu hóa và hạ tầng tính toán. Các khái niệm này sẽ quay lại trong huấn luyện độ chính xác hỗn hợp, lượng tử hóa, kernel Transformer, huấn luyện phân tán và suy luận hiệu quả.
+Numerical Computation nối Mathematics với [AI System Architecture](../00_foundations/04_ai_system_architecture.md), Optimization và Compute Infrastructure. Những concepts này sẽ quay lại khi học mixed-precision training, quantization, Transformer kernels, distributed training và efficient inference.
 
-Khi mô hình bất ổn hoặc chi phí triển khai cao, hãy nhìn cả **phương trình, định dạng số, miền giá trị tensor, thứ tự cộng dồn, lưu lượng bộ nhớ và kernel phần cứng**, chứ không chỉ nhìn kiến trúc trên giấy.
+Khi model gặp instability hoặc deployment cost cao, hãy nhìn cả equation, precision format, tensor range, reduction order, memory movement và hardware kernel — không chỉ nhìn architecture trên paper.

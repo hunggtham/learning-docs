@@ -1,66 +1,68 @@
-# Word Embedding: từ từ rời rạc tới không gian ngữ nghĩa liên tục
+# Word Embeddings: từ discrete words tới continuous semantic geometry
 
-**Nhúng từ (Word Embedding / 단어 임베딩)** ánh xạ các đơn vị từ vựng rời rạc thành vector dày đặc. Trước embedding, biểu diễn one-hot coi mọi từ khác nhau đều không liên quan như nhau. Embedding cho phép mô hình học một không gian hình học trong đó những từ xuất hiện trong ngữ cảnh tương tự có vector liên quan.
+Word Embedding (단어 임베딩 / nhúng từ) maps discrete lexical units thành dense vectors. Trước embeddings, one-hot representation coi mọi words equally unrelated. Embeddings cho model học geometry nơi words xuất hiện trong similar contexts có vectors liên quan.
 
-Đây là bước chuyển quan trọng từ NLP ký hiệu thưa sang **biểu diễn phân tán (distributed representation)** và là nền trực tiếp của token embedding trong LLM.
+Đây là bước lịch sử quan trọng từ symbolic sparse NLP sang distributed representation, và là nền trực tiếp của token embeddings trong LLM.
 
-## Giới hạn của One-Hot
+## One-Hot Limitation
 
-Giả sử kích thước vocabulary là `V`. Từ thứ `i` được biểu diễn bằng:
+Vocabulary size `V`. Word `i` one-hot:
 
 \[
 e_i\in R^V
 \]
 
-với một phần tử bằng `1` và phần còn lại bằng `0`.
+với một `1`, còn lại `0`.
 
-Tích vô hướng giữa hai từ khác nhau luôn bằng `0`. Trong hình học này, `cat` không gần `dog` hơn `database`.
+Dot product giữa hai different words luôn zero. `cat` không gần `dog` hơn `database` về geometry.
 
-Embedding dày đặc:
+Dense embedding:
 
 \[
 v_w\in R^d,\quad d\ll V
 \]
 
-cho phép mô hình học độ tương đồng từ dữ liệu.
+cho phép learned similarities.
 
-## Giả thuyết phân bố
+## Distributional Hypothesis
 
-Một trực giác kinh điển của ngôn ngữ học phân bố là có thể hiểu một từ phần nào qua những từ thường xuất hiện xung quanh nó.
+> “You shall know a word by the company it keeps.”
 
-Các phương pháp embedding biến trực giác này thành mục tiêu dựa trên đồng xuất hiện hoặc dự đoán.
+Words xuất hiện trong similar contexts thường có related meaning/function.
 
-Tuy nhiên **tương đồng phân bố (distributional similarity)** không đồng nghĩa hai từ có cùng nghĩa. Từ trái nghĩa như `hot` và `cold` thường xuất hiện trong các ngữ cảnh tương tự nên vector của chúng vẫn có thể gần nhau.
+Embedding methods operationalize principle này từ co-occurrence/prediction.
+
+Nhưng distributional similarity không equal semantic identity: antonyms như `hot` và `cold` xuất hiện contexts giống nhau nên vectors có thể gần.
 
 ## Word2Vec: Skip-Gram
 
-Với từ trung tâm `w`, Skip-Gram dự đoán các từ ngữ cảnh `c`:
+Given center word `w`, predict context words `c`:
 
 \[
 P(c\mid w)=\frac{\exp(v_c'^Tv_w)}{\sum_{j\in V}\exp(v_j'^Tv_w)}
 \]
 
-Softmax trên toàn vocabulary rất tốn chi phí khi `V` lớn.
+Full softmax expensive vocabulary lớn.
 
-Mục tiêu này buộc vector từ trung tâm chứa thông tin hữu ích để dự đoán những từ thường xuất hiện gần nó.
+Skip-gram learns word vector useful để predict neighbors.
 
 ## CBOW
 
-**Continuous Bag-of-Words (CBOW)** đi theo hướng ngược lại: dùng các từ xung quanh để dự đoán từ trung tâm.
+Continuous Bag-of-Words predicts center word from surrounding context embeddings.
+
+Conceptually:
 
 ```text
-các từ ngữ cảnh
-→ tổng hợp embedding
-→ dự đoán từ trung tâm
+context words → aggregate embeddings → predict center
 ```
 
-CBOW thường nhanh hơn; Skip-Gram từng cho biểu diễn tốt hơn với một số từ hiếm trong các thiết lập cổ điển.
+CBOW often faster; Skip-Gram historically strong rare-word representations.
 
 ## Negative Sampling
 
-Thay vì tính softmax trên toàn vocabulary, mô hình phân biệt cặp `(word, context)` thật với một số cặp âm được lấy mẫu.
+Thay full vocabulary softmax, train binary discrimination real `(word,context)` vs sampled negatives.
 
-Mục tiêu gần dạng:
+Objective roughly:
 
 \[
 \log\sigma(v_c'^Tv_w)
@@ -68,27 +70,29 @@ Mục tiêu gần dạng:
 \sum_{k=1}^{K}\log\sigma(-v_{n_k}'^Tv_w)
 \]
 
-Điều này giảm chi phí tính toán rất mạnh.
+This drastically reduces compute.
 
-Phân bố dùng để lấy negative sample cũng ảnh hưởng hình học cuối cùng của embedding; đây không chỉ là một chi tiết triển khai.
+Negative sampling is not merely approximation detail; negative distribution influences learned geometry.
 
-## Liên hệ với PMI
+## PMI Connection
 
-Skip-Gram với negative sampling có liên hệ lý thuyết với việc phân rã một ma trận **Pointwise Mutual Information (PMI)** đã dịch chuyển.
+Skip-gram negative sampling has theoretical connection to factorizing shifted Pointwise Mutual Information matrix.
+
+PMI:
 
 \[
 PMI(w,c)=\log\frac{P(w,c)}{P(w)P(c)}
 \]
 
-PMI đo mức một cặp xuất hiện cùng nhau nhiều hơn bao nhiêu so với trường hợp hai biến độc lập.
+measures how much more often pair co-occurs than independence expectation.
 
-Liên hệ này cho thấy embedding dự đoán neural và các phương pháp ma trận đếm cổ điển không hoàn toàn tách biệt về bản chất.
+This links predictive embeddings to classical count-based matrix factorization.
 
 ## GloVe
 
-**GloVe (Global Vectors)** sử dụng trực tiếp thống kê đồng xuất hiện toàn cục. Mô hình học vector sao cho tích vô hướng liên hệ với log của số đếm hoặc tỷ lệ đồng xuất hiện.
+GloVe (Global Vectors) directly uses global co-occurrence counts. It learns vectors such that dot products relate log co-occurrence ratios/statistics.
 
-Word2Vec nhấn mạnh mục tiêu dự đoán trong ngữ cảnh cục bộ; GloVe nhấn mạnh cấu trúc đếm toàn cục. Cả hai đều tạo **embedding tĩnh (static embedding)** cho mỗi từ.
+Word2Vec emphasizes local predictive objective; GloVe global count structure. Both produce static word vectors.
 
 ## Cosine Similarity
 
@@ -96,119 +100,123 @@ Word2Vec nhấn mạnh mục tiêu dự đoán trong ngữ cảnh cục bộ; Gl
 cos(a,b)=\frac{a^Tb}{\|a\|\|b\|}
 \]
 
-Cosine thường được dùng vì tập trung vào hướng vector thay vì độ lớn. Tuy nhiên metric phù hợp còn phụ thuộc mục tiêu huấn luyện; các mô hình embedding hiện đại có thể được tối ưu trực tiếp cho cosine hoặc dot product.
+often used because direction captures relation independent magnitude.
 
-## Phép tương tự bằng vector
+But whether cosine is best depends training objective. Modern embedding models may be optimized specifically for dot product/cosine.
 
-Ví dụ nổi tiếng:
+## Vector Analogies
+
+Famous:
 
 \[
 king-man+woman\approx queen
 \]
 
-cho thấy một số quan hệ có thể xuất hiện xấp xỉ dưới dạng hướng tuyến tính trong không gian embedding.
+shows some relations encoded as approximately linear directions.
 
-Không nên khái quát quá mức. Kết quả phụ thuộc corpus, tiền xử lý và phương pháp học; nhiều quan hệ ngữ nghĩa không thể biểu diễn bằng một offset vector toàn cục đơn giản.
+Không nên overgeneralize: analogy behavior varies corpus/preprocessing and many semantic relations are not simple global vector offsets.
 
-## Giới hạn của Static Embedding: đa nghĩa
+## Static Embedding Limitation: Polysemy
 
-`bank` chỉ có một vector Word2Vec dù được dùng trong:
+`bank` has one Word2Vec vector regardless context:
 
 ```text
 bank loan
 river bank
 ```
 
-Vector tĩnh phải trộn nhiều nghĩa vào cùng một vị trí.
+Static vector averages senses.
 
-**Embedding theo ngữ cảnh (contextual embedding)** giải quyết phần lớn vấn đề này bằng cách tính biểu diễn phụ thuộc toàn bộ câu hoặc đoạn xung quanh.
+Contextual embeddings solve by compute representation conditioned on sentence.
 
-## Subword Embedding với fastText
+## Subword Embeddings: fastText
 
-fastText biểu diễn từ từ các n-gram ký tự, giúp xử lý từ hiếm và ngôn ngữ có hình thái phong phú.
+fastText represents word using character n-grams, helping rare/morphological words.
 
-Những từ tiếng Hàn, tiếng Việt hoặc các biến thể chia sẻ một phần cấu trúc có thể dùng chung các mảnh subword.
+Example Korean/Vietnamese/inflected words can share subword components.
 
-Với từ chưa từng xuất hiện nguyên vẹn, fastText vẫn có thể xây vector từ các n-gram đã biết.
+It can form vectors for unseen words from n-grams, unlike fixed whole-word lookup.
 
-## Embedding Matrix trong mạng nơ-ron
+## Embedding Matrix in Neural Networks
 
-Một embedding layer học được có ma trận:
+Learnable embedding layer:
 
 \[
 E\in R^{V\times d}
 \]
 
-Token ID chọn một hàng:
+Token ID selects row:
 
 \[
 x_t=E[token_t]
 \]
 
-Về mặt toán học, thao tác này tương đương nhân one-hot:
+This is mathematically equivalent one-hot multiply:
 
 \[
 e_t^TE
 \]
 
-nhưng lookup hiệu quả hơn nhiều.
+but lookup efficient.
 
-Trong huấn luyện, gradient cập nhật các hàng tương ứng với token xuất hiện và có thể tương tác với các cơ chế chia sẻ trọng số khác.
+During training, gradients update rows corresponding tokens (and through tied/shared mechanisms).
 
-## Ảnh hưởng của tần suất
+## Frequency Effects
 
-Từ phổ biến nhận nhiều cập nhật hơn từ hiếm. Độ lớn và hướng embedding có thể tương quan với tần suất.
+Frequent words get many updates; rare words few. Embedding norms/directions can correlate frequency.
 
-Word2Vec thường giảm lấy mẫu các từ cực phổ biến để chúng không chi phối ngữ cảnh.
+Subsampling very frequent words in Word2Vec reduces dominance of stopword-like contexts.
 
-Thiên lệch xã hội và thống kê trong corpus cũng đi vào hình học embedding, ví dụ liên hệ giữa giới tính và nghề nghiệp.
+Bias in corpus also appears geometry: gender/profession/social associations can be encoded.
 
-## Giới hạn của Debiasing đơn giản
+## Debiasing Limitations
 
-Loại bỏ một “hướng giới tính” có thể giảm một chỉ số liên hệ cụ thể nhưng không xóa toàn bộ thiên lệch phân tán trong không gian biểu diễn.
+Removing one “gender direction” can reduce a measured association but not erase distributed social bias. Bias is multi-dimensional and downstream behavior depends model/context.
 
-Fairness của embedding cần được đánh giá qua nhiều tác vụ và hành vi downstream chứ không thể giải quyết chỉ bằng một phép chiếu vector.
+Embedding fairness requires evaluation, not simple projection fix.
 
-## Embedding cho tài liệu
+## Embeddings for Documents
 
-Lấy trung bình các word embedding là cách đơn giản để biểu diễn tài liệu nhưng làm mất thứ tự và ngữ cảnh.
+Average word vectors is simple document representation but loses order/context.
 
-Doc2Vec từng mở rộng biểu diễn phân tán lên tài liệu. Hiện nay sentence/document encoder thường dùng Transformer theo ngữ cảnh, pooling và huấn luyện contrastive.
+Doc2Vec historically extended distributed representation. Modern sentence/document encoders use contextual Transformers + pooling/contrastive training.
 
-## Embedding và tìm kiếm
+## Embeddings and Search
 
-Nếu query và document được biểu diễn trong cùng không gian:
+If query/document represented in same space:
 
 \[
 score(q,d)=q^Td
 \]
 
-nearest-neighbor search có thể tìm tài liệu gần về ngữ nghĩa.
+nearest-neighbor search retrieves semantically related docs.
 
-Word embedding tĩnh thường không đủ cho truy xuất hiện đại; sentence embedding được huấn luyện trực tiếp ở cấp query–document phù hợp hơn. Tuy nhiên nguyên lý hình học bắt đầu từ đây.
+Static word embeddings alone usually insufficient modern retrieval; sentence embedding models train at query-document level.
 
-## Mô hình tư duy
+Still, core geometry principle begins here.
 
-> Embedding biến “danh tính của ký hiệu” thành “vị trí và hướng trong một không gian quan hệ được học”. Hình học chỉ có ý nghĩa vì dữ liệu và mục tiêu huấn luyện đã định hình nó.
+## Mental Model
 
-## Những hiểu lầm thường gặp
+> Embedding turns “identity of symbol” into “location/direction in learned relation space”. Geometry gets meaning only because training objective + data shape it.
 
-### “Mỗi chiều embedding là một thuộc tính ngữ nghĩa dễ đọc”
+## Common Misconceptions
 
-Thông thường không. Thông tin được phân tán và hệ trục có thể thay đổi qua nhiều phép biến đổi mà vẫn giữ quan hệ tương đối.
+### “Each dimension corresponds a human-readable semantic attribute”
 
-### “Cosine gần 1 nghĩa hai từ đồng nghĩa”
+Usually representation distributed; axes arbitrary up to transformations.
 
-Không. Nó chỉ nói vector gần cùng hướng trong hình học đã học; từ trái nghĩa hoặc từ có ngữ cảnh sử dụng tương tự cũng có thể gần nhau.
+### “Cosine near 1 means synonyms”
 
-### “Word2Vec hiểu ngữ cảnh cho từng lần dùng từ”
+It means vectors aligned under learned geometry; antonyms/contextually similar words can also align.
 
-Không. Nó dùng ngữ cảnh khi huấn luyện nhưng cuối cùng mỗi từ vẫn có một vector tĩnh.
+### “Word2Vec understands context”
 
-### “Embedding là sự thật ngữ nghĩa khách quan”
+Training uses context, but final word vector is static across usages.
 
-Không. Nó phản ánh corpus, mục tiêu huấn luyện, thiên lệch và phần thông tin bị thiếu.
+### “Embeddings are objective semantic truth”
 
-## Liên kết kiến thức
+They encode corpus/objective biases and omissions.
 
-Word Embedding nối [Học biểu diễn](../05_neural_networks/08_representation_learning.md), [Đại số tuyến tính](../01_mathematical_foundations/01_linear_algebra_for_ai.md) và dẫn tới [Contextual Embeddings](./04_contextual_embeddings.md).
+## Knowledge Connection
+
+Word embeddings connect [Representation Learning](../05_neural_networks/08_representation_learning.md), [Linear Algebra](../01_mathematical_foundations/01_linear_algebra_for_ai.md), and lead to [Contextual Embeddings](./04_contextual_embeddings.md).

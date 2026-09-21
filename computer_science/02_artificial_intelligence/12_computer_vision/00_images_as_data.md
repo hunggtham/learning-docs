@@ -1,16 +1,16 @@
-# Ảnh như Dữ liệu
+# Images as Data
 
-Computer Vision bắt đầu từ một sự thật đơn giản: máy không “nhìn thấy vật thể” như con người; nó nhận **các con số được sắp xếp trên một lưới (grid)**. Một ảnh RGB thường được biểu diễn thành tensor:
+Computer Vision bắt đầu từ một fact đơn giản: máy không “nhìn thấy vật thể” như con người; nó nhận **numbers arranged on a grid**. Một ảnh RGB thường được biểu diễn thành tensor:
 
 \[
 X\in\mathbb{R}^{H\times W\times 3}
 \]
 
-Mỗi pixel chứa cường độ (intensity) cho ba kênh Red, Green và Blue.
+mỗi pixel chứa intensity cho Red, Green, Blue.
 
-## Từ Scene thật tới Pixel
+## Từ scene thật tới pixels
 
-Camera biến photon thành tín hiệu điện, sau đó sampling và quantization tạo thành pixel. Vì vậy image không phải bản thân thế giới; nó là một phép đo (measurement) chịu ảnh hưởng của:
+Camera pipeline biến photons thành electrical signal, rồi sampling/quantization thành pixels. Vì vậy image không phải world itself; nó là measurement chịu ảnh hưởng bởi:
 
 - sensor;
 - exposure;
@@ -21,155 +21,144 @@ Camera biến photon thành tín hiệu điện, sau đó sampling và quantizat
 - viewpoint;
 - lighting.
 
-Computer Vision phải suy ra semantic structure từ một measurement không hoàn hảo.
+Computer Vision phải infer semantic structure từ measurement không hoàn hảo.
 
-## Hệ tọa độ
+## Coordinate System
 
-Image coordinate thường dùng:
+Image coordinate thường:
 
 ```text
-gốc tọa độ: góc trên bên trái
-x: cột → tăng sang phải
-y: hàng → tăng xuống dưới
+origin: top-left
+x: column → right
+y: row → down
 ```
 
-Bounding box có thể dùng `(x_min,y_min,x_max,y_max)` hoặc `(center_x, center_y, width, height)`. Format mismatch là nguồn bug rất phổ biến trong vision pipeline.
+Bounding box có thể dùng `(x_min,y_min,x_max,y_max)` hoặc center-width-height. Format mismatch là source bug phổ biến.
 
-## Channel
+## Channels
 
-RGB có ba channel; grayscale thường có một channel. Các modality khác có thể gồm:
+RGB dùng 3 channels; grayscale 1. Other modalities:
 
 - depth;
 - infrared;
 - multispectral;
-- medical CT/MRI volume;
+- medical CT/MRI volumes;
 - alpha transparency.
 
-Representation phải phù hợp với sensing process tạo ra dữ liệu.
+Representation phải match sensing process.
 
 ## Resolution và Information
 
-Resize ảnh nhỏ hơn giúp giảm compute nhưng có thể làm mất vật thể nhỏ, ký tự hoặc edge detail.
+Resize ảnh nhỏ hơn giảm compute nhưng có thể mất tiny objects/text. Resize lớn hơn không tạo information mới.
 
-Resize ảnh lớn hơn không tự tạo thêm information mới; nó chỉ nội suy từ pixel hiện có.
-
-Số pixel tăng theo bình phương spatial dimension. Nếu tăng gấp đôi cả width và height, số pixel tăng khoảng bốn lần.
+Pixel count tăng quadratically theo spatial dimension. Doubling width/height → ~4× pixels.
 
 ## Normalization
 
-Neural model thường chuyển pixel integer `[0,255]` thành float, sau đó normalize:
+Neural models thường transform pixel integers `[0,255]` thành floats, sau đó normalize:
 
 \[
 x'=(x-\mu)/\sigma
 \]
 
-Normalization giúp optimization ổn định hơn và đưa scale đầu vào về distribution phù hợp với model training. Nó không tự làm thay đổi semantic content lý tưởng của image.
+Normalization ảnh hưởng optimization, không thay semantic content lý tưởng.
 
-## Color Space
+## Color Spaces
 
-RGB thuận tiện cho display và nhiều sensor, nhưng không phải representation duy nhất.
+RGB thuận tiện display/sensors nhưng không phải representation duy nhất. HSV/HSL tách hue/saturation/lightness; YCbCr tách luminance/chrominance và phổ biến trong compression/video.
 
-- HSV/HSL tách hue, saturation và lightness;
-- YCbCr tách luminance và chrominance, phổ biến trong compression/video.
+Choice color space có thể simplify classical algorithms.
 
-Chọn color space phù hợp có thể làm một số classical image-processing algorithm đơn giản hơn.
+## Image as Signal
 
-## Image như một Signal
+Image là 2D discrete signal. Neighborhood structure có ý nghĩa: adjacent pixels thường correlated.
 
-Image có thể xem là một **tín hiệu rời rạc hai chiều (2D discrete signal)**. Neighborhood structure có ý nghĩa: pixel gần nhau thường có correlation cao hơn pixel ở xa.
-
-Đây là một lý do quan trọng tạo nên inductive bias của convolution: local pattern và translation structure được tận dụng trực tiếp.
+Điều này giải thích inductive bias của convolution: local patterns và translation structure.
 
 ## Spatial Frequency
 
-Vùng mượt chủ yếu chứa low-frequency structure; edge, texture và chi tiết nhỏ chứa nhiều high-frequency component.
-
-Góc nhìn Fourier giúp hiểu blur, sharpening, denoising và compression.
+Smooth regions chứa low-frequency structure; edges/textures có high-frequency components. Fourier perspective giúp hiểu blur, sharpening và compression.
 
 ## Sampling và Aliasing
 
-Nếu downsample quá mạnh mà không low-pass filter trước, high-frequency detail có thể bị “gập” thành pattern giả — hiện tượng **aliasing**.
+Nếu downsample quá mạnh mà không low-pass filter, high-frequency details fold thành artifacts — **aliasing**.
 
-Trực giác từ Nyquist: sampling rate cần đủ cao so với frequency của signal muốn giữ lại.
+Nyquist intuition: sampling rate phải đủ cao relative to signal frequency.
 
 ## Noise
 
-Sensor noise, compression artifact, motion blur hoặc low-light noise làm observation khác với scene thật.
-
-Vision model đáng tin cần training data và augmentation phản ánh điều kiện deployment thực tế, thay vì chỉ ảnh benchmark sạch.
+Sensor noise, compression artifacts và motion blur làm observation khác true scene. Robust vision model cần data/augmentation reflect deployment conditions.
 
 ## Geometry
 
-Perspective projection chiếu world 3D lên image 2D. Cùng một object có apparent size và shape khác nhau khi viewpoint thay đổi.
+Perspective projection map 3D world onto 2D image. Same object thay đổi apparent size/shape theo viewpoint. Vision vì vậy phải deal invariance/equivariance.
 
-Computer Vision vì vậy phải học hoặc xây được các dạng **invariance** và **equivariance** phù hợp với geometry của task.
+## Annotation Types
 
-## Kiểu Annotation
-
-Các task khác nhau cần loại label khác nhau:
+Tasks khác nhau cần labels khác:
 
 ```text
 classification → image label
-object detection → box + class
-segmentation → pixel mask
-keypoint detection → landmark coordinate
+object detection → boxes + classes
+segmentation → pixel masks
+keypoints → landmark coordinates
 captioning → text
 ```
 
-Label representation quyết định mức chi tiết supervision và annotation cost.
+Label representation quyết định supervision granularity và annotation cost.
 
 ## Data Augmentation
 
-Các transformation như crop, flip, color jitter hoặc rotation tạo sample bổ sung và encode assumption về invariance mong muốn.
+Transformations như crop, flip, color jitter, rotation tạo additional samples và encode expected invariances.
 
-Tuy nhiên augmentation phải giữ nguyên semantics. Horizontal flip có thể làm đổi ý nghĩa của traffic sign, text hoặc medical laterality.
+Nhưng augmentation phải semantics-preserving. Horizontal flip của traffic sign/text hoặc medical laterality có thể đổi meaning.
 
 ## Train–Deployment Gap
 
-Vision đặc biệt nhạy với domain shift, ví dụ:
+Vision rất sensitive domain shift:
 
-- indoor so với outdoor;
-- ban ngày so với ban đêm;
+- indoor vs outdoor;
+- daytime vs night;
 - camera model khác;
-- road marking khác quốc gia;
-- synthetic data so với real data.
+- country/road marking khác;
+- synthetic vs real.
 
-Metric cao trên benchmark không tự bảo đảm chất lượng deployment.
+Metric trên benchmark không tự đảm bảo deployment quality.
 
-## Image Token và Patch
+## Image Tokens và Patches
 
-Vision Transformer chia image thành các patch rồi flatten và project mỗi patch thành vector giống token.
+Vision Transformer chia image thành patches rồi flatten/project thành token-like vectors. Điều này nối image representation với Transformer sequence processing.
 
-Nếu patch size là `P×P`, số patch xấp xỉ:
+Nếu patch size `P×P`, số patches roughly:
 
 \[
 N=\frac{HW}{P^2}
 \]
 
-Patch nhỏ hơn giữ chi tiết tốt hơn nhưng tạo nhiều token hơn, làm attention cost tăng.
+Smaller patch → more tokens → better fine detail but higher attention cost.
 
-## Mô hình tư duy
+## Mental Model
 
-> **Computer Vision là quá trình suy luận từ measurement dạng pixel về hidden structure của thế giới.**
+> **Computer Vision là inference từ measurement pixels về hidden structure của world.**
 
-Một pixel không “là” vật thể. Semantic object xuất hiện từ spatial pattern, context và learned representation.
+Một pixel không “là” vật thể; semantic object emerges từ spatial patterns, context và learned representations.
 
-## Những nhầm lẫn thường gặp
+## Common Misconceptions
 
-### “Resolution cao hơn luôn tốt hơn”
+### “Higher resolution luôn tốt hơn”
 
-Không. Compute và memory tăng nhanh, trong khi noise cũng có thể tăng. Resolution hữu ích phụ thuộc task.
+Compute/memory increase mạnh và noise cũng có thể tăng; task determines useful resolution.
 
-### “Image augmentation chỉ để tăng số lượng dữ liệu”
+### “Image augmentation chỉ để tăng dataset size”
 
-Không. Nó còn encode invariance assumption mà ta muốn model học.
+Nó còn encode invariance assumptions.
 
-### “Pixel value là sự thật tuyệt đối”
+### “Pixel value là objective reality”
 
-Không. Camera processing, lighting và sensor đều ảnh hưởng measurement.
+Camera processing và lighting ảnh hưởng measurement.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Image representation nối Signal Processing, Linear Algebra, Geometry và Deep Learning. Chapter tiếp theo giới thiệu classical image-processing operation để hiểu cấu trúc ảnh trước khi đi sâu vào learned model.
+Images connect Signal Processing, Linear Algebra, Geometry và Deep Learning. Chapter tiếp theo giới thiệu classical image-processing operations giúp hiểu structure trước learned models.
 
-Xem tiếp: [Nền tảng Image Processing](./01_image_processing_foundations.md).
+Xem tiếp: [Image Processing Foundations](./01_image_processing_foundations.md).

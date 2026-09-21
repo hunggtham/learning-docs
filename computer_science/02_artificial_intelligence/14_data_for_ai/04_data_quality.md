@@ -1,272 +1,240 @@
-# Chất lượng Dữ liệu
+# Data Quality
 
-**Chất lượng dữ liệu (data quality / 데이터 품질)** không phải một điểm số duy nhất. Một dataset có thể sạch về format nhưng vẫn kém vì coverage thiếu, label sai, timestamp đã stale hoặc distribution lệch xa môi trường deployment.
+**Data quality (데이터 품질 / chất lượng dữ liệu)** không phải một score duy nhất. Dataset có thể sạch về format nhưng vẫn kém vì coverage thiếu, labels sai, timestamps stale hoặc distribution lệch deployment.
 
-Một framework thực dụng nên nhìn qua nhiều chiều:
+Một framework thực dụng gồm nhiều dimensions:
 
 ```text
-độ đúng — correctness
-độ đầy đủ — completeness
-độ nhất quán — consistency
-độ duy nhất — uniqueness
-độ mới — freshness
-độ phủ — coverage
-mức đại diện — representativeness
-chất lượng label
+correctness
+completeness
+consistency
+uniqueness
+freshness
+coverage
+representativeness
+label quality
 lineage
-khả năng sẵn sàng — availability
+availability
 ```
 
-## Độ đúng
+## Correctness
 
-Giá trị có phản ánh hiện tượng thật không? `country=KR` có thể hoàn toàn hợp schema nhưng vẫn sai với user cụ thể.
+Value có phản ánh phenomenon thật không? `country=KR` có thể syntactically valid nhưng wrong for user.
 
-Correctness thường cần reference source, audit domain hoặc đối chiếu với nguồn authoritative.
+Correctness thường cần reference source hoặc domain audit.
 
-## Độ đầy đủ
+## Completeness
 
-Bao nhiêu thông tin bắt buộc bị missing? Tuy nhiên completeness 100% cũng không bảo đảm usefulness; field có thể đã được điền bằng default value vô nghĩa chỉ để không còn null.
+Bao nhiêu required information bị missing? Nhưng 100% completeness không guarantee utility; field có thể filled bằng default meaningless value.
 
-Vì vậy completeness phải được đánh giá cùng semantics của giá trị.
+## Consistency
 
-## Độ nhất quán
-
-Cùng một concept có được biểu diễn nhất quán giữa các source và theo thời gian không?
+Cùng concept có thống nhất across sources/time không?
 
 ```text
-currency = KRW ở table A
-currency = USD ở table B
-nhưng field name giống nhau
+currency KRW in table A
+USD in table B
+same field name
 ```
 
-Semantic inconsistency thường nguy hiểm hơn schema mismatch rõ ràng vì pipeline vẫn chạy nhưng ý nghĩa dữ liệu đã lệch.
+Semantic inconsistency nguy hiểm hơn schema mismatch rõ ràng.
 
-## Độ duy nhất
+## Uniqueness
 
-Duplicate example làm thay đổi effective weighting của dataset.
+Duplicate examples alter effective weighting. Need entity/event-specific duplicate definition.
 
-Cần định nghĩa duplicate theo entity hoặc event chứ không chỉ exact row equality. Hai row khác ID vẫn có thể là cùng một real-world event.
+## Freshness
 
-## Độ mới
+Feature/data có update đủ nhanh cho use case? User profile từ 6 tháng trước có thể valid format nhưng stale.
 
-Feature hoặc source có được cập nhật đủ nhanh cho use case không? User profile từ sáu tháng trước có thể hợp format nhưng đã stale với decision hiện tại.
+Define freshness SLA per feature/source.
 
-Nên định nghĩa **freshness SLA** riêng cho từng feature hoặc source thay vì một ngưỡng chung cho toàn dataset.
+## Coverage
 
-## Độ phủ
+Dataset có chứa cases system sẽ gặp không? Coverage phải analyze theo meaningful dimensions:
 
-Dataset có chứa những case mà hệ thống thật sự sẽ gặp không? Coverage nên được phân tích theo các chiều có ý nghĩa như:
-
-- khu vực địa lý;
-- thiết bị;
-- ngôn ngữ;
+- geography;
+- device;
+- language;
 - class;
-- thời gian;
+- time;
 - sensor;
 - subgroup;
-- edge case.
+- edge cases.
 
-Aggregate row count lớn không chứng minh coverage tốt.
+## Representativeness
 
-## Mức độ Đại diện
+Training distribution có tương đồng target deployment distribution? Oversampling có thể intentional, nhưng evaluation/calibration phải account.
 
-Training distribution có gần với target deployment distribution không?
+## Label Quality
 
-Oversampling một class hiếm có thể là lựa chọn có chủ đích để giúp học tốt hơn, nhưng calibration và evaluation phải tính tới việc class prior ở production khác training.
+Metrics:
 
-## Chất lượng Label
-
-Một số metric hữu ích gồm:
-
-- mức disagreement giữa annotator;
-- tỷ lệ cần adjudication;
-- accuracy trên known-answer task;
+- disagreement;
+- adjudication rate;
+- known-answer accuracy;
 - class-specific noise;
-- label latency và maturity.
+- label latency/maturity.
 
-Chất lượng label phải được theo dõi như một thành phần của data quality, không phải giả định luôn đúng.
+## Lineage Quality
 
-## Chất lượng Lineage
+Nếu không biết data đến từ đâu và transform nào, debug impossible dù values nhìn hợp lý.
 
-Nếu không biết dữ liệu đến từ đâu, qua transformation nào và version nào, việc debug gần như không thể dù các value nhìn có vẻ hợp lý.
+## Dataset Health Dashboard
 
-Lineage tốt cho phép truy ngược:
-
-```text
-model prediction
-→ feature version
-→ dataset snapshot
-→ transform job
-→ source record
-```
-
-## Dashboard về Sức khỏe Dataset
-
-Nên monitor xu hướng theo thời gian chứ không chỉ chạy check một lần:
+Monitor trends, not just one-time checks:
 
 ```text
-row / event count
+row/event count
 null rate
-số entity duy nhất
+unique entities
 class prior
-feature quantile
+feature quantiles
 category cardinality
 freshness
 label delay
 join failure
 ```
 
-Điều quan trọng là phát hiện biến động bất thường giữa các dataset version hoặc giữa training và production.
+## Distribution Tests
 
-## Kiểm tra Distribution
-
-Có thể so sánh reference distribution với dữ liệu hiện tại bằng các metric thống kê như:
+Compare training/reference vs current data using statistical distances:
 
 - PSI;
 - KS statistic;
 - Wasserstein distance;
-- Jensen–Shannon divergence;
-- kiểm định dạng chi-square cho category.
+- Jensen-Shannon divergence;
+- categorical chi-square-like checks.
 
-Không có một threshold universal. Với dataset rất lớn, khác biệt thống kê cực nhỏ cũng có thể trở nên “significant” dù không có business impact. Cần nhìn cả effect size và ảnh hưởng tới decision.
+No threshold universal; statistical significance can trigger on huge datasets for tiny irrelevant differences. Need business effect size.
 
-## Schema Drift và Semantic Drift
+## Schema Drift vs Semantic Drift
 
-**Schema drift** xảy ra khi field name, type hoặc structure thay đổi.
+Schema drift: field type/name changes.
 
-**Semantic drift** xảy ra khi schema vẫn giống nhưng ý nghĩa đổi. Ví dụ `status=1` trước đây nghĩa là `active`, nhưng sau một phiên bản service lại nghĩa là `verified`.
+Semantic drift: schema same but meaning changes. Example `status=1` used to mean active, new service version means verified.
 
-Semantic drift khó phát hiện tự động hơn nhiều, vì vậy semantic contract và versioning rất quan trọng.
+Semantic drift harder to detect automatically; versioned contracts help.
 
 ## Feature Drift
 
-Distribution của input thay đổi:
+Input distribution changes:
 
 \[
 P_t(X) \neq P_{ref}(X)
 \]
 
-Không phải mọi feature drift đều làm model kém đi. Cần liên hệ drift với performance hoặc decision quality thay vì chỉ cảnh báo vì distribution khác.
+Not every drift harms model. Need relate drift to performance/decision.
 
-## Label Drift và Concept Drift
+## Label / Concept Drift
 
-Quan hệ giữa input và target có thể thay đổi:
+Relationship changes:
 
 \[
-P_t(Y\mid X) \neq P_{ref}(Y\mid X)
+P_t(Y|X) \neq P_{ref}(Y|X)
 \]
 
-Đây thường là dạng drift nguy hiểm hơn, nhưng label thực tế hay đến trễ nên việc phát hiện cũng khó hơn.
+This is more directly harmful but labels often delayed, so detection harder.
 
-## Data Slice
+## Data Slices
 
-Metric aggregate dễ che lỗi theo subgroup. Nên định nghĩa các slice quan trọng như:
-
-```text
-user mới
-ngôn ngữ hiếm
-camera model cụ thể
-ảnh chụp ban đêm
-giao dịch giá trị cao
-```
-
-Mỗi slice cần đủ sample và có quality metric riêng.
-
-## Quality Gate
-
-Trước khi dùng một snapshot để train hoặc deploy, pipeline có thể enforce các gate như:
+Aggregate quality hides issues. Define critical slices:
 
 ```text
-schema hợp lệ
-không có critical feature vượt ngưỡng missing
-label maturity đầy đủ
-leakage audit đạt yêu cầu
-coverage tối thiểu đạt chuẩn
-lineage đã được ghi lại
+new users
+rare language
+mobile camera model
+nighttime
+high-value transactions
 ```
 
-Critical gate fail nên chặn pipeline thay vì chỉ hiện màu đỏ trên dashboard.
+Each slice needs minimum sample size and quality metrics.
 
-## Golden Record
+## Quality Gates
 
-Một tập nhỏ **golden record** có expected transformation rõ ràng giúp test ETL và feature pipeline end-to-end.
+Before training/deploy data snapshot, enforce gates:
 
-Khi transform code thay đổi, golden record cho biết logic có bị regression không.
+```text
+schema passes
+no critical feature missing > threshold
+label maturity complete
+leakage audit passed
+coverage minimum met
+lineage recorded
+```
 
-## Data Quality và Model Metric
+A failed gate should block pipeline rather than just dashboard red.
 
-Mô hình đôi khi vẫn tạm thời hoạt động tốt dù upstream data đã có vấn đề nhờ redundancy hoặc vì lỗi mới chưa tác động tới nhiều sample.
+## Golden Records
 
-Data-quality monitoring giúp phát hiện incident trước khi model metric giảm rõ rệt.
+Small curated records with expected transformations help test ETL/feature pipeline end-to-end.
 
-## Data Quality Debt
+## Data Quality vs Model Metrics
 
-Team có thể tích lũy **data debt** giống technical debt: field không tài liệu hóa, join mong manh, source thay đổi không version, default value không rõ semantics.
+A model may temporarily perform well despite bad data due to redundancy. Data-quality monitoring detects upstream problem before model metric collapses.
 
-Data debt làm mọi cải tiến mô hình sau đó chậm và khó tin cậy hơn.
+## Quality Debt
 
-## Chất lượng Dữ liệu Không có cấu trúc
+Teams can accumulate “data debt”: undocumented fields, fragile joins, silently changing sources. This resembles technical debt and slows every later model improvement.
 
-Với text, có thể kiểm tra:
+## Quality for Unstructured Data
+
+Text quality:
 
 - encoding;
 - spam;
 - boilerplate;
 - language;
 - truncation;
-- reliability của source và fact.
+- factual/source reliability.
 
-Với image/audio, có thể kiểm tra:
+Image/audio quality:
 
 - corruption;
 - resolution;
-- blur hoặc noise;
+- blur/noise;
 - clipping;
 - metadata mismatch.
 
-## Chất lượng Dữ liệu cho Foundation Model
+## Foundation Model Data Quality
 
-Ở quy mô lớn, cần thêm các concern ở cấp mixture:
+Scale introduces mixture-level concerns:
 
 ```text
-phân bố chất lượng giữa các source
+source quality distribution
 deduplication
-benchmark contamination
-cân bằng ngôn ngữ
+contamination
+language balance
 repetition
-tỷ lệ synthetic content
+synthetic-content fraction
 ```
 
-Dữ liệu chất lượng thấp nhưng bị lặp nhiều có thể nhận lượng gradient không tương xứng và ảnh hưởng model mạnh hơn số lượng source gợi ý.
+Low-quality repeated data may receive disproportionate optimization weight.
 
-## Ví dụ Data Quality Incident
+## Data Quality Incident
 
-Giả sử upstream outage làm risk score bị thiếu, nhưng pipeline mới tự điền `0`. Schema và null check đều pass vì `0` là numeric value hợp lệ.
+Example feature pipeline accidentally fills missing risk score with `0` after upstream outage. Schema, null checks all pass because `0` valid. Distribution dashboard reveals sudden spike at zero. This shows quality needs statistical semantics, not only types.
 
-Tuy nhiên dashboard distribution sẽ cho thấy một spike đột ngột tại `0`.
+## Mental Model
 
-Ví dụ này cho thấy data quality không thể chỉ dựa vào type và nullability; cần hiểu statistical semantics của feature.
+> **Data quality asks: can this dataset faithfully support the inference/decision we intend, at the time and population where we will use it?**
 
-## Mô hình tư duy
+## Common Misconceptions
 
-> **Data quality đặt câu hỏi: dataset này có đủ đáng tin để hỗ trợ đúng inference hoặc decision mà ta muốn, tại đúng thời điểm và trên đúng population deployment hay không?**
+### “No nulls = high quality”
 
-## Những nhầm lẫn thường gặp
+Defaults can hide missingness.
 
-### “Không còn null nghĩa là data quality cao”
+### “Data drift = model failure”
 
-Không. Default value có thể che mất missingness thật.
+Some drift irrelevant; need performance linkage.
 
-### “Có data drift nghĩa là model hỏng”
+### “Quality is preprocessing team responsibility”
 
-Không. Một số drift không liên quan tới outcome; cần kiểm tra tác động thật.
+Producer, data engineer, ML engineer and domain owner share semantic responsibility.
 
-### “Chất lượng dữ liệu là trách nhiệm riêng của preprocessing team”
+## Knowledge Connection
 
-Không. Producer, data engineer, ML engineer và domain owner cùng chịu trách nhiệm về semantics và reliability.
+Data quality connects observability, contracts, statistics and MLOps monitoring.
 
-## Liên kết kiến thức
-
-Data quality nối Observability, Data Contract, Statistics và MLOps Monitoring.
-
-Xem tiếp: [Rò rỉ Dữ liệu](./05_data_leakage.md).
+Xem tiếp: [Data Leakage](./05_data_leakage.md).

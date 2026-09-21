@@ -1,169 +1,169 @@
-# Bài toán học và thiên lệch quy nạp
+# Learning Problem và Inductive Bias
 
-Machine Learning chỉ quan sát một lượng dữ liệu hữu hạn nhưng lại phải dự đoán ngoài những quan sát đó. Đây là một khoảng trống logic rất quan trọng: vô số hàm có thể khớp hoàn toàn cùng một tập huấn luyện nhưng cho hành vi rất khác trên những điểm chưa từng thấy. Vì vậy **học luôn cần thiên lệch quy nạp (inductive bias / 귀납 편향)** — tức các giả định khiến thuật toán ưu tiên một số giả thuyết hơn các giả thuyết khác.
+Machine Learning chỉ có finite observations nhưng phải predict beyond observations. Đây là một logical gap: vô số functions có thể fit cùng finite training set nhưng behavior hoàn toàn khác ở unseen points. Vì vậy **learning luôn cần inductive bias (귀납 편향 / thiên lệch quy nạp)** — assumptions khiến algorithm ưu tiên một số hypotheses hơn số khác.
 
-Thiên lệch quy nạp không phải “bias xấu” theo nghĩa bất công. Nó là điều kiện cần để mô hình có thể khái quát hóa. Câu hỏi đúng không phải “làm sao loại bỏ toàn bộ bias?”, mà là “bias nào phù hợp với cấu trúc của bài toán và môi trường triển khai?”.
+Inductive bias không phải “bias xấu” như unfairness. Nó là điều kiện cần để generalize. Câu hỏi đúng không phải “làm sao loại bỏ mọi bias?” mà là “bias nào phù hợp structure của problem và deployment environment?”.
 
-## Từ dữ liệu tới giả thuyết
+## From data to hypothesis
 
-Tập dữ liệu:
+Dataset:
 
 \[
 D=\{(x_i,y_i)\}_{i=1}^{n}
 \]
 
-Không gian giả thuyết:
+Hypothesis space:
 
 \[
 \mathcal H=\{f:X\to Y\}
 \]
 
-Thuật toán học ánh xạ tập dữ liệu thành một giả thuyết:
+Learning algorithm maps dataset thành hypothesis:
 
 \[
 A(D)=\hat f\in\mathcal H
 \]
 
-Nếu nhiều giả thuyết cùng có lỗi huấn luyện bằng 0, thuật toán vẫn phải chọn một trong số chúng.
+Nếu nhiều hypotheses đều zero training error, algorithm vẫn phải chọn một.
 
-Lựa chọn đó đến từ kiến trúc, hàm mục tiêu, regularization, optimizer, initialization và cách biểu diễn dữ liệu.
+Selection comes from architecture, objective, regularization, optimization, initialization and data representation.
 
-## Vì sao dữ liệu hữu hạn không thể xác định mọi thứ?
+## Why finite data cannot determine everything
 
-Giả sử có ba điểm huấn luyện:
+Suppose training points:
 
 ```text
 x: 1 2 3
-y: 2 4 6
+ y: 2 4 6
 ```
 
-Giả thuyết tự nhiên là:
+Natural hypothesis:
 
 \[
 y=2x
 \]
 
-Nhưng có vô số hàm khác cũng đi qua chính xác ba điểm đó rồi khác hoàn toàn ở bên ngoài.
+But infinitely many functions pass exactly through those three points and differ elsewhere.
 
-Ví dụ:
+For example polynomial with extra term that is zero at x=1,2,3:
 
 \[
 y=2x+c(x-1)(x-2)(x-3)
 \]
 
-Với mọi giá trị `c`, biểu thức vẫn khớp hoàn toàn ba điểm huấn luyện vì phần tích thêm bằng 0 tại `x=1,2,3`.
+Every `c` fits training data perfectly.
 
-Việc ưu tiên quan hệ tuyến tính đơn giản `y=2x` chính là một thiên lệch quy nạp.
+Choosing simple linear relation is an inductive preference.
 
-## Không gian giả thuyết là một prior về cấu trúc
+## Hypothesis space as a structural prior
 
-Linear regression giả định:
+Linear regression:
 
 \[
 f(x)=w^Tx+b
 \]
 
-nghĩa là target có thể được xấp xỉ tốt bởi cấu trúc affine trên feature đã chọn.
+assumes target can be approximated by affine structure in chosen features.
 
-Decision tree giả định những quy tắc hữu ích có thể được xây từ các phép chia ngưỡng theo từng trục feature.
+Decision tree assumes useful rules can be built from axis-aligned splits.
 
-CNN đưa vào giả định về tính cục bộ và cấu trúc dịch chuyển trong ảnh.
+CNN assumes locality and translation-related structure.
 
-Transformer giả định chuỗi có thể được mô hình hóa bằng tương tác giữa token với các layer dùng chung và attention.
+Transformer assumes sequence can be modeled through learned token interactions with shared layers/attention.
 
-Kiến trúc vì vậy không phải một “vỏ chứa trung lập”; nó quyết định loại pattern nào dễ biểu diễn và dễ học.
+Architecture is not neutral container; it encodes what patterns are easy to represent/learn.
 
-## Nguyên lý Occam
+## Occam's Razor
 
-Một nguyên lý quen thuộc là ưu tiên lời giải đơn giản hơn khi nhiều mô hình khớp dữ liệu tương đương nhau.
+A common principle prefers simpler explanation among equally good fits.
 
-Nhưng “đơn giản” phụ thuộc vào cách biểu diễn.
+But “simple” depends representation.
 
-Một hàm sin có thể rất đơn giản trong biểu diễn Fourier nhưng trở nên rất phức tạp nếu cố xấp xỉ bằng đa thức bậc cao. Convolution rất tự nhiên khi giả định locality trong ảnh.
+A sinusoid is simple in Fourier representation but complex as high-degree polynomial; a convolution is simple under spatial locality.
 
-Vì vậy Occam's Razor chỉ có ý nghĩa sau khi ta xác định ngôn ngữ mô hình hoặc cách mô tả độ phức tạp.
+Therefore Occam's Razor becomes meaningful only after defining description/model language.
 
-## Regularization như một ưu tiên tường minh
+## Regularization as explicit preference
 
-Hàm mục tiêu:
+Objective:
 
 \[
 J(\theta)=\hat R(\theta)+\lambda\Omega(\theta)
 \]
 
-Với L2:
+L2 penalty:
 
 \[
 \Omega(\theta)=\|\theta\|_2^2
 \]
 
-mô hình ưu tiên tham số có độ lớn nhỏ hơn.
+prefers smaller parameter magnitude.
 
-Với L1:
+L1:
 
 \[
 \Omega(\theta)=\|\theta\|_1
 \]
 
-mô hình thường có xu hướng tạo nghiệm thưa (sparsity) hơn trong nhiều bài toán.
+encourages sparsity in many settings.
 
-Regularization nói một cách trực tiếp: nếu nhiều hàm cùng khớp dữ liệu, hãy ưu tiên hàm thỏa thêm một tiêu chí cấu trúc.
+Regularization says multiple functions fit; prefer one satisfying extra structural preference.
 
-## Regularization ngầm
+## Implicit regularization
 
-Không có penalty tường minh không có nghĩa hệ thống không có bias.
+No explicit penalty does not mean no regularization/bias.
 
-Quỹ đạo gradient descent, initialization, nhiễu mini-batch, early stopping và cách tham số hóa đều có thể ưu tiên một số nghiệm hơn các nghiệm khác.
+Gradient descent trajectory, initialization, batch noise, early stopping and parameterization can favor certain solutions.
 
-Trong neural network dư tham số, optimizer thường tìm một loại nghiệm nội suy cụ thể chứ không chọn ngẫu nhiên trong toàn bộ các nghiệm có training loss bằng 0.
+In overparameterized neural networks, optimizer often finds particular interpolating solutions rather than arbitrary zero-training-loss solution.
 
-Đây được gọi là **thiên lệch ngầm (implicit bias)** và vẫn là một chủ đề nghiên cứu quan trọng.
+This implicit bias is active research topic.
 
-## Data augmentation như một giả định bất biến
+## Data augmentation as invariance bias
 
-Giả sử nhãn ảnh không nên thay đổi khi dịch nhẹ hoặc lật ảnh phù hợp.
+Suppose image label should not change under small translation/flip.
 
-Huấn luyện trên các phiên bản biến đổi mã hóa giả định:
+Training on transformed samples encodes:
 
 \[
 f(x)\approx f(T(x))
 \]
 
-với `T` là phép biến đổi được tin rằng không làm thay đổi nhãn.
+for transformations `T` believed label-preserving.
 
-Data augmentation không phải một “mẹo miễn phí”. Lật ngang có thể hợp lý với ảnh mèo nhưng có thể sai với chữ viết, biển giao thông hoặc ảnh y khoa có phân biệt trái/phải.
+Augmentation is domain assumption, not free improvement. Horizontal flip is fine for cats, but can be invalid for text, traffic signs or medical laterality.
 
-## Bất biến và đồng biến
+## Equivariance vs invariance
 
-Một hàm **bất biến (invariant)** thỏa:
+Invariant:
 
 \[
 f(Tx)=f(x)
 \]
 
-nghĩa là đầu ra không đổi khi đầu vào bị biến đổi theo `T`.
+output unchanged.
 
-Một hàm **đồng biến (equivariant)** thỏa:
+Equivariant:
 
 \[
 f(Tx)=T'f(x)
 \]
 
-nghĩa là đầu ra thay đổi theo một quy luật tương ứng.
+output transforms predictably.
 
-Phân loại ảnh có thể cần bất biến với dịch chuyển nhỏ; segmentation lại cần mask dịch chuyển theo ảnh, tức quan hệ đồng biến.
+Image classification may desire translation invariance; segmentation requires output mask shift with image, an equivariant relationship.
 
-Kiến trúc có thể mã hóa trực tiếp những giả định như vậy.
+Architecture can encode these biases.
 
-## Prior trong học Bayes
+## Prior knowledge in Bayesian learning
 
-Trong cách nhìn Bayes, prior:
+Bayesian prior:
 
 \[
 p(\theta)
 \]
 
-mã hóa ưu tiên trước khi quan sát dữ liệu.
+explicitly encodes preference before data.
 
 Posterior:
 
@@ -171,330 +171,343 @@ Posterior:
 p(\theta\mid D)\propto p(D\mid\theta)p(\theta)
 \]
 
-Nhiều dạng regularization có thể được diễn giải như MAP với prior tương ứng. L2 thường liên hệ với Gaussian prior, còn L1 liên hệ với Laplace prior trong các mô hình chuẩn.
+Regularization often corresponds to MAP prior interpretation. L2 is related to Gaussian prior in common formulations; L1 to Laplace prior.
 
-Điều này cho thấy “bias” có thể được biểu diễn dưới dạng xác suất hoặc penalty toán học.
+This connection shows “bias” can be written as probability or penalty.
 
 ## Empirical Risk Minimization
 
-ERM chọn:
+ERM chooses:
 
 \[
 \hat f=\arg\min_{f\in\mathcal H}
 \frac{1}{n}\sum_i L(f(x_i),y_i)
 \]
 
-Rủi ro thực nghiệm là thứ ta đo được trực tiếp. Rủi ro trên toàn population thì không thể quan sát đầy đủ.
+Training risk is observable. Population risk is not.
 
-Lý thuyết generalization hỏi: trong điều kiện nào rủi ro thực nghiệm thấp có thể cho ta niềm tin rằng rủi ro kỳ vọng cũng thấp?
+Generalization theory asks when low empirical risk implies low expected risk.
 
-Câu trả lời phụ thuộc vào độ phức tạp mô hình, kích thước và phân phối dữ liệu, regularization và cấu trúc thuật toán.
+Answer depends capacity, data size/distribution, regularization and algorithmic structure.
 
 ## Structural Risk Minimization
 
-Thay vì dùng một không gian giả thuyết rất lớn, ta có thể xét một chuỗi lớp lồng nhau:
+Instead of one huge hypothesis class, consider nested classes:
 
 \[
 \mathcal H_1\subset\mathcal H_2\subset\cdots
 \]
 
-Mục tiêu là cân bằng giữa mức khớp dữ liệu và độ phức tạp.
+Choose trade-off between empirical fit and complexity.
 
-Trực giác:
-
-```text
-fit đủ tốt
-nhưng không dùng nhiều capacity hơn mức cần thiết
-```
-
-Deep Learning hiện đại làm câu chuyện capacity đơn giản trở nên phức tạp hơn vì mô hình rất lớn vẫn có thể khái quát hóa tốt dù đủ tham số để ghi nhớ toàn bộ training set.
-
-## Trực giác VC dimension
-
-VC dimension đo khả năng một lớp giả thuyết có thể **shatter** các tập điểm trong bài toán phân loại nhị phân.
-
-VC dimension càng cao thì lớp mô hình càng phong phú.
-
-Nó cung cấp các bound liên hệ giữa:
+This formalizes idea:
 
 ```text
-số lượng mẫu
-độ phức tạp lớp mô hình
-khoảng cách generalization
+fit data enough
+but avoid unnecessary capacity
 ```
 
-Tuy nhiên các bound kiểu VC thường quá lỏng để giải thích định lượng hành vi thực tế của neural network rất lớn. Dù vậy, nó vẫn là nền tảng khái niệm quan trọng.
+Modern Deep Learning complicates simple capacity story because huge models can generalize despite enough parameters to memorize.
+
+## VC dimension intuition
+
+VC dimension measures ability of hypothesis class to shatter sets of points in binary classification.
+
+Higher VC dimension means richer class.
+
+It supports bounds roughly relating:
+
+```text
+sample size
+model capacity
+generalization gap
+```
+
+But VC theory is often too loose to explain practical behavior of massive neural networks quantitatively. It remains important conceptual foundation.
 
 ## Bias–variance
 
-Một họ mô hình quá cứng có thể có bias cao: dự đoán sai có hệ thống vì không biểu diễn được cấu trúc thật.
+A model class too rigid may have high bias; predictions systematically miss structure.
 
-Một mô hình quá linh hoạt có thể có variance cao: chỉ cần thay đổi một ít dữ liệu huấn luyện cũng làm mô hình thay đổi mạnh.
+A highly flexible learner can have high variance; small dataset changes produce large model changes.
 
-Trong một số giả định với squared error:
+Classical decomposition under squared-error assumptions:
 
 \[
 ExpectedError=Bias^2+Variance+Noise
 \]
 
-Đây là mô hình tư duy hữu ích, không phải một lý thuyết đầy đủ cho mọi neural network hiện đại.
+This is a mental model, not universal full theory.
 
-Xem thêm: [Bias, Variance and Generalization](./14_bias_variance_and_generalization.md).
+See [Bias, Variance and Generalization](./14_bias_variance_and_generalization.md).
 
 ## Underfitting
 
-Dấu hiệu thường gặp:
+Symptoms:
 
 ```text
-training error cao
-validation error cũng cao
+training error high
+validation error also high
 ```
 
-Nguyên nhân có thể là feature thiếu thông tin, mô hình quá hạn chế, regularization quá mạnh hoặc quá trình tối ưu chưa hội tụ.
+Possible causes:
 
-Chỉ thêm nhiều dữ liệu thường không giải quyết được underfitting mạnh nếu bản thân mô hình không đủ khả năng biểu diễn.
+- features missing useful information;
+- model too restrictive;
+- excessive regularization;
+- optimization not converged.
+
+Adding data alone often does not solve strong underfitting.
 
 ## Overfitting
 
-Dấu hiệu thường gặp:
+Typical pattern:
 
 ```text
-training error rất thấp
-validation error cao hơn đáng kể
+training error very low
+validation error significantly worse
 ```
 
-Nguyên nhân có thể gồm mô hình linh hoạt nhưng dữ liệu ít, pattern giả do leakage, điều chỉnh quá nhiều theo validation set, correlation ngẫu nhiên hoặc regularization yếu.
+Possible causes:
 
-Overfitting luôn phải được hiểu tương đối với phân phối mục tiêu và giao thức đánh giá.
+- flexible model + insufficient data;
+- leakage-like artifacts;
+- repeated validation tuning;
+- spurious correlations;
+- weak regularization.
 
-## Ghi nhớ và khái quát hóa có thể cùng tồn tại
+Overfitting is relative to target distribution and evaluation procedure.
 
-Một mô hình có thể ghi nhớ một số ví dụ hiếm nhưng vẫn generalize tốt ở phần còn lại. Hai hành vi này không phải hai trạng thái loại trừ nhau.
+## Memorization vs generalization
 
-Neural network lớn có thể nội suy gần như toàn bộ training set nhưng vẫn học biểu diễn hữu ích nhờ quy mô dữ liệu và inductive bias.
+Models can memorize rare examples while also generalize elsewhere. These are not mutually exclusive binary states.
 
-Vì vậy quy tắc “số tham số > số mẫu thì chắc chắn overfit” không còn đáng tin như một nguyên tắc chung.
+Large neural networks can interpolate training set but learn useful representations due to data scale and inductive biases.
 
-## Nội suy và ngoại suy
+So “parameter count > sample count ⇒ overfit” is not a reliable modern rule.
 
-**Nội suy (interpolation)** dự đoán trong vùng đã được training distribution bao phủ.
+## Interpolation and extrapolation
 
-**Ngoại suy (extrapolation)** dự đoán ra ngoài vùng hoặc cấu trúc đã quan sát.
+Interpolation predicts within region covered by training distribution.
 
-Nhiều mô hình ML hoạt động kém đáng tin cậy hơn rất nhiều khi phải extrapolate.
+Extrapolation predicts outside observed range/structure.
 
-Một mô hình huấn luyện trên mức thu nhập từ 0 tới 100k vẫn có thể trả ra số cho mức 10 triệu, nhưng khả năng tính ra đầu ra không có nghĩa đầu ra đó đáng tin.
+Many ML models are much less reliable under extrapolation.
 
-## Tương quan giả
+A model trained on incomes 0–100k may behave strangely at 10 million even if formula returns a number.
 
-Một feature có thể tương quan với nhãn trong môi trường huấn luyện nhưng không ổn định hoặc không có ý nghĩa nhân quả.
+Confidence should not be inferred from mere ability to compute output.
 
-Ví dụ classifier ảnh y tế học watermark của bệnh viện thay vì pattern bệnh vì watermark vô tình tương quan với nhãn.
+## Spurious correlation
 
-Nếu train/test đều chia ngẫu nhiên từ cùng bệnh viện, metric có thể vẫn rất đẹp. Chỉ khi đánh giá ở bệnh viện khác vấn đề mới lộ ra.
+A feature may correlate with label in training environment but not causally/reliably.
+
+Example image classifier learns hospital watermark instead of disease pattern because watermark correlates with labels.
+
+Training/test random split from same hospitals may not reveal problem. External-site split might.
+
+Inductive bias includes assumptions about which correlations will persist.
 
 ## Shortcut learning
 
-Neural network thường khai thác tín hiệu dễ dự đoán nhất thay vì khái niệm con người mong đợi.
+Neural models often exploit easiest predictive signal rather than intended concept.
 
-Nếu màu nền dự đoán được lớp, mô hình có thể bỏ qua hình dạng vật thể.
+If dataset allows background color to predict class, model may ignore object shape.
 
-Đây không phải mô hình “gian lận”; hàm mục tiêu chỉ thưởng dự đoán đúng chứ không thưởng “lý do mà con người muốn”.
+This is not model “cheating”; objective rewards prediction, not human-intended reasoning.
 
-Vì vậy dữ liệu và evaluation phải được thiết kế để loại bỏ hoặc thách thức các shortcut.
+Dataset/evaluation must remove or challenge shortcuts.
 
-## Giả định về phân phối
+## Distributional assumptions
 
-Supervised learning truyền thống thường giả định train và test là i.i.d. từ cùng phân phối.
+Standard supervised learning often assumes train and test are i.i.d. from same distribution.
 
-Trong thực tế:
+Reality:
 
 \[
 P_{train}(X,Y)\neq P_{deploy}(X,Y)
 \]
 
-Khi distribution shift xảy ra, inductive bias từng hoạt động tốt có thể thất bại.
+Under shift, a bias that worked historically may fail.
 
-Do đó validation split và monitoring nên phản ánh các dạng shift có khả năng xuất hiện.
+Robustness requires designing validation splits and monitoring around plausible shifts.
 
-## Domain shift và invariant
+## Domain shift and invariants
 
-Nếu môi trường thay đổi, ta muốn tìm quan hệ ổn định qua nhiều domain.
+If environments vary, seek relationships stable across them.
 
-Ví dụ:
+Examples:
 
 ```text
-bệnh viện A và B
-quốc gia A và B
-mùa đông và mùa hè
-thiết bị cũ và mới
+hospital A vs B
+country A vs B
+winter vs summer
+old device vs new device
 ```
 
-Học cấu trúc ổn định hơn correlation cục bộ là một bài toán khó. Các phương pháp domain generalization cố giải quyết vấn đề này, nhưng bảo đảm của chúng luôn dựa trên giả định cụ thể.
+Learning invariant causal-ish structure is harder than fitting pooled correlations. Domain generalization methods attempt this, but guarantees require assumptions.
 
-## Biểu diễn feature thay đổi độ khó của bài toán
+## Feature representation changes simplicity
 
-Một bài toán phi tuyến trong feature gốc có thể trở nên tuyến tính sau một phép biến đổi.
+A nonlinear problem in raw feature may become linear after transformation.
 
-Ví dụ ranh giới hình tròn có thể đơn giản hơn nếu dùng:
+Example circular boundary can be easier using radius:
 
 \[
 r^2=x_1^2+x_2^2
 \]
 
-Sau đó chỉ cần threshold theo `r`.
+Then threshold on `r` suffices.
 
-Feature engineering thay đổi độ phức tạp của mô hình phía sau.
+Feature engineering alters hypothesis complexity needed downstream.
 
-Deep Learning tự học nhiều phép biến đổi để biến bài toán thành dạng dễ xử lý hơn ở các layer sau.
+Deep Learning learns transformations automatically to make target easier for later layers.
 
-## Kernel trick như một thiên lệch biểu diễn
+## Kernel trick as representational bias
 
-Kernel method ngầm ánh xạ dữ liệu vào không gian feature nhiều chiều:
+Kernel methods implicitly map inputs to high-dimensional feature space:
 
 \[
 \phi(x)
 \]
 
-nhưng không cần tính trực tiếp tọa độ, chỉ cần:
+without computing coordinates explicitly, using:
 
 \[
 k(x,x')=\langle\phi(x),\phi(x')\rangle
 \]
 
-Việc chọn kernel chính là chọn một giả định về similarity.
+Choice of kernel encodes similarity bias.
 
-RBF kernel ưu tiên giả định rằng các điểm gần nhau trong không gian feature có hành vi tương tự.
+RBF kernel assumes nearby points in feature space should behave similarly.
 
-## Thiên lệch cục bộ
+## Locality bias
 
-k-NN giả định các ví dụ gần nhau có khả năng chia sẻ target.
+k-NN assumes nearby examples likely share target.
 
-Giả định này chỉ hữu ích khi metric khoảng cách phản ánh đúng sự tương đồng ngữ nghĩa.
+This only works if distance metric aligns with semantic relevance.
 
-Trong không gian nhiều chiều hoặc dữ liệu trộn nhiều scale, Euclidean distance có thể trở nên vô nghĩa.
+In high dimensions/raw mixed-scale data, Euclidean distance may be meaningless.
 
-Vì vậy ngay cả phương pháp “không học tham số rõ ràng” vẫn mang inductive bias rất mạnh.
+Thus even “model-free” method has strong inductive bias.
 
-## Thiên lệch của Decision Tree
+## Tree bias
 
-Decision tree chia không gian feature bằng các quy tắc ngưỡng theo từng trục.
+Decision trees partition feature space using hierarchical threshold rules.
 
-Nó mô hình hóa interaction và phi tuyến tốt, nhưng có thể kém hiệu quả với ranh giới mượt và nghiêng chéo vì phải dùng nhiều split dạng bậc thang.
+They naturally model interactions and nonlinearities but axis-aligned partitions can be inefficient for diagonal smooth boundaries.
 
-Ensemble tree giúp giảm độ bất ổn trong khi vẫn tận dụng ưu điểm của tree với dữ liệu bảng.
+Ensembles reduce instability while keeping tree-based bias useful for tabular data.
 
-## Pretraining như một prior đã học
+## Pretraining as inductive prior
 
-Mô hình pretrained không bắt đầu từ “không biết gì”; các tham số đã được định hình bởi dữ liệu trước đó.
+A pretrained model starts not from random ignorance but parameters shaped by massive prior data.
 
-Fine-tuning trên một tập nhỏ có thể tận dụng:
+Fine-tuning with small task dataset uses representation prior:
 
 ```text
-pattern tổng quát từ pretraining
-+ bằng chứng riêng của task mới
+general patterns from pretraining
++ task-specific evidence
 ```
 
-Điều này cải thiện sample efficiency rất mạnh.
+This changes sample efficiency dramatically.
 
-Foundation model có thể được xem như một prior hoặc biểu diễn học được để tái sử dụng trên nhiều nhiệm vụ.
+Foundation models can be viewed as learned priors/representations reused across tasks.
 
-## Giả định của transfer learning
+## Transfer learning assumptions
 
-Transfer learning chỉ hữu ích khi tri thức từ source domain có liên quan tới target domain.
+Transfer works when source pretraining structure useful for target.
 
-Nếu hai miền khác quá xa hoặc bias từ pretraining không phù hợp, có thể xảy ra **negative transfer**.
+Negative transfer can occur when domains/tasks differ or inherited biases harmful.
 
-Vì vậy “pretrained luôn tốt hơn” không phải một quy tắc tuyệt đối.
+“Pretrained is always better” is not guaranteed.
 
 ## Multi-task learning
 
-Một mô hình chia sẻ tham số cho nhiều task có thể tối ưu:
+Shared model learns several tasks:
 
 \[
 L=\sum_t\lambda_t L_t
 \]
 
-Nếu các task liên quan, biểu diễn dùng chung có thể giúp regularize và tăng sample efficiency.
+Shared representations can regularize/help if tasks related. Conflicting gradients may hurt.
 
-Nếu gradient giữa các task xung đột, một task có thể làm task khác tệ đi.
+Task relatedness is another inductive assumption.
 
-Việc cho rằng các task có liên quan cũng chính là một thiên lệch quy nạp.
+## Human choices as hidden bias
 
-## Lựa chọn của con người cũng tạo bias
-
-Bias xuất hiện từ trước cả thuật toán:
+Bias enters before algorithm:
 
 ```text
-bài toán nào được tự động hóa?
-ai xuất hiện trong dataset?
-label "thành công" nghĩa là gì?
-metric nào được tối ưu?
-loại lỗi nào được chấp nhận?
+what problem to automate?
+who appears in dataset?
+what label means "success"?
+which metric optimized?
+which errors tolerated?
 ```
 
-Bias kỹ thuật của mô hình và bias xã hội hoặc fairness có liên quan nhưng không phải cùng một khái niệm.
+Technical model bias and social/fairness bias overlap but are not identical concepts.
 
-## Trực giác No Free Lunch
+## No Free Lunch
 
-Nếu lấy trung bình đều trên toàn bộ mọi hàm mục tiêu có thể có, không một learner nào vượt trội mọi learner khác trong các thiết lập No Free Lunch kinh điển.
+Averaged uniformly over all possible target functions, no learner dominates all others in classic No Free Lunch settings.
 
-Ý nghĩa thực dụng:
+Practical meaning:
 
-> Machine Learning hoạt động vì các bài toán thật có cấu trúc, và mô hình của ta mang giả định phù hợp với cấu trúc đó.
+> Learning works because real-world tasks have structure and our models exploit assumptions about that structure.
 
-Điều này không có nghĩa “mọi thuật toán đều ngang nhau”. Trong một domain cụ thể, có inductive bias phù hợp và có inductive bias rất tệ.
+Do not interpret as “all algorithms equal”. On actual domains, some inductive biases match far better.
 
-## Chọn họ mô hình
+## Choosing model family
 
-Các câu hỏi cần cân nhắc gồm:
+Ask:
 
 ```text
-Có bao nhiêu dữ liệu?
-Dữ liệu thuộc loại nào?
-Mức phi tuyến và interaction dự kiến ra sao?
-Có cần interpretability không?
-Giới hạn latency / memory thế nào?
-Có distribution shift nào đáng lo?
-Có ràng buộc vật lý hoặc monotonic cứng không?
+How much data?
+What data type?
+Expected nonlinearity/interactions?
+Need interpretability?
+Latency/memory constraints?
+Distribution shifts?
+Hard monotonic/physical constraints?
 ```
 
-Lựa chọn mô hình nên đi từ cấu trúc bài toán, không đi từ độ nổi tiếng của thuật toán.
+Model selection should follow problem structure, not popularity.
 
-## Mô hình tư duy
+## Mental Model
 
 ```text
-Dữ liệu hữu hạn không thể xác định duy nhất hành vi tương lai.
-Inductive bias quyết định lời giải nào được ưu tiên.
+Finite data cannot uniquely determine future behavior.
+Inductive bias chooses which explanation to prefer.
 
-Architecture      → thiên lệch biểu diễn
-Regularization    → ưu tiên tham số / hàm
-Optimization      → thiên lệch chọn nghiệm
-Data augmentation → giả định bất biến
-Pretraining       → prior đã học
-Features          → thay đổi hình học và độ đơn giản của bài toán
+Architecture     → representational bias
+Regularization   → parameter/function preference
+Optimization     → solution-selection bias
+Data augmentation→ invariance assumptions
+Pretraining      → learned prior
+Features         → change geometry/simplicity of task
 ```
 
-## Các hiểu lầm thường gặp
+## Common Misconceptions
 
-### “Bias là thứ phải loại bỏ hoàn toàn”
+### “Bias là thứ phải loại bỏ”
 
-Không. Inductive bias là điều kiện cần để generalization xảy ra. Bias bất công trong xã hội là một vấn đề khác dù có thể tương tác với bias kỹ thuật.
+Inductive bias is necessary for generalization. Unfair societal bias is a different but related concern.
 
-### “Mô hình càng linh hoạt càng tốt”
+### “More flexible model always better”
 
-Không. Flexibility giúp fit dữ liệu nhưng cần dữ liệu, regularization và evaluation phù hợp để khái quát hóa.
+Flexibility helps fit but needs data/bias/evaluation to generalize.
 
-### “Mô hình fit toàn bộ training data nghĩa là đã học sự thật”
+### “A model that fits all training data learned the truth”
 
-Không. Vô số hàm có thể nội suy cùng các quan sát hữu hạn.
+Many functions can interpolate same observations.
 
-### “Architecture chỉ ảnh hưởng compute”
+### “Architecture only affects compute”
 
-Không. Architecture mã hóa giả định mạnh về locality, sequence, invariance và composition.
+Architecture encodes strong assumptions about locality, sequence, invariance and composition.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Thiên lệch quy nạp nối Thống kê, Tối ưu hóa và Kiến trúc mô hình. Mỗi thuật toán ở các chương sau nên được đọc với một câu hỏi xuyên suốt: **phương pháp này đang giả định điều gì về dữ liệu, và giả định đó hữu ích hoặc nguy hiểm trong trường hợp nào?**
+Inductive bias connects Statistics, Optimization and model architecture. Every algorithm chapter later should be read as: **what assumptions does this method encode, and when are those assumptions useful or dangerous?**
 
-Xem tiếp: [Dữ liệu, feature và label](./02_data_features_and_labels.md).
+Xem tiếp: [Data, Features and Labels](./02_data_features_and_labels.md).

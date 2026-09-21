@@ -1,237 +1,253 @@
 # RNN, LSTM và GRU: học trạng thái qua thời gian
 
-Mạng nơ-ron hồi quy (**Recurrent Neural Network — RNN / 순환 신경망**) xử lý dữ liệu chuỗi bằng cách tái sử dụng cùng một hàm chuyển trạng thái qua các bước thời gian (timesteps). Thay vì xem từng vị trí là độc lập, mô hình duy trì **trạng thái ẩn (hidden state)** để mang thông tin từ quá khứ sang hiện tại.
+Recurrent Neural Network (RNN / 순환 신경망) xử lý sequence bằng cách reuse cùng transition function qua timesteps. Thay vì mỗi position độc lập, model duy trì hidden state mang information từ quá khứ.
 
-RNN là một bước phát triển quan trọng trong lịch sử học sâu vì nó biến chuỗi có độ dài thay đổi thành một quá trình tính toán khả vi có trạng thái. LSTM và GRU được phát triển để giảm khó khăn khi truyền tín hiệu và gradient qua các phụ thuộc dài hạn.
+RNN là bước lịch sử quan trọng vì nó biến variable-length sequence thành stateful differentiable computation. LSTM và GRU ra đời để giảm difficulty của long-term gradient flow.
 
-## RNN cơ bản
+## Vanilla RNN
 
-Cập nhật trạng thái:
+Update:
 
 \[
 h_t=\phi(W_{xh}x_t+W_{hh}h_{t-1}+b_h)
 \]
 
-Đầu ra:
+Output:
 
 \[
 y_t=g(W_{hy}h_t+b_y)
 \]
 
-Cùng các trọng số `W` được tái sử dụng ở mọi bước thời gian, tức là mô hình **chia sẻ tham số theo thời gian (parameter sharing across time)**.
+Same weights `W` reused mọi timestep → parameter sharing across time.
 
-## Trải mạng theo thời gian
+## Unrolling through time
 
-Có thể hình dung RNN được trải ra (unroll) như sau:
+RNN có thể unroll:
 
 ```text
-x1 → [ô RNN] → h1
+x1 → [cell] → h1
        ↓
-x2 → [ô RNN] → h2
+x2 → [cell] → h2
        ↓
-x3 → [ô RNN] → h3
+x3 → [cell] → h3
 ```
 
-Về mặt toán học, độ sâu của đồ thị tính toán tăng theo độ dài chuỗi. Khi huấn luyện, lan truyền ngược phải đi qua đồ thị đã trải này; cơ chế đó gọi là **lan truyền ngược qua thời gian (Backpropagation Through Time — BPTT)**.
+Mathematically graph depth proportional sequence length. Backpropagation phải traverse unrolled graph — **Backpropagation Through Time (BPTT)**.
 
-## Gradient tiêu biến trong RNN
+## Vanishing gradient trong RNN
 
-Gradient đi qua nhiều bước thời gian chứa các tích lặp của Jacobian hồi quy:
+Gradient qua many timesteps chứa repeated products involving recurrent Jacobian:
 
 \[
 \frac{\partial h_t}{\partial h_k}
 =\prod_{i=k+1}^{t}\frac{\partial h_i}{\partial h_{i-1}}
 \]
 
-Nếu chuẩn của các đạo hàm lặp lại thường nhỏ hơn `1`, gradient có thể giảm rất nhanh và trở nên gần bằng `0`; nếu chúng thường lớn hơn `1`, gradient có thể bùng nổ. Vì vậy RNN cơ bản gặp khó khăn khi học các phụ thuộc cách nhau rất xa trong chuỗi.
+Nếu spectral effects/activation derivatives shrink, gradient vanish; nếu grow, explode.
 
-## BPTT cắt ngắn
+Do đó vanilla RNN khó học long-range dependencies.
 
-Với chuỗi dài, có thể chỉ lan truyền gradient ngược qua `K` bước gần nhất thay vì toàn bộ lịch sử. Trạng thái ẩn vẫn tiếp tục được truyền về phía trước, nhưng đồ thị gradient được ngắt định kỳ.
+## Truncated BPTT
 
-Sự đánh đổi là:
+Long sequence training có thể backprop chỉ `K` timesteps thay vì toàn history.
+
+Hidden state vẫn carry forward, nhưng gradient graph detach periodically.
+
+Trade-off:
 
 ```text
-ít bộ nhớ và phép tính hơn
+lower memory/compute
 ↔
-khó gán tín hiệu học trực tiếp qua các phụ thuộc dài hơn cửa sổ cắt ngắn
+cannot assign credit through dependencies longer than truncation window directly
 ```
 
-Kỹ thuật này được gọi là **BPTT cắt ngắn (truncated BPTT)**.
+## LSTM: tạo memory path có gates
 
-## LSTM: đường truyền bộ nhớ có các cổng
+Long Short-Term Memory (LSTM / 장단기 메모리) có cell state `c_t` và gates.
 
-**Long Short-Term Memory (LSTM / 장단기 메모리)** bổ sung trạng thái ô `c_t` và các **cổng (gates)** để kiểm soát thông tin được giữ, ghi và đưa ra ngoài.
-
-Cổng quên (forget gate):
+Forget gate:
 
 \[
 f_t=\sigma(W_f[x_t,h_{t-1}]+b_f)
 \]
 
-Cổng đầu vào (input gate):
+Input gate:
 
 \[
 i_t=\sigma(W_i[x_t,h_{t-1}]+b_i)
 \]
 
-Trạng thái ứng viên (candidate):
+Candidate:
 
 \[
 \tilde c_t=\tanh(W_c[x_t,h_{t-1}]+b_c)
 \]
 
-Cập nhật trạng thái ô:
+Cell update:
 
 \[
 c_t=f_t\odot c_{t-1}+i_t\odot\tilde c_t
 \]
 
-Cổng đầu ra (output gate):
+Output gate:
 
 \[
 o_t=\sigma(W_o[x_t,h_{t-1}]+b_o)
 \]
 
-Trạng thái ẩn:
+Hidden:
 
 \[
 h_t=o_t\odot\tanh(c_t)
 \]
 
-## Vì sao LSTM giúp gradient truyền xa hơn?
+## Vì sao LSTM giúp gradient flow?
 
-Cập nhật trạng thái ô có một đường cộng trực tiếp:
+Cell state update có additive path:
 
 \[
 c_t=f_t\odot c_{t-1}+...
 \]
 
-Đạo hàm tương ứng là:
+Derivative:
 
 \[
 \frac{\partial c_t}{\partial c_{t-1}}=f_t
 \]
 
-Nếu cổng quên có giá trị gần `1`, thông tin và gradient có thể đi qua nhiều bước với ít lần bị nén bởi hàm phi tuyến hơn so với RNN cơ bản. LSTM không loại bỏ hoàn toàn vấn đề phụ thuộc dài hạn, nhưng cải thiện khả năng học chúng đáng kể.
+Nếu forget gate gần `1`, information/gradient có thể flow qua nhiều steps ít bị repeated nonlinear squashing hơn vanilla RNN.
 
-## Ý nghĩa của các cổng
+LSTM không “giải quyết hoàn toàn” long dependency, nhưng cải thiện đáng kể.
 
-Có thể hiểu trực giác các cổng như sau: cổng quên quyết định bao nhiêu thông tin cũ được giữ lại; cổng đầu vào quyết định bao nhiêu thông tin ứng viên mới được ghi vào bộ nhớ; cổng đầu ra quyết định phần nào của trạng thái ô được bộc lộ qua trạng thái ẩn.
+## Gate interpretation
 
-Các ý nghĩa này chỉ là cách giải thích chức năng. Giá trị của cổng được mô hình học từ dữ liệu chứ không phải các quy tắc ngữ nghĩa được lập trình thủ công.
+- forget gate: bao nhiêu old memory giữ lại;
+- input gate: bao nhiêu new candidate viết vào memory;
+- output gate: bao nhiêu cell state expose ra hidden.
+
+Gates learned, không hand-coded semantic.
 
 ## GRU
 
-**Gated Recurrent Unit (GRU / 게이트 순환 유닛)** đơn giản hóa LSTM bằng cách hợp nhất một phần cơ chế bộ nhớ và trạng thái ẩn.
+Gated Recurrent Unit (GRU / 게이트 순환 유닛) đơn giản hóa LSTM, merge memory/hidden.
 
-Cổng cập nhật (update gate):
+Update gate:
 
 \[
 z_t=\sigma(W_z[x_t,h_{t-1}])
 \]
 
-Cổng đặt lại (reset gate):
+Reset gate:
 
 \[
 r_t=\sigma(W_r[x_t,h_{t-1}])
 \]
 
-Trạng thái ứng viên:
+Candidate:
 
 \[
 \tilde h_t=\tanh(W_h[x_t,r_t\odot h_{t-1}])
 \]
 
-Cập nhật:
+Update:
 
 \[
 h_t=(1-z_t)\odot h_{t-1}+z_t\odot\tilde h_t
 \]
 
-GRU có ít cổng và ít tham số hơn LSTM. Điều đó có thể làm mô hình nhẹ hơn, nhưng hiệu quả cuối cùng vẫn phụ thuộc dữ liệu và bài toán; không có quy tắc rằng GRU luôn tốt hơn hoặc kém hơn LSTM.
+GRU fewer parameters/gates; performance depends task/data.
 
-## RNN hai chiều
+## Bidirectional RNN
 
-Nếu bài toán cho phép sử dụng cả ngữ cảnh trước và sau một vị trí, có thể chạy một RNN theo chiều thuận và một RNN theo chiều ngược:
+Nếu task cho phép future context, run one RNN forward và one backward:
 
 \[
 h_t=[\overrightarrow h_t;\overleftarrow h_t]
 \]
 
-Đây là **RNN hai chiều (bidirectional RNN)**, hữu ích cho gán nhãn chuỗi, nhận dạng tiếng nói hoặc bộ mã hóa khi toàn bộ đầu vào đã có sẵn.
+Useful tagging/speech encoders.
 
-Nó không thể được dùng trực tiếp theo cùng cách cho sinh tự hồi quy nhân quả nếu token tương lai chưa tồn tại tại thời điểm dự đoán.
+Không dùng directly cho causal generation nếu future token unavailable.
 
-## RNN nhiều tầng
+## Stacked RNN
 
-Có thể chồng nhiều tầng hồi quy:
+Multiple recurrent layers:
 
 ```text
-chuỗi đầu vào
-→ tầng RNN 1
-→ tầng RNN 2
+sequence
+→ RNN layer 1
+→ RNN layer 2
 → ...
 ```
 
-Khi đó đồ thị vừa sâu theo thời gian vừa sâu theo số tầng, khiến tối ưu khó hơn. Dropout, kết nối tắt (residual connection) và các kỹ thuật chuẩn hóa có thể giúp ổn định quá trình huấn luyện.
+Depth across time + layers makes optimization harder. Dropout/residual/norm variants help.
 
-## Nút thắt biểu diễn chuỗi
+## Sequence bottleneck
 
-Trong mô hình nhiều-đến-một (many-to-one), trạng thái ẩn cuối `h_T` thường phải tóm tắt toàn bộ chuỗi. Khi chuỗi dài, việc ép mọi thông tin vào một vector kích thước cố định tạo ra **nút thắt thông tin (information bottleneck)**.
+Many-to-one model dùng final hidden state `h_T` để summarize entire input. Long sequence information phải compress vào fixed vector.
 
-Các mô hình dịch máy encoder–decoder thời kỳ đầu gặp rõ vấn đề này. Attention giải quyết một phần bằng cách cho bộ giải mã truy cập trực tiếp nhiều trạng thái của bộ mã hóa thay vì chỉ dựa vào một vector cuối cùng.
+Early seq2seq translation suffered this bottleneck. Attention solves by allowing decoder access all encoder states rather than one final state.
 
-## Điểm mạnh của RNN
+## RNN strengths
 
-RNN xử lý luồng dữ liệu từng bước và duy trì một trạng thái có kích thước cố định cho mỗi tầng. Khi suy luận trực tuyến, mô hình có thể cập nhật trạng thái khi dữ liệu mới đến mà không cần giữ toàn bộ lịch sử đầu vào trong bộ nhớ.
+RNN processes streaming input incrementally with constant state size per layer. Inference per new timestep can be efficient without storing all past activations (beyond state).
 
-Đặc tính này phù hợp với một số bài toán chuỗi thời gian, âm thanh trực tuyến, thiết bị biên và hệ thống cần độ trễ thấp.
+This is useful edge/online time-series/audio contexts.
 
-## Hạn chế của RNN so với Transformer
+## RNN limitations vs Transformer
 
-Trong huấn luyện, trạng thái `h_t` phụ thuộc `h_{t-1}`, nên các bước thời gian khó được tính song song hoàn toàn. Transformer có thể xử lý nhiều vị trí cùng lúc trong một tầng attention.
+Sequential dependency prevents parallel computation across timesteps during training. Transformer computes positions mostly parallel.
 
-Ngoài ra, đường truyền thông tin giữa hai vị trí cách xa nhau trong RNN có độ dài `O(T)` bước hồi quy, trong khi self-attention có thể kết nối trực tiếp hai vị trí trong cùng một tầng. Lợi thế về đường truyền gradient và khả năng song song là những nguyên nhân quan trọng khiến Transformer thống trị nhiều bài toán NLP quy mô lớn.
+Long-range path length in RNN is `O(T)` recurrent steps; self-attention connects positions in one layer.
+
+This compute/optimization advantage drove Transformer dominance in NLP.
 
 ## RNN vẫn còn giá trị
 
-RNN, LSTM và GRU vẫn hữu ích trong nhiều trường hợp như dữ liệu chuỗi thời gian nhỏ hoặc vừa, xử lý streaming, thiết bị nhúng, mô hình có trạng thái liên tục và các miền mà recurrence phù hợp tự nhiên với cấu trúc bài toán.
+RNN/LSTM/GRU remain useful for:
 
-Các **mô hình không gian trạng thái (state-space models)** hiện đại cũng đưa ý tưởng cập nhật trạng thái tuần tự trở lại với thiết kế hiệu quả hơn cho chuỗi dài.
+- small/medium time-series datasets;
+- streaming low-latency models;
+- embedded devices;
+- stateful sequence processing;
+- domains where recurrence is natural.
 
-## Encoder–Decoder dùng RNN
+Modern state-space models also revive recurrent-style efficient inference with better long-range design.
 
-Bộ mã hóa xử lý chuỗi nguồn thành các trạng thái; bộ giải mã sinh chuỗi đích theo từng bước và điều kiện hóa trên thông tin từ bộ mã hóa. Việc bổ sung attention là cầu nối trực tiếp từ kiến trúc RNN encoder–decoder sang các kiến trúc hiện đại hơn.
+## Encoder–Decoder with RNN
 
-Xem [Mô hình Encoder–Decoder](./03_encoder_decoder_models.md) và [Attention](./04_attention.md).
+Encoder processes source sequence to states. Decoder recurrently generates target, conditioned on encoder summary/states.
 
-## Mô hình tư duy
+Adding attention was the key bridge to modern architecture.
+
+Xem [Encoder–Decoder Models](./03_encoder_decoder_models.md) và [Attention](./04_attention.md).
+
+## Mental Model
 
 ```text
-RNN  = liên tục cập nhật một trạng thái nén của quá khứ
-LSTM = trạng thái + các cổng học được để giữ, ghi và đọc thông tin
-GRU  = cơ chế cập nhật trạng thái có cổng nhưng gọn hơn LSTM
+RNN  = continuously update compressed state
+LSTM = state + learned gates controlling write/keep/read
+GRU  = simplified gated state update
 ```
 
-## Những hiểu lầm thường gặp
+## Common Misconceptions
 
-### “LSTM có thể nhớ vô hạn”
+### “LSTM remembers indefinitely”
 
-Không. Các cổng giúp duy trì thông tin tốt hơn, nhưng năng lực biểu diễn, nhiễu, độ dài chuỗi và quá trình tối ưu vẫn giới hạn trí nhớ thực tế.
+Gates improve retention, but capacity/noise/optimization still limit long-range memory.
 
-### “GRU ít tham số hơn nên luôn tốt hơn”
+### “GRU always faster and therefore better”
 
-GRU thường rẻ hơn về tính toán, nhưng chất lượng phụ thuộc cấu trúc dữ liệu và bài toán.
+Fewer gates/parameters often cheaper, but performance task-dependent.
 
-### “RNN đã lỗi thời vì có Transformer”
+### “RNN obsolete because Transformer exists”
 
-Transformer thống trị nhiều bài toán chuỗi quy mô lớn, nhưng recurrence vẫn có lợi khi cần streaming hoặc bị giới hạn tài nguyên.
+Transformer dominates many large sequence tasks, but recurrence remains useful under streaming/compute constraints.
 
-### “Trạng thái ẩn là bộ nhớ có thể đọc như văn bản”
+### “Hidden state is human-readable memory”
 
-Không. Nó là một vector biểu diễn phân tán được học từ dữ liệu, không phải bộ nhớ ký hiệu tường minh.
+It is distributed learned vector state, not explicit symbolic memory.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-RNN sử dụng trực tiếp [Lan truyền ngược](../05_neural_networks/04_backpropagation.md), [cắt gradient và bộ tối ưu](../05_neural_networks/05_gradient_descent_and_optimizers.md), đồng thời kế thừa ý tưởng trạng thái từ mô hình chuỗi. Attention xuất hiện một phần vì việc nén toàn bộ lịch sử vào trạng thái hồi quy cố định trở thành nút thắt.
+RNN applies [Backpropagation](../05_neural_networks/04_backpropagation.md), [Gradient Clipping](../05_neural_networks/05_gradient_descent_and_optimizers.md) and sequence state ideas. Attention emerges specifically because fixed recurrent state becomes bottleneck.

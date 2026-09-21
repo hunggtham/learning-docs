@@ -1,215 +1,188 @@
-# Dữ liệu Tổng hợp
+# Synthetic Data
 
-**Dữ liệu tổng hợp (synthetic data / 합성 데이터)** là dữ liệu được tạo bởi simulator, rule hoặc generative model thay vì thu trực tiếp từ hiện tượng thật. Nó hữu ích để tăng coverage, hỗ trợ privacy, tạo rare scenario hoặc bootstrap label, nhưng không phải “dữ liệu miễn phí” vì synthetic data luôn kế thừa assumption và bias của generator.
+**Synthetic data (합성 데이터 / dữ liệu tổng hợp)** là data được tạo bởi simulator, rules hoặc generative model thay vì thu trực tiếp từ phenomenon thật. Nó hữu ích để tăng coverage, bảo vệ privacy, tạo rare scenarios hoặc bootstrap labels, nhưng không phải “data miễn phí” vì synthetic data luôn kế thừa assumptions của generator.
 
-## Các nguồn Synthetic Data
+## Các nguồn synthetic data
 
 ```text
 rule-based generation
 simulation / digital twin
-generative model
-text do LLM tạo
-ảnh render
-procedural environment
-counterfactual transformation
+generative models
+LLM-generated text
+rendered images
+procedural environments
+counterfactual transformations
 ```
 
-Mỗi nguồn có mức fidelity và failure mode khác nhau.
+Mỗi source có fidelity và failure modes khác.
 
 ## Simulation
 
-Trong Robotics hoặc Autonomous Driving, simulator có thể tạo gần như không giới hạn trajectory, image và sensor data.
+Robotics/autonomous driving có thể generate unlimited trajectories/images trong simulator.
 
 Ưu điểm:
 
-- label có thể chính xác theo simulator state;
-- rare hoặc dangerous case rẻ hơn nhiều để tạo;
-- kiểm soát đầy đủ condition.
+- labels exact từ simulator state;
+- rare/dangerous cases cheap;
+- full control conditions.
 
-Nhược điểm lớn nhất là **khoảng cách mô phỏng–thực tế (sim-to-real gap)**. Renderer, physics engine hoặc sensor model không hoàn hảo nên distribution vẫn lệch production.
+Nhược điểm: **sim-to-real gap**. Renderer/physics/sensor model không perfect.
 
 ## Domain Randomization
 
-**Domain randomization** thay đổi ngẫu nhiên texture, lighting, camera hoặc physics parameter để buộc model học structure bền vững hơn thay vì overfit vào một simulator cụ thể.
+Randomize textures, lighting, camera, physics parameters để force model learn invariant structure rather than overfit one simulator look.
 
-Mục tiêu không nhất thiết là làm simulation photorealistic nhất, mà là bao phủ đủ variation để model generalize sang real domain.
+Goal không phải make simulation photorealistic nhất, mà cover real domain sufficiently.
 
-## Synthetic Data từ Generative Model
+## Generative Synthetic Data
 
-Diffusion model hoặc LLM có thể tạo example mới. Một số use case:
+Diffusion/LLM can produce new examples. Use cases:
 
-- augment rare class;
-- tạo instruction–response pair;
-- tạo paraphrase;
-- mô phỏng edge case;
-- tạo sample có cấu trúc gần giống dữ liệu thật.
+- augment rare classes;
+- generate instruction-response pairs;
+- create paraphrases;
+- simulate edge cases;
+- anonymized-like samples.
 
-Tuy nhiên generated data luôn phản ánh training distribution của generator.
+But generated data reflects generator training distribution.
 
-## Self-Instruct và Synthetic Instruction
+## Self-Instruct / Synthetic Instructions
 
-LLM có thể tự tạo task rồi tự tạo answer để scale instruction-tuning data.
+LLM can generate tasks then answers, scaling instruction-tuning data.
 
-Pipeline điển hình:
+Pipeline:
 
 ```text
-seed task
-→ sinh candidate instruction
-→ lọc / deduplicate
-→ sinh response
-→ quality judge / human audit một phần
+seed tasks
+→ generate candidate instructions
+→ filter/deduplicate
+→ generate responses
+→ quality judge/human sample audit
 ```
 
-Rủi ro là error có thể tích lũy, và model family có thể truyền lại chính blind spot của nó cho student model.
+Risk: errors compound and model family may teach its own blind spots.
 
 ## Teacher–Student Distillation
 
-Một model mạnh đóng vai teacher có thể tạo label hoặc response cho model nhỏ hơn.
+Strong model labels/generates training data for smaller model. Student approximates teacher behavior, not necessarily ground truth.
 
-Student học xấp xỉ behavior của teacher, không phải tự động học ground truth tuyệt đối. Chất lượng cuối cùng bị giới hạn bởi teacher và filtering pipeline.
+Quality ceiling tied to teacher + filtering.
 
-## Sinh Rare Event
+## Rare Event Generation
 
-Fraud, failure hoặc incident nghiêm trọng thường hiếm. Synthetic generation có thể tăng coverage nhưng nếu rare case được tạo quá phi thực tế, model sẽ học artifact phân biệt “synthetic” và “real” thay vì học phenomenon thật.
+Fraud/failure cases rare. Synthetic generation can balance training, but if synthetic rare cases unrealistic model learns artifacts separating “synthetic” from “real” rather than true phenomenon.
 
-Cần đánh giá realism và luôn giữ real validation data làm mốc.
+Need realism evaluation and mixed real data.
 
-## Động cơ Privacy
+## Privacy Motivation
 
-Synthetic record có thể giảm việc expose trực tiếp record thật, nhưng privacy không tự động được bảo đảm.
+Synthetic records may reduce direct exposure of real individuals, but privacy is not automatic.
 
-Generator vẫn có thể memorize và reproduce training sample. Nếu privacy là yêu cầu nghiêm ngặt, cần attack test hoặc formal mechanism như **Differential Privacy (DP)**.
+Generator can memorize and reproduce training records. Privacy needs attacks/tests or formal mechanisms like Differential Privacy.
 
-## Liên hệ với Differential Privacy
+## Differential Privacy Connection
 
-DP training giới hạn ảnh hưởng của từng training record lên model. Synthetic data sinh từ model được train bằng DP có thể kế thừa một số guarantee chính thức dưới các assumption nhất định.
-
-Ordinary synthetic data không có guarantee này chỉ vì nó “không phải raw record”.
+DP training limits influence of any one training record. Synthetic data generated from DP-trained model can inherit formal privacy guarantees under assumptions, unlike ordinary synthetic data.
 
 ## Statistical Fidelity
 
-Với tabular synthetic data, nên so sánh:
+For tabular synthetic data, compare:
 
-- marginal distribution;
-- correlation;
-- conditional distribution;
-- rare-category frequency;
-- temporal pattern;
+- marginals;
+- correlations;
+- conditional distributions;
+- rare category frequency;
+- temporal patterns;
 - downstream model utility.
 
-Khớp histogram đơn giản không chứng minh joint distribution đã đúng.
+Matching simple histograms does not guarantee joint fidelity.
 
 ## Utility Evaluation
 
-Một cách đánh giá thực dụng là **Train Synthetic, Test Real (TSTR)**:
+Train on synthetic, test on **real holdout**. This TSTR (Train Synthetic Test Real) style evaluation measures whether synthetic captures task-relevant structure.
 
-```text
-train trên synthetic data
-→ test trên real holdout
-```
-
-Cách này kiểm tra synthetic data có giữ được task-relevant structure hay không.
-
-Nên đồng thời so sánh model train trên real-only với model train trên real + synthetic.
+Also compare model trained real vs real+synthetic.
 
 ## Diversity
 
-Generator có thể bị mode collapse hoặc tạo nhiều near-duplicate.
+Generator mode collapse/low diversity produces many near-duplicates. Count alone overstates effective sample size.
 
-Khi đó số lượng sample lớn chỉ làm tăng row count chứ không tăng effective diversity. Cần deduplication và diversity metric.
+Deduplication and diversity metrics needed.
 
-## Tỷ lệ Synthetic-to-Real
+## Synthetic-to-Real Ratio
 
-Dùng quá nhiều synthetic data có thể kéo model về artifact của generator.
-
-Không có tỷ lệ universal. Nên chọn dựa trên real validation performance và theo dõi domain shift giữa synthetic với real data.
+Too much synthetic data can shift model toward generator artifacts. Optimal ratio task-dependent; monitor real validation performance.
 
 ## Distribution Steering
 
-Synthetic generator có thể cố ý tăng coverage cho subgroup hoặc category hiếm.
-
-Tuy nhiên ép training distribution thành uniform không đồng nghĩa deployment prior cũng uniform. Training balancing và probability calibration cần được xử lý như hai bài toán khác nhau.
+Synthetic generator can intentionally rebalance subgroup/category coverage. But forcing uniform distribution may no longer match deployment prior. Separate training balancing from probability calibration.
 
 ## Counterfactual Data Augmentation
 
-Có thể thay đổi một thuộc tính trong khi cố giữ label semantics, ví dụ:
+Modify one attribute while preserving label semantics:
 
 ```text
 he ↔ she
-thay background color
+background color change
 style transfer
 ```
 
-Cách này hữu ích để phá shortcut, nhưng counterfactual phải còn plausible và không vô tình thay đổi target concept.
+Useful to break shortcuts, but generated counterfactual must remain plausible and not unintentionally alter target.
 
 ## Adversarial Synthetic Data
 
-Có thể tạo hard negative hoặc red-team prompt gần decision boundary để tăng robustness.
+Generate hard negatives or red-team prompts near model decision boundary. This can strengthen robustness, but generator may overfocus known failure modes.
 
-Nhưng generator có thể chỉ tập trung vào failure mode đã biết và bỏ sót vùng hoàn toàn chưa được khám phá.
+## Synthetic Evaluation Sets
 
-## Synthetic Evaluation Set
-
-Generated benchmark giúp mở rộng scenario nhanh, nhưng nếu cùng một model family vừa sinh test case vừa chấm điểm, evaluation dễ trở thành vòng lặp khép kín.
-
-Cần real/human anchor để hiệu chỉnh.
+Generated benchmarks scale scenario creation, but using LLM to both generate and judge can create circularity. Keep human/real anchors.
 
 ## Data Contamination
 
-Khi web ngày càng chứa nhiều nội dung AI-generated, foundation model tương lai có thể ingest synthetic data mà không biết.
+As web fills with AI-generated content, future foundation-model training may ingest synthetic data unknowingly. Repeated model-generated distributions can narrow diversity or amplify errors.
 
-Lặp lại model-generated distribution qua nhiều thế hệ có thể thu hẹp diversity hoặc khuếch đại lỗi. Provenance vì vậy ngày càng quan trọng.
+Provenance becomes increasingly important.
 
-## Trực giác về Model Collapse
+## Model Collapse Intuition
 
-Nếu synthetic generation dần thay thế real signal qua nhiều generation mà không có dữ liệu thật mới, phần tail của distribution có thể bị xói mòn.
+If generations replace real data over repeated generations without fresh real signal, distribution tails may erode. Exact behavior depends setup, but principle: synthetic feedback loop can lose information.
 
-Behavior chính xác tùy setup, nhưng nguyên lý bền vững là: feedback loop chỉ gồm synthetic data có thể làm mất thông tin.
+## Watermark / Metadata
 
-## Watermark và Metadata
+Synthetic media can carry provenance metadata/watermarks. Metadata can be stripped; watermark robust detection is probabilistic, not perfect.
 
-Synthetic media có thể mang provenance metadata hoặc watermark.
+## Simulation Labels vs Real Labels
 
-Tuy nhiên metadata có thể bị xóa, còn watermark detection thường chỉ là probabilistic signal chứ không phải proof hoàn hảo.
+Simulator gives exact internal state, but mapping to real sensor semantics may differ. Perfect simulated ground truth does not mean perfect real-world relevance.
 
-## Label trong Simulation và Label ngoài Thực tế
+## Example: Document OCR
 
-Simulator có thể cung cấp internal state chính xác, nhưng mapping từ simulated state sang real sensor semantics vẫn có thể khác.
+Synthetic text rendered with many fonts/backgrounds gives exact transcription/bounding boxes. Useful pretraining. But real scans add fold, glare, handwriting, compression; real fine-tuning still needed.
 
-“Perfect simulated ground truth” không đồng nghĩa “perfect real-world relevance”.
+## Example: Code Data
 
-## Ví dụ: Document OCR
+LLM-generated code can create exercises/solutions/tests. But compiler/test execution should verify, because syntactically plausible code may be wrong/insecure.
 
-Có thể render synthetic document với nhiều font và background để có exact transcription, bounding box hoặc layout annotation.
+## Mental Model
 
-Đây là dữ liệu pretraining rất hữu ích. Nhưng real scan còn có fold, glare, handwriting, compression và camera distortion nên vẫn cần real fine-tuning hoặc evaluation.
+> **Synthetic data là output của một model về world. Training trên synthetic nghĩa là học từ assumptions của world-model đó; giá trị đến từ controllability, không phải vì synthetic inherently truthful.**
 
-## Ví dụ: Code Data
+## Common Misconceptions
 
-LLM có thể tạo exercise, solution và test case cho code.
+### “Synthetic data solves privacy”
 
-Tuy nhiên output nên được compiler, unit test hoặc static analysis verify vì code trông hợp lệ về syntax vẫn có thể sai hoặc không an toàn.
+Not automatically; memorization/re-identification possible.
 
-## Mô hình tư duy
+### “More synthetic samples always increase diversity”
 
-> **Synthetic data là output của một mô hình về thế giới. Train trên synthetic nghĩa là học từ assumption của world-model đó; giá trị lớn nhất đến từ khả năng kiểm soát, không phải vì synthetic tự nhiên đúng hơn real data.**
+Generator may output near-duplicates/mode bias.
 
-## Những nhầm lẫn thường gặp
+### “If synthetic looks realistic to human, it is statistically correct”
 
-### “Synthetic data giải quyết privacy”
+Visual plausibility does not guarantee task-relevant joint distribution.
 
-Không tự động. Memorization và re-identification vẫn có thể xảy ra.
+## Knowledge Connection
 
-### “Càng nhiều synthetic sample thì diversity càng cao”
+Synthetic data connects Generative AI, Simulation, Privacy, RL environments and Data Governance.
 
-Không. Generator có thể tạo near-duplicate hoặc mode bias.
-
-### “Synthetic data nhìn giống thật thì chắc chắn statistically correct”
-
-Không. Visual plausibility không bảo đảm joint distribution liên quan tới task đã đúng.
-
-## Liên kết kiến thức
-
-Synthetic data nối Generative AI, Simulation, Privacy, Reinforcement Learning Environment và Data Governance.
-
-Xem tiếp: [Quản trị Dữ liệu](./08_data_governance.md).
+Xem tiếp: [Data Governance](./08_data_governance.md).

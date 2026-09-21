@@ -1,17 +1,17 @@
-# Gán nhãn Dữ liệu
+# Data Labeling
 
-**Gán nhãn dữ liệu (data labeling / 데이터 라벨링)** biến các raw example thành supervision signal mà mô hình dùng để tối ưu. Label không tự nhiên xuất hiện từ thực tế rồi rơi thẳng vào dataset; nó thường được tạo bởi rule, human judgment, downstream outcome hoặc một model khác. Vì vậy label luôn có ngữ nghĩa, độ bất định và một quy trình tạo phía sau.
+**Data labeling (데이터 라벨링 / gán nhãn dữ liệu)** biến raw examples thành supervision signal mà model tối ưu. Label không tự nhiên rơi từ reality xuống dataset; nó được tạo bởi rule, human judgment, downstream outcome hoặc model khác. Vì vậy label luôn có semantics, uncertainty và process phía sau.
 
-## Ground Truth không phải lúc nào cũng Tuyệt đối
+## Ground Truth không luôn tuyệt đối
 
-Một số label gần như deterministic:
+Một số label gần deterministic:
 
 ```text
-invoice total = numeric field chính xác
-object class = catalog ID đã biết
+invoice total = exact numeric field
+object class = known catalog ID
 ```
 
-Nhưng nhiều label mang tính chủ quan hoặc latent:
+Nhưng nhiều labels subjective/latent:
 
 ```text
 toxicity
@@ -22,37 +22,37 @@ helpfulness
 image quality
 ```
 
-Trong những trường hợp này, disagreement giữa annotator có thể phản ánh ambiguity thật của task chứ không đơn giản là ai đó “gán nhãn sai”.
+Trong các case này, disagreement giữa annotators có thể phản ánh ambiguity thật, không chỉ annotator “sai”.
 
-## Định nghĩa Label
+## Label Definition
 
-Trước khi annotation, cần có specification rõ:
+Trước annotation cần specification:
 
-- label đại diện cho điều gì;
-- ranh giới positive/negative;
-- edge case;
-- lựa chọn unknown hoặc abstain;
+- label nghĩa là gì;
+- positive/negative boundary;
+- edge cases;
+- unknown/abstain option;
 - temporal cutoff;
-- quy tắc multi-label;
-- example và counterexample.
+- multi-label rules;
+- examples/counterexamples.
 
-Nếu guideline mơ hồ, mô hình sẽ học chính sự không nhất quán đó.
+Không có guideline rõ, model sẽ học inconsistency.
 
-## Label dựa trên Outcome
+## Outcome Labels
 
-Label có thể đến từ một sự kiện xảy ra trong tương lai:
+Labels có thể đến từ future event:
 
 ```text
-customer churn trong 30 ngày
-transaction trở thành chargeback
-loan default trong 12 tháng
+customer churned within 30 days
+transaction became chargeback
+loan defaulted within 12 months
 ```
 
-Cần định nghĩa **cửa sổ quan sát (observation window)** và thời điểm label đủ trưởng thành. Nếu tạo training set quá sớm, nhiều sample chưa kịp phát sinh outcome sẽ bị gán false negative.
+Need define observation window và label maturity. Training too early creates false negatives vì outcome chưa có đủ time xuất hiện.
 
-## Proxy Label
+## Proxy Labels
 
-Khi mục tiêu thật khó đo trực tiếp, ta thường dùng proxy:
+Khi true goal khó measure, ta dùng proxy:
 
 ```text
 click → interest
@@ -60,87 +60,79 @@ watch time → satisfaction
 manual review result → fraud truth
 ```
 
-Rủi ro cốt lõi là **proxy mismatch**. Mô hình tối ưu proxy được đưa vào dữ liệu, không tự hiểu concept thật mà designer mong muốn.
+Proxy mismatch là core risk. Model optimize proxy, không intended concept.
 
 ## Human Annotation
 
-Một human-labeling pipeline đáng tin cần ít nhất:
+Human labeling pipeline cần:
 
 ```text
-instruction
-training / calibration
+instructions
+training/calibration
 annotation UI
-quality check
+quality checks
 adjudication
 feedback loop
 ```
 
-UX của tool ảnh hưởng trực tiếp tới label quality. Nếu giao diện crop mất context hoặc ẩn metadata cần thiết, annotator không thể đưa ra label chính xác dù guideline tốt.
+Tool UX ảnh hưởng label quality. Nếu UI crop mất context, annotator không thể label đúng.
 
-## Mức độ Đồng thuận giữa Annotator
+## Inter-Annotator Agreement
 
-Agreement đo mức độ nhất quán giữa người gán nhãn. Percent agreement đơn giản có thể trông cao giả tạo khi một class chiếm đa số.
-
-Với hai annotator, **Cohen’s kappa** có thể dùng:
+Agreement measures consistency. Simple percent agreement bị inflated khi one class dominant. Cohen’s kappa cho two annotators:
 
 \[
 \kappa=\frac{p_o-p_e}{1-p_e}
 \]
 
-Trong đó `p_o` là agreement quan sát được và `p_e` là agreement kỳ vọng do ngẫu nhiên.
+trong đó `p_o` observed agreement, `p_e` expected by chance.
 
-Agreement thấp có thể báo hiệu guideline chưa rõ hoặc task vốn có tính chủ quan cao.
+Low agreement có thể signal guideline unclear hoặc task inherently subjective.
 
 ## Majority Vote
 
-Khi có nhiều label cho cùng sample, majority vote là cách tổng hợp đơn giản nhưng nó làm mất uncertainty và mặc định mọi annotator đáng tin như nhau.
+Multiple labels có thể aggregate bằng majority vote, nhưng điều này discards uncertainty và assumes annotators equally reliable.
 
-Các lựa chọn khác gồm:
+Alternative:
 
-- weighted annotator;
-- probabilistic label model;
+- weighted annotators;
+- probabilistic label models;
 - adjudicator;
 - soft target distribution.
 
-## Soft Label
+## Soft Labels
 
-Nếu 7/10 annotator chọn A và 3/10 chọn B, có thể giữ target distribution:
+Nếu 7/10 annotators chọn A, 3/10 chọn B, target distribution:
 
 \[
 y=[0.7,0.3]
 \]
 
-thay vì ép thành hard label `[1,0]`.
+có thể preserve ambiguity tốt hơn hard majority `[1,0]`.
 
-Soft label giữ lại thông tin về ambiguity và disagreement tốt hơn trong những task có nhiều interpretation hợp lý.
+## Expert vs Crowd Labels
 
-## Expert Label và Crowd Label
+Domain tasks như radiology/legal review cần expert knowledge. Crowd labels cheaper nhưng may lack domain competence.
 
-Các domain như radiology hoặc legal review thường cần expert knowledge. Crowd labeling rẻ hơn nhưng có thể thiếu competence chuyên ngành.
-
-Một pipeline lai có thể để crowd xử lý case dễ, còn expert adjudicate những case khó hoặc disagreement cao.
+Hybrid pipeline có thể crowd easy cases, expert adjudicate difficult cases.
 
 ## Annotation Bias
 
-Annotator mang theo background văn hóa, kiến thức và prior riêng. Người thiết kế guideline cũng encode value và assumption vào định nghĩa label.
-
-Diverse annotator pool cùng subgroup analysis giúp phát hiện những vùng disagreement có hệ thống thay vì chỉ nhìn overall agreement.
+Annotators bring cultural/contextual priors. Guideline designer cũng encode values. Diverse annotator pool + subgroup analysis helps expose disagreements.
 
 ## Blind Annotation
 
-Nếu annotator nhìn thấy model prediction trước khi label, **anchoring bias** có thể xảy ra.
-
-Khi xây independent gold data, UI nên cân nhắc ẩn model output để human judgment không bị kéo theo dự đoán hiện tại của hệ thống.
+Nếu annotator biết model prediction, anchoring bias có thể xảy ra. Human review UI nên cân nhắc hide model output khi collecting independent ground truth.
 
 ## Active Learning
 
-Trong **học chủ động (active learning)**, model chọn những sample bất định hoặc có giá trị thông tin cao để đưa cho con người label.
+Model chọn examples uncertain/high-value để label. This reduces cost but sample becomes model-dependent.
 
-Cách này có thể giảm chi phí annotation, nhưng tập sample được chọn lại phụ thuộc chính model hiện tại. Vì vậy vẫn nên giữ một phần random audit hoặc exploration để không bỏ sót systematic blind spot.
+Need include exploration/random audit samples để không miss systematic blind spots.
 
 ## Weak Supervision
 
-**Weak supervision** tạo label từ heuristic, rule hoặc knowledge source thay vì human annotation trực tiếp, ví dụ:
+Labels generated by heuristics/rules/knowledge bases:
 
 ```text
 keyword rule
@@ -149,54 +141,48 @@ existing classifier
 business rule
 ```
 
-Nhiều labeling function có nhiễu có thể được kết hợp bằng probabilistic model. Cách này scale tốt nhưng vẫn kế thừa bias của rule.
+Multiple noisy labeling functions có thể combine probabilistically.
+
+Weak supervision scales but inherits rule bias.
 
 ## Pseudo-Labeling
 
-Một mô hình được train trên labeled data có thể dự đoán unlabeled data, sau đó dùng các prediction có confidence cao làm **pseudo-label**.
+Train model on labeled data, predict unlabeled data, use confident predictions as pseudo-labels.
 
-Rủi ro chính là self-reinforcing error: model sai ở đâu có thể tiếp tục tạo thêm data sai cùng hướng. Thresholding, teacher model và consistency method giúp giảm nhưng không loại bỏ hoàn toàn vấn đề này.
+Risk: self-reinforcing mistakes. Thresholding, teacher models và consistency methods reduce but not eliminate.
 
-## Label do LLM tạo
+## LLM-Generated Labels
 
-LLM có thể gán nhãn text hoặc image ở quy mô lớn, nhưng nên xem nó như một **annotator có nhiễu**, không phải oracle.
+LLMs can label text/image at scale. Need treat as noisy annotator:
 
-Cần:
-
-- benchmark với human gold set;
-- kiểm tra subgroup bias;
-- lưu model version và prompt version;
-- tránh vòng lặp nơi cùng một model family vừa tạo label vừa tự đánh giá label đó.
+- benchmark against human gold set;
+- inspect subgroup bias;
+- record model/version/prompt;
+- avoid circular evaluation where same model family generates and judges labels.
 
 ## Label Leakage
 
-Quy trình annotation có thể vô tình dùng thông tin không có sẵn tại thời điểm inference.
+Annotation process may use information unavailable at inference. Example fraud analyst sees final chargeback status while labeling suspiciousness at transaction time.
 
-Ví dụ analyst nhìn thấy chargeback cuối cùng rồi dùng thông tin đó để gán nhãn “suspicious at transaction time”. Training label lúc này chứa future information.
-
-Câu hỏi quan trọng là:
-
-> **Annotator được phép biết những gì tương ứng với prediction time?**
+Need ask: **labeler được phép biết gì tương ứng prediction time?**
 
 ## Label Noise
 
-Random noise đối xứng và class-dependent noise ảnh hưởng learning algorithm khác nhau. Deep neural network có khả năng cuối cùng memorize cả label sai nếu train đủ lâu.
+Symmetric random noise and class-dependent noise affect algorithms differently. Deep networks can eventually memorize noisy labels.
 
-Early stopping, robust loss, sample reweighting hoặc relabeling có thể giúp, nhưng tốt nhất vẫn là sửa source process nếu có thể.
+Early stopping, robust losses, sample reweighting and relabeling may help, but fixing source process preferable.
 
-## Positive–Unlabeled Learning
+## Positive-Unlabeled Learning
 
-Đôi khi ta chỉ biết chắc một số positive, còn phần unlabeled chứa cả negative thật lẫn positive chưa được phát hiện.
-
-Nếu coi toàn bộ unlabeled là negative, dataset sẽ bị bias. **Positive–Unlabeled learning (PU learning)** mô hình hóa trường hợp này rõ hơn.
+Sometimes positives known but unlabeled pool mixes negatives + undiscovered positives. Treating unlabeled as negative creates bias. PU learning models this explicitly.
 
 ## Multi-Label Annotation
 
-Một object hoặc document có thể thuộc nhiều class cùng lúc. Annotation UI nên cho phép chọn tất cả label phù hợp thay vì ép thành một class duy nhất nếu semantics thực sự là multi-label.
+Objects/documents may belong multiple classes. Interface should allow all applicable labels, not force artificial single class.
 
-## Hierarchical Label
+## Hierarchical Labels
 
-Taxonomy có thể có cấu trúc phân cấp:
+Taxonomy:
 
 ```text
 vehicle
@@ -204,68 +190,62 @@ vehicle
 └── truck
 ```
 
-Annotator đôi khi chỉ chắc chắn ở parent level. Hệ thống nên lưu đúng granularity đó thay vì bắt buộc đoán xuống leaf class.
+Annotators may know parent but not leaf. Store label granularity instead of guessing fine class.
 
-## Span, Box và Mask Label
+## Span/Box/Mask Labels
 
-Label có cấu trúc còn có vấn đề alignment và geometry. Bounding box “tight” hay “loose”, text-span boundary hoặc segmentation contour đều cần guideline rõ.
+Structured labels have geometry/alignment quality. Bounding box guidelines (tight vs loose), text span boundary, segmentation contour all need explicit policies.
 
-Nếu policy annotation không nhất quán, model sẽ học một target geometry không ổn định.
+## Label Versioning
 
-## Versioning cho Label
-
-Taxonomy có thể thay đổi theo thời gian:
+Taxonomy changes:
 
 ```text
 v1: fraud / not fraud
 v2: account takeover / card theft / friendly fraud / clean
 ```
 
-Dataset và model lịch sử phải biết label schema version nào đã được dùng. Thay đổi taxonomy đôi khi đòi hỏi relabeling chứ không chỉ rename field.
+Historical models/datasets must know label schema version. Migration may require relabeling.
 
 ## Gold Set
 
-Nên duy trì một **gold set** chất lượng cao được review kỹ, tách khỏi annotation thông thường.
-
-Không nên liên tục tune guideline và model trực tiếp theo hidden test examples cho tới khi test set trở thành training signal gián tiếp.
+Maintain high-quality carefully reviewed evaluation set separate from routine annotation. Do not repeatedly tune annotator guidelines against hidden test examples until it becomes training by proxy.
 
 ## Annotation QA
 
-Một số kỹ thuật QA gồm:
+Methods:
 
-- hidden known-answer task;
-- overlap giữa nhiều annotator;
-- consistency check;
-- constraint loại impossible label;
-- review sample disagreement cao;
-- drift monitoring theo thời gian.
+- hidden known-answer tasks;
+- overlap between annotators;
+- consistency checks;
+- impossible-label constraints;
+- review of high-disagreement examples;
+- drift monitoring.
 
-## Chi phí và Chất lượng
+## Cost vs Quality
 
-Annotation budget nên tập trung vào vùng bất định, hiếm hoặc có impact cao.
+Annotation budget should prioritize uncertain/high-impact regions. 1 million weak labels may be less valuable than 50k consistent domain-relevant labels.
 
-Một triệu weak label có thể kém giá trị hơn 50 nghìn label nhất quán và đúng domain nếu mục tiêu là production reliability.
+## Mental Model
 
-## Mô hình tư duy
+> **Label là measurement của target concept, không phải concept itself. Chất lượng model bị giới hạn bởi cách target được operationalize và đo.**
 
-> **Label là phép đo của target concept, không phải chính concept đó. Chất lượng mô hình bị giới hạn bởi cách target được operationalize và đo lường.**
+## Common Misconceptions
 
-## Những nhầm lẫn thường gặp
+### “Human label = ground truth”
 
-### “Human label chính là ground truth”
+Human can disagree, miss context or follow flawed guideline.
 
-Không. Human có thể disagreement, thiếu context hoặc làm theo guideline bị lỗi.
+### “Majority vote always creates truth”
 
-### “Majority vote luôn tạo ra truth”
+It can erase valid minority interpretation.
 
-Không. Nó có thể xóa mất interpretation thiểu số nhưng hợp lệ.
+### “LLM labels are free scale”
 
-### “LLM label là cách scale miễn phí”
+They shift annotation error into model/prompt bias and require validation.
 
-Không. Nó chỉ chuyển annotation error sang model bias và prompt bias, nên vẫn cần validation.
+## Knowledge Connection
 
-## Liên kết kiến thức
+Labeling connects measurement theory, HCI, statistics, weak supervision and evaluation.
 
-Gán nhãn dữ liệu nối Measurement Theory, HCI, Statistics, Weak Supervision và Evaluation.
-
-Xem tiếp: [Chất lượng Dữ liệu](./04_data_quality.md).
+Xem tiếp: [Data Quality](./04_data_quality.md).

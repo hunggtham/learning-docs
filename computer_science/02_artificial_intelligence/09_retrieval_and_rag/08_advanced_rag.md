@@ -1,24 +1,24 @@
-# Các mẫu Advanced RAG
+# Advanced RAG Patterns
 
-RAG cơ bản dùng một query, một lượt retrieval và một bước generation. Workload thực tế thường cần cấu trúc phong phú hơn: câu hỏi mơ hồ, bằng chứng nhiều bước, dữ liệu dị thể, tài liệu thay đổi và yêu cầu độ tin cậy cao. **Advanced RAG** không phải một thuật toán duy nhất; nó là tập hợp các mẫu kiến trúc nhằm cải thiện retrieval, chọn bằng chứng và kiểm soát generation.
+Basic RAG uses one query, one retrieval pass and one generation step. Real workloads often need more structure: ambiguous questions, multi-hop evidence, heterogeneous data, changing documents and high reliability. **Advanced RAG** is not one algorithm; it is a collection of architectural patterns for improving retrieval, evidence selection and generation control.
 
-## Viết lại Query
+## Query Rewriting
 
-Đầu vào hội thoại có thể thiếu thông tin nếu tách khỏi lịch sử:
+Conversational input may be underspecified:
 
 ```text
 "còn phí của gói kia thì sao?"
 ```
 
-Một rewrite model có thể dùng lịch sử để tạo query độc lập. Hệ thống tốt nên giữ nguyên ý định ban đầu và log cả hai dạng.
+A rewrite model resolves history into standalone query. Good system preserves original intent and logs both forms.
 
-Bản rewrite không nên âm thầm thêm fact không có trong cuộc trò chuyện.
+A rewrite should not silently add facts not present in conversation.
 
-## Mở rộng Query
+## Query Expansion
 
-Có thể sinh synonym, alias hoặc nhiều cách diễn đạt ngữ nghĩa để tăng recall.
+Generate synonyms/aliases or multiple semantic formulations to increase recall.
 
-Ví dụ:
+Example:
 
 ```text
 "hủy hợp đồng"
@@ -27,72 +27,74 @@ Ví dụ:
 → 해지
 ```
 
-Sau đó hợp nhất kết quả từ các query đã mở rộng. Rủi ro là **trôi chủ đề (topic drift)**, vì vậy expansion nên được giới hạn bằng domain dictionary hoặc reranking.
+Merge results from expanded queries. Risk is topic drift, so expansion should be constrained by domain dictionaries or reranking.
 
 ## Multi-Query Retrieval
 
-Với câu hỏi phức tạp, có thể tạo nhiều query liên quan rồi hợp nhất kết quả. Cách này hữu ích khi một embedding duy nhất không biểu diễn tốt mọi khía cạnh.
+For complex question, generate several related queries and fuse results. This is useful when one embedding cannot represent all aspects equally.
 
 ```text
-câu hỏi người dùng
+user question
 → query A
 → query B
 → query C
-→ retrieve từng query
-→ hợp nhất / rerank
+→ retrieve each
+→ fusion/rerank
 ```
 
 ## HyDE
 
-**Hypothetical Document Embeddings (HyDE)** tạo một câu trả lời hoặc document giả định từ query, embedding văn bản đó rồi tìm document thật nằm gần nó.
+**Hypothetical Document Embeddings (HyDE)** creates a hypothetical answer/document from query, embeds that generated text, then retrieves real documents close to it.
 
-Trực giác là một đoạn giả định dài có thể nằm gần tài liệu relevant hơn query ngắn.
+Intuition: long hypothetical text may land nearer relevant documents than short query.
 
-Rủi ro là văn bản giả định có thể đưa thêm assumption sai và làm retrieval lệch hướng. HyDE phải được đánh giá thực nghiệm, không nên mặc định dùng.
+Risk: hypothetical generation may inject wrong assumptions and drift retrieval.
 
-## Parent–Child Retrieval
+HyDE should be evaluated, not treated as default.
 
-Index child chunk nhỏ để search chính xác, sau đó trả parent context lớn hơn cho generation:
+## Parent-Child Retrieval
+
+Index small child chunks for precise search, then return larger parent context for generation.
 
 ```text
-chunk nhỏ tìm đúng điểm cần thiết
-→ parent section cung cấp điều kiện xung quanh
+small chunk finds needle
+→ parent section supplies surrounding conditions
 ```
 
-Mẫu này đặc biệt hữu ích với manual và policy.
+This is especially effective for manuals/policies.
 
 ## Multi-Vector Retrieval
 
-Một document có thể có nhiều representation:
+One document may have multiple representations:
 
 ```text
-embedding của raw chunk
-embedding của summary
-embedding của title
-embedding của các câu hỏi mà chunk có thể trả lời
+raw chunk embedding
+summary embedding
+title embedding
+questions-the-chunk-can-answer embeddings
 ```
 
-Hệ thống có thể retrieve theo bất kỳ representation nào nhưng vẫn trả về source text gốc.
+Retrieve by any representation but return original source text.
 
-Cách này tách **biểu diễn phục vụ tìm kiếm** khỏi **biểu diễn làm bằng chứng**.
+This separates **search representation** from **evidence representation**.
 
 ## Summary Index
 
-Với document rất dài, có thể xây hệ thống summary phân cấp:
+For very long documents, build hierarchical summaries:
 
 ```text
-summary toàn document
-summary theo section
-leaf chunk
+document summary
+section summaries
+leaf chunks
 ```
 
-Retriever trước tiên route tới document hoặc section liên quan rồi mới search cục bộ.
+Retriever first routes to relevant document/section, then searches locally.
 
-Cách này giảm search space và hỗ trợ câu hỏi tổng quát.
+This reduces search space and supports broad questions.
 
-## Retrieval phân cấp
+## Hierarchical Retrieval
 
-Corpus có thể tổ chức như:
+Corpus can be organized:
 
 ```text
 organization
@@ -102,13 +104,13 @@ organization
 → chunk
 ```
 
-Query được route ở tầng cao trước rồi retrieval ở tầng thấp.
+Query first predicts higher-level route then retrieves lower-level units.
 
-Sai route trở thành failure mode mới, vì vậy nên có fallback global search.
+Routing errors become new failure mode, so fallback global search is useful.
 
-## Routing theo Metadata
+## Metadata Routing
 
-Trước semantic search, hệ thống có thể trích constraint có cấu trúc:
+Before semantic search, detect structured constraints:
 
 ```text
 language=ko
@@ -117,55 +119,55 @@ country=KR
 version=current
 ```
 
-LLM có thể đề xuất filter, nhưng application phải validate giá trị theo schema được phép.
+Route to matching namespace/index. LLM may extract filters, but application validates allowed values.
 
 ## Multi-Hop Retrieval
 
-Một số câu trả lời cần chuỗi nguồn:
+Some answers require chain of sources. Example:
 
 ```text
-Policy nào áp dụng cho product X?
-→ retrieve định nghĩa product
-→ tìm ra policy ID
-→ retrieve các clause của policy
+Which policy applies to product X?
+→ retrieve product definition
+→ discover policy ID
+→ retrieve policy clauses
 ```
 
-Controller lặp có thể dùng evidence trung gian để tạo query tiếp theo.
+An iterative controller can use intermediate evidence to formulate next query.
 
-Khi đó kiến trúc bắt đầu giao thoa với Agent.
+This begins to overlap agent architecture.
 
 ## Graph RAG
 
-Khi quan hệ giữa entity quan trọng, hệ thống có thể xây graph hoặc Knowledge Graph rồi kết hợp graph traversal với text retrieval.
+When relationships between entities matter, build graph or knowledge graph and combine graph traversal with text retrieval.
 
-Phù hợp với:
+Useful for:
 
 ```text
-quan hệ tổ chức
-chuỗi dependency
-quy định và clause
-mạng lưới entity
+organization relationships
+dependency chains
+regulations and clauses
+entity networks
 ```
 
-Graph RAG có giá trị khi cấu trúc quan hệ thực sự rõ; graph không tự động tốt hơn vector retrieval.
+Graph RAG is valuable when relational structure is explicit, not because graph is automatically superior to vectors.
 
 ## SQL + RAG
 
-Dữ liệu có cấu trúc thường nên được query bằng SQL, còn phần giải thích không cấu trúc lấy từ text retrieval.
+Structured data should often be queried with SQL, while unstructured explanation comes from text retrieval.
 
-Ví dụ:
+Example:
 
 ```text
-SQL → giá trị transaction hiện tại
-RAG → policy / giải thích
-LLM → tổng hợp
+SQL → current transaction values
+RAG → policy/explanation
+LLM → synthesize
 ```
 
-Không nên embedding bảng rồi kỳ vọng vector search thực hiện aggregate chính xác.
+Do not embed tables and expect vector search to perform accurate aggregation.
 
-## RAG có công cụ hỗ trợ
+## Tool-Augmented RAG
 
-Retriever có thể chỉ là một tool trong nhiều tool:
+Retriever itself can be one tool among many:
 
 ```text
 web search
@@ -175,46 +177,48 @@ API
 code search
 ```
 
-Router chọn nguồn dữ liệu theo loại câu hỏi. Cách này robust hơn một vector index dùng cho mọi thứ.
+Router chooses data source based on question.
+
+This is more robust than one universal vector index.
 
 ## Corrective RAG
 
-Sau retrieval, hệ thống đánh giá evidence có đủ và relevant không. Nếu không, có thể:
+After retrieval, system evaluates whether evidence is sufficient/relevant. If not:
 
 ```text
 rewrite query
-mở rộng search
-đổi retriever
+broaden search
+switch retriever
 search web
-hỏi làm rõ
+ask clarification
 abstain
 ```
 
-Vòng sửa giúp tránh ép mô hình trả lời khi evidence yếu.
+Correction loop prevents forced answer on weak evidence.
 
-## Mẫu Self-RAG
+## Self-RAG-like Patterns
 
-Mô hình có thể quyết định khi nào cần retrieval và tự đánh giá claim có được support không.
+Model may decide when retrieval is needed and critique whether generated statements are supported.
 
-Tuy nhiên self-evaluation vẫn mang tính xác suất; external evidence check vẫn có giá trị.
+But self-evaluation is probabilistic; external evidence checks still valuable.
 
 ## Adaptive Retrieval
 
-Không phải query nào cũng cần retrieval. Chào hỏi đơn giản hoặc tác vụ transform thuần túy có thể bỏ qua search.
+Not every query needs retrieval. Simple greetings or pure transformation tasks may skip search.
 
-Router có thể dự đoán:
+Router predicts:
 
 ```text
-có cần retrieval không?
-nguồn nào?
-bao nhiêu kết quả?
+retrieve?
+which source?
+how many results?
 ```
 
-Cách này giảm latency/cost nhưng sai route có thể làm mất tri thức cần thiết.
+This saves latency/cost but routing errors can miss necessary knowledge.
 
-## Phân loại Query
+## Query Classification
 
-Có thể phân query thành:
+Classify query into patterns:
 
 ```text
 exact lookup
@@ -225,28 +229,28 @@ calculation
 current data
 ```
 
-Mỗi loại dùng chiến lược retrieval khác nhau.
+Each class gets specialized retrieval strategy.
 
-## Nén Context
+## Context Compression
 
-Chunk sau rerank có thể được nén thành excerpt liên quan query. Điều này giảm token nhưng thêm rủi ro extractor làm mất ngoại lệ quan trọng.
+Reranked chunks can be compressed into query-relevant excerpts. This lowers tokens but introduces extractor risk.
 
-Nên giữ source reference để người dùng có thể mở context đầy đủ.
+Keep source references so user can inspect full context.
 
 ## Evidence Graph
 
-Với câu trả lời từ nhiều nguồn, có thể tạo mapping rõ:
+For multi-source answer, create explicit mapping:
 
 ```text
 claim A ← source 1
 claim B ← source 2 + source 3
 ```
 
-Cách này cải thiện citation và verification.
+This improves citation quality and makes verification easier.
 
-## Giải quyết nguồn mâu thuẫn
+## Conflict Resolution
 
-Nếu hai nguồn bất đồng, mô hình không nên tự “lấy trung bình”. Hãy dùng metadata:
+If two sources disagree, model should not silently average. Use metadata:
 
 ```text
 version
@@ -256,77 +260,77 @@ status
 jurisdiction
 ```
 
-Hệ thống đôi khi nên trình bày xung đột thay vì bịa một câu trả lời duy nhất.
+System may present conflict rather than fabricate single answer.
 
 ## Temporal RAG
 
-Corpus nhạy thời gian cần lọc theo khoảng hiệu lực. Query phải lấy source hợp lệ tại thời điểm được hỏi, không chỉ source mới nhất.
+Time-sensitive corpora need effective-date filtering. Query should retrieve source valid at requested time, not simply newest.
 
-Ví dụ:
+Example:
 
 ```text
 "policy as of 2025-12-01"
 ```
 
-cần metadata về khoảng thời gian có hiệu lực.
+requires temporal validity intervals.
 
 ## Personalized RAG
 
-Retrieval có thể dùng profile, quyền và preference của user. Tuy nhiên personalization không được làm rò dữ liệu chéo người dùng.
+Retrieval can consider user profile/permissions/preferences. But personalization must not leak sensitive cross-user data.
 
-Phải tách tín hiệu personalization khỏi logic authorization.
+Separate personalization signal from authorization logic.
 
 ## Caching
 
-Có thể cache query embedding, retrieval result hoặc final answer. Cache key cần bao gồm:
+Cache query embedding, retrieval results or final answers. Cache key must include:
 
 ```text
 query
-user / tenant scope
+user/tenant scope
 index version
 source version
-model / prompt version
+model/prompt version
 ```
 
-Nếu thiếu, hệ thống có thể trả dữ liệu lỗi thời hoặc rò thông tin giữa user.
+Otherwise stale or cross-user leakage can occur.
 
 ## Observability
 
-Advanced RAG cần trace đầy đủ:
+Advanced RAG needs traces:
 
 ```text
-query gốc
-query đã rewrite
-filter
-ID và score retrieval
-reranker score
-context được chọn
-citation
-output cuối
+original query
+rewritten queries
+filters
+retrieved IDs/scores
+reranker scores
+selected context
+citations
+final output
 ```
 
-Không có trace, việc debug “LLM trả lời sai” dễ biến thành đoán mò.
+Without trace, debugging “LLM trả lời sai” becomes guesswork.
 
-## Mô hình tư duy
+## Mental Model
 
-> Advanced RAG là **điều phối retrieval dưới bất định**. Chỉ nên thêm độ phức tạp khi một failure mode đã được đo cho thấy cần nó.
+> Advanced RAG is **retrieval orchestration under uncertainty**. Complexity should be added only when a measured failure mode justifies it.
 
-## Những hiểu lầm thường gặp
+## Common Misconceptions
 
-### “Advanced RAG nghĩa là phải thêm agent framework”
+### “Advanced RAG means add an agent framework”
 
-Không. Nhiều cải tiến chỉ là kiến trúc retrieval và ranking xác định.
+Không. Many improvements are deterministic retrieval/ranking architecture.
 
-### “Graph RAG luôn tốt hơn vector RAG”
+### “Graph RAG always beats vector RAG”
 
-Không. Nó phụ thuộc cấu trúc quan hệ và loại query.
+Không. It depends on relational structure and query type.
 
-### “Càng nhiều vòng retrieval càng tốt”
+### “More retrieval loops always improve answer”
 
-Không. Nhiều call hơn làm tăng latency, drift và cost.
+No. More calls increase latency, drift and cost.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Advanced RAG là cầu nối từ retrieval pipeline sang [Agents](../10_agents_and_ai_systems/00_from_llm_to_agent.md).
+Advanced RAG is the bridge from retrieval pipeline to [Agents](../10_agents_and_ai_systems/00_from_llm_to_agent.md).
 
 Xem tiếp: [RAG Evaluation](./09_rag_evaluation.md).

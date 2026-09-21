@@ -1,207 +1,207 @@
-# Lý thuyết thông tin cho Trí tuệ nhân tạo
+# Information Theory cho Artificial Intelligence
 
-**Lý thuyết thông tin (Information Theory / 정보이론)** cung cấp ngôn ngữ để định lượng **sự bất định, mức độ bất ngờ và lượng thông tin**. Trong AI, nó giải thích vì sao log-xác suất xuất hiện trong hàm mất mát, vì sao entropy chéo là mục tiêu tự nhiên cho phân loại và mô hình ngôn ngữ, vì sao độ phân kỳ KL đo mức không khớp giữa các phân phối, và vì sao nén dữ liệu có quan hệ sâu với việc học.
+Information Theory (정보이론 / lý thuyết thông tin) cung cấp một language để định lượng **uncertainty, surprise và information**. Trong AI, nó giải thích vì sao log-probability xuất hiện trong loss functions, vì sao cross-entropy là objective tự nhiên cho classification và language modeling, vì sao KL divergence đo discrepancy giữa distributions, và vì sao compression có relationship sâu với learning.
 
-Điểm khởi đầu không phải công thức entropy, mà là một trực giác đơn giản: nếu một sự kiện rất dễ dự đoán xảy ra, ta học được ít điều mới; nếu một sự kiện rất bất ngờ xảy ra, lượng thông tin nhận được lớn hơn. Lý thuyết thông tin biến trực giác này thành toán học.
+Điểm khởi đầu không phải công thức entropy. Ta bắt đầu từ câu hỏi: nếu một event rất predictable xảy ra, ta học được ít điều mới; nếu một event rất bất ngờ xảy ra, ta nhận được nhiều information hơn. Information Theory biến trực giác này thành mathematics.
 
-Xem trước: [Xác suất cho AI](./02_probability_for_ai.md).
+Xem trước: [Probability for AI](./02_probability_for_ai.md).
 
-## Tự thông tin: sự kiện càng hiếm càng mang nhiều thông tin
+## Self-information: event càng hiếm càng informative
 
-Với một sự kiện có xác suất `p(x)`, **tự thông tin (self-information)** hay **độ bất ngờ (surprisal)** là:
+Với event có probability `p(x)`, self-information hoặc surprisal:
 
 \[
 I(x)=-\log p(x)
 \]
 
-Nếu `p(x)=1`, sự kiện chắc chắn và:
+Nếu `p(x)=1`, event chắc chắn và:
 
 \[
 I(x)=0
 \]
 
-Nếu sự kiện hiếm, `p(x)` nhỏ và `-log p(x)` lớn.
+Nếu event hiếm, `p(x)` nhỏ và `-log p(x)` lớn.
 
-Logarit không phải lựa chọn tùy ý. Nó biến xác suất của các sự kiện độc lập thành lượng thông tin cộng được:
+Logarithm không phải lựa chọn arbitrary. Nó biến probability của independent events thành additive information:
 
 \[
 I(x,y)=-\log[p(x)p(y)]=I(x)+I(y)
 \]
 
-Cơ số của log quyết định đơn vị:
+Base của log quyết định unit:
 
-- cơ số 2 → bit;
-- cơ số `e` → nat.
+- base 2 → bits;
+- base `e` → nats.
 
-Trong tối ưu hóa học máy, log tự nhiên thường thuận tiện hơn.
+Trong ML optimization, natural log thường convenient.
 
-## Entropy: độ bất ngờ kỳ vọng
+## Entropy: expected surprise
 
-**Entropy (엔트로피)**:
+Entropy (엔트로피):
 
 \[
 H(X)=-\sum_x p(x)\log p(x)
 \]
 
-là giá trị kỳ vọng của tự thông tin:
+là expected self-information:
 
 \[
 H(X)=\mathbb{E}[-\log p(X)]
 \]
 
-Nếu phân phối hoàn toàn xác định, entropy bằng 0. Nếu `K` kết quả có xác suất bằng nhau:
+Nếu distribution deterministic, entropy bằng 0. Nếu `K` outcomes equally likely:
 
 \[
 H(X)=\log K
 \]
 
-và đây là entropy lớn nhất trong số các phân phối rời rạc trên `K` kết quả.
+và đây là maximum entropy trên `K` discrete outcomes.
 
-Entropy không phải “độ hỗn loạn” theo nghĩa mơ hồ; nó định lượng mức bất định của biến ngẫu nhiên dưới một phân phối xác suất cụ thể.
+Entropy không phải “độ hỗn loạn” theo nghĩa vague. Nó định lượng uncertainty của random variable under a distribution.
 
-## Ví dụ: đồng xu
+## Ví dụ: coin
 
-Với đồng xu cân bằng:
+Fair coin:
 
 \[
 P(H)=P(T)=0.5
 \]
 
-Entropy theo cơ số 2 là:
+Entropy base 2:
 
 \[
 H(X)=1\text{ bit}
 \]
 
-Nếu đồng xu gần như luôn ra mặt ngửa:
+Nếu coin gần như luôn head:
 
 \[
 P(H)=0.99,\quad P(T)=0.01
 \]
 
-entropy nhỏ hơn nhiều vì kết quả dễ dự đoán hơn.
+entropy nhỏ hơn nhiều vì outcome dễ predict.
 
-Một nguồn dữ liệu dễ dự đoán hơn thường có thể nén hiệu quả hơn. Đây là liên kết nền tảng giữa entropy và mã hóa.
+Một source predictable hơn có thể compress tốt hơn trung bình. Đây là connection fundamental giữa entropy và coding.
 
-## Entropy và nén dữ liệu
+## Entropy và compression
 
-Lý thuyết thông tin cho biết entropy đóng vai trò giống một giới hạn dưới đối với độ dài mã trung bình dưới các giả định mã hóa lý tưởng.
+Information Theory cho biết entropy là lower-bound-like quantity cho average code length dưới ideal coding assumptions.
 
-Nếu một token xuất hiện rất thường xuyên, ta muốn dùng mã ngắn. Token hiếm có thể dùng mã dài hơn. Mã Huffman và mã hóa số học hiện thực hóa trực giác này theo các cách khác nhau.
+Nếu token rất common, ta muốn code ngắn. Token rare có thể dùng code dài. Huffman coding và arithmetic coding hiện thực idea này theo các cách khác nhau.
 
-Mô hình ngôn ngữ hiện đại không chỉ là bộ nén, nhưng khả năng gán xác suất cao cho chuỗi quan sát có liên hệ chặt với nén: mô hình dự đoán tốt có âm log-likelihood thấp, và chuỗi có thể được mã hóa hiệu quả hơn nếu dùng phân phối của mô hình.
+Modern language model không chỉ là compressor, nhưng ability assign high probability cho observed sequence liên quan chặt với compression: model predict tốt thì negative log-likelihood thấp và sequence có thể được encoded hiệu quả hơn theo model distribution.
 
-## Entropy chéo
+## Cross-entropy
 
-Giả sử phân phối thật là `p`, còn phân phối của mô hình là `q`.
+Giả sử true distribution là `p`, model distribution là `q`.
 
-**Entropy chéo (cross-entropy)**:
+Cross-entropy:
 
 \[
 H(p,q)=-\sum_x p(x)\log q(x)
 \]
 
-là lượng bit hoặc nat kỳ vọng cần dùng nếu dữ liệu thực đến từ `p` nhưng ta dự đoán hoặc mã hóa bằng `q`.
+Nó là expected number of nats/bits cần nếu data thực đến từ `p` nhưng ta encode/predict bằng `q`.
 
-Nếu mục tiêu là một lớp one-hot `y`, hàm mất mát entropy chéo rút gọn thành:
+Nếu target là one-hot class `y`, cross-entropy loss reduce thành:
 
 \[
 L=-\log q(y)
 \]
 
-Mô hình bị phạt mạnh khi gán xác suất thấp cho lớp đúng.
+Model bị penalty mạnh nếu assign probability thấp cho correct class.
 
-## Entropy chéo trong phân loại
+## Cross-entropy trong classification
 
-Với logit `z`, softmax tạo phân phối:
+Với logits `z`, softmax tạo distribution:
 
 \[
 q_k=\frac{e^{z_k}}{\sum_j e^{z_j}}
 \]
 
-Với nhãn one-hot `y`:
+One-hot target `y`:
 
 \[
 L=-\sum_k y_k\log q_k
 \]
 
-chỉ thành phần của lớp đúng còn lại:
+chỉ giữ term correct class:
 
 \[
 L=-\log q_{true}
 \]
 
-Nếu mô hình gán xác suất `0.9`, hàm mất mát khoảng `0.105`; nếu gán `0.01`, mất mát khoảng `4.605` khi dùng log tự nhiên.
+Nếu model assign 0.9, loss khoảng `0.105`; nếu assign 0.01, loss khoảng `4.605` theo natural log.
 
-Vì vậy entropy chéo không chỉ kiểm tra đúng/sai; nó còn quan tâm mô hình tự tin tới mức nào vào kết quả đúng.
+Cross-entropy vì vậy không chỉ check đúng/sai. Nó quan tâm probability confidence của correct outcome.
 
-## Âm log-likelihood
+## Negative log-likelihood
 
-Nếu các quan sát độc lập khi đã biết tham số:
+Nếu observations independent conditioned on parameters:
 
 \[
 p(D\mid\theta)=\prod_i p(y_i\mid x_i,\theta)
 \]
 
-Ước lượng hợp lý cực đại muốn:
+Maximum likelihood:
 
 \[
 \max_\theta \prod_i p(y_i\mid x_i,\theta)
 \]
 
-Lấy log:
+Taking log:
 
 \[
 \max_\theta \sum_i \log p(y_i\mid x_i,\theta)
 \]
 
-Tương đương tối thiểu hóa **âm log-likelihood (negative log-likelihood)**:
+Tương đương minimize negative log-likelihood:
 
 \[
 \min_\theta -\sum_i \log p(y_i\mid x_i,\theta)
 \]
 
-Hàm mất mát entropy chéo trong phân loại là một dạng của âm log-likelihood.
+Cross-entropy loss trong classification là một form của negative log-likelihood.
 
-## Độ phân kỳ KL
+## KL divergence
 
-**Độ phân kỳ Kullback–Leibler (KL divergence)**:
+Kullback–Leibler divergence:
 
 \[
 D_{KL}(p\|q)=\sum_x p(x)\log\frac{p(x)}{q(x)}
 \]
 
-có liên hệ:
+Có identity:
 
 \[
 H(p,q)=H(p)+D_{KL}(p\|q)
 \]
 
-Vì `H(p)` không phụ thuộc vào mô hình `q`, tối thiểu hóa entropy chéo theo `q` tương đương tối thiểu hóa `D_KL(p||q)`.
+Vì `H(p)` không phụ thuộc model `q`, minimizing cross-entropy theo `q` tương đương minimizing KL `D_KL(p||q)`.
 
-KL luôn không âm và bằng 0 khi hai phân phối giống nhau gần như mọi nơi dưới các điều kiện phù hợp.
+KL luôn non-negative và bằng 0 khi distributions giống nhau almost everywhere dưới conditions phù hợp.
 
-Tuy nhiên KL **không phải khoảng cách theo nghĩa metric**:
+Nhưng KL **không phải distance metric**:
 
 \[
 D_{KL}(p\|q)\neq D_{KL}(q\|p)
 \]
 
-nói chung, và nó không thỏa bất đẳng thức tam giác.
+nói chung, và không thỏa triangle inequality.
 
-## Hướng của KL rất quan trọng
+## Direction của KL matters
 
-`D_KL(p||q)` phạt rất mạnh khi `p` có khối xác suất ở nơi `q` gần 0; nó thúc đẩy `q` bao phủ những vùng mà `p` coi là có thể xảy ra.
+`D_KL(p||q)` penalty rất mạnh khi `p` có mass nơi `q` gần zero. Nó thúc `q` cover support của `p`.
 
-`D_KL(q||p)` có hành vi khác và trong một số bối cảnh có xu hướng tập trung vào một mode thay vì bao phủ nhiều mode.
+`D_KL(q||p)` có behavior khác: nếu `q` tránh regions nơi `p` low, nó có thể tập trung vào một mode.
 
-Trực giác này thường được mô tả bằng “bao phủ mode” và “tìm mode”, nhưng hành vi thực tế còn phụ thuộc vào họ phân phối và bài toán tối ưu hóa, nên không nên xem đây là quy tắc tuyệt đối.
+Đây là intuition “mode covering” vs “mode seeking”, nhưng thực tế phụ thuộc family distributions và optimization context, nên không nên biến thành rule tuyệt đối.
 
-Hướng của KL đặc biệt quan trọng trong suy luận biến phân, chưng cất tri thức và tối ưu hóa chính sách.
+Direction KL xuất hiện quan trọng trong variational inference, distillation và policy optimization.
 
-## Độ phân kỳ Jensen–Shannon
+## Jensen–Shannon divergence
 
-**Độ phân kỳ Jensen–Shannon (JS divergence)** được xây từ KL và phân phối trộn:
+Jensen–Shannon divergence xây từ KL với mixture:
 
 \[
 m=\frac{1}{2}(p+q)
@@ -211,43 +211,43 @@ m=\frac{1}{2}(p+q)
 JS(p,q)=\frac{1}{2}D_{KL}(p\|m)+\frac{1}{2}D_{KL}(q\|m)
 \]
 
-JS đối xứng và bị chặn khi dùng cơ số log phù hợp.
+Nó symmetric và bounded với log base phù hợp.
 
-Lý thuyết GAN cổ điển có liên hệ với JS divergence dưới giả định bộ phân biệt lý tưởng, dù động lực huấn luyện GAN thực tế phức tạp hơn nhiều so với biểu thức lý thuyết này.
+GAN theory cổ điển có connection với JS divergence dưới ideal discriminator assumptions, dù practical GAN training dynamics phức tạp hơn expression lý thuyết này.
 
-## Entropy có điều kiện
+## Conditional entropy
 
-**Entropy có điều kiện (conditional entropy)**:
+Conditional entropy:
 
 \[
 H(Y\mid X)
 \]
 
-đo lượng bất định còn lại về `Y` sau khi đã biết `X`.
+đo uncertainty còn lại về `Y` khi đã biết `X`.
 
-Nếu `X` xác định hoàn toàn `Y`, entropy có điều kiện bằng 0.
+Nếu `X` fully determines `Y`, conditional entropy bằng 0.
 
-Trong học có giám sát, một biểu diễn tốt lý tưởng sẽ giữ lại thông tin liên quan tới mục tiêu và làm giảm bất định về `Y`:
+Trong supervised learning, một representation tốt ideally giảm uncertainty về target:
 
 ```text
-đầu vào thô
-   ↓ biểu diễn
-giữ thông tin liên quan tới nhiệm vụ
+raw input
+   ↓ representation
+retain task-relevant information
    ↓
-dự đoán mục tiêu với ít bất định hơn
+predict target with lower uncertainty
 ```
 
-Đồng thời, biểu diễn có thể loại bỏ chi tiết gây nhiễu không cần cho nhiệm vụ.
+Nhưng representation có thể discard nuisance information không cần cho task.
 
-## Thông tin tương hỗ
+## Mutual information
 
-**Thông tin tương hỗ (mutual information / 상호정보량)**:
+Mutual information (상호정보량):
 
 \[
 I(X;Y)=\sum_{x,y}p(x,y)\log\frac{p(x,y)}{p(x)p(y)}
 \]
 
-Có các dạng tương đương:
+Equivalent forms:
 
 \[
 I(X;Y)=H(X)-H(X\mid Y)
@@ -257,25 +257,27 @@ I(X;Y)=H(X)-H(X\mid Y)
 I(X;Y)=H(Y)-H(Y\mid X)
 \]
 
-Nó đo mức độ việc biết một biến làm giảm bất định về biến còn lại.
+Nó đo mức knowing one variable giảm uncertainty về variable kia.
 
-Nếu `X` và `Y` độc lập:
+Nếu `X` và `Y` independent:
 
 \[
 I(X;Y)=0
 \]
 
-Thông tin tương hỗ có thể nắm bắt phụ thuộc phi tuyến, khác với tương quan vốn chủ yếu đo quan hệ tuyến tính.
+Mutual information capture nonlinear dependency, unlike correlation which is primarily linear measure.
 
-## Thông tin tương hỗ và học biểu diễn
+## Mutual information và representation learning
 
-Ta có thể muốn biểu diễn `Z` giữ thông tin liên quan về mục tiêu `Y` nhưng bỏ bớt chi tiết gây nhiễu từ `X`:
+Ta có thể muốn representation `Z` giữ information relevant về target `Y` nhưng bỏ nuisance details từ `X`.
+
+Conceptually:
 
 \[
 X\rightarrow Z\rightarrow Y
 \]
 
-Ý tưởng **Nút thắt thông tin (Information Bottleneck)** cân bằng giữa:
+Information Bottleneck idea cân bằng:
 
 \[
 I(X;Z)
@@ -287,102 +289,104 @@ và:
 I(Z;Y)
 \]
 
-Tuy nhiên, ước lượng thông tin tương hỗ trong biểu diễn nơ-ron liên tục nhiều chiều là bài toán khó. Information Bottleneck hữu ích như một cách nhìn khái niệm; không nên mặc định rằng mọi mạng sâu thực tế đang tối ưu chính xác đại lượng này.
+Tuy nhiên estimating mutual information trong high-dimensional continuous neural representations là difficult. Information Bottleneck hữu ích như conceptual lens, không nên assume mọi practical deep network explicit optimize exact quantity này.
 
-## Bất đẳng thức xử lý dữ liệu
+## Data Processing Inequality
 
-Nếu có chuỗi Markov:
+Nếu Markov chain:
 
 \[
 X\rightarrow Z\rightarrow Y
 \]
 
-thì việc xử lý `X` qua `Z` không thể tự tạo thêm thông tin về `Y` từ hư không:
+thì processing `X` qua `Z` không thể tạo information về `Y` từ nothing:
 
 \[
 I(X;Y)\ge I(Z;Y)
 \]
 
-khi các giả định Markov phù hợp được thỏa mãn.
+under the Markov assumptions.
 
-Liên hệ với học biểu diễn: phép biến đổi có thể tổ chức lại thông tin để nhiệm vụ phía sau sử dụng dễ hơn, nhưng xử lý xác định không thể tự bổ sung tri thức hoàn toàn vắng mặt ở đầu vào.
+Connection với representation: transformation có thể reorganize information cho downstream task dễ use hơn, nhưng deterministic processing không magically add knowledge absent from input.
 
-Công cụ hoặc truy xuất bên ngoài có thể bổ sung thông tin mới vì chúng đưa thêm nguồn đầu vào vào hệ thống.
+External tools/retrieval có thể add new information vì chúng introduce additional input source.
 
-## Mô hình ngôn ngữ và entropy chéo
+## Language modeling và cross-entropy
 
-Mô hình ngôn ngữ tự hồi quy phân rã:
+Autoregressive language model factorizes:
 
 \[
 p(x_{1:T})=\prod_{t=1}^{T}p(x_t\mid x_{<t})
 \]
 
-Âm log-likelihood:
+Negative log-likelihood:
 
 \[
 -\log p(x_{1:T})=-\sum_t\log p(x_t\mid x_{<t})
 \]
 
-Entropy chéo trung bình trên token đo mức bất ngờ trung bình mà mô hình gán cho token thực tế tiếp theo.
+Average token cross-entropy đo expected surprise model assign cho actual next tokens.
 
-Huấn luyện dự đoán token tiếp theo chính là giảm độ bất ngờ trung bình trên phân phối huấn luyện.
+Training next-token prediction chính là giảm average surprisal trên training distribution.
 
 ## Perplexity
 
-**Perplexity** thường được định nghĩa:
+Perplexity thường defined:
 
 \[
 PP=\exp(H)
 \]
 
-nếu entropy chéo dùng log tự nhiên.
+nếu cross-entropy dùng natural log.
 
-Nếu entropy chéo trung bình là `H`, perplexity có thể được hiểu gần đúng như số nhánh lựa chọn hiệu dụng mà mô hình đang “phân vân”.
+Nếu average cross-entropy là `H`, perplexity có thể interpret roughly như effective branching factor: model “bối rối” tương đương lựa chọn giữa bao nhiêu equally likely options.
 
-Tuy nhiên perplexity chỉ so sánh được khi tokenization, tập dữ liệu và giao thức đánh giá tương thích. Hai mô hình dùng tokenizer khác nhau có thể cho số perplexity không thể so trực tiếp.
+Nhưng perplexity chỉ comparable khi tokenization, dataset và evaluation protocol tương thích. Hai models với tokenizers khác nhau có perplexity numbers không directly comparable.
 
-Perplexity thấp cũng không bảo đảm tính đúng sự thật, tính hữu ích hoặc độ an toàn tốt hơn.
+Perplexity thấp cũng không guarantee better factuality, helpfulness hay safety.
 
-## Entropy của đầu ra mô hình
+## Entropy của model output
 
-Với phân phối token tiếp theo, entropy cao nghĩa khối xác suất trải trên nhiều lựa chọn. Entropy thấp nghĩa phân phối tập trung vào ít lựa chọn hơn.
+Với next-token distribution, entropy cao nghĩa probability mass spread trên nhiều alternatives. Entropy thấp nghĩa model distribution concentrated.
 
-Entropy cao có thể đến từ sự mơ hồ thật sự, thiếu ngữ cảnh hoặc việc mô hình không chắc chắn; không thể suy ra nguyên nhân chỉ từ entropy.
+High entropy có thể do genuine ambiguity, insufficient context hoặc model uncertainty; không thể infer cause chỉ từ entropy.
 
-Temperature thay đổi logit và do đó thay đổi entropy đầu ra:
+Generation temperature thay logits và do đó output entropy:
 
 \[
 p_i(T)=softmax(z_i/T)
 \]
 
-Temperature cao hơn thường làm entropy tăng và đầu ra đa dạng hơn.
+Higher temperature thường tăng entropy, tạo diversity hơn.
 
-## KL trong chưng cất tri thức
+## KL trong knowledge distillation
 
-Mô hình giáo viên tạo phân phối `p_T`, mô hình học viên tạo `p_S`.
+Teacher model tạo distribution `p_T`, student tạo `p_S`.
 
-Chưng cất tri thức có thể tối thiểu hóa:
+Distillation có thể minimize:
 
 \[
 D_{KL}(p_T\|p_S)
 \]
 
-hoặc entropy chéo tương đương.
+hoặc cross-entropy tương đương theo context.
 
-Phân phối mềm của mô hình giáo viên chứa thêm quan hệ giữa các lớp mà nhãn cứng không có. Ví dụ:
+Soft teacher distribution chứa “dark knowledge”: relation giữa non-target classes mà hard label không chứa.
+
+Ví dụ image thật là dog, teacher có thể assign:
 
 ```text
-chó   0.80
-sói   0.12
-cáo   0.05
-xe    0.001
+dog 0.80
+wolf 0.12
+fox 0.05
+car 0.001
 ```
 
-Mô hình học viên học cả cấu trúc này thay vì chỉ nhận nhãn `chó=1`.
+Student học structure này thay vì chỉ target `dog=1`.
 
 ## KL trong Variational Autoencoder
 
-Hàm mục tiêu của VAE gồm thành phần tái tạo và điều chuẩn KL:
+VAE objective gồm reconstruction term và KL regularization:
 
 \[
 \mathcal{L}_{VAE}
@@ -390,112 +394,112 @@ Hàm mục tiêu của VAE gồm thành phần tái tạo và điều chuẩn KL
 -D_{KL}(q(z\mid x)\|p(z))
 \]
 
-KL kéo phân phối hậu nghiệm xấp xỉ về gần phân phối tiên nghiệm, giúp tạo không gian tiềm ẩn có cấu trúc, trong khi thành phần tái tạo giữ thông tin cần thiết để tái tạo dữ liệu.
+KL kéo approximate posterior về prior, tạo organized latent space, trong khi reconstruction giữ information cần tái tạo data.
 
-Đây là ví dụ cụ thể của đánh đổi giữa biểu diễn và điều chuẩn.
+Đây là concrete example của trade-off representation vs regularization.
 
-## KL trong căn chỉnh LLM kiểu RLHF/PPO
+## KL trong RLHF/PPO-style alignment
 
-Khi tối ưu chính sách cho LLM, thường cần tránh để mô hình trôi quá xa khỏi chính sách tham chiếu. Một thành phần phạt KL có thể xuất hiện:
+Policy optimization cho LLM thường cần tránh model drift quá xa reference policy. Một KL penalty có thể xuất hiện:
 
 \[
 Reward'=Reward-\beta D_{KL}(\pi_\theta\|\pi_{ref})
 \]
 
-Ý tưởng là cải thiện phần thưởng theo sở thích nhưng vẫn giữ chính sách tương đối gần hành vi tham chiếu.
+Idea: improve preference reward nhưng giữ policy gần pretrained/reference behavior.
 
-Cách triển khai chính xác khác nhau giữa các thuật toán; mô hình tư duy là KL đóng vai trò một ràng buộc tương tự vùng tin cậy.
+Exact implementation khác nhau giữa algorithms; mental model là KL đóng vai trust-region-like constraint.
 
-## Entropy chéo và làm mềm nhãn
+## Cross-entropy và label smoothing
 
-Nhãn one-hot cứng giả định lớp mục tiêu có xác suất 1 và mọi lớp khác bằng 0. **Làm mềm nhãn (label smoothing)** dùng mục tiêu:
+Hard one-hot targets assume target class probability 1 và others 0. Label smoothing dùng target softened:
 
 \[
 y'_k=(1-\epsilon)y_k+\epsilon/K
 \]
 
-Trong một số bài toán, nó có thể giảm tình trạng quá tự tin và đóng vai trò điều chuẩn.
+Nó có thể reduce overconfidence và act as regularization trong một số settings.
 
-Tuy nhiên làm mềm nhãn cũng thay đổi cách diễn giải hiệu chuẩn và không phải lúc nào cũng cải thiện mọi nhiệm vụ.
+Nhưng smoothing cũng thay interpretation calibration và không universally improve every task.
 
-## Nguyên lý entropy cực đại
+## Maximum entropy principle
 
-Nếu chỉ biết một số ràng buộc, **Nguyên lý Entropy Cực đại (Maximum Entropy Principle)** chọn phân phối có entropy lớn nhất trong số các phân phối thỏa các ràng buộc, nhằm tránh đưa thêm giả định không được bằng chứng hỗ trợ.
+Nếu chỉ biết một số constraints, Maximum Entropy Principle chọn distribution có entropy lớn nhất thỏa constraints, tránh inject assumptions không được support.
 
-Ví dụ, nếu chỉ biết trung bình và phương sai trên trục số thực dưới những điều kiện phù hợp, phân phối Gaussian xuất hiện như phân phối entropy cực đại.
+Ví dụ nếu chỉ biết mean và variance trên real line dưới conditions thích hợp, Gaussian arises as maximum-entropy distribution.
 
-Ý tưởng này nối lý thuyết thông tin với mô hình xác suất: không nên mã hóa mức chắc chắn lớn hơn điều bằng chứng cho phép.
+Idea này nối Information Theory với probabilistic modeling: không nên encode certainty nhiều hơn evidence cho phép.
 
-## Entropy và ra quyết định
+## Entropy và decision making
 
-Entropy đo bất định nhưng không trực tiếp đo thiệt hại kỳ vọng.
+Entropy đo uncertainty, nhưng không trực tiếp đo expected harm.
 
-Hai phân phối có cùng entropy có thể dẫn tới hậu quả rất khác nếu các kết quả có độ hữu dụng hoặc chi phí khác nhau.
+Hai distributions có cùng entropy có thể có very different consequences nếu outcomes có utility/cost khác nhau.
 
-Hệ thống AI cần tách:
+AI system cần tách:
 
 ```text
-độ bất định
-    +
-hậu quả / độ hữu dụng
-    ↓
-quy tắc ra quyết định
+uncertainty measure
+        +
+consequence / utility
+        ↓
+decision rule
 ```
 
-Đây là liên kết với lý thuyết quyết định và an toàn AI.
+Đây là connection với Decision Theory và AI Safety.
 
-## Độ tăng thông tin
+## Information gain
 
-**Độ tăng thông tin (information gain)** có thể hiểu như mức giảm entropy:
+Information gain có thể được nhìn như reduction in entropy:
 
 \[
 IG=H(Y)-H(Y\mid X)
 \]
 
-Trong một cách xây dựng phổ biến, cây quyết định dùng entropy hoặc information gain để chọn điểm chia.
+Decision trees dùng entropy/information gain để chọn split trong một formulation phổ biến.
 
-Học chủ động (active learning) cũng có thể chọn mẫu dự kiến làm giảm bất định nhiều nhất, dù hàm lựa chọn thực tế có nhiều biến thể.
+Active Learning cũng có thể chọn query dự kiến giảm uncertainty/information nhiều nhất, dù practical acquisition functions đa dạng.
 
-## Nén và khái quát hóa: một liên kết cần dùng thận trọng
+## Compression và generalization: connection thận trọng
 
-Có một liên hệ sâu giữa nén và học: quy luật giúp mô tả dữ liệu ngắn hơn, còn mô hình khái quát hóa tốt thường nắm bắt cấu trúc có thể tái sử dụng thay vì chỉ ghi nhớ dữ liệu thô.
+Có một deep connection giữa compression và learning: pattern cho phép description ngắn hơn, còn model generalize thường capture reusable structure thay vì memorize raw data.
 
-**Độ dài mô tả tối thiểu (Minimum Description Length - MDL)** chính thức hóa một góc nhìn: lời giải thích tốt cân bằng độ phức tạp của mô hình với chi phí mã hóa dữ liệu.
+Minimum Description Length (MDL) formalizes một cách nhìn: preferred explanation balances model complexity và data encoding cost.
 
-Tuy nhiên “nén tốt = thông minh” không phải tương đương phổ quát. Mục tiêu nén nào, dữ liệu nào và năng lực phía sau nào đều quan trọng.
+Nhưng “compress tốt = intelligent” không phải equivalence universal. Compression objective nào, data nào và downstream capability nào đều matter.
 
-## Mô hình tư duy (mental model)
+## Mental Model
 
 ```text
-Độ bất ngờ        = sự kiện hiếm mang nhiều thông tin
-Entropy            = bất định / độ bất ngờ kỳ vọng
-Entropy chéo       = chi phí khi dữ liệu từ p nhưng dự đoán bằng q
-KL divergence      = mức không khớp bổ sung giữa hai phân phối
-Thông tin tương hỗ = lượng thông tin chia sẻ giữa các biến
-Perplexity         = dạng mũ của bất định trung bình trên token
-Nén                = khai thác cấu trúc dự đoán được để mã hóa ngắn hơn
+Surprisal          = event hiếm mang nhiều information
+Entropy            = expected uncertainty/surprise
+Cross-entropy      = cost khi predict data từ p bằng model q
+KL divergence      = extra mismatch giữa two distributions
+Mutual information = information shared giữa variables
+Perplexity         = exponential form của average token uncertainty
+Compression        = exploit predictable structure để encode ngắn hơn
 ```
 
-## Các hiểu lầm thường gặp
+## Common Misconceptions
 
-### “Entropy cao nghĩa là dữ liệu xấu”
+### “Entropy cao nghĩa là data xấu”
 
-Không. Entropy chỉ nói mức bất định dưới một phân phối. Nhiệm vụ vốn mơ hồ có thể có entropy cao dù dữ liệu hoàn toàn hợp lệ.
+Không. Entropy chỉ nói uncertainty dưới distribution. Một task intrinsically ambiguous có thể entropy cao nhưng data hoàn toàn valid.
 
-### “KL divergence là khoảng cách”
+### “KL divergence là distance”
 
-KL không đối xứng và không thỏa bất đẳng thức tam giác.
+KL không symmetric và không thỏa triangle inequality.
 
-### “Perplexity thấp nghĩa LLM tốt hơn ở mọi mặt”
+### “Perplexity thấp nghĩa LLM tốt hơn mọi mặt”
 
-Perplexity đo khả năng dự đoán token tiếp theo trên tập đánh giá; nó không trực tiếp đo tính đúng sự thật, khả năng suy luận, độ an toàn hoặc khả năng làm theo chỉ dẫn.
+Perplexity đo next-token predictive fit trên evaluation corpus, không trực tiếp measure factuality, reasoning, safety hoặc instruction following.
 
 ### “Cross-entropy chỉ là công thức loss do framework chọn”
 
-Entropy chéo có thể được suy ra từ likelihood và lý thuyết thông tin. Hiểu nguồn gốc này giúp biết khi nào hàm mất mát phù hợp.
+Nó có derivation từ likelihood và Information Theory; understanding này giúp biết khi nào loss phù hợp.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Lý thuyết thông tin nối [Xác suất](./02_probability_for_ai.md), [Thống kê](./03_statistics_for_ai.md) và [Tối ưu hóa](./06_optimization.md) với các hàm mục tiêu trong học máy. Sau này entropy, cross-entropy, KL và thông tin tương hỗ sẽ quay lại trong cây quyết định, mạng nơ-ron, mô hình ngôn ngữ, VAE, chưng cất tri thức và căn chỉnh.
+Information Theory nối [Probability](./02_probability_for_ai.md), [Statistics](./03_statistics_for_ai.md) và [Optimization](./06_optimization.md) với Machine Learning objectives. Sau này entropy, cross-entropy, KL và mutual-information ideas sẽ quay lại trong Decision Trees, Neural Networks, Language Models, VAEs, Distillation và Alignment.
 
-Khi gặp một đại lượng thuộc lý thuyết thông tin, hãy hỏi: **đang so sánh phân phối nào, kỳ vọng lấy theo phân phối nào, log dùng đơn vị gì, và đại lượng đó trực tiếp phản ánh mục tiêu sản phẩm hay chỉ là đại diện thay thế?**
+Khi gặp một information-theoretic quantity, hãy hỏi: distribution nào đang được so sánh, expectation dưới distribution nào, log unit gì, và quantity đó có trực tiếp map tới product objective hay chỉ là proxy.

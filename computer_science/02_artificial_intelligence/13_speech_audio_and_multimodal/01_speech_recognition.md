@@ -1,271 +1,202 @@
 # Automatic Speech Recognition
 
-**Nhận dạng tiếng nói tự động (Automatic Speech Recognition — ASR / 음성 인식)** biến acoustic signal thành text hoặc token sequence.
+**Automatic Speech Recognition (ASR / 음성 인식)** biến acoustic signal thành text/token sequence.
 
 ```text
 waveform
 → acoustic representation
 → encoder
-→ sequence decoding / alignment
+→ sequence decoding/alignment
 → text
 ```
 
-ASR khó vì input rất dài theo time, output ngắn hơn nhiều và alignment giữa audio frame với character hoặc word thường không biết trước.
+ASR khó vì input dài theo time, output ngắn hơn và alignment giữa audio frames với characters/words không biết trước.
 
 ## Classical ASR Pipeline
 
-Traditional ASR system thường tách thành nhiều module:
+Traditional systems tách nhiều modules:
 
 ```text
-feature như MFCC
+features (MFCC)
 → acoustic model
 → pronunciation lexicon
 → language model
 → decoder
 ```
 
-Acoustic model ước lượng likelihood của phonetic unit từ audio. Lexicon map phoneme sang word. Language model đánh giá mức hợp lý của word sequence.
+Acoustic model estimate phonetic likelihood; lexicon map phonemes→words; language model score word sequences.
 
-Modern end-to-end ASR cố học nhiều thành phần này jointly trong một architecture thống nhất hơn.
+Modern end-to-end ASR học nhiều components jointly.
 
-## Bài toán Alignment
+## Alignment Problem
 
-Một utterance dài vài giây có thể tạo hàng trăm frame, nhưng transcript chỉ có vài chục token.
-
-Training label thường chỉ cung cấp toàn transcript chứ không nói chính xác frame nào tương ứng với token nào.
-
-Do đó ASR phải đồng thời học representation và alignment.
+Một utterance vài giây có hundreds frames nhưng transcript có vài chục tokens. Model cần biết frame nào correspond token nào mà training label thường chỉ có transcript whole sequence.
 
 ## CTC
 
-**Connectionist Temporal Classification (CTC)** xử lý alignment bằng cách thêm `blank` symbol rồi cộng xác suất của mọi frame-level alignment hợp lệ có thể collapse về cùng target sequence.
+**Connectionist Temporal Classification (CTC)** giải alignment bằng thêm `blank` symbol và sum probability over all valid frame-level alignments collapsing to target sequence.
 
-Ví dụ:
+Ví dụ paths:
 
 ```text
 _ h h _ i _
 h _ h i i _
 ```
 
-có thể collapse thành `hi` theo CTC rule.
+có thể collapse thành `hi` theo CTC rules.
 
-CTC đặt conditional-independence assumption mạnh hơn autoregressive decoder, đổi lại decoding thường hiệu quả và alignment tự nhiên hơn cho streaming hoặc forced alignment.
+CTC assumes conditional independence giữa output labels given encoder features mạnh hơn autoregressive decoders, giúp decoding efficient.
 
 ## Sequence-to-Sequence ASR
 
-Encoder biến audio thành hidden representation. Autoregressive decoder attend encoder feature rồi generate token từng bước.
+Encoder transforms audio; autoregressive decoder attends encoder features và generate tokens one by one.
 
-Ưu điểm:
+Pros:
 
-- language context được tích hợp mạnh;
-- output format linh hoạt;
-- có thể model dependency giữa token trực tiếp.
+- language context integrated;
+- flexible output.
 
-Hạn chế:
+Cons:
 
 - autoregressive latency;
-- khó streaming hơn;
-- có thể hallucinate text khi audio rất kém hoặc silence;
-- decoding cost cao hơn.
+- hallucination risk khi audio poor/silent;
+- harder streaming.
 
 ## RNN-T / Transducer
 
-**Recurrent Neural Network Transducer (RNN-T)** kết hợp acoustic encoder, prediction network và joint network.
+Recurrent Neural Network Transducer combines acoustic encoder, prediction network và joint network. It supports streaming better and models output history.
 
-Kiến trúc này hỗ trợ streaming tốt hơn và vẫn model output history.
-
-Modern implementation có thể thay RNN bằng Transformer hoặc Conformer component trong một số phần của stack.
+Modern implementations may replace RNN with Transformer/Conformer components.
 
 ## Conformer
 
-**Conformer** kết hợp self-attention để nắm global context với convolution để model local acoustic pattern.
+Conformer combines self-attention for global context + convolution for local acoustic patterns. This hybrid inductive bias fits speech well.
 
-Hybrid inductive bias này phù hợp speech vì speech vừa có local spectral structure vừa có dependency dài theo thời gian.
+## Encoder-Only Self-Supervised Speech Models
 
-## Self-Supervised Speech Encoder
+Large unlabeled audio can pretrain representations using masked/contrastive objectives. Fine-tuning then needs less labeled speech.
 
-Lượng unlabeled audio rất lớn có thể được dùng để pretrain encoder bằng masked hoặc contrastive objective.
-
-Sau đó model chỉ cần ít labeled speech hơn để fine-tune cho ASR.
-
-Đây là parallel trực tiếp với self-supervised learning trong Vision và pretraining trong NLP.
+This parallels self-supervised vision and language pretraining.
 
 ## Streaming ASR
 
-Real-time transcription không thể chờ toàn utterance kết thúc.
+Real-time transcription cannot wait full utterance. Need causal/chunked encoders and partial hypotheses.
 
-Streaming ASR cần causal hoặc chunked encoder và phải trả partial hypothesis trong lúc user vẫn đang nói.
-
-Ngoài Word Error Rate, cần đo thêm:
-
-- latency;
-- time-to-first-partial;
-- stability của partial transcript;
-- finalization delay.
+Metrics include not only Word Error Rate but **latency** and stability of partial transcripts.
 
 ## Word Error Rate
 
-**Word Error Rate (WER)**:
+WER:
 
 \[
 WER=\frac{S+D+I}{N}
 \]
 
-trong đó:
+where:
 
-- `S`: substitution;
-- `D`: deletion;
-- `I`: insertion;
-- `N`: số word trong reference.
+- `S` substitutions;
+- `D` deletions;
+- `I` insertions;
+- `N` reference words.
 
-WER có thể lớn hơn 100% nếu insertion rất nhiều.
+WER can exceed 100% if insertions large.
 
-Với language có word-boundary khác English, Character Error Rate hoặc language-specific tokenization có thể phản ánh chất lượng tốt hơn.
+For languages without whitespace word boundaries, Character Error Rate or language-specific tokenization may be more meaningful.
 
-## Khác biệt giữa các Ngôn ngữ
+## Language Dependence
 
-Korean, Vietnamese và English khác nhau về phonology, writing system, morphology và word segmentation.
+Korean, Vietnamese, English differ in phonology, writing system and word segmentation. Evaluation/tokenization must respect language structure.
 
-Evaluation pipeline phải phù hợp structure của từng language thay vì dùng một tokenizer rule chung một cách máy móc.
-
-Code-switching làm bài toán khó hơn vì language identity có thể thay đổi ngay bên trong một utterance.
+Code-switching adds challenge because language identity changes inside utterance.
 
 ## Beam Search
 
-Decoder có thể giữ nhiều candidate hypothesis thay vì chọn greedy token duy nhất.
-
-Một external hoặc integrated language model có thể được kết hợp:
+Decoder may keep top candidate hypotheses instead of greedy token. External/implicit language-model scores can combine with acoustic score:
 
 \[
 Score = \log P_{ASR}(y|x)+\lambda\log P_{LM}(y)+\beta LengthPenalty
 \]
 
-Các weight cần tune trên validation data phù hợp domain.
+Weights require tuning.
 
-## Hallucination trong ASR
+## Hallucination
 
-End-to-end generative ASR có thể sinh text nghe rất hợp lý nhưng không được audio support, đặc biệt khi input là noise hoặc silence.
+End-to-end generative ASR may output plausible text unsupported by audio under noise/silence. This differs from ordinary substitution errors.
 
-Đây là failure khác với substitution thông thường.
-
-Mitigation có thể gồm:
-
-- VAD;
-- no-speech confidence;
-- timestamp consistency;
-- constrained decoding;
-- fallback hoặc abstention policy.
+Need VAD, no-speech confidence, timestamps and fallback policies.
 
 ## Timestamp Alignment
 
-Subtitle, search và meeting analysis thường cần timestamp theo segment hoặc word.
+Applications need word/segment timestamps for subtitles/search. Alignment can be derived from attention/CTC or separate forced alignment model.
 
-Alignment có thể lấy từ CTC, attention signal hoặc một forced-alignment model riêng.
-
-Timestamp accuracy là một quality dimension độc lập với transcript correctness.
+Timestamp accuracy is independent quality dimension from transcript correctness.
 
 ## Speaker Diarization
 
-Câu hỏi “ai nói vào lúc nào?” là một task khác ASR.
-
-Một diarization pipeline có thể:
+“Who spoke when?” is separate task. Pipeline may:
 
 ```text
-speech segment
-→ speaker embedding
-→ clustering / assignment
-→ speaker label
+speech segments
+→ speaker embeddings
+→ clustering
+→ speaker labels
 ```
 
-Kết hợp ASR với diarization tạo meeting transcription có cả nội dung và speaker turn.
+ASR + diarization combine into meeting transcription.
 
-## Punctuation và Formatting
+## Punctuation and Formatting
 
-Raw ASR transcript có thể thiếu punctuation, casing hoặc normalized number format.
-
-Post-processing model có thể khôi phục các thành phần này, nhưng formatting sai có thể làm đổi meaning của date, decimal hoặc identifier.
+Raw ASR may omit punctuation/casing. Post-processing model restores sentence boundaries, numbers and formatting. But formatting can alter meaning, especially decimal/date entities.
 
 ## Domain Adaptation
 
-Medical term, legal vocabulary hoặc internal company jargon thường hiếm trong general ASR data.
+Medical/legal/company jargon creates out-of-vocabulary or rare-token errors. Adaptation options:
 
-Các lựa chọn adaptation gồm:
-
-- language-model biasing bằng domain text;
-- contextual vocabulary biasing;
-- fine-tuning bằng domain speech;
-- custom pronunciation lexicon trong modular system.
+- domain text language-model biasing;
+- vocabulary/contextual biasing;
+- fine-tuning with domain speech;
+- custom pronunciation lexicon in modular systems.
 
 ## Contextual Biasing
 
-System có thể cung cấp danh sách name, product hoặc entity dự kiến xuất hiện.
-
-Bias vừa phải giúp recognize rare term, nhưng bias quá mạnh có thể ép decoder hallucinate entity ngay cả khi acoustic evidence yếu.
+Provide names/entities expected in context. But excessive bias can force hallucinated rare terms.
 
 ## Noise Robustness
 
-Nên evaluate ASR theo nhiều slice:
-
-```text
-SNR
-microphone type
-accent
-speaker subgroup
-environment
-room reverberation
-```
-
-Average WER có thể che failure nghiêm trọng ở một subgroup cụ thể.
+Evaluate separately by SNR, microphone, accent, speaker demographic and environment. Average WER hides subgroup failures.
 
 ## Multilingual ASR
 
-Một model có thể dùng shared encoder cho nhiều language và language token để điều kiện hóa decoding.
-
-Điều này giúp transfer sang low-resource language nhưng cũng có nguy cơ high-resource language dominate training mixture.
-
-Tokenizer, script coverage và data balancing cần được thiết kế cẩn thận.
+One model may share encoder across languages and use language tokens. Benefits transfer low-resource languages, but high-resource languages can dominate and scripts/tokenization need balance.
 
 ## Privacy
 
-Speech chứa nhiều information nhạy cảm hơn transcript:
-
-- speaker identity;
-- accent;
-- background conversation;
-- emotion;
-- environmental context.
-
-Retention, access control và encryption vẫn quan trọng ngay cả khi application chỉ cần text output.
+Speech contains biometric and contextual sensitive information beyond transcript. Data retention and encryption policies matter even if only text output is needed.
 
 ## Edge ASR
 
-On-device ASR giảm network latency và privacy exposure, nhưng model cần tối ưu:
+On-device ASR reduces latency/privacy risk but model needs quantization, streaming memory control and hardware optimization.
 
-- quantization;
-- streaming memory;
-- accelerator usage;
-- battery/power consumption.
+## Mental Model
 
-## Mô hình tư duy
+> **ASR is not “audio classification repeated over time”; it is sequence transduction with uncertain alignment, acoustic variation and linguistic constraints.**
 
-> **ASR không phải “audio classification lặp theo thời gian”; nó là sequence transduction với uncertain alignment, acoustic variation và linguistic constraint.**
+## Common Misconceptions
 
-## Những nhầm lẫn thường gặp
+### “Low WER means perfect meeting transcription”
 
-### “WER thấp nghĩa meeting transcript đã hoàn hảo”
+Diarization, punctuation, timestamps and entity formatting can still fail.
 
-Không. Diarization, punctuation, timestamp và entity formatting vẫn có thể fail.
+### “Language model correction always improves ASR”
 
-### “Language model correction luôn cải thiện ASR”
+It can replace acoustically supported rare words with more common but wrong phrases.
 
-Không. LM có thể thay rare word được audio support bằng một phrase phổ biến hơn nhưng sai.
+### “Speech recognition = speaker recognition”
 
-### “Speech recognition và speaker recognition là một task”
+Transcript content and speaker identity are distinct tasks.
 
-Không. Transcript content và speaker identity là hai mục tiêu khác nhau.
+## Knowledge Connection
 
-## Liên kết kiến thức
-
-ASR kết hợp Sequence Modeling, CTC, Attention, Self-Supervised Learning và Language Modeling.
+ASR joins sequence modeling, CTC/attention, self-supervised learning and language modeling.
 
 Xem tiếp: [Speech Synthesis](./02_speech_synthesis.md).

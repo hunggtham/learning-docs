@@ -1,15 +1,15 @@
 # Search và Information Retrieval trong NLP
 
-**Truy xuất thông tin (Information Retrieval — IR / 정보 검색)** trả lời câu hỏi: với một query, trong một tập dữ liệu lớn, tài liệu hoặc đoạn văn nào liên quan nhất? Đây là nền trực tiếp của công cụ tìm kiếm và RAG.
+Information Retrieval (IR / 정보 검색 / truy xuất thông tin) trả lời câu hỏi: với một query, trong một collection lớn, documents/passages nào relevant nhất? Đây là nền trực tiếp của search engine và RAG.
 
-IR khác phân loại ở chỗ đầu ra thường là **một thứ hạng trên corpus lớn**. Hệ thống cần tạo tập ứng viên rất nhanh trước, sau đó mới dùng mô hình chính xác nhưng đắt hơn để chấm điểm và xếp hạng lại.
+IR khác classification ở chỗ output là **ranking over large corpus**. System cần candidate generation cực nhanh rồi scoring/reranking chính xác hơn.
 
 ## Inverted Index
 
-Cấu trúc dữ liệu cốt lõi của tìm kiếm từ khóa là **chỉ mục đảo (inverted index)**:
+Lexical search core data structure:
 
 ```text
-term → danh sách tài liệu / vị trí chứa term
+term → postings list of documents/positions
 ```
 
 Ví dụ:
@@ -18,38 +18,40 @@ Ví dụ:
 "transformer" → [doc2, doc10, doc42]
 ```
 
-Query không cần quét mọi tài liệu. Inverted index làm sparse retrieval có thể mở rộng tới corpus rất lớn. Nếu lưu cả vị trí token, hệ thống còn hỗ trợ tìm cụm từ hoặc khoảng cách giữa các từ.
+Query không scan mọi documents. Inverted index makes sparse retrieval scalable.
+
+Positions enable phrase/proximity search.
 
 ## Boolean Retrieval
 
-Query có thể kết hợp từ bằng toán tử logic:
+Queries combine terms:
 
 ```text
 AI AND safety
 transformer NOT electrical
 ```
 
-Cách này chính xác về điều kiện nhưng không tự tạo thứ hạng relevance mềm và dễ gặp vấn đề khi query dùng từ khác tài liệu.
+Precise but no ranking by graded relevance and vocabulary mismatch problematic.
 
 ## TF-IDF
 
-Một term có giá trị khi xuất hiện nhiều trong tài liệu nhưng hiếm trên toàn corpus:
+Term important if frequent in document but rare corpus-wide.
 
 \[
 TFIDF(t,d)=TF(t,d)IDF(t)
 \]
 
-với dạng IDF đơn giản:
+IDF often:
 
 \[
 IDF(t)=\log\frac{N}{DF(t)}
 \]
 
-Query và document có thể được biểu diễn thành vector thưa rồi so bằng cosine similarity.
+Sparse document/query vectors can use cosine similarity.
 
 ## BM25
 
-BM25 là baseline lexical ranking rất mạnh:
+BM25 is strong lexical ranking baseline:
 
 \[
 score(q,d)=\sum_{t\in q}IDF(t)
@@ -57,142 +59,153 @@ score(q,d)=\sum_{t\in q}IDF(t)
 {f(t,d)+k_1(1-b+b|d|/avgdl)}
 \]
 
-Nó bổ sung hai trực giác quan trọng: tần suất lặp lại một term có lợi nhưng lợi ích giảm dần; tài liệu dài được chuẩn hóa để không thắng chỉ vì chứa nhiều từ hơn.
+It introduces term-frequency saturation and document-length normalization.
 
-Term hiếm trong corpus thường được trọng số cao hơn. BM25 vẫn đặc biệt mạnh với tên chính xác, mã, identifier và thuật ngữ hiếm.
+Important intuition:
+
+- repeated term helps but diminishing returns;
+- long document gets normalization;
+- rare query terms matter more.
+
+BM25 remains highly competitive for exact names, codes, identifiers and rare terminology.
 
 ## Vocabulary Mismatch
 
-Query `car repair` có thể cần tài liệu chứa `automobile maintenance`. Nếu chỉ dựa vào trùng từ, relevance sẽ thấp dù nghĩa gần nhau.
+Query `car repair` may need document `automobile maintenance`. Lexical overlap weak.
 
-Dense retrieval giải quyết một phần bằng embedding học được.
+Dense retrieval uses learned embeddings to capture semantic relation.
 
 ## Dense Retrieval
 
-Bi-encoder tạo vector độc lập:
+Bi-encoder:
 
 \[
 q=f_\theta(query),\quad d=g_\theta(document)
 \]
 
-và chấm điểm:
+score:
 
 \[
 s(q,d)=q^Td
 \]
 
-Document embedding có thể được tính trước. Khi query đến, hệ thống chỉ cần tạo query vector rồi tìm láng giềng gần nhất.
+Precompute document embeddings. Query vector performs nearest-neighbor search.
 
-Cách này đánh đổi khả năng khớp từ chính xác lấy hình học ngữ nghĩa đã học.
+This trades exact lexical matching for learned semantic geometry.
 
 ## Approximate Nearest Neighbor
 
-Quét chính xác hàng triệu vector rất tốn chi phí. **Approximate Nearest Neighbor (ANN)** tìm gần đúng top neighbor để đổi một phần recall lấy tốc độ và bộ nhớ.
+Exact scan millions vectors expensive. ANN indexes approximate top neighbors.
 
-Các khái niệm phổ biến gồm:
+Common concepts:
 
-- HNSW: tìm kiếm trên đồ thị nhiều tầng;
-- IVF: chia không gian thành các vùng thô;
-- Product Quantization: nén vector;
-- flat search: baseline tìm chính xác.
+- HNSW graph search;
+- IVF coarse partitions;
+- Product Quantization compression;
+- flat exact search baseline.
 
-“Vector database” thường đóng gói các cơ chế chỉ mục này cùng metadata, filtering, persistence và vận hành.
+ANN has recall/latency/memory trade-off. “Vector database” wraps indexing, filtering, persistence, metadata and operations around these mechanisms.
 
-## Trực giác về HNSW
+## HNSW intuition
 
-**Hierarchical Navigable Small World (HNSW)** xây đồ thị vector theo nhiều tầng. Tìm kiếm bắt đầu ở tầng thưa để di chuyển nhanh đến vùng phù hợp, rồi xuống tầng dày hơn để tinh chỉnh kết quả.
+Hierarchical Navigable Small World graph connects vectors; search greedily navigates from coarse upper layers to dense lower layer.
 
-Các hyperparameter điều khiển số cạnh và độ rộng tìm kiếm. Mở rộng tìm kiếm thường tăng recall nhưng cũng tăng latency.
+Hyperparameters control graph degree/construction/search breadth. Higher search effort improves recall but increases latency.
 
 ## Hybrid Retrieval
 
-Lexical và dense retrieval có ưu thế bổ sung:
+Lexical and dense methods have complementary strengths.
 
 ```text
-BM25  → từ khóa chính xác, mã, tên hiếm
-Dense → paraphrase và tương đồng ngữ nghĩa
+BM25: exact keyword, code, rare names
+Dense: paraphrase, semantic similarity
 ```
 
-Hệ thống lai có thể hợp nhất candidate hoặc thứ hạng. **Reciprocal Rank Fusion (RRF)** dùng:
+Hybrid combine scores/candidates. Reciprocal Rank Fusion (RRF):
 
 \[
 RRF(d)=\sum_r\frac1{k+rank_r(d)}
 \]
 
-nên không cần hiệu chỉnh trực tiếp các thang điểm rất khác nhau giữa retriever.
+avoids raw score calibration across retrievers.
 
 ## Reranking
 
-Retriever tầng đầu ưu tiên tốc độ và recall. Cross-encoder reranker đọc chung query và document rồi cho điểm relevance chính xác hơn.
+First-stage retriever optimizes recall + speed. Cross-encoder reranker jointly reads query/document and assigns relevance score.
 
-Một pipeline điển hình:
+Pipeline:
 
 ```text
-corpus hàng triệu tài liệu
-→ BM25 / dense lấy top 100
+Corpus millions
+→ BM25/dense retrieve top 100
 → cross-encoder rerank
 → top 5–20
 ```
 
-Cấu trúc cascade này chỉ dành compute đắt tiền cho một tập candidate nhỏ.
+This cascade concentrates expensive computation on small candidate set.
 
-## Mở rộng Query
+## Query Expansion
 
-Có thể thêm từ đồng nghĩa hoặc term liên quan để giảm vocabulary mismatch. Pseudo-relevance feedback cổ điển dùng những term thường gặp trong top document.
+Add synonyms/related terms to bridge mismatch. Classical pseudo-relevance feedback uses top docs terms.
 
-LLM hiện đại có thể viết lại hoặc mở rộng query, nhưng cũng có nguy cơ làm lệch intent. Nên giữ query gốc và đánh giá expansion trên dữ liệu thật.
+Modern LLM can rewrite/expand query, but may drift intent. Original query should remain and expansion evaluated.
 
 ## Chunking
 
-RAG thường lập chỉ mục đoạn nhỏ thay vì cả tài liệu.
+RAG retrieval often indexes passages, not whole documents.
 
-Sự đánh đổi:
+Trade-off:
 
-- chunk nhỏ → khớp chính xác hơn nhưng ít ngữ cảnh;
-- chunk lớn → nhiều ngữ cảnh nhưng relevance có thể bị pha loãng;
-- overlap → giữ thông tin qua biên nhưng tăng trùng lặp và chi phí.
+- small chunk → precise, less context;
+- large chunk → more context, diluted embedding/relevance;
+- overlap → preserve boundaries but duplicate results/cost.
 
-Khi có thể nên giữ đơn vị ngữ nghĩa tự nhiên như heading, paragraph, table và code block.
+Chunk should preserve semantic units: headings, paragraphs, tables/code blocks when possible.
 
 ## Parent–Child Retrieval
 
-Có thể index child chunk nhỏ để tìm chính xác nhưng trả lại parent section lớn hơn cho generator:
+Index small child chunks for precise matching but return larger parent section for context.
 
 ```text
-embedding chunk nhỏ → tìm khớp
-parent section       → đưa vào LLM
+small chunk embedding → match
+parent section         → send LLM
 ```
 
-Thiết kế này tách kích thước đơn vị truy xuất khỏi kích thước context dùng để sinh.
+This separates retrieval granularity from generation context granularity.
 
 ## Metadata Filtering
 
-Relevance không chỉ là tương đồng văn bản. Hệ thống enterprise còn phải lọc theo:
+Relevance is not only text similarity. Need constraints:
 
 ```text
-quyền người dùng
-khoảng thời gian
-ngôn ngữ
-loại tài liệu
-project / customer
-version / trạng thái
+user permission
+date range
+language
+document type
+project/customer
+version/status
 ```
 
-Filtering quyền truy cập phải xảy ra đúng chỗ trong retrieval. Việc truy xuất được tài liệu không có quyền đã là lỗi bảo mật ngay cả khi LLM cuối cùng không trích dẫn nó.
+Metadata filtering before/within ANN is critical enterprise RAG. Retrieving unauthorized document is security failure even if model never quotes it.
 
-## Độ mới của chỉ mục
+## Freshness
 
-Kiến thức trong search chỉ mới bằng pipeline ingestion. Tài liệu mới phải được parse, chunk, embed, index và đồng bộ tới các node phục vụ truy vấn.
+Index update pipeline determines knowledge freshness. New document must be parsed, chunked, embedded, indexed and propagated.
 
-Hệ thống cũng phải xử lý version và deletion. “RAG có kiến thức thời gian thực” chỉ đúng nếu toàn bộ ingestion/index pipeline đủ nhanh.
+Search system should track document version and deletion. “RAG has real-time knowledge” only if ingestion is real-time enough.
 
-## Nhãn Relevance
+## Relevance Labels
 
-Dữ liệu query–document có thể đến từ đánh giá con người, click log, cặp tổng hợp hoặc hành vi ngầm.
+Training/evaluation query-document relevance can be:
 
-Click log có thiên lệch vị trí và phơi nhiễm: tài liệu không được hiển thị thì không thể được click. Vì vậy dữ liệu hành vi phản ánh policy của search system, không phải relevance trung lập.
+- human judgments;
+- click logs;
+- synthetic pairs;
+- implicit behavior.
 
-## Metric truy xuất
+Click data has position/exposure bias. Documents not shown cannot be clicked, creating feedback loop.
+
+## Retrieval Metrics
 
 Recall@K:
 
@@ -200,73 +213,73 @@ Recall@K:
 \frac{relevant\ docs\ retrieved\ in\ topK}{all\ relevant\ docs}
 \]
 
-MRR tập trung vị trí của kết quả liên quan đầu tiên:
+MRR focuses first relevant rank:
 
 \[
 MRR=\frac1N\sum_q\frac1{rank_q}
 \]
 
-NDCG hỗ trợ relevance nhiều mức và giảm trọng số theo vị trí.
+NDCG handles graded relevance and rank discounts.
 
-Trong RAG, **retrieval recall** thường rất quan trọng: nếu bằng chứng đúng không lọt vào candidate, generator không thể grounded vào nó.
+For RAG, **retrieval recall** often critical: if correct evidence never retrieved, generator cannot ground answer from it.
 
-## Retrieval Quality và Answer Quality
+## Retrieval vs Answer Quality
 
-Truy xuất tốt không bảo đảm câu trả lời đúng vì LLM vẫn có thể bỏ qua hoặc đọc sai context. Nhưng truy xuất kém đặt một trần rất thấp cho chất lượng trả lời.
+Good retrieval doesn't guarantee answer; LLM may ignore/misread context.
 
-Do đó nên đánh giá riêng:
-
-```text
-chất lượng retrieval
-chất lượng context
-độ trung thành của generation
-độ đúng end-to-end
-```
-
-## Search như một hệ thống nhiều tầng
-
-Kiến trúc hiện đại có thể gồm:
+Bad retrieval caps answer quality. Therefore evaluate separately:
 
 ```text
-hiểu / viết lại query
-↓
-retrieval ứng viên (lexical + dense)
-↓
-metadata / permission filter
-↓
-reranking
-↓
-đa dạng hóa / loại trùng
-↓
-lắp ráp context
-↓
-answer hoặc UI kết quả
+retrieval quality
+context quality
+generation faithfulness
+end-to-end answer correctness
 ```
 
-Chỉ tối ưu embedding model sẽ bỏ qua phần lớn các nguyên nhân ảnh hưởng chất lượng thực tế.
+## Search as Multi-Stage System
 
-## Mô hình tư duy
+Modern architecture:
 
-> Retrieval là một cái phễu: tầng đầu rẻ và rộng cố giữ bằng chứng đúng sống sót; tầng sau đắt và chính xác hơn cải thiện thứ hạng trước khi dữ liệu đi vào bước trả lời.
+```text
+Query understanding/rewrite
+↓
+Candidate retrieval (lexical + dense)
+↓
+Metadata/filter
+↓
+Reranking
+↓
+Diversity/deduplication
+↓
+Context assembly
+↓
+Answer / result UI
+```
 
-## Những hiểu lầm thường gặp
+Optimizing only embedding model ignores most system.
 
-### “Dense Retrieval thay thế BM25”
+## Mental Model
 
-Không. Hybrid thường mạnh vì exact lexical signal vẫn rất quan trọng.
+> Retrieval is a funnel: cheap broad methods maximize chance relevant evidence survives early stages; expensive precise methods improve ordering later.
 
-### “Vector DB hiểu tài liệu”
+## Common Misconceptions
 
-Không. Nó lưu và tìm vector/metadata; chất lượng ngữ nghĩa chủ yếu đến từ embedding, chunking và dữ liệu huấn luyện.
+### “Dense retrieval replaces BM25”
 
-### “Document có cosine cao nhất nên luôn đưa thẳng vào LLM”
+Hybrid often wins because exact lexical signals remain important.
 
-Không. Similarity không đồng nghĩa relevance, authority, freshness hay permission; filtering và reranking vẫn cần.
+### “Vector DB understands documents”
 
-### “RAG trả lời sai thì chắc chắn LLM hallucinate”
+It indexes vectors/metadata; semantic quality comes from embedding/training/chunking.
 
-Không. Nguyên nhân có thể là retrieval miss, chunk sai, index cũ hoặc context assembly kém.
+### “Cosine highest document should go directly to LLM”
 
-## Liên kết kiến thức
+Similarity ≠ relevance/authority/freshness; reranking/filtering help.
 
-Information Retrieval nối [k-NN](../04_machine_learning/07_knn_and_distance_based_learning.md), [Contextual Embeddings](./04_contextual_embeddings.md), [Search](../02_search_reasoning_and_planning/00_state_space_and_search.md) và chuẩn bị trực tiếp cho `09_retrieval_and_rag/`.
+### “If RAG answer wrong, LLM is hallucinating”
+
+Root cause may be retrieval miss, bad chunk, stale index or context assembly.
+
+## Knowledge Connection
+
+IR connects [k-NN](../04_machine_learning/07_knn_and_distance_based_learning.md), [Contextual Embeddings](./04_contextual_embeddings.md), classical [Search](../02_search_reasoning_and_planning/00_state_space_and_search.md) and directly prepares `09_retrieval_and_rag/`.

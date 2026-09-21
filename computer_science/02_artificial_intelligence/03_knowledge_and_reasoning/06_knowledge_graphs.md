@@ -1,6 +1,6 @@
-# Đồ thị tri thức trong Trí tuệ nhân tạo
+# Knowledge Graphs trong Artificial Intelligence
 
-**Đồ thị tri thức (Knowledge Graph / 지식 그래프)** biểu diễn thực thể và các mối quan hệ giữa chúng bằng một cấu trúc đồ thị có ngữ nghĩa rõ ràng. Dạng đơn giản nhất là một bộ ba:
+**Knowledge Graph (지식 그래프 / đồ thị tri thức)** biểu diễn entities và relationships bằng graph có typed semantics. Dạng đơn giản nhất là triple:
 
 \[
 (subject, predicate, object)
@@ -14,31 +14,31 @@ Ví dụ:
 (CompanyX, locatedIn, Seoul)
 ```
 
-Điểm quan trọng là Knowledge Graph không chỉ đơn giản là một graph database có nhiều cạnh. Giá trị thực sự của nó đến từ định danh thực thể, schema hoặc ontology, nguồn gốc dữ liệu (provenance), phạm vi thời gian, ý nghĩa của quan hệ và khả năng kết nối nhiều sự kiện từ các nguồn khác nhau thành một mô hình có thể truy vấn hoặc suy luận.
+Điểm quan trọng: Knowledge Graph không chỉ là graph database có nhiều edges. Giá trị của nó đến từ identity, schema/ontology, provenance, temporal validity, relation semantics và khả năng nối facts từ nhiều nguồn thành một model có thể query/reason.
 
-Xem trước: [Biểu diễn tri thức](./00_knowledge_representation.md).
+Xem trước: [Knowledge Representation](./00_knowledge_representation.md).
 
-## Mô hình dữ liệu đồ thị
+## Graph data model
 
-Một đồ thị gồm tập node `V` và tập cạnh `E`:
+Một graph gồm nodes `V` và edges `E`:
 
 \[
 G=(V,E)
 \]
 
-Trong Knowledge Graph:
+Trong KG:
 
-- node thường là thực thể, khái niệm hoặc literal;
-- cạnh có loại quan hệ cụ thể;
-- node và cạnh có thể mang thuộc tính hoặc metadata.
+- node thường là entity/concept/literal;
+- edge có relation type;
+- node/edge có thể có properties/metadata.
 
-Mô hình kiểu RDF thường biểu diễn quan hệ bằng bộ ba. Mô hình property graph cho phép gắn thuộc tính trực tiếp lên node và cạnh.
+RDF-like graph biểu diễn edge qua triples. Property-graph systems cho phép properties trực tiếp trên node/edge.
 
-Hai kiểu mô hình này có thể chuyển đổi qua lại trong nhiều trường hợp, nhưng cách truy vấn, công cụ và ngữ nghĩa không hoàn toàn giống nhau.
+Hai models có conversion possibilities nhưng query semantics/tooling khác nhau.
 
-## Định danh thực thể
+## Entity identity
 
-Nếu cùng một thực thể ngoài đời được ghi bằng nhiều identifier khác nhau:
+Nếu facts dùng identifiers khác nhau cho cùng real entity:
 
 ```text
 Seoul
@@ -46,76 +46,81 @@ Seoul
 SEOUL_CITY_001
 ```
 
-hệ thống cần cơ chế ánh xạ về một định danh chuẩn.
+system cần mapping/canonical ID.
 
-Nếu không, đồ thị sẽ bị chia thành nhiều thực thể trùng lặp. Ngược lại, nếu gộp nhầm hai thực thể khác nhau, dữ liệu cũng bị nhiễm lẫn.
+Nếu không, graph bị split thành duplicate entities. Nếu merge nhầm hai entities, facts bị contamination.
 
-**Đối sánh thực thể (entity resolution / 개체 해결)** vì vậy là thành phần nền tảng chứ không phải công việc dọn dữ liệu phụ.
+**Entity resolution (개체 해결 / thực thể đối sánh)** vì vậy là foundation, không phải cleanup minor.
 
-## Ngữ nghĩa của quan hệ
+## Relation semantics
 
-Một cạnh `worksAt` cần được định nghĩa rõ:
+Edge label `worksAt` cần define:
 
-- chủ thể nào được phép xuất hiện;
-- đối tượng nào được phép xuất hiện;
-- chỉ quan hệ hiện tại hay cả lịch sử;
-- nhân viên chính thức và contractor có được xem giống nhau hay không;
-- quan hệ có phạm vi thời gian hay không.
+- subject type nào hợp lệ;
+- object type nào hợp lệ;
+- active employment hay historical?
+- full-time/contractor có count không?
+- temporal validity?
 
-Nếu không có ngữ nghĩa, đồ thị có thể kết nối đúng về mặt cú pháp nhưng mơ hồ về ý nghĩa.
+Without semantics, graph may be syntactically connected but semantically ambiguous.
 
 ## Schema và ontology
 
-Schema có thể mô tả:
+Schema can state:
 
 ```text
 Person --worksAt--> Organization
 Organization --locatedIn--> Place
 ```
 
-Ontology có thể bổ sung quan hệ phân cấp:
+Ontology adds class hierarchy/axioms:
 
 ```text
 Doctor subClassOf MedicalProfessional
 Hospital subClassOf HealthcareOrganization
 ```
 
-Bộ suy luận có thể dùng các quy tắc này để suy ra kiểu kế thừa.
+Reasoner may derive inherited types.
 
-Schema cũng giúp kiểm tra tính hợp lệ. Ví dụ cạnh `Person worksAt Date` nhiều khả năng là sai về mặt ngữ nghĩa.
+Schema also enables validation: edge `Person worksAt Date` likely invalid.
 
-## Mô hình RDF
+## RDF mental model
 
-RDF biểu diễn phát biểu dưới dạng:
+RDF represents statements as triples:
 
 ```text
 subject predicate object
 ```
 
-Ví dụ kiểu Turtle:
+Example Turtle-like:
 
 ```turtle
 :Alice :worksAt :CompanyX .
 :CompanyX :locatedIn :Seoul .
 ```
 
-URI hoặc IRI được dùng để định danh tài nguyên một cách nhất quán theo quy ước.
+A URI/IRI identifies resources globally within conventions.
 
-Một lợi thế lớn của RDF là khả năng hợp nhất dữ liệu từ nhiều nguồn khi identifier và vocabulary được thiết kế tương thích.
+RDF graph can merge datasets when identifiers/vocabularies align.
 
 ## RDFS và OWL
 
-RDFS cung cấp các khái niệm nền như class, subclass, property, domain và range.
+RDFS provides basic vocabulary for:
 
-OWL bổ sung các khả năng biểu diễn ontology phong phú hơn, chẳng hạn equivalence, cardinality và các biểu thức lớp dựa trên Description Logic.
+- classes;
+- subclass;
+- properties;
+- domain/range.
 
-Mức biểu đạt càng cao thì suy luận có thể càng tốn kém. Vì vậy OWL cung cấp nhiều profile với mức đánh đổi khác nhau giữa khả năng biểu diễn và chi phí suy luận.
+OWL adds richer ontology constructs based on Description Logics, such as equivalence, cardinality and class expressions depending profile.
+
+More expressive profile means potentially more expensive reasoning; OWL profiles intentionally offer different trade-offs.
 
 ## SPARQL
 
-SPARQL truy vấn đồ thị RDF bằng mẫu đồ thị.
+SPARQL queries RDF graph by graph patterns.
 
-Ví dụ:
+Conceptual query:
 
 ```sparql
 SELECT ?person
@@ -125,35 +130,35 @@ WHERE {
 }
 ```
 
-Đây là truy vấn theo cấu trúc quan hệ, không phải tìm kiếm tương đồng ngữ nghĩa.
+This is pattern matching over triples, not semantic similarity search.
 
-Bộ máy SPARQL cũng phải tối ưu thứ tự join tương tự query optimizer của cơ sở dữ liệu quan hệ.
+Graph engines optimize join orders much like relational DB query optimizers.
 
-## Property Graph và truy vấn kiểu Cypher
+## Property Graph và Cypher-like query
 
-Property graph có thể lưu:
+Property graph may store:
 
 ```text
 (:Person {id: 1})-[:WORKS_AT {since: 2024}]->(:Company)
 ```
 
-Ngôn ngữ như Cypher biểu diễn mẫu đường đi và quan hệ trực tiếp trên đồ thị.
+Query language like Cypher expresses path patterns.
 
-Property graph thường phổ biến trong ứng dụng vận hành và phân tích quan hệ; hệ RDF/OWL nhấn mạnh hơn vào chuẩn ngữ nghĩa và ontology.
+Property graphs are common in operational graph applications; RDF/OWL ecosystems emphasize web-scale semantic standards/ontologies.
 
-Không có mô hình nào luôn tốt hơn trong mọi trường hợp.
+Neither model is universally superior.
 
-## Quan hệ dạng cạnh và quan hệ dạng sự kiện
+## Relation as edge vs event node
 
-Quan hệ nhị phân đơn giản có thể biểu diễn trực tiếp:
+Simple edge works for binary timeless relation:
 
 ```text
 Alice --worksAt--> CompanyX
 ```
 
-Nhưng nếu việc làm cần thêm vai trò, ngày bắt đầu, ngày kết thúc, mức lương và nguồn dữ liệu, một cạnh duy nhất trở nên thiếu thông tin.
+But suppose employment has role, start/end, salary, source.
 
-Ta có thể chuyển quan hệ thành một node sự kiện:
+Represent employment as entity/event:
 
 ```text
 Alice --participantIn--> Employment123
@@ -162,11 +167,11 @@ Employment123 --role--> Engineer
 Employment123 --startDate--> 2025-01-01
 ```
 
-Cách này phù hợp hơn với quan hệ nhiều ngôi và những quan hệ cần nhiều qualifier.
+This avoids awkward edge metadata in triple-only model and supports n-ary relations.
 
-## Nguồn gốc dữ liệu
+## Provenance
 
-Một sự kiện quan trọng thường cần kèm theo thông tin nguồn:
+A fact should often carry source:
 
 ```text
 claim: CompanyX locatedIn Seoul
@@ -175,34 +180,34 @@ retrievedAt: 2026-09-01
 confidence: verified
 ```
 
-Khi hai nguồn mâu thuẫn, provenance cho phép hệ thống so sánh thay vì âm thầm ghi đè.
+When sources conflict, provenance allows system to compare rather than silently overwrite.
 
-Citation trong RAG và provenance trong Knowledge Graph giải quyết cùng một vấn đề cốt lõi: ta biết thông tin này đến từ đâu và đáng tin đến mức nào.
+RAG citation and KG provenance solve related trust problem.
 
-## Knowledge Graph theo thời gian
+## Temporal Knowledge Graph
 
-Quan hệ có thể thay đổi:
+Relations change over time:
 
 ```text
 (Alice, worksAt, CompanyX, 2025-01..2026-08)
 ```
 
-Knowledge Graph có yếu tố thời gian cho phép trả lời câu hỏi lịch sử như:
+Temporal KG supports historical queries:
 
-> Ai là CEO tại thời điểm T?
+> Who was CEO on date T?
 
-Nếu bỏ qua thời gian, đồ thị có thể chứa hai cạnh nhìn như mâu thuẫn nhưng thực tế đúng ở hai giai đoạn khác nhau.
+Without time, graph may contain contradictory edges that are actually valid in different periods.
 
-## Suy luận trên đồ thị
+## Inference over graph
 
-Ví dụ quy tắc:
+Rule:
 
 ```text
 parentOf(x,y) ∧ parentOf(y,z)
 → grandparentOf(x,z)
 ```
 
-Hoặc ontology:
+Ontology:
 
 ```text
 Cardiologist subClassOf Doctor
@@ -210,89 +215,92 @@ Alice type Cardiologist
 → Alice type Doctor
 ```
 
-Hệ thống có thể materialize các bộ ba dẫn xuất hoặc tính động khi truy vấn.
+Inference materializes derived triples or answers queries dynamically.
 
-Duyệt đồ thị đơn thuần không phải suy luận logic nếu hệ thống chưa định nghĩa ngữ nghĩa cho quan hệ.
+Graph traversal alone is not logical inference unless relation semantics define rule.
 
-## Quan hệ bắc cầu
+## Transitive relations
 
-Nếu quan hệ được khai báo là bắc cầu:
+If relation declared transitive:
 
 \[
 R(a,b)\land R(b,c)\rightarrow R(a,c)
 \]
 
-thì ta có thể suy ra quan hệ gián tiếp.
+Examples may include `ancestorOf`, `locatedWithin` under carefully defined semantics.
 
-Ví dụ `ancestorOf` thường có tính bắc cầu. Một số quan hệ vị trí như `locatedWithin` cũng có thể bắc cầu nếu định nghĩa cẩn thận.
+Do not assume every relation transitive. `friendOf` and `parentOf` are not.
 
-Không được tự động giả định mọi cạnh đều bắc cầu. `friendOf` hay `parentOf` không có tính chất này.
+## Symmetric và inverse relations
 
-## Quan hệ đối xứng và quan hệ nghịch đảo
-
-Quan hệ đối xứng:
+Symmetric:
 
 \[
 MarriedTo(a,b)\rightarrow MarriedTo(b,a)
 \]
 
-Quan hệ nghịch đảo:
+Inverse:
 
 \[
 ParentOf(a,b)\leftrightarrow ChildOf(b,a)
 \]
 
-Mã hóa những thuộc tính này trong ontology giúp giảm dữ liệu lặp và cải thiện khả năng truy vấn.
+Encoding these properties reduces duplicated manual facts and supports query expansion.
 
-## Hoàn thiện Knowledge Graph
+## Knowledge Graph completion
 
-Knowledge Graph thường không đầy đủ. Bài toán dự đoán liên kết (link prediction) ước lượng điểm cho bộ ba chưa tồn tại:
+KG often incomplete. Link prediction estimates missing triple score:
 
 \[
 score(h,r,t)
 \]
 
-Các mô hình embedding biến thực thể và quan hệ thành vector rồi học hàm chấm điểm.
+Embedding methods map entities/relations to vectors and learn scoring function.
 
-Ví dụ ý tưởng kiểu TransE:
+Example TransE-like idea:
 
 \[
 \mathbf{h}+\mathbf{r}\approx\mathbf{t}
 \]
 
-với các bộ ba được xem là đúng.
+for true triple.
 
-Quan trọng: cạnh được dự đoán chỉ là **giả thuyết**, không phải sự kiện đã được xác minh. Trong hệ thống quan trọng, không nên tự động chuyển score thành fact.
+But predicted edge is **hypothesis**, not verified fact. Completion must not silently convert score into truth in high-stakes system.
 
-## Embedding thực thể
+## Entity embeddings
 
-Graph embedding đưa thực thể vào không gian vector dựa trên topology và quan hệ.
+Graph embeddings place entities in vector space based on topology/relations.
 
-Nhờ đó có thể thực hiện link prediction, tìm thực thể tương tự, clustering hoặc dùng vector làm feature cho Machine Learning.
+They enable:
 
-Tuy nhiên embedding nén nhiều cấu trúc quan hệ vào vector nên có thể làm mất khả năng giải thích tường minh.
+- link prediction;
+- similarity;
+- clustering;
+- downstream ML features.
 
-Đây lại là sự đánh đổi quen thuộc giữa biểu diễn ký hiệu và biểu diễn phân tán.
+But vector similarity compresses relational structure and can lose explicit interpretability.
 
-## Graph Neural Network
+This mirrors symbolic ↔ distributed representation trade-off.
 
-GNN cập nhật biểu diễn của node bằng cách tổng hợp thông tin từ lân cận:
+## Graph Neural Networks
+
+GNN updates node representation by aggregating neighbors:
 
 \[
 \mathbf{h}_v^{(l+1)}=\phi\left(\mathbf{h}_v^{(l)},\operatorname{AGG}\{\mathbf{h}_u^{(l)}:u\in N(v)\}\right)
 \]
 
-GNN có thể học pattern trên cấu trúc đồ thị, nhưng không thay thế vai trò của schema, ontology hay provenance.
+GNN can learn on graph structure, but it does not replace KG schema/provenance.
 
-Knowledge Graph là cách tổ chức dữ liệu và ngữ nghĩa; GNN là một kiến trúc học có thể sử dụng dữ liệu đồ thị.
+Knowledge Graph is data/semantic representation; GNN is learning architecture that may consume graphs.
 
-## Truy vấn nhiều bước
+## Multi-hop queries
 
-Ví dụ câu hỏi:
+Question:
 
-> Những nhà cung cấp nào nằm ở các quốc gia đang bị sự kiện X ảnh hưởng?
+> Which suppliers are located in countries affected by event X?
 
-có thể cần một đường đi kiểu:
+May require path:
 
 ```text
 Supplier
@@ -302,57 +310,63 @@ Country
 Event
 ```
 
-Đồ thị giúp thể hiện rõ truy vấn nhiều bước.
+Graph enables explicit multi-hop retrieval.
 
-Tuy nhiên chỉ vì tồn tại một đường đi không có nghĩa câu trả lời luôn đúng về mặt ngữ nghĩa. Loại quan hệ, hướng cạnh và bối cảnh đều phải phù hợp.
+But path existence does not automatically mean answer semantically valid; relation directions/types matter.
 
-## Bùng nổ số đường đi
+## Path explosion
 
-Nếu bậc trung bình của đồ thị là `b`, số đường đi độ dài `k` có thể tăng gần `b^k`.
+If average degree `b`, number paths of length `k` can grow roughly `b^k`.
 
-Vì vậy truy vấn đồ thị thường cần lọc loại quan hệ, giới hạn hướng cạnh, giới hạn độ dài đường đi, áp dụng schema và xếp hạng.
+Graph query needs:
 
-Đây cũng là một bài toán tìm kiếm.
+- relation filters;
+- direction constraints;
+- path length bounds;
+- schema;
+- ranking.
 
-## Knowledge Graph và cơ sở dữ liệu quan hệ
+This is search problem again.
 
-Cơ sở dữ liệu quan hệ mạnh ở giao dịch dạng bảng, ràng buộc và SQL join.
+## Knowledge Graph vs relational database
 
-Graph database mạnh hơn khi cần truy vấn quan hệ nhiều bước, cấu trúc linh hoạt và path traversal.
+Relational DB excels tabular transactions, constraints and SQL joins.
 
-Nhiều Knowledge Graph vẫn có thể lưu bằng cơ sở dữ liệu quan hệ. “Knowledge Graph” trước hết là một cách mô hình hóa tri thức, không bắt buộc phải dùng một công nghệ lưu trữ cụ thể.
+Graph DB excels variable-length relationship traversal and graph-centric schema.
 
-Nên chọn storage theo workload thay vì theo tên công nghệ.
+Many KG facts can be stored relationally; “Knowledge Graph” is semantic/modeling concept, not necessarily requirement for graph database technology.
 
-## Knowledge Graph và vector database
+Choose storage from workload, not branding.
 
-Vector database truy xuất theo mức tương đồng trong không gian embedding:
+## Knowledge Graph vs vector database
+
+Vector DB retrieves by embedding similarity:
 
 ```text
 query embedding ≈ document/entity embedding
 ```
 
-Knowledge Graph truy xuất theo quan hệ được biểu diễn rõ:
+KG retrieves by explicit relationships/constraints:
 
 ```text
 entity --relation--> entity
 ```
 
-Vector search trả lời câu hỏi “thứ gì giống nhau về ngữ nghĩa?”.
+Vector search answers “what is semantically similar?”
 
-Knowledge Graph trả lời câu hỏi “những thực thể nào được kết nối bởi quan hệ cụ thể?”.
+KG query answers “what is explicitly connected according to relation semantics?”
 
-Hai cơ chế có thể bổ sung cho nhau.
+Hybrid system can use both.
 
-## Knowledge Graph kết hợp RAG
+## KG + RAG
 
-RAG cơ bản thường có dòng xử lý:
+Text RAG flow:
 
 ```text
 query → embedding retrieval → chunks → LLM
 ```
 
-Nếu kết hợp Knowledge Graph:
+KG-enhanced flow can add:
 
 ```text
 query
@@ -364,39 +378,37 @@ relevant entities + relations + documents
 LLM grounded generation
 ```
 
-Cách này hữu ích khi cần cấu trúc quan hệ rõ, truy vấn nhiều bước hoặc provenance.
+Benefits can include explicit multi-hop structure, metadata filtering and provenance.
 
-Đổi lại, chi phí xây và duy trì graph cao hơn đáng kể so với RAG văn bản đơn giản.
+But graph construction/maintenance cost is significant.
 
-## Thuật ngữ GraphRAG
+## GraphRAG term
 
-“GraphRAG” hiện được dùng cho nhiều kiến trúc khác nhau, không phải một thuật toán chuẩn duy nhất.
+“GraphRAG” is used for multiple architectures, not one standardized algorithm. Common idea is augment retrieval/generation with graph-derived entities, communities, relations or paths.
 
-Điểm chung thường là quá trình retrieval hoặc generation được tăng cường bằng thực thể, quan hệ, community hoặc path lấy từ một graph.
+When evaluating GraphRAG, ask exactly:
 
-Khi đánh giá một hệ GraphRAG, cần hỏi rõ:
+- graph built how?
+- nodes/edges mean what?
+- query strategy?
+- graph used for retrieval, summarization or reasoning?
+- facts verified how?
 
-- graph được xây bằng cách nào;
-- node và edge thực sự đại diện cho điều gì;
-- chiến lược truy vấn ra sao;
-- graph được dùng để retrieval, summarization hay reasoning;
-- fact được xác minh như thế nào.
+Do not treat label as guarantee of better reasoning.
 
-Tên “GraphRAG” tự nó không bảo đảm chất lượng suy luận tốt hơn.
+## Entity linking from text
 
-## Liên kết thực thể từ văn bản
+Before querying KG from natural language, identify mentions and map to entities.
 
-Trước khi truy vấn Knowledge Graph bằng ngôn ngữ tự nhiên, hệ thống phải xác định mention và ánh xạ về đúng entity.
+`Apple` could mean company or fruit.
 
-Ví dụ `Apple` có thể là công ty hoặc trái táo.
+Entity linking uses context to resolve ambiguity.
 
-Entity linking sử dụng ngữ cảnh để giải quyết mơ hồ.
+A wrong link contaminates entire downstream multi-hop query, so confidence/fallback matter.
 
-Nếu link sai ngay từ đầu, toàn bộ truy vấn nhiều bước phía sau có thể sai theo. Vì vậy confidence và fallback rất quan trọng.
+## Ontology-aware retrieval
 
-## Retrieval dựa trên ontology
-
-Nếu truy vấn yêu cầu `medical professional`, ontology có thể mở rộng sang các subclass như:
+If query asks `medical professional`, ontology may expand subclasses:
 
 ```text
 Doctor
@@ -405,13 +417,13 @@ Pharmacist
 ... ⊑ MedicalProfessional
 ```
 
-Cách này tăng độ bao phủ mà không phụ thuộc hoàn toàn vào từ khóa hoặc embedding similarity.
+This improves recall without relying only lexical/embedding similarity.
 
-Tuy nhiên ontology phải phản ánh đúng định nghĩa hiện tại của miền dữ liệu.
+But ontology must match domain and current definitions.
 
-## Knowledge Graph trong hệ gợi ý
+## KG in recommendation
 
-Có thể mô hình hóa:
+User-item interaction plus item attributes/relations:
 
 ```text
 User → watched → Movie
@@ -419,13 +431,13 @@ Movie → directedBy → Director
 Movie → genre → SciFi
 ```
 
-Các path trên graph có thể trở thành feature hoặc lý do giải thích recommendation.
+Graph paths can provide explainable features/recommendations.
 
-Embedding hoặc GNN có thể học thêm từ đồ thị dị thể này.
+Embedding/GNN models can learn from this heterogeneous graph.
 
-## Knowledge Graph trong phát hiện gian lận
+## KG in fraud detection
 
-Một graph có thể nối:
+Graph connects:
 
 ```text
 Account
@@ -436,108 +448,113 @@ Phone
 Transaction
 ```
 
-Gian lận thường mang tính quan hệ: nhiều tài khoản dùng chung thiết bị hoặc IP, hoặc có chuỗi tiền quay vòng.
+Fraud may be relational: many accounts share device/IP or money cycles.
 
-Những pattern này khó nhìn thấy nếu chỉ xem từng dòng giao dịch độc lập.
+Graph algorithms/GNNs detect patterns invisible to per-row classifier.
 
-Khi dùng graph cho fraud cần đặc biệt chú ý thời gian để tránh leakage từ các cạnh xuất hiện sau thời điểm cần dự đoán.
+Still need temporal ordering and avoid leakage (future edges).
 
-## Chất lượng dữ liệu
+## Data quality
 
-Các chiều chất lượng quan trọng gồm:
+KG quality dimensions:
 
-- độ chính xác của entity resolution;
-- độ đúng của quan hệ;
-- độ bao phủ;
-- độ mới theo thời gian;
+- entity resolution accuracy;
+- relation correctness;
+- coverage;
+- temporal freshness;
 - provenance;
-- tính nhất quán schema;
-- tỷ lệ duplicate và conflict.
+- schema consistency;
+- duplicate/conflict rate.
 
-Một graph rất lớn nhưng định danh kém có thể tệ hơn một graph nhỏ nhưng đáng tin cậy.
+A huge graph with poor identity is worse than smaller reliable graph.
 
-## Cập nhật gia tăng
+## Incremental updates
 
-Knowledge Graph trong production luôn thay đổi. Pipeline có thể gồm:
+Production KG evolves continuously. Update pipeline must handle:
 
 ```text
-nguồn mới
-→ trích xuất thực thể / quan hệ
-→ entity resolution
-→ kiểm tra schema
-→ lưu provenance
-→ hòa giải xung đột
-→ cập nhật index / embedding
+new source
+→ extract entities/relations
+→ resolve identity
+→ validate schema
+→ preserve provenance
+→ reconcile conflicts
+→ update indexes/embeddings
 ```
 
-Đây là bài toán kết hợp giữa Data Engineering và Knowledge Engineering, không chỉ là Machine Learning.
+This is Data Engineering + Knowledge Engineering, not just AI modeling.
 
-## Trích xuất bằng LLM
+## Extraction with LLM
 
-LLM có thể chuyển văn bản thành các bộ ba ứng viên:
+LLM can convert text to candidate triples:
 
 ```text
 Text → LLM → structured entities/relations
 ```
 
-Nhưng vẫn phải kiểm tra vì mô hình có thể tự tạo quan hệ không tồn tại, gộp sai entity, bỏ mất qualifier hoặc thời gian, hoặc chuẩn hóa giá trị sai.
+Need validation because model may:
 
-Pipeline an toàn hơn:
+- invent relation;
+- merge entities incorrectly;
+- omit qualifier/time;
+- normalize value wrongly.
+
+Safer pipeline:
 
 ```text
 LLM extraction
 → schema validation
 → entity resolution
 → source-grounded verification
-→ human/review rules cho dữ liệu quan trọng
+→ human/review rules for critical facts
 ```
 
-## Hỏi đáp trên Knowledge Graph
+## Question answering over KG
 
-Có nhiều cách:
+Methods range from:
 
-- SPARQL hoặc Cypher xác định;
-- semantic parsing từ ngôn ngữ tự nhiên sang query;
+- deterministic SPARQL/Cypher;
+- semantic parsing NL → query;
 - embedding-based relation prediction;
 - GNN reasoning;
-- LLM gọi công cụ truy vấn graph.
+- LLM tool-calling graph query.
 
-Một mẫu đáng tin cậy trong doanh nghiệp là: LLM tạo query có cấu trúc, graph engine thực thi, sau đó LLM diễn đạt kết quả kèm provenance.
+Reliable enterprise pattern: LLM generates structured query, graph engine executes, LLM verbalizes result with provenance.
 
-## Mô hình tư duy
+## Mental Model
 
 ```text
-Entity      = một đối tượng có thể định danh
-Relation    = kết nối ngữ nghĩa có kiểu
-Triple      = phát biểu nguyên tử trên đồ thị
-Ontology    = vocabulary + ràng buộc ngữ nghĩa
-Provenance  = nguồn của phát biểu
-Time        = bối cảnh hiệu lực
-Graph query = truy xuất quan hệ có cấu trúc
-Embedding   = lớp tương đồng / chấm điểm học được
-Reasoner    = suy ra fact mới từ quy tắc hình thức
+Entity      = identifiable thing
+Relation    = typed semantic connection
+Triple      = atomic graph statement
+Ontology    = vocabulary + semantic constraints
+Provenance  = source of claim
+Time        = validity context
+Graph query = explicit structured relationship retrieval
+Embedding   = learned similarity/score layer
+Reasoner    = derives facts from formal semantics/rules
 ```
 
-## Các hiểu lầm thường gặp
+## Common Misconceptions
 
-### “Knowledge Graph là vector database có thêm quan hệ”
+### “Knowledge Graph = vector database with relationships”
 
-Không. Vector database xoay quanh tương đồng trong embedding space; Knowledge Graph xoay quanh quan hệ có kiểu và ngữ nghĩa tường minh.
+No. Vector DB centers similarity in embedding space; KG centers explicit typed relations and semantics.
 
-### “Nếu có đường đi thì quan hệ đó có ý nghĩa”
+### “If path exists, relationship is meaningful”
 
-Không. Ý nghĩa chỉ đúng khi loại cạnh, hướng và ngữ cảnh của đường đi phù hợp với câu hỏi.
+Graph path only becomes meaningful through relation semantics, direction and context.
 
-### “Link prediction tạo ra fact còn thiếu”
+### “Link prediction adds missing facts”
 
-Không trực tiếp. Nó chỉ tạo ứng viên và điểm số; vẫn có thể cần xác minh ngoài mô hình.
+It predicts candidates/scores; external validation may be required before treating as facts.
 
-### “GraphRAG luôn tốt hơn RAG thường”
+### “GraphRAG always better than normal RAG”
 
-Không. GraphRAG có thêm chi phí xây và truy vấn graph, chỉ đáng giá khi quan hệ hoặc cấu trúc nhiều bước thật sự quan trọng.
+It adds graph construction/query overhead and is valuable when relational/multi-hop structure actually matters.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Knowledge Graph nằm ở giao điểm của Database, Logic, Graph Algorithms, NLP và Machine Learning. Nó đặc biệt quan trọng với RAG và Agent vì cung cấp tri thức bên ngoài có thể cập nhật và truy vấn rõ ràng, trong khi embedding và LLM đảm nhận phần hiểu ngôn ngữ và khái quát hóa linh hoạt.
+Knowledge Graphs sit at intersection of Databases, Logic, Graph Algorithms, NLP and ML. They are especially important later for RAG and Agents because they provide explicit mutable external knowledge, while embeddings/LLMs provide flexible statistical language understanding.
 
-Xem tiếp: [AI ký hiệu và AI neuro-symbolic](./07_symbolic_neurosymbolic_ai.md).
+Xem tiếp: [Symbolic and Neuro-Symbolic AI](./07_symbolic_neurosymbolic_ai.md).

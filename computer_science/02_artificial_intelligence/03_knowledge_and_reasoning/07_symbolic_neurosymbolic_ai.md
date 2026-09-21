@@ -1,432 +1,473 @@
-# AI ký hiệu và AI Neuro-Symbolic
+# Symbolic AI và Neuro-Symbolic AI
 
-Lịch sử AI đôi khi bị kể quá đơn giản theo kiểu: **AI ký hiệu thất bại → Machine Learning chiến thắng → Deep Learning thay thế mọi thứ trước đó**. Cách kể này không chính xác. Hệ ký hiệu và hệ neural có những điểm mạnh khác nhau; nhiều hệ thống đáng tin cậy hiện nay kết hợp mô hình học được với công cụ, ràng buộc, tìm kiếm, cơ sở dữ liệu và cơ chế kiểm chứng hình thức.
+Artificial Intelligence thường được kể như một cuộc chuyển giao: **Symbolic AI thất bại → Machine Learning thắng → Deep Learning thay thế mọi thứ cũ**. Câu chuyện này quá đơn giản. Symbolic và neural approaches có strengths khác nhau; nhiều reliable systems hiện đại kết hợp learned perception/language với explicit tools, constraints, search, databases và formal verification.
 
-**AI ký hiệu (Symbolic AI / 기호주의 인공지능)** biểu diễn tri thức bằng ký hiệu, quy tắc và quan hệ có cấu trúc. **AI neural** học biểu diễn phân tán và hàm từ dữ liệu. **AI neuro-symbolic (Neuro-Symbolic AI / 신경-기호 인공지능)** là tên chung cho các hướng cố gắng kết hợp hai họ phương pháp này; nó không chỉ một kiến trúc duy nhất.
+**Symbolic AI (기호주의 인공지능)** biểu diễn knowledge bằng symbols, rules và structured relations. **Neural AI** học distributed representations và functions từ data. **Neuro-Symbolic AI (신경-기호 인공지능)** là umbrella term cho approaches cố kết hợp hai families, nhưng không có một architecture duy nhất mang tên này.
 
-Xem trước: [Biểu diễn tri thức](./00_knowledge_representation.md), [Suy luận và lập luận](./03_inference_and_reasoning.md), và [Knowledge Graph](./06_knowledge_graphs.md).
+Xem trước: [Knowledge Representation](./00_knowledge_representation.md), [Inference and Reasoning](./03_inference_and_reasoning.md), và [Knowledge Graphs](./06_knowledge_graphs.md).
 
-## AI ký hiệu bắt đầu từ đâu?
+## Symbolic AI bắt đầu từ đâu?
 
-Các hệ ký hiệu giả định rằng nhiều khía cạnh của trí tuệ có thể được mô hình hóa bằng:
+Symbolic systems giả định nhiều aspects của intelligence có thể modeled bằng:
 
 ```text
-ký hiệu
-+ quy tắc
-+ tìm kiếm / suy luận
+symbols
++ rules
++ search/inference
 ```
 
-Ví dụ gồm bộ chứng minh định lý, expert system, planner kiểu STRIPS, SAT/SMT solver, rule engine và ontology reasoner.
+Examples:
 
-Một ký hiệu như `Patient42`, vị từ `HasSymptom(x,Fever)` hoặc quy tắc `A∧B→C` có ý nghĩa được xác định rõ bởi người thiết kế và tri thức miền.
+- theorem prover;
+- expert system;
+- STRIPS planner;
+- SAT/SMT solver;
+- rule engine;
+- ontology reasoner.
 
-## Điểm mạnh của hệ ký hiệu
+A symbol như `Patient42`, predicate `HasSymptom(x,Fever)` và rule `A∧B→C` có explicit semantics do designer/domain define.
 
-### Tính tường minh
+## Strength của symbolic systems
 
-Một quy tắc có thể đọc trực tiếp:
+### Explicitness
+
+Rule có thể inspect:
 
 ```text
 HighRisk(x) ∧ MissingKYC(x) → ManualReview(x)
 ```
 
-Người thiết kế biết rõ điều kiện nào dẫn tới kết luận nào.
+System designer biết relation nào được encoded.
 
-### Khả năng kiểm chứng
+### Verification
 
-Bộ chứng minh hình thức hoặc solver có thể xác nhận một ứng viên có thỏa các ràng buộc đã mô hình hóa hay không.
+Formal proof/solver có thể guarantee candidate satisfies constraints relative to model.
 
-### Khả năng kết hợp cấu trúc
+### Compositional structure
 
-Ký hiệu và quan hệ có thể kết hợp theo quy tắc rõ ràng. Khi xuất hiện thực thể mới nhưng vẫn phù hợp schema, hệ thống có thể áp dụng quy tắc mà không cần huấn luyện lại.
+Symbols và relations combine systematically. Rule applies to new entities without retraining if facts fit schema.
 
-### Hiệu quả dữ liệu
+### Data efficiency
 
-Nếu quy tắc miền đã biết, không cần hàng nghìn ví dụ để hệ thống tự phát hiện lại cùng quy tắc bằng thống kê.
+If domain rules known, system không cần thousands examples để rediscover them statistically.
 
-## Điểm yếu của hệ ký hiệu
+## Weakness của symbolic systems
 
-Một vấn đề kinh điển là **nút thắt thu thập tri thức (knowledge acquisition bottleneck)**: chuyên gia phải tự mã hóa số lượng rất lớn quy tắc và sự kiện.
+### Knowledge acquisition bottleneck
 
-Hệ ký hiệu cũng dễ giòn khi dữ liệu đầu vào không sạch. Ảnh, âm thanh và ngôn ngữ tự nhiên không xuất hiện sẵn dưới dạng ký hiệu hoàn hảo.
+Human experts phải encode huge number rules/facts.
 
-Ngoài ra, tri thức đời thường có quá nhiều ngoại lệ và phụ thuộc ngữ cảnh để có thể mã hóa toàn bộ bằng tay.
+### Brittleness
 
-Những hạn chế này là một trong các động lực thúc đẩy Machine Learning và Deep Learning.
+Rule written for clean symbolic input may fail when real data noisy/ambiguous.
 
-## Hệ neural bắt đầu từ việc học
+### Perception gap
 
-Một mô hình neural có dạng:
+Images, audio và natural language do not arrive as clean symbols.
+
+### Commonsense scale
+
+Explicitly encoding every exception/context is difficult.
+
+These weaknesses helped drive statistical ML and Deep Learning.
+
+## Neural systems start from learning
+
+Neural model:
 
 \[
 f_\theta(x)
 \]
 
-và học các tham số `θ` từ dữ liệu thông qua tối ưu hóa.
+learns parameters from data using optimization.
 
-Thay vì thiết kế toàn bộ feature hoặc rule thủ công, mô hình có thể học biểu diễn trực tiếp từ dữ liệu.
+Instead of manually define features/rules, representation can be learned end-to-end.
 
-Điểm mạnh của neural network là xử lý perception, ngôn ngữ, similarity, dữ liệu nhiều chiều và khả năng khái quát hóa từ lượng dữ liệu lớn.
+Strengths:
 
-Đổi lại, biểu diễn bên trong khó giải thích trực tiếp, việc bảo đảm ràng buộc cứng khó hơn, hành vi ngoài phân phối có thể không ổn định và tri thức cụ thể khó cập nhật chọn lọc trong trọng số.
+- perception;
+- language;
+- similarity/generalization;
+- high-dimensional noisy data;
+- scalable learning from massive datasets.
 
-## Không nên xem symbolic và neural như hai lựa chọn loại trừ nhau
+Weaknesses:
 
-Rất nhiều hệ thống hiện đại đã là hệ lai dù không tự gọi là “neuro-symbolic”.
+- opaque internal representations;
+- hard guarantees difficult;
+- brittle OOD behavior;
+- exact constraint satisfaction not automatic;
+- factual knowledge hard to update selectively.
 
-Ví dụ search engine:
+## Symbolic vs neural is not binary
+
+Many systems already hybrid without using label “neuro-symbolic”.
+
+Example search engine:
 
 ```text
 neural embedding retrieval
-+ bộ lọc Boolean
-+ chỉ mục cơ sở dữ liệu
-+ quy tắc xếp hạng
++ boolean filters
++ database indexes
++ ranking rules
 ```
 
-Ví dụ coding agent:
+Example coding agent:
 
 ```text
-LLM đề xuất code
-+ compiler / type checker
-+ test
-+ shell / git tool
+LLM proposes code
++ compiler/type checker
++ tests
++ shell/git tools
 ```
 
-Compiler chính là một thành phần hình thức cung cấp phản hồi chính xác mà LLM không cần tự mô phỏng.
+Compiler is symbolic/formal component providing exact feedback.
 
-## Chọn cơ chế theo yêu cầu của từng thành phần
+## A useful decomposition
 
-Thay vì hỏi “symbolic hay neural tốt hơn?”, nên hỏi thành phần nào cần tính chất nào.
+Instead of asking “symbolic or neural?”, ask which component requires which property:
 
-| Nhu cầu | Cơ chế thường phù hợp |
+| Need | Often suitable mechanism |
 |---|---|
-| Hiểu pixel hoặc âm thanh thô | neural model |
-| Tìm tương đồng ngữ nghĩa | embedding |
-| Ràng buộc nghiệp vụ cứng | rule / solver |
-| Tính toán số chính xác | calculator / runtime |
-| Lưu trữ quan hệ tường minh | database / Knowledge Graph |
-| Giao tiếp ngôn ngữ linh hoạt | LLM |
-| Chứng minh hình thức | theorem prover |
-| Lập kế hoạch tổ hợp | search / solver + heuristic học được |
+| Perception from raw pixels/audio | neural model |
+| Semantic similarity | embeddings |
+| Hard business constraint | rule/solver |
+| Exact arithmetic | calculator/runtime |
+| Relational factual store | database/KG |
+| Flexible language interface | LLM |
+| Formal proof | theorem prover |
+| Combinatorial planning | search/solver + learned heuristic |
 
-Một kiến trúc tốt có thể kết hợp nhiều cơ chế thay vì buộc một mô hình duy nhất làm mọi việc.
+System architecture can compose mechanisms.
 
-## Neural perception rồi suy luận ký hiệu
+## Neural perception → symbolic reasoning
 
-Một mẫu kiến trúc cổ điển:
+Classic pattern:
 
 ```text
-ảnh
+image
  ↓ neural detector
-đối tượng + thuộc tính
- ↓ symbolic rules / planner
-suy luận / hành động
+objects + attributes
+ ↓ symbolic rules/planner
+reasoning/action
 ```
 
-Điểm yếu là lỗi perception sẽ trở thành ký hiệu sai. Bộ suy luận phía sau có thể hoàn toàn hợp logic nhưng đang suy luận trên dữ liệu đầu vào sai.
+Risk: perception errors become wrong symbols. Downstream reasoner may be perfectly logical about incorrect detections.
 
-Vì vậy ranh giới giữa neural và symbolic nên truyền cả độ tin cậy hoặc mức bất định khi phù hợp.
+Need uncertainty/confidence at interface.
 
-## Cấu trúc ký hiệu hướng dẫn việc học neural
+## Symbolic structure guiding neural learning
 
-Quy tắc hoặc ràng buộc có thể được đưa vào hàm mất mát.
+Rules/constraints can shape training objective.
 
-Ví dụ biết rằng:
+Suppose known constraint:
 
 \[
 A(x)\rightarrow B(x)
 \]
 
-có thể thêm penalty khi dự đoán neural vi phạm quan hệ này.
+One can add penalty when neural predictions violate implication.
 
-Đây là **ràng buộc mềm (soft constraint)**. Nó làm vi phạm trở nên tốn kém nhưng không tạo bảo đảm tuyệt đối, trừ khi kết quả cuối cùng còn được kiểm tra bằng một cơ chế cứng khác.
+This creates **soft constraint** rather than guaranteed symbolic enforcement unless final output checked separately.
 
-## Logic khả vi
+## Differentiable logic
 
-Một số phương pháp thay chân trị Boolean bằng giá trị liên tục `[0,1]` và thay toán tử logic bằng các hàm khả vi.
+Some methods replace Boolean truth with continuous values `[0,1]` and logical operators with differentiable relaxations.
 
-Ví dụ phép hội kiểu fuzzy có thể dùng:
+Example fuzzy-style conjunction may use:
 
 \[
 T(a,b)=ab
 \]
 
-hoặc một t-norm khác.
+or other t-norms.
 
-Khi đó mức thỏa logic có thể trở thành một phần của loss và huấn luyện bằng gradient.
+Then logical consistency becomes differentiable loss.
 
-Lợi ích là tích hợp trực tiếp với Deep Learning. Hạn chế là ngữ nghĩa chân trị đã trở thành xấp xỉ liên tục, không còn tương đương hoàn toàn với chứng minh logic cổ điển.
+Benefits: train by gradient.
 
-## Logic Tensor Network
+Limitation: relaxed truth semantics differ from classical logic; satisfaction may be approximate, not proof.
 
-Các hướng kiểu **Logic Tensor Network** ánh xạ vị từ thành hàm neural rồi biến công thức logic thành mục tiêu thỏa mãn khả vi.
+## Logic Tensor Networks
 
-Có thể hình dung:
+Logic Tensor Network-like approaches ground predicates into neural functions and translate logical formulas into differentiable satisfaction objectives.
+
+Mental model:
 
 ```text
-công thức ký hiệu
-   ↓ relaxation khả vi
-hàm mất mát
+symbolic formula
+   ↓ differentiable relaxation
+training loss
    ↓
-tham số neural
+neural parameters
 ```
 
-Cách này đưa tri thức có cấu trúc vào quá trình học, nhưng không tự động kế thừa toàn bộ bảo đảm của theorem proving cổ điển.
+This integrates prior knowledge into learning but does not automatically inherit classical theorem-proving guarantees.
 
-## Chứng minh định lý có neural hỗ trợ
+## Neural theorem proving
 
-Mô hình học có thể giúp xếp hạng lemma hoặc tactic:
+A learned model can guide proof search:
 
 ```text
-trạng thái chứng minh hiện tại
- ↓ neural model xếp hạng bước tiếp theo
-formal prover thực thi
+current proof state
+ ↓ neural model ranks lemmas/tactics
+formal prover executes step
  ↓
-trạng thái chứng minh hợp lệ hoặc thất bại
+valid next proof state or failure
 ```
 
-Tính đúng đắn cuối cùng đến từ kernel hình thức; neural network chủ yếu cải thiện hiệu quả tìm kiếm.
+Correctness comes from formal kernel; neural network improves search efficiency.
 
-Đây là một trong những kiến trúc neuro-symbolic rõ ràng nhất vì vai trò của hai phần được tách rất sạch.
+This is one of clearest neuro-symbolic patterns because roles are separated cleanly.
 
-## Heuristic học được kết hợp tìm kiếm ký hiệu
+## Learned heuristic + symbolic search
 
-Thuật toán tìm kiếm có thể cần heuristic `h(s)` hoặc policy để ưu tiên hành động. Neural network dự đoán hành động hoặc giá trị có triển vọng, trong khi quy tắc chuyển trạng thái vẫn được kiểm tra chính xác.
+Search algorithm needs heuristic `h(s)` or policy ordering. Neural network predicts promising actions/value, while symbolic state transition remains exact.
 
-Các hệ thống kiểu AlphaZero có thể nhìn như:
+AlphaZero-like game systems:
 
 ```text
-neural policy / value
+neural policy/value
 + Monte Carlo Tree Search
-+ luật trò chơi chính xác
++ exact game rules
 ```
 
-Machine Learning không thay thế search; nó giúp search tập trung vào nhánh hứa hẹn hơn.
+Again learning and symbolic/search computation complement each other.
 
-## LLM kết hợp SAT/SMT solver
+## LLM + SAT/SMT solver
 
-Giả sử yêu cầu tự nhiên:
+Natural-language requirement:
 
-> Xếp lịch cho 5 nhân viên, không được trùng ca, Alice không làm thứ Ba...
+> Schedule 5 workers, no overlapping shifts, Alice unavailable Tuesday...
 
-Kiến trúc đáng tin cậy hơn là:
+Architecture:
 
 ```text
-ngôn ngữ tự nhiên
- ↓ LLM trích xuất biến / ràng buộc
-SMT / CP-SAT model
+natural language
+ ↓ LLM extracts variables/constraints
+SMT/CP-SAT model
  ↓ solver
-assignment hợp lệ hoặc UNSAT
- ↓ LLM giải thích
+valid assignment / unsat
+ ↓ LLM explains
 ```
 
-Solver chỉ bảo đảm các ràng buộc đã được mã hóa. Điểm yếu nhất vẫn là bước chuyển từ ý định người dùng sang mô hình ràng buộc, vì vậy hệ thống nên hiển thị hoặc kiểm tra mô hình trung gian khi bài toán quan trọng.
+The solver guarantees constraints encoded. The weak link is semantic translation from user text to constraints, so system should expose/check extracted model.
 
-## LLM kết hợp code execution
+## LLM + code execution
 
-Với số học hoặc phân tích dữ liệu:
+For arithmetic/data analysis:
 
 ```text
-câu hỏi
- ↓ LLM viết code / query
-runtime thực thi
- ↓ kết quả thật
-LLM diễn giải
+question
+ ↓ LLM writes code/query
+runtime executes exact computation
+ ↓ actual result
+LLM explains result
 ```
 
-Đây là một kiến trúc lai rất thực dụng. Khi có một executor xác định và chính xác, không cần yêu cầu LLM “tự đóng vai máy tính” trong trọng số.
+This is a practical hybrid architecture. LLM is not asked to simulate calculator internally when deterministic executor exists.
 
-## LLM kết hợp Knowledge Graph
+## LLM + Knowledge Graph
 
-LLM có thể phụ trách nhận diện thực thể, tạo query và diễn đạt kết quả; Knowledge Graph lưu tri thức quan hệ tường minh.
+LLM can perform entity linking/query generation and verbalization; KG stores explicit facts/relations.
 
 ```text
-câu hỏi người dùng
- ↓ phân tích ngữ nghĩa / entity linking
-truy vấn graph có cấu trúc
- ↓ Knowledge Graph
+user question
+ ↓ semantic parse/entity link
+structured graph query
+ ↓ KG
 facts + provenance
  ↓ LLM
-câu trả lời
+answer
 ```
 
-Cách này giúp tri thức có thể cập nhật độc lập khỏi model weights và dễ kiểm toán hơn.
+This enables fresh/updatable knowledge and auditability.
 
-Tuy nhiên graph có thể không đầy đủ; không được tự suy rằng “không có cạnh” nghĩa là “sai” nếu hệ thống không dùng closed-world semantics.
+But graph coverage may be incomplete; LLM must not infer absence as false unless schema uses closed-world semantics.
 
-## RAG có phải Neuro-Symbolic AI không?
+## RAG as hybrid AI?
 
-RAG kết hợp retrieval với generative model, nhưng gọi mọi hệ RAG là “neuro-symbolic” sẽ làm khái niệm trở nên quá rộng.
+RAG combines neural retrieval/generation with external symbolic-ish text store/index, but calling every RAG system “neuro-symbolic” stretches term.
 
-Vector RAG thông thường có thể không có suy luận ký hiệu nào. KG-RAG, solver-backed RAG hoặc RAG có rule engine rõ ràng mang tính lai hơn.
+Plain vector RAG has no explicit symbolic reasoning. KG-RAG or solver-backed RAG is more clearly hybrid.
 
-Nên mô tả chính xác kiến trúc thay vì chỉ dùng nhãn.
+Use architecture description rather than label hype.
 
-## Program synthesis kết hợp verification
+## Program synthesis + verification
 
-Mô hình neural đề xuất chương trình, còn test, static analysis hoặc formal verifier kiểm tra.
+Neural model proposes program; tests/static analysis/formal verifier checks.
+
+Loop:
 
 ```text
-đề xuất
+propose
  ↓
-thực thi / kiểm chứng
- ↓ lỗi hoặc phản ví dụ
-sửa lại
+execute/verify
+ ↓ error/counterexample
+repair
  ↺
 ```
 
-Phản ví dụ mang thông tin rất cao vì nó chỉ ra một điều kiện cụ thể khiến lời giải sai. Mẫu này rất quan trọng trong coding agent đáng tin cậy.
+Counterexample provides high-information feedback. This pattern is central to reliable coding agents.
 
 ## Constraint decoding
 
-Thay vì sinh token tự do rồi mới từ chối, decoder có thể ép đầu ra tuân theo grammar hoặc schema ngay trong quá trình sinh.
+Instead of generate arbitrary tokens then reject, decoder can enforce grammar/schema during generation.
 
-Ví dụ:
+Examples:
 
 - JSON grammar;
 - SQL grammar;
-- finite-state constraint;
-- regex hoặc CFG-guided decoding.
+- finite-state constraints;
+- regex/CFG-guided decoding.
 
-Cách này có thể bảo đảm **cú pháp**, nhưng không bảo đảm **ngữ nghĩa**.
+This guarantees syntactic structure, not necessarily semantic correctness.
 
-Ví dụ `{"age": -500}` vẫn là JSON hợp lệ nhưng là giá trị sai về mặt miền dữ liệu.
+`{"age": -500}` can be valid JSON but invalid domain value.
 
-## Tool có kiểu dữ liệu rõ ràng
+Semantic validation remains separate.
 
-Schema của function calling tạo ra một giao diện gần với biểu diễn ký hiệu:
+## Typed tools
+
+Function calling schema provides symbolic interface:
 
 ```text
 search(query: string, top_k: int)
 transfer(amount: decimal, account_id: string)
 ```
 
-Kiểu và schema làm giảm không gian hành động và cho phép kiểm tra đầu vào.
+Type/schema reduces action space and allows validation.
 
-LLM lựa chọn công cụ và tham số; chính implementation của công cụ phải chịu trách nhiệm về permission, validation và side effect.
+Tool implementation then interacts with deterministic external system.
 
-## Tách người đề xuất và bộ kiểm chứng
+LLM chooses action; tool enforces semantics/permissions.
 
-Một mẫu kiến trúc mạnh:
+## Separation of proposer and verifier
+
+A robust pattern across hybrid AI:
 
 ```text
 Proposer
-  linh hoạt / học được / sáng tạo
+  flexible / learned / creative
         ↓
 Verifier
-  nghiêm ngặt / xác định / hình thức
+  strict / deterministic / formal
         ↓
 Executor
         ↓
 Feedback
 ```
 
-Ví dụ:
+Examples:
 
 - LLM ↔ compiler;
 - planner ↔ constraint validator;
 - theorem model ↔ proof kernel;
-- code model ↔ test;
+- code model ↔ tests;
 - extraction model ↔ schema validator.
 
-Cách này tránh yêu cầu một mô hình duy nhất vừa sáng tạo vừa hoàn toàn chính xác.
+This architecture reduces need for one model to be both creative and perfectly reliable.
 
-## Kiểm chứng chỉ đúng so với specification
+## Verification is only relative to specification
 
-Một solver có thể chứng nhận:
-
-```text
-lịch thỏa toàn bộ ràng buộc đã mã hóa
-```
-
-nhưng không thể tự chứng nhận:
+A solver can certify:
 
 ```text
-các ràng buộc đã mã hóa phản ánh hoàn hảo ý định của con người
+schedule satisfies encoded constraints
 ```
 
-Khoảng cách này gọi là **specification gap**.
+It cannot certify:
 
-Formal verification chuyển phần lớn rủi ro từ “thực thi có đúng không?” sang “ta đã mô hình hóa đúng thứ cần kiểm tra chưa?”, chứ không làm biến mất mọi bất định.
+```text
+encoded constraints perfectly reflect stakeholder intent
+```
 
-## Ràng buộc mềm và ràng buộc cứng
+This **specification gap** is central.
 
-Nếu thêm penalty vào loss:
+Formal verification moves uncertainty from execution correctness toward modeling correctness; it does not eliminate all uncertainty.
+
+## Soft vs hard constraints
+
+Neural loss penalty:
 
 \[
 L=L_{task}+\lambda L_{constraint}
 \]
 
-thì hệ thống chỉ làm vi phạm trở nên tốn kém hơn.
+makes violations costly but possible.
 
-Nếu dùng solver với ràng buộc:
+Hard solver constraint:
 
 \[
 g(x)\le0
 \]
 
-thì lời giải vi phạm sẽ bị loại hoàn toàn.
+rejects invalid solutions entirely.
 
-Với invariant an toàn quan trọng, nếu có thể kiểm tra xác định thì không nên chỉ dựa vào penalty mềm trong quá trình huấn luyện.
+Choose based requirement. Safety-critical invariant usually should not rely only on soft training penalty if deterministic enforcement possible.
 
-## Representation learning theo hướng neuro-symbolic
+## Neuro-symbolic representation learning
 
-Một số phương pháp học embedding nhưng vẫn tận dụng cấu trúc quan hệ đã biết.
+Some methods learn embeddings while preserving known relational structure.
 
-Knowledge Graph embedding học vector từ triple; GNN truyền thông tin qua topology của graph.
+Knowledge Graph embedding trains vectors from triples; graph neural networks propagate typed neighborhood information.
 
-Những hệ như vậy có thể được xem là lai theo nghĩa rộng, nhưng không nhất thiết đang thực hiện suy luận ký hiệu hình thức.
+These are hybrid in a broad sense, though not necessarily performing formal symbolic inference.
 
-Vì vậy cần dùng thuật ngữ “neuro-symbolic” cẩn thận.
+The term should be used carefully.
 
-## Ẩn dụ System 1 / System 2
+## System 1 / System 2 analogy
 
-Đôi khi người ta ví neural model là “System 1” nhanh và trực giác, còn symbolic search là “System 2” chậm và có cấu trúc.
+People sometimes call neural model “System 1” fast intuition and symbolic search “System 2” slow reasoning, borrowing psychology terminology.
 
-Ẩn dụ này có thể hữu ích để giải thích, nhưng không nên hiểu như một sự tương đương sinh học thật sự.
+This can be a useful metaphor but is not literal cognitive equivalence. Engineering architecture should be described concretely: proposal network, search, verifier, memory, tool execution.
 
-Trong kỹ thuật, nên mô tả cụ thể hơn: proposal network, search, verifier, memory và tool execution.
+## When symbolic rules are a poor fit
 
-## Khi symbolic không phù hợp
+Do not force symbolic modeling when:
 
-Không nên ép mọi bài toán vào rule nếu ranh giới khái niệm mơ hồ, đầu vào nhiều chiều, quy tắc không thể liệt kê hết hoặc môi trường thay đổi nhanh.
+- category boundary inherently fuzzy;
+- raw input high-dimensional;
+- rules impossible to enumerate;
+- environment rapidly changes;
+- semantics learned from examples matter more than formal constraints.
 
-Nhận diện vật thể từ pixel là ví dụ điển hình nơi Deep Learning hiệu quả hơn rất nhiều so với pipeline symbolic thủ công.
+Image recognition from pixels is classic example where Deep Learning outperforms handcrafted symbolic vision pipelines.
 
-## Khi neural model không phù hợp
+## When neural models are a poor fit
 
-Không nên yêu cầu neural network một mình xử lý những việc đã có thuật toán xác định rõ như:
+Do not ask neural network alone for:
 
-- tính thuế chính xác;
-- kiểm tra quyền truy cập cứng;
-- join cơ sở dữ liệu;
-- kiểm tra chữ ký mật mã;
-- proof checking;
-- bảo đảm thỏa ràng buộc.
+- exact tax calculation when formula known;
+- hard access-control rule;
+- deterministic database join;
+- cryptographic verification;
+- proof checker;
+- constraint-satisfaction guarantee.
 
-Nên dùng công cụ xác định cho phần đó và chỉ dùng LLM ở chỗ cần giao tiếp hoặc điều phối linh hoạt.
+Use deterministic tools and let model orchestrate when language flexibility needed.
 
-## Lỗi của hệ lai có thể cộng dồn
+## Error composition
 
-Một hệ lai có nhiều nguồn lỗi:
+Hybrid system has multiple failure probabilities:
 
 ```text
-lỗi semantic parsing
-+ lỗi retrieval
-+ lỗi giả định của solver / model
-+ lỗi thực thi tool
-+ lỗi diễn giải kết quả
+semantic parse error
++ retrieval error
++ solver/model assumption error
++ tool execution error
++ explanation error
 ```
 
-Thêm verifier không bảo đảm toàn bộ pipeline đúng nếu upstream hoặc downstream xử lý sai thông tin.
+Adding verifier does not guarantee entire pipeline if upstream/downstream components can mis-handle results.
 
-Đánh giá cần có cả mức component và end-to-end.
+Evaluation must be end-to-end plus component-level.
 
-## Thiết kế giao diện giữa neural và symbolic
+## Interface design matters
 
-Nếu có thể, nên truyền trạng thái có cấu trúc thay vì văn bản tự do.
+Neural-symbolic boundary should expose structured state, not ambiguous prose where possible.
 
-Ví dụ tốt:
+Good:
 
 ```json
 {
@@ -436,66 +477,68 @@ Ví dụ tốt:
 }
 ```
 
-Rule engine có thể xử lý dạng này ổn định hơn một câu mô tả tự nhiên phải phân tích lại ở mỗi bước.
+Rule engine can consume reliably.
 
-## Confidence và khả năng từ chối
+Free-form sentence parsing at every step adds unnecessary uncertainty.
 
-Nếu neural parser không chắc chắn, hệ thống có thể yêu cầu làm rõ thay vì đưa một biểu diễn đáng ngờ vào solver.
+## Confidence and abstention
 
-Một solver hoàn hảo vẫn có thể cho ra kết quả “rất chắc chắn nhưng sai” nếu input symbolic ban đầu được parse sai.
+If neural parser uncertain, system may abstain/ask clarification instead of feed dubious symbols into strict solver.
 
-Vì vậy giao diện giữa hai phần phải nhận biết bất định.
+A perfect solver on wrong parse can create confidently wrong outcome.
 
-## Cách đọc một nghiên cứu Neuro-Symbolic
+Hybrid systems need uncertainty-aware handoff.
 
-Khi một bài nghiên cứu tuyên bố dùng neuro-symbolic, nên hỏi:
+## Neuro-symbolic benchmark question
 
-- tri thức ký hiệu nào được cung cấp;
-- thành phần nào được học;
-- phần nào có bảo đảm hình thức;
-- logic là ràng buộc cứng hay relaxation khả vi;
-- nhiễu được xử lý thế nào;
-- khả năng compositional generalization có thật hay chỉ khớp benchmark.
+When paper claims neuro-symbolic improvement, ask:
 
-Tên kiến trúc tự nó không nói lên chất lượng.
+- what symbolic knowledge is provided?
+- what is learned?
+- where are guarantees?
+- is logic hard or differentiable soft?
+- how is noise handled?
+- does system generalize compositionally or just fit benchmark?
 
-## Mô hình tư duy
+Architecture label alone does not answer quality.
+
+## Mental Model
 
 ```text
 Symbolic AI
-  fact / rule / constraint tường minh
-  + search / inference chính xác
+  explicit facts/rules/constraints
+  + exact search/inference
 
 Neural AI
-  biểu diễn phân tán học được
-  + khái quát hóa thống kê
+  learned distributed representations
+  + statistical generalization
 
 Hybrid / Neuro-Symbolic
-  dùng từng cơ chế ở nơi phù hợp
+  use each where its strengths fit
 
 Learned proposer → formal verifier → executor → feedback
 ```
 
-## Các hiểu lầm thường gặp
+## Common Misconceptions
 
-### “AI ký hiệu đã chết”
+### “Symbolic AI đã chết”
 
-Không. Solver, rule engine, database, planner, compiler và proof checker vẫn là những thành phần cốt lõi của nhiều hệ AI hiện đại.
+Formal solvers, rules, databases, planners and compilers remain essential; modern AI often embeds them as tools/components.
 
-### “Neuro-symbolic tự động có cả sự linh hoạt neural và bảo đảm symbolic”
+### “Neuro-symbolic automatically gives neural flexibility + symbolic guarantee”
 
-Không. Chỉ có bảo đảm khi kiến trúc thật sự có lớp kiểm chứng hoặc cưỡng chế đúng đắn. Penalty logic khả vi không tương đương chứng minh cứng.
+Only if architecture truly has a sound verifier/enforcement layer. Differentiable logic penalties are not same as hard proof.
 
-### “RAG chính là neuro-symbolic AI”
+### “RAG = neuro-symbolic AI”
 
-Không nhất thiết. Vector RAG chỉ là retrieval kết hợp generation và có thể không dùng biểu diễn hay suy luận ký hiệu.
+Plain vector RAG is hybrid retrieval/generation but does not necessarily include symbolic representation/reasoning.
 
-### “Có formal verifier là toàn hệ thống đúng”
+### “Formal verifier makes system correct”
 
-Verifier chỉ bảo đảm thuộc tính đã được đặc tả. Nó không đảm bảo bước hiểu ngôn ngữ tự nhiên hoặc các giả định thế giới thực ban đầu đúng.
+It guarantees properties encoded in specification, not correctness of natural-language interpretation or real-world assumptions.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-AI neuro-symbolic khép lại lớp Biểu diễn tri thức và chuẩn bị chuyển sang Machine Learning. Bài học chính mang tính kiến trúc: mô hình học mạnh ở perception, ngôn ngữ và đề xuất heuristic; hệ ký hiệu hoặc deterministic system mạnh ở trạng thái tường minh, ràng buộc, tính toán chính xác và verification.
+Neuro-symbolic design closes the Knowledge Representation layer and prepares the transition to Machine Learning. The central lesson is architectural: learned models are powerful at perception, language and heuristic proposal; symbolic/deterministic systems are powerful at explicit state, constraints, exact computation and verification.
 
-Các phần RAG, Agent và AI Engineering phía sau sẽ sử dụng lại mẫu kết hợp này nhiều lần.
+Later sections on RAG, Agents and AI Engineering will reuse this pattern repeatedly.

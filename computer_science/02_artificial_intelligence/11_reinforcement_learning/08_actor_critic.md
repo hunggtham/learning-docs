@@ -1,24 +1,24 @@
-# Actor–Critic
+# Actor-Critic
 
-**Actor–Critic (액터-크리틱)** kết hợp hai thành phần:
+**Actor-Critic (액터-크리틱)** kết hợp hai components:
 
 - **Actor**: policy `π_θ(a|s)` quyết định action;
-- **Critic**: value estimator `V_w(s)` hoặc `Q_w(s,a)` đánh giá state hoặc action.
+- **Critic**: value estimator `V_w(s)` hoặc `Q_w(s,a)` đánh giá action/state.
 
 Actor học từ feedback của critic; critic học dự đoán long-term return.
 
 ```text
 state
-→ Actor chọn action
-→ environment trả reward và next state
-→ Critic tính TD / advantage signal
+→ Actor chooses action
+→ environment gives reward/next state
+→ Critic computes TD/advantage signal
 → update Critic
 → update Actor
 ```
 
 ## Vì sao cần Critic?
 
-REINFORCE dùng full Monte Carlo return nên gradient variance cao. Critic dùng value estimate để tạo learning signal có variance thấp hơn thông qua bootstrapping.
+REINFORCE dùng full Monte Carlo return nên variance cao. Critic bootstrap value estimate để tạo lower-variance learning signal.
 
 Một one-step TD error:
 
@@ -26,205 +26,146 @@ Một one-step TD error:
 \delta_t=R_{t+1}+\gamma V_w(S_{t+1})-V_w(S_t)
 \]
 
-có thể được dùng như approximate advantage cho actor:
+có thể dùng như approximate advantage cho actor:
 
 \[
 \theta\leftarrow\theta+\alpha\delta_t\nabla_\theta\log\pi_\theta(A_t|S_t)
 \]
 
-## Objective của Actor
+## Actor Objective
 
-Actor muốn tăng expected return. Critic giúp ước lượng action hiện tại tốt hơn baseline bao nhiêu.
+Actor muốn tăng expected return. Critic cung cấp estimate action tốt hơn baseline bao nhiêu.
 
-- nếu `δ_t>0`, outcome tốt hơn kỳ vọng → tăng probability của action;
-- nếu `δ_t<0`, outcome tệ hơn kỳ vọng → giảm probability tương đối.
+Nếu `δ_t>0`, action tốt hơn expected → tăng probability.
 
-Actor vì vậy không cần đợi complete return mới biết hướng update.
+Nếu `δ_t<0`, action tệ hơn expected → giảm probability.
 
-## Objective của Critic
+## Critic Objective
 
-Critic cố giảm value-prediction error, ví dụ:
+Critic minimize value prediction error, ví dụ:
 
 \[
 L_V=(R+\gamma V_w(s')-V_w(s))^2
 \]
 
-Actor và critic được học đồng thời nên target của mỗi bên cũng thay đổi theo thời gian. Đây là một coupled optimization problem, không phải hai supervised model độc lập.
+Actor và critic learning targets thay đổi cùng nhau, tạo coupled optimization dynamics.
 
-## On-Policy Actor–Critic
+## On-Policy Actor-Critic
 
-Các algorithm thuộc family A2C/A3C sử dụng on-policy trajectory. Critic cung cấp advantage estimate để giảm variance so với pure Monte Carlo policy gradient.
+A2C/A3C family sử dụng on-policy trajectories. Advantage estimate từ critic giảm variance so với pure Monte Carlo.
 
-On-policy method thường đơn giản hơn về distribution correction nhưng phải thu dữ liệu mới thường xuyên khi policy thay đổi.
+## Off-Policy Actor-Critic
 
-## Off-Policy Actor–Critic
+Algorithms như DDPG, TD3, SAC learn from replay buffers.
 
-Các algorithm như DDPG, TD3 và SAC có thể học từ replay buffer.
-
-Trong continuous action problem, actor có thể được optimize theo:
+Actor có thể optimize:
 
 \[
 \max_\theta Q_w(s,\pi_\theta(s))
 \]
 
-thay vì cần tính `argmax_a Q(s,a)` bằng exhaustive search.
+trong continuous action problems.
 
-## Trực giác DDPG
+## DDPG Intuition
 
-**Deep Deterministic Policy Gradient (DDPG)** dùng:
+**Deep Deterministic Policy Gradient (DDPG)** dùng deterministic actor cho continuous action, critic Q-function, replay buffer và target networks.
 
-```text
-deterministic actor
-Q critic
-replay buffer
-target network
-```
+Nhưng DDPG sensitive/stability issues; TD3 cải thiện bằng clipped double critics, delayed policy updates và target smoothing.
 
-để xử lý continuous action.
+## Soft Actor-Critic
 
-DDPG có thể nhạy với hyperparameter và overestimation. TD3 cải thiện bằng double critic, delayed policy update và target policy smoothing.
-
-## Soft Actor–Critic
-
-**Soft Actor–Critic (SAC)** tối ưu return đồng thời khuyến khích entropy:
+**SAC** maximize return + entropy:
 
 \[
 J(\pi)=\mathbb E\left[\sum_t \gamma^t(r_t+\alpha H(\pi(\cdot|s_t)))\right]
 \]
 
-Entropy làm policy tiếp tục exploration và tránh collapse quá sớm.
+Entropy encourage exploration và robustness. SAC là strong off-policy method cho continuous control.
 
-SAC là một off-policy method mạnh cho nhiều continuous-control problem.
+## Shared vs Separate Networks
 
-## Shared và Separate Network
+Actor/critic có thể share representation trunk rồi tách heads, hoặc independent networks.
 
-Actor và critic có thể:
-
-- dùng hai network độc lập;
-- share một representation trunk rồi tách thành các head riêng.
-
-Shared representation tiết kiệm compute và có thể tận dụng common feature, nhưng gradient của policy objective và value objective cũng có thể interfere.
+Shared network tiết kiệm compute và representation, nhưng gradients từ policy/value objectives có thể interfere.
 
 ## Critic Bias
 
-Critic là learned approximator nên có thể sai có hệ thống.
+Nếu critic systematically wrong, actor optimize against wrong landscape. This is analogous reward-model exploitation: actor can exploit critic error.
 
-Nếu critic overestimate một vùng action space, actor có thể học cách exploit lỗi đó thay vì thật sự tăng return trong environment.
-
-Vấn đề này tương tự optimizer khai thác reward-model error.
-
-Double critic, target network và conservative update là các cách giảm rủi ro.
+Double critics và conservative updates help.
 
 ## Advantage Estimation
 
-Critic cho phép estimate:
+Critic enables:
 
 \[
 A(s,a)=Q(s,a)-V(s)
 \]
 
-hoặc GAE.
+or GAE estimates. Advantage removes state difficulty baseline: action judged relative to what is normally achievable from state.
 
-Advantage loại bỏ baseline về độ khó của state: action được đánh giá dựa trên việc nó tốt hơn hoặc tệ hơn mức thường đạt được từ state đó bao nhiêu.
+## Two Timescales
 
-## Hai Timescale học
+Actor và critic learning rates ảnh hưởng stability. Critic cần track policy enough; actor không nên outrun critic too much.
 
-Learning rate của actor và critic ảnh hưởng stability.
+## Target Networks
 
-Critic phải theo kịp policy đủ tốt để cung cấp signal hữu ích, trong khi actor không nên thay đổi nhanh đến mức critic liên tục học một target đã lỗi thời.
-
-Đây là lý do actor–critic thường nhạy với relative update rate.
-
-## Target Network
-
-Off-policy critic thường dùng target network cập nhật chậm để ổn định bootstrap target, tương tự DQN.
-
-Nếu target thay đổi quá mạnh mỗi gradient step, value learning dễ dao động.
+Off-policy critics often use slow target networks to stabilize bootstrap target, giống DQN.
 
 ## Replay Buffer
 
-Off-policy actor–critic tái sử dụng transition cũ từ replay buffer.
+Off-policy actor-critic reuse transitions. Need handle distribution mismatch, stale data and exploration coverage.
 
-Điều này tăng sample efficiency nhưng tạo các vấn đề:
+## Continuous Action Boundaries
 
-```text
-distribution mismatch
-stale experience
-exploration coverage
-sampling bias
-```
-
-Replay strategy trở thành một thành phần quan trọng của algorithm.
-
-## Continuous Action Boundary
-
-Actor output thường được đưa qua `tanh` rồi scale về action bound thực tế.
-
-Với stochastic policy như SAC, khi biến đổi random variable bằng `tanh`, log-probability cần correction tương ứng với Jacobian của phép biến đổi.
-
-Đây là ví dụ cho thấy implementation detail có liên hệ trực tiếp với probability theory.
+Actor output thường squashed with `tanh` then scaled to action bounds. Probability correction needed for stochastic policy log-probs after transformation in SAC-like methods.
 
 ## Partial Observability
 
-Nếu observation không có Markov property, actor và critic có thể dùng recurrent network, Transformer memory hoặc belief representation để giữ information từ history.
+Actor/critic có thể use recurrent state/transformer memory when observation not Markov.
 
-## Multi-Agent Actor–Critic
+## Multi-Agent Actor-Critic
 
-Trong multi-agent RL, một pattern phổ biến là:
+Centralized critic can observe joint information during training while decentralized actors act from local observations at execution. Đây là common multi-agent RL paradigm.
 
-```text
-training: centralized critic thấy nhiều thông tin chung
-execution: mỗi actor chỉ dùng local observation
-```
+## Example: Robot Control
 
-Cách này gọi là **centralized training with decentralized execution** trong nhiều formulation.
+State includes joint positions/velocities; actor outputs motor torques; critic estimates future return. Continuous high-dimensional actions make Q-table impossible, actor provides direct control mapping.
 
-## Ví dụ: Robot Control
+## Actor-Critic và LLM
 
-State có thể gồm joint position và velocity. Actor output motor torque; critic estimate future return của control action.
+RLHF with PPO conceptually has policy actor and learned reward/value components. But LLM action space and sequence generation make implementation specialized.
 
-Continuous high-dimensional action làm Q-table không khả thi, trong khi actor cung cấp direct mapping từ state sang control.
-
-## Actor–Critic và LLM
-
-PPO-style RLHF về mặt khái niệm cũng có policy model và value/reward component.
-
-Tuy nhiên LLM có action space là token sequence và reward thường xuất hiện ở sequence level, nên implementation khác đáng kể so với continuous-control RL.
-
-## Failure Mode
-
-Actor–critic có thể gặp:
+## Failure Modes
 
 - critic divergence;
-- actor exploit critic error;
-- exploration không đủ;
+- actor exploits critic errors;
+- insufficient exploration;
 - value overestimation;
-- entropy coefficient không ổn định;
+- unstable entropy coefficient;
 - replay distribution mismatch;
-- reward scale không phù hợp.
+- reward scale problems.
 
-Những failure này cần được tách khi debug thay vì chỉ nói “RL không hội tụ”.
+## Mental Model
 
-## Mô hình tư duy
+> **Actor nói “tôi sẽ làm gì”; Critic nói “lựa chọn đó tốt hơn kỳ vọng bao nhiêu”.**
 
-> **Actor nói “tôi sẽ làm gì”; Critic nói “lựa chọn đó tốt hơn hoặc tệ hơn kỳ vọng bao nhiêu”.**
-
-## Những nhầm lẫn thường gặp
+## Common Misconceptions
 
 ### “Critic là một human reviewer”
 
-Không. Trong RL, critic thường là learned value hoặc Q estimator. Human hoặc external evaluator có thể tạo reward, nhưng đó là vai trò khác.
+Không. Critic trong RL là learned value/Q estimator, dù external evaluators có thể provide reward.
 
-### “Actor–Critic luôn on-policy”
+### “Actor-Critic luôn on-policy”
 
-Không. Có cả on-policy và off-policy family.
+Có cả on-policy và off-policy families.
 
-### “Critic luôn đúng”
+### “Critic chính xác tuyệt đối”
 
-Không. Critic là function approximator và có bias, variance, distribution shift như các learned model khác.
+Critic cũng là learned approximator và có bias/error.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Actor–Critic kết hợp value-based RL với policy-based RL và là cầu trực tiếp sang Deep Reinforcement Learning.
+Actor-Critic kết hợp value-based và policy-based RL, là bridge trực tiếp sang Deep Reinforcement Learning.
 
 Xem tiếp: [Deep Reinforcement Learning](./09_deep_reinforcement_learning.md).

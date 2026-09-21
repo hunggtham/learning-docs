@@ -1,12 +1,12 @@
-# Knowledge Layer về Natural Language Processing
+# Natural Language Processing Knowledge Layer
 
-Folder này xây nền tảng **xử lý ngôn ngữ tự nhiên (Natural Language Processing — NLP / 자연어 처리)** từ biểu diễn văn bản tới tìm kiếm và đánh giá. Nó không bắt đầu bằng LLM; mục tiêu là hiểu dữ liệu ngôn ngữ, tokenization, language modeling, embedding và Information Retrieval trước khi sang `08_large_language_models/`.
+Folder này xây NLP (Natural Language Processing / 자연어 처리 / xử lý ngôn ngữ tự nhiên) từ representation của text tới search/evaluation. Nó không bắt đầu bằng LLM; mục tiêu là hiểu language data, tokenization, language modeling, embeddings và information retrieval trước khi sang `08_large_language_models/`.
 
-## Bản đồ phụ thuộc
+## Dependency map
 
 ```mermaid
 flowchart TD
-    A[00 Ngôn ngữ như dữ liệu] --> B[01 Chuẩn hóa & Tokenization]
+    A[00 Language as Data] --> B[01 Normalization & Tokenization]
     B --> C[02 Language Models]
     A --> D[03 Word Embeddings]
     C --> E[04 Contextual Embeddings]
@@ -21,55 +21,55 @@ flowchart TD
     I --> J
 ```
 
-## Các chapter
+## Chapters
 
-**[00 — Language as Data](./00_language_as_data.md)** đi từ cấu trúc ngôn ngữ, corpus và phân bố, tính mơ hồ, hình thái, BoW/TF-IDF tới bước chuyển từ ký hiệu rời rạc sang biểu diễn liên tục.
+**[00 — Language as Data](./00_language_as_data.md)** đi từ linguistic structure, corpus/distribution, ambiguity, morphology, BoW/TF-IDF tới discrete→continuous representation.
 
-**[01 — Text Normalization & Tokenization](./01_text_normalization_and_tokenization.md)** trình bày Unicode, chữ hoa/thường, khoảng trắng, tokenization theo từ/ký tự/byte/subword, BPE, WordPiece, Unigram, SentencePiece, hiệu quả đa ngôn ngữ và vấn đề bảo mật/versioning.
+**[01 — Text Normalization & Tokenization](./01_text_normalization_and_tokenization.md)** cover Unicode, case/whitespace, word/character/byte/subword tokenization, BPE/WordPiece/Unigram/SentencePiece, multilingual efficiency và security/versioning.
 
-**[02 — Language Models](./02_language_models.md)** xây phân rã xác suất theo chain rule, n-gram và smoothing, neural/autoregressive/masked LM, perplexity, sampling và sự phân biệt “xác suất ngôn ngữ ≠ sự thật”.
+**[02 — Language Models](./02_language_models.md)** xây chain-rule factorization, n-gram/smoothing, neural/autoregressive/masked LMs, perplexity, sampling và “language probability ≠ truth”.
 
-**[03 — Word Embeddings](./03_word_embeddings.md)** giải thích giả thuyết phân bố, Word2Vec, CBOW, Skip-Gram, negative sampling, GloVe, PMI, fastText và giới hạn của static embedding.
+**[03 — Word Embeddings](./03_word_embeddings.md)** giải thích distributional hypothesis, Word2Vec/CBOW/Skip-Gram/negative sampling, GloVe, PMI, fastText và static embedding limitations.
 
-**[04 — Contextual Embeddings](./04_contextual_embeddings.md)** nối ELMo/BERT, biểu diễn token/câu, bi-encoder/cross-encoder, contrastive retrieval, multilingual embedding và embedding version drift.
+**[04 — Contextual Embeddings](./04_contextual_embeddings.md)** nối ELMo/BERT, token/sentence representations, bi-encoder/cross-encoder, contrastive retrieval, multilingual embeddings và embedding version drift.
 
-**[05 — Sequence-to-Sequence NLP](./05_sequence_to_sequence_nlp.md)** tập trung vào dịch máy và tóm tắt, mô hình ngôn ngữ có điều kiện, Beam Search, cơ chế sao chép, constrained decoding, denoising text-to-text pretraining và faithfulness.
+**[05 — Sequence-to-Sequence NLP](./05_sequence_to_sequence_nlp.md)** tập trung translation/summarization, conditional language modeling, beam search, copy/constrained decoding, denoising text-to-text pretraining và faithfulness.
 
-**[06 — Transformer NLP](./06_transformer_nlp.md)** phân biệt encoder-only, decoder-only và encoder–decoder bằng luồng thông tin + mục tiêu pretraining, sau đó đi vào fine-tuning, PEFT, thích ứng domain và đa ngôn ngữ.
+**[06 — Transformer NLP](./06_transformer_nlp.md)** phân biệt encoder-only/decoder-only/encoder-decoder bằng information flow + pretraining objective, rồi fine-tuning/PEFT/domain/multilingual adaptation.
 
-**[07 — Information Extraction](./07_information_extraction.md)** chuyển văn bản thành entity, relation, event, slot và fact cho Knowledge Graph có provenance; đồng thời trình bày structured extraction bằng LLM cùng validation.
+**[07 — Information Extraction](./07_information_extraction.md)** đưa text thành entities, relations, events, slots và knowledge graph facts có provenance; cover generative structured extraction + validation.
 
-**[08 — Search & Information Retrieval](./08_search_and_information_retrieval.md)** đi từ inverted index, TF-IDF và BM25 tới dense ANN, hybrid retrieval, reranking, chunking, filter và metric retrieval cho RAG.
+**[08 — Search & Information Retrieval](./08_search_and_information_retrieval.md)** đi từ inverted index/TF-IDF/BM25 tới dense ANN, hybrid retrieval, reranking, chunking, filters và RAG retrieval metrics.
 
-**[09 — NLP Evaluation](./09_nlp_evaluation.md)** trình bày metric cho classification/NER, BLEU, ROUGE, chrF, BERTScore, metric học được, human/LLM judge, đánh giá đa ngôn ngữ, contamination và error taxonomy.
+**[09 — NLP Evaluation](./09_nlp_evaluation.md)** cover classification/NER metrics, BLEU/ROUGE/chrF/BERTScore/learned metrics, human/LLM judges, multilingual evaluation, contamination và error taxonomy.
 
-## Mô hình tư duy
+## Mental model
 
 ```text
-Ngôn ngữ con người
-→ chuẩn hóa / tokenization
-→ ký hiệu / token
-→ biểu diễn thưa / dày đặc / theo ngữ cảnh
-→ mô hình ngôn ngữ / tìm kiếm / trích xuất
-→ đầu ra có cấu trúc hoặc văn bản được sinh
-→ đánh giá theo đúng tác vụ
+Human language
+→ normalization/tokenization
+→ symbols/tokens
+→ sparse/dense/contextual representation
+→ language/search/extraction model
+→ structured or generated output
+→ task-specific evaluation
 ```
 
-Chất lượng hệ thống NLP không chỉ nằm ở kiến trúc neural. Corpus, tokenizer, retrieval, output schema, decoding và metric đều có thể trở thành nút thắt chính.
+NLP system quality không chỉ nằm ở neural architecture. Corpus, tokenizer, retrieval, output schema, decoding và metric đều có thể là bottleneck.
 
 ## Chuyển tiếp sang Large Language Models
 
-`08_large_language_models/` không giải thích Transformer và tokenization lại từ đầu. Nó tập trung vào điều xảy ra khi language modeling được **mở rộng quy mô (scaling)** theo dữ liệu, tham số và compute, sau đó được post-train để làm theo chỉ dẫn:
+`08_large_language_models/` sẽ không giải thích Transformer/tokenization từ đầu nữa. Nó tập trung vào điều xảy ra khi causal/sequence language modeling được **scale** về data/parameters/compute và sau đó post-train cho instruction following:
 
 ```text
 Transformer LM
-→ pretraining quy mô lớn
+→ large-scale pretraining
 → foundation model
-→ supervised / instruction fine-tuning
-→ preference alignment như RLHF / DPO
+→ supervised/instruction fine-tuning
+→ preference alignment (RLHF/DPO...)
 → in-context learning / prompting
-→ hành vi reasoning
+→ reasoning behavior
 → hallucination / grounding / evaluation
 ```
 
-Nhờ layer NLP này, các thuật ngữ `token`, `embedding`, `perplexity`, `autoregressive`, `retrieval` và `reranking` đã có cơ chế rõ ràng trước khi bước vào LLM.
+Nhờ NLP layer này, các từ `token`, `embedding`, `perplexity`, `autoregressive`, `retrieval`, `reranking` đã có mechanism rõ trước khi bước vào LLM.

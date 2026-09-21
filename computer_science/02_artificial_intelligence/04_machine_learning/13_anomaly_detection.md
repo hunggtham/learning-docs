@@ -1,205 +1,197 @@
 # Anomaly Detection: khi điều quan trọng là những gì hiếm hoặc khác thường
 
-**Anomaly Detection (이상 탐지 / phát hiện bất thường)** tìm các quan sát khác đáng kể so với hành vi được xem là bình thường. Giao dịch gian lận, xâm nhập mạng, cảm biến lỗi, đăng nhập bất thường hay sản phẩm lỗi trong dây chuyền đều có thể được mô hình hóa như bài toán phát hiện bất thường.
+Anomaly Detection (이상 탐지 / phát hiện bất thường) tìm observations khác đáng kể so với behavior được xem là bình thường. Fraud transaction, network intrusion, defective sensor, unusual login và manufacturing defect đều có thể được phrased như anomaly problems.
 
-Khó khăn cốt lõi là **anomaly thường hiếm, phụ thuộc mạnh vào ngữ cảnh và đôi khi chưa từng xuất hiện trong dữ liệu huấn luyện có nhãn**. Vì vậy Anomaly Detection không chỉ là binary classification với class imbalance; trong nhiều trường hợp ta phải học trước một mô hình về “bình thường”, rồi đo mức lệch khỏi mô hình đó.
+Khó khăn cốt lõi là **anomaly thường hiếm, thay đổi theo context và đôi khi chưa từng xuất hiện trong labeled training data**. Vì vậy anomaly detection không chỉ là binary classification với class imbalance; nhiều trường hợp ta phải học “normality” trước rồi đo deviation.
 
 ## Anomaly không đồng nghĩa outlier thống kê
 
-Một điểm nằm xa mean có thể là outlier thống kê nhưng hoàn toàn hợp lệ trong domain.
+Một point xa mean có thể là statistical outlier nhưng hoàn toàn hợp lệ trong domain. Ngược lại, một fraud transaction có amount bình thường nhưng bất thường vì time/device/location combination.
 
-Ngược lại, một giao dịch fraud có amount rất bình thường nhưng trở nên đáng ngờ vì tổ hợp thời gian, thiết bị, vị trí và lịch sử tài khoản.
+Anomaly luôn phụ thuộc context và representation.
 
-Vì vậy anomaly luôn phụ thuộc vào ngữ cảnh và representation.
+Ba loại thường gặp:
 
-Ba dạng thường gặp:
+- **Point anomaly**: observation riêng lẻ khác thường.
+- **Contextual anomaly**: chỉ bất thường trong context, ví dụ login 3AM từ country mới.
+- **Collective anomaly**: từng point bình thường nhưng sequence/pattern cả nhóm bất thường.
 
-- **bất thường điểm (point anomaly)**: một quan sát riêng lẻ khác thường;
-- **bất thường theo ngữ cảnh (contextual anomaly)**: chỉ bất thường trong bối cảnh cụ thể, ví dụ đăng nhập lúc 3 giờ sáng từ quốc gia mới;
-- **bất thường tập thể (collective anomaly)**: từng điểm riêng lẻ có vẻ bình thường nhưng cả chuỗi hoặc nhóm tạo pattern bất thường.
+## Statistical anomaly detection
 
-## Phát hiện bất thường bằng mô hình thống kê
-
-Nếu giả định dữ liệu bình thường tuân theo Gaussian:
+Nếu assume normal data theo Gaussian:
 
 \[
 x\sim\mathcal N(\mu,\Sigma)
 \]
 
-có thể dùng likelihood hoặc density. Một điểm có:
+có thể dùng likelihood/density. Point có:
 
 \[
 p(x)<\epsilon
 \]
 
-có thể bị đánh dấu.
+được flag.
 
-Khoảng cách Mahalanobis:
+Mahalanobis distance:
 
 \[
 d_M(x)=\sqrt{(x-\mu)^T\Sigma^{-1}(x-\mu)}
 \]
 
-xử lý correlation và scale của feature tốt hơn Euclidean distance trong mô hình Gaussian đa biến.
+account correlations và feature scale tốt hơn Euclidean distance.
 
-Tuy nhiên giả định Gaussian có thể sai nghiêm trọng với dữ liệu đa mode hoặc phi tuyến.
+Nhưng Gaussian assumption có thể sai nghiêm trọng với multimodal/nonlinear data.
 
-## z-score và thống kê bền vững
+## z-score và robust statistics
 
-Một quy tắc một biến đơn giản:
+Univariate rule đơn giản:
 
 \[
 z=\frac{x-\mu}{\sigma}
 \]
 
-có thể đánh dấu khi `|z|>3`, chẳng hạn.
+flag `|z|>3` chẳng hạn.
 
-Nếu outlier làm mean và standard deviation bị méo, có thể dùng median và **Median Absolute Deviation (MAD)**:
+Nếu outliers làm mean/std bị distort, robust alternatives dùng median và MAD:
 
 \[
 MAD=median(|x_i-median(x)|)
 \]
 
-Threshold nên được chọn theo mức false positive mà hệ thống vận hành chấp nhận được, không chỉ theo quy ước `3σ`.
+Rule threshold phải dựa vào operational false-positive tolerance, không chỉ convention `3σ`.
 
 ## Isolation Forest
 
-Isolation Forest dựa trên trực giác: anomaly vừa hiếm vừa khác nên thường dễ bị cô lập bằng các phép split ngẫu nhiên hơn điểm bình thường.
+Isolation Forest dựa trên idea: anomaly hiếm và khác nên dễ bị “isolate” bằng random splits hơn normal points.
 
-Hệ thống xây nhiều random tree; đường đi từ root tới leaf cô lập thường ngắn hơn với anomaly.
+Build random trees; path length từ root tới isolated leaf ngắn hơn cho anomaly.
 
-Ưu điểm là không cần ước lượng density tường minh, scale khá tốt trên dữ liệu bảng nhiều chiều và ít giả định phân phối hơn mô hình Gaussian.
+Ưu điểm:
 
-Tuy nhiên hiệu quả vẫn phụ thuộc representation, tỷ lệ contamination và cách chọn threshold.
+- không cần density estimation explicit;
+- scale khá tốt high-dimensional tabular data;
+- ít assumption distribution.
+
+Nhưng performance vẫn phụ thuộc representation và contamination/threshold selection.
 
 ## One-Class SVM
 
-One-Class SVM học một ranh giới bao quanh vùng dữ liệu được xem là bình thường trong kernel feature space. Điểm nằm ngoài vùng đó được xem như anomaly.
+One-Class SVM học boundary bao quanh region normal data trong kernel feature space. Points ngoài region được xem anomaly.
 
-Phương pháp này có thể hữu ích với dataset vừa phải, nhưng cần lưu ý chi phí kernel và độ nhạy với hyperparameter.
+Nó hữu ích cho moderate dataset nhưng kernel scaling và hyperparameter sensitivity cần lưu ý.
 
 ## Local Outlier Factor
 
-**Local Outlier Factor (LOF)** so sánh mật độ cục bộ của một điểm với mật độ của các láng giềng.
+LOF so local density của point với densities neighbors. Point có density thấp hơn neighborhood đáng kể sẽ anomalous.
 
-Nếu mật độ quanh điểm thấp đáng kể so với neighborhood, điểm đó có anomaly score cao.
+Điều này giúp khi data có regions với global densities khác nhau, nhưng nearest-neighbor issues và dimension cao vẫn tồn tại.
 
-Cách này hữu ích khi dataset có nhiều vùng mật độ toàn cục khác nhau, nhưng vẫn chịu các vấn đề quen thuộc của nearest-neighbor và high-dimensional geometry.
+## Reconstruction-based detection
 
-## Phát hiện dựa trên lỗi tái tạo
-
-Autoencoder có thể được train trên dữ liệu phần lớn là bình thường:
+Autoencoder train trên mostly-normal data:
 
 \[
 x\rightarrow z\rightarrow\hat x
 \]
 
-Nếu pattern bình thường được tái tạo tốt còn pattern lạ được tái tạo kém, reconstruction error:
+Nếu normal patterns reconstruct tốt còn unusual patterns reconstruct kém, reconstruction error:
 
 \[
 A(x)=\|x-\hat x\|
 \]
 
-có thể dùng làm anomaly score.
+có thể là anomaly score.
 
-Tuy nhiên autoencoder có capacity lớn đôi khi vẫn tái tạo anomaly rất tốt.
+Nhưng high-capacity autoencoder đôi khi reconstruct anomaly cũng tốt. Reconstruction error không tự động là anomaly probability.
 
-Vì vậy reconstruction error không tự động là xác suất anomaly.
+## Time-Series Anomaly Detection
 
-## Anomaly Detection cho chuỗi thời gian
+Time series cần model expected behavior theo trend, seasonality và temporal dependency.
 
-Time series cần mô hình hành vi kỳ vọng theo trend, seasonality và dependency theo thời gian.
-
-Một cách phổ biến là dùng phần dư:
+Residual approach:
 
 \[
 r_t=y_t-\hat y_t
 \]
 
-rồi đánh dấu khi residual vượt threshold.
+flag khi residual vượt threshold.
 
-Giá trị `100` có thể hoàn toàn bình thường vào giờ cao điểm nhưng bất thường vào ban đêm. Vì vậy baseline phải có ngữ cảnh.
+Một value `100` có thể bình thường lúc peak hour nhưng abnormal lúc night. Contextual baseline vì vậy quan trọng.
 
-Bất thường theo chuỗi có thể cần change-point detection, forecasting model hoặc state-space model.
+Sequence anomalies có thể cần change-point detection, forecasting models hoặc state-space models.
 
-## Fraud Detection có giám sát khác gì?
+## Supervised Fraud Detection khác gì?
 
-Nếu có đủ fraud label đáng tin cậy, supervised classification thường mạnh hơn một anomaly detector không giám sát.
+Nếu có đủ labeled fraud examples và labels reliable, supervised classification thường mạnh hơn unsupervised anomaly detector.
 
-Anomaly Detection hữu ích hơn khi label rất ít, cần phát hiện kiểu tấn công mới, hành vi bình thường dễ mô hình hóa hơn hành vi xấu hoặc định nghĩa anomaly thay đổi theo thời gian.
+Anomaly methods hữu ích khi:
 
-Hệ production thường kết hợp nhiều tầng:
+- labels rất ít;
+- muốn detect novel attacks;
+- normal behavior dễ model hơn anomalies;
+- anomaly definition thay đổi.
 
-```text
-supervised risk model
-+ business rules
-+ anomaly score
-+ human review
-```
+Production system thường hybrid: supervised risk model + rules + anomaly score + human review.
 
-## Chọn threshold
+## Threshold selection
 
-Anomaly algorithm thường trả một score `s(x)`, còn hệ thống cảnh báo cần threshold.
+Anomaly algorithms thường output score `s(x)`, còn alert cần threshold.
 
-Threshold quyết định sự đánh đổi:
+Threshold quyết định trade-off:
 
 ```text
-threshold thấp → nhiều alert hơn → recall cao hơn, false positive nhiều hơn
-threshold cao → ít alert hơn → tải vận hành thấp hơn, bỏ sót nhiều hơn
+lower threshold → more alerts → higher recall, more false positives
+higher threshold → fewer alerts → lower operational load, more misses
 ```
 
-Nếu đội review chỉ xử lý được 500 case mỗi ngày, capacity chính là một ràng buộc thật.
+Nếu review team chỉ xử lý 500 cases/day, capacity là constraint thật. Threshold optimization cần tie với alert budget và expected loss.
 
-Threshold phải gắn với ngân sách cảnh báo và tổn thất kỳ vọng, không chỉ với metric offline.
+## Extreme class imbalance và Precision-Recall
 
-## Mất cân bằng cực mạnh và Precision–Recall
+Anomaly tasks hiếm positive nên ROC-AUC có thể trông tốt dù false positives tuyệt đối quá nhiều.
 
-Trong bài toán anomaly, positive thường rất hiếm nên ROC-AUC có thể nhìn rất đẹp dù số false positive tuyệt đối vẫn quá lớn.
+Precision-Recall curve thường informative hơn.
 
-Precision–Recall curve thường cung cấp thông tin thực dụng hơn.
-
-Ví dụ có 1 triệu giao dịch và chỉ 100 fraud. False-positive rate 1% vẫn tạo khoảng 10.000 cảnh báo sai — gần như không thể vận hành dù specificity 99% nghe rất cao.
+Ví dụ 1 triệu transactions, 100 fraud. False-positive rate 1% tạo ~10,000 false alerts — operationally unusable dù specificity 99% nghe rất cao.
 
 ## Concept Drift
 
-“Bình thường” hôm nay có thể không còn bình thường sau product launch, thay đổi mùa hoặc khi attacker thay chiến thuật.
+“Normal” hôm nay có thể không còn normal sau product launch, season change hoặc attacker adaptation.
 
-Hệ Anomaly Detection cần theo dõi distribution của score, tỷ lệ alert và outcome đã xác minh.
+Anomaly system cần monitoring score distribution, alert rate và confirmed outcomes. Static threshold dễ degrade.
 
-Threshold tĩnh rất dễ xuống cấp theo thời gian.
+Fraud/security đặc biệt adversarial: attacker phản ứng với detection policy.
 
-Trong fraud hoặc security, môi trường còn mang tính đối kháng: attacker có thể chủ động thích nghi với chính sách phát hiện.
+## Root Cause vs Detection
 
-## Phát hiện và tìm nguyên nhân là hai bài toán khác nhau
+Anomaly score chỉ nói observation khác expected pattern; nó không giải thích nguyên nhân.
 
-Anomaly score chỉ nói quan sát khác pattern kỳ vọng, không giải thích nguyên nhân.
+Operational system cần diagnostics: feature contributions, nearest normal examples, violated rules, timeline context hoặc downstream investigation workflow.
 
-Hệ thống vận hành còn cần các tín hiệu chẩn đoán như feature contribution, ví dụ bình thường gần nhất, rule bị vi phạm, timeline hoặc workflow điều tra.
+Detection và root-cause analysis là hai layers khác nhau.
 
-**Phát hiện (detection)** và **phân tích nguyên nhân gốc (root-cause analysis)** là hai layer khác nhau.
+## Mental Model
 
-## Mô hình tư duy
+> Anomaly Detection = xây một model về “normal/expected behavior”, rồi đo mức observation mới deviates khỏi model đó dưới context phù hợp.
 
-> Anomaly Detection = xây một mô hình về hành vi bình thường hoặc kỳ vọng, sau đó đo xem quan sát mới lệch khỏi mô hình đó tới mức nào trong đúng ngữ cảnh.
+## Common Misconceptions
 
-## Các hiểu lầm thường gặp
+### “Anomaly là điểm hiếm”
 
-### “Anomaly chỉ đơn giản là điểm hiếm”
+Rare nhưng legitimate behavior không nhất thiết anomaly; context và impact matter.
 
-Không. Hành vi hiếm nhưng hợp lệ chưa chắc là anomaly; ngữ cảnh và hậu quả mới quyết định ý nghĩa.
+### “Unsupervised anomaly detection không cần labels”
 
-### “Unsupervised Anomaly Detection không cần label”
-
-Training có thể không dùng label, nhưng threshold, evaluation và tuning production vẫn rất cần outcome đã xác minh hoặc feedback từ domain expert.
+Training có thể không cần labels, nhưng threshold/evaluation/production tuning vẫn rất cần confirmed outcomes hoặc domain feedback.
 
 ### “Reconstruction error cao nghĩa chắc chắn fraud”
 
-Không. Nó chỉ là một score độ lệch theo representation và autoencoder hiện tại.
+Nó chỉ là deviation score theo autoencoder representation.
 
-### “Accuracy 99% là tốt cho Anomaly Detection”
+### “99% accuracy là tốt trong anomaly detection”
 
-Không. Với positive cực hiếm, accuracy gần như vô nghĩa nếu không nhìn confusion matrix, precision, recall và số alert thực tế.
+Với rare positives, accuracy gần như vô nghĩa nếu không nhìn confusion matrix, precision, recall và alert volume.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Anomaly Detection nối [Xác suất](../01_mathematical_foundations/02_probability_for_ai.md), [k-NN](./07_knn_and_distance_based_learning.md), [Clustering](./11_clustering.md), [Đánh giá mô hình](./15_model_evaluation.md) và các phần sau về AI Security và Monitoring.
+Anomaly Detection nối [Probability](../01_mathematical_foundations/02_probability_for_ai.md), [k-NN](./07_knn_and_distance_based_learning.md), [Clustering](./11_clustering.md), [Model Evaluation](./15_model_evaluation.md) và sau này AI Security/Monitoring.

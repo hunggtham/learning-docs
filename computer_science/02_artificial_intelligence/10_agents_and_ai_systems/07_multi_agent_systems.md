@@ -1,6 +1,6 @@
-# Hệ thống Multi-Agent
+# Multi-Agent Systems
 
-Một **hệ thống đa tác nhân (multi-agent system / 다중 에이전트 시스템)** có nhiều agent tương tác để hoàn thành cùng một task hoặc một nhóm task liên quan. Ý tưởng này hấp dẫn vì có thể chia vai trò, chạy subtask song song hoặc tạo cơ chế kiểm tra chéo, nhưng mỗi agent bổ sung cũng làm tăng chi phí giao tiếp, điều phối và số failure mode.
+Một **multi-agent system (다중 에이전트 시스템)** có nhiều agents tương tác để hoàn thành task. Ý tưởng hấp dẫn vì có thể chia vai trò hoặc chạy subtasks song song, nhưng thêm agent cũng thêm communication, coordination và failure modes.
 
 ```text
 Coordinator
@@ -10,37 +10,37 @@ Coordinator
 └── Domain Reviewer
 ```
 
-## Vì sao dùng nhiều Agent?
+## Vì sao dùng nhiều agent?
 
-Multi-agent có giá trị khi task có cấu trúc phân rã tự nhiên, ví dụ:
+Multi-agent hữu ích khi task có decomposition tự nhiên:
 
-- các subtask độc lập có thể chạy song song;
-- mỗi subtask cần context hoặc chuyên môn khác nhau;
-- cần phân tách nhiệm vụ (separation of duties);
+- subtasks độc lập có thể parallelize;
+- cần specialization/context riêng;
+- cần separation of duties;
 - một agent tạo artifact và agent khác verify;
-- cần mô phỏng nhiều stakeholder hoặc perspective.
+- cần simulate multiple stakeholders.
 
-Không nên thêm nhiều agent chỉ với giả định rằng “nhiều agent = thông minh hơn”.
+Không nên dùng chỉ để “tăng intelligence”.
 
-## Chuyên môn hóa vai trò
+## Role Specialization
 
-Các agent có thể khác nhau về:
+Agent có thể khác nhau về:
 
 ```text
-instruction
-tool được phép dùng
-permission
+instructions
+available tools
+permissions
 context
 model
 memory
-success criterion
+success criteria
 ```
 
-Ví dụ verifier agent chỉ có quyền đọc và chạy test, không có quyền write. Sự tách quyền này tạo một ranh giới kỹ thuật thực sự, đáng tin hơn việc dùng cùng một agent rồi prompt “hãy tự kiểm tra lại mình”.
+Ví dụ verifier agent chỉ có read/test tools, không có write permission. Separation này tăng reliability hơn việc prompt cùng model “hãy tự kiểm tra mình”.
 
 ## Coordinator Pattern
 
-Trong **mẫu điều phối trung tâm (coordinator pattern)**, một coordinator phân task và tổng hợp kết quả:
+Coordinator phân task và aggregate results.
 
 ```mermaid
 flowchart TD
@@ -52,194 +52,160 @@ flowchart TD
     D --> C
 ```
 
-Ưu điểm là ownership rõ và dễ quan sát. Nhược điểm là coordinator có thể trở thành bottleneck hoặc single point of failure.
+Coordinator có thể trở thành bottleneck hoặc single point of failure.
 
 ## Blackboard Pattern
 
-Trong **blackboard pattern**, nhiều agent đọc và ghi vào một workspace chung:
+Agents đọc/ghi shared workspace:
 
 ```text
-shared task board
-shared artifact store
-shared state store
+shared task board / artifact store / state store
 ```
 
-Cách này giảm phụ thuộc vào một coordinator duy nhất nhưng lại đòi hỏi rule rõ về ownership, locking, versioning và conflict resolution.
+Coordinator nhẹ hơn, nhưng cần conflict resolution và ownership rules.
 
 ## Peer-to-Peer Debate
 
-Các agent có thể critique proposal của nhau. Pattern này đôi khi giúp mở rộng coverage, nhưng cũng dễ tạo vòng lặp dài, tốn token và sinh false consensus.
+Agents critique proposals của nhau. Có thể tăng coverage, nhưng dễ tạo redundant token usage và false consensus.
 
-Diversity chỉ có giá trị khi agent thực sự khác nhau về evidence, tool, role hoặc model. Nhiều bản clone cùng một prompt thường có lỗi tương quan cao.
+Independent diversity chỉ có giá trị nếu agents thật sự có different evidence/roles, không phải clone cùng prompt.
 
 ## Producer–Verifier
 
-Một pattern mạnh và dễ kiểm soát hơn:
+Một pattern mạnh:
 
 ```text
-Producer tạo solution
-→ Verifier kiểm bằng tiêu chí độc lập
-→ Producer sửa nếu verification fail
+Producer creates solution
+→ Verifier tests against independent criteria
+→ Producer revises if needed
 ```
 
-Verifier nên có source hoặc tool độc lập, ví dụ test runner, schema validator, linter hoặc policy engine. Nếu verifier chỉ đọc prose của producer, hai agent vẫn có thể chia sẻ cùng một sai lầm.
+Verifier nên có independent evidence/tooling. Nếu verifier chỉ đọc prose của producer, correlated errors vẫn cao.
 
-## Hợp đồng Delegation
+## Delegation Contract
 
-Subtask giao cho agent nên có contract rõ:
+Subtask giao cho agent nên có:
 
 ```text
 objective
-input
+inputs
 allowed tools
 output schema
-completion criterion
+completion criteria
 budget
 deadline
 ```
 
-Instruction kiểu “Research this” quá mơ hồ để orchestration đáng tin cậy.
+“Research this” quá mơ hồ.
 
-## Chi phí giao tiếp
+## Communication Cost
 
-Nếu `n` agent giao tiếp all-to-all, số cạnh giao tiếp tiềm năng tăng gần:
+Nếu `n` agents all-to-all communicate, potential communication edges tăng gần:
 
 \[
 O(n^2)
 \]
 
-Do đó topology rất quan trọng. Mô hình hierarchical hoặc coordinator thường giảm lượng chatter không cần thiết.
+Vì vậy topology quan trọng. Hierarchical/coordinator patterns giảm chatter.
 
-## Tính nhất quán của Shared State
+## Shared State Consistency
 
-Hai agent cùng sửa một artifact có thể conflict. Hệ thống cần các cơ chế quen thuộc từ distributed systems:
+Hai agents cùng edit artifact có thể conflict. Cần:
 
-- lock;
+- locks;
 - versioning;
-- optimistic concurrency;
 - merge strategy;
 - ownership partition;
 - event ordering.
 
-Multi-agent system không loại bỏ bài toán consistency; nó làm bài toán đó rõ hơn.
+Multi-agent systems inherits distributed systems problems.
 
 ## Duplicate Work
 
-Nếu không có task registry hoặc trạng thái assignment chung, nhiều agent có thể vô tình làm cùng một subtask. Coordinator hoặc workflow engine nên hỗ trợ assignment có tính idempotent và trạng thái như:
+Without task registry, agents có thể cùng làm một subtask. Coordinator cần idempotent assignment hoặc shared task status.
+
+## Trust Boundaries
+
+Không phải agent nào cũng nên có same permissions. Research agent đọc web; deploy agent có production permission; verifier read-only.
+
+Compromise một agent không nên grant access toàn system.
+
+## Consensus không đảm bảo truth
+
+Nếu ba agents cùng dùng same model/training data, errors có thể correlated. Majority vote chỉ hiệu quả khi errors sufficiently independent.
+
+## Multi-Agent vs Parallel Tool Calls
+
+Nhiều agent không cần thiết nếu chỉ muốn fetch 5 APIs song song. Parallel tools trong một workflow đơn giản hơn.
+
+Dùng multi-agent khi cần distinct reasoning/state/permission boundaries, không chỉ concurrency.
+
+## Agent Handoff
+
+Handoff cần explicit transfer state:
 
 ```text
-PENDING
-RUNNING
-DONE
-FAILED
-CANCELLED
+what has been done
+what evidence exists
+what remains
+constraints
+artifact references
 ```
 
-## Trust Boundary
+Không nên chỉ gửi raw transcript.
 
-Không phải agent nào cũng cần cùng permission.
-
-Ví dụ:
+## Example: Software Change
 
 ```text
-Research Agent → đọc web và tài liệu
-Reviewer       → chỉ đọc artifact
-Deploy Agent   → quyền production có kiểm soát
-Coordinator    → điều phối nhưng không trực tiếp có mọi credential
+Planner → identifies files/tests
+Implementer → edits code
+Tester → runs test suite
+Reviewer → inspects diff against requirements
+Coordinator → decides done/revise
 ```
 
-Nếu một agent bị prompt injection hoặc compromise, blast radius không nên lan sang toàn hệ thống.
+Điểm mạnh là separation of duties; điểm yếu là latency/cost.
 
-## Consensus không đồng nghĩa sự thật
+## Example: Research
 
-Nếu ba agent cùng dùng một model, cùng training distribution và cùng context, lỗi của chúng có thể tương quan. Majority vote chỉ giúp khi các error đủ độc lập.
+Agents có thể split sources theo region/criterion, sau đó aggregator merge. Citation provenance phải preserved xuyên handoffs.
 
-Do đó consensus nên được xem là một signal bổ sung, không phải proof of correctness.
+## Evaluation
 
-## Multi-Agent và Parallel Tool Calls
-
-Không cần tạo nhiều agent chỉ để fetch năm API song song. Parallel tool call trong một workflow đơn thường rẻ và dễ debug hơn.
-
-Dùng multi-agent khi thực sự cần:
-
-```text
-state riêng
-context riêng
-permission riêng
-reasoning role riêng
-verification boundary riêng
-```
-
-chứ không chỉ vì cần concurrency.
-
-## Handoff giữa các Agent
-
-Handoff nên chuyển state có cấu trúc:
-
-```text
-đã làm gì
-evidence nào đã có
-artifact nào đã tạo
-phần nào còn thiếu
-constraint nào phải giữ
-resource id / version liên quan
-```
-
-Không nên chỉ chuyển raw transcript dài rồi để agent sau tự suy ra trạng thái hiện tại.
-
-## Ví dụ: thay đổi phần mềm
-
-```text
-Planner      → xác định file và test cần chạm tới
-Implementer  → sửa code
-Tester       → chạy test suite
-Reviewer     → inspect diff theo requirement
-Coordinator  → quyết định done hay revise
-```
-
-Điểm mạnh là separation of duties. Điểm yếu là latency, token cost và coordination overhead.
-
-## Ví dụ: Research
-
-Nhiều agent có thể chia source theo region, company hoặc criterion, sau đó aggregator tổng hợp. Citation provenance phải được giữ xuyên suốt handoff để final answer không mất nguồn.
-
-## Đánh giá Multi-Agent System
-
-Không chỉ đo final answer. Nên theo dõi:
+Đánh giá:
 
 - end-to-end task success;
-- đóng góp của từng agent;
-- tỷ lệ duplicate work;
-- communication token;
+- per-agent contribution;
+- duplicated work;
+- communication tokens;
 - coordination latency;
 - conflict rate;
-- verifier catch rate;
-- failure recovery rate.
+- verifier catch rate.
 
-Nếu kiến trúc multi-agent không tăng success hoặc reliability đủ để bù chi phí, nó là overengineering.
+Nếu multi-agent không tăng success đủ để bù cost, architecture là overengineering.
 
-## Mô hình tư duy
+## Mental Model
 
-> **Multi-agent là một distributed system gồm các worker xác suất.**
+> **Multi-agent là distributed system của probabilistic workers.**
 
-Thách thức không chỉ nằm ở reasoning của từng agent mà còn ở phân công task, giao tiếp, consistency, quyền hạn và verification.
+Điều khó không chỉ là reasoning từng agent mà là task allocation, communication, consistency và trust.
 
-## Những nhầm lẫn thường gặp
+## Common Misconceptions
 
-### “Nhiều agent tự nhiên sẽ thông minh hơn một agent”
+### “Nhiều agent sẽ tự nhiên thông minh hơn một agent”
 
-Không. Coordination overhead và correlated failure có thể làm hệ thống tệ hơn.
+Không. Coordination overhead và correlated failures có thể làm tệ hơn.
 
-### “Role chỉ cần đổi system prompt”
+### “Agent roles chỉ cần đổi system prompt”
 
-Role mạnh hơn khi khác permission, tool, context, model hoặc tiêu chí evaluation.
+Role mạnh hơn khi khác permissions, tools, context và evaluation criteria.
 
 ### “Debate luôn tăng accuracy”
 
-Không. Debate có thể chỉ làm output dài hơn hoặc củng cố cùng một lỗi nếu các agent không có evidence độc lập.
+Debate có thể tạo verbosity hoặc reinforce common error nếu evidence không independent.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Multi-agent system nối trực tiếp với distributed systems, organizational design, workflow orchestration, ensemble reasoning và security boundary.
+Multi-agent systems nối distributed systems, organizational design, workflow orchestration và ensemble reasoning.
 
-Xem tiếp: [Điều phối Agent](./08_agent_orchestration.md).
+Xem tiếp: [Agent Orchestration](./08_agent_orchestration.md).

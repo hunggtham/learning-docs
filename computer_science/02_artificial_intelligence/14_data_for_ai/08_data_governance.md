@@ -1,75 +1,75 @@
-# Quản trị Dữ liệu cho AI
+# Data Governance for AI
 
-**Quản trị dữ liệu (data governance / 데이터 거버넌스)** là hệ thống policy, ownership, metadata, access control và lifecycle management giúp tổ chức biết dữ liệu nào đang tồn tại, ai chịu trách nhiệm, dữ liệu được phép dùng cho mục đích gì và model nào đang phụ thuộc vào nó.
+**Data governance (데이터 거버넌스 / quản trị dữ liệu)** là hệ thống policy, ownership, metadata, access control và lifecycle management giúp tổ chức biết data nào tồn tại, ai chịu trách nhiệm, được dùng cho mục đích gì và model nào phụ thuộc vào nó.
 
-Governance không phải paperwork tách rời engineering. Khi AI dùng dữ liệu để train hoặc deploy, quản trị dữ liệu trở thành một phần trực tiếp của reliability, security và compliance.
+Governance không phải paperwork tách rời engineering. Khi AI dùng data để train/deploy, governance trở thành part of reliability, security và compliance.
 
 ## Ownership
 
-Mỗi critical dataset hoặc source nên có owner rõ ràng, ví dụ:
+Mỗi critical dataset/source nên có owner rõ:
 
 ```text
-business / domain owner
+business/domain owner
 technical data owner
-data steward / quality owner
-security / privacy contact
+steward / quality owner
+security/privacy contact
 ```
 
-Nếu không ai chịu trách nhiệm cho semantics, feature definition và data contract rất dễ drift âm thầm theo thời gian.
+Nếu không ai chịu trách nhiệm semantics, feature definition sẽ drift âm thầm.
 
 ## Data Catalog
 
-**Danh mục dữ liệu (data catalog)** lưu metadata như:
+Catalog lưu metadata:
 
-- tên và mô tả dataset;
+- dataset name/description;
 - schema;
 - owner;
 - source;
 - freshness;
 - lineage;
 - privacy classification;
-- permitted use;
+- permitted uses;
 - quality status;
-- retention policy.
+- retention.
 
-Catalog chỉ có giá trị khi metadata được duy trì và có thể tìm kiếm, không phải một tài liệu tĩnh bị bỏ quên.
+Catalog chỉ hữu ích nếu metadata maintained và searchable.
 
-## Data Lineage
+## Lineage
 
-Lineage có thể biểu diễn thành graph:
+Lineage graph:
 
 ```text
-source table / file
-→ ETL / feature job
+source tables/files
+→ ETL/feature jobs
 → training snapshot
 → model version
 → deployment
 ```
 
-Khi một field nguồn bị lỗi, lineage giúp trả lời model, experiment hoặc service nào bị ảnh hưởng.
+Khi source field bị lỗi, lineage trả lời models nào bị ảnh hưởng.
 
 ## Access Control
 
-Nguyên tắc **least privilege** cũng áp dụng cho dữ liệu:
+Least privilege áp dụng data:
 
 ```text
-ai được đọc raw PII?
-ai được export dữ liệu?
-ai được train model?
-ai được xem label nhạy cảm?
+who can read raw PII?
+who can export?
+who can train model?
+who can see labels?
 ```
 
-Role-based hoặc attribute-based access nên được enforce ở storage/service layer, không chỉ dựa trên quy ước xã hội hoặc prompt.
+Role/attribute-based access nên enforcement ở storage/service layer, không qua social convention.
 
 ## Purpose Limitation
 
-Dữ liệu được thu thập cho một mục đích không tự động trở nên hợp lệ cho mọi mục đích khác.
+Data collected for one purpose may not automatically be legitimate for another. Governance records allowed processing purposes và restrictions.
 
-Governance cần ghi rõ permitted processing purpose và restriction. AI experimentation cũng phải tuân thủ cùng constraint như production.
+AI experimentation phải respect same constraints as production.
 
-## Phân loại Dữ liệu
+## Data Classification
 
-Một số nhóm thường gặp:
+Common classes:
 
 ```text
 public
@@ -77,60 +77,56 @@ internal
 confidential
 personal data
 sensitive personal data
-secret / credential
-regulated-domain data
+secrets/credentials
+regulated domain data
 ```
 
-Classification này quyết định encryption, retention, access và sharing policy.
+Classification drives encryption, retention và sharing policies.
 
 ## Encryption
 
-Dữ liệu nên được bảo vệ:
+Protect data:
 
-- khi lưu trữ (at rest);
-- khi truyền (in transit);
-- bằng key management phù hợp;
-- cùng access logging.
+- at rest;
+- in transit;
+- key management;
+- access logging.
 
-Encryption không ngăn được misuse bởi một user đã được cấp quyền; authorization và audit vẫn cần thiết.
+Encryption does not solve misuse by authorized user; authorization/audit still needed.
 
 ## Retention và Deletion
 
-Retention cần gắn với mục đích rõ ràng. Training snapshot thường muốn immutable để reproducibility, trong khi privacy hoặc compliance có thể yêu cầu deletion.
+Retention should be purposeful. Training snapshot immutability conflicts with deletion requests/compliance; model lifecycle needs strategy for data removal and retraining where required.
 
-Model lifecycle vì vậy cần strategy cho data removal và retraining khi cần.
-
-Xóa raw record không tự động xóa ảnh hưởng của record đó khỏi một model đã train.
+Deleting raw record does not automatically remove influence from already-trained model.
 
 ## Provenance
 
-Với dữ liệu bên ngoài, nên lưu:
+For external data, record:
 
-- source URL hoặc provider;
-- ngày thu thập;
-- license và terms;
-- transformation đã áp dụng;
-- consent hoặc legal basis khi liên quan.
+- source URL/provider;
+- collection date;
+- license/terms;
+- transformations;
+- consent/legal basis where relevant.
 
-Trong thời đại foundation model, provenance ngày càng quan trọng cho copyright, trust và contamination analysis.
+Foundation-model era makes provenance increasingly important for copyright, trust and contamination analysis.
 
-## Versioning cho Dataset
+## Dataset Versioning
 
-Một dataset version nên xác định được chính xác nội dung và processing configuration, không chỉ một nhãn semantic version chung chung.
-
-Ví dụ:
+A version should identify exact content + processing config. Semantic version labels alone insufficient without immutable manifest/hash.
 
 ```text
 dataset_v42
 manifest hash
-source snapshot id
+source snapshot ids
 transform commit
 label schema version
 ```
 
 ## Reproducibility
 
-Để tái tạo một model, code là chưa đủ. Cần ít nhất:
+To reproduce model, need more than code:
 
 ```text
 training data version
@@ -141,138 +137,126 @@ model config
 software environment
 ```
 
-Governance cung cấp phần “data side” của reproducibility chain.
+Governance provides data half of reproducibility chain.
 
-## Data Contract
+## Data Contracts
 
-Producer và consumer nên thống nhất schema, semantics, SLA và quy trình thay đổi.
-
-Breaking change phải kích hoạt migration rõ ràng thay vì âm thầm làm downstream pipeline suy giảm.
+Producer and consumer agree on schema + semantics + SLA + change process. Breaking changes trigger explicit migration instead of silent downstream degradation.
 
 ## Privacy Impact
 
-Trước khi dùng dữ liệu nhạy cảm, nên hỏi:
+Before using sensitive data, ask:
 
-- feature này có thật sự cần thiết không?
-- aggregate hoặc pseudonymized form có đủ không?
-- có thể xử lý cục bộ thay vì gửi ra ngoài không?
-- retention bao lâu?
-- có cross-border transfer không?
-- user có kỳ vọng dữ liệu được dùng theo cách này không?
+- is feature necessary?
+- can aggregate/pseudonymized form work?
+- can computation occur locally?
+- retention duration?
+- cross-border transfer?
+- user expectations?
 
-Data minimization vừa giảm risk vừa giảm cơ hội để model học shortcut không mong muốn.
+Data minimization reduces both risk and model shortcut opportunities.
 
-## Pseudonymization và Anonymization
+## Pseudonymization vs Anonymization
 
-Thay tên bằng ID là **pseudonymization**, không phải true anonymization.
+Replacing name with ID is pseudonymization, not true anonymization. Linkage/re-identification remains possible.
 
-Re-identification vẫn có thể xảy ra thông qua linkage hoặc auxiliary data. Dataset high-dimensional đặc biệt khó anonymize mà vẫn giữ utility cao.
+High-dimensional datasets are difficult to anonymize while preserving utility.
 
 ## Differential Privacy
 
-**Differential Privacy (DP)** cung cấp một bound toán học lên ảnh hưởng của từng record.
-
-Một mechanism `M` là `(ε,δ)`-DP nếu với hai neighboring dataset `D` và `D'`:
+Differential Privacy offers formal bound on effect of one record. Roughly, mechanism `M` is `(ε,δ)`-DP if neighboring datasets produce similar output distributions:
 
 \[
 P(M(D)\in S)\le e^\epsilon P(M(D')\in S)+\delta
 \]
 
-`ε` nhỏ hơn thường nghĩa privacy mạnh hơn nhưng có thể làm utility giảm do cần thêm noise.
+Smaller `ε` stronger privacy but often lower utility/more noise.
 
-DP là một privacy mechanism toán học, không thay thế access control, encryption hoặc security operation.
+DP is mathematical privacy mechanism, not substitute for access/security controls.
 
 ## Data Residency
 
-Một số tổ chức yêu cầu dữ liệu phải ở lại trong country hoặc region cụ thể.
+Organizations may require data remain in specific country/region. Cloud/model provider selection and cross-region processing become architecture constraint.
 
-Khi đó lựa chọn cloud, model provider và cross-region processing trở thành architecture constraint, không chỉ là quyết định hạ tầng.
+## Vendor Data
 
-## Dữ liệu từ Vendor
+Third-party datasets/APIs need due diligence:
 
-Dataset hoặc API bên thứ ba cần được đánh giá về:
-
-- quyền sử dụng theo license;
+- license rights;
 - collection method;
 - data quality;
-- privacy commitment;
+- privacy commitments;
 - retention;
-- quyền dùng để train model;
-- điều khoản thay đổi hoặc chấm dứt dịch vụ.
+- model-training permissions;
+- change/termination terms.
 
-## Audit Log
+## Audit Logs
 
-Nên ghi lại ai đã access, export hoặc modify dataset nhạy cảm.
+Record who accessed/exported/modified sensitive datasets. Logs themselves sensitive and should be immutable enough for audit use.
 
-Audit log bản thân cũng là dữ liệu nhạy cảm và cần mức độ integrity phù hợp để có giá trị trong điều tra.
+## Data Incident Response
 
-## Ứng phó Data Incident
+If dataset leaked/corrupted:
 
-Nếu dataset bị leak hoặc corrupt, quy trình có thể gồm:
+1. contain access;
+2. identify affected data/models;
+3. use lineage to find downstream artifacts;
+4. invalidate/retrain as needed;
+5. preserve evidence;
+6. update controls.
 
-1. cô lập access;
-2. xác định data và model bị ảnh hưởng;
-3. dùng lineage để tìm downstream artifact;
-4. invalidate hoặc retrain khi cần;
-5. bảo toàn evidence;
-6. cập nhật control và regression test.
+## Governance for RAG
 
-## Governance cho RAG
+RAG index may ingest documents with different ACLs. Retrieval must enforce document permissions **before** results enter model context.
 
-RAG index có thể ingest document với ACL khác nhau.
+Do not rely on model to hide unauthorized chunk after retrieval.
 
-Retrieval phải enforce permission **trước khi** chunk đi vào model context. Không nên retrieve secret data rồi yêu cầu model “đừng tiết lộ”.
+## Governance for Agent Memory
 
-## Governance cho Agent Memory
+Persistent memory can become a new data store. It needs retention, deletion, user scope and provenance just like databases.
 
-Persistent memory có thể trở thành một data store mới. Nó cần retention, deletion, user scope, provenance và access control giống các database khác.
+## Governance for Synthetic Data
 
-## Governance cho Synthetic Data
+Record generator/model/prompt/source dataset. Synthetic label does not erase original licensing/privacy obligations automatically.
 
-Nên lưu generator, model version, prompt version và source dataset đã dùng để tạo synthetic data.
+## Governance vs Bureaucracy
 
-Synthetic output không tự động xóa bỏ licensing hoặc privacy obligation của source ban đầu.
+Bad governance creates manual gates without reducing risk. Good governance creates machine-readable metadata, automated policy checks and clear ownership.
 
-## Governance không đồng nghĩa Bureaucracy
+## Data Documentation
 
-Governance kém tạo ra nhiều manual gate nhưng không giảm risk.
-
-Governance tốt chuyển policy thành metadata có thể đọc bằng máy, automated check và ownership rõ ràng.
-
-## Tài liệu hóa Dataset
-
-Một artifact hữu ích có thể là **Dataset Card**:
+Useful artifact:
 
 ```text
-- mục đích
-- target population
-- cách thu thập
-- quy trình gán nhãn
-- limitation đã biết
-- sensitive field
+Dataset Card
+- purpose
+- population
+- collection
+- label process
+- known limitations
+- sensitive fields
 - license
-- recommended use
-- prohibited use
+- recommended / prohibited uses
 ```
 
-## Mô hình tư duy
+## Mental Model
 
-> **Data governance biến những file dữ liệu vô danh thành asset có owner, provenance, permission và lifecycle rõ ràng.**
+> **Governance turns data from anonymous files into accountable assets with ownership, provenance, permissions and lifecycle.**
 
-## Những nhầm lẫn thường gặp
+## Common Misconceptions
 
-### “Governance chỉ quan trọng với công ty bị regulated”
+### “Governance only matters for regulated companies”
 
-Không. Ngay cả hệ thống nhỏ cũng cần lineage và ownership để debug và tái tạo kết quả.
+Even small systems need lineage/ownership to debug and reproduce.
 
-### “Dataset đã anonymized thì an toàn mãi mãi”
+### “Anonymized dataset is safe forever”
 
-Không. Re-identification risk thay đổi khi xuất hiện thêm auxiliary data hoặc kỹ thuật mới.
+Re-identification risk evolves with auxiliary data.
 
-### “Search engine của RAG truy cập được document thì model cũng được phép đọc”
+### “If RAG search engine can access document, model may access it”
 
-Không. User-level authorization vẫn phải được enforce riêng.
+User-level authorization still must be enforced.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Data governance nối Security, Privacy, MLOps, AI Safety và Organizational Process. Đây là phần kết thúc Data layer và chuẩn bị cho AI Engineering, nơi model và data trở thành các production service.
+Data governance connects Security, Privacy, MLOps, AI Safety and organizational process. It closes the Data layer and prepares for AI Engineering, where models/data become production services.

@@ -1,8 +1,8 @@
-# Hàm kích hoạt: vì sao Neural Network cần tính phi tuyến?
+# Activation Functions: tại sao Neural Network cần Nonlinearity?
 
-**Hàm kích hoạt (Activation Function / 활성화 함수)** thường được giới thiệu như một danh sách `sigmoid`, `tanh`, `ReLU`, `GELU`. Nếu chỉ học như vậy, kiến thức rất dễ biến thành ghi nhớ tên hàm. Bản chất sâu hơn là: activation quyết định **hình dạng của phép biến đổi**, **dòng gradient (gradient flow)** và **đặc tính thống kê của hidden representation**.
+Activation Function (활성화 함수 / hàm kích hoạt) thường được giới thiệu như một danh sách `sigmoid`, `tanh`, `ReLU`, `GELU`. Cách học đó dễ biến thành thuộc lòng. Bản chất sâu hơn là: activation quyết định **hình dạng transformation**, **gradient flow** và **statistical behavior** của hidden representations.
 
-Nếu bỏ activation giữa các affine layer, toàn bộ network có thể rút gọn thành một phép biến đổi affine duy nhất. Vì vậy tính phi tuyến là điều kiện để độ sâu tạo ra khả năng biểu diễn mới.
+Nếu bỏ activation giữa các affine layers, toàn network collapse thành một affine transformation. Vì vậy nonlinearity là điều kiện để depth tạo expressivity mới.
 
 ## Identity activation
 
@@ -10,9 +10,7 @@ Nếu bỏ activation giữa các affine layer, toàn bộ network có thể rú
 \phi(z)=z
 \]
 
-Hàm đồng nhất không tạo thêm tính phi tuyến.
-
-Nó vẫn hữu ích ở output của regression hoặc trong một số residual/projection block, nhưng nếu mọi hidden layer đều dùng identity thì mạng sâu vẫn chỉ tương đương một mô hình tuyến tính.
+Không thêm nonlinearity. Hữu ích ở regression output hoặc một số residual/projection block, nhưng nếu mọi hidden layer đều identity thì deep stack vẫn linear.
 
 ## Sigmoid
 
@@ -20,17 +18,15 @@ Nó vẫn hữu ích ở output của regression hoặc trong một số residua
 \sigma(z)=\frac{1}{1+e^{-z}}
 \]
 
-Đầu ra nằm trong `(0,1)`.
-
-Đạo hàm:
+Range `(0,1)`. Derivative:
 
 \[
 \sigma'(z)=\sigma(z)(1-\sigma(z))
 \]
 
-Giá trị đạo hàm lớn nhất chỉ `0.25`; khi `|z|` lớn, đạo hàm tiến gần 0. Hiện tượng này gọi là **bão hòa (saturation)** và có thể gây **gradient biến mất (vanishing gradient)** khi mạng sâu.
+Maximum derivative chỉ `0.25`; khi `|z|` lớn, derivative gần zero. Đây là **saturation**, gây vanishing gradients khi stack sâu.
 
-Sigmoid vẫn rất phù hợp cho đầu ra xác suất nhị phân hoặc các cổng trong LSTM, nơi giá trị bị giới hạn trong `(0,1)` có ý nghĩa rõ ràng.
+Sigmoid vẫn rất phù hợp ở binary probability output hoặc gates trong LSTM, nơi bounded value có semantic rõ.
 
 ## tanh
 
@@ -38,17 +34,17 @@ Sigmoid vẫn rất phù hợp cho đầu ra xác suất nhị phân hoặc các
 tanh(z)=\frac{e^z-e^{-z}}{e^z+e^{-z}}
 \]
 
-Đầu ra nằm trong `(-1,1)` và có tâm quanh 0 tốt hơn sigmoid.
+Range `(-1,1)`, zero-centered hơn sigmoid.
 
-Đạo hàm:
+Derivative:
 
 \[
 1-tanh^2(z)
 \]
 
-Tuy nhiên tanh vẫn bão hòa khi giá trị tuyệt đối lớn.
+vẫn saturate khi magnitude lớn.
 
-Trong lịch sử, tanh thường dễ train hơn sigmoid ở hidden layer của nhiều mạng đời đầu, nhưng họ ReLU sau này thuận lợi hơn cho nhiều feed-forward network sâu.
+Historically tanh tốt hơn sigmoid cho hidden layers trong nhiều early networks, nhưng ReLU-family thường easier train deep feed-forward nets.
 
 ## ReLU
 
@@ -56,7 +52,7 @@ Trong lịch sử, tanh thường dễ train hơn sigmoid ở hidden layer của
 ReLU(z)=\max(0,z)
 \]
 
-Đạo hàm:
+Derivative:
 
 \[
 ReLU'(z)=
@@ -66,19 +62,20 @@ ReLU'(z)=
 \end{cases}
 \]
 
-Tại `z=0`, convention đạo hàm phụ thuộc implementation, nhưng một điểm đơn lẻ thường không gây vấn đề lớn trong training liên tục.
+Tại zero derivative convention tùy implementation, nhưng single point không tạo issue lớn trong continuous training.
 
-Các ưu điểm chính của ReLU gồm không bão hòa ở phía dương, tính toán đơn giản, tạo activation thưa và giúp gradient đi qua tốt hơn sigmoid/tanh trong nhiều mạng sâu.
+Ưu điểm:
+
+- không saturate ở positive side;
+- computation đơn giản;
+- sparse activations;
+- gradient có thể flow tốt hơn sigmoid/tanh.
 
 ## Dying ReLU
 
-Nếu một unit rơi vào vùng `z<0` đối với hầu hết input, gradient qua ReLU bằng 0 và unit có thể không phục hồi được.
+Nếu unit rơi vào region `z<0` cho hầu hết inputs, gradient qua ReLU = 0 nên unit có thể không recover. Learning rate quá lớn hoặc bad initialization làm risk tăng.
 
-Hiện tượng này gọi là **Dying ReLU**.
-
-Learning rate quá lớn hoặc initialization không phù hợp làm rủi ro tăng lên.
-
-Một số biến thể:
+Variants:
 
 **Leaky ReLU**:
 
@@ -86,31 +83,31 @@ Một số biến thể:
 \phi(z)=\max(\alpha z,z)
 \]
 
-cho một slope âm nhỏ.
+cho small negative slope.
 
-**PReLU** học trực tiếp `α`.
+**PReLU** học `α`.
 
-**ELU** và **SELU** dùng vùng âm mượt với các mục tiêu khác về thống kê activation.
+**ELU/SELU** có smooth negative region với goals khác về activation statistics.
 
 ## GELU
 
-**Gaussian Error Linear Unit (GELU)** phổ biến trong Transformer:
+Gaussian Error Linear Unit (GELU) phổ biến trong Transformers:
 
 \[
 GELU(x)=x\Phi(x)
 \]
 
-với `Φ` là CDF của phân phối chuẩn chuẩn hóa.
+với `Φ` là CDF của standard normal.
 
-Trực giác đơn giản là GELU “gating” input một cách mượt dựa trên độ lớn thay vì cắt cứng phần âm như ReLU.
+Intuitively, GELU gate input smoothly theo magnitude thay vì hard zero như ReLU.
 
-Một xấp xỉ thường gặp:
+Approximation thường dùng:
 
 \[
 0.5x\left(1+tanh\left[\sqrt{2/\pi}(x+0.044715x^3)\right]\right)
 \]
 
-Nhiều Transformer hiện đại cũng dùng SiLU hoặc SwiGLU.
+Transformer variants cũng dùng SiLU/SwiGLU.
 
 ## SiLU / Swish
 
@@ -118,19 +115,19 @@ Nhiều Transformer hiện đại cũng dùng SiLU hoặc SwiGLU.
 SiLU(x)=x\sigma(x)
 \]
 
-SiLU là hàm mượt, có một vùng âm hơi không đơn điệu và xuất hiện trong nhiều kiến trúc hiện đại.
+Smooth, non-monotonic nhẹ ở negative region và được dùng trong nhiều modern architectures.
 
-## Gated Linear Unit và SwiGLU
+## Gated Linear Units và SwiGLU
 
-Feed-forward block của Transformer hiện đại thường sử dụng activation có cơ chế cổng:
+Transformer feed-forward blocks hiện đại thường dùng gated activation:
 
 \[
 SwiGLU(x)=(xW_1)\odot SiLU(xW_2)
 \]
 
-sau đó mới qua projection tiếp theo.
+rồi projection tiếp theo.
 
-Cơ chế gating cho phép tương tác nhân giữa nhiều projection được học, làm representation linh hoạt hơn so với chỉ dùng một activation scalar đơn giản.
+Gating cho phép multiplicative interaction giữa learned projections, tăng expressivity so với một activation scalar đơn giản.
 
 ## Softmax không phải hidden activation thông thường
 
@@ -140,87 +137,82 @@ Softmax:
 softmax(z_i)=\frac{e^{z_i}}{\sum_j e^{z_j}}
 \]
 
-biến vector logit thành một phân phối có tổng bằng 1.
+biến vector logits thành distribution sum=1. Nó thường dùng ở multiclass output và attention weights, không làm hidden activation generic như ReLU/GELU.
 
-Nó thường được dùng ở output của multiclass classification hoặc để tạo attention weight, chứ không phải hidden activation tổng quát như ReLU hay GELU.
+Softmax couples dimensions: thay một logit ảnh hưởng probabilities của mọi classes.
 
-Softmax còn có tính liên kết giữa các chiều: thay một logit sẽ ảnh hưởng xác suất của tất cả class còn lại.
+## Activation và gradient flow
 
-## Activation và dòng gradient
-
-Backpropagation qua nhiều layer tạo tích của nhiều đạo hàm:
+Backprop qua chain product:
 
 \[
-\frac{\partial L}{\partial h^{(l)}}=
-\frac{\partial L}{\partial h^{(l+1)}}
-\frac{\partial h^{(l+1)}}{\partial h^{(l)}}
+\frac{\partial L}{\partial h^{(l)}}=rac{\partial L}{\partial h^{(l+1)}}\frac{\partial h^{(l+1)}}{\partial h^{(l)}}
 \]
 
-Nếu các đạo hàm liên tục nhỏ hơn 1 đáng kể, gradient có thể co lại qua chiều sâu. Nếu norm của Jacobian liên tục lớn hơn 1, gradient có thể bùng nổ.
+Nếu derivatives liên tục <1 mạnh, gradient shrink qua depth. Nếu Jacobian norms >1 liên tục, gradient có thể explode.
 
-Vì vậy activation không thể được đánh giá riêng lẻ. Nó tương tác trực tiếp với initialization, normalization, residual connection và toàn bộ architecture.
+Activation choice tương tác với initialization, normalization, residual connections và architecture; không thể đánh giá riêng lẻ.
 
-## Output activation phải phù hợp target
+## Output activation phải match target
 
-Một số lựa chọn thường gặp:
+Regression unbounded → thường identity.
 
-```text
-Regression không bị chặn        → thường dùng identity
-Binary classification           → sigmoid hoặc logits + BCE-with-logits
-Multiclass loại trừ lẫn nhau    → softmax
-Multi-label                     → sigmoid độc lập cho từng label
-Đại lượng dương                 → có thể dùng softplus / exponential
-Tham số variance phải > 0       → softplus thường hữu ích
-```
+Binary classification → sigmoid probability hoặc logits + numerically stable BCE-with-logits.
 
-Activation ở output layer chính là một giả định mô hình hóa, không chỉ là chi tiết implementation.
+Mutually exclusive multiclass → softmax.
 
-## Có bắt buộc khả vi ở mọi điểm không?
+Multi-label → independent sigmoid per label.
 
-Gradient-based training cần đạo hàm hữu ích gần như mọi nơi, nhưng hàm không cần khả vi tuyệt đối tại mọi điểm đơn lẻ. ReLU là ví dụ điển hình.
+Positive quantity → có thể softplus/exponential tùy probabilistic model.
 
-Các phép toán rời rạc như `argmax` thường không khả vi, nên thường được đặt ngoài đường training hoặc xử lý bằng relaxation hay estimator đặc biệt.
+Variance parameter cần >0 → softplus thường useful.
 
-## Thống kê activation
+Activation ở output là một modeling assumption, không chỉ implementation detail.
 
-Nếu mean và variance của activation liên tục trôi khi đi qua nhiều layer, optimization trở nên khó hơn.
+## Differentiability có bắt buộc tuyệt đối không?
 
-Initialization và normalization cố giữ scale của tín hiệu ở mức hợp lý.
+Gradient-based training cần useful derivatives gần như mọi nơi, nhưng function không cần differentiable tại mọi single point. ReLU là example.
 
-SELU từng được thiết kế để activation statistics có xu hướng hội tụ về một vùng ổn định dưới các giả định nhất định.
+Discrete operations như `argmax` thường không differentiable và được đặt ngoài training path hoặc xử lý bằng relaxations/estimators.
 
-Transformer hiện đại thường dựa vào LayerNorm hoặc RMSNorm kết hợp residual path để kiểm soát dòng tín hiệu.
+## Activation statistics
 
-## Vì sao ReLU từng là bước tiến quan trọng?
+Nếu activations liên tục có mean/variance drift qua layers, optimization khó. Initialization và normalization cố giữ scale signal hợp lý.
 
-ReLU không phải nguyên nhân duy nhất làm Deep Learning phát triển, nhưng cùng với initialization tốt hơn và GPU, nó giúp giảm vấn đề saturation trong feed-forward network và CNN sâu.
+Self-normalizing networks từng thiết kế SELU + initialization để activation statistics converge về stable range under assumptions.
 
-Tiến bộ lịch sử thường đến từ sự kết hợp của nhiều cải tiến, không phải một “activation thần kỳ” duy nhất.
+Modern Transformers thường dựa LayerNorm/RMSNorm + residual pathways.
 
-## Mô hình tư duy
+## Why ReLU changed Deep Learning
 
-> Hàm kích hoạt là cơ chế điều khiển hình dạng của phép biến đổi được học: nó quyết định layer có thể bẻ cong representation space ra sao và gradient truyền qua phép biến đổi đó như thế nào.
+ReLU không phải nguyên nhân duy nhất, nhưng cùng better initialization và GPUs, nó giảm saturation problem trong deep feed-forward/CNN networks, giúp training depth lớn hơn thực dụng.
 
-## Các hiểu lầm thường gặp
+Historical progress thường đến từ interaction của nhiều improvements, không single magic activation.
+
+## Mental Model
+
+> Activation function là “shape control” của learned transformation: nó quyết định layer có thể bend representation space thế nào và gradient đi qua transformation ra sao.
+
+## Common Misconceptions
 
 ### “ReLU tốt nhất nên cứ dùng ReLU”
 
-Không. Kiến trúc và domain quyết định lựa chọn. Transformer thường dùng GELU, SiLU hoặc SwiGLU; các cổng RNN lại dùng sigmoid/tanh.
+Architecture/domain matter. Transformers thường dùng GELU/SiLU/SwiGLU; RNN gates dùng sigmoid/tanh.
 
-### “Sigmoid đã lỗi thời”
+### “Sigmoid lỗi thời”
 
-Không. Nó vẫn tự nhiên cho Bernoulli output và cơ chế gating.
+Không. Nó vẫn natural cho Bernoulli output và gating.
 
-### “Softmax làm mô hình tự tin hơn”
+### “Softmax làm model confident hơn”
 
-Không. Softmax chỉ chuẩn hóa logit; scale và temperature ảnh hưởng độ sắc của phân phối, nhưng không bảo đảm correctness hay calibration.
+Softmax chỉ normalize logits; temperature/scale ảnh hưởng sharpness, không đảm bảo correctness/calibration.
 
 ### “Activation chỉ ảnh hưởng expressivity”
 
-Không. Nó còn ảnh hưởng optimization, gradient flow, activation statistics và numerical stability.
+Nó còn ảnh hưởng optimization, gradient flow, activation statistics và numerical behavior.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Xem [Giải tích](../01_mathematical_foundations/04_calculus_for_ai.md), [Tính toán số](../01_mathematical_foundations/07_numerical_computation.md) và [Initialization và Normalization](./06_initialization_and_normalization.md).
+Xem [Calculus](../01_mathematical_foundations/04_calculus_for_ai.md), [Numerical Computation](../01_mathematical_foundations/07_numerical_computation.md), [Initialization and Normalization](./06_initialization_and_normalization.md).
 
-Xem tiếp: [Lan truyền tiến](./03_forward_propagation.md).
+Xem tiếp: [Forward Propagation](./03_forward_propagation.md).

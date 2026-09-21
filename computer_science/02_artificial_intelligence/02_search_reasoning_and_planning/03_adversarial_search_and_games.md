@@ -1,99 +1,99 @@
-# Tìm kiếm đối kháng và chơi trò chơi
+# Adversarial Search và Game Playing
 
-Nhiều bài toán tìm kiếm giả định môi trường thụ động: ta chọn hành động, phép chuyển xảy ra theo quy tắc và mục tiêu không chủ động chống lại ta. Trong trò chơi và môi trường đối kháng, một tác nhân khác chủ động chọn hành động để làm kết quả của ta xấu đi. Khi đó “tìm đường tốt” trở thành “chọn chiến lược tốt khi đối thủ cũng tối ưu”.
+Nhiều search problem giả định environment thụ động: ta chọn action, transition xảy ra theo rules, goal không chống lại ta. Trong games và adversarial settings, một actor khác chủ động chọn action làm outcome của ta xấu đi. Khi đó “tìm path tốt” trở thành “chọn strategy tốt khi đối thủ cũng tối ưu”.
 
-**Tìm kiếm đối kháng (Adversarial Search / 적대적 탐색)** nghiên cứu việc ra quyết định trong môi trường nhiều tác nhân có mục tiêu cạnh tranh. Ví dụ cổ điển là cờ vua, cờ đam và Go; các ý tưởng này cũng hữu ích trong an ninh, thương lượng, ra quyết định bền vững và hệ thống đa tác nhân.
+**Adversarial Search (적대적 탐색)** nghiên cứu decision making trong multi-agent environments có competitive objectives. Classical examples là chess, checkers, Go; ideas của nó cũng hữu ích cho security, negotiation, robust decision making và multi-agent systems.
 
-Xem trước: [Không gian trạng thái và tìm kiếm](./00_state_space_and_search.md).
+Xem trước: [State Space and Search](./00_state_space_and_search.md).
 
-## Từ tìm đường tới cây trò chơi
+## Từ path search tới game tree
 
-Tìm kiếm một tác nhân:
+Single-agent search:
 
 ```text
-trạng thái → hành động → trạng thái kế → ... → mục tiêu
+state → action → successor → ... → goal
 ```
 
-Trò chơi hai người luân phiên:
+Two-player turn-taking game:
 
 ```text
-MAX chọn hành động
+MAX chooses action
     ↓
-MIN chọn phản ứng
+MIN chooses response
     ↓
-MAX chọn hành động
+MAX chooses action
     ↓
 ...
 ```
 
-Mỗi nút không chỉ chứa trạng thái mà còn chứa thông tin lượt của người chơi nào.
+Mỗi node không chỉ có state mà còn player-to-move.
 
-**Cây trò chơi (game tree)** phân nhánh theo các hành động hợp lệ của cả hai phía.
+Game tree branches theo legal actions của both sides.
 
-## Trò chơi tổng bằng không
+## Zero-sum games
 
-Trong **trò chơi hai người tổng bằng không (two-player zero-sum game)**, độ hữu dụng của hai người đối nghịch:
+Trong two-player zero-sum game, utility của hai players đối nhau:
 
 \[
 U_{MAX}=-U_{MIN}
 \]
 
-Nếu MAX thắng được `+1`, MIN nhận `-1`; hòa có thể là `0`.
+Nếu MAX thắng +1, MIN nhận -1; draw 0.
 
-Giả định tổng bằng không giúp phân tích gọn hơn nhưng không bao phủ hợp tác, thương lượng hoặc môi trường đa tác nhân tổng quát.
+Zero-sum assumption làm analysis clean nhưng không cover cooperation, bargaining hoặc general-sum multi-agent environments.
 
-## Thông tin hoàn hảo
+## Perfect information
 
-Cờ vua là trò chơi **thông tin hoàn hảo (perfect information)**: trạng thái bàn cờ được cả hai bên nhìn thấy đầy đủ, không có quân bài ẩn.
+Chess là perfect-information game: board state visible đầy đủ, không hidden cards.
 
-Poker có thông tin không hoàn hảo.
+Poker có imperfect information.
 
-Minimax cổ điển đặc biệt phù hợp với trò chơi xác định, thông tin hoàn hảo và tổng bằng không. Nếu có yếu tố ngẫu nhiên hoặc thông tin ẩn, cần các mở rộng khác.
+Deterministic perfect-information zero-sum games là setting kinh điển cho minimax. Chance hoặc hidden information cần extensions khác.
 
-## Nguyên lý minimax
+## Minimax principle
 
-MAX chọn hành động tối đa hóa độ hữu dụng với giả định MIN sẽ chọn phản ứng làm độ hữu dụng của MAX nhỏ nhất.
+MAX chọn action maximize utility assuming MIN sẽ choose response minimize MAX utility.
 
-Giá trị đệ quy:
+Recursive value:
 
 \[
 V(s)=
 \begin{cases}
-U(s), & s\text{ là trạng thái kết thúc}\\
-\max_{a}V(T(s,a)), & \text{lượt MAX}\\
-\min_{a}V(T(s,a)), & \text{lượt MIN}
+U(s), & s\text{ terminal}\\
+\max_{a}V(T(s,a)), & MAX\text{ turn}\\
+\min_{a}V(T(s,a)), & MIN\text{ turn}
 \end{cases}
 \]
 
-MAX không chọn nước đi có kết quả đẹp nhất trong trường hợp đối thủ hợp tác. Nó chọn nước có **bảo đảm tốt nhất trong trường hợp xấu nhất**.
+MAX không chọn move có outcome tốt nhất nếu opponent cooperate. Nó chọn move có **best worst-case guarantee**.
 
-## Ví dụ nhỏ
+## Example nhỏ
 
-Giả sử MAX có hai nước:
-
-```text
-A → MIN có thể ép kết quả về {3, 5}
-B → MIN có thể ép kết quả về {2, 9}
-```
-
-MIN chọn giá trị nhỏ nhất ở mỗi nhánh:
+Suppose MAX has two moves:
 
 ```text
-A = min(3,5)=3
-B = min(2,9)=2
+A → MIN can force {3, 5}
+B → MIN can force {2, 9}
 ```
 
-MAX chọn A vì:
+MIN chooses minimum under each branch:
+
+```text
+A value = min(3,5)=3
+B value = min(2,9)=2
+```
+
+MAX chooses A because:
 
 \[
 \max(3,2)=3
 \]
 
-Nhánh B có khả năng đạt 9 rất hấp dẫn, nhưng đối thủ hợp lý sẽ không cho phép điều đó nếu có lựa chọn khác.
+Move B has attractive possible 9, nhưng rational adversary sẽ not allow it.
 
-## Minimax như suy luận ngược
+## Minimax as backward induction
 
-Minimax tính giá trị ở lá rồi truyền ngược lên cây.
+Minimax solves leaves first then propagate values backward.
 
 ```mermaid
 flowchart TD
@@ -105,363 +105,370 @@ flowchart TD
     B --> B2[9]
 ```
 
-`A=min(3,5)=3`, `B=min(2,9)=2`, và gốc `max(3,2)=3`.
+`A=min(3,5)=3`, `B=min(2,9)=2`, root `max(3,2)=3`.
 
-Đây là cấu trúc đệ quy gần với quy hoạch động trên cây trò chơi.
+This is dynamic-programming-like recursive structure on game tree.
 
-## Độ phức tạp
+## Complexity
 
-Nếu hệ số phân nhánh là `b` và độ sâu tìm kiếm là `m`:
+Nếu branching factor là `b` và search depth `m`:
 
 \[
 O(b^m)
 \]
 
-về thời gian, còn cách triển khai theo chiều sâu thường cần bộ nhớ gần `O(bm)` trong phân tích phổ biến.
+time, with depth-first implementation space roughly `O(bm)` under common analysis.
 
-Cờ vua có hàng chục nước hợp lệ trung bình ở mỗi vị trí và chiều sâu trận đấu lớn, nên minimax vét cạn là bất khả thi.
+Chess branching ~tens moves/position and game depth large, making exhaustive minimax impossible.
 
-Vì vậy cần cắt tỉa, hàm đánh giá, sắp xếp nước đi và hướng dẫn bằng mô hình học.
+Hence pruning, evaluation functions, move ordering and learned guidance.
 
-## Hàm đánh giá
+## Evaluation function
 
-Nếu không thể tìm tới trạng thái kết thúc, ta dừng ở một độ sâu giới hạn và ước lượng giá trị vị trí:
+If cannot search to terminal state, stop at cutoff depth and estimate position value:
 
 \[
 \hat V(s)
 \]
 
-Trong cờ vua, hàm đánh giá có thể kết hợp giá trị quân, an toàn của vua, độ hoạt động của quân và cấu trúc tốt.
+Chess evaluation might combine material, king safety, piece activity, pawn structure.
 
-Hệ thống hiện đại có thể dùng mạng giá trị (value network).
+Modern systems may use neural value networks.
 
-Sai số đánh giá có thể được truyền ngược qua minimax. Tìm sâu hơn có thể bù một phần nhưng cũng gặp **hiệu ứng chân trời (horizon effect)**.
+Evaluation error can propagate up minimax. Search depth may compensate some errors but also encounter **horizon effect**.
 
-## Hiệu ứng chân trời
+## Horizon effect
 
-Nếu một sự kiện xấu nằm ngay sau độ sâu cắt, hệ thống có thể chọn nước chỉ để đẩy sự kiện đó ra ngoài chân trời tìm kiếm.
+If bad event lies just beyond search cutoff, model may choose move that merely delays event past horizon.
 
-Ví dụ mất hậu là không thể tránh trong 6 nước, nhưng tìm kiếm sâu 5 nước có thể thích một phương án chỉ trì hoãn việc mất hậu vì hàm đánh giá chưa nhìn thấy hậu quả.
+Example: losing queen unavoidable in 6 moves, search depth 5 prefers line postponing loss because evaluator chưa thấy consequence.
 
-**Tìm kiếm trạng thái yên tĩnh (quiescence search)** kéo dài tìm kiếm ở vị trí chiến thuật hoặc nhiều biến động cho tới khi trạng thái đủ ổn định để đánh giá.
+Quiescence search extends tactical/noisy positions until state becomes more stable for evaluation.
 
-## Cắt tỉa Alpha–Beta
+## Alpha–Beta pruning
 
-**Cắt tỉa Alpha–Beta (Alpha–Beta pruning)** tính cùng giá trị minimax nhưng bỏ qua những nhánh không thể ảnh hưởng tới quyết định cuối.
+Alpha–Beta pruning computes same minimax value while avoiding branches that cannot affect decision.
 
-Duy trì:
+Maintain:
 
-- `α`: giá trị tốt nhất MAX đã có thể bảo đảm;
-- `β`: giá trị tốt nhất MIN đã có thể ép xuống.
+- `α`: best value MAX can guarantee so far;
+- `β`: best value MIN can guarantee so far.
 
-Nếu:
+If at some point:
 
 \[
 \alpha\ge\beta
 \]
 
-các phần còn lại của nhánh có thể được cắt dưới logic chuẩn.
+remaining branch can be pruned under standard logic.
 
-## Vì sao cắt tỉa vẫn an toàn?
+## Why pruning is safe
 
-Giả sử MAX đã có một lựa chọn bảo đảm giá trị 5. Khi đánh giá một lựa chọn khác, MIN đã tìm được phản ứng khiến nhánh đó chỉ còn tối đa 3.
+Suppose MAX already has option worth 5. While evaluating another move, MIN finds response limiting branch to ≤3.
 
-MAX sẽ không chọn nhánh ≤3 thay cho phương án bảo đảm 5, nên không cần xem hết các phản ứng MIN còn lại.
+MAX will never choose that branch over guaranteed 5, so no need inspect other MIN responses.
 
-Cắt tỉa loại bỏ tính toán, không loại bỏ quyết định minimax tối ưu.
+Pruning removes computation, not possible optimal decision.
 
-## Thứ tự nước đi rất quan trọng
+## Move ordering matters
 
-Trường hợp xấu của Alpha–Beta vẫn gần độ phức tạp minimax. Nhưng với thứ tự nước đi lý tưởng, phân tích cổ điển cho thấy cùng lượng tính toán có thể tìm sâu gần gấp đôi:
+Alpha–Beta worst case remains roughly minimax complexity. With ideal move ordering, effective search depth can roughly double for same computation in classic analysis:
 
 \[
 O(b^{m/2})
 \]
 
-thay vì `O(b^m)`.
+rather than `O(b^m)`.
 
-Vì vậy việc xếp các nước hứa hẹn lên trước rất quan trọng.
+Thus good move ordering is huge.
 
-Mạng chính sách (policy network) đã học có thể dùng để sắp xếp nước đi, từ đó làm tìm kiếm hiệu quả hơn.
+Learned policy networks can order promising moves, making search more efficient.
 
-## Bảng chuyển vị
+## Transposition tables
 
-Cùng một vị trí trò chơi có thể xuất hiện qua nhiều thứ tự nước đi khác nhau; hiện tượng này gọi là **chuyển vị (transposition)**.
+Same game position can arise through different move orders, called **transposition**.
 
-Lưu bộ nhớ đệm của các vị trí đã đánh giá giúp tránh tìm lại.
+Caching evaluated positions avoids repeated search.
 
-Một mục trong **bảng chuyển vị (transposition table)** có thể lưu:
+Transposition table entries may store:
 
 ```text
-mã băm trạng thái
-độ sâu đã tìm
-giá trị hoặc loại cận
-nước đi tốt nhất
+state hash
+searched depth
+value or bound type
+best move
 ```
 
-Zobrist hashing là kỹ thuật phổ biến để băm trạng thái bàn cờ hiệu quả.
+Zobrist hashing is common efficient board hashing technique.
 
-Vì bảng có kích thước hữu hạn, chính sách thay thế mục cũ cũng quan trọng.
+Because table finite, replacement policy matters.
 
-## Đào sâu lặp trong trò chơi
+## Iterative deepening in games
 
-Engine trò chơi thường tìm ở độ sâu 1, 2, 3,... lặp lại.
+Game engines often search depth 1,2,3,... repeatedly.
 
-Mặc dù có phần tính lại, cách này mang nhiều lợi ích:
+Although repeated work occurs, advantages include:
 
-- luôn có nước tốt nhất từ lần tìm hoàn tất gần nhất;
-- dùng nước tốt ở vòng trước để sắp xếp nước ở vòng sau;
-- thích nghi với ngân sách thời gian không chắc chắn;
-- làm nóng bảng chuyển vị.
+- always have best move from completed depth;
+- use previous iteration best move for ordering;
+- fit uncertain time budget;
+- warm transposition table.
 
-Cách này phối hợp rất tốt với Alpha–Beta.
+This combines well with Alpha–Beta.
 
-## Biến chính
+## Principal variation
 
-**Biến chính (principal variation)** là chuỗi nước đi đang được xem là tốt nhất theo kết quả tìm kiếm hiện tại.
+Principal variation is current best sequence of moves under search.
 
-Nó hữu ích để sắp xếp nước, gỡ lỗi engine, hiển thị đường dự kiến và tái sử dụng trong đào sâu lặp.
+It is useful for:
 
-Tuy nhiên nó phụ thuộc vào độ sâu và hàm đánh giá, không phải lời tiên đoán chắc chắn về trận đấu thật.
+- move ordering;
+- explain/debug engine;
+- display expected line;
+- iterative deepening reuse.
 
-## Expectiminimax: nút ngẫu nhiên
+But it is contingent on evaluation/search depth; not guaranteed actual future play.
 
-Trò chơi như backgammon có xúc xắc nên cây chứa thêm nút ngẫu nhiên bên cạnh MAX và MIN.
+## Expectiminimax: chance nodes
 
-Giá trị tại nút ngẫu nhiên:
+Games like backgammon include dice/chance.
+
+Tree contains MAX, MIN and CHANCE nodes.
+
+Chance value:
 
 \[
 V(s)=\sum_o P(o)V(T(s,o))
 \]
 
-Ta lấy kỳ vọng thay vì min hoặc max.
+At chance node, take expectation rather than min/max.
 
-Độ phức tạp cây tăng thêm vì các kết quả ngẫu nhiên cũng tạo phân nhánh.
+Tree complexity grows further because chance outcomes add branching.
 
-## Thông tin không hoàn hảo
+## Imperfect information
 
-Trong poker, người chơi không biết bài của đối thủ. Trạng thái thật không được quan sát đầy đủ.
+Poker players do not know opponent cards. State is not fully observed.
 
-Áp dụng minimax ngây thơ trên trạng thái nhìn thấy là không đủ vì người chơi phải suy luận trên **tập thông tin (information set)**, niềm tin và chiến lược trộn.
+Naively minimax over visible state fails because player must reason over information sets/beliefs and mixed strategies.
 
-Các khái niệm của lý thuyết trò chơi như cân bằng Nash và **tối thiểu hóa hối tiếc phản thực (Counterfactual Regret Minimization - CFR)** trở nên quan trọng.
+Game Theory concepts like Nash equilibrium, counterfactual regret minimization (CFR) become relevant.
 
-Đây là cầu nối từ tìm kiếm đối kháng sang lý thuyết quyết định nhiều tác nhân rộng hơn.
+This is conceptual bridge from adversarial search to broader multi-agent decision theory.
 
-## Chiến lược trộn
+## Mixed strategies
 
-Trong kéo-búa-bao, chiến lược xác định luôn có thể bị khai thác. Chơi tối ưu cần phân phối xác suất trên các hành động.
+In games like rock-paper-scissors, deterministic strategy exploitable. Optimal play uses probability distribution over actions.
 
-Một **chiến lược trộn (mixed strategy)**:
+A mixed strategy:
 
 \[
 \pi(a)
 \]
 
-Trong cân bằng đối xứng của kéo-búa-bao:
+For symmetric rock-paper-scissors equilibrium:
 
 \[
 \pi(R)=\pi(P)=\pi(S)=1/3
 \]
 
-Không có một hành động thuần túy nào bảo đảm giá trị tốt nhất trước đối thủ hợp lý.
+No pure action guarantees value against rational opponent.
 
-Điều này cho thấy “hành động tốt nhất” đôi khi cần mang tính ngẫu nhiên.
+This shows “best action” may be stochastic.
 
-## Cân bằng Nash
+## Nash equilibrium
 
-Một cấu hình chiến lược là **cân bằng Nash (Nash equilibrium)** nếu không người chơi nào có thể tăng độ hữu dụng bằng cách đơn phương đổi chiến lược.
+A strategy profile is Nash equilibrium if no player can improve utility by unilateral deviation.
 
-Trong trò chơi hai người tổng bằng không, định lý minimax nối giá trị cân bằng với maximin/minimax dưới các giả định trò chơi hữu hạn phù hợp.
+In two-player zero-sum games, minimax theorem connects equilibrium value with maximin/minimax under suitable finite-game assumptions.
 
-Trò chơi tổng quát có thể có nhiều cân bằng và động lực phức tạp hơn.
+General-sum games can have multiple equilibria and more complex incentives.
 
 ## Monte Carlo Tree Search
 
-**Monte Carlo Tree Search (MCTS)** xây cây một cách chọn lọc bằng lấy mẫu thay vì mở rộng vét cạn tới độ sâu cố định.
+Monte Carlo Tree Search (MCTS) builds search tree selectively using sampling rather than exhaustive depth expansion.
 
-Vòng lặp điển hình:
+Canonical loop:
 
 ```text
-Lựa chọn
+Selection
    ↓
-Mở rộng
+Expansion
    ↓
-Mô phỏng / Đánh giá
+Simulation / Evaluation
    ↓
-Lan truyền giá trị ngược lên cây
+Backpropagation of value
    ↺
 ```
 
-MCTS đặc biệt hữu ích khi hệ số phân nhánh lớn và khó xây hàm đánh giá viết tay tốt.
+MCTS is especially useful when branching large and good heuristic evaluation difficult.
 
-## Khám phá và khai thác trong MCTS
+## Exploration vs exploitation in MCTS
 
-Quy tắc kiểu UCT thường có dạng:
+UCT-like selection rule:
 
 \[
 \bar X_j + C\sqrt{\frac{\ln N}{n_j}}
 \]
 
-Hạng đầu ưu tiên nước có giá trị quan sát cao, tức **khai thác (exploitation)**.
+First term prefers moves with high observed value (exploitation).
 
-Hạng sau ưu tiên nước ít được thử, tức **khám phá (exploration)**.
+Second term prefers less-visited moves (exploration).
 
-`N` là số lần thăm nút cha, `n_j` là số lần thăm nút con.
+`N` parent visits, `n_j` child visits.
 
-Đây là liên kết trực tiếp với bài toán bandit nhiều tay và tìm kiếm có nhận biết bất định.
+This is connection to multi-armed bandits and uncertainty-aware search.
 
-## MCTS được hướng dẫn bằng mạng nơ-ron
+## Neural-guided MCTS
 
-Các hệ thống kiểu AlphaGo/AlphaZero kết hợp:
+AlphaGo/AlphaZero-style systems combine:
 
-- mạng chính sách → phân phối ưu tiên trên các nước hứa hẹn;
-- mạng giá trị → ước lượng kết quả mà không cần mô phỏng tới cuối;
-- MCTS → tìm kiếm có cấu trúc và tinh chỉnh quyết định.
+- policy network → prior over promising moves;
+- value network → estimate outcome without full rollout;
+- MCTS → structured search/refinement.
 
-Bài học quan trọng:
+This is key lesson:
 
-> **Học không đơn giản thay thế tìm kiếm; học có thể làm tìm kiếm thông minh hơn rất nhiều.**
+> Learning did not simply replace search. Learning made search much more informed.
 
-Chính sách giảm hiệu quả hệ số phân nhánh; mạng giá trị giảm nhu cầu đi tới trạng thái kết thúc; tìm kiếm cải thiện quyết định so với chỉ dùng đầu ra thô của mạng.
+Policy narrows branching; value reduces need reach terminal states; search improves over raw network output.
 
-## Vòng phản hồi kiểu AlphaZero
+## AlphaZero-style feedback loop
 
-Về khái niệm:
+Conceptually:
 
 ```mermaid
 flowchart LR
-    N[Mạng chính sách + giá trị] --> M[MCTS]
-    M --> G[Ván tự chơi]
-    G --> D[Dữ liệu huấn luyện]
+    N[Policy + Value Network] --> M[MCTS]
+    M --> G[Self-play Games]
+    G --> D[Training Data]
     D --> N
 ```
 
-Tự chơi tạo dữ liệu từ chính sách và tìm kiếm hiện tại. Mạng học từ mục tiêu chính sách/giá trị được cải thiện bởi tìm kiếm và kết quả trận đấu.
+Self-play creates data from current policy/search. Network learns improved policy/value targets derived from search/outcomes.
 
-Đây là sự tích hợp của học, tìm kiếm và học tăng cường.
+This is Learning + Search + Reinforcement Learning integrated.
 
-## Minimax và MCTS
+## Minimax vs MCTS
 
-Minimax/Alpha–Beta phù hợp khi:
+Minimax/Alpha–Beta works well when:
 
-- phép chuyển xác định;
-- phân nhánh còn tương đối kiểm soát được;
-- có hàm đánh giá mạnh;
-- cần độ chính xác chiến thuật cao.
+- deterministic transitions;
+- relatively manageable branching;
+- evaluation function strong;
+- tactical precision matters.
 
-MCTS phù hợp khi:
+MCTS works well when:
 
-- phân nhánh lớn;
-- lấy mẫu ngẫu nhiên hữu ích;
-- có mô phỏng hoặc mạng giá trị;
-- muốn hành vi kiểu anytime.
+- branching large;
+- stochastic sampling useful;
+- rollout/value estimates available;
+- incremental anytime behavior desired.
 
-Đây không phải ranh giới tuyệt đối. Engine lai có thể kết hợp nhiều kỹ thuật.
+This is not strict binary. Hybrid engines combine multiple techniques.
 
-## Tìm kiếm đối kháng ngoài trò chơi bàn cờ
+## Adversarial search outside board games
 
-### An ninh
+### Security
 
-Bên phòng thủ chọn chiến lược phát hiện hoặc phân bổ tài nguyên trong khi kẻ tấn công thích nghi.
+Defender chooses detection/resource strategy while attacker adapts.
 
-### Học máy bền vững
+### Robust ML
 
-Ví dụ đối kháng có thể được mô hình hóa thành tối ưu phía trong:
+Adversarial examples can be formulated as inner optimization:
 
 \[
 \max_{\|\delta\|\le\epsilon} L(f(x+\delta),y)
 \]
 
-trong khi huấn luyện giảm mục tiêu phía ngoài:
+while training minimizes outer objective:
 
 \[
 \min_\theta \mathbb{E}[\max_\delta L(f_\theta(x+\delta),y)]
 \]
 
-Đây là tối ưu đối kháng liên tục, không phải tìm kiếm cây trò chơi, nhưng cấu trúc chiến lược tương tự: một bên tìm lỗi, một bên tối ưu độ bền vững.
+This is continuous adversarial optimization rather than game-tree search, but same strategic structure: one player seeks failure, other robustness.
 
-### Hệ thống đa tác nhân
+### Multi-agent systems
 
-Các tác nhân có thể cạnh tranh tài nguyên, thương lượng hoặc hợp tác. Môi trường không tổng bằng không cần công cụ rộng hơn minimax.
+Agents may compete for resources, negotiate or cooperate. General-sum environments need beyond minimax.
 
-## Độ sâu tìm kiếm và chất lượng đánh giá
+## Search depth vs evaluation quality
 
-Tìm sâu hơn với hàm đánh giá yếu và tìm nông hơn với mô hình đánh giá mạnh tạo ra một đánh đổi thực tế.
+A deeper search with poor evaluator and a shallower search with strong evaluator can trade off.
 
-Câu hỏi phân bổ tính toán:
-
-```text
-dùng FLOPs để mở cây sâu hơn?
-        hay
-dùng FLOPs cho mô hình đánh giá mạnh hơn?
-```
-
-Đây là một dạng của **tính toán tại thời điểm suy luận (test-time compute)** trong hệ thống AI hiện đại.
-
-## Liên hệ với tính toán tại thời điểm suy luận
-
-Hệ thống suy luận có thể sinh và đánh giá nhiều ứng viên thay vì chỉ tạo một đáp án:
+Compute allocation question:
 
 ```text
-phân phối ban đầu của mô hình
-   ↓
-sinh nhiều nhánh ứng viên
-   ↓
-chấm điểm / xác minh
-   ↓
-mở rộng các đường hứa hẹn
+spend FLOPs on deeper tree?
+        vs
+spend FLOPs on stronger model evaluation?
 ```
 
-Tuy nhiên nếu bài toán không thật sự là trò chơi luân phiên tổng bằng không, không nên dùng thuật ngữ minimax một cách tùy tiện.
+Modern AI systems repeatedly face this inference-time compute trade-off.
 
-## Mô hình hóa đối thủ
+## Test-time compute connection
 
-Minimax giả định đối thủ tối ưu theo nghĩa trường hợp xấu nhất. Đối thủ thực có thể bị giới hạn hoặc có mẫu hành vi.
+Reasoning systems can generate/evaluate multiple candidates rather than one answer. Conceptually similar to game search:
 
-Nếu mô hình hóa chính sách đối thủ:
+```text
+model prior
+   ↓
+branch candidates
+   ↓
+score/verify
+   ↓
+expand promising paths
+```
+
+But unless environment is literal zero-sum alternating game, minimax terminology should not be applied casually.
+
+## Opponent modeling
+
+Minimax assumes opponent optimal in worst-case sense. Real opponents may be bounded or patterned.
+
+If model opponent policy:
 
 \[
 \pi_{opp}(a\mid s)
 \]
 
-tác nhân có thể khai thác điểm yếu dự đoán được.
+agent may exploit predictable weaknesses.
 
-Rủi ro là mô hình đối thủ sai hoặc đối thủ thay đổi chiến lược.
+Risk: model wrong, adversary changes strategy.
 
-Trong an ninh thường ưu tiên giả định bền vững theo trường hợp xấu; trong trò chơi với con người có thể hữu ích khi thích nghi theo đối thủ.
+Security often prefers robust worst-case assumptions; games against humans may benefit opponent adaptation.
 
-## Mô hình tư duy (mental model)
+## Mental Model
 
 ```text
-Tìm kiếm một tác nhân → môi trường không chủ động chống lại bạn
-Minimax             → giả định đối thủ chọn phản ứng xấu nhất cho bạn
-Alpha–Beta          → bỏ nhánh chắc chắn không ảnh hưởng quyết định minimax
-Hàm đánh giá         → ước lượng khi trạng thái kết thúc quá xa
-MCTS                → lấy mẫu các phần hứa hẹn của cây lớn
-Tìm kiếm hướng dẫn bằng mạng → chính sách/giá trị đã học định hướng tính toán
+Single-agent search → world does not strategically oppose you
+Minimax             → assume opponent chooses worst response
+Alpha–Beta          → skip branches provably irrelevant to minimax decision
+Evaluation          → estimate value when terminal too far
+MCTS                → sample promising parts of huge tree
+Neural-guided search→ learned policy/value directs computation
 ```
 
-## Các hiểu lầm thường gặp
+## Common Misconceptions
 
-### “Alpha–Beta thay đổi đáp án minimax”
+### “Alpha–Beta changes minimax answer”
 
-Nếu triển khai đúng, nó chỉ bỏ các nhánh không thể ảnh hưởng tới giá trị minimax; kết quả cuối không đổi.
+With correct implementation/order assumptions, it prunes branches that cannot affect minimax value; answer stays same.
 
-### “Chỉ độ sâu tìm kiếm quyết định sức mạnh engine”
+### “Search depth alone determines engine strength”
 
-Hàm đánh giá, thứ tự nước đi, cắt tỉa, bảng chuyển vị và mở rộng chọn lọc đều rất quan trọng.
+Evaluation, move ordering, pruning, transposition caching and selective extensions matter greatly.
 
-### “MCTS chỉ là mô phỏng ngẫu nhiên”
+### “MCTS is just random rollout”
 
-MCTS hiện đại dùng thống kê lựa chọn có cấu trúc và thường dùng chính sách/giá trị đã học; mô phỏng ngẫu nhiên ngây thơ chỉ là một thành phần có thể có.
+Modern MCTS uses structured selection statistics and often learned policy/value; naive random simulation is only one possible component.
 
-### “Mạng nơ-ron mạnh khiến tìm kiếm trở nên không cần thiết”
+### “A strong neural network makes search unnecessary”
 
-Trong một số bài toán, chính sách trực tiếp là đủ. Nhưng nhiều miền vẫn mạnh hơn đáng kể khi kết hợp tìm kiếm. Lựa chọn phụ thuộc độ trễ, phân nhánh và yêu cầu chất lượng.
+Sometimes direct policy is enough, but many domains gain strength from search. Choice depends latency, branching and quality requirements.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Tìm kiếm đối kháng nối [Tìm kiếm heuristic](./02_heuristic_search.md), lý thuyết trò chơi, học tăng cường và lập kế hoạch được hướng dẫn bằng mạng nơ-ron. Nó cho thấy một kiến trúc AI lặp lại nhiều lần: **tiên nghiệm/giá trị đã học + tìm kiếm tường minh + phản hồi**.
+Adversarial search links [Heuristic Search](./02_heuristic_search.md), Game Theory, Reinforcement Learning and modern neural-guided planning. It demonstrates a recurring AI architecture: **learned prior/value + explicit search + feedback**.
 
-Xem tiếp: [Thỏa mãn ràng buộc](./04_constraint_satisfaction.md) và [Lập kế hoạch](./05_planning.md).
+Xem tiếp: [Constraint Satisfaction](./04_constraint_satisfaction.md) và [Planning](./05_planning.md).

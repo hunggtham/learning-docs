@@ -1,121 +1,117 @@
-# Support Vector Machine: biên, hình học và kernel
+# Support Vector Machines: margin, geometry và kernel
 
-**Support Vector Machine (SVM / 서포트 벡터 머신)** xây dựng bộ phân loại dựa trên một nguyên lý hình học: không chỉ tìm một siêu phẳng (hyperplane) tách các lớp, mà tìm siêu phẳng có **biên an toàn (margin)** lớn. Margin là khoảng cách giữa ranh giới quyết định và những điểm huấn luyện gần ranh giới nhất.
+Support Vector Machine (SVM / 서포트 벡터 머신) xây classifier từ một geometric principle: không chỉ tìm hyperplane phân tách classes, mà tìm hyperplane có **margin** lớn. Margin là khoảng cách an toàn giữa decision boundary và những training points gần boundary nhất.
 
-SVM quan trọng không chỉ vì bản thân thuật toán. Nó giúp hiểu rõ regularization, tối ưu lồi, đối ngẫu (duality), kernel và hình học của không gian biểu diễn.
+SVM quan trọng không chỉ vì bản thân algorithm; nó giúp hiểu regularization, convex optimization, duality, kernels và representation geometry.
 
-## Từ siêu phẳng phân tách tới margin
+## Từ separating hyperplane tới margin
 
-Bộ phân loại nhị phân có dạng:
+Binary classifier:
 
 \[
 f(x)=\mathbf w^T\mathbf x+b
 \]
 
-Ranh giới quyết định:
+Decision boundary:
 
 \[
 \mathbf w^T\mathbf x+b=0
 \]
 
-Với nhãn `y∈{-1,+1}`, nếu dữ liệu phân tách tuyến tính được, ta muốn:
+Với labels `y∈{-1,+1}`, nếu data linearly separable ta muốn:
 
 \[
 y_i(\mathbf w^T\mathbf x_i+b)\ge1
 \]
 
-Margin hình học tỷ lệ nghịch với norm của trọng số:
+Geometric margin tỉ lệ nghịch với norm của weight:
 
 \[
 margin=\frac{2}{\|\mathbf w\|}
 \]
 
-Do đó tối đa hóa margin tương đương tối thiểu hóa:
+Maximize margin tương đương minimize:
 
 \[
 \frac12\|\mathbf w\|^2
 \]
 
-với các ràng buộc phân loại tương ứng.
+subject to classification constraints.
 
-## Vì sao margin có ý nghĩa?
+## Tại sao margin có ý nghĩa?
 
-Nếu có nhiều ranh giới đều phân loại hoàn hảo training set, ranh giới nằm quá sát các điểm dữ liệu dễ đổi prediction chỉ vì đầu vào bị nhiễu nhẹ.
+Nếu có nhiều boundaries đều classify training set hoàn hảo, boundary đi sát data points dễ thay đổi prediction khi input perturb nhẹ. Large margin chọn solution có buffer lớn hơn.
 
-Ranh giới có margin lớn tạo vùng đệm rộng hơn.
+Đây là một inductive bias về robustness/generalization.
 
-Đây là một **thiên lệch quy nạp (inductive bias)** hướng tới độ bền và khả năng khái quát hóa tốt hơn.
+## Support Vectors
 
-## Support Vector
+Chỉ những points nằm trên hoặc trong margin quyết định optimum mạnh nhất. Chúng gọi là **support vectors (서포트 벡터)**.
 
-Chỉ một số điểm nằm trên hoặc bên trong margin ảnh hưởng trực tiếp mạnh nhất tới nghiệm tối ưu. Chúng được gọi là **vector hỗ trợ (support vector / 서포트 벡터)**.
+Points rất xa boundary thường không ảnh hưởng solution nếu constraints đã satisfied.
 
-Các điểm nằm rất xa ranh giới thường không còn ảnh hưởng tới nghiệm sau khi ràng buộc của chúng đã được thỏa mãn.
-
-Tên “Support Vector Machine” xuất phát từ chính việc ranh giới được “đỡ” bởi những mẫu quan trọng này.
+Đây là reason SVM có tên như vậy: boundary được “đỡ” bởi critical examples.
 
 ## Soft Margin
 
-Dữ liệu thực tế thường không thể phân tách hoàn hảo. Ta thêm biến nới lỏng (slack variable) `ξ_i`:
+Real data thường không perfectly separable. Introduce slack variables `ξ_i`:
 
 \[
 y_i(\mathbf w^T\mathbf x_i+b)\ge1-\xi_i,\qquad \xi_i\ge0
 \]
 
-Hàm mục tiêu:
+Objective:
 
 \[
 \min_{w,b,\xi}\frac12\|w\|^2+C\sum_i\xi_i
 \]
 
-`C` điều khiển sự đánh đổi:
+`C` control trade-off:
 
-- `C` lớn: phạt mạnh các vi phạm margin hoặc lỗi phân loại, cố fit training data hơn;
-- `C` nhỏ: chấp nhận thêm vi phạm để giữ margin rộng hơn.
+- large `C`: phạt training violations mạnh, fit data hơn;
+- small `C`: chấp nhận violations để giữ margin rộng hơn.
 
-Đây chính là một dạng regularization trade-off.
+Đây là regularization trade-off dưới một form khác.
 
 ## Hinge Loss
 
-Soft-margin SVM có thể viết gần với bài toán empirical risk có regularization:
+Soft-margin SVM có thể viết gần với regularized empirical risk:
 
 \[
 J(w)=\frac12\|w\|^2+C\sum_i\max(0,1-y_if(x_i))
 \]
 
-**Hinge loss** bằng 0 khi mẫu không chỉ được phân loại đúng mà còn nằm ngoài margin yêu cầu.
+Hinge loss bằng zero khi example không chỉ đúng mà còn nằm ngoài margin.
 
-## Chuẩn hóa feature
+## Feature Scaling
 
-SVM phụ thuộc vào dot product và hình học của feature space, vì vậy scale của feature rất quan trọng.
+SVM phụ thuộc dot products/distances, nên feature scale rất quan trọng. Một feature magnitude lớn có thể dominate geometry.
 
-Một feature có độ lớn lớn hơn nhiều có thể chi phối toàn bộ geometry.
-
-Standardization vì thế thường là bước tiền xử lý mặc định khi dùng SVM.
+Standardization thường là preprocessing mặc định cho SVM.
 
 ## Kernel Trick
 
-Nếu các lớp không thể phân tách tuyến tính trong không gian gốc, ta có thể ánh xạ đầu vào qua một phép biến đổi phi tuyến:
+Nếu classes không linearly separable trong original space, ta có thể map input qua nonlinear feature map:
 
 \[
 \phi(x)
 \]
 
-rồi học một ranh giới tuyến tính trong không gian mới.
+rồi học linear separator trong transformed space.
 
-Dạng đối ngẫu của SVM phụ thuộc vào các tích vô hướng:
+Dual form của SVM phụ thuộc vào inner products:
 
 \[
 \phi(x_i)^T\phi(x_j)
 \]
 
-Nếu có một hàm kernel:
+Nếu có kernel function:
 
 \[
 K(x_i,x_j)=\phi(x_i)^T\phi(x_j)
 \]
 
-thì không cần tính trực tiếp toàn bộ tọa độ của `φ(x)`. Đây là **kernel trick**.
+thì không cần compute `φ(x)` explicitly. Đây là **kernel trick**.
 
 RBF kernel:
 
@@ -123,83 +119,75 @@ RBF kernel:
 K(x,z)=\exp(-\gamma\|x-z\|^2)
 \]
 
-cho phép tạo ranh giới phi tuyến rất linh hoạt.
+cho nonlinear boundaries rất linh hoạt.
 
-## Kernel không phải bất kỳ hàm similarity nào
+## Kernel không phải magic similarity bất kỳ
 
-Một kernel hợp lệ phải thỏa các tính chất để có thể được diễn giải như tích vô hướng trong một không gian feature, thường liên quan tới ma trận Gram bán xác định dương (positive semidefinite).
+Kernel hợp lệ cần thỏa properties để tương ứng inner product trong một feature space, thường liên quan positive semidefinite Gram matrix.
 
-Vì vậy không phải bất kỳ hàm similarity tự chế nào cũng có thể thay vào kernel mà vẫn giữ các bảo đảm lý thuyết và tính chất tối ưu hóa.
+Không phải mọi similarity function tùy ý đều có thể dùng như kernel mà vẫn giữ theory/optimization properties.
 
 ## C và gamma
 
 Với RBF SVM:
 
-- `C` điều khiển mức phạt lỗi và vi phạm margin;
-- `γ` điều khiển mức độ cục bộ của kernel.
+- `C` điều khiển penalty cho classification errors/margin violations;
+- `γ` điều khiển mức local của kernel.
 
-`γ` quá lớn làm ảnh hưởng của mỗi điểm rất hẹp, tạo ranh giới phức tạp và variance cao.
+`γ` quá lớn làm mỗi point influence vùng rất nhỏ → boundary phức tạp/high variance.
 
-`γ` quá nhỏ làm ảnh hưởng trải quá rộng, tạo mô hình quá mượt và bias cao.
+`γ` quá nhỏ làm influence quá rộng → model quá smooth/high bias.
 
-Các hyperparameter này nên được chọn bằng validation đúng cách, đặc biệt khi có nested search để tránh optimistic bias.
+Hyperparameter search cần nested/correct validation để tránh optimistic bias.
 
-## Khả năng mở rộng tính toán
+## Computational scaling
 
-Kernel SVM cần tính hoặc sử dụng quan hệ theo cặp giữa các mẫu training, nên thời gian và bộ nhớ có thể tăng rất mạnh theo `n`.
+Kernel SVM cần pairwise relationships giữa training points; memory/time có thể tăng rất mạnh với `n`.
 
-Vì vậy kernel SVM thường phù hợp hơn với dataset nhỏ hoặc vừa. Với dữ liệu rất lớn, linear SVM, approximate kernel hoặc họ mô hình khác thường thực tế hơn.
+Vì vậy kernel SVM phù hợp hơn small/medium datasets. Large-scale problems thường dùng linear SVM, approximate kernels hoặc models khác.
 
-## SVM và Logistic Regression
+## SVM vs Logistic Regression
 
-Nếu dùng raw linear feature, cả hai đều có ranh giới quyết định tuyến tính.
+Cả hai có linear decision boundary nếu dùng raw linear features.
 
-Logistic Regression tối ưu log-loss theo cách diễn giải xác suất và trực tiếp tạo xác suất mô hình.
+Logistic Regression optimize probabilistic log-loss và output probability model trực tiếp.
 
-SVM tối ưu margin và hinge loss; score thô của SVM không phải xác suất đã hiệu chuẩn.
+SVM optimize margin/hinge objective; raw decision score không phải calibrated probability.
 
-Nếu cần probability, có thể calibration SVM bằng Platt scaling hoặc isotonic regression trên held-out data.
+Nếu cần probability, có thể calibrate SVM bằng Platt scaling hoặc isotonic regression trên held-out data.
 
-## Kernel và Representation Learning
+## Kernels và Neural Representation Learning
 
-Kernel method mã hóa nonlinear similarity bằng một kernel được chọn trước.
+Kernel methods encode nonlinear similarity thông qua fixed/designed kernel. Deep Learning học representation `φ_θ(x)` từ data.
 
-Deep Learning học trực tiếp một phép biến đổi:
+Có thể nhìn một neural network như học feature space rồi dùng simple output head. Difference lớn là feature map trong deep learning được learned jointly, thay vì kernel fixed trước.
 
-\[
-\phi_\theta(x)
-\]
+## Mental Model
 
-Từ góc nhìn này, neural network có thể được xem là học feature space rồi dùng một output head tương đối đơn giản phía sau.
+> SVM hỏi: boundary nào không chỉ đúng trên training data mà còn giữ khoảng cách an toàn lớn nhất với critical examples?
 
-Khác biệt lớn là feature map trong Deep Learning được học cùng task, còn kernel thường được cố định hoặc xác định trước.
+Kernel mở rộng câu hỏi này sang một feature space nonlinear mà ta có thể không cần biểu diễn trực tiếp.
 
-## Mô hình tư duy
+## Common Misconceptions
 
-> SVM hỏi: trong số các ranh giới có thể phân loại dữ liệu, ranh giới nào giữ khoảng cách an toàn lớn nhất với những mẫu quan trọng nhất?
+### “Support vectors là mọi points gần boundary”
 
-Kernel mở rộng cùng ý tưởng sang một không gian feature phi tuyến mà ta không nhất thiết phải biểu diễn trực tiếp.
+Theo optimization, support vectors là points có nonzero dual coefficients; chúng là points active trong solution.
 
-## Các hiểu lầm thường gặp
+### “SVM luôn tốt cho high-dimensional data”
 
-### “Support vector là mọi điểm gần boundary”
+Linear SVM có thể rất mạnh với sparse high-dimensional data như text, nhưng kernel SVM có scaling issue theo sample size.
 
-Không chính xác. Theo bài toán tối ưu, support vector là các điểm có dual coefficient khác 0 và thực sự hoạt động trong nghiệm cuối.
+### “Kernel trick giống neural network hidden layer”
 
-### “SVM luôn tốt cho dữ liệu nhiều chiều”
+Cả hai tạo effective nonlinear representation, nhưng kernel map thường fixed/implicit còn neural representation learned.
 
-Linear SVM thường rất mạnh với dữ liệu sparse nhiều chiều như văn bản, nhưng kernel SVM có vấn đề scaling theo số lượng mẫu.
+### “SVM score là probability”
 
-### “Kernel trick giống một hidden layer neural”
+Không. Margin score cần calibration nếu muốn probabilistic interpretation.
 
-Hai cơ chế đều tạo khả năng phi tuyến, nhưng kernel map thường cố định hoặc ngầm định, còn neural representation được học từ dữ liệu.
+## Knowledge Connection
 
-### “SVM score là xác suất”
+SVM nối [Optimization](../01_mathematical_foundations/06_optimization.md), [Linear Algebra](../01_mathematical_foundations/01_linear_algebra_for_ai.md) và [Bias–Variance](./14_bias_variance_and_generalization.md).
 
-Không. Margin score cần được calibration nếu muốn diễn giải theo xác suất.
-
-## Liên kết kiến thức
-
-SVM nối [Tối ưu hóa](../01_mathematical_foundations/06_optimization.md), [Đại số tuyến tính](../01_mathematical_foundations/01_linear_algebra_for_ai.md) và [Bias–Variance](./14_bias_variance_and_generalization.md).
-
-Xem tiếp: [Clustering](./11_clustering.md), nơi không còn label để trực tiếp xác định ranh giới phân loại.
+Xem tiếp: [Clustering](./11_clustering.md), nơi không còn target labels để định nghĩa boundary.

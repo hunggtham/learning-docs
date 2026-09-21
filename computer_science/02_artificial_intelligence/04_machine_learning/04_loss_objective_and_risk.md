@@ -1,34 +1,34 @@
-# Hàm mất mát, hàm mục tiêu và rủi ro trong Machine Learning
+# Loss, Objective và Risk trong Machine Learning
 
-Machine Learning không thể “học” theo một ý niệm mơ hồ. Muốn mô hình thay đổi tham số theo hướng hữu ích, ta phải biến câu hỏi “mô hình đang làm tốt đến đâu?” thành một đại lượng có thể tính được. Từ đây xuất hiện ba khái niệm rất dễ bị trộn lẫn: **hàm mất mát (loss function / 손실 함수)**, **hàm mục tiêu (objective function / 목적 함수)** và **rủi ro kỳ vọng (risk / 위험)**.
+Machine Learning không học một cách mơ hồ. Muốn model thay đổi parameters theo hướng có ích, ta cần biến câu hỏi “model đang làm tốt đến đâu?” thành một đại lượng có thể tính được. Từ đây xuất hiện ba concept dễ bị trộn lẫn: **loss function (손실 함수 / hàm mất mát)**, **objective function (목적 함수 / hàm mục tiêu)** và **risk (위험 / rủi ro kỳ vọng)**.
 
-Một dự đoán có thể sai ở nhiều mức độ khác nhau. Hàm mất mát gán một con số cho mức sai lệch đó. Tuy nhiên mất mát trên từng mẫu chưa phải mục tiêu cuối cùng; mô hình phải hoạt động tốt trên phân phối dữ liệu thực tế, không chỉ trên training data. Vì vậy lý thuyết học thống kê đi từ loss ở từng mẫu tới rủi ro thực nghiệm và rủi ro kỳ vọng.
+Một prediction có thể đúng hoặc sai theo rất nhiều mức độ. Loss là cách ta gán một con số cho sai lệch đó. Nhưng loss trên từng sample chưa phải mục tiêu cuối cùng; model cần hoạt động tốt trên distribution thực tế, không chỉ trên training data. Vì vậy statistical learning theory đưa ta từ loss cục bộ tới empirical risk và expected risk.
 
-## Từ dự đoán tới sai số có thể đo được
+## Từ prediction tới measurable error
 
-Giả sử mô hình nhận đầu vào `x`, tạo dự đoán:
+Giả sử model nhận input `x`, tạo prediction:
 
 \[
 \hat{y}=f_\theta(x)
 \]
 
-và nhãn thật là `y`. Hàm mất mát:
+và ground truth là `y`. Loss function:
 
 \[
 L(y,\hat{y})
 \]
 
-đo mức độ dự đoán không phù hợp với target theo một tiêu chí cụ thể.
+đo mức độ prediction không phù hợp target theo một tiêu chí cụ thể.
 
-Điểm quan trọng là loss **không phải một “sai số tự nhiên” tồn tại sẵn trong thế giới**. Nó là một lựa chọn thiết kế. Chọn loss nào đồng nghĩa với quyết định loại lỗi nào sẽ bị phạt mạnh hơn.
+Điểm quan trọng là loss **không phải “sai số tự nhiên tồn tại sẵn trong thế giới”**. Nó là một thiết kế. Chọn loss nào tức là ta quyết định kiểu sai nào đáng bị phạt mạnh hơn.
 
-Ví dụ hồi quy có thể dùng Mean Squared Error:
+Ví dụ regression có thể dùng Mean Squared Error:
 
 \[
 L=(y-\hat y)^2
 \]
 
-Sai số lớn bị bình phương nên bị phạt rất mạnh. Nếu dữ liệu có outlier, MSE có thể khiến optimizer dành nhiều sức để giảm lỗi ở một vài điểm cực đoan.
+Sai số lớn bị bình phương nên bị phạt rất mạnh. Nếu dữ liệu có outlier, MSE có thể khiến optimizer dành nhiều effort cho một số điểm cực đoan.
 
 Mean Absolute Error:
 
@@ -36,85 +36,79 @@ Mean Absolute Error:
 L=|y-\hat y|
 \]
 
-ít nhạy với outlier hơn. Chỉ thay loss function cũng có thể làm hành vi học được thay đổi đáng kể.
+ít nhạy với outlier hơn. Chỉ khác loss function, behavior học được đã có thể thay đổi rõ rệt.
 
-## Loss và mô hình xác suất
+## Loss và probabilistic modeling
 
-Nhiều hàm mất mát không phải công thức được chọn tùy ý mà xuất phát từ giả định thống kê.
+Nhiều loss không phải công thức arbitrary mà xuất phát từ statistical assumptions.
 
-Nếu giả định nhiễu hồi quy là Gaussian:
+Nếu giả định regression noise là Gaussian:
 
 \[
 y=f_\theta(x)+\epsilon,\qquad \epsilon\sim\mathcal N(0,\sigma^2)
 \]
 
-thì tối đa hóa likelihood tương đương với tối thiểu hóa squared error, bỏ qua các hằng số không ảnh hưởng tới nghiệm tối ưu.
+thì maximizing likelihood tương đương minimizing squared error, bỏ qua constant.
 
-Điều này dẫn tới một trực giác quan trọng:
+Điều này cho insight quan trọng:
 
-> Chọn loss thường cũng đồng nghĩa với chọn một giả định về quá trình sinh dữ liệu (data-generating process).
+> Chọn loss thường tương đương chọn một assumption về data-generating process.
 
-Trong classification, cross-entropy xuất hiện tự nhiên từ negative log-likelihood.
+Với classification, cross-entropy loss xuất hiện tự nhiên từ negative log-likelihood.
 
-Nếu lớp đúng là `y` và mô hình tạo phân phối:
-
-\[
-p_\theta(y\mid x)
-\]
-
-thì loss:
+Nếu target class là `y` và model output distribution `p_\theta(y\mid x)`, loss:
 
 \[
 L=-\log p_\theta(y\mid x)
 \]
 
-phạt rất mạnh khi mô hình gán xác suất thấp cho đáp án đúng.
+phạt model rất mạnh khi nó gán xác suất thấp cho đáp án đúng.
 
-Đây cũng là nền tảng trực tiếp của language-model training: dự đoán token tiếp theo thường tối ưu negative log-likelihood ở mức token.
+Đây là nền trực tiếp của language-model training: next-token prediction thường minimize token-level negative log-likelihood.
 
-## Từ loss từng mẫu tới rủi ro thực nghiệm
+## Từ sample loss tới empirical risk
 
-Với dataset:
+Training dataset:
 
 \[
 D=\{(x_i,y_i)\}_{i=1}^{n}
 \]
 
-rủi ro thực nghiệm (empirical risk) là:
+Empirical risk:
 
 \[
 \hat R(\theta)=\frac{1}{n}\sum_{i=1}^{n}L(y_i,f_\theta(x_i))
 \]
 
-tức loss trung bình trên mẫu quan sát được.
+là average loss trên observed sample.
 
-**Empirical Risk Minimization (ERM / 경험적 위험 최소화)** chọn tham số:
+**Empirical Risk Minimization (ERM / 경험적 위험 최소화)** chọn parameters:
 
 \[
 \hat\theta=\arg\min_\theta \hat R(\theta)
 \]
 
-Đây là abstraction đứng sau rất nhiều thuật toán supervised learning.
+Đây là abstraction đứng sau rất nhiều supervised-learning algorithms.
 
-Tuy nhiên mục tiêu thật không phải làm dataset lịch sử “hài lòng”. Ta muốn mô hình hoạt động tốt trên dữ liệu tương lai lấy từ phân phối `P(X,Y)`:
+Nhưng mục tiêu thực không phải làm dataset lịch sử hài lòng. Ta muốn tốt trên future examples từ distribution `P(X,Y)`:
 
 \[
 R(\theta)=\mathbb E_{(x,y)\sim P}[L(y,f_\theta(x))]
 \]
 
-Đây là **rủi ro kỳ vọng (expected risk / population risk)**.
+Đây là **expected risk / population risk**. Vì không biết distribution thật, ta dùng empirical risk như estimator.
 
-Vì không biết toàn bộ phân phối thật, ta dùng empirical risk như một ước lượng. Khoảng cách giữa hai loại rủi ro chính là vấn đề trung tâm của generalization.
+Khoảng cách giữa hai thứ này chính là trung tâm của generalization.
 
-## Hàm mục tiêu rộng hơn loss
+## Objective function rộng hơn loss
 
-Trong thực tế, objective thường chứa thêm regularization:
+Trong thực tế objective thường có thêm regularization:
 
 \[
 J(\theta)=\hat R(\theta)+\lambda\Omega(\theta)
 \]
 
-`Ω(θ)` có thể phạt độ phức tạp hoặc độ lớn tham số.
+`Ω(θ)` có thể penalize model complexity hoặc parameter magnitude.
 
 Ví dụ L2 regularization:
 
@@ -122,7 +116,7 @@ Ví dụ L2 regularization:
 \Omega(\theta)=\|\theta\|_2^2
 \]
 
-khuyến khích trọng số nhỏ hơn.
+khuyến khích weight nhỏ hơn.
 
 L1 regularization:
 
@@ -130,49 +124,49 @@ L1 regularization:
 \Omega(\theta)=\|\theta\|_1
 \]
 
-thường tạo nghiệm thưa hơn trong nhiều bài toán.
+có xu hướng tạo sparse parameters.
 
-Objective cũng có thể gồm nhiều thành phần:
+Objective còn có thể chứa nhiều term:
 
 \[
 J=J_{task}+\alpha J_{aux}+\beta J_{constraint}
 \]
 
-Trong AI hiện đại, multi-task learning, representation learning và alignment thường dùng objective dạng kết hợp như vậy.
+Trong modern AI, multi-task learning, representation learning và alignment thường dùng objective composed như vậy.
 
-## Surrogate loss: tối ưu thứ dễ tính để phục vụ mục tiêu khó hơn
+## Surrogate loss: optimize thứ dễ tính để đạt mục tiêu khó hơn
 
-Nhiều metric nghiệp vụ hoặc task metric không khả vi.
+Nhiều business metric hoặc task metric không differentiable.
 
-Accuracy phụ thuộc vào `argmax`, nên không tạo gradient hữu ích trực tiếp. Vì vậy có thể train bằng cross-entropy nhưng đánh giá bằng accuracy, F1 hoặc AUC.
+Accuracy chứa discrete `argmax`, nên gradient không hữu ích trực tiếp. Ta thường train bằng cross-entropy rồi evaluate bằng accuracy/F1/AUC.
 
-Cross-entropy khi đó đóng vai trò **hàm mất mát thay thế (surrogate loss)**: một mục tiêu có tính chất toán học thuận lợi để tối ưu, với kỳ vọng rằng cải thiện nó sẽ kéo theo metric thật tốt hơn.
+Cross-entropy lúc này là **surrogate loss**: objective có mathematical properties thuận lợi để optimization, hy vọng cải thiện metric ta thực sự quan tâm.
 
-Phải phân biệt ba tầng:
+Từ đây có một distinction quan trọng:
 
 ```text
-Training objective ≠ Evaluation metric ≠ Business objective
+Training objective != Evaluation metric != Business objective
 ```
 
-Ví dụ một fraud model có thể tối ưu log loss, được đánh giá bằng precision/recall, nhưng mục tiêu doanh nghiệp thực tế lại là giảm số tiền mất do gian lận, giảm chi phí điều tra và hạn chế gây phiền cho khách hàng.
+Ví dụ fraud model có thể optimize log loss, được evaluate bằng precision/recall, nhưng business thật quan tâm money saved, investigation cost và customer friction.
 
-Rất nhiều thất bại production đến từ việc ba tầng mục tiêu này không khớp nhau, chứ không phải optimizer yếu.
+Production ML thất bại nhiều khi không phải vì optimizer yếu, mà vì ba tầng objective này không aligned.
 
-## Mất cân bằng lớp và chi phí bất đối xứng
+## Class imbalance và asymmetric cost
 
-Nếu 99,9% giao dịch là bình thường, mô hình luôn dự đoán “normal” vẫn có accuracy cực cao nhưng hoàn toàn vô dụng.
+Nếu 99.9% transactions bình thường, model đoán luôn “normal” có accuracy rất cao nhưng vô dụng.
 
-Loss có thể cần phản ánh hậu quả bất đối xứng. Weighted cross-entropy:
+Loss cần phản ánh asymmetric consequences. Weighted cross-entropy:
 
 \[
 L=-w_y\log p(y\mid x)
 \]
 
-cho phép lớp hiếm có ảnh hưởng lớn hơn trong training.
+cho phép rare class có influence lớn hơn.
 
-Các hướng khác gồm resampling, focal loss hoặc lựa chọn threshold theo cost.
+Một hướng khác là resampling, focal loss hoặc decision threshold dựa trên cost.
 
-Điểm cần phân biệt: **loss weighting và thresholding giải quyết hai tầng khác nhau**. Weight thay đổi quá trình học; threshold thay đổi quyết định sau khi mô hình đã sinh score.
+Quan trọng: **loss weighting và thresholding giải quyết các tầng khác nhau**. Weight thay learning dynamics; threshold thay decision rule sau khi model tạo score.
 
 ## Hinge loss và margin
 
@@ -184,13 +178,13 @@ L=\max(0,1-yf(x))
 
 với `y∈{-1,+1}`.
 
-Nó không chỉ yêu cầu phân loại đúng dấu mà còn muốn điểm dữ liệu nằm ngoài một margin đủ lớn. Điều này đưa một nguyên lý hình học trực tiếp vào objective.
+Không chỉ yêu cầu prediction đúng sign, hinge loss còn muốn point nằm ngoài margin. Điều này đưa geometric principle trực tiếp vào objective.
 
 Xem thêm: [Support Vector Machines](./10_support_vector_machines.md).
 
-## Robust loss
+## Robust losses
 
-Nếu MSE quá nhạy với outlier nhưng MAE lại không mượt tại 0, Huber loss kết hợp hai hành vi:
+Nếu MSE quá nhạy outlier nhưng MAE khó optimize mượt tại zero, Huber loss kết hợp hai behavior:
 
 \[
 L_\delta(a)=
@@ -200,68 +194,64 @@ L_\delta(a)=
 \end{cases}
 \]
 
-Sai số nhỏ dùng dạng bình phương; sai số lớn chuyển sang tăng tuyến tính.
+Error nhỏ dùng quadratic behavior; error lớn chuyển sang linear.
 
-Đây là ví dụ điển hình của sự đánh đổi giữa độ bền thống kê và tính thuận lợi cho tối ưu hóa.
+Đây là ví dụ điển hình của engineering trade-off giữa statistical robustness và optimization properties.
 
-## Tối ưu đa mục tiêu trong hệ AI
+## Multi-objective optimization trong AI system
 
-Một recommender không chỉ cần engagement. Nếu tối ưu click duy nhất, hệ thống có thể học cách đẩy nội dung giật gân.
+Một recommender không chỉ cần engagement. Nếu chỉ optimize click, system có thể học clickbait. Objective thực tế có thể phải balance retention, diversity, fairness, latency và safety.
 
-Objective thực tế có thể phải cân bằng retention, diversity, fairness, latency và safety.
+Một LLM system cũng tương tự. Quality, factuality, helpfulness, latency, token cost và safety có thể xung đột.
 
-Một hệ LLM cũng tương tự: chất lượng, factuality, helpfulness, latency, token cost và safety có thể xung đột.
-
-Không phải mọi trade-off đều nên ép vào một scalar loss. Có trường hợp nên dùng hard constraint, policy layer hoặc hệ nhiều tầng.
+Không phải mọi trade-off đều nên nhét vào một scalar loss. Có trường hợp cần hard constraint, policy layer hoặc multi-stage system.
 
 ## Objective misspecification
 
-Optimizer thực hiện đúng điều objective thưởng, không phải điều con người “thực sự muốn nhưng chưa mã hóa”.
+Optimizer thực hiện đúng điều objective yêu cầu, không phải điều con người “thực sự muốn nhưng không encode”.
 
-Nếu proxy có lỗ hổng, mô hình có thể khai thác lỗ hổng đó.
+Nếu reward proxy có loophole, model có thể exploit proxy. Đây là một dạng **Goodhart's Law**: khi measure trở thành target, measure có thể mất khả năng phản ánh goal ban đầu.
 
-Đây là một dạng trực giác của **Goodhart's Law**: khi một thước đo trở thành mục tiêu tối ưu, nó có thể mất khả năng đại diện cho mục tiêu ban đầu.
+Connection này nối supervised ML với Reinforcement Learning và AI Safety.
 
-Điểm này nối supervised learning với Reinforcement Learning và AI Safety.
+## Mental Model
 
-## Mô hình tư duy
-
-Có thể nhìn quá trình học theo chuỗi:
+Hãy nhìn learning theo chuỗi:
 
 ```text
-Mục tiêu ngoài đời thực
-   ↓ xấp xỉ
+Real goal
+   ↓ approximation
 Evaluation metric
-   ↓ chọn proxy dễ tối ưu
+   ↓ optimization-friendly proxy
 Training objective
-   ↓ tín hiệu ở từng sample
+   ↓ sample-level signal
 Loss
-   ↓ gradient / thuật toán
+   ↓ gradients / algorithm
 Parameter update
 ```
 
-Mỗi mũi tên là một vị trí có thể xuất hiện mismatch.
+Mỗi mũi tên là nơi mismatch có thể xuất hiện.
 
-## Các hiểu lầm thường gặp
+## Common Misconceptions
 
-### “Loss thấp nghĩa là mô hình tốt”
+### “Loss thấp nghĩa model tốt”
 
-Chỉ đúng khi nói rõ loss nào và trên distribution nào. Training loss thấp vẫn có thể đi cùng overfitting rất nặng.
+Chỉ đúng nếu nói rõ loss nào và trên distribution nào. Training loss thấp có thể đi cùng severe overfitting.
 
-### “Cross-entropy và accuracy chỉ là hai cách đo cùng một thứ”
+### “Cross-entropy và accuracy là hai cách đo giống nhau”
 
-Không. Accuracy chỉ quan tâm class cuối cùng; cross-entropy còn nhạy với xác suất mô hình gán cho đáp án đúng. Hai mô hình có cùng accuracy nhưng mức confidence rất khác có thể có cross-entropy khác rất lớn.
+Accuracy chỉ quan tâm predicted class cuối cùng; cross-entropy còn nhạy với probability assigned. Một model đúng nhưng cực kỳ uncertain và một model đúng với probability 0.999 có cùng accuracy nhưng loss khác mạnh.
 
 ### “Regularization chỉ là mẹo chống overfitting”
 
-Không. Regularization biểu diễn một preference hoặc inductive bias về loại nghiệm được ưu tiên và làm thay đổi cả optimization landscape.
+Regularization encode preference/inductive bias về solution. Nó thay optimization landscape và hypothesis được ưu tiên.
 
-### “Objective đúng thì production behavior chắc chắn đúng”
+### “Nếu objective đúng thì production behavior chắc chắn đúng”
 
-Không. Distribution shift, data pipeline lỗi, calibration, threshold, tương tác hệ thống và feedback loop đều có thể làm hành vi khác giả định trong training.
+Không. Distribution shift, data pipeline lỗi, calibration, threshold, system interaction và user feedback đều có thể làm behavior khác training assumptions.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Loss nối Xác suất, Lý thuyết thông tin và Tối ưu hóa. Risk nối Thống kê với generalization. Objective nối quá trình training toán học với thiết kế sản phẩm và AI Safety.
+Loss nối Probability, Information Theory và Optimization. Risk nối Statistics với generalization. Objective nối mathematical training với product design và AI Safety.
 
 Xem tiếp: [Linear Regression](./05_linear_regression.md), [Logistic Regression](./06_logistic_regression.md), [Bias, Variance and Generalization](./14_bias_variance_and_generalization.md) và [Model Evaluation](./15_model_evaluation.md).

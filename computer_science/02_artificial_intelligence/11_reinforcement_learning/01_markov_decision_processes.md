@@ -1,8 +1,8 @@
-# Markov Decision Process
+# Markov Decision Processes
 
-**Quá trình quyết định Markov (Markov Decision Process — MDP / 마르코프 결정 과정)** là framework toán học cho bài toán ra quyết định tuần tự, trong đó state hiện tại được giả định chứa đủ thông tin liên quan để dự đoán dynamics tương lai khi biết action được chọn.
+**Markov Decision Process (MDP / 마르코프 결정 과정)** là mathematical framework cho sequential decision making khi state hiện tại chứa đủ information relevant để predict future dynamics dưới action.
 
-Một MDP thường được mô tả bằng tuple:
+Một MDP thường được mô tả bởi tuple:
 
 \[
 (\mathcal S,\mathcal A,P,R,\gamma)
@@ -10,169 +10,158 @@ Một MDP thường được mô tả bằng tuple:
 
 trong đó:
 
-- `S`: không gian trạng thái (state space);
-- `A`: không gian hành động (action space);
-- `P(s'|s,a)`: phân phối chuyển trạng thái (transition distribution);
+- `S`: state space;
+- `A`: action space;
+- `P(s'|s,a)`: transition distribution;
 - `R(s,a,s')`: reward;
 - `γ`: discount factor.
 
 ## Markov Property
 
-Giả định Markov viết:
+Markov assumption:
 
 \[
 P(S_{t+1}\mid S_t,A_t,S_{t-1},...) = P(S_{t+1}\mid S_t,A_t)
 \]
 
-Nghĩa là nếu state representation đủ đầy đủ, quá khứ không cung cấp thêm thông tin cần thiết để dự đoán next transition ngoài thông tin đã có trong state hiện tại.
+Nghĩa là nếu state representation đầy đủ, quá khứ không cung cấp thêm information cần cho next transition.
 
-Đây là giả định về **cách biểu diễn state**, không phải tuyên bố rằng thế giới “không có history”. Nếu state bỏ mất thông tin quan trọng, Markov property sẽ không còn đúng.
+Điều này là assumption về **representation**, không phải world “không có history”. Nếu state thiếu thông tin, Markov property fail.
 
-Ví dụ trạng thái bàn cờ hiện tại có thể đủ để xác định legal move. Ngược lại, trong một hội thoại dài, chỉ giữ message mới nhất thường không đủ để đại diện cho toàn bộ state liên quan.
+Ví dụ game board hiện tại có thể đủ để quyết định legal moves. Nhưng user conversation chỉ giữ latest message thường không đủ state.
 
 ## Transition Model
 
-`P(s'|s,a)` mô tả environment có thể chuyển sang state nào sau action.
+`P(s'|s,a)` nói environment có thể chuyển sang đâu sau action.
 
-Trường hợp xác định:
+Deterministic case:
 
 \[
 s'=T(s,a)
 \]
 
-Trường hợp ngẫu nhiên cần một distribution trên các next state có thể xảy ra.
+Stochastic case cần distribution.
 
-Ví dụ hệ thống autonomous driving khi phanh có outcome phụ thuộc road condition, sensor uncertainty và hành vi của các actor khác.
+Ví dụ autonomous vehicle braking có outcome phụ thuộc road condition, sensor uncertainty và other actors.
 
 ## Reward Function
 
-Reward có thể phụ thuộc state, action và next state. Objective của agent không phải tối đa hóa immediate reward từng bước, mà tối đa hóa expected return dài hạn.
+Reward có thể depend on state/action/next state. Objective không phải maximize immediate reward mà expected return.
 
-Chỉ cần thay cách định nghĩa reward, optimal policy có thể thay đổi hoàn toàn dù transition dynamics của environment giữ nguyên.
+Một choice reward khác có thể tạo policy hoàn toàn khác dù dynamics giống nhau.
 
 ## Policy
 
-Policy được viết:
+Policy:
 
 \[
 \pi(a|s)
 \]
 
-Khi policy cố định, nó cùng transition model tạo ra một Markov chain trên state. Khi đó bài toán từ “chọn action nào?” chuyển thành “policy hiện tại có value bao nhiêu?”.
+induces a Markov chain over states. Khi policy fixed, decision problem biến thành policy evaluation problem.
 
-## Xác suất của Trajectory
+## Trajectory Probability
 
-Một trajectory có thể viết:
+Một trajectory:
 
 \[
 \tau=(s_0,a_0,r_1,s_1,a_1,...)
 \]
 
-Xác suất xuất hiện trajectory đó phụ thuộc initial state, policy và transition dynamics:
+có probability phụ thuộc initial state, policy và transition dynamics:
 
 \[
 P(\tau)=P(s_0)\prod_t \pi(a_t|s_t)P(s_{t+1}|s_t,a_t)
 \]
 
-Biểu thức này cho thấy policy không chỉ quyết định action; nó còn quyết định distribution của dữ liệu mà agent sẽ quan sát trong tương lai.
+Expression này giải thích tại sao policy ảnh hưởng distribution data agent thu được.
 
 ## Finite Horizon và Infinite Horizon
 
-**Finite-horizon problem** có số bước giới hạn `T`. Optimal policy khi đó có thể phụ thuộc thời gian còn lại.
+Finite-horizon problem có số bước giới hạn `T`. Optimal policy có thể depend on time remaining.
 
-Trong **infinite-horizon discounted problem**, dưới các điều kiện thích hợp ta thường tìm stationary policy, tức policy không cần phụ thuộc trực tiếp vào chỉ số thời gian.
+Infinite-horizon discounted problem thường tìm stationary policy dưới assumptions thích hợp.
 
 ## Terminal State
 
-**Terminal state** hoặc **absorbing state** kết thúc episode. Sau terminal state, không còn action hoặc future reward có ý nghĩa đối với episode đó.
-
-Cách định nghĩa terminal condition ảnh hưởng trực tiếp return và learning target.
+Terminal/absorbing state có thể kết thúc episode. Sau terminal không có meaningful future actions/rewards.
 
 ## MDP và Planning
 
-Nếu `P` và `R` đã biết, ta có thể giải MDP bằng Dynamic Programming, ví dụ value iteration hoặc policy iteration.
+Nếu `P` và `R` biết rõ, ta có thể solve MDP bằng Dynamic Programming như value iteration/policy iteration.
 
-Nếu transition hoặc reward model chưa biết, Reinforcement Learning học từ sample interaction.
+Nếu unknown, RL học từ samples.
 
-Có thể nhìn ranh giới như sau:
+Do đó:
 
 ```text
-Known model + tối ưu policy → planning / control
+Known model + optimize policy → planning/control
 Unknown model + experience → reinforcement learning
 ```
 
-Ranh giới này không tuyệt đối vì model-based RL có thể học model rồi dùng planning trên model đã học.
+Boundary này mềm vì model-based RL có thể học model rồi plan.
 
 ## POMDP
 
-Khi agent không quan sát được full state, ta có **Partially Observable Markov Decision Process (POMDP)**. Agent nhận observation `o_t` thay vì trực tiếp thấy `s_t`.
+Khi agent không observe full state, ta có **Partially Observable MDP (POMDP)**. Agent nhận observation `o_t`, không trực tiếp state `s_t`.
 
-Một cách xử lý là duy trì **belief state**:
+Có thể maintain belief:
 
 \[
 b_t(s)=P(S_t=s\mid history)
 \]
 
-Belief state biểu diễn distribution tin tưởng của agent về hidden state thật dựa trên observation history.
+Belief state biến uncertainty về hidden state thành state representation mới.
 
-## Thiết kế State
+## State Design
 
-State quá nhỏ làm mất thông tin và khiến bài toán không còn gần Markov.
+State quá nhỏ → non-Markov, agent khó learn.
 
-State quá lớn làm sample complexity và computation tăng.
+State quá lớn → sample complexity và computation tăng.
 
-Representation learning trong RL cố tìm representation giữ lại information quan trọng cho decision nhưng loại bớt chi tiết không cần thiết.
+Representation learning trong RL tìm state features giữ decision-relevant information.
 
-## Độ hạt của Action
+## Action Granularity
 
-Action space cũng là một design choice.
+Action space cũng là design choice. Low-level continuous actions cho control chính xác nhưng horizon dài. High-level actions reduce horizon nhưng cần abstraction/model.
 
-Low-level continuous action cho khả năng control chi tiết nhưng làm horizon dài và planning khó hơn. High-level action rút ngắn horizon nhưng cần abstraction đủ tốt.
+Agent tools trong LLM systems cũng có analogy: `click(x,y)` low-level vs `create_ticket(...)` high-level.
 
-Có thể liên hệ với LLM agent:
+## Discount Factor Interpretation
 
-```text
-click(x,y)          → action rất low-level
-create_ticket(...)  → action high-level có semantics rõ
-```
+`γ` có thể hiểu như:
 
-## Diễn giải Discount Factor
-
-`γ` có thể được hiểu theo nhiều góc:
-
-- mức ưu tiên reward gần hơn reward xa;
+- preference for sooner reward;
 - effective horizon;
-- công cụ toán học giúp tổng return hội tụ;
-- xác suất tiếp tục process trong một số formulation.
+- mathematical device for convergence;
+- probability-like continuation interpretation trong một số settings.
 
-Khi `γ` gần 1, effective horizon tăng mạnh; trực giác thường dùng là khoảng `1/(1-γ)`, nhưng đây không phải một identity chính xác cho mọi bài toán.
+Effective horizon roughly grows as `1/(1-γ)` khi γ gần 1, nhưng đây chỉ intuition.
 
 ## Reward Scale
 
-Scale của reward ảnh hưởng numerical optimization, learning rate và các hyperparameter dù trong một số formulation, nhân toàn bộ reward với hằng số dương không đổi optimal policy lý tưởng.
+Scale reward ảnh hưởng numerical optimization và hyperparameters dù optimal policy lý tưởng có thể invariant với positive scaling trong một số settings.
 
-Vì vậy khi implementation, reward scale vẫn là vấn đề kỹ thuật cần quan tâm.
+## Mental Model
 
-## Mô hình tư duy
+> **MDP là state-machine có uncertainty + rewards + choices. RL học cách điều khiển state-machine đó khi dynamics hoặc optimal policy chưa biết.**
 
-> **MDP là một state machine có uncertainty, reward và lựa chọn action. RL học cách điều khiển state machine đó khi dynamics hoặc optimal policy chưa biết.**
+## Common Misconceptions
 
-## Những nhầm lẫn thường gặp
+### “Markov nghĩa là random”
 
-### “Markov nghĩa là ngẫu nhiên”
+Không. Markov nói future conditionally independent of past given present state; transition có thể deterministic.
 
-Không. Markov chỉ nói future độc lập có điều kiện với quá khứ khi đã biết present state. Transition hoàn toàn có thể deterministic.
+### “State = observation”
 
-### “State luôn bằng observation”
+Chỉ đúng trong fully observable setting.
 
-Chỉ đúng trong fully observable setting. Với POMDP, observation chỉ là tín hiệu gián tiếp về hidden state.
+### “MDP chỉ là lý thuyết cho game”
 
-### “MDP chỉ dành cho game”
+Nó là foundation cho robotics, operations, recommendation, resource allocation và sequential control.
 
-Không. Nó là nền tảng cho robotics, operations research, recommendation, resource allocation và sequential control.
+## Knowledge Connection
 
-## Liên kết kiến thức
+MDP nối Probability, Dynamic Programming, Control Theory và agent state representation.
 
-MDP nối Probability, Dynamic Programming, Control Theory và cách thiết kế state cho agent.
-
-Xem tiếp: [Value Function và Bellman Equation](./02_value_functions_and_bellman_equations.md).
+Xem tiếp: [Value Functions and Bellman Equations](./02_value_functions_and_bellman_equations.md).

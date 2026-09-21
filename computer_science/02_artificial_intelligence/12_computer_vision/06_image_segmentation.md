@@ -1,13 +1,13 @@
 # Image Segmentation
 
-**Phân đoạn ảnh (Image Segmentation / 이미지 분할)** gán label ở mức pixel hoặc region. Nó không chỉ trả lời “có object gì?” và “object ở đâu?”, mà còn xác định **pixel nào thuộc object hoặc vùng nào**.
+**Image Segmentation (이미지 분할)** gán label ở mức pixel hoặc region. Nó trả lời không chỉ “có object gì?” và “ở đâu?”, mà còn **pixel nào thuộc object nào**.
 
 Có ba setting chính:
 
 ```text
-Semantic Segmentation → mỗi pixel có class, không tách các instance cùng class
-Instance Segmentation → tách từng object instance và mask riêng
-Panoptic Segmentation → kết hợp semantic “stuff” và instance “things”
+Semantic Segmentation → mỗi pixel có class, không tách instance cùng class
+Instance Segmentation → tách từng object instance + mask
+Panoptic Segmentation → kết hợp semantic “stuff” + instance “things”
 ```
 
 ## Semantic Segmentation
@@ -18,56 +18,42 @@ Input:
 X\in\mathbb{R}^{H\times W\times C}
 \]
 
-Output logits cho mỗi pixel:
+Output logits per pixel:
 
 \[
 Z\in\mathbb{R}^{H\times W\times K}
 \]
 
-Mỗi pixel được classify vào một trong `K` class.
+Mỗi pixel được classify vào one of `K` classes.
 
 ## Encoder–Decoder Architecture
 
-Classification backbone thường downsample để học semantic feature mạnh hơn, nhưng quá trình đó làm mất spatial detail.
+Classification backbone downsample để học semantics nhưng mất spatial detail. Segmentation cần recover resolution.
 
-Segmentation cần khôi phục resolution để dự đoán ở mức pixel.
-
-Pattern điển hình:
+Typical pattern:
 
 ```text
 image
-→ encoder: resolution thấp hơn, semantics mạnh hơn
-→ decoder: upsample + kết hợp detail
+→ encoder: lower resolution, richer semantics
+→ decoder: upsample + fuse details
 → pixel-wise prediction
 ```
 
-U-Net là architecture kinh điển với skip connection nối high-resolution feature từ encoder sang decoder.
+U-Net là classic architecture với skip connections nối encoder features high-resolution sang decoder.
 
-## Vì sao Skip Connection quan trọng?
+## Why Skip Connections Matter
 
-Deep feature có thể biết “đây là car” nhưng boundary thường coarse vì spatial resolution đã giảm.
-
-Feature ở layer sớm giữ edge và location detail tốt hơn.
-
-Skip connection kết hợp:
-
-```text
-semantics mạnh từ layer sâu
-+
-localization detail từ layer sớm
-```
+Deep features biết “đây là car” nhưng spatial boundary coarse. Early features có edges/location chi tiết. Skip connections combine semantics + localization.
 
 ## Upsampling
 
-Các lựa chọn phổ biến:
+Options:
 
-- nearest hoặc bilinear interpolation;
+- nearest/bilinear interpolation;
 - transposed convolution;
 - learned upsampling.
 
-Transposed convolution có thể tạo checkerboard artifact nếu interaction giữa kernel và stride không phù hợp.
-
-Upsampling không tự tái tạo information đã bị mất hoàn toàn; nó chỉ xây lại spatial output từ feature còn giữ được.
+Transposed convolution có thể tạo checkerboard artifacts nếu kernel/stride interaction không tốt.
 
 ## Segmentation Loss
 
@@ -77,7 +63,7 @@ Pixel-wise cross-entropy:
 L=-\sum_{i} \log p_{i,y_i}
 \]
 
-Nhưng class imbalance thường rất mạnh vì background có thể chiếm phần lớn pixel.
+Nhưng class imbalance rất severe: background có thể dominate.
 
 Dice coefficient:
 
@@ -85,7 +71,7 @@ Dice coefficient:
 Dice=\frac{2|P\cap G|}{|P|+|G|}
 \]
 
-Dice loss tập trung vào overlap nên đặc biệt hữu ích trong medical hoặc small-object segmentation.
+Dice loss emphasizes overlap và useful medical/small-object segmentation.
 
 IoU/Jaccard:
 
@@ -93,114 +79,94 @@ IoU/Jaccard:
 IoU=\frac{|P\cap G|}{|P\cup G|}
 \]
 
-## Chất lượng Boundary
+## Boundary Quality
 
-Hai mask có IoU gần nhau nhưng boundary behavior có thể rất khác.
-
-Nếu contour precision quan trọng, ví dụ surgical planning hoặc industrial inspection, nên dùng thêm boundary-specific loss hoặc metric.
+Two masks có similar IoU nhưng boundary behavior khác. Boundary-specific metrics/losses useful when contour precision matters, e.g. medical surgery or manufacturing.
 
 ## Instance Segmentation
 
-Mask R-CNN mở rộng object detection:
+Mask R-CNN extends detection:
 
 ```text
 region proposal
 → class + box
-→ mask head cho từng instance
+→ per-instance mask head
 ```
 
-Bài toán khó hơn semantic segmentation vì phải tách hai object cùng class nhưng nằm cạnh hoặc overlap nhau.
+Need assign pixels to distinct objects even if same class and overlapping.
 
 ## Panoptic Segmentation
 
-“Things” là object đếm được như person hoặc car.
+“Things” = countable instances như person/car.
 
-“Stuff” là region không có instance rõ như sky, road hoặc grass.
+“Stuff” = amorphous regions như sky/road/grass.
 
-Panoptic segmentation cố tạo một unified scene parse gồm cả hai loại.
+Panoptic segmentation seeks unified scene parse.
 
-## Fully Convolutional Network
+## Fully Convolutional Networks
 
-**Fully Convolutional Network (FCN)** thay dense classifier bằng convolutional operation để giữ spatial output và hỗ trợ image size linh hoạt hơn.
+FCN replaces dense classifier with convolutional operations to preserve spatial prediction and accept variable image sizes more naturally.
 
-Đây là bước quan trọng trong lịch sử deep segmentation.
+## Atrous/Dilated Convolution
 
-## Atrous / Dilated Convolution
-
-Dilated convolution tăng receptive field mà không giảm resolution mạnh.
-
-DeepLab-style architecture kết hợp dilation với multi-scale context để vừa giữ detail vừa nhìn region rộng.
+Dilated convolution expands receptive field without reducing resolution. DeepLab-style architectures combine dilation + multi-scale context.
 
 ## Multi-Scale Context
 
-Identity của một pixel có thể phụ thuộc scene rộng hơn.
-
-Một gray patch nhỏ có thể là road, wall hoặc car tùy surrounding context.
-
-Pyramid pooling hoặc ASPP thu thập feature ở nhiều receptive-field scale để giải bài toán này.
+Pixel identity may depend on larger scene. A tiny gray patch could be road, wall or car based on context. Pyramid pooling/ASPP capture multiple receptive-field scales.
 
 ## Transformer Segmentation
 
-Vision Transformer cho phép global interaction giữa patch.
-
-Modern segmentation system có thể dùng transformer encoder/decoder và mask query, biến segmentation thành một dạng set prediction tương tự DETR.
+Vision transformers provide global interactions. Modern segmentation may use transformer encoder/decoder and mask queries, treating masks as set predictions similar DETR.
 
 ## Promptable Segmentation
 
-Foundation segmentation model có thể nhận point, box, mask hoặc text-like prompt để chỉ định region cần segment.
+Foundation segmentation models can accept points, boxes, masks or text-like prompts to specify target object/region. This changes interaction from fixed taxonomy to **conditional segmentation**.
 
-Điều này chuyển bài toán từ fixed taxonomy sang **conditional segmentation**.
-
-Tuy nhiên model vẫn có thể fail khi domain image khác xa pretraining distribution, ví dụ industrial hoặc medical imagery đặc thù.
+Still, model may fail on domain-specific imagery outside pretraining distribution.
 
 ## Annotation Cost
 
-Pixel mask rất tốn công annotate. Các strategy giảm chi phí gồm:
+Pixel masks expensive. Strategies:
 
-- polygon;
-- weak label;
-- box hoặc scribble;
+- polygons;
+- weak labels;
+- boxes/scribbles;
 - pseudo-labeling;
 - interactive annotation;
 - foundation-model-assisted labeling.
 
-Boundary label cũng có thể mang tính chủ quan giữa annotator.
+Label quality at boundaries can be subjective.
 
 ## Class Imbalance
 
-Rare class hoặc small lesion có thể chỉ chiếm phần rất nhỏ image.
+Rare classes/small lesions can occupy tiny fraction. Pixel accuracy then misleading.
 
-Pixel accuracy lúc đó dễ gây hiểu nhầm vì chỉ cần predict background tốt cũng đạt score cao.
-
-Nên xem class-wise IoU, Dice, recall và region-level metric.
+Use class-wise IoU, Dice, recall and region-level metrics.
 
 ## Post-Processing
 
-Morphological cleanup, connected component, CRF-like refinement hoặc domain constraint có thể loại isolated noise và enforce geometry hợp lý.
+Morphological cleanup, connected components, CRF-like refinement or domain constraints can remove isolated noise.
 
-Production segmentation thường là hybrid giữa neural prediction và deterministic post-processing.
+Production segmentation often hybrid neural + deterministic geometry.
 
 ## 3D Segmentation
 
-Medical CT/MRI dùng volume:
+Medical CT/MRI uses volumes:
 
 \[
 X\in\mathbb{R}^{D\times H\times W\times C}
 \]
 
-3D convolution capture volumetric context nhưng memory cost rất lớn.
-
-2.5D approach dùng slice hiện tại cùng một số neighboring slice để giảm cost nhưng vẫn giữ thêm context theo depth.
+3D convolutions capture volumetric context but memory cost huge. 2.5D approaches process slices with neighboring context.
 
 ## Temporal Segmentation
 
-Video segmentation cần consistency qua frame.
-
-Nếu infer từng frame độc lập, mask có thể flicker. Temporal model, optical flow hoặc tracking giúp giữ identity và shape ổn định hơn.
+Video segmentation should preserve consistency across frames. Independent per-frame masks flicker; temporal models/tracking help.
 
 ## Evaluation
 
-Metric phổ biến:
+Common metrics:
 
 - mIoU;
 - Dice/F1;
@@ -208,34 +174,32 @@ Metric phổ biến:
 - boundary F-score;
 - panoptic quality.
 
-Metric phải phù hợp failure cost. Trong medical imaging, bỏ sót một lesion nhỏ có thể nghiêm trọng hơn boundary lệch vài pixel.
+Metric choice depends application. In medical imaging, missing small lesion may be much worse than slight boundary mismatch.
 
 ## Uncertainty
 
-Pixel-wise confidence map có thể giúp chọn region cần manual review.
+Pixel-wise confidence maps can guide manual review. But neighboring pixels correlated, so naive confidence interpretation may overstate certainty.
 
-Tuy nhiên pixel lân cận có correlation cao, nên không nên hiểu confidence từng pixel như các independent probability.
+## Mental Model
 
-## Mô hình tư duy
+> **Segmentation giữ spatial structure đến mức pixel; encoder học “cái gì”, decoder khôi phục “ở đâu chính xác”.**
 
-> **Segmentation giữ spatial structure tới cấp pixel; encoder học “cái gì”, decoder khôi phục “ở đâu chính xác”.**
+## Common Misconceptions
 
-## Những nhầm lẫn thường gặp
+### “Pixel accuracy cao = segmentation tốt”
 
-### “Pixel accuracy cao nghĩa segmentation tốt”
-
-Không. Background dominance có thể làm metric cao dù rare object gần như luôn bị bỏ sót.
+Background dominance có thể làm metric cao dù rare object fail.
 
 ### “Segmentation mask là ground truth tuyệt đối”
 
-Không. Human annotation boundary có uncertainty và guideline khác nhau có thể tạo mask khác nhau.
+Human annotation boundaries có uncertainty.
 
 ### “Upsampling phục hồi detail đã mất”
 
-Không hoàn toàn. Nó chỉ reconstruct từ feature còn giữ được hoặc skip connection; information đã bị discard hoàn toàn không tự quay lại.
+Nó chỉ reconstruct từ retained features/skip connections; information fully discarded không magically return.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Segmentation nối image-processing mask, CNN multi-scale representation, object detection và Transformer set prediction.
+Segmentation connects image processing masks, CNN multi-scale representation, detection và transformer set prediction.
 
-Xem tiếp: [Vision Transformer](./07_vision_transformers.md).
+Xem tiếp: [Vision Transformers](./07_vision_transformers.md).

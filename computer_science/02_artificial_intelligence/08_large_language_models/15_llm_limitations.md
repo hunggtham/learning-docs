@@ -1,164 +1,164 @@
-# Giới hạn của mô hình ngôn ngữ lớn
+# Limitations của Large Language Models
 
-LLM mạnh vì học các quy luật thống kê rộng từ lượng dữ liệu và compute lớn, nhưng kiến trúc và objective của chúng tạo ra những giới hạn mang tính cấu trúc. Hiểu các giới hạn này giúp chọn đúng kiến trúc hệ thống thay vì cố “prompt mạnh hơn” cho mọi vấn đề.
+LLM rất mạnh vì học broad statistical regularities từ lượng data và compute lớn, nhưng architecture/objective của chúng tạo ra limitations mang tính cấu trúc. Hiểu limitations giúp chọn đúng architecture system thay vì cố “prompt harder” mọi vấn đề.
 
-## Tri thức không có provenance tự nhiên
+## Knowledge không có provenance native
 
-Trọng số không lưu citation của source theo dạng cơ sở dữ liệu. Mô hình có thể sinh một fact nhưng không tự biết tài liệu chính xác nào hỗ trợ fact đó.
+Weights không lưu source citation theo dạng database. Model có thể generate fact nhưng không tự biết exact document nào support fact đó.
 
-Nếu provenance là yêu cầu, cần retrieval và source tracking bên ngoài.
+Nếu provenance là requirement, cần retrieval/source tracking.
 
-## Tri thức có mốc thời gian và có thể lỗi thời
+## Knowledge có cutoff và staleness
 
-Pretraining xảy ra tại một giai đoạn cụ thể. Fact xuất hiện sau mốc dữ liệu hoặc trạng thái thay đổi liên tục không tự nằm trong trọng số nếu không có continued training/update.
+Pretraining xảy ra tại một thời điểm. Facts sau cutoff hoặc state dynamic không nằm trong weights trừ khi continued training/update.
 
-Dữ liệu hiện tại nên đến từ tool, API, database hoặc RAG.
+Current data nên đến từ tools/APIs/RAG.
 
 ## Hallucination
 
-Objective tự hồi quy yêu cầu mô hình tiếp tục chuỗi chứ không bảo đảm sự thật. Mô hình có thể tạo câu sai với phong cách rất tự tin.
+Autoregressive objective yêu cầu tiếp tục sequence, không guarantee truth. Model có thể tạo confident falsehood.
 
 Xem: [Hallucination and Grounding](./13_hallucination_and_grounding.md).
 
-## Cửa sổ ngữ cảnh hữu hạn
+## Context window hữu hạn
 
-Mô hình chỉ condition trên token nằm trong context window hiện tại. Hội thoại dài cần cắt bớt, tóm tắt hoặc retrieval từ memory ngoài.
+Model chỉ condition trên tokens trong current context window. Long conversations cần truncation, summarization hoặc memory retrieval.
 
-Ngay cả khi toàn bộ token vẫn vừa cửa sổ, **mức sử dụng hiệu quả** của thông tin ở đầu, giữa và cuối context có thể không đồng đều.
+Ngay cả khi token technically fits, **effective use** của information ở đầu/giữa context có thể không đồng đều.
 
-## Reasoning không được bảo đảm
+## Reasoning không guaranteed
 
-LLM có thể giải nhiều bài toán lập luận nhưng vẫn thất bại ở biến thể logic đơn giản, đặc biệt với prompt đối kháng hoặc distribution shift.
+LLM có thể solve many reasoning tasks nhưng vẫn fail logically simple variants, especially adversarial or distribution-shifted prompts.
 
-Khi độ chính xác tuyệt đối quan trọng, nên bổ sung external verification.
+External verification nên dùng khi exactness important.
 
-## Tính toán chính xác yếu hơn công cụ thuật toán
+## Exact computation yếu hơn algorithmic tools
 
-Số học với số lớn, exhaustive search, tổng hợp database và formal proof thường phù hợp hơn với công cụ chuyên dụng thay vì token generation.
+Large-number arithmetic, exhaustive search, database aggregation và formal proof thường phù hợp với specialized tools hơn token generation.
 
-Hệ thống tốt phân công phép toán cho đúng nền tảng tính toán.
+System tốt dispatch operation tới right computational substrate.
 
-## Calibration còn hạn chế
+## Calibration hạn chế
 
-Câu chữ thể hiện sự tự tin không phải xác suất đúng. Các từ như “chắc chắn” có thể chỉ là phong cách đã học.
+Language confidence không phải probability of correctness. Phrases như “chắc chắn” có thể chỉ là learned style.
 
-Quyết định nhạy rủi ro cần score đã calibration hoặc kiểm tra ngoài mô hình.
+Risk-sensitive decisions cần calibrated scores hoặc external checks.
 
-## Nhạy với prompt
+## Prompt sensitivity
 
-Thay đổi nhỏ trong cách diễn đạt có thể làm đầu ra khác. Hậu huấn luyện giảm nhưng không loại bỏ hoàn toàn hiện tượng này.
+Small wording differences có thể alter output. Post-training reduces but does not eliminate sensitivity.
 
-Prompt production cần regression test và versioning.
+Production prompts cần regression tests.
 
-## Dễ chịu ảnh hưởng của prompt injection
+## Susceptibility to prompt injection
 
-Mô hình vốn được huấn luyện để làm theo pattern và instruction trong context. Khi document không đáng tin nằm cùng context với chỉ dẫn có quyền cao, attacker có thể cố điều hướng mô hình.
+Model naturally follows patterns/instructions in context. Khi untrusted documents nằm cùng context với privileged instructions, attacker có thể attempt steer model.
 
-Security cần ranh giới quyền bên ngoài model.
+Security requires privilege boundaries outside model.
 
-## Tính không xác định
+## Non-determinism
 
-Sampling làm đầu ra thay đổi giữa các lần chạy. Ngay cả deterministic decoding cũng có thể thay đổi khi model/provider version, kernel hoặc hệ thống serving thay đổi.
+Sampling làm outputs vary. Even deterministic decoding can change across model/provider versions, kernels or system updates.
 
-Nếu ứng dụng cần khả năng tái lập nghiêm ngặt, nên tách các thành phần xác định và ghi lại model version, config và môi trường thực thi.
+If application requires strict repeatability, isolate deterministic components and record model/config/version.
 
-## Bias từ dữ liệu
+## Bias từ data
 
-Corpus huấn luyện phản ánh mất cân bằng xã hội, ngôn ngữ và địa lý. Mô hình có thể yếu hơn ở low-resource language/domain hoặc tái tạo stereotype.
+Training corpus reflects social, linguistic và geographic imbalance. Model can underperform on low-resource languages/domains or reproduce stereotypes.
 
-Đánh giá phải bao phủ population mục tiêu thay vì chỉ nhìn benchmark trung bình.
+Evaluation must include target population, not only average benchmark.
 
-## Lỗi đuôi dài
+## Long-tail failures
 
-Mô hình có thể đúng 99% ở case phổ biến nhưng thất bại khó đoán ở edge case hiếm. Với triển khai quy mô lớn, 1% vẫn có thể tạo rất nhiều sự cố.
+Model may perform 99% on common cases but fail rare edge cases unpredictably. For large-scale deployment, 1% can be many incidents.
 
-Guardrail, fallback và human review nên tập trung vào những tail failure có chi phí cao.
+Guardrails/fallback human review should target high-cost tail failures.
 
 ## Distribution shift
 
-Hành vi người dùng thay đổi, thuật ngữ mới xuất hiện và chiến lược tấn công tiến hóa. Offline eval tĩnh sẽ mất giá trị theo thời gian.
+User behavior changes, new jargon appears, malicious strategies evolve. Static offline eval decays over time.
 
-Monitoring và continual evaluation là cần thiết.
+Monitoring and continual evaluation are necessary.
 
-## Lỗi công cụ có thể khuếch đại
+## Tool errors compound
 
-Agentic LLM có thể gọi tool, nhưng tham số sai có thể thay đổi trạng thái bên ngoài. Năng lực ngôn ngữ của mô hình không bảo đảm an toàn giao dịch.
+Agentic LLM can call tools, but wrong tool argument may change external state. Model language capability does not guarantee transaction safety.
 
-Cần quyền tối thiểu, idempotency, validation, bước xác nhận và audit log.
+Use permissions, idempotency, validation, confirmation and audit logs.
 
-## Bộ nhớ không giống con người
+## Memory is not human-like
 
-“Bộ nhớ hội thoại” thường đến từ context, retrieval hoặc database của ứng dụng. LLM không tự duy trì episodic memory bền vững qua nhiều phiên nếu hệ thống không cung cấp cơ chế đó.
+Conversation memory usually comes from explicit context, retrieval or application database. LLM does not automatically maintain persistent episodic memory across sessions unless system provides it.
 
-## Khả năng giải thích còn chưa đầy đủ
+## Interpretability is incomplete
 
-Attention weight hoặc rationale do mô hình sinh không cung cấp lời giải thích đầy đủ về computation nội bộ. **Mechanistic interpretability** có thể khám phá một số circuit và pattern nhưng chưa làm quyết định của mô hình lớn hoàn toàn minh bạch.
+Attention weights or generated rationales do not provide full explanation of internal computation. Mechanistic interpretability can reveal circuits/patterns but does not yet make large model decisions fully transparent.
 
-## Bất định về dữ liệu huấn luyện
+## Training-data uncertainty
 
-Với nhiều mô hình, thành phần corpus chính xác có thể không được công khai đầy đủ. Điều này làm phân tích copyright, contamination và provenance khó hơn.
+For many models, exact corpus composition may be partially unknown. This complicates copyright, contamination and provenance analysis.
 
-## Hiểu ngôn ngữ và tương tác thế giới là hai việc khác nhau
+## Language understanding vs world interaction
 
-Mô hình chỉ-text học pattern của thế giới thông qua văn bản. Grounding vật lý, cảm biến và hành động thời gian thực cần giao diện đa phương thức, robot hoặc tool.
+Text-only model learns world patterns through text. Physical grounding, sensing and real-time action require multimodal/robotic/tool interfaces.
 
-Năng lực ngôn ngữ không nên bị đồng nhất với trải nghiệm embodied trực tiếp.
+Language competence should not be confused with direct embodied experience.
 
-## Lệch giữa objective và mục tiêu thật
+## Optimization target mismatch
 
-Pretraining tối ưu token prediction; post-training tối ưu preference hoặc policy signal. Mục tiêu thật của người dùng có thể khác proxy đó.
+Pretraining optimizes token prediction; post-training optimizes preference/policy signals. User's true objective may differ.
 
-Đây là vấn đề kiểu **Goodhart**: proxy được tối ưu rất tốt nhưng mục tiêu thật có thể bị tổn hại.
+This is Goodhart-like problem: proxy metric can be optimized while real goal suffers.
 
-## Giới hạn của model và giới hạn của system
+## Model vs System limitation
 
-Nhiều “giới hạn LLM” có thể được giảm ở cấp hệ thống:
+Nhiều “LLM limitations” có thể mitigated ở system level:
 
 ```text
-tri thức cũ   → RAG / API
-số học        → calculator
-factuality    → grounding / verifier
-workflow dài  → agent state + tools
-định dạng     → constrained decoding / schema
-bảo mật       → permission / sandbox
+stale knowledge → RAG/API
+arithmetic      → calculator
+factuality      → grounding/verifier
+long workflow   → agent state + tools
+format          → constrained decoding/schema
+security        → permissions/sandbox
 ```
 
-Tuy nhiên mỗi lớp bổ sung cũng tạo độ phức tạp và failure mode mới.
+Nhưng mitigation adds complexity and new failure modes.
 
-## Khi LLM là công cụ không phù hợp
+## When LLM is the wrong tool
 
-Nếu bài toán có quy tắc xác định chính xác, ít mơ hồ và yêu cầu verification cao, phần mềm truyền thống có thể tốt hơn.
+Nếu problem có exact deterministic rules, low ambiguity và high verification requirement, normal software may be better.
 
-Ví dụ:
+Examples:
 
 ```text
-tính lãi
-kiểm tra quyền
+interest calculation
+permission check
 schema validation
-sinh ID duy nhất
-xác minh mật mã
+unique ID generation
+cryptographic verification
 ```
 
-LLM có thể giải thích hoặc làm giao diện quanh rule engine nhưng không nên thay deterministic core.
+LLM có thể explain/interface quanh rule engine nhưng không nên replace deterministic core.
 
-## Mô hình tư duy
+## Mental Model
 
-> LLM là **động cơ xác suất cho ngôn ngữ và biểu diễn**, không phải database, calculator, theorem prover, policy engine hay operating system. Hệ thống AI mạnh bằng cách kết hợp LLM với đúng thành phần khác.
+> LLM là **probabilistic language-and-representation engine**, không phải database, calculator, theorem prover, policy engine hay operating system. Production AI mạnh bằng cách kết hợp LLM với đúng components khác.
 
-## Những hiểu lầm thường gặp
+## Common Misconceptions
 
-### “Thế hệ model sau sẽ làm mọi giới hạn biến mất”
+### “Model thế hệ sau sẽ làm mọi limitation biến mất”
 
-Một số hạn chế có thể giảm, nhưng bảo đảm sự thật, provenance, authorization và thực thi xác định vẫn là vấn đề cấp hệ thống.
+Some limitations improve, but truth guarantees, provenance, authorization và deterministic execution remain system concerns.
 
-### “Nếu prompt đủ tốt thì không cần kiến trúc khác”
+### “Nếu prompt đủ tốt thì không cần architecture khác”
 
-Prompt không thay được tri thức bên ngoài, tool hoặc validation.
+Prompt không thay external knowledge, tools hoặc validation.
 
-### “LLM có failure nghĩa AI không hữu ích”
+### “LLM failure nghĩa AI không hữu ích”
 
-Không. Giá trị đến từ việc ghép đúng năng lực với đúng tác vụ và engineering quanh failure mode.
+Không. Giá trị đến từ matching capability với task và engineering around failure modes.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Các giới hạn này dẫn trực tiếp tới những layer tiếp theo: [Retrieval & RAG](../09_retrieval_and_rag/00_information_retrieval_foundations.md), Agents, Evaluation, Safety và AI Engineering.
+Limitations dẫn trực tiếp tới các layer tiếp theo: [Retrieval & RAG](../09_retrieval_and_rag/00_information_retrieval_foundations.md), Agents, Evaluation, Safety và AI Engineering.

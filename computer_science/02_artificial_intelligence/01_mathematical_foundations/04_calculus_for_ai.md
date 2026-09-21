@@ -1,94 +1,94 @@
-# Giải tích cho Trí tuệ nhân tạo
+# Calculus cho Artificial Intelligence
 
-**Giải tích (Calculus / 미적분학)** là ngôn ngữ để mô tả **sự thay đổi**. Trong AI, câu hỏi quan trọng không chỉ là “hàm mất mát hiện tại bằng bao nhiêu?”, mà còn là: nếu thay đổi một tham số rất nhỏ, hàm mất mát sẽ thay đổi theo hướng nào và nhanh đến mức nào? Đạo hàm, đạo hàm riêng và gradient biến câu hỏi đó thành những đại lượng có thể tính được.
+Calculus (미적분학 / giải tích) là ngôn ngữ để mô tả **change**. Trong AI, câu hỏi quan trọng không chỉ là “loss hiện tại bằng bao nhiêu?” mà còn là: nếu thay một parameter rất nhỏ, loss sẽ thay đổi theo hướng nào và nhanh đến mức nào? Derivative, partial derivative và gradient biến câu hỏi đó thành quantities có thể tính được.
 
-Nếu đại số tuyến tính mô tả biểu diễn và phép biến đổi, giải tích cho ta biết phép biến đổi **nhạy với đầu vào hoặc tham số ra sao**. Huấn luyện mạng nơ-ron, lan truyền ngược, tối ưu hóa dựa trên gradient, phân tích độ nhạy và nhiều phần của mô hình xác suất đều dựa trên ý tưởng này.
+Nếu Linear Algebra mô tả representation và transformation, Calculus cho ta biết transformation **nhạy** với input hoặc parameter ra sao. Neural-network training, backpropagation, gradient-based optimization, sensitivity analysis và nhiều phần của probabilistic modeling đều dựa trên idea này.
 
-Xem trước: [Đại số tuyến tính cho AI](./01_linear_algebra_for_ai.md).
+Xem trước: [Linear Algebra for AI](./01_linear_algebra_for_ai.md).
 
-## Hàm là điểm xuất phát
+## Function là điểm xuất phát
 
-Một mô hình có thể viết:
+Một model có thể viết:
 
 \[
 \hat y=f_\theta(x)
 \]
 
-Hàm mất mát:
+Loss:
 
 \[
 L(\theta)=\ell(f_\theta(x),y)
 \]
 
-Huấn luyện muốn thay đổi `θ` để `L` nhỏ hơn.
+Training muốn thay `θ` để `L` nhỏ hơn.
 
-Nếu `θ` chỉ là một số, đạo hàm:
+Nếu `θ` chỉ là một số, derivative:
 
 \[
 \frac{dL}{d\theta}
 \]
 
-mô tả tốc độ thay đổi cục bộ.
+mô tả local rate of change.
 
-Nếu đạo hàm dương, tăng `θ` một chút thường làm hàm mất mát tăng; giảm `θ` có xu hướng làm mất mát giảm. Nếu đạo hàm âm thì hướng tác động ngược lại.
+Nếu derivative positive, tăng `θ` một chút có xu hướng tăng loss; giảm `θ` có xu hướng giảm loss. Nếu derivative negative, direction ngược lại.
 
-Đây là trực giác nền của **hạ gradient (gradient descent)**.
+Đây là intuition phía sau gradient descent.
 
-## Giới hạn và đạo hàm
+## Limit và derivative
 
-Đạo hàm được định nghĩa qua giới hạn:
+Derivative được định nghĩa qua limit:
 
 \[
 f'(x)=\lim_{h\to0}\frac{f(x+h)-f(x)}{h}
 \]
 
-Tỷ số này đo độ dốc của đường cát tuyến khi khoảng `h` tiến dần tới 0.
+Ratio này đo slope của secant line khi interval `h` nhỏ dần tới 0.
 
-Trong tính toán số, máy không thực sự dùng `h=0`; đạo hàm giải tích hoặc **vi phân tự động (automatic differentiation)** tránh nhiều sai số của cách xấp xỉ sai phân hữu hạn ngây thơ.
+Trong numerical computation, máy không thật sự lấy `h=0`; analytic derivative hoặc automatic differentiation tránh nhiều error của naive finite difference.
 
-## Xấp xỉ tuyến tính cục bộ
+## Local linear approximation
 
-Đạo hàm quan trọng vì một hàm trơn gần một điểm có thể được xấp xỉ tuyến tính:
+Derivative quan trọng vì smooth function gần một point có thể được approximate tuyến tính:
 
 \[
 f(x+\Delta x)\approx f(x)+f'(x)\Delta x
 \]
 
-Trong nhiều chiều:
+Trong nhiều dimensions:
 
 \[
 f(\mathbf{x}+\Delta\mathbf{x})\approx f(\mathbf{x})+\nabla f(\mathbf{x})^T\Delta\mathbf{x}
 \]
 
-Vì vậy gradient là tín hiệu tuyến tính cục bộ mô tả đầu ra thay đổi thế nào theo các hướng của đầu vào.
+Gradient vì vậy là best local linear signal mô tả output thay đổi theo input directions.
 
-## Đạo hàm riêng
+## Partial derivative
 
-Nếu một hàm phụ thuộc nhiều biến:
+Nếu function phụ thuộc nhiều variables:
 
 \[
 f(x,y)
 \]
 
-đạo hàm riêng theo `x`:
+partial derivative theo `x`:
 
 \[
 \frac{\partial f}{\partial x}
 \]
 
-mô tả sự thay đổi khi chỉ thay `x` và giữ `y` cố định.
+thay đổi `x` trong khi giữ `y` cố định.
 
-Mạng nơ-ron có thể có hàng triệu hoặc hàng tỷ tham số, nên hàm mất mát là một hàm nhiều chiều:
+Neural network có millions/billions parameters, nên loss là function high-dimensional:
 
 \[
 L(\theta_1,\theta_2,\ldots,\theta_p)
 \]
 
-Mỗi đạo hàm riêng trả lời một tham số ảnh hưởng cục bộ tới hàm mất mát như thế nào.
+Mỗi partial derivative trả lời parameter đó locally ảnh hưởng loss thế nào.
 
 ## Gradient
 
-Gradient gom các đạo hàm riêng thành một vector:
+Gradient gom partial derivatives thành vector:
 
 \[
 \nabla_\theta L=
@@ -99,31 +99,31 @@ Gradient gom các đạo hàm riêng thành một vector:
 \end{bmatrix}
 \]
 
-Dưới hình học Euclid, gradient chỉ hướng tăng cục bộ nhanh nhất. Vì vậy hướng âm của gradient là hướng giảm cục bộ nhanh nhất.
+Gradient point theo direction steepest local increase dưới Euclidean geometry. Vì vậy negative gradient là steepest local decrease direction.
 
-Cập nhật hạ gradient:
+Gradient-descent update:
 
 \[
 \theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t)
 \]
 
-trong đó `η` là tốc độ học (learning rate).
+`η` là learning rate.
 
-Gradient không nói điểm cực tiểu toàn cục nằm ở đâu; nó chỉ cung cấp thông tin cục bộ.
+Gradient không nói minimum toàn cục ở đâu; nó chỉ cung cấp local information.
 
-## Đạo hàm theo hướng
+## Directional derivative
 
-Nếu muốn biết `f` thay đổi theo vector đơn vị `u`:
+Nếu muốn biết `f` thay đổi theo direction unit vector `u`:
 
 \[
 D_{\mathbf{u}}f=\nabla f^T\mathbf{u}
 \]
 
-Tích vô hướng này nối giải tích với đại số tuyến tính. Gradient chứa đủ thông tin để tính tốc độ thay đổi cục bộ theo mọi hướng.
+Dot product này nối Calculus với Linear Algebra. Gradient là vector chứa đủ information để tính local rate theo mọi direction.
 
-## Quy tắc dây chuyền
+## Chain rule
 
-**Quy tắc dây chuyền (chain rule)** là nền tảng của lan truyền ngược.
+Chain rule là foundation của backpropagation.
 
 Nếu:
 
@@ -137,17 +137,17 @@ thì:
 \frac{dy}{dx}=\frac{dy}{du}\frac{du}{dx}
 \]
 
-Ý nghĩa là ảnh hưởng của `x` lên `y` đi qua biến trung gian `u`; độ nhạy tổng thể là tích của các độ nhạy cục bộ.
+Ý nghĩa: ảnh hưởng của `x` lên `y` đi qua intermediate `u`; tổng sensitivity là product của local sensitivities.
 
-Mạng nơ-ron chính là phép hợp thành của nhiều hàm:
+Neural network chính là composition nhiều functions:
 
 \[
 f(x)=f_L(f_{L-1}(...f_1(x)))
 \]
 
-Quy tắc dây chuyền cho phép truyền ảnh hưởng của hàm mất mát cuối cùng ngược qua từng tầng.
+Chain rule cho phép propagate effect của final loss ngược qua từng layer.
 
-## Ví dụ đơn giản về lan truyền ngược
+## Một example đơn giản của backpropagation
 
 Giả sử:
 
@@ -169,7 +169,7 @@ Ta cần:
 \frac{\partial L}{\partial w}
 \]
 
-Theo quy tắc dây chuyền:
+Chain rule:
 
 \[
 \frac{\partial L}{\partial w}=
@@ -178,7 +178,7 @@ Theo quy tắc dây chuyền:
 \frac{\partial z}{\partial w}
 \]
 
-Với sigmoid kết hợp entropy chéo nhị phân, các thành phần rút gọn thành:
+Với sigmoid + binary cross-entropy, terms simplify đẹp thành:
 
 \[
 \frac{\partial L}{\partial z}=\hat y-y
@@ -190,11 +190,11 @@ và:
 \frac{\partial L}{\partial w}=(\hat y-y)x
 \]
 
-Gradient có cấu trúc trực quan: **sai số dự đoán × tín hiệu đầu vào**.
+Gradient vì vậy có intuitive structure: prediction error nhân với input signal.
 
-## Đồ thị tính toán
+## Computation graph
 
-Một mô hình có thể được biểu diễn thành **đồ thị tính toán (computation graph)** có hướng của các phép toán.
+Một model có thể được biểu diễn như directed acyclic graph của operations.
 
 ```mermaid
 flowchart LR
@@ -203,73 +203,73 @@ flowchart LR
     MUL --> ADD[+ b]
     B[b] --> ADD
     ADD --> SIG[sigmoid]
-    SIG --> LOSS[hàm mất mát]
+    SIG --> LOSS[loss]
     Y[y] --> LOSS
 ```
 
-**Lượt truyền xuôi (forward pass)** tính giá trị từ đầu vào tới hàm mất mát.
+Forward pass tính values từ input tới loss.
 
-**Lượt truyền ngược (backward pass)** dùng quy tắc dây chuyền để truyền đạo hàm từ hàm mất mát về các tham số.
+Backward pass dùng chain rule để truyền derivatives từ loss về parameters.
 
-Framework vi phân tự động lưu đồ thị hoặc thông tin đủ để tính các tích vector–Jacobian hiệu quả.
+Framework autograd lưu graph hoặc information đủ để compute vector-Jacobian products hiệu quả.
 
-## Lan truyền ngược không phải hạ gradient
+## Backpropagation không phải gradient descent
 
-Hai khái niệm này thường bị trộn lẫn.
+Hai khái niệm thường bị trộn.
 
-**Lan truyền ngược (backpropagation / 역전파)** là thuật toán hiệu quả để tính gradient của hàm hợp bằng quy tắc dây chuyền.
+**Backpropagation (역전파)** là algorithm hiệu quả để compute gradients của composed function bằng chain rule.
 
-**Hạ gradient (gradient descent)** là chiến lược tối ưu hóa dùng gradient để cập nhật tham số.
+**Gradient descent** là optimization strategy dùng gradients để update parameters.
 
-Ta có thể dùng lan truyền ngược cùng Adam, SGD, RMSProp hoặc các bộ tối ưu khác. Hạ gradient cũng có thể dùng cho các hàm không phải mạng nơ-ron.
+Ta có thể dùng backprop với Adam, SGD, RMSProp hoặc optimizer khác. Và gradient descent có thể dùng cho functions không phải neural network.
 
 ## Jacobian
 
-Nếu hàm ánh xạ vector sang vector:
+Nếu function map vector sang vector:
 
 \[
 \mathbf{y}=f(\mathbf{x})
 \]
 
-**Ma trận Jacobian** là:
+Jacobian là matrix:
 
 \[
 J_{ij}=\frac{\partial y_i}{\partial x_j}
 \]
 
-Jacobian mô tả phép biến đổi tuyến tính cục bộ từ nhiễu nhỏ của đầu vào sang thay đổi đầu ra:
+Jacobian mô tả local linear transformation từ input perturbation sang output perturbation:
 
 \[
 \Delta \mathbf{y}\approx J\Delta\mathbf{x}
 \]
 
-Trong học sâu, việc tạo tường minh Jacobian khổng lồ thường quá tốn kém. Vi phân tự động tính các tích với Jacobian mà không cần vật chất hóa toàn bộ ma trận.
+Trong Deep Learning, explicitly constructing huge Jacobian thường quá expensive. Automatic differentiation tính products với Jacobian mà không materialize toàn matrix.
 
-## Hessian và độ cong
+## Hessian và curvature
 
-Với hàm vô hướng `f(x)`, **ma trận Hessian** chứa các đạo hàm bậc hai:
+Với scalar function `f(x)`, Hessian là matrix second derivatives:
 
 \[
 H_{ij}=\frac{\partial^2 f}{\partial x_i\partial x_j}
 \]
 
-Gradient nói về độ dốc; Hessian nói về **độ cong (curvature)**.
+Gradient nói slope; Hessian nói curvature.
 
-Xấp xỉ bậc hai:
+Second-order approximation:
 
 \[
 f(\mathbf{x}+\Delta)\approx f(\mathbf{x})+\nabla f^T\Delta+\frac{1}{2}\Delta^T H\Delta
 \]
 
-Phương pháp Newton dùng thông tin độ cong:
+Newton's method uses curvature:
 
 \[
 \theta_{new}=\theta-H^{-1}\nabla L
 \]
 
-Nhưng Hessian của mạng nơ-ron lớn quá lớn để nghịch đảo trực tiếp, nên tối ưu hóa thực tế thường dùng phương pháp bậc nhất hoặc các xấp xỉ phù hợp.
+Nhưng Hessian của large neural networks quá lớn để invert trực tiếp, nên practical optimization thường dùng first-order methods hoặc approximations.
 
-## Đạo hàm của một số hàm kích hoạt
+## Derivatives của common activations
 
 ### Sigmoid
 
@@ -277,13 +277,13 @@ Nhưng Hessian của mạng nơ-ron lớn quá lớn để nghịch đảo trự
 \sigma(x)=\frac{1}{1+e^{-x}}
 \]
 
-Đạo hàm:
+Derivative:
 
 \[
 \sigma'(x)=\sigma(x)(1-\sigma(x))
 \]
 
-Khi `|x|` lớn, đạo hàm gần 0. Xếp nhiều tầng sigmoid dễ gặp **gradient biến mất (vanishing gradient)**.
+Khi `|x|` lớn, derivative gần 0. Deep stacks sigmoid dễ gặp vanishing gradient.
 
 ### Tanh
 
@@ -291,7 +291,7 @@ Khi `|x|` lớn, đạo hàm gần 0. Xếp nhiều tầng sigmoid dễ gặp **
 \tanh'(x)=1-\tanh^2(x)
 \]
 
-Tanh có tâm quanh 0 tốt hơn sigmoid nhưng vẫn có vùng bão hòa.
+Tanh zero-centered hơn sigmoid nhưng vẫn saturate.
 
 ### ReLU
 
@@ -299,7 +299,7 @@ Tanh có tâm quanh 0 tốt hơn sigmoid nhưng vẫn có vùng bão hòa.
 ReLU(x)=\max(0,x)
 \]
 
-Đạo hàm:
+Derivative:
 
 \[
 ReLU'(x)=
@@ -309,218 +309,222 @@ ReLU'(x)=
 \end{cases}
 \]
 
-Tại `x=0`, đạo hàm theo nghĩa nghiêm ngặt không tồn tại, nhưng triển khai thực tế chọn một **đạo hàm dưới (subgradient)** theo quy ước.
+Tại `x=0`, derivative strict không defined, nhưng implementation chọn subgradient convention.
 
-ReLU giúp giảm vấn đề bão hòa ở miền dương nhưng nơ-ron có thể “chết” nếu liên tục nằm trong miền âm.
+ReLU giúp mitigate saturation ở positive region nhưng neurons có thể “die” nếu persistently negative.
 
-## Gradient biến mất
+## Vanishing gradients
 
-Quy tắc dây chuyền nhân nhiều đạo hàm:
+Chain rule multiply nhiều derivatives:
 
 \[
 \frac{\partial L}{\partial h_1}=\frac{\partial L}{\partial h_L}
 \prod_{k=2}^{L}\frac{\partial h_k}{\partial h_{k-1}}
 \]
 
-Nếu chuẩn của các thừa số thường nhỏ hơn 1, gradient có thể co theo cấp số nhân qua chiều sâu.
+Nếu norms của factors thường <1, gradient shrink exponentially qua depth.
 
-Điều này từng khiến việc huấn luyện mạng sâu và RNN dài rất khó.
+Điều này từng làm train deep networks và long RNNs rất khó.
 
-Các giải pháp kiến trúc thường gồm:
+Architectural solutions gồm:
 
-- hàm kích hoạt kiểu ReLU;
-- khởi tạo cẩn thận;
-- kết nối dư;
-- chuẩn hóa;
-- cơ chế cổng của LSTM/GRU cho mô hình chuỗi.
+- ReLU-like activations;
+- careful initialization;
+- residual connections;
+- normalization;
+- LSTM/GRU gating cho sequence models.
 
-## Gradient bùng nổ
+## Exploding gradients
 
-Nếu tích các đạo hàm có chuẩn lớn hơn 1 lặp đi lặp lại, gradient có thể tăng rất lớn.
+Nếu derivative products có norms >1 repeatedly, gradients có thể grow rất lớn.
 
-Hậu quả gồm cập nhật không ổn định, `NaN/Inf` và hàm mất mát tăng đột biến.
+Consequences:
 
-**Cắt gradient (gradient clipping)** giới hạn chuẩn:
+- unstable updates;
+- NaN/Inf;
+- loss spikes.
+
+Gradient clipping giới hạn norm:
 
 \[
 g\leftarrow g\cdot\min\left(1,\frac{c}{\|g\|}\right)
 \]
 
-Nó không giải quyết nguyên nhân gốc của mọi bất ổn nhưng thường hữu ích khi huấn luyện RNN và Transformer.
+Nó không giải quyết root cause mọi instability nhưng thường useful trong RNN/Transformer training.
 
-## Kết nối dư dưới góc nhìn giải tích
+## Residual connections từ Calculus perspective
 
-Một khối dư:
+Residual block:
 
 \[
 y=x+F(x)
 \]
 
-có đạo hàm:
+Derivative:
 
 \[
 \frac{dy}{dx}=I+\frac{\partial F}{\partial x}
 \]
 
-Đường đồng nhất `I` cung cấp một tuyến gradient trực tiếp. Đây là một lý do kiến trúc residual giúp huấn luyện mô hình rất sâu dễ hơn.
+Identity path cung cấp direct gradient route. Đây là một reason residual architectures train deep models tốt hơn.
 
-## Đạo hàm của phép toán ma trận
+## Derivative của matrix operations
 
-Học sâu sử dụng giải tích ma trận. Ví dụ:
+Deep Learning dùng matrix calculus. Ví dụ:
 
 \[
 \mathbf{y}=W\mathbf{x}
 \]
 
-Nếu `L` là hàm mất mát vô hướng, gradient theo `W` liên hệ với tích ngoài giữa gradient từ tầng sau và đầu vào.
+Nếu scalar loss `L`, gradient theo `W` phụ thuộc outer product giữa upstream gradient và input.
 
-Framework autograd che đi ký hiệu phức tạp, nhưng suy luận theo kích thước vẫn cần thiết:
+Framework autograd che notation phức tạp, nhưng shape reasoning vẫn cần:
 
 ```text
 W: m × n
 x: n
-y: m
+ y: m
 ∂L/∂y: m
 ∂L/∂W: m × n
 ```
 
-Gradient của một tham số phải có cùng kích thước với tham số đó.
+Gradient của parameter phải có same shape với parameter.
 
-## Gradient của softmax kết hợp cross-entropy
+## Gradient của softmax + cross-entropy
 
-Với logit `z`, softmax:
+Cho logits `z`, softmax:
 
 \[
 p_i=\frac{e^{z_i}}{\sum_j e^{z_j}}
 \]
 
-Entropy chéo với nhãn one-hot `y`:
+Cross-entropy với one-hot target `y`:
 
 \[
 L=-\sum_i y_i\log p_i
 \]
 
-Gradient rút gọn thành:
+Gradient simplify thành:
 
 \[
 \frac{\partial L}{\partial z_i}=p_i-y_i
 \]
 
-Đây là một liên kết đẹp: gradient trực tiếp là chênh lệch giữa phân phối dự đoán và phân phối mục tiêu.
+Đây là một elegant connection: gradient trực tiếp là difference giữa predicted distribution và target distribution.
 
-## Vi phân tự động
+## Automatic differentiation
 
-Cần phân biệt ba cơ chế:
+Có ba ideas cần phân biệt:
 
-**Vi phân ký hiệu (symbolic differentiation)** tạo công thức đạo hàm dưới dạng biểu thức.
+**Symbolic differentiation** tạo symbolic formula derivative.
 
-**Vi phân số (numerical differentiation)** xấp xỉ đạo hàm bằng sai phân hữu hạn.
+**Numerical differentiation** approximate bằng finite differences.
 
-**Vi phân tự động (automatic differentiation / 자동 미분)** áp dụng quy tắc dây chuyền qua các phép toán nguyên thủy để tính đạo hàm chính xác tới giới hạn số dấu phẩy động.
+**Automatic differentiation (자동 미분)** áp dụng chain rule qua primitive operations để compute derivative chính xác tới floating-point arithmetic.
 
-Vi phân tự động chế độ ngược đặc biệt hiệu quả khi có rất nhiều tham số đầu vào và chỉ một hàm mất mát vô hướng, đúng với cấu trúc huấn luyện mạng nơ-ron.
+Reverse-mode autodiff đặc biệt hiệu quả khi có many inputs/parameters và một scalar loss, đúng shape của neural-network training.
 
-Lan truyền ngược có thể xem là dạng chuyên biệt của vi phân chế độ ngược trên đồ thị mạng.
+Backpropagation là reverse-mode differentiation specialized trên network/computation graph.
 
-## Kiểm tra gradient bằng sai phân hữu hạn
+## Finite-difference gradient checking
 
-Có thể kiểm tra triển khai gradient bằng:
+Có thể verify gradient implementation bằng:
 
 \[
 \frac{\partial f}{\partial x}\approx\frac{f(x+\epsilon)-f(x-\epsilon)}{2\epsilon}
 \]
 
-Nếu gradient từ autograd khác xấp xỉ này quá nhiều, có thể có lỗi triển khai.
+Nếu autograd gradient khác finite difference nhiều, có thể có bug.
 
-Tuy nhiên `ε` quá nhỏ gây triệt tiêu số dấu phẩy động; quá lớn gây sai số xấp xỉ. Kiểm tra gradient phù hợp để gỡ lỗi trường hợp nhỏ, không phải phương pháp huấn luyện.
+Nhưng `ε` quá nhỏ gây floating-point cancellation; quá lớn gây approximation error. Gradient checking phù hợp debugging small cases, không phải training method.
 
-## Khả vi và đạo hàm dưới
+## Differentiability và subgradients
 
-Không phải mọi hàm hữu ích đều khả vi ở mọi điểm. ReLU không khả vi tại 0. Chuẩn L1 không khả vi tại 0.
+Không phải mọi useful function differentiable mọi nơi. ReLU nondifferentiable tại 0. L1 norm nondifferentiable tại 0.
 
-Tối ưu hóa vẫn có thể dùng **đạo hàm dưới (subgradient)** hoặc các khái niệm đạo hàm tổng quát.
+Optimization vẫn có thể dùng **subgradient** hoặc generalized derivatives.
 
-Vì vậy câu “học sâu yêu cầu mọi phép toán phải khả vi tuyệt đối” là quá đơn giản. Điều cần thiết thường là có tín hiệu tương tự đạo hàm đủ tốt gần như mọi nơi hoặc dùng hàm thay thế phù hợp.
+Do đó “Deep Learning cần mọi operation differentiable tuyệt đối” là oversimplification. Cần derivative-like signal đủ cho optimization almost everywhere hoặc surrogate approach phù hợp.
 
-## Phép toán rời rạc và vấn đề gradient
+## Discrete operations và gradient problem
 
-Lấy mẫu token, `argmax` hoặc định tuyến cứng là các phép toán rời rạc và không có đạo hàm trực tiếp theo cách thông thường.
+Sampling token, argmax hoặc hard routing là discrete và derivative không straightforward.
 
-Đây là lý do nhiều phương pháp dùng:
+Đây là lý do nhiều methods dùng:
 
-- xấp xỉ mềm;
+- soft relaxations;
 - policy gradient / REINFORCE;
-- straight-through estimator;
+- straight-through estimators;
 - Gumbel-softmax;
-- hàm mất mát thay thế khả vi.
+- differentiable surrogate losses.
 
-Liên kết này quan trọng khi học học tăng cường và mô hình sinh dữ liệu rời rạc.
+Connection này quan trọng khi học Reinforcement Learning và generative discrete models.
 
-## Gradient không phải lời giải thích nhân quả
+## Gradient không phải explanation
 
-Biết gradient của đầu ra theo đầu vào có thể tạo bản đồ độ nổi bật (saliency map), nhưng độ nhạy đạo hàm không tự động là lời giải thích nhân quả.
+Biết gradient của output theo input có thể tạo saliency map, nhưng derivative sensitivity không tự động là causal explanation.
 
-Một đặc trưng có gradient nhỏ tại điểm hiện tại vẫn có thể quan trọng trên toàn miền; các đặc trưng tương quan cũng khiến diễn giải khó hơn.
+Một feature có gradient nhỏ tại current point vẫn có thể quan trọng globally; correlated features làm interpretation khó.
 
-Vì vậy không nên kết luận đơn giản “gradient cao = đặc trưng quan trọng”.
+Explainability cần thận trọng hơn “gradient cao = feature quan trọng”.
 
-## Giải tích trong mô hình thời gian liên tục
+## Calculus của continuous-time models
 
-Một số mô hình AI xem động lực học như phương trình vi phân:
+Một số AI models nhìn dynamics như differential equation:
 
 \[
 \frac{d\mathbf{h}(t)}{dt}=f(\mathbf{h}(t),t,\theta)
 \]
 
-Neural ODE và các biểu diễn liên tục liên quan tới mô hình khuếch tán nối học sâu với phương trình vi phân.
+Neural ODEs và diffusion-related continuous formulations nối Deep Learning với differential equations.
 
-Không cần học phương trình vi phân để bắt đầu học máy, nhưng ví dụ này cho thấy giải tích không chỉ nằm ở gradient huấn luyện mà còn có thể nằm ngay trong động lực của mô hình.
+Không cần differential equations để bắt đầu ML, nhưng chúng cho thấy Calculus không chỉ tồn tại ở training gradient mà còn có thể nằm trong model dynamics.
 
-## Tích phân và kỳ vọng
+## Integral và expectation
 
-Kỳ vọng của biến liên tục:
+Probability expectation continuous:
 
 \[
 \mathbb{E}[f(X)]=\int f(x)p(x)dx
 \]
 
-Nhiều hàm mục tiêu xác suất đòi hỏi tích phân khó giải dạng đóng, dẫn tới xấp xỉ Monte Carlo, suy luận biến phân hoặc tích phân số.
+Nhiều objective probabilistic yêu cầu integral khó giải closed-form, dẫn tới Monte Carlo approximation, variational inference hoặc numerical integration.
 
-Giải tích và xác suất vì vậy gắn chặt với nhau, không phải hai môn tách rời.
+Calculus và Probability vì vậy gắn chặt, không phải hai môn tách rời.
 
-## Mô hình tư duy (mental model)
+## Mental Model
 
 ```text
-Đạo hàm          = đầu ra nhạy thế nào với thay đổi nhỏ của đầu vào
-Đạo hàm riêng    = độ nhạy theo một biến
-Gradient         = vector độ nhạy cục bộ theo mọi tham số
-Quy tắc dây chuyền = nối các độ nhạy cục bộ qua phép hợp thành
-Lan truyền ngược = tính quy tắc dây chuyền hiệu quả trên đồ thị tính toán
-Jacobian         = ánh xạ tuyến tính cục bộ từ vector sang vector
-Hessian          = độ cong cục bộ
-Autograd         = cơ chế tự động tính đạo hàm từ các phép toán nguyên thủy
+Derivative      = output nhạy thế nào với một input nhỏ
+Partial derivative = sensitivity theo một variable
+Gradient        = vector local sensitivity theo mọi parameter
+Chain rule      = nối local sensitivities qua composition
+Backpropagation = compute chain rule hiệu quả trên computation graph
+Jacobian        = local linear map vector → vector
+Hessian         = local curvature
+Autograd        = engine tự động tính derivative từ primitive operations
 ```
 
-## Các hiểu lầm thường gặp
+## Common Misconceptions
 
-### “Gradient chỉ thẳng tới điểm cực tiểu”
+### “Gradient chỉ direction tới minimum”
 
-Gradient chỉ hướng tăng cục bộ nhanh nhất; hướng âm gradient cho hướng giảm cục bộ. Nó không biết điểm cực tiểu toàn cục nằm ở đâu.
+Gradient cho local steepest ascent; negative gradient cho local descent. Nó không biết global minimum nằm ở đâu.
 
-### “Backpropagation chính là cách mạng nơ-ron học”
+### “Backpropagation là cách neural network học”
 
-Lan truyền ngược chỉ tính gradient. Hành vi học còn phụ thuộc vào hàm mất mát, bộ tối ưu, dữ liệu, kiến trúc, điều chuẩn và lịch huấn luyện.
+Backprop chỉ compute gradients. Learning behavior còn phụ thuộc loss, optimizer, data, architecture, regularization và training schedule.
 
-### “Đạo hàm bằng 0 nghĩa là đã tối ưu”
+### “Derivative bằng 0 nghĩa là optimum”
 
-Điểm đó có thể là cực tiểu cục bộ, cực đại cục bộ, điểm yên ngựa hoặc vùng phẳng.
+Có thể là local minimum, local maximum, saddle point hoặc flat region.
 
-### “Có autograd thì không cần hiểu giải tích”
+### “Autograd khiến Calculus không cần thiết”
 
-Autograd giúp tính đạo hàm nhưng không giải thích gradient biến mất, bão hòa, động lực học của quá trình học hoặc bất ổn số.
+Autograd tính derivative, nhưng không giải thích vanishing gradients, saturation, learning dynamics hoặc instability.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Giải tích nối trực tiếp tới [Tối ưu hóa](./06_optimization.md), mạng nơ-ron và lan truyền ngược. Khi gỡ lỗi huấn luyện, hãy hỏi: độ lớn gradient ra sao, đường tính toán nào truyền gradient, hàm kích hoạt có bão hòa không, hình học cục bộ của hàm mất mát thế nào và độ chính xác số có đang làm gradient biến mất hay không.
+Calculus nối trực tiếp sang [Optimization](./06_optimization.md), Neural Networks và Backpropagation. Khi debug training, hãy hỏi: gradient magnitude ra sao, computation path nào truyền gradient, activation có saturate không, loss geometry local thế nào và numerical precision có làm gradient biến mất không.
 
-Xem tiếp: [Tối ưu hóa cho AI](./06_optimization.md) và [Tính toán số](./07_numerical_computation.md).
+Xem tiếp: [Optimization for AI](./06_optimization.md) và [Numerical Computation](./07_numerical_computation.md).

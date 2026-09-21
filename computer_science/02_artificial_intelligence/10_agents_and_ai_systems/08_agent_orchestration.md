@@ -1,6 +1,6 @@
-# Điều phối Agent
+# Agent Orchestration
 
-**Điều phối (orchestration / 오케스트레이션)** là layer quản lý quá trình thực thi của agent hoặc workflow: scheduling, state, queue, retry, budget, concurrency, approval, tracing và recovery. Khả năng reasoning của mô hình không thay thế orchestration.
+**Orchestration (오케스트레이션 / điều phối)** là layer quản lý execution của agent/workflow: scheduling, state, queues, retries, budgets, concurrency, approvals, tracing và recovery. Model reasoning không thay thế orchestration.
 
 ```text
 User / Event
@@ -10,14 +10,14 @@ Orchestrator
 ├─ task queue
 ├─ policy engine
 ├─ model runtime
-├─ tool executor
+├─ tool executors
 ├─ approval service
 └─ observability
 ```
 
-## Orchestrator sở hữu vòng đời Task
+## Orchestrator owns lifecycle
 
-Một task production thường có lifecycle rõ:
+Một task production có lifecycle:
 
 ```text
 CREATED
@@ -27,75 +27,62 @@ CREATED
 → COMPLETED / FAILED / CANCELLED
 ```
 
-Persist lifecycle giúp hệ thống restart hoặc resume mà không mất tiến trình.
+Persist lifecycle giúp restart/resume.
 
-## Thực thi dựa trên Queue
+## Queue-Based Execution
 
-Task chạy lâu nên tách HTTP request/response khỏi worker thực thi:
+Long-running task nên tách request/response HTTP khỏi execution worker.
 
 ```text
-API tạo task
-→ đưa vào queue
-→ worker thực thi
-→ event / state được persist
-→ client poll hoặc subscribe kết quả
+API creates task
+→ queue
+→ worker executes
+→ events/state persisted
+→ client polls/subscribes
 ```
 
-Kiến trúc này hỗ trợ retry, backpressure và horizontal scaling tốt hơn một request giữ kết nối lâu.
+Điều này hỗ trợ retries, backpressure và horizontal scaling.
 
-## Kiểm soát Concurrency
+## Concurrency Control
 
-Hệ thống cần giới hạn concurrency theo các chiều như:
+Need limits theo:
 
 - tenant;
 - user;
-- tool hoặc provider;
+- tool/provider;
 - model capacity;
-- external API rate limit.
+- external API rate limits.
 
-Cho phép agent chạy song song không giới hạn dễ gây bùng nổ chi phí hoặc làm quá tải downstream system.
+Unlimited parallel agents dễ tạo cost explosion hoặc hammer downstream systems.
 
 ## Scheduling
 
-Subtask có thể tạo thành dependency graph hoặc DAG. Scheduler chỉ nên chạy node khi prerequisite đã hoàn thành.
+Subtasks có dependency DAG. Scheduler chỉ run nodes có prerequisites satisfied.
 
-Priority có thể dựa trên:
-
-```text
-SLA
-deadline
-critical path
-user tier
-resource availability
-```
-
-Scheduling vì vậy là bài toán systems engineering, không phải nhiệm vụ nên để LLM tự quyết hoàn toàn.
+Priority có thể dựa trên SLA, deadline, critical path hoặc user tier.
 
 ## Backpressure
 
-Nếu tool hoặc provider chậm, queue depth sẽ tăng. Hệ thống cần **backpressure** thay vì tiếp tục spawn worker vô hạn.
+Nếu tool/provider chậm, queue length tăng. System cần backpressure thay vì tiếp tục spawn workers.
 
-Các signal quan trọng gồm:
+Signals:
 
 ```text
 queue depth
 oldest task age
 worker utilization
 provider error rate
-throughput
 ```
 
-Backpressure có thể dẫn tới giảm admission rate, hạ concurrency, delay task hoặc route sang provider khác.
+## Retry Ownership
 
-## Quyền sở hữu Retry
+Retry policy nên nằm orchestration layer, không chỉ trong prompt.
 
-Retry policy nên nằm trong orchestration layer, không chỉ trong prompt.
+Model có thể propose semantic retry, nhưng transport/transient retries là runtime concern.
 
-Mô hình có thể đề xuất một **semantic retry**, ví dụ sửa arguments rồi thử lại. Nhưng transport retry, timeout retry và backoff cho transient error là trách nhiệm của runtime.
+## Approval as First-Class State
 
-## Approval là State hạng nhất
-
-Human approval nên được persist như một event hoặc state rõ ràng:
+Human approval nên persisted event/state:
 
 ```text
 WAITING_APPROVAL
@@ -105,32 +92,30 @@ expires_at
 approved_by
 ```
 
-Sau khi service restart, system vẫn biết task đang chờ approval nào và approval đó áp dụng cho action nào.
+Sau restart vẫn biết task đang chờ gì.
 
 ## Cancellation
 
-User cần khả năng hủy task dài. Runtime phải propagate cancellation tới queued operation và tool đang chạy khi có thể.
-
-Cancellation cũng cần semantics rõ: một external side effect đã commit có thể không thể “hủy” đơn giản mà phải dùng compensating action.
+User cần cancel long task. Runtime phải propagate cancellation tới queued/running tool operations khi có thể.
 
 ## Model Routing
 
-Không phải step nào cũng cần model mạnh nhất.
+Không phải step nào cũng cần strongest model.
 
-Orchestrator có thể route:
+Routing có thể chọn:
 
 ```text
-small model       → classification / extraction
-large model       → planning mơ hồ hoặc synthesis khó
-embedding model   → retrieval
-specialized model → vision / speech / code
+small model → classification/extraction
+large model → ambiguous planning
+embedding model → retrieval
+specialized model → vision/code
 ```
 
-Model routing là bài toán tối ưu giữa chất lượng, latency và cost.
+Routing là cost-quality optimization problem.
 
 ## Tool Routing
 
-Nếu nhiều provider cung cấp cùng capability, routing có thể xét:
+Multiple providers cho same capability có thể route theo:
 
 ```text
 availability
@@ -139,28 +124,27 @@ cost
 region
 compliance
 quality
-rate limit
 ```
 
-Fallback phải bảo toàn semantics. Hai API cùng được gọi là “search” hoặc “send message” có thể có contract và side effect khác nhau.
+Fallback phải preserve semantics; hai APIs cùng tên capability có thể khác contract.
 
 ## Artifact Store
 
-Output lớn nên được persist thành artifact thay vì truyền nguyên nội dung qua mọi prompt:
+Large outputs nên persist artifact, không pass qua every prompt.
 
 ```text
-artifact_id
-content_hash
+artifact id
+content hash
 metadata
-producer_step
+producer step
 version
 ```
 
-Context của model chỉ nên mang reference, summary hoặc excerpt cần thiết.
+Context chỉ carry references/excerpts.
 
 ## Event Bus
 
-Event giúp tách rời các component:
+Events decouple components:
 
 ```text
 ToolSucceeded
@@ -169,36 +153,29 @@ TaskTimedOut
 ArtifactCreated
 ```
 
-Consumer khác nhau có thể dùng cùng event để cập nhật UI, metrics, audit log hoặc trigger step tiếp theo.
+Consumers có thể update UI, metrics, audit hoặc trigger next step.
 
-## Exactly-Once rất khó
+## Exactly-Once là khó
 
-Trong distributed systems, bảo đảm **exactly-once execution** thật sự thường khó và đắt. Thiết kế thực tế phổ biến hơn là:
+Distributed systems thường không guarantee exactly-once execution đơn giản. Practical design dùng at-least-once delivery + idempotent handlers.
 
-```text
-at-least-once delivery
-+
-idempotent handler
-```
-
-Do đó tool có side effect nên hỗ trợ idempotency key hoặc cơ chế deduplication.
+Agent tools vì vậy cần idempotency.
 
 ## Checkpoint và Resume
 
-State nên được checkpoint sau những transition quan trọng. Khi worker crash:
+Persist state sau meaningful transition. Khi worker crash:
 
 ```text
 load checkpoint
-→ kiểm tra side effect cuối đã commit chưa
-→ xác định step an toàn tiếp theo
-→ resume
+inspect last committed side effect
+resume from next safe step
 ```
 
-Không nên replay mù toàn bộ trajectory, vì các write action cũ có thể bị thực hiện lại.
+Không blindly replay whole trajectory.
 
 ## Observability
 
-Một trace có thể tổ chức theo hierarchy:
+Trace hierarchy:
 
 ```text
 Task trace
@@ -209,72 +186,55 @@ Task trace
 └─ verification span
 ```
 
-Các metric quan trọng gồm:
+Metrics:
 
-- task success rate;
+- task success;
 - latency distribution;
-- token và cost;
+- tokens/cost;
 - tool error rate;
 - retry count;
 - step count;
-- human escalation rate;
-- cancellation rate;
-- queue wait time.
+- human escalation rate.
 
-## Orchestration và Framework
+## Orchestration vs Framework
 
-Agent framework có thể cung cấp abstraction tiện lợi, nhưng các khái niệm bền vững vẫn là:
+Framework có thể provide abstractions, nhưng concepts bền vững là state machine, queue, event log, retry, permission và tracing. Library này ưu tiên concepts thay vì phụ thuộc một agent framework cụ thể.
 
-```text
-state machine
-queue
-event log
-retry
-permission
-budget
-tracing
-checkpoint
-```
-
-Knowledge library nên ưu tiên những concept này thay vì phụ thuộc vào một framework cụ thể có thể thay đổi nhanh.
-
-## Ví dụ: Enterprise Document Agent
-
-Một hệ thống xử lý tài liệu doanh nghiệp có thể chạy:
+## Example: Enterprise document agent
 
 ```text
 upload event
 → parse worker
-→ indexing worker
+→ retrieval/index worker
 → agent analysis
 → policy validation
-→ human approval nếu nhạy cảm
+→ human approval if sensitive
 → export artifact
 → notify user
 ```
 
-Đây là một distributed workflow có node agentic, không phải một Python loop duy nhất chạy từ đầu đến cuối.
+Đây là distributed workflow có agentic node, không phải single Python loop.
 
-## Mô hình tư duy
+## Mental Model
 
-> **Agent reasoning quyết định “nên làm gì”; orchestration đảm bảo việc đó được chạy, giới hạn, theo dõi, retry và phục hồi như thế nào.**
+> **Agent reasoning quyết định “nên làm gì”; orchestration đảm bảo “việc đó được chạy, theo dõi, retry, giới hạn và phục hồi như thế nào”.**
 
-## Những nhầm lẫn thường gặp
+## Common Misconceptions
 
-### “Dùng agent framework là đã có production orchestration”
+### “Agent framework đã lo production orchestration”
 
-Không. Nhiều framework chủ yếu hỗ trợ prompt, tool và graph. Durability, multi-tenant security, queue, retry semantics và operations vẫn cần kiến trúc riêng.
+Nhiều framework chủ yếu lo prompt/tool graph; durability, multi-tenant security và ops vẫn cần architecture riêng.
 
-### “Một serverless function loop là đủ”
+### “Serverless function loop là đủ”
 
-Không phải với task dài, external side effect hoặc workflow cần resume. Timeout và retry của serverless runtime có thể tạo duplicate execution nếu không có durable state.
+Task dài có timeout, retries và external side effects cần durable state/workflow semantics.
 
 ### “Queue chỉ để scale”
 
-Không. Queue còn tạo isolation, buffering, rate control và retry boundary.
+Queue còn là isolation, buffering và retry boundary.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Orchestration nối agent với distributed systems, backend architecture, queue, event sourcing, concurrency control và observability.
+Orchestration nối agents với distributed systems, backend architecture, queues, event sourcing và observability.
 
-Xem tiếp: [Đánh giá Agent](./09_agent_evaluation.md).
+Xem tiếp: [Agent Evaluation](./09_agent_evaluation.md).

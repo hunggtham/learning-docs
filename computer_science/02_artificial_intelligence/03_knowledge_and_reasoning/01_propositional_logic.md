@@ -1,47 +1,49 @@
-# Logic mệnh đề cho Trí tuệ nhân tạo
+# Propositional Logic cho Artificial Intelligence
 
-**Logic mệnh đề (Propositional Logic / 명제 논리)** là một ngôn ngữ hình thức để biểu diễn các phát biểu có giá trị đúng/sai và suy luận từ chúng bằng các quy tắc chính xác. Nó đơn giản hơn Logic vị từ bậc nhất nhưng rất quan trọng vì cung cấp bộ từ vựng nền về cú pháp, ngữ nghĩa, quan hệ kéo theo, chứng minh, tính thỏa mãn và kiểm tra mô hình.
+**Propositional Logic (명제 논리 / logic mệnh đề)** là một formal language để biểu diễn statements có truth value và suy luận từ chúng bằng rules chính xác. Nó là hệ logic đơn giản hơn First-Order Logic nhưng cực kỳ quan trọng vì cho ta vocabulary về syntax, semantics, entailment, proof, satisfiability và model checking.
 
-Trong AI, Logic mệnh đề xuất hiện trong hệ thống luật, bộ giải SAT, mã hóa bài toán lập kế hoạch, kiểm chứng và suy luận ràng buộc. Mục tiêu không phải biến mọi tri thức thành `P ∧ Q`, mà là hiểu **suy luận hình thức (formal reasoning)** khác với nhận dạng mẫu thống kê ở đâu.
+Trong AI, Propositional Logic xuất hiện trong rule systems, SAT solving, planning encodings, verification và constraint reasoning. Học nó không phải để viết mọi knowledge thành `P ∧ Q`; mục tiêu là hiểu formal reasoning khác với statistical pattern matching ở đâu.
 
-Xem trước: [Biểu diễn tri thức](./00_knowledge_representation.md).
+Xem trước: [Knowledge Representation](./00_knowledge_representation.md).
 
-## Mệnh đề
+## Proposition
 
-Một **mệnh đề (proposition)** là một phát biểu có thể đúng hoặc sai.
+Một proposition là statement có thể true hoặc false.
 
-Ví dụ:
-
-```text
-P: Trời đang mưa.
-Q: Mặt đường ướt.
-```
-
-Không phải mệnh đề:
+Examples:
 
 ```text
-"Hãy đóng cửa!"      → mệnh lệnh
-"Mấy giờ rồi?"       → câu hỏi (question)
-x > 3                 → công thức mở cho tới khi x được gán hoặc lượng hóa
+P: It is raining.
+Q: The road is wet.
 ```
 
-Logic mệnh đề xem `P` như một ký hiệu nguyên tử; nó không nhìn vào cấu trúc bên trong của khái niệm “đang mưa”.
+Không phải proposition:
 
-## Các phép nối logic
+```text
+"Close the door!"      → command
+"What time is it?"     → question
+x > 3                   → open formula until x assigned/quantified
+```
 
-| Ký hiệu | Thuật ngữ | Ý nghĩa |
-|---|---|---|
-| `¬P` | phủ định (NOT) | không P |
-| `P ∧ Q` | hội (AND) | P và Q |
-| `P ∨ Q` | tuyển (OR) | P hoặc Q theo nghĩa bao hàm |
-| `P → Q` | kéo theo (implication) | nếu P thì Q |
-| `P ↔ Q` | tương đương hai chiều (biconditional) | P khi và chỉ khi Q |
+Propositional Logic treats `P` như atomic symbol; nó không nhìn inside structure “raining”.
 
-`∨` mặc định là “hoặc bao hàm”: đúng khi một hoặc cả hai vế đúng.
+## Connectives
 
-## Bảng chân trị
+Common logical connectives:
 
-Phép kéo theo thường gây nhầm lẫn:
+| Symbol | English | 한국어 | Meaning |
+|---|---|---|---|
+| `¬P` | NOT | 부정 | không P |
+| `P ∧ Q` | AND | 논리곱 / 그리고 | P và Q |
+| `P ∨ Q` | OR | 논리합 / 또는 | P hoặc Q inclusive |
+| `P → Q` | implication | 함의 | nếu P thì Q |
+| `P ↔ Q` | biconditional | 동치 | P iff Q |
+
+`∨` mặc định inclusive OR: true khi một hoặc cả hai true.
+
+## Truth table
+
+Implication often causes confusion:
 
 | P | Q | `P → Q` |
 |---|---|---|
@@ -50,144 +52,144 @@ Phép kéo theo thường gây nhầm lẫn:
 | F | T | T |
 | F | F | T |
 
-Vì sao `P→Q` lại đúng khi P sai?
+Why is implication true when P false?
 
-Bởi vì:
+Because `P→Q` equivalent:
 
 \[
-P\rightarrow Q\equiv\neg P\lor Q
+\neg P\lor Q
 \]
 
-Nó chỉ cấm trường hợp P đúng nhưng Q sai.
+It only forbids case P true and Q false.
 
-Từ “nếu” trong ngôn ngữ tự nhiên đôi khi còn mang nghĩa nhân quả hoặc thời gian, những nghĩa này không tự động được chứa trong phép kéo theo vật chất của logic.
+Natural-language “if” may carry causal/temporal meaning not captured by material implication.
 
-## Cú pháp và ngữ nghĩa
+## Syntax vs semantics
 
-**Cú pháp (syntax)** định nghĩa công thức nào được viết hợp lệ.
+**Syntax** defines well-formed formulas.
 
-Ví dụ:
+Example:
 
 \[
 (P\land Q)\rightarrow R
 \]
 
-**Ngữ nghĩa (semantics)** định nghĩa khi nào công thức đúng dưới một cách diễn giải hoặc mô hình gán giá trị chân trị cho các ký hiệu.
+**Semantics** defines truth under an interpretation/model assigning truth values to symbols.
 
-Sự phân biệt này rất quan trọng:
+This distinction is fundamental:
 
 ```text
-cú pháp  = cấu trúc biểu thức
-ngữ nghĩa = điều kiện làm biểu thức đúng hoặc sai
+syntax    = expression structure
+semantics = what makes expression true/false
 ```
 
-LLM có thể sinh ra công thức trông đúng cú pháp nhưng ánh xạ công thức đó sang miền thực tế vẫn có thể sai về ngữ nghĩa.
+LLM can generate syntactically valid-looking formula while semantic mapping to domain may still be wrong.
 
-## Mô hình trong logic
+## Model
 
-Một **mô hình (model)** ở đây là phép gán giá trị đúng/sai cho các mệnh đề.
+A model `M` is assignment of truth values to propositions.
 
-Nếu:
+If:
 
 ```text
 P=true
 Q=false
 ```
 
-thì mô hình đó thỏa `P∨Q` nhưng không thỏa `P∧Q`.
+then `M` satisfies `P∨Q` but not `P∧Q`.
 
-Ký hiệu:
+Notation:
 
 \[
 M\models\alpha
 \]
 
-nghĩa là mô hình `M` thỏa công thức `α`.
+means model `M` satisfies formula `α`.
 
-## Có thể thỏa, hằng đúng và mâu thuẫn
+## Satisfiable, valid và unsatisfiable
 
-Một công thức **có thể thỏa (satisfiable)** nếu tồn tại ít nhất một mô hình làm nó đúng.
+Formula is **satisfiable** if at least one model makes it true.
 
-Một công thức **hằng đúng (valid/tautology)** nếu mọi mô hình đều làm nó đúng.
+**Valid / tautology** if every model makes it true.
 
-Ví dụ:
+Example:
 
 \[
 P\lor\neg P
 \]
 
-luôn đúng.
+always true.
 
-Một công thức **không thể thỏa (unsatisfiable/contradiction)** nếu không có mô hình nào làm nó đúng:
+**Unsatisfiable / contradiction** if no model makes true:
 
 \[
 P\land\neg P
 \]
 
-Ba khái niệm này là nền của SAT và chứng minh phản chứng.
+These concepts power SAT solving and proof by contradiction.
 
-## Quan hệ kéo theo
+## Entailment
 
-Cơ sở tri thức `KB` **kéo theo (entails)** `α`:
+Knowledge base `KB` entails `α`:
 
 \[
 KB\models\alpha
 \]
 
-nếu mọi mô hình thỏa `KB` cũng thỏa `α`.
+if every model satisfying `KB` also satisfies `α`.
 
-Điểm quan trọng:
+Important:
 
-> Quan hệ kéo theo là tất yếu về ngữ nghĩa, không phải chỉ vì `α` “nghe có vẻ hợp lý”.
+> Entailment is semantic necessity, not merely that α “sounds plausible”.
 
-Ví dụ:
+Example:
 
 \[
 KB=\{P\rightarrow Q, P\}
 \]
 
-thì:
+then:
 
 \[
 KB\models Q
 \]
 
-## Suy diễn
+## Inference
 
-Một thủ tục suy diễn dẫn xuất công thức bằng thao tác cú pháp:
+Inference procedure derives formula syntactically:
 
 \[
 KB\vdash\alpha
 \]
 
-Cần phân biệt:
+Distinguish:
 
 ```text
-⊨ quan hệ kéo theo về ngữ nghĩa
-⊢ khả năng dẫn xuất / chứng minh bằng cú pháp
+⊨ semantic entailment
+⊢ syntactic derivability/proof
 ```
 
-Một hệ chứng minh **đúng đắn (sound)** nếu chỉ dẫn xuất những kết luận thật sự được kéo theo.
+A proof system is **sound** if it derives only entailed statements.
 
-Nó **đầy đủ (complete)** nếu mọi kết luận được kéo theo về nguyên tắc đều có thể được dẫn xuất.
+It is **complete** if every entailed statement can in principle be derived.
 
-Các thuật ngữ này nói về hệ chứng minh, không phải độ chính xác của mô hình học máy.
+These terms are about proof systems, not ML accuracy.
 
 ## Modus Ponens
 
-Quy tắc:
+Rule:
 
 \[
 P,\quad P\rightarrow Q
 \]
 
-suy ra:
+therefore:
 
 \[
 Q
 \]
 
-Ví dụ:
+Example:
 
 ```text
 ServerDown → Alert
@@ -195,7 +197,7 @@ ServerDown
 ∴ Alert
 ```
 
-Quy tắc hợp lệ независимо với ý nghĩa miền của các ký hiệu.
+This is valid regardless domain meaning.
 
 ## Modus Tollens
 
@@ -203,29 +205,31 @@ Quy tắc hợp lệ независимо với ý nghĩa miền của các ký 
 P\rightarrow Q,\quad \neg Q
 \]
 
-suy ra:
+therefore:
 
 \[
 \neg P
 \]
 
-Nhưng **khẳng định hệ quả (affirming the consequent)** là sai:
+But **affirming the consequent** is invalid:
 
 \[
 P\rightarrow Q,\quad Q
 \]
 
-không cho phép suy ra `P`, vì Q có thể có nguyên nhân khác.
+does not imply `P` because Q may have other causes.
 
-## Các tương đương logic
+## Logical equivalences
 
-Phủ định kép:
+Useful transformations:
+
+Double negation:
 
 \[
 \neg\neg P\equiv P
 \]
 
-Luật De Morgan:
+De Morgan:
 
 \[
 \neg(P\land Q)\equiv \neg P\lor\neg Q
@@ -235,13 +239,13 @@ Luật De Morgan:
 \neg(P\lor Q)\equiv \neg P\land\neg Q
 \]
 
-Khử phép kéo theo:
+Implication elimination:
 
 \[
 P\rightarrow Q\equiv\neg P\lor Q
 \]
 
-Tương đương hai chiều:
+Biconditional:
 
 \[
 P\leftrightarrow Q
@@ -249,237 +253,237 @@ P\leftrightarrow Q
 (P\rightarrow Q)\land(Q\rightarrow P)
 \]
 
-Các phép biến đổi này rất quan trọng khi chuyển công thức sang dạng chuẩn.
+These matter when converting formulas to normal forms.
 
-## Các dạng chuẩn
+## Normal forms
 
-### Dạng chuẩn hội
+### Conjunctive Normal Form
 
-**Dạng chuẩn hội (Conjunctive Normal Form - CNF)** là phép hội của nhiều mệnh đề, mỗi mệnh đề là phép tuyển của các literal.
+CNF is conjunction of clauses; each clause is disjunction of literals.
 
 \[
 (A\lor\neg B)\land(C\lor D)\land(\neg A\lor E)
 \]
 
-Bộ giải SAT thường làm việc trên CNF.
+SAT solvers commonly operate on CNF.
 
-### Dạng chuẩn tuyển
+### Disjunctive Normal Form
 
-**Dạng chuẩn tuyển (Disjunctive Normal Form - DNF)** là phép tuyển của các nhóm hội.
+DNF is disjunction of conjunctions.
 
 \[
 (A\land B)\lor(\neg A\land C)
 \]
 
-Mọi công thức mệnh đề đều có thể biểu diễn bằng CNF hoặc DNF, nhưng chuyển đổi ngây thơ có thể gây bùng nổ kích thước theo cấp số nhân. **Biến đổi Tseitin (Tseitin transformation)** thêm biến phụ để tạo CNF tương đương về tính thỏa mãn với kích thước tăng tuyến tính.
+Any propositional formula can be represented in CNF/DNF, but naive conversion may cause exponential blow-up. Tseitin transformation introduces auxiliary variables to produce equisatisfiable CNF with linear-size growth.
 
-## Literal và mệnh đề tuyển
+## Clause và literal
 
-Một **literal** là mệnh đề nguyên tử hoặc phủ định của nó:
+A **literal** is proposition or negation:
 
 ```text
 P
 ¬Q
 ```
 
-Một mệnh đề tuyển (clause):
+Clause:
 
 \[
 P\lor\neg Q\lor R
 \]
 
-Công thức CNF là tập hoặc phép hội của các clause.
+CNF formula is set/conjunction of clauses.
 
-SAT khai thác cấu trúc này rất mạnh.
+SAT solving uses this structure heavily.
 
-## Phép phân giải
+## Resolution
 
-**Phép phân giải (resolution)**:
+Resolution rule:
 
 \[
 (P\lor A),\quad(\neg P\lor B)
 \]
 
-suy ra:
+infer:
 
 \[
 A\lor B
 \]
 
-Nếu lặp phép phân giải và dẫn tới mệnh đề rỗng `□`, ta đã tìm được mâu thuẫn.
+If repeated resolution derives empty clause `□`, contradiction found.
 
-Để chứng minh `KB⊨α`, có thể thêm `¬α` vào KB rồi chứng minh tập mới không thể thỏa.
+To prove `KB⊨α`, add `¬α` to KB and show unsatisfiable by resolution.
 
-## Chứng minh bằng phản chứng
+## Proof by contradiction
 
-Muốn chứng minh `Q` từ:
+Want prove `Q` from:
 
 ```text
 P
 P → Q
 ```
 
-Chuyển phép kéo theo:
+Convert implication:
 
 \[
 \neg P\lor Q
 \]
 
-Thêm `¬Q`.
+Add `¬Q`.
 
-Phân giải `¬P∨Q` với `¬Q` → `¬P`.
+Resolve `¬P∨Q` with `¬Q` → `¬P`.
 
-Phân giải `¬P` với `P` → mệnh đề rỗng.
+Resolve `¬P` with `P` → empty clause.
 
-Do tập giả định cộng `¬Q` mâu thuẫn, nên Q được kéo theo.
+Thus assumptions + `¬Q` inconsistent, so Q entailed.
 
-## Mệnh đề Horn
+## Horn clauses
 
-**Mệnh đề Horn (Horn clause)** có tối đa một literal dương.
+Horn clause has at most one positive literal.
 
-Ví dụ:
+Example:
 
 \[
 \neg P\lor\neg Q\lor R
 \]
 
- tương ứng:
+which corresponds:
 
 \[
 P\land Q\rightarrow R
 \]
 
-Logic Horn hỗ trợ suy diễn tiến/lùi hiệu quả và là nền của nhiều hệ thống luật cũng như các mảnh của lập trình logic.
+Horn logic supports efficient forward/backward chaining and underlies rule systems/logic programming fragments.
 
-## Suy diễn tiến
+## Forward chaining
 
-**Suy diễn tiến (forward chaining)** bắt đầu từ các sự kiện đã biết và liên tục kích hoạt những quy tắc có tiền đề đã thỏa.
+Start with known facts and repeatedly fire rules whose premises satisfied.
 
 ```text
-Sự kiện: A, B
-Quy tắc:
+Facts: A, B
+Rules:
 A ∧ B → C
 C → D
 ```
 
-Suy ra C, sau đó D.
+Derive C, then D.
 
-Forward chaining là cách suy luận **hướng dữ liệu (data-driven)**.
+Forward chaining is **data-driven**.
 
-Nó hữu ích khi có nhiều kết luận có thể cần hoặc sự kiện đến theo dòng.
+Useful when many possible conclusions or streaming facts.
 
-## Suy diễn lùi
+## Backward chaining
 
-**Suy diễn lùi (backward chaining)** bắt đầu từ truy vấn hoặc mục tiêu rồi hỏi cần những tiền đề nào để chứng minh nó.
+Start from query/goal and ask what premises would prove it.
 
-Muốn chứng minh `D`:
+To prove `D`:
 
 ```text
-Cần C
-Muốn có C cần A và B
-Kiểm tra A,B có trong tập sự kiện
+Need C
+To prove C need A and B
+Check facts A,B
 ```
 
-Đây là suy luận **hướng mục tiêu (goal-driven)**.
+Backward chaining is **goal-driven**.
 
-Suy luận kiểu Prolog dùng backward chaining kết hợp hợp nhất ở mức Logic vị từ bậc nhất.
+Prolog-style reasoning uses backward chaining with unification at First-Order level.
 
-## Bài toán SAT
+## SAT problem
 
-SAT hỏi:
+SAT asks:
 
-> Có tồn tại phép gán Boolean cho các biến để công thức trở thành đúng không?
+> Is there an assignment to Boolean variables making formula true?
 
-SAT là NP-complete, nhưng bộ giải hiện đại vẫn xử lý hiệu quả nhiều bài toán lớn có cấu trúc.
+SAT is NP-complete, yet modern solvers handle enormous structured instances.
 
-Ứng dụng gồm:
+Applications:
 
-- kiểm chứng phần cứng;
-- lập kế hoạch;
-- lập lịch và cấu hình;
-- giải phụ thuộc;
-- chứng minh định lý;
-- phân tích phần mềm.
+- hardware verification;
+- planning;
+- scheduling/configuration;
+- dependency resolution;
+- theorem proving;
+- software analysis.
 
 ## DPLL
 
-DPLL mở rộng quay lui SAT bằng:
+DPLL extends backtracking SAT with:
 
-- lan truyền đơn vị;
-- loại literal thuần;
-- phân nhánh.
+- unit propagation;
+- pure literal elimination;
+- branching.
 
-Các bộ giải CDCL hiện đại phát triển từ nền tảng liên quan này bằng học mệnh đề từ xung đột và quay lui không theo thứ tự thời gian.
+Modern CDCL solvers build on related foundation with conflict learning and non-chronological backtracking.
 
-## Lan truyền đơn vị
+## Unit propagation
 
-Mệnh đề:
+Clause:
 
 \[
 A\lor B\lor C
 \]
 
-Nếu `A=false` và `B=false` thì `C=true` bị bắt buộc.
+If `A=false` and `B=false`, then `C=true` forced.
 
-Hãy lan truyền mọi phép gán bắt buộc trước khi phân nhánh.
+Propagate forced assignments before branching.
 
-Đây chính là nguyên lý “suy luận trước khi tìm kiếm” đã gặp trong CSP.
+This is same “reason before search” principle seen in CSP.
 
-## Học mệnh đề từ xung đột
+## Conflict-Driven Clause Learning
 
-Khi một phép gán gây mâu thuẫn, bộ giải phân tích đồ thị suy diễn và học mệnh đề mới để tránh lặp lại cùng nguyên nhân xung đột. Cơ chế này gọi là **Conflict-Driven Clause Learning (CDCL)**.
+When assignments cause conflict, analyze implication graph and learn clause preventing same reason for conflict.
 
-Vòng lặp khái niệm:
+CDCL loop conceptually:
 
 ```text
-lan truyền
+propagate
   ↓
-phân nhánh
+branch
   ↓
-có xung đột?
-  ├─ không → tiếp tục
-  └─ có → phân tích → học mệnh đề → quay lui xa
+conflict?
+  ├─ no → continue
+  └─ yes → analyze → learn clause → backjump
 ```
 
-Mệnh đề học được vẫn là hệ quả logic, nên bộ giải trở nên hiệu quả hơn mà không đánh đổi tính đúng.
+Learned clause is logically implied, so solver becomes smarter without sacrificing correctness.
 
-## Tính nhất quán của cơ sở tri thức
+## Knowledge-base consistency
 
-Nếu KB chứa:
+If KB contains:
 
 \[
 P
 \]
 
-và:
+and:
 
 \[
 \neg P
 \]
 
-thì cơ sở tri thức mâu thuẫn trong logic cổ điển.
+classical logic KB inconsistent.
 
-Theo nguyên lý bùng nổ, từ mâu thuẫn có thể dẫn xuất bất kỳ công thức nào trong logic cổ điển.
+Under principle of explosion, from contradiction arbitrary formula can be derived in classical logic.
 
-Cơ sở tri thức thực tế có thể chứa xung đột, từ đó cần logic cận nhất quán, suy luận có xét nguồn gốc hoặc chính sách xử lý xung đột tường minh.
+Real knowledge bases may contain conflicts, motivating paraconsistent logics, provenance-aware reasoning or explicit conflict-resolution policies.
 
-## Suy luận theo thế giới đóng
+## Closed-world reasoning
 
-Bản thân Logic mệnh đề không nói rằng sự kiện không xuất hiện thì là sai. Giả định thế giới đóng là một chính sách ngữ nghĩa bổ sung.
+Propositional logic itself does not say absent facts false. Closed-world assumption is extra semantic policy.
 
-Bộ máy luật có thể dùng **phủ định do thất bại (negation as failure)**:
+Rule engine may implement **negation as failure**:
 
 ```text
-nếu không chứng minh được P, tạm xem P là sai
+if cannot prove P, assume not P
 ```
 
-Điều này khác với phủ định logic cổ điển.
+This differs from classical logical negation.
 
-Nhầm hai khái niệm có thể tạo lỗi suy luận tinh vi.
+Confusing them causes subtle bugs.
 
-## Logic và điều kiện trong phần mềm
+## Logic và software conditions
 
-Logic Boolean nằm bên dưới điều kiện chương trình:
+Boolean logic underlies code:
 
 ```java
 if (authenticated && !locked) {
@@ -487,71 +491,71 @@ if (authenticated && !locked) {
 }
 ```
 
-Tuy nhiên trạng thái chương trình, thời gian và tác dụng phụ khiến ngữ nghĩa phần mềm phong phú hơn công thức mệnh đề.
+But program state/time/side effects make full software semantics richer than propositional formulas.
 
-Kiểm chứng hình thức thường chuyển các thuộc tính chương trình sang ràng buộc SAT/SMT.
+Formal verification often translates program properties into SAT/SMT constraints.
 
-## SAT và SMT
+## SAT vs SMT
 
-SAT chỉ dùng biến Boolean.
+SAT variables Boolean.
 
-**SMT (Satisfiability Modulo Theories)** bổ sung các lý thuyết như:
+**SMT (Satisfiability Modulo Theories)** adds theories such as:
 
-- số nguyên và số thực;
-- mảng;
-- bit-vector;
-- chuỗi;
-- hàm chưa diễn giải.
+- integers/reals;
+- arrays;
+- bit-vectors;
+- strings;
+- uninterpreted functions.
 
-Ví dụ:
+Example:
 
 \[
 x>3\land y=x+2\land y<4
 \]
 
-cần lý thuyết số học, không chỉ các biến Boolean nguyên tử trừ khi được mã hóa lại.
+requires arithmetic theory, not pure Boolean atoms alone unless encoded.
 
-SMT rất quan trọng trong kiểm chứng chương trình và tác nhân dựa trên bộ giải.
+SMT is highly relevant for program verification and solver-backed agents.
 
-## Logic và xác suất
+## Logic vs probability
 
-Logic cổ điển:
+Classical logic:
 
 ```text
-P đúng hoặc sai
+P true / false
 ```
 
-Xác suất:
+Probability:
 
 ```text
 P(P)=0.7
 ```
 
-Logic mô tả cấu trúc chắc chắn; xác suất mô tả bất định.
+Logic captures structural certainty; probability captures uncertainty.
 
-Quy tắc `Smoke→Fire` trong logic nghiêm ngặt có nghĩa mọi trường hợp có khói đều có cháy. Quan hệ ngoài đời thường chỉ mang tính xác suất, nên ép nó thành phép kéo theo tuyệt đối là mô hình hóa sai.
+A rule `Smoke→Fire` in strict logic means every smoke case implies fire. Real-world relation is probabilistic, so forcing it into strict implication is wrong modeling.
 
-Biểu diễn phải phù hợp với ngữ nghĩa của miền.
+Representation must match domain semantics.
 
-## Logic và suy luận bằng LLM
+## Logic vs LLM reasoning
 
-LLM có thể tạo chuỗi suy luận hợp logic, nhưng cơ chế dự đoán token tiếp theo không bảo đảm chứng minh đúng đắn.
+LLM can produce logically valid sequences but next-token generation does not guarantee sound proof.
 
-Kiến trúc lai:
+Hybrid approach:
 
 ```text
-LLM đề xuất định lý / bước chứng minh
+LLM proposes theorem/proof steps
         ↓
-bộ máy logic hình thức kiểm tra tính hợp lệ
+formal logic engine checks validity
         ↓
-chấp nhận / từ chối / sửa chữa
+accept / reject / repair
 ```
 
-Cách này kết hợp suy luận ngôn ngữ linh hoạt với xác minh ký hiệu.
+This pattern combines flexible language reasoning with symbolic verification.
 
-## Lập kế hoạch dưới dạng SAT
+## Planning as SAT
 
-Lập kế hoạch có chân trời giới hạn có thể tạo các biến Boolean:
+Bounded planning can introduce Boolean variables:
 
 ```text
 ActionA_t
@@ -559,46 +563,46 @@ AtRobotRoom1_t
 AtRobotRoom2_t
 ```
 
-Ràng buộc mã hóa điều kiện trước, hiệu ứng và điều kiện duy nhất.
+Constraints encode action preconditions, effects and exactly-one conditions.
 
-Một phép gán thỏa SAT tương ứng với một kế hoạch.
+SAT solver finding assignment corresponds to plan.
 
-Đây là ví dụ của **quy giản biểu diễn**: biến bài toán lập kế hoạch thành bài toán thỏa mãn.
+This illustrates representational reduction: planning becomes satisfiability.
 
-## Mô hình tư duy (mental model)
+## Mental Model
 
 ```text
-Mệnh đề         = phát biểu nguyên tử đúng/sai
-Công thức       = kết hợp mệnh đề bằng phép nối logic
-Mô hình         = phép gán làm công thức đúng/sai
-Kéo theo        = đúng trong mọi mô hình của KB
-Chứng minh      = dẫn xuất bằng cú pháp
-SAT             = có tồn tại ít nhất một mô hình không?
-Phân giải       = quy tắc suy diễn cơ học trên clause
-Suy diễn tiến   = sự kiện → hệ quả
-Suy diễn lùi    = mục tiêu → tiền đề cần thiết
+Proposition  = atomic true/false claim
+Formula      = claims combined by logical operators
+Model        = assignment making formulas true/false
+Entailment   = true in every model of KB
+Proof        = syntactic derivation
+SAT          = does at least one model exist?
+Resolution   = mechanical inference over clauses
+Forward chain = facts → consequences
+Backward chain = goal → required premises
 ```
 
-## Các hiểu lầm thường gặp
+## Common Misconceptions
 
-### “P→Q nghĩa là P gây ra Q”
+### “P→Q means P causes Q”
 
-Phép kéo theo vật chất mã hóa điều kiện chân trị, không phải quan hệ nhân quả.
+Material implication encodes truth condition, not causality.
 
-### “Nếu Q đúng và P→Q thì P phải đúng”
+### “If Q is true and P→Q, then P must be true”
 
-Đây là lỗi khẳng định hệ quả.
+Affirming consequent is invalid.
 
-### “Không biết nghĩa là sai”
+### “Not known means false”
 
-Chỉ đúng nếu có giả định thế giới đóng hoặc chính sách phủ định do thất bại tường minh.
+Only under explicit closed-world/negation-as-failure assumptions.
 
-### “SAT là NP-complete nên bộ giải thực tế không dùng được”
+### “SAT is NP-complete nên solver practical không dùng được”
 
-Độ khó trường hợp xấu không ngăn bộ giải xử lý hiệu quả nhiều bài toán có cấu trúc quy mô lớn.
+Worst-case hardness does not prevent solving many large structured instances efficiently.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Logic mệnh đề nối Biểu diễn tri thức với CSP/SAT, lập kế hoạch và kiểm chứng hình thức. Nó cung cấp sự phân biệt ngữ nghĩa–cú pháp cần thiết trước khi học Logic vị từ bậc nhất và tạo đường cơ sở để hiểu vì sao suy luận xác suất và suy luận nơ-ron đưa ra các đánh đổi khác.
+Propositional Logic connects KR with CSP/SAT, planning and formal verification. It introduces the semantic/syntactic distinction needed before First-Order Logic and gives a baseline for understanding why probabilistic/neural reasoning offer different trade-offs.
 
-Xem tiếp: [Logic vị từ bậc nhất](./02_first_order_logic.md) và [Suy diễn và suy luận](./03_inference_and_reasoning.md).
+Xem tiếp: [First-Order Logic](./02_first_order_logic.md) và [Inference and Reasoning](./03_inference_and_reasoning.md).

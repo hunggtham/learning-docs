@@ -1,104 +1,99 @@
-# Tìm kiếm vector: từ láng giềng gần nhất tới chỉ mục ANN
+# Vector Search: từ Nearest Neighbor tới ANN Index
 
-Khi corpus có hàng triệu vector embedding, cách tìm kiếm ngây thơ phải so query với mọi vector và có chi phí:
+Khi corpus có hàng triệu embedding vectors, naive search so sánh query với mọi vector có cost:
 
 \[
 O(Nd)
 \]
 
-với `N` vector và số chiều `d`. Tìm kiếm chính xác bằng brute force có thể phù hợp với corpus nhỏ hoặc batch trên GPU, nhưng ở quy mô lớn thường cần **tìm kiếm láng giềng gần đúng (Approximate Nearest Neighbor — ANN / 근사 최근접 이웃)**.
+với `N` vectors và dimension `d`. Exact brute-force có thể ổn với corpus nhỏ hoặc GPU batch, nhưng scale lớn thường cần **Approximate Nearest Neighbor (ANN / 근사 최근접 이웃)**.
 
-ANN chấp nhận mất một phần độ chính xác hình học để giảm độ trễ và chi phí bộ nhớ.
+ANN hy sinh một phần exactness để giảm latency/memory cost.
 
-## Láng giềng gần nhất chính xác
+## Exact Nearest Neighbor
 
-Với query `q`, ta tìm:
+Given query `q`, tìm:
 
 \[
 \arg\max_d s(q,d)
 \]
 
-Nếu dùng cosine hoặc dot product, exact search phải tính score với toàn bộ corpus.
+Nếu dùng cosine/dot product, exact search compute score với toàn bộ corpus.
 
-Exact search rất hữu ích làm baseline vì cho biết kết quả láng giềng chính xác của embedding space. Nếu ANN recall thấp hơn nhiều so với exact search, cấu hình index có vấn đề.
+Exact search useful cho baseline vì cho upper bound recall của index. Nếu ANN recall thấp hơn nhiều exact search, index config có vấn đề.
 
-## Vì sao xấp xỉ vẫn hiệu quả?
+## Why Approximation Works
 
-RAG thường không cần vector gần nhất chính xác tuyệt đối về toán học; điều cần là candidate set chứa bằng chứng liên quan. Nếu index trả về vector gần nhất xấp xỉ với recall cao nhưng nhanh hơn rất nhiều, đánh đổi đó có giá trị lớn.
+RAG thường không cần exact mathematically nearest vector; cần candidate set relevant. Nếu index trả almost-nearest vectors với recall cao nhưng nhanh hơn 100x, trade-off rất đáng giá.
 
-Cần phân biệt hai loại recall:
+Quality metric của ANN thường là **recall against exact nearest neighbors**, khác retrieval relevance recall. Hai layers cần phân biệt:
 
 ```text
-ANN recall
-= index có tìm lại được các exact nearest neighbor không?
-
-Retrieval recall
-= những neighbor được tìm có thật sự chứa evidence relevant không?
+ANN recall: index có tìm được vector neighbors exact không?
+Retrieval recall: những neighbors đó có chứa relevant evidence không?
 ```
-
-Đây là hai tầng lỗi khác nhau.
 
 ## HNSW
 
-**Hierarchical Navigable Small World (HNSW)** xây graph nhiều tầng. Search bắt đầu ở tầng trên thưa hơn để di chuyển nhanh tới vùng gần query, rồi tinh chỉnh ở tầng dưới dày hơn.
+**Hierarchical Navigable Small World (HNSW)** xây graph nhiều tầng. Search bắt đầu ở sparse upper layers để move nhanh gần query region, sau đó refine ở dense lower layer.
 
-Mô hình tư duy:
+Mental model:
 
 ```text
-tầng cao như đường cao tốc → đi xa nhanh
-tầng thấp như đường địa phương → tìm neighbor gần
+highway layer → đi xa nhanh
+local roads   → tìm neighbor gần
 ```
 
-Các tham số thường quan trọng:
+Important parameters thường gồm:
 
-- `M`: số kết nối của mỗi node;
-- `efConstruction`: độ rộng search khi xây index;
-- `efSearch`: độ rộng search khi query.
+- `M`: số connections per node;
+- `efConstruction`: search breadth khi build;
+- `efSearch`: search breadth khi query.
 
-Giá trị lớn hơn thường tăng recall nhưng cũng tăng bộ nhớ, thời gian build hoặc latency query.
+Higher values thường improve recall nhưng tăng memory/build/query cost.
 
-HNSW rất mạnh cho search độ trễ thấp và cập nhật động, nhưng footprint bộ nhớ của graph có thể lớn.
+HNSW mạnh cho low-latency dynamic search nhưng index memory có thể lớn.
 
 ## IVF
 
-**Inverted File Index (IVF)** chia không gian vector thành các cell thô bằng centroid. Query chỉ tìm trong một số cluster gần nhất.
+**Inverted File Index (IVF)** cluster vector space thành coarse cells bằng centroids. Query chỉ search một số nearest clusters.
 
 ```text
-toàn bộ vector
-→ cluster thành cell
-→ query chọn nprobe cell
-→ search chính xác hoặc lượng tử hóa trong các cell đã chọn
+all vectors
+→ cluster into cells
+→ query selects nprobe cells
+→ exact/quantized search within selected cells
 ```
 
-`nprobe` lớn hơn thường tăng recall nhưng tăng latency.
+`nprobe` lớn → recall cao hơn, latency lớn hơn.
 
-IVF phù hợp search quy mô lớn và thường được kết hợp với Product Quantization.
+IVF phù hợp large-scale search và thường kết hợp Product Quantization.
 
 ## Product Quantization
 
-**Product Quantization (PQ)** nén vector bằng cách chia các chiều thành subspace rồi lượng tử hóa từng subvector bằng codebook.
+**PQ** compress vector bằng chia dimensions thành subspaces và quantize mỗi subvector bằng codebook.
 
-Thay vì lưu float vector đầy đủ, index lưu mã compact và xấp xỉ distance bằng bảng tra cứu.
+Thay lưu float vector đầy đủ, index lưu compact codes. Distance được approximate từ lookup tables.
 
-Đánh đổi:
+Trade-off:
 
 ```text
-bộ nhớ ↓
-hiệu quả cache ↑
-độ chính xác giảm một phần
+memory ↓
+cache efficiency ↑
+accuracy ↓ somewhat
 ```
 
-PQ đặc biệt quan trọng khi số vector lên tới hàng tỷ hoặc chi phí memory là điểm nghẽn.
+PQ rất quan trọng khi billions vectors hoặc memory cost dominate.
 
 ## Scalar Quantization
 
-Vector float32 có thể được lượng tử sang int8 hoặc float16. Cách này đơn giản hơn PQ và thường giữ chất lượng tốt trong nhiều trường hợp.
+Float32 vector có thể quantize sang int8/float16. Simpler hơn PQ và giữ accuracy tốt trong many settings.
 
-Tác động của quantization vẫn phải benchmark trên đúng phân bố embedding thực tế.
+Nhưng quantization effect cần benchmark trên actual embedding distribution.
 
-## Chọn metric
+## Metric Choice
 
-ANN index phải dùng metric phù hợp với embedding model:
+ANN index phải match similarity used by embedding model:
 
 ```text
 cosine similarity
@@ -106,13 +101,13 @@ inner product
 L2 distance
 ```
 
-Nếu vector được normalize, cosine và inner product cho cùng thứ hạng. Nếu không, độ lớn vector ảnh hưởng inner product.
+Nếu vectors normalized, cosine và inner product ranking equivalent. Nếu không, magnitude affects inner product.
 
-Chọn sai metric có thể làm retrieval giảm nghiêm trọng.
+Sai metric có thể degrade retrieval nghiêm trọng.
 
-## Bài toán filtering
+## Filtering Problem
 
-Enterprise RAG thường cần filter:
+Enterprise RAG cần filters:
 
 ```text
 tenant_id = X
@@ -121,101 +116,103 @@ version = current
 language = ko
 ```
 
-Filter có thể áp dụng trước hoặc sau ANN.
+Filter có thể apply pre-filter hoặc post-filter.
 
-**Post-filter**: retrieve top-k rồi loại item không hợp lệ. Nếu filter rất chọn lọc, số kết quả và recall có thể giảm mạnh.
+**Post-filter**: ANN retrieve top-k rồi remove unauthorized/nonmatching items. Nếu nhiều items bị remove, result count/recall giảm.
 
-**Pre-filter**: thu hẹp candidate space trước hoặc trong search. Implementation phức tạp hơn nhưng phù hợp hơn với constraint nghiêm ngặt.
+**Pre-filter**: restrict candidate space trước/within search. Implementation phức tạp hơn nhưng correctness tốt hơn.
 
-Filter liên quan bảo mật không được thiết kế theo kiểu “best effort”.
+Security filters không được best-effort.
 
-## Xây index và cập nhật
+## Index Build vs Update
 
-Một số index tối ưu cho batch build, số khác hỗ trợ insert/delete động tốt hơn. Knowledge base cập nhật thường xuyên phải cân nhắc semantics cập nhật.
+Một số indexes optimized batch build, others dynamic insert/delete tốt hơn. Knowledge base có frequent updates cần consider update semantics.
 
-Xóa đôi khi chỉ đánh dấu **tombstone** rồi rebuild nền thay vì loại vật lý ngay. Nếu có yêu cầu pháp lý về xóa dữ liệu, cần hiểu rõ lifecycle lưu trữ và index.
+Deletion đôi khi là tombstone + background rebuild, không immediate physical removal.
 
-## Độ mới của index
+Nếu legal deletion requirement nghiêm ngặt, cần hiểu storage/index lifecycle.
 
-Index có thể chậm hơn source database. Pipeline thường là:
+## Freshness
+
+Index có thể lag source database. Pipeline:
 
 ```text
-source thay đổi
+source update
 → ingestion event
-→ parse / chunk
+→ parse/chunk
 → embed
-→ cập nhật index
+→ index update
 ```
 
-Khoảng trễ này là **freshness lag**. RAG chỉ “mới nhất” nếu ingestion có SLA phù hợp.
+Latency giữa source và search là **freshness lag**. RAG “latest” chỉ tốt nếu ingestion SLA tốt.
 
 ## Sharding
 
-Corpus lớn có thể được shard theo tenant, language, region hoặc hash. Query có thể fan-out qua nhiều shard rồi hợp nhất thứ hạng.
+Large corpus có thể shard by tenant, language, region hoặc hash. Query fan-out across shards rồi merge rankings.
 
-Semantic sharding giảm search space nhưng có nguy cơ route query vào sai shard.
+Semantic sharding giảm search space nhưng risk route sai query.
 
 ## Replication
 
-Vector search thiên về đọc có thể dùng replica để tăng throughput và high availability. Đồng bộ phiên bản index giữa replica trở thành vấn đề vận hành.
+Read-heavy vector search cần replicas để scale throughput/high availability. Index version synchronization trở thành operational concern.
 
 ## Top-k và efSearch
 
-Top-k là số kết quả cần trả. `efSearch` hoặc search breadth là số candidate nội bộ mà thuật toán khám phá.
+Top-k là số results user wants. `efSearch`/search breadth là internal candidate exploration. Muốn top-10 không có nghĩa internal search chỉ inspect 10 nodes.
 
-Muốn top-10 không có nghĩa index chỉ cần xem 10 node. Hai tham số cần được tune độc lập.
+Recall tuning cần separate these knobs.
 
 ## Batch Search
 
-Query embedding có thể được batch và engine vector có thể tận dụng SIMD hoặc GPU. Workload throughput cao khác với workload một query cần latency thấp.
+Embedding queries có thể batch, và vector engines có SIMD/GPU acceleration. Throughput workload khác low-latency single-query workload.
 
-Benchmark phải giống traffic production.
+Benchmark phải match traffic pattern.
 
-## Benchmark recall của index
+## Index Recall Benchmark
 
-Một quy trình đơn giản:
+Procedure:
 
 ```text
-lấy mẫu query
+sample queries
 → brute-force exact top-k
 → ANN top-k
-→ so độ trùng
+→ compare overlap
 ```
 
-Nếu ANN recall@10 = 0.98, trung bình 98% exact neighbor được khôi phục. Nhưng vẫn phải đánh giá relevance ngữ nghĩa riêng.
+Nếu ANN recall@10 = 0.98, 98% exact neighbors recovered on average. Nhưng still need semantic relevance evaluation.
 
-## Hình học chiều cao
+## High-Dimensional Geometry
 
-Trong không gian nhiều chiều, phân bố khoảng cách có thể dồn lại. Embedding tốt cố tạo local structure hữu ích, nhưng ANN vẫn chịu một phần **curse of dimensionality**.
+In high dimensions, distance distributions can concentrate. Good learned embeddings try create useful local structure, but ANN algorithms still face curse of dimensionality.
 
-Cải thiện representation thường có thể tạo lợi ích lớn hơn việc chỉ tiếp tục tune index.
+Better representation often improves search more than endlessly tuning index.
 
-## Vector Search và Vector Database
+## Vector Search vs Vector Database
 
-Vector search là bài toán thuật toán/index. **Vector database** bổ sung persistence, metadata, CRUD, filtering, replication, consistency, API và vận hành.
+Vector search là algorithm/index problem. **Vector database** adds persistence, metadata, CRUD, filtering, replication, transactions/consistency, APIs và operations.
 
-HNSW tự nó không phải một vector database.
+Không nên coi HNSW = vector database.
 
-## Mô hình tư duy
+## Mental Model
 
-> ANN index là **lớp hiệu năng** bao quanh embedding geometry. Nó không tạo ra chất lượng ngữ nghĩa; nó cố tìm nhanh các neighbor mà không gian embedding đã định nghĩa.
+> ANN index là **performance layer** quanh embedding geometry. Nó không tạo semantic quality; nó cố tìm gần đúng những neighbors mà embedding space đã định nghĩa.
 
-## Những hiểu lầm thường gặp
+## Common Misconceptions
 
 ### “Approximate search làm RAG hallucinate”
 
-ANN có thể làm bỏ sót evidence, nhưng phải tách lỗi index recall khỏi lỗi retriever, dữ liệu và generator.
+ANN approximation có thể miss evidence, nhưng root cause phải tách ANN recall khỏi retriever/model quality.
 
 ### “HNSW luôn tốt nhất”
 
-Không. Memory, scale, pattern cập nhật và hardware có thể khiến IVF, PQ hoặc brute force phù hợp hơn.
+Không. Memory, scale, update pattern và hardware khác nhau làm IVF/PQ/brute-force đôi khi tốt hơn.
 
 ### “Filter sau search luôn ổn”
 
-Không khi filter rất chọn lọc hoặc mang ý nghĩa bảo mật.
+Không nếu filter selective hoặc security-critical.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Vector search dựa trên [Linear Algebra](../01_mathematical_foundations/01_linear_algebra_for_ai.md) và [Embeddings](./02_embeddings_for_retrieval.md).
+Vector search dựa [High-dimensional Linear Algebra](../01_mathematical_foundations/01_linear_algebra_for_ai.md) và [Embeddings](./02_embeddings_for_retrieval.md).
 
 Xem tiếp: [Vector Databases](./04_vector_databases.md).

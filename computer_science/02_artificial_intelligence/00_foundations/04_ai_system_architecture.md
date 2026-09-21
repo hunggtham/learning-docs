@@ -1,135 +1,135 @@
-# Kiến trúc hệ thống AI: từ mô hình tới hệ thống vận hành thực tế
+# AI System Architecture: từ Model tới Production System
 
-Khi học AI, người mới thường nhìn thấy một hàm rất đơn giản:
+Khi học AI, người mới thường nhìn thấy một function rất đơn giản:
 
 ```text
-đầu vào → mô hình → đầu ra
+input → model → output
 ```
 
-Đây là phép trừu tượng hóa đúng ở mức mô hình, nhưng chưa đủ để hiểu một sản phẩm AI thực tế. Một **hệ thống AI vận hành thực tế (production AI system)** còn phải giải quyết thu nhận dữ liệu, tiền xử lý, ngữ cảnh, suy luận, truy xuất, logic nghiệp vụ, công cụ, quyền truy cập, kiểm tra hợp lệ, khả năng quan sát, đánh giá, độ trễ, chi phí và khôi phục khi có lỗi.
+Đây là abstraction đúng ở mức model, nhưng không đủ để hiểu một AI product thực tế. Production AI system phải giải quyết data ingestion, preprocessing, context, inference, retrieval, business logic, tools, permissions, validation, observability, evaluation, latency, cost và failure recovery.
 
-Một hệ thống tốt không nhất thiết dùng mô hình mạnh nhất. Nó cần **toàn bộ luồng xử lý hoạt động nhất quán dưới các ràng buộc thực tế**.
+Một system tốt không nhất thiết có model mạnh nhất. Nó cần **toàn bộ pipeline hoạt động nhất quán dưới constraints thực tế**.
 
-## Mô hình chỉ là một thành phần của hệ thống
+## Model là component, không phải toàn bộ system
 
-Giả sử xây trợ lý tri thức nội bộ cho công ty. Nếu chỉ gọi LLM với câu hỏi của người dùng, mô hình chỉ có tri thức nằm trong tham số và phần ngữ cảnh được gửi kèm yêu cầu. Nó không tự biết cơ sở dữ liệu nội bộ mới nhất, quyền của người dùng hay trạng thái hiện tại của quy trình nghiệp vụ.
+Giả sử xây internal assistant cho công ty. Nếu chỉ gọi LLM với user question, model chỉ có knowledge nằm trong parameters và context được gửi vào request. Nó không tự biết database nội bộ mới nhất, permission của user hay trạng thái hiện tại của business workflow.
 
-Vì vậy hệ thống cần một lớp **điều phối (orchestration)**:
+System cần orchestration:
 
 ```mermaid
 flowchart LR
-    U[Người dùng] --> API[Lớp ứng dụng / API]
-    API --> AUTH[Xác thực và phân quyền]
-    AUTH --> ORCH[Bộ điều phối AI]
-    ORCH --> RET[Truy xuất]
-    RET --> KB[(Kho tri thức)]
-    ORCH --> LLM[Mô hình]
-    ORCH --> TOOL[Công cụ / API]
-    TOOL --> SYS[(Hệ thống nghiệp vụ)]
-    LLM --> VAL[Kiểm tra / Hàng rào an toàn]
+    U[User] --> API[Application/API Layer]
+    API --> AUTH[Auth & Permission]
+    AUTH --> ORCH[AI Orchestrator]
+    ORCH --> RET[Retrieval]
+    RET --> KB[(Knowledge Base)]
+    ORCH --> LLM[Model]
+    ORCH --> TOOL[Tools / APIs]
+    TOOL --> SYS[(Business Systems)]
+    LLM --> VAL[Validation / Guardrails]
     VAL --> API
-    ORCH --> OBS[Nhật ký / Dấu vết / Đánh giá]
+    ORCH --> OBS[Logs / Traces / Evaluation]
 ```
 
-Mỗi khối giải quyết một vấn đề khác nhau. Nếu lớp phân quyền sai, mô hình có thể làm lộ thông tin mà người dùng không được phép thấy. Nếu truy xuất sai, câu trả lời có thể dựa vào tài liệu không liên quan. Nếu thực thi công cụ thiếu kiểm tra, một tham số do mô hình bịa ra có thể gây tác động thật lên hệ thống.
+Mỗi box giải quyết một problem khác nhau. Nếu permission layer sai, model có thể expose information không nên thấy. Nếu retrieval sai, answer có thể grounded vào document không liên quan. Nếu tool execution thiếu validation, một hallucinated parameter có thể tạo side effect thật.
 
-## Luồng ngoại tuyến và luồng trực tuyến
+## Offline path và Online path
 
-Hệ thống AI thường có ít nhất hai dòng xử lý.
+AI system thường có ít nhất hai dòng xử lý.
 
-### Luồng ngoại tuyến (offline path)
+### Offline path
 
-Luồng ngoại tuyến chuẩn bị mô hình và dữ liệu trước khi yêu cầu của người dùng xuất hiện:
+Offline path chuẩn bị model/data trước khi user request đến:
 
 ```text
-Dữ liệu thô
-→ làm sạch
-→ gán nhãn / biến đổi
-→ huấn luyện hoặc lập chỉ mục
-→ đánh giá
-→ tạo artifact mô hình/chỉ mục
-→ triển khai
+Raw data
+→ cleaning
+→ labeling / transformation
+→ training or indexing
+→ evaluation
+→ model/index artifact
+→ deployment
 ```
 
-Huấn luyện học máy, tạo vector nhúng, chia tài liệu thành đoạn và xây chỉ mục theo lô thường thuộc luồng này.
+Machine Learning training, embedding generation, document chunking và batch index build thường thuộc path này.
 
-### Luồng trực tuyến (online path)
+### Online path
 
-Luồng trực tuyến phục vụ yêu cầu đang diễn ra:
+Online path phục vụ request:
 
 ```text
-Yêu cầu
-→ xác thực
-→ tiền xử lý
-→ ngữ cảnh / truy xuất
-→ suy luận
-→ kiểm tra
-→ phản hồi
+Request
+→ authentication
+→ preprocessing
+→ context/retrieval
+→ inference
+→ validation
+→ response
 ```
 
-Thiết kế production phải tối ưu luồng trực tuyến cho độ trễ và độ tin cậy, đồng thời duy trì luồng ngoại tuyến để cập nhật mô hình và tri thức.
+Production design phải tối ưu online path cho latency và reliability trong khi vẫn có offline path để cập nhật knowledge/model.
 
-## Luồng dữ liệu (data pipeline)
+## Data Pipeline
 
-Chất lượng mô hình bị giới hạn bởi chất lượng dữ liệu. Một luồng dữ liệu thường gồm thu nhận, xác thực, biến đổi, lưu trữ và truy vết nguồn gốc (lineage).
+Model quality bị chặn bởi data quality. Data pipeline thường gồm ingestion, validation, transformation, storage và lineage.
 
-Nếu một đặc trưng được tính theo cách A khi huấn luyện nhưng lại được tính theo cách B khi phục vụ, hệ thống tạo ra **độ lệch giữa huấn luyện và phục vụ (training-serving skew)**. Ví dụ, lúc huấn luyện `average_spend_30d` được tính theo UTC nhưng khi vận hành lại tính theo múi giờ địa phương. Mô hình có thể suy giảm dù mã suy luận không hề phát sinh lỗi.
+Một feature được train theo cách A nhưng serve theo cách B tạo **training-serving skew**. Ví dụ training tính `average_spend_30d` theo UTC nhưng production tính theo local timezone. Model có thể degrade dù code inference không lỗi.
 
-Vì vậy định nghĩa đặc trưng, lược đồ dữ liệu và phiên bản phải được quản lý giống như hợp đồng phần mềm.
+Vì vậy feature definition, schema và versioning phải được quản lý như software contract.
 
-## Phục vụ mô hình (model serving)
+## Model Serving
 
-**Phục vụ mô hình (model serving / 모델 서빙)** là việc đưa mô hình đã huấn luyện vào trạng thái mà ứng dụng có thể gọi được. Một số kiểu phục vụ phổ biến:
+**Model serving (모델 서빙)** là việc expose trained model để application gọi được. Serving có thể là:
 
 ```text
-suy luận theo lô (batch inference)
-API đồng bộ trực tuyến
-worker bất đồng bộ qua hàng đợi
-suy luận dạng luồng
-suy luận trực tiếp trên thiết bị
+batch inference
+online synchronous API
+async queue worker
+streaming inference
+on-device inference
 ```
 
-Các đánh đổi chính gồm độ trễ (latency), thông lượng (throughput), bộ nhớ, mức sử dụng phần cứng và chi phí.
+Trade-off chính gồm latency, throughput, memory, hardware utilization và cost.
 
-Ví dụ, chatbot tương tác ưu tiên thời gian tới token đầu tiên và khả năng phát kết quả dạng luồng. Trong khi đó, chấm điểm hàng triệu khách hàng theo lô thường ưu tiên thông lượng hơn độ trễ của từng bản ghi.
+Ví dụ interactive chatbot ưu tiên time-to-first-token và streaming. Batch scoring hàng triệu customers có thể ưu tiên throughput hơn latency từng record.
 
-## Hệ thống có trạng thái và không trạng thái
+## Stateful và Stateless AI
 
-Nhiều dịch vụ API truyền thống ưu tiên **không trạng thái (stateless)** để dễ mở rộng. Nhưng AI hội thoại và tác nhân thường cần lưu trạng thái.
+Nhiều API service truyền thống cố stateless để scale dễ. Nhưng conversational AI và agent thường cần state.
 
-Trạng thái có thể nằm ở:
+State có thể nằm ở:
 
-- lịch sử hội thoại;
-- cơ sở dữ liệu bên ngoài;
-- bộ nhớ vector;
-- máy trạng thái của luồng công việc;
-- nhật ký thực thi công cụ;
-- kho hồ sơ người dùng.
+- conversation history;
+- external database;
+- vector memory;
+- workflow state machine;
+- tool execution log;
+- user/profile store.
 
-Không nên mặc định nhét mọi trạng thái vào lời nhắc. Cửa sổ ngữ cảnh có chi phí, giới hạn dung lượng và có thể chứa thông tin cũ hoặc không liên quan. Thiết kế thực tế cần phân biệt đâu là **ngữ cảnh tạm thời (transient context)** và đâu là **trạng thái bền vững (persistent state)**.
+Không nên mặc định nhét mọi state vào prompt. Context window có cost, giới hạn capacity và có thể chứa stale/irrelevant information. Production design cần quyết định cái gì là transient context, cái gì là persistent state.
 
-## Lớp truy xuất (retrieval layer)
+## Retrieval Layer
 
-**Sinh tăng cường bằng truy xuất (Retrieval-Augmented Generation - RAG)** bổ sung tri thức bên ngoài trước khi suy luận:
+Retrieval-Augmented Generation (RAG) thêm external knowledge trước inference:
 
 ```text
-truy vấn
-→ biến đổi truy vấn / tạo embedding
-→ truy xuất
-→ xếp hạng / xếp hạng lại
-→ xây ngữ cảnh
-→ sinh câu trả lời
+query
+→ query transformation / embedding
+→ retrieval
+→ ranking / reranking
+→ context construction
+→ generation
 ```
 
-Điểm quan trọng: RAG không chỉ là “cơ sở dữ liệu vector + LLM”. Chất lượng truy xuất phụ thuộc vào cách chia đoạn, lập chỉ mục, lọc metadata, biểu diễn truy vấn, xếp hạng và cách lắp ráp ngữ cảnh.
+Điểm quan trọng: RAG không phải “vector DB + LLM”. Retrieval quality phụ thuộc chunking, indexing, metadata filter, query representation, ranking và context assembly.
 
-Nếu bộ truy xuất không lấy đúng bằng chứng, mô hình sinh rất khó tạo câu trả lời bám đúng nguồn.
+Nếu retriever không lấy đúng evidence, generator khó tạo answer grounded đúng.
 
-## Lớp công cụ (tool layer)
+## Tool Layer
 
-Sử dụng công cụ cho phép hệ thống AI tương tác với hệ thống bên ngoài như tìm kiếm, truy vấn cơ sở dữ liệu, CRM, máy tính, môi trường thực thi mã hoặc API nội bộ.
+Tool use cho phép AI system tương tác với external systems: search, database query, CRM, calculator, code execution hoặc internal APIs.
 
-Một công cụ nên có **hợp đồng rõ ràng (tool contract)**:
+Một tool nên có contract rõ:
 
 ```json
 {
@@ -140,177 +140,177 @@ Một công cụ nên có **hợp đồng rõ ràng (tool contract)**:
 }
 ```
 
-Nhưng lược đồ chỉ là bước đầu. Hệ thống còn phải phân quyền hành động, kiểm tra tham số, giới hạn tác động phụ, thử lại có kiểm soát và ghi dấu vết kiểm toán.
+Nhưng schema chỉ là bước đầu. System cần authorize action, validate arguments, limit side effects, retry có kiểm soát và record audit trail.
 
-Đặc biệt cần phân biệt **công cụ đọc (read tool)** và **công cụ ghi (write tool)**. Sai khi đọc có thể tạo câu trả lời tệ; sai khi ghi có thể thay đổi dữ liệu thật.
+Đặc biệt phải phân biệt **read tool** và **write tool**. Sai khi đọc có thể tạo answer tệ; sai khi write có thể thay đổi dữ liệu thật.
 
-## Lớp điều phối (orchestration layer)
+## Orchestration Layer
 
-Bộ điều phối quyết định thứ tự tương tác giữa mô hình, truy xuất và công cụ. Ba mẫu thiết kế phổ biến là:
-
-```text
-luồng công việc xác định
-luồng công việc do LLM định tuyến
-vòng lặp tác nhân
-```
-
-Luồng công việc xác định phù hợp khi quy trình đã rõ. Định tuyến bằng LLM phù hợp khi cần phân loại ngữ nghĩa để chọn nhánh. Vòng lặp tác nhân phù hợp khi chuỗi hành động khó biết trước và cần thích nghi theo kết quả trung gian.
-
-Một sai lầm phổ biến là dùng tác nhân cho mọi thứ. Mức tự chủ càng cao thì không gian tìm kiếm càng lớn và việc kiểm thử càng khó. Nếu luồng nghiệp vụ đã xác định, luồng công việc thường đáng tin cậy hơn.
-
-## Hàng rào an toàn và kiểm tra hợp lệ
-
-**Hàng rào an toàn (guardrail)** không phải một lớp thần kỳ có thể “chặn mọi lỗi AI”. Độ tin cậy thường đến từ nhiều lớp:
+Orchestrator quyết định sequence giữa model, retrieval và tools. Có ba pattern phổ biến:
 
 ```text
-kiểm tra đầu vào
-kiểm tra quyền
-ràng buộc lời nhắc / chính sách
-lược đồ đầu ra có cấu trúc
-kiểm tra nội dung
-kiểm tra quy tắc nghiệp vụ
-phê duyệt của con người cho hành động rủi ro cao
+Deterministic workflow
+LLM-routed workflow
+Agentic loop
 ```
 
-Ví dụ, nếu mô hình sinh SQL, không nên thực thi trực tiếp bất kỳ chuỗi SQL nào nó tạo ra. Hệ thống có thể giới hạn chỉ đọc, phân tích cây cú pháp (AST), áp dụng danh sách bảng được phép và thực thi quyền ở mức hàng dữ liệu.
+Deterministic workflow phù hợp khi process rõ. LLM routing phù hợp khi cần semantic classification/chọn branch. Agentic loop phù hợp khi sequence action khó biết trước và cần adapt dựa vào intermediate result.
 
-## Khả năng quan sát (observability)
+Một sai lầm phổ biến là dùng agent cho mọi thứ. More autonomy làm search space lớn hơn và khó test hơn. Nếu business flow đã xác định, workflow thường reliable hơn.
 
-Hệ thống truyền thống thường theo dõi CPU, bộ nhớ, tỷ lệ lỗi và độ trễ. Hệ thống AI cần thêm các tín hiệu đặc thù:
+## Guardrails và Validation
+
+Guardrail không phải một layer thần kỳ “chặn AI sai”. Reliability thường cần nhiều lớp:
 
 ```text
-phiên bản lời nhắc / ngữ cảnh
-mô hình / phiên bản mô hình
-tài liệu đã truy xuất
-số token đầu vào / đầu ra
-lần gọi công cụ
-độ trễ từng giai đoạn
-chi phí
-phản hồi người dùng
-điểm đánh giá
-phân loại lỗi
+input validation
+permission check
+prompt / policy constraints
+structured output schema
+content validation
+business-rule validation
+human approval for high-impact action
 ```
 
-Với tác nhân, dấu vết thực thi (trace) từng bước đặc biệt quan trọng vì kết quả cuối sai có thể do lập kế hoạch, truy xuất, kết quả công cụ hoặc cập nhật trạng thái.
+Ví dụ model sinh SQL thì không nên execute trực tiếp string bất kỳ. Có thể giới hạn read-only query, parse AST, enforce table allowlist và apply row-level permission.
 
-## Đánh giá như một hệ thống con
+## Observability
 
-Đầu ra AI thường không hoàn toàn xác định và không phải lúc nào cũng có một chuỗi đáp án chính xác duy nhất. Vì vậy đánh giá cần nhiều tầng:
-
-- kiểm thử đơn vị xác định cho mã và quy tắc nghiệp vụ;
-- tập dữ liệu chuẩn nội bộ (golden dataset) cho hành vi mong muốn;
-- chỉ số theo nhiệm vụ;
-- đánh giá của con người;
-- bộ đánh giá dựa trên mô hình khi phù hợp;
-- thử nghiệm A/B trực tuyến hoặc chỉ số kinh doanh.
-
-Không nên thay kiểm thử đơn vị bằng bộ đánh giá LLM. Mỗi loại kiểm thử phù hợp với một kiểu lỗi khác nhau.
-
-## Độ trễ, thông lượng và chi phí
-
-Kiến trúc AI luôn bị ràng buộc bởi tài nguyên.
-
-Nếu một luồng gọi mô hình 5 lần tuần tự, độ trễ gần bằng tổng độ trễ của từng lần gọi. Nếu các lời gọi độc lập có thể chạy song song, đường tới hạn (critical path) sẽ ngắn hơn.
-
-Bộ nhớ đệm (caching) có thể giảm chi phí nhưng cần khóa cache và chính sách làm mới đúng. Gom lô (batching) tăng hiệu suất GPU nhưng có thể làm tăng thời gian chờ. Mô hình nhỏ có thể đủ cho phân loại hoặc định tuyến, trong khi mô hình mạnh hơn chỉ dành cho nhiệm vụ suy luận khó.
-
-Vì vậy kiến trúc thực tế thường **không đồng nhất (heterogeneous)** thay vì dùng một mô hình cho tất cả công việc.
-
-## Phương án dự phòng và suy giảm có kiểm soát
-
-Hệ thống AI phải giả định rằng thành phần sẽ có lúc thất bại.
-
-Bộ truy xuất có thể hết thời gian chờ. API mô hình có thể bị giới hạn tần suất. Công cụ có thể đổi lược đồ. Đầu ra có thể không phân tích được.
-
-Các chiến lược dự phòng gồm:
+Traditional system quan sát CPU, memory, error rate và latency. AI system cần thêm model-specific signals:
 
 ```text
-thử lại theo chính sách giới hạn
-chuyển sang mô hình dự phòng
-trả kết quả một phần
-chuyển sang luồng xác định
-yêu cầu con người kiểm tra
-từ chối thực thi khi hành động nhạy cảm
+prompt/context version
+model/version
+retrieved documents
+input/output tokens
+tool calls
+latency per stage
+cost
+user feedback
+evaluation scores
+failure category
 ```
 
-**Từ chối mặc định khi không chắc (fail closed)** đặc biệt quan trọng với hành động có ảnh hưởng an ninh: nếu quyền truy cập không xác định chắc chắn, hệ thống không được thực thi.
+Đối với agent, trace từng step cực quan trọng vì final answer sai có thể do planning, retrieval, tool result hoặc state update.
 
-## Ranh giới bảo mật
+## Evaluation như một subsystem
 
-Lời nhắc không phải ranh giới bảo mật. Nếu người dùng viết “hãy bỏ qua quy tắc trước”, hệ thống không thể dựa vào việc mô hình “tự nhớ chính sách” để bảo vệ cơ sở dữ liệu.
+AI output thường không deterministic và không có exact expected string. Vì vậy evaluation cần nhiều tầng:
 
-Ranh giới bảo mật phải nằm ở hạ tầng xác định:
+- deterministic unit test cho code/business rule;
+- golden dataset cho expected behavior;
+- task-specific metrics;
+- human review;
+- model-based evaluator khi phù hợp;
+- online A/B hoặc business metrics.
+
+Không nên thay unit test bằng LLM evaluator. Mỗi loại test phù hợp một failure mode khác nhau.
+
+## Latency, Throughput và Cost
+
+AI architecture luôn có resource constraints.
+
+Nếu một pipeline gọi model 5 lần tuần tự, latency gần bằng tổng latency của từng call. Nếu có thể chạy independent calls song song, critical path giảm.
+
+Caching có thể giảm cost nhưng cần cache key đúng và invalidation policy. Batching tăng GPU utilization nhưng có thể tăng waiting latency. Model nhỏ hơn có thể đủ cho classification/routing, trong khi model mạnh hơn dùng cho difficult reasoning.
+
+Do đó production architecture thường heterogeneous thay vì “một model làm tất cả”.
+
+## Fallback và Graceful Degradation
+
+AI system cần giả định component sẽ fail.
+
+Retriever có thể timeout. Model API có thể rate-limit. Tool có thể trả schema mới. Output có thể không parse được.
+
+Fallback strategy có thể là:
 
 ```text
-xác thực
-phân quyền
-chính sách mạng
-quyền của công cụ
-quyền cơ sở dữ liệu
-quản lý bí mật
-nhật ký kiểm toán
+retry with bounded policy
+fallback model
+return partial result
+switch to deterministic path
+ask human review
+fail closed for sensitive action
 ```
 
-Mô hình chỉ nên được cấp **quyền tối thiểu cần thiết (least privilege)**.
+`Fail closed` quan trọng với action có security impact: nếu permission check không chắc, không execute.
 
-## Ví dụ: trợ lý tri thức nội bộ
+## Security Boundary
 
-Một kiến trúc thực tế có thể là:
+Prompt không phải security boundary. Nếu user prompt nói “hãy bỏ qua rule trước”, system không nên dựa vào model “tự nhớ policy” để bảo vệ database.
+
+Security phải nằm ở deterministic infrastructure:
 
 ```text
-Câu hỏi người dùng
-→ Xác thực
-→ Phân loại truy vấn
-→ Lọc metadata theo phòng ban
-→ Truy xuất lai
-→ Xếp hạng lại
-→ Xây ngữ cảnh
-→ LLM sinh câu trả lời
-→ Kiểm tra trích dẫn
-→ Phản hồi
-→ Ghi trace + feedback
+Authentication
+Authorization
+Network policy
+Tool permission
+Database permission
+Secrets management
+Audit log
 ```
 
-Nếu câu trả lời sai, cần điều tra cả luồng thay vì chỉ thay lời nhắc:
+Model chỉ nên được cấp minimum capability cần thiết.
+
+## Example: Internal Knowledge Assistant
+
+Một architecture thực tế:
 
 ```text
-Truy vấn có được hiểu đúng không?
-Tài liệu đúng đã được lập chỉ mục chưa?
-Tài liệu đó có được truy xuất không?
-Nó có được xếp đủ cao không?
-Đoạn liên quan có được đưa vào ngữ cảnh không?
-Mô hình có sử dụng bằng chứng không?
-Trích dẫn có được gắn đúng không?
+User Question
+→ Auth
+→ Query classification
+→ Department metadata filter
+→ Hybrid retrieval
+→ Reranking
+→ Context builder
+→ LLM generation
+→ Citation verification
+→ Response
+→ Trace + feedback
 ```
 
-Đây là **tư duy hệ thống (system thinking)**.
+Nếu answer sai, investigation đi theo pipeline thay vì chỉ đổi prompt:
 
-## Mô hình tư duy (mental model)
+```text
+Was query understood?
+Was the correct document indexed?
+Was it retrieved?
+Was it ranked high enough?
+Was relevant chunk included?
+Did model use the evidence?
+Was citation attached correctly?
+```
 
-> **Hệ thống AI = Hệ thống phần mềm + Hệ thống dữ liệu + Mô hình + Vòng phản hồi/đánh giá.**
+Đây là system thinking.
 
-Nếu chỉ tối ưu điểm benchmark của mô hình mà bỏ qua ba phần còn lại, hệ thống khó có thể sẵn sàng cho môi trường vận hành thực tế.
+## Mental Model
 
-## Các hiểu lầm thường gặp
+> **AI system = Software System + Data System + Model + Feedback/Evaluation Loop.**
 
-### “Đổi sang mô hình mạnh hơn sẽ sửa được hệ thống”
+Nếu chỉ optimize model benchmark mà bỏ qua ba phần còn lại, system khó production-ready.
 
-Mô hình tốt hơn có thể tăng năng lực nhưng không sửa được dữ liệu cũ, phân quyền sai, truy xuất kém, hợp đồng công cụ sai hoặc thiếu khả năng quan sát.
+## Common Misconceptions
 
-### “Prompt engineering chính là kiến trúc hệ thống”
+### “Đổi sang model mạnh hơn sẽ sửa system”
 
-Kỹ thuật lời nhắc (prompt engineering) chỉ là một lớp cấu hình/đầu vào. Kiến trúc còn bao gồm ranh giới thành phần, luồng dữ liệu, trạng thái, độ tin cậy và bảo mật.
+Model tốt hơn có thể tăng capability nhưng không sửa stale data, broken permission, bad retrieval, tool contract sai hoặc missing observability.
 
-### “RAG làm mô hình luôn đúng sự thật”
+### “Prompt engineering là architecture”
 
-RAG chỉ cung cấp bằng chứng. Truy xuất có thể sai và mô hình sinh vẫn có thể bỏ qua hoặc diễn giải sai bằng chứng.
+Prompt là một configuration/input layer. Architecture bao gồm component boundary, data flow, state, reliability và security.
 
-### “Tác nhân càng tự do càng thông minh”
+### “RAG làm model luôn factual”
 
-Tự chủ cao tăng tính linh hoạt nhưng cũng tăng số đường dẫn có thể thất bại. Độ tin cậy thường đến từ việc giới hạn không gian hành động và dùng hợp đồng tường minh.
+RAG chỉ cung cấp evidence. Retrieval có thể sai và generator vẫn có thể bỏ qua hoặc diễn giải sai evidence.
 
-## Liên kết kiến thức
+### “Agent càng tự do càng thông minh”
 
-Chapter này nối AI với thiết kế API, hệ thống phân tán, cơ sở dữ liệu, an ninh, khả năng quan sát, hạ tầng đám mây và kiểm thử phần mềm. Khi đi sâu vào RAG, tác nhân, MLOps và LLMOps, ta sẽ quay lại kiến trúc này và mở từng thành phần thành một miền kiến thức riêng.
+Autonomy tăng flexibility nhưng cũng tăng số failure paths. Reliability thường đến từ việc giới hạn action space và explicit contracts.
 
-Xem tiếp: [AI, Học máy, Học sâu và AI tạo sinh khác nhau thế nào?](./05_ai_vs_ml_vs_dl_vs_generative_ai.md).
+## Knowledge Connection
+
+Chapter này nối AI với API Design, Distributed Systems, Database, Security, Observability, Cloud Infrastructure và Software Testing. Khi đi sâu vào RAG, Agent, MLOps và LLMOps, ta sẽ quay lại architecture này và mở từng component thành một domain riêng.
+
+Xem tiếp: [AI vs ML vs DL vs Generative AI](./05_ai_vs_ml_vs_dl_vs_generative_ai.md).

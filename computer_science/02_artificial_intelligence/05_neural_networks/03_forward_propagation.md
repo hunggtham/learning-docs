@@ -1,10 +1,10 @@
-# Lan truyền tiến và đồ thị tính toán
+# Forward Propagation và Computational Graph
 
-**Lan truyền tiến (Forward Propagation / 순전파)** là quá trình đưa đầu vào đi qua đồ thị tính toán để tạo prediction và loss. Nghe có vẻ đơn giản như “chạy mô hình”, nhưng hiểu forward pass ở mức shape tensor, giá trị trung gian và dependency trong graph là điều kiện cần để hiểu backpropagation, chi phí bộ nhớ và cách debug Neural Network.
+Forward Propagation (순전파 / lan truyền xuôi) là quá trình đưa input qua computation graph để tạo prediction và loss. Nghe có vẻ trivial — “chạy model” — nhưng hiểu forward pass ở mức tensor shapes, intermediate values và graph dependencies là prerequisite để hiểu backpropagation, memory cost và debugging neural networks.
 
 ## Forward pass của một MLP
 
-Với đầu vào `x`:
+Với input `x`:
 
 \[
 z^{(1)}=W^{(1)}x+b^{(1)}
@@ -26,45 +26,45 @@ z^{(2)}=W^{(2)}h^{(1)}+b^{(2)}
 L=Loss(\hat y,y)
 \]
 
-Lan truyền tiến chỉ thực thi các phép toán theo đúng thứ tự phụ thuộc của chúng.
+Forward propagation chỉ evaluate các operations theo dependency order.
 
-## Đồ thị tính toán
+## Computational Graph
 
-Quá trình tính có thể được biểu diễn như một DAG:
+Ta có thể biểu diễn computation như DAG:
 
 ```mermaid
 flowchart LR
-    X[x] --> M1[Nhân ma trận W1]
+    X[x] --> M1[MatMul W1]
     W1[W1] --> M1
     M1 --> A1[+ b1]
     B1[b1] --> A1
-    A1 --> ACT[Hàm kích hoạt]
-    ACT --> M2[Nhân ma trận W2]
+    A1 --> ACT[Activation]
+    ACT --> M2[MatMul W2]
     W2[W2] --> M2
-    M2 --> OUT[Logit / đầu ra]
+    M2 --> OUT[Logits / Output]
     OUT --> LOSS[Loss]
     Y[target] --> LOSS
 ```
 
-Mỗi node là một phép toán; các cạnh mang tensor.
+Mỗi node là operation; edges mang tensors.
 
-Backward pass sau này duyệt graph theo chiều ngược để tích lũy đạo hàm.
+Backward pass sau này traverse graph ngược để accumulate derivatives.
 
-## Shape tensor giống như hệ kiểu của Deep Learning
+## Tensor Shapes là type system của Deep Learning
 
-Giả sử batch đầu vào:
+Giả sử batch:
 
 \[
 X\in\mathbb R^{B\times d_{in}}
 \]
 
-Trọng số:
+Weight:
 
 \[
 W\in\mathbb R^{d_{out}\times d_{in}}
 \]
 
-Nếu framework dùng quy ước:
+Nếu framework convention dùng:
 
 \[
 Z=XW^T+b
@@ -76,100 +76,98 @@ thì:
 Z\in\mathbb R^{B\times d_{out}}
 \]
 
-Shape mismatch là một trong các lỗi implementation phổ biến nhất.
+Shape mismatch là một trong những lỗi implementation phổ biến nhất. Học cách annotate shape giúp reasoning architecture tốt hơn.
 
-Thói quen ghi rõ shape giúp reasoning về kiến trúc tốt hơn.
-
-Trong Transformer thường gặp:
+Ví dụ Transformer thường annotate:
 
 ```text
 B = batch size
 T = sequence length
 D = hidden dimension
-H = số attention head
+H = attention heads
 ```
 
-Hidden tensor có thể có dạng:
+Hidden tensor:
 
 \[
 X\in\mathbb R^{B\times T\times D}
 \]
 
-Khả năng reasoning theo shape dần trở thành một kỹ năng hệ thống, không chỉ kỹ năng toán học.
+Shape reasoning trở thành essential system skill.
 
 ## Broadcasting
 
-Bias `b∈R^{d_out}` thường được broadcast qua batch dimension:
+Bias `b∈R^{d_out}` được broadcast qua batch dimension:
 
 \[
 Z_{ij}=(XW^T)_{ij}+b_j
 \]
 
-Broadcasting rất tiện, nhưng cũng có thể tạo lỗi âm thầm nếu các dimension vô tình khớp theo cách không mong muốn.
+Broadcasting convenient nhưng có thể tạo silent bug nếu shape accidental align sai. Explicit mental model rất quan trọng.
 
-Vì vậy cần luôn hiểu rõ ý nghĩa của từng axis thay vì chỉ thấy code chạy được.
+## Batch processing
 
-## Xử lý theo batch
+Thay vì loop từng sample, matrix/tensor operations xử lý batch song song. Hardware accelerator đạt throughput cao vì dense linear algebra có arithmetic intensity tốt.
 
-Thay vì lặp qua từng sample, các phép toán ma trận và tensor xử lý cả batch song song.
+Batch size ảnh hưởng:
 
-Accelerator đạt throughput cao nhờ dense linear algebra có cường độ tính toán lớn.
+- gradient estimate variance;
+- memory usage;
+- hardware utilization;
+- normalization behavior;
+- training dynamics.
 
-Batch size ảnh hưởng tới variance của gradient, bộ nhớ, mức sử dụng phần cứng, hành vi của normalization và dynamics của training.
+Forward propagation vì vậy không chỉ mathematical mapping mà còn systems computation.
 
-Vì vậy forward propagation không chỉ là một ánh xạ toán học; nó còn là một bài toán thực thi hệ thống.
+## Logits và probabilities
 
-## Logit và xác suất
+Classification head thường output logits `z`, chưa qua softmax/sigmoid.
 
-Classification head thường tạo **logit**, tức score chưa qua sigmoid hoặc softmax.
+Framework loss thường nhận logits trực tiếp để numerical stability.
 
-Loss của framework thường nhận trực tiếp logit để dùng công thức ổn định số.
+Ví dụ multiclass cross-entropy thực hiện log-softmax + negative log likelihood trong stable fused formulation.
 
-Ví dụ multiclass cross-entropy thường kết hợp log-softmax và negative log-likelihood trong một implementation ổn định.
+Inference mới có thể convert logits thành probabilities khi cần.
 
-Chỉ khi inference hoặc downstream logic thật sự cần probability ta mới chuyển logit thành xác suất.
+## Training Mode vs Evaluation Mode
 
-## Training Mode và Evaluation Mode
+Một số layers behavior khác giữa train/eval.
 
-Một số layer có hành vi khác nhau giữa training và evaluation.
+**Dropout** random mask trong training nhưng disabled/rescaled behavior ở inference.
 
-**Dropout** tạo mask ngẫu nhiên trong training nhưng được tắt ở inference.
+**Batch Normalization** dùng batch statistics trong training và running statistics trong evaluation.
 
-**Batch Normalization** dùng thống kê của batch trong training và running statistics khi evaluation.
+Nếu quên `model.eval()` hoặc equivalent, inference result có thể sai/stochastic.
 
-Nếu quên chuyển sang `model.eval()` hoặc cơ chế tương đương, kết quả inference có thể sai hoặc mang tính ngẫu nhiên ngoài ý muốn.
+LayerNorm thường không phụ thuộc batch statistics theo cùng cách.
 
-LayerNorm không phụ thuộc batch statistics theo cùng cách.
+## Intermediate Activations và Memory
 
-## Activation trung gian và bộ nhớ
+Backprop cần nhiều intermediate values từ forward pass để compute gradients. Vì vậy training memory lớn hơn inference.
 
-Backpropagation cần nhiều giá trị trung gian từ forward pass để tính gradient. Vì vậy training thường tốn bộ nhớ hơn inference rất nhiều.
-
-Bộ nhớ training có thể gồm:
+Roughly memory gồm:
 
 ```text
-tham số
-+ gradient
-+ trạng thái optimizer
-+ activation trung gian
+parameters
++ gradients
++ optimizer states
++ activations
 ```
 
-Với sequence dài hoặc batch lớn, activation có thể chiếm phần bộ nhớ rất đáng kể.
+Activation memory có thể dominate với long sequence/large batch.
 
-**Gradient checkpointing / activation recomputation** tiết kiệm memory bằng cách không lưu toàn bộ activation; trong backward pass hệ thống tính lại một phần forward khi cần.
+**Gradient checkpointing / activation recomputation** tiết kiệm memory bằng cách không lưu mọi activation; backward recompute một phần forward. Trade compute for memory.
 
-Đây là sự đánh đổi compute lấy memory.
+## Static vs Dynamic Graph
 
-## Đồ thị tĩnh và đồ thị động
+Frameworks lịch sử khác nhau:
 
-Các framework lịch sử từng khác nhau ở cách xây computation graph:
+- static graph: define graph trước rồi execute;
+- eager/dynamic: operations execute ngay và autograd records graph dynamically.
 
-- **static graph**: định nghĩa graph trước rồi mới chạy;
-- **dynamic/eager graph**: phép toán được thực thi ngay và autograd ghi lại graph động.
+Modern systems thường combine eager developer experience với graph compilation/tracing để optimize kernels.
 
-Hệ thống hiện đại thường kết hợp trải nghiệm eager cho developer với tracing hoặc compilation để tối ưu kernel.
-
-Dù implementation khác nhau, đồ thị tính toán vẫn là mô hình tư duy chung.
+Conceptually computational graph vẫn là mental model chung.
 
 ## Forward pass trong residual network
 
@@ -179,76 +177,76 @@ Residual block:
 y=x+F(x)
 \]
 
-có một đường tắt (skip path) truyền `x` trực tiếp tới output.
+Graph có skip path. Đây không chỉ architectural decoration; backward có gradient path qua identity, giúp deep network train easier.
 
-Đây không chỉ là trang trí kiến trúc. Trong backward pass, gradient cũng có một đường đi trực tiếp qua identity, giúp mạng sâu dễ train hơn.
+Transformer stack phụ thuộc heavily vào residual connections.
 
-Transformer stack phụ thuộc rất mạnh vào residual connection.
+## Determinism
 
-## Tính xác định và tính ngẫu nhiên
+Forward pass có thể stochastic nếu dropout/sampling/noise layers active. GPU kernels cũng có thể nondeterministic tùy operation/backend.
 
-Forward pass có thể mang tính stochastic nếu dropout, sampling hoặc noise layer đang hoạt động.
+Reproducibility cần distinguish:
 
-Ngoài ra một số GPU kernel có thể nondeterministic tùy backend.
+- deterministic model function ở eval;
+- stochastic training;
+- hardware-level nondeterminism.
 
-Khi nói về reproducibility cần phân biệt ba tầng:
+Random seed không luôn đảm bảo bitwise-identical result across hardware/library versions.
 
-- hàm mô hình xác định ở evaluation mode;
-- tính ngẫu nhiên có chủ đích trong training;
-- nondeterminism ở mức phần cứng hoặc kernel.
+## Mixed Precision Forward
 
-Random seed không phải lúc nào cũng bảo đảm kết quả bitwise-identical giữa các hardware hoặc phiên bản library khác nhau.
+FP16/BF16 giảm memory/bandwidth và tăng accelerator throughput. Nhưng một số operations cần higher precision accumulation hoặc stable kernel.
 
-## Forward với Mixed Precision
+Automatic Mixed Precision chọn dtypes per operation. Numerical computation concepts từ previous folder quay lại trực tiếp.
 
-FP16 hoặc BF16 giúp giảm memory bandwidth, giảm dung lượng bộ nhớ và tăng throughput accelerator.
+## Forward Hook / Activation Inspection
 
-Tuy nhiên một số phép toán vẫn cần accumulation ở precision cao hơn hoặc kernel ổn định số hơn.
+Debugging có thể inspect:
 
-**Automatic Mixed Precision (AMP)** tự chọn dtype phù hợp cho từng nhóm operation.
-
-Các khái niệm từ Tính toán số quay lại trực tiếp ở đây.
-
-## Quan sát activation để debug
-
-Có thể inspect các thống kê như:
-
-- mean/std của activation;
+- activation mean/std;
 - min/max;
 - NaN/Inf;
-- tỷ lệ giá trị bằng 0;
-- shape tensor.
+- percentage zeros;
+- tensor shapes.
 
-Nếu activation bùng nổ hoặc biến mất dần theo layer, nguyên nhân có thể đến từ initialization, normalization, learning rate hoặc scale đầu vào.
+Nếu activations explode/vanish qua layers, root cause có thể là initialization, normalization, learning rate hoặc bad input scale.
 
-## Tối ưu đồ thị inference
+## Inference Graph Optimization
 
-Khi deployment, forward graph có thể được tối ưu bằng operator fusion, constant folding, quantization, kernel selection, compilation, batching và KV cache với autoregressive Transformer.
+Deployment có thể optimize forward graph bằng:
 
-Hàm toán học có thể gần như không đổi nhưng cách thực thi hệ thống thay đổi rất lớn về latency và cost.
+- operator fusion;
+- constant folding;
+- quantization;
+- kernel selection;
+- compilation;
+- batching;
+- KV cache cho autoregressive Transformer.
 
-## Mô hình tư duy
+Mathematical function gần tương đương nhưng system execution khác rất nhiều về latency/cost.
 
-> Forward pass là quá trình thực thi một computation graph có tham số. Shape tensor mô tả “kiểu” của dữ liệu, activation là trạng thái trung gian, còn output/loss là điểm cuối để backward pass phân phối tín hiệu trách nhiệm ngược về các tham số.
+## Mental Model
 
-## Các hiểu lầm thường gặp
+> Forward pass là execution của một parameterized computation graph. Tensor shapes mô tả “kiểu” của data; activations là intermediate state; output/loss là endpoint mà backward sẽ dùng để gửi credit/blame ngược graph.
+
+## Common Misconceptions
 
 ### “Forward propagation chỉ là matrix multiplication”
 
-Không. Mô hình hiện đại còn có attention, normalization, gating, convolution, routing, recurrence và nhiều cơ chế khác.
+Modern models còn attention, normalization, gating, convolution, routing, recurrence và control mechanisms.
 
-### “Nên tính probability trước rồi mới tính loss”
+### “Probability nên được tính trước loss”
 
-Về khái niệm có thể hiểu như vậy, nhưng implementation thường truyền logit trực tiếp vào fused loss để ổn định số.
+Về concept có thể, nhưng implementation thường truyền logits vào fused loss để stability.
 
-### “Forward khi train và inference giống hệt nhau”
+### “Train và inference forward giống hệt nhau”
 
-Không. Dropout, BatchNorm, sampling, cache và quantization có thể làm hành vi khác nhau.
+Dropout, BatchNorm, sampling, cache và quantization có thể khác.
 
-### “Bộ nhớ chủ yếu bị chiếm bởi parameters”
+### “Memory chủ yếu là parameters”
 
-Không trong training. Gradient, optimizer state và activation cũng có thể cực kỳ lớn.
+Training còn gradients, optimizer states và activations; activations có thể rất lớn.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
 Forward graph chuẩn bị trực tiếp cho [Backpropagation](./04_backpropagation.md) và [Training Dynamics](./09_deep_learning_training_dynamics.md).

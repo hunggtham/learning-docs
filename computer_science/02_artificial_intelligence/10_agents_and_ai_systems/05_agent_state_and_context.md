@@ -1,125 +1,125 @@
-# Trạng thái và Ngữ cảnh của Agent
+# Agent State và Context
 
-Agent thường thất bại không phải vì mô hình “không đủ thông minh”, mà vì **trạng thái (state / 상태)** và **ngữ cảnh (context / 문맥)** bị trộn thành một khối văn bản khó kiểm soát. Hai khái niệm này liên quan chặt chẽ nhưng không đồng nghĩa.
+Agent thường thất bại không phải vì model “không thông minh”, mà vì **state** và **context** bị trộn thành một khối text khó kiểm soát. Hai khái niệm này liên quan nhưng không đồng nghĩa.
 
-**State** là thông tin mô tả task và hệ thống hiện đang ở đâu. **Context** là tập con thông tin được đưa vào mô hình tại một lần suy luận (inference step).
+**State (상태 / trạng thái)** là information mô tả task/system hiện đang ở đâu. **Context (문맥 / ngữ cảnh)** là subset information được đưa vào model ở một inference step.
 
 ```text
-Trạng thái đã persist — persisted state, source of truth đầy đủ
-          ↓ chọn / retrieve / tóm tắt
-Ngữ cảnh của mô hình — model context, góc nhìn làm việc tạm thời
+Persisted state (full source of truth)
+          ↓ select / retrieve / summarize
+Model context (temporary working view)
           ↓
-Quyết định của mô hình
+Model decision
           ↓
-Cập nhật trạng thái
+State update
 ```
 
-## Trạng thái có cấu trúc
+## Structured State
 
-State nên lưu những dữ liệu cần tính chính xác và khả năng kiểm tra lại:
+State nên lưu những thứ cần correctness:
 
 ```text
 task id
 status
-plan hiện tại
-các bước đã hoàn thành
-resource id
-version
-approval đang chờ
-budget
-retry counter
-kết quả verification
+current plan
+completed steps
+resource ids
+versions
+pending approvals
+budgets
+retry counters
+verification results
 ```
 
-Những dữ liệu này thường phù hợp với JSON, database hoặc state store hơn một transcript dạng prose.
+Những dữ liệu này phù hợp JSON/DB hơn prose transcript.
 
 ## Context Window
 
-**Cửa sổ ngữ cảnh (context window)** gồm các token mà mô hình nhìn thấy trong một lần gọi:
+Context window gồm token model thấy tại một call:
 
-- system/developer instruction;
-- mục tiêu của user;
-- phần state được chọn;
-- document hoặc memory được retrieve;
-- tool schema;
-- observation gần đây;
-- các message trước nếu thật sự cần.
+- system/developer instructions;
+- user goal;
+- selected state;
+- retrieved docs/memory;
+- tool schemas;
+- recent observations;
+- previous messages nếu cần.
 
-Context là tài nguyên hữu hạn. Thêm nhiều thông tin không đồng nghĩa chất lượng quyết định sẽ tốt hơn.
+Context là scarce resource. Thêm nhiều không đồng nghĩa tốt hơn.
 
-## Lựa chọn Context
+## Context Selection
 
-Context engineering cần trả lời câu hỏi:
+Context engineering hỏi:
 
-> Với quyết định hiện tại, mô hình thực sự cần biết những gì?
+> Với decision hiện tại, model cần biết chính xác gì?
 
-Ví dụ agent đang chạy lại test không cần nhận toàn bộ 200 trang tài liệu sản phẩm. Context được giới hạn đúng phạm vi giúp giảm chi phí token và giảm nhiễu.
+Ví dụ agent đang rerun test không cần toàn bộ 200 trang product docs. Scoped context giảm cost và distraction.
 
 ## Source of Truth
 
-Không nên coi context của mô hình là **nguồn dữ liệu chuẩn (source of truth)** cho trạng thái bên ngoài có thể thay đổi.
+Không nên coi model context là source of truth cho mutable external state.
 
-Nếu record trong database đã đổi version sau khi agent đọc, context hiện tại đã lỗi thời. Trước một thao tác ghi quan trọng, runtime nên đọc lại resource hoặc kiểm tra version.
+Nếu database record version thay đổi sau khi agent đọc, context đã stale. Trước critical write cần refetch/version check.
 
-## Chuyển đổi trạng thái
+## State Transition
 
-Agent runtime có thể được mô hình hóa bằng phép chuyển trạng thái:
+Agent runtime có transition:
 
 \[
 s_{t+1}=T(s_t,a_t,o_{t+1})
 \]
 
-Trong đó `a_t` là action và `o_{t+1}` là observation mới. Với software agent, hàm `T` thường được thực thi bằng application code có tính xác định thay vì để LLM tự sửa state trực tiếp.
+`a_t` là action, `o_{t+1}` là observation. Với software agent, `T` thường do deterministic application code implement.
 
-Mô hình có thể đề xuất state update, nhưng transition được persist nên qua validation.
+Model có thể đề xuất update nhưng persisted transition nên validate.
 
-## Lịch sử hội thoại
+## Conversation History
 
-Conversation history là bằng chứng về quá trình tương tác, nhưng không phải cách biểu diễn state lý tưởng.
+Conversation history là evidence về interaction, không phải ideal state representation.
 
-Ví dụ user đã approve một thao tác ở message thứ 42. Thay vì mỗi lần lại đưa 42 message vào context, runtime có thể persist:
+Ví dụ user đã approve action ở message 42. Thay vì mỗi lần đưa 42 messages vào context, runtime có thể persist:
 
 ```json
 {"approval":"granted","scope":"deploy-staging","approved_at":"..."}
 ```
 
-Sự kiện gốc vẫn được giữ riêng trong audit log để truy vết.
+và giữ original audit event riêng.
 
-## Nén Context
+## Context Compression
 
-Khi lịch sử dài, hệ thống có thể:
+Khi history dài, có thể:
 
-- tóm tắt;
-- giữ một cửa sổ message gần nhất;
-- retrieve những turn có liên quan;
-- trích xuất fact có cấu trúc;
-- chuyển artifact lớn sang external storage.
+- summarize;
+- keep recent window;
+- retrieve relevant turns;
+- extract structured facts;
+- move large artifacts ra external storage.
 
-Compression phải giữ lại những chi tiết ảnh hưởng quyết định. Một summary không nên làm mất exception, constraint hoặc approval quan trọng.
+Compression cần preserve decision-critical details. Summary không nên xóa exception hoặc constraints.
 
 ## Lost-in-the-Middle
 
-Ngay cả khi mô hình hỗ trợ context dài, thông tin liên quan nằm ở vị trí bất lợi trong chuỗi vẫn có thể được sử dụng kém hiệu quả hơn. Vì vậy cách tổ chức context rất quan trọng:
+Ngay cả model context dài, relevant information ở vị trí bất lợi có thể được sử dụng kém hơn. Context organization quan trọng:
 
 ```text
-policy / goal
-→ state hiện tại quan trọng nhất
-→ evidence liên quan
-→ tool definition
-→ background ít quan trọng
+policy/goal
+→ critical current state
+→ relevant evidence
+→ tool definitions
+→ noncritical background
 ```
 
-Không nên dump dữ liệu vào prompt theo thứ tự ngẫu nhiên của pipeline.
+Không nên dump data theo thứ tự tình cờ.
 
-## Cô lập Context
+## Context Isolation
 
-Subtask hoặc subagent chỉ nên nhận lượng context tối thiểu cần thiết. Điều này vừa giảm token cost vừa giảm nguy cơ rò rỉ dữ liệu.
+Subtasks/subagents nên nhận context minimum necessary. Điều này vừa giảm token cost vừa giảm data leakage.
 
-Trong hệ thống nhiều tenant, authorization phải được enforce trước retrieval; không nên dựa vào instruction kiểu “không được tiết lộ dữ liệu của user khác”.
+Multi-tenant systems cần enforce authorization trước retrieval, không rely on model instruction “không được tiết lộ”.
 
 ## Context và Prompt Injection
 
-Nội dung được retrieve hoặc tool result nên được xem là dữ liệu không đáng tin cậy mặc định. Context cần duy trì ranh giới độ tin cậy:
+Retrieved content/tool result là untrusted data. Context cần preserve trust boundary:
 
 ```text
 Trusted policy
@@ -127,62 +127,58 @@ Trusted task state
 Untrusted external content
 ```
 
-Prompt formatting chỉ giúp mô hình phân biệt các vùng dữ liệu. Quyền thực thi thật sự vẫn phải nằm trong runtime và permission system.
+Model prompt formatting chỉ hỗ trợ; actual permissions vẫn nằm ở runtime.
 
-## Versioning cho State
+## State Versioning
 
-Resource có thể thay đổi nên có version, revision hoặc ETag.
+Mutable resource nên có version/ETag.
 
-Một pattern an toàn:
+Pattern:
 
 ```text
-đọc resource ở version 7
-mô hình đề xuất update
-chỉ ghi nếu resource vẫn là version 7
+read resource version 7
+model proposes update
+write only if version still 7
 ```
 
-Nếu resource đã thành version 8, runtime trả conflict để agent đọc lại rồi quyết định tiếp.
-
-Đây là cách áp dụng **optimistic concurrency control** vào agent system.
+Nếu đã thành version 8, return conflict để agent refetch/reason.
 
 ## Context Caching
 
-Các prefix ổn định như policy hoặc tool schema có thể được cache để giảm chi phí prefill. Tuy nhiên cache phải gắn với version; khi instruction hoặc tool definition thay đổi, cache cũ không được tiếp tục dùng một cách im lặng.
+Stable prefix như policy/tool schemas có thể cache để giảm inference cost. Nhưng cache invalidation cần versioning khi instructions/tool definitions thay đổi.
 
 ## State Machine
 
-Một **máy trạng thái (state machine)** tường minh giúp hành vi agent dễ quan sát hơn:
+Explicit state machine làm behavior observable:
 
 ```mermaid
 stateDiagram-v2
     [*] --> Planning
     Planning --> Executing
     Executing --> Verifying
-    Verifying --> Executing: chưa hoàn thành
-    Verifying --> AwaitingApproval: hành động rủi ro
-    AwaitingApproval --> Executing: đã được duyệt
-    Verifying --> Done: thành công
-    Executing --> Failed: lỗi không thể phục hồi
+    Verifying --> Executing: incomplete
+    Verifying --> AwaitingApproval: risky action
+    AwaitingApproval --> Executing: approved
+    Verifying --> Done: success
+    Executing --> Failed: unrecoverable
 ```
 
-State machine cũng giúp retry, resume và audit rõ hơn so với việc chỉ lưu transcript.
+## Context Budgeting
 
-## Phân bổ Context Budget
-
-Có thể chủ động chia token budget, ví dụ:
+Một simple token budget:
 
 ```text
 20% policy + task
-30% current state + observation
+30% current state/observations
 40% retrieved evidence
-10% khoảng trống cho output
+10% output headroom
 ```
 
-Không có tỷ lệ nào phù hợp cho mọi hệ thống. Ý chính là context phải được phân bổ có chủ đích thay vì lấp đầy đến giới hạn.
+Không có tỷ lệ universal; idea là allocate intentionally.
 
-## Tham chiếu Artifact
+## Artifact References
 
-File lớn không nên được copy toàn bộ vào mọi model call. Tốt hơn là persist artifact rồi truyền:
+Large file không nên copy toàn bộ vào every call. Persist artifact rồi pass:
 
 ```text
 artifact_id
@@ -190,30 +186,30 @@ summary
 relevant excerpts
 ```
 
-Khi cần thêm chi tiết, agent có thể yêu cầu đọc đúng range hoặc section tương ứng.
+Model request additional ranges khi cần.
 
-## Mô hình tư duy
+## Mental Model
 
-> **State là mô hình thế giới đã được persist; context là khung hình mà mô hình được nhìn thấy tại một thời điểm.**
+> **State là world model được persisted; context là camera frame model được nhìn thấy ở một thời điểm.**
 
-Khung hình không phải toàn bộ thế giới, và thay đổi khung hình không đồng nghĩa thay đổi source of truth.
+Camera frame không phải toàn bộ world.
 
-## Những nhầm lẫn thường gặp
+## Common Misconceptions
 
-### “Context window đủ lớn thì không cần state store”
+### “Nếu context window đủ lớn thì không cần state store”
 
-Không đúng. Context window không cung cấp transaction, durability, exact query, authorization hay versioning.
+Không. Context không cung cấp transaction, durability, exact query, authorization hay versioning.
 
-### “Lưu toàn bộ chat là cách an toàn nhất”
+### “Lưu toàn bộ chat là an toàn nhất”
 
-Raw history chứa nhiễu, instruction lỗi thời và rủi ro bảo mật. Structured state kết hợp audit log thường đáng tin hơn.
+Raw history có noise, stale instructions và security risk. Structured state + audit log thường tốt hơn.
 
 ### “Summary luôn thay thế được source data”
 
-Không. Summary là biểu diễn mất mát; evidence quan trọng vẫn cần provenance hoặc reference về dữ liệu gốc.
+Summary lossy; critical evidence cần provenance/reference.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-State và context nối trực tiếp với database design, distributed systems, context engineering và memory. Phần tiếp theo phân biệt workflow có control flow xác định với hệ thống agentic cho mô hình quyền chọn bước tiếp theo.
+State/context nối database design, distributed systems, context engineering và memory. Tiếp theo ta phân biệt deterministic workflow với truly agentic control.
 
-Xem tiếp: [Workflow và Agent](./06_workflows_vs_agents.md).
+Xem tiếp: [Workflows vs Agents](./06_workflows_vs_agents.md).

@@ -1,300 +1,320 @@
-# Tìm kiếm không dùng heuristic: BFS, DFS, UCS và các chiến lược nền tảng
+# Uninformed Search: BFS, DFS, UCS và các chiến lược nền tảng
 
-**Tìm kiếm không dùng heuristic (Uninformed Search / 무정보 탐색)** giải bài toán chỉ dựa trên đặc tả bài toán: trạng thái ban đầu, hành động, phép chuyển, mục tiêu và chi phí đường đi. Thuật toán không có ước lượng theo miền để biết trạng thái nào “gần mục tiêu hơn”.
+**Uninformed Search (무정보 탐색 / tìm kiếm không dùng heuristic)** giải bài toán chỉ bằng problem definition: initial state, actions, transition, goal và path cost. Algorithm không có domain-specific estimate cho biết state nào “gần goal hơn”.
 
-Điều này không làm nhóm thuật toán này trở nên lỗi thời. Chúng là đường cơ sở giúp hiểu rõ đánh đổi giữa tính đầy đủ, tính tối ưu, thời gian và bộ nhớ. Các thuật toán có heuristic như A* chỉ thực sự dễ hiểu khi ta thấy điều gì xảy ra nếu hoàn toàn không có heuristic.
+Điều này không làm uninformed search trở nên lỗi thời. Nó là baseline giúp ta hiểu rõ trade-off giữa completeness, optimality, time và memory. Heuristic search như A* chỉ thực sự dễ hiểu khi ta thấy điều gì xảy ra nếu không có heuristic.
 
-Xem trước: [Không gian trạng thái và tìm kiếm](./00_state_space_and_search.md).
+Xem trước: [State Space and Search](./00_state_space_and_search.md).
 
-## Một phép trừu tượng chung
+## Một abstraction chung
 
-Mọi chiến lược đều có biên tìm kiếm, nhưng khác cách lấy nút tiếp theo:
+Mọi strategy đều có frontier, nhưng khác cách lấy node:
 
 ```text
-BFS → hàng đợi FIFO
-DFS → ngăn xếp LIFO
-UCS → hàng đợi ưu tiên theo g(n)
-Tìm kiếm giới hạn độ sâu → DFS + giới hạn độ sâu
-Đào sâu lặp → lặp lại DFS có giới hạn độ sâu
-Tìm kiếm hai chiều → hai phía tìm và gặp nhau
+BFS → queue FIFO
+DFS → stack LIFO
+UCS → priority queue by g(n)
+Depth-limited → DFS + depth bound
+Iterative deepening → repeated depth-limited DFS
+Bidirectional → two searches meeting
 ```
 
-Các thuộc tính của thuật toán phụ thuộc vào giả định về hệ số phân nhánh, độ sâu mục tiêu và chi phí cạnh.
+Các properties phụ thuộc assumptions về branching, goal depth và edge cost.
 
-## Tìm kiếm theo chiều rộng
+## Breadth-First Search
 
-**Tìm kiếm theo chiều rộng (Breadth-First Search - BFS / 너비 우선 탐색)** mở rộng nút theo độ sâu tăng dần.
+Breadth-First Search (BFS / 너비 우선 탐색) expand nodes theo depth tăng dần.
 
-Nếu biên là hàng đợi FIFO:
+Nếu frontier là FIFO queue:
 
 ```pseudo
-hàng_đợi ← [bắt_đầu]
-đã_thăm ← {bắt_đầu}
+queue ← [start]
+visited ← {start}
 
-while hàng_đợi không rỗng:
-    n ← lấy_đầu(hàng_đợi)
-    if mục_tiêu(n): return đường_đi(n)
+while queue not empty:
+    n ← pop_front(queue)
+    if goal(n): return path(n)
 
-    for s in các_nút_kế(n):
-        if s chưa có trong đã_thăm:
-            đã_thăm.add(s)
-            hàng_đợi.thêm_cuối(s)
+    for s in successors(n):
+        if s not in visited:
+            visited.add(s)
+            queue.push_back(s)
 ```
 
-BFS khám phá toàn bộ trạng thái ở độ sâu 0, sau đó độ sâu 1, độ sâu 2 và tiếp tục như vậy.
+BFS first explores all states depth 0, rồi depth 1, depth 2...
 
-### Khi nào BFS tối ưu?
+### Khi nào BFS optimal?
 
-Nếu mọi bước có cùng chi phí, đường có ít bước nhất cũng là đường có chi phí thấp nhất. Khi đó BFS tối ưu.
+Nếu mọi step có cùng cost, shortest depth cũng là lowest path cost. Khi đó BFS optimal.
 
-Nếu chi phí cạnh khác nhau, đường nông hơn có thể đắt hơn đường sâu hơn. Lúc đó BFS không bảo đảm tối ưu theo chi phí.
+Nếu edge costs khác nhau, shallowest path có thể đắt hơn path sâu hơn. Lúc đó BFS không guarantee cost-optimal.
 
-### Độ phức tạp
+### Complexity
 
-Với hệ số phân nhánh `b` và độ sâu của mục tiêu nông nhất `d`, thời gian và bộ nhớ trong trường hợp xấu thường tăng theo cấp số nhân:
+Với branching factor `b` và shallowest goal depth `d`, worst-case time/memory thường exponential:
 
 \[
 O(b^d)
 \]
 
-Điểm yếu lớn của BFS là bộ nhớ vì phải giữ gần như toàn bộ biên của một tầng.
+Memory là weakness lớn: BFS phải giữ frontier của whole level.
 
-## Tìm kiếm theo chiều sâu
+### Ví dụ
 
-**Tìm kiếm theo chiều sâu (Depth-First Search - DFS / 깊이 우선 탐색)** đi sâu vào một nhánh trước khi quay lui.
+Graph:
 
-Có thể triển khai bằng ngăn xếp hoặc đệ quy:
-
-```pseudo
-ngăn_xếp ← [bắt_đầu]
-đã_thăm ← tập_rỗng()
-
-while ngăn_xếp không rỗng:
-    n ← pop(ngăn_xếp)
-    if n in đã_thăm: continue
-    đã_thăm.add(n)
-
-    if mục_tiêu(n): return đường_đi(n)
-
-    push(các_nút_kế(n))
+```text
+S → A → G
+ \  
+  → B → C → G
 ```
 
-### Điểm mạnh
+Nếu edge cost equal, BFS tìm `S-A-G` trước vì depth nhỏ hơn.
 
-DFS thường dùng ít bộ nhớ hơn BFS. Nếu độ sâu tối đa là `m`, độ phức tạp không gian thường gần:
+## Depth-First Search
+
+Depth-First Search (DFS / 깊이 우선 탐색) đi sâu một branch trước khi backtrack.
+
+Stack/recursion:
+
+```pseudo
+stack ← [start]
+visited ← set()
+
+while stack not empty:
+    n ← pop(stack)
+    if n in visited: continue
+    visited.add(n)
+
+    if goal(n): return path(n)
+
+    push successors(n)
+```
+
+### Strength
+
+DFS memory thấp hơn BFS. Nếu maximum depth `m`, rough space complexity:
 
 \[
 O(bm)
 \]
 
-trong cách lưu cây tìm kiếm thông thường.
+với standard tree-storage reasoning, thay vì exponential frontier theo shallow goal depth.
 
-### Điểm yếu
+### Weakness
 
-DFS có thể lao rất sâu vào một nhánh sai hoặc vô hạn nếu không kiểm soát chu trình và độ sâu.
+DFS có thể lao sâu vào branch rất dài hoặc infinite nếu không cycle/depth control.
 
-Nó không bảo đảm tối ưu. Mục tiêu được tìm thấy đầu tiên phụ thuộc mạnh vào thứ tự sinh nút kế tiếp.
+Nó không optimal. Goal tìm đầu tiên phụ thuộc successor ordering.
 
-### Khi nào DFS hữu ích?
+### Khi DFS useful?
 
-DFS phù hợp khi bộ nhớ hạn chế, lời giải dự kiến sâu, chỉ cần một lời giải bất kỳ, cần duyệt toàn bộ bằng quay lui hoặc xử lý các bài toán đồ thị như phát hiện chu trình.
+- memory constrained;
+- solution expected deep;
+- chỉ cần any solution;
+- exhaustive traversal/backtracking;
+- topological/cycle-related graph algorithms trong CS broader context.
 
-## Tìm kiếm giới hạn độ sâu
+## Depth-Limited Search
 
-**Tìm kiếm giới hạn độ sâu (Depth-Limited Search - DLS)** là DFS với giới hạn `ℓ`.
+Depth-Limited Search (DLS) là DFS với depth limit `ℓ`.
 
-Khi đạt độ sâu `ℓ`, nút không được mở rộng thêm.
+Nếu reached depth `ℓ`, node không expand nữa.
 
-Cách này tránh đi sâu vô hạn nhưng có thể bỏ lỡ lời giải nằm sâu hơn giới hạn.
+Nó tránh infinite descent nhưng có thể miss solution deeper than limit.
 
-Cần phân biệt ba kết quả:
+Cần phân biệt return states:
 
 ```text
-THÀNH_CÔNG
-THẤT_BẠI   → không có lời giải trong phần đã khám phá
-CẮT_NGANG  → có thể còn lời giải sâu hơn giới hạn
+SUCCESS
+FAILURE    → không có solution trong explored space
+CUTOFF     → có thể có solution sâu hơn limit
 ```
 
-Sự phân biệt này đặc biệt quan trọng cho đào sâu lặp.
+Distinction này quan trọng cho Iterative Deepening.
 
-## DFS đào sâu lặp
+## Iterative Deepening DFS
 
-**Tìm kiếm đào sâu lặp (Iterative Deepening Depth-First Search - IDDFS)** chạy DLS với các giới hạn:
+Iterative Deepening Depth-First Search (IDDFS) chạy DLS với limits:
 
 ```text
 0, 1, 2, 3, ...
 ```
 
-Thoạt nhìn có vẻ lãng phí vì các nút ở tầng trên bị mở rộng nhiều lần. Nhưng trong cây tăng theo cấp số nhân, phần lớn nút nằm ở tầng sâu nhất, nên chi phí lặp lại ở các tầng trên tương đối nhỏ.
+Nó nghe có vẻ wasteful vì expand upper nodes nhiều lần. Nhưng trong exponential tree, phần lớn nodes nằm ở deepest level, nên repeated upper-level work relatively small.
 
-Với chi phí mỗi bước bằng nhau, IDDFS kết hợp:
+Với unit costs, IDDFS kết hợp:
 
-- tính đầy đủ của BFS;
-- khả năng tìm mục tiêu nông nhất như BFS;
-- mức sử dụng bộ nhớ gần DFS.
+- completeness của BFS;
+- optimal shallowest-depth behavior của BFS;
+- memory profile gần DFS.
 
-Thời gian vẫn xấp xỉ:
+Time vẫn khoảng:
 
 \[
 O(b^d)
 \]
 
-và bộ nhớ khoảng:
+space khoảng:
 
 \[
 O(bd)
 \]
 
-trong cách phân tích thông thường.
+under common formulation.
 
-## Tìm kiếm chi phí đồng nhất
+## Uniform-Cost Search
 
-**Tìm kiếm chi phí đồng nhất (Uniform-Cost Search - UCS / 균일 비용 탐색)** luôn mở rộng nút có chi phí đường đi thấp nhất:
+Uniform-Cost Search (UCS / 균일 비용 탐색) expand node có lowest path cost:
 
 \[
 g(n)
 \]
 
-Có thể xem nó gần với thuật toán Dijkstra từ điểm bắt đầu tới mục tiêu trong ngữ cảnh AI.
+Nó là Dijkstra-like search từ start tới goal trong AI terminology.
+
+Priority queue:
 
 ```pseudo
-biên ← PQ((0,bắt_đầu))
-tốt_nhất[bắt_đầu] ← 0
+frontier ← PQ((0,start))
+best[start] ← 0
 
-while biên:
-    g,n ← lấy_chi_phí_thấp_nhất()
+while frontier:
+    g,n ← pop_lowest_cost()
 
-    if g != tốt_nhất[n]: continue
-    if mục_tiêu(n): return đường_đi
+    if g != best[n]: continue
+    if goal(n): return path
 
-    for cạnh(n,s,c):
-        g_mới ← g + c
-        if s chưa_thấy OR g_mới < tốt_nhất[s]:
-            tốt_nhất[s] ← g_mới
-            push(g_mới,s)
+    for edge(n,s,c):
+        new_g ← g + c
+        if s unseen OR new_g < best[s]:
+            best[s] ← new_g
+            push(new_g,s)
 ```
 
-### Vì sao thường kiểm tra mục tiêu khi lấy nút ra khỏi hàng đợi?
+### Vì sao goal test thường khi pop, không phải khi generate?
 
-Một trạng thái mục tiêu có thể được sinh ra lần đầu qua một đường đắt, trong khi một đường rẻ hơn chưa được khám phá.
+Một goal có thể được generated qua expensive path trước, rồi sau đó có cheaper path chưa explored.
 
-Khi UCS lấy mục tiêu ra như nút có chi phí nhỏ nhất trên biên, với chi phí cạnh không âm, lúc đó mới có bảo đảm tối ưu.
+Khi UCS pops goal as lowest-cost frontier node under nonnegative costs, ta mới có optimality guarantee.
 
-## BFS là trường hợp đặc biệt của UCS
+## BFS là special case của UCS
 
-Nếu mọi cạnh có chi phí bằng 1:
+Nếu every edge cost = 1:
 
 \[
 g(n)=depth(n)
 \]
 
-thì thứ tự của UCS theo chi phí đường đi tương đương BFS theo độ sâu.
+UCS ordering theo path cost tương đương BFS ordering theo depth.
 
-Có thể ghi nhớ:
+Đây là useful unification:
 
 ```text
-BFS = UCS khi chi phí mỗi bước đồng nhất
+BFS = UCS khi step cost uniform
 ```
 
-## Chi phí cạnh âm
+## Negative edge cost
 
-Lập luận tối ưu tiêu chuẩn của UCS/Dijkstra yêu cầu chi phí cạnh không âm.
+UCS/Dijkstra assumptions require nonnegative edge cost for standard optimality logic.
 
-Nếu tồn tại cạnh âm, một nút tưởng như rẻ nhất ở hiện tại vẫn có thể được cải thiện sau qua đường đi chứa cạnh âm.
+Nếu negative edges tồn tại, một node tưởng cheapest hiện tại có thể later được cải thiện qua negative-cost path.
 
-Các thuật toán như Bellman–Ford xử lý cạnh âm trong bài toán đường đi ngắn nhất; chu trình âm có thể khiến khái niệm đường ngắn nhất không còn hữu hạn.
+Các algorithms như Bellman–Ford handle negative edges trong graph shortest path, và negative cycles làm shortest path undefined (`-∞`).
 
-Trong thiết kế hàm chi phí AI, phần thưởng hoặc chi phí âm cần được mô hình hóa cẩn thận.
+Trong AI cost design, negative rewards/costs cần careful formulation.
 
-## Kiểm tra chu trình
+## Cycle checking
 
-Trong tìm kiếm cây:
+Trong tree search:
 
 ```text
 A → B → C → A → ...
 ```
 
-có thể tạo mở rộng vô hạn.
+có thể tạo infinite expansion.
 
-Kiểm tra chu trình theo đường hiện tại ngăn một trạng thái lặp lại trên cùng đường.
+Path-based cycle checking ngăn state lặp trên current path.
 
-Tập đã duyệt toàn cục mạnh hơn, nhưng với bài toán có trọng số cần lưu chi phí tốt nhất: “đã từng thấy trạng thái” chưa đủ nếu sau đó xuất hiện đường rẻ hơn.
+Global explored set mạnh hơn, nhưng với weighted search cần có best-cost logic: “đã thấy state” không đủ nếu later path rẻ hơn.
 
-## Trạng thái trùng trong biên
+## Frontier duplicates
 
-Có hai kiểu triển khai thường gặp:
+Có hai implementation styles:
 
-1. cập nhật trực tiếp phần tử trong hàng đợi ưu tiên;
-2. thêm ứng viên mới tốt hơn và bỏ ứng viên cũ khi nó được lấy ra.
+1. decrease-key/update entry trong priority queue;
+2. push new better entry và khi pop bỏ stale entry.
 
-Kiểu thứ hai thường đơn giản hơn với thư viện heap thông thường:
+Style 2 thường đơn giản hơn với standard heap libraries.
 
 ```python
 if popped_cost != best[state]:
     continue
 ```
 
-Mô hình tư duy: bảng `best` là nguồn sự thật; heap có thể chứa ứng viên đã cũ.
+Mental model: `best` map là source of truth, heap có thể chứa stale candidates.
 
-## Tìm kiếm hai chiều
+## Bidirectional Search
 
-Nếu trạng thái bắt đầu `S` và mục tiêu chính xác `G` đều đã biết, có thể tìm xuôi từ `S` và ngược từ `G`.
+Nếu start `S` và exact goal `G` đều known, search forward từ `S` và backward từ `G`.
 
-Số nút lý tưởng có thể giảm từ:
-
-\[
-O(b^d)
-\]
-
-xuống gần:
+Idealized node counts:
 
 \[
 O(b^{d/2}) + O(b^{d/2})
 \]
 
-### Điều kiện thực tế
+so với:
 
-Tìm kiếm hai chiều cần:
+\[
+O(b^d)
+\]
 
-- sinh được trạng thái tiền nhiệm hoặc cạnh ngược;
-- kiểm tra giao nhau hiệu quả;
-- điều kiện dừng cẩn thận khi có trọng số;
-- khả năng giữ hai biên trong bộ nhớ.
+cho one-direction BFS.
 
-Nếu mục tiêu là một điều kiện rộng như “bất kỳ lịch hợp lệ nào”, tìm ngược có thể không đơn giản.
+### Conditions thực tế
 
-## Thứ tự tìm và quy tắc phá hòa
+Bidirectional search cần:
 
-Ngay cả cùng BFS hoặc UCS, thứ tự sinh nút kế tiếp vẫn ảnh hưởng đường được trả về khi tồn tại nhiều lời giải tối ưu.
+- generate predecessors hoặc reverse edges;
+- efficient intersection test;
+- careful stopping criterion với weighted costs;
+- manageable frontier from both sides.
 
-A* cũng chịu ảnh hưởng bởi **quy tắc phá hòa (tie-breaking)** khi nhiều nút có cùng điểm ưu tiên.
+Nếu goal là predicate rộng (“bất kỳ schedule hợp lệ”), backward search có thể không straightforward.
 
-Nếu đường đi cụ thể cần tái lập, nên dùng thứ tự sinh nút xác định.
+## Search order và tie-breaking
 
-## Độ phức tạp theo cây và theo đồ thị
+Ngay cả cùng BFS/UCS, thứ tự generate successors ảnh hưởng path returned khi multiple optimal solutions tồn tại.
 
-Giáo trình AI thường diễn đạt độ phức tạp bằng `b,d,m`, trong khi lý thuyết đồ thị dùng `|V|,|E|`.
+A* tie-breaking cũng ảnh hưởng nodes expanded.
 
-Duyệt BFS trên đồ thị hữu hạn có thể đạt:
+Reproducibility cần deterministic successor ordering khi output path matters.
+
+## Tree complexity và graph complexity
+
+Textbook often expresses complexity bằng `b,d,m`, nhưng finite graph có `|V|,|E|`.
+
+BFS graph traversal:
 
 \[
 O(|V|+|E|)
 \]
 
-nếu mỗi đỉnh và cạnh chỉ được xử lý một số lần hằng định.
+nếu mỗi node/edge processed once.
 
-Thuật toán đường đi ngắn nhất dùng hàng đợi ưu tiên thường có độ phức tạp liên quan tới `|E| log |V|`, tùy cấu trúc heap.
+Priority-queue shortest path có complexity liên quan `|E| log |V|` tùy heap implementation.
 
-Hai cách ký hiệu tương ứng với hai góc nhìn:
+Hai notation trả lời two views:
 
 ```text
-góc nhìn cây tìm kiếm AI → phân nhánh / độ sâu
-góc nhìn thuật toán đồ thị → đỉnh / cạnh
+AI search tree view → branching/depth
+Graph algorithm view → vertices/edges
 ```
 
-## Ví dụ: đường đi có trọng số
+## Example: weighted routes
 
-Giả sử:
+Suppose:
 
 ```text
 S --1--> A --100--> G
@@ -302,117 +322,119 @@ S --1--> A --100--> G
   --10--> B --10--> C --10--> G
 ```
 
-BFS thấy `S-A-G` ở độ sâu 2 và trả đường chi phí 101.
+BFS thấy `S-A-G` depth 2 và trả path cost 101.
 
-UCS mở rộng theo chi phí tích lũy và tìm `S-B-C-G` với chi phí 30.
+UCS explores theo accumulated cost và tìm `S-B-C-G` cost 30.
 
-Vì vậy “ít bước hơn” không đồng nghĩa “rẻ hơn”.
+Đây là lý do “ít bước hơn” không đồng nghĩa “rẻ hơn”.
 
-## Bộ nhớ là một tài nguyên thuật toán
+## Memory as algorithmic resource
 
-BFS thường hết RAM trước khi hết CPU.
+BFS thường fail vì RAM trước CPU.
 
-Giả sử biên có 10 triệu nút, mỗi nút cần 100 byte thông tin:
+Suppose frontier 10 million nodes, mỗi node metadata 100 bytes:
 
 ```text
 ≈ 1 GB
 ```
 
-Trong thực tế chi phí đối tượng có thể còn lớn hơn.
+thực tế object overhead có thể lớn hơn nhiều.
 
-Mã hóa trạng thái gọn, cách lưu nút cha, tìm kiếm trên bộ nhớ ngoài hoặc đào sâu lặp có thể quan trọng hơn việc tối ưu vi mô thao tác mở rộng.
+Compact state encoding, parent reconstruction strategy, external-memory search hoặc iterative deepening có thể quan trọng hơn micro-optimizing expansion.
 
-## Đào sâu lặp và các hệ thống suy luận hiện đại
+## Iterative deepening và modern reasoning systems
 
-Ý tưởng cấp dần ngân sách độ sâu có dạng tương tự trong hệ thống hiện đại:
-
-```text
-thử suy luận nông / đơn giản
-nếu chưa đủ → cho phép tìm sâu hơn
-```
-
-Không nên gọi mọi “mức suy luận” là IDDFS theo nghĩa thuật toán chính xác, nhưng việc tăng dần ngân sách tính toán là một mẫu thiết kế lặp lại nhiều lần.
-
-## Beam Search: cắt bớt không gian theo điểm số
-
-**Beam Search** thường được học trong phần giải mã chuỗi, nhưng là đối chiếu hữu ích với tìm kiếm đầy đủ.
-
-Ở mỗi độ sâu, chỉ giữ `k` ứng viên có điểm cao nhất:
+Idea allocate progressively larger depth budget có analog trong modern systems:
 
 ```text
-tất cả khả năng tăng theo cấp số nhân
-       ↓ cắt bớt
-chỉ giữ beam width = k
+try shallow/simple reasoning
+if insufficient → allow deeper search
 ```
 
-Beam Search tiết kiệm thời gian và bộ nhớ nhưng không đầy đủ và không bảo đảm tối ưu toàn cục.
+Không nên gọi mọi “reasoning depth setting” là literal IDDFS, nhưng resource-bounded iterative expansion là recurring design pattern.
 
-Dịch máy và sinh chuỗi từng sử dụng chiến lược này rất rộng rãi.
+## Beam Search: informed bởi score nhưng incomplete
 
-## Tìm kiếm dưới giới hạn tài nguyên
+Beam Search thường được học gần sequence decoding hơn uninformed search, nhưng useful contrast.
 
-Hệ thống thực tế có giới hạn:
+At each depth chỉ giữ top `k` candidates theo score.
 
-- thời gian;
-- bộ nhớ;
-- chi phí API/công cụ;
-- ngân sách token.
+```text
+all possibilities exponential
+       ↓ prune
+keep beam width k
+```
 
-Một thuật toán tối ưu về lý thuyết có thể hoàn toàn không dùng được trong thực tế.
+Beam search tiết kiệm memory/time nhưng không complete và không guarantee global optimum.
 
-Thuật toán bị giới hạn tài nguyên chấp nhận đánh đổi chất lượng lời giải để giảm tính toán. Ý tưởng này quay lại trong thuật toán anytime, Beam Search, Monte Carlo Tree Search và lập kế hoạch tác nhân LLM.
+Machine translation và sequence generation historically use beam search extensively.
 
-## Thuật toán anytime
+## Search under resource limits
 
-**Thuật toán anytime** có thể trả lời giải tốt nhất hiện tại nếu bị dừng, và chất lượng tiếp tục cải thiện nếu được cấp thêm thời gian.
+Real systems có:
 
-Đây là thuộc tính hữu ích khi ngân sách tính toán không chắc chắn.
+- time budget;
+- memory budget;
+- API/tool cost;
+- token budget.
 
-Weighted A* và nhiều phương pháp cải thiện lặp có các biến thể anytime.
+Một theoretically optimal search may be unusable.
 
-## Chọn chiến lược tìm kiếm không heuristic
+Resource-bounded algorithms trade solution quality for computation.
 
-| Tình huống | Trực giác lựa chọn |
+This idea later appears in anytime algorithms, beam search, Monte Carlo Tree Search and LLM agent planning.
+
+## Anytime algorithms
+
+Anytime algorithm có thể return current best solution nếu interrupted, và quality cải thiện khi có thêm time.
+
+This is valuable when exact compute budget uncertain.
+
+Weighted A* và iterative improvement methods can have anytime variants.
+
+## Choosing an uninformed strategy
+
+| Situation | Strategy intuition |
 |---|---|
-| Chi phí bằng nhau, lời giải nông | BFS |
-| Bộ nhớ hạn chế, chỉ cần một lời giải | DFS / DLS |
-| Không biết độ sâu mục tiêu, chi phí bằng nhau | IDDFS |
-| Chi phí không âm khác nhau | UCS |
-| Biết chính xác đầu và đích, đồ thị đảo được | Tìm kiếm hai chiều |
+| Unit cost, shallow solution | BFS |
+| Memory tight, any solution | DFS / DLS |
+| Unknown goal depth, unit cost | IDDFS |
+| Different nonnegative costs | UCS |
+| Exact start + goal, reversible graph | Bidirectional search |
 
-Bảng này chỉ là điểm khởi đầu. Vẫn cần phân tích kích thước đồ thị, chu trình, ràng buộc và cách biểu diễn bộ nhớ thực tế.
+Table này là starting heuristic, không substitute analysis of actual graph size, cycles, constraints và memory representation.
 
-## Mô hình tư duy (mental model)
+## Mental Model
 
 ```text
-BFS   = ưu tiên độ sâu nhỏ
-DFS   = đi sâu một nhánh, tiết kiệm bộ nhớ
-DLS   = DFS có chân trời độ sâu
-IDDFS = bảo đảm theo độ sâu kiểu BFS với bộ nhớ gần DFS
-UCS   = tối ưu chi phí đường đi tích lũy
-Tìm hai chiều = giảm độ sâu hiệu dụng bằng cách gặp ở giữa
+BFS   = optimize depth
+DFS   = commit to one branch, save memory
+DLS   = DFS with horizon
+IDDFS = BFS-like depth guarantee using DFS-like memory
+UCS   = optimize accumulated path cost
+Bidirectional = reduce effective depth by meeting in middle
 ```
 
-## Các hiểu lầm thường gặp
+## Common Misconceptions
 
-### “BFS luôn tìm đường ngắn nhất”
+### “BFS luôn tìm shortest path”
 
-BFS chỉ tối thiểu số cạnh; nó tối ưu theo chi phí khi mọi bước có chi phí bằng nhau.
+Chỉ shortest number of edges; cost-optimal khi step costs equal/uniform.
 
 ### “DFS nhanh hơn BFS”
 
-Không có quy luật chung như vậy. DFS có thứ tự khám phá khác và ít tốn bộ nhớ hơn, nhưng có thể đi rất lâu vào nhánh sai.
+Không universal. Nó có different exploration order và lower memory, nhưng có thể search huge wrong branch.
 
-### “Tập đã thăm chỉ là tối ưu hiệu năng”
+### “Visited set chỉ là optimization”
 
-Trong đồ thị có chu trình, phát hiện trạng thái trùng có thể quyết định cả khả năng dừng lẫn tính đúng đắn.
+Trong cyclic graphs, duplicate detection có thể quyết định termination và correctness.
 
-### “UCS thấy mục tiêu lần đầu là đủ”
+### “UCS goal thấy lần đầu là đủ”
 
-Mục tiêu cần được xác nhận khi được lấy ra theo logic chi phí thấp nhất; việc được sinh ra đầu tiên chưa bảo đảm tối ưu.
+Goal cần được settled/popped theo lowest path cost logic; generated first chưa guarantee optimal.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Tìm kiếm không dùng heuristic là đường cơ sở để thấy heuristic mang lại điều gì. [Tìm kiếm heuristic](./02_heuristic_search.md) sẽ thêm ước lượng `h(n)` để tập trung mở rộng, còn phần lập kế hoạch sẽ bổ sung điều kiện trước và hiệu ứng của hành động.
+Uninformed Search cung cấp baseline để thấy heuristic mang lại gì. [Heuristic Search](./02_heuristic_search.md) sẽ thêm estimate `h(n)` để focus expansion, còn Planning sẽ add richer action preconditions/effects.
 
-Khi chọn thuật toán tìm kiếm, hãy bắt đầu bằng các thuộc tính của đồ thị: **hệ số phân nhánh, độ sâu, chi phí cạnh, chu trình, ngân sách bộ nhớ và việc mục tiêu/phép chuyển ngược có được biết hay không**.
+Khi chọn search algorithm, hãy bắt đầu bằng graph properties: branching factor, depth, edge costs, cycles, memory budget và whether goal/reverse transitions known.

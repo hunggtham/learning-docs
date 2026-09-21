@@ -1,33 +1,33 @@
 # Modern Visual Representation
 
-Computer Vision hiện đại ngày càng ít xoay quanh một task head riêng lẻ và ngày càng tập trung vào **biểu diễn thị giác dùng chung (general-purpose visual representation)** có thể transfer sang classification, retrieval, detection, segmentation và multimodal reasoning.
+Modern Computer Vision ngày càng ít xoay quanh một task head riêng lẻ và ngày càng tập trung vào **general-purpose visual representations** có thể transfer sang classification, retrieval, detection, segmentation và multimodal reasoning.
 
-Sự chuyển đổi có thể hình dung như sau:
+Điểm chuyển paradigm:
 
 ```text
 Task-specific supervised model
         ↓
 Large pretrained visual encoder
         ↓
-adapt / prompt / fine-tune cho nhiều task
+adapt / prompt / fine-tune for many tasks
 ```
 
 ## Self-Supervised Learning
 
-Image label đắt nhưng raw image rất dồi dào. **Self-supervised learning** tạo supervision từ chính structure của data thay vì cần human label cho mọi sample.
+Image labels đắt nhưng raw images abundant. Self-supervised methods tạo supervision từ chính data.
 
 Hai family lớn:
 
 ```text
-contrastive / alignment objective
-masked / reconstruction objective
+contrastive / alignment objectives
+masked / reconstruction objectives
 ```
 
 ## Contrastive Learning
 
-Hai augmented view của cùng image được coi là positive pair; view từ image khác đóng vai trò negative hoặc được tách gián tiếp tùy method.
+Hai augmented views từ cùng image được coi positive pair; views khác là negatives hoặc implicitly separated.
 
-Mục tiêu:
+Goal:
 
 \[
 sim(z_i,z_i^+) \uparrow
@@ -37,80 +37,73 @@ sim(z_i,z_i^+) \uparrow
 sim(z_i,z_j^-) \downarrow
 \]
 
-Representation được học để trở nên invariant với các augmentation đã chọn.
+Representation được học để invariant với augmentations chosen.
 
-Vì vậy augmentation policy thực chất là một phần của supervision signal.
+Vì vậy augmentation policy là part of supervision.
 
-## Trực giác SimCLR
+## SimCLR Intuition
 
 Pipeline:
 
 ```text
 image
-→ hai random augmentation
+→ two random augmentations
 → shared encoder
 → projection head
 → contrastive loss
 ```
 
-Trong formulation ban đầu, batch lớn cung cấp nhiều negative sample.
+Large batch cung cấp many negatives trong original formulation.
 
-## Momentum / Teacher Encoder
+## Momentum / Teacher Encoders
 
-Các family như MoCo, BYOL hoặc DINO dùng momentum teacher, target network, queue hoặc self-distillation để ổn định representation learning.
+Methods như MoCo/BYOL/DINO-style families dùng target/momentum teacher, queues hoặc self-distillation để stabilize representation learning.
 
-Ý tưởng cốt lõi là learner cố khớp với một target representation thay đổi chậm thay vì học trực tiếp từ manual label.
+Điểm conceptual: learner match a slowly changing target representation thay vì labels manual.
 
-## Tránh Representation Collapse
+## Avoiding Collapse
 
-Nếu encoder output cùng một vector cho mọi image, alignment loss có thể rơi vào trivial solution.
+Nếu encoder output same vector cho all images, alignment objective trivial. Different methods prevent collapse bằng:
 
-Các method tránh collapse bằng nhiều cơ chế:
-
-- negative sample;
+- negatives;
 - stop-gradient;
 - predictor asymmetry;
-- variance/covariance constraint;
-- teacher centering hoặc sharpening.
+- variance/covariance constraints;
+- teacher centering/sharpening.
 
 ## Masked Image Modeling
 
-Một lượng lớn patch được che rồi model phải reconstruct phần bị thiếu:
+Mask nhiều patches rồi reconstruct:
 
 ```text
-visible patch
-→ encoder
-→ decoder
-→ dự đoán missing pixel / feature / latent target
+visible patches → encoder → decoder → predict missing content/features
 ```
 
-MAE-style method thường dùng masking ratio khá cao vì neighboring image patch có redundancy lớn.
+MAE-style methods mask high ratio vì neighboring image patches redundant.
 
-Target có thể là raw pixel hoặc learned feature token.
+Target có thể raw pixels hoặc learned feature tokens.
 
-## Supervised và Self-Supervised Representation
+## Supervised vs Self-Supervised Representation
 
-Supervised ImageNet training đẩy feature theo taxonomy class được cung cấp.
+Supervised ImageNet training pushes features toward provided classes. Self-supervised objectives có thể preserve broader visual information useful tasks beyond taxonomy.
 
-Self-supervised objective có thể giữ broader visual information hữu ích cho task ngoài taxonomy đó.
-
-Tuy nhiên self-supervised không tự động tốt hơn. Data scale, augmentation, architecture và objective vẫn quyết định chất lượng representation.
+Không có guarantee self-supervised always better; objective/data scale matter.
 
 ## Vision–Language Pretraining
 
-CLIP-style training dùng paired `(image,text)`.
+CLIP-style training uses paired `(image,text)`.
 
-Image encoder tạo `v`, text encoder tạo `t`; contrastive objective làm matched pair gần nhau trong shared embedding space.
+Image encoder produces `v`; text encoder produces `t`. Contrastive objective makes matched pairs similar in shared space.
 
 ```text
 image ↔ caption
 ```
 
-Điều này tạo một **open-vocabulary semantic interface**: class mới có thể được mô tả bằng text prompt thay vì fixed classifier ID.
+This creates **open-vocabulary semantic interface**: new label can be represented by text prompt rather than fixed classifier ID.
 
 ## Zero-Shot Classification
 
-Ta có thể tính image embedding `v`, rồi so với text embedding của candidate prompt:
+Compute image embedding `v`, text embeddings for prompts:
 
 ```text
 "a photo of a cat"
@@ -118,93 +111,83 @@ Ta có thể tính image embedding `v`, rồi so với text embedding của cand
 ...
 ```
 
-Class có similarity cao nhất được chọn.
+select highest similarity.
 
-Không cần train task-specific classifier head, nhưng prompt template, domain shift và pretraining coverage vẫn ảnh hưởng mạnh chất lượng.
+No task-specific classifier training required, though prompt templates and domain shift affect quality.
 
 ## Semantic Retrieval
 
-Shared embedding space hỗ trợ:
+Shared embedding space enables:
 
 ```text
-text query  → retrieve image
-image query → retrieve text hoặc image
+text query → retrieve images
+image query → retrieve text/images
 ```
 
-Đây là một dạng multimodal information retrieval.
+This is multimodal information retrieval.
 
 ## Open-Vocabulary Vision
 
-Detection hoặc segmentation có thể thay fixed class head bằng text-conditioned representation.
+Detection/segmentation can replace fixed class head with text-conditioned embeddings. Model can localize concepts specified by natural language.
 
-Model khi đó có thể localize concept được mô tả bằng natural language.
+Challenge: text-image pretraining may learn broad semantics but weak precise localization; extra objectives/architectures needed.
 
-Challenge là image-text pretraining thường học broad semantics tốt hơn precise localization, nên cần objective hoặc architecture bổ sung.
+## Foundation Models for Segmentation
 
-## Foundation Model cho Segmentation
+Promptable segmentation separates target specification from mask generation. Input prompts may be points, boxes or masks.
 
-Promptable segmentation tách **cách chỉ định target** khỏi **cách sinh mask**.
+This turns segmentation into general interactive capability rather than fixed class taxonomy.
 
-Prompt có thể là point, box hoặc mask.
+## Visual Tokenizers
 
-Segmentation vì vậy trở thành một general interactive capability thay vì bị giới hạn bởi fixed class taxonomy.
+Generative image models may encode image into discrete/continuous latent tokens using VAE/VQ-style encoder. Transformer/diffusion operates in latent space instead of raw pixels.
 
-## Visual Tokenizer
+Latent representation reduces compute while hopefully preserving perceptual semantics.
 
-Generative image model có thể encode image thành discrete hoặc continuous latent token bằng VAE hoặc VQ-style encoder.
+## Diffusion Representation
 
-Transformer hoặc diffusion model sau đó hoạt động trong latent space thay vì raw pixel space.
+Diffusion models are generative, but intermediate features can also contain semantic structure useful downstream. Generative training can produce representations, though objective differs discriminative contrastive training.
 
-Latent representation giảm compute nếu vẫn giữ được perceptual information quan trọng.
+## Image Embedding Geometry
 
-## Representation từ Diffusion Model
+Cosine similarity useful only because training aligns geometry to semantics. Embedding is not universal semantic truth.
 
-Diffusion model chủ yếu được train cho generation, nhưng intermediate feature cũng có thể chứa semantic structure hữu ích cho downstream task.
+Different encoders place concepts differently depending data/objective.
 
-Điều này cho thấy generative objective cũng có thể sinh representation mạnh, dù inductive pressure khác contrastive hoặc discriminative training.
+## Fine-Tuning Strategies
 
-## Geometry của Image Embedding
-
-Cosine similarity chỉ hữu ích vì training objective đã tổ chức geometry theo một số semantic relation.
-
-Embedding không phải universal semantic truth. Hai encoder khác nhau có thể đặt cùng concept ở geometry rất khác do data và objective khác nhau.
-
-## Fine-Tuning Strategy
-
-Pretrained visual model có thể được adapt bằng:
+Pretrained visual model can adapt via:
 
 ```text
 linear probe
 full fine-tuning
 partial unfreezing
-adapter / LoRA-like method
+adapters / LoRA-like methods
 prompt tuning
 ```
 
-Choice phụ thuộc data size, compute budget, deployment constraint và domain gap.
+Choice depends data size, compute and domain gap.
 
-## Domain-Specific Foundation Model
+## Domain-Specific Foundation Models
 
-Medical image, satellite image và industrial image khác web photo về texture, scale, sensor và label semantics.
-
-Domain-specific pretraining hoặc adaptation thường cần thiết khi distribution gap lớn.
+Medical, satellite, industrial imagery differ strongly from web photos. Domain pretraining often required because texture, scale, sensor and label semantics differ.
 
 ## Data Curation
 
-Ở foundation-model scale, data quality trở thành yếu tố trọng yếu:
+At foundation-model scale, data quality matters:
 
-- duplicate;
-- caption chất lượng thấp;
-- sensitive hoặc NSFW data;
+- duplicates;
+- low-quality captions;
+- NSFW/sensitive data;
 - geographic/cultural imbalance;
 - copyright/licensing;
 - benchmark leakage.
 
-Representation kế thừa bias và coverage gap từ training corpus.
+Representation inherits dataset bias.
 
-## Evaluation vượt ra ngoài Classification
+## Evaluation Beyond Classification
 
-Một visual representation tốt nên được kiểm tra trên nhiều task:
+Good representation should be tested on multiple tasks:
 
 - linear probing;
 - retrieval;
@@ -213,69 +196,53 @@ Một visual representation tốt nên được kiểm tra trên nhiều task:
 - localization;
 - cross-domain transfer.
 
-Một benchmark duy nhất có thể phản ánh quá hẹp và dễ bị overfit bởi architecture hoặc data choice.
+A single benchmark can overfit architecture/data choices.
 
 ## Visual Reasoning
 
-Visual encoder mạnh không đồng nghĩa model reasoning tốt.
+Strong visual encoder is not same as reasoning model. VLM needs connect perception features with language/reasoning layers. Failure can arise because object not perceived, relation lost, OCR weak or reasoning wrong.
 
-Một Vision-Language Model có thể fail vì nhiều nguyên nhân khác nhau:
+## Multimodal Bridge
 
-```text
-object không được perception đúng
-spatial relation bị mất
-OCR yếu
-counting sai
-reasoning language sai
-```
-
-Cần tách perception failure khỏi reasoning failure khi debug.
-
-## Cầu nối Multimodal
-
-Một architecture phổ biến:
+Common architecture:
 
 ```text
 image
 → vision encoder
-→ visual token
+→ visual tokens
 → projector / cross-attention
 → language model
-→ text hoặc tool output
+→ text/tool output
 ```
 
-Projector giúp align dimension và distribution của visual feature với interface mà language model có thể sử dụng.
+The projector aligns visual feature dimension/distribution with language model interface.
 
 ## Temporal Vision
 
-Video thêm dimension thời gian. Frame-only encoder không trực tiếp nắm motion hoặc action relation giữa các frame.
-
-Video representation có thể dùng temporal sampling, 3D convolution, temporal attention hoặc factorized space–time model.
+Video adds time. A frame-only visual encoder misses motion/action relationships. Video representation uses temporal sampling, 3D conv, temporal attention or factorized space-time models.
 
 ## Spatial Grounding
 
-Một multimodal assistant mô tả image tổng quát tốt vẫn có thể kém ở exact coordinate grounding.
+Multimodal assistant that describes image globally may still fail exact coordinate grounding. Grounded vision-language models need explicit spatial training/tasks.
 
-Grounded vision-language model cần explicit spatial supervision hoặc architecture hỗ trợ region/box/mask relation.
+## Mental Model
 
-## Mô hình tư duy
+> **Modern vision foundation models học một visual coordinate system reusable; multimodal AI nối coordinate system đó với language/action spaces.**
 
-> **Modern vision foundation model học một visual coordinate system có thể tái sử dụng; Multimodal AI nối coordinate system đó với language và action space.**
+## Common Misconceptions
 
-## Những nhầm lẫn thường gặp
+### “CLIP understands everything visually because it supports zero-shot labels”
 
-### “CLIP hỗ trợ zero-shot nên hiểu mọi thứ trong ảnh”
+Alignment quality limited by pretraining pairs and can miss fine spatial details/counting/OCR.
 
-Không. Image-text alignment phụ thuộc pretraining pair và thường yếu hơn ở fine spatial detail, counting hoặc OCR.
+### “Foundation model eliminates domain data”
 
-### “Foundation model loại bỏ nhu cầu domain data”
+Domain validation/adaptation vẫn cần, đặc biệt medical/industrial.
 
-Không. Domain validation và adaptation vẫn rất quan trọng, đặc biệt trong medical và industrial system.
+### “Embedding similarity proves objects same”
 
-### “Embedding similarity chứng minh hai object giống nhau”
+Similarity reflects model objective/data, not ontological identity.
 
-Không. Similarity phản ánh model objective và data, không phải ontological identity.
+## Knowledge Connection
 
-## Liên kết kiến thức
-
-Modern visual representation là bridge trực tiếp sang `13_speech_audio_and_multimodal/`, nơi image token, audio representation và text token được kết nối trong shared hoặc connected representation space.
+Modern visual representation là bridge trực tiếp sang `13_speech_audio_and_multimodal/`, nơi image tokens, audio representations và text tokens được kết hợp trong shared or connected representation spaces.

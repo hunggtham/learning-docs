@@ -1,403 +1,409 @@
-# Bài toán thỏa mãn ràng buộc trong AI
+# Constraint Satisfaction Problems trong AI
 
-Một số bài toán không cần tìm một đường đi cụ thể; ta chỉ cần tìm **một phép gán thỏa tất cả ràng buộc**. Lập lịch, Sudoku, tô màu bản đồ, phân bổ tài nguyên, cấu hình hệ thống và nhiều bài toán con của lập kế hoạch có cấu trúc này.
+Một số bài toán không cần tìm một path cụ thể; ta chỉ cần tìm **một assignment thỏa tất cả constraints**. Scheduling, Sudoku, map coloring, resource allocation, configuration và nhiều planning subproblems có cấu trúc này.
 
-**Bài toán thỏa mãn ràng buộc (Constraint Satisfaction Problem - CSP / 제약 만족 문제)** tách bài toán thành biến, miền giá trị và ràng buộc. Cách biểu diễn này cho phép dùng suy luận để loại bỏ rất nhiều khả năng trước khi phải tìm kiếm, minh họa một nguyên lý quan trọng của AI:
+**Constraint Satisfaction Problem (CSP / 제약 만족 문제)** tách problem thành variables, domains và constraints. Cách biểu diễn này cho phép dùng inference để loại bỏ rất nhiều possibilities trước khi search, minh họa một principle quan trọng của AI:
 
-> **Biểu diễn tốt có thể làm bài toán dễ hơn rất nhiều so với vét cạn trên mọi cấu hình thô.**
+> Một representation tốt có thể làm bài toán dễ hơn nhiều so với brute-force search trên raw configurations.
 
-Xem trước: [Biểu diễn bài toán](../00_foundations/03_problem_representation.md) và [Không gian trạng thái và tìm kiếm](./00_state_space_and_search.md).
+Xem trước: [Problem Representation](../00_foundations/03_problem_representation.md) và [State Space and Search](./00_state_space_and_search.md).
 
-## Một CSP gồm những gì?
+## CSP gồm những gì?
 
-Một CSP được mô tả bằng:
+Một CSP được mô tả bởi:
 
 \[
 (X,D,C)
 \]
 
-trong đó:
+Trong đó:
 
-- `X={X1,...,Xn}` là tập biến;
-- `D_i` là miền giá trị của biến `X_i`;
-- `C` là tập ràng buộc.
+- `X={X1,...,Xn}` là variables;
+- `D_i` là domain của variable `X_i`;
+- `C` là set constraints.
 
-Mục tiêu là tìm phép gán:
+Goal là assignment:
 
 \[
 X_i=v_i
 \]
 
-sao cho mọi ràng buộc đều được thỏa mãn.
+sao cho mọi constraint đều satisfied.
 
-## Ví dụ tô màu bản đồ
+## Ví dụ map coloring
 
-Giả sử cần tô các vùng sao cho hai vùng kề nhau có màu khác nhau.
+Giả sử cần tô màu regions sao cho adjacent regions khác màu.
 
 ```text
-Biến: WA, NT, SA, Q, NSW, V, T
-Miền: {Đỏ, Xanh lá, Xanh dương}
-Ràng buộc: WA != NT, WA != SA, ...
+Variables: WA, NT, SA, Q, NSW, V, T
+Domain: {Red, Green, Blue}
+Constraint: WA != NT, WA != SA, ...
 ```
 
-Thứ tự tô màu cuối cùng không quan trọng; điều quan trọng là phép gán cuối cùng hợp lệ.
+Không cần care order tô màu cuối cùng. Chỉ final assignment matter.
 
-Đây là khác biệt với tìm đường, nơi chính đường đi cũng có ý nghĩa và chi phí.
+Đây là khác biệt với route search, nơi path itself has meaning/cost.
 
-## Ràng buộc một biến, hai biến và toàn cục
+## Unary, binary và global constraints
 
-**Ràng buộc một biến (unary constraint)** chỉ áp dụng lên một biến:
+**Unary constraint** áp dụng một variable:
 
 \[
 X\neq Red
 \]
 
-**Ràng buộc hai biến (binary constraint)** liên hệ hai biến:
+**Binary constraint** giữa hai variables:
 
 \[
 X\neq Y
 \]
 
-**Ràng buộc toàn cục (global constraint)** liên hệ nhiều biến, ví dụ `AllDifferent(X1,...,Xn)` trong Sudoku hoặc lập lịch.
+**Global constraint** involve many variables, ví dụ `AllDifferent(X1,...,Xn)` trong Sudoku/scheduling.
 
-Ràng buộc toàn cục không chỉ giúp viết ngắn hơn. Thuật toán lan truyền chuyên biệt có thể khai thác cấu trúc của nó mạnh hơn việc tách thành hàng loạt ràng buộc từng cặp.
+Global constraint không chỉ syntax convenience. Specialized propagation algorithm có thể exploit structure mạnh hơn decomposing thành pairwise constraints.
 
-## Đồ thị ràng buộc
+## Constraint graph
 
-CSP hai biến có thể được biểu diễn bằng đồ thị:
+Binary CSP có thể represented bằng graph:
 
 ```text
-nút = biến
-cạnh = ràng buộc giữa hai biến
+node = variable
+edge = constraint giữa variables
 ```
 
-Cấu trúc đồ thị giúp suy luận về tính độc lập, khả năng phân rã và độ phức tạp kiểu treewidth.
+Graph structure giúp reason về independence, decomposition và treewidth-like complexity.
 
-Nếu đồ thị tách thành các thành phần không liên thông, từng phần có thể được giải độc lập.
+Nếu graph split thành disconnected components, solve independently.
 
-## Liệt kê vét cạn
+## Naive enumeration
 
-Nếu có `n` biến và mỗi miền có kích thước `d`, số phép gán có thể là:
+Nếu `n` variables, mỗi domain size `d`, brute force có:
 
 \[
 d^n
 \]
 
-Sudoku có 81 ô với miền 9 chữ số gợi ý tới `9^81` tổ hợp thô, một con số khổng lồ.
+assignments.
 
-Tuy nhiên các ràng buộc loại bỏ ngay phần lớn tổ hợp. Thuật toán CSP tận dụng điều này trước và trong quá trình phân nhánh.
+Sudoku 81 cells với domain 9 gợi ý `9^81`, enormous.
 
-## Tìm kiếm quay lui
+Nhưng constraints immediately eliminate most combinations. CSP algorithms exploit this before/during branching.
 
-**Tìm kiếm quay lui (backtracking search)** gán biến từng bước. Khi phép gán một phần vi phạm ràng buộc, thuật toán quay lui và thử giá trị khác.
+## Backtracking Search
+
+Backtracking assign variables one by one. Khi partial assignment violates constraint, undo and try alternative.
 
 ```pseudo
-quay_lui(phép_gán):
-    if đã_hoàn_chỉnh: return phép_gán
+backtrack(assignment):
+    if complete: return assignment
 
-    X ← chọn_biến_chưa_gán()
-    for v in thứ_tự_giá_trị(X):
-        if nhất_quán(X=v, phép_gán):
-            gán X=v
-            kết_quả ← quay_lui(phép_gán)
-            if thành_công: return kết_quả
-            hủy_gán X
+    X ← choose_unassigned_variable()
+    for v in order_values(X):
+        if consistent(X=v, assignment):
+            assign X=v
+            result ← backtrack(assignment)
+            if success: return result
+            unassign X
 
-    return thất_bại
+    return failure
 ```
 
-Về bản chất đây là DFS trên không gian phép gán, nhưng suy luận chuyên biệt cho CSP khiến nó mạnh hơn DFS ngây thơ.
+Backtracking là DFS trong assignment space, nhưng CSP-specific reasoning làm nó mạnh hơn naive DFS.
 
-## Thứ tự biến: MRV
+## Variable ordering: MRV
 
-**Giá trị còn lại ít nhất (Minimum Remaining Values - MRV)** chọn biến có ít giá trị hợp lệ nhất.
+**Minimum Remaining Values (MRV)** chọn variable có ít legal values nhất.
 
-Trực giác:
+Intuition:
 
-> **Phát hiện thất bại càng sớm càng tốt.**
+> Fail fast.
 
-Nếu một biến gần như không thể gán, xử lý nó trước giúp phát hiện mâu thuẫn sớm thay vì lãng phí tìm kiếm trên các nhánh khác.
+Nếu một variable gần như impossible, giải nó trước để discover contradiction early thay vì waste search ở branches khác.
 
-MRV còn được gọi là chọn “biến bị ràng buộc nhiều nhất”.
+MRV còn gọi “most constrained variable”.
 
-## Heuristic bậc của biến
+## Degree heuristic
 
-Nếu nhiều biến hòa nhau theo MRV, có thể chọn biến tham gia nhiều ràng buộc nhất với các biến chưa gán.
+Nếu tie MRV, chọn variable participating in most constraints với unassigned variables.
 
-Ý tưởng là chọn biến có ảnh hưởng lớn để lan truyền hạn chế sớm.
+Idea: chọn variable có influence lớn để propagate restriction sớm.
 
-MRV nhìn số giá trị còn lại; heuristic bậc nhìn mức liên kết trong đồ thị.
+MRV nhìn domain size hiện tại; degree nhìn connectivity.
 
-## Thứ tự giá trị: giá trị ít hạn chế nhất
+## Value ordering: Least Constraining Value
 
-Sau khi chọn biến, **giá trị ít hạn chế nhất (Least Constraining Value - LCV)** ưu tiên giá trị loại bỏ ít lựa chọn của các biến lân cận nhất.
+Sau khi chọn variable, **Least Constraining Value (LCV)** thử value loại ít options của neighbors nhất.
 
-Heuristic chọn biến thường theo tinh thần “thất bại sớm”; heuristic chọn giá trị thường cố “để lại nhiều linh hoạt”. Hai ý tưởng không mâu thuẫn: chọn biến khó trước nhưng chọn giá trị ít phá lựa chọn tương lai.
+Variable heuristic thường “fail first”, value heuristic thường “leave flexibility”.
 
-## Kiểm tra trước
+Hai ideas không contradiction: ta chọn hard variable nhưng chọn value ít phá future choices.
 
-Khi gán `X=v`, **kiểm tra trước (forward checking)** loại các giá trị không tương thích khỏi miền của các biến lân cận.
+## Forward checking
 
-Nếu miền của biến lân cận trở thành rỗng, thất bại được phát hiện ngay.
+Khi assign `X=v`, forward checking remove incompatible values khỏi domains neighbors.
 
-Ví dụ:
+Nếu neighbor domain empty, fail immediately.
+
+Example:
 
 ```text
-X có miền {R,G}
-Y có miền {R,G}
-ràng buộc X != Y
+X domain {R,G}
+Y domain {R,G}
+constraint X != Y
 
-gán X=R
-→ loại R khỏi Y
+assign X=R
+→ remove R from Y
 → Y={G}
 ```
 
-Forward checking phát hiện hệ quả cục bộ trước một bước.
+Forward checking detects local consequence one step ahead.
 
-## Lan truyền ràng buộc
+## Constraint propagation
 
-Mạnh hơn forward checking, **lan truyền ràng buộc (constraint propagation)** lặp lại việc áp dụng các quy tắc nhất quán cho tới khi không thể thu hẹp miền thêm nữa.
+Stronger than forward checking, propagation repeatedly enforce local consistency until no more reduction.
 
-Ví dụ:
+Example chain:
 
 ```text
 X=R
-→ Y không thể R
+→ Y cannot R
 → Y=G
-→ Z không thể G
+→ Z cannot G
 → Z=B
 ```
 
-Một phép gán có thể gây hiệu ứng dây chuyền trên toàn mạng ràng buộc.
+One assignment can cascade across network.
 
-## Tính nhất quán cung
+## Arc consistency
 
-Với ràng buộc hai biến giữa `X` và `Y`, cung `X→Y` có **tính nhất quán cung (arc consistency)** nếu mỗi giá trị trong `D_X` đều có ít nhất một giá trị hỗ trợ trong `D_Y` thỏa ràng buộc.
+For binary constraint between `X` and `Y`, arc `X→Y` is consistent if every value in `D_X` has at least one supporting value in `D_Y` satisfying constraint.
 
-Nếu giá trị `x` không có bất kỳ hỗ trợ nào ở `Y`, nó được loại khỏi miền của `X`.
+If value `x` has no support in `Y`, remove it.
 
-Thuật toán **AC-3** liên tục xem lại các cung cho tới khi ổn định hoặc một miền trở thành rỗng.
+**AC-3** algorithm repeatedly revises arcs until stable or domain empty.
+
+Simplified:
 
 ```pseudo
-hàng_đợi ← tất_cả_các_cung
-while hàng_đợi:
+queue ← all arcs
+while queue:
     (Xi,Xj) ← pop
-    if sửa_miền(Xi,Xj):
-        if miền(Xi) rỗng: thất_bại
-        for Xk là_láng_giềng_của Xi, Xk != Xj:
-            thêm (Xk,Xi)
+    if revise(Xi,Xj):
+        if domain(Xi) empty: failure
+        for Xk neighbor of Xi except Xj:
+            add (Xk,Xi)
 ```
 
-## Nhất quán cục bộ không bảo đảm có lời giải toàn cục
+## Local consistency không guarantee global solution
 
-Một CSP có thể nhất quán theo từng cung nhưng vẫn không có lời giải toàn cục.
+Arc-consistent CSP can still have no solution. Local checks only ensure pairwise support, not global compatibility.
 
-Điểm quan trọng là:
+This distinction important:
 
 ```text
-lan truyền ràng buộc giúp giảm không gian tìm kiếm
-nhưng thường không loại bỏ hoàn toàn nhu cầu phân nhánh tìm kiếm
+constraint propagation reduces search
+but usually does not eliminate need for search
 ```
 
-## Duy trì tính nhất quán cung
+## Maintaining Arc Consistency
 
-**Maintaining Arc Consistency (MAC)** chạy kiểm tra nhất quán cung sau mỗi phép gán trong quá trình quay lui.
+MAC runs arc consistency after each assignment during backtracking.
 
-Cách này tốn nhiều suy luận hơn ở mỗi nút nhưng có thể giảm mạnh số nút phải tìm.
+More propagation cost per node but fewer search nodes.
 
-Đánh đổi:
+Trade-off:
 
 ```text
-nhiều suy luận hơn trên mỗi nút
-↔
-ít phân nhánh hơn
+more inference per node
+vs
+less branching
 ```
 
-Điểm cân bằng tốt phụ thuộc cấu trúc bài toán.
+Optimal balance depends problem structure.
 
-## Sudoku như một CSP
+## Sudoku as CSP
 
-Biến = 81 ô.
+Variables = 81 cells.
 
-Miền = các chữ số 1..9 cho ô trống.
+Domain = digits 1..9 for empty cells.
 
-Ràng buộc:
+Constraints:
 
-- mỗi hàng `AllDifferent`;
-- mỗi cột `AllDifferent`;
-- mỗi khối 3×3 `AllDifferent`.
+- each row AllDifferent;
+- each column AllDifferent;
+- each 3×3 block AllDifferent.
 
-Các kỹ thuật con người như “ô này chỉ còn một số có thể điền” chính là dạng lan truyền ràng buộc.
+Human techniques like “only possible value” are forms of constraint propagation.
 
-Đoán và quay lui chỉ cần khi suy luận chưa đủ.
+Guess-and-backtrack happens only when propagation insufficient.
 
-## Lập lịch
+## Scheduling
 
-Biến có thể là các nhiệm vụ.
+Variables can be tasks.
 
-Miền là các thời điểm hoặc tài nguyên có thể sử dụng.
+Domain = possible times/resources.
 
-Ràng buộc ví dụ:
+Constraints:
 
 ```text
-Nhiệm vụ A phải trước B
-A và C không được dùng cùng máy cùng lúc
-nhân viên E chỉ rảnh ở một số khung giờ
-tổng công suất mỗi tuần có giới hạn
+Task A before B
+A and C cannot use same machine simultaneously
+employee E available only certain hours
+max weekly capacity
 ```
 
-Lập lịch thực tế thường dẫn tới **lập trình ràng buộc (Constraint Programming - CP)** hoặc tối ưu số nguyên hỗn hợp thay vì CSP hữu hạn đơn giản.
+Real scheduling often becomes richer **Constraint Programming (CP)** or mixed-integer optimization rather than simple finite-domain CSP.
 
-## Ràng buộc cứng và mềm
+## Hard vs soft constraints
 
-CSP cổ điển xem ràng buộc là điều bắt buộc phải thỏa.
+Classical CSP treats constraint as must satisfy.
 
-Bài toán thực tế thường có cả sở thích mềm:
+Real problem often has soft preferences:
 
 ```text
-cứng: hai cuộc họp không được cùng phòng và cùng giờ
-mềm: ưu tiên buổi sáng
-mềm: giảm làm thêm giờ
+hard: two meetings cannot occupy same room/time
+soft: prefer morning
+soft: minimize employee overtime
 ```
 
-Weighted CSP, Max-CSP hoặc mô hình tối ưu gán chi phí cho việc vi phạm sở thích mềm.
+Weighted CSP / Max-CSP / optimization formulations assign penalty/cost to violations.
 
-Đây là điểm giao với Nghiên cứu vận hành (Operations Research).
+This connects CSP with Operations Research.
 
-## SAT như một bài toán ràng buộc
+## SAT as constraint problem
 
-**Bài toán thỏa mãn Boolean (Boolean Satisfiability - SAT)** hỏi liệu có phép gán đúng/sai cho các biến để công thức Boolean trở thành đúng hay không.
+Boolean Satisfiability (SAT) asks whether Boolean formula has assignment making it true.
 
-Các biến là Boolean, còn ràng buộc là các mệnh đề.
+Variables are Boolean, constraints are clauses.
 
-Ví dụ dạng chuẩn hội (CNF):
+Example CNF:
 
 \[
 (A\lor \neg B)\land(B\lor C)
 \]
 
-SAT là NP-complete nhưng bộ giải SAT hiện đại rất hiệu quả trên nhiều bài toán có cấu trúc nhờ:
+SAT is NP-complete but modern SAT solvers are extremely effective on many structured instances using:
 
-- lan truyền đơn vị;
-- học mệnh đề từ xung đột (CDCL);
-- heuristic chọn biến;
-- khởi động lại.
+- unit propagation;
+- conflict-driven clause learning (CDCL);
+- variable heuristics;
+- restarts.
 
-“NP-complete” không có nghĩa mọi trường hợp thực tế đều bất khả thi.
+“NP-complete” does not mean every real instance is impossible.
 
-## Lan truyền đơn vị
+## Unit propagation
 
-Nếu có mệnh đề:
+If clause:
 
 \[
 (A\lor B)
 \]
 
-và `A=false`, thì `B` buộc phải đúng.
+and `A=false`, then `B` must true.
 
-Đây là một dạng lan truyền ràng buộc trên công thức Boolean.
+This is constraint propagation over Boolean formula.
 
-CSP và SAT chia sẻ cùng một ý tưởng sâu: **dùng suy luận để thu hẹp miền trước khi buộc phải phân nhánh**.
+CSP and SAT share deep idea: inference shrinks domains before search branches.
 
-## Học mệnh đề từ xung đột
+## Conflict-Driven Clause Learning
 
-Khi bộ giải SAT đi tới mâu thuẫn, nó phân tích nguyên nhân để suy ra mệnh đề mới ngăn cùng kiểu phép gán sai lặp lại. Cơ chế này gọi là **Conflict-Driven Clause Learning (CDCL)**.
+When SAT solver reaches contradiction, it analyzes conflict to derive new clause preventing same class of bad assignments.
 
-Về khái niệm:
+This is search that **learns from failure**.
+
+Conceptually:
 
 ```text
-phân nhánh
+branch
  ↓
-mâu thuẫn
+contradiction
  ↓
-phân tích nguyên nhân
+analyze reason
  ↓
-học thêm ràng buộc
+learn constraint
  ↓
-tránh lặp lại sai lầm
+avoid repeated mistake
 ```
 
-Đây là tìm kiếm có khả năng **học từ thất bại**.
+This pattern resembles modern reasoning systems with memory/verification, though CDCL has formal Boolean semantics and stronger guarantees.
 
-Mẫu tư duy này có nét tương đồng với hệ thống suy luận hiện đại có bộ nhớ và xác minh, dù CDCL dựa trên ngữ nghĩa Boolean hình thức và có bảo đảm mạnh hơn.
+## Local search for CSP
 
-## Tìm kiếm cục bộ cho CSP
+Instead of building partial consistent assignment, start with complete possibly-invalid assignment and iteratively reduce conflicts.
 
-Thay vì xây dần phép gán nhất quán, có thể bắt đầu từ một phép gán đầy đủ nhưng có vi phạm rồi liên tục giảm xung đột.
+**Min-conflicts** chooses conflicted variable and assigns value minimizing violations.
 
-**Min-conflicts** chọn một biến đang xung đột và gán lại giá trị làm số vi phạm nhỏ nhất.
+It works surprisingly well for large N-Queens.
 
-Phương pháp này hoạt động rất tốt với bài toán N-Queens lớn.
+Local search uses little memory but may get stuck and is not complete without additional strategy.
 
-Tìm kiếm cục bộ dùng ít bộ nhớ nhưng có thể mắc kẹt và không đầy đủ nếu không có chiến lược bổ sung.
+## N-Queens
 
-## Bài toán N quân hậu
+Place `N` queens on `N×N` board so no two attack each other.
 
-Đặt `N` quân hậu lên bàn `N×N` sao cho không quân nào tấn công nhau.
+Variables: one queen per column.
 
-Biến: một quân hậu cho mỗi cột.
+Domain: row number.
 
-Miền: số hàng.
-
-Ràng buộc:
+Constraints:
 
 \[
 Q_i\neq Q_j
 \]
 
-và:
+and:
 
 \[
 |Q_i-Q_j|\neq|i-j|
 \]
 
-Cách biểu diễn “mỗi cột đúng một quân hậu” đã loại bỏ xung đột cùng cột ngay từ cấu trúc bài toán. Đây là ví dụ rõ rằng biểu diễn tốt có thể giảm ràng buộc trước cả khi chạy thuật toán.
+CSP representation already eliminates same-column conflict by construction. Good representation reduces constraints before algorithm starts.
 
-## Phá đối xứng
+## Symmetry breaking
 
-Nhiều CSP có các lời giải tương đương do đối xứng. Tìm kiếm có thể lãng phí thời gian khám phá nhiều hoán vị của cùng một cấu trúc.
+Many CSPs have symmetric equivalent solutions. Search wastes time rediscovering permutations.
 
-Ví dụ trong tô màu, đổi tên toàn bộ Đỏ ↔ Xanh lá có thể tạo một lời giải tương đương.
+Example coloring: swapping names Red/Green across entire valid solution produces equivalent solution.
 
-Có thể thêm **ràng buộc phá đối xứng (symmetry-breaking constraint)** để chỉ giữ một đại diện chuẩn.
+Add symmetry-breaking constraints to choose canonical representative.
 
-Một lần nữa, biểu diễn và ràng buộc giúp thu nhỏ không gian tìm kiếm mạnh mẽ.
+Again, representation/constraints can shrink search space dramatically.
 
-## Phân rã bài toán
+## Decomposition
 
-Nếu đồ thị ràng buộc có các thành phần độc lập, ta có thể giải từng phần riêng.
+If constraint graph has independent components, solve each separately.
 
-CSP có cấu trúc cây thường giải hiệu quả hơn nhiều so với đồ thị chu trình tùy ý.
+More generally, tree-structured CSPs can be solved efficiently compared with arbitrary cyclic graphs.
 
-**Treewidth** đo gần đúng mức độ một đồ thị khác cây đến đâu; nhiều thuật toán có độ phức tạp theo cấp số nhân của treewidth thay vì chỉ theo số lượng biến.
+Graph **treewidth** measures roughly how far graph from tree-like; many algorithms exponential in treewidth rather than raw number variables.
 
-Điều này nối CSP với mô hình đồ thị xác suất và suy luận trên đồ thị.
+This connects CSP to Graphical Models and probabilistic inference.
 
-## CSP và tối ưu hóa
+## CSP vs Optimization
 
-CSP hỏi:
+CSP asks:
 
-> Có phép gán nào thỏa mọi ràng buộc không?
+> Is there any assignment satisfying constraints?
 
-Tối ưu hóa hỏi:
+Optimization asks:
 
-> Trong các phép gán khả thi, phép nào tốt nhất theo hàm mục tiêu?
+> Which feasible assignment has best objective?
 
-Hệ thống thực tế thường kết hợp:
+Real systems often combine:
 
 \[
-\min_x f(x)\quad\text{s.t. các ràng buộc}
+\min_x f(x)\quad\text{s.t. constraints}
 \]
 
-Lập lịch, định tuyến và phân bổ tài nguyên thường dùng Mixed Integer Programming, CP-SAT hoặc bộ giải chuyên biệt.
+Scheduling, routing and resource allocation frequently use Mixed Integer Programming, CP-SAT or specialized solvers.
 
-AI, Nghiên cứu vận hành và tối ưu hóa giao nhau rất mạnh ở đây.
+AI, Operations Research and Optimization overlap strongly here.
 
-## Lập trình ràng buộc
+## Constraint Programming
 
-**Lập trình ràng buộc (Constraint Programming)** cho phép lập trình viên khai báo biến và ràng buộc, còn bộ giải chịu trách nhiệm lan truyền và tìm kiếm.
+Constraint Programming lets developer declare variables/constraints while solver handles propagation + search.
 
-Ví dụ API khái niệm:
+Example conceptual API:
 
 ```python
 start_A < start_B
@@ -405,74 +411,74 @@ no_overlap(tasks_on_machine_1)
 all_different(room_assignments)
 ```
 
-Cách này tách **điều gì phải đúng** khỏi **thuật toán cụ thể dùng để tìm lời giải**.
+This separates **what must be true** from exact search procedure.
 
-Tinh thần khai báo này gần với lập trình logic.
+Declarative modeling is similar spirit to logic programming.
 
-## Heuristic học được cho CSP và SAT
+## Learned heuristics for CSP/SAT
 
-Thứ tự chọn biến và giá trị ảnh hưởng rất mạnh tới thời gian chạy. Học máy có thể học heuristic phân nhánh từ các bài toán đã giải.
+Variable/value ordering dramatically affects runtime. ML can learn branching heuristics from solved instances.
 
-Tuy nhiên tính đúng vẫn có thể được giữ bởi bộ giải ký hiệu: thành phần học chỉ quyết định nên tìm ở đâu trước; bộ kiểm tra ràng buộc hoặc cơ chế chứng minh vẫn bảo đảm tính hợp lệ.
+But solver correctness can remain symbolic: learned component only chooses where search first; constraint checker/proof machinery preserves validity.
 
-Thiết kế lai này hấp dẫn vì học giúp tăng tốc mà không phải tin mô hình nơ-ron cho tính đúng cuối cùng.
+This hybrid design is attractive because learning improves speed without trusting neural model for final correctness.
 
-## LLM kết hợp bộ giải ràng buộc
+## LLM + constraints
 
-LLM có thể đề xuất lịch hoặc cấu hình, nhưng sinh văn bản tự do không bảo đảm ràng buộc cứng.
+LLM can propose candidate schedule/configuration, but text generation does not guarantee hard constraints.
 
-Một kiến trúc đáng tin hơn:
-
-```text
-LLM hiểu yêu cầu bằng ngôn ngữ tự nhiên
-        ↓
-chuyển thành mô hình CSP có cấu trúc
-        ↓
-bộ giải tìm và kiểm tra phép gán
-        ↓
-LLM giải thích kết quả
-```
-
-Cách này mạnh hơn việc yêu cầu LLM “ghi nhớ mọi ràng buộc” trong một đoạn sinh tự do.
-
-## Kiểm tra đầu ra có cấu trúc
-
-Lược đồ JSON và ràng buộc kiểu dữ liệu có thể xem là họ hàng đơn giản của CSP. Bộ giải mã hoặc bộ kiểm tra sau sinh bảo đảm đầu ra thuộc một miền cấu trúc hợp lệ.
-
-Giải mã theo ngữ pháp giúp giảm lỗi cú pháp, nhưng ràng buộc ngữ nghĩa như “ngày kết thúc phải sau ngày bắt đầu” vẫn cần kiểm tra hoặc bộ giải giàu biểu đạt hơn.
-
-## Mô hình tư duy (mental model)
+Reliable architecture:
 
 ```text
-Biến        = thứ cần lựa chọn
-Miền        = các giá trị có thể chọn
-Ràng buộc   = tổ hợp bị cấm hoặc bắt buộc
-Lan truyền  = loại giá trị bất khả thi mà chưa cần đoán
-Tìm kiếm    = phân nhánh khi suy luận chưa đủ
-Heuristic   = chọn biến/giá trị phân nhánh thông minh hơn
-Học         = có thể cải thiện heuristic, không nhất thiết quyết định tính đúng
+LLM interprets natural-language requirements
+        ↓
+structured CSP/solver model
+        ↓
+constraint solver finds/verifies assignment
+        ↓
+LLM explains result
 ```
 
-## Các hiểu lầm thường gặp
+This is stronger than asking LLM to “remember all constraints” in free-form generation.
 
-### “CSP chỉ là thử mọi phép gán”
+## Structured output validation
 
-Bộ giải CSP tốt dùng lan truyền, heuristic, học từ xung đột và phân rã để tránh phần lớn tổ hợp.
+JSON schema/type constraints are simpler cousin of CSP. Decoder or post-validator ensures output belongs to valid structural domain.
 
-### “Nhất quán cung nghĩa là đã giải xong”
+Grammar-constrained decoding reduces invalid syntax, but semantic constraints like “end date after start date” need richer validation/solver logic.
 
-Nhất quán cục bộ có thể tồn tại trong một bài toán vẫn không có lời giải toàn cục.
+## Mental Model
 
-### “LLM đủ lớn có thể thay hoàn toàn bộ giải ràng buộc”
+```text
+Variable   = thing we must choose
+Domain     = options available
+Constraint = combinations forbidden/required
+Propagation = remove impossible values without guessing
+Search      = branch when inference alone insufficient
+Heuristic   = choose branching variable/value intelligently
+Learning    = optionally improve heuristic, not necessarily correctness rule
+```
 
-LLM có thể đề xuất lời giải, nhưng khi cần bảo đảm cứng phải có cơ chế kiểm tra, tìm kiếm hoặc suy luận hình thức tường minh.
+## Common Misconceptions
 
-### “NP-complete nghĩa là bộ giải thực tế vô dụng”
+### “CSP là brute force assignment”
 
-Độ phức tạp trường hợp xấu không mô tả mọi bài toán có cấu trúc. Bộ giải SAT/CP có thể xử lý hiệu quả nhiều bài toán lớn trong thực tế.
+Good CSP solvers use propagation, heuristics, learning and decomposition to avoid most combinations.
 
-## Liên kết kiến thức
+### “Arc consistency means solved”
 
-CSP nằm ở giao điểm của tìm kiếm, logic, đồ thị và tối ưu hóa. Nó dạy một bài học AI lặp lại nhiều lần: **suy luận trước khi phân nhánh**. Lan truyền ràng buộc biến tri thức thành việc thu hẹp miền, giống như heuristic biến tri thức thành thứ tự ưu tiên tìm kiếm.
+Local consistency can hold while no global solution exists.
 
-Xem tiếp: [Lập kế hoạch](./05_planning.md), nơi hành động có điều kiện trước và hiệu ứng, còn mục tiêu thường yêu cầu một chuỗi hành động thay vì chỉ một phép gán cuối cùng.
+### “LLM can replace constraint solver nếu model đủ lớn”
+
+LLM may propose solutions, but hard guarantees require explicit validation/search/formal mechanism when correctness matters.
+
+### “NP-complete nghĩa practical solver vô dụng”
+
+Worst-case complexity does not predict all structured instances. SAT/CP solvers solve many large real problems effectively.
+
+## Knowledge Connection
+
+CSP sits at intersection of Search, Logic, Graphs and Optimization. It teaches a recurring AI lesson: **reason before branching**. Constraint propagation converts knowledge into domain reduction, just as heuristics convert knowledge into search priority.
+
+Xem tiếp: [Planning](./05_planning.md), nơi actions có preconditions/effects và goal thường cần một sequence thay vì chỉ final assignment.

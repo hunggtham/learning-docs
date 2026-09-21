@@ -1,131 +1,131 @@
-# Lập kế hoạch và phân rã tác vụ trong AI Agent
+# Planning và Task Decomposition trong AI Agent
 
-Một mục tiêu như “chuẩn bị báo cáo thị trường và gửi cho team” không phải một action đơn. Agent cần biến mục tiêu thành chuỗi subgoal có dependency. Đây là **lập kế hoạch (planning / 계획)** ở cấp ứng dụng.
+Một goal như “chuẩn bị báo cáo thị trường và gửi cho team” không phải một action đơn. Agent cần biến goal thành chuỗi subgoal có dependency. Đây là **planning (계획 / lập kế hoạch)** ở mức application.
 
-Cần phân biệt hai nghĩa:
+Tuy nhiên cần phân biệt hai nghĩa:
 
-- **lập kế hoạch cổ điển (classical planning)**: state, action, precondition, effect và goal được mô hình hóa hình thức;
-- **LLM planning**: mô hình sinh một chuỗi bước hoặc subtask được đề xuất từ context bằng ngôn ngữ tự nhiên.
+- classical planning: state, action, precondition, effect và goal được mô hình hóa formal;
+- LLM planning: model sinh một proposed sequence/subtasks từ natural-language context.
 
-Plan do LLM sinh có thể hữu ích nhưng không tự có bảo đảm về khả năng thực thi hoặc tính tối ưu.
+LLM plan hữu ích nhưng không tự có guarantee về executability hay optimality.
 
-## Vì sao cần phân rã?
+## Vì sao decomposition cần tồn tại?
 
-Task dài tạo gánh nặng về tổ hợp và context. Phân rã biến bài toán lớn thành các đơn vị có thể quan sát và verify.
+Task dài tạo combinatorial và context burden. Decomposition biến problem lớn thành các units có thể quan sát và verify.
 
 ```text
-Mục tiêu
-├── thu thập bằng chứng
-│   ├── nguồn A
-│   └── nguồn B
-├── phân tích
-├── soạn thảo
-└── kiểm tra và bàn giao
+Goal
+├── gather evidence
+│   ├── source A
+│   └── source B
+├── analyze
+├── draft
+└── validate & deliver
 ```
 
 Subtask tốt nên có input, output và completion criterion rõ.
 
-## Đồ thị phụ thuộc
+## Dependency Graph
 
-Plan không nhất thiết là danh sách tuyến tính. Nhiều task có dạng DAG:
+Plan không nhất thiết là list tuyến tính. Nhiều task có DAG:
 
 ```mermaid
 flowchart TD
-    A[Thu thập dữ liệu sản phẩm] --> D[So sánh]
-    B[Thu thập giá] --> D
-    C[Thu thập policy] --> D
-    D --> E[Soạn thảo]
-    E --> F[Xác minh]
+    A[Collect product data] --> D[Compare]
+    B[Collect pricing] --> D
+    C[Collect policy] --> D
+    D --> E[Draft]
+    E --> F[Verify]
 ```
 
-Biểu diễn dependency cho phép chạy song song những node độc lập.
+Represent dependency cho phép parallelize các node độc lập.
 
-## Lập kế hoạch phân cấp
+## Hierarchical Planning
 
-Task decomposition thường có nhiều tầng:
+Task decomposition thường hierarchical:
 
 ```text
 Deploy service
-→ chuẩn bị artifact
-→ cấu hình environment
+→ prepare artifact
+→ configure environment
 → deploy staging
 → validate
 → deploy production
 ```
 
-Mỗi node có thể tiếp tục được phân rã khi cần. Không nên mở rộng toàn bộ cây quá sớm vì environment có thể thay đổi.
+Mỗi node lại decomposed khi cần. Không nên expand toàn bộ tree quá sớm vì environment có thể thay đổi.
 
-## Độ sâu Plan và bất định
+## Plan depth và uncertainty
 
-Action gần thường được biết rõ hơn action xa. Vì vậy **lập kế hoạch theo chân trời cuốn chiếu (rolling-horizon planning)** hữu ích:
+Near-term actions thường biết rõ hơn distant actions. Vì vậy **rolling-horizon planning** hữu ích:
 
 ```text
-lập vài bước gần đáng tin
-→ thực thi
-→ quan sát
-→ mở rộng hoặc sửa plan
+plan next few reliable steps
+→ execute
+→ observe
+→ extend/revise plan
 ```
 
-Cách này tốt hơn một mega-plan dài dựa trên nhiều giả định chưa kiểm chứng.
+Đây tốt hơn một mega-plan dài dựa trên assumptions chưa kiểm chứng.
 
-## Điều kiện trước và hiệu ứng
+## Preconditions và Effects
 
-Ngay cả khi không dùng formal planner, tư duy precondition/effect giúp tránh action vô nghĩa.
+Ngay cả khi không dùng formal planner, tư duy precondition/effect giúp agent tránh action vô nghĩa.
 
 Ví dụ:
 
 ```text
 Action: merge_pull_request
 Preconditions:
-- PR tồn tại
-- required checks đã pass
-- policy approval được thỏa
+- PR exists
+- required checks pass
+- approval policy satisfied
 
 Effects:
-- target branch thay đổi
-- trạng thái PR thành merged
+- target branch changes
+- PR state becomes merged
 ```
 
-LLM có thể đề xuất action, còn runtime nên kiểm precondition bằng tool và state.
+LLM có thể đề xuất action, runtime nên kiểm preconditions bằng tool/state.
 
-## Xác minh Plan
+## Plan Validation
 
-Với plan được sinh, cần hỏi:
+Plan generated cần hỏi:
 
 - action nào không có tool hỗ trợ?
 - dependency nào bị thiếu?
-- có bước không thể đảo ngược trước verification không?
-- có approval bắt buộc không?
-- output bước trước có đủ cho bước sau không?
+- có bước irreversible trước verification không?
+- có required approval không?
+- output của step trước có đủ cho step sau?
 - có cycle không?
 
-Các constraint cấu trúc có thể được kiểm tra xác định.
+Validation có thể deterministic cho structural constraints.
 
-## Phân rã tác vụ và Context Engineering
+## Task decomposition và context engineering
 
-Mỗi subtask không cần toàn bộ global context. Context có scope giúp giảm nhiễu:
-
-```text
-mục tiêu toàn cục + artifact liên quan + local subtask state
-```
-
-Subagent nhận quá nhiều context không liên quan sẽ tốn token và khó tập trung vào thông tin quan trọng.
-
-## Plan-and-Execute và Planning xen kẽ
-
-**Plan-and-execute** tạo plan trước rồi thực thi. Phù hợp khi environment ổn định và task quen thuộc.
-
-**Interleaved planning** xen lập kế hoạch với execution. Phù hợp khi tool result thay đổi bước tiếp theo.
-
-Agent production thường dùng kiểu lai:
+Mỗi subtask không cần toàn bộ global context. Context scoped giúp giảm noise:
 
 ```text
-plan thô → thực thi bước → kiểm kết quả → tinh chỉnh plan
+Global goal + relevant artifacts + local subtask state
 ```
 
-## Search trong không gian Plan
+Khi subagent nhận quá nhiều unrelated context, attention bị phân tán và token cost tăng.
 
-Có thể sinh nhiều candidate plan rồi chấm theo cost, risk và xác suất thành công. Đây là cầu nối về classical search.
+## Plan-and-Execute vs Interleaved Planning
+
+**Plan-and-execute** tạo plan trước rồi làm. Tốt khi environment ổn định và task familiar.
+
+**Interleaved planning** lập kế hoạch xen execution. Tốt khi tool results thay đổi next step.
+
+Production agents thường hybrid:
+
+```text
+coarse plan → execute step → inspect → refine
+```
+
+## Search trong plan space
+
+Có thể generate nhiều candidate plans rồi score theo cost/risk/success likelihood. Đây nối lại classical search.
 
 Nếu candidate plan `P` có:
 
@@ -133,84 +133,84 @@ Nếu candidate plan `P` có:
 Score(P)=Utility(P)-\lambda Cost(P)-\mu Risk(P)
 \]
 
-runtime có thể chọn plan có trade-off tốt hơn thay vì dùng proposal đầu tiên.
+runtime có thể chọn plan trade-off tốt hơn thay vì first generated plan.
 
-## Failure mode khi phân rã
+## Decomposition failure modes
 
-### Thiếu dependency
+### Missing dependency
 
-Agent viết report trước khi thu đủ evidence.
+Agent viết report trước khi collect đủ evidence.
 
-### Phân rã quá mức
+### Over-decomposition
 
-Task nhỏ bị chia thành hàng chục microstep, làm tăng latency và failure surface.
+Task nhỏ bị chia thành hàng chục microsteps, tăng latency và failure surface.
 
-### Phân rã chưa đủ
+### Under-decomposition
 
-Một step quá rộng như “research everything” không có tiêu chí hoàn thành đo được.
+Một step quá rộng như “research everything” không có measurable completion.
 
-### Cam kết quá sớm
+### Premature commitment
 
 Agent khóa vào một strategy trước khi inspect environment.
 
-### Kế hoạch vòng tròn
+### Circular planning
 
-Subtask A cần B, còn B lại phụ thuộc A.
+Subtask A cần B, B lại cần A.
 
 ## Critical Path
 
-Trong plan DAG, **đường găng (critical path)** quyết định thời gian hoàn thành tối thiểu. Chạy song song task ngoài critical path không giảm latency nếu bottleneck vẫn nằm ở chuỗi tuần tự chính.
+Trong plan DAG, critical path quyết định minimum completion time. Parallelizing non-critical tasks không giảm latency nếu bottleneck ở một sequential chain.
 
-Tư duy project scheduling rất hữu ích cho agent orchestration.
+Tư duy project scheduling hữu ích cho agent orchestration.
 
-## Planning ưu tiên Verification
+## Verification-first Planning
 
 Plan tốt thiết kế verification cùng action:
 
 ```text
-sửa code → chạy test
-update record → đọc lại record
-gửi draft → xác nhận message id
+edit code → run test
+update record → re-read record
+send draft → confirm message id
 ```
 
-Verification không nên chỉ được thêm ở cuối như một bước phụ.
+Không nên thêm verification sau cùng như một afterthought.
 
-## Thứ tự có nhận thức rủi ro
+## Risk-aware ordering
 
-Nên ưu tiên action chỉ đọc hoặc có thể đảo ngược trước write không thể đảo ngược:
+Ưu tiên reversible/read-only actions trước irreversible writes.
 
 ```text
 inspect → simulate → validate → approve → mutate
 ```
 
-Đây là tư duy tương tự transaction database và safe deployment.
+Đây giống database transaction và safe deployment principles.
 
-## Ví dụ: migrate database schema
+## Example: migrate database schema
 
-Plan yếu:
+Weak plan:
 
 ```text
 change schema → deploy
 ```
 
-Plan tốt hơn:
+Better plan:
 
 ```text
-kiểm tra cách schema đang được dùng
-→ tạo migration tương thích ngược
-→ test trên staging data
+inspect schema usage
+→ create backward-compatible migration
+→ test on staging data
 → deploy migration
-→ verify app cũ và mới đều tương thích
+→ verify old/new app compatibility
 → deploy app
 → monitor
-→ dọn legacy column sau
+→ clean legacy column later
 ```
 
-Task decomposition cần constraint domain chứ không chỉ năng lực ngôn ngữ.
+Task decomposition cần domain constraints, không chỉ linguistic ability.
 
-## Human Checkpoint
+## Human checkpoints
 
-Plan có thể đánh dấu node cần approval:
+Plan có thể mark nodes cần approval:
 
 ```text
 Research [auto]
@@ -219,11 +219,11 @@ Send external email [approval]
 Production deploy [approval]
 ```
 
-Approval nên là node rõ trong graph, không phải một câu nhắc mơ hồ.
+Approval là graph node, không phải vague instruction.
 
-## Lưu bền vững Plan
+## Plan persistence
 
-Nên lưu:
+Persist:
 
 ```text
 subtask id
@@ -235,28 +235,28 @@ attempt count
 verification status
 ```
 
-Điều này hỗ trợ resume và debugging.
+Điều này cho resumability và debugging.
 
-## Mô hình tư duy
+## Mental Model
 
-> **Plan là giả thuyết có thể thực thi về cách đi từ state hiện tại tới goal; observation mới có quyền làm thay đổi giả thuyết đó.**
+> **Plan là executable hypothesis về cách đi từ state hiện tại tới goal; observation mới có quyền sửa hypothesis đó.**
 
-## Những hiểu lầm thường gặp
+## Common Misconceptions
 
-### “LLM viết checklist hay nghĩa là planning tốt”
+### “LLM viết checklist hay là đã planning tốt”
 
-Không. Checklist không bảo đảm dependency, executability hoặc validation.
+Checklist không đảm bảo dependency, executability hoặc validation.
 
 ### “Plan càng chi tiết càng tốt”
 
-Không. Chi tiết quá xa trong tương lai dễ dựa trên giả định sai. Progressive decomposition thường tốt hơn.
+Chi tiết xa trong tương lai dễ dựa trên assumptions sai. Progressive decomposition thường tốt hơn.
 
 ### “Agent planning thay thế workflow engine”
 
-Không. Workflow runtime vẫn rất hữu ích cho scheduling, persistence, retry và policy.
+Không. Workflow runtime vẫn hữu ích cho scheduling, persistence, retries và policy.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Planning nối [Classical Planning](../02_search_reasoning_and_planning/05_planning.md), agent loop và distributed workflow orchestration.
+Planning nối [Classical Planning](../02_search_reasoning_and_planning/05_planning.md), agent loop và distributed workflow orchestration. Next: memory giúp agent reuse information across steps/tasks.
 
 Xem tiếp: [Agent Memory](./04_agent_memory.md).

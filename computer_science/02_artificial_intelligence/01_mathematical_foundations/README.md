@@ -1,51 +1,51 @@
-# Nền tảng toán học cho Trí tuệ nhân tạo
+# Mathematical Foundations for Artificial Intelligence
 
-Thư mục này không phải một “khóa toán phải học xong trước khi học AI”. Đây là tập các chapter giải thích những **công cụ toán học (mathematical tools)** xuất hiện lặp lại trong AI, chúng giải quyết vấn đề gì và vì sao cần tồn tại.
+Folder này không phải một “khóa toán trước khi học AI”. Nó là tập các chapter giải thích những mathematical tools xuất hiện lặp lại trong AI và vì sao chúng cần tồn tại.
 
-Bắt đầu bằng [Toán học cho AI](./00_mathematics_for_ai.md) để có bản đồ tổng thể, sau đó đọc các chapter chuyên sâu theo quan hệ phụ thuộc của chủ đề đang học.
+Bắt đầu bằng [Mathematics for AI](./00_mathematics_for_ai.md) để có bản đồ tổng thể, sau đó đọc các chapter chuyên sâu theo dependency thực tế của topic đang học.
 
-## Các chapter
+## Chapters
 
-1. [Toán học cho AI](./00_mathematics_for_ai.md) — bản đồ vai trò của toán trong AI.
-2. [Đại số tuyến tính cho AI](./01_linear_algebra_for_ai.md) — vector, ma trận, tensor, hình học, hạng, SVD/PCA, embedding và attention.
-3. [Xác suất cho AI](./02_probability_for_ai.md) — xác suất có điều kiện, Bayes, likelihood, phân phối, hiệu chuẩn và lấy mẫu.
-4. [Thống kê cho AI](./03_statistics_for_ai.md) — mẫu hữu hạn, ước lượng, khái quát hóa, rò rỉ dữ liệu, chỉ số, thí nghiệm và dịch chuyển phân phối.
-5. [Giải tích cho AI](./04_calculus_for_ai.md) — đạo hàm, gradient, quy tắc dây chuyền, Jacobian/Hessian, lan truyền ngược và vi phân tự động.
-6. [Lý thuyết thông tin](./05_information_theory.md) — entropy, entropy chéo, KL divergence, thông tin tương hỗ, perplexity và nén.
-7. [Tối ưu hóa cho AI](./06_optimization.md) — SGD, momentum, Adam/AdamW, lịch tốc độ học, mức điều kiện, ràng buộc và căn chỉnh mục tiêu.
-8. [Tính toán số](./07_numerical_computation.md) — dấu phẩy động, độ ổn định, độ chính xác hỗn hợp, lượng tử hóa, kernel ổn định và tính toán theo phần cứng.
+1. [Mathematics for AI](./00_mathematics_for_ai.md) — bản đồ vai trò của toán trong AI.
+2. [Linear Algebra for AI](./01_linear_algebra_for_ai.md) — vector, matrix, tensor, geometry, rank, SVD/PCA, embeddings và attention.
+3. [Probability for AI](./02_probability_for_ai.md) — conditional probability, Bayes, likelihood, distributions, calibration và sampling.
+4. [Statistics for AI](./03_statistics_for_ai.md) — finite sample, estimation, generalization, data leakage, metrics, experiments và distribution shift.
+5. [Calculus for AI](./04_calculus_for_ai.md) — derivative, gradient, chain rule, Jacobian/Hessian, backpropagation và automatic differentiation.
+6. [Information Theory](./05_information_theory.md) — entropy, cross-entropy, KL divergence, mutual information, perplexity và compression.
+7. [Optimization for AI](./06_optimization.md) — SGD, momentum, Adam/AdamW, schedules, conditioning, constraints và objective alignment.
+8. [Numerical Computation](./07_numerical_computation.md) — floating point, stability, mixed precision, quantization, stable kernels và hardware-aware computation.
 
-## Bản đồ phụ thuộc
+## Dependency map
 
 ```mermaid
 flowchart TD
-    M[00 Bản đồ toán học] --> LA[01 Đại số tuyến tính]
-    M --> P[02 Xác suất]
-    M --> C[04 Giải tích]
-    P --> S[03 Thống kê]
-    P --> IT[05 Lý thuyết thông tin]
-    LA --> O[06 Tối ưu hóa]
+    M[00 Mathematics Map] --> LA[01 Linear Algebra]
+    M --> P[02 Probability]
+    M --> C[04 Calculus]
+    P --> S[03 Statistics]
+    P --> IT[05 Information Theory]
+    LA --> O[06 Optimization]
     C --> O
-    LA --> NC[07 Tính toán số]
+    LA --> NC[07 Numerical Computation]
     O --> NC
-    S --> ML[Học máy]
+    S --> ML[Machine Learning]
     IT --> ML
     O --> ML
-    NC --> DL[Học sâu]
+    NC --> DL[Deep Learning]
 ```
 
-Không cần đọc theo một đường duy nhất. Nếu đang học Transformer, Đại số tuyến tính + Giải tích + Tối ưu hóa + Tính toán số có độ ưu tiên cao. Nếu đang học đánh giá mô hình, Thống kê + Xác suất quan trọng hơn. Nếu đang học mô hình ngôn ngữ, Xác suất + Lý thuyết thông tin là các nền tảng trực tiếp.
+Không cần đọc theo một đường duy nhất. Nếu đang học Transformer, Linear Algebra + Calculus + Optimization + Numerical Computation có priority cao. Nếu đang học evaluation, Statistics + Probability quan trọng hơn. Nếu đang học language modeling, Probability + Information Theory là dependency trực tiếp.
 
-## Mô hình tư duy (mental model)
+## Mental model
 
 ```text
-Đại số tuyến tính   → biểu diễn và biến đổi
-Xác suất            → sự bất định và phân phối
-Thống kê            → suy luận từ mẫu tới quần thể
-Giải tích           → độ nhạy và gradient
-Lý thuyết thông tin → độ bất ngờ, bất định và mã hóa
-Tối ưu hóa          → tìm tham số/hành động theo mục tiêu
-Tính toán số        → làm toán chạy ổn định trên phần cứng thật
+Linear Algebra      → biểu diễn và biến đổi
+Probability         → uncertainty và distributions
+Statistics          → suy luận từ sample tới population
+Calculus            → sensitivity và gradients
+Information Theory  → surprise, uncertainty và coding
+Optimization        → tìm parameters/actions theo objective
+Numerical Computing → làm toán chạy ổn định trên hardware thật
 ```
 
-Các chapter phía sau trong thư viện sẽ liên kết ngược về phần này khi một cơ chế toán học thực sự cần thiết.
+Các chapter sau trong library sẽ cross-reference lại folder này khi mathematical mechanism thực sự cần thiết.

@@ -1,146 +1,142 @@
-# Tinh chỉnh theo chỉ dẫn
+# Instruction Tuning
 
-LLM cơ sở được tiền huấn luyện để **tiếp tục văn bản**, nhưng người dùng muốn một trợ lý có thể hiểu yêu cầu và tạo phản hồi phù hợp. **Tinh chỉnh theo chỉ dẫn (instruction tuning / 지시 튜닝)** là quá trình điều chỉnh mô hình để ánh xạ từ chỉ dẫn + ngữ cảnh sang định dạng phản hồi và hành vi mong muốn.
+Base LLM được pretrain để **tiếp tục text**, nhưng user muốn một assistant có thể hiểu request và tạo response phù hợp. **Instruction tuning (지시 튜닝 / tinh chỉnh theo chỉ dẫn)** là quá trình điều chỉnh model để map từ instruction + context sang desired response format và behavior.
 
-Điểm quan trọng là instruction tuning không “dạy toàn bộ tri thức mới”. Phần lớn kiến thức rộng và năng lực ngôn ngữ đã hình thành trong tiền huấn luyện. Hậu huấn luyện chủ yếu thay đổi cách mô hình **sử dụng** các năng lực đó theo kiểu tương tác mong muốn.
+Điểm quan trọng là instruction tuning không “dạy toàn bộ kiến thức mới”. Phần lớn broad knowledge và language capability đã được hình thành trong pretraining. Post-training thay đổi cách model **sử dụng** capability đó theo interaction pattern mong muốn.
 
-## Từ tiếp tục văn bản tới làm theo chỉ dẫn
+## Từ continuation tới instruction following
 
-Mục tiêu tiền huấn luyện:
+Pretraining objective:
 
 \[
 P(x_t\mid x_{<t})
 \]
 
-không tự phân biệt vai trò ngữ nghĩa như system, user hay assistant trừ khi các mẫu đó xuất hiện trong dữ liệu.
+không phân biệt semantic role như system, user hay assistant trừ khi những pattern đó xuất hiện trong data.
 
-Dataset chỉ dẫn cung cấp cấu trúc rõ hơn:
-
-```text
-Chỉ dẫn: Giải thích recursion đơn giản.
-Phản hồi: ...
-```
-
-hoặc định dạng chat:
+Instruction dataset đưa structure rõ hơn:
 
 ```text
-system    → policy / context
-user      → yêu cầu
-assistant → phản hồi mong muốn
+Instruction: Explain recursion simply.
+Response: ...
 ```
 
-Mô hình học rằng một số chuỗi token đóng vai trò chỉ dẫn và đầu ra nên tuân theo các ràng buộc tương ứng.
-
-## Dữ liệu instruction
-
-Dữ liệu instruction có thể đến từ ví dụ do con người viết, dữ liệu tổng hợp, dataset được chuyển đổi hoặc mixture của nhiều tác vụ. Chất lượng quan trọng hơn việc chỉ tăng số lượng.
-
-Một ví dụ tốt không chỉ có “đáp án đúng”; nó còn thể hiện định dạng, độ sâu, giọng điệu, ranh giới từ chối, schema gọi công cụ hoặc phong cách lập luận cần thiết.
-
-Nếu dataset không nhất quán, mô hình cũng học một phân bố hành vi không nhất quán.
-
-## Đa dạng tác vụ và khả năng khái quát hóa
-
-Instruction tuning hữu ích vì mô hình có thể khái quát từ nhiều mẫu tác vụ sang chỉ dẫn chưa thấy. Nếu dữ liệu huấn luyện chỉ chứa một số template hẹp, mô hình có thể overfit vào cách diễn đạt.
-
-Sự đa dạng giúp mô hình học một pattern cấp cao hơn:
-
-> Phần văn bản trước mô tả ý định và ràng buộc; phần phản hồi phải thỏa mãn ý định và ràng buộc đó.
-
-Đây có thể được xem như một giao diện học được giữa ngôn ngữ tự nhiên và năng lực của mô hình.
-
-## Vai trò System, User và Assistant
-
-Hệ thống chat hiện đại thường mã hóa vai trò bằng token đặc biệt hoặc định dạng riêng. Thứ bậc vai trò không phải thuộc tính tự nhiên của mô hình ngôn ngữ; nó là hành vi được hình thành bởi dữ liệu huấn luyện, giao thức serving và policy ở runtime.
-
-Vì vậy **prompt injection** là vấn đề cấp hệ thống: mô hình đọc nhiều luồng văn bản, trong khi ứng dụng muốn một số luồng có quyền cao hơn các luồng khác.
-
-## Instruction tuning và tri thức
-
-Fine-tuning có thể bổ sung một phần tri thức theo miền, nhưng không phải lúc nào cũng là công cụ tốt nhất. Nếu tri thức thay đổi thường xuyên hoặc cần provenance, retrieval thường phù hợp hơn.
-
-Nên dùng instruction tuning khi muốn thay đổi **ánh xạ hành vi**, ví dụ:
+hoặc chat format:
 
 ```text
-input schema → JSON có cấu trúc
-support ticket → phân loại + giải thích
-câu hỏi → phản hồi theo policy hoặc phong cách domain
+system → policy/context
+user   → request
+assistant → desired answer
 ```
 
-Nên dùng RAG khi cần đưa fact và document context mới, có thể truy nguồn, vào quá trình trả lời.
+Model học rằng một số token sequence đóng vai trò instruction và output nên theo constraints đó.
 
-## Quên nghiêm trọng
+## Instruction data
 
-Nếu fine-tune quá mạnh trên dữ liệu hẹp, mô hình có thể mất một phần năng lực hoặc phong cách tổng quát đã học. Hiện tượng này gọi là **quên nghiêm trọng (catastrophic forgetting)**.
+Instruction data có thể đến từ human-written examples, synthetic generation, transformed datasets hoặc mixtures của nhiều tasks. Quality quan trọng hơn việc chỉ tăng số lượng.
 
-Các cách giảm gồm learning rate thấp hơn, trộn dữ liệu tổng quát, regularization và tinh chỉnh tiết kiệm tham số (parameter-efficient fine-tuning).
+Một example tốt không chỉ có “đáp án đúng”; nó thể hiện format, depth, tone, refusal boundary, tool-use schema hoặc reasoning style cần thiết.
 
-## Instruction tuning đa tác vụ
+Nếu dataset inconsistent, model học distribution inconsistent.
 
-Một mô hình có thể được huấn luyện đồng thời trên dịch, tóm tắt, QA, extraction, coding và dialogue. Biểu diễn dùng chung cho phép chuyển giao giữa các tác vụ.
+## Task diversity và generalization
 
-Tuy nhiên mixture cần được gán trọng số. Dataset lớn nhưng dễ có thể chi phối gradient và khiến tác vụ khó hoặc hiếm bị đại diện quá ít.
+Instruction tuning hữu ích vì model có thể generalize từ many task templates sang instruction mới. Nếu training chỉ có narrow templates, model có thể overfit phrasing.
 
-## Dữ liệu instruction tổng hợp
+Diversity giúp model học meta-pattern:
 
-Một mô hình mạnh hơn có thể sinh cặp instruction–response để huấn luyện mô hình khác. Cách này mở rộng dữ liệu nhanh nhưng có nguy cơ lan truyền lỗi, phong cách nhân tạo và blind spot của teacher.
+> text trước mô tả intent/constraints; text sau phải satisfy intent/constraints.
 
-Dữ liệu tổng hợp cần lọc và đánh giá, không nên mặc định coi đầu ra teacher là ground truth.
+Đây là một dạng learned interface giữa human language và model capability.
 
-## Instruction tuning và SFT
+## System/User/Assistant roles
 
-Hai thuật ngữ này giao nhau nhiều nhưng nhấn mạnh hai khía cạnh khác nhau.
+Modern chat systems thường encode role tokens hoặc special formatting. Role hierarchy không phải property tự nhiên của language model; nó là behavior được tạo bởi training, serving protocol và runtime policy.
 
-**Tinh chỉnh có giám sát (Supervised Fine-Tuning — SFT)** mô tả thủ tục học từ cặp input–output có nhãn. **Instruction tuning** mô tả loại dữ liệu và hành vi: ví dụ mang ý nghĩa chỉ dẫn.
+Vì vậy prompt injection là system-level problem: model đang đọc nhiều text streams nhưng application muốn một số streams có authority cao hơn streams khác.
 
-Instruction tuning thường được thực hiện bằng SFT, nhưng SFT cũng có thể dùng cho tác vụ không phải natural-language instruction.
+## Instruction tuning và knowledge
+
+Fine-tuning có thể inject some domain knowledge, nhưng đây không phải always best tool. Nếu knowledge thay đổi thường xuyên hoặc cần provenance, retrieval thường phù hợp hơn.
+
+Use instruction tuning khi muốn thay đổi **behavior mapping**, ví dụ:
+
+```text
+input schema → structured JSON
+support ticket → classification + explanation
+question → answer theo policy/domain style
+```
+
+Use RAG khi muốn cung cấp facts/document context fresh và traceable.
+
+## Catastrophic forgetting
+
+Nếu fine-tune quá mạnh trên narrow data, model có thể mất capability hoặc style rộng trước đó. Mitigation gồm lower learning rate, data mixture, regularization và parameter-efficient tuning.
+
+## Multi-task instruction tuning
+
+Một model có thể train trên translation, summarization, QA, extraction, coding và dialogue cùng lúc. Shared representation cho phép transfer giữa tasks.
+
+Nhưng task mixture cần weighting. Dataset lớn nhưng easy có thể dominate gradient và làm hard/rare task bị underrepresented.
+
+## Synthetic instruction data
+
+Stronger model có thể generate instruction-response pairs cho weaker/open model. Điều này scale nhanh nhưng có nguy cơ propagate errors, stylistic artifacts và blind spots của teacher.
+
+Synthetic data cần filtering/evaluation thay vì assume teacher output là ground truth.
+
+## Instruction tuning vs SFT
+
+Hai thuật ngữ overlap nhiều. **Supervised Fine-Tuning (SFT)** mô tả learning procedure dùng labeled input-output pairs. **Instruction tuning** mô tả loại behavior/data: examples có instruction semantics.
+
+Instruction tuning thường được thực hiện bằng SFT, nhưng SFT cũng có thể dùng cho task không phải natural-language instruction.
 
 Xem tiếp: [Supervised Fine-Tuning](./07_supervised_fine_tuning.md).
 
-## Làm theo chỉ dẫn chưa phải alignment hoàn chỉnh
+## Instruction following không bằng alignment hoàn chỉnh
 
-Mô hình có thể làm theo instruction tốt nhưng vẫn:
+Model có thể follow instruction rất tốt nhưng vẫn:
 
 - hallucinate;
-- làm theo chỉ dẫn độc hại;
-- vi phạm policy an toàn;
-- tối ưu cách diễn đạt thay vì ý định;
-- thất bại khi nhiều instruction xung đột.
+- follow malicious instruction;
+- violate safety policy;
+- optimize wording thay vì intent;
+- fail under conflicting instructions.
 
-Do đó hệ thống thường bổ sung preference training và các lớp an toàn ở runtime.
+Preference training và runtime safety layers thường được thêm sau.
 
-## Từ chối quá mức và từ chối thiếu
+## Over-refusal và under-refusal
 
-Hậu huấn luyện an toàn có sự đánh đổi. Nếu ví dụ từ chối quá rộng, mô hình có thể từ chối cả yêu cầu vô hại. Nếu quá hẹp, biến thể nguy hiểm có thể vượt qua ranh giới.
+Post-training safety có trade-off. Nếu refusal examples quá rộng, model có thể từ chối benign requests. Nếu quá hẹp, harmful transformations có thể bypass.
 
-Đánh giá phải đo cả tính hữu ích và khả năng từ chối đúng lúc, thay vì chỉ tối ưu một phía.
+Evaluation phải đo cả helpfulness lẫn appropriate refusal, không chỉ một phía.
 
-## Định dạng cũng là một dạng hành vi
+## Formatting as behavior
 
-Instruction tuning có thể dạy mô hình tạo JSON, XML hoặc lời gọi công cụ. Tuy nhiên generation vẫn có tính xác suất. Nếu đầu ra phải hợp lệ cú pháp tuyệt đối, nên bổ sung **giải mã có ràng buộc (constrained decoding)** hoặc validation theo schema.
+Instruction tuning có thể dạy structured output như JSON/XML/tool call. Tuy nhiên generation vẫn probabilistic. Nếu output phải syntactically valid tuyệt đối, constrained decoding hoặc schema validation nên bổ sung.
 
-Hành vi mô hình và kiểm tra xác định là hai lớp khác nhau.
+Model behavior và deterministic validation là hai layers khác nhau.
 
-## Mô hình tư duy
+## Mental Model
 
-> Tiền huấn luyện tạo **năng lực tổng quát**; instruction tuning tạo **giao thức tương tác** để năng lực đó phục vụ yêu cầu theo cách hữu ích hơn.
+> Pretraining tạo **general capability**; instruction tuning tạo **interaction protocol** để capability đó phục vụ request theo cách hữu ích hơn.
 
-## Những hiểu lầm thường gặp
+## Common Misconceptions
 
-### “Fine-tune là cách tốt nhất để cập nhật fact mới”
+### “Fine-tune là cách tốt nhất để cập nhật facts mới”
 
-Không nhất thiết. Retrieval thường tốt hơn về độ mới và provenance đối với tri thức động.
+Không nhất thiết. Retrieval có freshness/provenance tốt hơn cho knowledge dynamic.
 
-### “Instruction tuning làm mô hình hiểu mọi instruction”
+### “Instruction tuning làm model hiểu mọi instruction”
 
-Nó cải thiện khái quát hóa nhưng vẫn phụ thuộc phân bố dữ liệu, độ phức tạp của context và xung đột giữa các ràng buộc.
+Nó cải thiện generalization nhưng vẫn phụ thuộc distribution, context complexity và conflicting constraints.
 
-### “Thứ bậc vai trò được hard-code trong Transformer”
+### “Role hierarchy là hard-coded truth trong Transformer”
 
-Ngữ nghĩa vai trò đến từ định dạng huấn luyện và hệ thống runtime; attention không tự biết system message có quyền cao hơn.
+Role semantics đến từ training format và runtime system, không phải attention tự nhiên biết system message có authority cao hơn.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Instruction tuning nối pretraining với hành vi trợ lý. Sau SFT, các kỹ thuật như RLHF hoặc DPO tiếp tục điều chỉnh đầu ra theo sở thích con người và policy.
+Instruction tuning nối pretraining với assistant behavior. Sau SFT, preference optimization như RLHF/DPO tiếp tục điều chỉnh output theo human preferences và policy.
 
 Xem tiếp: [Supervised Fine-Tuning](./07_supervised_fine_tuning.md).

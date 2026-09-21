@@ -1,10 +1,10 @@
-# Truy xuất thưa và truy xuất dày đặc
+# Sparse Retrieval và Dense Retrieval
 
-Hệ thống truy xuất hiện đại thường dùng hai nhóm chính: **truy xuất thưa (sparse retrieval)** dựa trên sự trùng khớp term và **truy xuất dày đặc (dense retrieval)** dựa trên biểu diễn vector học được. Hai cách tiếp cận không phải “thế hệ mới thay thế thế hệ cũ”; chúng mã hóa relevance theo hai giả định khác nhau.
+Modern retrieval systems thường dùng hai families chính: **sparse retrieval** dựa trên term overlap và **dense retrieval** dựa trên learned vector representations. Hai approaches không phải generation mới thay generation cũ; chúng encode relevance theo hai assumptions khác nhau.
 
-## Biểu diễn thưa
+## Sparse Representation
 
-Trong sparse retrieval, document và query được biểu diễn trong không gian vocabulary rất lớn, nhưng hầu hết chiều bằng `0`.
+Trong sparse retrieval, document/query được biểu diễn trong vocabulary space rất lớn. Hầu hết dimensions bằng 0.
 
 Ví dụ vocabulary:
 
@@ -12,42 +12,44 @@ Ví dụ vocabulary:
 [refund, cancel, account, ekyc, passport, ...]
 ```
 
-Một document chỉ kích hoạt những term xuất hiện trong nó. BM25 là ví dụ điển hình.
+Một document chỉ activate terms xuất hiện trong nó.
 
-### Điểm mạnh
+BM25 là sparse retrieval điển hình.
 
-Sparse retrieval rất mạnh khi exact token mang nhiều ý nghĩa:
+### Strength
+
+Sparse retrieval rất mạnh khi exact tokens có ý nghĩa cao:
 
 ```text
-mã lỗi EKYC_4021
+error code EKYC_4021
 product ID
-số điều luật
-thuật ngữ kỹ thuật hiếm
-tên người / công ty
+legal article number
+rare technical term
+person/company name
 ```
 
-Nó cũng minh bạch hơn vì có thể chỉ ra term nào đã khớp.
+Nó transparent hơn: ta biết term nào match.
 
-### Điểm yếu
+### Weakness
 
-Nó gặp vấn đề **lệch từ vựng (vocabulary mismatch)**:
+Vocabulary mismatch:
 
 ```text
 query: "người dùng không đăng nhập được"
-document: "authentication failure"
+doc: "authentication failure"
 ```
 
-Nếu không chia sẻ term, lexical score có thể thấp dù quan hệ ngữ nghĩa cao.
+Nếu không share terms, lexical score thấp dù semantic relation cao.
 
-## Biểu diễn dày đặc
+## Dense Representation
 
-Dense retriever dùng encoder để ánh xạ query và document thành vector:
+Dense retriever dùng encoder để map query/document vào vector:
 
 \[
 q=f_q(text),\quad d=f_d(text)
 \]
 
-Mức tương đồng có thể dùng:
+Similarity:
 
 \[
 s(q,d)=q^T d
@@ -55,24 +57,24 @@ s(q,d)=q^T d
 
 hoặc cosine similarity.
 
-Mô hình được huấn luyện để cặp relevant gần nhau hơn cặp không relevant.
+Model được train sao cho relevant pairs gần nhau hơn non-relevant pairs.
 
 ## Bi-Encoder
 
-Query và document được encode độc lập:
+Query và document encode độc lập:
 
 ```text
-query → encoder → vector q
-document → encoder → vector d
+query → encoder → q vector
+doc   → encoder → d vector
 ```
 
-Vector document có thể tính trước, nên retrieval nhanh bằng vector index.
+Document vectors precompute được, nên retrieval nhanh bằng vector index.
 
-Đây là kiến trúc phổ biến cho first-stage dense retrieval.
+Đây là architecture phổ biến của dense first-stage retrieval.
 
-## Huấn luyện contrastive
+## Contrastive Training
 
-Dense retriever thường được huấn luyện với cặp dương `(q,d+)` và các negative `d-`.
+Dense retriever thường train với positive pair `(q,d+)` và negatives `d-`.
 
 Objective kiểu softmax:
 
@@ -80,122 +82,124 @@ Objective kiểu softmax:
 P(d^+\mid q)=\frac{e^{s(q,d^+)}}{\sum_j e^{s(q,d_j)}}
 \]
 
-Mô hình học một geometry nơi document relevant có score cao hơn.
+Model học geometry nơi relevant document có score cao.
 
-## Lấy mẫu negative
+## Negative Sampling
 
-Negative quyết định retriever học được ranh giới nào.
+Negatives quyết định retriever học gì.
 
-Random negative thường quá dễ vì document hoàn toàn khác topic. **Hard negative** như tài liệu giống về lexical hoặc semantic nhưng chứa đáp án sai buộc mô hình học khác biệt tinh hơn.
+Random negatives quá dễ: document hoàn toàn khác topic. Hard negatives như lexical-similar nhưng wrong answer buộc model học distinctions fine-grained.
 
-Nếu negative set chứa **false negative**, tức tài liệu thực ra relevant, tín hiệu huấn luyện bị nhiễu.
+Nếu negative set chứa false negatives — documents thực ra relevant — training signal bị noisy.
 
 ## Cross-Encoder
 
-Cross-encoder đưa query và document vào cùng một mô hình:
+Cross-encoder đưa query và document vào cùng model:
 
 ```text
 [query ; document] → Transformer → relevance score
 ```
 
-Cách này cho phép tương tác token-level sâu nên thường chính xác hơn bi-encoder, nhưng không thể precompute độc lập document representation. Chi phí quá cao để chấm hàng triệu document.
+Nó cho phép token-level interaction sâu nên accuracy cao hơn bi-encoder, nhưng không thể precompute document representation độc lập. Cost quá cao để score hàng triệu docs.
 
-Vì vậy cross-encoder thường đóng vai trò **reranker** sau bước retrieval ứng viên.
+Vì vậy cross-encoder thường dùng reranker sau candidate retrieval.
 
 ## Late Interaction
 
-Các kiến trúc **late interaction** giữ nhiều vector token cho query và document rồi thực hiện tương tác chi tiết hơn trong lúc scoring, trong khi vẫn cho phép pre-index phần lớn thông tin document.
+Các architectures như late interaction giữ multiple token vectors cho document/query rồi compute finer interaction mà vẫn pre-index được phần document.
 
-Chúng nằm giữa bi-encoder và cross-encoder về chi phí và chất lượng.
+Nó nằm giữa bi-encoder và cross-encoder về cost/quality.
 
-## Truy xuất lai
+## Hybrid Retrieval
 
-**Hybrid retrieval** kết hợp sparse và dense:
+Hybrid kết hợp sparse và dense:
 
 \[
 score=\alpha score_{dense}+(1-\alpha)score_{sparse}
 \]
 
-hoặc hợp nhất thứ hạng bằng Reciprocal Rank Fusion.
+Hoặc merge rankings bằng reciprocal rank fusion.
 
-Hybrid thường robust với corpus doanh nghiệp vì query ngữ nghĩa và identifier chính xác cùng tồn tại.
+Hybrid thường robust trong enterprise corpora vì semantic queries và exact identifiers coexist.
 
 ## Reciprocal Rank Fusion
 
-Nếu hai retriever có thang score khác nhau, cộng trực tiếp khó hiệu chỉnh. **RRF** kết hợp theo vị trí xếp hạng:
+Nếu hai retrievers có score scales khác nhau, direct weighted sum khó. RRF combine rank positions:
 
 \[
 RRF(d)=\sum_r \frac{1}{k+rank_r(d)}
 \]
 
-Cách này không yêu cầu raw score của các retriever nằm trên cùng một thang.
+Nó không cần calibrate raw scores giữa retrievers.
 
-## Trôi ngữ nghĩa
+## Semantic Drift
 
-Dense retriever có thể trả về document rất giống về chủ đề nhưng sai chi tiết cần trả lời.
+Dense retriever có thể trả document semantically related nhưng answer-specific detail sai.
 
-Ví dụ query hỏi `refund within 7 days`, nhưng retriever trả policy `refund within 30 days` vì hai đoạn gần nhau về semantic.
+Ví dụ query hỏi `refund within 7 days`, retriever đưa policy `refund within 30 days` vì topic rất giống.
 
-Reranking, metadata và filter theo thời gian cần xử lý những khác biệt tinh này.
+Reranking/metadata/time filters cần xử lý fine distinction.
 
-## Điểm mù với exact match
+## Exact-match Blind Spot
 
-Embedding model có thể làm mượt các chuỗi hiếm. Mã lỗi `E1012` và `E1013` có thể có vector gần nhau dù ý nghĩa vận hành khác hoàn toàn.
+Embedding model có thể smooth rare strings. Error code `E1012` và `E1013` có thể nằm gần nhau dù khác meaning operationally.
 
-Sparse retrieval nên được giữ để bảo toàn tín hiệu exact token.
+Sparse retrieval nên giữ exact token signal.
 
-## Truy xuất đa ngôn ngữ
+## Multilingual Retrieval
 
-Multilingual embedding có thể ánh xạ biểu thức tương đương trong tiếng Hàn, tiếng Anh và tiếng Việt vào vùng gần nhau. Điều này rất hữu ích với knowledge base đa ngôn ngữ.
+Multilingual embedding model có thể map Korean/English/Vietnamese semantic equivalents gần nhau. Điều này rất hữu ích cho cross-language knowledge base.
 
-Tuy nhiên chất lượng không đồng đều giữa ngôn ngữ. Enterprise eval cần kiểm tra cặp ngôn ngữ thật của hệ thống.
+Nhưng quality không uniform giữa languages. Enterprise eval cần test language pairs thật.
 
-## Thích ứng theo domain
+## Domain Adaptation
 
-Embedding model tổng quát có thể không hiểu abbreviation nội bộ. Fine-tune retriever hoặc thêm training pair từ query domain có thể cải thiện geometry.
+General embedding model có thể không hiểu internal abbreviations. Fine-tuning retriever hoặc augment training pairs từ domain queries cải thiện geometry.
 
-Trong nhiều trường hợp, metadata hoặc lexical alias là giải pháp đơn giản hơn và đáng tin hơn.
+Metadata/lexical aliases cũng là solution simpler hơn trong nhiều cases.
 
-## Query encoder và Document encoder
+## Query vs Document Encoder
 
-Hai phía có thể dùng chung trọng số hoặc dùng encoder bất đối xứng. Query thường ngắn còn document dài, nên huấn luyện bất đối xứng có thể tối ưu cho vai trò khác nhau.
+Có thể share weights hoặc dùng asymmetric encoders. Query thường ngắn, document dài; asymmetric training có thể optimize roles khác nhau.
 
-## Số lượng candidate
+## Candidate Count
 
-Top `k` quá nhỏ làm bỏ sót bằng chứng; top `k` quá lớn làm reranker và generator quá tải.
+Retrieve top `k` quá nhỏ → miss evidence.
 
-Nên chọn `k` dựa trên đường recall của retrieval và budget downstream thay vì chọn tùy ý.
+Top `k` quá lớn → reranker/generator overload.
 
-## Sparse retrieval được học
+Chọn `k` dựa retrieval recall curve và downstream budget, không arbitrary.
 
-Một số phương pháp dùng neural model để học trọng số term thưa, vẫn giữ hiệu quả inverted index nhưng có khả năng mở rộng ngữ nghĩa tốt hơn BM25 cổ điển.
+## Sparse Learned Retrieval
 
-Điểm cần nhớ: sparse/dense không hoàn toàn đồng nghĩa classical/neural.
+Có methods học sparse term weights bằng neural model, giữ inverted-index efficiency nhưng semantic expansion tốt hơn classic BM25.
 
-## Mô hình tư duy
+Conceptual point: sparse/dense không hoàn toàn đồng nghĩa classical/neural.
+
+## Mental Model
 
 ```text
-Sparse → "có cùng từ hoặc identifier không?"
-Dense  → "có cùng pattern ý nghĩa không?"
-Hybrid → "dùng cả bằng chứng lexical và semantic geometry"
+Sparse → "có cùng words/identifiers không?"
+Dense  → "có cùng meaning pattern không?"
+Hybrid → "dùng cả lexical evidence và semantic geometry"
 ```
 
-## Những hiểu lầm thường gặp
+## Common Misconceptions
 
 ### “Dense luôn tốt hơn BM25”
 
-Không, đặc biệt với corpus kỹ thuật có identifier chính xác.
+Không, especially exact technical corpora.
 
-### “Cosine similarity so sánh trực tiếp được giữa mọi embedding model”
+### “Cosine similarity có thể compare trực tiếp giữa mọi embedding models”
 
-Không. Phân bố score phụ thuộc mô hình, training và normalization.
+Không. Score distribution depends model/training/normalization.
 
-### “Hybrid chỉ cần cộng hai score”
+### “Hybrid chỉ cần cộng 2 scores”
 
-Raw score có thể không tương thích; cần normalization hoặc RRF.
+Raw score scales có thể incompatible; normalization/RRF cần xem xét.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Dense retrieval dựa trực tiếp vào [Embeddings](../08_large_language_models/02_embeddings_and_semantic_space.md). Sparse retrieval dựa trên inverted index và IR. RAG tốt thường kết hợp nhiều tín hiệu retrieval.
+Dense retrieval dựa trực tiếp vào [Embeddings](../08_large_language_models/02_embeddings_and_semantic_space.md). Sparse retrieval dựa inverted index/IR. RAG tốt thường dùng multiple retrieval signals.
 
 Xem tiếp: [Embeddings for Retrieval](./02_embeddings_for_retrieval.md).

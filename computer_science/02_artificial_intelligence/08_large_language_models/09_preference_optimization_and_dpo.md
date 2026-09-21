@@ -1,24 +1,24 @@
-# Tối ưu sở thích và Direct Preference Optimization (DPO)
+# Preference Optimization và Direct Preference Optimization (DPO)
 
-Sau RLHF cổ điển, một câu hỏi tự nhiên xuất hiện: nếu đã có các cặp sở thích `chosen > rejected`, có nhất thiết phải huấn luyện reward model riêng rồi chạy reinforcement learning như PPO không? **Direct Preference Optimization (DPO)** là một nhóm phương pháp cho phép cập nhật mô hình ngôn ngữ trực tiếp từ dữ liệu preference bằng objective gần với supervised learning hơn, nhờ đó đơn giản hóa pipeline.
+Sau RLHF cổ điển, một câu hỏi tự nhiên xuất hiện: nếu ta đã có preference pairs `chosen > rejected`, có nhất thiết phải train reward model riêng rồi chạy reinforcement learning như PPO không? **Direct Preference Optimization (DPO)** là một family method cho phép update language model trực tiếp từ preference data bằng objective supervised-like, giảm độ phức tạp pipeline.
 
-## Cặp preference
+## Preference pair
 
 Một sample thường có dạng:
 
 ```text
 prompt x
-phản hồi được chọn y_w
-phản hồi bị loại y_l
+chosen response y_w
+rejected response y_l
 ```
 
-Ta muốn policy ưu tiên tương đối `y_w` hơn `y_l`, nhưng vẫn không để policy trôi quá xa mô hình tham chiếu.
+Ta muốn policy gán relative preference lớn hơn cho `y_w` so với `y_l`, nhưng vẫn giữ policy không drift quá xa reference model.
 
-## Trực giác của DPO
+## Intuition của DPO
 
-DPO xuất phát từ quan hệ giữa policy tối ưu có regularization KL và phần thưởng ngầm. Thay vì học riêng `r(x,y)` rồi tối ưu reward đó, objective có thể viết trực tiếp bằng tỷ lệ log-probability giữa policy hiện tại và policy tham chiếu.
+DPO xuất phát từ relationship giữa optimal KL-regularized reward policy và implicit reward. Thay vì explicitly fit `r(x,y)` rồi optimize it, objective có thể viết trực tiếp bằng log-probability ratios giữa policy hiện tại và reference policy.
 
-Một dạng phổ biến:
+Một form phổ biến:
 
 \[
 \mathcal L_{DPO}
@@ -32,109 +32,114 @@ Một dạng phổ biến:
 \right)
 \]
 
-Không cần học thuộc công thức. Ý chính là mô hình được khuyến khích **tăng xác suất tương đối của phản hồi được chọn so với phản hồi bị loại**, sau khi tính tới hành vi ban đầu của reference model.
+Không cần học thuộc formula ngay. Ý chính là model được khuyến khích **increase chosen relative to rejected**, sau khi accounting cho behavior ban đầu của reference model.
 
-## Vì sao cần mô hình tham chiếu?
+## Tại sao cần reference model?
 
-Nếu chỉ tăng xác suất của chosen response, mô hình có thể overfit tập preference và trôi khỏi phân bố ngôn ngữ tốt đã học.
+Nếu chỉ maximize chosen response probability, model có thể overfit preference set và drift khỏi language distribution tốt đã học.
 
-Reference model đóng vai trò mỏ neo. Update được đánh giá theo “mức thay đổi so với policy ban đầu” chứ không chỉ raw likelihood.
+Reference model tạo anchor. Preference update đo “thay đổi so với policy ban đầu”, không chỉ raw likelihood.
 
 ## Vai trò của beta
 
-`β` kiểm soát quan hệ giữa độ mạnh của tối ưu preference và regularization.
+`β` điều khiển strength của preference optimization/regularization relationship.
 
-Ý nghĩa chính xác của việc `β` lớn hay nhỏ phụ thuộc cách thư viện tham số hóa objective. Vì vậy không nên chuyển cách hiểu của `β` giữa các implementation một cách máy móc; cần đọc đúng công thức được dùng.
-
-## DPO không phải sự thay thế thần kỳ cho RLHF
-
-DPO đơn giản hóa engineering vì loại bỏ reward model tách riêng và vòng RL on-policy. Tuy nhiên nó vẫn phụ thuộc rất mạnh vào chất lượng và độ bao phủ của dữ liệu preference.
-
-Nếu dataset được thu từ policy cũ còn policy mới trôi sang một phân bố khác, nhãn offline có thể không bao phủ failure mode mới.
-
-Phương pháp RL vẫn có lợi thế khi cần exploration online hoặc reward signal phức tạp.
-
-## Phản hồi được chọn không phải chân lý tuyệt đối
-
-Một preference pair chỉ cho biết `A` được chọn hơn `B` theo guideline hoặc người đánh giá. Nếu cả hai đều sai, DPO vẫn có thể tăng xác suất cho câu trả lời “ít tệ hơn”.
-
-Do đó preference optimization không thay thế factual verification.
-
-## Thiên lệch theo độ dài
-
-Người đánh giá hoặc reward signal có thể vô tình ưu tiên câu trả lời dài. Nếu chosen response thường dài hơn, mô hình có thể học preference về verbosity thay vì chất lượng thật.
-
-Nên phân tích dataset theo:
-
-- phân bố độ dài;
-- dấu hiệu phong cách;
-- mất cân bằng chủ đề;
-- mức bất đồng của annotator;
-- hiệu ứng vị trí hoặc thứ tự hiển thị.
-
-## Độ khó của cặp so sánh
-
-Nếu chosen và rejected khác chất lượng quá rõ, tín hiệu dễ nhưng ít tinh tế. Nếu quá giống nhau, nhãn có thể nhiễu.
-
-Dataset preference tốt thường cần nhiều mức độ khó để mô hình học những khác biệt có ý nghĩa.
-
-## DPO và dữ liệu SFT
-
-Pipeline thường là:
+Trực giác:
 
 ```text
-mô hình đã pretrain
+β nhỏ/lớn tùy convention implementation
+→ trade-off giữa staying near reference và fitting preference strongly
+```
+
+Khi dùng library cụ thể cần kiểm tra exact parameterization; không nên chuyển meaning của `β` giữa implementations một cách máy móc.
+
+## DPO không phải magic replacement cho RLHF
+
+DPO đơn giản hóa engineering vì bỏ explicit reward model + on-policy RL loop. Nhưng nó vẫn phụ thuộc mạnh vào preference data quality và coverage.
+
+Nếu preference dataset được thu từ policy cũ và model mới drift sang distribution khác, offline labels có thể không cover failure modes mới.
+
+RL methods có advantage khi muốn online exploration hoặc reward signal phức tạp.
+
+## Chosen response không phải absolute truth
+
+Preference pair chỉ nói `A` được chọn hơn `B` theo guideline/annotator. Nếu cả hai đều sai, DPO vẫn có thể reinforce answer “ít tệ hơn”.
+
+Vì vậy preference optimization không thay factual verification.
+
+## Length bias
+
+Annotators hoặc reward signals thường có bias theo response length. Nếu chosen responses thường dài hơn, model có thể learn verbosity preference ngoài intended quality.
+
+Dataset analysis nên kiểm tra:
+
+- length distribution;
+- style artifacts;
+- topic imbalance;
+- annotator disagreement;
+- position/order effects.
+
+## Pair difficulty
+
+Nếu chosen và rejected quá khác quality, signal dễ nhưng ít fine-grained. Nếu quá giống, labels có thể noisy.
+
+Một good preference dataset thường cần mixture difficulty để model học distinctions meaningful.
+
+## DPO và SFT data
+
+Thường pipeline:
+
+```text
+pretrained model
 → SFT
 → preference optimization
 ```
 
-SFT tạo baseline làm theo chỉ dẫn ổn định; DPO tiếp tục tinh chỉnh thứ tự ưu tiên giữa các hành vi thay thế.
+SFT tạo stable instruction-following baseline. DPO sau đó refine ranking giữa alternative behaviors.
 
-DPO trực tiếp từ base model yếu có thể khó vì chosen sample quá xa phân bố policy hiện tại.
+DPO trực tiếp từ weak base model có thể khó vì chosen samples quá xa current policy distribution.
 
-## Các objective preference khác
+## Other preference objectives
 
-DPO không phải phương pháp duy nhất. Có nhiều biến thể và hướng thay thế để xử lý nhiễu, thiết lập không cần reference, margin phần thưởng hoặc cập nhật online.
-
-Tên thuật toán thay đổi nhanh; mô hình tư duy bền vững hơn là:
+DPO không phải only method. Có nhiều variants/alternatives nhằm xử lý noise, reference-free setup, reward margins hoặc online updates. Tên algorithms thay đổi nhanh; mental model bền vững hơn là:
 
 ```text
-dữ liệu preference
-+ likelihood của policy / reference
-→ objective làm đầu ra được ưu tiên có xác suất tương đối cao hơn
+preference data
++ policy/reference likelihood
+→ objective làm preferred output tương đối có xác suất cao hơn
 ```
 
-## Preference optimization và an toàn
+## Preference optimization và safety
 
-Preference pair có thể mã hóa hành vi an toàn, nhưng safety policy thường đa chiều và mang tính đối kháng. Mô hình tối ưu trên các cặp tĩnh vẫn có thể thất bại trước prompt injection hoặc jailbreak.
+Preference pairs có thể encode safe behavior, nhưng safety policy thường multi-dimensional và adversarial. Một model optimized trên static pairs vẫn có thể fail prompt injection/jailbreak.
 
-Safety cần evaluation và defense-in-depth ở cấp hệ thống.
+Safety cần evaluation và defense-in-depth ở system layer.
 
-## Vấn đề phân bố của dữ liệu offline
+## Offline distribution problem
 
-Dataset preference phản ánh prompt và candidate đã từng được lấy mẫu. Nếu traffic production khác mạnh, mô hình có thể được tối ưu cho sai vùng của input space.
+Preference dataset phản ánh prompts và candidates đã sampled. Nếu deployment traffic khác mạnh, model may be optimized cho wrong region of input space.
 
-Đây chính là một dạng **distribution shift** trong statistical learning.
+Đây là connection với statistical distribution shift.
 
-## Mô hình tư duy
+## Mental Model
 
-> DPO biến “con người thích A hơn B” thành **cập nhật likelihood tương đối** trực tiếp trên policy, thay vì bắt buộc xây reward model rồi chạy một RL optimizer riêng.
+> DPO biến “human thích A hơn B” thành **relative likelihood update** trực tiếp trên policy, thay vì bắt buộc xây reward model rồi chạy RL optimizer.
 
-## Những hiểu lầm thường gặp
+## Common Misconceptions
 
-### “DPO không phải RL nên không cần hiểu reward hoặc preference”
+### “DPO không phải reinforcement-learning-related nên không cần hiểu preference/reward”
 
-DPO vẫn bắt nguồn từ bài toán preference optimization có regularization KL; hiểu framing reward/preference giúp hiểu đúng objective.
+DPO vẫn bắt nguồn từ KL-regularized preference optimization; hiểu reward/preference framing giúp hiểu objective.
 
 ### “DPO luôn tốt hơn PPO”
 
-Không. Lựa chọn phụ thuộc dữ liệu, nhu cầu feedback online, độ ổn định và ràng buộc engineering.
+Không. Choice phụ thuộc data, online feedback needs, stability và engineering constraints.
 
-### “DPO bảo đảm mô hình aligned”
+### “DPO đảm bảo model aligned”
 
-DPO tối ưu preference quan sát được. Alignment rộng hơn rất nhiều so với một dataset và một objective.
+Nó optimize observed preferences. Alignment rộng hơn dataset và objective.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
 DPO nối [RLHF](./08_rlhf.md), [SFT](./07_supervised_fine_tuning.md), [Probability](../01_mathematical_foundations/02_probability_for_ai.md) và [Distribution Shift](../04_machine_learning/14_bias_variance_and_generalization.md).
 

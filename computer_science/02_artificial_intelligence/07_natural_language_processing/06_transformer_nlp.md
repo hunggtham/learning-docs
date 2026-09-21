@@ -1,61 +1,67 @@
-# Transformer trong NLP: Encoder, Decoder và thích ứng tác vụ
+# Transformer NLP: Encoder, Decoder và Task Adaptation
 
-Kiến trúc Transformer là một cơ chế tổng quát; NLP biến cơ chế đó thành những họ mô hình khác nhau thông qua **masking, mục tiêu pretraining, pooling/head và chiến lược fine-tuning**. BERT, GPT và T5 không chỉ khác tên; chúng có luồng thông tin và mục tiêu học khác nhau.
+Transformer architecture là general mechanism; NLP biến mechanism đó thành các model families khác nhau bằng **masking, pretraining objective, pooling/head và fine-tuning strategy**. BERT, GPT và T5 không chỉ khác tên — chúng encode information flow khác nhau.
 
-## NLP với Encoder-Only
+## Encoder-Only NLP
 
-Self-attention của encoder thường hai chiều: mỗi token có thể truy cập ngữ cảnh bên trái và bên phải.
+Encoder self-attention thường bidirectional. Mỗi token có thể attend left/right context.
 
-Pretraining kiểu BERT dùng **Masked Language Modeling (MLM)**: chọn một số token, làm hỏng hoặc che chúng rồi dự đoán token gốc.
+BERT-style pretraining dùng Masked Language Modeling (MLM): chọn một số tokens, corrupt/mask, predict originals.
 
-Biểu diễn thu được phù hợp cho:
+Representation tốt cho:
 
-- phân loại văn bản;
-- phân loại token / NER;
-- Question Answering trích xuất;
-- chấm điểm cặp câu;
-- embedding sau khi được huấn luyện thêm cho mục tiêu phù hợp.
+- text classification;
+- token classification/NER;
+- extractive QA;
+- sentence-pair scoring;
+- embeddings sau task-specific training.
 
-Encoder-only không tự nhiên cho sinh văn bản tự hồi quy dài vì luồng thông tin và mục tiêu huấn luyện không mang tính nhân quả.
+Encoder-only không naturally generate long autoregressive text, vì training/information flow không causal.
 
-## NLP với Decoder-Only
+## Decoder-Only NLP
 
-Decoder-only sử dụng causal mask và học:
+Causal mask:
 
 \[
 P(x_t\mid x_{<t})
 \]
 
-Một kiến trúc có thể xử lý nhiều tác vụ bằng cách biến đầu vào và yêu cầu thành tiền tố, rồi sinh phần tiếp theo làm đầu ra.
+Một architecture có thể handle many tasks by expressing input/task as prefix and generating output continuation.
 
-Tính linh hoạt này mở rộng tự nhiên thành LLM và instruction following.
+This flexibility scales naturally into LLM/instruction following.
 
-Với tác vụ phân loại thuần túy, decoder lớn có thể tốn compute hơn encoder chuyên dụng, nhưng một hệ thống triển khai thống nhất đôi khi vẫn đáng giá về mặt vận hành.
+For pure classification, decoder model may be compute-inefficient compared with smaller encoder but unified deployment can justify it.
 
-## NLP với Encoder–Decoder
+## Encoder–Decoder NLP
 
-Encoder đọc toàn bộ nguồn hai chiều; decoder sinh đầu ra nhân quả và dùng cross-attention để truy cập biểu diễn nguồn.
+Encoder reads full source bidirectionally; decoder generates target causally with cross-attention.
 
-Cấu trúc này tự nhiên cho:
+Natural for:
 
-- dịch máy;
-- tóm tắt;
-- biến đổi có cấu trúc;
-- sinh có điều kiện.
+- translation;
+- summarization;
+- structured transformation;
+- conditional generation.
 
-Các họ T5 và BART minh họa rõ mô hình text-to-text.
+T5/BART families show strong text-to-text paradigm.
 
-## Mục tiêu Pretraining định hình năng lực
+## Pretraining Objective Shapes Capability
 
-Cùng một kiến trúc dưới các mục tiêu khác nhau có thể học hành vi rất khác.
+Same architecture under different objectives learns different behavior.
 
-Causal LM được thưởng khi dự đoán phần tiếp theo. Masked LM học khôi phục token bị che bằng cả hai phía. Denoising Seq2Seq học phục hồi toàn bộ văn bản từ đầu vào bị làm hỏng. Mục tiêu contrastive học hình học tương đồng.
+Causal LM rewards continuation.
 
-Vì vậy không nên suy năng lực chỉ từ tên kiến trúc; cần xem cả luồng thông tin và objective.
+Masked LM rewards reconstruct hidden tokens using both sides.
 
-## Fine-Tuning cho phân loại
+Denoising seq2seq rewards reconstruct entire text from corrupted input.
 
-Đầu ra encoder có thể được pooling từ `[CLS]` hoặc trung bình hidden state:
+Contrastive objectives reward similarity geometry.
+
+Do not infer capability solely from architecture.
+
+## Fine-Tuning for Classification
+
+Encoder output can pool `[CLS]` or mean hidden states:
 
 \[
 h_{pool}=Pool(H)
@@ -67,140 +73,140 @@ Classifier:
 p(y\mid x)=softmax(Wh_{pool}+b)
 \]
 
-Fine-tuning có thể cập nhật toàn bộ encoder, một phần encoder hoặc chỉ head.
+Fine-tuning updates all/partial encoder + head.
 
-Tập dữ liệu nhỏ làm tăng nguy cơ overfit và catastrophic forgetting. Learning rate thấp hơn, regularization hoặc adapter có thể giúp.
+Small dataset risks overfit/catastrophic forgetting; lower LR, regularization, adapters can help.
 
-## Phân loại Token
+## Token Classification
 
-NER hoặc POS tagging dùng hidden state của từng token:
+NER/POS tagging uses per-token hidden state:
 
 \[
 p(y_i\mid x)=softmax(Wh_i+b)
 \]
 
-Subword tạo một vấn đề thực tế: một từ có thể bị chia thành nhiều piece. Pipeline phải quyết định gán nhãn cho piece đầu, mọi piece hay gộp chúng khi đánh giá.
+Subword complication: one word may split multiple pieces. Labeling strategy must decide first-piece/all-piece aggregation.
 
-Metric nên tái tạo đúng ranh giới từ hoặc thực thể thay vì chỉ tính accuracy trên token piece.
+Metrics should reconstruct word/entity spans correctly.
 
 ## Extractive Question Answering
 
-Với đầu vào `[question ; context]`, encoder tạo hidden state cho mọi token. Hai head dự đoán vị trí bắt đầu và kết thúc:
+Given `[question ; context]`, encoder outputs token states. Two heads predict start/end positions:
 
 \[
 P(start=i),\qquad P(end=j)
 \]
 
-Câu trả lời bị giới hạn trong một span của context, giúp giảm tự do sinh và một số dạng hallucination. Tuy nhiên nếu đáp án không có trong context, hệ thống cần mô hình hóa lựa chọn “không có đáp án”; nếu không nó vẫn có thể chọn một span sai.
+Answer constrained to span in context, reducing free-form hallucination but cannot answer if answer absent unless no-answer modeled.
 
 ## Natural Language Inference
 
-**Natural Language Inference (NLI)** nhận premise và hypothesis rồi phân loại entailment, contradiction hoặc neutral.
+Input premise+hypothesis, classify entailment/contradiction/neutral.
 
-Dataset NLI hữu ích để nghiên cứu suy luận ngữ nghĩa, nhưng mô hình có thể khai thác artifact trong cách người gán nhãn tạo câu. Điểm benchmark cao không tự động chứng minh khả năng suy luận logic bền vững ngoài phân bố.
+NLI datasets useful for semantic reasoning but models may exploit annotation artifacts. High benchmark score does not prove robust logical inference.
 
-## Cross-Encoder cho cặp văn bản
+## Sentence Pair Cross-Encoding
 
-Với relevance hoặc paraphrase:
+For relevance/paraphrase:
 
 ```text
 [CLS] query [SEP] document
 ```
 
-self-attention chung cho phép token của query tương tác trực tiếp với token của document. Điều này thường cho điểm cặp chính xác hơn nhưng chi phí suy luận tăng theo số cặp ứng viên.
+joint self-attention lets every token pair interact, giving accurate scoring but O(number of candidate pairs) inference cost.
 
-Sự đánh đổi bi-encoder ↔ cross-encoder là nền tảng của kiến trúc retrieval và reranking.
+Bi-encoder vs cross-encoder trade-off becomes central retrieval architecture.
 
-## Fine-Tuning dựa trên Prompt
+## Prompt-Based Fine-Tuning
 
-Thay vì thêm classification head riêng, có thể chuyển tác vụ về dự đoán ngôn ngữ:
+Instead of classification head, reformulate task as language prediction:
 
 ```text
 Review: ... Sentiment: [MASK]
 ```
 
-hoặc sinh văn bản.
+or generation.
 
-Cách này giúp tác vụ downstream gần hơn với mục tiêu pretraining và có thể hữu ích khi dữ liệu ít. Tuy nhiên lựa chọn verbalizer — token nào đại diện nhãn nào — có thể tạo thiên lệch đáng kể.
+Prompting aligns downstream task with pretraining objective, useful few-shot regimes. Verbalizer choice can bias results.
 
 ## Parameter-Efficient Fine-Tuning
 
-Thay vì cập nhật toàn bộ trọng số, có thể dùng:
+Rather than update all weights:
 
-- adapter: chèn module nhỏ có thể huấn luyện;
-- LoRA: học cập nhật low-rank;
-- prefix/prompt tuning: học vector giống token ảo;
-- bias-only: chỉ cập nhật một phần tham số.
+- adapters insert small trainable modules;
+- LoRA learns low-rank updates;
+- prefix/prompt tuning learns virtual token-like vectors;
+- bias-only methods update subset.
 
-**PEFT (Parameter-Efficient Fine-Tuning)** giảm bộ nhớ và dung lượng lưu trữ, tiện cho nhiều biến thể chuyên biệt trên cùng base model và có thể giảm forgetting. Đổi lại, một số tác vụ có thể cần năng lực thích ứng cao hơn full fine-tuning mới đạt trần chất lượng tốt nhất.
+Benefits: memory/storage, multi-tenant specialization and reduced forgetting. Trade-off can be lower ceiling/task-specific quirks.
 
-## Tài liệu dài
+## Long Documents
 
-Transformer cơ bản có context hữu hạn và attention bậc hai. Các chiến lược thường gặp:
+Vanilla Transformer context finite/quadratic. Strategies:
 
-- cắt ngắn;
-- sliding window;
-- mã hóa từng chunk rồi tổng hợp phân cấp;
+- truncate;
+- sliding windows;
+- hierarchical encode chunks then aggregate;
 - sparse/long attention;
-- retrieval trước khi mã hóa.
+- retrieval before encoding.
 
-Cách chia phải phù hợp tác vụ; chunking cục bộ có thể làm mất quan hệ diễn ngôn kéo dài qua nhiều phần tài liệu.
+Task determines whether local chunking loses discourse relation.
 
-## Mô hình NLP chuyên Domain
+## Domain-Specific NLP Models
 
-Y sinh, pháp lý và tài chính có thuật ngữ, phong cách và loại thực thể khác văn bản tổng quát. Tiếp tục pretraining trên corpus domain rồi fine-tune cho tác vụ cụ thể có thể cải thiện kết quả.
+Biomedical/legal/financial corpora contain vocabulary/style/entities not well represented general models. Continued pretraining on domain corpus then task fine-tuning can improve.
 
-Tuy nhiên domain pretraining vẫn cần kiểm soát chất lượng, bản quyền, riêng tư và khả năng làm lệch năng lực tổng quát.
+But domain pretraining needs quality/copyright/privacy controls and can shift general capability.
 
-## Transformer đa ngôn ngữ
+## Multilingual Transformer
 
-Tokenizer và tham số dùng chung cho nhiều ngôn ngữ cho phép transfer xuyên ngôn ngữ. Nhưng ngôn ngữ nhiều dữ liệu có thể chiếm phần lớn dung lượng học; script, hiệu quả token và tỷ lệ corpus đều ảnh hưởng.
+Shared tokenizer + parameters across languages enables transfer. High-resource languages may dominate capacity; scripts/token efficiency and corpus balance matter.
 
-Cross-lingual transfer xuất hiện vì biểu diễn chung học được nhiều cấu trúc tương đồng, nhưng hiệu năng không đồng đều. Hệ thống nhắm tới tiếng Hàn hoặc tiếng Việt nên đánh giá riêng từng ngôn ngữ thay vì chỉ dựa vào điểm tiếng Anh.
+Cross-lingual transfer works because shared representations align statistical structures, but performance uneven. Evaluate each language, especially Korean/Vietnamese target use.
 
 ## Distillation
 
-**Chưng cất mô hình (knowledge distillation)** dùng teacher Transformer truyền hành vi sang student nhỏ hơn thông qua soft target, hidden-state loss hoặc các tín hiệu khác.
+Teacher Transformer transfers behavior to smaller student using soft targets/hidden-state losses.
 
-Mục tiêu là giảm latency và memory trong khi giữ càng nhiều chất lượng càng tốt. Student có thể dùng ít layer hoặc hidden dimension nhỏ hơn.
+Goal reduce latency/memory while retain performance. Student architecture can be fewer layers/smaller hidden dimension.
 
-Distillation sẽ xuất hiện lại trong phần AI Engineering.
+Distillation will reappear in deployment/inference layer.
 
-## Quantization trong NLP
+## Quantization-aware NLP Preview
 
-Suy luận có thể lượng tử hóa trọng số và activation. Nhiều mô hình chịu được INT8 hoặc 4-bit khá tốt, nhưng layer nhạy hoặc outlier có thể cần mixed precision và calibration.
+Inference can quantize weights/activations. Some NLP models tolerate INT8/4-bit well; sensitive layers/outliers may require mixed precision/calibration.
 
-Nén mô hình không phải chuyện tách rời NLP; nó là một ràng buộc triển khai ảnh hưởng trực tiếp lựa chọn model và kiến trúc hệ thống.
+Model compression is system constraint, not separate from NLP deployment.
 
-## Mô hình tư duy
+## Mental Model
 
 ```text
-Cơ chế Transformer
-+ mask / luồng thông tin
-+ mục tiêu pretraining
-+ task head hoặc prompting
-+ phương pháp thích ứng
-= hành vi của mô hình NLP
+Transformer mechanism
++ attention mask / information flow
++ pretraining objective
++ task head / prompting
++ adaptation method
+= NLP model behavior
 ```
 
-## Những hiểu lầm thường gặp
+## Common Misconceptions
 
-### “BERT và GPT chỉ khác dữ liệu huấn luyện”
+### “BERT và GPT chỉ khác training data”
 
-Không. Hướng attention, causal mask và objective khác nhau về bản chất.
+Architecture direction/mask and objective differ fundamentally.
 
-### “Encoder không sinh văn bản nên kém hơn”
+### “Encoder model không generate nên kém hơn”
 
-Không. Với phân loại, retrieval hoặc reranking, encoder nhỏ có thể hiệu quả hơn nhiều trên mỗi đơn vị compute.
+For classification/retrieval/reranking, encoder can be much more efficient and accurate per compute.
 
-### “Fine-tuning toàn bộ trọng số luôn tốt nhất”
+### “Fine-tuning all weights always best”
 
-Không. Dữ liệu nhỏ, nhiều tác vụ và ràng buộc serving có thể làm PEFT phù hợp hơn.
+Small data/multi-task/serving constraints may favor PEFT.
 
-### “Mô hình đa ngôn ngữ tạo biểu diễn hoàn toàn độc lập ngôn ngữ”
+### “Multilingual model means language-independent representation hoàn hảo”
 
-Không. Alignment xuyên ngôn ngữ luôn không hoàn hảo và phụ thuộc dữ liệu.
+Cross-lingual alignment is imperfect and data-dependent.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Xem [Kiến trúc Transformer](../06_deep_learning_architectures/05_transformer.md), [Seq2Seq NLP](./05_sequence_to_sequence_nlp.md) và tiếp theo [Information Extraction](./07_information_extraction.md).
+Xem [Transformer architecture](../06_deep_learning_architectures/05_transformer.md), [Seq2Seq NLP](./05_sequence_to_sequence_nlp.md), and next [Information Extraction](./07_information_extraction.md).

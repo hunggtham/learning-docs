@@ -1,10 +1,10 @@
 # Neuron, Perceptron và Multi-Layer Perceptron
 
-**Neuron nhân tạo (artificial neuron)** là một khối tính toán đơn giản: nhận vector đầu vào, tính tổng có trọng số, cộng bias rồi đưa kết quả qua hàm kích hoạt. Tuy nhiên để hiểu Neural Network đúng bản chất, cần phân biệt rõ **Perceptron**, **neuron hiện đại**, **mạng một layer** và **Multi-Layer Perceptron (MLP / 다층 퍼셉트론)**.
+Artificial neuron là building block đơn giản: nhận vector input, tính weighted sum, thêm bias rồi qua activation. Nhưng để hiểu vì sao neural network hoạt động, cần phân biệt rõ **perceptron**, **neuron hiện đại**, **single-layer network** và **Multi-Layer Perceptron (MLP / 다층 퍼셉트론)**.
 
-## Neuron nhân tạo
+## Artificial neuron
 
-Một unit có dạng:
+Một unit:
 
 \[
 z=\mathbf w^T\mathbf x+b
@@ -14,33 +14,33 @@ z=\mathbf w^T\mathbf x+b
 a=\phi(z)
 \]
 
-Trong đó `w` quyết định hướng và độ nhạy của phép đo tuyến tính, `b` dịch ngưỡng, còn `φ` tạo tính phi tuyến.
+`w` xác định direction/sensitivity, `b` dịch decision threshold, `φ` tạo nonlinearity.
 
-Nếu `φ` là hàm đồng nhất, unit chỉ còn là một thành phần tuyến tính giống Linear Regression. Nếu dùng sigmoid, hành vi giống Logistic Regression. Nếu dùng ReLU, đầu ra bằng 0 với pre-activation âm và tăng tuyến tính với phần dương.
+Nếu `φ` là identity, unit chỉ là linear regression component. Nếu sigmoid, có logistic behavior. Nếu ReLU, output zero cho negative preactivation và linear cho positive.
 
 ## Perceptron lịch sử
 
-Perceptron nhị phân dùng activation dạng threshold hoặc sign:
+Perceptron binary dùng threshold/sign activation:
 
 \[
 \hat y=sign(\mathbf w^T\mathbf x+b)
 \]
 
-Quy tắc học trong dạng đơn giản cập nhật khi mẫu bị phân loại sai:
+Learning rule update khi misclassified:
 
 \[
 \mathbf w\leftarrow \mathbf w+\eta y\mathbf x
 \]
 
-với nhãn `y∈{-1,+1}`.
+cho labels `y∈{-1,+1}` trong simplified form.
 
-**Perceptron Convergence Theorem** nói rằng nếu dữ liệu có thể phân tách tuyến tính, thuật toán sẽ hội tụ sau hữu hạn số lỗi.
+Perceptron Convergence Theorem nói nếu data linearly separable, algorithm hội tụ sau hữu hạn mistakes.
 
-Tuy nhiên XOR không phân tách tuyến tính được, nên một perceptron đơn lẻ không thể giải bài toán đó. Hạn chế này là một trong những động lực dẫn tới mạng nhiều layer.
+Nhưng XOR không linearly separable, nên single perceptron không solve được. Limitation này thúc đẩy multi-layer networks.
 
-## Một layer dưới dạng ma trận
+## Layer dưới dạng matrix
 
-Thay vì một neuron, một layer có thể có `m` unit:
+Thay vì một neuron, layer có `m` units:
 
 \[
 \mathbf z=W\mathbf x+\mathbf b
@@ -58,13 +58,11 @@ Sau activation:
 \mathbf h=\phi(\mathbf z)
 \]
 
-Mỗi hàng của `W` là weight vector của một unit.
-
-GPU có thể tính hàng nghìn unit song song bằng matrix multiplication, đây là một trong các lý do Neural Network phù hợp rất tốt với accelerator hiện đại.
+Mỗi row của `W` là weight vector của một unit. GPU có thể tính hàng nghìn units song song bằng matrix multiplication.
 
 ## Multi-Layer Perceptron
 
-MLP xếp chồng nhiều fully connected layer:
+MLP stack fully-connected layers:
 
 \[
 h^{(1)}=\phi(W^{(1)}x+b^{(1)})
@@ -78,151 +76,149 @@ h^{(2)}=\phi(W^{(2)}h^{(1)}+b^{(2)})
 \hat y=g(W^{(3)}h^{(2)}+b^{(3)})
 \]
 
-Các hidden layer không có target riêng trực tiếp. Representation bên trong được định hình bởi loss cuối thông qua backpropagation.
+Hidden layers không có target trực tiếp. Chúng được shaped bởi final loss thông qua backpropagation.
 
-## Hidden unit đang học gì?
+## Hidden units đang học gì?
 
-Không nên giả định mỗi hidden unit tương ứng một khái niệm rõ ràng như “mắt mèo” hay “bánh xe”.
+Không nên assume mỗi hidden unit tương ứng một concept rõ như “mắt mèo”. Representation thường distributed.
 
-Representation thường mang tính phân tán. Một hidden vector `h` có thể mã hóa nhiều yếu tố thông qua direction hoặc subspace, còn layer sau kết hợp chúng thành feature bậc cao hơn.
+Một hidden vector `h` có thể encode multiple factors qua directions/subspaces. Layer sau combine chúng thành higher-order features.
 
-Muốn diễn giải hidden unit cần phân tích thực nghiệm; không thể suy ý nghĩa chỉ từ vị trí neuron trong layer.
+Interpretability cần empirical analysis, không thể suy meaning chỉ từ unit index.
 
 ## Output layer phụ thuộc task
 
-Với binary classification, hệ thống thường dùng một logit + sigmoid hoặc hai logit + softmax.
+Binary classification thường dùng one logit + sigmoid hoặc two logits + softmax.
 
-Với multiclass classification:
+Multiclass:
 
 \[
 \mathbf p=softmax(Wh+b)
 \]
 
-Với regression, output có thể tuyến tính.
+Regression có thể dùng linear output.
 
-Với **multi-label classification**, mỗi label thường dùng sigmoid độc lập thay vì softmax vì nhiều label có thể đồng thời đúng.
+Multi-label classification thường dùng independent sigmoid per label, không softmax, vì labels không mutually exclusive.
 
-Activation và loss ở output layer phải phù hợp với cấu trúc xác suất của target.
+Output activation/loss phải match probabilistic structure của target.
 
-## Chiều batch
+## Batch dimension
 
-Trong thực tế, input thường là batch:
+Thực tế input batch:
 
 \[
 X\in\mathbb R^{B\times d}
 \]
 
-Forward pass:
+Forward:
 
 \[
 Z=XW^T+b
 \]
 
-Bias được broadcast qua `B` sample.
+Broadcast bias trên `B` samples.
 
-Khả năng suy luận đúng shape của tensor là kỹ năng rất quan trọng khi implement Neural Network. Nhiều lỗi không nằm ở công thức mà nằm ở việc hiểu sai ý nghĩa của một axis.
+Tensor-shape reasoning là skill critical khi implement neural networks.
 
-## Đếm số tham số
+## Parameter count
 
-Một fully connected layer từ `d_in` tới `d_out` có:
+Fully connected layer từ `d_in` tới `d_out` có:
 
 \[
 d_{in}d_{out}+d_{out}
 \]
 
-tham số.
+parameters.
 
-Nếu ảnh `224×224×3` được flatten trực tiếp thành khoảng 150 nghìn feature rồi nối với 4.096 hidden unit, chỉ layer đầu đã cần hơn 600 triệu tham số.
+Nếu image 224×224×3 flatten trực tiếp (~150k features) rồi connect 4096 hidden units, parameters >600M chỉ layer đầu. Đây là lý do CNN dùng locality/weight sharing thay dense MLP cho images.
 
-Đây là lý do CNN dùng locality và weight sharing thay vì dense MLP cho ảnh.
+Architecture phản ánh structural assumptions của modality.
 
-Kiến trúc phải phản ánh cấu trúc của modality.
+## MLP cho tabular data
 
-## MLP cho dữ liệu bảng
+MLP có thể dùng tabular data, nhưng Gradient Boosted Trees thường rất competitive khi data size vừa và heterogeneous. Neural models có lợi khi:
 
-MLP có thể xử lý tabular data, nhưng Gradient Boosted Tree vẫn rất cạnh tranh khi dataset có quy mô vừa và feature dị thể.
+- dataset lớn;
+- learned embeddings/categories;
+- multimodal inputs;
+- end-to-end representation learning;
+- transfer/pretraining.
 
-Neural model thường có lợi thế hơn khi dữ liệu rất lớn, cần embedding học được cho category, input đa phương thức, cần end-to-end representation learning hoặc tận dụng transfer/pretraining.
+Không nên chọn MLP chỉ vì “deep learning hiện đại hơn”.
 
-Không nên chọn MLP chỉ vì “Deep Learning hiện đại hơn”.
+## Decision regions
 
-## Vùng quyết định
+ReLU MLP tạo piecewise-linear function. Mỗi pattern ReLU active/inactive xác định một local linear region.
 
-ReLU MLP tạo hàm dạng **tuyến tính từng đoạn (piecewise-linear)**.
-
-Mỗi pattern ReLU bật/tắt xác định một vùng cục bộ nơi toàn mạng hoạt động như một phép biến đổi tuyến tính.
-
-Khi depth tăng, số vùng tuyến tính có thể tăng rất lớn, giúp mạng biểu diễn ranh giới quyết định phức tạp dù từng phép toán cơ bản rất đơn giản.
+Depth có thể tạo rất nhiều regions, cho decision boundary phức tạp dù mỗi primitive operation đơn giản.
 
 ## Bias term là gì?
 
-Bias `b` không phải statistical bias hay social bias. Nó tương tự intercept: cho phép ngưỡng activation dịch khỏi gốc tọa độ.
+Bias `b` không phải statistical/social bias. Nó giống intercept: cho phép activation threshold dịch khỏi origin.
 
-Nếu không có bias, các hyperplane kiểu `Wx=0` đều buộc đi qua origin, làm giảm khả năng biểu diễn.
+Không có bias, mọi hyperplane `Wx=0` đi qua origin, hạn chế expressivity.
 
-## Kết nối dày đặc và kết nối thưa
+## Dense connection và sparsity
 
-MLP chuẩn là **fully connected**: mỗi output unit nhận toàn bộ hidden vector của layer trước.
+Standard MLP fully connected: mỗi output unit nhận toàn bộ previous hidden vector. Nhưng architectures khác có sparse/local/recurrent/attention connections.
 
-Nhưng nhiều kiến trúc khác dùng kết nối cục bộ, thưa, hồi quy hoặc attention.
+Neural Network không đồng nghĩa fully connected network.
 
-Neural Network không đồng nghĩa với fully connected network.
+## Perceptron vs Logistic Neuron
 
-## Perceptron và Logistic Neuron
+Perceptron hard threshold không differentiable tại boundary và gradient zero/undefined theo cách không thuận lợi cho backprop.
 
-Perceptron dùng hard threshold, không khả vi tại boundary và không cung cấp gradient thuận lợi cho backpropagation.
+Sigmoid/ReLU/GELU cung cấp differentiable hoặc almost-everywhere differentiable behavior phù hợp gradient-based training.
 
-Sigmoid, ReLU và GELU cung cấp hàm khả vi hoặc khả vi gần như mọi nơi, phù hợp với gradient-based training.
+Modern network vì vậy không train bằng classic perceptron rule trong đa số cases.
 
-Vì vậy mạng hiện đại hầu như không được train bằng perceptron rule cổ điển.
+## Example: XOR bằng hidden representation
 
-## Ví dụ XOR qua hidden representation
+Một MLP có thể học hidden units đại diện regions khác nhau rồi output combine chúng.
 
-Một MLP có thể học các hidden feature đại diện cho những vùng khác nhau, sau đó layer cuối kết hợp chúng.
-
-Về mặt khái niệm:
+Conceptually:
 
 ```text
 (x1, x2)
-  ↓ feature phi tuyến được học
-[feature gần giống x1 OR x2,
- feature gần giống x1 AND x2]
-  ↓ kết hợp
+  ↓ hidden nonlinear features
+[feature: x1 OR x2,
+ feature: x1 AND x2]
+  ↓ combine
 XOR
 ```
 
-Không cần tự viết chính xác các feature logic; quá trình training có thể tìm representation trung gian hữu ích.
+Không cần hand-code exact logical features; training có thể discover useful intermediate features.
 
-## Mô hình tư duy
+## Mental Model
 
 ```text
-Neuron = phép đo tuyến tính + phản ứng phi tuyến
-Layer  = nhiều phép đo được học đồng thời
-MLP    = chuỗi phép biến đổi representation
+Neuron = linear measurement + nonlinear response
+Layer  = many measurements learned together
+MLP    = repeated representation transformation
 ```
 
-Hidden layer không phải “các bước reasoning” theo nghĩa symbolic; chúng là những phép biến đổi số được học.
+Hidden layers không phải “các bước reasoning” theo nghĩa symbolic; chúng là learned numerical transformations.
 
-## Các hiểu lầm thường gặp
+## Common Misconceptions
 
-### “Mỗi neuron là một feature có ý nghĩa rõ ràng”
+### “Mỗi neuron là một feature có nghĩa rõ ràng”
 
-Không nhất thiết. Có thể tồn tại unit chuyên biệt, nhưng thông tin thường được phân tán trên nhiều dimension.
+Có thể có specialized units, nhưng information thường distributed.
 
-### “Perceptron và Neural Network hiện đại là cùng một thuật toán”
+### “Perceptron và modern neural network là cùng một algorithm”
 
-Không. Perceptron là learner tuyến tính với threshold lịch sử; mạng hiện đại dùng nhiều layer khả vi, backpropagation và optimizer.
+Perceptron là historical linear-threshold learner. Modern nets use multilayer differentiable computation + backprop/optimizers.
 
 ### “Bias neuron gây model bias”
 
-Không. Bias term chỉ là affine offset và không trực tiếp liên quan fairness bias.
+Bias term chỉ là affine offset, không liên quan trực tiếp fairness bias.
 
-### “MLP là universal nên không cần CNN hay Transformer”
+### “MLP đủ universal nên không cần CNN/Transformer”
 
-Khả năng biểu diễn về lý thuyết không thay thế hiệu quả dữ liệu, compute và inductive bias. Kiến trúc chuyên biệt học cấu trúc phù hợp nhanh và tiết kiệm hơn.
+Theoretical expressivity không thay efficiency/inductive bias. Specialized architectures learn relevant structure hiệu quả hơn.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Xem lại [Đại số tuyến tính](../01_mathematical_foundations/01_linear_algebra_for_ai.md) và [Từ mô hình tuyến tính tới Neural Network](./00_from_linear_models_to_neural_networks.md).
+Xem lại [Linear Algebra](../01_mathematical_foundations/01_linear_algebra_for_ai.md) và [From Linear Models to Neural Networks](./00_from_linear_models_to_neural_networks.md).
 
-Xem tiếp: [Hàm kích hoạt](./02_activation_functions.md), phần quyết định việc hợp thành nhiều layer có thật sự tạo tính phi tuyến và dễ huấn luyện hay không.
+Xem tiếp: [Activation Functions](./02_activation_functions.md), phần quyết định layer composition có thực sự nonlinear và trainable hay không.

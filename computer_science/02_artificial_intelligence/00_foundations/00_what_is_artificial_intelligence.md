@@ -1,146 +1,138 @@
-# Trí tuệ nhân tạo (Artificial Intelligence) là gì?
+# Artificial Intelligence là gì?
 
-**Trí tuệ nhân tạo (Artificial Intelligence - AI / 인공지능)** thường được mô tả bằng câu “máy móc bắt chước trí thông minh con người”. Cách nói này hữu ích để tạo trực giác ban đầu nhưng chưa đủ chính xác, vì nó vẫn để lại hai câu hỏi khó hơn: **trí thông minh là gì**, và **một hệ thống cần giống con người đến mức nào mới được xem là thông minh**?
+Artificial Intelligence (AI / Trí tuệ nhân tạo / 인공지능) thường được mô tả bằng những câu rất rộng như “máy móc bắt chước trí thông minh con người”. Cách nói này hữu ích để tạo trực giác ban đầu nhưng chưa đủ chính xác, vì nó để lại hai câu hỏi khó hơn: **trí thông minh là gì**, và **máy cần giống con người đến mức nào mới được coi là thông minh**?
 
-Một cách tiếp cận thực tế hơn là bắt đầu từ bài toán. Trong nhiều tình huống, hệ thống phải nhận thông tin từ môi trường, biểu diễn thông tin đó theo dạng máy có thể xử lý, suy luận điều đang xảy ra, lựa chọn hành động phù hợp và đôi khi học từ kết quả để cải thiện hành vi về sau. AI nghiên cứu cách xây dựng hệ thống có thể thực hiện một phần hoặc toàn bộ chuỗi đó.
+Một cách tiếp cận tốt hơn là bắt đầu từ vấn đề thực tế. Trong rất nhiều bài toán, một hệ thống phải nhận thông tin từ môi trường, hiểu hoặc biểu diễn thông tin đó theo một dạng có thể xử lý, suy ra điều gì đang xảy ra, lựa chọn hành động phù hợp và đôi khi học từ kết quả để cải thiện hành vi sau này. AI nghiên cứu cách làm cho máy thực hiện được một phần hoặc toàn bộ chuỗi đó.
 
-Nói cách khác, AI không phải một thuật toán duy nhất. Nó là **một họ phương pháp (family of approaches)** dành cho những bài toán mà việc viết toàn bộ quy tắc bằng tay là quá khó, quá cứng nhắc hoặc không đủ để xử lý sự biến đổi của thế giới thực.
+Nói cách khác, AI không phải một thuật toán duy nhất. Nó là một **family of approaches** cho những bài toán mà việc viết toàn bộ rule bằng tay là khó, không ổn định hoặc không đủ linh hoạt.
 
-## Từ tự động hóa (automation) đến trí thông minh (intelligence)
+## Từ automation đến intelligence
 
-Hãy so sánh một chương trình tính thuế với một hệ thống phát hiện gian lận. Chương trình tính thuế có thể hoạt động hoàn toàn bằng quy tắc cố định: nếu thu nhập nằm trong khoảng nào thì áp dụng mức thuế tương ứng. Dữ liệu đầu vào (input) đi vào, chương trình chạy các điều kiện đã được xác định trước rồi tạo dữ liệu đầu ra (output). Đây là **tự động hóa (automation)**, nhưng không nhất thiết cần AI.
+Hãy so sánh một chương trình tính thuế với một hệ thống phát hiện gian lận. Chương trình tính thuế có thể hoạt động hoàn toàn bằng rule cố định: nếu thu nhập nằm trong khoảng nào thì áp dụng mức thuế tương ứng. Input đi vào, một chuỗi điều kiện xác định trước được chạy, output đi ra. Đây là automation, nhưng không nhất thiết cần AI.
 
-Trong bài toán **phát hiện gian lận (fraud detection)**, số lượng mẫu hành vi có thể rất lớn và thay đổi liên tục. Một giao dịch bất thường có thể phụ thuộc vào số tiền, thời điểm, vị trí, lịch sử tài khoản, thiết bị, đơn vị bán hàng và mối quan hệ trong mạng lưới giao dịch. Nếu cố viết quy tắc cho mọi trường hợp, hệ thống sẽ nhanh chóng trở nên cứng nhắc. **Học máy (Machine Learning - ML)** có thể học các mẫu thống kê từ dữ liệu lịch sử và ước lượng khả năng một giao dịch là gian lận.
+Trong fraud detection, số lượng pattern có thể rất lớn và thay đổi liên tục. Một giao dịch bất thường có thể phụ thuộc vào số tiền, thời điểm, vị trí, lịch sử tài khoản, loại thiết bị, merchant, network relationship và hàng trăm tín hiệu khác. Nếu cố viết rule cho mọi trường hợp, system sẽ nhanh chóng trở nên cứng nhắc. Machine Learning có thể học pattern từ historical data và ước lượng xác suất một giao dịch là fraud.
 
-Sự khác biệt không nằm ở việc “có mã nguồn hay không”, vì AI vẫn là phần mềm. Điểm khác nằm ở **cách hành vi của hệ thống được tạo ra**. Trong lập trình truyền thống (traditional programming), lập trình viên trực tiếp mã hóa phần lớn logic. Trong AI dựa trên học máy, lập trình viên thiết kế mô hình (model), luồng dữ liệu (data pipeline), hàm mục tiêu (objective) và quá trình huấn luyện (training) để mô hình học ra một ánh xạ hữu ích từ dữ liệu.
-
-```text
-Lập trình truyền thống
-Quy tắc + Dữ liệu → Kết quả
-
-Học máy
-Dữ liệu + Kết quả mong muốn → Mô hình đã học
-Mô hình đã học + Dữ liệu mới → Dự đoán
-```
-
-Điều này không có nghĩa AI lúc nào cũng phải học từ dữ liệu. **AI cổ điển (classical AI)** còn sử dụng tìm kiếm (search), logic, lập kế hoạch (planning), giải bài toán ràng buộc (constraint solving) và biểu diễn tri thức (knowledge representation). Vì vậy ML là một nhánh rất lớn của AI, nhưng không phải toàn bộ AI.
-
-## Trí thông minh nên được nhìn như tập hợp năng lực
-
-Một hệ thống thường được gọi là “thông minh” vì nó có một hoặc nhiều năng lực như nhận thức (perception), suy luận (reasoning), học (learning), lập kế hoạch (planning), hiểu ngôn ngữ, dự đoán, ra quyết định hoặc hành động. Không nên gom tất cả các năng lực này thành một khái niệm mơ hồ.
-
-Ví dụ, một mô hình thị giác máy tính (computer vision model) có thể phân loại ảnh rất tốt nhưng không biết lập kế hoạch. Một hệ thống chứng minh định lý (theorem prover) có thể suy luận logic nhưng không hiểu hình ảnh. Một mô hình ngôn ngữ lớn (Large Language Model - LLM) có thể xử lý ngôn ngữ rất rộng nhưng vẫn có thể thất bại khi cần đối chiếu sự thật với nguồn ngoài hoặc lập kế hoạch dài hạn.
-
-Vì vậy, trí thông minh nên được xem như **một tập hợp nhiều năng lực**, thay vì một nhãn nhị phân “thông minh / không thông minh”.
-
-Một mô hình tư duy (mental model) hữu ích là:
+Sự khác biệt quan trọng không nằm ở việc “có code hay không”, vì AI vẫn là software. Điểm khác nằm ở **cách hành vi được tạo ra**. Trong traditional programming, developer trực tiếp encode phần lớn logic. Trong learning-based AI, developer thiết kế model, data pipeline, objective và training process để model tự tìm một mapping hữu ích từ data.
 
 ```text
-Trí thông minh ≈ khả năng biến thông tin thành hành vi hữu ích dưới các ràng buộc
+Traditional programming
+Rules + Data → Output
+
+Machine Learning
+Data + Desired Output → Learned Model
+Learned Model + New Data → Prediction
 ```
 
-“Hành vi hữu ích” phụ thuộc vào mục tiêu. Với hệ thống gợi ý (recommender system), đó có thể là xếp hạng nội dung. Với robot, đó có thể là hành động vật lý. Với LLM, đó có thể là tạo chuỗi token phù hợp. Với tác nhân tự chủ (autonomous agent), đó có thể là một chuỗi hành động hướng tới mục tiêu.
+Điều này không có nghĩa AI lúc nào cũng học từ data. Classical AI còn dùng search, logic, planning, constraint solving và knowledge representation. Vì vậy Machine Learning chỉ là một nhánh rất lớn bên trong AI, không phải định nghĩa của toàn bộ AI.
 
-## Hệ thống AI cần biểu diễn thế giới
+## Intelligence nên được nhìn như capability, không phải magic
 
-Máy không trực tiếp nhìn thấy “con mèo”, “khách hàng sắp rời bỏ dịch vụ” hay “ý nghĩa của một câu”. Nó chỉ nhận được một **biểu diễn (representation)** như điểm ảnh (pixel), token, vector, đồ thị (graph), đặc trưng (feature) hoặc trạng thái (state). Biểu diễn là cầu nối giữa thế giới thực và tính toán.
+Một system được gọi là “intelligent” thường vì nó có một hoặc nhiều capability sau: perception, reasoning, learning, planning, language understanding, prediction, decision making hoặc action. Không nên gộp tất cả thành một khái niệm mơ hồ.
+
+Ví dụ, một computer vision model có thể nhận ảnh và phân loại vật thể rất tốt nhưng không biết lập kế hoạch. Một theorem prover có thể suy luận logic nhưng không hiểu hình ảnh. Một LLM có thể xử lý language cực rộng nhưng vẫn có thể thất bại với factual grounding hoặc long-horizon planning. Intelligence vì vậy nên được xem như một vector capability thay vì một binary label “thông minh / không thông minh”.
+
+Mental model hữu ích là:
+
+```text
+Intelligence ≈ khả năng biến information thành useful behavior dưới constraints
+```
+
+“Useful behavior” phụ thuộc vào objective. Với recommender system, đó có thể là ranking item. Với robot, đó có thể là hành động vật lý. Với LLM, đó có thể là sequence token trả lời phù hợp. Với autonomous agent, đó có thể là một chuỗi action hướng tới goal.
+
+## Một AI system cần biểu diễn thế giới
+
+Máy không trực tiếp nhìn thấy “con mèo”, “khách hàng rời bỏ dịch vụ” hay “ý nghĩa của câu”. Nó chỉ nhận một representation: pixel, token, vector, graph, feature hoặc state. Representation là cầu nối giữa world và computation.
 
 Điều này dẫn tới một nguyên lý quan trọng:
 
-> **Một mô hình chỉ có thể xử lý những gì đã được biểu diễn theo dạng mà phép tính của nó có thể thao tác.**
+> **Một model chỉ có thể xử lý những gì đã được biểu diễn theo một dạng mà computation của nó có thể thao tác.**
 
-Một ảnh RGB có thể trở thành tensor. Một câu có thể được tách thành mã token rồi chuyển thành vector nhúng (embedding vector). Một trò chơi bàn cờ có thể được biểu diễn thành trạng thái. Một mạng xã hội có thể được biểu diễn thành đồ thị.
+Một ảnh RGB có thể trở thành tensor. Một câu có thể trở thành token IDs rồi embedding vectors. Một board game có thể trở thành state. Một mạng xã hội có thể trở thành graph. Nếu representation làm mất thông tin quan trọng, model phía sau khó có thể phục hồi điều không còn tồn tại trong input.
 
-Nếu biểu diễn làm mất thông tin quan trọng, mô hình phía sau thường không thể tự khôi phục phần thông tin đã biến mất. Vì vậy biểu diễn không chỉ là bước “định dạng dữ liệu”; nó quyết định mô hình có thể nhìn thấy cấu trúc nào của bài toán.
+Vì vậy representation không chỉ là bước “format data”. Nó quyết định model có thể nhìn thấy cấu trúc nào của problem.
 
-Xem thêm: [Biểu diễn bài toán](./03_problem_representation.md).
+Xem thêm: [Problem Representation](./03_problem_representation.md).
 
-## Tìm kiếm, suy luận, học và tối ưu hóa khác nhau như thế nào?
+## Search, reasoning, learning và optimization khác nhau như thế nào?
 
-Bốn khái niệm này thường bị dùng lẫn nhau.
+Bốn từ này thường bị trộn lẫn.
 
-**Tìm kiếm (search / 탐색)** là quá trình khám phá không gian các khả năng để tìm đường đi, trạng thái hoặc lời giải. Thuật toán A* tìm đường trong đồ thị là ví dụ điển hình.
+**Search (탐색 / tìm kiếm)** là việc khám phá một space của khả năng để tìm path, state hoặc solution. A* search tìm đường trong graph là ví dụ điển hình.
 
-**Suy luận (reasoning / 추론)** là quá trình tạo kết luận từ tri thức, quy tắc hoặc bằng chứng. Suy luận logic và suy luận xác suất đều là suy luận, nhưng sử dụng cơ chế khác nhau.
+**Reasoning (추론 / suy luận)** là việc tạo conclusion từ knowledge, rule hoặc evidence. Logic inference và probabilistic inference đều là reasoning, nhưng cơ chế khác nhau.
 
-**Học (learning / 학습)** là quá trình thay đổi biểu diễn nội bộ hoặc tham số dựa trên dữ liệu và kinh nghiệm để cải thiện hiệu năng trên một nhiệm vụ hoặc một phân phối dữ liệu.
+**Learning (학습 / học)** là quá trình thay đổi internal representation hoặc parameters dựa trên data/experience để cải thiện performance trên một task hoặc distribution.
 
-**Tối ưu hóa (optimization / 최적화)** là quá trình tìm giá trị của các biến sao cho hàm mục tiêu tốt hơn, chẳng hạn giảm hàm mất mát (loss). Huấn luyện mạng nơ-ron thường là một bài toán tối ưu hóa, nhưng học và tối ưu hóa không đồng nghĩa. Tối ưu hóa là một cơ chế; học nhấn mạnh khả năng rút ra cấu trúc có thể khái quát hóa (generalization) ngoài dữ liệu huấn luyện.
+**Optimization (최적화 / tối ưu hóa)** là việc tìm giá trị của biến sao cho objective tốt hơn, chẳng hạn minimize loss. Training neural network thường là một optimization problem, nhưng learning và optimization không đồng nghĩa: optimization là mechanism; learning là mục tiêu rộng hơn về khả năng generalize từ data.
 
-Các cơ chế này thường được kết hợp. Học tăng cường (Reinforcement Learning - RL) kết hợp học, tối ưu hóa và đôi khi lập kế hoạch. Tác nhân LLM có thể kết hợp mô hình ngôn ngữ, gọi công cụ, tìm kiếm và lập kế hoạch. Hệ thống gợi ý trong thực tế có thể kết hợp học mô hình, tối ưu thứ hạng và các ràng buộc nghiệp vụ.
+Các cơ chế này thường kết hợp. Reinforcement Learning có learning + optimization + planning. LLM agent có language model + tool use + search/planning. Production recommendation system có model learning + ranking optimization + business constraints.
 
-## AI hẹp, AGI và ASI
+## Weak AI, General AI và terminology
 
-**AI hẹp (Narrow AI)**, còn được gọi là **AI yếu (Weak AI / 약인공지능)**, chỉ các hệ thống được tối ưu cho một phạm vi nhiệm vụ nhất định. Phần lớn hệ thống AI đang được triển khai trong thực tế thuộc nhóm này.
+Trong nhiều tài liệu, **Narrow AI** hoặc **Weak AI (약인공지능)** chỉ những system được tối ưu cho một phạm vi task nhất định. Đây là phần gần như toàn bộ AI deployed hiện nay.
 
-**Trí tuệ nhân tạo tổng quát (Artificial General Intelligence - AGI / 범용 인공지능)** thường dùng để mô tả một hệ thống giả định có năng lực rộng, có thể thích nghi và xử lý nhiều lĩnh vực ở mức tổng quát hơn. Hiện không có một định nghĩa vận hành (operational definition) duy nhất được toàn bộ cộng đồng chấp nhận. Vì vậy, khi đọc một tuyên bố về AGI, cần kiểm tra năng lực, chỉ số đo và bộ chuẩn đánh giá (benchmark) cụ thể thay vì chỉ dựa vào nhãn “AGI”.
+**Artificial General Intelligence (AGI / 범용 인공지능)** thường dùng để mô tả một hypothetical system có năng lực rộng, có thể thích nghi và xử lý nhiều domain ở mức tổng quát hơn. Tuy nhiên không có một operational definition duy nhất được mọi cộng đồng chấp nhận. Vì vậy khi đọc claim về AGI cần kiểm tra metric, capability và benchmark cụ thể thay vì chỉ dựa vào label.
 
-**Siêu trí tuệ nhân tạo (Artificial Superintelligence - ASI / 초인공지능)** thường chỉ giả thuyết về hệ thống vượt con người trên rất nhiều lĩnh vực nhận thức. Đây chủ yếu là một khái niệm lý thuyết và dự báo, chưa phải một nhóm kỹ thuật ổn định trong thực hành kỹ thuật AI.
+**Artificial Superintelligence (ASI / 초인공지능)** thường chỉ giả thuyết về system vượt con người trên rất nhiều cognitive domains. Đây là khái niệm mang tính lý thuyết và dự báo nhiều hơn là một engineering category ổn định.
 
-Library này ưu tiên các khái niệm có cơ chế rõ ràng và có thể kiểm chứng, đồng thời vẫn giải thích những thuật ngữ phổ biến để người đọc hiểu các cuộc thảo luận hiện đại.
+Library này ưu tiên những khái niệm có mechanism rõ ràng và có thể kiểm chứng, đồng thời vẫn giải thích terminology để người đọc hiểu discussion hiện đại.
 
 ## AI có “hiểu” không?
 
-Câu hỏi này phụ thuộc vào cách định nghĩa “hiểu”. Nếu hiểu nghĩa là hệ thống có biểu diễn nội bộ đủ để dự đoán, suy luận hoặc hành động đúng trong một nhóm tình huống, nhiều mô hình thể hiện một dạng **hiểu theo chức năng (functional understanding)**. Nếu “hiểu” được định nghĩa theo trải nghiệm chủ quan có ý thức, hiện không thể suy ra điều đó chỉ từ hành vi đầu ra của mô hình.
+Câu hỏi này phụ thuộc vào định nghĩa của “understanding”. Nếu “understanding” nghĩa là system có internal representation đủ để dự đoán, suy luận hoặc hành động đúng trong một class of situations, nhiều model rõ ràng thể hiện một dạng functional understanding. Nếu “understanding” được định nghĩa theo subjective conscious experience, hiện không thể suy ra điều đó chỉ từ output behavior.
 
-Trong kỹ thuật (engineering), cách hữu ích hơn là tránh nhân hóa hệ thống và đặt những câu hỏi có thể đo được: mô hình giữ ngữ cảnh được bao lâu, có khái quát hóa sang phân phối mới hay không, có đối chiếu được với nguồn bên ngoài hay không, mức hiệu chuẩn (calibration) ra sao, thường gặp kiểu lỗi nào và hành vi có ổn định trước các biến đổi đầu vào hay không.
+Trong engineering, cách an toàn hơn là tránh anthropomorphism và hỏi những câu có thể đo được: model giữ được context bao lâu, có generalize sang distribution mới không, có grounded vào external source không, calibration thế nào, failure mode nào thường gặp, và behavior có stable dưới perturbation không.
 
-## AI là bài toán cấp hệ thống
+## AI là một system problem
 
-Trong bản minh họa đơn giản, người ta thường nhìn AI như:
-
-```text
-đầu vào → mô hình → đầu ra
-```
-
-Nhưng trong môi trường vận hành thực tế (production), mô hình chỉ là một thành phần.
+Trong demo, người ta thường nhìn AI như `input → model → output`. Trong production, model chỉ là một thành phần.
 
 ```mermaid
 flowchart LR
-    U[Người dùng / Môi trường] --> APP[Ứng dụng]
-    APP --> DATA[Dữ liệu / Ngữ cảnh]
-    DATA --> MODEL[Mô hình]
+    U[User / Environment] --> APP[Application]
+    APP --> DATA[Data / Context]
+    DATA --> MODEL[Model]
     MODEL --> APP
-    APP --> TOOL[Công cụ / API]
+    APP --> TOOL[Tools / APIs]
     TOOL --> APP
-    APP --> SAFE[An toàn / Kiểm tra]
+    APP --> SAFE[Safety / Validation]
     SAFE --> U
-    APP --> OBS[Nhật ký / Đánh giá / Giám sát]
+    APP --> OBS[Logging / Evaluation / Monitoring]
 ```
 
-Chất lượng dữ liệu, độ trễ (latency), chi phí, quyền riêng tư, khả năng quan sát (observability), đánh giá, phương án dự phòng (fallback) và kiến trúc phần mềm thường quyết định hệ thống có thực sự dùng được hay không. Một mô hình mạnh nhưng nhận sai ngữ cảnh, truy xuất (retrieval) kém hoặc tích hợp lỗi vẫn tạo ra sản phẩm tệ.
+Data quality, latency, cost, privacy, observability, evaluation, fallback strategy và software architecture thường quyết định system có usable hay không. Một model mạnh nhưng context sai, retrieval kém hoặc integration lỗi vẫn tạo ra product tệ.
 
-Đây là lý do library tách rõ **mô hình AI (AI model)** và **hệ thống AI (AI system)**.
+Đây là lý do library sau này tách rõ `AI model` và `AI system`.
 
-## Các hiểu lầm thường gặp
+## Common Misconceptions
 
 ### “AI = Machine Learning”
 
-Không đúng. AI còn bao gồm tìm kiếm, lập kế hoạch, logic, suy luận ký hiệu (symbolic reasoning), giải bài toán ràng buộc và nhiều phương pháp khác. Học máy là một hướng tiếp cận lớn của AI hiện đại.
+Sai vì AI còn có search, planning, logic, symbolic reasoning, constraint solving và nhiều approach khác. Machine Learning là một major paradigm của AI hiện đại.
 
-### “Deep Learning là AI hiện đại nên không cần học các ý tưởng cũ”
+### “Deep Learning = AI hiện đại nên những thứ cũ không cần học”
 
-Nhiều ý tưởng cũ vẫn xuất hiện trong hệ thống hiện đại dưới hình thức mới. Tác nhân cần trạng thái, mục tiêu và hành động; lập kế hoạch vẫn quan trọng; tìm kiếm xuất hiện trong quá trình giải mã (decoding), truy xuất và các hệ thống suy luận; suy luận xác suất vẫn là nền tảng để xử lý bất định. Hiểu AI cổ điển giúp nhìn AI hiện đại như một quá trình phát triển liên tục thay vì một chuỗi từ khóa thời thượng.
+Nhiều idea cũ vẫn quay lại dưới hình thức mới. Agent cần state, goal và action; planning vẫn quan trọng; search xuất hiện trong decoding, retrieval và reasoning systems; probabilistic reasoning vẫn là nền cho uncertainty. Hiểu classical AI giúp nhìn modern AI như một continuum thay vì một loạt buzzword.
 
-### “Mô hình càng lớn thì luôn càng thông minh”
+### “Model càng lớn thì luôn càng thông minh”
 
-Quy mô (scale) có thể cải thiện nhiều năng lực, nhưng hiệu năng còn phụ thuộc dữ liệu, kiến trúc, mục tiêu huấn luyện, chiến lược suy luận, quyền truy cập công cụ, chất lượng ngữ cảnh và miền đánh giá. Lớn hơn không tự động giải quyết mọi kiểu lỗi.
+Scale có thể cải thiện nhiều capability nhưng performance còn phụ thuộc data, architecture, training objective, inference strategy, tool access, context quality và evaluation domain. Bigger không tự động giải quyết mọi failure mode.
 
-### “Đầu ra của AI nghe hợp lý thì có nghĩa là đúng”
+### “AI output nghe hợp lý thì có nghĩa là đúng”
 
-Độ trôi chảy (fluency) và tính đúng sự thật là hai thuộc tính khác nhau. Đặc biệt với mô hình sinh (generative model), một chuỗi có xác suất ngôn ngữ cao vẫn có thể sai về thế giới thực. Vì vậy việc đối chiếu nguồn (grounding), truy xuất, xác minh (verification) và đánh giá là phần cốt lõi của thiết kế hệ thống.
+Fluency và factual correctness là hai property khác nhau. Đặc biệt với generative model, một sequence có xác suất ngôn ngữ cao vẫn có thể sai về factual world. Vì vậy grounding, retrieval, verification và evaluation là phần cốt lõi của system design.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-AI nối nhiều lĩnh vực nền tảng:
+AI nối nhiều lĩnh vực nền:
 
-- **Toán học (Mathematics)** cung cấp ngôn ngữ để biểu diễn vector, xác suất, hàm mất mát và tối ưu hóa.
-- **Khoa học máy tính (Computer Science)** cung cấp thuật toán, cấu trúc dữ liệu, độ phức tạp, hệ thống và các trừu tượng lập trình.
-- **Thống kê (Statistics)** giúp suy luận dưới bất định và đánh giá khả năng khái quát hóa từ mẫu sang quần thể.
-- **Lý thuyết thông tin (Information Theory)** giúp định lượng bất định và lượng thông tin.
-- **Khoa học nhận thức (Cognitive Science)** cung cấp nhiều câu hỏi về nhận thức, trí nhớ, học và suy luận, dù trí tuệ máy không nhất thiết phải sao chép bộ não.
-- **Kỹ nghệ phần mềm (Software Engineering)** giúp biến mô hình thành một sản phẩm đáng tin cậy.
+- **Mathematics** cung cấp language để biểu diễn vector, probability, loss và optimization.
+- **Computer Science** cung cấp algorithms, data structures, complexity, systems và programming abstractions.
+- **Statistics** giúp reasoning dưới uncertainty và đánh giá generalization từ sample sang population.
+- **Information Theory** giúp định lượng uncertainty và information.
+- **Cognitive Science** cung cấp nhiều câu hỏi về perception, memory, learning và reasoning, dù machine intelligence không cần sao chép brain.
+- **Software Engineering** biến model thành reliable product.
 
-Điểm quan trọng là không học các liên kết này như kiến thức vụn. Khi gặp một khái niệm AI, hãy hỏi: **biểu diễn là gì, mục tiêu là gì, bất định nằm ở đâu, cơ chế nào biến đầu vào thành đầu ra, và hệ thống đang tối ưu điều gì?**
+Điểm quan trọng là không học các connection này như trivia. Khi gặp một concept AI, hãy hỏi: representation là gì, objective là gì, uncertainty nằm ở đâu, mechanism nào biến input thành output, và system đang tối ưu cho điều gì.
 
-Xem tiếp: [Lịch sử và các mô hình tư duy AI](./01_history_and_ai_paradigms.md) và [Trí thông minh, tác nhân và môi trường](./02_intelligence_agents_and_environments.md).
+Xem tiếp: [History and AI Paradigms](./01_history_and_ai_paradigms.md) và [Intelligence, Agents and Environments](./02_intelligence_agents_and_environments.md).

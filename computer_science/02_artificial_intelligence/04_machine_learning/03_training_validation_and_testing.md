@@ -1,53 +1,53 @@
-# Huấn luyện, validation và testing trong Machine Learning
+# Training, Validation và Testing trong Machine Learning
 
-Một mô hình có thể khớp dữ liệu huấn luyện rất tốt nhưng điều đó không có nghĩa nó sẽ hoạt động tốt trên dữ liệu tương lai. Vì vậy Machine Learning cần tách dữ liệu theo **vai trò thống kê**, không chỉ theo folder: tập huấn luyện dùng để học tham số; tập validation dùng để lựa chọn mô hình, siêu tham số hoặc threshold; tập test dùng để ước lượng hiệu quả sau khi toàn bộ lựa chọn đã được khóa.
+Một model có thể fit training data rất tốt nhưng không có nghĩa nó sẽ hoạt động tốt trên future data. Vì vậy Machine Learning cần tách data theo **vai trò statistical**, không chỉ theo folder: training dùng để học parameters; validation dùng để lựa chọn model/hyperparameters/threshold; test dùng để estimate performance sau selection.
 
-Nếu liên tục nhìn kết quả test rồi điều chỉnh mô hình, test set không còn độc lập. Về bản chất, nó đã trở thành một phần của quá trình huấn luyện mở rộng.
+Nếu repeatedly nhìn test result rồi điều chỉnh model, test set không còn độc lập. Nó đã trở thành một phần của training process theo nghĩa rộng.
 
 ## Ba vai trò cơ bản
 
-### Tập huấn luyện
+### Training set
 
-Tập huấn luyện (training set) dùng để fit tham số mô hình:
+Dùng để fit model parameters:
 
 \[
 \theta^*=\arg\min_\theta \hat R_{train}(\theta)
 \]
 
-Các bước tiền xử lý có tham số học được như scaler, PCA hay imputer cũng phải được fit chỉ bằng training data.
+Preprocessing có learned parameters như scaler/PCA/imputer cũng phải fit trên training data.
 
-### Tập validation
+### Validation set
 
-Tập validation dùng để lựa chọn:
+Dùng để chọn:
 
-- họ mô hình;
-- siêu tham số;
-- tập feature;
-- mức regularization;
-- checkpoint cho early stopping;
-- threshold ra quyết định.
+- model family;
+- hyperparameters;
+- feature set;
+- regularization;
+- early stopping checkpoint;
+- decision threshold.
 
-Vì validation data ảnh hưởng trực tiếp các lựa chọn phát triển, metric trên tập này sẽ dần có thiên lệch lựa chọn (selection bias) nếu tuning quá nhiều.
+Validation data ảnh hưởng decisions nên performance trên nó có selection bias after extensive tuning.
 
-### Tập test
+### Test set
 
-Tập test là dữ liệu giữ lại (held-out data) để ước lượng khả năng khái quát hóa sau khi toàn bộ lựa chọn mô hình đã hoàn tất.
+Held-out data reserved để estimate final generalization after model choices.
 
-Test set nên mô phỏng population, thời gian và ranh giới triển khai thật càng sát càng tốt.
+Test should mimic intended deployment distribution/boundary as closely as practical.
 
-## Khi nào random split phù hợp?
+## Why random split works sometimes
 
-Nếu các mẫu gần độc lập và cùng phân phối (i.i.d.) từ một phân phối mục tiêu ổn định, random split thường tạo được train, validation và test có đặc tính gần nhau.
+If examples approximately i.i.d. from same stationary target distribution, random split creates train/validation/test with similar distributions.
 
-Ví dụ các phép đo hoa độc lập từ cùng một population có thể dùng random stratified split.
+Example independent flower measurements from same population can often use random stratified split.
 
-Tuy nhiên rất nhiều dataset thực tế vi phạm tính độc lập hoặc tính ổn định theo thời gian.
+But many real datasets violate independence/time stationarity.
 
-## Chia theo thời gian
+## Time-based split
 
-Trong forecasting hoặc dự đoán production, hệ thống học từ quá khứ rồi dự đoán tương lai.
+Forecasting or production prediction normally trains on past and predicts future.
 
-Evaluation đúng nên phản ánh chính chiều thời gian đó:
+Correct evaluation should reflect direction:
 
 ```text
 Train: Jan–Jun
@@ -55,343 +55,398 @@ Validation: Jul
 Test: Aug
 ```
 
-Nếu trộn dữ liệu tháng 8 vào training để dự đoán những record giống tháng 6, thông tin của tương lai đã ảnh hưởng quá trình phát triển mô hình.
+Randomly mixing August into training lets future patterns influence model predicting June-like rows.
 
-Ngay cả khi không có feature tương lai trực tiếp, distribution tương lai vẫn có thể bị rò vào training.
+Even without explicit future feature, distribution knowledge can leak.
 
-## Chia theo nhóm
+## Group-based split
 
-Nếu một thực thể có nhiều dòng dữ liệu, ví dụ nhiều lần khám của cùng bệnh nhân, nhiều giao dịch của cùng user hoặc nhiều event của cùng device, random row split có thể làm cùng một entity xuất hiện ở cả train và test.
+If multiple rows per entity:
 
-Nếu deployment yêu cầu generalize sang entity hoàn toàn mới, cần group-aware split như GroupKFold hoặc GroupShuffle.
+```text
+patient visits
+user transactions
+device events
+```
 
-Nếu deployment lại dự đoán event tương lai cho chính các entity đã biết, time split bên trong mỗi entity có thể hợp lý hơn.
+random row split puts same entity both sides.
 
-Ranh giới evaluation phải mô phỏng đúng câu hỏi sản phẩm.
+If deployment must generalize to unseen entities, use GroupKFold/GroupShuffle-like split by entity.
+
+If deployment predicts future events for existing entities, time-within-entity split may be more appropriate.
+
+Evaluation boundary must match product question.
 
 ## Stratification
 
-Trong classification mất cân bằng, random split có thể tạo tỷ lệ positive rất khác nhau giữa các tập, đặc biệt khi dataset nhỏ.
+For imbalanced classification, random split may give very different positive rates, especially small dataset.
 
-Stratified split giúp giữ tỷ lệ lớp gần giống nhau.
+Stratified split preserves class proportions approximately.
 
-Tuy nhiên stratification không tự giải quyết leakage theo group hoặc time. Khi cần phải kết hợp nhiều ràng buộc cùng lúc.
+But stratification alone does not fix group/time leakage.
 
-## Overfitting validation set
+Need combine constraints when necessary.
 
-Giả sử thử 1.000 cấu hình rồi chọn cấu hình có validation score cao nhất. Dù mỗi estimate đều có nhiễu, giá trị lớn nhất có xu hướng được hưởng lợi từ may mắn.
+## Validation overfitting
 
-Tuning lặp lại quá nhiều sẽ overfit validation set.
+Suppose try 1000 configurations and choose best validation score. Even if each estimate noisy, maximum tends to benefit from luck.
 
-Biện pháp gồm nested cross-validation, giữ một final holdout riêng, giảm số bậc tự do khi search, báo cáo nhiều seed và uncertainty, hoặc đánh giá thêm trên nguồn dữ liệu bên ngoài.
+Repeated tuning overfits validation set.
+
+Mitigations:
+
+- nested cross-validation;
+- separate final holdout;
+- reduce search degrees of freedom;
+- report uncertainty/multiple seeds;
+- evaluate on new external data.
 
 ## Cross-validation
 
-K-fold cross-validation chia dữ liệu thành `K` phần. Ở mỗi vòng:
+K-fold CV splits data into K folds. For each fold:
 
 ```text
-train trên K-1 fold
-validation trên fold còn lại
+train on K-1 folds
+validate on remaining fold
 ```
 
-sau đó tổng hợp metric.
+Aggregate scores.
 
-Cách này hữu ích khi dữ liệu ít vì mỗi mẫu được dùng cho validation một lần và training nhiều lần.
+Useful when data limited, because each example used for validation once and training multiple times.
 
-## Cross-validation không tự động loại bỏ leakage
+## Cross-validation is not automatically leakage-free
 
-Mỗi fold phải tự fit preprocessing riêng.
+Every fold must fit preprocessing independently.
 
-Sai:
+Wrong:
 
 ```text
-PCA trên toàn bộ data → chạy CV
+PCA on all data → CV model
 ```
 
-Đúng:
+Correct:
 
 ```text
-với mỗi fold:
-  fit PCA chỉ trên fold-training
+for each fold:
+  fit PCA on fold-training only
   transform fold-validation
 ```
 
-Pipeline abstraction giúp tự động giữ đúng ranh giới này.
+Pipeline abstractions automate this boundary.
 
 ## Nested cross-validation
 
-Nested CV dùng vòng ngoài để ước lượng generalization và vòng trong để chọn hyperparameter.
+Outer CV estimates generalization.
+
+Inner CV selects hyperparameters.
 
 ```text
 outer train
-  ↓ inner CV → chọn hyperparameter
-fit lại trên toàn bộ outer train
+  ↓ inner CV → choose hyperparameters
+fit on full outer train
   ↓
 evaluate outer holdout
 ```
 
-Cách này giảm optimistic bias do tuning, đặc biệt với dataset nhỏ, nhưng chi phí tính toán cao hơn nhiều.
+This reduces optimistic bias from tuning, especially small datasets.
+
+Computational cost is much higher.
 
 ## Leave-One-Out
 
-Leave-One-Out Cross-Validation (LOOCV) dùng mỗi lần đúng một mẫu làm validation.
+LOOCV uses one example validation each run.
 
-Ưu điểm là gần như toàn bộ dữ liệu được dùng để train trong mỗi fold.
+Advantages:
 
-Nhược điểm là tốn chi phí, estimate có thể có variance cao trong một số trường hợp và hoàn toàn không phù hợp nếu dữ liệu có dependency theo group hoặc time.
+- nearly all data used for training each fold.
 
-Nhiều fold hơn không có nghĩa luôn tốt hơn.
+Disadvantages:
 
-## Cross-validation lặp lại
+- expensive;
+- high variance of estimate in some settings;
+- not appropriate with grouped/time dependencies.
 
-Có thể lặp K-fold với nhiều cách chia khác nhau để đo mức nhạy của score với partition.
+More folds are not automatically better.
 
-Cách này hữu ích khi dataset nhỏ và metric thay đổi đáng kể theo split.
+## Repeated cross-validation
 
-Nên báo cáo phân phối score thay vì chỉ một giá trị trung bình.
+Repeat K-fold with different partitions to estimate split variability.
 
-## Cross-validation theo thời gian
+Useful when dataset small and model score sensitive to partition.
 
-Rolling hoặc expanding window có thể dùng:
+Report distribution, not only mean.
+
+## Temporal cross-validation
+
+Rolling/expanding window:
 
 ```text
 Train [1..t1] → Validate [t1+1..t2]
 Train [1..t2] → Validate [t2+1..t3]
 ```
 
-hoặc giữ cửa sổ training cố định rồi trượt theo thời gian.
+or fixed rolling window.
 
-Cách này kiểm tra độ bền qua nhiều giai đoạn và tránh leakage từ tương lai về quá khứ.
+This measures robustness across time and supports hyperparameter choice without future-to-past leakage.
 
 ## Backtesting
 
-Trong tài chính, forecasting hoặc recommender, evaluation thường mô phỏng nhiều thời điểm triển khai trong lịch sử.
+In finance, demand forecasting and recommendation, evaluation often simulates historical deployment points.
 
-Ở mỗi thời điểm:
+At each timestamp:
 
 ```text
-chỉ dùng dữ liệu đã tồn tại lúc đó
-train hoặc update mô hình
-predict cửa sổ tương lai
-đợi outcome rồi đánh giá
+use only data known then
+train/update model
+predict future window
+measure outcome later
 ```
 
-Tính đúng theo thời điểm của feature là điều bắt buộc.
+True point-in-time feature availability is essential.
 
 ## Test contamination
 
-Test data có thể rò vào training thông qua duplicate, benchmark công khai bị thu thập vào corpus, tiền xử lý fit trên toàn bộ data, tuning thủ công theo leaderboard hoặc lặp submission quá nhiều.
+Test example can leak into training via:
 
-Khi contamination xảy ra, test score không còn đo hoàn toàn generalization độc lập mà trộn cả memorization và selection.
+- duplicates;
+- public benchmark copied into corpus;
+- feature preprocessing;
+- manual prompt/model tuning;
+- repeated leaderboard feedback.
 
-Foundation model đặc biệt dễ gặp vấn đề này vì training corpus ở quy mô web.
+Contamination means measured test score partly memorization/selection rather than independent generalization.
+
+Foundation-model benchmarks are especially vulnerable because training corpora web-scale.
 
 ## External validation
 
-Đánh giá trên site, thời điểm hoặc nguồn khác giúp kiểm tra domain shift mạnh hơn random split nội bộ.
+Evaluate on another site/time/source.
 
-Ví dụ mô hình y tế train ở bệnh viện A rồi test tại bệnh viện B.
+Example medical model trained Hospital A and tested Hospital B.
 
-Chỉ một mức sụt nhỏ cũng có thể phát hiện feature phụ thuộc site hoặc shortcut mà internal split không lộ ra.
+External validation probes domain shift and shortcut reliance more strongly than random internal split.
 
-## Dev set và validation set
+A small performance drop can reveal hidden site-specific features.
 
-Trong nhiều tài liệu, `dev set` và `validation set` gần như được dùng thay nhau.
+## Development set vs validation set terminology
 
-Một số nhóm dùng:
+Literature uses `dev set` and `validation set` mostly interchangeably.
+
+Some teams use:
 
 ```text
 train
-validation / dev
+validation/dev
 test
 ```
 
-Nhóm khác thêm calibration set hoặc shadow set.
+Others additionally have calibration or shadow sets.
 
-Tên gọi ít quan trọng hơn việc quy định rõ vai trò và ai được phép nhìn kết quả ở giai đoạn nào.
+Names less important than strict role/access policy.
 
 ## Calibration set
 
-Các phương pháp hiệu chỉnh hậu nghiệm như temperature scaling hoặc Platt scaling cần dữ liệu không dùng để fit tham số chính của mô hình.
+Post-hoc calibration methods such as temperature scaling or Platt scaling need data not used to fit base model parameters.
 
-Có thể dùng validation set hoặc tách riêng calibration set.
+Could use validation split or dedicated calibration split.
 
-Nếu calibration trực tiếp trên test set, metric calibration sau đó sẽ bị lạc quan quá mức.
+If calibrate on test set, final calibration metric optimistic.
 
-## Tuning threshold
+## Threshold tuning
 
-Mô hình có thể trả score hoặc probability, còn threshold được chọn trên validation theo mục tiêu sản phẩm.
+Probability model may output scores. Decision threshold tuned on validation based on cost/precision/recall constraints.
 
-Ví dụ:
+Example choose threshold such that:
 
 ```text
 precision ≥ 95%
-trong điều kiện đó tối đa hóa recall
+maximize recall
 ```
 
-Sau khi threshold bị khóa, mới đánh giá final performance trên test.
+Then report locked-threshold performance on test.
 
-Không được chọn threshold sau khi đã nhìn test labels.
+Do not choose threshold after seeing test labels.
 
 ## Early stopping
 
-Trong huấn luyện lặp:
+During iterative training:
 
 ```text
-training loss thường giảm
-validation metric được theo dõi
-khi validation không còn cải thiện thì dừng
+train loss generally falls
+validation metric monitored
+stop when validation stops improving
 ```
 
-Vì validation ảnh hưởng thời điểm dừng và checkpoint được chọn, cần test riêng để ước lượng không thiên lệch hơn.
+Because validation influences stopping/checkpoint selection, final unbiased estimate needs separate test.
 
-Patience giúp tránh dừng chỉ vì một dao động nhiễu ngắn hạn.
+Patience avoids stopping on one noisy fluctuation.
 
-## Learning curve
+## Learning curves
 
-Learning curve biểu diễn hiệu quả theo lượng dữ liệu huấn luyện.
+Plot performance vs training set size.
 
-Một số pattern thường gặp:
+Patterns:
 
 ```text
-training rất tốt, validation kém, gap lớn
-→ variance cao; thêm dữ liệu có thể giúp
+train good, validation poor, gap large
+→ high variance / more data may help
 
-training kém, validation cũng kém
-→ underfitting / vấn đề biểu diễn / mô hình / tối ưu
+train poor, validation poor
+→ underfit / representation/model/optimization issue
 
-cả hai tiếp tục cải thiện khi tăng dữ liệu
-→ thêm dữ liệu có khả năng hữu ích
+both improve with more data
+→ data scale useful
 ```
 
-Đây là công cụ chẩn đoán chứ không phải định luật tuyệt đối.
+Learning curves are diagnostic, not strict theorem.
 
-## Training curve
+## Training curves
 
-Theo dõi loss hoặc metric theo epoch hoặc optimization step giúp phát hiện divergence, thời điểm overfitting bắt đầu, plateau, learning rate không ổn định hoặc lỗi data pipeline.
+Plot loss/metric vs optimization steps/epochs.
 
-Cần nhìn cả training và validation curve thay vì một đường đơn lẻ.
+Useful signals:
 
-## Tìm kiếm hyperparameter
+- divergence;
+- overfitting onset;
+- plateau;
+- unstable learning rate;
+- data pipeline issue.
 
-Grid search thử mọi tổ hợp trong một lưới nhưng chi phí tăng rất nhanh theo số chiều.
+Need compare training and validation, not one curve alone.
 
-Random search lấy mẫu ngẫu nhiên cấu hình và thường hiệu quả hơn khi chỉ một số hyperparameter thực sự quan trọng.
+## Hyperparameter search
 
-Bayesian optimization xây mô hình của response surface để chọn vùng hứa hẹn tiếp theo.
+Grid search enumerates combinations. Cost grows exponentially with dimensions.
 
-Các hệ neural lớn còn có thể dùng population-based, evolutionary hoặc những chiến lược search khác.
+Random search samples configurations and is often more efficient when only some hyperparameters matter.
 
-## Ngân sách tuning là một phần của so sánh
+Bayesian optimization models response surface to choose promising configurations.
 
-So sánh Algorithm A được tuning cực kỹ với Algorithm B chỉ dùng default là không công bằng.
+Modern neural training may use population-based/evolutionary/search methods.
 
-Khi so mô hình cần xét cả compute budget và số lần search.
+## Search budget is part of comparison
 
-Leaderboard đôi khi phản ánh tài nguyên engineering và tuning nhiều không kém bản thân thuật toán.
+Comparing Algorithm A tuned heavily vs Algorithm B with defaults is unfair.
 
-## Nhiều random seed
+Model comparison should account compute/tuning budget.
 
-Huấn luyện stochastic thay đổi theo initialization và thứ tự dữ liệu.
+Leaderboard results may reflect engineering/search resources as much as algorithm core.
 
-Khi khả thi nên báo cáo:
+## Multiple random seeds
+
+Stochastic training varies due initialization/data order.
+
+Report:
 
 \[
 mean\pm std
 \]
 
-hoặc confidence interval qua nhiều run.
+or confidence intervals across runs when feasible.
 
-Không nên để một seed may mắn đại diện toàn bộ chất lượng phương pháp.
+One lucky seed should not define method quality.
 
-Với foundation model rất lớn, chạy lại toàn bộ nhiều lần có thể bất khả thi; khi đó cần ghi rõ giới hạn và dùng ablation quy mô nhỏ cẩn thận.
+For expensive foundation models, multiple full runs may be impossible; then document limitation and use smaller-scale ablations carefully.
 
-## Bất định thống kê của metric
+## Statistical uncertainty of metrics
 
-Metric trên test set chỉ là estimate từ một sample hữu hạn.
+Test metric is estimate from finite sample.
 
-Với accuracy và giả định nhị thức gần đúng:
+Accuracy standard error under rough binomial assumption:
 
 \[
 SE\approx\sqrt{\frac{p(1-p)}{n}}
 \]
 
-Với metric phức tạp hoặc so sánh hai mô hình trên cùng tập dữ liệu, bootstrap thường hữu ích.
+For complex metrics or paired model comparison, bootstrap can estimate uncertainty.
 
-Chênh lệch 0,1% có thể hoàn toàn không đáng kể nếu uncertainty lớn hơn mức đó.
+A 0.1% score difference may be meaningless if uncertainty larger.
 
-## So sánh theo cặp
+## Paired comparison
 
-Khi hai mô hình được đánh giá trên cùng các example, nên tận dụng cấu trúc theo cặp thay vì coi hai score độc lập.
+When two models evaluated on same examples, compare per-example outcomes jointly.
 
-Paired bootstrap hoặc kiểm định kiểu McNemar có thể mạnh hơn vì dùng correlation giữa các dự đoán.
+Paired bootstrap/McNemar-like tests exploit correlation and often more powerful than treating scores independent.
 
-Câu hỏi không chỉ là “A có score lớn hơn B không?” mà là “chênh lệch có ổn định vượt qua sampling noise không?”.
+Question is not just “A score > B score” but whether difference stable beyond sampling noise.
 
-## Đánh giá theo lát cắt
+## Evaluation subsets
 
-Metric tổng thể có thể che giấu lỗi trên các nhóm quan trọng.
+Overall metric can hide failure on important slices.
 
-Có thể đánh giá theo:
+Evaluate by:
 
 ```text
-quốc gia / thiết bị / ngôn ngữ
-lớp hiếm
-người dùng mới
-văn bản dài
-ảnh thiếu sáng
-giao dịch giá trị cao
+country/device/language
+rare classes
+new users
+long documents
+low-light images
+high-value transactions
 ```
 
-Slice nên được chọn từ rủi ro của domain, không phải chỉ đào ngẫu nhiên tới khi tìm thấy một subgroup có score bất thường.
+Choose slices based domain risks, not arbitrary demographic fishing.
 
-## Hiệu quả của nhóm tệ nhất
+## Worst-group performance
 
-Average score có thể tăng trong khi một subgroup bị giảm mạnh.
+Average can improve while a subgroup worsens.
 
-Trong bài toán safety hoặc fairness, worst-group metric có thể cần được theo dõi riêng.
+For safety/fairness-critical use, track worst-group or constraint metrics.
 
-Tuy nhiên nhóm nhỏ có uncertainty lớn hơn, vì vậy luôn cần báo cáo số lượng mẫu và khoảng tin cậy.
+But small groups have wider statistical uncertainty; report counts/confidence.
 
-## Offline và online evaluation
+## Offline vs online evaluation
 
-Offline test đo hiệu quả trên dữ liệu lịch sử.
+Offline test predicts performance under historical data.
 
-A/B test online đo tác động thật khi hệ thống mới làm thay đổi hành vi người dùng hoặc môi trường.
+Online A/B test measures system impact when model changes user/environment behavior.
 
-Ví dụ recommender có offline ranking metric tốt hơn nhưng làm feed ít đa dạng và giảm hài lòng dài hạn.
+A recommender with better offline ranking metric may reduce long-term satisfaction.
 
-Offline phù hợp cho development nhanh; online phù hợp để đo causal product impact khi có thể thử nghiệm an toàn.
+Use offline for development; online for causal product impact where appropriate.
 
 ## Shadow deployment
 
-Trong shadow deployment, mô hình mới nhận live input nhưng không điều khiển quyết định thật.
+New model receives live inputs but does not affect decisions; compare predictions/latency/distribution silently.
 
-Nó giúp phát hiện lỗi schema hoặc feature, đo latency, so sánh prediction distribution và thu thập label sau này.
+Benefits:
 
-Tuy nhiên nó không đo được feedback loop do hành động của mô hình mới vì mô hình chưa thật sự can thiệp.
+- detect schema/feature issues;
+- measure live latency;
+- compare score distribution;
+- collect labels later.
+
+It cannot measure behavioral feedback caused by new actions because model not controlling them.
 
 ## Canary deployment
 
-Canary deployment đưa mô hình mới tới một tỷ lệ traffic nhỏ rồi mở rộng dần nếu metric ổn định.
+Serve small percentage real traffic, monitor, then expand.
 
-Cần xác định trước điều kiện rollback và guardrail metric.
+Useful for operational risk.
 
-## Theo dõi distribution shift
+Need rollback conditions and guardrail metrics.
 
-Sau khi deployment nên theo dõi distribution của feature, prediction distribution, tỷ lệ missing, latency và eventual label/performance.
+## Dataset shift monitoring
 
-Feature drift không tự động đồng nghĩa performance drift, nhưng là tín hiệu cần điều tra.
+After deployment monitor:
 
-Ngược lại concept drift có thể xảy ra dù marginal distribution của feature nhìn khá ổn định.
+- feature distribution;
+- prediction distribution;
+- missing rates;
+- latency;
+- eventual labels/performance.
 
-## Split có khả năng tái lập
+Feature drift does not automatically mean performance drift, but signals need investigation.
 
-Nên lưu trực tiếp danh sách example ID hoặc split manifest, không chỉ random seed.
+Concept drift may happen even if feature marginals stable.
 
-Khi dataset thay đổi, cùng seed vẫn có thể tạo partition khác.
+## Reproducible split
 
-Cần version ít nhất:
+Persist example IDs or split manifest, not just random seed.
+
+Data changes can make same seed produce different partition.
+
+Version:
 
 ```text
 dataset snapshot
@@ -401,69 +456,76 @@ code commit
 model config
 ```
 
-## Giao thức benchmark
+## Benchmark protocol
 
-Một benchmark tốt phải nói rõ dataset version, split, metric, preprocessing rule, external data được phép dùng và đôi khi cả compute constraint.
+Good benchmark specifies:
 
-Nếu protocol không rõ, score giữa các nghiên cứu hoặc mô hình không thực sự so sánh được.
+```text
+dataset version
+split
+metric
+preprocessing rules
+allowed external data
+compute constraints if relevant
+```
 
-## Bảo vệ test set
+Without protocol, scores not comparable.
 
-Với benchmark quan trọng, có thể giữ label hoặc example test ở chế độ private để giảm manual overfitting.
+## Test set security
 
-Tuy nhiên nếu cho submit qua API quá nhiều lần, score vẫn làm rò thông tin dần dần.
+For high-stakes benchmark, keep labels/private examples hidden to reduce manual overfitting.
 
-Có thể cần giới hạn lượt submit hoặc xoay vòng test set.
+But repeated API submissions still leak information through scores. Limit submissions or rotate test sets.
 
-## Vòng lặp phát triển dựa trên evaluation
+## Evaluation-driven development loop
 
 ```mermaid
 flowchart LR
-    P[Bài toán] --> T[Train]
+    P[Problem] --> T[Train]
     T --> V[Validation]
-    V --> D[Chẩn đoán]
+    V --> D[Diagnosis]
     D --> T
-    V --> L[Khóa thiết kế]
+    V --> L[Lock Design]
     L --> E[Final Test]
     E --> DEP[Deploy]
     DEP --> MON[Monitor]
     MON --> P
 ```
 
-Test set không phải vòng feedback hằng ngày của nhóm phát triển; validation mới là nơi dùng cho iteration.
+The test is not the everyday feedback loop; validation is.
 
-## Mô hình tư duy
+## Mental Model
 
 ```text
-Train      = học tham số
-Validation = đưa ra lựa chọn phát triển
-Test       = ước lượng sau khi thiết kế đã khóa
-CV         = lặp nhiều partition khi dữ liệu hạn chế
-External   = thử thách giả định domain
-Online     = đo tác động thật của intervention
-Monitoring = kiểm tra deployment distribution tiếp tục phù hợp
+Train      = learn parameters
+Validation = make development choices
+Test       = estimate after choices are locked
+CV         = repeat train/validation partitions when data limited
+External   = challenge domain assumptions
+Online     = measure intervention/product effect
+Monitoring = verify deployment distribution remains acceptable
 ```
 
-## Các hiểu lầm thường gặp
+## Common Misconceptions
 
-### “80/20 là quy tắc chuẩn cho mọi dataset”
+### “80/20 split is standard rule”
 
-Không. Tỷ lệ split phụ thuộc kích thước dữ liệu, group, time và task. Vai trò thống kê quan trọng hơn con số phần trăm cố định.
+Split ratios depend dataset size, grouping, time and task. Statistical role matters more than percentages.
 
-### “Có cross-validation thì không cần test set”
+### “Cross-validation means no need test set”
 
-Nếu CV được dùng rất nhiều để chọn mô hình, một holdout độc lập cuối cùng vẫn rất hữu ích.
+If CV used heavily for model selection, a final independent holdout can still be valuable.
 
-### “Test score là hiệu quả thật”
+### “Test score is true performance”
 
-Không. Nó là một estimate trên một sample và một protocol cụ thể.
+It is an estimate on a specific sample/protocol.
 
-### “Có random seed thì chắc chắn reproducible”
+### “Random seed makes result reproducible”
 
-Không. Version dữ liệu, software, hardware và kernel nondeterministic cũng ảnh hưởng.
+Data versions, software/hardware and nondeterministic kernels also matter.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Evaluation protocol là một phần của tính hợp lệ khoa học của Machine Learning. Một thuật toán rất phức tạp nhưng test contaminated cho ta ít thông tin hơn một baseline đơn giản được đánh giá đúng cách.
+Evaluation protocol is part of scientific validity of Machine Learning. A sophisticated algorithm with contaminated split teaches less than a simple baseline evaluated correctly.
 
-Xem tiếp: [Hàm mất mát, hàm mục tiêu và rủi ro](./04_loss_objective_and_risk.md).
+Xem tiếp: [Loss, Objective and Risk](./04_loss_objective_and_risk.md).

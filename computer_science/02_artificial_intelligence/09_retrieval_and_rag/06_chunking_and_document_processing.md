@@ -1,38 +1,38 @@
-# Chunking và xử lý tài liệu cho RAG
+# Chunking và Document Processing cho RAG
 
-RAG không tìm kiếm “document” theo đúng cách con người đọc một file. Nó tìm những **đơn vị truy xuất (retrieval units)** đã được tạo trong pipeline ingestion. Cách parse và chunk tài liệu quyết định thông tin nào có thể được retrieve cùng nhau.
+RAG không search “document” theo nghĩa con người đọc file. Nó search những **retrieval units** đã được tạo trong ingestion pipeline. Cách parse và chunk tài liệu quyết định information nào có thể được retrieve cùng nhau.
 
 ## Vì sao phải chunk?
 
-Một PDF 100 trang quá lớn để biến thành một vector duy nhất có ý nghĩa. Embedding cả document làm nhiều chủ đề bị trộn trung bình vào cùng representation.
+Một PDF 100 trang quá lớn để embed thành one vector hữu ích. Whole-document embedding làm nhiều topics bị average vào cùng representation.
 
-Ngược lại, chunk chỉ một câu có thể quá nhỏ và làm mất điều kiện hoặc context.
+Ngược lại, chunk một câu quá nhỏ có thể mất condition và context.
 
-Chunking giải bài toán đánh đổi:
+Chunking giải trade-off:
 
 ```text
-độ chính xác khi truy xuất ↔ mức đầy đủ của context
+retrieval precision ↔ contextual completeness
 ```
 
-## Chunk theo kích thước cố định
+## Fixed-Size Chunking
 
-Cách đơn giản là chia theo số ký tự hoặc token, ví dụ 500 token với overlap 50 token.
+Cách đơn giản chia theo số characters/tokens, ví dụ 500 tokens với overlap 50.
 
-Ưu điểm: dễ triển khai và kích thước dễ dự đoán.
+Ưu điểm: dễ implement, predictable size.
 
-Nhược điểm: có thể cắt giữa bảng, câu hoặc section logic.
+Nhược điểm: có thể cắt giữa table, sentence hoặc logical section.
 
-Chunk cố định là baseline tốt, không phải lựa chọn tối ưu cho mọi tài liệu.
+Fixed chunking là baseline tốt, không phải universal best.
 
-## Chunk theo câu hoặc đoạn văn
+## Sentence/Paragraph Chunking
 
-Chia theo ranh giới câu hoặc paragraph giúp giữ đơn vị ngôn ngữ tự nhiên hơn.
+Split theo sentence/paragraph boundaries giữ language units tự nhiên hơn.
 
-Tuy nhiên độ dài paragraph biến động mạnh. Một đoạn pháp lý có thể vượt 1.000 token, trong khi một bullet chỉ có vài token.
+Nhưng paragraph length biến động mạnh. Một legal paragraph có thể 1000+ tokens, trong khi bullet item chỉ vài tokens.
 
-## Chunk theo cấu trúc tài liệu
+## Structure-Aware Chunking
 
-**Chunk theo cấu trúc (structure-aware chunking)** dùng heading hierarchy, section, table, list, code block và layout.
+Dùng heading hierarchy, section, table, list, code block và document layout.
 
 Ví dụ Markdown:
 
@@ -44,42 +44,42 @@ Ví dụ Markdown:
 ...
 ```
 
-Mỗi chunk có thể kế thừa đường dẫn heading:
+Mỗi chunk có thể inherit heading path:
 
 ```text
 Refund Policy > Eligibility
 ```
 
-Heading context rất có giá trị cho embedding và câu trả lời cuối.
+Heading context rất valuable cho embedding và final answer.
 
-## Chunk theo ngữ nghĩa
+## Semantic Chunking
 
-Có thể phát hiện thay đổi chủ đề bằng similarity giữa embedding của các câu hoặc paragraph. Khi semantic distance tăng đủ mạnh, hệ thống tạo boundary mới.
+Có thể detect topic shift bằng embedding similarity giữa sentences/paragraphs. Khi semantic distance tăng, tạo boundary.
 
-Cách này thích ứng nội dung tốt hơn fixed-size nhưng làm ingestion tốn kém hơn và threshold khó tune.
+Method này adapt content tốt hơn fixed-size nhưng cost ingestion tăng và threshold khó tune.
 
 ## Overlap
 
-Overlap giúp tránh mất thông tin ở ranh giới chunk.
+Chunk overlap giúp information ở boundary không bị mất.
 
-Nhưng overlap quá lớn tạo nhiều chunk trùng, làm index phình to và top-k có thể chứa nhiều evidence gần giống nhau.
+Nhưng overlap quá nhiều tạo duplicated chunks, tăng index size và làm top-k chứa gần-identical evidence.
 
-Reranker hoặc context dedup cần xử lý duplication này.
+Reranker/context dedup cần handle duplicates.
 
-## Parent–Child Chunking
+## Parent-Child Chunking
 
-Một pattern mạnh là:
+Một strong pattern:
 
 ```text
-child chunk nhỏ → retrieval chính xác
-parent section lớn → context đầy đủ cho generation
+small child chunk → retrieval precision
+large parent section → generation context
 ```
 
-Index child chunk nhỏ, nhưng khi child match thì trả thêm parent hoặc neighbor context.
+Index small chunks, nhưng khi child match thì return parent/neighbor context.
 
-Cách này tách **độ mịn retrieval** khỏi **độ mịn generation**.
+Điều này tách retrieval granularity khỏi generation granularity.
 
-## Bổ sung context cho chunk
+## Contextual Chunk Enrichment
 
 Một chunk như:
 
@@ -87,7 +87,7 @@ Một chunk như:
 "This must be completed within 7 days."
 ```
 
-gần như mất nghĩa nếu thiếu heading. Có thể enrich thành:
+không có meaning nếu missing heading. Có thể enrich:
 
 ```text
 Document: Account Closure Policy
@@ -95,41 +95,41 @@ Section: Identity Verification
 Text: This must be completed within 7 days.
 ```
 
-Representation đã enrich thường giúp retrieval tốt hơn.
+Embedding enriched representation improves retrieval.
 
-## Bảng
+## Tables
 
-Table là nguồn failure lớn trong RAG. PDF extraction đơn giản có thể làm sai thứ tự cột.
+Tables là major RAG failure source. Naive PDF extraction có thể flatten column order sai.
 
-Cần cố giữ:
+Cần preserve:
 
 ```text
 header
-row label
-đơn vị
-merged cell
-footnote
+row labels
+units
+merged cells
+footnotes
 ```
 
-Có thể chuyển table sang Markdown, JSON record hoặc câu văn tùy loại query.
+Có thể convert table thành Markdown, JSON records hoặc sentence representations tùy query type.
 
-Nếu người dùng cần aggregate qua nhiều row, SQL hoặc dataframe tool thường phù hợp hơn text RAG.
+Nếu user hỏi aggregate across rows, SQL/dataframe tool có thể tốt hơn text RAG.
 
-## PDF và layout
+## PDFs và Layout
 
-PDF chủ yếu lưu lệnh vẽ chứ không lưu paragraph theo semantics. Tài liệu nhiều cột, header/footer, page number và OCR error có thể làm text bị nhiễu.
+PDF stores drawing instructions, không semantic paragraphs. Multi-column, header/footer, page numbers và OCR errors có thể pollute text.
 
-Cần kiểm tra trực quan một số sample. “Extract text thành công” không có nghĩa reading order đã đúng.
+Parsing quality cần visually inspect sample documents. “Text extracted successfully” không có nghĩa reading order đúng.
 
 ## OCR
 
-Tài liệu scan cần OCR. Lỗi OCR ở ID và số đặc biệt nguy hiểm.
+Scanned docs cần OCR. OCR errors ở IDs/numbers đặc biệt dangerous.
 
-Nên lưu page image hoặc tọa độ gốc để người dùng có thể xác minh citation khi cần.
+Store page image reference hoặc original coordinates để human verify citations khi cần.
 
-## Tài liệu mã nguồn
+## Code Documents
 
-Code nên chunk theo đơn vị cú pháp:
+Code nên chunk theo syntactic units:
 
 ```text
 class
@@ -138,71 +138,71 @@ method
 module
 ```
 
-Chunk cố định có thể tách function signature khỏi body.
+Fixed token chunk có thể separate function signature và body.
 
-Nên kèm file path, symbol name và language metadata.
+Include file path, symbol name và language metadata.
 
-## Dữ liệu hội thoại
+## Conversation Data
 
-Chat log có semantics về speaker và turn. Chunk ngẫu nhiên có thể làm mất quan hệ question–answer.
+Chat logs có speaker/turn semantics. Chunking random turns có thể mất question-answer relation.
 
-Conversation RAG nên giữ turn pair hoặc thread structure.
+Conversation RAG nên keep turn pairs/thread structure.
 
 ## Versioning
 
-Mỗi chunk nên truy được về:
+Every chunk should trace to:
 
 ```text
 source_document_id
 source_version
 chunker_version
-page / section
+page/section
 content_hash
 ```
 
-Khi source thay đổi, hệ thống cần biết chunk nào phải xóa hoặc reindex.
+Khi source update, delete/reindex đúng chunks.
 
-## Content Hash
+## Content Hashing
 
-Hash nội dung đã chuẩn hóa giúp bỏ qua chunk không đổi và phát hiện duplicate.
+Hash normalized content giúp skip unchanged chunks và detect duplicates.
 
-Tuy nhiên nếu metadata thay đổi, vẫn có thể cần reindex vì filter hoặc citation phụ thuộc metadata.
+But metadata changes may still require reindex if filters/citations depend on metadata.
 
-## Khử trùng lặp
+## Deduplication
 
-Repository policy thường chứa nhiều tài liệu gần trùng. Nếu không dedup, top-k có thể trả năm version của cùng một paragraph.
+Near-duplicate documents common in policy repositories. Without dedup, retrieval top-k may return 5 versions same paragraph.
 
-Cần phân biệt:
+Need distinguish:
 
 ```text
 exact duplicate
 near duplicate
-version history hợp lệ
+legitimate version history
 ```
 
-Không nên dedup mù rồi xóa mất semantics của version cũ/mới.
+Do not dedup away newer/older version semantics blindly.
 
-## Kiểm soát truy cập ở cấp chunk
+## Access Control at Chunk Level
 
-Nếu các section khác nhau có quyền khác nhau, ACL ở document level có thể quá thô. Chunk metadata có thể mang access scope riêng.
+If different sections have different permissions, document-level ACL may be too coarse. Chunk metadata can carry access scope.
 
-Authorization phải được duy trì qua toàn bộ artifact dẫn xuất.
+Authorization must survive derived artifacts.
 
-## Thử nghiệm kích thước chunk
+## Chunk Size Experiment
 
-Nên chọn chunk size bằng dữ liệu đánh giá. Có thể xây tập query có nhãn rồi so recall/precision giữa 200, 500 và 1.000 token.
+Choose chunk size empirically. Build labeled queries and compare retrieval recall/precision for sizes like 200/500/1000 tokens.
 
-Không có “512 token là tốt nhất” cho mọi bài toán. Kích thước phù hợp phụ thuộc cấu trúc tài liệu và độ chi tiết của câu hỏi.
+No universal “best 512 tokens”. Optimal size depends document structure and question granularity.
 
-## Mở rộng neighbor
+## Neighbor Expansion
 
-Sau khi retrieve chunk `i`, có thể thêm `i-1`, `i+1` nếu tính liên tục của context quan trọng.
+After retrieving chunk `i`, include `i-1`, `i+1` when context continuity matters.
 
-Cách này tăng độ đầy đủ nhưng tiêu tốn token budget.
+This improves completeness but consumes token budget.
 
-## Heading cho embedding và text hiển thị
+## Heading Injection vs Raw Text
 
-Embedding text có thể thêm heading, nhưng evidence hiển thị cho user không nhất thiết cần lặp heading ở mọi đoạn. Có thể lưu tách:
+Embedding may include heading, but final evidence should avoid repeated heading noise. Store separate fields:
 
 ```text
 embedding_text
@@ -210,48 +210,46 @@ raw_display_text
 metadata
 ```
 
-Representation dùng cho retrieval nhờ đó có thể khác representation dùng cho citation.
+This allows retrieval representation differ from user-facing citation.
 
-## Trích context theo query
+## Query-Aware Context Extraction
 
-Thay vì gửi toàn bộ chunk, một model khác có thể trích chỉ các câu liên quan. Điều này giảm token nhưng tạo failure point mới: extractor có thể bỏ mất ngoại lệ quan trọng.
+Instead of sending whole chunk, another model can extract only sentences relevant to query. This reduces tokens but creates a new failure point: extractor may remove crucial exception.
 
-Chỉ nên dùng với chunk dài và có evaluation.
+Use for very long chunks with evaluation.
 
-## Chunking và kinh tế hạ tầng
+## Chunking and Economics
 
-Chunk nhỏ làm số vector tăng:
+Smaller chunks mean more vectors:
 
 ```text
 index size ↑
 embedding cost ↑
-retrieval candidate ↑
+retrieval candidates ↑
 ```
 
-Chunk lớn làm token generation tăng.
+Larger chunks mean generation token cost ↑.
 
-Vì vậy chunking vừa là quyết định chất lượng vừa là quyết định hạ tầng.
+Chunking is both quality and infrastructure decision.
 
-## Mô hình tư duy
+## Mental Model
 
-> Chunking quyết định **đơn vị nguyên tử của tri thức được truy xuất**. Nếu đơn vị này sai, retriever và model phía sau phải xử lý một bài toán đã mất cấu trúc ngay từ ingestion.
+> Chunking quyết định **atomic unit của knowledge retrieval**. Nếu unit sai, retriever/model phía sau phải giải bài toán đã bị mất structure từ ingestion.
 
-## Những hiểu lầm thường gặp
+## Common Misconceptions
 
 ### “Overlap càng nhiều càng an toàn”
 
-Không. Duplication làm lãng phí ranking và context.
+Không. Duplication làm ranking/context waste.
 
-### “PDF text extraction đã là bài toán giải xong”
+### “PDF text extraction là solved problem”
 
-Không với layout phức tạp, scan và table.
+Không với layout phức tạp, scanned docs và tables.
 
-### “Một chunk size dùng được cho mọi loại tài liệu”
+### “Một chunk size dùng được mọi document type”
 
-Không. Code, policy, table và conversation có cấu trúc khác nhau.
+Không. Code, policy, tables và conversations có structure khác nhau.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Chunking nối document parsing và data engineering với retrieval.
-
-Xem tiếp: [Retrieval, Ranking and Reranking](./07_retrieval_ranking_and_reranking.md).
+Chunking nối document parsing/data engineering với retrieval. Tiếp theo [Retrieval, Ranking and Reranking](./07_retrieval_ranking_and_reranking.md).

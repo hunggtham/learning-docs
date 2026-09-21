@@ -1,16 +1,16 @@
-# Nền tảng Image Processing
+# Image Processing Foundations
 
-Trước Deep Learning, Computer Vision dựa nhiều vào **xử lý ảnh (image processing / 영상 처리)**: biến đổi tín hiệu ảnh để làm nổi bật cấu trúc hữu ích. Dù model hiện đại có thể tự học feature, các nguyên lý filtering, edge, morphology và frequency vẫn rất quan trọng để hiểu data pipeline và failure mode.
+Trước Deep Learning, Computer Vision dựa nhiều vào **image processing (영상 처리 / xử lý ảnh)**: biến đổi tín hiệu ảnh để làm nổi bật structure hữu ích. Dù modern models học features tự động, các nguyên lý filtering, edges, morphology và frequency vẫn giúp hiểu data pipeline và failure modes.
 
-## Convolution như Local Filtering
+## Convolution như local filtering
 
-Với image `I` và kernel `K`, dạng discrete correlation/convolution thường dùng trong implementation tính weighted sum trên neighborhood:
+Với image `I` và kernel `K`, convolution/discrete correlation practical form tính weighted sum neighborhood:
 
 \[
 Y(i,j)=\sum_m\sum_n K(m,n)I(i+m,j+n)
 \]
 
-Một mean-blur kernel:
+Một kernel blur trung bình:
 
 \[
 \frac{1}{9}
@@ -21,36 +21,36 @@ Một mean-blur kernel:
 \end{bmatrix}
 \]
 
-làm mượt local variation bằng cách lấy trung bình vùng lân cận.
+làm smooth local variation.
 
-Edge kernel như Sobel xấp xỉ spatial derivative. CNN sau này giữ nguyên ý tưởng local filtering nhưng để kernel được học từ data thay vì hand-design hoàn toàn.
+Edge kernel như Sobel approximates spatial derivative. CNN sau này học kernels thay vì hand-design hoàn toàn.
 
 ## Padding và Boundary
 
-Khi kernel ở gần image border, neighborhood bị thiếu. Các strategy phổ biến:
+Kernel gần border thiếu neighbors. Strategies:
 
 - zero padding;
-- reflection padding;
-- replicate padding;
-- valid convolution hoặc không padding.
+- reflect;
+- replicate;
+- valid/no padding.
 
-Boundary choice ảnh hưởng output shape và có thể tạo artifact ở mép ảnh.
+Boundary choice ảnh hưởng output dimension và artifacts.
 
-## Blur và Giảm Noise
+## Blur và Noise Reduction
 
-Gaussian blur dùng kernel:
+Gaussian blur:
 
 \[
 G(x,y)=\frac{1}{2\pi\sigma^2}e^{-(x^2+y^2)/(2\sigma^2)}
 \]
 
-Pixel gần center có weight cao hơn; high-frequency noise bị suppress.
+ưu tiên center pixels và suppress high-frequency noise.
 
-Nhưng blur cũng làm mất edge và fine detail. Denoising luôn là trade-off giữa giảm noise và giữ signal cần thiết.
+Nhưng blur cũng xóa edges/fine detail. Denoising luôn là signal-vs-detail trade-off.
 
-## Edge và Gradient
+## Edges và Gradients
 
-Edge là vùng intensity thay đổi nhanh. Image gradient:
+Edge là nơi intensity thay đổi nhanh. Image gradient:
 
 \[
 \nabla I=(I_x,I_y)
@@ -62,30 +62,23 @@ Magnitude:
 |\nabla I|=\sqrt{I_x^2+I_y^2}
 \]
 
-Direction biểu diễn orientation của local change.
+Direction cho orientation của local change.
 
-Trước thời Deep Learning, edge là primitive cốt lõi cho shape detection, contour extraction và feature engineering.
+Edges từng là core primitive cho object shape detection.
 
 ## Canny Edge Detection
 
-Pipeline Canny cổ điển:
+Canny pipeline classic:
 
 ```text
 Gaussian smoothing
-→ tính gradient
+→ gradient computation
 → non-maximum suppression
 → double threshold
 → hysteresis tracking
 ```
 
-Điểm đáng học không chỉ là thuật toán cụ thể, mà là cách pipeline tách rõ:
-
-```text
-giảm noise
-→ phát hiện evidence cục bộ
-→ giữ edge mạnh
-→ nối edge dựa trên connectivity
-```
+Điểm đáng học là pipeline separates noise suppression, local evidence và connectivity reasoning.
 
 ## Thresholding
 
@@ -95,43 +88,32 @@ Binary segmentation đơn giản:
 B(x,y)=1[I(x,y)>T]
 \]
 
-Global threshold dễ fail khi illumination không đồng đều. Adaptive threshold dùng local statistic nên thích nghi tốt hơn với variation theo vùng.
+Global threshold fail nếu illumination nonuniform. Adaptive threshold dùng local statistics.
 
-Otsu method chọn threshold bằng cách tối ưu separation giữa các class theo giả định histogram phù hợp.
+Otsu method chọn threshold để separate classes theo between-class variance assumption.
 
-## Morphological Operation
+## Morphological Operations
 
 Với binary mask và structuring element:
 
-- **erosion (침식 / co)** làm foreground nhỏ lại;
-- **dilation (팽창 / giãn)** làm foreground lớn ra;
-- **opening** = erosion rồi dilation;
-- **closing** = dilation rồi erosion.
+- **erosion (침식)** shrink foreground;
+- **dilation (팽창)** expand foreground;
+- opening = erosion then dilation;
+- closing = dilation then erosion.
 
-Các operation này thường dùng để loại small noise, lấp hole hoặc nối component sau segmentation.
+Dùng để remove small noise, fill holes, connect components.
 
-## Connected Component
+## Connected Components
 
-Binary mask có thể được nhóm thành các **connected region**. Với mỗi component ta có thể tính:
+Binary mask có thể được group thành connected regions. Component properties như area, centroid, bounding box rất hữu ích cho OCR/inspection pipelines.
 
-```text
-area
-centroid
-bounding box
-perimeter
-```
+## Histograms
 
-Điều này hữu ích trong OCR, industrial inspection và post-processing mask.
+Intensity histogram mô tả frequency của pixel values. Histogram equalization redistribute contrast; CLAHE làm local adaptive enhancement.
 
-## Histogram
+Nhưng contrast enhancement có thể amplify noise.
 
-Intensity histogram mô tả distribution của pixel value.
-
-Histogram equalization phân phối lại intensity để tăng contrast. CLAHE thực hiện contrast enhancement cục bộ, giảm vấn đề global histogram khi illumination thay đổi theo vùng.
-
-Tuy nhiên contrast enhancement cũng có thể làm noise nổi rõ hơn.
-
-## Geometric Transformation
+## Geometric Transformations
 
 Affine transform:
 
@@ -139,101 +121,85 @@ Affine transform:
 \begin{bmatrix}x'\\y'\end{bmatrix}=A\begin{bmatrix}x\\y\end{bmatrix}+b
 \]
 
-bao gồm translation, rotation, scale và shear.
+cover translation, rotation, scale, shear.
 
-Khi perspective change cần projective transformation hoặc homography để map planar structure giữa hai viewpoint.
+Perspective/homography cần projective transform để map planes under viewpoint change.
 
 ## Interpolation
 
-Resize hoặc warp yêu cầu estimate pixel tại non-integer coordinate. Các cách phổ biến:
+Resize/warp cần estimate pixel values at non-integer coordinates:
 
 - nearest neighbor;
 - bilinear;
 - bicubic.
 
-Nearest neighbor thường phù hợp với segmentation mask vì giữ nguyên discrete label. Bilinear hoặc bicubic phù hợp hơn với natural image vì tạo chuyển tiếp mượt.
-
-Dùng bilinear cho class mask có thể tạo ra class ID không tồn tại.
+Nearest preserves labels for masks better; bilinear smoother for images. Dùng interpolation sai cho segmentation mask có thể tạo class IDs invalid.
 
 ## Frequency Domain
 
-2D Fourier Transform phân rã image thành các spatial frequency.
+2D Fourier transform decompose image into spatial frequencies. Convolution in spatial domain corresponds multiplication in frequency domain.
 
-Convolution trong spatial domain tương ứng phép nhân trong frequency domain.
+Low-pass filters smooth; high-pass emphasize edges.
 
-- low-pass filter → làm mượt;
-- high-pass filter → nhấn mạnh edge và chi tiết.
+Frequency view giúp hiểu blur, periodic noise và compression.
 
-Góc nhìn frequency giúp hiểu blur, periodic noise, aliasing và compression.
+## JPEG Intuition
 
-## Trực giác JPEG
+JPEG chia blocks, transform qua DCT, quantize frequency coefficients rồi entropy-code. Loss chủ yếu đến từ quantization; high-frequency details bị bỏ mạnh hơn.
 
-JPEG thường:
+Compression artifacts có thể ảnh hưởng model nếu train/test compression khác nhau.
 
-```text
-chia image thành block
-→ DCT
-→ quantize frequency coefficient
-→ entropy coding
-```
+## Classical Pipeline Example
 
-Phần loss lớn đến từ quantization. High-frequency detail thường bị loại mạnh hơn low-frequency structure.
-
-Nếu compression distribution của train và deployment khác nhau, model có thể gặp domain shift.
-
-## Ví dụ Classical Pipeline
-
-Document scan có thể đi qua:
+Document scan:
 
 ```text
-grayscale
+gray
 → denoise
 → deskew
 → adaptive threshold
 → morphology
-→ connected component
+→ connected components
 → OCR
 ```
 
-Deep model có thể thay một số stage, nhưng preprocessing vẫn rất hữu ích khi acquisition pipeline có cấu trúc ổn định.
+Một deep model có thể replace vài stage nhưng preprocessing vẫn hữu ích khi acquisition predictable.
 
-## Khi Classical Image Processing vẫn phù hợp
+## When Classical Processing Still Wins
 
-- industrial inspection có rule rõ;
-- compute budget rất nhỏ;
-- geometry đơn giản và deterministic;
-- pre/post-processing quanh neural model;
-- cleanup segmentation mask;
+- deterministic industrial inspection;
+- tiny compute budget;
+- obvious geometric rule;
+- pre/postprocessing around neural model;
+- mask cleanup;
 - document normalization.
 
-Không phải mọi vision problem đều cần deep network.
+Không phải mọi vision problem cần deep network.
 
-## Differentiable Image Operation
+## Differentiable Image Operations
 
-Nhiều image-processing operation có phiên bản differentiable và có thể trở thành layer hoặc augmentation trong neural training.
+Nhiều processing operations có differentiable equivalents và trở thành layers/augmentations inside neural training.
 
-Điều này cho thấy ranh giới giữa classical processing và learned model không hoàn toàn cứng.
+## Mental Model
 
-## Mô hình tư duy
+> **Image processing thay đổi measurement để structure cần thiết trở nên dễ detect hơn. Deep learning chủ yếu thay hand-designed feature extraction bằng learned representations, không xóa bỏ signal-processing foundations.**
 
-> **Image processing biến đổi measurement để structure cần thiết dễ phát hiện hơn. Deep Learning chủ yếu thay hand-designed feature extraction bằng learned representation, nhưng không xóa nền tảng signal processing.**
+## Common Misconceptions
 
-## Những nhầm lẫn thường gặp
+### “Deep Learning làm image processing lỗi thời”
 
-### “Deep Learning làm Image Processing lỗi thời”
+Không. Resize, normalization, augmentation, filtering và geometric transforms vẫn ở mọi pipeline.
 
-Không. Resize, normalization, augmentation, filtering và geometric transform vẫn tồn tại trong hầu hết pipeline.
+### “Sharpen luôn tăng information”
 
-### “Sharpen làm xuất hiện information mới”
+Sharpen tăng local contrast; không tạo detail thật đã mất.
 
-Không. Sharpen tăng local contrast; nó không tái tạo detail thật đã mất khỏi measurement.
+### “Thresholding là segmentation giống deep segmentation”
 
-### “Thresholding và deep segmentation là cùng một thứ”
+Cùng output mask nhưng assumptions/capability rất khác.
 
-Chúng có thể cùng output mask nhưng assumption, representation và capability rất khác nhau.
+## Knowledge Connection
 
-## Liên kết kiến thức
-
-Convolution và filtering là cầu trực tiếp tới CNN; gradient và frequency nối Computer Vision với Calculus và Signal Processing.
+Convolution/filtering là bridge trực tiếp tới CNN; gradient/frequency connect Calculus và Signal Processing.
 
 Xem tiếp: [Feature Representation](./02_feature_representation.md).

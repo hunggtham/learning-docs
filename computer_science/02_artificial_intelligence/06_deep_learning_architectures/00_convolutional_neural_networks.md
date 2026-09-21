@@ -1,74 +1,74 @@
-# Convolutional Neural Network: tận dụng cấu trúc không gian
+# Convolutional Neural Networks: tận dụng cấu trúc không gian
 
-**Convolutional Neural Network (CNN / 합성곱 신경망 / mạng nơ-ron tích chập)** được phát triển vì MLP dày đặc đối xử các chiều đầu vào gần như độc lập, trong khi ảnh có cấu trúc rất mạnh: các pixel gần nhau tạo thành mẫu cục bộ, cùng một cạnh có thể xuất hiện ở nhiều vị trí và cấu trúc thị giác thường hình thành theo tầng từ cạnh → texture → bộ phận → vật thể.
+Convolutional Neural Network (CNN / 합성곱 신경망) được tạo ra vì dense MLP đối xử mọi input dimension như độc lập, trong khi image có structure rất mạnh: pixels gần nhau tạo local patterns, cùng một edge có thể xuất hiện ở nhiều vị trí, và spatial hierarchy từ edge → texture → part → object có tính compositional.
 
-CNN mã hóa hai **thiên lệch quy nạp (inductive bias)** chính: **kết nối cục bộ (local connectivity)** và **chia sẻ trọng số (weight sharing)**.
+CNN encode hai inductive biases chính: **local connectivity** và **weight sharing**.
 
-## Vì sao flatten ảnh vào MLP gây lãng phí?
+## Vì sao flatten image vào MLP là lãng phí?
 
-Ảnh RGB `224×224×3` có 150.528 giá trị. Một dense layer 4.096 unit cần hơn 600 triệu weight chỉ riêng layer đầu tiên.
+Image RGB `224×224×3` có 150,528 values. Dense layer 4096 units cần hơn 600 triệu weights chỉ layer đầu.
 
-Quan trọng hơn, flatten làm mất cấu trúc không gian tường minh. Pixel tại `(10,10)` và `(10,11)` vốn ở sát nhau, nhưng sau khi biến thành vector, MLP không được cung cấp một giả định đặc biệt rằng hai vị trí đó có quan hệ cục bộ.
+Quan trọng hơn, flatten bỏ explicit locality. Pixel ở `(10,10)` và `(10,11)` vốn neighboring nhưng vector index không cho MLP biết relation đặc biệt đó.
 
-CNN giữ nguyên lưới không gian và xử lý bằng các kernel nhỏ.
+CNN giữ spatial grid và dùng local kernels.
 
-## Phép convolution
+## Convolution operation
 
-Một kernel 2D nhỏ, ví dụ `3×3`, trượt qua ảnh. Với một channel:
+Một 2D kernel nhỏ, ví dụ `3×3`, trượt qua image. Với single channel:
 
 \[
 y_{i,j}=\sum_{u,v}K_{u,v}x_{i+u,j+v}
 \]
 
-Nhiều framework Deep Learning thực tế tính **cross-correlation** thay vì lật kernel theo định nghĩa convolution toán học truyền thống, nhưng vẫn dùng tên convolution.
+Deep-learning frameworks thường implement cross-correlation (không flip kernel) nhưng vẫn gọi convolution.
 
-Với input nhiều channel:
+Multi-channel input:
 
 \[
 W\in R^{C_{out}\times C_{in}\times K_h\times K_w}
 \]
 
-mỗi output channel kết hợp một patch cục bộ trên toàn bộ input channel.
+mỗi output channel combine local patch across all input channels.
 
-## Chia sẻ trọng số
+## Weight Sharing
 
-Cùng một kernel được dùng lại ở mọi vị trí không gian. Nếu kernel học mẫu cạnh dọc, nó có thể phát hiện mẫu này ở nhiều nơi trong ảnh.
+Cùng kernel weights được reuse mọi spatial location. Nếu kernel học vertical edge, nó detect edge ở nhiều vị trí.
 
-Số tham số:
+Parameter count không phụ thuộc image width/height trực tiếp:
 
 \[
 C_{out}(C_{in}K_hK_w+1)
 \]
 
-không tăng trực tiếp theo chiều rộng hoặc chiều cao ảnh. Đây là lợi thế rất lớn so với dense connection.
+Đây là huge efficiency gain so dense connection.
 
-## Tính đồng biến theo phép tịnh tiến
+## Translation Equivariance
 
-Nếu input dịch chuyển, feature map của convolution cũng dịch chuyển tương ứng trong điều kiện lý tưởng và bỏ qua ảnh hưởng biên hoặc stride. Đây là **tính đồng biến (translation equivariance)**, không phải bất biến hoàn toàn.
+Nếu input shift, convolution feature map cũng shift tương ứng (ignoring boundaries/stride effects). Đây là **equivariance**, không phải exact invariance.
 
-Pooling hoặc global aggregation có thể làm prediction cuối trở nên bất biến hơn với thay đổi vị trí nhỏ.
+Pooling/global aggregation có thể tạo more invariant final prediction.
 
-## Stride, Padding và Dilation
+## Stride, Padding, Dilation
 
-Kích thước output 1D:
+Output size 1D:
 
 \[
 O=\left\lfloor\frac{N+2P-D(K-1)-1}{S}+1\right\rfloor
 \]
 
-Trong đó `S` là stride, `P` là padding và `D` là dilation.
+`S` stride, `P` padding, `D` dilation.
 
-- `stride > 1` giảm kích thước không gian;
-- padding kiểm soát kích thước và cách xử lý biên;
-- dilation mở rộng vùng quan sát mà không cần tăng nhiều tham số kernel.
+- stride >1 downsample;
+- padding giữ spatial size/control border;
+- dilation mở receptive field mà không tăng kernel parameters nhiều.
 
 ## Receptive Field
 
-Một unit ở layer sâu phụ thuộc vào một vùng ngày càng lớn của ảnh gốc. Xếp chồng nhiều convolution `3×3` làm **trường tiếp nhận (receptive field)** tăng theo depth.
+Unit ở deep layer phụ thuộc một region của original image. Stack `3×3` convolutions làm receptive field tăng.
 
-Layer đầu xử lý pattern cục bộ; layer sâu tích hợp ngữ cảnh rộng hơn.
+Early layers local; deeper units integrate larger context.
 
-**Receptive field hiệu dụng (effective receptive field)** có thể nhỏ hơn vùng lý thuyết vì mức đóng góp của các vị trí không phân bố đều.
+**Effective receptive field** có thể nhỏ hơn theoretical vì contribution distribution không uniform.
 
 ## Pooling
 
@@ -78,127 +78,115 @@ Max pooling:
 y_{i,j}=\max_{(u,v)\in window}x_{i+u,j+v}
 \]
 
-Average pooling lấy trung bình trong cửa sổ.
+Average pooling lấy mean.
 
-Pooling giảm độ phân giải, mở rộng receptive field hiệu dụng và tạo một mức bất biến cục bộ. CNN hiện đại đôi khi dùng strided convolution thay cho pooling.
+Pooling giảm resolution, tăng effective receptive field và tạo local invariance. Modern CNN đôi khi dùng strided convolution thay pooling.
 
-**Global Average Pooling** lấy trung bình toàn bộ spatial map theo từng channel và giúp giảm lượng tham số ở classification head.
+Global Average Pooling average toàn spatial map per channel, giảm dense-head parameters.
 
-## Feature phân cấp
+## Hierarchical Features
 
-Một cách diễn giải kinh điển:
+Một classic interpretation:
 
 ```text
-pixel
-→ cạnh / hướng
-→ texture / hình đơn giản
-→ bộ phận
-→ feature cấp vật thể
+pixels
+→ edges/orientations
+→ textures/simple shapes
+→ parts
+→ object-level features
 ```
 
-Không phải mọi channel đều ánh xạ sạch sang một concept cụ thể, nhưng trực giác phân cấp vẫn hữu ích vì receptive field và khả năng hợp thành tăng theo depth.
+Không phải mọi channel cleanly map concept, nhưng hierarchy intuition hữu ích vì receptive field và composition tăng qua depth.
 
-## ResNet và Skip Connection
+## ResNet và Skip Connections
 
-CNN rất sâu khó tối ưu nếu chỉ xếp layer tuần tự.
-
-ResNet block:
+Very deep CNN khó optimize. ResNet block:
 
 \[
 y=x+F(x)
 \]
 
-thêm đường identity giúp tín hiệu và gradient truyền qua dễ hơn.
+cho identity path và easier gradient flow.
 
-Thay vì phải học toàn bộ mapping mới, block chỉ cần học phần hiệu chỉnh còn thiếu `F(x)`.
+Thay vì mỗi block phải learn full mapping, nó learn residual correction `F(x)`.
 
-Residual connection sau đó trở thành nguyên lý rất quan trọng cả trong Transformer.
+Residual architecture trở thành principle chung và xuất hiện mạnh trong Transformers.
 
-## Convolution 1×1
+## 1×1 Convolution
 
-Kernel `1×1` không kết hợp các vị trí lân cận nhưng trộn thông tin giữa các channel:
+Kernel `1×1` không mix neighbors spatially nhưng mix channels:
 
 \[
 y_{i,j}=W x_{i,j}
 \]
 
-Có thể xem đây là linear projection áp dụng độc lập tại từng vị trí, hữu ích để đổi số channel hoặc tạo bottleneck.
+Nó là per-location linear projection, useful để change channel dimension/bottleneck.
 
 ## Depthwise Separable Convolution
 
-Convolution chuẩn trộn cả cấu trúc không gian và channel trong cùng một operation.
+Standard conv mixes spatial + channel jointly. Depthwise separable conv tách:
 
-Depthwise separable convolution tách thành:
+1. depthwise spatial conv per channel;
+2. pointwise `1×1` conv mix channels.
 
-1. convolution không gian riêng trên từng channel;
-2. pointwise convolution `1×1` để trộn channel.
-
-Cách này giảm compute đáng kể và được dùng trong các kiến trúc kiểu MobileNet.
+Compute giảm mạnh, used in MobileNet-like architectures.
 
 ## BatchNorm và CNN Training
 
-CNN truyền thống thường dùng chuỗi:
+CNN historically dùng Conv → BatchNorm → ReLU patterns. Modern variants thay ordering/norm/activation.
 
-```text
-Convolution → BatchNorm → ReLU
-```
+BatchNorm works well with sufficiently large image batches; small-batch detection/segmentation may prefer GroupNorm.
 
-Các kiến trúc mới có thể thay đổi thứ tự, normalization hoặc activation.
+## CNN for more than Images
 
-BatchNorm hoạt động tốt khi batch ảnh đủ lớn; với detection hoặc segmentation có batch nhỏ, GroupNorm đôi khi phù hợp hơn.
+1D convolution: audio/time series/text local patterns.
 
-## CNN không chỉ dùng cho ảnh
+3D convolution: video/medical volumes.
 
-Convolution 1D có thể dùng với âm thanh, time series hoặc pattern cục bộ trong text.
+Graph convolutions generalize neighborhood aggregation on non-grid structures nhưng mathematical operation khác grid convolution.
 
-Convolution 3D phù hợp với video hoặc thể tích y khoa.
+## Classification, Detection, Segmentation
 
-Graph convolution mở rộng trực giác tổng hợp lân cận sang cấu trúc không phải lưới, nhưng operation toán học không hoàn toàn giống grid convolution.
+Image classification output one/few labels.
 
-## Classification, Detection và Segmentation
+Object detection cần bounding boxes + classes.
 
-Image classification trả một hoặc vài label.
+Segmentation prediction per pixel.
 
-Object detection cần bounding box cùng class.
+Same CNN backbone can feed different heads. Task output structure quyết định architecture beyond feature extractor.
 
-Segmentation tạo prediction cho từng pixel.
+## CNN vs Vision Transformer
 
-Cùng một CNN backbone có thể cấp feature cho nhiều loại head. Cấu trúc output của task quyết định phần kiến trúc phía sau feature extractor.
+CNN hardcodes locality/translation sharing. Vision Transformer splits image into patches và learn global interactions through attention.
 
-## CNN và Vision Transformer
+CNN often data-efficient due strong inductive bias; ViT scales extremely well with large pretraining. Modern vision systems frequently hybrid or use convolution-like local biases inside transformers.
 
-CNN mã hóa mạnh locality và chia sẻ theo phép tịnh tiến.
+Không có simple “Transformer replaced CNN” rule.
 
-Vision Transformer chia ảnh thành patch rồi học tương tác toàn cục bằng attention.
+## Mental Model
 
-CNN thường hiệu quả dữ liệu nhờ inductive bias mạnh; ViT có khả năng scale rất tốt với pretraining lớn. Nhiều hệ vision hiện đại kết hợp cả hai loại bias hoặc đưa locality vào Transformer.
+> CNN says: local pattern matters, same kind of pattern can occur anywhere, and complex visual concepts can be composed hierarchically from local features.
 
-Không có quy tắc đơn giản rằng “Transformer đã thay thế CNN”.
+## Common Misconceptions
 
-## Mô hình tư duy
+### “Convolution automatically makes model translation invariant”
 
-> CNN giả định pattern cục bộ quan trọng, cùng một loại pattern có thể xuất hiện ở nhiều vị trí và khái niệm thị giác phức tạp có thể được xây phân cấp từ các feature cục bộ.
+Convolution is mainly equivariant. Pooling/aggregation/training augmentation contribute invariance.
 
-## Các hiểu lầm thường gặp
+### “CNN kernel is hand-designed edge filter”
 
-### “Convolution tự động làm mô hình bất biến với phép tịnh tiến”
+Classical vision used hand filters; CNN kernels are learned end-to-end.
 
-Không. Convolution chủ yếu có tính đồng biến; pooling, aggregation và augmentation mới góp phần tạo bất biến.
+### “Deep layer neuron always represents object part”
 
-### “CNN kernel là edge filter viết tay”
+Representation distributed; conceptual hierarchy is approximate mental model.
 
-Không. Computer Vision cổ điển từng dùng filter thủ công; kernel của CNN được học end-to-end.
+### “CNN obsolete after Vision Transformer”
 
-### “Neuron ở layer sâu luôn đại diện một bộ phận vật thể”
+CNN remains strong, efficient and widely deployed; architectures converge/hybridize.
 
-Không. Representation thường phân tán; hierarchy chỉ là mô hình tư duy gần đúng.
+## Knowledge Connection
 
-### “CNN đã lỗi thời sau Vision Transformer”
+CNN applies [Representation Learning](../05_neural_networks/08_representation_learning.md), [Weight Sharing/Regularization](../05_neural_networks/07_regularization.md) and [Residual Connections](../05_neural_networks/04_backpropagation.md).
 
-Không. CNN vẫn mạnh, hiệu quả và được triển khai rộng rãi; nhiều kiến trúc hiện đại đang hội tụ hoặc lai hóa các ý tưởng của cả hai.
-
-## Liên kết kiến thức
-
-CNN ứng dụng trực tiếp [Representation Learning](../05_neural_networks/08_representation_learning.md), [Regularization và Weight Sharing](../05_neural_networks/07_regularization.md) và [Residual Connection](../05_neural_networks/04_backpropagation.md).
-
-Phần Computer Vision sau này sẽ mở rộng sang detection, segmentation và Vision Transformer.
+Computer Vision domain later expands detection, segmentation and ViT.

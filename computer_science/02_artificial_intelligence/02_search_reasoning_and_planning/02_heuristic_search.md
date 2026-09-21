@@ -1,72 +1,70 @@
-# Tìm kiếm heuristic: Greedy Best-First và A*
+# Heuristic Search: Greedy Best-First và A*
 
-Tìm kiếm không heuristic biết trạng thái hiện tại, các hành động và chi phí đã đi, nhưng không biết hướng nào có vẻ gần mục tiêu hơn. Khi không gian trạng thái lớn, cách đó quá đắt. **Tìm kiếm heuristic (Heuristic Search / 휴리스틱 탐색)** thêm một hàm ước lượng `h(n)` nhằm trả lời:
+Uninformed search biết trạng thái hiện tại, actions và cost đã đi, nhưng không biết hướng nào có vẻ gần goal hơn. Khi state space lớn, điều đó quá đắt. **Heuristic Search (휴리스틱 탐색)** thêm một estimate `h(n)` nhằm trả lời:
 
-> Từ nút `n`, ước tính còn bao nhiêu chi phí nữa để tới mục tiêu?
+> Từ node `n`, còn khoảng bao nhiêu cost nữa để tới goal?
 
-Heuristic không cần hoàn hảo. Chỉ cần tương quan đủ tốt với độ khó còn lại, nó có thể giảm mạnh số nút phải mở rộng. Nhưng heuristic cũng đưa thêm tri thức hoặc giả định vào quá trình tìm kiếm, nên chất lượng và các bảo đảm tính đúng phụ thuộc vào thuộc tính của `h`.
+Heuristic không cần hoàn hảo. Chỉ cần correlate đủ tốt với remaining difficulty, nó có thể giảm số node expanded rất mạnh. Nhưng heuristic cũng đưa knowledge/assumption vào search, nên quality và correctness guarantees phụ thuộc properties của `h`.
 
-Xem trước: [Tìm kiếm không dùng heuristic](./01_uninformed_search.md).
+Xem trước: [Uninformed Search](./01_uninformed_search.md).
 
-## Hàm heuristic
+## Heuristic function
 
-Heuristic có thể viết:
+Heuristic:
 
 \[
 h(n)\approx h^*(n)
 \]
 
-trong đó `h*(n)` là chi phí tối ưu thật từ `n` tới mục tiêu.
+trong đó `h*(n)` là true optimal cost từ `n` tới goal.
 
-Ví dụ lập kế hoạch đường đi:
+Route planning example:
 
 ```text
-h(n) = khoảng cách đường thẳng từ n tới đích
+h(n) = straight-line distance từ n tới destination
 ```
 
-Khoảng cách đường thực tế thường lớn hơn hoặc bằng khoảng cách đường thẳng, nên trong một số mô hình chi phí, đây có thể là cận dưới phù hợp.
+Actual road distance thường ≥ straight-line distance, nên đây có thể là lower bound phù hợp trong một số map/cost models.
 
-Trong câu đố, tổng khoảng cách Manhattan của các ô tới vị trí đích là một heuristic quen thuộc.
+Puzzle example: Manhattan distance sum của tiles tới goal positions.
 
-Có thể xem heuristic là tri thức miền được nén thành một giá trị vô hướng dùng để hướng dẫn tìm kiếm.
+Heuristic là domain knowledge được nén thành một scalar estimate.
 
 ## Greedy Best-First Search
 
-**Greedy Best-First Search** chọn nút có:
+Greedy Best-First Search chọn node có smallest:
 
 \[
 f(n)=h(n)
 \]
 
-nhỏ nhất.
+Nó ignore cost đã bỏ ra `g(n)`.
 
-Nó bỏ qua chi phí đã trả `g(n)`.
-
-Mô hình tư duy:
+Mental model:
 
 ```text
-“trạng thái nào trông gần mục tiêu nhất thì ưu tiên trước”
+"state nào trông gần goal nhất thì đi trước"
 ```
 
-Cách này có thể rất nhanh nếu heuristic tốt nhưng cũng dễ bị đánh lừa.
+Điều này có thể rất nhanh nếu heuristic tốt, nhưng dễ bị lừa.
 
-## Ví dụ Greedy thất bại
+## Greedy failure example
 
-Giả sử:
+Suppose route:
 
 ```text
-S → A → vùng có chi phí rất lớn → G
+S → A → trap-like expensive region → G
  \ 
   → B → C → G
 ```
 
-Heuristic đánh giá `A` rất gần mục tiêu theo khoảng cách hình học nhưng đường thực tế từ `A` bị chặn hoặc rất đắt.
+Heuristic đánh giá `A` rất gần goal theo geometric distance nhưng actual road blocked/expensive.
 
-Greedy vẫn ưu tiên `h` thấp dù chi phí đường đi đang tăng mạnh.
+Greedy cứ follow `h` thấp dù path cost tăng mạnh.
 
-Vì bỏ qua `g(n)`, Greedy không bảo đảm tối ưu và cách triển khai trên đồ thị cũng cần xử lý cẩn thận nếu muốn bảo đảm tính đầy đủ.
+Vì ignore `g(n)`, Greedy không guarantee optimality và standard graph formulation may require care for completeness.
 
-## A*: kết hợp chi phí đã trả và ước lượng tương lai
+## A*: combine past cost và future estimate
 
 A* dùng:
 
@@ -74,55 +72,57 @@ A* dùng:
 f(n)=g(n)+h(n)
 \]
 
-trong đó:
+Trong đó:
 
-- `g(n)` = chi phí thật từ trạng thái bắt đầu tới `n`;
-- `h(n)` = chi phí còn lại được ước lượng;
-- `f(n)` = tổng chi phí lời giải được ước lượng nếu đi qua `n`.
+- `g(n)` = actual cost từ start tới `n`;
+- `h(n)` = estimated remaining cost;
+- `f(n)` = estimated total solution cost through `n`.
 
-A* cân bằng hai câu hỏi:
+A* cân bằng:
 
 ```text
-đã trả bao nhiêu chi phí?
+what have I already paid?
         +
-ước tính còn bao nhiêu chi phí?
+what do I expect remains?
 ```
 
-Nếu `h(n)=0` với mọi nút, A* trở thành Uniform-Cost Search.
+Nếu `h(n)=0` mọi node, A* trở thành Uniform-Cost Search.
 
-Nếu bỏ `g(n)`, hành vi trở nên gần Greedy Best-First Search.
+Nếu `g(n)` bị bỏ, behavior gần Greedy Best-First.
 
-## Heuristic chấp nhận được
+## Admissible heuristic
 
-Heuristic **chấp nhận được (admissible heuristic / 허용적 휴리스틱)** nếu không bao giờ ước lượng lớn hơn chi phí tối ưu thật còn lại:
+Heuristic **admissible (허용적 휴리스틱)** nếu không overestimate true remaining cost:
 
 \[
 0\le h(n)\le h^*(n)
 \]
 
-Nó mang tính “lạc quan”.
+Nó “optimistic”.
 
-Vì không thổi phồng chi phí còn lại, A* trên cây có bảo đảm tối ưu dưới các giả định chuẩn.
+Vì lower-bound estimate không exaggerate remaining cost, A* tree search có optimality guarantee dưới standard assumptions.
 
-Thông thường cũng yêu cầu:
+### Goal heuristic
+
+Usually require:
 
 \[
 h(goal)=0
 \]
 
-vì chi phí còn lại tại mục tiêu là 0.
+Nếu goal remaining cost thật là 0, admissibility implies điều này cho nonnegative heuristic.
 
-## Heuristic nhất quán
+## Consistent heuristic
 
-Heuristic **nhất quán (consistent / monotone / 일관적 휴리스틱)** nếu với mọi chuyển trạng thái `n→n'` có chi phí `c`:
+Heuristic **consistent / monotone (일관적 휴리스틱)** nếu với every transition `n→n'` cost `c`:
 
 \[
 h(n)\le c(n,n')+h(n')
 \]
 
-Điều này giống bất đẳng thức tam giác.
+Đây giống triangle inequality.
 
-Từ đó:
+Rearrange:
 
 \[
 g(n)+h(n)\le g(n)+c(n,n')+h(n')
@@ -134,23 +134,25 @@ nên:
 f(n)\le f(n')
 \]
 
-trên một đường đi.
+along path.
 
-Tính nhất quán làm `f` không giảm dọc đường và giúp A* trên đồ thị chốt nút sạch hơn mà thường không phải mở lại nút.
+Consistency làm `f` nondecreasing và giúp graph-search A* settle nodes cleanly without repeated reopening under common implementation.
 
-Dưới các giả định mục tiêu phù hợp, nhất quán suy ra chấp nhận được; chiều ngược lại không luôn đúng.
+Consistent ⇒ admissible under suitable goal assumptions. Admissible không nhất thiết consistent.
 
-## Trực giác vì sao A* tối ưu
+## Vì sao A* optimal?
 
-Giả sử chi phí lời giải tối ưu là `C*`.
+Intuition với admissible heuristic:
 
-Với mọi nút `n` trên đường tối ưu:
+Suppose optimal solution cost `C*`.
+
+For any node `n` trên optimal path:
 
 \[
 f(n)=g(n)+h(n)\le g(n)+h^*(n)=C^*
 \]
 
-Một mục tiêu không tối ưu `G'` có:
+Một suboptimal goal `G'` có:
 
 \[
 f(G')=g(G')>C^*
@@ -158,194 +160,193 @@ f(G')=g(G')>C^*
 
 vì `h(goal)=0`.
 
-A* luôn mở rộng nút có `f` nhỏ nhất. Khi vẫn còn nút trên đường tối ưu có `f≤C*`, mục tiêu tệ hơn không thể được ưu tiên trước dưới các giả định chuẩn.
+A* luôn expand smallest `f`; còn node optimal-path với `f≤C*` thì suboptimal goal không thể được selected first under assumptions.
 
-Chứng minh đầy đủ còn phụ thuộc chi tiết tìm kiếm cây hay đồ thị, nhưng đây là trực giác trung tâm.
+Proof formal phụ thuộc tree/graph search details, nhưng đây là central intuition.
 
-## Heuristic “tốt hơn” nghĩa là gì?
+## Better heuristic means what?
 
-Nếu `h_2(n)≥h_1(n)` với mọi `n` và cả hai đều chấp nhận được, `h_2` được gọi là **chi phối (dominates)** `h_1`.
+Nếu `h_2(n)≥h_1(n)` mọi `n`, và cả hai admissible, `h_2` **dominates** `h_1`.
 
-Một cận dưới gần chi phí thật hơn thường giúp A* mở rộng ít nút hơn.
+Closer lower bound thường làm A* expand fewer nodes.
 
-Hai trường hợp cực đoan:
-
-```text
-h(n)=0        → gần UCS, hầu như không có hướng dẫn
-h(n)=h*(n)    → heuristic hoàn hảo
-```
-
-Heuristic hoàn hảo biết chính xác chi phí tối ưu còn lại, tức gần như đã giải phần lớn bài toán. Tuy nhiên tính heuristic cũng có chi phí, nên thực tế phải cân bằng:
+Extreme cases:
 
 ```text
-độ chính xác heuristic ↔ chi phí tính heuristic
+h(n)=0        → UCS, little guidance
+h(n)=h*(n)    → perfect heuristic
 ```
 
-## Suy ra heuristic bằng bài toán nới lỏng
+Perfect heuristic biết exact remaining optimal cost, essentially solves much of problem already. Computing heuristic cũng có cost, nên practical trade-off là:
 
-Một phương pháp mạnh là **nới lỏng ràng buộc (relax constraints)**.
+```text
+heuristic accuracy vs heuristic computation cost
+```
 
-Nếu giải một bài toán dễ hơn mà chi phí tối ưu của nó là cận dưới cho bài toán gốc, kết quả có thể trở thành heuristic chấp nhận được.
+## Deriving heuristics bằng relaxed problem
 
-Ví dụ 8-puzzle:
+Một powerful method là **relax constraints**.
 
-- bài toán gốc: một ô chỉ di chuyển vào vị trí trống lân cận;
-- bài toán nới lỏng: mỗi ô được di chuyển độc lập;
-- từ đó có thể suy ra ước lượng kiểu khoảng cách Manhattan.
+Nếu solve easier problem whose optimal cost lower-bounds original problem, result becomes admissible heuristic.
 
-Nguyên lý tổng quát:
+8-puzzle example:
 
-> **Bỏ bớt ràng buộc → bài toán dễ hơn → cận dưới lạc quan.**
+- original: tile moves only into blank adjacent position;
+- relaxed: tile can move independently → Manhattan distance-like estimate.
 
-Điều này nối thiết kế heuristic với kỹ thuật nới lỏng trong tối ưu hóa.
+General principle:
 
-## Cơ sở dữ liệu mẫu trạng thái
+> Remove constraints → easier problem → optimistic lower bound.
 
-**Pattern Database (PDB)** tính trước khoảng cách chính xác cho một phần hoặc một phép trừu tượng của không gian trạng thái.
+This connects heuristic design with optimization relaxations.
 
-Khi chạy:
+## Pattern databases
+
+Pattern Database (PDB) precompute exact distances for abstracted subset of problem states.
+
+At runtime:
 
 \[
 h(n)=distance\_in\_abstract\_space(n)
 \]
 
-Nếu phép trừu tượng nới lỏng bài toán gốc đúng cách, heuristic vẫn chấp nhận được.
+Nếu abstraction relaxes original problem properly, heuristic admissible.
 
-PDB đánh đổi bộ nhớ và chi phí tiền tính toán để tăng tốc quá trình tìm kiếm sau đó.
+PDB trades memory/precomputation for faster search.
 
-Có thể xem đây là một ví dụ sớm của việc lưu sẵn ước lượng giá trị trước thời đại heuristic nơ-ron.
+This is early example of “learn/cache useful value estimates” before neural heuristics.
 
-## Kết hợp nhiều heuristic
+## Combining heuristics
 
-Nếu `h1` và `h2` đều chấp nhận được thì:
+Nếu `h1` và `h2` admissible, then:
 
 \[
 h(n)=\max(h_1(n),h_2(n))
 \]
 
-vẫn chấp nhận được và ít nhất không yếu hơn từng heuristic riêng lẻ.
+vẫn admissible và dominates each individually.
 
-Ngược lại, `h1+h2` không tự động chấp nhận được vì có thể đếm hai lần cùng một phần chi phí, trừ khi hai heuristic có tính cộng theo cách phân chia chi phí phù hợp.
+Sum `h1+h2` không automatically admissible vì có thể double-count cost, trừ khi heuristics additive under partitioned costs.
 
 ## Weighted A*
 
-**Weighted A*** dùng:
+Weighted A*:
 
 \[
 f(n)=g(n)+w h(n),\quad w>1
 \]
 
-để ưu tiên heuristic mạnh hơn.
+prioritize heuristic more strongly.
 
-Nó thường mở rộng ít nút hơn và chạy nhanh hơn nhưng đánh đổi tính tối ưu chính xác. Dưới một số giả định có thể suy ra giới hạn mức kém tối ưu.
+Nó thường expand fewer nodes/faster nhưng sacrifice exact optimality. Under certain assumptions one can derive bounded suboptimality.
 
-Đây là ví dụ thực tế của đánh đổi giữa chất lượng lời giải và chi phí tính toán.
+This is practical example của quality-vs-compute trade-off.
 
-## Tìm kiếm kiểu anytime
+## Anytime search
 
-Các biến thể **anytime** cố tìm một lời giải nhanh trước, sau đó dùng thêm thời gian để cải thiện chất lượng hoặc cận tối ưu.
+Anytime variants tìm solution nhanh trước, rồi use more time để improve bound/quality.
 
-Ví dụ, Anytime Repairing A* (ARA*) có thể giảm dần trọng số heuristic theo thời gian.
+Example family: Anytime Repairing A* (ARA*) gradually reduce heuristic weight.
 
-Cách này hữu ích trong robotics và lập kế hoạch khi ngân sách tính toán thay đổi.
+Useful in robotics/planning when system has variable planning time.
 
-## Vấn đề bộ nhớ của A*
+## Memory problem của A*
 
-A* có thể tiết kiệm thời gian nhưng dùng rất nhiều bộ nhớ vì phải giữ biên và tập trạng thái đã khám phá.
+A* có thể be time-efficient nhưng memory-hungry vì store frontier/explored nodes.
 
-Một số biến thể gồm:
+Variants:
 
 - Iterative Deepening A* (IDA*);
 - Recursive Best-First Search (RBFS);
 - Simplified Memory-Bounded A* (SMA*).
 
-Chúng đánh đổi việc tính lại hoặc một số bảo đảm để giảm bộ nhớ.
+They trade repeated computation hoặc weaker behavior for lower memory.
 
 ## IDA*
 
-IDA* dùng DFS theo các ngưỡng của `f=g+h` thay vì độ sâu.
+IDA* uses depth-first contours bounded by `f=g+h` rather than depth.
 
-Chạy DFS với ngưỡng `T`; nếu chưa có lời giải, ngưỡng tiếp theo thường là giá trị `f` nhỏ nhất đã vượt `T`.
+Run DFS with threshold `T`; if no solution, next threshold becomes minimum exceeded `f`.
 
-Bộ nhớ gần DFS nhưng nhiều nút có thể bị mở rộng lại nhiều lần.
+Memory near DFS, but nodes can be re-expanded many times.
 
-Nó phù hợp khi bộ nhớ là nút thắt và heuristic đủ mạnh.
+Useful when memory dominates and heuristic reasonably strong.
 
 ## Beam Search
 
-**Beam Search** chỉ giữ `k` ứng viên tốt nhất ở mỗi độ sâu hoặc bước theo một điểm số.
+Beam Search keeps only best `k` candidates per depth/step according to score.
 
-Nó không phải A* và nhìn chung:
+It is not A* and generally:
 
-- không đầy đủ;
-- không tối ưu;
-- bộ nhớ bị giới hạn gần theo độ rộng beam.
+- incomplete;
+- non-optimal;
+- bounded memory roughly by beam width.
 
-Mô hình chuỗi sử dụng Beam Search vì không gian từ vựng phân nhánh quá lớn và tìm kiếm chính xác là bất khả thi.
+Sequence models use beam search because branching vocabulary huge and exact search impossible.
 
-Điểm beam thường dựa trên log-xác suất và chuẩn hóa độ dài, không phải `g+h` cùng heuristic chấp nhận được như A* cổ điển.
+Beam score often uses log probability and length normalization, not classic path cost + admissible heuristic.
 
-## Độ chính xác heuristic và hiệu chuẩn
+## Heuristic accuracy vs calibration
 
-Heuristic không nhất thiết là xác suất; nó ước lượng chi phí hoặc giá trị.
+Heuristic need not be probability. It estimates cost/value.
 
-Với các bảo đảm của A*, thuộc tính **cận dưới** quan trọng hơn hiệu chuẩn thống kê.
+For A* guarantees, *lower-bound property* matters more than statistical calibration.
 
-Heuristic học bằng mạng nơ-ron có thể chính xác trung bình nhưng thỉnh thoảng ước lượng quá cao, từ đó phá vỡ tính chấp nhận được nghiêm ngặt.
+A learned heuristic from neural network may be accurate average-wise but occasionally overestimate, breaking strict admissibility.
 
-Hệ thống tìm kiếm học được trong thực tế thường chấp nhận đánh đổi này để tăng tốc.
+Practical learned search often accepts this to gain speed.
 
-## Heuristic đã học
+## Learned heuristics
 
-Có thể huấn luyện mô hình:
+Train model:
 
 \[
 h_\theta(s)\approx cost\_to\_goal(s)
 \]
 
-từ các ví dụ đã được giải.
+using solved examples.
 
-Lợi ích:
+Benefits:
 
-- nắm bắt cấu trúc miền phức tạp;
-- suy luận nhanh sau huấn luyện;
-- có thể khái quát hóa giữa nhiều trường hợp.
+- capture complex domain structure;
+- fast inference after training;
+- generalize across instances.
 
-Rủi ro:
+Risks:
 
-- dịch chuyển phân phối;
-- không có bảo đảm chấp nhận được;
-- ước lượng sai nhưng tự tin;
-- chi phí suy luận của chính mô hình.
+- distribution shift;
+- no admissibility guarantee;
+- confident bad estimates;
+- inference cost.
 
-Một cách lai là giữ riêng một cận dưới an toàn và dùng mô hình học chỉ để hướng dẫn thứ tự tìm kiếm.
+One hybrid approach combines safe lower bound + learned guidance separately.
 
-## Hướng dẫn bằng chính sách và ước lượng giá trị
+## Policy guidance vs value heuristic
 
-Một **chính sách (policy)** dự đoán hành động hứa hẹn:
+A **policy** predicts promising action:
 
 \[
 \pi(a\mid s)
 \]
 
-Một **hàm giá trị hoặc heuristic** ước lượng chất lượng trạng thái hoặc chi phí còn lại:
+A **value/heuristic** estimates state quality or remaining cost:
 
 \[
 V(s), h(s)
 \]
 
-Tìm kiếm có thể dùng cả hai:
+Search can use both:
 
 ```text
-chính sách → ưu tiên / chọn hành động
-giá trị     → đánh giá trạng thái kết quả
+policy → order/select actions
+value  → evaluate resulting states
 ```
 
-Đây là mẫu trung tâm trong tìm kiếm trò chơi được hướng dẫn bằng mạng nơ-ron và nhiều hệ thống lập kế hoạch hiện đại.
+This pattern is central in neural-guided game search and modern planning.
 
-## Quan hệ giữa A* và Dijkstra/UCS
+## A* và Dijkstra relationship
 
-Dijkstra hoặc UCS:
+Dijkstra/UCS:
 
 \[
 f(n)=g(n)
@@ -357,117 +358,117 @@ A*:
 f(n)=g(n)+h(n)
 \]
 
-Heuristic có thể được xem như một thế năng giúp ưu tiên tìm theo hướng mục tiêu.
+Heuristic can be interpreted as a potential that reweights search toward goal.
 
-Khi `h=0`, A* trở về UCS nếu triển khai tương đương.
+When `h=0`, A* exactly reduces to UCS under equivalent implementation.
 
-## Heuristic hình học
+## Geometry heuristic
 
-Với lưới chỉ cho di chuyển 4 hướng và mỗi bước có chi phí 1, khoảng cách Manhattan:
+For 4-direction grid unit moves, Manhattan distance:
 
 \[
 h=|x-x_g|+|y-y_g|
 \]
 
-là heuristic chấp nhận được nếu không tồn tại phép dịch chuyển rẻ hơn như dịch chuyển chéo hay dịch chuyển tức thời.
+is admissible if no cheaper teleport/diagonal action exists.
 
-Nếu cho phép đi chéo với chi phí 1, Manhattan có thể ước lượng quá cao; khoảng cách kiểu Chebyshev có thể phù hợp hơn.
+If diagonal moves allowed with unit cost, Manhattan can overestimate and lose admissibility. Chebyshev-like distance may be appropriate.
 
-Bài học quan trọng:
+Important lesson:
 
-> **Heuristic chỉ hợp lệ tương đối với mô hình chuyển trạng thái và mô hình chi phí cụ thể.**
+> A heuristic is only valid relative to transition model and cost model.
 
-## Heuristic trong môi trường động
+## Heuristic under dynamic environment
 
-Nếu giao thông thay đổi, khoảng cách hình học tĩnh chỉ còn là cận dưới của thời gian di chuyển nếu giả định tốc độ tối đa vẫn hợp lệ.
+If road traffic changes, static distance heuristic may remain admissible for travel time only if lower-bound speed assumptions hold.
 
-Các thuật toán như D* hoặc Lifelong Planning A* có thể tái sử dụng kết quả tìm kiếm trước khi chi phí cạnh thay đổi.
+Dynamic path planning may use algorithms like D* / Lifelong Planning A* that reuse prior search when costs change.
 
-Điều này nối heuristic search với định vị và robotics.
+This connects heuristic search to robotics/navigation.
 
-## Phân biệt lỗi tìm kiếm và lỗi heuristic
+## Search errors vs heuristic errors
 
-Nếu hệ thống trả đường xấu, cần chẩn đoán toàn bộ chuỗi:
+If search returns bad path, diagnose:
 
 ```text
-biểu diễn sai?
-mô hình chuyển / chi phí sai?
-heuristic không hợp lệ?
-thuật toán triển khai sai?
-ngân sách tính toán đã cắt mất lời giải tốt?
-môi trường động nhưng trạng thái đã cũ?
+representation wrong?
+transition/cost wrong?
+heuristic invalid?
+algorithm implementation wrong?
+resource cutoff pruned optimum?
+dynamic environment stale?
 ```
 
-Không nên mặc định mọi lỗi đều do heuristic.
+Do not blame heuristic alone.
 
-## Tìm kiếm heuristic trong chứng minh định lý
+## Heuristic search in theorem proving
 
-Trạng thái chứng minh có thể là tập nghĩa vụ hoặc mệnh đề hiện tại; hành động là quy tắc suy luận; mục tiêu là hoàn tất chứng minh.
+Proof search state = current obligations/clauses; actions = inference rules; goal = proof complete.
 
-Heuristic xếp hạng mệnh đề hoặc mục tiêu con nên mở rộng trước.
+Heuristics rank which clause/subgoal to expand.
 
-Các hệ thống chứng minh định lý dùng nơ-ron hiện đại có thể học cách xếp hạng, trong khi kernel ký hiệu vẫn kiểm chứng tính đúng của chứng minh.
+Modern neural theorem provers learn rankings while symbolic kernel verifies correctness.
 
-Đây là ví dụ mạnh của **Tìm kiếm + Học + Xác minh hình thức**.
+This is strong example of Search + Learning + Formal Verification.
 
-## Tìm kiếm heuristic trong tác nhân LLM
+## Heuristic search in LLM agents
 
-Trạng thái tác nhân có thể gồm tiến độ nhiệm vụ, quan sát và kết quả công cụ. Chuỗi hành động ứng viên phân nhánh rất nhanh.
+Agent state may include task status, observations and tool results. Candidate action sequences branch rapidly.
 
-LLM có thể đề xuất hành động; mô hình hoặc quy tắc khác có thể đánh giá trạng thái. Hệ thống có thể giữ nhiều ứng viên thay vì chỉ một chuỗi tham lam.
+LLM itself can propose actions; another model/rule can score states. Search may keep multiple candidates rather than single greedy chain.
 
-Tuy nhiên điểm số của LLM không phải heuristic chấp nhận được. Vì vậy các bảo đảm lý thuyết của A* không tự động chuyển sang hệ thống này.
+But LLM scores are not admissible heuristic. Therefore A* theoretical guarantees do not transfer automatically.
 
-Cần dùng thuật ngữ chính xác:
+Use terminology carefully:
 
 ```text
-Tìm kiếm ưu tiên kiểu A* với điểm học được
+A*-like priority search with learned score
 ≠
-A* cổ điển với heuristic chấp nhận được
+classical A* with admissible h
 ```
 
-## Tìm kiếm và truy xuất
+## Search and Retrieval
 
-Hệ thống truy xuất thông tin xếp hạng tài liệu theo điểm liên quan. Về ý tưởng đây cũng là tìm kiếm trên một tập ứng viên, nhưng cấu trúc chỉ mục và thuật toán láng giềng gần nhất khác với tìm đường trong không gian trạng thái.
+Information retrieval ranks documents by relevance score. Conceptually it is search over corpus, but indexing/nearest-neighbor algorithms differ from state-space path search.
 
-Hệ thống **láng giềng gần nhất xấp xỉ (Approximate Nearest Neighbor - ANN)** cố ý đánh đổi tính chính xác tuyệt đối để tăng tốc, tương tự nhiều đánh đổi của tìm kiếm giới hạn tài nguyên.
+Approximate Nearest Neighbor systems deliberately sacrifice exactness for speed, analogous to resource-bounded search trade-offs.
 
-Mẫu tư duy chung là: **tránh liệt kê toàn bộ bằng cách dùng cấu trúc và tín hiệu hướng dẫn**.
+Common mental pattern is **avoid exhaustive enumeration by using structure/guidance**.
 
-## Mô hình tư duy (mental model)
+## Mental Model
 
 ```text
-g(n) = chi phí đã trả
-h(n) = chi phí còn lại được ước lượng
-f(n) = tổng chi phí ước lượng nếu đi qua n
+g(n) = cost already paid
+h(n) = estimate cost still remaining
+f(n) = estimated total cost through n
 
-Greedy → chỉ tin h
-UCS    → chỉ dùng g
-A*     → cân bằng g + h
+Greedy → trusts h only
+UCS    → trusts g only
+A*     → balances g + h
 ```
 
-Heuristic chấp nhận được là cận dưới lạc quan. Heuristic nhất quán còn thỏa một ràng buộc cục bộ giống bất đẳng thức tam giác.
+Admissible heuristic is optimistic. Consistent heuristic also respects local triangle-like constraint.
 
-## Các hiểu lầm thường gặp
+## Common Misconceptions
 
-### “A* luôn là thuật toán đường ngắn nhất nhanh nhất”
+### “A* always fastest shortest-path algorithm”
 
-Không. Hiệu năng phụ thuộc chất lượng heuristic, cấu trúc đồ thị, cách triển khai và bộ nhớ. `h` kém có thể làm A* gần giống UCS.
+No. Performance depends heuristic quality, graph structure, implementation and memory. Poor `h` degenerates toward UCS.
 
-### “Heuristic phải dự đoán thật chính xác”
+### “Heuristic must be accurate”
 
-Nếu cần bảo đảm tối ưu cổ điển, tính chấp nhận được và nhất quán quan trọng hơn độ chính xác trung bình. Một heuristic kém sát hơn nhưng không ước lượng quá cao đôi khi phù hợp hơn.
+For classical optimality guarantees, admissibility/consistency properties matter. A slightly less accurate admissible heuristic may be preferable to inaccurate overestimating one when exact optimality required.
 
-### “Heuristic học được tự động giữ A* tối ưu”
+### “Learned heuristic automatically makes A* optimal”
 
-Không, nếu nó có thể ước lượng quá cao hoặc vi phạm giả định.
+Not if it can overestimate and assumptions break.
 
-### “Greedy và A* gần như giống nhau”
+### “Greedy and A* are basically same”
 
-Greedy bỏ qua chi phí tích lũy `g`; A* giữ cả `g` và `h`. Đây là khác biệt nền tảng.
+Greedy ignores accumulated cost `g`; A* includes it. This difference is fundamental.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Tìm kiếm heuristic biến tri thức miền thành tiết kiệm tính toán. Nó nối AI cổ điển với tìm kiếm được hướng dẫn bằng mô hình hiện đại: heuristic viết tay có thể được thay thế hoặc bổ sung bằng ước lượng giá trị đã học, còn cơ chế tìm kiếm vẫn xử lý cấu trúc tổ hợp.
+Heuristic Search turns domain knowledge into computational savings. It connects classical AI to modern neural-guided search: handcrafted `h` can be replaced or complemented by learned value estimates, while search still handles combinatorial structure.
 
-Xem tiếp: [Tìm kiếm đối kháng và trò chơi](./03_adversarial_search_and_games.md), [Bài toán thỏa mãn ràng buộc](./04_constraint_satisfaction.md) và [Lập kế hoạch](./05_planning.md).
+Xem tiếp: [Adversarial Search and Games](./03_adversarial_search_and_games.md), [Constraint Satisfaction](./04_constraint_satisfaction.md) và [Planning](./05_planning.md).

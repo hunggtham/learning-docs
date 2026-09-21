@@ -1,102 +1,102 @@
-# Biểu diễn bài toán (Problem Representation) trong AI
+# Problem Representation trong AI
 
-Trước khi một hệ thống AI có thể tìm kiếm, học, suy luận hoặc tối ưu hóa, bài toán phải được chuyển thành một **biểu diễn (representation / 표현)** mà máy có thể thao tác. Đây là bước thường bị xem nhẹ vì nó xuất hiện trước thuật toán, nhưng cách biểu diễn có thể quyết định rất lớn việc bài toán dễ hay khó giải.
+Trước khi một AI system có thể search, learn, reason hoặc optimize, problem phải được chuyển thành một **representation (표현 / biểu diễn)** mà máy có thể thao tác. Đây là bước thường bị xem nhẹ vì nó nằm trước algorithm, nhưng representation quyết định rất lớn việc bài toán có dễ giải hay không.
 
-Máy không trực tiếp nhận “ý nghĩa”. Nó nhận bit, số, token, tensor, đồ thị hoặc cấu trúc ký hiệu. Vì vậy câu hỏi đầu tiên không nên là “mô hình nào mạnh nhất?”, mà là:
+Máy không nhận “ý nghĩa” trực tiếp. Nó nhận bits, numbers, tokens, tensors, graphs hoặc symbolic structures. Vì vậy câu hỏi đầu tiên không phải “model nào mạnh nhất?”, mà là:
 
-> **Ta đang biểu diễn thế giới như thế nào, và cách biểu diễn đó giữ lại hoặc làm mất thông tin gì?**
+> **Ta đang biểu diễn thế giới như thế nào, và representation đó giữ lại hoặc làm mất thông tin gì?**
 
-## Từ bài toán thực tế tới bài toán tính toán
+## Từ real-world problem tới computational problem
 
-Giả sử muốn xây hệ thống tìm đường trong Seoul. Thế giới thực gồm đường phố, giao thông, đường một chiều, thời gian, thời tiết, tai nạn và vô số chi tiết khác. Không thể đưa toàn bộ “thế giới thật” nguyên trạng vào thuật toán. Ta phải chọn một **mức trừu tượng (abstraction)** phù hợp.
+Giả sử muốn xây hệ thống tìm đường trong Seoul. Real world gồm đường phố, traffic, one-way road, thời gian, weather, accidents và vô số chi tiết. Không thể đưa “thế giới thật” nguyên trạng vào algorithm. Ta phải chọn abstraction.
 
-Một biểu diễn đơn giản có thể là:
+Một representation đơn giản:
 
 ```text
-Giao lộ       → nút (node)
-Đường         → cạnh (edge)
-Thời gian đi  → trọng số cạnh
-Vị trí hiện tại → nút bắt đầu
-Điểm đến        → nút đích
+Intersection → node
+Road         → edge
+Travel time  → edge weight
+Current place → start node
+Destination   → goal node
 ```
 
-Khi đó bài toán thực được chuyển thành bài toán tìm kiếm trên đồ thị (graph search).
+Khi đó problem thực được chuyển thành graph search.
 
-Nếu chỉ dùng khoảng cách làm trọng số, hệ thống có thể chọn đường ngắn nhưng đang tắc. Nếu dùng thời gian di chuyển kỳ vọng, biểu diễn phù hợp hơn với mục tiêu “đến nhanh”. Nếu cần tránh đường thu phí, biểu diễn phải thêm ràng buộc hoặc chi phí tương ứng.
+Nếu chỉ dùng distance làm edge weight, system có thể chọn đường ngắn nhưng kẹt xe. Nếu dùng expected travel time, representation tốt hơn cho objective “đến nhanh”. Nếu cần tránh toll road, representation lại phải thêm constraint hoặc cost.
 
-Vì vậy, biểu diễn luôn gắn với **mục tiêu và giả định (assumption)** của bài toán.
+Representation vì vậy luôn gắn với **mục tiêu và assumption**.
 
-## Không gian trạng thái (state space)
+## State Space
 
-Trong AI cổ điển, một bài toán thường được mô hình hóa bằng:
+Trong classical AI, một problem thường được mô hình hóa bằng:
 
-- **trạng thái ban đầu (initial state)**;
-- **không gian trạng thái (state space)**;
-- **hành động hoặc phép biến đổi (actions/operators)**;
-- **mô hình chuyển trạng thái (transition model)**;
-- **điều kiện đích (goal test)**;
-- **chi phí đường đi (path cost)** nếu cần.
+- **initial state**;
+- **state space**;
+- **actions/operators**;
+- **transition model**;
+- **goal test**;
+- **path cost** nếu cần.
 
-Ví dụ với trò chơi 8-puzzle, mỗi cách sắp xếp các ô là một trạng thái. Di chuyển một ô tạo ra trạng thái mới. Thuật toán tìm kiếm không cần biết puzzle là “đồ chơi”; nó chỉ cần biểu diễn trạng thái và quy tắc chuyển trạng thái.
+Ví dụ 8-puzzle, mỗi cách sắp xếp tile là một state. Move một tile tạo state mới. Search algorithm không cần biết puzzle là “đồ chơi”; nó chỉ cần state representation và transition rules.
 
-Không gian trạng thái có thể cực lớn. Chỉ với `n` biến nhị phân đã có tới:
+State space có thể cực lớn. Với `n` binary variables, đã có tới:
 
 \[
 2^n
 \]
 
-trạng thái có thể xảy ra. Đây là nguồn gốc của **bùng nổ tổ hợp (combinatorial explosion / 조합 폭발)**.
+possible states. Đây là nguồn gốc của **combinatorial explosion (조합 폭발)**.
 
-Một biểu diễn tốt đôi khi giảm không gian tìm kiếm nhiều hơn việc thay một thuật toán tìm kiếm bằng thuật toán khác.
+Representation tốt đôi khi giảm search space mạnh hơn việc thay algorithm.
 
-## Đặc trưng trong học máy
+## Features trong Machine Learning
 
-Trong học máy cổ điển, dữ liệu đầu vào thường được biểu diễn thành **vector đặc trưng (feature vector)**:
+Trong classical Machine Learning, input thường được biểu diễn bằng feature vector:
 
 \[
 \mathbf{x} = [x_1, x_2, \dots, x_d]
 \]
 
-Ví dụ, mô hình đánh giá rủi ro tín dụng có thể sử dụng các đặc trưng như:
+Ví dụ credit-risk model có thể dùng:
 
 ```text
-tuổi
-thu nhập
-số tiền vay
-tỷ lệ nợ
-độ dài lịch sử thanh toán
-số lần trả chậm
+age
+income
+loan_amount
+debt_ratio
+payment_history_length
+number_of_late_payments
 ```
 
-Mô hình không nhìn thấy “khách hàng” như con người. Nó nhìn thấy một vector số.
+Model không thấy “khách hàng” như con người. Nó thấy vector numbers.
 
-**Kỹ thuật đặc trưng (feature engineering)** là quá trình thiết kế biểu diễn hữu ích từ dữ liệu thô. Nếu biểu diễn không chứa tín hiệu cần thiết, mô hình tốt đến đâu cũng khó học được ánh xạ mong muốn.
+Feature engineering là quá trình thiết kế representation hữu ích từ raw data. Nếu feature không chứa signal cần thiết, model tốt đến đâu cũng khó học được mapping mong muốn.
 
-## Học biểu diễn (representation learning)
+## Representation Learning
 
-Học sâu thay đổi cách xây dựng biểu diễn. Thay vì kỹ sư tự chọn mọi đặc trưng, mô hình có thể học các biểu diễn trung gian trực tiếp từ dữ liệu.
+Deep Learning thay đổi cách xây representation. Thay vì engineer tự chọn mọi feature, model học intermediate representations từ data.
 
-Một mô hình phân loại ảnh có thể biến đổi dữ liệu theo chuỗi khái niệm:
+Một image classifier có thể biến:
 
 ```text
-điểm ảnh
+pixels
   ↓
-cạnh / kết cấu cục bộ
+local edges / textures
   ↓
-hình dạng / bộ phận
+shapes / parts
   ↓
-đặc trưng thị giác trừu tượng hơn
+higher-level visual features
   ↓
-dự đoán lớp
+class prediction
 ```
 
-Đây không phải hệ phân cấp cố định tuyệt đối, nhưng cho thấy ý tưởng chính: các tầng ẩn biến dữ liệu ban đầu thành những không gian biểu diễn thuận lợi hơn cho nhiệm vụ.
+Đây không phải hierarchy cố định tuyệt đối, nhưng cho thấy idea: hidden layers transform raw representation thành spaces phù hợp hơn cho task.
 
-Trong xử lý ngôn ngữ tự nhiên (NLP), mã token được ánh xạ thành **vector nhúng (embedding vector / 임베딩 벡터)**. Transformer tiếp tục biến các vector này thành **biểu diễn theo ngữ cảnh (contextual representation)**, nghĩa là cùng một từ có thể có biểu diễn khác nhau tùy câu và vị trí xung quanh.
+Trong NLP, token IDs được map thành **embedding vectors (임베딩 벡터)**. Transformer tiếp tục biến embeddings thành contextual representations, nghĩa là representation của cùng một word có thể khác tùy surrounding context.
 
-## Biểu diễn ký hiệu (symbolic representation)
+## Symbolic Representation
 
-Không phải mọi biểu diễn đều là vector. Tri thức có thể được biểu diễn bằng ký hiệu, vị từ, quy tắc hoặc đồ thị.
+Không phải representation nào cũng là vector. Knowledge có thể được biểu diễn bằng symbol, predicate, rule hoặc graph.
 
 Ví dụ:
 
@@ -105,19 +105,19 @@ works_for(Alice, CompanyA)
 located_in(CompanyA, Seoul)
 ```
 
-Một đồ thị tri thức (knowledge graph) có thể biểu diễn thực thể và quan hệ:
+Một knowledge graph có thể biểu diễn entity và relation:
 
 ```text
 Alice ──works_for──> CompanyA ──located_in──> Seoul
 ```
 
-Biểu diễn ký hiệu có lợi khi cấu trúc và quan hệ cần ngữ nghĩa tường minh. Biểu diễn vector phù hợp khi cần đo độ tương đồng, học mẫu và tối ưu hóa khả vi. Hệ thống lai có thể kết hợp cả hai.
+Symbolic representation có lợi khi structure và relationship cần explicit semantics. Vector representation có lợi khi cần similarity, pattern learning và differentiable optimization. Hybrid systems có thể dùng cả hai.
 
-## Phân phối xác suất như một dạng biểu diễn
+## Probability Distribution như Representation
 
-Khi bất định quan trọng, trạng thái không nên bị ép thành một sự thật duy nhất mà có thể được biểu diễn bằng **phân phối xác suất (probability distribution)**.
+Khi uncertainty quan trọng, state không nên được biểu diễn như một fact duy nhất mà có thể là distribution.
 
-Ví dụ, hệ thống định vị chưa chắc robot đang ở đâu:
+Ví dụ system localization không chắc robot đang ở đâu:
 
 \[
 P(Location = A)=0.6
@@ -129,146 +129,150 @@ P(Location = B)=0.3
 P(Location = C)=0.1
 \]
 
-Biểu diễn này giữ lại sự bất định thay vì buộc hệ thống chọn một đáp án quá sớm.
+Representation này giữ uncertainty thay vì ép chọn một answer quá sớm.
 
-Đây là nền tảng của suy luận Bayes, mô hình trạng thái ẩn và robotics xác suất.
+Đây là nền cho Bayesian reasoning, hidden-state models và probabilistic robotics.
 
-## Biểu diễn chuỗi (sequence representation)
+## Sequence Representation
 
-Ngôn ngữ, âm thanh và chuỗi thời gian đều có thứ tự. Nếu chỉ xem các phần tử như một tập hợp không thứ tự, ta làm mất thông tin quan trọng.
+Language, audio và time series có order. Nếu chỉ xem các element như unordered set, ta mất information quan trọng.
 
-Ví dụ:
+Câu:
 
 ```text
 Dog bites man
 ```
 
-khác về ý nghĩa với:
+khác:
 
 ```text
 Man bites dog
 ```
 
-mặc dù chứa cùng các từ.
+dù chứa cùng words.
 
-Vì vậy mô hình chuỗi cần mã hóa thứ tự bằng cơ chế hồi quy, thông tin vị trí hoặc kiến trúc tương đương. Transformer không có hồi quy tự nhiên như RNN nên cần **biểu diễn vị trí (positional representation/encoding)** để biết thứ tự token.
+Sequence models vì vậy cần encode order bằng recurrence, positional information hoặc architecture khác.
 
-## Biểu diễn đồ thị (graph representation)
+Transformer không có recurrence tự nhiên như RNN nên cần **positional encoding / positional representation** để biết token order.
 
-Khi mối quan hệ quan trọng hơn vị trí trong một chuỗi, đồ thị là phép trừu tượng tự nhiên.
+## Graph Representation
 
-Mạng xã hội, phân tử, mạng đường bộ, đồ thị phụ thuộc và đồ thị tri thức đều có thể biểu diễn bằng:
+Khi relationship quan trọng hơn vị trí trong sequence, graph là abstraction tự nhiên.
+
+Social network, molecule, road network, dependency graph, knowledge graph đều có thể biểu diễn:
 
 \[
 G=(V,E)
 \]
 
-trong đó `V` là tập đỉnh hoặc nút và `E` là tập cạnh.
+trong đó `V` là vertices/nodes và `E` là edges.
 
-Biểu diễn đồ thị cho phép suy luận về tính liên thông, lân cận, đường đi ngắn nhất, độ trung tâm và truyền thông điệp (message passing).
+Graph representation cho phép reasoning về connectivity, neighborhood, shortest path, centrality và message passing.
 
-## Biểu diễn liên tục và không gian nhúng
+## Continuous Representation và Embedding Space
 
-Phép nhúng (embedding) đưa một đối tượng rời rạc vào không gian vector liên tục:
+Embedding đưa discrete object vào continuous vector space:
 
 \[
 f: Object \rightarrow \mathbb{R}^d
 \]
 
-Nếu mục tiêu huấn luyện được thiết kế phù hợp, quan hệ ngữ nghĩa có thể được phản ánh một phần bằng hình học trong không gian vector. Hai tài liệu có ý nghĩa gần nhau có thể có độ tương đồng cosine cao hơn.
+Nếu training objective được thiết kế phù hợp, semantic relationship có thể phản ánh bằng geometry trong vector space. Hai document có meaning gần nhau có thể có cosine similarity cao hơn.
 
-Đây là nền tảng của tìm kiếm ngữ nghĩa, hệ thống gợi ý và RAG.
+Điều này là nền cho semantic search, recommendation và RAG.
 
-Tuy nhiên, không nên xem không gian nhúng là “bản đồ hoàn hảo của ý nghĩa”. Hình học của nó phụ thuộc vào mô hình, dữ liệu và mục tiêu huấn luyện. Thước đo tương đồng chỉ có ý nghĩa trong ngữ cảnh của biểu diễn đó.
+Tuy nhiên cần tránh misconception rằng embedding space là “bản đồ hoàn hảo của meaning”. Geometry phụ thuộc model, data và objective. Similarity metric chỉ có ý nghĩa trong context của representation đó.
 
-## Biểu diễn mất mát và không mất mát
+## Lossy và Lossless Representation
 
-Một biểu diễn có thể làm mất thông tin. Đây là **biểu diễn mất mát (lossy representation)**.
+Một representation có thể làm mất thông tin.
 
-Ví dụ, giảm kích thước ảnh từ `4000×3000` xuống `224×224` làm mất chi tiết. Tách token có thể chia từ hiếm thành nhiều mảnh nhỏ. Gộp nhật ký sự kiện theo ngày có thể làm mất thứ tự thời gian ở mức phút.
+Ví dụ resize image từ `4000×3000` xuống `224×224` làm mất chi tiết. Tokenization có thể chia text theo cách làm rare word trở thành nhiều subword. Aggregating event logs theo ngày có thể làm mất temporal ordering trong từng phút.
 
-Mất thông tin không nhất thiết là xấu. Nén có thể loại bỏ chi tiết không cần thiết và khiến bài toán có thể xử lý được. Câu hỏi đúng là: **thông tin bị mất có quan trọng đối với nhiệm vụ hay không?**
+Loss không nhất thiết xấu. Compression có thể loại bỏ detail không cần thiết và làm problem tractable. Câu hỏi đúng là: **thông tin bị mất có quan trọng cho task hay không?**
 
-## Tính bất biến (invariance)
+## Invariance
 
-Một biểu diễn tốt thường cố phản ánh những phép biến đổi không nên làm thay đổi ý nghĩa của nhiệm vụ.
+Một representation tốt thường cố encode những transformation không nên làm thay đổi meaning của task.
 
-Ví dụ, mô hình nhận diện vật thể lý tưởng vẫn nên nhận ra cùng một vật thể khi nó dịch chuyển nhẹ trong ảnh. Đây liên quan đến **tính bất biến hoặc hiệp biến theo phép tịnh tiến (translation invariance/equivariance)** của mạng tích chập (CNN).
+Ví dụ object classifier nên ideally nhận ra cùng object dù dịch chuyển nhẹ trong image. Đây là một dạng translation invariance/equivariance liên quan tới CNN.
 
-Trong văn bản, ý nghĩa đôi khi nên bất biến trước thay đổi định dạng hoặc khoảng trắng, nhưng không thể bất biến hoàn toàn trước thay đổi thứ tự từ.
+Trong text, semantic meaning đôi khi nên invariant với thay đổi format hoặc whitespace nhưng không invariant với word order.
 
-Vì vậy thiết kế biểu diễn luôn gắn với các giả định về tính bất biến.
+Thiết kế representation liên quan sâu tới assumptions về invariance.
 
-## Số chiều và lời nguyền số chiều
+## Dimensionality
 
-Vector có quá nhiều chiều làm tăng chi phí tính toán và độ khó thống kê. Đây là bối cảnh của **lời nguyền số chiều (curse of dimensionality)**.
+Vector có quá nhiều dimensions có thể gây computational cost và statistical difficulty. Đây là bối cảnh của **curse of dimensionality**.
 
-Khi số chiều tăng, dữ liệu trở nên thưa hơn trong không gian. Khoảng cách giữa các điểm cũng có thể kém phân biệt hơn. Các kỹ thuật giảm chiều như PCA cố giữ lại phần biến thiên quan trọng trong một không gian nhỏ hơn.
+Khi dimensionality tăng, data trở nên sparse hơn trong space. Distance metric cũng có thể kém discriminative hơn. Dimensionality reduction như PCA cố giữ important variance trong space nhỏ hơn.
 
-Học biểu diễn sâu cũng thường tạo **không gian tiềm ẩn (latent space)** có cấu trúc hữu ích hơn dữ liệu thô.
+Deep representation learning cũng thường tạo latent space có structure hữu ích hơn raw input.
 
-## Biểu diễn và lược đồ cơ sở dữ liệu
+## Representation và Database Schema
 
-Trong kỹ nghệ phần mềm, **lược đồ cơ sở dữ liệu (database schema)** cũng là một dạng biểu diễn của miền nghiệp vụ. Một ứng dụng AI thường phải đi qua nhiều dạng biểu diễn:
+Trong Software Engineering, database schema cũng là một dạng representation của domain. Một AI application thường phải bridge nhiều representation:
 
 ```text
-Hàng trong CSDL quan hệ
+Relational rows
     ↓
-Đối tượng ứng dụng
+Application objects
     ↓
-Văn bản tuần tự hóa / lời nhắc có cấu trúc
+Serialized text / structured prompt
     ↓
-Token
+Tokens
     ↓
-Vector nhúng / trạng thái ẩn
+Embeddings / hidden states
     ↓
-Đầu ra mô hình
+Model output
     ↓
-Trạng thái ứng dụng có cấu trúc
+Structured application state
 ```
 
-Lỗi có thể xuất hiện ở ranh giới giữa các biểu diễn, chứ không chỉ trong mô hình. Ví dụ, nếu cơ sở dữ liệu lưu thời gian sai múi giờ, mô hình phía sau có thể suy luận sai dù bản thân mô hình hoạt động đúng.
+Bug có thể xuất hiện ở boundary giữa các representation, không chỉ trong model.
 
-## Biểu diễn và hàm mục tiêu cùng quyết định việc học
+Ví dụ nếu database lưu date sai timezone, model downstream có thể reasoning sai dù model “thông minh”.
 
-Mô hình không tự nhiên học “ý nghĩa”. Nó học biểu diễn giúp giảm **hàm mục tiêu (objective)** mà quá trình huấn luyện yêu cầu.
+## Representation và Objective cùng quyết định learning
 
-Nếu học tương phản (contrastive learning) kéo các cặp dương lại gần nhau và đẩy các cặp âm ra xa, hình học của không gian nhúng sẽ phản ánh chính mục tiêu đó.
+Model không tự nhiên học “meaning”. Nó học representation hữu ích để minimize objective.
 
-Nếu mô hình ngôn ngữ được huấn luyện bằng dự đoán token tiếp theo, biểu diễn ẩn của nó cũng được định hình bởi nhiệm vụ dự đoán token tiếp theo.
+Nếu contrastive training kéo positive pairs gần nhau và đẩy negative pairs xa nhau, embedding geometry sẽ phản ánh objective đó.
+
+Nếu language model được train bằng next-token prediction, hidden representation được shaped bởi nhiệm vụ dự đoán token tiếp theo.
 
 Do đó:
 
 ```text
-Dữ liệu + Kiến trúc + Hàm mục tiêu → Biểu diễn đã học
+Data + Architecture + Objective → Learned Representation
 ```
 
-Không nên tách cách biểu diễn khỏi mục tiêu huấn luyện.
+Không nên tách representation khỏi training objective.
 
-## Mô hình tư duy (mental model)
+## Mental Model
 
-Hãy nghĩ biểu diễn như **API giữa thế giới và thuật toán**.
+Hãy nghĩ representation như **API giữa thế giới và algorithm**.
 
-API tốt làm lộ ra đúng thông tin ở mức trừu tượng phù hợp. API tệ che mất tín hiệu cần thiết hoặc đưa vào quá nhiều chi tiết không liên quan.
+API tốt expose đúng information ở abstraction phù hợp. API tệ che mất signal cần thiết hoặc expose quá nhiều irrelevant detail.
 
-Khi mô hình thất bại, đừng chỉ hỏi “cần mô hình lớn hơn không?”. Hãy hỏi liệu cách biểu diễn có đang làm bài toán khó hơn một cách không cần thiết hay không.
+Khi model thất bại, đừng chỉ hỏi “cần model lớn hơn không?”. Hãy hỏi representation có khiến problem khó một cách không cần thiết hay không.
 
-## Các hiểu lầm thường gặp
+## Common Misconceptions
 
-### “Dữ liệu thô luôn tốt nhất vì mô hình tự học được mọi thứ”
+### “Raw data luôn tốt nhất vì model tự học được hết”
 
-Không đúng trong mọi trường hợp. Học đầu-cuối (end-to-end learning) có thể rất mạnh nhưng cần dữ liệu, năng lực tính toán và kiến trúc phù hợp. Ràng buộc miền hoặc đặc trưng có cấu trúc đôi khi cải thiện hiệu quả sử dụng mẫu và độ tin cậy.
+Không đúng trong mọi trường hợp. End-to-end learning có thể mạnh nhưng cần data, compute và architecture phù hợp. Domain constraints hoặc structured features đôi khi cải thiện sample efficiency và reliability.
 
-### “Embedding = ý nghĩa”
+### “Embedding = meaning”
 
-Phép nhúng là một biểu diễn số đã được học để phục vụ một mục tiêu. Nó có thể nắm bắt nhiều quy luật ngữ nghĩa nhưng không đồng nghĩa với “ý nghĩa tuyệt đối”.
+Embedding là learned numerical representation phục vụ một objective. Nó có thể capture nhiều semantic regularity nhưng không phải meaning theo nghĩa tuyệt đối.
 
-### “Càng nhiều đặc trưng càng tốt”
+### “Nhiều feature hơn luôn tốt hơn”
 
-Đặc trưng không liên quan có thể làm tăng nhiễu, chi phí, nguy cơ quá khớp và rò rỉ dữ liệu. Chất lượng biểu diễn quan trọng hơn số lượng đặc trưng đơn thuần.
+Feature irrelevant có thể tăng noise, cost, overfitting risk và leakage. Quality của representation quan trọng hơn count đơn thuần.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Biểu diễn bài toán nối trực tiếp với cấu trúc dữ liệu, đại số tuyến tính, xác suất, lý thuyết thông tin, thiết kế cơ sở dữ liệu, xử lý tín hiệu và kiến trúc phần mềm. Đây là lý do AI không thể tách khỏi nền tảng khoa học máy tính.
+Problem representation nối trực tiếp tới Data Structures, Linear Algebra, Probability, Information Theory, Database Design, Signal Processing và Software Architecture. Đây là lý do AI không thể tách khỏi Computer Science nền tảng.
 
-Xem tiếp: [Kiến trúc hệ thống AI](./04_ai_system_architecture.md).
+Xem tiếp: [AI System Architecture](./04_ai_system_architecture.md).

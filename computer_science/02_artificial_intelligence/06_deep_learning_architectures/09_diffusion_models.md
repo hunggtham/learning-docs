@@ -1,25 +1,25 @@
 # Diffusion Models: tạo dữ liệu bằng quá trình khử nhiễu có điều kiện
 
-**Diffusion Model (확산 모델 / mô hình khuếch tán)** học phân bố sinh theo một cách khác GAN: thay vì yêu cầu generator tạo ngay một mẫu hoàn chỉnh trong một bước, ta định nghĩa một **quá trình thuận (forward process)** dần phá dữ liệu thành nhiễu, rồi huấn luyện mô hình học **quá trình đảo ngược khử nhiễu (reverse denoising process)** để đi từ nhiễu trở lại dữ liệu có cấu trúc.
+Diffusion Models (확산 모델) học generative distribution bằng một idea khác GAN: thay vì generator một bước phải tạo sample hoàn chỉnh ngay, ta định nghĩa một **forward process** dần phá data thành noise, rồi train model học **reverse denoising process** từng bước để quay từ noise về data.
 
-Cách phân rã này biến bài toán sinh phức tạp thành một chuỗi bài toán khử nhiễu cục bộ tương đối ổn định.
+Điều này biến generation thành một chuỗi bài toán local denoising tương đối ổn định.
 
-## Quá trình khuếch tán thuận
+## Forward Diffusion Process
 
-Bắt đầu từ dữ liệu thật:
+Bắt đầu data:
 
 \[
 x_0\sim p_{data}
 \]
 
-Mỗi bước thêm nhiễu Gaussian:
+Mỗi step thêm Gaussian noise:
 
 \[
 q(x_t\mid x_{t-1})=
 \mathcal N(\sqrt{1-\beta_t}x_{t-1},\beta_t I)
 \]
 
-Đặt:
+Define:
 
 \[
 \alpha_t=1-\beta_t,
@@ -27,32 +27,32 @@ q(x_t\mid x_{t-1})=
 \bar\alpha_t=\prod_{s=1}^{t}\alpha_s
 \]
 
-Ta có thể lấy mẫu trực tiếp tại bất kỳ bước thời gian nào:
+Ta có closed form sample trực tiếp bất kỳ timestep:
 
 \[
 x_t=\sqrt{\bar\alpha_t}x_0+\sqrt{1-\bar\alpha_t}\epsilon,
 \qquad \epsilon\sim\mathcal N(0,I)
 \]
 
-Khi `t` lớn, tín hiệu gốc bị phá dần và `x_t` tiến gần nhiễu Gaussian.
+As `t` large, signal destroyed và `x_t` gần Gaussian noise.
 
-## Quá trình đảo ngược
+## Reverse Process
 
-Mục tiêu là học:
+Goal learn:
 
 \[
 p_\theta(x_{t-1}\mid x_t)
 \]
 
-Nếu mô hình biết thành phần nhiễu hoặc score của dữ liệu, nó có thể khử nhiễu từng bước.
+Nếu biết noise/data score, có thể gradually denoise.
 
-Một tham số hóa phổ biến của DDPM huấn luyện mạng nơ-ron dự đoán nhiễu đã được thêm:
+DDPM parameterization phổ biến train neural network predict added noise:
 
 \[
 \epsilon_\theta(x_t,t)
 \]
 
-với hàm mất mát đơn giản hóa:
+Loss simplified:
 
 \[
 L=\mathbb E_{x_0,\epsilon,t}
@@ -61,68 +61,70 @@ L=\mathbb E_{x_0,\epsilon,t}
 \right]
 \]
 
-Mạng nhận mẫu bị nhiễu cùng mức thời gian và học ước lượng thành phần nhiễu.
+Network receives noisy sample + timestep and learns noise component.
 
-## Vì sao dự đoán nhiễu giúp sinh dữ liệu?
+## Tại sao predict noise giúp generation?
 
-Từ:
+From:
 
 \[
 x_t=\sqrt{\bar\alpha_t}x_0+\sqrt{1-\bar\alpha_t}\epsilon
 \]
 
-nếu mô hình ước lượng được `ε`, ta có thể suy ra xấp xỉ của dữ liệu sạch `x_0` hoặc trung bình của bước đảo ngược. Lặp nhiều bước sẽ dần khôi phục cấu trúc dữ liệu.
+if model estimates `ε`, one can estimate clean `x_0` or reverse mean. Repeating reverse steps gradually reconstructs data structure.
 
-Mô hình đang học một trường khử nhiễu qua nhiều mức noise chứ không phải học một ánh xạ duy nhất từ nhiễu sang ảnh trong một bước.
+Model is learning denoising vector field across noise levels, not memorizing one deterministic mapping noise→image in single jump.
 
-## Mã hóa timestep
+## Timestep Encoding
 
-Cùng một ảnh bị nhiễu nhẹ và bị nhiễu gần hoàn toàn cần cách xử lý khác nhau. Vì vậy mô hình nhận thêm embedding của timestep hoặc mức nhiễu.
+Same noisy image at low vs high noise requires different denoising behavior. Model therefore receives timestep/noise level embedding.
 
-Các embedding hình sin hoặc Fourier thường biến scalar `t` thành vector rồi đưa vào mạng cùng đặc trưng ảnh.
+Sinusoidal/Fourier-like embeddings map scalar `t` into vector processed alongside features.
 
-## Kiến trúc U-Net
+## U-Net Architecture
 
-Diffusion ảnh truyền thống thường dùng U-Net:
+Image diffusion historically uses U-Net:
 
 ```text
-độ phân giải cao
-→ encoder giảm kích thước
+high resolution
+→ downsample encoder
 → bottleneck
-→ decoder tăng kích thước
+→ upsample decoder
 ```
 
-Các kết nối tắt (skip connection) truyền chi tiết không gian từ nhánh giảm kích thước sang nhánh tăng kích thước.
+Skip connections pass fine spatial details from down path to up path.
 
-U-Net diffusion hiện đại thường có residual block, attention/cross-attention và normalization. Các kiến trúc Transformer cho diffusion như DiT ngày càng phổ biến ở quy mô lớn.
+Modern diffusion U-Nets include residual blocks, attention/cross-attention and normalization.
 
-## Diffusion có điều kiện
+Transformer-based diffusion architectures (DiT-like) increasingly replace/augment U-Net at scale.
 
-Nếu muốn sinh `x` dựa trên văn bản hoặc nhãn `c`:
+## Conditional Diffusion
+
+Want generate `x` conditioned on text/class `c`:
 
 \[
 \epsilon_\theta(x_t,t,c)
 \]
 
-bộ mã hóa văn bản tạo embedding và cross-attention đưa điều kiện đó vào mạng khử nhiễu.
+Text encoder creates embeddings; cross-attention injects text condition into image denoiser.
 
-Vì vậy text-to-image thực chất là một hệ thống đa phương thức kết hợp bộ mã hóa điều kiện với mô hình sinh khử nhiễu.
+Thus text-to-image is multimodal encoder + conditional generative denoising system.
 
 ## Classifier Guidance
 
-Một classifier bên ngoài có thể ước lượng:
+An external classifier estimates:
 
 \[
 \nabla_{x_t}\log p(c\mid x_t)
 \]
 
-và điều chỉnh hướng đảo ngược về phía lớp mong muốn.
+and modifies reverse score toward desired class.
 
-Cách này cải thiện khả năng điều kiện hóa nhưng cần classifier được huấn luyện trên dữ liệu ở nhiều mức nhiễu.
+This improved conditional quality but requires classifier trained on noisy data.
 
 ## Classifier-Free Guidance
 
-Trong huấn luyện, cùng một mô hình đôi khi nhận điều kiện và đôi khi bị bỏ điều kiện. Khi suy luận, kết hợp dự đoán có điều kiện và không điều kiện:
+Train same model sometimes with condition dropped. At inference combine conditional and unconditional predictions:
 
 \[
 \epsilon_{guided}
@@ -130,134 +132,136 @@ Trong huấn luyện, cùng một mô hình đôi khi nhận điều kiện và 
 +w(\epsilon_{cond}-\epsilon_{uncond})
 \]
 
-`w` là hệ số **guidance**.
+`w` guidance scale.
 
-Tăng guidance thường làm đầu ra bám prompt mạnh hơn nhưng có thể giảm đa dạng hoặc tăng artifact và quá bão hòa. Vì vậy không có quy tắc “càng lớn càng tốt”.
+Higher guidance often increases prompt adherence but can reduce diversity/oversaturate artifacts. Trade-off, not “higher better”.
 
-## Cách nhìn Score-Based
+## Score-Based View
 
-**Score function**:
+Score function:
 
 \[
 \nabla_x\log p_t(x)
 \]
 
-chỉ hướng làm mật độ dữ liệu tăng tại một mức nhiễu `t` nhất định.
+points toward directions increasing data density at noise level `t`.
 
-Denoising score matching và diffusion có quan hệ rất chặt. Trong biểu diễn thời gian liên tục, quá trình này có thể được mô tả bằng phương trình vi phân ngẫu nhiên (SDE).
+Denoising-score matching and diffusion are closely connected. Continuous-time formulation uses stochastic differential equations (SDEs).
 
-Cách nhìn này cho nền tảng xác suất sâu hơn trực giác “mạng chỉ dự đoán nhiễu”.
+This provides deeper probabilistic interpretation beyond “predict noise”.
 
-## Tốc độ lấy mẫu
+## Sampling Speed
 
-DDPM gốc thường cần hàng trăm hoặc hàng nghìn bước đảo ngược, chậm hơn generator GAN một bước.
+Original DDPM uses many reverse steps (hundreds/thousands), slower than one-pass GAN.
 
-Các kỹ thuật tăng tốc gồm:
+Accelerations:
 
 - DDIM;
-- bộ giải số bậc cao;
-- các phương pháp kiểu DPM-Solver;
-- distillation và consistency model;
-- lịch lấy mẫu ít bước hơn.
+- higher-order samplers;
+- DPM-Solver-like methods;
+- distillation/consistency models;
+- fewer-step schedules.
 
-Sampler thay đổi cách tích phân quỹ đạo đảo ngược, tạo sự đánh đổi giữa tốc độ, chất lượng và độ đa dạng.
+Sampler changes numerical integration/path, often trading speed vs quality/diversity.
 
 ## DDIM
 
-DDIM xây quỹ đạo lấy mẫu không-Markov, có thể gần xác định hơn nhưng dùng cùng mục tiêu huấn luyện cơ bản. Nó cho phép giảm số bước lấy mẫu đáng kể và hỗ trợ các thao tác latent thuận tiện hơn.
+DDIM constructs non-Markovian/deterministic-like sampling paths sharing training objective, enabling fewer steps and latent interpolation behavior.
 
-Các tham số kiểu `η` có thể điều khiển mức ngẫu nhiên tùy cách triển khai.
+`η`-style settings can control stochasticity depending formulation.
 
 ## Latent Diffusion
 
-Diffusion trực tiếp trên pixel rất tốn chi phí. Latent Diffusion trước hết nén ảnh:
+Raw pixel diffusion expensive. Latent diffusion first compress image:
 
 \[
 x\xrightarrow{VAE\ encoder}z
 \]
 
-sau đó chạy diffusion trên `z`, rồi giải mã:
+run diffusion on `z`, then:
 
 \[
 z_0\xrightarrow{VAE\ decoder}\hat x
 \]
 
-Không gian latent có độ phân giải nhỏ hơn nhiều, làm chi phí U-Net hoặc Transformer giảm đáng kể.
+Latent spatial resolution smaller → attention/U-Net computation drastically cheaper.
 
-Đây là lý do hiểu VAE rất quan trọng đối với hệ thống text-to-image hiện đại.
+This is why understanding VAE matters for text-to-image systems.
 
 ## Image-to-Image và Inpainting
 
-Image-to-image thường bắt đầu từ latent của ảnh nguồn, thêm lượng nhiễu có kiểm soát rồi khử nhiễu dưới điều kiện văn bản. Mức nhiễu quyết định đầu ra được phép lệch khỏi ảnh gốc bao xa.
+Image-to-image starts from encoded input plus controlled noise then denoises under text condition. Noise strength controls how far output may deviate.
 
-**Inpainting** giữ vùng đã biết và khử nhiễu vùng bị che dựa trên ngữ cảnh xung quanh cùng prompt. **Outpainting** mở rộng canvas theo nguyên lý tương tự.
+Inpainting keeps known pixels/latent regions constrained and denoises masked region using surrounding context + prompt.
 
-Đây chủ yếu là các biến thể điều kiện hóa và kiểm soát, không phải những họ mô hình hoàn toàn khác.
+Outpainting extends canvas similarly.
 
-## Điều kiện hóa kiểu ControlNet
+These are conditioning/control variations, not completely different model classes.
 
-Các tín hiệu cấu trúc bổ sung như biên cạnh, pose hoặc depth có thể đi qua một nhánh điều khiển song song để tác động lên mô hình diffusion đã pretrain.
+## ControlNet-like Conditioning
 
-Thiết kế này tách điều khiển ngữ nghĩa bằng văn bản khỏi điều khiển hình học và bố cục.
+Additional structural condition such as edge map, pose, depth can feed parallel/control branch while preserving pretrained diffusion model.
 
-## So sánh Diffusion, VAE và GAN
+This separates semantic text control from geometric/spatial control.
 
-| Họ mô hình | Tín hiệu huấn luyện | Lấy mẫu | Đánh đổi điển hình |
+## Diffusion vs VAE vs GAN
+
+| Family | Training signal | Sampling | Typical trade-off |
 |---|---|---|---|
-| VAE | ELBO / tái tạo + KL | một lần qua decoder | latent mượt, mô hình xác suất rõ, đôi khi ảnh mềm hơn |
-| GAN | critic đối kháng | một lần qua generator | sắc nét và nhanh, nhưng khó huấn luyện và có mode collapse |
-| Diffusion | khử nhiễu / score | nhiều bước | ổn định và chất lượng cao, truyền thống chậm hơn |
+| VAE | ELBO / reconstruction + KL | one decoder pass | smooth latent, likelihood framework, sometimes softer samples |
+| GAN | adversarial critic | one generator pass | sharp/fast, unstable/mode collapse risk |
+| Diffusion | denoising/score objective | iterative | stable/high quality, traditionally slower |
 
-Hệ thống hiện đại thường lai ghép nhiều cơ chế, nên bảng này mô tả nguyên lý chứ không phải ranh giới tuyệt đối giữa sản phẩm.
+Modern systems hybridize, so taxonomy describes mechanisms, not product boundaries.
 
-## Diffusion cho dữ liệu ngoài ảnh
+## Diffusion for non-image data
 
-Diffusion và score-based model đã được áp dụng cho âm thanh, video, 3D, phân tử và hành động liên tục. Các biến thể diffusion rời rạc điều chỉnh quá trình cho token hoặc biến phân loại.
+Diffusion/score methods apply audio, video, 3D, molecule, continuous actions. Discrete diffusion variants adapt process to categorical/token spaces.
 
-Ngôn ngữ rời rạc vẫn chủ yếu do Transformer tự hồi quy thống trị vì cơ chế làm hỏng/phục hồi token và bài toán giải mã có những đánh đổi khác ảnh liên tục.
+However discrete language generation remains dominated autoregressive Transformers because corruption/reverse process and decoding trade-offs differ.
 
-## Dữ liệu, bản quyền và an toàn
+## Data and Copyright/Safety Connection
 
-Hành vi của mô hình sinh phản ánh phân bố huấn luyện. Memorization vẫn có thể xảy ra; mô hình có thể tái tạo phong cách, khái niệm hoặc thiên lệch có trong dữ liệu. Vì vậy nguồn gốc dữ liệu và loại trùng rất quan trọng.
+Generative model behavior reflects training distribution. Memorization can occur; model may reproduce styles/concepts/biases. Dataset provenance and deduplication matter.
 
-Bộ lọc an toàn có thể đặt ở dữ liệu huấn luyện, prompt, latent/quá trình sinh hoặc đầu ra. Đây là bài toán cấp hệ thống, không thể giải quyết chỉ bằng phương trình diffusion.
+Safety filters can operate training data, prompt, latent/generation and output — system problem beyond diffusion math.
 
-## Mô hình tư duy
+## Mental Model
 
 ```text
-Huấn luyện:
-dữ liệu thật → thêm mức nhiễu đã biết → mô hình học dự đoán cách loại nhiễu
+Training:
+real data → add known noise level → model predicts how to remove noise
 
-Sinh:
-nhiễu ngẫu nhiên → khử một ít → khử một ít → ... → mẫu có cấu trúc
+Generation:
+random noise → denoise a little → denoise a little → ... → structured sample
 ```
 
-Ở mỗi mức nhiễu, mô hình học hướng cục bộ đưa mẫu về những vùng có mật độ dữ liệu hợp lý hơn.
+At every noise level, model learns local direction toward plausible data.
 
-## Những hiểu lầm thường gặp
+## Common Misconceptions
 
-### “Diffusion lưu ảnh rồi tìm ảnh gần nhất”
+### “Diffusion stores images then retrieves nearest one”
 
-Không. Quá trình sinh chạy động lực khử nhiễu đã học. Memorization là một rủi ro riêng, không phải cơ chế định nghĩa của diffusion.
+Generation runs learned denoising dynamics. Memorization is separate risk, not core mechanism.
 
-### “Dự đoán noise chỉ là mẹo tùy ý”
+### “Noise prediction is arbitrary trick”
 
-Không. Nó xuất phát từ cách tham số hóa quá trình xác suất đảo ngược và score matching, đồng thời tạo hàm mục tiêu ổn định.
+It arises from parameterization of reverse probabilistic/score process and yields simple stable objective.
 
-### “Càng nhiều bước diffusion càng tốt”
+### “More diffusion steps always better”
 
-Không. Chất lượng còn phụ thuộc sampler, bậc phương pháp, mô hình và lịch nhiễu; sampler hiện đại có thể đạt chất lượng tốt với ít bước hơn.
+Sampler/order/training determine trade-off; advanced samplers achieve quality with fewer steps.
 
-### “Guidance scale chỉ điều khiển chất lượng ảnh”
+### “Guidance scale controls image quality only”
 
-Không. Nó đánh đổi độ bám điều kiện với độ đa dạng và artifact.
+It trades conditioning strength against diversity/artifacts.
 
-### “Stable Diffusion chạy trực tiếp trên pixel”
+### “Stable Diffusion means diffusion is done directly in pixels”
 
-Không. Các hệ thống latent diffusion tiêu biểu chạy phần lớn quá trình khử nhiễu trong không gian latent do VAE nén, sau đó mới giải mã về pixel.
+Latent diffusion operates in VAE-compressed latent space, then decodes to pixels.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Diffusion tổng hợp [Xác suất](../01_mathematical_foundations/02_probability_for_ai.md), [Tính toán số](../01_mathematical_foundations/07_numerical_computation.md), [Autoencoder/VAE](./06_autoencoders.md), [Attention](./04_attention.md) và điều kiện hóa đa phương thức.
+Diffusion synthesizes [Probability](../01_mathematical_foundations/02_probability_for_ai.md), [Numerical Methods](../01_mathematical_foundations/07_numerical_computation.md), [Autoencoder/VAE](./06_autoencoders.md), [Attention](./04_attention.md) and multimodal text conditioning.
 
-Phần `13_speech_audio_and_multimodal/` sẽ nối diffusion với các hệ thống nền tảng văn bản, ảnh, âm thanh và video.
+Later `13_speech_audio_and_multimodal/` will connect diffusion with text/image/audio/video foundation systems.

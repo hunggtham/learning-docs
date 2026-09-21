@@ -1,68 +1,68 @@
-# Tokenization cho LLM: độ dài chuỗi, từ vựng và chi phí mô hình
+# LLM Tokenization: sequence length, vocabulary và model economics
 
-Tokenization cho LLM sử dụng các nguyên lý subword và byte giống NLP truyền thống, nhưng khi mô hình được mở rộng quy mô lớn, nó trở thành vấn đề về **chi phí tính toán, ngân sách ngữ cảnh, công bằng đa ngôn ngữ và khả năng tương thích giao thức**. Tokenizer không chỉ chia văn bản; nó quyết định mô hình phải thực hiện bao nhiêu bước tự hồi quy (autoregressive steps) để biểu diễn hoặc sinh cùng một lượng nội dung.
+LLM tokenization dùng cùng subword/byte principles của NLP, nhưng ở large-scale model nó trở thành vấn đề **compute, context economics, multilingual fairness và protocol compatibility**. Một tokenizer không chỉ chia text; nó quyết định model phải thực hiện bao nhiêu autoregressive steps để biểu diễn/generate cùng content.
 
-Xem nền: [Chuẩn hóa văn bản và Tokenization](../07_natural_language_processing/01_text_normalization_and_tokenization.md). Chapter này tập trung vào các hệ quả dành riêng cho LLM.
+Xem nền: [Text Normalization and Tokenization](../07_natural_language_processing/01_text_normalization_and_tokenization.md). Chapter này tập trung LLM-specific consequences.
 
-## Token là đơn vị tính toán của LLM
+## Token là đơn vị compute của LLM
 
-Chi phí huấn luyện và suy luận thường tăng theo số token. Nếu cùng một câu được tách thành 20 token thay vì 10, nhiều phép toán theo chiều chuỗi phải xử lý gần gấp đôi số vị trí.
+Training/inference cost thường scale theo token count. Một câu tokenize 20 tokens thay vì 10 roughly doubles sequence positions for many operations.
 
-Độ trễ khi sinh tự hồi quy cũng tăng theo số token đầu ra vì các token được sinh tuần tự.
+Autoregressive output latency cũng proportional generated tokens because generation serial.
 
-Do đó hiệu quả tokenizer ảnh hưởng trực tiếp tới:
+Therefore tokenizer efficiency affects:
 
 ```text
-FLOPs khi huấn luyện
-mức sử dụng cửa sổ ngữ cảnh
+training FLOPs
+context usage
 KV cache
-độ trễ suy luận
-chi phí API theo token
-trải nghiệm đa ngôn ngữ
+inference latency
+API/token cost
+multilingual UX
 ```
 
-## Đánh đổi kích thước từ vựng
+## Vocabulary Size Trade-off
 
-Từ vựng lớn có xu hướng:
+Large vocabulary:
 
-- tạo chuỗi ngắn hơn;
-- làm ma trận embedding và ma trận đầu ra lớn hơn;
-- tạo nhiều tham số dành cho token hiếm;
-- tăng bộ nhớ và phép tính ở lớp đầu ra/softmax.
+- shorter sequences;
+- larger embedding/output matrix;
+- more rare token parameters;
+- softmax/output compute/memory bigger.
 
-Từ vựng nhỏ có xu hướng:
+Small vocabulary:
 
-- tái sử dụng subword nhiều hơn;
-- tạo chuỗi dài hơn;
-- làm ma trận token nhỏ hơn.
+- more subword reuse;
+- longer sequences;
+- smaller token matrices.
 
-Không có một kích thước tối ưu chung. Nó phụ thuộc quy mô mô hình, dữ liệu và tập ngôn ngữ cần hỗ trợ.
+Optimal depends model size/data/languages.
 
 ## Byte-Level BPE
 
-Nhiều tokenizer kiểu GPT bắt đầu từ byte rồi hợp nhất các chuỗi thường gặp. Cách làm này có thể biểu diễn mọi chuỗi Unicode mà không cần token `<UNK>`.
+Many GPT-like tokenizers start bytes then merge frequent sequences. Any Unicode text can represent, avoiding `<UNK>`.
 
-Tuy nhiên các hệ chữ sử dụng nhiều byte trong UTF-8 có thể cần nhiều đơn vị cơ sở hơn trước khi merge. Nếu một ngôn ngữ xuất hiện ít trong corpus huấn luyện tokenizer, nó cũng có thể nhận ít merge hiệu quả hơn.
+But scripts using multi-byte UTF-8 may need more base units before merges. Underrepresented language gets fewer efficient merges.
 
-## Mật độ token
+## Token Fertility
 
-**Mật độ token (token fertility)** là số token trung bình cần để biểu diễn một từ, ký tự hoặc đơn vị nội dung.
+**Fertility** = average number tokens per word/character/content unit.
 
-Ngôn ngữ có fertility cao hơn sẽ tiêu tốn nhiều context và compute hơn cho cùng một lượng nội dung ngữ nghĩa.
+Higher fertility language consumes more context and compute for same semantic message.
 
-Trong hệ thống đa ngôn ngữ, nên đo fertility riêng cho tiếng Hàn, tiếng Việt, tiếng Anh và dữ liệu chuyên ngành như code hay tài liệu nội bộ.
+For multilingual deployment, measure fertility separately Korean, Vietnamese, English and domain code/data.
 
-## Ảnh hưởng thực tế với tiếng Hàn và tiếng Việt
+## Korean/Vietnamese practical effect
 
-Tiếng Hàn có nhiều đuôi biến hình; tokenizer tốt có thể tái sử dụng các mẫu stem hoặc morpheme, nhưng hiệu quả phụ thuộc cân bằng corpus.
+Korean endings create many forms; good subword merges can reuse stem/morpheme patterns but corpus balance matters.
 
-Tiếng Việt có nhiều từ đa âm tiết được viết bằng các âm tiết tách bởi khoảng trắng. Tokenizer có thể hoặc không merge tốt những biểu thức đa âm tiết phổ biến.
+Vietnamese words may span syllables separated spaces; tokenizer may or may not merge common multi-syllable expressions.
 
-Vì vậy không nên áp dụng máy móc quy tắc kinh nghiệm như “khoảng bốn ký tự trên một token” vốn thường được ước lượng cho tiếng Anh.
+Do not assume 4 characters/token English heuristic across languages.
 
-## Chat template
+## Chat Templates
 
-Mô hình instruction/chat được hậu huấn luyện với một cách tuần tự hóa hội thoại cụ thể. Ví dụ ở mức trừu tượng:
+Instruction/chat models are trained with exact serialization scheme. Example abstractly:
 
 ```text
 <|system|>...
@@ -70,108 +70,108 @@ Mô hình instruction/chat được hậu huấn luyện với một cách tuầ
 <|assistant|>...
 ```
 
-Các token đặc biệt phân tách vai trò và lượt hội thoại.
+Special tokens delimit roles/turns.
 
-Nếu ứng dụng tự ghép prompt bằng template sai, mô hình sẽ nhận một phân bố đầu vào khác với hậu huấn luyện và có thể hiểu sai vai trò hoặc phản hồi kém ổn định.
+If application manually builds prompt with wrong template, model sees distribution unlike post-training and may leak role text/behave poorly.
 
-Khi có thể, nên dùng đúng tokenizer và chat template chính thức đi cùng checkpoint.
+Always use official tokenizer/chat-template implementation when possible.
 
-## BOS, EOS và điều kiện dừng
+## BOS/EOS and Stop Conditions
 
-Token bắt đầu/kết thúc chuỗi như **BOS/EOS** ảnh hưởng biên sinh. Một lượt chat có thể dùng token kết thúc lượt khác với token kết thúc tài liệu.
+Beginning/end tokens affect generation boundaries. Chat turn may use special end-of-turn token distinct document EOS.
 
-Logic dừng của inference server phải khớp với token hoặc chuỗi dừng của mô hình. Chỉ dừng theo substring có thể cắt nhầm văn bản hợp lệ hoặc bỏ lỡ điểm dừng do khác ranh giới token.
+Inference server stop logic must align tokens/strings. Stopping by substring can truncate legitimate text or fail with token boundary differences.
 
-## Token healing và hiệu ứng ranh giới
+## Token Healing / Boundary Effects
 
-Nếu prompt kết thúc giữa một từ hoặc tại một mẫu khoảng trắng bất thường, cách token hóa phần cuối có thể khác phân bố mô hình thường thấy khi huấn luyện. Một số hệ thống dùng **token healing** hoặc token hóa lại quanh ranh giới để giảm vấn đề này.
+Prompt ending inside a tokenizable word or with awkward whitespace can create tokenization distribution unlike training. Some systems implement token healing/re-tokenization around boundary.
 
-Hiệu ứng này thường quan trọng hơn trong autocomplete và hoàn thành mã nguồn so với chat thông thường.
+This matters autocomplete/code completion more than normal chat.
 
-## Tokenization và số
+## Tokenization and Numbers
 
-Số có thể bị tách thành những nhóm chữ số không trực quan. Đây là một phần nguyên nhân khiến LLM yếu ở số học hoặc đếm chính xác: mô hình thao tác trên mẫu token thống kê chứ không làm việc với kiểu dữ liệu số nguyên bản.
+Numbers split into digit chunks unpredictably. This partly explains weak exact arithmetic/counting: model operates statistical token patterns rather than native numeric datatype.
 
-Khi cần độ tin cậy cao, phép tính chính xác nên được chuyển cho code, máy tính hoặc công cụ chuyên dụng.
+Tools/code/calculators should handle exact arithmetic when reliability required.
 
-## Dữ liệu có cấu trúc
+## Structured Data
 
-JSON, XML và mã nguồn có nhiều dấu câu nên có thể tiêu tốn nhiều token. Dạng minified giảm token nhưng đôi khi làm đầu ra khó đọc và khó debug; dạng định dạng đẹp dùng nhiều context hơn.
+JSON/XML/code punctuation can consume many tokens. Minified format saves tokens but may reduce readability/model reliability; pretty format uses more context.
 
-Thiết kế schema có thể tối ưu cả tính hợp lệ lẫn chi phí token. Tên field dài và lặp lại nhiều lần làm tăng token đầu ra.
+Schema design can optimize both validity and token cost. Repeated long field names increase output tokens.
 
-## Tokenizer và khả năng tương thích với ma trận embedding
+## Tokenizer and Embedding Matrix Compatibility
 
-Checkpoint của mô hình phụ thuộc ánh xạ chính xác:
+Model checkpoint assumes exact mapping:
 
 \[
-\text{chuỗi token}\leftrightarrow \text{token id}\leftrightarrow \text{hàng embedding}
+token\ string\leftrightarrow token\ id\leftrightarrow embedding\ row
 \]
 
-Đổi tokenizer sẽ phá ngữ nghĩa của embedding dù kích thước vocabulary có giống nhau.
+Swap tokenizer destroys semantics even if vocab size same.
 
-Khi thêm token mới, cần mở rộng ma trận embedding/đầu ra và huấn luyện các hàng mới. Việc cấp một ID mới không tự động dạy mô hình ý nghĩa của token đó.
+Adding new tokens requires resize embedding/output matrices and training those rows; naive addition does not teach meaning.
 
-## Token đặc biệt như một bề mặt tấn công
+## Special Tokens as Attack Surface
 
-Nếu văn bản không tin cậy có thể chèn marker vai trò hoặc chuỗi điều khiển đặc biệt và ứng dụng tuần tự hóa kém, thứ bậc chỉ dẫn có thể bị nhiễu.
+If untrusted text can inject role delimiters/special-control strings and application serializes poorly, instruction hierarchy may be confused.
 
-API chat an toàn hơn nên tách vai trò bằng cấu trúc giao thức và escape/encode dữ liệu người dùng đúng cách thay vì nối thô các chuỗi giả dạng `<system>` hay `<assistant>`.
+Robust chat APIs should separate roles structurally and escape/encode user data according protocol rather than concatenate raw pseudo-role markup.
 
-Vấn đề này nối tokenization với prompt injection và bảo mật ứng dụng LLM.
+Tokenizer/protocol security connects prompt injection.
 
-## Lập ngân sách ngữ cảnh
+## Context Budget Planning
 
-Với cửa sổ ngữ cảnh `C`:
+For context window `C`:
 
 ```text
-chỉ dẫn hệ thống
-+ lịch sử hội thoại
-+ tài liệu truy xuất
-+ kết quả công cụ
-+ đầu vào người dùng
-+ phần dành riêng cho đầu ra
-≤ C token
+system instructions
++ conversation history
++ retrieved documents
++ tool results
++ user input
++ reserved output
+≤ C tokens
 ```
 
-Nếu vượt ngân sách, hệ thống cần cắt bớt, tóm tắt hoặc truy xuất chọn lọc. Cắt âm thầm có thể loại bỏ chỉ dẫn hệ thống hoặc bằng chứng quan trọng tùy implementation.
+If budget exceeded, system needs truncate/summarize/retrieve selectively. Silent truncation may remove system instruction or crucial evidence depending implementation.
 
-## Prompt caching
+## Prompt Caching
 
-Phần prefix được lặp lại có thể được cache bởi inference server hoặc provider để giảm chi phí **prefill**. Cache thường phụ thuộc chính xác chuỗi token, nên chỉ một thay đổi nhỏ trong template cũng có thể làm mất cache hit.
+Repeated prefix tokens can be cached by inference providers/servers, reducing prefill compute. Cache usually depends exact token prefix, so tiny text/template change invalidates hit.
 
-Việc tổ chức system prompt và schema ổn định có thể cải thiện chi phí vận hành.
+Stable system prompt/schema organization can improve economics.
 
-## Token đầu vào và đầu ra có đặc tính chi phí khác nhau
+## Input vs Output Token Cost
 
-Giai đoạn **prefill** xử lý token đầu vào với mức song song hóa cao hơn, còn giai đoạn **decode** sinh từng token đầu ra tuần tự.
+Transformer **prefill** processes input tokens parallel-ish; **decode** generates output one by one. Same token count has different latency characteristics.
 
-Do đó cùng số token nhưng đặc tính độ trễ khác nhau. Input dài làm tăng prefill và KV cache; output dài đặc biệt làm tăng độ trễ decode tuần tự.
+Long input increases prefill and KV cache; long output increases serial decode latency strongly.
 
-Tối ưu hệ thống cần phân biệt hai pha này.
+System optimization distinguishes both.
 
-## Mô hình tư duy
+## Mental Model
 
-> Tokenizer là giao diện nhị phân ứng dụng (ABI) giữa chuỗi ký tự của con người và tính toán tensor của LLM. Nó xác định độ mịn của chuỗi, chi phí và các ranh giới giao thức; thay tokenizer gần với thay giao diện mô hình hơn là thay một tùy chọn tiền xử lý văn bản.
+> Tokenizer is the ABI between human strings and LLM tensor computation. It defines sequence granularity, cost and protocol boundaries; changing it is closer to changing model interface than changing a text preprocessing option.
 
-## Những hiểu lầm thường gặp
+## Common Misconceptions
 
-### “Số token gần bằng số từ”
+### “Token count is roughly word count”
 
-Tỷ lệ thay đổi mạnh theo ngôn ngữ, nội dung và tokenizer.
+Varies language/content/tokenizer dramatically.
 
-### “Chất lượng tokenizer chỉ ảnh hưởng chi phí”
+### “Tokenizer quality only changes cost”
 
-Nó còn ảnh hưởng độ dài chuỗi, khả năng chia sẻ hình thái và độ khó khi mô hình học hoặc sinh.
+It affects sequence length, morphology sharing and model learning/generation difficulty.
 
-### “Vai trò trong chat chỉ là nhãn văn bản”
+### “Chat roles are just text labels”
 
-Chúng được tuần tự hóa bằng token/template đặc thù mà mô hình đã học trong hậu huấn luyện.
+They are serialized through model-specific special token/template learned during post-training.
 
-### “Chỉ cần thêm token là mô hình hiểu ngay”
+### “Add a token and model immediately understands it”
 
-Embedding mới phải được huấn luyện; token ID tự nó không mang ngữ nghĩa.
+New embedding must be trained; ID alone has no semantic meaning.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Xem [NLP Tokenization](../07_natural_language_processing/01_text_normalization_and_tokenization.md), [Transformer](../06_deep_learning_architectures/05_transformer.md) và [Prompting & Context Engineering](./11_prompting_and_context_engineering.md).
+Xem [NLP Tokenization](../07_natural_language_processing/01_text_normalization_and_tokenization.md), [Transformer](../06_deep_learning_architectures/05_transformer.md) và later [Context Engineering](./11_prompting_and_context_engineering.md).

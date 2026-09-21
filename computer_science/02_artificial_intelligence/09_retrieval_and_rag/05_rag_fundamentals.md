@@ -1,8 +1,8 @@
-# Nền tảng Retrieval-Augmented Generation (RAG)
+# Retrieval-Augmented Generation (RAG) Fundamentals
 
-**Retrieval-Augmented Generation (RAG / 검색 증강 생성)** là kiến trúc trong đó mô hình không chỉ dựa vào tham số mà còn nhận **bằng chứng bên ngoài được truy xuất trong lúc suy luận**. Mục tiêu cốt lõi là làm quá trình sinh được grounding vào nguồn tri thức có thể cập nhật, kiểm soát và truy vết.
+**Retrieval-Augmented Generation (RAG / 검색 증강 생성)** là architecture trong đó model không chỉ dựa vào parameters mà còn nhận **external evidence được retrieve tại inference time**. Mục tiêu cốt lõi là làm cho generation được grounded vào knowledge có thể cập nhật, kiểm soát và truy vết.
 
-## Kiến trúc cốt lõi
+## Core Architecture
 
 ```mermaid
 flowchart LR
@@ -16,64 +16,64 @@ flowchart LR
     L --> A[Answer]
 ```
 
-Một hệ thống production thường bổ sung reranking, metadata filter, xử lý citation, validation và observability.
+Một production system thường thêm reranking, metadata filters, citation handling, validation và observability.
 
-## Vì sao cần RAG?
+## Vì sao RAG tồn tại?
 
-Tri thức trong trọng số LLM có những giới hạn:
-
-```text
-có mốc dữ liệu huấn luyện
-không có provenance nguồn tự nhiên
-khó cập nhật riêng một fact
-private enterprise data không nằm sẵn trong pretraining
-```
-
-RAG đưa tri thức ra ngoài mô hình. Thay vì retrain mỗi khi tài liệu đổi, hệ thống cập nhật knowledge base hoặc index.
-
-## RAG không làm mô hình “học” tài liệu
-
-Tài liệu retrieval chỉ tồn tại trong context hiện tại. Trọng số không tự cập nhật.
+LLM weights có limitations:
 
 ```text
-RAG → điều kiện hóa tạm thời bằng evidence
-Fine-tuning → cập nhật tham số bền vững
+knowledge cutoff
+không có source provenance native
+khó update một fact riêng lẻ
+private enterprise data không nằm trong pretraining
 ```
 
-Sự phân biệt này rất quan trọng khi thiết kế vòng đời tri thức.
+RAG externalize knowledge. Thay vì retrain model mỗi khi document thay đổi, update knowledge base/index.
 
-## Pipeline ingestion và pipeline query
+## RAG không làm model “học” documents
 
-RAG có hai đường xử lý khác nhau.
+Retrieved documents chỉ tồn tại trong current context. Weights không tự update.
+
+```text
+RAG → temporary evidence conditioning
+Fine-tuning → persistent parameter update
+```
+
+Đây là distinction quan trọng khi design knowledge lifecycle.
+
+## Ingestion Path vs Query Path
+
+RAG có hai pipelines khác nhau.
 
 ### Ingestion
 
 ```text
-tài liệu nguồn
+source documents
 → parse
-→ làm sạch
-→ segment / chunk
-→ bổ sung metadata
-→ embed / index
+→ clean
+→ segment/chunk
+→ enrich metadata
+→ embed/index
 ```
 
 ### Query
 
 ```text
-query người dùng
-→ rewrite / filter
+user query
+→ rewrite/filter
 → retrieve
 → rerank
-→ chọn context
+→ select context
 → generate
-→ cite / verify
+→ cite/verify
 ```
 
-Nếu ingestion sai, mô hình ở query time thường không thể tự sửa triệt để.
+Nếu ingestion sai, query-time model khó sửa.
 
-## Giao diện giữa retrieval và generation
+## Retrieval-Generation Interface
 
-Context builder nên trình bày evidence cho LLM với format rõ ràng:
+Context builder phải trình bày evidence cho LLM theo format rõ:
 
 ```text
 Source 1 [policy_v5, section 3]
@@ -83,154 +83,156 @@ Source 2 [faq_2026]
 ...
 ```
 
-Metadata cần giữ được danh tính nguồn. Nếu chỉ nối text thô, việc tạo citation và truy provenance về sau sẽ khó hơn nhiều.
+Metadata nên preserve source identity. Nếu chỉ concatenate text, citation/provenance sau đó rất khó.
 
-## Context là một ngân sách hữu hạn
+## Context Is a Budget
 
-Giả sử context window là 32k token. Hệ thống phải phân bổ cho:
+Suppose model context window is 32k tokens. System phải allocate cho:
 
 ```text
 system prompt
-lịch sử hội thoại
-query người dùng
-evidence retrieval
+conversation history
+user query
+retrieved evidence
 few-shot examples
-phần token dành cho output
+output reserve
 ```
 
-Retrieve top-50 chunk rồi đưa tất cả vào prompt thường làm tăng nhiễu. Reranking và chọn context vì vậy rất quan trọng.
+Retrieve top-50 chunks rồi nhét tất cả thường làm noise tăng. Reranking/context selection quan trọng.
 
-## Failure mode của retrieval
+## Retrieval Failure Modes
 
-### Bỏ sót
+### Miss
 
-Bằng chứng đúng không được retrieve.
+Correct evidence không được retrieve.
 
-### Nhiễu tương tự
+### Distractor
 
-Chunk sai nhưng rất giống về ngữ nghĩa được retrieve.
+Wrong but similar chunk được retrieve.
 
-### Bằng chứng không đầy đủ
+### Partial evidence
 
-Chunk chứa một phần đáp án nhưng thiếu điều kiện hoặc ngoại lệ.
+Chunk chứa một nửa answer nhưng thiếu condition/exception.
 
-### Bằng chứng lỗi thời
+### Stale evidence
 
-Version cũ được xếp hạng cao hơn version hiện hành.
+Old version rank cao hơn current version.
 
-### Bằng chứng không được phép truy cập
+### Unauthorized evidence
 
-Security filter thất bại. Đây là sự cố bảo mật nghiêm trọng chứ không chỉ là lỗi chất lượng.
+Security filter fail — đây là critical incident, không chỉ quality issue.
 
-## Failure mode của generation
+## Generation Failure Modes
 
-Ngay cả khi evidence hoàn hảo, LLM vẫn có thể:
+Even with perfect evidence, LLM có thể:
 
-- bỏ qua nguồn;
-- kết hợp các chunk sai;
-- thêm chi tiết không được hỗ trợ;
-- trích dẫn sai source;
-- xử lý nguồn mâu thuẫn không đúng.
+- ignore source;
+- combine chunks sai;
+- invent unsupported details;
+- cite wrong source;
+- fail conflicting evidence resolution.
 
-Vì vậy retrieval quality và groundedness của generation phải được đánh giá riêng.
+Vì vậy retrieval quality và generation groundedness cần separate evals.
 
-## Viết lại query
+## Query Rewriting
 
-Query hội thoại có thể rất phụ thuộc ngữ cảnh:
+User query thường conversational:
 
 ```text
 "còn trường hợp đó thì sao?"
 ```
 
-Retriever cần một query độc lập dựa trên conversation context. LLM có thể rewrite thành:
+Retriever cần standalone query dựa conversation context. LLM có thể rewrite:
 
 ```text
 "What is the refund policy for annual subscription cancellation after 7 days?"
 ```
 
-Viết lại giúp retrieval nhưng có nguy cơ làm lệch ý định. Nên log cả query gốc và query đã rewrite.
+Rewrite improves retrieval nhưng có risk alter intent. Logging both original and rewritten query is useful.
 
 ## Multi-Query Retrieval
 
-Câu hỏi phức tạp có thể chứa nhiều khía cạnh. Hệ thống có thể sinh nhiều subquery rồi hợp nhất kết quả để tăng recall:
+Complex question có multiple aspects. Generate several search queries rồi merge results tăng recall.
 
 ```text
-câu hỏi
+question
 → subquery A
 → subquery B
 → subquery C
 → retrieve + merge
 ```
 
-Đổi lại chi phí tăng và query expansion có thể gây query drift.
+Cost tăng và query expansion có thể drift.
 
-## Retrieval có metadata
+## Metadata-Aware Retrieval
 
-Filter có cấu trúc nên được suy ra từ trạng thái user/application:
+Structured filters nên derive từ user/application state:
 
 ```text
-product = sản phẩm của user
+product = user's product
 country = KR
 version = active
 permission_scope = authorized
 ```
 
-LLM có thể đề xuất giá trị filter nhưng ứng dụng phải validate theo schema và quyền được phép.
+LLM can propose filter values, but application should validate them against allowed schema.
 
-## Mẫu citation an toàn hơn
+## Citation Pattern
 
-Retriever nên cung cấp source ID có cấu trúc:
+Safer pattern uses source IDs provided by retriever:
 
 ```text
 [DOC-17:S3]
 ```
 
-LLM trích dẫn ID đó, còn renderer ánh xạ sang URL và metadata đáng tin. Không nên để mô hình tự bịa URL.
+LLM cites IDs; renderer resolves URL/title. Do not let model invent arbitrary URLs.
 
-## “Chỉ trả lời từ nguồn”
+## “Answer from Sources Only”
 
-Prompt yêu cầu chỉ dùng evidence có thể giảm claim không được hỗ trợ nhưng không phải bảo đảm cứng. Hệ thống nên thêm bước kiểm tra khả năng trả lời:
+Prompting model to only use evidence reduces unsupported claims but is not hard guarantee. Add answerability check:
 
 ```text
-Nguồn retrieval có đủ bằng chứng để trả lời không?
+Do retrieved sources contain sufficient evidence?
 ```
 
-Nếu không, nên abstain hoặc mở rộng retrieval.
+If no, abstain or broaden retrieval.
 
-## RAG và context dài
+## RAG vs Long Context
 
-Nếu corpus đủ nhỏ, đưa toàn bộ tài liệu vào context dài có thể giảm rủi ro retrieval miss nhưng tăng chi phí, nhiễu và vẫn chịu giới hạn attention.
+If corpus small enough, putting all docs into long context may remove retrieval miss risk but increases cost/noise and still has attention limitations.
 
-RAG scale tốt hơn vì chọn nguồn rõ ràng. Hai cách cũng có thể kết hợp: retrieve document phù hợp rồi đưa nguyên section dài vào context.
+RAG scales better and provides explicit source selection.
 
-## RAG và Fine-Tuning
+Long-context and RAG can complement each other: retrieve documents, then provide larger full sections.
 
-Nên dùng RAG cho:
+## RAG vs Fine-Tuning
+
+Use RAG for:
 
 ```text
-tri thức thay đổi
+changing knowledge
 private documents
-citation / provenance
-corpus factual lớn
+citation/provenance
+large factual corpora
 ```
 
-Nên dùng fine-tuning cho:
+Use fine-tuning for:
 
 ```text
-hành vi bền vững
-format / style
-chuyên biệt hóa tác vụ
+persistent behavior
+format/style
+task specialization
 ```
 
-Trong thực tế thường kết hợp cả hai.
+Often combine both.
 
-## RAG và giao diện Search
+## RAG vs Search UI
 
-RAG tổng hợp câu trả lời; search truyền thống trả tài liệu. Generation tiện lợi nhưng thêm rủi ro tổng hợp sai.
+RAG synthesizes answer. Traditional search returns documents. Generation is useful but creates synthesis risk.
 
-Trong domain pháp lý hoặc audit, giao diện nên hiển thị answer + source excerpt + direct link để người dùng kiểm chứng.
+For legal/audit contexts, UI may show answer + source excerpts + direct links so user can verify.
 
-## Pseudocode RAG tối thiểu
+## Minimal RAG Pseudocode
 
 ```python
 query = rewrite(user_query, history)
@@ -241,28 +243,28 @@ answer = llm.generate(user_query, context)
 return validate_and_attach_sources(answer, ranked)
 ```
 
-Mỗi hàm ở đây là một bài toán engineering riêng.
+Each function is a separate engineering problem.
 
-## Mô hình tư duy
+## Mental Model
 
-> RAG là **pipeline đưa bằng chứng vào trước generation**. Độ tin cậy của LLM bị giới hạn bởi việc evidence đúng có được retrieve, chọn, biểu diễn và sử dụng trung thực hay không.
+> RAG là **evidence pipeline trước generation**. LLM chỉ đáng tin đến mức evidence đúng được retrieve, selected, represented và used faithfully.
 
-## Những hiểu lầm thường gặp
+## Common Misconceptions
 
 ### “RAG chỉ cần vector DB”
 
 Không. Ingestion, chunking, retrieval, reranking, context building, versioning và evaluation đều quan trọng.
 
-### “RAG cập nhật kiến thức trong trọng số mô hình”
+### “RAG cập nhật kiến thức của model”
 
-Không. Nó đưa evidence vào context mà không tự cập nhật weights.
+Không update weights; nó inject evidence vào context.
 
-### “Retrieval đúng thì câu trả lời chắc chắn đúng”
+### “Nếu retrieval đúng thì answer chắc chắn đúng”
 
-Không. Generator vẫn có failure mode riêng.
+Generator vẫn có failure modes.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-RAG nối IR, embedding, database systems, context engineering và LLM grounding.
+RAG nối IR, embeddings, database systems, context engineering và LLM grounding.
 
 Xem tiếp: [Chunking and Document Processing](./06_chunking_and_document_processing.md).

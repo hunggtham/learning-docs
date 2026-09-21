@@ -1,16 +1,16 @@
 # Feature Representation trong Computer Vision
 
-Trước khi deep neural network trở thành lựa chọn mặc định, Computer Vision thường tách pipeline thành hai phần:
+Trước khi deep neural networks trở thành default, Computer Vision thường tách pipeline thành hai phần:
 
 ```text
-image → hand-designed feature → classifier
+image → hand-designed features → classifier
 ```
 
-**Biểu diễn đặc trưng (feature representation / 특징 표현)** là cách biến raw pixel thành descriptor giữ lại information quan trọng cho task đồng thời loại bớt variation không cần thiết.
+**Feature representation (특징 표현 / biểu diễn đặc trưng)** là cách biến raw pixels thành descriptors giữ information quan trọng cho task đồng thời bỏ bớt variation không cần thiết.
 
-## Vì sao Raw Pixel khó dùng trực tiếp?
+## Tại sao raw pixels khó?
 
-Hai ảnh của cùng một object có thể khác rất mạnh trong pixel space chỉ vì:
+Hai ảnh cùng một object có thể khác mạnh ở pixel space vì:
 
 - translation;
 - scale;
@@ -20,199 +20,185 @@ Hai ảnh của cùng một object có thể khác rất mạnh trong pixel spac
 - background;
 - occlusion.
 
-Một representation hữu ích cần ổn định hơn trước các **nuisance variation** nhưng vẫn nhạy với semantic difference thật sự.
+Một useful representation cần stable hơn với nuisance variation nhưng vẫn sensitive với semantic differences.
 
-## Local Feature
+## Local Features
 
-Classical vision thường tìm interest point rồi mô tả local neighborhood quanh điểm đó.
+Classical vision thường detect interest points rồi mô tả local neighborhood.
 
-Ví dụ **SIFT (Scale-Invariant Feature Transform)** tìm keypoint qua nhiều scale, ước lượng orientation rồi tạo descriptor từ local gradient histogram.
+Ví dụ **SIFT (Scale-Invariant Feature Transform)** tìm keypoints qua scale space, estimate orientation rồi tạo descriptor từ local gradient histograms.
 
-Mental model:
+Mental idea:
 
 ```text
-tìm local point có thể lặp lại ổn định
-→ chuẩn hóa scale và orientation
-→ mô tả local edge pattern
+find repeatable local points
+→ normalize scale/orientation
+→ describe local edge pattern
 ```
 
-Nhờ vậy SIFT ổn định hơn raw patch matching khi object bị scale hoặc rotate.
+SIFT robust hơn raw patch matching dưới scale/rotation changes.
 
 ## HOG
 
-**Histogram of Oriented Gradients (HOG)** chia image thành cell, tính gradient orientation rồi aggregate thành histogram.
+**Histogram of Oriented Gradients (HOG)** chia image thành cells, tính gradient orientations rồi aggregate histograms.
 
-Shape của object thường được encode tốt hơn bằng hướng edge so với absolute pixel intensity.
+Object shape thường được encode tốt bởi edge directions hơn absolute pixel intensity.
 
-HOG từng rất hiệu quả cho pedestrian detection khi kết hợp với linear SVM.
+HOG từng rất effective cho pedestrian detection khi kết hợp linear SVM.
 
 ## Bag of Visual Words
 
-Local descriptor có số lượng thay đổi theo image. **Bag of Visual Words** cluster descriptor thành một visual vocabulary, sau đó biểu diễn mỗi image bằng histogram tần suất của các “visual word”.
+Local descriptors có variable count. Bag-of-visual-words cluster descriptors thành visual vocabulary, rồi represent image bằng histogram of “visual words”.
 
-Có thể liên hệ với NLP bag-of-words:
+Analogy với NLP bag-of-words:
 
 ```text
-local patch descriptor
-→ visual token
-→ frequency vector
+local patch descriptors → visual tokens → frequency vector
 ```
 
-Nhược điểm lớn là spatial layout bị mất phần lớn.
+Nhược điểm: mất phần lớn spatial layout.
 
-## Invariance và Equivariance
+## Feature Invariance vs Equivariance
 
-Một representation **invariant** gần như không đổi khi input chịu transformation:
+**Invariant** representation giữ gần như giống nhau khi input transform:
 
 \[
 f(Tx)\approx f(x)
 \]
 
-Một representation **equivariant** thay đổi theo cách có thể dự đoán:
+**Equivariant** representation transform predictable:
 
 \[
 f(Tx)=T'f(x)
 \]
 
-Classification thường muốn invariance với translation nhỏ. Detection và segmentation lại cần giữ spatial correspondence, nên equivariance thường quan trọng hơn pure invariance.
+Classification thường muốn invariance với translation nhỏ. Detection/segmentation cần giữ spatial correspondence, nên equivariance quan trọng hơn pure invariance.
 
 ## Feature Pyramid
 
-Object có thể xuất hiện ở nhiều scale khác nhau. Classical system dùng image pyramid hoặc feature pyramid để detect object ở nhiều resolution.
+Objects có nhiều scales. Classical systems dùng image pyramids hoặc feature pyramids để detect object ở multiple resolutions.
 
-Modern CNN tiếp tục ý tưởng này bằng **Feature Pyramid Network (FPN)**, nơi representation ở nhiều spatial resolution được kết hợp.
+Modern Feature Pyramid Networks giữ multi-scale feature maps trong CNN.
 
 ## Dimensionality Reduction
 
-Descriptor high-dimensional có thể được compress bằng PCA.
+Descriptors high-dimensional có thể compress bằng PCA. PCA giữ directions of largest variance nhưng không guarantee semantic importance.
 
-PCA giữ direction có variance lớn nhất nhưng không bảo đảm direction đó là semantic feature quan trọng nhất cho downstream task.
-
-Whitening có thể decorrelate dimension, nhưng cũng có thể amplify low-variance noise.
+Whitening có thể decorrelate dimensions nhưng đôi khi amplify low-variance noise.
 
 ## Metric Learning
 
-Nếu representation dùng cho matching hoặc retrieval, ta muốn entity liên quan nằm gần nhau và entity khác nằm xa nhau.
+Nếu representation dùng cho retrieval/matching, ta muốn similar entities close và dissimilar far.
 
-Contrastive hoặc triplet objective theo trực giác:
+Contrastive/triplet objectives:
 
 ```text
 anchor-positive distance ↓
 anchor-negative distance ↑
 ```
 
-Face recognition và image retrieval hiện đại phụ thuộc mạnh vào learned metric embedding.
+Modern face recognition và image retrieval dựa heavily vào learned metric embeddings.
 
-## Hand-Designed và Learned Feature
+## Hand-Designed vs Learned Features
 
-Hand-designed feature encode prior từ kiến thức con người, ví dụ:
-
-```text
-edge quan trọng
-local gradient quan trọng
-scale/orientation normalization hữu ích
-```
-
-Deep Learning thay vào đó học feature hierarchy từ data:
+Hand-designed features encode strong prior từ human knowledge:
 
 ```text
-pixel
-→ edge / texture
-→ part-level pattern
-→ object / semantic pattern
+edges matter
+local gradients matter
+scale/orientation normalization useful
 ```
 
-Không nên hiểu hierarchy này như một mapping cứng theo layer, nhưng nó là mental model hữu ích.
+Deep learning học hierarchy từ data:
+
+```text
+pixels
+→ edges/textures
+→ parts
+→ objects/semantic patterns
+```
+
+Không nên hiểu hierarchy này quá literal, nhưng nó là mental model hữu ích.
 
 ## Transfer Learning
 
-Một pretrained visual backbone có thể tạo representation dùng chung cho nhiều task.
+A pretrained visual backbone produces generic representations. Downstream task có thể:
 
-Downstream task có thể:
+- freeze backbone + train head;
+- fine-tune all layers;
+- use adapters/parameter-efficient tuning.
 
-- freeze backbone và chỉ train head;
-- fine-tune toàn bộ network;
-- dùng adapter hoặc parameter-efficient tuning.
-
-Representation càng tốt thì downstream task thường cần càng ít labeled data hơn.
+Representation quality quyết định sample efficiency downstream.
 
 ## Self-Supervised Visual Representation
 
-Annotation image rất đắt. Self-supervised method học từ augmentation, masking hoặc relation giữa các view của cùng image.
+Labels expensive. Self-supervised methods học từ image augmentations/masking.
 
 Contrastive idea:
 
 ```text
-hai view của cùng image → embedding nên gần nhau
-view của image khác     → embedding nên xa hơn
+two views of same image → embeddings should align
+views of different images → separated
 ```
 
-Masked image modeling lại che patch rồi yêu cầu model reconstruct hoặc predict representation của phần bị che.
+Masked image modeling reconstruct/predict missing patches/features.
 
 ## CLIP-Style Representation
 
-Image encoder và text encoder có thể được train để image-text pair đúng nằm gần nhau trong shared embedding space.
+Image encoder và text encoder được train để aligned image-text pairs close trong shared embedding space.
 
-Điều này cho phép zero-shot classification hoặc retrieval:
+Điều này tạo powerful zero-shot classification/retrieval:
 
 ```text
 image embedding
-so với
-text embedding của candidate label
+vs
+text embeddings of candidate labels
 ```
 
-Đây là cầu trực tiếp từ Computer Vision sang Multimodal AI.
+Đây là bridge trực tiếp sang multimodal AI.
 
 ## Representation Collapse
 
-Self-supervised objective có nguy cơ model output cùng một vector cho mọi input — hiện tượng **representation collapse**.
+Self-supervised objectives có risk model output same vector cho everything. Methods cần negatives, predictors, stop-gradient hoặc variance/covariance constraints để tránh trivial solution.
 
-Các method khác nhau dùng negative sample, predictor, stop-gradient hoặc variance/covariance constraint để tránh trivial solution này.
+## Feature Quality is Task-Dependent
 
-## Feature Quality phụ thuộc Task
-
-Embedding tốt cho semantic image retrieval chưa chắc tốt cho fine-grained defect inspection.
-
-“Good representation” luôn phải được hiểu tương đối với downstream objective và loại variation cần giữ hoặc bỏ.
+Embedding tốt cho semantic retrieval chưa chắc tốt cho fine-grained defect inspection. “Good representation” luôn relative to downstream structure.
 
 ## Linear Probe
 
-Một cách đơn giản để đánh giá representation là freeze encoder rồi train linear classifier trên top.
-
-Nếu linear head đạt kết quả tốt, class structure đã tương đối linearly separable trong learned feature space.
+Một cách test representation: freeze encoder, train linear classifier. Nếu simple linear head đạt tốt, semantic classes đã tương đối linearly separable trong feature space.
 
 ## Visualization
 
-t-SNE hoặc UMAP có thể project high-dimensional feature xuống 2D để inspect.
+t-SNE/UMAP có thể visualize high-dimensional features nhưng 2D plots distort global geometry; không nên dùng cluster đẹp làm proof chất lượng.
 
-Nhưng projection làm méo geometry. Cluster nhìn đẹp trong 2D không phải bằng chứng đủ rằng representation tốt cho task thực tế.
+## Explainability Caution
 
-## Cẩn trọng với Explainability
+Activation map/nearest neighbors giúp inspect representation nhưng không cho complete causal explanation model decision.
 
-Activation map, nearest neighbor hoặc feature visualization giúp inspect model, nhưng không cung cấp complete causal explanation cho quyết định của network.
+## Mental Model
 
-## Mô hình tư duy
+> **Feature representation là coordinate system mới nơi distinctions quan trọng của task trở nên dễ xử lý hơn.**
 
-> **Feature representation là một coordinate system mới nơi những distinction quan trọng cho task trở nên dễ xử lý hơn.**
+Deep learning mạnh vì nó học coordinate system cùng objective thay vì chỉ dùng features cố định.
 
-Deep Learning mạnh vì nó học coordinate system cùng với objective thay vì cố định feature từ trước.
+## Common Misconceptions
 
-## Những nhầm lẫn thường gặp
+### “Learned features luôn tốt hơn hand-crafted”
 
-### “Learned feature luôn tốt hơn hand-crafted feature”
+Không nếu data nhỏ, constraints rõ hoặc feature engineering encode domain physics mạnh.
 
-Không. Khi data ít hoặc domain physics rõ, hand-crafted feature có thể rất hiệu quả và dễ kiểm soát.
+### “Embedding distance = semantic truth”
 
-### “Embedding distance là semantic truth”
-
-Không. Distance phản ánh training objective và data distribution.
+Distance phản ánh training objective và data, không universal semantics.
 
 ### “Invariance càng nhiều càng tốt”
 
-Không. Nếu một transformation làm đổi label, ép invariance sẽ làm mất information cần thiết.
+Nếu transformation đổi label, invariance gây mất information.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Feature representation nối [Representation Learning](../05_neural_networks/08_representation_learning.md), dimensionality reduction và metric learning. CNN đưa locality và translation bias trực tiếp vào quá trình representation learning.
+Feature representation nối [Representation Learning](../05_neural_networks/08_representation_learning.md), dimensionality reduction và metric learning. CNN là architecture đưa locality/translation bias trực tiếp vào representation learning.
 
-Xem tiếp: [CNN trong Computer Vision](./03_cnn_for_vision.md).
+Xem tiếp: [CNN for Vision](./03_cnn_for_vision.md).

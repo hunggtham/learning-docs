@@ -1,127 +1,82 @@
-# Thiết kế Agent đáng tin cậy
+# Reliable Agent Design
 
-Một agent đáng tin cậy không xuất hiện chỉ nhờ prompt kiểu “hãy cẩn thận”. **Độ tin cậy (reliability)** đến từ kiến trúc có khả năng giới hạn uncertainty, kiểm soát side effect, verify progress và phục hồi sau failure.
+Reliable agent không đến từ một prompt “hãy cẩn thận”. Reliability xuất hiện khi architecture giới hạn uncertainty, kiểm soát side effects, verify progress và phục hồi được sau failure.
 
-Một mô hình production có thể nhìn như sau:
+Một production mental model:
 
 ```text
-Mục tiêu của user
-→ plan được giới hạn phạm vi
-→ action space có ranh giới
-→ execution được validate
-→ observation của kết quả
+User goal
+→ scoped plan
+→ bounded action space
+→ validated execution
+→ observed result
 → verification
-→ state được persist
-→ tiếp tục / escalate / dừng
+→ persisted state
+→ continue / escalate / stop
 ```
 
-## Nguyên tắc 1: Chỉ dùng Autonomy khi nó tạo giá trị
+## Principle 1: Minimize autonomy where it adds no value
 
-Nếu logic đã biết trước, code hoặc workflow deterministic thường đáng tin hơn. Chỉ nên giao cho model những quyết định thật sự cần semantic flexibility.
+Nếu logic known trước, code/workflow deterministic thường đáng tin hơn. Chỉ giao cho model những decision cần semantic flexibility.
 
 ```text
-branch đã biết      → code trực tiếp
-semantic choice mơ hồ → model có thể quyết định
-write rủi ro cao    → policy + approval
+known branch → code it
+ambiguous semantic choice → model may decide
+high-risk write → policy + approval
 ```
 
-Autonomy là một trade-off, không phải mục tiêu tự thân.
+## Principle 2: Narrow the action space
 
-## Nguyên tắc 2: Thu hẹp Action Space
+Tool ít nhưng meaningful tốt hơn raw shell/API toàn quyền. Typed actions tạo boundary rõ cho authorization và audit.
 
-Một số tool nhỏ nhưng có semantics rõ thường tốt hơn raw shell hoặc API toàn quyền. Typed action tạo boundary rõ cho authorization, validation và audit.
+## Principle 3: Separate proposal from execution
 
-Ví dụ `delete_customer_account(customer_id)` có thể dễ kiểm soát hơn một generic `execute_sql(sql)` rất nhiều.
-
-## Nguyên tắc 3: Tách Proposal khỏi Execution
-
-LLM đề xuất action. Runtime kiểm tra:
+LLM đề xuất action. Runtime kiểm:
 
 ```text
 schema
-business constraint
+business constraints
 permission
 risk
 budget
 approval
 ```
 
-sau đó mới thực thi.
+rồi mới execute.
 
-Probabilistic reasoning và deterministic execution không nên bị trộn thành một bước không kiểm soát.
+## Principle 4: Use least privilege
 
-## Nguyên tắc 4: Least Privilege
+Credentials và tools chỉ có quyền cần thiết. Read-only mặc định; write permission tách riêng; destructive operations cần stronger gates.
 
-Credential và tool chỉ nên có quyền tối thiểu cần thiết.
+## Principle 5: Make writes idempotent
 
-```text
-read-only mặc định
-write permission tách riêng
-destructive operation có gate mạnh hơn
-```
+Retry-safe design tránh duplicate side effects. Dùng idempotency key, resource version hoặc transaction ID.
 
-Agent không nên có quyền rộng chỉ vì “có thể sẽ cần”.
-
-## Nguyên tắc 5: Thiết kế Write có tính Idempotent
-
-Retry là chuyện bình thường trong distributed system. Write operation nên chống duplicate side effect bằng:
-
-```text
-idempotency key
-resource version
-transaction id
-request id
-```
-
-Nếu cùng một step bị chạy lại, hệ thống cần biết đó là retry chứ không phải một yêu cầu mới.
-
-## Nguyên tắc 6: Verify Effect, không Verify Intent
+## Principle 6: Verify effects, not intentions
 
 Sau mutation:
 
 ```text
-write → đọc lại / test / inspect external state
+write → re-read / test / inspect external state
 ```
 
-Không chấp nhận assertion của model kiểu “đã hoàn thành” nếu hệ thống có thể kiểm tra trạng thái thật.
+Không chấp nhận model assertion “đã xong”.
 
-## Nguyên tắc 7: Persist State có cấu trúc
+## Principle 7: Persist structured state
 
-Conversation transcript không đủ làm durable state. Nên persist ít nhất:
+Conversation transcript không đủ. Persist task status, resource IDs, plan, completed steps, approvals và verification.
 
-```text
-task status
-resource id
-plan
-completed step
-approval
-verification result
-budget
-```
+## Principle 8: Design for restart
 
-Structured state giúp resume, audit và concurrency control đáng tin hơn.
+Worker/model/API có thể fail. Checkpoint after committed side effects. Resume từ known state thay vì replay mù.
 
-## Nguyên tắc 8: Thiết kế để Restart được
+## Principle 9: Classify errors
 
-Worker, model và API đều có thể fail. Cần checkpoint sau committed side effect và resume từ known state thay vì replay toàn bộ trajectory một cách mù quáng.
+Transient, semantic, permission và conflict errors cần recovery khác nhau. Blind retry là anti-pattern.
 
-## Nguyên tắc 9: Phân loại Error
+## Principle 10: Bound the loop
 
-Các error khác nhau cần cách recovery khác nhau:
-
-```text
-transient error   → retry/backoff
-invalid argument  → sửa input
-permission error  → stop/escalate
-conflict          → refetch state
-business rejection→ replan hoặc hỏi user
-```
-
-Blind retry là một anti-pattern.
-
-## Nguyên tắc 10: Giới hạn Loop
-
-Đặt các giới hạn như:
+Đặt limits:
 
 ```text
 max steps
@@ -132,111 +87,98 @@ wall-clock deadline
 repetition threshold
 ```
 
-Agent cần biết khi nào phải dừng, abstain hoặc escalate thay vì tiếp tục vô hạn.
+Agent cần biết khi nào escalate.
 
-## Nguyên tắc 11: Context phải được Curate
+## Principle 11: Context is curated, not dumped
 
-Chỉ đưa vào context state và evidence liên quan. Tách trusted instruction khỏi untrusted content và giữ provenance.
+Inject minimum relevant state/evidence. Tách trusted instructions khỏi untrusted content. Preserve provenance.
 
-Context càng dài không đồng nghĩa quyết định càng tốt.
+## Principle 12: Treat retrieved/tool content as untrusted
 
-## Nguyên tắc 12: Xem Tool Output và Retrieved Content là Untrusted
+Document có thể chứa prompt injection. External data không được tự nâng cấp thành instruction authority.
 
-Document, email, website hoặc API response có thể chứa prompt injection hoặc dữ liệu sai.
+## Principle 13: Human approval by risk class
 
-External data không được tự nâng cấp thành instruction authority chỉ vì nó nằm trong model context.
+Approval policy nên explicit:
 
-## Nguyên tắc 13: Human Approval dựa trên Risk Class
-
-Approval policy nên rõ ràng:
-
-| Action | Mặc định |
+| Action | Default |
 |---|---|
-| Search / read | tự động |
-| Draft artifact | tự động |
-| Sửa state có thể hoàn tác trong sandbox | tự động có kiểm soát |
-| Gửi communication ra ngoài | thường cần approval |
-| Production deploy | approval hoặc policy riêng |
-| Xóa / chuyển tài sản nhạy cảm | approval nghiêm ngặt |
+| Search/read | automatic |
+| Draft artifact | automatic |
+| Modify reversible sandbox state | controlled automatic |
+| Send external communication | often approval |
+| Production deploy | approval/policy |
+| Delete/transfer sensitive assets | strict approval |
 
-Policy cụ thể phụ thuộc domain và impact của failure.
+Exact policy phụ thuộc domain.
 
-## Nguyên tắc 14: Dùng Sandbox cho Exploration
+## Principle 14: Use sandbox for exploration
 
-Coding agent, browser agent hoặc data agent nên thử trong sandbox hoặc staging khi có thể. Failure trong isolated environment rẻ hơn nhiều so với production incident.
+Coding/browser agents nên thử trong sandbox/staging khi có thể. Failure trong isolated environment rẻ hơn production.
 
-## Nguyên tắc 15: Ưu tiên Action có thể hoàn tác
+## Principle 15: Prefer reversible actions
 
-Thứ tự an toàn thường là:
+Ordering:
 
 ```text
 observe → simulate → stage → verify → commit
 ```
 
-Trì hoãn irreversible action tạo thêm cơ hội kiểm tra và recovery.
+Delayed irreversible action tạo opportunity kiểm tra.
 
-## Nguyên tắc 16: Tách Planner, Executor và Verifier
+## Principle 16: Separate planner, executor and verifier concerns
 
-Không nhất thiết phải dùng ba model khác nhau, nhưng ba vai trò logic nên tách:
+Không nhất thiết dùng 3 models, nhưng logical roles nên tách:
 
 ```text
-planner  → đề xuất
-executor → thực hiện operation được phép
-verifier → kiểm acceptance criterion
+planner proposes
+executor performs allowed operation
+verifier checks acceptance criteria
 ```
 
 Independent verifier giảm self-confirmation bias.
 
-## Nguyên tắc 17: Giữ Provenance
+## Principle 17: Preserve provenance
 
-Fact và decision nên truy được về evidence.
+Facts/decisions nên link evidence. Với RAG/research agent, citation phải map tới source chunks/documents. Với tool action, log request/result resource IDs.
 
-Với RAG hoặc research agent, citation cần map tới source chunk hoặc document. Với tool action, log phải giữ request, result và resource id liên quan.
+## Principle 18: Version mutable state
 
-## Nguyên tắc 18: Version Mutable State
-
-Dùng optimistic concurrency khi phù hợp:
+Optimistic concurrency:
 
 ```text
-đọc version 10
-→ đề xuất update
-→ chỉ commit nếu vẫn là version 10
+read v10
+propose update
+commit only if still v10
 ```
 
-Nếu state đã đổi, agent phải refetch rồi replan.
+Nếu stale, refetch và replan.
 
-## Nguyên tắc 19: Theo dõi Economics
+## Principle 19: Monitor economics
 
-Một agent đáng tin nhưng chi phí không kiểm soát vẫn chưa production-ready.
-
-Theo dõi:
+Reliable nhưng cost vô hạn không production-ready. Track:
 
 ```text
 success per dollar
 success per second
-steps per task
-retries per task
+steps/task
+retries/task
 cost by tool/model
 ```
 
-Optimization phải cân bằng quality, reliability, latency và cost.
+## Principle 20: Evaluate adversarially
 
-## Nguyên tắc 20: Evaluation theo hướng Adversarial
+Test happy path chưa đủ. Inject:
 
-Happy-path test chưa đủ. Cần chủ động đưa vào:
-
-- dữ liệu stale;
-- timeout;
-- document độc hại;
-- permission thiếu;
+- stale data;
+- timeouts;
+- malicious documents;
+- missing permissions;
 - partial success;
-- state xung đột;
-- goal thay đổi giữa chừng;
-- tool result bất thường.
+- conflicting state;
+- goal changes.
 
-Hệ thống đáng tin cần fail an toàn khi assumption bị phá vỡ.
-
-## Ví dụ kiến trúc Reliability
+## Reliability Architecture Example
 
 ```mermaid
 flowchart TD
@@ -249,111 +191,106 @@ flowchart TD
     T --> S[Persist Result / State]
     S --> Q[Verifier]
     Q -->|pass| O
-    Q -->|fail / replan| P
+    Q -->|fail/replan| P
     O -->|done| R[Final Result]
 ```
 
-Điểm chính là model nằm bên trong một control structure có permission, validation, state và verification rõ ràng.
-
 ## Reliability Budget
 
-Không phải mọi failure có impact giống nhau. Có thể ưu tiên engineering effort theo:
+Không phải mọi failure equal. Allocate engineering effort theo expected loss:
 
 \[
 Expected\ Loss = P(failure)\times Impact(failure)
 \]
 
-Một lỗi tóm tắt ít rủi ro có thể chấp nhận variance lớn hơn. Payment, deletion hoặc production deployment cần control nghiêm ngặt hơn nhiều.
+Low-impact summarization có thể accept more variance. Payment/deletion cần much stricter controls.
 
 ## Graceful Degradation
 
-Khi model hoặc tool unavailable, hệ thống có thể:
+Khi model/tool unavailable:
 
-- chuyển sang fallback model;
-- chuyển sang read-only mode;
-- giảm scope;
-- queue task để xử lý lại;
-- handoff cho human.
+- fallback model;
+- read-only mode;
+- reduced scope;
+- queue for later;
+- human handoff.
 
-Với high-risk write, nên **fail closed** thay vì improvisation không an toàn.
+Fail closed cho high-risk writes, không improvise insecurely.
 
-## Safe Default
+## Safe Defaults
 
-Action mơ hồ nên mặc định về phương án không phá hủy.
-
-Ví dụ nếu “remove” có thể nghĩa là hide hoặc delete vĩnh viễn, policy nên chọn operation có thể hoàn tác hoặc yêu cầu clarification trước destructive action.
+Ambiguous action nên default non-destructive. Example nếu không rõ “remove” là hide hay delete, ask/choose reversible operation tùy policy.
 
 ## Auditability
 
-Hệ thống cần lưu đủ để reconstruct:
+Store enough to reconstruct:
 
 ```text
-ai yêu cầu
-state nào đã được quan sát
-action nào được đề xuất
-policy nào cho phép
-approval nào đã xảy ra
-tool thật sự đã làm gì
-verifier đã thấy gì
+who requested
+what state was observed
+which action proposed
+which policy approved
+what tool actually did
+what verification saw
 ```
 
-Audit log cần mức chống tampering phù hợp với risk của domain.
+Audit log phải chống tampering theo risk level.
 
 ## Data Privacy
 
-Context minimization cũng là privacy control. Không gửi toàn bộ customer database cho model nếu task chỉ cần một record. Secret và PII nên được redact hoặc không đưa vào context nếu không cần thiết.
+Context minimization cũng là privacy control. Không gửi toàn customer database cho model nếu task cần một record. Redact secrets và PII khi không cần.
 
-## Model Update là System Change
+## Model Updates are System Changes
 
-Đổi model version có thể làm tool selection, formatting và refusal behavior thay đổi. Hãy xử lý model upgrade giống dependency upgrade:
+Đổi model version có thể thay tool behavior. Treat like dependency upgrade:
 
 ```text
 offline eval
-→ canary
-→ monitor
-→ rollback nếu cần
+canary
+monitor
+rollback capability
 ```
 
-## Version Prompt, Tool Schema và Policy
+## Prompt/Tool Schema Versioning
 
-Prompt template, tool schema và policy cần versioning để khi regression xảy ra có thể xác định chính xác configuration nào đã tạo hành vi đó.
+Version prompt templates, tool schemas và policies để trace regression về exact configuration.
 
 ## Incident Response
 
-Khi agent gây incident, quy trình có thể gồm:
+Khi agent gây incident:
 
-1. dừng hoặc cancel task bị ảnh hưởng;
-2. thu hồi credential nguy hiểm nếu cần;
-3. xác định side effect đã xảy ra;
-4. rollback hoặc compensating action;
-5. bảo toàn trace và log;
-6. phân loại root cause;
-7. thêm regression scenario vào eval suite.
+1. stop/cancel affected tasks;
+2. revoke dangerous credentials nếu cần;
+3. identify side effects;
+4. rollback/compensate;
+5. preserve traces;
+6. classify root cause;
+7. add regression scenario.
 
-## Mô hình tư duy
+## Mental Model
 
-> **Reliable agent = probabilistic reasoning được giới hạn bên trong deterministic safety và systems boundary.**
+> **Reliable agent = bounded probabilistic reasoning inside deterministic safety and systems boundaries.**
 
-Model không cần hoàn hảo nếu hệ thống có khả năng phát hiện, giới hạn và phục hồi failure tốt. Nhưng high-risk action không nên phụ thuộc vào khả năng “tự kiềm chế” của model.
+Model không cần hoàn hảo nếu system phát hiện, giới hạn và phục hồi failure tốt. Nhưng high-risk actions không nên phụ thuộc vào model self-restraint alone.
 
-## Những nhầm lẫn thường gặp
+## Common Misconceptions
 
 ### “Model mạnh hơn sẽ giải quyết reliability”
 
-Không. Model quality giúp giảm một số lỗi nhưng không thay transaction, authorization, state consistency hoặc observability.
+Model quality giúp, nhưng không thay transaction, authorization, state consistency hay observability.
 
 ### “Guardrail prompt là security boundary”
 
-Không. Prompt chỉ là behavioral signal, không phải access-control mechanism.
+Prompt là behavioral signal, không phải access-control mechanism.
 
 ### “Human-in-the-loop tự động làm hệ thống an toàn”
 
-Không. Approval quá nhiều có thể dẫn tới rubber-stamping. Chỉ nên escalate risk thật sự và cung cấp context đủ rõ cho human reviewer.
+Approval overload gây rubber-stamping. Chỉ escalate meaningful risk với context rõ.
 
 ### “Agent có thể tự verify mọi thứ”
 
-Không. Verification đáng tin hơn khi dựa vào deterministic test, independent source hoặc external state có thể kiểm tra trực tiếp.
+Verification tốt nhất dựa deterministic tests, independent sources hoặc external state khi có thể.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Thiết kế agent đáng tin cậy kết hợp Software Engineering, Security, Distributed Systems, Databases, HCI, AI Evaluation và classical control loop. Đây là điểm kết thúc layer Agent trước khi chuyển sang Reinforcement Learning, nơi policy được học trực tiếp từ reward và interaction.
+Reliable agent design kết hợp Software Engineering, Security, Distributed Systems, Databases, HCI, AI Evaluation và classical control loops. Đây là điểm kết thúc layer Agent trước khi chuyển sang Reinforcement Learning, nơi agent học policy trực tiếp từ reward/interaction.

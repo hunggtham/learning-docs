@@ -1,6 +1,6 @@
 # Q-Learning
 
-**Q-learning (Q 러닝)** là một thuật toán **Temporal-Difference control không cần model (model-free)** và **off-policy**, dùng để học xấp xỉ optimal action-value function:
+**Q-learning (Q 러닝)** là model-free, off-policy Temporal Difference control algorithm học approximation của optimal action-value function:
 
 \[
 Q^*(s,a)
@@ -14,40 +14,35 @@ Q(S_t,A_t)\leftarrow Q(S_t,A_t)+\alpha\left[R_{t+1}+\gamma\max_a Q(S_{t+1},a)-Q(
 
 ## Vì sao Q-learning mạnh?
 
-Agent có thể hành động theo một behavior policy có exploration, trong khi learning target vẫn hướng về greedy optimal policy.
+Agent có thể behave exploratory nhưng target update toward greedy policy. Đây là off-policy distinction:
 
 ```text
-behavior policy → tạo dữ liệu
-
-greedy target policy → định hướng learning
+behavior policy → generates data
+optimal greedy target → drives learning
 ```
 
-Đây chính là đặc trưng off-policy.
-
-Trong tabular setting, với exploration đủ và các giả định hội tụ chuẩn, Q-learning có thể hội tụ về `Q*`.
+Với sufficient exploration và standard tabular assumptions, Q-learning converge tới `Q*`.
 
 ## Greedy Policy từ Q
 
-Nếu Q-function đã đủ chính xác:
+Nếu Q đã tốt:
 
 \[
 \pi(s)=\arg\max_a Q(s,a)
 \]
 
-Agent có thể chọn action tốt nhất mà không cần biết transition model của environment.
+Không cần explicit transition model để chọn action.
 
 ## Exploration
 
-Nếu luôn greedy ngay từ random initial Q, agent có thể không bao giờ khám phá action tốt nằm ngoài trajectory ban đầu.
-
-Một cách đơn giản là epsilon-greedy:
+Nếu luôn greedy từ random initial Q, agent có thể không discover good actions. Epsilon-greedy:
 
 ```text
-với xác suất ε → chọn action ngẫu nhiên
-ngược lại       → chọn argmax Q(s,a)
+random action with ε
+argmax Q otherwise
 ```
 
-`ε` có thể giảm dần theo thời gian, nhưng giảm quá nhanh khiến state-action coverage không đủ.
+`ε` có thể decay theo time, nhưng decay quá nhanh dẫn tới insufficient exploration.
 
 ## Off-Policy Target
 
@@ -57,126 +52,99 @@ Q-learning target:
 y=R+\gamma\max_{a'}Q(s',a')
 \]
 
-không phụ thuộc action mà behavior policy thực sự chọn ở next step.
+không depend on action behavior policy thực sự chọn ở next step. Vì vậy agent có thể learn greedy target while behaving exploratory.
 
-Do đó agent có thể tiếp tục explore trong environment nhưng value update vẫn giả định rằng từ next state trở đi sẽ chọn action greedy nhất.
+## SARSA Contrast
 
-## So sánh với SARSA
-
-SARSA dùng target:
+SARSA target:
 
 \[
 R+\gamma Q(s',a'_{behavior})
 \]
 
-Nó tính đến action thực tế mà exploratory behavior policy sẽ chọn.
+Trong risky environment, SARSA có thể learn safer path under exploratory behavior vì nó accounts possibility of exploratory mistakes. Q-learning learns value of ideal greedy continuation.
 
-Trong environment có rủi ro, SARSA đôi khi học route thận trọng hơn vì value phản ánh possibility của exploratory mistake. Q-learning lại học value của một ideal greedy continuation.
+## Tabular Limit
 
-## Giới hạn của Tabular Q-learning
-
-Q-table cần kích thước:
+Table size:
 
 \[
 |S|\times|A|
 \]
 
-Điều này không khả thi với image state, continuous state hoặc state space khổng lồ.
-
-Function approximation dẫn tới Deep Q-Network (DQN), nơi neural network nhận state và output Q-value cho action.
+không feasible cho images/continuous states. Function approximation leads to Deep Q-Networks.
 
 ## Overestimation Bias
 
-Operator `max` trên các Q estimate có noise có xu hướng chọn estimate bị noise đẩy lên cao.
-
-Điều này tạo **overestimation bias**.
-
-Double Q-learning tách action selection và action evaluation để giảm bias.
+`max` over noisy estimates tends to select positive noise. Double Q-learning separates action selection and evaluation to reduce bias.
 
 ## Experience Replay
 
-Deep Q-learning thường lưu transition:
+Deep Q-learning stores transitions:
 
 ```text
-(s, a, r, s', done)
+(s,a,r,s',done)
 ```
 
-vào **replay buffer**, sau đó sample mini-batch để training.
+in replay buffer and samples mini-batches.
 
-Lợi ích:
+Benefits:
 
-- giảm temporal correlation giữa sample liên tiếp;
-- tái sử dụng experience nhiều lần;
-- tăng hiệu quả batching trên GPU;
-- hỗ trợ off-policy learning.
+- breaks temporal correlation;
+- reuses data;
+- improves hardware batching.
 
-Tuy nhiên replay buffer cũng tạo vấn đề về stale data, sampling distribution và ưu tiên sample.
+But replay distribution may differ from current policy; this is compatible with off-policy learning but creates prioritization/staleness concerns.
 
 ## Target Network
 
-Nếu cùng một neural network vừa tạo target vừa được update liên tục, target sẽ di chuyển quá nhanh và training dễ bất ổn.
+If same network both defines target and is updated every gradient step, target moves rapidly.
 
-DQN dùng một target network `Q_{θ^-}` được freeze hoặc cập nhật chậm:
+DQN keeps slowly updated/frozen target network:
 
 \[
 y=r+\gamma\max_{a'}Q_{\theta^-}(s',a')
 \]
 
-Online network `Q_θ` được optimize để tiến gần target này.
+then optimize online network `Q_θ` toward target.
 
-Target network làm bootstrapping ổn định hơn.
+Target network stabilizes bootstrapping.
 
 ## DQN Loss
-
-Một loss điển hình:
 
 \[
 L(\theta)=\mathbb E[(y-Q_\theta(s,a))^2]
 \]
 
-Trong thực tế Huber loss thường được dùng để giảm ảnh hưởng của TD error quá lớn.
+or Huber loss often used for robustness.
 
-## Terminal Transition
+## Terminal Transitions
 
-Nếu transition kết thúc episode:
+If transition ends episode:
 
 \[
 y=r
 \]
 
-Không bootstrap từ terminal next state.
+No bootstrap from terminal next state.
 
-Xử lý sai `done` hoặc terminal flag có thể làm value estimate bị bias.
+Incorrect handling `done` can bias learning.
 
 ## Reward Clipping
 
-Một số deep RL system cổ điển clip reward để ổn định training.
+Some classic deep RL systems clip rewards for stability, but this changes objective by discarding magnitude information. Engineering trick must be understood as objective transformation.
 
-Nhưng clipping thay đổi objective vì loại bỏ thông tin magnitude của reward.
+## Continuous Actions
 
-Do đó đây không chỉ là một numerical trick; nó có thể thay behavior mà agent tối ưu.
+`max_a Q(s,a)` difficult when action continuous high-dimensional. Actor-critic methods learn explicit policy to produce action, avoiding exhaustive argmax.
 
-## Continuous Action
+## Q-learning và Planning Analogy
 
-Trong continuous high-dimensional action space, việc tính:
+Q value acts like cached long-term action utility. Classical planning computes consequence from model; Q-learning learns it from experience.
 
-\[
-\max_a Q(s,a)
-\]
+## Example
 
-trở nên khó vì không thể enumerate toàn bộ action.
-
-Actor–critic method giải quyết bằng cách học explicit policy network để trực tiếp tạo action thay vì exhaustive argmax.
-
-## Liên hệ với Planning
-
-Q-value có thể được xem như cached estimate của long-term utility cho từng state-action pair.
-
-Classical planning tính consequence bằng environment model. Q-learning học consequence từ experience.
-
-## Ví dụ số
-
-Giả sử:
+Suppose:
 
 ```text
 Q(s,a)=2
@@ -192,10 +160,10 @@ Target:
 1+0.9\times5=5.5
 \]
 
-TD error:
+Error:
 
 \[
-5.5-2=3.5
+3.5
 \]
 
 Update:
@@ -204,44 +172,34 @@ Update:
 Q(s,a)=2+0.1\times3.5=2.35
 \]
 
-Q-value dịch dần về phía observed Bellman target thay vì bị ghi đè trong một lần.
+## Distribution Shift in Replay
 
-## Distribution Shift trong Replay Buffer
+Old buffer transitions may come from obsolete policies. Too-old data can slow adaptation; too-recent-only data reduces diversity. Replay design is a data-engineering problem inside RL.
 
-Transition cũ có thể được tạo bởi policy đã rất khác policy hiện tại.
+## Offline Q-Learning Risk
 
-Nếu buffer chứa quá nhiều data cũ, adaptation có thể chậm. Nếu chỉ giữ sample rất mới, diversity giảm và temporal correlation tăng.
+If dataset lacks certain actions, max may exploit overestimated unseen actions. Conservative offline RL methods penalize out-of-distribution action values.
 
-Replay buffer vì vậy cũng là một data-engineering problem bên trong RL.
+## Mental Model
 
-## Rủi ro của Offline Q-Learning
+> **Q-learning học “nếu ở state này và làm action này, long-term return tốt nhất có thể từ đó là bao nhiêu?”.**
 
-Trong offline RL, dataset có thể không chứa một số action. Nhưng Q-function vẫn phải output value cho chúng.
-
-Operator `max` có thể chọn một unseen action bị overestimate chỉ vì function approximator extrapolate sai.
-
-Đây là lý do conservative offline RL cố penalize hoặc hạn chế value của out-of-distribution action.
-
-## Mô hình tư duy
-
-> **Q-learning học: “nếu đang ở state này và chọn action này, long-term return tốt nhất có thể đạt từ đây là bao nhiêu?”**
-
-## Những nhầm lẫn thường gặp
+## Common Misconceptions
 
 ### “Q-learning cần biết environment model”
 
-Không. Nó học trực tiếp từ sampled transition.
+Không; nó học from transitions.
 
-### “Off-policy nghĩa là không cần exploration”
+### “Off-policy nghĩa là agent không cần exploration”
 
-Không. Off-policy chỉ nói target policy khác behavior policy; learning vẫn cần đủ data coverage.
+Vẫn cần data coverage cho relevant state-actions.
 
-### “DQN chỉ là thay Q-table bằng neural network”
+### “DQN chỉ là Q-table bằng neural network”
 
-Không hoàn toàn. Function approximation tạo instability mới, nên replay buffer, target network và các stabilizer trở thành thành phần rất quan trọng.
+Function approximation thêm instability; replay/target networks là critical system changes.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Q-learning nối TD bootstrapping với Deep Learning. Policy-gradient method ở chapter tiếp theo tiếp cận control theo hướng khác: optimize trực tiếp policy distribution thay vì gián tiếp chọn argmax trên Q.
+Q-learning nối TD bootstrapping với Deep Learning. Policy-gradient methods tiếp cận control trực tiếp bằng optimizing policy distribution thay vì argmax trên Q.
 
 Xem tiếp: [Policy Gradient](./07_policy_gradient.md).

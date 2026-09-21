@@ -1,209 +1,211 @@
-# Embedding và không gian ngữ nghĩa trong hệ thống LLM
+# Embeddings và Semantic Space trong LLM Systems
 
-“Embedding” trong bối cảnh LLM có ít nhất ba nghĩa cần tách biệt: **embedding token đầu vào (input token embedding)**, **trạng thái ẩn theo ngữ cảnh (contextual hidden state)** và **đầu ra của mô hình embedding bên ngoài dùng cho truy xuất hoặc đo tương đồng**. Cả ba đều là vector nhưng được tối ưu cho mục tiêu khác nhau.
+“Embedding” trong LLM context có ít nhất ba meanings cần tách: **input token embedding**, **internal contextual hidden states**, và **external embedding model output dùng cho retrieval/similarity**. Chúng đều là vectors nhưng objective/use khác nhau.
 
-Nếu trộn ba khái niệm này, ta dễ nghĩ cơ sở dữ liệu vector đang lưu “suy nghĩ của LLM” hoặc embedding token chính là embedding ngữ nghĩa của cả câu. Hai cách hiểu đó đều không chính xác.
+Nếu trộn ba loại, dễ nghĩ vector database đang lưu “LLM thoughts” hoặc token embedding là semantic sentence embedding. Không đúng.
 
-## Embedding token đầu vào
+## Input Token Embedding
 
-Token ID được ánh xạ tới một hàng trong ma trận:
+Tokenizer ID maps row:
 
 \[
 x_t=E[token_t]
 \]
 
-với `E∈R^{V×d_model}` được huấn luyện cùng mô hình ngôn ngữ.
+`E∈R^{V×d_model}` trained jointly with language model.
 
-Vector này là biểu diễn ban đầu không phụ thuộc ngữ cảnh. Quá trình đưa ngữ cảnh vào biểu diễn xảy ra qua các layer Transformer.
+This vector is context-independent initial representation. Contextualization happens through Transformer layers.
 
-## Trạng thái ẩn theo ngữ cảnh
+## Contextual Hidden State
 
-Sau layer `l`:
+After layer `l`:
 
 \[
 h_t^{(l)}=TransformerLayer_l(...)
 \]
 
-trạng thái của token phụ thuộc những token khác mà attention được phép nhìn thấy. Cùng một token có thể có vector ẩn khác nhau trong các context khác nhau.
+depends other allowed tokens. Same token has different hidden state based context.
 
-Các trạng thái ẩn nội bộ được tối ưu chủ yếu cho mục tiêu của mô hình ngôn ngữ, không mặc định được tối ưu cho tìm kiếm câu bằng cosine similarity.
+Internal hidden states optimized for next-token objective, not necessarily cosine sentence search.
 
-## Chiếu ngược ra từ vựng
+## Output / Unembedding
 
-Trạng thái ẩn cuối được ánh xạ thành logit của vocabulary:
+Final hidden state maps to vocabulary logits:
 
 \[
 z=W_Uh_t
 \]
 
-Nhiều kiến trúc dùng **chia sẻ trọng số (weight tying)** với `W_U=E^T`, nhưng đây không phải quy tắc bắt buộc.
+Often `W_U=E^T` through weight tying, but not universal.
 
-Tích vô hướng giữa trạng thái ẩn và vector đầu ra của token tạo điểm tương thích trước softmax. Điều này tạo quan hệ hình học giữa không gian ẩn và từ vựng, nhưng hành vi cuối cùng vẫn là kết quả của toàn bộ chuỗi layer và context.
+Dot product hidden state with token output vectors yields token compatibility logits.
 
-## Mô hình embedding bên ngoài
+This creates interesting geometric relation between hidden space and vocabulary, but softmax behavior is contextual/composed through layers.
 
-Mô hình truy xuất thường ánh xạ cả query, document hoặc chunk:
+## External Embedding Model
+
+Retrieval model maps whole query/document/chunk:
 
 \[
 f(text)\rightarrow z\in R^d
 \]
 
-và được huấn luyện bằng mục tiêu contrastive hoặc retrieval để độ tương đồng vector phản ánh mức liên quan ngữ nghĩa.
+trained with contrastive/retrieval objective so vector similarity corresponds relevance/semantic relation.
 
-Trạng thái ẩn cuối của một chat LLM không tự động là embedding truy xuất tốt. Mô hình embedding chuyên dụng thường vừa tốt hơn cho retrieval vừa rẻ hơn.
+A chat LLM's last hidden state is not automatically good retrieval embedding. Dedicated embedding model usually better/cheaper.
 
-## Không gian ngữ nghĩa không phải từ điển các concept
+## Semantic Space không phải dictionary of concepts
 
-Một vector không có ý nghĩa độc lập với mô hình và objective. Nếu xoay toàn bộ không gian embedding bằng một phép biến đổi bảo toàn tích vô hướng, hành vi dựa trên khoảng cách có thể không đổi. Vì vậy từng chiều riêng lẻ không phải một “trục ngữ nghĩa” cố định.
+A vector has no meaning independent model/objective. Rotating entire embedding space while preserving dot products can leave behavior unchanged; individual coordinate therefore not canonical semantic axis.
 
-Ý nghĩa chủ yếu nằm trong quan hệ giữa các vector, subspace và phép tính phía sau.
+Meaning lies relationships/subspaces and downstream computation.
 
-## Cosine similarity và dot product
+## Cosine vs Dot Product
 
-Nếu vector đã chuẩn hóa:
+If vectors normalized:
 
 \[
 q^Td=cos(q,d)
 \]
 
-Nếu chưa chuẩn hóa, dot product còn chịu ảnh hưởng độ lớn vector. Một số mô hình có thể sử dụng norm như một phần tín hiệu. Do đó metric trong vector database phải phù hợp với cách mô hình embedding được huấn luyện và khuyến nghị sử dụng.
+If not normalized, dot-product includes magnitude. Some embedding models use vector norm to encode confidence/frequency; follow recommended similarity.
 
-## Embedding có thể cắt ngắn
+Vector DB metric must match training objective.
 
-Một số mô hình dùng **Matryoshka Representation Learning** để phần prefix của vector vẫn giữ thông tin hữu ích. Ví dụ có thể giảm từ 1024 xuống 256 chiều với suy giảm chất lượng có kiểm soát.
+## Matryoshka / Truncatable Embeddings
 
-Lợi ích là giảm dung lượng lưu trữ và tăng tốc ANN. Tuy nhiên tính chất này phải được huấn luyện và đánh giá; cắt tùy ý embedding thông thường có thể phá hỏng chất lượng.
+Some models train embedding so prefix dimensions retain useful information; vector can truncate from e.g. 1024 to 256 dimensions with graceful degradation.
 
-## Đánh đổi số chiều embedding
+Benefit storage/ANN speed. This property must be trained/validated; arbitrary truncating generic embedding may destroy quality.
 
-Số chiều cao hơn tăng khả năng biểu diễn nhưng cũng tăng:
+## Embedding Dimension Trade-off
 
-- dung lượng lưu trữ;
-- băng thông bộ nhớ;
-- kích thước chỉ mục ANN;
-- độ trễ truy xuất;
-- độ phức tạp của hệ thống.
+Higher dimension increases capacity but also:
 
-Sau một mức nhất định, tăng chiều có thể chỉ cải thiện nhỏ. Cần đánh giá trên corpus thật.
+- storage;
+- memory bandwidth;
+- ANN index size;
+- retrieval latency;
+- sample/overfit complexity.
 
-## Chuẩn hóa và lượng tử hóa embedding
+Beyond a point, quality gain may small. Evaluate target corpus.
 
-Kho vector lớn có thể lưu bằng FP16, int8 hoặc mã product quantization để giảm bộ nhớ. Đổi lại recall của ANN có thể giảm.
+## Embedding Normalization và Quantization
 
-Lượng tử hóa embedding/index khác với lượng tử hóa trọng số LLM, dù cùng dựa trên nguyên lý xấp xỉ số.
+Large vector corpora can store FP16/int8/product-quantized codes. Compression saves memory at recall cost.
 
-## Pipeline tìm kiếm ngữ nghĩa
+Quantization of embeddings/index is separate from LLM weight quantization, though principles numerical approximation related.
+
+## Semantic Search Pipeline
 
 ```text
-Tài liệu
-→ chia đoạn
-→ embedding
+Document
+→ chunk
+→ embed
 → index vector + metadata
 
 Query
-→ embedding bằng mô hình tương thích
+→ embed same compatible model
 → ANN search
-→ filter / rerank
+→ filter/rerank
 ```
 
-Không nên trộn vector sinh bởi các phiên bản embedding khác nhau trong cùng không gian nếu chưa chứng minh chúng tương thích.
+Mix embedding model versions corrupts geometry.
 
-## Truy xuất bất đối xứng
+## Asymmetric Retrieval
 
-Vai trò query và document khác nhau. Một số mô hình yêu cầu prefix tác vụ như:
+Query and document roles differ. Some models use task prefixes:
 
 ```text
 query: ...
 passage: ...
 ```
 
-hoặc dùng encoder/projection khác nhau cho hai phía. Bỏ prefix yêu cầu có thể làm chất lượng giảm đáng kể.
+or separate encoders/projections. Ignoring required prefixes lowers quality.
 
-## Tìm kiếm lai
+## Hybrid Search
 
-Dense embedding đôi khi yếu với ID chính xác, tên riêng, số hoặc từ khóa hiếm. BM25 và sparse retrieval lại mạnh ở khớp từ chính xác.
+Dense embeddings struggle exact IDs/names/numbers sometimes. BM25 lexical retriever catches exact terms.
 
-**Tìm kiếm lai (hybrid search)** kết hợp sparse và dense signal, đặc biệt hữu ích với mã nguồn, tài liệu sản phẩm, pháp lý hoặc corpus doanh nghiệp.
+Hybrid retrieval fuses sparse + dense signals, especially enterprise code/product/legal docs.
 
-## Tinh chỉnh embedding
+## Embedding Fine-Tuning
 
-Cặp dương và âm theo domain có thể điều chỉnh geometry của không gian.
+Domain positives/negatives can adapt geometry.
 
-Ví dụ hard negative:
+Hard negative example:
 
 ```text
-query: đặt lại PIN thẻ doanh nghiệp
-negative: đặt lại mật khẩu ngân hàng cá nhân
+query: reset corporate card PIN
+negative: reset personal bank password
 ```
 
-Hai câu gần về ngữ nghĩa chung nhưng khác tác vụ, buộc mô hình học ranh giới tinh hơn. Cần kiểm soát **false negative** để không đẩy xa những tài liệu thực sự liên quan.
+Semantically close but task-irrelevant, forcing model learn fine distinctions.
 
-## Embedding và quyền riêng tư
+False negatives must be controlled.
 
-Vector không được đảm bảo là dữ liệu ẩn danh. Các tấn công có thể suy ra thuộc tính, membership hoặc một phần nội dung nguồn tùy mô hình và mức truy cập.
+## Embeddings and Privacy
 
-Không nên công khai vector store chỉ vì “nó chỉ chứa số”. Kiểm soát truy cập, mã hóa và chính sách dữ liệu vẫn cần thiết.
+Vectors are not guaranteed anonymous. Embeddings can leak attributes/membership/content under attacks; sensitive source permissions still apply.
 
-## Đảo ngược embedding
+Do not expose vector store assuming “only numbers”. Access control and encryption remain needed.
 
-Nghiên cứu đã cho thấy trong một số điều kiện có thể tái tạo hoặc suy luận đặc điểm của dữ liệu nguồn từ embedding. Khả năng cụ thể phụ thuộc mô hình và threat model, nhưng nguyên tắc an toàn là coi embedding tạo từ dữ liệu nhạy cảm cũng là dữ liệu nhạy cảm dẫn xuất.
+## Embedding Inversion
 
-## Bộ nhớ LLM và bộ nhớ vector
+Research can sometimes reconstruct or infer source text/attributes from embeddings. Exact feasibility depends model/access, but principle: embedding is derived sensitive data.
 
-Ứng dụng có thể lưu note hoặc sự kiện cũ dưới dạng văn bản + embedding rồi truy xuất về sau. Vector database là hệ thống bộ nhớ ngoài; trọng số LLM không thay đổi chỉ vì ta thêm một bản ghi.
+## LLM Memory vs Vector Memory
+
+Application may store past notes as embeddings and retrieve relevant memories. The vector database is external memory system; LLM weights do not update when inserting memory.
+
+Architecture:
 
 ```text
-hội thoại / sự kiện
-→ bản ghi văn bản
-→ embedding / index
-
-query tương lai
-→ truy xuất bản ghi
-→ đưa vào context
+conversation/event
+→ text record
+→ embedding/index
+future query
+→ retrieve record
+→ context
 → LLM
 ```
 
-Sự phân biệt này tránh cách nói nhân hóa như “LLM đã nhớ vĩnh viễn” khi thực tế ứng dụng chỉ lưu bộ nhớ ngoài.
+This distinction prevents anthropomorphic “LLM remembered permanently” confusion.
 
-## Knowledge Graph và embedding
+## Knowledge Graph + Embedding
 
-Knowledge Graph lưu entity và relation rõ ràng; embedding hỗ trợ truy xuất mờ theo ngữ nghĩa. Hệ thống kiểu GraphRAG có thể kết hợp neighborhood từ graph với passage truy xuất bằng vector.
+Knowledge graph stores explicit entities/relations; embeddings support fuzzy semantic lookup. Hybrid GraphRAG-like systems may retrieve graph neighborhoods + vector passages.
 
-Quan hệ tường minh và độ tương đồng dense bổ sung cho nhau.
+Explicit relation and dense similarity complement each other.
 
-## Mô hình tư duy
+## Mental Model
 
 ```text
-Token embedding
-= mã học được ban đầu cho danh tính token
-
-Contextual hidden state
-= biểu diễn token sau khi tính toán với ngữ cảnh
-
-Retrieval embedding
-= biểu diễn văn bản được huấn luyện để khoảng cách phục vụ truy xuất
+Token embedding      = initial learned code for token identity
+Contextual hidden    = token representation after context computation
+Retrieval embedding  = compressed text representation trained so distance is useful
 ```
 
-Tất cả đều là vector, nhưng mục đích của vector đến từ objective đã tạo ra nó.
+All are vectors, but vector purpose comes from objective.
 
-## Những hiểu lầm thường gặp
+## Common Misconceptions
 
-### “Có thể lấy bất kỳ hidden state nào của LLM đưa vào vector DB để semantic search”
+### “Any LLM hidden state can go into vector DB for semantic search”
 
-Có thể về mặt kỹ thuật, nhưng không đảm bảo hiệu quả. Objective truy xuất chuyên dụng rất quan trọng.
+Possible but not necessarily effective; dedicated retrieval objective matters.
 
-### “Khoảng cách vector là xác suất liên quan”
+### “Vector distance gives probability relevance”
 
-Không. Nếu cần xác suất, điểm similarity phải được hiệu chỉnh và kiểm chứng thực nghiệm.
+No. Score needs empirical calibration if probability required.
 
-### “Embedding loại bỏ tính nhạy cảm của văn bản”
+### “Embedding removes sensitive text”
 
-Không. Hãy coi embedding dẫn xuất từ dữ liệu nhạy cảm là dữ liệu cần bảo vệ.
+No. Treat embeddings derived from sensitive data as sensitive.
 
-### “Embedding càng nhiều chiều thì RAG càng tốt”
+### “Bigger embedding dimension always improves RAG”
 
-Luôn có đánh đổi giữa chất lượng, lưu trữ và ANN. Trong thực tế lỗi retrieval còn thường bị chi phối bởi chunking, dữ liệu và reranking hơn là chỉ số chiều.
+Quality/storage/ANN trade-off; retrieval errors often dominated chunking/data/reranking rather than dimension.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Xem [Contextual Embeddings](../07_natural_language_processing/04_contextual_embeddings.md), [Information Retrieval](../07_natural_language_processing/08_search_and_information_retrieval.md) và layer [Retrieval & RAG](../09_retrieval_and_rag/).
+Xem [Contextual Embeddings](../07_natural_language_processing/04_contextual_embeddings.md), [Information Retrieval](../07_natural_language_processing/08_search_and_information_retrieval.md), and later `09_retrieval_and_rag/`.

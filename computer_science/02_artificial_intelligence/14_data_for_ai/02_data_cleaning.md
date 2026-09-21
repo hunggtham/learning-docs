@@ -1,175 +1,169 @@
-# Làm sạch Dữ liệu
+# Data Cleaning
 
-**Làm sạch dữ liệu (data cleaning / 데이터 정제)** không phải thao tác máy móc kiểu “xóa những hàng xấu”. Đây là quá trình phát hiện và xử lý inconsistency, corruption, missingness, duplicate và lỗi ngữ nghĩa trong khi vẫn cố giữ lại những tín hiệu thật sự có giá trị cho mô hình.
+**Data cleaning (데이터 정제 / làm sạch dữ liệu)** không phải thao tác “xóa những hàng xấu” một cách máy móc. Nó là quá trình phát hiện và xử lý inconsistency, corruption, missingness, duplicates và semantic errors trong khi cố gắng không xóa mất signal thật.
 
-## Làm sạch bắt đầu từ Schema và Ngữ nghĩa
+## Cleaning bắt đầu từ Schema và Semantics
 
-Một giá trị chỉ có thể được gọi là không hợp lệ khi ta hiểu ý nghĩa của field.
+Một value chỉ có thể được gọi là invalid nếu biết meaning của field.
 
 ```text
-age = 250      → không hợp lệ nếu age tính theo năm
-amount = -10   → có thể là lỗi, nhưng cũng có thể là refund hợp lệ
-lat = 91       → không hợp lệ với geographic latitude
+age = 250      → invalid nếu age in years
+amount = -10   → có thể invalid, hoặc refund hợp lệ
+lat = 91       → invalid geographic latitude
 ```
 
-Vì vậy data cleaning cần domain contract, không chỉ một tập generic function.
+Do đó data cleaning cần domain contract, không chỉ generic functions.
 
-## Giá trị Thiếu
+## Missing Values
 
-Missing data có thể xuất hiện vì nhiều nguyên nhân:
+Missing có nhiều nguyên nhân:
 
-- field là optional;
-- sensor bị lỗi;
-- user từ chối cung cấp;
-- feature không áp dụng cho trường hợp đó;
-- nguồn dữ liệu tạm thời không khả dụng;
-- join không khớp;
+- field optional;
+- sensor failure;
+- user refused;
+- feature not applicable;
+- data source unavailable;
+- join mismatch;
 - logging bug.
 
-Nếu gộp tất cả về `null` rồi tự động điền mean, ta có thể xóa mất thông tin về chính cơ chế missing.
+Gộp tất cả thành null rồi impute mean có thể xóa meaning.
 
-Một pattern hữu ích là lưu:
+Useful pattern:
 
 ```text
-giá trị
-+ cờ missing
-+ lý do missing nếu biết
+value
++ missing indicator
++ missing reason when known
 ```
 
 ## Imputation
 
-Một số cách điền giá trị thiếu phổ biến gồm:
+Common approaches:
 
-- hằng số hoặc sentinel;
-- mean, median hoặc mode;
-- giá trị theo group;
-- model-based imputation;
-- forward fill cho time series khi ngữ nghĩa cho phép.
+- constant/sentinel;
+- mean/median/mode;
+- group-based;
+- model-based;
+- forward fill for time series when valid.
 
-Các thống kê dùng cho imputation phải được fit trên training data. Nếu tính mean bằng cả test data, distribution information của test đã bị rò rỉ vào training pipeline.
+Imputation must fit on training data only to avoid leakage. Mean calculated using test data leaks distribution information.
 
-## Outlier
+## Outliers
 
-Một outlier có thể là:
+Outlier có thể là:
 
-- lỗi dữ liệu;
-- trường hợp hiếm nhưng hợp lệ;
-- chính fraud hoặc anomaly mà mô hình cần phát hiện.
+- data error;
+- rare but valid case;
+- fraud/anomaly target itself.
 
-Xóa hoặc clip outlier một cách máy móc có thể phá đúng những case quan trọng nhất.
+Blindly clipping/removing outliers can destroy exactly the cases model needs detect.
 
-Cần kết hợp domain bound, phân tích distribution và kiểm tra source trước khi quyết định.
+Use domain bounds + distribution diagnostics + source inspection.
 
-## Dữ liệu Trùng lặp
+## Duplicates
 
-Exact duplicate row tương đối dễ phát hiện, nhưng duplicate theo entity hoặc event khó hơn.
+Exact duplicate rows easy; entity/event duplicates harder.
 
-Ví dụ:
+Examples:
 
 ```text
-cùng giao dịch được retry với event id khác
-cùng tài liệu được mirror trên nhiều website
-cùng ảnh được resize hoặc crop
-cùng patient study được export hai lần
+same transaction retried with different event id
+same document mirrored across websites
+same image resized/cropped
+same patient study exported twice
 ```
 
-Phải định nghĩa rõ duplicate nghĩa là gì trong domain cụ thể.
+Need define duplicate semantics.
 
 ## Entity Resolution
 
-Nhiều record có thể cùng đại diện cho một entity nhưng dùng ID hoặc tên khác nhau. **Entity resolution** có thể dựa trên deterministic key, fuzzy matching hoặc probabilistic linkage.
+Records may refer same entity with different IDs/names. Entity resolution can use deterministic keys, fuzzy matching or probabilistic linkage.
 
-False merge rất nguy hiểm vì nó tạo ra một lịch sử kết hợp giả giữa những entity thực ra khác nhau.
+False merges are dangerous because they create artificial combined history.
 
-## Chuẩn hóa Kiểu dữ liệu và Đơn vị
+## Type and Unit Normalization
 
-Ví dụ điển hình:
+Examples:
 
 ```text
-height: cm so với m
-currency: KRW so với USD
-timezone: local time so với UTC
-date: DD/MM so với MM/DD
+height: cm vs m
+currency: KRW vs USD
+timezone: local vs UTC
+date: DD/MM vs MM/DD
 ```
 
-Một numeric field không có unit rõ ràng là một bug tiềm ẩn.
+A numeric field without unit is latent bug.
 
-Nên chuẩn hóa unit nhưng vẫn giữ provenance của giá trị raw khi cần audit hoặc debug.
+Normalize unit while preserving original/raw provenance when useful.
 
-## Chuẩn hóa Categorical Data
+## Categorical Normalization
 
-`Seoul`, `SEOUL`, `서울`, `Seoul-si` có thể là cùng một thực thể hoặc không, tùy task.
+`Seoul`, `SEOUL`, `서울`, `Seoul-si` may be same or different depending task. Canonicalization requires ontology/context, not lowercase alone.
 
-Canonicalization cần ontology và context, không thể chỉ lowercase string rồi coi như đã giải quyết.
+## Text Cleaning
 
-## Làm sạch Văn bản
+Traditional NLP often aggressively removed punctuation/stopwords. Modern LLM/NLP may need formatting, casing and punctuation.
 
-NLP truyền thống thường loại mạnh punctuation, stopword hoặc casing. Nhưng modern NLP/LLM có thể cần chính những tín hiệu định dạng đó.
+Cleaning should preserve signals required by model.
 
-Cleaning phải giữ lại thông tin mà downstream model thực sự cần.
-
-Một số thao tác thường gặp:
+Potential operations:
 
 - Unicode normalization;
-- loại control character;
-- lọc boilerplate;
-- sửa encoding;
+- control-character removal;
+- boilerplate filtering;
+- encoding repair;
 - language detection;
-- loại duplicate paragraph.
+- duplicate paragraph removal.
 
 ## Unicode
 
-Các ký tự nhìn giống nhau có thể dùng code point khác nhau. Lựa chọn giữa NFC và NFKC có thể thay đổi semantics.
+Visually similar characters may have different code points; normalization NFC/NFKC choices can change semantics. NFKC compatibility normalization may alter special symbols, so task-dependent.
 
-NFKC thực hiện compatibility normalization mạnh hơn và có thể biến đổi một số ký hiệu đặc biệt, vì vậy cần quyết định theo task chứ không áp dụng mặc định trong mọi trường hợp.
+## HTML/Web Cleaning
 
-## HTML và Dữ liệu Web
+Extract main content, remove navigation/ads/scripts. But boilerplate classifier can accidentally remove code/table/citations.
 
-Khi trích xuất nội dung chính từ web, thường cần loại navigation, quảng cáo và script.
+Preserve document structure if RAG or layout understanding needs it.
 
-Tuy nhiên bộ lọc boilerplate có thể vô tình xóa code block, table hoặc citation. Nếu dữ liệu sẽ dùng cho RAG hoặc layout understanding, cấu trúc tài liệu nên được giữ càng nhiều càng tốt.
+## Image Cleaning
 
-## Làm sạch Ảnh
+Check:
 
-Cần kiểm tra các lỗi như:
-
-- file decode thất bại;
-- file bị corrupt;
-- aspect ratio bất thường;
-- duplicate;
-- ảnh trống;
-- label không khớp ảnh;
+- decode errors;
+- corrupted files;
+- extreme aspect ratio;
+- duplicates;
+- blank images;
+- label/image mismatch;
 - orientation metadata.
 
-Nếu auto-rotate ảnh theo EXIF nhưng không transform annotation coordinate tương ứng, bounding box hoặc mask sẽ bị lệch.
+Auto-rotation based EXIF can change annotation coordinates if not transformed too.
 
-## Làm sạch Audio
+## Audio Cleaning
 
-Có thể kiểm tra clipping, tỷ lệ silence, duration, sampling rate, số channel, alignment với transcript và noise level.
+Check clipping, silence ratio, duration, sample rate, channel count, transcript alignment, noise. Resampling should be standardized before feature extraction.
 
-Resampling nên được chuẩn hóa trước khi feature extraction để tránh train-serving mismatch.
+## Time-Series Cleaning
 
-## Làm sạch Time Series
+Do not sort/forward-fill carelessly across entity boundaries. Sensor gaps may be meaningful.
 
-Không nên sort hoặc forward-fill mù giữa nhiều entity khác nhau. Khoảng trống sensor có thể mang ý nghĩa nghiệp vụ.
-
-Cần dùng event-time ordering và phân biệt rõ “không có phép đo” với “giá trị thật bằng 0”.
+Use event-time ordering and distinguish missing measurement from true zero.
 
 ## Referential Integrity
 
-Join có thể âm thầm làm rơi hoặc nhân đôi row. Cần kiểm tra cardinality:
+Joins can silently drop/duplicate rows. Validate cardinality:
 
 ```text
-kỳ vọng one-to-one
-nhưng thực tế one-to-many
-→ số row tăng bất thường
+expected one-to-one
+actual one-to-many
+→ row explosion
 ```
 
-Đây là một trong những lỗi data engineering phổ biến nhất trong feature pipeline.
+This is common hidden data bug in feature engineering.
 
-## Cô lập Train và Test
+## Train/Test Isolation
 
-Những transformation học thống kê từ dữ liệu phải chỉ fit trên train:
+Cleaning transformations that learn statistics must fit train only:
 
 ```text
 scaler
@@ -179,82 +173,80 @@ PCA
 feature selector
 ```
 
-Sau đó áp dụng transformation đã cố định cho validation và test.
+Then apply frozen transform to validation/test.
 
-## Automated Data Test
+## Automated Data Tests
 
-Nên xem dataset như code và có assertion rõ ràng:
+Treat dataset like code. Assertions:
 
 ```text
-range của row count
-tỷ lệ null
+row count range
+null percentage
 unique key
-miền giá trị category
-numeric bound
-timestamp phải đơn điệu khi cần
+category domain
+numeric bounds
+monotonic timestamps
 join cardinality
 schema version
 ```
 
-Framework có thể tự động hóa, nhưng nguyên lý cốt lõi vẫn là data contract + test.
+Tools/frameworks can automate, but concept is data contracts + tests.
 
-## Sửa hay Loại bỏ?
+## Repair vs Drop
 
-Nếu lỗi có thể được sửa một cách chắc chắn, có thể repair nhưng nên lưu audit trail.
+If error can be confidently corrected, repair with audit trail. Otherwise drop/quarantine may be safer.
 
-Nếu không đủ chắc chắn, drop hoặc đưa vào quarantine thường an toàn hơn. Không nên âm thầm “bịa” một giá trị chỉ để record hợp schema.
+Never silently fabricate unknown value just to satisfy schema.
 
 ## Quarantine Dataset
 
-Record xấu hoặc đáng ngờ có thể được chuyển sang một quarantine dataset để review thay vì xóa vĩnh viễn.
-
-Cách này giữ lại evidence phục vụ debugging lỗi nguồn và cải thiện pipeline trong tương lai.
+Bad/suspicious records can be moved to quarantine for review rather than permanently deleted. This supports debugging source issues.
 
 ## Cleaning Log
 
-Nên theo dõi số lượng record qua từng bước:
+Track counts:
 
 ```text
-số row ban đầu
-số duplicate bị loại
-số record sai schema
-số giá trị được impute
-số sample bị lọc theo ngôn ngữ
-số row cuối cùng
+raw rows
+removed duplicates
+invalid schema
+imputed values
+filtered languages
+final rows
 ```
 
-Nếu dataset version mới thay đổi lớn, team phải giải thích được vì sao.
+Large changes between versions should be explainable.
 
-## Khả năng Tái tạo
+## Reproducibility
 
-Cleaning nên deterministic và versioned khi có thể. Sửa thủ công trực tiếp trong CSV mà không ghi lại script hoặc transformation phá hỏng lineage và reproducibility.
+Cleaning must be deterministic/versioned where possible. Manual edits to CSV without recorded script destroy lineage.
 
 ## Over-Cleaning
 
-Làm sạch quá mức có thể khiến training data trở nên “đẹp” hơn production một cách không thực tế.
+Over-cleaning can make training data unrealistically pristine. Model then fails on messy production input.
 
-Nếu deployment luôn có typo, noise, blur hoặc missing value, việc loại toàn bộ những trường hợp đó khỏi train có thể làm model kém robust hơn.
+Sometimes keeping realistic noise is important for robustness.
 
-## Mô hình tư duy
+## Mental Model
 
-> **Làm sạch dữ liệu không nhằm làm dataset trông đẹp; mục tiêu là làm representation phản ánh trung thực hơn hiện tượng và contract mà mô hình sẽ gặp.**
+> **Cleaning không nhằm làm data “đẹp”; nó nhằm làm representation faithful hơn với phenomenon và contract mà model sẽ gặp.**
 
-## Những nhầm lẫn thường gặp
+## Common Misconceptions
 
 ### “Outlier nên bị xóa”
 
-Không. Rare valid case có thể chính là trường hợp quan trọng nhất.
+Rare valid cases may be most important.
 
-### “Null nghĩa là zero”
+### “Null = zero”
 
-Không. Missingness có semantics riêng.
+Missingness has different semantics.
 
-### “Cleaning luôn có thể làm trước khi chia train/test”
+### “Cleaning can happen before splitting”
 
-Chỉ đúng với transformation hoàn toàn stateless và deterministic. Bất kỳ thống kê học từ dữ liệu nào cũng có thể gây leakage nếu fit trước khi split.
+Only stateless deterministic cleaning; learned statistics can leak test information.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Data cleaning nối ETL, validation, thống kê về missingness và phòng chống leakage.
+Data cleaning connects ETL, validation, statistical missingness and leakage prevention.
 
-Xem tiếp: [Gán nhãn Dữ liệu](./03_data_labeling.md).
+Xem tiếp: [Data Labeling](./03_data_labeling.md).

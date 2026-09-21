@@ -1,82 +1,73 @@
 # Deep Reinforcement Learning
 
-**Deep Reinforcement Learning (Deep RL / 심층 강화학습)** kết hợp Reinforcement Learning với neural network để xử lý state hoặc action space quá lớn cho tabular method. Neural network có thể đóng vai trò function approximator cho value, Q-function, policy hoặc environment model.
+**Deep Reinforcement Learning (Deep RL / 심층 강화학습)** kết hợp Reinforcement Learning với neural networks để xử lý state/action spaces quá lớn cho tabular methods. Neural network đóng vai trò function approximator cho value, Q-function, policy hoặc environment model.
 
 ```text
-pixel / sensor / embedding
+pixels / sensors / embeddings
         ↓
-biểu diễn neural
+ neural representation
         ↓
 Q-value / policy / value / model
         ↓
 RL objective
 ```
 
-## Vì sao Deep RL khó hơn Supervised Deep Learning?
+## Vì sao Deep RL khó hơn supervised deep learning?
 
 Supervised learning thường train trên dataset tương đối stationary. Trong RL:
 
-- policy thay đổi → phân phối dữ liệu thay đổi;
-- target có thể bootstrap từ chính network;
-- reward có thể delayed hoặc sparse;
-- exploration quyết định data nào sẽ xuất hiện trong tương lai;
-- sample liên tiếp có temporal correlation;
-- objective và target distribution liên tục thay đổi.
+- policy thay đổi → data distribution thay đổi;
+- targets có thể bootstrap từ network itself;
+- rewards delayed/sparse;
+- exploration determines future data;
+- samples temporally correlated;
+- objective non-stationary.
 
-Vì vậy tăng capacity của neural network không tự giải quyết bài toán RL; function approximation còn tạo thêm vấn đề stability mới.
+Vì vậy neural network capacity không tự giải quyết RL; nó còn tạo stability problems mới.
 
 ## DQN: Deep Q-Network
 
-DQN xấp xỉ:
+DQN approximates:
 
 \[
 Q(s,a;\theta)
 \]
 
-bằng neural network. Input có thể là image hoặc feature vector, output là Q-value cho từng discrete action.
+với neural network. Input có thể là image, output là Q-value cho each discrete action.
 
-Ba ý tưởng engineering quan trọng:
+Key engineering ideas:
 
 1. **experience replay**;
 2. **target network**;
-3. ổn định reward, gradient và optimization.
+3. reward/gradient stabilization.
 
-Loss cơ bản:
+Loss:
 
 \[
 L(\theta)=\mathbb E[(r+\gamma\max_{a'}Q(s',a';\theta^-)-Q(s,a;\theta))^2]
 \]
 
-## Vì sao Experience Replay quan trọng?
+## Why Replay Matters
 
-Các state hoặc frame liên tiếp thường tương quan rất mạnh. Nếu SGD train trực tiếp trên sequence liên tiếp, mini-batch có ít diversity và gradient noisy theo trajectory hiện tại.
+Sequential frames/states highly correlated. SGD assumes batches useful when samples not all nearly identical. Replay randomizes historical transitions and reuses expensive experience.
 
-Replay buffer giúp:
+Prioritized replay samples high-TD-error transitions more often, but needs importance correction to reduce sampling bias.
 
-```text
-lưu transition lịch sử
-→ sample ngẫu nhiên mini-batch
-→ phá bớt temporal correlation
-→ tái sử dụng experience
-```
+## Target Networks
 
-**Prioritized Experience Replay** sample transition có TD error lớn thường xuyên hơn, nhưng cần correction để giảm sampling bias.
-
-## Target Network
-
-Nếu cùng một network vừa tạo target vừa bị update mỗi gradient step, ta gặp **moving target problem**:
+Moving target problem:
 
 ```text
-network thay đổi
-→ target thay đổi
-→ network liên tục đuổi theo prediction của chính nó
+network changes
+→ target changes
+→ network chases own changing prediction
 ```
 
-Một target network được freeze hoặc update chậm giúp giảm feedback instability.
+Frozen/slow target network reduces feedback instability.
 
 ## Double DQN
 
-Double DQN giảm overestimation bằng cách dùng online network để chọn action nhưng target network để evaluate action đó:
+Reduce max overestimation by selecting action with online network, evaluating it with target network:
 
 \[
 a^*=\arg\max_a Q(s',a;\theta)
@@ -86,172 +77,131 @@ a^*=\arg\max_a Q(s',a;\theta)
 y=r+\gamma Q(s',a^*;\theta^-)
 \]
 
-Selection và evaluation được tách ra nên positive noise ít bị khuếch đại hơn.
+## Dueling Networks
 
-## Dueling Network
-
-Dueling architecture phân rã:
+Decompose:
 
 \[
 Q(s,a)=V(s)+A(s,a)
 \]
 
-kèm normalization để decomposition có thể xác định.
-
-Ý tưởng hữu ích khi nhiều action tại một state có effect tương tự: network có thể học state value chung trước rồi học phần difference giữa các action.
+with normalization to make decomposition identifiable. Useful when many actions have similar effect from a state.
 
 ## Policy-Based Deep RL
 
-Policy network trực tiếp output action distribution hoặc parameter của action distribution.
+Policy network directly outputs action distribution. PPO, SAC and actor-critic methods scale naturally to continuous/high-dimensional action spaces.
 
-PPO, SAC và nhiều actor–critic method phù hợp tự nhiên với continuous hoặc high-dimensional action space hơn Q-table hoặc discrete argmax.
+## Representation Learning in RL
 
-## Representation Learning trong RL
+RL agent must learn not just control but useful state representations. Reward signal may be sparse, so representation learning can be data-inefficient.
 
-Deep RL agent không chỉ học control mà còn phải học representation của state.
+Auxiliary/self-supervised objectives can help learn dynamics/relevant features.
 
-Nếu reward sparse, signal để học representation cũng rất yếu. Vì vậy auxiliary objective hoặc self-supervised objective có thể được dùng để học feature về dynamics, object hoặc temporal structure trước hoặc cùng RL objective.
+## World Models
 
-## World Model
-
-Model-based Deep RL có thể học dynamics:
+Model-based Deep RL learns environment dynamics:
 
 \[
 \hat s_{t+1}=f_\phi(s_t,a_t)
 \]
 
-hoặc latent dynamics, sau đó planning hoặc improve policy trên model đã học.
+or latent dynamics, then plans/improves policy using learned model.
 
-Lợi ích lớn là potential sample efficiency vì model có thể “tưởng tượng” nhiều transition mà không cần tương tác thật.
+Benefits: potential sample efficiency.
 
-Rủi ro là **model bias**: nếu learned model sai, planner có thể khai thác chính lỗi của model, đặc biệt khi đi xa khỏi training distribution.
+Risk: **model bias**. Planning can exploit model errors, especially far outside training distribution.
 
-## Imagination và Latent Planning
+## Imagination and Latent Planning
 
-Thay vì simulate raw pixel, world-model agent có thể học latent state `z_t`, rồi dự đoán latent transition và reward.
+Instead of simulating raw pixels, world-model agents can learn latent state `z_t` and predict latent transitions/rewards. Planning in latent space reduces cost if representation preserves control-relevant information.
 
-Planning trong latent space rẻ hơn nếu representation giữ đúng information cần cho control.
+## Exploration in High Dimensions
 
-Nếu latent representation bỏ mất một factor quan trọng, imagined trajectory có thể trông hợp lý nhưng dẫn tới policy sai trong environment thật.
-
-## Exploration trong Không gian lớn
-
-Random action exploration thường rất kém hiệu quả khi reward sparse và state space lớn.
-
-Các hướng phổ biến gồm:
+Random action exploration is inefficient when rewards sparse. Methods include:
 
 - intrinsic motivation;
-- curiosity hoặc prediction error;
-- count / pseudo-count bonus;
+- curiosity/prediction error;
+- count/pseudo-count bonuses;
 - entropy maximization;
 - uncertainty-driven exploration.
 
-Tuy nhiên intrinsic reward cũng có thể bị exploit. Ví dụ agent có thể tìm một nguồn noise khó dự đoán rồi ở đó mãi vì curiosity reward cao.
+But intrinsic rewards can be gamed: agent may seek noisy unpredictable states forever.
 
-## Sparse Reward và Hindsight
+## Sparse Reward and Hindsight
 
-**Hindsight Experience Replay (HER)** relabel một failed trajectory bằng goal mà agent thực sự đã đạt được.
-
-Ví dụ robot cố đưa object tới A nhưng cuối cùng tới B. Thay vì bỏ trajectory, ta có thể học rằng trajectory đó là successful experience cho goal B.
-
-HER đặc biệt hữu ích cho goal-conditioned task.
+Hindsight Experience Replay relabels failed trajectories with goals they actually achieved, creating useful learning signal for goal-conditioned tasks.
 
 ## Distribution Shift
 
-Khi policy được cải thiện, agent bắt đầu tới những state mới. Function approximator có thể chưa từng thấy vùng đó nên prediction kém.
-
-Prediction sai lại dẫn policy tới distribution mới hơn nữa. Đây là feedback loop rất đặc trưng của RL và là nguồn instability quan trọng.
+Policy improvement moves agent into new state distributions where function approximator may be poorly trained. This feedback loop is central RL risk.
 
 ## Sim-to-Real
 
-Robotics thường train trong simulation rồi deploy lên physical system. Difference giữa simulator và thực tế tạo **sim-to-real gap**.
+Robotics often train in simulation then deploy physical system. Simulation mismatch causes transfer gap.
 
-Các kỹ thuật giảm gap gồm:
+Techniques:
 
 - domain randomization;
 - system identification;
-- fine-tuning bằng real data;
-- safety constraint;
-- robust control.
-
-Simulation success không tự động bảo đảm real-world success.
+- fine-tuning with real data;
+- safety constraints.
 
 ## Offline Deep RL
 
-Offline Deep RL học hoàn toàn từ logged data có sẵn.
+Learn from logged data only. Main challenge: policy may choose out-of-distribution actions whose Q-values are extrapolation errors.
 
-Thách thức lớn nhất là policy mới có thể chọn out-of-distribution action mà dataset không support. Q-value của những action này dễ chỉ là extrapolation error.
-
-Offline RL method thường cố:
-
-```text
-giữ policy gần data support
-hoặc
-học conservative value estimate
-```
-
-để tránh khai thác vùng không có evidence.
+Offline RL methods constrain policy near data support or learn conservative value estimates.
 
 ## Safe RL
 
-Một số bài toán không thể chỉ tối đa hóa reward mà còn có constraint:
+Objective may include constraints:
 
 \[
 \max_\pi \mathbb E[G] \quad \text{s.t.}\quad \mathbb E[C_i]\le d_i
 \]
 
-Trong đó `C_i` là cost hoặc risk signal.
-
-Real-world system không thể exploration tự do qua catastrophic action chỉ để học rằng action đó nguy hiểm.
+where `C_i` are costs/risks. Real systems cannot freely explore catastrophic actions.
 
 ## Multi-Agent Deep RL
 
-Khi nhiều agent cùng học, environment trở thành non-stationary từ góc nhìn từng agent vì policy của các agent khác cũng thay đổi.
+Multiple learning agents make environment non-stationary from each agent's perspective. Centralized training/decentralized execution is common strategy.
 
-Một strategy phổ biến là **centralized training, decentralized execution**: training critic có nhiều global information hơn, nhưng khi deploy mỗi actor chỉ dùng local observation.
+## Deep RL Evaluation
 
-## Đánh giá Deep RL
+Single seed result unreliable. Need multiple random seeds and confidence intervals because training variance high.
 
-Một training run với một random seed không đủ đáng tin vì variance có thể rất lớn.
-
-Cần nhiều seed và uncertainty estimate. Nên report ít nhất:
+Also report:
 
 - sample efficiency;
 - final return;
 - stability;
-- compute hoặc environment step;
-- safety violation;
-- generalization sang environment thay đổi.
+- compute/environment steps;
+- safety violations;
+- generalization to changed environments.
 
 ## Reward Hacking
 
-Optimizer mạnh sẽ tìm loophole trong reward nếu environment cho phép.
+Strong optimizer finds loopholes. Example agent gets reward for touching checkpoints and learns loop around same reward trigger if environment allows. This demonstrates specification problem, not “malice”.
 
-Ví dụ agent được reward mỗi lần chạm checkpoint và tìm ra vòng lặp để trigger checkpoint liên tục mà không hoàn thành mục tiêu thật.
+## Deep RL and Games
 
-Đây là **specification problem**, không phải “agent có ý xấu”.
+Games useful research environments because rules/rewards/simulation cheap, but success in games does not automatically transfer to open world where reward and state definitions are ambiguous.
 
-## Deep RL và Game
+## RLHF / LLM Post-Training
 
-Game là research environment tốt vì rules, reward và simulator rõ, rẻ và reset được.
+Deep RL techniques like PPO have been used for language-model alignment. Important differences:
 
-Nhưng success trong game không tự chuyển sang open-world domain nơi state, reward và objective mơ hồ hơn rất nhiều.
+- policy action is token sequence;
+- pretrained policy already powerful;
+- reward model learned from preferences;
+- KL/reference constraints keep behavior near base/SFT model;
+- online environment often human/preference proxy, not physics simulator.
 
-## RLHF và LLM Post-Training
+Modern preference optimization may avoid full RL loop in some pipelines, but RL concepts remain useful for understanding policy optimization.
 
-Một số kỹ thuật Deep RL như PPO đã được dùng cho LLM alignment. Nhưng LLM setting có nhiều điểm khác:
+## The Deadly Triad Revisited
 
-- action là token hoặc token sequence;
-- pretrained policy đã có capability rất mạnh;
-- reward model thường học từ preference;
-- KL/reference constraint giúp policy không drift quá xa SFT/base model;
-- environment thường là preference process chứ không phải physics simulator.
-
-Modern preference optimization có thể không cần full RL loop trong một số pipeline, nhưng RL vẫn cung cấp mental model quan trọng cho policy optimization.
-
-## Deadly Triad một lần nữa
-
-Deep RL thường kết hợp:
+Deep RL frequently combines:
 
 ```text
 function approximation
@@ -259,47 +209,36 @@ function approximation
 + off-policy data
 ```
 
-Do đó replay buffer, target network, double estimator và stabilization không phải các “hack phụ”; chúng xử lý structural instability của bài toán.
+Hence stabilizers are not incidental hacks; they address structural instability.
 
-## Compute và Reproducibility
+## Compute and Reproducibility
 
-Deep RL result phụ thuộc mạnh vào:
+Deep RL experiments depend strongly on seeds, environment versions, wrappers, reward preprocessing and evaluation policy. Reproducibility requires versioning entire environment pipeline, not model code alone.
 
-```text
-random seed
-environment version
-wrapper
-reward preprocessing
-observation preprocessing
-evaluation policy
-```
+## Mental Model
 
-Muốn reproducibility, phải version toàn environment pipeline chứ không chỉ model code.
+> **Deep RL không chỉ là “neural network + reward”; nó là feedback system nơi model quyết định data nào nó sẽ thấy tiếp theo.**
 
-## Mô hình tư duy
+Đây là khác biệt sâu với ordinary supervised learning.
 
-> **Deep RL không chỉ là “neural network + reward”; nó là một feedback system nơi policy quyết định chính dữ liệu mà model sẽ thấy tiếp theo.**
-
-Đây là khác biệt sâu so với ordinary supervised learning.
-
-## Những nhầm lẫn thường gặp
+## Common Misconceptions
 
 ### “Deep RL là con đường chung để tạo intelligence”
 
-Không. Nó rất mạnh cho sequential decision problem nhưng sample cost, reward specification và safety khiến nhiều task phù hợp hơn với supervised learning, planning hoặc normal software.
+Nó mạnh cho sequential decision problems nhưng sample cost, reward specification và safety make it unsuitable for many tasks.
 
-### “Simulation thành công nghĩa là real-world thành công”
+### “Simulation success nghĩa real-world success”
 
-Không. Sim-to-real gap có thể rất lớn.
+Sim-to-real gap có thể lớn.
 
 ### “Reward cao chứng minh behavior tốt”
 
-Chỉ khi reward thực sự đo đúng intended behavior và environment không có loophole quan trọng.
+Only if reward faithfully measures intended behavior and environment has no loopholes.
 
-### “Neural network lớn hơn sẽ sửa RL instability”
+### “Bigger neural network fixes RL instability”
 
-Không. Data-feedback loop, off-policy shift và bootstrapping instability vẫn tồn tại.
+Optimization/data feedback instability vẫn tồn tại.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Deep RL nối [Neural Networks](../05_neural_networks/README.md), MDP/Bellman theory, Optimization, Agents và Safety. Đây là điểm kết thúc nền tảng RL; các layer Safety/Alignment phía sau sẽ quay lại reward specification, policy constraint và evaluation.
+Deep RL nối [Neural Networks](../05_neural_networks/README.md), MDP/Bellman theory, Optimization, Agents và Safety. Đây là điểm kết thúc RL foundation; các later safety/alignment chapters sẽ quay lại reward specification, policy constraints và evaluation.

@@ -1,8 +1,8 @@
-# Embedding cho truy xuất
+# Embeddings for Retrieval
 
-**Truy xuất bằng embedding (embedding retrieval)** biến query và document thành vector sao cho hình học của không gian vector phản ánh mức liên quan hữu ích. Điểm quan trọng là embedding không có ý nghĩa “tự nhiên”; ý nghĩa của khoảng cách đến từ objective và dữ liệu huấn luyện.
+**Embedding retrieval** biến query và document thành vectors sao cho geometry của vector space phản ánh relevance hữu ích. Điều quan trọng là embedding không có meaning “tự nhiên”; meaning của distance đến từ training objective và data.
 
-## Từ văn bản tới vector
+## From Text to Vector
 
 Một encoder tạo:
 
@@ -10,7 +10,7 @@ Một encoder tạo:
 z=f_\theta(text)\in\mathbb{R}^d
 \]
 
-Query và document được encode thành `q`, `d`. Retrieval dùng mức tương đồng:
+Query và document được encode thành `q`, `d`. Retrieval dùng similarity:
 
 \[
 s(q,d)=q^Td
@@ -22,11 +22,11 @@ hoặc cosine similarity:
 \cos(q,d)=\frac{q^Td}{\|q\|\|d\|}
 \]
 
-Nếu vector đã được chuẩn hóa L2, xếp hạng bằng dot product và cosine là tương đương.
+Nếu vectors được L2-normalize, dot product và cosine ranking giống nhau.
 
-## Vector đang biểu diễn điều gì?
+## What Does the Vector Represent?
 
-Embedding có thể mã hóa sự tương đồng chủ đề, intent, tương đương ngữ nghĩa hoặc relevance theo tác vụ tùy cách huấn luyện. Một general sentence embedding không nhất thiết tối ưu cho truy xuất question→answer.
+Embedding có thể encode topical similarity, intent, semantic equivalence hoặc task-specific relevance tùy training. Một general sentence embedding model không nhất thiết tối ưu cho question→answer retrieval.
 
 Ví dụ:
 
@@ -35,61 +35,61 @@ query: "How do I reset my password?"
 positive doc: "Password recovery steps"
 ```
 
-Dữ liệu huấn luyện nên chứa các cặp query–document tương tự để geometry phản ánh đúng retrieval intent.
+Training nên đưa query-document positive pair kiểu này để geometry phản ánh retrieval intent.
 
 ## Pooling
 
-Transformer tạo biểu diễn theo token. Để có một vector cho toàn đoạn văn, encoder cần một chiến lược **pooling** như:
+Transformer tạo token representations. Để có one vector cho whole text, encoder cần pooling:
 
 - CLS token;
 - mean pooling;
 - weighted pooling;
 - learned pooling.
 
-Pooling ảnh hưởng chất lượng retrieval. Mean pooling đơn giản nhưng có thể làm loãng token quan trọng trong chunk dài.
+Pooling strategy ảnh hưởng retrieval quality. Mean pooling simple nhưng có thể dilute key token trong long chunk.
 
-## Chuẩn hóa vector
+## Normalization
 
-Embedding thường được chuẩn hóa:
+Embedding normalization thường giúp score stable:
 
 \[
 \hat z=\frac{z}{\|z\|}
 \]
 
-để score ổn định hơn. Tuy nhiên không phải mọi model đều được huấn luyện với cùng giả định; cần theo đúng hướng dẫn của embedding model.
+Nhưng không phải mọi model được train với same assumption. Documentation của embedding model cần được follow.
 
-## Số chiều
+## Dimensionality
 
-Vector nhiều chiều có capacity lớn hơn nhưng làm tăng dung lượng và chi phí index. Với `N` vector dimension `d` kiểu float32:
+Dimension lớn cho capacity cao hơn nhưng tăng storage/index cost. Nếu có `N` vectors dimension `d` float32:
 
 \[
 storage\approx N\cdot d\cdot 4\ bytes
 \]
 
-Một triệu vector × 1536 chiều cần khoảng 6.1 GB chỉ cho raw vector, chưa tính index và metadata.
+1 triệu vectors × 1536 dimensions ≈ 6.1 GB chỉ cho raw vectors, chưa tính index/metadata.
 
-Giảm chiều hoặc index đã lượng tử hóa có thể giảm chi phí.
+Dimension reduction hoặc quantized index có thể giảm cost.
 
-## Prefix cho Query và Document
+## Query/Document Prefixes
 
-Một số embedding model được huấn luyện với prefix như:
+Một số embedding models được train với prefixes như:
 
 ```text
 query: ...
 passage: ...
 ```
 
-Prefix không chỉ để trang trí; nó báo vai trò cho mô hình trong huấn luyện bất đối xứng. Bỏ prefix có thể làm giảm hiệu quả.
+Prefix không cosmetic; nó signal role trong asymmetric training. Bỏ prefix có thể giảm performance.
 
-## Embedding theo chunk
+## Chunk Embedding
 
-RAG thường embedding chunk thay vì cả document. Vector của chunk phải giữ đủ context cục bộ để query có thể match.
+RAG thường embed chunks thay whole documents. Chunk vector phải represent enough local semantic context để query match.
 
-Nếu chunk chỉ chứa một row của bảng mà mất header, embedding có thể mất semantics. Pipeline ingestion có thể thêm tiêu đề section hoặc metadata document trước khi embedding.
+Nếu chunk chỉ chứa một table row không header, embedding mất semantics. Ingestion có thể prepend section title/document metadata trước embedding.
 
-## Metadata trong embedding và metadata làm filter
+## Metadata in Embedding vs Metadata as Filter
 
-Có thể nối metadata vào text trước khi embedding:
+Có thể concatenate metadata vào text trước embedding:
 
 ```text
 Title: Refund Policy
@@ -97,29 +97,27 @@ Product: Card
 Content: ...
 ```
 
-Tuy nhiên constraint xác định như access level, tenant hoặc version vẫn nên dùng filter. Không nên dựa vào vector geometry để cưỡng chế authorization.
+Nhưng deterministic constraints như access level, tenant hoặc version nên vẫn dùng filters. Không nên hy vọng vector geometry enforce authorization.
 
-## Hard Negative
+## Hard Negatives
 
-Fine-tune retriever thường cần **hard negative**. Ví dụ query hỏi policy cho `credit card`, còn negative là policy gần như giống hệt nhưng dành cho `debit card`.
+Retriever fine-tuning cần hard negatives. Ví dụ query hỏi policy cho `credit card`, negative là nearly identical policy cho `debit card`.
 
-Mô hình nhờ đó học khác biệt quan trọng mà semantic similarity tổng quát dễ bỏ qua.
+Model học distinction critical mà general semantic similarity dễ bỏ qua.
 
-## In-Batch Negative
+## In-Batch Negatives
 
-Trong contrastive training, positive của sample khác trong cùng batch thường được dùng làm negative. Cách này hiệu quả về compute nhưng có nguy cơ **false negative** nếu hai query thật sự cùng relevant với một document.
+Trong contrastive training, other positives trong same batch thường dùng làm negatives. Efficient nhưng có risk false negatives nếu two queries share relevant docs.
 
-Cách tạo batch vì vậy ảnh hưởng tín hiệu học.
+Batch composition ảnh hưởng learning signal.
 
-## Embedding có thể cắt ngắn
+## Matryoshka / Truncatable Embeddings
 
-Một số model được huấn luyện theo kiểu Matryoshka để phần prefix dimension vẫn dùng được, cho phép giảm chiều nhằm đổi chất lượng lấy storage hoặc latency.
+Một số models train để prefix dimensions vẫn usable, cho phép truncate vector để trade quality for storage/latency. Đây là architecture/training property, không áp dụng arbitrary cho mọi embedding vector.
 
-Đây là thuộc tính phải được huấn luyện; không thể mặc định cắt mọi embedding vector mà không mất cấu trúc.
+## Multilingual Embeddings
 
-## Embedding đa ngôn ngữ
-
-Multilingual embedding có thể ánh xạ các biểu thức tương đương:
+Multilingual embedding maps semantically similar text across languages vào common space:
 
 ```text
 "hoàn tiền"
@@ -127,31 +125,31 @@ Multilingual embedding có thể ánh xạ các biểu thức tương đương:
 "환불"
 ```
 
-vào vùng gần nhau trong cùng không gian.
+có thể gần nhau.
 
-Nhưng truy xuất xuyên ngôn ngữ cần được đánh giá riêng vì mất cân bằng dữ liệu có thể tạo khoảng cách chất lượng giữa các ngôn ngữ.
+Nhưng cross-language retrieval cần eval riêng vì language imbalance trong training có thể tạo quality gap.
 
-## Embedding cho code
+## Code Embeddings
 
-Code search có semantics khác prose. Function signature, identifier và behavior đều quan trọng. Embedding model chuyên cho code thường phù hợp hơn generic text embedding.
+Code search có semantics khác prose. Function signature, identifiers và behavior matter. Domain-specific code embedding model thường tốt hơn generic text embedding.
 
-## Ngưỡng similarity
+## Similarity Thresholds
 
-Một lỗi phổ biến là hard-code kiểu `cosine > 0.8 = relevant`. Phân bố score phụ thuộc model, corpus và loại query.
+Một common mistake là hard-code `cosine > 0.8 = relevant`. Score distribution depends model, corpus và query type.
 
-Ngưỡng phải được calibration trên dữ liệu retrieval có nhãn.
+Threshold phải calibrate trên labeled retrieval data.
 
-Top-k ranking thường dễ chuyển hơn absolute threshold, nhưng quyết định abstain hoặc “không có bằng chứng” vẫn cần calibration.
+Top-k ranking thường more portable than absolute threshold, nhưng abstention/use-no-evidence decisions vẫn cần calibration.
 
-## Embedding drift
+## Embedding Drift
 
-Khi thay embedding model, vector cũ và mới thường không còn nằm trong cùng không gian. Query bằng model mới không nên tìm trực tiếp trên vector cũ trừ khi nhà thiết kế bảo đảm compatibility.
+Khi đổi embedding model, old and new vectors thường không nằm trong same space. Query encoded bằng new model không nên search old vectors unless model explicitly compatible.
 
-Migration cần re-embed corpus hoặc duy trì hai index trong giai đoạn chuyển đổi.
+Migration cần re-embed corpus hoặc dual-index transition.
 
 ## Versioning
 
-Nên lưu metadata:
+Store metadata:
 
 ```text
 embedding_model_version
@@ -162,42 +160,42 @@ created_at
 
 Nếu retrieval regression xảy ra, team cần biết index được tạo bằng pipeline nào.
 
-## Quyền riêng tư
+## Privacy
 
-Không nên giả định embedding là không thể đảo ngược. Vector có thể làm lộ thông tin ngữ nghĩa hoặc nội dung. Quyền truy cập vector database nên tuân cùng mức nhạy cảm với source data.
+Embedding không nên được assume irreversible. Vector có thể leak semantic/content information. Access control cho vector DB cần giống source data sensitivity.
 
-## Đánh giá
+## Evaluation
 
-Chất lượng embedding nên được đo bằng retrieval task:
+Embedding quality nên đo retrieval task:
 
 ```text
 Recall@k
 MRR
 nDCG
-khả năng phân biệt hard negative
-các lát cắt đa ngôn ngữ
+hard-negative discrimination
+multilingual slices
 ```
 
-Visualization vector đẹp không phải bằng chứng đủ cho chất lượng production.
+Visualization đẹp của vectors không đủ evidence production quality.
 
-## Mô hình tư duy
+## Mental Model
 
-> Embedding là **hệ tọa độ được học cho một retrieval objective**. Khoảng cách có ý nghĩa vì mô hình được huấn luyện để đưa các item relevant lại gần nhau, không phải vì vector tự mang “sự thật ngữ nghĩa”.
+> Embedding là **learned coordinate system cho một retrieval objective**. Distance có meaning vì model được train để relevant things align, không vì vector tự mang semantic truth.
 
-## Những hiểu lầm thường gặp
+## Common Misconceptions
 
-### “Embedding giống hash của câu”
+### “Embedding giống database hash của sentence”
 
-Không. Input tương tự có thể nằm gần nhau và vector là một biểu diễn mất mát.
+Không. Similar inputs can be near, and vector is lossy representation.
 
-### “Nhiều chiều hơn luôn tốt hơn”
+### “Higher dimension luôn better”
 
-Không. Chi phí tăng còn tín hiệu hữu ích phụ thuộc cách huấn luyện.
+Không. Cost tăng và useful signal phụ thuộc training.
 
-### “Có thể thay metadata filter bằng embedding”
+### “Metadata filter có thể thay bằng embedding”
 
-Không với constraint về bảo mật, tenant hoặc version.
+Không cho security/version constraints.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
 Xem [Linear Algebra](../01_mathematical_foundations/01_linear_algebra_for_ai.md), [LLM Embeddings](../08_large_language_models/02_embeddings_and_semantic_space.md), và tiếp theo [Vector Search](./03_vector_search.md).

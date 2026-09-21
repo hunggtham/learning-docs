@@ -1,36 +1,34 @@
-# Transformer: Attention + tính toán Residual ở quy mô lớn
+# Transformer: Attention + Residual Computation ở quy mô lớn
 
-**Transformer (트랜스포머)** không chỉ là “mô hình dùng attention”. Đây là một kiến trúc tổ chức tính toán thành các khối lặp gồm attention, mạng truyền thẳng (feed-forward), kết nối tắt (residual connection) và chuẩn hóa (normalization). Thiết kế này cho phép các vị trí trong chuỗi được xử lý song song khi huấn luyện và tạo đường truyền ngắn hơn giữa những token cách xa nhau so với RNN.
+Transformer (트랜스포머) không chỉ là “model dùng attention”. Nó là một architecture tổ chức computation thành repeated blocks gồm attention, feed-forward transformation, residual connections và normalization, cho phép sequence positions xử lý song song trong training và long-range interactions ngắn path hơn RNN.
 
-Transformer là nền tảng của BERT, GPT, T5, Vision Transformer và phần lớn mô hình nền tảng (foundation model) hiện đại. Vì vậy cần hiểu cấu trúc ở mức tensor và cơ chế tính toán, không chỉ ghi nhớ sơ đồ kiến trúc.
+Transformer là nền của BERT, GPT, T5, Vision Transformer và phần lớn modern foundation models, nên cần hiểu block ở mức tensor/mechanism chứ không chỉ hình minh họa.
 
-## Biểu diễn đầu vào
+## Input Representation
 
-Token ID được tra trong ma trận embedding:
+Token IDs được lookup embedding matrix:
 
 \[
 E\in R^{|V|\times d_{model}}
 \]
 
-Token `i` nhận vector:
+Token `i`:
 
 \[
 x_i=E[token_i]
 \]
 
-Sau đó mô hình bổ sung hoặc mã hóa thông tin vị trí.
+Sau đó thêm/encode positional information.
 
-Tensor trạng thái ẩn thường có dạng:
+Hidden tensor:
 
 \[
 X\in R^{B\times T\times d_{model}}
 \]
 
-trong đó `B` là kích thước batch, `T` là độ dài chuỗi và `d_model` là chiều biểu diễn.
+## Core Transformer Block
 
-## Khối Transformer cốt lõi
-
-Một khối **pre-norm** đơn giản hóa có thể viết:
+Một simplified pre-norm block:
 
 \[
 H'=H+Attention(Norm(H))
@@ -40,18 +38,18 @@ H'=H+Attention(Norm(H))
 H''=H'+FFN(Norm(H'))
 \]
 
-Cấu trúc này được lặp qua `L` tầng.
+Lặp `L` layers.
 
-Hai tầng con chính là:
+Hai sublayers chính:
 
-1. **Attention** — trao đổi thông tin giữa các vị trí trong chuỗi.
-2. **Mạng truyền thẳng (Feed-Forward Network — FFN)** — biến đổi đặc trưng ở từng vị trí một cách độc lập.
+1. Attention — mix information across positions.
+2. Feed-Forward Network — transform each position independently in feature dimension.
 
-**Dòng residual (residual stream)** mang biểu diễn xuyên suốt toàn bộ chồng tầng.
+Residual stream carries representation through stack.
 
-## Tầng con Self-Attention
+## Self-Attention Sub-layer
 
-Từ trạng thái ẩn đã chuẩn hóa:
+Given normalized hidden state:
 
 \[
 Q=XW_Q,
@@ -59,7 +57,7 @@ K=XW_K,
 V=XW_V
 \]
 
-sau đó:
+then:
 
 \[
 A=softmax\left(\frac{QK^T}{\sqrt{d_k}}+M\right)
@@ -69,45 +67,47 @@ A=softmax\left(\frac{QK^T}{\sqrt{d_k}}+M\right)
 O=AVW_O
 \]
 
-`M` là mặt nạ hoặc độ lệch attention.
+`M` is mask/bias.
 
-Attention cho phép token trộn thông tin với token khác. Nếu bỏ cơ chế này, FFN chuẩn chỉ xử lý từng vị trí riêng lẻ và không tự trao đổi thông tin giữa các token.
+Attention mixes tokens; without it each token's computation would stay local to own position in standard FFN.
 
-## Mạng Feed-Forward
+## Feed-Forward Network
 
-FFN của Transformer cổ điển:
+Classic Transformer FFN:
 
 \[
 FFN(x)=W_2\phi(W_1x+b_1)+b_2
 \]
 
-được áp dụng độc lập lên từng token nhưng dùng chung trọng số.
+applied independently to each token position with shared weights.
 
-Thiết kế cổ điển thường dùng:
+Typically hidden expansion:
 
 \[
 d_{ff}\approx4d_{model}
 \]
 
-Các Transformer hiện đại dùng những biến thể có cổng như SwiGLU và tỷ lệ chiều khác.
+classic design, though modern gated FFNs/SwiGLU use different ratios.
 
-Có thể nhớ ngắn gọn: attention trộn thông tin **giữa các vị trí**, còn FFN biến đổi thông tin **giữa các chiều đặc trưng** của mỗi vị trí.
+Attention mixes **across sequence**; FFN mixes **across feature dimensions**.
 
-## Dòng Residual
+## Residual Stream
 
-Cập nhật residual có dạng:
+Residual addition:
 
 \[
 x\leftarrow x+F(x)
 \]
 
-Tầng con không thay thế hoàn toàn biểu diễn hiện tại mà ghi thêm một phần cập nhật vào dòng biểu diễn chung. Điều này giúp gradient truyền ổn định hơn và cho phép nhiều tầng cùng đóng góp dần vào biểu diễn.
+means sublayer writes an update into shared residual representation rather than replacing it completely.
 
-Một mô hình tư duy hữu ích là xem residual stream như một “kênh giao tiếp” mà các khối attention và MLP đọc rồi ghi cập nhật trở lại. Đây chỉ là phép so sánh khái niệm, không phải bus phần mềm theo nghĩa đen.
+This improves gradient flow and supports composition of many layers.
 
-## LayerNorm và RMSNorm
+A useful mechanistic mental model is “residual stream as communication bus”: attention/MLP blocks read from and write transformations back into stream. Đây là abstraction hữu ích, không phải literal software bus.
 
-Mẫu pre-norm phổ biến:
+## LayerNorm / RMSNorm
+
+Pre-Norm modern pattern:
 
 ```text
 x
@@ -122,70 +122,76 @@ x
 └→ + residual ──┘
 ```
 
-Pre-norm thường giúp các Transformer rất sâu dễ tối ưu hơn vì đường residual đồng nhất được giữ tương đối sạch. Nhiều LLM hiện đại dùng **RMSNorm** thay cho LayerNorm.
+Pre-norm usually easier optimize deep stacks because identity residual path remains clean.
 
-## Transformer dạng Encoder
+Many LLMs use RMSNorm instead of LayerNorm.
 
-Encoder thường dùng self-attention hai chiều: mỗi token không bị mask có thể truy cập những token khác trong chuỗi.
+## Encoder Transformer
 
-Thiết kế này phù hợp với các bài toán cần biểu diễn hoặc hiểu toàn bộ đầu vào. Các mô hình kiểu BERT dùng chồng encoder và mục tiêu mô hình hóa ngôn ngữ có che token (masked language modeling).
+Encoder self-attention is usually bidirectional: every non-masked token can attend every other.
 
-## Transformer dạng Decoder
+Good for representation/understanding tasks.
 
-Decoder-only sử dụng mặt nạ nhân quả:
+BERT-style masked-language-model pretraining uses encoder stack.
+
+## Decoder Transformer
+
+Decoder-only self-attention uses causal mask:
 
 \[
 M_{ij}=-\infty\quad j>i
 \]
 
-nên vị trí `i` không thể thấy token tương lai.
+so position `i` cannot see future tokens.
 
-Các mô hình kiểu GPT huấn luyện theo phân rã:
+GPT-style autoregressive model trains:
 
 \[
 P(x_{1:T})=\prod_tP(x_t\mid x_{<t})
 \]
 
-Dù có mặt nạ nhân quả, khi huấn luyện toàn bộ vị trí vẫn có thể được tính song song vì chuỗi đích đã có sẵn.
+All positions can still be processed parallel during training because target sequence known and mask enforces causality.
 
-## Transformer Encoder–Decoder
+## Encoder–Decoder Transformer
 
-Encoder xây biểu diễn hai chiều của chuỗi nguồn. Decoder thường có ba tầng con:
+Encoder builds source representations bidirectionally.
 
-1. self-attention nhân quả;
-2. cross-attention trên đầu ra encoder;
+Decoder block contains:
+
+1. causal self-attention;
+2. cross-attention over encoder output;
 3. FFN.
 
-Cấu trúc này phù hợp với dịch máy, tóm tắt và sinh có điều kiện.
+Suitable translation/summarization and conditional generation.
 
-## Kích thước Multi-Head
+## Multi-Head Dimensions
 
-Ví dụ:
+If:
 
 \[
 d_{model}=4096,
 \quad h=32
 \]
 
-thì chiều head cổ điển là:
+then classic head dimension:
 
 \[
 d_{head}=128
 \]
 
-Q/K/V được chiếu rồi đổi hình dạng:
+Q/K/V projected then reshape:
 
 ```text
 [B, T, D]
 → [B, T, H, Dh]
-→ chuyển trục thành [B, H, T, Dh]
+→ transpose to [B, H, T, Dh]
 ```
 
-Khả năng suy luận chính xác về shape tensor là kỹ năng thiết yếu khi triển khai và tối ưu Transformer.
+Shape reasoning is critical for implementation/inference systems.
 
-## Mã hóa vị trí
+## Positional Encoding
 
-Transformer gốc dùng mã hóa hình sin:
+Original Transformer used sinusoidal:
 
 \[
 PE(pos,2i)=\sin(pos/10000^{2i/d})
@@ -195,139 +201,167 @@ PE(pos,2i)=\sin(pos/10000^{2i/d})
 PE(pos,2i+1)=\cos(pos/10000^{2i/d})
 \]
 
-LLM hiện đại thường dùng RoPE hoặc cơ chế vị trí tương đối.
+Modern LLMs often use RoPE or relative mechanisms.
 
-Thiết kế vị trí ảnh hưởng trực tiếp tới khả năng mở rộng context. Tăng một con số cấu hình về độ dài tối đa không đồng nghĩa mô hình sẽ hoạt động tốt ở độ dài chưa từng được huấn luyện.
+Position scheme influences context extension/extrapolation. Extending max context beyond training length is not trivial just changing config number.
 
-## Số tham số chủ yếu đến từ đâu?
+## Parameter Count Roughly Comes From Where?
 
-Với một tầng decoder, bỏ qua bias và norm, các phép chiếu attention Q/K/V/O cổ điển dùng xấp xỉ:
+For decoder layer ignoring biases/norm:
+
+Attention projections roughly:
 
 \[
 4d^2
 \]
 
-tham số. MQA/GQA có thể giảm phần K/V.
+(Q,K,V,O; less with GQA/MQA for K/V).
 
-FFN dùng xấp xỉ:
+FFN often roughly:
 
 \[
 2d\,d_{ff}
 \]
 
-với FFN hai ma trận; FFN có cổng thường có ba ma trận. Trong nhiều LLM, số tham số ở FFN lớn hơn phần attention.
+or three matrices for gated FFN.
 
-Embedding và đầu chiếu ra vocabulary cũng chiếm lượng tham số đáng kể.
+In many LLMs FFN parameters exceed attention parameters.
 
-## Chia sẻ trọng số đầu vào và đầu ra
+Embeddings/output head also significant, possibly weight-tied.
 
-Embedding đầu vào và ma trận chiếu đầu ra có thể dùng chung trọng số:
+## Weight Tying
+
+Input embedding and output unembedding matrix may share parameters:
 
 \[
 W_{out}=E^T
 \]
 
-Kỹ thuật **weight tying** này giảm số tham số và liên kết hình học của biểu diễn token đầu vào với đầu ra. Nó phổ biến nhưng không bắt buộc.
+This reduces parameter count and connects input/output token geometry.
 
-## Độ phức tạp tính toán
+Not universal but common.
 
-Self-attention có chi phí gần:
+## Computational Complexity
+
+Self-attention roughly:
 
 \[
 O(T^2d)
 \]
 
-FFN có chi phí gần:
+FFN:
 
 \[
 O(Td^2)
 \]
 
-Thành phần nào chiếm ưu thế phụ thuộc quan hệ giữa độ dài chuỗi `T` và chiều mô hình `d`. Context rất dài làm chi phí attention bậc hai nổi bật; với chuỗi ngắn nhưng mô hình rất rộng, các phép chiếu và FFN có thể chiếm nhiều FLOP hơn.
+Depending `T` vs `d`, different component dominates.
 
-## Huấn luyện song song nhưng sinh tuần tự
+For long context, attention quadratic becomes major. For short context and huge `d`, MLP/projections may dominate FLOPs.
 
-Trong huấn luyện, các vị trí trong chuỗi có thể được tính song song dưới causal mask.
+## Training Parallelism vs Generation Seriality
 
-Khi sinh, token `t+1` chỉ được xác định sau khi token `t` đã được chọn. Phụ thuộc này tạo nút thắt độ trễ tuần tự.
+Training: entire sequence positions processed parallel under causal mask.
 
-KV cache tránh tính lại key/value của quá khứ nhưng không loại bỏ tính tuần tự ở cấp token. **Speculative decoding** dùng mô hình nhỏ đề xuất một nhóm token rồi để mô hình đích xác minh theo lô, nhờ đó có thể tăng tốc mà vẫn bảo toàn phân phối đích nếu thuật toán được triển khai đúng.
+Generation: token `t+1` cannot compute until token `t` selected. This sequential dependency limits latency.
+
+KV cache avoids recompute past attention K/V, nhưng generation remains autoregressive serial at token level.
+
+Speculative decoding tries generate candidate tokens with smaller model then verify in batches, improving throughput without changing target distribution under proper algorithm.
 
 ## Context Window
 
-**Cửa sổ ngữ cảnh (context window)** giới hạn lượng token mô hình xử lý trong một yêu cầu hoặc đoạn huấn luyện.
+Context window limits tokens model can process in one request/training segment.
 
-Context dài hơn làm tăng bộ nhớ attention/KV cache, độ trễ và nhu cầu dữ liệu huấn luyện để mô hình học cách sử dụng vị trí xa.
+Longer context increases:
 
-Thông số “hỗ trợ 1 triệu token” chỉ nói về khả năng đưa lượng token đó vào hệ thống; nó không chứng minh mô hình suy luận hoặc truy xuất tốt đồng đều trên toàn bộ một triệu token.
+- attention/cache memory;
+- latency;
+- data requirements to learn use long-range positions.
 
-## Transformer như tương tác trên tập hoặc đồ thị
+“Supports 1M tokens” does not imply model reasons equally well across 1M tokens. Effective context utilization requires evaluation.
 
-Nếu bỏ thông tin vị trí, self-attention có tính hoán vị tương đương (permutation equivariance) và có thể được nhìn như truyền thông điệp trên đồ thị đầy đủ.
+## Transformer as Set/Graph-like Interaction
 
-Khi thêm vị trí hoặc quan hệ, Transformer có thể áp dụng cho ảnh dưới dạng patch, âm thanh, protein, phân tử hoặc token đa phương thức. Kiến trúc chỉ yêu cầu các phần tử được biểu diễn thành token và có cách mã hóa cấu trúc quan hệ phù hợp.
+Ignoring positions, self-attention is permutation-equivariant and resembles message passing on fully connected graph.
 
-## Vì sao Transformer mở rộng quy mô tốt?
+Position encoding gives sequence structure. This explains why Transformer adapts to images (patch tokens), audio, proteins, molecules and multimodal tokens.
 
-Thành công của Transformer đến từ nhiều yếu tố cùng lúc: phép nhân ma trận phù hợp GPU/TPU, khả năng song song hóa theo vị trí khi huấn luyện, residual và normalization giúp chồng nhiều tầng, attention xử lý ngữ cảnh linh hoạt, cùng một họ kiến trúc áp dụng được cho nhiều modality và các mục tiêu tự giám sát cung cấp lượng dữ liệu rất lớn.
+Architecture only needs items represented as tokens/elements plus relational/positional information.
 
-Vì vậy không nên giải thích sự thành công của Transformer bằng một yếu tố duy nhất; đó là kết quả đồng thiết kế giữa kiến trúc, dữ liệu, tối ưu hóa, phần cứng và hệ thống.
+## Why Transformer Scales Well
 
-## Hạn chế
+Several factors align:
 
-Transformer vẫn có những hạn chế quan trọng: attention bậc hai khi chuỗi dài, độ trễ sinh tự hồi quy, nhu cầu tính toán/bộ nhớ lớn, hành vi thống kê không có cơ chế xác minh sự thật tích hợp sẵn, context hữu hạn và biểu diễn phân tán khó giải thích.
+- matrix multiplications map well to GPU/TPU;
+- training sequence positions parallel;
+- residual/norm stable deep stacking;
+- attention handles flexible context;
+- same architecture works across modalities/tasks;
+- self-supervised objectives provide huge data.
 
-Những giới hạn này thúc đẩy attention hiệu quả hơn, mô hình không gian trạng thái, RAG, công cụ bên ngoài và các tầng xác minh ở cấp hệ thống.
+Transformer success is architecture + data + compute + optimization + systems co-design.
 
-## Transformer so với RNN
+## Limitations
 
-| Thuộc tính | RNN/LSTM | Transformer |
+- quadratic attention at long sequences;
+- autoregressive decoding latency;
+- huge memory/compute requirements;
+- learned statistical behavior without built-in factual verification;
+- finite context and retrieval limitations;
+- opaque distributed representations.
+
+These motivate efficient attention, state-space models, RAG, tools and system-level verification.
+
+## Transformer vs RNN
+
+| Property | RNN/LSTM | Transformer |
 |---|---|---|
-| Song song hóa vị trí khi huấn luyện | thấp | cao |
-| Đường truyền xa | qua nhiều bước hồi quy | kết nối attention trực tiếp |
-| Trạng thái khi suy luận | trạng thái hồi quy gọn | KV cache tăng theo context |
-| Chi phí ngữ cảnh dài cơ bản | tuyến tính theo từng bước | attention đầy đủ bậc hai |
-| Khả năng streaming tự nhiên | cao | cần cache/chunking |
+| Training position parallelism | thấp | cao |
+| Long-range path | nhiều recurrent steps | direct attention path |
+| State at inference | compact recurrent state | KV cache grows with context |
+| Vanilla long-context compute | linear per recurrent step | quadratic full attention training |
+| Streaming naturalness | cao | needs caching/chunking |
 
-Không có mô hình nào vượt trội tuyệt đối trong mọi ràng buộc triển khai.
+Không model universally superior under every deployment constraint.
 
-## Transformer so với CNN
+## Transformer vs CNN
 
-CNN mã hóa cứng tính cục bộ và chia sẻ theo không gian. Transformer có thể học tương tác toàn cục linh hoạt hơn nhưng có thiên lệch quy nạp yếu hơn, nên thường hưởng lợi mạnh từ pretraining quy mô lớn.
+CNN hardcodes locality/translation structure. Transformer can learn global pairwise relations but weaker prior, often needs larger data/pretraining.
 
-Nhiều kiến trúc thị giác hiện đại kết hợp cả hai ý tưởng thay vì coi chúng loại trừ nhau.
+Vision architectures increasingly mix both ideas.
 
-## Mô hình tư duy
+## Mental Model
 
 ```text
-Residual stream giữ biểu diễn token
-Attention  → token trao đổi thông tin
-MLP        → mỗi token biến đổi đặc trưng nội bộ
-Norm       → ổn định thang giá trị
-Residual   → bảo toàn và tích lũy thông tin/gradient
-Lặp lại qua nhiều tầng
+Residual stream holds token representations
+Attention  → tokens exchange information
+MLP        → each token transforms features internally
+Norm       → stabilize scale
+Residual   → preserve/accumulate information & gradients
+Repeat many layers
 ```
 
-## Những hiểu lầm thường gặp
+## Common Misconceptions
 
-### “Transformer chính là Attention”
+### “Transformer = Attention”
 
-Không. Attention là thành phần cốt lõi nhưng MLP, residual, normalization, thông tin vị trí và mục tiêu huấn luyện đều cần thiết.
+Attention critical but MLP, residual, normalization, positions and training objective equally necessary architecture components.
 
-### “Attention cho mô hình thấy lịch sử vô hạn”
+### “Attention lets model see infinite history”
 
-Không. Nó chỉ truy cập trong context/cache hiện có và vẫn bị giới hạn bởi tài nguyên tính toán.
+Only within context/cache window and compute constraints.
 
-### “Decoder-only không có encoder nên không hiểu đầu vào”
+### “Decoder-only model has no encoder so it cannot understand input”
 
-Không. Cùng chồng Transformer nhân quả biến đổi prompt thành các biểu diễn theo ngữ cảnh trước khi dự đoán phần tiếp theo.
+Same causal stack transforms prompt tokens into contextual representations before predicting continuation.
 
-### “Context càng dài thì câu trả lời luôn càng tốt”
+### “More context always improves answer”
 
-Không. Context thừa hoặc nhiễu có thể làm chất lượng giảm; truy xuất và kỹ thuật xây dựng context vẫn rất quan trọng.
+Irrelevant/noisy context can degrade performance; retrieval/context engineering matters.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Transformer tổng hợp [Attention](./04_attention.md), [Residual và Backpropagation](../05_neural_networks/04_backpropagation.md), [RMSNorm](../05_neural_networks/06_initialization_and_normalization.md) và [Học biểu diễn](../05_neural_networks/08_representation_learning.md).
+Transformer synthesizes [Attention](./04_attention.md), [Residual/Backprop](../05_neural_networks/04_backpropagation.md), [RMSNorm](../05_neural_networks/06_initialization_and_normalization.md), [Representation Learning](../05_neural_networks/08_representation_learning.md).
 
-Các phần NLP và LLM tiếp theo sẽ xây tokenization, pretraining, scaling, instruction tuning và generation trên cơ chế này.
+NLP and LLM folders will build tokenization, pretraining, scaling, instruction tuning and generation on top of this mechanism.

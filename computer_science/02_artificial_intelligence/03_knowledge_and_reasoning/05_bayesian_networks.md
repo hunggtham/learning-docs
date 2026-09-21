@@ -1,38 +1,36 @@
-# Mạng Bayes trong Trí tuệ nhân tạo
+# Bayesian Networks trong Artificial Intelligence
 
-**Mạng Bayes (Bayesian Network / 베이지안 네트워크)** là một đồ thị có hướng không chu trình (Directed Acyclic Graph - DAG), trong đó mỗi node là một biến ngẫu nhiên và mỗi cạnh biểu diễn quan hệ phụ thuộc trực tiếp trong phép phân rã của phân phối xác suất chung.
+**Bayesian Network (베이지안 네트워크 / mạng Bayes)** là một directed acyclic graph (DAG) trong đó mỗi node là random variable và mỗi edge biểu diễn dependency trực tiếp trong factorization của joint probability. Nó cho phép ta mô hình hóa một distribution rất lớn bằng các local conditional distributions thay vì viết full joint table.
 
-Ý tưởng quan trọng là thay vì viết một bảng xác suất chung khổng lồ cho mọi tổ hợp biến, ta khai thác cấu trúc cục bộ của bài toán để mô tả bằng nhiều phân phối có điều kiện nhỏ hơn.
-
-Mạng Bayes kết hợp ba thành phần trong cùng một biểu diễn:
+Bayesian Network quan trọng vì nó kết hợp ba thứ trong một representation:
 
 ```text
-cấu trúc đồ thị
-+ xác suất
-+ độc lập có điều kiện
+graph structure
++ probability
++ conditional independence
 ```
 
-Nhờ vậy, hệ thống có thể suy luận về nguyên nhân, bằng chứng, mức bất định và chi phí tính toán một cách có cấu trúc.
+Điều này giúp reasoning về causes/evidence, inference dưới uncertainty và complexity của computation.
 
-Xem trước: [Suy luận xác suất](./04_probabilistic_reasoning.md).
+Xem trước: [Probabilistic Reasoning](./04_probabilistic_reasoning.md).
 
-## Vì sao cần cấu trúc đồ thị?
+## Tại sao cần graph?
 
-Giả sử có `n` biến nhị phân. Một bảng phân phối chung đầy đủ cần gần:
+Giả sử có `n` binary variables. Full joint distribution cần gần:
 
 \[
 2^n-1
 \]
 
-tham số độc lập.
+independent parameters.
 
-Với 30 biến nhị phân, số cấu hình đã xấp xỉ một tỷ.
+Với 30 binary variables, con số entries đã khoảng một tỷ.
 
-Nhưng thế giới thực thường có cấu trúc cục bộ: thời tiết ảnh hưởng giao thông, bệnh ảnh hưởng triệu chứng, hỏng linh kiện ảnh hưởng cảnh báo. Không phải biến nào cũng phụ thuộc trực tiếp vào tất cả biến còn lại.
+Nhưng real domains thường có local structure: weather ảnh hưởng traffic; disease ảnh hưởng symptoms; component failure ảnh hưởng alarms. Không phải mọi variable trực tiếp depend mọi variable khác.
 
-Mạng Bayes tận dụng chính cấu trúc đó để giảm số tham số và làm suy luận khả thi hơn.
+Bayesian Network khai thác structure này.
 
-## Cấu trúc DAG
+## DAG structure
 
 Ví dụ:
 
@@ -44,85 +42,87 @@ flowchart LR
     A --> M[MaryCalls]
 ```
 
-Cách đọc theo xác suất:
+Interpretation probabilistic:
 
-- `Alarm` phụ thuộc trực tiếp vào `Burglary` và `Earthquake`;
-- `JohnCalls` và `MaryCalls` phụ thuộc trực tiếp vào `Alarm`;
-- khi đã biết `Alarm`, mô hình không cần thêm phụ thuộc trực tiếp từ `Burglary` hay `Earthquake` tới các cuộc gọi.
+- Alarm depends directly on Burglary and Earthquake.
+- JohnCalls and MaryCalls depend directly on Alarm.
+- Given Alarm, calls do not need directly depend on Burglary/Earthquake in this model.
 
-Cấu trúc đồ thị là một **giả định mô hình hóa**, không tự động là chân lý nhân quả.
+Graph is modeling assumption, not automatically causal truth.
 
-## Phân rã phân phối chung
+## Joint factorization
 
-Với các biến `X1,...,Xn` theo thứ tự topo:
+For variables `X1,...,Xn` in topological order:
 
 \[
 P(X_1,...,X_n)=\prod_i P(X_i\mid Parents(X_i))
 \]
 
-Với ví dụ báo động:
+For burglary network:
 
 \[
 P(B,E,A,J,M)=
 P(B)P(E)P(A\mid B,E)P(J\mid A)P(M\mid A)
 \]
 
-Nhờ vậy, thay vì biểu diễn trực tiếp mọi tổ hợp của năm biến nhị phân, ta chỉ cần nhiều bảng điều kiện nhỏ.
+Instead of full 32-cell table for five binary variables, local CPTs require fewer parameters.
 
-## Bảng xác suất có điều kiện
+## Conditional Probability Table
 
-Với biến rời rạc, mỗi node có thể được mô tả bằng **bảng xác suất có điều kiện (Conditional Probability Table - CPT)**.
+For discrete variable, each node can have CPT.
 
-Ví dụ với `Alarm`:
+Example `Alarm`:
 
-| B | E | P(A=true \| B,E) |
+| B | E | P(A=true | B,E) |
 |---|---|---:|
 | T | T | 0.95 |
 | T | F | 0.94 |
 | F | T | 0.29 |
 | F | F | 0.001 |
 
-Các con số chỉ mang tính minh họa. Mỗi hàng phải xác định một phân phối xác suất hợp lệ.
+Numbers are illustrative modeling values.
 
-## Tính chất Markov cục bộ
+CPT rows must define valid probability distributions.
 
-Mỗi biến độc lập có điều kiện với các node không phải hậu duệ của nó khi đã biết các node cha.
+## Local Markov property
 
-Ví dụ trong đồ thị trên:
+Each variable is conditionally independent of its non-descendants given its parents.
+
+This property justifies factorization.
+
+Example `JohnCalls` independent of `Burglary` given `Alarm` in graph:
 
 \[
 J\perp B\mid A
 \]
 
-Nghĩa là khi đã biết trạng thái của `Alarm`, biết thêm `Burglary` không cung cấp thêm thông tin trực tiếp cần thiết cho `JohnCalls` theo mô hình này.
+But without conditioning on Alarm, they can be dependent because burglary changes alarm probability which changes call probability.
 
-Tuy nhiên nếu chưa biết `Alarm`, `Burglary` và `JohnCalls` vẫn có thể phụ thuộc vì trộm làm thay đổi xác suất chuông báo động, rồi chuông làm thay đổi xác suất John gọi điện.
+## d-Separation
 
-## d-separation
+**d-separation** is graphical criterion for determining conditional independence implied by DAG.
 
-**d-separation** là tiêu chuẩn đồ thị dùng để xác định các quan hệ độc lập có điều kiện được hàm ý bởi DAG.
+Three primitive path structures matter.
 
-Ba cấu trúc cơ bản cần ghi nhớ.
-
-### Chuỗi
+### Chain
 
 ```text
 X → Z → Y
 ```
 
-Thông thường `X` và `Y` phụ thuộc. Khi điều kiện hóa theo `Z`, đường truyền bị chặn:
+X and Y are generally dependent, but conditioning on Z blocks path:
 
 \[
 X\perp Y\mid Z
 \]
 
-### Nhánh chung
+### Fork
 
 ```text
 X ← Z → Y
 ```
 
-`Z` là nguyên nhân chung. Khi biết `Z`, mối liên hệ giữa `X` và `Y` có thể bị chặn:
+Z is common cause. Conditioning on Z blocks association:
 
 \[
 X\perp Y\mid Z
@@ -134,158 +134,162 @@ X\perp Y\mid Z
 X → Z ← Y
 ```
 
-Đường này mặc định bị chặn. Nếu điều kiện hóa theo `Z` hoặc hậu duệ của `Z`, đường có thể được mở và `X`, `Y` trở nên phụ thuộc.
+Path is blocked by default. Conditioning on collider `Z` or descendant can **open** path and create dependency.
 
-Đây chính là cấu trúc của hiện tượng explaining away.
+This is explaining-away structure.
 
-## Sai lệch do điều kiện hóa trên collider
+## Collider bias
 
-Giả sử năng lực và may mắn đều ảnh hưởng khả năng được tuyển chọn:
+Suppose Ability and Luck both influence being Selected:
 
 ```text
 Ability → Selected ← Luck
 ```
 
-Trong toàn bộ dân số, `Ability` và `Luck` có thể độc lập. Nhưng nếu chỉ xét nhóm đã được chọn, một người có năng lực thấp nhưng vẫn được chọn sẽ làm ta tăng niềm tin rằng người đó gặp nhiều may mắn.
+In overall population, Ability/Luck may independent. Among selected people, if someone has low ability, observing they were selected increases belief they had luck. Conditioning on selection introduces association.
 
-Điều kiện hóa theo biến `Selected` đã tạo ra một mối liên hệ nhân tạo.
-
-Hiện tượng này đặc biệt quan trọng khi phân tích dữ liệu bị chọn lọc hoặc trong suy luận nhân quả.
+This has major implications for dataset selection bias and causal analysis.
 
 ## Markov blanket
 
-**Markov blanket** của một node gồm:
+Markov blanket of node consists of:
 
-- các node cha;
-- các node con;
-- các node cha khác của các node con.
+- parents;
+- children;
+- other parents of its children.
 
-Khi đã biết toàn bộ Markov blanket, node đó độc lập với phần còn lại của mạng.
+Conditioned on Markov blanket, node independent of rest of network.
 
-Khái niệm này hữu ích để hiểu suy luận cục bộ và đôi khi cả lựa chọn đặc trưng.
+This can help feature selection/local inference intuition.
 
-## Suy luận chính xác bằng liệt kê
+## Exact inference by enumeration
 
-Giả sử cần tính:
+Query:
 
 \[
 P(B\mid J=true,M=true)
 \]
 
-Cách ngây thơ là cộng qua các biến ẩn:
+Naive method sums over hidden variables:
 
 \[
 P(B,j,m) = \sum_e\sum_a P(B,e,a,j,m)
 \]
 
-sau đó chuẩn hóa theo `B`.
+then normalize across B.
 
-Cách này đúng nhưng lặp lại rất nhiều phép tính và không mở rộng tốt khi số biến tăng.
+Correct but repeats many calculations and scales poorly.
 
-## Loại biến
+## Variable elimination
 
-**Variable Elimination** tổ chức lại phép tính để tái sử dụng các factor trung gian.
+Variable Elimination reorders computation to reuse factors.
 
-Thay vì liệt kê toàn bộ phép gán, ta lần lượt:
+Instead of enumerate every full assignment, multiply local factors and sum hidden variables as soon as possible.
+
+Conceptually:
 
 ```text
-lấy các factor có chứa biến ẩn
-→ nhân chúng
-→ cộng bỏ biến ẩn
-→ tạo factor mới nhỏ hơn
-→ lặp lại
+factors
+ ↓ multiply factors involving hidden variable
+ ↓ sum out hidden variable
+new smaller factor
+ ↓ repeat
 ```
 
-Thứ tự loại biến có thể làm kích thước factor trung gian thay đổi rất lớn.
+Elimination order can radically change intermediate factor size.
 
 ## Treewidth
 
-Độ phức tạp của suy luận chính xác phụ thuộc mạnh vào **treewidth** của cấu trúc đồ thị sau các bước biến đổi liên quan tới loại biến.
+Inference complexity is strongly related to graph treewidth after moralization/elimination structure.
 
-Một đồ thị trông có vẻ thưa vẫn có thể sinh clique lớn trong quá trình loại biến.
+Sparse-looking graph may still create large cliques under elimination.
 
-Do đó chi phí suy luận không thể đánh giá chỉ bằng số lượng node; topology của đồ thị mới là yếu tố quyết định.
+This explains why probabilistic inference is not simply “number of nodes”. Graph topology matters.
 
-## Lan truyền niềm tin
+## Belief propagation
 
-Trên đồ thị dạng cây, **belief propagation** truyền message giữa các node hoặc factor để tính marginal chính xác một cách hiệu quả.
+On tree-structured graphical models, messages pass between nodes/factors and yield exact marginals efficiently.
 
-Một message có thể được hiểu là phần tóm tắt ảnh hưởng của một nhánh đồ thị tới phần còn lại.
+A message summarizes how one subtree influences another.
 
-Nếu đồ thị có vòng, có thể dùng **loopy belief propagation** như một phương pháp xấp xỉ, nhưng không có bảo đảm chung rằng nó sẽ hội tụ hoặc luôn cho kết quả chính xác.
+On graphs with loops, **loopy belief propagation** can be used approximately but convergence/correctness not guaranteed generally.
 
-## Suy luận bằng lấy mẫu
+## Sampling inference
 
-Các phương pháp như likelihood weighting, Gibbs sampling và Monte Carlo có thể xấp xỉ posterior.
+Likelihood weighting, Gibbs sampling and other Monte Carlo methods approximate posterior.
 
-Nếu bằng chứng quan sát có xác suất tiên nghiệm rất thấp, rejection sampling trở nên cực kỳ kém hiệu quả vì phần lớn mẫu bị loại bỏ.
+Evidence with very low prior probability can make rejection sampling extremely inefficient because most samples rejected.
 
-Vì vậy thuật toán suy luận phải phù hợp với cấu trúc mô hình và loại bằng chứng.
+Inference algorithm must match evidence/model structure.
 
-## Học tham số
+## Learning parameters
 
-Nếu cấu trúc đồ thị đã biết và mọi biến được quan sát đầy đủ, các tham số CPT có thể ước lượng bằng tần suất hoặc MLE:
+If graph known and variables fully observed, CPT parameters can be estimated by counts/MLE or Bayesian estimates.
+
+For discrete node:
 
 \[
 \hat P(X=x\mid Parents=u)=
 \frac{count(X=x,Parents=u)}{count(Parents=u)}
 \]
 
-Smoothing hoặc prior giúp tránh xác suất bằng 0 với những tổ hợp chưa từng xuất hiện trong dữ liệu.
+Smoothing/prior avoids zero probabilities for unseen combinations.
 
-## Dữ liệu thiếu và EM
+## Missing data và EM
 
-Khi tồn tại biến ẩn hoặc dữ liệu thiếu, thuật toán **Expectation-Maximization (EM)** có thể dùng để ước lượng tham số.
+When latent/missing variables exist, Expectation-Maximization (EM) can estimate parameters.
 
-Chu trình trực giác:
+Conceptual loop:
 
 ```text
-E-step: ước lượng phân bố của biến ẩn theo tham số hiện tại
-M-step: cập nhật tham số để tối đa hóa kỳ vọng likelihood của dữ liệu đầy đủ
-lặp lại
+E-step: infer expected latent assignments under current parameters
+M-step: update parameters maximizing expected complete-data likelihood
+repeat
 ```
 
-Trong dạng chuẩn, EM không làm giảm likelihood qua mỗi vòng lặp, nhưng có thể hội tụ tại tối ưu cục bộ.
+EM increases likelihood each iteration under standard formulation but can converge local optimum.
 
-## Học cấu trúc đồ thị
+## Learning graph structure
 
-Cấu trúc DAG cũng có thể được học từ dữ liệu thông qua tìm kiếm trên không gian đồ thị, dùng điểm số như BIC, BDe hoặc các kiểm định độc lập có điều kiện.
+Structure itself can be learned from data by search over DAGs using scores such as BIC/BDe-like criteria or constraint-based independence tests.
 
-Số lượng DAG tăng cực nhanh theo số biến, vì vậy tìm kiếm chính xác thường rất khó.
+Number DAGs grows super-exponentially, so exact search hard.
 
-Quan trọng hơn, học cấu trúc từ dữ liệu quan sát không tự động khôi phục được đồ thị nhân quả nếu không có thêm giả định.
+Structure learning from observational data does not automatically recover causal graph without assumptions.
 
-## Mạng Bayes và đồ thị nhân quả
+## Bayesian Network vs Causal DAG
 
-DAG của Mạng Bayes biểu diễn phép phân rã xác suất và các quan hệ độc lập có điều kiện.
+A Bayesian Network DAG encodes probabilistic factorization/conditional independencies.
 
-**Đồ thị nhân quả (causal graph)** bổ sung ngữ nghĩa mạnh hơn: cạnh biểu diễn cơ chế nhân quả có thể dùng cho suy luận can thiệp.
+A **causal graph** adds stronger semantics: arrows represent causal mechanisms suitable for intervention reasoning.
 
-Cùng một hình dạng DAG có thể chỉ mang nghĩa mô tả xác suất mà không mang nghĩa nhân quả.
+Same DAG shape can be used descriptively without causal interpretation.
 
-Vì vậy không được kết luận “X gây ra Y” chỉ vì có cạnh `X→Y` trong một mạng dự đoán.
+Do not infer “X causes Y” simply because edge `X→Y` appears in predictive network.
 
-## Can thiệp
+## Intervention
 
-Trong mô hình nhân quả, can thiệp:
+In causal model, intervention `do(X=x)` replaces mechanism generating X.
 
-\[
-P(Y\mid do(X=x))
-\]
-
-khác với quan sát:
+Observation:
 
 \[
 P(Y\mid X=x)
 \]
 
-vì can thiệp chủ động thay thế cơ chế sinh `X`, trong khi quan sát có thể bị nhiễu bởi biến gây nhiễu (confounder).
+Intervention:
 
-Mạng Bayes cung cấp nền tảng đồ thị hữu ích, nhưng suy luận nhân quả cần thêm giả định nhân quả ngoài xác suất thuần túy.
+\[
+P(Y\mid do(X=x))
+\]
+
+can differ due confounding.
+
+Bayesian Networks provide graphical foundation, but causal inference requires causal assumptions beyond probability alone.
 
 ## Dynamic Bayesian Network
 
-**Dynamic Bayesian Network (DBN)** lặp lại cấu trúc qua thời gian:
+DBN repeats structure across time:
 
 ```text
 X_t → X_{t+1}
@@ -293,143 +297,145 @@ X_t → X_{t+1}
 Y_t    Y_{t+1}
 ```
 
-HMM và Kalman Filter có thể được xem là những mô hình động có cấu trúc đặc biệt.
+HMM and Kalman Filter are special structured dynamic probabilistic models.
 
-DBN cho phép mô hình hóa nhiều biến trạng thái và quan sát thay đổi theo thời gian.
+DBNs generalize temporal dependencies to multiple variables.
 
 ## Noisy-OR
 
-Nếu nhiều nguyên nhân gần như độc lập đều có thể kích hoạt cùng một hiệu ứng, một CPT đầy đủ tăng theo hàm mũ theo số lượng node cha.
+When many independent-ish causes can trigger effect, full CPT grows exponential in parent count.
 
-**Noisy-OR** giảm số tham số bằng cách giả định mỗi nguyên nhân có một xác suất riêng để gây hiệu ứng, rồi kết hợp chúng theo cấu trúc xác suất xác định.
+Noisy-OR parameterizes causal influence compactly.
 
-Đây là ví dụ của việc tận dụng cấu trúc để giảm kích thước phân phối có điều kiện (Conditional Probability Distribution - CPD).
+If causes independently fail to trigger effect with probabilities, probability no cause succeeds is product; complement gives effect probability.
 
-## Biến liên tục
+This is example of structured CPD reducing parameter count.
 
-Mạng Bayes không bị giới hạn ở CPT rời rạc. Các phân phối có điều kiện có thể là Gaussian hoặc hàm tham số hóa khác.
+## Continuous variables
 
-Ví dụ mô hình Gaussian tuyến tính:
+Bayesian Networks not limited to discrete CPTs. Conditional distributions can be Gaussian or parameterized functions.
+
+Linear Gaussian BN:
 
 \[
 X_i = \beta_0 + \sum_j \beta_j Parent_j + \epsilon
 \]
 
-với nhiễu Gaussian.
+with Gaussian noise.
 
-Mạng lai giữa biến rời rạc và liên tục cần các thuật toán suy luận tương thích với kiểu phân phối đã chọn.
+Hybrid discrete/continuous networks require compatible inference methods.
 
-## Mạng Bayes trong chẩn đoán
+## Bayesian Networks và diagnosis
 
-Trong chẩn đoán, hướng sinh thường đi từ nguyên nhân tới biểu hiện:
+Diagnostic reasoning often goes from effects to causes:
 
 ```text
 Disease → Symptom
+observe Symptom
+infer Disease posterior
 ```
 
-Nhưng khi quan sát triệu chứng, suy luận lại đi theo chiều ngược để tính posterior của bệnh.
+Graph direction follows generative/causal-like mechanism; inference can flow opposite edge direction through Bayes.
 
-Điều này rất quan trọng: **hướng cạnh không giới hạn hướng truy vấn**. Cạnh biểu diễn cấu trúc phân rã, còn Bayes cho phép cập nhật niềm tin theo bằng chứng ở bất kỳ vị trí phù hợp nào.
+This is crucial: edge direction does not limit query direction.
 
-## Explaining away trong chẩn đoán
+## Explaining away in diagnosis
 
-Nếu hai bệnh cùng có thể gây sốt, quan sát sốt làm tăng xác suất của cả hai.
+Two diseases cause fever. Observing fever increases both beliefs. If test confirms disease A, belief disease B may decrease because fever already explained.
 
-Nếu sau đó xét nghiệm xác nhận bệnh A, niềm tin vào bệnh B có thể giảm vì hiện tượng sốt đã có một lời giải thích mạnh.
+Independent causes become dependent after common effect observed.
 
-Đây chính là explaining away trong ngữ cảnh y khoa.
+## Decision Networks
 
-## Decision Network
+Influence Diagram extends Bayesian Network with:
 
-**Influence Diagram** mở rộng Mạng Bayes bằng ba loại node:
+- chance nodes;
+- decision nodes;
+- utility nodes.
 
-- node ngẫu nhiên (chance node);
-- node quyết định (decision node);
-- node utility.
+Then choose action maximizing expected utility.
 
-Sau đó hệ thống chọn hành động tối đa hóa utility kỳ vọng.
+This integrates probabilistic belief with decision theory.
 
-Đây là cầu nối trực tiếp giữa suy luận xác suất và lý thuyết quyết định.
+## Bayesian Networks vs Neural Networks
 
-## Mạng Bayes và Neural Network không giống nhau
-
-Tên gọi dễ gây nhầm:
+Name similarity is misleading.
 
 ```text
-Bayesian Network → mô hình đồ thị xác suất
-Neural Network   → hàm tham số hóa khả vi / đồ thị tính toán
+Bayesian Network → probabilistic graphical model
+Neural Network   → parameterized differentiable function/computation graph
 ```
 
-Một neural network có thể tham số hóa các phân phối có điều kiện trong mô hình xác suất, nhưng hai khái niệm vẫn khác nhau về bản chất.
+A neural network can parameterize conditional probabilities inside a probabilistic model, but concepts are distinct.
 
-## Neural Network làm mô hình xác suất điều kiện
+## Neural conditional probability models
 
-Thay vì CPT, có thể dùng neural network để biểu diễn:
+Instead of CPT, use neural network:
 
 \[
 P(X_i\mid Parents_i;\theta)
 \]
 
-Cách này kết hợp cấu trúc phân rã của đồ thị với khả năng xấp xỉ hàm linh hoạt của neural network.
+This combines graph factorization with flexible function approximator.
 
-Các mô hình tự hồi quy (autoregressive) cũng có thể được nhìn như đồ thị có hướng trên chuỗi:
+Autoregressive neural models are conceptually directed graphical models over sequence:
 
 \[
 P(x_{1:T})=\prod_tP(x_t\mid x_{<t})
 \]
 
-Transformer language model chính là một cơ chế neural để tham số hóa những phân phối có điều kiện này.
+Transformer LMs implement these conditionals with neural networks.
 
-## Kết hợp Mạng Bayes và RAG
+## Bayesian Network và RAG diagnosis
 
-Trong hệ thống doanh nghiệp, đồ thị xác suất có thể dùng để suy luận cấu trúc phụ thuộc, còn RAG truy xuất bằng chứng văn bản.
+Enterprise AI can use graph to reason dependency while RAG retrieves textual evidence.
 
-Ví dụ xử lý sự cố:
+Example incident response:
 
 ```text
-log quan sát được
-   ↓ node bằng chứng
-mạng xác suất
-   ↓ posterior của nguyên nhân gốc
-truy xuất tài liệu theo các giả thuyết hàng đầu
+Observed logs
+   ↓ evidence nodes
+probabilistic graph
+   ↓ posterior root causes
+retrieve docs for top hypotheses
    ↓
-LLM giải thích kèm nguồn
+LLM explains with sources
 ```
 
-Đồ thị chịu trách nhiệm về cấu trúc và bất định; LLM chịu trách nhiệm giao tiếp ngôn ngữ và diễn giải.
+Graph encodes uncertainty/structure; LLM handles language interface/explanation.
 
-## Mô hình tư duy
+## Mental Model
 
 ```text
-Node          = biến ngẫu nhiên
-Edge          = phụ thuộc trực tiếp trong phép phân rã
-CPT / CPD     = phân phối có điều kiện cục bộ
-DAG           = đồ thị có hướng không chu trình
-Factorization = phân phối chung = tích các phân phối cục bộ
-d-separation  = đọc độc lập có điều kiện từ đồ thị
-Inference     = cập nhật / truy vấn xác suất khi có bằng chứng
+Node      = random variable
+Edge      = direct dependency in factorization
+CPT/CPD   = local conditional distribution
+DAG       = no directed cycles
+Factorize = joint as product of local conditionals
+d-separation = read conditional independencies from graph
+Inference = update/query probabilities given evidence
 ```
 
-## Các hiểu lầm thường gặp
+## Common Misconceptions
 
-### “Có cạnh nghĩa là có quan hệ nhân quả”
+### “Edge means causation”
 
-Không. Chỉ khi mô hình được xây với ngữ nghĩa và giả định nhân quả phù hợp thì cạnh mới có thể được diễn giải là nhân quả.
+Only if model is given causal semantics/assumptions. Ordinary BN edge means dependency/factorization structure.
 
-### “Không có cạnh nghĩa là hai biến độc lập”
+### “No edge means variables independent”
 
-Không nhất thiết. Độc lập phụ thuộc vào cấu trúc đường đi và điều kiện hóa, được xác định qua d-separation.
+Not necessarily marginally. Graph implies specific conditional independencies via d-separation.
 
-### “Điều kiện hóa luôn làm giảm phụ thuộc”
+### “Conditioning always removes dependency”
 
-Không. Điều kiện hóa trên collider có thể tạo ra phụ thuộc mới.
+Conditioning on collider can create dependency.
 
-### “Mạng Bayes là Neural Network dùng trọng số Bayesian”
+### “Bayesian Network is neural network with Bayesian weights”
 
-Không. Đây là hai họ mô hình khác nhau.
+No. They are different model families.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Mạng Bayes biến suy luận xác suất thành một cấu trúc đồ thị: topology quyết định phép phân rã và ảnh hưởng trực tiếp tới độ phức tạp của suy luận. Các khái niệm này sẽ quay lại trong causal inference, HMM, probabilistic programming và mô hình sinh tự hồi quy.
+Bayesian Networks make probabilistic reasoning structural: graph topology determines factorization and inference complexity. Concepts here reappear in causal inference, HMMs, probabilistic programming and autoregressive generative models.
 
-Xem tiếp: [Knowledge Graph](./06_knowledge_graphs.md), nơi cạnh mặc định biểu diễn quan hệ ngữ nghĩa chứ không phải phụ thuộc xác suất.
+Xem tiếp: [Knowledge Graphs](./06_knowledge_graphs.md), which represents semantic relations rather than probabilistic dependency by default.

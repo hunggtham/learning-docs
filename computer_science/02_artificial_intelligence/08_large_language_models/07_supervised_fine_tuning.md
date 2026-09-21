@@ -1,58 +1,58 @@
-# Tinh chỉnh có giám sát (SFT)
+# Supervised Fine-Tuning (SFT)
 
-**Tinh chỉnh có giám sát (Supervised Fine-Tuning — SFT / 지도 미세조정)** là giai đoạn tiếp tục huấn luyện một mô hình đã tiền huấn luyện trên tập ví dụ có input và đầu ra mong muốn rõ ràng. Với mô hình chat, một sample có thể gồm system message, yêu cầu của user và phản hồi assistant chuẩn.
+**Supervised Fine-Tuning (SFT / 지도 미세조정 / tinh chỉnh có giám sát)** là giai đoạn tiếp tục train một pretrained model trên tập examples có input và desired output rõ ràng. Với chat model, một sample có thể gồm system message, user request và assistant response chuẩn.
 
-Nếu pretraining học phân bố rộng của ngôn ngữ, SFT tập trung gradient vào **phân bố hành vi mong muốn**.
+Nếu pretraining học distribution rộng của language, SFT ép gradient tập trung vào **behavior distribution mong muốn**.
 
-## Hàm mục tiêu
+## Objective
 
-Về mặt toán học, SFT thường vẫn dùng cross-entropy dự đoán token tiếp theo trên phần phản hồi mục tiêu:
+Về mặt toán học, SFT thường vẫn dùng next-token cross-entropy trên target response:
 
 \[
 \mathcal L_{SFT}=-\sum_{t\in response}\log P_\theta(y_t\mid x,y_{<t})
 \]
 
-`x` là chỉ dẫn/context, còn `y` là câu trả lời mong muốn.
+`x` là instruction/context, còn `y` là desired answer.
 
-Nhiều pipeline **che loss (loss masking)** trên token của user/system và chỉ tối ưu token của assistant. Như vậy mô hình không bị huấn luyện để “dự đoán lại user” mà tập trung bắt chước hành vi phản hồi.
+Nhiều pipeline mask loss trên user/system tokens và chỉ optimize assistant tokens. Như vậy model không bị train để “predict user” mà tập trung tái tạo response behavior.
 
 ## SFT khác pretraining ở đâu?
 
-Cơ chế optimizer và backpropagation có thể giống nhau, nhưng **phân bố dữ liệu và tín hiệu giám sát** khác.
+Mechanism optimizer/backprop có thể giống, nhưng **data distribution và supervision signal** khác.
 
 Pretraining:
 
 ```text
-corpus thô → dự đoán token tiếp theo ở mọi vị trí phù hợp
+raw corpus → predict next token everywhere
 ```
 
 SFT:
 
 ```text
-instruction / context → bắt chước phản hồi đã tuyển chọn
+instruction/context → imitate curated target response
 ```
 
-Vì vậy SFT gần với **bắt chước hành vi (behavior cloning)** hơn so với language modeling thô.
+SFT vì vậy gần behavior cloning hơn raw language modeling.
 
-## Chất lượng dữ liệu quyết định chất lượng hành vi
+## Data quality quyết định behavior quality
 
-Một dataset SFT nhỏ nhưng được tuyển chọn tốt có thể thay đổi hành vi mạnh vì mô hình đã có năng lực nền. Ngược lại, nếu phản hồi mục tiêu dài dòng, né tránh, quá tự tin hoặc không nhất quán, mô hình cũng học những pattern đó.
+Một SFT dataset nhỏ nhưng curated có thể thay đổi behavior mạnh vì pretrained model đã có capability nền. Nhưng nếu target responses verbose, evasive, overconfident hoặc inconsistent, model sẽ bắt chước pattern đó.
 
-Dữ liệu SFT cần bao phủ nhiều chiều:
+SFT data cần represent nhiều dimensions:
 
-- độ chính xác;
-- mức tuân thủ chỉ dẫn;
-- phong cách và độ sâu;
-- hành vi từ chối;
-- định dạng gọi công cụ;
-- bao phủ đa ngôn ngữ;
-- xử lý yêu cầu mơ hồ.
+- correctness;
+- instruction adherence;
+- style/depth;
+- refusal behavior;
+- tool format;
+- multilingual coverage;
+- ambiguity handling.
 
-## Loss masking và template hội thoại
+## Loss masking và conversation templates
 
-Chat template quyết định token nào biểu diễn ranh giới vai trò. Nếu template khi huấn luyện và serving không khớp, hành vi mô hình có thể giảm dù trọng số không đổi.
+Chat template quyết định token nào đại diện role boundaries. Một mismatch giữa training template và serving template có thể làm model behavior giảm dù weights không đổi.
 
-Ví dụ mô hình được huấn luyện với token đặc biệt:
+Ví dụ model được train với special tokens:
 
 ```text
 <|system|> ...
@@ -60,112 +60,114 @@ Ví dụ mô hình được huấn luyện với token đặc biệt:
 <|assistant|> ...
 ```
 
-nhưng inference lại dùng format khác, mô hình có thể không nhận ra ngữ nghĩa vai trò giống lúc huấn luyện.
+nhưng inference dùng format khác, model có thể không recognize role semantics đúng như training.
 
-## Full fine-tuning và tinh chỉnh tiết kiệm tham số
+## Full fine-tuning vs parameter-efficient fine-tuning
 
-**Tinh chỉnh toàn bộ (full fine-tuning)** cập nhật gần như toàn bộ trọng số. Cách này linh hoạt nhưng tốn memory/compute và có nguy cơ catastrophic forgetting.
+**Full fine-tuning** cập nhật gần như toàn bộ model weights. Nó linh hoạt nhưng tốn memory/compute và có risk catastrophic forgetting.
 
-**Tinh chỉnh tiết kiệm tham số (Parameter-Efficient Fine-Tuning — PEFT)** chỉ huấn luyện một tập con tham số hoặc adapter. LoRA là ví dụ nổi tiếng:
+**Parameter-Efficient Fine-Tuning (PEFT)** chỉ train một subset parameters hoặc adapters. LoRA là ví dụ nổi tiếng:
 
 \[
 W' = W + BA
 \]
 
-với rank nhỏ `r`, nhờ đó số tham số cần huấn luyện giảm mạnh.
+với rank nhỏ `r`, nên số trainable parameters giảm mạnh.
 
-LoRA không “nén toàn bộ mô hình”; nó học một **cập nhật hạng thấp (low-rank update)** cho một số ma trận được chọn.
+LoRA không “compress toàn bộ model”; nó học một low-rank update trên một số matrices được chọn.
 
-## Tinh chỉnh theo miền
+## Domain fine-tuning
 
-Nếu tác vụ cần thuật ngữ, format và phong cách phản hồi đặc thù, SFT theo domain có thể rất hữu ích. Ví dụ trợ lý hỗ trợ tài chính cần định dạng phản hồi, tone và logic escalation ổn định.
+Nếu task yêu cầu terminology và output style đặc thù, SFT domain có thể rất hữu ích. Ví dụ financial support assistant cần response format, tone và escalation logic ổn định.
 
-Tuy nhiên fact thay đổi thường xuyên vẫn nên đến từ database hoặc RAG nếu độ mới và provenance quan trọng.
+Nhưng facts thường xuyên thay đổi vẫn nên đến từ database/RAG, không nên hard-code qua weights nếu provenance quan trọng.
 
-## Chương trình học và mixture dữ liệu
+## Curriculum và mixture
 
-Dataset SFT thường là hỗn hợp general instruction, domain task, safety data và tool use. Trọng số mỗi nguồn ảnh hưởng gradient.
+SFT dataset thường là mixture của general instruction, domain tasks, safety data và tool use. Weighting ảnh hưởng gradient.
 
-Nếu ví dụ safety quá nhiều và quá đơn giản, mô hình có thể từ chối quá mức. Nếu dữ liệu domain chi phối, năng lực tổng quát có thể giảm.
+Nếu safety examples quá nhiều và simplistic, over-refusal tăng. Nếu domain data quá mạnh, general capability có thể giảm.
 
-## Loss chỉ trên phản hồi
+## Response-only loss
 
-Trong chat SFT, cách làm phổ biến là tính loss chỉ trên phản hồi assistant. Điều này tránh huấn luyện mô hình tái tạo văn bản người dùng.
+Trong chat SFT, một practice phổ biến là tính loss chỉ trên assistant response. Điều này tránh model học reproduce user text.
 
-Tuy nhiên system prompt vẫn ảnh hưởng trạng thái ẩn vì nó nằm trong context dù không trực tiếp chịu loss.
+Tuy nhiên system prompt structure vẫn ảnh hưởng hidden representation vì nó nằm trong context dù không chịu loss trực tiếp.
 
 ## Sequence packing
 
-Nhiều sample SFT ngắn có thể được đóng gói vào cùng sequence để tăng mức sử dụng GPU. Attention mask và loss mask phải bảo đảm các sample không rò context sang nhau ngoài semantics đã thiết kế.
+Nhiều short SFT samples có thể pack vào một training sequence để tăng utilization. Attention/loss masks phải đảm bảo samples không leak context lẫn nhau ngoài intended packing semantics.
 
 ## Overfitting trong SFT
 
-Dataset SFT thường nhỏ hơn corpus pretraining rất nhiều. Mô hình lớn có thể nhanh chóng ghi nhớ format hoặc câu trả lời cụ thể.
+SFT dataset thường nhỏ hơn pretraining corpus rất nhiều. Model lớn có thể memorize formatting hoặc exact answers nhanh.
 
-Validation nên theo dõi:
+Validation cần đo:
 
 ```text
 training loss
 validation loss
-behavior evaluation
-khả năng khái quát ra ngoài template đã thấy
+behavior evals
+out-of-template generalization
 ```
 
-Loss SFT thấp không đồng nghĩa trợ lý tốt.
+SFT loss thấp không đồng nghĩa assistant tốt.
 
-## SFT và trace lập luận
+## SFT và reasoning traces
 
-Dataset có thể chứa rationale hoặc lời giải từng bước. Mô hình có thể học pattern giải từng bước, nhưng chất lượng phụ thuộc độ đúng của trace.
+Dataset có thể chứa rationale hoặc chain-like solution steps. Model có thể học pattern giải từng bước, nhưng quality phụ thuộc correctness của traces.
 
-Nếu trace trông hợp lý nhưng sai, mô hình cũng có thể bắt chước. Phản hồi dài hơn không tự động nghĩa là reasoning tốt hơn.
+Nếu traces chứa plausible nhưng incorrect reasoning, model cũng bắt chước.
+
+Không nên assume dài hơn = reasoning tốt hơn.
 
 ## Distillation bằng SFT
 
-Teacher model mạnh có thể sinh phản hồi, sau đó student được huấn luyện bằng SFT. Đây là một dạng **chưng cất tri thức (knowledge distillation)** ở cấp hành vi.
+Một teacher model mạnh có thể generate responses, sau đó student train bằng SFT. Đây là một dạng knowledge distillation ở behavior level.
 
-Student học phân bố đầu ra của teacher nhưng không nhất thiết sao chép cơ chế nội bộ.
+Student học distribution output của teacher, nhưng không nhất thiết copy internal mechanism.
 
-## SFT cho sử dụng công cụ
+## Tool-use SFT
 
-Để mô hình gọi tool, dataset có thể chứa:
+Để model gọi tools, dataset có thể chứa examples:
 
 ```text
-yêu cầu người dùng
-→ JSON gọi công cụ
-→ kết quả công cụ
-→ câu trả lời cuối
+user request
+→ tool call JSON
+→ tool result
+→ final answer
 ```
 
-SFT giúp mô hình học cú pháp và pattern quyết định. Production vẫn cần validation schema, quyền truy cập và xử lý lỗi runtime.
+SFT giúp model học syntax và decision patterns. Nhưng production vẫn cần schema validation, permissions và runtime error handling.
 
 ## SFT và calibration
 
-SFT có thể làm câu trả lời trông tự tin hơn mà không cải thiện calibration về độ đúng tương ứng. Do đó tối ưu phong cách “tự tin và hữu ích” có thể làm overconfidence nặng hơn.
+SFT có thể làm model answers trông tự tin hơn mà không cải thiện factual calibration tương ứng. Vì vậy preference về “confident helpful style” có thể tạo overconfidence.
 
-Đánh giá cần tách phong cách khỏi tính đúng.
+Evaluation phải tách style và correctness.
 
-## Mô hình tư duy
+## Mental Model
 
-> SFT là **bắt chước hành vi dựa trên năng lực đã học từ pretraining**.
+> SFT là **behavior imitation trên top của pretrained capability**.
 
-Nó không thay thế tiền huấn luyện, retrieval hay verification ở runtime.
+Nó không thay thế pretraining, retrieval hay runtime verification.
 
-## Những hiểu lầm thường gặp
+## Common Misconceptions
 
-### “SFT huấn luyện mô hình từ đầu cho tác vụ”
+### “SFT train model từ đầu cho task”
 
-Không. Với LLM, SFT thường là một giai đoạn hậu huấn luyện tương đối nhỏ trên mô hình đã pretrain.
+Không. Với LLM, SFT thường là small post-training phase trên pretrained model.
 
 ### “LoRA luôn cho kết quả giống full fine-tuning”
 
-Không. Hiệu quả phụ thuộc rank, target module, dữ liệu và mức thay đổi hành vi cần thiết.
+Không. Hiệu quả phụ thuộc rank, target modules, data và mức thay đổi behavior cần thiết.
 
-### “Dataset SFT càng lớn càng tốt”
+### “SFT dataset càng lớn càng tốt”
 
-Ví dụ xấu hoặc không nhất quán có thể làm hành vi tệ đi. Chất lượng và độ bao phủ quan trọng hơn số lượng thô.
+Bad/inconsistent examples có thể degrade behavior. Curated quality và coverage quan trọng hơn raw count.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-SFT là cầu nối giữa [Instruction Tuning](./06_instruction_tuning.md) và preference optimization. Khi có nhiều câu trả lời chấp nhận được, bắt chước một target duy nhất không đủ để biểu diễn thứ tự ưu tiên. Đây là lý do RLHF và DPO xuất hiện.
+SFT là cầu giữa [Instruction Tuning](./06_instruction_tuning.md) và preference optimization. Khi multiple acceptable answers tồn tại, imitation một target không đủ để encode preference ordering. Đó là lý do RLHF/DPO xuất hiện.
 
 Xem tiếp: [RLHF](./08_rlhf.md).

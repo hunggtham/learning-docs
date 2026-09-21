@@ -1,8 +1,8 @@
 # Audio và Speech Representation
 
-Âm thanh là một **tín hiệu áp suất thay đổi theo thời gian (time-varying pressure signal)**. Microphone biến dao động áp suất thành tín hiệu điện, sau đó hệ thống sampling để tạo thành các giá trị số. Máy không trực tiếp nghe “giọng nói” hoặc “âm nhạc”; nó nhận một discrete waveform.
+Âm thanh là **time-varying pressure signal** được microphone biến thành electrical signal rồi sample thành numbers. Máy không trực tiếp nghe “giọng nói” hay “âm nhạc”; nó nhận discrete waveform.
 
-Một mono waveform có thể viết:
+Một mono waveform:
 
 \[
 x[n],\quad n=0,1,...,N-1
@@ -10,45 +10,39 @@ x[n],\quad n=0,1,...,N-1
 
 ## Sampling Rate
 
-**Tần số lấy mẫu (sampling rate)** `f_s` cho biết số sample được ghi mỗi giây, ví dụ 16 kHz cho nhiều speech system hoặc 44.1 kHz cho music.
+Sampling rate `f_s` cho biết số samples mỗi giây, ví dụ 16 kHz cho speech hoặc 44.1 kHz cho music.
 
-Nyquist theorem cho biết frequency cao nhất có thể biểu diễn mà không aliasing trong điều kiện lý tưởng phải thỏa:
+Nyquist theorem nói frequency cao nhất có thể represent không aliasing lý tưởng là:
 
 \[
 f_{max}<\frac{f_s}{2}
 \]
 
-Phần lớn information quan trọng cho speech intelligibility nằm ở dải tương đối thấp, vì vậy 16 kHz thường đủ cho nhiều ASR application.
+Vì speech intelligibility chủ yếu nằm dưới vài kHz, 16 kHz thường đủ cho ASR.
 
 ## Bit Depth
 
-**Bit depth** quyết định độ phân giải của phép quantization amplitude.
+Bit depth controls quantization resolution. Higher bit depth giảm quantization noise nhưng tăng storage/bandwidth.
 
-Bit depth cao hơn giảm quantization noise nhưng làm storage và bandwidth tăng.
+## Waveform vs Frequency Domain
 
-Sampling rate quyết định độ phân giải theo thời gian; bit depth quyết định độ phân giải theo amplitude. Hai khái niệm này không giống nhau.
-
-## Waveform và Frequency Domain
-
-Raw waveform biểu diễn amplitude theo thời gian.
-
-Fourier Transform phân rã signal thành các frequency component:
+Raw waveform cho amplitude theo time. Fourier transform decompose thành frequencies:
 
 \[
 X(f)=\mathcal F\{x(t)\}
 \]
 
-Nhưng speech liên tục thay đổi theo thời gian, nên Fourier Transform trên toàn signal làm mất information về frequency nào xuất hiện ở thời điểm nào.
+Nhưng speech changes over time, nên full-signal Fourier transform mất temporal locality.
 
 ## Short-Time Fourier Transform
 
-**Short-Time Fourier Transform (STFT)** chia waveform thành các window chồng lấn rồi tính Fourier Transform riêng cho từng window:
+STFT chia waveform thành overlapping windows rồi Fourier transform mỗi window:
 
 \[
 X(m,k)=\sum_n x[n]w[n-mH]e^{-j2\pi kn/N}
 \]
 
-Trong đó `m` là frame index, `k` là frequency bin và `H` là hop size.
+`m` là frame index, `k` frequency bin, `H` hop size.
 
 Magnitude spectrogram:
 
@@ -56,44 +50,38 @@ Magnitude spectrogram:
 S(m,k)=|X(m,k)|^2
 \]
 
-biểu diễn năng lượng theo cả time và frequency.
+cho time–frequency representation.
 
-## Trade-off của Window Size
+## Window Size Trade-off
 
-Window dài:
+Long window:
 
 ```text
-frequency resolution tốt hơn
-nhưng time resolution kém hơn
+better frequency resolution
+worse time resolution
 ```
 
-Window ngắn tạo trade-off ngược lại.
-
-Đây là một biểu hiện của **time–frequency uncertainty trade-off**: khó có resolution cực cao đồng thời ở cả hai trục.
+Short window ngược lại. Đây là time-frequency uncertainty trade-off.
 
 ## Mel Scale
 
-Human perception về pitch và frequency không tuyến tính hoàn toàn theo Hz.
+Human pitch perception không linear theo Hz. **Mel scale** compresses high frequencies. Mel filterbank aggregates spectrum into perceptually motivated bands.
 
-**Mel scale** nén vùng high frequency và giữ resolution tương đối tốt hơn ở vùng frequency thấp theo một mô hình gần với perception của con người.
+Mel spectrogram là common input cho speech/audio models.
 
-Mel filterbank tổng hợp spectrum thành các perceptually motivated band. **Mel spectrogram** vì vậy là input rất phổ biến cho speech và audio model.
+## Log-Mel Features
 
-## Log-Mel Feature
-
-Loudness perception cũng gần logarithmic hơn linear.
-
-Do đó energy thường được log-transform:
+Human loudness roughly logarithmic, nên dùng log energy:
 
 \[
 \log(S+\epsilon)
 \]
 
-Phép biến đổi này vừa nén dynamic range vừa giúp optimization ổn định hơn.
+cũng compress dynamic range và stabilize training.
 
 ## MFCC
 
-**Mel-Frequency Cepstral Coefficients (MFCC)** từng là feature rất phổ biến trong ASR truyền thống:
+Mel-Frequency Cepstral Coefficients historically common in ASR:
 
 ```text
 waveform
@@ -104,119 +92,107 @@ waveform
 → MFCC
 ```
 
-MFCC nén spectral envelope liên quan tới đặc điểm vocal tract.
+MFCC compress spectral envelope linked to vocal tract characteristics.
 
-Modern deep model thường dùng log-mel spectrogram hoặc raw waveform trực tiếp, nhưng MFCC vẫn rất quan trọng để hiểu lịch sử và signal-processing foundation của speech recognition.
+Modern deep models often use log-mel spectrogram or raw waveform directly.
 
 ## Speech Production
 
-Speech signal phản ánh tương tác giữa:
+Speech signal reflects interaction của:
 
-- nguồn dao động từ vocal folds;
-- resonance của vocal tract và formant;
+- vocal-source excitation;
+- vocal tract resonances/formants;
 - articulation;
 - prosody;
-- acoustic channel và room.
+- room/acoustic channel.
 
-Góc nhìn **source–filter model** giúp hiểu vì sao cùng một phoneme có thể khác nhau giữa speaker nhưng vẫn chia sẻ spectral structure nhất định.
+This source-filter view helps understand why same phoneme differs across speakers but shares spectral patterns.
 
-## Phoneme, Grapheme và Token
+## Phoneme, Grapheme, Token
 
-Speech recognition có thể map audio sang nhiều output unit khác nhau:
+Speech recognition may map audio to:
 
 ```text
-phoneme
-character / grapheme
-subword token
-word
+phonemes
+characters/graphemes
+subword tokens
+words
 ```
 
-Choice của output unit ảnh hưởng alignment, vocabulary size, pronunciation handling và multilingual behavior.
+Output unit choice affects alignment, vocabulary and multilingual behavior.
 
 ## Prosody
 
-Meaning của speech không chỉ nằm ở lexical content.
+Meaning is not only lexical content. Pitch `F0`, energy, duration and rhythm encode emotion, emphasis and sentence structure.
 
-Pitch `F0`, energy, duration và rhythm còn encode emotion, emphasis, question/statement pattern và discourse structure.
+ASR may discard much prosody; TTS must recreate it.
 
-ASR có thể bỏ qua nhiều prosody khi chỉ cần transcript, trong khi TTS cần tái tạo prosody để giọng nói tự nhiên và truyền đúng ý.
+## Silence and Voice Activity Detection
 
-## Silence và Voice Activity Detection
+VAD determines regions containing speech. It reduces compute and avoids transcribing silence/noise, but false negatives cut real speech.
 
-**Voice Activity Detection (VAD)** xác định đoạn nào chứa speech.
+## Noise and Reverberation
 
-VAD giúp giảm compute và tránh transcribe silence hoặc noise, nhưng false negative có thể cắt mất speech thật.
-
-Trong streaming system, VAD cũng ảnh hưởng latency vì nó góp phần quyết định khi nào một utterance được xem là kết thúc.
-
-## Noise và Reverberation
-
-Recording thực tế có thể chứa:
+Real recordings contain:
 
 - background noise;
-- echo và reverberation;
+- echo/reverberation;
 - microphone frequency response;
 - clipping;
-- codec/compression artifact.
+- packet compression.
 
-Nếu training chỉ dùng clean studio speech, deployment quality có thể giảm mạnh do domain shift.
+Training only clean studio speech causes deployment shift.
 
 ## Beamforming
 
-Microphone array có thể tận dụng delay khác nhau giữa nhiều microphone để tăng tín hiệu từ một hướng và suppress noise từ hướng khác.
-
-**Beamforming** là ví dụ điển hình cho signal processing có thể hoạt động trước hoặc song song với learned model.
+Microphone arrays exploit spatial delays to emphasize source direction and suppress noise. This is signal processing before/alongside learned models.
 
 ## Audio Augmentation
 
-Các augmentation hữu ích gồm:
+Useful transforms:
 
 - additive noise;
 - speed perturbation;
-- convolution với room impulse response;
-- gain change;
-- SpecAugment che một số vùng time/frequency.
+- room impulse convolution;
+- gain changes;
+- SpecAugment masks time/frequency regions.
 
-Augmentation encode assumption về variation mà model nên robust, nhưng không được làm thay đổi label semantics ngoài ý muốn.
+Augmentations encode expected invariance but should not destroy label.
 
-## Raw-Waveform Model
+## Raw-Waveform Models
 
-Learned convolutional encoder có thể xử lý waveform trực tiếp và tự học frontend representation.
-
-Điều này giảm reliance vào handcrafted feature nhưng không làm time–frequency structure biến mất; model vẫn phải học các pattern đó từ data.
+Learned convolutional encoders can directly transform waveform into latent features. This reduces handcrafted frontend but still must discover frequency/time structure from data.
 
 ## Audio Tokenization
 
-Generative audio model có thể quantize continuous acoustic representation thành discrete **codec token** bằng vector quantization hoặc neural codec.
+Generative audio models may quantize continuous acoustic representations into discrete codec tokens using vector quantization.
 
-Khi đó audio có thể được model như một token sequence, gần hơn với cách autoregressive language model xử lý text.
+Then audio can be modeled autoregressively like language tokens.
 
 ## Multi-Channel Audio
 
-Stereo hoặc microphone array thêm channel dimension và cung cấp spatial cue như interaural time difference hoặc level difference.
+Stereo/microphone arrays add channel dimension and spatial cues such as interaural time/level differences.
 
-Thông tin spatial này hữu ích cho localization, separation và beamforming.
+## Mental Model
 
-## Mô hình tư duy
+> **Audio AI là inference trên một signal vừa temporal vừa spectral. Waveform nói cái gì xảy ra theo time; spectrogram nói năng lượng nằm ở frequency nào tại từng time window.**
 
-> **Audio AI là quá trình suy luận trên một signal vừa có cấu trúc thời gian vừa có cấu trúc tần số. Waveform cho biết signal thay đổi thế nào theo time; spectrogram cho biết energy nằm ở frequency nào trong từng time window.**
+## Common Misconceptions
 
-## Những nhầm lẫn thường gặp
+### “Spectrogram là ảnh nên xử lý như image bình thường”
 
-### “Spectrogram là ảnh nên có thể augmentation như image bình thường”
+Nó là 2D tensor nhưng axes có physical meaning khác; augmentations valid cho image không necessarily valid cho audio.
 
-Không hoàn toàn. Spectrogram là tensor 2D nhưng hai axis mang physical meaning khác image spatial axis. Một transformation hợp lệ cho image chưa chắc hợp lệ cho audio.
+### “Higher sample rate luôn tốt hơn ASR”
 
-### “Sampling rate càng cao thì ASR luôn càng tốt”
+Above task-relevant bandwidth, compute/data cost có thể tăng mà gain nhỏ.
 
-Không. Khi đã vượt task-relevant bandwidth, compute và storage có thể tăng nhiều trong khi quality gain rất nhỏ.
+### “Speech = text trong audio form”
 
-### “Speech chỉ là text ở dạng audio”
+Speech còn speaker identity, prosody, emotion, acoustic environment.
 
-Không. Speech còn chứa speaker identity, prosody, emotion và acoustic environment.
+## Knowledge Connection
 
-## Liên kết kiến thức
-
-Audio nối Signal Processing, Fourier Analysis, CNN/Transformer sequence model và Representation Learning.
+Audio connects Signal Processing, Fourier Analysis, CNN/Transformer sequence models và representation learning.
 
 Xem tiếp: [Speech Recognition](./01_speech_recognition.md).

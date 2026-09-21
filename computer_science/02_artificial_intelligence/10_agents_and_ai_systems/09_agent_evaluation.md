@@ -1,8 +1,8 @@
-# Đánh giá Agent
+# Agent Evaluation
 
-Đánh giá **tác nhân AI (AI agent)** khó hơn đánh giá một phản hồi đơn lẻ vì agent tạo ra **quỹ đạo thực thi (trajectory)** gồm nhiều quyết định, lời gọi công cụ, thay đổi trạng thái và side effect. Một final answer đúng vẫn có thể đến từ trajectory nguy hiểm; ngược lại một task thất bại có thể do tool outage, stale state hoặc permission chứ không phải do reasoning của model.
+Đánh giá agent khó hơn đánh giá single model response vì agent tạo **trajectory** gồm nhiều decisions, tool calls và state transitions. Một final answer đúng có thể đến từ trajectory nguy hiểm; một task fail có thể do tool outage chứ không phải model reasoning.
 
-Vì vậy evaluation cần đồng thời nhìn:
+Do đó evaluation cần nhiều level:
 
 ```text
 step-level
@@ -11,71 +11,50 @@ end-to-end task-level
 system-level
 ```
 
-## Kiến thức cần có trước
+## End-to-End Task Success
 
-Nên đọc [Tool Calling](./01_tools_and_function_calling.md), [Agent Loop](./02_agent_loop.md), [Planning](./03_planning_and_task_decomposition.md), [Agent State](./05_agent_state_and_context.md), [RAG Evaluation](../09_retrieval_and_rag/09_rag_evaluation.md) và [LLM Evaluation](../08_large_language_models/14_llm_evaluation.md).
+Metric quan trọng nhất là task có đạt acceptance criteria thật không.
 
-## Hợp đồng đánh giá Agent
-
-Trước khi chạy benchmark, cần xác định:
-
-```text
-goal là gì?
-acceptance criterion là gì?
-agent được phép dùng tool nào?
-state ban đầu là gì?
-side effect nào được phép?
-stop condition là gì?
-maximum budget về step/token/cost/time là bao nhiêu?
-property nào là hard invariant?
-```
-
-Nếu không cố định những yếu tố này, hai run không thực sự đang giải cùng một task.
-
-## Thành công End-to-End
-
-Metric quan trọng nhất là task có thực sự đạt acceptance criterion hay không.
-
-Ví dụ với coding task:
+Ví dụ coding task:
 
 ```text
 required tests pass
-không có regression
-requested behavior đã được implement
-scope constraint được giữ đúng
+no regression
+requested behavior implemented
+scope constraints respected
 ```
 
-Không dùng self-report kiểu “đã xong” của mô hình làm ground truth.
+Không dùng self-reported “done” của model làm ground truth.
 
-## Step-level Evaluation
+## Step-Level Evaluation
 
-Mỗi quyết định có thể được kiểm tra:
+Mỗi decision có thể score:
 
-- có chọn đúng tool không?
-- argument có đúng schema và semantics không?
-- có gọi tool không cần thiết không?
-- observation có được diễn giải đúng không?
-- retry có phù hợp error class không?
-- dangerous action có bị runtime chặn đúng không?
+- chọn đúng tool?
+- arguments đúng?
+- có dùng unnecessary tool?
+- observation được interpret đúng?
+- retry appropriate?
+- dangerous action bị chặn?
 
-Step metric giúp xác định failure đầu tiên thay vì chỉ thấy task cuối cùng thất bại.
+Step metrics giúp localize failure.
 
 ## Trajectory Evaluation
 
-Hai agent đều có thể hoàn thành task nhưng trajectory khác nhau:
+Hai agents đều hoàn thành task nhưng trajectory khác:
 
 ```text
-Agent A: 5 step, 1 retry, có verification
-Agent B: 27 step, search lặp lại, ghi nhầm rồi rollback
+A: 5 steps, 1 retry, verified
+B: 27 steps, repeated searches, accidental write then rollback
 ```
 
-Final success không phản ánh đầy đủ efficiency và risk.
+Final success alone không capture efficiency/risk.
 
-Các metric có thể gồm:
+Trajectory metrics:
 
 ```text
 step count
-tool-call count
+tool calls
 repeated-action rate
 cost
 latency
@@ -84,167 +63,96 @@ approval count
 unnecessary mutation count
 ```
 
-## Trực giác toán học về xác suất thành công theo horizon
+## Efficiency
 
-Nếu mỗi critical step có xác suất thành công xấp xỉ `p` và coi đơn giản các bước độc lập, một task dài `H` bước có xác suất hoàn tất gần:
-
-\[
-P(success)\approx p^H
-\]
-
-Đây không phải mô hình chính xác cho mọi agent, nhưng cho trực giác quan trọng: **sai số nhỏ ở mỗi bước có thể khuếch đại mạnh khi horizon dài**.
-
-Ví dụ nếu `p=0.98`:
+Có thể define normalized efficiency:
 
 \[
-0.98^{20}\approx0.67
+E = \frac{utility}{cost + \lambda latency + \mu steps}
 \]
 
-Nghĩa là reliability của long-horizon task không thể suy ra trực tiếp từ accuracy một bước. Đây là lý do cần decomposition, checkpoint, verifier và recovery.
+Không có universal formula; mục đích là make trade-off explicit.
 
-## Hiệu quả và Economics
+## Tool-Use Accuracy
 
-Có thể định nghĩa utility có điều chỉnh resource:
+Create test cases mà correct tool/arguments known. Measure:
 
-\[
-E=\frac{utility}{cost+\lambda\,latency+\mu\,steps}
-\]
+- tool selection accuracy;
+- argument validity;
+- semantic correctness;
+- permission compliance.
 
-Không có công thức universal. Mục tiêu là làm rõ trade-off giữa outcome và resource.
+## Retrieval/Research Agents
 
-Production nên theo dõi **cost per verified successful task**, không chỉ cost/request.
+Ngoài answer quality cần:
 
-## Độ chính xác khi dùng Tool
+- source recall;
+- citation correctness;
+- source authority;
+- claim–evidence alignment;
+- unsupported claim rate.
 
-Nên tạo test case mà tool đúng và argument đúng đã biết trước. Đo:
+## Agentic Coding
+
+Metrics có thể:
+
+- tests passed;
+- patch correctness;
+- regression rate;
+- files changed beyond scope;
+- compile/lint;
+- security/static-analysis issues;
+- number of failed attempts.
+
+## Planning Evaluation
+
+Plan score theo:
 
 ```text
-tool selection accuracy
-argument validity
-semantic correctness
-permission compliance
-unnecessary tool-call rate
-recovery correctness
-```
-
-Một JSON hợp schema nhưng gọi nhầm account hoặc operation vẫn là lỗi nghiêm trọng.
-
-## Đánh giá Planning
-
-Plan nên được kiểm tra theo:
-
-```text
-coverage của subtask bắt buộc
+coverage of required subtasks
 dependency correctness
 executability
 risk ordering
 verification coverage
-khả năng thích nghi sau failure
+adaptability after failure
 ```
 
-Một plan viết đẹp nhưng chứa tool không tồn tại hoặc step không thể thực thi vẫn là plan thất bại.
+Một plan prose đẹp nhưng chứa non-existent tool là fail.
 
-## Đánh giá Retrieval trong Agent
+## Memory Evaluation
 
-Research agent cần đo cả:
+Measure:
 
-```text
-source recall
-citation correctness
-source authority
-claim–evidence alignment
-unsupported claim rate
-freshness
-ACL compliance
-```
-
-Nếu agent dùng RAG như một subroutine, failure taxonomy nên giữ được stage retrieval riêng thay vì gộp chung thành “reasoning error”.
-
-## Đánh giá Memory và State
-
-Có thể đo:
-
-- recall khi retrieve memory liên quan;
+- relevant memory retrieval recall;
 - stale fact usage;
-- contradiction rate;
+- contradiction;
 - unauthorized memory access;
 - memory write precision;
-- harmful persistence;
-- token cost do memory gây ra.
+- harmful persistence.
 
-State evaluation còn cần kiểm:
+## Safety Evaluation
 
-```text
-resume có đúng sau crash không?
-retry có lặp side effect không?
-concurrent update có gây lost update không?
-version/state transition có hợp lệ không?
-```
+Scenario suites phải test:
 
-## Safety và Security Evaluation
+- direct prompt injection;
+- indirect injection qua documents/web;
+- privilege escalation;
+- destructive action request;
+- exfiltration attempt;
+- ambiguous approval;
+- conflicting instructions.
 
-Scenario suite nên có:
+Safety test cần verify runtime boundary, không chỉ model refusal text.
 
-```text
-direct prompt injection
-indirect injection qua document/web/tool output
-privilege escalation
-destructive action request
-data exfiltration
-ambiguous approval
-conflicting instruction
-compromised tool output
-cross-tenant access attempt
-```
+## Deterministic Test Environment
 
-Safety test phải verify runtime boundary và permission behavior, không chỉ xem mô hình có viết câu từ chối hay không.
+Tool/environment nên có simulator/sandbox để repeat trajectories.
 
-## Môi trường kiểm thử có thể replay
+Ví dụ fake email server, test database, mock filesystem. Nếu mỗi evaluation run tác động production state, test không reproducible và nguy hiểm.
 
-Agent eval nên chạy trên simulator hoặc sandbox có trạng thái kiểm soát được:
+## Scenario-Based Evaluation
 
-```text
-fake email server
-test database
-mock filesystem
-sandbox API
-versioned document corpus
-```
-
-Mỗi case cần một **environment snapshot** xác định:
-
-```text
-initial state
-available tools
-tool versions
-credentials / permissions
-network conditions
-expected invariants
-```
-
-Nhờ vậy failure có thể replay thay vì biến mất vì production state đã đổi.
-
-## State Snapshot và Event Log
-
-Một run nên lưu:
-
-```text
-agent/model/prompt version
-initial state snapshot
-mỗi tool proposal
-validation/authorization result
-tool response
-state transition
-approval event
-final state
-final answer
-```
-
-Natural-language transcript không đủ để tái tạo workflow có side effect.
-
-## Scenario-based Evaluation
-
-Agent task có nhiều biến thể nên xây scenario dataset:
+Agent tasks đa dạng nên xây scenario dataset:
 
 ```text
 normal success
@@ -253,198 +161,123 @@ transient tool failure
 permission denied
 conflicting records
 stale state
-user đổi goal giữa task
+user changes goal mid-task
 malicious retrieved content
-partial side effect
-service timeout
 ```
 
-Mỗi scenario nên có expected invariant và acceptance criterion rõ.
+Mỗi scenario có expected invariants.
 
-## Invariant-based Scoring
+## Invariants
 
-Không phải lúc nào cũng cần exact trajectory. Agent có thể tìm đường đi khác nhau miễn giữ invariant:
+Thay vì yêu cầu exact trajectory, enforce invariants:
 
 ```text
-không write trước approval
-không vượt budget
-không truy cập ngoài tenant
-phải verify sau mutation
-không lặp payment khi retry
-factual claim cần citation nếu policy yêu cầu
+must not write before approval
+must cite external factual claims
+must not exceed budget
+must verify after mutation
+must preserve user data
 ```
 
-Invariant đặc biệt hữu ích khi đánh giá agent tự chủ vì trajectory hợp lệ có thể không duy nhất.
+Agent có thể tìm different valid paths miễn invariants hold.
 
-## Đánh giá tính ngẫu nhiên của trajectory
+## LLM-as-Judge
 
-Sampling, tool latency hoặc search result có thể làm cùng một task sinh trajectory khác nhau. Vì vậy với critical case nên chạy nhiều lần.
+LLM judge hữu ích cho semantic dimensions như relevance/style, nhưng không nên là sole evaluator cho factual/tool correctness.
 
-Nếu `S_i` là 1 khi run thứ `i` hoàn tất task an toàn và 0 nếu không:
+Risks:
 
-\[
-\hat p=\frac{1}{n}\sum_i S_i
-\]
+- judge bias;
+- self-preference;
+- prompt sensitivity;
+- poor calibration.
 
-`\hat p` ước lượng **verified success probability**. Nên theo dõi thêm variance của cost, step count và latency, vì một agent “thường nhanh nhưng thỉnh thoảng loop 100 bước” là production risk thật.
-
-## Fault Injection
-
-Để đánh giá recovery, simulator có thể chủ động tạo lỗi:
-
-```text
-TIMEOUT
-RATE_LIMITED
-TRANSIENT_FAILURE
-CONFLICT
-STALE_VERSION
-PARTIAL_RESULT
-```
-
-Agent phải phân biệt retryable và non-retryable error. Retry mù mọi lỗi thường làm reliability kém hơn.
-
-## LLM-as-a-Judge
-
-LLM judge hữu ích cho relevance, style hoặc completeness, nhưng không nên là evaluator duy nhất cho factual, tool hoặc state correctness.
-
-Deterministic check nên giữ vai trò anchor cho:
-
-```text
-file tồn tại?
-transaction có đúng state?
-schema hợp lệ?
-permission có đúng?
-test có pass?
-```
+Use deterministic checks và human labels làm anchors.
 
 ## Human Evaluation
 
-Human evaluation cần thiết với task chủ quan hoặc rủi ro cao. Rubric phải đủ rõ để inter-rater agreement có ý nghĩa.
-
-Disagreement giữa evaluator cũng là tín hiệu: task có thể mơ hồ, policy chưa rõ hoặc evidence chưa đủ.
+Cần khi quality subjective hoặc high-stakes. Human rubric phải rõ để inter-rater consistency tốt.
 
 ## Regression Testing
 
-Mọi thay đổi model, prompt, tool schema, workflow graph hoặc retrieval pipeline đều có thể làm behavior đổi.
+Mỗi thay đổi prompt/model/tool schema có thể đổi behavior. Maintain fixed eval suite và compare before/after.
 
-Cần lưu **behavior bundle**:
-
-```text
-model + prompt + tools + schemas + workflow + retrieval + policy
-```
-
-và chạy cùng regression suite trước khi promote.
+Không chỉ compare average; inspect critical scenario regressions.
 
 ## Online Evaluation
 
-Metric production có thể gồm:
+Production metrics:
 
 ```text
-verified task completion rate
-user correction rate
+task completion rate
+user corrections
 human escalation
-abort / cancel rate
-cost per task
-p95 / p99 latency
-unsafe-action block rate
+abort/cancel rate
+cost/task
+p95 latency
+unsafe action blocks
 incident rate
-retry/loop rate
 ```
 
-A/B test cần guardrail metric, không chỉ tối ưu số task completed.
+A/B test cần guardrail metrics, không chỉ user engagement.
 
 ## Failure Taxonomy
 
-Nên tag failure theo layer:
+Tag failures:
 
 ```text
 MODEL_REASONING
 TOOL_SELECTION
-TOOL_ARGUMENT
 TOOL_EXECUTION
 STATE_STALE
-STATE_CONFLICT
 RETRIEVAL_MISS
 PERMISSION
 PLANNING
 VERIFICATION_MISS
 ORCHESTRATION
 USER_AMBIGUITY
-BUDGET_EXCEEDED
 ```
 
-Taxonomy giúp biết cần sửa model, prompt, tool, data hay runtime.
+Taxonomy giúp biết nên fix prompt, tool, data hay runtime.
 
 ## Credit Assignment
 
-Task thất bại sau 20 step tạo bài toán credit assignment: step nào gây lỗi gốc?
-
-Structured trace, state snapshot và event log giúp xác định causal chain tốt hơn so với đọc transcript bằng mắt.
+End-to-end failure qua 20 steps tạo challenge: step nào thực sự gây fail? Trace + structured state giúp postmortem.
 
 ## Benchmark Leakage
 
-Public agent benchmark có thể xuất hiện trong training data hoặc bị tối ưu quá mức. Internal realistic task thường phản ánh production distribution tốt hơn.
+Public agent benchmarks có thể contaminated trong training data. Internal realistic tasks thường cho signal production tốt hơn.
 
-Nên giữ cả benchmark chuẩn để so sánh và private eval để đo generalization.
+## Reliability Curve theo Horizon
 
-## Failure mode của hệ thống đánh giá Agent
+Đo success theo number of required steps. Nếu performance sụt mạnh khi horizon > 5, design cần more decomposition/checkpoints chứ không chỉ average benchmark.
 
-**Chỉ chấm final answer.** Bỏ qua trajectory nguy hiểm.
+## Cost-aware Evaluation
 
-**Không snapshot environment.** Run không thể replay.
+Model A success 90% với $1/task, model B 92% với $10/task. “Better” phụ thuộc business utility và failure cost.
 
-**Tool mock quá đơn giản.** Agent pass benchmark nhưng fail với lỗi thật như timeout/conflict.
+## Mental Model
 
-**Judge chấm cả property xác định.** Dùng LLM để “đoán” transaction state thay vì đọc state thật.
+> **Agent evaluation phải đo outcome, trajectory, safety và economics cùng lúc.**
 
-**Không test horizon dài.** Agent trông tốt ở task 2 bước nhưng sụp ở workflow 20 bước.
+Một demo thành công không nói gì về reliability distribution.
 
-**Không pin tool/workflow version.** Score thay đổi mà không biết vì code hay model.
+## Common Misconceptions
 
-## Production Release Gate
+### “Benchmark model cao thì agent sẽ cao”
 
-Một flow hợp lý:
-
-```text
-candidate behavior bundle
-→ deterministic tool/state tests
-→ scenario replay
-→ stochastic repeated runs cho critical cases
-→ security/invariant suite
-→ cost/latency budget
-→ shadow/canary
-→ online monitoring
-→ promote hoặc rollback
-```
-
-Mọi incident đáng kể nên quay lại thành scenario regression mới.
-
-## Mô hình tư duy
-
-> **Agent evaluation phải đo outcome, trajectory, invariants, recovery và economics cùng lúc.**
-
-Một demo thành công chỉ chứng minh hệ thống *có thể* hoạt động trong một trường hợp; nó không chứng minh reliability distribution của production workload.
-
-## Những nhầm lẫn thường gặp
-
-### “Model benchmark cao thì agent chắc chắn tốt”
-
-Không. Agent quality còn phụ thuộc tool, state, orchestration, retrieval và environment.
+Agent quality phụ thuộc tools, state, orchestration và environment.
 
 ### “Final answer đúng là đủ”
 
-Không. Trajectory có thể vi phạm permission hoặc tạo side effect sai rồi mới rollback.
+Trajectory có thể vi phạm permission hoặc tạo side effect sai rồi sửa lại.
 
 ### “LLM judge thay thế được test”
 
-Không đối với property xác định như file existence, transaction state, schema validity hoặc permission.
+Không cho deterministic properties như file existence, transaction state hay permission.
 
-### “Một successful run chứng minh agent reliable”
+## Knowledge Connection
 
-Không. Cần đo phân phối behavior qua nhiều scenario và nhiều run.
+Evaluation nối software testing, observability, statistics và safety engineering. Chapter cuối chuyển các lessons thành design principles cho reliable agents.
 
-## Liên kết kiến thức
-
-Agent evaluation nối [Tool Calling](./01_tools_and_function_calling.md), [Agent State](./05_agent_state_and_context.md), [RAG Evaluation](../09_retrieval_and_rag/09_rag_evaluation.md), [Evaluation Foundations](../18_evaluation_reliability_interpretability/00_evaluation_foundations.md), [Reliability Engineering](../18_evaluation_reliability_interpretability/07_reliability_engineering.md) và [LLMOps](../16_mlops_and_llmops/08_llmops.md).
-
-Xem tiếp: [Thiết kế Agent đáng tin cậy](./10_reliable_agent_design.md).
+Xem tiếp: [Reliable Agent Design](./10_reliable_agent_design.md).

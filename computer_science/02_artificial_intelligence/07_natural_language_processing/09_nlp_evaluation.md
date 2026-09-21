@@ -1,255 +1,280 @@
-# Đánh giá NLP: từ nhãn chính xác tới chất lượng ngôn ngữ mở
+# NLP Evaluation: từ exact labels tới open-ended language quality
 
-**Đánh giá NLP (NLP Evaluation / 자연어 처리 평가)** khó hơn nhiều bài toán ML vì ngôn ngữ cho phép nhiều đầu ra khác nhau nhưng vẫn cùng đúng. Phân loại có nhãn tương đối rõ; dịch, tóm tắt và sinh văn bản có thể có vô số cách diễn đạt hợp lệ. Vì vậy cần chọn metric theo đúng tác vụ, tách điểm tự động khỏi giá trị thực cho người dùng và luôn phân tích loại lỗi cụ thể.
+NLP Evaluation (자연어 처리 평가) khó vì language cho phép nhiều outputs khác nhau cùng đúng. Classification có label rõ; translation/summarization/generation có vô số acceptable phrasings. Vì vậy evaluation cần chọn metric phù hợp task, tách automatic score khỏi human utility và luôn inspect failure categories.
 
-## Phân loại và NER
+## Classification / NER
 
-Phân loại dùng accuracy, precision, recall, F1 và calibration như ML nói chung.
+Classification dùng accuracy, precision, recall, F1, calibration như ML chung.
 
-NER nên dùng F1 ở cấp thực thể hoặc span thay vì chỉ token accuracy vì nhãn `O` thường chiếm đa số.
+NER nên entity/span-level F1 thay token accuracy vì class `O` dominate.
 
-Ví dụ exact match nghiêm ngặt:
+Exact entity match strict:
 
 ```text
 Gold: [Seoul National University]
 Pred: [National University]
 ```
 
-sẽ tính là sai dù có phần chồng lấp. Có thể bổ sung phân tích partial match, nhưng quy ước báo cáo phải rõ ràng.
+count wrong dù overlap. Có thể thêm partial-match analysis nhưng report convention rõ.
 
-## Macro và Micro F1
+## Macro vs Micro F1
 
-**Micro F1** gộp toàn bộ count nên bị lớp phổ biến chi phối.
+Micro aggregate all examples/counts, dominated frequent classes.
 
-**Macro F1** tính F1 từng lớp rồi lấy trung bình ngang nhau, nhờ đó làm lộ hiệu năng kém ở lớp hiếm.
+Macro average F1 each class equally, exposes rare-class weakness.
 
-Weighted macro dùng số lượng mẫu làm trọng số.
+Weighted macro uses support weights.
 
-Phân bố nhãn NLP thường mất cân bằng, nên một metric duy nhất hiếm khi đủ.
+NLP label distributions often imbalanced, nên report more than one view.
 
 ## BLEU
 
-BLEU đo modified n-gram precision cùng brevity penalty so với một hoặc nhiều bản tham chiếu.
+BLEU measures modified n-gram precision + brevity penalty relative references.
 
-Đây là metric lịch sử hữu ích cho đánh giá dịch máy ở cấp corpus vì rẻ và tái lập được.
+Useful historical MT corpus metric, cheap/reproducible.
 
-Hạn chế chính là: paraphrase hợp lệ có thể bị phạt, khả năng phát hiện lỗi ngữ nghĩa và factuality yếu, tokenization và số lượng reference ảnh hưởng điểm, đồng thời điểm ở cấp từng câu khá nhiễu.
+Limitations:
 
-BLEU nên dùng để so trong cùng giao thức chứ không phải thước đo chất lượng ngôn ngữ phổ quát.
+- valid paraphrases penalized;
+- semantics/factuality weak;
+- tokenization/reference count affect score;
+- sentence-level noisy.
+
+BLEU should compare same setup, not become universal language-quality score.
 
 ## ROUGE
 
-Họ ROUGE nhấn mạnh mức bao phủ và trùng lặp, phổ biến trong tóm tắt.
+ROUGE family emphasizes overlap/recall, common summarization.
 
-ROUGE-L dùng **longest common subsequence**. Nó thưởng sự trùng nội dung nhưng không đáng tin để phát hiện mâu thuẫn sự thật.
+ROUGE-L uses longest common subsequence. It rewards content overlap but cannot reliably detect factual inconsistency.
 
-Hệ thống extractive thường có lợi thế trên ROUGE vì câu trả lời giữ nhiều từ giống nguồn.
+Extractive systems often score well because wording overlaps source.
 
-## METEOR và chrF
+## METEOR / chrF
 
-METEOR bổ sung stemming, synonym và heuristic căn chỉnh.
+METEOR includes stemming/synonym/alignment heuristics.
 
-chrF dùng F-score của character n-gram và thường hữu ích cho ngôn ngữ có hình thái phong phú vì ít phụ thuộc ranh giới từ.
+chrF uses character n-gram F-score and works well morphologically rich languages because less dependent word tokenization.
 
-Không metric nào thay thế được phân tích lỗi theo bài toán.
+No metric removes need for task-specific error analysis.
 
 ## BERTScore
 
-BERTScore so token của candidate và reference bằng độ tương đồng contextual embedding.
+BERTScore matches candidate/reference tokens using contextual embedding similarity.
 
-Nó nhận ra paraphrase tốt hơn metric chỉ dựa trên chuỗi bề mặt. Tuy nhiên nó phụ thuộc encoder dùng để chấm và có thể cho điểm cao cho câu giống về ngữ nghĩa tổng quát nhưng sai một sự kiện hoặc con số quan trọng.
+It captures paraphrases better than surface overlap.
 
-## Metric được học
+But depends pretrained encoder and can reward semantically similar yet factually wrong outputs.
 
-Các metric kiểu COMET học từ đánh giá con người và biểu diễn của nguồn/reference, thường tương quan với chất lượng dịch tốt hơn nhiều metric cổ điển.
+## Learned Metrics
 
-Nhưng bản thân metric cũng là một model, vì vậy có thể có thiên lệch domain, bị tối ưu lách, thay đổi theo phiên bản hoặc có overlap dữ liệu huấn luyện.
+COMET-style MT metrics learn from human judgments/source/reference representations and often correlate better with human quality.
 
-Metric học được cũng cần được kiểm định.
+Risks:
+
+- domain/model bias;
+- metric gaming;
+- version drift;
+- hidden training overlap.
+
+Metric is another model requiring validation.
 
 ## Perplexity
 
-Với mô hình ngôn ngữ:
+Language-model intrinsic metric:
 
 \[
 PPL=\exp(crossentropy)
 \]
 
-Perplexity hữu ích khi so cùng tokenizer và cùng corpus kiểm tra. Nó đo mức dự đoán token tiếp theo, không trực tiếp đo helpfulness, instruction following hoặc factuality.
+Useful compare same tokenization/test corpus. It measures next-token predictive fit, not downstream instruction/helpfulness directly.
 
 ## Exact Match
 
-Question Answering và structured extraction thường dùng exact string match.
+QA/structured extraction often use exact string match.
 
-Metric này phù hợp khi đáp án có dạng chuẩn rõ ràng nhưng quá nghiêm khi nhiều cách định dạng hoặc paraphrase đều hợp lệ.
+Good when canonical answer strict, bad when formatting/paraphrase acceptable.
 
-Quy trình normalization có thể bỏ chữ hoa, dấu câu hoặc article, nhưng chính sách phải phù hợp ngôn ngữ và yêu cầu tác vụ.
+Normalization can lowercase/remove punctuation/articles but policy must match task and languages.
 
-## Metric ngữ nghĩa cho QA
+## Semantic QA Metrics
 
-Extractive QA thường dùng token F1. Generative QA có thể kết hợp semantic similarity, entailment hoặc judge cùng kiểm tra evidence.
+Token F1 for extractive QA compares overlap. Generative QA may use learned judge/entailment plus factual source checks.
 
-Một đáp án nhìn tổng thể rất giống reference vẫn có thể sai một số tiền, ngày hoặc thực thể quan trọng; embedding similarity trung bình dễ bỏ sót loại lỗi này.
+A semantically similar answer can still contain one dangerous wrong number; aggregate embedding similarity may miss it.
 
-## Faithfulness và chất lượng tổng quát
+## Faithfulness vs Quality
 
-Một bản tóm tắt có thể rất trôi chảy và đúng chủ đề nhưng không trung thành với nguồn.
+Summaries can be fluent/relevant but unfaithful.
 
-Nên tách các trục:
+Separate axes:
 
 ```text
-mức bao phủ / relevance
-độ trôi chảy / mạch lạc
-faithfulness / grounding
+coverage/relevance
+fluency/coherence
+faithfulness/grounding
 factual correctness
-style / format
+style/format
 ```
 
-Gộp tất cả vào một điểm sẽ che mất sự đánh đổi giữa các thuộc tính.
+One overall score hides trade-offs.
 
-## Đánh giá của con người
+## Human Evaluation
 
-Human evaluation có thể nhận xét tinh tế hơn nhưng cũng có phương sai và thiên lệch.
+Human judges can assess nuanced meaning, but evaluation has variance/bias.
 
-Thiết kế tốt cần rubric rõ ràng, so sánh mù/ngẫu nhiên, nhiều người chấm cho nhiệm vụ chủ quan, đo mức đồng thuận, lấy mẫu đại diện và cơ chế xử lý edge case.
+Need:
 
-So sánh theo cặp thường dễ và ổn định hơn yêu cầu người đánh giá cho điểm tuyệt đối 1–5.
+- clear rubric;
+- blind/randomized comparison;
+- multiple raters for subjective task;
+- inter-rater agreement;
+- representative samples;
+- adjudication for edge cases.
 
-## LLM-as-a-Judge
+Pairwise preference often easier/more reliable than absolute 1–5 score.
 
-LLM có thể làm judge để đánh giá quy mô lớn với chi phí thấp hơn con người, đặc biệt cho so sánh cặp và rubric có cấu trúc.
+## LLM-as-a-Judge Preview
 
-Nhưng judge có thể có:
+LLM can evaluate outputs cheaply at scale, especially pairwise/rubric tasks.
 
-- thiên lệch vị trí;
-- thích câu dài hoặc phong cách cụ thể;
-- thiên lệch về cùng họ model;
-- nhạy với prompt;
-- lỗi factual;
-- bị nội dung câu trả lời prompt-inject.
+But judge has biases:
 
-Nên hiệu chỉnh judge với nhãn người thật và cung cấp bằng chứng có cấu trúc khi có thể.
+- position bias;
+- verbosity/style preference;
+- self/model-family preference;
+- prompt sensitivity;
+- factual errors;
+- vulnerability to answer text injection.
 
-## Contamination dữ liệu
+Use calibrated judge against human labels and structured evidence where possible.
 
-Nếu benchmark đã xuất hiện trong pretraining hoặc fine-tuning, điểm số có thể phản ánh memorization hoặc selection thay vì generalization độc lập.
+## Data Contamination
 
-Với dữ liệu huấn luyện đóng, contamination thường khó chứng minh hoàn toàn. Tập mới, riêng tư hoặc chia theo thời gian giúp giảm rủi ro.
+If benchmark appears in pretraining/fine-tuning, score may reflect memorization.
 
-Trong thời đại LLM, benchmark cũng cần vòng đời và phiên bản như dữ liệu production.
+Contamination hard prove for closed training data. New/private/time-split evaluation reduces risk.
 
-## Challenge Set
+LLM era makes benchmark lifecycle important.
 
-Tập kiểm tra IID trung bình có thể bỏ sót hiện tượng ngôn ngữ quan trọng. Có thể xây tập tập trung vào:
+## Challenge Sets
+
+Average IID test may miss linguistic phenomena. Create targeted sets:
 
 ```text
-phủ định
-đồng tham chiếu
-thực thể hiếm
-số và ngày
-ngữ cảnh dài
-code-switch đa ngôn ngữ
-lỗi chính tả đối kháng
-tính mơ hồ
+negation
+coreference
+rare entities
+numbers/dates
+long context
+multilingual code-switching
+adversarial spelling
+ambiguity
 ```
 
-Mỗi tập nhắm tới một năng lực hoặc failure mode cụ thể.
+Each tests specific capability/failure mode.
 
 ## Robustness
 
-Có thể biến đổi đầu vào mà không thay đổi ý nghĩa:
+Perturb input without changing meaning:
 
 ```text
-đổi dấu câu
-paraphrase bằng từ đồng nghĩa
-lỗi gõ nhẹ
-đổi thứ tự định dạng
-chèn câu không liên quan
+punctuation change
+synonym paraphrase
+typo
+format reorder
+irrelevant sentence insertion
 ```
 
-Nếu tác vụ bất biến với biến đổi đó, đầu ra nên tương đối ổn định.
+Prediction should remain stable if task invariant.
 
-Tuy nhiên perturbation phải thực sự giữ nguyên ngữ nghĩa; nếu vô tình đổi nghĩa thì phép đo robustness không còn hợp lệ.
+But perturbation must genuinely preserve semantics.
 
-## Đánh giá đa ngôn ngữ
+## Multilingual Evaluation
 
-Không nên chỉ dịch benchmark tiếng Anh rồi coi độ khó tương đương. Dịch có thể thay văn hóa, độ mơ hồ, độ dài token và cả mức độ tự nhiên.
+Do not translate English benchmark and assume equivalence. Translation may change difficulty, culture, tokenization and ambiguity.
 
-Nên dùng dữ liệu và người đánh giá bản ngữ, đồng thời báo cáo theo từng ngôn ngữ.
+Use native-language datasets/raters and report per-language metrics.
 
-Với tiếng Hàn và tiếng Việt, khoảng trắng, hình thái và tokenization có thể ảnh hưởng metric dựa trên overlap; metric theo ký tự hoặc ngữ nghĩa có thể bổ sung góc nhìn.
+For Korean/Vietnamese, spacing/morphology/tokenization can affect exact/overlap metrics; character or semantic metrics may complement.
 
-## Bất định thống kê
+## Statistical Uncertainty
 
-Khi có thể nên báo cáo confidence interval bằng bootstrap trên đơn vị độc lập.
+Report confidence intervals via bootstrap over examples/documents when possible.
 
-Nếu nhiều mẫu cùng thuộc một người dùng hoặc tài liệu, nên resample theo user/document thay vì từng row để không đánh giá thấp độ bất định.
+If samples grouped by user/document, resample at independent unit.
 
-Chênh lệch điểm rất nhỏ mà không có khoảng tin cậy không nên quyết định việc triển khai.
+Tiny score difference without uncertainty should not drive deployment decision.
 
-## Đánh giá Online
+## Online Evaluation
 
-Metric offline không phản ánh toàn bộ tương tác với người dùng. A/B test có thể đo task completion, search success, số lần sửa hoặc thử lại, retention và bỏ cuộc vì latency.
+Offline NLP metric does not capture user interaction. A/B testing can measure:
 
-Nhưng metric online cũng có thể tạo động cơ sai như clickbait hoặc trả lời dài quá mức. Vì vậy cần guardrail và nhiều chỉ số bổ sung.
+- task completion;
+- search success;
+- correction/retry rate;
+- retention;
+- latency abandonment.
 
-## Phân loại lỗi
+But online metric can incentivize bad behavior (clickbait, verbosity). Guardrails needed.
 
-Với output sinh, nên phân loại thủ công hoặc bán tự động:
+## Error Taxonomy
+
+For generated output, manually categorize:
 
 ```text
-sai thực thể
-sai số / ngày
-bỏ sót
-thêm thông tin không được hỗ trợ
-mâu thuẫn
-vi phạm instruction
-lỗi format
-lỗi ngôn ngữ / phong cách
-lỗi grounding từ retrieval
+wrong entity
+wrong number/date
+omission
+unsupported addition
+contradiction
+instruction violation
+format error
+language/style issue
+retrieval grounding failure
 ```
 
-Thống kê loại lỗi thường giúp cải thiện hệ thống cụ thể hơn nhiều so với chỉ nhìn BLEU hoặc ROUGE.
+Error counts guide engineering much more actionable than one BLEU/ROUGE score.
 
-## Đánh giá có thể tái lập
+## Reproducible Evaluation
 
-Cần lưu:
+Record:
 
 ```text
-phiên bản model / tokenizer
-prompt / template
-cấu hình decoding
-phiên bản dataset
-phiên bản metric
-quy tắc normalization
+model/tokenizer version
+prompt/template
+decoding config
+dataset commit/version
+metric version
+normalization
 random seed
-phiên bản retrieval index nếu có
+retrieval index/version if used
 ```
 
-Cấu hình sinh có thể làm điểm thay đổi đáng kể dù model weights không đổi.
+Generation settings can materially change score.
 
-## Mô hình tư duy
+## Mental Model
 
-> Đánh giá NLP là bài toán thiết kế phép đo. Trước tiên phải định nghĩa “hành vi ngôn ngữ tốt” cho tác vụ, sau đó mới chọn nhiều phép đo xấp xỉ nó.
+> NLP evaluation is measurement design. First define what “good language behavior” means for the task; only then choose multiple measurements that approximate it.
 
-## Những hiểu lầm thường gặp
+## Common Misconceptions
 
-### “Metric tự động cao nghĩa output tốt cho người dùng”
+### “Automatic metric cao = output tốt cho user”
 
-Không. Metric chỉ đo một phần mục tiêu mong muốn.
+Metric captures subset of desired properties.
 
-### “Embedding metric giải quyết hoàn toàn vấn đề paraphrase”
+### “Semantic embedding metric solves paraphrase problem completely”
 
-Không. Nó vẫn có thể bỏ qua lỗi factual, số học hoặc logic nhỏ nhưng nghiêm trọng.
+It may miss factual/number/logical errors.
 
-### “Human evaluation là ground truth không nhiễu”
+### “Human evaluation is ground truth without noise”
 
-Không. Con người bất đồng và có thiên lệch; rubric và sampling rất quan trọng.
+Humans disagree and have biases; rubric/design matter.
 
-### “Benchmark score chính là năng lực mô hình”
+### “Benchmark score is model capability”
 
-Không. Đó là hiệu năng trên một mẫu bài toán dưới prompt và giao thức đánh giá cụ thể.
+It is performance on a sampled benchmark under specific prompt/eval protocol.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Đánh giá NLP mở rộng [Model Evaluation](../04_machine_learning/15_model_evaluation.md) và chuẩn bị cho các layer LLM/RAG, nơi generation mở, judge và grounding trở thành vấn đề trung tâm.
+NLP evaluation extends [Model Evaluation](../04_machine_learning/15_model_evaluation.md) and prepares dedicated LLM/RAG evaluation layers where open-ended generation, judges and grounding become central.

@@ -1,58 +1,58 @@
-# Variational Autoencoder: không gian latent như một mô hình xác suất
+# Variational Autoencoders: latent space như một probabilistic model
 
-**Variational Autoencoder (VAE / 변분 오토인코더 / bộ tự mã hóa biến phân)** mở rộng autoencoder từ cơ chế nén xác định thành một **mô hình sinh có biến tiềm ẩn (latent-variable generative model)**. Encoder không chỉ tạo một vector latent duy nhất mà xấp xỉ phân bố của biến tiềm ẩn `z` khi biết đầu vào `x`. Decoder định nghĩa khả năng sinh dữ liệu khi biết latent.
+Variational Autoencoder (VAE / 변분 오토인코더) mở rộng autoencoder từ deterministic compression thành một **latent-variable generative model**. Encoder không output một latent vector duy nhất; nó approximate distribution của latent variable `z` conditioned on input `x`. Decoder defines likelihood của data given latent.
 
-Mục tiêu là vừa tái tạo dữ liệu tốt, vừa buộc phân bố latent có cấu trúc gần một prior đơn giản để có thể lấy mẫu và sinh dữ liệu mới.
+Mục tiêu là vừa reconstruct data vừa làm latent distribution có structure gần một prior đơn giản để có thể sample/generate.
 
-## Mô hình sinh
+## Generative model
 
-Giả sử prior của latent là:
+Assume latent prior:
 
 \[
 p(z)=\mathcal N(0,I)
 \]
 
-Decoder định nghĩa:
+Decoder:
 
 \[
 p_\theta(x\mid z)
 \]
 
-Phân bố chung:
+Joint:
 
 \[
 p_\theta(x,z)=p(z)p_\theta(x\mid z)
 \]
 
-Xác suất biên của dữ liệu:
+Data likelihood:
 
 \[
 p_\theta(x)=\int p(z)p_\theta(x\mid z)dz
 \]
 
-Tích phân này thường không thể tính chính xác khi decoder là mạng nơ-ron phức tạp.
+Integral thường intractable với neural decoder.
 
-## Bài toán suy luận
+## Inference problem
 
-Posterior thật:
+True posterior:
 
 \[
 p_\theta(z\mid x)=\frac{p(z)p_\theta(x\mid z)}{p_\theta(x)}
 \]
 
-khó tính vì mẫu số chứa tích phân phức tạp.
+khó compute vì denominator integral.
 
-VAE đưa vào một phân bố encoder:
+VAE introduce encoder distribution:
 
 \[
 q_\phi(z\mid x)
 \]
 
-để xấp xỉ posterior. Đây là **suy luận biến phân (variational inference)**.
+để approximate posterior. Đây là **variational inference**.
 
-## Evidence Lower Bound — ELBO
+## Evidence Lower Bound (ELBO)
 
-Ta tối ưu một cận dưới của log-likelihood:
+Ta derive lower bound:
 
 \[
 \log p_\theta(x)
@@ -61,73 +61,73 @@ Ta tối ưu một cận dưới của log-likelihood:
 -D_{KL}(q_\phi(z\mid x)\|p(z))
 \]
 
-ELBO gồm hai thành phần chính.
+ELBO gồm hai phần.
 
-### Thành phần tái tạo / likelihood
+### Reconstruction / Likelihood Term
 
 \[
 \mathbb E_q[\log p_\theta(x\mid z)]
 \]
 
-khuyến khích latent giữ đủ thông tin để decoder giải thích và tái tạo đầu vào.
+encourage latent explain input well.
 
-### Điều chuẩn KL
+### KL Regularization
 
 \[
 D_{KL}(q_\phi(z\mid x)\|p(z))
 \]
 
-khuyến khích posterior xấp xỉ không đi quá xa prior.
+encourage posterior codes stay close prior.
 
-Hàm mất mát thường được viết dưới dạng:
+Loss often written:
 
 \[
 L_{VAE}=L_{recon}+D_{KL}(q(z\mid x)\|p(z))
 \]
 
-với khác biệt về dấu hoặc hệ số tùy quy ước triển khai.
+with sign/convention differences.
 
-## Vì sao phải kéo latent về gần prior?
+## Why regularize latent toward prior?
 
-Autoencoder thông thường có thể ánh xạ từng ví dụ vào những vùng rời rạc tùy ý. Khi lấy ngẫu nhiên một điểm Gaussian, điểm đó có thể nằm ở vùng decoder chưa bao giờ được huấn luyện.
+Vanilla autoencoder maps examples to arbitrary isolated regions. Sampling random Gaussian point may land where decoder never trained.
 
-VAE buộc các posterior latent cùng tương thích hơn với một prior chung, nhờ vậy việc lấy mẫu:
+VAE pushes encoded distributions to occupy a smoother prior-compatible space, making:
 
 \[
 z\sim\mathcal N(0,I)
 \]
 
-rồi giải mã có ý nghĩa hơn.
+then decode feasible.
 
-Đổi lại, nếu áp lực KL quá mạnh, mô hình có thể hy sinh chi tiết tái tạo.
+Trade-off: too much KL can reduce reconstruction detail.
 
-## Encoder Gaussian
+## Gaussian Encoder
 
-Encoder thường tạo:
+Common encoder outputs:
 
 \[
 \mu_\phi(x),\qquad \log\sigma_\phi^2(x)
 \]
 
-và định nghĩa:
+and defines:
 
 \[
 q_\phi(z\mid x)=\mathcal N(\mu,diag(\sigma^2))
 \]
 
-Mô hình thường dự đoán log-variance thay vì variance trực tiếp vì log-variance không bị ràng buộc phải dương và thuận tiện hơn về ổn định số; khi cần có thể lấy hàm mũ để thu được variance.
+Why output log variance? Variance must positive; log-space unconstrained/stable and exponentiate when needed.
 
 ## Reparameterization Trick
 
-Nếu lấy mẫu trực tiếp:
+Naively sampling:
 
 \[
 z\sim\mathcal N(\mu,\sigma^2)
 \]
 
-nút ngẫu nhiên phụ thuộc vào tham số làm việc truyền gradient theo đường lấy mẫu trở nên khó xử lý.
+puts stochastic node depending on parameters, hard for pathwise gradient.
 
-Ta viết lại:
+Rewrite:
 
 \[
 \epsilon\sim\mathcal N(0,I)
@@ -137,127 +137,149 @@ Ta viết lại:
 z=\mu+\sigma\odot\epsilon
 \]
 
-Khi đó phần ngẫu nhiên nằm ở `ε`, còn `z` vẫn là hàm khả vi của `μ` và `σ`. Kỹ thuật này gọi là **mẹo tái tham số hóa (reparameterization trick)**.
+Randomness moved to parameter-independent `ε`; `z` differentiable w.r.t. `μ,σ`.
 
-## KL dạng đóng cho Gaussian
+This is **reparameterization trick**.
 
-Với Gaussian đường chéo so với chuẩn tắc:
+## Closed-form KL for Gaussian
+
+For diagonal Gaussian vs standard normal:
 
 \[
 D_{KL}(q\|p)=\frac12\sum_j
 (\mu_j^2+\sigma_j^2-\log\sigma_j^2-1)
 \]
 
-Do đó thành phần KL của VAE chuẩn có thể tính trực tiếp mà không cần Monte Carlo.
+Thus no Monte Carlo needed for KL term in standard VAE.
 
-## Likelihood của Decoder quyết định hàm tái tạo
+## Decoder likelihood determines reconstruction loss
 
-Nếu:
+If:
 
 \[
 p(x\mid z)=\mathcal N(\mu_\theta(z),\sigma^2I)
 \]
 
-negative log-likelihood tương ứng gần với MSE dưới các giả định nhất định.
+negative log-likelihood corresponds roughly MSE.
 
-Nếu đầu ra được mô hình hóa Bernoulli, BCE là dạng thích hợp hơn.
+For Bernoulli outputs, BCE-like likelihood.
 
-Vì vậy việc chọn hàm mất mát tái tạo thực chất là chọn giả định về mô hình quan sát.
+Choosing reconstruction loss is choosing observation model assumptions.
 
 ## β-VAE
 
-Có thể điều chỉnh:
+Modify:
 
 \[
 L=L_{recon}+\beta D_{KL}
 \]
 
-`β>1` tăng áp lực đưa latent về prior và đôi khi tạo biểu diễn có các yếu tố tách biệt hơn, nhưng thường đổi lại bằng chất lượng tái tạo thấp hơn.
+`β>1` strengthens prior pressure and sometimes improves factorized/disentangled structure at cost reconstruction.
 
-Tính **disentanglement** không được đảm bảo chỉ nhờ tăng `β`; khả năng định danh các yếu tố latent còn phụ thuộc giả định dữ liệu và mô hình.
+But disentanglement is not guaranteed; identifiability needs assumptions.
 
 ## Posterior Collapse
 
-Nếu decoder quá mạnh, nó có thể gần như bỏ qua latent:
+Powerful decoder may ignore `z`:
 
 \[
 q(z\mid x)\approx p(z)
 \]
 
-KL khi đó gần `0` và `z` mang rất ít thông tin về `x`.
+KL near zero and latent carries little information.
 
-Hiện tượng này thường được gọi là **posterior collapse**, đặc biệt dễ xảy ra ở VAE văn bản có decoder tự hồi quy mạnh.
+Common in text VAEs with autoregressive decoder because decoder can model sequence without latent.
 
-Các biện pháp giảm gồm KL annealing, free bits, decoder yếu hơn hoặc thay đổi kiến trúc và hàm mục tiêu.
+Mitigations:
 
-## Nội suy latent
+- KL annealing;
+- free bits;
+- weaker decoder;
+- architecture/objective changes.
 
-Nhờ prior được điều chuẩn, nội suy giữa hai latent của VAE thường mượt hơn autoencoder thông thường.
+## Latent Interpolation
 
-Tuy nhiên, nội suy tuyến tính trong không gian Gaussian không phải lúc nào cũng là đường đi phù hợp nhất theo hình học xác suất; một số trường hợp dùng nội suy trên mặt cầu (spherical interpolation).
+Because latent prior is regularized, interpolation usually smoother than vanilla AE.
 
-Hình ảnh nội suy mượt cũng không tự động chứng minh các chiều latent tương ứng với khái niệm ngữ nghĩa dễ đọc.
+But linear interpolation in Gaussian space not always probability-geodesic optimal; spherical interpolation sometimes used.
 
-## So sánh VAE, GAN và Diffusion
+Smooth visualization does not prove semantic disentanglement.
 
-VAE có mô hình latent xác suất rõ ràng, tối ưu cận dưới ELBO và thường huấn luyện ổn định, nhưng các mô hình pixel cổ điển có thể cho ảnh mờ nếu likelihood hoặc decoder không đủ phù hợp.
+## VAE vs GAN vs Diffusion
 
-GAN học phân bố thông qua trò chơi đối kháng, có thể tạo ảnh sắc nét nhưng dễ gặp mất ổn định và mode collapse.
+VAE:
 
-Diffusion học quá trình khử nhiễu lặp, thường cho chất lượng sinh cao và huấn luyện ổn định hơn GAN, đổi lại việc lấy mẫu truyền thống cần nhiều bước.
+- explicit latent probabilistic model;
+- ELBO likelihood lower bound;
+- stable end-to-end training;
+- samples historically blurrier in pixel space depending decoder/loss.
 
-Các hệ thống hiện đại thường kết hợp nhiều ý tưởng thay vì tách biệt tuyệt đối.
+GAN:
 
-## Liên hệ với Latent Diffusion
+- adversarial implicit distribution;
+- sharp samples;
+- unstable training/mode collapse risk.
 
-Một hệ thống kiểu Stable Diffusion thường có luồng:
+Diffusion:
+
+- iterative denoising likelihood/score-based family;
+- high sample quality/stable training;
+- slower iterative sampling traditionally.
+
+Modern systems combine ideas, e.g. latent diffusion uses VAE-like image autoencoder to compress images before diffusion.
+
+## Latent Diffusion Connection
+
+Stable-Diffusion-like pipeline often:
 
 ```text
-ảnh
+image
 → VAE encoder
-→ biểu diễn latent theo không gian
-→ diffusion khử nhiễu trong latent
+→ latent spatial representation
+→ diffusion denoising in latent space
 → VAE decoder
-→ ảnh
+→ image
 ```
 
-VAE giảm chi phí bằng cách đưa quá trình diffusion từ không gian pixel lớn sang không gian latent nén. Vì vậy VAE vẫn là thành phần quan trọng dù diffusion là cơ chế sinh được nhắc tới nhiều hơn.
+VAE here reduces compute by moving diffusion from raw pixels to compressed latent.
 
-## Liên hệ với Variational Inference
+Thus VAE remains central even when diffusion is visible generation mechanism.
 
-VAE không chỉ là “autoencoder có thêm nhiễu”. Nó thực hiện **suy luận biến phân được amortize (amortized variational inference)**: một encoder duy nhất học cách ánh xạ mọi `x` sang tham số posterior xấp xỉ, thay vì phải chạy một bài toán tối ưu riêng cho từng mẫu.
+## Variational Inference Connection
 
-**Amortization** cho phép chia sẻ chi phí và tri thức suy luận trên toàn bộ tập dữ liệu.
+VAE is not only autoencoder with noise. It is amortized variational inference: one encoder network learns mapping from any `x` to approximate posterior parameters, instead of running separate optimization per datapoint.
 
-## Mô hình tư duy
+**Amortization** shares inference computation across dataset.
+
+## Mental Model
 
 ```text
-Encoder: x → phân bố các nguyên nhân latent khả dĩ z
-Prior:   giữ không gian latent có cấu trúc và dễ lấy mẫu
-Decoder: z → phân bố của quan sát x
-ELBO:    cân bằng giải thích dữ liệu và tương thích với prior
+Encoder: x → distribution over plausible latent causes z
+Prior:   regularizes latent world to a sampleable space
+Decoder: z → distribution over observations x
+ELBO:    balance explaining data vs keeping latent posterior compatible with prior
 ```
 
-## Những hiểu lầm thường gặp
+## Common Misconceptions
 
-### “VAE encoder tạo trực tiếp một latent vector”
+### “VAE encoder outputs latent vector”
 
-Thông thường encoder tạo tham số của một phân bố; latent sau đó được lấy mẫu bằng reparameterization.
+It usually outputs distribution parameters; latent is sampled/reparameterized.
 
-### “KL chỉ là regularization chống overfitting”
+### “KL term just prevents overfitting”
 
-Không. Nó còn buộc posterior xấp xỉ tương thích với prior và kiểm soát dung lượng thông tin của latent.
+It aligns approximate posterior with prior, enabling coherent generative latent space and controlling information capacity.
 
-### “Loss của VAE luôn là MSE + KL”
+### “VAE loss = MSE + KL always”
 
-Không. Thành phần tái tạo phụ thuộc likelihood đã chọn; MSE chỉ là một trường hợp.
+Reconstruction term depends chosen likelihood; MSE is one case.
 
-### “VAE bảo đảm latent có các yếu tố con người đọc được”
+### “VAE guarantees disentangled human-readable latent factors”
 
-Không. Disentanglement cần nhiều giả định và thiết kế bổ sung.
+No. Disentanglement requires stronger assumptions/objectives/data.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-VAE kết hợp [Xác suất](../01_mathematical_foundations/02_probability_for_ai.md), [KL Divergence và Lý thuyết thông tin](../01_mathematical_foundations/05_information_theory.md), [Autoencoder](./06_autoencoders.md) và suy luận biến phân.
+VAE combines [Probability](../01_mathematical_foundations/02_probability_for_ai.md), [KL Divergence / Information Theory](../01_mathematical_foundations/05_information_theory.md), [Autoencoders](./06_autoencoders.md) and variational inference.
 
-Xem tiếp: [Generative Adversarial Networks](./08_generative_adversarial_networks.md) và [Diffusion Models](./09_diffusion_models.md).
+Xem tiếp: [Generative Adversarial Networks](./08_generative_adversarial_networks.md) and [Diffusion Models](./09_diffusion_models.md).

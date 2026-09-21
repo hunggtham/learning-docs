@@ -1,177 +1,173 @@
-# Lập luận trong mô hình ngôn ngữ lớn
+# Reasoning trong Large Language Models
 
-Khi nói một LLM “lập luận (reasoning)”, cần tách hành vi quan sát được khỏi khẳng định về cơ chế bên trong. Ở góc nhìn engineering, **reasoning** có thể hiểu là khả năng biến một bài toán thành chuỗi biến đổi trung gian làm tăng khả năng tìm được đáp án đúng: phân rã, so sánh, suy diễn, kiểm chứng, tìm kiếm hoặc dùng công cụ.
+Khi nói một LLM “reasoning”, ta cần tách behavior quan sát được khỏi claim về cơ chế bên trong. Ở mức engineering, **reasoning** có thể hiểu là khả năng biến một problem thành chuỗi intermediate transformations giúp tăng xác suất tìm được answer đúng: decomposition, comparison, derivation, verification, search hoặc tool use.
 
-Không cần giả định mô hình suy nghĩ giống con người để đánh giá năng lực này. Câu hỏi hữu ích hơn là: mô hình giải bài toán nhiều bước ổn định đến đâu, failure mode nào thường xuất hiện và tính toán bên ngoài có cải thiện độ tin cậy không?
+Không cần giả định model suy nghĩ giống con người để đánh giá capability này. Câu hỏi hữu ích hơn là: model có thể giải bài toán nhiều bước ổn định đến đâu, failure mode nào xuất hiện, và external computation có cải thiện reliability không?
 
-## Trả lời trực tiếp và tính toán trung gian
+## Direct answer vs intermediate computation
 
-Một prompt có thể yêu cầu mô hình trả lời ngay hoặc tạo các bước trung gian. Với tác vụ nhiều bước, việc dành thêm token cho quá trình giải có thể giúp vì mô hình có thêm vị trí để thực hiện tính toán tuần tự.
+Một prompt có thể yêu cầu model trả lời trực tiếp hoặc tạo intermediate steps. Với tasks nhiều bước, việc tạo scratch reasoning có thể giúp vì model có thêm token positions để thực hiện computation tuần tự.
 
-Mô hình tư duy:
-
-```text
-giải mã một bước
-so với
-cấp thêm token inference để biến đổi bài toán qua nhiều bước
-```
-
-Tuy nhiên văn bản reasoning dài không tự động đúng. Mô hình có thể tạo lời giải thích mạch lạc cho một đáp án sai.
-
-## Phân rã bài toán
-
-Bài toán phức tạp thường dễ xử lý hơn khi tách thành bài toán con:
+Mental model:
 
 ```text
-hiểu mục tiêu
-→ trích xuất dữ kiện
-→ giải bài toán con A
-→ giải bài toán con B
-→ kết hợp
-→ kiểm chứng
+single-step decoding
+vs
+allocate more inference tokens to transform the problem
 ```
 
-Phân rã có thể giảm độ phức tạp tìm kiếm nếu các bài toán con được xác định đúng. Nếu phân rã sai từ đầu, các bước sau vẫn có thể rất nhất quán nhưng cùng đi tới kết luận sai.
+Tuy nhiên reasoning text dài không tự động đúng. Model có thể tạo một explanation coherent cho answer sai.
 
-## Prompting có bước lập luận
+## Decomposition
 
-Ví dụ có các bước trung gian đôi khi cải thiện hiệu quả ở toán, symbolic task và tác vụ tổ hợp. Một cách hiểu thực dụng là mô hình được đưa vào phân bố đầu ra nơi lời giải được trải qua nhiều token thay vì ép toàn bộ phép tính vào một token đáp án ngắn.
+Complex problem thường dễ hơn khi tách thành subproblems:
 
-Nhưng phần reasoning hiển thị không nên được coi là bản ghi trung thực bắt buộc của computation bên trong. Bản thân lời giải thích cũng là văn bản được sinh.
+```text
+understand goal
+→ extract known facts
+→ solve subproblem A
+→ solve subproblem B
+→ combine
+→ verify
+```
+
+Decomposition giảm effective search complexity nếu subproblems đúng. Nếu decomposition sai từ đầu, downstream steps có thể consistent nhưng wrong.
+
+## Chain-of-thought-like prompting
+
+Demonstrations có intermediate steps đôi khi cải thiện performance trên arithmetic, symbolic và compositional tasks. Lý do thực dụng là model được dẫn vào distribution nơi solution unfolds qua nhiều tokens thay vì ép compress computation vào next-token answer ngắn.
+
+Nhưng visible reasoning không nên được xem là guaranteed faithful transcript của internal computation. Output explanation itself là generated text.
 
 ## Self-consistency
 
-Một chiến lược là sinh nhiều đường giải khác nhau rồi tổng hợp đáp án cuối. Nếu mỗi đường có xác suất đúng đủ cao và lỗi không hoàn toàn tương quan, bỏ phiếu có thể tăng accuracy.
+Một strategy là sample multiple reasoning paths rồi aggregate final answers. Nếu independent paths có chance đúng lớn hơn random và errors không perfectly correlated, voting có thể cải thiện accuracy.
 
-Chi phí tăng gần theo số sample. Nếu mô hình có cùng một misconception hệ thống, self-consistency chỉ tạo nhiều biến thể của cùng lỗi.
+Cost tăng gần theo số samples. Nếu model có systematic misconception, self-consistency chỉ tạo nhiều phiên bản cùng một lỗi.
 
-## Tìm kiếm trên các đường lập luận
+## Search over reasoning paths
 
-Thay vì chỉ lấy một trajectory, hệ thống có thể phân nhánh các bước ứng viên, chấm điểm, cắt nhánh và tiếp tục. Đây là kết nối trực tiếp với tìm kiếm cổ điển:
+Thay vì sample một trajectory, system có thể branch candidate steps, score, prune và continue. Đây là connection trực tiếp với classical search.
 
 ```text
-state     = lời giải một phần
-operator  = đề xuất bước reasoning tiếp theo
-heuristic = verifier hoặc value model
-search    = chọn nhánh để mở rộng
+state = partial solution
+operator = propose next reasoning step
+heuristic = verifier/value model
+search = choose paths to expand
 ```
 
-LLM lúc này đóng vai trò mô hình đề xuất (proposal model) bên trong hệ thống search.
+LLM trở thành proposal model bên trong search system.
 
-## Kiểm chứng
+## Verification
 
-Độ tin cậy tăng mạnh khi kết quả trung gian hoặc cuối có thể được kiểm tra bằng công cụ xác định như:
+Reasoning reliability tăng mạnh khi intermediate/final result có thể kiểm tra bằng deterministic tool:
 
-- máy tính;
+- calculator;
 - compiler;
 - SQL engine;
 - theorem prover;
-- unit test;
+- unit tests;
 - symbolic algebra.
 
-Một pattern mạnh là:
+Pattern mạnh:
 
 ```text
-LLM đề xuất
-→ verifier bên ngoài kiểm tra
-→ mô hình sửa nếu cần
+LLM proposes
+→ external verifier checks
+→ model revises if needed
 ```
 
-Cách này thường đáng tin hơn việc chỉ yêu cầu mô hình “tự tin hơn” hoặc “kiểm tra lại”.
+Đây thường đáng tin hơn “model tự tin hơn”.
 
-## Lập luận có công cụ hỗ trợ
+## Tool-augmented reasoning
 
-LLM không cần tự thực hiện mọi phép toán. Với số học lớn, gọi calculator hợp lý hơn sinh từng chữ số. Với dữ liệu hiện tại, truy vấn API tốt hơn đoán từ trọng số.
+Một LLM không cần internalize mọi operation. Với arithmetic lớn, gọi calculator hợp lý hơn sinh phép tính token-by-token. Với current data, query API tốt hơn đoán.
 
-Năng lực ở cấp hệ thống đến từ việc chọn đúng công cụ và tích hợp kết quả đúng cách.
+Intelligence system-level đến từ việc chọn đúng tool và integrate result đúng cách.
 
-## Tính toán ẩn và reasoning hiển thị
+## Reasoning và latent computation
 
-Một phần computation diễn ra trong hidden state trước mỗi token. Rationale hiển thị chỉ là một cách chiếu quá trình đó thành ngôn ngữ.
+Một phần computation xảy ra trong hidden states trước mỗi token. Visible rationale chỉ là một projection thành language. Vì vậy absence of long rationale không đồng nghĩa absence of computation, và presence of rationale không guarantee fidelity.
 
-Vì vậy không có lời giải thích dài không có nghĩa không có computation; ngược lại có rationale dài cũng không bảo đảm rationale phản ánh đúng cơ chế tạo đáp án.
+Engineering evaluation nên đo task success, verification và robustness, không đo “trông có vẻ suy nghĩ”.
 
-Đánh giá engineering nên đo kết quả tác vụ, verification và robustness thay vì chỉ đo “trông có vẻ đang suy nghĩ”.
+## Test-time compute
 
-## Compute lúc kiểm thử
+Cho model thêm inference tokens, multiple samples, search hoặc verifier calls là một cách tăng **test-time compute**. Đây là axis khác model scale.
 
-Cho mô hình thêm token suy luận, nhiều sample, search hoặc verifier call là cách tăng **compute lúc kiểm thử (test-time compute)**. Đây là một trục khác với tăng kích thước mô hình.
-
-Đánh đổi:
+Trade-off:
 
 ```text
-nhiều compute hơn
-→ có thể đáng tin hơn
-nhưng
-→ độ trễ và chi phí cao hơn
+more compute → potentially better reliability
+but → higher latency/cost
 ```
 
-Ứng dụng nên cấp ngân sách theo mức rủi ro của tác vụ.
+Application cần chọn budget theo task risk.
 
-## Lập kế hoạch và lập luận
+## Planning vs reasoning
 
-Reasoning thường biến thông tin thành kết luận. **Lập kế hoạch (planning)** chọn chuỗi hành động để đạt mục tiêu trong môi trường.
+Reasoning thường biến information thành conclusion. Planning chọn sequence of actions để đạt goal trong environment.
 
-LLM agent có thể dùng reasoning để tạo plan, nhưng chất lượng plan còn phụ thuộc theo dõi state, mô hình hóa hiệu ứng hành động và feedback từ environment.
+LLM agent có thể dùng reasoning để tạo plan, nhưng plan quality còn phụ thuộc state tracking, action effects và environment feedback.
 
 Xem: [Planning](../02_search_reasoning_and_planning/05_planning.md).
 
-## Thất bại ở số học
+## Arithmetic failure
 
-Language modeling không bảo đảm số học chính xác. Các phép carry theo chữ số có thể mong manh khi chuỗi dài.
+LLM language modeling không đảm bảo exact arithmetic. Digit-level carry operations là brittle khi sequence dài.
 
-Calculator giải bài toán bằng thuật toán xác định. Đây là ví dụ rõ rằng hệ thống mạnh hơn không nhất thiết cần mô hình tự thực hiện mọi computation.
+Calculator tool giải problem theo deterministic algorithm. Đây là example rõ rằng stronger system không nhất thiết cần model tự làm mọi computation.
 
-## Thất bại ở logic
+## Logic failure
 
-LLM có thể tạo syllogism nghe hợp lý nhưng sai ở phủ định, lượng từ hoặc cách diễn đạt đối kháng. Formal solver có semantics và quy tắc chứng minh tường minh.
+LLM có thể produce valid-sounding syllogism nhưng fail negation, quantifier hoặc adversarial wording. Formal solver có explicit semantics và proof rules.
 
-Một kiến trúc lai có thể dùng mô hình để chuyển natural language thành biểu diễn formal rồi để solver kiểm chứng.
+Hybrid approach: model parse natural language → formal representation → solver verifies.
 
-## Lập luận dưới bất định
+## Reasoning under uncertainty
 
-Không phải bài toán nào cũng có một đáp án chính xác duy nhất. Bayesian reasoning hoặc decision reasoning cần biểu diễn uncertainty và utility. Câu văn thể hiện sự chắc chắn do LLM sinh không phải xác suất đã được calibration.
+Không phải problem nào có one exact answer. Bayesian/decision reasoning cần represent uncertainty và utility. LLM-generated certainty language không phải calibrated probability.
 
-Với quyết định rủi ro cao, mô hình xác suất tường minh hoặc policy domain nên bổ sung.
+Nếu decision high stakes, explicit probabilistic model hoặc domain policy cần bổ sung.
 
-## Vấn đề tính trung thực của rationale
+## Faithfulness problem
 
-Rationale được sinh có thể là lời giải thích hậu nghiệm (post-hoc explanation). Mô hình có thể đi đến đáp án nhờ feature khác với điều nó mô tả trong lời giải thích.
+Generated rationale có thể là post-hoc explanation. Model có thể arrive at answer through features khác với explanation nó viết.
 
-Do đó không nên dùng chain-of-thought text làm audit trail duy nhất cho quyết định được quản lý chặt.
+Do đó không nên dùng chain-of-thought text làm sole audit trail cho regulated decisions.
 
-## Scratchpad nội bộ và giải thích cho người dùng
+## Hidden scratchpad vs user-facing explanation
 
-Hệ thống có thể tách computation nội bộ khỏi phần giải thích ngắn gọn cho user. Người dùng thường cần lý do và bằng chứng có thể kiểm chứng hơn là toàn bộ scratch work theo token.
+Một system có thể separate internal computational process khỏi concise user explanation. User thường cần reasons/evidence có thể kiểm chứng hơn raw token-by-token scratch work.
 
-Giải thích tốt nên nêu premise, source, phép tính và uncertainty liên quan.
+Good explanation should cite premises, sources, calculations và uncertainty relevant.
 
-## Benchmark reasoning
+## Reasoning benchmarks
 
-Benchmark toán, code hoặc logic chỉ đo từng lát cắt của reasoning. Điểm cao không đồng nghĩa năng lực suy luận phổ quát.
+Benchmarks như math/code/logical tasks đo slices của reasoning. High score không nghĩa universal reasoning competence.
 
-Nhiễm dữ liệu, độ nhạy prompt và cách verifier chấm cũng ảnh hưởng score.
+Contamination, prompt sensitivity và verifier differences cũng ảnh hưởng score.
 
-## Mô hình tư duy
+## Mental Model
 
-> Lập luận bằng LLM đáng tin nhất khi được xem như **đề xuất xác suất + phân rã có cấu trúc + search/verification bên ngoài**, chứ không phải một oracle suy luận hoàn hảo.
+> LLM reasoning đáng tin nhất khi được xem như **probabilistic proposal + structured decomposition + external verification/search**, không phải một oracle suy luận hoàn hảo.
 
-## Những hiểu lầm thường gặp
+## Common Misconceptions
 
-### “Mô hình viết reasoning dài nghĩa là reasoning sâu”
+### “Model viết reasoning dài nghĩa là reasoning sâu”
 
-Độ dài không bảo đảm tính đúng.
+Length không guarantee correctness.
 
-### “Nếu model reasoning tốt thì không cần tool”
+### “Nếu model reasoning tốt thì không cần tools”
 
-Tool thường xử lý tác vụ chính xác đáng tin và rẻ hơn.
+Tools thường làm exact tasks đáng tin và rẻ hơn.
 
-### “Reasoning là một năng lực đơn nhất”
+### “Reasoning là một capability đơn nhất”
 
-Toán, code, causal reasoning, planning và commonsense reasoning có failure mode khác nhau.
+Math, code, causal, planning và commonsense reasoning có failure modes khác nhau.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Reasoning nối Transformer và ICL với [Search](../02_search_reasoning_and_planning/00_state_space_and_search.md), [Logic](../03_knowledge_and_reasoning/03_inference_and_reasoning.md), Agent và tool use.
+Reasoning nối Transformer/ICL với [Search](../02_search_reasoning_and_planning/00_state_space_and_search.md), [Logic](../03_knowledge_and_reasoning/03_inference_and_reasoning.md), Agents và tool use.
 
 Xem tiếp: [Hallucination and Grounding](./13_hallucination_and_grounding.md).

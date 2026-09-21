@@ -1,262 +1,256 @@
-# Dữ liệu là Nền tảng của AI
+# Data as the Foundation of AI
 
-Một mô hình AI chỉ học được từ những thông tin mà pipeline dữ liệu quan sát và giữ lại. Vì vậy **dữ liệu (data / 데이터)** không phải nguyên liệu trung tính; nó là kết quả của đo lường (measurement), lựa chọn (selection), gán nhãn (labeling), ghi log và chính sách thu thập.
+Một AI model chỉ học được từ information mà data pipeline quan sát và giữ lại. Vì vậy **data (데이터)** không phải nguyên liệu trung tính; nó là kết quả của measurement, selection, labeling, logging và policy.
 
-Mô hình tư duy:
+Mental model:
 
 ```text
-Thế giới thực
-→ đo lường / ghi nhận sự kiện
-→ dữ liệu thô
-→ lọc / gán nhãn / biến đổi
-→ tập dữ liệu huấn luyện
-→ mô hình
-→ quyết định
-→ hành vi và dữ liệu mới trong thế giới thực
+Real world
+→ measurement / event logging
+→ raw data
+→ filtering / labeling / transformation
+→ training dataset
+→ model
+→ decisions
+→ new real-world behavior/data
 ```
 
-Vòng lặp cuối cùng đặc biệt quan trọng: một hệ thống AI sau khi triển khai có thể thay đổi chính dữ liệu mà nó sẽ nhìn thấy trong tương lai.
+Loop cuối quan trọng: deployed AI có thể thay đổi data tương lai.
 
-## Dataset không phải là Thực tế
+## Dataset không phải Reality
 
-Tập dữ liệu (dataset) chỉ là một mẫu lấy ra từ quá trình sinh dữ liệu (data-generating process). Nếu quá trình đó có thiên lệch, mô hình cũng có xu hướng học lại thiên lệch của quá trình.
+Dataset chỉ là sample từ process tạo data. Nếu process đó biased, model học bias của process.
 
-Ví dụ, một dataset cho vay thường chỉ có kết quả trả nợ của những người đã được phê duyệt. Ta không quan sát được điều gì sẽ xảy ra nếu những người từng bị từ chối cũng được cho vay. Đây là vấn đề phản thực tế (counterfactual) điển hình.
+Ví dụ loan dataset chỉ có repayment outcomes cho applicants đã được approve. Ta không observe counterfactual của rejected applicants.
 
-## Quá trình Sinh dữ liệu
+## Data Generating Process
 
-Một câu hỏi rất quan trọng là:
+Một useful question:
 
-> Dữ liệu này xuất hiện bằng cơ chế nào?
+> Data này xuất hiện bằng cơ chế nào?
 
-Cần hiểu ít nhất:
+Need understand:
 
-- ai hoặc hệ thống nào tạo ra sự kiện;
-- sensor hoặc log nào ghi nhận nó;
-- trường hợp nào có thể bị thiếu;
-- chính sách nào quyết định dữ liệu nào được đưa vào;
-- label được xác định ở thời điểm nào;
-- môi trường triển khai khác môi trường thu thập dữ liệu ra sao.
+- ai tạo event;
+- sensor/log nào capture;
+- trường hợp nào bị missing;
+- policy nào quyết định inclusion;
+- label được xác định khi nào;
+- deployment khác collection environment ra sao.
 
-Nếu không hiểu quá trình sinh dữ liệu, rất dễ coi các pattern ngẫu nhiên hoặc thiên lệch của hệ thống ghi nhận là “quy luật của thế giới”.
+## Observational Data
 
-## Dữ liệu Quan sát
+Most production ML data is observational, not randomized experiment. Correlation may reflect confounding or selection effects.
 
-Phần lớn dữ liệu machine learning trong production là **dữ liệu quan sát (observational data)** chứ không phải kết quả của thí nghiệm ngẫu nhiên có kiểm soát.
+Prediction may still work if deployment distribution similar, nhưng causal interpretation cần caution.
 
-Tương quan trong dữ liệu có thể đến từ biến nhiễu (confounding), quy tắc lựa chọn mẫu hoặc hành vi của hệ thống hiện tại. Một mô hình dự đoán vẫn có thể hoạt động tốt nếu distribution triển khai tương tự, nhưng không nên tự động diễn giải correlation thành quan hệ nhân quả.
+## Data Schema
 
-## Schema của Dữ liệu
-
-Schema không chỉ là kiểu dữ liệu. Nó còn phải là một **hợp đồng ngữ nghĩa (semantic contract)** mô tả rõ:
+Schema không chỉ data types; cần semantic contract:
 
 ```text
-ý nghĩa của field
-đơn vị
-ngữ nghĩa thời gian
-quy tắc nullable
-nguồn dữ liệu
+field meaning
+unit
+time semantics
+nullable rules
+source
 version
-miền giá trị hợp lệ
-mức độ nhạy cảm / privacy class
+allowed range
+privacy class
 ```
 
-Giá trị `amount = 100` gần như vô nghĩa nếu không biết currency, unit và thời điểm mà con số đó đại diện.
+`amount=100` vô nghĩa nếu không biết currency/unit/time.
 
-## Event Time và Processing Time
+## Event Time vs Processing Time
 
-Trong hệ thống streaming hoặc transaction cần phân biệt:
+Streaming/transaction systems distinguish:
 
 ```text
-event_time      → thời điểm sự kiện thật sự xảy ra
-processing_time → thời điểm pipeline nhận hoặc xử lý sự kiện
+event_time      → when real-world event happened
+processing_time → when pipeline received/processed it
 ```
 
-Nhiều lỗi data leakage trong ML xuất hiện khi feature được tính bằng thông tin chỉ xuất hiện **sau** thời điểm cần dự đoán.
+ML leakage often occurs when feature computed using information available only after prediction time.
 
-## Tính đúng theo Thời điểm
+## Point-in-Time Correctness
 
-Một training example tại thời điểm `t` chỉ được phép dùng những thông tin mà production thật sự có thể biết tại `t`.
+Training example at time `t` chỉ được use information that would have existed at `t` in production.
 
 ```text
-thời điểm dự đoán = 10:00
-feature sử dụng chargeback chỉ được phát hiện lúc 14:00
-→ rò rỉ dữ liệu (data leakage)
+prediction time = 10:00
+feature uses chargeback discovered at 14:00
+→ leakage
 ```
 
-Feature store hoặc truy vấn dữ liệu lịch sử vì vậy cần hỗ trợ **as-of semantics** hoặc point-in-time correctness.
+Feature store/history queries need as-of semantics.
 
-## Đơn vị Quan sát
+## Unit of Observation
 
-Một row trong dataset có thể đại diện cho:
+Dataset row may represent:
 
-- người dùng;
-- giao dịch;
-- phiên làm việc;
-- ảnh;
-- tài liệu;
-- cửa sổ thời gian.
+- user;
+- transaction;
+- session;
+- image;
+- document;
+- time window.
 
-Chọn sai đơn vị quan sát có thể tạo duplicate weighting hoặc leakage. Ví dụ nhiều ảnh của cùng một bệnh nhân bị chia ngẫu nhiên sang cả train và test có thể làm metric cao giả tạo vì hai tập không thật sự độc lập.
+Incorrect unit can create duplicate weighting or leakage. Example splitting multiple images from same patient across train/test.
 
-## Lấy mẫu
+## Sampling
 
-Training distribution đôi khi cố ý lấy nhiều mẫu từ class hiếm để mô hình học tốt hơn. Điều này hữu ích cho optimization nhưng làm thay đổi tỷ lệ class so với môi trường production.
+Training distribution may intentionally oversample rare positives. This helps learning but changes class prior.
 
-Nếu class prior ở deployment khác training, xác suất dự đoán, calibration và threshold có thể cần được điều chỉnh lại.
+If deployment prior differs, probability calibration/threshold selection must account for sampling.
 
-## Độ phủ của Dữ liệu
+## Coverage
 
-Dataset nên bao phủ không gian vận hành mà hệ thống sẽ gặp, ví dụ:
+Dataset should cover intended operational space:
 
 ```text
-ngôn ngữ
-thiết bị
-khu vực
-điều kiện ánh sáng / tiếng ồn
-nhóm khách hàng
-các trường hợp hiếm nhưng quan trọng
+languages
+devices
+regions
+lighting/noise
+customer segments
+rare edge cases
 ```
 
-Không thể kỳ vọng một mô hình generalize ổn định sang vùng mà training data chưa từng đại diện, trừ khi có assumption hoặc transfer learning phù hợp.
+No model can generalize reliably to regions absent from training without assumptions/transfer.
 
 ## Long Tail
 
-Dữ liệu thực tế thường có phân bố đuôi dài (long-tail distribution). Các trường hợp phổ biến chiếm phần lớn dataset, trong khi những lỗi hiếm nhưng có tác động lớn lại có rất ít supervision.
+Real-world categories often follow heavy-tailed frequency. Common cases dominate data; rare but important failures have little supervision.
 
-Chiến lược xử lý có thể gồm thu thập có mục tiêu, reweighting, synthetic data hoặc rule riêng cho nhóm rủi ro cao.
+Long-tail strategy may require targeted collection, reweighting, synthetic data or separate rules.
 
-## Dữ liệu Trùng lặp
+## Duplicate Data
 
-Duplicate làm tăng giả số lượng sample hiệu quả và có thể bị phân tán qua train/test split.
+Duplicates inflate effective sample count and can leak across splits.
 
-Near-duplicate còn khó hơn exact duplicate: ảnh đã crop hoặc resize, tài liệu được copy, câu bị paraphrase hoặc dữ liệu được xuất lại từ cùng một nguồn có thể vẫn gần như cùng một observation.
+Near-duplicate detection is harder than exact hashes: resized/cropped images, copied documents, paraphrases.
 
-## Versioning cho Dataset
+## Data Versioning
 
-Dataset là một artifact cần được version hóa. Một experiment có thể tái tạo được khi ta biết:
+Dataset is an artifact. Need know:
 
 ```text
-snapshot nguồn
-version của code biến đổi
-các filter đã áp dụng
-version của label
-cách chia train / validation / test
-hash hoặc manifest của dữ liệu
+source snapshots
+transform code version
+filters
+label version
+split definition
+hash / manifest
 ```
 
-Không có versioning, kết quả “model A tốt hơn model B” rất khó kiểm chứng vì hai lần train có thể đã dùng dataset khác nhau.
+Without versioning, experiment cannot reproduce.
 
 ## Data Lineage
 
-**Dòng dõi dữ liệu (data lineage)** theo dõi nguồn gốc của feature và dataset:
+Lineage tracks where each feature/dataset comes from:
 
 ```text
-bảng trong database nguồn
+source DB table
 → ETL job
-→ phép biến đổi feature
+→ feature transform
 → training dataset
 → model version
 ```
 
-Lineage đặc biệt quan trọng cho debugging, compliance và phân tích ảnh hưởng khi một nguồn dữ liệu thay đổi.
+Critical for debugging, compliance and impact analysis.
 
-## Feedback Loop
+## Feedback Loops
 
-Một recommender hiển thị một số item → người dùng tương tác với những item được hiển thị → các interaction này lại trở thành training data mới.
+Recommendation model shows items → users interact with shown items → logs become next training data. Model influences what evidence it later sees.
 
-Mô hình vì vậy có thể thay đổi distribution của dữ liệu tương lai. Điều này có thể khuếch đại popularity bias hoặc khiến hệ thống ngày càng ít quan sát các lựa chọn đã không được đề xuất.
+This can amplify popularity bias or hide alternatives.
 
 ## Selective Labels
 
-Đôi khi outcome chỉ được quan sát sau một quyết định cụ thể. Ví dụ:
+We observe outcome only after specific decision. Examples:
 
-- default chỉ được quan sát ở khoản vay đã phê duyệt;
-- kết quả y tế chỉ có ở bệnh nhân đã được xét nghiệm;
-- fraud chỉ được xác nhận ở giao dịch đã bị điều tra.
+- loan default only for approved loans;
+- medical result only for tested patients;
+- fraud confirmed only for investigated transactions.
 
-Đây là **selective labels** và làm cho assumption i.i.d. đơn giản trở nên không đầy đủ. Một số bài toán có thể cần exploration, causal inference hoặc policy-aware evaluation.
+This violates simple i.i.d. assumptions and may require exploration/causal methods.
 
-## Dữ liệu Thiếu
+## Missing Data
 
-Cơ chế missing rất quan trọng:
+Missingness mechanisms matter:
 
-- **MCAR**: missing không liên quan tới các biến;
-- **MAR**: missing phụ thuộc vào dữ liệu đã quan sát;
-- **MNAR**: missing phụ thuộc vào giá trị hoặc quá trình chưa quan sát được.
+- MCAR: missing unrelated to variables;
+- MAR: missing depends observed data;
+- MNAR: missing depends unobserved value/process.
 
-Imputation không thể tự khôi phục chính xác thông tin MNAR tùy ý. Trước khi chọn kỹ thuật điền giá trị thiếu, cần hiểu vì sao dữ liệu bị thiếu.
+Imputation cannot magically recover arbitrary MNAR information.
 
-## Dữ liệu Có cấu trúc và Không có cấu trúc
+## Structured vs Unstructured Data
 
-Structured data có schema rõ. Văn bản, ảnh và audio thường được gọi là unstructured data, nhưng chúng vẫn có metadata, provenance và cấu trúc tiềm ẩn.
+Structured data has explicit schema; unstructured text/image/audio still has metadata, provenance and latent structure. “Unstructured” does not mean schema-free pipeline.
 
-“Unstructured” không có nghĩa pipeline không cần schema, versioning hoặc validation.
+## Data for Foundation Models
 
-## Dữ liệu cho Foundation Model
+At web scale, curation includes:
 
-Ở quy mô web, quá trình curation có thể bao gồm:
+- deduplication;
+- language identification;
+- quality filtering;
+- safety filtering;
+- license/provenance;
+- contamination removal;
+- mixture weighting.
 
-- loại dữ liệu trùng lặp (deduplication);
-- nhận diện ngôn ngữ;
-- lọc chất lượng;
-- lọc an toàn;
-- theo dõi license và provenance;
-- loại contamination;
-- điều chỉnh tỷ trọng giữa các nguồn dữ liệu.
-
-Tỷ lệ các nguồn trong data mixture thực chất là một phần của training objective: domain nhận nhiều token hơn cũng nhận nhiều gradient update hơn.
+Data mixture is effectively part of training objective: more tokens from domain → more optimization attention to that domain.
 
 ## Benchmark Contamination
 
-Nếu dữ liệu evaluation hoặc near-duplicate của nó xuất hiện trong training/pretraining, benchmark không còn đo generalization một cách sạch sẽ.
+If evaluation examples appear in training/pretraining, benchmark no longer estimates generalization cleanly.
 
-Exact string matching thường không đủ để phát hiện contamination vì dữ liệu có thể đã được paraphrase hoặc dẫn xuất qua nhiều nguồn trung gian.
+Exact match insufficient because paraphrases/derived sources may contaminate.
 
-## Số lượng và Chất lượng Dữ liệu
+## Data Quantity vs Quality
 
-Nhiều dữ liệu thường có ích, nhưng dữ liệu chất lượng thấp, trùng lặp hoặc nhiều nhiễu có thể làm lãng phí compute hoặc dạy mô hình các pattern không mong muốn.
+More data often helps, but low-quality duplicated/noisy data can waste compute or teach harmful patterns.
 
-Giá trị thực tế của dữ liệu phụ thuộc vào diversity, relevance, correctness và coverage, không chỉ số row hoặc số token.
+Effective data value depends diversity, relevance, correctness and coverage, not row count alone.
 
 ## Active Learning
 
-Thay vì gán nhãn ngẫu nhiên, **học chủ động (active learning)** cho mô hình chọn những sample bất định hoặc giàu thông tin để con người annotate.
-
-Cách này có thể giảm chi phí labeling, nhưng heuristic về uncertainty vẫn có thể bỏ sót những blind spot mà model đang quá tự tin một cách sai lầm.
+Instead label random examples, model identifies uncertain/informative examples for annotation. This can improve label efficiency but uncertainty heuristic may miss systematic blind spots.
 
 ## Data-Centric AI
 
-Khi pipeline và model baseline đã tương đối ổn định, cải thiện label, coverage và definition của dữ liệu thường mang lại lợi ích lớn hơn việc liên tục đổi architecture.
+When pipeline/model baseline stable, improving labels, coverage and definitions often gives more gain than architecture tweaks.
 
-**Data-centric AI** không có nghĩa model không quan trọng; nó coi chất lượng dữ liệu là một đối tượng engineering cần được đo, version và cải tiến có hệ thống.
+Data-centric approach does not mean model unimportant; it means treat data quality as an engineering object.
 
-## Quyền riêng tư
+## Privacy
 
-Training data có thể chứa dữ liệu cá nhân hoặc nhạy cảm. Quy trình thu thập cần xem xét purpose limitation, data minimization, retention và access control.
+Training data may contain personal/sensitive information. Collection needs purpose limitation, minimization, retention and access controls.
 
-Anonymization đặc biệt khó với dữ liệu high-dimensional; text hoặc image có thể cho phép tái nhận diện gián tiếp dù identifier trực tiếp đã bị loại bỏ.
+Anonymization is difficult for high-dimensional data; text/images can re-identify indirectly.
 
-## Mô hình tư duy
+## Mental Model
 
-> **Dataset là một góc nhìn đã được đo lường và ghi nhận về thực tế, được tạo ra bởi một quá trình. Muốn hiểu mô hình, trước hết phải hiểu quá trình tạo dataset.**
+> **Dataset là một instrumented view của reality, produced by a process. Muốn hiểu model, phải hiểu process tạo dataset.**
 
-## Những nhầm lẫn thường gặp
+## Common Misconceptions
 
-### “Dữ liệu tự nói lên tất cả”
+### “Data speaks for itself”
 
-Không. Ý nghĩa của dữ liệu phụ thuộc measurement, schema, sampling và selection process.
+Data meaning depends measurement, schema and selection.
 
-### “Càng nhiều row càng tốt”
+### “More rows always improve model”
 
-Không. Duplicate, noise và mất cân bằng coverage có thể làm giá trị biên của dữ liệu giảm mạnh.
+Duplicates/noise/coverage imbalance reduce marginal value.
 
 ### “Random train/test split luôn đúng”
 
-Không. Quan hệ theo time, group hoặc entity thường yêu cầu cách chia khác để tránh leakage.
+Time/group/entity dependencies often require different splitting.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Data layer nối Thống kê, Database, Distributed Systems, Privacy và đánh giá Machine Learning.
+Data layer connects Statistics, Databases, Distributed Systems, Privacy và ML evaluation.
 
-Xem tiếp: [Thu thập Dữ liệu](./01_data_collection.md).
+Xem tiếp: [Data Collection](./01_data_collection.md).

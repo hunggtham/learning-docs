@@ -1,142 +1,140 @@
-# Tiền huấn luyện của mô hình ngôn ngữ lớn
+# Pretraining của Large Language Model
 
-**Tiền huấn luyện (pretraining / 사전학습)** là giai đoạn mô hình học cấu trúc thống kê từ lượng dữ liệu rất lớn trước khi được điều chỉnh để làm theo chỉ dẫn hoặc phục vụ một ứng dụng cụ thể. Với LLM chỉ-bộ-giải-mã (decoder-only), mục tiêu phổ biến là **dự đoán token tiếp theo (next-token prediction)**: tại mỗi vị trí, mô hình nhận phần tiền tố và tối đa hóa xác suất của token tiếp theo.
+**Pretraining (사전학습 / tiền huấn luyện)** là giai đoạn model học statistical structure từ một lượng dữ liệu rất lớn trước khi được điều chỉnh để làm theo instruction hoặc phục vụ một application cụ thể. Với decoder-only LLM, objective phổ biến là **next-token prediction**: tại mỗi vị trí, model nhận prefix và tối đa hóa xác suất của token tiếp theo.
 
 \[
 P(x_{1:T})=\prod_{t=1}^{T}P(x_t\mid x_{<t})
 \]
 
-Hàm mất mát tương ứng thường là negative log-likelihood hoặc cross-entropy:
+Loss tương ứng thường là negative log-likelihood hay cross-entropy:
 
 \[
 \mathcal L=-\sum_t \log P_\theta(x_t\mid x_{<t})
 \]
 
-Mục tiêu nhìn có vẻ đơn giản nhưng buộc mô hình phải nén rất nhiều quy luật của ngôn ngữ và thế giới vào tham số. Muốn dự đoán token tốt, mô hình phải học cú pháp, liên hệ ngữ nghĩa, cấu trúc diễn ngôn, sự đồng xuất hiện của fact, mẫu mã nguồn và nhiều dạng cấu trúc lập luận có trong phân bố huấn luyện.
+Điểm quan trọng là objective này nhìn có vẻ đơn giản nhưng buộc model phải nén rất nhiều regularity của language và world vào parameters. Muốn dự đoán token tiếp theo tốt, model phải học syntax, semantic association, discourse structure, factual co-occurrence, coding patterns và nhiều dạng reasoning pattern xuất hiện trong training distribution.
 
-## Tiền huấn luyện không phải nạp dữ liệu vào cơ sở dữ liệu
+## Pretraining không phải database ingestion
 
-Mô hình không biến corpus thành một key-value store hoàn hảo. Huấn luyện cập nhật hàng tỷ tham số để phân bố đầu ra phù hợp dữ liệu. Tri thức vì vậy được **phân tán (distributed)** trong trọng số và biểu diễn.
+Model không biến corpus thành một key-value store hoàn hảo. Training cập nhật hàng tỷ parameters sao cho distribution output phù hợp data. Knowledge vì vậy được **distributed** trong weights. Một fact có thể được encode qua nhiều directions trong representation space và nhiều layers cùng lúc.
 
-Điều này giúp mô hình khái quát hóa, diễn đạt lại và kết hợp mẫu thay vì chỉ phát lại nguyên văn chuỗi huấn luyện. Đồng thời nó cũng giải thích vì sao truy xuất từ tham số không đáng tin như truy vấn cơ sở dữ liệu: tri thức trong tham số không tự có bảo đảm về độ mới, nguồn gốc hay khả năng tra cứu chính xác.
+Điều này giải thích vì sao model có thể generalize, paraphrase và combine patterns thay vì chỉ replay exact training strings. Đồng thời nó cũng giải thích vì sao retrieval từ parameters không đáng tin như truy vấn database: parameterized knowledge không có guarantee về freshness, provenance hay exact lookup.
 
-## Pipeline dữ liệu là một phần của mô hình
+## Data pipeline là một phần của model
 
-Chất lượng tiền huấn luyện không chỉ phụ thuộc kiến trúc. Cách xây corpus quyết định mô hình được tiếp xúc với “thế giới” nào. Dữ liệu web thô thường cần khử trùng lặp (deduplication), lọc chất lượng, nhận diện ngôn ngữ, chia tài liệu, lọc an toàn và gán trọng số cho từng nguồn.
+Pretraining quality không chỉ phụ thuộc architecture. Corpus construction quyết định model nhìn thấy thế giới nào. Raw web data thường phải qua deduplication, quality filtering, language detection, document segmentation, safety filtering và mixture weighting.
 
-Nếu một domain được lấy mẫu quá nhiều, mô hình có xu hướng học domain đó mạnh hơn. Nếu corpus chứa bản sao của câu hỏi benchmark, đánh giá có thể bị nhiễm (contamination). Nếu quá trình lọc loại quá nhiều dữ liệu của một ngôn ngữ, năng lực ở ngôn ngữ đó có thể giảm.
+Nếu một domain được oversample, model có xu hướng học domain đó mạnh hơn. Nếu corpus chứa duplicated benchmark questions, evaluation có thể bị contamination. Nếu filtering loại quá mạnh một language, capability của language đó giảm.
 
-Vì vậy có thể xem phân bố huấn luyện như một **chương trình học ngầm (implicit curriculum)**.
+Vì vậy có thể coi training distribution là một implicit curriculum.
 
-## Ngân sách token và mức độ tiếp xúc dữ liệu
+## Token budget và exposure
 
-Dataset thường được đo bằng số token chứ không chỉ số document. Tài liệu dài tạo nhiều vị trí huấn luyện hơn tài liệu ngắn.
-
-Tokenization cũng ảnh hưởng mức độ tiếp xúc và chi phí: cùng một lượng nội dung tiếng Việt hoặc tiếng Hàn có thể cần nhiều token hơn tiếng Anh tùy vocabulary, làm tăng compute và giảm dung lượng context hiệu dụng.
+Dataset thường được đo bằng **token count**, không chỉ số document. Một document dài có nhiều training positions hơn document ngắn. Tokenization cũng ảnh hưởng exposure: cùng một câu tiếng Việt hoặc tiếng Hàn có thể cần nhiều token hơn tiếng Anh tùy vocabulary, làm tăng compute và giảm effective context capacity.
 
 Xem thêm: [LLM Tokenization](./01_llm_tokenization.md).
 
 ## Causal masking
 
-Mô hình decoder-only dùng **mặt nạ nhân quả (causal mask)** để token ở vị trí `t` không nhìn thấy token tương lai `x_{>t}` trong lúc huấn luyện. Điều này làm tác vụ huấn luyện phù hợp với sinh tự hồi quy.
+Decoder-only model dùng causal mask để token tại vị trí `t` không nhìn thấy future token `x_{>t}` trong training. Điều này làm training task khớp với autoregressive generation.
 
-Trong một sequence huấn luyện, forward pass vẫn có thể xử lý nhiều vị trí song song vì các token đúng phía trước đã có sẵn. Khi suy luận thì khác: token mới phải sinh tuần tự vì đầu ra bước trước trở thành input bước sau.
+Trong mỗi sequence, forward pass vẫn có thể xử lý nhiều positions song song vì ground-truth previous tokens đã biết. Inference khác: token mới phải được sinh tuần tự vì output của bước trước trở thành input bước sau.
 
-Đây là lý do thông lượng huấn luyện và độ trễ sinh có đặc tính hệ thống rất khác nhau.
+Sự khác nhau này là lý do training throughput và generation latency có characteristics rất khác.
 
 ## Teacher forcing
 
-Trong huấn luyện tự hồi quy, mô hình thường nhận **token trước đó đúng theo dữ liệu (ground-truth previous token)** thay vì token do chính nó sinh. Cơ chế này gọi là **teacher forcing**.
+Trong training autoregressive, model thường nhận **ground-truth previous tokens** thay vì token do chính nó sinh. Cơ chế này gọi là teacher forcing.
 
-Teacher forcing giúp tối ưu ổn định và cho phép song song hóa, nhưng tạo khác biệt với inference: nếu mô hình sinh sai một token khi triển khai, các bước sau phải điều kiện hóa trên chính lỗi đó và lỗi có thể tích lũy.
+Nó làm optimization ổn định và parallelizable nhưng tạo mismatch với inference: khi model sinh sai một token lúc deployment, những bước tiếp theo phải condition trên chính lỗi đó. Error có thể compound.
 
-Instruction tuning và preference training có thể thay đổi hành vi nhưng không loại bỏ hoàn toàn sự khác biệt này.
+Instruction tuning và preference training không loại bỏ hoàn toàn mismatch này.
 
-## Packing và xây sequence
+## Packing và sequence construction
 
-Để tận dụng GPU, nhiều tài liệu ngắn có thể được **đóng gói (packing)** vào cùng một sequence. Implementation phải xử lý đúng ranh giới attention nếu không muốn token của tài liệu này vô tình nhìn sang tài liệu khác theo cách không mong muốn.
+Để tận dụng GPU, nhiều short documents có thể được **packed** vào cùng sequence. Implementation phải đảm bảo attention boundary đúng nếu không muốn token của document này vô tình nhìn sang document khác theo cách không mong muốn.
 
-Huấn luyện context dài cũng làm chi phí attention tăng mạnh. Với self-attention chuẩn, compute và memory của attention tăng gần bậc hai theo độ dài chuỗi:
+Long-context training cũng làm cost attention tăng mạnh. Với vanilla self-attention, compute/memory attention tăng gần quadratic theo sequence length:
 
 \[
 O(n^2)
 \]
 
-Do đó context length không phải một cấu hình miễn phí.
+Do đó context length không phải một setting miễn phí.
 
-## Phối trộn dữ liệu
+## Data mixture
 
-LLM tổng quát thường được huấn luyện trên hỗn hợp văn bản tự nhiên, mã nguồn, toán học, sách, tài liệu kỹ thuật và nguồn đã tuyển chọn. Trọng số của từng nguồn quyết định mức đóng góp gradient.
+Một LLM tổng quát thường train trên mixture như natural language, code, mathematics, books, technical documents và curated sources. Weight của từng source quyết định gradient contribution.
 
-Ví dụ tăng dữ liệu code có thể cải thiện lập trình và đôi khi cải thiện kiểu lập luận có cấu trúc, nhưng nếu mixture mất cân bằng, chất lượng ở các domain ngôn ngữ khác có thể giảm. Đây là bài toán tối ưu đa mục tiêu chứ không phải “càng nhiều dữ liệu càng tốt”.
+Ví dụ tăng code data có thể cải thiện programming và đôi khi reasoning có cấu trúc, nhưng nếu mixture mất cân bằng có thể làm giảm language quality ở domain khác. Đây là một optimization đa mục tiêu chứ không chỉ “càng nhiều data càng tốt”.
 
-## Khử trùng lặp
+## Deduplication
 
-Dữ liệu trùng khiến mô hình gặp cùng mẫu quá nhiều lần, tăng nguy cơ ghi nhớ và làm sai lệch ước lượng chất lượng. Có thể deduplicate ở cấp document, paragraph hoặc chuỗi con xấp xỉ.
+Duplicate data làm model gặp cùng pattern quá nhiều lần, tăng memorization và làm quality estimate sai. Dedup có thể ở document-level, paragraph-level hoặc approximate substring level.
 
-Deduplication cũng quan trọng với tính toàn vẹn benchmark. Nếu tập đánh giá hoặc bản gần trùng của nó đã xuất hiện trong corpus tiền huấn luyện, điểm số không còn phản ánh khả năng khái quát hóa sạch.
+Dedup cũng quan trọng cho benchmark integrity. Nếu evaluation set hoặc near-duplicate của nó xuất hiện trong pretraining corpus, score không còn đo pure generalization.
 
-## Ghi nhớ và khái quát hóa
+## Memorization và generalization
 
-LLM có thể vừa khái quát hóa vừa ghi nhớ; hai hiện tượng không loại trừ nhau.
+LLM có thể vừa generalize vừa memorize. Hai hiện tượng không loại trừ nhau.
 
-Chuỗi hiếm, thông tin nhận dạng cá nhân hoặc chuỗi lặp nhiều lần có nguy cơ bị ghi nhớ cao hơn. Tuy nhiên phần lớn năng lực hữu ích đến từ các trừu tượng hóa và quy luật thống kê đã học, chứ không phải chỉ sao chép nguyên văn.
+Rare strings, personally identifying text hoặc repeated sequences có nguy cơ memorization cao hơn. Nhưng phần lớn capability hữu ích đến từ learned abstractions và statistical regularities chứ không phải exact copying.
 
 Khi đánh giá privacy, cần phân biệt:
 
 ```text
-mô hình biết mẫu tổng quát
-và
-mô hình có thể tái tạo chuỗi huấn luyện cụ thể
+model biết pattern chung
+vs
+model có thể reproduce training sequence cụ thể
 ```
 
-## Tiền huấn luyện tạo base model, không phải trợ lý hoàn chỉnh
+## Pretraining tạo base model, không tạo assistant hoàn chỉnh
 
-Base model được tối ưu để tiếp tục văn bản. Với prompt dạng:
+Base model được optimize để continue text. Nếu prompt:
 
 ```text
 User: Explain gradient descent.
 Assistant:
 ```
 
-mô hình có thể tiếp tục theo mẫu hội thoại nếu từng thấy cấu trúc tương tự, nhưng không có bảo đảm rằng nó sẽ tuân thủ chỉ dẫn ổn định.
+base model có thể tiếp tục theo pattern đối thoại nếu training data có pattern đó, nhưng không có guarantee sẽ tuân instruction ổn định.
 
-Hành vi làm theo chỉ dẫn thường được cải thiện bằng **tinh chỉnh có giám sát (SFT)** và **tối ưu sở thích (preference optimization)**.
+Instruction-following behavior thường được cải thiện qua supervised fine-tuning và preference optimization.
 
-## Tiền huấn luyện thích ứng theo miền
+## Domain-adaptive pretraining
 
-Có thể tiếp tục tiền huấn luyện trên corpus chuyên ngành như tài chính, pháp lý hoặc y sinh. Cách này thường gọi là **continued pretraining** hoặc **domain-adaptive pretraining**.
+Có thể tiếp tục pretraining trên corpus chuyên ngành, ví dụ finance, legal hoặc biomedical data. Đây là **continued pretraining / domain-adaptive pretraining**.
 
-Nó khác SFT. Continued pretraining vẫn tối ưu objective của mô hình ngôn ngữ trên raw text; SFT tối ưu phản hồi dựa trên cặp input–response được định dạng rõ.
+Nó khác SFT. Continued pretraining vẫn tối ưu language-model objective trên raw text, còn SFT tối ưu output được định dạng theo input–response examples.
 
-Continued pretraining hữu ích khi muốn mô hình hấp thụ vocabulary và phân bố chuyên ngành sâu hơn, nhưng có thể gây **quên nghiêm trọng (catastrophic forgetting)** nếu dữ liệu quá hẹp hoặc learning rate quá lớn.
+Continued pretraining hữu ích khi muốn model hấp thụ vocabulary và distribution chuyên ngành sâu hơn, nhưng có thể gây catastrophic forgetting nếu mixture quá hẹp hoặc learning rate quá cao.
 
-## Tiền huấn luyện và năng lực nổi lên
+## Pretraining và emergent capability
 
-Khi tăng quy mô mô hình, dữ liệu và compute, một số năng lực trở nên rõ ràng hơn. Không nên diễn giải điều đó như một “module reasoning bí mật” đột nhiên được bật.
+Khi scale model/data/compute tăng, một số capability xuất hiện rõ hơn. Không nên hiểu điều đó như “một module reasoning bí mật tự bật”. Capability observable là kết quả của architecture, data distribution, optimization, scale và evaluation threshold tương tác.
 
-Năng lực quan sát được là kết quả tương tác giữa kiến trúc, phân bố dữ liệu, tối ưu, quy mô và cách đánh giá. Một benchmark có thể tạo cảm giác năng lực xuất hiện đột ngột chỉ vì điểm vượt một ngưỡng trong khi chất lượng nền đã tăng dần.
+Một benchmark có thể trông như capability xuất hiện đột ngột chỉ vì score vượt một threshold, trong khi underlying performance tăng dần.
 
-## Mô hình tư duy
+## Mental Model
 
-> Tiền huấn luyện là quá trình **nén phân bố của corpus khổng lồ vào tham số** bằng mục tiêu dự đoán token. Mô hình không học một bách khoa toàn thư có chỉ mục; nó học một hàm tạo phân bố xác suất theo context.
+> Pretraining là quá trình **nén distribution của một corpus khổng lồ vào parameters** bằng objective dự đoán token. Model không học một encyclopedia có index; nó học một function tạo probability distribution dựa trên context.
 
-## Những hiểu lầm thường gặp
+## Common Misconceptions
 
-### “Mô hình đã đọc Internet nên biết mọi thứ trên Internet”
+### “Model đã đọc internet nên biết mọi thứ trên internet”
 
-Corpus luôn hữu hạn, đã được lọc và có mốc thời gian. Ngay cả văn bản từng xuất hiện trong huấn luyện cũng không bảo đảm được truy xuất chính xác.
+Training corpus luôn hữu hạn, filtered và có cutoff. Ngay cả text từng xuất hiện trong training cũng không bảo đảm model retrieve chính xác.
 
-### “Pretraining chỉ dạy fact”
+### “Pretraining chỉ dạy kiến thức factual”
 
-Nó đồng thời dạy cú pháp, phong cách, pattern code, quan hệ ngữ nghĩa, pattern thủ tục và biểu diễn dùng lại được.
+Nó đồng thời dạy syntax, style, code patterns, semantic relations, procedural patterns và representations hữu ích.
 
-### “Thêm dữ liệu luôn tốt”
+### “Thêm data luôn tốt”
 
-Dữ liệu chất lượng thấp, trùng lặp hoặc lệch mục tiêu có thể làm mô hình tệ hơn. Chất lượng và mixture quan trọng không kém số lượng.
+Low-quality, duplicated hoặc mismatched data có thể làm model tệ hơn. Data quality và mixture quan trọng như quantity.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-Tiền huấn luyện kết nối [Language Models](../07_natural_language_processing/02_language_models.md), [Information Theory](../01_mathematical_foundations/05_information_theory.md), [Optimization](../01_mathematical_foundations/06_optimization.md) và [Transformer](../06_deep_learning_architectures/05_transformer.md).
+Pretraining kết nối [Language Models](../07_natural_language_processing/02_language_models.md), [Information Theory](../01_mathematical_foundations/05_information_theory.md), [Optimization](../01_mathematical_foundations/06_optimization.md) và [Transformer](../06_deep_learning_architectures/05_transformer.md).
 
 Xem tiếp: [Scaling Laws](./05_scaling_laws.md).

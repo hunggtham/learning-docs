@@ -1,6 +1,6 @@
 # Speech Synthesis và Text-to-Speech
 
-**Tổng hợp tiếng nói (Text-to-Speech — TTS / 음성 합성)** biến text thành waveform có thể nghe được. Bài toán không chỉ là đọc đúng chữ; system còn phải tạo pronunciation, timing, prosody, speaker characteristic và fine acoustic detail.
+**Text-to-Speech (TTS / 음성 합성)** biến text thành waveform có thể nghe được. Đây không chỉ là đọc đúng chữ; system phải tạo pronunciation, timing, prosody, speaker characteristics và acoustic detail.
 
 ```text
 text
@@ -11,15 +11,13 @@ text
 
 ## Classical TTS
 
-Các system cũ thường dùng **concatenative synthesis**, tức ghép các đoạn speech đã thu sẵn, hoặc statistical parametric synthesis.
+Older systems dùng concatenative synthesis (ghép recorded units) hoặc parametric statistical synthesis. Quality bị giới hạn bởi coverage, joins và oversmoothing.
 
-Quality bị giới hạn bởi coverage của recording unit, discontinuity tại điểm ghép và hiện tượng oversmoothing.
-
-Modern neural TTS học mapping từ text hoặc phoneme sang acoustic feature rồi dùng neural vocoder để synthesize waveform.
+Modern neural TTS học mapping từ text/phonemes tới acoustic features và dùng neural vocoder để synthesize waveform.
 
 ## Text Normalization
 
-Raw text có thể chứa:
+Raw text có:
 
 ```text
 2026-09-20
@@ -29,176 +27,122 @@ CPU
 1234
 ```
 
-TTS phải quyết định cách đọc dựa trên language và context.
+TTS cần quyết định cách đọc theo language/context. Text normalization converts non-standard words into speakable forms.
 
-**Text normalization** chuyển các non-standard word thành dạng có thể phát âm.
-
-Nếu normalization sai, pronunciation vẫn sai dù acoustic model rất mạnh.
+Error ở normalization tạo pronunciation sai dù acoustic model tốt.
 
 ## Grapheme-to-Phoneme
 
-Written form không phải lúc nào cũng xác định pronunciation duy nhất.
+Written form không luôn uniquely determine pronunciation. G2P maps graphemes to phonemes or pronunciation units.
 
-**Grapheme-to-Phoneme (G2P)** map grapheme sang phoneme hoặc pronunciation unit.
-
-English có irregular spelling nên G2P đặc biệt quan trọng. Korean Hangul gần phonemic hơn nhưng vẫn có liaison và sound-change rule. Vietnamese ghi tone và pronunciation khá trực tiếp bằng orthography nhưng vẫn có regional variation.
+English irregular spelling cần mạnh; Korean Hangul closer phonemic but liaison/sound rules still matter; Vietnamese tones/diacritics encode pronunciation more directly nhưng regional variation tồn tại.
 
 ## Acoustic Model
 
-Acoustic model dự đoán spectrogram hoặc mel feature từ linguistic sequence.
+Acoustic model predicts spectrogram/mel features from linguistic sequence.
 
-Attention-based sequence-to-sequence model từng được dùng nhiều để align text position với audio frame.
+Attention-based seq2seq models historically align text positions with audio frames. Monotonic nature của speech alignment giúp architectures impose duration/monotonic constraints.
 
-Vì speech alignment gần monotonic, modern architecture thường đưa duration hoặc monotonic constraint vào để giảm lỗi skip và repeat.
+## Tacotron Intuition
 
-## Trực giác Tacotron
+Encoder represents text, attention aligns text positions to decoder time, decoder generates mel spectrogram frames autoregressively.
 
-Tacotron-style pipeline:
-
-```text
-text encoder
-→ attention alignment
-→ autoregressive decoder
-→ mel spectrogram
-```
-
-Điểm yếu lớn là attention failure: model có thể bỏ từ, lặp từ hoặc mất ổn định với câu dài.
+Weakness: attention failures can skip/repeat words, long sentences unstable.
 
 ## Duration-Based Non-Autoregressive TTS
 
-Model như FastSpeech family dự đoán duration của phoneme rồi expand representation thành sequence frame.
+Models like FastSpeech family predict phoneme durations rồi expand representations across frames.
 
-Lợi ích:
+Benefits:
 
-- generation song song;
-- inference nhanh hơn;
-- duration control rõ hơn;
-- ít attention-alignment failure hơn.
+- parallel generation;
+- faster inference;
+- explicit duration control;
+- fewer attention alignment failures.
 
 ## Vocoder
 
-**Vocoder** biến acoustic representation như mel spectrogram thành waveform.
+Vocoder maps acoustic representation (e.g., mel spectrogram) to waveform.
 
-Neural vocoder có nhiều family:
+Neural vocoders include autoregressive, GAN-based, flow/diffusion families.
 
-- autoregressive;
-- GAN-based;
-- flow-based;
-- diffusion-based.
-
-Có thể hiểu separation như sau:
+Separation:
 
 ```text
-Acoustic model → quyết định cấu trúc speech ở mức spectrogram
-Vocoder        → dựng fine waveform detail
+Acoustic model decides what speech should sound like at spectrogram level
+Vocoder renders fine waveform detail
 ```
 
-## End-to-End và Codec-Token TTS
+## End-to-End / Codec-Token TTS
 
-Một số system mới encode speech thành neural audio codec token rồi model token sequence trực tiếp bằng Transformer-like architecture.
-
-Cách này làm mờ ranh giới truyền thống giữa acoustic model và vocoder, vì speech có thể được biểu diễn bằng discrete hoặc quantized token sequence ngay trong generation stack.
+Recent systems may represent speech with neural audio codec tokens and model token sequences directly with Transformer-like architectures, reducing traditional mel/vocoder boundary.
 
 ## Prosody
 
-Prosody gồm:
+Prosody includes:
 
-- pitch / F0;
+- pitch/F0;
 - duration;
 - energy;
-- pause;
+- pauses;
 - rhythm;
 - emphasis;
 - speaking style.
 
-Text không xác định duy nhất prosody. Cùng một sentence có thể được nói như question, sarcasm hoặc excitement tùy cách delivery.
+Text underdetermines prosody. Same sentence can be question, sarcasm, excitement depending delivery.
 
-Vì vậy TTS luôn phải chọn một acoustic realization trong rất nhiều khả năng hợp lệ.
+## Speaker Embeddings
 
-## Speaker Embedding
+Multi-speaker TTS condition on speaker embedding. Speaker encoder may derive representation from reference audio.
 
-Multi-speaker TTS thường condition trên **speaker embedding**.
-
-Speaker encoder có thể trích representation từ reference audio và dùng representation này để giữ voice identity trong generation.
-
-Đây là nền của voice cloning nhưng cũng tạo impersonation và security risk.
+This enables voice cloning, but also creates impersonation/security risks.
 
 ## Voice Cloning
 
-Few-shot hoặc zero-shot voice cloning dùng một đoạn reference audio ngắn để suy ra speaker representation rồi synthesize nội dung mới.
+Few-shot/zero-shot cloning maps short reference audio to speaker style. Quality depends recording quality, language overlap and speaker representation.
 
-Quality phụ thuộc recording quality, language overlap, speaker encoder và coverage trong training data.
+Consent, disclosure and anti-spoofing become important governance concerns.
 
-Consent, disclosure và anti-spoofing trở thành requirement quan trọng khi feature này được deploy.
+## Emotion and Style Control
 
-## Emotion và Style Control
+Control signals can be categorical style labels, natural-language instructions, reference audio or latent embeddings.
 
-Style control có thể đến từ:
-
-- categorical style label;
-- natural-language instruction;
-- reference audio;
-- latent style embedding.
-
-Thách thức là **entanglement**: speaker identity, emotion, pitch và speaking rate có thể không tách biệt sạch trong learned representation.
+But entanglement problem: speaker identity, emotion and speaking rate may not separate cleanly.
 
 ## Multilingual TTS
 
-Một model có thể support nhiều language bằng shared acoustic và speaker representation.
+One model can support many languages, sharing acoustic/speaker representations. Need handle phoneme inventories, scripts, accent transfer and code-switching.
 
-Cần xử lý:
-
-```text
-phoneme inventory
-script
-accent transfer
-code-switching
-language-specific prosody
-```
-
-Một speaker được synthesize ở language chưa từng thấy trong reference có thể mang accent do training distribution quyết định.
+Speaker voice in unseen language may inherit accent from training data.
 
 ## Diffusion TTS
 
-Diffusion model có thể generate acoustic feature hoặc waveform với quality cao bằng iterative denoising.
-
-Điểm yếu là inference có thể chậm hơn nếu cần nhiều denoising step. Distillation hoặc few-step sampler giúp giảm latency.
+Diffusion can generate acoustic features/waveforms iteratively with high quality, but inference may be slower unless distillation/fewer steps.
 
 ## Evaluation
 
-Metric chủ quan truyền thống là **Mean Opinion Score (MOS)**, nơi listener chấm naturalness.
+Traditional subjective metric **MOS (Mean Opinion Score)** asks listeners rate naturalness. But MOS depends test protocol/listener population.
 
-MOS phụ thuộc test protocol, listener population và audio condition nên không nên so sánh các study khác nhau một cách máy móc.
+Other dimensions:
 
-Các dimension khác cần đo:
-
-- intelligibility;
-- ASR WER trên generated speech;
+- intelligibility / ASR WER on generated audio;
 - speaker similarity;
 - prosody accuracy;
 - latency;
-- long-text robustness;
-- pronunciation của name, number và domain term.
+- robustness to long text;
+- pronunciation of names/numbers.
 
-Không có một metric duy nhất mô tả đầy đủ TTS quality.
+No single metric captures naturalness.
 
 ## Streaming TTS
 
-Voice assistant cần bắt đầu phát speech trước khi toàn response được generate.
+Voice assistants need start speaking before entire response generated. Streaming architecture synthesizes chunks while preserving prosody/continuity.
 
-Streaming TTS synthesize chunk theo thời gian nhưng vẫn phải giữ prosody và continuity giữa chunk.
-
-Trade-off quan trọng:
-
-```text
-latency khởi đầu thấp
-↔
-cần future text context để phrasing tự nhiên hơn
-```
+Trade-off: low initial latency vs needing future text context for natural phrasing.
 
 ## Real-Time Conversational Speech
 
-Một voice assistant dạng cascade có thể dùng:
+Pipeline may be:
 
 ```text
 ASR / speech encoder
@@ -206,47 +150,43 @@ ASR / speech encoder
 → TTS
 ```
 
-Pipeline này modular và dễ debug nhưng thêm latency, đồng thời có thể làm mất prosody information giữa các stage.
+but cascaded stages add latency and lose prosody. End-to-end speech-to-speech models seek direct acoustic interaction while retaining language reasoning.
 
-End-to-end speech-to-speech model cố giữ acoustic interaction trực tiếp hơn trong khi vẫn sử dụng language reasoning.
+## Watermarking and Provenance
 
-## Watermarking và Provenance
-
-Synthetic audio misuse thúc đẩy research về watermark và provenance.
-
-Watermark lý tưởng cần survive compression hoặc editing mà không tạo audible artifact lớn, nhưng không nên xem watermark là security guarantee tuyệt đối.
+Synthetic audio misuse motivates watermark/provenance techniques. Watermarks must survive compression/editing while minimizing audible artifacts; not foolproof security.
 
 ## TTS Safety
 
-Các risk chính gồm:
+Risks:
 
 - impersonation fraud;
 - fake evidence;
 - non-consensual voice cloning;
 - social engineering.
 
-Tùy use case, application control có thể cần speaker consent, rate limit, disclosure, provenance và abuse monitoring.
+Application controls should include speaker consent, rate limits, disclosure and abuse monitoring depending use case.
 
-## Mô hình tư duy
+## Mental Model
 
-> **TTS giải một bài toán underdetermined: text xác định linguistic content, nhưng model phải chọn một acoustic realization hợp lý trong rất nhiều voice, rhythm và emotion có thể có.**
+> **TTS solves an underdetermined inverse problem: text specifies linguistic content, but model must choose one plausible acoustic realization among many possible voices, rhythms and emotions.**
 
-## Những nhầm lẫn thường gặp
+## Common Misconceptions
 
-### “Pronunciation đúng nghĩa là TTS tốt”
+### “Correct pronunciation means good TTS”
 
-Không. Naturalness, prosody, speaker consistency và timing cũng rất quan trọng.
+Naturalness/prosody/speaker consistency also matter.
 
-### “Voice cloning chỉ lưu recording rồi phát lại từng đoạn”
+### “Voice cloning stores the original recordings and plays pieces back”
 
-Không. Modern system thường condition generative model trên learned speaker representation.
+Modern systems typically condition generative model on learned speaker representation.
 
-### “TTS càng expressive càng tốt”
+### “More expressive TTS is always better”
 
-Không phải trong mọi application. Business hoặc assistive use case có thể cần delivery ổn định và predictable hơn dramatic variation.
+Business/assistive contexts may prefer stable predictable delivery over dramatic variation.
 
-## Liên kết kiến thức
+## Knowledge Connection
 
-TTS nối Generative Modeling, Diffusion, GAN, Audio Codec, Sequence Alignment và Multimodal Interaction.
+TTS connects generative modeling, diffusion/GAN/audio codecs, sequence alignment and multimodal interaction.
 
 Xem tiếp: [Multimodal Representation](./03_multimodal_representation.md).
