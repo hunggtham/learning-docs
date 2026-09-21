@@ -150,6 +150,77 @@ user = null;
 
 Nếu không còn reference khác, object có thể trở thành collectible. Nhưng GC timing không deterministic.
 
+## Hãy hình dung heap như một graph reachability
+
+Thay vì nghĩ “biến hết scope thì object bị xóa”, hãy hình dung object trên heap tạo thành graph references:
+
+```text
+GC roots
+  ↓
+global/module state
+  ↓
+store/cache/listener
+  ↓
+closure
+  ↓
+large object graph
+```
+
+Nếu vẫn còn bất kỳ strong-reference path nào từ root đến object, object chưa collectible. Khi mọi path bị cắt, object có thể được GC thu hồi vào một thời điểm engine lựa chọn.
+
+Circular references tự chúng **không phải memory leak**:
+
+```js
+let a = {};
+let b = {};
+
+a.other = b;
+b.other = a;
+
+a = null;
+b = null;
+```
+
+Hai object vẫn reference nhau nhưng nếu không còn path từ GC roots tới cycle, tracing GC có thể collect cả cycle. Đây là khác biệt với reference-counting model đơn giản mà người mới thường hình dung.
+
+## Strong reference thường đến từ ownership bị quên
+
+Ví dụ global Map:
+
+```js
+const cache = new Map();
+
+function remember(user) {
+  cache.set(user.id, user);
+}
+```
+
+Nếu cache không có eviction, mỗi user được thêm vào có thể sống cho lifetime của page. Đây không phải “GC không chạy”; app vẫn cố ý giữ strong reference trong Map.
+
+Tương tự, DOM node có thể đã remove khỏi document nhưng vẫn sống nếu JavaScript còn giữ reference:
+
+```js
+const node = document.querySelector("#panel");
+node.remove();
+
+// node vẫn reachable qua binding node
+```
+
+Detached DOM chỉ thành leak khi reference sống lâu hơn intended lifecycle.
+
+## Closure retention phải được nhìn theo retainer path
+
+Closure có thể giữ bindings, nhưng không nên kết luận “closure = leak”. Câu hỏi đúng là:
+
+```text
+Closure nào còn reachable?
+Ai giữ callback đó?
+Callback cần giữ object nào?
+Owner có cleanup đúng lifecycle không?
+```
+
+Ví dụ listener trên `window` thường có lifetime page-wide, nên callback attached vào đó có thể giữ page/component data nếu không remove khi component/page logic kết thúc.
+
 ### Senior mental model
 
 Memory leak trong garbage-collected language thường là **accidental reachability**: object vẫn còn một đường reference từ root dù business đã “không dùng nữa”.
@@ -161,6 +232,23 @@ Memory leak trong garbage-collected language thường là **accidental reachabi
 Modern engines có generational/incremental/concurrent strategies khác nhau. Bạn không cần thuộc thuật toán GC cụ thể để viết application code tốt.
 
 Bạn cần biết ba điều: allocation có cost, GC có cost, và timing GC không phải API contract. Không viết logic kiểu “đặt reference null rồi GC chắc chắn chạy trong 2 giây”. Không dùng finalizer để đảm bảo business cleanup.
+
+## Allocation rate cũng là performance signal
+
+Ngay cả khi không leak, code tạo lượng lớn temporary objects/arrays/strings có thể tăng GC pressure:
+
+```js
+function process(rows) {
+  return rows
+    .map(expensiveMap)
+    .filter(expensiveFilter)
+    .map(expensiveNormalize);
+}
+```
+
+Code có thể hoàn toàn đúng, nhưng trên dataset lớn nó tạo intermediate arrays. Không nên lập tức rewrite thành loop vì “loop nhanh hơn”; hãy profile allocation/CPU trước. Nếu hotspot thực sự nằm ở pipeline này, bạn mới cân nhắc lazy iteration, fused loop, worker hoặc algorithm khác.
+
+GC pause/overhead là **hậu quả của workload/allocation/reachability**, không phải thứ nên optimize bằng superstition.
 
 ---
 
@@ -203,6 +291,46 @@ cleanup:
 
 ```js
 clearInterval(intervalId);
+```
+
+## Leak diagnosis: tìm “ai đang giữ nó”, không đoán từ object size
+
+Một workflow thực tế với DevTools Memory:
+
+```text
+1. Reproduce lifecycle nhiều lần
+   open → close → open → close
+
+2. Force/observe GC khi tooling cho phép
+
+3. Chụp heap snapshots hoặc allocation profile
+
+4. Tìm object/DOM nodes tăng sau mỗi cycle
+
+5. Xem Retainers / retaining path
+
+6. Tìm owner thật: listener, cache, closure, timer, subscription, framework registry...
+
+7. Fix ownership/cleanup
+
+8. Re-run cùng scenario
+```
+
+Nếu heap tăng trong lúc feature hoạt động rồi giảm sau GC/lifecycle cleanup, đó có thể chỉ là normal allocation. Leak thường thể hiện **baseline retained memory tăng qua những lifecycle lặp lại**.
+
+## Pending async work và stale lifecycle
+
+Request pending không phải tự động leak vĩnh viễn. Nhưng nếu page/component bị destroy trong khi callback giữ references rồi một registry/controller khác vẫn giữ operation, data có thể sống lâu không cần thiết. Cancellation vừa cải thiện correctness, vừa có thể rút ngắn resource lifetime.
+
+```js
+const controller = new AbortController();
+
+loadLargeData({
+  signal: controller.signal
+});
+
+// khi owner bị destroy
+controller.abort();
 ```
 
 ### Senior pattern — Resource Ownership
@@ -296,6 +424,80 @@ while (
 ```
 
 Result có thể là input lag và animation freeze.
+
+## Browser runtime là JavaScript engine + host environment
+
+Để debug frontend ở level Senior, hãy tách các layer:
+
+```text
+ECMAScript language
+  values / functions / Promise / modules
+
+JavaScript engine
+  parser / interpreter / JIT / GC
+
+Web platform host
+  DOM / timers / fetch / events / storage / workers
+
+Browser rendering/network processes
+  style / layout / paint / composite / network stack
+
+Application/framework
+  React / WebSquare / your modules
+```
+
+`setTimeout`, `fetch`, DOM events và `requestAnimationFrame` không phải magic bên trong ECMAScript engine. Browser host đăng ký work, nhận OS/network/input signals và sau đó đưa callbacks/continuations trở lại execution model theo web-platform rules.
+
+Điều này giúp phân loại lỗi. Ví dụ:
+
+```text
+SyntaxError khi parse
+→ language/parser
+
+Long synchronous loop
+→ JS main-thread execution
+
+Fetch 500
+→ network/server contract
+
+Layout thrashing
+→ rendering pipeline interaction
+
+WebView thiếu API
+→ host/runtime compatibility
+```
+
+## Main thread là shared resource của UI
+
+Trong browser page thông thường, nhiều việc cạnh tranh main thread:
+
+```text
+JavaScript task
+DOM event handlers
+style/layout work
+paint preparation
+some browser callbacks
+```
+
+Vì vậy “function chỉ mất 30ms” không thể đánh giá riêng nếu nó chạy liên tục trên input path hoặc nằm giữa nhiều tasks khác. Performance engineering phải nhìn entire user interaction.
+
+## Fetch không “chạy JavaScript trên network thread” theo cách application cần quản lý
+
+Khi gọi:
+
+```js
+const response = await fetch(url);
+```
+
+browser network stack làm network I/O ngoài JS call stack. Nhưng khi Promise continuation của `await` chạy, JavaScript của bạn lại cần execution opportunity. JSON parsing lớn, mapping lớn và rendering sau response vẫn có thể block main thread.
+
+```js
+const data = await response.json();
+const normalized = expensiveNormalize(data);
+render(normalized);
+```
+
+Network async không đồng nghĩa post-processing async/non-blocking.
 
 ### Senior note
 
@@ -822,6 +1024,30 @@ performance.measure(
 
 Microbenchmarks dễ bị JIT, GC, warmup và unrealistic workload làm lệch. User-perceived scenario quan trọng hơn tiny loop benchmark.
 
+## Lab profile và Real User Monitoring trả lời hai câu hỏi khác nhau
+
+DevTools/lab giúp bạn reproduce, inspect flame chart, heap, waterfall trong môi trường kiểm soát. Production telemetry/RUM cho biết vấn đề có thật trên user devices hay không.
+
+Một optimization workflow tốt:
+
+```text
+production symptom / UX metric
+↓
+reproduce representative case
+↓
+profile CPU / memory / network / rendering
+↓
+identify dominant cost
+↓
+change one hypothesis
+↓
+measure again
+↓
+watch production regression
+```
+
+Đừng tối ưu function vì nó “trông chậm”. Performance budget nên gắn với user interaction, ví dụ startup, search latency, click-to-render hoặc memory sau nhiều navigation cycles.
+
 ---
 
 # Chương 32 — Layout, Paint, Composite và Layout Thrashing
@@ -983,6 +1209,36 @@ privilege/effect
 
 Senior phải biết data đi vào từ đâu và cuối cùng được dùng ở sink nào.
 
+## Validation, encoding và sanitization không phải cùng một việc
+
+**Validation** trả lời “data có đúng shape/range/allowlist mà operation chấp nhận không?”. Ví dụ `action` chỉ được là `"+"SAVE"+"` hoặc `"+"CANCEL"+"`.
+
+**Encoding/escaping** biến data để nó được hiểu như dữ liệu chứ không trở thành syntax trong context cụ thể, ví dụ HTML/URL/JavaScript context.
+
+**Sanitization** loại/neutralize dangerous structures khi bạn chủ đích cho phép rich content như HTML subset.
+
+Đừng dùng một helper “sanitize string” chung cho mọi sink. Security luôn phụ thuộc context nơi data được interpret.
+
+## Source đáng tin cậy về business không đồng nghĩa safe cho sink
+
+API nội bộ có thể trả display name do user nhập trước đó. Khi đưa vào `textContent`, nó là text. Khi đưa vào `innerHTML`, cùng value có thể trở thành markup. Security classification phải theo **data flow tới sink**, không chỉ theo “server của mình”.
+
+### Production review pattern
+
+Với mỗi privileged/dangerous sink, trace ngược:
+
+```text
+sink
+↑
+transformations
+↑
+validation/sanitization
+↑
+source/trust boundary
+```
+
+Nếu không thể giải thích chain này, code security-critical chưa đủ rõ.
+
 ---
 
 # Chương 39 — XSS và DOM XSS
@@ -1118,6 +1374,34 @@ window.addEventListener(
 
 Cần validate `origin`, `source`, message type/schema và authorization/capability. Origin đúng không tự chứng minh operation requested là allowed.
 
+## Hãy coi message như một RPC request qua trust boundary
+
+Một message production nên có shape ổn định:
+
+```js
+{
+  version: 1,
+  type: "OPEN_DOCUMENT",
+  requestId: "...",
+  payload: {
+    documentId: "..."
+  }
+}
+```
+
+Receiver nên kiểm tra theo thứ tự:
+
+```text
+expected source/window?
+expected origin?
+known protocol version?
+known message type?
+payload schema valid?
+operation được authorize/capability cho sender này?
+```
+
+Chỉ check `origin` rồi gọi privileged handler vẫn có thể tạo **confused-deputy** style problem nếu trusted page bị attacker điều khiển để gửi command mà nó không nên có quyền yêu cầu.
+
 ---
 
 # Chương 46 — Native Bridge / WebView Security Boundary
@@ -1138,6 +1422,60 @@ const kycBridge = {
 ```
 
 Questions senior phải hỏi: page/origin nào được gọi bridge, payload được validate ở đâu, navigation restriction có ở native side không, callback/deep link có request ID không, bridge expose capabilities tối thiểu chưa.
+
+## Bridge nên giống versioned RPC protocol hơn là global God Object
+
+Bad mental model:
+
+```text
+window.nativeBridge
+→ web muốn gọi gì cũng được
+```
+
+Tốt hơn:
+
+```text
+web feature
+↓
+small JS adapter
+↓
+versioned message/command
+↓
+native validation + authorization
+↓
+minimal native capability
+↓
+versioned result/error callback
+```
+
+Ví dụ request:
+
+```js
+{
+  version: 2,
+  type: "KYC_START",
+  requestId: "req-123",
+  payload: {
+    sessionId: "..."
+  }
+}
+```
+
+Result:
+
+```js
+{
+  version: 2,
+  type: "KYC_RESULT",
+  requestId: "req-123",
+  status: "success",
+  payload: {
+    verificationId: "..."
+  }
+}
+```
+
+`requestId` giúp correlation và tránh callback của request cũ cập nhật flow mới. Protocol version giúp native/web releases tiến hóa có kiểm soát. Validation phải tồn tại ở native side nữa; JavaScript validation không phải security boundary nếu attacker có thể gọi bridge trực tiếp qua compromised page/runtime.
 
 ---
 
@@ -1203,6 +1541,66 @@ export function createUserService({
 ```
 
 Không export mọi helper internal. Public API nhỏ cho phép refactor implementation mà không phá consumers.
+
+## Production pattern: tách policy khỏi mechanism
+
+Ví dụ generic HTTP client nên biết mechanism:
+
+```text
+URL
+headers
+HTTP status
+JSON parsing
+AbortSignal
+```
+
+Nó không nên biết business policy kiểu “403 của KYC thì chuyển screen 7”. Policy đó thuộc feature/domain orchestration.
+
+Tương tự, cache mechanism có thể biết TTL/eviction, còn “balance có được stale 30 giây không” là domain policy.
+
+Sự tách biệt này giúp abstraction reusable mà không biến thành God Service.
+
+## Production pattern: functional core, effectful shell
+
+Một flow có thể tổ chức:
+
+```text
+external DTO / user event
+↓
+validate + normalize
+↓
+pure/domain calculation
+↓
+decide command/effect
+↓
+network/storage/native adapter
+↓
+map result
+↓
+state transition/render
+```
+
+Không cần áp dụng rigid architecture cho feature nhỏ. Nhưng khi business logic có giá trị test/reuse, giữ nó khỏi DOM/network side effects làm code dễ reason hơn.
+
+## Production pattern: explicit ownership contract
+
+Nếu API tạo resource, public surface nên giúp caller biết cleanup:
+
+```js
+const subscription = subscribeToUpdates(handler);
+
+// later
+subscription.dispose();
+```
+
+hoặc:
+
+```js
+const unsubscribe = subscribe(handler);
+unsubscribe();
+```
+
+Hidden global registration mà caller không có cleanup path là production smell.
 
 ### Senior question
 
@@ -1646,6 +2044,74 @@ Race condition tests cần chủ động điều khiển response order để re
 Modern ECMAScript/runtime có các features như immutable array methods, Iterator helpers, Set operations, `Promise.withResolvers`, `Promise.try`, `RegExp.escape`, explicit resource management và ngày càng nhiều Intl/ArrayBuffer APIs.
 
 Senior không cần chạy theo mọi feature mới. Với browser/WebView enterprise, luôn hỏi target runtime versions, transpiler/polyfill feasibility và fallback. Stage-4/standardized không có nghĩa mọi WebView cũ đã support.
+
+## Modern vs legacy: đọc code theo “problem được giải quyết”, không theo tuổi syntax
+
+Legacy syntax không mặc định là code xấu; nó thường phản ánh runtime/toolchain tại thời điểm code được viết. Khi migrate, hãy hiểu semantic reason trước khi replace.
+
+Một số mapping thường gặp:
+
+```text
+var
+→ let / const
+reason: block scope + binding intent rõ hơn
+
+function callback + var self = this
+→ arrow callback
+reason: lexical this cho callback case
+
+arguments
+→ rest parameters (...args)
+reason: real Array-like collection semantics rõ hơn
+
+string concatenation
+→ template literals
+reason: interpolation/readability
+
+manual property extraction
+→ destructuring
+reason: binding intent ngắn hơn
+
+constructor function + prototype methods
+→ class syntax
+reason: standard syntax cho cùng prototype model
+
+IIFE/global namespace
+→ ES modules
+reason: lexical module scope + explicit dependency graph
+
+callback pyramids / Deferred APIs
+→ Promise
+reason: standardized async composition
+
+Promise chains cho sequential flow
+→ async/await
+reason: control flow dễ đọc hơn, semantics vẫn Promise-based
+
+indexOf(...) !== -1
+→ includes(...)
+reason: membership intent rõ
+
+sort() + copy thủ công
+→ toSorted()
+reason: non-mutating collection operation
+```
+
+### Migration rule
+
+Không mass-rewrite legacy code chỉ vì syntax mới đẹp hơn. Ưu tiên thay đổi khi có một trong các lợi ích thực:
+
+```text
+fix correctness bug
+reduce scope/this ambiguity
+remove global coupling
+make async ownership clearer
+improve module boundary
+reduce mutation risk
+meet supported runtime/toolchain standard
+```
+
+Một stable legacy module đang chạy production có thể đáng giữ hơn một rewrite lớn không có tests. Adapter + incremental migration thường an toàn hơn.
 
 ---
 
