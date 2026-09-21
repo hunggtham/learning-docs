@@ -1,329 +1,319 @@
-# Korean Construction & Project Finance — contractor profit, 시행사, PF guarantees và refinancing risk
+# Xây dựng & Project Finance Hàn Quốc — lợi nhuận nhà thầu, 시행사, bảo lãnh PF và rủi ro tái cấp vốn
 
-Case này không dùng một company duy nhất mà dựng một **stylized Korean construction/PF case** để học một risk structure xuất hiện nhiều trong nền kinh tế Hàn Quốc. Construction company có thể report backlog và accounting profit ổn định trong khi project-finance exposure nằm ở guarantees, bridge loans, unsold units hoặc related SPV.
+Case này không dùng một công ty duy nhất mà dựng một **tình huống mô phỏng xây dựng/PF tại Hàn Quốc** để học một cấu trúc rủi ro xuất hiện khá phổ biến. Công ty xây dựng có thể báo cáo backlog và lợi nhuận kế toán ổn định trong khi rủi ro tài chính dự án lại nằm ở bảo lãnh, khoản vay cầu nối, căn hộ chưa bán hoặc các SPV liên quan.
 
-Vì vậy case này tập trung vào distinction giữa **construction operating business** và **project-finance contingent risk**.
+Vì vậy case tập trung vào sự khác biệt giữa **hoạt động xây dựng cốt lõi** và **rủi ro tài chính dự án có điều kiện (contingent PF risk)**.
 
 Xem [18_construction_real_estate_and_project_finance](../18_construction_real_estate_and_project_finance.md), [36_credit_ratings_bonds_default_and_restructuring](../36_credit_ratings_bonds_default_and_restructuring.md) và [38_forensic_accounting_red_flags_and_earnings_quality](../38_forensic_accounting_red_flags_and_earnings_quality.md).
 
-## 1. Ai là ai trong một development project?
+## 1. Ai là ai trong một dự án phát triển bất động sản?
 
-Người mới thường gọi tất cả là “construction company”, nhưng một project có nhiều economic actors.
+Người mới thường gọi tất cả là “công ty xây dựng”, nhưng một dự án có nhiều chủ thể kinh tế khác nhau.
 
-**Developer (시행사)** tìm land, structure project, obtain permits, arrange financing và chịu development economics.
+**Chủ đầu tư phát triển (developer / 시행사)** tìm đất, cấu trúc dự án, xin giấy phép, thu xếp vốn và chịu phần lớn kinh tế phát triển dự án.
 
-**Contractor (시공사)** xây project theo contract. Trong Korea, large contractor có thể đồng thời provide credit enhancement hoặc participate economically sâu hơn pure builder.
+**Nhà thầu xây dựng (contractor / 시공사)** xây công trình theo hợp đồng. Tại Hàn Quốc, nhà thầu lớn đôi khi còn cung cấp hỗ trợ tín dụng hoặc tham gia sâu hơn một nhà thầu thuần túy.
 
-**PF lender** cung cấp project financing dựa vào project cash flow/collateral/credit support.
+**Bên cho vay PF** cung cấp vốn dựa trên dòng tiền dự án, tài sản bảo đảm và các hình thức hỗ trợ tín dụng.
 
-**SPV/PFV** có thể là legal vehicle giữ project assets/liabilities.
+**SPV/PFV** có thể là pháp nhân chuyên biệt nắm giữ tài sản và nghĩa vụ của dự án.
 
-**Trust company, securities company, savings bank, insurer hoặc other financial institutions** có thể tham gia funding structure.
+Công ty tín thác, công ty chứng khoán, ngân hàng tiết kiệm, công ty bảo hiểm hoặc các tổ chức tài chính khác cũng có thể tham gia cấu trúc vốn.
 
-Nếu không resolve roles, analyst rất dễ nhầm debt của SPV với contractor debt — hoặc ngược lại bỏ qua guarantee khiến SPV debt cuối cùng quay về contractor.
+Nếu không xác định đúng vai trò, rất dễ nhầm nợ của SPV với nợ của nhà thầu — hoặc ngược lại bỏ qua bảo lãnh khiến nghĩa vụ của SPV cuối cùng quay về nhà thầu.
 
-## 2. Project Finance khác corporate loan
+## 2. Project Finance khác khoản vay doanh nghiệp thông thường
 
-Trong **corporate finance**, lender dựa nhiều vào overall company cash flow/balance sheet.
+Trong **tài chính doanh nghiệp (corporate finance)**, bên cho vay dựa nhiều vào dòng tiền và bảng cân đối của cả công ty.
 
-Trong **project finance (프로젝트 파이낸싱, PF)**, repayment logic tập trung vào project-specific cash flow.
-
-Simplified:
+Trong **tài chính dự án (Project Finance / PF / 프로젝트 파이낸싱)**, logic trả nợ tập trung vào dòng tiền của chính dự án.
 
 ```text
-Land / permits
-→ bridge financing
-→ construction / 본PF
-→ presales or leasing
-→ completion
-→ customer payment / asset sale
-→ repay PF
+Đất / giấy phép
+→ vốn cầu nối
+→ xây dựng / 본PF
+→ bán trước hoặc cho thuê
+→ hoàn thành
+→ khách hàng thanh toán / bán tài sản
+→ trả nợ PF
 ```
 
-Nhưng “non-recourse” trong theory không có nghĩa mọi Korean PF exposure hoàn toàn isolated. Guarantees, debt assumption, completion guarantee hoặc other credit support có thể reconnect project risk với sponsor/contractor.
+Tuy nhiên “không truy đòi (non-recourse)” trong lý thuyết không có nghĩa mọi rủi ro PF ở Hàn Quốc đều tách hoàn toàn khỏi công ty mẹ. Bảo lãnh, nhận nợ thay, cam kết hoàn thành công trình hoặc hỗ trợ thanh khoản có thể nối rủi ro dự án trở lại nhà tài trợ hoặc nhà thầu.
 
-## 3. Bridge loan — phase rủi ro trước khi project đủ điều kiện 본PF
+## 3. Khoản vay cầu nối: giai đoạn rủi ro trước khi dự án đủ điều kiện 본PF
 
-**Bridge loan (브릿지론)** tài trợ giai đoạn sớm như land acquisition/initial development trước khi project đạt conditions cho main PF.
+**Khoản vay cầu nối (bridge loan / 브릿지론)** tài trợ giai đoạn sớm như mua đất và chuẩn bị dự án trước khi đủ điều kiện chuyển sang PF chính.
 
-Risk cao vì:
+Rủi ro cao vì:
 
 ```text
-Permits chưa hoàn tất
-Construction chưa bắt đầu
-Presales chưa có
-Exit phụ thuộc refinancing into 본PF
+Giấy phép chưa hoàn tất
+Xây dựng chưa bắt đầu
+Bán trước chưa rõ
+Lối ra phụ thuộc tái cấp vốn sang 본PF
 ```
 
-Nếu rates tăng hoặc project feasibility xấu đi, bridge loan có thể không refinance được.
+Nếu lãi suất tăng hoặc tính khả thi của dự án xấu đi, khoản vay cầu nối có thể không tái cấp vốn được.
 
-Đây là classic maturity/refinancing risk.
+Đây là **rủi ro kỳ hạn và tái cấp vốn (maturity/refinancing risk)** điển hình.
 
-## 4. Presales — 분양 và cash-flow model
+## 4. Bán trước (분양) và mô hình dòng tiền
 
-Residential development Korea thường có **presale (분양)** structure quan trọng. Buyer commitments/payments có thể support project funding.
-
-Project economics phụ thuộc:
+Dự án nhà ở Hàn Quốc thường sử dụng **bán trước (presale / 분양)**. Cam kết và các đợt thanh toán của người mua có thể hỗ trợ dòng tiền dự án.
 
 \[
-Expected\ Sales = Units \times Expected\ Selling\ Price
+Doanh\ thu\ kỳ\ vọng = Số\ căn \times Giá\ bán\ kỳ\ vọng
 \]
 
-nhưng feasibility phải trừ:
+Nhưng tính khả thi phải trừ:
 
 ```text
-Land
-Construction
-Finance cost
+Đất
+Chi phí xây dựng
+Chi phí tài chính
 Marketing
-Taxes/fees
-Contingency
+Thuế / phí
+Dự phòng rủi ro
 ```
 
-Nếu selling price bị capped hoặc demand yếu trong khi construction/interest cost tăng, expected developer margin bị compressed.
+Nếu giá bán bị giới hạn hoặc nhu cầu yếu trong khi chi phí xây dựng và lãi vay tăng, biên lợi nhuận của chủ đầu tư bị thu hẹp.
 
-## 5. Contractor backlog không phải guarantee of profit
+## 5. Backlog của nhà thầu không bảo đảm lợi nhuận
 
-Construction backlog tạo revenue visibility nhưng margin phụ thuộc original bid assumptions và cost inflation.
+Backlog tạo khả năng dự báo doanh thu nhưng biên lợi nhuận phụ thuộc giả định chi phí ban đầu và lạm phát chi phí.
 
-Ví dụ stylized:
+Ví dụ:
 
 ```text
-Contract revenue = 1,000
-Expected cost at signing = 900
-Expected profit = 100
+Doanh thu hợp đồng = 1.000
+Chi phí ước tính lúc ký = 900
+Lợi nhuận kỳ vọng = 100
 ```
 
-Nếu material/labor cost tăng khiến expected total cost thành 1,020, project chuyển từ +100 sang -20.
+Nếu chi phí vật liệu và lao động tăng khiến tổng chi phí ước tính thành 1.020, dự án chuyển từ +100 sang -20.
 
-Long-duration contract vì vậy có **estimate risk**.
+Hợp đồng dài hạn vì vậy có **rủi ro ước tính (estimate risk)**. Tùy chuẩn mực và tình hình thực tế, kế toán có thể phải ghi nhận dự phòng hoặc tổn thất dự kiến trước khi công trình hoàn thành vật lý.
 
-Accounting có thể recognize expected loss/provision trước full physical completion tùy standards và facts.
+## 6. Ghi nhận theo tiến độ và tài sản hợp đồng
 
-## 6. Percentage of completion và contract assets
+Doanh thu xây dựng thường được ghi nhận theo tiến độ khi đủ điều kiện kế toán.
 
-Construction revenue thường được recognized theo progress khi criteria được đáp ứng.
-
-Điều này tạo distinction:
+Cần tách:
 
 ```text
-Accounting revenue recognized
-vs billing issued
-vs cash collected
+Doanh thu kế toán đã ghi nhận
+so với
+Hóa đơn đã phát hành
+so với
+Tiền đã thu
 ```
 
-Nếu recognized revenue chạy trước billing/cash, **contract asset (계약자산)** có thể tăng.
+Nếu doanh thu được ghi nhận trước khi lập hóa đơn hoặc thu tiền, **tài sản hợp đồng (contract asset / 계약자산)** có thể tăng.
 
-Contract asset tăng không tự động là red flag; nó có thể normal theo milestone. Nhưng nếu tăng nhanh hơn revenue nhiều periods, cần hỏi assumptions, billing disputes và collectability.
+Tài sản hợp đồng tăng không tự động là dấu hiệu xấu; có thể phù hợp với tiến độ thanh toán. Nhưng nếu tăng nhanh hơn doanh thu trong nhiều kỳ, cần kiểm tra giả định tiến độ, tranh chấp thanh toán và khả năng thu tiền.
 
-## 7. Guarantee — risk có thể nằm ngoài headline debt
+## 7. Bảo lãnh: rủi ro có thể nằm ngoài con số nợ nổi bật
 
-Một contractor có corporate debt 2 trillion won nhưng additionally guarantee PF obligations cho projects. Nếu project fails và guarantee crystallizes, economic debt có thể tăng đột ngột.
-
-Do đó:
+Một nhà thầu có thể có 2 nghìn tỷ won nợ doanh nghiệp nhưng đồng thời bảo lãnh nghĩa vụ PF của nhiều dự án. Nếu dự án thất bại và bảo lãnh bị kích hoạt, nghĩa vụ kinh tế có thể tăng đột ngột.
 
 \[
-Economic\ Leverage \neq Reported\ Borrowings\ Alone
+Đòn\ bẩy\ kinh\ tế \neq Chỉ\ riêng\ nợ\ vay\ báo\ cáo
 \]
 
 Cần đọc:
 
 ```text
-Borrowings
-+ bonds
-+ lease liabilities where relevant
-+ guarantees / commitments
-+ debt assumption obligations
-+ liquidity support
+Khoản vay
++ trái phiếu
++ nợ thuê khi phù hợp
++ bảo lãnh / cam kết
++ nghĩa vụ nhận nợ thay
++ hỗ trợ thanh khoản
 ```
 
-không phải cộng tất cả mechanically, mà classify probability và conditions.
+Không cộng tất cả một cách máy móc; phải phân loại điều kiện kích hoạt và xác suất.
 
-## 8. Completion guarantee — 책임준공
+## 8. Cam kết hoàn thành công trình (책임준공)
 
-**Completion guarantee / 책임준공** có thể yêu cầu contractor hoàn thành construction dù developer gặp difficulty, tùy contract.
+**Cam kết hoàn thành công trình (completion guarantee / 책임준공)** có thể buộc nhà thầu phải hoàn tất xây dựng dù chủ đầu tư gặp khó khăn, tùy điều khoản hợp đồng.
 
-Điều này có economic value cho lenders vì giảm completion risk, nhưng transfer một phần risk sang contractor.
+Nó có giá trị với bên cho vay vì giảm rủi ro dự án dở dang, nhưng chuyển một phần rủi ro sang nhà thầu.
 
-Analyst phải đọc exact obligation. Không nên coi mọi 책임준공 giống debt guarantee; legal mechanics khác nhau. Nhưng cũng không nên bỏ qua vì “không phải borrowing”.
+Cần đọc chính xác nghĩa vụ pháp lý. Không nên coi mọi `책임준공` như bảo lãnh nợ, nhưng cũng không được bỏ qua chỉ vì nó không xuất hiện như khoản vay trên bảng cân đối.
 
-## 9. Refinancing spiral
+## 9. Vòng xoáy tái cấp vốn
 
-Một PF project có thể rơi vào adverse loop:
+Dự án PF có thể rơi vào vòng xoáy bất lợi:
 
 ```text
-Rates ↑ / property demand ↓
-→ presales weak
-→ project value / feasibility ↓
-→ lenders demand higher spread or refuse refinance
-→ finance cost ↑
-→ feasibility worse
-→ sponsor needs more equity/support
-→ liquidity pressure spreads
+Lãi suất tăng / nhu cầu bất động sản giảm
+→ tỷ lệ bán trước yếu
+→ giá trị và tính khả thi dự án giảm
+→ bên cho vay đòi chênh lệch lãi cao hơn hoặc từ chối tái cấp vốn
+→ chi phí tài chính tăng
+→ tính khả thi xấu thêm
+→ chủ đầu tư cần thêm vốn / hỗ trợ
+→ áp lực thanh khoản lan rộng
 ```
 
-Nếu nhiều projects cùng gặp problem, contractor/securities company exposure có thể become systemic.
+Nếu nhiều dự án cùng gặp vấn đề, rủi ro có thể truyền sang nhà thầu và các công ty chứng khoán/tổ chức tài chính liên quan.
 
-Đây là connection giữa real estate và financial sector.
+## 10. Căn chưa bán (미분양)
 
-## 10. Unsold inventory — 미분양
+**Căn chưa bán (unsold units / 미분양)** là chỉ báo quan trọng nhưng cần bối cảnh.
 
-**Unsold units (미분양)** là key signal nhưng cần context.
+Căn chưa bán trước khi hoàn thành vẫn có thể bán sau. Căn đã hoàn thành nhưng chưa bán thường nghiêm trọng hơn vì chi phí xây dựng đã phát sinh và chi phí tài chính vẫn tiếp tục.
 
-Unsold before completion có thể still sell later. Unsold completed units thường more severe vì construction cost đã spent và inventory financing continues.
+Rủi ro phụ thuộc địa điểm, mức giá, chất lượng dự án và đòn bẩy. Không chỉ đếm số căn; cần hỏi giá bán kỳ vọng còn đủ trả nợ và chi phí còn lại hay không.
 
-Risk depends location, price, product quality và leverage.
+## 11. Khác biệt theo khu vực
 
-Không chỉ đếm units; cần hỏi expected selling price có đủ cover remaining debt/cost không.
+Nhu cầu nhà ở tại Seoul và vùng lõi 수도권 có thể khác rất xa các dự án tỉnh.
 
-## 11. Regional divergence
+Giá nhà trung bình toàn quốc có thể che tình trạng dư cung cục bộ.
 
-Seoul/core 수도권 housing demand và provincial project economics có thể khác rất lớn.
-
-National average house price có thể che local oversupply.
-
-Project-level analysis cần:
+Phân tích dự án cần xem:
 
 ```text
-Local population / household formation
-Jobs / transport
-Competing supply
-Presale absorption
-Price vs local income
-Land cost
+Dân số / hình thành hộ gia đình địa phương
+Việc làm / giao thông
+Nguồn cung cạnh tranh
+Tốc độ hấp thụ bán trước
+Giá bán so với thu nhập địa phương
+Chi phí đất
 ```
 
-Construction/PF là một trong những lĩnh vực mà geography trở thành financial variable trực tiếp.
+Xây dựng/PF là một trong những lĩnh vực mà địa lý trở thành biến tài chính trực tiếp.
 
 Xem [24_regional_clusters_and_industrial_geography](../24_regional_clusters_and_industrial_geography.md).
 
-## 12. Stylized project case
+## 12. Ví dụ dự án mô phỏng
 
-Giả sử một project:
+Giả sử:
 
 ```text
-Expected sales: 1.5T KRW
-Land + construction + other cost: 1.2T
-Initial expected margin before financing: 0.3T
-PF debt: 0.8T
+Doanh thu kỳ vọng: 1,5 nghìn tỷ KRW
+Đất + xây dựng + chi phí khác: 1,2 nghìn tỷ
+Biên lợi nhuận kỳ vọng trước chi phí tài chính: 0,3 nghìn tỷ
+Nợ PF: 0,8 nghìn tỷ
 ```
 
-Nếu sales price/absorption yếu làm expected sales giảm 10%:
+Nếu giá bán và tốc độ hấp thụ yếu khiến doanh thu kỳ vọng giảm 10%:
 
 \[
-1.5T \times 0.9 = 1.35T
+1,5T \times 0,9 = 1,35T
 \]
 
-Nếu construction cost đồng thời tăng 8% trên 0.8T construction component, cost tăng thêm 0.064T. Margin buffer bị compress mạnh.
+Nếu chi phí xây dựng đồng thời tăng 8% trên phần chi phí xây dựng 0,8T, chi phí tăng thêm 0,064T. Bộ đệm lợi nhuận nhanh chóng bị thu hẹp.
 
-Nếu completion delay làm finance cost tăng thêm, equity cushion có thể gần biến mất.
+Nếu chậm hoàn thành còn làm chi phí lãi vay tăng, phần vốn chủ sở hữu mỏng có thể gần như biến mất.
 
-Điểm học: **small percentage shocks ở revenue và cost có thể destroy thin project equity** vì leverage.
+Bài học: **các cú sốc phần trăm nhỏ ở doanh thu và chi phí có thể phá hủy phần vốn chủ sở hữu mỏng vì đòn bẩy**.
 
-## 13. Contractor stress test
+## 13. Kiểm tra sức chịu đựng của nhà thầu
 
-Một coherent stress:
-
-```text
-Housing demand weak
-→ presale ratio lower
-→ project cash inflow delayed
-→ PF refinancing spread +300bp
-→ developer liquidity weakens
-→ contractor provides support under guarantees
-→ contractor CFO deteriorates
-→ net debt rises
-→ rating pressure
-→ refinancing cost at corporate level rises
-```
-
-Đây là feedback loop giữa project và parent/company balance sheet.
-
-## 14. Securities company/PF connection
-
-PF risk không chỉ ở builders. Securities firms có thể arrange, guarantee, underwrite hoặc hold PF-related exposures.
-
-Do đó real-estate downturn có thể transmit:
+Một kịch bản nhân quả hợp lý:
 
 ```text
-Property project
-→ developer
-→ contractor
-→ securities / savings bank / lender
-→ short-term funding market
+Nhu cầu nhà ở yếu
+→ tỷ lệ bán trước thấp
+→ tiền vào dự án chậm
+→ chênh lệch lãi PF +300 bp
+→ thanh khoản của 시행사 xấu đi
+→ nhà thầu phải hỗ trợ theo bảo lãnh/cam kết
+→ CFO của nhà thầu xấu đi
+→ nợ ròng tăng
+→ áp lực xếp hạng tín nhiệm
+→ chi phí tái cấp vốn cấp doanh nghiệp tăng
 ```
 
-Đây là lý do construction chapter phải đọc cùng financial-sector chapter.
+Đây là vòng phản hồi giữa dự án và bảng cân đối của công ty mẹ/nhà thầu.
 
-## 15. DART reading order cho contractor
+## 14. Mối liên hệ với công ty chứng khoán và tổ chức tài chính
+
+Rủi ro PF không chỉ nằm ở nhà thầu. Công ty chứng khoán có thể thu xếp, bảo lãnh, phân phối hoặc nắm giữ các khoản liên quan đến PF.
+
+Suy giảm bất động sản có thể truyền theo:
 
 ```text
-1. Segment revenue / backlog
-2. Major project list
-3. Cost estimates / provisions
-4. Contract assets / receivables
-5. Inventory / unsold exposure if disclosed
-6. Borrowings and maturity
-7. Guarantees / contingent liabilities
-8. PF-related credit support
-9. Related parties / SPVs
-10. Cash flow and liquidity
+Dự án bất động sản
+→ 시행사
+→ nhà thầu
+→ công ty chứng khoán / ngân hàng tiết kiệm / bên cho vay
+→ thị trường vốn ngắn hạn
 ```
 
-Income statement chỉ là điểm bắt đầu.
+Đây là lý do chapter xây dựng phải đọc cùng tài chính.
 
-## 16. Valuation: normalized earnings + contingent risk
-
-P/E thấp của contractor có thể phản ánh cycle hoặc hidden PF concern.
-
-Một simplified analytical bridge:
+## 15. Thứ tự đọc DART cho nhà thầu
 
 ```text
-Normalized construction earnings
-+ value of other segments/assets
-- net corporate debt
-- probability-weighted contingent PF losses
-= equity value framework
+1. Doanh thu theo mảng / backlog
+2. Danh sách dự án lớn
+3. Ước tính chi phí / dự phòng
+4. Tài sản hợp đồng / khoản phải thu
+5. Tồn kho / dự án chưa bán nếu có công bố
+6. Nợ vay và kỳ hạn
+7. Bảo lãnh / nghĩa vụ tiềm tàng
+8. Hỗ trợ tín dụng liên quan PF
+9. Bên liên quan / SPV
+10. Dòng tiền và thanh khoản
 ```
 
-Probability-weighting không cần pretend precision. Mục tiêu là không đặt guarantee exposure bằng 0 hoặc 100% một cách máy móc.
+Báo cáo kết quả kinh doanh chỉ là điểm bắt đầu.
 
-## 17. Common misconceptions
+## 16. Định giá: lợi nhuận chuẩn hóa + rủi ro tiềm tàng
 
-### “Backlog lớn thì contractor an toàn”
+P/E thấp của nhà thầu có thể phản ánh chu kỳ hoặc lo ngại PF chưa hiện rõ.
 
-Sai vì backlog margin và project financing risk khác nhau.
+Có thể xây cầu phân tích:
 
-### “PF debt nằm ở SPV nên parent không liên quan”
+```text
+Lợi nhuận xây dựng chuẩn hóa
++ giá trị các mảng / tài sản khác
+- nợ ròng cấp doanh nghiệp
+- tổn thất PF tiềm tàng đã điều chỉnh xác suất
+= khung giá trị vốn chủ sở hữu
+```
 
-Sai nếu có guarantees/support/strategic obligation.
+Không cần giả vờ có độ chính xác tuyệt đối. Mục tiêu là không đặt rủi ro bảo lãnh bằng 0% hoặc 100% một cách máy móc.
 
-### “Guarantee bằng debt ngay lập tức”
+## 17. Những nhầm lẫn thường gặp
 
-Cũng sai. Guarantee là contingent exposure; cần đọc trigger và probability.
+### “Backlog lớn thì nhà thầu an toàn”
 
-### “House price quốc gia ổn thì mọi PF project ổn”
+Sai vì biên lợi nhuận backlog và rủi ro tài chính dự án là hai lớp khác nhau.
 
-Sai vì real estate rất local.
+### “Nợ PF nằm ở SPV nên công ty mẹ không liên quan”
 
-## 18. Research workbook
+Sai nếu có bảo lãnh, hỗ trợ thanh khoản hoặc nghĩa vụ chiến lược.
 
-| Driver | Y-4 | Y-3 | Y-2 | Y-1 | Y0 |
+### “Bảo lãnh bằng nợ ngay lập tức”
+
+Cũng sai. Bảo lãnh là nghĩa vụ có điều kiện; phải đọc điều kiện kích hoạt và xác suất.
+
+### “Giá nhà toàn quốc ổn thì mọi dự án PF ổn”
+
+Sai vì bất động sản mang tính địa phương rất cao.
+
+## 18. Bài tập nghiên cứu
+
+| Chỉ tiêu | Y-4 | Y-3 | Y-2 | Y-1 | Y0 |
 |---|---:|---:|---:|---:|---:|
-| New orders | | | | | |
+| Đơn hàng mới | | | | | |
 | Backlog | | | | | |
-| Construction margin | | | | | |
-| Contract assets | | | | | |
-| Receivables | | | | | |
-| Corporate debt | | | | | |
-| PF guarantees | | | | | |
+| Biên lợi nhuận xây dựng | | | | | |
+| Tài sản hợp đồng | | | | | |
+| Khoản phải thu | | | | | |
+| Nợ doanh nghiệp | | | | | |
+| Bảo lãnh PF | | | | | |
 | CFO | | | | | |
-| Interest expense | | | | | |
+| Chi phí lãi | | | | | |
 
-Bên cạnh table, lập **project exposure map** riêng thay vì chỉ total guarantees.
+Bên cạnh bảng, hãy lập **bản đồ phơi nhiễm dự án (project exposure map)** riêng thay vì chỉ ghi tổng giá trị bảo lãnh.
 
-## Mental Model cuối
+## Mô hình tư duy cuối
 
-> Korean construction/PF analysis là bài toán **cash-flow timing + thin project equity + contingent recourse**. Contractor có thể trông khỏe trên income statement nhưng yếu nếu nhiều project cùng cần liquidity support. Luôn đi từ project economics → financing structure → legal obligation → corporate liquidity.
+> Phân tích xây dựng/PF Hàn Quốc là bài toán **thời điểm dòng tiền + vốn chủ sở hữu dự án mỏng + nghĩa vụ truy đòi có điều kiện**. Nhà thầu có thể trông khỏe trên báo cáo lợi nhuận nhưng yếu nếu nhiều dự án cùng lúc cần hỗ trợ thanh khoản. Luôn đi theo chuỗi: **kinh tế dự án → cấu trúc tài trợ → nghĩa vụ pháp lý → thanh khoản doanh nghiệp**.
 
-Case này hoàn tất một vòng quan trọng của practical layer: từ semiconductor, auto, platform, SME, SI/SM sang bank, battery, defense, commerce/logistics và real-estate finance. Khi gặp company mới, hãy chọn case có production function gần nhất rồi điều chỉnh driver tree thay vì bắt đầu từ zero.
+Case này hoàn tất một vòng quan trọng của lớp thực hành: từ bán dẫn, ô tô, nền tảng số, SME, SI/SM tới ngân hàng, pin, quốc phòng, thương mại/logistics và tài chính bất động sản. Khi gặp công ty mới, hãy chọn case có hàm sản xuất gần nhất rồi điều chỉnh cây động lực thay vì bắt đầu lại từ số 0.
