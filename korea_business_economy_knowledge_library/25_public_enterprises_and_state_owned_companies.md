@@ -1,496 +1,233 @@
-# Doanh nghiệp công, public institutions và vai trò của nhà nước trong nền kinh tế Hàn Quốc (Public Enterprises / 공기업·공공기관)
+# Doanh nghiệp công, cơ quan công và vai trò của nhà nước trong nền kinh tế Hàn Quốc (Public Enterprises / 공기업·공공기관)
 
-Không phải mọi enterprise quan trọng ở Korea đều là chaebol hoặc private listed company. Electricity, gas, rail, infrastructure, housing, development finance và nhiều public services liên quan tới **public enterprises / 공기업** và broader **public institutions / 공공기관**.
+Không phải mọi doanh nghiệp quan trọng ở Hàn Quốc đều là chaebol hoặc công ty tư nhân niêm yết. Điện, khí đốt, đường sắt, hạ tầng, nhà ở, tài chính phát triển và nhiều dịch vụ công liên quan trực tiếp tới **doanh nghiệp công (public enterprise / 공기업)** và rộng hơn là **cơ quan công (public institution / 공공기관)**.
 
-Chúng cần mental model khác private company vì objective function không chỉ là shareholder profit. Public enterprise có thể phải đồng thời tối ưu **service continuity, affordability, safety, industrial policy, regional development và financial sustainability**.
+Các tổ chức này cần một mô hình tư duy khác doanh nghiệp tư nhân vì hàm mục tiêu không chỉ là tối đa hóa lợi nhuận cho cổ đông. Một doanh nghiệp công có thể đồng thời phải bảo đảm tính liên tục của dịch vụ, khả năng chi trả, an toàn, chính sách công nghiệp, phát triển vùng và sức khỏe tài chính.
 
-> Mental model: private firm operates under `market constraints`; public enterprise operates under **market + policy + public-service constraints**.
+> Mental Model — mô hình tư duy: doanh nghiệp tư nhân hoạt động dưới **ràng buộc thị trường**; doanh nghiệp công hoạt động dưới **ràng buộc thị trường + chính sách + nghĩa vụ dịch vụ công**.
 
-## Public institution không phải một category đồng nhất
+## `공공기관` không phải một nhóm đồng nhất
 
-Korean public-sector ecosystem includes multiple legal/administrative classifications. `공기업`, `준정부기관`, other public institutions and policy-finance entities can have different revenue structures and mandates.
+Hệ sinh thái khu vực công tại Hàn Quốc gồm nhiều loại tổ chức khác nhau như `공기업`, `준정부기관`, các cơ quan công khác và tổ chức tài chính chính sách. Mỗi loại có cấu trúc doanh thu, quyền quản trị và nhiệm vụ khác nhau.
 
-Therefore seeing label `공공기관` does not automatically mean:
+Vì vậy nhãn `공공기관` không tự động có nghĩa nhà nước sở hữu 100%, mọi khoản nợ đều được bảo lãnh, nhân viên dùng cùng một hệ thống lương hay tối đa hóa lợi nhuận là mục tiêu chính. Khi phân tích phải xác định pháp lý cụ thể, cơ chế kiểm soát, nguồn doanh thu và nhiệm vụ công của từng tổ chức.
 
-- state owns 100%;
-- entity earns revenue like corporation;
-- all debt is guaranteed;
-- employee system is identical;
-- profit maximization is primary objective.
+## Lợi nhuận tài chính không bằng lợi ích xã hội
 
-Always identify exact legal status, owner/control, revenue source and public mandate.
+Giả sử một tuyến đường sắt kết nối vùng dân cư thưa. Về tài chính, doanh thu vé có thể không đủ bù chi phí vốn. Nhưng tuyến đó vẫn có thể tạo lợi ích xã hội thông qua khả năng đi lại, giảm tắc nghẽn, phát triển khu vực quanh ga hoặc giảm tai nạn và ô nhiễm.
 
-## Public enterprise economics: why profit alone is incomplete
-
-Suppose railway line connects low-density region. Financially it may not cover full capital cost, but it can create social benefits:
-
-- mobility;
-- regional access;
-- reduced congestion;
-- development around stations;
-- lower accident/externality cost.
-
-This creates distinction:
+Ta cần phân biệt:
 
 \[
-Financial\ Return \neq Social\ Return
+Lợi\ nhuận\ tài\ chính \neq Lợi\ ích\ xã\ hội
 \]
 
-Public enterprise can rationally undertake project with low financial return if social return justifies it under policy.
+Doanh nghiệp công có thể thực hiện dự án có lợi nhuận tài chính thấp nếu lợi ích xã hội đủ lớn. Tuy nhiên điều đó không có nghĩa mọi dự án lợi nhuận thấp đều hợp lý; nhiệm vụ công vẫn phải đi cùng phân tích chi phí–lợi ích nghiêm túc.
 
-But this does not mean all low-return projects are good. Public mandate still requires cost-benefit discipline.
+## Độc quyền tự nhiên: khi một mạng lưới rẻ hơn nhiều mạng lưới
 
-## Natural monopoly: why one network may be cheaper than many
+**Độc quyền tự nhiên (natural monopoly / 자연독점)** xuất hiện khi chi phí cố định của mạng lưới quá lớn đến mức một nhà cung cấp phục vụ toàn thị trường hiệu quả hơn nhiều mạng lưới song song. Truyền tải điện, đường ống khí và một số hạ tầng đường sắt là ví dụ điển hình.
 
-**Natural monopoly / 자연독점** occurs when fixed network cost is so high that one provider can serve market more efficiently than duplicated networks.
+Nếu hai công ty xây hai lưới điện quốc gia trùng nhau, phần lớn chi phí cố định bị nhân đôi. Vì vậy cạnh tranh trong các ngành này thường chuyển từ “nhiều mạng lưới cạnh tranh” sang **quản lý và điều tiết một mạng lưới chung**.
 
-Examples can include:
+Đánh đổi cốt lõi là: một mạng lưới có lợi thế quy mô nhưng áp lực cạnh tranh yếu hơn. Cơ quan điều tiết vì vậy phải theo dõi giá, chất lượng đầu tư và tiêu chuẩn dịch vụ.
 
-- electricity transmission/distribution;
-- gas pipeline;
-- rail infrastructure.
+## Sở hữu nhà nước có thể giải bài toán thiếu vốn dài hạn
 
-If two firms build parallel national grids, duplicated fixed cost can be wasteful.
+Trong giai đoạn đầu công nghiệp hóa, thị trường vốn tư nhân có thể chưa đủ sâu để tài trợ các dự án hạ tầng quy mô rất lớn với thời gian hoàn vốn dài. Doanh nghiệp được nhà nước hậu thuẫn có thể xây thép, điện, khí, đường sắt hoặc hạ tầng tài chính phát triển.
 
-Thus competition may shift from “many networks competing” to **regulation/governance of one network**.
+Mô hình sở hữu có thể thay đổi khi thị trường trưởng thành hơn thông qua cổ phần hóa, niêm yết hoặc tư nhân hóa. Vì vậy cấu trúc công–tư nên được hiểu như một **lựa chọn thể chế phụ thuộc giai đoạn phát triển**, không phải một nhãn cố định.
 
-The trade-off:
+## Giá dịch vụ công vừa là giá kinh tế vừa là công cụ chính sách
 
-```text
-Single network → scale efficiency
-              → but weak competitive pressure
-```
+Giá trong thị trường tư nhân thường phản ứng tương đối trực tiếp với chi phí và nhu cầu. Giá điện, gas hoặc một số dịch vụ công có thể còn mang mục tiêu ổn định đời sống và chính sách công nghiệp.
 
-Regulation must control tariff, investment quality and service standards.
-
-## Public ownership as response to missing private capital
-
-During early industrialization, private capital markets may be too shallow for enormous infrastructure projects with long payback.
-
-State-backed enterprise can build:
-
-- steel capacity;
-- electricity;
-- gas infrastructure;
-- rail/roads;
-- development finance.
-
-This can solve coordination and financing failures.
-
-But as markets mature, ownership model may evolve through corporatization, listing or privatization.
-
-Therefore public/private structure should be understood as **stage-dependent institutional choice**, not permanent ideology.
-
-## Tariff as price + policy instrument
-
-Private market price usually responds to cost/demand. Public utility tariff can also serve affordability or industrial-policy goals.
-
-If fuel cost rises but tariff is held below cost, economic loss does not disappear.
-
-It moves somewhere:
+Nếu giá nhiên liệu tăng nhưng giá bán lẻ bị giữ dưới chi phí, tổn thất kinh tế không biến mất. Nó chỉ chuyển sang nơi khác:
 
 ```text
-Current consumer bill ↓
-        but
-Public utility loss/debt ↑
-        → future tariff / fiscal support / financing burden
+Hóa đơn hiện tại của người dùng thấp hơn
+        ↓
+Doanh nghiệp công chịu lỗ hoặc tăng nợ
+        ↓
+Chi phí quay lại qua giá tương lai, ngân sách hoặc chi phí tài chính
 ```
 
-This is **intertemporal cost shifting**.
+Đây là **chuyển chi phí giữa các thời kỳ (intertemporal cost shifting)**.
 
-## Quasi-fiscal burden / 준재정 부담
+## Gánh nặng bán tài khóa (Quasi-fiscal Burden / 준재정 부담)
 
-When public enterprise performs policy function without direct budget transfer, cost can accumulate on its balance sheet.
+Khi doanh nghiệp công thực hiện nhiệm vụ chính sách nhưng không nhận ngân sách tương ứng, chi phí có thể tích tụ trên bảng cân đối của doanh nghiệp.
 
-Example logic:
+Ví dụ: nhà nước muốn giữ giá điện ổn định, chi phí đầu vào tăng, doanh nghiệp không được tăng giá đủ nhanh và phải vay thêm để bù phần chênh lệch. Lợi ích chính sách là thật, nhưng khoản nợ cũng là thật.
 
-- government wants stable tariff;
-- input cost rises;
-- company cannot fully pass cost;
-- company borrows to finance gap.
+Vì vậy khi đọc doanh nghiệp công phải hỏi **cuối cùng ai hấp thụ chi phí**: người tiêu dùng tương lai, người nộp thuế, chủ nợ hay chính doanh nghiệp.
 
-The policy benefit is real, but so is debt.
+## Logic của doanh nghiệp điện lực
 
-Analyst should ask **who eventually absorbs cost?**
+Chi phí phát điện và mua nhiên liệu có thể thay đổi nhanh theo LNG, than, dầu và tỷ giá, trong khi giá bán lẻ điện thường điều chỉnh chậm hơn vì yếu tố chính sách.
 
-This is reason public-enterprise balance sheet can have fiscal significance even when debt is legally corporate debt.
+Do đó lợi nhuận của doanh nghiệp điện lực có thể biến động mạnh do **độ trễ chuyển chi phí (pass-through lag)** chứ không nhất thiết vì hiệu quả vận hành thay đổi tương ứng.
 
-## KEPCO-type utility logic: input cost and tariff mismatch
-
-Electricity system illustrates mechanism clearly.
-
-Generation/fuel procurement cost can change rapidly with LNG/coal/oil/FX.
-
-Retail tariff can adjust more slowly due to policy.
-
-Therefore utility earnings may swing because **pass-through lag** rather than efficiency change.
-
-Evaluating management purely on one-year ROE would miss tariff institution.
-
-But persistent inefficiency still matters. Need decompose:
+Phân tích hợp lý cần tách:
 
 \[
-Loss = Policy\ Price\ Gap + Operating\ Inefficiency + Financing\ Cost + Other
+Lỗ = Chênh\ lệch\ giá\ do\ chính\ sách + Kém\ hiệu\ quả\ vận\ hành + Chi\ phí\ tài\ chính + Yếu\ tố\ khác
 \]
 
-See [30_energy_security_power_market_and_transition](./30_energy_security_power_market_and_transition.md).
+Xem [`30_energy_security_power_market_and_transition.md`](./30_energy_security_power_market_and_transition.md).
 
-## KOGAS-type procurement logic: security has value
+## An ninh năng lượng có giá trị kinh tế riêng
 
-Gas procurement can use long-term contracts, spot purchases, inventories and shipping arrangements.
+Doanh nghiệp khí có thể kết hợp hợp đồng dài hạn, mua spot, tồn kho và vận tải LNG. Một doanh nghiệp chỉ tối ưu lợi nhuận ngắn hạn có thể giảm tồn kho và mua nguồn rẻ nhất. Nhưng tổ chức mang nhiệm vụ an ninh năng lượng có thể chấp nhận giữ dự phòng cao hơn để giảm rủi ro thiếu nguồn.
 
-A pure short-term profit optimizer might minimize inventory and buy cheapest supply.
+Phần dự phòng đó có **giá trị quyền chọn chống đứt gãy (resilience option value)**. Nó có thể nhìn “kém hiệu quả” trong năm bình thường nhưng rất có giá trị khi khủng hoảng xảy ra.
 
-A public-security mandate may hold more buffer or long-term contracts to reduce shortage risk.
+## Đường sắt và ngoại tác
 
-This can appear less profitable in normal market but valuable during crisis.
+Đường sắt có chi phí hạ tầng cố định lớn nhưng tạo nhiều **ngoại tác (externalities)** như giảm tắc nghẽn, giảm carbon, tiết kiệm thời gian và hỗ trợ phát triển vùng. Vì vậy doanh thu vé không thể phản ánh đầy đủ lợi ích xã hội.
 
-Economic concept is **resilience option value**.
+Tuy nhiên, chính vì lợi ích xã hội khó đo nên cũng tồn tại rủi ro dùng lý do chính sách để biện minh cho dự án ít người sử dụng. Mọi tuyên bố về lợi ích xã hội vẫn cần bằng chứng và phân tích chi phí–lợi ích.
 
-## Rail: network, externalities and regional policy
+## Ngân hàng chính sách: tài chính với nhiệm vụ công
 
-Rail has huge fixed infrastructure and positive externalities.
+Tổ chức tài chính chính sách có thể hỗ trợ xuất khẩu, ngành chiến lược, SME, hạ tầng hoặc tái cấu trúc doanh nghiệp. Chúng khác ngân hàng thương mại ở chỗ có thể cân nhắc ngoại tác và giá trị chiến lược ngoài lợi nhuận tín dụng ngắn hạn.
 
-Fare revenue alone may not capture:
+Nhưng rủi ro tín dụng không biến mất. Khoản vay chính sách vẫn có thể thất bại.
 
-- reduced road congestion;
-- carbon reduction;
-- time savings;
-- regional development.
+Cần phân biệt **vấn đề thanh khoản (liquidity problem)** và **vấn đề khả năng thanh toán dài hạn (solvency problem)**. Doanh nghiệp vẫn có nền tảng kinh tế tốt nhưng tạm thời không tái cấp vốn được có thể được cứu bằng thanh khoản. Ngược lại, doanh nghiệp mà dòng tiền tương lai không đủ trả nợ thì việc liên tục gia hạn chỉ trì hoãn việc ghi nhận tổn thất.
 
-Therefore project evaluation needs social cost-benefit analysis.
+## Vai trò chống chu kỳ
 
-But this also creates risk of politically attractive low-use infrastructure. Social-return claims should still use evidence.
+Trong khủng hoảng, nhiều tổ chức tài chính tư nhân có thể đồng thời giảm rủi ro. Khi tất cả cùng rút tín dụng, cả doanh nghiệp khỏe cũng có thể thiếu tiền.
 
-## Policy banks: finance with public mandate
-
-Policy-finance institutions exist to address financing gaps in exports, strategic industries, SMEs, infrastructure or restructuring.
-
-Their role differs from commercial banks because they can consider externality/strategic value.
-
-But credit risk remains real.
-
-A policy loan is not free money.
-
-Useful distinction:
-
-### Liquidity problem
-
-Firm is economically viable but temporarily cannot refinance.
-
-Policy support can preserve value.
-
-### Solvency problem
-
-Future cash flows are insufficient relative to liabilities.
-
-Repeated refinancing may only postpone loss.
-
-This distinction is critical in restructuring.
-
-## Countercyclical role
-
-During crisis, private lenders may all reduce risk simultaneously.
-
-If every bank withdraws, even healthy borrower can face liquidity freeze.
-
-Policy bank can lend countercyclically to prevent fire-sale spiral.
-
-Mechanism:
+Tài chính công có thể can thiệp theo hướng chống chu kỳ:
 
 ```text
-Private credit shock
+Tín dụng tư nhân co lại
       ↓
-liquidity shortage
+Thiếu thanh khoản
       ↓
-asset sales / layoffs
+Bán tháo tài sản / sa thải
       ↓
-further economic decline
+Suy giảm kinh tế sâu hơn
 ```
 
-Public finance can break spiral if support targets viable borrowers.
+Nếu hỗ trợ đúng doanh nghiệp còn khả năng tồn tại, chính sách có thể chặn vòng xoáy này.
 
-## Moral hazard in policy finance
+## Rủi ro đạo đức trong tài chính chính sách
 
-Support can create expectation of rescue.
+Nếu doanh nghiệp và chủ nợ tin rằng các công ty “chiến lược” sẽ luôn được cứu, họ có thể chấp nhận rủi ro cao hơn mức hợp lý. Đây là **rủi ro đạo đức (moral hazard / 도덕적 해이)**.
 
-If managers/lenders believe strategic firm will always be saved, they may take excessive risk.
+Vì vậy hỗ trợ tốt cần đi cùng điều kiện, phân bổ tổn thất và kỷ luật. Mục tiêu công và kỷ luật thị trường phải cùng tồn tại.
 
-Thus effective policy finance needs **conditionality and loss discipline**.
+## Mua sắm công tạo ra thị trường
 
-Public purpose and market discipline must coexist.
+Chính phủ và cơ quan công mua thiết bị đường sắt, hệ thống quốc phòng, SI/SM, xây dựng, y tế và dịch vụ hạ tầng. Mua sắm công có thể trở thành khách hàng tham chiếu đầu tiên cho công nghệ nội địa và giúp startup hoặc SME tạo hồ sơ năng lực.
 
-This echoes historical state–bank–chaebol relationship discussed in [00_history/02_1960s_export_industrialization_and_business_formation](./00_history/02_1960s_export_industrialization_and_business_formation.md).
+Nhưng hệ thống này cũng có rủi ro như áp lực giá thấp nhất, thủ tục phức tạp, phạm vi hợp đồng cứng, tham nhũng nếu quản trị yếu và nhiều tầng thầu phụ.
 
-## Public procurement: government as market creator
+Thiết kế tiêu chí mua sắm và minh bạch vì vậy tác động trực tiếp đến chất lượng thị trường nhà cung cấp.
 
-Government/public institutions purchase:
+## SI/SM trong dự án công
 
-- rail equipment;
-- defense systems;
-- IT/SI;
-- construction;
-- healthcare;
-- energy/infrastructure services.
-
-Public procurement can create first reference customer for domestic technology.
-
-A startup/SME that wins public project gains revenue and credibility.
-
-But procurement also creates risks:
-
-- lowest-bid pressure;
-- bureaucracy;
-- scope rigidity;
-- favoritism/corruption if governance weak;
-- multilayer subcontracting.
-
-Transparency and evaluation design matter.
-
-## SI/SM and public projects
-
-Public IT project may follow:
+Một dự án IT công có thể đi theo cấu trúc:
 
 ```text
-Public institution
-      ↓
-Prime SI vendor
-      ↓
-Subcontractors
-      ↓
-Specialized developers
+Cơ quan công
+   ↓
+Nhà thầu SI chính
+   ↓
+Nhà thầu phụ
+   ↓
+Đội phát triển chuyên môn
 ```
 
-Budget, procurement rules and acceptance process shape project economics.
+Quy định ngân sách, nghiệm thu và mua sắm quyết định kinh tế của dự án. Chậm phê duyệt ở tầng trên có thể làm chậm thanh toán cho nhiều lớp nhà thầu phía dưới, biến thủ tục công thành vấn đề vốn lưu động cho SME.
 
-A delay in approval can postpone payment to multiple layers.
+Xem [`34_digital_fintech_cloud_and_it_services.md`](./34_digital_fintech_cloud_and_it_services.md).
 
-Therefore public procurement becomes working-capital issue for SMEs.
+## Nợ doanh nghiệp công: nợ pháp lý và kỳ vọng hỗ trợ của nhà nước
 
-See [34_digital_fintech_cloud_and_it_services](./34_digital_fintech_cloud_and_it_services.md).
+Nợ có thể nằm hoàn toàn trên pháp nhân doanh nghiệp công chứ không phải nợ trực tiếp của chính phủ. Tuy nhiên thị trường vẫn có thể kỳ vọng nhà nước hỗ trợ một tổ chức có vai trò hệ thống.
 
-## Public enterprise debt: legal debt vs fiscal perception
+Vì vậy cần hình dung một phổ từ **bảo lãnh chủ quyền rõ ràng** tới **rủi ro doanh nghiệp độc lập hoàn toàn**. Mỗi tổ chức nằm ở vị trí khác nhau tùy luật, nhiệm vụ và lịch sử.
 
-Debt may legally sit at corporation, not central government.
+Không nên tự động coi mọi khoản nợ của SOE là nợ chính phủ, nhưng cũng không nên bỏ qua nghĩa vụ tiềm tàng đối với ngân sách.
 
-But markets can still perceive implicit state support for systemically important entity.
+## Chi phí vốn thấp có thể vừa là lợi thế vừa là nguồn méo mó
 
-This creates a spectrum:
+Nếu chủ nợ kỳ vọng nhà nước hỗ trợ mạnh, doanh nghiệp công có thể vay với chênh lệch lãi suất thấp hơn một doanh nghiệp tư nhân có cùng đòn bẩy. Điều này hữu ích khi tài trợ hạ tầng dài hạn.
 
-```text
-Explicit sovereign guarantee
-←----------------------→
-Pure standalone corporate risk
-```
+Nhưng vốn rẻ cũng có thể làm giảm kỷ luật và tạo đầu tư quá mức. Lợi thế tài trợ và rủi ro quản trị là hai mặt của cùng một cơ chế.
 
-Each entity sits somewhere depending law, mandate and history.
+## Đánh giá hiệu quả phải theo nhiều mục tiêu
 
-Analyst should neither automatically classify all SOE debt as sovereign debt nor ignore contingent fiscal exposure.
+Doanh nghiệp tư nhân có thể tập trung mạnh vào ROIC và lợi nhuận. Doanh nghiệp công còn phải quan tâm an toàn, độ tin cậy, khả năng chi trả, dịch vụ vùng, phát thải, việc làm và sức khỏe tài chính.
 
-## Cost of capital and implicit support
+Các mục tiêu này có thể xung đột. Một doanh nghiệp đường sắt tối đa hóa lợi nhuận có thể muốn đóng tuyến ít khách, nhưng điều đó có thể đi ngược nhiệm vụ kết nối vùng.
 
-If lenders expect strong government support, public enterprise may borrow at lower spread than equally leveraged private company.
+Vì vậy đánh giá cần làm rõ trọng số của từng mục tiêu thay vì dùng khái niệm “giá trị công” một cách mơ hồ.
 
-This can be useful for infrastructure finance.
+## Vấn đề đại diện trong doanh nghiệp công
 
-But cheaper funding can reduce discipline and encourage overinvestment.
+Doanh nghiệp công có nhiều “chủ sở hữu lợi ích” cùng lúc: bộ quản lý, người dân, người nộp thuế, khách hàng, nhân viên và đôi khi cả cổ đông bên ngoài.
 
-Again, advantage and agency risk are two sides of same mechanism.
+Nhiều bên ủy quyền dễ làm trách nhiệm bị phân tán. Quản lý có thể tối ưu một KPI nhưng làm xấu mục tiêu khác. Vì vậy nhiệm vụ rõ ràng, chỉ số minh bạch và kiểm toán độc lập rất quan trọng.
 
-## Multi-objective performance measurement
+## Rủi ro chu kỳ chính trị
 
-Private company can use ROIC/profit as central objective.
+Chiến lược của doanh nghiệp công có thể thay đổi theo chính quyền và ưu tiên chính sách, trong khi hạ tầng thường có vòng đời 20–30 năm. Điều này tạo **rủi ro chính sách (policy risk)** và có thể làm quyết định đầu tư kém nhất quán.
 
-Public enterprise may also have KPIs for:
+Quản trị hạ tầng tốt nên cố giữ các nguyên tắc kinh tế cốt lõi ổn định hơn chu kỳ chính trị ngắn hạn.
 
-- safety;
-- reliability;
-- affordability;
-- regional service;
-- emissions;
-- employment;
-- financial health.
+## Từ công sang tư và mô hình sở hữu hỗn hợp
 
-These objectives can conflict.
+Một số doanh nghiệp có nguồn gốc nhà nước sau đó được tư nhân hóa, niêm yết hoặc hoạt động theo cơ chế thị trường hơn. POSCO và KT là các ví dụ lịch sử đáng chú ý.
 
-A rail operator maximizing profit might close low-density routes, conflicting with regional-access mandate.
+Tư nhân hóa có thể tăng kỷ luật cổ đông, mở rộng tiếp cận thị trường vốn và tạo động lực hiệu quả hơn. Nhưng thay đổi sở hữu không tự động tạo cạnh tranh. Một độc quyền được tư nhân hóa nhưng điều tiết yếu chỉ có thể chuyển địa tô từ nhà nước sang cổ đông tư nhân.
 
-Therefore evaluation needs explicit weighting rather than vague “public value”.
+Một số doanh nghiệp niêm yết vẫn có ảnh hưởng chính sách hoặc cổ phần chiến lược của nhà nước. Nhà đầu tư cần hiểu ai kiểm soát hội đồng quản trị, chính sách cổ tức, cơ chế giá và các hạn chế chiến lược.
 
-## Principal–agent problem in public enterprise
+## Việc làm trong cơ quan công
 
-Public enterprise has multiple principals:
+Cơ quan công thường có tuyển dụng tiêu chuẩn hóa, quy trình đánh giá chính thức hơn và mức ổn định được nhận thức cao hơn. Tuy nhiên chất lượng công việc khác nhau rất lớn theo tổ chức và chức năng.
 
-- government ministry;
-- citizens/taxpayers;
-- customers;
-- sometimes public shareholders;
-- employees.
+Không nên chỉ đánh giá “việc công = ổn định”. Cần xem kỹ khả năng chuyển đổi kỹ năng, lộ trình thăng tiến, địa điểm, xu hướng lương, phúc lợi, văn hóa tổ chức và rủi ro tái cấu trúc do chính sách.
 
-Multiple principals can make accountability diffuse.
+## Doanh nghiệp công và phát triển vùng
 
-Manager may optimize one KPI while ignoring another.
+Nhà nước có thể đặt trụ sở hoặc dự án ngoài 수도권 để hỗ trợ phát triển cân bằng. Điều này tạo việc làm đầu tàu và nhu cầu nhà cung cấp địa phương, nhưng cũng có thể tăng chi phí phối hợp nếu nhân lực và khách hàng vẫn tập trung ở nơi khác.
 
-Governance therefore requires clear mandate, transparent metrics and independent audit/oversight.
+Đây là đánh đổi giữa **hiệu quả tập trung (agglomeration efficiency)** và mục tiêu phân bổ vùng.
 
-## Political cycle risk
+Xem [`24_regional_clusters_and_industrial_geography.md`](./24_regional_clusters_and_industrial_geography.md).
 
-Public-enterprise strategy can change with administration or policy priorities.
+## Hạ tầng công là đầu vào năng suất của doanh nghiệp tư nhân
 
-Projects with 20–30 year life may face changing tariff, energy or infrastructure policy.
+Đường, cảng, điện, đường sắt và viễn thông có thể do khu vực công vận hành hoặc tài trợ nhưng trực tiếp tạo năng suất cho doanh nghiệp tư nhân. Một fab bán dẫn không sở hữu lưới điện quốc gia nhưng hiệu quả của fab phụ thuộc rất lớn vào độ ổn định của lưới.
 
-This creates policy uncertainty and potential investment inefficiency.
+Vì vậy hiệu quả doanh nghiệp công đi vào ROIC của khu vực tư nhân một cách gián tiếp. Quản trị hạ tầng là vấn đề năng suất vĩ mô, không chỉ là vấn đề của riêng khu vực công.
 
-Long-term infrastructure governance should ideally stabilize core economic rules beyond short political cycle.
+## Cứu hoạt động sản xuất khác với cứu cổ đông cũ
 
-## Public-to-private transition
+Khi một doanh nghiệp chiến lược gặp khủng hoảng, nhà nước có thể muốn giữ công việc, tài sản sản xuất hoặc chức năng hệ thống. Nhưng điều đó không nhất thiết có nghĩa phải bảo vệ toàn bộ cổ đông và chủ nợ cũ khỏi tổn thất.
 
-Some historically public-origin companies later become privatized/listed or more market-oriented.
+Đây là khác biệt giữa **cứu doanh nghiệp về mặt pháp nhân** và **giữ lại tài sản sản xuất có giá trị**. Tái cấu trúc tốt có thể áp tổn thất theo thứ tự quyền lợi nhưng vẫn bảo toàn hoạt động kinh tế quan trọng.
 
-POSCO and KT lineages illustrate institutional evolution.
+## Cách phân tích một doanh nghiệp công tại Hàn Quốc
 
-Privatization can introduce:
+Hãy xác định loại pháp lý, chủ thể kiểm soát, nhiệm vụ công, cơ chế doanh thu, khả năng chuyển chi phí đầu vào sang giá bán, nhu cầu CAPEX, cấu trúc nợ và mức hỗ trợ của nhà nước, rủi ro chính sách, hiệu quả vận hành, lợi ích xã hội và nghĩa vụ ngân sách tiềm tàng.
 
-- market pricing;
-- shareholder discipline;
-- capital-market access;
-- efficiency incentives.
+Không nên nhìn một tỷ số ROE hoặc debt ratio riêng lẻ mà bỏ qua cơ chế giá và nhiệm vụ công.
 
-But ownership change alone does not guarantee better outcome. Monopoly, governance and regulation still matter.
+## Mental Model — mô hình tư duy
 
-A privatized monopoly without effective regulation can simply shift monopoly rent from state to private owners.
+> Doanh nghiệp công có hai “bảng cân đối”: **bảng cân đối tài chính** và **bảng cân đối nhiệm vụ chính sách**. Phân tích tốt phải hỏi mục tiêu công có đáng với chi phí kinh tế hay không và chi phí đó được phân bổ minh bạch qua thời gian như thế nào.
 
-## Hybrid ownership
+## Những nhầm lẫn thường gặp
 
-A company can be listed with private shareholders while government retains influence or strategic stake depending structure.
+Sở hữu nhà nước không có nghĩa mọi khoản nợ được bảo lãnh. Giá dịch vụ thấp không chứng minh chi phí sản xuất thấp. ROE thấp không tự động là quản lý kém nếu doanh nghiệp bị ràng buộc bởi nhiệm vụ công, nhưng nhiệm vụ công cũng không biện minh cho đầu tư kém hiệu quả vô hạn. Tư nhân hóa không tự động tạo cạnh tranh. Hỗ trợ nhà nước có thể giải quyết thiếu thanh khoản nhưng không thể chữa mãi một mô hình kinh tế âm.
 
-Hybrid model creates dual accountability.
+## Liên kết
 
-Investor must understand:
-
-- who controls board;
-- policy mandate;
-- dividend policy;
-- tariff control;
-- strategic restrictions.
-
-Listed status does not automatically mean pure shareholder-value objective.
-
-## Employment in public institutions
-
-Public institutions often have:
-
-- standardized recruitment;
-- public pay/evaluation rules;
-- stronger procedural constraints;
-- perceived stability.
-
-But variation is huge. Work intensity, compensation and career development differ by entity/function.
-
-Do not reduce public job to “stable”. Evaluate:
-
-- role skill portability;
-- promotion system;
-- location;
-- wage trajectory;
-- pension/benefits;
-- organizational culture;
-- exposure to restructuring/policy change.
-
-## Public enterprise and regional development
-
-State entities can locate facilities, headquarters or projects in regions to support balanced development.
-
-This can create anchor employment and supplier demand.
-
-But forced relocation can also increase coordination cost if talent/customer network concentrated elsewhere.
-
-Regional policy therefore has trade-off between agglomeration efficiency and distribution goals.
-
-See [24_regional_clusters_and_industrial_geography](./24_regional_clusters_and_industrial_geography.md).
-
-## Public infrastructure as private-sector productivity input
-
-Road, port, electricity, rail and telecom infrastructure may be publicly operated/financed but create value for private firms.
-
-A semiconductor fab’s productivity depends partly on reliable electricity and logistics it does not own.
-
-Thus public enterprise efficiency enters private-company ROIC indirectly.
-
-This is why infrastructure governance is macro productivity issue.
-
-## Socializing downside vs sharing upside
-
-Public support sometimes rescues strategic sector during crisis.
-
-A key fairness question is whether private owners keep upside while taxpayers absorb downside.
-
-Good restructuring can impose losses on existing equity/creditors according to rules while preserving economically valuable operations.
-
-This is difference between **saving a company** and **saving productive assets/jobs/system function**.
-
-The two need not imply protecting old shareholders.
-
-## How to analyze a Korean public enterprise
-
-### Step 1 — Identify legal/institutional category
-
-What exactly is entity? Who owns/controls it?
-
-### Step 2 — Define mandate
-
-Commercial profit, universal service, security, regional development?
-
-### Step 3 — Revenue mechanism
-
-Market price, regulated tariff, government transfer, fees?
-
-### Step 4 — Cost pass-through
-
-Can input cost be passed to customers? With what lag?
-
-### Step 5 — CAPEX requirement
-
-Infrastructure replacement/expansion? Long lead time?
-
-### Step 6 — Debt and support
-
-Explicit guarantee, implicit support, standalone rating?
-
-### Step 7 — Policy risk
-
-Can tariff/strategy change politically?
-
-### Step 8 — Efficiency
-
-Benchmark operating cost and service quality, not profit alone.
-
-### Step 9 — Social return
-
-What externalities/public benefits justify non-commercial activity?
-
-### Step 10 — Contingent fiscal risk
-
-Could losses migrate to public budget in stress?
-
-## Mental Model
-
-> Public enterprise is an economic organization with **dual balance sheets**: a financial balance sheet and a policy mandate. Good analysis asks whether public objective is worth its economic cost and whether that cost is transparently allocated over time.
-
-## Common misconceptions
-
-Public ownership does not mean all debt is automatically guaranteed.
-
-Low tariff does not prove low production cost.
-
-Low ROE does not automatically mean management failure if policy mandate constrains pricing.
-
-Policy mandate does not justify unlimited inefficiency or bad CAPEX.
-
-Privatization does not automatically create competition.
-
-Government support can solve liquidity problem but cannot permanently cure negative economics.
-
-## Connections
-
-Read [26_economic_institutions_and_policy_making](./26_economic_institutions_and_policy_making.md) for policy architecture, [30_energy_security_power_market_and_transition](./30_energy_security_power_market_and_transition.md) for utilities, [11_banks_finance_and_corporate_funding](./11_banks_finance_and_corporate_funding.md) for credit risk and [24_regional_clusters_and_industrial_geography](./24_regional_clusters_and_industrial_geography.md) for regional public investment.
+Đọc [`26_economic_institutions_and_policy_making.md`](./26_economic_institutions_and_policy_making.md) cho kiến trúc chính sách, [`30_energy_security_power_market_and_transition.md`](./30_energy_security_power_market_and_transition.md) cho utility, [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md) cho rủi ro tín dụng và [`24_regional_clusters_and_industrial_geography.md`](./24_regional_clusters_and_industrial_geography.md) cho đầu tư công theo vùng.
