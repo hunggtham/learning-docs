@@ -28,6 +28,14 @@ Xem [quy ước ngôn ngữ](./LANGUAGE_STYLE.md) để hiểu cách thư viện
 | Xã hội, Đạo đức & Nghề nghiệp | [`basic/12_society_ethics_profession`](./basic/12_society_ethics_profession/) | [`12_society_ethics_profession/advanced`](./12_society_ethics_profession/advanced/README.md) |
 | Kết nối xuyên lĩnh vực | [`basic/90_connections`](./basic/90_connections/) | [`90_connections/advanced`](./90_connections/advanced/README.md) |
 
+## Thư viện AI chuyên sâu
+
+Ngoài tuyến `basic/10_ai_foundations → 10_ai_foundations/advanced`, repository có một thư viện chuyên sâu riêng về AI:
+
+**[Artificial Intelligence Knowledge Library](./02_artificial_intelligence/README.md)**
+
+Thư viện này đi theo quan hệ phụ thuộc khái niệm và mở rộng từ Transformer, LLM, Retrieval/Vector Search, RAG, Tool Calling và Agents tới Evaluation, AI Engineering, LLMOps, Reliability và Security. Nó bổ sung chiều sâu theo domain, không thay thế lớp AI Foundations dùng chung của Computer Science.
+
 ## Cách học
 
 Không cần học hết phần nền tảng rồi mới đọc phần nâng cao. Cách hợp lý hơn là đọc chương nền tảng tương ứng để có vốn thuật ngữ và hiểu cơ chế chính, sau đó chuyển sang phần nâng cao khi cần hiểu cơ chế bên trong, chứng minh, hiệu năng, kiểu lỗi hoặc thiết kế cho hệ thống thực tế.
