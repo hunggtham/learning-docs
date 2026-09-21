@@ -1,339 +1,329 @@
-# Coupang — e-commerce, fulfillment density, membership và logistics economics
+# Coupang — thương mại điện tử, mật độ hoàn tất đơn hàng, hội viên và kinh tế logistics
 
-Case này dùng Coupang như một laboratory để hiểu một loại Korean company khác hẳn chaebol truyền thống. Company được hình thành trong venture/digital era nhưng business model cuối cùng lại rất **physical-infrastructure intensive**: fulfillment centers, inventory, delivery network, technology, customer service và last-mile operations cùng hoạt động như một system.
+Case này dùng Coupang như một bài thực hành để hiểu một loại doanh nghiệp Hàn Quốc rất khác chaebol truyền thống. Công ty hình thành trong thời kỳ số và vốn mạo hiểm, nhưng mô hình kinh doanh cuối cùng lại **thâm dụng hạ tầng vật lý (physical-infrastructure intensive)**: trung tâm hoàn tất đơn hàng, tồn kho, mạng lưới giao hàng, công nghệ, chăm sóc khách hàng và vận hành chặng cuối cùng cùng hoạt động như một hệ thống.
 
-Điểm học quan trọng là: gọi một company là “tech” không cho biết economics. Analyst phải tìm production function thực sự.
+Điểm quan trọng là: gọi một doanh nghiệp là “công nghệ” không cho biết kinh tế thực sự của nó. Cần tìm đúng **hàm sản xuất (production function)**.
 
 Xem [17_platform_telecom_content_retail_services](../17_platform_telecom_content_retail_services.md), [33_logistics_ports_and_distribution_networks](../33_logistics_ports_and_distribution_networks.md) và [07_startups_venture_and_scaleups](../07_startups_venture_and_scaleups.md).
 
-## 1. E-commerce revenue không phải một engine duy nhất
+## 1. Doanh thu thương mại điện tử không đến từ một động cơ duy nhất
 
-Một commerce ecosystem có thể có first-party retail, marketplace, fulfillment/logistics services, membership, advertising và adjacent services.
+Một hệ sinh thái thương mại có thể gồm bán lẻ trực tiếp, sàn cho người bán bên thứ ba, dịch vụ logistics/hoàn tất đơn hàng, hội viên, quảng cáo và các dịch vụ liền kề.
 
-Các engines có accounting khác nhau.
+Mỗi mảng có cách ghi nhận kế toán khác nhau.
 
-Trong **1P retail**, company mua inventory rồi bán lại. Gross merchandise value và reported revenue có thể gần nhau hơn vì company là principal.
+Trong **bán lẻ trực tiếp (first-party / 1P)**, công ty mua tồn kho rồi bán lại. Tổng giá trị hàng hóa giao dịch và doanh thu báo cáo có thể gần nhau hơn vì công ty là bên bán chính.
 
-Trong **3P marketplace**, merchant bán cho customer và platform lấy commission/service fee. GMV có thể rất lớn nhưng reported revenue chỉ là take rate hoặc service revenue tùy arrangement.
+Trong **sàn bên thứ ba (third-party marketplace / 3P)**, người bán bán trực tiếp cho khách hàng và nền tảng thu hoa hồng hoặc phí dịch vụ. Tổng giá trị giao dịch có thể rất lớn nhưng doanh thu báo cáo chỉ phản ánh phần hoa hồng/phí mà nền tảng được hưởng.
 
 Vì vậy:
 
 \[
-GMV \neq Revenue \neq Gross\ Profit \neq Cash\ Flow
+GMV \neq Doanh\ thu \neq Lợi\ nhuận\ gộp \neq Dòng\ tiền
 \]
 
-Đây là distinction đầu tiên phải giữ.
+Đây là phân biệt đầu tiên phải giữ.
 
-## 2. Customer value proposition và flywheel
+## 2. Giá trị cho khách hàng và vòng quay tăng trưởng
 
-Commerce platform có thể tạo flywheel:
+Nền tảng thương mại có thể tạo một vòng quay tích cực:
 
 ```text
-More assortment + faster delivery
-→ better customer experience
-→ more orders
-→ higher route / warehouse density
-→ lower cost per order
-→ better price/service
-→ more customers
+Nhiều lựa chọn hơn + giao nhanh hơn
+→ trải nghiệm khách hàng tốt hơn
+→ số đơn hàng tăng
+→ mật độ tuyến giao / kho tăng
+→ chi phí trên mỗi đơn giảm
+→ giá và dịch vụ tốt hơn
+→ nhiều khách hàng hơn
 ```
 
-Nhưng flywheel chỉ tồn tại nếu cost per order thực sự giảm khi density tăng. Nếu growth chỉ đến từ subsidy/discount, network có thể lớn nhưng economic moat yếu.
+Nhưng vòng quay này chỉ thực sự tồn tại nếu chi phí trên mỗi đơn giảm khi mật độ tăng. Nếu tăng trưởng chủ yếu đến từ trợ giá và khuyến mãi, mạng lưới có thể lớn nhưng lợi thế kinh tế yếu.
 
-> **Mental Model:** logistics density là một dạng network effect vật lý. Nhiều orders trong cùng geography có thể làm fixed infrastructure và route cost được spread hiệu quả hơn.
+> **Mô hình tư duy:** mật độ logistics là một dạng hiệu ứng mạng vật lý. Nhiều đơn hàng trong cùng một khu vực giúp chi phí hạ tầng và tuyến giao được phân bổ hiệu quả hơn.
 
-## 3. Density economics
+## 3. Kinh tế mật độ
 
-Giả sử một delivery route có fixed daily cost 300,000 won.
+Giả sử một tuyến giao hàng có chi phí cố định mỗi ngày là 300.000 won.
 
-Nếu route giao 100 packages:
-
-\[
-Fixed\ Route\ Cost/Package = 3,000\ won
-\]
-
-Nếu density tăng lên 200 packages với route cost chỉ tăng nhẹ lên 360,000 won:
+Nếu giao 100 kiện:
 
 \[
-Cost/Package = 1,800\ won
+Chi\ phí\ cố\ định/kiện = 3.000\ won
 \]
 
-Đây là stylized example, không phải company data. Nó minh họa vì sao order density có thể tạo operating leverage.
+Nếu mật độ tăng lên 200 kiện trong khi chi phí tuyến chỉ tăng nhẹ lên 360.000 won:
 
-Nhưng khi expansion vào low-density region, economics có thể đảo lại.
+\[
+Chi\ phí/kiện = 1.800\ won
+\]
 
-## 4. Fulfillment center là inventory machine, không chỉ warehouse
+Đây chỉ là ví dụ minh họa, không phải số liệu của công ty. Nó cho thấy vì sao mật độ đơn hàng có thể tạo **đòn bẩy hoạt động (operating leverage)**.
 
-Fulfillment center economics phụ thuộc:
+Khi mở rộng vào khu vực mật độ thấp, kinh tế có thể đảo chiều.
+
+## 4. Trung tâm hoàn tất đơn hàng là cỗ máy tồn kho, không chỉ là nhà kho
+
+Kinh tế của trung tâm hoàn tất đơn hàng phụ thuộc:
 
 ```text
-Throughput
-× pick/pack productivity
-× automation
-× utilization
-× inventory placement accuracy
+Lưu lượng xử lý
+× năng suất lấy/đóng gói
+× tự động hóa
+× tỷ lệ sử dụng công suất
+× độ chính xác bố trí tồn kho
 ```
 
-Nếu inventory được đặt gần demand, delivery nhanh và transport cost giảm. Nhưng nếu forecast sai, inventory bị stranded ở wrong location và cần transfer/markdown.
+Nếu tồn kho được đặt gần nhu cầu, giao hàng nhanh hơn và chi phí vận chuyển giảm. Nhưng nếu dự báo sai, hàng có thể nằm sai địa điểm và phải chuyển kho hoặc giảm giá.
 
-Do đó logistics advantage cần data/forecasting kết hợp physical assets.
+Lợi thế logistics vì vậy cần kết hợp dữ liệu/dự báo với tài sản vật lý.
 
-## 5. Inventory turns và negative working capital
+## 5. Vòng quay tồn kho và vốn lưu động âm
 
-Retail có thể có favorable working capital nếu collect customer cash nhanh nhưng pay suppliers sau.
-
-Simplified cash conversion cycle:
+Bán lẻ có thể có vốn lưu động thuận lợi nếu thu tiền khách hàng nhanh nhưng trả tiền nhà cung cấp chậm hơn.
 
 \[
 CCC = DIO + DSO - DPO
 \]
 
-E-commerce consumer sales thường có low receivable days; nếu supplier payment terms dài, business có thể tạo working-capital funding.
+Thương mại điện tử B2C thường có số ngày phải thu thấp; nếu thời hạn thanh toán cho nhà cung cấp dài, doanh nghiệp có thể được tài trợ một phần bởi khoản phải trả.
 
-Nhưng inventory build quá nhanh có thể hút cash và tăng markdown risk.
+Tuy nhiên tồn kho tăng quá nhanh sẽ hút tiền và làm tăng rủi ro giảm giá hàng hóa. Vì vậy phải đọc tăng trưởng doanh thu cùng với tăng trưởng tồn kho.
 
-Revenue growth vì vậy phải được đọc cùng inventory growth.
+## 6. Biên lợi nhuận gộp chưa đủ — cần biết chi phí hoàn tất đơn hàng nằm ở đâu
 
-## 6. Gross margin không đủ — fulfillment cost nằm ở đâu?
+Hai nhà bán lẻ có cùng biên lợi nhuận gộp nhưng kinh tế hoàn tất đơn hàng có thể rất khác.
 
-Hai retailers có cùng gross margin nhưng fulfillment economics khác nhau.
-
-Analyst cần hiểu classification:
+Cần hiểu cách phân loại:
 
 ```text
-Product cost
-Fulfillment labor
-Delivery cost
-Payment cost
-Customer service
+Giá vốn hàng hóa
+Chi phí lao động hoàn tất đơn hàng
+Chi phí giao hàng
+Chi phí thanh toán
+Chăm sóc khách hàng
 Marketing
-Technology
+Công nghệ
 ```
 
-Nếu một company classify nhiều fulfillment costs below gross profit, gross margin không thể so trực tiếp với company classify khác.
+Nếu một công ty ghi nhiều chi phí logistics bên dưới lợi nhuận gộp còn công ty khác ghi chúng trong giá vốn, biên gộp không thể so trực tiếp.
 
-Unit economics nên đi xuống contribution level:
+Nên đi xuống mức **lợi nhuận đóng góp (contribution margin)**:
 
 \[
-Contribution\ per\ Order = Revenue\ per\ Order - Variable\ Product/Fulfillment/Delivery\ Cost
+Lợi\ nhuận\ đóng\ góp/đơn = Doanh\ thu/đơn - Chi\ phí\ biến\ đổi\ sản\ phẩm/logistics/giao\ hàng
 \]
 
-rồi mới xét fixed corporate/technology cost.
+sau đó mới xét chi phí cố định ở cấp công ty và công nghệ.
 
-## 7. Membership: revenue nhỏ có thể tạo economics lớn
+## 7. Hội viên: doanh thu phí có thể nhỏ nhưng ảnh hưởng kinh tế lớn
 
-Membership fee có thể không phải largest revenue line nhưng ảnh hưởng behavior:
-
-```text
-Membership
-→ lower perceived marginal delivery cost
-→ order frequency ↑
-→ retention ↑
-→ density ↑
-→ logistics efficiency ↑
-```
-
-Nhưng free/fast shipping làm company absorb delivery cost. Membership chỉ tạo value nếu higher frequency/retention và ecosystem monetization bù được service cost.
-
-Không nên value membership chỉ bằng `members × annual fee`.
-
-## 8. Retention và cohort economics
-
-Aggregate active-customer growth có thể che churn.
-
-Cohort analysis hỏi:
+Phí hội viên có thể không phải dòng doanh thu lớn nhất nhưng làm thay đổi hành vi:
 
 ```text
-Customers acquired in period T
-→ how many remain after 3/6/12/24 months?
-→ spending per retained customer?
-→ contribution after fulfillment?
+Hội viên
+→ khách hàng cảm nhận chi phí giao thêm gần bằng 0
+→ tần suất đặt hàng tăng
+→ tỷ lệ giữ chân tăng
+→ mật độ đơn hàng tăng
+→ hiệu quả logistics tăng
 ```
 
-Nếu older cohorts spend more over time mà acquisition cost không tăng quá nhanh, unit economics mạnh hơn headline user growth.
+Tuy nhiên giao nhanh/miễn phí làm công ty gánh chi phí dịch vụ. Hội viên chỉ tạo giá trị nếu tần suất, mức giữ chân và kiếm tiền trong hệ sinh thái bù được chi phí phục vụ.
 
-Nếu growth phụ thuộc liên tục vào expensive acquisition, scale có thể không self-reinforcing.
+Không nên định giá hội viên chỉ bằng `số thành viên × phí hàng năm`.
 
-## 9. Marketplace economics và merchant incentives
+## 8. Giữ chân khách hàng và kinh tế theo nhóm người dùng
 
-3P marketplace có asset-light characteristics hơn 1P retail, nhưng merchant quality, take rate, advertising, fulfillment service và competition quyết định value.
+Tăng trưởng khách hàng hoạt động tổng thể có thể che việc khách hàng cũ rời đi.
 
-Higher take rate tăng revenue per GMV nhưng có thể làm merchants multi-home hoặc tăng prices.
-
-Do đó pricing power có limit:
+**Phân tích cohort** nên hỏi:
 
 ```text
-Platform value to merchant
-- fees
-- fulfillment cost
-- alternative channel economics
-= merchant surplus
+Khách hàng có được ở kỳ T
+→ còn bao nhiêu sau 3/6/12/24 tháng?
+→ chi tiêu trên mỗi khách giữ lại thay đổi ra sao?
+→ lợi nhuận đóng góp sau logistics thế nào?
 ```
 
-Nếu merchant surplus quá thấp, ecosystem phản ứng.
+Nếu cohort cũ chi tiêu nhiều hơn theo thời gian trong khi chi phí thu hút khách hàng không tăng quá nhanh, kinh tế đơn vị mạnh hơn con số người dùng đơn thuần.
 
-## 10. Last-mile labor và service promise
+Nếu tăng trưởng phụ thuộc liên tục vào chi phí thu hút đắt đỏ, quy mô có thể không tự củng cố.
 
-Fast delivery promise tạo customer value nhưng làm operations khó hơn.
+## 9. Kinh tế sàn và động lực của người bán
 
-Cutoff time, overnight sorting, delivery windows và returns đều cần capacity buffer. System tối ưu không phải 100% utilization mọi lúc; cần slack để absorb peaks và maintain service level.
+Sàn 3P có tính ít thâm dụng tài sản hơn bán lẻ 1P, nhưng chất lượng người bán, tỷ lệ thu phí (take rate), quảng cáo, dịch vụ logistics và cạnh tranh quyết định giá trị.
 
-Đây là một important operations insight:
+Tăng take rate giúp doanh thu trên GMV tăng nhưng có thể khiến người bán đa nền tảng hoặc tăng giá bán.
 
-> Maximum utilization không đồng nghĩa maximum economic efficiency khi service-level failure rất đắt.
-
-## 11. CAPEX: tech company nhưng vẫn cần physical capital
-
-Fulfillment center, automation, vehicles/equipment và IT infrastructure tạo CAPEX/depreciation.
-
-Growth phase có thể có:
+Có thể hình dung thặng dư của người bán:
 
 ```text
-CAPEX today
-→ capacity tomorrow
-→ utilization ramp later
-→ depreciation begins
-→ cash payback even later
+Giá trị nền tảng mang lại cho người bán
+- phí nền tảng
+- chi phí logistics
+- hiệu quả của kênh thay thế
+= phần lợi ích còn lại của người bán
 ```
 
-Do đó FCF có thể lag accounting operating improvement.
+Nếu phần lợi ích này quá thấp, hệ sinh thái sẽ phản ứng.
 
-Analyst cần hỏi new capacity có density path đủ để earn acceptable return không.
+## 10. Lao động giao chặng cuối và lời hứa dịch vụ
 
-## 12. Geographic expansion và transferability của moat
+Giao nhanh tạo giá trị cho khách hàng nhưng làm vận hành khó hơn.
 
-Một network mạnh ở Korea không tự động copy sang market khác.
+Giờ chốt đơn, phân loại ban đêm, khung giờ giao và hàng hoàn đều cần **công suất dự phòng (capacity buffer)**. Hệ thống tối ưu không phải lúc nào cũng chạy ở 100% công suất; cần khoảng trống để hấp thụ giờ cao điểm và duy trì chất lượng dịch vụ.
 
-Moat transfer phụ thuộc:
+> Tỷ lệ sử dụng tối đa không đồng nghĩa hiệu quả kinh tế tối đa khi chi phí thất bại dịch vụ rất cao.
+
+## 11. CAPEX: doanh nghiệp công nghệ nhưng vẫn cần vốn vật lý lớn
+
+Trung tâm hoàn tất đơn hàng, tự động hóa, xe/thiết bị và hạ tầng CNTT tạo CAPEX và khấu hao.
 
 ```text
-Population density
-Urban form
-Labor cost
-Customer expectation
-Existing competitors
-Payment infrastructure
-Regulation
-Real-estate/logistics cost
+CAPEX hôm nay
+→ công suất tương lai
+→ tăng tỷ lệ sử dụng sau đó
+→ khấu hao bắt đầu
+→ hoàn vốn tiền mặt muộn hơn nữa
 ```
 
-Strategy có thể đúng ở Seoul metropolitan density nhưng không economic ở low-density geography.
+Vì vậy FCF có thể cải thiện chậm hơn lợi nhuận hoạt động kế toán.
 
-Do đó international expansion phải được modeled như new market, không chỉ multiply domestic success.
+Cần hỏi công suất mới có đường đi đủ rõ để đạt mật độ cần thiết và tạo mức sinh lời chấp nhận được hay không.
 
-## 13. Competition: price, convenience và assortment
+## 12. Mở rộng địa lý và khả năng mang lợi thế sang thị trường khác
 
-Commerce competition không chỉ price. Customer chooses bundle:
+Mạng lưới mạnh ở Hàn Quốc không tự động sao chép được sang nước khác.
+
+Khả năng chuyển lợi thế phụ thuộc:
 
 ```text
-Price
-+ assortment
-+ delivery speed/reliability
-+ returns
-+ trust
-+ membership benefits
+Mật độ dân số
+Cấu trúc đô thị
+Chi phí lao động
+Kỳ vọng giao hàng của khách hàng
+Đối thủ hiện tại
+Hạ tầng thanh toán
+Quy định
+Chi phí bất động sản / logistics
 ```
 
-Company có thể tolerate slightly higher product price nếu convenience advantage lớn, nhưng switching cost trong commerce thường thấp hơn enterprise software. Moat phải được continuously earned through service.
+Chiến lược hiệu quả ở mật độ đô thị Seoul có thể không hiệu quả tại khu vực mật độ thấp.
 
-## 14. Macro transmission
+Mỗi thị trường quốc tế phải được mô hình hóa như một thị trường mới, không chỉ nhân quy mô thành công trong nước.
 
-Consumer slowdown truyền vào commerce qua basket size, discretionary mix và frequency. Inflation có mixed effect: nominal GMV có thể tăng vì price, nhưng real volume/mix xấu.
+## 13. Cạnh tranh: giá, tiện lợi và độ phong phú sản phẩm
 
-Labor cost tăng ảnh hưởng fulfillment. Fuel/transport cost ảnh hưởng delivery. Rates ảnh hưởng consumer demand và cost of capital for logistics expansion.
-
-Causal chain:
+Khách hàng lựa chọn một gói giá trị:
 
 ```text
-Household real income ↓
-→ discretionary basket ↓
-→ mix shifts to essentials
-→ GMV/revenue mix changes
-→ merchant advertising demand changes
-→ fulfillment volume/density changes
+Giá
++ độ phong phú sản phẩm
++ tốc độ / độ tin cậy giao hàng
++ đổi trả
++ niềm tin
++ quyền lợi hội viên
 ```
 
-## 15. Scenario model
+Doanh nghiệp có thể duy trì giá cao hơn đôi chút nếu lợi thế tiện lợi đủ lớn, nhưng chi phí chuyển đổi trong thương mại thường thấp hơn phần mềm doanh nghiệp. Lợi thế phải được duy trì liên tục bằng dịch vụ.
 
-### Density-improvement scenario
+## 14. Truyền dẫn vĩ mô
+
+Suy giảm tiêu dùng ảnh hưởng thương mại qua giá trị giỏ hàng, cơ cấu hàng tùy ý và tần suất đặt hàng. Lạm phát có tác động hai chiều: GMV danh nghĩa có thể tăng vì giá, nhưng sản lượng thực và cơ cấu sản phẩm có thể xấu đi.
+
+Chi phí lao động ảnh hưởng logistics. Nhiên liệu và vận tải ảnh hưởng giao hàng. Lãi suất ảnh hưởng nhu cầu tiêu dùng và chi phí vốn khi mở rộng mạng lưới.
 
 ```text
-Active customers +8%
-Orders/customer +10%
-Same-region density ↑
-Cost/order -7%
-Contribution margin ↑
-CAPEX grows slower than orders
-FCF improves
+Thu nhập thực hộ gia đình giảm
+→ chi tiêu tùy ý giảm
+→ cơ cấu chuyển sang hàng thiết yếu
+→ GMV / doanh thu thay đổi
+→ nhu cầu quảng cáo của người bán thay đổi
+→ khối lượng hoàn tất đơn hàng và mật độ thay đổi
 ```
 
-### Growth-without-economics scenario
+## 15. Mô hình kịch bản
+
+### Kịch bản cải thiện mật độ
+
+```text
+Khách hàng hoạt động +8%
+Số đơn mỗi khách +10%
+Mật độ trong cùng khu vực tăng
+Chi phí/đơn -7%
+Biên lợi nhuận đóng góp tăng
+CAPEX tăng chậm hơn số đơn
+FCF cải thiện
+```
+
+### Kịch bản tăng trưởng nhưng kinh tế không cải thiện
 
 ```text
 GMV +20%
-Heavy promotion
-Low-density expansion
-Fulfillment cost/order flat/up
+Khuyến mãi mạnh
+Mở rộng sang vùng mật độ thấp
+Chi phí hoàn tất đơn/đơn không giảm hoặc tăng
 CAPEX +30%
-FCF remains weak
+FCF vẫn yếu
 ```
 
-Hai scenarios có cùng attractive topline narrative nhưng shareholder economics rất khác.
+Hai kịch bản đều có tăng trưởng doanh thu hấp dẫn nhưng kinh tế cho cổ đông rất khác.
 
-## 16. Valuation
+## 16. Định giá
 
-Commerce/platform hybrid không nên được valued chỉ bằng revenue multiple.
+Mô hình kết hợp thương mại và nền tảng không nên được định giá chỉ bằng bội số doanh thu.
 
-Useful decomposition:
+Có thể tách:
 
 ```text
-Core retail contribution
-+ marketplace/ads economics
-+ membership ecosystem value
-+ adjacent businesses/options
-- corporate overhead
-- required logistics reinvestment
+Lợi nhuận đóng góp của bán lẻ cốt lõi
++ kinh tế marketplace / quảng cáo
++ giá trị hệ sinh thái hội viên
++ hoạt động mới / quyền chọn tăng trưởng
+- chi phí chung
+- nhu cầu tái đầu tư logistics
 ```
 
-Reverse valuation hỏi current enterprise value imply long-run contribution margin và reinvestment rate nào.
+**Định giá ngược (reverse valuation)** hỏi giá trị doanh nghiệp hiện tại đang ngầm giả định biên lợi nhuận đóng góp dài hạn và tỷ lệ tái đầu tư ở mức nào.
 
-High growth chỉ valuable khi incremental growth earns return above cost of capital.
+Tăng trưởng chỉ tạo giá trị khi phần tăng thêm tạo mức sinh lời cao hơn chi phí vốn.
 
-## 17. Common misconceptions
+## 17. Những nhầm lẫn thường gặp
 
-### “E-commerce là asset-light tech”
+### “Thương mại điện tử là công nghệ ít tài sản”
 
-Không nhất thiết. Fulfillment-led model có thể rất capital intensive.
+Không nhất thiết. Mô hình tự vận hành fulfillment có thể rất thâm dụng vốn.
 
-### “GMV growth = revenue growth = profit growth”
+### “GMV tăng = doanh thu tăng = lợi nhuận tăng”
 
-Sai vì principal/agent accounting, take rate, mix và fulfillment cost.
+Sai vì còn phụ thuộc cách ghi nhận chính/bên đại lý, take rate, cơ cấu và chi phí logistics.
 
-### “Fast delivery càng nhanh càng tốt”
+### “Giao càng nhanh càng tốt”
 
-Chỉ nếu willingness-to-pay/retention benefit vượt incremental service cost.
+Chỉ đúng nếu lợi ích về sẵn sàng chi trả hoặc giữ chân khách hàng lớn hơn chi phí dịch vụ tăng thêm.
 
-### “Membership fee là lợi nhuận gần như 100%”
+### “Phí hội viên gần như là lợi nhuận 100%”
 
-Sai vì membership tạo service obligations và thay đổi customer behavior/cost.
+Sai vì hội viên tạo nghĩa vụ dịch vụ và làm thay đổi chi phí phục vụ khách hàng.
 
-## 18. Research workbook
+## 18. Bài tập nghiên cứu
 
-| Driver | Y-4 | Y-3 | Y-2 | Y-1 | Y0 |
+| Chỉ tiêu | Y-4 | Y-3 | Y-2 | Y-1 | Y0 |
 |---|---:|---:|---:|---:|---:|
-| Active customers | | | | | |
-| Revenue/customer | | | | | |
-| Revenue | | | | | |
-| Gross / contribution margin | | | | | |
-| Inventory | | | | | |
+| Khách hàng hoạt động | | | | | |
+| Doanh thu/khách hàng | | | | | |
+| Doanh thu | | | | | |
+| Biên gộp / biên đóng góp | | | | | |
+| Tồn kho | | | | | |
 | CFO | | | | | |
 | CAPEX | | | | | |
 | FCF | | | | | |
 
-Nếu disclosure không có exact orders/density, dùng proxy nhưng phải label inference rõ ràng.
+Nếu doanh nghiệp không công bố chính xác số đơn hoặc mật độ, có thể dùng chỉ báo thay thế nhưng phải ghi rõ đâu là suy luận.
 
-## Mental Model cuối
+## Mô hình tư duy cuối
 
-> Fulfillment-led e-commerce là **software-coordinated physical network**. Technology giúp forecast và orchestrate; economic moat chỉ xuất hiện khi customer density, inventory placement và operational execution làm cost/service curve tốt hơn đối thủ một cách bền vững.
+> Thương mại điện tử tự vận hành fulfillment là một **mạng vật lý được điều phối bằng phần mềm**. Công nghệ giúp dự báo và điều phối; lợi thế kinh tế chỉ xuất hiện khi mật độ khách hàng, bố trí tồn kho và chất lượng vận hành làm đường chi phí–dịch vụ tốt hơn đối thủ một cách bền vững.
 
-Đọc tiếp [10_korean_construction_pf_case.md](./10_korean_construction_pf_case.md) để thấy một asset/project-heavy model nơi cash-flow timing và guarantees còn quan trọng hơn reported revenue.
+Đọc tiếp [10_korean_construction_pf_case](./10_korean_construction_pf_case.md) để thấy mô hình thâm dụng dự án/tài sản, nơi thời điểm dòng tiền và bảo lãnh còn quan trọng hơn doanh thu báo cáo.
