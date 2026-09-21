@@ -21,7 +21,8 @@ def insert_before(path, marker, block, signature):
     text = text[:i].rstrip() + '\n\n---\n\n' + block.strip() + '\n\n---\n\n' + text[i:].lstrip()
     path.write_text(text, encoding='utf-8')
 
-cssb = load('css')
+css_data = (PAY/'css1.b64').read_text().strip() + (PAY/'css2.b64').read_text().strip()
+cssb = json.loads(zlib.decompress(base64.b64decode(css_data)).decode('utf-8'))
 scssb = load('scss')
 twb = load('tailwind')
 
