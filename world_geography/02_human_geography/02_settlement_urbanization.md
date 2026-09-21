@@ -1,45 +1,103 @@
 # Định cư, đô thị hóa và cấu trúc thành phố
 
-## Vì sao con người tập trung thành khu định cư?
+## Thành phố tồn tại vì proximity tạo giá trị
 
-Khu định cư hình thành khi sự tập trung đem lại lợi ích: tiếp cận nước, phòng thủ, thị trường, hành chính, chuyên môn hóa lao động và hạ tầng. Khi mật độ tăng, **kinh tế tập tụ (agglomeration economies / 집적경제)** xuất hiện: doanh nghiệp và người lao động ở gần nhau có thể giảm chi phí tìm kiếm, vận chuyển và tăng lan tỏa tri thức.
+Khu định cư tập trung nước, thị trường, hành chính, lao động và hạ tầng. Khi nhiều người và doanh nghiệp ở gần nhau, **kinh tế tập tụ (agglomeration economies / 집적경제)** giảm chi phí matching, sharing và learning.
 
-Nhưng mật độ cũng tạo tắc nghẽn, giá thuê cao, ô nhiễm và rủi ro bệnh tật. Thành phố tồn tại vì lợi ích của **sự gần nhau (proximity)** thường lớn hơn chi phí đối với nhiều hoạt động, ít nhất đến một ngưỡng nhất định.
+Nhưng proximity cũng tạo congestion, giá đất cao, ô nhiễm và risk concentration. Thành phố là kết quả cân bằng giữa **lợi ích gần nhau** và **chi phí mật độ**.
 
-## Đô thị hóa khác tăng trưởng đô thị
+## Settlement hierarchy
 
-**Đô thị hóa (urbanization / 도시화)** là sự tăng tỷ lệ dân số sống trong khu vực đô thị. **Tăng trưởng đô thị (urban growth)** là sự tăng số người sống ở đô thị. Một nước có thể tăng dân số đô thị nhưng tỷ lệ đô thị hóa gần như không đổi nếu tổng dân số cũng tăng với tốc độ tương tự.
+Hệ thống định cư thường có nhiều cấp: làng, thị trấn, thành phố vùng, metropolis. Nơi lớn cung cấp dịch vụ hiếm hơn vì cần market threshold lớn; nơi nhỏ cung cấp nhu cầu thường ngày.
 
-## Địa điểm và vị thế tương đối
+**Central place theory** là model lý tưởng hóa giúp hiểu service hierarchy và catchment area. Thực tế bị biến dạng bởi đường, địa hình, online service và lịch sử, nhưng intuition về threshold và range vẫn hữu ích.
 
-Trong địa lý đô thị, **đặc điểm tại chỗ (site)** là các điều kiện ngay nơi khu định cư hình thành, như điểm vượt sông, cảng, đồi hoặc nguồn nước. **Vị thế tương đối (situation)** là vị trí của nơi đó trong vùng và mạng lưới rộng hơn, như nằm trên tuyến thương mại, gần thủ đô hoặc đóng vai trò cửa ngõ vào hậu phương. Nhiều thành phố ban đầu thành công nhờ điều kiện tại chỗ; về sau kết nối mạng lưới và vị thế tương đối có thể quan trọng hơn.
+## Site và situation
 
-## Giá trị đất đô thị
+**Site** là đặc điểm tại chỗ: điểm vượt sông, vịnh, cao độ, nước. **Situation** là vị trí trong mạng rộng: trên hành lang thương mại, gần thị trường, là gateway tới hinterland.
 
-Vị trí trung tâm thường có khả năng tiếp cận cao nên giá thuê đất có xu hướng lớn. Trực giác từ **mô hình địa tô đấu giá (bid-rent)** giải thích vì sao hoạt động cần tiếp cận cao chấp nhận trả nhiều để ở trung tâm, còn hoạt động cần nhiều diện tích có xu hướng dịch ra ngoài. Tuy nhiên đô thị hiện đại bị thay đổi bởi cao tốc, metro, quy hoạch phân khu, làm việc từ xa và nhiều trung tâm kinh doanh.
+Nhiều thành phố hình thành nhờ site nhưng lớn lên nhờ situation. Khi công nghệ đổi, situation có thể quan trọng hơn điều kiện ban đầu.
 
-## Vùng đô thị chức năng
+## Urbanization khác urban growth
 
-Ranh giới hành chính thành phố thường không trùng với vùng đô thị thực tế. Dòng người đi làm có thể nối nhiều đơn vị hành chính thành một **thị trường lao động đô thị (metropolitan labor market)** chung. Đây là lý do quy hoạch giao thông hoặc nhà ở chỉ theo ranh giới hành chính thường bỏ sót quan hệ thực.
+**Urbanization** = tỷ lệ dân số đô thị tăng. **Urban growth** = số người đô thị tăng. Một nước có thể urban growth mạnh nhưng urbanization ratio ít đổi nếu tổng dân số cũng tăng nhanh.
 
-## Ngoại ô hóa và đô thị lan tỏa
+Ngoài migration và natural increase, **reclassification** cũng làm dân số “đô thị” tăng khi khu định cư được đổi định nghĩa hành chính.
 
-Giao thông dựa trên ô tô làm giảm khoảng cách cảm nhận và mở rộng vùng đất có thể phát triển, tạo ngoại ô và **đô thị lan tỏa (urban sprawl)**. Mô hình này có thể tăng diện tích nhà ở nhưng làm tăng phụ thuộc ô tô, chi phí hạ tầng và tiêu thụ đất.
+## Land market và bid-rent
 
-## Khu định cư phi chính thức
+Khả năng tiếp cận cao làm nhiều activity sẵn sàng trả rent cao cho vị trí trung tâm. **Bid-rent model** giải thích xu hướng commercial activity dùng ít diện tích nhưng cần access ở gần core, còn activity cần nhiều đất dịch ra xa.
 
-Tăng trưởng đô thị nhanh trong khi nguồn nhà ở chính thức không theo kịp có thể tạo **khu định cư phi chính thức (informal settlement)**. Không nên đơn giản hóa chúng thành “khu nghèo bất hợp pháp”; nhiều nơi có quyền sử dụng đất phức tạp, kinh tế phi chính thức và mạng lưới cộng đồng mạnh. Chính sách phá dỡ có thể phá sinh kế nếu bỏ qua khả năng tiếp cận việc làm.
+Nhưng metro, highway, zoning và polycentric employment tạo nhiều peak giá đất thay vì một CBD duy nhất.
 
-## Đảo nhiệt đô thị
+## Transport–land use feedback
 
-Bê tông và nhựa đường hấp thụ nhiệt, ít cây làm giảm bốc thoát hơi nước, “hẻm phố” giữa các tòa nhà thay đổi bức xạ và gió, còn nhiệt do con người bổ sung thêm năng lượng. Vì vậy lõi đô thị có thể ấm hơn vùng xung quanh, đặc biệt vào ban đêm.
+Giao thông và sử dụng đất tác động hai chiều:
 
-## Thành phố thông minh và dữ liệu
+**hạ tầng mới → access tăng → giá/đầu tư thay đổi → development mới → nhu cầu đi lại tăng → áp lực hạ tầng mới**.
 
-Cảm biến đô thị, dữ liệu giao thông và **bản sao số (digital twin)** có thể giúp tối ưu vận hành, nhưng dữ liệu không phủ đều và thuật toán có thể tái tạo bất bình đẳng không gian. GIS là công nghệ cốt lõi để nối dữ liệu hạ tầng, thửa đất, giao thông công cộng và dân số.
+Đây là lý do xây thêm đường không chỉ “phục vụ nhu cầu có sẵn”; nó có thể thay đổi vị trí nhà ở và doanh nghiệp, tạo **induced demand**.
+
+## Polycentric city và metropolitan region
+
+Đô thị hiện đại thường có nhiều employment center. Ranh giới hành chính có thể chia một vùng chức năng thành nhiều thành phố nhưng dòng đi làm tạo một **metropolitan labor market** chung.
+
+Đánh giá housing chỉ trong city proper có thể sai nếu commuter sống ngoài ranh giới. Nên dùng travel-to-work area khi có thể.
+
+## Agglomeration và diseconomies
+
+Cụm lớn tăng productivity qua matching, sharing, learning, nhưng congestion, pollution và housing cost là **diseconomies of agglomeration**.
+
+Khi diseconomies tăng, activity có thể chuyển ra suburban node hoặc thành phố cấp hai nhưng vẫn giữ link tới core. Vì vậy decentralization không nhất thiết là “thành phố suy tàn”; nó có thể là tái cấu trúc metropolitan network.
+
+## Housing là hệ thống tồn kho chậm điều chỉnh
+
+Nhà ở có tuổi thọ dài và xây dựng mất thời gian. Khi việc làm tăng nhanh mà supply housing phản ứng chậm, rent/price có thể tăng mạnh.
+
+Zoning, floor-area ratio, land assembly, construction capacity và transport đều ảnh hưởng supply. Housing affordability vì vậy không chỉ là vấn đề income mà là **income + supply + location + transport cost**.
+
+## Informal settlement: response trước thiếu hụt formal system
+
+Khi formal housing quá đắt hoặc thủ tục đất đai khó, hộ gia đình tạo giải pháp phi chính thức gần việc làm. Khu informal có thể thiếu drainage và tenure security nhưng cũng có network cộng đồng và vị trí access tốt.
+
+Policy phá dỡ xa trung tâm có thể cải thiện building standard nhưng làm mất livelihood nếu commute tăng. Cần đánh giá tổng package **housing + service + accessibility**.
+
+## Infrastructure network và urban metabolism
+
+Thành phố nhập nước, điện, thực phẩm và vật liệu; xuất nước thải, rác, nhiệt và hàng hóa. **Urban metabolism** xem đô thị như hệ flow.
+
+Mạng nước/điện có economies of density nhưng cũng tạo cascading risk: mất điện có thể dừng bơm nước, metro và telecom. Resilience cần mapping dependency giữa hạ tầng.
+
+## Urban heat island
+
+Vật liệu tối hấp thụ nhiệt, thiếu evapotranspiration, urban canyon cản radiative cooling và anthropogenic heat làm core nóng hơn, đặc biệt ban đêm.
+
+Nhưng nhiệt không phân bố đồng đều trong thành phố. Tree cover, housing quality và AC access làm **heat exposure + vulnerability** khác nhau giữa neighborhood.
+
+## Flood và impervious surface
+
+Đô thị hóa tăng bề mặt không thấm, rút ngắn runoff lag time và có thể tăng peak flow. Culvert và sewer chỉ có design capacity; khi rainfall vượt ngưỡng, flood path quay lại theo địa hình tự nhiên.
+
+Quy hoạch cần giữ floodplain, storage và overland flow route, không chỉ tăng kích thước cống.
+
+## Smart city và digital twin
+
+Sensor, transit card, traffic data và **digital twin** giúp quan sát hệ đô thị theo thời gian. Nhưng data coverage không đều và algorithm có thể tối ưu cho người đã được đo tốt hơn.
+
+Smart city tốt bắt đầu từ problem và governance, không từ việc lắp sensor.
+
+## Korea–Vietnam như hai cấu trúc đô thị để so cơ chế
+
+Seoul metropolitan region hữu ích để học polycentric commuting, rail accessibility và concentration; Hà Nội/TP.HCM hữu ích để quan sát rapid motorization, peri-urban transformation và interaction giữa formal–informal development.
+
+Nên dùng case để kiểm tra model, không biến case thành “mẫu đại diện” cho toàn quốc.
+
+## Những hiểu lầm phổ biến
+
+“High density = bad living condition” nhầm density với overcrowding. “Xây highway giảm tắc vĩnh viễn” bỏ induced demand. “City boundary = urban economy” bỏ commuting region. “Informal settlement chỉ là vấn đề pháp lý” bỏ access và housing shortage.
 
 ## Mô hình tư duy
 
-Thành phố là **nút nơi con người, vốn, thông tin và hạ tầng tập trung để giảm chi phí tương tác**, đồng thời tạo ra các tác động ngoại vi như tắc nghẽn và ô nhiễm. Hình thái đô thị là dấu vết của công nghệ giao thông, thị trường đất, quy hoạch và lịch sử.
+> Thành phố là **node tập tụ + land market + transport network + infrastructure flows**. Hình thái đô thị là kết quả feedback giữa accessibility, giá đất, housing và mobility. Muốn hiểu một city, hãy vẽ nơi việc làm nằm, người sống ở đâu và network nào nối hai bên.
 
-Xem tiếp: [Giao thông và toàn cầu hóa](./08_transport_trade_globalization.md), [Thành phố toàn cầu](../04_global_systems/03_global_cities_networks.md).
+Xem tiếp: [Dân số](./00_population_demography.md), [Giao thông và toàn cầu hóa](./08_transport_trade_globalization.md), [Thành phố toàn cầu](../04_global_systems/03_global_cities_networks.md).

@@ -1,45 +1,95 @@
-# Thành phố toàn cầu, mạng lưới và thứ bậc đô thị
+# Thành phố toàn cầu, mạng đô thị và quyền lực kết nối
 
-## Thành phố quan trọng không chỉ vì dân số
+## Global city không đồng nghĩa megacity
 
-Một thành phố có thể không đông dân nhất nhưng vẫn có vai trò vượt trội nếu tập trung tài chính, hậu cần (logistics), thông tin, văn hóa hoặc dịch vụ chuyên môn. **Thành phố toàn cầu (global city / 글로벌 도시)** là một nút trong các mạng xuyên quốc gia, không đơn giản là “siêu đô thị” theo số dân.
+**Megacity** nói về quy mô dân số; **global city / world city** nói về chức năng mạng. Một thành phố có thể không thuộc nhóm đông dân nhất nhưng có vai trò lớn nếu tập trung tài chính, dịch vụ chuyên môn, logistics, công nghệ hoặc điều phối chuỗi giá trị.
 
-Đây là khác biệt giữa **quy mô (size)** và **tính trung tâm mạng (network centrality)**.
+Câu hỏi địa lý vì thế là: **dòng gì đi qua thành phố, quyết định gì được đưa ra ở đó, và nó kết nối những vùng nào?**
 
-## Mạng lưới thành phố
+## Thành phố là node trong nhiều network chồng lên nhau
 
-Trụ sở doanh nghiệp, tuyến hàng không, vận tải biển, tài chính và liên kết dữ liệu tạo mạng liên đô thị. Sức ảnh hưởng của một thành phố phụ thuộc cả năng lực địa phương lẫn vị trí của nó trong mạng. Đây là lý do cảng hoặc trung tâm tài chính có thể có ảnh hưởng vượt xa diện tích lãnh thổ.
+Không tồn tại một “global city network” duy nhất. Có mạng hàng không, container, ngân hàng, trụ sở doanh nghiệp, nghiên cứu, cáp dữ liệu và văn hóa.
 
-Trong lý thuyết đồ thị, tính trung tâm có nhiều cách đo. **Bậc trung tâm (degree centrality)** đo số kết nối trực tiếp; **trung tâm trung gian (betweenness centrality)** đo mức một nút nằm trên các đường đi ngắn; các phép đo dựa trên **vectơ riêng (eigenvector)** coi kết nối tới nút quan trọng có giá trị lớn hơn. Mạng đô thị có trực giác tương tự, dù địa lý thực tế phức tạp hơn đồ thị thuần túy.
+Một city có thể central trong aviation nhưng không trong finance, hoặc mạnh về manufacturing coordination nhưng yếu về maritime trade. Vì vậy ranking tổng hợp thường nén nhiều dimension và cần đọc methodology.
 
-## Chức năng chỉ huy và điều phối
+## Centrality: degree, betweenness và eigenvector
 
-Các dịch vụ sản xuất cao cấp như luật, tài chính, tư vấn và công nghệ thường tập trung nơi hoạt động ra quyết định doanh nghiệp và lao động kỹ năng cao dày đặc. Tập tụ giúp trao đổi tri thức khó mã hóa và ghép nối lao động chuyên môn.
+**Degree centrality** đo số link trực tiếp. **Betweenness centrality** đo mức node nằm trên path nối node khác. **Eigenvector-like centrality** cho trọng số cao hơn khi kết nối với node quan trọng.
 
-## Mạng trung tâm–nan hoa và tính dễ tổn thương
+Những khái niệm graph giúp xây intuition nhưng network đô thị có weight, direction, capacity và geography. Flight route 1 chuyến/tuần không tương đương route 20 chuyến/ngày.
 
-Hàng không, hậu cần (logistics) và mạng số thường dùng cấu trúc **trung tâm–nan hoa (hub-and-spoke)** để đạt quy mô kinh tế. Nút trung tâm mạnh làm mạng hiệu quả hơn nhưng tạo rủi ro tập trung. Khi thời tiết, đình công hoặc hỏng hạ tầng xảy ra tại nút lớn, gián đoạn có thể lan rộng hơn phạm vi địa phương.
+## Command-and-control function
 
-## Siêu vùng đô thị
+Trụ sở, finance, legal, consulting và professional service tập trung nơi có skill, client và institution. Các activity này giúp **điều phối** production diễn ra ở nhiều nơi.
 
-Khi nhiều vùng đô thị lân cận được nối bằng giao thông tốc độ cao và dòng kinh tế mạnh, chúng có thể hình thành **siêu vùng (mega-region)**. Ranh giới hành chính vẫn tồn tại nhưng nền kinh tế chức năng vượt qua các ranh giới đó.
+Vì vậy production geography và command geography có thể tách nhau: nhà máy ở một vùng, design/finance/marketing ở city khác.
 
-## Vùng hậu phương vẫn quan trọng
+## Gateway function
 
-Thành phố toàn cầu không “nổi” độc lập khỏi lãnh thổ. Thành phố cảng cần kết nối hàng hóa với hậu phương; trung tâm tài chính cần môi trường pháp lý–thể chế; trung tâm công nghệ cần thị trường lao động, đại học và nhà ở. Sức mạnh mạng lưới luôn gắn với nền tảng địa phương.
+Cảng, sân bay và rail terminal biến city thành **gateway** giữa hinterland và global network. Gateway mạnh cần cả external link lẫn internal connectivity.
 
-## Nhà ở và bất bình đẳng
+Một cảng hiện đại nhưng đường ra hinterland tắc nghẽn sẽ không tạo cùng vai trò như cảng tích hợp rail/highway/logistics park.
 
-Thành công kinh tế làm nhu cầu tăng và có thể đẩy chi phí nhà ở lên cao. Nếu nguồn cung bị hạn chế, người lao động bị đẩy xa trung tâm việc làm và thời gian đi lại tăng. Vì vậy khả năng tiếp cận, không chỉ tiền lương, quyết định cơ hội đô thị thực tế.
+## Agglomeration của dịch vụ cao cấp
 
-## Làm việc số có xóa vai trò thành phố không?
+Professional service có lợi từ proximity vì nhiều knowledge khó mã hóa hoàn toàn. Client, lawyer, financier, engineer và specialist gặp nhau trong cùng labor market làm matching nhanh hơn.
 
-Làm việc từ xa giảm nhu cầu cùng địa điểm đối với một số nhiệm vụ nhưng không xóa lợi thế tập tụ. Đổi mới, xây dựng niềm tin, thị trường lao động chuyên môn và tiện ích đô thị vẫn tạo xu hướng tập trung. Đồng thời các thành phố hạng hai có thể thu hút thêm cư dân nếu công việc tương thích với làm từ xa.
+Remote work giảm một số interaction cost nhưng trust building, deal-making và job switching vẫn tạo lợi thế cho dense market.
 
-Internet làm truyền thông gần như tức thời, nhưng trung tâm dữ liệu vẫn cần điện, làm mát, cáp quang và quyền tài phán. Kiến trúc đám mây cũng có vùng và vùng sẵn sàng. Kinh tế số thay đổi địa lý chứ không loại bỏ địa lý.
+## Global production network và city
+
+Thành phố không chỉ cạnh tranh; chúng bổ sung nhau. Một value chain có thể nối R&D, finance, component production, assembly và distribution qua nhiều urban node.
+
+Do đó nên hỏi **city pair / corridor** nào có flow mạnh, thay vì chỉ xếp hạng từng city riêng lẻ.
+
+## Mega-region và polycentric network
+
+Khi nhiều metropolitan area gần nhau được nối bằng high-speed transport và supply chain, chúng có thể hoạt động như **mega-region**. Không nhất thiết có một CBD thống trị; specialized centers bổ sung nhau.
+
+Điều này làm ranh giới hành chính ngày càng kém phù hợp với economic geography.
+
+## Port city, airport city và data hub là các kiểu node khác nhau
+
+Port city cần maritime–hinterland interface; airport hub cần transfer network và air-service economics; data hub cần electricity, fiber, peering và regulatory environment.
+
+Một nơi có thể kết hợp nhiều vai trò, nhưng mỗi role có infrastructure bottleneck khác nhau.
+
+## Housing và inequality là giới hạn của global-city success
+
+High-wage sectors tăng demand cho location, có thể đẩy housing cost lên. Nếu worker thiết yếu phải sống xa, commute và labor shortage tăng.
+
+Vì vậy “city thành công” ở aggregate không đảm bảo accessibility tốt cho mọi nhóm. **Spatial inequality** là phần nội tại của phân tích global city.
+
+## Resilience: central node cũng là failure point
+
+Centrality tạo lợi thế nhưng tăng consequence khi gián đoạn. Airport hub shutdown, port closure, power outage hoặc data-center failure có thể lan sang network khác.
+
+Resilience không chỉ là backup trong city; còn là khả năng flow reroute qua node khác và capacity spare của network.
+
+## Seoul trong mạng Đông Á như case học phương pháp
+
+Seoul metropolitan region có thể được dùng để học cách headquarter, advanced services, airport connectivity, digital infrastructure và national concentration chồng lên nhau. Nhưng không nên suy vai trò chỉ từ population; cần tách network layer.
+
+Tương tự, Singapore là ví dụ rõ về quy mô lãnh thổ nhỏ nhưng network centrality cao. Case giúp thấy **size ≠ connectivity**.
+
+## Global city ranking: đọc methodology trước thứ hạng
+
+Các index chọn biến khác nhau: corporate offices, air links, culture, finance hoặc talent. Thay weight có thể đổi ranking.
+
+Vì vậy ranking nên dùng như dataset để hiểu dimension, không như bảng “thành phố tốt nhất”.
+
+## Digital economy không làm city biến mất
+
+Data flow tức thời nhưng data center cần điện, cooling và cable. Startup ecosystem cần capital và labor. Cloud có region/availability zone vật lý.
+
+Số hóa làm một số interaction decouple khỏi distance nhưng thường tăng giá trị của node có infrastructure và skill mạnh.
+
+## Những hiểu lầm phổ biến
+
+“Đông dân = global city” nhầm size với function. “Globalization làm mọi city cạnh tranh trực tiếp” bỏ complementarity. “Remote work xóa agglomeration” bỏ labor market và tacit knowledge. “Centrality chỉ có lợi” bỏ systemic risk.
 
 ## Mô hình tư duy
 
-> Thành phố là **nút trong nhiều mạng chồng lên nhau**. Hãy hỏi thành phố tập trung dòng nào, kết nối với nút nào và sự cố tại đó sẽ lan theo mạng nào.
+> Thành phố toàn cầu là **node điều phối nhiều network chồng lên nhau**. Hãy tách network layer, đo flow và capacity, rồi hỏi node nào có thể thay thế khi một node lỗi. Quy mô dân số chỉ là một thuộc tính, không phải định nghĩa vai trò.
 
-Xem thêm: [Đô thị hóa](../02_human_geography/02_settlement_urbanization.md), [Địa lý kinh tế](../02_human_geography/05_economic_geography.md).
+Xem tiếp: [Đô thị hóa](../02_human_geography/02_settlement_urbanization.md), [Địa lý kinh tế](../02_human_geography/05_economic_geography.md), [Giao thông và toàn cầu hóa](../02_human_geography/08_transport_trade_globalization.md).
