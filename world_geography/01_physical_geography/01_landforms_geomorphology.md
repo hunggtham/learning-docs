@@ -1,57 +1,161 @@
-# Địa mạo: cách địa hình được tạo và tái tạo
+# Địa mạo: từ uplift đến landscape evolution
 
-## Cảnh quan là kết quả đồng thời của tạo dựng và phá hủy
+## Landscape là trạng thái tạm thời của một hệ động
 
-**Địa mạo học (geomorphology / 지형학)** nghiên cứu các dạng địa hình và quá trình tạo ra chúng. Một cảnh quan không chỉ do kiến tạo “nâng lên” hay xói mòn “hạ xuống”; nó là kết quả của sự tương tác giữa nâng kiến tạo, loại đá, khí hậu, nước, băng, trọng lực, thảm thực vật và thời gian.
+**Địa mạo học (geomorphology / 지형학)** nghiên cứu landform và process tạo–biến đổi chúng. Một mountain, valley hay delta không phải “vật thể hoàn tất” mà là snapshot của competition giữa uplift, weathering, erosion, transport và deposition.
 
-Có thể hình dung độ chênh cao địa hình là kết quả của cân bằng động giữa **nâng kiến tạo (tectonic uplift)** và **hạ thấp địa hình (denudation)** — tổng hợp của phong hóa, xói mòn và chuyển động khối trên sườn dốc.
+Một mental model hữu ích là **source–transfer–sink**. Mountain belt là source của sediment; river chuyển vật liệu; floodplain, delta và deep ocean basin là sink. Nhưng sink có thể trở thành source mới nếu uplift hoặc sea-level change xảy ra.
 
-## Phong hóa khác xói mòn
+## Relief được tạo bởi tectonics và tiêu hao bởi denudation
 
-**Phong hóa (weathering / 풍화)** phá vỡ hoặc biến đổi đá ngay tại chỗ. **Xói mòn (erosion / 침식)** vận chuyển vật chất sang nơi khác. Phong hóa vật lý làm đá vỡ mà thành phần hóa học gần như không đổi; phong hóa hóa học biến đổi khoáng vật qua phản ứng với nước, axit và oxy.
+Tectonic uplift và volcanic construction tạo potential energy. **Denudation** gồm weathering, erosion và mass wasting làm giảm relief.
 
-Ở khí hậu ẩm và ấm, phản ứng hóa học thường nhanh hơn; ở vùng lạnh, chu kỳ đóng băng–tan băng có thể quan trọng. Tuy nhiên địa chất địa phương và độ ẩm cũng quan trọng không kém nhiệt độ.
+Ở steady state lý tưởng, uplift rate và denudation rate có thể gần cân bằng theo trung bình dài hạn. Nhưng thực tế climate, rock strength và tectonic rate thay đổi, nên landscape luôn có transient response.
 
-## Sườn dốc và chuyển động khối
+Điều quan trọng là tránh câu “núi cao vì tectonics” như lời giải đầy đủ. Hai vùng có uplift tương tự vẫn có relief khác nếu erosion efficiency khác.
 
-Trọng lực luôn kéo vật chất xuống dốc. Sườn ổn định khi lực chống trượt lớn hơn lực gây trượt. Nước có vai trò hai mặt: một lượng ẩm vừa phải có thể tăng liên kết trong đất, nhưng khi đất bão hòa, áp lực nước lỗ rỗng tăng và có thể làm giảm ứng suất hữu hiệu, khiến trượt lở dễ xảy ra.
+## Weathering không phải erosion
 
-Đó là lý do một đợt mưa kéo dài có thể gây **mất ổn định (failure)** sau nhiều giờ hoặc nhiều ngày, ngay cả khi cường độ mưa ở thời điểm cuối không cực lớn.
+**Phong hóa (weathering)** phá vỡ hoặc biến đổi rock tại chỗ. **Xói mòn (erosion)** lấy material đi khỏi vị trí. **Transport** di chuyển sediment, còn **deposition** xảy ra khi transport capacity giảm.
 
-## Địa hình do sông
+Weathering vật lý gồm freeze–thaw, thermal stress, salt crystallization hoặc root growth. Weathering hóa học gồm dissolution, hydrolysis và oxidation.
 
-Sông không chỉ “đào thung lũng”. Nó đồng thời xói mòn, vận chuyển và bồi tụ. Khả năng vận chuyển trầm tích phụ thuộc lưu lượng, vận tốc, độ dốc và kích thước hạt. Khi năng lượng dòng chảy giảm, vật liệu thô thường lắng trước vật liệu mịn.
+Khí hậu ấm–ẩm thường tăng chemical reaction, nhưng rock mineralogy, fracture và water residence cũng quan trọng. Không nên biến climate thành nguyên nhân duy nhất.
 
-**Khúc uốn sông (meander)** hình thành do vận tốc và xói mòn khác nhau giữa bờ ngoài và bờ trong. Theo thời gian, khúc uốn dịch chuyển có thể bị cắt cổ tạo **hồ móng ngựa (oxbow lake)**. **Đồng bằng ngập lũ (floodplain)** được xây dựng qua nhiều lần ngập và dịch chuyển lòng sông, nên bản chất tự nhiên của nó là khu vực có rủi ro lũ cao dù đất thường màu mỡ.
+## Regolith và soil là interface
 
-## Châu thổ và bờ biển
+Lớp material phong hóa phía trên bedrock gọi chung là **regolith**. Soil phát triển trong phần regolith tương tác mạnh với sinh vật và organic matter.
 
-**Châu thổ (delta)** hình thành khi lượng trầm tích sông đưa tới lớn hơn khả năng sóng, thủy triều và dòng biển mang đi. Vì vậy không phải mọi cửa sông đều có châu thổ lớn. Đập ở thượng nguồn có thể giữ lại trầm tích, làm châu thổ hạ lưu thiếu vật liệu bù đắp và khiến sụt lún hoặc xói lở bờ biển nghiêm trọng hơn.
+Độ dày regolith ảnh hưởng infiltration, root, slope stability và weathering feedback. Một slope có bedrock lộ thiên phản ứng với mưa rất khác slope phủ colluvium dày.
 
-Bờ biển là ranh giới động giữa đất liền, đại dương và khí quyển. Xói vách biển, vận chuyển cát bãi biển và di chuyển cồn cát thay đổi theo chế độ sóng, mực nước biển và ngân sách trầm tích. Tường chắn biển có thể bảo vệ một đoạn bờ nhưng làm thay đổi vận chuyển trầm tích và tăng xói lở ở nơi khác.
+## Slope process và ngưỡng ổn định
 
-## Địa hình băng hà
+Gravity luôn tạo component force xuống dốc. Slope ổn định khi resisting force lớn hơn driving force.
 
-Băng hà là khối băng chuyển động dưới tác dụng của trọng lực. Nó xói mòn bằng mài mòn và bứt vật liệu, tạo thung lũng chữ U, hõm băng và vịnh hẹp; đồng thời bồi tụ vật liệu hỗn tạp và **trầm tích băng tích (moraine)**. Nhiều hồ và đồng bằng ở vĩ độ cao vẫn mang dấu vết băng hà cũ dù hiện nay không còn băng hà.
+Water tăng pore pressure, giảm **effective stress** và có thể làm material trượt. Do đó landslide thường phụ thuộc **antecedent moisture** chứ không chỉ peak rainfall.
 
-## Địa hình karst
+Vegetation có thể tăng root reinforcement nhưng cũng thêm weight và truyền water vào soil. Tác động phụ thuộc species, depth và slope material.
 
-Trong đá vôi, nước hơi có tính axit hòa tan **canxi cacbonat (calcium carbonate)** dọc các khe nứt, tạo hang động, hố sụt và hệ thống thoát nước ngầm. Vì nước ngầm trong địa hình karst có thể chảy nhanh theo các ống và khe liên thông, chất ô nhiễm có thể lan khác với trong tầng chứa nước thông thường.
+## Mass movement có nhiều mode
 
-## Địa hình hoang mạc
+Rockfall, debris flow, slump, translational slide và creep có mechanics khác nhau. Gom tất cả thành “sạt lở” dễ làm sai mitigation.
 
-Hoang mạc được xác định chủ yếu bởi **tính khô hạn (aridity)**, không phải nhiệt độ cao. Vì vậy có cả hoang mạc lạnh. Gió quan trọng, nhưng lũ quét và các dòng chảy nước không thường xuyên cũng có thể tạo địa hình mạnh. Hình dạng cồn cát phụ thuộc chế độ gió và nguồn cung cát.
+Debris flow có thể di chuyển như mixture nước–sediment rất nhanh theo channel; rockfall phụ thuộc joint và cliff; slow creep có thể làm road/building biến dạng trong nhiều năm.
 
-## Quy mô và thang thời gian
+Hazard map cần map process, không chỉ map “độ dốc lớn”.
 
-Một vụ trượt lở có thể thay đổi thung lũng trong vài phút; một dãy núi cần hàng triệu năm để phát triển. Địa mạo học vì vậy buộc ta ghép các quá trình có thang thời gian khác nhau vào cùng một khung giải thích.
+## Fluvial geomorphology: river điều chỉnh năng lượng và sediment
 
-## Liên hệ với kỹ thuật
+River vừa vận chuyển water vừa sediment. Discharge, slope, grain size và channel geometry cùng kiểm soát transport.
 
-Đường bộ, đường hầm, đập và mở rộng đô thị đều phụ thuộc địa hình, ổn định sườn dốc, trầm tích và thoát nước. Phân tích địa hình từ mô hình số độ cao (DEM) trong GIS là cách chuyển kiến thức địa mạo thành dữ liệu phục vụ kỹ thuật.
+Một biểu thức đơn giản cho stream power theo đơn vị chiều dài:
+
+\[
+\Omega = \rho g Q S
+\]
+
+với \(Q\) là discharge và \(S\) là slope. Đây không phải model đầy đủ của erosion nhưng cho thấy vì sao high discharge + steep gradient tạo năng lực làm việc lớn.
+
+## Channel pattern không ngẫu nhiên
+
+Straight, meandering, braided và anabranching channel phản ánh combination của slope, sediment load, bank strength, discharge variability và vegetation.
+
+Meander có erosion mạnh ở outer bend và deposition ở inner bend, làm channel migrate. Oxbow lake hình thành khi neck bị cutoff.
+
+Braided river thường liên quan sediment supply cao, bank yếu và discharge biến động. Không nên coi mọi river “tự nhiên” là meandering.
+
+## Floodplain là bộ nhớ của river
+
+Floodplain được xây bằng overbank deposition, channel migration và avulsion. Nó là một phần của river system, không phải đất “ngoài sông”.
+
+Khi con người xây dày đặc trên floodplain rồi dùng levee để cố định river, exposure tăng. Nếu levee fail, consequence có thể rất lớn.
+
+Geomorphology vì thế là nền cho risk planning.
+
+## Sediment budget
+
+Một reach river hoặc coast có thể phân tích bằng budget:
+
+\[
+\Delta S = I - O
+\]
+
+Nếu sediment input giảm do dam giữ lại, downstream channel có thể incision hoặc coast thiếu vật liệu. Nếu input tăng do deforestation/mining, aggradation và turbidity có thể tăng.
+
+Không thể hiểu delta chỉ từ water discharge; cần cả sediment flux.
+
+## Delta: nơi river, ocean và subsidence gặp nhau
+
+Delta tồn tại khi sediment supply đủ để bù subsidence, wave/tide removal và relative sea-level rise.
+
+Dam upstream có thể giảm sediment; groundwater extraction có thể tăng subsidence; sea-level rise tăng accommodation space. Vì vậy delta vulnerability là kết quả của nhiều process nối xa nhau.
+
+Mekong Delta là case quan trọng cho Vietnam: hydrology thượng nguồn, sand mining, subsidence, salinity và coast cùng tạo một system, không thể tách từng vấn đề.
+
+## Coastal geomorphology và littoral cell
+
+Wave và current vận chuyển sediment dọc bờ. **Littoral cell** là segment coast có source, transport path và sink tương đối liên kết.
+
+Groin hoặc breakwater giữ sand một nơi có thể làm nơi down-drift thiếu sediment. Coastal engineering do đó thường redistribute erosion thay vì “xóa erosion”.
+
+Sea wall bảo vệ asset phía sau nhưng có thể làm beach narrowing nếu shoreline không còn chỗ retreat.
+
+## Karst: drainage có thể nằm dưới đất
+
+Limestone hòa tan trong water hơi acid tạo cave, sinkhole và conduit. Trong karst, groundwater có thể chảy nhanh theo channel ngầm, nên pollution travel khác porous aquifer.
+
+Surface watershed và groundwater catchment có thể không trùng. Đây là warning cho việc chỉ dùng DEM để suy mọi flow.
+
+## Glacial geomorphology
+
+Glacier chảy dưới gravity, erosion bằng abrasion/plucking và vận chuyển sediment. U-shaped valley, cirque, fjord và moraine ghi lại glacial process.
+
+Sau deglaciation, landscape còn tiếp tục adjust: lake hình thành, slope mất support, isostatic rebound xảy ra. Vì vậy “glacial landscape” có legacy rất dài sau khi ice biến mất.
+
+## Periglacial và permafrost
+
+Ở vùng lạnh, freeze–thaw và permafrost tạo patterned ground, solifluction và thermokarst. Khi permafrost thaw, ground ice mất thể tích có thể làm surface collapse.
+
+Đây là coupling giữa climate change, geomorphology và infrastructure risk ở Arctic.
+
+## Aeolian geomorphology và dryland
+
+Wind vận chuyển dust và sand khi surface dry, fine material available và vegetation thưa. Dune form phụ thuộc wind regime và sand supply.
+
+Nhưng dryland landscape không chỉ do wind. Ephemeral flood có thể có geomorphic work cực lớn trong thời gian ngắn.
+
+## Landscape evolution và base level
+
+River incision phụ thuộc **base level**, thường liên quan sea level hoặc lake/river junction. Nếu base level hạ, river có thể incise; nếu nâng, deposition tăng.
+
+Tectonic uplift, dam, sea-level change hoặc capture đều có thể tạo transient knickpoint lan upstream.
+
+Landscape vì thế chứa “wave” điều chỉnh sau perturbation.
+
+## Drainage divide và river capture
+
+Watershed divide không bất biến. Một basin erosion nhanh hơn có thể mở rộng headward và capture stream của basin bên cạnh.
+
+River capture làm drainage network đổi đột ngột trên timescale địa chất, ảnh hưởng sediment, ecosystem và settlement corridor.
+
+## DEM và geomorphometry
+
+GIS dùng DEM để tính slope, aspect, curvature, flow direction, contributing area và visibility. Nhưng DEM có resolution và error.
+
+Một culvert nhỏ có thể không tồn tại trong DEM 30 m; forest canopy có thể làm surface model khác ground model. Vì vậy automated drainage extraction cần data phù hợp.
+
+## Landscape, infrastructure và economy
+
+Mountain pass định hình road/rail; alluvial plain giảm construction cost nhưng tăng flood risk; bedrock quality ảnh hưởng tunnel; landslide terrain tăng maintenance cost.
+
+Địa mạo vì thế đi thẳng vào transport geography và economic geography.
+
+Chain quan trọng:
+
+**tectonic/climate history → relief & sediment → settlement corridor → infrastructure cost → economic connectivity → risk**.
 
 ## Mô hình tư duy
 
-Mỗi dạng địa hình có thể đọc như **dấu vết của dòng năng lượng và vật chất**. Hãy hỏi: nguồn năng lượng là gì, vật chất đến từ đâu, được vận chuyển bằng nước, gió, băng hay trọng lực, khi nào năng lượng đủ để xói mòn và khi nào giảm xuống để vật liệu bồi tụ?
+Mỗi landform là dấu vết của **energy + material + resistance + time**. Khi nhìn một valley, delta hay coast, hãy hỏi source energy là gì, material từ đâu, resistance nào giới hạn process, sediment đi đâu và system đang ở steady state hay đang điều chỉnh sau disturbance.
 
-Xem tiếp: [Thủy văn](./04_hydrology_rivers_groundwater.md), [Đại dương và bờ biển](./05_oceans_coasts.md), [GIS](../00_foundations/04_geospatial_data_gis_remote_sensing.md).
+Xem tiếp: [Hydrology](./04_hydrology_rivers_groundwater.md), [Oceans & coasts](./05_oceans_coasts.md), [Natural hazards](./07_natural_hazards_risk.md).
