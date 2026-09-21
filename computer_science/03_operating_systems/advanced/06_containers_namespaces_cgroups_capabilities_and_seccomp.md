@@ -170,4 +170,4 @@ storage hoặc network
 
 Khi abstraction container gây khó hiểu, hãy bóc nó trở lại process, namespace, cgroup, syscall, filesystem và scheduler. Đây cũng là cách reasoning hiệu quả khi debug Docker và Kubernetes.
 
-Xem tiếp: [Kernel synchronization và RCU](./07_kernel_synchronization_rcu_and_lockless_read_paths.md), [Security](../../07_security_reliability/advanced/README.md) và [Architecture](../../02_computer_architecture/advanced/README.md).
+Xem tiếp: [Kernel execution contexts](./00_kernel_execution_contexts_and_syscall_path.md), [Security](../../07_security_reliability/advanced/README.md) và [Architecture](../../02_computer_architecture/advanced/README.md).

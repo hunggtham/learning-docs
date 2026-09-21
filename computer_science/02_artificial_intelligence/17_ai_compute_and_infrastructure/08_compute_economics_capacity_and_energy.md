@@ -227,4 +227,4 @@ Không. Nó ảnh hưởng trực tiếp datacenter power, thermal limit và chi
 
 ## Liên kết kiến thức
 
-Xem [Latency/Throughput/Cost](../15_ai_engineering/09_latency_throughput_and_cost.md), [Model Compression](../15_ai_engineering/08_model_compression.md), [Cluster Scheduling](./07_cluster_scheduling_and_interconnect.md) và [Ethics/Governance](../20_ethics_governance_and_society/README.md).
+Xem [Latency/Throughput/Cost](../15_ai_engineering/09_latency_throughput_and_cost.md), [Model Compression](../15_ai_engineering/08_model_compression.md), [Cluster Scheduling](./07_cluster_scheduling_and_interconnect.md) và [Ethics/Governance](../19_ai_safety_security_alignment/README.md).

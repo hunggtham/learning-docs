@@ -76,4 +76,4 @@ Zero-copy thường nghĩa “giảm một hoặc nhiều CPU copies”, không 
 
 ## Kết nối
 
-Đọc cùng [process/thread](./01_processes_threads_and_scheduling.md), [concurrency](./02_concurrency_synchronization_and_deadlock.md), [socket/networking](../06_networks_distributed_systems/06_sockets_ipv6_nat_firewalls_vpn.md) và [state/queues/backpressure](../08_software_systems/03_state_queues_backpressure_and_boundaries.md).
+Đọc cùng [process/thread](./01_processes_threads_and_scheduling.md), [concurrency](./02_concurrency_synchronization_and_deadlock.md), [socket/networking](../06_networks_distributed_systems/06_sockets_ipv6_nat_firewalls_and_vpn.md) và [state/queues/backpressure](../08_software_systems/03_state_queues_backpressure_and_boundaries.md).

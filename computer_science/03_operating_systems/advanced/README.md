@@ -1,6 +1,6 @@
 # Hệ điều hành nâng cao
 
-Lộ trình sau [nền tảng hệ điều hành](../../basic/03_operating_systems/README.md):
+Lộ trình sau [nền tảng hệ điều hành](../../basic/03_operating_systems/00_kernel_syscalls_and_os_abstractions.md):
 
 1. [Ngữ cảnh thực thi kernel và đường đi system call](./00_kernel_execution_contexts_and_syscall_path.md)
 2. [Scheduler internals, run queue và đánh đổi công bằng/độ trễ](./01_scheduler_run_queues_fairness_and_latency.md)

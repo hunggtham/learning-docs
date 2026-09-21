@@ -1,6 +1,6 @@
 # Advanced Computation & Information
 
-Library này mở rộng từ [foundation Computation & Information](../../basic/00_computation_information/README.md). Các chapter tập trung vào formal reasoning thay vì chỉ mô tả concepts.
+Library này mở rộng từ [foundation Computation & Information](../../basic/00_computation_information/00_what_computer_science_studies.md). Các chapter tập trung vào formal reasoning thay vì chỉ mô tả concepts.
 
 Roadmap dự kiến:
 

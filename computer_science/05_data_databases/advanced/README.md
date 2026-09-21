@@ -1,6 +1,6 @@
 # Cơ sở dữ liệu nâng cao
 
-Lộ trình sau [nền tảng cơ sở dữ liệu](../../basic/05_data_databases/README.md):
+Lộ trình sau [nền tảng cơ sở dữ liệu](../../basic/05_data_databases/00_data_models_and_database_systems.md):
 
 1. [MVCC, khả năng quan sát phiên bản, WAL và cơ chế phục hồi](./00_mvcc_visibility_wal_and_recovery_internals.md)
 2. [Bộ quản lý khóa, predicate locking và mức cô lập tuần tự hóa](./01_lock_manager_predicate_locking_and_serializable_isolation.md)

@@ -116,6 +116,6 @@ Window capacity và effective context use là hai vấn đề khác nhau.
 
 ## Knowledge Connection
 
-Scaling nối directly với [AI Compute](../17_ai_compute_and_infrastructure/00_computation_behind_ai.md) sau này, [Optimization](../01_mathematical_foundations/06_optimization.md) và [Pretraining](./04_pretraining.md).
+Scaling nối trực tiếp với [AI Compute](../17_ai_compute_and_infrastructure/00_compute_foundations.md), [Optimization](../01_mathematical_foundations/06_optimization.md) và [Pretraining](./04_pretraining.md).
 
 Xem tiếp: [Instruction Tuning](./06_instruction_tuning.md).

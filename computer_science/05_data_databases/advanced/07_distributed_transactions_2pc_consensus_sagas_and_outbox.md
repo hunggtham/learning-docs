@@ -200,4 +200,4 @@ Mỗi hàng cần một recovery rule. Nếu không thể giải thích outcome 
 
 Thay vì hỏi “làm sao rollback mọi thứ?”, hãy hỏi: boundary atomic nào thực sự tồn tại, trạng thái trung gian nào được phép, operation nào idempotent, recovery dựa vào log nào và business compensation nghĩa là gì.
 
-Xem thêm: [MVCC/WAL](./00_mvcc_visibility_wal_and_recovery_internals.md), [Distributed Systems](../../06_networks_distributed_systems/advanced/README.md) và [Idempotency](../../08_software_systems/advanced/05_idempotency_deduplication_and_exactly_once_boundaries.md).
+Xem thêm: [MVCC/WAL](./00_mvcc_visibility_wal_and_recovery_internals.md), [Distributed Systems](../../06_networks_distributed_systems/advanced/README.md) và [Idempotency](../../08_software_systems/advanced/05_idempotency_and_deduplication_at_scale.md).

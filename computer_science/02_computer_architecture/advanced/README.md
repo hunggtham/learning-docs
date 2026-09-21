@@ -1,6 +1,6 @@
 # Advanced Computer Architecture
 
-Bắt đầu từ [Computer Architecture foundation](../../basic/02_computer_architecture/README.md).
+Bắt đầu từ [Computer Architecture foundation](../../basic/02_computer_architecture/00_digital_logic_and_circuits.md).
 
 Roadmap:
 

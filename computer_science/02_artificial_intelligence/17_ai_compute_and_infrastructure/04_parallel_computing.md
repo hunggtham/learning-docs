@@ -184,4 +184,4 @@ Không. Topology, collective, checkpointing và failure handling trở thành b�
 
 ## Liên kết kiến thức
 
-Xem [Distributed Training](./05_distributed_training.md), [Distributed Inference](./06_distributed_inference.md), [Memory/Bandwidth](./03_memory_and_bandwidth.md), [Deep Learning Training](../05_neural_networks/09_training_dynamics.md).
+Xem [Distributed Training](./05_distributed_training.md), [Distributed Inference](./06_distributed_inference.md), [Memory/Bandwidth](./03_memory_and_bandwidth.md), [Deep Learning Training](../05_neural_networks/09_deep_learning_training_dynamics.md).

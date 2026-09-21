@@ -199,4 +199,4 @@ Không universal; many tabular tasks simple models competitive and preferable.
 
 ## Knowledge Connection
 
-Xem [Linear Models](../04_machine_learning/05_linear_and_logistic_regression.md), [Neural Representations](../05_neural_networks/08_representation_learning.md), [Evaluation Foundations](./00_evaluation_foundations.md), [Ethics/Governance](../20_ethics_governance_and_society/README.md).
+Xem [Linear Models](../04_machine_learning/05_linear_regression.md), [Neural Representations](../05_neural_networks/08_representation_learning.md), [Evaluation Foundations](./00_evaluation_foundations.md), [Ethics/Governance](../19_ai_safety_security_alignment/README.md).

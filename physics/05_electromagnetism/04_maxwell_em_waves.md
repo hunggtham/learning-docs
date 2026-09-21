@@ -490,4 +490,4 @@ Lực từ `q\mathbf v\times\mathbf B` vuông góc vận tốc tức thời nên
 
 **Nên hiểu trước:** [Điện tĩnh học](00_electrostatics.md), [Từ trường và cảm ứng](03_magnetism_induction.md), [Ngôn ngữ Toán học](../00_foundations/03_mathematical_language.md).
 
-**Liên hệ tiếp:** [Quang học sóng](../06_optics/01_wave_optics.md), [Quang học Fourier](../06_optics/03_fourier_imaging_instrumentation.md), [Đường truyền và ống dẫn sóng](05_transmission_lines_waveguides.md), [Thuyết tương đối hẹp](../07_relativity/00_special_relativity.md).
+**Liên hệ tiếp:** [Quang học sóng](../06_optics/01_wave_optics.md), [Quang học Fourier](../06_optics/04_fourier_imaging_instrumentation.md), [Đường truyền và ống dẫn sóng](05_transmission_lines_waveguides.md), [Thuyết tương đối hẹp](../07_relativity/00_special_relativity.md).

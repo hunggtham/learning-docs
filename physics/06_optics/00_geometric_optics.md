@@ -326,4 +326,4 @@ Quang hình học là bài toán tối ưu pha và đường truyền trong gi�
 
 **Nên hiểu trước:** [Sóng điện từ](../05_electromagnetism/04_maxwell_em_waves.md), [Ngôn ngữ toán học](../00_foundations/03_mathematical_language.md).
 
-**Liên hệ tiếp:** [Quang học sóng](01_wave_optics.md), [Quang học Fourier và hệ tạo ảnh](03_fourier_imaging_instrumentation.md).
+**Liên hệ tiếp:** [Quang học sóng](01_wave_optics.md), [Quang học Fourier và hệ tạo ảnh](04_fourier_imaging_instrumentation.md).

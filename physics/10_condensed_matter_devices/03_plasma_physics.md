@@ -297,6 +297,6 @@ Không. Khi hiệu ứng động học trong không gian vận tốc quan trọn
 
 ## Liên kết kiến thức (Knowledge Connection)
 
-**Nên hiểu trước:** [Cơ học chất lưu](../03_continuum/00_fluids.md), [Maxwell và sóng điện từ](../05_electromagnetism/04_maxwell_em_waves.md), [Lý thuyết động học và Boltzmann](../04_thermal_statistical/04_kinetic_theory_boltzmann_equation.md).
+**Nên hiểu trước:** [Cơ học chất lưu](../03_continuum/00_fluids.md), [Maxwell và sóng điện từ](../05_electromagnetism/04_maxwell_em_waves.md), [Lý thuyết động học và Boltzmann](../04_thermal_statistical/06_kinetic_theory_boltzmann_equation.md).
 
 **Liên hệ tiếp:** [Vật lý sao](../11_astrophysics_cosmology/00_stars_compact_objects.md), [Vật lý tính toán](../12_experimental_computational/02_computational_physics.md), [Chuyển pha và truyền nhiệt](../04_thermal_statistical/02_phase_transitions_heat_transfer.md).

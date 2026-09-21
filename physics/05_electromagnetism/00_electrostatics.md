@@ -417,4 +417,4 @@ Chỉ đúng trong cân bằng điện tĩnh lý tưởng. Dây đang dẫn dòn
 
 **Nên hiểu trước:** [Ngôn ngữ Toán học](../00_foundations/03_mathematical_language.md).
 
-**Liên hệ tiếp:** [Mạch DC](01_dc_circuits.md), [Điện tĩnh dạng bài toán biên](08_boundary_value_image_multipoles.md), [Trường điện từ trong vật chất](07_fields_in_matter_dielectrics_magnetism.md), [Maxwell và sóng điện từ](04_maxwell_em_waves.md).
+**Liên hệ tiếp:** [Mạch DC](01_dc_circuits.md), [Điện tĩnh dạng bài toán biên](10_boundary_value_image_multipoles.md), [Trường điện từ trong vật chất](07_fields_in_matter_dielectrics_magnetism.md), [Maxwell và sóng điện từ](04_maxwell_em_waves.md).
