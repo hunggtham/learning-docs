@@ -30,6 +30,12 @@ P(\ge1)=1-(1-0.01)^{30}\approx 26\%
 
 Điểm quan trọng là xác suất theo năm có thể thay đổi nếu khí hậu, sử dụng đất hoặc hệ thống sông thay đổi. Khi đó giả định **tính dừng (stationarity)** của dữ liệu lịch sử không còn phù hợp. Một “lũ 100 năm” được ước tính từ quá khứ không nhất thiết còn có đúng xác suất đó trong tương lai.
 
+## Tổn thất kỳ vọng và phần đuôi của phân bố
+
+Quản lý rủi ro không chỉ hỏi “sự kiện thường xảy ra nhất là gì?”. Một sự kiện hiếm nhưng tổn thất cực lớn có thể chi phối **tổn thất kỳ vọng (expected loss)** và yêu cầu vốn dự phòng. Vì vậy engineering, insurance và disaster planning thường quan tâm cả **đường cong vượt tổn thất (loss exceedance curve)**: xác suất tổn thất vượt một mức nhất định.
+
+Đây là bridge quan trọng giữa physical geography và finance. Hazard model mô tả physical intensity; exposure model mô tả tài sản/người; vulnerability curve chuyển intensity thành damage; financial layer chuyển damage thành loss.
+
 ## Động đất: từ nguồn phát đến thiệt hại
 
 Độ lớn động đất mô tả năng lượng sự kiện, nhưng thiệt hại tại một nơi còn phụ thuộc khoảng cách tới đứt gãy, loại sóng, địa chất nền và công trình. Bồn trầm tích mềm có thể khuếch đại rung lắc so với nền đá cứng.
@@ -80,6 +86,20 @@ Cháy cần nhiên liệu, điều kiện khô và nguồn bắt lửa. Nhiều 
 
 Rủi ro cháy vùng giáp ranh đô thị–rừng phụ thuộc cả vật liệu nhà, khoảng cách cây cối, đường sơ tán và khả năng chữa cháy. Đây là ví dụ điển hình của tương tác giữa quá trình sinh thái và cấu trúc định cư.
 
+## Vulnerability là biến động, không phải thuộc tính cố định của “nhóm yếu thế”
+
+Tính dễ tổn thương thay đổi theo income, housing quality, mobility, health, insurance, social network, language access và timing. Cùng một hộ có thể ít vulnerable trước earthquake nhưng rất vulnerable trước heat wave nếu nhà ở nóng và không có cooling.
+
+Vulnerability cũng có tính địa lý. Một cộng đồng thu nhập thấp ở gần job nhưng nằm trong floodplain có trade-off khác cộng đồng ở xa hazard nhưng thiếu transport. Vì vậy risk reduction cần tránh đơn giản hóa vulnerability thành một chỉ số duy nhất.
+
+## Hạ tầng quan trọng và dependency graph
+
+Điện, nước, viễn thông, metro, hospital và data center phụ thuộc lẫn nhau. Mất điện có thể dừng pump nước; mất telecom làm response chậm; flood ở một substation có thể làm nhiều district mất dịch vụ dù bản thân chúng không ngập.
+
+Có thể mô hình hóa hạ tầng như **đồ thị phụ thuộc (dependency graph)**. Rủi ro hệ thống phụ thuộc không chỉ node nào nằm trong hazard zone mà node nào có betweenness cao, có backup hay single point of failure.
+
+Đây là nơi physical geography nối trực tiếp với urban planning, logistics và IT resilience.
+
 ## Cảnh báo sớm: từ dự báo đến hành động
 
 Cảnh báo sớm chỉ hiệu quả khi đủ bốn mắt xích: phát hiện, truyền thông, hiểu thông điệp và có khả năng hành động. Một hệ thống cảm biến chính xác nhưng người dân không nhận được cảnh báo hoặc không biết phải đi đâu vẫn có thể thất bại.
@@ -91,6 +111,12 @@ Vì vậy **hệ thống cảnh báo sớm (early warning system)** là hệ k�
 Giảm rủi ro có thể dùng công trình như đê, tường chắn, gia cố và hồ điều tiết; hoặc biện pháp phi công trình như quy hoạch, quy chuẩn xây dựng, bảo hiểm, giáo dục và cảnh báo.
 
 Công trình bảo vệ có thể tạo **nghịch lý đê (levee effect)**: khi cảm giác an toàn tăng, phát triển tập trung mạnh hơn sau đê, khiến thiệt hại tiềm năng tăng nếu công trình thất bại. Do đó quản lý rủi ro không nên chỉ hỏi “có công trình bảo vệ hay chưa?” mà còn hỏi nó thay đổi hành vi sử dụng đất thế nào.
+
+## Tránh rủi ro, bảo vệ tại chỗ và managed retreat
+
+Có ba logic lớn trong adaptation không gian. **Avoidance** hạn chế xây mới ở nơi rủi ro cao. **Protection** giữ settlement tại chỗ bằng levee, seawall, slope stabilization hay cooling infrastructure. **Accommodation** chấp nhận hazard nhưng giảm damage bằng elevated building, floodable space hoặc operating rule.
+
+Khi long-term protection quá đắt hoặc failure consequence quá lớn, một số nơi còn cân nhắc **rút lui có quản lý (managed retreat)**. Đây không phải giải pháp kỹ thuật thuần túy vì liên quan property rights, compensation, livelihood, heritage và political legitimacy.
 
 ## Bảo hiểm và truyền giá rủi ro
 
@@ -104,11 +130,21 @@ Bảo hiểm chuyển một phần tổn thất tài chính từ cá nhân sang 
 
 Khái niệm **xây dựng lại tốt hơn (build back better)** nhấn mạnh việc dùng giai đoạn phục hồi để giảm rủi ro tương lai: chuyển vị trí công trình, nâng tiêu chuẩn, tăng dự phòng và cải thiện mạng hạ tầng.
 
+Resilience cũng cần phân biệt **robustness** — chịu shock mà ít suy giảm — với **redundancy** — có tuyến/năng lực thay thế — và **rapidity** — phục hồi nhanh. Một city có seawall mạnh nhưng chỉ một tuyến điện vào vẫn có systemic vulnerability cao.
+
 ## GIS và bản đồ rủi ro
 
 Bản đồ rủi ro thường chồng lớp hiểm họa với dân số, tài sản, hạ tầng và chỉ số dễ tổn thương. Nhưng mỗi lớp có độ phân giải và độ bất định khác nhau. Một bản đồ màu đỏ không phải dự báo chắc chắn rằng nơi đó sẽ bị thiệt hại; nó là kết quả của mô hình và giả định.
 
 Đặc biệt, việc tổng hợp dữ liệu theo quận có thể che các điểm nóng ở cấp khu phố. Vì vậy quy mô phân tích phải phù hợp quyết định cần hỗ trợ.
+
+## Korea và Vietnam như hai cấu hình risk khác nhau
+
+Korea có urban concentration và infrastructure density cao, nên một event tại metropolitan/industrial node có thể tạo cascading economic loss dù hazard footprint không lớn. Heavy rain, heat, typhoon và landslide cần được đọc cùng underground transport, hillside settlement và critical infrastructure.
+
+Vietnam có exposure lớn ở delta, long coastline và monsoon/typhoon system; flood, storm surge, river sediment, subsidence và urbanization tương tác mạnh. Đồng bằng tạo agriculture–industry–settlement advantage nhưng cùng lúc tạo concentration of exposure.
+
+Hai case cho thấy không có “hazard ranking” đơn giản. Risk đến từ **physical process × settlement pattern × infrastructure network × adaptive capacity**.
 
 ## Những hiểu lầm phổ biến
 
@@ -118,8 +154,10 @@ Bản đồ rủi ro thường chồng lớp hiểm họa với dân số, tài 
 
 **“Bản đồ nguy hiểm càng chi tiết càng chính xác.”** Không nhất thiết; độ phân giải cao không loại bỏ sai số mô hình và dữ liệu đầu vào.
 
+**“Xây công trình bảo vệ là đã giải quyết risk.”** Sai; protection có thể đổi behavior, tạo residual risk và làm consequence lớn hơn nếu protection fail.
+
 ## Mô hình tư duy
 
-> Thảm họa xuất hiện khi **quá trình vật lý gặp hệ thống xã hội có phơi lộ và dễ tổn thương**. Hãy lần theo chuỗi: nguồn hiểm họa → đường truyền → nơi phơi lộ → điểm yếu → khả năng ứng phó → phục hồi. Quản lý rủi ro tốt là phá chuỗi ở nhiều mắt xích, không chỉ cố ngăn hiện tượng tự nhiên.
+> Thảm họa xuất hiện khi **quá trình vật lý gặp hệ thống xã hội có phơi lộ, dễ tổn thương và dependency**. Hãy lần theo chuỗi: nguồn hiểm họa → đường truyền → nơi phơi lộ → điểm yếu → critical network → khả năng ứng phó → phục hồi. Quản lý rủi ro tốt là phá chuỗi ở nhiều mắt xích, không chỉ cố ngăn hiện tượng tự nhiên.
 
-Xem tiếp: [Địa lý chính trị](../02_human_geography/04_political_geography_borders.md), [Biến đổi khí hậu](../04_global_systems/00_climate_change.md), [GIS](../00_foundations/04_geospatial_data_gis_remote_sensing.md).
+Xem tiếp: [Earth system](../00_foundations/01_earth_as_system.md), [Urbanization](../02_human_geography/02_settlement_urbanization.md), [Địa lý chính trị](../02_human_geography/04_political_geography_borders.md), [Biến đổi khí hậu](../04_global_systems/00_climate_change.md), [GIS](../00_foundations/04_geospatial_data_gis_remote_sensing.md).
