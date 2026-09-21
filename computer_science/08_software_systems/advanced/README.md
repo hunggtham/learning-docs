@@ -8,11 +8,13 @@ Roadmap:
 4. [Load balancing algorithms, connection pools và locality](./03_load_balancing_connection_pools_and_locality.md)
 5. [Event streams: partitions, watermarks, replay và stateful processing](./04_event_streams_partitions_watermarks_replay_and_state.md)
 6. [Idempotency architecture và deduplication at scale](./05_idempotency_and_deduplication_at_scale.md)
-7. Schema/protocol evolution và compatibility contracts
+7. [Tiến hóa schema, protocol và hợp đồng tương thích](./06_schema_protocol_evolution_and_compatibility_contracts.md)
 8. Service boundaries, data ownership và distributed coupling
 9. API gateways, sidecars/service mesh và failure propagation
 10. Performance profiling across CPU, memory, I/O và network
 11. Multi-tenant resource isolation và noisy-neighbor control
 12. Graceful degradation, load shedding và overload recovery
 
-Sáu chapter đầu tạo production model từ queue/capacity/cache tới routing, event processing và reliable side effects. Phần sau sẽ đi sâu compatibility, service topology và performance/resilience engineering.
+Bảy chapter đầu tạo production model từ queue/capacity/cache tới routing, event processing, reliable side effects và khả năng tiến hóa hệ thống khi nhiều version chạy đồng thời. Schema evolution được xem như distributed protocol theo thời gian, không chỉ là thao tác đổi database column hay JSON field.
+
+Phần tiếp theo ưu tiên service/data ownership và coupling trước khi đi sâu topology, profiling và resilience.
