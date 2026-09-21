@@ -1,35 +1,49 @@
 # Swift & iOS Knowledge Library — Index
 
-Bộ tài liệu này là lộ trình học Swift và iOS từ gần như số 0 đến mức có thể ownership một hệ thống production. Đây không phải cheat sheet. Mỗi file cố gắng giải thích khái niệm theo mạch “là gì → vì sao tồn tại → hoạt động thế nào → khi nào dùng → cách dùng → lỗi/edge case → production note”.
+Canonical learning path của bộ Swift/iOS là:
 
-## Baseline version — cập nhật 20/09/2026
+**01 Beginner → 02 Intermediate → 03 Advanced / Senior → 04 Master**
 
-Baseline hiện hành của bộ note là **Xcode 27 + Swift 6.4 + iOS 27 SDK**. Swift 6.4 đã phát hành chính thức ngày 15/09/2026. Xcode 27 hỗ trợ Swift language mode 6, 5, 4.2 và 4, vì vậy tài liệu vẫn giữ các ghi chú migration và legacy cần thiết để đọc codebase cũ. Xcode 27.1/27.2 đang ở beta và không được dùng làm baseline stable.
+`05_swift_ios_production_reference.md` là reference xuyên cấp sau Master hoặc dùng để tra cứu failure mode production; nó **không phải Level 5** và không thay thế bốn file canonical.
 
-## Lộ trình
+## Baseline — 21/09/2026
 
-### 1. [Beginner](01_swift_ios_beginner.md)
+Baseline stable: **Xcode 27 + Swift 6.4 + iOS 27 SDK**. Swift 6.4 phát hành chính thức ngày 15/09/2026. Xcode 27.1/27.2 vẫn ở beta tại thời điểm cập nhật nên không được coi là baseline stable.
 
-Học Swift core, type system nền tảng, Optional, collection, struct/class/enum/protocol, ARC, generic, Foundation, Xcode project/build settings, SwiftUI, UIKit nhập môn, state/navigation, URLSession, Codable, SwiftData, file system, SPM, form/focus, gesture/animation, test và signing. Đây là file phải đọc theo thứ tự nếu bắt đầu từ gần như số 0.
+Library vẫn giữ Swift 5.x, UIKit, Combine, Core Data và Objective-C interoperability khi chúng cần thiết để đọc/migrate production codebase.
 
-### 2. [Intermediate](02_swift_ios_intermediate.md)
+## 1. [Beginner](01_swift_ios_beginner.md)
 
-Đi sâu generic/existential, property wrapper/macro, structured concurrency, actor/Sendable, AsyncSequence, task cancellation, SwiftUI data flow/layout/navigation, network layer, persistence, dependency injection, architecture, UIKit interoperability, background execution, SPM/module boundary, sanitizers và deterministic testing.
+Nền semantics: Swift/Xcode/version axes, values/types, Unicode/collection, control flow, function/`inout`, Optional, struct/class/enum/protocol, initialization, properties, closure lifetime, ARC/memory, error/generic/Foundation, SwiftUI, state ownership, navigation, networking, concurrency nhập môn, persistence, UIKit lifecycle, interoperability, testing, SwiftPM và signing.
 
-### 3. [Advanced / Senior](03_swift_ios_advanced_senior.md)
+**Gate:** phải giải thích được value/reference semantics, escaping capture, retain cycle, `weak`/`unowned`, ARC khác data race, `await` là suspension, `@State`/`@Binding` ownership, UIKit lifecycle cơ bản và deployment target khác SDK/compiler.
 
-Tập trung vào ownership, dispatch, actor reentrancy, performance, UIKit/SwiftUI internals ở mức ứng dụng, production architecture, modularization, build/compile time, Instruments, resilient networking, database concurrency, security, testing strategy, CI/CD, Objective-C/C/C++ interop, noncopyable/borrowing và incident mindset.
+## 2. [Intermediate](02_swift_ios_intermediate.md)
 
-### 4. [Master](04_swift_ios_master.md)
+Feature ownership/isolation: generics/existentials, structured task, `Task`, cancellation, actor/reentrancy, `@MainActor`, `Sendable`/`@Sendable`, AsyncSequence/continuation, `@State`/`@Binding`/`@Observable`/`@Bindable`, Environment, identity, `.task(id:)`, networking/retry/idempotency/auth, Codable boundary, SwiftData/Core Data context, DI, architecture, UIKit bridge, background work, deterministic test và module boundary.
 
-Tập trung vào migration Swift 5→6.x, Swift 6.4, ABI/library evolution, macros, systems/memory-safety APIs, rendering identity, offline sync, observability, performance/energy budget, App Extensions, WidgetKit, ActivityKit, App Intents, StoreKit, CloudKit, release engineering, distributed-version migration, multi-platform/cross-platform Swift và production-readiness audit.
+**Gate:** phải chỉ được task owner/cancellation, isolation boundary, Sendable crossing, SwiftUI source of truth/identity, network/persistence boundary, dependency source và test point của một feature thật.
 
-### 5. [Production Reference & Completion Guide](05_swift_ios_production_reference.md)
+## 3. [Advanced / Senior](03_swift_ios_advanced_senior.md)
 
-Đây là file tra cứu sau khi đã đi qua lộ trình chính. Nó gom những vấn đề xuyên cấp thường chỉ rõ khi app tiến vào production: escaping/sendable closure, numeric correctness, HTTP semantics, tolerant decoding, retry/backoff/idempotency, Core Data legacy, background URLSession, ownership mới, SwiftPM plugin/generated code, observability, Memory Graph, App Extension process boundary, supply-chain security, ADR/compatibility matrix, disaster recovery, release-artifact testing và Definition of Done theo risk.
+Production implementation: ownership/resource lifetime, advanced concurrency invariant, SwiftUI rendering/performance, UIKit lifecycle đầy đủ, containment/navigation/scene/reuse, memory traps, Representable/Coordinator/HostingController, hybrid source-of-truth, migration UIKit ↔ SwiftUI, architecture/module graph, API evolution, Instruments, resilient network/persistence, security/privacy, CI/CD và incident handling.
 
-## Nguyên tắc version
+**Gate:** phải vẽ được ownership graph, UIKit/SwiftUI lifecycle, task/isolation graph, state source-of-truth, data boundary và module dependency graph; đồng thời biết profile, test migration/release artifact và phân tích rollback risk.
 
-Một API được compiler biết chưa chắc chạy được trên deployment target cũ. Luôn tách **Xcode version**, **Swift compiler/language mode**, **SDK version** và **deployment target**. Với runtime API mới, dùng availability check; với source khác theo platform/build mode, dùng conditional compilation.
+## 4. [Master](04_swift_ios_master.md)
 
-Tài liệu ưu tiên API hiện đại nhưng không xóa UIKit, Combine, Objective-C interop, Core Data và các pattern legacy quan trọng, bởi codebase production thực tế thường tồn tại qua nhiều thế hệ framework.
+System longevity: Swift/iOS evolution theo programming model; Swift 5 → 6.x migration; source/binary/API compatibility; persistence schema và distributed mobile versioning; offline sync; HTTP resilience; architecture governance/ADR; observability; performance/energy budget; threat model/privacy/supply-chain; extension/StoreKit/system integration; release artifacts, staged rollout, rollback và disaster recovery.
+
+**Completion target:** khi toolchain/framework mới xuất hiện, có thể xác định change thuộc compiler/language/SDK/runtime nào, boundary nào bị ảnh hưởng, test/migration nào cần chạy và rollout/recovery như thế nào.
+
+## [Production Reference](05_swift_ios_production_reference.md)
+
+Reference xuyên cấp cho các chủ đề hay xuất hiện khi debug/production audit: closure lifetime, numeric correctness, HTTP semantics, tolerant decoding, retry/backoff/idempotency, Core Data legacy, background transfer, ownership APIs mới, generated code, observability/memory graph, extension process boundary, supply-chain, ADR/version matrix, disaster recovery, release artifact testing và risk-based Definition of Done.
+
+## Dependency rules của learning flow
+
+Không bỏ ARC để nhảy thẳng concurrency; không bỏ task/isolation để nhảy thẳng architecture; không tối ưu SwiftUI khi source-of-truth/identity còn sai; không làm hybrid SwiftUI/UIKit khi lifecycle UIKit chưa chắc; không học version/release governance trước khi hiểu production implementation.
+
+## Version rule
+
+Luôn tách **Xcode version**, **Swift compiler**, **Swift language mode**, **SDK version** và **deployment target**. Runtime API mới dùng availability check; compile-time platform/source selection dùng conditional compilation. Package/library còn có `swift-tools-version`, dependency version và public API availability riêng.
