@@ -284,11 +284,33 @@ Modern JSX transform cho phép JSX không cần import React chỉ vì transform
 
 Các project rất cũ có thể load React bằng script UMD trong HTML. React 19 không còn phát hành UMD build như trước; code hiện đại ưu tiên module/ESM hoặc bundler/framework.
 
+## 13A. Migrate lifecycle theo intent thay vì map tên method một-một
+
+Class lifecycle thường chứa nhiều concern trong cùng method, nên bảng “method cũ → Hook mới” chỉ là gợi ý đọc code, không phải migration recipe.
+
+| Intent trong code cũ | Hướng hiện đại thường phù hợp | Ghi chú |
+|---|---|---|
+| Tính value từ props/state | tính trực tiếp trong render, đôi khi `useMemo` nếu thực sự đắt | tránh copy props vào state rồi Effect sync |
+| Setup/cleanup subscription | `useEffect` với dependency mô tả configuration | nghĩ theo start/stop process |
+| DOM measurement trước paint | ref + `useLayoutEffect` | dùng tối thiểu vì block paint |
+| User click gây POST/navigation | event handler / action | không vòng qua flag + Effect |
+| Nhiều event cập nhật state phức tạp | `useReducer` hoặc state machine | reducer phải pure |
+| Reset local state khi entity đổi | đổi identity bằng `key` hoặc model state theo ID | thường rõ hơn Effect `setState` reset |
+| Error Boundary | có thể giữ class boundary hiện hữu | không cần rewrite chỉ vì component con dùng Hooks |
+
+Khi còn gặp `componentDidMount`/`componentDidUpdate`, hãy đọc side effect cụ thể: một method có thể vừa fetch, vừa log analytics, vừa sync DOM. Migration tốt thường tách chúng thành event/Effect/boundary riêng theo semantics, nhờ đó dependency và cleanup trở nên rõ hơn.
+
 ## 14. Migration checklist
 
 Khi nâng một codebase cũ, đừng cố nhảy thẳng từ “API cũ” sang “API mới” bằng mechanical replacement. Trước hết xác định project đang ở React version nào, renderer/root API nào, framework pin version gì và third-party library nào dựa vào internals.
 
 Một flow thực tế là: root API → deprecated class/context/ref APIs → tests → TypeScript/types → Strict Mode/concurrency assumptions → framework/server integration. Với React 18 lên 19, React team khuyến nghị dùng 18.3 như bước cảnh báo trung gian.
+
+## 14A. Khi nào nên giữ old pattern
+
+Legacy không đồng nghĩa phải rewrite. Class Component ổn định, có test tốt và ít thay đổi có thể tiếp tục tồn tại; HOC/render props vẫn hợp lệ nếu đó là public contract của library; Redux cũ vẫn có giá trị khi domain cần centralized event flow, middleware hoặc selector ecosystem. Chi phí migration phải được so với rủi ro và lợi ích thực tế.
+
+Nên ưu tiên migrate khi old API đã bị remove ở target React, khi Strict/concurrent semantics phơi ra bug cleanup/purity, khi dependency cũ chặn security/framework upgrade, hoặc khi code thay đổi thường xuyên và abstraction hiện tại làm feature work ngày càng khó. Mục tiêu là giảm risk và complexity chứ không phải đạt “100% Function Component”.
 
 ## 15. Bảng version nhanh
 
