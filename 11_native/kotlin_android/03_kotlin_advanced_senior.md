@@ -174,9 +174,118 @@ Không nhất thiết phải dùng MVI framework. Điều quan trọng là state
 
 # 10. Compose runtime và recomposition
 
-Compose compiler/runtime xây composition tree, ghi nhận state reads và lên lịch recomposition khi observable state thay đổi. Recomposition không đồng nghĩa redraw toàn màn hình; runtime có thể skip group nếu input stable/equal theo rules.
+Compose không phải “framework gọi lại toàn bộ screen mỗi khi state đổi”. Compiler Compose biến `@Composable` function thành code có thêm metadata/runtime protocol; runtime duy trì **Composition** để nhớ cấu trúc UI, identity của các call site và những state read nào xảy ra ở đâu. Khi observable state đổi, Compose invalidates đúng restart scope liên quan và cố làm lượng công việc tối thiểu cần thiết.
 
-Composable phải tránh side effect trong body vì body có thể chạy nhiều lần, bỏ qua, hoặc bị restart.
+Mental model một frame:
+
+```text
+State/data
+   ↓
+Composition — UI nào tồn tại?
+   ↓
+Layout — đo và đặt ở đâu?
+   ↓
+Draw — vẽ như thế nào?
+```
+
+Recomposition chỉ nói về việc chạy lại phần **composition** cần thiết. Sau đó layout hoặc draw có thể chạy hoặc được bỏ qua tùy kết quả. Vì vậy “recomposition count cao” tự nó chưa chứng minh UI chậm.
+
+## 10.1 Identity đến từ vị trí call site và key
+
+Compose cần biết instance logic nào ở lần composition hiện tại tương ứng với instance nào trước đó để giữ `remember`, effect và state đúng chỗ.
+
+Ví dụ:
+
+```kotlin
+@Composable
+fun UserList(users: List<User>) {
+    users.forEach { user ->
+        UserRow(user)
+    }
+}
+```
+
+Nếu list thay đổi thứ tự, positional identity có thể làm runtime phải làm nhiều việc hơn và effect/state gắn item khó theo đúng entity. Với lazy list, stable key tạo identity rõ:
+
+```kotlin
+LazyColumn {
+    items(
+        items = users,
+        key = { it.id },
+        contentType = { "user" }
+    ) { user ->
+        UserRow(user)
+    }
+}
+```
+
+Key phải biểu diễn **identity bền vững**, không phải index nếu index thay đổi khi insert/delete/reorder.
+
+## 10.2 `remember` thuộc Composition, không thuộc business object
+
+```kotlin
+val state = remember(key) { expensiveInitialization(key) }
+```
+
+Giá trị được giữ khi call site còn identity và key không đổi. `remember` không sống qua process death; không tự sống qua việc composable rời Composition; và không phải nơi giữ dữ liệu business lâu dài chỉ vì “muốn khỏi load lại”.
+
+Phân lớp owner:
+
+```text
+UI ephemeral state trong call site
+→ remember
+
+UI state nhỏ cần save qua recreation
+→ rememberSaveable
+
+screen state/business interaction
+→ ViewModel / state holder
+
+durable data
+→ repository + database/DataStore/server
+```
+
+## 10.3 State read quyết định phase nào bị invalidated
+
+Compose theo dõi **nơi đọc state**, không chỉ nơi state được tạo.
+
+Composition read:
+
+```kotlin
+var padding by remember { mutableStateOf(8.dp) }
+Text(
+    "Hello",
+    Modifier.padding(padding) // read khi dựng modifier trong composition
+)
+```
+
+Khi `padding` đổi, composition scope liên quan phải chạy lại.
+
+Layout-placement read có thể tránh composition:
+
+```kotlin
+Modifier.offset {
+    IntOffset(offsetX.roundToPx(), 0)
+}
+```
+
+Nếu `offsetX` được đọc trong placement lambda, thay đổi có thể chỉ invalidate layout/placement.
+
+Draw read:
+
+```kotlin
+Modifier.drawBehind {
+    drawRect(color = animatedColor)
+}
+```
+
+Nếu state chỉ được đọc trong draw, runtime có thể chỉ chạy draw phase.
+
+Senior optimization không phải chuyển mọi read xuống phase thấp nhất bằng mẹo khó đọc; nó là hiểu hot path để tránh recomposition/layout không cần thiết khi profiler chứng minh vấn đề.
+
+## 10.4 Composable body phải gần pure
+
+Composable có thể chạy lại, bị skip hoặc một composition attempt có thể không được apply. Vì vậy body không phải nơi gọi side effect tùy ý:
 
 ```kotlin
 @Composable
@@ -185,30 +294,217 @@ fun Bad(userId: String) {
 }
 ```
 
-Đưa effect vào ViewModel/event hoặc effect API phù hợp.
+UI body nên chủ yếu mô tả output từ input/state. Business side effect thuộc event handler/ViewModel/data layer; effect gắn lifecycle UI dùng Effect API phù hợp.
 
-# 11. Stability, Snapshot State và performance
+# 11. Snapshot State, stability và performance
 
-Compose performance liên quan stability inference, parameter equality, allocation và state granularity. Stable/immutable data giúp runtime skip recomposition tốt hơn, nhưng không nên annotate `@Stable`/`@Immutable` để “ép nhanh” khi contract không đúng; annotation sai có thể làm UI không update đúng.
+Compose Snapshot system cung cấp observable state model cho runtime. Khi code đọc một `State<T>` trong restart scope, runtime có thể theo dõi dependency đó; khi write hợp lệ thay đổi value, những scope đã đọc nó có thể bị invalidated.
 
-State nên được đặt gần nơi cần dùng nhưng không làm mất single source of truth. Nếu một list lớn thay đổi một phần, model key ổn định và immutable item giúp lazy list reuse hiệu quả hơn.
+Ordinary Kotlin mutation không tự trở thành observable:
 
 ```kotlin
-LazyColumn {
-    items(
-        items = users,
-        key = { it.id }
-    ) { user ->
-        UserRow(user)
+val users = mutableListOf<User>()
+users += newUser // Compose không tự biết list này đã đổi nếu list không nằm trong observable state model phù hợp
+```
+
+Một pattern an toàn hơn là immutable snapshot được publish qua observable holder:
+
+```kotlin
+var users by mutableStateOf<List<User>>(emptyList())
+    private set
+
+fun add(user: User) {
+    users = users + user
+}
+```
+
+hoặc dùng `SnapshotStateList` khi mutable collection semantics là chủ đích. Điều quan trọng là runtime phải nhìn thấy mutation contract.
+
+## 11.1 Stability không đồng nghĩa immutability
+
+**Immutable** nghĩa state quan sát được của object không đổi sau construction theo contract. **Stable** trong Compose là contract rộng hơn giúp compiler/runtime reasoning về việc input có thay đổi quan sát được không.
+
+Không annotate `@Stable` hoặc `@Immutable` chỉ để benchmark đẹp. Nếu object thực tế mutate theo cách Compose không thể quan sát nhưng bạn tuyên bố stable, runtime có thể skip công việc cần thiết và tạo correctness bug.
+
+Correctness > skip rate.
+
+## 11.2 Parameter equality và granularity
+
+Nếu một root `ScreenState` khổng lồ đổi object mỗi khi timer/scroll nhỏ thay đổi, nhiều subtree có thể bị invalidated dù chỉ một vùng quan tâm value đó. Ngược lại, chia state thành hàng trăm holder nhỏ có thể làm ownership khó hiểu.
+
+Granularity tốt xuất phát từ semantic ownership:
+
+```text
+state nào thay đổi cùng nhau?
+subtree nào thật sự đọc field nào?
+field nào derived từ source khác?
+update frequency khác nhau bao nhiêu?
+```
+
+Không tối ưu bằng cách “split mọi state” trước khi đo.
+
+## 11.3 `derivedStateOf` dùng khi derived result đổi ít hơn input
+
+Ví dụ scroll index thay đổi liên tục nhưng UI chỉ cần biết đã qua item đầu hay chưa:
+
+```kotlin
+val showScrollToTop by remember {
+    derivedStateOf {
+        listState.firstVisibleItemIndex > 0
     }
 }
 ```
 
+`derivedStateOf` có overhead. Không dùng cho phép nối string đơn giản chỉ vì value được tính từ state khác.
+
+## 11.4 `remember` cache theo identity/key, không phải cache toàn cục
+
+```kotlin
+val sortedItems = remember(items) {
+    items.sortedBy { it.title }
+}
+```
+
+Cách này hợp lý nếu sorting đủ đáng kể và `items` có immutable/replacement semantics rõ. Nếu list bị mutate in-place nhưng reference không đổi, key `items` không thể tự biểu diễn mutation mà runtime không quan sát được.
+
+## 11.5 Lazy list: key, content type và mutation
+
+Stable key giúp item giữ identity qua reorder; `contentType` có thể giúp lazy container reuse item structure phù hợp. Nhưng key không chữa data model sai. Nếu hai item có cùng key hoặc key thay theo position, state/effect có thể gắn nhầm entity.
+
+## 11.6 Performance phải đo theo frame, không theo trực giác
+
+Các câu hỏi đúng:
+
+```text
+frame nào jank?
+composition, measure/layout hay draw tốn thời gian?
+allocation/GC có spike không?
+expensive calculation có nằm trong composition không?
+list có item identity ổn định không?
+main thread có bị I/O/lock chặn không?
+```
+
+Dùng tracing/profiling/Macrobenchmark/Compose tooling theo vấn đề. Recomposition là một tín hiệu; không phải KPI duy nhất.
+
 # 12. Side effects đúng cách
 
-`LaunchedEffect(key)` restart coroutine khi key thay đổi. `DisposableEffect` phù hợp register/unregister listener. `SideEffect` chạy sau successful composition để đồng bộ state sang object bên ngoài. `produceState` bridge async producer thành State. `snapshotFlow` biến snapshot state read thành Flow.
+Compose effect API tồn tại vì composable body nên side-effect free. Chọn effect theo **lifetime và cleanup contract**, không theo việc “snippet nào chạy được”.
 
-Senior review phải hỏi: effect này thuộc UI lifecycle hay business lifecycle? Nếu cần tiếp tục khi rời màn hình, `LaunchedEffect` thường không đúng owner. Nếu chỉ là render state, effect có thể là smell.
+## 12.1 `LaunchedEffect`: coroutine sống cùng call site + key
+
+```kotlin
+LaunchedEffect(userId) {
+    analytics.trackScreen(userId)
+}
+```
+
+Khi effect vào Composition, coroutine được launch. Khi call site rời Composition, coroutine bị cancel. Khi key đổi, coroutine cũ bị cancel và block chạy lại với key mới.
+
+Nếu operation phải tiếp tục sau khi screen rời Composition, đây thường là owner sai; ViewModel/application/WorkManager có thể phù hợp hơn tùy lifetime.
+
+## 12.2 Constant key không có nghĩa “một lần toàn app”
+
+```kotlin
+LaunchedEffect(Unit) { ... }
+```
+
+nghĩa là effect không restart vì key đổi trong **lifetime hiện tại của call site**. Nếu call site rời Composition rồi quay lại, effect chạy lại. Vì vậy `LaunchedEffect(Unit)` không phải lifecycle toàn process.
+
+## 12.3 `rememberUpdatedState`: latest value nhưng giữ effect lifetime
+
+Nếu callback thay đổi qua recomposition nhưng ta không muốn restart delay/subscription dài:
+
+```kotlin
+val currentOnTimeout by rememberUpdatedState(onTimeout)
+
+LaunchedEffect(Unit) {
+    delay(3_000)
+    currentOnTimeout()
+}
+```
+
+Tách hai vấn đề:
+
+```text
+lifetime/restart của effect
+!=
+latest value effect cần đọc
+```
+
+## 12.4 `DisposableEffect`: acquire/release external resource
+
+Phù hợp listener/observer cần cleanup:
+
+```kotlin
+DisposableEffect(lifecycleOwner) {
+    val observer = LifecycleEventObserver { _, event ->
+        // ...
+    }
+    lifecycleOwner.lifecycle.addObserver(observer)
+
+    onDispose {
+        lifecycleOwner.lifecycle.removeObserver(observer)
+    }
+}
+```
+
+Key đổi hoặc call site rời Composition thì cleanup cũ chạy trước khi resource mới được gắn. `onDispose {}` rỗng thường là dấu hiệu effect API khác phù hợp hơn.
+
+## 12.5 `SideEffect`: publish sau successful composition
+
+`SideEffect` phù hợp đồng bộ Compose state sang object ngoài Compose sau khi composition đã apply thành công. Không dùng nó cho network request hay work cần coroutine.
+
+## 12.6 `produceState` và `snapshotFlow`
+
+`produceState` hữu ích bridge producer async/callback thành Compose State khi ownership thực sự thuộc UI boundary.
+
+`snapshotFlow` quan sát Snapshot state read trong block và biến change thành Flow, hữu ích cho analytics/stream transformation:
+
+```kotlin
+LaunchedEffect(listState) {
+    snapshotFlow { listState.firstVisibleItemIndex }
+        .distinctUntilChanged()
+        .collect { index ->
+            analytics.onVisibleIndex(index)
+        }
+}
+```
+
+Đừng dùng `snapshotFlow` để vòng ngược mọi Compose state sang ViewModel; nếu domain state vốn đã là Flow, giữ source ở layer gốc thường đơn giản hơn.
+
+## 12.7 `rememberCoroutineScope`: coroutine từ event handler
+
+Một event như bấm nút để show Snackbar cần coroutine nhưng không nhất thiết là effect của state:
+
+```kotlin
+val scope = rememberCoroutineScope()
+
+Button(onClick = {
+    scope.launch {
+        snackbarHostState.showSnackbar("Saved")
+    }
+}) {
+    Text("Save")
+}
+```
+
+Scope này vẫn gắn với Composition. Không dùng để khởi chạy durable business work phải sống lâu hơn UI.
+
+## 12.8 Effect review checklist
+
+Với mỗi effect, hỏi:
+
+```text
+điều gì tạo identity của effect?
+key nào phải restart nó?
+value nào chỉ cần latest mà không restart?
+cleanup ở đâu?
+leaving composition có phải cancel work không?
+operation này thật sự là UI side effect hay business command?
+process death/re-entry có chạy lặp nguy hiểm không?
+```
+
+Nếu không trả lời được, effect đang dựa vào may mắn hơn là lifecycle contract.
 
 # 13. Lifecycle, configuration change và process death
 
@@ -370,11 +666,13 @@ Dispatcher injection làm code testable và giúp library/data layer kiểm soá
 
 Thread starvation có thể xảy ra khi code dùng blocking call trong pool nhỏ, giữ lock quá lâu hoặc tạo quá nhiều công việc CPU đồng thời. Khi điều tra performance, phải phân biệt coroutine đang **suspend** với thread đang **blocked**; stack trace và profiler thể hiện hai hiện tượng khác nhau.
 
-# 33. Compose performance: đo recomposition đúng cách
+# 33. Compose performance: từ invalidation tới frame evidence
 
-Recomposition count tự nó không phải bug. Một composable nhỏ recompose rẻ có thể tốt hơn một cấu trúc phức tạp cố tránh mọi recomposition. Vấn đề cần đo là frame time, allocation, layout/draw cost, expensive work trong composition và invalidation phạm vi quá rộng.
+Recomposition count tự nó không phải bug. Compose có ba phase chính cho frame: **composition → layout → draw**, và Snapshot state read ở phase nào sẽ quyết định scope công việc có thể bị restart khi state đổi. Vì vậy Senior review phải hỏi “state này được đọc ở phase nào?” trước khi cố giảm mọi recomposition.
 
-Không đặt parsing lớn, sorting list dài hoặc object allocation nặng trực tiếp trong composable body nếu có thể hoist/cache hợp lý. `remember` cache theo composition lifetime và key; `derivedStateOf` hữu ích khi state dẫn xuất thay đổi ít hơn nguồn đầu vào, nhưng dùng dư thừa lại tạo overhead.
+Ví dụ animation chỉ thay đổi offset có thể đọc state trong placement lambda; color animation có thể đọc trong draw block. Nếu đọc cùng value khi dựng modifier trong composition, phạm vi invalidation có thể rộng hơn. Nhưng chỉ chuyển read xuống layout/draw khi code vẫn rõ và profiling chứng minh hot path.
+
+Expensive calculation trong composition cần được xem xét:
 
 ```kotlin
 val sortedItems = remember(items) {
@@ -382,7 +680,25 @@ val sortedItems = remember(items) {
 }
 ```
 
-Với list, stable key giúp Compose giữ identity item. Nếu model được mutate in-place mà state holder không phát hiện thay đổi, UI có thể không update dù annotation stability nhìn “đẹp”. Production correctness quan trọng hơn tối ưu skip.
+`remember` chỉ đúng nếu key phản ánh mutation semantics. Nếu `items` bị mutate in-place mà reference không đổi, cache có thể stale. Immutable replacement làm state/equality reasoning đơn giản hơn.
+
+`derivedStateOf` hữu ích khi input đổi thường xuyên nhưng output semantic đổi ít hơn, ví dụ scroll index → `showScrollToTop`. Nó không phải helper bắt buộc cho mọi computed value.
+
+Khi profile Compose, phân biệt:
+
+```text
+composition cost
+measure/layout cost
+draw cost
+allocation + GC
+main-thread blocking
+image/text cost
+lazy list identity/reuse
+```
+
+Một composable recompose nhiều nhưng mỗi lần cực rẻ có thể không đáng tối ưu. Một composable hiếm recompose nhưng mỗi lần sort/parse hàng nghìn item trên Main mới là vấn đề lớn.
+
+Production correctness luôn đứng trước skip optimization. Không dùng annotation stability sai contract, không mutate model âm thầm, không tạo key giả chỉ để giảm metric.
 
 # 34. Main thread, ANR, StrictMode và leak
 
