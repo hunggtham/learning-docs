@@ -1,28 +1,33 @@
 # Tailwind CSS — Master Supplement, bản giải thích đầy đủ
-## Tailwind CSS v4.3: compiler model, design-system architecture, source detection, custom APIs, migration và production engineering
+## Tailwind CSS v4.3: trình biên dịch (compiler) model, design-system kiến trúc (architecture), phát hiện nguồn (source detection), custom APIs, chuyển đổi (migration) và production engineering
 
 > File này đọc sau `TailwindCSS_Beginner_to_Senior_2026_REWRITTEN.md`.
 >
-> File Beginner → Senior giúp bạn dùng Tailwind rất chắc trong production. File này đi sâu hơn vào những phần mà một Tailwind specialist, design-system engineer hoặc frontend senior cần hiểu khi project lớn lên: Tailwind build engine nhìn source như thế nào, `@theme` trở thành public API ra sao, custom utilities được resolve thế nào, source boundaries ảnh hưởng bundle như thế nào, vì sao class conflict không thể giải thích bằng thứ tự class trong HTML, và khi nào Tailwind bắt đầu trở thành một phần của package architecture chứ không chỉ là công cụ styling.
+> File Beginner → Senior giúp bạn dùng Tailwind rất chắc trong production. File này đi sâu hơn vào những phần mà một Tailwind specialist, design-system engineer hoặc frontend senior cần hiểu khi project lớn lên: Tailwind build engine nhìn source như thế nào, `@theme` trở thành giao diện công khai (public API) ra sao, custom các tiện ích (utilities) được resolve thế nào, source boundaries ảnh hưởng bundle như thế nào, vì sao class conflict không thể giải thích bằng thứ tự class trong HTML, và khi nào Tailwind bắt đầu trở thành một phần của package kiến trúc (architecture) chứ không chỉ là công cụ styling.
 
 ---
+
+## Quy ước thuật ngữ Việt–Anh
+
+Trong tài liệu này, thuật ngữ Tailwind được diễn đạt bằng tiếng Việt trước rồi giữ từ gốc bên cạnh khi cần đối chiếu. Ví dụ: **mô hình ưu tiên tiện ích (utility-first)**, **tiện ích (utility)**, **biến thể trạng thái (state variant)**, **giá trị tùy ý (arbitrary value)**, **điểm ngắt (breakpoint)**, **truy vấn vùng chứa (container query)**, **phát hiện nguồn (source detection)**, **biên dịch tức thời (JIT, just-in-time)** và **cấu hình ưu tiên CSS (CSS-first configuration)**. Tên class, directive và utility literal trong code luôn được giữ nguyên.
+
 
 # PHẦN I — TỪ “DÙNG TAILWIND” ĐẾN “HIỂU HỆ THỐNG TAILWIND”
 
 ## 1. Tại sao cần một Master Supplement riêng?
 
-## 1A. Master diagnosis: utility → generated CSS → browser behavior
+## 1A. Master diagnosis: tiện ích (utility) → generated CSS → browser behavior
 
-Ở level master, một utility phải trace được theo hai chiều. Chiều xuôi bắt đầu từ class candidate, qua source scanner, variant/theme resolver, tới generated CSS rồi browser layout/rendering. Chiều ngược bắt đầu từ UI bug trong DevTools, truy computed style và layout context để tìm candidate/build rule gây behavior.
+Ở level master, một tiện ích (utility) phải trace được theo hai chiều. Chiều xuôi bắt đầu từ class candidate, qua source scanner, biến thể (variant)/theme resolver, tới generated CSS rồi browser layout/rendering. Chiều ngược bắt đầu từ UI bug trong DevTools, truy computed style và layout context để tìm candidate/build rule gây behavior.
 
-Ví dụ `min-w-0` resolve thành `min-width: 0`; browser dùng value này khi tính minimum inline size của flex/grid item, cho phép item co nhỏ hơn intrinsic content width. Nếu ellipsis hoạt động sau khi thêm `min-w-0`, nguyên nhân là layout constraint thay đổi chứ không phải Tailwind có truncate magic. `md:hover:bg-brand` cũng phải tách thành breakpoint condition + hover selector + theme color token. Nếu rule không được generate, debug source/theme; nếu rule có nhưng inactive, debug conditions; nếu apply nhưng visual vẫn sai, debug cascade/blending/browser CSS.
+Ví dụ `min-w-0` resolve thành `min-width: 0`; browser dùng giá trị (value) này khi tính minimum inline size của flex/phần tử Grid (grid item), cho phép item co nhỏ hơn intrinsic content width. Nếu ellipsis hoạt động sau khi thêm `min-w-0`, nguyên nhân là layout constraint thay đổi chứ không phải Tailwind có truncate magic. `md:hover:bg-brand` cũng phải tách thành điểm ngắt (breakpoint) condition + hover bộ chọn (selector) + theme color token. Nếu rule không được generate, gỡ lỗi (debug) source/theme; nếu rule có nhưng inactive, gỡ lỗi (debug) conditions; nếu apply nhưng visual vẫn sai, gỡ lỗi (debug) cơ chế phân tầng (cascade)/blending/browser CSS.
 
-Version baseline vẫn là **Tailwind CSS v4.3** tại audit 2026-09-21. Khi migrate v3/early-v4, hãy xem đây là architecture change: JS config-first → CSS-first `@theme`; `content` globs → automatic detection/`@source`; simple custom plugin utility → `@utility`; repeated selector state → `@custom-variant` khi phù hợp. Migration cần diff generated CSS, browser baseline và visual regression, không chỉ search/replace syntax.
+Version đường cơ sở (baseline) vẫn là **Tailwind CSS v4.3** tại audit 2026-09-21. Khi migrate v3/early-v4, hãy xem đây là kiến trúc (architecture) change: JS config-first → ưu tiên CSS (CSS-first) `@theme`; `content` globs → automatic detection/`@source`; simple custom plugin tiện ích (utility) → `@utility`; repeated bộ chọn (selector) trạng thái (state) → `@custom-variant` khi phù hợp. chuyển đổi (migration) cần diff generated CSS, browser đường cơ sở (baseline) và hồi quy giao diện (visual regression), không chỉ search/replace syntax.
 
 
-Khi mới học Tailwind, vấn đề thường là “class nào tạo padding?”, “làm responsive thế nào?”, “dark mode viết ra sao?”. Khi đã làm production vài tháng, câu hỏi thay đổi. Bạn bắt đầu gặp những case như: class có trong JSX nhưng CSS không được generate; cùng một component hoạt động trong app A nhưng fail khi được publish thành package; một arbitrary value nhìn đúng nhưng IntelliSense không hiểu vì namespace ambiguous; `px-2` và `px-4` cùng xuất hiện nhưng class viết sau trong `className` không thắng; một stylesheet dùng `@apply` trong Vue scoped style không nhận custom theme; hoặc một microfrontend import Tailwind làm hỏng reset của host page.
+Khi mới học Tailwind, vấn đề thường là “class nào tạo padding?”, “làm responsive thế nào?”, “dark mode viết ra sao?”. Khi đã làm production vài tháng, câu hỏi thay đổi. Bạn bắt đầu gặp những case như: class có trong JSX nhưng CSS không được generate; cùng một component hoạt động trong app A nhưng fail khi được publish thành package; một giá trị tùy ý (arbitrary value) nhìn đúng nhưng IntelliSense không hiểu vì không gian tên (namespace) ambiguous; `px-2` và `px-4` cùng xuất hiện nhưng class viết sau trong `className` không thắng; một stylesheet dùng `@apply` trong Vue scoped style không nhận custom theme; hoặc một microfrontend import Tailwind làm hỏng reset của host page.
 
-Những vấn đề đó không còn là “học thêm utility”. Chúng nằm ở ranh giới giữa source code, build pipeline, generated CSS và browser. Vì vậy ở cấp độ master, mental model phải mở rộng thành:
+Những vấn đề đó không còn là “học thêm tiện ích (utility)”. Chúng nằm ở ranh giới giữa source code, quy trình build (build pipeline), generated CSS và browser. Vì vậy ở cấp độ master, mô hình tư duy (mental model) phải mở rộng thành:
 
 ```text
 Application source
@@ -39,7 +44,7 @@ Mỗi lỗi cần được định vị vào đúng tầng trước khi sửa. �
 
 ## 2. Tailwind v4 là một compiler-oriented authoring system
 
-Tailwind v4 không nên được hình dung như một file `tailwind.css` chứa sẵn hàng chục nghìn class. Nó hoạt động giống một compiler pipeline: đọc CSS entrypoint, đọc các Tailwind directives, phát hiện class candidates trong source, resolve candidate đó thành utility/variant và generate CSS cần thiết.
+Tailwind v4 không nên được hình dung như một file `tailwind.css` chứa sẵn hàng chục nghìn class. Nó hoạt động giống một trình biên dịch (compiler) pipeline: đọc CSS entrypoint, đọc các Tailwind directives, phát hiện class candidates trong source, resolve candidate đó thành tiện ích (utility)/biến thể (variant) và generate CSS cần thiết.
 
 Ví dụ source có:
 
@@ -47,7 +52,7 @@ Ví dụ source có:
 <div class="flex gap-4 rounded-xl">
 ```
 
-Tailwind scanner phát hiện các token có khả năng là class. Resolver nhận ra `flex`, `gap-4`, `rounded-xl` là utilities hợp lệ. Sau đó Tailwind generate CSS rule tương ứng.
+Tailwind scanner phát hiện các token có khả năng là class. Resolver nhận ra `flex`, `gap-4`, `rounded-xl` là các tiện ích (utilities) hợp lệ. Sau đó Tailwind generate CSS rule tương ứng.
 
 Nếu source chứa:
 
@@ -55,13 +60,13 @@ Nếu source chứa:
 something-that-looks-like-a-class
 ```
 
-nhưng không map tới utility nào, nó bị bỏ qua.
+nhưng không map khóa–giá trị (map) tới tiện ích (utility) nào, nó bị bỏ qua.
 
-Điểm quan trọng là Tailwind **không cần hiểu semantics của React component hoặc business logic**. Nó chỉ cần complete candidate strings.
+Điểm quan trọng là Tailwind **không cần hiểu ngữ nghĩa (semantics) của React component hoặc business logic**. Nó chỉ cần complete candidate strings.
 
 ---
 
-## 3. Candidate detection không phải JavaScript evaluation
+## 3. phát hiện ứng viên lớp (candidate detection) không phải JavaScript evaluation
 
 Hãy xem code:
 
@@ -73,9 +78,9 @@ return (
 );
 ```
 
-Một JavaScript runtime có thể dễ dàng evaluate ra `bg-blue-600`. Nhưng Tailwind source detection không chạy application như JavaScript interpreter. Nó nhìn source như text.
+Một JavaScript thời gian chạy (runtime) có thể dễ dàng evaluate ra `bg-blue-600`. Nhưng Tailwind phát hiện nguồn (source detection) không chạy application như JavaScript interpreter. Nó nhìn source như text.
 
-Vì string `bg-blue-600` không tồn tại nguyên vẹn trong source, scanner không thể dựa vào runtime knowledge để generate class đó.
+Vì string `bg-blue-600` không tồn tại nguyên vẹn trong source, scanner không thể dựa vào thời gian chạy (runtime) knowledge để generate class đó.
 
 Cách đúng:
 
@@ -93,11 +98,11 @@ return (
 
 Ở đây các complete candidates tồn tại literal trong source.
 
-Đây không chỉ là limitation của scanner. Nó còn thúc đẩy architecture tốt hơn vì component có finite visual API.
+Đây không chỉ là limitation của scanner. Nó còn thúc đẩy kiến trúc (architecture) tốt hơn vì component có finite visual API.
 
 ---
 
-## 4. Static mapping là một design pattern chứ không chỉ workaround
+## 4. Static mapping là một mẫu thiết kế (design pattern) chứ không chỉ workaround
 
 Giả sử Button nhận:
 
@@ -105,7 +110,7 @@ Giả sử Button nhận:
 <Button variant="danger" />
 ```
 
-Bạn map:
+Bạn map khóa–giá trị (map):
 
 ```ts
 const variants = {
@@ -122,21 +127,21 @@ const variants = {
 
 Pattern này tạo ra ba lợi ích cùng lúc.
 
-Thứ nhất, Tailwind scanner nhìn thấy toàn bộ complete class names. Thứ hai, TypeScript có thể biến key thành finite union. Thứ ba, consumer chỉ biết semantic variant chứ không phụ thuộc palette implementation.
+Thứ nhất, Tailwind scanner nhìn thấy toàn bộ complete class names. Thứ hai, TypeScript có thể biến key thành finite union. Thứ ba, consumer chỉ biết mang tính ngữ nghĩa (semantic) biến thể (variant) chứ không phụ thuộc palette implementation.
 
 Nếu mai design đổi `danger` từ `red-600` sang `rose-700`, component consumer không cần sửa.
 
-Ở cấp độ master, bạn nên nhìn static class mapping như **public API boundary**, không chỉ scanner hack.
+Ở cấp độ master, bạn nên nhìn static class mapping như **giao diện công khai (public API) boundary**, không chỉ scanner hack.
 
 ---
 
-# PHẦN II — SOURCE DETECTION NHƯ MỘT PHẦN CỦA ARCHITECTURE
+# PHẦN II — phát hiện nguồn (source detection) NHƯ MỘT PHẦN CỦA kiến trúc (architecture)
 
-## 5. Automatic source detection thực sự mang lại điều gì?
+## 5. Automatic phát hiện nguồn (source detection) thực sự mang lại điều gì?
 
-Tailwind v4 tự động scan project trong phần lớn setup. Nó cố tình bỏ qua nhiều nguồn không có giá trị cho utility detection như binary files, CSS files, common lockfiles, `node_modules` và nhiều path bị ignore bởi Git.
+Tailwind v4 tự động scan project trong phần lớn setup. Nó cố tình bỏ qua nhiều nguồn không có giá trị cho tiện ích (utility) detection như binary files, CSS files, common lockfiles, `node_modules` và nhiều path bị ignore bởi Git.
 
-Điều này tốt cho performance và setup đơn giản. Nhưng khi app bắt đầu dùng monorepo hoặc package chứa component source, automatic detection không còn đủ.
+Điều này tốt cho hiệu năng (performance) và setup đơn giản. Nhưng khi app bắt đầu dùng monorepo hoặc package chứa component source, automatic detection không còn đủ.
 
 Ví dụ:
 
@@ -171,7 +176,7 @@ Tư duy beginner là: “class không generate thì thêm `@source`”.
 
 Tư duy senior/master là: “stylesheet này chịu trách nhiệm generate CSS cho source domain nào?”
 
-Một app admin có thể không cần scan storefront. Một storefront bundle không nên generate utility cho internal admin tool. Vì vậy `@source` giúp xác định ownership của CSS bundle.
+Một app admin có thể không cần scan storefront. Một storefront bundle không nên generate tiện ích (utility) cho internal admin tool. Vì vậy `@source` giúp xác định ownership của CSS bundle.
 
 ---
 
@@ -187,7 +192,7 @@ repo/
 └─ packages/
 ```
 
-Nếu source detection phụ thuộc current working directory một cách vô tình, build có thể khác giữa local và CI.
+Nếu phát hiện nguồn (source detection) phụ thuộc current working directory một cách vô tình, build có thể khác giữa local và CI.
 
 Bạn có thể xác định base path:
 
@@ -251,27 +256,27 @@ Storefront:
 
 Bây giờ mỗi bundle có explicit candidate universe.
 
-Đây là một bước chuyển từ “framework config” sang **asset architecture**.
+Đây là một bước chuyển từ “framework config” sang **asset kiến trúc (architecture)**.
 
 ---
 
-## 10. Safelist bằng `@source inline()`
+## 10. danh sách ép giữ (safelist) bằng `@source inline()`
 
-Có những utility không xuất hiện trong normal source nhưng bạn vẫn muốn generate.
+Có những tiện ích (utility) không xuất hiện trong normal source nhưng bạn vẫn muốn generate.
 
 Ví dụ HTML được tạo bởi hệ thống template bên ngoài biết class `underline`.
 
 Bạn có thể force candidate bằng `@source inline(...)`.
 
-Điều quan trọng ở cấp độ master là hiểu safelist làm tăng **candidate set**. Nếu bạn safelist mọi color, breakpoint, hover, focus, dark variant “cho chắc”, bạn đang chủ động bỏ usage-driven generation.
+Điều quan trọng ở cấp độ master là hiểu danh sách ép giữ (safelist) làm tăng **candidate set**. Nếu bạn danh sách ép giữ (safelist) mọi color, điểm ngắt (breakpoint), hover, focus, dark biến thể (variant) “cho chắc”, bạn đang chủ động bỏ usage-driven generation.
 
-Safelist nên finite và business-driven.
+danh sách ép giữ (safelist) nên finite và business-driven.
 
 ---
 
 ## 11. Brace expansion và combinatorial explosion
 
-Current source-inline APIs có khả năng generate ranges/variants rất mạnh. Nhưng syntax mạnh thường dẫn tới abuse.
+Current source-inline APIs có khả năng generate ranges/các biến thể (variants) rất mạnh. Nhưng syntax mạnh thường dẫn tới abuse.
 
 Nếu bạn generate:
 
@@ -284,7 +289,7 @@ Nếu bạn generate:
 
 bạn đã tạo hàng nghìn candidates trước khi application thực sự dùng.
 
-Compiler làm đúng; architecture sai.
+trình biên dịch (compiler) làm đúng; kiến trúc (architecture) sai.
 
 Senior cần luôn hỏi:
 
@@ -298,7 +303,7 @@ Bundle tăng bao nhiêu?
 
 # PHẦN III — `@theme` NHƯ PUBLIC DESIGN-SYSTEM API
 
-## 12. Theme variable không chỉ là CSS custom property
+## 12. biến chủ đề (theme variable) không chỉ là CSS custom thuộc tính (property)
 
 Normal CSS:
 
@@ -308,7 +313,7 @@ Normal CSS:
 }
 ```
 
-chỉ tạo runtime variable.
+chỉ tạo thời gian chạy (runtime) biến (variable).
 
 Tailwind:
 
@@ -320,7 +325,7 @@ Tailwind:
 
 có hai tác dụng.
 
-Tác dụng đầu tiên là Tailwind compiler hiểu `brand` thuộc color namespace, nên generate APIs như:
+Tác dụng đầu tiên là Tailwind trình biên dịch (compiler) hiểu `brand` thuộc color không gian tên (namespace), nên generate APIs như:
 
 ```text
 bg-brand
@@ -329,15 +334,15 @@ border-brand
 fill-brand
 ```
 
-Tác dụng thứ hai là CSS variable theme cũng tồn tại trong generated CSS để browser hoặc custom CSS sử dụng.
+Tác dụng thứ hai là CSS biến (variable) theme cũng tồn tại trong generated CSS để browser hoặc custom CSS sử dụng.
 
 Vì vậy `@theme` vừa là:
-- compiler configuration,
-- runtime token declaration.
+- trình biên dịch (compiler) cấu hình (configuration),
+- thời gian chạy (runtime) token khai báo (declaration).
 
 ---
 
-## 13. Theme namespace quyết định vocabulary
+## 13. không gian tên chủ đề (theme namespace) quyết định vocabulary
 
 Nếu bạn tạo:
 
@@ -347,7 +352,7 @@ Nếu bạn tạo:
 }
 ```
 
-bạn đang thêm utility:
+bạn đang thêm tiện ích (utility):
 
 ```text
 rounded-card
@@ -361,7 +366,7 @@ Nếu tạo:
 }
 ```
 
-bạn đang tạo responsive vocabulary liên quan breakpoint.
+bạn đang tạo responsive vocabulary liên quan điểm ngắt (breakpoint).
 
 Vì thế token name trong Tailwind không chỉ là internal implementation. Nó xuất hiện trong markup trên toàn project.
 
@@ -379,25 +384,25 @@ thành:
 
 có thể yêu cầu sửa hàng trăm `rounded-card`.
 
-Đó là lý do theme namespace là **public API**.
+Đó là lý do không gian tên chủ đề (theme namespace) là **giao diện công khai (public API)**.
 
 ---
 
 ## 14. Versioning theme vocabulary
 
-Nếu design system được publish như package, theme token rename có thể là breaking change.
+Nếu hệ thống thiết kế (design system) được publish như package, theme token rename có thể là breaking change.
 
-Một semantic versioning mindset hợp lý là:
+Một mang tính ngữ nghĩa (semantic) versioning mindset hợp lý là:
 - thêm token mới nhưng giữ cũ: thường backward-compatible,
-- đổi value nhẹ: có thể visual change nhưng không API break,
+- đổi giá trị (value) nhẹ: có thể visual change nhưng không API break,
 - xóa/rename token: API break,
-- đổi breakpoint token: behavior break rộng.
+- đổi điểm ngắt (breakpoint) token: behavior break rộng.
 
-CSS không có TypeScript compiler báo mọi consumer bị vỡ, nên deprecation/versioning càng quan trọng.
+CSS không có TypeScript trình biên dịch (compiler) báo mọi consumer bị vỡ, nên trạng thái ngừng khuyến nghị (deprecation)/versioning càng quan trọng.
 
 ---
 
-## 15. Primitive và semantic token nên coexist thế nào?
+## 15. Primitive và token ngữ nghĩa (semantic token) nên coexist thế nào?
 
 Primitive:
 
@@ -410,7 +415,7 @@ gray-900
 
 mô tả visual scale.
 
-Semantic:
+mang tính ngữ nghĩa (semantic):
 
 ```text
 action-bg
@@ -429,7 +434,7 @@ bg-blue-600
 hover:bg-blue-700
 ```
 
-Một design system nhiều brand/theme thường cần semantic layer:
+Một hệ thống thiết kế (design system) nhiều brand/theme thường cần mang tính ngữ nghĩa (semantic) layer:
 
 ```css
 :root {
@@ -456,7 +461,7 @@ Component:
 
 ---
 
-## 16. Semantic token cần đủ chính xác
+## 16. token ngữ nghĩa (semantic token) cần đủ chính xác
 
 Một token:
 
@@ -464,9 +469,9 @@ Một token:
 danger
 ```
 
-có vẻ semantic nhưng quá rộng.
+có vẻ mang tính ngữ nghĩa (semantic) nhưng quá rộng.
 
-Nếu map tới `--color-danger`, Tailwind có thể cho dev viết:
+Nếu map khóa–giá trị (map) tới `--color-danger`, Tailwind có thể cho dev viết:
 
 ```text
 bg-danger
@@ -484,11 +489,11 @@ danger-fg
 danger-border
 ```
 
-Semantic token tốt không phải token ít; nó là token có role rõ.
+token ngữ nghĩa (semantic token) tốt không phải token ít; nó là token có role rõ.
 
 ---
 
-## 17. Reset namespace để enforce design system
+## 17. Reset không gian tên (namespace) để enforce hệ thống thiết kế (design system)
 
 Tailwind mặc định có palette lớn. Developer rất dễ chọn:
 
@@ -514,7 +519,7 @@ Strict system có thể reset:
 }
 ```
 
-Bây giờ các utility default không được backed bởi token sẽ biến mất.
+Bây giờ các tiện ích (utility) default không được backed bởi token sẽ biến mất.
 
 Đây là cách biến Tailwind từ “huge toolbox” thành **constrained design language**.
 
@@ -535,14 +540,14 @@ có thể không hoạt động.
 
 Third-party Tailwind source package có thể assume default tokens.
 
-Do đó strict namespace phù hợp khi:
-- design system đã mature,
+Do đó strict không gian tên (namespace) phù hợp khi:
+- hệ thống thiết kế (design system) đã mature,
 - package ownership rõ,
 - team muốn enforce vocabulary.
 
 ---
 
-## 19. `@theme inline` và CSS variable resolution
+## 19. `@theme inline` và CSS biến (variable) resolution
 
 Giả sử:
 
@@ -553,9 +558,9 @@ Giả sử:
 }
 ```
 
-CSS custom properties resolve theo cascade/scope của element nơi chúng được dùng. Indirection đôi khi khiến variable referenced không có value ở scope expected.
+CSS custom các thuộc tính (properties) resolve theo cơ chế phân tầng (cascade)/phạm vi (scope) của element nơi chúng được dùng. Indirection đôi khi khiến biến (variable) referenced không có giá trị (value) ở phạm vi (scope) expected.
 
-`@theme inline` cho Tailwind generate utility với referenced expression trực tiếp hơn:
+`@theme inline` cho Tailwind generate tiện ích (utility) với referenced expression trực tiếp hơn:
 
 ```css
 @theme inline {
@@ -564,13 +569,13 @@ CSS custom properties resolve theo cascade/scope của element nơi chúng đư�
 }
 ```
 
-Đây là công cụ để kiểm soát **runtime CSS variable indirection**, không chỉ performance syntax.
+Đây là công cụ để kiểm soát **thời gian chạy (runtime) CSS biến (variable) indirection**, không chỉ hiệu năng (performance) syntax.
 
 ---
 
 ## 20. `@theme static`
 
-Tailwind có thể tối ưu theme variable output theo usage.
+Tailwind có thể tối ưu biến chủ đề (theme variable) output theo usage.
 
 Nếu một external JavaScript library cần:
 
@@ -578,9 +583,9 @@ Nếu một external JavaScript library cần:
 --color-brand
 ```
 
-nhưng không utility nào dùng brand trong scanned source, variable có thể không được emit theo normal usage-driven strategy.
+nhưng không tiện ích (utility) nào dùng brand trong scanned source, biến (variable) có thể không được emit theo normal usage-driven strategy.
 
-`@theme static` ép generate đầy đủ theme declarations.
+`@theme static` ép generate đầy đủ theme các khai báo (declarations).
 
 Use:
 - theme package,
@@ -592,7 +597,7 @@ Use:
 
 ---
 
-# PHẦN IV — CUSTOM UTILITY Ở CẤP COMPILER API
+# PHẦN IV — CUSTOM tiện ích (utility) Ở CẤP trình biên dịch (compiler) API
 
 ## 21. `@utility` là gì ở mức sâu hơn?
 
@@ -604,10 +609,10 @@ Simple:
 }
 ```
 
-Bạn không chỉ viết một CSS class. Bạn đăng ký một utility với Tailwind để nó tham gia:
-- variant system,
+Bạn không chỉ viết một CSS class. Bạn đăng ký một tiện ích (utility) với Tailwind để nó tham gia:
+- biến thể (variant) system,
 - candidate generation,
-- utility sorting.
+- tiện ích (utility) sorting.
 
 Use:
 
@@ -621,21 +626,21 @@ nếu condition hợp lý.
 
 ---
 
-## 22. Utility tốt phải “atomic” theo nghĩa semantic
+## 22. tiện ích (utility) tốt phải “atomic” theo nghĩa mang tính ngữ nghĩa (semantic)
 
-Atomic không có nghĩa đúng một CSS declaration trong mọi trường hợp. Tailwind core có utilities dùng custom properties hoặc nhiều declaration để tạo một effect.
+Atomic không có nghĩa đúng một CSS khai báo (declaration) trong mọi trường hợp. Tailwind core có các tiện ích (utilities) dùng custom các thuộc tính (properties) hoặc nhiều khai báo (declaration) để tạo một effect.
 
-Điều quan trọng là utility biểu diễn **một concern**.
+Điều quan trọng là tiện ích (utility) biểu diễn **một concern**.
 
 Ví dụ:
-- `truncate` có nhiều declarations nhưng một concern: single-line truncation.
+- `truncate` có nhiều các khai báo (declarations) nhưng một concern: single-line truncation.
 - `ring-2` có implementation phức tạp nhưng một concern: ring width.
 
-Một custom utility tên `dashboard-card-primary` chứa layout, color, hover và typography cùng lúc không còn atomic. Nó là component.
+Một custom tiện ích (utility) tên `dashboard-card-primary` chứa layout, color, hover và typography cùng lúc không còn atomic. Nó là component.
 
 ---
 
-## 23. Functional utility
+## 23. Functional tiện ích (utility)
 
 ```css
 @utility tab-* {
@@ -650,7 +655,7 @@ Một custom utility tên `dashboard-card-primary` chứa layout, color, hover v
 
 Tailwind nhìn candidate `tab-github`, `tab-4` hoặc `tab-[12]`, rồi thử resolver.
 
-Bạn có thể hình dung functional utility như một mini grammar:
+Bạn có thể hình dung functional tiện ích (utility) như một mini grammar:
 
 ```text
 prefix
@@ -661,7 +666,7 @@ prefix
 
 ---
 
-## 24. Theme value resolver
+## 24. Theme giá trị (value) resolver
 
 Nếu:
 
@@ -671,7 +676,7 @@ Nếu:
 }
 ```
 
-và utility resolver có:
+và tiện ích (utility) resolver có:
 
 ```css
 --value(--tab-size-*)
@@ -683,13 +688,13 @@ candidate:
 tab-github
 ```
 
-map tới theme token.
+map khóa–giá trị (map) tới theme token.
 
-Điều này giúp custom utility family integrate với design-token system thay vì hard-code lookup table riêng.
+Điều này giúp custom tiện ích (utility) family integrate với design-token system thay vì hard-code lookup table riêng.
 
 ---
 
-## 25. Bare value resolver
+## 25. Bare giá trị (value) resolver
 
 ```css
 --value(integer)
@@ -705,11 +710,11 @@ tab-8
 
 resolve trực tiếp integer.
 
-Bare values nên được giới hạn theo CSS/property semantics. Không phải mọi arbitrary text nên được accepted.
+Bare các giá trị (values) nên được giới hạn theo CSS/thuộc tính (property) ngữ nghĩa (semantics). Không phải mọi arbitrary text nên được accepted.
 
 ---
 
-## 26. Arbitrary value resolver
+## 26. giá trị tùy ý (arbitrary value) resolver
 
 ```css
 --value([integer])
@@ -717,7 +722,7 @@ Bare values nên được giới hạn theo CSS/property semantics. Không phả
 
 cho bracket syntax.
 
-Tailwind functional utility có thể hiểu các type CSS-oriented như:
+Tailwind functional tiện ích (utility) có thể hiểu các type CSS-oriented như:
 - length,
 - color,
 - percentage,
@@ -726,11 +731,11 @@ Tailwind functional utility có thể hiểu các type CSS-oriented như:
 - number,
 - integer.
 
-Typed arbitrary value giúp parser biết bạn muốn gì và tránh ambiguity.
+Typed giá trị tùy ý (arbitrary value) giúp parser biết bạn muốn gì và tránh ambiguity.
 
 ---
 
-## 27. Nhiều resolver trong cùng utility
+## 27. Nhiều resolver trong cùng tiện ích (utility)
 
 ```css
 @utility tab-* {
@@ -745,30 +750,30 @@ Typed arbitrary value giúp parser biết bạn muốn gì và tránh ambiguity.
 
 Tailwind thử các resolution forms theo grammar.
 
-Khi tự thiết kế API, hãy chọn order/accepted forms sao cho developer dự đoán được. Một utility quá “thông minh” nhận 10 loại value khác nhau có thể trở nên khó dùng hơn raw CSS.
+Khi tự thiết kế API, hãy chọn order/accepted forms sao cho developer dự đoán được. Một tiện ích (utility) quá “thông minh” nhận 10 loại giá trị (value) khác nhau có thể trở nên khó dùng hơn raw CSS.
 
 ---
 
-## 28. Transform value theo nguồn
+## 28. Transform giá trị (value) theo nguồn
 
 Bạn có thể cần:
 - percentage arbitrary giữ nguyên,
 - integer bare chuyển sang percentage,
 - theme token dùng trực tiếp.
 
-Multiple declarations với `--value()` có thể được Tailwind resolve selectively.
+Multiple các khai báo (declarations) với `--value()` có thể được Tailwind resolve selectively.
 
-Đây là feature dành cho framework-level utility authoring. Normal app hiếm khi cần custom parser phức tạp.
+Đây là feature dành cho framework-level tiện ích (utility) authoring. Normal app hiếm khi cần custom parser phức tạp.
 
 ---
 
-## 29. Negative custom utility
+## 29. Negative custom tiện ích (utility)
 
-Tailwind không tự cho rằng mọi property có negative variant.
+Tailwind không tự cho rằng mọi thuộc tính (property) có negative biến thể (variant).
 
 Ví dụ padding không thể âm, opacity không có nghĩa âm.
 
-Nếu custom utility đại diện inset, bạn có thể đăng ký:
+Nếu custom tiện ích (utility) đại diện inset, bạn có thể đăng ký:
 - positive family,
 - negative family.
 
@@ -778,7 +783,7 @@ Nếu custom utility đại diện inset, bạn có thể đăng ký:
 
 ## 30. `--default()` trong v4.3
 
-Một utility:
+Một tiện ích (utility):
 
 ```css
 @utility tab-* {
@@ -800,48 +805,48 @@ với default 4.
 
 `tab-2` vẫn explicit 2.
 
-Bare default chỉ nên được thêm khi người đọc utility có thể đoán reasonable meaning. Nếu `surface` không rõ default màu gì, đừng tạo implicit default chỉ vì framework support.
+Bare default chỉ nên được thêm khi người đọc tiện ích (utility) có thể đoán reasonable meaning. Nếu `surface` không rõ default màu gì, đừng tạo implicit default chỉ vì framework support.
 
 ---
 
 ## 31. Modifier
 
-Một utility:
+Một tiện ích (utility):
 
 ```text
 text-lg/7
 ```
 
 có:
-- main value `lg`,
+- main giá trị (value) `lg`,
 - modifier `7`.
 
-Modifier phù hợp khi có relationship rõ giữa primary và secondary value.
+Modifier phù hợp khi có relationship rõ giữa primary và secondary giá trị (value).
 
-Custom API có thể dùng `--modifier()`, nhưng senior cần tránh syntax clever. Utility grammar nên gần cách core Tailwind được đọc.
+Custom API có thể dùng `--modifier()`, nhưng senior cần tránh syntax clever. tiện ích (utility) grammar nên gần cách core Tailwind được đọc.
 
 ---
 
-## 32. Custom utility sorting
+## 32. Custom tiện ích (utility) sorting
 
-Một hiểu nhầm là custom utility được cascade đúng theo vị trí bạn viết trong file.
+Một hiểu nhầm là custom tiện ích (utility) được cơ chế phân tầng (cascade) đúng theo vị trí bạn viết trong file.
 
-Tailwind có utility-layer ordering/sorting behavior riêng để utilities compose predictable hơn, và v4 có logic liên quan số lượng properties cho custom utilities.
+Tailwind có utility-layer ordering/sorting behavior riêng để các tiện ích (utilities) compose predictable hơn, và v4 có logic liên quan số lượng các thuộc tính (properties) cho custom các tiện ích (utilities).
 
 Do đó:
-- không dựa vào source order local để giải conflict,
+- không dựa vào thứ tự nguồn (source order) local để giải conflict,
 - inspect generated CSS nếu behavior quan trọng,
-- component override nên dùng architecture rõ.
+- component override nên dùng kiến trúc (architecture) rõ.
 
 ---
 
-# PHẦN V — VARIANT ALGEBRA
+# PHẦN V — biến thể (variant) ALGEBRA
 
-## 33. Variant không phải text prefix
+## 33. biến thể (variant) không phải text prefix
 
-`hover:` không chỉ “thêm chữ hover vào class”. Nó transform CSS selector.
+`hover:` không chỉ “thêm chữ hover vào class”. Nó transform CSS bộ chọn (selector).
 
-`md:` không transform selector, mà wrap rule trong media query.
+`md:` không transform bộ chọn (selector), mà wrap rule trong truy vấn môi trường (media query).
 
 `supports-*:` wrap trong `@supports`.
 
@@ -849,11 +854,11 @@ Do đó:
 
 `peer-invalid:` tạo sibling relationship.
 
-Một variant vì vậy có thể được hiểu như **function biến đổi CSS context**.
+Một biến thể (variant) vì vậy có thể được hiểu như **hàm (function) biến đổi CSS context**.
 
 ---
 
-## 34. Variant stacking
+## 34. biến thể (variant) stacking
 
 ```text
 dark:md:hover:bg-blue-600
@@ -862,11 +867,11 @@ dark:md:hover:bg-blue-600
 là composition của ba transformations:
 - dark condition,
 - responsive media condition,
-- hover selector.
+- hover bộ chọn (selector).
 
-Khi stacked variant không chạy, debug từng condition:
-- dark state active?
-- viewport đạt md?
+Khi stacked biến thể (variant) không chạy, gỡ lỗi (debug) từng condition:
+- dark trạng thái (state) active?
+- vùng nhìn (viewport) đạt md?
 - device hỗ trợ hover?
 - element thật sự hover?
 
@@ -876,7 +881,7 @@ Khi stacked variant không chạy, debug từng condition:
 
 ## 35. `@custom-variant` là reusable condition API
 
-Nếu project lặp selector:
+Nếu project lặp bộ chọn (selector):
 
 ```text
 [&:where([data-density=compact] *)]
@@ -895,11 +900,11 @@ Markup:
 density-compact:py-1
 ```
 
-Bây giờ design vocabulary biểu diễn semantic state thay vì raw selector.
+Bây giờ design vocabulary biểu diễn mang tính ngữ nghĩa (semantic) trạng thái (state) thay vì raw bộ chọn (selector).
 
 ---
 
-## 36. Naming custom variant
+## 36. Naming custom biến thể (variant)
 
 Một project nội bộ có thể dùng:
 
@@ -909,20 +914,20 @@ midnight:
 authenticated:
 ```
 
-Một design-system package được dùng ngoài project nên cân nhắc namespace:
+Một design-system package được dùng ngoài project nên cân nhắc không gian tên (namespace):
 
 ```text
 ds-compact:
 ds-brand-a:
 ```
 
-vì Tailwind core có thể thêm variants trong tương lai.
+vì Tailwind core có thể thêm các biến thể (variants) trong tương lai.
 
 ---
 
 ## 37. `@variant` trong custom CSS
 
-Bạn đã quyết định custom selector là rõ nhất:
+Bạn đã quyết định custom bộ chọn (selector) là rõ nhất:
 
 ```css
 .third-party-button {
@@ -930,7 +935,7 @@ Bạn đã quyết định custom selector là rõ nhất:
 }
 ```
 
-nhưng vẫn muốn dark state giống Tailwind:
+nhưng vẫn muốn dark trạng thái (state) giống Tailwind:
 
 ```css
 .third-party-button {
@@ -940,11 +945,11 @@ nhưng vẫn muốn dark state giống Tailwind:
 }
 ```
 
-V4.3 nâng cấp stacked/compound `@variant`, nên Tailwind variant system có thể được reuse bên trong CSS chứ không chỉ markup.
+V4.3 nâng cấp stacked/compound `@variant`, nên Tailwind biến thể (variant) system có thể được reuse bên trong CSS chứ không chỉ markup.
 
 ---
 
-# PHẦN VI — CASCADE VÀ CONFLICT Ở MỨC MASTER
+# PHẦN VI — cơ chế phân tầng (cascade) VÀ CONFLICT Ở MỨC MASTER
 
 ## 38. Vì sao class order trong HTML không đảm bảo winner?
 
@@ -952,7 +957,7 @@ V4.3 nâng cấp stacked/compound `@variant`, nên Tailwind variant system có t
 <div class="px-2 px-4">
 ```
 
-Nhiều người nghĩ `px-4` viết sau nên thắng. Nhưng CSS cascade không biết thứ tự token trong class attribute như source order của declarations.
+Nhiều người nghĩ `px-4` viết sau nên thắng. Nhưng CSS cơ chế phân tầng (cascade) không biết thứ tự token trong class attribute như thứ tự nguồn (source order) của các khai báo (declarations).
 
 Browser nhìn stylesheet:
 
@@ -961,7 +966,7 @@ Browser nhìn stylesheet:
 .px-4 { ... }
 ```
 
-Rule nào được generate ở vị trí/layer nào mới ảnh hưởng source order.
+Rule nào được generate ở vị trí/layer nào mới ảnh hưởng thứ tự nguồn (source order).
 
 Vì thế dynamic class composition không nên dựa vào string append order.
 
@@ -978,7 +983,7 @@ caller: px-2
 
 Bạn muốn caller override.
 
-Một Tailwind-aware merge helper có thể nhận ra `px-4` và `px-2` thuộc cùng utility group rồi giữ intended winner trong normalized class string.
+Một Tailwind-aware merge helper có thể nhận ra `px-4` và `px-2` thuộc cùng tiện ích (utility) group rồi giữ intended winner trong normalized class string.
 
 Nó không thay CSS engine; nó xử lý conflict trước khi markup render.
 
@@ -990,11 +995,11 @@ Use phù hợp ở reusable component library boundaries.
 
 Tailwind-aware formatter sắp class để readability ổn định.
 
-Nếu formatter đổi thứ tự text mà UI đổi behavior, bạn đang dựa vào một assumption không an toàn. Hãy kiểm tra conflict/cascade.
+Nếu formatter đổi thứ tự text mà UI đổi behavior, bạn đang dựa vào một assumption không an toàn. Hãy kiểm tra conflict/cơ chế phân tầng (cascade).
 
 ---
 
-## 41. Cascade layers
+## 41. các lớp phân tầng (cascade layers)
 
 Tailwind v4 dùng native layers:
 
@@ -1005,7 +1010,7 @@ components
 utilities
 ```
 
-Một rule trong utilities có layer priority cao hơn components trong normal cascade.
+Một rule trong các tiện ích (utilities) có layer priority cao hơn components trong normal cơ chế phân tầng (cascade).
 
 Điều này cho phép:
 
@@ -1023,20 +1028,20 @@ và markup:
 <div class="card p-8">
 ```
 
-utility override component without specificity war.
+tiện ích (utility) override component without cuộc chiến độ đặc hiệu (specificity war).
 
 ---
 
 ## 42. Unlayered CSS có thể gây surprise
 
-Native CSS cascade có behavior đặc biệt khi layered và unlayered author styles coexist. Normal unlayered rule có thể có priority cao hơn layered normal styles.
+Native CSS cơ chế phân tầng (cascade) có behavior đặc biệt khi layered và unlayered author styles coexist. Normal unlayered rule có thể có priority cao hơn layered normal styles.
 
-Nếu bạn import một vendor CSS unlayered sau/bên cạnh Tailwind, utility có thể không override như bạn dự đoán.
+Nếu bạn import một vendor CSS unlayered sau/bên cạnh Tailwind, tiện ích (utility) có thể không override như bạn dự đoán.
 
 Senior phải inspect:
 - layer,
 - origin,
-- specificity,
+- độ đặc hiệu (specificity),
 - importance.
 
 Không tăng `!important` ngay.
@@ -1053,15 +1058,15 @@ bg-red-500!
 
 Use targeted exception.
 
-Nếu bạn dùng important modifier khắp app, bạn đã phá advantage của predictable layered cascade.
+Nếu bạn dùng important modifier khắp app, bạn đã phá advantage của predictable layered cơ chế phân tầng (cascade).
 
 ---
 
 ## 44. Global important strategy
 
-Tailwind có architecture options để generate utilities important trong một bundle/import scenario.
+Tailwind có kiến trúc (architecture) options để generate các tiện ích (utilities) important trong một bundle/import scenario.
 
-Đây có thể là migration tool khi host legacy CSS cực kỳ specific.
+Đây có thể là chuyển đổi (migration) tool khi host legacy CSS cực kỳ specific.
 
 Nhưng global important làm:
 - third-party override khó,
@@ -1072,20 +1077,20 @@ Hãy xem nó như temporary anti-corruption layer, không phải default.
 
 ---
 
-# PHẦN VII — PREFLIGHT, EMBEDDING VÀ MICROFRONTENDS
+# PHẦN VII — Preflight (lớp reset nền của Tailwind), EMBEDDING VÀ MICROFRONTENDS
 
-## 45. Preflight trong greenfield app
+## 45. Preflight (lớp reset nền của Tailwind) trong greenfield app
 
-Trong app mới, Preflight giúp:
+Trong app mới, Preflight (lớp reset nền của Tailwind) giúp:
 - normalize defaults,
 - predictable border box/reset behavior,
-- Tailwind utilities có nền consistent.
+- Tailwind các tiện ích (utilities) có nền consistent.
 
 Ở đây full import là hợp lý.
 
 ---
 
-## 46. Preflight trong legacy host
+## 46. Preflight (lớp reset nền của Tailwind) trong legacy host
 
 Legacy app có thể assume:
 - h1 mặc định lớn,
@@ -1093,22 +1098,22 @@ Legacy app có thể assume:
 - button có native border,
 - body có margin/reset khác.
 
-Import Tailwind Preflight có thể thay đổi toàn host.
+Import Tailwind Preflight (lớp reset nền của Tailwind) có thể thay đổi toàn host.
 
 Đừng sửa bằng hàng trăm override trước khi xác nhận root cause là reset collision.
 
 ---
 
-## 47. Disable Preflight cho embedded widget
+## 47. Disable Preflight (lớp reset nền của Tailwind) cho embedded widget
 
 Một widget được inject vào host page nên tránh global reset.
 
-Architecture có thể:
+kiến trúc (architecture) có thể:
 - import theme,
-- import utilities,
-- omit Preflight,
+- import các tiện ích (utilities),
+- omit Preflight (lớp reset nền của Tailwind),
 - prefix classes,
-- scope source detection.
+- phạm vi (scope) phát hiện nguồn (source detection).
 
 Mục tiêu là widget không làm thay đổi host typography/forms.
 
@@ -1118,7 +1123,7 @@ Mục tiêu là widget không làm thay đổi host typography/forms.
 
 Prefix giúp:
 - tránh class collisions,
-- tránh CSS variable naming collisions tùy import strategy,
+- tránh CSS biến (variable) naming collisions tùy import strategy,
 - coexist nhiều Tailwind systems.
 
 Cost:
@@ -1126,29 +1131,29 @@ Cost:
 - docs/examples khác standard,
 - component packages phải biết prefix contract.
 
-Dùng cho isolation requirement thật, không phải mặc định.
+Dùng cho cô lập (isolation) requirement thật, không phải mặc định.
 
 ---
 
 ## 49. Microfrontend
 
 Nếu nhiều microfrontend cùng chạy trên một document, ba nguy cơ lớn là:
-- nhiều Preflight,
-- duplicate theme variables,
+- nhiều Preflight (lớp reset nền của Tailwind),
+- duplicate các biến chủ đề (theme variables),
 - layer ordering không thống nhất.
 
 Ba chiến lược phổ biến là:
 - share một Tailwind/theme build,
 - mỗi app dùng prefixed isolated bundle,
-- Shadow DOM isolation.
+- Shadow DOM (cây DOM đóng gói) cô lập (isolation).
 
 Không có một đáp án universal; quyết định phụ thuộc deployment ownership.
 
 ---
 
-# PHẦN VIII — RUNTIME VALUES VÀ TAILWIND BUILD-TIME
+# PHẦN VIII — thời gian chạy (runtime) các giá trị (values) VÀ TAILWIND BUILD-TIME
 
-## 50. Runtime data không nên trở thành runtime class grammar
+## 50. thời gian chạy (runtime) data không nên trở thành thời gian chạy (runtime) class grammar
 
 API trả về:
 
@@ -1173,13 +1178,13 @@ Good:
 />
 ```
 
-Class remains static, value runtime.
+Class remains static, giá trị (value) thời gian chạy (runtime).
 
 Đây là một trong những boundary pattern quan trọng nhất.
 
 ---
 
-## 51. Runtime color
+## 51. thời gian chạy (runtime) color
 
 ```jsx
 <div
@@ -1190,7 +1195,7 @@ Class remains static, value runtime.
 />
 ```
 
-Nếu namespace ambiguous:
+Nếu không gian tên (namespace) ambiguous:
 
 ```text
 text-(color:--text)
@@ -1209,9 +1214,9 @@ Dynamic:
 - progress,
 - user color,
 - canvas dimension
-có thể hợp lý qua inline custom properties.
+có thể hợp lý qua inline custom các thuộc tính (properties).
 
-Utility class dùng để consume variable và kết hợp states/responsive.
+tiện ích (utility) class dùng để consume biến (variable) và kết hợp các trạng thái (states)/responsive.
 
 ---
 
@@ -1219,10 +1224,10 @@ Utility class dùng để consume variable và kết hợp states/responsive.
 
 Một security policy nghiêm ngặt có thể hạn chế inline style attributes.
 
-Khi đó runtime CSS variable strategy cần phối hợp CSP:
+Khi đó thời gian chạy (runtime) CSS biến (variable) strategy cần phối hợp CSP:
 - nonce,
 - safe stylesheet injection,
-- predefined class states,
+- predefined class các trạng thái (states),
 tùy app.
 
 Tailwind không bypass Content Security Policy.
@@ -1258,9 +1263,9 @@ text-a dark:text-b
 border-c dark:border-d
 ```
 
-và bạn còn brand A, brand B, high contrast, theme seasonal, class strings phình mạnh.
+và bạn còn brand A, brand B, độ tương phản cao (high contrast), theme seasonal, class strings phình mạnh.
 
-Lúc đó semantic runtime tokens có thể tốt hơn:
+Lúc đó mang tính ngữ nghĩa (semantic) thời gian chạy (runtime) tokens có thể tốt hơn:
 
 ```css
 [data-theme="light"] {
@@ -1294,15 +1299,15 @@ Nếu script chạy sau page paint:
 Fix ở initialization/SSR layer:
 - server knows theme,
 - early script,
-- system preference fallback.
+- system preference phương án dự phòng (fallback).
 
 Tailwind generated CSS không thể tự quyết định persisted app preference.
 
 ---
 
-# PHẦN X — ARIA, DATA, GROUP, PEER, HAS Ở MỨC ARCHITECTURE
+# PHẦN X — ARIA, DATA, GROUP, PEER, HAS Ở MỨC kiến trúc (architecture)
 
-## 57. ARIA là semantic contract
+## 57. ARIA là mang tính ngữ nghĩa (semantic) contract
 
 ```text
 aria-expanded
@@ -1310,15 +1315,15 @@ aria-selected
 aria-pressed
 ```
 
-không phải chỉ là convenient CSS states.
+không phải chỉ là convenient CSS các trạng thái (states).
 
-Nếu component có true accessibility semantics, Tailwind aria variant là tuyệt vời.
+Nếu component có true khả năng tiếp cận (accessibility) ngữ nghĩa (semantics), Tailwind aria biến thể (variant) là tuyệt vời.
 
-Nếu state chỉ là “loading skeleton visible”, dùng `data-loading` có thể đúng hơn `aria-*` tùy semantics.
+Nếu trạng thái (state) chỉ là “loading skeleton visible”, dùng `data-loading` có thể đúng hơn `aria-*` tùy ngữ nghĩa (semantics).
 
 ---
 
-## 58. Data attribute là presentation/application state hook
+## 58. Data attribute là presentation/application trạng thái (state) hook
 
 ```html
 <div
@@ -1363,7 +1368,7 @@ Không name groups trong structure phức tạp có thể làm hover/focus style
 
 ## 60. `in-*` convenience vs precision
 
-`in-*` bỏ explicit marker và tìm ancestor state.
+`in-*` bỏ explicit marker và tìm ancestor trạng thái (state).
 
 Nó giảm markup nhưng tăng implicit dependency.
 
@@ -1375,7 +1380,7 @@ Senior chọn:
 
 ## 61. Peer là sibling direction
 
-CSS sibling selector không quay ngược.
+CSS sibling bộ chọn (selector) không quay ngược.
 
 ```html
 <input class="peer">
@@ -1389,7 +1394,7 @@ Nếu paragraph đứng trước input, peer pattern không thể target backwar
 Use:
 - parent `has-*`,
 - DOM restructure,
-- application state
+- application trạng thái (state)
 tùy case.
 
 ---
@@ -1402,19 +1407,19 @@ Good:
 - parent contains checked input,
 - form group contains invalid input.
 
-Không dùng `:has()` để suy business state không được biểu diễn trong DOM. State business vẫn phải đến từ app model.
+Không dùng `:has()` để suy business trạng thái (state) không được biểu diễn trong DOM. trạng thái (state) business vẫn phải đến từ app model.
 
 ---
 
 # PHẦN XI — THIRD-PARTY INTEGRATION
 
-## 63. Arbitrary variants phù hợp với integration nhỏ
+## 63. các biến thể tùy ý (arbitrary variants) phù hợp với integration nhỏ
 
 ```text
 [&_.vendor-item]:p-2
 ```
 
-một hoặc vài selector là fine.
+một hoặc vài bộ chọn (selector) là fine.
 
 ---
 
@@ -1432,7 +1437,7 @@ vendor disabled
 vendor nested menu
 ```
 
-class attribute sẽ trở thành selector language khó đọc.
+class attribute sẽ trở thành bộ chọn (selector) language khó đọc.
 
 Tạo:
 
@@ -1452,7 +1457,7 @@ và viết normal CSS hoặc `@apply` targeted.
 }
 ```
 
-Trong case markup không control, `@apply` thực sự có giá trị vì giúp use same Tailwind theme/utility values.
+Trong case markup không control, `@apply` thực sự có giá trị vì giúp use same Tailwind theme/tiện ích (utility) các giá trị (values).
 
 Đây khác với việc tự recreate mọi internal app component bằng `.btn-primary`.
 
@@ -1471,7 +1476,7 @@ Nhưng nếu chỉ dùng one token, direct `var(--color-...)` đơn giản hơn.
 
 ---
 
-# PHẦN XII — TAILWIND + SCSS / CSS MODULES / SHADOW DOM
+# PHẦN XII — TAILWIND + SCSS / CSS MODULES / Shadow DOM (cây DOM đóng gói)
 
 ## 67. Một project có thể có quá nhiều styling layers
 
@@ -1487,7 +1492,7 @@ SCSS variable
 → component className
 ```
 
-Kỹ thuật thì có thể hoạt động, nhưng debugging trở nên khó.
+Kỹ thuật thì có thể hoạt động, nhưng gỡ lỗi (debugging) trở nên khó.
 
 Mastery là biết **bỏ bớt layer**.
 
@@ -1496,15 +1501,15 @@ Mastery là biết **bỏ bớt layer**.
 ## 68. Tailwind + SCSS
 
 SCSS vẫn mạnh nếu project cần:
-- compile-time maps,
-- functions,
-- legacy Sass library configuration.
+- thời điểm biên dịch (compile-time) các map khóa–giá trị (maps),
+- các hàm (functions),
+- legacy Sass library cấu hình (configuration).
 
 Tailwind v4 đã có:
 - theme CSS vars,
-- CSS-first utilities,
-- native nesting ecosystem,
-- variants.
+- ưu tiên CSS (CSS-first) các tiện ích (utilities),
+- native lồng cú pháp (nesting) ecosystem,
+- các biến thể (variants).
 
 Greenfield Tailwind project có thể không cần Sass.
 
@@ -1518,7 +1523,7 @@ Tailwind:
 - atomic styling in markup.
 
 CSS Modules:
-- local scoped selector.
+- local scoped bộ chọn (selector).
 
 Cả hai coexist tốt khi responsibilities khác nhau.
 
@@ -1530,22 +1535,22 @@ Nếu CSS Module chỉ có:
 }
 ```
 
-thì bạn đang thêm một abstraction mà không có value.
+thì bạn đang thêm một abstraction mà không có giá trị (value).
 
 ---
 
-## 70. Shadow DOM
+## 70. Shadow DOM (cây DOM đóng gói)
 
 Tailwind generated stylesheet ở document không pierce shadow root.
 
 Web Component cần:
 - own stylesheet,
 - adopted stylesheet,
-- custom properties,
+- custom các thuộc tính (properties),
 - `::part`
 tùy API.
 
-Tailwind không thay Shadow DOM encapsulation.
+Tailwind không thay Shadow DOM (cây DOM đóng gói) đóng gói (encapsulation).
 
 ---
 
@@ -1553,11 +1558,11 @@ Tailwind không thay Shadow DOM encapsulation.
 
 ## 71. Design-system package có thể ship cái gì?
 
-Một Tailwind design system có thể ship:
+Một Tailwind hệ thống thiết kế (design system) có thể ship:
 - source React/Vue components chứa Tailwind classes,
 - compiled CSS,
 - theme CSS,
-- custom utilities.
+- custom các tiện ích (utilities).
 
 Mỗi lựa chọn có coupling khác nhau.
 
@@ -1568,7 +1573,7 @@ Mỗi lựa chọn có coupling khác nhau.
 Consumer build Tailwind dựa trên package source.
 
 Ưu:
-- utility generation theo usage.
+- tiện ích (utility) generation theo usage.
 
 Yêu cầu:
 - consumer `@source` package,
@@ -1607,7 +1612,7 @@ chứa `@theme`.
 Nhiều apps share:
 - colors,
 - typography,
-- breakpoints,
+- các điểm ngắt (breakpoints),
 - radii.
 
 Theme package có thể version độc lập với component package.
@@ -1618,9 +1623,9 @@ Theme package có thể version độc lập với component package.
 
 Nếu library dùng feature v4.3 như:
 - `@container-size`,
-- scrollbar utilities,
+- scrollbar các tiện ích (utilities),
 - `zoom-*`,
-- new functional utility defaults,
+- new functional tiện ích (utility) defaults,
 
 docs nên nói rõ minimum Tailwind version.
 
@@ -1630,15 +1635,15 @@ Nếu không, consumer v4.1 có thể compile fail hoặc thiếu class.
 
 # PHẦN XIV — V4.3 FEATURES VÀ Ý NGHĨA KIẾN TRÚC
 
-## 76. Scrollbar utilities
+## 76. Scrollbar các tiện ích (utilities)
 
 V4.3 đưa scrollbar styling vào core tốt hơn.
 
 Điều này có hai tác dụng:
-- giảm nhu cầu community plugin/custom utility,
-- làm design token integration dễ hơn.
+- giảm nhu cầu community plugin/custom tiện ích (utility),
+- làm token thiết kế (design token) integration dễ hơn.
 
-Nhưng scrollbar vẫn là platform UI. Visual behavior cross-browser/OS không tuyệt đối giống nhau.
+Nhưng scrollbar vẫn là platform UI. Visual behavior đa trình duyệt (cross-browser)/OS không tuyệt đối giống nhau.
 
 ---
 
@@ -1652,7 +1657,7 @@ Bạn có thể query block size/height-dependent contexts, nhưng size containm
 
 ## 78. `zoom-*`
 
-V4.3 utility cho CSS `zoom` xuất hiện sau khi browser interoperability tốt hơn.
+V4.3 tiện ích (utility) cho CSS `zoom` xuất hiện sau khi browser interoperability tốt hơn.
 
 Use cases:
 - preview,
@@ -1665,64 +1670,64 @@ Không thay responsive layout.
 
 ## 79. `tab-*`
 
-`tab-size` trở thành first-class utility.
+`tab-size` trở thành first-class tiện ích (utility).
 
 Use:
 - code rendering,
 - source editor,
 - preformatted blocks.
 
-Một feature nhỏ nhưng minh họa triết lý Tailwind: khi CSS property trở nên đủ phổ biến, core utility API mở rộng để giảm custom CSS.
+Một feature nhỏ nhưng minh họa triết lý Tailwind: khi CSS thuộc tính (property) trở nên đủ phổ biến, core tiện ích (utility) API mở rộng để giảm custom CSS.
 
 ---
 
 ## 80. Stacked/compound `@variant`
 
-Trước đây nhiều developer nghĩ variants chỉ dành class markup. V4.3 làm custom CSS variant reuse mạnh hơn.
+Trước đây nhiều developer nghĩ các biến thể (variants) chỉ dành class markup. V4.3 làm custom CSS biến thể (variant) reuse mạnh hơn.
 
-Điều này giúp third-party/custom component CSS vẫn participate cùng state vocabulary của project.
+Điều này giúp third-party/custom component CSS vẫn participate cùng trạng thái (state) vocabulary của project.
 
 ---
 
-# PHẦN XV — MIGRATION V3 → V4 SÂU HƠN
+# PHẦN XV — chuyển đổi (migration) V3 → V4 SÂU HƠN
 
-## 81. Migration không phải chỉ search-and-replace
+## 81. chuyển đổi (migration) không phải chỉ search-and-replace
 
-V3 architecture thường gom:
+V3 kiến trúc (architecture) thường gom:
 - content paths,
 - theme,
 - plugins,
-- safelist
+- danh sách ép giữ (safelist)
 vào JS config.
 
 V4 đưa nhiều phần về CSS.
 
-Do đó migration là cơ hội hỏi:
+Do đó chuyển đổi (migration) là cơ hội hỏi:
 - theme tokens public nào?
 - source ownership thế nào?
 - custom plugin nào giờ chỉ cần `@utility`?
-- safelist nào là technical debt?
+- danh sách ép giữ (safelist) nào là technical debt?
 - component nào đang dynamic class synthesis?
 
 ---
 
 ## 82. Upgrade tool
 
-Official upgrade tooling có thể tự động phần lớn migration mechanics.
+Official upgrade tooling có thể tự động phần lớn chuyển đổi (migration) mechanics.
 
 Nhưng tool không thể quyết định:
-- semantic token design,
+- token ngữ nghĩa (semantic token) design,
 - monorepo source ownership,
-- public component API,
-- custom utility architecture.
+- public giao diện thành phần (component API),
+- custom tiện ích (utility) kiến trúc (architecture).
 
 Run tool, sau đó review.
 
 ---
 
-## 83. Browser support trước khi migrate
+## 83. mức hỗ trợ trình duyệt (browser support) trước khi migrate
 
-Tailwind v4 dùng modern CSS baseline và có minimum browser targets cao hơn v3.
+Tailwind v4 dùng modern CSS đường cơ sở (baseline) và có minimum browser targets cao hơn v3.
 
 Nếu product còn hỗ trợ browser cũ, upgrade có thể là product decision chứ không chỉ package update.
 
@@ -1730,7 +1735,7 @@ Nếu product còn hỗ trợ browser cũ, upgrade có thể là product decisio
 
 ---
 
-## 84. `@config` như migration bridge
+## 84. `@config` như chuyển đổi (migration) bridge
 
 ```css
 @config "../../tailwind.config.js";
@@ -1742,15 +1747,15 @@ Nếu 2 năm sau project vẫn có:
 - half CSS theme,
 - half JS config,
 - half plugins
-thì migration chưa hoàn thành về architecture.
+thì chuyển đổi (migration) chưa hoàn thành về kiến trúc (architecture).
 
 ---
 
-## 85. Custom plugin migration
+## 85. Custom plugin chuyển đổi (migration)
 
-Một v3 plugin chỉ tạo simple utility có thể chuyển sang `@utility`.
+Một v3 plugin chỉ tạo simple tiện ích (utility) có thể chuyển sang `@utility`.
 
-Plugin chỉ tạo variant có thể chuyển sang `@custom-variant`.
+Plugin chỉ tạo biến thể (variant) có thể chuyển sang `@custom-variant`.
 
 Complex JS plugin có logic/package integration vẫn có thể giữ plugin.
 
@@ -1758,22 +1763,22 @@ Mục tiêu không phải loại bỏ JS plugin bằng mọi giá, mà dùng sim
 
 ---
 
-## 86. Safelist migration
+## 86. danh sách ép giữ (safelist) chuyển đổi (migration)
 
-Old safelist thường tích tụ “mysterious classes” qua năm tháng.
+Old danh sách ép giữ (safelist) thường tích tụ “mysterious classes” qua năm tháng.
 
 Khi chuyển sang `@source inline()`, hãy audit từng set:
 - source thật sự ở đâu?
-- CMS có finite values không?
-- có thể static map không?
+- CMS có finite các giá trị (values) không?
+- có thể static map khóa–giá trị (map) không?
 
-Đừng mechanically copy universe safelist.
+Đừng mechanically copy universe danh sách ép giữ (safelist).
 
 ---
 
-# PHẦN XVI — PERFORMANCE
+# PHẦN XVI — hiệu năng (performance)
 
-## 87. Tailwind performance cần đo ở đâu?
+## 87. Tailwind hiệu năng (performance) cần đo ở đâu?
 
 Có ba loại cost:
 - source scanning,
@@ -1782,7 +1787,7 @@ Có ba loại cost:
 
 Ngoài ra browser vẫn chịu CSS/render cost như bình thường.
 
-Một source tree lớn nhưng candidate ít có cost scanning. Một safelist lớn có cost generation/output. Một giant CSS bundle có network/parse cost.
+Một source tree lớn nhưng candidate ít có cost scanning. Một danh sách ép giữ (safelist) lớn có cost generation/output. Một giant CSS bundle có network/parse cost.
 
 ---
 
@@ -1798,7 +1803,7 @@ V4 được tối ưu mạnh cho incremental generation, nhưng monorepo/file-wa
 
 ---
 
-## 89. Unique arbitrary values
+## 89. Unique các giá trị tùy ý (arbitrary values)
 
 ```text
 top-[117px]
@@ -1806,19 +1811,19 @@ top-[117px]
 
 one-off không vấn đề.
 
-Data-driven generation của hàng nghìn values mới là vấn đề.
+Data-driven generation của hàng nghìn các giá trị (values) mới là vấn đề.
 
 Pattern đúng cho data:
-- CSS variable,
-- one static utility consumer.
+- CSS biến (variable),
+- one static tiện ích (utility) consumer.
 
 ---
 
 ## 90. `@theme static` và output size
 
-Static theme giúp consumers ngoài utility system nhìn thấy tất cả tokens.
+Static theme giúp consumers ngoài tiện ích (utility) system nhìn thấy tất cả tokens.
 
-Nhưng nếu theme có hàng nghìn variables, output tăng.
+Nhưng nếu theme có hàng nghìn các biến (variables), output tăng.
 
 Hãy quyết định dựa usage:
 - design-token package cần full surface → hợp lý,
@@ -1835,9 +1840,9 @@ Hai entrypoint đều:
 ```
 
 có thể mỗi cái chứa:
-- Preflight,
+- Preflight (lớp reset nền của Tailwind),
 - theme,
-- overlapping utilities.
+- overlapping các tiện ích (utilities).
 
 Nếu cả hai load cùng page, CSS duplicate.
 
@@ -1857,11 +1862,11 @@ color: var(--color-red-500);
 
 rẻ và rõ hơn `@apply text-red-500`.
 
-Không micro-optimize một component; nhưng architecture hàng nghìn components thì khác.
+Không micro-optimize một component; nhưng kiến trúc (architecture) hàng nghìn components thì khác.
 
 ---
 
-# PHẦN XVII — DEBUGGING Ở CẤP MASTER
+# PHẦN XVII — gỡ lỗi (debugging) Ở CẤP MASTER
 
 ## 93. Bước 1: xác định CSS có tồn tại không
 
@@ -1871,15 +1876,15 @@ Nếu `.bg-brand` không tồn tại:
 - scanner,
 - theme token,
 - source,
-- utility registration.
+- tiện ích (utility) registration.
 
 Nếu tồn tại:
 - Tailwind build đã làm việc,
-- chuyển sang cascade/layout debugging.
+- chuyển sang cơ chế phân tầng (cascade)/layout gỡ lỗi (debugging).
 
 ---
 
-## 94. Debug source detection
+## 94. gỡ lỗi (debug) phát hiện nguồn (source detection)
 
 Kiểm tra class có literal complete không.
 
@@ -1893,7 +1898,7 @@ Nếu package source, kiểm tra `@source`.
 
 ---
 
-## 95. Debug custom theme
+## 95. gỡ lỗi (debug) custom theme
 
 `bg-brand` không generate?
 
@@ -1913,11 +1918,11 @@ Nếu bạn chỉ đặt:
 }
 ```
 
-thì runtime variable tồn tại nhưng Tailwind theme namespace có thể không đăng ký utility như bạn tưởng.
+thì thời gian chạy (runtime) biến (variable) tồn tại nhưng Tailwind không gian tên chủ đề (theme namespace) có thể không đăng ký tiện ích (utility) như bạn tưởng.
 
 ---
 
-## 96. Debug custom utility
+## 96. gỡ lỗi (debug) custom tiện ích (utility)
 
 Candidate correct nhưng rule không có?
 
@@ -1926,13 +1931,13 @@ Check:
 - functional resolver type,
 - theme key,
 - default/modifier,
-- value có resolve được không.
+- giá trị (value) có resolve được không.
 
-Build-time Tailwind có thể drop declaration không resolve.
+Build-time Tailwind có thể drop khai báo (declaration) không resolve.
 
 ---
 
-## 97. Debug variant
+## 97. gỡ lỗi (debug) biến thể (variant)
 
 `group-hover` không chạy?
 
@@ -1947,11 +1952,11 @@ Kiểm tra:
 Kiểm tra:
 - peer trước target,
 - input thật sự invalid,
-- selector relation.
+- bộ chọn (selector) relation.
 
 ---
 
-## 98. Debug container
+## 98. gỡ lỗi (debug) container
 
 `@md:` không chạy?
 
@@ -1961,15 +1966,15 @@ Kiểm tra:
 - nếu named query thì name đúng,
 - `@container-size` chỉ cần cho block-size use case.
 
-Không nhìn viewport width để kết luận container variant.
+Không nhìn vùng nhìn (viewport) width để kết luận container biến thể (variant).
 
 ---
 
-## 99. Debug class conflict
+## 99. gỡ lỗi (debug) class conflict
 
 Mở computed style.
 
-Tìm property:
+Tìm thuộc tính (property):
 
 ```text
 padding-left
@@ -1988,33 +1993,33 @@ rồi đoán.
 
 ---
 
-## 100. Debug z-index
+## 100. gỡ lỗi (debug) z-index
 
-Nếu utility rule `z-50` apply mà modal vẫn dưới:
-- parent stacking context,
-- top layer,
-- transform/filter/opacity/isolation.
+Nếu tiện ích (utility) rule `z-50` apply mà modal vẫn dưới:
+- parent ngữ cảnh xếp chồng (stacking context),
+- lớp trên cùng (top layer),
+- transform/filter/opacity/cô lập (isolation).
 
 Tailwind không thể phá CSS stacking rules.
 
 ---
 
-# PHẦN XVIII — ACCESSIBILITY VÀ UI STATE Ở SCALE
+# PHẦN XVIII — khả năng tiếp cận (accessibility) VÀ UI trạng thái (state) Ở SCALE
 
-## 101. Accessibility phải được thiết kế thành component contract
+## 101. khả năng tiếp cận (accessibility) phải được thiết kế thành hợp đồng thành phần (component contract)
 
 Button component nên có:
 - actual `<button>`,
 - disabled behavior,
 - focus-visible style,
-- loading semantics,
+- loading ngữ nghĩa (semantics),
 - accessible label khi icon-only.
 
-Tailwind utilities làm implementation concise, nhưng contract nằm ở component design.
+Tailwind các tiện ích (utilities) làm implementation concise, nhưng contract nằm ở component design.
 
 ---
 
-## 102. State matrix
+## 102. trạng thái (state) matrix
 
 Một mature component không chỉ test default.
 
@@ -2027,29 +2032,29 @@ hover/focus/active/disabled/loading
 × forced colors
 ```
 
-Tailwind giúp encode combinations, nhưng state space vẫn tồn tại.
+Tailwind giúp encode combinations, nhưng trạng thái (state) space vẫn tồn tại.
 
-Visual regression rất hữu ích.
+hồi quy giao diện (visual regression) rất hữu ích.
 
 ---
 
-## 103. Reduced motion không phải optional polish
+## 103. giảm chuyển động (reduced motion) không phải optional polish
 
 Nếu component có transform/animation lớn:
 - add `motion-reduce`,
 - hoặc thiết kế motion system global.
 
-User preference là input giống viewport/theme, không phải afterthought.
+User preference là input giống vùng nhìn (viewport)/theme, không phải afterthought.
 
 ---
 
-## 104. Forced colors
+## 104. màu cưỡng bức (forced colors)
 
 Colors có thể bị browser override.
 
-Nếu custom control chỉ biểu diễn selected state bằng subtle background color, forced colors mode có thể mất distinction.
+Nếu custom control chỉ biểu diễn selected trạng thái (state) bằng subtle background color, màu cưỡng bức (forced colors) mode có thể mất distinction.
 
-Test actual forced-colors behavior và use semantic border/system color fallback khi cần.
+Test actual forced-colors behavior và use mang tính ngữ nghĩa (semantic) border/system color phương án dự phòng (fallback) khi cần.
 
 ---
 
@@ -2059,7 +2064,7 @@ Test actual forced-colors behavior và use semantic border/system color fallback
 
 Static tooling có thể bắt:
 - invalid class,
-- deprecated class,
+- đã ngừng khuyến nghị (deprecated) class,
 - dynamic concatenation patterns,
 - arbitrary-value policy.
 
@@ -2078,7 +2083,7 @@ Test behavior:
 
 ---
 
-## 107. Visual regression
+## 107. hồi quy giao diện (visual regression)
 
 CSS bug thường không throw exception.
 
@@ -2110,9 +2115,9 @@ expect(button.className)
 
 formatter hoặc harmless refactor làm test fail.
 
-Prefer semantic/visual tests.
+Prefer mang tính ngữ nghĩa (semantic)/visual tests.
 
-Class snapshot chỉ hợp lý nếu class output là public API hoặc bạn đang test class-merging utility.
+Class snapshot chỉ hợp lý nếu class output là giao diện công khai (public API) hoặc bạn đang test class-merging tiện ích (utility).
 
 ---
 
@@ -2134,7 +2139,7 @@ Better data:
 danger
 ```
 
-App map:
+App map khóa–giá trị (map):
 
 ```text
 danger → bg-red-500 text-white
@@ -2147,7 +2152,7 @@ Bạn giữ:
 
 ---
 
-## 110. Arbitrary value từ untrusted input
+## 110. giá trị tùy ý (arbitrary value) từ untrusted input
 
 Không concatenate user input vào:
 
@@ -2155,11 +2160,11 @@ Không concatenate user input vào:
 [background:url(...)]
 ```
 
-hoặc arbitrary property.
+hoặc thuộc tính tùy ý (arbitrary property).
 
 Tailwind không sanitize CSS intent.
 
-Whitelist values hoặc validate data rồi expose qua safe runtime variable.
+Whitelist các giá trị (values) hoặc validate data rồi expose qua safe thời gian chạy (runtime) biến (variable).
 
 ---
 
@@ -2180,7 +2185,7 @@ Tailwind v4 phù hợp làm consumer/output của token pipeline.
 
 ---
 
-## 112. External design token pipeline
+## 112. External token thiết kế (design token) pipeline
 
 Ví dụ:
 
@@ -2215,7 +2220,7 @@ không nên cần biết:
 bg-blue-600
 ```
 
-Nếu sau này team đổi sang CSS Modules hoặc vanilla CSS, component API vẫn giữ.
+Nếu sau này team đổi sang CSS Modules hoặc vanilla CSS, giao diện thành phần (component API) vẫn giữ.
 
 Đây là abstraction boundary khỏe mạnh.
 
@@ -2230,27 +2235,27 @@ Một article renderer có nested:
 - blockquote,
 - tables,
 - code,
-- lists,
+- các danh sách (lists),
 - links
 từ CMS.
 
 Viết class vào từng generated element không practical.
 
-Scoped semantic CSS hoặc typography solution hợp lý hơn.
+Scoped mang tính ngữ nghĩa (semantic) CSS hoặc typography solution hợp lý hơn.
 
 ---
 
 ## 115. Third-party DOM sâu
 
-Một editor library có internal DOM tree thay đổi theo version. Một stylesheet integration rõ ràng tốt hơn arbitrary variant cực dài trong root class.
+Một editor library có internal DOM tree thay đổi theo version. Một stylesheet integration rõ ràng tốt hơn biến thể tùy ý (arbitrary variant) cực dài trong root class.
 
 ---
 
 ## 116. CSS feature có syntax phức tạp
 
-Animation keyframes, advanced selector hoặc print stylesheet có thể đọc tốt hơn khi viết CSS trực tiếp.
+Animation keyframes, advanced bộ chọn (selector) hoặc print stylesheet có thể đọc tốt hơn khi viết CSS trực tiếp.
 
-Tailwind hỗ trợ arbitrary/custom API, nhưng không phải mọi CSS nên được convert thành utility.
+Tailwind hỗ trợ arbitrary/custom API, nhưng không phải mọi CSS nên được convert thành tiện ích (utility).
 
 ---
 
@@ -2258,25 +2263,25 @@ Tailwind hỗ trợ arbitrary/custom API, nhưng không phải mọi CSS nên đ
 
 ## 117. Chọn đúng abstraction
 
-Nếu vấn đề là atomic styling với core CSS property, dùng utility.
+Nếu vấn đề là atomic styling với core CSS thuộc tính (property), dùng tiện ích (utility).
 
-Nếu value là exception một lần, dùng arbitrary value.
+Nếu giá trị (value) là exception một lần, dùng giá trị tùy ý (arbitrary value).
 
-Nếu value lặp thành design vocabulary, dùng `@theme`.
+Nếu giá trị (value) lặp thành design vocabulary, dùng `@theme`.
 
-Nếu value thay đổi runtime, dùng CSS custom property.
+Nếu giá trị (value) thay đổi thời gian chạy (runtime), dùng CSS custom thuộc tính (property).
 
-Nếu project thiếu một atomic utility reusable, dùng `@utility`.
+Nếu project thiếu một atomic tiện ích (utility) reusable, dùng `@utility`.
 
-Nếu condition selector lặp lại, dùng `@custom-variant`.
+Nếu condition bộ chọn (selector) lặp lại, dùng `@custom-variant`.
 
-Nếu selector phức tạp nhưng local/semantic, dùng CSS.
+Nếu bộ chọn (selector) phức tạp nhưng local/mang tính ngữ nghĩa (semantic), dùng CSS.
 
-Nếu structure + style + state lặp lại, extract component.
+Nếu structure + style + trạng thái (state) lặp lại, extract component.
 
 Nếu source nằm ngoài automatic scan, dùng `@source`.
 
-Đây là cách senior tránh “mọi thứ thành utility” hoặc “mọi thứ thành custom CSS”.
+Đây là cách senior tránh “mọi thứ thành tiện ích (utility)” hoặc “mọi thứ thành custom CSS”.
 
 ---
 
@@ -2287,7 +2292,7 @@ Nếu source nằm ngoài automatic scan, dùng `@source`.
 Tạo bốn trường hợp:
 - literal `bg-blue-600`,
 - dynamic ``bg-${color}-600``,
-- static map,
+- static map khóa–giá trị (map),
 - class trong workspace package.
 
 Build và inspect generated CSS. Mục tiêu là tự nhìn thấy scanner boundary.
@@ -2296,20 +2301,20 @@ Build và inspect generated CSS. Mục tiêu là tự nhìn thấy scanner bound
 
 ## 119. Lab: strict theme
 
-Reset color namespace, chỉ define:
+Reset color không gian tên (namespace), chỉ define:
 - surface,
 - text,
 - action,
 - danger.
 
-Sau đó thử dùng `bg-blue-500` và quan sát API không còn. Mục tiêu là hiểu `@theme` điều khiển utility vocabulary.
+Sau đó thử dùng `bg-blue-500` và quan sát API không còn. Mục tiêu là hiểu `@theme` điều khiển tiện ích (utility) vocabulary.
 
 ---
 
-## 120. Lab: functional utility
+## 120. Lab: functional tiện ích (utility)
 
 Tạo `tab-*` hỗ trợ:
-- theme value,
+- theme giá trị (value),
 - integer,
 - arbitrary,
 - bare default.
@@ -2327,19 +2332,19 @@ Tạo admin/storefront bundles với `source(none)`.
 - overlap,
 - candidate count.
 
-Mục tiêu là hiểu source detection như bundle architecture.
+Mục tiêu là hiểu phát hiện nguồn (source detection) như bundle kiến trúc (architecture).
 
 ---
 
-## 122. Lab: runtime CSS variable
+## 122. Lab: thời gian chạy (runtime) CSS biến (variable)
 
-API value:
+API giá trị (value):
 - width,
 - color.
 
 Không dùng dynamic arbitrary class.
 
-Bridge bằng CSS vars và static utilities.
+Bridge bằng CSS vars và static các tiện ích (utilities).
 
 ---
 
@@ -2350,19 +2355,19 @@ Cùng một ProfileCard đặt trong:
 - content 600px,
 - modal 900px.
 
-Dùng container query thay viewport breakpoint cho internal layout.
+Dùng truy vấn vùng chứa (container query) thay vùng nhìn (viewport) điểm ngắt (breakpoint) cho internal layout.
 
 ---
 
-## 124. Lab: v3 migration
+## 124. Lab: v3 chuyển đổi (migration)
 
 Lấy project có:
 - `tailwind.config.js`,
 - content,
-- safelist,
-- custom utility plugin.
+- danh sách ép giữ (safelist),
+- custom tiện ích (utility) plugin.
 
-Migrate từng phần sang v4 CSS-first, nhưng giữ visual regression snapshots để đảm bảo behavior không đổi.
+Migrate từng phần sang v4 ưu tiên CSS (CSS-first), nhưng giữ hồi quy giao diện (visual regression) snapshots để đảm bảo behavior không đổi.
 
 ---
 
@@ -2372,7 +2377,7 @@ Nhúng widget vào một legacy page.
 
 Thử:
 - full Tailwind import,
-- disable Preflight,
+- disable Preflight (lớp reset nền của Tailwind),
 - prefix,
 - isolate sources.
 
@@ -2384,9 +2389,9 @@ Quan sát host page bị ảnh hưởng thế nào.
 
 ## 126. Bạn đã đạt mức master khi nào?
 
-Bạn chưa cần nhớ mọi utility. Thay vào đó, bạn nên có thể giải thích bằng lời của mình vì sao Tailwind không generate dynamic interpolated class; tại sao `@theme` là compiler API chứ không chỉ CSS variables; tại sao theme token rename có thể là breaking change; tại sao source boundaries nên thiết kế theo bundle ownership; vì sao `@container-size` không nên thay toàn bộ `@container`; functional utility resolver hoạt động ở build time ra sao; vì sao HTML class order không phải CSS source order; `@reference` có role gì trong isolated stylesheet; tại sao runtime data nên đi qua CSS variable; vì sao ARIA và data attributes không interchangeable về semantics; và khi nào Tailwind abstraction bắt đầu làm code khó hiểu hơn plain CSS.
+Bạn chưa cần nhớ mọi tiện ích (utility). Thay vào đó, bạn nên có thể giải thích bằng lời của mình vì sao Tailwind không generate dynamic interpolated class; tại sao `@theme` là trình biên dịch (compiler) API chứ không chỉ CSS các biến (variables); tại sao theme token rename có thể là breaking change; tại sao source boundaries nên thiết kế theo bundle ownership; vì sao `@container-size` không nên thay toàn bộ `@container`; functional tiện ích (utility) resolver hoạt động ở build time ra sao; vì sao HTML class order không phải CSS thứ tự nguồn (source order); `@reference` có role gì trong isolated stylesheet; tại sao thời gian chạy (runtime) data nên đi qua CSS biến (variable); vì sao ARIA và data attributes không interchangeable về ngữ nghĩa (semantics); và khi nào Tailwind abstraction bắt đầu làm code khó hiểu hơn plain CSS.
 
-Bạn cũng nên debug được một issue theo pipeline:
+Bạn cũng nên gỡ lỗi (debug) được một issue theo pipeline:
 
 ```text
 source
@@ -2404,7 +2409,7 @@ thay vì thêm class thử từng cái.
 
 ## 127. Trước khi merge một Tailwind feature lớn
 
-Hãy đọc component như một hệ thống. Xác định responsive ownership thuộc viewport hay container. Xác định state là native, ARIA, data hay business state. Kiểm tra arbitrary values có đang lặp thành hidden token hay không. Kiểm tra focus, disabled, reduced motion. Với component reusable, xác định class override policy. Với monorepo/package, xác định source scanner có nhìn thấy class hay không. Sau cùng, inspect generated CSS khi có custom utility/variant hoặc conflict khó.
+Hãy đọc component như một hệ thống. Xác định quyền sở hữu hành vi đáp ứng (responsive ownership) thuộc vùng nhìn (viewport) hay container. Xác định trạng thái (state) là native, ARIA, data hay business trạng thái (state). Kiểm tra các giá trị tùy ý (arbitrary values) có đang lặp thành hidden token hay không. Kiểm tra focus, disabled, giảm chuyển động (reduced motion). Với component reusable, xác định class override policy. Với monorepo/package, xác định source scanner có nhìn thấy class hay không. Sau cùng, inspect generated CSS khi có custom tiện ích (utility)/biến thể (variant) hoặc conflict khó.
 
 Đây không phải checklist để tick máy móc; đây là cách senior đọc implementation trước khi PR trở thành technical debt.
 
@@ -2420,7 +2425,7 @@ Tailwind CSS v4.3 release:
 
 https://tailwindcss.com/blog/tailwindcss-v4-3
 
-Theme variables:
+các biến chủ đề (theme variables):
 
 https://tailwindcss.com/docs/theme
 
@@ -2428,15 +2433,15 @@ Detecting classes in source files:
 
 https://tailwindcss.com/docs/detecting-classes-in-source-files
 
-Functions and directives:
+các hàm (functions) and directives:
 
 https://tailwindcss.com/docs/functions-and-directives
 
-Responsive design and container queries:
+thiết kế đáp ứng (responsive design) and các truy vấn vùng chứa (container queries):
 
 https://tailwindcss.com/docs/responsive-design
 
-Styling utilities:
+Styling các tiện ích (utilities):
 
 https://tailwindcss.com/docs/styling-with-utility-classes
 
@@ -2452,21 +2457,21 @@ https://tailwindcss.com/docs/upgrade-guide
 
 ## 128. Compatibility boundaries: v3 codebase, v4 codebase và package contracts
 
-Một design-system/package không nên chỉ nói “dùng Tailwind”. Nếu source package dựa `@theme`, functional `@utility`, `@container-size` hoặc v4.3 utilities, consumer minimum version là một phần của package contract. Ngược lại, một package viết cho v3 có thể phụ thuộc JS plugin/config/content semantics mà v4 consumer cần migration bridge.
+Một design-system/package không nên chỉ nói “dùng Tailwind”. Nếu source package dựa `@theme`, functional `@utility`, `@container-size` hoặc v4.3 các tiện ích (utilities), consumer minimum version là một phần của package contract. Ngược lại, một package viết cho v3 có thể phụ thuộc JS plugin/config/content ngữ nghĩa (semantics) mà v4 consumer cần chuyển đổi (migration) bridge.
 
-V3 và v4 khác ở ownership model. V3 thường tập trung configuration trong JavaScript; v4 đưa theme/source/customization vào CSS entrypoint. Vì vậy library migration phải quyết định package ship source components, compiled CSS hay theme-only CSS. Mỗi lựa chọn tạo coupling khác nhau với consumer Tailwind version.
+V3 và v4 khác ở ownership model. V3 thường tập trung cấu hình (configuration) trong JavaScript; v4 đưa theme/source/customization vào CSS entrypoint. Vì vậy library chuyển đổi (migration) phải quyết định package ship source components, compiled CSS hay theme-only CSS. Mỗi lựa chọn tạo coupling khác nhau với consumer Tailwind version.
 
-## 129. Utility mapping phải dừng ở CSS khi framework đã hoàn thành nhiệm vụ
+## 129. tiện ích (utility) mapping phải dừng ở CSS khi framework đã hoàn thành nhiệm vụ
 
-Master debugging cần một “handoff rule”: nếu utility candidate được generate và computed declaration đúng, dừng debug Tailwind. Từ thời điểm đó, dùng CSS mental model: cascade layer, containing block, intrinsic sizing, formatting context, stacking, overflow, paint/composite. Framework không có layer bí mật phía sau browser.
+Master gỡ lỗi (debugging) cần một “handoff rule”: nếu tiện ích (utility) candidate được generate và computed khai báo (declaration) đúng, dừng gỡ lỗi (debug) Tailwind. Từ thời điểm đó, dùng CSS mô hình tư duy (mental model): lớp phân tầng (cascade layer), khối chứa tham chiếu (containing block), định cỡ nội tại (intrinsic sizing), ngữ cảnh định dạng (formatting context), stacking, overflow, paint/composite. Framework không có layer bí mật phía sau browser.
 
-Điều này đặc biệt quan trọng với `flex-1`, `min-w-0`, `grid-cols-*`, `sticky`, `z-*`, `truncate`, `aspect-*`, container variants và motion utilities. Mỗi class chỉ là authoring API cho CSS behavior đã tồn tại. Biết handoff point giúp team phân loại bug nhanh và viết docs/components không thần bí hóa Tailwind.
+Điều này đặc biệt quan trọng với `flex-1`, `min-w-0`, `grid-cols-*`, `sticky`, `z-*`, `truncate`, `aspect-*`, container các biến thể (variants) và motion các tiện ích (utilities). Mỗi class chỉ là authoring API cho CSS behavior đã tồn tại. Biết handoff point giúp team phân loại bug nhanh và viết docs/components không thần bí hóa Tailwind.
 
 ## 130. Upgrade strategy cho Tailwind production
 
-Khi nâng minor/major version, hãy audit theo ba lớp. Lớp compiler gồm candidate detection, source ownership, custom utilities/variants và plugin integration. Lớp generated CSS gồm Preflight, layers, theme variables, naming/deprecation và bundle size. Lớp browser gồm visual regression, accessibility states và browser support của CSS feature mới.
+Khi nâng minor/major version, hãy audit theo ba lớp. Lớp trình biên dịch (compiler) gồm phát hiện ứng viên lớp (candidate detection), source ownership, custom các tiện ích (utilities)/các biến thể (variants) và plugin integration. Lớp generated CSS gồm Preflight (lớp reset nền của Tailwind), layers, các biến chủ đề (theme variables), naming/trạng thái ngừng khuyến nghị (deprecation) và bundle size. Lớp browser gồm hồi quy giao diện (visual regression), khả năng tiếp cận (accessibility) các trạng thái (states) và mức hỗ trợ trình duyệt (browser support) của CSS feature mới.
 
-Tính đến 21/09/2026, Tailwind blog vẫn ghi v4.3 là release framework mới nhất; vì vậy canonical note giữ v4.3 làm baseline nhưng version evolution phải được hiểu theo generation, không hard-code assumption rằng API hôm nay sẽ bất biến. Mỗi lần upgrade, đọc migration/release notes và diff output thay vì chỉ chạy `npm install`.
+Tính đến 21/09/2026, Tailwind blog vẫn ghi v4.3 là release framework mới nhất; vì vậy canonical note giữ v4.3 làm đường cơ sở (baseline) nhưng version evolution phải được hiểu theo generation, không hard-code assumption rằng API hôm nay sẽ bất biến. Mỗi lần upgrade, đọc chuyển đổi (migration)/release notes và diff output thay vì chỉ chạy `npm install`.
 
 ---
 
@@ -2499,4 +2504,4 @@ source ownership
 → browser
 ```
 
-Điểm quan trọng nhất là không để Tailwind trở thành black box. Nếu framework làm bạn khó hiểu CSS hơn, abstraction đang bị dùng sai. Nếu Tailwind giúp design vocabulary rõ hơn, source gần component hơn, responsive/state declarative hơn và build output predictable hơn, bạn đang dùng nó đúng ở mức senior/master.
+Điểm quan trọng nhất là không để Tailwind trở thành black box. Nếu framework làm bạn khó hiểu CSS hơn, abstraction đang bị dùng sai. Nếu Tailwind giúp design vocabulary rõ hơn, source gần component hơn, responsive/trạng thái (state) declarative hơn và build output predictable hơn, bạn đang dùng nó đúng ở mức senior/master.
