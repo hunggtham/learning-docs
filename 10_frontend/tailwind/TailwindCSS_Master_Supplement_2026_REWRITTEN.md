@@ -2446,6 +2446,30 @@ https://tailwindcss.com/docs/upgrade-guide
 
 ---
 
+---
+
+# PHẦN XXVIII — VERSION BOUNDARIES VÀ CSS MAPPING Ở MỨC MASTER
+
+## 128. Compatibility boundaries: v3 codebase, v4 codebase và package contracts
+
+Một design-system/package không nên chỉ nói “dùng Tailwind”. Nếu source package dựa `@theme`, functional `@utility`, `@container-size` hoặc v4.3 utilities, consumer minimum version là một phần của package contract. Ngược lại, một package viết cho v3 có thể phụ thuộc JS plugin/config/content semantics mà v4 consumer cần migration bridge.
+
+V3 và v4 khác ở ownership model. V3 thường tập trung configuration trong JavaScript; v4 đưa theme/source/customization vào CSS entrypoint. Vì vậy library migration phải quyết định package ship source components, compiled CSS hay theme-only CSS. Mỗi lựa chọn tạo coupling khác nhau với consumer Tailwind version.
+
+## 129. Utility mapping phải dừng ở CSS khi framework đã hoàn thành nhiệm vụ
+
+Master debugging cần một “handoff rule”: nếu utility candidate được generate và computed declaration đúng, dừng debug Tailwind. Từ thời điểm đó, dùng CSS mental model: cascade layer, containing block, intrinsic sizing, formatting context, stacking, overflow, paint/composite. Framework không có layer bí mật phía sau browser.
+
+Điều này đặc biệt quan trọng với `flex-1`, `min-w-0`, `grid-cols-*`, `sticky`, `z-*`, `truncate`, `aspect-*`, container variants và motion utilities. Mỗi class chỉ là authoring API cho CSS behavior đã tồn tại. Biết handoff point giúp team phân loại bug nhanh và viết docs/components không thần bí hóa Tailwind.
+
+## 130. Upgrade strategy cho Tailwind production
+
+Khi nâng minor/major version, hãy audit theo ba lớp. Lớp compiler gồm candidate detection, source ownership, custom utilities/variants và plugin integration. Lớp generated CSS gồm Preflight, layers, theme variables, naming/deprecation và bundle size. Lớp browser gồm visual regression, accessibility states và browser support của CSS feature mới.
+
+Tính đến 21/09/2026, Tailwind blog vẫn ghi v4.3 là release framework mới nhất; vì vậy canonical note giữ v4.3 làm baseline nhưng version evolution phải được hiểu theo generation, không hard-code assumption rằng API hôm nay sẽ bất biến. Mỗi lần upgrade, đọc migration/release notes và diff output thay vì chỉ chạy `npm install`.
+
+---
+
 # KẾT LUẬN
 
 Ở level beginner, Tailwind có vẻ là:

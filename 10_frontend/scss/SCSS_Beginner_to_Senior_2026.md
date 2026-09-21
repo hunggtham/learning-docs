@@ -5,7 +5,7 @@
 > Tài liệu này nối tiếp:
 >
 > ```text
-> CSS_Beginner_to_Senior_2026_v2.md
+> CSS_Beginner_to_Senior_2026.md
 > CSS_Master_Supplement_2026.md
 > ```
 >
@@ -3763,6 +3763,47 @@ Official Sass:
 - https://sass-lang.com/documentation/breaking-changes/import/
 - https://sass-lang.com/documentation/breaking-changes/slash-div/
 - https://sass-lang.com/documentation/breaking-changes/color-functions/
+
+---
+
+---
+
+# 156. SCSS Architecture — thiết kế module graph trước khi thiết kế folder [SENIOR/ARCH]
+
+Một codebase SCSS lớn không nên bắt đầu từ câu hỏi “dùng 7-1 hay chia folder thế nào?”, mà từ câu hỏi **module nào sở hữu API nào và module nào được phép emit CSS**. Folder chỉ là representation của dependency graph. Nếu mọi file có thể truy cập global variables/mixins và emit rules khi import, structure nhìn đẹp nhưng architecture vẫn global.
+
+Modern Sass với `@use` và `@forward` cho phép bạn thiết kế graph rõ hơn. Một tool module chứa variables/functions/mixins nên lý tưởng không emit CSS. Một style module cố ý emit base/component rules. Một facade module dùng `@forward` để expose public surface ổn định. Entry point `@use`s các facade/style modules theo dependency order mà application cần.
+
+```text
+_tokens.scss      → values / configuration
+_math.scss        → functions, no CSS output
+_button-tools.scss→ mixins, no CSS output
+_button.scss      → emits component CSS
+_index.scss       → @forward public API
+app.scss          → entry point, @use style/facade modules
+```
+
+Điểm quan trọng là “partial” không tự làm code modular. `_tokens.scss` vẫn có thể là global soup nếu được kéo bằng legacy `@import`. Module boundary đến từ namespace, private members, single evaluation và public API discipline của `@use`/`@forward`.
+
+## Public API và configuration boundary
+
+Library Sass nên expose ít thứ hơn internal implementation. Nếu consumer cần configure brand color, spacing scale hoặc feature flag compile-time, expose `$variable: default !default` có chủ đích và configure qua `@use ... with (...)`. Đừng expose mọi internal map chỉ vì “sau này có thể cần”; khi consumer phụ thuộc vào shape của nested map, refactor nội bộ biến thành breaking change.
+
+`@forward ... show/hide` hoặc prefixing giúp facade chỉ xuất phần ổn định. Private members nên thực sự private. Public mixin/function name, parameter semantics và generated CSS contract đều là API cần versioning.
+
+## Side-effect CSS phải có ownership
+
+Một common bug là `@use` một helper module chỉ để gọi function nhưng module đó cũng emit reset/components. Vì module load một lần, duplication được giảm so với `@import`, nhưng side effect vẫn tồn tại. Tách tool modules khỏi style modules làm dependency graph predictable hơn và giúp library consumer dùng logic mà không kéo CSS ngoài ý muốn.
+
+## `@extend` không phải inheritance architecture
+
+`@extend` hợp nhất selectors trong compiler. Nó không copy declarations như mixin và không tạo type hierarchy như Java. Vì selector unification có thể tạo output ở nơi xa call site và coupling giữa modules, hãy giới hạn `@extend` cho placeholder contracts rất controlled. Nếu bạn cần parameterization, mixin thường rõ hơn; nếu chỉ cần shared visual primitives, composition/utility class hoặc native CSS layer/token thường dễ dự đoán hơn.
+
+## Sass vs native CSS responsibility
+
+Sass mạnh ở compile-time generation: transform data structures, validate config, tạo repetitive API và package reusable authoring tools. Native CSS mạnh ở runtime: custom properties, cascade layers, nesting, container queries, `:has()`, logical properties và theming theo environment/state. Một architecture hiện đại nên để runtime concerns ở CSS nếu browser đã giải được trực tiếp, thay vì generate hàng trăm variants compile-time bằng loops.
+
+SCSS tốt không làm CSS biến mất khỏi mental model. Nó làm source dễ maintain hơn trong khi generated CSS vẫn nhỏ, specificity thấp và dễ inspect.
 
 ---
 
