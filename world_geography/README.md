@@ -1,60 +1,76 @@
 # Knowledge Library — Địa lý thế giới
 
-Bộ tài liệu này được tổ chức theo **khái niệm (concept) → kiến thức phụ thuộc (dependency) → mối quan hệ (relationship)**, không chia theo các mức cơ bản–trung cấp–nâng cao. Mục tiêu là học Địa lý như một hệ thống giải thích **vì sao thế giới có hình dạng, khí hậu, dân cư, thành phố, biên giới, mạng lưới kinh tế và các vùng địa lý như hiện nay**, thay vì ghi nhớ danh sách địa danh.
+Bộ tài liệu này được tổ chức theo **khái niệm (concept) → kiến thức phụ thuộc (dependency) → mối quan hệ (relationship)**. Mục tiêu là hiểu **vì sao** thế giới có các pattern địa hình, khí hậu, dân cư, thành phố, biên giới và mạng kinh tế như hiện nay, thay vì ghi nhớ địa danh.
 
-> **Mô hình tư duy (mental model) trung tâm:** Địa lý nghiên cứu *vị trí*, *phân bố*, *quan hệ không gian*, *quá trình* và *quy mô*. Một hiện tượng chỉ thật sự được hiểu khi ta biết nó xảy ra ở đâu, vì sao ở đó, lan truyền theo cơ chế nào và thay đổi thế nào khi đổi quy mô phân tích.
+> **Mental model trung tâm:** Địa lý là khoa học về **mẫu (pattern) + quá trình (process) + mạng/dòng (network/flow) + quy mô (scale) + bằng chứng (evidence)**.
 
-## Cách dùng thư viện
+## Bắt đầu ở đâu?
 
-Nên đọc `00_foundations` trước để hiểu tư duy không gian, hệ tọa độ, bản đồ và dữ liệu địa lý. `01_physical_geography` giải thích nền vật lý của Trái Đất; `02_human_geography` giải thích dân số, đô thị, kinh tế và không gian xã hội; `03_regions` dùng các nguyên lý đó để đọc từng vùng; `04_global_systems` đi vào các hệ thống xuyên biên giới.
+Đọc [Learning Route](./LEARNING_ROUTE.md) trước nếu học từ đầu hoặc muốn biết thứ tự dependency. Xem [Core Coverage Audit](./CORE_COVERAGE_AUDIT.md) nếu muốn biết chapter nào đã sâu, chapter nào còn cần nâng và roadmap tiếp theo.
 
-`05_earth_global_geography` mở rộng từ “địa lý trên bề mặt” sang **Địa cầu như một vật thể hành tinh**: hình dạng, kích thước, chuyển động, lục địa–đại dương, phân bố độ cao, trường hấp dẫn, từ trường, hệ quy chiếu toàn cầu và dấu chân của con người ở quy mô hành tinh.
+World Atlas là **application layer**, không phải foundation. Không cần đọc hàng trăm country file để “học hết địa lý”.
 
-`06_world_atlas` là **Atlas thế giới dạng knowledge graph**. Thay vì chỉ liệt kê thủ đô–dân số, mỗi hồ sơ quốc gia hoặc vùng lãnh thổ giải thích khung tự nhiên, khí hậu–nước, phân bố dân cư, mạng đô thị, không gian sản xuất, hành lang giao thông, rủi ro và vai trò của vị trí trong khu vực. Inventory chính dựa trên UN M49 “countries or areas”; các trường hợp không được M49 tách riêng nhưng có giá trị địa lý–thống kê được xử lý trong nhóm hồ sơ bổ sung với ghi chú phương pháp rõ ràng.
+## Kiến trúc Knowledge Library
 
-`90_connections` nối Địa lý với Toán học, thống kê, công nghệ thông tin, GIS, dữ liệu, kinh tế học và các mô hình tư duy tổng hợp.
+`00_foundations` xây tư duy không gian, tọa độ, cartography, GIS và remote sensing.
 
-Quy ước liên kết chéo dùng đường dẫn Markdown tương đối, ví dụ: [Bản đồ và phép chiếu](./00_foundations/03_cartography_projections_scale.md).
+`01_physical_geography` giải thích solid Earth, atmosphere, hydrology, oceans, soils/ecosystems và natural hazards.
 
-## Sơ đồ quan hệ kiến thức
+`02_human_geography` đi từ population–migration–urbanization sang culture, political/economic geography, agriculture, industry/energy, trade và development.
+
+`03_regions` tổng hợp các mechanism để đọc region; đây không phải folder ghi nhớ country list.
+
+`04_global_systems` nghiên cứu system vượt biên giới: climate change, Water–Food–Energy nexus, chokepoint/resource networks, global cities và sustainability.
+
+`05_earth_global_geography` mở rộng sang Địa cầu như một vật thể: geodesy, rotation/orbit, continents/ocean basins, relief, gravity, magnetic field và global reference systems.
+
+`06_world_atlas` dùng country/territory như case study có chọn lọc. Inventory có thể đầy đủ nhưng profile chỉ được coi hoàn chỉnh khi đạt chuẩn learning chapter. Xem [Atlas coverage status](./06_world_atlas/03_coverage_status.md).
+
+`90_connections` nối Geography với Math/Statistics, IT/GIS/Data, Economics/Finance và mental models tổng hợp.
+
+## Sơ đồ dependency
 
 ```mermaid
 graph TD
-  A[Tư duy địa lý] --> B[Trái Đất như một hệ thống]
-  A --> C[Tọa độ và thời gian]
-  C --> D[Bản đồ và phép chiếu]
-  D --> E[GIS và viễn thám]
-  B --> F[Kiến tạo mảng]
-  B --> G[Khí quyển và khí hậu]
-  B --> H[Thủy văn và đại dương]
-  F --> I[Địa mạo]
-  G --> J[Quần xã và hệ sinh thái]
-  H --> J
-  A --> K[Dân số và di cư]
-  K --> L[Đô thị hóa]
-  A --> M[Địa lý chính trị và kinh tế]
-  F --> N[Địa lý vùng]
-  G --> N
+  A[Geographical thinking] --> B[Coordinates / Maps / GIS]
+  A --> C[Earth systems]
+  C --> D[Plate tectonics / Geomorphology]
+  C --> E[Atmosphere / Climate]
+  E --> F[Hydrology / Oceans]
+  D --> G[Soils / Ecosystems]
+  F --> G
+  G --> H[Natural hazards / Risk]
+  A --> I[Population]
+  I --> J[Migration / Urbanization / Culture]
+  J --> K[Economic / Political geography]
+  K --> L[Agriculture / Industry / Trade]
+  L --> M[Development / Inequality]
+  D --> N[Regional geography]
+  E --> N
   M --> N
-  N --> O[Các hệ thống toàn cầu]
-  B --> Q[Địa cầu và địa lý toàn hành tinh]
-  Q --> R[World Atlas]
-  N --> R
-  E --> P[Địa lý + IT/Data]
+  N --> O[Global systems]
+  B --> P[GIS / IT / Data applications]
+  O --> Q[Selective World Atlas cases]
 ```
 
-## Cấu trúc
+## Cách đánh giá chất lượng chapter
 
-```text
-world_geography/
-├── 00_foundations/
-├── 01_physical_geography/
-├── 02_human_geography/
-├── 03_regions/
-├── 04_global_systems/
-├── 05_earth_global_geography/
-├── 06_world_atlas/
-└── 90_connections/
-```
+Một chapter tốt phải trả lời được: khái niệm là gì; vấn đề nào khiến nó cần tồn tại; cơ chế hoạt động thế nào; biến/flow/constraint nào quan trọng; ở scale nào kết luận có thể đổi; dữ liệu đo bằng gì; limitation và misconception ở đâu; nó nối với chapter nào.
 
-Bộ tài liệu ưu tiên kiến thức tương đối bền vững. Với số liệu dân số, GDP, khí hậu cực trị, tên chính thức hoặc tình trạng lãnh thổ có thể thay đổi theo thời điểm, hồ sơ atlas ưu tiên cơ chế địa lý và ghi rõ hệ phân loại đang dùng thay vì coi một con số tạm thời là kiến thức cố định.
+Số file, số heading và số dòng không phải metric chất lượng.
+
+## Quy tắc ngôn ngữ
+
+Phần giải thích dùng tiếng Việt tự nhiên. Thuật ngữ tiếng Anh được giữ như keyword bổ sung khi giúp tra cứu, ví dụ `khả năng tiếp cận (accessibility)`, `tự tương quan không gian (spatial autocorrelation)`. Code, công thức, acronym và canonical name giữ nguyên khi dịch làm mất chính xác.
+
+## Nội dung thay đổi theo thời gian
+
+Core ưu tiên kiến thức tương đối bền vững. Population, GDP, trade share, current government, current border/dispute status hoặc ranking nếu được dùng phải có mốc thời gian và nguồn phù hợp. Atlas không nên trở thành snapshot nhanh lỗi thời.
+
+## Roadmap sau audit
+
+Thứ tự ưu tiên hiện tại là:
+
+**core cross-link audit → East Asia/Southeast Asia regional depth → selective high-value Atlas profiles → comparative geography chapters**.
+
+Không quay lại chiến lược tạo hàng trăm country skeleton.

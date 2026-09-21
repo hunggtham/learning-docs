@@ -1,51 +1,80 @@
 # Phương pháp, tên gọi và phạm vi của World Atlas
 
-## Vì sao cần một chuẩn inventory?
+## Inventory và learning profile là hai bài toán khác nhau
 
-Cụm từ “mọi quốc gia và vùng lãnh thổ” tưởng đơn giản nhưng trong dữ liệu thực tế có nhiều lớp: quốc gia thành viên Liên Hợp Quốc, quốc gia quan sát viên, lãnh thổ phụ thuộc, đặc khu, đảo xa, vùng có mã thống kê riêng và các không gian có tình trạng được mô tả khác nhau giữa hệ thống quốc tế.
+Cụm “mọi quốc gia và vùng lãnh thổ” có nhiều lớp thống kê và pháp lý. Để inventory không tùy ý, project dùng **UN M49** làm baseline cho danh mục `countries or areas`, với ISO 3166 làm tham chiếu bổ trợ khi phù hợp.
 
-Để tránh tự tạo một danh sách tùy ý, atlas dùng **UN M49** làm baseline. M49 được UN Statistics Division duy trì cho mục đích thống kê và liệt kê các “country or area”, kèm mã số M49 và phần lớn có ISO alpha-3. UN nhấn mạnh việc xếp một khu vực vào nhóm thống kê không hàm ý lập trường về tình trạng pháp lý, chính quyền hay ranh giới.
+Việc một entry nằm trong inventory không buộc phải có một chapter riêng. Inventory giải quyết **completeness của danh sách**; learning profile giải quyết **giá trị giáo dục**.
 
-ISO 3166 được dùng bổ trợ vì tiêu chuẩn này định nghĩa mã cho **countries, dependencies and other areas of particular geopolitical interest**. Hai hệ có mục tiêu gần nhau nhưng không hoàn toàn giống nhau.
+## Cấu trúc file không phải tuyên bố chủ quyền
 
-## Hồ sơ không phải tuyên bố chủ quyền
+Nếu một không gian được phân tích riêng, điều đó chỉ có nghĩa nó hữu ích cho địa lý. Folder, tên file và mã không được dùng như kết luận về chủ quyền, tính chính danh hoặc đường biên.
 
-Folder và tên file chỉ là cấu trúc tri thức. Nếu một vùng được viết thành file riêng, điều đó có nghĩa **nó hữu ích khi phân tích địa lý độc lập**, không có nghĩa atlas tuyên bố nó là quốc gia có chủ quyền.
+Với khu vực có cách phân loại khác nhau giữa hệ thống quốc tế, profile phải ghi provenance và tách: hệ phân loại thống kê, tình trạng/quan điểm theo nguồn và cấu trúc địa lý đang phân tích. Không suy ý định chính trị từ bản đồ.
 
-Ngược lại, nếu M49 gộp một khu vực trong mã thống kê khác, atlas vẫn có thể tạo profile bổ sung nếu cần để hiểu địa hình, dân cư, kinh tế hay mạng lưới của khu vực đó. Phần đầu file phải ghi rõ ngữ cảnh phân loại.
+## Không tạo stub để chạy coverage
 
-## Trường hợp M49 không tách riêng
+Một template có vài câu không phải profile. Từ audit này, quy tắc là:
 
-UN M49 nêu rõ hai ví dụ thường gặp. Kosovo không xuất hiện như một mục chính trong M49; M49 mô tả nó trong bối cảnh Nghị quyết Hội đồng Bảo an 1244 (1999) và cho biết mã 412 có thể dùng cho mục đích thống kê nghiêm ngặt. Taiwan Province of China cũng không xuất hiện như một mục chính; M49 xem trong mã China 156 nhưng cho biết mã 158 có thể được dùng cho mục đích thống kê nghiêm ngặt.
+- không auto-generate country files từ inventory;
+- không đánh dấu completed chỉ vì file tồn tại;
+- không dùng số line/heading như metric chất lượng;
+- không copy cùng một đoạn cho hàng chục country rồi đổi tên;
+- nếu case không có đủ giá trị độc lập, gộp vào regional/comparative chapter.
 
-Atlas vì mục tiêu học địa lý sẽ có thể duy trì profile bổ sung cho các không gian này, với wording trung tính và ghi rõ hệ phân loại. Cách làm tương tự được áp dụng nếu sau này gặp một khu vực có mã thực tế trong datasets nhưng không là mục M49 chính.
+Các stub legacy từ batch trước chỉ là transitional reference và sẽ được promote/merge/remove khi Atlas được cleanup.
+
+## Bốn trạng thái nội dung
+
+**Inventory only:** chỉ có entry trong danh mục.
+
+**Reference:** có ghi chú ngắn để định vị nhưng chưa đủ làm bài học.
+
+**Learning profile:** có causal chain hoàn chỉnh, misconception, mental model và cross-link.
+
+**Deep comparative profile:** ngoài learning profile còn so sánh cơ chế với nơi khác, giải thích network dependency và nối nhiều domain core.
+
+Chỉ hai trạng thái cuối được tính vào educational coverage.
+
+## Profile phải có thesis, không chỉ template
+
+Mỗi profile nên trả lời một câu thesis, ví dụ: “địa lý của nơi này được tổ chức bởi một megadelta + export corridor + monsoon regime” hoặc “mountain water tower + landlocked trade dependence”.
+
+Các section sau phải chứng minh thesis. Nếu heading đầy đủ nhưng nội dung chỉ lặp fact, profile vẫn chưa đạt.
+
+## Nội dung bền vững và dữ liệu theo thời điểm
+
+Ưu tiên vị trí, relief, basin, climate regime, population pattern, urban hierarchy, production belt, port/corridor và hazard mechanism.
+
+Population/GDP/trade share, current government, ranking và event thay đổi nhanh chỉ thêm khi phục vụ một luận điểm, phải ghi năm và source. Không biến profile thành snapshot dễ lỗi thời.
+
+## Political geography và boundary provenance
+
+M49 là hệ thống thống kê; việc dùng M49 không đồng nghĩa Atlas tự đưa ra phán quyết pháp lý. Khi cần mô tả boundary hoặc maritime claim, phải dùng nguồn có thẩm quyền phù hợp, ghi thời điểm và thể hiện bất định/tranh chấp bằng wording trung tính.
+
+Bản đồ boundary cũng là data product: cần biết source, version và rule biểu diễn.
 
 ## Tên file và mã
 
-Nếu có ISO alpha-3, file ưu tiên dạng:
+Nếu có ISO alpha-3, file có thể dùng dạng `KOR_republic_of_korea.md`, `VNM_viet_nam.md`. Mã giúp link ổn định hơn tên hiển thị, nhưng mã không phải bản chất địa lý của territory.
 
-```text
-KOR_republic_of_korea.md
-VNM_viet_nam.md
-GRL_greenland.md
-```
+## Profile priority
 
-Mã giúp file ổn định ngay cả khi short name thay đổi. Tên hiển thị bên trong chapter dùng tiếng Việt trước, tên tiếng Anh/UN khi cần trong ngoặc.
+Thứ tự ưu tiên không dựa trên diện tích hoặc “quan trọng hơn” theo giá trị chính trị. Nó dựa trên **learning leverage**: nơi nào giúp hiểu nhiều concept, có liên hệ Korea–Vietnam hoặc có vai trò rõ trong economy/history/network geography thì được làm sâu trước.
 
-## Nội dung bền vững và nội dung theo thời điểm
+Nhóm đầu gồm East Asia, Southeast Asia, major global economies, chokepoint/corridor cases, megadeltas, landlocked states, city-states, archipelagos và resource-system cases.
 
-Atlas ưu tiên dữ kiện ít biến động: vị trí, địa hình, lưu vực, khí hậu nền, mô hình dân cư, mạng đô thị, cảng/hành lang và rủi ro tự nhiên. Số liệu dân số, GDP, chính quyền hiện tại, xếp hạng và số liệu thương mại thay đổi nhanh nên chỉ thêm khi có mục đích phân tích rõ, ghi năm và nguồn.
+## Definition of Done
 
-Một profile không nên trở thành “snapshot năm nay” nhanh lỗi thời.
+Một profile chỉ được gắn `Learning profile` khi người đọc có thể trả lời:
 
-## Chính trị và biên giới
+- physical structure tạo constraint/opportunity gì;
+- climate/water được tạo bởi cơ chế nào;
+- population/urban pattern vì sao nằm ở đó;
+- production và network có hình dạng nào;
+- external dependency và chokepoint nào quan trọng;
+- hazard biến thành risk qua exposure/vulnerability ra sao;
+- claim nào chỉ là model hoặc có limitation;
+- profile nối với prerequisite core files nào.
 
-Khi địa lý chính trị cần thiết, tài liệu mô tả **cấu trúc không gian và tình trạng theo nguồn**, không tự suy ý định, tính chính danh hay kết quả tương lai. Với tranh chấp, cần tách ba lớp: kiểm soát thực tế, yêu sách pháp lý/ngoại giao và cách nguồn dữ liệu phân loại.
-
-Bản đồ có thể khác nhau vì dùng nguồn khác; đó là lý do provenance của boundary dataset là một phần của kiến thức GIS.
-
-## Mức hoàn thiện của profile
-
-Một profile được coi là “đã viết” khi có đủ các lớp: khung không gian; địa hình–kiến tạo; khí hậu–nước; sinh thái/tài nguyên khi có ý nghĩa; dân cư–đô thị; kinh tế không gian; mạng giao thông–liên kết; rủi ro; hiểu lầm phổ biến; mental model và cross-link.
-
-Không tạo hàng trăm stub một đoạn chỉ để đủ số file. Inventory có thể hoàn chỉnh trước, nhưng profile phải được phát triển theo batch có chiều sâu.
+Nếu chưa trả lời được, nó vẫn là reference, không phải completed content.

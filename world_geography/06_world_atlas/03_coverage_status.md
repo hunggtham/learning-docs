@@ -1,60 +1,66 @@
-# Coverage status — World Atlas
+# Coverage Status — World Atlas
 
-Tài liệu này theo dõi **profile thực sự đã được viết**, không tính README inventory là profile hoàn chỉnh.
+## Coverage phải tách inventory khỏi learning content
 
-## Nền tảng atlas — hoàn thành
+Atlas hiện có **inventory rộng** dựa trên UN M49 và nhiều file country/area được tạo trong các batch trước. Từ audit này, sự tồn tại của một file **không còn được tính là nội dung hoàn thành**.
 
-- Methodology và coverage policy: hoàn thành.
-- Global inventory theo UN M49: hoàn thành.
-- Profile template: hoàn thành.
-- Supplemental policy cho các không gian không là entry M49 chính: hoàn thành.
+Có ba lớp coverage khác nhau:
 
-## Asia — hoàn thành baseline M49
+**Inventory coverage** nghĩa tên/mã country-or-area đã có trong index để không bỏ sót không gian thống kê. Lớp này có thể hoàn chỉnh mà không cần tạo hàng trăm chapter.
 
-Central Asia, Eastern Asia, South-eastern Asia, Southern Asia và Western Asia đều đã có profile. Supplemental geographic profile cho Taiwan đã được tạo để phục vụ học địa lý mà không dùng cấu trúc file làm tuyên bố về chủ quyền.
+**Reference stub** là file ngắn giúp định vị hoặc ghi mental model sơ bộ. Nó không phải learning chapter và không được tính vào completion metric.
 
-## Europe — hoàn thành baseline M49
+**Learning profile** là chapter có causal chain đầy đủ: physical base → climate/water → population/urban → economy → networks → hazards/constraints → misconceptions → mental model → cross-links. Chỉ lớp này mới được tính là nội dung Atlas hoàn chỉnh.
 
-Eastern, Northern, Southern và Western Europe đều đã có profile. Kosovo có supplemental geographic profile với ghi chú classification trung tính.
+## Trạng thái hiện tại
 
-## Africa — hoàn thành baseline M49
+**Inventory coverage:** rộng và về cơ bản đã bao phủ Africa, Americas, Asia, Europe, Oceania và Antarctica theo baseline M49 đã dùng trong project.
 
-Northern, Eastern, Middle, Southern và Western Africa đều đã có profile cho toàn bộ country/area trong inventory M49, gồm island/overseas areas và Western Sahara theo tên entry thống kê.
+**Learning-profile coverage:** **chưa hoàn chỉnh toàn cầu**. Một số profile lớn đã được depth-pass, đặc biệt nhóm Africa trong các commit gần đây; nhiều file Asia/Europe/Americas/Oceania vẫn ở mức compact hoặc reference-only và phải re-audit trước khi được gắn nhãn hoàn chỉnh.
 
-## Americas — hoàn thành baseline M49
+**Legacy short profiles:** còn tồn tại từ giai đoạn chạy coverage. Chúng được xem là transitional reference files, không nằm trong learning route và là ứng viên để **nâng sâu, gộp vào subregion chapter hoặc xóa** khi cleanup Atlas. Không tiếp tục tạo thêm file kiểu này.
 
-Northern America, Central America, Caribbean và South America đều đã có profile. Americas còn có chapter continental patterns nối mountain systems, basins, urban corridors, gateways và climate teleconnections.
+## Quy tắc từ thời điểm audit
 
-## Oceania — hoàn thành baseline M49
+Không tạo profile mới chỉ để “đủ quốc gia”. Global inventory chịu trách nhiệm completeness của danh sách; profile folder là **curated learning layer**.
 
-Australia and New Zealand, Melanesia, Micronesia và Polynesia đều đã có profile cho mọi country/area trong inventory. Oceania có chapter regional patterns giải thích high island–atoll contrast, freshwater lens, ocean-distance logistics và reef as natural infrastructure.
+Một file template chưa có giải thích cơ chế không được tính là completed. Số heading hoặc số dòng cũng không đủ; mỗi section phải trả lời “vì sao / bằng cơ chế nào / giới hạn gì”.
 
-## Antarctica — hoàn thành atlas profile
+Nếu một country/territory không có đủ giá trị học độc lập, kiến thức của nó nên nằm trong chapter tiểu vùng hoặc comparative chapter thay vì giữ một skeleton riêng.
 
-Antarctica có chapter riêng phù hợp một polar continent thay vì ép vào country template, bao gồm ice dynamics, Southern Ocean, research logistics và remote sensing.
+## Priority learning profiles
 
-# Baseline global coverage: HOÀN THÀNH
+Atlas ưu tiên nơi có giá trị cao đối với route Korea–Vietnam, kinh tế thế giới, lịch sử mạng thương mại và các hệ thống địa lý lớn.
 
-Ở cấp inventory M49, atlas hiện đã có profile cho **tất cả country/area thuộc Africa, Americas, Asia, Europe, Oceania và Antarctica**, cộng supplemental profiles cho một số không gian địa lý không tách riêng như entry M49 chính.
+Nhóm Đông Á/Đông Nam Á nên ưu tiên **Republic of Korea, Viet Nam, China, Japan, DPR Korea, Taiwan (supplemental geographic case), Singapore, Indonesia, Malaysia, Thailand và Philippines**.
 
-Điều này không có nghĩa mọi chapter đã đạt độ sâu cuối cùng. Từ đây library chuyển sang **Depth Pass**.
+Nhóm global economy nên ưu tiên **United States, India, Germany, France, United Kingdom, Netherlands, Australia** cùng các case có vai trò lớn trong manufacturing, finance, ports hoặc commodity networks.
 
-## Depth Pass — đang triển khai
+Nhóm energy/chokepoint nên chọn profile theo giá trị cơ chế như **Saudi Arabia, Iran, Türkiye, United Arab Emirates, Egypt, Panama** và các corridor/gateway liên quan, nhưng nội dung địa chính trị theo thời điểm phải kiểm tra nguồn cập nhật và giữ wording trung tính.
 
-### Africa — major profiles đã nâng lên mức textbook
+Các profile Africa đã được depth-pass vẫn được giữ vì chúng cung cấp case tốt về Sahel, Nile, Congo Basin, Great Rift, landlocked corridors, resource belts và urbanization.
 
-Nigeria, Ethiopia, Kenya, Democratic Republic of the Congo, South Africa, Algeria, Egypt, Morocco, Sudan, Tanzania, Uganda, Angola, Cameroon, Ghana, Senegal, Libya, Tunisia, Mozambique, Madagascar, Zambia, Zimbabwe, Côte d’Ivoire, Mali, Niger và Botswana đã được mở rộng từ summary ngắn thành chapter theo causal chain.
+## Không dùng Atlas để thay core
 
-Các chapter này hiện có các lớp: physical structure → water/climate → settlement/urban hierarchy → production geography → transport/corridor → hazard/exposure → misconception → mental model.
+Nếu một concept như demographic transition, monsoon, plate tectonics, agglomeration hay chokepoint chưa hiểu, phải quay lại core chapter. Country profile chỉ minh họa sự kết hợp của nhiều cơ chế ở một place cụ thể.
 
-### Ưu tiên tiếp theo
+## Definition of Done cho một Learning Profile
 
-1. Hoàn thiện Africa depth pass: Malawi, Rwanda, Burundi, Somalia, Namibia, Lesotho, Eswatini, Gabon, Congo, Guinea và các island/overseas entries.
-2. Asia depth pass: ưu tiên các country profile 9–15 dòng ở Central, Southern và Western Asia.
-3. Europe depth pass: nâng các profile mini-state/territory và các nước được tạo ở batch đầu.
-4. Americas/Oceania: chuẩn hóa các profile nhỏ và bổ sung comparative geography.
-5. Thêm các chapter comparison theo pattern: landlocked states, archipelagos, megadeltas, mountain states, desert states, global city-states, polar/subpolar territories.
+Một profile đủ chuẩn khi:
 
-## Definition of Done nâng cao
+1. Có thesis không gian rõ: “territory này được tổ chức bởi những cấu trúc nào?”.
+2. Giải thích physical base và climate/water bằng cơ chế, không chỉ liệt kê núi–sông.
+3. Giải thích population/urban pattern bằng accessibility, history và network.
+4. Giải thích production zones, corridor và external dependency.
+5. Tách hazard, exposure và vulnerability.
+6. Có ít nhất một phần misconception/limitation.
+7. Có mental model cô đọng nhưng không thay cho phần giải thích.
+8. Có relative links về prerequisite core và region chapter.
+9. Tránh số liệu nhanh lỗi thời nếu không có năm/nguồn.
+10. Có đủ chiều sâu để đọc độc lập; template/skeleton không đạt điều kiện này.
 
-Một profile đạt mức textbook khi người đọc có thể trả lời được: **vì sao dân cư nằm ở đó; vì sao network có hình dạng đó; tài nguyên/nước đến từ đâu; nút nào là critical; hazard biến thành risk bằng cơ chế nào; và territory này giống/khác nơi nào trên thế giới**.
+## Cleanup queue
+
+Khi quay lại Atlas, ưu tiên re-audit theo subregion. File reference-only sẽ nhận một trong ba quyết định: **promote** thành learning profile, **merge** vào regional/comparative chapter, hoặc **remove** nếu không tạo giá trị ngoài inventory.
+
+Metric quan trọng từ đây là **số profile có giá trị học và chất lượng cross-link**, không phải tổng số `.md`.

@@ -1,16 +1,46 @@
-# World Atlas — Quốc gia, vùng lãnh thổ và các không gian địa lý của thế giới
+# World Atlas — Application Layer của Knowledge Library
 
-Atlas này không được thiết kế như bảng tra “thủ đô – diện tích – dân số”. Mỗi hồ sơ phải giải thích **vì sao không gian đó có cấu trúc như hiện nay** bằng cách nối địa hình, khí hậu, nước, dân cư, mạng đô thị, kinh tế, giao thông, rủi ro và vị trí khu vực.
+## Atlas không phải mục tiêu coverage theo số file
 
-Một quốc gia có thể thay đổi chính phủ hoặc số liệu GDP trong vài năm, nhưng nhiều ràng buộc địa lý tồn tại hàng thập kỷ đến hàng triệu năm: không giáp biển, nằm trên cung núi lửa, kiểm soát một eo biển, có đồng bằng châu thổ, phụ thuộc một lưu vực hay có mạng đô thị dọc bờ biển. Atlas ưu tiên những cấu trúc bền vững này.
+World Atlas dùng quốc gia, vùng lãnh thổ và các không gian địa lý như **case study** để áp dụng kiến thức core. Nó không phải bảng tra “thủ đô–dân số–GDP”, cũng không phải dự án tạo một file cho mọi mã chỉ để đạt 100% file coverage.
 
-## Chuẩn coverage
+Danh sách toàn cầu được giữ ở [Global inventory](./01_global_inventory.md). Inventory có thể đầy đủ mà profile học tập vẫn có tính chọn lọc.
 
-Inventory chính dùng **UN M49 — Standard country or area codes for statistical use**. M49 bao gồm “countries or areas” và chia mỗi mục vào một vùng thống kê. Việc dùng phân loại này nhằm có một baseline nhất quán; nó **không được hiểu là phán quyết của tài liệu về chủ quyền, đường biên hay tính hợp pháp chính trị**.
+## Ba loại nội dung phải phân biệt
 
-Bên cạnh M49, atlas có thể tạo **hồ sơ địa lý bổ sung** cho những không gian thường cần phân tích riêng trong bản đồ, thống kê hoặc kinh tế nhưng M49 không tách thành mục chính. Những file như vậy phải ghi rõ lý do tồn tại và hệ phân loại nguồn đang dùng.
+**Inventory entry** chỉ đảm bảo một không gian không bị bỏ khỏi danh mục.
 
-Xem chi tiết: [Phương pháp và coverage](./00_methodology_and_coverage.md).
+**Reference stub** là ghi chú ngắn từ các batch cũ. Nó có thể hữu ích để định vị nhưng **không được tính là chapter hoàn chỉnh** và không nằm trong learning route.
+
+**Learning profile** là tài liệu độc lập có causal reasoning và cross-link với core. Chỉ loại này được xem là nội dung Atlas đã hoàn thiện.
+
+Xem trạng thái: [Coverage status](./03_coverage_status.md).
+
+## Khi nào một country đáng có profile riêng?
+
+Tạo hoặc giữ profile riêng khi territory cung cấp case học đáng giá: cấu trúc địa hình–khí hậu đặc biệt, demographic transition, global production network, major port/corridor, resource system, chokepoint, megadelta, landlocked dependency, city-state, archipelago hoặc liên hệ trực tiếp với Korea–Vietnam.
+
+Nếu kiến thức chỉ lặp lại chapter vùng và không có cơ chế riêng đáng học, nên gộp vào regional/comparative chapter thay vì duy trì skeleton.
+
+## Phương pháp đọc profile
+
+Bắt đầu bằng thesis không gian. Sau đó theo causal chain:
+
+**physical base → climate/water → settlement/population → production → transport/network → external dependencies → hazard/risk → transformation**.
+
+Mục tiêu là có thể giải thích vì sao pattern xuất hiện, không phải nhớ danh sách fact.
+
+## Nội dung bền vững trước snapshot
+
+Atlas ưu tiên địa hình, lưu vực, climate regime, network structure, urban hierarchy và corridor. Dân số, GDP, trade share, government hoặc current dispute thay đổi nhanh chỉ nên đưa vào khi có mục đích phân tích, kèm thời điểm và nguồn.
+
+Với vấn đề chính trị/biên giới, cấu trúc file không phải tuyên bố về chủ quyền. Xem [Methodology](./00_methodology_and_coverage.md).
+
+## Vai trò của Korea và Vietnam trong route
+
+Vì library phục vụ việc học có liên hệ trực tiếp với Korea và Vietnam, East Asia và Southeast Asia là application priority. Các profile Korea–Vietnam–China–Japan và các node ASEAN quan trọng nên được nâng sâu trước khi mở rộng long tail.
+
+Country profile phải quay lại core chapter như population, migration, industry, trade, hydrology hoặc climate. Nếu profile có thể đọc mà không cần core, nó dễ biến thành encyclopedic fact sheet thay vì knowledge graph.
 
 ## Cấu trúc
 
@@ -19,6 +49,7 @@ Xem chi tiết: [Phương pháp và coverage](./00_methodology_and_coverage.md).
 ├── 00_methodology_and_coverage.md
 ├── 01_global_inventory.md
 ├── 02_profile_template.md
+├── 03_coverage_status.md
 ├── africa/
 ├── americas/
 ├── asia/
@@ -28,10 +59,4 @@ Xem chi tiết: [Phương pháp và coverage](./00_methodology_and_coverage.md).
 └── supplemental/
 ```
 
-Các folder châu lục chứa README inventory trước; hồ sơ chi tiết được thêm theo từng tiểu vùng. Khi một profile hoàn thiện, nó phải đủ sâu để người đọc hiểu khu vực mà không cần chỉ dựa vào chapter vùng tổng quát.
-
-## Cách đọc một hồ sơ
-
-Hãy bắt đầu bằng **khung không gian**: giáp đâu, mở ra biển nào, địa hình nào chia cắt bên trong. Sau đó đọc **khung vật lý**: kiến tạo, khí hậu, lưu vực, tài nguyên và hiểm họa. Tiếp theo là **khung con người**: dân cư nằm ở đâu và vì sao, đô thị nào là nút chính, kinh tế bám theo hành lang nào. Cuối cùng đọc **mạng bên ngoài**: cảng, tuyến thương mại, biên giới, phụ thuộc năng lượng–lương thực–nước và rủi ro truyền qua mạng.
-
-Mục tiêu cuối cùng không phải nhớ từng fact, mà có thể nhìn bản đồ trống và suy ra: **“nếu địa hình, khí hậu và vị trí như vậy, những mẫu dân cư–kinh tế nào có khả năng xuất hiện?”**
+Atlas được đọc **sau** [Learning Route](../LEARNING_ROUTE.md), không phải trước.

@@ -1,47 +1,63 @@
 # Template hồ sơ quốc gia / vùng lãnh thổ
 
-Template này định nghĩa **logic nội dung**, không phải form bắt buộc cứng nhắc. Profile nên viết thành prose liền mạch; chỉ dùng bảng/bullet khi thật sự phù hợp với inventory hoặc so sánh.
+## Template là logic suy luận, không phải checklist để tạo skeleton
 
-## Tên và vị trí trong atlas
+File này chỉ hướng dẫn cách xây **Learning Profile**. Không được tạo đủ heading rồi viết mỗi mục một câu để đánh dấu completed. Nếu territory không có đủ giá trị học độc lập, hãy đưa nó vào regional/comparative chapter.
 
-Giải thích tên tiếng Việt, short name quốc tế, mã ISO/M49 nếu có, tiểu vùng M49 và nếu cần tình trạng đặc biệt của entry. Không biến mục này thành bài chính trị; chỉ đủ để người đọc biết file đại diện cho không gian nào.
+## 1. Thesis không gian
 
-## Khung không gian
+Mở đầu bằng 2–4 câu trả lời: **những cấu trúc nào tổ chức territory này?** Ví dụ mountain water tower, megadelta, island network, landlocked corridor, global city-state hoặc resource-export axis.
 
-Mô tả vị trí tương đối, biển, nước láng giềng, độ kéo dài, hình dạng, đảo/bán đảo, khoảng cách tới tuyến lớn. Quan trọng hơn là giải thích hệ quả: không giáp biển → phụ thuộc corridor; quần đảo → logistics biển; lãnh thổ dài hẹp → network dọc trục.
+Thesis phải được chứng minh ở các phần sau.
 
-## Địa hình và kiến tạo
+## 2. Khung không gian và effective location
 
-Không chỉ liệt kê núi/sông. Giải thích vì sao địa hình tồn tại và nó chia không gian thành vùng chức năng nào.
+Giải thích vị trí tương đối, sea/neighbor, shape, island/peninsula, landlockedness và khoảng cách tới network lớn. Không chỉ nói “giáp X”; phải nói vị trí đó làm access/cost/dependency thay đổi thế nào.
 
-## Khí hậu, nước và sinh thái
+## 3. Địa hình, kiến tạo và vật liệu nền
 
-Nêu cơ chế tạo mùa/mưa/khô, lưu vực chính, nguồn nước và giới hạn. Nếu có gió mùa, dòng biển, bóng mưa, băng tuyết hay khô hạn, nối trực tiếp với nông nghiệp và định cư.
+Núi, basin, plateau, delta, volcanic arc hoặc craton tồn tại vì quá trình gì? Địa hình chia territory thành các vùng chức năng nào và ảnh hưởng route/settlement ra sao?
 
-## Dân cư và mạng đô thị
+## 4. Khí hậu, nước và sinh thái
 
-Giải thích **người tập trung ở đâu và vì sao**. Thành phố được đọc như node: thủ đô hành chính, cảng, industrial cluster, gateway hay metropolitan core.
+Giải thích energy/moisture mechanism: monsoon, westerly, current, rain shadow, altitude, seasonality. Xác định basin, groundwater, snow/ice hoặc coastal system quan trọng.
 
-## Kinh tế không gian
+Không dùng annual rainfall trung bình để thay toàn bộ water geography.
 
-Mô tả các vùng sản xuất, resource belt, agricultural zone, industrial corridor, service/finance center. Tránh chỉ liệt kê ngành đóng góp GDP.
+## 5. Dân số và urban network
 
-## Giao thông và mạng ngoài
+Người tập trung ở đâu và vì sao? Phân biệt administrative capital, economic core, port/gateway và secondary city. Nếu có urban primacy/polycentricity, giải thích bằng history + accessibility + agglomeration.
 
-Cảng, sân bay, đường sắt, sông, corridor, border crossing, chokepoint. Hỏi “nếu một tuyến bị gián đoạn thì dòng sẽ đi đâu?”.
+## 6. Economic geography
 
-## Rủi ro và môi trường
+Xác định production belt, industrial cluster, agriculture zone, resource corridor, service node. Không liệt kê ngành theo GDP; phải nối ngành với labor, port, energy, water và supplier network.
 
-Tách hazard, exposure, vulnerability. Nêu các trade-off: đồng bằng màu mỡ nhưng lũ; núi cung cấp nước nhưng trượt lở; bờ biển mở thương mại nhưng chịu bão.
+## 7. Transport, trade và external dependency
 
-## Những hiểu lầm phổ biến
+Cảng, railway, highway, border crossing, aviation, cable. Hỏi: nếu một link lỗi, flow reroute ở đâu? Country profile có giá trị cao khi cho thấy network dependency chứ không chỉ tên infrastructure.
 
-Chọn 2–4 misconception đáng giá, đặc biệt các nhận định do nhìn bản đồ sai quy mô hoặc đồng nhất toàn quốc.
+## 8. Hazard, exposure và vulnerability
 
-## Mô hình tư duy
+Tách physical hazard khỏi nơi population/asset nằm và capacity thích ứng. Một fertile floodplain vừa là opportunity vừa là exposure; một coast vừa mở trade vừa chịu storm/sea-level risk.
 
-Kết thúc bằng 2–4 câu cô đọng mô hình không gian của territory, ví dụ “mountain water tower → coastal industrial corridor → maritime trade network”.
+## 9. Transformation
 
-## Liên kết
+Nêu 2–4 quá trình dài hạn làm geography đổi: demographic transition, urbanization, industrial restructuring, water stress, climate adaptation, energy transition hoặc corridor development. Tránh dự đoán political outcome.
 
-Link tới chapter vùng, physical geography và global system liên quan.
+## 10. Misconceptions và limits
+
+Chọn ít nhất hai hiểu lầm có giá trị học. Ví dụ “landlocked = isolated”, “desert = empty”, “small island = unimportant”, “resource-rich = rich economy”. Giải thích cơ chế làm nhận định sai.
+
+## 11. Mental model
+
+Kết thúc bằng causal chain ngắn, không dùng mental model thay cho nội dung. Ví dụ:
+
+**mountain water tower → narrow settlement corridors → port dependence → export manufacturing network**.
+
+## 12. Cross-links
+
+Link tới ít nhất một physical/core chapter, một human/global chapter và region chapter liên quan. Profile là node ứng dụng của knowledge graph.
+
+## Completion gate
+
+Không gắn nhãn Learning Profile nếu thiếu causal mechanism, limitation và cross-link. File chỉ 3–10 dòng hoặc chỉ có fact list mặc định là **Reference Stub**, bất kể tên file hay số heading.
