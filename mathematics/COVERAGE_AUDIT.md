@@ -1,115 +1,262 @@
-# Coverage Audit — Master Knowledge Book: Toán
+# Coverage & Depth Audit — Mathematics Knowledge Library
 
-## Phạm vi của từ “hoàn thiện”
+## Mục tiêu của audit
 
-“Toán học” là một lĩnh vực mở nên không tồn tại một bộ tài liệu hữu hạn có thể bao phủ mọi branch nghiên cứu. Trong Knowledge Library này, **hoàn thiện trong scope** được hiểu là: bao phủ mạch kiến thức từ toán phổ thông đến nền tảng đại học và các mathematical structures cốt lõi dùng trong Computer Science, Software Engineering, AI/Data, Statistics, Engineering, signal/control và quantitative reasoning; đồng thời hạn chế tối đa việc một chapter sử dụng concept chưa từng được giải thích ở đâu trong library.
+Mathematics Knowledge Library hiện đã có coverage rộng từ school mathematics tới foundational university mathematics, Computer Science, AI/Data, numerical mathematics, optimization, signal/control và quantitative reasoning. Vì vậy audit hiện tại **không dùng số lượng chapter làm mục tiêu chính**.
 
-Một topic đạt yêu cầu khi có explanation theo first principles, giải thích meaning của công thức thay vì chỉ liệt kê formula, chỉ rõ assumptions/conditions quan trọng, có example hoặc application đủ cụ thể, có mental model để hình thành intuition và có phần Common Misconceptions cho các lỗi nhận thức thường gặp.
+Tiêu chí mới là **depth + learning dependency**: người đọc có hiểu vấn đề trước khi gặp formalism không, formula có được giải thích meaning/assumptions không, theorem/rule có proof idea không, examples có đủ để transfer reasoning không, và các chapter có nối với nhau thành knowledge graph hay vẫn giống collection rời rạc.
 
-## Kết quả audit hiện tại — 2026-09-18
+Library vẫn giữ **87 topic files**; Round 6 không tăng chapter count. Thay đổi chính là rewrite các node có dependency centrality cao nhưng depth thấp hơn đáng kể so với phần còn lại.
 
-Library hiện có **87 topic files**, chưa tính `README.md`, glossary và file audit này.
+## Chuẩn đánh giá depth
 
-Các vòng đầu đã bổ sung các khoảng trống lớn ở rational functions/domain, composition/inverse, conics, trigonometric identities/harmonics, orthogonality/projection, determinant/rank/null space, infinite series/Taylor, vector calculus, statistical inference, multivariate probability, information theory, computability, constrained optimization, numerical linear algebra và Fourier analysis.
+Một chapter được xem là đủ sâu trong scope khi phần lớn các câu hỏi sau có câu trả lời ngay trong chapter:
 
-Vòng tiếp theo bổ sung mathematical modeling & dimensional analysis, topology nhập môn, PDE, likelihood/MLE/MAP, abstract algebra nền tảng, linear programming/duality và Laplace/Z-transform.
+- Concept giải quyết vấn đề gì?
+- Intuition nào nên hình thành trước definition?
+- Formal definition/theorem xuất hiện sau intuition như thế nào?
+- Formula đến từ đâu và từng term có meaning gì?
+- Assumptions/domain validity là gì?
+- Có proof idea hoặc derivation phù hợp không?
+- Có worked example, counterexample hoặc failure mode không?
+- Concept liên hệ gì với prerequisite và downstream chapters?
+- Có connection thực sự về structure với CS, Physics, AI hoặc Finance không?
+- Mental Model có giúp reasoning transfer không?
+- Common Misconceptions có giải thích vì sao lỗi tư duy xuất hiện không?
 
-**Audit round 4** tiếp tục mở rộng phần nối giữa toán nền tảng và modern computing bằng bảy topic mới: Tensor & Multilinear Algebra; Matrix Calculus/Jacobian/Hessian/Automatic Differentiation; Real Analysis; Complex Analysis; Stochastic Processes/Markov Chains/Time Series; Bayesian Inference/Posterior Predictive/Hierarchical Models; Dynamic Programming/Bellman/Optimal Control.
+File [`EDITORIAL_STANDARD.md`](./EDITORIAL_STANDARD.md) là chuẩn biên soạn canonical cho các vòng rewrite tiếp theo.
 
-Round 4 cũng không chỉ tăng số file. Ba chapter cốt lõi từng quá ngắn đã được rewrite đáng kể: `Eigenvalues and Eigenvectors`, `Integrals and Accumulation`, `Differential Equations`. Các bản mới bổ sung multiplicity, defective matrices, spectral radius, PCA/Markov/graph connections; substitution, Jacobian, multidimensional integration, expectation, convolution, Monte Carlo; existence/uniqueness, phase portrait, stability, linearization, numerical ODE, stiffness và connections với stochastic systems/control.
+## Domain-depth audit hiện tại
 
-## Phân bố topic hiện tại
+| Domain | Depth hiện tại | Audit learning dependency |
+|---|---|---|
+| Mathematical thinking | Mạnh | `00_foundations/00_mathematical_thinking.md` đã đủ vai trò entry point: modeling, abstraction, invariants, dimensions, approximation và first-principles reasoning. |
+| Logic | Khá mạnh | Propositions, implication, quantifiers, contrapositive và reasoning structure đã đủ cho discrete mathematics/proof. Có thể mở rộng formal logic sau này nhưng chưa phải bottleneck. |
+| Proof | Khá mạnh | Direct proof, contradiction, induction, counterexample và invariant đã có. Proof ideas được dùng downstream trong algorithms/number theory. |
+| Sets | Khá mạnh | Membership, subset, operations, Cartesian product và cardinality đủ làm prerequisite. |
+| Relations | Khá mạnh | Relations, equivalence relation và relation-as-subset-of-product đã có connection sang databases/discrete structures. |
+| Mappings | Mạnh | Functions/mappings đã được rewrite sâu ở Round 5; injective/surjective/bijective, composition, inverse và information-preservation đã rõ. |
+| Number systems | Khá mạnh | Natural/integer/rational/real/complex, positional systems và floating-point motivation đã có. |
+| Arithmetic | **Đã nâng mạnh Round 6** | Ratio/rate/proportion/percentage trước đây mỏng; hiện đã nối denominator reasoning, percentage points, weighted averages, geometric growth, finance returns, Simpson-style aggregation và units. |
+| Algebra | Trung bình-khá | Algebraic language và rational expressions ổn; equations/inequalities, powers/logarithms và polynomials vẫn ngắn hơn các chapter mới và là candidate Round 7. |
+| Functions | Mạnh | Function concept và exponential/logarithmic models đã rewrite; composition/inverse, recurrence, parametric/polar/implicit tạo learning flow tốt. |
+| Geometry | **Đã nâng một phần Round 6** | Pythagorean/distance và scaling laws đã rewrite sâu. Coordinate geometry và transformations/symmetry vẫn là các file tương đối ngắn cần ưu tiên tiếp. |
+| Trigonometry | Mạnh | Round 5 đã chuyển từ SOH-CAH-TOA sang unit-circle/rotation/radian/harmonics/Fourier viewpoint. |
+| Linear algebra | **Đã nâng mạnh Round 6** | Matrices, linear transformations và least squares/SVD trước đây là major depth gap. Ba chapter đã rewrite với rank/null-space, basis dependence, projection, conditioning, QR/SVD, pseudoinverse, regularization và applications. |
+| Calculus | **Đã nâng mạnh Round 5–6** | Limits đã rewrite Round 5; derivatives, derivative applications và multivariable calculus đã rewrite Round 6; integrals/ODE đã sâu từ Round 4. Calculus core hiện cân bằng hơn với analysis. |
+| Real analysis | Mạnh trong scope | Completeness, Cauchy/convergence, compactness, uniform convergence và rigorous calculus bridge đã đủ cho current library. |
+| Complex analysis | Mạnh trong scope | Complex derivative, Cauchy–Riemann, contour integration, residues và transform connections đã có. |
+| Probability | **Đã nâng mạnh Round 6** | Probability foundations đã rewrite: sample-space modeling, conditional probability, Bayes/base-rate, independence/conditional independence, expectation, calibration và common-cause dependence. |
+| Statistics | Khá mạnh | Sampling, estimation, confidence intervals, hypothesis testing, regression, MLE/MAP, Bayesian inference và multivariate probability đã có. Descriptive/inferential overview và regression chapter vẫn có thể polish sau nhưng không phải missing dependency. |
+| Discrete mathematics | Khá mạnh | Logic/induction, Boolean algebra, number theory, trees/posets/lattices, automata và algebraic structures đã đủ broad flow. |
+| Graph theory | Mạnh | Round 5 đã rewrite thành modeling + traversal + shortest path + SCC + matching + coloring + flow/cut + Laplacian/random walk connections. |
+| Information theory | Mạnh trong scope | Entropy, coding, cross-entropy/KL và probability connection đã có; không cần thêm chapter mới hiện tại. |
+| Numerical methods | Mạnh sau Round 5 | Numerical error, conditioning, stability, floating point, root finding, interpolation, numerical LA, ODE stability và mixed precision đã được nâng sâu. |
+| Optimization | **Đã nâng mạnh Round 6** | General optimization chapter đã rewrite từ modeling → convexity → gradients → constraints/KKT → duality → discrete/robust/multi-objective optimization. |
+| Dynamic programming | Mạnh trong scope | Bellman principle, MDP/value/policy iteration, optimal control bridge đã có riêng. |
+| Control | Khá mạnh | ODE/eigenvalue stability + Laplace/Z-transform + Bellman/optimal control tạo dependency path tốt. Control chuyên ngành sâu hơn hiện được xem là optional expansion, không phải prerequisite gap. |
+| Fourier/Laplace | Mạnh trong scope | Harmonics → Fourier/frequency → Laplace/Z-transform → ODE/control dependency đã rõ. |
+| Mathematical connections | Mạnh | Rate/change/accumulation, distance/projection, uncertainty/information, AI/Data/Software, Finance/Life, Fourier và dynamic systems đã có cross-domain chapters. |
 
-| Nhóm | Số topic | Phạm vi chính |
-|---|---:|---|
-| Foundations | 6 | mathematical thinking, proof, sets/mappings, number systems, units, modeling & dimensional analysis |
-| Algebra | 7 | equations, ratios, powers/logarithms, polynomials, complex numbers, rational expressions |
-| Functions | 6 | function concept, linear/quadratic, exponential/log, recurrence, composition/inverse, parametric/polar/implicit |
-| Geometry & Trigonometry | 9 | Euclidean/coordinate geometry, scaling, trigonometry, transformations, conics, harmonics, topology |
-| Vectors & Linear Algebra | 10 | vectors, matrices, transformations, spaces/basis, eigenstructure, SVD, projection, rank/null space, tensors, matrix calculus/autodiff |
-| Calculus & Analysis | 13 | limits, derivatives, integrals, multivariable calculus, ODE, numerical calculus, series/Taylor, vector calculus, PDE, real analysis, complex analysis |
-| Probability & Statistics | 13 | probability, Bayes, distributions, expectation, inference, regression, sampling/testing, multivariate probability, MLE/MAP, stochastic processes, Bayesian inference |
-| Discrete Mathematics & Theoretical CS | 9 | graphs, complexity, recurrence/induction, Boolean algebra, number theory, trees/posets/lattices, information theory, automata/computability, algebraic structures |
-| Optimization & Numerical Mathematics | 7 | general optimization, gradient/convexity, numerical error, constrained optimization/KKT, root finding/numerical LA, LP/duality, dynamic programming/control |
-| Knowledge Connections | 7 | rate/accumulation, distance/projection, uncertainty/entropy, AI/Data/Software, finance/daily life, Fourier, Laplace/Z-transform |
-| **Tổng** | **87** | Không tính README, glossary và audit |
+## Round 6 — Batch 1: Linear Algebra core
 
-## Audit round 4 — topic mới
+Commit batch tập trung ba files:
 
-### Tensor & Multilinear Algebra
+- `04_vectors_linear_algebra/01_matrices_and_linear_systems.md`
+- `04_vectors_linear_algebra/02_linear_transformations.md`
+- `04_vectors_linear_algebra/05_least_squares_svd_and_decompositions.md`
 
-File: `04_vectors_linear_algebra/08_tensors_and_multilinear_algebra.md`
+### Matrices and Linear Systems
 
-Khoảng trống trước audit là library đi từ vectors/matrices thẳng tới AI connections nhưng chưa giải thích tensor như mathematical object, tensor product, contraction, covariant/contravariant components, Einstein notation và distinction giữa tensor với multidimensional array trong software. Chapter mới lấp bridge này và nối trực tiếp sang ML tensor shapes và matrix calculus.
+Bản cũ đúng concept nhưng chủ yếu liệt kê matrix notation, Gaussian elimination, determinant và inverse. Bản mới tổ chức learning flow:
 
-### Matrix Calculus, Jacobian, Hessian & Automatic Differentiation
+```text
+constraints / transformations
+→ Ax=b
+→ column-space viewpoint
+→ row operations as reversible equivalence
+→ rank / nullity / consistency
+→ invertibility equivalences
+→ determinant as volume collapse
+→ conditioning
+→ least-squares dependency.
+```
 
-File: `04_vectors_linear_algebra/09_matrix_calculus_jacobian_hessian_and_autodiff.md`
+Thêm worked portfolio-constraint example, explicit distinction giữa exact algebra và numerical solving, cùng connections sang graphics, ML, circuits và sparse simulation.
 
-Trước đây multivariable calculus đã nhắc gradient/Jacobian nhưng chưa đủ để nối với backpropagation và modern autodiff. Chapter mới giải thích derivative như linear map của perturbations, Jacobian, Hessian, quadratic forms, matrix differentials, shape checking, forward/reverse-mode AD, Jacobian-vector product, vector-Jacobian product và Hessian-vector product.
+### Linear Transformations
 
-### Real Analysis
+Bản mới đặt **superposition** trước formalism. Matrix được giải thích như coordinate representation của an operator, không phải operator itself. Kernel được đọc như information-loss subspace, image như reachable outputs, rank-nullity như accounting of degrees of freedom.
 
-File: `05_calculus/11_real_analysis_convergence_and_rigor.md`
+Chapter cũng nối linearity với local Jacobian linearization, eigenbasis, physics superposition và neural-network representations.
 
-Calculus trước đây chủ yếu dùng intuition operational. Chapter mới bổ sung completeness của real numbers, epsilon definitions, Cauchy sequences, subsequences, compactness, pointwise/uniform convergence, continuity/differentiability rigor và lý do không thể tùy tiện đổi thứ tự limit/integral/derivative.
+### Least Squares, SVD and Decompositions
 
-### Complex Analysis
+Bản mới derive normal equations từ orthogonal projection, thêm worked line-fit example, giải thích vì sao normal equations không phải default numerical solver, và nối QR/SVD với conditioning.
 
-File: `05_calculus/12_complex_analysis_and_analytic_functions.md`
+Pseudoinverse, regularization, low-rank approximation, PCA, finance factor models và AI low-rank parameterization được thêm như consequences của cùng geometry, không phải application list rời rạc.
 
-Complex numbers trước đây đã có nhưng thiếu bridge sang analytic functions và transform methods. Chapter mới bổ sung complex derivative, Cauchy–Riemann equations, contour integrals, Cauchy theorem/formula, singularities, Laurent series, residues, harmonic functions và connection với Fourier/Laplace/control.
+## Round 6 — Batch 2: Calculus core
 
-### Stochastic Processes, Markov Chains & Time Series
+Files:
 
-File: `06_probability_statistics/11_stochastic_processes_markov_chains_and_time_series.md`
+- `05_calculus/01_derivatives.md`
+- `05_calculus/02_derivative_applications.md`
+- `05_calculus/04_multivariable_calculus.md`
 
-Probability trước đây chủ yếu mô tả random variables tĩnh. Chapter mới mở sang random evolution theo time với stationarity, autocorrelation, Markov property, transition matrices, stationary distributions, absorbing states, random walk, Poisson process, Brownian motion, martingales, AR/MA intuition, HMM và MCMC connection.
+### Derivatives
 
-### Bayesian Inference & Hierarchical Models
+Derivative được rewrite quanh idea **local response / local linear model** thay vì symbolic rules. Power rule, product rule và chain rule đều có derivation/proof idea. Units, error propagation, elasticity, implicit differentiation, numerical differentiation và automatic differentiation được nối bằng chung sensitivity structure.
 
-File: `06_probability_statistics/12_bayesian_inference_posterior_predictive_and_hierarchical_models.md`
+### Derivative Applications
 
-Library đã có Bayes theorem và MAP nhưng chưa có full Bayesian workflow. Chapter mới bổ sung prior/likelihood/posterior, conjugacy, posterior predictive, credible interval, prior/posterior predictive checks, hierarchical models, partial pooling, Bayesian regression, MCMC/variational inference, prior sensitivity và decision-theoretic interpretation.
+Critical points, first/second derivative tests và inflection được giải thích bằng sign/curvature/Taylor reasoning. Optimization section nhấn mạnh objective + feasible domain + boundaries thay vì “set derivative = 0”.
 
-### Dynamic Programming, Bellman & Optimal Control
+Newton method được derive từ tangent approximation; Physics equilibrium, AI gradients và Finance Greeks được dùng như structural connections.
 
-File: `08_optimization_numerical/06_dynamic_programming_bellman_and_optimal_control.md`
+### Multivariable Calculus
 
-Trước audit, recurrence trong CS và optimization tồn tại như hai nhánh nhưng chưa có chapter nối chúng thành sequential decision theory. Chapter mới giải thích state/action/transition, optimal substructure, Bellman equation, shortest path/knapsack/edit distance, stochastic DP, MDP, value iteration, policy iteration, curse of dimensionality, optimal control và HJB connection.
+Partial derivatives chỉ là entry point; chapter hiện lấy Jacobian/local-linear-map làm central idea. Gradient direction được derive bằng Cauchy–Schwarz, Hessian eigenvalues được nối với conditioning, Lagrange multiplier được derive từ normals/tangent space, và Jacobian determinant được giải thích như local volume scaling.
 
-## Các chapter được nâng cấp sâu trong round 4
+Probability density transforms, backpropagation, physical fields và multi-factor finance sensitivity được nối cùng dependency path.
 
-### Eigenvalues and Eigenvectors
+## Round 6 — Batch 3: Probability, Complexity and Optimization
 
-File giữ nguyên: `04_vectors_linear_algebra/04_eigenvalues_and_eigenvectors.md`
+Files:
 
-Bản mới bổ sung eigenspace, algebraic/geometric multiplicity, diagonalization dưới góc đổi basis, defective matrices, Jordan intuition, spectral radius, complex eigenpairs, positive definiteness, Rayleigh quotient, SVD relation, PCA, Markov chains, graph Laplacian, matrix exponential và numerical sensitivity.
+- `06_probability_statistics/01_probability_foundations.md`
+- `06_probability_statistics/03_random_variables_and_distributions.md`
+- `07_discrete_cs/01_algorithms_complexity_and_logarithms.md`
+- `08_optimization_numerical/00_optimization.md`
 
-### Integrals and Accumulation
+### Probability Foundations
 
-File giữ nguyên: `05_calculus/03_integrals_and_accumulation.md`
+Bản mới đặt event definition + information set + model assumptions trước formulas. Conditional probability được giải thích như renormalization khi universe thu hẹp. Bayes được derive từ hai factorization của joint event; worked medical-test example làm rõ base-rate effect.
 
-Bản mới mở rộng integral từ “area under curve” thành continuous accumulation framework: substitution, integration by parts, improper integrals, average value, probability/expectation, multidimensional change of variables/Jacobian, line/surface integrals, convolution, integral transforms, numerical quadrature, Monte Carlo integration và conservation laws.
+Independence/conditional independence, calibration, common-cause failures và expectation/risk được thêm để chapter usable cho AI, engineering và finance.
 
-### Differential Equations
+### Random Variables and Distributions
 
-File giữ nguyên: `05_calculus/05_differential_equations.md`
+Random variable được giữ đúng definition là mapping từ outcome space sang numbers. PMF/density/CDF được tổ chức như representations của probabilistic law, không phải các formulas tách rời.
 
-Bản mới bổ sung IVP, existence/uniqueness intuition, first-order linear equations, phase lines, equilibria/stability, characteristic roots, damping/resonance, systems of ODEs, matrix exponential, nonlinear linearization, phase planes, conservation laws, boundary-value problems, Euler/RK4, local/global error, stiffness, backward Euler, adaptive step size, event detection và non-dimensionalization.
+Chapter bổ sung indicator variables, expectation/variance reasoning, distribution assumptions, joint/marginal/conditional distributions, covariance limits, Jacobian transformation, quantiles/tails và links với likelihood losses.
 
-## Dependency gaps còn lại sau round 4
+### Algorithmic Complexity
 
-Không có gap lớn nào buộc các path phổ biến AI/Data/Software/Engineering phải nhảy qua một concept hoàn toàn chưa được giới thiệu. Tuy vậy, nếu tiếp tục mở rộng từ “broad master foundation” sang “upper-undergraduate / early graduate mathematical library”, các candidate hợp lý tiếp theo là measure theory & Lebesgue integration, functional analysis, differential geometry/manifolds, generating functions nâng cao, stochastic calculus, numerical PDE, graph spectral theory sâu hơn, combinatorial optimization, game theory và category theory nhập môn.
+Bản mới bắt đầu từ **cost model**. Big-O/Theta/Omega được giải thích như scaling statements; logarithm được derive từ repeated multiplicative shrinkage.
 
-Các topic này hiện được xem là **optional expansion**, không phải missing prerequisite bắt buộc của scope hiện tại. Khi thêm, cần giữ nguyên nguyên tắc: không thêm chapter chỉ để tăng số lượng; chapter mới phải lấp một dependency hoặc một knowledge connection có giá trị rõ ràng.
+Binary search, merge sort, lower bound cho comparison sorting, amortized dynamic arrays, representation-sensitive graph complexity, DP và practical hardware caveats được nối vào cùng growth-accounting model.
 
-## Tiêu chí tiếp tục audit
+### Optimization
 
-Các vòng tiếp theo nên ưu tiên hai loại vấn đề. Thứ nhất là chapter có file size/nội dung quá ngắn so với importance của concept; đây là lý do round 4 rewrite eigenvalues, integrals và differential equations. Thứ hai là concept được reference nhiều lần trong các ứng dụng nhưng chưa có chapter giải thích first principles.
+Bản mới nhấn mạnh objective/feasible set trước algorithms. Convexity có proof idea cho global guarantee, gradient descent được derive từ local linear model, Lagrange/KKT/duality được giải thích bằng geometry và shadow prices.
 
-Mục tiêu không phải biến library thành encyclopedia vô hạn, mà giữ một network kiến thức đủ sâu để người đọc có thể đi từ câu hỏi thực tế ngược về mathematical foundations mà không gặp “black box” quá lớn.
+Discrete optimization, Bellman structure, Pareto trade-offs, robust optimization, AI objective misspecification và finance estimation risk được thêm để tạo engineering judgment.
+
+## Round 6 — Batch 4: Arithmetic and Geometry bridges
+
+Files:
+
+- `01_algebra/02_ratio_proportion_percentage.md`
+- `03_geometry_trigonometry/02_pythagorean_theorem_and_distance.md`
+- `03_geometry_trigonometry/03_similarity_area_volume_and_scaling.md`
+
+### Ratio, Proportion and Percentage
+
+Chapter hiện phân biệt additive difference, multiplicative ratio, dimensional rate và percentage. Percentage point, repeated percentage compounding, weighted averages, geometric growth, annualized return, Simpson-style aggregation và nominal/real return được nối vào denominator reasoning.
+
+### Pythagorean Theorem and Distance
+
+Pythagoras được nâng từ triangle formula thành **orthogonal decomposition principle**. Inner product, generalized norm identity, projection proof của nearest point, law of cosines, least squares, statistics sum-of-squares, metrics và high-dimensional geometry đều được nối từ same structure.
+
+### Similarity, Area, Volume and Scaling
+
+Chapter hiện derive `k`, `k^2`, `k^3` từ independent dimensions, thêm square-cube law, determinant scaling, log-log power laws, resolution/voxel complexity, curse of dimensionality, Reynolds-style dynamic similarity và fractal/effective dimension intuition.
+
+## Các chapter vẫn thấp hơn depth median và nên ưu tiên Round 7
+
+Coverage hiện rộng và không có missing prerequisite lớn, nhưng các files sau vẫn tương đối ngắn so với dependency centrality:
+
+1. `01_algebra/01_equations_and_inequalities.md`
+2. `01_algebra/03_powers_roots_and_logarithms.md`
+3. `01_algebra/04_polynomials_and_factorization.md`
+4. `03_geometry_trigonometry/01_coordinate_geometry.md`
+5. `03_geometry_trigonometry/05_transformations_and_symmetry.md`
+6. `04_vectors_linear_algebra/00_vectors.md`
+7. `05_calculus/06_numerical_calculus.md` — overlap với numerical methods cần consolidate/reframe hơn là chỉ kéo dài.
+8. `06_probability_statistics/05_descriptive_and_inferential_statistics.md`
+9. `06_probability_statistics/06_regression_and_correlation.md`
+10. `07_discrete_cs/02_recurrence_and_induction_in_algorithms.md`
+11. `08_optimization_numerical/01_gradient_descent_and_convexity.md` — cần tránh duplication với rewritten optimization chapter; nên chuyên sâu convergence/conditioning hơn.
+
+Priority nên tiếp tục dựa trên **dependency centrality trước file count**.
+
+## Dependency path sau Round 6
+
+### Path cho AI/Data
+
+```text
+ratio / logarithm
+→ functions
+→ vectors / matrices
+→ linear transformations
+→ projection / least squares / SVD
+→ derivatives
+→ multivariable calculus / matrix calculus
+→ probability / random variables
+→ statistics / likelihood
+→ optimization
+→ dynamic programming / information theory.
+```
+
+### Path cho Physics/Engineering
+
+```text
+geometry / trigonometry
+→ vectors / linear transformations
+→ derivatives / integrals
+→ ODE / eigenvalues
+→ multivariable / vector calculus
+→ PDE
+→ Fourier
+→ Laplace / Z-transform
+→ control.
+```
+
+### Path cho Computer Science
+
+```text
+logic / proof
+→ sets / relations / mappings
+→ functions
+→ discrete mathematics
+→ induction / recurrence
+→ graph theory
+→ complexity
+→ probability
+→ numerical/optimization where needed.
+```
+
+### Path cho Finance
+
+```text
+ratio / percentage / compounding
+→ exponential/logarithm
+→ probability / random variables
+→ expectation / covariance / statistics
+→ linear algebra / factor models
+→ optimization
+→ stochastic processes / Bayesian inference.
+```
+
+## Scope boundary
+
+Các topic như measure theory/Lebesgue integration, functional analysis, differential geometry/manifolds, stochastic calculus, advanced PDE, combinatorial optimization chuyên sâu và category theory vẫn là **optional upper-level expansion**, không phải missing prerequisite của current scope.
+
+Không nên thêm chúng chỉ để tăng số chapter. Một chapter mới chỉ nên được thêm khi nó lấp dependency gap thực sự hoặc tạo knowledge connection có giá trị rõ.
 
 ## Kết luận
 
-Ở trạng thái hiện tại, library gồm **87 topic files** và đã có coverage từ school mathematics tới phần nền tảng quan trọng của linear algebra, calculus/analysis, probability/statistics, discrete mathematics, numerical methods, optimization, AI/Data mathematics và dynamic systems. Round 4 đặc biệt cải thiện bridge giữa theory và modern computing thông qua tensors, autodiff, stochastic processes, Bayesian modeling và Bellman-style sequential optimization.
+Round 6 giữ nguyên **87 topics** nhưng nâng depth của **13 chapter có dependency centrality cao** qua bốn batches. Thay đổi trọng tâm từ “coverage completeness” sang “conceptual completeness”: intuition trước formalism, formula có provenance, assumptions/failure modes rõ, proof idea khi phù hợp, worked examples đủ reasoning transfer và connections chỉ dùng khi shared mathematical structure thực sự tồn tại.
+
+Ở trạng thái hiện tại, bottleneck chính không còn là thiếu lĩnh vực, mà là tiếp tục làm đồng đều chất lượng của nhóm chapter cũ còn ngắn hơn depth median.
