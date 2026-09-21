@@ -32,3 +32,5 @@ jobs:
           git diff --cached --stat
           git commit -m 'Refine canonical CSS SCSS Tailwind mental models'
           git push origin HEAD:main
+
+# retry: verified payload checksum
