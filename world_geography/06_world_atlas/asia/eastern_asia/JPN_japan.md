@@ -1,31 +1,119 @@
-# Nhật Bản — Japan (JPN)
+# Nhật Bản (Japan) — island arc, limited plains và Pacific urban-industrial belt
 
-## Quần đảo trên rìa mảng
+## Thesis không gian
 
-Nhật Bản là chuỗi đảo kéo dài theo cung ở rìa tây Thái Bình Dương. Nhiều ranh giới mảng và đới hút chìm lân cận tạo động đất, núi lửa, nâng núi và rãnh biển sâu. Vì vậy hiểm họa địa chất không phải sự kiện ngoại lệ mà là một phần cấu trúc địa lý.
+Nhật Bản là **quần đảo nằm trên active plate margin, nhiều núi và ít đồng bằng**, khiến population, infrastructure và industry tập trung mạnh vào coastal plain và corridor. Resource/energy import qua sea kết hợp manufacturing high-value tạo maritime economic system.
 
-## Núi nhiều, đồng bằng ít
+Causal chain:
 
-Phần lớn diện tích có địa hình đồi núi; các đồng bằng phù sa và bồn địa ven biển tương đối nhỏ nhưng tập trung dân cư, công nghiệp và hạ tầng. Điều này tạo urban corridor mật độ cao và giá trị đất lớn. Đồng bằng Kanto là ví dụ nơi địa hình thuận lợi hỗ trợ một mega-region cực lớn.
+**island arc tectonics → mountain relief + hazard → scarce flat land → coastal urban concentration → rail/port industrial belt → imported-resource processing → global high-value network**.
 
-## Khí hậu dài theo vĩ độ
+## Island arc và tectonics
 
-Quần đảo kéo từ vùng lạnh đến cận nhiệt đới, nên khí hậu rất đa dạng. Biển Nhật Bản và Thái Bình Dương tạo tương phản mùa: gió mùa đông bắc qua biển có thể mang tuyết lớn tới sườn phía biển Nhật Bản, trong khi bờ Thái Bình Dương có chế độ khác. Dòng biển ấm và lạnh ảnh hưởng nhiệt độ, sương mù và ngư trường.
+Japan nằm tại vùng tương tác nhiều plate/subduction system. Earthquake, volcano và tsunami là process cấu trúc.
 
-## Mạng đô thị–đường sắt
+Mountain building làm relief dốc, river ngắn và sediment transfer nhanh.
 
-Đất bằng hạn chế và đô thị dày thúc đẩy mạng đường sắt hiệu suất cao. Hành lang Tokaido nối Tokyo–Nagoya–Osaka là ví dụ về **linear urban corridor** nơi khoảng cách hiệu dụng được nén bởi hạ tầng tốc độ cao.
+Hazard không phải event hiếm tách rời geography; nó ảnh hưởng building code, land use, insurance và infrastructure redundancy.
 
-## Tài nguyên và nhập khẩu
+## Limited plains
 
-Địa hình núi và nguồn nhiên liệu hóa thạch nội địa hạn chế làm kinh tế phụ thuộc mạnh vào mạng hàng hải cho nhiều nguyên liệu và năng lượng. Mặt khác, bờ biển dài, cảng, công nghệ và mật độ công nghiệp tạo lợi thế kết nối lớn.
+Large plain như Kanto, Nobi, Osaka/Kansai có share settlement/economy rất lớn vì flat land hiếm.
 
-## Rủi ro phức hợp
+Khi plain hiếm, urban density và land value tăng; rail corridor hiệu quả hơn vì population/job tập trung.
 
-Động đất có thể kéo theo sóng thần, cháy, gián đoạn điện và logistics; bão nhiệt đới mang gió, mưa và trượt lở. Đây là case điển hình về **cascading risk** trong xã hội hạ tầng dày.
+Coastal reclamation mở land cho port/airport/industry nhưng tạo geotechnical/liquefaction/coastal exposure cần quản lý.
 
-## Mô hình tư duy
+## Climate gradient
 
-> Nhật Bản là **quần đảo núi lửa nhiều núi → dân cư nén vào các đồng bằng/hành lang ven biển → mạng đường sắt và cảng cực dày → phơi lộ cao với động đất, tsunami và bão**.
+Archipelago kéo dài north–south nên climate từ cool temperate tới subtropical. Mountain spine tạo contrast giữa Sea of Japan side và Pacific side, đặc biệt winter snowfall.
 
-Xem: [Kiến tạo mảng](../../../01_physical_geography/00_plate_tectonics_geologic_time.md), [Thiên tai](../../../01_physical_geography/07_natural_hazards_risk.md).
+Summer rain, frontal system và typhoon tạo flood/landslide risk.
+
+Seasonality ảnh hưởng agriculture, energy và transport.
+
+## Short steep rivers
+
+Mountain gần coast làm many river short/steep, flash response nhanh. Hydropower và reservoir có role nhưng flood control phức tạp do limited basin storage.
+
+Alluvial fan/plain thuận settlement nhưng cũng flood/sediment risk.
+
+## Pacific Belt
+
+Tokyo–Nagoya–Osaka/Kobe cùng many cities tạo Pacific urban-industrial corridor. Port, rail, expressway và dense market củng cố agglomeration.
+
+High-speed rail hoạt động hiệu quả vì nhiều large city nằm gần cùng corridor, tạo demand density.
+
+Transport technology phát huy lợi thế khi settlement pattern đã tuyến tính/concentrated.
+
+## Tokyo metropolitan centrality
+
+Tokyo không chỉ đông dân mà còn là command/service node: government, finance, headquarters, media, university và transport hub.
+
+Metropolitan sprawl và commuter rail tạo functional region vượt Tokyo administrative boundary.
+
+National centralization làm regional demographic contrast mạnh hơn khi rural area già hóa/shrink.
+
+## Manufacturing geography
+
+Automotive, machinery, electronics và material industry phát triển trong cluster với supplier network mạnh.
+
+Toyota region/Aichi là ví dụ manufacturing ecosystem dựa supplier proximity và logistics.
+
+Advanced manufacturing vẫn cần port, power và industrial land.
+
+## Resource và energy import
+
+Domestic fossil resource hạn chế so demand. Japan nhập large share energy/raw material qua sea.
+
+LNG, oil, ore vào port rồi tới power/industry. Energy security vì thế liên quan diversification, storage, nuclear/renewable policy và maritime route.
+
+Đây là constraint tương tự Korea nhưng geography archipelago và market scale khác.
+
+## Fisheries và marine space
+
+Island geography làm fisheries và marine ecosystem quan trọng. Warm/cold current interaction tạo productive water ở nhiều area.
+
+Fishery resource thay đổi theo ocean temperature, stock migration và management; coast không tự động đảm bảo unlimited fish.
+
+## Natural hazard và resilience engineering
+
+Japan đầu tư mạnh seismic building, early warning, tsunami evacuation và flood infrastructure. Nhưng risk không bao giờ bằng 0 vì exposure high và hazard multi-type.
+
+Resilience không chỉ engineering; demographic aging và rural evacuation capacity cũng quan trọng.
+
+## Demographic shrink
+
+Aging và population decline ảnh hưởng rural town, housing vacancy, local rail và municipal service.
+
+Core metropolitan vẫn retain jobs/young population tốt hơn nhiều peripheral area, tạo spatial polarization.
+
+Compact-city policy ở một số place là response với shrink: concentrate service quanh transit thay vì duy trì dispersed infrastructure.
+
+## Agriculture
+
+Mountain làm farmland limited; rice paddy tập trung plain/valley, horticulture specialization theo climate/topography.
+
+Small fragmented field và aging farmer tạo structural challenge, nhưng technology/high-value product giúp một số region thích nghi.
+
+Food import nối Japan với global food system.
+
+## Regional role
+
+Japan là maritime industrial economy nằm gần East Asian production network và Pacific route. Island arc tạo hazard nhưng sea access tạo trade opportunity.
+
+Regional role đến từ capital/technology, manufacturing, finance và logistics hơn natural resource abundance.
+
+## Common misconceptions
+
+“Japan giàu dù không có tài nguyên” chưa đủ: country có marine, forest, water và human/institutional capital, nhưng energy/mineral import constraint vẫn rất thật.
+
+“Earthquake risk đồng đều toàn Japan” sai; source, ground condition và exposure khác region.
+
+“Population decline làm Tokyo shrink giống rural” sai vì migration nội địa tạo divergence.
+
+## Mental model
+
+Japan = **active island arc + scarce plains + Pacific urban belt + rail/port concentration + resource-import manufacturing system**.
+
+Xem thêm: [East Asia](../../../03_regions/01_east_asia.md), [Natural hazards](../../../01_physical_geography/07_natural_hazards_risk.md), [Transport & trade](../../../02_human_geography/08_transport_trade_globalization.md).

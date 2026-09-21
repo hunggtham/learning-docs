@@ -1,39 +1,111 @@
-# Trung Quốc — China (CHN)
+# Trung Quốc (China) — continental gradient, river basins và coastal megaregions
 
-## Khung không gian
+## Thesis không gian
 
-Trung Quốc trải trên khoảng cách đông–tây và bắc–nam rất lớn, nên không thể đọc như một khối đồng nhất. Cấu trúc quan trọng nhất là **bậc thang địa hình từ cao ở phía tây xuống thấp về phía đông**. Cao nguyên Thanh Tạng và các hệ núi tạo “mái nước” lớn; phía đông mở thành bồn địa, đồng bằng và bờ biển nơi phần lớn dân cư cùng hoạt động kinh tế tập trung.
+Trung Quốc có một gradient địa hình nổi bật từ **cao nguyên/núi phía tây xuống basin–plain phía đông**, cùng contrast ẩm–khô và interior–coast rất lớn. Phần đông tập trung phần lớn population, agriculture, city và industry; phía tây rộng nhưng thưa dân hơn do elevation/aridity/accessibility.
 
-## Địa hình, kiến tạo và sông
+Causal chain:
 
-Va chạm giữa mảng Ấn Độ và Á–Âu nâng cao Himalaya–Thanh Tạng và ảnh hưởng toàn bộ địa hình phía tây. Từ vùng cao này xuất phát hoặc được cấp nước cho nhiều hệ sông lớn của châu Á. Trong lãnh thổ, Hoàng Hà và Trường Giang nối nội địa với đồng bằng phía đông, mang cả nước, trầm tích và rủi ro lũ.
+**high west + monsoon east → major rivers/alluvial plains → dense eastern settlement → coastal/river industrialization → continental transport integration → global manufacturing/trade role**.
 
-Hoàng Hà nổi tiếng với tải trầm tích cao từ cao nguyên Hoàng Thổ; bồi lắng có thể nâng lòng sông tương đối so với đồng bằng, khiến quản lý đê và kênh trở thành vấn đề địa lý–kỹ thuật lâu dài. Trường Giang có lưu vực ẩm hơn, hành lang đô thị–công nghiệp dày và vai trò vận tải nội địa lớn.
+## High west, low east
 
-## Khí hậu và gradient đông–tây
+Tibetan Plateau và mountain system phía tây/southwest tạo headwater cho nhiều river. Basin/desert ở northwest có aridity mạnh.
 
-Gió mùa đưa ẩm từ biển vào, nhưng ảnh hưởng giảm dần về nội địa. Kết quả là phía đông–nam nhìn chung ẩm hơn, còn tây bắc có nhiều vùng khô hạn và hoang mạc. Độ cao làm Thanh Tạng có khí hậu lạnh dù nằm ở vĩ độ không quá cao. Vì thế “khí hậu Trung Quốc” thực chất là tập nhiều chế độ khác nhau.
+Phía east có North China Plain, Yangtze basin/delta và southern coastal lowland thuận lợi hơn cho dense settlement.
 
-## Dân cư và mạng đô thị
+Một national average vì thế rất dễ gây hiểu sai.
 
-Dân cư tập trung mạnh ở nửa phía đông, nơi có đồng bằng, nước, đất nông nghiệp, cảng và mạng giao thông dày hơn. Các vùng đô thị ven biển như quanh Bohai, châu thổ Trường Giang và châu thổ Châu Giang hoạt động như những cụm mạng hơn là các thành phố đơn lẻ.
+## Water tower và river system
 
-Địa hình phía tây làm mật độ thấp hơn và tăng chi phí hạ tầng. Đây là ví dụ điển hình cho việc **diện tích lãnh thổ không tương đương diện tích có cùng khả năng tiếp cận và sức chứa**.
+Yangtze, Yellow River và Pearl River system là các trục địa lý lớn. River cung water, sediment, navigation và hydropower nhưng đồng thời flood risk và transregional dependency.
 
-## Kinh tế không gian và hành lang
+Yangtze nối inland industrial/agricultural zone với Shanghai/Yangtze Delta. Pearl River network nối southern manufacturing cities với estuary/coast.
 
-Sự phát triển sản xuất ven biển gắn với cảng, mật độ nhà cung cấp, lao động và khả năng tiếp cận thị trường quốc tế. Về sau, đường sắt cao tốc, cao tốc và hành lang nội địa làm giảm khoảng cách hiệu dụng giữa các thành phố. Tuy nhiên hạ tầng không xóa địa lý: núi, hoang mạc, khoảng cách tới cảng và nguồn nước vẫn tạo chi phí khác nhau.
+Yellow River có high sediment history do Loess Plateau, nên flood/sediment management có significance lâu dài.
 
-## Rủi ro
+## Monsoon và aridity gradient
 
-Phía tây và tây nam có động đất, trượt lở và địa hình cao; phía đông chịu lũ sông, bão nhiệt đới ở ven biển, nắng nóng và rủi ro đô thị. Khai thác nước ở vùng khô và áp lực môi trường ở các hành lang mật độ cao là bài toán phân bố tài nguyên.
+Southeast/east nhận nhiều monsoon moisture hơn northwest interior. Mountain và distance from ocean tạo rain shadow và continentality.
 
-## Hiểu lầm phổ biến
+Agriculture vì thế phân vùng: humid rice system mạnh hơn south/east; dryland wheat/maize và pastoral system tăng ở north/interior tùy place.
 
-Không nên đồng nhất “phía đông phát triển dày đặc” với toàn bộ lãnh thổ. Cũng không nên đọc các sông chỉ như tài nguyên nước; chúng là hành lang kinh tế, nguồn trầm tích, hệ sinh thái và mạng rủi ro xuyên vùng.
+Water scarcity ở north không thể hiểu chỉ từ rainfall; population/industry/irrigation demand cũng quan trọng.
 
-## Mô hình tư duy
+## Population concentration
 
-> Trung Quốc có thể được đọc như **cao nguyên–núi phía tây → các lưu vực và đồng bằng phía đông → các mega-region ven biển**, được nối bằng sông và mạng hạ tầng. Gradient địa hình–ẩm độ giải thích phần lớn sự lệch lớn trong dân cư và sản xuất.
+Population density cao ở eastern lowlands và basins, thấp hơn ở plateau/desert. Pattern này phản ánh water, arable land, climate và historical settlement.
 
-Xem: [Đông Á](../../../03_regions/01_east_asia.md), [Gió mùa](../../../01_physical_geography/02_atmosphere_weather_climate.md).
+Urbanization làm concentration vào city cluster tăng nhưng interior city/corridor cũng phát triển theo transport investment.
+
+## Coastal megaregions
+
+Yangtze River Delta, Pearl River Delta/Greater Bay area và Beijing–Tianjin–Hebei là major urban-economic systems với function khác nhau.
+
+Cluster advantage đến từ supplier, labor, university, finance, port và infrastructure.
+
+Agglomeration tăng productivity nhưng congestion, housing, pollution và regional inequality là counterforce.
+
+## Manufacturing và supplier network
+
+China trở thành major manufacturing platform nhờ combination market size, labor transition, infrastructure, supplier ecosystem, port và policy—not một biến duy nhất.
+
+Deep supplier network tạo path dependence: firm mới hưởng lợi vì input/service đã tập trung.
+
+Khi wage hoặc trade condition đổi, industry có thể move một phần nhưng cluster không biến mất ngay.
+
+## Port và river-sea integration
+
+Shanghai/Ningbo-Zhoushan, Shenzhen/Guangzhou region và other port nối domestic production với global shipping.
+
+Yangtze inland waterway làm coastal port có hinterland sâu. Đây là advantage khác island port: river corridor kéo maritime access vào sâu continent.
+
+## Rail/highway và territorial integration
+
+Large national scale làm internal transport critical. High-speed rail chủ yếu phục vụ passenger/urban network; freight rail/highway/waterway phục vụ goods tùy commodity.
+
+Transport investment giảm effective distance nhưng không xóa relief và population gradient.
+
+## Energy/resource geography
+
+Coal reserve, hydropower, wind/solar potential và industrial demand phân bố không trùng nhau. Resource-rich west/north và demand-heavy east tạo need cho rail, pipeline và electricity transmission.
+
+Energy geography là **source–grid–load**, không chỉ map resource.
+
+## Agriculture và food security
+
+Large population + regional climate tạo need for diversified domestic production and trade. Irrigation, fertilizer, mechanization và cold chain tăng output nhưng water/soil/environment trade-off.
+
+Urban diet change còn ảnh hưởng feed import và global commodity network.
+
+## Internal migration và urban system
+
+Rural-to-urban migration và regional migration reshape labor distribution. Hukou/institutional arrangements ảnh hưởng access to service và settlement choice; atlas nên nhìn phenomenon như interaction giữa labor market và institution, không chỉ population flow.
+
+Major city hút high-skill labor, trong khi manufacturing city và inland city có trajectory khác.
+
+## Hazard geography
+
+West/southwest có earthquake/landslide tectonic risk; east/south coast có typhoon/flood; north/interior có drought/dust/heat risk tùy region.
+
+Large dams, dense city và industrial corridor làm cascading risk quan trọng.
+
+## Regional role
+
+China kết nối continental Eurasia với western Pacific. Coastal manufacturing/port network hướng ra global market, trong khi rail/road/pipeline tăng continental connectivity.
+
+Regional role vì thế vừa maritime vừa continental.
+
+## Common misconceptions
+
+“China là một khối địa lý đồng nhất” sai vì west–east gradient rất lớn.
+
+“Coast giàu chỉ vì gần biển” sai; port, supplier, market, institution và historical industrialization tạo agglomeration.
+
+“High-speed rail xóa geography” sai; network giảm travel time nhưng node hierarchy và resource location vẫn tồn tại.
+
+## Mental model
+
+China = **high dry west → river headwaters → dense eastern plains → coastal megaregions → integrated continental-maritime network**.
+
+Xem thêm: [East Asia](../../../03_regions/01_east_asia.md), [Economic geography](../../../02_human_geography/05_economic_geography.md), [Global cities](../../../04_global_systems/03_global_cities_networks.md).
