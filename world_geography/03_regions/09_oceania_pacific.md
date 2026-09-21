@@ -1,39 +1,125 @@
-# Châu Đại Dương và Thái Bình Dương
+# Châu Đại Dương và Thái Bình Dương: ocean-as-network
 
-## Australia, New Zealand và các đảo Thái Bình Dương là những thế giới địa lý khác nhau
+## Thesis không gian
 
-Châu Đại Dương gồm Australia có quy mô lục địa, New Zealand hoạt động kiến tạo mạnh và hàng nghìn đảo Thái Bình Dương. Vì vậy vùng cần được đọc theo quy mô và loại đảo, không nên xem tất cả như một không gian đồng nhất.
+Oceania không nên được đọc như “nhiều đảo nhỏ quanh Australia”. Vùng gồm một continental-scale Australia, tectonically active New Zealand và thousands Pacific island có geology/scale khác nhau.
 
-## Australia: nội địa khô và dân cư ven biển
+Khung tốt nhất là:
 
-Australia có nội địa khô và bán khô rất rộng; phần lớn dân số tập trung quanh bờ đông, đông nam và tây nam. Nguồn nước, khí hậu ven biển ôn hòa hơn và lịch sử phát triển cảng cùng giải thích mẫu này. Đây là ví dụ rõ rằng diện tích quốc gia không phản ánh trực tiếp diện tích thuận lợi cho định cư.
+**ocean distance + island geology + climate/water + maritime connectivity → settlement/resource pattern → high transport dependency → distinctive vulnerability and regional role**.
 
-Khoảng cách giữa các thành phố lớn khiến hàng không và mạng vận tải hàng hóa có vai trò đặc biệt quan trọng.
+## Ocean là không gian kết nối
 
-## New Zealand: kiến tạo và môi trường biển
+Land-centered map làm Pacific island trông như các point cô lập. Nhưng với navigation, fisheries, EEZ, cable và aviation, ocean là medium kết nối.
 
-New Zealand nằm gần ranh giới giữa mảng Thái Bình Dương và mảng Australia, tạo động đất, nâng núi và hệ núi lửa. Khí hậu biển làm nhiệt độ tương đối ôn hòa nhưng địa hình tạo tương phản mưa rất mạnh. Địa lý tự nhiên ảnh hưởng trực tiếp thiết kế hạ tầng, tiêu chuẩn xây dựng và quản lý hiểm họa.
+Một island state có land area nhỏ nhưng maritime zone rộng, nên fishery và ocean governance có importance vượt land size.
 
-## Đảo núi lửa cao và đảo san hô vòng
+Distance phải đo bằng route frequency/cost, không chỉ kilomet.
 
-Đảo núi lửa cao có độ cao, suối và đất khác rõ với **đảo san hô vòng (atoll)** thấp. Nước ngầm trên đảo san hô vòng thường tồn tại như một **thấu kính nước ngọt (freshwater lens)** mỏng nổi trên nước mặn, rất nhạy với khai thác quá mức và xâm nhập mặn.
+## Australia: old continent, dry interior
 
-## Đại dương không phải khoảng trống giữa các đảo
+Australia có geological core cổ, relief thấp tương đối so với active mountain belt và interior arid/semi-arid rộng.
 
-Trong địa lý Thái Bình Dương, đại dương chính là môi trường kết nối. Nếu nhìn bằng bản đồ thiên về đất liền, đảo trông nhỏ và xa nhau; nếu nhìn theo di chuyển biển, ngư trường và vùng đặc quyền kinh tế, logic không gian thay đổi hoàn toàn. Một quốc đảo có diện tích đất rất nhỏ nhưng vùng biển quản lý rất rộng.
+Population tập trung mạnh quanh east/southeast/southwest coast vì climate, water, port history và urban economy. Interior area lớn nhưng low carrying capacity theo water/accessibility.
 
-Vì thế **diện tích đất không phản ánh đầy đủ tầm quan trọng không gian**. Địa lý ngư nghiệp, quản trị đại dương, khoảng cách tuyến và tần suất kết nối có thể quan trọng hơn diện tích lãnh thổ nổi.
+Area ≠ usable settlement space.
 
-## Tính dễ tổn thương và khả năng chống chịu của đảo nhỏ
+## Australian water constraint
 
-Nhiều quốc đảo Thái Bình Dương có cao độ thấp, nguồn nước ngọt hạn chế và hạ tầng tập trung gần bờ. Xoáy thuận nhiệt đới hoặc nước dâng do bão có thể gây thiệt hại rất lớn so với quy mô nền kinh tế. Nhưng mức dễ tổn thương không chỉ đến từ hiểm họa; chất lượng công trình, hệ sinh thái, năng lực sơ tán và nguồn lực tài chính đều ảnh hưởng kết quả.
+Rainfall variable và drought là key constraint. Murray–Darling basin support irrigation/agriculture nhưng allocation giữa farm, city và ecosystem tạo basin governance challenge.
 
-## Xa xôi và chi phí vận tải
+Groundwater, reservoir và interannual climate variability làm water system phức tạp.
 
-Nền kinh tế đảo xa thường chịu chi phí hàng hóa cao vì thị trường nhỏ và khoảng cách lớn. Kinh tế mạng lưới giải thích một phần: lưu lượng ít làm khó đạt quy mô kinh tế, còn tuyến dài tăng nhiên liệu và thời gian. Kết nối số có thể làm giảm một số dạng “xa xôi” đối với dịch vụ, nhưng không thể thay thế hậu cần vật lý (physical logistics) cho thực phẩm, nhiên liệu và vật liệu xây dựng.
+Agricultural export vì thế phụ thuộc climate risk và water policy.
 
-Xem thêm: [Đại dương](../01_physical_geography/05_oceans_coasts.md), [Biến đổi khí hậu](../04_global_systems/00_climate_change.md).
+## Resource export và port corridor
+
+Iron ore, coal, LNG và other mineral/energy resource thường khai thác ở remote region rồi nối rail/pipeline tới specialized port.
+
+Đây là **resource corridor** pattern: mine → dedicated infrastructure → export terminal.
+
+GDP value cao không đồng nghĩa region khai thác có dense settlement; capital-intensive extraction có thể hoạt động với low local population.
+
+## New Zealand: plate boundary và maritime climate
+
+New Zealand nằm trên/near boundary giữa Pacific và Australian plates, tạo earthquake, volcano và mountain.
+
+Westerly flow gặp Southern Alps tạo wet west và rain-shadow east. Hydropower, agriculture và settlement phản ánh contrast này.
+
+Earthquake risk ảnh hưởng building code và infrastructure redundancy.
+
+## High volcanic island và atoll
+
+High island có relief, stream, freshwater catchment và volcanic soil. Low atoll có elevation nhỏ và **freshwater lens** mỏng.
+
+Atoll water balance nhạy với rainfall, pumping và saltwater intrusion. Sea-level/extreme wave risk cao vì elevation thấp.
+
+Không nên gộp “Pacific islands” thành một physical type.
+
+## Coral reef và coastal protection
+
+Reef cung habitat, fishery và wave-energy dissipation. Degradation làm ecosystem service giảm và có thể tăng coastal exposure.
+
+Reef health phụ thuộc temperature, water quality, fishing và local disturbance. Climate và local management cùng quyết định outcome.
+
+## Tropical cyclone và disaster scale
+
+Cyclone có thể tác động toàn bộ small island economy vì population/infrastructure tập trung narrow coast và national asset base nhỏ.
+
+Loss tuyệt đối có thể không lớn theo global comparison nhưng ratio so GDP/population rất lớn.
+
+Risk cần normalization theo capacity và exposure.
+
+## Remoteness và economies of scale
+
+Small market + long route làm freight cost cao. Ship frequency thấp còn tăng inventory need và delay risk.
+
+Digital connection giảm friction cho information/service nhưng không vận chuyển food, fuel, cement.
+
+Submarine cable landing trở thành critical infrastructure; một cut có thể ảnh hưởng lớn nếu redundancy thấp.
+
+## Aviation và tourism
+
+Tourism island economy phụ thuộc air connectivity, airport runway, fuel và external demand. Covid-type mobility shock trong lịch sử gần đây minh họa network dependence, nhưng nguyên lý bền vững là: **high specialization + few gateways = vulnerability**.
+
+Diversification khó vì scale nhỏ, nhưng niche service và digital sector có thể giảm một phần constraint.
+
+## Fisheries và EEZ
+
+Tuna/fish stock di chuyển qua large ocean space và national maritime zone. Governance cần science, monitoring và international coordination.
+
+Land area nhỏ không phản ánh resource jurisdiction at sea.
+
+## Sea-level rise và adaptation
+
+Relative sea level, wave, reef state, subsidence/uplift và storm determine local impact. Atoll risk khác high volcanic island.
+
+Adaptation option gồm elevation/protection, water management, ecosystem-based adaptation, migration planning; choice phụ thuộc cost và culture.
+
+Không nên giản lược thành “mọi island sẽ biến mất”.
+
+## Indigenous navigation và knowledge
+
+Pacific settlement history cho thấy sophisticated navigation dựa star, swell, wind và ecology. Ocean không phải unknown void đối với island society.
+
+Regional geography nên coi indigenous spatial knowledge như knowledge system, không chỉ cultural anecdote.
+
+## Australia–Asia connection
+
+Australia physically separated by sea nhưng economically deeply connected với East/Southeast Asia qua mineral/energy export, education, migration và trade.
+
+Port và shipping route làm effective distance khác geometric remoteness.
+
+## Common misconceptions
+
+“Oceania = Australia” bỏ phần lớn island geography.
+
+“Small island = isolated” sai nếu node nằm trên aviation/shipping/cable network tốt.
+
+“Climate change impact giống nhau trên mọi island” sai vì elevation, geology, reef và infrastructure khác.
 
 ## Mô hình tư duy
 
-> Đọc Châu Đại Dương bằng mô hình **đại dương là mạng lưới (ocean-as-network)**, không phải “đảo đồng nghĩa cô lập”. Khoảng cách, tần suất tuyến và phạm vi quản lý biển quan trọng hơn diện tích đất đơn thuần.
+Oceania = **ocean network + island type + gateway dependency + climate/resource specialization**.
+
+Xem tiếp: [Oceans & coasts](../01_physical_geography/05_oceans_coasts.md), [Climate change](../04_global_systems/00_climate_change.md), [Chokepoints/resources](../04_global_systems/02_geopolitics_chokepoints_resources.md).

@@ -1,45 +1,127 @@
-# Bắc Mỹ
+# Bắc Mỹ: continental scale, resource corridor và metropolitan network
 
-## Một lục địa có độ biến thiên không gian rất lớn
+## Thesis không gian
 
-Bắc Mỹ trải dài từ Bắc Cực đến vĩ độ nhiệt đới và từ các dãy núi ven Thái Bình Dương qua đồng bằng nội địa đến rìa Đại Tây Dương. Dãy Rocky nằm ở phía tây, đồng bằng rộng ở trung tâm và Appalachia ở phía đông. Quy mô lớn tạo độ biến thiên khí hậu lục địa mạnh theo không gian; ảnh hưởng đại dương rõ hơn ở ven biển.
+Bắc Mỹ được tổ chức bởi **western mountain system, central plain/river basin, Great Lakes–St. Lawrence corridor và Atlantic/Pacific/Gulf coasts**. Quy mô lục địa tạo climate gradient lớn; transport network nối resource hinterland với urban–industrial coast và border market.
 
-Đây là nơi có thể quan sát rõ **tính lục địa (continentality)**: vùng nội địa có biên độ nhiệt năm lớn hơn vùng ven biển vì đất nóng và nguội nhanh hơn đại dương. Rocky Mountains còn tạo rào cản địa hình lớn và bóng mưa ở nhiều khu vực phía khuất gió.
+Causal chain:
 
-## Hệ Mississippi–Missouri
+**relief + river + resource → agricultural/industrial specialization → continental transport → metropolitan corridor → cross-border production network**.
 
-Lưu vực Mississippi gom nước từ phần rất lớn nội địa rồi đổ ra Vịnh Mexico. Hệ sông hỗ trợ nông nghiệp và vận tải sà lan, cho thấy thủy văn có thể trở thành hạ tầng hậu cần (logistics). Ngũ cốc từ nội địa có thể đi bằng sông tới cảng xuất khẩu với chi phí thấp hơn trong nhiều trường hợp so với chỉ dùng đường bộ.
+## Western cordillera và rain shadow
 
-Rủi ro lũ cũng là một phần của cùng hệ thống: đồng bằng ngập lũ tạo đất màu mỡ và tuyến vận tải thuận lợi nhưng đồng thời làm người và tài sản phơi lộ với lũ.
+Rocky Mountains và các range phía west tạo high relief, snowpack, watershed divide và rain shadow. Pacific coast climate khác interior dry region rõ rệt.
 
-## Great Lakes–St. Lawrence và địa lý công nghiệp
+Mountain snow hoạt động như seasonal water storage cho river và agriculture. Khi snow timing đổi, reservoir operation và irrigation cũng phải đổi.
 
-Hệ Great Lakes–St. Lawrence kết hợp nước ngọt, vận tải và vị trí giữa Hoa Kỳ–Canada để tạo một hành lang công nghiệp lịch sử lớn. Sản xuất ở đây hình thành không chỉ nhờ nguyên liệu mà còn nhờ vận tải đường thủy, lao động, thị trường và mạng đường sắt.
+West còn có active tectonic margin ở nhiều segment, tạo earthquake/volcanic hazard.
 
-## Hình thái đô thị và “địa lý ô tô”
+## Central plain và agriculture scale
 
-Nhiều vùng đô thị, đặc biệt tại Hoa Kỳ và Canada, mở rộng theo cao tốc và ngoại ô trong thế kỷ XX. Phát triển mật độ thấp làm khoảng cách đi lại tăng và khiến giao thông công cộng khó phục vụ hơn, tạo một vòng phản hồi: hạ tầng ô tô khuyến khích phân tán; phân tán lại làm phụ thuộc ô tô tăng.
+Great Plains/Central Lowlands có relief tương đối thuận lợi cho mechanized agriculture, road/rail và large settlement grid.
 
-Tuy nhiên các lõi đô thị cũ và thành phố định hướng giao thông công cộng có cấu trúc khác, nên không nên coi “đô thị Bắc Mỹ” là một mô hình duy nhất.
+Corn Belt, wheat belt hoặc ranching zone là **fuzzy region** hình thành từ soil, climate, market và technology. Boundary dịch theo crop price, irrigation và climate.
 
-## Các vành đai nông nghiệp
+Agricultural productivity phụ thuộc fertilizer, machinery, storage, rail/barge và export terminal; farmland không vận hành tách logistics.
 
-Great Plains, Central Valley của California, Corn Belt và Canadian Prairies là ví dụ về chuyên môn hóa nông nghiệp theo đất, khí hậu, tưới tiêu và hạ tầng thị trường. Những tên như **Corn Belt** không phải ranh giới cứng; chúng là **vùng chức năng mờ (fuzzy functional region)** thay đổi theo giá cây trồng, công nghệ và khí hậu.
+## Mississippi–Missouri: drainage và logistics backbone
 
-## Tài nguyên và năng lượng
+Mississippi basin gom water từ vùng rộng. Navigable river làm bulk cargo như grain, coal/industrial material có transport cost thấp.
 
-Dầu khí, thủy điện, khoáng sản, rừng và tiềm năng tái tạo phân bố rất không đều. Bùng nổ năng lượng có thể làm thành phố địa phương tăng nhanh rồi biến động mạnh khi giá thay đổi.
+River engineering, levee và channelization hỗ trợ navigation/flood protection nhưng thay đổi sediment và floodplain connection.
 
-## Hội nhập xuyên biên giới
+Mississippi Delta/Gulf Coast cho thấy upstream land use và sediment management có downstream consequence.
 
-Hoa Kỳ, Canada và Mexico tạo các chuỗi sản xuất, thực phẩm và năng lượng tích hợp cao. Biên giới vẫn tạo ma sát pháp lý, nhưng linh kiện có thể qua biên giới nhiều lần trong cùng một quá trình sản xuất.
+## Great Lakes–St. Lawrence corridor
 
-## Địa lý hiểm họa
+Great Lakes cung cấp freshwater, port và industrial location. St. Lawrence nối inland water system với Atlantic.
 
-Bờ Tây có động đất và cháy; Vịnh Mexico và Đại Tây Dương có bão; nội địa có lốc xoáy, giông mạnh, hạn và lũ. Điều này cho thấy cấu trúc hiểm họa thay đổi mạnh theo tiểu vùng.
+Historical steel/auto/manufacturing cluster dựa trên ore/coal transport, market và labor. Khi industry restructure, city trajectory khác nhau tùy ability chuyển sang service/technology/logistics.
 
-Xem thêm: [Thiên tai và rủi ro](../01_physical_geography/07_natural_hazards_risk.md), [Địa lý kinh tế](../02_human_geography/05_economic_geography.md).
+Đây là path dependence điển hình.
+
+## Atlantic seaboard và megalopolis
+
+Northeast corridor có chuỗi metropolitan area với rail/highway/airport density cao. Economic centrality đến từ long urban history, port, finance, government, university và market.
+
+Megalopolis là functional region, không phải một city hành chính.
+
+## Sun Belt và spatial shift
+
+Population/economic growth ở south/west trong nhiều thập kỷ liên quan air conditioning, highway/aviation, defense/technology investment, lower cost ở một số place và amenity/climate.
+
+Nhưng “Sun Belt” cũng là fuzzy region; Phoenix, Texas metros, Southeast manufacturing và Florida service economy không cùng một mechanism.
+
+## Auto-oriented urban form
+
+Highway expansion, low-density zoning và suburban mortgage/land market tạo urban sprawl ở nhiều metro.
+
+Feedback:
+
+**road capacity → accessible land tăng → dispersed development → trip distance tăng → car dependence tăng**.
+
+Public transit viability giảm nếu density thấp và destination phân tán. Đây là transport–land-use feedback hơn là preference cá nhân đơn giản.
+
+## Housing và metropolitan inequality
+
+Job cluster, school district, zoning, transit access và housing supply tạo spatial inequality. Household ở xa job center có thể trả rent thấp hơn nhưng time/transport cost cao hơn.
+
+Do đó development phải đo **accessibility**, không chỉ income/housing price.
+
+## Energy geography
+
+Oil/gas basin, hydropower, coal legacy, nuclear, wind/solar phân bố không đều. Pipeline và transmission line nối source với demand.
+
+Shale development cho thấy technology có thể biến geological formation thành economic resource, nhưng output phụ thuộc price, infrastructure và regulation.
+
+## Mexico–US–Canada production network
+
+Manufacturing supply chain vượt border, đặc biệt automotive/electronics/agriculture. Component có thể cross border nhiều lần.
+
+Border friction vì vậy là time/cost trong production network, không chỉ political line.
+
+Nearshoring hay supply-chain diversification cần map supplier, port, rail, power và labor—not simply distance.
+
+## Mexico geography trong North America
+
+Mexico nối North American industrial network với Central America/Caribbean-Pacific space. Northern manufacturing corridor, central highland urban system và Gulf/Pacific coast có roles khác nhau.
+
+Mountain relief làm internal travel và climate complex; plateau city có altitude climate khác tropical coast.
+
+## Canada và sparse northern space
+
+Population Canada tập trung mạnh near southern corridor, while northern territory rộng nhưng sparse do climate/accessibility.
+
+Resource project ở remote north phụ thuộc rail/road/port/air và indigenous land relation. Area lớn không đồng nghĩa settlement capacity lớn.
+
+## Hazard mosaic
+
+West: earthquake, wildfire, drought. Gulf/Atlantic: hurricane, storm surge. Central: tornado/severe storm, flood, drought. North: cold/permafrost/coastal Arctic change.
+
+Risk pattern phản ánh physical process + settlement pattern. Insurance market và building code vì thế có regional geography.
+
+## Water scarcity và interbasin infrastructure
+
+Western city/agriculture phụ thuộc reservoir, snowpack, groundwater và long-distance aqueduct. Water allocation giữa urban, agriculture, ecosystem tạo multi-objective problem.
+
+Growing population không tự động tạo scarcity; demand management, crop choice và allocation institution quyết định outcome cùng physical supply.
+
+## Indigenous geography và land
+
+North America không bắt đầu với modern state boundary. Indigenous societies có territorial/mobility system gắn river, hunting, agriculture và trade route.
+
+Hiện tại land right, resource project và protected area vẫn có geographic dimension. Regional geography nên nhận ra historical layer thay vì coi current boundary là điểm bắt đầu tuyệt đối.
+
+## Common misconceptions
+
+“Bắc Mỹ = Hoa Kỳ” làm mất Canada/Mexico và cross-border system.
+
+“Resource-rich nên tự động self-sufficient” sai vì refinery, grid, pipeline và trade tạo interdependence.
+
+“Sprawl do người dân chỉ thích nhà rộng” quá đơn giản; policy, road, zoning và finance tạo incentive structure.
 
 ## Mô hình tư duy
 
-> Bắc Mỹ có thể được đọc như một tập hợp **bờ biển – núi – đồng bằng – hành lang sông** được liên kết bằng mạng giao thông quy mô lục địa. Vùng chức năng thường quan trọng hơn ranh giới hành chính khi phân tích nền kinh tế và dòng lưu chuyển.
+Bắc Mỹ = **continental resource hinterland + river/lake corridor + metropolitan coast + integrated border supply chain**.
+
+Xem tiếp: [United States Atlas](../06_world_atlas/americas/northern_america/USA_united_states.md), [Economic geography](../02_human_geography/05_economic_geography.md), [Natural hazards](../01_physical_geography/07_natural_hazards_risk.md).
