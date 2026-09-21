@@ -1,7 +1,7 @@
 # Tailwind CSS — Master Supplement, bản giải thích đầy đủ
 ## Tailwind CSS v4.3: trình biên dịch (compiler) model, design-system kiến trúc (architecture), phát hiện nguồn (source detection), custom APIs, chuyển đổi (migration) và production engineering
 
-> File này đọc sau `TailwindCSS_Beginner_to_Senior_2026_REWRITTEN.md`.
+> File này đọc sau `TailwindCSS_Beginner_to_Senior_2026.md`.
 >
 > File Beginner → Senior giúp bạn dùng Tailwind rất chắc trong production. File này đi sâu hơn vào những phần mà một Tailwind specialist, design-system engineer hoặc frontend senior cần hiểu khi project lớn lên: Tailwind build engine nhìn source như thế nào, `@theme` trở thành giao diện công khai (public API) ra sao, custom các tiện ích (utilities) được resolve thế nào, source boundaries ảnh hưởng bundle như thế nào, vì sao class conflict không thể giải thích bằng thứ tự class trong HTML, và khi nào Tailwind bắt đầu trở thành một phần của package kiến trúc (architecture) chứ không chỉ là công cụ styling.
 
