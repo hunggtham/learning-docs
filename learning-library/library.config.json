@@ -45,6 +45,12 @@
       "rights": "author-confirmed"
     },
     {
+      "path": "korea_law_civic_life",
+      "category": "Korea law & civic life",
+      "language": "vi-ko-en",
+      "rights": "author-confirmed"
+    },
+    {
       "path": "korean_history",
       "category": "Korean history",
       "language": "vi-ko-en",
@@ -89,9 +95,9 @@
     {
       "path": "10_frontend/scss/SCSS_Beginner_to_Senior_2026.md",
       "title": "SCSS: Beginner to Senior",
-      "category": "Frontend",
       "language": "vi-en",
-      "rights": "author-confirmed"
+      "rights": "author-confirmed",
+      "category": "Frontend"
     },
     {
       "path": "10_frontend/scss/SCSS_Master_Supplement_2026.md",
