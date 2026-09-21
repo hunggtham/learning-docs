@@ -1,117 +1,341 @@
-# Nền tảng xác suất: mô hình hóa bất định
+# Nền tảng xác suất: mô hình hóa bất định bằng events, information và assumptions
 
-Xác suất (Probability / 확률) không loại bỏ bất định; nó gán structure định lượng cho những outcomes chưa biết. Một probability model bắt đầu bằng sample space, events và rule gán probability.
+Xác suất (probability / 확률) không phải là cách làm cho thế giới “ít ngẫu nhiên hơn”. Nó là một language để mô tả **uncertainty có structure**. Trước khi hỏi một probability bằng bao nhiêu, phải hỏi ba câu:
 
-## Sample space và event
+1. outcome space nào đang được model?
+2. event nào ta quan tâm?
+3. information và assumptions nào đang được dùng?
 
-Không gian mẫu (Sample space / 표본공간) `Ω` là set all outcomes trong model. Event (사건) là subset của `Ω`.
+Một con số như `70%` không có nghĩa nếu event và information set chưa được định nghĩa.
 
-Với coin toss:
+## Sample space: universe của model, không nhất thiết universe của reality
+
+Không gian mẫu (sample space / 표본공간) `\Omega` là set outcomes mà model cho phép.
+
+Với một coin toss:
 
 ```math
-\Omega=\{H,T\}
+\Omega=\{H,T\}.
 ```
-
-Event “heads” là `{H}`.
 
 Với hai tosses:
 
 ```math
-\Omega=\{HH,HT,TH,TT\}
+\Omega=\{HH,HT,TH,TT\}.
 ```
 
-Event “exactly one head” là `{HT,TH}`.
-
-## Probability axioms
-
-Probability measure `P` thỏa:
+Một event (사건) là subset của `\Omega`. Event “exactly one head” là
 
 ```math
-P(A)\ge0
+\{HT,TH\}.
+```
+
+Điểm subtle: sample space là modeling choice. Nếu ta model latency chỉ bằng categories `{fast, slow}`, ta đã bỏ nhiều detail so với continuous milliseconds. Probability conclusions chỉ đúng trong representation đã chọn.
+
+## Probability axioms tồn tại để giữ reasoning nhất quán
+
+Probability measure `P` phải thỏa:
+
+```math
+P(A)\ge0,
 ```
 
 ```math
-P(\Omega)=1
+P(\Omega)=1,
 ```
 
-và với disjoint events `A_i`:
+và với pairwise-disjoint events `A_i`:
 
 ```math
-P\left(\bigcup_i A_i\right)=\sum_iP(A_i)
+P\left(\bigcup_iA_i\right)
+=
+\sum_iP(A_i).
 ```
 
-Từ đó derive complement:
+Từ ba axioms này, nhiều rules quen thuộc được derive thay vì memorize.
+
+Vì `A` và `A^c` disjoint và union thành `\Omega`:
 
 ```math
-P(A^c)=1-P(A)
+P(A)+P(A^c)=1,
 ```
 
-và union:
+nên
 
 ```math
-P(A\cup B)=P(A)+P(B)-P(A\cap B)
+P(A^c)=1-P(A).
 ```
 
-## Equally likely outcomes
+Với two events:
+
+```math
+P(A\cup B)
+=P(A)+P(B)-P(A\cap B),
+```
+
+vì intersection bị double-count nếu chỉ cộng hai probabilities.
+
+## Equally likely formula là special case
 
 Nếu finite outcomes equally likely:
 
 ```math
-P(A)=\frac{|A|}{|\Omega|}
+P(A)=\frac{|A|}{|\Omega|}.
 ```
 
-Nhưng formula này không phải definition universal của probability. Real-world outcomes hiếm khi tự nhiên equally likely. Ta cần model/data để gán probabilities.
+Nhưng đây không phải definition chung của probability. Nó chỉ đúng sau khi assumption “equally likely” được justify.
 
-## Frequency interpretation
+Một loaded die, market return hay server failure không có outcomes tự nhiên equally likely. Probability phải đến từ mechanism, empirical model, symmetry hoặc inference.
 
-Trong repeated trials under stable conditions, relative frequency thường tiến gần probability theo law of large numbers. Nếu coin fair, fraction heads quanh 0.5 khi number trials lớn.
+## Worked example — inclusion-exclusion từ set reasoning
 
-Điều này không nghĩa sequence phải “bù” ngắn hạn. Sau 10 tails liên tiếp, next fair toss vẫn probability heads 0.5.
+Trong 1,000 users:
 
-## Probability as degree of belief
+- 420 dùng feature A;
+- 350 dùng feature B;
+- 120 dùng cả hai.
 
-Bayesian interpretation xem probability là quantified uncertainty given information. Probability có thể update khi evidence mới đến. Frequentist và Bayesian frameworks khác nhau trong interpretation và inference, dù dùng nhiều mathematics chung.
-
-## Independence
-
-Events `A` và `B` independent nếu
+Probability một randomly sampled user dùng ít nhất một feature:
 
 ```math
-P(A\cap B)=P(A)P(B)
+P(A\cup B)
+=
+0.42+0.35-0.12
+=0.65.
 ```
 
-Điều này nghĩa biết A xảy ra không thay probability của B trong model.
+Nếu chỉ cộng 0.42 và 0.35, overlap bị count twice. Probability union rule chính là set inclusion-exclusion được normalize thành measure.
 
-Independence không giống mutual exclusivity. Nếu events mutually exclusive và đều có positive probability, chúng không independent vì occurrence của one làm probability other thành zero.
+## Conditional probability: probability luôn phụ thuộc information
 
-## Expected count
+Xác suất có điều kiện (conditional probability / 조건부확률) của `A` khi biết `B` xảy ra:
 
-Nếu event probability `p` lặp `n` independent trials, expected number occurrences là `np`. Nhưng expectation không guarantee actual count exactly `np`; nó là long-run/average property.
+```math
+P(A\mid B)
+=
+\frac{P(A\cap B)}{P(B)},
+\qquad P(B)>0.
+```
 
-## Risk interpretation
+Interpretation: khi biết `B`, universe relevant thu hẹp từ `\Omega` xuống `B`; ta renormalize probability mass trong `B` về total 1.
 
-Một forecast “30% rain” không có nghĩa trời sẽ mưa 30% thời gian hôm đó. Tùy forecasting definition, nó thường biểu diễn probability precipitation cho area/time event specified. Probability phải đi kèm event definition.
+Từ definition:
+
+```math
+P(A\cap B)=P(A\mid B)P(B).
+```
+
+Và đối xứng:
+
+```math
+P(A\cap B)=P(B\mid A)P(A).
+```
+
+Equate hai expressions để derive Bayes:
+
+```math
+P(A\mid B)
+=
+\frac{P(B\mid A)P(A)}{P(B)}.
+```
+
+Bayes không phải magic inversion; nó chỉ là intersection được factor theo hai directions khác nhau.
+
+## Worked Bayes example — base rate matters
+
+Suppose disease prevalence là 1%. Test có sensitivity 95% và false-positive rate 5%.
+
+Trong 10,000 people, expected counts:
+
+```text
+Disease:        100
+Positive among disease: 95
+No disease:   9,900
+False positives: 495
+```
+
+Among positive tests, disease cases khoảng
+
+```math
+\frac{95}{95+495}\approx0.161.
+```
+
+Positive test không imply 95% chance disease. Sensitivity `P(+|D)` khác posterior `P(D|+)`. Base rate quyết định denominator.
+
+## Independence: một structural assumption, không phải cảm giác “không liên quan”
+
+Events `A,B` independent nếu
+
+```math
+P(A\cap B)=P(A)P(B).
+```
+
+Equivalent khi probabilities positive:
+
+```math
+P(A\mid B)=P(A).
+```
+
+Nghĩa là biết `B` không thay probability của `A` trong model.
+
+Independence khác mutual exclusivity. Nếu `A` và `B` mutually exclusive với positive probabilities, occurrence của `B` làm probability `A` thành zero, nên chúng strongly dependent.
+
+## Pairwise independence chưa chắc mutual independence
+
+Nhiều events có thể pairwise independent nhưng không jointly independent. Vì vậy trong high-dimensional models, statement “independent” phải rõ level và conditioning context.
+
+Conditional independence đặc biệt quan trọng trong Bayesian networks, graphical models và causal inference:
+
+```math
+X\perp Y\mid Z.
+```
+
+Nó nói sau khi biết `Z`, `X` không cung cấp thêm information về `Y` trong model.
+
+## Why multiplication appears in repeated trials
+
+Nếu trials independent với success probability `p`, probability của specific sequence có `k` successes và `n-k` failures là
+
+```math
+p^k(1-p)^{n-k}.
+```
+
+Multiplication đến từ repeated conditional factorization under independence.
+
+Binomial probability thêm combinatorial factor `\binom nk` vì có nhiều sequences tạo cùng count `k`.
+
+Probability và combinatorics gặp nhau ở đây: counting tells how many paths, probability tells weight mỗi path.
+
+## Frequency interpretation và law of large numbers
+
+Nếu repeat một stable random experiment nhiều lần, sample average/frequency thường converge về expectation/probability dưới suitable assumptions.
+
+Điều này giải thích vì sao probability có empirical meaning. Nhưng convergence không nghĩa short-term balancing.
+
+Sau 10 tails liên tiếp của fair coin, next toss vẫn
+
+```math
+P(H)=0.5.
+```
+
+Belief “heads is now due” là gambler's fallacy: nó nhầm long-run frequency convergence với short-run compensating force.
+
+## Bayesian viewpoint: uncertainty given current information
+
+Bayesian probability dùng probability để encode uncertainty về unknown states/parameters. Khi evidence mới đến:
+
+```math
+posterior
+\propto
+likelihood\times prior.
+```
+
+Frequentist framework khác về interpretation của parameters và probability statements, nhưng share axioms và much of the same probability calculus.
+
+Không nên biến hai frameworks thành slogans. Mỗi one answers inference questions với assumptions và procedures khác nhau.
+
+## Expected value: probability-weighted balance point
+
+Cho discrete random variable `X`:
+
+```math
+E[X]=\sum_x xP(X=x).
+```
+
+Expectation không nhất thiết là possible outcome. Fair die có expectation 3.5 dù không bao giờ roll 3.5.
+
+Expectation là linear:
+
+```math
+E[aX+bY]=aE[X]+bE[Y]
+```
+
+không cần independence.
+
+Đây là reason expected cost/revenue often easy to decompose.
+
+## Worked Finance example — expected return không đủ mô tả risk
+
+Investment A returns `+10%` chắc chắn. Investment B returns `+30%` với probability 0.5 và `-10%` với probability 0.5.
+
+Both have expected return 10%:
+
+```math
+E[R_B]=0.5(0.30)+0.5(-0.10)=0.10.
+```
+
+Nhưng distributions khác hoàn toàn. Expected value alone loses variance, tail and path information.
+
+Probability model phải match decision question; một scalar expectation hiếm khi đủ cho risk management.
+
+## Calibration: probability forecast nên được kiểm tra thế nào?
+
+Nếu model đưa probability khoảng 0.7 cho nhiều comparable cases, một calibrated model sẽ thấy event xảy ra roughly 70% trong nhóm đó over repeated samples.
+
+Calibration khác discrimination. Model có thể rank risks tốt nhưng probabilities badly calibrated.
+
+Trong AI classification, medical risk, weather forecast và credit risk, distinction này quan trọng.
+
+## Common-cause dependence trong engineering
+
+Suppose two servers each failure probability 1%. Nếu independent, probability cả hai fail là
+
+```math
+0.01^2=0.0001.
+```
+
+Nhưng nếu cả hai share same power supply hoặc network, failures correlated. Multiplying 1%×1% underestimates systemic risk.
+
+Independence là assumption phải justify, không phải default convenience.
+
+## Probability zero không luôn nghĩa impossible
+
+Với continuous distribution:
+
+```math
+P(X=x)=0
+```
+
+cho every exact point, nhưng một realized `X` vẫn nhận một exact value. Probability zero event trong continuous mathematics không đồng nghĩa logical impossibility.
+
+Đây là bridge tới measure-theoretic probability.
+
+## Computer Science, AI và information theory connections
+
+Randomized algorithms analyze expected runtime và failure probability. Hash collisions, Bloom filters, distributed retries và sampling đều dựa probability assumptions.
+
+Machine learning dùng conditional distributions like
+
+```math
+P(Y\mid X).
+```
+
+Information theory dùng
+
+```math
+-\log P(x)
+```
+
+để đo surprisal. Rare outcomes carry more information under the model.
+
+## Assumptions và failure modes
+
+Probability statements depend on event definition, conditioning information và model stability. Distribution shift phá historical probabilities. Selection bias làm observed frequencies không represent target population. Hidden variables phá independence. Small samples tạo high uncertainty ngay cả khi point estimate nhìn precise.
+
+Một probability model tốt phải nói cả number **và** assumptions đã tạo number đó.
 
 ## Mental Model
 
-> Probability là measure trên tập các outcomes. Nó chỉ có nghĩa sau khi ta xác định rõ “event nào?”, “information nào đang có?” và “model nào tạo ra con số đó?”.
+> Probability là bookkeeping nhất quán cho uncertainty. Sample space nói những outcomes nào model cho phép; events gom outcomes thành câu hỏi; conditioning thay đổi information set; independence là structural simplification; Bayes chỉ re-express cùng joint probability khi evidence thay đổi. Probability không tồn tại trong vacuum — nó luôn gắn với model và information.
 
 ## Common Misconceptions
 
-Mutually exclusive không phải independent. 70% probability không nghĩa event chắc chắn xảy ra 70 lần trong mỗi block 100 trials. Past streak không buộc random process “cân bằng ngay” nếu trials independent.
+**“Probability 70% nghĩa event sẽ xảy ra 70 lần trong đúng 100 trials.”** Không; đó là long-run/calibration statement under repeated comparable conditions, không guarantee một block cụ thể.
 
-## Worked Example: union và overlap
+**“Mutually exclusive nghĩa independent.”** Ngược lại, positive-probability mutually exclusive events are dependent.
 
-Trong 100 users, 40 dùng feature A, 30 dùng B, 15 dùng cả hai. Fraction dùng ít nhất một:
+**“Sau một streak, random process phải bù.”** Không nếu trials independent.
 
-```math
-\frac{40+30-15}{100}=0.55
-```
+**“Positive test 95% accurate nghĩa 95% chance disease.”** Posterior còn phụ thuộc base rate và false positives.
 
-Nếu chỉ cộng 40%+30%=70%, 15 users overlap bị đếm hai lần. Inclusion-exclusion trong set theory trở thành probability union rule.
-
-## Independence phải được model hóa, không suy từ “không liên quan trực giác”
-
-Hai events có thể phụ thuộc qua hidden variable. Ví dụ server errors và slow responses có thể nhìn như hai metrics khác nhau nhưng cùng phụ thuộc load. Nếu model nhân probabilities như independent mà dependency mạnh, risk estimates sai.
-
-Trong reliability engineering, component failures đôi khi share power/network/environment; common-cause failures phá assumption độc lập và làm system risk cao hơn calculation naive.
+**“Hai systems trông unrelated nên failures independent.”** Shared hidden causes có thể tạo dependence mạnh.
