@@ -40,19 +40,105 @@ Thư viện này đi theo quan hệ phụ thuộc khái niệm và mở rộng t
 
 Không cần học hết phần nền tảng rồi mới đọc phần nâng cao. Cách hợp lý hơn là đọc chương nền tảng tương ứng để có vốn thuật ngữ và hiểu cơ chế chính, sau đó chuyển sang phần nâng cao khi cần hiểu cơ chế bên trong, chứng minh, hiệu năng, kiểu lỗi hoặc thiết kế cho hệ thống thực tế.
 
-Ví dụ:
+### Learning route 1 — từ phần cứng đến application
 
 ```text
-basic/02_computer_architecture/02_memory_hierarchy_and_cache.md
-        ↓
-02_computer_architecture/advanced/00_memory_consistency_cache_coherence_and_ordering.md
-        ↓
-basic/03_operating_systems/02_concurrency_synchronization_and_deadlock.md
-        ↓
-advanced OS / runtime concurrency
+CPU / cache / memory hierarchy
+↓
+virtual memory / scheduler / syscall / I/O
+↓
+runtime: GC / JIT / coroutine
+↓
+application concurrency / queues / database client
+↓
+network / remote service
+↓
+distributed coordination / replication / consistency
 ```
 
-Cấu trúc dữ liệu và thuật toán (DSA) đã có thư viện nâng cao riêng theo cùng mô hình và tiếp tục đi sâu vào cách triển khai bằng C, Java và JavaScript. Các lĩnh vực nâng cao còn lại được mở rộng theo lộ trình trong từng `advanced/README.md`.
+Route này phù hợp khi muốn hiểu vì sao cùng một đoạn code có thể chậm hoặc sai vì nguyên nhân ở tầng thấp hơn. Nên đọc lần lượt các phần Architecture → OS → Programming Languages & Runtime → Software Systems → Networks & Distributed Systems, rồi quay lại [`90_connections/advanced`](./90_connections/advanced/README.md) để nối các tầng bằng symptom thực tế.
+
+### Learning route 2 — durability và consistency
+
+```text
+application transaction
+↓
+MVCC / WAL / lock
+↓
+filesystem / page cache / device
+↓
+replication / consensus
+↓
+cache / event / replica visibility
+```
+
+Route này dùng cho backend/database engineering. Bắt đầu từ nền tảng transaction rồi đọc Database Advanced, OS filesystem/I/O, Distributed Systems và chapter [durability xuyên tầng](./90_connections/advanced/03_durability_path_application_commit_wal_filesystem_device.md).
+
+### Learning route 3 — concurrency và ordering
+
+```text
+language memory model
+↓
+runtime scheduler / coroutine
+↓
+OS thread / synchronization
+↓
+CPU memory ordering / cache coherence
+↓
+network ordering / timeout
+↓
+distributed causality / consensus
+```
+
+Route này giúp phân biệt data race, logical race, thread scheduling, memory reordering và distributed ordering. Không nên dùng từ “concurrent” như một khái niệm duy nhất cho mọi tầng.
+
+### Learning route 4 — reliability và security boundary
+
+```text
+identity / authorization
+↓
+process/container boundary
+↓
+service identity / TLS
+↓
+secret / KMS / key lifecycle
+↓
+distributed failure / retry / overload
+↓
+incident containment / recovery
+```
+
+Route này nối Security với Reliability thay vì coi chúng là hai môn rời rạc. Một control bảo mật có thể tạo dependency availability; một retry policy reliability có thể trở thành abuse amplifier nếu thiếu rate limit hoặc idempotency.
+
+## Quy tắc dependency trong chapter nâng cao
+
+Một chapter nâng cao không được giả định người đọc đã hiểu sâu thuật ngữ hệ thống chỉ vì thuật ngữ đó phổ biến. Khi lần đầu dùng các khái niệm như `process`, `thread`, `virtual memory`, `syscall`, `cache`, `WAL`, `MVCC`, `consensus`, `idempotency`, chapter phải hoặc giải thích bản chất ngắn gọn trước, hoặc link trực tiếp đến chapter nền tảng chứa định nghĩa và mental model.
+
+Mỗi chapter nâng cao nên trả lời được bốn lớp câu hỏi:
+
+```text
+1. Concept tồn tại để giải bài toán gì?
+2. Internals duy trì invariant bằng cơ chế nào?
+3. Khi failure/performance pressure xuất hiện thì nó hỏng hoặc chậm ra sao?
+4. Nó phụ thuộc và tác động các tầng khác thế nào?
+```
+
+Nếu một nội dung chỉ liệt kê API hoặc công nghệ mà không tạo thêm mental model, nó không nên trở thành chapter riêng trong Computer Science Library.
+
+## Nguyên tắc audit coverage
+
+Coverage được xem là đủ khi domain đã có đường reasoning từ foundation → internals → failure modes → performance/concurrency/consistency → production evidence. Không tăng số chapter chỉ để làm roadmap dài hơn.
+
+Khi audit một domain, ưu tiên tìm:
+
+- chapter quá mỏng, chỉ định nghĩa mà chưa giải thích mechanism;
+- dependency ẩn khiến người mới không hiểu thuật ngữ đang được dùng;
+- thiếu failure matrix hoặc edge cases;
+- thiếu connection tới hardware/OS/runtime/network khi connection đó quyết định behavior;
+- thiếu cách quan sát thực tế như metric, trace, execution plan, GC log, wait event hoặc kernel evidence;
+- duplicate giữa các domain có thể thay bằng cross-link.
+
+Cấu trúc dữ liệu và thuật toán (DSA) đã có phần nâng cao riêng theo cùng mô hình và đi sâu vào implementation bằng C, Java và JavaScript. Các domain khác tiếp tục được cải thiện trong chính `computer_science/`, không tách thêm root library nếu conceptual boundary đã được bao phủ ở đây.
 
 ## Nguyên tắc biên soạn phần nâng cao
 

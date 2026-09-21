@@ -10,9 +10,11 @@ Roadmap:
 4. [Advanced cache hierarchy, prefetching và replacement](./03_advanced_cache_hierarchy_prefetching_and_replacement.md)
 5. [NUMA, interconnects và scalable coherence](./04_numa_interconnects_and_scalable_coherence.md)
 6. [TLB, page walkers, huge pages và virtualization extensions](./05_tlb_page_walkers_huge_pages_and_virtualization.md)
-7. SIMD/vector ISA và GPU execution model
+7. [SIMD, vector ISA và GPU execution model](./06_simd_vector_isa_and_gpu_execution_model.md)
 8. Performance counters, roofline và bottleneck attribution
 9. Microarchitectural side channels: Spectre/Meltdown-class reasoning
 10. Persistent memory và crash-consistency implications
 
-Sáu chapter hiện tại tạo đường reasoning liên tục từ instruction execution → speculation → cache/coherence → machine topology → address translation. Phần tiếp theo sẽ đi vào vector/GPU execution, measurement và security/performance consequences.
+Bảy chapter hiện tại tạo đường reasoning từ instruction execution → speculation → cache/coherence → machine topology → address translation → data-parallel execution. Khi đọc phần SIMD/GPU, cần giữ connection với compiler vectorization và memory hierarchy: số execution lane lớn không tạo speedup nếu dependency hoặc bandwidth không cho phép cấp đủ công việc.
+
+Phần tiếp theo ưu tiên measurement và bottleneck attribution trước khi đi sâu side-channel/security và persistent memory.
