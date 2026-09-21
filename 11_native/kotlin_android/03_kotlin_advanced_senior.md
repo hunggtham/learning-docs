@@ -156,21 +156,90 @@ queryFlow
 
 `stateIn` và `shareIn` chuyển cold flow thành hot shared flow trong một scope. `SharingStarted.WhileSubscribed(...)` thường hợp UI nhưng timeout/replay phải được hiểu, không copy template máy móc.
 
-# 9. State machine và UDF
+# 9. State machine, UDF và architecture invariant
 
-UI phức tạp dễ rơi vào impossible states nếu dùng nhiều flags:
-
-```kotlin
-loading=true, success=true, error=true
-```
-
-Một state machine model rõ phase và transition. Unidirectional Data Flow có dạng:
+UDF không phải tên khác của MVI framework. Nó là một constraint giúp reasoning:
 
 ```text
-State -> UI -> Event -> Reducer/Handler -> New State
+authoritative state
+    ↓
+UI render
+    ↓
+user/system event
+    ↓
+owner xử lý side effect / transition
+    ↓
+source of truth thay đổi
+    ↓
+state mới
 ```
 
-Không nhất thiết phải dùng MVI framework. Điều quan trọng là state ownership và transition deterministic.
+Điểm Senior cần giữ không phải “mọi app phải có reducer”, mà là **mỗi fact quan trọng có owner và source of truth rõ**. Nếu cùng một bookmark tồn tại thành mutable state riêng ở database, repository cache, ViewModel và `remember`, hệ thống có bốn nơi có thể bất đồng.
+
+## 9.1 Bắt đầu architecture bằng invariant
+
+Trước khi chọn MVVM/MVI/Clean Architecture, hãy viết invariant:
+
+```text
+User A không bao giờ nhìn thấy cache của User B.
+Sau khi payment được server confirm, retry không tạo transaction thứ hai.
+UI chỉ render article snapshot từ local source of truth.
+Process recreation có thể reconstruct screen từ stable ID.
+```
+
+Architecture có giá trị khi boundary làm invariant dễ giữ và dễ test.
+
+## 9.2 State machine tránh impossible state
+
+Nhiều flags độc lập dễ tạo tổ hợp vô nghĩa:
+
+```text
+loading=true
+fatalError=true
+contentEmpty=false
+paymentSucceeded=true
+```
+
+Có hai kiểu model phổ biến:
+
+```text
+mutually exclusive phase
+→ sealed state / explicit state machine
+
+content có thể coexist với refresh/error metadata
+→ immutable data class với invariant được document
+```
+
+Không ép mọi screen thành sealed state nếu UX cần cached content + refresh + warning cùng lúc. Model phải theo business invariant, không theo template.
+
+## 9.3 Command, state và event phải phân biệt
+
+```text
+Command
+= yêu cầu làm việc: Refresh, Submit, Retry
+
+State
+= fact hiện tại có thể đọc lại: PaymentCompleted, UserLoggedOut
+
+Transient UI effect
+= Snackbar "Copied", haptic, focus request
+```
+
+Nếu một fact quan trọng bị model thành event một lần và collector vắng mặt thì mất, design có thể sai. Durable fact nên có durable/source-of-truth representation.
+
+## 9.4 Stale snapshot là architecture bug, không chỉ concurrency bug
+
+Ví dụ ViewModel giữ object `Article` được truyền từ list screen sang detail. Trong lúc detail mở, DB sync article mới. Detail vẫn hiển thị object cũ vì navigation argument trở thành source of truth thứ hai.
+
+Tốt hơn:
+
+```text
+navigation truyền articleId
+→ destination observe repository/DB theo ID
+→ UI luôn thấy authoritative snapshot
+```
+
+Architecture phải giải thích data freshness và reconstruction, không chỉ dependency direction.
 
 # 10. Compose runtime và recomposition
 
@@ -194,19 +263,6 @@ Recomposition chỉ nói về việc chạy lại phần **composition** cần t
 
 Compose cần biết instance logic nào ở lần composition hiện tại tương ứng với instance nào trước đó để giữ `remember`, effect và state đúng chỗ.
 
-Ví dụ:
-
-```kotlin
-@Composable
-fun UserList(users: List<User>) {
-    users.forEach { user ->
-        UserRow(user)
-    }
-}
-```
-
-Nếu list thay đổi thứ tự, positional identity có thể làm runtime phải làm nhiều việc hơn và effect/state gắn item khó theo đúng entity. Với lazy list, stable key tạo identity rõ:
-
 ```kotlin
 LazyColumn {
     items(
@@ -219,7 +275,7 @@ LazyColumn {
 }
 ```
 
-Key phải biểu diễn **identity bền vững**, không phải index nếu index thay đổi khi insert/delete/reorder.
+Key phải biểu diễn identity bền vững, không phải index nếu index thay đổi khi insert/delete/reorder.
 
 ## 10.2 `remember` thuộc Composition, không thuộc business object
 
@@ -247,41 +303,9 @@ durable data
 
 ## 10.3 State read quyết định phase nào bị invalidated
 
-Compose theo dõi **nơi đọc state**, không chỉ nơi state được tạo.
+Compose theo dõi nơi đọc state, không chỉ nơi state được tạo. Read trong composition có thể trigger recomposition; read trong placement có thể chỉ restart layout; read trong draw có thể chỉ restart draw.
 
-Composition read:
-
-```kotlin
-var padding by remember { mutableStateOf(8.dp) }
-Text(
-    "Hello",
-    Modifier.padding(padding) // read khi dựng modifier trong composition
-)
-```
-
-Khi `padding` đổi, composition scope liên quan phải chạy lại.
-
-Layout-placement read có thể tránh composition:
-
-```kotlin
-Modifier.offset {
-    IntOffset(offsetX.roundToPx(), 0)
-}
-```
-
-Nếu `offsetX` được đọc trong placement lambda, thay đổi có thể chỉ invalidate layout/placement.
-
-Draw read:
-
-```kotlin
-Modifier.drawBehind {
-    drawRect(color = animatedColor)
-}
-```
-
-Nếu state chỉ được đọc trong draw, runtime có thể chỉ chạy draw phase.
-
-Senior optimization không phải chuyển mọi read xuống phase thấp nhất bằng mẹo khó đọc; nó là hiểu hot path để tránh recomposition/layout không cần thiết khi profiler chứng minh vấn đề.
+Senior optimization không phải chuyển mọi read xuống phase thấp nhất bằng mẹo khó đọc; nó là hiểu hot path để tránh work không cần thiết khi profiler chứng minh vấn đề.
 
 ## 10.4 Composable body phải gần pure
 
@@ -298,213 +322,32 @@ UI body nên chủ yếu mô tả output từ input/state. Business side effect 
 
 # 11. Snapshot State, stability và performance
 
-Compose Snapshot system cung cấp observable state model cho runtime. Khi code đọc một `State<T>` trong restart scope, runtime có thể theo dõi dependency đó; khi write hợp lệ thay đổi value, những scope đã đọc nó có thể bị invalidated.
+Compose Snapshot system cung cấp observable state model cho runtime. Ordinary Kotlin mutation không tự trở thành observable. Immutable snapshot hoặc Snapshot-aware collection làm mutation contract rõ hơn.
 
-Ordinary Kotlin mutation không tự trở thành observable:
+**Immutable** và **Stable** không phải cùng khái niệm. Không annotate `@Stable`/`@Immutable` chỉ để giảm metric; annotation sai có thể khiến runtime bỏ work cần thiết và tạo correctness bug.
 
-```kotlin
-val users = mutableListOf<User>()
-users += newUser // Compose không tự biết list này đã đổi nếu list không nằm trong observable state model phù hợp
-```
+`derivedStateOf` hữu ích khi input đổi thường xuyên nhưng output semantic đổi ít hơn. `remember` cache theo identity/key chứ không phải global cache. Lazy list cần stable key; key sai không chỉ ảnh hưởng performance mà còn có thể gắn state/effect nhầm entity.
 
-Một pattern an toàn hơn là immutable snapshot được publish qua observable holder:
-
-```kotlin
-var users by mutableStateOf<List<User>>(emptyList())
-    private set
-
-fun add(user: User) {
-    users = users + user
-}
-```
-
-hoặc dùng `SnapshotStateList` khi mutable collection semantics là chủ đích. Điều quan trọng là runtime phải nhìn thấy mutation contract.
-
-## 11.1 Stability không đồng nghĩa immutability
-
-**Immutable** nghĩa state quan sát được của object không đổi sau construction theo contract. **Stable** trong Compose là contract rộng hơn giúp compiler/runtime reasoning về việc input có thay đổi quan sát được không.
-
-Không annotate `@Stable` hoặc `@Immutable` chỉ để benchmark đẹp. Nếu object thực tế mutate theo cách Compose không thể quan sát nhưng bạn tuyên bố stable, runtime có thể skip công việc cần thiết và tạo correctness bug.
-
-Correctness > skip rate.
-
-## 11.2 Parameter equality và granularity
-
-Nếu một root `ScreenState` khổng lồ đổi object mỗi khi timer/scroll nhỏ thay đổi, nhiều subtree có thể bị invalidated dù chỉ một vùng quan tâm value đó. Ngược lại, chia state thành hàng trăm holder nhỏ có thể làm ownership khó hiểu.
-
-Granularity tốt xuất phát từ semantic ownership:
-
-```text
-state nào thay đổi cùng nhau?
-subtree nào thật sự đọc field nào?
-field nào derived từ source khác?
-update frequency khác nhau bao nhiêu?
-```
-
-Không tối ưu bằng cách “split mọi state” trước khi đo.
-
-## 11.3 `derivedStateOf` dùng khi derived result đổi ít hơn input
-
-Ví dụ scroll index thay đổi liên tục nhưng UI chỉ cần biết đã qua item đầu hay chưa:
-
-```kotlin
-val showScrollToTop by remember {
-    derivedStateOf {
-        listState.firstVisibleItemIndex > 0
-    }
-}
-```
-
-`derivedStateOf` có overhead. Không dùng cho phép nối string đơn giản chỉ vì value được tính từ state khác.
-
-## 11.4 `remember` cache theo identity/key, không phải cache toàn cục
-
-```kotlin
-val sortedItems = remember(items) {
-    items.sortedBy { it.title }
-}
-```
-
-Cách này hợp lý nếu sorting đủ đáng kể và `items` có immutable/replacement semantics rõ. Nếu list bị mutate in-place nhưng reference không đổi, key `items` không thể tự biểu diễn mutation mà runtime không quan sát được.
-
-## 11.5 Lazy list: key, content type và mutation
-
-Stable key giúp item giữ identity qua reorder; `contentType` có thể giúp lazy container reuse item structure phù hợp. Nhưng key không chữa data model sai. Nếu hai item có cùng key hoặc key thay theo position, state/effect có thể gắn nhầm entity.
-
-## 11.6 Performance phải đo theo frame, không theo trực giác
-
-Các câu hỏi đúng:
-
-```text
-frame nào jank?
-composition, measure/layout hay draw tốn thời gian?
-allocation/GC có spike không?
-expensive calculation có nằm trong composition không?
-list có item identity ổn định không?
-main thread có bị I/O/lock chặn không?
-```
-
-Dùng tracing/profiling/Macrobenchmark/Compose tooling theo vấn đề. Recomposition là một tín hiệu; không phải KPI duy nhất.
+Performance phải đo theo frame: composition, measure/layout, draw, allocation/GC, main-thread block và lazy reuse. Correctness đứng trước skip optimization.
 
 # 12. Side effects đúng cách
 
-Compose effect API tồn tại vì composable body nên side-effect free. Chọn effect theo **lifetime và cleanup contract**, không theo việc “snippet nào chạy được”.
+Compose effect API tồn tại vì composable body nên side-effect free. Chọn effect theo lifetime và cleanup contract.
 
-## 12.1 `LaunchedEffect`: coroutine sống cùng call site + key
+`LaunchedEffect(key)` launch coroutine khi vào Composition, cancel khi rời Composition, và cancel/restart khi key đổi. Constant key như `Unit` chỉ có nghĩa “không restart vì key trong lifetime call site này”, không phải “một lần toàn app”.
 
-```kotlin
-LaunchedEffect(userId) {
-    analytics.trackScreen(userId)
-}
-```
+`rememberUpdatedState` cho phép effect giữ lifetime hiện tại nhưng đọc callback/value mới nhất. `DisposableEffect` dùng khi có acquire/release listener/resource. `SideEffect` publish Compose state sang non-Compose object sau successful composition. `snapshotFlow` chuyển Snapshot reads thành Flow; `rememberCoroutineScope` hữu ích cho coroutine được kích hoạt từ UI event như snackbar.
 
-Khi effect vào Composition, coroutine được launch. Khi call site rời Composition, coroutine bị cancel. Khi key đổi, coroutine cũ bị cancel và block chạy lại với key mới.
-
-Nếu operation phải tiếp tục sau khi screen rời Composition, đây thường là owner sai; ViewModel/application/WorkManager có thể phù hợp hơn tùy lifetime.
-
-## 12.2 Constant key không có nghĩa “một lần toàn app”
-
-```kotlin
-LaunchedEffect(Unit) { ... }
-```
-
-nghĩa là effect không restart vì key đổi trong **lifetime hiện tại của call site**. Nếu call site rời Composition rồi quay lại, effect chạy lại. Vì vậy `LaunchedEffect(Unit)` không phải lifecycle toàn process.
-
-## 12.3 `rememberUpdatedState`: latest value nhưng giữ effect lifetime
-
-Nếu callback thay đổi qua recomposition nhưng ta không muốn restart delay/subscription dài:
-
-```kotlin
-val currentOnTimeout by rememberUpdatedState(onTimeout)
-
-LaunchedEffect(Unit) {
-    delay(3_000)
-    currentOnTimeout()
-}
-```
-
-Tách hai vấn đề:
+Senior review phải hỏi:
 
 ```text
-lifetime/restart của effect
-!=
-latest value effect cần đọc
-```
-
-## 12.4 `DisposableEffect`: acquire/release external resource
-
-Phù hợp listener/observer cần cleanup:
-
-```kotlin
-DisposableEffect(lifecycleOwner) {
-    val observer = LifecycleEventObserver { _, event ->
-        // ...
-    }
-    lifecycleOwner.lifecycle.addObserver(observer)
-
-    onDispose {
-        lifecycleOwner.lifecycle.removeObserver(observer)
-    }
-}
-```
-
-Key đổi hoặc call site rời Composition thì cleanup cũ chạy trước khi resource mới được gắn. `onDispose {}` rỗng thường là dấu hiệu effect API khác phù hợp hơn.
-
-## 12.5 `SideEffect`: publish sau successful composition
-
-`SideEffect` phù hợp đồng bộ Compose state sang object ngoài Compose sau khi composition đã apply thành công. Không dùng nó cho network request hay work cần coroutine.
-
-## 12.6 `produceState` và `snapshotFlow`
-
-`produceState` hữu ích bridge producer async/callback thành Compose State khi ownership thực sự thuộc UI boundary.
-
-`snapshotFlow` quan sát Snapshot state read trong block và biến change thành Flow, hữu ích cho analytics/stream transformation:
-
-```kotlin
-LaunchedEffect(listState) {
-    snapshotFlow { listState.firstVisibleItemIndex }
-        .distinctUntilChanged()
-        .collect { index ->
-            analytics.onVisibleIndex(index)
-        }
-}
-```
-
-Đừng dùng `snapshotFlow` để vòng ngược mọi Compose state sang ViewModel; nếu domain state vốn đã là Flow, giữ source ở layer gốc thường đơn giản hơn.
-
-## 12.7 `rememberCoroutineScope`: coroutine từ event handler
-
-Một event như bấm nút để show Snackbar cần coroutine nhưng không nhất thiết là effect của state:
-
-```kotlin
-val scope = rememberCoroutineScope()
-
-Button(onClick = {
-    scope.launch {
-        snackbarHostState.showSnackbar("Saved")
-    }
-}) {
-    Text("Save")
-}
-```
-
-Scope này vẫn gắn với Composition. Không dùng để khởi chạy durable business work phải sống lâu hơn UI.
-
-## 12.8 Effect review checklist
-
-Với mỗi effect, hỏi:
-
-```text
-điều gì tạo identity của effect?
-key nào phải restart nó?
-value nào chỉ cần latest mà không restart?
+identity của effect là gì?
+key nào restart?
+value nào chỉ cần latest?
 cleanup ở đâu?
-leaving composition có phải cancel work không?
-operation này thật sự là UI side effect hay business command?
-process death/re-entry có chạy lặp nguy hiểm không?
+leaving Composition có nên cancel operation không?
+đây là UI effect hay business command?
 ```
-
-Nếu không trả lời được, effect đang dựa vào may mắn hơn là lifecycle contract.
 
 # 13. Lifecycle, configuration change và process death
 
@@ -516,29 +359,180 @@ Configuration change thường recreate Activity nhưng ViewModel có thể số
 
 `SavedStateHandle` cho ViewModel state cần phục hồi sau process recreation theo capability của saved state. Nó không phải database. Chỉ lưu dữ liệu nhỏ, serializable/savable hoặc identifier cần để reconstruct screen.
 
-# 15. Multi-module architecture
+# 15. Multi-module architecture: boundary phải mua được giá trị
 
-Module hóa giúp enforce dependency, tăng parallel build/caching và ownership, nhưng quá nhiều module tạo build overhead và complexity. Module boundary có thể theo feature (`feature:home`, `feature:checkout`) và core (`core:model`, `core:network`, `core:database`, `core:designsystem`).
+Module hóa không phải mục tiêu tự thân. Một module nên tồn tại vì ít nhất một force cụ thể: ownership/team boundary, dependency isolation, build parallelism/cache, reusable public contract, optional delivery hoặc giới hạn accidental coupling.
 
-Feature module không nên phụ thuộc vòng. Public API của module nên nhỏ. Internal implementation nên dùng `internal` khi phù hợp.
+Một graph có thể như:
 
-# 16. Gradle và build performance
+```text
+:app
+  ↓
+:feature:home:impl ─────→ :feature:home:api
+  ↓                           ↑
+:core:data ─────→ :core:model │
+  ↓                           │
+:core:database / :core:network
+```
 
-Các khái niệm cần nắm: Gradle configuration phase, task graph, build cache, configuration cache, incremental compilation, KSP/KAPT cost, dependency resolution, build variants, product flavors, build types.
+Dependency phải có hướng. Nếu `feature:A` import internal implementation của `feature:B`, boundary trên sơ đồ không tồn tại thực tế.
 
-Không chạy logic I/O tùy tiện trong Gradle configuration. Dependency version nên centralize. Tránh dynamic version như `1.+` vì build khó reproducible.
+## 15.1 Public surface nhỏ hơn implementation surface
 
-# 17. DI ở quy mô lớn
+Module public API nên chứa contract cần thiết, không export mọi DTO/entity/helper. `internal` là công cụ compile-time/module visibility hữu ích nhưng không phải security boundary.
 
-Hilt/Dagger compile-time graph giúp verify dependency. Scope phải map đúng lifecycle. `@Singleton` không nên dùng chỉ vì “đỡ tạo object”. Một object stateful vô tình singleton có thể leak state giữa user/session.
+Một thay đổi implementation phía sau API nhỏ có blast radius build/source nhỏ hơn một `core:common` expose hàng trăm symbol.
 
-Assisted injection hữu ích khi một số parameter runtime không nằm trong graph. Multibinding hữu ích plugin architecture/handler registry.
+## 15.2 God core module là monolith đội lốt modularization
 
-# 18. Offline-first, cache và sync
+`core:common` chứa networking, analytics, navigation, model, auth và utility của mọi feature tạo dependency fan-in cực lớn. Mỗi sửa nhỏ có thể invalidated nhiều module và mọi team đều sở hữu “một chút”, cuối cùng không ai thực sự sở hữu.
 
-Offline-first thường chọn local DB làm source of truth. Repository observe local data, refresh từ network, merge theo conflict policy, rồi write local. Sync cần xử lý idempotency, retry, ordering, conflict và auth expiration.
+Tách theo capability ổn định, không theo mong muốn tạo thật nhiều folder.
 
-Không đủ khi chỉ “cache response 5 phút”. Cần xác định freshness policy, stale-while-revalidate, ownership của timestamp, và hành vi khi partial failure.
+## 15.3 Module boundary phải đi cùng runtime ownership
+
+Tách `feature:checkout` thành module không tự giải quyết việc checkout session sống bao lâu, repository source of truth ở đâu hay coroutine scope thuộc ai. Build boundary và runtime boundary là hai dimension khác nhau.
+
+# 16. Gradle, build graph và release debugging
+
+Gradle build cần được hiểu theo phase thay vì xem như “Android Studio bấm Run”.
+
+```text
+Settings / project discovery
+→ configuration
+→ variant/task graph
+→ task execution
+→ compiler/code generation
+→ resource + manifest processing
+→ D8/R8
+→ packaging/signing
+→ APK/AAB
+```
+
+Một lỗi phải được định vị ở phase nào trước khi sửa.
+
+## 16.1 Configuration cost vs execution cost
+
+Configuration cache giải quyết việc tái sử dụng configuration state khi build logic tương thích; build cache tái sử dụng task output dựa trên input. Hai cache khác nhau.
+
+Không chạy network/file scanning tùy ý trong configuration. Custom task phải khai báo input/output đúng để incremental/cache có thể tin cậy.
+
+## 16.2 Build reproducibility
+
+Production artifact phải truy được:
+
+```text
+source commit
+Gradle wrapper
+AGP/Kotlin/JDK
+resolved dependency graph
+build variant/flavor
+R8 rules
+signing identity/process
+feature/config inputs
+```
+
+Dynamic version như `1.+` phá reproducibility vì cùng commit có thể resolve dependency khác ở ngày khác.
+
+## 16.3 Debug build pass không chứng minh release pass
+
+Release có thể khác debug ở:
+
+```text
+R8 shrinking/optimization/obfuscation
+resource shrinking
+BuildConfig/manifest value
+signing
+proguard consumer rules
+feature flag/environment
+native symbols
+```
+
+Vì vậy CI cần compile/test release-like variant. Lỗi reflection/JNI/serialization chỉ xuất hiện sau minify là failure mode bình thường cần được thiết kế test.
+
+## 16.4 Debugging theo exact variant
+
+Khi bug chỉ xảy ra ở `prodRelease`, đừng reproduce bằng `devDebug` rồi kết luận. Ghi exact tuple:
+
+```text
+commit + variant + device/API + dependency lock + server/config version
+```
+
+Forensics bắt đầu từ artifact thật, không từ source “trông giống”.
+
+# 17. DI ở quy mô lớn: graph và lifetime contract
+
+DI không phải architecture; DI quản lý object graph và creation/lifetime. Scope phải phản ánh owner thật:
+
+```text
+application singleton
+session scoped
+activity/navigation graph scoped
+ViewModel scoped
+transient
+```
+
+Một object stateful vô tình `@Singleton` có thể leak data qua account switch. Một Activity Context bị giữ trong singleton tạo memory leak. Constructor injection làm dependency explicit nhưng không tự bảo đảm scope đúng.
+
+Hilt/Dagger compile-time graph giúp verify dependency. Assisted injection hữu ích khi một số input là runtime identity như `itemId`. Multibinding phù hợp registry/plugin model. Không tạo interface cho mọi class chỉ để DI “đẹp”; seam phải phản ánh volatility/test requirement thật.
+
+# 18. Offline-first, source of truth và sync correctness
+
+Offline-first không chỉ là “cache API response”. Phải định nghĩa consistency contract giữa local và remote.
+
+Một pattern production:
+
+```text
+UI observe local DB
+network refresh/sync
+    ↓
+transaction update local DB
+    ↓
+DB emit authoritative snapshot
+    ↓
+UI update
+```
+
+## 18.1 Read-offline và write-offline khác độ khó
+
+Read cache chỉ cần freshness/revalidation policy. Write-offline cần durable pending mutation, idempotency, ordering, conflict, retry và account isolation.
+
+Nếu product không cần offline mutation, đừng xây distributed sync engine chỉ vì “offline-first nghe hiện đại”.
+
+## 18.2 Ambiguous outcome
+
+Request timeout không có nghĩa server chưa commit:
+
+```text
+client gửi POST
+server commit
+response mất
+client thấy timeout
+```
+
+Nếu retry mù, duplicate side effect có thể xuất hiện. Idempotency key/server contract mới giải quyết được nhóm failure này.
+
+## 18.3 Durable outbox invariant
+
+Nếu local optimistic update và pending operation phải luôn cùng tồn tại, ghi chúng trong cùng local transaction:
+
+```text
+entity state changed
+AND
+outbox mutation exists
+```
+
+Crash giữa hai write riêng biệt sẽ phá invariant.
+
+## 18.4 Conflict và ordering
+
+LWW chỉ đúng nếu business chấp nhận last-write-wins và clock/version đáng tin. Nhiều domain cần server revision/optimistic concurrency/field merge hoặc explicit conflict UI.
+
+Mutation queue cũng cần biết operation có commute không. `setFavorite(true)` có semantics retry khác `toggleFavorite()` vì toggle phụ thuộc state trước đó.
+
+## 18.5 Account/session isolation
+
+Pending work và cache phải namespace theo account/session nếu dữ liệu user-specific. Logout không chỉ xóa token; cần xác định worker đang chạy, DB/cache cũ, in-flight response và notification/deep link state.
 
 # 19. Paging 3
 
@@ -546,52 +540,194 @@ Paging 3 giúp load dữ liệu theo trang từ database/network. `Pager`, `Pagi
 
 UI cần handle refresh/append/prepend load states độc lập. Sai lầm thường gặp là biến mọi error thành full-screen error dù chỉ append page fail.
 
-# 20. Background execution policy
+# 20. Background execution policy: chọn primitive theo lifetime + guarantee
 
-Android giới hạn background ngày càng chặt. Chọn công cụ theo semantic: coroutine trong ViewModel cho work gắn màn hình; foreground service cho user-visible ongoing task có yêu cầu rõ; WorkManager cho deferrable guaranteed work; exact alarm chỉ cho use case đủ điều kiện; push notification/FCM cho server-triggered signal.
+Không chọn background API theo câu hỏi “cái nào chạy nền?”, mà theo contract:
 
-Không dùng Service chỉ vì “cần thread nền”. Service không phải thread.
+```text
+work chỉ có ý nghĩa khi screen còn sống
+→ ViewModel/lifecycle coroutine
 
-# 21. Security production
+work user-visible đang chạy liên tục
+→ foreground service nếu platform policy/use case cho phép
 
-Threat model phải xem attacker có thể decompile APK, hook runtime, MITM thiết bị compromised, steal token hoặc exploit exported component. Không dựa vào obfuscation như biện pháp bảo mật duy nhất.
+work có thể trì hoãn nhưng cần eventually execute
+→ WorkManager
 
-Kiểm tra `android:exported`, deep link validation, PendingIntent mutability, WebView settings, JavaScript bridge, file URI/content URI, certificate pinning trade-off, Keystore và token lifetime.
+đúng thời điểm gần tuyệt đối
+→ alarm API chỉ khi use case đủ điều kiện
 
-WebView đặc biệt nguy hiểm nếu load content không tin cậy cùng JS bridge. `addJavascriptInterface` cần threat model nghiêm ngặt.
+server-triggered signal
+→ push/FCM, sau đó app quyết định work phù hợp
+```
 
-# 22. Performance, memory và battery
+Service không phải thread. WorkManager không phải sync correctness engine; nó schedule execution, còn idempotency/source-of-truth/retry semantic thuộc business/data design.
 
-Các nhóm performance chính: startup, frame rendering/jank, memory, network, database và battery. Dùng Android Profiler, Perfetto, Macrobenchmark, Baseline Profiles, Layout Inspector/Compose tooling tùy vấn đề.
+Production failure cần test Doze, battery saver, process kill, reboot, network mất/đổi, permission revoke và duplicate scheduling nếu relevant.
 
-Memory leak thường đến từ listener không unregister, coroutine scope sống quá lâu, singleton giữ Activity/View, Fragment binding giữ sau `onDestroyView`, callback capture reference và cache không bounded.
+# 21. Security production: threat model trước API
 
-# 23. Networking nâng cao
+Mobile client là môi trường người dùng kiểm soát. Attacker có thể decompile APK, hook method, inspect memory, chạy rooted/emulated environment hoặc gửi Intent/deep link trực tiếp.
 
-OkHttp interceptor chain có application interceptor và network interceptor với semantics khác. Authentication refresh cần tránh thundering herd khi nhiều request cùng nhận 401. Có thể serialize token refresh bằng mutex/single-flight pattern.
+## 21.1 Trust boundary
 
-Timeout cần phân biệt connect/read/write/call. Retry chỉ an toàn khi operation idempotent hoặc backend hỗ trợ idempotency key.
+```text
+client-side role check
+= UX optimization
 
-# 24. Database nâng cao
+backend authorization
+= security authority
+```
 
-Room transaction:
+Không nhúng server secret dài hạn rồi trông chờ R8/obfuscation bảo vệ. Keystore bảo vệ key material tốt hơn file plaintext nhưng không biến compromised device thành trusted server.
+
+## 21.2 External input phải coi là untrusted
+
+Các boundary cần validate:
+
+```text
+Intent/deep link
+exported Activity/Service/Receiver/Provider
+PendingIntent
+content URI/FileProvider
+WebView navigation/JS bridge
+notification action
+Binder/native input
+```
+
+Kiểm tra scheme/host/path/ID, authorization sau navigation, URI grant tối thiểu và `android:exported` có chủ đích.
+
+## 21.3 Token/session security là lifecycle problem
+
+Token có expiry/refresh/revoke. Concurrent `401` cần single-flight refresh; logout cần vô hiệu session state, cancel/namespace pending work và không để response của account cũ update state account mới.
+
+Không log token/PII. Telemetry schema phải có privacy review vì observability cũng là data export surface.
+
+## 21.4 Certificate pinning có operational cost
+
+Pinning chỉ dùng khi threat model biện minh và có rotation/recovery plan. Certificate/key thay đổi không được chuẩn bị có thể biến security control thành outage toàn app.
+
+# 22. Performance, memory và battery: evidence before optimization
+
+Performance engineering theo vòng:
+
+```text
+user-visible metric
+→ reproduce trên representative device
+→ trace/profile
+→ hypothesis
+→ one controlled change
+→ measure lại
+→ regression guard
+```
+
+Các metric khác nhau cần tool khác nhau:
+
+```text
+startup TTID/TTFD
+frame time/jank
+CPU hot path
+allocation/GC/memory peak
+DB latency/query plan
+network latency/bytes
+battery/background wakeup
+APK/download size
+```
+
+Macrobenchmark phù hợp startup/interaction ở package level; Perfetto/System Trace nhìn thread/system timeline; memory profiler tìm retention/allocation; baseline profile cải thiện compiled hot path nhưng không sửa algorithm chậm.
+
+## 22.1 Tail latency quan trọng hơn average đẹp
+
+Average 8 ms không có nghĩa smooth nếu p95/p99 có frame 80–150 ms. Production telemetry nên segment theo device class/OS/network nếu metric nhạy với environment.
+
+## 22.2 Memory leak = lifetime mismatch
+
+Các pattern thường gặp:
+
+```text
+singleton giữ Activity/View
+listener không unregister
+Fragment binding sống sau onDestroyView
+coroutine scope sống dài hơn owner
+unbounded cache
+callback/lambda capture object graph lớn
+```
+
+GC không thể thu object còn reachable. Debug bằng retention path thay vì gọi `System.gc()`.
+
+## 22.3 Battery là scheduling + radio + sensor problem
+
+Polling thường xuyên, location high accuracy liên tục, wakeup quá nhiều và retry storm đều tốn pin. Batch work, chọn constraint hợp lý, debounce/throttle khi đúng semantic và dừng sensor/camera/BLE theo lifecycle/resource ownership.
+
+# 23. Networking nâng cao: failure taxonomy trước retry
+
+Phân biệt:
+
+```text
+DNS/connectivity/timeout
+TLS failure
+HTTP protocol status
+serialization/schema failure
+auth/session failure
+domain validation/conflict
+ambiguous outcome sau side effect
+```
+
+Không map tất cả thành `NetworkError` rồi retry.
+
+OkHttp interceptor chain có application/network interceptor với semantics khác. Token refresh cần tránh thundering herd khi nhiều request cùng `401`; mutex/single-flight có thể phù hợp nếu lock scope đúng.
+
+Timeout cần phân biệt connect/read/write/call. Retry chỉ an toàn khi operation idempotent hoặc backend có idempotency key. Backoff nên có jitter ở fleet lớn để tránh nhiều client retry cùng lúc.
+
+HTTP cache và application DB cache là hai layer khác nhau. Cache policy phải xác định freshness, validation và source of truth.
+
+# 24. Database nâng cao: transaction là invariant boundary
+
+Room transaction không chỉ để “chạy nhanh hơn”; nó bảo đảm nhóm write quan trọng commit/rollback cùng nhau.
 
 ```kotlin
 @Transaction
 suspend fun replaceData(...) { ... }
 ```
 
-Index cần dựa trên query pattern. Too many indexes làm write chậm và tăng storage. Migration phải test bằng exported schema/migration test khi production data quan trọng.
+Nếu business invariant là entity update và outbox mutation phải cùng tồn tại, transaction phải bao quanh cả hai.
 
-Database operation cần hiểu thread/concurrency; Room suspend/Flow hỗ trợ tốt nhưng transaction dài vẫn block database resources.
+Index cần dựa trên query plan. Quá nhiều index tăng write/storage. Migration phải test bằng schema cũ + dữ liệu đại diện; destructive migration chỉ hợp với disposable cache nếu product chấp nhận mất dữ liệu.
 
-# 25. Testing strategy
+Database lock/transaction dài có thể block resource dù API là suspend. Không đặt network call trong DB transaction. Sync cursor + downloaded page có thể cần cùng transaction để crash không tạo “cursor mới nhưng data chưa ghi”.
 
-Test pyramid Android thực tế nên tối đa hóa fast deterministic tests ở domain/data boundary, thêm integration test nơi serialization/DB/DI cần xác minh, và giữ UI/end-to-end test cho critical flows.
+Rollback release cũng phải đọc được schema/data đã do version mới tạo nếu product muốn binary rollback thực sự khả thi.
 
-Fake thường tốt hơn mock cho stateful collaborator vì behavior gần thực tế hơn. Mock phù hợp verify interaction hẹp. Tránh test implementation detail như “method A phải gọi method B đúng 1 lần” nếu contract chỉ yêu cầu output state.
+# 25. Testing strategy: test invariant và failure order
 
-Compose UI test nên query bằng semantics/testTag khi cần, nhưng ưu tiên semantics phản ánh accessibility/meaning.
+Test pyramid Android nên tối đa hóa fast deterministic tests ở domain/data boundary, thêm integration test tại serialization/DB/DI/boundary, và UI/end-to-end test cho critical flows.
+
+Fake thường tốt hơn mock cho stateful collaborator vì giữ behavior gần hệ thống thật. Mock phù hợp interaction hẹp.
+
+Senior test không chỉ happy path. Cần chủ động điều khiển order:
+
+```text
+request A bắt đầu
+request B bắt đầu
+B success
+A success muộn
+→ assert A không overwrite B
+```
+
+Các failure test có giá trị cao:
+
+```text
+process death giữa flow
+DB migration từ schema thực
+network timeout sau remote commit
+401 đồng thời
+permission revoke
+disk full / serialization corrupt nếu domain quan trọng
+R8/minified release
+rollback đọc data version mới
+```
+
+Compose UI test nên query semantics phản ánh meaning/accessibility thay vì chỉ testTag nếu có thể.
 
 # 26. Java interoperability
 
@@ -617,27 +753,80 @@ Tốt hơn dùng enum/options object hoặc named arguments nếu internal Kotli
 
 Builder chỉ cần khi constructor/named defaults không đủ. Kotlin data class + default parameter thường loại bỏ boilerplate builder Java.
 
+Public API cần document cả **behavioral contract**: threading, cancellation, ordering, replay, nullability, ownership và failure; type signature một mình chưa đủ.
+
 # 28. Design patterns và Kotlin idioms
 
 Nhiều GoF pattern được Kotlin làm nhẹ hơn. Strategy có thể là function type thay vì hierarchy class. Singleton có `object`. Builder có DSL/named/default args. Decorator có delegation. Observer thường biểu diễn bằng Flow. State pattern có sealed hierarchy/reducer.
 
 Không áp pattern vì tên nghe “senior”. Pattern là giải pháp cho force cụ thể. Nếu language feature làm vấn đề biến mất, đừng dựng class graph chỉ để giống sách.
 
-# 29. Legacy migration
+# 29. Legacy migration: strangler thay big-bang
 
-Migration Java -> Kotlin nên incremental, không “Convert Java File to Kotlin” rồi coi là xong. Code convert tự động thường giữ Java idiom: nullable rộng, mutable collection, companion boilerplate, platform type chưa normalize.
+Migration Java → Kotlin hoặc XML → Compose nên tạo seam và di chuyển incrementally.
 
-Migration XML -> Compose cũng nên incremental. Có thể giữ Fragment navigation, chuyển từng leaf screen sang ComposeView, sau đó cân nhắc nâng architecture. Rewrite big-bang tăng regression risk.
+Ví dụ:
+
+```text
+Rx repository cũ
+→ adapter boundary expose Flow cho feature mới
+→ migrate caller dần
+→ đo/test
+→ xóa Rx path khi không còn consumer
+```
+
+Hoặc:
+
+```text
+Fragment host cũ
+→ ComposeView cho leaf screen mới
+→ navigation/lifecycle vẫn giữ contract cũ
+→ migrate screen theo risk/ownership
+```
+
+Mỗi migration phải có:
+
+```text
+behavior baseline
+entry/exit criteria
+coexistence contract
+telemetry/test
+rollback/fallback
+owner
+ngày/điều kiện xóa legacy
+```
+
+Convert source tự động không đồng nghĩa migration semantic hoàn tất.
 
 # 30. Senior review checklist
 
-Một review senior không chỉ nhìn syntax. Cần kiểm tra state ownership; cancellation; lifecycle; error semantics; idempotency; retry; persistence; null boundary; thread safety; source of truth; testability; security; accessibility; performance; observability; backward compatibility; migration cost; API contract; module dependency; build impact.
+Review theo chain thay vì theo framework:
+
+```text
+Requirement
+→ invariant
+→ owner/lifetime
+→ source of truth
+→ state transition
+→ execution context
+→ concurrency/ordering
+→ external boundary
+→ failure/retry/idempotency
+→ persistence/reconstruction
+→ security/privacy
+→ performance budget
+→ test evidence
+→ build/artifact
+→ rollout/rollback
+```
+
+Một feature chưa production-ready nếu chỉ trả lời “dùng MVVM + Hilt + Room + Compose” nhưng không giải thích được race, process death, stale data, retry, security boundary hoặc rollback.
 
 ---
 
 ## Senior Notes tổng kết
 
-Code Android production bền không đến từ việc dùng nhiều library nhất mà từ việc đặt đúng ownership. State thuộc ai, coroutine thuộc scope nào, database là source of truth hay cache, retry thuộc layer nào, error được map ở boundary nào, event có thực sự là event hay chỉ là state chưa model đúng, dependency sống bao lâu, và behavior nào phải survive process death. Seniority thể hiện ở khả năng trả lời rõ những câu hỏi đó trước khi bug xảy ra.
+Code Android production bền không đến từ việc dùng nhiều library nhất mà từ việc đặt đúng ownership và giữ invariant. State thuộc ai, coroutine thuộc scope nào, database là source of truth hay cache, retry thuộc layer nào, error được map ở boundary nào, event có thực sự là event hay chỉ là state chưa model đúng, dependency sống bao lâu, và behavior nào phải survive process death. Seniority thể hiện ở khả năng trả lời rõ những câu hỏi đó trước khi bug xảy ra.
 
 ---
 
@@ -654,23 +843,19 @@ suspend fun token(): Token = mutex.withLock {
 }
 ```
 
-Ví dụ trên còn gợi ý pattern **single-flight**: nhiều caller cùng cần token mới nhưng chỉ một refresh chạy. Tuy nhiên nếu `refreshToken()` có thể lâu hoặc re-enter dependency khác, phải xem xét lock scope để tránh contention/deadlock logic. Senior engineer không chọn Mutex vì “có concurrency”; trước tiên cần giảm shared mutable state, xác định owner, rồi mới dùng primitive phù hợp.
+Ví dụ trên còn gợi ý pattern single-flight. Tuy nhiên nếu `refreshToken()` lâu hoặc re-enter dependency khác, phải xem lock scope để tránh contention/deadlock logic. Trước tiên giảm shared mutable state và xác định owner rồi mới chọn primitive.
 
-`Channel` không thay thế Flow. Flow phù hợp mô hình stream/declarative transformation; Channel phù hợp queue/message hand-off. Đặc biệt tránh dùng Channel như event bus toàn app vì ownership và backpressure nhanh chóng trở nên khó kiểm soát.
+`Channel` không thay thế Flow. Flow phù hợp stream/declarative transformation; Channel phù hợp queue/message hand-off. Tránh Channel như event bus toàn app vì ownership/backpressure khó kiểm soát.
 
 # 32. Coroutine scheduler, dispatcher injection và starvation
 
-`Dispatchers.IO` và `Dispatchers.Default` đều dùng thread pools được quản lý, nhưng có mục đích khác nhau. Blocking I/O nên tách khỏi CPU-bound work để không làm nghẽn compute pool. Ngược lại, đưa vòng lặp CPU nặng vào IO không biến nó thành “I/O”.
+`Dispatchers.IO` và `Dispatchers.Default` có mục đích khác nhau. Blocking I/O nên tách khỏi CPU-bound work. Đưa vòng lặp CPU nặng vào IO không biến nó thành I/O.
 
-Dispatcher injection làm code testable và giúp library/data layer kiểm soát main-safety. Tuy nhiên abstraction quá mức như inject năm dispatcher vào mọi class cũng tạo ceremony. Một pattern thực tế là định nghĩa một `DispatcherProvider` ở boundary lớn, hoặc inject dispatcher trực tiếp cho component thật sự cần chuyển context.
-
-Thread starvation có thể xảy ra khi code dùng blocking call trong pool nhỏ, giữ lock quá lâu hoặc tạo quá nhiều công việc CPU đồng thời. Khi điều tra performance, phải phân biệt coroutine đang **suspend** với thread đang **blocked**; stack trace và profiler thể hiện hai hiện tượng khác nhau.
+Dispatcher injection làm code testable và giúp data layer kiểm soát main-safety. Thread starvation có thể xảy ra khi blocking call trong pool nhỏ, lock quá lâu hoặc quá nhiều CPU work đồng thời. Khi profile, phân biệt coroutine suspend với thread blocked.
 
 # 33. Compose performance: từ invalidation tới frame evidence
 
-Recomposition count tự nó không phải bug. Compose có ba phase chính cho frame: **composition → layout → draw**, và Snapshot state read ở phase nào sẽ quyết định scope công việc có thể bị restart khi state đổi. Vì vậy Senior review phải hỏi “state này được đọc ở phase nào?” trước khi cố giảm mọi recomposition.
-
-Ví dụ animation chỉ thay đổi offset có thể đọc state trong placement lambda; color animation có thể đọc trong draw block. Nếu đọc cùng value khi dựng modifier trong composition, phạm vi invalidation có thể rộng hơn. Nhưng chỉ chuyển read xuống layout/draw khi code vẫn rõ và profiling chứng minh hot path.
+Recomposition count tự nó không phải bug. Compose có ba phase chính cho frame: composition → layout → draw, và Snapshot state read ở phase nào quyết định work có thể restart khi state đổi.
 
 Expensive calculation trong composition cần được xem xét:
 
@@ -680,66 +865,118 @@ val sortedItems = remember(items) {
 }
 ```
 
-`remember` chỉ đúng nếu key phản ánh mutation semantics. Nếu `items` bị mutate in-place mà reference không đổi, cache có thể stale. Immutable replacement làm state/equality reasoning đơn giản hơn.
+`remember` chỉ đúng nếu key phản ánh mutation semantics. `derivedStateOf` hữu ích khi input đổi thường xuyên nhưng output semantic đổi ít hơn.
 
-`derivedStateOf` hữu ích khi input đổi thường xuyên nhưng output semantic đổi ít hơn, ví dụ scroll index → `showScrollToTop`. Nó không phải helper bắt buộc cho mọi computed value.
-
-Khi profile Compose, phân biệt:
-
-```text
-composition cost
-measure/layout cost
-draw cost
-allocation + GC
-main-thread blocking
-image/text cost
-lazy list identity/reuse
-```
-
-Một composable recompose nhiều nhưng mỗi lần cực rẻ có thể không đáng tối ưu. Một composable hiếm recompose nhưng mỗi lần sort/parse hàng nghìn item trên Main mới là vấn đề lớn.
-
-Production correctness luôn đứng trước skip optimization. Không dùng annotation stability sai contract, không mutate model âm thầm, không tạo key giả chỉ để giảm metric.
+Khi profile Compose, phân biệt composition cost, measure/layout, draw, allocation/GC, main-thread block, image/text cost và lazy list identity/reuse. Production correctness luôn đứng trước skip optimization.
 
 # 34. Main thread, ANR, StrictMode và leak
 
-Android UI thread xử lý input, lifecycle callback, drawing orchestration và nhiều callback framework. Blocking disk/network hoặc CPU work dài trên main có thể gây jank và **ANR**. Không phải mọi freeze đều do network; JSON parse lớn, database transaction, bitmap decode hoặc lock contention cũng có thể chặn main.
+Android UI thread xử lý input, lifecycle callback, drawing orchestration và nhiều callback framework. Blocking disk/network hoặc CPU work dài trên main có thể gây jank và ANR. JSON parse lớn, bitmap decode, DB transaction hoặc lock contention cũng có thể chặn main.
 
-`StrictMode` trong debug build giúp phát hiện một số disk/network operation hoặc leaked closable object. Memory leak thường đến từ object sống lâu giữ reference đến Activity/View/Context sống ngắn: singleton giữ Activity, callback không unregister, coroutine scope sai owner hoặc ViewBinding của Fragment không clear đúng lifecycle là ví dụ kinh điển.
+`StrictMode` trong debug build giúp phát hiện một số disk/network operation hoặc leaked closable object. Khi nghi leak, nhìn retention path bằng memory profiler/tooling; GC không thể thu object còn reachable.
 
-Khi nghi leak, cần nhìn retention path bằng memory profiler/tooling thay vì thêm `System.gc()`. GC không thể thu hồi object còn reachable.
+ANR investigation nên kết hợp main-thread stack/thread dump, trace/Perfetto và context về binder/lock/I/O. Không “sửa ANR” bằng cách chuyển toàn bộ code sang IO nếu bottleneck thật là lock contention hoặc algorithm CPU.
 
 # 35. R8, shrinking và keep rules
 
-Release build có thể bật R8 để shrink, optimize và obfuscate. Code dùng reflection, JNI, serializer cũ hoặc framework tìm class theo tên có thể bị ảnh hưởng nếu R8 không biết entry point. Keep rule phải càng hẹp càng tốt; rule kiểu `-keep class ** { *; }` vô hiệu hóa phần lớn lợi ích và che giấu dependency reflection không được model rõ.
+Release build có thể bật R8 để shrink, optimize và obfuscate. Reflection, JNI, serializer hoặc framework tìm class theo tên có thể bị ảnh hưởng nếu entry point không được model.
 
-Library Android nên cung cấp **consumer rules** nếu chính library yêu cầu keep rule. App không nên phải đoán internals của dependency. Sau obfuscation, crash stack trace cần mapping file để deobfuscate; release pipeline phải lưu/upload mapping tương ứng artifact.
+Keep rule phải càng hẹp càng tốt. Library Android nên cung cấp consumer rules nếu chính library cần. Sau obfuscation, release pipeline phải lưu/upload mapping đúng artifact để deobfuscate crash.
+
+Failure forensic:
+
+```text
+debug pass + release fail
+→ compare minify/resource shrink/BuildConfig/manifest/signing
+→ inspect R8 diagnostics/mapping/usage
+→ reproduce exact release variant
+```
 
 # 36. Signing, APK/AAB và release reproducibility
 
-Android artifact release phải được ký. Debug keystore chỉ dành cho development. Release signing key cần quản lý như credential quan trọng; mất key hoặc để lộ key có hậu quả dài hạn. Với Play App Signing, Google quản lý app signing key trong service, còn team thường quản lý upload key, nhưng quy trình rotate/recovery vẫn phải được document.
+Android artifact release phải được ký. Release signing key/upload key là credential operational quan trọng.
 
-Build reproducibility nghĩa một release có thể truy ra source commit, dependency versions, Gradle wrapper, JDK/toolchain, signing process và configuration đã tạo artifact. Không dùng dynamic version kiểu `1.+` cho production dependency vì build cùng commit ở hai ngày khác nhau có thể khác nhau.
+Build reproducibility nghĩa release truy ra được source commit, dependency graph, wrapper/JDK/toolchain, variant, config, R8 mapping, native symbols và signing process.
+
+AAB là publishing artifact; thiết bị thường nhận split APK phù hợp configuration. Vì vậy verify install/delivery path khi bug liên quan ABI/resource/language split, không chỉ inspect `.aab` upload.
 
 # 37. API level compatibility, behavior change và feature gating
 
-Ba khái niệm `minSdk`, `compileSdk`, `targetSdk` phải được hiểu ở cấp Senior. `compileSdk` quyết định symbol API nào compiler nhìn thấy; `minSdk` quyết định thiết bị thấp nhất có thể cài; `targetSdk` opt-in nhiều behavior change của platform và chịu policy distribution.
+`minSdk`, `compileSdk`, `targetSdk` là ba contract khác nhau. Code gọi API mới trên OS cũ cần guard hoặc compat abstraction.
 
-Code gọi API mới trên thiết bị cũ phải guard bằng API check hoặc abstraction đã xử lý compatibility. Khi nâng targetSdk, không chỉ sửa số Gradle rồi build. Cần đọc behavior changes của từng Android version, test notification/permission/background execution/storage/window/insets và các API nhạy cảm với platform policy.
+Nâng `targetSdk` là behavior migration: test notification, permission, background execution, storage, window/insets, exported component và policy thay đổi. Nên tách target migration khỏi Kotlin/AGP migration khi có thể để forensic rõ.
 
-Tại thời điểm tài liệu được cập nhật (2026-09-20), Android 17 là API 37. Google Play yêu cầu app mới và update thông thường từ 2026-08-31 phải target Android 16 / API 36 trở lên. Hai con số này minh họa rằng “latest platform API” và “minimum Play target requirement” là hai khái niệm khác nhau.
+Tại baseline này Android 17 là API 37, trong khi Play target requirement có thể thấp hơn latest platform. Latest SDK và distribution requirement không phải cùng một khái niệm.
 
 # 38. WebView như một security boundary
 
-WebView kết hợp web security model với native app privilege. URL từ external input phải validate scheme/host; navigation cần quyết định domain nào được phép ở lại trong WebView; file access, mixed content, JavaScript và debugging phải được cấu hình theo threat model. `addJavascriptInterface` có thể mở native capability cho JavaScript, vì vậy chỉ expose API tối thiểu cho content đáng tin cậy.
+WebView kết hợp web security model với native app privilege. Validate external URL scheme/host, quyết định domain nào được ở trong WebView, hạn chế file access/JS/debugging theo threat model và cực kỳ thận trọng với `addJavascriptInterface`.
 
-Authentication token không nên nhét tùy tiện vào URL vì URL có thể đi vào log/history/referrer. Cookie/session, custom header và OAuth redirect cần thiết kế cùng backend. Certificate pinning chỉ dùng khi có operational plan cho certificate rotation; pin sai có thể làm toàn bộ app mất kết nối khi backend đổi certificate.
+Authentication token không nên nhét tùy tiện vào URL. Certificate pinning chỉ dùng khi có operational plan cho rotation/recovery.
 
 # 39. Database migration và schema evolution trong production
 
-Room migration phải coi dữ liệu người dùng hiện có là tài sản, không phải sample database có thể xóa. Mỗi schema change cần migration path được test từ các version thực tế còn tồn tại. Destructive migration chỉ phù hợp nếu dữ liệu thật sự disposable/cache và product chấp nhận mất dữ liệu.
+Room migration phải coi dữ liệu người dùng là tài sản. Test từ schema cũ thực tế, insert dữ liệu đại diện, chạy migration rồi verify schema + data.
 
-Migration test nên tạo database ở schema cũ, insert dữ liệu đại diện, chạy migration rồi xác minh schema lẫn dữ liệu. Với sync app, cần suy nghĩ thêm compatibility giữa local schema mới và payload server cũ/mới trong giai đoạn rollout.
+Với staged rollout, app version cũ và mới có thể cùng tồn tại. Local data, remote payload và server behavior phải có compatibility window. Nếu migration irreversible, binary rollback có thể không cứu được user đã mở app version mới.
 
-# 40. Senior decision framework
+# 40. Production failure model và Senior decision framework
 
-Khi review một feature, hãy đi theo chuỗi câu hỏi thay vì bắt đầu từ framework: state thuộc owner nào; lifetime bao lâu; source of truth ở đâu; operation có blocking hay suspend; failure nào có thể retry; dữ liệu có cần tồn tại qua process death không; input có đến từ boundary không tin cậy không; API có thay đổi theo version Android không; performance nào cần đo; test nào bảo vệ behavior quan trọng; và migration/rollback ra sao. Nếu những câu hỏi này có đáp án rõ, lựa chọn MVVM/MVI, Hilt/Koin, Room/SQLDelight hoặc Retrofit/Ktor thường trở thành quyết định kỹ thuật dễ lý giải hơn.
+Mobile production không chạy theo happy path. Một feature nên được review với failure matrix:
+
+```text
+Process
+- configuration recreate
+- process kill
+- app update
+- device reboot
+
+Concurrency
+- duplicate tap
+- request A/B out of order
+- 401 storm
+- worker + foreground UI cùng mutate
+
+Network
+- offline
+- timeout trước commit
+- timeout sau remote commit
+- partial payload/schema drift
+
+Persistence
+- migration
+- disk full/corrupt data
+- transaction partiality
+- rollback binary đọc schema mới
+
+Platform
+- permission revoke
+- targetSdk behavior change
+- OEM/WebView difference
+- background restriction
+
+Release
+- R8-only failure
+- ABI/split issue
+- bad remote config
+- staged rollout regression
+```
+
+Sau đó hỏi theo chuỗi:
+
+```text
+state thuộc owner nào?
+lifetime bao lâu?
+source of truth ở đâu?
+operation blocking hay suspend?
+ordering được định nghĩa chưa?
+retry có an toàn/idempotent không?
+process death reconstruct thế nào?
+input nào untrusted?
+performance budget nào cần đo?
+test nào chứng minh invariant?
+telemetry nào phát hiện regression?
+rollback/fallback có thật sự khả thi không?
+```
+
+Nếu những câu hỏi này có đáp án rõ, lựa chọn MVVM/MVI, Hilt/Koin, Room/SQLDelight hoặc Retrofit/Ktor thường trở thành quyết định kỹ thuật dễ lý giải hơn.
