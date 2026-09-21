@@ -8,7 +8,7 @@
 
 
 <!-- VERSION_UPDATE_2026-09-12_START -->
-## Bản đồ version dùng xuyên suốt tài liệu — cập nhật 2026-09-12
+## Bản đồ version dùng xuyên suốt tài liệu — cập nhật 2026-09-21
 
 Tài liệu dùng **Spring Boot 4.1.1 + Spring Framework 7.0.9** làm baseline stable hiện đại. Spring Boot 4.1.1 yêu cầu tối thiểu Java 17, tương thích đến Java 26 và yêu cầu Spring Framework 7.0.9 trở lên. Với Servlet stack, generation này dùng Servlet 6.1, điển hình với Tomcat 11 hoặc Jetty 12.1. GraalVM Native Image support của Boot 4.1 yêu cầu GraalVM 25 trở lên.
 
@@ -217,6 +217,18 @@ Khi đọc Stack Overflow hoặc blog, trước tiên hãy nhìn năm bài viế
 
 ---
 
+<!-- SPRING_BATCH5_VERSION_BEGINNER -->
+## Học version theo “cách viết application thay đổi”, không theo release-note list
+
+Boot 2.7 / Framework 5.3 đại diện thế hệ Java 8-era, `javax.*` và nhiều security/config examples cũ. Khi nhìn `javax.servlet`, `javax.persistence`, `WebSecurityConfigurerAdapter`, `RestTemplate`-centric tutorials hoặc XML nhiều, đừng vội kết luận code sai; hãy xác định generation trước rồi map sang cách hiện đại.
+
+Boot 3 / Framework 6 là bước chuyển platform lớn hơn một bản nâng version: Java 17 trở thành baseline, Java EE namespace đổi sang `jakarta.*`, Spring Security 6 chuyển mạnh sang bean/lambda configuration, observability/AOT trở thành first-class hơn. Migration thường thất bại ở third-party library chưa hỗ trợ Jakarta chứ không chỉ ở source import.
+
+Boot 4 / Framework 7 tiếp tục platform hóa: Jakarta EE 11 / Servlet 6.1, Jackson 3 là hướng mặc định, Boot modularize starters/test support mạnh hơn, Framework dùng JSpecify nullness và có API-versioning support ở web stack. Vì vậy code mới nên học theo Boot 4.1, nhưng người làm enterprise vẫn cần đọc được 2.7/3.x và biết migration path thay vì rewrite toàn bộ.
+<!-- SPRING_BATCH5_VERSION_BEGINNER_END -->
+
+---
+
 # 5. Tạo một Spring Boot project và hiểu những file đang xuất hiện
 
 Cách phổ biến nhất để tạo project là Spring Initializr tại `start.spring.io`. Bạn chọn build tool, Java version, Boot version và dependencies. Với backend cơ bản, Maven + Java 21 hoặc 25 + Spring Web + Validation là lựa chọn dễ học.
@@ -269,7 +281,7 @@ Ví dụ:
 ```xml
 <dependency>
     <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-web</artifactId>
+    <artifactId>spring-boot-starter-webmvc</artifactId>
 </dependency>
 ```
 

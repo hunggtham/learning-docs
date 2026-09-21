@@ -7,7 +7,7 @@
 
 
 <!-- VERSION_UPDATE_2026-09-12_START -->
-## Bản đồ version dùng xuyên suốt tài liệu — cập nhật 2026-09-12
+## Bản đồ version dùng xuyên suốt tài liệu — cập nhật 2026-09-21
 
 Tài liệu dùng **Spring Boot 4.1.1 + Spring Framework 7.0.9** làm baseline stable hiện đại. Spring Boot 4.1.1 yêu cầu tối thiểu Java 17, tương thích đến Java 26 và yêu cầu Spring Framework 7.0.9 trở lên. Với Servlet stack, generation này dùng Servlet 6.1, điển hình với Tomcat 11 hoặc Jetty 12.1. GraalVM Native Image support của Boot 4.1 yêu cầu GraalVM 25 trở lên.
 
@@ -1809,6 +1809,18 @@ Actuator có thể expose health, metrics, mappings, conditions, config properti
 Các endpoint nhạy cảm không được public mặc định tùy config, và bạn không nên mở tất cả.
 
 Trong incident, `/actuator/conditions`/mappings/metrics có thể rất hữu ích.
+
+---
+
+<!-- SPRING_BATCH5_OBS_INTERMEDIATE -->
+## Observability pipeline: operation → Observation → metrics/traces, còn log là evidence khác
+
+Micrometer Observation model bắt đầu từ một operation có lifecycle start/stop/error và context. `ObservationRegistry` phối hợp các `ObservationHandler`; handler có thể tạo meter, tracing span hoặc context propagation tùy stack được cấu hình. Vì framework có thể instrument HTTP server/client, datasource và nhiều integrations sẵn, custom instrumentation nên bổ sung business boundary thay vì tạo duplicate span quanh mọi method.
+
+Metric dimensions phải low-cardinality vì mỗi combination tạo time series. `method`, normalized route, status group hoặc payment type thường bounded; `userId`, `orderId`, raw exception message và full URL thường không bounded. High-cardinality identity phù hợp trace/log hơn. Một hệ thống quan sát tốt dùng cùng semantic operation names/correlation để đi từ metric spike → exemplar/trace → logs → JFR/DB evidence.
+
+Actuator chỉ là management surface. Endpoint `health`, `metrics`, `mappings`, `conditions`, `threaddump`, `heapdump`, `env` có risk khác nhau. Exposure và authorization phải được thiết kế như admin API; production không nên public toàn bộ `/actuator/**`. Health cũng phải có semantics: liveness trả lời restart có giúp không; readiness trả lời instance có nên nhận traffic không.
+<!-- SPRING_BATCH5_OBS_INTERMEDIATE_END -->
 
 ---
 

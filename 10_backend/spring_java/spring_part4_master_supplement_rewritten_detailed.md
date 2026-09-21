@@ -323,6 +323,18 @@ Official docs hiện liệt kê Framework 7.1.0-M1 và Boot 4.2.0-M1 là preview
 
 Default: để Boot quản lý versions. Override khi có security fix, vendor compatibility, required feature hoặc known bug fix, và phải test matrix. Platform coherence quan trọng hơn newest artifact number.
 
+<!-- SPRING_BATCH5_VERSION_MASTER -->
+## Migration graph: 2.7/5.3 → 3.5/6.2 → 4.1/7.0
+
+Migration nên được xem như chuỗi compatibility boundaries. Từ Boot 2.7 lên generation 3, boundary lớn là Java 17 + Jakarta namespace + portfolio major versions; hãy loại deprecated APIs ở latest 2.7 trước, update libraries tới bản Jakarta-compatible rồi mới đổi major. Từ Boot 3 lên 4, official strategy vẫn nên đưa application lên latest 3.5 trước để warnings/deprecations hiện rõ, sau đó mới xử lý Boot 4 modular starter graph, Framework 7, Jackson 3, Security 7 và test-module changes.
+
+Đừng migrate bằng cách chỉnh version rồi sửa compile errors cho tới khi xanh. Một upgrade matrix phải test startup/auto-config, HTTP serialization, Security authentication/authorization, database migrations/JPA queries, transaction rollback behavior, scheduled/async work, observability agents/exporters và packaging/native path nếu có. Binary linkage errors sau deploy thường là dấu hiệu runtime dependency graph khác graph compile, vì vậy inspect packaged artifact/BOM resolution.
+
+Tại thời điểm cập nhật này, baseline stable của bộ note là Boot 4.1.1 + Framework 7.0.9. Boot docs vẫn liệt kê 3.5.16 như maintenance line quan trọng. Framework 7.1.0-M1 và Boot 4.2.0-M1 vẫn preview. Spring Security docs liệt kê 7.1.1 là latest stable, cùng maintenance 7.0.7 và 6.5.11; Security 7.2.0-M1 là preview. Preview chỉ dùng để theo dõi direction, không được viết thành production baseline.
+<!-- SPRING_BATCH5_VERSION_MASTER_END -->
+
+---
+
 # 45. Source-reading roadmap
 
 ```text
@@ -364,7 +376,7 @@ Dùng `@NullMarked` ở package, `@Nullable` cho generic element/return và stat
 
 Sample phải có MVC, JPA, Security, Flyway và tests. Upgrade, ghi lại starter names, Jackson custom code, test dependencies, Security changes, nullability warnings và third-party compatibility. Đây là bài tập versioning thực tế hơn việc học changelog.
 
-# 51. Version snapshot — 2026-09-12
+# 51. Version snapshot — 2026-09-21
 
 ```text
 Stable current:

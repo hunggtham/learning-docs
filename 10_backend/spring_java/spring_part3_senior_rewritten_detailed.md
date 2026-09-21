@@ -7,7 +7,7 @@
 
 
 <!-- VERSION_UPDATE_2026-09-12_START -->
-## Bản đồ version dùng xuyên suốt tài liệu — cập nhật 2026-09-12
+## Bản đồ version dùng xuyên suốt tài liệu — cập nhật 2026-09-21
 
 Tài liệu dùng **Spring Boot 4.1.1 + Spring Framework 7.0.9** làm baseline stable hiện đại. Spring Boot 4.1.1 yêu cầu tối thiểu Java 17, tương thích đến Java 26 và yêu cầu Spring Framework 7.0.9 trở lên. Với Servlet stack, generation này dùng Servlet 6.1, điển hình với Tomcat 11 hoặc Jetty 12.1. GraalVM Native Image support của Boot 4.1 yêu cầu GraalVM 25 trở lên.
 
@@ -1092,6 +1092,16 @@ Reactive security lại dùng Reactor context model.
 
 ---
 
+<!-- SPRING_BATCH5_OBS_SENIOR -->
+## Observability phải phản ánh queue/resource boundaries của Spring application
+
+Một request timer duy nhất không đủ để biết request chậm ở đâu. Production dashboard nên cho thấy server request latency, active/in-flight requests, executor/virtual-thread behavior phù hợp runtime, DB pool active/pending/acquisition time, query latency, HTTP-client latency, cache hit/miss và JVM CPU/GC. Khi mỗi scarce resource có saturation signal, bạn có thể phân biệt CPU-bound với queue-bound hoặc downstream-bound.
+
+Trace là causal path, nhưng trace không thay metric. Sampling có thể bỏ mất request hiếm; metrics cho distribution/p95/p99 và saturation liên tục. JFR lại trả lời JVM-level CPU/allocation/lock/GC mà tracing không thấy. Troubleshooting tốt chuyển giữa bốn lớp: metrics xác định thời điểm/phạm vi, trace tìm dependency/span, logs lấy domain/error context, profile/JFR/DB plan xác minh execution cost.
+<!-- SPRING_BATCH5_OBS_SENIOR_END -->
+
+---
+
 # 66. Observability: Metrics, Traces, Logs
 
 Metrics trả lời “hệ thống đang xảy ra bao nhiêu/lâu bao nhiêu”. Traces trả lời “request cụ thể đi qua đâu”. Logs cho detailed events/context. JFR/profile cho runtime.
@@ -1475,6 +1485,20 @@ Tách representation ở boundaries có lifecycle/compatibility khác nhau.
 
 ---
 
+<!-- SPRING_BATCH5_TROUBLESHOOTING_SENIOR -->
+## Production troubleshooting theo symptom → layer → evidence
+
+Nếu application **không start**, bắt đầu từ first meaningful cause trong exception chain rồi phân loại: configuration binding, missing/ambiguous bean, condition mismatch, schema migration, database connectivity, classpath/linkage hay custom initialization. Condition report và dependency tree hữu ích hơn thêm annotation thử nghiệm.
+
+Nếu request trả **404**, trước tiên kiểm mapping/servlet context/path. Nếu **400**, nhìn conversion, JSON deserialize và Bean Validation. Nếu **401**, trace authentication chain/credential. Nếu **403**, xác định principal đã authenticated chưa và authorization rule nào deny. Nếu controller breakpoint không bao giờ hit, đừng debug service trước filter/mapping layer.
+
+Nếu endpoint **chậm nhưng CPU thấp**, tìm wait: DB connection acquisition, slow SQL/locks, remote HTTP, executor queue, synchronized lock. Nếu **CPU cao**, dùng JFR/profile trước; JSON serialization, crypto, regex, mapper loops, GC hoặc busy loop đều có thể là nguyên nhân. Nếu **RSS tăng nhưng heap ổn**, nhìn thread count/stacks, direct buffer/native memory, metaspace và agents chứ không chỉ heap dump.
+
+Nếu bật virtual threads mà throughput không tăng, kiểm downstream scarce resource. 50 DB connections vẫn chỉ cho khoảng 50 concurrent DB operations bất kể có 500 hay 50.000 virtual threads. Nếu latency tăng, queueing ở pool/semaphore/downstream vẫn là bottleneck thật.
+<!-- SPRING_BATCH5_TROUBLESHOOTING_SENIOR_END -->
+
+---
+
 # 93. Production Debugging: `@Transactional` không chạy
 
 Checklist reasoning:
@@ -1805,7 +1829,7 @@ Master Supplement sẽ không lặp application patterns. Nó sẽ đi vào **Sp
 
 ---
 
-<!-- VERSION_DETAIL_PART3_2026-09-12_START -->
+<!-- VERSION_DETAIL_PART3_2026-09-21_START -->
 # Version Deep Dive cho Senior: migration và production behavior theo generation
 
 Đường migration an toàn từ Boot 3 sang Boot 4 là đưa application lên **latest Boot 3.5.x trước**, xử lý deprecations/dependency conflicts rồi mới chuyển 4.x. Boot 4 loại bỏ nhiều API deprecated và đồng thời nâng major versions của portfolio projects.
@@ -1823,7 +1847,7 @@ Boot 4.1 bổ sung notable features gồm Spring gRPC support, Jackson configura
 Spring Security cũng đã sang major generation 7. Security 6.5 là preparation line cho migration; current docs tại thời điểm cập nhật liệt kê stable 7.1.1, 7.0.7 và 6.5.11. Khi dùng Boot, ưu tiên version management của Boot trừ khi có lý do security/compatibility rõ và đã test matrix.
 
 Preview hiện tại là Boot 4.2.0-M1 + Framework 7.1.0-M1. Senior/Master nên đọc để biết direction nhưng không nên dạy milestone API như stable production API.
-<!-- VERSION_DETAIL_PART3_2026-09-12_END -->
+<!-- VERSION_DETAIL_PART3_2026-09-21_END -->
 
 ---
 
