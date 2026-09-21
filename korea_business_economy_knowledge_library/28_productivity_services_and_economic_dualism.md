@@ -1,240 +1,209 @@
-# Productivity, service economy và cấu trúc hai tốc độ của Hàn Quốc (Productivity & Economic Dualism / 생산성·서비스업·경제 이중구조)
+# Năng suất, kinh tế dịch vụ và cấu trúc hai tốc độ của Hàn Quốc (Productivity & Economic Dualism / 생산성·서비스업·경제 이중구조)
 
-Kinh tế Hàn Quốc thường được nhìn qua semiconductor fabs, shipyards, automobile plants và battery factories. Hình ảnh đó đúng nhưng chưa đủ. Phần lớn employment lại nằm trong services và SMEs. Vì vậy Hàn Quốc có một paradox quan trọng: **một nền kinh tế có những “islands of excellence” với productivity rất cao vẫn có aggregate productivity thấp hơn tiềm năng vì phần còn lại của economy vận hành ở mức productivity thấp hơn nhiều**.
+Kinh tế Hàn Quốc thường được nhìn qua fab bán dẫn, xưởng đóng tàu, nhà máy ô tô và pin. Hình ảnh đó đúng nhưng chưa đủ. Phần lớn việc làm lại nằm trong dịch vụ và SME. Vì vậy Hàn Quốc có một nghịch lý quan trọng: **một nền kinh tế có những “đảo xuất sắc” với năng suất rất cao vẫn có năng suất tổng thể thấp hơn tiềm năng vì phần còn lại vận hành ở mức thấp hơn nhiều**.
 
-Đây là ý nghĩa cốt lõi của **economic dualism (경제 이중구조)**: không phải nền kinh tế bị chia thành hai khu vực hoàn toàn tách biệt, mà là cùng một labor market và capital market chứa các firms có technology, wage, management quality và bargaining power khác nhau rất lớn.
+Đây là ý nghĩa cốt lõi của **cấu trúc kinh tế hai tốc độ (economic dualism / 경제 이중구조)**: cùng một thị trường lao động và thị trường vốn nhưng tồn tại các doanh nghiệp có công nghệ, mức lương, năng lực quản lý và quyền thương lượng khác nhau rất lớn.
 
-## Productivity thực sự là gì?
+## Năng suất thực sự là gì?
 
-**Labor productivity (노동생산성)** thường được đo bằng real value added trên worker hoặc trên hour:
+**Năng suất lao động (labor productivity / 노동생산성)** thường được đo bằng giá trị gia tăng thực trên mỗi lao động hoặc mỗi giờ làm việc:
 
 \[
-Labor\ Productivity = \frac{Real\ Value\ Added}{Hours\ Worked}
+Năng\ suất\ lao\ động = \frac{Giá\ trị\ gia\ tăng\ thực}{Số\ giờ\ làm\ việc}
 \]
 
-Nếu một factory giữ nguyên số giờ làm nhưng tạo được output có value cao hơn, productivity tăng. Nếu restaurant phục vụ cùng số khách nhưng dùng ít labor hour hơn mà không giảm quality, productivity cũng tăng.
+Nếu một nhà máy giữ nguyên số giờ nhưng tạo ra sản phẩm có giá trị cao hơn, năng suất tăng. Nếu một nhà hàng phục vụ cùng số khách với ít giờ lao động hơn mà chất lượng không giảm, năng suất cũng tăng.
 
-Productivity không đồng nghĩa “nhân viên làm chăm hơn”. Nó phụ thuộc vào capital, technology, process design, skills, management, market structure và organization.
+Năng suất không đồng nghĩa “nhân viên làm chăm hơn”. Nó phụ thuộc vào vốn, công nghệ, thiết kế quy trình, kỹ năng, quản lý, cấu trúc thị trường và tổ chức.
 
-Có thể viết một production function đơn giản:
+Có thể mô tả bằng hàm sản xuất đơn giản:
 
 \[
 Y = A K^{\alpha}L^{1-\alpha}
 \]
 
-Trong đó `Y` là output, `K` là capital, `L` là labor và `A` là **Total Factor Productivity (TFP / 총요소생산성)**. `A` không phải một object cụ thể; nó đại diện cho phần hiệu quả đến từ technology, know-how, management, logistics, institution và cách resources được tổ chức.
+Trong đó `Y` là sản lượng, `K` là vốn, `L` là lao động và `A` là **năng suất nhân tố tổng hợp (Total Factor Productivity / TFP / 총요소생산성)**. `A` không phải một vật thể riêng; nó đại diện cho hiệu quả đến từ công nghệ, bí quyết, quản lý, logistics, thể chế và cách nguồn lực được tổ chức.
 
-## Vì sao manufacturing productivity thường cao hơn service productivity?
+## Vì sao năng suất sản xuất thường cao hơn nhiều dịch vụ truyền thống?
 
-Manufacturing thường dễ standardize và automate hơn. Một machine hoặc production line có thể tạo hàng nghìn units giống nhau. Fixed cost cao được chia trên volume lớn, tạo economies of scale.
+Sản xuất thường dễ tiêu chuẩn hóa và tự động hóa hơn. Một máy hoặc dây chuyền có thể tạo hàng nghìn đơn vị giống nhau, trong khi chi phí cố định được chia trên sản lượng lớn.
 
-Nhiều services truyền thống lại cần human interaction trực tiếp. Haircut, nursing, childcare hay restaurant service khó tăng output/hour vô hạn mà không giảm quality. Đây là logic gần với **Baumol cost disease**: wage của service workers vẫn phải tăng theo labor market chung ngay cả khi physical productivity tăng chậm.
+Nhiều dịch vụ truyền thống lại cần tương tác trực tiếp của con người. Cắt tóc, chăm sóc người già, giữ trẻ hoặc phục vụ nhà hàng khó tăng sản lượng trên mỗi giờ vô hạn mà không giảm chất lượng. Đây gần với logic **bệnh chi phí Baumol (Baumol cost disease)**: lương lao động dịch vụ vẫn phải tăng theo mặt bằng chung dù năng suất vật lý tăng chậm.
 
-Nhưng nói “services productivity thấp” quá chung chung. Modern services như software, cloud, gaming, fintech, content licensing hoặc online platforms có economics rất khác. Chúng có thể có fixed development cost cao nhưng marginal cost thấp và scale toàn cầu.
+Nhưng không nên gom mọi dịch vụ vào cùng một nhóm. Phần mềm, cloud, game, fintech, nội dung số hoặc nền tảng có thể có chi phí phát triển ban đầu cao nhưng chi phí phục vụ thêm khách hàng thấp và có khả năng mở rộng toàn cầu.
 
-Vì vậy service sector cần tách thành ít nhất hai nhóm mental model:
-
-```text
-Local labor-intensive services
-→ restaurant, care, personal services, small retail
-→ scale giới hạn bởi labor và local demand
-
-Scalable tradable services
-→ software, finance, content, cloud, platforms
-→ scale bằng IP, data và distribution
-```
-
-## Korea: employment tập trung ở services nhưng productivity gap còn lớn
-
-Bank of Korea đánh giá private services năm 2024 chiếm khoảng 44% nominal GDP và 65% employment, trong khi labor productivity per worker của private services trong khoảng hai thập niên chỉ ở khoảng 40% manufacturing productivity.
-
-Không nên diễn giải rằng “một service worker chỉ làm được 40% một factory worker”. Đây là aggregate comparison bị ảnh hưởng bởi industry mix, capital intensity, pricing và measurement. Nhưng gap đủ lớn để cho thấy một vấn đề cấu trúc: **rất nhiều labor đang nằm trong sectors tạo value added thấp hơn trên mỗi worker**.
-
-Nếu new jobs tiếp tục tập trung vào low-productivity services trong khi manufacturing employment không tăng nhiều, aggregate productivity có thể chậm lại dù exporters vẫn rất mạnh.
-
-## Firm-size dualism: large enterprises và SMEs
-
-Một dimension khác là **firm-size productivity gap**. Large firms thường có capital intensity cao hơn, management systems tốt hơn, global demand, R&D budget lớn hơn và access to finance rẻ hơn. SMEs có thể bị hạn chế bởi scale, customer concentration, weak digital systems hoặc difficulty attracting talent.
-
-Statistics 2024 cho thấy SMEs chiếm 99,9% enterprise count và 80,4% employment nhưng 43,7% sales. Sales không bằng value added, nhưng pattern này cho thấy firm-size structure rất skewed.
-
-Điểm quan trọng là gap không chỉ là kết quả; nó còn tự duy trì qua feedback loop:
+Có thể tách hai mô hình:
 
 ```text
-Low productivity
-   ↓
-Low margin
-   ↓
-Low wage / weak benefits
-   ↓
-Talent attraction khó hơn
-   ↓
-Weak management / digital capability
-   ↓
-Low productivity
+Dịch vụ địa phương thâm dụng lao động
+→ nhà hàng, chăm sóc, bán lẻ nhỏ, dịch vụ cá nhân
+→ quy mô bị giới hạn bởi lao động và nhu cầu địa phương
+
+Dịch vụ có thể giao dịch và mở rộng
+→ phần mềm, tài chính, nội dung, cloud, nền tảng
+→ mở rộng bằng IP, dữ liệu và phân phối
 ```
 
-Đây là lý do một policy chỉ tăng minimum wage, chỉ subsidize equipment hoặc chỉ training workers không thể tự động giải dualism.
+## Khoảng cách năng suất dịch vụ–sản xuất tại Hàn Quốc
 
-## Productivity gap có thể là vấn đề của allocation, không chỉ technology
+Bank of Korea từng chỉ ra rằng dịch vụ tư nhân chiếm tỷ trọng rất lớn trong việc làm nhưng năng suất trên mỗi lao động thấp hơn đáng kể so với sản xuất. Không nên diễn giải rằng “một nhân viên dịch vụ chỉ làm được X% một công nhân nhà máy”, vì số liệu tổng hợp chịu ảnh hưởng của cơ cấu ngành, cường độ vốn, giá cả và cách đo.
 
-Giả sử firm A có productivity cao nhưng không thể vay vốn để mở rộng, trong khi firm B productivity thấp vẫn giữ nhiều capital vì collateral, group affiliation hoặc policy support. Aggregate productivity sẽ thấp hơn dù technology của từng firm không đổi.
+Điểm quan trọng hơn là: **rất nhiều lao động đang nằm trong các ngành tạo giá trị gia tăng thấp hơn trên mỗi người**. Nếu việc làm mới tiếp tục tập trung vào dịch vụ năng suất thấp trong khi sản xuất tiên tiến không tăng lao động nhiều, năng suất tổng thể có thể chậm lại dù các nhà xuất khẩu hàng đầu vẫn rất mạnh.
 
-Đây là **allocative efficiency / 자원배분 효율성**: labor và capital có đi tới nơi tạo value cao nhất hay không.
+## Dualism theo quy mô doanh nghiệp
 
-KDI đã chỉ ra rằng một phần slowdown của TFP Hàn Quốc có liên quan đến decline trong allocative efficiency giữa firms. Nghiên cứu về business groups cũng cho thấy input growth không luôn đi cùng value-added growth tương ứng. Ý nghĩa lớn hơn là: nền kinh tế có thể tăng investment nhưng productivity vẫn yếu nếu **marginal capital** được đặt sai chỗ.
+Một chiều khác là khoảng cách năng suất giữa doanh nghiệp lớn và SME. Doanh nghiệp lớn thường có cường độ vốn cao hơn, hệ thống quản lý tốt hơn, nhu cầu toàn cầu, ngân sách R&D lớn hơn và chi phí vốn thấp hơn. SME có thể bị giới hạn bởi quy mô, tập trung khách hàng, hệ thống số yếu hoặc khó thu hút nhân tài.
 
-## Creative destruction và vì sao firm exit cũng cần thiết
+Vấn đề quan trọng là khoảng cách này có thể tự duy trì:
 
-**Creative destruction / 창조적 파괴** là quá trình firms và business models kém hiệu quả rời market để labor/capital chuyển sang nơi productive hơn.
+```text
+Năng suất thấp
+   ↓
+Biên lợi nhuận thấp
+   ↓
+Lương / phúc lợi thấp
+   ↓
+Khó thu hút nhân tài
+   ↓
+Quản lý và năng lực số yếu
+   ↓
+Năng suất tiếp tục thấp
+```
 
-Nếu weak firms tồn tại quá lâu nhờ cheap credit, guarantees hoặc repeated support, resources có thể bị “kẹt”. Đây thường được gọi là **zombie firm problem**.
+Vì vậy chỉ tăng lương tối thiểu, chỉ trợ cấp máy móc hoặc chỉ đào tạo nhân viên không thể tự động giải quyết dualism.
 
-Nhưng đóng firm yếu không phải policy đơn giản. Exit tạo unemployment, local decline và supplier losses. Vì vậy productivity policy luôn có tension giữa **reallocation efficiency** và **transition cost**.
+## Năng suất còn là vấn đề phân bổ nguồn lực
 
-Một system tốt cần cho phép firm exit nhưng đồng thời hỗ trợ workers di chuyển, retrain và tìm productive job khác. Bảo vệ worker và bảo vệ mọi firm sống mãi không phải cùng một mục tiêu.
+Giả sử doanh nghiệp A có năng suất cao nhưng khó vay vốn để mở rộng, trong khi doanh nghiệp B năng suất thấp vẫn giữ nhiều vốn nhờ tài sản thế chấp, quan hệ tập đoàn hoặc hỗ trợ chính sách. Năng suất toàn nền kinh tế sẽ thấp hơn dù công nghệ của từng doanh nghiệp không đổi.
 
-## Self-employment và fragmentation
+Đây là **hiệu quả phân bổ (allocative efficiency / 자원배분 효율성)**: vốn và lao động có đi tới nơi tạo giá trị cao nhất hay không.
 
-Hàn Quốc có lịch sử tỷ trọng self-employment tương đối cao. Khi worker rời corporate job và mở restaurant, café hoặc small retail shop, entry barrier thấp khiến nhiều establishments cạnh tranh cho cùng demand.
+Một nền kinh tế có thể đầu tư rất nhiều nhưng năng suất vẫn yếu nếu **đồng vốn cận biên** được đưa vào dự án lợi suất thấp.
 
-Nếu aggregate demand không tăng, thêm 100 cafés không làm người dân uống gấp đôi coffee. Market bị fragmented, revenue per store giảm và owner phải dùng nhiều labor hour để tạo cùng value.
+## Phá hủy sáng tạo và vai trò của doanh nghiệp rời thị trường
 
-Đây là lý do entrepreneurship count cao không tự động nghĩa productivity cao. Cần phân biệt **high-growth entrepreneurship** với **necessity self-employment**.
+**Phá hủy sáng tạo (creative destruction / 창조적 파괴)** là quá trình doanh nghiệp và mô hình kinh doanh kém hiệu quả rời thị trường để vốn và lao động chuyển sang nơi năng suất cao hơn.
 
-## Scale-up bottleneck: vì sao nhiều firms không vượt khỏi SME stage?
+Nếu doanh nghiệp yếu tồn tại quá lâu nhờ tín dụng rẻ, bảo lãnh hoặc hỗ trợ lặp lại, nguồn lực có thể bị “kẹt”. Đây thường được gọi là vấn đề **doanh nghiệp zombie**.
 
-Scale-up cần nhiều hơn product tốt. Firm phải đồng thời xây management, finance, talent, data, brand và market access.
+Tuy nhiên để doanh nghiệp yếu rời thị trường cũng có chi phí chuyển đổi: thất nghiệp, suy giảm vùng và tổn thất nhà cung cấp. Vì vậy chính sách năng suất luôn phải cân bằng giữa **hiệu quả tái phân bổ** và **chi phí chuyển đổi**.
 
-KDI 2026 cho thấy successful scale-up trong manufacturing gắn chặt với R&D, AI adoption và exports; trong services, brand strength và design capability nổi bật hơn. Điều này cho thấy productivity policy cần **bottleneck-specific intervention** thay vì một subsidy chung.
+Bảo vệ người lao động để họ chuyển việc tốt hơn khác với giữ mọi doanh nghiệp yếu tồn tại mãi.
 
-Một manufacturing supplier có thể cần automation và export certification. Một service firm có thể cần brand, UX và repeatable sales channel. Một software company có thể cần productization để thoát project-based billing.
+## Tự doanh và phân mảnh thị trường
 
-## Management quality là một loại technology
+Hàn Quốc có lịch sử tỷ trọng tự doanh tương đối cao. Khi nhiều người rời công ty rồi mở nhà hàng, café hoặc cửa hàng nhỏ, rào cản gia nhập thấp có thể khiến quá nhiều cơ sở cạnh tranh cùng một lượng nhu cầu.
 
-Hai factories dùng cùng equipment và labor có thể tạo output khác nhau rất lớn do scheduling, quality control, procurement, maintenance và incentives.
+Nếu người dân không uống nhiều cà phê hơn nhưng số café tăng mạnh, doanh thu trên mỗi cửa hàng giảm và chủ cửa hàng phải bỏ nhiều giờ lao động hơn cho cùng lượng giá trị tạo ra.
 
-Management practices vì vậy là một dạng **intangible capital / 무형자본**. ERP, MES, SCM, CRM và AI chỉ tạo value khi management biết redesign process.
+Vì vậy số lượng người “khởi nghiệp” cao không tự động nghĩa năng suất cao. Cần phân biệt **khởi nghiệp tăng trưởng cao** với **tự doanh vì thiếu lựa chọn việc làm (necessity self-employment)**.
 
-Ví dụ, một MES dashboard chỉ hiển thị defect rate sẽ không giúp nếu supervisor không có authority dừng line hoặc root-cause process không tồn tại. Technology và governance của process phải đi cùng nhau.
+## Nút thắt scale-up
 
-Đây là connection trực tiếp với Software Engineering: enterprise software không chỉ “support business”; nó định hình **information flow và decision latency** của firm.
+Mở rộng quy mô không chỉ cần sản phẩm tốt. Doanh nghiệp còn phải xây quản lý, tài chính, nhân tài, dữ liệu, thương hiệu và thị trường.
 
-## Productivity và wage: quan hệ dài hạn nhưng không phải one-to-one ngắn hạn
+Một nhà cung cấp sản xuất có thể cần tự động hóa và chứng nhận xuất khẩu. Một doanh nghiệp dịch vụ có thể cần thương hiệu, thiết kế và kênh bán lặp lại được. Một công ty phần mềm có thể cần **sản phẩm hóa (productization)** để thoát mô hình dự án tính phí theo đầu người.
 
-Trong dài hạn, real wage bền vững khó tăng nhanh hơn labor productivity mãi. Nếu wage tăng nhanh hơn output per worker, firm phải giảm margin, tăng price hoặc automate.
+Chính sách năng suất vì vậy nên xử lý đúng nút thắt của từng loại doanh nghiệp thay vì dùng một gói trợ cấp giống nhau cho tất cả.
 
-Ngược lại, productivity tăng không đảm bảo wage tự động tăng cùng tốc độ. Value có thể đi vào profit, capital income hoặc market-share expansion tùy bargaining structure.
+## Chất lượng quản lý là một dạng công nghệ
 
-Do đó cần tách hai câu hỏi:
+Hai nhà máy dùng cùng máy móc và lao động vẫn có thể tạo sản lượng rất khác do lịch sản xuất, kiểm soát chất lượng, mua hàng, bảo trì và hệ thống động lực.
+
+Thực hành quản lý vì vậy là một loại **vốn vô hình (intangible capital / 무형자본)**. ERP, MES, SCM, CRM và AI chỉ tạo giá trị khi doanh nghiệp đồng thời thiết kế lại quy trình và quyền quyết định.
+
+Một dashboard MES hiển thị tỷ lệ lỗi sẽ không giúp nhiều nếu quản đốc không có quyền dừng dây chuyền hoặc tổ chức không có quy trình tìm nguyên nhân gốc.
+
+Đây là điểm giao trực tiếp với Software Engineering: phần mềm doanh nghiệp không chỉ “hỗ trợ nghiệp vụ”; nó định hình luồng thông tin và độ trễ ra quyết định của tổ chức.
+
+## Năng suất và lương
+
+Trong dài hạn, lương thực tế khó tăng mãi nhanh hơn năng suất lao động. Nếu lương tăng nhanh hơn sản lượng trên mỗi người, doanh nghiệp phải giảm biên lợi nhuận, tăng giá hoặc tự động hóa.
+
+Ngược lại, năng suất tăng cũng không bảo đảm lương tự động tăng cùng tốc độ. Phần giá trị tăng thêm có thể đi vào lợi nhuận, thu nhập vốn hoặc mở rộng thị phần tùy cấu trúc thương lượng.
+
+Vì vậy cần tách:
 
 \[
-\text{Productivity growth} \neq \text{automatic wage growth}
+Tăng\ năng\ suất \neq Tăng\ lương\ tự\ động
 \]
 
-Productivity quyết định “pie” có thể lớn nhanh đến đâu; labor-market institutions và bargaining quyết định pie được chia thế nào.
+Năng suất quyết định “chiếc bánh” có thể lớn nhanh đến đâu; thể chế lao động và quyền thương lượng quyết định chiếc bánh được chia như thế nào.
 
-## Demographics làm productivity trở nên cấp thiết hơn
+## Già hóa khiến năng suất trở nên cấp thiết
 
-Khi working-age population giảm, Hàn Quốc không thể dựa mãi vào việc thêm workers. Có thể biểu diễn:
+Có thể viết:
 
 \[
-GDP = Workers \times Hours\ per\ Worker \times Output\ per\ Hour
+GDP = Số\ người\ làm\ việc \times Giờ\ làm\ việc\ mỗi\ người \times Sản\ lượng\ mỗi\ giờ
 \]
 
-Nếu `Workers` giảm, growth phải đến nhiều hơn từ participation và `Output per Hour`.
-
-Hours có giới hạn, participation cũng có giới hạn. Vì vậy aging biến productivity từ “mục tiêu tốt nên có” thành **điều kiện để duy trì living standards**.
+Khi số người làm việc giảm, tăng trưởng phải dựa nhiều hơn vào tỷ lệ tham gia và sản lượng mỗi giờ. Số giờ có giới hạn, tỷ lệ tham gia cũng có giới hạn. Vì vậy già hóa biến năng suất từ “mục tiêu tốt nên có” thành **điều kiện duy trì mức sống**.
 
 Xem [`27_demographics_households_and_consumption.md`](./27_demographics_households_and_consumption.md).
 
-## Regional dualism
+## Dualism theo vùng
 
-Productivity gap không chỉ giữa large/SME mà còn giữa Seoul metropolitan area và nhiều regions. Capital, high-skill jobs, universities, venture funding và corporate headquarters tập trung tạo **agglomeration effect**.
+Khoảng cách năng suất còn tồn tại giữa 수도권 và nhiều khu vực khác. Trụ sở, công việc kỹ năng cao, đại học, vốn mạo hiểm và doanh nghiệp lớn tập trung tạo **lợi ích tập trung (agglomeration effect)**.
 
-Khi talent rời region, local firms khó recruit hơn; productivity yếu làm wage thấp; wage thấp lại thúc đẩy youth migration. Đây là một feedback loop tương tự SME trap nhưng ở geographic level.
+Khi nhân tài rời vùng, doanh nghiệp địa phương khó tuyển người; năng suất yếu làm lương thấp; lương thấp lại thúc đẩy thanh niên rời đi. Đây là vòng phản hồi tương tự bẫy SME nhưng ở cấp địa lý.
 
-Vì vậy regional policy không thể chỉ xây industrial park. Nó cần demand, universities, transport, housing, quality jobs và firm ecosystem cùng lúc.
+Vì vậy chính sách vùng không thể chỉ xây khu công nghiệp. Nó cần nhu cầu, đại học, giao thông, nhà ở, công việc chất lượng và hệ sinh thái doanh nghiệp đồng thời.
 
-Xem [`24_regional_clusters_and_industrial_geography.md`](./24_regional_clusters_and_industrial_geography.md).
+## Dịch vụ có thể giao dịch là một con đường nâng năng suất
 
-## Tradable services là một con đường nâng aggregate productivity
+Sản xuất Hàn Quốc đã tận dụng nhu cầu toàn cầu rất tốt. Dịch vụ có thể làm điều tương tự nếu trở thành hàng hóa có thể xuất khẩu.
 
-Manufacturing đã tận dụng global demand rất tốt. Services có thể làm điều tương tự nếu trở thành tradable.
+Game, K-content, phần mềm, dịch vụ kỹ thuật, tài chính, y tế và cấp phép IP cho phép doanh nghiệp mở rộng vượt quy mô dân số nội địa. Khi xuất khẩu dịch vụ tăng, năng suất dịch vụ không còn bị khóa hoàn toàn vào nhu cầu địa phương.
 
-Gaming, K-content, software, engineering services, finance, healthcare services và IP licensing cho phép firm scale beyond domestic population. Khi service export tăng, service productivity không còn bị khóa hoàn toàn bởi local demand.
+## AI: công cụ năng suất hay chỉ là chi phí mới?
 
-K-content là ví dụ: một creative asset tạo tại Korea có thể monetization qua streaming, concerts, merchandise, advertising và licensing ở nhiều quốc gia. Marginal revenue có thể tăng nhanh hơn domestic labor input.
+AI có thể tăng năng suất bằng tự động hóa tác vụ lặp lại, hỗ trợ lập trình, dịch, dự báo, kiểm tra chất lượng và chăm sóc khách hàng. Nhưng ROI không đến chỉ từ việc “có model”.
 
-## AI: productivity tool hay chỉ là cost mới?
-
-AI có tiềm năng tăng productivity bằng automation routine tasks, support coding, translation, forecasting, inspection và customer service. Nhưng ROI không đến từ model access một mình.
-
-Firm cần data quality, process integration và worker capability để dùng output đúng. Nếu AI chỉ thêm một layer tool nhưng employee vẫn nhập cùng data vào năm systems khác nhau, productivity gain sẽ nhỏ.
-
-Nói cách khác:
+Doanh nghiệp cần dữ liệu tốt, tích hợp vào quy trình và nhân viên biết kiểm tra kết quả. Có thể hình dung:
 
 ```text
-AI value = Model capability × Process redesign × Adoption × Verification
+Giá trị AI
+= năng lực mô hình
+× mức thiết kế lại quy trình
+× mức chấp nhận sử dụng
+× khả năng kiểm chứng
 ```
 
-Nếu một factor gần zero, tổng value thấp.
+Nếu một thành phần gần bằng 0, giá trị cuối cùng cũng rất thấp.
 
-## Đo productivity cũng có limitations
+## Đo năng suất có giới hạn
 
-Digital services tạo measurement challenge. Một free search engine, messaging app hoặc open-source tool có consumer value lớn nhưng GDP đo chủ yếu qua monetary transactions. Quality improvement cũng khó capture đầy đủ.
+Dịch vụ số tạo thách thức đo lường. Một công cụ tìm kiếm miễn phí, ứng dụng nhắn tin hoặc phần mềm mã nguồn mở có thể tạo giá trị lớn cho người dùng nhưng GDP chỉ ghi nhận phần giao dịch tiền tệ. Tương tự, trong y tế hoặc dịch vụ công, phục vụ nhiều người hơn không đồng nghĩa phúc lợi tăng nếu chất lượng giảm.
 
-Trong public services hoặc healthcare, tăng output quantity chưa chắc tăng welfare nếu quality giảm.
+Vì vậy số liệu năng suất cần được diễn giải theo ngành, không nên dùng như một “điểm số tuyệt đối” cho mọi hoạt động.
 
-Vì vậy productivity data cần interpretation, không nên dùng như một score tuyệt đối cho mọi sector.
+## Không có một chính sách năng suất duy nhất
 
-## Policy trade-offs: không có silver bullet
+Trợ cấp vốn hữu ích khi doanh nghiệp thiếu vốn nhưng không giải quản lý yếu. Đào tạo giúp thiếu kỹ năng nhưng không giải mô hình lợi nhuận thấp. Cạnh tranh thúc đẩy hiệu quả nhưng phân mảnh quá mức có thể ngăn doanh nghiệp đạt quy mô. M&A tạo quy mô nhưng có thể tăng tập trung thị trường.
 
-Capital subsidy giúp khi firm thiếu capital nhưng không giải weak management. Training giúp skill shortage nhưng không giải low-margin business model. Competition thúc efficiency nhưng excessive fragmentation có thể ngăn scale. M&A tạo scale nhưng có thể tăng concentration.
+Cách tiếp cận theo bản chất là hỏi **nút thắt thật nằm ở đâu**: công nghệ, vốn, quản lý, thị trường, kỹ năng, quy định, quyền lực khách hàng hay rào cản rời thị trường.
 
-First-principles approach là hỏi **bottleneck thật sự nằm ở đâu**: technology, capital, management, market access, skill, regulation, customer power hay exit barrier.
-
-Một productivity strategy tốt thường gồm cả entry, scale-up và exit:
+Một hệ thống lành mạnh cần cả ba giai đoạn:
 
 ```text
-Entry → Experiment → Scale productive firms → Exit weak firms → Reallocate resources
+Gia nhập
+→ thử nghiệm
+→ doanh nghiệp tốt mở rộng
+→ doanh nghiệp yếu rời thị trường
+→ nguồn lực được tái phân bổ
 ```
 
-Nếu system chỉ khuyến khích entry mà không scale-up, economy có nhiều small firms nhưng ít champions. Nếu chỉ bảo vệ incumbents, dynamism giảm.
+Nếu chỉ khuyến khích thành lập doanh nghiệp mà không tạo đường scale-up và exit, nền kinh tế có thể có rất nhiều doanh nghiệp nhỏ nhưng năng suất thấp kéo dài.
 
-## Mental Model
+## Mental Model — mô hình tư duy
 
-> Productivity là khả năng biến **labor + capital + knowledge + organization** thành value. Vấn đề lớn của Hàn Quốc không phải thiếu pockets of excellence, mà là làm sao để productivity lan từ global manufacturing champions sang services, SMEs và regions rộng hơn.
+> Năng suất không chỉ là “làm nhanh hơn”. Nó là **khả năng biến lao động, vốn và tri thức thành giá trị cao hơn**. Dualism xuất hiện khi công nghệ, vốn, quản lý và nhân tài tập trung ở một phần nhỏ của nền kinh tế trong khi phần lớn lao động nằm ở khu vực không tích lũy được các lợi thế đó.
 
-Một mental model ngắn:
+## Những nhầm lẫn thường gặp
 
-```text
-Technology quyết định frontier
-Management quyết định firm có tới frontier không
-Capital/labor allocation quyết định economy có đưa resources tới firm tốt không
-Competition quyết định pressure phải cải thiện
-Institutions quyết định quá trình đó diễn ra nhanh hay chậm
-```
+Năng suất thấp không có nghĩa người lao động lười. Dịch vụ không phải mặc định năng suất thấp. SME không phải mặc định kém công nghệ. Trợ cấp vốn không tự tạo năng suất. AI không tự tạo ROI nếu quy trình không đổi. Đóng doanh nghiệp yếu và bảo vệ người lao động là hai câu hỏi chính sách khác nhau.
 
-## Common misconceptions
+## Liên kết
 
-**“Làm việc nhiều giờ nghĩa là productivity cao.”** Sai. Productivity đo output per input, không đo effort đơn thuần.
-
-**“Manufacturing tốt thì aggregate economy tự động productive.”** Sai. Nếu phần lớn employment ở low-productivity services, aggregate vẫn bị kéo xuống.
-
-**“SME productivity thấp vì worker kém.”** Quá đơn giản. Capital, management, market power, scale và customer structure đều quan trọng.
-
-**“Automation luôn tăng aggregate productivity.”** Không chắc. Nếu workers displaced không chuyển sang productive uses khác, social gain thấp hơn firm-level gain.
-
-**“Giữ mọi firm sống giúp employment.”** Chỉ trong ngắn hạn. Nếu resources bị khóa trong low-return firms quá lâu, wage và growth về dài hạn bị hạn chế.
-
-## Connections
-
-Đọc cùng [`04_chaebol_and_large_business_groups.md`](./04_chaebol_and_large_business_groups.md), [`06_sme_mid_sized_and_subcontracting_ecosystem.md`](./06_sme_mid_sized_and_subcontracting_ecosystem.md), [`27_demographics_households_and_consumption.md`](./27_demographics_households_and_consumption.md), [`29_innovation_rnd_education_and_human_capital.md`](./29_innovation_rnd_education_and_human_capital.md) và [`34_digital_fintech_cloud_and_it_services.md`](./34_digital_fintech_cloud_and_it_services.md).
-
-### Nguồn nền
-
-- Bank of Korea, *Korea’s Service Industry Productivity: Structural Challenges and Policy Options*, 2025: https://www.bok.or.kr/eng/bbs/B0000354/view.do?menuNo=400409&nttId=10093636
-- Ministry of SMEs and Startups, 2024 SME Basic Statistics released 2026: https://www.mss.go.kr/site/smba/foffice/ex/statDB/StReportContentDetailView.do?gb=1&reSeq=2218
-- KDI, *Economic Dynamism of Korea: With a Focus on the Economic Concentration of Business Groups*: https://www.kdi.re.kr/eng/research/reportView?pub_no=15575
-- KDI, *Rebuilding Scale-up Support Policies: Toward an Integrated Framework* (2026): https://www.kdi.re.kr/eng/research/reportView?pub_no=19159
+Đọc cùng [`06_sme_mid_sized_and_subcontracting_ecosystem.md`](./06_sme_mid_sized_and_subcontracting_ecosystem.md), [`12_labor_titles_compensation_and_workplace.md`](./12_labor_titles_compensation_and_workplace.md), [`17_platform_telecom_content_retail_services.md`](./17_platform_telecom_content_retail_services.md), [`24_regional_clusters_and_industrial_geography.md`](./24_regional_clusters_and_industrial_geography.md), [`27_demographics_households_and_consumption.md`](./27_demographics_households_and_consumption.md) và [`29_innovation_rnd_education_and_human_capital.md`](./29_innovation_rnd_education_and_human_capital.md).
