@@ -1,448 +1,434 @@
-# Corporate Actions, M&A, Merger, Spin-off và Capital Actions tại doanh nghiệp Hàn Quốc (기업행위·M&A·합병·분할)
+# Hành động doanh nghiệp, M&A, sáp nhập, chia tách và thay đổi vốn tại doanh nghiệp Hàn Quốc (기업행위·M&A·합병·분할)
 
-Khi đọc một company, rất nhiều thay đổi lớn không xuất hiện từ hoạt động kinh doanh thường ngày mà từ **corporate actions / 기업행위**: merger, acquisition, spin-off, split-off, rights issue, treasury-share transaction, tender offer, asset sale, share swap hoặc restructuring. Những event này có thể thay đổi ownership, earnings perimeter, debt, share count và value distribution giữa các stakeholder chỉ trong một thời gian ngắn.
+Khi đọc một doanh nghiệp, nhiều thay đổi lớn không đến từ hoạt động kinh doanh thường ngày mà từ **hành động doanh nghiệp (corporate actions / 기업행위)** như sáp nhập, mua lại, chia tách, tăng vốn, giao dịch cổ phiếu quỹ, chào mua công khai, bán tài sản, hoán đổi cổ phiếu hoặc tái cấu trúc.
 
-Vì vậy analyst không thể chỉ đọc revenue và operating profit. Phải hiểu **transaction mechanics** và hỏi: ai đưa tài sản gì vào deal, ai nhận claim gì sau deal, tỷ lệ ownership thay đổi ra sao và value được chuyển giữa các entity như thế nào.
+Những sự kiện này có thể thay đổi quyền sở hữu, phạm vi hợp nhất lợi nhuận, nợ, số lượng cổ phiếu và cách giá trị được phân phối giữa các bên liên quan chỉ trong một thời gian ngắn.
 
-## 1. Corporate action là gì?
+Vì vậy không thể chỉ đọc doanh thu và lợi nhuận hoạt động. Cần hiểu **cơ chế giao dịch (transaction mechanics)** và hỏi: ai đưa tài sản gì vào giao dịch, ai nhận quyền lợi gì sau giao dịch, tỷ lệ sở hữu thay đổi ra sao và giá trị được chuyển giữa các pháp nhân như thế nào.
 
-Corporate action là quyết định của company làm thay đổi capital structure, ownership, legal perimeter hoặc rights của security holders.
+## 1. Hành động doanh nghiệp là gì?
 
-Một mental model:
+Hành động doanh nghiệp là quyết định làm thay đổi cấu trúc vốn, quyền sở hữu, phạm vi pháp lý hoặc quyền của người nắm giữ chứng khoán.
 
 ```text
-Before transaction
-Assets + liabilities + shareholders
+Trước giao dịch
+Tài sản + nợ + cổ đông
         ↓
-Legal / financial action
+Hành động pháp lý / tài chính
         ↓
-After transaction
-New perimeter + new claims + new control structure
+Sau giao dịch
+Phạm vi mới + quyền đòi mới + cấu trúc kiểm soát mới
 ```
 
-Điểm khó là accounting result, legal form và economic substance có thể khác nhau. Một transaction được gọi là “merger” chưa chắc economic logic giống acquisition. Một spin-off có thể unlock focus nhưng cũng có thể chuyển asset quality giữa entities.
+Điểm khó là kết quả kế toán, hình thức pháp lý và bản chất kinh tế có thể khác nhau. Một giao dịch được gọi là “sáp nhập” chưa chắc có logic kinh tế giống mua lại. Một chia tách có thể giúp tập trung chiến lược nhưng cũng có thể chuyển tài sản chất lượng giữa các pháp nhân.
 
-## 2. M&A: tại sao công ty mua công ty khác?
+## 2. M&A: vì sao doanh nghiệp mua doanh nghiệp khác?
 
-**Merger & Acquisition / M&A / 인수합병** thường được biện minh bằng growth, synergy, technology, customer access, vertical integration, geographic expansion hoặc restructuring.
+**Mua bán và sáp nhập (Merger & Acquisition / M&A / 인수합병)** thường được biện minh bằng tăng trưởng, hợp lực, công nghệ, tiếp cận khách hàng, tích hợp dọc, mở rộng địa lý hoặc tái cấu trúc.
 
-Nhưng “synergy” chỉ meaningful nếu map được thành cash flow.
+Nhưng “hợp lực (synergy)” chỉ có ý nghĩa nếu chuyển được thành dòng tiền.
+
+```text
+Hợp lực doanh thu
+→ bán chéo / phân phối / định giá
+→ doanh thu cao hơn
+
+Hợp lực chi phí
+→ mua sắm / nhân sự / hệ thống trùng lặp
+→ chi phí thấp hơn
+
+Hợp lực vốn
+→ vốn lưu động / tài trợ / cấu trúc thuế tốt hơn
+→ nhu cầu vốn hoặc chi phí vốn thấp hơn
+```
+
+Nếu không thể chuyển hợp lực thành cơ chế đo được, nó vẫn chỉ là câu chuyện quản lý.
+
+## 3. Giá mua và phần chênh trả thêm
+
+Bên mua thường phải trả **phần chênh mua lại (acquisition premium)** so với giá thị trường trước thông tin giao dịch để cổ đông mục tiêu chấp nhận.
+
+\[
+Giá\ trị\ tạo\ ra = Hợp\ lực - Phần\ chênh\ mua\ lại - Chi\ phí\ tích\ hợp - Chi\ phí\ tài\ trợ
+\]
+
+Giao dịch có thể làm doanh nghiệp hợp nhất lớn hơn nhưng vẫn phá hủy giá trị cổ đông nếu giá mua quá cao.
+
+Tăng trưởng không đồng nghĩa tạo giá trị.
+
+## 4. Phân bổ giá mua và goodwill
+
+Sau khi mua lại, kế toán phải phân bổ giá mua vào tài sản và nợ có thể xác định; phần còn lại thường trở thành **lợi thế thương mại (goodwill / 영업권)**.
+
+\[
+Goodwill = Giá\ mua - Giá\ trị\ hợp\ lý\ của\ tài\ sản\ thuần\ xác\ định\ được
+\]
+
+Goodwill lớn không tự động xấu. Nó có thể phản ánh thương hiệu, mạng lưới, nhân lực hoặc hợp lực kỳ vọng không thể ghi nhận riêng. Nhưng goodwill lớn buộc nhà phân tích hỏi liệu bên mua có trả quá cao và rủi ro suy giảm giá trị có lớn không.
+
+## 5. Suy giảm goodwill
+
+Nếu doanh nghiệp được mua lại hoạt động kém hơn kỳ vọng, goodwill có thể bị ghi giảm giá trị. Đây là chi phí không tiền mặt tại thời điểm ghi nhận nhưng thường phản ánh quyết định phân bổ vốn trước đó không đạt kỳ vọng hoặc giả định ban đầu đã yếu đi.
+
+Khi thấy suy giảm goodwill, không nên dừng ở nhãn “một lần”. Hãy quay lại hỏi:
+
+- giá mua ban đầu;
+- luận điểm lúc mua;
+- kết quả thực tế;
+- trách nhiệm của ban quản lý.
+
+## 6. Tăng/giảm EPS sau giao dịch
+
+Ban quản lý đôi khi nói giao dịch **làm tăng EPS (EPS accretive)**. Nhưng EPS tăng không đồng nghĩa giao dịch tạo giá trị.
+
+Một công ty có P/E cao có thể phát hành cổ phiếu đang được định giá cao để mua công ty P/E thấp và làm EPS tăng về mặt cơ học dù giá trị chiến lược không lớn.
+
+Tạo giá trị phải nhìn ROIC trên vốn bỏ ra so với chi phí vốn, không chỉ EPS.
+
+## 7. Tài trợ cho thương vụ mua lại
+
+M&A có thể dùng tiền mặt, nợ, cổ phiếu mới hoặc kết hợp.
+
+Giao dịch dùng tiền mặt làm giảm thanh khoản. Dùng nợ làm tăng đòn bẩy và chi phí lãi. Dùng cổ phiếu làm pha loãng cổ đông nhưng giảm rủi ro tái cấp vốn.
+
+Câu hỏi đúng là:
+
+> Cấu trúc tài trợ có phù hợp với khả năng tạo dòng tiền và mức rủi ro của tài sản được mua hay không?
+
+## 8. Sáp nhập (합병)
+
+Trong **sáp nhập (merger / 합병)**, các pháp nhân được kết hợp theo cấu trúc cụ thể. Cổ đông của pháp nhân bị sáp nhập có thể nhận cổ phiếu của pháp nhân còn lại hoặc pháp nhân mới theo **tỷ lệ sáp nhập (merger ratio / 합병비율)**.
+
+Tỷ lệ sáp nhập rất nhạy cảm vì nó quyết định quyền sở hữu kinh tế sau giao dịch.
+
+Nếu định giá tương đối giữa các pháp nhân không hợp lý, giá trị có thể chuyển từ nhóm cổ đông này sang nhóm khác.
+
+## 9. Sáp nhập giữa các bên liên quan và rủi ro quản trị
+
+Khi các pháp nhân trong cùng tập đoàn sáp nhập, rủi ro xung đột lợi ích tăng. Người kiểm soát có thể có tỷ lệ sở hữu khác nhau ở từng pháp nhân.
 
 Ví dụ:
 
 ```text
-Revenue synergy
-→ cross-sell / distribution / pricing
-→ higher revenue
-
-Cost synergy
-→ procurement / headcount / duplicated systems
-→ lower cost
-
-Capital synergy
-→ better working capital / funding / tax structure
-→ lower capital need or funding cost
+Người kiểm soát sở hữu:
+Công ty A = 30%
+Công ty B = 5%
 ```
 
-Nếu không convert được synergy thành measurable mechanism, nó vẫn chỉ là narrative.
+Nếu điều khoản sáp nhập thiên về A, người kiểm soát có thể tăng giá trị kinh tế hoặc quyền kiểm soát dù câu chuyện cấp tập đoàn được mô tả là “hợp lực”.
 
-## 3. Acquisition price và premium
+Vì vậy giao dịch bên liên quan phải đọc cùng [`08_corporate_governance_ownership_and_control.md`](./08_corporate_governance_ownership_and_control.md).
 
-Acquirer thường phải trả premium so với unaffected market price để target shareholders chấp nhận.
+## 10. Hoán đổi cổ phiếu (주식교환)
 
-Câu hỏi quan trọng:
+**Hoán đổi cổ phiếu (share swap / 주식교환)** có thể được dùng để biến một công ty thành công ty con sở hữu toàn phần hoặc tái tổ chức quyền sở hữu trong tập đoàn.
 
-\[
-Value\ Created = Synergy - Premium - Integration\ Cost - Financing\ Cost
-\]
+Cổ đông công ty mục tiêu đổi cổ phiếu mục tiêu lấy cổ phiếu hoặc tiền của công ty mẹ/bên mua theo điều khoản giao dịch.
 
-Acquisition có thể giúp combined company lớn hơn nhưng vẫn destroy shareholder value nếu premium quá cao.
+Cần theo dõi quyền sở hữu sau giao dịch và cách đối xử với cổ đông thiểu số.
 
-Growth không đồng nghĩa value creation.
+## 11. Chia tách công ty (회사분할)
 
-## 4. Purchase price allocation và goodwill
+Tái cấu trúc doanh nghiệp Hàn Quốc sử dụng nhiều dạng **chia tách công ty (company split / 회사분할)**. Quan trọng hơn việc học tên pháp lý là hiểu logic kinh tế.
 
-Sau acquisition, accounting phải allocate purchase price vào identifiable assets/liabilities và phần residual thường thành **goodwill / 영업권**.
+### Chia tách theo tỷ lệ — 인적분할
 
-Simplified:
-
-\[
-Goodwill = Purchase\ Consideration - Fair\ Value\ of\ Net\ Identifiable\ Assets
-\]
-
-Goodwill lớn không tự động xấu. Nó có thể phản ánh brand, network, human capital hoặc expected synergy không thể recognize riêng. Nhưng goodwill cao làm analyst cần hỏi acquirer có overpay không và impairment risk thế nào.
-
-## 5. Goodwill impairment
-
-Nếu acquired business underperform, goodwill có thể bị impairment. Đây là non-cash charge tại thời điểm recognition nhưng phản ánh prior capital allocation đã thất bại hoặc assumptions suy yếu.
-
-Do đó khi thấy impairment, không nên dừng ở “one-off”. Hãy quay lại hỏi:
-
-- acquisition price ban đầu;
-- thesis lúc mua;
-- performance thực tế;
-- management accountability.
-
-## 6. Accretion/dilution
-
-Management đôi khi nói deal **EPS accretive**. Nhưng EPS accretion không đồng nghĩa deal tạo value.
-
-Một acquirer với high P/E có thể issue expensive-valued stock để mua low-P/E target và làm EPS tăng mechanically dù strategic value không lớn.
-
-Value creation phải xem ROIC trên capital bỏ ra so với cost of capital, không chỉ EPS.
-
-## 7. Financing an acquisition
-
-Acquisition có thể dùng cash, debt, new shares hoặc combination.
-
-Cash-funded deal giảm liquidity. Debt-funded deal tăng leverage và interest burden. Share-funded deal dilute shareholders nhưng giảm refinancing risk.
-
-Câu hỏi đúng là:
-
-> Financing structure có match cash-flow visibility và risk của acquired asset không?
-
-## 8. Merger (합병)
-
-Trong **merger / 합병**, legal entities được combine theo structure cụ thể. Shareholders của entity bị merged có thể nhận shares của surviving/new entity theo **merger ratio / 합병비율**.
-
-Merger ratio là điểm rất nhạy vì nó quyết định economic ownership sau transaction.
-
-Nếu relative valuation giữa entities không fair, value có thể transfer từ shareholder group này sang group khác.
-
-## 9. Related-party merger và governance risk
-
-Khi entities thuộc cùng business group merge, conflict-of-interest risk tăng. Controller có thể có different ownership percentages ở hai entities.
-
-Ví dụ simplified:
+Cổ đông hiện hữu thường nhận quyền sở hữu tại các pháp nhân mới theo tỷ lệ.
 
 ```text
-Controller owns:
-Entity A = 30%
-Entity B = 5%
-```
-
-Nếu merger terms favor A, controller có thể tăng economic control/value dù group-level story được mô tả là “synergy”.
-
-Vì vậy related-party transaction phải đọc cùng [`08_corporate_governance_ownership_and_control.md`](./08_corporate_governance_ownership_and_control.md).
-
-## 10. Share swap (주식교환)
-
-**Share swap / 주식교환** có thể được dùng để biến company thành wholly owned subsidiary hoặc reorganize group ownership.
-
-Economic effect là target shareholders đổi shares của target lấy shares/cash của parent/acquirer theo terms.
-
-Analyst phải track post-transaction ownership và minority shareholder treatment.
-
-## 11. Spin-off / company split (회사분할)
-
-Korean corporate restructuring thường sử dụng nhiều dạng **company split / 회사분할**. Economic intuition quan trọng hơn việc học tên legal form.
-
-Cần phân biệt hai logic:
-
-### Proportional split / 인적분할
-
-Existing shareholders thường nhận ownership ở các resulting entities theo proportion.
-
-Conceptually:
-
-```text
-Old shareholder
+Cổ đông cũ
    ↓
-New Company A + New Company B
+Công ty A mới + Công ty B mới
 ```
 
-Shareholder tiếp tục directly own cả hai businesses.
+Cổ đông tiếp tục trực tiếp sở hữu cả hai hoạt động.
 
-### Physical split / 물적분할
+### Chia tách vật lý — 물적분할
 
-Parent tách business thành subsidiary mới nhưng parent giữ ownership ở subsidiary.
+Công ty mẹ tách một hoạt động thành công ty con mới nhưng vẫn giữ quyền sở hữu công ty con.
 
 ```text
-Shareholder
+Cổ đông
    ↓
-Parent
+Công ty mẹ
    ↓
-New subsidiary
+Công ty con mới
 ```
 
-Điểm governance-sensitive xuất hiện nếu high-growth division được tách thành subsidiary rồi IPO sau đó. Parent shareholder có indirect exposure nhưng ownership economics có thể thay đổi khi subsidiary issue new shares.
+Rủi ro quản trị xuất hiện nếu mảng tăng trưởng cao được tách thành công ty con rồi IPO sau đó. Cổ đông công ty mẹ vẫn có phơi nhiễm gián tiếp nhưng kinh tế sở hữu có thể thay đổi khi công ty con phát hành cổ phiếu mới.
 
-## 12. Tại sao company split?
+## 12. Vì sao doanh nghiệp chia tách?
 
-Rationale có thể gồm focus, separate funding, strategic partnership, risk isolation hoặc preparation for sale/IPO.
+Lý do có thể là tập trung chiến lược, huy động vốn riêng, tìm đối tác, cô lập rủi ro hoặc chuẩn bị bán/IPO.
 
-Nhưng split không tự tạo value. Nó chỉ thay legal boundary. Value tăng nếu new structure cải thiện incentives, financing, transparency hoặc capital allocation.
+Nhưng chia tách không tự tạo giá trị. Nó chỉ thay ranh giới pháp lý. Giá trị tăng nếu cấu trúc mới cải thiện động lực, tài trợ, minh bạch hoặc phân bổ vốn.
 
-## 13. Subsidiary IPO sau split
+## 13. IPO công ty con sau chia tách
 
-Khi subsidiary IPO, parent có thể raise capital hoặc monetize stake. Nhưng analyst phải theo dõi:
+Khi công ty con IPO, công ty mẹ có thể huy động vốn hoặc bán bớt cổ phần. Cần theo dõi:
 
-- parent ownership trước/sau IPO;
-- new shares vs secondary shares;
-- dilution;
-- use of proceeds;
-- whether growth asset value shifts away from parent minority shareholders.
+- tỷ lệ sở hữu của công ty mẹ trước/sau IPO;
+- cổ phiếu mới hay cổ phiếu thứ cấp;
+- mức pha loãng;
+- mục đích sử dụng vốn;
+- giá trị của tài sản tăng trưởng có dịch chuyển khỏi cổ đông thiểu số công ty mẹ hay không.
 
-Đây là classic case cần tách group value và listed-entity shareholder value.
+Đây là trường hợp điển hình phải tách giá trị cấp tập đoàn khỏi giá trị của pháp nhân niêm yết cụ thể.
 
-## 14. Rights issue (유상증자)
+## 14. Tăng vốn có thu tiền (유상증자)
 
-**Rights issue / 유상증자** là issuance new shares để raise equity capital.
+**Tăng vốn có thu tiền (rights issue / 유상증자)** là phát hành cổ phiếu mới để huy động vốn chủ sở hữu.
 
-Company có thể dùng proceeds cho capex, acquisition, debt repayment hoặc liquidity rescue.
+Doanh nghiệp có thể dùng tiền cho CAPEX, M&A, trả nợ hoặc cứu thanh khoản.
 
-Share count tăng nên existing holder bị dilution nếu không participate hoặc nếu issue structure thay economics.
+Số cổ phiếu tăng nên cổ đông hiện hữu bị pha loãng nếu không tham gia hoặc nếu cấu trúc phát hành làm thay đổi kinh tế sở hữu.
 
-Không nên đánh giá rights issue chỉ là positive/negative. Hỏi:
+Không nên đánh giá tăng vốn chỉ là tốt/xấu. Hãy hỏi:
 
 ```text
-Tại sao cần vốn?
-Issue price thế nào?
+Vì sao cần vốn?
+Giá phát hành thế nào?
 Ai tham gia?
-Use of proceeds?
-Expected return trên vốn mới?
+Tiền dùng vào đâu?
+ROIC kỳ vọng trên vốn mới?
 ```
 
-## 15. Bonus issue (무상증자)
+## 15. Phát hành cổ phiếu thưởng (무상증자)
 
-**Bonus issue / 무상증자** tăng number of shares nhưng không inject new external capital vào business.
+**Phát hành cổ phiếu thưởng (bonus issue / 무상증자)** làm tăng số lượng cổ phiếu nhưng không đưa thêm vốn bên ngoài vào doanh nghiệp.
 
-Nếu economic pie không đổi, chia thành nhiều shares không tự tạo intrinsic value.
+Nếu “miếng bánh kinh tế” không đổi, chia thành nhiều cổ phiếu hơn không tự làm giá trị nội tại tăng.
 
-Price per share adjust tương ứng về lý thuyết.
+Đây là nơi nhà đầu tư cá nhân dễ nhầm “nhiều cổ phiếu hơn = giàu hơn”.
 
-Đây là nơi retail investors dễ nhầm “nhiều shares hơn = giàu hơn”.
+## 16. Mua lại cổ phiếu (자사주 매입)
 
-## 16. Share buyback (자사주 매입)
+Doanh nghiệp dùng tiền mua lại cổ phiếu. Mua lại tạo giá trị khi cổ phiếu bị định giá thấp và doanh nghiệp không có lựa chọn sử dụng tiền nào có lợi suất cao hơn.
 
-Company dùng cash mua lại shares. Buyback tạo value khi shares undervalued và business không có higher-return use of cash.
-
-Nhưng buyback ở overvaluation có thể destroy value.
-
-Một formula intuition:
+Nếu mua lại cổ phiếu bị định giá quá cao, doanh nghiệp có thể phá hủy giá trị.
 
 ```text
-If intrinsic value > repurchase price
-→ remaining shareholders gain
+Nếu giá trị nội tại > giá mua lại
+→ cổ đông còn lại có lợi
 
-If intrinsic value < repurchase price
-→ remaining shareholders lose
+Nếu giá trị nội tại < giá mua lại
+→ cổ đông còn lại bị thiệt
 ```
 
-## 17. Treasury shares (자기주식)
+## 17. Cổ phiếu quỹ (자기주식)
 
-Treasury shares là shares company đã repurchase và giữ. Chúng có accounting/governance implications khác outstanding shares thông thường.
+**Cổ phiếu quỹ (treasury shares / 자기주식)** là cổ phiếu công ty đã mua lại và giữ. Chúng có xử lý kế toán và hệ quả quản trị khác cổ phiếu đang lưu hành thông thường.
 
-Analyst cần đọc treatment khi company cancels, disposes hoặc uses them trong transaction.
+Cần đọc cách xử lý khi công ty hủy, bán lại hoặc dùng chúng trong giao dịch.
 
-**Treasury-share cancellation / 자사주 소각** giảm share count economically khác với simply holding treasury shares.
+**Hủy cổ phiếu quỹ (treasury-share cancellation / 자사주 소각)** làm giảm số cổ phiếu hiệu lực về kinh tế, khác với chỉ giữ cổ phiếu quỹ trên bảng cân đối.
 
-## 18. Dividend và special dividend
+## 18. Cổ tức và cổ tức đặc biệt
 
-Dividend chuyển cash từ company sang shareholders.
+Cổ tức chuyển tiền từ doanh nghiệp sang cổ đông.
 
-Regular dividend có thể signal stable distribution policy. Special dividend có thể đến từ asset sale hoặc excess cash.
+Cổ tức thường xuyên có thể cho thấy chính sách phân phối ổn định. Cổ tức đặc biệt có thể đến từ bán tài sản hoặc tiền dư thừa.
 
-Nhưng dividend cao trong company leverage lớn có thể weaken creditor protection.
+Nhưng trả cổ tức cao trong doanh nghiệp có đòn bẩy lớn có thể làm khả năng bảo vệ chủ nợ yếu đi.
 
-Do đó payout phải đọc trong capital-allocation context.
+Vì vậy chính sách chi trả phải đặt trong bối cảnh phân bổ vốn.
 
-## 19. Tender offer (공개매수)
+## 19. Chào mua công khai (공개매수)
 
-**Tender offer / 공개매수** là offer mua shares từ shareholders theo price/terms công khai. Nó có thể dùng cho takeover, delisting hoặc ownership consolidation.
+**Chào mua công khai (tender offer / 공개매수)** là đề nghị mua cổ phiếu từ cổ đông theo mức giá và điều khoản công khai. Nó có thể dùng cho thâu tóm, hủy niêm yết hoặc củng cố quyền sở hữu.
 
-Important variables:
+Các biến quan trọng:
 
-- offer price;
-- target ownership threshold;
-- financing;
-- conditionality;
-- treatment nếu không tender.
+- giá chào mua;
+- tỷ lệ sở hữu mục tiêu;
+- nguồn tài trợ;
+- điều kiện thực hiện;
+- cách xử lý cổ đông không tham gia.
 
-## 20. Delisting và going private
+## 20. Hủy niêm yết và chuyển thành công ty tư nhân
 
-Going-private transaction có thể giúp company tránh public-market cost và quản lý dài hạn hơn, nhưng minority shareholders cần đánh giá exit price và fairness.
+Giao dịch đưa doanh nghiệp ra khỏi thị trường đại chúng có thể giúp giảm chi phí niêm yết và quản lý dài hạn hơn, nhưng cổ đông thiểu số cần đánh giá mức giá thoái vốn và tính công bằng.
 
-Một company delist không có nghĩa business xấu; transaction có thể driven by ownership strategy.
+Hủy niêm yết không có nghĩa hoạt động kinh doanh xấu; nó có thể xuất phát từ chiến lược sở hữu.
 
-## 21. Asset sale và carve-out
+## 21. Bán tài sản và carve-out
 
-Company có thể bán business unit hoặc assets thay vì shares của whole company.
+Doanh nghiệp có thể bán một mảng kinh doanh hoặc tài sản thay vì bán toàn bộ cổ phần công ty.
 
-Carve-out giúp isolate business nhưng tax, employee transfer, contracts và shared infrastructure làm transaction complex.
+**Carve-out** giúp tách riêng một hoạt động nhưng thuế, chuyển nhân viên, hợp đồng và hạ tầng dùng chung làm giao dịch phức tạp.
 
-Analyst cần hỏi seller mất earnings nào và cash proceeds dùng làm gì.
+Cần hỏi bên bán mất bao nhiêu lợi nhuận và số tiền thu được sẽ dùng vào đâu.
 
-## 22. Holding-company conversion
+## 22. Chuyển đổi sang mô hình công ty mẹ
 
-Group có thể restructure thành holding-company architecture để clarify control, ownership và business boundaries.
+Tập đoàn có thể tái cấu trúc theo mô hình công ty mẹ để làm rõ quyền kiểm soát, quyền sở hữu và ranh giới hoạt động.
 
-Nhưng simplification trên diagram không bảo đảm economic simplification. Intercompany stakes, dividends và related-party transactions vẫn cần theo dõi.
+Nhưng sơ đồ đơn giản hơn không bảo đảm kinh tế đơn giản hơn. Cổ phần chéo, cổ tức nội bộ và giao dịch bên liên quan vẫn cần theo dõi.
 
 Xem [`05_group_structure_affiliates_holding_companies.md`](./05_group_structure_affiliates_holding_companies.md).
 
-## 23. Strategic investment và minority stake
+## 23. Đầu tư chiến lược và cổ phần thiểu số
 
-Mua 10–20% strategic stake không giống acquisition. Investor có exposure nhưng không full control.
+Mua 10–20% cổ phần chiến lược không giống mua lại toàn bộ. Nhà đầu tư có phơi nhiễm kinh tế nhưng không kiểm soát hoàn toàn.
 
-Accounting treatment và governance rights phụ thuộc influence/control level.
+Xử lý kế toán và quyền quản trị phụ thuộc mức độ ảnh hưởng/kiểm soát.
 
-Cần distinguish:
-
-```text
-Financial investment
-Strategic minority
-Significant influence
-Joint control
-Control
-```
-
-## 24. Joint venture (JV / 합작법인)
-
-JV hữu ích khi partners chia technology, market access hoặc capital. Nhưng decision rights phải rõ.
-
-50/50 ownership nghe “công bằng” nhưng có deadlock risk nếu governance weak.
-
-Key questions:
-
-- ai appoint CEO?
-- reserved matters?
-- funding obligations?
-- IP ownership?
-- exit mechanism?
-
-## 25. M&A integration risk
-
-Deal close chỉ là beginning.
-
-Integration failure có thể đến từ IT systems, culture, customer churn, employee departures, duplicated processes hoặc incompatible incentives.
-
-Một synergy model nên có timeline:
+Cần phân biệt:
 
 ```text
-Day 1 legal close
-→ 100-day integration
-→ systems/process integration
-→ synergy realization
-→ normalized economics
+Đầu tư tài chính
+Cổ phần thiểu số chiến lược
+Ảnh hưởng đáng kể
+Đồng kiểm soát
+Kiểm soát
 ```
 
-Nếu management claim synergy ngay trong Year 1 nhưng integration complexity rất cao, assumption có thể aggressive.
+## 24. Liên doanh (JV / 합작법인)
 
-## 26. Culture integration
+JV hữu ích khi các bên chia sẻ công nghệ, thị trường hoặc vốn. Nhưng quyền quyết định phải rõ.
 
-Korea-specific group culture, hierarchy, evaluation và communication style có thể làm cross-border acquisition khó hơn financial model thể hiện.
+Sở hữu 50/50 nghe “công bằng” nhưng dễ bế tắc nếu quản trị yếu.
+
+Cần hỏi:
+
+- ai bổ nhiệm CEO?
+- vấn đề nào cần đồng thuận?
+- nghĩa vụ góp thêm vốn?
+- quyền sở hữu IP?
+- cơ chế thoái vốn?
+
+## 25. Rủi ro tích hợp M&A
+
+Hoàn tất giao dịch pháp lý mới chỉ là bắt đầu.
+
+Tích hợp có thể thất bại vì hệ thống CNTT, văn hóa, khách hàng rời đi, nhân sự nghỉ việc, quy trình trùng lặp hoặc động lực không tương thích.
+
+Mô hình hợp lực nên có dòng thời gian:
+
+```text
+Ngày hoàn tất pháp lý
+→ 100 ngày đầu tích hợp
+→ tích hợp hệ thống / quy trình
+→ hiện thực hóa hợp lực
+→ kinh tế bình thường hóa
+```
+
+Nếu ban quản lý tuyên bố phần lớn hợp lực ngay năm đầu trong khi độ phức tạp tích hợp rất cao, giả định có thể quá lạc quan.
+
+## 26. Tích hợp văn hóa
+
+Văn hóa tập đoàn, hệ thống thứ bậc, đánh giá và giao tiếp đặc trưng ở Hàn Quốc có thể làm M&A xuyên biên giới khó hơn những gì mô hình tài chính thể hiện.
 
 Xem [`13_business_culture_decision_making_and_communication.md`](./13_business_culture_decision_making_and_communication.md).
 
-## 27. Employee consequences
+## 27. Hệ quả với nhân viên
 
-M&A và split có thể thay employer legal entity, reporting line, compensation, location hoặc promotion path.
+M&A và chia tách có thể thay đổi pháp nhân sử dụng lao động, đường báo cáo, lương thưởng, địa điểm hoặc lộ trình thăng tiến.
 
-Đối với career analysis, transaction không chỉ là stock-market event.
+Với phân tích nghề nghiệp, giao dịch không chỉ là sự kiện trên thị trường chứng khoán.
 
-Hỏi:
+Hãy hỏi:
 
-- team thuộc entity nào sau deal?
-- duplicate functions có bị rationalize?
-- core capability được giữ ở đâu?
-- decision center chuyển về đâu?
+- đội nhóm thuộc pháp nhân nào sau giao dịch?
+- chức năng trùng lặp có bị tinh giản không?
+- năng lực cốt lõi được giữ ở đâu?
+- trung tâm ra quyết định chuyển về đâu?
 
-## 28. Event study mindset
+## 28. Tư duy phân tích sự kiện
 
-Khi corporate action được announce, tách ba layers:
+Khi một hành động doanh nghiệp được công bố, tách ba lớp:
 
-**Fact:** deal terms chính thức.
+**Sự kiện thực tế:** điều khoản giao dịch chính thức.
 
-**Management claim:** synergy, strategic rationale.
+**Tuyên bố của ban quản lý:** hợp lực và lý do chiến lược.
 
-**Market reaction:** price changes.
+**Phản ứng thị trường:** biến động giá.
 
-Market reaction không tự chứng minh deal tốt/xấu. Nó là aggregate expectation tại một thời điểm.
+Phản ứng thị trường không tự chứng minh giao dịch tốt hay xấu; nó là kỳ vọng tổng hợp tại một thời điểm.
 
-## 29. Pro forma analysis
+## 29. Phân tích pro forma
 
-Để hiểu post-deal company, xây **pro forma / 추정 결합** view.
+Để hiểu công ty sau giao dịch, xây **bức tranh kết hợp giả định (pro forma / 추정 결합)**:
 
 ```text
-Standalone A revenue/profit/debt
-+ Standalone B
-+ Expected synergy
-- Integration cost
-+ Financing impact
-= Pro forma combined company
+Doanh thu / lợi nhuận / nợ độc lập của A
++ của B
++ hợp lực kỳ vọng
+- chi phí tích hợp
++ tác động tài trợ
+= công ty kết hợp giả định
 ```
 
-Sau đó check leverage, share count và interest coverage.
+Sau đó kiểm tra đòn bẩy, số cổ phiếu và khả năng trả lãi.
 
-## 30. Per-share analysis
+## 30. Phân tích trên mỗi cổ phiếu
 
-Deal có thể tăng total profit nhưng EPS hoặc intrinsic value per share giảm nếu dilution lớn.
+Giao dịch có thể làm tổng lợi nhuận tăng nhưng EPS hoặc giá trị nội tại trên mỗi cổ phiếu giảm nếu pha loãng lớn.
 
-Do đó luôn chuyển từ company-level value sang **per-share economics**.
+Vì vậy luôn chuyển từ giá trị cấp công ty sang **kinh tế trên mỗi cổ phiếu (per-share economics)**.
 
-## 31. Event checklist cho DART/KIND
+## 31. Checklist sự kiện cho DART/KIND
 
-Khi thấy announcement về corporate action, đọc theo flow:
+Khi thấy thông báo hành động doanh nghiệp, đọc theo trình tự:
 
 ```text
-1. Transaction type
-2. Counterparty / related party?
-3. Valuation basis
-4. Exchange ratio / issue price
-5. Financing
-6. Ownership before/after
-7. Accounting perimeter
-8. Use of proceeds
-9. Governance approval
-10. Conditions / timeline
-11. Minority-shareholder effect
-12. Balance-sheet effect
+1. Loại giao dịch
+2. Đối tác / có phải bên liên quan không?
+3. Cơ sở định giá
+4. Tỷ lệ hoán đổi / giá phát hành
+5. Tài trợ
+6. Quyền sở hữu trước/sau
+7. Phạm vi kế toán
+8. Mục đích sử dụng tiền
+9. Phê duyệt quản trị
+10. Điều kiện / thời gian
+11. Tác động tới cổ đông thiểu số
+12. Tác động bảng cân đối
 ```
 
-## 32. Red flags
+## 32. Dấu hiệu cần kiểm tra sâu hơn
 
-Một số signal cần deep-dive thêm:
+Một số tín hiệu:
 
-- repeated acquisitions nhưng ROIC giảm;
-- large goodwill accumulation;
-- related-party merger với complex ratio;
-- split rồi subsidiary IPO liên tục;
-- frequent emergency equity issuance;
-- asset sale để finance ordinary operations;
-- buyback nhưng không cancel trong governance-sensitive context;
-- acquisition funded bằng short-term debt.
+- mua lại nhiều lần nhưng ROIC giảm;
+- goodwill tích lũy rất lớn;
+- sáp nhập bên liên quan với tỷ lệ phức tạp;
+- chia tách rồi liên tục IPO công ty con;
+- tăng vốn khẩn cấp thường xuyên;
+- bán tài sản để tài trợ hoạt động thường ngày;
+- mua lại cổ phiếu nhưng không hủy trong bối cảnh nhạy cảm về quản trị;
+- mua lại doanh nghiệp bằng nợ ngắn hạn.
 
-Red flag không phải proof wrongdoing; nó là reason để mở footnotes và transaction documents.
+Dấu hiệu không chứng minh sai phạm; nó chỉ là lý do để mở thuyết minh và tài liệu giao dịch.
 
-## Mental Model
+## Mô hình tư duy
 
-> Corporate action là **reallocation of ownership claims** chứ không chỉ là headline event.
+> Hành động doanh nghiệp là **tái phân bổ quyền sở hữu và quyền đòi**, không chỉ là một tiêu đề sự kiện.
 
-Khi đọc bất kỳ deal nào, hãy vẽ hai sơ đồ:
+Khi đọc bất kỳ giao dịch nào, hãy vẽ hai sơ đồ:
 
 ```text
-BEFORE: assets → liabilities → owners
-AFTER : assets → liabilities → owners
+TRƯỚC: tài sản → nợ → chủ sở hữu
+SAU   : tài sản → nợ → chủ sở hữu
 ```
 
 Sau đó hỏi ba câu:
 
-1. Ai control cái gì sau transaction?
-2. Ai chịu thêm risk?
-3. Value per share/claim của mỗi stakeholder thay đổi thế nào?
+1. Ai kiểm soát cái gì sau giao dịch?
+2. Ai chịu thêm rủi ro?
+3. Giá trị trên mỗi cổ phiếu/quyền đòi của từng bên thay đổi thế nào?
 
-## Common misconceptions
+## Những nhầm lẫn thường gặp
 
-**“M&A làm revenue lớn hơn nên deal tốt.”** Sai. Premium và financing có thể destroy value.
+**“M&A làm doanh thu lớn hơn nên giao dịch tốt.”** Sai. Phần chênh mua lại và cách tài trợ có thể phá hủy giá trị.
 
-**“Spin-off tự unlock value.”** Không. Legal separation chỉ tạo option; value phụ thuộc incentives, funding và ownership treatment.
+**“Spin-off tự động mở khóa giá trị.”** Không. Tách pháp lý chỉ tạo lựa chọn; giá trị phụ thuộc động lực, tài trợ và cách xử lý quyền sở hữu.
 
-**“Bonus issue làm shareholder giàu hơn.”** Không. Number of shares tăng nhưng pie không tự lớn hơn.
+**“Phát hành cổ phiếu thưởng làm cổ đông giàu hơn.”** Không. Số cổ phiếu tăng nhưng tổng giá trị kinh tế không tự tăng.
 
-**“Buyback luôn tốt.”** Không. Repurchase overvalued shares destroy value.
+**“Mua lại cổ phiếu luôn tốt.”** Không. Mua cổ phiếu bị định giá quá cao có thể phá hủy giá trị.
 
-**“Related-party transaction trong cùng group không quan trọng vì owner cuối giống nhau.”** Sai với listed entities có different minority shareholders.
+**“Giao dịch bên liên quan trong cùng tập đoàn không quan trọng vì chủ cuối giống nhau.”** Sai với các pháp nhân niêm yết có cổ đông thiểu số khác nhau.
 
 ## Liên kết tiếp theo
 
