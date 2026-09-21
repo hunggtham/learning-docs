@@ -1,129 +1,395 @@
-# Ứng dụng của đạo hàm: shape, approximation và optimization
+# Ứng dụng của đạo hàm: shape, approximation, sensitivity và optimization
 
-Derivative trở nên mạnh khi ta dùng sign và magnitude của nó để đọc behavior của function thay vì chỉ tính symbolic expression.
+Biết tính đạo hàm chỉ là bước đầu. Sức mạnh thật sự đến khi ta dùng derivative để **đọc behavior của một function**, xây approximation, kiểm tra sensitivity và tìm optimum dưới constraints.
 
-## Increasing và decreasing
+Một function có thể complicated globally nhưng derivative cho local information tại từng point. Nếu ghép những local clues lại, ta hiểu shape của toàn bộ graph.
 
-Nếu `f'(x)>0` trên interval, `f` tăng ở đó; nếu `f'(x)<0`, giảm. Critical points thường nơi
+## Sign của derivative cho biết direction của movement
+
+Nếu
+
+```math
+f'(x)>0
+```
+
+trên một interval, `f` tăng ở đó. Nếu
+
+```math
+f'(x)<0,
+```
+
+`f` giảm.
+
+Lý do intuitive: derivative là local slope. Positive slope nghĩa step nhỏ theo `x` tạo positive first-order change.
+
+Nhưng statement formal cần assumptions phù hợp như differentiability trên interval. Ta không nên biến sign rule thành shortcut tách rời theorem.
+
+## Critical point chỉ là candidate
+
+Critical point thường là nơi
 
 ```math
 f'(x)=0
 ```
 
-hoặc derivative undefined nhưng function defined.
+hoặc derivative không tồn tại nhưng function vẫn defined.
 
-Critical point chỉ là candidate cho extremum, không phải guarantee.
+Đây là nơi first-order behavior đặc biệt, nhưng không tự động là max/min.
 
-## Local extrema
-
-First derivative test xem sign change. Nếu `f'` đổi `+` sang `-`, local maximum; `-` sang `+`, local minimum.
-
-Second derivative:
+Ví dụ
 
 ```math
-f''(x)>0
+f(x)=x^3
 ```
 
-cho local concave-up behavior; nếu tại critical point và `f''>0`, thường là local minimum. Nếu `f''<0`, local maximum. Nếu `f''=0`, test inconclusive.
-
-Ví dụ `f(x)=x^4` có `f''(0)=0` nhưng vẫn minimum.
-
-## Concavity và inflection
-
-`f''` đo cách slope thay đổi. Positive second derivative nghĩa slope increasing; negative nghĩa slope decreasing.
-
-Inflection point liên quan change of concavity, không chỉ `f''=0`. Cần verify sign change hoặc structural condition.
-
-## Optimization from first principles
-
-Giả sử rectangle có perimeter fixed `P`. Nếu sides `x,y`:
+có
 
 ```math
-2x+2y=P
+f'(0)=0,
 ```
 
-nên
+nhưng 0 không là local max hay min. Function vẫn tăng xuyên qua point đó.
+
+## First derivative test: nhìn sign change thay vì chỉ nhìn zero
+
+Nếu derivative đổi từ positive sang negative, function chuyển từ tăng sang giảm, nên có local maximum.
+
+Nếu đổi từ negative sang positive, có local minimum.
+
+Nếu không đổi sign, critical point có thể là flat inflection hoặc higher-order behavior.
+
+Đây là reasoning robust hơn việc chỉ solve `f'=0`.
+
+## Second derivative: slope itself đang thay đổi ra sao?
+
+Second derivative
 
 ```math
-y=\frac P2-x
+f''(x)
+```
+
+là derivative của slope.
+
+Nếu `f''>0`, slope đang tăng: graph concave up. Nếu `f''<0`, slope đang giảm: graph concave down.
+
+Tại critical point `x_0` với
+
+```math
+f'(x_0)=0,
+```
+
+nếu
+
+```math
+f''(x_0)>0,
+```
+
+local quadratic model có curvature upward, nên thường là local minimum. Nếu `f''<0`, local maximum.
+
+Nếu `f''=0`, test inconclusive. `x^4` tại 0 vẫn là minimum dù second derivative zero.
+
+## Taylor viewpoint: vì sao second derivative test hoạt động?
+
+Near `x_0`:
+
+```math
+f(x_0+h)
+\approx
+f(x_0)+f'(x_0)h+
+\frac12f''(x_0)h^2.
+```
+
+Tại critical point, first-order term vanish:
+
+```math
+f(x_0+h)-f(x_0)
+\approx
+\frac12f''(x_0)h^2.
+```
+
+Vì `h^2\ge0`, sign của `f''` quyết định local curvature first nonzero order. Đây là reason behind test, không phải rule arbitrary.
+
+## Inflection point không phải chỉ là nơi `f''=0`
+
+Inflection point cần **change of concavity**.
+
+`f''(x_0)=0` chỉ là candidate. Ví dụ
+
+```math
+f(x)=x^4
+```
+
+có `f''(0)=0` nhưng concavity vẫn upward hai phía, nên không có inflection.
+
+Trong khi
+
+```math
+f(x)=x^3
+```
+
+đổi concavity quanh 0, nên 0 là inflection point.
+
+## Optimization: phần khó thường là modeling, không phải differentiation
+
+Một optimization problem cần ít nhất:
+
+- decision variables;
+- objective;
+- feasible domain/constraints.
+
+Derivative chỉ giúp sau khi model được viết đúng.
+
+### Worked example — fixed perimeter rectangle
+
+Perimeter fixed `P`:
+
+```math
+2x+2y=P.
+```
+
+Constraint cho
+
+```math
+y=\frac P2-x.
 ```
 
 Area:
 
 ```math
-A(x)=x\left(\frac P2-x\right)=\frac P2x-x^2
+A(x)=x\left(\frac P2-x\right).
 ```
 
 Derivative:
 
 ```math
-A'(x)=\frac P2-2x
+A'(x)=\frac P2-2x.
 ```
 
-set zero:
+Critical point:
 
 ```math
-x=\frac P4
+x=\frac P4.
 ```
 
-và `y=P/4`. Square maximizes area under fixed perimeter.
+Then
 
-Điểm quan trọng là derivative chỉ bước cuối; khó khăn thực là model constraint để objective trở thành function phù hợp.
+```math
+y=\frac P4.
+```
+
+Second derivative
+
+```math
+A''(x)=-2<0
+```
+
+confirms local maximum, và feasible interval cho thấy đây cũng là global maximum.
+
+Learning point: constraint reduced a two-variable problem thành one-variable objective.
+
+## Boundary matters
+
+Trong constrained domain, optimum có thể nằm ở boundary dù derivative không zero.
+
+Ví dụ maximize
+
+```math
+f(x)=x
+```
+
+trên `[0,1]`. Không có interior critical point; global maximum là `x=1`.
+
+Do đó practical optimization workflow là:
+
+```text
+identify domain
+→ find interior critical candidates
+→ include boundaries / nondifferentiable points
+→ compare objective values or use structural theorem.
+```
+
+## Local vs global optimum
+
+Derivative tests thường local. Một function nonconvex có nhiều local minima.
+
+Nếu function convex trên convex domain, local minimum trở thành global minimum. Đây là reason convexity quan trọng trong optimization: nó nâng local reasoning thành global guarantee.
+
+## Sensitivity và error propagation
+
+Local linearization:
+
+```math
+\Delta y\approx f'(x)\Delta x.
+```
+
+Nếu input uncertainty khoảng `\sigma_x`, first-order output uncertainty roughly scales với `|f'(x)|`.
+
+Trong multi-input systems, gradient/Jacobian thay derivative scalar.
+
+Điều này nối calculus với numerical conditioning và experimental uncertainty.
 
 ## Marginal quantities
 
-Trong economics, nếu cost `C(q)`, marginal cost:
+Nếu cost `C(q)` phụ thuộc production quantity:
 
 ```math
 C'(q)
 ```
 
-xấp xỉ extra cost khi production tăng một unit quanh current `q`. “Marginal” chính là local rate of change.
+là marginal cost: local cost increase per additional unit around current `q`.
 
-Trong software capacity, derivative-like sensitivity có thể đo latency thay đổi thế nào khi load tăng gần operating point, dù real systems thường discrete/noisy.
-
-## Newton's method
-
-Muốn solve `f(x)=0`, dùng tangent line tại current estimate `x_n`:
+Nếu revenue `R(q)`:
 
 ```math
-x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}
+R'(q)
 ```
 
-Derivation: tangent approximation
+là marginal revenue.
+
+Profit
 
 ```math
-0\approx f(x_n)+f'(x_n)(x_{n+1}-x_n)
+\Pi(q)=R(q)-C(q)
 ```
 
-solve cho next point.
-
-Method có thể converge rất nhanh gần good root, nhưng có thể fail với poor initial guess, small derivative hoặc structure phức tạp.
-
-## Error propagation
-
-Nếu `y=f(x)` và input uncertainty small `Δx`, local approximation:
+có derivative
 
 ```math
-\Delta y\approx f'(x)\Delta x
+\Pi'(q)=R'(q)-C'(q).
 ```
 
-nên derivative đo sensitivity/error amplification. Multivariable version dùng gradient/Jacobian.
-
-## Elasticity
-
-Dimensionless sensitivity:
+Interior optimum candidate thỏa
 
 ```math
-E=\frac{x}{f(x)}f'(x)
+R'(q)=C'(q).
 ```
 
-đo approximate percentage change output cho 1% input change. Economics dùng elasticity vì unit-independent comparison.
+Meaning: tăng thêm một unit không còn tạo marginal gain vượt marginal cost.
+
+Đây là economic interpretation của first-order condition.
+
+## Elasticity: sensitivity không phụ thuộc units
+
+Derivative absolute phụ thuộc unit scale. Elasticity dùng
+
+```math
+E(x)=\frac{x}{f(x)}f'(x).
+```
+
+để đo approximate percentage output change per 1% input change.
+
+Nếu demand `Q(p)` theo price `p`, price elasticity giúp compare sensitivity giữa products có scale khác nhau.
+
+## Newton's method: dùng tangent để tìm root
+
+Muốn solve
+
+```math
+f(x)=0,
+```
+
+linearize quanh current guess `x_n`:
+
+```math
+f(x)
+\approx
+f(x_n)+f'(x_n)(x-x_n).
+```
+
+Set approximation bằng zero:
+
+```math
+0=f(x_n)+f'(x_n)(x_{n+1}-x_n),
+```
+
+suy ra
+
+```math
+x_{n+1}
+=
+x_n-rac{f(x_n)}{f'(x_n)}.
+```
+
+Method nhanh gần a simple root nhưng không globally guaranteed. Small derivative, poor initial guess hoặc multiple roots có thể gây failure.
+
+## Worked Newton example
+
+Tìm `\sqrt2` bằng root của
+
+```math
+f(x)=x^2-2.
+```
+
+Then
+
+```math
+f'(x)=2x.
+```
+
+Newton update:
+
+```math
+x_{n+1}
+=
+\frac12\left(x_n+\frac2{x_n}\right).
+```
+
+Starting `x_0=1.5`:
+
+```math
+x_1\approx1.41667,
+```
+
+```math
+x_2\approx1.41422.
+```
+
+Fast convergence comes from local quadratic error reduction under suitable conditions.
+
+## Physics connection — equilibrium và stability
+
+Potential energy `U(x)` tạo force
+
+```math
+F(x)=-U'(x).
+```
+
+Equilibrium thỏa `U'(x)=0`. Nếu `U''(x)>0`, potential local minimum, thường stable equilibrium. Nếu `U''<0`, local maximum, thường unstable.
+
+Optimization language và physics stability share same curvature structure.
+
+## AI connection — gradient-based learning
+
+Training minimizes loss `L(\theta)`. In one dimension, derivative gives local descent direction. In many dimensions, gradient generalizes it.
+
+But a zero gradient does not guarantee good model: it may be local minimum, saddle point, flat region hoặc numerical plateau.
+
+Second-order curvature explains why same learning rate behaves differently across directions.
+
+## Finance connection — local Greeks
+
+Option Greeks là derivatives của price theo market variables. Delta là first derivative theo underlying; gamma là second derivative. They quantify local sensitivity, not exact finite move behavior for arbitrary price jumps.
+
+Again, derivative means local response, not global prediction.
+
+## Assumptions và failure modes
+
+Derivative-based optimization assumes enough smoothness. Nonsmooth objectives require subgradients hoặc other methods.
+
+Stationary point classification can fail if only low-order derivatives vanish. Constraints can invalidate unconstrained conclusions. Real-world objectives may be noisy, discrete hoặc nonstationary, so symbolic calculus may only approximate operational decision-making.
 
 ## Mental Model
 
-> Derivative biến graph thành bản đồ local behavior: sign nói hướng đi, magnitude nói độ nhạy, derivative thứ hai nói slope đang tự thay đổi thế nào. Optimization là tìm nơi cải thiện first-order không còn khả thi hoặc boundary chặn lại.
+> Derivative applications are about reading a local landscape. First derivative tells which way the terrain slopes; second derivative tells how the slope bends; constraints tell where movement is allowed. Optimization is not “set derivative to zero” but a structured search over feasible candidates using local geometry plus global assumptions.
 
 ## Common Misconceptions
 
-`f'(x)=0` không đủ để kết luận extremum. Local optimum không nhất thiết global. Newton method không guaranteed converge. Optimization luôn cần xét domain/boundary constraints, không chỉ solve derivative bằng zero.
+**“`f'=0` nghĩa optimum.”** Chỉ là candidate.
+
+**“Second derivative zero nghĩa inflection.”** Không; concavity phải thực sự change.
+
+**“Tìm interior critical points là đủ.”** Boundary và nondifferentiable points có thể chứa global optimum.
+
+**“Newton method luôn nhanh.”** Nó nhanh khi local assumptions tốt; otherwise có thể diverge hoặc converge tới root không mong muốn.
+
+**“Derivative sensitivity là causal effect.”** Nó là sensitivity trong model; causality cần assumptions/data khác.
