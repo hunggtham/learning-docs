@@ -32,4 +32,6 @@ jobs:
           git add -A
           git diff --cached --stat
           git commit -m 'Audit and deepen canonical Java knowledge library'
+          git fetch origin main
+          git rebase origin/main
           git push origin HEAD:main
