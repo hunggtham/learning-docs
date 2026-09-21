@@ -1,0 +1,19 @@
+{
+  "name": "정보처리기사 - Build textbook from GitHub",
+  "nodes": [
+    {
+      "parameters": {"rule": {"interval": [{"field": "hours", "hoursInterval": 1}]}},
+      "id": "schedule", "name": "Every hour", "type": "n8n-nodes-base.scheduleTrigger", "typeVersion": 1.2,
+      "position": [260, 300]
+    },
+    {
+      "parameters": {"method": "POST", "url": "={{ $env.TEXTBOOK_WORKER_URL + '/run' }}", "options": {"timeout": 28800000}},
+      "id": "worker", "name": "Generate textbook", "type": "n8n-nodes-base.httpRequest", "typeVersion": 4.2,
+      "position": [500, 300]
+    }
+  ],
+  "connections": {"Every hour": {"main": [[{"node": "Generate textbook", "type": "main", "index": 0}]]}},
+  "settings": {"executionOrder": "v1", "timezone": "Asia/Seoul"},
+  "active": false,
+  "versionId": "46cd64e1-3943-460f-8aba-a2a5ed4df3c1"
+}
