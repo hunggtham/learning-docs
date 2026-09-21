@@ -34,6 +34,15 @@
 
 # 0. Mastery Boundary
 
+# 0A. Modern Sass status — audit 2026-09
+
+Canonical notes này lấy **Dart Sass 1.104.1** làm implementation/reference hiện tại. LibSass và Ruby Sass không còn là target cho code mới. Modern Sass đang chủ động tiến gần CSS platform: Sass `@import` và global built-in functions đã deprecated từ 1.80.0; code mới dùng `@use`, `@forward` và built-in modules như `sass:math`, `sass:map`, `sass:color`. Legacy `if()` cũng đang trên lộ trình deprecation để tránh xung đột với CSS `if()` mới.
+
+Module graph là phần architecture cốt lõi. Mỗi `@use` load module một lần theo canonical URL, members được namespaced và private members không rò ra ngoài. `@forward` cho phép package tách implementation thành nhiều partial/module nhưng xuất một facade ổn định. Khi audit library, hãy phân biệt tool module không emit CSS, style module có side effect CSS và entry/facade module quyết định public surface/dependency order.
+
+Mọi abstraction Sass cuối cùng phải được đánh giá bằng generated CSS. Compile-time cleverness không được phép tạo selector explosion, duplicate declarations, specificity escalation hoặc bundle vượt budget. Sass mastery là biết khi nào compile-time abstraction có giá trị và khi nào native CSS/custom properties/container queries/cascade layers đã là công cụ phù hợp hơn.
+
+
 Để “master SCSS” cần phân biệt 3 layer:
 
 ```text

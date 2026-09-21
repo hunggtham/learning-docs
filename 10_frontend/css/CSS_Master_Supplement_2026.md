@@ -38,6 +38,15 @@
 
 # 0. V2 đã đủ đến đâu?
 
+# 0A. Master trace: từ selector matching đến rendering
+
+Ở mức master, CSS là một pipeline có dependency chứ không phải một bộ property. Browser xây DOM/CSSOM, match selector, áp cascade để tìm specified values, default/inherit những phần còn thiếu, tính computed/used values, tạo formatting tree và boxes, chạy layout algorithm, sau đó paint và composite. Một bug ở mỗi tầng có biểu hiện khác nhau: declaration bị crossed-out là cascade problem; computed value đúng nhưng geometry sai thường là sizing/layout problem; geometry đúng nhưng element bị che liên quan stacking/top layer/clip; frame chậm cần đo style/layout/paint/composite.
+
+Performance cũng nên được hiểu theo invalidation scope. Thay class ở ancestor có thể làm style recalculation cho descendants liên quan; font metrics có thể thay intrinsic size và kéo layout; geometry changes có thể reflow; shadow/filter lớn có thể tăng paint cost. `transform`/`opacity` thường phù hợp cho animation vì có thể tránh layout trong nhiều trường hợp, nhưng layer promotion không miễn phí. `contain` và `content-visibility` có thể giảm work khi subtree thật sự độc lập, đồng thời chúng cũng thay đổi layout/containment semantics nên không nên dùng như một “performance class” mặc định.
+
+Khi review CSS production, hãy trả lời được bốn câu: declaration nào thắng, box/formatting context nào được tạo, layout algorithm nào quyết định geometry, và thay đổi này invalidate phần nào của rendering pipeline. Khi bốn câu đó rõ, phần lớn CSS edge case trở thành behavior có thể dự đoán.
+
+
 ## V2 đã cover rất tốt
 
 ```text

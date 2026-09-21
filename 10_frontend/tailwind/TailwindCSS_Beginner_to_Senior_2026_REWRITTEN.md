@@ -3,7 +3,7 @@
 
 > Đây là bản viết lại hoàn toàn của tài liệu Tailwind trước. Tài liệu được viết cho người muốn **học để hiểu**, không phải người đã biết Tailwind và chỉ cần cheat sheet.
 >
-> Baseline của tài liệu là **Tailwind CSS v4.3**. Khi một nội dung liên quan trực tiếp đến CSS, tài liệu sẽ giải thích CSS cần thiết ngay tại chỗ thay vì yêu cầu bạn quay về tài liệu CSS khác.
+> Baseline của tài liệu là **Tailwind CSS v4.3** — vẫn là release Tailwind CSS mới nhất được Tailwind công bố tính đến audit 2026-09-21. Khi một nội dung liên quan trực tiếp đến CSS, tài liệu sẽ giải thích CSS cần thiết ngay tại chỗ thay vì yêu cầu bạn quay về tài liệu CSS khác.
 >
 > Cách đọc xuyên suốt tài liệu:
 >
@@ -23,6 +23,30 @@
 # PHẦN I — HIỂU TAILWIND TỪ GỐC
 
 ## 1. Tailwind CSS thực sự là gì?
+
+## 1A. Cách đọc Tailwind mà không cần nhớ CSS notes trước đó
+
+Tài liệu luôn liên hệ Tailwind với CSS nhưng không giả định bạn còn nhớ định nghĩa từ CSS library. Với mỗi utility, hãy hỏi bốn câu: utility generate property/mechanism CSS nào; property đó tác động lên chính element hay quan hệ parent/children; layout context nào phải tồn tại để property có ý nghĩa; và variant phía trước class biến selector hay thêm media/container condition nào.
+
+Ví dụ `items-center` không có nghĩa chung chung là “căn giữa”. Nó generate `align-items: center` và chỉ có behavior mong đợi khi element là Flex/Grid container. Trong `flex-row`, cross axis thường theo chiều block/dọc; trong `flex-col`, trục đổi. Vì vậy phải hiểu container algorithm + axis + generated CSS, không học `items-center = center`.
+
+`absolute` tương tự: utility generate `position: absolute`, đưa box ra khỏi normal flow và position theo containing block. `top-0` chỉ đặt inset sau khi containing block đã được xác định. Nếu containing block sai, thêm nhiều inset class không sửa root cause.
+
+Responsive utility cũng chỉ tạo conditional CSS. `md:grid-cols-2` đặt Grid utility trong viewport media condition; `@md:flex-row` dùng container query condition. Browser vẫn chạy Grid/Flexbox bình thường. `hover:*` biến interaction selector; `group-hover:*` tạo ancestor relationship; `peer-invalid:*` dựa sibling relationship.
+
+Trace debug canonical là:
+
+```text
+complete class candidate có tồn tại trong source?
+→ Tailwind có generate rule không?
+→ variant condition có active không?
+→ rule có thắng cascade không?
+→ generated CSS đang ở layout context nào?
+→ sizing / overflow / containing block / stacking có đúng không?
+```
+
+Hai bước đầu thường là Tailwind/build problem. Các bước sau là browser behavior, nhưng mỗi section trong file phải giải thích behavior đó tại chỗ. Đây là cách học utility-first mà không biến class names thành magic.
+
 
 Tailwind CSS là một framework CSS theo hướng **utility-first**. “Utility” ở đây có nghĩa là một class thường làm một nhiệm vụ tương đối nhỏ và rõ ràng. Ví dụ, `flex` bật Flexbox, `items-center` căn các flex item theo cross axis, `p-4` tạo padding, còn `rounded-xl` tạo bo góc. Thay vì đặt một class có tên theo component rồi viết toàn bộ CSS trong một file riêng, Tailwind khuyến khích bạn ghép các utility trực tiếp tại nơi bạn viết markup.
 

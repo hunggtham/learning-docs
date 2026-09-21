@@ -11,6 +11,15 @@
 
 ## 1. Tại sao cần một Master Supplement riêng?
 
+## 1A. Master diagnosis: utility → generated CSS → browser behavior
+
+Ở level master, một utility phải trace được theo hai chiều. Chiều xuôi bắt đầu từ class candidate, qua source scanner, variant/theme resolver, tới generated CSS rồi browser layout/rendering. Chiều ngược bắt đầu từ UI bug trong DevTools, truy computed style và layout context để tìm candidate/build rule gây behavior.
+
+Ví dụ `min-w-0` resolve thành `min-width: 0`; browser dùng value này khi tính minimum inline size của flex/grid item, cho phép item co nhỏ hơn intrinsic content width. Nếu ellipsis hoạt động sau khi thêm `min-w-0`, nguyên nhân là layout constraint thay đổi chứ không phải Tailwind có truncate magic. `md:hover:bg-brand` cũng phải tách thành breakpoint condition + hover selector + theme color token. Nếu rule không được generate, debug source/theme; nếu rule có nhưng inactive, debug conditions; nếu apply nhưng visual vẫn sai, debug cascade/blending/browser CSS.
+
+Version baseline vẫn là **Tailwind CSS v4.3** tại audit 2026-09-21. Khi migrate v3/early-v4, hãy xem đây là architecture change: JS config-first → CSS-first `@theme`; `content` globs → automatic detection/`@source`; simple custom plugin utility → `@utility`; repeated selector state → `@custom-variant` khi phù hợp. Migration cần diff generated CSS, browser baseline và visual regression, không chỉ search/replace syntax.
+
+
 Khi mới học Tailwind, vấn đề thường là “class nào tạo padding?”, “làm responsive thế nào?”, “dark mode viết ra sao?”. Khi đã làm production vài tháng, câu hỏi thay đổi. Bạn bắt đầu gặp những case như: class có trong JSX nhưng CSS không được generate; cùng một component hoạt động trong app A nhưng fail khi được publish thành package; một arbitrary value nhìn đúng nhưng IntelliSense không hiểu vì namespace ambiguous; `px-2` và `px-4` cùng xuất hiện nhưng class viết sau trong `className` không thắng; một stylesheet dùng `@apply` trong Vue scoped style không nhận custom theme; hoặc một microfrontend import Tailwind làm hỏng reset của host page.
 
 Những vấn đề đó không còn là “học thêm utility”. Chúng nằm ở ranh giới giữa source code, build pipeline, generated CSS và browser. Vì vậy ở cấp độ master, mental model phải mở rộng thành:

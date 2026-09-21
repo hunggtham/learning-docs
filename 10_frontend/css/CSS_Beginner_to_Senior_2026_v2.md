@@ -107,6 +107,55 @@ Mục tiêu là học được **cách senior ghép các property thành hệ th
 
 # 0. Bản đồ học CSS
 
+# 0A. Mental model xuyên suốt: từ declaration tới pixel trên màn hình
+
+CSS dễ bị học thành một danh sách property rời rạc, nhưng browser không xử lý CSS theo cách đó. Khi HTML và stylesheet được load, browser trước tiên phải xác định selector nào match element. Sau đó cascade chọn declaration thắng cho từng property. Chỉ sau khi cascade/defaulting hoàn tất, inheritance mới cung cấp value cho những property có cơ chế thừa hưởng. Browser tiếp tục tạo box, xác định normal flow và formatting context, resolve containing block, intrinsic/available size và positioning, chạy layout algorithm như Flexbox/Grid, rồi mới paint và composite.
+
+Trục học canonical của CSS vì vậy là:
+
+```text
+selector matching
+→ cascade
+→ specificity / scope proximity / source order
+→ inheritance + initial/defaulting
+→ box model + sizing
+→ normal flow
+→ formatting context
+→ positioning + containing block
+→ Flexbox / Grid / other layout algorithms
+→ responsive conditions
+→ paint / composite / performance
+```
+
+Khi CSS “không chạy”, hãy truy theo đúng trục này thay vì đổi property ngẫu nhiên. Ví dụ `.card { width: 100% }` có thể không cho kết quả mong muốn vì selector không match, rule ở layer khác thắng, percentage resolve theo containing block khác, flex item bị automatic minimum size chặn co, hoặc parent tạo overflow/formatting context khác với assumption. Thêm `!important` chỉ giải quyết một nhánh rất nhỏ của cây nguyên nhân.
+
+## Cascade trước, specificity sau
+
+Specificity không phải luật đầu tiên của CSS. Cascade trước tiên xét relevance, origin/importance và cascade layer. Specificity chỉ được so giữa những declaration vẫn còn cạnh tranh trong cùng context precedence. Nếu specificity bằng nhau, `@scope` có thể đưa scoping proximity vào quyết định; source order là tie-breaker cuối. Vì thế architecture với `@layer`, selector nhẹ và component boundary thường bền hơn specificity war.
+
+## Inheritance không phải “specificity của parent truyền xuống con”
+
+Một `color` trên parent thường truyền xuống child vì `color` là inherited property; `padding` thì không. Nếu child có rule trực tiếp target nó, direct value thắng inherited value bất kể selector của parent mạnh đến đâu. Khi debug typography, custom property hoặc theme, hãy luôn phân biệt declaration thắng trên chính element với value inherited từ ancestor.
+
+## Box model phải được đặt trong formatting context
+
+`content`, `padding`, `border`, `margin` chỉ mô tả box. Cách box được đặt phụ thuộc formatting context. Block formatting context có rules về block flow, floats và margin interaction; inline formatting context tạo line boxes và baseline; Flexbox/Grid chạy sizing/placement algorithm riêng. Đây là lý do cùng `width`, `margin:auto` hay alignment property có thể hành xử khác ở các context khác nhau.
+
+## Normal flow là baseline của positioning
+
+Trước `absolute`, `fixed`, `sticky`, cần hiểu normal flow. `position: relative` vẫn giữ slot trong flow rồi offset visual box. `absolute` rời normal flow và tìm containing block. `fixed` thường liên hệ viewport/top-level containing context. `sticky` vẫn tham gia flow nhưng bị ràng buộc bởi scroll container, inset và scroll range. Khi positioning sai, câu hỏi đúng là “containing block/scroll container là ai?” trước khi hỏi “top bao nhiêu px?”.
+
+## Responsive chỉ đổi điều kiện; layout engine vẫn là CSS layout
+
+Media query bật/tắt declarations theo viewport, input capability, motion preference hoặc color scheme. Container query làm điều tương tự nhưng query container thay vì viewport. Bên trong điều kiện đó, layout vẫn do normal flow, Flexbox, Grid và sizing algorithms thực thi. Responsive tốt thường bắt đầu bằng fluid/intrinsic constraints, rồi breakpoint chỉ xuất hiện ở nơi behavior thực sự cần đổi.
+
+## Rendering/performance là phần cuối của cùng mental model
+
+Sau layout, browser paint text, background, border, shadow/effects rồi composite. Thay đổi geometry như `width` hoặc font metrics có thể kéo theo style/layout/paint; `transform` và `opacity` thường thuận lợi hơn cho compositor animation nhưng không miễn phí. Blur/backdrop-filter lớn, quá nhiều compositing layers hoặc `will-change` bừa bãi có thể tăng memory/render cost. Performance phải được đo theo rendering pipeline, không tối ưu bằng mẹo truyền miệng.
+
+Khi debug production, trace chuẩn là: selector match → declaration valid → cascade/layer/specificity → computed value → inheritance/defaulting → formatting context/containing block → intrinsic/min/max/overflow → stacking/paint/composite. Đây là xương sống nối mọi chapter còn lại.
+
+
 ## Thứ tự ưu tiên
 
 1. **Syntax → Selector → Cascade → Specificity → Inheritance**

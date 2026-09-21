@@ -9,8 +9,8 @@
 > CSS_Master_Supplement_2026.md
 > ```
 >
-> Baseline:
-> - Dùng **Dart Sass**.
+> Baseline (audit 2026-09):
+> - Dùng **Dart Sass 1.104.1** làm mốc tài liệu hiện tại.
 > - Ưu tiên **`@use` / `@forward`**.
 > - Không xây code mới dựa trên Sass `@import`.
 > - Ưu tiên built-in modules: `sass:math`, `sass:color`, `sass:list`, `sass:map`, `sass:string`, `sass:selector`, `sass:meta`.
@@ -27,6 +27,34 @@
 ---
 
 # 0. SCSS thực sự là gì?
+
+# 0A. Mental model xuyên suốt: SCSS là chương trình chạy trước CSS
+
+SCSS phải được học như một compile-time language dùng để author/generate CSS. `$variables`, maps, loops, mixins, functions và module graph được Dart Sass xử lý trước khi browser nhìn thấy trang. Kết quả cuối cùng chỉ là CSS. Vì vậy Sass variable không cascade, không inherit và không thay đổi runtime; CSS custom property thì có thể tham gia cascade, inheritance và runtime overrides.
+
+Trục học canonical của SCSS là:
+
+```text
+Sass values / variables
+→ nesting + selector generation
+→ mixins / functions như compile-time abstraction
+→ lists / maps / control flow để generate CSS
+→ @use / @forward tạo module graph
+→ partials + entry points tổ chức source
+→ @extend như selector unification, không phải OOP inheritance
+→ architecture + public API
+→ compiler deprecations / migration
+→ CSS output quality + compile performance
+```
+
+Khi đọc SCSS, luôn hỏi compiler sẽ emit CSS gì, bao nhiêu rule, selector nào và ở vị trí nào. Mixin include nhiều lần có thể duplicate declarations. Loop có thể tạo hàng nghìn rules. Nesting sâu có thể sinh selector specificity cao và coupling với DOM. Source ngắn hơn không đồng nghĩa output tốt hơn.
+
+Variables phù hợp với compile-time calculation/generation. CSS custom properties phù hợp với runtime theme, cascade-based component contracts và values cần override trong DevTools/runtime. Mixins nên mô tả declaration set hoặc content wrapper có parameterization rõ. Functions nên trả value và tránh side effect. Maps hữu ích khi thực sự biểu diễn structured configuration; map lồng sâu chỉ để “gom mọi thứ” thường biến API thành khó dùng.
+
+Modern module system là `@use` và `@forward`. `@use` tạo namespace, scope members trong file dùng và load module một lần. `@forward` tạo facade/public surface. Partials chỉ là tổ chức source; chúng không tự tạo module architecture nếu code vẫn nối bằng legacy `@import`. Sass `@import` và global built-ins đã deprecated từ Dart Sass 1.80.0 nên code mới không nên xây trên global namespace cũ.
+
+`@extend` cũng không phải inheritance kiểu Java. Sass thực hiện selector unification để các selector mở rộng cùng nhận rules, vì thế output có thể xuất hiện xa nơi gọi và khó dự đoán. Placeholder `%foo` có use case, nhưng mixin, utility/composition hoặc CSS architecture thường explicit hơn. SCSS tốt phải làm CSS output dễ hiểu hơn, không che CSS đi.
+
 
 Sass là stylesheet language compile thành CSS.
 
