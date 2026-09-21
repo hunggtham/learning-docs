@@ -1,19 +1,18 @@
 # HTML — Beginner → Senior
 ## Tài liệu học HTML từ số 0 đến mức có thể thiết kế và review markup production
 
-Tài liệu này được viết cho người học HTML từ đầu, không giả định bạn đã có kiến thức frontend trước đó. Mục tiêu không phải là giúp bạn nhớ thật nhiều tag, mà là xây một mental model đủ chắc để bạn hiểu trình duyệt (browser) đang làm gì với HTML, vì sao HTML ngữ nghĩa (semantic HTML) quan trọng, khi nào nên dùng một element thay vì `div`, form thực sự submit dữ liệu như thế nào, vì sao khả năng tiếp cận (accessibility) và SEO liên quan trực tiếp tới markup, và HTML ảnh hưởng bảo mật (security)/hiệu năng (performance) ra sao.
+Tài liệu này được viết cho người học HTML từ đầu, không giả định bạn đã có kiến thức frontend trước đó. Mục tiêu không phải là giúp bạn nhớ thật nhiều tag, mà là xây một mental model đủ chắc để bạn hiểu trình duyệt đang làm gì với HTML, vì sao HTML ngữ nghĩa quan trọng, khi nào nên dùng một element thay vì `div`, form thực sự submit dữ liệu như thế nào, vì sao khả năng tiếp cận và SEO liên quan trực tiếp tới markup, và HTML ảnh hưởng bảo mật/hiệu năng ra sao.
 
-Nếu đọc tuần tự từ đầu đến cuối, bạn phải có thể đi từ việc viết một trang HTML cơ bản tới việc review markup ở mức senior: hiểu document structure, các phần tử mang ngữ nghĩa (semantic elements), links, images, tables, forms, khả năng tiếp cận (accessibility), script quá trình tải (loading), siêu dữ liệu (metadata), responsive images, iframe, native interactive elements và những lỗi production phổ biến.
+Nếu đọc tuần tự từ đầu đến cuối, bạn phải có thể đi từ việc viết một trang HTML cơ bản tới việc review markup ở mức senior: hiểu cấu trúc tài liệu, các phần tử mang ngữ nghĩa, links, images, tables, forms, khả năng tiếp cận, quá trình tải script, siêu dữ liệu, ảnh đáp ứng, iframe, các phần tử tương tác gốc của trình duyệt và những lỗi production phổ biến.
 
 
 ## Quy ước thuật ngữ trong tài liệu
 
-Tài liệu ưu tiên giải thích bằng tiếng Việt tự nhiên và giữ thuật ngữ tiếng Anh khi đó là tên chuẩn cần đối chiếu. Một số khái niệm được dùng thống nhất như sau: **phân tích cú pháp (parsing)** là quá trình trình duyệt hoặc bộ phân tích đọc mã nguồn để tạo cấu trúc dữ liệu; **ngữ nghĩa (semantics)** là ý nghĩa mà phần tử truyền cho trình duyệt và công nghệ hỗ trợ; **cây trợ năng (accessibility tree)** là cấu trúc mà công nghệ hỗ trợ sử dụng để hiểu giao diện; **kiểm tra ràng buộc của biểu mẫu (constraint validation)** là cơ chế kiểm tra hợp lệ gốc của HTML; **mô hình nội dung (content model)** quy định phần tử nào được phép chứa phần tử nào; **trạng thái hiện thời (live state)** là giá trị hiện tại trên đối tượng DOM, có thể khác giá trị ban đầu trong mã HTML; **lớp trên cùng (top layer)** là lớp đặc biệt do trình duyệt quản lý cho `dialog`, popover và một số giao diện nổi. Các tên chuẩn như DOM, ARIA, CORS, CSP, Shadow DOM, Web Components, `iframe`, tag, attribute hoặc tên API cụ thể được giữ nguyên khi dịch sẽ làm mất nghĩa hoặc gây khó tra cứu.
-
+Tài liệu dùng tiếng Việt tự nhiên làm ngôn ngữ giải thích chính và giữ thuật ngữ gốc ở lần định nghĩa để tiện tra cứu. Các cách gọi được dùng thống nhất gồm: **trình duyệt (browser)**, **phân tích cú pháp (parsing)**, **bộ phân tích cú pháp (parser)**, **HTML ngữ nghĩa (semantic HTML)**, **ngữ nghĩa (semantics)**, **khả năng tiếp cận (accessibility)**, **cây trợ năng (accessibility tree)**, **tên trợ năng (accessible name)**, **siêu dữ liệu (metadata)**, **kiểm tra ràng buộc của biểu mẫu (constraint validation)**, **mô hình nội dung (content model)**, **thuộc tính DOM (DOM property)**, **trạng thái hiện thời (live state)**, **lớp trên cùng (top layer)**, **hiệu năng (performance)** và **bảo mật (security)**. Sau khi đã định nghĩa ở đây, phần nội dung bên dưới ưu tiên dùng cách gọi tiếng Việt để câu văn không bị nặng. Các tên chuẩn như DOM, ARIA, CORS, CSP, Shadow DOM, Web Components, `iframe`, tên tag, attribute và API cụ thể được giữ nguyên nếu dịch sẽ làm mất nghĩa hoặc gây khó đối chiếu tài liệu kỹ thuật.
 
 ---
 
-# PHẦN 1 — HTML LÀ GÌ VÀ BROWSER HIỂU NÓ THẾ NÀO?
+# PHẦN 1 — HTML LÀ GÌ VÀ TRÌNH DUYỆT (BROWSER) HIỂU NÓ THẾ NÀO?
 
 ## 1. HTML không phải ngôn ngữ lập trình
 
@@ -37,7 +36,7 @@ HTML không chứa logic theo nghĩa như Java hoặc JavaScript. Nó không có
 đây là button
 ```
 
-Trình duyệt (browser) parse HTML thành DOM. CSS sử dụng DOM/element structure để presentation, còn JavaScript tương tác với DOM để thêm behavior.
+Trình duyệt parse HTML thành DOM. CSS sử dụng DOM/element structure để presentation, còn JavaScript tương tác với DOM để thêm behavior.
 
 Mental model đơn giản:
 
@@ -47,7 +46,7 @@ CSS  → presentation
 JS   → behavior
 ```
 
-Trong project hiện đại, ba layer có thể được viết thông qua framework như React hoặc Vue, nhưng trình duyệt (browser) cuối cùng vẫn phải nhận được DOM tương ứng với HTML ngữ nghĩa (semantics).
+Trong project hiện đại, ba layer có thể được viết thông qua framework như React hoặc Vue, nhưng trình duyệt cuối cùng vẫn phải nhận được DOM tương ứng với HTML ngữ nghĩa.
 
 ---
 
@@ -59,11 +58,11 @@ Một HTML document hiện đại nên bắt đầu:
 <!doctype html>
 ```
 
-DOCTYPE nói với trình duyệt (browser) rằng document phải được render theo standards mode hiện đại.
+DOCTYPE nói với trình duyệt rằng document phải được render theo standards mode hiện đại.
 
 Nó không phải một HTML element và cũng không phải closing-tag syntax.
 
-Nếu thiếu doctype, trình duyệt (browser) có thể rơi vào **quirks mode**, nơi một số layout/CSS behaviors mô phỏng web rất cũ để tương thích với hệ thống cũ (legacy) pages.
+Nếu thiếu doctype, trình duyệt có thể rơi vào **quirks mode**, nơi một số layout/CSS behaviors mô phỏng web rất cũ để tương thích với hệ thống cũ pages.
 
 Vì vậy production HTML gần như luôn có:
 
@@ -100,7 +99,7 @@ Một document chuẩn thường có dạng:
 
 Bạn nên hiểu từng layer thay vì chỉ copy skeleton.
 
-`html` là document element. `head` chứa siêu dữ liệu (metadata) và resources liên quan document. `body` chứa nội dung chính được render/interact.
+`html` là document element. `head` chứa siêu dữ liệu và resources liên quan document. `body` chứa nội dung chính được render/interact.
 
 ---
 
@@ -134,7 +133,7 @@ Nếu tiếng Anh:
 <html lang="en">
 ```
 
-`lang` không chỉ dành cho search engines. Screen reader có thể dùng nó để chọn pronunciation rules. Trình duyệt (browser) translation, spell checking và khả năng tiếp cận (accessibility) tools cũng dựa vào language siêu dữ liệu (metadata).
+`lang` không chỉ dành cho search engines. Screen reader có thể dùng nó để chọn pronunciation rules. Trình duyệt translation, spell checking và khả năng tiếp cận tools cũng dựa vào language siêu dữ liệu.
 
 Nếu chỉ một đoạn dùng ngôn ngữ khác, khai báo ở subtree:
 
@@ -174,7 +173,7 @@ Semantic direction nên được biểu diễn bằng `dir` khi nó thuộc nộ
 
 ## 6. `<head>`
 
-`head` chứa siêu dữ liệu (metadata) và resources, không phải phần content chính mà user đọc.
+`head` chứa siêu dữ liệu và resources, không phải phần content chính mà user đọc.
 
 Ví dụ:
 
@@ -192,9 +191,9 @@ Ví dụ:
 </head>
 ```
 
-Trình duyệt (browser) có thể discover CSS, scripts, icons, siêu dữ liệu (metadata) và preload hints trong `head`.
+Trình duyệt có thể discover CSS, scripts, icons, siêu dữ liệu và preload hints trong `head`.
 
-Source order trong `head` cũng có thể ảnh hưởng hiệu năng (performance) vì trình duyệt (browser) discover resources theo thứ tự parse.
+Source order trong `head` cũng có thể ảnh hưởng hiệu năng vì trình duyệt discover resources theo thứ tự parse.
 
 ---
 
@@ -208,13 +207,13 @@ Khai báo encoding:
 
 UTF‑8 là encoding phù hợp gần như mọi web application hiện đại.
 
-Đặt declaration sớm trong `head` để trình duyệt (browser) biết cách decode bytes đúng trước khi parse content.
+Đặt declaration sớm trong `head` để trình duyệt biết cách decode bytes đúng trước khi parse content.
 
 Nếu encoding bị hiểu sai, tiếng Việt/Hàn/Nhật có thể trở thành mojibake.
 
 ---
 
-## 8. Viewport siêu dữ liệu (metadata)
+## 8. Viewport siêu dữ liệu
 
 Mobile responsive page thường dùng:
 
@@ -224,7 +223,7 @@ Mobile responsive page thường dùng:
   content="width=device-width, initial-scale=1">
 ```
 
-Nếu thiếu viewport siêu dữ liệu (metadata), mobile trình duyệt (browser) có thể giả định một desktop-like layout viewport rồi scale page xuống. Khi đó CSS media queries và layout có thể không hoạt động như bạn mong đợi.
+Nếu thiếu viewport siêu dữ liệu, mobile trình duyệt có thể giả định một desktop-like layout viewport rồi scale page xuống. Khi đó CSS media queries và layout có thể không hoạt động như bạn mong đợi.
 
 Không nên disable user zoom bừa bằng:
 
@@ -233,7 +232,7 @@ user-scalable=no
 maximum-scale=1
 ```
 
-vì zoom là khả năng tiếp cận (accessibility) capability quan trọng.
+vì zoom là khả năng tiếp cận capability quan trọng.
 
 ---
 
@@ -245,7 +244,7 @@ vì zoom là khả năng tiếp cận (accessibility) capability quan trọng.
 <title>Order #1234 – Admin Portal</title>
 ```
 
-Nó xuất hiện ở trình duyệt (browser) tab, bookmark/history và có thể được search engine dùng làm result title.
+Nó xuất hiện ở trình duyệt tab, bookmark/history và có thể được search engine dùng làm result title.
 
 Một page production nên có title cụ thể và khác nhau giữa các page quan trọng.
 
@@ -322,7 +321,7 @@ Preload:
   as="image">
 ```
 
-Ở level beginner, chỉ cần hiểu `rel` mô tả relationship và `href` chỉ resource. Ở level senior, cần biết preload/preconnect có thể giúp hoặc làm hại hiệu năng (performance) nếu sử dụng bừa.
+Ở level beginner, chỉ cần hiểu `rel` mô tả relationship và `href` chỉ resource. Ở level senior, cần biết preload/preconnect có thể giúp hoặc làm hại hiệu năng nếu sử dụng bừa.
 
 ---
 
@@ -362,11 +361,11 @@ Khi debug một page có relative URLs kỳ lạ, hãy nhớ kiểm tra `<base>`
 </body>
 ```
 
-Trình duyệt (browser) parse body markup thành DOM. JavaScript framework có thể mutate DOM sau đó, nhưng ngữ nghĩa (semantics) cuối vẫn dựa trên elements thực tế.
+Trình duyệt parse body markup thành DOM. JavaScript framework có thể mutate DOM sau đó, nhưng ngữ nghĩa cuối vẫn dựa trên elements thực tế.
 
 ---
 
-## 14. Vì sao HTML ngữ nghĩa (semantic HTML) quan trọng?
+## 14. Vì sao HTML ngữ nghĩa quan trọng?
 
 Bạn có thể xây gần như mọi giao diện bằng:
 
@@ -382,7 +381,7 @@ Nhưng markup:
 <div class="nav">
 ```
 
-không nói với trình duyệt (browser)/cây trợ năng (khả năng tiếp cận (accessibility) tree) rằng đây là navigation.
+không nói với trình duyệt/cây trợ năng rằng đây là navigation.
 
 Markup:
 
@@ -392,9 +391,9 @@ Markup:
 
 có semantic rõ.
 
-Semantic HTML giúp các trình đọc màn hình (screen readers), người dùng bàn phím, search engines và chính developer hiểu document structure.
+Semantic HTML giúp các trình đọc màn hình, người dùng bàn phím, search engines và chính developer hiểu cấu trúc tài liệu.
 
-Senior HTML không có nghĩa “không bao giờ dùng div”. Nó nghĩa là dùng phần tử mang ngữ nghĩa (semantic element) khi ngữ nghĩa (semantics) phù hợp và dùng `div` khi chỉ cần generic grouping/layout.
+Senior HTML không có nghĩa “không bao giờ dùng div”. Nó nghĩa là dùng phần tử mang ngữ nghĩa khi ngữ nghĩa phù hợp và dùng `div` khi chỉ cần generic grouping/layout.
 
 ---
 
@@ -436,7 +435,7 @@ Một page có thể có nhiều `header` nếu chúng thuộc các sections/art
 </main>
 ```
 
-Nó tạo landmark hữu ích cho công nghệ hỗ trợ. User dùng trình đọc màn hình (screen reader) có thể nhảy nhanh tới main content mà không phải tab/nghe toàn navigation.
+Nó tạo landmark hữu ích cho công nghệ hỗ trợ. User dùng trình đọc màn hình có thể nhảy nhanh tới main content mà không phải tab/nghe toàn navigation.
 
 Thông thường chỉ nên có một main đang active/visible cho document.
 
@@ -543,7 +542,7 @@ Mental test: nếu copy phần này ra khỏi page, nó vẫn có ý nghĩa đ�
 </aside>
 ```
 
-Không dùng `aside` chỉ vì CSS đặt nó bên phải. Vị trí visual không quyết định ngữ nghĩa (semantics).
+Không dùng `aside` chỉ vì CSS đặt nó bên phải. Vị trí visual không quyết định ngữ nghĩa.
 
 ---
 
@@ -580,7 +579,7 @@ Heading biểu diễn hierarchy.
 
 Đừng chọn heading theo font size. Nếu muốn text lớn hơn, dùng CSS.
 
-Heading hierarchy giúp user scan page, trình đọc màn hình (screen reader) navigation và search engine hiểu structure.
+Heading hierarchy giúp user scan page, trình đọc màn hình navigation và search engine hiểu structure.
 
 Một senior review sẽ kiểm tra “heading có mô tả hierarchy nội dung đúng không?” chứ không chỉ “có h1 chưa?”.
 
@@ -598,7 +597,7 @@ Paragraph:
 
 `p` dành cho paragraph text, không phải generic container.
 
-Không nên đặt block structures không phù hợp bên trong `p`; trình duyệt (browser) bộ phân tích cú pháp (parser) có thể tự đóng `p`, khiến DOM khác source bạn tưởng. Phần Master sẽ giải thích bộ phân tích cú pháp (parser) behavior này kỹ hơn.
+Không nên đặt block structures không phù hợp bên trong `p`; trình duyệt bộ phân tích cú pháp có thể tự đóng `p`, khiến DOM khác source bạn tưởng. Phần Master sẽ giải thích bộ phân tích cú pháp behavior này kỹ hơn.
 
 ---
 
@@ -614,9 +613,9 @@ Không nên đặt block structures không phù hợp bên trong `p`; trình duy
 
 Nó không mang semantic riêng.
 
-Dùng `div` khi bạn chỉ cần grouping/layout hoặc khi không có phần tử mang ngữ nghĩa (semantic element) phù hợp.
+Dùng `div` khi bạn chỉ cần grouping/layout hoặc khi không có phần tử mang ngữ nghĩa phù hợp.
 
-Một senior không tránh `div`; senior tránh **div soup khi native ngữ nghĩa (semantics) đã tồn tại**.
+Một senior không tránh `div`; senior tránh **div soup khi ngữ nghĩa gốc của phần tử đã tồn tại**.
 
 ---
 
@@ -631,9 +630,9 @@ Một senior không tránh `div`; senior tránh **div soup khi native ngữ ngh�
 </p>
 ```
 
-Nó không mang ngữ nghĩa (semantics) riêng.
+Nó không mang ngữ nghĩa riêng.
 
-Dùng để style hoặc attach behavior/data cho một đoạn inline khi không có phần tử mang ngữ nghĩa (semantic element) thích hợp.
+Dùng để style hoặc attach behavior/data cho một đoạn inline khi không có phần tử mang ngữ nghĩa thích hợp.
 
 ---
 
@@ -670,7 +669,7 @@ Không dùng:
 <section>Topic B</section>
 ```
 
-Trình duyệt (browser) thường render một đường ngang, nhưng semantic chính không phải “vẽ line”.
+Trình duyệt thường render một đường ngang, nhưng semantic chính không phải “vẽ line”.
 
 ---
 
@@ -684,7 +683,7 @@ Trình duyệt (browser) thường render một đường ngang, nhưng semantic
 <strong>Do not share your password.</strong>
 ```
 
-`b` chủ yếu thu hút attention mà không nói nội dung quan trọng hơn về ngữ nghĩa (semantics):
+`b` chủ yếu thu hút attention mà không nói nội dung quan trọng hơn về ngữ nghĩa:
 
 ```html
 <b>Keyword:</b> HTML
@@ -710,7 +709,7 @@ I <em>really</em> need this.
 <i lang="la">Homo sapiens</i>
 ```
 
-Trình duyệt (browser) thường italic cả hai, nhưng ngữ nghĩa (semantics) khác.
+Trình duyệt thường italic cả hai, nhưng ngữ nghĩa khác.
 
 ---
 
@@ -754,7 +753,7 @@ Không nên dùng chỉ vì muốn font-size nhỏ.
 <ins>$70</ins>
 ```
 
-Có thể thêm siêu dữ liệu (metadata) như `datetime`.
+Có thể thêm siêu dữ liệu như `datetime`.
 
 Nếu đang hiển thị old price, `s` thường hợp hơn `del`, vì bạn không nhất thiết đang mô tả document edit.
 
@@ -794,7 +793,7 @@ Press <kbd>Ctrl</kbd> + <kbd>C</kbd>.
 <var>x</var> + <var>y</var>
 ```
 
-Những tags này giúp technical documentation có ngữ nghĩa (semantics) rõ hơn.
+Những tags này giúp technical documentation có ngữ nghĩa rõ hơn.
 
 ---
 
@@ -828,7 +827,7 @@ Inline quote:
 <p>He said <q>Hello</q>.</p>
 ```
 
-`blockquote[cite]` có thể chứa source URI siêu dữ liệu (metadata), nhưng trình duyệt (browser) không tự hiển thị citation cho user.
+`blockquote[cite]` có thể chứa source URI siêu dữ liệu, nhưng trình duyệt không tự hiển thị citation cho user.
 
 ---
 
@@ -854,7 +853,7 @@ Không phải generic “nguồn URL” tag.
 
 `datetime` cung cấp machine-readable representation.
 
-Date/time ngữ nghĩa (semantics) hữu ích với structured content, parsers và machine processing.
+Date/time ngữ nghĩa hữu ích với structured content, parsers và machine processing.
 
 ---
 
@@ -882,7 +881,7 @@ H<sub>2</sub>O
 x<sup>2</sup>
 ```
 
-Dùng cho subscript/superscript ngữ nghĩa (semantics), không chỉ visual positioning.
+Dùng cho subscript/superscript ngữ nghĩa, không chỉ visual positioning.
 
 ---
 
@@ -917,7 +916,7 @@ East Asian pronunciation annotations:
 </ruby>
 ```
 
-`rt` chứa annotation/pronunciation. `rp` hỗ trợ phương án dự phòng (fallback) presentation cho old environments.
+`rt` chứa annotation/pronunciation. `rp` hỗ trợ phương án dự phòng presentation cho old environments.
 
 ---
 
@@ -962,7 +961,7 @@ Dùng `ol` khi order mang meaning, `ul` khi order không quan trọng.
 </dl>
 ```
 
-`dl` rất phù hợp với glossary, siêu dữ liệu (metadata) hoặc term-description pairs.
+`dl` rất phù hợp với glossary, siêu dữ liệu hoặc term-description pairs.
 
 ---
 
@@ -1000,13 +999,13 @@ Ví dụ:
 
 ## 46. Link và button khác nhau ở bản chất
 
-Nếu tương tác (interaction) thay đổi URL/location hoặc navigate tới resource khác, dùng link:
+Nếu tương tác thay đổi URL/location hoặc navigate tới resource khác, dùng link:
 
 ```html
 <a href="/profile">Profile</a>
 ```
 
-Nếu tương tác (interaction) thực hiện action trong current application state, dùng button:
+Nếu tương tác thực hiện action trong current application state, dùng button:
 
 ```html
 <button type="button">
@@ -1014,9 +1013,9 @@ Nếu tương tác (interaction) thực hiện action trong current application 
 </button>
 ```
 
-Đây là một trong những rules quan trọng nhất của HTML ngữ nghĩa (semantic HTML).
+Đây là một trong những rules quan trọng nhất của HTML ngữ nghĩa.
 
-Không dùng `<a href="#">` để fake button nếu không có navigation ngữ nghĩa (semantics).
+Không dùng `<a href="#">` để fake button nếu không có navigation ngữ nghĩa.
 
 ---
 
@@ -1032,9 +1031,9 @@ Không dùng `<a href="#">` để fake button nếu không có navigation ngữ 
 
 Mở browsing context mới.
 
-Khi dùng external links, `rel` có thể cần tùy bảo mật (security)/privacy/relationship requirements.
+Khi dùng external links, `rel` có thể cần tùy bảo mật/privacy/relationship requirements.
 
-Modern browsers có behaviors bảo vệ opener tốt hơn trước, nhưng hiểu `noopener`/`noreferrer` vẫn quan trọng khi review hệ thống cũ (legacy) hoặc explicit policies.
+Modern browsers có behaviors bảo vệ opener tốt hơn trước, nhưng hiểu `noopener`/`noreferrer` vẫn quan trọng khi review hệ thống cũ hoặc explicit policies.
 
 ---
 
@@ -1060,7 +1059,7 @@ author
 license
 ```
 
-SEO relation tokens không phải bảo mật (security) controls.
+SEO relation tokens không phải bảo mật controls.
 
 ---
 
@@ -1074,9 +1073,9 @@ SEO relation tokens không phải bảo mật (security) controls.
 </a>
 ```
 
-Nó là trình duyệt (browser) hint cho download behavior trong applicable cases.
+Nó là trình duyệt hint cho download behavior trong applicable cases.
 
-Đừng dùng nó như access-control/bảo mật (security) mechanism.
+Đừng dùng nó như access-control/bảo mật mechanism.
 
 ---
 
@@ -1114,7 +1113,7 @@ Decorative image:
   alt="">
 ```
 
-`alt=""` không có nghĩa “quên alt”; nó cố ý nói image decorative và không cần trình đọc màn hình (screen reader) announce.
+`alt=""` không có nghĩa “quên alt”; nó cố ý nói image decorative và không cần trình đọc màn hình announce.
 
 Alt tốt mô tả **purpose trong context**, không phải liệt kê mọi pixel.
 
@@ -1130,7 +1129,7 @@ Alt tốt mô tả **purpose trong context**, không phải liệt kê mọi pix
   alt="...">
 ```
 
-Attributes này giúp trình duyệt (browser) biết intrinsic aspect ratio và reserve layout space trước khi image load.
+Attributes này giúp trình duyệt biết intrinsic aspect ratio và reserve layout space trước khi image load.
 
 Điều đó giúp giảm layout shift.
 
@@ -1154,9 +1153,9 @@ img {
   alt="...">
 ```
 
-Lazy quá trình tải (loading) phù hợp với images ngoài viewport.
+Lazy quá trình tải phù hợp với images ngoài viewport.
 
-Không nên lazy-load hero/LCP image một cách máy móc vì trình duyệt (browser) có thể discover/fetch nó muộn hơn.
+Không nên lazy-load hero/LCP image một cách máy móc vì trình duyệt có thể discover/fetch nó muộn hơn.
 
 ---
 
@@ -1172,7 +1171,7 @@ Không nên lazy-load hero/LCP image một cách máy móc vì trình duyệt (b
   alt="...">
 ```
 
-Bạn cung cấp image candidates; trình duyệt (browser) chọn candidate dựa trên viewport, device pixel ratio và expected render width.
+Bạn cung cấp image candidates; trình duyệt chọn candidate dựa trên viewport, device pixel ratio và expected render width.
 
 ---
 
@@ -1191,9 +1190,9 @@ Bạn cung cấp image candidates; trình duyệt (browser) chọn candidate d�
   alt="...">
 ```
 
-`sizes` nói trình duyệt (browser) image dự kiến render rộng bao nhiêu trong các viewport conditions.
+`sizes` nói trình duyệt image dự kiến render rộng bao nhiêu trong các viewport conditions.
 
-Nếu `sizes` sai, trình duyệt (browser) có thể chọn resource quá lớn hoặc quá nhỏ.
+Nếu `sizes` sai, trình duyệt có thể chọn resource quá lớn hoặc quá nhỏ.
 
 ---
 
@@ -1262,7 +1261,7 @@ muted
 preload
 ```
 
-Autoplay có nhiều trình duyệt (browser) restrictions, đặc biệt nếu có audio.
+Autoplay có nhiều trình duyệt restrictions, đặc biệt nếu có audio.
 
 `preload` là hint, không phải absolute command.
 
@@ -1306,7 +1305,7 @@ Media có thể cung cấp nhiều sources:
 </video>
 ```
 
-Trình duyệt (browser) dùng capability/type hints để chọn phù hợp.
+Trình duyệt dùng capability/type hints để chọn phù hợp.
 
 ---
 
@@ -1320,7 +1319,7 @@ Trình duyệt (browser) dùng capability/type hints để chọn phù hợp.
   label="English">
 ```
 
-`captions` thường chứa cả speech và relevant sound descriptions cho khả năng tiếp cận (accessibility). `subtitles` chủ yếu dịch/transcribe dialogue cho người vẫn nghe được audio.
+`captions` thường chứa cả speech và relevant sound descriptions cho khả năng tiếp cận. `subtitles` chủ yếu dịch/transcribe dialogue cho người vẫn nghe được audio.
 
 ---
 
@@ -1356,7 +1355,7 @@ Bạn mở capability từng phần:
 sandbox="allow-scripts allow-forms"
 ```
 
-Senior bảo mật (security) principle là **least privilege**: chỉ allow capability thực sự cần.
+Senior bảo mật principle là **least privilege**: chỉ allow capability thực sự cần.
 
 ---
 
@@ -1414,7 +1413,7 @@ Modern layout dùng CSS Grid/Flexbox.
 </table>
 ```
 
-Caption mô tả mục đích/nội dung table và rất hữu ích cho khả năng tiếp cận (accessibility).
+Caption mô tả mục đích/nội dung table và rất hữu ích cho khả năng tiếp cận.
 
 ---
 
@@ -1442,7 +1441,7 @@ Caption mô tả mục đích/nội dung table và rất hữu ích cho khả n�
 
 `thead`, `tbody`, `tfoot` tạo logical groups.
 
-Trình duyệt (browser) bộ phân tích cú pháp (parser) có table-specific rules; source và resulting DOM có thể khác nếu markup thiếu/invalid. Phần Master sẽ giải thích.
+Trình duyệt bộ phân tích cú pháp có table-specific rules; source và resulting DOM có thể khác nếu markup thiếu/invalid. Phần Master sẽ giải thích.
 
 ---
 
@@ -1476,7 +1475,7 @@ Complex table có thể cần `headers`/`id` strategies, nhưng đừng làm tab
 
 Dùng cho merged cells.
 
-Merged table structures cần test khả năng tiếp cận (accessibility) cẩn thận vì association trở nên phức tạp.
+Merged table structures cần test khả năng tiếp cận cẩn thận vì association trở nên phức tạp.
 
 ---
 
@@ -1492,9 +1491,9 @@ Merged table structures cần test khả năng tiếp cận (accessibility) cẩ
 </form>
 ```
 
-Form không chỉ là visual wrapper. Nó là một mechanism browser-native để collect các điều khiển được đưa vào dữ liệu gửi đi (successful controls) và submit data tới URL.
+Form không chỉ là visual wrapper. Nó là một mechanism browser-native để collect các điều khiển được đưa vào dữ liệu gửi đi và submit data tới URL.
 
-Đây là lý do hiểu native form ngữ nghĩa (semantics) cực kỳ quan trọng dù bạn dùng React.
+Đây là lý do hiểu native form ngữ nghĩa cực kỳ quan trọng dù bạn dùng React.
 
 ---
 
@@ -1506,7 +1505,7 @@ Form không chỉ là visual wrapper. Nó là một mechanism browser-native đ�
 
 `action` là URL target khi form submit.
 
-Nếu application intercept submit bằng JavaScript, native action vẫn có thể là tăng cường dần (progressive enhancement) phương án dự phòng (fallback) tùy architecture.
+Nếu application intercept submit bằng JavaScript, native action vẫn có thể là tăng cường dần (progressive enhancement) phương án dự phòng tùy architecture.
 
 ---
 
@@ -1528,7 +1527,7 @@ GET phù hợp với safe query/search/filter navigation, nơi data có thể n�
 
 POST phù hợp với state-changing submission hoặc payload không nên encoded như query.
 
-HTML method ngữ nghĩa (semantics) không thay HTTP authorization/bảo mật (security) rules.
+HTML method ngữ nghĩa không thay HTTP authorization/bảo mật rules.
 
 ---
 
@@ -1567,7 +1566,7 @@ Nếu quên multipart, file data sẽ không được submit đúng như bạn m
 
 `for` match `id`.
 
-Label không chỉ là text cạnh input. Nó tạo association khả năng tiếp cận (accessibility) và click/tap behavior.
+Label không chỉ là text cạnh input. Nó tạo association khả năng tiếp cận và click/tap behavior.
 
 Bạn cũng có thể wrap control:
 
@@ -1594,7 +1593,7 @@ Sai:
 
 nếu không có label.
 
-Placeholder biến mất khi user nhập và thường có contrast/khả năng tiếp cận (accessibility) issues.
+Placeholder biến mất khi user nhập và thường có contrast/khả năng tiếp cận issues.
 
 Tốt hơn:
 
@@ -1630,7 +1629,7 @@ name
 value
 ```
 
-`type` chọn behavior/ngữ nghĩa (semantics).
+`type` chọn behavior/ngữ nghĩa.
 
 `name` là key trong form submission.
 
@@ -1677,7 +1676,7 @@ Security vẫn phụ thuộc HTTPS, server storage và authentication architectu
   required>
 ```
 
-Trình duyệt (browser) cung cấp email-specific kiểm tra tính hợp lệ (validation) ngữ nghĩa (semantics) và mobile keyboard hints.
+Trình duyệt cung cấp email-specific kiểm tra tính hợp lệ (validation) ngữ nghĩa và mobile keyboard hints.
 
 Server vẫn phải validate email/business rules.
 
@@ -1722,7 +1721,7 @@ URL:
 
 `tel` không validate universal phone format vì formats quá đa dạng.
 
-`url` có URL constraint ngữ nghĩa (semantics).
+`url` có URL constraint ngữ nghĩa.
 
 ---
 
@@ -1785,7 +1784,7 @@ Radio cùng `name` tạo group và thường chỉ một item được selected.
 
 Nếu backend cần global instant, timezone phải được xác định ở layer khác.
 
-UI display cũng phụ thuộc locale/trình duyệt (browser).
+UI display cũng phụ thuộc locale/trình duyệt.
 
 ---
 
@@ -1880,7 +1879,7 @@ Markup:
 
 Đây là initial/default value relationship.
 
-Sau user edit, thuộc tính DOM (DOM property):
+Sau user edit, thuộc tính DOM:
 
 ```js
 input.value
@@ -1894,7 +1893,7 @@ input.getAttribute("value")
 
 vẫn phản ánh markup attribute `"Alice"`.
 
-Đây là bước đầu để hiểu difference giữa **thuộc tính nội dung (content attribute)** và **IDL/thuộc tính DOM (DOM property)**.
+Đây là bước đầu để hiểu difference giữa **thuộc tính nội dung** và **IDL/thuộc tính DOM**.
 
 ---
 
@@ -1906,9 +1905,9 @@ vẫn phản ánh markup attribute `"Alice"`.
   required>
 ```
 
-Trình duyệt (browser) native kiểm tra ràng buộc (constraint kiểm tra tính hợp lệ (validation)) có thể block submission nếu value missing/invalid.
+Trình duyệt native kiểm tra ràng buộc (constraint kiểm tra tính hợp lệ (validation)) có thể block submission nếu value missing/invalid.
 
-Client kiểm tra tính hợp lệ (validation) giúp UX, không phải bảo mật (security) boundary. Server bắt buộc validate lại.
+Client kiểm tra tính hợp lệ (validation) giúp UX, không phải bảo mật boundary. Server bắt buộc validate lại.
 
 ---
 
@@ -1926,7 +1925,7 @@ không edit
 không submit
 ```
 
-Đây là thuộc tính boolean (boolean attribute).
+Đây là thuộc tính boolean.
 
 Sai:
 
@@ -1934,9 +1933,9 @@ Sai:
 <input disabled="false">
 ```
 
-Nó vẫn disabled vì thuộc tính boolean (boolean attribute) true khi attribute tồn tại.
+Nó vẫn disabled vì thuộc tính boolean true khi attribute tồn tại.
 
-Muốn false, remove attribute hoặc set thuộc tính DOM (DOM property) false.
+Muốn false, remove attribute hoặc set thuộc tính DOM false.
 
 ---
 
@@ -1973,14 +1972,14 @@ Option initial state:
 <option selected>Korea</option>
 ```
 
-Sau user tương tác (interaction), các thuộc tính DOM (DOM properties):
+Sau user tương tác, các thuộc tính DOM:
 
 ```js
 input.checked
 option.selected
 ```
 
-phản ánh trạng thái hiện tại (current state), còn markup attributes liên quan default/initial state.
+phản ánh trạng thái hiện tại, còn markup attributes liên quan default/initial state.
 
 ---
 
@@ -2023,7 +2022,7 @@ Không thay server kiểm tra tính hợp lệ (validation).
 
 Pattern constraint có thể hỗ trợ simple format kiểm tra tính hợp lệ (validation).
 
-Không biến HTML regex thành bảo mật (security) filter. Server phải validate domain value bằng rule của mình.
+Không biến HTML regex thành bảo mật filter. Server phải validate domain value bằng rule của mình.
 
 ---
 
@@ -2094,7 +2093,7 @@ Không tắt autofill bừa chỉ vì “UI nhìn sạch hơn”.
 
 `inputmode` chủ yếu gợi ý keyboard/input UI.
 
-`type` ảnh hưởng ngữ nghĩa (semantics)/kiểm tra tính hợp lệ (validation).
+`type` ảnh hưởng ngữ nghĩa/kiểm tra tính hợp lệ (validation).
 
 Ví dụ postal code numeric-looking nhưng không phải number quantity; có thể dùng:
 
@@ -2182,7 +2181,7 @@ không phải `value` attribute như input.
 
 Visible label có thể khác submitted `value`.
 
-Native select cung cấp keyboard/mobile/khả năng tiếp cận (accessibility) behaviors mà custom `div` dropdown phải tự implement rất nhiều.
+Native select cung cấp keyboard/mobile/khả năng tiếp cận behaviors mà custom `div` dropdown phải tự implement rất nhiều.
 
 ---
 
@@ -2277,11 +2276,11 @@ HTML native có thể làm:
 </form>
 ```
 
-Backend nhận value của điều khiển gửi biểu mẫu (submitter) được click.
+Backend nhận value của điều khiển gửi biểu mẫu được click.
 
 Button còn có thể override `formaction`, `formmethod`, `formenctype`, `formtarget` và `formnovalidate`.
 
-Phần Master sẽ giải thích sâu điều khiển gửi biểu mẫu (submitter)/biểu mẫu chủ quản (form owner) ngữ nghĩa (semantics).
+Phần Master sẽ giải thích sâu điều khiển gửi biểu mẫu/biểu mẫu chủ quản ngữ nghĩa.
 
 ---
 
@@ -2376,7 +2375,7 @@ dialog.showModal()
 
 cho modal.
 
-Native dialog có top-layer/modal/tiêu điểm (focus) ngữ nghĩa (semantics) tốt hơn một `div.modal` tự chế, dù production vẫn phải test tiêu điểm (focus) flow và khả năng tiếp cận (accessibility).
+Native dialog có top-layer/modal/tiêu điểm ngữ nghĩa tốt hơn một `div.modal` tự chế, dù production vẫn phải test tiêu điểm flow và khả năng tiếp cận.
 
 ---
 
@@ -2426,7 +2425,7 @@ Invoker:
 </button>
 ```
 
-Trình duyệt (browser) quản lý show/hide, lớp trên cùng (top layer) và light-dismiss behavior theo popover mode.
+Trình duyệt quản lý show/hide, lớp trên cùng và light-dismiss behavior theo popover mode.
 
 Feature này sẽ được giải thích sâu ở Master Implementation.
 
@@ -2444,7 +2443,7 @@ Feature này sẽ được giải thích sâu ở Master Implementation.
 
 Nó được dùng cho fragment navigation, label association, ARIA relationships, CSS và JS.
 
-Duplicate IDs có thể gây khả năng tiếp cận (accessibility)/query bugs khó debug.
+Duplicate IDs có thể gây khả năng tiếp cận/query bugs khó debug.
 
 ---
 
@@ -2484,7 +2483,7 @@ Inline style hợp lệ, nhưng large application thường tránh sử dụng r
 
 `title` là advisory information.
 
-Không dùng nó làm tên trợ năng (accessible name) duy nhất cho critical control.
+Không dùng nó làm tên trợ năng duy nhất cho critical control.
 
 ---
 
@@ -2502,7 +2501,7 @@ JavaScript:
 element.hidden = true;
 ```
 
-Phần Master sẽ phân biệt `hidden`, `hidden="until-found"`, CSS hiding và khả năng tiếp cận (accessibility) implications.
+Phần Master sẽ phân biệt `hidden`, `hidden="until-found"`, CSS hiding và khả năng tiếp cận implications.
 
 ---
 
@@ -2514,7 +2513,7 @@ Phần Master sẽ phân biệt `hidden`, `hidden="until-found"`, CSS hiding và
 </main>
 ```
 
-`inert` làm subtree non-interactive trong nhiều user tương tác (interaction) paths, bao gồm tiêu điểm (focus).
+`inert` làm subtree non-interactive trong nhiều user tương tác paths, bao gồm tiêu điểm.
 
 Useful với custom overlay workflows, nhưng native modal dialog đã có browser-managed inertness behavior cho surrounding content.
 
@@ -2532,7 +2531,7 @@ tabindex="0"
 tabindex="-1"
 ```
 
-cho phép programmatic tiêu điểm (focus) nhưng không natural tab.
+cho phép programmatic tiêu điểm nhưng không natural tab.
 
 Positive tabindex như:
 
@@ -2540,7 +2539,7 @@ Positive tabindex như:
 tabindex="5"
 ```
 
-thường là anti-pattern vì phá natural tiêu điểm (focus) order và rất khó maintain.
+thường là anti-pattern vì phá natural tiêu điểm order và rất khó maintain.
 
 ---
 
@@ -2557,7 +2556,7 @@ JavaScript:
 button.dataset.userId
 ```
 
-Phù hợp với lightweight application siêu dữ liệu (metadata).
+Phù hợp với lightweight application siêu dữ liệu.
 
 Không chứa secret/token vì DOM thuộc client.
 
@@ -2573,7 +2572,7 @@ Không chứa secret/token vì DOM thuộc client.
 
 Nó biến content thành editable region, nhưng không tự trở thành rich-text editor production.
 
-Selection, paste sanitization, undo, trình duyệt (browser) differences và khả năng tiếp cận (accessibility) làm editor implementation phức tạp hơn nhiều.
+Selection, paste sanitization, undo, trình duyệt differences và khả năng tiếp cận làm editor implementation phức tạp hơn nhiều.
 
 ---
 
@@ -2585,7 +2584,7 @@ Selection, paste sanitization, undo, trình duyệt (browser) differences và kh
 
 Cho native drag behavior.
 
-Nếu drag action là critical, hãy cung cấp alternative không phụ thuộc pointer drag cho khả năng tiếp cận (accessibility).
+Nếu drag action là critical, hãy cung cấp alternative không phụ thuộc pointer drag cho khả năng tiếp cận.
 
 ---
 
@@ -2611,7 +2610,7 @@ Autofocus:
 <input autofocus>
 ```
 
-Autofocus phải dùng cẩn thận vì có thể bật mobile keyboard hoặc làm trình đọc màn hình (screen reader) context nhảy bất ngờ.
+Autofocus phải dùng cẩn thận vì có thể bật mobile keyboard hoặc làm trình đọc màn hình context nhảy bất ngờ.
 
 ---
 
@@ -2625,7 +2624,7 @@ Classic external script:
 <script src="/app.js"></script>
 ```
 
-Script quá trình tải (loading) strategy ảnh hưởng bộ phân tích cú pháp (parser) và hiệu năng (performance).
+Script quá trình tải strategy ảnh hưởng bộ phân tích cú pháp và hiệu năng.
 
 ---
 
@@ -2638,7 +2637,7 @@ Script quá trình tải (loading) strategy ảnh hưởng bộ phân tích cú 
 </script>
 ```
 
-Classic deferred script được download song song và execute sau document phân tích cú pháp (parsing), đồng thời giữ relative execution order giữa deferred scripts.
+Classic deferred script được download song song và execute sau document phân tích cú pháp, đồng thời giữ relative execution order giữa deferred scripts.
 
 Đây là good default cho nhiều classic application scripts.
 
@@ -2670,9 +2669,9 @@ Phù hợp với independent scripts như analytics.
 
 ES Module hỗ trợ `import`/`export` và module graph.
 
-Module scripts có quá trình tải (loading)/execution behavior riêng, gần deferred by default trong nhiều respects.
+Module scripts có quá trình tải/execution behavior riêng, gần deferred by default trong nhiều respects.
 
-Modern frontend cần hiểu module quá trình tải (loading) thay vì chỉ học `async/defer`.
+Modern frontend cần hiểu module quá trình tải thay vì chỉ học `async/defer`.
 
 ---
 
@@ -2685,7 +2684,7 @@ Modern frontend cần hiểu module quá trình tải (loading) thay vì chỉ h
 </script>
 ```
 
-Legacy phương án dự phòng (fallback) pattern cho browsers không support modules.
+Legacy phương án dự phòng pattern cho browsers không support modules.
 
 Ngày nay nhiều projects không cần nữa, nhưng senior nên nhận diện khi maintain old bundles.
 
@@ -2701,7 +2700,7 @@ Ngày nay nhiều projects không cần nữa, nhưng senior nên nhận diện 
 </script>
 ```
 
-Subresource Integrity cho trình duyệt (browser) verify fetched resource khớp expected hash.
+Subresource Integrity cho trình duyệt verify fetched resource khớp expected hash.
 
 Hữu ích với pinned third-party CDN resources.
 
@@ -2715,7 +2714,7 @@ Hữu ích với pinned third-party CDN resources.
 
 Nonce có thể được Content Security Policy dùng để allow specific inline script.
 
-Nonce phải unpredictable và phù hợp policy. Hardcode same nonce mãi làm mất bảo mật (security) intent.
+Nonce phải unpredictable và phù hợp policy. Hardcode same nonce mãi làm mất bảo mật intent.
 
 ---
 
@@ -2733,7 +2732,7 @@ Nếu base feature có thể hoạt động native/server-side, tăng cường d
 
 # PHẦN 18 — SEO, SOCIAL METADATA VÀ STRUCTURED DATA
 
-## 136. SEO bắt đầu từ nội dung và ngữ nghĩa (semantics)
+## 136. SEO bắt đầu từ nội dung và ngữ nghĩa
 
 HTML SEO không chỉ là meta tags.
 
@@ -2765,11 +2764,11 @@ Search engine phải hiểu content thật.
 
 Dùng để chỉ preferred URL khi nhiều URLs đại diện cùng/similar content.
 
-Nó không phải redirect và không phải bảo mật (security) rule.
+Nó không phải redirect và không phải bảo mật rule.
 
 ---
 
-## 138. Robots siêu dữ liệu (metadata)
+## 138. Robots siêu dữ liệu
 
 ```html
 <meta
@@ -2843,15 +2842,15 @@ Sai nếu không có lý do:
 </button>
 ```
 
-Native button đã có keyboard/tiêu điểm (focus)/role/form ngữ nghĩa (semantics).
+Native button đã có keyboard/tiêu điểm/role/form ngữ nghĩa.
 
-ARIA không tạo native behavior. Nếu dùng `role="button"` trên div, bạn còn phải implement keyboard activation và tiêu điểm (focus) behavior.
+ARIA không tạo native behavior. Nếu dùng `role="button"` trên div, bạn còn phải implement keyboard activation và tiêu điểm behavior.
 
 ---
 
 ## 142. Accessible name
 
-Một control cần tên mà cây trợ năng (khả năng tiếp cận (accessibility) tree) hiểu.
+Một control cần tên mà cây trợ năng hiểu.
 
 Text button:
 
@@ -2859,7 +2858,7 @@ Text button:
 <button>Save</button>
 ```
 
-đã có tên trợ năng (accessible name).
+đã có tên trợ năng.
 
 Icon-only:
 
@@ -2871,7 +2870,7 @@ Icon-only:
 </button>
 ```
 
-Nếu visible text tồn tại, ưu tiên để tên trợ năng (accessible name) phù hợp visible text.
+Nếu visible text tồn tại, ưu tiên để tên trợ năng phù hợp visible text.
 
 ---
 
@@ -2973,9 +2972,9 @@ Escape
 arrow keys ở controls phù hợp
 ```
 
-Kiểm tra tiêu điểm (focus) order, visible tiêu điểm (focus) và khả năng activate controls.
+Kiểm tra tiêu điểm order, visible tiêu điểm và khả năng activate controls.
 
-HTML ngữ nghĩa (semantics) tốt thường giảm rất nhiều custom keyboard code.
+HTML ngữ nghĩa tốt thường giảm rất nhiều custom keyboard code.
 
 ---
 
@@ -2991,14 +2990,14 @@ Markup:
   checked>
 ```
 
-Trình duyệt (browser) parse thành DOM object có properties:
+Trình duyệt parse thành DOM object có properties:
 
 ```js
 input.value
 input.checked
 ```
 
-Content attribute và thuộc tính DOM (DOM property) có thể reflect lẫn nhau nhưng không phải lúc nào cũng cùng trạng thái hiện tại (current state).
+Content attribute và thuộc tính DOM có thể reflect lẫn nhau nhưng không phải lúc nào cũng cùng trạng thái hiện tại.
 
 ---
 
@@ -3026,7 +3025,7 @@ input.getAttribute("value")
 
 có thể vẫn → `"A"`.
 
-Attribute thể hiện markup/default value relationship; property thể hiện current trạng thái hiện thời (live state).
+Attribute thể hiện markup/default value relationship; property thể hiện current trạng thái hiện thời.
 
 ---
 
@@ -3046,7 +3045,7 @@ input.checked
 
 → false.
 
-`checked` thuộc tính nội dung (content attribute) vẫn có thể tồn tại và liên quan default checked state.
+`checked` thuộc tính nội dung vẫn có thể tồn tại và liên quan default checked state.
 
 ---
 
@@ -3104,7 +3103,7 @@ Common boolean attrs gồm `disabled`, `checked`, `selected`, `required`, `reado
 
 ## 154. Không phải element nào cũng chứa gì cũng được
 
-HTML có các mô hình nội dung (content models).
+HTML có các mô hình nội dung.
 
 Ví dụ `ul` có list items phù hợp.
 
@@ -3126,7 +3125,7 @@ Nếu navigation, dùng link. Nếu action, dùng button.
 
 ## 155. Void elements
 
-Các HTML các phần tử rỗng đặc biệt (void elements) quan trọng:
+Các HTML các phần tử rỗng đặc biệt quan trọng:
 
 ```text
 area
@@ -3158,25 +3157,25 @@ Không viết:
 <img>text</img>
 ```
 
-HTML các phần tử rỗng đặc biệt (void elements) khác XML self-closing model.
+HTML các phần tử rỗng đặc biệt khác XML self-closing model.
 
 ---
 
 # PHẦN 22 — BROWSER PARSER CƠ BẢN
 
-## 156. bộ phân tích cú pháp HTML (HTML bộ phân tích cú pháp (parser)) không giống XML bộ phân tích cú pháp (parser)
+## 156. bộ phân tích cú pháp HTML (HTML bộ phân tích cú pháp) không giống XML bộ phân tích cú pháp
 
-bộ phân tích cú pháp HTML (HTML bộ phân tích cú pháp (parser)) được thiết kế với phục hồi lỗi (error recovery) mạnh.
+bộ phân tích cú pháp HTML (HTML bộ phân tích cú pháp) được thiết kế với phục hồi lỗi (error recovery) mạnh.
 
 Invalid markup có thể vẫn tạo DOM và render.
 
 Điều đó không nghĩa markup đúng.
 
-Trình duyệt (browser) có standardized algorithms để sửa/normalize nhiều cases.
+Trình duyệt có standardized algorithms để sửa/normalize nhiều cases.
 
 ---
 
-## 157. Trình duyệt (browser) có thể thêm nodes
+## 157. Trình duyệt có thể thêm nodes
 
 Source:
 
@@ -3188,7 +3187,7 @@ Source:
 </table>
 ```
 
-DOM inspector có thể thấy `tbody` được bộ phân tích cú pháp (parser) tạo.
+DOM inspector có thể thấy `tbody` được bộ phân tích cú pháp tạo.
 
 Đây là ví dụ source text không phải luôn giống resulting DOM tree.
 
@@ -3198,7 +3197,7 @@ DOM inspector có thể thấy `tbody` được bộ phân tích cú pháp (pars
 
 **View Source** gần với original response/source markup.
 
-**Elements panel** cho current parsed DOM sau trình duyệt (browser) normalization và JavaScript mutations.
+**Elements panel** cho current parsed DOM sau trình duyệt normalization và JavaScript mutations.
 
 Nếu React/Vue hydrate DOM, bạn còn có framework internal tree/state.
 
@@ -3230,19 +3229,19 @@ Security phải dựa trên contextual encoding/sanitization/CSP strategy, khôn
 
 ---
 
-## 161. Iframe bảo mật (security)
+## 161. Iframe bảo mật
 
 Use sandbox/allow/referrer policies có chủ đích.
 
-Third-party iframe là bảo mật (security) boundary, không phải chỉ layout box.
+Third-party iframe là bảo mật boundary, không phải chỉ layout box.
 
 ---
 
-## 162. Resource quá trình tải (loading) ảnh hưởng hiệu năng (performance)
+## 162. Resource quá trình tải ảnh hưởng hiệu năng
 
-HTML quyết định trình duyệt (browser) discover CSS, JS, images, fonts, iframes sớm hay muộn.
+HTML quyết định trình duyệt discover CSS, JS, images, fonts, iframes sớm hay muộn.
 
-Do đó hiệu năng (performance) không chỉ là JavaScript optimization.
+Do đó hiệu năng không chỉ là JavaScript optimization.
 
 Good markup có thể:
 
@@ -3267,7 +3266,7 @@ preconnect đúng origin
   alt="...">
 ```
 
-Đây là priority hint cho trình duyệt (browser).
+Đây là priority hint cho trình duyệt.
 
 Không đặt mọi thứ `high`; nếu mọi resource đều high thì signal mất giá trị và scheduling có thể xấu hơn.
 
@@ -3317,7 +3316,7 @@ progress
 meter
 ```
 
-Native controls thường có keyboard, tiêu điểm (focus), khả năng tiếp cận (accessibility) và trình duyệt (browser) integration tốt hơn custom div.
+Native controls thường có keyboard, tiêu điểm, khả năng tiếp cận và trình duyệt integration tốt hơn custom div.
 
 ---
 
@@ -3348,7 +3347,7 @@ Search form:
 
 Nếu JavaScript không chạy, form vẫn submit được.
 
-JavaScript có thể enhance suggestions, quá trình tải (loading) state và client kiểm tra tính hợp lệ (validation).
+JavaScript có thể enhance suggestions, quá trình tải state và client kiểm tra tính hợp lệ (validation).
 
 Đây là tăng cường dần (progressive enhancement): base functionality tồn tại trước, JS cải thiện trải nghiệm.
 
@@ -3358,7 +3357,7 @@ JavaScript có thể enhance suggestions, quá trình tải (loading) state và 
 
 Khi review markup, senior nên hỏi theo flow.
 
-Element này có semantic đúng không? Nếu dùng `div`, có native element phù hợp hơn không? Heading hierarchy có đúng không? Links và buttons có bị dùng lẫn không? Form controls có label không? Form submission thực tế sẽ gửi những fields nào? Interactive controls có keyboard accessible không? Image alt có đúng purpose không? Resource quá trình tải (loading) có làm chậm LCP không? Iframe có sandbox quá rộng không? Client data có bị coi là trusted không? HTML có valid/parser-stable không?
+Element này có semantic đúng không? Nếu dùng `div`, có native element phù hợp hơn không? Heading hierarchy có đúng không? Links và buttons có bị dùng lẫn không? Form controls có label không? Form submission thực tế sẽ gửi những fields nào? Interactive controls có keyboard accessible không? Image alt có đúng purpose không? Resource quá trình tải có làm chậm LCP không? Iframe có sandbox quá rộng không? Client data có bị coi là trusted không? HTML có valid/parser-stable không?
 
 Nếu bạn có thể trả lời những câu này, bạn đang review HTML ở level engineering chứ không chỉ syntax.
 
@@ -3523,25 +3522,25 @@ Nếu bạn có thể trả lời những câu này, bạn đang review HTML ở
 </html>
 ```
 
-Document này cố tình dùng native ngữ nghĩa (semantics) trước custom behavior. Heading hierarchy rõ, navigation dùng links, form controls có labels, image có dimensions/alt, time machine-readable và JS dùng module quá trình tải (loading).
+Document này cố tình dùng ngữ nghĩa gốc của phần tử trước custom behavior. Heading hierarchy rõ, navigation dùng links, form controls có labels, image có dimensions/alt, time machine-readable và JS dùng module quá trình tải.
 
 ---
 
 # PHẦN 26 — ROADMAP HỌC
 
-Ở giai đoạn Beginner, bạn cần nắm document structure, text, links, images, lists, tables và form basics. Bạn nên tự viết vài trang không framework để trình duyệt (browser) ngữ nghĩa (semantics) trở thành phản xạ.
+Ở giai đoạn Beginner, bạn cần nắm cấu trúc tài liệu, text, links, images, lists, tables và form basics. Bạn nên tự viết vài trang không framework để trình duyệt ngữ nghĩa trở thành phản xạ.
 
-Ở Intermediate, tập trung semantic layout, responsive images, form kiểm tra tính hợp lệ (validation), `autocomplete`, native interactive elements và khả năng tiếp cận (accessibility) fundamentals.
+Ở Intermediate, tập trung semantic layout, ảnh đáp ứng, form kiểm tra tính hợp lệ (validation), `autocomplete`, các phần tử tương tác gốc của trình duyệt và khả năng tiếp cận fundamentals.
 
-Ở Advanced, học attribute/property, script quá trình tải (loading), các gợi ý tải tài nguyên (resource hints), SEO, iframe bảo mật (security), responsive hiệu năng (performance) và tăng cường dần (progressive enhancement).
+Ở Advanced, học attribute/property, quá trình tải script, các gợi ý tải tài nguyên (resource hints), SEO, iframe bảo mật, responsive hiệu năng và tăng cường dần (progressive enhancement).
 
-Ở Senior, mục tiêu là hiểu bộ phân tích cú pháp (parser), form submission ngữ nghĩa (semantics), tiêu điểm (focus)/cây trợ năng (khả năng tiếp cận (accessibility) tree), bảo mật (security) trust boundaries và browser-native platform behavior. Những phần sâu hơn như foster parenting, DOM clobbering, Declarative Shadow DOM, advanced Popover/Dialog và customizable select được tách sang file Master Implementation để file này vẫn có flow học rõ ràng.
+Ở Senior, mục tiêu là hiểu bộ phân tích cú pháp, form submission ngữ nghĩa, tiêu điểm/cây trợ năng, bảo mật trust boundaries và browser-native platform behavior. Những phần sâu hơn như foster parenting, DOM clobbering, Declarative Shadow DOM, advanced Popover/Dialog và customizable select được tách sang file Master Implementation để file này vẫn có flow học rõ ràng.
 
 ---
 
 # KẾT LUẬN
 
-Một developer “biết HTML” có thể nhớ hàng chục tags. Một developer senior phải hiểu trình duyệt (browser) sẽ làm gì với markup đó.
+Một developer “biết HTML” có thể nhớ hàng chục tags. Một developer senior phải hiểu trình duyệt sẽ làm gì với markup đó.
 
 Khi thấy:
 
@@ -3549,7 +3548,7 @@ Khi thấy:
 <button>
 ```
 
-senior nghĩ tới action ngữ nghĩa (semantics), keyboard activation, tiêu điểm (focus) behavior, form điều khiển gửi biểu mẫu (submitter) behavior và khả năng tiếp cận (accessibility) role.
+senior nghĩ tới action ngữ nghĩa, keyboard activation, tiêu điểm behavior, form điều khiển gửi biểu mẫu behavior và khả năng tiếp cận role.
 
 Khi thấy:
 
@@ -3565,7 +3564,7 @@ Khi thấy:
 <form>
 ```
 
-senior nghĩ tới các điều khiển được đưa vào dữ liệu gửi đi (successful controls), điều khiển gửi biểu mẫu (submitter), GET/POST, encoding, native kiểm tra tính hợp lệ (validation), autocomplete và server-side trust boundary.
+senior nghĩ tới các điều khiển được đưa vào dữ liệu gửi đi, điều khiển gửi biểu mẫu, GET/POST, encoding, native kiểm tra tính hợp lệ (validation), autocomplete và server-side trust boundary.
 
 Khi thấy:
 
@@ -3573,6 +3572,6 @@ Khi thấy:
 <script>
 ```
 
-senior nghĩ tới bộ phân tích cú pháp (parser) blocking, module quá trình tải (loading), CSP, integrity và critical kết xuất (rendering) path.
+senior nghĩ tới bộ phân tích cú pháp blocking, module quá trình tải, CSP, integrity và critical kết xuất path.
 
 Đó là cách chuyển từ “học tag HTML” sang **engineering HTML**.

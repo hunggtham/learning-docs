@@ -1,21 +1,20 @@
 # XML — Intermediate
 ## Namespace, DTD, XML Schema, XPath và các mô hình Parser
 
-Tài liệu này tiếp nối phần Beginner. Ở phần trước, bạn đã biết XML là một cây dữ liệu strict, biết phần tử (element), thuộc tính (attribute), text, encoding, CDATA và khái niệm đúng cú pháp XML (well-formed). Tuy nhiên chỉ biết cú pháp XML chưa đủ để dùng XML trong hệ thống thật. Khi nhiều vocabulary được trộn với nhau, bạn cần không gian tên (namespace). Khi muốn kiểm tra XML có đúng cấu trúc hay không, bạn cần DTD hoặc XML Schema. Khi muốn tìm dữ liệu trong cây, bạn cần XPath. Khi document nhỏ hoặc rất lớn, bạn phải chọn DOM, SAX hoặc StAX phù hợp.
+Tài liệu này tiếp nối phần Beginner. Ở phần trước, bạn đã biết XML là một cây dữ liệu strict, biết phần tử, thuộc tính, text, encoding, CDATA và khái niệm đúng cú pháp XML. Tuy nhiên chỉ biết cú pháp XML chưa đủ để dùng XML trong hệ thống thật. Khi nhiều vocabulary được trộn với nhau, bạn cần không gian tên. Khi muốn kiểm tra XML có đúng cấu trúc hay không, bạn cần DTD hoặc XML Schema. Khi muốn tìm dữ liệu trong cây, bạn cần XPath. Khi document nhỏ hoặc rất lớn, bạn phải chọn DOM, SAX hoặc StAX phù hợp.
 
 Phần Intermediate được viết theo đúng flow đó để bạn hiểu vì sao từng lớp tồn tại.
 
 
 ## Quy ước thuật ngữ trong tài liệu
 
-Tài liệu ưu tiên tiếng Việt tự nhiên nhưng giữ thuật ngữ gốc ở những khái niệm cần tra cứu. Các thuật ngữ cốt lõi được dùng thống nhất như sau: **phần tử (element)** là đơn vị cấu trúc chính của XML; **thuộc tính (attribute)** là thông tin gắn trên phần tử; **không gian tên (namespace)** phân biệt các bộ từ vựng XML; **lược đồ (schema)** mô tả cấu trúc và kiểu dữ liệu hợp lệ; **phân tích cú pháp (parsing)** biến byte/text XML thành cây hoặc chuỗi sự kiện; **đúng cú pháp XML (well-formed)** nghĩa là thỏa các quy tắc cú pháp lõi; **kiểm tra tính hợp lệ (validation)** kiểm tra tài liệu theo DTD/XSD hoặc quy tắc khác; **xử lý theo luồng (streaming)** đọc dữ liệu tuần tự mà không giữ toàn bộ cây trong bộ nhớ; **tuần tự hóa (serialization)** biến cấu trúc XML trong bộ nhớ trở lại dạng text/byte; **chuẩn hóa chính tắc (canonicalization/C14N)** tạo biểu diễn ổn định phục vụ so sánh hoặc chữ ký số. Các tên chuẩn như XML, DTD, XSD, XPath, XSLT, XQuery, DOM, SAX, StAX, SOAP, WSDL, QName, PSVI và tên API cụ thể được giữ nguyên.
-
+Tài liệu dùng tiếng Việt tự nhiên làm ngôn ngữ giải thích chính và giữ thuật ngữ gốc ở lần định nghĩa để tiện tra cứu. Các cách gọi được dùng thống nhất gồm: **phần tử (element)**, **thuộc tính (attribute)**, **phần tử gốc (root element)**, **không gian tên (namespace)**, **tiền tố (prefix)**, **tên mở rộng (expanded name)**, **lược đồ (schema)**, **đúng cú pháp XML (well-formed)**, **kiểm tra tính hợp lệ (validation)**, **phân tích cú pháp (parsing)**, **bộ phân tích cú pháp (parser)**, **xử lý theo luồng (streaming)**, **truy vấn (query)**, **chuyển đổi (transformation)**, **ánh xạ/liên kết (binding)**, **tuần tự hóa (serialization)** và **chuẩn hóa chính tắc (canonicalization/C14N)**. Sau khi đã định nghĩa ở đây, phần nội dung bên dưới ưu tiên dùng cách gọi tiếng Việt để tránh lặp ngoặc tiếng Anh quá dày. Các tên chuẩn như XML, DTD, XSD, XPath, XSLT, XQuery, DOM, SAX, StAX, SOAP, WSDL, QName, PSVI và tên API cụ thể được giữ nguyên.
 
 ---
 
 ## 1. Vấn đề name collision và lý do XML Namespace xuất hiện
 
-Giả sử hệ thống của bạn cần kết hợp dữ liệu từ hai domain. Một domain nói về HTML-like document và một domain nói về furniture inventory. Cả hai đều dùng phần tử (element) tên `table`:
+Giả sử hệ thống của bạn cần kết hợp dữ liệu từ hai domain. Một domain nói về HTML-like document và một domain nói về furniture inventory. Cả hai đều dùng phần tử tên `table`:
 
 ```xml
 <document>
@@ -26,7 +25,7 @@ Giả sử hệ thống của bạn cần kết hợp dữ liệu từ hai domai
 
 Nhìn vào XML này, application không biết `table` đầu tiên và `table` thứ hai thuộc vocabulary nào.
 
-XML Namespace giải quyết vấn đề bằng cách làm cho tên logic của phần tử (element) không còn chỉ là local name `table`. Identity thật được xem như cặp:
+XML Namespace giải quyết vấn đề bằng cách làm cho tên logic của phần tử không còn chỉ là local name `table`. Identity thật được xem như cặp:
 
 ```text
 namespace URI + local name
@@ -45,7 +44,7 @@ Ví dụ:
 </root>
 ```
 
-Bây giờ hai phần tử (element) có local name giống nhau nhưng không gian tên (namespace) khác nhau, vì vậy application phân biệt được hoàn toàn.
+Bây giờ hai phần tử có local name giống nhau nhưng không gian tên khác nhau, vì vậy application phân biệt được hoàn toàn.
 
 ---
 
@@ -65,21 +64,21 @@ và:
 <u:user xmlns:u="https://example.com/user"/>
 ```
 
-có tiền tố (prefix) khác nhau, nhưng cùng URI của không gian tên (không gian tên (namespace) URI) và local name. Về nhận biết không gian tên (namespace-aware) identity, cả hai là cùng một tên mở rộng (expanded name):
+có tiền tố khác nhau, nhưng cùng URI của không gian tên (không gian tên URI) và local name. Về nhận biết định danh không gian tên, cả hai là cùng một tên mở rộng:
 
 ```text
 {https://example.com/user}user
 ```
 
-Điều này có nghĩa khi code Java, XPath, XSLT hoặc lược đồ (schema) xử lý XML, bạn không nên so sánh string tiền tố (prefix) `a` hoặc `u` để xác định business meaning. Prefix có thể đổi tự do miễn nó vẫn bind tới cùng URI của không gian tên (không gian tên (namespace) URI).
+Điều này có nghĩa khi code Java, XPath, XSLT hoặc lược đồ xử lý XML, bạn không nên so sánh string tiền tố `a` hoặc `u` để xác định business meaning. Prefix có thể đổi tự do miễn nó vẫn bind tới cùng URI của không gian tên (không gian tên URI).
 
-Một XML serializer thậm chí có thể đọc input tiền tố (prefix) `a` rồi serialize output thành `ns1` mà semantics vẫn không đổi.
+Một XML serializer thậm chí có thể đọc input tiền tố `a` rồi serialize output thành `ns1` mà semantics vẫn không đổi.
 
 ---
 
 ## 3. Expanded name
 
-Expanded name là mental model bạn nên dùng mọi lúc khi gặp không gian tên (namespace).
+Expanded name là mental model bạn nên dùng mọi lúc khi gặp không gian tên.
 
 Ví dụ:
 
@@ -96,13 +95,13 @@ local name    = user
 
 Prefix `app` chỉ là cách viết lexical.
 
-Khi bảo mật (security) hoặc business logic match phần tử (element), cách đúng về tư duy là match URI của không gian tên (không gian tên (namespace) URI) và local name, không match raw tag string.
+Khi bảo mật (security) hoặc business logic match phần tử, cách đúng về tư duy là match URI của không gian tên (không gian tên URI) và local name, không match raw tag string.
 
 ---
 
-## 4. Default không gian tên (namespace)
+## 4. Default không gian tên
 
-Nếu không muốn viết tiền tố (prefix) lặp lại, XML cho phép không gian tên mặc định (default không gian tên (namespace)):
+Nếu không muốn viết tiền tố lặp lại, XML cho phép không gian tên mặc định (default không gian tên):
 
 ```xml
 <catalog xmlns="https://example.com/catalog">
@@ -112,13 +111,13 @@ Nếu không muốn viết tiền tố (prefix) lặp lại, XML cho phép khôn
 </catalog>
 ```
 
-Trong subtree này, các unprefixed các phần tử (elements) `catalog`, `book`, `title` thuộc không gian tên (namespace) `https://example.com/catalog`.
+Trong subtree này, các unprefixed các phần tử `catalog`, `book`, `title` thuộc không gian tên `https://example.com/catalog`.
 
-Điều này làm XML dễ đọc hơn, nhưng cũng gây một trong những bug XPath phổ biến nhất: developer thấy source không có tiền tố (prefix) nên tưởng phần tử (element) “không không gian tên (namespace)”. Thực tế chúng đang nằm trong không gian tên mặc định (default không gian tên (namespace)).
+Điều này làm XML dễ đọc hơn, nhưng cũng gây một trong những bug XPath phổ biến nhất: developer thấy source không có tiền tố nên tưởng phần tử “không không gian tên”. Thực tế chúng đang nằm trong không gian tên mặc định (default không gian tên).
 
 ---
 
-## 5. Default không gian tên (namespace) không áp dụng cho unprefixed các thuộc tính (attributes)
+## 5. Default không gian tên không áp dụng cho unprefixed các thuộc tính
 
 Đây là rule phải thuộc lòng.
 
@@ -130,15 +129,15 @@ Xét:
   id="B001"/>
 ```
 
-Element `book` thuộc không gian tên (namespace):
+Element `book` thuộc không gian tên:
 
 ```text
 https://example.com/catalog
 ```
 
-Nhưng thuộc tính (attribute) `id` không có không gian tên (namespace).
+Nhưng thuộc tính `id` không có không gian tên.
 
-Nếu bạn muốn namespaced thuộc tính (attribute), phải viết tiền tố (prefix) rõ:
+Nếu bạn muốn namespaced thuộc tính, phải viết tiền tố rõ:
 
 ```xml
 <book
@@ -147,15 +146,15 @@ Nếu bạn muốn namespaced thuộc tính (attribute), phải viết tiền t�
   app:id="B001"/>
 ```
 
-Bây giờ `app:id` thuộc không gian tên (namespace) `https://example.com/app`.
+Bây giờ `app:id` thuộc không gian tên `https://example.com/app`.
 
-Điểm này rất quan trọng với XPath, DOM, XML Signature và ánh xạ/liên kết (binding) frameworks.
+Điểm này rất quan trọng với XPath, DOM, XML Signature và ánh xạ/liên kết frameworks.
 
 ---
 
 ## 6. Namespace scope và redeclaration
 
-Namespace tiền tố (prefix) ánh xạ/liên kết (binding) có scope.
+Namespace tiền tố ánh xạ/liên kết có scope.
 
 ```xml
 <root xmlns:p="urn:a">
@@ -169,7 +168,7 @@ Namespace tiền tố (prefix) ánh xạ/liên kết (binding) có scope.
 
 `p:item` đầu tiên thuộc `urn:a`, còn `p:item` bên trong `section` thuộc `urn:b`.
 
-Vì vậy không được scan một file rồi kết luận “tiền tố (prefix) `p` luôn nghĩa urn:a”. Binding phải được resolve theo context.
+Vì vậy không được scan một file rồi kết luận “tiền tố `p` luôn nghĩa urn:a”. Binding phải được resolve theo context.
 
 ---
 
@@ -187,15 +186,15 @@ hoặc là URN:
 urn:example:order
 ```
 
-Processor không bắt buộc phải download lược đồ (schema) từ URI của không gian tên (không gian tên (namespace) URI).
+Processor không bắt buộc phải download lược đồ từ URI của không gian tên (không gian tên URI).
 
-Một sai lầm phổ biến là nghĩ rằng `xmlns="https://example.com/order"` nghĩa trình duyệt (browser) hoặc bộ phân tích cú pháp (parser) sẽ truy cập URL này. Không phải. Schema location và không gian tên (namespace) identity là hai khái niệm khác nhau.
+Một sai lầm phổ biến là nghĩ rằng `xmlns="https://example.com/order"` nghĩa trình duyệt (browser) hoặc bộ phân tích cú pháp sẽ truy cập URL này. Không phải. Schema location và định danh không gian tên là hai khái niệm khác nhau.
 
 ---
 
 ## 8. Prefix `xml`
 
-Prefix `xml` được dành sẵn cho XML không gian tên (namespace) chuẩn và dùng trong:
+Prefix `xml` được dành sẵn cho XML không gian tên chuẩn và dùng trong:
 
 ```xml
 xml:lang
@@ -204,11 +203,11 @@ xml:base
 xml:id
 ```
 
-Bạn không được tự redefine `xml` sang không gian tên (namespace) của mình.
+Bạn không được tự redefine `xml` sang không gian tên của mình.
 
 ---
 
-## 9. Tại sao chỉ đúng cú pháp XML (well-formed) vẫn chưa đủ?
+## 9. Tại sao chỉ đúng cú pháp XML vẫn chưa đủ?
 
 XML core chỉ kiểm tra cú pháp. Ví dụ:
 
@@ -219,9 +218,9 @@ XML core chỉ kiểm tra cú pháp. Ví dụ:
 </order>
 ```
 
-có thể hoàn toàn đúng cú pháp XML (well-formed).
+có thể hoàn toàn đúng cú pháp XML.
 
-Nhưng application có thể yêu cầu `order` phải có `id`, `customer`, `total`, và `total` phải là decimal. Để diễn tả grammar hoặc contract đó, XML ecosystem dùng các lược đồ (schema) languages. Hai công nghệ bạn cần hiểu trước tiên là DTD và XSD.
+Nhưng application có thể yêu cầu `order` phải có `id`, `customer`, `total`, và `total` phải là decimal. Để diễn tả grammar hoặc contract đó, XML ecosystem dùng các lược đồ languages. Hai công nghệ bạn cần hiểu trước tiên là DTD và XSD.
 
 ---
 
@@ -229,7 +228,7 @@ Nhưng application có thể yêu cầu `order` phải có `id`, `customer`, `to
 
 ## 10. DTD là gì?
 
-DTD là **Document Type Definition**. Đây là cơ chế lược đồ (schema) cổ điển đi cùng XML từ rất sớm.
+DTD là **Document Type Definition**. Đây là cơ chế lược đồ cổ điển đi cùng XML từ rất sớm.
 
 Ví dụ:
 
@@ -274,7 +273,7 @@ hoặc reference external file:
 <!DOCTYPE note SYSTEM "note.dtd">
 ```
 
-External DTD rất quan trọng về bảo mật (security). Nếu bộ phân tích cú pháp (parser) được phép tự fetch URI hoặc file từ DTD của untrusted input, attacker có thể lợi dụng thực thể ngoài (external thực thể (entity)) hoặc external subset để đọc file, SSRF hoặc gây denial of service. Phần Senior sẽ đi sâu vào XXE.
+External DTD rất quan trọng về bảo mật (security). Nếu bộ phân tích cú pháp được phép tự fetch URI hoặc file từ DTD của untrusted input, attacker có thể lợi dụng thực thể ngoài (external thực thể) hoặc external subset để đọc file, SSRF hoặc gây denial of service. Phần Senior sẽ đi sâu vào XXE.
 
 ---
 
@@ -288,7 +287,7 @@ DTD có thể định nghĩa child sequence:
 
 Điều này có nghĩa `user` cần `name` rồi đến `email`.
 
-Nếu order đảo lại, document có thể invalid theo DTD dù vẫn đúng cú pháp XML (well-formed).
+Nếu order đảo lại, document có thể invalid theo DTD dù vẫn đúng cú pháp XML.
 
 ---
 
@@ -336,7 +335,7 @@ nghĩa là contact chứa một trong hai branch.
 
 `#PCDATA` nghĩa là parsed character data.
 
-DTD cũng hỗ trợ nội dung hỗn hợp (mixed content), ví dụ:
+DTD cũng hỗ trợ nội dung hỗn hợp, ví dụ:
 
 ```dtd
 <!ELEMENT p (#PCDATA|em|strong)*>
@@ -348,7 +347,7 @@ cho phép text xen `em` và `strong`.
 
 ## 16. `ATTLIST`
 
-DTD có thể định nghĩa các thuộc tính (attributes):
+DTD có thể định nghĩa các thuộc tính:
 
 ```dtd
 <!ATTLIST user
@@ -356,7 +355,7 @@ DTD có thể định nghĩa các thuộc tính (attributes):
   active (true|false) "true">
 ```
 
-Ở đây `id` là thuộc tính (attribute) có type `ID` và bắt buộc. `active` chỉ nhận `true` hoặc `false`, mặc định là `true`.
+Ở đây `id` là thuộc tính có type `ID` và bắt buộc. `active` chỉ nhận `true` hoặc `false`, mặc định là `true`.
 
 Các từ khóa thường gặp gồm `#REQUIRED`, `#IMPLIED` và `#FIXED`.
 
@@ -364,7 +363,7 @@ Các từ khóa thường gặp gồm `#REQUIRED`, `#IMPLIED` và `#FIXED`.
 
 ## 17. Entities trong DTD
 
-Bạn có thể define thực thể (entity):
+Bạn có thể define thực thể:
 
 ```dtd
 <!ENTITY company "Acme Corporation">
@@ -378,13 +377,13 @@ sau đó dùng:
 
 Parser có thể expand `&company;` thành text.
 
-Entity system rất mạnh nhưng cũng là lý do DTD trở thành bề mặt tấn công (attack surface). External các thực thể (entities), parameter các thực thể (entities) và thực thể (entity) expansion đều cần được control trong production.
+Entity system rất mạnh nhưng cũng là lý do DTD trở thành bề mặt tấn công. External các thực thể, parameter các thực thể và thực thể expansion đều cần được control trong production.
 
 ---
 
 ## 18. Vì sao DTD không đủ cho nhiều hệ thống enterprise?
 
-DTD có khả năng mô tả structure nhưng hệ kiểu (type system) hạn chế, không gian tên (namespace) integration không tự nhiên và syntax riêng. Khi cần decimal, dateTime, typed các thuộc tính (attributes), reusable complex type hoặc advanced constraints, XSD thường phù hợp hơn.
+DTD có khả năng mô tả structure nhưng hệ kiểu hạn chế, không gian tên integration không tự nhiên và syntax riêng. Khi cần decimal, dateTime, typed các thuộc tính, reusable complex type hoặc advanced constraints, XSD thường phù hợp hơn.
 
 DTD vẫn tồn tại trong nhiều publishing/document systems và legacy standards, nên senior phải đọc được, nhưng với application contract mới, XSD phổ biến hơn.
 
@@ -411,7 +410,7 @@ Ví dụ:
 
 Namespace `http://www.w3.org/2001/XMLSchema` là vocabulary của XML Schema.
 
-XSD không chỉ nói phần tử (element) nào được nằm ở đâu. Nó còn có hệ thống data types, reusable types, restrictions, không gian tên (namespace) integration và ràng buộc định danh (identity constraints).
+XSD không chỉ nói phần tử nào được nằm ở đâu. Nó còn có hệ thống data types, reusable types, restrictions, không gian tên integration và ràng buộc định danh.
 
 ---
 
@@ -440,13 +439,13 @@ Ví dụ:
 <xs:element name="price" type="xs:decimal"/>
 ```
 
-Bây giờ `price` không còn chỉ là arbitrary text về mặt lược đồ (schema). Schema validator có thể kiểm tra lexical value có hợp `xs:decimal` hay không.
+Bây giờ `price` không còn chỉ là arbitrary text về mặt lược đồ. Schema validator có thể kiểm tra lexical value có hợp `xs:decimal` hay không.
 
 ---
 
 ## 21. Simple type và complex type
 
-Một simple phần tử (element) có thể khai báo trực tiếp:
+Một simple phần tử có thể khai báo trực tiếp:
 
 ```xml
 <xs:element
@@ -454,7 +453,7 @@ Một simple phần tử (element) có thể khai báo trực tiếp:
   type="xs:string"/>
 ```
 
-Complex type dùng khi phần tử (element) có children hoặc các thuộc tính (attributes):
+Complex type dùng khi phần tử có children hoặc các thuộc tính:
 
 ```xml
 <xs:element name="user">
@@ -473,7 +472,7 @@ Complex type dùng khi phần tử (element) có children hoặc các thuộc t�
 
 ## 22. `xs:sequence`
 
-`xs:sequence` nói rằng child các phần tử (elements) phải xuất hiện theo thứ tự.
+`xs:sequence` nói rằng child các phần tử phải xuất hiện theo thứ tự.
 
 ```xml
 <xs:sequence>
@@ -493,7 +492,7 @@ hợp order.
 
 Nếu đổi `email` trước `name`, có thể invalid.
 
-Đây là điều cần nhớ khi version XML contract: nếu lược đồ (schema) dùng strict sequence, chèn phần tử (element) mới vào sai vị trí có thể làm consumer cũ fail.
+Đây là điều cần nhớ khi version XML contract: nếu lược đồ dùng strict sequence, chèn phần tử mới vào sai vị trí có thể làm consumer cũ fail.
 
 ---
 
@@ -508,13 +507,13 @@ Nếu đổi `email` trước `name`, có thể invalid.
 
 Nghĩa là chọn một branch.
 
-Choice rất hữu ích cho union-like structures nhưng nếu nested choice quá sâu, lược đồ (schema) sẽ khó đọc và ánh xạ/liên kết (binding) code cũng phức tạp.
+Choice rất hữu ích cho union-like structures nhưng nếu nested choice quá sâu, lược đồ sẽ khó đọc và ánh xạ/liên kết code cũng phức tạp.
 
 ---
 
 ## 24. `xs:all`
 
-`xs:all` được dùng khi một nhóm các phần tử (elements) có thể xuất hiện với order linh hoạt hơn `sequence`, trong constraints mà XSD version quy định.
+`xs:all` được dùng khi một nhóm các phần tử có thể xuất hiện với order linh hoạt hơn `sequence`, trong constraints mà XSD version quy định.
 
 Điểm quan trọng là đừng nghĩ `xs:all` nghĩa “bất kỳ thứ gì, bao nhiêu lần cũng được”. Nó vẫn có rule về children và occurrence. Nếu cần repeating arbitrary structures, bạn phải đọc đúng XSD model thay vì suy từ tên `all`.
 
@@ -533,11 +532,11 @@ Nghĩa là `item` xuất hiện từ 0 tới vô hạn lần.
 
 Nếu không ghi, nhiều declarations mặc định 1 occurrence.
 
-Đây là lý do khi đọc XSD bạn phải chú ý defaults, không chỉ những thuộc tính (attribute) xuất hiện.
+Đây là lý do khi đọc XSD bạn phải chú ý defaults, không chỉ những thuộc tính xuất hiện.
 
 ---
 
-## 26. XSD thuộc tính (attribute) declaration
+## 26. XSD thuộc tính declaration
 
 ```xml
 <xs:attribute
@@ -546,7 +545,7 @@ Nếu không ghi, nhiều declarations mặc định 1 occurrence.
   use="required"/>
 ```
 
-`use="required"` bắt buộc thuộc tính (attribute) tồn tại.
+`use="required"` bắt buộc thuộc tính tồn tại.
 
 Các cases khác có thể là optional hoặc prohibited tùy context.
 
@@ -611,7 +610,7 @@ Nhưng hãy nhớ rằng thêm hoặc xóa enum value có thể là breaking con
 
 Pattern trong XML Schema dùng regex dialect riêng. Bạn không nên copy Java regex hoặc JavaScript regex rồi assume chúng tương đương hoàn toàn.
 
-Nếu pattern là business-critical, đọc rules của XSD regex và test bằng đúng lược đồ (schema) processor.
+Nếu pattern là business-critical, đọc rules của XSD regex và test bằng đúng bộ xử lý lược đồ.
 
 ---
 
@@ -645,13 +644,13 @@ Anonymous type:
 
 Named type hợp khi structure được reuse hoặc version độc lập. Anonymous type hợp với one-off local structure.
 
-Việc chọn kiểu nào là một phần của lược đồ (schema) design pattern, phần Master sẽ nói sâu hơn.
+Việc chọn kiểu nào là một phần của lược đồ design pattern, phần Master sẽ nói sâu hơn.
 
 ---
 
 ## 31. `targetNamespace`
 
-Một lược đồ (schema) thường định nghĩa vocabulary trong một không gian tên (namespace) cụ thể:
+Một lược đồ thường định nghĩa vocabulary trong một không gian tên cụ thể:
 
 ```xml
 <xs:schema
@@ -660,23 +659,23 @@ Một lược đồ (schema) thường định nghĩa vocabulary trong một kh�
   xmlns:o="https://example.com/order">
 ```
 
-`targetNamespace` trả lời câu hỏi: “Các global lược đồ (schema) components này thuộc vocabulary không gian tên (namespace) nào?”
+`targetNamespace` trả lời câu hỏi: “Các global lược đồ components này thuộc vocabulary không gian tên nào?”
 
-Nếu hiểu sai `targetNamespace`, bạn sẽ gặp lỗi kiểu lược đồ (schema) nói `order` tồn tại nhưng validator báo “cannot find declaration” vì instance phần tử (element) không ở không gian tên (namespace) đúng.
+Nếu hiểu sai `targetNamespace`, bạn sẽ gặp lỗi kiểu lược đồ nói `order` tồn tại nhưng validator báo “cannot find declaration” vì instance phần tử không ở không gian tên đúng.
 
 ---
 
 ## 32. `elementFormDefault`
 
-Một lược đồ (schema) có thể khai báo:
+Một lược đồ có thể khai báo:
 
 ```xml
 elementFormDefault="qualified"
 ```
 
-Điều này ảnh hưởng local các phần tử (elements) có cần không gian tên (namespace) qualification hay không.
+Điều này ảnh hưởng local các phần tử có cần không gian tên qualification hay không.
 
-Đây là một trong những điểm gây lỗi nhiều nhất khi làm SOAP/XSD Java ánh xạ/liên kết (binding). Một instance nhìn gần giống nhau nhưng khác không gian tên (namespace) qualification có thể invalid hoàn toàn.
+Đây là một trong những điểm gây lỗi nhiều nhất khi làm SOAP/XSD Java ánh xạ/liên kết. Một instance nhìn gần giống nhau nhưng khác không gian tên qualification có thể invalid hoàn toàn.
 
 Khi debug, luôn xem cùng lúc:
 
@@ -690,13 +689,13 @@ namespace declarations của instance
 
 ## 33. `xs:include` và `xs:import`
 
-`xs:include` thường dùng để compose lược đồ (schema) components trong cùng không gian tên (namespace) family/context:
+`xs:include` thường dùng để compose lược đồ components trong cùng không gian tên family/context:
 
 ```xml
 <xs:include schemaLocation="common.xsd"/>
 ```
 
-`xs:import` dùng để đưa lược đồ (schema) components thuộc không gian tên (namespace) khác vào:
+`xs:import` dùng để đưa lược đồ components thuộc không gian tên khác vào:
 
 ```xml
 <xs:import
@@ -717,7 +716,7 @@ Dù thực tế XSD có thêm details, mental model này đủ tốt để bắt
 
 ## 34. `xsi:schemaLocation`
 
-XML instance có thể chứa lược đồ (schema) location hints:
+XML instance có thể chứa lược đồ location hints:
 
 ```xml
 <order
@@ -728,21 +727,21 @@ XML instance có thể chứa lược đồ (schema) location hints:
     order.xsd">
 ```
 
-Đây là hint ánh xạ (mapping) không gian tên (namespace) tới lược đồ (schema) location.
+Đây là hint ánh xạ không gian tên tới lược đồ location.
 
-Điều quan trọng về bảo mật (security) là application không nên mặc định tin và fetch arbitrary lược đồ (schema) URL từ untrusted document. Resolver và lược đồ (schema) source nên do application kiểm soát.
+Điều quan trọng về bảo mật (security) là application không nên mặc định tin và fetch arbitrary lược đồ URL từ untrusted document. Resolver và lược đồ source nên do application kiểm soát.
 
 ---
 
 ## 35. `xsi:noNamespaceSchemaLocation`
 
-Nếu vocabulary không có không gian tên (namespace), instance có thể dùng:
+Nếu vocabulary không có không gian tên, instance có thể dùng:
 
 ```xml
 xsi:noNamespaceSchemaLocation="note.xsd"
 ```
 
-Nó vẫn là lược đồ (schema) location hint, không biến untrusted URL thành trusted dependency.
+Nó vẫn là lược đồ location hint, không biến untrusted URL thành trusted dependency.
 
 ---
 
@@ -756,7 +755,7 @@ Ví dụ:
   xsi:nil="true"/>
 ```
 
-Nếu lược đồ (schema) declaration cho phép `nillable`, phần tử (element) có thể biểu diễn nil.
+Nếu lược đồ declaration cho phép `nillable`, phần tử có thể biểu diễn nil.
 
 Bạn phải phân biệt ba trạng thái:
 
@@ -768,9 +767,9 @@ Bạn phải phân biệt ba trạng thái:
 <middleName></middleName>
 ```
 
-và phần tử (element) hoàn toàn không xuất hiện.
+và phần tử hoàn toàn không xuất hiện.
 
-Nil, empty và missing có thể có business meaning khác nhau. Đây là lý do object ánh xạ (mapping) XML sang Java `null` đôi khi làm mất thông tin nếu ánh xạ (mapping) không cẩn thận.
+Nil, empty và missing có thể có business meaning khác nhau. Đây là lý do object ánh xạ XML sang Java `null` đôi khi làm mất thông tin nếu ánh xạ không cẩn thận.
 
 ---
 
@@ -778,7 +777,7 @@ Nil, empty và missing có thể có business meaning khác nhau. Đây là lý 
 
 ## 37. XPath là gì?
 
-XPath là ngôn ngữ expression/truy vấn (query) dùng để chọn hoặc tính toán dựa trên XML/XDM.
+XPath là ngôn ngữ expression/truy vấn dùng để chọn hoặc tính toán dựa trên XML/XDM.
 
 Ví dụ document:
 
@@ -800,9 +799,9 @@ XPath:
 /library/book/title
 ```
 
-chọn các `title` các phần tử (elements).
+chọn các `title` các phần tử.
 
-Bạn nên hình dung XPath như “đường đi + điều kiện” trên tree, nhưng modern XPath còn mạnh hơn nhiều và có hệ kiểu (type system), functions, sequences.
+Bạn nên hình dung XPath như “đường đi + điều kiện” trên tree, nhưng modern XPath còn mạnh hơn nhiều và có hệ kiểu, functions, sequences.
 
 ---
 
@@ -824,7 +823,7 @@ Bạn nên hình dung XPath như “đường đi + điều kiện” trên tree
 
 là shorthand liên quan descendant-or-self traversal.
 
-Nó rất tiện nhưng dễ bị lạm dụng. Trên XML lớn, truy vấn (query) quá rộng khó reason và có thể tốn tài nguyên. Nếu biết path rõ, path explicit thường tốt hơn.
+Nó rất tiện nhưng dễ bị lạm dụng. Trên XML lớn, truy vấn quá rộng khó reason và có thể tốn tài nguyên. Nếu biết path rõ, path explicit thường tốt hơn.
 
 ---
 
@@ -834,7 +833,7 @@ Nó rất tiện nhưng dễ bị lạm dụng. Trên XML lớn, truy vấn (que
 /library/book/@id
 ```
 
-chọn `id` các thuộc tính (attributes).
+chọn `id` các thuộc tính.
 
 ---
 
@@ -844,9 +843,9 @@ chọn `id` các thuộc tính (attributes).
 /library/book[@id='2']
 ```
 
-chọn book có thuộc tính (attribute) id bằng `2`.
+chọn book có thuộc tính id bằng `2`.
 
-Predicate có thể dùng expression phức tạp hơn, không chỉ thuộc tính (attribute) equality.
+Predicate có thể dùng expression phức tạp hơn, không chỉ thuộc tính equality.
 
 ---
 
@@ -876,7 +875,7 @@ Khi dùng position với `//` hoặc grouped expressions, context có thể khá
 
 chọn direct text nodes của `title`.
 
-Trong nội dung hỗn hợp (mixed content):
+Trong nội dung hỗn hợp:
 
 ```xml
 <p>Hello <b>world</b>!</p>
@@ -896,15 +895,15 @@ String-value của `p` có thể là `"Hello world!"` theo XPath data model.
 /library/*
 ```
 
-chọn phần tử (element) children.
+chọn các phần tử con.
 
 ```xpath
 //@*
 ```
 
-có thể chọn rất rộng các các thuộc tính (attributes).
+có thể chọn rất rộng các các thuộc tính.
 
-Wildcard useful nhưng làm truy vấn (query) ít explicit hơn, nên chỉ dùng khi vocabulary thực sự cần generic handling.
+Wildcard useful nhưng làm truy vấn ít explicit hơn, nên chỉ dùng khi vocabulary thực sự cần generic handling.
 
 ---
 
@@ -934,7 +933,7 @@ Exact set phụ thuộc XPath version. Phần Senior/Master sẽ chuyển từ X
 
 ---
 
-## 46. Default không gian tên (namespace) và bug XPath nổi tiếng
+## 46. Default không gian tên và bug XPath nổi tiếng
 
 Document:
 
@@ -952,33 +951,33 @@ Developer viết:
 
 và không nhận được result.
 
-Lý do là `library` và `book` thuộc không gian tên (namespace) `https://example.com/books`. Trong nhiều XPath host APIs, unprefixed name trong expression không tự map tới không gian tên mặc định (default không gian tên (namespace)) của source document.
+Lý do là `library` và `book` thuộc không gian tên `https://example.com/books`. Trong nhiều XPath host APIs, unprefixed name trong expression không tự map tới không gian tên mặc định (default không gian tên) của source document.
 
-Bạn cần bind một tiền tố (prefix) của riêng mình:
+Bạn cần bind một tiền tố của riêng mình:
 
 ```text
 b → https://example.com/books
 ```
 
-sau đó truy vấn (query):
+sau đó truy vấn:
 
 ```xpath
 /b:library/b:book
 ```
 
-Prefix `b` không cần xuất hiện trong source XML. Nó chỉ cần map tới đúng URI của không gian tên (không gian tên (namespace) URI).
+Prefix `b` không cần xuất hiện trong source XML. Nó chỉ cần map tới đúng URI của không gian tên (không gian tên URI).
 
-Đây là nguyên tắc quan trọng nhất khi debug XPath không gian tên (namespace).
+Đây là nguyên tắc quan trọng nhất khi debug XPath không gian tên.
 
 ---
 
 # Các mô hình phân tích cú pháp (Parser Models)
 
-## 47. Vì sao phải có nhiều loại bộ phân tích cú pháp (parser)?
+## 47. Vì sao phải có nhiều loại bộ phân tích cú pháp?
 
 Một file XML 20 KB và một file XML 10 GB có cùng cú pháp, nhưng cách xử lý tối ưu khác hoàn toàn.
 
-Nếu load 10 GB thành DOM tree, memory usage có thể lớn hơn raw file nhiều lần. Vì vậy XML ecosystem có cả tree bộ phân tích cú pháp (parser) và xử lý theo luồng (streaming) bộ phân tích cú pháp (parser).
+Nếu load 10 GB thành DOM tree, memory usage có thể lớn hơn raw file nhiều lần. Vì vậy XML ecosystem có cả tree bộ phân tích cú pháp và xử lý theo luồng bộ phân tích cú pháp.
 
 Ba mô hình bạn nên biết là DOM, SAX và StAX.
 
@@ -986,7 +985,7 @@ Ba mô hình bạn nên biết là DOM, SAX và StAX.
 
 ## 48. DOM
 
-DOM bộ phân tích cú pháp (parser) đọc toàn bộ document rồi tạo tree trong memory.
+DOM bộ phân tích cú pháp đọc toàn bộ document rồi tạo tree trong memory.
 
 Lợi ích là bạn có thể nhảy tới bất kỳ node nào, dùng XPath thuận tiện, mutate tree và serialize lại.
 
@@ -1004,15 +1003,15 @@ Element root = doc.getDocumentElement();
 
 DOM rất dễ dùng với XML nhỏ và vừa.
 
-Nhược điểm là memory cost. Mỗi phần tử (element) không chỉ chiếm bytes của source; còn có object overhead, strings, pointers, không gian tên (namespace) siêu dữ liệu (metadata) và child collections.
+Nhược điểm là memory cost. Mỗi phần tử không chỉ chiếm bytes của source; còn có object overhead, strings, pointers, không gian tên siêu dữ liệu (metadata) và child collections.
 
 ---
 
 ## 49. SAX
 
-SAX là event-driven push bộ phân tích cú pháp (parser).
+SAX là event-driven push bộ phân tích cú pháp.
 
-Thay vì đưa bạn tree, bộ phân tích cú pháp (parser) gọi callbacks kiểu:
+Thay vì đưa bạn tree, bộ phân tích cú pháp gọi callbacks kiểu:
 
 ```text
 startDocument
@@ -1032,13 +1031,13 @@ Ví dụ khi đọc:
 
 application có thể nhận một chuỗi events tương ứng.
 
-Ưu điểm của SAX là memory rất thấp vì bộ phân tích cú pháp (parser) không cần giữ toàn tree. Nhược điểm là state management khó hơn. Nếu muốn biết “đang ở trong user nào, đã đọc field gì”, bạn phải tự giữ state.
+Ưu điểm của SAX là memory rất thấp vì bộ phân tích cú pháp không cần giữ toàn tree. Nhược điểm là state management khó hơn. Nếu muốn biết “đang ở trong user nào, đã đọc field gì”, bạn phải tự giữ state.
 
 ---
 
 ## 50. StAX
 
-StAX là xử lý theo luồng (streaming) pull bộ phân tích cú pháp (parser) phổ biến trong Java ecosystem.
+StAX là xử lý theo luồng pull bộ phân tích cú pháp phổ biến trong Java ecosystem.
 
 Khác SAX gọi ngược vào application, StAX cho application chủ động yêu cầu event tiếp theo.
 
@@ -1062,7 +1061,7 @@ Nếu XML rất lớn và bạn chỉ cần đọc một lần từ đầu tới
 
 Trong Java business application, StAX thường là lựa chọn thuận tiện cho large XML vì pull model dễ viết state machine.
 
-Không nên chọn bộ phân tích cú pháp (parser) chỉ theo “cái nào nhanh nhất”. Hãy chọn theo access pattern và memory requirement.
+Không nên chọn bộ phân tích cú pháp chỉ theo “cái nào nhanh nhất”. Hãy chọn theo access pattern và memory requirement.
 
 ---
 
@@ -1083,9 +1082,9 @@ Document document =
     builder.parse(file);
 ```
 
-`setNamespaceAware(true)` cực kỳ quan trọng nếu XML dùng các không gian tên (namespaces).
+`setNamespaceAware(true)` cực kỳ quan trọng nếu XML dùng các không gian tên.
 
-Tuy nhiên đoạn code này chưa phải secure bộ phân tích cú pháp (parser) configuration. External DTD/thực thể (entity) processing có thể cần disable hoặc control tùy implementation. Phần Senior sẽ giải thích vì sao.
+Tuy nhiên đoạn code này chưa phải secure cấu hình bộ phân tích cú phápuration. External DTD/thực thể processing có thể cần disable hoặc control tùy implementation. Phần Senior sẽ giải thích vì sao.
 
 ---
 
@@ -1102,9 +1101,9 @@ String value =
     );
 ```
 
-Với namespaced XML, bạn cần `NamespaceContext` hoặc cơ chế tương đương để tiền tố (prefix) trong XPath map tới URI của không gian tên (không gian tên (namespace) URI).
+Với namespaced XML, bạn cần `NamespaceContext` hoặc cơ chế tương đương để tiền tố trong XPath map tới URI của không gian tên (không gian tên URI).
 
-Không hardcode tiền tố (prefix) source làm business identity.
+Không hardcode tiền tố source làm business identity.
 
 ---
 
@@ -1123,7 +1122,7 @@ empty elements
 text
 ```
 
-Nếu output có cryptographic requirement, bạn còn phải phân biệt ordinary tuần tự hóa (serialization) với chuẩn hóa chính tắc (canonicalization).
+Nếu output có cryptographic requirement, bạn còn phải phân biệt ordinary tuần tự hóa với chuẩn hóa chính tắc.
 
 Một XML serializer được thiết kế đúng tốt hơn nhiều so với nối string thủ công.
 
@@ -1131,7 +1130,7 @@ Một XML serializer được thiết kế đúng tốt hơn nhiều so với n�
 
 ## 55. Marshal và unmarshal
 
-Trong object ánh xạ/liên kết (binding) frameworks, bạn thường gặp hai từ:
+Trong object ánh xạ/liên kết frameworks, bạn thường gặp hai từ:
 
 ```text
 marshal   object → XML
@@ -1148,7 +1147,7 @@ Ví dụ XML:
 
 có thể map thành Java object `User`.
 
-Nhưng object model thường đơn giản hơn XML model. Mixed content, các không gian tên (namespaces), nil-vs-missing, order, repeating các phần tử (elements) và unknown extension đều có thể làm ánh xạ (mapping) mất nuance.
+Nhưng object model thường đơn giản hơn XML model. Mixed content, các không gian tên, nil-vs-missing, order, repeating các phần tử và unknown extension đều có thể làm ánh xạ mất nuance.
 
 Vì vậy senior không nên nghĩ “có JAXB thì không cần hiểu XML”.
 
@@ -1169,13 +1168,13 @@ bytes
 
 XSD kiểm tra structural/type rules. Nó không thay business logic.
 
-Ví dụ lược đồ (schema) có thể nói `amount` là decimal dương, nhưng không biết user hiện tại có quyền transfer số tiền đó hay không. Authorization vẫn thuộc application.
+Ví dụ lược đồ có thể nói `amount` là decimal dương, nhưng không biết user hiện tại có quyền transfer số tiền đó hay không. Authorization vẫn thuộc application.
 
 ---
 
-## 57. Lỗi “lược đồ (schema) không tìm thấy declaration”
+## 57. Lỗi “lược đồ không tìm thấy declaration”
 
-Đây là lỗi rất phổ biến. Bạn có lược đồ (schema) định nghĩa:
+Đây là lỗi rất phổ biến. Bạn có lược đồ định nghĩa:
 
 ```text
 {urn:order}order
@@ -1187,11 +1186,11 @@ nhưng input thực tế là:
 <order>
 ```
 
-không không gian tên (namespace).
+không không gian tên.
 
-Dù local name đều là `order`, tên mở rộng (expanded name) khác nhau.
+Dù local name đều là `order`, tên mở rộng khác nhau.
 
-Hoặc input có không gian tên mặc định (default không gian tên (namespace)) đúng nhưng XPath/lược đồ (schema) config không nhận biết không gian tên (namespace-aware).
+Hoặc input có không gian tên mặc định (default không gian tên) đúng nhưng XPath/lược đồ config không nhận biết không gian tên.
 
 Khi debug, luôn kiểm tra:
 
@@ -1215,9 +1214,9 @@ xsi:schemaLocation="
   http://internal-server/schema.xsd"
 ```
 
-và bộ phân tích cú pháp (parser)/validator tự fetch URL đó, attacker có thể ảnh hưởng network access.
+và bộ phân tích cú pháp/validator tự fetch URL đó, attacker có thể ảnh hưởng network access.
 
-Production application nên chủ động chọn lược đồ (schema) trusted, dùng local registry hoặc bộ phân giải (resolver). Instance hint không nên tự trở thành authority.
+Production application nên chủ động chọn lược đồ trusted, dùng local registry hoặc bộ phân giải. Instance hint không nên tự trở thành authority.
 
 ---
 
@@ -1235,7 +1234,7 @@ Khi data có structure kiểu:
 </records>
 ```
 
-xử lý theo luồng (streaming) bộ phân tích cú pháp (parser) là lựa chọn tự nhiên.
+xử lý theo luồng bộ phân tích cú pháp là lựa chọn tự nhiên.
 
 ---
 
@@ -1257,7 +1256,7 @@ Nếu vocabulary biết rõ:
 
 thường an toàn và dễ review hơn.
 
-Đặc biệt trong security-sensitive code, truy vấn (query) broad có thể chọn wrong node.
+Đặc biệt trong security-sensitive code, truy vấn broad có thể chọn wrong node.
 
 ---
 
@@ -1282,7 +1281,7 @@ Cho XML:
 </o:order>
 ```
 
-`o:order` thuộc không gian tên (namespace) `urn:order`. Attribute `id` không có không gian tên (namespace) vì nó unprefixed. `c:customer` và `c:name` thuộc `urn:common`. `sku` cũng không có không gian tên (namespace). `o:item` và `o:price` thuộc `urn:order`.
+`o:order` thuộc không gian tên `urn:order`. Attribute `id` không có không gian tên vì nó unprefixed. `c:customer` và `c:name` thuộc `urn:common`. `sku` cũng không có không gian tên. `o:item` và `o:price` thuộc `urn:order`.
 
 Nếu dùng XPath, bạn có thể tự bind:
 
@@ -1297,7 +1296,7 @@ rồi dùng:
 /ord:order/ord:item/ord:price
 ```
 
-Prefix trong truy vấn (query) không cần giống tiền tố (prefix) source.
+Prefix trong truy vấn không cần giống tiền tố source.
 
 Nếu file có 5 triệu `item`, StAX hoặc SAX thường hợp hơn DOM.
 
@@ -1319,17 +1318,17 @@ raw bytes
 → application/domain
 ```
 
-Bạn cũng phải hiểu rằng không gian tên (namespace) và lược đồ (schema) là hai lớp riêng. Namespace định danh vocabulary; lược đồ (schema) mô tả grammar/type của vocabulary.
+Bạn cũng phải hiểu rằng không gian tên và lược đồ là hai lớp riêng. Namespace định danh vocabulary; lược đồ mô tả grammar/type của vocabulary.
 
-Ở phần Senior, chúng ta sẽ thêm chuyển đổi (transformation), XQuery, tiến hóa lược đồ (lược đồ (schema) evolution), xử lý theo luồng (streaming) architecture, XXE, XML Catalog, chuẩn hóa chính tắc (canonicalization) và XML Signature.
+Ở phần Senior, chúng ta sẽ thêm chuyển đổi, XQuery, tiến hóa lược đồ (lược đồ evolution), xử lý theo luồng architecture, XXE, XML Catalog, chuẩn hóa chính tắc và XML Signature.
 
 ---
 
 # PHẦN BỔ SUNG SAU AUDIT — VALIDATION, NAMESPACE VÀ PARSER Ở MỨC THỰC CHIẾN
 
-## 63. `xmlns=""`: reset không gian tên mặc định (default không gian tên (namespace)) trong subtree
+## 63. `xmlns=""`: reset không gian tên mặc định (default không gian tên) trong subtree
 
-Default không gian tên (namespace) có scope và có thể được reset. Ví dụ:
+Default không gian tên có scope và có thể được reset. Ví dụ:
 
 ```xml
 <root xmlns="urn:outer">
@@ -1341,17 +1340,17 @@ Default không gian tên (namespace) có scope và có thể được reset. Ví
 </root>
 ```
 
-`root` và `item` đầu thuộc `urn:outer`. Khi `legacy` khai báo `xmlns=""`, không gian tên mặc định (default không gian tên (namespace)) bị xóa cho subtree đó, nên `legacy` và `item` bên trong không còn không gian tên (namespace).
+`root` và `item` đầu thuộc `urn:outer`. Khi `legacy` khai báo `xmlns=""`, không gian tên mặc định (default không gian tên) bị xóa cho subtree đó, nên `legacy` và `item` bên trong không còn không gian tên.
 
-Đây là một source bug rất khó nhìn bằng mắt vì local names vẫn giống nhau. Khi DOM/XPath/lược đồ (schema) báo không match, hãy inspect URI của không gian tên (không gian tên (namespace) URI) thực thay vì chỉ nhìn tag text.
+Đây là một source bug rất khó nhìn bằng mắt vì local names vẫn giống nhau. Khi DOM/XPath/lược đồ báo không match, hãy inspect URI của không gian tên (không gian tên URI) thực thay vì chỉ nhìn tag text.
 
 ---
 
-## 64. `attributeFormDefault` và local các thuộc tính (attributes)
+## 64. `attributeFormDefault` và local các thuộc tính
 
-Ngoài `elementFormDefault`, XSD còn có `attributeFormDefault`. Nó ảnh hưởng việc local các thuộc tính (attributes) có phải namespace-qualified hay không.
+Ngoài `elementFormDefault`, XSD còn có `attributeFormDefault`. Nó ảnh hưởng việc local các thuộc tính có phải namespace-qualified hay không.
 
-Nếu lược đồ (schema) có target không gian tên (namespace) nhưng một local thuộc tính (attribute) vẫn unqualified, instance có thể trông như:
+Nếu lược đồ có target không gian tên nhưng một local thuộc tính vẫn unqualified, instance có thể trông như:
 
 ```xml
 <o:order
@@ -1367,17 +1366,17 @@ thay vì:
   o:id="123">
 ```
 
-Hai forms có expanded-name khác nhau. Khi validator báo thuộc tính (attribute) “không được phép” dù spelling `id` có vẻ đúng, hãy kiểm tra declaration là global/local và `attributeFormDefault`/`form` override của thuộc tính (attribute).
+Hai forms có expanded-name khác nhau. Khi validator báo thuộc tính “không được phép” dù spelling `id` có vẻ đúng, hãy kiểm tra declaration là global/local và `attributeFormDefault`/`form` override của thuộc tính.
 
 ---
 
-## 65. Global phần tử (element) và local phần tử (element) không chỉ khác vị trí trong file XSD
+## 65. Global phần tử và local phần tử không chỉ khác vị trí trong file XSD
 
-Element được khai báo trực tiếp dưới `xs:schema` là global declaration và có thể được reference/reuse theo lược đồ (schema) rules. Element nằm trong `complexType`/model group thường là local declaration.
+Element được khai báo trực tiếp dưới `xs:schema` là global declaration và có thể được reference/reuse theo quy tắc lược đồ. Element nằm trong `complexType`/model group thường là local declaration.
 
-Điều này ảnh hưởng không gian tên (namespace) qualification, reuse, substitution, code generation và cách bạn đọc lược đồ (schema) dependency graph. Khi debug Java generated classes, việc two các phần tử (elements) cùng local name nhưng đến từ declarations khác nhau có thể dẫn tới types/annotations khác nhau.
+Điều này ảnh hưởng không gian tên qualification, reuse, substitution, code generation và cách bạn đọc lược đồ dependency graph. Khi debug Java generated classes, việc two các phần tử cùng local name nhưng đến từ declarations khác nhau có thể dẫn tới types/annotations khác nhau.
 
-Senior lược đồ (schema) reading vì vậy nên đi từ root/global declarations rồi follow type/reference graph, không đọc XSD như một file XML tuyến tính từ trên xuống.
+Senior lược đồ reading vì vậy nên đi từ root/global declarations rồi follow type/reference graph, không đọc XSD như một file XML tuyến tính từ trên xuống.
 
 ---
 
@@ -1385,7 +1384,7 @@ Senior lược đồ (schema) reading vì vậy nên đi từ root/global declar
 
 Một XPath expression không tồn tại trong vacuum. Processor evaluate nó với **static context** và **dynamic context**.
 
-Static context chứa những thứ như không gian tên (namespace) tiền tố (prefix) bindings, available functions, default function không gian tên (namespace) hoặc base URI tùy host/version. Dynamic context chứa context item/node, position, size, variable values và runtime data.
+Static context chứa những thứ như không gian tên tiền tố bindings, available functions, default function không gian tên hoặc base URI tùy host/version. Dynamic context chứa context item/node, position, size, variable values và runtime data.
 
 Vì vậy cùng expression:
 
@@ -1395,11 +1394,11 @@ book/title
 
 có thể trả kết quả khác hoàn toàn nếu context node khác. Đây là lý do code gọi XPath trên `Document` và code gọi cùng expression trên một `Element` không nhất thiết tương đương.
 
-Khi debug XPath, đừng chỉ hỏi “expression đúng chưa?”. Hãy hỏi thêm “expression đang được evaluate từ node nào và không gian tên (namespace) context nào?”.
+Khi debug XPath, đừng chỉ hỏi “expression đúng chưa?”. Hãy hỏi thêm “expression đang được evaluate từ node nào và không gian tên context nào?”.
 
 ---
 
-## 67. `local-name()` không phải cách chữa không gian tên (namespace) đúng mặc định
+## 67. `local-name()` không phải cách chữa không gian tên đúng mặc định
 
 Developer đôi khi gặp default-namespace bug rồi viết:
 
@@ -1407,33 +1406,33 @@ Developer đôi khi gặp default-namespace bug rồi viết:
 //*[local-name()='book']
 ```
 
-Expression này có thể làm truy vấn (query) trả result, nhưng nó bỏ qua không gian tên (namespace) identity. Nếu document trộn `urn:catalog:book` và `urn:malicious:book`, cả hai đều có local name `book`.
+Expression này có thể làm truy vấn trả result, nhưng nó bỏ qua định danh không gian tên. Nếu document trộn `urn:catalog:book` và `urn:malicious:book`, cả hai đều có local name `book`.
 
-Trong generic tooling, `local-name()` có use case thật. Nhưng business/bảo mật (security) truy vấn (query) nên bind URI của không gian tên (không gian tên (namespace) URI) đúng và dùng qualified XPath. “Làm cho truy vấn (query) chạy” không đồng nghĩa “truy vấn (query) đúng semantic”.
+Trong generic tooling, `local-name()` có use case thật. Nhưng business/bảo mật (security) truy vấn nên bind URI của không gian tên (không gian tên URI) đúng và dùng qualified XPath. “Làm cho truy vấn chạy” không đồng nghĩa “truy vấn đúng semantic”.
 
 ---
 
 ## 68. SAX `characters()` có thể được gọi nhiều lần cho một đoạn text
 
-Một lỗi SAX rất phổ biến là nghĩ bộ phân tích cú pháp (parser) sẽ gọi `characters()` đúng một lần cho mỗi phần tử (element) text. API không đảm bảo như vậy. Text:
+Một lỗi SAX rất phổ biến là nghĩ bộ phân tích cú pháp sẽ gọi `characters()` đúng một lần cho mỗi phần tử text. API không đảm bảo như vậy. Text:
 
 ```xml
 <name>Alice Wonderland</name>
 ```
 
-có thể được deliver thành nhiều chunks tùy buffer/thực thể (entity)/bộ phân tích cú pháp (parser) implementation.
+có thể được deliver thành nhiều chunks tùy buffer/thực thể/bộ phân tích cú pháp implementation.
 
-Handler đúng thường accumulate text trong `StringBuilder` giữa `startElement` và `endElement`, rồi xử lý khi phần tử (element) kết thúc. Không viết business logic giả định một callback tương ứng một value hoàn chỉnh.
+Handler đúng thường accumulate text trong `StringBuilder` giữa `startElement` và `endElement`, rồi xử lý khi phần tử kết thúc. Không viết business logic giả định một callback tương ứng một value hoàn chỉnh.
 
-Điểm này cho thấy xử lý theo luồng (streaming) bộ phân tích cú pháp (parser) expose **events/chunks**, không expose object fields sẵn như ánh xạ/liên kết (binding) framework.
+Điểm này cho thấy xử lý theo luồng bộ phân tích cú pháp expose **events/chunks**, không expose object fields sẵn như ánh xạ/liên kết framework.
 
 ---
 
-## 69. StAX event model và nhận biết không gian tên (namespace-aware) reading
+## 69. StAX event model và nhận biết không gian tên reading
 
-Với StAX, application chủ động pull events như `START_ELEMENT`, `CHARACTERS`, `END_ELEMENT`. Khi gặp `START_ELEMENT`, hãy đọc `QName`/URI của không gian tên (không gian tên (namespace) URI)/local part thay vì chỉ `getLocalName()` nếu vocabulary có không gian tên (namespace).
+Với StAX, application chủ động pull events như `START_ELEMENT`, `CHARACTERS`, `END_ELEMENT`. Khi gặp `START_ELEMENT`, hãy đọc `QName`/URI của không gian tên (không gian tên URI)/local part thay vì chỉ `getLocalName()` nếu vocabulary có không gian tên.
 
-Text cũng có thể cần accumulate qua nhiều character events. Whitespace events, comments hoặc CDATA representation có thể xuất hiện tùy reader API/config. Vì vậy một state machine tốt xác định rõ “đang ở phần tử (element) nào”, “đang thu field nào”, và chỉ finalize value khi gặp end phần tử (element) tương ứng.
+Text cũng có thể cần accumulate qua nhiều character events. Whitespace events, comments hoặc CDATA representation có thể xuất hiện tùy reader API/config. Vì vậy một state machine tốt xác định rõ “đang ở phần tử nào”, “đang thu field nào”, và chỉ finalize value khi gặp end phần tử tương ứng.
 
 Streaming code có ít memory nhưng đổi lại bạn phải quản lý state chính xác hơn DOM.
 
@@ -1455,17 +1454,17 @@ Validator validator = schema.newValidator();
 validator.validate(new StreamSource(xmlFile));
 ```
 
-`SchemaFactory` xử lý lược đồ (schema) language/compilation. `Schema` đại diện compiled lược đồ (schema) model có thể được reuse theo contract của implementation/API. `Validator` là object dùng để validate một source và thường không nên được share tùy tiện giữa concurrent operations nếu API không cam kết thread-safety.
+`SchemaFactory` xử lý lược đồ language/compilation. `Schema` đại diện compiled lược đồ model có thể được reuse theo contract của implementation/API. `Validator` là object dùng để validate một source và thường không nên được share tùy tiện giữa concurrent operations nếu API không cam kết thread-safety.
 
-Production code còn phải kiểm soát external lược đồ (schema)/DTD access và bộ phân giải (resolver); ví dụ code ngắn ở trên chỉ minh họa lifecycle, chưa phải security-hardening recipe hoàn chỉnh.
+Production code còn phải kiểm soát external lược đồ/DTD access và bộ phân giải; ví dụ code ngắn ở trên chỉ minh họa lifecycle, chưa phải security-hardening recipe hoàn chỉnh.
 
 ---
 
 ## 71. Validation error model: warning, error, fatal error và line/column
 
-XML APIs thường expose lỗi kèm locator information như line và column. Với SAX-style `ErrorHandler`, bạn có các mức như warning, error và fatal error theo bộ phân tích cú pháp (parser)/validator semantics.
+XML APIs thường expose lỗi kèm locator information như line và column. Với SAX-style `ErrorHandler`, bạn có các mức như warning, error và fatal error theo bộ phân tích cú pháp/validator semantics.
 
-Well-formedness violation thường là fatal ở XML phân tích cú pháp (parsing) layer: bộ phân tích cú pháp (parser) không thể tiếp tục như HTML trình duyệt (browser) phục hồi lỗi (error recovery). Schema kiểm tra tính hợp lệ (validation) error nghĩa document đã có thể parse XML nhưng không thỏa contract XSD/DTD.
+Well-formedness violation thường là fatal ở XML phân tích cú pháp layer: bộ phân tích cú pháp không thể tiếp tục như HTML trình duyệt (browser) phục hồi lỗi (error recovery). Schema kiểm tra tính hợp lệ (validation) error nghĩa document đã có thể parse XML nhưng không thỏa contract XSD/DTD.
 
 Khi đưa error ra application log/API response, nên preserve layer và location nếu an toàn:
 
@@ -1474,13 +1473,13 @@ XML_PARSE_ERROR at line 12, column 18
 XSD_VALIDATION_ERROR at /order/item[3]/price
 ```
 
-để developer không mất thời gian tìm lỗi lược đồ (schema) trong khi document còn chưa đúng cú pháp XML (well-formed). Với sensitive payload, log context vừa đủ chứ không dump toàn document.
+để developer không mất thời gian tìm lỗi lược đồ trong khi document còn chưa đúng cú pháp XML. Với sensitive payload, log context vừa đủ chứ không dump toàn document.
 
 ---
 
 ## 72. Validation không nên bị trộn với business kiểm tra tính hợp lệ (validation)
 
-Một chuỗi xử lý (pipeline) rõ ràng thường phân tầng:
+Một chuỗi xử lý rõ ràng thường phân tầng:
 
 ```text
 bytes / transport checks
@@ -1492,27 +1491,27 @@ bytes / transport checks
 → authorization
 ```
 
-XSD có thể kiểm tra `amount` là decimal, positive và đúng cardinality. Nhưng nó không biết account hiện tại có đủ balance hay user có quyền chuyển tiền. Ngược lại, business validator không nên phải tự kiểm tra XML tag đóng đúng hay không gian tên (namespace) có đúng contract hay không.
+XSD có thể kiểm tra `amount` là decimal, positive và đúng cardinality. Nhưng nó không biết account hiện tại có đủ balance hay user có quyền chuyển tiền. Ngược lại, business validator không nên phải tự kiểm tra XML tag đóng đúng hay không gian tên có đúng contract hay không.
 
 Phân tầng làm error message rõ hơn, test dễ hơn và giảm nguy cơ một layer “tin” dữ liệu mà layer trước chưa kiểm tra.
 
 ---
 
-## 73. Validate trước ánh xạ (mapping) hay validate trong lúc ánh xạ (mapping)?
+## 73. Validate trước ánh xạ hay validate trong lúc ánh xạ?
 
-Không có một chuỗi xử lý (pipeline) duy nhất cho mọi library. Có hệ thống parse/validate rồi mới unmarshal; có ánh xạ/liên kết (binding) framework tích hợp lược đồ (schema) kiểm tra tính hợp lệ (validation) trong unmarshal; có xử lý theo luồng (streaming) chuỗi xử lý (pipeline) validate và consume gần như cùng lúc.
+Không có một chuỗi xử lý duy nhất cho mọi library. Có hệ thống parse/validate rồi mới unmarshal; có ánh xạ/liên kết framework tích hợp lược đồ kiểm tra tính hợp lệ (validation) trong unmarshal; có xử lý theo luồng chuỗi xử lý validate và consume gần như cùng lúc.
 
-Điều quan trọng là outcome phải rõ: **business layer chỉ nhận data sau khi structural contract cần thiết đã được kiểm tra**. Nếu hiệu năng (performance) khiến bạn tránh parse hai lần, hãy thiết kế chuỗi xử lý (pipeline) xử lý theo luồng (streaming)/Source/handler phù hợp thay vì bỏ kiểm tra tính hợp lệ (validation) mà không nhận ra.
+Điều quan trọng là outcome phải rõ: **business layer chỉ nhận data sau khi structural contract cần thiết đã được kiểm tra**. Nếu hiệu năng (performance) khiến bạn tránh parse hai lần, hãy thiết kế chuỗi xử lý xử lý theo luồng/Source/handler phù hợp thay vì bỏ kiểm tra tính hợp lệ (validation) mà không nhận ra.
 
 Với file cực lớn, việc build DOM chỉ để validate rồi build lần hai để process là dấu hiệu architecture cần xem lại.
 
 ---
 
-## 74. Test XML bộ phân tích cú pháp (parser)/validator bằng negative cases, không chỉ happy path
+## 74. Test XML bộ phân tích cú pháp/validator bằng negative cases, không chỉ happy path
 
-Một test suite tốt không chỉ có một file valid. Hãy có fixtures cho wrong không gian tên (namespace), missing required phần tử (element), wrong order, invalid datatype, nil/empty/missing, duplicate ID, unexpected extension, malformed XML, huge text node, deep nesting và external-entity payload.
+Một test suite tốt không chỉ có một file valid. Hãy có fixtures cho wrong không gian tên, missing required phần tử, wrong order, invalid datatype, nil/empty/missing, duplicate ID, unexpected extension, malformed XML, huge text node, deep nesting và external-entity payload.
 
-Mục tiêu không phải “test XML Standard”, mà là verify **exact bộ phân tích cú pháp (parser) + exact configuration + exact lược đồ (schema) version** của application xử lý boundary như bạn nghĩ. Parser defaults và implementation version khác nhau có thể thay behavior bảo mật (security)/hiệu năng (performance).
+Mục tiêu không phải “test XML Standard”, mà là verify **exact bộ phân tích cú pháp + exact configuration + exact phiên bản lược đồ** của application xử lý boundary như bạn nghĩ. Parser defaults và implementation version khác nhau có thể thay behavior bảo mật (security)/hiệu năng (performance).
 
 ---
 

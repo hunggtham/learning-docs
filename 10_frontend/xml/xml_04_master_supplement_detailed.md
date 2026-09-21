@@ -1,15 +1,14 @@
 # XML — Master Supplement
-## XML specification internals, XSD 1.1, XPath/XQuery/XSLT 3.x, chuẩn hóa chính tắc (canonicalization) và các edge case cần biết để thực sự master XML
+## XML specification internals, XSD 1.1, XPath/XQuery/XSLT 3.x, chuẩn hóa chính tắc và các edge case cần biết để thực sự master XML
 
-Tài liệu này là phần cuối của bộ XML. Bạn chỉ nên đọc sau khi đã hiểu ba phần trước. Mục tiêu không phải biến bạn thành người thuộc lòng W3C specification, mà là giúp bạn có mental model đủ sâu để đọc specification khi cần, debug bộ phân tích cú pháp (parser) khác nhau, hiểu vì sao tuần tự hóa (serialization) có thể thay đổi nhưng semantics không đổi, phân biệt schema-typed data với raw XML, và xử lý những hệ thống dùng XML Signature, XSD 1.1, XSLT 3.0 hoặc hướng tài liệu (document-centric) XML phức tạp.
+Tài liệu này là phần cuối của bộ XML. Bạn chỉ nên đọc sau khi đã hiểu ba phần trước. Mục tiêu không phải biến bạn thành người thuộc lòng W3C specification, mà là giúp bạn có mental model đủ sâu để đọc specification khi cần, debug bộ phân tích cú pháp khác nhau, hiểu vì sao tuần tự hóa có thể thay đổi nhưng semantics không đổi, phân biệt schema-typed data với raw XML, và xử lý những hệ thống dùng XML Signature, XSD 1.1, XSLT 3.0 hoặc hướng tài liệu XML phức tạp.
 
-Ở mức này, XML không còn chỉ là “markup language”. Nó là một hệ sinh thái gồm lexical syntax, các không gian tên (namespaces), lược đồ (schema) hệ kiểu (type system), truy vấn (query) data model, chuyển đổi (transformation) engine, URI resolution, bảo mật (security) model và canonical representation.
+Ở mức này, XML không còn chỉ là “markup language”. Nó là một hệ sinh thái gồm lexical syntax, các không gian tên, lược đồ hệ kiểu, truy vấn data model, chuyển đổi engine, URI resolution, bảo mật (security) model và canonical representation.
 
 
 ## Quy ước thuật ngữ trong tài liệu
 
-Tài liệu ưu tiên tiếng Việt tự nhiên nhưng giữ thuật ngữ gốc ở những khái niệm cần tra cứu. Các thuật ngữ cốt lõi được dùng thống nhất như sau: **phần tử (element)** là đơn vị cấu trúc chính của XML; **thuộc tính (attribute)** là thông tin gắn trên phần tử; **không gian tên (namespace)** phân biệt các bộ từ vựng XML; **lược đồ (schema)** mô tả cấu trúc và kiểu dữ liệu hợp lệ; **phân tích cú pháp (parsing)** biến byte/text XML thành cây hoặc chuỗi sự kiện; **đúng cú pháp XML (well-formed)** nghĩa là thỏa các quy tắc cú pháp lõi; **kiểm tra tính hợp lệ (validation)** kiểm tra tài liệu theo DTD/XSD hoặc quy tắc khác; **xử lý theo luồng (streaming)** đọc dữ liệu tuần tự mà không giữ toàn bộ cây trong bộ nhớ; **tuần tự hóa (serialization)** biến cấu trúc XML trong bộ nhớ trở lại dạng text/byte; **chuẩn hóa chính tắc (canonicalization/C14N)** tạo biểu diễn ổn định phục vụ so sánh hoặc chữ ký số. Các tên chuẩn như XML, DTD, XSD, XPath, XSLT, XQuery, DOM, SAX, StAX, SOAP, WSDL, QName, PSVI và tên API cụ thể được giữ nguyên.
-
+Tài liệu dùng tiếng Việt tự nhiên làm ngôn ngữ giải thích chính và giữ thuật ngữ gốc ở lần định nghĩa để tiện tra cứu. Các cách gọi được dùng thống nhất gồm: **phần tử (element)**, **thuộc tính (attribute)**, **phần tử gốc (root element)**, **không gian tên (namespace)**, **tiền tố (prefix)**, **tên mở rộng (expanded name)**, **lược đồ (schema)**, **đúng cú pháp XML (well-formed)**, **kiểm tra tính hợp lệ (validation)**, **phân tích cú pháp (parsing)**, **bộ phân tích cú pháp (parser)**, **xử lý theo luồng (streaming)**, **truy vấn (query)**, **chuyển đổi (transformation)**, **ánh xạ/liên kết (binding)**, **tuần tự hóa (serialization)** và **chuẩn hóa chính tắc (canonicalization/C14N)**. Sau khi đã định nghĩa ở đây, phần nội dung bên dưới ưu tiên dùng cách gọi tiếng Việt để tránh lặp ngoặc tiếng Anh quá dày. Các tên chuẩn như XML, DTD, XSD, XPath, XSLT, XQuery, DOM, SAX, StAX, SOAP, WSDL, QName, PSVI và tên API cụ thể được giữ nguyên.
 
 ---
 
@@ -19,7 +18,7 @@ Hai version chính tồn tại là XML 1.0 và XML 1.1.
 
 XML 1.0 là version phổ biến nhất trong production. XML 1.1 thay đổi một số rule liên quan character repertoire, control characters và newline handling để phù hợp hơn với một số Unicode/use cases.
 
-Điều quan trọng là XML 1.1 không phải “XML mới hơn nên luôn tốt hơn”. Ecosystem support quan trọng hơn version number. Nếu partner, Java library, tool, lược đồ (schema) processor và downstream system đều dùng XML 1.0, việc tự chuyển sang 1.1 chỉ tạo khả năng tương thích (compatibility) risk.
+Điều quan trọng là XML 1.1 không phải “XML mới hơn nên luôn tốt hơn”. Ecosystem support quan trọng hơn version number. Nếu partner, Java library, tool, bộ xử lý lược đồ và downstream system đều dùng XML 1.0, việc tự chuyển sang 1.1 chỉ tạo khả năng tương thích risk.
 
 Vì vậy nếu không có requirement rõ, XML 1.0 vẫn là lựa chọn interoperable nhất.
 
@@ -37,9 +36,9 @@ Một regex kiểu:
 
 không đại diện đầy đủ XML Name grammar.
 
-Điều này quan trọng vì nhiều developer tự validate phần tử (element) name hoặc build dynamic XML bằng regex ASCII. Nếu input có Unicode name hợp lệ, regex có thể reject sai. Ngược lại, regex tự chế có thể cho phép structure không hợp grammar thực.
+Điều này quan trọng vì nhiều developer tự validate tên phần tử hoặc build dynamic XML bằng regex ASCII. Nếu input có Unicode name hợp lệ, regex có thể reject sai. Ngược lại, regex tự chế có thể cho phép structure không hợp grammar thực.
 
-Rule đúng là dùng bộ phân tích cú pháp (parser)/serializer/lược đồ (schema) library để xử lý XML names.
+Rule đúng là dùng bộ phân tích cú pháp/serializer/lược đồ library để xử lý XML names.
 
 ---
 
@@ -55,13 +54,13 @@ Vì vậy byte sequence có thể decode thành Unicode hợp lệ nhưng charac
 
 ## 4. End-of-line normalization
 
-XML bộ phân tích cú pháp (parser) có rule chuẩn hóa line endings.
+XML bộ phân tích cú pháp có rule chuẩn hóa line endings.
 
-Một file có thể dùng CRLF, CR hoặc LF tùy platform. Sau phân tích cú pháp (parsing), processor có thể expose newline theo normalized form.
+Một file có thể dùng CRLF, CR hoặc LF tùy platform. Sau phân tích cú pháp, processor có thể expose newline theo normalized form.
 
 Điều này cho thấy một nguyên tắc lớn: **raw lexical bytes và parsed character data không phải cùng layer**.
 
-Nếu bạn compare raw file byte-for-byte với data sau bộ phân tích cú pháp (parser), bạn đang compare hai representations khác nhau.
+Nếu bạn compare raw file byte-for-byte với data sau bộ phân tích cú pháp, bạn đang compare hai representations khác nhau.
 
 Đây cũng là lý do XML Digital Signature không thể chỉ “hash pretty-printed XML” tùy tiện.
 
@@ -71,11 +70,11 @@ Nếu bạn compare raw file byte-for-byte với data sau bộ phân tích cú p
 
 Attribute values cũng có normalization rules.
 
-Ví dụ thực thể (entity) references có thể được expanded, whitespace có thể được normalized theo XML/DTD type rules, và application cuối cùng nhận string khác lexical source.
+Ví dụ thực thể references có thể được expanded, whitespace có thể được normalized theo XML/DTD type rules, và application cuối cùng nhận string khác lexical source.
 
-Nếu DTD khai báo thuộc tính (attribute) type không phải CDATA, normalization có thể mạnh hơn.
+Nếu DTD khai báo thuộc tính type không phải CDATA, normalization có thể mạnh hơn.
 
-Điều này có hai consequences. Thứ nhất, business logic không nên phụ thuộc exact lexical spelling của thuộc tính (attribute) nếu contract nói semantic value. Thứ hai, cryptographic protocol phải xác định chuẩn hóa chính tắc (canonicalization) đúng thay vì ký raw source tùy tool.
+Điều này có hai consequences. Thứ nhất, business logic không nên phụ thuộc exact lexical spelling của thuộc tính nếu contract nói semantic value. Thứ hai, cryptographic protocol phải xác định chuẩn hóa chính tắc đúng thay vì ký raw source tùy tool.
 
 ---
 
@@ -90,7 +89,7 @@ XML declaration có thể chứa:
   standalone="yes"?>
 ```
 
-`standalone` không có nghĩa “file này không cần internet” hoặc “không được load các tài nguyên bên ngoài (external resources)”.
+`standalone` không có nghĩa “file này không cần internet” hoặc “không được load các tài nguyên bên ngoài”.
 
 Nó liên quan việc external markup declarations có ảnh hưởng tới information được processor truyền cho application hay không theo XML rules.
 
@@ -98,7 +97,7 @@ Nó liên quan việc external markup declarations có ảnh hưởng tới info
 
 ---
 
-# DTD Deeper
+# DTD chuyên sâu
 
 ## 7. Internal subset và external subset
 
@@ -118,42 +117,42 @@ hoặc external subset:
 
 hoặc kết hợp theo grammar phù hợp.
 
-Điểm cần nhớ ở mức master là DTD processing không chỉ là “validate structure”. Nó có thể ảnh hưởng các thực thể (entities), default thuộc tính (attribute) values và information application nhận.
+Điểm cần nhớ ở mức master là DTD processing không chỉ là “validate structure”. Nó có thể ảnh hưởng các thực thể, default giá trị thuộc tínhs và information application nhận.
 
 ---
 
-## 8. Parameter các thực thể (entities)
+## 8. Parameter các thực thể
 
-General thực thể (entity) dùng trong document content:
+General thực thể dùng trong document content:
 
 ```xml
 &company;
 ```
 
-Parameter thực thể (entity) dùng trong DTD:
+Parameter thực thể dùng trong DTD:
 
 ```dtd
 <!ENTITY % common SYSTEM "common.dtd">
 %common;
 ```
 
-Parameter các thực thể (entities) cho phép modularize DTD grammar.
+Parameter các thực thể cho phép modularize DTD grammar.
 
-Nhưng external parameter các thực thể (entities) cũng là một phần của XXE bề mặt tấn công (attack surface). Nếu bạn chỉ disable general các thực thể ngoài (external các thực thể (entities)) nhưng vẫn để parameter thực thể (entity) resolution mở, bộ phân tích cú pháp (parser) có thể vẫn access các tài nguyên bên ngoài (external resources).
+Nhưng external parameter các thực thể cũng là một phần của XXE bề mặt tấn công. Nếu bạn chỉ disable general các thực thể ngoài (external các thực thể) nhưng vẫn để parameter thực thể resolution mở, bộ phân tích cú pháp có thể vẫn access các tài nguyên bên ngoài.
 
 ---
 
-## 9. Unparsed các thực thể (entities) và NOTATION
+## 9. Unparsed các thực thể và NOTATION
 
-DTD còn có khái niệm unparsed thực thể (entity) và notation để liên kết XML document với external non-XML data format.
+DTD còn có khái niệm unparsed thực thể và notation để liên kết XML document với external non-XML data format.
 
 Trong application hiện đại bạn ít gặp chúng, nhưng có thể thấy trong publishing, SGML-derived ecosystem hoặc old document standards.
 
-Bạn không cần memorize syntax chi tiết, chỉ cần nhận diện rằng DTD thực thể (entity) system rộng hơn việc thay `&name;` bằng text.
+Bạn không cần memorize syntax chi tiết, chỉ cần nhận diện rằng DTD thực thể system rộng hơn việc thay `&name;` bằng text.
 
 ---
 
-# Namespace Deeper
+# Không gian tên (Namespace) chuyên sâu
 
 ## 10. Namespace URI là identifier, không phải URL để normalize tùy ý
 
@@ -169,11 +168,11 @@ và:
 https://example.com/ns/
 ```
 
-không nên được application tự coi là cùng không gian tên (namespace) chỉ vì “URL giống nhau”.
+không nên được application tự coi là cùng không gian tên chỉ vì “URL giống nhau”.
 
-Namespace identity dựa trên không gian tên (namespace) name theo specification, không dựa trên HTTP redirect, DNS equivalence hoặc URL chuẩn hóa chính tắc (canonicalization) tự chế.
+Namespace identity dựa trên không gian tên name theo specification, không dựa trên HTTP redirect, DNS equivalence hoặc URL chuẩn hóa chính tắc tự chế.
 
-Đây là nguyên tắc cực kỳ quan trọng với signature, bảo mật (security) matching và lược đồ (schema) resolution.
+Đây là nguyên tắc cực kỳ quan trọng với signature, bảo mật (security) matching và lược đồ resolution.
 
 ---
 
@@ -200,9 +199,9 @@ Nếu input đổi thành:
 <o:Order xmlns:o="urn:order"/>
 ```
 
-semantics không gian tên (namespace) vẫn giữ nguyên.
+semantics không gian tên vẫn giữ nguyên.
 
-Mọi code security-sensitive nên match bằng URI của không gian tên (không gian tên (namespace) URI) + local name.
+Mọi code security-sensitive nên match bằng URI của không gian tên (không gian tên URI) + local name.
 
 ---
 
@@ -215,7 +214,7 @@ xs:string
 app:OrderType
 ```
 
-Điểm khó là QName không chỉ xuất hiện trong phần tử (element) names. Nó còn có thể nằm **trong thuộc tính (attribute) value**.
+Điểm khó là QName không chỉ xuất hiện trong tên phần tửs. Nó còn có thể nằm **trong giá trị thuộc tính**.
 
 Ví dụ:
 
@@ -223,9 +222,9 @@ Ví dụ:
 <xs:element type="app:OrderType"/>
 ```
 
-Để hiểu `app:OrderType`, processor phải nhìn không gian tên (namespace) ánh xạ/liên kết (binding) của tiền tố (prefix) `app` trong context hiện tại.
+Để hiểu `app:OrderType`, processor phải nhìn không gian tên ánh xạ/liên kết của tiền tố `app` trong context hiện tại.
 
-Nếu bạn copy một thuộc tính (attribute) QName-valued sang một phần tử (element) khác nhưng quên copy không gian tên (namespace) declaration, lexical text giống nhau nhưng meaning hỏng.
+Nếu bạn copy một thuộc tính QName-valued sang một phần tử khác nhưng quên copy khai báo không gian tên, lexical text giống nhau nhưng meaning hỏng.
 
 ---
 
@@ -235,9 +234,9 @@ XML node/document có thể có base URI dựa trên document location, `xml:bas
 
 Functions hoặc processors có thể resolve relative URI dựa trên base URI.
 
-Ví dụ XSLT `document()`, lược đồ (schema) imports hoặc application link resolution đều có thể bị ảnh hưởng.
+Ví dụ XSLT `document()`, lược đồ imports hoặc application link resolution đều có thể bị ảnh hưởng.
 
-Ở mức bảo mật (security), base URI và URI bộ phân giải (resolver) phải được xem cùng nhau. Một relative URI tưởng vô hại có thể resolve thành local file hoặc remote network resource.
+Ở mức bảo mật (security), base URI và URI bộ phân giải phải được xem cùng nhau. Một relative URI tưởng vô hại có thể resolve thành local file hoặc remote network resource.
 
 ---
 
@@ -245,7 +244,7 @@ Ví dụ XSLT `document()`, lược đồ (schema) imports hoặc application li
 
 ## 14. XML Information Set
 
-XML Infoset là mô hình abstract mô tả “information” có trong một XML document sau phân tích cú pháp (parsing), không tập trung vào exact lexical spelling.
+XML Infoset là mô hình abstract mô tả “information” có trong một XML document sau phân tích cú pháp, không tập trung vào exact lexical spelling.
 
 Ví dụ:
 
@@ -261,7 +260,7 @@ và:
 
 khác cách viết nhưng không nhất thiết khác information ở level mà nhiều XML applications quan tâm.
 
-Infoset giúp bạn hiểu vì sao parse → serialize có thể đổi quote style, self-closing form hoặc thuộc tính (attribute) formatting mà semantics vẫn giữ.
+Infoset giúp bạn hiểu vì sao parse → serialize có thể đổi quote style, self-closing form hoặc thuộc tính formatting mà semantics vẫn giữ.
 
 ---
 
@@ -285,13 +284,13 @@ Nếu application dùng schema-aware XSLT/XQuery processor, type information có
 
 ---
 
-## 16. Default values từ lược đồ (schema)
+## 16. Default values từ lược đồ
 
 Schema có thể định nghĩa default/fixed values.
 
-Điều này nghĩa raw XML source không có thuộc tính (attribute)/phần tử (element) value rõ ràng, nhưng post-validation application model có thể expose schema-supplied value tùy API.
+Điều này nghĩa raw XML source không có thuộc tính/phần tử value rõ ràng, nhưng post-validation application model có thể expose schema-supplied value tùy API.
 
-Đây là lý do khi debug “tại sao object có giá trị mà source XML không có”, bạn phải kiểm tra lược đồ (schema) defaults.
+Đây là lý do khi debug “tại sao object có giá trị mà source XML không có”, bạn phải kiểm tra lược đồ defaults.
 
 ---
 
@@ -327,9 +326,9 @@ Ví dụ concept:
 
 Assertion dùng XPath-like expression để kiểm tra constraint trên instance.
 
-Điều này làm lược đồ (schema) expressive hơn nhưng cũng đẩy business-like logic vào lược đồ (schema).
+Điều này làm lược đồ expressive hơn nhưng cũng đẩy business-like logic vào lược đồ.
 
-Bạn phải cân bằng giữa “lược đồ (schema) kiểm tra tính hợp lệ (validation) mạnh” và “lược đồ (schema) quá thông minh khó debug”.
+Bạn phải cân bằng giữa “lược đồ kiểm tra tính hợp lệ (validation) mạnh” và “lược đồ quá thông minh khó debug”.
 
 Ngoài ra processor support XSD 1.1 không universal. Không assume Java default XML Schema implementation support mọi feature.
 
@@ -339,9 +338,9 @@ Ngoài ra processor support XSD 1.1 không universal. Không assume Java default
 
 XSD 1.1 có thể chọn type dựa trên conditions.
 
-Ví dụ conceptually, một phần tử (element) có thuộc tính (attribute) `kind="company"` có thể dùng CompanyType, còn `kind="person"` dùng PersonType.
+Ví dụ conceptually, một phần tử có thuộc tính `kind="company"` có thể dùng CompanyType, còn `kind="person"` dùng PersonType.
 
-Feature này powerful nhưng làm khả năng liên vận (interoperability) giảm nếu consumer chỉ support XSD 1.0.
+Feature này powerful nhưng làm khả năng liên vận giảm nếu consumer chỉ support XSD 1.0.
 
 Trong cross-company integration, support matrix quan trọng hơn việc dùng feature mới nhất.
 
@@ -353,7 +352,7 @@ Trong cross-company integration, support matrix quan trọng hơn việc dùng f
 
 Các khái niệm như anchoring, character classes và Unicode categories không map 1:1 với JavaScript/Java/PCRE.
 
-Nếu contract có regex quan trọng, test bằng đúng lược đồ (schema) processor.
+Nếu contract có regex quan trọng, test bằng đúng bộ xử lý lược đồ.
 
 ---
 
@@ -393,7 +392,7 @@ Với financial XML:
 <amount>123.45</amount>
 ```
 
-ánh xạ (mapping) sang Java `BigDecimal` thường phù hợp hơn `double`.
+ánh xạ sang Java `BigDecimal` thường phù hợp hơn `double`.
 
 Nếu dùng `double`, binary floating point có thể tạo rounding artifacts không phù hợp money calculation.
 
@@ -419,7 +418,7 @@ sang Java type nào phụ thuộc semantic contract, không chỉ syntax.
 
 ## 25. Identity constraints không dùng arbitrary XPath 3.1
 
-Selectors/fields của `xs:key`, `xs:keyref`, `xs:unique` dùng một XPath subset/rule set dành riêng cho lược đồ (schema) constraints.
+Selectors/fields của `xs:key`, `xs:keyref`, `xs:unique` dùng một XPath subset/rule set dành riêng cho lược đồ constraints.
 
 Đừng assume mọi expression chạy được trong Saxon XPath 3.1 sẽ chạy được trong `xs:key`.
 
@@ -546,7 +545,7 @@ map {
 }
 ```
 
-Điều này giúp truy vấn (query) ecosystem xử lý data giống JSON object, không chỉ XML nodes.
+Điều này giúp truy vấn ecosystem xử lý data giống JSON object, không chỉ XML nodes.
 
 ---
 
@@ -593,9 +592,9 @@ element user {
 
 ## 36. XQuery modules
 
-Large XQuery application có modules, functions, các không gian tên (namespaces) và imports.
+Large XQuery application có modules, functions, các không gian tên và imports.
 
-Một số XML-native database dùng XQuery như application/truy vấn (query) language thực sự, không chỉ là một expression ngắn.
+Một số XML-native database dùng XQuery như application/truy vấn language thực sự, không chỉ là một expression ngắn.
 
 ---
 
@@ -611,7 +610,7 @@ Chúng có concepts về exposed/accepted components, visibility và versioning.
 
 ## 38. XSLT accumulators
 
-Streaming chuyển đổi (transformation) đôi khi cần running state, ví dụ section number hoặc running total.
+Streaming chuyển đổi đôi khi cần running state, ví dụ section number hoặc running total.
 
 Accumulators cung cấp cơ chế declarative để tính state theo traversal.
 
@@ -631,14 +630,14 @@ Ví dụ một mode có thể nói “nếu không có template specialized thì
 
 ## 40. Identity Transformation Pattern
 
-Một chuyển đổi (transformation) phổ biến là:
+Một chuyển đổi phổ biến là:
 
 ```text
 copy toàn document
 nhưng override vài node cần thay
 ```
 
-Ví dụ đổi không gian tên (namespace), redact password hoặc rename một phần tử (element).
+Ví dụ đổi không gian tên, redact password hoặc rename một phần tử.
 
 Thay vì viết output cho toàn tree, bạn dùng identity/default-copy rule rồi chỉ override difference.
 
@@ -646,15 +645,15 @@ Pattern này cực kỳ quan trọng trong migration và normalization.
 
 ---
 
-# Resolver và External Resources
+# Bộ phân giải (resolver) và tài nguyên bên ngoài (external resources)
 
 ## 41. XML Catalog sâu hơn
 
-XML Catalog không chỉ map lược đồ (schema) URL. Nó có thể map system identifiers, public identifiers hoặc URI references tùy catalog rules.
+XML Catalog không chỉ map lược đồ URL. Nó có thể map system identifiers, public identifiers hoặc URI references tùy catalog rules.
 
 Trong build/integration environment, Catalog giúp biến external dependencies thành controlled local resources.
 
-Điều này rất hữu ích nếu vendor lược đồ (schema) dùng absolute URL nhưng production không được internet access.
+Điều này rất hữu ích nếu vendor lược đồ dùng absolute URL nhưng production không được internet access.
 
 ---
 
@@ -676,15 +675,15 @@ Pattern này áp dụng với XSD imports, XSLT includes/imports, `document()` v
 
 ---
 
-# Canonical XML
+# XML chính tắc (Canonical XML)
 
 ## 43. Canonicalization giải quyết vấn đề gì?
 
 XML có nhiều lexical forms tương đương về semantic information.
 
-Ví dụ thuộc tính (attribute) order, quote style, empty phần tử (element) syntax và không gian tên (namespace) declaration placement có thể khác.
+Ví dụ thuộc tính order, quote style, empty phần tử syntax và khai báo không gian tên placement có thể khác.
 
-Canonical XML định nghĩa cách biến XML information thành deterministic tuần tự hóa (serialization) theo algorithm cụ thể.
+Canonical XML định nghĩa cách biến XML information thành deterministic tuần tự hóa theo algorithm cụ thể.
 
 Nó được dùng nhiều nhất trong digital signatures.
 
@@ -692,15 +691,15 @@ Nó được dùng nhiều nhất trong digital signatures.
 
 ## 44. Inclusive và Exclusive Canonicalization
 
-Trong XML Signature ecosystem có nhiều chuẩn hóa chính tắc (canonicalization) algorithms.
+Trong XML Signature ecosystem có nhiều chuẩn hóa chính tắc algorithms.
 
-Exclusive chuẩn hóa chính tắc (canonicalization) đặc biệt hữu ích khi sign một subtree có thể được move hoặc embed trong namespace-rich context, vì bạn không muốn surrounding không gian tên (namespace) declarations thay đổi canonical form ngoài ý muốn.
+Exclusive chuẩn hóa chính tắc đặc biệt hữu ích khi sign một subtree có thể được move hoặc embed trong namespace-rich context, vì bạn không muốn surrounding khai báo không gian têns thay đổi canonical form ngoài ý muốn.
 
 Bạn không cần tự implement, nhưng phải biết algorithm identifier là một phần protocol. Không tự đổi “vì output nhìn giống”.
 
 ---
 
-# XML Signature sâu hơn
+# Chữ ký XML (XML Signature) chuyên sâu
 
 ## 45. Reference là trọng tâm của XML Signature
 
@@ -729,7 +728,7 @@ Nếu bỏ step cuối, vẫn có thể có application-level vulnerability.
 
 Reference `#order123` phải resolve tới đúng node.
 
-XML processor/library phải biết thuộc tính (attribute) nào là ID.
+XML processor/library phải biết thuộc tính nào là ID.
 
 Nguồn ID semantics có thể là:
 
@@ -749,7 +748,7 @@ Nếu attacker tạo duplicate-looking IDs hoặc application resolve khác veri
 
 Giả sử signature verifier nói node A hợp lệ.
 
-Business code không được bỏ node A rồi chạy truy vấn (query):
+Business code không được bỏ node A rồi chạy truy vấn:
 
 ```text
 find first <Order>
@@ -777,19 +776,19 @@ attacker có thể gửi:
 <evil:Admin xmlns:evil="urn:evil"/>
 ```
 
-Local name là `Admin`, nhưng vocabulary không gian tên (namespace) khác.
+Local name là `Admin`, nhưng vocabulary không gian tên khác.
 
-Security-sensitive XML processing phải check tên mở rộng (expanded name), không chỉ local name hoặc tiền tố (prefix).
+Security-sensitive XML processing phải check tên mở rộng, không chỉ local name hoặc tiền tố.
 
 ---
 
-# Parser Differential và Resource Limits
+# Khác biệt giữa bộ phân tích cú pháp (parser differential) và giới hạn tài nguyên (resource limits)
 
 ## 49. Parser differential
 
-Không phải mọi XML bộ phân tích cú pháp (parser) có same defaults.
+Không phải mọi XML bộ phân tích cú pháp có same defaults.
 
-Một bộ phân tích cú pháp (parser) có thể enable DTD, bộ phân tích cú pháp (parser) khác disable. Một XSD engine support 1.1, engine khác chỉ 1.0. Entity limit, không gian tên (namespace) behavior và XInclude defaults cũng có thể khác.
+Một bộ phân tích cú pháp có thể enable DTD, bộ phân tích cú pháp khác disable. Một XSD engine support 1.1, engine khác chỉ 1.0. Entity limit, không gian tên behavior và XInclude defaults cũng có thể khác.
 
 Vì vậy protocol bảo mật (security) không nên phụ thuộc undocumented default.
 
@@ -799,9 +798,9 @@ Configuration phải explicit và tested trên exact implementation/version.
 
 ## 50. XXE disabled vẫn chưa đủ chống DoS
 
-Một attacker không cần thực thể ngoài (external thực thể (entity)) để gây resource exhaustion.
+Một attacker không cần thực thể ngoài (external thực thể) để gây resource exhaustion.
 
-Họ có thể gửi document sâu hàng trăm nghìn levels, hàng triệu các phần tử (elements), các thuộc tính (attributes) khổng lồ hoặc text node rất lớn.
+Họ có thể gửi document sâu hàng trăm nghìn levels, hàng triệu các phần tử, các thuộc tính khổng lồ hoặc text node rất lớn.
 
 Vì vậy XML boundary cần size/depth/node limits độc lập với XXE configuration.
 
@@ -811,7 +810,7 @@ Vì vậy XML boundary cần size/depth/node limits độc lập với XXE confi
 
 Raw XML 100 MB có thể thành tree tiêu tốn vài trăm MB hoặc hơn.
 
-Reason gồm Java objects, UTF string representation, arrays, pointers, các thuộc tính (attributes) và siêu dữ liệu (metadata).
+Reason gồm Java objects, UTF string representation, arrays, pointers, các thuộc tính và siêu dữ liệu (metadata).
 
 Nếu service có 512 MB heap, “file chỉ 100 MB” vẫn có thể làm service crash.
 
@@ -819,7 +818,7 @@ Streaming design phải dựa trên benchmark và limits thực.
 
 ---
 
-# Serialization và Lexical Preservation
+# Tuần tự hóa (serialization) và bảo toàn biểu diễn từ vựng (lexical preservation)
 
 ## 52. Pretty-print có thể thay đổi data
 
@@ -831,7 +830,7 @@ Với record XML:
 
 thêm indentation thường không ảnh hưởng business fields.
 
-Nhưng với nội dung hỗn hợp (mixed content):
+Nhưng với nội dung hỗn hợp:
 
 ```xml
 <p>Hello <b>world</b>!</p>
@@ -875,15 +874,15 @@ output:
 <ns1:user xmlns:ns1="urn:user"/>
 ```
 
-có thể hoàn toàn equivalent theo không gian tên (namespace) semantics.
+có thể hoàn toàn equivalent theo không gian tên semantics.
 
-Consumer không được depend exact tiền tố (prefix) string trừ khi một unusual protocol định nghĩa lexical contract.
+Consumer không được depend exact tiền tố string trừ khi một unusual protocol định nghĩa lexical contract.
 
 ---
 
 ## 55. Attribute order không phải business order
 
-Không viết code nghĩ “thuộc tính (attribute) đầu tiên là id, thứ hai là status”.
+Không viết code nghĩ “thuộc tính đầu tiên là id, thứ hai là status”.
 
 Attribute names xác định meaning, không phải vị trí.
 
@@ -891,7 +890,7 @@ Canonicalization có ordering rule riêng chỉ để tạo deterministic repres
 
 ---
 
-## 56. Empty phần tử (element) lexical form
+## 56. Empty phần tử lexical form
 
 ```xml
 <a/>
@@ -903,7 +902,7 @@ và:
 <a></a>
 ```
 
-thường biểu diễn cùng empty phần tử (element).
+thường biểu diễn cùng empty phần tử.
 
 Raw string diff không phải semantic XML diff.
 
@@ -917,11 +916,11 @@ Input:
 <name>&company;</name>
 ```
 
-sau phân tích cú pháp (parsing) có thể thành text `Acme Corporation`.
+sau phân tích cú pháp có thể thành text `Acme Corporation`.
 
 Serializer sau đó có thể output direct text thay vì `&company;`.
 
-Business meaning không được phụ thuộc thực thể (entity) lexical choice.
+Business meaning không được phụ thuộc thực thể lexical choice.
 
 ---
 
@@ -974,17 +973,17 @@ trừ khi protocol explicitly yêu cầu canonical lexical representation.
 
 ---
 
-# Alternative Schema Languages
+# Các ngôn ngữ lược đồ thay thế (alternative schema languages)
 
 ## 60. RELAX NG
 
-RELAX NG là một lược đồ (schema) language khác ngoài DTD và XSD.
+RELAX NG là một lược đồ language khác ngoài DTD và XSD.
 
 Nó có XML syntax và compact syntax.
 
-RELAX NG nổi tiếng với grammar model tương đối elegant, đặc biệt cho hướng tài liệu (document-centric) XML và nội dung hỗn hợp (mixed content).
+RELAX NG nổi tiếng với grammar model tương đối elegant, đặc biệt cho hướng tài liệu XML và nội dung hỗn hợp.
 
-Bạn không nhất thiết phải dùng nó trong Java enterprise project, nhưng master XML nên biết XSD không phải lược đồ (schema) language duy nhất.
+Bạn không nhất thiết phải dùng nó trong Java enterprise project, nhưng master XML nên biết XSD không phải lược đồ language duy nhất.
 
 ---
 
@@ -1029,13 +1028,13 @@ Không bắt một layer làm mọi việc.
 
 ---
 
-# XSD Design Patterns
+# Các mẫu thiết kế XSD (XSD design patterns)
 
 ## 63. Russian Doll
 
-Russian Doll style dùng local anonymous types nested trong một root/global phần tử (element).
+Russian Doll style dùng local anonymous types nested trong một root/global phần tử.
 
-Ưu điểm là lược đồ (schema) self-contained và encapsulated.
+Ưu điểm là lược đồ self-contained và encapsulated.
 
 Nhược điểm là type reuse thấp.
 
@@ -1045,9 +1044,9 @@ Pattern phù hợp vocabulary nhỏ, structure ít tái sử dụng.
 
 ## 64. Venetian Blind
 
-Venetian Blind dùng global named complex types nhưng local phần tử (element) declarations.
+Venetian Blind dùng global named complex types nhưng local phần tử declarations.
 
-Ưu điểm là reusable type definitions mà vẫn hạn chế số global các phần tử (elements).
+Ưu điểm là reusable type definitions mà vẫn hạn chế số global các phần tử.
 
 Đây là pattern phổ biến khi domain structures được reuse.
 
@@ -1055,27 +1054,27 @@ Venetian Blind dùng global named complex types nhưng local phần tử (elemen
 
 ## 65. Salami Slice
 
-Salami Slice dùng nhiều global phần tử (element) declarations rồi reference chúng.
+Salami Slice dùng nhiều global phần tử declarations rồi reference chúng.
 
-Ưu điểm là phần tử (element) reuse.
+Ưu điểm là phần tử reuse.
 
-Nhược điểm là global symbol space lớn và lược đồ (schema) navigation phức tạp hơn.
+Nhược điểm là global symbol space lớn và lược đồ navigation phức tạp hơn.
 
 ---
 
 ## 66. Garden of Eden
 
-Garden of Eden đưa cả các phần tử (elements) và named types lên global scope.
+Garden of Eden đưa cả các phần tử và named types lên global scope.
 
 Ưu điểm là maximum reuse/extensibility.
 
-Nhược điểm là lược đồ (schema) có nhiều global components và dependency graph phức tạp.
+Nhược điểm là lược đồ có nhiều global components và dependency graph phức tạp.
 
 Không có pattern “senior nhất”. Chọn theo governance, reuse và versioning requirements.
 
 ---
 
-# Contract-first và Code-first
+# Thiết kế từ hợp đồng (contract-first) và từ mã nguồn (code-first)
 
 ## 67. Contract-first
 
@@ -1090,7 +1089,7 @@ design XML vocabulary/XSD
 
 Ưu điểm lớn nhất là contract không phụ thuộc Java implementation.
 
-Nó phù hợp B2B/tích hợp doanh nghiệp (enterprise integration) nơi nhiều language/platform cùng consume.
+Nó phù hợp B2B/tích hợp doanh nghiệp nơi nhiều language/platform cùng consume.
 
 ---
 
@@ -1105,17 +1104,17 @@ Java classes
 
 Nhanh cho internal service.
 
-Nhưng generated lược đồ (schema) dễ phản ánh OO decisions như class inheritance, wrapper collections hoặc implementation naming.
+Nhưng generated lược đồ dễ phản ánh OO decisions như class inheritance, wrapper collections hoặc implementation naming.
 
 Nếu contract tồn tại 10 năm và có nhiều partner, code-first có thể tạo technical debt.
 
 ---
 
-# Master Design Patterns
+# Các mẫu thiết kế mức Master (Master Design Patterns)
 
 ## 69. Boundary Parser
 
-Thay vì mỗi service method tự tạo bộ phân tích cú pháp (parser), nên có một boundary component chịu trách nhiệm:
+Thay vì mỗi service method tự tạo bộ phân tích cú pháp, nên có một boundary component chịu trách nhiệm:
 
 ```text
 size limits
@@ -1133,19 +1132,19 @@ Business code chỉ nhận typed/trusted representation.
 
 ## 70. Resolver Gateway
 
-Mọi external XML resource lookup đi qua bộ phân giải (resolver) chung.
+Mọi external XML resource lookup đi qua bộ phân giải chung.
 
 Resolver thực hiện allowlist, XML Catalog, caching và observability.
 
-Không để XSLT/XSD/bộ phân tích cú pháp (parser) tự gọi internet ở nhiều nơi.
+Không để XSLT/XSD/bộ phân tích cú pháp tự gọi internet ở nhiều nơi.
 
 ---
 
 ## 71. Schema Registry
 
-Schemas nên có ownership, version, checksum, khả năng tương thích (compatibility) status và release lifecycle.
+Schemas nên có ownership, version, checksum, khả năng tương thích status và release lifecycle.
 
-Nếu một common lược đồ (schema) bị thay âm thầm, nhiều integration có thể vỡ.
+Nếu một common lược đồ bị thay âm thầm, nhiều integration có thể vỡ.
 
 Schema phải được quản lý như API artifact.
 
@@ -1155,7 +1154,7 @@ Schema phải được quản lý như API artifact.
 
 Vendor-specific XML được transform thành internal model ổn định.
 
-Điều này ngăn external không gian tên (namespace)/type quirks leak vào domain.
+Điều này ngăn external không gian tên/type quirks leak vào domain.
 
 ---
 
@@ -1178,17 +1177,17 @@ Mỗi stage nhỏ và testable.
 
 Khi dùng XML Signature, signature verification layer phải trả exact verified node/data cho business layer.
 
-Business code không tự truy vấn (query) lại toàn document.
+Business code không tự truy vấn lại toàn document.
 
 Đây là pattern bảo mật (security) cực quan trọng.
 
 ---
 
-# Debug và Review
+# Gỡ lỗi (debug) và rà soát (review)
 
 ## 75. Full debug flow
 
-Khi XML integration lỗi, đừng sửa ngẫu nhiên tiền tố (prefix) hoặc XPath.
+Khi XML integration lỗi, đừng sửa ngẫu nhiên tiền tố hoặc XPath.
 
 Hãy đi theo thứ tự:
 
@@ -1215,19 +1214,19 @@ signature reference target node nào?
 
 ## 76. Master bảo mật (security) review
 
-Một XML endpoint nhận untrusted input phải được review cả input size, nesting depth, DTD, các thực thể ngoài (external các thực thể (entities)), parameter các thực thể (entities), external subset, XInclude, lược đồ (schema) resolution, XSLT resolution, XPath construction, nhận biết không gian tên (namespace-aware) matching, signature reference ánh xạ/liên kết (binding) và sensitive logging.
+Một XML endpoint nhận untrusted input phải được review cả input size, nesting depth, DTD, các thực thể ngoài (external các thực thể), parameter các thực thể, external subset, XInclude, lược đồ resolution, XSLT resolution, XPath construction, nhận biết không gian tên matching, signature reference ánh xạ/liên kết và sensitive logging.
 
 Nếu endpoint chỉ “disable XXE” nhưng không có input size limit, nó vẫn có thể bị memory DoS.
 
 Nếu signature verify đúng nhưng business code đọc wrong node, nó vẫn có thể vulnerable.
 
-Security XML là chuỗi xử lý (pipeline) property, không phải một bộ phân tích cú pháp (parser) flag.
+Security XML là chuỗi xử lý property, không phải một bộ phân tích cú pháp flag.
 
 ---
 
 ## 77. Master hiệu năng (performance) review
 
-Hãy hỏi liệu DOM có thật sự cần không, input maximum size là bao nhiêu, lược đồ (schema)/XSLT có compile lại mỗi request không, bộ phân giải (resolver) có network access không, XPath có broad `//` trên tree lớn không, chuỗi xử lý (pipeline) có parse-serialize nhiều vòng không, và memory amplification đã được benchmark chưa.
+Hãy hỏi liệu DOM có thật sự cần không, input maximum size là bao nhiêu, lược đồ/XSLT có compile lại mỗi request không, bộ phân giải có network access không, XPath có broad `//` trên tree lớn không, chuỗi xử lý có parse-serialize nhiều vòng không, và memory amplification đã được benchmark chưa.
 
 Một hiệu năng (performance) bug XML thường đến từ architecture hơn là một tag cụ thể.
 
@@ -1277,7 +1276,7 @@ Mỗi arrow là một nơi có thể có bug, hiệu năng (performance) cost ho
 
 Bạn không cần thuộc từng production rule trong W3C specification.
 
-Bạn có thể coi mình có XML mastery foundation khi nhìn một hệ thống XML lạ và biết hỏi đúng câu: XML version nào, encoding nào, không gian tên (namespace) nào, lược đồ (schema) version nào, bộ phân tích cú pháp (parser) model nào, external resolution có được kiểm soát không, XPath/XSLT version nào, contract evolve thế nào, nil-vs-missing semantics ra sao, document có lớn tới mức cần xử lý theo luồng (streaming) không, và protocol có chuẩn hóa chính tắc (canonicalization)/signature requirement không.
+Bạn có thể coi mình có XML mastery foundation khi nhìn một hệ thống XML lạ và biết hỏi đúng câu: XML version nào, encoding nào, không gian tên nào, phiên bản lược đồ nào, bộ phân tích cú pháp model nào, external resolution có được kiểm soát không, XPath/XSLT version nào, contract evolve thế nào, nil-vs-missing semantics ra sao, document có lớn tới mức cần xử lý theo luồng không, và protocol có chuẩn hóa chính tắc/signature requirement không.
 
 Đó là sự khác biệt giữa “biết viết XML” và “hiểu XML platform”.
 
@@ -1285,6 +1284,6 @@ Bạn có thể coi mình có XML mastery foundation khi nhìn một hệ thốn
 
 ## 80. Cách học bộ bốn file
 
-Phần Beginner nên đọc từ đầu đến cuối và tự gõ XML examples. Phần Intermediate cần thực hành không gian tên (namespace)/XPath/XSD vì chỉ đọc sẽ rất dễ quên. Phần Senior nên học song song với Java XML APIs hoặc một integration case thực tế. Phần Master Supplement không cần học thuộc trong một lần; hãy dùng nó để xây mental model và quay lại khi gặp lược đồ (schema), signature, bộ phân tích cú pháp (parser) hoặc chuyển đổi (transformation) edge case.
+Phần Beginner nên đọc từ đầu đến cuối và tự gõ XML examples. Phần Intermediate cần thực hành không gian tên/XPath/XSD vì chỉ đọc sẽ rất dễ quên. Phần Senior nên học song song với Java XML APIs hoặc một integration case thực tế. Phần Master Supplement không cần học thuộc trong một lần; hãy dùng nó để xây mental model và quay lại khi gặp lược đồ, signature, bộ phân tích cú pháp hoặc chuyển đổi edge case.
 
-Sau khi hoàn thành cả bốn phần, bước tiếp theo hiệu quả nhất không phải đọc thêm hàng trăm trang lý thuyết mà là tự làm một project nhỏ có không gian tên (namespace), XSD kiểm tra tính hợp lệ (validation), XPath truy vấn (query), StAX large-file phân tích cú pháp (parsing), XSLT chuyển đổi (transformation) và secure bộ phân tích cú pháp (parser) configuration. Khi bạn tự debug những tương tác (interaction) đó, kiến thức XML sẽ trở thành kỹ năng thực tế thay vì chỉ là kiến thức đọc.
+Sau khi hoàn thành cả bốn phần, bước tiếp theo hiệu quả nhất không phải đọc thêm hàng trăm trang lý thuyết mà là tự làm một project nhỏ có không gian tên, XSD kiểm tra tính hợp lệ (validation), XPath truy vấn, StAX large-file phân tích cú pháp, XSLT chuyển đổi và secure cấu hình bộ phân tích cú phápuration. Khi bạn tự debug những tương tác (interaction) đó, kiến thức XML sẽ trở thành kỹ năng thực tế thay vì chỉ là kiến thức đọc.
