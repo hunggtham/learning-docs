@@ -6,6 +6,46 @@
 
 ---
 
+
+<!-- VERSION_UPDATE_2026-09-12_START -->
+## Bản đồ version dùng xuyên suốt tài liệu — cập nhật 2026-09-12
+
+Tài liệu dùng **Spring Boot 4.1.1 + Spring Framework 7.0.9** làm baseline stable hiện đại. Spring Boot 4.1.1 yêu cầu tối thiểu Java 17, tương thích đến Java 26 và yêu cầu Spring Framework 7.0.9 trở lên. Với Servlet stack, generation này dùng Servlet 6.1, điển hình với Tomcat 11 hoặc Jetty 12.1. GraalVM Native Image support của Boot 4.1 yêu cầu GraalVM 25 trở lên.
+
+Khi học để làm việc enterprise, bạn vẫn phải nhận biết **Spring Boot 3.5.16 + Spring Framework 6.2.19+**. Đây là maintenance line quan trọng của generation 3.x, vẫn yêu cầu Java 17+, tương thích đến Java 25 và thuộc Servlet 6.0 generation. Đây cũng là bridge tốt nhất trước khi migrate một hệ thống Boot 3 sang Boot 4.
+
+Generation legacy **Spring Boot 2.7 + Spring Framework 5.3** cần được nhận biết để maintain code cũ. Dấu hiệu rõ nhất là Java 8/11-era code và namespace `javax.*`. Từ Boot 3 / Framework 6, Spring chuyển sang Java 17+ và `jakarta.*`. Từ Boot 4 / Framework 7, Spring tiếp tục nâng Jakarta EE 11, modularize Boot mạnh hơn và dùng Jackson 3 làm JSON generation ưu tiên.
+
+Ở phía preview, **Spring Boot 4.2.0-M1 + Spring Framework 7.1.0-M1** đã có tài liệu nhưng vẫn là milestone. Tài liệu này chỉ note direction, không dùng preview API làm baseline.
+
+```text
+Boot 2.7 + Framework 5.3
+→ Java 8+ generation
+→ javax.*
+→ legacy enterprise
+
+Boot 3.5 + Framework 6.2
+→ Java 17+
+→ jakarta.*
+→ Servlet 6.0
+→ migration bridge quan trọng
+
+Boot 4.1 + Framework 7.0
+→ Java 17–26
+→ Jakarta EE 11 / Servlet 6.1
+→ Jackson 3 preferred
+→ modular Boot
+→ baseline hiện đại
+
+Boot 4.2 M1 + Framework 7.1 M1
+→ preview
+→ theo dõi direction, không dùng làm production baseline
+```
+
+Version chỉ được nhắc ở nơi nó thật sự thay đổi package, dependency, API, runtime behavior hoặc migration; không biến tài liệu thành changelog.
+<!-- VERSION_UPDATE_2026-09-12_END -->
+
+---
 # 1. Spring giải quyết vấn đề gì?
 
 Nếu mới học backend Java, bạn rất dễ nhìn Spring như một bộ sưu tập annotation. Bạn thấy `@RestController`, `@Service`, `@Repository`, `@Autowired`, `@Transactional` và tưởng rằng chỉ cần nhớ “annotation này dùng để làm gì” là đã học Spring. Cách học đó giúp tạo demo nhanh nhưng rất dễ gãy khi gặp project thật, bởi vì annotation chỉ là **metadata**. Annotation tự nó không tạo object, không mở transaction, không nhận HTTP request và cũng không truy cập database. Có một runtime của Spring đọc metadata đó rồi thực hiện công việc tương ứng.
@@ -2013,6 +2053,26 @@ Part 2 sẽ mở chiếc hộp mà Part 1 mới chỉ nhìn từ bên ngoài. B�
 Persistence sẽ đi vào entity lifecycle, persistence context, dirty checking, lazy loading, N+1, fetch strategy, pagination và locking. Sau đó mới đến RestClient/HTTP interface, WebClient, events, async, scheduling, caching, Security, test slices, Testcontainers, Actuator, Micrometer và Virtual Threads.
 
 Đó là lúc Spring chuyển từ “framework tôi đang dùng” thành “runtime model tôi hiểu”.
+
+---
+
+<!-- VERSION_DETAIL_PART1_2026-09-12_START -->
+# Version Deep Dive cho Beginner: nhìn project và nhận ra Spring generation
+
+Ở Beginner, mục tiêu của version knowledge không phải học lịch sử release. Mục tiêu là mở một project và nhận ra ngay generation để không copy nhầm tutorial.
+
+Nếu thấy `javax.persistence.*` hoặc `javax.validation.*`, project gần như chắc chắn thuộc generation trước Boot 3. Boot 3+ chuyển sang `jakarta.persistence.*`, `jakarta.validation.*` và Jakarta ecosystem. Đây là breaking migration lớn chứ không chỉ rename package.
+
+Nếu project dùng Boot 3.5.x, hãy nghĩ Framework 6.2 generation: Java 17 minimum, Jakarta namespace và Servlet 6.0-era stack. Đây là line rất quan trọng khi đọc code enterprise hiện tại.
+
+Nếu project dùng Boot 4, hãy chú ý Boot 4 modularize dependency structure mạnh hơn. Migration guide chuẩn hóa nhiều starter names; web MVC starter hiện là `spring-boot-starter-webmvc`, Security OAuth2 starters đi theo nhóm `spring-boot-starter-security-*`, và nhiều technology/test integrations có dedicated starters riêng. Flyway/Liquibase cũng có Boot starter riêng trong Boot 4 migration model.
+
+Boot 4 ưu tiên Jackson 3. Jackson 3 đổi nhiều group/package names từ `com.fasterxml.jackson` sang `tools.jackson`, trong khi annotations giữ compatibility riêng. Nếu bạn chỉ dùng DTO + `@RestController`, Boot che phần lớn thay đổi; nếu tự custom mapper/modules thì version trở nên rất quan trọng.
+
+Spring Framework 7 chuyển null-safety sang JSpecify. Beginner chưa cần cấu hình NullAway, nhưng nên biết tại sao IDE/Kotlin có thể báo nullability khác tutorial Framework 5/6.
+
+Khi tạo project mới ở thời điểm hiện tại, một baseline học hợp lý là Java 21 hoặc 25 với Boot 4.1.x. Java 17 vẫn là minimum, còn version production thật phải theo platform/vendor/framework support của công ty.
+<!-- VERSION_DETAIL_PART1_2026-09-12_END -->
 
 ---
 

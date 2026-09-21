@@ -5,6 +5,46 @@
 
 ---
 
+
+<!-- VERSION_UPDATE_2026-09-12_START -->
+## Bản đồ version dùng xuyên suốt tài liệu — cập nhật 2026-09-12
+
+Tài liệu dùng **Spring Boot 4.1.1 + Spring Framework 7.0.9** làm baseline stable hiện đại. Spring Boot 4.1.1 yêu cầu tối thiểu Java 17, tương thích đến Java 26 và yêu cầu Spring Framework 7.0.9 trở lên. Với Servlet stack, generation này dùng Servlet 6.1, điển hình với Tomcat 11 hoặc Jetty 12.1. GraalVM Native Image support của Boot 4.1 yêu cầu GraalVM 25 trở lên.
+
+Khi học để làm việc enterprise, bạn vẫn phải nhận biết **Spring Boot 3.5.16 + Spring Framework 6.2.19+**. Đây là maintenance line quan trọng của generation 3.x, vẫn yêu cầu Java 17+, tương thích đến Java 25 và thuộc Servlet 6.0 generation. Đây cũng là bridge tốt nhất trước khi migrate một hệ thống Boot 3 sang Boot 4.
+
+Generation legacy **Spring Boot 2.7 + Spring Framework 5.3** cần được nhận biết để maintain code cũ. Dấu hiệu rõ nhất là Java 8/11-era code và namespace `javax.*`. Từ Boot 3 / Framework 6, Spring chuyển sang Java 17+ và `jakarta.*`. Từ Boot 4 / Framework 7, Spring tiếp tục nâng Jakarta EE 11, modularize Boot mạnh hơn và dùng Jackson 3 làm JSON generation ưu tiên.
+
+Ở phía preview, **Spring Boot 4.2.0-M1 + Spring Framework 7.1.0-M1** đã có tài liệu nhưng vẫn là milestone. Tài liệu này chỉ note direction, không dùng preview API làm baseline.
+
+```text
+Boot 2.7 + Framework 5.3
+→ Java 8+ generation
+→ javax.*
+→ legacy enterprise
+
+Boot 3.5 + Framework 6.2
+→ Java 17+
+→ jakarta.*
+→ Servlet 6.0
+→ migration bridge quan trọng
+
+Boot 4.1 + Framework 7.0
+→ Java 17–26
+→ Jakarta EE 11 / Servlet 6.1
+→ Jackson 3 preferred
+→ modular Boot
+→ baseline hiện đại
+
+Boot 4.2 M1 + Framework 7.1 M1
+→ preview
+→ theo dõi direction, không dùng làm production baseline
+```
+
+Version chỉ được nhắc ở nơi nó thật sự thay đổi package, dependency, API, runtime behavior hoặc migration; không biến tài liệu thành changelog.
+<!-- VERSION_UPDATE_2026-09-12_END -->
+
+---
 # 1. Senior Spring là gì?
 
 Ở Intermediate, bạn đã biết container tạo bean qua definitions và post-processors, AOP dùng proxy, MVC có dispatch pipeline, transaction có propagation và JPA có persistence context.
@@ -1688,6 +1728,28 @@ Với production, phải giải thích outbox, idempotency, saga, cache stampede
 Master Supplement sẽ không lặp application patterns. Nó sẽ đi vào **Spring source/framework-author level**: `DefaultListableBeanFactory`, configuration-class processing, `AutowiredAnnotationBeanPostProcessor`, auto-proxy creation internals, `AdvisedSupport/ProxyFactory`, `TransactionInterceptor` source flow, `TransactionSynchronizationManager`, DispatcherServlet initialization, handler mappings/adapters registry, Boot auto-configuration import metadata, custom starter authoring, Spring TestContext internals, AOT processors/runtime hints deeper, Spring 7 null-safety/JSpecify, Boot 4 modularization và Spring 7.1 preview/current evolution.
 
 Đó là layer cần thiết nếu mục tiêu là “master Spring itself”, không chỉ Senior Spring application engineer.
+
+---
+
+<!-- VERSION_DETAIL_PART3_2026-09-12_START -->
+# Version Deep Dive cho Senior: migration và production behavior theo generation
+
+Đường migration an toàn từ Boot 3 sang Boot 4 là đưa application lên **latest Boot 3.5.x trước**, xử lý deprecations/dependency conflicts rồi mới chuyển 4.x. Boot 4 loại bỏ nhiều API deprecated và đồng thời nâng major versions của portfolio projects.
+
+Boot 4 có modular design rõ hơn. Main modules và test infrastructure được tách theo technology, nhiều integrations có `spring-boot-starter-<technology>` và `spring-boot-starter-<technology>-test`. Migration phải review cả production dependency tree lẫn test dependency tree.
+
+Jackson 3 là breaking point lớn. Boot 4 còn `spring-boot-jackson2` như stop-gap compatibility module nhưng module này deprecated theo hướng loại bỏ trong tương lai. Custom serializers, mapper modules, polymorphic typing, persisted JSON và Security serialization cần test riêng khi migrate.
+
+Framework 7 dùng JSpecify và deprecated Spring null-safety annotations cũ trong `org.springframework.lang`. Với Java static analysis hoặc Kotlin, upgrade có thể tạo compile-time warnings/errors mới dù method names gần như không đổi.
+
+Framework 7 có native API-versioning support cho MVC/WebFlux và `@Proxyable` từ 7.0. `@Proxyable` chỉ gợi ý proxy type nếu bean thật sự được auto-proxy; nó không tự tạo proxy.
+
+Boot 4.1 bổ sung notable features gồm Spring gRPC support, Jackson configuration/customization improvements, HTTP client SSRF mitigation với `InetAddressFilter`, OpenTelemetry/observability enhancements và Log4j file rotation support.
+
+Spring Security cũng đã sang major generation 7. Security 6.5 là preparation line cho migration; current docs tại thời điểm cập nhật liệt kê stable 7.1.1, 7.0.7 và 6.5.11. Khi dùng Boot, ưu tiên version management của Boot trừ khi có lý do security/compatibility rõ và đã test matrix.
+
+Preview hiện tại là Boot 4.2.0-M1 + Framework 7.1.0-M1. Senior/Master nên đọc để biết direction nhưng không nên dạy milestone API như stable production API.
+<!-- VERSION_DETAIL_PART3_2026-09-12_END -->
 
 ---
 

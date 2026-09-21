@@ -5,6 +5,46 @@
 
 ---
 
+
+<!-- VERSION_UPDATE_2026-09-12_START -->
+## Bản đồ version dùng xuyên suốt tài liệu — cập nhật 2026-09-12
+
+Tài liệu dùng **Spring Boot 4.1.1 + Spring Framework 7.0.9** làm baseline stable hiện đại. Spring Boot 4.1.1 yêu cầu tối thiểu Java 17, tương thích đến Java 26 và yêu cầu Spring Framework 7.0.9 trở lên. Với Servlet stack, generation này dùng Servlet 6.1, điển hình với Tomcat 11 hoặc Jetty 12.1. GraalVM Native Image support của Boot 4.1 yêu cầu GraalVM 25 trở lên.
+
+Khi học để làm việc enterprise, bạn vẫn phải nhận biết **Spring Boot 3.5.16 + Spring Framework 6.2.19+**. Đây là maintenance line quan trọng của generation 3.x, vẫn yêu cầu Java 17+, tương thích đến Java 25 và thuộc Servlet 6.0 generation. Đây cũng là bridge tốt nhất trước khi migrate một hệ thống Boot 3 sang Boot 4.
+
+Generation legacy **Spring Boot 2.7 + Spring Framework 5.3** cần được nhận biết để maintain code cũ. Dấu hiệu rõ nhất là Java 8/11-era code và namespace `javax.*`. Từ Boot 3 / Framework 6, Spring chuyển sang Java 17+ và `jakarta.*`. Từ Boot 4 / Framework 7, Spring tiếp tục nâng Jakarta EE 11, modularize Boot mạnh hơn và dùng Jackson 3 làm JSON generation ưu tiên.
+
+Ở phía preview, **Spring Boot 4.2.0-M1 + Spring Framework 7.1.0-M1** đã có tài liệu nhưng vẫn là milestone. Tài liệu này chỉ note direction, không dùng preview API làm baseline.
+
+```text
+Boot 2.7 + Framework 5.3
+→ Java 8+ generation
+→ javax.*
+→ legacy enterprise
+
+Boot 3.5 + Framework 6.2
+→ Java 17+
+→ jakarta.*
+→ Servlet 6.0
+→ migration bridge quan trọng
+
+Boot 4.1 + Framework 7.0
+→ Java 17–26
+→ Jakarta EE 11 / Servlet 6.1
+→ Jackson 3 preferred
+→ modular Boot
+→ baseline hiện đại
+
+Boot 4.2 M1 + Framework 7.1 M1
+→ preview
+→ theo dõi direction, không dùng làm production baseline
+```
+
+Version chỉ được nhắc ở nơi nó thật sự thay đổi package, dependency, API, runtime behavior hoặc migration; không biến tài liệu thành changelog.
+<!-- VERSION_UPDATE_2026-09-12_END -->
+
+---
 # 1. Cách tư duy ở level Intermediate
 
 Ở Beginner, bạn nhìn:
@@ -1839,6 +1879,24 @@ Với JPA, bạn phải giải thích persistence context, managed/detached, dir
 Với infrastructure, bạn phải hiểu `@Async` cần executor, `@Scheduled` chạy trên mỗi instance, Spring event không durable, cache annotation không định nghĩa cache policy, virtual thread không thay DB pool, và Security chạy ở filter chain trước MVC.
 
 Nếu bạn chỉ nhớ API names mà không giải thích được failure modes, chưa nên gọi là Senior.
+
+---
+
+<!-- VERSION_DETAIL_PART2_2026-09-12_START -->
+# Version Deep Dive cho Intermediate: API nào xuất hiện ở generation nào?
+
+`RestClient` được Spring Framework giới thiệu từ **6.1**. Vì vậy Boot 2 / Framework 5 không có API này; project cũ thường dùng `RestTemplate` cho synchronous HTTP hoặc `WebClient` cho reactive stack. Với Framework 6.1+ và 7.x, `RestClient` là synchronous fluent API quan trọng cho code mới.
+
+`JdbcClient` cũng có từ **Framework 6.1**. Nó là fluent façade trên `JdbcTemplate` và `NamedParameterJdbcTemplate`, nên template APIs vẫn rất quan trọng cho batch, stored procedures và operations phức tạp.
+
+Virtual-thread integration của Spring Boot bắt đầu từ **Boot 3.2** trên Java 21+ với `spring.threads.virtual.enabled=true`. Feature tiếp tục ở Boot 3.5 và Boot 4.x. Khi bật, pool-size properties truyền thống có thể không còn tác dụng theo cùng cách; `spring.main.keep-alive=true` vẫn cần nhớ ở các application mà daemon virtual threads có thể làm JVM kết thúc khi không còn non-daemon thread.
+
+Spring Test có bean override infrastructure mới từ **Framework 6.2**, gồm `@TestBean`, `@MockitoBean` và `@MockitoSpyBean`. Vì vậy tutorial cũ dùng `@MockBean` là bình thường; với Framework 6.2/7.x, hãy hiểu current TestContext bean-override model.
+
+Spring Framework 7 thêm **API versioning support** cho MVC/WebFlux và client side, thêm `@Proxyable` để gợi ý proxy type per bean khi auto-proxying xảy ra, và chuyển null-safety contracts sang JSpecify. Những thay đổi này có ý nghĩa runtime/tooling thực tế, không chỉ là số major version.
+
+Khi đọc một API Intermediate, luôn hỏi: nó thuộc Framework hay Boot, xuất hiện từ version nào, và abstraction tương đương trong generation cũ là gì. Cách này giúp bạn vừa maintain Boot 2/3 vừa viết Boot 4 code hiện đại.
+<!-- VERSION_DETAIL_PART2_2026-09-12_END -->
 
 ---
 
