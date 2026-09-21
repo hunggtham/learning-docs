@@ -1,15 +1,21 @@
 # XML — Senior
-## XSLT, XQuery, schema evolution, streaming, security, canonicalization và enterprise integration
+## XSLT, XQuery, tiến hóa lược đồ (lược đồ (schema) evolution), xử lý theo luồng (streaming), bảo mật (security), chuẩn hóa chính tắc (canonicalization) và tích hợp doanh nghiệp (enterprise integration)
 
-Phần này dành cho giai đoạn bạn đã hiểu cú pháp XML, namespace, XSD, XPath và parser models. Ở mức senior, việc “đọc được XML” không còn đủ. Bạn phải có khả năng thiết kế một XML contract có thể sống lâu trong hệ thống enterprise, xử lý file lớn mà không làm nổ memory, harden parser trước input không đáng tin, version schema mà không phá consumer, dùng transformation/query đúng chỗ, và hiểu vì sao canonicalization hoặc digital signature lại phức tạp hơn việc hash raw XML text.
+Phần này dành cho giai đoạn bạn đã hiểu cú pháp XML, không gian tên (namespace), XSD, XPath và bộ phân tích cú pháp (parser) models. Ở mức senior, việc “đọc được XML” không còn đủ. Bạn phải có khả năng thiết kế một XML contract có thể sống lâu trong hệ thống enterprise, xử lý file lớn mà không làm nổ memory, harden bộ phân tích cú pháp (parser) trước input không đáng tin, version lược đồ (schema) mà không phá consumer, dùng chuyển đổi (transformation)/truy vấn (query) đúng chỗ, và hiểu vì sao chuẩn hóa chính tắc (canonicalization) hoặc chữ ký số (digital signature) lại phức tạp hơn việc hash raw XML text.
 
 Tư duy xuyên suốt của phần này là chuyển từ “XML như dữ liệu” sang “XML như một processing platform”.
+
+
+## Quy ước thuật ngữ trong tài liệu
+
+Tài liệu ưu tiên tiếng Việt tự nhiên nhưng giữ thuật ngữ gốc ở những khái niệm cần tra cứu. Các thuật ngữ cốt lõi được dùng thống nhất như sau: **phần tử (element)** là đơn vị cấu trúc chính của XML; **thuộc tính (attribute)** là thông tin gắn trên phần tử; **không gian tên (namespace)** phân biệt các bộ từ vựng XML; **lược đồ (schema)** mô tả cấu trúc và kiểu dữ liệu hợp lệ; **phân tích cú pháp (parsing)** biến byte/text XML thành cây hoặc chuỗi sự kiện; **đúng cú pháp XML (well-formed)** nghĩa là thỏa các quy tắc cú pháp lõi; **kiểm tra tính hợp lệ (validation)** kiểm tra tài liệu theo DTD/XSD hoặc quy tắc khác; **xử lý theo luồng (streaming)** đọc dữ liệu tuần tự mà không giữ toàn bộ cây trong bộ nhớ; **tuần tự hóa (serialization)** biến cấu trúc XML trong bộ nhớ trở lại dạng text/byte; **chuẩn hóa chính tắc (canonicalization/C14N)** tạo biểu diễn ổn định phục vụ so sánh hoặc chữ ký số. Các tên chuẩn như XML, DTD, XSD, XPath, XSLT, XQuery, DOM, SAX, StAX, SOAP, WSDL, QName, PSVI và tên API cụ thể được giữ nguyên.
+
 
 ---
 
 ## 1. XSLT là gì?
 
-XSLT là viết tắt của **XSL Transformations**. Nó là ngôn ngữ dùng để transform XML/XDM input thành một output tree hoặc serialization khác.
+XSLT là viết tắt của **XSL Transformations**. Nó là ngôn ngữ dùng để transform XML/XDM input thành một output tree hoặc tuần tự hóa (serialization) khác.
 
 Ví dụ, source XML:
 
@@ -103,7 +109,7 @@ Nếu bạn dùng `xsl:for-each` cho mọi thứ, XSLT dễ biến thành impera
 
 lấy value theo XPath expression rồi output nó theo semantics của XSLT version.
 
-Đừng dùng `value-of` như mặc định cho mọi nested content. Nếu source có mixed content:
+Đừng dùng `value-of` như mặc định cho mọi nested content. Nếu source có nội dung hỗn hợp (mixed content):
 
 ```xml
 <p>Hello <em>world</em>!</p>
@@ -125,7 +131,7 @@ và bạn muốn preserve markup semantics, `apply-templates` thường phù h�
 
 `for-each` hoàn toàn hợp lệ và useful. Nhưng senior cần biết khi nào nó làm stylesheet trở nên procedural quá mức.
 
-Nếu same node cần nhiều rendering modes hoặc override behavior theo type, template dispatch thường flexible hơn.
+Nếu same node cần nhiều kết xuất (rendering) modes hoặc override behavior theo type, template dispatch thường flexible hơn.
 
 ---
 
@@ -165,9 +171,9 @@ XSLT conditions dùng XPath expressions. Vì vậy hiểu XPath type model và s
   select="sum(item/price)"/>
 ```
 
-Đừng nghĩ variable trong XSLT giống mutable variable trong Java. XSLT thiên functional/declarative. Một binding thường biểu diễn một value, không phải một ô nhớ bạn mutate theo loop.
+Đừng nghĩ variable trong XSLT giống mutable variable trong Java. XSLT thiên functional/declarative. Một ánh xạ/liên kết (binding) thường biểu diễn một value, không phải một ô nhớ bạn mutate theo loop.
 
-Tư duy immutable binding giúp transformation dễ reason hơn và phù hợp streaming/parallel optimization hơn.
+Tư duy immutable ánh xạ/liên kết (binding) giúp chuyển đổi (transformation) dễ reason hơn và phù hợp xử lý theo luồng (streaming)/parallel optimization hơn.
 
 ---
 
@@ -208,19 +214,19 @@ Modes là một trong những công cụ quan trọng để chia một styleshee
 
 ## 9. XSLT hiện đại không dừng ở version 1.0
 
-Nhiều developer chỉ từng gặp XSLT 1.0 trong hệ thống legacy nên nghĩ XSLT là một ngôn ngữ cũ, yếu và khó dùng. XSLT 2.0/3.0 cùng XPath hiện đại có type system, functions, grouping, packages, maps, arrays và streaming features mạnh hơn rất nhiều.
+Nhiều developer chỉ từng gặp XSLT 1.0 trong hệ thống legacy nên nghĩ XSLT là một ngôn ngữ cũ, yếu và khó dùng. XSLT 2.0/3.0 cùng XPath hiện đại có hệ kiểu (type system), functions, grouping, packages, maps, arrays và xử lý theo luồng (streaming) features mạnh hơn rất nhiều.
 
 Điểm quan trọng không phải bạn phải dùng XSLT 3.0 ở mọi nơi, mà là khi review một system, bạn phải biết processor đang support version nào. Syntax và capability có thể khác rất xa.
 
 ---
 
-## 10. XSLT streaming
+## 10. XSLT xử lý theo luồng (streaming)
 
-Nếu source XML là 20 GB, việc build toàn tree trước transformation có thể không khả thi. XSLT 3.0 có các streaming-oriented capabilities giúp processor xử lý dữ liệu theo stream trong những constraints nhất định.
+Nếu source XML là 20 GB, việc build toàn tree trước chuyển đổi (transformation) có thể không khả thi. XSLT 3.0 có các streaming-oriented capabilities giúp processor xử lý dữ liệu theo stream trong những constraints nhất định.
 
-Streaming stylesheet không thể tùy ý “quay lại ancestor xa”, query toàn descendants tương lai hoặc sort toàn dataset mà không buffer, vì processor chưa thấy toàn data.
+Streaming stylesheet không thể tùy ý “quay lại ancestor xa”, truy vấn (query) toàn descendants tương lai hoặc sort toàn dataset mà không buffer, vì processor chưa thấy toàn data.
 
-Senior phải hiểu rằng streaming không chỉ là bật một flag. Transformation logic phải **streamable**.
+Senior phải hiểu rằng xử lý theo luồng (streaming) không chỉ là bật một flag. Transformation logic phải **streamable**.
 
 ---
 
@@ -228,7 +234,7 @@ Senior phải hiểu rằng streaming không chỉ là bật một flag. Transfo
 
 ## 11. XQuery là gì?
 
-XQuery là ngôn ngữ query đầy đủ cho XML/XDM. Nếu XPath là expression language, XQuery bổ sung cấu trúc để query, filter, join, sort, group và construct result.
+XQuery là ngôn ngữ truy vấn (query) đầy đủ cho XML/XDM. Nếu XPath là expression language, XQuery bổ sung cấu trúc để truy vấn (query), filter, join, sort, group và construct result.
 
 Ví dụ:
 
@@ -242,7 +248,7 @@ return
   </result>
 ```
 
-XQuery rất phù hợp với XML-native databases hoặc hệ thống cần query collections of XML documents.
+XQuery rất phù hợp với XML-native databases hoặc hệ thống cần truy vấn (query) collections of XML documents.
 
 ---
 
@@ -268,15 +274,15 @@ order by $p descending
 return $b/title
 ```
 
-Đây là một pipeline declarative. Modern XQuery có thêm nhiều clauses nhưng FLWOR là mental model cơ bản.
+Đây là một chuỗi xử lý (pipeline) declarative. Modern XQuery có thêm nhiều clauses nhưng FLWOR là mental model cơ bản.
 
 ---
 
 ## 13. XPath và XQuery khác nhau ở đâu?
 
-XPath thường được embed vào XSLT, Java API, schema assertions hoặc tools để select/calculate.
+XPath thường được embed vào XSLT, Java API, lược đồ (schema) assertions hoặc tools để select/calculate.
 
-XQuery là một full language có thể tạo output mới, define functions và implement query logic lớn.
+XQuery là một full language có thể tạo output mới, define functions và implement truy vấn (query) logic lớn.
 
 Nếu chỉ cần lấy `/order/item/price`, XPath là đủ. Nếu cần join hai collections, aggregate, sort rồi construct report XML, XQuery phù hợp hơn.
 
@@ -353,7 +359,7 @@ following-sibling::item[1]
 
 chọn next item sibling.
 
-Axes giúp query rõ ràng và precise hơn việc dùng `//` rồi filter rộng.
+Axes giúp truy vấn (query) rõ ràng và precise hơn việc dùng `//` rồi filter rộng.
 
 ---
 
@@ -375,27 +381,27 @@ Input B:
 
 Hai input cùng semantics.
 
-XPath application nên bind một prefix riêng:
+XPath application nên bind một tiền tố (prefix) riêng:
 
 ```text
 ord → urn:order
 ```
 
-sau đó query:
+sau đó truy vấn (query):
 
 ```xpath
 /ord:order
 ```
 
-Không bao giờ coi prefix source là identity.
+Không bao giờ coi tiền tố (prefix) source là identity.
 
 ---
 
-# Schema Design và Contract Evolution
+# Thiết kế lược đồ (Schema Design) và tiến hóa hợp đồng dữ liệu (Contract Evolution)
 
 ## 18. Namespace phải stable
 
-Namespace URI là identity của vocabulary. Đừng đổi namespace chỉ vì:
+Namespace URI là identity của vocabulary. Đừng đổi không gian tên (namespace) chỉ vì:
 
 ```text
 website đổi domain
@@ -404,13 +410,13 @@ XSD file chuyển folder
 team đổi tên
 ```
 
-Nếu bạn đổi namespace, consumer có thể coi toàn bộ element là vocabulary mới.
+Nếu bạn đổi không gian tên (namespace), consumer có thể coi toàn bộ phần tử (element) là vocabulary mới.
 
 Namespace nên được version/govern như một API identity.
 
 ---
 
-## 19. Version trong namespace
+## 19. Version trong không gian tên (namespace)
 
 Một strategy là:
 
@@ -421,13 +427,13 @@ urn:example:order:v2
 
 Ưu điểm là breaking version boundary rất rõ. Consumer không thể vô tình coi v2 là v1.
 
-Nhược điểm là mọi XPath, XSD import, binding, serializer và message đều phải đổi namespace khi version đổi.
+Nhược điểm là mọi XPath, XSD import, ánh xạ/liên kết (binding), serializer và message đều phải đổi không gian tên (namespace) khi version đổi.
 
 Strategy này hợp khi major versions thực sự độc lập.
 
 ---
 
-## 20. Stable namespace + version attribute
+## 20. Stable không gian tên (namespace) + version thuộc tính (attribute)
 
 Một strategy khác:
 
@@ -439,9 +445,9 @@ Một strategy khác:
 
 Namespace giữ ổn định, version nằm trong data.
 
-Ưu điểm là query namespace và vocabulary identity ít churn hơn.
+Ưu điểm là truy vấn (query) không gian tên (namespace) và vocabulary identity ít churn hơn.
 
-Nhược điểm là application phải có logic rõ để phân biệt version semantics, và schema validation/version routing có thể phức tạp hơn.
+Nhược điểm là application phải có logic rõ để phân biệt version semantics, và lược đồ (schema) kiểm tra tính hợp lệ (validation)/version routing có thể phức tạp hơn.
 
 Không có một strategy luôn đúng.
 
@@ -449,7 +455,7 @@ Không có một strategy luôn đúng.
 
 ## 21. Backward-compatible change
 
-Thêm optional element thường dễ compatible hơn:
+Thêm optional phần tử (element) thường dễ compatible hơn:
 
 ```xml
 <xs:element
@@ -459,7 +465,7 @@ Thêm optional element thường dễ compatible hơn:
 
 Nếu consumer cũ tolerant đúng cách, nó có thể ignore field mới.
 
-Những thay đổi dễ breaking gồm rename required field, đổi namespace, đổi type từ string sang decimal khi old values không hợp, đổi order trong strict sequence, hoặc làm optional field thành required.
+Những thay đổi dễ breaking gồm rename required field, đổi không gian tên (namespace), đổi type từ string sang decimal khi old values không hợp, đổi order trong strict sequence, hoặc làm optional field thành required.
 
 Schema evolution phải được treat như API evolution.
 
@@ -467,7 +473,7 @@ Schema evolution phải được treat như API evolution.
 
 ## 22. Extension points
 
-XSD có wildcard:
+XSD có ký tự đại diện (wildcard):
 
 ```xml
 <xs:any
@@ -477,23 +483,23 @@ XSD có wildcard:
   maxOccurs="unbounded"/>
 ```
 
-Nó tạo nơi extension namespaces khác có thể cắm vào.
+Nó tạo nơi extension các không gian tên (namespaces) khác có thể cắm vào.
 
 Điều này rất hữu ích với protocol cần vendor extension.
 
-Nhưng `xs:any` ở khắp nơi sẽ làm schema gần như không còn ý nghĩa. Một good extension point phải có location, namespace policy và validation policy rõ.
+Nhưng `xs:any` ở khắp nơi sẽ làm lược đồ (schema) gần như không còn ý nghĩa. Một good điểm mở rộng (extension point) phải có location, không gian tên (namespace) policy và kiểm tra tính hợp lệ (validation) policy rõ.
 
 ---
 
 ## 23. `processContents`
 
-`strict`, `lax`, `skip` điều khiển wildcard processing.
+`strict`, `lax`, `skip` điều khiển ký tự đại diện (wildcard) processing.
 
-`strict` yêu cầu content được validate theo schema rules phù hợp.
+`strict` yêu cầu content được validate theo lược đồ (schema) rules phù hợp.
 
-`lax` cho phép validate nếu có declaration/schema phù hợp, còn nếu không có thì có thể tiếp tục.
+`lax` cho phép validate nếu có declaration/lược đồ (schema) phù hợp, còn nếu không có thì có thể tiếp tục.
 
-`skip` nói không schema-validate wildcard content.
+`skip` nói không schema-validate ký tự đại diện (wildcard) content.
 
 Nếu bạn dùng `skip` cho security-sensitive extension, application vẫn phải validate business data ở layer khác.
 
@@ -513,7 +519,7 @@ Ví dụ một list customer có ID unique, rồi order reference customer bằn
 
 ## 25. `xs:unique`
 
-`xs:unique` bảo đảm values được chọn bởi selector/field không trùng lặp theo schema semantics.
+`xs:unique` bảo đảm values được chọn bởi selector/field không trùng lặp theo lược đồ (schema) semantics.
 
 Nó thích hợp với business condition kiểu “mọi SKU trong list phải unique”.
 
@@ -539,7 +545,7 @@ order/customerRef
 
 phải match một customer ID tồn tại trong document.
 
-Đây là integrity constraint ở schema layer.
+Đây là integrity constraint ở lược đồ (schema) layer.
 
 ---
 
@@ -559,7 +565,7 @@ Ví dụ một `EmployeeType` có thể extend `PersonType`.
 
 Giống OO inheritance, type derivation mạnh nhưng có thể bị lạm dụng.
 
-Một schema inheritance tree sâu làm consumer khó hiểu và code generation khó maintain. Composition thường dễ reason hơn nếu domain không thực sự cần polymorphism.
+Một lược đồ (schema) inheritance tree sâu làm consumer khó hiểu và code generation khó maintain. Composition thường dễ reason hơn nếu domain không thực sự cần polymorphism.
 
 ---
 
@@ -573,19 +579,19 @@ Instance có thể chọn derived type:
   xsi:type="EmployeeType">
 ```
 
-nếu schema cho phép.
+nếu lược đồ (schema) cho phép.
 
-`xsi:type` hữu ích nhưng làm instance document gắn chặt hơn với schema type system. Nếu contract cần simple interoperability, explicit elements đôi khi dễ hơn.
+`xsi:type` hữu ích nhưng làm instance document gắn chặt hơn với lược đồ (schema) hệ kiểu (type system). Nếu contract cần simple khả năng liên vận (interoperability), explicit các phần tử (elements) đôi khi dễ hơn.
 
 ---
 
 ## 30. Substitution groups
 
-Substitution group cho phép element declarations thay thế một head element theo schema rules.
+Substitution group cho phép phần tử (element) declarations thay thế một head phần tử (element) theo lược đồ (schema) rules.
 
 Nó hỗ trợ polymorphic XML vocabulary.
 
-Nhưng khi kết hợp với derived types và `xsi:type`, schema có thể rất khó đọc. Senior phải cân bằng flexibility với maintainability.
+Nhưng khi kết hợp với derived types và `xsi:type`, lược đồ (schema) có thể rất khó đọc. Senior phải cân bằng flexibility với maintainability.
 
 ---
 
@@ -611,17 +617,17 @@ empty string
 not provided
 ```
 
-Nếu Java binding map cả ba thành `null` hoặc `""`, business semantics có thể bị mất.
+Nếu Java ánh xạ/liên kết (binding) map cả ba thành `null` hoặc `""`, business semantics có thể bị mất.
 
 Contract phải định nghĩa rõ điều này.
 
 ---
 
-# XML Binding và Java
+# Ánh xạ XML (XML Binding) và Java
 
-## 32. XML object binding là convenience layer, không phải XML replacement
+## 32. XML object ánh xạ/liên kết (binding) là convenience layer, không phải XML replacement
 
-Framework như JAXB/Jakarta XML Binding có thể map:
+Framework như JAXB/Jakarta Ánh xạ XML (XML Binding) có thể map:
 
 ```xml
 <user>
@@ -639,7 +645,7 @@ class User {
 
 Đây là developer-friendly abstraction.
 
-Nhưng XML có nhiều concepts OO model không biểu diễn tự nhiên: mixed content, attribute vs element, namespace, order, unknown extensions, substitution groups, nil-vs-missing.
+Nhưng XML có nhiều concepts OO model không biểu diễn tự nhiên: nội dung hỗn hợp (mixed content), thuộc tính (attribute) vs phần tử (element), không gian tên (namespace), order, unknown extensions, substitution groups, nil-vs-missing.
 
 Nếu integration phức tạp, đừng để generated classes che mất contract semantics.
 
@@ -647,23 +653,23 @@ Nếu integration phức tạp, đừng để generated classes che mất contra
 
 ## 33. Contract-first vs object-first ở mức senior
 
-Trong enterprise integration, một schema được nhiều Java/.NET/vendor systems dùng thường nên được thiết kế như một language-neutral contract.
+Trong tích hợp doanh nghiệp (enterprise integration), một lược đồ (schema) được nhiều Java/.NET/vendor systems dùng thường nên được thiết kế như một language-neutral contract.
 
-Nếu generate XSD trực tiếp từ Java class, schema dễ mang theo những quyết định nội bộ của Java model như inheritance, collection wrapper hoặc naming conventions mà partner không cần biết.
+Nếu generate XSD trực tiếp từ Java class, lược đồ (schema) dễ mang theo những quyết định nội bộ của Java model như inheritance, collection wrapper hoặc naming conventions mà partner không cần biết.
 
 Vì vậy contract-first thường phù hợp với long-lived cross-system XML interfaces.
 
 ---
 
-# Large XML và Streaming
+# XML dung lượng lớn (Large XML) và Streaming
 
 ## 34. Vì sao DOM có thể rất tốn memory?
 
 Raw XML 500 MB không có nghĩa DOM chỉ dùng 500 MB RAM.
 
-Một DOM tree cần object cho mỗi element, text node, attribute, namespace binding và collections/pointers. Memory footprint có thể tăng nhiều lần so với source.
+Một DOM tree cần object cho mỗi phần tử (element), text node, thuộc tính (attribute), không gian tên (namespace) ánh xạ/liên kết (binding) và collections/pointers. Memory footprint có thể tăng nhiều lần so với source.
 
-Vì vậy large XML phải được benchmark bằng actual parser, không estimate từ file size.
+Vì vậy large XML phải được benchmark bằng actual bộ phân tích cú pháp (parser), không estimate từ file size.
 
 ---
 
@@ -678,7 +684,7 @@ Với record-oriented XML:
 </records>
 ```
 
-StAX pipeline có thể:
+StAX chuỗi xử lý (pipeline) có thể:
 
 ```text
 đọc tới <record>
@@ -725,7 +731,7 @@ Streaming chỉ giúp không giữ toàn tree. Nó không loại requirement lư
 
 # Security
 
-## 38. Vì sao XML có security surface lớn?
+## 38. Vì sao XML có bảo mật (security) surface lớn?
 
 XML processor lịch sử có nhiều capability:
 
@@ -742,7 +748,7 @@ extension functions
 
 Các capability này rất hữu ích với trusted documents, nhưng nguy hiểm với attacker-controlled XML.
 
-Senior phải coi parser như một component có filesystem/network capabilities cần được sandbox/harden.
+Senior phải coi bộ phân tích cú pháp (parser) như một component có filesystem/network capabilities cần được sandbox/harden.
 
 ---
 
@@ -760,7 +766,7 @@ Concept:
 <data>&xxe;</data>
 ```
 
-Nếu parser resolve entity `xxe`, nó có thể đọc local file và đưa content vào parsed data.
+Nếu bộ phân tích cú pháp (parser) resolve thực thể (entity) `xxe`, nó có thể đọc local file và đưa content vào parsed data.
 
 Trên server, attack có thể nhắm:
 
@@ -772,38 +778,38 @@ cloud metadata endpoints
 denial of service
 ```
 
-Không phải mọi parser mặc định vulnerable, nhưng bạn không được dựa vào assumption. Hãy configure theo parser/version thật.
+Không phải mọi bộ phân tích cú pháp (parser) mặc định vulnerable, nhưng bạn không được dựa vào assumption. Hãy configure theo bộ phân tích cú pháp (parser)/version thật.
 
 ---
 
 ## 40. External DTD và SSRF
 
-Ngay cả không dùng entity trực tiếp, DOCTYPE:
+Ngay cả không dùng thực thể (entity) trực tiếp, DOCTYPE:
 
 ```xml
 <!DOCTYPE root SYSTEM
   "http://internal-service/private.dtd">
 ```
 
-có thể khiến parser gửi network request nếu external subset resolution enabled.
+có thể khiến bộ phân tích cú pháp (parser) gửi network request nếu external subset resolution enabled.
 
 Đó là SSRF-style behavior.
 
 ---
 
-## 41. Parameter entities
+## 41. Parameter các thực thể (entities)
 
-DTD còn có parameter entities, thường dùng bên trong DTD grammar.
+DTD còn có parameter các thực thể (entities), thường dùng bên trong DTD grammar.
 
-External parameter entity cũng có thể trigger resource loading.
+External parameter thực thể (entity) cũng có thể trigger quá trình tải tài nguyên (resource loading).
 
-Vì vậy hardening chỉ “disable external general entities” nhưng bỏ parameter entities vẫn có thể chưa đủ.
+Vì vậy gia cố bảo mật (hardening) chỉ “disable external general các thực thể (entities)” nhưng bỏ parameter các thực thể (entities) vẫn có thể chưa đủ.
 
 ---
 
 ## 42. Billion Laughs
 
-Billion Laughs tận dụng recursive/nested entity expansion.
+Billion Laughs tận dụng recursive/nested thực thể (entity) expansion.
 
 Concept đơn giản:
 
@@ -830,7 +836,7 @@ XInclude cho phép include external XML/resource:
   href="other.xml"/>
 ```
 
-Nếu input untrusted và XInclude enabled, attacker có thể influence external resource access.
+Nếu input untrusted và XInclude enabled, attacker có thể influence tài nguyên bên ngoài (external resource) access.
 
 Nếu application không cần XInclude, disable nó.
 
@@ -838,15 +844,15 @@ Nếu application không cần XInclude, disable nó.
 
 ## 44. Schema resolution cũng là external access
 
-XSD có imports/includes. Instance có `schemaLocation`. Nếu validator tự fetch remote schemas, attacker hoặc network dependency có thể ảnh hưởng behavior.
+XSD có imports/includes. Instance có `schemaLocation`. Nếu validator tự fetch remote các lược đồ (schemas), attacker hoặc network dependency có thể ảnh hưởng behavior.
 
-Một production system tốt nên dùng trusted local schema registry hoặc resolver.
+Một production system tốt nên dùng trusted local lược đồ (schema) registry hoặc bộ phân giải (resolver).
 
 ---
 
 ## 45. XML Catalog
 
-XML Catalog là cơ chế mapping external identifiers/URIs tới local resources.
+XML Catalog là cơ chế ánh xạ (mapping) external identifiers/URIs tới local resources.
 
 Ví dụ concept:
 
@@ -861,9 +867,9 @@ Trong enterprise XML infrastructure, Catalog là tool rất giá trị.
 
 ---
 
-## 46. Secure parser strategy
+## 46. Secure bộ phân tích cú pháp (parser) strategy
 
-Với untrusted XML, default mental checklist là: tắt DTD nếu không cần; tắt external general entities; tắt external parameter entities; block external DTD/schema resolution; tắt XInclude nếu không cần; giới hạn document size/depth/entity expansions; dùng secure processing options; và kiểm soát mọi URI resolver.
+Với untrusted XML, default mental checklist là: tắt DTD nếu không cần; tắt external general các thực thể (entities); tắt external parameter các thực thể (entities); block external DTD/lược đồ (schema) resolution; tắt XInclude nếu không cần; giới hạn document size/depth/thực thể (entity) expansions; dùng secure processing options; và kiểm soát mọi URI bộ phân giải (resolver).
 
 Exact flag khác nhau giữa `DocumentBuilderFactory`, `SAXParserFactory`, `XMLInputFactory`, `SchemaFactory` và `TransformerFactory`.
 
@@ -871,9 +877,9 @@ Exact flag khác nhau giữa `DocumentBuilderFactory`, `SAXParserFactory`, `XMLI
 
 ---
 
-## 47. Hardening một parser không harden toàn pipeline
+## 47. Hardening một bộ phân tích cú pháp (parser) không harden toàn chuỗi xử lý (pipeline)
 
-Bạn có thể đã secure DOM parser nhưng sau đó XSLT `TransformerFactory` vẫn được phép `document()` tới external URI.
+Bạn có thể đã secure DOM bộ phân tích cú pháp (parser) nhưng sau đó XSLT `TransformerFactory` vẫn được phép `document()` tới external URI.
 
 Hoặc `SchemaFactory` vẫn fetch imports.
 
@@ -892,7 +898,7 @@ signature verifier
 
 ---
 
-## 48. XSLT security
+## 48. XSLT bảo mật (security)
 
 XSLT có thể include/import stylesheets và trong một số processor có khả năng access external documents hoặc extension functions.
 
@@ -911,11 +917,11 @@ String xpath =
     "/users/user[name='" + input + "']";
 ```
 
-thì input chứa quotes hoặc XPath syntax có thể thay đổi query.
+thì input chứa quotes hoặc XPath syntax có thể thay đổi truy vấn (query).
 
 Concept giống SQL Injection.
 
-Defense là dùng variable binding nếu engine hỗ trợ, không cho user cung cấp arbitrary expression fragments, hoặc validate input theo allowlist rõ ràng.
+Defense là dùng variable ánh xạ/liên kết (binding) nếu engine hỗ trợ, không cho user cung cấp arbitrary expression fragments, hoặc validate input theo allowlist rõ ràng.
 
 ---
 
@@ -937,7 +943,7 @@ và:
 
 có thể mang cùng information theo XML data model nhưng raw bytes khác.
 
-Nếu signature phụ thuộc raw formatting, chỉ cần formatter đổi attribute order hoặc empty element notation là hash fail.
+Nếu signature phụ thuộc raw formatting, chỉ cần formatter đổi thuộc tính (attribute) order hoặc empty phần tử (element) notation là hash fail.
 
 Canonical XML giải quyết bằng cách tạo representation deterministic theo algorithm chuẩn.
 
@@ -975,7 +981,7 @@ Application phải hiểu signed scope.
 
 ## 53. Signature Wrapping Attack
 
-Một attack class quan trọng là signature wrapping.
+Một attack class quan trọng là tấn công bọc chữ ký (signature wrapping).
 
 Concept:
 
@@ -986,7 +992,7 @@ signature verifier xác nhận A
 business code query nhầm B
 ```
 
-Ví dụ verifier verify element có ID `signed-order`, nhưng application sau đó chạy:
+Ví dụ verifier verify phần tử (element) có ID `signed-order`, nhưng application sau đó chạy:
 
 ```java
 getElementsByTagName("Order").item(0)
@@ -994,7 +1000,7 @@ getElementsByTagName("Order").item(0)
 
 và nhận một attacker-controlled `Order` khác.
 
-Defense là application phải process **exact node đã được signature verifier xác nhận**, không verify xong rồi query document một lần nữa bằng selector mơ hồ.
+Defense là application phải process **exact node đã được signature verifier xác nhận**, không verify xong rồi truy vấn (query) document một lần nữa bằng selector mơ hồ.
 
 ---
 
@@ -1006,21 +1012,21 @@ Reference kiểu:
 #order123
 ```
 
-cần processor biết attribute nào là ID.
+cần processor biết thuộc tính (attribute) nào là ID.
 
 ID semantics có thể đến từ DTD, XSD, `xml:id` hoặc API/library configuration.
 
-Một attribute tên `id` không tự động có ID semantics trong mọi XML API.
+Một thuộc tính (attribute) tên `id` không tự động có ID semantics trong mọi XML API.
 
-Đây là một chi tiết nhỏ nhưng cực kỳ quan trọng với XML Signature security.
+Đây là một chi tiết nhỏ nhưng cực kỳ quan trọng với XML Signature bảo mật (security).
 
 ---
 
-# Integration Architecture
+# Kiến trúc tích hợp (Integration Architecture)
 
 ## 55. Boundary Validation Pattern
 
-Một inbound pipeline tốt có thể là:
+Một inbound chuỗi xử lý (pipeline) tốt có thể là:
 
 ```text
 network/file bytes
@@ -1035,7 +1041,7 @@ network/file bytes
 
 Mỗi stage giải quyết một vấn đề riêng.
 
-XSD không thay authorization. Parser security không thay business validation. Mapping không thay schema validation.
+XSD không thay authorization. Parser bảo mật (security) không thay business kiểm tra tính hợp lệ (validation). Mapping không thay lược đồ (schema) kiểm tra tính hợp lệ (validation).
 
 ---
 
@@ -1060,23 +1066,23 @@ Tương tự, XSLT stylesheet có thể được compile/cache nếu processor A
 
 Strict reader reject field lạ.
 
-Ưu điểm là contract predictable và security dễ reason.
+Ưu điểm là contract predictable và bảo mật (security) dễ reason.
 
-Nhược điểm là forward compatibility thấp.
+Nhược điểm là forward khả năng tương thích (compatibility) thấp.
 
 Tolerant reader cho phép unknown optional extensions.
 
-Ưu điểm là schema evolution tốt hơn.
+Ưu điểm là tiến hóa lược đồ (lược đồ (schema) evolution) tốt hơn.
 
 Nhược điểm là consumer có thể silently ignore semantic quan trọng.
 
-Một senior contract phải nói rõ unknown element policy, thay vì để parser behavior quyết định ngẫu nhiên.
+Một senior contract phải nói rõ unknown phần tử (element) policy, thay vì để bộ phân tích cú pháp (parser) behavior quyết định ngẫu nhiên.
 
 ---
 
 ## 58. “Be liberal in what you accept” không phải lúc nào tốt
 
-Postel's Law từng rất phổ biến trong protocol design, nhưng với security-critical contracts, quá tolerant có thể che lỗi hoặc bypass validation.
+Postel's Law từng rất phổ biến trong protocol design, nhưng với security-critical contracts, quá tolerant có thể che lỗi hoặc bypass kiểm tra tính hợp lệ (validation).
 
 Một strategy hiện đại hơn là:
 
@@ -1105,7 +1111,7 @@ Nhiều XML protocols dùng envelope:
 </message>
 ```
 
-Header chứa cross-cutting metadata như correlation ID, routing, version, security information. Body chứa business payload.
+Header chứa cross-cutting siêu dữ liệu (metadata) như correlation ID, routing, version, bảo mật (security) information. Body chứa business payload.
 
 SOAP là ví dụ nổi tiếng của pattern này.
 
@@ -1127,13 +1133,13 @@ urn:partner:custom
 
 XML Namespace giúp hai bên mở rộng cùng document mà tránh collision.
 
-Nếu schema có controlled wildcard extension point, partner có thể thêm metadata mà không đổi core namespace.
+Nếu lược đồ (schema) có controlled ký tự đại diện (wildcard) điểm mở rộng (extension point), partner có thể thêm siêu dữ liệu (metadata) mà không đổi core không gian tên (namespace).
 
 ---
 
 ## 61. Schema Registry Pattern
 
-Một tổ chức lớn nên quản lý schema giống API artifacts.
+Một tổ chức lớn nên quản lý lược đồ (schema) giống API artifacts.
 
 Registry/repository nên biết:
 
@@ -1162,7 +1168,7 @@ Partner B XML
 Legacy SOAP XML
 ```
 
-business code không nên hiểu từng external schema.
+business code không nên hiểu từng external lược đồ (schema).
 
 Bạn có thể transform/map tất cả thành internal canonical model.
 
@@ -1195,11 +1201,11 @@ vendor XML
 → internal DTO/domain
 ```
 
-Legacy naming, namespace, null semantics và schema quirks dừng lại ở boundary.
+Legacy naming, không gian tên (namespace), null semantics và lược đồ (schema) quirks dừng lại ở boundary.
 
 ---
 
-# XML Design Idioms
+# Quy ước thiết kế XML (XML Design Idioms)
 
 ## 64. Explicit units
 
@@ -1255,13 +1261,13 @@ hoặc trực tiếp:
 </order>
 ```
 
-Wrapper giúp collection có chỗ chứa metadata như count, pagination hoặc future options. Nhưng nó làm schema verbose hơn.
+Wrapper giúp collection có chỗ chứa siêu dữ liệu (metadata) như count, pagination hoặc future options. Nhưng nó làm lược đồ (schema) verbose hơn.
 
 Chọn dựa trên khả năng evolution.
 
 ---
 
-## 67. Discriminator attribute vs distinct elements
+## 67. Discriminator thuộc tính (attribute) vs distinct các phần tử (elements)
 
 Option A:
 
@@ -1279,19 +1285,19 @@ Option B:
 </email>
 ```
 
-Option A giúp schema compact, option B làm element semantics explicit hơn.
+Option A giúp lược đồ (schema) compact, option B làm phần tử (element) semantics explicit hơn.
 
-Nếu mỗi contact type có structure khác nhau, distinct elements hoặc type system thường rõ hơn discriminator string.
+Nếu mỗi contact type có structure khác nhau, distinct các phần tử (elements) hoặc hệ kiểu (type system) thường rõ hơn discriminator string.
 
 ---
 
-# Senior Anti-patterns
+# Các phản mẫu ở mức Senior (Senior Anti-patterns)
 
-## 68. Đổi namespace cho mọi minor release
+## 68. Đổi không gian tên (namespace) cho mọi minor release
 
-Nếu `v1.1`, `v1.2`, `v1.3` đều có namespace mới, consumer phải update XPath/binding liên tục.
+Nếu `v1.1`, `v1.2`, `v1.3` đều có không gian tên (namespace) mới, consumer phải update XPath/ánh xạ/liên kết (binding) liên tục.
 
-Chỉ version namespace khi strategy thực sự yêu cầu breaking identity.
+Chỉ version không gian tên (namespace) khi strategy thực sự yêu cầu breaking identity.
 
 ---
 
@@ -1327,25 +1333,25 @@ Nếu mọi field bắt buộc, thêm feature mới gần như luôn breaking.
 
 ## 73. Everything optional
 
-Nếu mọi field optional, schema không còn enforce business shape.
+Nếu mọi field optional, lược đồ (schema) không còn enforce business shape.
 
 Senior phải cân bằng evolvability và correctness.
 
 ---
 
-# Performance và Observability
+# Hiệu năng (hiệu năng (performance)) và khả năng quan sát (observability)
 
 ## 74. Performance limits
 
-Production XML processing nên nghĩ tới max bytes, depth, number of elements, number of attributes, max text node size, entity expansion limits và processing timeout.
+Production XML processing nên nghĩ tới max bytes, depth, number of các phần tử (elements), number of các thuộc tính (attributes), max text node size, thực thể (entity) expansion limits và processing timeout.
 
-Security và performance ở đây liên quan chặt nhau vì attacker có thể dùng XML complexity để tiêu tốn CPU/RAM.
+Security và hiệu năng (performance) ở đây liên quan chặt nhau vì attacker có thể dùng XML complexity để tiêu tốn CPU/RAM.
 
 ---
 
 ## 75. Logging
 
-Khi validation fail, log nên giúp debug:
+Khi kiểm tra tính hợp lệ (validation) fail, log nên giúp debug:
 
 ```text
 message type
@@ -1367,7 +1373,7 @@ Một log “đủ để debug” không đồng nghĩa “log toàn payload”.
 
 Một XML contract tốt nên có sample tests cho minimum valid, full valid, old version, future extension, missing field, nil field, empty field, wrong order, invalid type, very large payload và malicious XXE input.
 
-Các fixtures này giúp regression test schema, parser config và mapping code.
+Các fixtures này giúp regression test lược đồ (schema), bộ phân tích cú pháp (parser) config và ánh xạ (mapping) code.
 
 ---
 
@@ -1400,7 +1406,7 @@ Nếu bạn hiểu được flow này và biết mỗi stage giải quyết vấ
 
 ## 78. SOAP là gì và vì sao nó gắn chặt với XML?
 
-SOAP là một **messaging framework** dùng XML để đóng gói message. Khi nói SOAP, đừng chỉ nghĩ “API trả XML thay vì JSON”. SOAP định nghĩa một processing model với envelope, header blocks, body, faults, namespaces và khả năng mở rộng theo modules. XML phù hợp với SOAP vì namespace cho phép nhiều chuẩn hoặc vendor extensions cùng xuất hiện trong một message mà không đụng tên, còn XSD cung cấp contract type/structure rất mạnh.
+SOAP là một **messaging framework** dùng XML để đóng gói message. Khi nói SOAP, đừng chỉ nghĩ “API trả XML thay vì JSON”. SOAP định nghĩa một processing model với envelope, header blocks, body, faults, các không gian tên (namespaces) và khả năng mở rộng theo modules. XML phù hợp với SOAP vì không gian tên (namespace) cho phép nhiều chuẩn hoặc vendor extensions cùng xuất hiện trong một message mà không đụng tên, còn XSD cung cấp contract type/structure rất mạnh.
 
 Một SOAP 1.2 message tối giản có thể có dạng:
 
@@ -1426,15 +1432,15 @@ Một SOAP 1.2 message tối giản có thể có dạng:
 </env:Envelope>
 ```
 
-`Envelope` là outermost SOAP element. `Header` là optional và chứa zero hoặc nhiều header blocks. `Body` là nơi mang information hướng tới ultimate receiver. Business payload như `o:GetOrder` không thuộc SOAP namespace; nó thuộc vocabulary `urn:example:order`. Chính sự tách namespace này làm SOAP extensible.
+`Envelope` là outermost SOAP phần tử (element). `Header` là optional và chứa zero hoặc nhiều header blocks. `Body` là nơi mang information hướng tới ultimate receiver. Business payload như `o:GetOrder` không thuộc SOAP không gian tên (namespace); nó thuộc vocabulary `urn:example:order`. Chính sự tách không gian tên (namespace) này làm SOAP extensible.
 
-SOAP 1.1 và SOAP 1.2 có namespace/protocol details khác nhau. SOAP 1.2 dùng envelope namespace `http://www.w3.org/2003/05/soap-envelope`; hệ thống SOAP 1.1 legacy thường dùng `http://schemas.xmlsoap.org/soap/envelope/`. Vì vậy khi debug một SOAP integration, version không phải chi tiết nhỏ: namespace, HTTP binding và fault format có thể khác.
+SOAP 1.1 và SOAP 1.2 có không gian tên (namespace)/protocol details khác nhau. SOAP 1.2 dùng envelope không gian tên (namespace) `http://www.w3.org/2003/05/soap-envelope`; hệ thống SOAP 1.1 legacy thường dùng `http://schemas.xmlsoap.org/soap/envelope/`. Vì vậy khi debug một SOAP integration, version không phải chi tiết nhỏ: không gian tên (namespace), HTTP ánh xạ/liên kết (binding) và fault format có thể khác.
 
 ---
 
-## 79. SOAP Header không chỉ là chỗ đặt metadata tùy ý
+## 79. SOAP Header không chỉ là chỗ đặt siêu dữ liệu (metadata) tùy ý
 
-SOAP Header được thiết kế để mang các blocks có semantics xử lý riêng, ví dụ security, transaction, routing, correlation hoặc addressing. Header block có thể target một node/intermediary cụ thể trên message path.
+SOAP Header được thiết kế để mang các blocks có semantics xử lý riêng, ví dụ bảo mật (security), transaction, routing, correlation hoặc addressing. Header block có thể target một node/intermediary cụ thể trên message path.
 
 SOAP còn có concept `mustUnderstand`. Nếu một header block bắt buộc phải được hiểu mà node nhận message không hiểu semantics của block đó, node không nên im lặng bỏ qua rồi xử lý business body như bình thường; SOAP processing model có fault behavior cho tình huống này.
 
@@ -1459,7 +1465,7 @@ Body thường chứa application-specific XML. Ví dụ:
 </env:Body>
 ```
 
-SOAP chỉ định envelope/body structure, còn `Transfer`, `from`, `to`, `amount` là contract của payment service. Các elements business này thường được mô tả bằng XSD và được reference/import từ WSDL.
+SOAP chỉ định envelope/body structure, còn `Transfer`, `from`, `to`, `amount` là contract của payment service. Các các phần tử (elements) business này thường được mô tả bằng XSD và được reference/import từ WSDL.
 
 Điều đó tạo một layering rất rõ:
 
@@ -1508,7 +1514,7 @@ Ví dụ rút gọn:
 
 ## 82. WSDL là gì?
 
-WSDL là **Web Services Description Language**. Trong các SOAP systems truyền thống, WSDL đóng vai trò contract mô tả service để client/server tooling biết service cung cấp operations nào, message shape ra sao, binding/protocol nào được dùng và endpoint ở đâu.
+WSDL là **Web Services Description Language**. Trong các SOAP systems truyền thống, WSDL đóng vai trò contract mô tả service để client/server tooling biết service cung cấp operations nào, message shape ra sao, ánh xạ/liên kết (binding)/protocol nào được dùng và endpoint ở đâu.
 
 Bạn có thể hình dung WSDL 1.1 theo mental model:
 
@@ -1520,7 +1526,7 @@ XML Schema / types
 → service / endpoint
 ```
 
-Trong thực tế WSDL thường import hoặc embed XSD. XSD định nghĩa business elements/types; WSDL ghép chúng thành service operations và transport binding.
+Trong thực tế WSDL thường import hoặc embed XSD. XSD định nghĩa business các phần tử (elements)/types; WSDL ghép chúng thành service operations và transport ánh xạ/liên kết (binding).
 
 Đây là lý do khi một SOAP client generate Java classes từ WSDL, bạn có thể thấy rất nhiều generated DTOs, service interfaces và QName constants. Tooling đang biến XML contract thành programming-language artifacts.
 
@@ -1546,17 +1552,17 @@ WSDL + XSD
 → SOAP response hoặc SOAP Fault
 ```
 
-Framework che đi rất nhiều bước, nhưng khi production lỗi bạn phải có khả năng mở wire message và kiểm tra namespace, QName, element order, `xsi:nil`, schema type và SOAP version.
+Framework che đi rất nhiều bước, nhưng khi production lỗi bạn phải có khả năng mở wire message và kiểm tra không gian tên (namespace), QName, phần tử (element) order, `xsi:nil`, lược đồ (schema) type và SOAP version.
 
-Một exception Java kiểu “unexpected element” thường thực chất là mismatch giữa expanded name trong XML và generated binding expectation.
+Một exception Java kiểu “unexpected phần tử (element)” thường thực chất là mismatch giữa tên mở rộng (expanded name) trong XML và generated ánh xạ/liên kết (binding) expectation.
 
 ---
 
 ## 84. WSDL/XSD code generation giúp nhanh nhưng có coupling
 
-Generated classes giúp developer không phải tự viết parser cho mỗi SOAP message. Tuy nhiên code generation cũng làm application coupling mạnh với contract. Khi WSDL thay namespace, type hierarchy hoặc required field, generated code có thể thay đổi hàng loạt.
+Generated classes giúp developer không phải tự viết bộ phân tích cú pháp (parser) cho mỗi SOAP message. Tuy nhiên code generation cũng làm application coupling mạnh với contract. Khi WSDL thay không gian tên (namespace), type hierarchy hoặc required field, generated code có thể thay đổi hàng loạt.
 
-Vì vậy long-lived enterprise service cần quản lý WSDL/XSD version như public API. Không sửa schema âm thầm rồi regenerate cả hai bên nếu còn external consumers.
+Vì vậy long-lived enterprise service cần quản lý WSDL/XSD version như public API. Không sửa lược đồ (schema) âm thầm rồi regenerate cả hai bên nếu còn external consumers.
 
 Nếu generated classes quá phức tạp, nên map chúng sang internal DTO/domain model ở boundary thay vì để WSDL-generated types chạy xuyên business layer.
 
@@ -1564,7 +1570,7 @@ Nếu generated classes quá phức tạp, nên map chúng sang internal DTO/dom
 
 ## 85. SOAP, WS-* và vì sao enterprise systems vẫn dùng
 
-SOAP thường xuất hiện trong banking, insurance, telecom, government, B2B integration và các hệ thống được xây trong thời kỳ enterprise service bus. Một lý do là ecosystem xung quanh SOAP có nhiều specifications cho concerns như security, addressing, reliability và transactions. Những hệ thống đã đầu tư vào WSDL/XSD governance, code generation và integration middleware không có lý do kỹ thuật để rewrite chỉ vì JSON phổ biến hơn.
+SOAP thường xuất hiện trong banking, insurance, telecom, government, B2B integration và các hệ thống được xây trong thời kỳ enterprise service bus. Một lý do là ecosystem xung quanh SOAP có nhiều specifications cho concerns như bảo mật (security), addressing, reliability và transactions. Những hệ thống đã đầu tư vào WSDL/XSD governance, code generation và integration middleware không có lý do kỹ thuật để rewrite chỉ vì JSON phổ biến hơn.
 
 Điều này không có nghĩa SOAP nên là default cho mọi API mới. Với một public/internal CRUD API đơn giản, HTTP + JSON thường nhẹ và dễ vận hành hơn. Nhưng nếu bạn maintain core banking hoặc B2B gateway, việc hiểu SOAP/WSDL/XSD là kỹ năng thực tế chứ không phải kiến thức lịch sử.
 
@@ -1572,9 +1578,9 @@ SOAP thường xuất hiện trong banking, insurance, telecom, government, B2B 
 
 ## 86. SOAP so với REST/JSON phải so ở đúng tầng
 
-SOAP là messaging framework/protocol family; REST là architectural style; JSON là data serialization format. Vì vậy câu “SOAP hay JSON cái nào tốt hơn” đang so các khái niệm khác tầng.
+SOAP là messaging framework/protocol family; REST là architectural style; JSON là data tuần tự hóa (serialization) format. Vì vậy câu “SOAP hay JSON cái nào tốt hơn” đang so các khái niệm khác tầng.
 
-Một SOAP service thường dùng XML payload và WSDL contract. Một REST-like HTTP API thường dùng JSON, URLs, HTTP methods/status codes và OpenAPI. Nhưng về mặt architecture, lựa chọn còn phụ thuộc governance, legacy compatibility, security requirements, tooling và partner contracts.
+Một SOAP service thường dùng XML payload và WSDL contract. Một REST-like HTTP API thường dùng JSON, URLs, HTTP methods/status codes và OpenAPI. Nhưng về mặt architecture, lựa chọn còn phụ thuộc governance, legacy khả năng tương thích (compatibility), bảo mật (security) requirements, tooling và partner contracts.
 
 Senior không chọn công nghệ chỉ vì verbosity. Bạn phải đánh giá contract lifecycle và ecosystem của hệ thống.
 
@@ -1602,17 +1608,17 @@ Response đi ngược lại qua mapper và SOAP layer.
 
 ## 88. Debug SOAP theo layer thay vì nhìn một XML khổng lồ
 
-Khi SOAP request fail, hãy bắt đầu từ transport: endpoint, HTTP headers/content type, TLS và authentication có đúng không. Sau đó kiểm tra SOAP version bằng envelope namespace. Tiếp theo kiểm tra `Envelope`, `Header`, `Body` và Fault structure. Sau đó mới đi vào business payload namespace và XSD order/type. Cuối cùng kiểm tra binding code hoặc generated classes.
+Khi SOAP request fail, hãy bắt đầu từ transport: endpoint, HTTP headers/content type, TLS và authentication có đúng không. Sau đó kiểm tra SOAP version bằng envelope không gian tên (namespace). Tiếp theo kiểm tra `Envelope`, `Header`, `Body` và Fault structure. Sau đó mới đi vào business payload không gian tên (namespace) và XSD order/type. Cuối cùng kiểm tra ánh xạ/liên kết (binding) code hoặc generated classes.
 
-Flow debug này giúp tránh việc sửa ngẫu nhiên prefix. Trong XML, prefix có thể khác nhưng namespace URI mới quyết định identity. Một service kỳ vọng `{urn:bank:v1}Transfer` sẽ không chấp nhận `{urn:bank:v2}Transfer` chỉ vì cả hai đều viết prefix `pay`.
+Flow debug này giúp tránh việc sửa ngẫu nhiên tiền tố (prefix). Trong XML, tiền tố (prefix) có thể khác nhưng URI của không gian tên (không gian tên (namespace) URI) mới quyết định identity. Một service kỳ vọng `{urn:bank:v1}Transfer` sẽ không chấp nhận `{urn:bank:v2}Transfer` chỉ vì cả hai đều viết tiền tố (prefix) `pay`.
 
 ---
 
-## 89. SOAP security vẫn bắt đầu từ XML security
+## 89. SOAP bảo mật (security) vẫn bắt đầu từ XML bảo mật (security)
 
-Dù SOAP framework xử lý envelope, XML parser và external resolution vẫn là phần threat surface. Ngoài ra SOAP systems còn có thể dùng message-level security standards như WS-Security/XML Signature. Khi đó namespace-aware signature verification, canonicalization và verified-node binding từ các phần trước trở nên đặc biệt quan trọng.
+Dù SOAP framework xử lý envelope, XML bộ phân tích cú pháp (parser) và external resolution vẫn là phần threat surface. Ngoài ra SOAP systems còn có thể dùng message-level bảo mật (security) standards như WS-Security/XML Signature. Khi đó nhận biết không gian tên (namespace-aware) signature verification, chuẩn hóa chính tắc (canonicalization) và verified-node ánh xạ/liên kết (binding) từ các phần trước trở nên đặc biệt quan trọng.
 
-Không nên tự parse SOAP bằng string hoặc tự implement XML Signature. Hãy dùng framework/library đã được review, cấu hình parser/resource resolution chặt, rồi giữ business logic tách khỏi raw XML.
+Không nên tự parse SOAP bằng string hoặc tự implement XML Signature. Hãy dùng framework/library đã được review, cấu hình bộ phân tích cú pháp (parser)/resource resolution chặt, rồi giữ business logic tách khỏi raw XML.
 
 ---
 
@@ -1632,6 +1638,6 @@ transport
 → business logic
 ```
 
-Nếu có SOAP, SOAP envelope nằm giữa XML layer và application payload. Nếu có XSLT, transformation nằm ở boundary hoặc integration pipeline. Nếu có XML Signature, canonicalization/reference verification phải xảy ra theo protocol trước khi business code tin dữ liệu.
+Nếu có SOAP, SOAP envelope nằm giữa XML layer và application payload. Nếu có XSLT, chuyển đổi (transformation) nằm ở boundary hoặc integration chuỗi xử lý (pipeline). Nếu có XML Signature, chuẩn hóa chính tắc (canonicalization)/reference verification phải xảy ra theo protocol trước khi business code tin dữ liệu.
 
 Đây là điểm mà toàn bộ kiến thức XML từ Beginner tới Senior kết nối lại thành một hệ thống duy nhất.
