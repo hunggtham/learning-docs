@@ -1,6 +1,6 @@
 # Kotlin + Android Master Note — Intermediate
 
-> Mục tiêu: chuyển từ “viết được app” sang “xây app có cấu trúc đúng”, nắm Kotlin idioms, coroutine/Flow, ViewModel, Room, networking, navigation, lifecycle, testing và dependency injection.
+> Mục tiêu: chuyển từ “viết được app” sang “xây app có cấu trúc đúng”, hiểu coroutine/Flow, ViewModel, source of truth, Room/networking, lifecycle, testing, DI, migration và các failure mode cơ bản trước khi sang Senior. Ở level này, mỗi API phải được đặt vào đúng **owner, lifetime và data flow**.
 
 ## Mục lục
 
@@ -16,7 +16,7 @@
 10. Flow, StateFlow, SharedFlow
 11. Android app architecture
 12. ViewModel và UI State
-13. Repository và data source
+13. Repository, data source và source of truth
 14. Room
 15. Networking
 16. Dependency Injection
@@ -27,202 +27,85 @@
 21. WorkManager
 22. DataStore
 23. Testing
-24. Error handling
-25. Security và configuration căn bản
-26. Migration/legacy notes
+24. Error handling và retry
+25. Security/configuration căn bản
+26. Modern vs legacy migration notes
 27. Project architecture mẫu
+28. Serialization và DTO boundary
+29. Parcelable, Bundle và component boundary
+30. Files, MediaStore và scoped storage
+31. Notification và foreground work
+32. Deep link và App Link
+33. Build variants, release/debug và BuildConfig
+34. Coroutine/Flow testing có kiểm soát thời gian
+35. Process death như test case thiết kế
+36. Intermediate integration project
 
 ---
 
 # 1. Kotlin idioms quan trọng
 
-Kotlin không chỉ là Java viết ngắn hơn. Nếu mang nguyên tư duy Java sang Kotlin, code thường nhiều mutable state, nullable handling vụng và class ceremony không cần thiết. Kotlin idiomatic code tận dụng immutable value, expression, extension function, sealed hierarchy, higher-order function và standard library.
-
-Ví dụ thay vì kiểm tra null thủ công:
-
-```kotlin
-if (user != null) {
-    send(user)
-}
-```
-
-có thể viết:
+Kotlin không chỉ là Java viết ngắn hơn. Idiomatic Kotlin ưu tiên immutable value, expression, extension, sealed hierarchy và higher-order function khi chúng làm intent rõ hơn.
 
 ```kotlin
 user?.let(::send)
 ```
 
-Nhưng “ngắn hơn” không tự động là “tốt hơn”. Nếu chain scope function dài khiến khó đọc, code rõ ràng bằng `if` vẫn tốt hơn. Idiom là pattern làm intent rõ, không phải cuộc thi rút số dòng.
+Không chain scope function chỉ để giảm số dòng. Code rõ ràng bằng `if` hoặc local variable thường tốt hơn một chain khó đọc.
 
 # 2. Scope functions: `let`, `run`, `with`, `apply`, `also`
 
-Năm scope function đều tạo một scope tạm, nhưng khác nhau ở cách tham chiếu receiver và giá trị trả về.
-
-| Function | Receiver bên trong | Trả về | Dùng tốt khi |
+| Function | Receiver | Trả về | Dùng tốt khi |
 |---|---|---|---|
 | `let` | `it` | lambda result | null-chain, transform |
 | `run` | `this` | lambda result | configure + compute |
-| `with(x)` | `this` | lambda result | nhóm nhiều call trên object đã có |
-| `apply` | `this` | chính receiver | cấu hình object |
-| `also` | `it` | chính receiver | side effect như log/debug |
+| `with(x)` | `this` | lambda result | nhóm nhiều call |
+| `apply` | `this` | receiver | configure object |
+| `also` | `it` | receiver | log/side effect nhỏ |
 
-```kotlin
-val user = User().apply {
-    name = "Lan"
-    age = 25
-}
-```
-
-```kotlin
-val length = text?.let { value ->
-    value.trim().length
-} ?: 0
-```
-
-Lỗi thường gặp là nested `let/apply/run` làm mất ngữ nghĩa `this`/`it`. Senior code thường giới hạn nesting hoặc đặt tên lambda parameter rõ ràng.
+Nested `let/apply/run` dễ làm mất ngữ nghĩa `this`/`it`; hãy đặt tên lambda parameter hoặc tách block.
 
 # 3. Extension function và property
 
-Extension tạo API có vẻ như method của type mà không sửa class gốc.
-
-```kotlin
-fun String.isEmailLike(): Boolean = contains("@") && contains(".")
-```
-
-Extension được resolve statically theo declared type, không phải virtual dispatch như member function.
-
-```kotlin
-open class Animal
-class Dog : Animal()
-
-fun Animal.name() = "animal"
-fun Dog.name() = "dog"
-
-val x: Animal = Dog()
-println(x.name()) // animal
-```
-
-Do đó extension không phải cách override behavior runtime.
+Extension được resolve statically theo declared type, không phải virtual dispatch. Nó phù hợp thêm convenience/API adapter, không thay polymorphism runtime.
 
 # 4. Generics và variance
 
-Generics cho phép type-safe abstraction.
-
-```kotlin
-class Box<T>(val value: T)
-```
-
-Kotlin có declaration-site variance `out` và `in`.
-
-```kotlin
-interface Producer<out T> {
-    fun produce(): T
-}
-
-interface Consumer<in T> {
-    fun consume(value: T)
-}
-```
-
-`out T` nghĩa type chủ yếu được produce; `in T` nghĩa type chủ yếu được consume. Quy tắc nhớ PECS của Java vẫn hữu ích về trực giác: Producer Extends, Consumer Super, nhưng Kotlin biểu diễn trực tiếp bằng variance modifier.
-
-Use-site projection cũng tồn tại:
-
-```kotlin
-fun copy(from: Array<out Any>, to: Array<Any>) { ... }
-```
-
-Star projection `Foo<*>` dùng khi không biết type argument nhưng vẫn muốn thao tác an toàn trong giới hạn compiler cho phép.
+`out T` cho producer, `in T` cho consumer. Star projection `Foo<*>` hữu ích khi chưa biết type argument nhưng vẫn muốn thao tác trong giới hạn an toàn.
 
 # 5. `object`, `companion object` và singleton
 
-`object` declaration tạo singleton lazy theo semantics của JVM/class initialization.
-
-```kotlin
-object AppLogger {
-    fun log(message: String) { ... }
-}
-```
-
-Không nên biến mọi service thành global singleton vì testability và dependency boundary sẽ kém. Dependency Injection thường quản lý singleton lifetime tốt hơn.
-
-`companion object` là object gắn với class:
-
-```kotlin
-class User private constructor(val id: Long) {
-    companion object {
-        fun create(id: Long) = User(id)
-    }
-}
-```
+`object` tạo singleton theo class-loading semantics. Không biến mọi service thành global singleton; stateful singleton làm testing/lifetime khó hơn. DI thường quản lý lifecycle rõ hơn.
 
 # 6. Delegation và delegated properties
 
-Class delegation:
-
-```kotlin
-class LoggingList<T>(
-    private val delegate: MutableList<T>
-) : MutableList<T> by delegate
-```
-
-Property delegation phổ biến với `lazy`:
-
-```kotlin
-val config by lazy { loadConfig() }
-```
-
-Android XML/View code từng dùng `by lazy`, custom delegates hoặc Fragment view binding delegate. Với Compose, `by` còn xuất hiện trong state:
-
-```kotlin
-var text by remember { mutableStateOf("") }
-```
-
-Đây dựa trên `getValue`/`setValue` operator functions.
+Class delegation và property delegate giảm boilerplate khi semantics đúng. `lazy`, Compose state delegation và custom ViewBinding delegate là ví dụ phổ biến.
 
 # 7. Sequences
 
-Collection operation thông thường như `map().filter()` tạo intermediate collection tùy operation. `Sequence` xử lý lazy.
-
-```kotlin
-val result = (1..1_000_000)
-    .asSequence()
-    .map { it * 2 }
-    .filter { it % 3 == 0 }
-    .take(10)
-    .toList()
-```
-
-Sequence không phải lúc nào nhanh hơn. Với collection nhỏ hoặc chain ngắn, overhead iterator/lambda có thể không đáng. Dùng khi pipeline dài, dữ liệu lớn hoặc cần short-circuit lazy.
+`Sequence` lazy và có thể giảm intermediate collection với pipeline dài/short-circuit. Collection nhỏ/chain ngắn không mặc định nhanh hơn; performance cần đo.
 
 # 8. Coroutine nền tảng
 
-Coroutine là abstraction concurrency nhẹ, không đồng nghĩa với thread. Coroutine có thể suspend mà không block thread, sau đó resume trên thread thích hợp theo dispatcher/context.
-
-`suspend` đánh dấu function có thể suspend và chỉ được gọi từ coroutine hoặc suspend function khác.
+Coroutine không đồng nghĩa thread. `suspend` chỉ nói function có thể suspend; nó không đảm bảo function chạy background.
 
 ```kotlin
-suspend fun loadUser(): User {
-    delay(100)
-    return User(...)
-}
+suspend fun loadUser(): User = api.loadUser()
 ```
 
-Coroutine builder thường gặp:
+Builder chính:
 
 ```kotlin
-scope.launch { ... }       // trả Job
-scope.async { ... }        // trả Deferred<T>
+scope.launch { ... }       // Job
+scope.async { ... }        // Deferred<T>
 withContext(dispatcher) { ... }
 ```
 
-`launch` phù hợp công việc không trả value trực tiếp; `async` phù hợp concurrent computation cần `await`. Không dùng `async` chỉ để “chạy coroutine” nếu không cần Deferred.
-
-Dispatcher phổ biến: `Dispatchers.Main`, `IO`, `Default`. `Main` cho UI; `IO` cho blocking I/O; `Default` cho CPU-intensive work. Suspend function tốt nên “main-safe”: nếu bên trong có blocking I/O, chính function đó chuyển sang dispatcher phù hợp thay vì bắt caller nhớ chuyển thread.
+`launch` cho work không trả value trực tiếp; `async` cho concurrent computation cần `await`. Suspend API của data layer nên **main-safe**: nếu implementation dùng blocking I/O, chính layer đó chịu trách nhiệm đổi dispatcher.
 
 # 9. Structured concurrency
 
-Structured concurrency nghĩa lifecycle coroutine con bị ràng buộc với scope cha. Nó giúp cancellation, error propagation và resource cleanup có cấu trúc.
+Coroutine con sống trong scope cha. Điều này tạo ownership và cancellation có cấu trúc.
 
 ```kotlin
 suspend fun loadPage(): Page = coroutineScope {
@@ -232,86 +115,87 @@ suspend fun loadPage(): Page = coroutineScope {
 }
 ```
 
-Nếu một child fail trong `coroutineScope`, các sibling thường bị cancel. `supervisorScope` dùng khi muốn child failure không tự cancel sibling.
+Chỉ parallel khi hai operation độc lập. `supervisorScope` phù hợp khi sibling failure độc lập; nó không tự xử lý error.
 
-Tránh `GlobalScope` trong application code. Scope nên có owner rõ ràng. Android chính thức cũng khuyến nghị inject dispatcher, tránh expose mutable type, để ViewModel tạo coroutine cho business actions, và dùng data/business layer expose suspend function hoặc Flow.
+Tránh `GlobalScope`. Hỏi: **ai sở hữu coroutine và khi owner chết thì work có nên tiếp tục không?**
 
 # 10. Flow, StateFlow và SharedFlow
 
-`Flow<T>` là cold asynchronous stream: block upstream thường chỉ chạy khi có collector.
-
-```kotlin
-fun observeUsers(): Flow<List<User>> = dao.observeUsers()
-```
-
-Operator quan trọng:
-
-```kotlin
-flow
-    .map { ... }
-    .filter { ... }
-    .distinctUntilChanged()
-    .debounce(300)
-    .catch { ... }
-    .combine(other) { a, b -> ... }
-```
-
-`StateFlow` là hot state holder, luôn có current value. Rất phù hợp expose UI state từ ViewModel.
+`Flow<T>` thường cold: upstream chạy khi collect. `StateFlow` là hot state holder có current value. `SharedFlow` là hot broadcast stream với replay/buffer cấu hình được.
 
 ```kotlin
 private val _uiState = MutableStateFlow(UiState())
 val uiState: StateFlow<UiState> = _uiState.asStateFlow()
 ```
 
-`SharedFlow` là hot broadcast stream cấu hình replay/buffer, phù hợp event stream hoặc shared upstream trong một số trường hợp. Tuy nhiên one-off UI event là chủ đề dễ thiết kế sai; không nên mặc định mọi event đều là `SharedFlow` nếu state-based modeling đơn giản hơn.
+Không chọn SharedFlow chỉ vì “event”. Trước hết hỏi event có cần survive collector inactive/recreation không. Nếu câu trả lời có, có thể đó là durable state chứ không phải one-off event.
+
+Các operator như `debounce`, `combine`, `distinctUntilChanged`, `flatMapLatest` cần dùng theo semantics. `flatMapLatest` hợp search latest-wins nhưng không hợp audit stream nơi mọi item phải xử lý.
 
 # 11. Android app architecture
 
-Kiến trúc Android hiện đại thường chia tối thiểu UI layer và data layer; domain layer là optional khi business logic đủ phức tạp hoặc cần reuse rõ ràng.
-
-UI layer nhận state và phát event. ViewModel điều phối UI state. Repository abstract nguồn dữ liệu và cung cấp API cho ViewModel/use case. Data source làm việc với network/database/platform API.
-
-Một dependency direction điển hình:
+Architecture hiện đại tối thiểu có UI layer và data layer; domain layer optional.
 
 ```text
-UI -> ViewModel -> UseCase(optional) -> Repository -> DataSource
+UI
+→ ViewModel / state holder
+→ UseCase (optional)
+→ Repository
+→ local/remote/platform data source
 ```
 
-Không nên để Composable gọi Retrofit/Room trực tiếp. Không nên để Repository biết Button hay NavController. Boundary rõ giúp test, thay nguồn dữ liệu và xử lý concurrency tốt hơn.
+Điểm quan trọng không phải số layer mà là **dependency direction** và **ownership**.
+
+UI không gọi Retrofit/Room trực tiếp vì UI không nên biết policy cache/retry/sync. Repository không biết Button/NavController vì data layer không nên phụ thuộc presentation.
+
+## 11.1 Architecture bắt đầu từ state
+
+Trước khi tạo class, phân loại state:
+
+```text
+UI ephemeral state
+screen state
+business/application data
+persisted data
+server truth
+```
+
+Ví dụ search text nhỏ có thể ở ViewModel/SavedStateHandle; danh sách article không nên bị nhét vào saved state nếu có thể reload từ Room.
+
+## 11.2 Domain layer là optional
+
+Use case có giá trị khi operation chứa policy/business rule/reuse. Nếu `GetUserUseCase` chỉ gọi một dòng `repository.getUser()`, thêm layer có thể chỉ tăng navigation cost.
 
 # 12. ViewModel và UI State
 
+ViewModel là screen-level state holder/orchestrator, không phải nơi chứa toàn bộ networking, SQL và service locator.
+
+Ví dụ state:
+
 ```kotlin
 data class UserUiState(
-    val loading: Boolean = false,
     val users: List<UserUi> = emptyList(),
-    val errorMessage: String? = null
+    val isInitialLoading: Boolean = false,
+    val isRefreshing: Boolean = false,
+    val error: UiError? = null
 )
-
-class UserViewModel(
-    private val repository: UserRepository
-) : ViewModel() {
-    private val _uiState = MutableStateFlow(UserUiState())
-    val uiState = _uiState.asStateFlow()
-
-    fun refresh() {
-        viewModelScope.launch {
-            _uiState.update { it.copy(loading = true, errorMessage = null) }
-            runCatching { repository.refresh() }
-                .onFailure { e ->
-                    _uiState.update { it.copy(errorMessage = e.message) }
-                }
-            _uiState.update { it.copy(loading = false) }
-        }
-    }
-}
 ```
 
-Trong app lớn, nên tránh nhiều boolean độc lập tạo impossible state. Có thể dùng sealed state hoặc state machine tùy domain.
+Phân biệt initial load và refresh giúp UI giữ cached content thay vì thay toàn màn hình bằng spinner.
 
-# 13. Repository và data source
+ViewModel nhận action, gọi repository/use case, rồi expose state. Nó không giữ Activity/View context và không tạo Retrofit/Room trực tiếp.
 
-Repository không chỉ là wrapper “mỗi method gọi một DAO”. Nó nên đại diện abstraction dữ liệu mà upper layer cần, xử lý source of truth, synchronization, caching và policy.
+# 13. Repository, data source và source of truth
+
+Repository không chỉ là wrapper DAO/API. Nó trả lời:
+
+```text
+source nào authoritative?
+khi nào refresh?
+local và remote merge ra sao?
+error nào propagate?
+mutation có retry được không?
+```
 
 ```kotlin
 interface UserRepository {
@@ -320,13 +204,22 @@ interface UserRepository {
 }
 ```
 
-Nếu app offline-first, database thường đóng vai trò source of truth; network refresh ghi DB; UI observe DB. Cách này giảm việc UI phải ghép nhiều source thủ công.
+Offline/read-cache pattern phổ biến:
+
+```text
+Room emits cached data
+→ UI render ngay
+→ refresh network
+→ validate/map DTO
+→ transaction update Room
+→ Room emits state mới
+```
+
+UI không cần biết data mới tới từ network hay DB.
 
 # 14. Room
 
-Room là abstraction database trên SQLite.
-
-Entity:
+Room bọc SQLite bằng schema/DAO/compile-time validation.
 
 ```kotlin
 @Entity(tableName = "users")
@@ -335,8 +228,6 @@ data class UserEntity(
     val name: String
 )
 ```
-
-DAO:
 
 ```kotlin
 @Dao
@@ -349,43 +240,38 @@ interface UserDao {
 }
 ```
 
-Database:
-
-```kotlin
-@Database(entities = [UserEntity::class], version = 1)
-abstract class AppDatabase : RoomDatabase() {
-    abstract fun userDao(): UserDao
-}
-```
-
-Migration phải được quản lý nghiêm túc. `fallbackToDestructiveMigration` có thể hữu ích cho prototype nhưng có thể xóa data; không dùng vô thức trong production.
+Transaction bảo vệ invariant DB. Migration phải được test với schema/data cũ thật đại diện. `fallbackToDestructiveMigration` chỉ hợp dữ liệu disposable/cache nếu product chấp nhận mất data.
 
 # 15. Networking
 
-Android app thường dùng OkHttp + Retrofit hoặc Ktor client. Retrofit biến HTTP API thành Kotlin interface.
+Retrofit/OkHttp hoặc Ktor client đều là implementation detail của transport layer.
+
+DTO nên tách domain model:
 
 ```kotlin
-interface UserApi {
-    @GET("users")
-    suspend fun getUsers(): List<UserDto>
+data class UserDto(val id: Long, val name: String?)
 
-    @POST("users")
-    suspend fun createUser(@Body request: CreateUserRequest): UserDto
-}
+fun UserDto.toDomain() = User(
+    id = id,
+    name = name.orEmpty()
+)
 ```
 
-Tách DTO khỏi domain model để backend schema không rò trực tiếp vào toàn app.
+Phân biệt ít nhất:
 
-```kotlin
-data class UserDto(val id: Long, val name: String)
-fun UserDto.toDomain() = User(id, name)
+```text
+transport error: offline, DNS, timeout
+protocol error: HTTP status
+serialization/schema error
+auth/session error
+domain/business error
 ```
 
-Cần phân biệt transport failure, HTTP error, serialization error và domain error. `200` không luôn đồng nghĩa nghiệp vụ thành công nếu backend trả error code trong body.
+Không để `HttpException`/Retrofit type chảy tới Composable nếu UI chỉ cần domain action/message.
 
 # 16. Dependency Injection
 
-DI đưa dependency từ bên ngoài thay vì class tự tạo chúng.
+DI là quản lý graph/lifetime. Manual DI, Hilt hay Koin đều chỉ là công cụ.
 
 ```kotlin
 class UserRepositoryImpl(
@@ -394,118 +280,137 @@ class UserRepositoryImpl(
 ) : UserRepository
 ```
 
-Hilt là lựa chọn phổ biến trong Android Jetpack ecosystem. Koin là runtime DI/service locator style dễ bắt đầu nhưng có trade-off khác. Manual DI vẫn tốt cho app nhỏ và giúp hiểu bản chất.
-
-Điểm quan trọng là lifetime/scope: singleton toàn app, Activity retained, ViewModel scoped, hoặc object transient. Sai scope có thể tạo memory leak hoặc state-sharing ngoài ý muốn.
+Scope sai gây leak/state-sharing. `@Singleton` không phải default tốt cho mọi class; chỉ dùng khi lifetime thực sự app-wide.
 
 # 17. Navigation nâng cao
 
-Navigation không chỉ là `navigate("detail")`. Cần nghĩ về back stack, deep link, argument, saved state và ownership của ViewModel.
+Navigation gồm back stack, route identity, deep link, argument và ViewModel scope. Truyền stable ID thay object lớn/stale:
 
-Không nên truyền object lớn qua navigation argument. Truyền stable identifier rồi load dữ liệu tại destination thường tốt hơn, tránh vượt Binder transaction limit và tránh stale object.
-
-# 18. Compose state và effect
-
-Compose có nhiều API state/effect với mục đích khác nhau.
-
-`remember` giữ value qua recomposition. `rememberSaveable` thêm khả năng save qua recreation khi value saveable. `derivedStateOf` tạo state suy ra và hữu ích khi muốn giảm recomposition khi derived result không đổi. `LaunchedEffect` chạy coroutine gắn với composition lifecycle theo key. `DisposableEffect` có cleanup. `SideEffect` publish state ra non-Compose object sau successful composition. `rememberUpdatedState` giữ latest value trong long-lived effect mà không restart effect.
-
-Ví dụ:
-
-```kotlin
-LaunchedEffect(userId) {
-    viewModel.load(userId)
-}
+```text
+navigate(articleId)
+→ destination reconstruct data từ repository
 ```
 
-Sai lầm hay gặp là dùng `LaunchedEffect(Unit)` để chạy business logic mà không hiểu lifecycle, hoặc gọi network trực tiếp trong Composable body gây call lặp khi recomposition.
+Deep link là external input, phải validate và authorization lại ở destination/domain layer.
+
+# 18. Compose state/effect
+
+`remember` sống qua recomposition trong cùng composition. `rememberSaveable` có thể save qua recreation cho value phù hợp. `LaunchedEffect(key)` chạy coroutine theo composition lifetime; `DisposableEffect` cleanup resource; `rememberUpdatedState` cập nhật latest callback mà không restart effect.
+
+Không gọi network trực tiếp trong Composable body. Business operation nên do owner phù hợp quản lý.
 
 # 19. XML interoperability
 
-Compose có thể nhúng View qua `AndroidView`; XML/View app có thể nhúng Compose qua `ComposeView`. Điều này rất hữu ích khi migration từng màn hình.
+Compose và View system có thể coexist. `ComposeView` cho View/Fragment host Compose; `AndroidView` cho Compose host View.
 
-Legacy View code còn gặp Fragment, RecyclerView, ConstraintLayout, LiveData, Data Binding, View Binding. Không cần rewrite toàn bộ chỉ để “hiện đại”; migration nên dựa vào cost/risk.
+XML/Fragment/RecyclerView/View Binding không “sai” chỉ vì Compose tồn tại. Migration incremental giảm regression risk.
 
 # 20. Lifecycle-aware collection
 
-Trong Compose, thường dùng `collectAsStateWithLifecycle` để collect Flow thành Compose State theo lifecycle thích hợp.
-
-Trong View system, dùng `repeatOnLifecycle`:
+Compose thường dùng `collectAsStateWithLifecycle()`. View system dùng `repeatOnLifecycle`.
 
 ```kotlin
 lifecycleScope.launch {
     repeatOnLifecycle(Lifecycle.State.STARTED) {
-        viewModel.uiState.collect { state ->
-            render(state)
-        }
+        viewModel.uiState.collect(::render)
     }
 }
 ```
 
-Không nên `launch { flow.collect {} }` vô hạn trong Activity mà không quan tâm lifecycle nếu collector cần dừng khi UI không visible.
+Collector lifecycle phải phản ánh việc UI có cần nhận update khi invisible không.
 
 # 21. WorkManager
 
-WorkManager dành cho deferrable, guaranteed background work có constraint, ví dụ sync dữ liệu cần eventually execute. Nó không phải replacement chung cho mọi coroutine/background task.
+WorkManager cho **deferrable durable work** cần eventually run và có constraints/retry.
 
 ```kotlin
-class SyncWorker(
-    appContext: Context,
-    params: WorkerParameters
-) : CoroutineWorker(appContext, params) {
-    override suspend fun doWork(): Result {
-        return try {
-            sync()
-            Result.success()
-        } catch (e: IOException) {
-            Result.retry()
-        }
+class SyncWorker(...) : CoroutineWorker(...) {
+    override suspend fun doWork(): Result = try {
+        sync()
+        Result.success()
+    } catch (e: IOException) {
+        Result.retry()
     }
 }
 ```
 
+Không retry mọi exception. Validation/4xx nghiệp vụ thường cần failure, không phải retry vô hạn.
+
 # 22. DataStore
 
-DataStore phù hợp thay SharedPreferences cho key-value/settings hiện đại. Có Preferences DataStore và Proto DataStore. Preferences đơn giản nhưng không type-safe schema mạnh; Proto có schema rõ hơn và migration tốt hơn.
+Preferences DataStore phù hợp key-value typed wrapper; Proto DataStore phù hợp schema rõ. Không dùng DataStore như relational database.
 
-Không dùng DataStore như database quan hệ. Room phù hợp dữ liệu có query/relationship lớn hơn.
+Migration SharedPreferences → DataStore nên giữ key/semantic behavior, không chỉ copy giá trị.
 
 # 23. Testing
 
-Ba tầng test phổ biến: local unit test chạy JVM, instrumentation test chạy device/emulator, UI test (Compose/UI Automator/Espresso tùy stack).
+Ba tầng cơ bản:
 
-Business logic nên test không cần Android framework nếu có thể.
+```text
+JVM unit test
+integration test boundary
+instrumented/UI test
+```
 
-Coroutine test dùng `runTest` và `TestDispatcher`. Android guidance khuyến nghị inject dispatcher để test deterministic hơn.
+Business logic nên test nhanh ngoài Android framework nếu có thể. Fake tốt cho collaborator stateful; mock tốt cho interaction hẹp.
+
+Một test có giá trị chứng minh behavior/invariant, không khóa implementation detail.
+
+# 24. Error handling và retry
+
+Không `catch(Exception)` mọi nơi rồi trả string chung.
+
+Một error model đơn giản:
 
 ```kotlin
-@Test
-fun load_success_updatesState() = runTest {
-    val repo = FakeRepository(...)
-    val vm = UserViewModel(repo)
-    vm.refresh()
-    advanceUntilIdle()
-    assertFalse(vm.uiState.value.loading)
+sealed interface DataError {
+    data object Offline : DataError
+    data object Timeout : DataError
+    data object Unauthorized : DataError
+    data class Http(val code: Int) : DataError
+    data class Unknown(val cause: Throwable) : DataError
 }
 ```
 
-# 24. Error handling
+UI map error sang behavior phù hợp: offline có thể vẫn render cache; unauthorized có thể trigger session recovery; validation focus field.
 
-Không catch `Exception` mọi nơi rồi bỏ qua. Đặc biệt trong coroutine, không nên swallow `CancellationException` vì cancellation cooperative cần propagate.
+## 24.1 Retry không phải mặc định
 
-Boundary pattern thường là data layer map low-level exceptions thành domain error khi cần, ViewModel chuyển domain result thành UI state, UI render state và action retry.
+GET read thường dễ retry hơn mutation. Với POST tạo side effect, timeout có thể xảy ra sau khi server đã commit. Muốn retry an toàn cần backend idempotency contract/key.
 
-# 25. Security và configuration căn bản
+## 24.2 Cancellation không phải error UI
 
-Không hardcode API secret trong APK và kỳ vọng nó bí mật; APK có thể reverse engineer. API cần secret thực sự nên đặt logic phía server hoặc dùng cơ chế token thích hợp.
+Coroutine bị cancel do screen đóng không nên hiện snackbar “Something went wrong”. Đừng swallow `CancellationException`.
 
-BuildConfig field, resource value và local properties có thể hữu ích quản lý environment nhưng không biến secret client thành an toàn tuyệt đối.
+# 25. Security/configuration căn bản
 
-Dùng HTTPS, Network Security Config khi cần policy, Android Keystore cho cryptographic keys, và tránh log dữ liệu nhạy cảm.
+Không hardcode server secret trong APK. BuildConfig/local.properties chỉ thay cách inject value vào artifact, không làm value đóng gói trở thành secret.
 
-# 26. Migration/legacy notes
+Dùng HTTPS, Network Security Config khi cần, Keystore cho key material, tránh log PII/token và validate Intent/deep-link/URI input từ bên ngoài.
 
-`LiveData` vẫn hợp lệ và phổ biến trong app cũ; app Kotlin/Compose mới thường dùng Flow/StateFlow. `AsyncTask` deprecated và nên thay bằng coroutine/WorkManager tùy use case. `startActivityForResult`/`onActivityResult` nên thay bằng Activity Result API. `SharedPreferences` không bị “cấm”, nhưng DataStore thường là lựa chọn mới tốt hơn. XML/View system không deprecated; Compose chỉ là hướng UI hiện đại được ưu tiên.
+# 26. Modern vs legacy migration notes
+
+Phân loại legacy trước khi rewrite:
+
+```text
+Deprecated/unsafe
+Supported nhưng có replacement
+Still-valid cho use case cụ thể
+Historical-only
+```
+
+| Older API/stack | Modern direction | Lý do |
+|---|---|---|
+| `AsyncTask` | coroutine / WorkManager theo lifetime | AsyncTask deprecated |
+| `startActivityForResult` | Activity Result API | lifecycle-aware |
+| Kotlin synthetic view | View Binding / Compose | workflow cũ |
+| LiveData-centric | Flow/StateFlow trong Kotlin stack | LiveData vẫn supported |
+| RxJava-heavy | coroutine/Flow khi đáng migrate | không rewrite mù |
+| SharedPreferences | DataStore cho structured settings | migrate theo contract |
+| XML-only | Compose/hybrid | XML vẫn supported |
+| kapt | KSP khi processor hỗ trợ | migrate per dependency |
+
+Modern stack không tự động tạo architecture tốt. Migration cần test/telemetry và benefit cụ thể.
 
 # 27. Project architecture mẫu
 
@@ -513,11 +418,12 @@ Dùng HTTPS, Network Security Config khi cần policy, Android Keystore cho cryp
 app/
 ├─ ui/
 │  ├─ home/
+│  │  ├─ HomeRoute.kt
 │  │  ├─ HomeScreen.kt
 │  │  ├─ HomeViewModel.kt
 │  │  └─ HomeUiState.kt
 │  └─ navigation/
-├─ domain/
+├─ domain/              # optional
 │  ├─ model/
 │  └─ usecase/
 ├─ data/
@@ -527,19 +433,11 @@ app/
 └─ di/
 ```
 
-Domain layer có thể bỏ nếu app đơn giản. Đừng tạo use case một dòng chỉ vì template bảo phải có. Kiến trúc tốt giảm coupling và làm dependency/business rules rõ hơn; kiến trúc xấu chỉ tăng folder.
+Folder structure không phải architecture. Dependency direction/source of truth/state ownership mới là architecture.
 
----
+# 28. Serialization và DTO boundary
 
-## Intermediate Senior Notes
-
-Một Android developer ở mức intermediate nên bắt đầu nhìn app như một hệ thống state + side effect + lifecycle chứ không phải collection các callback. Khi state ownership rõ ràng, lifecycle rõ ràng và data flow một chiều, phần lớn bug “màn hình tự dưng sai” giảm mạnh. Coroutine phải có scope owner; Flow phải có lifecycle; repository phải có policy; UI không được trực tiếp biết chi tiết storage/network nếu không có lý do rõ ràng.
-
----
-
-# 28. Serialization, DTO và boundary giữa network/domain
-
-Network payload thường là JSON, nhưng object nhận từ server không nên mặc định trở thành domain model dùng khắp ứng dụng. DTO (**Data Transfer Object**) phản ánh contract transport; domain model phản ánh ý nghĩa nghiệp vụ. Tách hai loại này cho phép backend thay field, nullable hoặc naming mà không làm domain layer bị phụ thuộc trực tiếp.
+Transport DTO phản ánh wire schema; domain model phản ánh nghiệp vụ.
 
 ```kotlin
 @Serializable
@@ -547,83 +445,106 @@ data class UserDto(
     val id: Long,
     val display_name: String? = null
 )
-
-data class User(
-    val id: Long,
-    val displayName: String
-)
-
-fun UserDto.toDomain() = User(
-    id = id,
-    displayName = display_name.orEmpty()
-)
 ```
 
-Kotlin Serialization, Moshi và Gson là các lựa chọn phổ biến tùy stack. Khi dùng reflection-based serializer cần hiểu R8/obfuscation và default constructor/annotation requirements. Với Kotlin Serialization, compiler plugin tạo serializer giúp type-safe hơn và tránh một số reflection cost. Dù dùng library nào, unknown field, missing field, enum value mới, null bất ngờ và schema migration đều phải được xem là tình huống bình thường của hệ thống phân tán.
+Unknown field, missing field, new enum value và null bất ngờ là tình huống bình thường khi client/server release độc lập. Parser/model cần forward-compatible ở nơi phù hợp.
 
-# 29. Parcelable, Bundle và dữ liệu truyền giữa component
+# 29. Parcelable, Bundle và component boundary
 
-`Bundle`/Intent argument phù hợp cho dữ liệu nhỏ. Android có `Parcelable` để serialization hiệu quả hơn trong IPC/component boundary. Kotlin Android Extensions trước đây từng cung cấp `@Parcelize`; hiện `kotlin-parcelize` plugin là cách chuẩn nếu muốn compiler generate implementation.
+Bundle/Intent chỉ nên mang dữ liệu nhỏ. `@Parcelize` giúp generate Parcelable nhưng không phải lý do truyền object graph lớn.
 
 ```kotlin
 @Parcelize
-data class UserArgs(
-    val userId: Long,
-    val source: String
-) : Parcelable
+data class UserArgs(val userId: Long) : Parcelable
 ```
 
-Không truyền object graph lớn qua Intent/Bundle. Cách bền vững hơn là truyền ID nhỏ rồi load dữ liệu từ repository/database. Điều này tránh Binder transaction limit, giảm coupling và giúp process recreation dễ phục hồi hơn.
+Stable ID + repository reconstruction bền hơn object snapshot stale.
 
 # 30. Files, MediaStore và scoped storage
 
-Android có nhiều loại storage với lifetime và visibility khác nhau. Internal app storage chỉ app truy cập trực tiếp và thường bị xóa khi uninstall. Cache có thể bị hệ thống dọn. Shared media như ảnh/video nên đi qua MediaStore hoặc system picker theo API hiện hành. Không nên áp dụng tư duy “đường dẫn file tùy ý” từ desktop vào Android hiện đại vì scoped storage và permission model đã thay đổi đáng kể qua nhiều Android version.
+Android storage có internal/cache/shared-media/document-provider với lifetime/permission khác nhau. Với `content://`, dùng `ContentResolver`; đừng cố ép mọi URI thành filesystem path.
 
-Khi cần user chọn tài liệu, Storage Access Framework hoặc Activity Result contract thường tốt hơn tự xin quyền truy cập toàn bộ storage. URI trả về có thể là `content://`, vì vậy code nên làm việc qua `ContentResolver` thay vì cố chuyển mọi URI thành filesystem path.
+Photo Picker/SAF giúp giảm broad storage permission khi user chủ động chọn tài liệu/media.
 
 # 31. Notification và foreground work
 
-Notification không chỉ là gọi `notify()`. Từ Android 8, notification thường cần channel. Một số phiên bản Android mới còn có runtime notification permission. Notification channel được người dùng kiểm soát; sau khi tạo, một số behavior không thể tùy ý đổi như config nội bộ bình thường.
+Notification channel, runtime notification permission và foreground-service policy thay đổi theo Android generation. Foreground Service không phải cách lách background restriction.
 
-Foreground Service dành cho công việc ongoing mà người dùng nhận biết và platform cho phép, đồng thời yêu cầu notification thích hợp. Nó không phải cách lách background restriction. Nếu công việc có thể trì hoãn và cần bảo đảm chạy, WorkManager thường đúng hơn. Nếu công việc chỉ tồn tại cùng một màn hình, coroutine trong lifecycle/ViewModel thường đúng hơn. Chọn primitive theo **lifetime và guarantee**, không theo thói quen.
+Chọn primitive theo lifetime/guarantee, không theo thói quen.
 
 # 32. Deep link và App Link
 
-Deep link đưa user trực tiếp đến destination cụ thể. Custom scheme như `myapp://product/42` dễ thiết lập nhưng có thể bị app khác đăng ký cùng scheme. Android App Links dùng HTTPS domain và domain verification để tạo liên kết đáng tin cậy hơn.
+Custom scheme dễ conflict. App Links dùng HTTPS + verification. External route phải validate input và authorization; deep link không phải quyền truy cập.
 
-Route từ external input phải được validate. Không giả định query parameter luôn tồn tại hoặc có format đúng. Nếu deep link có thể mở chức năng nhạy cảm, authorization vẫn phải kiểm tra sau khi điều hướng; deep link không phải bằng chứng người dùng được phép truy cập dữ liệu đó.
+# 33. Build variants, release/debug và BuildConfig
 
-# 33. Build variants, product flavors và BuildConfig
+Build type (`debug`/`release`) và product flavor tạo variants. Quá nhiều dimensions làm CI/test matrix nổ theo tích tổ hợp.
 
-Build type thường biểu diễn cách build như `debug`/`release`; product flavor thường biểu diễn biến thể sản phẩm như `dev`, `staging`, `prod` hoặc region/brand. Hai chiều này kết hợp thành build variant. Cần tránh tạo quá nhiều dimension vì số variant tăng theo tích Descartes và làm build, test, CI phức tạp hơn.
+Quan trọng hơn: **debug chạy không chứng minh release chạy**. Release có thể khác vì:
 
-Thông tin như base URL có thể khác theo variant, nhưng **secret thực sự không trở nên an toàn chỉ vì đặt trong BuildConfig/local.properties**. Bất kỳ giá trị nào đóng gói trong app đều có khả năng bị trích xuất. Secret dài hạn phải được bảo vệ phía server hoặc bằng protocol phù hợp.
+```text
+R8/obfuscation/resource shrinking
+manifest merge
+BuildConfig/env
+signing
+production endpoint
+feature flags
+```
+
+CI nên build ít nhất release/minified variant quan trọng. Secret không trở nên an toàn vì nằm trong BuildConfig.
 
 # 34. Coroutine/Flow testing có kiểm soát thời gian
 
-Coroutine test nên dùng `kotlinx-coroutines-test` để điều khiển scheduler thay vì `Thread.sleep()`. `runTest` có virtual time và cho phép `advanceUntilIdle()`/`advanceTimeBy()` khi cần. Dispatcher nên inject để production dùng dispatcher thật còn test dùng test dispatcher.
+Dùng `runTest`/TestDispatcher thay `Thread.sleep()`.
 
 ```kotlin
 @Test
 fun loadUser_updatesState() = runTest {
-    val dispatcher = StandardTestDispatcher(testScheduler)
-    val vm = UserViewModel(fakeRepo, dispatcher)
-
+    val vm = UserViewModel(fakeRepo)
     vm.load()
     advanceUntilIdle()
-
     assertEquals("An", vm.uiState.value.name)
 }
 ```
 
-Với Flow, cần quyết định đang test snapshot state cuối cùng hay chuỗi emission. StateFlow có giá trị hiện tại; cold Flow chỉ chạy khi collect. Một test tốt xác minh behavior công khai, không khóa chặt implementation detail như số coroutine nội bộ nếu điều đó không phải contract.
+Với race/latest-wins, fake repository có thể cho phép test điều khiển thứ tự completion thay vì dựa timing ngẫu nhiên.
 
-# 35. Process death như một test case thiết kế
+# 35. Process death như test case thiết kế
 
-Configuration change và process death không giống nhau. ViewModel giúp sống qua recreation trong cùng process nhưng không tồn tại sau khi process bị kill. Khi thiết kế screen, hãy phân loại state: dữ liệu có thể reload từ repository; input nhỏ cần phục hồi bằng SavedStateHandle/rememberSaveable; dữ liệu nghiệp vụ bền vững cần persist ở database/DataStore/server.
+ViewModel sống qua configuration change nhưng không sống qua process death. Phân loại state:
 
-Một dấu hiệu kiến trúc yếu là cần nhét toàn bộ object graph vào saved state để “không mất gì”. Kiến trúc tốt thường có stable identifier và source of truth có thể reconstruct state.
+```text
+reloadable data → repository/source of truth
+small reconstruct key → SavedStateHandle/rememberSaveable
+durable business data → DB/DataStore/server
+```
 
-# 36. Intermediate integration project nên có gì
+Nếu screen chỉ restore được bằng cách save toàn object graph vào Bundle, architecture có thể đang thiếu stable identity/source of truth.
 
-Một project kết thúc Intermediate nên có ít nhất một flow từ UI → ViewModel → Repository → local/network data source; UI state expose bằng StateFlow; Room làm local persistence; network layer map DTO sang domain; navigation có typed/validated argument; DI rõ ràng; coroutine có lifecycle owner; loading/error/empty/success state được model; unit test cho ViewModel/repository và ít nhất một integration test cho DB hoặc serialization. Mục tiêu không phải nhồi framework mà là nhìn thấy dependency direction và lifetime của dữ liệu xuyên suốt một app hoàn chỉnh.
+# 36. Intermediate integration project
+
+Một project kết thúc Intermediate nên chứng minh được flow:
+
+```text
+UI action
+→ ViewModel
+→ repository
+→ network/Room
+→ source-of-truth update
+→ Flow/StateFlow
+→ lifecycle-aware UI render
+```
+
+Ngoài happy path phải có ít nhất:
+
+```text
+offline với cache
+refresh failure
+process recreation bằng stable ID
+validation/auth error
+retry policy rõ
+release variant build
+DB/serialization integration test
+```
+
+Mục tiêu không phải nhồi framework, mà là thấy rõ **dependency direction + lifetime + failure behavior** trước khi bước sang Advanced/Senior.
