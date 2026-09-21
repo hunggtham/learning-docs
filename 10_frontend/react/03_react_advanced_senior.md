@@ -81,6 +81,12 @@ Input cập nhật ngay theo `query`, subtree nặng có thể dùng value cũ t
 >
 > `startTransition`, `useTransition` và `useDeferredValue` thuộc wave React 18. Chúng không phải “React 19 optimization”. React 19 tiếp tục xây Actions/Suspense/server features trên concurrent foundations này, nên hiểu transition trước khi học Actions và Activity sẽ giúp luồng học tự nhiên hơn.
 
+## 6A. Transition, deferred value và debounce giải quyết ba vấn đề khác nhau
+
+`startTransition`/`useTransition` gắn **priority semantic** cho update: input trực tiếp vẫn urgent, còn render kết quả nặng có thể non-urgent. `useDeferredValue` cho consumer dùng một value chậm hơn source hiện tại khi caller không kiểm soát setter. Debounce lại là kỹ thuật thời gian: chỉ thực hiện công việc sau một khoảng yên lặng. Ba công cụ có thể kết hợp nhưng không thay thế nhau.
+
+Ví dụ search box có thể cập nhật text ngay, defer render danh sách lớn để typing mượt, đồng thời debounce network request để giảm traffic. Nếu chỉ debounce toàn bộ state input, UI có thể cảm giác lag; nếu chỉ transition request, bạn vẫn có thể gửi quá nhiều HTTP calls. Senior design phải tách **responsiveness**, **render priority** và **I/O rate limiting**.
+
 ## 7. Suspense nâng cao
 
 ```jsx
@@ -265,6 +271,12 @@ Phân biệt render error, async mutation error, loading error, expected domain 
 
 Production app cần observability, correlation ID và fallback theo route/feature. Một boundary duy nhất ở root thường quá thô.
 
+## 20A. Async UI cần phân biệt pending, expected error và unexpected render failure
+
+Suspense boundary xử lý “chưa sẵn sàng để render” theo protocol được hỗ trợ; Error Boundary xử lý lỗi render bất ngờ trong subtree; form/action state thường biểu diễn validation hoặc expected mutation failure. Gộp tất cả thành `try/catch + global toast` làm mất semantics và khiến recovery khó dự đoán.
+
+Với data layer production, cần xác định boundary nào retry, boundary nào giữ stale content, boundary nào reset khi route/key đổi và lỗi nào phải report observability. Transition có thể giữ UI cũ trong lúc navigation/data mới chuẩn bị; nhưng nếu request thất bại, UX cần route/action-specific recovery thay vì chỉ spinner biến mất.
+
 ## 21. SSR, streaming và hydration
 
 SSR tạo HTML trên server. Browser nhận HTML trước, sau đó React hydrate để gắn interactivity. Streaming cho phép gửi HTML từng phần thay vì chờ toàn tree.
@@ -340,6 +352,12 @@ Server Component không cần directive `"use server"`.
 Trong RSC, `'use client'` tạo module boundary; dependency dưới client boundary có khả năng đi vào client bundle. Vì vậy không import database SDK, filesystem hay secret-bearing module vào client graph. Props server → client phải tuân serialization contract; Server Function reference là trường hợp protocol riêng, không có nghĩa function JavaScript bất kỳ truyền được qua network.
 
 Evolution đi từ SPA mọi component chạy client, qua SSR render HTML server rồi hydrate client, tới RSC nơi một phần component chỉ chạy server. Migration nên đặt interactive boundary nhỏ nhất hợp lý thay vì thêm `'use client'` lên root cho hết lỗi.
+
+## 24B. SSR, hydration và RSC là các trục khác nhau
+
+SSR trả HTML từ server để có initial content sớm; hydration gắn React client runtime vào HTML đó; React Server Components cho phép một phần component tree chạy server và truyền payload để compose với Client Components. Một app có thể SSR mà không dùng RSC, và RSC framework vẫn phải quyết định phần nào hydrate trên client.
+
+Khi debug, cần hỏi đúng boundary: mismatch là vấn đề server HTML khác initial client render; bundle lớn là vấn đề client dependency graph; secret leak là vấn đề module boundary/serialization; waterfall có thể nằm ở routing/data architecture. Gọi tất cả là “SSR issue” làm migration và profiling thiếu chính xác.
 
 ## 25. Server Functions và security
 
@@ -475,6 +493,14 @@ React performance không chỉ là re-render. Bottleneck lớn thường là net
 
 Quy trình đúng: đo trải nghiệm, profile bằng React DevTools và browser Performance, xác định bottleneck, giảm work ở layer đúng, rồi đo lại. Memo một component 0.1 ms trong khi tải 4 MB JS là tối ưu sai chỗ.
 
+## 32A. Performance cost model: render work, commit work và external work
+
+Trước khi memoize, xác định bottleneck thuộc loại nào. **Render work** là thời gian gọi component và tính tree; **commit work** là DOM mutation, layout effect/ref work; **external work** gồm network, parse dữ liệu, image, third-party widget và browser layout/paint. `memo` không sửa request waterfall, còn code splitting không giúp một Effect loop vô hạn.
+
+Một workflow tối ưu hợp lý là: tái hiện interaction chậm → đo bằng React DevTools Profiler và browser performance tools → xác định component hoặc external task chiếm thời gian → sửa architecture trước → chỉ thêm memoization khi identity ổn định và render thực sự đắt → đo lại. Performance optimization không được trở thành dependency cho correctness.
+
+Các tối ưu structural thường thắng memoization rải rác: giữ state gần nơi dùng, tránh Effect chain set state, chia context theo volatility, virtualize list lớn, tránh render subtree không cần thiết, và đặt Suspense/code-split boundary theo interaction thực tế.
+
 ## 33. Profiling
 
 React DevTools Profiler cho biết component render/commit cost và các thông tin liên quan. Browser Performance panel cần dùng khi bottleneck gồm scripting, layout, paint, network. Hãy profile production-like build vì development mode có Strict Mode/debug overhead.
@@ -497,6 +523,12 @@ Trong JavaScript:
 Object/function mới có identity mới, ảnh hưởng dependency, memo và selector. Nhưng không vì vậy mà mọi function cần `useCallback`. Nếu child không memo và function không làm dependency cần stability thì callback memo thường không mang lợi ích.
 
 React Compiler có thể tự xử lý nhiều memoization, nhưng identity contract với external system vẫn cần hiểu rõ.
+
+## 35A. Memoization boundary trong thời React Compiler
+
+`memo`, `useMemo` và `useCallback` đều có chi phí về dependency reasoning và cache bookkeeping. Chúng hữu ích khi một expensive subtree thường nhận cùng props, một calculation thực sự đắt, hoặc external API yêu cầu stable identity. Chúng không nên được dùng như nghi thức cho mọi object/function.
+
+React Compiler có thể tự động hóa nhiều memoization, nhưng điều đó làm **purity và data flow** quan trọng hơn chứ không ít đi. Compiler không sửa state ownership sai, Effect loop, context value thay đổi vô ích hay network waterfall. Library cũng không thể giả định mọi consumer bật Compiler, nên public API vẫn cần identity contract rõ và benchmark trên runtime support thực tế.
 
 ## 36. Code splitting strategy
 
