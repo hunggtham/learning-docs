@@ -1,83 +1,146 @@
-# Thập niên 1980: ổn định, tự do hóa và chuyển từ “được bảo hộ” sang cạnh tranh hơn (Stabilization & Liberalization / 안정화·자율화)
+# Thập niên 1980: ổn định, tự do hóa, dân chủ hóa và cạnh tranh dựa trên năng suất (Stabilization & Liberalization / 안정화·자율화)
 
-Bước vào thập niên 1980, Hàn Quốc không còn là economy nhỏ chỉ sản xuất hàng nhẹ, nhưng cái giá của tăng trưởng nhanh đã hiện rõ: inflation, overcapacity, debt và sự can thiệp quá sâu vào allocation. Vì vậy policy focus chuyển dần từ “đầu tư càng nhanh càng tốt” sang **stabilization, restructuring và liberalization**.
+Bước vào thập niên 1980, Hàn Quốc đã có nhà máy thép, xưởng đóng tàu, nhà máy ô tô, tổ hợp hóa dầu và cơ sở điện tử quy mô lớn. Nhưng thành công của chiến lược HCI trong thập niên 1970 đi cùng lạm phát, đòn bẩy cao, công suất dư thừa và một số méo mó trong phân bổ vốn. Vì vậy bài toán chính sách thay đổi: **không còn chỉ là xây thêm công suất, mà phải làm cho công suất hiện có hiệu quả và bền vững về tài chính hơn**.
 
-## Vì sao phải ổn định sau HCI?
+Thập niên 1980 vì thế là cây cầu giữa thời kỳ nhà nước phát triển (developmental state) và nền kinh tế dựa nhiều hơn vào cạnh tranh, tín hiệu thị trường, công nghệ và kỷ luật tài chính.
 
-Khi capital investment tăng quá nhanh, aggregate demand có thể vượt supply và tạo inflation. Nếu firm vay nhiều để xây capacity nhưng global demand giảm, debt service trở thành gánh nặng. Sau second oil shock và downturn đầu thập niên 1980, Hàn Quốc phải xử lý chính những vấn đề này.
+## Ổn định sau HCI: tăng trưởng không thể chỉ dựa vào lượng đầu tư
 
-Ổn định (stabilization / 안정화) nghĩa là giảm inflation, kiểm soát macro imbalance và buộc investment discipline trở lại. Nó không phải đối lập với growth; nó là điều kiện để capital allocation trở nên bền vững hơn.
+Khi đầu tư tăng quá nhanh, nhu cầu tín dụng, nguyên liệu và lao động có thể vượt nguồn cung, đẩy lạm phát lên. Nếu công suất được xây trước nhu cầu, tỷ lệ sử dụng công suất giảm nhưng doanh nghiệp vẫn phải trả lãi và nợ gốc.
 
-## Từ sector-specific support sang market discipline nhiều hơn
+Đây là lý do chính sách chuyển mạnh hơn sang **ổn định kinh tế vĩ mô (macroeconomic stabilization / 거시경제 안정화)**.
 
-KDI mô tả cải cách tài chính đầu thập niên 1980 như quá trình thận trọng: government giảm dần một số hỗ trợ theo ngành và tiến tới deregulation, trade liberalization và financial reform. Đây không phải overnight free market. Korea chuyển từng bước từ state-directed allocation sang system có market signals mạnh hơn.
+Ổn định không có nghĩa “chống tăng trưởng”. Mục tiêu là khôi phục điều kiện để quyết định đầu tư phản ánh tỷ suất sinh lợi thay vì chỉ tiếp tục theo quán tính hành chính.
 
-Một economy có thể dùng directed credit hiệu quả khi số ngành và project còn ít, nhưng khi economy phức tạp hơn, central authority khó biết project nào có return cao. Information problem tăng theo complexity. Đây là lý do thị trường vốn, competition và price signals trở nên quan trọng hơn khi nền kinh tế trưởng thành.
+Một phân biệt hữu ích:
 
-## Import liberalization: competition đi vào domestic market
+\[
+Số\ lượng\ tăng\ trưởng \neq Chất\ lượng\ tăng\ trưởng
+\]
 
-Mở cửa nhập khẩu làm doanh nghiệp nội địa mất một phần protection. Khi goods nước ngoài cạnh tranh trực tiếp, firm không thể dựa mãi vào captive domestic market. Import liberalization vì vậy là một productivity test.
+Nếu GDP tăng nhờ đầu tư rất lớn nhưng lợi nhuận biên trên vốn ngày càng giảm, mô hình cuối cùng sẽ chạm giới hạn tài chính.
 
-Nhưng adjustment không đồng đều. Một số firm nâng quality và technology; một số sector dư thừa capacity phải restructure. Chính sách mở cửa tạo winner và loser, nên luôn có political economy conflict.
+## Tái cơ cấu: vốn và công suất phải được phân bổ lại
 
-## “Three lows” và export boom cuối thập niên 1980
+Các ngành đầu tư quá mức có thể cần hợp nhất, đóng cửa, sáp nhập hoặc tìm nguồn cầu mới. Đây là **tái cơ cấu công nghiệp (industrial restructuring / 산업구조조정)**.
 
-Nửa sau thập niên 1980, Hàn Quốc hưởng lợi từ môi trường thường được gọi là **3저 호황**: oil price thấp, interest rate quốc tế thấp và đồng dollar yếu so với yen sau Plaza Accord khiến hàng Nhật tương đối đắt hơn. Korea có cơ hội cạnh tranh mạnh hơn trong export manufacturing.
+Tái cơ cấu có chi phí xã hội. Nhà máy đóng cửa làm người lao động mất việc, ngân hàng phải xử lý nợ xấu và địa phương mất nguồn thu. Vì vậy điều chỉnh thường khó về mặt chính trị.
 
-Điểm cần nhớ là external tailwind có thể làm firm nhìn tốt hơn fundamental capability. Khi phân tích lịch sử company, nên tách improvement do productivity khỏi improvement do favorable macro environment.
+Nhưng duy trì mọi dự án yếu cũng có chi phí: vốn và lao động bị giữ trong các hoạt động có tỷ suất sinh lợi thấp. Đây là phiên bản sớm của tranh luận giữa **phá hủy sáng tạo (creative destruction)** và bảo vệ quá trình chuyển đổi vẫn tồn tại trong Hàn Quốc hiện đại.
 
-## Democratization và labor relations
+## Tự do hóa tài chính: giảm tín dụng định hướng nhưng không thay đổi trong một đêm
 
-Dân chủ hóa năm 1987 đi cùng thay đổi lớn trong labor movement. Wage tăng nhanh hơn, union power mạnh hơn và quan hệ lao động trở thành variable kinh tế quan trọng. Firms không thể tiếp tục dựa vào low-wage model của thập niên 1960.
+Thập niên 1980 chứng kiến cải cách dần dần đối với tài chính, lãi suất, ngân hàng và thị trường vốn. Tuy nhiên hệ thống không chuyển ngay từ “nhà nước” sang “thị trường”.
 
-Điều này lại đẩy doanh nghiệp lên higher value added: automation, quality, branding và technology trở nên cần thiết hơn. Rising wages vì vậy vừa là cost pressure vừa là force thúc đẩy upgrading.
+Các cơ chế tín dụng định hướng và quan hệ ngân hàng vẫn tồn tại, trong khi doanh nghiệp lớn ngày càng muốn tiếp cận nguồn vốn đa dạng hơn. Một hệ thống chuyển tiếp có thể tạo động lực lai: kỷ luật thị trường tăng nhưng kỳ vọng ngầm rằng một số doanh nghiệp sẽ được hỗ trợ vẫn chưa biến mất hoàn toàn.
 
-## Hyundai và bước vào thị trường Mỹ
+Điểm này rất quan trọng để hiểu rủi ro thập niên 1990. Doanh nghiệp mở rộng nhanh hơn tốc độ trưởng thành của quản trị rủi ro, giám sát tài chính và cơ chế phá sản.
 
-Hyundai bắt đầu xuất khẩu Excel sang Hoa Kỳ năm 1986. Đây là bước chuyển từ exporter ở emerging markets sang competition tại developed market. Những vấn đề quality và brand perception sau đó cho thấy export volume không đủ; long-term success cần after-sales service, reliability và R&D.
+> **Mental Model:** tự do hóa không phải công tắc `nhà nước → thị trường`; nó là quá trình thay đổi dần giá cả, thể chế và các giới hạn.
 
-## Electronics đi từ assembly sang technology race
+## Vì sao tín hiệu thị trường ngày càng quan trọng khi nền kinh tế phức tạp hơn?
 
-Samsung và LG trong thập niên 1980 mở rộng electronics và component capability. Semiconductor trở thành ngành chiến lược đặc biệt vì capital intensity cao, technology cycle nhanh và scale economy mạnh. Samsung bước sâu vào memory semiconductor, đặt nền cho vị thế toàn cầu sau này.
+Khi nền kinh tế còn nhỏ và chỉ có vài dự án chiến lược, chính phủ có thể trực tiếp phối hợp nhiều quyết định. Nhưng khi hàng nghìn doanh nghiệp, sản phẩm và công nghệ xuất hiện, nhu cầu thông tin tăng quá nhanh.
 
-Semiconductor là ví dụ rõ cho transition từ **cost-based competition** sang **technology-based competition**. Wage advantage giảm nhưng yield, process technology, capex timing và R&D có thể tạo moat mới.
+Không một cơ quan trung tâm nào có thể biết chính xác độ co giãn nhu cầu, sở thích khách hàng và rủi ro kỹ thuật của mọi dự án. Giá, lợi nhuận, lãi suất và phá sản vì thế trở thành **cơ chế thông tin (information mechanisms)**. Tín hiệu thị trường không hoàn hảo, nhưng nó phân tán việc xử lý thông tin tới nhiều người ra quyết định.
 
-## Chaebol và vấn đề concentration
+## Từ tăng công suất sang tăng năng suất
 
-Khi large groups ngày càng đa ngành, economic concentration trở thành policy issue. Fair Trade Act và competition policy phát triển trong bối cảnh này. Từ đây, quan hệ state–chaebol chuyển dần từ “chủ yếu hỗ trợ tăng trưởng” sang vừa hỗ trợ competitiveness vừa kiểm soát concentration và unfair practices.
+Trong giai đoạn đầu công nghiệp hóa, chỉ cần chuyển lao động từ nông nghiệp năng suất thấp sang nhà máy có máy móc đã có thể tạo tăng năng suất lớn. Khi nền kinh tế trưởng thành hơn, lợi ích từ chuyển dịch đơn giản này giảm dần.
 
-## Mental Model
+Tăng trưởng phải dựa nhiều hơn vào:
 
-> Thập niên 1980 là giai đoạn Korea bắt đầu thay “tăng trưởng bằng allocation” bằng “tăng trưởng bằng competition”. State vẫn quan trọng, nhưng market signal, imports, labor bargaining và technology pressure tăng đáng kể.
+```text
+Công nghệ tốt hơn
++ quản lý tốt hơn
++ chất lượng cao hơn
++ quy trình hiệu quả hơn
++ sản phẩm có giá trị cao hơn
+→ năng suất cao hơn
+```
 
-## Common misconceptions
+Đây là bước chuyển từ **tăng trưởng theo chiều rộng** sang **tăng trưởng theo chiều sâu**.
 
-“Tự do hóa” không có nghĩa government biến mất. Trong Korea, liberalization xảy ra theo từng sector và đồng thời với industrial policy mới. Cũng không nên cho rằng democratization chỉ là political event; nó thay đổi wage formation, labor relations và cost structure của firm.
+## Điện tử và bán dẫn: từ lắp ráp sang công nghệ phức tạp hơn
 
-## Connections
+Trong thập niên 1980, điện tử trở thành một trong những lĩnh vực quan trọng nhất của Hàn Quốc. Các doanh nghiệp như Samsung và GoldStar/LG đã tích lũy kinh nghiệm từ hàng điện tử tiêu dùng rồi tiến sâu hơn vào linh kiện và bán dẫn.
 
-Xem [../22_tax_regulation_and_competition](../22_tax_regulation_and_competition.md), [../12_labor_titles_compensation_and_workplace](../12_labor_titles_compensation_and_workplace.md) và [../10_capital_markets_kospi_kosdaq_konex](../10_capital_markets_kospi_kosdaq_konex.md).
+Bán dẫn khác hàng tiêu dùng đơn giản ở chỗ chi phí R&D, CAPEX, độ phức tạp quy trình và tốc độ thay đổi công nghệ đều rất cao. Doanh nghiệp phải liên tục tái đầu tư trước khi công nghệ cũ mất giá trị.
 
-### Nguồn nền để đọc thêm
+Điều này tạo một mô hình cạnh tranh mới:
 
-KDI, *Korea's Financial Reform since the Early 1980s*; KDI, *Import Liberalization and Industrial Adjustment in Korea*; KDI, *The Korean Economy in Historical Perspectives*.
+```text
+CAPEX + R&D
+→ quy trình tốt hơn
+→ yield cao hơn / chi phí đơn vị thấp hơn
+→ thị phần và dòng tiền
+→ tái đầu tư vào thế hệ tiếp theo
+```
 
-## Financial liberalization không diễn ra trong một đêm
+Đây là vòng lặp sẽ trở thành nền tảng cho sức mạnh bán dẫn Hàn Quốc về sau.
 
-Directed-credit system của các thập niên trước dần được nới nhưng banking/finance không lập tức trở thành free market hoàn chỉnh. Interest-rate controls, bank ownership, capital-market development và foreign-capital access thay đổi theo nhiều bước. Điều này quan trọng vì corporate leverage structure của 1990s là sản phẩm của transition chưa hoàn chỉnh: firms lớn đã có appetite đầu tư toàn cầu nhưng risk discipline của finance chưa trưởng thành tương ứng.
+## Ô tô: chất lượng và thương hiệu bắt đầu quan trọng hơn
 
-## Seoul Olympics và consumer economy trưởng thành hơn
+Khi Hàn Quốc bước sâu hơn vào thị trường xuất khẩu, cạnh tranh không còn chỉ là sản xuất rẻ. Ô tô phải đáp ứng tiêu chuẩn an toàn, độ bền, dịch vụ hậu mãi và kỳ vọng thương hiệu ở nhiều quốc gia.
 
-Cuối 1980s, rising income, urban middle class và international exposure làm consumption pattern đổi. Electronics, automobiles, department stores, advertising và services tăng vai trò. Korean firms không còn chỉ học cách export; họ phải học brand, design và domestic consumer segmentation.
+Doanh nghiệp vì thế phải đầu tư vào thiết kế, kỹ thuật, quản lý chất lượng và mạng lưới phân phối. Đây là bước chuyển từ “có thể sản xuất” sang “có thể bán sản phẩm phức tạp dưới thương hiệu của chính mình”.
 
-Đây là nền cho bước chuyển 1990s từ “manufacturer” sang “global brand owner”.
+## Tiền lương tăng và quan hệ lao động thay đổi
 
-## Labor democratization và wage-productivity bargaining
+Công nghiệp hóa làm năng suất và thu nhập tăng, đồng thời xã hội đô thị hóa nhanh. Khi người lao động có kỹ năng cao hơn và thị trường lao động chặt hơn, tiền lương tăng và mô hình cạnh tranh dựa thuần vào lao động rẻ dần mất hiệu lực.
 
-Sau democratization, labor organization mạnh hơn và wage tăng nhanh ở nhiều sectors. Về economics, đây vừa là redistribution của gains từ industrialization vừa tạo pressure nâng productivity.
+Đặc biệt sau dân chủ hóa năm 1987, hoạt động công đoàn và thương lượng lao động trở nên mạnh hơn. Tiền lương tăng nhanh ở nhiều ngành, buộc doanh nghiệp phải tìm cách nâng năng suất và tự động hóa.
 
-Firms có ba phản ứng: automate, move up value chain hoặc relocate labor-intensive production. Vì vậy rising wage không chỉ là cost shock; nó có thể accelerate industrial upgrading nếu firm có capability đầu tư.
+Điều này không chỉ là chi phí. Thu nhập hộ gia đình cao hơn cũng mở rộng thị trường tiêu dùng nội địa, tạo điều kiện cho bán lẻ, dịch vụ và hàng tiêu dùng phát triển.
 
-## Conglomerate concentration trở thành policy problem mới
+## Dân chủ hóa thay đổi môi trường thể chế của doanh nghiệp
 
-Khi chaebol lớn mạnh, policy objective chuyển từ “tạo national champions” sang cân bằng scale benefits với concentration/financial risk. Cross-shareholding, diversification và bank–corporate links bắt đầu bị xem là governance questions, mở đường cho reforms mạnh hơn sau 1997.
+Dân chủ hóa không chỉ là sự kiện chính trị. Nó thay đổi cách xã hội thương lượng về tiền lương, điều kiện làm việc, môi trường, phân phối thu nhập và trách nhiệm doanh nghiệp.
+
+Khi nhiều nhóm xã hội có tiếng nói hơn, chi phí và lợi ích của chính sách công nghiệp phải được cân nhắc rộng hơn. Mô hình ra quyết định tập trung của giai đoạn trước dần chịu nhiều giới hạn và yêu cầu minh bạch hơn.
+
+Đây là một phần của quá trình Hàn Quốc chuyển từ nền kinh tế “huy động nguồn lực để bắt kịp” sang nền kinh tế phải cân bằng tăng trưởng với nhiều mục tiêu xã hội khác.
+
+## Ba yếu tố thuận lợi cuối thập niên 1980
+
+Cuối thập niên 1980, Hàn Quốc hưởng lợi từ một số điều kiện bên ngoài thuận lợi thường được gọi là “ba thấp”: giá dầu thấp, lãi suất quốc tế thấp và đồng USD yếu so với một số đồng tiền chủ chốt. Các yếu tố này giúp giảm chi phí nhập năng lượng và tài chính, đồng thời hỗ trợ khả năng cạnh tranh xuất khẩu trong một số giai đoạn.
+
+Tuy nhiên không nên nhầm điều kiện thuận lợi với năng lực cấu trúc. Một cú hích bên ngoài chỉ tạo kết quả lớn khi nền kinh tế đã có nhà máy, kỹ năng, sản phẩm và kênh xuất khẩu để tận dụng nó.
+
+## Tài khoản vãng lai và sự thay đổi vị thế bên ngoài
+
+Khi xuất khẩu tăng mạnh và điều kiện thương mại thuận lợi, Hàn Quốc có những giai đoạn cải thiện đáng kể cán cân vãng lai. Điều này giúp giảm một phần áp lực ngoại tệ từng là hạn chế lớn trong thập niên 1950–1960.
+
+Sự thay đổi này rất quan trọng: nền kinh tế từ chỗ phụ thuộc viện trợ và thiếu ngoại tệ bắt đầu có khả năng tự tạo ngoại tệ quy mô lớn thông qua xuất khẩu.
+
+Nhưng khi ràng buộc ngoại tệ giảm, doanh nghiệp lại có khả năng vay và đầu tư quốc tế nhiều hơn—tạo ra một loại rủi ro mới sẽ trở nên rõ trong thập niên 1990.
+
+## Chaebol: từ công cụ thực thi công nghiệp hóa thành vấn đề quản trị
+
+Đến thập niên 1980, các tập đoàn lớn đã có nhiều công ty liên kết, hoạt động trong nhiều ngành và nắm nguồn lực đáng kể. Lợi thế của họ là khả năng huy động vốn, nhân lực và công nghệ ở quy mô lớn.
+
+Nhưng khi quy mô tăng, câu hỏi cũng thay đổi. Không chỉ hỏi “tập đoàn có thể thực hiện dự án không?” mà phải hỏi “ai kiểm soát tập đoàn, vốn được phân bổ giữa các công ty thế nào, cổ đông thiểu số được bảo vệ ra sao và cạnh tranh có bị méo mó không?”
+
+Đây là lúc **quản trị doanh nghiệp (corporate governance / 기업지배구조)** dần trở thành một vấn đề kinh tế lớn hơn.
+
+## Thị trường chứng khoán và vai trò của vốn cổ phần
+
+Khi doanh nghiệp lớn hơn, nguồn vốn chỉ từ ngân hàng trở nên không đủ. Thị trường chứng khoán mở rộng giúp doanh nghiệp huy động vốn cổ phần và tạo thêm cơ chế định giá thị trường.
+
+Vốn cổ phần khác nợ ở chỗ không có nghĩa vụ trả lãi cố định, nhưng cổ đông yêu cầu quyền đối với lợi nhuận và quản trị. Khi thị trường vốn phát triển, doanh nghiệp phải đối mặt nhiều hơn với công bố thông tin và kỳ vọng của nhà đầu tư.
+
+Đây là bước quan trọng trên con đường từ mô hình tài chính dựa chủ yếu vào ngân hàng sang hệ thống kết hợp ngân hàng và thị trường vốn.
+
+## Tự do hóa tạo cơ hội nhưng cũng làm rủi ro khó nhìn hơn
+
+Khi kiểm soát tài chính giảm và doanh nghiệp tiếp cận nhiều nguồn vốn hơn, đầu tư có thể tăng nhanh. Nhưng nếu quản trị rủi ro và giám sát chưa phát triển cùng tốc độ, tự do hóa có thể cho phép doanh nghiệp tích lũy đòn bẩy và rủi ro ngoại tệ lớn hơn.
+
+Đây là bài học quan trọng: **tự do hóa tài chính (financial liberalization / 금융자율화)** không tự động tạo kỷ luật thị trường. Kỷ luật chỉ hoạt động khi người cho vay chịu tổn thất thật, thông tin đủ tốt, giám sát đủ mạnh và cơ chế phá sản có thể xử lý doanh nghiệp yếu.
+
+## Connection — Vì sao thập niên 1990 vừa là toàn cầu hóa vừa tích lũy rủi ro?
+
+Bước sang thập niên 1990, Hàn Quốc đã có doanh nghiệp toàn cầu hơn, thị trường vốn lớn hơn và khả năng vay quốc tế tốt hơn. Chính các thành tựu này mở ra cơ hội mở rộng nhanh, nhưng cũng cho phép doanh nghiệp và tổ chức tài chính vay nhiều hơn, kể cả bằng ngoại tệ và kỳ hạn ngắn.
+
+Chương tiếp theo, [thập niên 1990 và khủng hoảng 1997](./05_1990s_globalization_and_1997_crisis.md), giải thích vì sao tăng trưởng, tự do hóa tài chính, đòn bẩy và chênh lệch kỳ hạn có thể kết hợp thành khủng hoảng.
+
+> **Mental Model cuối:** thập niên 1980 là giai đoạn Hàn Quốc bắt đầu chuyển từ “huy động càng nhiều vốn càng tốt” sang “vốn phải được sử dụng hiệu quả hơn”. Thị trường, công nghệ, năng suất và quản trị trở nên quan trọng hơn; đồng thời tự do hóa tạo ra những rủi ro mới mà hệ thống giám sát lúc đó chưa hoàn toàn theo kịp.

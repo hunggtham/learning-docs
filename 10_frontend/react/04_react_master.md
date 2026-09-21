@@ -2,7 +2,7 @@
 
 > Mục tiêu của level Master không phải “thuộc mọi API”, mà là hiểu sâu invariants của React, compiler/runtime boundary, server architecture, library design, migration, observability, security và cách ra quyết định khi ecosystem tiếp tục thay đổi.
 
-## 1. Baseline React 19.3 và cách đọc version đúng
+## 1. Version map React 15 → 19.3 và cách đọc version đúng
 
 Tại thời điểm biên soạn, React 19.3 là stable hiện hành. Đây là chi tiết quan trọng vì React 19.x đã bổ sung feature qua minor release chứ không chỉ sửa bug. Vì vậy câu “project dùng React 19” chưa đủ để suy ra project có thể dùng API nào.
 
@@ -439,6 +439,14 @@ Một migration không nên được đánh giá thành công chỉ vì app “r
 
 Đối với framework RSC, không force một React minor/patch mới hơn framework support matrix. Framework có thể pin hoặc thử nghiệm một build React cụ thể để đồng bộ protocol/server runtime.
 
+## 23A. Migration là behavior-preserving transformation, không phải đổi syntax hàng loạt
+
+Một migration React tốt giữ behavior và ownership ổn định trước khi đổi abstraction. Với class code, hãy inventory state, derived values, subscriptions, DOM refs, async requests, error boundaries và public component contract. Sau đó tách logic theo intent: render derivation ở render, user-caused work ở event handler, external synchronization ở Effect, complex state transition ở reducer, shared cross-tree dependency ở Context/store.
+
+Không cần đổi toàn bộ tree trong một PR. Leaf component ít dependency là điểm bắt đầu tốt; wrapper/HOC có thể tiếp tục bao quanh Function Component mới. Error Boundary class có thể được giữ lại nếu đang hoạt động ổn. Snapshot/integration/E2E tests dùng làm safety net cho behavior, còn codemod chỉ giải quyết mechanical API changes.
+
+Khi nâng version đồng thời với refactor component model, rủi ro tăng vì khó phân biệt lỗi do runtime behavior change hay do rewrite. Với codebase lớn, tách **version migration**, **deprecated API removal** và **architecture refactor** thành các bước quan sát được thường an toàn hơn.
+
 ## 24. Legacy Class Component
 
 Enterprise code vẫn có class:
@@ -853,6 +861,22 @@ Gọi API, analytics, mutate global.
 ### Authentication-only UI
 
 Ẩn nút nhưng server không authorize.
+
+## 38A. Production deployment: build → canary → rollback
+
+Deployment React không chỉ là `npm run build`. SPA/static hosting cần asset hashing, cache policy khác nhau giữa HTML entry và immutable JS/CSS, cùng history fallback để deep link không 404. Giá trị environment bundle vào client phải xem là public; secret chỉ ở server runtime.
+
+SSR/RSC còn có server runtime, streaming, server/client manifests, cache/invalidation và compatibility giữa framework với React server packages. CDN cache key phải phân biệt public với personalized data để tránh cross-user leak.
+
+Pipeline production nên có lint/typecheck/test/build, dependency/security scan, accessibility/performance checks cho critical flow, preview/canary, release ID cho source maps/logs, health check, error/Web Vitals monitoring và rollback artifact known-good. Feature flag tách deploy code khỏi enable behavior. Khi migrate CRA → Vite/framework cần audit env semantics, public path, router fallback, dynamic imports, service worker/PWA, test runner và deployment base path.
+
+## 38B. Production architecture phải có boundary, budget và recovery path
+
+Một React production architecture nên mô tả rõ ít nhất năm boundary: **render boundary** (component/Suspense/Error Boundary), **state ownership boundary**, **network/cache boundary**, **server/client module boundary**, và **deployment/observability boundary**. Nếu mọi concern hội tụ ở root provider hoặc một global store, failure blast radius và invalidation scope thường quá lớn.
+
+Mỗi critical flow nên có budget và recovery path: loading bao lâu thì đổi UX, retry ở đâu, stale data được giữ bao lâu, lỗi nào user có thể sửa, lỗi nào cần report, bundle/interaction budget là bao nhiêu, rollback version nào là known-good. Feature flag giúp tách deploy khỏi release behavior; release ID nối source map, log và metric với đúng artifact.
+
+Production review cũng phải kiểm tra cache ownership. Browser/CDN/server/query cache cùng tồn tại có thể tạo nhiều lớp stale data. Không cache personalized HTML/data bằng key chung. Mutation phải xác định invalidation hoặc optimistic reconciliation rõ; nếu không, UI có thể “nhanh” nhưng sai consistency.
 
 ## 39. Architecture review checklist
 

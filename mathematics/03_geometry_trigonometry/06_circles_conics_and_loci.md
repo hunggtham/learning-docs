@@ -1,16 +1,26 @@
-# Đường tròn, conic sections và quỹ tích
+# Đường tròn, conic sections và quỹ tích: geometry của distance constraints
 
-Một cách mạnh để hiểu geometry là không bắt đầu từ hình vẽ mà từ **quỹ tích (Locus / 자취)**: tập hợp tất cả các điểm thỏa một điều kiện. Khi condition là distance tới một point, line hoặc pair of points, các đường cong quen thuộc như circle, parabola, ellipse và hyperbola xuất hiện tự nhiên.
+Quỹ tích (locus / 자취) là tập hợp mọi điểm thỏa một điều kiện. Cách nhìn này mạnh hơn việc học riêng từng phương trình circle, parabola, ellipse hay hyperbola, vì nó trả lời câu hỏi bản chất: **đường cong này tồn tại vì constraint nào?**
 
-## Circle là tập điểm cách tâm một khoảng không đổi
+Một conic có thể được nhìn đồng thời theo ba lớp:
 
-Cho center
+```text
+geometric constraint
+→ algebraic equation
+→ transformed coordinate representation
+```
+
+Khi ba lớp này được nối với nhau, standard forms không còn là công thức phải ghi nhớ.
+
+## 1. Circle: giữ một distance không đổi
+
+Cho tâm
 
 ```math
 C=(h,k)
 ```
 
-và radius `r`. Một point `P=(x,y)` nằm trên circle khi
+và bán kính `r`. Điểm `P=(x,y)` thuộc circle khi
 
 ```math
 CP=r.
@@ -19,91 +29,124 @@ CP=r.
 Dùng distance formula:
 
 ```math
-\sqrt{(x-h)^2+(y-k)^2}=r.
+\sqrt{(x-h)^2+(y-k)^2}=r,
 ```
 
-Bình phương hai vế:
+nên
 
 ```math
 (x-h)^2+(y-k)^2=r^2.
 ```
 
-Phương trình circle không phải một formula tùy ý; nó chỉ là Pythagorean distance viết thành constraint.
+Đây là phương trình đường tròn (circle / 원) vì nó chỉ encode một distance constraint.
 
-## Tangent và radius
+### Worked example
 
-Tangent tại một point trên circle vuông góc với radius đi qua point đó. Có thể hiểu qua optimization: tangent direction là direction mà first-order change của distance-squared constraint bằng zero.
+Circle tâm `(2,-1)`, radius `3`:
 
-Đặt
+```math
+(x-2)^2+(y+1)^2=9.
+```
+
+Điểm `(5,-1)` nằm trên circle vì distance tới center bằng 3.
+
+## 2. Level set và normal vector
+
+Viết
 
 ```math
 F(x,y)=(x-h)^2+(y-k)^2-r^2.
 ```
 
-Gradient
+Circle là level set
 
 ```math
-\nabla F=(2(x-h),2(y-k))
+F(x,y)=0.
 ```
 
-hướng theo radius và vuông góc với level curve `F=0`. Đây là bridge tự nhiên sang multivariable calculus.
+Gradient:
 
-## Parabola: cùng khoảng cách tới focus và directrix
+```math
+\nabla F=(2(x-h),2(y-k)).
+```
 
-Parabola (Parabola / 포물선) là locus của points có distance tới một focus bằng distance tới một directrix.
+Gradient hướng theo radius. Vì gradient vuông góc với level curve, tangent tại một điểm trên circle vuông góc với radius.
 
-Cho focus `(0,p)` và directrix `y=-p`. Với point `(x,y)`:
+Đây là bridge trực tiếp tới multivariable calculus: geometry của tangent/normal xuất hiện từ gradient của constraint.
+
+## 3. Parabola: cân bằng distance tới point và line
+
+Parabola (포물선) là locus của các điểm có distance tới focus bằng distance tới directrix.
+
+Cho focus `(0,p)` và directrix `y=-p`. Với `P=(x,y)`:
 
 ```math
 \sqrt{x^2+(y-p)^2}=|y+p|.
 ```
 
-Bình phương và simplify:
+Bình phương:
 
 ```math
-x^2+(y-p)^2=(y+p)^2
+x^2+(y-p)^2=(y+p)^2.
 ```
+
+Simplify:
 
 ```math
 x^2=4py.
 ```
 
-Standard equation xuất hiện từ distance definition. Reflective property của parabola giải thích vì sao parabolic antennas và reflectors có thể tập trung parallel rays vào focus trong ideal geometric model.
+Như vậy standard form đến từ distance definition, không phải từ việc “nhớ dạng parabola”.
 
-## Ellipse: tổng khoảng cách tới hai foci không đổi
+### Reflective property
 
-Ellipse (Ellipse / 타원) là locus của points `P` sao cho
+Trong ideal geometry, ray song song với axis của parabola phản xạ qua tangent và đi qua focus. Đây là lý do parabolic reflector xuất hiện trong antenna, telescope và satellite dish.
+
+Điểm quan trọng là application này phụ thuộc thêm physical law về reflection; geometric shape cung cấp structure, physics cung cấp mechanism.
+
+## 4. Ellipse: tổng hai distance không đổi
+
+Ellipse (타원) là locus của các điểm `P` sao cho
 
 ```math
 PF_1+PF_2=2a.
 ```
 
-Trong coordinate system phù hợp, standard form là
+Trong principal coordinates:
 
 ```math
 \frac{x^2}{a^2}+\frac{y^2}{b^2}=1,
-\qquad a>b>0.
+\qquad a\ge b>0.
 ```
 
-Focal distance `c` thỏa
+Focal distance:
 
 ```math
 c^2=a^2-b^2.
 ```
 
-Quantity
+Eccentricity:
 
 ```math
-e=\frac ca
+e=\frac ca,
 ```
 
-gọi là eccentricity. Circle là special case `e=0`; ellipse có `0<e<1`.
+với
 
-Planetary orbit trong Kepler idealization là ellipse với central body ở một focus, không phải ở geometric center. Đây là một example quan trọng về việc geometric parameter có physical meaning khi model assumptions thích hợp.
+```text
+circle: e=0
+ellipse: 0<e<1
+```
 
-## Hyperbola: hiệu khoảng cách không đổi
+Eccentricity đo degree mà conic lệch khỏi circle-like geometry.
 
-Hyperbola (Hyperbola / 쌍곡선) thỏa
+### Kepler connection
+
+Trong ideal two-body model, planetary orbit là ellipse với central body ở một focus. Nhưng đây là consequence của inverse-square dynamics, không phải chỉ vì “ellipse trông giống orbit”. Geometry và physical dynamics cần được phân biệt.
+
+## 5. Hyperbola: hiệu hai distance không đổi
+
+Hyperbola (쌍곡선) thỏa
 
 ```math
 |PF_1-PF_2|=2a.
@@ -115,56 +158,181 @@ Standard form:
 \frac{x^2}{a^2}-\frac{y^2}{b^2}=1.
 ```
 
-Nó có asymptotes
+Asymptotes:
 
 ```math
 y=\pm\frac ba x.
 ```
 
-Hyperbolic geometry xuất hiện trong localization problems dựa trên difference of arrival times: difference khoảng cách tới hai sensors tạo một hyperbola. Nhiều sensor pairs intersect để estimate source position.
+Asymptote không phải một phần của hyperbola. Nó mô tả direction mà curve tiến gần khi `|x|` lớn.
 
-## Conic sections từ một unified quadratic equation
+### Localization example
 
-General second-degree equation
+Nếu hai sensors đo chênh lệch thời gian đến của một signal, chênh lệch distance tới hai sensors gần như cố định. Locus khả dĩ là hyperbola. Nhiều sensor pairs cho nhiều hyperbolas; intersection cho estimate source position.
 
-```math
-Ax^2+Bxy+Cy^2+Dx+Ey+F=0
-```
+Đây là ví dụ đẹp về geometry → inverse problem.
 
-có thể represent conics tùy coefficients và non-degeneracy conditions. Rotation/translation coordinates có thể loại cross terms hoặc recenter equation.
+## 6. Một definition thống nhất bằng eccentricity
 
-Discriminant-like quantity
+Một cách unified hơn dùng focus `F`, directrix `L` và eccentricity `e`:
 
 ```math
-B^2-4AC
+\frac{\text{distance}(P,F)}{\text{distance}(P,L)}=e.
 ```
 
-help classify: negative thường ellipse-type, zero parabola-type, positive hyperbola-type, dưới assumptions thích hợp.
+Từ đó:
 
-Deep connection ở đây là quadratic forms. Matrix
+```text
+e < 1 → ellipse
+ e = 1 → parabola
+ e > 1 → hyperbola
+```
+
+Circle có thể xem như limiting/special symmetric case.
+
+Cách này cho thấy các conics không phải bốn families hoàn toàn tách rời; chúng là các regimes của cùng một distance-ratio idea.
+
+## 7. General quadratic equation
+
+General conic equation:
+
+```math
+Ax^2+Bxy+Cy^2+Dx+Ey+F=0.
+```
+
+Quadratic part được encode bởi symmetric matrix
 
 ```math
 Q=
 \begin{bmatrix}
-A&B/2\\
-B/2&C
-\end{bmatrix}
+A & B/2\\
+B/2 & C
+\end{bmatrix}.
 ```
 
-encode quadratic part. Eigenvectors của `Q` cho principal axes. Vì vậy việc “xoay trục để bỏ `xy`” thực chất là diagonalization của symmetric matrix.
+Viết compact:
 
-## Bézier và conic thinking trong graphics
+```math
+x^TQx+d^Tx+F=0.
+```
 
-Computer graphics không chỉ dùng conics; curves thường được represent parametrically. Nhưng circle/ellipse vẫn là primitive quan trọng trong vector graphics và CAD. Một lesson rộng hơn là lựa chọn representation: implicit form tốt cho inside/outside tests và constraints; parametric form tốt để generate points theo path.
+Đây là bridge trực tiếp từ analytic geometry sang quadratic forms trong linear algebra.
+
+## 8. Vì sao rotation loại được cross term `xy`?
+
+Symmetric matrix `Q` có orthogonal eigenbasis. Nếu đổi coordinates sang eigenvectors của `Q`, matrix trở thành diagonal:
+
+```math
+Q=P\Lambda P^T.
+```
+
+Trong rotated coordinates, quadratic part không còn mixed term `xy`.
+
+Vì vậy “rotate axes to simplify conic” thực chất là **diagonalize a symmetric quadratic form**.
+
+Đây là cùng structure xuất hiện trong PCA, covariance ellipses và Hessian analysis.
+
+## 9. Classification bằng `B^2-4AC`
+
+Under non-degenerate real conditions:
+
+```text
+B² - 4AC < 0 → ellipse-type
+B² - 4AC = 0 → parabola-type
+B² - 4AC > 0 → hyperbola-type
+```
+
+Nhưng đây không phải complete classification nếu không xét linear/constant terms và degeneracy. Equation có thể collapse thành pair of lines, a point hoặc empty set.
+
+Rule chỉ có meaning khi assumptions được nói rõ.
+
+## 10. Parametric, implicit và matrix representations
+
+Một circle có implicit form:
+
+```math
+x^2+y^2=r^2.
+```
+
+Parametric form:
+
+```math
+x=r\cos t,
+\qquad
+y=r\sin t.
+```
+
+Implicit representation tốt cho constraints, inside/outside tests và level-set reasoning. Parametric representation tốt cho rendering, animation và path traversal.
+
+Representation choice là một engineering decision, không chỉ notation preference.
+
+## 11. Conics và optimization
+
+Ellipse
+
+```math
+x^TQx\le1
+```
+
+với positive-definite `Q` mô tả an ellipsoidal feasible set.
+
+Trong statistics, covariance matrix tạo confidence ellipses. Trong optimization, quadratic constraints/objectives tạo ellipsoidal geometry. Trong machine learning, Mahalanobis distance cũng tạo level sets dạng ellipse/ellipsoid.
+
+## 12. Conics và second-order local models
+
+Taylor approximation bậc hai gần critical point:
+
+```math
+f(x+\Delta)
+\approx
+f(x)+\frac12\Delta^TH\Delta.
+```
+
+Level sets của quadratic form `\Delta^TH\Delta` thường là ellipses/hyperbolas tùy eigenvalue signs.
+
+Do đó conic geometry không chỉ là school geometry; nó là local geometry của multivariable functions.
+
+## Worked example: classify và rotate intuition
+
+Xét
+
+```math
+5x^2+4xy+2y^2=1.
+```
+
+Quadratic matrix:
+
+```math
+Q=
+\begin{bmatrix}
+5&2\\
+2&2
+\end{bmatrix}.
+```
+
+`Q` symmetric và positive definite, nên level set là ellipse. Cross term chỉ nói axes của ellipse không aligned với original coordinate axes. Eigenvectors của `Q` cho principal axes.
 
 ## Knowledge Connection
 
-Conics nối Pythagorean distance với algebra, optimization và linear algebra. Circle là level set; gradient cho normal. General conic là quadratic form; coordinate rotation là eigenbasis change. Parabola nối tới projectile path trong ideal constant-gravity model, dù physical derivation của projectile là từ kinematics chứ không phải focus/directrix definition.
+Conics nối nhiều chapter:
+
+```text
+Pythagorean distance
+→ locus
+→ quadratic equation
+→ quadratic form
+→ eigenvectors / axis rotation
+→ Hessian geometry
+→ covariance ellipse
+→ optimization constraints
+```
+
+Trong Physics, conics xuất hiện trong orbital mechanics và optics. Trong AI/Data, ellipsoids xuất hiện trong covariance geometry và Gaussian contours. Trong Finance, quadratic risk models có level sets dạng ellipsoid khi covariance matrix positive definite.
 
 ## Mental Model
 
-> Conic sections là geometry của distance constraints. Circle giữ một distance; parabola cân hai loại distance; ellipse giữ tổng; hyperbola giữ hiệu. Standard equations chỉ là các distance rules sau khi chọn coordinate system thuận tiện.
+> Conic sections là geometry của distance constraints và quadratic forms. Standard equation chỉ là representation thuận tiện sau khi chọn coordinate system phù hợp.
 
 ## Common Misconceptions
 
-Projectile path là parabola chỉ dưới assumptions như constant gravity và bỏ air resistance. Ellipse không phải “circle bị kéo” về mặt definition, dù affine scaling circle tạo ellipse. Hyperbola graph `y=1/x` có hyperbolic shape nhưng không nên đồng nhất mọi rational curve với geometric hyperbola mà không xét equation/coordinate transform.
+Ellipse không chỉ là “circle bị kéo” về definition, dù affine transform của circle tạo ellipse. Projectile path chỉ là parabola dưới assumptions như constant gravity và negligible air resistance. `B²-4AC` không đủ để classify mọi degenerate case. Hyperbola `xy=1` vẫn là conic dù không ở standard axis-aligned form; đổi coordinates có thể làm structure rõ hơn.

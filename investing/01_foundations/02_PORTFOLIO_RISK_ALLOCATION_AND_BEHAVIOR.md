@@ -1,67 +1,335 @@
-# Portfolio, risk allocation và hành vi nhà đầu tư
+# Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư
 
-## 1. Portfolio không phải danh sách ticker
+> Một danh mục tốt không phải là tập hợp nhiều mã chứng khoán, mà là một hệ thống được thiết kế để phục vụ mục tiêu tài chính trong giới hạn về thời gian, thanh khoản, khả năng chịu lỗ và hành vi của người sở hữu. Chương này xây nền từ định nghĩa rủi ro tới phân bổ tài sản, đóng góp rủi ro, tái cân bằng và kỷ luật ra quyết định.
 
-Một portfolio là tập hợp risk exposures. Bạn có thể sở hữu mười ticker nhưng nếu tám ticker đều là technology growth, danh mục vẫn concentrated. Ngược lại, bốn assets với economic drivers khác nhau có thể đa dạng hóa tốt hơn.
+## 1. Rủi ro không chỉ là độ biến động
 
-Khi nhìn portfolio, hãy chuyển từ câu hỏi “tôi có bao nhiêu mã” sang “tôi đang chịu những factor nào”. Equity chịu earnings và valuation risk. Long bonds chịu duration và inflation risk. Corporate bonds thêm credit risk. Gold nhạy với real yields, USD và safe-haven flows. Foreign assets thêm currency risk.
+Độ biến động (volatility) đo mức giá hoặc lợi suất dao động quanh giá trị trung bình. Nhưng nhà đầu tư có thể mất tiền vì nhiều lý do khác:
 
-## 2. Risk tolerance, risk capacity và risk requirement
+```text
+Mất vốn vĩnh viễn
+Vỡ nợ
+Thiếu thanh khoản
+Dùng đòn bẩy quá mức
+Tập trung quá cao
+Lệch tiền tệ với nghĩa vụ
+Sai sót vận hành
+Sai lầm hành vi
+```
 
-Risk tolerance là mức volatility về tâm lý bạn chịu được. Risk capacity là mức loss tài chính bạn thực sự có khả năng chịu mà không phá mục tiêu. Risk requirement là mức return cần thiết để đạt mục tiêu.
+Một tài sản ít biến động nhưng không thể bán khi cần tiền vẫn có thể rất rủi ro. Một cổ phiếu biến động cao nhưng chỉ chiếm tỷ trọng nhỏ và không dùng đòn bẩy có thể ít nguy hiểm hơn.
 
-Ba biến có thể xung đột. Một người rất thích risk nhưng cần tiền mua nhà trong một năm có capacity thấp cho equities. Một người retirement còn 30 năm có capacity cao hơn nhưng nếu tâm lý bán panic ở -15%, allocation quá aggressive vẫn thất bại trong thực tế.
+## 2. Ba khái niệm: chịu đựng, khả năng và mức rủi ro cần thiết
 
-## 3. Horizon và liability matching
+**Mức chịu đựng rủi ro (risk tolerance)** là mức dao động mà bạn có thể chịu về tâm lý mà không phá kế hoạch.
 
-Tiền có deadline nên được quản lý theo deadline. Một khoản sẽ dùng trong sáu tháng không nên phụ thuộc vào việc equity market có hồi kịp hay không. Asset allocation phải gắn với future liabilities.
+**Khả năng chịu rủi ro (risk capacity)** là mức lỗ mà tài chính của bạn có thể chịu được dựa trên thu nhập, nợ, nghĩa vụ, quỹ dự phòng và thời gian.
 
-Emergency fund có return thấp nhưng cho bạn quyền không phải forced seller. Vì vậy liquidity có option value. Cash không chỉ là tài sản “không sinh lời”; trong một số mục tiêu nó là insurance against bad timing.
+**Mức rủi ro cần thiết (risk requirement)** là mức rủi ro có thể phải chấp nhận để đạt mục tiêu.
 
-## 4. Diversification và correlation
+Ba yếu tố này có thể xung đột. Một người thích rủi ro nhưng cần tiền mua nhà trong hai năm có khả năng chịu rủi ro thấp đối với khoản tiền đó.
 
-Diversification hoạt động vì các assets không phản ứng giống nhau với cùng một shock. Tuy nhiên correlation không cố định. Trong inflation shock, stocks và bonds có thể cùng giảm. Trong deflationary recession, government bonds có thể hedge equity tốt hơn.
+## 3. Mục tiêu, thời hạn và nghĩa vụ phải đi trước sản phẩm
 
-Do đó diversification cần dựa trên economic drivers chứ không chỉ historical correlation. Nếu hai assets cùng phụ thuộc lower rates, correlation có thể tăng đúng lúc rates shock xảy ra.
+Trước khi hỏi “mua ETF nào?”, hãy xác định:
 
-## 5. Asset allocation và risk contribution
+```text
+Mục tiêu là gì?
+Cần bao nhiêu tiền?
+Cần vào thời điểm nào?
+Dùng đồng tiền nào?
+Khoản nào không được phép chịu lỗ lớn?
+```
 
-Capital allocation cho biết phần trăm tiền. Risk contribution cho biết phần trăm risk. Hai khái niệm khác nhau.
+Tiền cần trong thời gian ngắn nên ưu tiên khả năng chi trả hơn lợi suất kỳ vọng. Tiền cho mục tiêu dài hạn có thể chịu biến động cao hơn nếu khả năng tài chính và hành vi cho phép.
 
-Một asset volatility 30% với weight 20% có thể đóng góp risk nhiều hơn bond volatility 5% weight 40%. Đây là lý do equal-weight portfolio không phải equal-risk portfolio.
+## 4. Quỹ dự phòng là một phần của danh mục tổng thể
 
-Người mới không cần mô hình covariance phức tạp ngay. Có thể bắt đầu bằng giới hạn đơn giản: core broad assets chiếm phần lớn; single stock, thematic sector và leveraged product có maximum allocation nhỏ hơn; trading capital tách riêng khỏi long-term capital.
+Quỹ dự phòng không phải “tiền chết”. Nó mua quyền lựa chọn: giúp bạn không phải bán tài sản rủi ro đúng lúc thị trường giảm hoặc thu nhập gặp vấn đề.
 
-## 6. Rebalancing
+Nếu toàn bộ tài sản tài chính đều được đầu tư và bạn không có bộ đệm tiền mặt, rủi ro lớn nhất có thể là phải bán trong thời điểm xấu, không phải độ biến động trung bình của danh mục.
 
-Rebalancing đưa portfolio về target allocation sau khi market movement làm weights lệch. Nếu equities tăng mạnh từ target 60% lên 75%, bạn có thể bán một phần hoặc dùng new contributions để tăng defensive assets.
+## 5. Diversification là đa dạng hóa nguồn rủi ro
 
-Rebalancing không phải market timing. Nó là risk-control rule. Threshold rebalancing, ví dụ rebalance khi một weight lệch hơn một mức định trước, thường thực tế hơn kiểm tra liên tục.
+Đa dạng hóa không đến từ số lượng mã mà từ việc sở hữu các dòng lợi suất không phụ thuộc hoàn toàn vào cùng một nguyên nhân.
 
-## 7. Drawdown và sequence risk
+Mười ETF công nghệ khác nhau vẫn có thể cùng nhạy với:
 
-Loss 50% cần gain 100% để hòa vốn. Vì vậy downside control ảnh hưởng compounding phi tuyến.
+```text
+Lợi suất thực
+Tăng trưởng toàn cầu
+Định giá cổ phiếu tăng trưởng
+USD
+Tâm lý chấp nhận rủi ro
+```
 
-Sequence risk đặc biệt quan trọng khi bắt đầu rút tiền. Hai người có same average return nhưng người gặp crash ngay những năm đầu retirement có kết quả tệ hơn vì phải bán nhiều units lúc giá thấp. Asset allocation phải thay đổi khi portfolio chuyển từ accumulation sang decumulation.
+Danh mục nhìn có nhiều sản phẩm nhưng thực chất chỉ là một cược nhân tố lớn.
 
-## 8. Benchmark và performance measurement
+## 6. Tương quan và hiệp phương sai
 
-Benchmark phải phù hợp với mandate. Portfolio Korean small caps không nên được đánh giá chỉ bằng S&P 500. Một global balanced portfolio cũng không nên tự coi underperform vì Nasdaq tăng mạnh một năm.
+Tương quan (correlation) cho biết hai tài sản có xu hướng biến động cùng chiều tới mức nào. Hiệp phương sai (covariance) còn giữ thông tin về quy mô biến động.
 
-Time-weighted return phù hợp đánh giá strategy độc lập cash flows. Money-weighted return phản ánh trải nghiệm thực của investor có deposit/withdrawal thay đổi.
+Với hai tài sản:
 
-Performance phải được nhìn cùng risk. CAGR 15% với max drawdown 60% khác rất xa CAGR 12% với drawdown 15%.
+```text
+σp² = w1²σ1² + w2²σ2² + 2w1w2σ1σ2ρ12
+```
 
-## 9. Behavioral finance trong portfolio
+Một tài sản có độ biến động cao vẫn có thể làm danh mục ổn định hơn nếu tương quan đủ thấp.
 
-FOMO khiến allocation tăng ngay sau performance tốt. Recency bias khiến investor extrapolate vài năm gần nhất. Anchoring khiến giá mua trở thành reference vô nghĩa. Loss aversion khiến loser bị giữ lâu và winner bị bán sớm.
+Nhưng tương quan không cố định. Trong khủng hoảng, nhiều tài sản rủi ro cùng giảm vì nhu cầu tiền mặt và giảm đòn bẩy.
 
-Home bias làm investor nắm quá nhiều assets trong quốc gia mình chỉ vì quen thuộc. Familiarity không đồng nghĩa diversification. Narrative bias khiến investor xây portfolio quanh câu chuyện hấp dẫn thay vì cash flows và valuation.
+## 7. Tỷ trọng vốn không bằng tỷ trọng rủi ro
 
-Giải pháp tốt nhất không phải “cố bình tĩnh” mà là thiết kế rules trước. Investment Policy Statement xác định mục tiêu, allocation, giới hạn concentration, rebalancing, điều kiện dùng leverage và những hành vi bị cấm.
+Nếu 50% danh mục là cổ phiếu và 50% là trái phiếu ngắn hạn, phần lớn rủi ro vẫn có thể đến từ cổ phiếu vì độ biến động cao hơn nhiều.
 
-## 10. Portfolio như một hệ thống
+Do đó ngoài tỷ trọng vốn cần nhìn **đóng góp rủi ro (risk contribution)**.
 
-Một portfolio bền vững cần ba lớp. Lớp đầu là liquidity và obligations. Lớp hai là core compounding assets. Lớp ba là satellite hoặc tactical exposures mà bạn sẵn sàng để biến động mạnh hơn.
+Một vị thế 10% có thể tạo 25% rủi ro danh mục nếu biến động cao và tương quan mạnh với phần còn lại.
 
-Khi một ý tưởng mới xuất hiện, đừng chỉ hỏi nó có upside không. Hãy hỏi nó thêm factor gì vào portfolio, correlation với existing positions ra sao, downside scenario là gì và allocation bao nhiêu để nếu sai vẫn giữ được kế hoạch dài hạn.
+## 8. Rủi ro tập trung
+
+Tập trung có nhiều lớp:
+
+```text
+Một mã
+Một ngành
+Một quốc gia
+Một đồng tiền
+Một nhân tố
+Một nguồn thu nhập
+Một loại thanh khoản
+```
+
+Nhà đầu tư có lương từ ngành công nghệ, nắm cổ phiếu công nghệ và nhà ở tại cùng một thành phố đã có mức tập trung kinh tế lớn ngay cả khi tài khoản chứng khoán có nhiều mã.
+
+## 9. Beta và rủi ro thị trường
+
+Beta đo độ nhạy của tài sản so với chỉ số tham chiếu. Beta hữu ích để hiểu rủi ro hệ thống nhưng không mô tả đầy đủ rủi ro riêng, thanh khoản hoặc cú nhảy giá.
+
+Một danh mục beta thấp vẫn có thể chịu rủi ro lớn nếu tập trung vào một chiến lược bán biến động hoặc tài sản khó thanh khoản.
+
+## 10. Phân bổ chiến lược và phân bổ chiến thuật
+
+**Phân bổ chiến lược (strategic allocation)** là cấu trúc dài hạn dựa trên mục tiêu, thời hạn và khả năng chịu rủi ro.
+
+**Phân bổ chiến thuật (tactical allocation)** là điều chỉnh quanh cấu trúc dài hạn dựa trên định giá, vĩ mô hoặc cơ hội đặc biệt.
+
+Nếu không có lợi thế dự báo rõ ràng, thay đổi chiến thuật quá thường xuyên dễ trở thành đuổi theo hiệu suất.
+
+## 11. Cấu trúc lõi–vệ tinh
+
+Một cách tổ chức thực tế là:
+
+```text
+Lõi (core): đa dạng hóa rộng, chi phí thấp, vai trò dài hạn
+Vệ tinh (satellite): ý tưởng chủ động, ngành, nhân tố hoặc giao dịch có luận điểm riêng
+```
+
+Phần vệ tinh phải có giới hạn để một sai lầm chủ động không phá mục tiêu của toàn bộ danh mục.
+
+## 12. Tái cân bằng
+
+Tái cân bằng đưa danh mục trở lại tỷ trọng hoặc ngân sách rủi ro mục tiêu.
+
+Có thể dùng lịch định kỳ hoặc dải sai lệch. Ví dụ thay vì tái cân bằng đúng mỗi quý, chỉ hành động khi một nhóm tài sản lệch đủ lớn khỏi phạm vi cho phép.
+
+Tái cân bằng có thể buộc nhà đầu tư bán bớt tài sản tăng mạnh và mua thêm tài sản yếu hơn, nhưng không nên làm máy móc nếu bản chất rủi ro đã thay đổi.
+
+## 13. Rủi ro thứ tự lợi suất
+
+Rủi ro thứ tự lợi suất (sequence-of-returns risk) đặc biệt quan trọng khi nhà đầu tư đang rút tiền.
+
+Hai người có cùng lợi suất trung bình nhưng thứ tự năm tăng/giảm khác nhau có thể có kết quả rất khác nếu một người phải bán tài sản ở giai đoạn đầu suy giảm.
+
+Vì vậy giai đoạn gần mục tiêu cần chú trọng bộ đệm thanh khoản và tài sản ổn định hơn.
+
+## 14. Toán phục hồi sau thua lỗ
+
+```text
+Mất 10% → cần +11,1% để quay lại đỉnh
+Mất 20% → cần +25%
+Mất 50% → cần +100%
+```
+
+Đây là lý do quản trị mức suy giảm sâu quan trọng cho tăng trưởng kép. Tối đa hóa lợi suất kỳ vọng mà bỏ qua rủi ro phá sản hoặc bán cưỡng bức có thể làm kết quả dài hạn tệ hơn.
+
+## 15. Đòn bẩy làm thay đổi đường đi rủi ro
+
+Đòn bẩy không tạo lợi thế đầu tư. Nó chỉ phóng đại mức phơi nhiễm.
+
+Với đòn bẩy, nhà đầu tư còn chịu:
+
+```text
+Chi phí vốn
+Yêu cầu ký quỹ
+Rủi ro thanh lý
+Rủi ro gap
+Biến động yêu cầu tài sản bảo đảm
+```
+
+Một vị thế có kỳ vọng dương vẫn có thể bị thanh lý trước khi cơ chế dài hạn xảy ra.
+
+## 16. Ngân sách rủi ro
+
+Thay vì chỉ quy định “mỗi tài sản tối đa 20% vốn”, có thể đặt giới hạn theo rủi ro:
+
+```text
+Rủi ro cổ phiếu
+Rủi ro duration
+Rủi ro tín dụng
+Rủi ro tiền tệ
+Rủi ro hàng hóa
+Rủi ro thanh khoản
+Rủi ro giao dịch chủ động
+```
+
+Mục tiêu là tránh một nhân tố duy nhất thống trị toàn bộ danh mục mà không được nhận ra.
+
+## 17. Kiểm thử căng thẳng
+
+Không nên chỉ dựa trên độ biến động lịch sử. Hãy tạo các kịch bản có cơ chế rõ ràng:
+
+```text
+Lạm phát tăng trở lại → lợi suất dài hạn tăng → cổ phiếu duration dài giảm
+Suy thoái → lợi nhuận giảm → credit spread mở rộng
+USD tăng mạnh → tài sản ngoại tệ và dòng vốn thay đổi
+Dầu tăng do nguồn cung → lạm phát nhập khẩu và biên lợi nhuận bị ép
+Khủng hoảng thanh khoản → tương quan tăng và spread mở rộng
+```
+
+Kiểm thử nhằm tìm điểm yếu ẩn, không phải dự báo chính xác tương lai.
+
+## 18. Rủi ro tiền tệ và nghĩa vụ
+
+Tài sản ngoại tệ vừa tạo cơ hội đa dạng hóa vừa tạo lệch nghĩa vụ. Nếu mục tiêu tương lai bằng KRW, quá nhiều USD hoặc VND có thể tăng biến động của khả năng chi trả.
+
+Quyết định phòng vệ cần dựa trên thời hạn và độ chắc chắn của nghĩa vụ, không chỉ dự báo tỷ giá.
+
+## 19. Rủi ro thanh khoản
+
+Một tài sản được báo giá hằng ngày không có nghĩa có thể bán quy mô lớn mà không ảnh hưởng giá. Thanh khoản khi căng thẳng mới là thứ cần dùng cho sizing.
+
+Danh mục phải có đủ tài sản thanh khoản để đáp ứng chi tiêu, nghĩa vụ và margin mà không cần bán tháo tài sản dài hạn.
+
+## 20. Thiên lệch hành vi: quá tự tin
+
+Nhà đầu tư dễ đánh đồng kết quả tốt với kỹ năng. Một năm tăng mạnh có thể chỉ do beta thị trường, nhân tố đúng thời điểm hoặc may mắn.
+
+Nhật ký quyết định giúp ghi lại dữ kiện, giả định, mức định giá và điều kiện vô hiệu hóa trước khi biết kết quả.
+
+## 21. Thiên lệch xác nhận
+
+Thiên lệch xác nhận (confirmation bias) khiến người ta ưu tiên dữ liệu ủng hộ luận điểm và bỏ qua bằng chứng ngược lại.
+
+Cách chống lại là viết sẵn:
+
+```text
+Bằng chứng nào sẽ khiến tôi giảm xác suất kịch bản cơ sở?
+Dữ liệu nào sẽ buộc tôi bán dù giá chưa giảm?
+```
+
+## 22. Ác cảm thua lỗ và hiệu ứng sở hữu
+
+Ác cảm thua lỗ khiến khoản lỗ tạo cảm xúc mạnh hơn khoản lời cùng quy mô. Hiệu ứng sở hữu làm ta đánh giá tài sản đang nắm cao hơn một tài sản tương đương chưa mua.
+
+Một câu hỏi hữu ích:
+
+> Nếu hôm nay tôi đang cầm tiền mặt, tôi có chủ động mua vị thế này ở mức giá hiện tại không?
+
+Nếu câu trả lời là không, việc giữ chỉ vì “chưa bán thì chưa lỗ” cần được xem lại.
+
+## 23. Hiệu ứng gần đây và đuổi theo hiệu suất
+
+Những gì vừa xảy ra thường bị phóng đại thành dự báo dài hạn. Nhà đầu tư mua sau giai đoạn tăng mạnh và bán sau giai đoạn giảm mạnh có thể biến lợi suất tài sản tốt thành lợi suất nhà đầu tư kém.
+
+Phân bổ chiến lược và dải tái cân bằng giúp giảm hành vi này.
+
+## 24. Outcome bias và hindsight bias
+
+Thiên lệch theo kết quả (outcome bias) đánh giá quyết định chỉ dựa trên lời/lỗ. Thiên lệch nhìn lại (hindsight bias) khiến kết quả đã xảy ra trông như “rõ ràng từ trước”.
+
+Một quyết định có xác suất hợp lý vẫn có thể thua. Một quyết định tệ vẫn có thể lời.
+
+Đánh giá quy trình phải hỏi liệu dữ kiện, xác suất và sizing tại thời điểm ra quyết định có hợp lý không.
+
+## 25. Tuyên bố chính sách đầu tư
+
+Tuyên bố chính sách đầu tư (Investment Policy Statement, IPS) nên xác định:
+
+```text
+Mục tiêu
+Thời hạn
+Nghĩa vụ và đồng tiền
+Mức thanh khoản tối thiểu
+Phạm vi phân bổ chiến lược
+Giới hạn tập trung
+Quy tắc tái cân bằng
+Quy định về đòn bẩy / phái sinh
+Ngưỡng đánh giá lại
+```
+
+IPS không phải hợp đồng cứng nhắc với thị trường; nó là công cụ ngăn cảm xúc ngắn hạn phá mục tiêu dài hạn.
+
+## 26. Nhật ký quyết định
+
+Trước một quyết định quan trọng, ghi:
+
+```text
+Dữ kiện
+Giả định
+Điều thị trường đang kỳ vọng
+Kịch bản cơ sở / tích cực / tiêu cực
+Quy mô vị thế
+Rủi ro chính
+Điều kiện vô hiệu hóa
+Ngày đánh giá lại
+```
+
+Sau đó so với kết quả thực tế để cải thiện khả năng hiệu chỉnh xác suất.
+
+## 27. Đo hiệu quả đúng cách
+
+Không nên đánh giá danh mục chỉ bằng lợi suất tuyệt đối. Cần xem:
+
+```text
+Lợi suất so với mục tiêu và benchmark
+Mức suy giảm
+Độ biến động
+Lợi suất thực sau lạm phát
+Phí và thuế
+Đóng góp theo nhóm tài sản / nhân tố
+Mức rủi ro đã nhận để tạo lợi suất
+```
+
+Time-Weighted Return phù hợp khi muốn đánh giá chiến lược đầu tư độc lập với dòng tiền của nhà đầu tư. Money-Weighted Return phản ánh trải nghiệm thực tế của nhà đầu tư khi có đóng/rút tiền.
+
+## 28. Danh mục là một hệ thống
+
+Một tài sản không nên được đánh giá riêng khỏi vai trò của nó. Câu hỏi đúng không chỉ là “tài sản này tốt không?” mà là:
+
+```text
+Nó thêm nguồn lợi suất nào?
+Nó thêm rủi ro nào?
+Nó trùng lặp với vị thế nào?
+Nó giúp hay làm xấu nghĩa vụ tương lai?
+Nó có làm danh mục khó sống sót hơn trong kịch bản xấu không?
+```
+
+## 29. Mô hình tư duy cuối cùng
+
+```text
+Mục tiêu
+→ Nghĩa vụ
+→ Thanh khoản
+→ Khả năng chịu rủi ro
+→ Phân bổ chiến lược
+→ Ngân sách rủi ro
+→ Chọn sản phẩm
+→ Tái cân bằng
+→ Đo kết quả
+→ Đánh giá hành vi
+→ Cập nhật kế hoạch
+```
+
+Đây là nền tảng để chuyển từ việc “mua tài sản” sang quản trị một hệ thống tài chính cá nhân có mục tiêu.

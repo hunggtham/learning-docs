@@ -1,239 +1,640 @@
-# 04 — Earnings Quality, Financial Modeling và Forensic Analysis
+# Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic
 
-> Chương này đi từ đọc báo cáo tài chính sang đánh giá chất lượng lợi nhuận, phát hiện các dấu hiệu cần kiểm tra sâu hơn và xây mô hình dự báo đủ đơn giản để phục vụ quyết định đầu tư. Mục tiêu không phải biến bạn thành kiểm toán viên, mà giúp bạn không bị đánh lừa bởi một con số EPS đẹp nhưng dòng tiền, working capital hoặc capital structure đang xấu đi.
+> Chương này giúp chuyển từ việc “đọc báo cáo” sang đánh giá xem lợi nhuận có phản ánh đúng sức khỏe kinh tế của doanh nghiệp hay không. Mục tiêu không phải kết luận gian lận từ vài chỉ số lạ, mà phát hiện những điểm cần kiểm tra sâu hơn, nối lợi nhuận với dòng tiền và xây mô hình dự báo dựa trên động lực thật.
 
 ## 1. Lợi nhuận kế toán không đồng nghĩa tiền mặt
 
-Net income được tính theo accrual accounting. Doanh nghiệp ghi nhận doanh thu khi điều kiện kế toán được đáp ứng, không nhất thiết khi tiền đã vào tài khoản. Chi phí cũng có thể được ghi nhận trước hoặc sau cash payment thực tế.
+Kế toán dồn tích (accrual accounting) ghi nhận doanh thu và chi phí theo thời điểm kinh tế phù hợp, không nhất thiết theo lúc tiền thực thu hoặc thực chi.
 
-Điều này cần thiết vì nếu chỉ dùng cash accounting, một doanh nghiệp mua máy móc lớn trong một năm sẽ trông cực kỳ lỗ dù máy móc tạo doanh thu trong nhiều năm. Accrual accounting cố gắng ghép revenue với costs của cùng economic period.
+Điều này cần thiết để ghép doanh thu với chi phí tạo ra doanh thu đó. Tuy nhiên nó cũng tạo khoảng cách giữa:
 
-Nhưng chính flexibility đó tạo khoảng cách giữa reported earnings và cash economics. Investor phải học cách nối Income Statement với Balance Sheet và Cash Flow Statement thay vì đọc từng báo cáo riêng.
+```text
+lợi nhuận báo cáo
+và
+dòng tiền thực tế
+```
 
-## 2. Earnings Quality là gì?
+Vì vậy không nên đọc riêng Income Statement. Cần nối cả ba báo cáo:
 
-Earnings quality cao nghĩa lợi nhuận có khả năng phản ánh economic performance thật, chuyển thành cash tốt và có khả năng lặp lại.
+```text
+Income Statement
+↕
+Balance Sheet
+↕
+Cash Flow Statement
+```
 
-Lợi nhuận được tạo bởi tăng volume, pricing power và operating efficiency thường có chất lượng cao hơn lợi nhuận đến từ bán tài sản, tax benefit bất thường hoặc thay đổi accounting estimate.
+## 2. Chất lượng lợi nhuận là gì?
 
-Chất lượng earnings cũng liên quan persistence. Một one-off gain có thể hợp pháp và chính xác nhưng không nên được capitalized như recurring earnings.
+Chất lượng lợi nhuận (earnings quality) cao khi lợi nhuận:
 
-## 3. Cash Conversion
+- phản ánh hoạt động kinh tế thật;
+- có khả năng chuyển thành tiền mặt;
+- không phụ thuộc quá nhiều vào khoản bất thường;
+- có khả năng lặp lại;
+- không được tạo chủ yếu bằng thay đổi ước tính kế toán.
 
-Một kiểm tra đơn giản là so cumulative net income với cumulative operating cash flow trong nhiều năm.
+Lợi nhuận đến từ tăng sản lượng, tăng giá hợp lý và nâng hiệu quả vận hành thường bền hơn lợi nhuận từ bán tài sản, ưu đãi thuế một lần hoặc hoàn nhập dự phòng bất thường.
 
-Nếu company liên tục báo earnings tăng nhưng CFO tăng chậm hơn nhiều, cần hiểu vì sao. Có thể company đang tăng receivables vì sales tăng nhanh, điều hoàn toàn hợp lý. Nhưng cũng có thể credit terms bị nới để giữ revenue growth.
+## 3. Kiểm tra chuyển đổi lợi nhuận thành tiền
 
-Free Cash Flow còn phải xem capex. Một business báo CFO tốt nhưng cần capex rất lớn để duy trì capacity có economic cash generation thấp hơn business asset-light.
+Một bước đơn giản là so lợi nhuận ròng tích lũy với dòng tiền hoạt động (CFO) trong nhiều năm.
 
-## 4. Receivables và Days Sales Outstanding
+Nếu lợi nhuận tăng đều nhưng CFO tăng chậm hơn đáng kể, cần tìm nguyên nhân. Có thể doanh nghiệp đang tăng phải thu vì doanh thu tăng nhanh; cũng có thể doanh nghiệp phải nới tín dụng để giữ doanh số.
 
-Accounts Receivable là tiền khách hàng còn nợ. Revenue growth thường kéo receivables tăng, nên mức tăng tuyệt đối không nói nhiều.
+Dòng tiền tự do còn cần trừ capex. Một doanh nghiệp CFO cao nhưng phải tái đầu tư rất lớn để duy trì công suất có khả năng tạo tiền kinh tế thấp hơn doanh nghiệp ít tài sản.
 
-Days Sales Outstanding, DSO, ước lượng số ngày trung bình để thu tiền. Nếu DSO tăng liên tục trong khi competitors ổn định, có thể company đang nới terms hoặc collection quality xấu đi.
+## 4. Phải thu và DSO
 
-Ví dụ revenue tăng 10% nhưng receivables tăng 50% và DSO tăng mạnh. Đây không chứng minh manipulation, nhưng là câu hỏi quan trọng cho investor.
+Khoản phải thu (accounts receivable) là tiền khách hàng chưa thanh toán.
 
-## 5. Inventory và dấu hiệu cycle
+DSO — số ngày thu tiền bình quân (Days Sales Outstanding) — giúp đánh giá tốc độ thu tiền.
 
-Inventory gồm raw materials, work in process và finished goods tùy industry.
+Nếu:
 
-Inventory tăng nhanh hơn sales có thể phản ánh company chuẩn bị cho demand mạnh, hoặc ngược lại goods không bán được. Context quyết định interpretation.
+```text
+Doanh thu +10%
+Phải thu +45%
+DSO tăng mạnh
+```
 
-Trong semiconductor, inventory days là tín hiệu cycle rất quan trọng. Trong retail, inventory mix và markdown risk quan trọng. Trong auto, dealer inventory có thể ảnh hưởng pricing.
+thì cần hỏi:
 
-Write-down inventory làm gross margin giảm khi company thừa nhận hàng không còn giá trị như trước.
+- doanh nghiệp có nới thời hạn thanh toán không?
+- chất lượng khách hàng có xấu đi không?
+- doanh thu có bị đẩy sớm hơn bình thường không?
 
-## 6. Accounts Payable và Working Capital
+Đây là tín hiệu cần nghiên cứu, không phải bằng chứng gian lận.
 
-Accounts Payable là tiền company chưa trả suppliers. Nếu payable tăng, CFO có thể được hỗ trợ tạm thời vì company giữ cash lâu hơn.
+## 5. Hàng tồn kho và chu kỳ
 
-Working-capital improvement có thể rất tốt nếu đến từ supply-chain efficiency. Nhưng nếu CFO tăng chỉ vì kéo dài payment terms trong khi suppliers căng thẳng, quality thấp hơn.
+Tồn kho có thể gồm nguyên liệu, sản phẩm dở dang và thành phẩm.
 
-Investor nên hỏi working capital change có sustainable không.
+Tồn kho tăng nhanh hơn doanh thu có hai cách diễn giải hoàn toàn khác:
 
-## 7. Deferred Revenue
+- doanh nghiệp chuẩn bị cho nhu cầu mạnh;
+- hàng hóa đang bán chậm hơn kỳ vọng.
 
-Deferred revenue xuất hiện khi company nhận tiền trước nhưng chưa ghi nhận toàn bộ revenue.
+Cần đọc theo ngành. Ví dụ:
 
-Với subscription software, deferred revenue tăng có thể là dấu hiệu demand tốt vì customers prepaid. Đây là trường hợp cash flow có thể đi trước accounting revenue.
+- bán dẫn: số ngày tồn kho là tín hiệu chu kỳ quan trọng;
+- bán lẻ: cơ cấu tồn kho và rủi ro giảm giá quan trọng;
+- ô tô: tồn kho đại lý ảnh hưởng sức mạnh định giá.
 
-Nhưng investor phải hiểu contract duration và renewal behavior. Không nên dùng một metric giống nhau cho mọi business model.
+Khoản giảm giá tồn kho (inventory write-down) thường cho thấy giá trị kinh tế của hàng thấp hơn trước.
 
-## 8. Capitalizing vs Expensing
+## 6. Phải trả và vốn lưu động
 
-Nếu một cost được expensed ngay, profit hiện tại thấp hơn. Nếu được capitalized thành asset và amortized trong tương lai, profit hiện tại cao hơn.
+Khoản phải trả (accounts payable) tăng có thể hỗ trợ CFO vì doanh nghiệp giữ tiền lâu hơn trước khi trả nhà cung cấp.
 
-Accounting standards quy định khi nào capitalization phù hợp, nhưng management judgment vẫn có vai trò ở một số areas.
+Điều này có thể tốt nếu đến từ đàm phán hoặc hiệu quả chuỗi cung ứng. Nhưng nếu dòng tiền được cải thiện chỉ vì kéo dài thanh toán trong khi nhà cung cấp chịu áp lực, chất lượng thấp hơn.
 
-Nếu company thay đổi policy hoặc capitalizes nhiều development costs hơn peers, investor phải hiểu impact lên earnings.
+Khi đánh giá vốn lưu động cần hỏi:
 
-## 9. Depreciation và Maintenance Capex
+```text
+Thay đổi này có lặp lại được không?
+Hay chỉ là lợi ích tạm thời?
+```
 
-Depreciation là accounting allocation của historical capex. Nó không nhất thiết bằng maintenance capex thực tế.
+## 7. Chu kỳ chuyển đổi tiền mặt — CCC
 
-Một factory cũ có depreciation thấp nhưng cần replacement capex cao. Ngược lại, software company có accounting amortization nhưng economic reinvestment nằm nhiều trong R&D expense.
+Chu kỳ chuyển đổi tiền mặt (Cash Conversion Cycle, CCC) thường được nhìn qua:
 
-Đây là lý do EBITDA không phải cash flow. EBITDA bỏ depreciation nhưng business vẫn phải reinvest để duy trì productive assets.
+```text
+CCC = DSO + DIO - DPO
+```
 
-## 10. Stock-Based Compensation
+Trong đó:
 
-SBC là compensation thực cho employees dù không dùng cash ngay. Nó làm shareholders bị dilution nếu shares được phát hành.
+- DSO: số ngày thu tiền;
+- DIO: số ngày tồn kho;
+- DPO: số ngày trả nhà cung cấp.
 
-Một số companies nhấn mạnh adjusted earnings loại SBC, nhưng investor không nên giả định SBC “không phải chi phí”. Nếu company liên tục issue shares để trả employees, economic ownership của shareholder cũ bị pha loãng.
+CCC tăng kéo dài có thể báo hiệu vốn lưu động xấu đi. Tuy nhiên mô hình kinh doanh như siêu thị hoặc marketplace có thể có CCC âm một cách lành mạnh.
 
-Buyback dùng để offset SBC khác buyback thực sự giảm share count.
+## 8. Doanh thu nhận trước
 
-## 11. Share Count và Dilution
+Doanh thu chưa thực hiện (deferred revenue) xuất hiện khi doanh nghiệp nhận tiền trước nhưng chưa đủ điều kiện ghi nhận doanh thu.
 
-EPS có thể tăng vì net income tăng hoặc share count giảm.
+Với phần mềm thuê bao, doanh thu nhận trước tăng có thể phản ánh nhu cầu tốt và giúp dòng tiền đi trước lợi nhuận kế toán.
 
-Nếu company báo revenue growth 20% nhưng diluted share count cũng tăng mạnh, per-share value creation thấp hơn headline business growth.
+Cần hiểu thời hạn hợp đồng, tỷ lệ gia hạn và điều kiện hoàn tiền trước khi kết luận.
 
-Investor nên theo dõi basic và diluted shares qua nhiều năm. Options, RSUs và convertible securities có thể tạo future dilution.
+## 9. Vốn hóa và ghi chi phí
 
-## 12. Adjusted Earnings
+Nếu một khoản chi được ghi chi phí ngay, lợi nhuận hiện tại thấp hơn. Nếu được vốn hóa thành tài sản rồi phân bổ nhiều kỳ, lợi nhuận hiện tại cao hơn.
 
-Non-GAAP hoặc adjusted earnings có thể hữu ích để loại one-off items, nhưng management có incentive làm adjusted number đẹp hơn.
+Khi một doanh nghiệp vốn hóa chi phí phát triển nhiều hơn đối thủ, cần hiểu:
 
-Một restructuring cost xảy ra mỗi năm không còn là one-off về economic reality. Acquisition-related stock compensation lặp liên tục cũng không nên bị bỏ qua hoàn toàn.
+- chính sách kế toán;
+- lý do kinh tế;
+- thời gian khấu hao;
+- tác động lên lợi nhuận và tài sản.
 
-Investor nên tự xây normalized earnings thay vì dùng adjusted number mà company đưa ra không kiểm tra.
+## 10. Khấu hao và capex duy trì
 
-## 13. One-Off Gains và Losses
+Khấu hao kế toán phân bổ chi phí tài sản lịch sử, nhưng không nhất thiết bằng capex cần thiết để duy trì khả năng sản xuất.
 
-Bán land, litigation settlement, impairment hoặc tax benefit có thể làm net income biến động mạnh.
+Một nhà máy cũ có thể có khấu hao thấp nhưng cần đầu tư thay thế lớn. Ngược lại, công ty phần mềm ít capex hữu hình nhưng tái đầu tư mạnh qua R&D.
 
-Một nguyên tắc tốt là tách operating performance khỏi non-operating items. Valuation multiple nên áp lên earnings có khả năng lặp lại, không phải peak reported EPS do exceptional gain.
+Đây là lý do EBITDA không phải dòng tiền tự do.
 
-## 14. Related-Party Transactions
+## 11. SBC và pha loãng
 
-Transactions với related parties có thể hoàn toàn hợp pháp, nhưng tạo thêm conflict-of-interest risk.
+Thù lao bằng cổ phiếu (stock-based compensation, SBC) không dùng tiền ngay nhưng làm pha loãng quyền sở hữu.
 
-Nếu company mua assets từ entity liên quan management, cho vay related company hoặc revenue concentration tới affiliates, investor cần đọc footnotes kỹ.
+Nếu doanh nghiệp loại SBC khỏi lợi nhuận điều chỉnh, nhà đầu tư vẫn phải tính chi phí kinh tế bằng một trong hai cách:
 
-Governance risk đặc biệt quan trọng ở markets nơi controlling shareholders có ảnh hưởng lớn.
+- tăng số cổ phiếu pha loãng;
+- hoặc tính chi phí mua lại cổ phiếu để bù pha loãng.
 
-## 15. Customer Concentration
+Mua lại cổ phiếu chỉ để bù SBC khác với mua lại thực sự làm giảm số cổ phiếu.
 
-Company có một khách hàng chiếm 40% revenue có bargaining risk rất lớn.
+## 12. Theo dõi số cổ phiếu
 
-Khách hàng lớn có thể ép giá, thay supplier hoặc tự phát triển product. Growth hiện tại có thể rất đẹp nhưng valuation nên phản ánh concentration risk.
+EPS có thể tăng do:
 
-Trong semiconductor supply chain, customer concentration thường cực kỳ quan trọng vì qualification cycles dài và hyperscaler demand lớn.
+```text
+Lợi nhuận ròng tăng
+hoặc
+Số cổ phiếu giảm
+```
 
-## 16. Supplier Concentration
+Ngược lại, doanh thu và lợi nhuận doanh nghiệp có thể tăng nhưng giá trị trên mỗi cổ phiếu tăng chậm nếu cổ phiếu pha loãng tăng nhanh.
 
-Ngược lại, dependency vào một supplier duy nhất tạo supply-chain risk.
+Cần theo dõi:
 
-Company có thể có demand rất mạnh nhưng không giao hàng được nếu critical component thiếu. Một supplier độc quyền còn có power tăng giá và squeeze margin.
+- basic shares;
+- diluted shares;
+- options;
+- RSUs;
+- convertibles.
 
-## 17. Debt Maturity và Refinancing Risk
+## 13. Lợi nhuận điều chỉnh
 
-Total debt không đủ để đánh giá balance-sheet risk. Phải xem maturity schedule.
+Lợi nhuận non-GAAP hoặc adjusted có thể hữu ích để loại khoản thật sự bất thường.
 
-Company có debt 1 tỷ USD đáo hạn đều trong mười năm khác company có 700 triệu phải refinance trong mười hai tháng.
+Nhưng nếu “chi phí tái cấu trúc” xuất hiện năm nào cũng có thì về bản chất kinh tế nó không còn là một lần.
 
-Fixed vs floating rate cũng quan trọng. Khi policy rates tăng, floating debt reprices nhanh. Fixed debt chỉ chịu higher cost khi refinance.
+Tốt hơn nên tự xây **lợi nhuận chuẩn hóa (normalized earnings)** thay vì dùng nguyên số điều chỉnh của ban quản lý.
 
-## 18. Covenant Risk
+## 14. Khoản bất thường
 
-Loan covenants đặt giới hạn như maximum leverage hoặc minimum interest coverage.
+Các khoản như:
 
-Nếu earnings giảm, company có thể breach covenant dù chưa hết cash. Khi đó lender có thể yêu cầu negotiation, higher rate hoặc accelerated repayment.
+- bán đất;
+- bồi thường kiện tụng;
+- impairment;
+- lợi ích thuế;
+- lãi/lỗ đánh giá lại;
 
-Covenant headroom là phần margin còn lại trước khi vi phạm rule.
+có thể làm lợi nhuận biến động lớn.
 
-## 19. Goodwill và Acquisition Accounting
+Cần tách:
 
-Khi company mua business với giá cao hơn identifiable net assets, phần chênh thường trở thành goodwill.
+```text
+kết quả hoạt động lặp lại
+và
+khoản ngoài hoạt động hoặc một lần
+```
 
-Goodwill lớn không tự động xấu. Nhưng series acquisitions với goodwill tăng nhanh có thể che organic growth yếu.
+## 15. Giao dịch bên liên quan
 
-Nếu acquired business underperform, goodwill impairment có thể xuất hiện. Impairment non-cash ở thời điểm ghi nhận nhưng phản ánh capital allocation mistake đã xảy ra trước đó.
+Giao dịch với bên liên quan (related-party transaction) không tự động xấu, nhưng làm tăng rủi ro xung đột lợi ích.
 
-## 20. Return on Invested Capital
+Cần đọc kỹ khi doanh nghiệp:
 
-ROIC giúp đánh giá company tạo bao nhiêu after-tax operating profit trên capital đã đầu tư.
+- mua tài sản từ công ty liên quan;
+- cho bên liên quan vay;
+- bảo lãnh nghĩa vụ;
+- có doanh thu lớn với công ty cùng nhóm.
 
-Nếu ROIC cao hơn cost of capital bền vững, reinvestment tạo shareholder value. Nếu ROIC thấp hơn cost of capital, tăng trưởng có thể phá value dù revenue tăng.
+## 16. Tập trung khách hàng
 
-Do đó growth và ROIC phải đọc cùng nhau. Growth cao không đủ.
+Một khách hàng chiếm tỷ trọng doanh thu lớn tạo rủi ro thương lượng.
 
-## 21. Incremental ROIC
+Khách hàng lớn có thể:
 
-Historical ROIC có thể cao nhờ assets cũ rất profitable. Quan trọng hơn là return trên capital mới.
+- ép giá;
+- chuyển nhà cung cấp;
+- tự phát triển sản phẩm;
+- trì hoãn đơn hàng.
 
-Incremental ROIC hỏi additional NOPAT tạo ra so với additional invested capital trong một period. Nếu company phải đầu tư ngày càng nhiều để tạo cùng growth, economics đang deteriorate.
+Trong chuỗi bán dẫn, rủi ro này đặc biệt quan trọng vì quy trình qualification dài và vài khách hàng lớn có thể chi phối nhu cầu.
 
-## 22. Unit Economics
+## 17. Tập trung nhà cung cấp
 
-Unit economics đưa analysis về một đơn vị kinh tế cơ bản.
+Phụ thuộc một nhà cung cấp duy nhất tạo rủi ro chuỗi cung ứng.
 
-Với SaaS, có thể là CAC, LTV, churn và gross margin. Với airline, revenue per available seat kilometer và cost per available seat kilometer. Với retailer, same-store sales và sales per square meter. Với bank, NIM và credit cost.
+Doanh nghiệp có thể có nhu cầu rất mạnh nhưng vẫn không giao hàng được nếu thiếu một linh kiện quan trọng.
 
-Một model tốt phải bắt đầu từ drivers phù hợp business chứ không chỉ extrapolate revenue %.
+Do đó cần lập bản đồ:
 
-## 23. Cohort Analysis
+```text
+nhà cung cấp chính
+→ linh kiện quan trọng
+→ khả năng thay thế
+→ thời gian qualification
+→ quyền định giá
+```
 
-Cohort analysis theo dõi các nhóm customers bắt đầu cùng thời điểm.
+## 18. Lịch đáo hạn nợ
 
-Nếu customer retention và spending của cohort cũ tăng, growth quality tốt hơn business phải liên tục mua customers mới để thay churn.
+Tổng nợ không đủ để đánh giá rủi ro.
 
-Cohort analysis đặc biệt hữu ích với subscription, fintech và marketplace businesses.
+Hai doanh nghiệp cùng nợ 1 tỷ USD nhưng hoàn toàn khác nhau nếu:
 
-## 24. Driver-Based Financial Modeling
+```text
+A: đáo hạn đều trong 10 năm
+B: 700 triệu đáo hạn trong 12 tháng
+```
 
-Financial model không nên bắt đầu bằng “revenue năm sau +15%” nếu bạn có thể mô hình hóa drivers.
+Cần xem:
 
-Retail revenue có thể bằng store count × sales per store. Semiconductor revenue có thể bằng shipment volume × ASP. SaaS có thể dựa customer count × ARPU.
+- fixed vs floating rate;
+- lịch đáo hạn;
+- khoản vay bảo đảm;
+- khả năng tái cấp vốn;
+- lãi suất vay mới.
 
-Driver-based model giúp bạn hiểu điều kiện cần để forecast xảy ra và dễ stress test hơn.
+## 19. Covenant
 
-## 25. Ba Statement phải liên kết
+Điều khoản ràng buộc nợ (covenant) có thể yêu cầu:
 
-Income Statement forecast tạo net income. Capex, depreciation và working capital ảnh hưởng Balance Sheet và Cash Flow Statement. Debt và cash balance lại ảnh hưởng interest expense.
+- leverage tối đa;
+- interest coverage tối thiểu;
+- tài sản bảo đảm;
+- hạn chế cổ tức hoặc mua lại.
 
-Một model không liên kết ba statements dễ tạo assumption vô lý như cash âm nhưng interest income vẫn tăng.
+Khoảng cách còn lại trước khi vi phạm gọi là **covenant headroom**.
 
-Người mới có thể bắt đầu model đơn giản, nhưng logic linking nên đúng từ đầu.
+Doanh nghiệp có thể chưa cạn tiền nhưng vẫn gặp vấn đề nếu lợi nhuận giảm đủ mạnh để vi phạm covenant.
 
-## 26. Base, Bull và Bear Case
+## 20. Hạn mức tín dụng quay vòng
 
-Một forecast duy nhất tạo false precision.
+Hạn mức quay vòng (revolver) là một nguồn thanh khoản dự phòng quan trọng.
 
-Base case phản ánh outcome có vẻ hợp lý nhất. Bull case giả định drivers tốt hơn. Bear case giả định growth, margin hoặc valuation xấu hơn.
+Nhưng không nên chỉ nhìn số hạn mức danh nghĩa. Cần kiểm tra:
 
-Quan trọng là mỗi case phải có economic story. Bear case không chỉ lấy mọi số giảm 20% một cách tùy ý.
+- phần còn có thể rút;
+- điều kiện covenant;
+- ngày hết hạn;
+- ngân hàng cấp hạn mức;
+- tài sản bảo đảm.
 
-## 27. Sensitivity Table
+## 21. Goodwill và mua lại doanh nghiệp
 
-Valuation thường nhạy với một vài assumptions chính như revenue growth, margin, WACC và terminal growth.
+Goodwill thường xuất hiện khi giá mua cao hơn tài sản ròng có thể xác định.
 
-Sensitivity table giúp thấy conclusion có robust không. Nếu fair value chỉ cao hơn market price khi tất cả assumptions đều cực kỳ optimistic, margin of safety thấp.
+Goodwill lớn không tự động xấu. Nhưng chuỗi mua lại liên tục với goodwill tăng nhanh có thể che tăng trưởng hữu cơ yếu.
 
-## 28. Reverse DCF
+Impairment sau này không làm tiền mặt mất đi ở thời điểm ghi nhận, nhưng thường phản ánh quyết định phân bổ vốn kém đã xảy ra trước đó.
 
-Reverse DCF không hỏi “fair value là bao nhiêu” mà hỏi market price hiện tại đang imply growth và margin thế nào.
+## 22. Tăng trưởng hữu cơ
 
-Nếu price chỉ hợp lý khi company tăng revenue 25% trong mười năm và giữ margin record-high, investor biết expectation đang rất demanding.
+Tăng trưởng doanh thu tổng có thể đến từ:
 
-Reverse DCF đặc biệt hữu ích với high-growth companies nơi traditional P/E khó interpret.
+```text
+tăng trưởng hữu cơ
++ mua lại doanh nghiệp
++ thay đổi tỷ giá
+```
 
-## 29. Red Flags không phải bằng chứng gian lận
+Cần tách ba phần này. Một công ty có doanh thu +20% nhưng tăng trưởng hữu cơ chỉ +3% sẽ có chất lượng tăng trưởng khác doanh nghiệp tự tăng +20%.
 
-Các dấu hiệu như receivables tăng nhanh, frequent adjustments, auditor change, related-party transactions hoặc CFO yếu chỉ là signals cần điều tra.
+## 23. Cầu nối giá – sản lượng – cơ cấu
 
-Investor không nên kết luận fraud từ một ratio. Business context và accounting notes phải được kiểm tra.
+Phân tích `price-volume-mix` giúp tách:
 
-Forensic mindset nghĩa hoài nghi có hệ thống, không phải nghi ngờ mọi company.
+```text
+Giá bán thay đổi bao nhiêu?
+Sản lượng thay đổi bao nhiêu?
+Cơ cấu sản phẩm thay đổi bao nhiêu?
+```
 
-## 30. Thesis Sheet sau khi Modeling
+Biên lợi nhuận tăng nhờ tăng giá thường khác về độ bền so với tăng nhờ mix tốt hoặc nguyên liệu giảm.
 
-Sau khi hoàn thành model, hãy viết thesis bằng một trang.
+## 24. Biên gộp và biên tăng thêm
 
-Phần quan trọng nhất là key drivers, market expectation, catalysts, risks và invalidation conditions. Nếu model có hàng nghìn cells nhưng bạn không thể nói thesis trong vài đoạn văn, model đang thay thế tư duy thay vì hỗ trợ tư duy.
+Biên gộp hiện tại cho biết mức lợi nhuận trên doanh thu. **Biên tăng thêm (incremental margin)** cho biết mỗi đồng doanh thu mới tạo thêm bao nhiêu lợi nhuận.
+
+Nếu doanh thu tăng nhanh nhưng incremental margin giảm, tăng trưởng có thể đang kém hiệu quả hơn trước.
+
+## 25. ROIC và ROIC tăng thêm
+
+ROIC lịch sử cao chưa đủ. Quan trọng là vốn mới đang tạo lợi nhuận thế nào.
+
+Một cách nhìn:
+
+```text
+Incremental ROIC
+≈ ΔNOPAT / ΔInvested Capital
+```
+
+Nếu doanh nghiệp cần ngày càng nhiều vốn để tạo cùng mức tăng NOPAT, hiệu quả kinh tế đang xấu đi.
+
+## 26. Unit economics
+
+Unit economics đưa phân tích về một đơn vị kinh tế cơ bản.
+
+Ví dụ:
+
+- SaaS: CAC, LTV, churn, NRR;
+- bán lẻ: doanh thu/cửa hàng, same-store sales;
+- airline: RASK và CASK;
+- ngân hàng: NIM và credit cost;
+- marketplace: GMV, take rate, contribution margin.
+
+Mô hình tài chính tốt nên bắt đầu từ những động lực phù hợp với ngành.
+
+## 27. Phân tích cohort
+
+Phân tích nhóm khách hàng theo thời điểm bắt đầu (cohort analysis) giúp nhìn chất lượng tăng trưởng.
+
+Nếu cohort cũ tiếp tục mua nhiều hơn và tỷ lệ giữ chân cao, tăng trưởng thường có chất lượng cao hơn doanh nghiệp phải liên tục mua khách hàng mới để bù churn.
+
+## 28. Mô hình theo động lực
+
+Không nên bắt đầu bằng:
+
+```text
+Doanh thu năm sau +15%
+```
+
+nếu có thể bắt đầu từ:
+
+```text
+số khách hàng
+× doanh thu/khách hàng
+× retention
+× giá bán
+```
+
+Mô hình theo động lực (driver-based model) giúp biết chính xác giả định nào phải đúng để dự báo xảy ra.
+
+## 29. Ba báo cáo phải liên kết
+
+Một mô hình ba báo cáo (three-statement model) cần nối:
+
+```text
+Income Statement
+→ Net Income
+→ Cash Flow Statement
+→ Cash / Debt
+→ Balance Sheet
+→ Interest Expense
+→ Income Statement
+```
+
+Nếu tiền mặt âm nhưng thu nhập lãi vẫn tăng, hoặc nợ tăng mà chi phí lãi không đổi, mô hình đang sai logic.
+
+## 30. Kiểm soát lỗi mô hình
+
+Nên có các kiểm tra tự động:
+
+```text
+Assets = Liabilities + Equity
+Cash flow bridge khớp thay đổi tiền mặt
+Debt schedule khớp interest expense
+Retained earnings khớp net income - dividends
+Share count khớp SBC / issuance / buyback
+```
+
+Các kiểm tra đơn giản này ngăn rất nhiều lỗi mô hình.
+
+## 31. Base / Bull / Bear
+
+Một dự báo duy nhất tạo cảm giác chính xác giả.
+
+Mỗi kịch bản phải khác nhau ở nguyên nhân:
+
+```text
+Base:
+động lực vận hành bình thường
+
+Bull:
+nhu cầu, giá, mix hoặc hiệu suất tốt hơn
+
+Bear:
+doanh thu yếu + margin giảm + vốn lưu động xấu + tài trợ khó hơn
+```
+
+Không nên chỉ cộng/trừ 20% mọi biến.
+
+## 32. Phân tích độ nhạy
+
+Định giá thường tập trung vào vài biến:
+
+- tăng trưởng;
+- biên lợi nhuận;
+- WACC;
+- terminal growth;
+- capex;
+- vốn lưu động.
+
+Nếu kết luận đầu tư chỉ đúng khi mọi biến đều rất lạc quan, biên an toàn thấp.
+
+## 33. Reverse DCF
+
+DCF ngược (reverse DCF) hỏi:
+
+```text
+Giá hiện tại đang yêu cầu doanh nghiệp phải đạt
+bao nhiêu tăng trưởng, biên lợi nhuận và ROIC?
+```
+
+Đây đặc biệt hữu ích với doanh nghiệp tăng trưởng cao, nơi P/E hiện tại có thể khó diễn giải.
+
+## 34. Channel stuffing và ghi nhận doanh thu sớm
+
+**Channel stuffing** là việc đẩy hàng vào kênh phân phối mạnh hơn nhu cầu cuối nhằm ghi nhận doanh số sớm.
+
+Dấu hiệu cần kiểm tra có thể gồm:
+
+```text
+doanh thu tăng mạnh
++ phải thu tăng nhanh hơn
++ tồn kho ở distributor tăng
++ returns/rebates tăng sau đó
+```
+
+Không một tín hiệu đơn lẻ nào đủ để kết luận.
+
+## 35. Returns, rebates và reserves
+
+Doanh nghiệp có thể phải ước tính hàng trả lại, rebate, warranty hoặc dự phòng khác.
+
+Nếu các tỷ lệ này giảm bất thường đúng lúc lợi nhuận cần đạt mục tiêu, cần kiểm tra footnote và xu hướng nhiều kỳ.
+
+## 36. Supplier finance và factoring
+
+**Supplier finance** có thể kéo dài thời gian trả nhà cung cấp thông qua bên tài chính. **Factoring** có thể chuyển phải thu thành tiền sớm.
+
+Hai công cụ này không nhất thiết xấu, nhưng có thể làm CFO và working capital trông tốt hơn trong ngắn hạn.
+
+Cần hỏi:
+
+```text
+Đây là cải thiện hoạt động thật?
+Hay chỉ thay đổi thời điểm dòng tiền?
+```
+
+## 37. Lãi vay vốn hóa
+
+Ở dự án xây dựng dài hạn, một phần lãi vay có thể được vốn hóa vào tài sản thay vì đi ngay qua chi phí.
+
+Điều này làm lợi nhuận hiện tại cao hơn so với trường hợp ghi toàn bộ lãi vào chi phí.
+
+Cần theo dõi đồng thời:
+
+- tiền lãi thực trả;
+- lãi vốn hóa;
+- tổng nợ;
+- chi phí vốn bình quân.
+
+## 38. Thuế và chất lượng lợi nhuận
+
+Lợi nhuận có thể tăng vì thuế suất hiệu dụng giảm chứ không phải hoạt động tốt hơn.
+
+Khi thuế giảm do khoản một lần, deferred tax asset hoặc ưu đãi sắp hết hạn, cần chuẩn hóa lại lợi nhuận.
+
+## 39. Dấu hiệu từ kiểm toán và kiểm soát nội bộ
+
+Các tín hiệu cần đọc kỹ:
+
+- thay kiểm toán viên bất thường;
+- ý kiến kiểm toán có điều kiện;
+- material weakness;
+- restatement;
+- trì hoãn filing;
+- thay CFO hoặc controller liên tục.
+
+Đây không phải bằng chứng sai phạm, nhưng làm tăng nhu cầu kiểm tra.
+
+## 40. Consensus revisions
+
+Giá cổ phiếu thường phản ứng mạnh với **thay đổi kỳ vọng**, không chỉ mức lợi nhuận tuyệt đối.
+
+Theo dõi:
+
+```text
+Revenue estimates
+EPS estimates
+Margin estimates
+Target assumptions
+Breadth of revisions
+```
+
+Nếu số liệu hiện tại tốt nhưng dự báo tương lai liên tục bị hạ, thị trường có thể tập trung vào điểm ngoặt phía trước.
+
+## 41. Mô hình theo phân khúc và địa lý
+
+Doanh nghiệp đa mảng không nên chỉ kéo một CAGR tổng.
+
+Cần tách khi có ý nghĩa:
+
+```text
+Segment A
+Segment B
+Geography 1
+Geography 2
+Currency exposure
+Margin khác nhau
+```
+
+Điều này giúp xác định mảng nào thật sự tạo tăng trưởng và mảng nào đang che vấn đề.
+
+## 42. Dữ liệu point-in-time và versioning
+
+Khi backtest hoặc kiểm tra dự báo lịch sử, chỉ được dùng dữ liệu đã biết tại thời điểm đó.
+
+Cần phân biệt:
+
+```text
+Ngày kỳ báo cáo
+Ngày công bố
+Ngày sửa đổi
+Ngày ra quyết định
+```
+
+Dữ liệu đã được restate sau này không được đưa ngược vào quá khứ như thể nhà đầu tư đã biết.
+
+Mô hình cũng nên có version để biết giả định thay đổi khi nào và vì sao.
+
+## 43. Kiểm tra forensic theo ngành
+
+Không có một checklist chung cho mọi ngành.
+
+Ví dụ:
+
+```text
+Ngân hàng:
+NPL, group-2, provision coverage, capital, related lending
+
+Bán dẫn:
+inventory, utilization, capex, ASP, customer concentration
+
+SaaS:
+ARR, churn, NRR, SBC, deferred revenue
+
+Bán lẻ:
+inventory, markdown, same-store sales, lease obligations
+
+Bất động sản:
+legal status, presales, debt maturity, capitalized interest
+```
+
+## 44. Red flag không phải bằng chứng gian lận
+
+Một chỉ số bất thường chỉ nên tạo ra câu hỏi tiếp theo.
+
+Quy trình tốt là:
+
+```text
+Phát hiện bất thường
+→ tìm giải thích kinh tế
+→ đọc footnote
+→ so với lịch sử
+→ so với đối thủ
+→ kiểm tra dòng tiền
+→ kiểm tra phản hồi của ban quản lý
+```
+
+Không nên nhảy thẳng từ “DSO tăng” sang “doanh nghiệp gian lận”.
+
+## 45. Mẫu review hàng quý
+
+Sau mỗi kỳ báo cáo, có thể dùng chuỗi:
+
+```text
+1. Doanh thu: price / volume / mix
+2. Biên gộp và incremental margin
+3. CFO và FCF
+4. Receivables / Inventory / Payables
+5. DSO / DIO / DPO / CCC
+6. SBC và share count
+7. Debt / maturity / covenant / revolver
+8. One-offs / adjusted earnings
+9. Guidance
+10. Consensus revisions
+11. Valuation impact
+12. Thesis update / invalidation
+```
 
 ## Kết luận
 
-Phân tích doanh nghiệp chuyên sâu không phải săn tìm ratio bí mật. Nó là quá trình nối accounting với economics. Investor cần hiểu doanh thu có thật sự chuyển thành cash không, growth có tạo value trên mỗi cổ phiếu không, capital mới tạo ROIC bao nhiêu và valuation hiện tại đang đòi hỏi điều gì. Khi ba statement, unit economics và valuation được nối thành một model nhất quán, bạn mới thực sự chuyển từ “đọc báo cáo” sang “phân tích doanh nghiệp”.
+Phân tích chất lượng lợi nhuận không phải săn tìm sai phạm. Mục tiêu là hiểu lợi nhuận đến từ đâu, tiền mặt đi đâu và kết quả hiện tại có thể lặp lại hay không.
+
+Một doanh nghiệp có chất lượng cao thường cho phép bạn nối được chuỗi:
+
+```text
+động lực kinh doanh thật
+→ doanh thu
+→ lợi nhuận
+→ vốn lưu động
+→ dòng tiền
+→ tái đầu tư
+→ giá trị trên mỗi cổ phiếu
+```
+
+Khi chuỗi này bị đứt, đó là nơi cần nghiên cứu sâu hơn.

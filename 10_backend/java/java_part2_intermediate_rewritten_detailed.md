@@ -5,6 +5,11 @@
 >
 > Các ghi chú kiểu Senior, idiom và pattern không được tách thành mục riêng sau mỗi chương. Khi một tư duy nâng cao cần thiết, nó được giải thích ngay trong nội dung cùng ví dụ để bạn học như một phần tự nhiên của Java.
 
+
+## Vị trí của Part 2 trong learning flow
+
+Part 2 nối trực tiếp từ [Java Part 1 — Beginner](./java_part1_beginner_rewritten_detailed.md). Ở đây bạn không học lại syntax; bạn bắt đầu giải thích được contract của collections/generics, lifecycle của thread/resource, memory visibility, JDBC transaction, reflection, class loading và JVM. Sau khi hoàn thành Part 2, tiếp tục [Java Part 3 — Senior](./java_part3_senior_rewritten_detailed.md).
+
 ---
 
 # 1. Intermediate Java nghĩa là bắt đầu học theo contract
@@ -1023,6 +1028,31 @@ write count
 Hai threads có thể cùng read 10 và cùng write 11, mất một increment.
 
 Thread-safe design bắt đầu bằng việc giảm shared mutable state. Immutable data và thread confinement thường đơn giản hơn locks.
+
+
+
+---
+
+## `Thread`: object Java và execution context khác nhau thế nào?
+
+Trước khi học `synchronized`, executor hay virtual thread, cần hiểu `Thread` ở mức trực tiếp. Một `Thread` object biểu diễn một luồng thực thi có lifecycle. Tạo object chưa làm code chạy song song:
+
+```java
+Thread thread =
+    new Thread(() -> doWork());
+```
+
+Chỉ khi gọi `thread.start()` JVM mới tạo/schedule execution mới và thread đó sau đó thực thi `run()`. Nếu gọi trực tiếp `thread.run()`, đó chỉ là một method call bình thường trên **thread hiện tại**; không có concurrency mới.
+
+Bạn có thể chờ thread khác hoàn thành bằng `join()`. `join()` không chỉ “đợi cho xong”; việc thread kết thúc rồi thread khác join thành công còn tạo happens-before relationship, nên các effects trước khi thread kết thúc được thread join quan sát theo Java Memory Model.
+
+`Thread.sleep(...)` chỉ tạm dừng thread hiện tại; nó không nhả monitor lock đang giữ và không phải primitive để chờ một condition. Nếu test hoặc production code dùng `sleep(100)` để “đợi task chắc chạy xong”, design đang phụ thuộc timing. Hãy dùng `join`, latch, `Future` hoặc condition phù hợp.
+
+Platform thread có các trạng thái như `NEW`, `RUNNABLE`, `BLOCKED`, `WAITING`, `TIMED_WAITING`, `TERMINATED`. Trong production thread dump, state chỉ là đầu mối: một worker WAITING trên queue có thể hoàn toàn bình thường, còn hàng trăm threads BLOCKED trên cùng monitor mới là tín hiệu contention cần điều tra.
+
+Daemon thread không giữ JVM sống khi tất cả non-daemon threads đã kết thúc. Background work quan trọng không nên dựa vào giả định “daemon thread sẽ còn kịp flush”. Durability phải đến từ explicit persistence và lifecycle.
+
+Trong application production, bạn hiếm khi tự tạo một platform `Thread` cho từng task; `ExecutorService` quản lý lifecycle và capacity tốt hơn. Java 21 Virtual Threads lại làm thread-per-task style khả thi với cost model khác. Nhưng hiểu `Thread` vẫn bắt buộc để đọc stack trace, thread dump, interruption và framework execution.
 
 ---
 
@@ -2568,17 +2598,25 @@ Không cần Mockito/Spring để hiểu testability. Framework tools chỉ auto
 
 ---
 
-# 106. Legacy APIs cần nhận biết
+# 106. Legacy Java bạn sẽ gặp trong enterprise và cách hiện đại hóa mà không phá hệ thống
 
-`Date`, `Calendar`, `SimpleDateFormat` vẫn có trong legacy; prefer `java.time`.
+Legacy Java không đồng nghĩa “code xấu”. Nhiều hệ thống quan trọng được viết đúng với constraints của Java 6/7/8 và framework thời đó. Kỹ năng cần có là **đọc mental model cũ, nhận ra replacement hiện đại, rồi migrate có kiểm soát** thay vì rewrite theo style mới chỉ vì nhìn đẹp hơn.
 
-`Vector`, `Hashtable`, `Stack` thường legacy; modern alternatives `ArrayList`, `HashMap`/concurrent maps, `ArrayDeque`.
+Trong code Java 8 hoặc cũ hơn, bạn sẽ gặp anonymous classes ở những nơi code mới dùng lambda. Đổi sang lambda có thể giảm noise, nhưng đừng biến callback nhiều state/logic thành lambda 30 dòng chỉ để “modernize”. Named class đôi khi vẫn dễ đọc hơn.
 
-`StringBuffer` synchronized; `StringBuilder` thường default single-threaded local building.
+Bạn cũng sẽ gặp `Date`, `Calendar` và `SimpleDateFormat`. `SimpleDateFormat` mutable và không thread-safe; static shared formatter trong server có thể race. Code mới nên dùng `java.time` và immutable `DateTimeFormatter`. Khi migrate, phải xác định semantic trước: `Date` cũ đang đại diện exact instant, local business date hay chỉ timestamp DB? Chuyển bừa sang `LocalDateTime` có thể làm mất timezone meaning.
 
-Native serialization cần caution.
+Legacy collections có `Vector`, `Hashtable` và `Stack`. Chúng không “không dùng được”, nhưng synchronization semantics và API design thường không phải lựa chọn tốt cho code mới. `ArrayList`, `HashMap`/`ConcurrentHashMap`, `ArrayDeque` thường rõ hơn tùy requirement. Không thay `Hashtable` bằng `HashMap` chỉ vì mới hơn nếu old code thật sự dựa concurrent access; trước tiên phải xác định compound atomicity và ownership.
 
-Bạn phải đọc legacy code nhưng không copy legacy APIs vào code mới chỉ vì quen.
+I/O legacy thường dùng `File`, `FileInputStream`, `FileReader` với platform default charset. Modern code nên ưu tiên `Path`/`Files` và charset explicit. Concurrency legacy có thể tạo raw `Thread`, dùng `wait/notify`, `Timer/TimerTask` hoặc synchronized collections; modern executors, `BlockingQueue`, scheduled executors và atomics thường dễ reason hơn, nhưng migration phải preserve protocol chứ không chỉ replace API names.
+
+JDK 8 → 11 migration có một nhóm lỗi không nằm trong source style: JAXB/JAX-WS và Java EE/CORBA modules từng đi kèm JDK đã bị loại khỏi JDK 11. Code cũ có thể compile/run trên JDK 8 rồi báo missing class trên 11 cho tới khi dependencies được khai báo rõ trong build.
+
+JDK 17 tạo compatibility boundary khác: strong encapsulation của JDK internals mạnh hơn. Library cũ dùng reflection vào private fields của `java.*` có thể fail. `--add-opens` có thể là temporary migration bridge, nhưng long-term fix là update library hoặc chuyển sang supported API.
+
+Khi lên Java 21, Virtual Threads không có nghĩa phải rewrite executor architecture ngay. Trước hết đo workload: bottleneck là blocking platform threads hay DB pool/CPU? Virtual thread giảm cost chờ của Java threads, nhưng pool 30 database connections vẫn chỉ có 30 connections.
+
+Cách migrate an toàn là tách **platform upgrade** khỏi **source modernization** khi có thể: chạy tests trên JDK mới, sửa dependencies/removed APIs, xử lý illegal reflection, đo GC/memory/latency baseline, rồi refactor từng vùng với tests. Hai mục tiêu có risk profile khác nhau.
 
 ---
 

@@ -1,143 +1,306 @@
-# 03 — Lifecycle Allocation, Rebalancing và Investment Operations
+# Đầu tư theo vòng đời, tái cân bằng và vận hành danh mục
 
-> Chương này nối kiến thức nền tảng với cách vận hành một danh mục thật trong nhiều năm. Mục tiêu không phải tìm “tỷ lệ danh mục tối ưu” duy nhất, mà hiểu vì sao tỷ trọng tài sản phải phụ thuộc vào mục tiêu, dòng tiền, thời gian cần sử dụng vốn, khả năng chịu drawdown và loại nghĩa vụ tài chính của chính nhà đầu tư.
+> Xây danh mục không kết thúc ở việc chọn tỷ trọng cổ phiếu và trái phiếu. Một kế hoạch đầu tư phải sống cùng con người qua nhiều giai đoạn nghề nghiệp, thay đổi thu nhập, nợ, nhà ở, gia đình, thuế và nhu cầu thanh khoản. Chương này chuyển lý thuyết phân bổ tài sản thành hệ thống vận hành thực tế.
 
-## 1. Danh mục đầu tư là một hệ thống tài chính cá nhân
+## 1. Danh mục đầu tư chỉ là một phần của bảng cân đối cá nhân
 
-Người mới thường coi portfolio là danh sách những mã đang nắm giữ. Cách nhìn đầy đủ hơn là coi portfolio như một hệ thống có đầu vào, mục tiêu, giới hạn và quy tắc điều khiển. Đầu vào là thu nhập, tiền tiết kiệm và vốn đã tích lũy. Mục tiêu có thể là mua nhà, nghỉ hưu, tạo dòng tiền hoặc tích lũy tài sản. Giới hạn gồm emergency fund, khoản nợ, nghĩa vụ gia đình, mức drawdown có thể chịu và thời gian còn lại trước khi cần dùng tiền.
+Tài sản tài chính phải được nhìn cùng tiền mặt, nhà ở, nợ, quỹ hưu trí, vốn con người và các nghĩa vụ tương lai.
 
-Điều này giải thích vì sao hai người cùng 30 tuổi không nhất thiết nên có cùng portfolio. Người thứ nhất có việc làm rất ổn định, ít nợ và chưa cần vốn lớn trong mười năm có thể chịu tỷ trọng equity cao hơn. Người thứ hai chuẩn bị mua nhà trong hai năm và đang trả khoản vay lớn có liquidity need khác hoàn toàn. Asset allocation chỉ có ý nghĩa khi đặt bên cạnh balance sheet cá nhân.
+Một người có lương ổn định, ít nợ và mục tiêu dài hạn có khả năng chịu biến động khác người có thu nhập không ổn định và khoản trả nợ lớn trong hai năm tới.
 
-Một cách tư duy tốt là chia tài sản theo chức năng thay vì theo ticker. Liquidity bucket đảm bảo các nghĩa vụ gần. Stability bucket giảm biến động và cung cấp dry powder. Growth bucket hướng tới compounding dài hạn. Satellite bucket dành cho các ý tưởng có conviction nhưng rủi ro cao hơn. Không phải ai cũng cần đủ bốn bucket, nhưng framework này buộc bạn trả lời câu hỏi mỗi đồng vốn đang làm nhiệm vụ gì.
+Do đó quyết định đầu tư phải bắt đầu từ bảng cân đối tổng thể chứ không chỉ tài khoản chứng khoán.
 
-## 2. Human capital cũng là một tài sản
+## 2. Vốn con người
 
-Human capital là giá trị kinh tế của thu nhập tương lai từ nghề nghiệp. Một người có công việc ổn định, thu nhập ít phụ thuộc chu kỳ kinh tế có human capital gần giống một tài sản tương đối defensive. Một người làm trong ngành công nghệ tăng trưởng cao có income beta với thị trường công nghệ lớn hơn.
+Vốn con người (human capital) là giá trị kinh tế của thu nhập nghề nghiệp trong tương lai.
 
-Điều này ảnh hưởng portfolio. Nếu thu nhập, bonus, RSU và cơ hội nghề nghiệp của bạn đều phụ thuộc mạnh vào tech cycle, việc toàn bộ investment portfolio cũng tập trung Nasdaq và semiconductor làm total household risk cao hơn vẻ bề ngoài. Ngược lại, người có thu nhập rất ổn định có thể chịu allocation equity lớn hơn nếu horizon dài.
+Nếu công việc ổn định và ít nhạy với chu kỳ, vốn con người có thể giống một dòng thu nhập tương đối phòng thủ. Nếu làm trong ngành công nghệ chu kỳ, bonus và khả năng việc làm có thể cùng giảm khi cổ phiếu công nghệ giảm.
 
-Khi tuổi tăng, human capital giảm vì số năm lao động còn lại ít hơn. Financial capital vì thế thường trở nên quan trọng hơn. Đây là logic sâu hơn phía sau lời khuyên phổ biến rằng portfolio có thể dần thận trọng hơn khi gần thời điểm cần dùng vốn.
+Vì vậy người có thu nhập đã nhạy với một ngành nên thận trọng khi tài sản tài chính cũng tập trung vào cùng ngành đó.
 
-## 3. Liability matching và bucket theo thời gian
+## 3. Phân tầng mục tiêu theo thời gian
 
-Một khoản tiền sẽ dùng trong sáu tháng không nên chịu cùng risk với khoản tiền dùng sau hai mươi năm. Đây là nguyên tắc liability matching.
+Một cách thực tế là chia mục tiêu thành các tầng:
 
-Nếu tiền đặt cọc nhà cần trong mười hai tháng, equity drawdown 30% có thể biến một kế hoạch tài chính khả thi thành không thể thực hiện. Dù equity có expected return cao hơn cash trong dài hạn, mismatch về thời gian khiến nó trở thành công cụ không phù hợp.
+```text
+Thanh khoản ngay: chi tiêu / quỹ khẩn cấp
+Ổn định ngắn hạn: mục tiêu 1–3 năm
+Tăng trưởng trung–dài hạn: mục tiêu nhiều năm
+Vệ tinh: ý tưởng chủ động hoặc rủi ro cao hơn
+```
 
-Có thể hình dung horizon thành ba lớp. Ngắn hạn là các nghĩa vụ dưới khoảng hai năm, nơi liquidity và capital preservation quan trọng nhất. Trung hạn là vài năm, có thể dùng mix giữa short-duration fixed income và assets tăng trưởng tùy flexibility của mục tiêu. Dài hạn là capital không cần sử dụng trong nhiều năm, nơi volatility ngắn hạn có thể được chấp nhận để đổi lấy expected return cao hơn.
+Tầng thanh khoản không cần tối đa hóa lợi suất. Nhiệm vụ của nó là bảo đảm khả năng chi trả và tránh bán cưỡng bức.
 
-Điểm quan trọng là thời gian không phải biến duy nhất. Nếu ngày cần tiền có thể linh hoạt, bạn có nhiều risk capacity hơn. Nếu nghĩa vụ là cố định, như tiền mua nhà đã ký hợp đồng, risk capacity thấp hơn rõ rệt.
+## 4. Đồng tiền của nghĩa vụ
 
-## 4. Risk tolerance, risk capacity và risk requirement
+Nếu mục tiêu là mua nhà tại Hàn Quốc, nghĩa vụ chủ yếu bằng KRW. Nếu hỗ trợ gia đình hoặc mua tài sản tại Việt Nam, một phần nghĩa vụ có thể bằng VND.
 
-Ba khái niệm này thường bị trộn lẫn.
+Tài sản và nghĩa vụ khác đồng tiền tạo rủi ro tỷ giá. Vì vậy phân bổ tiền tệ phải xuất phát từ nơi tiền sẽ được sử dụng trong tương lai.
 
-Risk tolerance là mức biến động bạn chịu được về tâm lý. Một người có thể nói chấp nhận -30%, nhưng chỉ khi thực sự trải qua bear market mới biết con số đó có thật hay không.
+## 5. Rủi ro chịu được thay đổi theo vòng đời
 
-Risk capacity là mức loss bạn có thể chịu mà không phá mục tiêu tài chính. Đây là khái niệm khách quan hơn. Người sắp nghỉ hưu có thể rất “gan” nhưng capacity thấp vì thời gian phục hồi ngắn.
+Khả năng chịu rủi ro không phải hằng số. Nó thay đổi khi:
 
-Risk requirement là mức return bạn cần để đạt mục tiêu. Nếu mục tiêu chỉ cần 3% real return, không có lý do phải dùng portfolio cực kỳ aggressive chỉ vì muốn tối đa hóa lợi nhuận.
+```text
+Thu nhập thay đổi
+Nợ thay đổi
+Mục tiêu đến gần
+Có người phụ thuộc
+Tài sản thực tăng
+Khả năng chuyển việc thay đổi
+Sức khỏe hoặc hoàn cảnh gia đình thay đổi
+```
 
-Một allocation hợp lý phải thỏa cả ba. Nếu requirement cao hơn capacity cho phép, giải pháp không phải luôn tăng risk. Có thể phải tăng savings, kéo dài horizon hoặc giảm mục tiêu.
+Kế hoạch phân bổ nên có quy tắc xem xét khi các biến này thay đổi đáng kể.
 
-## 5. Strategic Asset Allocation
+## 6. Phân bổ chiến lược
 
-Strategic Asset Allocation là tỷ trọng dài hạn bạn chọn cho các nhóm tài sản dựa trên mục tiêu và risk profile. Ví dụ, thay vì nói “tôi mua KODEX 200, gold ETF và vài cổ phiếu”, bạn mô tả portfolio bằng exposure: domestic equity, global equity, bonds, gold và cash.
+Phân bổ chiến lược là cấu trúc dài hạn dựa trên mục tiêu và khả năng chịu rủi ro.
 
-Allocation nên được xây từ asset-class behavior trước, rồi mới chọn sản phẩm. Nếu bắt đầu từ sản phẩm, bạn dễ bị marketing dẫn dắt. Nếu bắt đầu từ function, bạn có thể chọn ETF phù hợp hơn.
+Một phân bổ có thể được mô tả theo chức năng thay vì sản phẩm:
 
-Equity cung cấp ownership growth nhưng drawdown lớn. Bonds cung cấp income và có thể ổn định portfolio, nhưng duration và credit risk phải được hiểu. Cash giảm volatility và tạo optionality nhưng chịu inflation drag. Gold có thể đa dạng hóa trong một số regime nhưng không tạo cash flow. Real estate và REIT có income và inflation linkage nhưng chịu rate sensitivity.
+```text
+Tăng trưởng
+Ổn định / Duration
+Bảo vệ lạm phát
+Thanh khoản
+Cơ hội chủ động
+```
 
-Strategic allocation không cần thay mỗi tháng. Nó là “default state” của portfolio.
+Cách này bền hơn việc xây danh mục từ tên ETF vì sản phẩm có thể thay đổi nhưng chức năng kinh tế ít thay đổi hơn.
 
-## 6. Tactical Asset Allocation
+## 7. Phân bổ chiến thuật
 
-Tactical allocation là việc tạm thời lệch khỏi strategic allocation vì valuation, macro regime hoặc risk assessment. Ví dụ strategic equity là 60%, nhưng bạn giảm còn 50% vì portfolio vừa tăng rất mạnh và valuation trở nên cực đoan.
+Phân bổ chiến thuật chỉ nên là sai lệch có giới hạn quanh phân bổ chiến lược.
 
-Tactical allocation khó hơn nhiều vì bạn phải đúng không chỉ về direction mà còn timing và magnitude. Nếu giảm equity quá sớm trong bull market, opportunity cost có thể lớn. Nếu chờ rõ ràng đến khi recession được xác nhận, market có thể đã giảm trước đó.
+Nếu không có phương pháp rõ, việc tăng giảm tỷ trọng theo tin tức dễ trở thành mua sau tăng và bán sau giảm.
 
-Vì vậy tactical decisions nên có giới hạn. Một framework thực tế là strategic allocation giữ phần lớn portfolio, còn tactical band chỉ dao động trong một khoảng hẹp. Điều này tránh biến long-term portfolio thành macro trading account.
+Một quyết định chiến thuật tốt cần nêu:
 
-## 7. Rebalancing và cơ chế “bán cao, mua thấp” có kỷ luật
+```text
+Lợi thế kỳ vọng là gì?
+Thời hạn bao lâu?
+Tỷ trọng tối đa bao nhiêu?
+Điều kiện nào khiến quay về trung tính?
+```
 
-Rebalancing là đưa portfolio về allocation mục tiêu sau khi price movements làm tỷ trọng lệch.
+## 8. Tái cân bằng theo lịch và theo dải
 
-Giả sử mục tiêu equity 60%, bonds 30%, gold 10%. Sau một năm equity tăng mạnh, tỷ trọng thành 72%, bonds 20%, gold 8%. Nếu không rebalancing, portfolio hiện tại rủi ro hơn thiết kế ban đầu dù bạn không hề mở position mới.
+Tái cân bằng theo lịch có thể thực hiện mỗi quý hoặc mỗi năm. Tái cân bằng theo dải chỉ hành động khi tỷ trọng lệch khỏi phạm vi cho phép.
 
-Calendar rebalancing là kiểm tra định kỳ, ví dụ mỗi quý hoặc mỗi năm. Threshold rebalancing chỉ hành động khi tỷ trọng lệch quá một ngưỡng, ví dụ hơn 5 percentage points. Cash-flow rebalancing dùng tiền mới để mua phần thiếu thay vì bán phần dư, giúp giảm tax và transaction cost.
+Dải tái cân bằng thường giảm giao dịch không cần thiết và cho phép xu hướng nhỏ tồn tại.
 
-Không có một rule tốt nhất. Điều quan trọng là rebalancing dựa trên policy chứ không dựa vào cảm xúc. Khi asset giảm mạnh, rule buộc bạn mua thêm đúng lúc tâm lý muốn tránh xa nó; khi asset tăng quá mạnh, rule buộc bạn giảm bớt dù narrative đang rất hấp dẫn.
+Có thể ưu tiên dùng dòng tiền mới để đưa danh mục về mục tiêu trước khi bán tài sản đang nắm, từ đó giảm thuế và chi phí.
 
-## 8. Sequence-of-Returns Risk
+## 9. Tái cân bằng không phải chiến lược tạo alpha tự động
 
-Hai người có average return giống nhau vẫn có kết quả rất khác nếu thứ tự return khác nhau, đặc biệt khi đang rút tiền.
+Tái cân bằng giúp kiểm soát rủi ro nhưng không bảo đảm lợi suất vượt trội. Trong xu hướng kéo dài, bán tài sản thắng để mua tài sản yếu có thể làm lợi suất thấp hơn.
 
-Người tích lũy trẻ có thể hưởng lợi khi market giảm vì contributions mới mua được asset rẻ hơn. Người đã nghỉ hưu và phải rút đều lại đối mặt với rủi ro khác. Nếu crash xảy ra đầu retirement, họ vừa chịu loss vừa phải bán tài sản để chi tiêu, khiến capital base bị thu nhỏ và khó phục hồi dù average return dài hạn cuối cùng vẫn tốt.
+Giá trị chính của tái cân bằng là giữ danh mục trong phạm vi rủi ro đã chấp nhận.
 
-Đây là sequence risk. Cách xử lý có thể gồm liquidity buffer, giảm withdrawal khi market xấu, giữ một phần bonds hoặc cash, hoặc dynamic allocation. Điểm cốt lõi là cùng một asset allocation có thể phù hợp giai đoạn accumulation nhưng không phù hợp giai đoạn decumulation.
+## 10. Rủi ro thứ tự lợi suất khi gần mục tiêu
 
-## 9. Reinvestment Risk và Duration Matching
+Khi còn nhiều năm tích lũy, một đợt giảm sớm có thể được bù bằng đóng góp mới và thời gian. Khi bắt đầu rút tiền, cùng một đợt giảm có thể nguy hiểm hơn vì phải bán nhiều đơn vị tài sản ở giá thấp.
 
-Bond không chỉ có price risk. Khi bond maturity và bạn nhận principal, nếu market rates đã giảm mạnh, khoản tiền mới chỉ reinvest được ở yield thấp hơn. Đây là reinvestment risk.
+Đó là rủi ro thứ tự lợi suất (sequence-of-returns risk).
 
-Nếu có liability ở một ngày cụ thể, duration matching giúp giảm sensitivity giữa asset và liability. Người mới không cần xây immunization portfolio phức tạp, nhưng nên hiểu rằng “bond an toàn” vẫn có nhiều loại risk khác nhau.
+Một cách giảm rủi ro là duy trì các tầng tiền mặt hoặc trái phiếu đáo hạn phù hợp với chi tiêu vài năm tới.
 
-Short-duration bonds có ít price sensitivity hơn nhưng phải reinvest thường xuyên. Long-duration bonds khóa yield lâu hơn nhưng price biến động lớn khi rates thay đổi. Vì vậy lựa chọn duration phải gắn với horizon và purpose.
+## 11. Rủi ro tái đầu tư
 
-## 10. Tax Location và Account Location
+Tài sản ngắn hạn ít biến động giá nhưng có rủi ro tái đầu tư (reinvestment risk). Khi đáo hạn, lãi suất mới có thể thấp hơn nhiều.
 
-Hai assets giống nhau có thể tạo after-tax return khác nhau tùy đặt trong account nào. Một số account có tax deferral hoặc tax advantage; một số income như interest hoặc distribution có thể bị tax theo cách khác capital gains.
+Vì vậy dùng liên tục T-bill một tháng cho nghĩa vụ chắc chắn trong một năm tạo sự không chắc chắn về mức lãi trong tương lai. Khớp kỳ hạn với nghĩa vụ có thể hợp lý hơn.
 
-Khái niệm tax location là đặt loại asset vào loại account phù hợp để tăng after-tax compounding. Tuy nhiên quy định cụ thể thay đổi theo quốc gia và tình trạng cư trú, vì vậy master note không nên đóng đinh một tỷ lệ thuế cố định.
+## 12. Thuế và vị trí tài sản
 
-Điều quan trọng là trước khi xây portfolio lớn, bạn phải biết account wrapper nào đang dùng, contribution limit, withdrawal restrictions và tax treatment hiện hành.
+Hai sản phẩm có lợi suất trước thuế giống nhau có thể tạo lợi suất sau thuế khác nhau.
 
-## 11. Transaction Cost không chỉ là commission
+Cần phân biệt:
 
-Chi phí đầu tư gồm commission, bid-ask spread, market impact, FX conversion, fund expenses, withholding tax, financing cost và đôi khi custody fee.
+```text
+Tài khoản chịu thuế
+Tài khoản được ưu đãi thuế
+Thu nhập từ cổ tức / lãi
+Lãi vốn thực hiện
+Khấu trừ thuế ở nước nguồn
+```
 
-Một ETF có expense ratio thấp nhưng spread rộng và AUM nhỏ có thể tốn hơn ETF fee cao hơn một chút nhưng thanh khoản tốt. Một investor mua foreign securities thường xuyên có thể mất đáng kể vào FX conversion.
+Quy định cụ thể thay đổi theo quốc gia và thời điểm, nên phải kiểm tra nguồn chính thức trước quyết định thật.
 
-Turnover cao làm các chi phí nhỏ cộng dồn. Vì vậy portfolio design tốt không chỉ chọn expected return mà còn giảm unnecessary turnover.
+## 13. Vòng quay danh mục và thuế kéo lùi lợi suất
 
-## 12. Custody, Beneficial Ownership và Operational Risk
+Giao dịch thường xuyên tạo phí, spread, trượt giá và có thể làm phát sinh thuế sớm hơn.
 
-Khi mua chứng khoán, bạn cần hiểu assets được custody thế nào. Broker, exchange, clearing house và depository là các tầng khác nhau. Trong nhiều hệ thống, broker ghi nhận account của khách hàng trong khi depository giữ record ở tầng hạ tầng.
+Một chiến lược tốt trên dữ liệu trước chi phí có thể trở nên kém sau khi tính tổng chi phí sở hữu.
 
-Beneficial ownership nghĩa bạn là người hưởng quyền kinh tế dù chứng khoán có thể được giữ qua nominee structure. Quy định chính xác khác theo jurisdiction.
+Lợi thế đầu tư phải đủ lớn để vượt qua ma sát thực tế.
 
-Operational risk bao gồm broker failure, cyberattack, account takeover, settlement error và withdrawal fraud. Hai-factor authentication, email security, withdrawal whitelist và record tài khoản vì thế cũng là risk management.
+## 14. Lưu ký và quyền sở hữu
 
-Với OTC CFD và Forex, counterparty structure còn quan trọng hơn vì position thường là hợp đồng với broker entity. Cùng một brand có thể có nhiều legal entities ở các jurisdiction khác nhau.
+Nhà đầu tư cần hiểu tài sản được giữ qua môi giới, ngân hàng lưu ký, tài khoản nominee hay cấu trúc nào khác.
 
-## 13. Securities Lending và rủi ro ẩn trong quỹ
+Cần phân biệt tài sản của khách hàng với tài sản của công ty môi giới và hiểu cơ chế xử lý khi trung gian phá sản.
 
-Một số ETF hoặc funds cho mượn chứng khoán để nhận lending revenue. Hoạt động này có thể giúp giảm tracking difference nhưng tạo counterparty và collateral risk.
+Rủi ro lưu ký là rủi ro vận hành/pháp lý, không giống rủi ro giá thị trường.
 
-Quỹ tốt thường có policy rõ về collateral, borrower standards và phần revenue chia lại cho fund. Investor không cần tránh mọi securities lending, nhưng nên biết nó tồn tại nếu phân tích quỹ kỹ.
+## 15. Người sở hữu thụ hưởng
 
-## 14. Tracking Difference sau thuế và sau FX
+Người sở hữu thụ hưởng (beneficial owner) là người có quyền lợi kinh tế cuối cùng dù chứng khoán có thể được ghi dưới tên nominee hoặc tài khoản tổng.
 
-Một ETF theo index nước ngoài có nhiều tầng chênh lệch. Index return có thể là gross hoặc net dividend. Fund chịu withholding tax. Sau đó expense ratio và transaction costs làm return giảm. Nếu investor đo bằng KRW, FX thêm một lớp nữa.
+Cấu trúc này phổ biến trong đầu tư xuyên biên giới. Cần biết quyền biểu quyết, cổ tức, hành động doanh nghiệp và tài sản được phân bổ cho khách hàng như thế nào.
 
-Vì vậy khi ETF “thua index” 1% không nên lập tức kết luận fund quản lý tệ. Bạn cần xem benchmark definition, tax treatment và currency basis.
+## 16. Cho vay chứng khoán trong quỹ
 
-## 15. Investment Policy Statement ở mức vận hành
+ETF hoặc quỹ có thể cho vay chứng khoán để tạo thêm thu nhập. Điều này có thể giảm sai lệch bám chỉ số nhưng thêm rủi ro người vay, tài sản thế chấp và vận hành.
 
-IPS tốt không chỉ ghi mục tiêu tỷ trọng. Nó cần trả lời khi nào được mua, khi nào được bán, giới hạn concentration, leverage có được phép hay không và review cadence.
+Cần đọc chính sách cho vay, tỷ lệ chia doanh thu và cách quản lý tài sản thế chấp thay vì chỉ nhìn phí quản lý.
 
-Ví dụ, core allocation có thể chỉ thay khi mục tiêu tài chính hoặc horizon thay đổi. Single-stock thesis được review sau earnings hoặc structural event. Rebalance diễn ra khi deviation vượt threshold. Trading account bị tách khỏi investment account. Emergency fund không được dùng để average down.
+## 17. Tracking difference sau mọi chi phí
 
-Rule vận hành càng rõ, quyết định trong market stress càng ít phụ thuộc cảm xúc.
+Sai lệch so với chỉ số không chỉ do phí quản lý. Nó còn có thể đến từ:
 
-## 16. Portfolio Review đúng cách
+```text
+Thuế cổ tức
+Chi phí giao dịch
+Tiền mặt chưa đầu tư
+Cho vay chứng khoán
+Tối ưu hóa mẫu
+FX hedge
+Thời điểm tái cân bằng
+```
 
-Review portfolio không phải nhìn P/L mỗi tối. Review nên hỏi liệu allocation hiện tại có còn phù hợp mục tiêu, risk có tập trung bất thường không, cash flow sắp tới có thay đổi không và thesis của active positions có bị phá vỡ không.
+Vì vậy nên so lợi suất thực tế của quỹ với chỉ số sau cùng quy ước thuế/phân phối thay vì chỉ nhìn expense ratio.
 
-Performance cần so với benchmark phù hợp. Một portfolio 50% bonds không nên bị đánh giá chỉ bằng S&P 500. Single-stock sleeve có thể so sector benchmark. Total portfolio nên so với blended benchmark phản ánh strategic allocation.
+## 18. Tổng chi phí sở hữu
 
-Review cũng phải phân biệt outcome và process. Portfolio có thể tăng nhờ luck dù process xấu; cũng có thể giảm tạm thời dù policy được tuân thủ đúng. Đầu tư dài hạn cần đánh giá chất lượng quyết định qua nhiều chu kỳ.
+Tổng chi phí sở hữu có thể gồm:
 
-## Kết luận
+```text
+Phí quản lý
+Spread
+Phí môi giới
+Trượt giá
+Thuế
+FX conversion
+Chi phí vay / tài trợ
+Chi phí phòng vệ
+Chi phí cơ hội của tiền mặt
+```
 
-Lifecycle investing là quá trình liên kết mục tiêu cuộc sống với asset allocation. Portfolio tốt không phải portfolio có nhiều sản phẩm nhất hoặc return cao nhất trong một năm. Nó là portfolio có đủ liquidity khi cần, đủ growth để đạt mục tiêu, đủ diversification để sống qua nhiều regime và đủ rõ về quy tắc để nhà đầu tư không tự phá hệ thống trong lúc thị trường biến động.
+Sản phẩm “0 phí giao dịch” không có nghĩa tổng chi phí bằng 0.
+
+## 19. Dòng tiền mới là công cụ tái cân bằng
+
+Đối với người đang tích lũy, đóng góp định kỳ là cách tái cân bằng rất hiệu quả.
+
+Thay vì bán tài sản đang cao hơn mục tiêu, có thể chuyển dòng tiền mới vào tài sản đang thấp hơn mục tiêu cho tới khi tỷ trọng được khôi phục.
+
+Cách này giảm turnover và có thể giảm ma sát thuế.
+
+## 20. Khi nào nên bán?
+
+Bán không nên chỉ vì giá giảm hoặc vì đang lời nhiều. Các lý do hợp lý hơn:
+
+```text
+Luận điểm bị vô hiệu hóa
+Rủi ro tăng vượt ngân sách
+Định giá vượt xa lợi suất kỳ vọng hợp lý
+Cần tái cân bằng
+Nghĩa vụ đến hạn
+Sản phẩm/cấu trúc không còn phù hợp
+Có lựa chọn tốt hơn sau chi phí và thuế
+```
+
+## 21. Kế hoạch chuyển đổi khi mục tiêu đến gần
+
+Khi mục tiêu từ dài hạn trở thành ngắn hạn, tỷ trọng tài sản rủi ro dành cho mục tiêu đó nên giảm dần nếu tổn thất lớn có thể làm thất bại kế hoạch.
+
+Đây không phải dự báo thị trường mà là quản trị khả năng chi trả.
+
+Một mục tiêu chắc chắn trong 12 tháng không nên phụ thuộc vào việc thị trường cổ phiếu phục hồi đúng lúc.
+
+## 22. Kiểm thử nghĩa vụ
+
+Thay vì chỉ kiểm thử danh mục theo cú sốc giá, hãy kiểm thử cả cuộc sống:
+
+```text
+Thu nhập giảm 30%
+Mất việc 6 tháng
+Chi phí lớn bất ngờ
+Tỷ giá đi ngược nghĩa vụ
+Nhà ở giảm giá
+Thị trường cổ phiếu giảm cùng lúc
+```
+
+Danh mục tốt phải sống cùng bảng cân đối cá nhân trong các trạng thái này.
+
+## 23. Investment Policy Statement
+
+Tuyên bố chính sách đầu tư (IPS) biến kế hoạch thành quy tắc có thể thực thi.
+
+Một IPS nên có:
+
+```text
+Mục tiêu và thời hạn
+Đồng tiền của nghĩa vụ
+Thanh khoản tối thiểu
+Phạm vi tỷ trọng
+Giới hạn tập trung
+Quy tắc tái cân bằng
+Sản phẩm được phép / không được phép
+Giới hạn đòn bẩy
+Quy tắc đánh giá lại
+```
+
+IPS càng đơn giản và thực thi được càng tốt.
+
+## 24. Đánh giá danh mục theo tháng/quý/năm
+
+Đánh giá hàng tháng nên tập trung vào dòng tiền, tỷ trọng, vi phạm giới hạn và sự kiện lớn.
+
+Đánh giá hàng quý có thể xem lại đóng góp lợi suất, mức tập trung, nhân tố và các luận điểm chủ động.
+
+Đánh giá hàng năm nên kiểm tra lại mục tiêu, thu nhập, nợ, nghĩa vụ, khung thuế, sản phẩm và toàn bộ IPS.
+
+## 25. Không thay đổi chiến lược chỉ vì một quý kém
+
+Một chiến lược dài hạn có thể có giai đoạn hoạt động kém dù cơ chế chưa thay đổi. Việc đổi chiến lược liên tục có thể biến nhà đầu tư thành người mua sau hiệu suất tốt.
+
+Cần phân biệt:
+
+```text
+Kết quả xấu nhưng nằm trong phân phối dự kiến
+với
+Kết quả xấu vì cơ chế / giả định đã sai
+```
+
+## 26. Quy trình vận hành thực tế
+
+Một chuỗi vận hành hợp lý:
+
+```text
+Cập nhật dòng tiền cá nhân
+→ Kiểm tra quỹ dự phòng
+→ Kiểm tra nghĩa vụ gần
+→ Cập nhật tỷ trọng và rủi ro
+→ Dùng dòng tiền mới để cân bằng
+→ Giao dịch phần còn lại nếu cần
+→ Ghi nhận chi phí / thuế
+→ Đánh giá kết quả
+```
+
+## 27. Mô hình tư duy cuối cùng
+
+Đầu tư theo vòng đời là bài toán khớp **tài sản, con người và thời gian**.
+
+```text
+Vốn con người
++ Tài sản tài chính
++ Tài sản thực
+- Nợ
+- Nghĩa vụ tương lai
+= Bảng cân đối kinh tế cá nhân
+```
+
+Danh mục tốt không phải danh mục có Sharpe cao nhất trên dữ liệu lịch sử, mà là danh mục giúp bạn đạt mục tiêu với xác suất đủ cao mà không buộc phải phá kế hoạch giữa đường.

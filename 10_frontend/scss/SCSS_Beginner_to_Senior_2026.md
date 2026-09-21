@@ -1,16 +1,16 @@
 # SCSS — Beginner → Senior Handbook (Modern Dart Sass, 2026)
 
-> **Mục tiêu:** học SCSS như một **compile-time language để author CSS**, không dùng Sass để che việc chưa hiểu CSS.
+> **Mục tiêu:** học SCSS như một **thời điểm biên dịch (compile-time) language để author CSS**, không dùng Sass để che việc chưa hiểu CSS.
 >
 > Tài liệu này nối tiếp:
 >
 > ```text
-> CSS_Beginner_to_Senior_2026_v2.md
+> CSS_Beginner_to_Senior_2026.md
 > CSS_Master_Supplement_2026.md
 > ```
 >
-> Baseline:
-> - Dùng **Dart Sass**.
+> đường cơ sở (baseline) (audit 2026-09):
+> - Dùng **Dart Sass 1.104.1** làm mốc tài liệu hiện tại.
 > - Ưu tiên **`@use` / `@forward`**.
 > - Không xây code mới dựa trên Sass `@import`.
 > - Ưu tiên built-in modules: `sass:math`, `sass:color`, `sass:list`, `sass:map`, `sass:string`, `sass:selector`, `sass:meta`.
@@ -18,15 +18,48 @@
 > Ký hiệu:
 > - **[CORE]**: phải biết.
 > - **[ADV]**: senior nên thành thạo.
-> - **[ARCH]**: architecture / library design.
+> - **[ARCH]**: kiến trúc (architecture) / library design.
 > - **⚠ PITFALL**: lỗi thường gặp.
 > - **Idiom**: cách viết Sass quen thuộc.
-> - **Coding Pattern**: pattern implementation.
-> - **Design Pattern**: architecture pattern.
+> - **mẫu lập trình (coding pattern)**: pattern implementation.
+> - **mẫu thiết kế (design pattern)**: kiến trúc (architecture) pattern.
 
 ---
 
+## Quy ước thuật ngữ Việt–Anh
+
+Trong tài liệu này, thuật ngữ Sass/SCSS được viết theo hướng tiếng Việt dễ hiểu nhưng vẫn giữ từ gốc để tra cứu. Ví dụ: **thời điểm biên dịch (compile-time)**, **thời gian chạy (runtime)**, **phạm vi (scope)**, **không gian tên (namespace)**, **đồ thị mô-đun (module graph)**, **nội suy (interpolation)**, **che khuất biến (shadowing)**, **luồng điều khiển (control flow)** và **hợp nhất bộ chọn (selector unification)**. Những tên directive, function, module và cú pháp Sass nằm trong mã vẫn được giữ nguyên.
+
+
 # 0. SCSS thực sự là gì?
+
+# 0A. mô hình tư duy (mental model) xuyên suốt: SCSS là chương trình chạy trước CSS
+
+SCSS phải được học như một thời điểm biên dịch (compile-time) language dùng để author/generate CSS. `$variables`, các map khóa–giá trị (maps), loops, các khối trộn tái sử dụng (mixins), các hàm (functions) và đồ thị mô-đun (module graph) được Dart Sass xử lý trước khi browser nhìn thấy trang. Kết quả cuối cùng chỉ là CSS. Vì vậy Sass biến (variable) không cơ chế phân tầng (cascade), không inherit và không thay đổi thời gian chạy (runtime); CSS custom thuộc tính (property) thì có thể tham gia cơ chế phân tầng (cascade), kế thừa (inheritance) và thời gian chạy (runtime) overrides.
+
+Trục học canonical của SCSS là:
+
+```text
+Sass values / variables
+→ nesting + selector generation
+→ mixins / functions như compile-time abstraction
+→ lists / maps / control flow để generate CSS
+→ @use / @forward tạo module graph
+→ partials + entry points tổ chức source
+→ @extend như selector unification, không phải OOP inheritance
+→ architecture + public API
+→ compiler deprecations / migration
+→ CSS output quality + compile performance
+```
+
+Khi đọc SCSS, luôn hỏi trình biên dịch (compiler) sẽ emit CSS gì, bao nhiêu rule, bộ chọn (selector) nào và ở vị trí nào. khối trộn tái sử dụng (mixin) include nhiều lần có thể duplicate các khai báo (declarations). Loop có thể tạo hàng nghìn rules. lồng cú pháp (nesting) sâu có thể sinh bộ chọn (selector) độ đặc hiệu (specificity) cao và coupling với DOM. Source ngắn hơn không đồng nghĩa output tốt hơn.
+
+các biến (variables) phù hợp với thời điểm biên dịch (compile-time) calculation/generation. CSS custom các thuộc tính (properties) phù hợp với thời gian chạy (runtime) theme, cascade-based component contracts và các giá trị (values) cần override trong DevTools/thời gian chạy (runtime). các khối trộn tái sử dụng (mixins) nên mô tả khai báo (declaration) set hoặc content wrapper có parameterization rõ. các hàm (functions) nên trả giá trị (value) và tránh tác dụng phụ (side effect). các map khóa–giá trị (maps) hữu ích khi thực sự biểu diễn structured cấu hình (configuration); map khóa–giá trị (map) lồng sâu chỉ để “gom mọi thứ” thường biến API thành khó dùng.
+
+Modern hệ mô-đun (module system) là `@use` và `@forward`. `@use` tạo không gian tên (namespace), phạm vi (scope) members trong file dùng và load module một lần. `@forward` tạo facade/bề mặt công khai (public surface). các file thành phần (partials) chỉ là tổ chức source; chúng không tự tạo kiến trúc mô-đun (module architecture) nếu code vẫn nối bằng legacy `@import`. Sass `@import` và global built-ins đã đã ngừng khuyến nghị (deprecated) từ Dart Sass 1.80.0 nên code mới không nên xây trên global không gian tên (namespace) cũ.
+
+`@extend` cũng không phải kế thừa (inheritance) kiểu Java. Sass thực hiện hợp nhất bộ chọn (selector unification) để các bộ chọn (selector) mở rộng cùng nhận rules, vì thế output có thể xuất hiện xa nơi gọi và khó dự đoán. Placeholder `%foo` có use case, nhưng khối trộn tái sử dụng (mixin), tiện ích (utility)/composition hoặc CSS kiến trúc (architecture) thường explicit hơn. SCSS tốt phải làm CSS output dễ hiểu hơn, không che CSS đi.
+
 
 Sass là stylesheet language compile thành CSS.
 
@@ -56,7 +89,7 @@ Compile thành:
 }
 ```
 
-## Mental model quan trọng
+## mô hình tư duy (mental model) quan trọng
 
 ```text
 SCSS source
@@ -69,33 +102,33 @@ Browser **không biết**:
 - `$variable`,
 - `@mixin`,
 - `@function`,
-- Sass map,
+- Sass map khóa–giá trị (map),
 - Sass loop.
 
 Browser chỉ nhận CSS cuối.
 
 ## Senior rule
 
-Nếu behavior phụ thuộc runtime:
+Nếu behavior phụ thuộc thời gian chạy (runtime):
 - theme,
-- cascade,
-- inheritance,
+- cơ chế phân tầng (cascade),
+- kế thừa (inheritance),
 - container,
 - user preference,
 
-thường CSS custom property phù hợp hơn Sass variable.
+thường CSS custom thuộc tính (property) phù hợp hơn Sass biến (variable).
 
 ---
 
-# 1. SCSS vs CSS Custom Properties [CORE]
+# 1. SCSS vs CSS Custom các thuộc tính (properties) [CORE]
 
-## Sass variable
+## Sass biến (variable)
 
 ```scss
 $space-4: 1rem;
 ```
 
-Compile-time.
+thời điểm biên dịch (compile-time).
 
 Sau compile:
 
@@ -103,7 +136,7 @@ Sau compile:
 /* $space-4 biến mất */
 ```
 
-## CSS custom property
+## CSS custom thuộc tính (property)
 
 ```css
 :root {
@@ -111,15 +144,15 @@ Sau compile:
 }
 ```
 
-Tồn tại runtime.
+Tồn tại thời gian chạy (runtime).
 
 Có:
-- cascade,
-- inheritance,
-- runtime override,
+- cơ chế phân tầng (cascade),
+- kế thừa (inheritance),
+- thời gian chạy (runtime) override,
 - DevTools visibility.
 
-## Pattern — Compile-time constants + runtime tokens
+## Pattern — thời điểm biên dịch (compile-time) constants + thời gian chạy (runtime) tokens
 
 ```scss
 $prefix: "app";
@@ -132,10 +165,10 @@ $prefix: "app";
 Sass:
 - generate structure,
 - build token tables,
-- utility generation.
+- tiện ích (utility) generation.
 
-CSS variables:
-- theme/runtime component contract.
+CSS các biến (variables):
+- theme/thời gian chạy (runtime) hợp đồng thành phần (component contract).
 
 ---
 
@@ -165,7 +198,7 @@ Compressed output:
 npx sass src/styles.scss dist/styles.css --style=compressed
 ```
 
-Source map behavior tùy CLI/build integration.
+bản đồ mã nguồn (source map) behavior tùy CLI/build integration.
 
 ## Production rule
 
@@ -175,11 +208,11 @@ Trong app hiện đại thường Sass chạy thông qua:
 - Angular CLI,
 - framework bundler.
 
-Không cần tự chạy CLI nếu build tool đã quản lý.
+Không cần tự chạy CLI nếu công cụ build (build tool) đã quản lý.
 
 ---
 
-# 3. File Naming: Partials [CORE]
+# 3. File Naming: các file thành phần (partials) [CORE]
 
 File private/internal thường bắt đầu `_`:
 
@@ -243,7 +276,7 @@ Thường được giữ kể cả compressed output.
 
 ---
 
-# 5. Sass Variables [CORE]
+# 5. Sass các biến (variables) [CORE]
 
 ```scss
 $brand: #2563eb;
@@ -268,13 +301,13 @@ $font-size
 $font_size
 ```
 
-có thể refer cùng name semantics.
+có thể refer cùng name ngữ nghĩa (semantics).
 
 **Không lợi dụng điều này.** Chọn một convention: thường kebab-case.
 
 ---
 
-# 6. Variable Scope [CORE]
+# 6. biến (variable) phạm vi (scope) [CORE]
 
 Top-level:
 
@@ -295,11 +328,11 @@ Local:
 }
 ```
 
-Local variable không nên assume available global.
+Local biến (variable) không nên assume available global.
 
 ---
 
-# 7. Shadowing [ADV]
+# 7. che khuất biến (shadowing) [ADV]
 
 ```scss
 $color: blue;
@@ -320,28 +353,28 @@ Output:
 
 ## Senior note
 
-Shadowing quá nhiều khiến SCSS khó reason.
+che khuất biến (shadowing) quá nhiều khiến SCSS khó reason.
 
 Ưu tiên:
-- local variable tên rõ,
-- module namespaces.
+- local biến (variable) tên rõ,
+- module các không gian tên (namespaces).
 
 ---
 
 # 8. `!default` [CORE][ARCH]
 
-Library variable:
+Library biến (variable):
 
 ```scss
 $button-radius: 0.5rem !default;
 ```
 
 Ý nghĩa:
-> set value nếu variable chưa được configured/set theo module semantics.
+> set giá trị (value) nếu biến (variable) chưa được configured/set theo module ngữ nghĩa (semantics).
 
 Dùng cho **configurable library defaults**.
 
-Không dùng `!default` cho mọi variable.
+Không dùng `!default` cho mọi biến (variable).
 
 ---
 
@@ -355,22 +388,22 @@ $flag: false;
 }
 ```
 
-Có thể modify global variable.
+Có thể modify global biến (variable).
 
 ## ⚠ PITFALL
 
-`!global` tạo hidden mutable state.
+`!global` tạo hidden trạng thái có thể thay đổi (mutable state).
 
 Senior rule:
 - tránh trong application SCSS,
-- ưu tiên functions return value,
+- ưu tiên các hàm (functions) return giá trị (value),
 - module config rõ ràng.
 
 ---
 
 # 10. Sass Data Types [CORE]
 
-Sass values gồm:
+Sass các giá trị (values) gồm:
 
 ```text
 numbers
@@ -507,7 +540,7 @@ Unquoted:
 $display: block;
 ```
 
-Interpolation:
+nội suy (interpolation):
 
 ```scss
 .#{$name} {}
@@ -519,9 +552,9 @@ Không quote mọi identifier nếu CSS cần identifier.
 
 ---
 
-# 16. Interpolation `#{}` [CORE]
+# 16. nội suy (interpolation) `#{}` [CORE]
 
-Selector:
+bộ chọn (selector):
 
 ```scss
 $variant: danger;
@@ -531,7 +564,7 @@ $variant: danger;
 }
 ```
 
-Property:
+thuộc tính (property):
 
 ```scss
 $side: left;
@@ -550,9 +583,9 @@ background-image:
 
 ## ⚠ PITFALL
 
-Interpolation là powerful nhưng dễ biến Sass thành template spaghetti.
+nội suy (interpolation) là powerful nhưng dễ biến Sass thành template spaghetti.
 
-Đừng generate arbitrary selectors nếu semantic class rõ hơn.
+Đừng generate arbitrary các bộ chọn (selectors) nếu mang tính ngữ nghĩa (semantic) class rõ hơn.
 
 ---
 
@@ -579,7 +612,7 @@ Used:
 $value: null;
 ```
 
-Sass thường không emit declaration nếu value là `null`.
+Sass thường không emit khai báo (declaration) nếu giá trị (value) là `null`.
 
 ```scss
 $border: null;
@@ -589,9 +622,9 @@ $border: null;
 }
 ```
 
-Có thể compile mà declaration không xuất.
+Có thể compile mà khai báo (declaration) không xuất.
 
-## Pattern — Optional declaration
+## Pattern — Optional khai báo (declaration)
 
 ```scss
 @mixin box($radius: null) {
@@ -603,7 +636,7 @@ Có thể compile mà declaration không xuất.
 
 ---
 
-# 19. Lists [CORE]
+# 19. các danh sách (lists) [CORE]
 
 Space-separated:
 
@@ -623,15 +656,15 @@ Bracketed:
 $list: [a, b, c];
 ```
 
-Slash-separated values cũng tồn tại.
+Slash-separated các giá trị (values) cũng tồn tại.
 
 ## Important
 
-Sass list không giống JS Array hoàn toàn.
+Sass danh sách (list) không giống JS Array hoàn toàn.
 
 - separator là metadata,
 - bracketed/unbracketed matter,
-- individual value cũng có list-like behavior.
+- individual giá trị (value) cũng có list-like behavior.
 
 ---
 
@@ -654,11 +687,11 @@ list.join($a, $b)
 list.separator($items)
 ```
 
-Modern module API ưu tiên namespace.
+Modern module API ưu tiên không gian tên (namespace).
 
 ---
 
-# 21. List Indexing [CORE]
+# 21. danh sách (list) Indexing [CORE]
 
 Sass historically indexes từ **1**, không phải 0.
 
@@ -668,7 +701,7 @@ list.nth($items, 1)
 
 → first item.
 
-Negative index có thể refer từ cuối tùy function semantics.
+Negative index có thể refer từ cuối tùy hàm (function) ngữ nghĩa (semantics).
 
 ## ⚠ PITFALL
 
@@ -676,7 +709,7 @@ Dev từ JS/Java dễ nhầm 0-based.
 
 ---
 
-# 22. Maps [CORE]
+# 22. các map khóa–giá trị (maps) [CORE]
 
 ```scss
 $colors: (
@@ -686,7 +719,7 @@ $colors: (
 );
 ```
 
-Map = key/value collection.
+map khóa–giá trị (map) = key/giá trị (value) collection.
 
 Use:
 
@@ -720,7 +753,7 @@ Availability của deep APIs cần Dart Sass hiện đại.
 
 ---
 
-# 24. Nested Maps [CORE/ADV]
+# 24. Nested các map khóa–giá trị (maps) [CORE/ADV]
 
 ```scss
 $theme: (
@@ -741,11 +774,11 @@ Get:
 map.get($theme, colors, primary)
 ```
 
-Modern Dart Sass hỗ trợ nested keys ở module functions phù hợp.
+Modern Dart Sass hỗ trợ nested keys ở module các hàm (functions) phù hợp.
 
 ---
 
-# 25. Map as Configuration [ARCH]
+# 25. map khóa–giá trị (map) as cấu hình (configuration) [ARCH]
 
 ```scss
 $button-sizes: (
@@ -773,12 +806,12 @@ Generate styles:
 
 ## Senior rule
 
-Map tốt khi:
+map khóa–giá trị (map) tốt khi:
 - finite design data,
 - generation có quy luật.
 
-Map xấu khi:
-- recreate entire DOM/component tree as configuration.
+map khóa–giá trị (map) xấu khi:
+- recreate entire DOM/component tree as cấu hình (configuration).
 
 ---
 
@@ -833,7 +866,7 @@ $hover:
 
 ## ⚠ Legacy
 
-Các global/legacy functions như:
+Các global/legacy các hàm (functions) như:
 - `lighten()`,
 - `darken()`,
 - old channel getters,
@@ -842,9 +875,9 @@ không nên là default cho code mới.
 
 ---
 
-# 28. Sass vs CSS Color Functions [ADV]
+# 28. Sass vs CSS Color các hàm (functions) [ADV]
 
-Nếu muốn runtime color derived từ CSS variable:
+Nếu muốn thời gian chạy (runtime) color derived từ CSS biến (variable):
 
 ```css
 background:
@@ -855,7 +888,7 @@ background:
   );
 ```
 
-Sass không thể compile-time resolve runtime custom property.
+Sass không thể thời điểm biên dịch (compile-time) resolve thời gian chạy (runtime) custom thuộc tính (property).
 
 ## Pattern
 
@@ -866,7 +899,7 @@ Runtime theme color       → CSS color functions
 
 ---
 
-# 29. Nesting [CORE]
+# 29. lồng cú pháp (nesting) [CORE]
 
 ```scss
 .card {
@@ -892,17 +925,17 @@ Output:
 
 ## Senior rule
 
-Nesting không phải mục tiêu của Sass.
+lồng cú pháp (nesting) không phải mục tiêu của Sass.
 
-Nesting chỉ nên giúp:
-- states,
-- pseudo selectors,
+lồng cú pháp (nesting) chỉ nên giúp:
+- các trạng thái (states),
+- pseudo các bộ chọn (selectors),
 - local slots,
 - contextual rules.
 
 ---
 
-# 30. Parent Selector `&` [CORE]
+# 30. Parent bộ chọn (selector) `&` [CORE]
 
 ```scss
 .button {
@@ -918,7 +951,7 @@ Output:
 .button:focus-visible {}
 ```
 
-Variant:
+biến thể (variant):
 
 ```scss
 .button {
@@ -934,7 +967,7 @@ Output:
 
 ---
 
-# 31. Parent Selector Context [ADV]
+# 31. Parent bộ chọn (selector) Context [ADV]
 
 ```scss
 .button {
@@ -954,7 +987,7 @@ Output:
 
 Context inversion dễ tạo hidden coupling.
 
-Theme hiện đại thường tốt hơn qua CSS variables:
+Theme hiện đại thường tốt hơn qua CSS các biến (variables):
 
 ```css
 [data-theme="dark"] {
@@ -964,9 +997,9 @@ Theme hiện đại thường tốt hơn qua CSS variables:
 
 ---
 
-# 32. Property Nesting [ADV/LEGACY AWARENESS]
+# 32. thuộc tính (property) lồng cú pháp (nesting) [ADV/LEGACY AWARENESS]
 
-Sass có syntax nested properties lịch sử:
+Sass có syntax nested các thuộc tính (properties) lịch sử:
 
 ```scss
 font: {
@@ -983,14 +1016,14 @@ Có thể compile thành:
 
 Không ưu tiên syntax này cho code mới.
 
-Plain declarations dễ search/read hơn.
+Plain các khai báo (declarations) dễ search/read hơn.
 
 ---
 
-# 33. Mixed Declarations + Nested Rules [CORE]
+# 33. Mixed các khai báo (declarations) + Nested Rules [CORE]
 
-Modern Sass đã align behavior với CSS nesting:
-declarations giữ thứ tự xuất hiện ngay cả khi interleaved với nested rules.
+Modern Sass đã align behavior với CSS lồng cú pháp (nesting):
+các khai báo (declarations) giữ thứ tự xuất hiện ngay cả khi interleaved với nested rules.
 
 ```scss
 .example {
@@ -1004,19 +1037,19 @@ declarations giữ thứ tự xuất hiện ngay cả khi interleaved với nest
 }
 ```
 
-Đừng assume Sass tự hoist declarations như historical versions.
+Đừng assume Sass tự hoist các khai báo (declarations) như historical versions.
 
 ## Senior rule
 
-Viết declarations có order rõ:
-- base declarations trước,
-- nested selectors/state sau,
+Viết các khai báo (declarations) có order rõ:
+- base các khai báo (declarations) trước,
+- nested các bộ chọn (selectors)/trạng thái (state) sau,
 
 nếu không có lý do cần interleave.
 
 ---
 
-# 34. Placeholder Selectors `%` [ADV]
+# 34. Placeholder các bộ chọn (selectors) `%` [ADV]
 
 ```scss
 %control-base {
@@ -1033,7 +1066,7 @@ Extend:
 }
 ```
 
-Placeholder tự nó không emit selector nếu không được extend.
+Placeholder tự nó không emit bộ chọn (selector) nếu không được extend.
 
 ---
 
@@ -1049,7 +1082,7 @@ Placeholder tự nó không emit selector nếu không được extend.
 }
 ```
 
-Sass **merges selectors**, không copy declarations đơn giản.
+Sass **merges các bộ chọn (selectors)**, không copy các khai báo (declarations) đơn giản.
 
 Output có thể:
 
@@ -1062,13 +1095,13 @@ Output có thể:
 
 ---
 
-# 36. `@extend` Mental Model [ADV]
+# 36. `@extend` mô hình tư duy (mental model) [ADV]
 
 `@extend` nói:
 
-> selector A phải behave như một instance của selector B.
+> bộ chọn (selector) A phải behave như một instance của bộ chọn (selector) B.
 
-Nó là selector unification/rewriting.
+Nó là hợp nhất bộ chọn (selector unification)/rewriting.
 
 Không nghĩ:
 
@@ -1079,8 +1112,8 @@ Không nghĩ:
 # 37. `@extend` Pitfalls [ADV]
 
 Có thể:
-- tạo selector output lớn,
-- nối selectors xa nhau,
+- tạo bộ chọn (selector) output lớn,
+- nối các bộ chọn (selectors) xa nhau,
 - coupling khó thấy,
 - khó predict trong legacy global imports.
 
@@ -1088,11 +1121,11 @@ Có thể:
 
 Ưu tiên:
 1. shared class,
-2. mixin,
-3. utility,
+2. khối trộn tái sử dụng (mixin),
+3. tiện ích (utility),
 4. token,
 
-trước `@extend` nếu semantics không thật sự là selector inheritance.
+trước `@extend` nếu ngữ nghĩa (semantics) không thật sự là bộ chọn (selector) kế thừa (inheritance).
 
 ---
 
@@ -1111,11 +1144,11 @@ Nếu cần extend, placeholder thường an toàn hơn extend concrete class:
 }
 ```
 
-Không làm `.button` trở thành semantic extension của public class khác.
+Không làm `.button` trở thành mang tính ngữ nghĩa (semantic) extension của public class khác.
 
 ---
 
-# 39. Mixins [CORE]
+# 39. các khối trộn tái sử dụng (mixins) [CORE]
 
 ```scss
 @mixin visually-hidden {
@@ -1136,7 +1169,7 @@ Use:
 
 ---
 
-# 40. Mixin Arguments [CORE]
+# 40. khối trộn tái sử dụng (mixin) Arguments [CORE]
 
 ```scss
 @mixin square($size) {
@@ -1183,7 +1216,7 @@ Useful khi:
 
 ## Library compatibility
 
-Renaming public mixin argument có thể là breaking change vì callers dùng keyword arguments.
+Renaming public khối trộn tái sử dụng (mixin) argument có thể là breaking change vì callers dùng keyword arguments.
 
 ---
 
@@ -1206,7 +1239,7 @@ Call:
 
 ---
 
-# 44. Passing Lists/Maps as Arguments [ADV]
+# 44. Passing các danh sách (lists)/các map khóa–giá trị (maps) as Arguments [ADV]
 
 ```scss
 $args: 1rem, 2rem;
@@ -1214,7 +1247,7 @@ $args: 1rem, 2rem;
 @include some-mixin($args...);
 ```
 
-Map có thể expand keyword arguments:
+map khóa–giá trị (map) có thể expand keyword arguments:
 
 ```scss
 $options: (
@@ -1278,19 +1311,19 @@ Advanced library technique.
 
 ---
 
-# 47. Content Scope [ADV]
+# 47. Content phạm vi (scope) [ADV]
 
 `@content` block is lexically scoped:
-- sees variables at include site,
-- không automatically see mixin local variables như dynamic scope.
+- sees các biến (variables) at include site,
+- không automatically see khối trộn tái sử dụng (mixin) local các biến (variables) như dynamic phạm vi (scope).
 
 ## Design lesson
 
-Mixin content block giống compile-time higher-order style block.
+khối trộn tái sử dụng (mixin) content block giống thời điểm biên dịch (compile-time) higher-order style block.
 
 ---
 
-# 48. Functions [CORE]
+# 48. các hàm (functions) [CORE]
 
 ```scss
 @function rem($px, $base: 16px) {
@@ -1314,11 +1347,11 @@ Need:
 
 ---
 
-# 49. Function vs Mixin [CORE]
+# 49. hàm (function) vs khối trộn tái sử dụng (mixin) [CORE]
 
-## Function
+## hàm (function)
 
-Return **value**:
+Return **giá trị (value)**:
 
 ```scss
 @function space($step) {
@@ -1326,7 +1359,7 @@ Return **value**:
 }
 ```
 
-## Mixin
+## khối trộn tái sử dụng (mixin)
 
 Emit **styles/rules**:
 
@@ -1347,13 +1380,13 @@ Style generation     → mixin
 
 ---
 
-# 50. Function Design [ADV]
+# 50. hàm (function) Design [ADV]
 
-Good function:
+Good hàm (function):
 - deterministic,
-- return value,
+- return giá trị (value),
 - validation rõ,
-- tên nói semantic intent.
+- tên nói mang tính ngữ nghĩa (semantic) intent.
 
 Bad:
 
@@ -1361,7 +1394,7 @@ Bad:
 @function do-everything(...) { ... }
 ```
 
-Không build mini application language trong Sass nếu CSS/custom properties đủ.
+Không build mini application language trong Sass nếu CSS/custom các thuộc tính (properties) đủ.
 
 ---
 
@@ -1424,9 +1457,9 @@ Trong Sass:
 
 là falsey.
 
-Nhiều value khác truthy, kể cả:
+Nhiều giá trị (value) khác truthy, kể cả:
 - `0`,
-- empty strings/lists theo Sass semantics.
+- empty strings/các danh sách (lists) theo Sass ngữ nghĩa (semantics).
 
 Đừng assume JS truthiness.
 
@@ -1434,7 +1467,7 @@ Nhiều value khác truthy, kể cả:
 
 # 54. `@each` [CORE]
 
-List:
+danh sách (list):
 
 ```scss
 $sizes: sm, md, lg;
@@ -1446,7 +1479,7 @@ $sizes: sm, md, lg;
 }
 ```
 
-Map:
+map khóa–giá trị (map):
 
 ```scss
 @each $name, $value in $colors {
@@ -1518,10 +1551,10 @@ Nhưng compile được ≠ nên làm.
 
 Concern:
 - CSS size,
-- dead utilities,
+- dead các tiện ích (utilities),
 - API explosion.
 
-## Design Pattern
+## mẫu thiết kế (design pattern)
 
 Generate từ **bounded design scale**, không từ mọi possible number.
 
@@ -1552,7 +1585,7 @@ Good library API:
 ```
 
 Use:
-- migration notice,
+- chuyển đổi (migration) notice,
 - suspicious but compilable input.
 
 Không spam warning cho normal usage.
@@ -1566,20 +1599,20 @@ Không spam warning cho normal usage.
 ```
 
 Useful:
-- inspect maps/lists,
-- function development.
+- inspect các map khóa–giá trị (maps)/các danh sách (lists),
+- hàm (function) development.
 
 Không xem output format như stable production API.
 
 ---
 
-# 61. `@use` — Modern Module System [CORE]
+# 61. `@use` — Modern hệ mô-đun (module system) [CORE]
 
 ```scss
 @use "tokens";
 ```
 
-Members accessed by namespace:
+Members accessed by không gian tên (namespace):
 
 ```scss
 .button {
@@ -1587,13 +1620,13 @@ Members accessed by namespace:
 }
 ```
 
-Mixin:
+khối trộn tái sử dụng (mixin):
 
 ```scss
 @include tokens.some-mixin;
 ```
 
-Function:
+hàm (function):
 
 ```scss
 width: tokens.some-function(...);
@@ -1612,7 +1645,7 @@ width: tokens.some-function(...);
 
 ---
 
-# 63. Namespace Alias [CORE]
+# 63. không gian tên (namespace) Alias [CORE]
 
 ```scss
 @use "design/tokens" as t;
@@ -1634,7 +1667,7 @@ Good khi module name dài.
 @use "tokens" as *;
 ```
 
-Members vào local namespace.
+Members vào local không gian tên (namespace).
 
 ## ⚠ PITFALL
 
@@ -1648,11 +1681,11 @@ Không biết `$brand` từ đâu.
 
 Senior rule:
 - application small file có thể dùng có kiểm soát,
-- library/large codebase nên giữ namespace.
+- library/large codebase nên giữ không gian tên (namespace).
 
 ---
 
-# 65. Module Configuration `with` [CORE][ARCH]
+# 65. Module cấu hình (configuration) `with` [CORE][ARCH]
 
 Module:
 
@@ -1679,10 +1712,10 @@ Module is loaded once.
 
 ---
 
-# 66. Configuration Contract [ARCH]
+# 66. cấu hình (configuration) Contract [ARCH]
 
-Configurable variable:
-- public API,
+Configurable biến (variable):
+- giao diện công khai (public API),
 - nên có `!default`,
 - naming stable,
 - docs rõ.
@@ -1727,7 +1760,7 @@ Nếu file cần cả hai:
 @use "theme";
 ```
 
-Thường forward trước để configuration flow predictable.
+Thường forward trước để cấu hình (configuration) flow predictable.
 
 ---
 
@@ -1750,7 +1783,7 @@ library.list-reset
 ```
 
 Useful:
-- public API clarity,
+- giao diện công khai (public API) clarity,
 - avoid collisions.
 
 ---
@@ -1769,11 +1802,11 @@ Hoặc:
   hide _helper;
 ```
 
-Use public API curation.
+Use giao diện công khai (public API) curation.
 
 ---
 
-# 71. Forward Configuration [ADV][ARCH]
+# 71. Forward cấu hình (configuration) [ADV][ARCH]
 
 Facade có thể set opinionated defaults:
 
@@ -1822,7 +1855,7 @@ Consumer:
 
 # 73. Load Paths [ADV]
 
-Compiler có thể configure load paths.
+trình biên dịch (compiler) có thể configure load paths.
 
 Thay vì:
 
@@ -1836,7 +1869,7 @@ có thể:
 @use "shared/tokens";
 ```
 
-Configuration tùy:
+cấu hình (configuration) tùy:
 - CLI,
 - bundler,
 - JS API.
@@ -1884,7 +1917,7 @@ math.unit
 math.percentage
 ```
 
-Có thêm constants/functions nâng cao tùy Dart Sass version.
+Có thêm constants/các hàm (functions) nâng cao tùy Dart Sass version.
 
 Example:
 
@@ -1906,7 +1939,7 @@ CSS:
 width: min(100%, 70rem);
 ```
 
-runtime browser calculation.
+thời gian chạy (runtime) browser calculation.
 
 Sass:
 
@@ -1914,9 +1947,9 @@ Sass:
 math.min(10px, 20px)
 ```
 
-compile-time numeric function.
+thời điểm biên dịch (compile-time) numeric hàm (function).
 
-## Mental model
+## mô hình tư duy (mental model)
 
 ```text
 Known at compile time → sass:math
@@ -1942,8 +1975,8 @@ string.unique-id
 
 Use cases:
 - generated names,
-- parsing limited compile-time tokens,
-- library utilities.
+- parsing limited thời điểm biên dịch (compile-time) tokens,
+- library các tiện ích (utilities).
 
 Don't build complex text processing engine in Sass.
 
@@ -1951,7 +1984,7 @@ Don't build complex text processing engine in Sass.
 
 # 78. `sass:selector` [ADV]
 
-Powerful selector engine API:
+Powerful bộ chọn (selector) engine API:
 
 ```text
 selector.is-superselector
@@ -1976,14 +2009,14 @@ $result:
   );
 ```
 
-Useful for library-level selector metaprogramming.
+Useful for library-level bộ chọn (selector) metaprogramming.
 
 ---
 
-# 79. Selector Functions — Use Carefully [ADV]
+# 79. bộ chọn (selector) các hàm (functions) — Use Carefully [ADV]
 
-If you frequently need dynamic selector manipulation:
-- architecture may be too clever.
+If you frequently need dynamic bộ chọn (selector) manipulation:
+- kiến trúc (architecture) may be too clever.
 
 Good:
 - framework/library abstraction.
@@ -2033,7 +2066,7 @@ Useful validation.
 
 ---
 
-# 82. Dynamic Function References [ADV]
+# 82. Dynamic hàm (function) References [ADV]
 
 ```scss
 $fn: meta.get-function("some-function");
@@ -2042,7 +2075,7 @@ $result: meta.call($fn, ...);
 
 Useful:
 - generic token transforms,
-- plugin-like compile-time patterns.
+- plugin-like thời điểm biên dịch (compile-time) patterns.
 
 Use sparingly.
 
@@ -2050,17 +2083,17 @@ Use sparingly.
 
 # 83. `meta.load-css()` [ADV]
 
-Load module CSS dynamically in mixin/context.
+Load module CSS dynamically in khối trộn tái sử dụng (mixin)/context.
 
 Use case:
 - conditional CSS emission,
-- advanced library architecture.
+- advanced library kiến trúc (architecture).
 
 Not replacement for normal `@use`.
 
 ---
 
-# 84. Sass Architecture — 7-1 Awareness [ARCH]
+# 84. Sass kiến trúc (architecture) — 7-1 Awareness [ARCH]
 
 Classic 7-1 pattern:
 
@@ -2181,7 +2214,7 @@ Consumer:
 
 ---
 
-# 89. Sass Token Map Pattern [CORE/ARCH]
+# 89. Sass Token map khóa–giá trị (map) Pattern [CORE/ARCH]
 
 ```scss
 $spacing: (
@@ -2194,7 +2227,7 @@ $spacing: (
 );
 ```
 
-Function:
+hàm (function):
 
 ```scss
 @function space($step) {
@@ -2208,7 +2241,7 @@ Function:
 
 ---
 
-# 90. Generate CSS Variables from Sass Map [CORE/ARCH]
+# 90. Generate CSS các biến (variables) from Sass map khóa–giá trị (map) [CORE/ARCH]
 
 ```scss
 @use "sass:map";
@@ -2226,7 +2259,7 @@ $colors: (
 }
 ```
 
-Output runtime tokens.
+Output thời gian chạy (runtime) tokens.
 
 ## Pattern
 
@@ -2259,7 +2292,7 @@ Nhưng recursion belongs more in master supplement.
 
 ---
 
-# 92. Utility Generation Pattern [CORE/ADV]
+# 92. tiện ích (utility) Generation Pattern [CORE/ADV]
 
 ```scss
 $spaces: (
@@ -2277,12 +2310,12 @@ $spaces: (
 
 Senior concern:
 - CSS output size,
-- design-system scope,
+- design-system phạm vi (scope),
 - naming consistency.
 
 ---
 
-# 93. Breakpoint Mixin Pattern [CORE]
+# 93. điểm ngắt (breakpoint) khối trộn tái sử dụng (mixin) Pattern [CORE]
 
 Config:
 
@@ -2294,7 +2327,7 @@ $breakpoints: (
 );
 ```
 
-Mixin:
+khối trộn tái sử dụng (mixin):
 
 ```scss
 @mixin up($name) {
@@ -2322,9 +2355,9 @@ Use:
 
 ---
 
-# 94. Breakpoint Mixin — Senior Caveat [ADV]
+# 94. điểm ngắt (breakpoint) khối trộn tái sử dụng (mixin) — Senior Caveat [ADV]
 
-Không biến mọi media query thành opaque mixin.
+Không biến mọi truy vấn môi trường (media query) thành opaque khối trộn tái sử dụng (mixin).
 
 Native:
 
@@ -2334,18 +2367,18 @@ Native:
 
 đôi khi rõ hơn.
 
-Mixin đáng dùng khi:
-- enforce design breakpoint contract,
-- shared semantics,
+khối trộn tái sử dụng (mixin) đáng dùng khi:
+- enforce design điểm ngắt (breakpoint) contract,
+- shared ngữ nghĩa (semantics),
 - validation.
 
 ---
 
 # 95. Responsive Modern Pattern [ADV]
 
-Sass breakpoint map cho **page breakpoints**.
+Sass điểm ngắt (breakpoint) map khóa–giá trị (map) cho **page các điểm ngắt (breakpoints)**.
 
-Container Queries vẫn nên viết CSS:
+các truy vấn vùng chứa (container queries) vẫn nên viết CSS:
 
 ```scss
 .card-shell {
@@ -2357,11 +2390,11 @@ Container Queries vẫn nên viết CSS:
 }
 ```
 
-Không compile container dimensions thành viewport architecture.
+Không compile container dimensions thành vùng nhìn (viewport) kiến trúc (architecture).
 
 ---
 
-# 96. Mixin for Repeated Declaration Set [CORE]
+# 96. khối trộn tái sử dụng (mixin) for Repeated khai báo (declaration) Set [CORE]
 
 Good:
 
@@ -2382,7 +2415,7 @@ Bad:
 }
 ```
 
-không hẳn luôn bad, nhưng utility/layout class có thể reusable runtime tốt hơn nếu dùng nhiều.
+không hẳn luôn bad, nhưng tiện ích (utility)/layout class có thể reusable thời gian chạy (runtime) tốt hơn nếu dùng nhiều.
 
 ## Decision
 
@@ -2393,7 +2426,7 @@ Need compile-time inline style set? → mixin
 
 ---
 
-# 97. Media Query Content Mixin Idiom [CORE]
+# 97. truy vấn môi trường (media query) Content khối trộn tái sử dụng (mixin) Idiom [CORE]
 
 ```scss
 @mixin reduced-motion {
@@ -2417,7 +2450,7 @@ Readable nếu team dùng convention này.
 
 ---
 
-# 98. State Mixin Anti-pattern [ADV]
+# 98. trạng thái (state) khối trộn tái sử dụng (mixin) phản mẫu (anti-pattern) [ADV]
 
 Avoid:
 
@@ -2427,9 +2460,9 @@ Avoid:
 }
 ```
 
-Nếu mixin abstracts semantic state quá sâu, output khó inspect.
+Nếu khối trộn tái sử dụng (mixin) abstracts mang tính ngữ nghĩa (semantic) trạng thái (state) quá sâu, output khó inspect.
 
-CSS states nên remain visible trong component source khi có thể.
+CSS các trạng thái (states) nên remain visible trong component source khi có thể.
 
 ---
 
@@ -2449,10 +2482,10 @@ CSS states nên remain visible trong component source khi có thể.
 
 Could generate type scale.
 
-But static design tokens may be easier to review.
+But static token thiết kế (design tokens) may be easier to review.
 
 Senior asks:
-> generation adds value or hides design decisions?
+> generation adds giá trị (value) or hides design decisions?
 
 ---
 
@@ -2470,11 +2503,11 @@ Works.
 
 ## ⚠ Caveat
 
-Renaming `.card` changes generated selectors:
+Renaming `.card` changes generated các bộ chọn (selectors):
 - convenient,
 - but searchability less direct.
 
-For large teams, explicit selectors may sometimes be clearer:
+For large teams, explicit các bộ chọn (selectors) may sometimes be clearer:
 
 ```scss
 .card {}
@@ -2482,28 +2515,28 @@ For large teams, explicit selectors may sometimes be clearer:
 .card__body {}
 ```
 
-SCSS does not require BEM nesting.
+SCSS does not require BEM lồng cú pháp (nesting).
 
 ---
 
-# 101. CUBE / Utility Composition + SCSS [ARCH]
+# 101. CUBE / tiện ích (utility) Composition + SCSS [ARCH]
 
 SCSS can define:
 - design scales,
-- utility generator,
+- tiện ích (utility) generator,
 - component tools.
 
-But actual architecture may prefer:
+But actual kiến trúc (architecture) may prefer:
 - composition classes,
-- utilities,
+- các tiện ích (utilities),
 - blocks,
 - exceptions.
 
-Don't let Sass nesting push project toward deeply coupled BEM trees.
+Don't let Sass lồng cú pháp (nesting) push project toward deeply coupled BEM trees.
 
 ---
 
-# 102. SCSS Design Pattern — Compile-time API [ARCH]
+# 102. SCSS mẫu thiết kế (design pattern) — thời điểm biên dịch (compile-time) API [ARCH]
 
 Treat module members as API:
 
@@ -2527,7 +2560,7 @@ Consumers should not depend on private internals.
 
 ---
 
-# 103. SCSS Design Pattern — Facade Module [ARCH]
+# 103. SCSS mẫu thiết kế (design pattern) — Facade Module [ARCH]
 
 Internal modules:
 
@@ -2551,12 +2584,12 @@ Consumer:
 @use "tokens";
 ```
 
-Equivalent architecture concept:
+Equivalent kiến trúc (architecture) concept:
 - Facade Pattern.
 
 ---
 
-# 104. SCSS Design Pattern — Configuration Object [ARCH]
+# 104. SCSS mẫu thiết kế (design pattern) — cấu hình (configuration) Object [ARCH]
 
 Instead of 20 globals:
 
@@ -2571,15 +2604,15 @@ $theme: (
 );
 ```
 
-Functions access config.
+các hàm (functions) access config.
 
-But module configuration via explicit variables may be clearer for public API.
+But module cấu hình (configuration) via explicit các biến (variables) may be clearer for giao diện công khai (public API).
 
-Use map when configuration is naturally hierarchical.
+Use map khóa–giá trị (map) when cấu hình (configuration) is naturally hierarchical.
 
 ---
 
-# 105. SCSS Design Pattern — Generator [ARCH]
+# 105. SCSS mẫu thiết kế (design pattern) — Generator [ARCH]
 
 Data:
 
@@ -2601,7 +2634,7 @@ CSS utility classes
 ```
 
 Useful for:
-- internal utility framework,
+- internal tiện ích (utility) framework,
 - token-derived APIs.
 
 Risk:
@@ -2609,7 +2642,7 @@ Risk:
 
 ---
 
-# 106. SCSS Design Pattern — Adapter [ARCH]
+# 106. SCSS mẫu thiết kế (design pattern) — Adapter [ARCH]
 
 Third-party library expects config:
 
@@ -2633,7 +2666,7 @@ Keep vendor mapping isolated.
 
 ---
 
-# 107. SCSS Design Pattern — Anti-Corruption Layer [ARCH]
+# 107. SCSS mẫu thiết kế (design pattern) — Anti-Corruption Layer [ARCH]
 
 Do not let Bootstrap/vendor names spread across app token system.
 
@@ -2649,7 +2682,7 @@ This keeps replacement possible later.
 
 # 108. `@at-root` [ADV]
 
-Moves nested rule out of current nesting context.
+Moves nested rule out of current lồng cú pháp (nesting) context.
 
 ```scss
 .component {
@@ -2659,20 +2692,20 @@ Moves nested rule out of current nesting context.
 }
 ```
 
-Advanced query forms can control which at-rules/selectors stay.
+Advanced query forms can control which at-rules/các bộ chọn (selectors) stay.
 
 ## Use cases
 
-- library selector generation,
-- escape contextual nesting.
+- library bộ chọn (selector) generation,
+- escape contextual lồng cú pháp (nesting).
 
 ## ⚠
 
-Frequent `@at-root` means nesting architecture may be wrong.
+Frequent `@at-root` means lồng cú pháp (nesting) kiến trúc (architecture) may be wrong.
 
 ---
 
-# 109. At-rule Nesting [CORE]
+# 109. At-rule lồng cú pháp (nesting) [CORE]
 
 ```scss
 .card {
@@ -2684,7 +2717,7 @@ Frequent `@at-root` means nesting architecture may be wrong.
 
 Sass handles nested at-rules.
 
-Modern CSS nesting now supports much of this natively, so Sass value here is less unique than before.
+Modern CSS lồng cú pháp (nesting) now supports much of this natively, so Sass giá trị (value) here is less unique than before.
 
 ---
 
@@ -2708,7 +2741,7 @@ Don't invent Sass workaround for native CSS feature if Sass already passes it th
 
 ---
 
-# 111. CSS Custom Properties in SCSS [CORE]
+# 111. CSS Custom các thuộc tính (properties) in SCSS [CORE]
 
 ```scss
 :root {
@@ -2716,7 +2749,7 @@ Don't invent Sass workaround for native CSS feature if Sass already passes it th
 }
 ```
 
-Interpolation may be needed when embedding Sass values in custom property text, depending expression/value context.
+nội suy (interpolation) may be needed when embedding Sass các giá trị (values) in custom thuộc tính (property) text, depending expression/giá trị (value) context.
 
 Example:
 
@@ -2730,13 +2763,13 @@ $brand: #2563eb;
 
 ---
 
-# 112. Custom Property Gotcha [ADV]
+# 112. Custom thuộc tính (property) Gotcha [ADV]
 
-CSS custom property values are parsed with CSS custom-property semantics.
+CSS custom thuộc tính (property) các giá trị (values) are parsed with CSS custom-property ngữ nghĩa (semantics).
 
-When mixing Sass variables/functions:
-- interpolation may be necessary,
-- preserve runtime syntax like `var()`, `calc()`, `color-mix()`.
+When mixing Sass các biến (variables)/các hàm (functions):
+- nội suy (interpolation) may be necessary,
+- preserve thời gian chạy (runtime) syntax like `var()`, `calc()`, `color-mix()`.
 
 Don't accidentally make Sass evaluate something intended for browser.
 
@@ -2756,7 +2789,7 @@ font-size: clamp(1rem, 2vw, 2rem);
 Sass may simplify only when mathematically safe/known.
 
 Senior rule:
-> Keep layout-dependent math in CSS runtime.
+> Keep layout-dependent math in CSS thời gian chạy (runtime).
 
 ---
 
@@ -2779,11 +2812,11 @@ color.scale(..., $space: ...)
 color.to-space(...)
 ```
 
-when color-space semantics matter.
+when color-space ngữ nghĩa (semantics) matter.
 
 ---
 
-# 115. Deprecation: Sass `@import` [MUST]
+# 115. trạng thái ngừng khuyến nghị (deprecation): Sass `@import` [MUST]
 
 Legacy:
 
@@ -2793,7 +2826,7 @@ Legacy:
 ```
 
 Problems:
-- global namespace,
+- global không gian tên (namespace),
 - repeated execution,
 - unclear provenance,
 - extend coupling.
@@ -2813,7 +2846,7 @@ For library facade:
 
 ---
 
-# 116. Global Built-in Function Deprecation [MUST]
+# 116. Global Built-in hàm (function) trạng thái ngừng khuyến nghị (deprecation) [MUST]
 
 Legacy:
 
@@ -2834,7 +2867,7 @@ color.scale(...);
 
 Benefits:
 - provenance,
-- less CSS function collision,
+- less CSS hàm (function) collision,
 - future compatibility.
 
 ---
@@ -2857,7 +2890,7 @@ $half: math.div($size, 2);
 
 ---
 
-# 118. Legacy Color Functions [MUST]
+# 118. Legacy Color các hàm (functions) [MUST]
 
 Avoid building new APIs around:
 
@@ -2879,7 +2912,7 @@ Use `sass:color` modern APIs with explicit color-space thinking.
 # 119. Sass Migrator [CORE/ADV]
 
 Official Sass Migrator helps migrate:
-- `@import` → module system,
+- `@import` → hệ mô-đun (module system),
 - division,
 - other deprecations/features supported by migrator.
 
@@ -2893,13 +2926,13 @@ Exact installation/flags should be checked against current docs.
 
 ## Rule
 
-Migration tool:
+chuyển đổi (migration) tool:
 - accelerates mechanical changes,
-- does not replace architecture review.
+- does not replace kiến trúc (architecture) review.
 
 ---
 
-# 120. Deprecation Warnings [CORE]
+# 120. trạng thái ngừng khuyến nghị (deprecation) Warnings [CORE]
 
 Treat warnings as future build failures.
 
@@ -2927,20 +2960,20 @@ But update dependencies rather than hiding warnings forever.
 
 ---
 
-# 122. Source Maps [CORE]
+# 122. các bản đồ mã nguồn (source maps) [CORE]
 
-SCSS debugging needs mapping:
+SCSS gỡ lỗi (debugging) needs mapping:
 
 ```text
 compiled CSS line
 ↔ SCSS source line
 ```
 
-Bundlers usually generate source maps in dev.
+Bundlers usually generate các bản đồ mã nguồn (source maps) in dev.
 
 Without them:
 - DevTools points to generated CSS,
-- architecture debugging harder.
+- kiến trúc (architecture) gỡ lỗi (debugging) harder.
 
 ---
 
@@ -2966,7 +2999,7 @@ Your bundler may minify after Sass.
 
 # 124. Sass Does Not Autoprefix [MUST]
 
-Sass compiler:
+Sass trình biên dịch (compiler):
 - compiles Sass to CSS.
 
 It does **not inherently replace**:
@@ -2995,9 +3028,9 @@ Complementary:
 
 Sass:
 - modules,
-- maps,
-- functions,
-- compile-time generation.
+- các map khóa–giá trị (maps),
+- các hàm (functions),
+- thời điểm biên dịch (compile-time) generation.
 
 PostCSS ecosystem:
 - vendor prefixes,
@@ -3028,7 +3061,7 @@ SCSS
 Still can use:
 - `@use`,
 - tokens,
-- functions.
+- các hàm (functions).
 
 Senior note:
 CSS Modules already gives scoping; don't overbuild BEM naming solely for collision avoidance.
@@ -3058,7 +3091,7 @@ Component Sass:
 
 ---
 
-# 128. Sass Variables vs Design Tokens [MUST]
+# 128. Sass các biến (variables) vs token thiết kế (design tokens) [MUST]
 
 Bad:
 
@@ -3074,7 +3107,7 @@ Better:
 $color-action-primary: #2563eb;
 ```
 
-Best for runtime themes:
+Best for thời gian chạy (runtime) themes:
 generate:
 
 ```css
@@ -3115,20 +3148,20 @@ $themes: (
 }
 ```
 
-Good when themes static compile-time set.
+Good when themes static thời điểm biên dịch (compile-time) set.
 
 ---
 
 # 130. Theme Generation Caveat [ADV]
 
-If theme data comes runtime/server/user:
+If theme data comes thời gian chạy (runtime)/server/user:
 Sass cannot help after compile.
 
-Use CSS variables/runtime JS/server CSS.
+Use CSS các biến (variables)/thời gian chạy (runtime) JS/server CSS.
 
 ---
 
-# 131. Validation Function Pattern [ADV]
+# 131. Validation hàm (function) Pattern [ADV]
 
 ```scss
 @function token($map, $key) {
@@ -3144,7 +3177,7 @@ Fail fast prevents silent inconsistent design.
 
 ---
 
-# 132. Recursive Map Access Pattern [ADV]
+# 132. Recursive map khóa–giá trị (map) Access Pattern [ADV]
 
 Could write helper:
 
@@ -3162,11 +3195,11 @@ Could write helper:
 
 But modern `sass:map` nested APIs may already solve this.
 
-Don't reinvent standard functions.
+Don't reinvent standard các hàm (functions).
 
 ---
 
-# 133. Recursive CSS Variable Generator [ADV]
+# 133. Recursive CSS biến (variable) Generator [ADV]
 
 Concept:
 
@@ -3203,9 +3236,9 @@ Master supplement sẽ nói deeper về recursion/meta/deprecations.
 
 ---
 
-# 134. Selector Explosion [ADV]
+# 134. bộ chọn (selector) Explosion [ADV]
 
-Nesting + `@extend` + loops có thể multiply selectors.
+lồng cú pháp (nesting) + `@extend` + loops có thể multiply các bộ chọn (selectors).
 
 Example risk:
 
@@ -3233,9 +3266,9 @@ SCSS abstraction cost phải đo ở **CSS output**.
 
 ---
 
-# 136. Mixin Duplication Cost [ADV]
+# 136. khối trộn tái sử dụng (mixin) Duplication Cost [ADV]
 
-Mixin:
+khối trộn tái sử dụng (mixin):
 
 ```scss
 @mixin card-base {
@@ -3245,7 +3278,7 @@ Mixin:
 ```
 
 Included 100 times:
-→ declarations emitted 100 times.
+→ các khai báo (declarations) emitted 100 times.
 
 Shared class:
 ```css
@@ -3255,25 +3288,25 @@ Shared class:
 
 Tradeoff:
 - CSS size,
-- semantics,
-- runtime class composition,
-- encapsulation.
+- ngữ nghĩa (semantics),
+- thời gian chạy (runtime) class composition,
+- đóng gói (encapsulation).
 
 ---
 
-# 137. Extend vs Mixin vs Utility [MUST]
+# 137. Extend vs khối trộn tái sử dụng (mixin) vs tiện ích (utility) [MUST]
 
 ## `@extend`
 
-Selector relationship.
+bộ chọn (selector) relationship.
 
 ## `@mixin`
 
-Declaration/rule duplication at compile time.
+khai báo (declaration)/rule duplication at compile time.
 
-## Utility class
+## tiện ích (utility) class
 
-Shared runtime class.
+Shared thời gian chạy (runtime) class.
 
 Decision:
 
@@ -3306,7 +3339,7 @@ Runtime concerns wrongly solved compile-time?
 
 ---
 
-# 139. Nesting Depth Budget [SENIOR]
+# 139. lồng cú pháp (nesting) Depth Budget [SENIOR]
 
 Suggested:
 
@@ -3318,21 +3351,21 @@ Suggested:
 
 Not hard rule.
 
-States/at-rules don't count the same as DOM descendant nesting conceptually.
+các trạng thái (states)/at-rules don't count the same as DOM descendant lồng cú pháp (nesting) conceptually.
 
 ---
 
-# 140. Public API Stability [ARCH]
+# 140. giao diện công khai (public API) Stability [ARCH]
 
 If building Sass library:
 
 Changing:
-- public variable,
-- mixin name,
-- function name,
+- public biến (variable),
+- khối trộn tái sử dụng (mixin) name,
+- hàm (function) name,
 - keyword argument name,
 - forwarded prefix,
-- default configuration,
+- default cấu hình (configuration),
 
 can be breaking change.
 
@@ -3340,7 +3373,7 @@ Treat Sass module like code library.
 
 ---
 
-# 141. Semantic Versioning [ARCH]
+# 141. mang tính ngữ nghĩa (semantic) Versioning [ARCH]
 
 Library releases:
 
@@ -3359,7 +3392,7 @@ CSS visual changes may also be breaking even if Sass API same.
 
 ---
 
-# 142. Naming Public Mixins [ARCH]
+# 142. Naming Public các khối trộn tái sử dụng (mixins) [ARCH]
 
 Bad:
 ```scss
@@ -3371,7 +3404,7 @@ Better:
 @mixin elevated-surface {}
 ```
 
-Expose semantics, not current implementation details.
+Expose ngữ nghĩa (semantics), not current implementation details.
 
 ---
 
@@ -3392,16 +3425,16 @@ Bad:
 Combinations explode.
 
 Better:
-- separate variant/state tokens,
-- maps,
-- CSS selectors/data attributes,
-- smaller mixins.
+- separate biến thể (variant)/trạng thái (state) tokens,
+- các map khóa–giá trị (maps),
+- CSS các bộ chọn (selectors)/data attributes,
+- smaller các khối trộn tái sử dụng (mixins).
 
 ---
 
-# 144. Sass Isn't a Component State Machine [MUST]
+# 144. Sass Isn't a Component máy trạng thái (state machine) [MUST]
 
-Runtime states:
+thời gian chạy (runtime) các trạng thái (states):
 ```text
 open
 loading
@@ -3412,27 +3445,27 @@ error
 
 belong in HTML/JS attributes/classes.
 
-Sass can generate style APIs but cannot know runtime state.
+Sass can generate style APIs but cannot know thời gian chạy (runtime) trạng thái (state).
 
 ---
 
 # 145. Prefer Native CSS Features [SENIOR]
 
 Historically Sass solved:
-- variables,
-- nesting,
+- các biến (variables),
+- lồng cú pháp (nesting),
 - color transforms,
 - calculations.
 
 Modern CSS now has:
-- custom properties,
-- native nesting,
+- custom các thuộc tính (properties),
+- native lồng cú pháp (nesting),
 - `color-mix`,
 - `calc`,
 - `min/max/clamp`,
-- container queries.
+- các truy vấn vùng chứa (container queries).
 
-Use Sass only where compile-time abstraction adds value.
+Use Sass only where thời điểm biên dịch (compile-time) abstraction adds giá trị (value).
 
 ---
 
@@ -3474,17 +3507,17 @@ Do not choose Sass only from habit.
 # 148. Beginner Practice
 
 Build:
-1. variables,
-2. nested selectors,
-3. mixins,
-4. simple function,
-5. map,
+1. các biến (variables),
+2. nested các bộ chọn (selectors),
+3. các khối trộn tái sử dụng (mixins),
+4. simple hàm (function),
+5. map khóa–giá trị (map),
 6. `@each`,
 7. `@use`.
 
 Project:
-- button variants from map,
-- spacing utilities,
+- button các biến thể (variants) from map khóa–giá trị (map),
+- spacing các tiện ích (utilities),
 - compile to CSS.
 
 ---
@@ -3493,24 +3526,24 @@ Project:
 
 Build:
 1. token module,
-2. breakpoint mixin,
+2. điểm ngắt (breakpoint) khối trộn tái sử dụng (mixin),
 3. component facade,
-4. theme variable generator,
+4. biến chủ đề (theme variable) generator,
 5. CSS Modules + SCSS,
-6. migration from `@import`.
+6. chuyển đổi (migration) from `@import`.
 
 ---
 
 # 150. Senior Practice
 
 Build:
-1. Sass library public API,
+1. Sass library giao diện công khai (public API),
 2. configurable module,
 3. `@forward show/hide/prefix`,
 4. vendor adapter,
 5. token validation,
-6. utility generator with output budget,
-7. source maps/build pipeline,
+6. tiện ích (utility) generator with output budget,
+7. các bản đồ mã nguồn (source maps)/quy trình build (build pipeline),
 8. deprecation-clean CI.
 
 ---
@@ -3519,29 +3552,29 @@ Build:
 
 ## Days 1–3
 - syntax,
-- variables,
+- các biến (variables),
 - data types,
-- nesting.
+- lồng cú pháp (nesting).
 
 ## Days 4–6
-- lists,
-- maps,
+- các danh sách (lists),
+- các map khóa–giá trị (maps),
 - built-in modules.
 
 ## Days 7–9
-- mixins,
+- các khối trộn tái sử dụng (mixins),
 - arguments,
 - `@content`.
 
 ## Days 10–12
-- functions,
-- control flow,
+- các hàm (functions),
+- luồng điều khiển (control flow),
 - validation.
 
 ## Days 13–15
 - `@use`,
-- namespace,
-- configuration.
+- không gian tên (namespace),
+- cấu hình (configuration).
 
 ## Days 16–18
 - `@forward`,
@@ -3553,19 +3586,19 @@ Build:
 - generators.
 
 ## Days 22–23
-- CSS variables integration,
-- runtime/compile-time boundary.
+- CSS các biến (variables) integration,
+- thời gian chạy (runtime)/thời điểm biên dịch (compile-time) boundary.
 
 ## Days 24–25
-- architecture,
+- kiến trúc (architecture),
 - component ownership.
 
 ## Days 26–27
-- legacy migration,
+- legacy chuyển đổi (migration),
 - deprecations.
 
 ## Day 28
-- output/performance inspection.
+- output/hiệu năng (performance) inspection.
 
 ## Day 29
 - library API review.
@@ -3579,36 +3612,36 @@ Build:
 
 Bạn phải trả lời được:
 
-1. Sass variable khác CSS custom property thế nào?
+1. Sass biến (variable) khác CSS custom thuộc tính (property) thế nào?
 2. SCSS compile ở thời điểm nào?
-3. Vì sao `@import` deprecated?
+3. Vì sao `@import` đã ngừng khuyến nghị (deprecated)?
 4. `@use` load module mấy lần?
 5. `@forward` khác `@use`?
 6. `!default` dùng cho gì?
-7. Namespace giúp gì?
+7. không gian tên (namespace) giúp gì?
 8. Vì sao `as *` nên hạn chế?
 9. Public/private Sass member là gì?
-10. Mixin khác function?
+10. khối trộn tái sử dụng (mixin) khác hàm (function)?
 11. `@content` dùng khi nào?
 12. Keyword args ảnh hưởng API compatibility thế nào?
 13. `@extend` thực sự làm gì?
-14. Placeholder selector có lợi gì?
+14. Placeholder bộ chọn (selector) có lợi gì?
 15. `math.div()` vì sao thay `/`?
 16. `sass:map` khác old `map-get`?
 17. Modern color API vì sao cần explicit space?
-18. Map phù hợp cho loại data nào?
-19. Khi nào loop generation là anti-pattern?
+18. map khóa–giá trị (map) phù hợp cho loại data nào?
+19. Khi nào loop generation là phản mẫu (anti-pattern)?
 20. Source SCSS nhỏ có đảm bảo CSS nhỏ?
-21. Mixin có duplication cost gì?
-22. Utility class khác mixin ra sao?
-23. Sass config và runtime theme khác nhau?
+21. khối trộn tái sử dụng (mixin) có duplication cost gì?
+22. tiện ích (utility) class khác khối trộn tái sử dụng (mixin) ra sao?
+23. Sass config và thời gian chạy (runtime) theme khác nhau?
 24. `@forward show/hide` giải quyết gì?
 25. Forward prefix dùng khi nào?
 26. Sass không thay Autoprefixer vì sao?
 27. CSS Modules và SCSS có conflict không?
-28. Native CSS nesting có làm Sass vô dụng không?
+28. Native CSS lồng cú pháp (nesting) có làm Sass vô dụng không?
 29. Khi nào nên chọn plain CSS thay Sass?
-30. Sass library public API nên version thế nào?
+30. Sass library giao diện công khai (public API) nên version thế nào?
 
 ---
 
@@ -3681,7 +3714,7 @@ $spaces: (
 
 ---
 
-# 154. Recommended Production Architecture
+# 154. Recommended Production kiến trúc (architecture)
 
 ```text
 SCSS
@@ -3738,9 +3771,50 @@ Official Sass:
 
 ---
 
+---
+
+# 156. SCSS kiến trúc (architecture) — thiết kế đồ thị mô-đun (module graph) trước khi thiết kế folder [SENIOR/ARCH]
+
+Một codebase SCSS lớn không nên bắt đầu từ câu hỏi “dùng 7-1 hay chia folder thế nào?”, mà từ câu hỏi **module nào sở hữu API nào và module nào được phép emit CSS**. Folder chỉ là representation của dependency graph. Nếu mọi file có thể truy cập global các biến (variables)/các khối trộn tái sử dụng (mixins) và emit rules khi import, structure nhìn đẹp nhưng kiến trúc (architecture) vẫn global.
+
+Modern Sass với `@use` và `@forward` cho phép bạn thiết kế graph rõ hơn. Một tool module chứa các biến (variables)/các hàm (functions)/các khối trộn tái sử dụng (mixins) nên lý tưởng không emit CSS. Một style module cố ý emit base/component rules. Một facade module dùng `@forward` để expose bề mặt công khai (public surface) ổn định. Entry point `@use`s các facade/style modules theo dependency order mà application cần.
+
+```text
+_tokens.scss      → values / configuration
+_math.scss        → functions, no CSS output
+_button-tools.scss→ mixins, no CSS output
+_button.scss      → emits component CSS
+_index.scss       → @forward public API
+app.scss          → entry point, @use style/facade modules
+```
+
+Điểm quan trọng là “file thành phần (partial)” không tự làm code modular. `_tokens.scss` vẫn có thể là global soup nếu được kéo bằng legacy `@import`. Module boundary đến từ không gian tên (namespace), private members, single evaluation và giao diện công khai (public API) discipline của `@use`/`@forward`.
+
+## giao diện công khai (public API) và cấu hình (configuration) boundary
+
+Library Sass nên expose ít thứ hơn internal implementation. Nếu consumer cần configure brand color, spacing scale hoặc feature flag thời điểm biên dịch (compile-time), expose `$variable: default !default` có chủ đích và configure qua `@use ... with (...)`. Đừng expose mọi internal map khóa–giá trị (map) chỉ vì “sau này có thể cần”; khi consumer phụ thuộc vào shape của nested map khóa–giá trị (map), refactor nội bộ biến thành breaking change.
+
+`@forward ... show/hide` hoặc prefixing giúp facade chỉ xuất phần ổn định. Private members nên thực sự private. Public khối trộn tái sử dụng (mixin)/hàm (function) name, parameter ngữ nghĩa (semantics) và generated CSS contract đều là API cần versioning.
+
+## Side-effect CSS phải có ownership
+
+Một common bug là `@use` một helper module chỉ để gọi hàm (function) nhưng module đó cũng emit reset/components. Vì module load một lần, duplication được giảm so với `@import`, nhưng tác dụng phụ (side effect) vẫn tồn tại. Tách tool modules khỏi style modules làm dependency graph predictable hơn và giúp library consumer dùng logic mà không kéo CSS ngoài ý muốn.
+
+## `@extend` không phải kế thừa (inheritance) kiến trúc (architecture)
+
+`@extend` hợp nhất các bộ chọn (selectors) trong trình biên dịch (compiler). Nó không copy các khai báo (declarations) như khối trộn tái sử dụng (mixin) và không tạo type hierarchy như Java. Vì hợp nhất bộ chọn (selector unification) có thể tạo output ở nơi xa call site và coupling giữa modules, hãy giới hạn `@extend` cho placeholder contracts rất controlled. Nếu bạn cần parameterization, khối trộn tái sử dụng (mixin) thường rõ hơn; nếu chỉ cần shared visual primitives, composition/tiện ích (utility) class hoặc native CSS layer/token thường dễ dự đoán hơn.
+
+## Sass vs native CSS responsibility
+
+Sass mạnh ở thời điểm biên dịch (compile-time) generation: transform data structures, validate config, tạo repetitive API và package reusable authoring tools. Native CSS mạnh ở thời gian chạy (runtime): custom các thuộc tính (properties), các lớp phân tầng (cascade layers), lồng cú pháp (nesting), các truy vấn vùng chứa (container queries), `:has()`, thuộc tính logic (logical properties) và theming theo environment/trạng thái (state). Một kiến trúc (architecture) hiện đại nên để thời gian chạy (runtime) concerns ở CSS nếu browser đã giải được trực tiếp, thay vì generate hàng trăm các biến thể (variants) thời điểm biên dịch (compile-time) bằng loops.
+
+SCSS tốt không làm CSS biến mất khỏi mô hình tư duy (mental model). Nó làm source dễ maintain hơn trong khi generated CSS vẫn nhỏ, độ đặc hiệu (specificity) thấp và dễ inspect.
+
+---
+
 # Kết luận
 
-SCSS senior không phải người viết nesting/mixin nhiều nhất.
+SCSS senior không phải người viết lồng cú pháp (nesting)/khối trộn tái sử dụng (mixin) nhiều nhất.
 
 SCSS senior biết:
 
@@ -3764,10 +3838,10 @@ mà không làm compiled CSS:
 - khó đọc,
 - quá lớn,
 - coupling,
-- deprecated,
+- đã ngừng khuyến nghị (deprecated),
 - khó migrate.
 
-Mental model cuối:
+mô hình tư duy (mental model) cuối:
 
 ```text
 CSS knowledge first

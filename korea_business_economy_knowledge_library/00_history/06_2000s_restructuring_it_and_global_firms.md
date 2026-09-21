@@ -1,91 +1,145 @@
-# Thập niên 2000: tái cấu trúc, IT, China shock và bước ra toàn cầu (Restructuring & Global Expansion / 구조조정·IT·글로벌화)
+# Thập niên 2000: tái cơ cấu, CNTT, Trung Quốc và bước ra toàn cầu (Restructuring & Global Expansion / 구조조정·IT·글로벌화)
 
-Sau khủng hoảng 1997, Hàn Quốc bước vào thập niên 2000 với corporate sector ít leverage hơn trước, governance minh bạch hơn và áp lực cạnh tranh toàn cầu mạnh hơn. Đây là giai đoạn nhiều công ty Hàn Quốc chuyển từ “nhà sản xuất giá cạnh tranh” sang **global brand, technology leader hoặc platform company**.
+Sau khủng hoảng 1997, Hàn Quốc bước vào thập niên 2000 với khu vực doanh nghiệp khác trước: đòn bẩy nhìn chung được kiểm soát hơn, công bố thông tin và quản trị tốt hơn, thị trường vốn có vai trò lớn hơn và nguy cơ doanh nghiệp thất bại trở nên đáng tin hơn. Nhưng thay đổi quan trọng nhất không chỉ là “Hàn Quốc phục hồi”. **Mô hình tăng trưởng bắt đầu chuyển từ mở rộng bằng vốn và sản xuất chi phí thấp sang thương hiệu toàn cầu, công nghệ, mạng số và sản xuất đa quốc gia.**
 
-## Tái cấu trúc không kết thúc khi GDP phục hồi
+Thập niên này là cây cầu giữa Hàn Quốc của công nghiệp hóa chaebol và Hàn Quốc của bán dẫn, nền tảng số, K-content và chuỗi cung ứng toàn cầu ngày nay.
 
-Nền kinh tế có thể quay lại tăng trưởng trước khi balance sheet của từng firm hoàn toàn khỏe. Vì vậy corporate restructuring kéo dài sang đầu 2000s. Doanh nghiệp bán non-core assets, giảm guarantees giữa affiliates, cải thiện cash-flow management và chú ý credit rating nhiều hơn.
+## Tái cơ cấu tiếp tục ngay cả khi GDP đã phục hồi
 
-Một thay đổi mental model quan trọng là **cash flow trở thành constraint thật**. Trong era trước, access to bank credit đôi khi dựa mạnh vào group reputation. Sau crisis, lender và investor nhìn kỹ debt coverage, profitability và governance hơn.
+Kinh tế vĩ mô có thể hồi phục nhanh hơn bảng cân đối của từng doanh nghiệp. Vì vậy tái cơ cấu không dừng lại khi GDP quay lại tăng.
 
-## Internet, broadband và nền kinh tế số
+Doanh nghiệp tiếp tục bán tài sản không cốt lõi, giảm bảo lãnh chéo, chú ý hơn đến dòng tiền, cải thiện công bố thông tin và xây lại cấu trúc vốn. Một thay đổi tư duy quan trọng là **dòng tiền và xếp hạng tín dụng trở thành giới hạn thực**.
 
-Korea triển khai broadband rất nhanh và có consumer adoption cao. Hạ tầng này tạo môi trường cho portal, online games, e-commerce và digital content. Naver, NHN-era internet businesses và nhiều game companies lớn lên trong một domestic market vừa connected vừa digitally intensive.
+Trước khủng hoảng, uy tín của tập đoàn có thể giúp tiếp cận tín dụng ngân hàng dễ hơn. Sau khủng hoảng, người cho vay và nhà đầu tư đòi hỏi khả năng trả nợ, lợi nhuận và quản trị rõ hơn. Đây là bước chuyển từ “tăng trưởng trước” sang **tăng trưởng có điều chỉnh theo rủi ro (risk-adjusted growth)**.
 
-Digital business có production function khác manufacturing. Factory cần machine capacity; platform cần users, data, software và network effects. Điều này mở ra một loại “scale” mới không cần capex vật chất theo cùng tỷ lệ với revenue.
+## Quản trị và thị trường vốn thay đổi hành vi doanh nghiệp
 
-Nhưng dot-com boom cũng cho thấy growth narrative có thể chạy trước unit economics. Đây là bài học sẽ lặp lại với startup/venture nhiều lần sau đó.
+Khi cổ đông bên ngoài, nhà đầu tư trái phiếu và tổ chức xếp hạng tín dụng có tiếng nói lớn hơn, ban quản lý phải giải thích rõ hơn cách phân bổ vốn.
 
-## Samsung: từ follower sang technology leadership
+M&A, thoái vốn, phát hành cổ phiếu và vay nợ trở thành quyết định phải đối diện với thị trường chứ không chỉ là lựa chọn nội bộ tập đoàn.
 
-Trong electronics, Samsung đẩy mạnh semiconductor, display và mobile. Memory semiconductor đặc biệt phù hợp với organizational strength về capex, manufacturing yield và scale. Nhưng cạnh tranh ở technology frontier đòi hỏi R&D intensity cao hơn nhiều so với assembly.
+Điều này không xóa quyền kiểm soát gia đình hoặc bản sắc tập đoàn, nhưng làm thị trường vốn bên ngoài trở thành một tầng kỷ luật mới. Xem [quản trị doanh nghiệp](../08_corporate_governance_ownership_and_control.md).
 
-Điểm đáng chú ý là technology leadership không đến từ một invention đơn lẻ mà từ **cumulative investment**: fab, process engineering, supplier ecosystem, talent và learning curve tích lũy qua nhiều cycle.
+## Internet băng rộng tạo một hàm sản xuất mới
 
-## Hyundai–Kia: quality, design và overseas production
+Hàn Quốc triển khai Internet băng rộng rất nhanh và tỷ lệ sử dụng cao. Hạ tầng này không tự tạo NAVER, trò chơi trực tuyến hay thương mại điện tử, nhưng làm chi phí thử nghiệm, phân phối và kết nối người dùng giảm mạnh.
 
-Sau khi Hyundai Motor mua Kia năm 1998, group dần xây architecture hiện đại gồm OEM, component suppliers, steel, logistics và finance. Trong 2000s, quality improvement, warranty strategy, design và local production overseas giúp brand perception thay đổi.
+Có thể so sánh băng rộng với điện lực: hạ tầng chỉ tạo giá trị lớn khi hàng loạt ứng dụng phía dưới xuất hiện.
 
-Đây là ví dụ về **non-price upgrading**. Khi wage và income tăng, firm không thể chỉ thắng bằng giá rẻ. Nó phải bán reliability, design, technology, service và brand trust.
+Cổng thông tin, trò chơi trực tuyến, ngân hàng Internet, thương mại điện tử và nội dung số có cơ chế kinh tế khác nhà máy. Quy mô nhà máy dựa nhiều vào công suất máy móc; quy mô nền tảng số dựa nhiều vào người dùng, phần mềm, dữ liệu và **hiệu ứng mạng lưới (network effects / 네트워크 효과)**.
 
-## China: market, factory và competitor cùng lúc
+Hàn Quốc bắt đầu có một loại quy mô mà CAPEX vật chất không nhất thiết tăng cùng tỷ lệ với doanh thu.
 
-China gia nhập WTO năm 2001 và nhanh chóng trở thành trung tâm manufacturing toàn cầu. Đối với Korea, China vừa là export market khổng lồ, nơi đặt production base và nguồn intermediate goods, vừa dần trở thành competitor.
+## Bài học dot-com: tăng người dùng không đồng nghĩa tăng giá trị kinh tế
 
-Supply chains Korea–China trở nên deeply integrated. Korean firms xuất components, chemicals, machinery sang China, trong khi nhập intermediate goods và consumer products. Đây là lý do “trade dependence on China” không thể hiểu chỉ bằng final-goods exports.
+Bùng nổ Internet đầu thời kỳ cũng cho thấy lượng truy cập và số người dùng có thể tăng trước khi mô hình kiếm tiền được chứng minh.
 
-## SK và telecom–energy transformation
+Một dịch vụ có nhiều người dùng nhưng không có khả năng kiếm tiền, tỷ lệ giữ chân hoặc quyền định giá vẫn có thể tiêu hủy vốn.
 
-SK đã chuyển từ textile sang petrochemical và energy từ trước, nhưng telecom trở thành một pillar quan trọng sau khi group phát triển trong mobile communications. Đây là case của portfolio transformation: business group không nhất thiết giữ original industry làm core mãi mãi.
+Bài học này lặp lại nhiều lần trong thời đại startup và đầu tư mạo hiểm: quy mô số giúp tăng trưởng nhanh hơn nhưng không xóa yêu cầu cuối cùng về dòng tiền. Xem [startup và scale-up](../07_startups_venture_and_scaleups.md).
 
-Khi một group chuyển ngành, capital allocation capability quyết định rất lớn. Acquiring a growth sector không tự động tạo value; integration, governance và debt burden mới quyết định result.
+## Trung Quốc gia nhập WTO: vừa là thị trường, nhà máy và đối thủ
 
-## LG: electronics, display và chemical platform
+Trung Quốc gia nhập WTO năm 2001 làm thay đổi sâu chuỗi giá trị châu Á. Với doanh nghiệp Hàn Quốc, Trung Quốc đồng thời là ba thứ.
 
-LG trong giai đoạn này phát triển mạnh consumer electronics, display và chemical businesses. Sau này battery trở thành một growth engine lớn. Genealogy từ chemical company sang electronics rồi advanced materials cho thấy corporate identity ở Korea thường thay đổi sâu theo industrial structure của quốc gia.
+Thứ nhất, đây là thị trường tiêu dùng và công nghiệp khổng lồ. Thứ hai, đây là địa điểm sản xuất có chi phí cạnh tranh và mạng lưới nhà cung cấp ngày càng sâu. Thứ ba, doanh nghiệp Trung Quốc dần trở thành đối thủ trong điện tử, thép, hóa chất, đóng tàu và nhiều ngành khác.
 
-## FTA và globalization của rules
+Do đó “phơi nhiễm Trung Quốc” không thể chỉ đo bằng tỷ trọng doanh thu bán sang Trung Quốc. Cần tách:
 
-Korea ký và mở rộng nhiều free trade agreements trong 2000s và 2010s. FTA không chỉ giảm tariff. Nó ảnh hưởng rules of origin, investment, services, intellectual property và supply-chain design.
+```text
+Doanh thu từ Trung Quốc
++ nhà máy đặt tại Trung Quốc
++ đầu vào mua từ Trung Quốc
++ cạnh tranh với doanh nghiệp Trung Quốc ở thị trường thứ ba
+```
 
-Khi firm quyết định đặt plant ở đâu, tariff advantage và rules of origin có thể thay đổi economics của project. Đây là connection trực tiếp giữa trade policy và corporate geography.
+Cách nhìn nhiều lớp này vẫn rất quan trọng cho phân tích doanh nghiệp Hàn Quốc hiện nay.
 
-## Từ catching up sang innovation challenge
+## Sản xuất đa quốc gia thay đổi ý nghĩa của “xuất khẩu Hàn Quốc”
 
-Đến cuối 2000s, Korea đã catch up đáng kể ở nhiều manufacturing sectors. Nhưng càng gần technology frontier, copy-and-improve strategy càng khó. Growth phụ thuộc hơn vào original R&D, software, design, intangible assets và entrepreneurship.
+Khi doanh nghiệp Hàn Quốc xây nhà máy ở Trung Quốc, Đông Nam Á, Mỹ và châu Âu, doanh thu của công ty Hàn Quốc không còn đồng nghĩa với hàng hóa được sản xuất trong lãnh thổ Hàn Quốc.
 
-Đây là bước chuyển từ **factor accumulation** sang **productivity/innovation growth**. Investment thêm machine vẫn quan trọng, nhưng marginal return giảm nếu không có technology và new business model.
+Một chiếc xe do Hyundai sản xuất ở Mỹ vẫn tạo lợi nhuận cho tập đoàn Hàn Quốc nhưng không xuất hiện như một chiếc xe xuất khẩu từ Hàn Quốc. Ngược lại, một sản phẩm xuất khẩu từ Hàn Quốc có thể chứa nhiều linh kiện nhập khẩu.
 
-## Mental Model
+Vì vậy cần phân biệt:
 
-> Thập niên 2000 là lúc corporate Korea chuyển từ “sản xuất tốt và rẻ” sang “quản lý global brand, technology, overseas production và digital network”. Từ đây competitive advantage không còn chỉ nằm trong factory mà nằm trong toàn bộ hệ thống R&D–brand–software–supply chain.
+- thương mại theo biên giới;
+- giá trị gia tăng nội địa;
+- doanh thu của doanh nghiệp đa quốc gia;
+- lợi nhuận và tài sản do công ty Hàn Quốc kiểm soát.
 
-## Connections
+Đây là nền để hiểu [chuỗi giá trị toàn cầu](../02_trade_export_and_global_value_chains.md).
 
-Xem [../02_trade_export_and_global_value_chains](../02_trade_export_and_global_value_chains.md), [../14_semiconductors_electronics_display](../14_semiconductors_electronics_display.md), [../15_automotive_battery_mobility](../15_automotive_battery_mobility.md) và [../17_platform_telecom_content_retail_services](../17_platform_telecom_content_retail_services.md).
+## Samsung: từ nhà sản xuất điện tử thành doanh nghiệp công nghệ toàn cầu
 
-### Nguồn nền để đọc thêm
+Samsung Electronics bước sâu hơn vào bộ nhớ bán dẫn, màn hình, điện thoại di động và thiết bị điện tử. Điều quan trọng không chỉ là quy mô nhà máy mà là khả năng tái đầu tư liên tục vào công nghệ.
 
-KDI, *The Korean Economy: Six Decades of Growth and Development*; corporate histories of Samsung, Hyundai, LG and SK; Korea trade and ICT policy materials.
+Bán dẫn tạo vòng lặp:
 
-## Broadband như infrastructure cho business model mới
+```text
+R&D + CAPEX
+→ công nghệ quy trình tốt hơn
+→ yield và chi phí đơn vị tốt hơn
+→ thị phần / lợi nhuận
+→ dòng tiền để tái đầu tư
+```
 
-Korea rollout broadband nhanh tạo demand cho portals, online games, e-commerce, internet banking và digital content. Infrastructure không tự tạo champions, nhưng nó làm experimentation cost thấp và user adoption nhanh.
+Nếu vòng lặp bị đứt ở một thế hệ công nghệ, doanh nghiệp có thể mất lợi thế rất nhanh. Vì vậy bán dẫn là ngành nơi quy mô, tốc độ học và kỷ luật đầu tư kết hợp chặt với nhau.
 
-Naver, online gaming companies và later platform ecosystems lớn lên trên nền này. Đây là example general-purpose technology tạo nhiều industries downstream.
+## Hyundai và Kia: từ cạnh tranh bằng giá sang chất lượng và thương hiệu
 
-## Global production network
+Trong thập niên 2000, các hãng xe Hàn Quốc cải thiện mạnh chất lượng, thiết kế, độ tin cậy và thương hiệu ở thị trường quốc tế.
 
-Korean firms tăng overseas plants để gần market, giảm tariff/logistics và hedge currency. “Korean company” vì vậy ngày càng ít đồng nghĩa “sản xuất tại Korea”.
+Một hãng ô tô toàn cầu không chỉ bán sản phẩm. Nó phải quản lý nhà cung cấp, nhà máy ở nhiều quốc gia, mạng lưới đại lý, tài chính mua xe, bảo hành và giá trị bán lại.
 
-Hyundai plants ở multiple countries, electronics production across Asia và later battery plants ở US/Europe cho thấy internationalization chuyển từ export-only sang **multinational production system**.
+Điều này làm mô hình kinh tế chuyển từ “sản xuất càng nhiều càng tốt” sang tối ưu **sản lượng × cơ cấu sản phẩm × giá × chất lượng × chi phí vòng đời**.
 
-## Brand premium như intangible capital
+## LG, SK và sự chuyên môn hóa sâu hơn
 
-Samsung/Hyundai đầu tư mạnh design, quality, marketing và global distribution. Khi brand tốt hơn, firm có thể tăng ASP mà không cần cost tăng tương ứng.
+LG tiếp tục xây vị thế trong điện tử, hóa chất và sau này pin. SK phát triển từ dệt may sang năng lượng, viễn thông và bán dẫn thông qua nhiều bước tái cấu trúc và M&A.
 
-Brand là asset không physical nhưng có economic return. Đây là transition quan trọng từ OEM mentality sang own-brand strategy.
+Các ví dụ này cho thấy phả hệ chaebol không phải quá trình mở rộng ngẫu nhiên mãi mãi. Sau 1997, nhiều tập đoàn phải lựa chọn rõ hơn ngành nào có thể trở thành cỗ máy tạo tiền hoặc năng lực chiến lược dài hạn.
 
-## China shock theo hai phase
+## Điện thoại di động và chuỗi cung ứng điện tử
 
-Phase đầu: China là low-cost production base và huge growth market. Phase sau: Chinese firms become competitors with scale, engineering and capital. Korean corporate strategy phải chuyển từ “produce in China” sang “compete with China globally”.
+Sự phát triển của điện thoại di động tạo nhu cầu cho bán dẫn, màn hình, pin, linh kiện và phần mềm. Hàn Quốc có lợi thế vì đã tích lũy nhiều mắt xích liên quan từ trước.
+
+Đây là ví dụ của **hiệu ứng cụm năng lực (capability cluster)**: khi nhiều ngành bổ trợ nằm gần nhau về công nghệ và nhà cung cấp, một thị trường mới có thể kích hoạt tăng trưởng đồng thời ở nhiều doanh nghiệp.
+
+## Thẻ tín dụng và bài học về tăng trưởng tài chính tiêu dùng
+
+Đầu thập niên 2000, Hàn Quốc cũng trải qua vấn đề liên quan đến mở rộng tín dụng thẻ. Khuyến khích tiêu dùng và phát hành thẻ nhanh giúp cầu nội địa tăng nhưng đồng thời làm nợ hộ gia đình và rủi ro tín dụng tăng.
+
+Bài học là tăng trưởng tài chính có thể kéo nhu cầu hiện tại lên bằng cách chuyển chi tiêu từ tương lai về hiện tại. Nếu khả năng trả nợ không tăng tương ứng, tăng trưởng đó không bền.
+
+Đây là tiền đề để hiểu vai trò lớn của **nợ hộ gia đình (household debt / 가계부채)** trong kinh tế Hàn Quốc hiện đại.
+
+## Khủng hoảng tài chính toàn cầu 2008: bài kiểm tra mới
+
+Khủng hoảng 2008 khác 1997. Lần này tâm chấn nằm ở hệ thống tài chính Mỹ và quốc tế, nhưng Hàn Quốc vẫn chịu tác động qua thương mại, USD funding, tỷ giá và tâm lý rủi ro.
+
+So với 1997, hệ thống Hàn Quốc có dự trữ ngoại hối, quản trị tài chính và cấu trúc doanh nghiệp tốt hơn. Điều này cho thấy cải cách sau khủng hoảng trước đã tạo **khả năng chống chịu (resilience / 회복탄력성)**, dù không loại bỏ hoàn toàn rủi ro bên ngoài.
+
+## Từ bắt kịp sang cạnh tranh ở biên công nghệ
+
+Khi Hàn Quốc còn ở xa biên công nghệ, doanh nghiệp có thể nhập máy móc, học quy trình đã tồn tại và tăng năng suất nhanh. Khi tiến gần biên, việc sao chép trở nên ít đủ hơn.
+
+Doanh nghiệp phải đầu tư nhiều hơn vào R&D, thiết kế, phần mềm, bằng sáng chế và phát triển sản phẩm mới. Đây là bước chuyển từ **hấp thụ công nghệ** sang **tạo công nghệ**.
+
+Bước chuyển này khó hơn vì kết quả R&D bất định và không thể chỉ dựa vào vốn vật chất.
+
+## Dịch vụ số tạo một loại doanh nghiệp mới bên ngoài chaebol truyền thống
+
+NAVER, các công ty game và nhiều doanh nghiệp Internet cho thấy một công ty Hàn Quốc có thể đạt quy mô lớn mà không cần đi theo con đường thép–xây dựng–hóa chất của chaebol cũ.
+
+Tài sản quan trọng của nền tảng có thể là phần mềm, dữ liệu, mạng lưới người dùng và thương hiệu số. Điều này làm cấu trúc doanh nghiệp Hàn Quốc đa dạng hơn.
+
+Tuy nhiên khi nền tảng lớn lên, nó lại đối mặt những câu hỏi quen thuộc: quyền lực thị trường, quản trị, đầu tư, cạnh tranh và quan hệ với SME.
+
+## Connection — Nền kinh tế 2010s–2020s được hình thành như thế nào?
+
+Đến cuối thập niên 2000, Hàn Quốc đã có doanh nghiệp sản xuất toàn cầu, hạ tầng số mạnh, thị trường vốn trưởng thành hơn và khả năng R&D cao hơn. Nhưng các vấn đề mới cũng rõ hơn: dân số già, năng suất dịch vụ thấp, phụ thuộc thương mại, cạnh tranh Trung Quốc và nhu cầu tìm động cơ tăng trưởng mới.
+
+Chương tiếp theo, [2010s–2020s: nền tảng, công nghiệp tiên tiến và tăng trưởng chậm](./07_2010s_2020s_platforms_advanced_industry_and_slow_growth.md), giải thích cách AI, HBM, pin, nền tảng số, an ninh kinh tế và nhân khẩu học thay đổi bài toán của Hàn Quốc.
+
+> **Mental Model cuối:** thập niên 2000 là lúc Hàn Quốc kết hợp kỷ luật tài chính hậu 1997 với năng lực công nghiệp đã tích lũy, rồi thêm một lớp mới gồm băng rộng, phần mềm, thương hiệu toàn cầu và sản xuất đa quốc gia. Nền kinh tế không còn chỉ “xuất khẩu hàng làm ở Hàn Quốc”; doanh nghiệp Hàn Quốc bắt đầu điều phối giá trị trên mạng lưới toàn cầu.

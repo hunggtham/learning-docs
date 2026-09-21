@@ -7,6 +7,11 @@
 >
 > Baseline version của supplement này là **Java 25 LTS** với awareness tới **Java 26**, là release mới nhất tại thời điểm cập nhật. Java 26 là non-LTS; Java 25 là LTS hiện tại. Các preview/incubator APIs được đánh dấu rõ để tránh nhầm với API final.
 
+
+## Vị trí của Master Supplement trong learning flow
+
+Master Supplement chỉ nên đọc sau [Java Part 3 — Senior](./java_part3_senior_rewritten_detailed.md). Đây không phải “Part 3 nhưng nhiều API hơn”; nó là phần bù cho low-level runtime, framework/library engineering và modern JDK internals. Nếu một chủ đề application-level đã được giải thích đủ ở ba phần trước, file này không lặp lại chỉ để tăng số lượng nội dung.
+
 ---
 
 # 1. “Master Java” thực sự có nghĩa gì?
@@ -2812,6 +2817,22 @@ jar tf
 ```
 
 and inspect actual artifact.
+
+---
+
+## Tại sao Master vẫn phải hiểu Java 8 → 11 → 17 → 21 thay vì chỉ nhìn Java 25/26
+
+Master Supplement dùng Java 25/26 để giải thích platform mới, nhưng framework/library engineer thường phải support code được viết từ nhiều generation. Vì vậy bốn mốc 8, 11, 17 và 21 phải được xem như **compatibility boundaries**.
+
+Java 8 là boundary nơi functional interfaces/default methods trở thành mainstream. Default methods đặc biệt quan trọng với library evolution: interface có thể thêm behavior mà không ngay lập tức phá mọi implementation cũ. Lambdas dựa target typing và `invokedynamic`, nên bytecode/runtime model khác anonymous class dù source intent có thể tương tự.
+
+Java 11 là boundary của post-modular JDK distribution. Library từng dựa JAXB/JAX-WS “có trong JDK” phải khai dependency riêng; jlink/module ecosystem và standard HTTP client thay deployment assumptions. Nếu library claim support 8 và 11+, CI phải thật sự test multiple runtimes thay vì compile một lần rồi suy đoán.
+
+Java 17 là boundary của strong encapsulation. Frameworks làm DI/ORM/serialization bằng reflection phải tách giữa reflection vào application classes — legitimate use case — và illegal access vào JDK internals. `--add-opens` là deployment escape hatch, không phải public API guarantee. Records/sealed types cũng tạo source models mới mà code generators/serializers cần hiểu.
+
+Java 21 là boundary của concurrency model. Frameworks/executors/pools viết với assumption “mỗi request = expensive OS-backed platform thread” cần được xem lại khi virtual threads được dùng. Instrumentation, `ThreadLocal`, blocking detection, pool sizing và observability phải phân biệt platform với virtual threads.
+
+Khi thiết kế library multi-release, hãy xác định **minimum supported Java**, **build JDK**, **test matrix**, **optional fast paths** và **public API type surface**. Đừng expose Java 21-only type trong public API của library claim Java 17 compatibility rồi cố giải bằng reflection. Nếu muốn implementation tối ưu theo runtime mới, Multi-Release JAR hoặc runtime feature detection có thể phù hợp nhưng làm test/packaging phức tạp hơn.
 
 ---
 

@@ -1,69 +1,161 @@
-# Thập niên 1970: công nghiệp nặng–hóa chất và sự bành trướng của chaebol (HCI Drive / 중화학공업화)
+# Thập niên 1970: công nghiệp nặng–hóa chất, tích hợp dọc và sự mở rộng của chaebol (HCI Drive / 중화학공업화)
 
-Nếu thập niên 1960 chứng minh rằng Hàn Quốc có thể xuất khẩu hàng công nghiệp, thì thập niên 1970 đặt câu hỏi khó hơn: **có thể chuyển từ hàng thâm dụng lao động sang thép, hóa dầu, máy móc, đóng tàu, ô tô và điện tử không?** Đây là giai đoạn cấu trúc tập đoàn lớn Hàn Quốc bắt đầu mang hình dạng quen thuộc hiện nay.
+Nếu thập niên 1960 chứng minh Hàn Quốc có thể xuất khẩu hàng công nghiệp, thì thập niên 1970 đặt ra bài toán khó hơn: **làm sao rời khỏi lợi thế lương thấp và xây các ngành có chi phí cố định, độ phức tạp kỹ thuật và yêu cầu công nghệ lớn hơn nhiều?**
 
-## Vì sao cần “đi lên” ngành nặng?
+Đây là thời kỳ thúc đẩy **công nghiệp nặng và hóa chất (Heavy and Chemical Industries, HCI / 중화학공업)**, đồng thời là lúc nhiều tập đoàn kinh doanh bắt đầu có kiến trúc gần hơn với hình dạng hiện nay.
 
-Labor-intensive manufacturing có thể tạo việc làm và ngoại tệ nhanh, nhưng lợi thế wage thấp không bền vững. Khi thu nhập tăng, các nước có labor cost thấp hơn xuất hiện. Nếu một nền kinh tế muốn tiếp tục tăng productivity, nó phải tăng capital intensity, technology content và value added.
+## Vì sao công nghiệp nhẹ không thể là điểm dừng?
 
-Trong thập niên 1970, chính phủ thúc đẩy **Heavy and Chemical Industry Drive (HCI / 중화학공업 육성정책)**, tập trung vào các ngành như steel, non-ferrous metals, machinery, shipbuilding, electronics và petrochemicals. Đây là industrial policy quy mô lớn, dùng directed credit, tax incentives, import protection, infrastructure và project selection.
+Dệt may, giày dép và lắp ráp đơn giản phù hợp với nền kinh tế có nhiều lao động nhưng ít vốn. Tuy nhiên mô hình này có giới hạn. Khi lương tăng, các quốc gia có chi phí lao động thấp hơn xuất hiện. Nếu Hàn Quốc chỉ cạnh tranh bằng giá, lợi thế so sánh sẽ dần suy yếu.
 
-## POSCO và logic “upstream capability”
+Muốn tiếp tục tăng thu nhập trên mỗi lao động, nền kinh tế cần tăng cường độ vốn, hàm lượng kỹ thuật, khả năng hấp thụ công nghệ, giá trị gia tăng trên mỗi lao động và năng lực ngành thượng nguồn trong nước.
 
-Thép là input nền của construction, shipbuilding, machinery, automobiles và appliances. Nếu phải nhập phần lớn steel, toàn bộ downstream industry chịu foreign-exchange burden và supply risk. POSCO, thành lập năm 1968 và mở rộng mạnh trong thập niên 1970, trở thành một upstream anchor cho industrial ecosystem.
+Đây là lý do mang tính cấu trúc—không chỉ chính trị—đằng sau việc chuyển sang thép, máy móc, đóng tàu, hóa dầu, ô tô và điện tử.
 
-Mental model ở đây là **input multiplier**: một investment vào upstream material có thể làm giảm cost hoặc tăng reliability cho nhiều ngành downstream cùng lúc. Vì vậy một số project có strategic value vượt profit của chính firm đó.
+## HCI: chính sách công nghiệp ở quy mô lớn hơn
 
-## Hyundai: từ construction sang shipbuilding và automobiles
+Chiến lược HCI tập trung tín dụng, ưu đãi thuế, bảo hộ, hạ tầng và phối hợp hành chính vào một số ngành được ưu tiên.
 
-Hyundai là case đặc biệt rõ về organizational capability chuyển ngành. Construction đã giúp tập đoàn học quản lý project lớn, procurement, labor và deadline. Những capability đó được tái sử dụng trong shipbuilding và automobile manufacturing.
+Khác biệt lớn so với thập niên 1960 nằm ở quy mô dự án và tính khó đảo ngược. Một nhà máy may có thể mở rộng dần; một nhà máy thép tích hợp hoặc xưởng đóng tàu cần lượng vốn ban đầu rất lớn và nhiều năm trước khi đạt tỷ lệ sử dụng công suất cao.
 
-Hyundai Motor được thành lập năm 1967; đầu tiên lắp ráp xe theo công nghệ nước ngoài, sau đó phát triển Pony, mẫu xe độc lập đầu tiên của công ty, ra mắt giữa thập niên 1970 và bắt đầu xuất khẩu. Quá trình này cho thấy một pathway phổ biến: **licensed production → local engineering → own model → export network**.
+Kinh tế của HCI vì thế có rủi ro lớn do **chi phí chìm (sunk cost / 매몰비용)**. Khi tài sản đã được xây, không dễ chuyển nó sang ngành khác.
 
-Hyundai Heavy Industries bước vào đóng tàu với logic tương tự nhưng capex lớn hơn rất nhiều. Shipbuilding cần dock, steel, engine, finance và order book. Đây là sector mà state support, export finance và large-scale business group có lợi thế rõ.
+\[
+Giá\ trị\ dự\ án\ kỳ\ vọng = PV(Dòng\ tiền\ tương\ lai) - Đầu\ tư\ ban\ đầu
+\]
 
-## Samsung và LG: nền móng electronics
+Nếu dự báo nhu cầu sai hoặc chi phí vốn tăng mạnh, tài sản quy mô lớn có thể trở thành gánh nặng thay vì lợi thế.
 
-Samsung Electronics được thành lập năm 1969, còn GoldStar của LG có từ cuối thập niên 1950. Trong thập niên 1970, consumer electronics và components mở rộng nhanh. Ban đầu, value added có thể thấp hơn các leader quốc tế vì phụ thuộc imported components và know-how, nhưng scale production, quality control và engineering capability được tích lũy dần.
+## Vì sao phối hợp của nhà nước quan trọng hơn trong công nghiệp nặng?
 
-Điểm quan trọng là ngành electronics có **learning curve / 학습곡선** rất mạnh. Càng sản xuất nhiều, firm càng học cách giảm defect, tăng yield và cải thiện process. Vì vậy scale không chỉ giảm fixed cost; nó còn tăng tốc learning.
+Các dự án HCI cần nhiều khoản đầu tư bổ trợ xuất hiện cùng lúc. Xưởng đóng tàu cần thép, cảng, thợ hàn lành nghề, động cơ hàng hải, tài trợ xuất khẩu và khách hàng. Nhà máy ô tô cần mạng lưới linh kiện, đường, thép, máy công cụ và phân phối.
 
-## SK: vertical integration từ textile sang petrochemical
+Một doanh nghiệp tư nhân có thể không dám đầu tư nếu không tin các mắt xích bổ trợ sẽ xuất hiện. Đây là **thất bại phối hợp (coordination failure / 조정실패)**.
 
-SK bắt đầu từ textile, nhưng synthetic fibers phụ thuộc petrochemical inputs. Việc đi ngược lên upstream giúp kiểm soát input, margin và technology. Đây là **vertical integration / 수직계열화**: doanh nghiệp mở rộng vào các stage khác của cùng value chain.
+Kế hoạch do nhà nước dẫn dắt có thể giảm vấn đề này bằng cách đồng bộ hạ tầng, tài chính và công suất công nghiệp. Nhưng chính quyền lực phối hợp tập trung cũng tạo rủi ro đầu tư quá mức nếu giả định ban đầu sai.
 
-Vertical integration có thể tạo advantage khi supply unreliable hoặc market chưa phát triển. Nhưng nó cũng tạo complexity và capital burden. Một group càng integrate nhiều, càng cần governance và capital allocation tốt.
+> **Mental Model:** chính sách công nghiệp giải quyết vấn đề phối hợp bằng cách tập trung quyết định; chính sự tập trung đó lại tạo rủi ro chọn sai ngành và phân bổ vốn sai.
 
-## Tại sao chaebol mở rộng nhanh trong giai đoạn này?
+## POSCO: thép thượng nguồn như một nền tảng công nghiệp
 
-HCI projects có ba đặc điểm: fixed cost rất lớn, payback dài và uncertainty cao. SME khó vay đủ vốn hoặc chịu loss nhiều năm trước khi đạt scale. Large groups có reputation, collateral, bank relationship và khả năng cross-subsidize giữa affiliates.
+Thép là đầu vào của xây dựng, ô tô, đóng tàu, máy móc và thiết bị gia dụng. Năng lực thép trong nước giúp giảm gánh nặng ngoại tệ và tăng độ tin cậy nguồn cung cho nhiều ngành phía dưới.
 
-Từ góc nhìn state, làm việc với một số large groups cũng giảm coordination cost. Nhưng concentration này có consequence: economic power ngày càng tập trung và relationship giữa government–banks–chaebol trở nên sâu hơn.
+Vì vậy POSCO không chỉ là một công ty thép. Nó hoạt động như một **nền tảng thượng nguồn (upstream industrial platform / 상류 산업기반)** cho hệ sinh thái công nghiệp rộng hơn.
 
-## Mặt trái của HCI Drive
+Cơ chế lan tỏa có thể hình dung:
 
-KDI và nhiều nghiên cứu đánh giá HCI theo hướng mixed. Chính sách này giúp Hàn Quốc xây base công nghiệp nặng rất nhanh, và nhiều sector sau đó trở thành globally competitive. Tuy nhiên, giai đoạn cuối thập niên 1970 xuất hiện overinvestment, inflation, foreign debt pressure và crowding-out với light industry.
+```text
+Thép trong nước
+→ nguồn cung ổn định hơn
+→ chi phí và thời gian giao hàng dễ kiểm soát hơn
+→ đóng tàu / ô tô / máy móc mở rộng
+→ nhu cầu thép tăng tiếp
+```
 
-Điều này minh họa một nguyên tắc first-principles: **một project có strategic rationale vẫn có thể bị overbuilt**. Nếu quá nhiều capital cùng đổ vào một ngành trước demand, return on capital giảm. Industrial policy không xóa supply-demand constraint.
+Đây là ví dụ về **liên kết xuôi–ngược (forward/backward linkage)** trong công nghiệp hóa.
 
-## Oil shocks và vulnerability của công nghiệp nặng
+## Đóng tàu: dự án lớn, tài trợ lớn và học kỹ thuật
 
-Khủng hoảng dầu 1973 và 1979 nhắc rằng industrialization nặng làm economy phụ thuộc imported energy. Korea thiếu dầu thô nên energy price shock truyền trực tiếp vào cost, inflation, trade balance và corporate margins.
+Đóng tàu đòi hỏi đất ven biển, ụ tàu, thép, kỹ sư, thợ hàn, quản lý dự án và tài trợ trước khi bàn giao. Doanh nghiệp phải chi tiền trong thời gian dài trước khi thu đủ tiền từ khách hàng.
 
-Đây là nguồn gốc của một pattern còn tồn tại đến hiện nay: Hàn Quốc có manufacturing base mạnh nhưng nhạy với giá energy và commodity quốc tế.
+Vì vậy đóng tàu không chỉ là bài toán công nghệ mà còn là bài toán **vốn lưu động và tài trợ dự án**. Một tập đoàn có khả năng huy động vốn, điều phối nhà cung cấp và chịu được giai đoạn đầu lỗ hoặc sử dụng công suất thấp có lợi thế lớn.
 
-## Mental Model
+Hyundai là ví dụ điển hình cho việc mang năng lực thực thi dự án từ xây dựng sang đóng tàu, sau đó tiếp tục mở rộng sang ô tô và các ngành khác.
 
-> Thập niên 1970 là lúc Hàn Quốc đổi “engine tăng trưởng” từ **lao động rẻ + hàng nhẹ** sang **capital + engineering + scale**. Chaebol lớn nhanh vì họ trở thành vehicle triển khai project lớn, nhưng chính điều đó làm leverage và concentration tăng cùng lúc.
+## Hóa dầu: biến đầu vào nhập khẩu thành nền vật liệu trong nước
 
-## Common misconceptions
+Hóa dầu tạo nguyên liệu cho nhựa, sợi tổng hợp, bao bì, linh kiện và nhiều sản phẩm công nghiệp. Hàn Quốc vẫn phải nhập dầu thô, nhưng thay vì nhập toàn bộ sản phẩm hóa chất cuối cùng, năng lực lọc–hóa dầu trong nước cho phép tạo thêm giá trị và cung cấp đầu vào cho ngành chế tạo.
 
-“Công nghiệp nặng thành công nên mọi investment lúc đó đều đúng” là sai. HCI có cả capability-building lẫn misallocation. Ngược lại, chỉ nhìn overinvestment rồi kết luận toàn bộ policy thất bại cũng bỏ qua việc nhiều nền tảng steel, shipbuilding, machinery và electronics sau này tạo export capacity lớn.
+Điều này cho thấy “tự chủ công nghiệp” không đồng nghĩa phải có mọi tài nguyên tự nhiên. Một nền kinh tế thiếu dầu vẫn có thể xây năng lực xử lý, hóa học, logistics và sản xuất để giữ phần giá trị gia tăng cao hơn trong nước.
 
-## Connections
+## Ô tô: từ lắp ráp sang xây hệ sinh thái nhà cung cấp
 
-Xem [../16_shipbuilding_steel_chemicals_heavy_industry](../16_shipbuilding_steel_chemicals_heavy_industry.md), [../15_automotive_battery_mobility](../15_automotive_battery_mobility.md), [../14_semiconductors_electronics_display](../14_semiconductors_electronics_display.md) và [../04_chaebol_and_large_business_groups](../04_chaebol_and_large_business_groups.md).
+Một nhà máy ô tô không thể cạnh tranh toàn cầu nếu phải nhập gần như mọi linh kiện. Công nghiệp ô tô cần hàng nghìn chi tiết, tiêu chuẩn chất lượng, logistics chính xác và mạng lưới nhà cung cấp nhiều tầng.
 
-### Nguồn nền để đọc thêm
+Do đó phát triển ô tô kéo theo quá trình **nội địa hóa (localization / 국산화)**. Nhà cung cấp học cách đáp ứng tiêu chuẩn của hãng xe; hãng xe có nguồn cung gần hơn và kiểm soát chất lượng tốt hơn; sản lượng tăng lại tạo thị trường lớn hơn cho nhà cung cấp.
 
-KDI, *Korean Industrial Policy in the 1970's: The Heavy and Chemical Industry Drive*; KDI, *Lessons from Korea's Industrialization Experience*; lịch sử chính thức Hyundai, Samsung, LG và SK.
+```text
+Sản lượng OEM tăng
+→ nhu cầu linh kiện tăng
+→ nhà cung cấp đầu tư
+→ chất lượng / năng suất tăng
+→ tỷ lệ nội địa hóa tăng
+→ khả năng cạnh tranh của OEM tăng
+```
+
+Nhưng quan hệ này cũng tạo bất cân xứng quyền thương lượng giữa doanh nghiệp lớn và SME, một vấn đề còn tồn tại trong kinh tế Hàn Quốc hiện đại.
+
+## Tích hợp dọc và sự hình thành cấu trúc tập đoàn
+
+Khi thị trường nhà cung cấp còn chưa phát triển, doanh nghiệp lớn có động lực tự xây nhiều mắt xích bên trong tập đoàn. Đây là **tích hợp dọc (vertical integration / 수직계열화)**.
+
+Một tập đoàn có thể sở hữu công ty nguyên liệu, sản xuất, logistics, thương mại và tài chính. Điều này giảm phụ thuộc vào thị trường bên ngoài và giúp phối hợp dự án nhanh hơn.
+
+Tuy nhiên, tích hợp dọc cũng làm cấu trúc tập đoàn phức tạp, tăng giao dịch nội bộ và có thể làm mờ ranh giới giữa lợi ích của từng pháp nhân với lợi ích của toàn nhóm.
+
+## Vì sao chaebol mở rộng nhanh trong giai đoạn này?
+
+Dự án HCI yêu cầu vốn rất lớn, năng lực quản lý sâu và khả năng chịu rủi ro trong thời gian dài. Các doanh nghiệp đã có hồ sơ thực hiện tốt từ thập niên 1960 có lợi thế trong việc nhận tín dụng và dự án mới.
+
+Một vòng tích lũy hình thành:
+
+```text
+Quy mô lớn hơn
+→ tiếp cận tín dụng và dự án tốt hơn
+→ tích lũy kỹ sư / quản lý
+→ thực hiện dự án lớn hơn
+→ doanh thu và tài sản lớn hơn
+→ khả năng tiếp cận nguồn lực tiếp tục tăng
+```
+
+Đây là một trong các cơ chế làm chaebol trở thành trung tâm của công nghiệp hóa.
+
+## Thị trường vốn nội bộ trong tập đoàn
+
+Khi thị trường tài chính bên ngoài còn chưa phát triển, tập đoàn có thể chuyển nguồn lực giữa các công ty liên kết. Một mảng tạo tiền có thể hỗ trợ mảng đang đầu tư mạnh.
+
+Đây là **thị trường vốn nội bộ (internal capital market / 내부자본시장)**. Nó có thể hữu ích khi ngân hàng hoặc thị trường chứng khoán chưa đủ khả năng đánh giá các dự án mới. Nhưng nó cũng tạo rủi ro: dự án yếu có thể được duy trì quá lâu, và cổ đông thiểu số của một công ty có thể không muốn tài sản của công ty đó phục vụ mục tiêu của toàn tập đoàn.
+
+Cơ chế này trở thành một chủ đề quan trọng của quản trị doanh nghiệp Hàn Quốc về sau.
+
+## Nợ là công cụ tăng tốc nhưng cũng khuếch đại rủi ro
+
+Các ngành HCI cần vốn lớn nên doanh nghiệp sử dụng nhiều nợ. Khi lợi nhuận trên tài sản cao hơn chi phí vay, đòn bẩy làm lợi nhuận vốn chủ tăng nhanh. Nhưng khi chu kỳ đảo chiều, lãi suất tăng hoặc dự án thất bại, nợ khuếch đại tổn thất.
+
+Có thể viết trực giác:
+
+\[
+ROE \approx ROA + Đòn\ bẩy \times (ROA - Chi\ phí\ nợ)
+\]
+
+Nếu ROA cao hơn chi phí nợ, đòn bẩy hỗ trợ ROE. Nếu ROA giảm xuống dưới chi phí nợ, cùng một cơ chế quay ngược lại.
+
+Đây là hạt giống của vấn đề đòn bẩy doanh nghiệp sẽ trở nên rõ hơn trong các thập niên sau và đặc biệt trong khủng hoảng 1997.
+
+## Cú sốc dầu và giới hạn của chiến lược công nghiệp nặng
+
+Thập niên 1970 cũng có các cú sốc dầu toàn cầu. Với một quốc gia phụ thuộc nhập khẩu năng lượng như Hàn Quốc, giá dầu tăng làm chi phí sản xuất, vận tải và ngoại tệ tăng mạnh.
+
+Các ngành HCI tiêu thụ nhiều năng lượng và vốn nên đặc biệt nhạy với chi phí đầu vào và lãi suất. Điều này cho thấy xây năng lực công nghiệp mới không loại bỏ sự phụ thuộc bên ngoài; nó chỉ thay đổi loại phụ thuộc từ hàng công nghiệp nhập khẩu sang năng lượng, nguyên liệu và công nghệ.
+
+## Năng suất, lương và chuyển dịch cơ cấu lao động
+
+Khi lao động chuyển từ nông nghiệp và công nghiệp nhẹ sang các ngành có vốn và kỹ thuật cao hơn, năng suất trung bình có thể tăng. Nhưng quá trình này cần đào tạo kỹ thuật, giáo dục và thời gian học tại nơi làm việc.
+
+Công nghiệp hóa vì vậy không chỉ là câu chuyện của vốn vật chất. Nó là quá trình kết hợp **vốn vật chất + vốn nhân lực + tổ chức**.
+
+## Thành công và chi phí cùng xuất hiện
+
+HCI giúp Hàn Quốc xây nền thép, đóng tàu, hóa chất, máy móc và ô tô—những ngành sau này trở thành trụ cột xuất khẩu. Nhưng chiến lược cũng làm nợ tăng, nguồn lực tập trung vào tập đoàn lớn và tạo nguy cơ công suất dư thừa.
+
+Không nên đánh giá giai đoạn này chỉ bằng hai nhãn “thành công” hoặc “can thiệp quá mức”. Câu hỏi phân tích tốt hơn là:
+
+> Những năng lực nào được tạo ra, chi phí nào phát sinh và cơ chế nào phải được sửa ở giai đoạn sau?
+
+## Connection — Tại sao thập niên 1980 cần ổn định và tự do hóa?
+
+Sau một giai đoạn đầu tư lớn, nền kinh tế bước vào thập niên 1980 với cơ sở công nghiệp sâu hơn nhưng cũng có lạm phát, nợ, công suất và mức tập trung kinh tế cao hơn.
+
+Chương tiếp theo, [thập niên 1980: ổn định, tự do hóa và dân chủ hóa](./04_1980s_stabilization_liberalization_and_democratization.md), giải thích cách Hàn Quốc bắt đầu chuyển từ mô hình huy động nguồn lực tập trung sang hệ thống có nhiều kỷ luật thị trường hơn.
+
+> **Mental Model cuối:** HCI là quá trình dùng vốn, tín dụng và phối hợp để xây những năng lực thượng nguồn mà thị trường non trẻ khó tự hình thành nhanh. Nó tạo nền công nghiệp hiện đại của Hàn Quốc, đồng thời làm chaebol lớn hơn, đòn bẩy cao hơn và đặt ra các vấn đề quản trị–phân bổ vốn cho giai đoạn sau.

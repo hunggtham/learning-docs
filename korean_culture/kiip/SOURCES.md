@@ -20,22 +20,39 @@ File DOCX được cung cấp chủ yếu là thông báo/link chia sẻ tài li
 - 법무부 사회통합프로그램: https://www.moj.go.kr/moj/369/subview.do
 - 사회통합정보망: https://www.socinet.go.kr/
 - KIIP 평가: https://www.kiiptest.org/
+- 법무부 평가 견본/자료: https://moj.go.kr/moj/415/subview.do
 - 심화 콘텐츠 보완 연구: https://www.moj.go.kr/bbs/immigration/43/440567/artclView.do
+- 사회통합프로그램 개편방향 보도자료 (2026-07-12): 법무부 출입국·외국인정책본부
 - 법정 최고금리 20%: https://www.moj.go.kr/bbs/moj/182/545579/artclView.do
 - 예금보호한도 1억원: https://www.fsc.go.kr/no010101/85200
+- 중앙선거관리위원회: https://www.nec.go.kr/
+- 대한민국 국회: https://www.assembly.go.kr/
+
+## Source hierarchy
+
+Khi có conflict, ưu tiên:
+
+1. `교재/공지` áp dụng cho đúng kỳ thi;
+2. văn bản/notice của `법무부`, `사회통합정보망`, `kiiptest.org`;
+3. cơ quan chuyên ngành chính thức như 선관위, 금융위, 교육부;
+4. 8 PDF tóm tắt người học cung cấp;
+5. note tổng hợp này;
+6. tài liệu community/thương mại.
 
 ## Version policy
 
-Các fact có thể đổi được ghi timestamp hoặc đưa vào `00_current_facts_and_corrections.md`.
+Fact có thể đổi phải có timestamp hoặc đưa vào `00_current_facts_and_corrections.md`.
 
-Tài liệu ôn thi phải luôn ưu tiên:
-1. 교재/공지 đang áp dụng cho kỳ thi;
-2. nguồn chính thức;
-3. note này;
-4. tài liệu thương mại/community chỉ để tham khảo thêm.
+Không sửa âm thầm source cũ. Ví dụ:
+
+`PDF: 예금보호 5천만원`  
+`Current: 1억원 (2025-09-01~)`.
+
+Cả hai được giữ để người học hiểu vì sao tài liệu cũ và thông tin hiện tại khác nhau.
 
 ## Scope tag policy
 
 - Nội dung lấy từ 8 PDF cơ bản được gắn `공통` vì đó là xương sống của 영주용 và cũng là nền tảng cho 귀화용.
-- Nội dung không có trong 8 PDF nhưng được thêm từ phạm vi 심화/nguồn chính thức được gắn `귀화용 심화`.
-- Dữ liệu pháp luật/statistic mới hơn không được sửa đè lên source; chúng nằm trong `00_current_facts_and_corrections.md` với nhãn current verification.
+- Nội dung thêm từ phạm vi 심화/nguồn chính thức được gắn `귀화용 심화`.
+- Dữ liệu pháp luật/statistic mới hơn không được sửa đè source; dùng `현재 확인`.
+- Câu hỏi trong mock/recall bank là **câu tự biên soạn**, không được mô tả như đề thật.

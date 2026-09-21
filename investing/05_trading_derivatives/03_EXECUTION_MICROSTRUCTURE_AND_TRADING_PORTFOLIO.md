@@ -1,295 +1,615 @@
-# 03 — Execution, Market Microstructure và Trading Portfolio
+# Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch
 
-> Chương này tập trung vào phần thường chỉ được học sau khi đã giao dịch một thời gian: giá được khớp như thế nào, vì sao spread và liquidity thay đổi, tại sao một strategy có backtest tốt nhưng live kém, và cách quản trị nhiều vị thế như một portfolio thay vì từng lệnh độc lập.
+> Tín hiệu tốt chưa đủ. Một chiến lược chỉ tạo được lợi thế thật khi lệnh được thực thi với chi phí hợp lý, quy mô vị thế đúng, trạng thái tài khoản chính xác và rủi ro được quản lý ở cấp toàn danh mục. Chương này giải thích bằng tiếng Việt toàn bộ chuỗi từ sổ lệnh tới phân tích chi phí giao dịch; thuật ngữ tiếng Anh chỉ giữ trong ngoặc hoặc dưới dạng viết tắt chuẩn khi cần tra cứu.
 
-## 1. Trading không kết thúc ở tín hiệu
+# Phần I — Một hệ thống giao dịch có ba lớp
 
-Một strategy có thể tạo entry signal tốt nhưng vẫn thất bại nếu execution cost lớn hơn edge. Điều này đặc biệt rõ với scalping, nơi expected profit mỗi trade nhỏ.
+## 1. Tín hiệu, quy mô rủi ro và thực thi
 
-Nếu setup có expectancy 0,15R trước chi phí nhưng spread, commission và slippage làm mất 0,12R trung bình, phần edge còn lại rất mỏng. Chỉ một thay đổi nhỏ trong liquidity hoặc commission cũng có thể biến strategy thành âm.
+Một hệ thống tối thiểu gồm:
 
-Vì vậy trading system gồm ít nhất ba lớp: signal generation, risk sizing và execution. Backtest chỉ meaningful nếu mô phỏng tương đối đúng cả ba.
+```text
+Tạo tín hiệu (signal generation)
+→ Xác định quy mô rủi ro (risk sizing)
+→ Thực thi lệnh (execution)
+```
 
-## 2. Limit Order Book
+Nếu kỳ vọng lợi nhuận trước chi phí là `+0,12R` nhưng tổng chênh lệch mua–bán, phí và trượt giá là `0,10R`, phần lớn lợi thế đã biến mất.
 
-Ở exchange-traded market, limit order book chứa các lệnh mua và bán chưa khớp ở từng mức giá.
+Vì vậy thực thi lệnh không phải hậu cần; nó là một phần của kinh tế chiến lược.
 
-Best bid là giá mua cao nhất. Best ask là giá bán thấp nhất. Spread là khoảng cách giữa hai mức này.
+## 2. Giá quyết định và giá thực thi
 
-Depth cho biết lượng volume đang chờ ở nhiều mức giá. Một market có top-of-book spread hẹp nhưng depth mỏng vẫn có thể slippage mạnh nếu order lớn.
+**Giá quyết định (decision price)** là mức giá khi chiến lược quyết định giao dịch.
 
-Order book là trạng thái động. Lệnh có thể được thêm, sửa hoặc hủy liên tục, nên snapshot hiện tại không đảm bảo liquidity vẫn tồn tại một giây sau.
+**Giá thực thi (execution price)** là mức giá khớp thật.
 
-## 3. Maker và Taker
+Khoảng cách giữa hai mức có thể đến từ:
 
-Trader đặt limit order chờ thường cung cấp liquidity và được gọi là maker. Trader dùng market order hoặc marketable limit order để khớp ngay đang lấy liquidity, hay taker.
+- chênh lệch mua–bán (spread);
+- độ trễ (latency);
+- tác động của chính lệnh lên giá (market impact);
+- thời gian chờ;
+- lệnh không khớp;
+- biến động thị trường trong lúc thực thi.
 
-Một số venues có fee model khác nhau cho maker và taker. Nhưng lower fee không tự động làm maker strategy tốt hơn vì fill probability và adverse selection quan trọng.
+Đây là nền tảng của **mức thiếu hụt do thực thi (implementation shortfall)**.
 
-Nếu bạn chỉ được fill khi market sắp đi ngược, limit-order execution có thể trông rẻ nhưng economic cost cao.
+# Phần II — Sổ lệnh giới hạn
 
-## 4. Queue Priority
+## 3. Sổ lệnh
 
-Nếu nhiều limit orders cùng price, venue cần rule xác định lệnh nào được fill trước. Price-time priority là cơ chế phổ biến: price tốt hơn ưu tiên trước, cùng price thì lệnh vào sớm hơn ưu tiên.
+**Sổ lệnh giới hạn (limit order book)** chứa các lệnh mua và bán đang chờ theo từng mức giá.
 
-Điều này quan trọng với high-frequency hoặc futures traders. Backtest giả định “giá chạm limit là được fill” thường quá lạc quan nếu queue lớn.
+```text
+Giá mua tốt nhất = best bid
+Giá bán tốt nhất = best ask
+Chênh lệch = best ask - best bid
+```
 
-Retail swing traders ít nhạy hơn, nhưng vẫn nên biết touch price không luôn đồng nghĩa full fill.
+**Độ sâu (depth)** cho biết khối lượng có sẵn ở nhiều mức giá. Chênh lệch hẹp nhưng độ sâu rất mỏng vẫn có thể gây trượt giá lớn cho lệnh lớn.
 
-## 5. Market Order và Marketable Limit
+## 4. Ưu tiên giá–thời gian
 
-Market order ưu tiên execution, chấp nhận khớp qua nhiều levels nếu size lớn.
+Nhiều sở giao dịch dùng nguyên tắc gần với **ưu tiên giá–thời gian (price-time priority)**:
 
-Marketable limit order đặt limit vượt qua best opposite quote, cho phép khớp ngay nhưng đặt giới hạn giá tệ nhất chấp nhận.
+```text
+Giá tốt hơn được ưu tiên trước
+→ nếu cùng giá, lệnh vào trước thường được ưu tiên trước
+```
 
-Trong fast market, marketable limit có thể bảo vệ khỏi extreme slippage nhưng cũng có fill risk nếu giá nhảy qua limit.
+Do đó kiểm thử giả định “giá chạm lệnh giới hạn = chắc chắn khớp” thường quá lạc quan.
 
-Không có order type luôn tối ưu. Exit trong emergency thường ưu tiên execution hơn entry bình thường.
+## 5. Vị trí trong hàng chờ
 
-## 6. Spread không cố định
+**Vị trí hàng chờ (queue position)** ảnh hưởng xác suất khớp. Nó phụ thuộc:
 
-Spread phụ thuộc competition giữa liquidity providers, volatility, information risk và trading session.
+- khối lượng lệnh đang đứng trước;
+- lệnh bị hủy;
+- lệnh thị trường mới đi vào;
+- quy tắc của nơi giao dịch;
+- thời gian chờ.
 
-Khi news sắp ra, market makers đối mặt adverse selection cao vì người trade có thể biết information mới nhanh hơn. Họ widen spread hoặc giảm size quoted.
+Với chiến lược rất ngắn hạn, mô hình hàng chờ có thể quan trọng gần ngang chất lượng tín hiệu.
 
-Trong Asia session, một số FX pairs có spread khác London overlap. Holiday hoặc rollover cũng có thể làm liquidity xấu.
+## 6. Bên cung cấp và bên lấy thanh khoản
 
-Backtest dùng spread cố định dễ đánh giá quá cao performance.
+**Bên cung cấp thanh khoản (maker)** thường đặt lệnh chờ. **Bên lấy thanh khoản (taker)** giao dịch chủ động với lệnh đang có sẵn.
 
-## 7. Slippage
+Bên cung cấp thanh khoản có thể tiết kiệm chênh lệch nhưng chịu:
 
-Slippage là difference giữa expected execution price và actual fill.
+- rủi ro không khớp;
+- lựa chọn bất lợi (adverse selection);
+- chi phí cơ hội.
 
-Positive slippage có thể xảy ra, nhưng trong stop-loss và fast market, negative slippage phổ biến hơn.
+Bên lấy thanh khoản có khả năng khớp nhanh hơn nhưng trả chênh lệch và có thể gây tác động giá.
 
-Slippage phụ thuộc size relative to available liquidity, volatility và order type. Strategy với stop rất ngắn nhạy với slippage hơn strategy target lớn.
+# Phần III — Các loại lệnh
 
-Một backtest chuyên nghiệp nên test nhiều slippage assumptions.
+## 7. Lệnh thị trường
 
-## 8. Market Impact
+**Lệnh thị trường (market order)** ưu tiên khả năng được khớp, không bảo đảm mức giá chính xác.
 
-Market impact là price movement do chính order của bạn tạo ra hoặc signal tới market.
+Trong thị trường mỏng hoặc khi có tin lớn, giá khớp có thể xa mức nhìn thấy trước khi gửi lệnh.
 
-Retail size trong EUR/USD thường quá nhỏ để tạo direct impact đáng kể, nhưng small-cap stock hoặc illiquid crypto có thể khác.
+## 8. Lệnh giới hạn có thể khớp ngay
 
-As account grows, strategy capacity trở thành constraint. Strategy profitable với $5.000 không nhất thiết scale tới $5 million.
+**Lệnh giới hạn chủ động (marketable limit order)** đi qua chênh lệch hiện tại nhưng vẫn đặt giới hạn cho mức giá tệ nhất chấp nhận được.
 
-Capacity là một phần của edge.
+Nó giảm nguy cơ khớp cực xấu nhưng có thể chỉ khớp một phần trong thị trường chạy nhanh.
 
-## 9. Adverse Selection
+## 9. Lệnh giới hạn thụ động
 
-Adverse selection xảy ra khi counterparty có information advantage hoặc order flow cho thấy price sắp move bất lợi.
+**Lệnh giới hạn thụ động (passive limit order)** kiểm soát giá nhưng có thể không khớp.
 
-Market makers kiếm spread nhưng có nguy cơ bị informed traders trade against họ trước price move.
+Một vấn đề quan trọng là **lựa chọn bất lợi (adverse selection)**: lệnh có thể được khớp nhiều nhất đúng lúc giá sắp tiếp tục đi ngược vị thế.
 
-Retail limit trader cũng gặp vấn đề tương tự: nếu buy limit chỉ fill trong lúc sellers aggressive vì bad news, fill rate cao có thể đi cùng future return xấu.
+## 10. Lệnh dừng
 
-Đây là lý do “luôn dùng limit để khỏi mất spread” không phải rule tuyệt đối.
+Lệnh dừng (stop order) chỉ kích hoạt sau khi đạt điều kiện. Giá kích hoạt không phải giá khớp được bảo đảm.
 
-## 10. Liquidity Sweep dưới góc Microstructure
+Khoảng nhảy giá có thể biến kế hoạch `-1R` thành tổn thất lớn hơn đáng kể.
 
-Trong price-action language, traders thường gọi việc price xuyên previous high/low rồi quay lại là liquidity sweep.
+## 11. Lệnh dừng–giới hạn
 
-Dưới góc microstructure, prior extremes có thể thu hút stop orders và breakout orders. Khi trigger, market orders tăng tạm thời. Nếu resting liquidity hoặc opposite flow hấp thụ được pressure, price có thể reverse.
+Lệnh dừng–giới hạn (stop-limit) kiểm soát mức giá tệ nhất nhưng có nguy cơ không thoát được nếu thị trường chạy qua vùng giới hạn quá nhanh.
 
-Không cần giả định một entity bí mật cố ý “săn stop”. Cơ chế order clustering đã đủ giải thích một phần hiện tượng.
+Vì vậy nó không tự động an toàn hơn lệnh dừng thị trường.
 
-## 11. Stop Orders và Gap Risk
+## 12. Thời hạn hiệu lực của lệnh
 
-Stop order chỉ kích hoạt khi trigger được chạm; execution price sau đó phụ thuộc market.
+Một số quy ước phổ biến:
 
-Nếu stock đóng 100 rồi mở hôm sau ở 80 vì earnings shock, stop 95 không bảo đảm fill ở 95.
+- DAY;
+- GTC;
+- IOC;
+- FOK.
 
-Derivative markets có thể trade gần 24 giờ nên gap nhỏ hơn một số cash stocks, nhưng extreme news vẫn tạo jumps.
+**Thời hạn hiệu lực (time-in-force)** là một phần của logic thực thi, không chỉ là tùy chọn giao diện.
 
-Position sizing phải tính gap/tail risk, không chỉ historical candle range.
+## 13. Khớp một phần
 
-## 12. Volatility Clustering
+Nếu lệnh chỉ khớp một phần, mức phơi nhiễm thực tế khác mức dự kiến.
 
-Volatility có xu hướng cluster: giai đoạn biến động lớn thường được theo sau bởi biến động lớn hơn bình thường, và calm period thường kéo dài một thời gian.
+Hệ thống phải theo dõi:
 
-Điều này ảnh hưởng stop distance và size. Fixed 10-pip stop có thể hợp lý ở low-vol regime nhưng vô nghĩa trong high-vol regime.
+```text
+Khối lượng yêu cầu
+Khối lượng đã khớp
+Khối lượng còn lại
+Vị thế thực tế
+```
 
-ATR hoặc realized volatility có thể dùng để normalize risk, nhưng phải tránh overreact với một spike đơn lẻ.
+trước khi gửi lệnh thay thế.
 
-## 13. Intraday Seasonality
+## 14. Giao dịch nhiều chân
 
-Volume và volatility thay đổi theo thời gian trong ngày.
+Spread quyền chọn hoặc cấu trúc phòng vệ nhiều chân có thể giao dịch dưới dạng gói hoặc từng chân.
 
-Equity open thường volatile vì overnight information được price. Lunch period có thể quieter. Close có rebalancing và institutional flows.
+Thực thi từng chân tạo **rủi ro lệch chân (legging risk)**: chân đầu đã khớp nhưng chân sau di chuyển khỏi mức giá dự kiến.
 
-FX có Asia, London và New York activity patterns. Gold và index futures phản ứng mạnh quanh US macro releases.
+# Phần IV — Chênh lệch mua–bán và thanh khoản
 
-Strategy nên backtest đúng session thực sự định trade.
+## 15. Vì sao chênh lệch tồn tại?
 
-## 14. News Execution
+Chênh lệch mua–bán bù cho nhà cung cấp thanh khoản các rủi ro như:
 
-CPI, NFP, FOMC hoặc unexpected geopolitical news có thể làm spreads widen và prices jump.
+- lựa chọn bất lợi;
+- rủi ro tồn kho;
+- biến động;
+- sử dụng vốn;
+- phí của nơi giao dịch.
 
-Một stop-loss trong news event có thể slippage lớn. Limit entry có thể không fill hoặc fill ở đúng thời điểm adverse move bắt đầu.
+Khi bất định tăng, chênh lệch thường rộng hơn.
 
-Nếu strategy không được thiết kế cho news, cách quản trị tốt có thể là giảm size hoặc tránh new entries quanh event.
+## 16. Chênh lệch niêm yết và chênh lệch hiệu dụng
 
-## 15. Latency
+**Chênh lệch niêm yết (quoted spread)** là khoảng bid–ask đang hiển thị.
 
-Latency là delay từ khi signal xuất hiện tới khi order đến venue và fill.
+**Chênh lệch hiệu dụng (effective spread)** đo chi phí khớp thực tế so với điểm giữa hoặc mức tham chiếu.
 
-Với swing trading, vài trăm milliseconds thường không quan trọng. Với ultra-short-term arbitrage, đó có thể là toàn bộ edge.
+Khớp được giá tốt hơn có thể làm chi phí thấp hơn chênh lệch niêm yết; thị trường biến động nhanh có thể làm chi phí cao hơn.
 
-Retail trader nên chọn strategy phù hợp infrastructure. Cố cạnh tranh latency với professional HFT là sai game.
+## 17. Chênh lệch thực giữ được
 
-## 16. Broker Execution Model
+**Chênh lệch thực giữ được (realized spread)** đo phần chênh lệch còn lại sau một khoảng thời gian, giúp tách:
 
-Trong OTC Forex/CFD, broker có thể internalize flow hoặc hedge ra external venues tùy model.
+```text
+Thu nhập từ chênh lệch
+và
+Tổn thất do lựa chọn bất lợi
+```
 
-Điều quan trọng hơn marketing label là legal disclosure về execution, conflicts, price source và slippage policy.
+## 18. Thanh khoản là khái niệm nhiều chiều
 
-ECN/STP/market-maker labels thường bị dùng như marketing. Investor nên đọc best-execution hoặc order-execution documents nếu available.
+Cần nhìn cùng:
 
-## 17. Trading Portfolio thay vì từng lệnh
+- chênh lệch;
+- độ sâu;
+- khả năng hồi phục của sổ lệnh;
+- giá trị giao dịch;
+- tác động giá;
+- số ngày cần để thoát vị thế.
 
-Nếu bạn mở năm trades, risk không phải năm con số độc lập. Correlation làm chúng tương tác.
+Khối lượng cao không bảo đảm một lệnh lớn có thể thoát với chi phí thấp.
 
-Long EUR/USD và GBP/USD có shared USD factor. Long Nasdaq, semiconductor ETF và NVDA có shared tech/growth factor. Một USD shock hoặc rate shock có thể làm tất cả stop cùng lúc.
+## 19. Thanh khoản ẩn và lệnh iceberg
 
-Portfolio risk cần nhìn common drivers.
+Một số lệnh chỉ hiển thị một phần khối lượng. Vì vậy độ sâu nhìn thấy có thể thấp hơn thanh khoản thật.
 
-## 18. Portfolio Heat
+Ngược lại, thanh khoản đang hiển thị cũng có thể biến mất nhanh; ảnh chụp sổ lệnh không phải cam kết.
 
-Portfolio heat là tổng potential loss nếu open stops bị hit, thường biểu diễn theo % equity.
+## 20. Nơi giao dịch không hiển thị trước lệnh
 
-Nếu bốn positions mỗi trade risk 0,5%, nominal heat là 2%. Nhưng nếu correlated mạnh, thực tế tail loss có thể gần xảy ra đồng thời.
+**Dark pool** hoặc nơi giao dịch ngoài sở có thể giảm khả năng lệnh lớn tự tiết lộ ý định trước giao dịch, nhưng làm quá trình khám phá giá và đánh giá chất lượng thực thi phức tạp hơn.
 
-Rule có thể giới hạn both per-trade risk và total heat.
+## 21. Thị trường phân mảnh theo nhiều nơi giao dịch
 
-## 19. Correlation không cố định
+Một chứng khoán có thể giao dịch ở nhiều địa điểm. Định tuyến tốt phải cân nhắc:
 
-Historical correlation thay đổi theo regime. EUR/USD và gold có thể cùng phản ánh USD trong một period nhưng tách nhau khi real-yield shock dominates gold.
+```text
+Giá
+Phí / hoàn phí
+Hàng chờ
+Độ trễ
+Xác suất khớp
+```
 
-Trong crisis, correlations thường tăng vì deleveraging.
+Giá hiển thị tốt nhất chưa chắc tạo kết quả thực tế tốt nhất.
 
-Do đó correlation matrix là tool hỗ trợ, không phải guarantee diversification.
+# Phần V — Khám phá giá và phiên đấu giá
 
-## 20. Factor Exposure của Trading Book
+## 22. Khám phá giá
 
-Trading book có factor exposures giống investment portfolio.
+**Khám phá giá (price discovery)** là quá trình thông tin mới được phản ánh vào giá.
 
-Một trader có thể tưởng đang trade six markets nhưng thực chất tất cả positions đều long risk-on. Khi VIX spike, cả book lỗ.
+Tùy thị trường, thông tin có thể xuất hiện trước ở hợp đồng tương lai, ETF, quyền chọn, FX hoặc thị trường cơ sở.
 
-Hãy mô tả mỗi trade theo drivers: USD, rates, equity beta, commodity, volatility hoặc country risk. Điều này giúp thấy hidden concentration.
+Không nên dùng giá tham chiếu đã cũ như thể đó là giá trị hợp lý hiện tại.
 
-## 21. Volatility Targeting
+## 23. Đấu giá mở cửa
 
-Volatility targeting điều chỉnh size để portfolio risk ổn định hơn khi market volatility thay đổi.
+Đấu giá mở cửa gom thông tin qua đêm và lệnh chờ. Kiểm thử “mua tại giá mở cửa” phải mô hình hóa khoảng nhảy giá và cơ chế đấu giá thực tế.
 
-Nếu realized volatility tăng gấp đôi, size có thể giảm. Nếu volatility thấp, size tăng trong giới hạn.
+## 24. Đấu giá đóng cửa
 
-Cách này tránh portfolio tự nhiên trở nên quá leveraged đúng lúc market biến động mạnh.
+Đấu giá đóng cửa thường có khối lượng lớn do:
 
-Nhưng volatility targeting có thể tạo procyclical selling trong crisis nếu áp dụng máy móc.
+- quỹ chỉ số;
+- danh mục bám chuẩn;
+- tái cân bằng;
+- dòng lệnh tổ chức.
 
-## 22. Risk Parity trong Trading
+Giá đóng cửa chính thức không có nghĩa mọi nhà giao dịch đều có thể khớp đúng mức đó.
 
-Risk parity ở mức đơn giản là phân bổ risk thay vì capital bằng nhau.
+## 25. Mẫu hình trong ngày
 
-Một position gold với ATR lớn có notional nhỏ hơn EUR/USD để đóng góp cùng mức risk.
+Khối lượng và biến động thường có mẫu hình theo thời gian trong ngày. Cổ phiếu thường sôi động hơn đầu/cuối phiên; FX chịu ảnh hưởng các phiên châu Á, London và New York.
 
-Nhưng equal volatility không đồng nghĩa equal tail risk. Gap, liquidity và correlation vẫn cần xét.
+Mô hình chi phí nên phản ánh thời điểm giao dịch.
 
-## 23. Expected Shortfall
+# Phần VI — Trượt giá và tác động thị trường
 
-Value at Risk hỏi loss threshold trong một confidence level, nhưng không nói losses beyond threshold lớn tới đâu.
+## 26. Trượt giá
 
-Expected Shortfall ước lượng average loss trong tail vượt VaR. Đây là metric hữu ích hơn khi quan tâm extreme downside.
+**Trượt giá (slippage)** là chênh lệch giữa giá kỳ vọng và giá thực thi.
 
-Retail trader không cần model phức tạp, nhưng tư duy tail loss quan trọng: maximum observed loss trong backtest không phải maximum possible loss.
+Nó phụ thuộc:
 
-## 24. Drawdown Control
+- biến động;
+- mức khẩn cấp;
+- kích thước lệnh so với độ sâu;
+- độ trễ;
+- loại lệnh;
+- rủi ro sự kiện.
 
-Drawdown control có thể gồm giảm risk sau khi equity drawdown vượt threshold.
+Không nên dùng một con số trượt giá cố định cho mọi chế độ thị trường.
 
-Ví dụ normal risk 0,5% mỗi trade, giảm còn 0,25% khi drawdown >8R và dừng review nếu >12R. Con số phải dựa strategy statistics, không tùy ý.
+## 27. Mức thiếu hụt do thực thi
 
-Mục tiêu là giảm probability risk-of-ruin khi system có thể đang out of regime hoặc execution bị lỗi.
+**Mức thiếu hụt do thực thi (implementation shortfall)** đo khoảng cách giữa kết quả giả định nếu giao dịch được thực hiện tại giá quyết định và kết quả thật sau thực thi.
 
-## 25. Recovery Math
+Có thể phân rã thành:
 
-Loss 10% cần gain 11,1% để hồi. Loss 50% cần gain 100%.
+```text
+Phí
++ chênh lệch mua–bán
++ chi phí trì hoãn
++ tác động thị trường
++ chi phí cơ hội
+```
 
-Đây là lý do drawdown control có giá trị nonlinear. Protecting downside giúp compounding hơn chỉ cố maximize gross return.
+## 28. Chi phí cơ hội
 
-## 26. Pyramiding
+Một lệnh thụ động không khớp có thể không mất phí nhưng vẫn tạo chi phí nếu bỏ lỡ một biến động có lợi.
 
-Pyramiding là tăng position khi trade đi đúng hướng theo rule.
+“Không giao dịch được” cũng là một dạng chi phí thực thi.
 
-Cách này khác averaging down. Trader thêm risk vào confirmed move, nhưng phải tính total stop risk sau mỗi add.
+## 29. Tác động thị trường
 
-Nếu mỗi add có stop riêng mà combined loss vượt risk budget, pyramid trở thành hidden leverage.
+Chính lệnh của bạn có thể làm giá di chuyển. Tác động thường tăng khi:
 
-## 27. Scaling Out
+- lệnh lớn so với thanh khoản;
+- độ sâu thấp;
+- yêu cầu hoàn tất nhanh;
+- biến động cao.
 
-Partial exits giảm position theo milestones.
+**Công suất chiến lược (strategy capacity)** bị giới hạn bởi tác động thị trường, không chỉ bởi số dư tài khoản.
 
-Ưu điểm là lock một phần gain và giảm psychological pressure. Nhược điểm là có thể giảm average winner và expectancy nếu strategy cần rare large trends.
+## 30. Tác động tạm thời và tác động lâu dài
 
-Không có answer chung. Backtest exit distribution quyết định.
+Tác động tạm thời có thể hồi lại sau khi lệnh hoàn tất. Tác động lâu dài phản ánh thông tin hoặc tín hiệu từ lệnh đã được thị trường hấp thụ.
 
-## 28. MAE/MFE và Execution Review
+Thực thi tốt cố giảm phần tác động không cần thiết.
 
-MAE cho biết trade đi ngược tối đa; MFE cho biết đi thuận tối đa.
+## 31. Tỷ lệ tham gia
 
-Kết hợp với execution data, bạn có thể thấy stop bị hit vì spread widening hay thesis thật sự invalid. Bạn cũng có thể đo whether limit entries improve average price nhưng reduce fill quality.
+```text
+Tỷ lệ tham gia
+= Khối lượng của mình / Khối lượng thị trường
+```
 
-Execution review phải tách signal edge khỏi fill edge.
+Tỷ lệ cao giúp hoàn tất nhanh hơn nhưng thường làm tăng tác động giá và rủi ro tiết lộ ý định.
 
-## 29. Implementation Shortfall
+## 32. Công suất chiến lược
 
-Implementation shortfall đo difference giữa theoretical decision price và actual portfolio outcome sau execution costs.
+Công suất trả lời câu hỏi:
 
-Nếu strategy signal tại 100 nhưng average fill 100,4 và exit slippage thêm 0,3, actual return có thể khác đáng kể model.
+> Có thể triển khai bao nhiêu vốn trước khi chi phí ăn hết lợi thế?
 
-Theo dõi implementation shortfall giúp biết live underperformance đến từ strategy hay execution.
+Cần xem vòng quay, giá trị giao dịch trung bình, thời gian nắm giữ, tỷ lệ tham gia và kịch bản thoát khi căng thẳng.
 
-## 30. Journal ở cấp Portfolio
+# Phần VII — Thuật toán thực thi
 
-Ngoài journal từng trade, nên có daily portfolio journal.
+## 33. TWAP
 
-Ghi total heat, main factor exposures, high-impact events, realized P/L, slippage và rule violations. Sau đó review whether losses cluster quanh một factor hoặc session.
+TWAP chia lệnh tương đối đều theo thời gian. Cách này đơn giản nhưng không thích nghi tốt khi thanh khoản trong ngày thay đổi mạnh.
 
-Một portfolio journal có thể phát hiện hidden issue mà xem từng trade riêng lẻ không thấy.
+## 34. VWAP
 
-## 31. Kill Switch
+VWAP phân bổ lệnh theo hồ sơ khối lượng dự kiến hoặc thực tế. Đánh bại VWAP chỉ cho biết chất lượng thực thi so với chuẩn đó, không chứng minh quyết định đầu tư ban đầu là đúng.
 
-Kill switch là điều kiện dừng trading khi system hoặc infrastructure bất thường.
+## 35. POV
 
-Ví dụ data feed lỗi, spreads gấp nhiều lần bình thường, broker rejects orders liên tục hoặc daily loss vượt hard limit.
+**Tỷ lệ theo khối lượng (Percentage-of-Volume, POV)** duy trì một tỷ lệ giao dịch gần cố định so với khối lượng thị trường. Nó thích nghi với mức độ hoạt động nhưng có thể giao dịch nhiều hơn đúng lúc biến động tăng.
 
-Professional risk management luôn có scenario “không được trade”.
+## 36. Thuật toán tối ưu mức thiếu hụt do thực thi
 
-## 32. Strategy Capacity
+Loại thuật toán này cân bằng:
 
-Capacity là mức capital tối đa strategy có thể triển khai mà không làm edge suy giảm quá nhiều.
+```text
+Tác động giá nếu giao dịch nhanh
+với
+Rủi ro giá nếu chờ lâu
+```
 
-Scalping illiquid instrument capacity thấp. Daily trend strategy trên liquid futures capacity cao hơn.
+Mức khẩn cấp cao thường dẫn tới thực thi nhiều hơn ở đầu khoảng thời gian.
 
-Nếu account tăng, strategy có thể phải chuyển timeframe, instrument hoặc execution style.
+## 37. Giá tại thời điểm bắt đầu
 
-## 33. Live vs Backtest Decomposition
+**Giá lúc bắt đầu thực thi (arrival price)** là mức giá khi quá trình thực thi được khởi động và thường phù hợp với chiến lược có tín hiệu mất giá trị nhanh.
 
-Khi live kém backtest, phân rã difference thành signal drift, cost drift, execution drift và behavior drift.
+Chuẩn so sánh phải được chọn trước khi nhìn kết quả.
 
-Signal drift nghĩa market regime thay đổi. Cost drift là spread/commission tăng. Execution drift là fill/slippage khác model. Behavior drift là trader không tuân rule.
+## 38. Định tuyến lệnh thông minh
 
-Chẩn đoán đúng mới sửa đúng.
+**Định tuyến lệnh thông minh (Smart Order Routing, SOR)** chọn nơi giao dịch dựa trên giá, phí, hàng chờ, độ trễ và xác suất khớp.
 
-## 34. Khi nào nên bỏ một Strategy?
+Mục tiêu là chất lượng khớp thực tế tốt hơn, không chỉ giá hiển thị tốt hơn.
 
-Không nên bỏ system chỉ vì losing streak nằm trong expected distribution.
+# Phần VIII — Lựa chọn bất lợi và chất lượng dòng lệnh
 
-Nhưng nếu live drawdown vượt historical/Monte Carlo range đáng kể, market mechanics thay đổi hoặc edge logic không còn tồn tại, cần stop và re-research.
+## 39. Lựa chọn bất lợi
 
-Strategy retirement nên dựa data và economic rationale, không chỉ cảm xúc.
+Một lệnh thụ động có thể chỉ được khớp khi phía đối diện có lợi thế thông tin hoặc khi giá sắp di chuyển ngược vị thế.
 
-## Kết luận
+Do đó “kiếm chênh lệch” chưa chắc tạo lợi nhuận thực.
 
-Execution và portfolio risk là nơi một strategy từ “ý tưởng trên chart” trở thành trading system thực. Trader cần hiểu order book, spread, slippage, liquidity, broker structure và factor correlation. Một setup có edge nhỏ chỉ sống được nếu implementation cost được kiểm soát và tổng risk của nhiều positions được quản trị như một portfolio, không phải như các lệnh độc lập.
+## 40. Dòng lệnh bất lợi
+
+Nhà cung cấp thanh khoản đôi khi gọi **dòng lệnh độc (toxic flow)** là dòng lệnh thường xuất hiện ngay trước biến động giá bất lợi cho họ.
+
+Đây là vấn đề thông tin và thời điểm, không nên mặc định diễn giải thành thao túng.
+
+## 41. Quét thanh khoản
+
+Các lệnh dừng và lệnh phá vỡ thường tập trung quanh đỉnh/đáy rõ ràng. Khi vùng đó bị xuyên:
+
+```text
+Lệnh kích hoạt ↑
+→ lệnh thị trường tăng mạnh
+→ nếu có thanh khoản đối ứng hấp thụ
+→ giá có thể đảo chiều
+```
+
+Cơ chế này giải thích nhiều hành vi thường bị gắn nhãn “săn stop” mà không cần giả định âm mưu.
+
+# Phần IX — Tin tức, khoảng nhảy giá và cơ chế kiểm soát thị trường
+
+## 42. Giao dịch quanh sự kiện
+
+CPI, NFP, FOMC, báo cáo lợi nhuận hoặc địa chính trị có thể làm:
+
+- chênh lệch tăng;
+- độ sâu giảm;
+- trượt giá tăng;
+- lệnh dừng bị nhảy qua;
+- biến động hàm ý của quyền chọn thay đổi mạnh.
+
+Chiến lược không được thiết kế cho điều kiện sự kiện nên có quy tắc giảm quy mô hoặc tránh giao dịch.
+
+## 43. Rủi ro nhảy giá
+
+**Rủi ro nhảy giá (gap risk)** xuất hiện khi giá thay đổi rời rạc và đi qua mức dừng mà không giao dịch tại mọi mức trung gian.
+
+Mô hình rủi ro phải tính những bước nhảy này thay vì giả định đường giá liên tục.
+
+## 44. Ngắt giao dịch
+
+Cơ chế ngắt giao dịch (circuit breaker) hoặc tạm dừng chỉ ngăn giao dịch trong thời gian nhất định; nó không xóa rủi ro. Khi mở lại, giá vẫn có thể nhảy tiếp.
+
+## 45. Biên độ giá hằng ngày
+
+Ở thị trường có biên độ, vị thế có thể bị kẹt nhiều phiên nếu không có thanh khoản đối ứng. Quy mô vị thế phải tính cả kịch bản thoát qua nhiều phiên.
+
+# Phần X — Hệ thống và độ an toàn vận hành
+
+## 46. Độ trễ
+
+Độ trễ chỉ quan trọng so với thời hạn của chiến lược. Với giao dịch theo ngày hoặc tuần, vài trăm mili giây thường không quyết định; với chênh lệch giá dưới giây, nó có thể là yếu tố sống còn.
+
+## 47. Đồng bộ thời gian
+
+Dữ liệu thị trường, tín hiệu, lệnh và khớp lệnh cần cùng chuẩn thời gian. Nếu đồng hồ sai, việc so sánh mô phỏng với giao dịch thật trở nên thiếu tin cậy.
+
+## 48. Chất lượng dữ liệu
+
+Giá cũ, dữ liệu mất, điểm dữ liệu lỗi hoặc điều chỉnh hành động doanh nghiệp sai có thể tạo tín hiệu giả.
+
+Hệ thống thực tế cần kiểm tra đầu vào và có hành vi an toàn khi dữ liệu bất thường.
+
+## 49. Trạng thái tại nhà môi giới
+
+Thông báo “đã gửi lệnh” không có nghĩa lệnh đã khớp. Nếu kết nối mất, hệ thống phải hỏi lại trạng thái thật trước khi gửi lại.
+
+## 50. Tính không lặp tác dụng
+
+**Tính bất biến khi gửi lại (idempotency)** giúp tránh tạo lệnh trùng khi hệ thống thử lại sau lỗi mạng. Mã định danh lệnh phía khách hàng là công cụ quan trọng.
+
+## 51. Đối soát
+
+Vị thế, tiền mặt và lệnh đang mở trong hệ thống nội bộ phải được đối soát với nhà môi giới sau mất kết nối hoặc khởi động lại.
+
+Trạng thái tại nhà môi giới hoặc sở giao dịch mới là nguồn sự thật của mức phơi nhiễm thật.
+
+## 52. Công tắc dừng khẩn cấp
+
+Cần định nghĩa trước điều kiện dừng giao dịch, ví dụ:
+
+- dữ liệu thị trường lỗi;
+- lệnh trùng;
+- chênh lệch bất thường;
+- nhà môi giới mất kết nối;
+- lỗ ngày vượt giới hạn;
+- rủi ro vượt ngưỡng.
+
+**Công tắc dừng (kill switch)** là cơ chế sống còn của hệ thống thực tế.
+
+# Phần XI — Danh mục giao dịch
+
+## 53. Tổng rủi ro dự kiến của các vị thế
+
+Tổng các mức lỗ dừng dự kiến không thể chỉ cộng cơ học nếu nhiều vị thế cùng phụ thuộc một nhân tố.
+
+Năm giao dịch đều cược USD giảm có thể cùng thất bại dù mỗi giao dịch chỉ chiếm 0,5% rủi ro danh nghĩa.
+
+## 54. Phơi nhiễm ròng và tổng
+
+Danh mục long–short có beta ròng gần 0 nhưng vẫn có đòn bẩy tổng rất lớn.
+
+Phơi nhiễm tổng quyết định nhu cầu nguồn vốn, vòng quay, thanh khoản và rủi ro nhảy giá. Cần theo dõi cả ròng lẫn tổng.
+
+## 55. Phơi nhiễm nhân tố
+
+Nên ánh xạ vị thế sang các nhân tố như:
+
+- USD;
+- lãi suất;
+- beta cổ phiếu;
+- tăng trưởng;
+- hàng hóa;
+- biến động;
+- quốc gia;
+- thanh khoản.
+
+Cách này phát hiện tập trung ẩn tốt hơn chỉ nhìn tương quan từng cặp.
+
+## 56. Phơi nhiễm tương đương Delta
+
+Danh mục quyền chọn cần quy đổi theo Delta và theo dõi thêm Gamma, Vega. Phí quyền chọn nhỏ không có nghĩa mức phơi nhiễm kinh tế nhỏ.
+
+## 57. DV01 và rủi ro lãi suất
+
+Với trái phiếu và lãi suất, nên cộng gộp DV01 và DV01 theo điểm kỳ hạn. Bù trừ giá trị danh nghĩa có thể che một cược đường cong lớn.
+
+## 58. Rủi ro biến động
+
+Bán quyền chọn, chiến lược carry và một số chiến lược hồi quy về trung bình có thể đều đang bán biến động dù dùng công cụ khác nhau.
+
+Biến động nên được xem như một nhóm rủi ro riêng.
+
+## 59. Rủi ro thanh khoản
+
+Cổ phiếu nhỏ, tín dụng lợi suất cao, tài sản số ít thanh khoản và hợp đồng tương lai đông người cùng vị thế có thể cùng mất thanh khoản khi nguồn vốn căng.
+
+Tương quan thanh khoản thường tăng trong khủng hoảng.
+
+## 60. Tương quan không ổn định
+
+Tương quan lịch sử có thể thay đổi mạnh theo chế độ và thường tăng khi hệ thống giảm đòn bẩy. Cần dùng thêm kịch bản căng thẳng thay vì chỉ ma trận tương quan quá khứ.
+
+## 61. Nhắm mục tiêu độ biến động
+
+Nhắm mục tiêu độ biến động điều chỉnh quy mô vị thế để giữ rủi ro kỳ vọng ổn định hơn.
+
+Điểm yếu là tính thuận chu kỳ: biến động thấp khuyến khích tăng vị thế trước cú sốc; biến động cao buộc giảm vị thế sau khi giá đã giảm.
+
+## 62. Phân bổ ngang bằng rủi ro giữa giao dịch
+
+Cân bằng đóng góp độ biến động giúp tránh một thị trường thống trị toàn bộ danh mục, nhưng “cùng độ biến động” không có nghĩa cùng rủi ro đuôi. Cần điều chỉnh thêm cho nhảy giá, thanh khoản và tính phi tuyến.
+
+## 63. VaR và Expected Shortfall
+
+VaR ước lượng ngưỡng tổn thất ở mức tin cậy nhất định. Expected Shortfall ước lượng tổn thất trung bình sau khi đã vượt ngưỡng đó.
+
+Cả hai vẫn phụ thuộc dữ liệu và mô hình; kiểm thử kịch bản không thể bỏ qua.
+
+## 64. Kiểm soát mức suy giảm
+
+Quy tắc giảm rủi ro khi mức suy giảm tăng phải được định nghĩa trước, dựa trên phân phối của chiến lược và khả năng mô hình bị hỏng, không dựa trên cảm xúc trong thời điểm thua lỗ.
+
+# Phần XII — Phân tích chi phí giao dịch và vòng học
+
+## 65. MAE và MFE
+
+MAE/MFE giúp nghiên cứu đường đi của giao dịch trong thời gian nắm giữ. Chúng hữu ích cho chẩn đoán nhưng không nên được dùng để tối ưu lệnh dừng trên cùng một mẫu dữ liệu rồi coi kết quả là chắc chắn.
+
+## 66. Phân rã chất lượng thực thi
+
+Khoảng cách giữa mô phỏng và kết quả thật có thể tách thành:
+
+```text
+Thời điểm tín hiệu
+Quy mô vị thế
+Chênh lệch mua–bán
+Phí
+Trượt giá
+Lệnh không khớp
+Tác động thị trường
+Can thiệp thủ công
+```
+
+Phải sửa đúng lớp gây rò rỉ lợi thế.
+
+## 67. Phân tích chi phí giao dịch
+
+**Phân tích chi phí giao dịch (Transaction Cost Analysis, TCA)** phân nhóm lệnh theo:
+
+- chuẩn so sánh;
+- nơi giao dịch;
+- loại lệnh;
+- kích thước;
+- thời gian;
+- biến động;
+- thanh khoản.
+
+Mục tiêu là phát hiện có hệ thống nơi chiến lược đang mất lợi thế.
+
+## 68. Chi phí kỳ vọng và chi phí thực tế
+
+Mô hình nên dự báo chi phí chênh lệch, trượt giá và tác động. Phân phối chi phí thực tế phải được so lại thường xuyên.
+
+Chi phí xấu đi kéo dài có thể báo hiệu chiến lược bị đông người dùng, vượt công suất hoặc cấu trúc thị trường đã thay đổi.
+
+## 69. Xác suất khớp và lựa chọn bất lợi
+
+Không nên chỉ tối ưu tỷ lệ khớp. Tỷ lệ khớp cao nhưng giá đi ngược ngay sau khớp có thể là dấu hiệu lựa chọn bất lợi.
+
+Cần xem cùng:
+
+```text
+Xác suất khớp
+Mức cải thiện giá
+Biến động sau khớp
+Chi phí cơ hội
+```
+
+## 70. Theo dõi công suất
+
+Khi quy mô vốn tăng, hãy theo dõi:
+
+- tỷ lệ tham gia;
+- tác động giá;
+- thời gian thoát;
+- tỷ lệ không khớp;
+- chi phí trên mỗi đơn vị lợi thế.
+
+Nếu chi phí tăng nhanh hơn lợi nhuận gộp, chiến lược đã gần hoặc vượt công suất.
+
+## 71. Kết luận
+
+Một chiến lược giao dịch thực tế phải sống được qua toàn chuỗi:
+
+```text
+Tín hiệu
+→ Quy mô rủi ro
+→ Lệnh
+→ Khớp lệnh
+→ Chi phí
+→ Mức phơi nhiễm danh mục
+→ Kiểm soát vận hành
+→ Đối soát
+→ Phân tích kết quả
+```
+
+Lợi thế không nằm riêng ở tín hiệu. Nó nằm ở khả năng bảo toàn giá trị của tín hiệu sau chi phí, thanh khoản, thực thi và các giới hạn vận hành.

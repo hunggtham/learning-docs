@@ -1,11 +1,22 @@
 {
-  "name": "Study Shelf",
+  "id": "./",
+  "name": "Study Shelf Learning OS",
   "short_name": "Study Shelf",
-  "description": "Personal Markdown and PDF study library",
+  "description": "Personal learning library with global search, reading progress, review queue, offline reading and knowledge links.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
   "background_color": "#f7f5f1",
   "theme_color": "#111827",
-  "lang": "vi"
+  "lang": "vi",
+  "categories": ["education", "productivity"],
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
 }

@@ -1,40 +1,42 @@
 # Swift & iOS Master Note — Beginner
 
-> Phạm vi: Swift căn bản, tư duy lập trình, cấu trúc một ứng dụng iOS, Xcode, SwiftUI, UIKit ở mức nhập môn, Foundation, state, navigation, networking và persistence cơ bản.
+> Phạm vi: Swift căn bản, tư duy lập trình, cấu trúc một ứng dụng iOS, Xcode, Foundation, SwiftUI, UIKit, state, networking, persistence và concurrency ở mức nhập môn.
 >
-> Baseline thực hành: Xcode 27 + Swift 6.4. Xcode 27 + Swift 6.4 + iOS 27 SDK là baseline hiện hành. Xcode 27.1/27.2 đang ở beta, vì vậy API chỉ xuất hiện ở các bản beta minor sẽ được đánh dấu riêng.
+> Baseline thực hành: **Xcode 27 + Swift 6.4 + iOS 27 SDK**. Xcode 27.1/27.2 đang ở beta tại thời điểm cập nhật 21/09/2026 nên không được dùng làm baseline stable.
 
-## 0. Swift, iOS, Xcode và các khái niệm cần phân biệt
-
-Swift là ngôn ngữ lập trình do Apple khởi xướng, được thiết kế để có hiệu năng gần nhóm ngôn ngữ compiled như C/C++, nhưng ưu tiên mạnh vào type safety, memory safety và cú pháp dễ đọc. Swift không đồng nghĩa với iOS. Bạn có thể dùng Swift cho macOS, watchOS, tvOS, visionOS, server, command line, WebAssembly và một số môi trường khác. Trong phạm vi tài liệu này, Swift được học chủ yếu để phát triển ứng dụng iPhone/iPad.
-
-iOS SDK là tập hợp framework, API, compiler support và resource mà Apple cung cấp để ứng dụng tương tác với hệ điều hành. Trong đó, `Foundation` cung cấp các kiểu và API nền tảng như `Date`, `URL`, `Data`, networking, file system và encoding; `SwiftUI` là framework UI declarative hiện đại; `UIKit` là framework UI imperative truyền thống nhưng vẫn cực kỳ quan trọng trong production, đặc biệt khi bảo trì codebase cũ hoặc cần API chưa có wrapper SwiftUI tương đương.
-
-Xcode là IDE chính thức của Apple. Nó chứa Swift compiler, build system, debugger LLDB, Interface Builder, Simulator, Instruments, code signing integration, Test navigator, package manager integration và các công cụ phát hành ứng dụng. Bạn có thể viết Swift bằng editor khác, nhưng để build, sign, chạy Simulator và phát hành iOS app thì Xcode vẫn là trung tâm của workflow.
-
-### 0.1 Version và deployment target
-
-Ba khái niệm phải tách rõ là phiên bản Swift, phiên bản Xcode và deployment target. Swift version quyết định language mode và tính năng ngôn ngữ. Xcode version quyết định toolchain và SDK được cài. Deployment target là phiên bản iOS thấp nhất mà app cho phép cài.
-
-Ví dụ, bạn có thể build bằng Xcode 27 với Swift 6.4 nhưng đặt iOS Deployment Target là iOS 17. Khi đó compiler hiểu Swift 6.4, nhưng code chỉ được gọi API tồn tại từ iOS 17 trở xuống, trừ khi bạn dùng availability check như:
-
-```swift
-if #available(iOS 27.0, *) {
-    // API mới
-} else {
-    // fallback cho iOS cũ hơn
-}
-```
-
-Điều này là nền tảng để hiểu tại sao “code compile được” chưa chắc “chạy được trên mọi thiết bị mà app hỗ trợ”.
+Tài liệu này không phải cheat sheet. Mục tiêu của Beginner là tạo một mental model đủ chắc để khi sang Intermediate, các chủ đề như actor, `Sendable`, Observation, architecture hay persistence không trở thành những annotation/API phải học thuộc lòng. Hãy đọc theo thứ tự; những phần sau giả định bạn hiểu ownership, Optional, value/reference semantics và closure ở các phần trước.
 
 ---
 
-# 1. Cài đặt và làm quen với Xcode
+# 0. Swift, iOS, SDK và Xcode là những lớp khác nhau
 
-## 1.1 Cài Xcode
+Swift là ngôn ngữ lập trình. iOS là hệ điều hành. iOS SDK là tập framework và API mà app dùng để tương tác với hệ điều hành. Xcode là IDE/toolchain chính thức chứa compiler, linker, debugger LLDB, build system, Simulator, Instruments, signing integration và các công cụ release.
 
-Cài Xcode từ Mac App Store hoặc Apple Developer Downloads. Với nhiều version Xcode trên cùng máy, có thể đổi command line tool bằng:
+Các framework nền tảng cần phân biệt sớm. `Swift Standard Library` cung cấp `Int`, `String`, `Array`, `Optional`, collection algorithms và phần lớn primitive của ngôn ngữ. `Foundation` bổ sung `Date`, `URL`, `Data`, `FileManager`, `URLSession`, encoding và nhiều API platform-neutral. `SwiftUI` là framework UI declarative hiện đại. `UIKit` là framework UI imperative/lifecycle-driven truyền thống nhưng vẫn rất quan trọng trong production, SDK integration và codebase legacy.
+
+## 0.1 Swift version, language mode, Xcode, SDK và deployment target
+
+Đây là năm khái niệm liên quan nhưng không đồng nhất. Xcode chứa một Swift compiler cụ thể và các SDK cụ thể. Swift language mode quyết định tập semantics/language rules mà target dùng. SDK version quyết định compiler biết những API platform nào. Deployment target lại là OS thấp nhất app hỗ trợ ở runtime.
+
+Ví dụ, một app có thể build bằng Xcode 27/Swift 6.4 nhưng deployment target là iOS 17. Compiler hiểu cú pháp Swift 6.4, nhưng API chỉ tồn tại từ iOS 27 phải được bảo vệ bằng availability:
+
+```swift
+if #available(iOS 27.0, *) {
+    // API chỉ dùng khi runtime đủ mới
+} else {
+    // fallback
+}
+```
+
+Compile-time condition như `#if DEBUG`, `#if os(iOS)` hoặc `#if canImport(...)` là chuyện khác: nó quyết định source nào được compile, không phải branch runtime.
+
+---
+
+# 1. Làm quen Xcode trước khi viết app
+
+## 1.1 Cài và kiểm tra toolchain
+
+Xcode có thể được cài từ Mac App Store hoặc Apple Developer Downloads. Nếu máy có nhiều Xcode:
 
 ```bash
 sudo xcode-select -s /Applications/Xcode.app
@@ -42,21 +44,21 @@ xcodebuild -version
 swift --version
 ```
 
-Lần đầu mở Xcode, IDE có thể yêu cầu cài thêm platform runtime hoặc Simulator. Simulator là môi trường giả lập thiết bị Apple trên Mac; nó không hoàn toàn giống thiết bị thật, đặc biệt với camera, push notification, thermal state, Bluetooth, background execution, keychain behavior và performance.
+Simulator giúp feedback nhanh nhưng không phải thiết bị thật. Camera, push notification, thermal behavior, memory pressure, background execution, Keychain, Bluetooth và performance cần được test trên device phù hợp.
 
-## 1.2 Tạo project iOS đầu tiên
+## 1.2 Project, target, scheme và build configuration
 
-Trong Xcode chọn `File > New > Project > iOS > App`. Các trường quan trọng gồm Product Name, Team, Organization Identifier, Interface, Language và Testing System.
+Khi tạo `iOS > App`, Xcode tạo project chứa ít nhất một application target. `Target` mô tả một sản phẩm build như app, test bundle, widget hoặc framework. `Scheme` mô tả cách build/run/test/profile/archive target. `Build Configuration` thường có Debug và Release. Debug ưu tiên debuggability; Release bật optimization và là nơi nhiều bug timing/data race chỉ xuất hiện rõ.
 
-`Bundle Identifier` thường có dạng reverse-domain, ví dụ `com.example.MyApp`. Nó định danh app trong hệ sinh thái Apple và liên quan đến signing, App ID, push notification, keychain group và App Store Connect.
+`Bundle Identifier` thường có dạng reverse-domain như `com.example.reader`. Nó liên quan đến App ID, signing, push, keychain access group và App Store Connect.
 
-Nếu chọn SwiftUI, entry point thường giống:
+SwiftUI app entry point thường là:
 
 ```swift
 import SwiftUI
 
 @main
-struct MyApp: App {
+struct ReaderApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
@@ -65,112 +67,144 @@ struct MyApp: App {
 }
 ```
 
-`@main` đánh dấu điểm bắt đầu của executable. `App` là protocol của SwiftUI. `Scene` biểu diễn một phần vòng đời UI cấp ứng dụng. `WindowGroup` tạo window chứa view gốc.
-
-## 1.3 Target, Scheme, Configuration và Build Settings
-
-`Target` mô tả một sản phẩm được build, ví dụ iOS app, widget extension, test bundle hoặc framework. `Scheme` mô tả cách build/run/test/profile/archive một hoặc nhiều target. `Build Configuration` thường là Debug và Release. Debug ưu tiên khả năng debug, còn Release bật optimization phù hợp phát hành.
-
-Build Settings có rất nhiều option. Người mới cần hiểu trước: `Product Bundle Identifier`, `iOS Deployment Target`, `Swift Language Version`, `Code Signing`, `Architectures`, `Other Swift Flags`, `Optimization Level`, `Info.plist` generation và capability-related settings.
-
-Không nên chỉnh Build Settings ngẫu nhiên. Trong production, một thay đổi nhỏ như sai deployment target, signing team hay `SWIFT_STRICT_CONCURRENCY` có thể ảnh hưởng toàn bộ target.
+`@main` đánh dấu entry point. `App` mô tả lifecycle ở mức ứng dụng; `Scene` mô tả một presentation/window lifecycle.
 
 ---
 
-# 2. Cú pháp Swift nền tảng
+# 2. Values, variables và type system nền tảng
 
-## 2.1 `let` và `var`
-
-Swift phân biệt constant và variable:
+## 2.1 `let`, `var` và type inference
 
 ```swift
-let appName = "Master Swift"
+let appName = "Reader"
 var launchCount = 0
 launchCount += 1
 ```
 
-`let` không cho gán lại binding sau khi khởi tạo. `var` cho phép thay đổi. Idiom quan trọng của Swift là “prefer `let` by default”: nếu một giá trị không cần mutation, dùng `let` để compiler và người đọc hiểu invariant rõ hơn.
+`let` tạo binding không được gán lại; `var` cho phép mutation. Hãy ưu tiên `let` nếu không cần thay đổi vì nó làm invariant rõ hơn cho compiler và người đọc.
 
-Swift có type inference:
+Swift suy luận type:
 
 ```swift
 let name = "Anna"      // String
-let age = 30           // Int
-let price = 12.5       // Double
-let active = true      // Bool
+let age = 30            // Int
+let price = 12.5        // Double
+let active = true       // Bool
 ```
 
-Hoặc khai báo type rõ ràng:
+Hoặc khai báo rõ:
 
 ```swift
-let count: Int = 10
-let ratio: Double = 0.75
+let retryCount: Int = 3
+let timeout: Double = 30
 ```
 
-## 2.2 Các kiểu dữ liệu cơ bản
+## 2.2 Numeric types và conversion
 
-Các numeric type phổ biến là `Int`, `UInt`, `Double`, `Float`. Trong app thông thường, ưu tiên `Int` cho integer và `Double` cho số thực. Không tự động convert giữa numeric types:
+Các type thường gặp là `Int`, `UInt`, `Double`, `Float`. Trong app thông thường, dùng `Int` cho integer và `Double` cho floating-point trừ khi domain/interop yêu cầu type khác.
+
+Swift không tự chuyển numeric type tùy ý:
 
 ```swift
-let a = 10
-let b = 2.5
-let result = Double(a) + b
+let count = 10
+let ratio = 2.5
+let result = Double(count) * ratio
 ```
 
-`String` là Unicode-correct collection of `Character`, không nên giả định mỗi ký tự có đúng một byte hoặc một UTF-16 code unit.
+Floating-point không biểu diễn chính xác mọi số thập phân. Không dùng `Double` làm model tiền nếu domain yêu cầu decimal arithmetic chính xác; `Decimal` hoặc integer minor units thường phù hợp hơn tùy hệ thống.
+
+Overflow integer thường trap trong build bình thường. Swift có overflow operator `&+`, `&-`, `&*`, nhưng chỉ dùng khi wraparound là semantics có chủ đích.
+
+## 2.3 Boolean và comparison
+
+Điều kiện Swift phải là `Bool`; không có kiểu “0 là false, khác 0 là true” như C.
 
 ```swift
-let greeting = "Xin chào"
-let message = "\(greeting), Swift!"
+if items.isEmpty {
+    print("No items")
+}
 ```
 
-String interpolation `\(...)` là idiom chính để nhúng expression.
+Các operator so sánh gồm `==`, `!=`, `<`, `<=`, `>`, `>=`; logical operator gồm `!`, `&&`, `||` và short-circuit theo thứ tự expression.
 
-## 2.3 Collection: Array, Set, Dictionary
+## 2.4 Tuple và `typealias`
 
-`Array<Element>` là collection có thứ tự và cho phép phần tử trùng:
+Tuple phù hợp với giá trị cục bộ nhỏ:
+
+```swift
+let user = (id: 42, name: "Minh")
+print(user.name)
+```
+
+Nếu dữ liệu có semantic lâu dài, hãy dùng `struct` thay vì lan truyền tuple qua nhiều layer.
+
+`typealias` tạo tên khác cho type, không tạo type mới:
+
+```swift
+typealias UserID = UUID
+```
+
+Nếu cần compiler phân biệt `UserID` và `OrderID`, hãy tạo wrapper type thay vì hai `typealias UUID`.
+
+---
+
+# 3. String, Character, collection và indexing
+
+## 3.1 String là Unicode, không phải mảng byte
+
+Một ký tự người dùng nhìn thấy có thể chứa nhiều Unicode scalar. Vì vậy `String.Index` không phải `Int`.
+
+```swift
+let text = "Swift 👨‍👩‍👧‍👦"
+let first = text[text.startIndex]
+let next = text.index(after: text.startIndex)
+let prefix = text.prefix(5)
+```
+
+Nếu cần vị trí `n`:
+
+```swift
+let index = text.index(text.startIndex, offsetBy: n)
+let character = text[index]
+```
+
+Random access theo integer lặp đi lặp lại trên `String` có thể là dấu hiệu data structure sai. Với binary protocol, dùng `Data`/byte-oriented API thay vì ép `String` thành byte array.
+
+## 3.2 Array, Set, Dictionary
 
 ```swift
 var names = ["An", "Bình", "Chi"]
 names.append("Dung")
-let first = names[0]
-```
 
-Truy cập index ngoài phạm vi gây runtime trap. Khi không chắc index hợp lệ, kiểm tra `indices.contains(index)` hoặc dùng algorithm phù hợp thay vì hard-code index.
-
-`Set<Element>` lưu phần tử unique, không đảm bảo thứ tự logic dùng cho UI:
-
-```swift
 var tags: Set<String> = ["swift", "ios"]
 tags.insert("xcode")
-```
 
-`Dictionary<Key, Value>` ánh xạ key → value:
-
-```swift
 var scores = ["Alice": 90, "Bob": 80]
-scores["Alice"] = 95
-let score = scores["Bob"] // Int?
+let bob = scores["Bob"] // Int?
 ```
 
-Việc lookup dictionary trả optional vì key có thể không tồn tại.
+`Array` có thứ tự và cho phép duplicate. `Set` giữ phần tử unique và yêu cầu `Hashable`. Dictionary lookup trả Optional vì key có thể không tồn tại.
 
-## 2.4 Tuple
+Truy cập array index ngoài range sẽ trap. Khi identity của UI item là entity identity, không dùng index thay cho ID chỉ vì thuận tiện.
 
-Tuple gom nhiều giá trị tạm thời mà không cần tạo type riêng:
+## 3.3 Collection algorithms
 
 ```swift
-let user = (id: 1, name: "Minh")
-print(user.id)
+let activeNames = users
+    .filter(\.isActive)
+    .map(\.name)
+    .sorted()
+
+let numbers = ["1", "x", "3"].compactMap(Int.init)
 ```
 
-Tuple hữu ích với local return nhỏ. Với model có semantic rõ hoặc tồn tại lâu, nên tạo `struct`.
+`map` transform từng phần tử; `compactMap` transform và bỏ nil; `flatMap` flatten nested sequence; `filter` giữ phần tử thỏa predicate; `reduce` gộp sequence. Không cần biến mọi loop thành functional chain: `for` loop vẫn tốt khi có early exit, mutation hoặc control flow phức tạp.
 
 ---
 
-# 3. Control Flow
+# 4. Control flow và pattern matching
 
-## 3.1 `if`, `else`, ternary và expression
+## 4.1 `if`, ternary, `guard`
 
 ```swift
 if age >= 18 {
@@ -178,21 +212,20 @@ if age >= 18 {
 } else {
     print("Minor")
 }
+
+let title = isLoggedIn ? "Home" : "Login"
 ```
 
-Swift không cho dùng integer như Boolean. Điều kiện phải có type `Bool`.
-
-Ternary:
+`guard` phù hợp để kiểm precondition rồi thoát sớm:
 
 ```swift
-let status = isLoggedIn ? "Logged In" : "Guest"
+func load(userID: String?) {
+    guard let userID else { return }
+    print(userID)
+}
 ```
 
-Nên dùng ternary cho expression ngắn. Logic phức tạp nên dùng `if`.
-
-## 3.2 `switch`
-
-`switch` trong Swift phải exhaustive:
+## 4.2 `switch` exhaustive
 
 ```swift
 switch statusCode {
@@ -207,71 +240,57 @@ default:
 }
 ```
 
-Swift không fall-through mặc định. Nếu thực sự cần hành vi đó có keyword `fallthrough`, nhưng thường nên tránh.
+Swift không fall through mặc định. Exhaustiveness làm enum/state machine an toàn hơn khi thêm case mới.
 
-Pattern matching là sức mạnh lớn của `switch`:
+## 4.3 `if case`, `guard case`, `for case`
+
+Pattern matching không chỉ tồn tại trong `switch`:
 
 ```swift
-let point = (2, 0)
+if case .success(let user) = result {
+    print(user)
+}
 
-switch point {
-case (0, 0):
-    print("Origin")
-case (_, 0):
-    print("On X axis")
-case (0, _):
-    print("On Y axis")
-case let (x, y):
-    print("\(x), \(y)")
+guard case .authenticated(let session) = state else {
+    return
+}
+
+for case let .success(value) in results {
+    print(value)
 }
 ```
 
-## 3.3 Loop
+Các form này hữu ích khi chỉ quan tâm một pattern mà không cần `switch` đầy đủ.
+
+## 4.4 Loop và range
 
 ```swift
-for number in 1...5 {
-    print(number)
-}
+for number in 1...5 { }
+for number in 1..<5 { }
 
-for number in 1..<5 {
-    print(number)
-}
-
-var n = 3
-while n > 0 {
-    n -= 1
+var retry = 3
+while retry > 0 {
+    retry -= 1
 }
 ```
 
-`...` là closed range, `..<` là half-open range.
+`...` là closed range, `..<` là half-open range. Collection code thường dùng half-open range vì upper bound có thể là `endIndex`.
 
 ---
 
-# 4. Function và parameter
+# 5. Function, parameter và call-site design
 
-Function:
+## 5.1 Function và argument label
 
 ```swift
-func greet(name: String) -> String {
-    "Hello, \(name)"
+func greet(_ person: String, from city: String) -> String {
+    "Hello \(person) from \(city)"
 }
+
+greet("Minh", from: "Seoul")
 ```
 
-Swift có argument label:
-
-```swift
-func move(from source: String, to destination: String) { }
-
-move(from: "A", to: "B")
-```
-
-Tên đầu tiên trước parameter là argument label, tên thứ hai là local parameter name:
-
-```swift
-func greet(_ person: String, from city: String) { }
-```
-
-`_` loại bỏ label ở call site.
+Argument label là một phần của API readability. Swift API tốt nên đọc gần như một câu ở call site.
 
 Default parameter:
 
@@ -287,210 +306,228 @@ func sum(_ numbers: Int...) -> Int {
 }
 ```
 
-Function là first-class value:
+## 5.2 Function là value
 
 ```swift
-func add(_ a: Int, _ b: Int) -> Int { a + b }
-
+func add(_ lhs: Int, _ rhs: Int) -> Int { lhs + rhs }
 let operation: (Int, Int) -> Int = add
 ```
 
+Function có thể được truyền vào function khác, lưu trong property hoặc trả về như value. Đây là nền tảng của closure, callback, higher-order function và dependency injection bằng function value.
+
+## 5.3 `inout`
+
+Parameter mặc định là value được truyền vào theo semantics của type. `inout` cho phép function mutate caller storage:
+
+```swift
+func increment(_ value: inout Int) {
+    value += 1
+}
+
+var count = 0
+increment(&count)
+```
+
+`inout` không có nghĩa “pointer C thông thường”. Swift thực thi exclusivity rule để tránh hai access ghi/đọc xung đột cùng storage.
+
+## 5.4 Overload và ambiguity
+
+Swift cho phép nhiều function cùng tên nếu signature khác nhau. Overload giúp API tự nhiên nhưng quá nhiều overload generic có thể khiến call site/diagnostic khó hiểu. Khi semantic khác nhau rõ rệt, tên khác thường tốt hơn ép compiler đoán.
+
 ---
 
-# 5. Optional — phần bắt buộc phải thật sự hiểu
+# 6. Optional — mô hình hóa sự vắng mặt trong type system
 
-Optional biểu diễn “có value hoặc không có value”. `String?` không phải `String`; nó là `Optional<String>`.
+`String?` là `Optional<String>`, nghĩa là có value hoặc `nil`.
 
 ```swift
 var nickname: String? = nil
 nickname = "Tom"
 ```
 
-Không được cưỡng ép dùng value optional như non-optional. Có nhiều cách unwrap.
-
-`if let`:
+## 6.1 Unwrap
 
 ```swift
 if let nickname {
     print(nickname)
 }
-```
 
-`guard let` phù hợp early exit:
-
-```swift
-func show(userID: String?) {
-    guard let userID else {
-        return
-    }
-
-    print(userID)
-}
-```
-
-Nil coalescing:
-
-```swift
 let displayName = nickname ?? "Anonymous"
-```
-
-Optional chaining:
-
-```swift
 let length = user.profile?.name.count
 ```
 
-Force unwrap `!`:
+`guard let` phù hợp với early-exit; nil coalescing `??` phù hợp default value; optional chaining phù hợp chuỗi property/method có thể nil.
+
+## 6.2 Force unwrap
 
 ```swift
 let value = nickname!
 ```
 
-`!` nghĩa là “tôi khẳng định value chắc chắn khác nil”. Nếu sai, app crash. Trong production, force unwrap chỉ hợp lý khi invariant thực sự được đảm bảo bởi thiết kế hoặc framework; nếu chỉ dùng để “làm compiler im lặng” thì đó là code smell.
+`!` là assertion runtime. Nếu value nil, app trap. Chỉ dùng khi invariant thực sự được bảo đảm bởi thiết kế/framework. “Compiler đang báo lỗi” không phải lý do hợp lệ.
 
-Implicitly unwrapped optional `String!` thường gặp ở code UIKit/IBOutlet cũ. Hãy hiểu nó nhưng đừng lạm dụng.
+Implicitly unwrapped Optional (`String!`) vẫn xuất hiện trong IBOutlet/API Objective-C legacy. Hãy hiểu để maintain code, không dùng làm default cho model mới.
 
 ---
 
-# 6. Struct, Class, Enum và Protocol
+# 7. Struct, class, enum và protocol
 
-## 6.1 `struct`
+## 7.1 Struct và value semantics
 
 ```swift
 struct User {
-    let id: Int
+    let id: UUID
     var name: String
-
-    func displayName() -> String {
-        name
-    }
 }
-```
 
-Struct là value type. Khi gán sang biến khác, về mặt semantics nó được copy:
-
-```swift
-var a = User(id: 1, name: "A")
+var a = User(id: UUID(), name: "A")
 var b = a
 b.name = "B"
-
-print(a.name) // A
 ```
 
-Swift standard library dùng value semantics rất nhiều.
+Về semantics, `a` và `b` là hai value độc lập. Standard collection như Array/String có thể dùng copy-on-write nội bộ để tránh copy vật lý không cần thiết, nhưng code của bạn vẫn phải reasoning như value semantics.
 
-## 6.2 `class`
+## 7.2 Class, identity và reference semantics
 
 ```swift
 final class Session {
     var token: String?
-
-    init(token: String? = nil) {
-        self.token = token
-    }
 }
+
+let first = Session()
+let second = first
+print(first === second) // true
 ```
 
-Class là reference type. Nhiều reference có thể trỏ cùng một instance. Class hỗ trợ inheritance và identity (`===`).
+Nhiều reference có thể trỏ cùng instance. Vì vậy mutation qua một reference có thể được quan sát từ reference khác. `===` kiểm identity, khác `==` là equality semantic.
+
+Nếu không chủ đích thiết kế inheritance, `final class` thường thể hiện intent tốt hơn.
+
+## 7.3 Enum: raw value, associated value và recursive state
 
 ```swift
-let a = Session()
-let b = a
-print(a === b) // true
-```
+enum Direction: String {
+    case north, south, east, west
+}
 
-`final` ngăn subclass. Nếu không thiết kế inheritance, `final class` thường cho intent rõ hơn và có thể giúp compiler optimize.
-
-## 6.3 `enum`
-
-Swift enum mạnh hơn enum kiểu integer truyền thống:
-
-```swift
 enum LoadState {
     case idle
     case loading
     case success([User])
-    case failure(Error)
+    case failure(any Error)
 }
 ```
 
-Associated values giúp mô hình hóa state machine:
+Raw value là giá trị cố định gắn với case. Associated value mang payload khác nhau theo case. Đây là công cụ rất mạnh để loại bỏ trạng thái bất khả thi.
+
+Enum recursive cần `indirect`:
 
 ```swift
-switch state {
-case .idle:
-    break
-case .loading:
-    ProgressView()
-case .success(let users):
-    Text("\(users.count)")
-case .failure(let error):
-    Text(error.localizedDescription)
+indirect enum Expression {
+    case number(Int)
+    case add(Expression, Expression)
 }
 ```
 
-## 6.4 Protocol
-
-Protocol định nghĩa capability/contract:
+## 7.4 Protocol
 
 ```swift
-protocol IdentifiableItem {
-    var id: String { get }
-    func displayName() -> String
+protocol Displayable {
+    var title: String { get }
+    func displayText() -> String
 }
 ```
 
-Type conform:
+Protocol mô tả capability/contract. Không tạo protocol chỉ vì “architecture mẫu có protocol”. Protocol có giá trị khi cần generic constraint, substitution, cross-module contract hoặc test seam thực sự.
+
+---
+
+# 8. Initialization, extension, nested type và subscript
+
+## 8.1 Initialization
+
+Struct có memberwise initializer nếu điều kiện phù hợp. Class có designated/convenience initializer và inheritance rule riêng. Failable initializer dùng `init?` khi input có thể không tạo được value hợp lệ.
 
 ```swift
-struct Product: IdentifiableItem {
-    let id: String
-    let name: String
+struct EmailAddress {
+    let value: String
 
-    func displayName() -> String {
-        name
+    init?(_ value: String) {
+        guard value.contains("@") else { return nil }
+        self.value = value
     }
 }
 ```
 
-Swift dùng protocol-oriented programming rất nhiều. Tuy nhiên “dùng protocol cho mọi thứ” không phải best practice; protocol nên xuất hiện khi thật sự cần abstraction, substitution, generic constraint hoặc test seam.
+Initializer phải đưa object vào trạng thái hợp lệ trước khi sử dụng `self` tự do. Đừng đẩy object “nửa khởi tạo” ra bên ngoài rồi mong caller nhớ gọi `setup()` nếu invariant có thể đảm bảo ngay trong init.
+
+## 8.2 Extension
+
+```swift
+extension String {
+    var isBlank: Bool {
+        trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+    }
+}
+```
+
+Extension nhóm behavior/conformance tốt, nhưng đừng rải một type thành hàng chục extension không có boundary rõ ràng.
+
+## 8.3 Nested type
+
+```swift
+struct APIRequest {
+    enum Method {
+        case get, post
+    }
+}
+```
+
+Nested type hữu ích khi type con chỉ có ý nghĩa trong namespace của type cha.
+
+## 8.4 Subscript
+
+```swift
+struct Matrix {
+    let rows: Int
+    let columns: Int
+    private var values: [Double]
+
+    subscript(row: Int, column: Int) -> Double {
+        get { values[row * columns + column] }
+        set { values[row * columns + column] = newValue }
+    }
+}
+```
+
+Subscript nên có semantics truy cập giống collection/index, không nên che một operation đắt đỏ hoặc side effect khó đoán.
 
 ---
 
-# 7. Property và Method
+# 9. Property, method và type-level member
 
-Stored property lưu dữ liệu. Computed property tính toán value:
+Stored property giữ dữ liệu; computed property tính value:
 
 ```swift
 struct Rectangle {
     var width: Double
     var height: Double
 
-    var area: Double {
-        width * height
-    }
+    var area: Double { width * height }
 }
 ```
 
 Property observer:
 
 ```swift
-var progress: Double = 0 {
+var progress = 0.0 {
     didSet {
-        print("Changed from \(oldValue) to \(progress)")
+        print("\(oldValue) -> \(progress)")
     }
 }
 ```
 
-Type property:
-
-```swift
-struct API {
-    static let baseURL = URL(string: "https://example.com")!
-}
-```
-
-Instance method có thể mutate state của class trực tiếp, nhưng method của struct phải dùng `mutating` nếu thay đổi stored property:
+Struct method cần `mutating` nếu sửa state:
 
 ```swift
 struct Counter {
@@ -502,32 +539,173 @@ struct Counter {
 }
 ```
 
+`static` member thuộc type. Class còn có `class` member cho phép subclass override:
+
+```swift
+class BaseFormatter {
+    class var identifier: String { "base" }
+}
+```
+
+Ưu tiên `static` nếu không có nhu cầu override.
+
 ---
 
-# 8. Access Control
+# 10. Access control
 
 Các mức chính: `open`, `public`, `package`, `internal`, `fileprivate`, `private`.
 
-`internal` là mặc định trong module. `private` giới hạn mạnh nhất theo lexical scope. `fileprivate` cho phép truy cập trong cùng file. `public` cho module khác dùng nhưng class/method không cho override ngoài module. `open` chỉ áp dụng cho class/class member và cho phép subclass/override từ module khác.
+`internal` là mặc định trong module. `package` chia sẻ trong cùng Swift package nhưng không public ra consumer bên ngoài package. `public` expose API ra module khác nhưng không cho subclass/override class member ngoài module; `open` cho phép điều đó.
 
-Người mới nên bắt đầu với nguyên tắc: để implementation detail là `private`, chỉ mở API đúng mức cần thiết.
+Nguyên tắc thực dụng: API surface càng nhỏ, invariant càng dễ giữ. Để implementation detail là `private`/`internal` trừ khi consumer thật sự cần.
 
 ---
 
-# 9. Error Handling
+# 11. Closure — lifetime, capture và `@escaping`
 
-Định nghĩa error:
+Closure là function value không tên:
+
+```swift
+let multiply: (Int, Int) -> Int = { lhs, rhs in
+    lhs * rhs
+}
+```
+
+Trailing closure và shorthand:
+
+```swift
+let doubled = [1, 2, 3].map { $0 * 2 }
+```
+
+## 11.1 Escaping và non-escaping
+
+Closure parameter mặc định là non-escaping: closure phải được gọi trước khi function return. Nếu closure được giữ lại để gọi sau, parameter cần `@escaping`:
+
+```swift
+final class Loader {
+    private var completion: (() -> Void)?
+
+    func start(completion: @escaping () -> Void) {
+        self.completion = completion
+    }
+}
+```
+
+Escaping closure quan trọng vì lifetime dài hơn call stack và có thể tham gia ownership cycle.
+
+## 11.2 Capture list
+
+Closure giữ các value/reference nó dùng. Với class reference, default capture thường là strong:
+
+```swift
+service.fetch { [weak self] result in
+    guard let self else { return }
+    self.handle(result)
+}
+```
+
+Capture list cũng có thể snapshot một value tại thời điểm closure được tạo:
+
+```swift
+var message = "A"
+let closure = { [message] in print(message) }
+message = "B"
+closure() // A
+```
+
+Không thêm `[weak self]` máy móc. Hãy hỏi closure được ai giữ, sống bao lâu và operation có nên tiếp tục khi owner biến mất hay không.
+
+## 11.3 `@autoclosure`
+
+`@autoclosure` cho phép caller truyền expression thay vì viết `{ ... }`. Nó phù hợp API như assertion/lazy expression nhưng dễ che control flow; app code hiếm khi cần tự thiết kế API kiểu này.
+
+---
+
+# 12. ARC và memory ownership — mental model bắt buộc
+
+Swift dùng Automatic Reference Counting cho class/reference-counted object. ARC tự chèn retain/release theo lifetime, nhưng ARC không phải garbage collector dò cycle.
+
+## 12.1 Strong reference và object lifetime
+
+```swift
+final class Owner {
+    let name: String
+    init(name: String) { self.name = name }
+    deinit { print("released \(name)") }
+}
+
+var owner: Owner? = Owner(name: "A")
+owner = nil
+```
+
+Khi strong reference cuối cùng mất đi, instance có thể deinitialize. `deinit` phù hợp cleanup synchronous/resource ownership rõ, nhưng không phải nơi đáng tin để gửi network request hoặc lưu business data quan trọng.
+
+## 12.2 Retain cycle giữa object
+
+```swift
+final class Parent {
+    var child: Child?
+}
+
+final class Child {
+    weak var parent: Parent?
+}
+```
+
+Nếu cả `Parent.child` và `Child.parent` đều strong, hai object giữ nhau và ARC không thể giảm count về zero. `weak` không giữ object sống và luôn đọc được như Optional vì target có thể biến mất.
+
+`unowned` cũng không retain nhưng biểu diễn invariant mạnh hơn: reference phải còn sống mỗi khi truy cập. Nếu invariant sai, chương trình trap. Chỉ dùng `unowned` khi lifetime relation thực sự được chứng minh, không phải để tránh viết `?`.
+
+## 12.3 Retain cycle với closure
+
+Một cycle phổ biến hơn là `self -> closure property/service -> closure -> self`:
+
+```swift
+final class ScreenModel {
+    var onChange: (() -> Void)?
+
+    func configure() {
+        onChange = { [weak self] in
+            self?.refresh()
+        }
+    }
+
+    private func refresh() { }
+}
+```
+
+Nếu closure chỉ tồn tại trong một call synchronous và không được giữ, strong capture có thể hoàn toàn đúng. Ownership graph quan trọng hơn quy tắc “closure luôn weak self”.
+
+## 12.4 Value type vẫn có thể giữ reference
+
+Struct không có identity ARC riêng, nhưng field của struct có thể là class reference:
+
+```swift
+struct Container {
+    var session: Session
+}
+```
+
+Copy `Container` không nhất thiết tạo `Session` mới. Hai container value có thể vẫn giữ cùng instance. Vì vậy “struct = mọi thứ deep copied” là mental model sai.
+
+## 12.5 Stack, heap và thứ thật sự cần nhớ
+
+Không nên học Swift theo quy tắc đơn giản “struct ở stack, class ở heap”. Compiler có quyền optimize/box/escape value. Điều có ý nghĩa ở source level là value semantics, reference identity, ownership và lifetime. Stack/heap hữu ích khi profiling low-level, nhưng không thay semantics ngôn ngữ.
+
+## 12.6 Debug memory
+
+Khi nghi leak, dùng Xcode Memory Graph để xem retain path; Instruments Allocations/Leaks để quan sát allocation/lifetime. Đừng kết luận mọi memory growth là leak: cache hợp lệ, image decode và object sống lâu có thể tăng resident memory mà không tạo unreachable cycle.
+
+---
+
+# 13. Error handling và cleanup
 
 ```swift
 enum LoginError: Error {
     case invalidCredentials
     case networkUnavailable
 }
-```
 
-Function throwing:
-
-```swift
 func login() throws -> User {
     throw LoginError.invalidCredentials
 }
@@ -546,130 +724,85 @@ do {
 }
 ```
 
-`try?` chuyển kết quả thành optional. `try!` crash nếu có error. `try!` không nên dùng cho operation có khả năng fail hợp lệ như network hoặc file I/O.
+`try?` biến failure thành nil; `try!` trap nếu error xảy ra. `try!` không phù hợp với network/file I/O vốn có failure hợp lệ.
 
-`defer` chạy khi rời scope:
+`defer` đảm bảo code chạy khi rời scope:
 
 ```swift
 func work() {
-    defer {
-        print("cleanup")
-    }
-    print("work")
+    acquireResource()
+    defer { releaseResource() }
+    performWork()
 }
 ```
 
 ---
 
-# 10. Closure
+# 14. Generic căn bản, KeyPath và type casting
 
-Closure là function value không tên:
-
-```swift
-let multiply: (Int, Int) -> Int = { a, b in
-    a * b
-}
-```
-
-Trailing closure:
-
-```swift
-let doubled = [1, 2, 3].map { value in
-    value * 2
-}
-```
-
-Shorthand:
-
-```swift
-let doubled = [1, 2, 3].map { $0 * 2 }
-```
-
-Các API SwiftUI, networking và async bridge cũ dùng closure rất nhiều.
-
-Capture semantics rất quan trọng với class:
-
-```swift
-final class ScreenModel {
-    var name = "Home"
-
-    func load() {
-        service.fetch { [weak self] result in
-            self?.name = "Loaded"
-        }
-    }
-}
-```
-
-`[weak self]` giúp tránh retain cycle khi closure được object khác giữ lâu hơn owner.
-
----
-
-# 11. Memory Management và ARC nhập môn
-
-Swift dùng Automatic Reference Counting (ARC) cho class instance. ARC tăng/giảm reference count và giải phóng object khi strong reference cuối cùng biến mất.
-
-Retain cycle điển hình:
-
-```swift
-final class Parent {
-    var child: Child?
-}
-
-final class Child {
-    weak var parent: Parent?
-}
-```
-
-`weak` luôn là optional vì target có thể bị giải phóng. `unowned` không giữ strong reference nhưng giả định target vẫn tồn tại khi truy cập; truy cập sau deallocation sẽ crash. Vì vậy `weak` an toàn hơn trong nhiều trường hợp.
-
-Value type như struct/enum không được quản lý identity theo ARC giống class, dù storage phía dưới của Array/String có optimization riêng như copy-on-write.
-
----
-
-# 12. Generic căn bản
-
-Generic cho phép viết code không phụ thuộc một concrete type:
+Generic tái sử dụng logic mà giữ type safety:
 
 ```swift
 func first<T>(_ items: [T]) -> T? {
     items.first
 }
-```
 
-Constraint:
-
-```swift
 func contains<T: Equatable>(_ value: T, in values: [T]) -> Bool {
     values.contains(value)
 }
 ```
 
-Bạn sẽ gặp generic khắp SwiftUI, `Result`, collection, `Optional`, networking abstraction và dependency injection.
+KeyPath là đường dẫn property có type:
+
+```swift
+let path: KeyPath<User, String> = \.name
+let name = user[keyPath: path]
+```
+
+Runtime cast:
+
+```swift
+if let viewController = value as? UIViewController {
+    // cast thành công
+}
+```
+
+`is` kiểm type; `as?` trả Optional; `as!` trap nếu sai. `Any` hữu ích ở boundary động/legacy nhưng nếu `[String: Any]` lan vào domain model thì thường nên thay bằng struct/enum/Codable.
 
 ---
 
-# 13. Foundation cần học sớm
+# 15. Regex hiện đại
 
-## 13.1 `Date`, `Calendar`, `DateComponents`
+Swift hỗ trợ Regex và regex literal trên toolchain hiện đại:
 
-`Date` biểu diễn một thời điểm tuyệt đối. Việc “ngày 12/09/2026” phụ thuộc timezone/calendar.
+```swift
+let pattern = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/
+
+if input.wholeMatch(of: pattern) != nil {
+    print("format looks valid")
+}
+```
+
+Regex phù hợp pattern matching/extraction, không phải parser cho grammar phức tạp hay HTML tổng quát. Validation format cũng không chứng minh resource tồn tại; email nhìn hợp lệ chưa có nghĩa mailbox thật.
+
+---
+
+# 16. Foundation cần học sớm
+
+## 16.1 `Date`, `Calendar`, timezone
+
+`Date` biểu diễn một instant. “Ngày/tháng/năm” là cách diễn giải theo calendar/timezone.
 
 ```swift
 let now = Date()
 let calendar = Calendar.current
 let year = calendar.component(.year, from: now)
+let tomorrow = calendar.date(byAdding: .day, value: 1, to: now)
 ```
 
-Không tự cộng 24 giờ để ra “ngày mai” nếu logic là calendar date. Dùng `Calendar`:
+Nếu logic là “ngày mai theo lịch”, không tự cộng 86.400 giây vì DST/calendar có thể làm assumption sai.
 
-```swift
-let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: Date())
-```
-
-## 13.2 `URL`
-
-Không ghép URL bằng string thủ công nếu có query:
+## 16.2 URL và URLComponents
 
 ```swift
 var components = URLComponents(string: "https://api.example.com/search")!
@@ -679,25 +812,25 @@ components.queryItems = [
 let url = components.url!
 ```
 
-## 13.3 `Codable`
+Không tự nối query string vì escaping/encoding dễ sai.
+
+## 16.3 `Codable`
 
 ```swift
-struct User: Codable {
+struct APIUser: Codable {
     let id: Int
     let name: String
 }
 ```
 
-Decode JSON:
-
 ```swift
-let user = try JSONDecoder().decode(User.self, from: data)
+let user = try JSONDecoder().decode(APIUser.self, from: data)
 ```
 
 Custom key:
 
 ```swift
-struct User: Decodable {
+struct APIUser: Decodable {
     let userID: Int
 
     enum CodingKeys: String, CodingKey {
@@ -706,13 +839,13 @@ struct User: Decodable {
 }
 ```
 
+DTO từ server và domain model không bắt buộc là một type. Khi API shape khác domain semantics, mapping riêng làm boundary rõ hơn.
+
 ---
 
-# 14. SwiftUI từ số 0
+# 17. SwiftUI: UI là function của state
 
-## 14.1 Declarative UI
-
-UIKit truyền thống thường ra lệnh từng bước “tạo label, set frame, addSubview, update text”. SwiftUI mô tả UI như một function của state:
+SwiftUI declarative nghĩa là bạn mô tả UI tương ứng với state hiện tại:
 
 ```swift
 struct CounterView: View {
@@ -730,72 +863,53 @@ struct CounterView: View {
 }
 ```
 
-Khi `count` thay đổi, SwiftUI xác định phần view dependency cần update. Bạn không “redraw toàn màn hình bằng tay”.
+`View` là value description. Đừng mang mental model “View object sống cố định và tôi mutate label.text” từ UIKit sang SwiftUI.
 
-## 14.2 `View` và modifier
-
-`View` là protocol. `body` trả một view description:
+## 17.1 Modifier và order
 
 ```swift
-var body: some View {
-    Text("Hello")
-        .font(.title)
-        .foregroundStyle(.primary)
-        .padding()
-}
+Text("Hello")
+    .font(.title)
+    .padding()
+    .background(.thinMaterial)
 ```
 
-Modifier thường trả một view mới về mặt value semantics. Thứ tự modifier có thể ảnh hưởng kết quả.
+Modifier trả về view description mới; thứ tự có thể thay đổi layout/visual effect.
 
-## 14.3 Layout cơ bản
+## 17.2 Layout
 
-`VStack`, `HStack`, `ZStack` lần lượt bố trí theo trục dọc, ngang, chồng lớp.
+`VStack`, `HStack`, `ZStack`, `Spacer`, `frame`, `padding`, alignment và layout priority là primitive chính. SwiftUI layout là negotiation: parent propose size, child chọn size phù hợp, parent đặt child. `frame` không đơn giản là UIKit frame assignment.
 
-```swift
-HStack(alignment: .center, spacing: 12) {
-    Image(systemName: "person.circle")
-    VStack(alignment: .leading) {
-        Text("Alice")
-        Text("iOS Developer")
-            .font(.caption)
-    }
-}
-```
-
-`Spacer()` chiếm khoảng trống linh hoạt. `padding`, `frame`, `alignment`, `layoutPriority`, `fixedSize` là các công cụ chính.
-
-Không nên mang tư duy Auto Layout frame tuyệt đối sang SwiftUI. Hãy hiểu proposed size, ideal size và container layout dần dần.
-
-## 14.4 List và `ForEach`
+## 17.3 List và identity
 
 ```swift
 struct Item: Identifiable {
     let id: UUID
-    let name: String
+    let title: String
 }
 
 List(items) { item in
-    Text(item.name)
+    Text(item.title)
 }
 ```
 
-Identity cực kỳ quan trọng. Không dùng index làm identity nếu danh sách có insert/delete/reorder khiến index thay đổi.
+Identity phải ổn định qua insert/delete/reorder. `ForEach(items.indices, id: \.self)` không phải replacement cho entity ID khi collection thay đổi.
 
 ---
 
-# 15. State và data flow trong SwiftUI
+# 18. SwiftUI state và ownership
 
-## 15.1 `@State`
+Trước khi chọn wrapper, hỏi: **ai sở hữu value, ai được mutate, lifetime thuộc đâu?**
 
-`@State` dùng cho local mutable state mà view sở hữu:
+## 18.1 `@State`
 
 ```swift
 @State private var isPresented = false
 ```
 
-Không truyền `@State` từ parent xuống child như một “reference”. Nếu child cần sửa state của parent, dùng binding.
+Dùng cho local mutable state mà view identity sở hữu. `@State` không phải cách biến mọi property thành mutable; derived value nên được tính từ source state thay vì lưu trùng.
 
-## 15.2 `@Binding`
+## 18.2 `@Binding`
 
 ```swift
 struct ToggleRow: View {
@@ -807,11 +921,9 @@ struct ToggleRow: View {
 }
 ```
 
-Dấu `$` lấy projected value, ở đây là `Binding<Bool>`.
+Binding không sở hữu value; nó là read/write projection tới state do nơi khác sở hữu.
 
-## 15.3 Observation hiện đại
-
-Với iOS 17+, Observation là hướng hiện đại:
+## 18.3 Observation hiện đại
 
 ```swift
 import Observation
@@ -823,23 +935,19 @@ final class ProfileModel {
 }
 ```
 
-SwiftUI có thể track property mà `body` thực sự đọc. `ObservableObject`, `@Published`, `@StateObject`, `@ObservedObject` vẫn quan trọng để đọc và duy trì codebase cũ hoặc target cũ hơn.
+SwiftUI theo dõi property observable mà view đọc. `ObservableObject`, `@Published`, `@StateObject`, `@ObservedObject` vẫn cần biết để maintain target cũ/code legacy.
 
-## 15.4 Environment
-
-Environment truyền dependency/context dọc view hierarchy:
+## 18.4 Environment
 
 ```swift
 @Environment(\.dismiss) private var dismiss
 ```
 
-Custom observable model có thể được đưa vào environment. Nhưng environment không nên biến thành “global dumping ground”; dependency quan trọng nên có ownership rõ.
+Environment phù hợp context/dependency theo view tree, nhưng không nên trở thành global service locator. Dependency business bắt buộc nên có ownership rõ ở composition root/initializer khi phù hợp.
 
 ---
 
-# 16. Navigation và presentation
-
-`NavigationStack` là API chính:
+# 19. Navigation và presentation
 
 ```swift
 NavigationStack {
@@ -866,26 +974,19 @@ Alert:
 
 ```swift
 .alert("Error", isPresented: $showError) {
-    Button("OK", role: .cancel) {}
+    Button("OK", role: .cancel) { }
 } message: {
-    Text(message)
+    Text(errorMessage)
 }
 ```
 
-Trong app phức tạp, navigation state nên được model hóa thay vì trải khắp view bằng nhiều Boolean rời rạc.
+Màn hình phức tạp nên model navigation state thay vì tích lũy nhiều Boolean không thể cùng đúng/sai hợp lý.
 
 ---
 
-# 17. Networking cơ bản với `URLSession`
-
-Async/await là cách hiện đại:
+# 20. Networking căn bản với URLSession
 
 ```swift
-struct APIUser: Decodable {
-    let id: Int
-    let name: String
-}
-
 func fetchUsers() async throws -> [APIUser] {
     let url = URL(string: "https://example.com/users")!
     let (data, response) = try await URLSession.shared.data(from: url)
@@ -899,49 +1000,49 @@ func fetchUsers() async throws -> [APIUser] {
 }
 ```
 
-Không chỉ decode JSON rồi coi là thành công. Production network layer phải xử lý status code, server error body, cancellation, timeout, retry policy, authentication, caching và connectivity.
+Network success không chỉ là “request không throw”. Phải kiểm HTTP status, decode error, cancellation và error body khi cần. Intermediate sẽ mở rộng sang request construction, auth, retry, cache và idempotency.
 
 ---
 
-# 18. Concurrency nhập môn: `async`, `await`, `Task`
-
-Function async:
+# 21. Concurrency nhập môn — task, suspension và cancellation
 
 ```swift
-func load() async throws -> User {
+func loadUser() async throws -> User {
     try await api.fetchUser()
 }
 ```
+
+`await` đánh dấu suspension point. Nó **không** có nghĩa “chuyển sang background thread”. Task có thể suspend để executor chạy công việc khác.
 
 Trong SwiftUI:
 
 ```swift
 .task {
     do {
-        user = try await load()
+        user = try await loadUser()
+    } catch is CancellationError {
+        // task bị cancel; thường không cần hiện lỗi cho user
     } catch {
         errorMessage = error.localizedDescription
     }
 }
 ```
 
-`await` không có nghĩa là “block thread”. Nó đánh dấu suspension point: task có thể tạm dừng và executor có thể làm việc khác.
-
-Cancellation là cooperative:
+Cancellation là cooperative. `Task.cancel()` đánh dấu task; code hoặc API cần quan sát cancellation:
 
 ```swift
 try Task.checkCancellation()
 ```
 
-Đừng tự động tạo `Task.detached` cho mọi việc nền. Structured concurrency là default tốt hơn.
+Đừng dùng `Task.detached` như cách mặc định để “chạy background”. Structured concurrency giữ lifetime/cancellation/priority relationship dễ reasoning hơn. Intermediate sẽ nối mental model này sang actors, isolation và `Sendable`.
 
-Swift 6.x đặc biệt nhấn mạnh data-race safety. Các khái niệm `Sendable`, actor isolation và `@MainActor` sẽ được học kỹ ở phần Intermediate/Advanced.
+Quan trọng: **ARC giải quyết lifetime của reference; concurrency giải quyết access đồng thời.** Object không leak vẫn có thể data race; object actor-isolated vẫn có thể bị giữ quá lâu. Hai bài toán khác nhau.
 
 ---
 
-# 19. Persistence căn bản
+# 22. Persistence căn bản
 
-## 19.1 `UserDefaults`
+## 22.1 UserDefaults
 
 Dùng cho preference nhỏ:
 
@@ -950,15 +1051,13 @@ UserDefaults.standard.set(true, forKey: "hasSeenOnboarding")
 let value = UserDefaults.standard.bool(forKey: "hasSeenOnboarding")
 ```
 
-Không dùng UserDefaults như database lớn hoặc nơi lưu token bí mật.
+Không dùng UserDefaults làm database lớn hoặc nơi lưu secret.
 
-## 19.2 Keychain
+## 22.2 Keychain
 
-Credential/token nhạy cảm nên dùng Keychain. API Keychain C-style khá verbose; trong app có thể bọc bằng service nhỏ hoặc thư viện đáng tin cậy. Phải hiểu access group, accessibility và behavior khi uninstall/reinstall tùy loại item.
+Credential/token nhạy cảm nên nằm trong Keychain thay vì UserDefaults/plain file. Cần hiểu access group và accessibility option khi lên Intermediate/Senior.
 
-## 19.3 SwiftData
-
-SwiftData là framework persistence hiện đại cho các OS mới:
+## 22.3 SwiftData
 
 ```swift
 @Model
@@ -973,8 +1072,6 @@ final class Note {
 }
 ```
 
-Ở view:
-
 ```swift
 @Query(sort: \Note.createdAt, order: .reverse)
 private var notes: [Note]
@@ -983,13 +1080,26 @@ private var notes: [Note]
 private var modelContext
 ```
 
-Core Data vẫn cực kỳ quan trọng với codebase hiện hữu và use case cần maturity lâu năm.
+SwiftData làm persistence ergonomic nhưng không loại bỏ schema/migration/query/concurrency problems. Core Data vẫn quan trọng trong production legacy và sẽ được học ở level sau.
+
+## 22.4 File system sandbox
+
+Documents, Application Support, Caches có mục đích khác nhau. User-generated data cần backup không nên nằm trong Caches; dữ liệu tái tạo được không nên làm phình backup.
+
+```swift
+let documents = FileManager.default.urls(
+    for: .documentDirectory,
+    in: .userDomainMask
+).first!
+```
+
+Dùng URL API thay vì nối path string thủ công.
 
 ---
 
-# 20. UIKit nhập môn và interoperability
+# 23. UIKit lifecycle — cần biết ngay cả khi học SwiftUI trước
 
-UIKit dùng object-oriented, lifecycle-driven UI.
+UIKit là object/lifecycle-driven. Một view controller tối thiểu:
 
 ```swift
 final class HomeViewController: UIViewController {
@@ -1000,38 +1110,89 @@ final class HomeViewController: UIViewController {
 }
 ```
 
-Các khái niệm chính gồm `UIViewController`, `UIView`, `UILabel`, `UIButton`, `UITableView`, `UICollectionView`, Auto Layout, delegate/data source, navigation controller và presentation controller.
+Các callback chính:
 
-SwiftUI có thể nhúng UIKit qua `UIViewRepresentable` / `UIViewControllerRepresentable`; UIKit có thể nhúng SwiftUI bằng `UIHostingController`.
+`loadView()` tạo root view nếu bạn tự quản view hierarchy. `viewDidLoad()` chạy sau khi view load và thường chỉ một lần trong lifetime controller; phù hợp setup view, binding/delegate. `viewWillAppear(_:)`/`viewDidAppear(_:)` chạy mỗi lần màn hình chuẩn bị/đã hiện. `viewWillDisappear(_:)`/`viewDidDisappear(_:)` chạy khi rời màn hình. Đừng đặt one-time setup vào `viewWillAppear` nếu nó sẽ bị lặp vô ý.
 
-Không nên nghĩ “SwiftUI thay thế hoàn toàn UIKit”. Với app production, biết interoperability là kỹ năng thực tế.
+Controller lifecycle khác app/scene lifecycle. App vào background không đồng nghĩa mọi view controller đều `viewDidDisappear` theo một quy luật đơn giản.
+
+Auto Layout constraint mô tả quan hệ layout; safe area tránh system bars/notch. `UITableView`/`UICollectionView` dùng cell reuse, nên cell phải reset/configure đầy đủ state khi reuse.
 
 ---
 
-# 21. Asset, localization và accessibility
+# 24. UIKit ↔ SwiftUI interoperability
 
-Image/resource thường quản lý qua Asset Catalog (`Assets.xcassets`). SF Symbols dùng:
+SwiftUI có thể wrap UIKit bằng `UIViewRepresentable`/`UIViewControllerRepresentable`. UIKit có thể host SwiftUI bằng `UIHostingController`.
+
+```swift
+let controller = UIHostingController(rootView: ProfileView())
+```
+
+Representable có hai phase quan trọng: `makeUIView`/`makeUIViewController` tạo object UIKit, còn `updateUIView`/`updateUIViewController` đồng bộ state SwiftUI mới vào object đang tồn tại. Đừng tạo lại heavy controller trong `update...` mỗi lần state đổi.
+
+Delegate/callback từ UIKit thường bridge qua `Coordinator`. Coordinator phải được thiết kế ownership cẩn thận để không tạo cycle giữa representable, coordinator và UIKit object.
+
+Migration app lớn thường nên incremental: feature mới có thể SwiftUI trong `UIHostingController`, hoặc một control UIKit chưa có SwiftUI wrapper có thể được represent trong SwiftUI. “Rewrite toàn bộ” hiếm khi là requirement kỹ thuật mặc định.
+
+---
+
+# 25. Form, focus, gesture và animation
+
+Control thường dùng: `TextField`, `SecureField`, `Toggle`, `Picker`, `DatePicker`, `Slider`, `Stepper`.
+
+```swift
+enum Field: Hashable { case email, password }
+@FocusState private var focusedField: Field?
+
+TextField("Email", text: $email)
+    .focused($focusedField, equals: .email)
+```
+
+Animation state change:
+
+```swift
+withAnimation(.spring) {
+    isExpanded.toggle()
+}
+```
+
+Transition:
+
+```swift
+if isVisible {
+    DetailView()
+        .transition(.opacity.combined(with: .move(edge: .bottom)))
+}
+```
+
+Gesture có thể cạnh tranh với system gesture; cần test trên OS/device thật, đặc biệt với selection, scroll và accessibility interaction.
+
+---
+
+# 26. Resource, localization và accessibility
+
+Asset Catalog quản image/color/resource. SF Symbols:
 
 ```swift
 Image(systemName: "heart.fill")
 ```
 
-Localization không nên hard-code mọi string. SwiftUI hỗ trợ localized string resources và String Catalog. Hãy thiết kế layout chịu được text dài hơn, pluralization và RTL.
+Localization không chỉ là thay text. Layout phải chịu được string dài, pluralization, RTL, locale-specific date/number.
 
-Accessibility phải được xem là chức năng, không phải trang trí. SwiftUI có các modifier như:
+Accessibility là chức năng:
 
 ```swift
 .accessibilityLabel("Favorite")
 .accessibilityHint("Marks this item as favorite")
 ```
 
-Dynamic Type, contrast, VoiceOver, tap target và Reduce Motion đều cần được test.
+Test Dynamic Type, VoiceOver, contrast, tap target và Reduce Motion. UI đẹp ở default font size nhưng vỡ ở accessibility size vẫn là bug.
 
 ---
 
-# 22. Debugging trong Xcode
+# 27. Debugging, test và memory tools
 
-Breakpoint dừng execution tại dòng code. LLDB có các command như:
+Breakpoint, exception breakpoint, LLDB:
 
 ```text
 po object
@@ -1040,201 +1201,28 @@ bt
 thread backtrace
 ```
 
-Xcode console là công cụ debug, nhưng production logging nên dùng `Logger` từ `OSLog` thay vì `print` tràn lan.
+Production logging dùng `Logger`/OSLog thay vì `print` tràn lan; không log access token/password/PII.
 
-```swift
-import OSLog
-
-private let logger = Logger(
-    subsystem: "com.example.app",
-    category: "network"
-)
-
-logger.info("Request started")
-```
-
-Không log password, access token hoặc PII nhạy cảm.
-
----
-
-# 23. Unit test nhập môn
-
-Swift Testing là framework testing hiện đại:
+Swift Testing:
 
 ```swift
 import Testing
 
 @Test
 func totalPrice() {
-    let result = 10 + 20
-    #expect(result == 30)
+    #expect(10 + 20 == 30)
 }
 ```
 
-XCTest vẫn rất phổ biến:
+XCTest vẫn phổ biến trong codebase hiện hữu.
 
-```swift
-import XCTest
-
-final class PriceTests: XCTestCase {
-    func testTotal() {
-        XCTAssertEqual(10 + 20, 30)
-    }
-}
-```
-
-Test nên kiểm chứng behavior có giá trị, không chỉ “chạy một dòng để tăng coverage”.
+Memory Graph giúp xem retain path/cycle. Instruments sẽ được học sâu hơn ở Advanced.
 
 ---
 
-# 24. Signing, device và chạy app thật
+# 28. Swift Package Manager và module nhập môn
 
-Để chạy trên iPhone, Xcode phải sign executable bằng certificate và provisioning information hợp lệ. “Automatically manage signing” phù hợp khi học và với nhiều team nhỏ.
-
-Các khái niệm phải phân biệt: Apple ID, Apple Developer Program membership, Team, Certificate, App ID, Provisioning Profile, Entitlement và Capability.
-
-Capability như Push Notifications, Sign in with Apple, Associated Domains hoặc App Groups ảnh hưởng entitlement và thường cần cấu hình cả Apple Developer portal lẫn target.
-
----
-
-# 25. Checklist kiến thức Beginner
-
-Sau level này, bạn phải tự tạo được project SwiftUI, hiểu target/scheme/deployment target, viết Swift cơ bản không phụ thuộc copy-paste, model dữ liệu bằng struct/enum, xử lý optional/error, gọi REST API bằng async/await, decode Codable, tạo navigation và state đơn giản, lưu preference, debug bằng breakpoint, viết unit test cơ bản, chạy Simulator và thiết bị thật.
-
-Điểm quan trọng hơn syntax là bạn phải hiểu ownership của state, khác biệt value/reference semantics, optional và error là một phần của type system, async không đồng nghĩa thread, và iOS API luôn bị ràng buộc bởi availability/deployment target.
-
----
-
-# 26. Operator, precedence và range — phần nhỏ nhưng dùng ở mọi nơi
-
-Swift có arithmetic operator như `+`, `-`, `*`, `/`, remainder `%`; comparison operator như `==`, `!=`, `<`, `<=`, `>`, `>=`; logical operator `!`, `&&`, `||`; assignment operator `=` và compound assignment như `+=`, `-=`. Một điểm quan trọng là assignment trong Swift không trả về một value theo kiểu C, vì vậy bạn không thể vô tình viết `if x = y` rồi compiler coi nó là condition.
-
-Nil-coalescing `??` là operator rất thường dùng với Optional. Range operator gồm `...` cho closed range, `..<` cho half-open range và one-sided range như `array[2...]`. Trong collection code, half-open range thường tự nhiên hơn vì upper bound có thể là `endIndex`.
-
-Swift cho phép định nghĩa custom operator và precedence group, nhưng đây là khả năng nên dùng rất thận trọng. Trong application code, operator tự chế dễ làm giảm readability; chúng phù hợp hơn với domain toán học hoặc library có semantics thực sự rõ ràng.
-
-# 27. String, Character, Unicode và indexing đúng cách
-
-`String` trong Swift không phải mảng byte hay mảng UTF-16. Một ký tự người dùng nhìn thấy có thể được tạo bởi nhiều Unicode scalar. Vì vậy `String.Index` là index riêng của String, không phải `Int`.
-
-```swift
-let text = "Swift 👨‍👩‍👧‍👦"
-let first = text[text.startIndex]
-let next = text.index(after: text.startIndex)
-let prefix = text.prefix(5)
-```
-
-Nếu cần ký tự thứ `n`, có thể dùng:
-
-```swift
-let index = text.index(text.startIndex, offsetBy: n)
-let character = text[index]
-```
-
-Nhưng nếu lặp đi lặp lại random access theo integer, hãy xem lại data structure; `String` không được thiết kế như array O(1) theo vị trí user-perceived character. Với parsing protocol/binary, thường bạn sẽ làm việc với `Data`, UTF-8 view hoặc parser phù hợp thay vì ép String thành byte array.
-
-Các API thường dùng gồm `hasPrefix`, `hasSuffix`, `contains`, `split`, `replacingOccurrences`, `trimmingCharacters`, `lowercased`, `uppercased`. Khi so sánh/search nội dung dành cho người dùng, locale và normalization có thể quan trọng; đừng mặc định lowercase thủ công là cách đúng cho mọi ngôn ngữ.
-
-# 28. Initialization, `deinit`, extension và subscript
-
-Struct có memberwise initializer tự sinh nếu bạn không che nó bằng initializer tùy chỉnh trong declaration. Class cần hiểu designated initializer, convenience initializer và inheritance rule. Initializer có thể failable bằng `init?` khi input không tạo được object hợp lệ.
-
-```swift
-struct EmailAddress {
-    let value: String
-
-    init?(_ value: String) {
-        guard value.contains("@") else { return nil }
-        self.value = value
-    }
-}
-```
-
-`deinit` chỉ tồn tại trên class và chạy trước khi instance bị giải phóng. Nó thích hợp để cleanup resource có ownership rõ, nhưng không nên phụ thuộc vào `deinit` cho operation async quan trọng như gửi analytics hoặc save network data vì timing deallocation không phải lifecycle business guarantee.
-
-Extension giúp thêm method, computed property, initializer, nested type hoặc protocol conformance mà không sửa declaration gốc:
-
-```swift
-extension String {
-    var isBlank: Bool {
-        trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
-    }
-}
-```
-
-Subscript cho cú pháp `value[index]`. Custom collection hoặc matrix có thể dùng:
-
-```swift
-struct Matrix {
-    let rows: Int
-    let columns: Int
-    private var values: [Double]
-
-    subscript(row: Int, column: Int) -> Double {
-        get { values[row * columns + column] }
-        set { values[row * columns + column] = newValue }
-    }
-}
-```
-
-# 29. Type casting, `Any`, `AnyObject` và tránh mất type safety
-
-`is` kiểm tra runtime type; `as?` cast an toàn và trả Optional; `as!` force cast và crash nếu sai.
-
-```swift
-if let viewController = value as? UIViewController {
-    // dùng an toàn
-}
-```
-
-`Any` có thể chứa hầu như mọi Swift value, còn `AnyObject` biểu diễn instance của class/reference-compatible object. Trong application Swift hiện đại, nếu bạn thấy dictionary `[String: Any]` lan rộng trong domain layer, đó thường là dấu hiệu nên model hóa dữ liệu bằng struct/enum/Codable. `Any` rất hữu ích ở boundary động như Objective-C, JSON thô, notification payload hoặc SDK legacy, nhưng không nên trở thành default data model.
-
-# 30. Collection algorithms và tư duy functional vừa đủ
-
-Các method `map`, `compactMap`, `flatMap`, `filter`, `reduce`, `sorted`, `first(where:)`, `contains(where:)`, `allSatisfy`, `prefix`, `dropFirst`, `zip` giúp code diễn đạt transformation trực tiếp.
-
-```swift
-let activeNames = users
-    .filter(\.isActive)
-    .map(\.name)
-    .sorted()
-```
-
-`compactMap` vừa transform vừa bỏ `nil`, rất phù hợp parsing:
-
-```swift
-let numbers = ["1", "x", "3"].compactMap(Int.init)
-```
-
-Không cần biến mọi loop thành chuỗi functional dài. Khi transformation nhiều branch, có side effect, cần early exit hoặc performance-sensitive, `for` loop thường dễ đọc hơn.
-
-# 31. Key Path
-
-Key path biểu diễn đường dẫn property như một value có type:
-
-```swift
-let namePath: KeyPath<User, String> = \.name
-let name = user[keyPath: namePath]
-```
-
-Bạn sẽ gặp key path trong sorting, SwiftUI binding, SwiftData query, KVO interop và generic API. Writable key path cho phép mutation khi root/property hỗ trợ.
-
-# 32. Regex hiện đại
-
-Swift có Regex DSL và regex literal trên toolchain hiện đại. Regex phù hợp validation/pattern extraction, nhưng không nên dùng để parse grammar phức tạp hoặc HTML tổng quát.
-
-```swift
-let pattern = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/
-if input.wholeMatch(of: pattern) != nil {
-    print("format email hợp lệ ở mức pattern")
-}
-```
-
-Validation thực tế phải tách “format nhìn hợp lý” khỏi “email tồn tại/thực sự nhận thư được”.
-
-# 33. Swift Package Manager nhập môn
-
-Swift Package Manager, thường viết tắt là SwiftPM hoặc SPM, quản dependency và package Swift. Trong Xcode có thể thêm package qua `File > Add Package Dependencies`. Một package thuần Swift có manifest `Package.swift`.
+SwiftPM/SPM quản package/dependency. Manifest:
 
 ```swift
 // swift-tools-version: 6.4
@@ -1253,77 +1241,47 @@ let package = Package(
 )
 ```
 
-Trong Swift 6.4, Swift Build trở thành build system mặc định của Swift Package Manager. Với người làm iOS, ý nghĩa thực tế là package ecosystem và build behavior giữa Apple platform và cross-platform ngày càng thống nhất hơn.
+Swift 6.4 đưa Swift Build thành build system mặc định của SwiftPM. Beginner chỉ cần hiểu package tạo module/dependency boundary thật; Intermediate sẽ học modularization và public API surface.
 
-# 34. File system, sandbox và `FileManager`
+---
 
-iOS app chạy trong sandbox. Các vị trí như Documents, Library/Application Support và Caches có mục đích khác nhau. User-generated data cần backup không nên đặt vào Caches; dữ liệu có thể tái tạo nên tránh làm phình backup.
+# 29. Signing và chạy trên device
 
-```swift
-let documents = FileManager.default.urls(
-    for: .documentDirectory,
-    in: .userDomainMask
-).first!
-```
+Để chạy/phát hành app, executable phải được code signed. Phân biệt Apple Developer Program membership, Team, Certificate, App ID, Provisioning Profile, Entitlement và Capability.
 
-Khi ghi file, cân nhắc atomic write, error handling, file protection và migration. Không xây path bằng nối string; dùng `URL.appendingPathComponent` hoặc API URL hiện đại.
+`Automatically manage signing` phù hợp cho học tập và nhiều project nhỏ. Capability như Push Notifications, Associated Domains, App Groups hoặc Sign in with Apple có thể cần cả target entitlement lẫn portal/server configuration.
 
-# 35. SwiftUI form, input, focus và keyboard
+---
 
-Các control thường dùng gồm `TextField`, `SecureField`, `Toggle`, `Picker`, `DatePicker`, `Slider`, `Stepper`. Form dài nên tổ chức bằng `Form`/`Section` khi semantics phù hợp.
+# 30. Xcode 27 / Swift 6.4 notes cho Beginner
 
-`@FocusState` quản focus:
+Swift 6.4 là release stable ngày 15/09/2026. Với iOS app, phần quan trọng không phải học mọi proposal mới mà là nhận biết language/tooling đang tiếp tục tăng memory safety, ownership expressiveness, observation và build portability.
 
-```swift
-enum Field: Hashable { case email, password }
+Xcode 27 đi với Swift 6.4/iOS 27 SDK. SwiftUI `State` implementation và builder internals tiếp tục tiến hóa; source app thông thường phần lớn không nên phụ thuộc implementation detail của wrapper/builder.
 
-@FocusState private var focusedField: Field?
+`AsyncImage`/network caching behavior và các API system có thể đổi theo SDK. Vì vậy khi tutorial cũ mâu thuẫn với release notes/API contract, ưu tiên documentation của toolchain đang build project.
 
-TextField("Email", text: $email)
-    .focused($focusedField, equals: .email)
-```
+---
 
-Validation nên phân biệt format error, server validation và transient typing state. Đừng hiện lỗi đỏ ngay khi user mới gõ ký tự đầu tiên nếu UX không yêu cầu.
+# 31. Capstone Beginner — nối language → memory → UI → async → persistence
 
-# 36. Gesture và animation cơ bản
+Hãy xây app “Reading List” có danh sách, chi tiết và form thêm/sửa. Model entity bằng `struct`/`enum`; `NavigationStack` cho navigation; local UI state dùng `@State`; shared observable model dùng Observation; REST bằng `URLSession`; decode Codable; bookmark bằng SwiftData; preference bằng UserDefaults; credential giả lập qua Keychain service.
 
-SwiftUI animation có hai lớp cần phân biệt: animation của state change và transition khi view xuất hiện/biến mất.
+Bắt buộc tự kiểm tra các failure path: server trả non-2xx, decode fail, task bị cancel, record không tồn tại, form invalid. Dùng Memory Graph để xác nhận một screen/model được giải phóng khi navigation pop nếu nó không còn owner.
 
-```swift
-withAnimation(.spring) {
-    isExpanded.toggle()
-}
-```
+## Checklist trước khi sang Intermediate
 
-```swift
-if isVisible {
-    DetailView()
-        .transition(.opacity.combined(with: .move(edge: .bottom)))
-}
-```
+Bạn cần giải thích được, không chỉ viết được syntax:
 
-Gesture gồm tap, long press, drag, magnification và rotation tùy platform/API. Khi kết hợp gesture, cần hiểu precedence giữa `.gesture`, `.highPriorityGesture` và `.simultaneousGesture`. Với iOS 27, một số system gesture như text selection có thể cạnh tranh với custom gesture, vì vậy hãy test behavior trên SDK/OS thật mà app hỗ trợ.
+1. Vì sao `struct` và `class` có semantics khác nhau; copy một struct chứa class reference có ý nghĩa gì.
+2. Optional khác default value như thế nào; khi nào `guard let`, `??`, optional chaining phù hợp.
+3. Closure escaping sống lâu hơn call stack ra sao; capture list tham gia retain cycle thế nào.
+4. ARC giải quyết object lifetime nhưng không giải quyết data race như thế nào.
+5. Vì sao `await` là suspension point chứ không phải synonym của background thread.
+6. Ai sở hữu `@State`; `@Binding` khác ownership ra sao; Observable model khác local state thế nào.
+7. UIKit controller có các lifecycle callback nào và vì sao `viewDidLoad` không tương đương `viewWillAppear`.
+8. Deployment target khác SDK/compiler version thế nào.
+9. Network/persistence có failure là trạng thái bình thường chứ không phải exception hiếm.
+10. Cách dùng Xcode breakpoint, test và Memory Graph để xác minh assumption thay vì đoán.
 
-# 37. Xcode Preview và workflow UI
-
-`#Preview` giúp render view với dữ liệu mẫu mà không chạy full app:
-
-```swift
-#Preview("Logged in") {
-    ProfileView(user: .preview)
-}
-```
-
-Preview là công cụ feedback nhanh, không thay Simulator/device test. API liên quan camera, push, keychain, background task, memory pressure hoặc animation timing vẫn cần môi trường runtime phù hợp.
-
-# 38. Những thay đổi Xcode 27 người mới cần biết
-
-Xcode 27 đi cùng Swift 6.4 và iOS 27 SDK. `@State` trong SwiftUI được triển khai bằng macro mới; expression khởi tạo class lưu trong state được đánh giá lazy theo view lifetime thay vì bị đánh giá lặp mỗi lần value-type View được tái tạo. Result builder trong SwiftUI cũng được thống nhất theo `ContentBuilder`, giúp cải thiện type-checking/build time. Phần lớn source code cũ tương thích, nhưng code dựa vào implementation detail của property wrapper/result builder có thể cần migration.
-
-`AsyncImage` trên SDK mới hỗ trợ HTTP caching mặc định theo cache header của server và có API để kiểm soát `URLRequest`, `URLSession`/`URLCache` chi tiết hơn. Điều này không có nghĩa mọi image loader custom trở nên vô dụng; production vẫn có thể cần transform pipeline, disk cache policy, prefetch, placeholder strategy hoặc authenticated request.
-
-# 39. Bài tập tổng hợp Beginner
-
-Hãy tự xây một app “Reading List” có ba màn hình: danh sách sách, chi tiết và form thêm/sửa. Model bằng `struct`/`enum`; dùng `NavigationStack`; local UI state dùng `@State`; model chia sẻ dùng Observation; gọi một REST endpoint bằng `URLSession`; decode bằng Codable; lưu bookmark bằng SwiftData; preference nhỏ bằng UserDefaults; token giả lập qua service Keychain; thêm ít nhất ba unit test và một error state rõ ràng.
-
-Nếu hoàn thành mà không copy nguyên sample, bạn sẽ buộc phải nối các khái niệm language → state → UI → async → persistence → test, chính là bước cần thiết trước khi lên Intermediate.
+Nếu các câu trên còn mơ hồ, hãy quay lại section tương ứng trước khi học actor, `Sendable`, architecture và advanced state management ở Intermediate.

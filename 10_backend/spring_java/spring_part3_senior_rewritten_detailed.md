@@ -5,6 +5,46 @@
 
 ---
 
+
+<!-- VERSION_UPDATE_2026-09-12_START -->
+## Bản đồ version dùng xuyên suốt tài liệu — cập nhật 2026-09-21
+
+Tài liệu dùng **Spring Boot 4.1.1 + Spring Framework 7.0.9** làm baseline stable hiện đại. Spring Boot 4.1.1 yêu cầu tối thiểu Java 17, tương thích đến Java 26 và yêu cầu Spring Framework 7.0.9 trở lên. Với Servlet stack, generation này dùng Servlet 6.1, điển hình với Tomcat 11 hoặc Jetty 12.1. GraalVM Native Image support của Boot 4.1 yêu cầu GraalVM 25 trở lên.
+
+Khi học để làm việc enterprise, bạn vẫn phải nhận biết **Spring Boot 3.5.16 + Spring Framework 6.2.19+**. Đây là maintenance line quan trọng của generation 3.x, vẫn yêu cầu Java 17+, tương thích đến Java 25 và thuộc Servlet 6.0 generation. Đây cũng là bridge tốt nhất trước khi migrate một hệ thống Boot 3 sang Boot 4.
+
+Generation legacy **Spring Boot 2.7 + Spring Framework 5.3** cần được nhận biết để maintain code cũ. Dấu hiệu rõ nhất là Java 8/11-era code và namespace `javax.*`. Từ Boot 3 / Framework 6, Spring chuyển sang Java 17+ và `jakarta.*`. Từ Boot 4 / Framework 7, Spring tiếp tục nâng Jakarta EE 11, modularize Boot mạnh hơn và dùng Jackson 3 làm JSON generation ưu tiên.
+
+Ở phía preview, **Spring Boot 4.2.0-M1 + Spring Framework 7.1.0-M1** đã có tài liệu nhưng vẫn là milestone. Tài liệu này chỉ note direction, không dùng preview API làm baseline.
+
+```text
+Boot 2.7 + Framework 5.3
+→ Java 8+ generation
+→ javax.*
+→ legacy enterprise
+
+Boot 3.5 + Framework 6.2
+→ Java 17+
+→ jakarta.*
+→ Servlet 6.0
+→ migration bridge quan trọng
+
+Boot 4.1 + Framework 7.0
+→ Java 17–26
+→ Jakarta EE 11 / Servlet 6.1
+→ Jackson 3 preferred
+→ modular Boot
+→ baseline hiện đại
+
+Boot 4.2 M1 + Framework 7.1 M1
+→ preview
+→ theo dõi direction, không dùng làm production baseline
+```
+
+Version chỉ được nhắc ở nơi nó thật sự thay đổi package, dependency, API, runtime behavior hoặc migration; không biến tài liệu thành changelog.
+<!-- VERSION_UPDATE_2026-09-12_END -->
+
+---
 # 1. Senior Spring là gì?
 
 Ở Intermediate, bạn đã biết container tạo bean qua definitions và post-processors, AOP dùng proxy, MVC có dispatch pipeline, transaction có propagation và JPA có persistence context.
@@ -54,6 +94,18 @@ AOT/native constraints
 
 ---
 
+<!-- SPRING_BATCH1_IOC_SENIOR -->
+## Dependency resolution ở production: type contract, lifecycle và exposed object phải được xem cùng nhau
+
+Ở production, “bean tồn tại” chưa đủ. Bạn cần phân biệt **definition type**, **target type** và **exposed type**. Một `@Bean` factory method có thể khai báo interface return type trong khi object thật là implementation cụ thể; sau đó auto-proxying có thể expose JDK proxy chỉ implement interfaces hoặc class proxy subclass target. Code dùng `getBean(SomeConcreteClass.class)` có thể vì vậy phụ thuộc proxy strategy một cách vô tình, trong khi constructor injection theo stable interface ít nhạy hơn.
+
+Dependency resolution cũng có lifecycle cost. Injecting một heavy singleton trực tiếp vào infrastructure bean có thể kéo cả application graph vào startup sớm. Injecting `ObjectProvider<T>` hoặc thiết kế lại boundary đôi khi không phải “lazy trick” mà là cách giữ phase separation đúng. Tuy nhiên provider bị dùng khắp business code lại làm dependencies khó nhìn, nên deferred lookup chỉ nên xuất hiện khi lifecycle/optionality thực sự cần.
+
+Khi custom framework code can thiệp vào bean creation, hãy giữ một invariant: metadata processors không nên vô tình instantiate application beans, instance processors không nên phụ thuộc sâu vào business graph, và caller không nên phụ thuộc implementation detail của proxy. Ba nguyên tắc này giảm phần lớn các lỗi startup/proxy khó đoán.
+<!-- SPRING_BATCH1_IOC_SENIOR_END -->
+
+---
+
 # 4. Early Bean Creation và “not eligible for all BeanPostProcessors”
 
 Một advanced startup bug xảy ra khi infrastructure bean trong lúc tạo post-processor lại yêu cầu application bean quá sớm. Bean đó được instantiate trước khi toàn bộ post-processors được register. Kết quả nó có thể không nhận proxy/advice mà bạn kỳ vọng.
@@ -70,7 +122,7 @@ Spring infrastructure dùng ordering contracts như `PriorityOrdered`, `Ordered`
 
 Application code bình thường không nên dùng post-processor để implement business feature. Vì post-processor chạy ở lifecycle layer, lỗi dễ ảnh hưởng toàn context và khó debug.
 
-**Senior Rule.** Nếu một requirement có thể giải bằng explicit composition/bean configuration, ưu tiên nó trước metaprogramming.
+Nếu một requirement có thể giải bằng explicit composition/bean configuration, ưu tiên nó trước metaprogramming.
 
 ---
 
@@ -125,7 +177,7 @@ Object invoke(MethodInvocation invocation)
 
 Transactions, observations và custom aspects có thể conceptually nằm trong chain kiểu này.
 
-**Design Pattern.** Đây là Proxy + Chain of Responsibility/Interceptor.
+Đây là Proxy + Chain of Responsibility/Interceptor.
 
 ---
 
@@ -168,7 +220,19 @@ và `process()` gọi `this.saveAudit()`, advice thứ hai bị bypass.
 
 Technical fix có thể dùng self proxy, nhưng architecture fix thường tốt hơn: `AuditService` là collaborator có transaction policy riêng.
 
-**Programming Pattern — Policy boundary as collaborator.** Khi hai methods cần proxy policies khác nhau, đó thường là dấu hiệu chúng đại diện hai execution boundaries khác nhau.
+Khi hai methods cần proxy policies khác nhau, đó thường là dấu hiệu chúng đại diện hai execution boundaries khác nhau.
+
+---
+
+<!-- SPRING_BATCH2_REQUEST_SENIOR -->
+## Request lifecycle dưới góc production: queueing, context và failure ownership
+
+Senior debugging cần nối HTTP lifecycle với capacity. Một request có thể chờ ở connector accept queue, server executor, Security filter, rate limiter, DB connection pool, remote HTTP client hoặc lock. Tất cả đều biểu hiện cuối cùng là “endpoint chậm”, nhưng cách xử lý hoàn toàn khác. Metrics và traces phải cho phép tách **server queue time, application execution time và downstream wait time** thay vì chỉ có một timer tổng.
+
+Filter order là security/correctness concern. CORS preflight phải được xử lý đúng trước authentication assumptions; correlation/tracing context phải có sớm để security/controller logs cùng một request ID; body-caching/logging filter có thể phá streaming hoặc tăng memory nếu wrap toàn payload. Interceptor phù hợp cho handler-aware policy, nhưng không nhìn thấy request bị security chain reject trước controller.
+
+Một rule vận hành quan trọng là layer nào tạo side effect thì layer đó phải chịu lifecycle của side effect. Filter mở MDC/context phải đóng trong `finally`. Controller không nên manually close transaction-managed EntityManager. Service không nên giữ servlet request để dùng trong async background task sau khi request đã kết thúc. Tách ownership đúng làm shutdown, timeout và error handling dễ reasoning hơn.
+<!-- SPRING_BATCH2_REQUEST_SENIOR_END -->
 
 ---
 
@@ -192,6 +256,18 @@ caller
 Với JDBC, physical connection thường được lấy từ DataSource và gắn với execution context để repositories trong cùng transaction dùng cùng transactional connection.
 
 Hiểu điều này giải thích vì sao transaction historically thread-bound và vì sao async execution không tự động “mang transaction theo”.
+
+---
+
+<!-- SPRING_BATCH3_TX_SENIOR -->
+## Suspend, resume, timeout và rollback-only là resource semantics chứ không phải annotation trivia
+
+Khi propagation yêu cầu transaction mới, manager có thể phải suspend resources/context của transaction hiện tại, bind resources mới, chạy inner scope rồi resume outer resources. `REQUIRES_NEW` vì vậy vừa tạo isolation boundary vừa tăng concurrent resource demand. Với local JDBC/JPA, “suspend” không biến outer transaction thành free; connection/locks của outer có thể vẫn tồn tại trong lúc inner transaction cần thêm capacity.
+
+Timeout cũng phải được nhìn từ resource layer. Spring transaction timeout có thể được truyền tới resource operations tùy manager/driver, nhưng nó không thay thế HTTP deadline, database statement timeout hay lock timeout ở mọi layer. Một use case có 2 giây budget nhưng remote client timeout 30 giây và DB lock wait 60 giây vẫn có thể phá latency SLO dù `@Transactional(timeout=5)` tồn tại.
+
+Rollback-only là trạng thái của logical/physical transaction, không phải exception decoration. Một inner participant có thể đánh dấu transaction không còn committable; outer method catch exception chỉ thay Java control flow, không xóa trạng thái resource. Đây là lý do senior code review phải xem exception taxonomy cùng propagation graph.
+<!-- SPRING_BATCH3_TX_SENIOR_END -->
 
 ---
 
@@ -295,6 +371,20 @@ DB phát hiện cycle và abort một transaction.
 Application mitigation gồm consistent lock ordering, transaction ngắn, index đúng để tránh lock nhiều rows, retry carefully với idempotency.
 
 Đừng chỉ tăng timeout.
+
+---
+
+<!-- SPRING_BATCH3_JPA_SENIOR -->
+## Từ Spring Data repository tới EntityManager: persistence runtime thật sự nằm ở đâu?
+
+Spring Data repository interface thường được triển khai bằng proxy, nhưng proxy không phải database engine. Nó dịch repository invocation thành implementation/query execution dùng JPA `EntityManager`. `EntityManager` mà application inject thường là một shared proxy: mỗi call được route tới transaction-bound persistence context phù hợp. Vì vậy repository có thể trông stateless trong Java trong khi persistence context giữ managed entities và pending changes theo transaction.
+
+`save(entity)` cũng không đồng nghĩa “chạy INSERT ngay”. `SimpleJpaRepository` quyết định entity có mới hay không; entity mới thường đi `persist`, entity được xem là existing thường đi `merge`. `merge` trả về managed copy và object truyền vào không nhất thiết trở thành chính instance managed. SQL INSERT/UPDATE có thể chỉ xuất hiện ở flush/commit, do JPA write-behind. Vì vậy debugger nhìn thấy `save()` return chưa có nghĩa database đã commit.
+
+Flush là synchronization giữa persistence context và database transaction, còn commit là durable transaction boundary. Query có thể trigger flush tùy flush mode để bảo đảm query thấy changes. `saveAndFlush` ép synchronization sớm hơn nhưng vẫn không biến local transaction thành committed transaction. Dùng nó để “chắc chắn đã save” thường che việc chưa hiểu flush/commit semantics.
+
+Open Session/EntityManager in View giữ persistence context qua web request để lazy relation còn có thể load trong serialization/view. Nó giảm `LazyInitializationException` nhưng làm SQL có thể phát sinh rất muộn, khó thấy transaction/query ownership và dễ tạo N+1. Senior design nên chủ động fetch/projection ở application boundary thay vì dựa lazy loading trong serializer.
+<!-- SPRING_BATCH3_JPA_SENIOR_END -->
 
 ---
 
@@ -897,6 +987,18 @@ Hiểu flow này quan trọng khi có multiple chains cho `/api/**`, `/admin/**`
 
 ---
 
+<!-- SPRING_BATCH4_SECURITY_SENIOR -->
+## Security production model: credential transport, key lifecycle và object-level authorization
+
+Security configuration phải bắt đầu từ credential transport. Session cookie nghĩa browser tự gửi credential và CSRF threat quan trọng. Bearer token trong `Authorization` header có threat khác nhưng vẫn cần XSS/storage/leak controls ở client. CORS chỉ là browser origin policy; nó không authenticate request và không thay authorization.
+
+Với JWT resource server, signature validation mới chỉ chứng minh token phù hợp key/algorithm. Production policy còn phải kiểm issuer, audience, time claims/clock skew, key rotation/JWK refresh và mapping claims thành authorities đúng domain. Log không được ghi raw access token. Nếu identity provider outage xảy ra, behavior phụ thuộc key cache/discovery strategy; đây là availability dependency cần được observability hóa.
+
+Authorization theo role thường chưa đủ cho business resource. “USER có thể cancel order” còn cần xác minh order thuộc user nào, trạng thái order và tenant. Policy này nên nằm ở use-case/domain authorization collaborator hoặc method authorization có access tới domain facts, không chỉ ở URL matcher. Nếu policy chỉ nằm controller, internal/batch/message entry point có thể bypass.
+<!-- SPRING_BATCH4_SECURITY_SENIOR_END -->
+
+---
+
 # 59. AuthenticationManager và AuthenticationProvider
 
 Authentication filter tạo authentication request/token rồi gọi `AuthenticationManager`.
@@ -987,6 +1089,16 @@ Security context có execution-context propagation concerns. Nếu submit task s
 Spring Security có context propagation integrations, nhưng bạn phải biết execution boundary.
 
 Reactive security lại dùng Reactor context model.
+
+---
+
+<!-- SPRING_BATCH5_OBS_SENIOR -->
+## Observability phải phản ánh queue/resource boundaries của Spring application
+
+Một request timer duy nhất không đủ để biết request chậm ở đâu. Production dashboard nên cho thấy server request latency, active/in-flight requests, executor/virtual-thread behavior phù hợp runtime, DB pool active/pending/acquisition time, query latency, HTTP-client latency, cache hit/miss và JVM CPU/GC. Khi mỗi scarce resource có saturation signal, bạn có thể phân biệt CPU-bound với queue-bound hoặc downstream-bound.
+
+Trace là causal path, nhưng trace không thay metric. Sampling có thể bỏ mất request hiếm; metrics cho distribution/p95/p99 và saturation liên tục. JFR lại trả lời JVM-level CPU/allocation/lock/GC mà tracing không thấy. Troubleshooting tốt chuyển giữa bốn lớp: metrics xác định thời điểm/phạm vi, trace tìm dependency/span, logs lấy domain/error context, profile/JFR/DB plan xác minh execution cost.
+<!-- SPRING_BATCH5_OBS_SENIOR_END -->
 
 ---
 
@@ -1182,7 +1294,7 @@ Nếu code chỉ dùng normal DTO + Boot auto-config, migration dễ hơn.
 
 Nếu bạn inject/customize Jackson internal types everywhere, migration lớn hơn.
 
-**Senior Pattern.** Depend on stable framework/application abstractions, không leak third-party implementation sâu khắp domain.
+Depend on stable framework/application abstractions, không leak third-party implementation sâu khắp domain.
 
 ---
 
@@ -1370,6 +1482,20 @@ Chỉ dùng trong integration constraints rất đặc biệt, không làm defau
 Nếu `UserEntity` dùng làm API DTO, Kafka message, cache value, domain object và batch format, mọi schema/persistence change có blast radius lớn.
 
 Tách representation ở boundaries có lifecycle/compatibility khác nhau.
+
+---
+
+<!-- SPRING_BATCH5_TROUBLESHOOTING_SENIOR -->
+## Production troubleshooting theo symptom → layer → evidence
+
+Nếu application **không start**, bắt đầu từ first meaningful cause trong exception chain rồi phân loại: configuration binding, missing/ambiguous bean, condition mismatch, schema migration, database connectivity, classpath/linkage hay custom initialization. Condition report và dependency tree hữu ích hơn thêm annotation thử nghiệm.
+
+Nếu request trả **404**, trước tiên kiểm mapping/servlet context/path. Nếu **400**, nhìn conversion, JSON deserialize và Bean Validation. Nếu **401**, trace authentication chain/credential. Nếu **403**, xác định principal đã authenticated chưa và authorization rule nào deny. Nếu controller breakpoint không bao giờ hit, đừng debug service trước filter/mapping layer.
+
+Nếu endpoint **chậm nhưng CPU thấp**, tìm wait: DB connection acquisition, slow SQL/locks, remote HTTP, executor queue, synchronized lock. Nếu **CPU cao**, dùng JFR/profile trước; JSON serialization, crypto, regex, mapper loops, GC hoặc busy loop đều có thể là nguyên nhân. Nếu **RSS tăng nhưng heap ổn**, nhìn thread count/stacks, direct buffer/native memory, metaspace và agents chứ không chỉ heap dump.
+
+Nếu bật virtual threads mà throughput không tăng, kiểm downstream scarce resource. 50 DB connections vẫn chỉ cho khoảng 50 concurrent DB operations bất kể có 500 hay 50.000 virtual threads. Nếu latency tăng, queueing ở pool/semaphore/downstream vẫn là bottleneck thật.
+<!-- SPRING_BATCH5_TROUBLESHOOTING_SENIOR_END -->
 
 ---
 
@@ -1579,6 +1705,18 @@ Không cần ratio cố định. Mỗi test phải trả lời câu hỏi cụ t
 
 ---
 
+<!-- SPRING_BATCH4_TEST_SENIOR -->
+## Testing architecture phải mô phỏng đúng failure boundary
+
+Một test suite production-grade không được dùng một kiểu test cho mọi thứ. Business invariant nên được ép qua plain unit/property tests; persistence concurrency cần real database vì locking/isolation khác H2; HTTP adapter cần contract/stub server để kiểm headers, timeout và error mapping; Security cần test cả unauthenticated, authenticated-but-forbidden và object ownership; transaction/outbox cần test commit thật.
+
+Context caching là một phần hiệu năng test. Profiles, dynamic properties, bean overrides và configuration classes tham gia cache identity. `@DirtiesContext` làm context bị loại khỏi cache và nên được coi là expensive operation. Nếu một test cần mutate global singleton state rồi dirties context để cleanup, đó có thể là feedback rằng production design có global mutable state khó cô lập.
+
+Testcontainers tăng fidelity nhưng không phải lý do đưa mọi unit test vào Docker. Hãy dùng container ở boundary nơi engine semantics quan trọng: PostgreSQL JSON/locking/index behavior, Kafka broker protocol, Redis TTL/serialization. Test nhanh ở inner loop và realistic ở integration boundary là hai mục tiêu bổ sung nhau.
+<!-- SPRING_BATCH4_TEST_SENIOR_END -->
+
+---
+
 # 110. Transactional Tests Pitfall
 
 `@Transactional` test rollback sau test tiện cleanup, nhưng có thể che commit-time constraints, after-commit listeners và lazy-loading behavior.
@@ -1688,6 +1826,28 @@ Với production, phải giải thích outbox, idempotency, saga, cache stampede
 Master Supplement sẽ không lặp application patterns. Nó sẽ đi vào **Spring source/framework-author level**: `DefaultListableBeanFactory`, configuration-class processing, `AutowiredAnnotationBeanPostProcessor`, auto-proxy creation internals, `AdvisedSupport/ProxyFactory`, `TransactionInterceptor` source flow, `TransactionSynchronizationManager`, DispatcherServlet initialization, handler mappings/adapters registry, Boot auto-configuration import metadata, custom starter authoring, Spring TestContext internals, AOT processors/runtime hints deeper, Spring 7 null-safety/JSpecify, Boot 4 modularization và Spring 7.1 preview/current evolution.
 
 Đó là layer cần thiết nếu mục tiêu là “master Spring itself”, không chỉ Senior Spring application engineer.
+
+---
+
+<!-- VERSION_DETAIL_PART3_2026-09-21_START -->
+# Version Deep Dive cho Senior: migration và production behavior theo generation
+
+Đường migration an toàn từ Boot 3 sang Boot 4 là đưa application lên **latest Boot 3.5.x trước**, xử lý deprecations/dependency conflicts rồi mới chuyển 4.x. Boot 4 loại bỏ nhiều API deprecated và đồng thời nâng major versions của portfolio projects.
+
+Boot 4 có modular design rõ hơn. Main modules và test infrastructure được tách theo technology, nhiều integrations có `spring-boot-starter-<technology>` và `spring-boot-starter-<technology>-test`. Migration phải review cả production dependency tree lẫn test dependency tree.
+
+Jackson 3 là breaking point lớn. Boot 4 còn `spring-boot-jackson2` như stop-gap compatibility module nhưng module này deprecated theo hướng loại bỏ trong tương lai. Custom serializers, mapper modules, polymorphic typing, persisted JSON và Security serialization cần test riêng khi migrate.
+
+Framework 7 dùng JSpecify và deprecated Spring null-safety annotations cũ trong `org.springframework.lang`. Với Java static analysis hoặc Kotlin, upgrade có thể tạo compile-time warnings/errors mới dù method names gần như không đổi.
+
+Framework 7 có native API-versioning support cho MVC/WebFlux và `@Proxyable` từ 7.0. `@Proxyable` chỉ gợi ý proxy type nếu bean thật sự được auto-proxy; nó không tự tạo proxy.
+
+Boot 4.1 bổ sung notable features gồm Spring gRPC support, Jackson configuration/customization improvements, HTTP client SSRF mitigation với `InetAddressFilter`, OpenTelemetry/observability enhancements và Log4j file rotation support.
+
+Spring Security cũng đã sang major generation 7. Security 6.5 là preparation line cho migration; current docs tại thời điểm cập nhật liệt kê stable 7.1.1, 7.0.7 và 6.5.11. Khi dùng Boot, ưu tiên version management của Boot trừ khi có lý do security/compatibility rõ và đã test matrix.
+
+Preview hiện tại là Boot 4.2.0-M1 + Framework 7.1.0-M1. Senior/Master nên đọc để biết direction nhưng không nên dạy milestone API như stable production API.
+<!-- VERSION_DETAIL_PART3_2026-09-21_END -->
 
 ---
 

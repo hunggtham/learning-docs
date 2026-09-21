@@ -38,10 +38,10 @@ Nếu tên lịch sử có Hán tự và cách đọc Hán–Việt giúp ngư�
 
 ## Khi nào không nên dịch cưỡng ép
 
-Tên hiện đại mà cách Hán–Việt ít được người Việt dùng hoặc khiến việc tra cứu khó hơn sẽ giữ romanization làm tên chính, nhưng vẫn kèm Hangul và English. Ví dụ: **Seoul (서울 / Seoul)**, **Gwangju (광주 / Gwangju)**, **Busan (부산 / Busan)**, **đảo Jeju (제주도 / Jeju Island)** và **Park Chung-hee (박정희 / Park Chung-hee)**.
+Tên hiện đại mà cách Hán–Việt ít được người Việt sử dụng hoặc khiến việc tra cứu khó hơn sẽ giữ dạng Latin hoá (romanization) làm tên chính, đồng thời vẫn kèm Hangul và tên tiếng Anh. Ví dụ: **Seoul (서울 / Seoul)**, **Gwangju (광주 / Gwangju)**, **Busan (부산 / Busan)**, **đảo Jeju (제주도 / Jeju Island)** và **Park Chung-hee (박정희 / Park Chung-hee)**.
 
-Sau lần xuất hiện đầu tiên, tài liệu có thể dùng dạng ngắn hơn nếu context đã rõ. Tên file vẫn giữ English/romanization để URL, Git và cross-link ổn định.
+Sau lần xuất hiện đầu tiên, tài liệu có thể dùng dạng ngắn hơn nếu bối cảnh đã rõ. Tên file vẫn giữ tiếng Anh hoặc dạng Latin hoá để đường dẫn, Git và liên kết chéo ổn định.
 
-## Mental Model
+## Mô hình tư duy
 
-Ba dạng tên là ba key trỏ tới cùng một node trong knowledge graph. Tiếng Việt giúp hiểu nghĩa và ghi nhớ; Hangul giúp nhận diện trong môi trường Hàn Quốc; English/Romanization giúp tra cứu sách, paper, museum database và tài liệu quốc tế.
+Ba dạng tên có thể xem như ba khoá trỏ tới cùng một nút trong đồ thị kiến thức (knowledge graph). Tên tiếng Việt giúp hiểu nghĩa và ghi nhớ; Hangul giúp nhận diện trong môi trường Hàn Quốc; tiếng Anh hoặc dạng Latin hoá giúp tra cứu sách, bài nghiên cứu, cơ sở dữ liệu bảo tàng và tài liệu quốc tế.

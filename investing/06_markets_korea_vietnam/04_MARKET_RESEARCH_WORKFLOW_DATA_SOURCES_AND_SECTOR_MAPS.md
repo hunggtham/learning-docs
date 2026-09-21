@@ -1,321 +1,603 @@
-# 04 — Market Research Workflow, Data Sources và Sector Maps cho Hàn Quốc & Việt Nam
+# Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành
 
-> Chương này biến toàn bộ kiến thức của domain thị trường thành một quy trình research lặp lại được. Mục tiêu là khi mở một mã ở Hàn Quốc hoặc Việt Nam, bạn biết phải kiểm tra dữ liệu nào trước, dữ liệu nào sau, nguồn nào ưu tiên và cách nối macro với company fundamentals mà không bị ngập trong tin tức.
+> Mục tiêu của chương này là biến kiến thức thành một **quy trình nghiên cứu có thể lặp lại**. Thay vì đọc tin rồi phản ứng cảm tính, người đọc bắt đầu từ câu hỏi, chọn nguồn dữ liệu phù hợp, phân biệt dữ kiện, ước tính và ý kiến, xây cây động lực rồi cập nhật luận điểm theo lịch rõ ràng. Thuật ngữ tiếng Anh chỉ được giữ trong ngoặc hoặc dưới dạng viết tắt chuẩn khi cần tra cứu.
 
-## 1. Research bắt đầu từ câu hỏi, không bắt đầu từ chart
+# Phần I — Bắt đầu bằng câu hỏi
 
-Khi chọn một stock hoặc ETF, bước đầu tiên không nên là phóng to chart rồi tìm support. Research tốt bắt đầu bằng câu hỏi kinh tế: business kiếm tiền từ đâu, demand driver là gì, balance sheet chịu risk gì và valuation đang price kỳ vọng nào.
+## 1. Cây câu hỏi
 
-Sau đó mới xác định market-level context. Với Korea, câu hỏi thường liên quan exports, semiconductor cycle, KRW, US yields và BOK. Với Vietnam, credit growth, banking liquidity, property cycle, VND, domestic rates, FDI và public investment thường quan trọng hơn.
+Một nghiên cứu tốt bắt đầu bằng câu hỏi có thể kiểm chứng.
 
-Cuối cùng mới đến timing và technical structure nếu chiến lược của bạn cần.
+Thay vì hỏi:
 
-## 2. Source Hierarchy
+```text
+“Bán dẫn Hàn Quốc có tốt không?”
+```
 
-Nguồn dữ liệu nên được xếp theo độ gần với nơi tạo thông tin.
+hãy tách thành:
 
-Primary sources là exchange, regulator, central bank, statistical agency và company filings. Secondary sources là sell-side research, media và data aggregators. Social media là lớp ý tưởng, không phải nguồn xác nhận cuối.
+```text
+Nhu cầu HBM có tăng nhanh hơn nguồn cung hiệu dụng không?
+→ ASP có được hỗ trợ không?
+→ tỷ lệ sử dụng công suất và biên lợi nhuận có tiếp tục tăng không?
+→ dự báo đồng thuận đã phản ánh bao nhiêu?
+```
 
-Một headline “BOK sắp đổi chính sách” không nên được coi là fact trước khi bạn đọc statement, minutes hoặc speech chính thức. Một tin “company profit tăng mạnh” phải quay về earnings release và notes.
+**Cây câu hỏi (question tree)** biến một chủ đề rộng thành chuỗi câu hỏi có dữ liệu trả lời.
 
-Nguyên tắc này giảm narrative error.
+## 2. Câu hỏi phải dẫn tới dữ liệu
 
-## 3. Research Workflow cho một Korean Stock
+Nếu một câu hỏi không chỉ ra dữ liệu nào có thể xác nhận hoặc bác bỏ, nó vẫn quá mơ hồ.
 
-Bắt đầu bằng business description và segment revenue. Xác định company bán gì, thị trường địa lý nào quan trọng và key input costs là gì.
+# Phần II — Thứ tự ưu tiên nguồn
 
-Tiếp theo đọc financials vài năm để hiểu revenue cycle, margins, cash flow, capex và debt. Với semiconductor, theo inventory và memory pricing. Với auto, theo volume, ASP, incentives và FX. Với banks, theo NIM, asset quality và capital.
+## 3. Thứ bậc nguồn
 
-Sau đó đọc valuation relative history và peers. Cuối cùng mới thêm macro overlay: USD/KRW, exports, BOK, oil, China và US cycle.
+Một thứ tự tham khảo:
 
-Research note nên kết thúc bằng thesis, catalysts, risks và invalidation.
+```text
+Cơ quan quản lý / Sở giao dịch / Ngân hàng trung ương / Cơ quan thống kê
+→ Báo cáo pháp lý / công bố doanh nghiệp
+→ Quan hệ nhà đầu tư / biên bản cuộc gọi
+→ Nhà cung cấp dữ liệu chất lượng cao
+→ Báo cáo môi giới / nghiên cứu tổng hợp
+→ Tin tức
+→ Mạng xã hội / cộng đồng
+```
 
-## 4. Research Workflow cho một Vietnamese Stock
+Nguồn phía dưới vẫn hữu ích để tìm ý tưởng, nhưng dữ kiện quan trọng nên được kiểm tra lại ở nguồn gốc khi có thể.
 
-Ở Vietnam, first step cũng là business, nhưng governance và liquidity thường cần attention lớn hơn.
+## 4. Hàn Quốc
 
-Kiểm tra listing venue, free float, average trading value và ownership concentration. Sau đó đọc financials và cash flow.
+Các nhóm nguồn thường dùng:
 
-Với banks, asset quality quan trọng hơn headline profit. Với property developers, legal status, presales, debt maturity và operating cash flow quan trọng hơn land-bank marketing. Với construction/materials, backlog, public investment và working capital quan trọng.
+- KRX;
+- BOK;
+- FSC/FSS;
+- cơ quan thống kê và thương mại;
+- DART và báo cáo doanh nghiệp;
+- trang quan hệ nhà đầu tư.
 
-Sau đó nối với credit policy, VND, domestic rates và sector cycle.
+## 5. Việt Nam
 
-## 5. Sector Map của Hàn Quốc
+Các nhóm nguồn thường dùng:
 
-Korea market chịu ảnh hưởng lớn từ semiconductors, autos, batteries, shipbuilding, industrials, chemicals, financials, internet/platforms, biotech và consumer brands.
+- SSC;
+- HOSE/HNX/VSDC;
+- SBV;
+- cơ quan thống kê;
+- hải quan và cơ quan thương mại;
+- báo cáo doanh nghiệp và quan hệ nhà đầu tư.
 
-Semiconductor là sector có global earnings cycle mạnh. Memory prices, HBM demand, foundry utilization và equipment capex có thể tác động rộng tới KOSPI.
+Tên cổng dữ liệu hoặc quy định cụ thể có thể thay đổi, nên phải kiểm tra nguồn chính thức hiện hành.
 
-Autos nhạy với global demand, USD/KRW, incentives, EV transition và tariffs. Shipbuilding nhạy với order cycle, LNG/carrier demand và steel cost. Batteries nhạy EV demand, raw materials và global industrial policy.
+# Phần III — Dữ kiện, ước tính, ý kiến và giả định
 
-Financials nhạy domestic rates, housing và credit. Internet/platform companies nhạy regulation, advertising và consumer activity.
+## 6. Dữ kiện
 
-Sector map giúp bạn hiểu index move đến từ đâu thay vì chỉ nhìn KOSPI total return.
+**Dữ kiện (fact)** là thông tin đã xảy ra và có thể xác minh, ví dụ doanh thu quý, lãi suất chính sách hoặc số cổ phiếu lưu hành.
 
-## 6. Sector Map của Việt Nam
+## 7. Ước tính
 
-Vietnam market có trọng số lớn ở banks, property, consumer, industrials, materials, securities, utilities và energy.
+**Ước tính (estimate)** là dự báo của nhà phân tích, doanh nghiệp hoặc đồng thuận thị trường.
 
-Banks là trung tâm vì vừa lớn trong index vừa là kênh credit chính. Property liên kết banks, corporate bonds, construction và household wealth. Securities companies nhạy market turnover, margin lending và capital-market sentiment.
+Ước tính phải có thời điểm vì nó thay đổi liên tục.
 
-Industrials có thể hưởng FDI và public investment nhưng phải tách logistics, industrial parks, construction và manufacturing suppliers.
+## 8. Ý kiến
 
-Consumer names nhạy income growth và domestic demand. Energy và utilities có policy/regulatory features riêng.
+**Ý kiến (opinion)** là cách diễn giải dữ liệu. Một ghi chú nghiên cứu tốt không trình bày ý kiến như thể là dữ kiện.
 
-## 7. Semiconductor Dashboard cho Korea
+## 9. Giả định
 
-Một semiconductor dashboard nên có memory prices, HBM demand signals, export data, inventory, capex, utilization và global semiconductor indices.
+**Giả định (assumption)** là đầu vào do người nghiên cứu tự đặt vào mô hình.
 
-Company earnings thường lag cycle signals. Stock price có thể bottom khi earnings vẫn xấu nếu market anticipates inventory normalization.
+Ví dụ:
 
-Vì vậy investor không nên đợi headline “profit recovery confirmed” mới bắt đầu research.
+```text
+Kịch bản cơ sở: biên gộp = 35%
+```
 
-## 8. Auto Dashboard cho Korea
+Đây không phải dữ kiện nếu chưa xảy ra.
 
-Theo global unit sales, US/EU demand, incentives, EV share, FX và raw-material costs.
+# Phần IV — Cây động lực
 
-KRW yếu có thể hỗ trợ translated revenue của exporters nhưng imported components và hedging policy ảnh hưởng net benefit.
+## 10. Cây động lực của doanh nghiệp
 
-Tariff và local-production policies cũng có thể thay competitive economics.
+Ví dụ bán dẫn:
 
-## 9. Bank Dashboard cho Korea
+```text
+Nhu cầu cuối
+→ tồn kho
+→ ASP
+→ tỷ lệ sử dụng công suất
+→ cơ cấu sản phẩm
+→ biên gộp
+→ EPS / FCF
+```
 
-Theo BOK policy rate, funding/deposit cost, NIM, household lending, property prices, delinquency và capital ratios.
+## 11. Cây động lực ngân hàng
 
-Higher rates không luôn bullish banks. NIM có thể tăng nhưng credit cost và funding competition cũng tăng.
+```text
+Chi phí tiền gửi / CASA
+→ NIM
+→ tăng trưởng tín dụng
+→ lợi nhuận trước dự phòng
+→ chi phí tín dụng
+→ lợi nhuận ròng
+→ ROE / giá trị sổ sách
+```
 
-Household debt là một structural variable quan trọng trong Korea.
+## 12. Cây động lực bất động sản
 
-## 10. Bank Dashboard cho Vietnam
+```text
+Tiến độ pháp lý
+→ bán trước
+→ thu tiền
+→ xây dựng
+→ bàn giao
+→ doanh thu / tiền mặt
+→ khả năng trả nợ
+```
 
-Theo credit growth, NIM, CASA, deposit rates, NPL, Group 2 loans, provision coverage và exposure to property/corporate bonds.
+# Phần V — Chỉ báo sớm và chỉ báo trễ
 
-Một bank tăng profit nhờ giảm provisions trong khi asset quality deteriorates có earnings quality khác bank tăng profit nhờ core lending growth và stable credit cost.
+## 13. Chỉ báo sớm
 
-Credit quota và policy transmission cũng có thể ảnh hưởng growth khác nhau giữa banks.
+**Chỉ báo sớm (leading indicator)** thường thay đổi trước lợi nhuận hoặc hoạt động kinh tế.
 
-## 11. Property Dashboard cho Vietnam
+Ví dụ:
 
-Property analysis cần legal progress, presales, inventory composition, debt maturity, bond repayment, operating cash flow và project handover schedule.
+- đơn hàng;
+- tồn kho;
+- lãi suất tiền gửi;
+- dư nợ ký quỹ;
+- dữ liệu xuất khẩu;
+- bán trước bất động sản.
 
-Land bank chỉ có value khi có khả năng chuyển thành project economic cash flow.
+## 14. Chỉ báo trễ
 
-Nếu legal bottleneck kéo dài, reported asset value có thể không phản ánh timing risk.
+**Chỉ báo trễ (lagging indicator)** thường xác nhận điều đã xảy ra.
 
-## 12. Securities Companies ở Vietnam
+Ví dụ NPL hoặc EPS báo cáo có thể xuất hiện sau điểm đảo chiều của tín dụng hoặc tồn kho.
 
-Brokerage companies kiếm tiền từ brokerage fees, margin lending, proprietary trading và investment banking tùy business model.
+## 15. Không mặc định chỉ báo luôn dẫn
 
-Khi market turnover tăng, brokerage và margin revenue thường được hỗ trợ. Nhưng proprietary book tạo earnings volatility.
+Quan hệ dẫn–trễ có thể thay đổi theo chế độ, vì vậy phải kiểm tra cả lịch sử lẫn cơ chế kinh tế.
 
-Capital adequacy và funding cost quan trọng nếu company mở rộng margin lending nhanh.
+# Phần VI — Kỳ vọng và điều chỉnh dự báo
 
-## 13. Industrial Park và FDI Theme
+## 16. Giá phản ứng với thay đổi kỳ vọng
 
-Industrial-park companies có thể hưởng lợi từ FDI manufacturing relocation.
+Một doanh nghiệp báo EPS cao vẫn có thể giảm nếu hướng dẫn tương lai thấp hơn kỳ vọng.
 
-Nhưng thesis phải đi sâu hơn headline “FDI tăng”. Investor cần xem land available, occupancy, rental rates, infrastructure, legal approvals và customer mix.
+## 17. Độ rộng điều chỉnh dự báo
 
-China+1 là structural theme nhưng valuation vẫn quyết định future return.
+Không chỉ nhìn một doanh nghiệp. Nếu nhiều nhà phân tích đồng thời nâng EPS ở nhiều công ty trong cùng ngành, chu kỳ có thể đang mở rộng.
 
-## 14. Public Investment Theme
+## 18. Điều gì đã được phản ánh trong giá?
 
-Public investment ảnh hưởng contractors, materials và infrastructure-related firms.
+Trước sự kiện cần ghi:
 
-Nhưng budget announcement khác actual disbursement. Company có backlog nhưng margin thấp hoặc receivables lớn vẫn có cash-flow risk.
+- định giá;
+- dự báo đồng thuận;
+- diễn biến giá gần đây;
+- tín hiệu về vị thế nhà đầu tư;
+- mức biến động hàm ý của quyền chọn nếu có.
 
-Research phải nối public spending data với company-specific project exposure.
+# Phần VII — Bản đồ ngành Hàn Quốc
 
-## 15. Export Data cho Korea
+## 19. Bán dẫn
 
-Korean export data là high-frequency macro signal quan trọng.
+Theo dõi:
 
-Semiconductor exports giúp gauge global tech cycle. Exports by destination giúp hiểu US/China exposure.
+```text
+ASP
+Tồn kho
+HBM
+Tỷ lệ sử dụng công suất
+Chi tiêu vốn
+Xuất khẩu
+USD/KRW
+Điều chỉnh dự báo EPS
+```
 
-Nhưng nominal export growth có thể chịu price effect và FX. Volume, unit price và product mix cần context.
+## 20. Ô tô và xe điện
 
-## 16. Trade Data cho Vietnam
+```text
+Sản lượng bán toàn cầu
+Cơ cấu sản phẩm
+Ưu đãi bán hàng
+Tỷ giá
+Tồn kho
+Chi phí pin
+```
+
+## 21. Pin
 
-Exports/imports giúp hiểu manufacturing demand, input demand và trade balance.
+```text
+Nhu cầu xe điện
+Tỷ lệ sử dụng công suất
+Nguyên liệu
+Hợp đồng khách hàng
+Mở rộng công suất
+```
 
-Strong exports có thể hỗ trợ growth và FX, nhưng nếu imports của machinery/raw materials tăng trước production boom, trade balance tạm xấu không nhất thiết negative.
+## 22. Đóng tàu và công nghiệp
 
-Trade structure cần đọc cùng FDI sector.
+```text
+Sổ đơn hàng
+Giá tàu mới
+Chi phí thép / lao động
+Lịch giao hàng
+Tỷ giá
+```
 
-## 17. FX Dashboard: USD/KRW
+## 23. Tài chính
 
-USD/KRW chịu US-Korea rate expectations, DXY, exports, oil imports, China risk và foreign portfolio flows.
+```text
+NIM
+Chi phí tín dụng
+Vốn
+Mức phơi nhiễm PF
+Giá trị giao dịch / môi giới
+```
 
-Không nên giải thích mỗi move bằng một variable duy nhất.
+## 24. Nền tảng, trò chơi và công nghệ sinh học
 
-Nếu USD/KRW tăng trong global risk-off, Korean exporters có translation benefit nhưng foreign-equity sentiment có thể xấu. Net effect lên stocks phụ thuộc sector.
+Tùy ngành cần theo dõi mức sử dụng và khả năng kiếm tiền, danh mục sản phẩm mới hoặc cột mốc thử nghiệm lâm sàng.
 
-## 18. FX Dashboard: USD/VND
+# Phần VIII — Bản đồ ngành Việt Nam
 
-VND được quản lý trong framework khác KRW và biến động market không hoàn toàn tự do như KRW.
+## 25. Ngân hàng
 
-Theo SBV signals, interbank rates, DXY, trade balance, FDI, reserves context và domestic liquidity.
+```text
+Tăng trưởng tín dụng
+NIM
+CASA
+Nợ nhóm 2 / NPL
+Bao phủ dự phòng
+Vốn
+Mức phơi nhiễm bất động sản
+```
 
-FX pressure có thể giới hạn room cho monetary easing nếu policy makers ưu tiên stability.
+## 26. Bất động sản
 
-## 19. Foreign Flow ở Korea
+```text
+Pháp lý
+Bán trước
+Tiền thu thực tế
+Lịch đáo hạn nợ
+Tái cấp vốn trái phiếu
+Bàn giao
+```
 
-Foreign investors có ảnh hưởng lớn tới KOSPI large caps.
+## 27. Công ty chứng khoán
 
-Foreign buying/selling nên đọc cùng KRW và semiconductor cycle. Large outflow có thể đến từ global allocation hoặc hedging, không nhất thiết company-specific view.
+```text
+Giá trị giao dịch
+Cho vay ký quỹ
+Chi phí nguồn vốn
+Danh mục tự doanh
+Ngân hàng đầu tư
+```
 
-Index rebalancing cũng tạo technical flows.
+## 28. Khu công nghiệp
 
-## 20. Foreign Flow ở Vietnam
+```text
+FDI
+Tỷ lệ lấp đầy
+Giá thuê
+Quỹ đất
+Hạ tầng
+```
 
-Foreign flow có visibility cao nhưng domestic investors và liquidity vẫn có vai trò rất lớn.
+## 29. Tiêu dùng
 
-FTSE/MSCI rebalance, ETF creation/redemption và foreign-room constraints có thể tạo flows không phản ánh fundamental view.
+```text
+Thu nhập
+Lượng khách
+Giá trị hóa đơn
+Tăng trưởng cửa hàng hiện hữu
+Tồn kho
+Biên lợi nhuận
+```
 
-Đừng coi một ngày foreign net sell là thesis change tự động.
+## 30. Đầu tư công và vật liệu
 
-## 21. Market Breadth
+```text
+Ngân sách
+Giải ngân
+Tiến độ dự án
+Nhu cầu thép / xi măng
+Chi phí đầu vào
+```
 
-Index có thể tăng trong khi majority stocks giảm nếu mega caps tăng mạnh.
+# Phần IX — Bảng theo dõi tỷ giá, dòng vốn và độ rộng
 
-Breadth gồm advance/decline, participation và sector leadership. Nó giúp biết rally broad hay narrow.
+## 31. Tỷ giá
 
-Ở Korea, mega-cap semiconductor có thể kéo KOSPI. Ở Vietnam, banks hoặc large caps có thể làm VN-Index khác trải nghiệm mid-cap investors.
+Theo dõi USD/KRW và USD/VND cùng nguyên nhân:
 
-## 22. Liquidity và Turnover
+- lãi suất;
+- cán cân đối ngoại;
+- dầu;
+- dòng vốn;
+- chính sách.
 
-Liquidity không chỉ là volume. Cần xem trading value, spread và depth relative position size.
+## 32. Dòng vốn nước ngoài
 
-Vietnam daily price limits làm liquidity risk đặc biệt quan trọng trong panic vì stock có thể floor nhiều sessions với ít buyers.
+Phân biệt:
 
-Korean large caps thường deeper nhưng small caps vẫn có liquidity risk.
+```text
+Dòng vốn thụ động
+Phân bổ chủ động
+Giảm rủi ro toàn cầu
+Ảnh hưởng phòng vệ tỷ giá
+```
 
-## 23. Margin Data
+## 33. Độ rộng thị trường
 
-Margin debt có thể amplify both bull and bear phases.
+Chỉ số tăng nhưng độ rộng giảm có thể cho thấy nhóm dẫn dắt quá hẹp.
 
-Khi market tăng và brokers mở margin, buying power tăng. Khi prices giảm, forced deleveraging có thể tạo additional selling.
+## 34. Thanh khoản
 
-Margin data là sentiment/financial-conditions signal, không phải standalone timing indicator.
+Theo dõi giá trị giao dịch, chênh lệch mua–bán và điều kiện ký quỹ/tín dụng phù hợp từng thị trường.
 
-## 24. Earnings Season Workflow
+# Phần X — Quy trình quanh báo cáo lợi nhuận
 
-Trước earnings, ghi consensus và key drivers. Sau report, so actual với expectation, nhưng đặc biệt đọc guidance.
+## 35. Trước khi công bố
 
-Stock reaction phụ thuộc surprise và positioning. Company beat nhưng guidance thấp có thể giảm.
+Ghi:
 
-Update model và thesis sau report thay vì chỉ ghi “beat/miss”.
+```text
+Doanh thu / EPS đồng thuận
+Kỳ vọng KPI chính
+Định giá
+Điều chỉnh dự báo gần đây
+Câu hỏi quan trọng
+```
 
-## 25. Central-Bank Meeting Workflow
+## 36. Khi kết quả được công bố
 
-Trước Fed, BOK hoặc SBV-relevant policy event, ghi market expectation.
+Tách:
 
-Sau event, không chỉ ghi rate decision. Đọc statement, inflation assessment, growth view, financial-stability concerns và forward guidance.
+```text
+Số báo cáo
+so với Đồng thuận
+so với Hướng dẫn trước đó
+```
 
-Theo phản ứng của 2Y yield, currency và equity sectors để hiểu market interpretation.
+Sau đó đi vào các động lực tạo chênh lệch.
 
-## 26. Geopolitical Shock Workflow
+## 37. Sau báo cáo
 
-Khi conflict xảy ra, xác định geography và transmission channel.
+Cập nhật:
 
-Oil route bị đe dọa khác cyberattack hay tariff announcement. Sau đó map winners/losers theo input costs, exports và FX.
+- mô hình;
+- định giá;
+- chất xúc tác;
+- điều kiện vô hiệu hóa;
+- mức độ tin cậy.
 
-Korea là energy importer nên oil shock có macro sensitivity cao. Vietnam impact khác theo energy structure và sector mix.
+# Phần XI — Quy trình quanh sự kiện ngân hàng trung ương
 
-## 27. Cross-Market Confirmation
+## 38. BOK / SBV
 
-Một thesis mạnh hơn khi nhiều markets xác nhận cùng story.
+Trước sự kiện:
 
-Ví dụ Korea semiconductor thesis được hỗ trợ nếu memory prices, semiconductor exports, company guidance và related global indices cùng cải thiện.
+```text
+Chính sách hiện tại
+Đồng thuận
+Tỷ giá
+Lạm phát
+Tăng trưởng
+Kỳ vọng đã phản ánh trong giá
+```
 
-Nếu stock tăng nhưng earnings revisions và exports yếu, rally có thể chủ yếu valuation/flow-driven.
+Sau sự kiện:
 
-## 28. Relative Strength
+```text
+Quyết định
+Thông cáo
+Định hướng
+Lãi suất thị trường
+Tỷ giá
+Phản ứng theo ngành
+```
 
-Relative strength so stock hoặc sector với benchmark.
+# Phần XII — Quy trình với chính sách tài khóa và quy định
 
-Company tăng 5% nhưng sector tăng 20% là underperformance. Company giảm 5% trong market giảm 20% có relative strength tốt.
+## 39. Thông báo không đồng nghĩa thực thi
 
-Relative analysis giúp tách company-specific information khỏi broad beta.
+Một chính sách tích cực cần đi qua:
 
-## 29. Valuation Regime
+```text
+Thông báo
+→ quy định pháp lý
+→ triển khai
+→ ảnh hưởng cấp doanh nghiệp
+→ dòng tiền
+```
 
-Không chỉ so P/E hiện tại với historical average. Historical multiple phải đặt trong rate regime và earnings cycle.
+## 40. Quy tắc ghi thời điểm
 
-P/E 15x khi bond yield 1% khác P/E 15x khi yield 5%. Cyclical company P/E thấp ở peak earnings có thể không rẻ.
+Quy định phải ghi ngày hiệu lực và nguồn. Không dùng ghi chú cũ như thể đó là quy tắc hiện hành nếu chưa kiểm tra.
 
-## 30. Research Notebook Template
+# Phần XIII — Chất xúc tác và điều kiện vô hiệu hóa
 
-Một research note tốt bắt đầu bằng business model và key drivers. Sau đó là financial trend, balance-sheet risk, valuation, macro sensitivity, catalysts, bear case và invalidation.
+## 41. Chất xúc tác
 
-Cuối note ghi những data series phải update định kỳ. Nhờ vậy thesis trở thành living document chứ không phải bài viết một lần.
+**Chất xúc tác (catalyst)** là sự kiện hoặc dữ liệu có thể khiến thị trường thay đổi kỳ vọng.
 
-## 31. Watchlist có cấu trúc
+## 42. Điều kiện vô hiệu hóa
 
-Watchlist không nên chỉ là 50 tickers.
+**Điều kiện vô hiệu hóa (invalidation)** là bằng chứng cho thấy cơ chế của luận điểm không còn đúng.
 
-Mỗi mã cần lý do theo dõi, trigger cần chờ và valuation range. Nếu không có thesis hoặc trigger, mã chỉ tạo information noise.
+Giá đi ngược vài phiên chưa chắc là bằng chứng vô hiệu hóa.
 
-Có thể chia watchlist theo core, cyclical, high-quality compounder, event-driven và speculative research.
+# Phần XIV — Danh sách theo dõi
 
-## 32. Weekly Market Review
+## 43. Danh sách theo dõi không chỉ là mã cổ phiếu
 
-Weekly review nên kiểm tra macro changes, rates, FX, commodity, sector leadership và earnings revisions.
+Mỗi mục nên có:
 
-Sau đó xem portfolio exposures có thay đổi không. Nếu không có thesis change, không cần trade chỉ vì một tuần nhiều news.
+```text
+Mã / ngành
+Luận điểm
+Động lực chính
+Định giá
+Chất xúc tác
+Điều kiện vô hiệu hóa
+Dữ liệu tiếp theo cần chờ
+```
 
-Review giúp tách learning khỏi impulsive action.
+## 44. Mức ưu tiên
 
-## 33. Monthly Macro Review
+Có thể chia:
 
-Monthly review phù hợp để cập nhật inflation trend, labor, PMI, credit, exports và policy path.
+- đang nghiên cứu chủ động;
+- chờ tín hiệu;
+- chỉ theo dõi;
+- luận điểm đã loại.
 
-Không nên thay macro thesis vì một data point. Trend và revisions quan trọng hơn.
+# Phần XV — Nhịp cập nhật hằng ngày, tuần, tháng và quý
 
-Korea và Vietnam có data calendars khác nhau nên notebook cần local calendar riêng.
+## 45. Hằng ngày
 
-## 34. Khi nào phải cập nhật Thesis?
+Chỉ cập nhật dữ liệu tần suất cao như giá, tỷ giá, dòng vốn, tin lớn và kết quả sự kiện. Không viết lại toàn bộ luận điểm mỗi ngày.
 
-Thesis cần update khi key driver, capital structure, management, regulation hoặc valuation thay đổi đáng kể.
+## 46. Hằng tuần
 
-Price move tự nó không luôn là thesis change. Nhưng price move có thể thay expected return vì valuation thay đổi.
+Đánh giá:
 
-Một stock tốt có thể trở thành khoản đầu tư kém khi price quá cao, và ngược lại.
+- độ rộng;
+- ngành dẫn dắt;
+- điều chỉnh dự báo lợi nhuận;
+- hàng hóa / tỷ giá quan trọng;
+- chất xúc tác sắp tới.
 
-## 35. Research Failure Modes
+## 47. Hằng tháng
 
-Confirmation bias khiến investor chỉ đọc sources ủng hộ thesis. Narrative fallacy biến một story hấp dẫn thành certainty. Overfitting dùng quá nhiều indicators để giải thích quá khứ. Authority bias tin analyst nổi tiếng mà không kiểm assumptions.
+Đánh giá vĩ mô, định giá, tín dụng, thanh khoản và bảng theo dõi ngành.
 
-Cách phòng vệ là luôn viết bear case và invalidation trước khi mua.
+## 48. Hằng quý
 
-## 36. Primary Sources nên dùng ở Korea
+Đi sâu báo cáo doanh nghiệp, mô hình lợi nhuận, bảng cân đối và phân bổ vốn.
 
-KRX dùng cho trading rules, listing và product information. Bank of Korea dùng cho rates, monetary policy và macro research. Government statistical sources dùng cho CPI, employment và national accounts. Company filings và investor relations dùng cho financials và guidance.
+# Phần XVI — Nhật ký quyết định
 
-Khi dữ liệu thay đổi, primary source ưu tiên hơn blog hoặc social media.
+## 49. Trước quyết định
 
-## 37. Primary Sources nên dùng ở Vietnam
+Ghi:
 
-SSC, HOSE, HNX, VSDC và VNX cung cấp market/regulatory information tùy nội dung. State Bank cung cấp monetary-policy và banking information. National statistics source cung cấp macro data. Company/exchange disclosures cung cấp financial reporting.
+```text
+Tập thông tin đang có
+Luận điểm
+Phân phối lợi suất kỳ vọng
+Rủi ro chính
+Logic xác định quy mô vị thế
+Điều kiện vô hiệu hóa
+```
 
-Các rule như settlement, tax và foreign-access có thể thay đổi nên phải kiểm hiện hành trước giao dịch thật.
+## 50. Sau quyết định
 
-## 38. Data Hygiene
+Đánh giá chất lượng quyết định riêng với kết quả. Không viết lại lý do sau khi đã biết giá tăng hay giảm.
 
-Cùng một metric từ hai websites có thể khác vì definition, currency, adjusted data hoặc reporting period.
+# Phần XVII — Sổ nghiên cứu
 
-Luôn ghi source, date và unit. Với valuation, ghi trailing hay forward. Với growth, ghi YoY hay QoQ. Với FX, ghi pair direction.
+## 51. Cấu trúc cho một chứng khoán
 
-Data hygiene nhỏ nhưng tránh rất nhiều analysis errors.
+```text
+01_business.md
+02_sector_drivers.md
+03_financials.md
+04_valuation.md
+05_events.md
+06_thesis_log.md
+```
 
-## 39. Từ Research tới Position Size
+Tên file có thể giữ tiếng Anh để tương thích hệ thống, nhưng nội dung giải thích nên dùng tiếng Việt.
 
-Research quality không tự quyết định position size. Position còn phụ thuộc uncertainty, liquidity, drawdown risk và portfolio correlation.
+## 52. Bảng theo dõi quốc gia
 
-High-conviction thesis ở illiquid small cap vẫn cần size nhỏ hơn broad ETF.
+Tách Hàn Quốc và Việt Nam thành bảng riêng, đồng thời duy trì một bảng biến toàn cầu chung để thấy cùng một cú sốc truyền khác nhau ra sao.
 
-Risk management là bước cuối của research workflow.
+# Phần XVIII — Thiên lệch và vệ sinh dữ liệu
+
+## 53. Thiên lệch xác nhận
+
+Chủ động tìm bằng chứng chống lại luận điểm, không chỉ dữ liệu ủng hộ.
+
+## 54. Thiên lệch gần đây
+
+Một quý tốt không tự động thay đổi kinh tế cấu trúc dài hạn.
+
+## 55. Sao chép câu chuyện từ báo cáo môi giới
+
+Không biến câu chuyện phân tích của bên khác thành dữ kiện nếu chưa kiểm tra dữ liệu gốc.
+
+## 56. Dữ liệu cũ
+
+Mọi dữ liệu động phải có thời điểm. Quy định, lãi suất, thành phần chỉ số và giới hạn sở hữu đều có thể thay đổi.
+
+# Phần XIX — Từ nghiên cứu tới quy mô vị thế
+
+## 57. Mức độ tin tưởng không đủ
+
+Quy mô vị thế phải xét:
+
+- mức giảm bất lợi;
+- thanh khoản;
+- bảng cân đối;
+- trùng lặp nhân tố;
+- bất định;
+- mức phơi nhiễm toàn danh mục.
+
+## 58. Chất lượng luận điểm và chất lượng thanh khoản là hai việc khác nhau
+
+Một luận điểm rất tốt ở cổ phiếu kém thanh khoản vẫn có thể chỉ phù hợp với vị thế nhỏ.
+
+# Phần XX — Mẫu nghiên cứu chuẩn
+
+## 59. Ghi chú doanh nghiệp
+
+```text
+Mô hình kinh doanh:
+Động lực ngành:
+Chỉ báo sớm:
+Chất lượng tài chính:
+Bảng cân đối:
+Định giá:
+Điều gì đã được phản ánh trong giá:
+Chất xúc tác:
+Điều kiện vô hiệu hóa:
+Rủi ro vị thế:
+Lần đánh giá tiếp theo:
+```
+
+## 60. Ghi chú quốc gia hoặc ngành
+
+```text
+Chế độ vĩ mô:
+Lãi suất / tỷ giá:
+Tín dụng / thanh khoản:
+Dòng vốn / độ rộng:
+Điều chỉnh dự báo lợi nhuận:
+Định giá:
+Kịch bản chính:
+Kịch bản thay thế:
+```
 
 ## Kết luận
 
-Một investor tự nghiên cứu hiệu quả không cần theo dõi mọi dữ liệu. Cần biết đúng drivers cho từng market và sector, ưu tiên primary sources, cập nhật thesis theo một cadence rõ ràng và phân biệt macro beta với company alpha. Khi workflow được chuẩn hóa, news không còn là dòng thông tin hỗn loạn mà trở thành input có vị trí rõ trong hệ thống phân tích.
+Nghiên cứu tốt không được đo bằng số lượng tin đã đọc mà bằng khả năng trả lời:
+
+```text
+Tôi đang cố kiểm chứng điều gì?
+Dữ liệu nào thực sự liên quan?
+Nguồn nào đáng tin nhất?
+Điều gì đã được phản ánh trong giá?
+Bằng chứng nào sẽ làm tôi đổi ý?
+```
+
+Khi quy trình này được lặp lại đều đặn, thư viện kiến thức trở thành một hệ thống hỗ trợ ra quyết định thay vì chỉ là kho tài liệu.

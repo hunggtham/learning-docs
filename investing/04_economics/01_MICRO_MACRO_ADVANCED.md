@@ -1,552 +1,636 @@
-# 05 — KINH TẾ VI MÔ VÀ VĨ MÔ CHUYÊN SÂU
+# Kinh tế vi mô và vĩ mô nâng cao
 
-> File này tiếp nối file 02 nhưng đi sâu hơn vào cơ chế kinh tế. Mục tiêu không phải học thuộc đồ thị hay công thức, mà hiểu vì sao cá nhân, doanh nghiệp và chính phủ đưa ra quyết định; các quyết định đó tương tác với nhau thế nào; và cuối cùng vì sao chúng ảnh hưởng tới doanh thu, lợi nhuận, lãi suất, tỷ giá và giá tài sản.
+> Mục tiêu của chương này là xây nền kinh tế học từ bản chất thay vì học thuộc các quan hệ kiểu “lãi suất tăng thì cổ phiếu giảm”. Phần vi mô giải thích hành vi của người tiêu dùng, doanh nghiệp và thị trường; phần vĩ mô nối các quyết định đó thành tăng trưởng, lạm phát, việc làm, chính sách và giá tài sản.
 
-## Mục lục
+# Phần I — Nền tảng tư duy kinh tế
 
-1. Scarcity, lựa chọn và opportunity cost
-2. Marginal thinking và incentive
-3. Supply, demand và equilibrium
-4. Elasticity và pricing power
-5. Consumer choice, utility và budget constraint
-6. Income effect và substitution effect
-7. Production, productivity và marginal product
-8. Fixed cost, variable cost và cost curves
-9. Economies of scale và diseconomies of scale
-10. Perfect competition
-11. Monopoly và market power
-12. Monopolistic competition
-13. Oligopoly và strategic interaction
-14. Game theory và Nash equilibrium
-15. Price discrimination
-16. Externalities
-17. Public goods và common resources
-18. Tax, subsidy và deadweight loss
-19. Labor market, wages và human capital
-20. Information asymmetry
-21. Adverse selection và moral hazard
-22. Principal-agent problem
-23. Behavioral economics
-24. Welfare economics và general equilibrium
-25. Từ vi mô sang vĩ mô
-26. National accounting và savings-investment identity
-27. Aggregate demand và aggregate supply
-28. Output gap
-29. Business cycle
-30. Fiscal multiplier
-31. IS–MP intuition
-32. Phillips curve
-33. Unemployment và natural rate
-34. Okun’s law
-35. Inflation expectations
-36. Monetary-policy transmission
-37. Taylor-rule intuition
-38. Fiscal policy và debt dynamics
-39. Crowding out và crowding in
-40. Productivity và long-run growth
-41. Solow growth intuition
-42. Human capital, institutions và innovation
-43. Demographics
-44. Financial accelerator
-45. Exchange-rate regimes
-46. Impossible trinity
-47. Policy mix trong nền kinh tế mở
-48. Cách dùng kinh tế học khi đầu tư
+## 1. Khan hiếm và chi phí cơ hội
 
----
+Kinh tế học bắt đầu từ **khan hiếm (scarcity)**: nguồn lực có giới hạn nhưng nhu cầu gần như vô hạn.
 
-## 1. Scarcity, lựa chọn và opportunity cost
+Vì vậy mọi lựa chọn đều có **chi phí cơ hội (opportunity cost)** — giá trị của phương án tốt nhất bị bỏ qua.
 
-Kinh tế học bắt đầu từ một sự thật rất đơn giản: nguồn lực hữu hạn nhưng mong muốn của con người gần như vô hạn. Một cá nhân chỉ có 24 giờ mỗi ngày. Một doanh nghiệp chỉ có một lượng vốn, nhân lực và năng lực sản xuất nhất định. Chính phủ cũng không thể đồng thời chi vô hạn cho quốc phòng, y tế, hạ tầng, giáo dục và phúc lợi mà không đối mặt với giới hạn thuế, nợ hoặc lạm phát.
+Ví dụ, nếu doanh nghiệp dùng 1 tỷ USD để xây nhà máy, chi phí kinh tế không chỉ là 1 tỷ USD đã chi mà còn là lợi ích có thể nhận được nếu dùng số vốn đó cho R&D, trả nợ hoặc mua lại cổ phiếu.
 
-Scarcity, tức khan hiếm, không có nghĩa một thứ phải hiếm tuyệt đối. Nó chỉ có nghĩa nguồn lực có giới hạn so với tất cả những cách có thể sử dụng nó. Vì vậy mọi quyết định kinh tế đều là quyết định lựa chọn.
+## 2. Tư duy cận biên
 
-Opportunity cost là giá trị của lựa chọn tốt nhất bị bỏ qua. Nếu bạn có 10 triệu won và dùng toàn bộ để mua cổ phiếu, opportunity cost không chỉ là 10 triệu tiền mặt biến mất. Nó còn là lợi ích bạn có thể nhận nếu dùng số tiền đó để trả nợ, gửi tiết kiệm, mua trái phiếu hoặc đầu tư vào kỹ năng nghề nghiệp.
+**Phân tích cận biên (marginal analysis)** hỏi điều gì xảy ra khi tăng thêm một đơn vị.
 
-Trong doanh nghiệp, opportunity cost xuất hiện ở capital allocation. Một công ty có 1 nghìn tỷ won tiền mặt có thể xây nhà máy mới, mua lại cổ phiếu, mua một công ty khác hoặc trả cổ tức. Quyết định tốt không phải quyết định tạo lợi nhuận dương tuyệt đối, mà là quyết định tạo return tốt hơn lựa chọn thay thế sau khi điều chỉnh rủi ro.
+Quyết định hợp lý thường dựa trên:
 
-Đối với nhà đầu tư, đây là lý do không nên hỏi riêng “cổ phiếu này có thể tăng không?”. Câu hỏi đúng hơn là “với mức giá hiện tại và rủi ro hiện tại, expected return của nó có hấp dẫn hơn những lựa chọn khác hay không?”. Khi government bond yield rất thấp, equities có thể hấp dẫn dù valuation cao. Khi risk-free yield tăng mạnh, opportunity cost của việc nắm cổ phiếu cũng tăng.
+```text
+Marginal Benefit
+so với
+Marginal Cost
+```
 
-## 2. Marginal thinking và incentive
+Một công ty không cần hỏi “quảng cáo có tốt không?”, mà nên hỏi “1 USD quảng cáo thêm tạo bao nhiêu gross profit tăng thêm?”.
 
-Kinh tế học thường không hỏi “có làm hay không” một cách tuyệt đối, mà hỏi “có nên làm thêm một đơn vị nữa hay không”. Đây là marginal thinking.
+## 3. Incentive
 
-Giả sử một nhà máy đang sản xuất 100.000 sản phẩm mỗi tháng. Quyết định có sản xuất sản phẩm thứ 100.001 không phụ thuộc toàn bộ chi phí xây nhà máy trong quá khứ. Nó phụ thuộc nhiều hơn vào marginal revenue, tức doanh thu tăng thêm từ một đơn vị, và marginal cost, tức chi phí tăng thêm để tạo đơn vị đó.
+Con người và doanh nghiệp phản ứng với **động lực khuyến khích (incentive)**.
 
-Nếu marginal revenue lớn hơn marginal cost, sản xuất thêm thường có ý nghĩa kinh tế. Khi hai giá trị tiến gần nhau, doanh nghiệp tới vùng output tối ưu theo mô hình đơn giản.
+Thuế, trợ cấp, lãi suất, tiền thưởng quản lý hay quy định đều có thể thay đổi hành vi dù mục tiêu chính sách ban đầu khác.
 
-Investor cũng dùng marginal thinking. Một cổ phiếu đã chiếm 20% portfolio có thể vẫn là doanh nghiệp tốt, nhưng câu hỏi mua thêm phải xét contribution của khoản tiền tiếp theo vào concentration risk. “Tôi vẫn thích công ty” không có nghĩa mua thêm luôn hợp lý.
+Phân tích chính sách tốt phải hỏi cả tác động trực tiếp và hành vi thích nghi.
 
-Incentive là động lực thay đổi hành vi. Thuế cao hơn làm một hành vi đắt hơn. Subsidy làm nó rẻ hơn. Bonus theo doanh số có thể khiến salesperson bán nhiều hơn nhưng cũng có thể tạo incentive bán sản phẩm không phù hợp. Lãi suất thấp khuyến khích borrowing; lãi suất cao làm tiết kiệm hấp dẫn hơn và investment hurdle rate tăng.
+# Phần II — Cung, cầu và giá
 
-Nhiều kết quả kinh tế không xuất phát từ ý định chính sách mà từ incentive mà chính sách tạo ra. Vì vậy khi phân tích regulation, không chỉ hỏi nhà làm luật muốn đạt gì; hãy hỏi individuals và firms sẽ thay đổi hành vi thế nào khi rule thay đổi.
+## 4. Cầu
 
-## 3. Supply, demand và equilibrium
+Đường cầu mô tả lượng người mua muốn mua ở các mức giá khác nhau, giữ các yếu tố khác không đổi.
 
-Demand curve mô tả lượng người mua muốn mua ở các mức giá khác nhau, khi các yếu tố khác giữ tương đối ổn định. Thông thường giá càng cao, lượng cầu càng thấp. Supply curve mô tả lượng người bán muốn cung cấp; thông thường giá cao hơn tạo incentive sản xuất và bán nhiều hơn.
+Cầu có thể dịch chuyển do:
 
-Equilibrium là vùng nơi lượng người mua muốn mua tương đối cân bằng với lượng người bán muốn bán. Nó không phải trạng thái bất biến. Khi income, technology, expectations, regulation hoặc input cost thay đổi, supply hoặc demand curve dịch chuyển và equilibrium mới xuất hiện.
+- thu nhập;
+- sở thích;
+- kỳ vọng;
+- giá sản phẩm thay thế;
+- giá sản phẩm bổ sung;
+- số lượng người mua.
 
-Đây là điểm rất quan trọng. Một biến động giá có thể do movement dọc theo curve hoặc shift của cả curve. Ví dụ oil price tăng vì global demand mạnh khác hoàn toàn oil price tăng vì supply bị gián đoạn. Hai trường hợp cùng tạo giá dầu cao hơn nhưng macro implications khác nhau.
+Cần phân biệt **di chuyển dọc đường cầu do giá** và **dịch chuyển toàn đường cầu do yếu tố khác**.
 
-Demand shock tích cực thường đi cùng output cao hơn và inflation pressure tăng. Negative supply shock có thể vừa làm price tăng vừa làm output giảm. Đây chính là lý do stagflation khó xử với central bank.
+## 5. Cung
 
-Trong stock analysis, supply-demand cũng xuất hiện ở cấp industry. Nếu semiconductor demand tăng nhưng capacity không thể mở rộng nhanh, ASP và margins tăng. Sau vài năm capex lớn, supply bắt kịp và pricing power có thể biến mất.
+Cung phụ thuộc:
 
-## 4. Elasticity và pricing power
+- giá bán;
+- chi phí đầu vào;
+- công nghệ;
+- công suất;
+- kỳ vọng;
+- quy định;
+- số lượng nhà cung cấp.
 
-Elasticity đo mức một biến phản ứng khi biến khác thay đổi. Price elasticity of demand đo lượng cầu thay đổi bao nhiêu phần trăm khi giá thay đổi 1%.
+Trong ngành cần capex lớn, nguồn cung thường phản ứng chậm. Đây là lý do bán dẫn, vận tải biển hoặc khai khoáng có chu kỳ mạnh.
 
-Nếu giá tăng 10% và lượng bán chỉ giảm 2%, demand tương đối inelastic. Doanh nghiệp có thể có pricing power hoặc product rất cần thiết. Nếu giá tăng 10% và lượng bán giảm 20%, demand elastic hơn.
+## 6. Cân bằng thị trường
 
-Elasticity không chỉ do nhu cầu thiết yếu. Nó còn phụ thuộc availability of substitutes, share of consumer budget và time horizon. Gasoline có thể inelastic trong vài tuần vì người đi làm chưa thể thay đổi xe hoặc nơi sống, nhưng elastic hơn qua nhiều năm khi người dân chuyển sang EV, public transport hoặc sống gần nơi làm.
+Giá cân bằng là nơi lượng cung và cầu gặp nhau trong một mô hình đơn giản.
 
-Cross-price elasticity mô tả cầu của sản phẩm A thay đổi khi giá sản phẩm B thay đổi. Nếu giá coffee tăng và demand tea tăng, chúng là substitutes ở mức nào đó. Nếu giá printer giảm làm demand ink tăng, hai sản phẩm complementary.
+Trong thực tế, giá liên tục điều chỉnh vì thông tin, tồn kho, hạn chế công suất và kỳ vọng tương lai thay đổi.
 
-Income elasticity cho biết demand thay đổi theo income. Luxury goods thường nhạy hơn với income. Staples ít nhạy hơn.
+## 7. Độ co giãn
 
-Đối với investor, elasticity giúp giải thích margin. Một consumer brand có brand loyalty mạnh có thể pass-through inflation tốt hơn producer hàng hóa chuẩn hóa. Đây là lý do cùng gặp input-cost shock nhưng companies có margin outcome khác nhau.
+**Độ co giãn (elasticity)** đo mức phản ứng của lượng cầu hoặc cung khi giá hay thu nhập thay đổi.
 
-## 5. Consumer choice, utility và budget constraint
+Cầu ít co giãn thường xuất hiện khi:
 
-Consumer theory bắt đầu bằng giả định người tiêu dùng phải phân bổ income hữu hạn giữa nhiều goods và services. Budget constraint mô tả những combinations mà họ có thể mua với income và prices hiện tại.
+- sản phẩm thiết yếu;
+- ít thay thế;
+- chi phí nhỏ so với thu nhập;
+- người mua khó thay đổi trong ngắn hạn.
 
-Nếu bạn có 100.000 won và một bữa ăn giá 10.000 won, coffee giá 5.000 won, bạn không thể mua vô hạn cả hai. Mỗi coffee thêm làm giảm số tiền dành cho meal hoặc mục tiêu khác.
+Doanh nghiệp có nhu cầu ít co giãn thường có khả năng tăng giá tốt hơn.
 
-Utility là khái niệm trừu tượng mô tả mức thỏa mãn. Kinh tế học hiện đại không cần khẳng định utility có thể đo tuyệt đối như nhiệt độ; nó dùng utility để biểu diễn preference ordering.
+## 8. Co giãn và pricing power
 
-Marginal utility thường giảm dần. Cốc nước đầu tiên khi rất khát có giá trị lớn; cốc thứ năm có utility nhỏ hơn. Diminishing marginal utility giúp giải thích vì sao willingness to pay cho mỗi unit thêm thường giảm.
+Quyền định giá (pricing power) không chỉ là “thương hiệu mạnh”. Nó phụ thuộc vào mức độ khách hàng sẵn sàng giảm lượng mua khi giá tăng.
 
-Consumer tối ưu hóa bằng cách phân bổ spending sao cho marginal utility nhận được trên mỗi đơn vị tiền chi ở các goods tương đối cân bằng theo logic mô hình.
+Nếu tăng giá 10% nhưng volume chỉ giảm 1%, doanh nghiệp có vị thế rất khác trường hợp volume giảm 15%.
 
-Trong đầu tư, concept này giúp hiểu consumer discretionary. Khi real income giảm vì inflation, consumers cắt các purchases có marginal utility thấp hơn hoặc dễ trì hoãn trước, trong khi necessities được bảo vệ tốt hơn.
+# Phần III — Hành vi người tiêu dùng
 
-## 6. Income effect và substitution effect
+## 9. Lựa chọn tiêu dùng
 
-Khi giá một sản phẩm thay đổi, hành vi consumer có thể được tách thành substitution effect và income effect.
+Người tiêu dùng phân bổ ngân sách để tối đa hóa mức thỏa dụng (utility) trong giới hạn thu nhập.
 
-Substitution effect xảy ra vì sản phẩm trở nên rẻ hoặc đắt tương đối so alternatives. Nếu beef tăng giá mạnh trong khi chicken không đổi, người tiêu dùng có thể chuyển từ beef sang chicken.
+Khái niệm quan trọng là trade-off: chi nhiều cho một nhóm hàng nghĩa là còn ít tiền cho nhóm khác.
 
-Income effect xảy ra vì thay đổi giá làm sức mua thực thay đổi. Nếu rent tăng mạnh, household cảm thấy nghèo hơn dù nominal salary không đổi và phải cắt spending khác.
+## 10. Hiệu ứng thu nhập và thay thế
 
-Hai effect này rất hữu ích khi phân tích inflation. Energy price shock không chỉ làm households mua ít gasoline hơn; nó còn giảm real disposable income và tác động restaurants, travel, apparel và entertainment.
+Khi giá một sản phẩm tăng:
 
-Đối với companies, doanh thu không chỉ phụ thuộc product price riêng. Relative price và real-income condition của customer quan trọng không kém.
+- **hiệu ứng thay thế (substitution effect):** người mua chuyển sang sản phẩm khác;
+- **hiệu ứng thu nhập (income effect):** sức mua thực giảm.
 
-## 7. Production, productivity và marginal product
+Hai hiệu ứng này giúp giải thích vì sao cùng một đợt lạm phát tác động khác nhau tới hàng thiết yếu và hàng tùy ý.
 
-Doanh nghiệp kết hợp labor, capital, land, technology và intermediate inputs để tạo output. Production function là cách kinh tế học mô tả quan hệ này.
+# Phần IV — Doanh nghiệp và chi phí
 
-Marginal product of labor là output tăng thêm khi thêm một unit labor, giữ tương đối các inputs khác. Ban đầu thêm worker có thể tăng output mạnh vì specialization. Nhưng nếu factory space và machines cố định, đến một lúc thêm worker tạo output tăng thêm nhỏ dần. Đây là diminishing marginal returns trong short run.
+## 11. Hàm sản xuất
 
-Productivity khác tổng output. Một nền kinh tế có thể tăng output chỉ vì có thêm workers, nhưng output per worker không tăng. Long-run living standards phụ thuộc mạnh vào productivity vì population và hours worked có giới hạn.
+Doanh nghiệp biến lao động, vốn và công nghệ thành sản lượng.
 
-AI, automation, software và better management có thể nâng productivity bằng cách giúp cùng một lượng labor và capital tạo nhiều output hơn.
+Năng suất tăng khi có thể tạo nhiều output hơn từ cùng lượng input.
 
-Investor nên phân biệt capex chỉ mở rộng capacity với capex nâng productivity. Hai loại đều tăng assets nhưng economics dài hạn khác nhau.
+## 12. Chi phí cố định và biến đổi
 
-## 8. Fixed cost, variable cost và cost curves
+**Chi phí cố định (fixed cost)** không thay đổi nhiều trong ngắn hạn theo sản lượng. **Chi phí biến đổi (variable cost)** thay đổi theo output.
 
-Fixed cost không thay đổi nhiều theo output trong short run, như rent hoặc depreciation của factory. Variable cost tăng theo production, như raw materials hoặc shipping.
+Ngành có fixed cost cao thường có **đòn bẩy hoạt động (operating leverage)** lớn.
 
-Average fixed cost giảm khi output tăng vì cùng fixed cost được phân bổ lên nhiều units. Đây là một nguồn operating leverage.
+```text
+Doanh thu ↑ nhẹ
+→ lợi nhuận có thể ↑ mạnh
+```
 
-Marginal cost là chi phí của unit tiếp theo. Trong nhiều production processes, marginal cost ban đầu có thể thấp nhưng tăng khi capacity bị căng, overtime tăng hoặc bottleneck xuất hiện.
+Nhưng chiều ngược lại cũng đúng.
 
-Average total cost gồm fixed và variable cost trên mỗi unit. Scale tối ưu thường liên quan vùng average cost thấp nhất trong mô hình đơn giản.
+## 13. Chi phí cận biên
 
-Khi demand sụp, company fixed-cost-heavy có lợi nhuận giảm nhanh vì fixed cost không biến mất. Airlines, semiconductor fabs và steel mills là ví dụ điển hình.
+Chi phí cận biên (marginal cost) là chi phí tạo thêm một đơn vị sản lượng.
 
-## 9. Economies of scale và diseconomies of scale
+Trong cạnh tranh mạnh, giá dài hạn thường có xu hướng bị kéo gần chi phí kinh tế của nhà sản xuất biên.
 
-Economies of scale xảy ra khi company lớn hơn làm average cost giảm. Nguyên nhân có thể là fixed cost được spread, purchasing power lớn, specialized labor, automation hoặc network infrastructure.
+## 14. Kinh tế theo quy mô
 
-Tech platforms có thể có scale economics cực mạnh vì software đã xây xong có thể phục vụ thêm users với marginal cost thấp.
+**Economies of scale** xuất hiện khi chi phí bình quân giảm khi quy mô tăng.
 
-Nhưng scale không vô hạn. Diseconomies of scale xuất hiện khi bureaucracy, coordination cost, politics nội bộ hoặc management complexity tăng. Company càng lớn có thể càng chậm đổi mới.
+Nguồn có thể đến từ:
 
-Investor nên hỏi scale là moat thật hay chỉ là size. Một company lớn nhưng economics xấu không tự động có lợi thế.
+- phân bổ fixed cost;
+- mua nguyên liệu tốt hơn;
+- dữ liệu;
+- mạng lưới;
+- logistics;
+- thương hiệu.
 
-## 10. Perfect competition
+Nhưng quy mô quá lớn cũng có thể tạo **diseconomies of scale** do quan liêu và phối hợp kém.
 
-Perfect competition là benchmark model nơi nhiều sellers bán product gần như identical, entry-exit dễ và không firm nào kiểm soát price. Thế giới thực hiếm khi hoàn hảo như vậy, nhưng model giúp hiểu commodity-like businesses.
+# Phần V — Cấu trúc thị trường
 
-Trong competition mạnh, abnormal profits thu hút entrants. Supply tăng và margins giảm. Long-run economic profit bị ép xuống gần cost of capital.
+## 15. Cạnh tranh hoàn hảo
 
-Đây là lý do ngành có barrier to entry thấp thường khó giữ ROIC rất cao lâu dài. Nếu một business đơn giản kiếm 30% return và ai cũng có thể copy, capital sẽ đổ vào cho tới khi return giảm.
+Mô hình cạnh tranh hoàn hảo giả định nhiều người mua bán, sản phẩm gần giống nhau và không ai có quyền định giá lớn.
 
-Investor quality thường tìm businesses có mechanism ngăn competition bào mòn profit.
+Đây là benchmark lý thuyết hơn là mô tả phần lớn ngành thực tế.
 
-## 11. Monopoly và market power
+## 16. Độc quyền
 
-Monopoly là trường hợp một seller kiểm soát phần lớn market và substitutes yếu. Monopolist có khả năng đặt price cao hơn marginal cost, nhưng vẫn bị demand curve giới hạn.
+Doanh nghiệp độc quyền có khả năng hạn chế output và đặt giá cao hơn thị trường cạnh tranh, nhưng vẫn bị giới hạn bởi cầu, công nghệ, regulation và sản phẩm thay thế.
 
-Market power có thể đến từ patent, network effect, regulation, control of scarce resource hoặc scale economies.
+## 17. Oligopoly
 
-Monopoly profit hấp dẫn với shareholder nhưng có thể gây welfare loss cho society vì output thấp hơn và price cao hơn competitive benchmark. Đây là lý do antitrust policy tồn tại.
+Trong thị trường ít đối thủ, quyết định của một công ty phụ thuộc phản ứng của công ty khác.
 
-Investor phải phân biệt sustainable market power với temporary dominance. Technology có thể phá moat rất nhanh nếu switching cost thấp.
+Đây là nơi **lý thuyết trò chơi (game theory)** trở nên quan trọng.
 
-## 12. Monopolistic competition
+## 18. Nash equilibrium
 
-Monopolistic competition có nhiều firms nhưng products differentiated. Restaurants, clothing brands và nhiều consumer products gần mô hình này hơn perfect competition.
+**Cân bằng Nash (Nash equilibrium)** là trạng thái mỗi bên không muốn đơn phương thay chiến lược khi chiến lược của bên khác giữ nguyên.
 
-Firm có một ít pricing power vì brand và differentiation, nhưng competition vẫn mạnh. Advertising và product innovation trở thành công cụ cạnh tranh.
+Khái niệm này giúp hiểu cạnh tranh giá, capex, capacity và bidding.
 
-Gross margin cao chưa đủ chứng minh moat. Nếu firm phải chi gần hết gross profit cho marketing chỉ để giữ customers, economic moat có thể yếu hơn tưởng tượng.
+## 19. Price discrimination
 
-## 13. Oligopoly và strategic interaction
+Doanh nghiệp có thể bán cùng sản phẩm với giá khác nhau cho nhóm khách hàng khác nhau khi:
 
-Oligopoly là market có ít large players. Semiconductor equipment, commercial aircraft, telecom ở nhiều quốc gia và credit-card networks có characteristics oligopoly.
+- có market power;
+- nhận diện được willingness to pay;
+- hạn chế resale.
 
-Trong oligopoly, mỗi firm phải quan tâm reaction của rivals. Nếu một airline giảm price, competitors có thể match và price war xảy ra. Nếu producers cùng giữ capex discipline, industry margins có thể tốt hơn.
+Ví dụ quen thuộc là airline pricing hoặc subscription tier.
 
-Đây là nơi game theory hữu ích.
+# Phần VI — Thất bại thị trường
 
-## 14. Game theory và Nash equilibrium
+## 20. Externality
 
-Game theory nghiên cứu quyết định khi outcome của bạn phụ thuộc vào action của người khác.
+Ngoại tác (externality) xuất hiện khi hành động của một bên tạo chi phí hoặc lợi ích cho bên khác nhưng không phản ánh đầy đủ trong giá.
 
-Prisoner’s Dilemma minh họa tình huống nơi hai players có incentive cá nhân dẫn tới outcome kém hơn nếu họ có thể hợp tác. Trong business, price war có cấu trúc tương tự: mỗi firm muốn giành share bằng giảm giá, nhưng nếu tất cả làm, industry profit sụp.
+Ô nhiễm là ví dụ ngoại tác âm. R&D có thể tạo ngoại tác dương vì kiến thức lan sang doanh nghiệp khác.
 
-Nash equilibrium là trạng thái nơi không player nào có incentive đơn phương thay action nếu actions của others giữ nguyên.
+## 21. Public goods
 
-Game theory không dự báo exact behavior, nhưng giúp investor nghĩ về strategic stability. Một cartel có thể giữ price cao nếu members tuân thủ quota, nhưng mỗi member có incentive bí mật tăng output. Vì vậy stability của OPEC-like arrangements phụ thuộc monitoring, spare capacity và incentives.
+Hàng hóa công (public goods) có tính không loại trừ và không cạnh tranh trong tiêu dùng ở mức cao.
 
-## 15. Price discrimination
+Quốc phòng hoặc một số loại kiến thức cơ bản là ví dụ gần với mô hình này.
 
-Price discrimination xảy ra khi doanh nghiệp bán cùng hoặc gần cùng product cho customers khác nhau với prices khác nhau dựa trên willingness to pay hoặc conditions.
+## 22. Thuế và tổn thất vô ích
 
-Airline tickets là ví dụ. Người business cần bay đúng giờ thường chấp nhận giá cao hơn traveler linh hoạt. Software có student pricing, enterprise pricing và geographic pricing.
+Thuế có thể làm giảm lượng giao dịch so với cân bằng không thuế.
 
-Price discrimination có thể tăng revenue và capacity utilization. Nhưng nó yêu cầu company có market power, khả năng phân loại customers và ngăn arbitrage đủ tốt.
+Phần phúc lợi mất đi mà không chuyển thành doanh thu thuế gọi là **deadweight loss**.
 
-Investor SaaS nên hiểu pricing tiers vì revenue growth có thể tới từ price architecture chứ không chỉ user growth.
+Mức tổn thất phụ thuộc độ co giãn của cung và cầu.
 
-## 16. Externalities
+# Phần VII — Thông tin và incentive
 
-Externality xảy ra khi action của một bên tạo cost hoặc benefit cho người khác nhưng không được phản ánh đầy đủ trong market price.
+## 23. Thông tin bất cân xứng
 
-Pollution là negative externality. Factory chỉ nhìn private cost nhưng society chịu health và environmental cost. Education có positive externality vì educated population có thể tăng productivity và social outcomes ngoài lợi ích cá nhân.
+**Thông tin bất cân xứng (information asymmetry)** xảy ra khi hai bên giao dịch biết thông tin khác nhau.
 
-Tax carbon, regulation hoặc tradable permits là các cách đưa external cost vào decision.
+Ví dụ ngân hàng không biết chính xác chất lượng người vay bằng chính người vay.
 
-Đối với investor, externalities trở thành policy risk. Một business profitable vì xã hội chưa pricing pollution có thể thấy cost tăng mạnh khi regulation thay đổi.
+## 24. Adverse selection
 
-## 17. Public goods và common resources
+**Lựa chọn bất lợi (adverse selection)** xảy ra trước giao dịch khi bên rủi ro cao có xu hướng tham gia nhiều hơn.
 
-Public goods thường có hai characteristics: non-rival và non-excludable. National defense là ví dụ gần điển hình; một người được bảo vệ không làm giảm protection của người khác và khó loại riêng một người khỏi benefit.
+## 25. Moral hazard
 
-Private market có thể cung cấp public goods dưới mức tối ưu vì free-rider problem.
+**Rủi ro đạo đức (moral hazard)** xảy ra sau giao dịch khi một bên thay đổi hành vi vì không chịu toàn bộ hậu quả.
 
-Common resources khác ở chỗ khó exclude nhưng rival. Fish stock trên biển có thể bị overused vì mỗi fisherman có incentive bắt thêm trước người khác. Đây là tragedy of the commons.
+## 26. Principal–agent problem
 
-Nhiều environmental và resource policies có thể hiểu tốt hơn qua framework này.
+**Vấn đề người ủy quyền – người đại diện (principal–agent problem)** xuất hiện khi người quản lý không hoàn toàn có cùng lợi ích với chủ sở hữu.
 
-## 18. Tax, subsidy và deadweight loss
+Đây là nền tảng kinh tế của corporate governance.
 
-Tax tạo wedge giữa price buyer trả và seller nhận. Ai thực sự chịu burden phụ thuộc elasticity, không chỉ ai legally nộp thuế.
+# Phần VIII — Kinh tế hành vi
 
-Nếu demand rất inelastic nhưng supply elastic, consumers có thể chịu phần lớn tax qua price cao hơn. Nếu demand elastic hơn, producers khó pass-through.
+## 27. Con người không hoàn toàn lý trí
 
-Tax có thể làm quantity traded giảm và tạo deadweight loss, tức phần surplus mất đi mà không trở thành tax revenue.
+Kinh tế hành vi nghiên cứu các sai lệch có hệ thống như:
 
-Subsidy làm activity rẻ hơn và khuyến khích quantity, nhưng cũng có fiscal cost và có thể tạo overproduction.
+- loss aversion;
+- anchoring;
+- overconfidence;
+- present bias;
+- herd behavior.
 
-Khi phân tích EV subsidy, housing tax hoặc import tariff, elasticity giúp dự đoán ai thực sự hưởng lợi hoặc chịu cost.
+Các bias này ảnh hưởng tiêu dùng, tiết kiệm và đầu tư.
 
-## 19. Labor market, wages và human capital
+# Phần IX — Từ vi mô tới vĩ mô
 
-Labor market cũng là supply-demand market, nhưng con người không phải commodity đơn giản. Wage phụ thuộc productivity, scarcity of skills, bargaining power, institutions và local conditions.
+## 28. Tổng hợp hành vi
 
-Human capital là knowledge, skills và health làm worker productive hơn. Education và training có thể là investment vì chi phí hiện tại đổi lấy future income.
+Kinh tế vĩ mô là kết quả tổng hợp của:
 
-Wage growth bền vững mà không tạo inflation thường cần productivity growth tương ứng. Nếu wages tăng 6% nhưng productivity chỉ tăng 1%, unit labor cost tăng mạnh và companies có thể tăng prices hoặc giảm margins.
+```text
+Household Consumption
++ Business Investment
++ Government Spending
++ Net Exports
+```
 
-Đây là lý do central banks theo dõi wage data cùng productivity.
+Nhưng tổng thể không phải lúc nào cũng bằng việc cộng cơ học từng cá nhân vì có feedback giữa các chủ thể.
 
-## 20. Information asymmetry
+## 29. GDP
 
-Information asymmetry xảy ra khi một bên transaction biết nhiều hơn bên kia.
+Theo phương pháp chi tiêu:
 
-Used-car seller biết condition của xe tốt hơn buyer. Borrower biết risk-taking intention hơn bank. Company management biết internal business tốt hơn outside shareholders.
+```text
+GDP = C + I + G + NX
+```
 
-Markets phát triển mechanisms để giảm asymmetry: audits, credit scores, warranties, disclosure, collateral và reputation.
+GDP đo giá trị sản xuất cuối cùng trong một nền kinh tế, không đo trực tiếp chất lượng cuộc sống hay giá trị tài sản.
 
-Investor relations và financial reporting tồn tại một phần để giảm information gap, nhưng không loại bỏ hoàn toàn.
+## 30. GDP danh nghĩa và thực
 
-## 21. Adverse selection và moral hazard
+GDP danh nghĩa chịu cả giá và lượng. GDP thực điều chỉnh thay đổi mức giá để gần hơn với tăng trưởng sản lượng.
 
-Adverse selection xảy ra trước transaction. Nếu insurer không phân biệt high-risk và low-risk customers, premium trung bình có thể làm low-risk rời market, để pool ngày càng riskier.
+Trong môi trường lạm phát cao, nominal growth có thể mạnh trong khi real growth yếu.
 
-Moral hazard xảy ra sau transaction khi protection làm behavior thay đổi. Nếu một institution tin chắc sẽ được bailout, nó có thể take more risk.
+## 31. Tổng cầu và tổng cung
 
-Banking regulation, deductibles trong insurance và collateral requirements đều cố giảm các problems này.
+Khung AD–AS giúp phân biệt cú sốc cầu và cung.
 
-Trong investing, leverage products có thể tạo moral hazard nếu trader nghĩ broker hoặc family sẽ rescue account.
+```text
+Demand Shock:
+Growth ↑ + Inflation ↑
 
-## 22. Principal-agent problem
+Positive Supply Shock:
+Growth ↑ + Inflation ↓
 
-Principal giao quyền cho agent nhưng interests không hoàn toàn giống nhau. Shareholders là principals, managers là agents.
+Negative Supply Shock:
+Growth ↓ + Inflation ↑
+```
 
-Management có thể muốn empire building, compensation lớn hoặc acquisitions tăng size dù shareholder value không tăng.
+Đây là một trong những bản đồ hữu ích nhất khi đọc vĩ mô.
 
-Board governance, stock-based compensation và activist investors là mechanisms alignment, nhưng cũng có side effects. Stock options có thể khuyến khích risk-taking hoặc short-term price management.
+## 32. Output gap
 
-Khi phân tích company, compensation structure cho biết incentives của management.
+**Khoảng sản lượng (output gap)** là chênh lệch giữa sản lượng thực và mức tiềm năng.
 
-## 23. Behavioral economics
+Output trên tiềm năng có thể tạo áp lực giá và lương. Output dưới tiềm năng thường đi cùng tài nguyên nhàn rỗi hơn.
 
-Traditional models thường bắt đầu với rational agents. Behavioral economics nghiên cứu systematic deviations.
+Mức tiềm năng không quan sát trực tiếp nên luôn là ước tính.
 
-Loss aversion làm con người ghét mất tiền mạnh hơn thích kiếm cùng số tiền. Anchoring làm họ bám vào reference point. Availability bias làm sự kiện dễ nhớ bị đánh giá probability quá cao. Herding làm individuals follow crowd khi uncertainty lớn.
+## 33. Chu kỳ kinh doanh
 
-Present bias khiến people ưu tiên gratification hiện tại hơn future welfare, ảnh hưởng saving behavior.
+Chu kỳ thường đi qua:
 
-Markets có thể aggregate information tốt nhưng không có nghĩa participants luôn rational. Bubbles thường cần kết hợp fundamentals, leverage, narrative và behavioral reinforcement.
+```text
+Recovery
+→ Expansion
+→ Late Cycle
+→ Slowdown / Recession
+→ Repair
+```
 
-## 24. Welfare economics và general equilibrium
+Nhưng độ dài và thứ tự không cố định.
 
-Partial-equilibrium analysis nhìn một market riêng lẻ. General equilibrium nhắc rằng markets liên kết với nhau.
+# Phần X — Thị trường lao động
 
-Tax housing có thể ảnh hưởng rent, construction, bank lending và household consumption. Oil shock ảnh hưởng transport, inflation, wages, central-bank policy và FX.
+## 34. Thất nghiệp
 
-Welfare economics nghiên cứu allocation ảnh hưởng tổng surplus và distribution ra sao. Policy có thể tăng total efficiency nhưng tạo losers, hoặc giảm efficiency để đạt mục tiêu distribution khác.
+Tỷ lệ thất nghiệp không phản ánh toàn bộ thị trường lao động. Cần xem thêm:
 
-Investor cần hiểu distinction giữa economic efficiency và political feasibility. Một policy “tối ưu” trên paper có thể không tồn tại nếu distributional cost quá lớn.
+- participation rate;
+- employment-population ratio;
+- hours worked;
+- job openings;
+- wage growth.
 
-## 25. Từ vi mô sang vĩ mô
+## 35. Okun's law
 
-Macroeconomics không đơn giản là cộng tất cả micro decisions vì interactions và feedback tạo aggregate behavior mới.
+**Định luật Okun (Okun's law)** mô tả quan hệ thực nghiệm giữa tăng trưởng và thất nghiệp.
 
-Nếu một household tiết kiệm nhiều hơn, đó có thể là prudent. Nếu tất cả households đồng thời giảm spending trong recession, aggregate demand giảm, firms cắt jobs và national income giảm. Đây là paradox of thrift trong một số conditions.
+Nó là quy tắc gần đúng, không phải hằng số bất biến.
 
-Tương tự, một bank giảm lending để bảo vệ balance sheet là rational. Nếu toàn banking system cùng deleverage, credit contraction có thể làm recession sâu hơn.
+## 36. Phillips curve
 
-Macro tập trung các feedback loops này.
+Đường Phillips mô tả quan hệ giữa lạm phát và mức độ căng của nền kinh tế hoặc thị trường lao động.
 
-## 26. National accounting và savings-investment identity
+Quan hệ này thay đổi theo:
 
-GDP expenditure identity là:
+- kỳ vọng lạm phát;
+- supply shock;
+- năng suất;
+- cấu trúc thị trường lao động.
 
-`Y = C + I + G + NX`
+Do đó không nên dùng như công thức cơ học.
 
-Trong đó Y là output/income, C consumption, I investment, G government spending và NX net exports.
+# Phần XI — Lạm phát
 
-Từ accounting identities, national saving liên hệ với domestic investment và current account. Một country đầu tư nhiều hơn national saving phải nhận financing từ abroad và thường có current-account deficit theo accounting framework.
+## 37. Các nguồn lạm phát
 
-Identity không nói causality. Current-account deficit không tự động “xấu”; nó có thể finance productive investment hoặc excessive consumption.
+Lạm phát có thể đến từ:
 
-Investor FX cần hiểu distinction này vì deficit sustainability phụ thuộc chất lượng capital inflow và external balance sheet.
+- cầu mạnh;
+- supply shock;
+- lương;
+- housing;
+- hàng hóa;
+- tỷ giá;
+- kỳ vọng.
 
-## 27. Aggregate demand và aggregate supply
+Cùng CPI 4% nhưng cấu trúc khác nhau sẽ tạo reaction function khác.
 
-Aggregate Demand, AD, mô tả total spending demand ở economy. Consumption, investment, government spending và net exports đóng góp.
+## 38. Kỳ vọng lạm phát
 
-Short-run Aggregate Supply, SRAS, phản ánh output firms sẵn sàng produce ở các price conditions trong ngắn hạn khi wages và contracts có stickiness.
+Nếu doanh nghiệp và người lao động tin lạm phát cao sẽ kéo dài, họ có thể điều chỉnh giá và lương trước, khiến lạm phát bền hơn.
 
-Long-run Aggregate Supply liên quan productive capacity của economy.
+Đây là lý do ngân hàng trung ương quan tâm việc kỳ vọng có được **neo (anchored)** hay không.
 
-Positive demand shock dịch AD sang phải: output và inflation thường cùng tăng trong short run. Negative supply shock dịch SRAS trái: output giảm nhưng inflation tăng. Đây là intuition quan trọng nhất để hiểu policy response.
+# Phần XII — Chính sách tiền tệ
 
-## 28. Output gap
+## 39. Cơ chế truyền dẫn
 
-Potential output là mức economy có thể sustain khi labor và capital được sử dụng ở mức bình thường mà không tạo inflation acceleration kéo dài.
+```text
+Policy Rate
+→ Money-Market Rates
+→ Bond Yields
+→ Mortgage / Corporate Rates
+→ FX / Asset Prices
+→ Consumption / Investment
+→ Growth / Inflation
+```
 
-Output gap là chênh lệch giữa actual output và potential output.
+Mỗi mắt xích có độ trễ và cường độ khác nhau.
 
-Positive output gap nghĩa demand vượt capacity, thường tạo inflation pressure. Negative gap nghĩa economy có slack và unemployment cao hơn.
+## 40. Reaction function
 
-Potential output không quan sát trực tiếp; economists ước lượng nên có uncertainty lớn. Central bank có thể sai nếu đánh giá capacity sai.
+Hàm phản ứng của ngân hàng trung ương cân nhắc:
 
-## 29. Business cycle
+- inflation;
+- labor;
+- growth;
+- expectations;
+- financial stability.
 
-Business cycle là fluctuations của economic activity quanh long-run trend.
+Thị trường thường phản ứng với thay đổi dự kiến trong reaction function chứ không chỉ mức lãi suất hiện tại.
 
-Expansion thường có output, employment, credit và profits tăng. Late cycle có capacity tight, wage pressure và inflation tăng. Tight policy có thể làm demand chậm. Recession làm output và employment giảm, inventories bị cắt và credit losses tăng. Recovery bắt đầu khi policy, valuations và inventories điều chỉnh.
+## 41. Taylor rule
 
-Không có cycle nào giống hệt. Recession do banking crisis khác recession do pandemic supply shock.
+Taylor rule là một khung đơn giản liên hệ policy rate với lạm phát và output gap.
 
-Investor nên xác định driver của cycle thay vì áp một clock cố định.
+Nó hữu ích như benchmark, không phải công thức buộc ngân hàng trung ương phải làm theo.
 
-## 30. Fiscal multiplier
+## 42. Neutral rate và r-star
 
-Fiscal multiplier đo output thay đổi bao nhiêu khi government spending hoặc tax thay đổi một đơn vị.
+**Lãi suất trung tính (neutral rate, r-star)** là mức lãi suất thực phù hợp với nền kinh tế ở gần toàn dụng và lạm phát ổn định.
 
-Multiplier không cố định. Nó thường lớn hơn khi economy có slack, central bank không offset stimulus và households có liquidity constraints. Nó có thể nhỏ hơn khi economy near capacity và stimulus chỉ đẩy inflation hoặc interest rates lên.
+R-star không quan sát trực tiếp và có thể thay đổi theo:
 
-Government infrastructure có thể có short-run demand effect và long-run supply effect nếu nâng productivity.
+- năng suất;
+- demographics;
+- tiết kiệm;
+- đầu tư;
+- fiscal policy.
 
-Cash transfers có speed nhanh nhưng multiplier phụ thuộc recipients spend hay save.
+# Phần XIII — Chính sách tài khóa
 
-## 31. IS–MP intuition
+## 43. Fiscal stimulus
 
-Thay vì học mô hình IS-LM cũ như đồ thị phải thuộc lòng, có thể dùng IS–MP intuition.
+Chính phủ có thể tác động tổng cầu qua chi tiêu, thuế và chuyển giao.
 
-IS side nói desired spending giảm khi real interest rate tăng vì borrowing đắt hơn và future spending bị discount mạnh hơn. Monetary-policy side nói central bank chọn policy stance dựa inflation và activity.
+Hiệu quả phụ thuộc:
 
-Khi inflation quá cao, central bank tăng real-rate pressure, làm investment và rate-sensitive consumption chậm. Khi recession và inflation thấp, policy easing làm financing conditions nhẹ hơn.
+- nền kinh tế còn công suất trống không;
+- hộ gia đình có chi tiêu hay tiết kiệm khoản nhận được;
+- chính sách tiền tệ phản ứng thế nào.
 
-Framework này giúp nối macro data với markets mà không cần quá nhiều algebra.
+## 44. Fiscal multiplier
 
-## 32. Phillips curve
+**Hệ số nhân tài khóa (fiscal multiplier)** đo output thay đổi bao nhiêu so với một thay đổi chi tiêu hoặc thuế.
 
-Phillips curve mô tả empirical relationship giữa labor-market slack và inflation/wage pressure trong một số periods.
+Multiplier không cố định. Nó có thể cao hơn trong suy thoái sâu và thấp hơn khi nền kinh tế đã quá nóng.
 
-Khi unemployment rất thấp, firms cạnh tranh labor và wages tăng. Nếu productivity không bù, cost pressure có thể truyền sang prices.
+## 45. Crowding out
 
-Nhưng relationship không ổn định. Inflation expectations, supply shocks, globalization và credibility của central bank làm curve thay đổi.
+Nếu chính phủ vay nhiều khi nền kinh tế gần toàn dụng, lợi suất có thể tăng và làm đầu tư tư nhân bị chèn lấn.
 
-Không nên dùng unemployment thấp để kết luận inflation chắc chắn tăng. Nó là một input trong broader model.
+Nhưng trong suy thoái với nguồn lực nhàn rỗi, hiệu ứng này có thể yếu hơn.
 
-## 33. Unemployment và natural rate
+# Phần XIV — Năng suất và tăng trưởng dài hạn
 
-Unemployment có nhiều loại. Frictional unemployment xảy ra khi people chuyển jobs. Structural unemployment do skills hoặc geography không match jobs. Cyclical unemployment tăng trong recession.
+## 46. Năng suất
 
-Natural rate hoặc NAIRU là estimate của unemployment consistent với inflation tương đối ổn định trong một framework. Nó không quan sát trực tiếp và thay đổi theo demographics, labor institutions và matching efficiency.
+Tăng trưởng dài hạn không thể dựa mãi vào tăng nợ hoặc kéo nhiều lao động hơn vào hệ thống.
 
-Policy cố kéo unemployment thấp hơn sustainable level quá lâu có thể tạo inflation pressure, nhưng uncertainty về natural rate luôn lớn.
+Nguồn bền vững gồm:
 
-## 34. Okun’s law
+- vốn;
+- lao động;
+- human capital;
+- công nghệ;
+- năng suất nhân tố tổng hợp (TFP).
 
-Okun’s law là empirical relationship giữa output growth và unemployment changes. Khi growth vượt trend đủ mạnh, unemployment thường giảm; recession làm unemployment tăng.
+## 47. Solow framework
 
-Đây không phải law vật lý. Productivity và labor-force participation có thể làm relationship thay đổi.
+Mô hình Solow giúp tách tăng trưởng từ tích lũy vốn, lao động và tiến bộ công nghệ.
 
-Investor dùng nó như intuition để nối GDP slowdown với earnings và labor data.
+Khi vốn trên mỗi lao động đã cao, thêm vốn thường có lợi suất giảm dần nếu công nghệ không tiến bộ.
 
-## 35. Inflation expectations
+## 48. TFP
 
-Expected inflation quan trọng vì contracts nhìn về tương lai.
+TFP phản ánh phần sản lượng không giải thích đơn thuần bằng tăng input.
 
-Nếu workers tin inflation sẽ cao, họ đòi wage increases. Firms kỳ vọng input costs tăng nên adjust prices sớm. Lenders yêu cầu higher nominal yields.
+Nó liên quan tới:
 
-Anchored expectations nghĩa households và markets tin central bank cuối cùng sẽ đưa inflation về target. De-anchoring làm disinflation cost lớn hơn vì behavior bắt đầu tự duy trì inflation.
+- công nghệ;
+- quản trị;
+- phân bổ vốn;
+- thể chế;
+- cạnh tranh.
 
-Breakeven inflation trong bond market là một proxy, nhưng còn chứa risk premia và liquidity effects.
+# Phần XV — Hệ thống tài chính và chu kỳ tín dụng
 
-## 36. Monetary-policy transmission
+## 49. Financial accelerator
 
-Policy rate truyền qua economy theo nhiều channels.
+Một vòng phản hồi tín dụng có thể diễn ra:
 
-Interest-rate channel làm borrowing cost thay đổi. Asset-price channel làm bond, stock và property valuations thay đổi. Credit channel ảnh hưởng willingness và capacity của banks cho vay. Exchange-rate channel tác động currency, imports và exports. Expectations channel ảnh hưởng decisions ngay trước khi policy thực sự thay đổi nhiều.
+```text
+Asset Price ↓
+→ Collateral ↓
+→ Lending Tightens
+→ Spending / Investment ↓
+→ Earnings ↓
+→ Credit Quality ↓
+→ Lending Tightens More
+```
 
-Transmission có lags và khác theo structure. Economy nhiều fixed-rate mortgages phản ứng chậm hơn economy nhiều floating-rate debt.
+Đây là **bộ khuếch đại tài chính (financial accelerator)**.
 
-Đây là lý do same 100bp hike có effect khác giữa US, Korea và emerging markets.
+## 50. Leverage cycle
 
-## 37. Taylor-rule intuition
+Đòn bẩy thường tăng khi volatility thấp và tài sản tăng giá, rồi giảm cưỡng bức khi collateral giảm.
 
-Taylor rule là benchmark mô tả policy rate nên phản ứng với inflation deviation và output gap.
+Đây là lý do thị trường tài chính có thể làm chu kỳ kinh tế mạnh hơn.
 
-Không cần dùng exact coefficients để hiểu insight: inflation cao hơn target và economy overheated thường gọi for tighter policy; inflation dưới target và output yếu gọi for easier policy.
+# Phần XVI — Kinh tế mở
 
-Actual central banks còn quan tâm financial stability, exchange rates và uncertainty.
+## 51. Current account
 
-Market participants dùng Taylor-rule-like thinking để đánh giá policy đang restrictive hay accommodative relative fundamentals.
+Tài khoản vãng lai phản ánh thương mại hàng hóa, dịch vụ, thu nhập và chuyển giao.
 
-## 38. Fiscal policy và debt dynamics
+Thặng dư không tự động “tốt”, thâm hụt không tự động “xấu”. Cần hỏi nền kinh tế đang đầu tư vào đâu và tài trợ bằng nguồn vốn gì.
 
-Government debt evolves theo primary deficit, interest cost và nominal GDP growth.
+## 52. Tỷ giá
 
-Một intuition quan trọng là so effective interest rate `r` với nominal growth `g`. Nếu `r > g`, debt ratio có xu hướng khó ổn định hơn nếu primary balance yếu. Nếu `g > r`, growth giúp denominator tăng nhanh hơn debt-service burden tương đối.
+FX là giá tương đối giữa hai đồng tiền.
 
-Nhưng debt sustainability còn phụ thuộc maturity, currency, investor base và credibility.
+Nó chịu ảnh hưởng của:
 
-High debt không tự động crisis. Nhưng nó giảm fiscal space và làm market nhạy hơn với inflation hoặc political shock.
+- chênh lệch lãi suất;
+- inflation;
+- growth;
+- capital flow;
+- risk sentiment;
+- policy intervention.
 
-## 39. Crowding out và crowding in
+## 53. Impossible trinity
 
-Crowding out xảy ra khi government borrowing hoặc spending làm resources và rates tăng, giảm private investment.
+**Bộ ba bất khả thi (impossible trinity)** nói một quốc gia không thể đồng thời có hoàn toàn:
 
-Trong economy near full capacity, large fiscal deficit có thể đẩy yields cao và compete với private borrowers.
+```text
+Tỷ giá cố định
++ Dòng vốn tự do
++ Chính sách tiền tệ độc lập
+```
 
-Crowding in có thể xảy ra khi public investment nâng demand hoặc infrastructure, làm private investment hấp dẫn hơn. Trong deep recession, government spending có thể sử dụng idle resources thay vì cạnh tranh mạnh.
+Phải hy sinh ít nhất một mức độ tự do.
 
-Context quyết định direction.
+## 54. Chế độ tỷ giá
 
-## 40. Productivity và long-run growth
+Có thể từ:
 
-Long-run GDP per capita growth cuối cùng phụ thuộc productivity nhiều hơn chỉ tăng labor hoặc capital.
+- fixed peg;
+- managed float;
+- free float.
 
-Productivity tăng khi technology, education, infrastructure, institutions và management improve.
+Mỗi chế độ tạo trade-off khác nhau về dự trữ ngoại hối, policy autonomy và capital-flow risk.
 
-Capital deepening giúp worker có nhiều tools hơn, nhưng diminishing returns nghĩa chỉ tích lũy machines không tạo growth vô hạn.
+# Phần XVII — Cách dùng kinh tế học trong đầu tư
 
-AI debate về kinh tế thực chất là debate về magnitude và timing của productivity gains, không chỉ stock prices của AI companies.
+## 55. Không dùng một quan hệ đơn biến
 
-## 41. Solow growth intuition
+Không nên dùng:
 
-Solow model cho thấy capital accumulation có diminishing returns. Economy nghèo có thể grow nhanh bằng đầu tư capital, nhưng khi capital per worker cao lên, mỗi unit capital mới tạo ít extra output hơn.
+```text
+Rate ↑ → Stocks ↓
+CPI ↑ → Gold ↑
+GDP ↑ → Currency ↑
+```
 
-Long-run sustained per-capita growth trong model cần technological progress.
+một cách cơ học.
 
-Model giúp hiểu catch-up growth của developing economies nhưng cũng giải thích vì sao institutions và innovation trở nên quan trọng khi income tăng.
+Cần hỏi:
 
-## 42. Human capital, institutions và innovation
+```text
+So với kỳ vọng nào?
+Do demand hay supply?
+Reaction function thay đổi không?
+Điều gì đã được price?
+```
 
-Human capital nâng ability sử dụng technology. Education quality, health và on-the-job learning đều quan trọng.
+## 56. Phân biệt level, change và surprise
 
-Institutions gồm property rights, rule of law, contract enforcement và governance. Nếu investor không tin property được bảo vệ, hurdle rate tăng và capital formation yếu.
+Một biến có thể ở mức cao nhưng đang giảm nhanh.
 
-Innovation tạo new products và production methods. R&D ecosystem, competition và financing conditions ảnh hưởng tốc độ innovation.
+Thị trường thường phản ứng mạnh với:
 
-Long-run national investing thesis không nên chỉ nhìn GDP hiện tại; quality của institutions và productivity engine quan trọng hơn.
+```text
+Mức hiện tại
++ Tốc độ thay đổi
++ Bất ngờ so với kỳ vọng
+```
 
-## 43. Demographics
+## 57. Phân biệt stock và flow
 
-Population size, age structure và labor-force participation ảnh hưởng growth, savings và fiscal balance.
+Stock là lượng tích lũy tại một thời điểm; flow là thay đổi trong một giai đoạn.
 
-Aging society có thể làm labor supply giảm, healthcare và pension spending tăng. Nhưng automation, immigration và participation của women hoặc older workers có thể offset một phần.
+Ví dụ:
 
-Demographics cũng ảnh hưởng asset markets qua saving behavior. Middle-aged households thường save nhiều hơn retirees, nhưng relationship thực tế phụ thuộc pension system và wealth distribution.
+- nợ là stock;
+- deficit là flow;
+- inventory là stock;
+- inventory build là flow.
 
-Korea, Japan và China đều đối mặt aging với cấu trúc khác nhau. Vietnam hiện trẻ hơn nhưng cũng sẽ chuyển dần.
+Nhầm hai loại này dễ dẫn tới phân tích sai.
 
-## 44. Financial accelerator
+## 58. Khung nhân quả
 
-Financial accelerator mô tả cách financial conditions khuếch đại economic shocks.
+Khi đọc một vấn đề kinh tế, nên đi theo:
 
-Khi asset prices giảm, collateral value giảm. Borrowers khó vay hơn. Investment giảm, earnings xấu và asset prices có thể giảm thêm.
+```text
+Nguyên nhân
+→ Incentive
+→ Hành vi
+→ Giá / Lượng
+→ Bảng cân đối
+→ Feedback
+→ Chính sách
+→ Kết quả phân phối
+```
 
-Trong boom, quá trình chạy ngược: collateral tăng, leverage dễ hơn và demand tăng.
+## 59. Checklist vĩ mô
 
-Property-banking cycles là ví dụ rõ nhất. Đây là lý do central banks theo dõi financial stability ngay cả khi CPI chưa quá cao.
+Một dashboard tối thiểu có thể gồm:
 
-## 45. Exchange-rate regimes
+```text
+Growth
+Inflation
+Labor
+Policy Rate
+Yield Curve
+Real Yield
+Credit Spread
+FX
+Oil / Commodities
+Liquidity
+Fiscal Impulse
+Earnings Revisions
+```
 
-Floating exchange rate để market quyết định phần lớn currency value, dù central bank vẫn có thể intervene.
+## Kết luận
 
-Fixed hoặc pegged regime gắn currency với currency khác hoặc basket. Peg giảm FX uncertainty nhưng yêu cầu reserves và policy consistency.
+Kinh tế học hữu ích nhất khi giúp bạn hiểu **cơ chế** chứ không phải tạo khẩu quyết.
 
-Managed float nằm giữa, nơi central bank cho currency move nhưng cố giảm excessive volatility hoặc hướng tới policy objective.
+Vi mô giải thích vì sao hộ gia đình và doanh nghiệp phản ứng với giá, chi phí và incentive. Vĩ mô nối hàng triệu quyết định đó thành tăng trưởng, lạm phát, tín dụng và policy.
 
-Regime quyết định cách shock được hấp thụ. Floating currency có thể depreciate nhanh; fixed system có thể buộc interest rates hoặc reserves điều chỉnh mạnh hơn.
+Đối với đầu tư, mục tiêu cuối cùng là có thể đi từ:
 
-## 46. Impossible trinity
+```text
+Shock
+→ Hành vi
+→ Growth / Inflation
+→ Policy
+→ Rates / FX / Credit
+→ Company Earnings
+→ Valuation
+```
 
-Impossible trinity nói một quốc gia không thể đồng thời có cả ba thứ hoàn toàn: fixed exchange rate, free capital movement và independent monetary policy.
-
-Nếu capital tự do và country muốn giữ exchange rate fixed với USD, domestic rate phải theo US nhiều hơn để tránh arbitrage và capital flow. Nếu muốn independent policy, exchange rate phải flexible hơn hoặc capital controls phải tồn tại.
-
-Framework này cực kỳ hữu ích khi phân tích emerging markets.
-
-## 47. Policy mix trong nền kinh tế mở
-
-Monetary và fiscal policy không vận hành trong vacuum. Strong fiscal stimulus trong khi central bank tight có thể giữ demand cao và khiến rates phải ở mức cao lâu hơn.
-
-Nếu currency đang chịu pressure, central bank có thể không thể cut nhanh dù domestic growth yếu.
-
-Commodity-importing country gặp oil shock có trade-off khó hơn: inflation tăng trong khi growth giảm.
-
-Investor nên luôn hỏi policy constraints. “Economy yếu nên chắc chắn central bank cut” có thể sai nếu FX hoặc inflation không cho phép.
-
-## 48. Cách dùng kinh tế học khi đầu tư
-
-Kinh tế học không phải machine dự báo giá ngày mai. Giá tài sản phản ánh expectations, positioning và valuation, trong khi macro data thường noisy và revised.
-
-Giá trị thực tế của economics là giúp bạn xây causal chain. Khi tariff tăng, bạn có thể nghĩ tới import price, elasticity, substitution, company margin, inflation, central-bank reaction và FX. Khi wages tăng, bạn hỏi productivity có tăng tương ứng không, labor market có tight không và company có pricing power không.
-
-Vi mô giúp bạn hiểu company và industry. Vĩ mô giúp bạn hiểu discount rate, demand environment và capital flows. Hai lớp gặp nhau ở earnings. Cuối cùng market price còn phụ thuộc expectation: một economy mạnh có thể đi cùng stock market giảm nếu strength làm rates cao hơn mức market đã price.
-
-Khi đọc news, hãy tự hỏi ba câu. Shock ban đầu là demand, supply hay financial? Ai có incentive thay đổi hành vi? Và effect quan trọng nhất đi vào cash flow hay discount rate? Nếu trả lời được ba câu đó, bạn đang sử dụng economics như một investor thay vì chỉ học terminology.
+mà không cần dựa vào một câu quan hệ đơn giản hóa.

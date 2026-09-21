@@ -1,196 +1,293 @@
 # Cách phân tích một công ty Hàn Quốc từ đầu đến cuối (Company Analysis Framework / 한국 기업 분석 프레임워크)
 
-File này là “entry point thực hành”. Khi gặp một company mới—dù là supplier, nơi định ứng tuyển, đối tác dự án hay cổ phiếu—đừng bắt đầu bằng chart giá hoặc review trên cộng đồng. Hãy xây mental model từ legal identity đến economics.
+Đây là chương thực hành trung tâm của toàn bộ thư viện. Khi gặp một doanh nghiệp mới—dù là nơi định ứng tuyển, nhà cung cấp, đối tác dự án hay một công ty niêm yết—không nên bắt đầu từ biểu đồ giá cổ phiếu hoặc danh tiếng thương hiệu. Hãy đi theo chuỗi **pháp nhân → mô hình kinh doanh → ngành và chuỗi giá trị → bộ máy tài chính → quản trị → phân bổ vốn → rủi ro và định giá**.
 
-## 1. Xác định đúng entity
+Mục tiêu không phải tạo một danh sách kiểm tra máy móc. Mục tiêu là xây dựng một **mô hình nhân quả (causal model)** đủ rõ để trả lời ba câu hỏi: doanh nghiệp kiếm tiền bằng cách nào, điều gì làm cơ chế kinh tế của nó tốt hoặc xấu đi, và bằng chứng nào sẽ khiến giả thuyết ban đầu không còn đúng.
 
-Ghi chính xác Korean corporate name, corporation code nếu có, listing code, parent group và status listed/unlisted. Tìm DART/KIND. Nếu company thuộc group, vẽ parent–subsidiary relationship tối thiểu một tầng lên và xuống.
+## Bước 0 — Đặt doanh nghiệp vào lịch sử và hệ sinh thái
 
-Câu hỏi đầu tiên: **company này thật sự bán gì và ai trả tiền cho nó?**
+Trước hết hãy hỏi doanh nghiệp hình thành trong giai đoạn nào của kinh tế Hàn Quốc. Một tập đoàn xây dựng hoặc công nghiệp hình thành trong thời kỳ tái thiết và phát triển công nghiệp nặng thường có nền tài sản, thói quen sử dụng nợ và mạng lưới nhà cung cấp rất khác một nền tảng số sinh ra trong thời kỳ Internet băng rộng. Một công ty dịch vụ CNTT thuộc chaebol có nhu cầu nội bộ ổn định (captive demand) khác một startup SaaS phải tự tìm từng khách hàng.
 
-## 2. Hiểu revenue engine
+Nguồn gốc lịch sử không quyết định tương lai, nhưng thường giải thích được “DNA tổ chức” của doanh nghiệp. Nếu công ty thuộc một tập đoàn lớn, nên đọc [phả hệ doanh nghiệp](./00_history/08_company_genealogies.md) và [chaebol](./04_chaebol_and_large_business_groups.md).
 
-Tách revenue theo product, segment, geography và customer type nếu disclosure có. Với mỗi segment hỏi:
+## Bước 1 — Xác định đúng pháp nhân
 
-\[
-Revenue = Volume \times Price
-\]
+Thương hiệu không đồng nghĩa với **pháp nhân (legal entity / 법인)**. Một thương hiệu có thể được vận hành bởi nhiều công ty con, trong khi một công ty niêm yết có thể sở hữu nhiều thương hiệu hoàn toàn khác nhau.
 
-Sau đó mở rộng: volume do market growth hay share gain? price do product mix hay inflation? recurring hay one-off?
-
-Đối với platform, volume có thể là users/transactions; bank là loan/assets; construction là progress recognition; shipbuilding là order execution.
-
-## 3. Vẽ value chain
-
-Xác định key inputs → company process → customers. Đánh dấu supplier concentration, customer concentration và substitute.
-
-Nếu không biết company đứng ở đâu trong chain, rất khó hiểu margin.
-
-## 4. Tìm moat
-
-Moat (Economic Moat / 경제적 해자) có thể đến từ scale, switching cost, network effect, technology/yield, brand, regulation, distribution hoặc cost advantage. Mỗi moat cần một mechanism cụ thể.
-
-“Company có công nghệ tốt” chưa đủ. Hỏi: technology đó làm customer tiết kiệm bao nhiêu? khó replicate vì patent, know-how hay capex? advantage có thể monetize thành price/margin không?
-
-## 5. Đọc 3 statements cùng nhau
-
-Income statement cho profit, balance sheet cho resources/claims, cash flow cho movement của cash. Kiểm tra:
-
-- revenue và operating margin trend;
-- receivables/inventory so với revenue;
-- operating cash flow so với net income;
-- capex và free cash flow;
-- debt maturity và interest expense;
-- share issuance/buyback/dividend.
-
-## 6. Tách cycle khỏi structure
-
-Nếu profit tăng, hỏi do cycle hay moat. Semiconductor price recovery, shipbuilding high-price backlog và FX tailwind có thể nâng earnings mà không đồng nghĩa competitive advantage tăng.
-
-Ngược lại, company đầu tư capacity mới có thể temporarily depress FCF dù long-term economics tốt.
-
-## 7. Governance
-
-Xem largest shareholders, related parties, board, treasury shares và major transactions. Với group affiliate, hỏi decision này có lợi cho entity hay chủ yếu cho group.
-
-## 8. Capital allocation
-
-Lập bảng mental:
+Cần xác định tên pháp nhân tiếng Hàn, trạng thái niêm yết, mã chứng khoán nếu có, tập đoàn mẹ, công ty con quan trọng, mã doanh nghiệp trên DART và phạm vi báo cáo hợp nhất. Nếu thuộc tập đoàn, tối thiểu hãy vẽ một tầng phía trên và một tầng phía dưới:
 
 ```text
-Operating Cash Flow
-  ├─ Maintenance CAPEX
-  ├─ Growth CAPEX
-  ├─ M&A / Investments
-  ├─ Debt repayment
-  ├─ Dividend
-  └─ Buyback
+Người kiểm soát / công ty mẹ
+        ↓
+Doanh nghiệp đang phân tích
+        ↓
+Các công ty con quan trọng
 ```
 
-Management quality được thể hiện ở cách capital đi qua cây này qua nhiều năm.
+Câu hỏi cốt lõi là: **pháp nhân nào thực sự ký hợp đồng, vay nợ, sở hữu tài sản và tạo lợi nhuận?**
 
-## 9. Valuation
+## Bước 2 — Xác định động cơ doanh thu
 
-Valuation chỉ có nghĩa sau khi hiểu business. Chọn metric phù hợp: P/E cho stable earnings, P/B/ROE cho financials, EV/EBITDA cho capital structure comparison, DCF khi có khả năng model cash flow.
+Doanh thu (revenue / 매출액) nên được tách theo phân khúc, khu vực, nhóm khách hàng và sản phẩm nếu doanh nghiệp công bố đủ dữ liệu.
 
-DCF core:
+Một quan hệ cơ bản là:
 
 \[
-Enterprise\ Value=\sum_{t=1}^{n}\frac{FCF_t}{(1+WACC)^t}+\frac{Terminal\ Value}{(1+WACC)^n}
+Doanh\ thu = Sản\ lượng \times Giá
 \]
 
-DCF không tạo certainty; nó ép ta làm assumptions explicit. Sensitivity table thường có giá trị hơn một target price duy nhất.
+Nhưng “sản lượng” có nghĩa khác nhau giữa các ngành. Với nền tảng số, đó có thể là người dùng hoặc giao dịch. Với ngân hàng, đơn vị kinh tế có thể là dư nợ, tài sản sinh lãi, tiền gửi hoặc phí. Với xây dựng, doanh thu liên quan đến tiến độ dự án và đơn hàng tồn đọng. Với SaaS, có thể nhìn số thuê bao và doanh thu định kỳ hằng năm (ARR).
 
-## 10. Stress test
+Sau đó cần hỏi: sản lượng tăng do thị trường tăng hay doanh nghiệp giành thêm thị phần? Giá tăng do quyền định giá hay chỉ do lạm phát? Cơ cấu sản phẩm (mix) có làm biên lợi nhuận thay đổi không? Doanh thu có tính lặp lại hay chỉ xuất hiện một lần? Mức độ tập trung khách hàng có cao không?
 
-Tạo ít nhất ba shock phù hợp business: demand -10%, FX move, input cost +20%, rate +100bp, customer loss, delay factory ramp hoặc regulation change. Xem variable nào làm thesis gãy.
+## Bước 3 — Vẽ chuỗi giá trị và quyền thương lượng
 
-## 11. Employment due diligence
+Một sơ đồ tối thiểu:
 
-Nếu mục tiêu là ứng tuyển, thêm layer: revenue stability của business unit, headcount trend, turnover, promotion/pay system, project pipeline, outsourcing ratio và skill portability. Một company financially strong chưa chắc role phù hợp career.
+```text
+Đầu vào quan trọng
+→ Quy trình của doanh nghiệp
+→ Khách hàng trực tiếp
+→ Nhu cầu cuối cùng
+```
 
-## 0. Đặt company vào historical context
+Trên sơ đồ đó, đánh dấu mức độ tập trung của nhà cung cấp, mức độ tập trung khách hàng, chi phí chuyển đổi (switching cost), sản phẩm thay thế, quy định, logistics, địa lý và quyền định giá (pricing power).
 
-Trước bước “xác định entity”, hãy hỏi company này sinh ra trong phase nào của Korean economy. Một construction group từ reconstruction era có organizational DNA khác platform sinh sau smartphone. Historical origin thường giải thích asset base, debt habit, supplier network và ownership structure hiện tại.
+Biên lợi nhuận gộp thường chỉ có ý nghĩa khi biết doanh nghiệp đang đứng ở đâu trong chuỗi. Một nhà cung cấp linh kiện có công nghệ tốt nhưng phụ thuộc một khách hàng duy nhất vẫn có thể có quyền thương lượng yếu nếu người mua dễ thay nhà cung cấp.
 
-Đọc [00_history/08_company_genealogies](./00_history/08_company_genealogies.md) nếu company thuộc major group.
+## Bước 4 — Tìm đơn vị kinh tế tự nhiên
 
-## 12. Normalize earnings
+Doanh thu và lợi nhuận toàn công ty có thể che mất cơ chế kinh tế của từng đơn vị. Hãy tìm **đơn vị kinh tế (economic unit)** phù hợp với ngành.
 
-Korean cyclicals có thể có peak profit làm P/E nhìn rất thấp. Hãy estimate normalized margin/earnings qua cycle thay vì dùng một năm. Với semiconductor, shipbuilding, chemicals, steel, construction và battery, cycle normalization là bắt buộc.
+Bán dẫn có thể nhìn wafer, bit, yield và ASP. Hàng không có thể nhìn hành khách-km, hệ số tải và doanh thu trên đơn vị vận chuyển. Nền tảng số có thể nhìn người dùng, giao dịch và tỷ lệ thu phí (take rate). SaaS có thể nhìn khách hàng, ARR và tỷ lệ rời bỏ (churn). Ngân hàng cần nhìn khoản vay, NIM và chi phí tín dụng. Xây dựng cần nhìn biên lợi nhuận dự án và mức phơi nhiễm PF.
 
-## 13. Kiểm tra segment và geography
+Nếu chưa xác định được đơn vị kinh tế, phân tích thường vẫn đang ở mức quá tổng hợp.
 
-Consolidated revenue che differences. Tách segment, customer, country và currency. Nếu 60% profit đến từ một segment dù chỉ 30% revenue, đó mới là economic engine.
+## Bước 5 — Lợi thế cạnh tranh phải có cơ chế
 
-## 14. Đọc footnotes trước khi kết luận debt thấp
+**Hào kinh tế (economic moat / 경제적 해자)** có thể đến từ lợi thế chi phí, quy mô, công nghệ, yield, hiệu ứng mạng lưới, chi phí chuyển đổi, thương hiệu, giấy phép, phân phối, dữ liệu hoặc bí quyết quy trình.
 
-Leases, guarantees, PF commitments, factoring và unconsolidated affiliates có thể tạo economic leverage ngoài headline borrowings. Related-party receivables cũng có thể là quasi-financing.
+Không nên dừng ở câu “công nghệ tốt”. Hãy nối thành chuỗi:
 
-## 15. Reverse-engineer management narrative
+```text
+Công nghệ tạo giá trị gì cho khách hàng?
+↓
+Khách hàng có sẵn sàng trả tiền cho giá trị đó không?
+↓
+Tại sao đối thủ khó sao chép?
+↓
+Lợi thế có xuất hiện trong biên lợi nhuận, thị phần hoặc tỷ lệ giữ chân không?
+```
 
-IR deck nói “AI, EV, green, global” chưa đủ. Chuyển narrative thành measurable variables: capex bao nhiêu, capacity khi nào online, customer contract nào, utilization giả định gì, target ROIC bao nhiêu. Nếu narrative không map được sang cash flow, hãy coi đó là hypothesis chứ không fact.
+Một năng lực kỹ thuật không chuyển thành giá trị kinh tế có thể chỉ là sự xuất sắc về kỹ thuật, chưa chắc là lợi thế cạnh tranh có thể kiếm tiền.
 
-## 16. So sánh với competitor đúng tầng value chain
+## Bước 6 — Đọc ba báo cáo tài chính cùng nhau
 
-Đừng so Samsung Electronics toàn bộ với TSMC chỉ vì đều semiconductor. So foundry với foundry, memory với memory, device với device. Tương tự battery cell maker không compare trực tiếp với cathode-material producer bằng same margin benchmark.
+Báo cáo kết quả kinh doanh cho biết khả năng tạo lợi nhuận. Bảng cân đối kế toán cho biết doanh nghiệp sở hữu nguồn lực gì và ai có quyền đòi hỏi trên các nguồn lực đó. Báo cáo lưu chuyển tiền tệ cho biết tiền thật sự di chuyển như thế nào.
 
-## 17. Thesis breaker
+Tối thiểu cần theo dõi tăng trưởng doanh thu, biên lợi nhuận gộp và hoạt động, khoản phải thu, tồn kho, dòng tiền hoạt động so với lợi nhuận ròng, CAPEX, nợ và lịch đáo hạn, chi phí lãi vay, số lượng cổ phiếu, cổ tức và mua lại cổ phiếu.
 
-Mỗi analysis nên có 2–4 conditions khiến thesis sai. Ví dụ “HBM share không tăng”, “PF guarantee crystallizes”, “customer concentration loss”, “new plant utilization <60%”. Thesis breaker giúp chống confirmation bias.
+Ba báo cáo phải giải thích được lẫn nhau. Lợi nhuận tăng liên tục nhưng tiền mặt giảm liên tục là tín hiệu cần tìm nguyên nhân.
 
-## Mental Model
+## Bước 7 — Đối chiếu lợi nhuận với tiền mặt
 
-> Phân tích công ty là quá trình chuyển **tên thương hiệu → legal entity → business model → value chain → financial machine → governance → valuation/risk**.
+Kế toán dồn tích (accrual accounting / 발생주의 회계) có thể ghi nhận doanh thu trước khi thu tiền. Nếu lợi nhuận ròng tăng nhưng dòng tiền từ hoạt động kinh doanh (CFO) yếu, hãy kiểm tra khoản phải thu, tồn kho, tài sản hợp đồng, lợi nhuận một lần, dự phòng và việc vốn hóa chi phí.
 
-## Một template ngắn để tái sử dụng
+Một xấp xỉ thường dùng cho doanh nghiệp công nghiệp là:
+
+\[
+Dòng\ tiền\ tự\ do\ (FCF) \approx CFO - CAPEX
+\]
+
+Tuy nhiên không nên áp dụng máy móc cho ngân hàng hoặc bảo hiểm vì cấu trúc bảng cân đối và khái niệm vốn hoạt động của các ngành tài chính khác doanh nghiệp công nghiệp.
+
+## Bước 8 — Xây cầu nối tài chính nhiều năm
+
+Một năm có thể nằm đúng đỉnh hoặc đáy chu kỳ. Nên nhìn ít nhất 5–10 năm khi dữ liệu cho phép:
+
+```text
+Doanh thu
+→ Lợi nhuận hoạt động
+→ Biên lợi nhuận
+→ CFO
+→ CAPEX
+→ FCF
+→ Nợ
+→ Số lượng cổ phiếu
+→ ROIC / ROE
+```
+
+Đánh dấu các sự kiện lớn như mua lại doanh nghiệp, chia tách, mở nhà máy, đỉnh/đáy chu kỳ, thay đổi chuẩn kế toán hoặc thay đổi quy định. Mục tiêu là phân biệt **thay đổi cấu trúc (structural change)** với **nhiễu tạm thời (temporary noise)**.
+
+## Bước 9 — Phân biệt chu kỳ và thay đổi cấu trúc
+
+Nhiều ngành lớn của Hàn Quốc có tính chu kỳ mạnh: bán dẫn, hóa chất, thép, đóng tàu, xây dựng và pin. Lợi nhuận ở đỉnh chu kỳ có thể làm P/E trông rất thấp ngay trước khi lợi nhuận giảm.
+
+Thay vì kéo dài lợi nhuận một năm sang tương lai, hãy ước lượng **lợi nhuận chuẩn hóa (normalized earnings / 정상화 이익)** và hỏi lợi nhuận tăng do chu kỳ, tỷ giá, chi phí đầu vào, thị phần, công nghệ, công suất hay quyền định giá. Mỗi động lực có độ bền khác nhau.
+
+## Bước 10 — Đọc bảng cân đối và đòn bẩy ẩn
+
+Nợ vay trên trang đầu báo cáo chưa chắc bằng tổng đòn bẩy kinh tế. Phần thuyết minh có thể chứa hợp đồng thuê, bảo lãnh, cam kết PF, factoring, phái sinh, công ty liên kết chưa hợp nhất, nghĩa vụ hưu trí và khoản phải thu với bên liên quan.
+
+Một doanh nghiệp có nợ vay thấp nhưng bảo lãnh lớn vẫn có rủi ro đuôi (tail risk) đáng kể. Xem thêm [ngân hàng và tài trợ doanh nghiệp](./11_banks_finance_and_corporate_funding.md).
+
+## Bước 11 — Phân tích quản trị doanh nghiệp
+
+Cần xem cổ đông kiểm soát, bên liên quan, thành phần hội đồng quản trị, cổ phiếu quỹ, sáp nhập/chia tách, giao dịch nội bộ và vấn đề kế nhiệm.
+
+Với công ty thuộc chaebol, câu hỏi quan trọng là:
+
+> Quyết định này tối ưu lợi ích của chính pháp nhân đang phân tích hay chủ yếu phục vụ kiến trúc kiểm soát của toàn tập đoàn?
+
+Không nên mặc định có xung đột. Mục tiêu là tách rõ hai cấp độ lợi ích.
+
+## Bước 12 — Theo dõi phân bổ vốn
+
+Dòng tiền hoạt động có thể được dùng cho CAPEX duy trì, CAPEX tăng trưởng, R&D, M&A, trả nợ, cổ tức, mua lại cổ phiếu hoặc tích lũy tiền mặt.
+
+Chất lượng quản lý thường thể hiện rõ hơn qua mô hình phân bổ vốn nhiều năm hơn là qua một bài phát biểu của ban lãnh đạo. Tăng trưởng chỉ tạo giá trị nếu lợi nhuận trên phần vốn đầu tư mới cao hơn chi phí vốn.
+
+Một xấp xỉ hữu ích là:
+
+\[
+ROIIC \approx \frac{\Delta NOPAT}{\Delta Vốn\ đầu\ tư}
+\]
+
+Nếu doanh nghiệp tái đầu tư rất lớn nhưng NOPAT tăng thêm thấp, doanh thu tăng vẫn có thể phá hủy giá trị.
+
+## Bước 13 — Chuyển câu chuyện của ban lãnh đạo thành biến đo được
+
+Các cụm từ như “AI”, “EV”, “xanh” hay “toàn cầu” trong tài liệu IR mới chỉ là câu chuyện. Hãy chuyển chúng thành các biến cụ thể: CAPEX bao nhiêu, công suất bao nhiêu, khi nào tăng sản lượng, khách hàng là ai, giả định tỷ lệ sử dụng công suất thế nào, ASP và biên lợi nhuận bao nhiêu, ROIC cần đạt mức nào.
+
+Nếu một câu chuyện không thể nối với doanh thu, chi phí, tài sản hoặc dòng tiền, hãy coi nó là **giả thuyết (hypothesis)** chứ chưa phải sự thật.
+
+## Bước 14 — Tách sự thật, tuyên bố của quản lý và suy luận
+
+Một ghi chú nghiên cứu nên phân biệt rõ:
+
+**Sự thật (fact):** báo cáo công bố CAPEX 5 nghìn tỷ KRW.
+
+**Tuyên bố của quản lý (management claim):** CAPEX này sẽ tạo vị thế dẫn đầu.
+
+**Suy luận (inference):** tỷ lệ sử dụng công suất phải đạt một mức nhất định để lợi nhuận dự án vượt tỷ suất yêu cầu.
+
+Trộn ba tầng này là một nguồn lớn của thiên kiến xác nhận (confirmation bias).
+
+## Bước 15 — Chọn doanh nghiệp so sánh đúng tầng chuỗi giá trị
+
+Không nên so sánh toàn bộ Samsung Electronics với TSMC chỉ vì cả hai đều liên quan đến bán dẫn. Hãy so bộ nhớ với bộ nhớ, foundry với foundry, nhà sản xuất cathode với nhà sản xuất cathode, nhà sản xuất cell pin với nhà sản xuất cell, công ty SI với công ty SI và ngân hàng Internet với nhóm ngân hàng/fintech có cơ chế kinh tế tương đồng.
+
+So sánh ngang hàng (peer comparison) chỉ có ý nghĩa khi các doanh nghiệp kiếm tiền theo cơ chế đủ giống nhau.
+
+## Bước 16 — Lập ma trận phơi nhiễm kinh tế vĩ mô
+
+Xác định những biến thực sự có liên hệ nhân quả với doanh nghiệp: KRW/USD, lãi suất BOK, dầu hoặc hàng hóa, nhu cầu Trung Quốc/Mỹ, nợ hộ gia đình, nhà ở, chu kỳ bán dẫn và quy định. Không cần đưa mọi biến vào mô hình. Chỉ giữ những biến có đường truyền tác động rõ.
+
+Xem [cơ chế truyền dẫn từ nền kinh tế đến doanh nghiệp](./21_economy_to_company_transmission.md).
+
+## Bước 17 — Chỉ định giá sau khi hiểu cơ chế kinh tế
+
+Không có một chỉ số định giá phù hợp mọi ngành. P/E hữu ích hơn khi lợi nhuận tương đối ổn định hoặc đã được chuẩn hóa. P/B kết hợp ROE thường phù hợp hơn với tổ chức tài chính. EV/EBITDA hữu ích khi so sánh tài sản hoạt động giữa các cấu trúc vốn khác nhau. DCF phù hợp khi có thể mô hình hóa dòng tiền với các giả định minh bạch.
+
+\[
+EV = \sum_{t=1}^{n}\frac{FCF_t}{(1+WACC)^t} + \frac{Giá\ trị\ cuối\ kỳ}{(1+WACC)^n}
+\]
+
+DCF không tạo ra sự chắc chắn. Giá trị lớn nhất của nó là buộc các giả định phải lộ ra. Bảng độ nhạy thường hữu ích hơn một giá mục tiêu duy nhất.
+
+## Bước 18 — Định giá ngược
+
+Thay vì chỉ hỏi “giá hợp lý là bao nhiêu?”, có thể hỏi:
+
+> Giá thị trường hiện tại đang ngầm yêu cầu mức tăng trưởng, biên lợi nhuận hoặc ROIC bao nhiêu?
+
+Đây là **DCF ngược (reverse DCF / 역산 DCF)**. Nếu giá hiện tại chỉ hợp lý khi biên lợi nhuận tăng lên mức doanh nghiệp chưa từng đạt, giả thuyết cần bằng chứng rất mạnh.
+
+## Bước 19 — Kiểm tra sức chịu đựng
+
+Tạo các cú sốc phù hợp với ngành, chẳng hạn nhu cầu giảm 10%, ASP giảm 15%, chi phí đầu vào tăng 20%, lãi suất tăng 150 điểm cơ bản, KRW biến động 10%, mất khách hàng lớn, nhà máy tăng sản lượng chậm hoặc bảo lãnh PF trở thành nghĩa vụ thực tế.
+
+Sau đó lần theo tác động đến doanh thu, biên lợi nhuận, tiền mặt, điều khoản nợ và nhu cầu huy động vốn. Kiểm tra sức chịu đựng (stress test) nên tập trung vào biến có thể làm giả thuyết đổi bản chất, không chỉ làm EPS giảm vài phần trăm.
+
+## Bước 20 — Xác định điều kiện làm giả thuyết sai
+
+Mỗi phân tích nên ghi rõ 2–5 **điều kiện bác bỏ giả thuyết (thesis breakers)**. Ví dụ: thị phần HBM không tăng, nhà máy mới có tỷ lệ sử dụng dưới 60%, khách hàng lớn đổi nhà cung cấp, bảo lãnh PF trở thành nợ thực tế, phê duyệt pháp lý thất bại hoặc churn vượt ngưỡng.
+
+Việc ghi trước các điều kiện này giúp chống thiên kiến xác nhận và tâm lý tiếc công đã bỏ ra.
+
+## Bước 21 — Thực hiện pre-mortem
+
+Giả sử hai năm sau phân tích sai hoàn toàn. Hãy hỏi nguyên nhân hợp lý có thể là gì: chu kỳ đảo chiều, công nghệ bị thay thế, mất khách hàng, phân bổ vốn sai, vấn đề quản trị, thay đổi quy định, khủng hoảng nguồn vốn hay chậm thực thi.
+
+**Pre-mortem** là cách tìm rủi ro lớn trước khi chúng trở thành tiêu đề tin tức.
+
+## Bước 22 — Nếu mục tiêu là nghề nghiệp, thêm lớp phân tích việc làm
+
+Nếu công ty là nơi định ứng tuyển, cần xem độ ổn định của đơn vị kinh doanh, xu hướng nhân sự, tỷ lệ nghỉ việc, cấu trúc lương thưởng, hệ thống thăng tiến, tỷ lệ thuê ngoài, nguồn dự án, khả năng chuyển đổi kỹ năng, chất lượng quản lý và độ rộng/sâu của vai trò.
+
+Một công ty tài chính mạnh chưa chắc cung cấp vai trò tốt cho sự nghiệp; một công ty nhỏ cũng chưa chắc có môi trường học tập kém. Xem [lao động và chức danh](./12_labor_titles_compensation_and_workplace.md) cùng [văn hóa doanh nghiệp](./13_business_culture_decision_making_and_communication.md).
+
+## Thứ tự ưu tiên nguồn nghiên cứu
+
+```text
+Báo cáo đã kiểm toán trên DART
+↓
+Thông báo KIND / KRX
+↓
+IR và công bố kết quả của doanh nghiệp
+↓
+Cơ quan quản lý / dữ liệu chính phủ
+↓
+Dữ liệu ngành
+↓
+Tin tức
+↓
+Cộng đồng / đánh giá người dùng hoặc nhân viên
+```
+
+Nguồn ở tầng thấp không vô dụng. Đánh giá nhân viên có thể hữu ích để hiểu văn hóa; báo chí có thể cung cấp bối cảnh. Tuy nhiên số liệu tài chính nên quay về nguồn sơ cấp bất cứ khi nào có thể.
+
+## Mẫu nghiên cứu có thể tái sử dụng
 
 ```markdown
-# Company
+# Tên doanh nghiệp
 
-## Identity & Group Structure
-## Revenue Engine
-## Value Chain & Customers
-## Competitive Advantage
-## Financial Quality
-## Balance Sheet & Funding
-## Governance
-## Capital Allocation
-## Industry & Macro Exposure
-## Valuation
-## Key Risks / Thesis Breakers
-## Employment View (nếu cần)
-## Sources: DART / KIND / IR / KFTC / KRX
+## 1. Pháp nhân và cấu trúc tập đoàn
+## 2. Bối cảnh lịch sử
+## 3. Động cơ doanh thu
+## 4. Chuỗi giá trị / khách hàng / nhà cung cấp
+## 5. Đơn vị kinh tế
+## 6. Lợi thế cạnh tranh
+## 7. Lịch sử tài chính
+## 8. Dòng tiền và vốn lưu động
+## 9. Bảng cân đối và nguồn vốn
+## 10. Quản trị / bên liên quan
+## 11. Phân bổ vốn
+## 12. Phơi nhiễm ngành và kinh tế vĩ mô
+## 13. Định giá / kỳ vọng hàm ý
+## 14. Rủi ro / kiểm tra sức chịu đựng
+## 15. Điều kiện bác bỏ giả thuyết / pre-mortem
+## 16. Góc nhìn nghề nghiệp nếu cần
+## Nguồn
 ```
 
-## Connections
+## Mental Model — Mô hình tư duy
 
-Hầu như toàn bộ library converge vào file này. Nếu gặp điểm chưa rõ, quay lại đúng domain file thay vì search rời rạc.
+> Phân tích doanh nghiệp là quá trình chuyển từ **thương hiệu → pháp nhân → cỗ máy kinh tế → cỗ máy tài chính → quản trị → kỳ vọng thị trường**.
 
-## 18. Build một historical financial bridge
+Một chuỗi câu hỏi ngắn có thể giữ trong đầu:
 
-Ít nhất 5 năm, normalize revenue, operating profit, capex, free cash flow, debt và share count. Sau đó annotate major events: acquisition, spin-off, cycle peak/trough, accounting change.
+```text
+Ai kiểm soát doanh nghiệp?
+→ Doanh nghiệp bán gì?
+→ Vì sao khách hàng trả tiền?
+→ Vì sao đối thủ không dễ sao chép?
+→ Lợi nhuận có chuyển thành tiền mặt không?
+→ Tăng trưởng cần bao nhiêu vốn?
+→ Rủi ro nằm ở bảng cân đối hay ngoài bảng cân đối?
+→ Ban quản lý phân bổ vốn ra sao?
+→ Giá hiện tại đang ngầm giả định điều gì?
+→ Bằng chứng nào sẽ làm giả thuyết sai?
+```
 
-Mục tiêu không phải spreadsheet đẹp mà distinguish structural vs temporary change.
-
-## 19. Reconcile profit với cash
-
-Nếu net income tăng nhưng operating cash flow giảm liên tục, hỏi receivables/inventory/contract assets. Accrual earnings có thể lead cash legitimately, nhưng persistent divergence cần explanation.
-
-\[
-Free\ Cash\ Flow \approx CFO - Capex
-\]
-
-Definition có thể adjust theo industry; luôn ghi convention.
-
-## 20. Calculate return on incremental capital
-
-Company growth chỉ tạo value nếu return trên vốn mới đủ cao.
-
-\[
-ROIIC \approx \frac{\Delta NOPAT}{\Delta Invested\ Capital}
-\]
-
-Nếu company reinvest 1 nghìn tỷ và after-tax operating profit chỉ tăng rất ít, growth có thể destroy value despite revenue record.
-
-## 21. Map management incentives
-
-Xem controlling shareholder, executive compensation, stock options, succession và related-party exposure. Incentive không chứng minh behavior, nhưng giúp predict likely capital-allocation preference.
-
-## 22. Separate narrative, evidence và inference
-
-Research note nên phân loại:
-
-**Fact**: filing nói capex 5 nghìn tỷ.
-
-**Management claim**: capex sẽ tạo leadership.
-
-**Inference**: utilization phải đạt X để return attractive.
-
-Trộn ba tầng này là nguồn bias lớn.
-
-## 23. Pre-mortem
-
-Giả sử thesis sai sau hai năm. Những nguyên nhân plausible nào? Cycle reversal, customer loss, regulation, capex overrun, governance, technology substitution hay FX?
-
-Pre-mortem buộc analyst tìm downside trước khi bị sunk-cost attachment vào thesis.
+Khi trả lời được chuỗi này bằng bằng chứng thay vì cảm giác, ta đã chuyển từ “biết tên công ty” sang thực sự hiểu doanh nghiệp.

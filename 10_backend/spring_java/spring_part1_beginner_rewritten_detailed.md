@@ -6,6 +6,46 @@
 
 ---
 
+
+<!-- VERSION_UPDATE_2026-09-12_START -->
+## Bản đồ version dùng xuyên suốt tài liệu — cập nhật 2026-09-21
+
+Tài liệu dùng **Spring Boot 4.1.1 + Spring Framework 7.0.9** làm baseline stable hiện đại. Spring Boot 4.1.1 yêu cầu tối thiểu Java 17, tương thích đến Java 26 và yêu cầu Spring Framework 7.0.9 trở lên. Với Servlet stack, generation này dùng Servlet 6.1, điển hình với Tomcat 11 hoặc Jetty 12.1. GraalVM Native Image support của Boot 4.1 yêu cầu GraalVM 25 trở lên.
+
+Khi học để làm việc enterprise, bạn vẫn phải nhận biết **Spring Boot 3.5.16 + Spring Framework 6.2.19+**. Đây là maintenance line quan trọng của generation 3.x, vẫn yêu cầu Java 17+, tương thích đến Java 25 và thuộc Servlet 6.0 generation. Đây cũng là bridge tốt nhất trước khi migrate một hệ thống Boot 3 sang Boot 4.
+
+Generation legacy **Spring Boot 2.7 + Spring Framework 5.3** cần được nhận biết để maintain code cũ. Dấu hiệu rõ nhất là Java 8/11-era code và namespace `javax.*`. Từ Boot 3 / Framework 6, Spring chuyển sang Java 17+ và `jakarta.*`. Từ Boot 4 / Framework 7, Spring tiếp tục nâng Jakarta EE 11, modularize Boot mạnh hơn và dùng Jackson 3 làm JSON generation ưu tiên.
+
+Ở phía preview, **Spring Boot 4.2.0-M1 + Spring Framework 7.1.0-M1** đã có tài liệu nhưng vẫn là milestone. Tài liệu này chỉ note direction, không dùng preview API làm baseline.
+
+```text
+Boot 2.7 + Framework 5.3
+→ Java 8+ generation
+→ javax.*
+→ legacy enterprise
+
+Boot 3.5 + Framework 6.2
+→ Java 17+
+→ jakarta.*
+→ Servlet 6.0
+→ migration bridge quan trọng
+
+Boot 4.1 + Framework 7.0
+→ Java 17–26
+→ Jakarta EE 11 / Servlet 6.1
+→ Jackson 3 preferred
+→ modular Boot
+→ baseline hiện đại
+
+Boot 4.2 M1 + Framework 7.1 M1
+→ preview
+→ theo dõi direction, không dùng làm production baseline
+```
+
+Version chỉ được nhắc ở nơi nó thật sự thay đổi package, dependency, API, runtime behavior hoặc migration; không biến tài liệu thành changelog.
+<!-- VERSION_UPDATE_2026-09-12_END -->
+
+---
 # 1. Spring giải quyết vấn đề gì?
 
 Nếu mới học backend Java, bạn rất dễ nhìn Spring như một bộ sưu tập annotation. Bạn thấy `@RestController`, `@Service`, `@Repository`, `@Autowired`, `@Transactional` và tưởng rằng chỉ cần nhớ “annotation này dùng để làm gì” là đã học Spring. Cách học đó giúp tạo demo nhanh nhưng rất dễ gãy khi gặp project thật, bởi vì annotation chỉ là **metadata**. Annotation tự nó không tạo object, không mở transaction, không nhận HTTP request và cũng không truy cập database. Có một runtime của Spring đọc metadata đó rồi thực hiện công việc tương ứng.
@@ -51,13 +91,13 @@ OrderService orderService = new OrderService(gateway);
 
 Khi application lớn lên, việc tự tay viết hàng trăm dòng `new A(new B(new C(...)))` trở nên khó quản lý. Bạn còn phải giải quyết lifecycle, configuration, environment, test replacement, proxy, transaction, web infrastructure và nhiều dependency có quan hệ với nhau. Spring cung cấp một **container** làm công việc tạo và liên kết các object đó.
 
-**Language Idiom.** Trong Java/Spring hiện đại, dependency bắt buộc nên được biểu diễn bằng constructor parameter. Điều này làm object graph rõ ràng, field có thể `final`, và object không tồn tại ở trạng thái “chưa được inject xong”.
+Trong Java/Spring hiện đại, dependency bắt buộc nên được biểu diễn bằng constructor parameter. Điều này làm object graph rõ ràng, field có thể `final`, và object không tồn tại ở trạng thái “chưa được inject xong”.
 
-**Programming Pattern.** Pattern quan trọng ở đây là **Constructor Injection** và **Explicit Dependencies**. Một class có constructor gồm `OrderRepository`, `PaymentGateway` và `Clock` nói rất rõ nó cần gì để hoạt động.
+Pattern quan trọng ở đây là **Constructor Injection** và **Explicit Dependencies**. Một class có constructor gồm `OrderRepository`, `PaymentGateway` và `Clock` nói rất rõ nó cần gì để hoạt động.
 
-**Design Pattern.** Ở tầng design, Spring hỗ trợ **Dependency Injection**, đồng thời giúp thực hiện **Dependency Inversion Principle** khi business code phụ thuộc vào abstraction thay vì vendor implementation.
+Ở tầng design, Spring hỗ trợ **Dependency Injection**, đồng thời giúp thực hiện **Dependency Inversion Principle** khi business code phụ thuộc vào abstraction thay vì vendor implementation.
 
-**Senior Note.** Nếu constructor của một service có mười hai dependency, đừng chữa bằng field injection để constructor trông ngắn hơn. Đó thường là tín hiệu class đang có quá nhiều trách nhiệm hoặc use case boundary chưa rõ.
+Nếu constructor của một service có mười hai dependency, đừng chữa bằng field injection để constructor trông ngắn hơn. Đó thường là tín hiệu class đang có quá nhiều trách nhiệm hoặc use case boundary chưa rõ.
 
 ---
 
@@ -94,7 +134,34 @@ Phần wiring lớn được chuyển sang Spring container.
 
 Điều quan trọng là Spring không “đoán business logic”. Nó chỉ quản lý object và infrastructure dựa trên metadata/configuration bạn cung cấp.
 
-**Senior Note.** Một cách rất hiệu quả để debug Spring là luôn dịch câu hỏi về Java thuần: “Object này do ai tạo?”, “Reference này được truyền vào khi nào?”, “Method này có đang được gọi qua proxy không?”, “Ai mở resource?”, “Ai chịu trách nhiệm close?”. Khi trả lời được các câu đó, phần lớn “Spring magic” biến thành một flow Java bình thường.
+Một cách rất hiệu quả để debug Spring là luôn dịch câu hỏi về Java thuần: “Object này do ai tạo?”, “Reference này được truyền vào khi nào?”, “Method này có đang được gọi qua proxy không?”, “Ai mở resource?”, “Ai chịu trách nhiệm close?”. Khi trả lời được các câu đó, phần lớn “Spring magic” biến thành một flow Java bình thường.
+
+---
+
+<!-- SPRING_BATCH1_IOC_BEGINNER -->
+## Từ metadata tới bean instance: container thực sự làm gì khi “inject dependency”? 
+
+Khi mới học, câu “Spring scan `@Service` rồi inject bean” đủ để bắt đầu, nhưng mental model đó quá ngắn để debug hệ thống thật. Container thực tế phải đi qua ba lớp khác nhau: **metadata cấu hình**, **BeanDefinition**, rồi mới tới **object instance**. `@Component`, `@Service`, `@Repository`, `@Configuration` và `@Bean` cung cấp metadata. Spring đọc metadata đó để đăng ký BeanDefinition, tức bản mô tả cách tạo object: class nào, scope nào, factory method nào, dependency nào, có lazy hay không, có qualifier gì và callback lifecycle nào. Chỉ sau khi context bước vào giai đoạn tạo bean, BeanDefinition mới được dùng để instantiate object.
+
+Vì vậy một bean có thể “được Spring biết tới” nhưng object thật chưa hề tồn tại. Lazy bean là ví dụ rõ nhất. Request-scoped bean còn cho thấy một BeanDefinition có thể đại diện nhiều instance theo từng request thay vì một singleton duy nhất. Khi bạn hiểu definition và instance là hai khái niệm khác nhau, nhiều lỗi startup bắt đầu dễ đọc hơn.
+
+Khi tạo một singleton service, container conceptually làm việc như sau:
+
+```text
+BeanDefinition của OrderService
+→ chọn constructor
+→ resolve từng constructor parameter
+→ lấy hoặc tạo dependency bean tương ứng
+→ gọi constructor Java bình thường
+→ chạy injection/lifecycle processors
+→ có thể wrap object bằng proxy
+→ đặt final reference vào singleton registry
+```
+
+Điểm cuối rất quan trọng: reference mà controller nhận đôi khi không phải object do constructor vừa tạo mà là **proxy** bao quanh object đó. Transaction, method security, cache, async và AOP dựa trên khả năng này. Spring không thay đổi quy tắc Java; nó thay object mà caller đang giữ reference tới.
+
+Dependency Injection vì vậy nên được hiểu là **xây object graph có kiểm soát**, không phải “tìm bean toàn cục”. Nếu business class tự giữ `ApplicationContext` rồi gọi `getBean()` ở mọi nơi, dependency lại trở thành hidden global lookup và bạn đã biến DI thành Service Locator. Constructor injection giữ graph hiển thị trong type signature, làm test dễ hơn và giúp container fail sớm nếu graph không thể xây.
+<!-- SPRING_BATCH1_IOC_BEGINNER_END -->
 
 ---
 
@@ -146,7 +213,19 @@ import jakarta.persistence.Entity;
 
 Sự đổi tên này không chỉ là style. Library cũ phụ thuộc `javax.*` có thể không tương thích với application Jakarta mới.
 
-**Senior Note.** Khi đọc Stack Overflow hoặc blog, trước tiên hãy nhìn năm bài viết, Java version và Spring Boot version. Một lời khuyên đúng cho Boot 2.1 có thể sai hoặc không còn cần thiết ở Boot 4.
+Khi đọc Stack Overflow hoặc blog, trước tiên hãy nhìn năm bài viết, Java version và Spring Boot version. Một lời khuyên đúng cho Boot 2.1 có thể sai hoặc không còn cần thiết ở Boot 4.
+
+---
+
+<!-- SPRING_BATCH5_VERSION_BEGINNER -->
+## Học version theo “cách viết application thay đổi”, không theo release-note list
+
+Boot 2.7 / Framework 5.3 đại diện thế hệ Java 8-era, `javax.*` và nhiều security/config examples cũ. Khi nhìn `javax.servlet`, `javax.persistence`, `WebSecurityConfigurerAdapter`, `RestTemplate`-centric tutorials hoặc XML nhiều, đừng vội kết luận code sai; hãy xác định generation trước rồi map sang cách hiện đại.
+
+Boot 3 / Framework 6 là bước chuyển platform lớn hơn một bản nâng version: Java 17 trở thành baseline, Java EE namespace đổi sang `jakarta.*`, Spring Security 6 chuyển mạnh sang bean/lambda configuration, observability/AOT trở thành first-class hơn. Migration thường thất bại ở third-party library chưa hỗ trợ Jakarta chứ không chỉ ở source import.
+
+Boot 4 / Framework 7 tiếp tục platform hóa: Jakarta EE 11 / Servlet 6.1, Jackson 3 là hướng mặc định, Boot modularize starters/test support mạnh hơn, Framework dùng JSpecify nullness và có API-versioning support ở web stack. Vì vậy code mới nên học theo Boot 4.1, nhưng người làm enterprise vẫn cần đọc được 2.7/3.x và biết migration path thay vì rewrite toàn bộ.
+<!-- SPRING_BATCH5_VERSION_BEGINNER_END -->
 
 ---
 
@@ -202,7 +281,7 @@ Ví dụ:
 ```xml
 <dependency>
     <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-web</artifactId>
+    <artifactId>spring-boot-starter-webmvc</artifactId>
 </dependency>
 ```
 
@@ -228,7 +307,7 @@ Starter không phải “một framework khác”. Nó chủ yếu là dependenc
 
 Một lợi ích lớn của Boot là **dependency management**. Boot phát hành một tập hợp version đã được kiểm thử cùng nhau. Vì vậy nếu dependency đã được Boot quản lý, bạn thường không tự ghi version. Tự ép Jackson, Hibernate hoặc Spring Framework sang một version khác chỉ vì “mới hơn” có thể gây lỗi linkage/runtime.
 
-**Senior Pattern.** Hãy để platform/BOM quản lý dependency versions và chỉ override khi có lý do cụ thể, ví dụ security patch hoặc library compatibility đã được xác minh.
+Hãy để platform/BOM quản lý dependency versions và chỉ override khi có lý do cụ thể, ví dụ security patch hoặc library compatibility đã được xác minh.
 
 ---
 
@@ -278,7 +357,7 @@ public class TimeConfiguration {
 
 `Clock` là class của JDK nên bạn không thể thêm `@Component` vào source của nó. `@Bean` cho phép bạn nói rõ Spring phải tạo object bằng factory method nào.
 
-**Programming Pattern.** Application components mà bạn sở hữu source thường dùng stereotype annotation. Infrastructure object hoặc third-party object thường được tạo rõ ràng trong `@Configuration`.
+Application components mà bạn sở hữu source thường dùng stereotype annotation. Infrastructure object hoặc third-party object thường được tạo rõ ràng trong `@Configuration`.
 
 ---
 
@@ -344,9 +423,9 @@ public class UserController {
 }
 ```
 
-**Language Idiom.** Dùng stereotype thể hiện role thật. `@Component` không sai, nhưng `@Repository` nói nhiều hơn về kiến trúc so với một annotation generic.
+Dùng stereotype thể hiện role thật. `@Component` không sai, nhưng `@Repository` nói nhiều hơn về kiến trúc so với một annotation generic.
 
-**Senior Note.** Annotation không tạo “layer” một cách thần kỳ. Nếu `@Service` chứa SQL, HTTP parsing, file handling và security logic hỗn hợp, nó vẫn là God Service dù có annotation đúng tên.
+Annotation không tạo “layer” một cách thần kỳ. Nếu `@Service` chứa SQL, HTTP parsing, file handling và security logic hỗn hợp, nó vẫn là God Service dù có annotation đúng tên.
 
 ---
 
@@ -385,7 +464,7 @@ Bạn có thể cấu hình scan:
 
 nhưng không nên xử lý mọi lỗi bằng cách scan quá rộng như `"com"`. Điều đó làm container nhìn thấy component không chủ đích và làm object graph khó hiểu hơn.
 
-**Senior Pattern.** Package structure là một architectural boundary. Main application class ở root package và package-by-feature thường giúp scanning tự nhiên.
+Package structure là một architectural boundary. Main application class ở root package và package-by-feature thường giúp scanning tự nhiên.
 
 ---
 
@@ -433,7 +512,7 @@ UserService service = new UserService(repository);
 
 khác ở chỗ Spring làm wiring.
 
-**Language Idiom.** Required dependency → constructor. Optional dependency chỉ nên optional nếu business/lifecycle thực sự cho phép thiếu.
+Required dependency → constructor. Optional dependency chỉ nên optional nếu business/lifecycle thực sự cho phép thiếu.
 
 ---
 
@@ -542,7 +621,7 @@ public PaymentService(
 }
 ```
 
-**Senior Note.** Nếu application phải chọn gateway động dựa trên `PaymentType`, rải `@Qualifier` vào business methods không phải thiết kế tốt. Ở Intermediate ta sẽ học inject `List`/`Map` strategy và tạo registry.
+Nếu application phải chọn gateway động dựa trên `PaymentType`, rải `@Qualifier` vào business methods không phải thiết kế tốt. Ở Intermediate ta sẽ học inject `List`/`Map` strategy và tạo registry.
 
 ---
 
@@ -671,7 +750,7 @@ OrderService orderService(
 
 Đọc method là thấy ngay dependencies.
 
-**Design Pattern.** `@Bean` giống Factory Method ở mức khái niệm; container trở thành object factory lớn quản lý lifecycle và dependency graph.
+`@Bean` giống Factory Method ở mức khái niệm; container trở thành object factory lớn quản lý lifecycle và dependency graph.
 
 ---
 
@@ -778,7 +857,7 @@ Bạn có thể đăng ký qua `@ConfigurationPropertiesScan` hoặc `@EnableCon
 
 **Programming Pattern — Typed Configuration.** Parse và validate external configuration một lần ở boundary, sau đó core application sử dụng type có nghĩa.
 
-**Senior Note.** `int timeout = 3` rất tệ nếu không biết đơn vị là giây hay millisecond. `Duration` làm unit explicit.
+`int timeout = 3` rất tệ nếu không biết đơn vị là giây hay millisecond. `Duration` làm unit explicit.
 
 ---
 
@@ -1010,7 +1089,7 @@ public record UserResponse(
 
 **Programming Pattern — Boundary DTO.** Transport contract được tách khỏi persistence/domain representation.
 
-**Senior Note.** Tách boundary không có nghĩa phải tạo DTO cho từng private method. Mapping ceremony chỉ có giá trị ở boundary có ý nghĩa.
+Tách boundary không có nghĩa phải tạo DTO cho từng private method. Mapping ceremony chỉ có giá trị ở boundary có ý nghĩa.
 
 ---
 
@@ -1197,7 +1276,7 @@ problem.setProperty(
 
 Bạn không bắt buộc phải dùng ngay ở Beginner, nhưng nên biết nó tồn tại vì error response trong Spring mới không chỉ có custom DTO.
 
-**Senior Note.** Public error response không nên lộ stack trace, SQL, table name, filesystem path hoặc internal host.
+Public error response không nên lộ stack trace, SQL, table name, filesystem path hoặc internal host.
 
 ---
 
@@ -1278,7 +1357,7 @@ public class Money {
 
 Nó không phải shared service.
 
-**Senior Note.** “Spring-managed everything” tạo domain model phụ thuộc framework vô ích.
+“Spring-managed everything” tạo domain model phụ thuộc framework vô ích.
 
 ---
 
@@ -1408,7 +1487,7 @@ public class JdbcUserRepository
 
 Spring handles resource cleanup and exception translation around common JDBC flow, nhưng SQL vẫn do bạn kiểm soát.
 
-**Senior Note.** Framework abstraction không thay kiến thức index, join, transaction, query plan và locking.
+Framework abstraction không thay kiến thức index, join, transaction, query plan và locking.
 
 ---
 
@@ -1661,7 +1740,7 @@ Các endpoint/capability khác có thể liên quan metrics, config, mappings, t
 
 Health endpoint thường được load balancer hoặc Kubernetes dùng để biết application có sẵn sàng không.
 
-**Senior Note.** Management endpoints có thể lộ thông tin nhạy cảm. Không expose tất cả ra public Internet.
+Management endpoints có thể lộ thông tin nhạy cảm. Không expose tất cả ra public Internet.
 
 ---
 
@@ -1714,7 +1793,7 @@ void appliesDiscount() {
 
 Không có lý do load Spring context nếu test chỉ cần plain Java behavior.
 
-**Language Idiom.** “Don’t start Spring if you don’t need Spring.”
+“Don’t start Spring if you don’t need Spring.”
 
 ---
 
@@ -1833,7 +1912,7 @@ order/
 
 Project nhỏ dùng layered packages vẫn được. Nhưng khi lớn, package-by-feature thường giúp cohesion tốt hơn.
 
-**Senior Note.** Folder structure không chữa được coupling nếu các module gọi nhau tùy tiện. Boundary là dependency rules, không chỉ thư mục.
+Folder structure không chữa được coupling nếu các module gọi nhau tùy tiện. Boundary là dependency rules, không chỉ thư mục.
 
 ---
 
@@ -2013,6 +2092,26 @@ Part 2 sẽ mở chiếc hộp mà Part 1 mới chỉ nhìn từ bên ngoài. B�
 Persistence sẽ đi vào entity lifecycle, persistence context, dirty checking, lazy loading, N+1, fetch strategy, pagination và locking. Sau đó mới đến RestClient/HTTP interface, WebClient, events, async, scheduling, caching, Security, test slices, Testcontainers, Actuator, Micrometer và Virtual Threads.
 
 Đó là lúc Spring chuyển từ “framework tôi đang dùng” thành “runtime model tôi hiểu”.
+
+---
+
+<!-- VERSION_DETAIL_PART1_2026-09-12_START -->
+# Version Deep Dive cho Beginner: nhìn project và nhận ra Spring generation
+
+Ở Beginner, mục tiêu của version knowledge không phải học lịch sử release. Mục tiêu là mở một project và nhận ra ngay generation để không copy nhầm tutorial.
+
+Nếu thấy `javax.persistence.*` hoặc `javax.validation.*`, project gần như chắc chắn thuộc generation trước Boot 3. Boot 3+ chuyển sang `jakarta.persistence.*`, `jakarta.validation.*` và Jakarta ecosystem. Đây là breaking migration lớn chứ không chỉ rename package.
+
+Nếu project dùng Boot 3.5.x, hãy nghĩ Framework 6.2 generation: Java 17 minimum, Jakarta namespace và Servlet 6.0-era stack. Đây là line rất quan trọng khi đọc code enterprise hiện tại.
+
+Nếu project dùng Boot 4, hãy chú ý Boot 4 modularize dependency structure mạnh hơn. Migration guide chuẩn hóa nhiều starter names; web MVC starter hiện là `spring-boot-starter-webmvc`, Security OAuth2 starters đi theo nhóm `spring-boot-starter-security-*`, và nhiều technology/test integrations có dedicated starters riêng. Flyway/Liquibase cũng có Boot starter riêng trong Boot 4 migration model.
+
+Boot 4 ưu tiên Jackson 3. Jackson 3 đổi nhiều group/package names từ `com.fasterxml.jackson` sang `tools.jackson`, trong khi annotations giữ compatibility riêng. Nếu bạn chỉ dùng DTO + `@RestController`, Boot che phần lớn thay đổi; nếu tự custom mapper/modules thì version trở nên rất quan trọng.
+
+Spring Framework 7 chuyển null-safety sang JSpecify. Beginner chưa cần cấu hình NullAway, nhưng nên biết tại sao IDE/Kotlin có thể báo nullability khác tutorial Framework 5/6.
+
+Khi tạo project mới ở thời điểm hiện tại, một baseline học hợp lý là Java 21 hoặc 25 với Boot 4.1.x. Java 17 vẫn là minimum, còn version production thật phải theo platform/vendor/framework support của công ty.
+<!-- VERSION_DETAIL_PART1_2026-09-12_END -->
 
 ---
 

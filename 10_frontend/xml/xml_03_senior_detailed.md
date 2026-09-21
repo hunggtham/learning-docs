@@ -1393,3 +1393,245 @@ raw bytes
 ```
 
 Nếu bạn hiểu được flow này và biết mỗi stage giải quyết vấn đề gì, bạn đã vượt khỏi mức “developer biết XML” và bắt đầu xử lý XML như một senior integration engineer.
+
+---
+
+# PHẦN BỔ SUNG — SOAP, WSDL VÀ XML TRONG ENTERPRISE INTEGRATION
+
+## 78. SOAP là gì và vì sao nó gắn chặt với XML?
+
+SOAP là một **messaging framework** dùng XML để đóng gói message. Khi nói SOAP, đừng chỉ nghĩ “API trả XML thay vì JSON”. SOAP định nghĩa một processing model với envelope, header blocks, body, faults, namespaces và khả năng mở rộng theo modules. XML phù hợp với SOAP vì namespace cho phép nhiều chuẩn hoặc vendor extensions cùng xuất hiện trong một message mà không đụng tên, còn XSD cung cấp contract type/structure rất mạnh.
+
+Một SOAP 1.2 message tối giản có thể có dạng:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<env:Envelope
+    xmlns:env="http://www.w3.org/2003/05/soap-envelope"
+    xmlns:o="urn:example:order">
+
+    <env:Header>
+        <o:CorrelationId>
+            8a5f-1234
+        </o:CorrelationId>
+    </env:Header>
+
+    <env:Body>
+        <o:GetOrder>
+            <o:orderId>1001</o:orderId>
+        </o:GetOrder>
+    </env:Body>
+
+</env:Envelope>
+```
+
+`Envelope` là outermost SOAP element. `Header` là optional và chứa zero hoặc nhiều header blocks. `Body` là nơi mang information hướng tới ultimate receiver. Business payload như `o:GetOrder` không thuộc SOAP namespace; nó thuộc vocabulary `urn:example:order`. Chính sự tách namespace này làm SOAP extensible.
+
+SOAP 1.1 và SOAP 1.2 có namespace/protocol details khác nhau. SOAP 1.2 dùng envelope namespace `http://www.w3.org/2003/05/soap-envelope`; hệ thống SOAP 1.1 legacy thường dùng `http://schemas.xmlsoap.org/soap/envelope/`. Vì vậy khi debug một SOAP integration, version không phải chi tiết nhỏ: namespace, HTTP binding và fault format có thể khác.
+
+---
+
+## 79. SOAP Header không chỉ là chỗ đặt metadata tùy ý
+
+SOAP Header được thiết kế để mang các blocks có semantics xử lý riêng, ví dụ security, transaction, routing, correlation hoặc addressing. Header block có thể target một node/intermediary cụ thể trên message path.
+
+SOAP còn có concept `mustUnderstand`. Nếu một header block bắt buộc phải được hiểu mà node nhận message không hiểu semantics của block đó, node không nên im lặng bỏ qua rồi xử lý business body như bình thường; SOAP processing model có fault behavior cho tình huống này.
+
+Điểm này cho thấy SOAP khác một JSON object có field `headers`. Header trong SOAP là một phần của processing model, không chỉ là convention do application tự nghĩ ra.
+
+---
+
+## 80. SOAP Body và business payload
+
+Body thường chứa application-specific XML. Ví dụ:
+
+```xml
+<env:Body>
+    <pay:Transfer
+        xmlns:pay="urn:bank:payment">
+
+        <pay:from>100-001</pay:from>
+        <pay:to>200-002</pay:to>
+        <pay:amount>50000</pay:amount>
+
+    </pay:Transfer>
+</env:Body>
+```
+
+SOAP chỉ định envelope/body structure, còn `Transfer`, `from`, `to`, `amount` là contract của payment service. Các elements business này thường được mô tả bằng XSD và được reference/import từ WSDL.
+
+Điều đó tạo một layering rất rõ:
+
+```text
+XML syntax
+→ SOAP envelope vocabulary
+→ application namespace/vocabulary
+→ XSD types
+→ business semantics
+```
+
+Khi lỗi xảy ra, phải xác định lỗi nằm ở layer nào thay vì chỉ nhìn “SOAP request invalid”.
+
+---
+
+## 81. SOAP Fault
+
+SOAP dùng `Fault` để biểu diễn lỗi theo message format chuẩn. Với SOAP 1.2, Fault có các phần như Code, Reason và optional Detail.
+
+Ví dụ rút gọn:
+
+```xml
+<env:Envelope
+    xmlns:env="http://www.w3.org/2003/05/soap-envelope">
+
+    <env:Body>
+        <env:Fault>
+            <env:Code>
+                <env:Value>env:Sender</env:Value>
+            </env:Code>
+
+            <env:Reason>
+                <env:Text xml:lang="en">
+                    Invalid order id
+                </env:Text>
+            </env:Reason>
+        </env:Fault>
+    </env:Body>
+
+</env:Envelope>
+```
+
+Điểm senior cần hiểu là HTTP status và SOAP Fault là hai layers khác nhau. Một integration framework có thể map transport failure, SOAP protocol fault và business error theo cách khác nhau. Khi log/debug, phải giữ distinction này.
+
+---
+
+## 82. WSDL là gì?
+
+WSDL là **Web Services Description Language**. Trong các SOAP systems truyền thống, WSDL đóng vai trò contract mô tả service để client/server tooling biết service cung cấp operations nào, message shape ra sao, binding/protocol nào được dùng và endpoint ở đâu.
+
+Bạn có thể hình dung WSDL 1.1 theo mental model:
+
+```text
+XML Schema / types
+→ messages
+→ operations / portType
+→ binding
+→ service / endpoint
+```
+
+Trong thực tế WSDL thường import hoặc embed XSD. XSD định nghĩa business elements/types; WSDL ghép chúng thành service operations và transport binding.
+
+Đây là lý do khi một SOAP client generate Java classes từ WSDL, bạn có thể thấy rất nhiều generated DTOs, service interfaces và QName constants. Tooling đang biến XML contract thành programming-language artifacts.
+
+---
+
+## 83. Contract-first SOAP flow
+
+Trong một hệ thống contract-first, team có thể thiết kế XSD/WSDL trước rồi generate client/server stubs.
+
+Flow khái niệm như sau:
+
+```text
+WSDL + XSD
+→ code generation
+→ Java client proxy / DTO classes
+→ marshal object thành XML
+→ wrap trong SOAP Envelope
+→ HTTP transport
+→ server SOAP stack
+→ parse + validate + unmarshal
+→ business service
+→ marshal response
+→ SOAP response hoặc SOAP Fault
+```
+
+Framework che đi rất nhiều bước, nhưng khi production lỗi bạn phải có khả năng mở wire message và kiểm tra namespace, QName, element order, `xsi:nil`, schema type và SOAP version.
+
+Một exception Java kiểu “unexpected element” thường thực chất là mismatch giữa expanded name trong XML và generated binding expectation.
+
+---
+
+## 84. WSDL/XSD code generation giúp nhanh nhưng có coupling
+
+Generated classes giúp developer không phải tự viết parser cho mỗi SOAP message. Tuy nhiên code generation cũng làm application coupling mạnh với contract. Khi WSDL thay namespace, type hierarchy hoặc required field, generated code có thể thay đổi hàng loạt.
+
+Vì vậy long-lived enterprise service cần quản lý WSDL/XSD version như public API. Không sửa schema âm thầm rồi regenerate cả hai bên nếu còn external consumers.
+
+Nếu generated classes quá phức tạp, nên map chúng sang internal DTO/domain model ở boundary thay vì để WSDL-generated types chạy xuyên business layer.
+
+---
+
+## 85. SOAP, WS-* và vì sao enterprise systems vẫn dùng
+
+SOAP thường xuất hiện trong banking, insurance, telecom, government, B2B integration và các hệ thống được xây trong thời kỳ enterprise service bus. Một lý do là ecosystem xung quanh SOAP có nhiều specifications cho concerns như security, addressing, reliability và transactions. Những hệ thống đã đầu tư vào WSDL/XSD governance, code generation và integration middleware không có lý do kỹ thuật để rewrite chỉ vì JSON phổ biến hơn.
+
+Điều này không có nghĩa SOAP nên là default cho mọi API mới. Với một public/internal CRUD API đơn giản, HTTP + JSON thường nhẹ và dễ vận hành hơn. Nhưng nếu bạn maintain core banking hoặc B2B gateway, việc hiểu SOAP/WSDL/XSD là kỹ năng thực tế chứ không phải kiến thức lịch sử.
+
+---
+
+## 86. SOAP so với REST/JSON phải so ở đúng tầng
+
+SOAP là messaging framework/protocol family; REST là architectural style; JSON là data serialization format. Vì vậy câu “SOAP hay JSON cái nào tốt hơn” đang so các khái niệm khác tầng.
+
+Một SOAP service thường dùng XML payload và WSDL contract. Một REST-like HTTP API thường dùng JSON, URLs, HTTP methods/status codes và OpenAPI. Nhưng về mặt architecture, lựa chọn còn phụ thuộc governance, legacy compatibility, security requirements, tooling và partner contracts.
+
+Senior không chọn công nghệ chỉ vì verbosity. Bạn phải đánh giá contract lifecycle và ecosystem của hệ thống.
+
+---
+
+## 87. Enterprise integration flow nên cô lập XML ở boundary
+
+Nếu service nhận SOAP từ external partner, một architecture tốt thường là:
+
+```text
+SOAP transport
+→ secure XML parser / SOAP framework
+→ schema validation
+→ generated/bound request object
+→ adapter / anti-corruption layer
+→ internal domain command
+→ business logic
+```
+
+Response đi ngược lại qua mapper và SOAP layer.
+
+Điểm quan trọng là business domain không nên phụ thuộc trực tiếp vào SOAP-specific types nếu không có lý do. Nếu ngày mai partner đổi SOAP version hoặc một channel mới dùng JSON, core domain không cần rewrite.
+
+---
+
+## 88. Debug SOAP theo layer thay vì nhìn một XML khổng lồ
+
+Khi SOAP request fail, hãy bắt đầu từ transport: endpoint, HTTP headers/content type, TLS và authentication có đúng không. Sau đó kiểm tra SOAP version bằng envelope namespace. Tiếp theo kiểm tra `Envelope`, `Header`, `Body` và Fault structure. Sau đó mới đi vào business payload namespace và XSD order/type. Cuối cùng kiểm tra binding code hoặc generated classes.
+
+Flow debug này giúp tránh việc sửa ngẫu nhiên prefix. Trong XML, prefix có thể khác nhưng namespace URI mới quyết định identity. Một service kỳ vọng `{urn:bank:v1}Transfer` sẽ không chấp nhận `{urn:bank:v2}Transfer` chỉ vì cả hai đều viết prefix `pay`.
+
+---
+
+## 89. SOAP security vẫn bắt đầu từ XML security
+
+Dù SOAP framework xử lý envelope, XML parser và external resolution vẫn là phần threat surface. Ngoài ra SOAP systems còn có thể dùng message-level security standards như WS-Security/XML Signature. Khi đó namespace-aware signature verification, canonicalization và verified-node binding từ các phần trước trở nên đặc biệt quan trọng.
+
+Không nên tự parse SOAP bằng string hoặc tự implement XML Signature. Hãy dùng framework/library đã được review, cấu hình parser/resource resolution chặt, rồi giữ business logic tách khỏi raw XML.
+
+---
+
+## 90. Mental model enterprise cuối cùng
+
+Khi gặp một hệ thống XML enterprise, hãy nhìn nó như một chuỗi contracts và processors:
+
+```text
+transport
+→ XML bytes
+→ secure parse
+→ namespace model
+→ schema/WSDL contract
+→ validation/binding
+→ transformation/integration layer
+→ domain model
+→ business logic
+```
+
+Nếu có SOAP, SOAP envelope nằm giữa XML layer và application payload. Nếu có XSLT, transformation nằm ở boundary hoặc integration pipeline. Nếu có XML Signature, canonicalization/reference verification phải xảy ra theo protocol trước khi business code tin dữ liệu.
+
+Đây là điểm mà toàn bộ kiến thức XML từ Beginner tới Senior kết nối lại thành một hệ thống duy nhất.

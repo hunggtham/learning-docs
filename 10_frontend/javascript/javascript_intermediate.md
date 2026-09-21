@@ -81,6 +81,102 @@ loop();
 
 stack tăng liên tục tới `Maximum call stack size exceeded`.
 
+## Execution context không đồng nghĩa lexical scope
+
+Hai khái niệm này liên quan nhưng không nên trộn thành một. **Lexical scope** mô tả code ở vị trí nào có thể nhìn thấy binding nào và được quyết định chủ yếu bởi cấu trúc source. **Execution context** là trạng thái của một lần thực thi cụ thể. Một function chỉ có một lexical relationship trong source nhưng có thể được gọi hàng nghìn lần, và mỗi lần gọi tạo execution context riêng.
+
+```js
+function calculate(price, quantity) {
+  const total = price * quantity;
+  return total;
+}
+
+calculate(100, 2);
+calculate(300, 4);
+```
+
+Hai lần gọi cùng dùng một function body và cùng lexical environment ngoài, nhưng `price`, `quantity`, `total` của hai lần gọi không phải cùng một execution state. Đây là lý do recursion hoạt động: cùng một function có thể xuất hiện nhiều lần trên call stack với parameters/local bindings khác nhau.
+
+```js
+function factorial(n) {
+  if (n <= 1) {
+    return 1;
+  }
+
+  return n * factorial(n - 1);
+}
+```
+
+Với `factorial(3)`, stack có thể hình dung:
+
+```text
+factorial(3)
+  ↓
+factorial(2)
+  ↓
+factorial(1)
+```
+
+Mỗi frame giữ `n` riêng. Khi `factorial(1)` return, frame đó biến mất khỏi stack; kết quả được dùng để tiếp tục frame `factorial(2)`.
+
+## Creation/initialization trước evaluation: nền tảng của hoisting
+
+Một mental model rất quan trọng là engine phải chuẩn bị environment và bindings trước khi thực thi lần lượt các statements. Vì thế “hoisting” không nên được hiểu là engine thật sự cắt một dòng code rồi di chuyển nó lên đầu file. Đúng hơn, declaration được xử lý trong quá trình khởi tạo environment, nhưng **mỗi loại declaration được khởi tạo khác nhau**.
+
+Function declaration có function value sẵn sớm:
+
+```js
+run();
+
+function run() {
+  console.log("run");
+}
+```
+
+`var` có binding được initialized bằng `undefined` trước khi assignment chạy:
+
+```js
+console.log(value); // undefined
+var value = 10;
+```
+
+`let`, `const` và `class` cũng có lexical binding, nhưng binding chưa được initialized để đọc cho đến khi evaluation đi tới declaration. Khoảng này là **Temporal Dead Zone (TDZ)**:
+
+```js
+console.log(value); // ReferenceError
+const value = 10;
+```
+
+Vì vậy câu “`let` không hoist” là cách nói đơn giản nhưng không chính xác về mental model. Binding tồn tại trong lexical environment, nhưng chưa thể access trước initialization.
+
+## Call stack chỉ chứa synchronous execution hiện tại
+
+Khi một browser API như timer nhận callback, callback không nằm trên call stack trong suốt thời gian chờ.
+
+```js
+function run() {
+  setTimeout(() => {
+    console.log("later");
+  }, 1000);
+}
+
+run();
+```
+
+Sau khi `setTimeout()` đăng ký timer và `run()` return, frame `run` đã rời stack. Khi timer đủ điều kiện và event loop chọn task tương ứng, **một lần gọi callback mới** mới được đẩy lên stack. Đây là điểm nối giữa call stack và event loop mà Chương 23 sẽ đào sâu.
+
+### Cách trace execution thực tế
+
+Khi code phức tạp, hãy trace theo ba câu hỏi thay vì đọc bằng cảm giác:
+
+```text
+1. Context/function nào đang chạy trên stack?
+2. Identifier này được resolve qua lexical environment nào?
+3. Công việc async này đang chạy ngay hay chỉ được schedule cho tương lai?
+```
+
+Ba câu hỏi này giải quyết phần lớn nhầm lẫn về closure, `this`, Promise và timer.
+
 ### Senior note
 
 Stack trace trong error chính là dấu vết của call stack. Khi debug async code, stack có thể phức tạp hơn vì continuation được schedule qua Promise/event loop. Hiểu call stack là nền tảng cho mọi phần runtime sau này.
@@ -138,6 +234,122 @@ function run() {
 ```
 
 Shadowing không sai, nhưng quá nhiều biến cùng tên trong nested scopes làm cognitive load cao.
+
+## Environment là nơi binding sống, không phải chỉ là một object thường
+
+Khi học scope, nhiều người hình dung mỗi scope là một JavaScript object như `{ name: value }`. Mental model đó chỉ đúng rất sơ bộ. Specification dùng **Environment Records** để mô tả bindings. Điều này quan trọng vì binding có behavior riêng: TDZ, immutable `const`, function parameter bindings, module imports là live bindings, và global `var`/global lexical declarations không hoàn toàn giống nhau.
+
+Bạn không thể làm:
+
+```js
+console.log(currentLexicalEnvironment);
+```
+
+vì lexical environment là khái niệm runtime/spec, không phải ordinary object được expose trực tiếp.
+
+## Identifier resolution là một quá trình tìm từ trong ra ngoài
+
+Với:
+
+```js
+const taxRate = 0.1;
+
+function createCalculator(discount) {
+  return function calculate(price) {
+    const subtotal = price * (1 - discount);
+    return subtotal * (1 + taxRate);
+  };
+}
+```
+
+Trong `calculate`, engine resolve:
+
+```text
+price
+→ current function environment
+
+discount
+→ outer createCalculator environment
+
+taxRate
+→ outer global/module environment
+```
+
+Nếu identifier không tìm thấy trong toàn chain, đọc nó gây `ReferenceError`.
+
+Đây khác với đọc property không tồn tại:
+
+```js
+const user = {};
+
+console.log(user.name); // undefined
+console.log(name);      // ReferenceError nếu không có binding name
+```
+
+Một bên là **property lookup trên object**, một bên là **identifier resolution qua lexical environments**. Phân biệt này rất quan trọng khi debug.
+
+## Block scope và per-iteration binding
+
+`let`/`const` có block scope:
+
+```js
+if (true) {
+  const token = "abc";
+}
+
+// token không tồn tại ở đây
+```
+
+Trong `for (let ...)`, JavaScript còn tạo semantics phù hợp để mỗi iteration có binding riêng cho closure:
+
+```js
+const callbacks = [];
+
+for (let i = 0; i < 3; i += 1) {
+  callbacks.push(() => i);
+}
+
+console.log(callbacks[0]()); // 0
+console.log(callbacks[1]()); // 1
+console.log(callbacks[2]()); // 2
+```
+
+Legacy `var` dùng một function-scoped binding:
+
+```js
+const callbacks = [];
+
+for (var i = 0; i < 3; i += 1) {
+  callbacks.push(() => i);
+}
+
+console.log(callbacks[0]()); // 3
+```
+
+Trước ES2015, legacy code thường dùng IIFE để tạo binding riêng từng iteration:
+
+```js
+for (var i = 0; i < 3; i += 1) {
+  (function (current) {
+    callbacks.push(function () {
+      return current;
+    });
+  })(i);
+}
+```
+
+Đây là ví dụ điển hình cho **modern syntax xuất hiện để diễn đạt intent mà legacy JavaScript phải mô phỏng bằng pattern**.
+
+## Global scope không đơn giản là `window`
+
+Trong browser classic script, một số global declarations có relationship với global object, nhưng lexical declarations như `let`/`const` không đơn giản trở thành properties của `window`.
+
+```js
+var legacyGlobal = 1;
+let lexicalGlobal = 2;
+```
+
+Tùy context classic script/module, semantics khác nhau; đặc biệt ES modules có module scope riêng. Vì vậy code hiện đại không nên dựa vào việc “khai báo top-level rồi chắc chắn có `window.xxx`”. Nếu cần global integration, expose explicit API.
 
 ### Programming pattern — lexical encapsulation
 
@@ -203,6 +415,96 @@ function createUserStore() {
 ```
 
 `user` không exposed trực tiếp ra ngoài.
+
+## Closure giữ binding, không phải snapshot value
+
+Đây là một distinction rất quan trọng. Closure thường không “copy value tại thời điểm function được tạo”; nó giữ khả năng truy cập **binding**.
+
+```js
+let status = "idle";
+
+function readStatus() {
+  return status;
+}
+
+status = "loading";
+
+console.log(readStatus()); // "loading"
+```
+
+Nếu closure chỉ snapshot `"idle"`, output đã là `"idle"`. Nhưng nó đọc binding hiện tại.
+
+Điều này giải thích cả sức mạnh lẫn bug của closure. Một callback có thể thấy state mới nếu binding bị mutate; nhưng một hệ thống render tạo **binding mới cho mỗi render/call** có thể khiến callback giữ binding cũ, tạo stale closure.
+
+## Mỗi factory call có một private environment khác nhau
+
+```js
+function createCounter() {
+  let count = 0;
+
+  return () => ++count;
+}
+
+const a = createCounter();
+const b = createCounter();
+
+console.log(a()); // 1
+console.log(a()); // 2
+console.log(b()); // 1
+```
+
+`a` và `b` không share `count`, vì chúng được tạo từ hai lần gọi khác nhau, mỗi lần có environment riêng. Đây là nền tảng của factory/module patterns dựa closure.
+
+## Closure và lifecycle/memory
+
+Nếu closure reachable, những bindings/object mà closure thật sự cần cũng có thể tiếp tục reachable.
+
+```js
+function createHandler(bigData) {
+  return function () {
+    return bigData.id;
+  };
+}
+```
+
+Nếu handler được gắn vào một global listener và không bao giờ remove, `bigData` có thể sống lâu hơn business lifecycle dự kiến.
+
+Nhưng câu “closure gây memory leak” là sai. Closure chỉ giữ data khi còn đường reachability. Vấn đề thực tế thường là **resource owner không cleanup callback/subscription**.
+
+Ví dụ:
+
+```js
+function mount(bigData) {
+  const handler = () => {
+    console.log(bigData.id);
+  };
+
+  window.addEventListener("resize", handler);
+
+  return () => {
+    window.removeEventListener("resize", handler);
+  };
+}
+```
+
+Ở đây closure có lifetime explicit qua cleanup function.
+
+## Stale closure: timing + lifecycle, không phải closure “hỏng”
+
+Hãy xem một factory tạo callback:
+
+```js
+function createLogger(message) {
+  return () => {
+    console.log(message);
+  };
+}
+
+const logOld = createLogger("old");
+const logNew = createLogger("new");
+```
+
+`logOld` đúng khi in `"old"`; nó giữ environment của lần gọi cũ. Framework render systems có thể tạo tình huống tương tự: callback cũ sống sau khi UI đã có state mới. Cách giải quyết không phải “tránh closure”, mà là thiết kế dependency/lifecycle đúng.
 
 ### Closure và memory
 
@@ -338,6 +640,110 @@ const user = new User("Kim");
 ```
 
 `new` tạo object mới và bind `this` vào object đó trong quá trình constructor chạy.
+
+## Bốn binding rules thực dụng cho normal function
+
+Khi nhìn một normal function, hãy xác định `this` bằng call expression chứ không nhìn nơi function được khai báo. Một mental model thực dụng là:
+
+```text
+1. new binding
+   new Fn()
+
+2. explicit binding
+   fn.call(obj)
+   fn.apply(obj)
+   fn.bind(obj)
+
+3. implicit binding
+   obj.fn()
+
+4. default binding
+   fn()
+```
+
+Arrow function là exception lớn vì không tạo own dynamic `this`; nó dùng lexical `this` của surrounding context.
+
+### Implicit receiver là expression ngay trước dấu `.`/`[]`
+
+```js
+const account = {
+  owner: {
+    name: "Kim",
+
+    show() {
+      return this.name;
+    }
+  }
+};
+
+account.owner.show();
+```
+
+`this` là `account.owner`, không phải `account`.
+
+Tương tự:
+
+```js
+account["owner"].show();
+```
+
+receiver vẫn là owner object.
+
+### Detached method làm mất receiver
+
+```js
+const show = account.owner.show;
+show();
+```
+
+Điều bị mất không phải “method thuộc class”, mà là **reference/call form chứa receiver**. Vì vậy callback API rất hay làm lộ bug này:
+
+```js
+button.addEventListener("click", account.owner.show);
+```
+
+Browser gọi callback theo event-listener semantics, không phải bằng `account.owner.show()`. Nếu method thật sự cần instance receiver, hãy wrap hoặc bind có chủ đích và giữ reference cleanup.
+
+```js
+const handleClick = account.owner.show.bind(account.owner);
+button.addEventListener("click", handleClick);
+```
+
+### `this` và lexical variables là hai cơ chế khác nhau
+
+```js
+const name = "outer";
+
+const user = {
+  name: "object",
+
+  show() {
+    console.log(name);
+    console.log(this.name);
+  }
+};
+```
+
+`name` được resolve qua lexical scope. `this.name` bắt đầu từ runtime receiver rồi property lookup. Nếu trộn hai mental models, `this` sẽ luôn cảm giác “bí ẩn”.
+
+### Class không thay đổi quy tắc cốt lõi của detached method
+
+```js
+class User {
+  constructor(name) {
+    this.name = name;
+  }
+
+  greet() {
+    return this.name;
+  }
+}
+
+const user = new User("Kim");
+const greet = user.greet;
+```
+
+`greet()` vẫn mất receiver. Class syntax không tự auto-bind methods như một số framework/language khác.
 
 ### Senior rule
 
@@ -555,6 +961,92 @@ Object.prototype
 ↓
 null
 ```
+
+## Property lookup là chain traversal, không phải copy method vào từng instance
+
+Với:
+
+```js
+const user = new User("Kim");
+user.greet();
+```
+
+`user` thường không có own property `greet`. Engine tìm:
+
+```text
+user
+↓ no own greet
+User.prototype
+↓ found greet
+```
+
+Sau đó function được gọi với receiver `user`, nên bên trong method `this` vẫn là `user`, **không phải `User.prototype`**. Đây là chỗ `this` và prototype chain giao nhau: prototype quyết định **tìm function ở đâu**; call-site quyết định **receiver là ai**.
+
+## Shadowing inherited property
+
+```js
+const proto = {
+  role: "user"
+};
+
+const account = Object.create(proto);
+
+console.log(account.role); // "user"
+
+account.role = "admin";
+
+console.log(account.role); // "admin"
+console.log(proto.role);   // "user"
+```
+
+Assignment thường tạo own property trên receiver thay vì sửa inherited data property ở prototype. Khi debug “tại sao object A đổi mà prototype không đổi”, hãy kiểm tra:
+
+```js
+Object.hasOwn(account, "role");
+Object.getPrototypeOf(account);
+```
+
+Accessor descriptors có thể làm assignment semantics phức tạp hơn, vì inherited setter có thể được gọi. Chương Property Descriptors giải thích cơ chế đó.
+
+## `instanceof` kiểm tra prototype relationship
+
+```js
+user instanceof User;
+```
+
+Ở mental-model level, `instanceof` kiểm tra liệu object được tham chiếu bởi `User.prototype` có xuất hiện trên prototype chain của `user` hay không. Nó không kiểm tra “shape object có giống User không”.
+
+Vì thế prototype mutation có thể thay đổi result, và cross-realm objects có thể làm `instanceof Array`/`instanceof Error` không hoạt động như bạn kỳ vọng. Với arrays, `Array.isArray()` thường robust hơn cross-realm.
+
+## Prototype mutation là global-ish behavior change cho descendants
+
+```js
+User.prototype.greet = function () {
+  return "changed";
+};
+```
+
+Các instances đang dùng prototype đó có thể thấy method mới ngay vì lookup xảy ra qua chain. Đây là sức mạnh của prototype model nhưng cũng là lý do patch built-in prototypes trong application code nguy hiểm:
+
+```js
+Array.prototype.last = function () {
+  return this[this.length - 1];
+};
+```
+
+Bạn đã thay behavior của mọi array trong realm và có nguy cơ conflict với library/standard tương lai.
+
+## Class syntax không xóa prototype model
+
+```js
+class User {
+  greet() {
+    return this.name;
+  }
+}
+```
+
+Method `greet` vẫn nằm trên `User.prototype`. `class` chủ yếu cung cấp syntax/semantics rõ hơn cho constructor, inheritance, methods, private fields..., nhưng lookup model vẫn là prototype-based.
 
 ### Senior note
 
@@ -991,6 +1483,123 @@ loadUser()
 
 Đây là một async bug rất phổ biến.
 
+## Settled không đồng nghĩa fulfilled
+
+“Settled” nghĩa Promise không còn pending; nó có thể **fulfilled** hoặc **rejected**.
+
+```text
+pending
+  ├─→ fulfilled(value)
+  └─→ rejected(reason)
+```
+
+Một khi settled, Promise không chuyển state lần nữa. Nếu executor gọi nhiều lần:
+
+```js
+new Promise((resolve, reject) => {
+  resolve(1);
+  resolve(2);
+  reject(new Error("late"));
+});
+```
+
+settlement đầu tiên quyết định state.
+
+## Resolution khác fulfillment
+
+Đây là nuance quan trọng khi Promise nhận một Promise/thenable khác.
+
+```js
+const inner = new Promise((resolve) => {
+  setTimeout(() => resolve(42), 1000);
+});
+
+const outer = Promise.resolve(inner);
+```
+
+`outer` được **resolved to** `inner`, nghĩa là nó adopt eventual state của `inner`. Nó chưa necessarily fulfilled ngay tại thời điểm relationship được thiết lập.
+
+Mental model hữu ích:
+
+```text
+return plain value
+→ next Promise fulfill với value
+
+throw error
+→ next Promise reject
+
+return Promise/thenable
+→ next Promise adopt eventual state
+```
+
+## `.then()` không sửa Promise cũ
+
+```js
+const p1 = Promise.resolve(10);
+const p2 = p1.then((value) => value * 2);
+```
+
+`p1` và `p2` là hai Promise khác nhau. Đây là nền tảng của chaining. Mỗi `.then()` tạo một continuation và một Promise cho kết quả continuation đó.
+
+## Promise handlers luôn asynchronous so với current synchronous stack
+
+```js
+console.log("A");
+
+Promise.resolve().then(() => {
+  console.log("B");
+});
+
+console.log("C");
+```
+
+Output:
+
+```text
+A
+C
+B
+```
+
+Ngay cả Promise đã fulfilled sẵn, handler `.then()` vẫn không chạy inline giữa `A` và `C`; nó được enqueue để chạy ở microtask checkpoint.
+
+## Thenable assimilation
+
+Promise resolution không chỉ nhận native Promise. Object có callable `then` cũng có thể được assimilate:
+
+```js
+const thenable = {
+  then(resolve) {
+    resolve(123);
+  }
+};
+
+const value = await Promise.resolve(thenable);
+console.log(value); // 123
+```
+
+Điều này cho interoperability với Promise-like implementations, nhưng cũng có nghĩa “đọc/resolve một thenable” có thể invoke user-defined behavior. Ở application code bình thường bạn không cần tự implement thenable; chỉ cần hiểu tại sao Promise có thể adopt non-native Promise-like values.
+
+## `.catch()` và `.finally()` cũng tiếp tục chain
+
+`.catch(onRejected)` về cơ bản là một form của `.then(undefined, onRejected)` và trả Promise mới. Nếu catch return value, chain có thể recover:
+
+```js
+const value = await Promise.reject(
+  new Error("failed")
+).catch(() => {
+  return "fallback";
+});
+```
+
+`value` là `"fallback"`.
+
+`finally()` chủ yếu dùng cleanup không phụ thuộc success/failure. Nếu finally callback không throw/return rejected Promise, original outcome đi tiếp.
+
+### Senior note
+
+Promise chain nên phản ánh ownership của async flow. Catch quá sớm rồi biến mọi error thành `null` thường phá error semantics; catch ở nơi bạn thật sự có thể recover, translate hoặc add context.
+
 ---
 
 # Chương 22 — `async` / `await` semantics
@@ -1023,6 +1632,122 @@ const [profile, settings] = await Promise.all([
 ]);
 ```
 
+## `await` tạm dừng function, không tạm dừng thread
+
+```js
+async function load() {
+  console.log("before");
+  const user = await loadUser();
+  console.log("after", user);
+}
+```
+
+Khi `loadUser()` chưa hoàn thành, phần continuation sau `await` được suspend. JavaScript main thread có thể xử lý event/task khác. Khi awaited value settle thành công, continuation được schedule để chạy lại qua Promise-job/microtask semantics.
+
+Vì vậy `await` không tương đương:
+
+```text
+sleep thread cho đến khi xong
+```
+
+mà gần hơn với:
+
+```text
+start/obtain async value
+return control to runtime
+resume function later with result
+```
+
+## Async function luôn wrap return value thành Promise outcome
+
+```js
+async function getNumber() {
+  return 10;
+}
+```
+
+Caller nhận Promise fulfillment với 10:
+
+```js
+getNumber().then(console.log);
+```
+
+Nếu return một Promise:
+
+```js
+async function getUser() {
+  return fetchUser();
+}
+```
+
+async function adopt eventual result, không tạo “Promise bên trong Promise” theo cách caller phải await hai lần.
+
+Nếu throw:
+
+```js
+async function fail() {
+  throw new Error("boom");
+}
+```
+
+caller nhận rejected Promise.
+
+## `try/catch` chỉ bắt rejection của phần bạn thật sự `await`
+
+```js
+async function run() {
+  try {
+    startAsyncWork();
+  } catch (error) {
+    // không nhất thiết bắt rejection của startAsyncWork
+  }
+}
+```
+
+Nếu `startAsyncWork()` trả Promise reject sau đó mà bạn không `await`/return nó, rejection tách khỏi synchronous `try` flow.
+
+```js
+async function run() {
+  try {
+    await startAsyncWork();
+  } catch (error) {
+    // bắt được rejection ở đây
+  }
+}
+```
+
+Đây là nguồn phổ biến của unhandled rejections trong code tưởng rằng đã có try/catch.
+
+## Start concurrent work trước, await sau
+
+Hai operation independent nhưng viết:
+
+```js
+const profile = await loadProfile();
+const settings = await loadSettings();
+```
+
+thì request thứ hai chỉ bắt đầu sau request đầu xong. Nếu independent, có thể start cả hai trước:
+
+```js
+const profilePromise = loadProfile();
+const settingsPromise = loadSettings();
+
+const profile = await profilePromise;
+const settings = await settingsPromise;
+```
+
+hoặc rõ hơn:
+
+```js
+const [profile, settings] = await Promise.all([
+  loadProfile(),
+  loadSettings()
+]);
+```
+
+Senior concern ở đây là **dependency graph**, không phải “await chậm”. Sequential là đúng khi operation B cần result A; concurrent là đúng khi chúng độc lập và concurrency level hợp lý.
+
 ### Async `forEach` trap
 
 ```js
@@ -1046,6 +1771,8 @@ await Promise.all(
   items.map(saveItem)
 );
 ```
+
+Nhưng với collection rất lớn, `Promise.all(items.map(...))` có thể tạo unbounded concurrency. Senior sẽ dùng pool/semaphore/mapLimit khi cần bound resource pressure.
 
 ---
 
@@ -1085,6 +1812,155 @@ queueMicrotask(() => {
   console.log("microtask");
 });
 ```
+
+## Browser event loop không phải một “queue duy nhất”
+
+Mental model beginner thường nói “callback queue”. Đủ để bắt đầu, nhưng ở Intermediate nên nâng lên:
+
+```text
+run one task
+↓
+execute synchronous call stack until empty
+↓
+perform microtask checkpoint
+↓
+possibly update rendering
+↓
+select next task
+```
+
+“Task” có thể đến từ timer, user interaction, networking/other host sources tùy browser specification. Không nên dựa vào một thứ tự tổng quát giữa mọi task source ngoài guarantees cụ thể.
+
+## Microtask checkpoint drain đến khi queue rỗng
+
+Nếu một microtask enqueue microtask khác, runtime tiếp tục xử lý trước khi quay về task/render opportunity.
+
+```js
+queueMicrotask(() => {
+  console.log("M1");
+
+  queueMicrotask(() => {
+    console.log("M2");
+  });
+});
+```
+
+Điều này giải thích **microtask starvation**: code liên tục enqueue microtasks có thể trì hoãn timers, input và rendering.
+
+```js
+function loop() {
+  queueMicrotask(loop);
+}
+
+loop();
+```
+
+Đây là code pathological; browser không có cơ hội bình thường để tiến tới task/rendering tiếp theo.
+
+## Promise continuation và `queueMicrotask()` cùng thuộc microtask-level scheduling
+
+```js
+console.log("A");
+
+queueMicrotask(() => {
+  console.log("microtask 1");
+});
+
+Promise.resolve().then(() => {
+  console.log("promise");
+});
+
+queueMicrotask(() => {
+  console.log("microtask 2");
+});
+
+console.log("B");
+```
+
+Các microtasks được enqueue theo order runtime tạo chúng, nên mental trace quan trọng là **thời điểm enqueue**, không phải syntax trông “Promise quan trọng hơn queueMicrotask”.
+
+## Rendering không xảy ra sau mọi dòng code
+
+Browser thường có rendering opportunities giữa event-loop turns/checkpoints khi phù hợp. Nếu một task synchronous dài 200ms, browser không thể paint UI giữa các dòng JavaScript đó dù bạn vừa thay DOM ở đầu task.
+
+```js
+button.textContent = "Working...";
+
+heavySynchronousWork();
+```
+
+Nếu `heavySynchronousWork()` block lâu, user có thể chưa nhìn thấy text mới cho đến khi task kết thúc và browser có cơ hội render.
+
+Đây là lý do long task ảnh hưởng responsiveness.
+
+## `requestAnimationFrame()` không phải microtask hay timer replacement chung
+
+`requestAnimationFrame()` là Web API để schedule callback phù hợp với rendering cycle. Nó hữu ích cho animation/DOM visual update coordination, không phải mechanism để chạy mọi business async work.
+
+```js
+requestAnimationFrame(() => {
+  element.style.transform = "translateX(100px)";
+});
+```
+
+Trong background tab, rendering/rAF có thể throttled hoặc pause tùy browser. Vì vậy đừng dùng rAF làm business clock.
+
+## Trace một ví dụ đầy đủ
+
+```js
+console.log("script start");
+
+setTimeout(() => {
+  console.log("timer");
+}, 0);
+
+Promise.resolve()
+  .then(() => {
+    console.log("promise 1");
+  })
+  .then(() => {
+    console.log("promise 2");
+  });
+
+queueMicrotask(() => {
+  console.log("queued microtask");
+});
+
+console.log("script end");
+```
+
+Trace:
+
+```text
+current task:
+  script start
+  schedule timer task
+  schedule promise 1 microtask
+  schedule queued microtask
+  script end
+
+microtask checkpoint:
+  promise 1
+    → schedules promise 2
+  queued microtask
+  promise 2
+
+later task:
+  timer
+```
+
+Output:
+
+```text
+script start
+script end
+promise 1
+queued microtask
+promise 2
+timer
+```
+
+Cách trace này đáng tin cậy hơn học thuộc một vài câu “Promise trước setTimeout”.
 
 ### Senior note
 

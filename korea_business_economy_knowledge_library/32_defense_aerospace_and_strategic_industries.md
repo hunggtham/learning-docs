@@ -1,156 +1,480 @@
-# Quốc phòng, hàng không vũ trụ và các ngành chiến lược (Defense, Aerospace & Strategic Industries / 방산·우주항공·전략산업)
+# Quốc phòng, hàng không vũ trụ và các ngành chiến lược Hàn Quốc (Defense, Aerospace & Strategic Industries / 방산·우주항공·전략산업)
 
-Defense industry khác commercial manufacturing vì customer chủ yếu là government, procurement cycle dài, export cần diplomacy và product phải đáp ứng reliability/security standards cực cao. Khi Korean defense firms mở rộng export, đây không chỉ là câu chuyện “vũ khí bán chạy” mà là kết quả của decades tích lũy heavy-industry, electronics, shipbuilding, precision machinery và public procurement capability.
+Ngành quốc phòng khác sản xuất thương mại thông thường vì khách hàng chủ yếu là chính phủ, chu kỳ mua sắm dài, sản phẩm phải đáp ứng tiêu chuẩn độ tin cậy và an ninh rất cao, còn xuất khẩu thường gắn với ngoại giao, tài trợ, đào tạo và nội địa hóa.
 
-## Defense procurement tạo demand khác market consumer
+Khi doanh nghiệp quốc phòng Hàn Quốc mở rộng xuất khẩu, đó không chỉ là câu chuyện “vũ khí bán chạy”. Nó phản ánh nhiều thập niên tích lũy năng lực từ công nghiệp nặng, điện tử, đóng tàu, cơ khí chính xác, phần mềm và mua sắm công.
 
-Trong consumer market, buyer có thể đổi brand nhanh. Trong defense, acquisition program kéo dài nhiều năm và gồm testing, budget approval, interoperability, training, maintenance và logistics support.
+Vì vậy một doanh nghiệp quốc phòng nên được nhìn như **đơn vị tích hợp hệ thống chu kỳ dài (long-cycle systems integrator)** hơn là một nhà bán phần cứng thông thường.
 
-Revenue vì thế thường lumpy và backlog-heavy. Contract ký hôm nay có thể được recognize thành revenue nhiều năm.
+## Hệ sinh thái quốc phòng: nhà thầu chính không tự làm mọi thứ
 
-Xem logic backlog tương tự [16_shipbuilding_steel_chemicals_heavy_industry](./16_shipbuilding_steel_chemicals_heavy_industry.md).
+Ngành có nhiều tầng:
 
-## Backlog không bằng profit chắc chắn
+```text
+Chính phủ / DAPA / khách hàng nước ngoài
+          ↓
+Nhà thầu chính / đơn vị tích hợp nền tảng
+          ↓
+Nhà cung cấp phân hệ
+          ↓
+Linh kiện / vật liệu / phần mềm
+```
 
-Order backlog (수주잔고) cho visibility nhưng không bảo đảm margin. Analyst cần xem contract type, escalation clauses, development obligations, FX, cost inflation và delivery schedule.
+Nhà thầu chính tích hợp nền tảng, quản lý chứng nhận và hợp đồng, đồng thời chịu trách nhiệm giao tiếp với khách hàng.
 
-Nếu fixed-price contract ký trước khi material/labor cost tăng, nominal backlog lớn vẫn có thể low margin.
+Nhà cung cấp có thể sở hữu radar, linh kiện động cơ, quang học, điện tử, dẫn đường, phần mềm hoặc vật liệu chuyên dụng.
 
-## Learning curve
+Khả năng giữ lại giá trị kinh tế phụ thuộc:
 
-Manufacturing complex systems có learning curve: unit cost giảm khi cumulative production tăng vì process improvement và supplier learning.
+- quyền sở hữu IP;
+- mức độ dễ bị thay thế;
+- rào cản chứng nhận;
+- quy mô;
+- nền thiết bị đã được triển khai.
 
-Một representation thường dùng:
+## DAPA và thể chế mua sắm quốc phòng
+
+**Defense Acquisition Program Administration (DAPA / 방위사업청)** quản lý nhiều chương trình phát triển và mua sắm quốc phòng.
+
+Mua sắm quốc phòng được chuẩn hóa và kiểm soát chặt hơn mua hàng thương mại vì phải đi qua:
+
+- xác định yêu cầu;
+- thử nghiệm và đánh giá;
+- phê duyệt ngân sách;
+- quy tắc an ninh;
+- các mốc hợp đồng;
+- nghiệm thu.
+
+Nhu cầu mua sắm trong nước có thể tài trợ quá trình hình thành năng lực trước khi thị trường xuất khẩu mở ra, tức đóng vai trò **khách hàng đầu mối (anchor demand)**.
+
+Cơ chế này tương tự chính sách công nghiệp và mua sắm công, nhưng đi kèm yêu cầu an ninh quốc gia cao hơn.
+
+## Doanh thu phụ thuộc backlog và thường không đều
+
+Một hợp đồng quốc phòng có thể kéo dài nhiều năm.
+
+Cần tách ba biến:
+
+```text
+Đơn hàng mới / 수주
+→ dòng hợp đồng mới
+
+Backlog / 수주잔고
+→ phần hợp đồng chưa thực hiện
+
+Doanh thu
+→ giá trị được ghi nhận khi sản xuất / giao hàng / hoàn thành tiến độ
+```
+
+Đơn hàng được công bố hôm nay có thể chỉ tạo doanh thu sau nhiều năm.
+
+Backlog vì vậy tạo khả năng dự báo nhưng không phải tiền mặt hay lợi nhuận hiện tại.
+
+## Chất lượng backlog quan trọng hơn quy mô
+
+Hai hợp đồng cùng giá trị có thể có kinh tế hoàn toàn khác nhau tùy:
+
+- giá cố định hay hoàn chi phí cộng phí;
+- nghĩa vụ phát triển;
+- mức nội địa hóa;
+- điều khoản điều chỉnh giá;
+- tỷ giá;
+- lịch giao hàng;
+- các mốc thanh toán.
+
+Một đơn hàng lớn nhưng đòi chuyển giao công nghệ và nội địa hóa rất cao có thể giữ lại ít giá trị hơn một hợp đồng nội địa nhỏ hơn.
+
+Vì vậy luôn hỏi: **biên lợi nhuận và điều khoản tiền mặt nào thực sự nằm trong backlog?**
+
+## Năng lực tích hợp hệ thống là một lợi thế khó sao chép
+
+Xe tăng, máy bay, tên lửa hay radar không chỉ là tập hợp linh kiện.
+
+Cảm biến, phần mềm, liên lạc, động lực, vật liệu và hệ thống điều khiển phải hoạt động đồng bộ trong điều kiện khắc nghiệt.
+
+Đây là **năng lực tích hợp hệ thống (systems integration / 체계통합 능력)**.
+
+Hàn Quốc có thể tận dụng năng lực tích lũy từ:
+
+- sản xuất ô tô;
+- đóng tàu;
+- điện tử;
+- bán dẫn;
+- máy móc công nghiệp nặng;
+- phần mềm.
+
+Năng lực tích hợp khó sao chép vì phần lớn tri thức mang tính ngầm và chỉ được chứng minh qua thử nghiệm, vận hành thực tế và phản hồi trong nhiều năm.
+
+## Độ tin cậy và chứng nhận tạo chi phí chuyển đổi
+
+Khi một nền tảng hoặc phân hệ đã được chứng nhận, đổi nhà cung cấp có thể yêu cầu thử nghiệm lại, thiết kế lại và đào tạo lại hệ thống hậu cần.
+
+Điều này tạo chi phí chuyển đổi cao và vòng đời sản phẩm dài.
+
+Nhưng cùng cơ chế đó làm việc gia nhập ngành rất chậm: một startup có nguyên mẫu tốt vẫn chưa đủ nếu thiếu lịch sử chứng nhận và triển khai.
+
+Quy định vừa là rào cản vừa có thể trở thành lợi thế của doanh nghiệp đã được chứng minh.
+
+## Đường cong học tập: sản lượng tích lũy có thể làm chi phí đơn vị giảm
+
+Sản xuất phức tạp thường có hiệu ứng học tập:
 
 \[
 C_n = C_1 n^b, \quad b<0
 \]
 
-Trong đó `C_n` là unit cost ở cumulative unit `n`. Đây không phải law universal, nhưng giúp hiểu vì sao export order lớn có thể cải thiện economics của domestic defense program bằng cách spread fixed development cost.
+trong đó `C_n` là chi phí xấp xỉ tại mức sản lượng tích lũy `n`.
 
-## Systems integration là moat
+Đường cong thực tế khác nhau theo sản phẩm, nhưng trực giác quan trọng là: sản lượng lớn hơn giúp phân bổ chi phí kỹ thuật và dụng cụ, đồng thời cải thiện quy trình.
 
-Tank, aircraft, radar hay missile không chỉ là collection parts. Value nằm ở systems integration: sensors, software, propulsion, materials, fire control, communication và reliability phải hoạt động cùng nhau.
+Đơn hàng xuất khẩu vì vậy có thể làm kinh tế của cả nền tảng trong nước tốt hơn nhờ tăng sản lượng tích lũy.
 
-Korean industrial base có advantage vì các capabilities này đã phát triển trong automobiles, shipbuilding, electronics và heavy machinery.
+## Chi phí R&D cố định và kinh tế vòng đời nền tảng
 
-## Export: product + financing + diplomacy + localization
+Phát triển máy bay, tên lửa hoặc nền tảng chiến đấu có thể cần nhiều năm R&D trước khi tạo doanh thu sản xuất đáng kể.
 
-Defense export thường cần package gồm government-to-government relationship, financing, training, maintenance, local production/offset và technology transfer.
+Sau khi chi phí phát triển cố định đã phát sinh, sản xuất thêm có thể có kinh tế cận biên tốt hơn.
 
-Vì vậy competitor không chỉ cạnh tranh specification/price. Delivery speed, political reliability và ability transfer production có thể quyết định deal.
+Vì vậy phải nhìn toàn vòng đời:
 
-Một company có great product nhưng export license hoặc diplomatic relationship yếu vẫn không capture market.
+```text
+Phát triển
+→ sản xuất ban đầu
+→ sản xuất quy mô
+→ biến thể xuất khẩu
+→ nâng cấp
+→ bảo trì vòng đời
+```
 
-## Aerospace: certification và long development cycle
+Một nền tảng thành công có thể tạo doanh thu trong nhiều thập niên.
 
-Aircraft business có development cycle rất dài và certification barrier cao. Commercial aerospace còn cần global supplier qualification; military aerospace cần mission-specific approval.
+## Bảo trì vòng đời: nền thiết bị đã triển khai tạo doanh thu định kỳ
 
-High fixed R&D cost tạo scale economics lớn. Một platform bán thêm unit sau development có thể improve project return đáng kể.
+Nền tảng quân sự cần:
 
-## Space economy
+- bảo trì;
+- phụ tùng;
+- đạn dược;
+- nâng cấp phần mềm;
+- đào tạo;
+- đại tu.
 
-Space industry gồm launch vehicles, satellites, payloads, ground systems và downstream data services. Upstream hardware capital intensive; downstream satellite imagery/data có software-like economics hơn.
+**Dịch vụ vòng đời (sustainment)** có thể tạo giá trị kinh tế lớn và thường ổn định hơn bán thiết bị ban đầu.
 
-Policy role lớn vì early demand thường đến từ government: weather, military reconnaissance, communication và science missions.
+Khách hàng đánh giá **tổng chi phí vòng đời**, không chỉ giá mua lúc đầu.
 
-## Shipbuilding–defense overlap
+Nhà cung cấp có mạng bảo trì mạnh có thêm một lớp lợi thế cạnh tranh.
 
-Naval vessel construction tận dụng shipyard, marine engineering và combat-system integration. Korea có civilian shipbuilding scale nên supplier/process capability có spillover vào naval programs.
+## Gói xuất khẩu: sản phẩm đơn lẻ chưa đủ
 
-Nhưng military ship profitability không thể suy trực tiếp từ commercial LNG carrier margin vì contract/design/regulatory structure khác.
+Xuất khẩu quốc phòng có thể là một gói:
 
-## Dual-use technology
+```text
+Phần cứng
++ tài trợ
++ đào tạo
++ bảo trì
++ lắp ráp tại địa phương
++ chuyển giao công nghệ
++ hỗ trợ giữa chính phủ với chính phủ
+```
 
-Dual-use (민군겸용) là technology có cả civilian và military use: drones, AI, satellite, cybersecurity, semiconductors, batteries, robotics và autonomous systems.
+Vì vậy đối thủ có thông số kỹ thuật hơi thấp hơn vẫn có thể thắng nếu giao hàng nhanh hơn, tài trợ tốt hơn hoặc chấp nhận nội địa hóa nhiều hơn.
 
-Boundary giữa “defense company” và “technology company” ngày càng mờ. Export control vì vậy trở thành constraint cho commercial supply chain too.
+Đây là lý do xuất khẩu quốc phòng vừa là kinh doanh vừa gắn với ngoại giao.
 
-## Strategic industry và economic security
+## Nội địa hóa và offset
 
-Semiconductors, batteries, critical minerals, nuclear và defense được policy makers coi strategic vì disruption có national-security cost lớn hơn normal consumer shortage.
+Chính phủ nước mua thường yêu cầu **nội địa hóa hoặc bù trừ (offset/localization / 절충교역·현지화)** như:
 
-Điều này làm efficiency objective thay đổi. Một supply chain redundant có thể expensive hơn nhưng socially optimal nếu resilience value cao.
+- lắp ráp địa phương;
+- linh kiện nội địa;
+- đào tạo;
+- chuyển giao công nghệ;
+- tạo việc làm tại nước mua.
 
-Nếu expected disruption loss là `p × L`, firm hoặc government có thể rationally trả resilience premium nhỏ hơn mức đó.
+Những điều kiện này giúp thắng hợp đồng nhưng có thể làm giảm phần giá trị được giữ lại tại doanh nghiệp Hàn Quốc, đồng thời tạo năng lực cho đối thủ tương lai.
 
-## How to analyze a defense company
+Khi phân tích thương vụ, không chỉ hỏi tổng giá trị đơn hàng mà phải hỏi **bao nhiêu giá trị kinh tế và IP thực sự ở lại với nhà xuất khẩu**.
 
-Đừng bắt đầu bằng headline order. Hãy map:
+## Phê duyệt xuất khẩu và rủi ro chính trị
 
-1. domestic vs export order;
-2. backlog duration;
-3. platform lifecycle;
-4. recurring maintenance/ammunition revenue;
-5. development cost và R&D funding;
-6. localization/offset obligation;
-7. working-capital timing;
-8. political/export-control risk.
+Bán sản phẩm quốc phòng có thể cần giấy phép xuất khẩu và phê duyệt của chính phủ.
 
-Một defense business có thể có visibility tốt nhưng cash conversion weak nếu milestone payment đến muộn.
+Một khách hàng hấp dẫn về thương mại vẫn có thể không tiếp cận được vì hạn chế an ninh hoặc ngoại giao.
 
-## Mental Model
+Quan hệ chính trị có thể đẩy nhanh hoặc chặn giao dịch độc lập với chất lượng sản phẩm.
 
-> Defense business bán **capability + reliability + lifecycle support + sovereign trust**, không chỉ bán hardware. Economics nằm trong backlog, learning curve, systems integration và government relationship.
+Vì vậy quy mô thị trường khả dụng luôn bị điều kiện hóa bởi chính sách.
 
-## Common misconceptions
+## Tỷ giá và hợp đồng chu kỳ dài
 
-Order announcement không bằng immediate revenue.
+Hợp đồng xuất khẩu có thể định giá bằng USD hoặc EUR trong khi nhiều chi phí phát sinh bằng KRW.
 
-Geopolitical tension có thể tăng demand nhưng cũng tăng supply-chain/export-control risk.
+Thời gian hợp đồng dài làm phơi nhiễm tỷ giá lớn hơn và việc phòng hộ phức tạp hơn.
 
-Government customer không có nghĩa credit/cash-flow risk bằng zero; budget timing và milestone acceptance vẫn matter.
+Các mốc thanh toán cũng rất quan trọng; trả trước lớn và thanh toán dồn về cuối tạo kinh tế vốn lưu động hoàn toàn khác nhau.
 
-## Connections
+Không nên giả định KRW yếu luôn làm biên lợi nhuận tăng nếu phòng hộ, nội địa hóa hoặc linh kiện nhập khẩu bù trừ tác động đó.
 
-Đọc cùng [16_shipbuilding_steel_chemicals_heavy_industry](./16_shipbuilding_steel_chemicals_heavy_industry.md), [29_innovation_rnd_education_and_human_capital](./29_innovation_rnd_education_and_human_capital.md), [25_public_enterprises_and_state_owned_companies](./25_public_enterprises_and_state_owned_companies.md) và [02_trade_export_and_global_value_chains](./02_trade_export_and_global_value_chains.md).
+## Vốn lưu động: tăng trưởng có thể hút tiền
 
-## Korean defense ecosystem: platform, subsystem và component
+Doanh nghiệp quốc phòng có thể phải tích lũy tồn kho và sản phẩm dở dang trước khi nghiệm thu.
 
-Industry không chỉ vài prime contractors. Có platform integrators như Hanwha Aerospace/Hyundai Rotem/KAI-type businesses, missile/radar/electronics specialists, shipyards và hàng trăm component suppliers.
+Nếu sổ đơn hàng tăng nhanh:
 
-Prime contractor chịu integration/customer interface; supplier có thể sở hữu critical component technology. Margin capture phụ thuộc IP, substitutability và qualification barrier.
+```text
+WIP / tồn kho tăng
+Tài sản hợp đồng / khoản phải thu tăng
+→ nhu cầu tiền mặt tăng
+```
 
-## DAPA và acquisition institution
+Do đó doanh thu tăng vẫn có thể đi cùng CFO yếu, đặc biệt trong giai đoạn xuất khẩu mở rộng nhanh.
 
-Defense Acquisition Program Administration (DAPA / 방위사업청) quản lý nhiều procurement/development programs. Đây là institutional difference quan trọng với normal commercial market: requirement, testing, budget và contract rules formalized cao.
+## Lạm phát chi phí và rủi ro hợp đồng giá cố định
 
-Domestic procurement có thể fund capability trước khi export market mở. Export sau đó spread development/fixed cost và tăng production learning.
+Nếu hợp đồng cố định giá nhưng thép, điện tử hoặc lao động tăng chi phí bất ngờ, biên lợi nhuận bị thu hẹp.
 
-## Localization và offset
+Một số hợp đồng có điều khoản điều chỉnh theo lạm phát, số khác không.
 
-Buyer country thường yêu cầu local assembly, technology transfer hoặc local suppliers. Đây là **offset/localization**. Nó giúp win contract nhưng có trade-off: Korean supplier có thể share know-how và future aftermarket revenue.
+Chất lượng backlog vì vậy còn phụ thuộc mức bảo vệ trước lạm phát chi phí.
 
-Deal tốt không chỉ lớn về order value; phải xem value retained in Korea và long-run service economics.
+## Biên lợi nhuận trong nước và xuất khẩu
 
-## Sustainment: installed base tạo recurring demand
+Xuất khẩu có thể có giá đơn vị cao hơn nhưng cũng phát sinh thêm chi phí nội địa hóa, tài trợ, bảo hành, đào tạo và chuyển giao công nghệ.
 
-Military platform bán một lần nhưng cần spare parts, maintenance, upgrades, training và munitions nhiều năm. Installed base lớn có thể tạo recurring revenue giống razor-and-blades model, dù procurement pattern vẫn lumpy.
+Hợp đồng trong nước lại có quy tắc mua sắm và định giá riêng.
 
-Lifecycle cost với buyer thường lớn hơn acquisition price. Supplier có strong sustainment network có competitive advantage.
+Vì vậy tỷ trọng xuất khẩu tăng không tự động đồng nghĩa biên lợi nhuận tăng.
 
-## FX và export margin
+# Hàng không vũ trụ (Aerospace / 항공우주)
 
-Contracts có thể denominated USD/EUR/local currency trong khi large share cost KRW. FX move ảnh hưởng margin tùy hedging và payment milestone.
+## Phát triển máy bay có chu kỳ cực dài
 
-Long contract duration làm hedging harder than short export sale.
+Phát triển máy bay gồm thiết kế, nguyên mẫu, thử bay, chứng nhận và tăng sản lượng.
 
-## Working capital
+Chi phí R&D cố định rất lớn nên quy mô sản xuất cực kỳ quan trọng.
 
-Defense company có thể build inventory/WIP trước milestone acceptance. Revenue growth vì thế kéo contract assets/receivables. Cash conversion là key check khi order book tăng nhanh.
+Khi nền tảng đã được chứng nhận, mỗi đơn vị bán thêm giúp phân bổ chi phí phát triển. Nhưng nếu không đạt đủ quy mô thị trường, lượng R&D khổng lồ có thể trở thành chi phí mắc kẹt.
 
-## Aerospace supplier certification
+Hàng không vũ trụ vì vậy có **giá trị quyền chọn cao nhưng chi phí thất bại cũng rất lớn**.
 
-Commercial aircraft supply chain yêu cầu long qualification, traceability và safety. Once supplier qualified on platform, switching cost cao nhưng volumes phụ thuộc Boeing/Airbus/global cycle.
+## Lợi thế từ chứng nhận
 
-Korean aerospace supplier có thể benefit from global programs nhưng also customer concentration.
+Nhà cung cấp hàng không thương mại cần khả năng truy xuất nguồn gốc, hệ thống chất lượng và quá trình chứng nhận dài với OEM máy bay.
 
-## Space downstream economics
+Khi đã nằm trong một nền tảng, đổi nhà cung cấp rất khó; nhưng bước vào nền tảng cũng rất chậm.
 
-Satellite imagery, geospatial analytics và communication services có recurring/data economics. Hardware launch success tạo infrastructure; value capture dài hạn có thể nằm ở data applications.
+Nhà cung cấp Hàn Quốc có thể tham gia các chương trình toàn cầu của Boeing/Airbus mà không cần tự sở hữu toàn bộ máy bay.
 
-AI làm satellite data interpretation scalable hơn, nối space với software rather than only rockets.
+Cơ hội xuất khẩu này đi cùng rủi ro tập trung khách hàng.
 
-## Strategic-industry valuation trap
+## Kinh tế động cơ
 
-Label “strategic” có thể tạo premium narrative nhưng valuation cuối cùng vẫn phụ thuộc cash flow. Policy support có thể reduce risk; nó không repeal competition, execution risk hay cost of capital.
+Động cơ máy bay thường có giá trị dịch vụ hậu mãi lớn: phụ tùng và bảo trì trong suốt vòng đời vận hành.
+
+Bán động cơ ban đầu có thể biên thấp hơn trong khi dịch vụ vòng đời tạo lợi nhuận cao hơn.
+
+Logic “nền thiết bị đã lắp đặt” này tương tự bảo trì quốc phòng và thiết bị y tế.
+
+## Chu kỳ hàng không dân dụng và quân sự khác nhau
+
+Hàng không thương mại phụ thuộc nhu cầu hãng bay và thay thế đội máy bay.
+
+Hàng không quân sự phụ thuộc ngân sách chính phủ và địa chính trị.
+
+Dùng chung năng lực kỹ thuật và sản xuất có thể giúp đa dạng chu kỳ, nhưng hợp đồng và kinh tế từng mảng vẫn khác nhau.
+
+# Công nghiệp vũ trụ (Space / 우주산업)
+
+## Chuỗi giá trị vũ trụ
+
+Có thể tách:
+
+```text
+Tên lửa phóng
+Vệ tinh / tải trọng
+Trạm mặt đất
+Thông tin liên lạc / định vị / quan sát Trái đất
+Phân tích dữ liệu / ứng dụng
+```
+
+Phần cứng thượng nguồn thâm dụng vốn và kỹ thuật. Lớp dữ liệu và ứng dụng phía dưới có khả năng mở rộng gần giống phần mềm hơn.
+
+## Chính phủ là khách hàng đầu mối
+
+Khí tượng, trinh sát quốc phòng, liên lạc và nhiệm vụ khoa học tạo nhu cầu ban đầu.
+
+Nếu thiếu nhiệm vụ công, thị trường tư nhân có thể chưa đủ lớn để biện minh cho chi phí cố định rất cao của phát triển tên lửa và vệ tinh.
+
+Mua sắm chính phủ vì vậy có thể xây năng lực cho cả hệ sinh thái.
+
+## Giá trị có thể dịch chuyển xuống lớp dữ liệu
+
+Vệ tinh tạo dữ liệu thô, nhưng giá trị kinh tế có thể được giữ nhiều hơn ở lớp phân tích và ứng dụng.
+
+AI làm phân loại ảnh và phân tích địa không gian có khả năng mở rộng hơn, nối công nghiệp vũ trụ với phần mềm và AI.
+
+Vì vậy “ngành vũ trụ” không chỉ là tên lửa.
+
+# Đóng tàu quân sự và phần giao nhau với công nghiệp quốc phòng
+
+Nền đóng tàu dân dụng quy mô lớn của Hàn Quốc tạo lan tỏa sang tàu hải quân: kết cấu thân tàu, hệ thống hàng hải, chuỗi cung ứng và quản lý dự án.
+
+Nhưng chương trình hải quân còn có hệ thống chiến đấu, yêu cầu bảo mật và nghiệm thu riêng.
+
+Biên lợi nhuận của tàu LNG thương mại không thể dùng trực tiếp làm chuẩn cho tàu quân sự.
+
+Xem [`16_shipbuilding_steel_chemicals_heavy_industry.md`](./16_shipbuilding_steel_chemicals_heavy_industry.md).
+
+# Công nghệ lưỡng dụng (Dual-use Technologies / 민군겸용기술)
+
+Drone, AI, vệ tinh, an ninh mạng, bán dẫn, pin, robot và hệ thống tự hành đều có thể dùng cho dân sự lẫn quân sự.
+
+Ranh giới giữa công ty quốc phòng và công ty công nghệ ngày càng mờ.
+
+Điều này tạo hai tác động:
+
+1. quy mô thương mại có thể làm giảm chi phí công nghệ quốc phòng;
+2. kiểm soát xuất khẩu và quy tắc an ninh có thể lan sang mảng thương mại.
+
+## AI và hệ thống tự hành
+
+AI có thể hỗ trợ nhận diện mục tiêu, hỗ trợ quyết định, bảo trì dự đoán, phương tiện tự hành và phòng thủ mạng.
+
+Nhưng triển khai thực tế cần độ tin cậy, khả năng giải thích, dữ liệu an toàn và quy tắc chỉ huy của con người nghiêm ngặt hơn AI tiêu dùng thông thường.
+
+**Trình diễn tốt không đồng nghĩa năng lực quân sự có thể triển khai.**
+
+# Ngành chiến lược và an ninh kinh tế
+
+Bán dẫn, pin, hạt nhân, khoáng sản quan trọng và quốc phòng thường được coi là chiến lược vì chi phí đứt gãy lớn hơn nhiều so với bất tiện tiêu dùng thông thường.
+
+Tối ưu hóa kinh tế có thể chấp nhận một mức dư thừa có chủ đích.
+
+Nếu xác suất gián đoạn là `p` và tổn thất là `L`:
+
+\[
+Tổn\ thất\ gián\ đoạn\ kỳ\ vọng = p\times L
+\]
+
+Trả một **phần bù chống chịu (resilience premium)** thấp hơn tổn thất kỳ vọng có thể hợp lý.
+
+Đây là lý do chính phủ có thể hỗ trợ công suất trong nước hoặc ở quốc gia đồng minh ngay cả khi nhà cung cấp nước ngoài khác rẻ hơn.
+
+## Nhãn “chiến lược” không xóa kỷ luật kinh doanh
+
+Tư cách ngành chiến lược có thể giúp tiếp cận chính sách hỗ trợ tốt hơn, nhưng doanh nghiệp vẫn chịu:
+
+- rủi ro thực thi;
+- cạnh tranh;
+- vượt chi phí;
+- pha loãng hoặc nợ;
+- tập trung khách hàng.
+
+Hỗ trợ chính sách thay đổi cấu trúc rủi ro–lợi nhuận; nó không vô hiệu hóa quy luật kinh tế.
+
+# Các kiểu doanh nghiệp cần phân biệt
+
+## Nhà thầu chính / đơn vị tích hợp nền tảng
+
+Theo dõi:
+
+```text
+Backlog
+Cơ cấu trong nước / xuất khẩu
+Vòng đời nền tảng
+Chi phí phát triển
+Nghĩa vụ nội địa hóa
+Vốn lưu động
+Tỷ trọng dịch vụ vòng đời
+```
+
+## Nhà cung cấp phân hệ
+
+```text
+Mức tập trung nền tảng
+Quyền sở hữu IP
+Rào cản chứng nhận
+Hạn chế xuất khẩu
+Giá trị linh kiện trên mỗi nền tảng
+```
+
+## Nhà cung cấp linh kiện hàng không
+
+```text
+Mức tập trung Boeing/Airbus/khách hàng
+Tốc độ sản xuất nền tảng
+Chứng nhận
+Tỷ giá
+Dịch vụ hậu mãi
+```
+
+## Công ty dữ liệu vũ trụ
+
+```text
+Quyền tiếp cận / chi phí vệ tinh
+Doanh thu thuê bao dữ liệu
+Mức tập trung khách hàng
+Hợp đồng chính phủ
+Biên lợi nhuận phân tích dữ liệu
+```
+
+# Kiểm tra sức chịu đựng
+
+Nhà thầu quốc phòng chính:
+
+- hợp đồng xuất khẩu lớn bị chậm 2 năm;
+- tỷ lệ nội địa hóa cao hơn dự kiến;
+- vật liệu +15%;
+- KRW mạnh lên;
+- mốc thanh toán bị chậm.
+
+Hàng không:
+
+- sản lượng máy bay bị cắt;
+- chứng nhận bị chậm;
+- chi phí phát triển vượt kế hoạch.
+
+Vũ trụ:
+
+- phóng thất bại;
+- vệ tinh bị chậm;
+- ngân sách chính phủ bị cắt;
+- kiếm tiền từ dữ liệu thấp hơn kế hoạch.
+
+# Mô hình tư duy
+
+> Doanh nghiệp quốc phòng bán **năng lực + độ tin cậy + hỗ trợ vòng đời + niềm tin cấp quốc gia**. Kinh tế nằm ở chất lượng backlog, đường cong học tập, tích hợp hệ thống, bảo trì vòng đời và quan hệ chính phủ — không nằm ở con số đơn hàng headline.
+
+```text
+R&D / chứng nhận
+        ↓
+Nhu cầu đầu mối trong nước
+        ↓
+Học qua sản xuất
+        ↓
+Xuất khẩu + nội địa hóa
+        ↓
+Nền thiết bị đã triển khai
+        ↓
+Bảo trì / nâng cấp
+```
+
+# Những nhầm lẫn thường gặp
+
+**“Công bố đơn hàng = doanh thu hiện tại.”** Sai. Ghi nhận có thể mất nhiều năm.
+
+**“Khách hàng chính phủ = không có rủi ro tiền mặt.”** Sai. Ngân sách, nghiệm thu và lịch thanh toán vẫn quan trọng.
+
+**“Căng thẳng địa chính trị luôn có lợi cho doanh nghiệp quốc phòng.”** Sai. Nhu cầu có thể tăng nhưng rủi ro chuỗi cung ứng và kiểm soát xuất khẩu cũng tăng.
+
+**“Giá trị đơn hàng xuất khẩu cho biết toàn bộ giá trị kinh tế doanh nghiệp giữ lại.”** Sai nếu nội địa hóa và chuyển giao công nghệ lớn.
+
+**“Ngành chiến lược = lợi nhuận được bảo đảm.”** Sai.
+
+**“Ngành vũ trụ = tên lửa.”** Sai. Nhiều giá trị tương lai có thể nằm ở dữ liệu và dịch vụ phía dưới.
+
+# Liên kết
+
+Đọc cùng [`02_trade_export_and_global_value_chains.md`](./02_trade_export_and_global_value_chains.md), [`16_shipbuilding_steel_chemicals_heavy_industry.md`](./16_shipbuilding_steel_chemicals_heavy_industry.md), [`25_public_enterprises_and_state_owned_companies.md`](./25_public_enterprises_and_state_owned_companies.md), [`29_innovation_rnd_education_and_human_capital.md`](./29_innovation_rnd_education_and_human_capital.md), [`30_energy_security_power_market_and_transition.md`](./30_energy_security_power_market_and_transition.md) và [`34_digital_fintech_cloud_and_it_services.md`](./34_digital_fintech_cloud_and_it_services.md).

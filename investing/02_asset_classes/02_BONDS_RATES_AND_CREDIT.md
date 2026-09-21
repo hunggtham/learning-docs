@@ -1,63 +1,343 @@
-# Trái phiếu, lãi suất và credit
+# Trái phiếu, lãi suất và tín dụng
 
-## Bond là hợp đồng cho vay
+> Trái phiếu thường bị mô tả như “sản phẩm an toàn trả lãi cố định”. Cách hiểu đó quá đơn giản. Trái phiếu là một tập hợp dòng tiền theo hợp đồng chịu đồng thời rủi ro lãi suất, lạm phát, tín dụng, thanh khoản, quyền chọn và đôi khi cả tỷ giá. Chương này xây tư duy từ nguyên lý định giá tới đường cong lợi suất, chênh lệch tín dụng, các cấu trúc chứng khoán hóa và cách triển khai qua quỹ trái phiếu.
 
-Bond holder cho issuer vay tiền và nhận contractual cash flows. Face value là principal tham chiếu. Coupon là interest payment theo điều khoản. Maturity là thời điểm principal được hoàn trả nếu issuer không default.
+## 1. Trái phiếu là hợp đồng cho vay
 
-Coupon không phải yield. Một bond coupon 3% có thể có market yield 5% nếu price đã giảm. Yield thay đổi theo market price và future cash flows.
+Người nắm trái phiếu cho tổ chức phát hành vay vốn và nhận dòng tiền theo hợp đồng. Mệnh giá (face/par value) là khoản gốc tham chiếu; coupon là khoản lãi; ngày đáo hạn (maturity) là ngày hoàn trả gốc nếu không vỡ nợ.
 
-## Vì sao yield tăng thì bond price giảm?
+Trái chủ khác cổ đông: trái chủ có quyền đòi theo hợp đồng và thường đứng cao hơn trong cấu trúc vốn, nhưng mức tăng giá trị kinh tế thường bị giới hạn hơn cổ phiếu.
 
-Nếu market mới phát hành bond cùng risk trả 5%, một old bond coupon 3% không thể tiếp tục giao dịch ở par nếu investor có lựa chọn tốt hơn. Price phải giảm để effective yield tăng. Đây là quan hệ nghịch cơ bản giữa rates và bond prices.
+## 2. Giá trái phiếu là giá trị hiện tại của dòng tiền
 
-## Duration
+```text
+Bond Price = Σ Coupon_t / (1 + y)^t + Face Value / (1 + y)^T
+```
 
-Duration đo độ nhạy price với yield. Bond maturity dài và coupon thấp thường duration cao hơn. Gần đúng, nếu modified duration bằng 7 và yield tăng 1 percentage point, price có thể giảm khoảng 7% trước khi xét convexity.
+Khi lợi suất yêu cầu tăng, giá trị hiện tại của dòng tiền cố định giảm; vì vậy giá và lợi suất thường đi ngược chiều.
 
-Duration giải thích tại sao government bond vẫn có thể giảm rất mạnh khi rates tăng dù default risk gần như không thay đổi.
+Một trái phiếu chính phủ có thể giảm giá mạnh dù gần như không có rủi ro vỡ nợ vì lãi suất chiết khấu đã thay đổi.
 
-## Yield curve
+## 3. Giá sạch và giá bẩn
 
-Curve nối yields ở các maturities. Short end nhạy policy rate. Long end phản ánh expected future rates, inflation và term premium.
+Giá sạch (clean price) không bao gồm lãi dồn tích. Giá bẩn (dirty price) là số tiền thực tế gần với giá thanh toán:
 
-Inversion xảy ra khi short yields cao hơn long yields. Nó thường cho thấy monetary policy hiện tại restrictive và market kỳ vọng future easing/growth slowdown. Nhưng inversion không xác định chính xác timing recession.
+```text
+Dirty Price = Clean Price + Accrued Interest
+```
 
-Bull steepening, bear steepening, flattening và inversion cung cấp thêm thông tin về loại shock đang được price.
+Khi so báo giá và tính lợi suất, phải biết thị trường đang sử dụng loại giá nào.
 
-## Nominal yield, real yield và inflation compensation
+## 4. Coupon, current yield và YTM khác nhau
 
-Nominal Treasury yield có thể được nghĩ gần đúng là real yield cộng inflation compensation. TIPS giúp market quan sát real yield. Chênh nominal và TIPS thường được dùng làm breakeven inflation, dù còn technical premia.
+Coupon là lãi theo hợp đồng trên mệnh giá. Lợi suất hiện tại (current yield) gần bằng coupon năm chia giá thị trường. Lợi suất đến đáo hạn (Yield to Maturity, YTM) là tỷ lệ chiết khấu khiến giá trị hiện tại của dòng tiền bằng giá hiện tại với một số giả định.
 
-Real yield tăng làm future cash flows bị discount mạnh hơn và tăng opportunity cost của gold. Đây là cầu nối quan trọng giữa bond market và other assets.
+YTM không phải lợi suất chắc chắn vì nhà đầu tư có thể bán trước đáo hạn, tổ chức phát hành có thể vỡ nợ hoặc dòng tiền phải tái đầu tư ở mức lãi khác.
 
-## Credit risk và spread
+## 5. Yield to Call và Yield to Worst
 
-Corporate bond holder chịu default risk. Credit spread là phần yield vượt government benchmark để bù credit và liquidity risk.
+Trái phiếu có quyền mua lại trước hạn (callable bond) cho phép tổ chức phát hành hoàn trả sớm theo điều khoản.
 
-Spreads mở rộng khi market lo recession, leverage hoặc refinancing. High-yield spreads là một financial-stress indicator quan trọng.
+Khi lãi suất giảm, doanh nghiệp có động cơ tái cấp vốn rẻ hơn và mua lại trái phiếu coupon cao, làm hạn chế phần tăng giá của nhà đầu tư.
 
-Investment grade không đồng nghĩa không thể mất tiền. Downgrade, duration và spread widening đều có thể gây drawdown trước maturity.
+Vì vậy cần xem lợi suất tới ngày gọi lại (yield to call) và lợi suất xấu nhất (yield to worst), không chỉ YTM.
 
-## Credit cycle
+## 6. Duration
 
-Trong expansion, defaults thấp và lending standards dễ. Companies vay nhiều hơn, spreads compress. Khi rates tăng và earnings chậm, weak balance sheets gặp refinancing pressure. Defaults tăng, investors yêu cầu higher spreads và credit conditions thắt chặt hơn.
+Duration đo thời điểm trung bình có trọng số của dòng tiền và độ nhạy của giá với lợi suất.
 
-Credit cycle thường khuếch đại business cycle vì financing trở nên khó đúng lúc cash flow yếu.
+```text
+%ΔPrice ≈ -Modified Duration × ΔYield
+```
 
-## Sovereign bonds
+Trái phiếu kỳ hạn dài, coupon thấp và lợi suất thấp thường có duration cao hơn.
 
-Government debt của country phát hành reserve currency và debt local currency có risk profile khác emerging sovereign vay ngoại tệ. Nominal default risk có thể thấp hơn nhưng inflation và currency risk vẫn tồn tại.
+## 7. DV01/PV01
 
-Foreign investor phải thêm FX risk. US Treasury có thể tăng bằng USD nhưng Korean investor vẫn có return thấp bằng KRW nếu USD yếu mạnh.
+DV01/PV01 đo mức thay đổi giá trị khi lợi suất dịch chuyển 1 điểm cơ bản.
 
-## Bond ETF
+Đây là thước đo tiền tệ trực tiếp hơn duration. Một danh mục có DV01 lớn có thể biến động đáng kể chỉ với thay đổi nhỏ của lãi suất.
 
-Bond ETF không “đáo hạn” giống một individual bond thông thường nếu fund liên tục roll holdings. Duration target được duy trì nên rate risk không tự biến mất theo cùng cách bạn giữ một bond tới maturity.
+## 8. Convexity
 
-Target-maturity ETF là cấu trúc khác và cần đọc methodology cụ thể.
+Quan hệ giá–lợi suất là đường cong chứ không phải đường thẳng. Convexity đo độ cong này.
 
-## Khi bond có vai trò trong portfolio
+Với trái phiếu thông thường có convexity dương, mức tăng giá khi lợi suất giảm thường lớn hơn mức giảm khi lợi suất tăng cùng một độ lớn so với xấp xỉ tuyến tính.
 
-Bonds có thể tạo income, diversification và liability matching. Short-duration high-quality bonds phù hợp capital preservation hơn long-duration bonds. Long-duration bonds có thể hedge deflation/recession nhưng chịu inflation shock mạnh.
+Khi có quyền chọn nhúng, convexity có thể thay đổi mạnh.
 
-Không có “bond allocation đúng” tách khỏi horizon, inflation regime và liabilities.
+## 9. Effective Duration
+
+Với trái phiếu có dòng tiền thay đổi theo lãi suất, như MBS hoặc callable bond, modified duration cố định có thể không đủ.
+
+Duration hiệu dụng (effective duration) ước lượng độ nhạy sau khi cho phép dòng tiền thay đổi khi lãi suất thay đổi.
+
+## 10. Key-Rate Duration
+
+Đường cong lợi suất không luôn dịch chuyển song song. Lợi suất 2Y có thể tăng trong khi 10Y không đổi.
+
+Duration theo điểm kỳ hạn (key-rate duration) phân rã độ nhạy theo các đoạn của đường cong. Hai danh mục cùng tổng duration vẫn có thể chịu rủi ro đường cong rất khác nhau.
+
+## 11. Đường cong lợi suất
+
+Đường cong nối lợi suất theo kỳ hạn. Đầu ngắn thường nhạy với lãi suất chính sách hiện tại và kỳ vọng. Đầu dài phản ánh đường đi lãi suất tương lai, tăng trưởng, lạm phát, nguồn cung trái phiếu và phần bù kỳ hạn.
+
+```text
+Long-term yield ≈ Expected future short rates + Term premium
+```
+
+## 12. Steepening và Flattening
+
+Đường cong dốc hơn (steepening) chỉ nói chênh lệch dài–ngắn tăng, không nói nguyên nhân.
+
+- **Bull steepener**: lợi suất ngắn giảm nhanh hơn dài, thường gắn với kỳ vọng hạ lãi suất hoặc suy thoái.
+- **Bear steepener**: lợi suất dài tăng nhanh hơn, có thể do lạm phát, nguồn cung trái phiếu hoặc phần bù kỳ hạn.
+
+Flattening cũng có phiên bản do lợi suất tăng hoặc giảm. Không nên học thuộc “steepening tốt, inversion xấu” mà không nhìn nguyên nhân.
+
+## 13. Đường cong đảo ngược
+
+Đường cong đảo ngược xảy ra khi lợi suất ngắn cao hơn lợi suất dài ở một số kỳ hạn. Nó thường phản ánh chính sách hiện tại chặt trong khi thị trường kỳ vọng lãi suất thấp hơn trong tương lai.
+
+Đảo ngược có thông tin về chu kỳ nhưng không cho thời điểm chính xác. Đường cong có thể dốc trở lại vì hạ lãi suất trong suy thoái hoặc vì đầu dài tăng do lạm phát/tài khóa; hai trường hợp có tác động rất khác.
+
+## 14. Lợi suất danh nghĩa, lợi suất thực và kỳ vọng lạm phát hòa vốn
+
+Lợi suất danh nghĩa có thể được hiểu gần đúng là lợi suất thực cộng kỳ vọng lạm phát và các phần bù rủi ro.
+
+Chênh lệch giữa Treasury danh nghĩa và TIPS cùng kỳ hạn thường được dùng làm kỳ vọng lạm phát hòa vốn (breakeven inflation), nhưng còn chứa phần bù rủi ro lạm phát và khác biệt thanh khoản.
+
+Lợi suất thực đặc biệt quan trọng với vàng và cổ phiếu duration dài.
+
+## 15. Carry
+
+Lợi suất nắm giữ (carry) là thu nhập mà vị thế tạo ra nếu các điều kiện khác không thay đổi, ví dụ coupon và ảnh hưởng của tài trợ.
+
+Carry không phải lợi suất chắc chắn. Một khoản carry nhỏ có thể bị xóa bởi thay đổi lãi suất hoặc spread lớn.
+
+## 16. Roll-Down
+
+Nếu đường cong dốc và hình dạng không đổi, trái phiếu khi tiến gần đáo hạn có thể “trượt” xuống điểm có lợi suất thấp hơn, tạo lợi nhuận giá. Đây là lợi suất trượt theo đường cong (roll-down).
+
+```text
+Expected fixed-income return
+≈ Carry + Roll-down + Rate move + Spread move + Default/Recovery + FX
+```
+
+## 17. Trái phiếu chính phủ, doanh nghiệp và thứ tự ưu tiên
+
+Nợ chính phủ thường là mốc tham chiếu lãi suất trong đồng tiền tương ứng, nhưng rủi ro chính phủ vẫn phụ thuộc cấu trúc tài khóa/tiền tệ.
+
+Nợ doanh nghiệp thêm rủi ro kinh doanh và vỡ nợ. Nợ có bảo đảm đứng cao hơn nợ không bảo đảm; nợ cao cấp đứng trên nợ thứ cấp.
+
+Không so hai trái phiếu chỉ bằng lợi suất nếu thứ tự ưu tiên, tài sản bảo đảm, kỳ hạn và quyền chọn khác nhau.
+
+## 18. Chênh lệch tín dụng
+
+Chênh lệch tín dụng (credit spread) là phần lợi suất cao hơn mốc phi rủi ro tương ứng. Nó bù cho:
+
+```text
+Tổn thất vỡ nợ kỳ vọng
+Bất định
+Thanh khoản
+Ác cảm rủi ro
+Cung–cầu kỹ thuật
+```
+
+Công thức trực giác:
+
+```text
+Expected Credit Loss ≈ PD × LGD × Exposure
+```
+
+## 19. Z-Spread và OAS
+
+Z-spread là mức chênh lệch cố định cộng vào toàn bộ đường cong chuẩn để chiết khấu dòng tiền hợp đồng về đúng giá.
+
+OAS (Option-Adjusted Spread) điều chỉnh thêm giá trị quyền chọn nhúng. Với trái phiếu callable hoặc MBS, OAS thường hữu ích hơn spread đơn giản vì tách một phần tác động của quyền chọn.
+
+## 20. Spread Duration
+
+Trái phiếu doanh nghiệp chịu cả duration lãi suất và duration chênh lệch tín dụng.
+
+Treasury yield có thể giảm 100bp nhưng credit spread tăng 200bp, khiến trái phiếu doanh nghiệp vẫn giảm.
+
+Đây là lý do high yield thường có hành vi gần cổ phiếu hơn trái phiếu chính phủ trong suy thoái.
+
+## 21. Rating không thay thế phân tích tín dụng
+
+Xếp hạng tín dụng là đánh giá hữu ích nhưng có thể chậm hơn thị trường. Chênh lệch tín dụng thường phản ứng trước khi xếp hạng thay đổi.
+
+Cần xem đòn bẩy, khả năng trả lãi, dòng tiền tự do, tính chu kỳ, giá trị tài sản, lịch đáo hạn và khả năng tiếp cận vốn.
+
+## 22. Thanh khoản của doanh nghiệp đi vay
+
+Một công ty có tài sản tốt vẫn có thể vỡ nợ nếu không đủ tiền hoặc không tái cấp vốn được trước đáo hạn.
+
+Cần xây “đường chạy thanh khoản” (liquidity runway):
+
+```text
+Tiền mặt
++ FCF dự kiến
++ Hạn mức chưa dùng
++ Khả năng bán tài sản
+so với
+Nợ đáo hạn
++ Lãi vay
++ Capex bắt buộc
++ Nghĩa vụ khác
+```
+
+## 23. Bức tường đáo hạn
+
+Nếu lượng lớn nợ đáo hạn tập trung trong 12–24 tháng, chi phí tái cấp vốn có thể tăng đột ngột ngay cả khi tỷ lệ nợ/EBITDA hiện tại chưa xấu.
+
+Phải xem nợ cố định/thả nổi, có bảo đảm/không bảo đảm và lịch đáo hạn theo từng năm.
+
+## 24. Chu kỳ tín dụng
+
+Một chu kỳ thường có dạng:
+
+```text
+Tín dụng dễ
+→ Đòn bẩy tích tụ
+→ Cú sốc
+→ Spread mở rộng
+→ Tái cấp vốn khó
+→ Vỡ nợ / Giảm đòn bẩy
+→ Sửa chữa bảng cân đối
+```
+
+Tín dụng khuếch đại chu kỳ kinh doanh vì tiêu chuẩn cho vay thay đổi theo giá tài sản và chất lượng người vay.
+
+## 25. Fallen Angels và Rising Stars
+
+**Fallen angel** là tổ chức phát hành bị hạ từ investment grade xuống high yield. Việc bị loại khỏi chỉ số/quỹ có giới hạn xếp hạng có thể tạo bán kỹ thuật.
+
+**Rising star** là tổ chức được nâng từ high yield lên investment grade. Dòng vốn kỹ thuật có thể đi hướng ngược lại.
+
+Phân tích phải tách thay đổi chất lượng tín dụng thật khỏi dòng vốn do quy tắc chỉ số.
+
+## 26. Khoản vay lãi suất thả nổi
+
+Công cụ lãi suất thả nổi có duration lãi suất thấp hơn nhưng người vay chịu chi phí lãi tăng nhanh khi benchmark tăng.
+
+Nhà đầu tư giảm rủi ro giá do lãi suất nhưng có thể tăng rủi ro tín dụng gián tiếp vì khả năng trả lãi của người vay xấu đi.
+
+## 27. Leveraged Loans và Covenant
+
+Khoản vay đòn bẩy (leveraged loan) thường cho doanh nghiệp có đòn bẩy cao. Điều khoản bảo vệ (covenant) có thể yêu cầu duy trì tỷ lệ tài chính hoặc giới hạn hành động.
+
+Khoản vay covenant-lite cho người cho vay ít quyền can thiệp sớm hơn. Lợi suất cao phải được đọc cùng chất lượng điều khoản.
+
+## 28. Trái phiếu liên kết lạm phát
+
+TIPS và các trái phiếu liên kết lạm phát điều chỉnh gốc hoặc dòng tiền theo chỉ số giá theo quy tắc.
+
+Chúng bảo vệ sức mua tốt hơn trong một số tình huống nhưng vẫn chịu duration của lợi suất thực. Một năm CPI cao vẫn có thể tạo lỗ nếu lợi suất thực tăng mạnh.
+
+## 29. MBS và convexity âm
+
+Chứng khoán bảo đảm bằng khoản vay thế chấp (MBS) nhận dòng tiền từ các khoản vay mua nhà. Người vay có quyền trả trước.
+
+Khi lãi suất giảm, tái cấp vốn tăng và nhà đầu tư nhận lại tiền sớm đúng lúc muốn giữ coupon cao. Khi lãi suất tăng, trả trước chậm và duration kéo dài.
+
+Đây là trực giác của convexity âm.
+
+## 30. ABS và phân tầng rủi ro
+
+Chứng khoán bảo đảm bằng tài sản (ABS) gom dòng tiền từ các khoản vay/tài sản rồi chia thành các tầng (tranche) có thứ tự nhận tiền và chịu lỗ khác nhau.
+
+Một pool tài sản tương đối ổn định vẫn có thể tạo tranche rủi ro cao nếu cấu trúc phân bổ lỗ phức tạp. Cần hiểu waterfall, credit enhancement và trigger.
+
+## 31. Trái phiếu chính phủ nội tệ và ngoại tệ
+
+Chính phủ vay bằng đồng tiền mình kiểm soát có rủi ro khác chính phủ vay bằng ngoại tệ.
+
+Nợ nội tệ có thể giảm rủi ro vỡ nợ danh nghĩa nhưng vẫn có rủi ro lạm phát và mất giá tiền tệ. Nợ ngoại tệ phụ thuộc dự trữ ngoại hối, cán cân thanh toán và khả năng tiếp cận thị trường quốc tế.
+
+## 32. ETF trái phiếu không giống trái phiếu riêng lẻ
+
+Trái phiếu riêng lẻ giữ tới đáo hạn có kỳ hạn còn lại giảm dần. ETF trái phiếu thông thường liên tục thay trái phiếu để duy trì vùng kỳ hạn mục tiêu.
+
+Vì vậy “giữ ETF trái phiếu tới đáo hạn” thường là mô hình sai, trừ các quỹ mục tiêu đáo hạn có cấu trúc đặc biệt.
+
+## 33. Thanh khoản ETF trái phiếu
+
+ETF có thể giao dịch thường xuyên dù trái phiếu cơ sở OTC và ít thanh khoản. Trong khủng hoảng, giá ETF có thể lệch NAV do NAV dùng báo giá cũ trong khi ETF đang khám phá giá nhanh hơn.
+
+Cần xem spread, AUM, chất lượng tài sản, duration và thanh khoản tài sản cơ sở.
+
+## 34. Thang đáo hạn, bullet và barbell
+
+**Bond ladder** trải kỳ hạn để tạo dòng tiền gốc đều.
+
+**Bullet** tập trung kỳ hạn quanh một mốc để khớp nghĩa vụ.
+
+**Barbell** kết hợp kỳ hạn ngắn và dài thay vì tập trung ở giữa.
+
+Hai danh mục có cùng duration tổng nhưng khác cấu trúc đường cong và rủi ro tái đầu tư.
+
+## 35. Immunization và liability matching
+
+Immunization cố gắng khớp duration/convexity của tài sản với nghĩa vụ để giảm nhạy với thay đổi lãi suất.
+
+Đây là tư duy khác với “mua trái phiếu vì nghĩ lãi suất sẽ giảm”. Mục tiêu là bảo vệ khả năng thanh toán nghĩa vụ.
+
+## 36. Phòng vệ lãi suất
+
+Có thể dùng futures hoặc swap để điều chỉnh DV01 mà không bán toàn bộ trái phiếu.
+
+Phòng vệ tốt cần khớp độ nhạy theo đường cong, không chỉ giá trị danh nghĩa. Curve twist có thể làm hedge một điểm kỳ hạn không hoàn hảo.
+
+## 37. Phòng vệ tín dụng
+
+CDS hoặc chỉ số tín dụng có thể giảm rủi ro spread/default, nhưng thêm rủi ro đối tác, basis và cấu trúc hợp đồng.
+
+Một hedge tín dụng không loại bỏ rủi ro thanh khoản của trái phiếu cơ sở.
+
+## 38. Khi long-duration bond đa dạng hóa cổ phiếu
+
+Trái phiếu chính phủ dài hạn thường hữu ích trong suy thoái do cầu yếu và giảm phát, khi lợi suất có xu hướng giảm.
+
+Trong cú sốc lạm phát, cổ phiếu và trái phiếu dài hạn có thể cùng giảm. Tương quan cổ phiếu–trái phiếu phụ thuộc chế độ kinh tế.
+
+## 39. Phân rã lợi suất thu nhập cố định
+
+```text
+Tổng lợi suất
+= Thu nhập / Carry
++ Roll-down
++ Thay đổi lãi suất
++ Thay đổi đường cong
++ Thay đổi spread
++ Quyền chọn
++ Vỡ nợ / Thu hồi
++ FX
+- Chi phí
+```
+
+Phân rã này giúp biết lợi nhuận đến từ nhận coupon, cược duration hay chấp nhận tín dụng.
+
+## 40. Checklist trái phiếu hoặc ETF trái phiếu
+
+```text
+Tổ chức phát hành
+Thứ tự ưu tiên / Tài sản bảo đảm
+Kỳ hạn / Call
+Coupon cố định hay thả nổi
+YTM / YTW
+Duration / DV01 / Convexity
+Spread / OAS
+Xếp hạng và rủi ro ngầm định
+Thanh khoản và lịch đáo hạn nợ
+Tiền tệ
+Khả năng tái cấp vốn
+Kịch bản xấu nhất hợp lý
+```
+
+Với ETF, thêm chất lượng tín dụng trung bình, cơ cấu holdings, thanh khoản tài sản cơ sở, phí, tracking và phòng vệ FX.
+
+## Kết luận
+
+Lợi suất trái phiếu không thể rút gọn thành “nhận coupon”. Cần tách **thu nhập, lãi suất, đường cong, tín dụng, quyền chọn, thanh khoản, vỡ nợ, thu hồi và tỷ giá**. Chỉ khi hiểu từng thành phần, nhà đầu tư mới biết trái phiếu đang đóng vai trò phòng thủ, tạo thu nhập hay thực chất là một khoản cược vào duration hoặc tín dụng.

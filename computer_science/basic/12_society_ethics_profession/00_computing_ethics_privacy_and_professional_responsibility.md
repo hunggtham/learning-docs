@@ -1,69 +1,67 @@
-# Computing ethics, privacy và professional responsibility
+# Đạo đức máy tính, quyền riêng tư và trách nhiệm nghề nghiệp
 
-Software changes what people can know, do and control. Vì vậy engineer không chỉ chịu trách nhiệm “code đúng spec”; cần xem ai bị ảnh hưởng, harm nào có thể xảy ra và quyền/consent nào đang được dùng. Ethics không thay law, nhưng law cũng không bao phủ mọi responsible decision.
+Phần mềm thay đổi điều con người có thể biết, có thể làm và có thể kiểm soát. Vì vậy kỹ sư không chỉ chịu trách nhiệm “viết mã đúng đặc tả”; còn phải xem ai bị ảnh hưởng, loại thiệt hại nào có thể xảy ra và dữ liệu hoặc quyền đồng thuận nào đang được sử dụng. Đạo đức (ethics) không thay thế pháp luật, nhưng pháp luật cũng không bao phủ mọi quyết định có trách nhiệm.
 
-## Technical decision có value assumptions
+## Quyết định kỹ thuật luôn chứa giả định về giá trị
 
-Chọn default public/private, data retention 30 ngày hay vô hạn, notification opt-in hay opt-out đều steer behavior và distribute risk.
+Chọn mặc định công khai hay riêng tư, giữ dữ liệu 30 ngày hay vô thời hạn, thông báo theo cơ chế tự chọn tham gia hay mặc định tham gia đều định hướng hành vi và phân phối rủi ro khác nhau.
 
-Một design có thể technically neutral-looking nhưng embed incentives/assumptions.
+Một thiết kế có vẻ trung lập về kỹ thuật vẫn có thể chứa các động cơ và giả định ảnh hưởng trực tiếp tới người dùng.
 
-## Privacy không chỉ là secrecy
+## Quyền riêng tư không chỉ là giữ bí mật
 
-Privacy liên quan control/context của personal information: data nào được thu, mục đích gì, ai truy cập, giữ bao lâu, combine với nguồn nào.
+**Quyền riêng tư (privacy)** liên quan tới quyền kiểm soát và ngữ cảnh của thông tin cá nhân: thu thập dữ liệu nào, cho mục đích gì, ai được truy cập, giữ bao lâu và kết hợp với nguồn nào.
 
-Information có thể không secret nhưng aggregation/re-identification tạo harm mới.
+Một thông tin riêng lẻ có thể không bí mật, nhưng khi tổng hợp nhiều nguồn hoặc tái định danh, hệ thống có thể tạo ra rủi ro mới mà từng mẩu dữ liệu riêng không có.
 
-## Data minimization
+## Tối thiểu hóa dữ liệu
 
-Thu thập ít data cần thiết giảm breach impact và governance burden. “Có thể hữu ích sau này” không luôn là justification tốt cho indefinite collection.
+**Tối thiểu hóa dữ liệu (data minimization)** nghĩa là chỉ thu thập lượng dữ liệu thực sự cần thiết. Điều này giảm thiệt hại khi xảy ra rò rỉ và giảm gánh nặng quản trị. Lý do “có thể hữu ích trong tương lai” không tự động biện minh cho việc thu thập vô thời hạn.
 
-Minimization cũng là security principle: data không tồn tại thì không thể leak từ system đó.
+Tối thiểu hóa cũng là nguyên tắc bảo mật: dữ liệu không tồn tại trong hệ thống thì không thể bị rò rỉ từ chính hệ thống đó.
 
-## Consent
+## Đồng thuận
 
-Consent có ý nghĩa khi informed, specific và reasonably voluntary. Dark patterns hoặc take-it-or-leave-it contexts có thể làm consent formality hơn là meaningful choice.
+**Đồng thuận (consent)** có ý nghĩa khi người dùng được cung cấp đủ thông tin, lựa chọn đủ cụ thể và có mức tự nguyện hợp lý. Mẫu thiết kế thao túng hoặc tình huống “chấp nhận tất cả hoặc không được dùng dịch vụ” có thể biến consent thành thủ tục hơn là lựa chọn thật sự.
 
-Engineering cần làm preference enforceable trong actual data flows, không chỉ checkbox UI.
+Kỹ thuật phải bảo đảm lựa chọn của người dùng được thực thi trong luồng dữ liệu thật, không chỉ tồn tại dưới dạng một ô chọn trên giao diện.
 
-## Purpose limitation
+## Giới hạn mục đích
 
-Data collected cho fraud prevention không tự động appropriate cho unrelated advertising. Repurposing thay risk/context và có thể cần new justification/consent tùy policy/law.
+Dữ liệu được thu để chống gian lận không tự động phù hợp cho quảng cáo không liên quan. Tái sử dụng cho mục đích khác làm thay đổi rủi ro và ngữ cảnh, và có thể cần cơ sở hoặc sự đồng thuận mới tùy chính sách và pháp luật.
 
-Data lineage giúp biết downstream systems đang dùng dataset nào cho purpose nào.
+Theo dõi nguồn gốc dữ liệu (data lineage) giúp biết hệ thống phía sau đang sử dụng tập dữ liệu nào cho mục đích nào.
 
-## Professional responsibility
+## Trách nhiệm nghề nghiệp
 
-Engineer có duty báo risk nghiêm trọng, không falsify test results và không hide known safety/security defects.
+Kỹ sư có trách nhiệm báo cáo rủi ro nghiêm trọng, không làm sai lệch kết quả kiểm thử và không che giấu lỗi an toàn hoặc bảo mật đã biết.
 
-Trong high-stakes systems, pressure deadline không loại obligation escalate evidence.
+Trong hệ thống có mức ảnh hưởng cao, áp lực tiến độ không xóa nghĩa vụ nâng cấp cảnh báo khi có bằng chứng về rủi ro. Bộ quy tắc đạo đức của các tổ chức nghề nghiệp cung cấp khung tham khảo nhưng không tự động giải mọi xung đột.
 
-Codes of ethics từ professional organizations cung cấp frameworks nhưng không tự giải mọi conflict.
+## Công nghệ có thể được dùng cho nhiều mục đích
 
-## Dual use
+Mã hóa, nhận diện khuôn mặt, nghiên cứu lỗ hổng và AI tạo sinh đều có thể đem lại lợi ích đồng thời bị lạm dụng. Phân tích có trách nhiệm cần xem các cách lạm dụng có khả năng xảy ra, cơ chế kiểm soát truy cập, giám sát và chiến lược công bố.
 
-Technology như encryption, facial recognition, vulnerability research và generative AI có beneficial + harmful uses. Responsible analysis xem plausible misuse, access controls, monitoring và publication strategy.
+Không thể ngăn mọi hành vi lạm dụng, nhưng quan điểm “công cụ trung lập nên không cần suy nghĩ về hậu quả” là không đủ.
 
-Không phải mọi misuse có thể prevent, nhưng “tool neutral nên không cần nghĩ” là insufficient.
+## Báo cáo và nâng cấp cảnh báo
 
-## Whistleblowing và escalation
+Khi nguy cơ hoặc vi phạm nghiêm trọng bị bỏ qua, có thể cần dùng các kênh nội bộ, đạo đức, tuân thủ hoặc pháp lý. Việc tố giác ra bên ngoài phụ thuộc pháp luật, bằng chứng và rủi ro cụ thể; đây không phải vấn đề chỉ có thể giải bằng kỹ thuật.
 
-Khi harm/rule violation nghiêm trọng bị ignore, internal escalation, ethics/compliance/legal channels có thể cần dùng. External whistleblowing phụ thuộc jurisdiction, evidence và risk; đây không phải topic chỉ technical.
+Một điểm quan trọng với kỹ sư là quy trình tổ chức cũng là cơ chế an toàn, tương tự code review nhưng áp dụng cho rủi ro xã hội và nghề nghiệp.
 
-Điểm CS nền tảng: organization process là một safety control, giống code review nhưng cho societal risk.
+## Những hiểu nhầm thường gặp
 
-## Common Misconceptions
+**“Nếu hợp pháp thì chắc chắn có đạo đức.”** Không đúng. Pháp luật đặt ra giới hạn và nghĩa vụ tối thiểu nhưng có thể đi sau công nghệ hoặc vẫn cho phép những lựa chọn gây hại.
 
-**“Nếu hợp pháp thì chắc chắn ethical.”** Law đặt minimum/constraints nhưng có thể lag technology hoặc cho phép choices vẫn gây harm.
+**“Quyền riêng tư chỉ là mã hóa cơ sở dữ liệu.”** Không đúng. Mã hóa chỉ là một biện pháp; việc thu thập, truy cập, lưu giữ và mục đích sử dụng vẫn quyết định rủi ro.
 
-**“Privacy = encrypt database.”** Encryption chỉ một control; collection, access, retention và purpose vẫn matter.
+**“Kỹ sư không quyết định sản phẩm nên không có trách nhiệm.”** Không đúng. Kỹ sư thường hiểu chi tiết triển khai và rủi ro mà người khác không thấy, nên có vai trò truyền đạt hệ quả và cảnh báo.
 
-**“Engineer không quyết product nên không có responsibility.”** Engineers biết implementation/risk details và có role communicate consequences.
+## Mô hình tư duy
 
-## Mental Model
-
-> Responsible computing hỏi không chỉ “system có hoạt động không?” mà “hoạt động cho ai, với dữ liệu/quyền lực nào, và ai chịu cost khi assumptions sai?”
+> Điện toán có trách nhiệm không chỉ hỏi “hệ thống có hoạt động không?” mà còn hỏi “hệ thống hoạt động cho ai, sử dụng dữ liệu và quyền lực nào, và ai phải chịu chi phí khi các giả định sai?”.
 
 ## Kết nối
 
-Đọc [security principles](../07_security_reliability/00_threat_models_and_security_principles.md), [HCI/dark patterns](../11_hci_graphics/01_interface_design_accessibility_and_usability.md), [AI evaluation](../10_ai_foundations/04_ai_evaluation_data_and_responsibility.md) và [data governance](./01_data_governance_bias_and_algorithmic_impact.md).
+Đọc [nguyên tắc bảo mật](../07_security_reliability/00_threat_models_and_security_principles.md), [HCI và mẫu thiết kế thao túng](../11_hci_graphics/01_interface_design_accessibility_and_usability.md), [đánh giá AI](../10_ai_foundations/04_ai_evaluation_data_and_responsibility.md) và [quản trị dữ liệu](./01_data_governance_bias_and_algorithmic_impact.md).

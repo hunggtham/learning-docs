@@ -1,12 +1,29 @@
-# Cây, thứ tự bộ phận và lattice
+# Cây, thứ tự bộ phận và lattice: cấu trúc của hierarchy, dependency và merge
 
-Discrete mathematics thường nghiên cứu structure thay vì continuous magnitude. Ba structures rất hữu ích trong CS là tree, partial order và lattice. Chúng xuất hiện trong file systems, syntax trees, dependency graphs, version histories, type hierarchies và distributed systems.
+Discrete mathematics không chỉ nghiên cứu “các số rời rạc”. Một phần rất quan trọng là nghiên cứu **structure**: object nào phụ thuộc object nào, hierarchy được tổ chức ra sao, states có thể so sánh hay merge như thế nào.
 
-## Tree là graph không có cycle và connected
+Ba structures quan trọng trong Computer Science là:
 
-Một tree (Tree / 트리) là undirected graph connected và acyclic.
+```text
+tree → hierarchy không cycle
+partial order → dependency/order không cần compare mọi pair
+lattice → partial order có operation merge/refine có meaning
+```
 
-Với `n` vertices, một tree có đúng
+Chúng xuất hiện trong file systems, syntax trees, dependency graphs, build systems, type systems, version histories, compilers, distributed systems và abstract interpretation.
+
+## 1. Tree: connected + acyclic
+
+Một tree (cây / 트리) là undirected graph vừa:
+
+```text
+connected
+acyclic
+```
+
+Hai properties này together tạo structure rất mạnh.
+
+Với `n` vertices, tree có đúng:
 
 ```math
 n-1
@@ -14,69 +31,286 @@ n-1
 
 edges.
 
-Tại sao? Bắt đầu từ một vertex. Mỗi khi thêm một new vertex mà vẫn giữ connected và không tạo cycle, ta cần đúng một edge nối nó vào structure hiện tại. Thêm `n-1` vertices cần `n-1` edges.
+### Proof idea
 
-Nếu connected graph có ít hơn `n-1` edges, không đủ links để nối mọi vertices. Nếu có nhiều hơn mà vẫn connected, ít nhất một edge tạo cycle.
+Bắt đầu từ một vertex. Mỗi new vertex muốn nối vào existing connected acyclic structure phải dùng exactly one new edge.
 
-## Rooted tree và hierarchy
+Nếu không edge → disconnected.
+Nếu ≥2 new edges tới existing tree → tạo cycle.
 
-Chọn một root tạo orientation parent–child. Mỗi node ngoài root có exactly one parent trong tree.
+Thêm `n-1` vertices cần `n-1` edges.
 
-Depth là số edges từ root tới node. Height liên quan longest downward path.
+## 2. Các characterization tương đương của tree
 
-File system, DOM tree và abstract syntax tree dùng hierarchy này. Nhưng Git history không luôn là tree vì merge commit có thể có nhiều parents; nó là directed acyclic graph.
+Với finite undirected graph, các statements sau equivalent:
 
-## Binary tree và search
-
-Trong binary search tree, mỗi node có at most two children và ordering invariant thường là left keys nhỏ hơn node, right keys lớn hơn.
-
-Nếu tree balanced, height khoảng
-
-```math
-O(\log n),
+```text
+connected và acyclic
+connected với n-1 edges
+acyclic với n-1 edges
+between every pair of vertices có unique simple path
 ```
 
-vì mỗi level có thể roughly double số nodes. Nếu degenerate thành chain, height là `O(n)`.
+Unique-path viewpoint cực hữu ích: hierarchy tree đảm bảo giữa hai nodes chỉ có một route đơn giản.
 
-Do đó complexity không đến từ tên “binary tree” mà từ geometric growth của number of reachable nodes theo depth.
+## 3. Rooted tree: hierarchy xuất hiện khi chọn root
 
-## Spanning tree
+Chọn một root biến undirected tree thành hierarchy.
 
-Cho connected graph có cycles, spanning tree giữ tất cả vertices nhưng chỉ giữ đủ edges để connected mà không cycle.
+Mỗi non-root node có exactly one parent.
 
-Minimum spanning tree chọn spanning tree có total edge weight nhỏ nhất. Applications gồm network design, clustering và approximation.
+Concepts:
 
-Algorithms như Kruskal/Prim use cut/cycle properties để chọn edges mà không cần thử mọi trees.
+```text
+parent / child
+ancestor / descendant
+depth
+height
+subtree
+leaf
+```
 
-## Partial order
+File system directory tree, DOM tree và many ASTs dùng rooted structure.
 
-Một quan hệ `\preceq` trên set `P` là partial order nếu reflexive, antisymmetric và transitive.
+Nhưng Git commit history không phải tree nói chung vì merge commit có thể có multiple parents; nó là DAG.
 
-“Partial” nghĩa không phải mọi pair đều comparable.
+## 4. Traversal: DFS và BFS trên tree
 
-Ví dụ subset relation `\subseteq`: với sets `{1}` và `{2}`, neither là subset của other. Nhưng relation vẫn có order structure.
+Tree traversal không chỉ là implementation detail.
 
-Dependency relation thường partial: task A phải trước B, nhưng task C có thể independent nên không cần so trước/sau với A.
+Depth-first search đi sâu theo branch trước. Nó tự nhiên cho recursive structure:
 
-## Hasse diagram
+```text
+preorder
+inorder
+postorder
+```
 
-Hasse diagram biểu diễn finite poset bằng cách bỏ self-loops và transitive edges, chỉ giữ cover relations.
+Breadth-first search đi theo levels, useful cho shortest-depth questions trong unweighted trees.
 
-Nó làm hierarchy lộ ra mà không làm graph cluttered. Divisibility trên positive integers là classic poset: `a\preceq b` nếu `a` divides `b`.
+Traversal order quyết định semantics trong compilers, UI trees và serialization.
 
-## Total order và topological sorting
+## 5. Binary tree không đồng nghĩa binary search tree
 
-Total order yêu cầu mọi pair comparable. Partial order có thể được mở rộng thành một linear order phù hợp constraints.
+Binary tree chỉ yêu cầu mỗi node có at most two children.
 
-Trong DAG, topological sort tạo sequence các vertices sao cho mọi directed edge `u\to v` đặt `u` trước `v`.
+Binary search tree thêm ordering invariant:
 
-Build systems, package dependencies và course prerequisites dùng chính idea này.
+```text
+left subtree keys < node key
+right subtree keys > node key
+```
 
-## Lattice
+Complexity phụ thuộc height.
 
-Một lattice (격자) là poset trong đó mọi pair có greatest lower bound (meet) và least upper bound (join).
+Balanced BST:
 
-Với subsets dưới inclusion:
+```math
+h=O(\log n).
+```
+
+Degenerate chain:
+
+```math
+h=O(n).
+```
+
+Do đó “binary” không tự tạo `O(log n)`.
+
+## 6. Why balanced trees give logarithmic depth
+
+Nếu mỗi level có thể roughly double nodes, total nodes tới height `h` scale như:
+
+```math
+1+2+4+\cdots+2^h\approx2^{h+1}.
+```
+
+Invert relation:
+
+```math
+h\approx\log_2n.
+```
+
+Logarithmic lookup đến từ exponential growth of capacity by depth.
+
+## 7. Heap: tree cho priority, không cho sorted traversal
+
+Binary heap là complete binary tree với heap property:
+
+```text
+min-heap: parent ≤ children
+max-heap: parent ≥ children
+```
+
+Heap support efficient min/max extraction nhưng không guarantee left subtree < right subtree như BST.
+
+Different invariants serve different operations.
+
+## 8. Spanning tree: remove cycles nhưng giữ connectivity
+
+Cho connected graph có cycles. Spanning tree giữ all vertices nhưng chỉ enough edges để graph connected và acyclic.
+
+Every spanning tree has:
+
+```math
+n-1
+```
+
+edges.
+
+Minimum spanning tree (MST) minimizes total edge weight.
+
+Applications:
+
+```text
+network design
+clustering
+road/cable layout
+approximation algorithms
+```
+
+## 9. Cut property intuition của MST
+
+Chia vertices thành hai groups. Edge nhẹ nhất crossing một cut, dưới suitable tie reasoning, có thể thuộc một MST.
+
+Kruskal/Prim algorithms exploit local safety properties để tránh enumerate all spanning trees.
+
+Đây là example của proof-guided greedy algorithm.
+
+## 10. Partial order: order không bắt buộc mọi pair comparable
+
+Relation `\preceq` là partial order nếu:
+
+```text
+reflexive
+antisymmetric
+transitive
+```
+
+Antisymmetric:
+
+```math
+a\preceq b\text{ và }b\preceq a
+\Rightarrow a=b.
+```
+
+Partial nghĩa có thể tồn tại `a,b` incomparable.
+
+Đây không phải thiếu information; incomparability là structure thật.
+
+## 11. Ví dụ partial orders
+
+Subset inclusion:
+
+```math
+A\subseteq B.
+```
+
+Divisibility:
+
+```math
+a\mid b.
+```
+
+Task dependency:
+
+```text
+A must finish before B
+```
+
+Version ancestry trong DAG.
+
+Hai independent tasks có thể incomparable.
+
+## 12. Hasse diagram
+
+Finite poset có thể visualize bằng Hasse diagram.
+
+Ta bỏ:
+
+```text
+self-loops
+transitive edges
+```
+
+và chỉ giữ cover relations.
+
+Nếu `a<b` nhưng không có `c` với `a<c<b`, `b` covers `a`.
+
+Hasse diagram làm structural hierarchy rõ hơn full relation graph.
+
+## 13. Minimal/maximal khác minimum/maximum
+
+Trong poset:
+
+```text
+minimal element → không có element strictly below nó
+minimum → ≤ mọi element khác
+```
+
+Có thể có nhiều minimal elements nhưng at most one minimum.
+
+Tương tự maximal vs maximum.
+
+Đây là distinction thường gây nhầm.
+
+## 14. Chains và antichains
+
+Chain là subset mà mọi pair comparable.
+
+Antichain là subset mà mọi distinct pair incomparable.
+
+Chain represent fully ordered subset; antichain represent maximal parallelism/no dependency relations.
+
+Trong scheduling, antichain size liên hệ degree of potential concurrency.
+
+## 15. Topological sorting: linear extension của partial order
+
+DAG encodes precedence constraints.
+
+Topological sort tạo total order compatible với all directed edges.
+
+Nếu nhiều independent nodes, topological order không unique.
+
+Build systems, package installation, course prerequisites và workflow engines dùng idea này.
+
+## 16. Cycle nghĩa precedence inconsistent
+
+Nếu dependency graph có directed cycle:
+
+```text
+A before B
+B before C
+C before A
+```
+
+không có topological order.
+
+Cycle detection vì vậy không chỉ là graph problem; nó phát hiện inconsistent ordering constraints.
+
+## 17. Lattice: mọi pair có meet và join
+
+Một lattice là poset trong đó mỗi pair `a,b` có:
+
+```text
+meet a∧b → greatest lower bound
+join a∨b → least upper bound
+```
+
+Meet là common information/state thấp nhất vẫn above all common lower constraints.
+Join là smallest state chứa/bao cả hai.
+
+Meaning cụ thể phụ thuộc poset.
+
+## 18. Power-set lattice
+
+Trên subsets của universe `U`, order là inclusion:
+
+```math
+A\preceq B\iff A\subseteq B.
+```
+
+Then:
 
 ```math
 A\wedge B=A\cap B,
@@ -86,18 +320,171 @@ A\wedge B=A\cap B,
 A\vee B=A\cup B.
 ```
 
-Boolean algebra là một distributive complemented lattice.
+Bottom:
 
-Trong type systems, lattice-like structures mô tả subtype joins/meets. Trong dataflow analysis của compilers, fixpoint computation thường diễn ra trên lattices để đảm bảo convergence dưới monotonic transfer functions.
+```math
+\varnothing.
+```
+
+Top:
+
+```math
+U.
+```
+
+Đây là canonical lattice example.
+
+## 19. Boolean algebra như distributive complemented lattice
+
+Power-set lattice có complement:
+
+```math
+A^c=U\setminus A.
+```
+
+và distributive laws.
+
+Boolean logic vì vậy có deep order-theoretic structure; AND/OR tương ứng meet/join.
+
+## 20. Lattice trong type systems
+
+Subtype relation có thể tạo partial order.
+
+Join của two types có thể represent least common supertype; meet có thể represent greatest common subtype nếu tồn tại.
+
+Type inference và flow analysis thường cần operations giống lattice join để merge information từ control-flow branches.
+
+## 21. Dataflow analysis trong compiler
+
+Mỗi program point có abstract state, ví dụ set variables known constant/live/reaching definitions.
+
+Transfer functions propagate states.
+
+At merge point:
+
+```text
+state from path A
+join
+state from path B
+```
+
+Lattice cung cấp mathematically well-defined merge.
+
+Monotonicity + finite-height/appropriate completeness giúp iterative fixpoint algorithms converge.
+
+## 22. Fixed points trên lattices
+
+Nếu function `F` monotone trên suitable complete lattice, fixed-point theorems cho conditions existence của least/greatest fixed points.
+
+Compiler analysis, semantics và model checking dùng principle này.
+
+Iteration:
+
+```text
+x0
+F(x0)
+F(F(x0))
+...
+```
+
+có thể tiến tới stable abstract state.
+
+## 23. Distributed systems và join-semilattice
+
+CRDTs thường dùng join-semilattice structure để merge replicas.
+
+Nếu merge operation associative, commutative, idempotent:
+
+```text
+merge(a,b)=merge(b,a)
+merge(merge(a,b),c)=merge(a,merge(b,c))
+merge(a,a)=a
+```
+
+thì repeated/out-of-order merging có thể converge under model assumptions.
+
+Đây là một application rất concrete của order/lattice theory.
+
+## 24. Trees vs DAGs vs posets
+
+Một tree imposes unique-parent/path structure.
+
+A DAG permits multiple parents.
+
+A poset là abstract relation; DAG/Hasse diagram có thể represent finite poset.
+
+Không nên đồng nhất three concepts dù chúng liên quan.
+
+## 25. Worked example: build dependencies
+
+Suppose:
+
+```text
+A → C
+B → C
+C → D
+B → E
+```
+
+`A` và `B` incomparable. `C` cần both predecessors. Possible topological orders:
+
+```text
+A,B,C,E,D
+B,A,E,C,D
+```
+
+miễn constraints giữ.
+
+Scheduler có thể parallelize `A` và `B`.
+
+## 26. Worked example: set lattice merge
+
+Suppose dataflow state là set variables definitely initialized.
+
+Path 1:
+
+```text
+{a,b}
+```
+
+Path 2:
+
+```text
+{a,c}
+```
+
+Nếu muốn “definitely initialized on all paths”, merge natural là intersection:
+
+```text
+{a}
+```
+
+Nếu muốn “possibly initialized on some path”, merge có thể là union:
+
+```text
+{a,b,c}
+```
+
+Cùng sets nhưng order/analysis semantics quyết định meet/join nào relevant.
 
 ## Knowledge Connection
 
-Trees là special graphs. Posets formalize dependency without forcing arbitrary total order. Lattices nối order theory với logic, set operations và static analysis. Topological sorting biến partial constraints thành executable sequence.
+```text
+graph theory
+→ trees / DAGs
+→ partial order
+→ Hasse representation
+→ lattices
+→ fixed-point computation
+→ compiler analysis / distributed merge
+```
+
+Trees connect to recursion and algorithm complexity. Posets connect to scheduling and dependency management. Lattices connect logic/set theory với static analysis và semantics.
 
 ## Mental Model
 
-> Tree encode “một đường cha duy nhất”; partial order encode “một số things phải trước/nhỏ hơn things khác nhưng không cần so mọi pair”; lattice thêm khả năng merge hai states bằng join/meet có nghĩa toán học.
+> Tree trả lời “mỗi node nằm trong hierarchy nào?”. Poset trả lời “những constraints trước/sau nào tồn tại?”. Lattice thêm capability “merge/refine hai states theo cách có order meaning”.
 
 ## Common Misconceptions
 
-Mọi hierarchy không nhất thiết là tree; multiple inheritance hoặc merges tạo DAG. Acyclic graph không tự động connected nên chưa chắc là tree. Partial order không có nghĩa relation “thiếu chính xác”; incomparability là feature. Topological order thường không unique.
+Mọi hierarchy không phải tree; multiple inheritance/merge tạo DAG. DAG không nhất thiết connected. Partial order không cần compare mọi pair. Minimal không đồng nghĩa minimum. Topological order thường không unique. Lattice join không luôn là numeric max; meaning phụ thuộc partial order.

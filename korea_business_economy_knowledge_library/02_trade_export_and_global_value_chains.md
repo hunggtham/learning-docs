@@ -1,128 +1,211 @@
-# Thương mại, xuất khẩu và chuỗi giá trị toàn cầu (Trade & Global Value Chains / 무역과 글로벌 가치사슬)
+# Thương mại, xuất khẩu và chuỗi giá trị toàn cầu của Hàn Quốc (Trade & Global Value Chains / 무역과 글로벌 가치사슬)
 
-Hàn Quốc là một nền kinh tế có độ hội nhập thương mại cao, nên để hiểu doanh nghiệp Hàn Quốc phải vượt qua cách nghĩ “công ty sản xuất ở Hàn rồi bán ra nước ngoài”. Doanh nghiệp hiện đại vận hành trong chuỗi giá trị toàn cầu (Global Value Chain, GVC / 글로벌 가치사슬), nơi thiết kế, nguyên liệu, linh kiện, sản xuất, logistics, phần mềm và bán hàng có thể nằm ở nhiều quốc gia.
+Hàn Quốc là nền kinh tế hội nhập thương mại sâu, nên không thể hiểu doanh nghiệp bằng cách nghĩ đơn giản “sản xuất ở Hàn Quốc rồi bán ra nước ngoài”. Doanh nghiệp hiện đại hoạt động trong **chuỗi giá trị toàn cầu (Global Value Chain, GVC / 글로벌 가치사슬)**, nơi thiết kế, nguyên liệu, linh kiện, sản xuất, phần mềm, logistics, phân phối và hậu mãi có thể nằm ở nhiều quốc gia.
 
-## Tại sao quốc gia thương mại?
+Câu hỏi đúng không chỉ là “xuất khẩu bao nhiêu?” mà là: **doanh nghiệp đứng ở mắt xích nào, có quyền thương lượng gì, dùng đầu vào từ đâu, bán cho ai, bằng đồng tiền nào và giữ lại bao nhiêu giá trị gia tăng**.
 
-Cốt lõi của thương mại không phải chỉ là “nơi nào làm rẻ hơn”. Lợi thế so sánh (Comparative Advantage / 비교우위) nói rằng ngay cả khi một quốc gia hiệu quả hơn ở nhiều hoạt động, chuyên môn hóa tương đối vẫn có thể tạo lợi ích trao đổi. Trong thực tế doanh nghiệp, lợi thế còn đến từ scale, know-how, supplier network, IP, tiêu chuẩn và learning curve.
+## Vì sao thương mại quan trọng với Hàn Quốc?
 
-Hàn Quốc đã tích lũy năng lực ở những ngành có barriers to entry cao như semiconductor, display, shipbuilding, automotive và battery. Khi đã hình thành cluster, lợi thế không nằm ở một nhà máy đơn lẻ mà ở toàn hệ sinh thái: kỹ sư, vendor, logistics, R&D, financing và khách hàng.
+Hàn Quốc thời kỳ đầu có thị trường nội địa nhỏ, ít tài nguyên tự nhiên và cần nhập máy móc, dầu cùng vật liệu công nghiệp.
 
-## Gross exports khác value added
+Xuất khẩu giải hai hạn chế: tạo ngoại tệ và mở thị trường lớn hơn nhu cầu trong nước.
 
-Nếu một công ty nhập nguyên liệu 70 USD, gia công và xuất sản phẩm 100 USD, gross export là 100 USD nhưng giá trị gia tăng trong nước không phải 100 USD. Mental model này giúp tránh đánh đồng số liệu xuất khẩu với toàn bộ giá trị Hàn Quốc giữ lại.
+Nhưng thương mại còn tạo **áp lực học hỏi**. Khách hàng toàn cầu không mua sản phẩm chỉ vì Hàn Quốc muốn công nghiệp hóa. Doanh nghiệp phải đáp ứng giá, chất lượng, thời gian giao hàng và tiêu chuẩn.
 
-Ở cấp công ty, câu hỏi tương ứng là **gross margin**: doanh thu lớn chưa chắc value capture lớn. Một OEM có thể có revenue rất lớn nhưng margin thấp hơn công ty sở hữu IP hoặc component độc quyền.
+Vì vậy mô hình hướng xuất khẩu vừa là chiến lược tạo cầu vừa là cơ chế xây năng lực.
 
-## Supply chain và điểm nghẽn
+## Lợi thế so sánh: chi phí cơ hội chứ không phải “ai giỏi hơn tuyệt đối”
 
-Chuỗi cung ứng (Supply Chain / 공급망) là mạng lưới vật lý và hợp đồng đưa input tới output. Một chuỗi có thể hiệu quả trong trạng thái bình thường nhưng mong manh trước shock nếu phụ thuộc một source duy nhất. Vì vậy các khái niệm như **dual sourcing / 이중 조달**, inventory buffer, localization và friend-shoring trở nên quan trọng.
+**Lợi thế so sánh (comparative advantage / 비교우위)** nói về chi phí cơ hội tương đối.
 
-Với doanh nghiệp Hàn Quốc, nguồn năng lượng và nguyên liệu nhập khẩu tạo exposure lớn; ngược lại, năng lực xuất khẩu technology products tạo nguồn thu ngoại tệ. Khi giá dầu tăng, một số hóa chất hoặc airline chịu chi phí cao hơn, trong khi shipbuilding hoặc engineering liên quan energy investment có thể hưởng lợi gián tiếp. Cùng một macro shock có transmission khác nhau giữa ngành.
+Một quốc gia có thể năng suất cao hơn quốc gia khác ở nhiều sản phẩm nhưng hai bên vẫn có lợi từ chuyên môn hóa nếu mức chênh lệch năng suất tương đối khác nhau.
 
-## Export order và lag
+Lịch sử Hàn Quốc còn cho thấy lợi thế so sánh không phải lúc nào cũng do tự nhiên ban sẵn. Nó có thể trở thành **lợi thế so sánh động (dynamic comparative advantage / 동태적 비교우위)** thông qua đầu tư vốn, giáo dục, hấp thụ công nghệ, học bằng làm, cụm nhà cung cấp và quy mô.
 
-Nhiều ngành công nghiệp không ghi nhận doanh thu ngay khi nhận đơn hàng. Đóng tàu có thể nhận order hôm nay nhưng doanh thu được recognized theo tiến độ trong nhiều quý hoặc năm. Semiconductor có cycle ngắn hơn nhưng tồn tại inventory adjustment. Automotive có production schedule, dealer inventory và incentives.
+Hàn Quốc không bắt đầu với lợi thế tự nhiên trong bán dẫn, tàu biển hay ô tô. Năng lực được tích lũy. Tuy nhiên trợ cấp một mình không thể tạo lợi thế động; doanh nghiệp cuối cùng vẫn phải đạt sức cạnh tranh kinh tế thật.
 
-Vì vậy khi đọc tin “exports tăng”, cần hỏi đó là shipment hiện tại, new orders, contract value hay expected delivery. Không trộn các time dimension này.
+## Lợi thế tuyệt đối và lợi thế so sánh
 
-## Tỷ giá và pricing power
+**Lợi thế tuyệt đối (absolute advantage)** hỏi ai sản xuất cùng sản phẩm với ít đầu vào hơn.
 
-Một exporter có thể định giá bằng USD, EUR hoặc currency khác. Nếu KRW giảm, lợi ích quy đổi phụ thuộc khả năng giữ giá ngoại tệ. Nếu khách hàng đòi giảm giá vì biết supplier có lợi từ FX, phần lợi ích bị chia sẻ. Khả năng giữ margin này liên quan **pricing power / 가격결정력**.
+**Lợi thế so sánh** hỏi ai phải hy sinh ít sản lượng thay thế hơn để sản xuất sản phẩm đó.
 
-## Trade concentration
+Phân biệt này quan trọng vì thương mại vẫn có thể tạo lợi ích ngay cả khi một bên có năng suất tuyệt đối cao hơn trong nhiều ngành.
 
-Một công ty có thể đa dạng về product nhưng tập trung về geography, hoặc ngược lại. Khi phân tích nên lập ma trận:
+## Xuất khẩu gộp không bằng giá trị giữ lại trong nước
 
-| Exposure | Câu hỏi |
-|---|---|
-| Product | Doanh thu phụ thuộc một sản phẩm hay platform? |
-| Customer | Có khách hàng lớn chiếm tỷ trọng quá cao không? |
-| Country | Doanh thu/nhà máy tập trung ở quốc gia nào? |
-| Supplier | Input quan trọng có single-source không? |
-| Currency | Revenue/cost/debt nằm ở currency nào? |
+Giả sử Hàn Quốc xuất khẩu một thiết bị trị giá 1.000 USD nhưng trong đó có 400 USD linh kiện nhập khẩu. Xuất khẩu gộp là 1.000 USD, nhưng giá trị gia tăng trong nước không phải toàn bộ 1.000 USD.
 
-Đây là cách biến “global company” thành một set exposure có thể reasoning.
-
-## Korea snapshot
-
-Thống kê thương mại 2026 cho thấy semiconductor tiếp tục đóng vai trò nổi bật trong xuất khẩu Hàn Quốc. Tuy nhiên, số liệu tháng có thể biến động mạnh theo timing shipment, working days và cycle; không nên ngoại suy một tháng thành xu hướng dài hạn.
-
-## Mental Model
-
-> Đừng hỏi “công ty Hàn này xuất khẩu bao nhiêu?”. Hãy hỏi: **công ty đứng ở mắt xích nào, nắm bargaining power nào, input nào đến từ đâu, ai là khách hàng và shock nào có thể truyền vào margin?**
-
-## Common misconceptions
-
-“Xuất khẩu tăng = lợi nhuận exporter tăng” không đủ. Profit còn phụ thuộc ASP, product mix, raw material, FX hedging, logistics, depreciation và operating leverage.
-
-“Supply chain diversification” cũng không miễn phí. Thêm supplier làm tăng redundancy nhưng có thể giảm scale discount, tăng qualification cost và complexity.
-
-## Connections
-
-Xem [06_sme_mid_sized_and_subcontracting_ecosystem](./06_sme_mid_sized_and_subcontracting_ecosystem.md) để hiểu supplier tiers, các file `14–18` để thấy GVC theo ngành, và [21_economy_to_company_transmission](./21_economy_to_company_transmission.md) để nối trade shock tới company earnings.
-
-## Comparative advantage không có nghĩa “nước nào giỏi tuyệt đối hơn”
-
-Lợi thế so sánh (Comparative Advantage / 비교우위) nói về opportunity cost. Một economy có thể productive hơn economy khác ở nhiều ngành nhưng vẫn gain from specialization nếu relative productivity khác nhau.
-
-Hàn Quốc xây comparative advantage động: advantage hiện tại trong chips, autos hay ships không chỉ đến từ resource tự nhiên mà từ accumulated capital, engineers, supplier networks và learning. Vì vậy comparative advantage có thể **được tạo ra** qua investment và learning, dù không thể tạo vô hạn bất chấp economics.
-
-## Domestic value added: một USD export không bằng một USD income nội địa
-
-Nếu Korean factory nhập components 70 USD, lắp ráp rồi export 100 USD, gross export là 100 nhưng domestic value added chỉ khoảng 30 trước other domestic inputs.
-
-Đây là lý do gross export ranking có thể exaggerate domestic contribution trong high-import assembly model.
-
-Value-added thinking cũng giúp hiểu why upstream materials/components matter: nếu Korea nội địa hóa một critical input có competitive cost, domestic capture per export dollar có thể tăng.
-
-## FTA và rules of origin
-
-Free Trade Agreement (FTA / 자유무역협정) giảm tariff theo rules cụ thể, nhưng firm chỉ hưởng preferential tariff nếu hàng hóa đáp ứng **rules of origin / 원산지 규정**.
-
-Trong GVC, origin không luôn bằng nơi final assembly. Rules có thể yêu cầu tariff-heading change, regional value content hoặc specific processing.
-
-Do đó procurement decision có thể thay đổi vì origin rule, không chỉ unit cost. Đây là connection giữa trade law và supply-chain design.
-
-## Export finance và payment risk
-
-Cross-border sale có additional risk: buyer có thể default, currency move, goods bị delay hoặc documents không compliant. Letter of Credit (L/C / 신용장), export credit insurance và guarantees giúp phân bổ risk.
-
-Payment terms ảnh hưởng working capital. Nếu exporter phải cho customer 90-day credit, sales growth có thể kéo receivables và financing need tăng.
+Có thể hình dung:
 
 \[
-DSO = \frac{Average\ Accounts\ Receivable}{Revenue}\times365
+Giá\ trị\ gia\ tăng\ nội\ địa = Giá\ trị\ xuất\ khẩu - Đầu\ vào\ nhập\ khẩu\ trực\ tiếp\ và\ gián\ tiếp
 \]
 
-Export boom không phải lúc nào cũng immediate cash boom.
+Điều này giải thích tại sao chỉ nhìn tổng kim ngạch xuất khẩu có thể đánh giá quá cao phần giá trị nền kinh tế thực sự giữ lại.
 
-## China: customer, production base và competitor
+Ngược lại, một doanh nghiệp Hàn Quốc sản xuất ở Mỹ hoặc Việt Nam có thể tạo lợi nhuận cho công ty mẹ nhưng sản lượng đó không xuất hiện như xuất khẩu từ Hàn Quốc.
 
-Trong 2000s–2010s, China vừa là market lớn vừa là manufacturing base cho Korean firms. Khi Chinese firms upgrade, relationship thay đổi: customer/supplier đồng thời trở thành competitor trong display, batteries, shipbuilding, electronics và chemicals.
+## Chuỗi giá trị: giá trị không phân bố đều giữa các mắt xích
 
-Phân tích exposure cần tách:
+Một sản phẩm có thể đi qua:
 
-1. sales vào China;
-2. production đặt tại China;
-3. inputs sourced từ China;
-4. competition từ Chinese firms ở third markets.
+```text
+Nguyên liệu
+→ linh kiện
+→ lắp ráp
+→ thương hiệu
+→ phân phối
+→ dịch vụ sau bán hàng
+```
 
-Một ratio “China revenue share” không capture đủ.
+Mỗi mắt xích có mức cạnh tranh và quyền thương lượng khác nhau. Lắp ráp có thể có biên thấp nếu dễ thay thế; thiết kế chip, IP hoặc thương hiệu có thể giữ phần giá trị lớn hơn nếu khó sao chép.
 
-## US–China technology rivalry và friend-shoring
+Vì vậy khi phân tích doanh nghiệp cần hỏi nó kiểm soát tài sản nào: công nghệ, quy trình, thương hiệu, kênh phân phối, dữ liệu hay quan hệ khách hàng.
 
-Export controls, subsidy conditions và national-security rules có thể giới hạn technology transfer hoặc location choice. Firm không còn tối ưu chỉ cost; phải cân bằng market access ở multiple blocs.
+## Quyền thương lượng quyết định ai giữ giá trị
 
-**Friend-shoring / 우호국 중심 공급망** và **China+1** không nghĩa rời China hoàn toàn. Thường là diversification để giảm single-point dependency.
+Một nhà cung cấp có công nghệ tốt nhưng phụ thuộc một khách hàng chiếm 70% doanh thu có thể vẫn có quyền định giá yếu.
 
-## Trade elasticity và pricing power
+Ngược lại, một nhà cung cấp nắm linh kiện độc quyền, được chứng nhận khó thay thế và chiếm tỷ trọng nhỏ trong tổng giá thành của khách hàng có thể có quyền thương lượng mạnh.
 
-Nếu KRW yếu, exporter có thể giữ USD price và nhận thêm KRW margin, hoặc giảm foreign-currency price để gain share. Choice phụ thuộc demand elasticity và competition.
+**Quyền thương lượng (bargaining power / 교섭력)** vì thế phụ thuộc vào mức tập trung khách hàng/nhà cung cấp, chi phí chuyển đổi, độ khan hiếm công nghệ, thời gian chứng nhận và mức độ quan trọng của linh kiện.
 
-Firm có strong brand/technology moat có thể giữ price tốt hơn commodity exporter. Vì vậy FX sensitivity là strategic variable, không chỉ accounting translation.
+## Tỷ giá và thương mại: cần nhìn phơi nhiễm ròng
 
-## GVC mapping template
+KRW yếu có thể làm doanh thu xuất khẩu quy đổi sang won cao hơn nhưng đồng thời làm nguyên liệu và năng lượng nhập khẩu đắt hơn.
 
-Khi phân tích một Korean industry, hãy vẽ ít nhất năm tầng: raw material → components/equipment → core manufacturing → distribution/customer → after-sales/recycling. Sau đó đánh dấu country concentration, currency, lead time và switching cost ở từng node.
+```text
+Doanh thu ngoại tệ
+- chi phí ngoại tệ
+- nợ ngoại tệ
+± phòng hộ
+= phơi nhiễm tỷ giá ròng
+```
 
-Điểm có switching cost cao + supply concentration cao thường là bottleneck. Bottleneck có thể capture disproportionate margin dù revenue size nhỏ.
+Doanh nghiệp bán ra nước ngoài nhưng sản xuất hoàn toàn ở nước ngoài có thể có độ nhạy với KRW khác doanh nghiệp xuất trực tiếp từ Hàn Quốc.
+
+Không nên dùng một câu “won yếu tốt cho nhà xuất khẩu” cho mọi công ty.
+
+## FTA và quy tắc xuất xứ
+
+Hiệp định thương mại tự do (FTA) giảm hoặc loại bỏ thuế quan giữa các thành viên, nhưng để hưởng ưu đãi, hàng hóa thường phải đáp ứng **quy tắc xuất xứ (rules of origin / 원산지 규정)**.
+
+Điều này biến quyết định mua linh kiện thành vấn đề chiến lược. Một đầu vào rẻ hơn từ quốc gia ngoài FTA có thể làm sản phẩm cuối không đạt điều kiện ưu đãi thuế.
+
+Với ô tô và pin, quy tắc hàm lượng nội địa có thể ảnh hưởng trực tiếp địa điểm đặt nhà máy và nhà cung cấp.
+
+## Thương mại dịch vụ và tài sản vô hình
+
+Xuất khẩu Hàn Quốc không chỉ là container hàng hóa. Trò chơi, nội dung, phần mềm, bản quyền, dịch vụ kỹ thuật và tài chính cũng tạo doanh thu xuyên biên giới.
+
+Tài sản vô hình có cơ chế kinh tế khác hàng vật chất. Chi phí tạo sản phẩm ban đầu có thể cao nhưng chi phí phân phối thêm một bản sao số thấp. Tuy nhiên doanh nghiệp phải đầu tư vào IP, thương hiệu, dữ liệu và phân phối nền tảng.
+
+K-content là ví dụ rõ: giá trị xuất khẩu không chỉ nằm trong file video hay bài hát mà trong quyền sở hữu IP, hợp đồng phân phối, thương hiệu nghệ sĩ và khả năng khai thác cộng đồng người hâm mộ.
+
+## Trung Quốc: bốn lớp phơi nhiễm
+
+Khi hỏi doanh nghiệp Hàn Quốc “phụ thuộc Trung Quốc bao nhiêu?”, không nên chỉ nhìn doanh thu tại Trung Quốc.
+
+Tách ít nhất bốn lớp:
+
+```text
+1. Doanh thu bán vào Trung Quốc
+2. Sản xuất đặt tại Trung Quốc
+3. Đầu vào mua từ Trung Quốc
+4. Cạnh tranh với doanh nghiệp Trung Quốc ở thị trường toàn cầu
+```
+
+Một công ty có doanh thu Trung Quốc thấp vẫn có thể phụ thuộc mạnh vào nguyên liệu hoặc đối mặt cạnh tranh lớn từ doanh nghiệp Trung Quốc.
+
+## Mỹ–Trung và sự chuyển từ tối ưu chi phí sang tối ưu khả năng chống chịu
+
+Trong môi trường thương mại cũ, doanh nghiệp có xu hướng đặt mỗi công đoạn ở nơi có chi phí–chất lượng tốt nhất. Khi địa chính trị và kiểm soát công nghệ tăng, mô hình thay đổi.
+
+**Friend-shoring**, **near-shoring** và đa dạng nguồn cung là các cách giảm rủi ro địa chính trị hoặc đứt gãy.
+
+```text
+Tối ưu truyền thống
+→ chi phí thấp nhất
+
+Tối ưu mới
+→ chi phí + độ tin cậy + trợ cấp + quyền tiếp cận thị trường + rủi ro chính trị
+```
+
+Điều này đặc biệt quan trọng với bán dẫn, pin, khoáng sản quan trọng và quốc phòng.
+
+## Kiểm soát xuất khẩu biến công nghệ thành tài sản chiến lược
+
+Khi một quốc gia hạn chế xuất khẩu thiết bị, phần mềm hoặc công nghệ cho một số thị trường, doanh nghiệp không còn tự do bán ở mọi nơi.
+
+Doanh thu tiềm năng, thiết kế sản phẩm, địa điểm nhà máy và lựa chọn khách hàng đều có thể bị thay đổi bởi quy định.
+
+Với bán dẫn, công nghệ tiên tiến có thể đồng thời là sản phẩm thương mại và tài sản an ninh quốc gia. Vì vậy nhà phân tích phải đọc cả báo cáo doanh nghiệp lẫn chính sách công nghệ.
+
+## Tài trợ thương mại và chu kỳ tiền mặt
+
+Xuất khẩu tạo khoảng thời gian giữa lúc doanh nghiệp mua nguyên liệu và lúc nhận tiền từ khách hàng nước ngoài. Khoảng thời gian đó cần tài trợ.
+
+```text
+Mua nguyên liệu
+→ sản xuất
+→ vận chuyển
+→ khách hàng nhận hàng
+→ thời hạn thanh toán
+→ thu tiền
+```
+
+**Tài trợ thương mại (trade finance / 무역금융)**, thư tín dụng, bảo hiểm tín dụng xuất khẩu và vốn lưu động giúp doanh nghiệp sống qua khoảng thời gian này.
+
+Một công ty có đơn hàng lớn vẫn có thể thiếu tiền mặt nếu chu kỳ thu tiền dài và phải tài trợ tồn kho lớn.
+
+## Logistics và nút thắt chuỗi cung ứng
+
+Cảng, tàu, container, kho và hải quan là một phần của cơ chế thương mại. Khi một nút thắt xảy ra, thời gian giao hàng kéo dài và doanh nghiệp phải giữ tồn kho an toàn cao hơn.
+
+Sau COVID-19, nhiều doanh nghiệp chuyển từ mô hình tồn kho cực thấp sang cân bằng giữa hiệu quả và khả năng chống chịu.
+
+Tồn kho cao hơn làm tăng vốn lưu động nhưng có thể giảm rủi ro dừng sản xuất. Đây là một đánh đổi, không phải câu hỏi có một đáp án duy nhất.
+
+## Hiệu ứng roi da: cú sốc nhỏ ở người tiêu dùng có thể thành cú sốc lớn ở nhà cung cấp
+
+Nếu nhà bán lẻ thấy nhu cầu giảm 5%, họ có thể giảm đơn hàng 10% để xả tồn kho. Nhà phân phối nhìn đơn hàng giảm lại cắt đặt hàng 15%. Nhà sản xuất linh kiện phía trên có thể nhận cú sốc lớn hơn nhiều.
+
+Đây là **hiệu ứng roi da (bullwhip effect / 채찍효과)**.
+
+Vì vậy doanh thu nhà cung cấp công nghiệp thường biến động mạnh hơn nhu cầu cuối cùng, đặc biệt ở các ngành có tồn kho và thời gian giao dài.
+
+## Đa quốc gia hóa và bài toán “doanh nghiệp Hàn Quốc”
+
+Một công ty có trụ sở tại Seoul có thể sản xuất ở Việt Nam, mua linh kiện từ Trung Quốc, bán tại Mỹ và vay USD. Khi đó “kinh tế Hàn Quốc” và “kinh tế của doanh nghiệp Hàn Quốc” không hoàn toàn trùng nhau.
+
+Phân tích đúng cần tách:
+
+- nơi ghi nhận doanh thu;
+- nơi sản xuất;
+- đồng tiền doanh thu và chi phí;
+- nơi nộp thuế;
+- pháp nhân sở hữu tài sản;
+- nơi tạo IP;
+- nơi quyết định chiến lược.
+
+Đây là lý do bản đồ pháp nhân và chuỗi giá trị phải đi cùng nhau.
+
+## Mental Model — Mô hình tư duy
+
+> Thương mại không chỉ là hàng hóa đi qua biên giới. Nó là mạng lưới nơi ngoại tệ, quyền thương lượng, công nghệ, logistics, tài chính và chính sách cùng quyết định ai giữ được giá trị.
+
+Khi phân tích một doanh nghiệp Hàn Quốc có hoạt động toàn cầu, hãy hỏi:
+
+```text
+Khách hàng cuối ở đâu?
+→ công ty bán trực tiếp cho ai?
+→ đầu vào đến từ đâu?
+→ công đoạn nào tạo giá trị lớn nhất?
+→ ai có quyền thương lượng?
+→ dòng tiền dùng đồng tiền nào?
+→ quy tắc thương mại / địa chính trị ảnh hưởng mắt xích nào?
+→ doanh nghiệp giữ lại bao nhiêu giá trị gia tăng?
+```
+
+Nếu trả lời được chuỗi này, ta không còn nhìn xuất khẩu như một con số tổng mà như một hệ thống kinh tế có thể phân tích.

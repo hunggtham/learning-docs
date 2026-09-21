@@ -1,99 +1,101 @@
-# DNS, HTTP, TLS và một web request end-to-end
+# DNS, HTTP, TLS và hành trình đầy đủ của một yêu cầu web
 
-Gõ một URL nhìn như một action đơn giản, nhưng browser phải resolve name, establish route/transport/security context, speak HTTP, receive data và execute/render. Chapter này dùng web request để nối nhiều layers.
+Gõ một URL trông như một thao tác đơn giản, nhưng trình duyệt (browser) phải phân giải tên miền, tìm đường mạng, thiết lập kết nối truyền tải và ngữ cảnh bảo mật, trao đổi HTTP, nhận dữ liệu rồi phân tích và hiển thị nội dung. Chương này dùng một yêu cầu web để nối nhiều tầng của hệ thống mạng.
 
-## URL decomposition
+## Cấu trúc của URL
 
-`https://example.com:443/path?q=1` chứa scheme `https`, host `example.com`, optional port, path và query. Scheme quyết định protocol expectations; hostname không trực tiếp là IP address.
+`https://example.com:443/path?q=1` chứa lược đồ (scheme) `https`, máy chủ `example.com`, cổng tùy chọn, đường dẫn và chuỗi truy vấn. Scheme cho biết giao thức được kỳ vọng; tên miền không phải chính địa chỉ IP.
 
 ## DNS
 
-Domain Name System (도메인 이름 시스템) là distributed hierarchical naming system. Resolver tìm records như A/AAAA/CNAME/MX/TXT qua cache và recursive/authoritative infrastructure.
+**Hệ thống tên miền (Domain Name System — DNS / 도메인 이름 시스템)** là hệ thống đặt tên phân cấp và phân tán. Bộ phân giải (resolver) tìm các bản ghi như A, AAAA, CNAME, MX hoặc TXT thông qua cache và hạ tầng máy chủ đệ quy/chính thức.
 
-DNS caching dùng TTL để giảm latency/load. Vì cache tồn tại, record change không globally immediate. Negative responses cũng có caching semantics.
+DNS dùng thời gian sống **TTL (Time To Live)** để lưu kết quả tạm thời, giảm độ trễ và tải. Vì có cache, thay đổi bản ghi không xuất hiện đồng thời trên toàn Internet. Kết quả “không tồn tại” cũng có thể được lưu tạm theo quy tắc riêng.
 
-DNS over UDP/TCP and encrypted transports DoH/DoT exist; exact path depends client/network.
+DNS có thể chạy trên UDP hoặc TCP; các biến thể mã hóa như DoH và DoT bảo vệ truy vấn trên đường truyền. Đường đi thực tế phụ thuộc vào thiết bị và mạng đang sử dụng.
 
-DNS round-robin/load-balancing is not same as strong health-aware routing by itself; caches and resolver behavior matter.
+Phân phối nhiều địa chỉ bằng DNS không tự động tương đương với cân bằng tải có kiểm tra sức khỏe mạnh, vì hành vi cache và resolver vẫn ảnh hưởng kết quả.
 
-## Establish transport
+## Thiết lập kết nối truyền tải
 
-Sau khi có destination address và route, client opens transport connection. Với classic HTTPS over TCP, TCP handshake establishes connection, then TLS handshake authenticates server and negotiates keys. With HTTP/3, QUIC combines transport/security mechanisms over UDP.
+Sau khi có địa chỉ đích và đường định tuyến, máy khách mở kết nối truyền tải. Với HTTPS truyền thống trên TCP, bắt tay TCP tạo kết nối, sau đó bắt tay TLS xác thực máy chủ và thương lượng khóa. Với HTTP/3, QUIC tích hợp nhiều chức năng truyền tải và bảo mật trên UDP.
 
-Connection reuse reduces repeated handshake cost.
+Tái sử dụng kết nối giúp giảm chi phí phải bắt tay lại nhiều lần.
 
-## TLS goals
+## Mục tiêu của TLS
 
-Transport Layer Security provides confidentiality, integrity and peer authentication (typically server authentication via certificate PKI; client cert optional). Certificate binds public key/identity claims through trust chain accepted by client.
+**Transport Layer Security (TLS)** cung cấp tính bí mật, tính toàn vẹn và xác thực đối tác; trường hợp phổ biến là xác thực máy chủ bằng chứng chỉ trong hạ tầng khóa công khai (PKI), còn chứng chỉ phía máy khách là tùy chọn.
 
-TLS does not guarantee application is honest or authorization correct. It protects channel properties under assumptions.
+TLS không bảo đảm ứng dụng là đáng tin hoặc logic phân quyền là đúng. Nó bảo vệ các thuộc tính của kênh truyền dưới những giả định nhất định.
 
-### Symmetric + public-key cryptography
+### Mật mã đối xứng và khóa công khai
 
-Public-key mechanisms authenticate/establish shared secret; bulk data uses efficient symmetric AEAD keys. Modern TLS uses ephemeral key exchange to provide forward secrecy in common configurations.
+Cơ chế khóa công khai được dùng để xác thực và thiết lập bí mật chung; dữ liệu khối lượng lớn sau đó được bảo vệ bằng khóa đối xứng hiệu quả hơn, thường qua cơ chế AEAD. Các cấu hình TLS hiện đại thường dùng trao đổi khóa tạm thời để có **bí mật chuyển tiếp (forward secrecy)**.
 
-Xem [Cryptography foundations](../07_security_reliability/01_cryptography_foundations.md).
+Xem [nền tảng mật mã học](../07_security_reliability/01_cryptography_foundations.md).
 
-## HTTP semantics
+## Ngữ nghĩa HTTP
 
-HTTP request has method, target, headers and optional body. Response has status, headers, body. Methods carry semantics such as safe/idempotent conventions, but server implementation can violate them.
+Một yêu cầu HTTP có phương thức, đích, header và phần thân tùy chọn. Phản hồi có mã trạng thái, header và phần thân. Các phương thức mang những quy ước như an toàn hoặc bất biến khi lặp lại (idempotent), nhưng việc triển khai phía máy chủ vẫn có thể vi phạm quy ước đó.
 
-HTTP/1.1 uses textual framing with persistent connections; HTTP/2 multiplexes binary frames/streams on one connection; HTTP/3 maps HTTP semantics onto QUIC streams. Application semantics remain recognizable while transport/framing evolves.
+HTTP/1.1 dùng định dạng văn bản và kết nối duy trì; HTTP/2 ghép nhiều luồng nhị phân trên một kết nối; HTTP/3 ánh xạ ngữ nghĩa HTTP lên các luồng QUIC. Ngữ nghĩa ứng dụng vẫn tương đối ổn định dù cơ chế đóng khung và truyền tải thay đổi.
 
-## Caching
+## Bộ nhớ đệm HTTP
 
-Browser, CDN, proxy and origin can cache responses according to Cache-Control, validators like ETag/Last-Modified and request semantics. Cache turns network call into local/edge response but creates freshness/invalidation trade-off.
+Trình duyệt, CDN, proxy và máy chủ gốc đều có thể lưu phản hồi theo `Cache-Control`, các bộ xác thực như `ETag`/`Last-Modified` và ngữ nghĩa của yêu cầu. Cache có thể biến một lần gọi mạng thành phản hồi cục bộ hoặc từ nút biên, nhưng tạo thêm bài toán về độ mới và vô hiệu hóa dữ liệu cũ.
 
-`Cache-Control: max-age` defines freshness window; revalidation can use conditional requests and 304. Sensitive/user-specific content requires careful `private`, `no-store`, `Vary` semantics.
+`Cache-Control: max-age` xác định khoảng thời gian phản hồi còn được xem là mới. Khi cần kiểm tra lại, máy khách có thể gửi yêu cầu có điều kiện và nhận `304 Not Modified`. Nội dung nhạy cảm hoặc riêng theo người dùng cần sử dụng cẩn thận các chỉ thị như `private`, `no-store` và `Vary`.
 
-## Cookies và sessions
+## Cookie và phiên làm việc
 
-HTTP is request/response; application session state can be maintained via cookies/tokens. Cookie attributes Secure, HttpOnly, SameSite affect transport/script/cross-site behavior. Cookie is not inherently authentication; it is storage/transport mechanism often carrying session identifier.
+HTTP hoạt động theo mô hình yêu cầu/phản hồi; trạng thái phiên của ứng dụng có thể được duy trì bằng cookie hoặc token. Các thuộc tính `Secure`, `HttpOnly` và `SameSite` ảnh hưởng cách cookie được gửi qua mạng, truy cập từ script và sử dụng giữa các site.
 
-## Proxies, CDN và load balancers
+Cookie tự nó không phải cơ chế xác thực. Nó là phương tiện lưu và truyền dữ liệu, thường chứa mã định danh phiên.
 
-Request may terminate TLS at CDN/load balancer, then be forwarded to backend via separate connection. Client-visible peer is edge endpoint. Headers like Forwarded/X-Forwarded-* carry original context by convention and must be trusted only from controlled proxies.
+## Proxy, CDN và bộ cân bằng tải
 
-## A request end-to-end
+TLS có thể kết thúc tại CDN hoặc bộ cân bằng tải, sau đó yêu cầu được chuyển tới backend qua một kết nối khác. Vì vậy đối tác mà máy khách trực tiếp nhìn thấy có thể là nút biên chứ không phải máy chủ ứng dụng cuối cùng.
 
-Conceptually:
+Các header như `Forwarded` hoặc `X-Forwarded-*` truyền ngữ cảnh ban đầu theo quy ước và chỉ nên được tin cậy khi chúng đến từ proxy nằm trong vùng kiểm soát.
+
+## Một yêu cầu từ đầu đến cuối
 
 ```text
 URL
  ↓
-DNS name resolution
+phân giải tên bằng DNS
  ↓
-IP routing / ARP-ND / link frames
+định tuyến IP / ARP-ND / khung liên kết
  ↓
-TCP or QUIC connection
+kết nối TCP hoặc QUIC
  ↓
-TLS authentication + key establishment
+xác thực TLS + thiết lập khóa
  ↓
-HTTP request
+yêu cầu HTTP
  ↓
-reverse proxy / app / database/cache
+reverse proxy / ứng dụng / cơ sở dữ liệu / cache
  ↓
-HTTP response
+phản hồi HTTP
  ↓
-TLS/transport/IP/link back
+TLS / truyền tải / IP / liên kết theo chiều ngược lại
  ↓
-browser parse/render/execute
+trình duyệt phân tích / hiển thị / thực thi
 ```
 
-Each arrow is a boundary with independent failure/latency/security behavior.
+Mỗi mũi tên là một ranh giới có kiểu lỗi, độ trễ và đặc tính bảo mật riêng.
 
-## Mental Model
+## Mô hình tư duy
 
-> A web request is not “HTTP goes to server”. It is a **stack of state machines and trust boundaries**, plus caches/proxies that may terminate one connection and create another.
+> Một yêu cầu web không đơn giản là “HTTP đi tới máy chủ”. Nó là một **chuỗi máy trạng thái (state machine) và ranh giới tin cậy**, kèm theo cache và proxy có thể kết thúc một kết nối rồi tạo kết nối mới.
 
-## Common Misconceptions
+## Những hiểu nhầm thường gặp
 
-**“HTTPS means website is safe.”** TLS secures channel/identity under PKI; application can still be malicious/vulnerable.
+**“HTTPS nghĩa là website an toàn.”** Không đúng. TLS bảo vệ kênh truyền và danh tính theo PKI; ứng dụng vẫn có thể độc hại hoặc có lỗ hổng.
 
-**“DNS maps one domain to one server.”** Multiple records, CDNs, anycast, load balancers and caching make mapping dynamic/many-to-many.
+**“DNS ánh xạ một tên miền tới đúng một máy chủ.”** Không đúng. Nhiều bản ghi, CDN, anycast, bộ cân bằng tải và cache làm ánh xạ trở nên động và có thể nhiều–nhiều.
 
-**“HTTP is stateless, therefore app cannot have session.”** Session state is layered via cookies/tokens/server storage.
+**“HTTP không lưu trạng thái nên ứng dụng không thể có phiên.”** Không đúng. Trạng thái phiên được xây thêm bằng cookie, token và vùng lưu trữ phía máy chủ.
 
 ## Kết nối
 
-This chapter is expanded end-to-end again in [Browser → Database Request](../90_connections/01_browser_to_database_request.md). Security details at [identity/auth](../07_security_reliability/02_identity_authentication_and_authorization.md), database access at [query execution](../05_data_databases/03_indexes_and_query_execution.md).
+Luồng đầy đủ được mở rộng thêm trong [Trình duyệt → Cơ sở dữ liệu](../90_connections/01_browser_to_database_request.md). Chi tiết bảo mật nằm ở [danh tính và xác thực](../07_security_reliability/02_identity_authentication_and_authorization.md), còn truy cập dữ liệu được nối với [thực thi truy vấn](../05_data_databases/03_indexes_and_query_execution.md).

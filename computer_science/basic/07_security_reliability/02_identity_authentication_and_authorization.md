@@ -1,76 +1,76 @@
-# Identity, authentication và authorization
+# Danh tính, xác thực và phân quyền
 
-Identity systems trả lời ba câu hỏi khác nhau: **ai/đối tượng nào? họ chứng minh identity bằng gì? họ được phép làm gì?** Trộn authentication và authorization là nguyên nhân phổ biến của security bugs.
+Hệ thống danh tính cần trả lời ba câu hỏi khác nhau: **đây là ai hoặc thực thể nào, họ chứng minh danh tính bằng gì, và họ được phép làm gì?** Nhầm lẫn giữa **xác thực (authentication)** và **phân quyền (authorization)** là nguyên nhân phổ biến của lỗi bảo mật.
 
-## Identity
+## Danh tính
 
-Identity (신원, 아이덴티티) là stable-ish identifier cho user, service, device hoặc workload trong một authority/domain. Username/email có thể thay đổi; internal subject ID thường ổn định hơn.
+**Danh tính (identity / 신원)** là định danh tương đối ổn định cho người dùng, dịch vụ, thiết bị hoặc khối lượng công việc trong một miền quản lý. Tên đăng nhập hoặc email có thể thay đổi, vì vậy mã định danh chủ thể nội bộ (subject ID) thường phù hợp hơn cho liên kết lâu dài.
 
-Identity có lifecycle: provisioning, credential enrollment, role changes, suspension, deletion. Orphaned accounts/keys là risk.
+Danh tính có vòng đời: cấp mới, đăng ký thông tin xác thực, thay đổi vai trò, tạm khóa và xóa. Tài khoản hoặc khóa bị bỏ quên sau khi không còn sử dụng là một rủi ro bảo mật.
 
-## Authentication
+## Xác thực
 
-Authentication (인증 / xác thực) xác minh claimant controls credential/factor associated với identity. Password, hardware key, TOTP, certificate, biometric đều là mechanisms với threats khác.
+**Xác thực (authentication / 인증)** kiểm tra rằng bên đang yêu cầu thực sự kiểm soát thông tin hoặc yếu tố xác thực gắn với danh tính. Mật khẩu, khóa phần cứng, TOTP, chứng chỉ và sinh trắc học là các cơ chế khác nhau với mô hình đe dọa khác nhau.
 
-Factors thường phân theo something you know/have/are. MFA mạnh khi factors independent; password + PIN trên cùng channel không necessarily two-factor meaningful.
+Các yếu tố thường được chia thành thứ người dùng biết, thứ người dùng sở hữu và đặc điểm của chính người dùng. **Xác thực đa yếu tố (Multi-Factor Authentication — MFA)** mạnh khi các yếu tố đủ độc lập; mật khẩu và PIN đi qua cùng một kênh không tự động tạo thành hai yếu tố độc lập có ý nghĩa.
 
-Authentication event có assurance level/context; “logged in once” không bảo session mãi trustworthy.
+Một lần đăng nhập thành công không có nghĩa phiên làm việc sẽ đáng tin vô thời hạn. Sự kiện xác thực luôn có mức bảo đảm, thời điểm và bối cảnh cụ thể.
 
-## Authorization
+## Phân quyền
 
-Authorization (인가 / phân quyền) quyết định action trên resource có được phép. Model phổ biến:
+**Phân quyền (authorization / 인가)** quyết định một hành động trên một tài nguyên có được phép hay không. Một số mô hình phổ biến gồm:
 
-- RBAC: permissions gắn roles, identities nhận roles.
-- ABAC: policy dựa attributes của subject/resource/environment/action.
-- ACL: resource liệt kê principals/permissions.
-- Capability-based: possession unforgeable token/reference grants authority.
+- **RBAC**: quyền gắn với vai trò, danh tính nhận vai trò.
+- **ABAC**: chính sách dựa trên thuộc tính của chủ thể, tài nguyên, môi trường và hành động.
+- **ACL**: tài nguyên liệt kê chủ thể và quyền tương ứng.
+- **Capability-based**: việc sở hữu một token hoặc tham chiếu không thể giả mạo trao quyền thực hiện hành động nhất định.
 
-Real systems thường mix.
+Hệ thống thực tế thường kết hợp nhiều mô hình.
 
-## Authentication ≠ authorization
+## Xác thực không đồng nghĩa với phân quyền
 
-Server biết request đến từ user 123 nhưng vẫn phải check user 123 có quyền đọc order 999 không. IDOR/BOLA vulnerabilities xảy ra khi endpoint accepts object ID và chỉ check login, không check ownership/policy.
+Máy chủ có thể biết yêu cầu đến từ người dùng 123 nhưng vẫn phải kiểm tra người dùng 123 có quyền đọc đơn hàng 999 hay không. Các lỗ hổng IDOR/BOLA xuất hiện khi endpoint nhận mã đối tượng rồi chỉ kiểm tra người dùng đã đăng nhập, nhưng không kiểm tra quyền sở hữu hoặc chính sách truy cập đối tượng.
 
-Every resource access cần complete mediation.
+Mỗi lần truy cập tài nguyên cần được kiểm tra quyền đầy đủ tại điểm thực thi, thay vì chỉ dựa vào giao diện phía người dùng.
 
-## Sessions
+## Phiên làm việc
 
-After authentication, server can create session ID stored cookie; session state server-side. Token-based systems carry signed claims (e.g. JWT) nhưng token vẫn cần validation: signature, issuer, audience, expiry, not-before, key rotation và authorization context.
+Sau khi xác thực, máy chủ có thể tạo **mã phiên (session ID)** và lưu nó trong cookie, trong khi trạng thái phiên nằm ở phía máy chủ. Hệ thống dựa trên token có thể mang các tuyên bố đã ký, ví dụ JWT, nhưng token vẫn phải được kiểm tra chữ ký, bên phát hành, đối tượng nhận, thời hạn, thời điểm có hiệu lực, trạng thái khóa và bối cảnh phân quyền.
 
-JWT không tự làm system stateless nếu revocation, user state, permissions hoặc refresh tokens cần server data.
+JWT không tự làm hệ thống trở thành “không trạng thái” nếu việc thu hồi token, trạng thái người dùng, quyền hoặc refresh token vẫn cần dữ liệu phía máy chủ.
 
-## Cookies và browser security
+## Cookie và bảo mật trình duyệt
 
-HttpOnly giảm JavaScript access; Secure yêu cầu HTTPS; SameSite controls cross-site sending and helps CSRF defenses. Session cookie should be unpredictable and protected against fixation/stealing.
+Thuộc tính `HttpOnly` hạn chế JavaScript truy cập cookie; `Secure` yêu cầu cookie chỉ được gửi qua HTTPS; `SameSite` kiểm soát việc gửi cookie trong ngữ cảnh khác trang và hỗ trợ phòng chống CSRF. Mã phiên phải khó đoán và được bảo vệ khỏi đánh cắp hoặc cố định phiên.
 
-CSRF exploits browser automatically attaching credentials to cross-site requests; anti-CSRF tokens/SameSite/origin checks mitigate depending architecture. XSS can perform actions as user and steal non-HttpOnly data, so prevention remains critical.
+**CSRF** lợi dụng việc trình duyệt tự động đính kèm thông tin xác thực vào yêu cầu khác trang. Token chống CSRF, `SameSite` và kiểm tra nguồn yêu cầu có thể giảm rủi ro tùy kiến trúc. **XSS** có thể thực hiện hành động dưới danh nghĩa người dùng và đọc dữ liệu không được `HttpOnly` bảo vệ, vì vậy phòng chống XSS vẫn rất quan trọng.
 
-## OAuth 2.0 và OpenID Connect intuition
+## Trực giác về OAuth 2.0 và OpenID Connect
 
-OAuth 2.0 is authorization framework for delegated access; OpenID Connect adds identity/authentication layer with ID token and standardized endpoints. Using OAuth access token as if it were arbitrary login token without validating intended semantics can be wrong.
+OAuth 2.0 là **khung phân quyền ủy quyền (delegated authorization framework)**; OpenID Connect (OIDC) bổ sung tầng danh tính và xác thực với ID token cùng các endpoint chuẩn. Không nên dùng access token của OAuth như một token đăng nhập tùy ý nếu chưa kiểm tra đúng mục đích và ngữ nghĩa của nó.
 
-Authorization Code + PKCE is common safe flow for public clients. Exact recommendations evolve, so implementation should follow current provider/spec guidance.
+Luồng Authorization Code kết hợp PKCE là lựa chọn phổ biến cho nhiều ứng dụng công khai. Khuyến nghị triển khai có thể thay đổi theo đặc tả và nhà cung cấp, vì vậy cần theo tài liệu hiện hành của hệ thống được sử dụng.
 
-## Service identity
+## Danh tính dịch vụ
 
-Microservices need machine identity too: mTLS certificates, workload identity, short-lived tokens or cloud IAM. Shared static API keys across many services destroy attribution and rotation granularity.
+Microservice cũng cần danh tính máy. Các lựa chọn gồm chứng chỉ mTLS, danh tính khối lượng công việc (workload identity), token ngắn hạn hoặc IAM của nền tảng cloud. Chia sẻ một API key tĩnh cho nhiều dịch vụ làm mất khả năng truy vết và khiến việc xoay vòng khóa trở nên thô và rủi ro.
 
-## Least privilege and scope
+## Đặc quyền tối thiểu và phạm vi quyền
 
-Token scopes/roles should narrow what holder can do. Short-lived credentials reduce exposure window, but refresh/rotation mechanism becomes critical.
+Phạm vi token và vai trò nên giới hạn đúng những gì chủ thể cần làm. Thông tin xác thực sống ngắn giảm thời gian bị khai thác nếu rò rỉ, nhưng cơ chế làm mới và xoay vòng trở thành phần quan trọng của thiết kế.
 
-## Mental Model
+## Mô hình tư duy
 
-> **Identity = subject. Authentication = prove/control identity. Authorization = policy decision for action/resource. Session/token = carry evidence/context over time.** Keep these layers explicit.
+> **Danh tính = chủ thể. Xác thực = chứng minh quyền kiểm soát danh tính. Phân quyền = quyết định chính sách cho hành động trên tài nguyên. Phiên hoặc token = mang bằng chứng và bối cảnh theo thời gian.** Hãy giữ các tầng này tách biệt trong thiết kế.
 
-## Common Misconceptions
+## Những hiểu lầm thường gặp
 
-**“Authenticated user can access any object ID they know.”** Authentication only says who, not permission.
+**“Người dùng đã xác thực có thể truy cập mọi mã đối tượng họ biết.”** Xác thực chỉ cho biết người dùng là ai, không cho biết họ có quyền với tài nguyên nào.
 
-**“JWT is encrypted.”** Typical JWS JWT is signed but payload readable; JWE is separate encryption form.
+**“JWT luôn được mã hóa.”** JWT dạng JWS thông thường được ký nhưng phần payload vẫn có thể đọc; JWE là cơ chế mã hóa riêng.
 
-**“OAuth = authentication.”** OAuth core delegates authorization; OIDC adds authentication/identity semantics.
+**“OAuth = xác thực.”** OAuth cốt lõi giải quyết phân quyền ủy quyền; OIDC bổ sung ngữ nghĩa xác thực và danh tính.
 
 ## Kết nối
 
-Threat boundaries in [security principles](./00_threat_models_and_security_principles.md), crypto tokens/certs in [cryptography](./01_cryptography_foundations.md), browser channel in [DNS/HTTP/TLS](../06_networks_distributed_systems/03_dns_http_tls_and_web_request.md), application attacks in [vulnerabilities](./03_software_vulnerabilities.md).
+Đọc thêm về ranh giới tin cậy trong [nguyên tắc bảo mật](./00_threat_models_and_security_principles.md), token và chứng chỉ trong [mật mã học](./01_cryptography_foundations.md), kênh trình duyệt trong [DNS/HTTP/TLS](../06_networks_distributed_systems/03_dns_http_tls_and_web_request.md) và các kiểu tấn công ứng dụng trong [lỗ hổng phần mềm](./03_software_vulnerabilities.md).

@@ -5,6 +5,13 @@
 >
 > Các “Senior Note”, “Language Idiom”, “Programming Pattern” và “Design Pattern” không được tách thành checklist riêng sau mỗi mục. Khi một pattern thực sự quan trọng, nó sẽ được giải thích ngay trong nội dung để bạn hiểu nó như một phần tự nhiên của Java chứ không phải một danh sách thuật ngữ cần học thuộc.
 
+
+## Cách đọc bộ Java canonical
+
+Đây là file đầu tiên trong bốn note canonical của Java Knowledge Library. Hãy đọc theo thứ tự **Beginner → Intermediate → Senior → Master Supplement** thay vì nhảy thẳng vào JVM hoặc concurrency. Beginner xây type system, object model, collections, exception và I/O; Intermediate mở generics, concurrency, JDBC, reflection và JVM; Senior chuyển sang production correctness, profiling và performance; Master chỉ bổ sung low-level/runtime/library-author topics chưa phù hợp với ba phần trước.
+
+Sau khi hoàn thành file này, tiếp tục tại [Java Part 2 — Intermediate](./java_part2_intermediate_rewritten_detailed.md).
+
 ---
 
 # 1. Trước khi viết code: Java thực sự chạy như thế nào?
@@ -2336,29 +2343,60 @@ Senior habit bắt đầu từ Beginner: khi runtime khác local, inspect actual
 
 ---
 
-# 74. Java Version Roadmap cần nhận biết
+# 74. Java 8 → 11 → 17 → 21: version thay đổi cách lập trình như thế nào?
 
-Java 8 là mốc rất lớn với lambdas, Stream API, Optional và `java.time`.
+Nếu chỉ học version bằng danh sách “release X thêm feature Y”, bạn rất nhanh quên. Cách hữu ích hơn là nhìn bốn generation như bốn lần **thay đổi phong cách viết và vận hành Java**.
 
-Java 9 thêm module system, collection factory methods và API improvements.
+**Java 8** là mốc đưa functional style thực dụng vào Java application code. Lambda, method reference và Stream không chỉ rút ngắn cú pháp; chúng biến *behavior* thành thứ có thể truyền vào API. Trước Java 8, một `Comparator`, callback hoặc `Runnable` thường được viết bằng anonymous class dài:
 
-Java 10 thêm local `var`.
+```java
+Collections.sort(users,
+    new Comparator<User>() {
+        @Override
+        public int compare(User a, User b) {
+            return a.name().compareTo(b.name());
+        }
+    });
+```
 
-Java 11 là LTS và thêm nhiều String/Files APIs, standard HTTP Client và lambda parameter `var`.
+Java 8 cho phép diễn đạt intent trực tiếp hơn:
 
-Java 14 finalizes switch expressions.
+```java
+users.sort(
+    Comparator.comparing(User::name));
+```
 
-Java 15 finalizes text blocks.
+Stream API tiếp tục ý tưởng này cho data transformation, còn `java.time` thay đổi cách xử lý thời gian từ `Date`/`Calendar` mutable và dễ sai sang những type có semantic rõ như `LocalDate`, `Instant`, `Duration`. Vì rất nhiều enterprise code từng baseline Java 8 trong thời gian dài, bạn phải đọc được cả anonymous classes, `Date`/`Calendar` lẫn code hiện đại tương đương.
 
-Java 16 finalizes records và pattern matching cho `instanceof`; Stream có `toList()` từ generation này.
+**Java 11** nên được hiểu như mốc Java hiện đại đầu tiên sau quá trình modular hóa JDK. Ở application code có các API nhỏ nhưng hữu ích như `String.isBlank()`, `strip()`, `lines()`, `Files.readString()` và standard `HttpClient`. Quan trọng hơn với enterprise migration là một số Java EE/CORBA modules như JAXB/JAX-WS không còn được bundle trong JDK. Một project Java 8 từng compile chỉ vì JAXB “có sẵn trong JDK” có thể fail khi lên 11 cho tới khi build khai báo dependency rõ. Từ đây bạn phải phân biệt **Java SE platform** với framework/library dependencies của application.
 
-Java 17 là LTS và finalizes sealed classes.
+**Java 17** làm domain modeling và platform encapsulation mạnh hơn. Records giúp data carrier/value-like objects giảm boilerplate; sealed classes giúp mô hình một tập subtype đóng; pattern matching cho `instanceof` giảm cast ceremony. Quan trọng hơn ở production migration, JDK internals bị strong encapsulation theo default mạnh hơn trước. Framework/library cũ dùng deep reflection vào private internals của `java.*` có thể gặp `InaccessibleObjectException`, vì vậy code bền vững hơn phải dựa supported API thay vì internal implementation.
 
-Java 21 là LTS, finalizes record patterns, pattern matching for switch và Virtual Threads.
+Trước records, một data carrier có thể cần constructor, accessors và equality boilerplate. Với Java 17, intent có thể được biểu diễn rõ hơn:
 
-Java 25 là LTS mới hơn và nên được xem là modern production target khi ecosystem của bạn hỗ trợ. Java 26 là non-LTS release hiện tại vào thời điểm tài liệu được cập nhật. Part Master Supplement sẽ cover feature delta 22–26 sâu hơn.
+```java
+record UserSummary(
+    long id,
+    String name) {
+}
+```
 
-LTS không có nghĩa “feature tốt hơn”; nó nghĩa vendor/support cadence phù hợp long-lived production.
+Ý nghĩa không chỉ là “record ngắn hơn class”, mà là language có một cách biểu diễn rõ ràng type chủ yếu được định nghĩa bởi dữ liệu của nó.
+
+**Java 21** thay đổi hai hướng lớn. Hướng thứ nhất là data-oriented programming: record patterns và pattern matching for `switch` làm closed/sealed model dễ destructure và xử lý exhaustive hơn. Hướng thứ hai là concurrency: Virtual Threads được final. Với nhiều I/O-bound server workloads, bạn có thể giữ imperative blocking style mà scale số concurrent tasks cao hơn thay vì buộc application chuyển sang callback/reactive style chỉ để tiết kiệm OS threads.
+
+```java
+try (var executor =
+        Executors.newVirtualThreadPerTaskExecutor()) {
+    Future<Response> future =
+        executor.submit(this::callRemoteService);
+    return future.get();
+}
+```
+
+Virtual thread không làm database, CPU hay external API nhanh hơn. Nó thay **cost model của thread**, không thay capacity của downstream resource. Phần Intermediate và Senior sẽ mở kỹ điểm này.
+
+Các release 9, 10, 14, 15 và 16 vẫn quan trọng vì collection factories, `var`, switch expressions, text blocks, records và pattern matching đã hình thành Java hiện đại. Tuy nhiên hãy học chúng theo **vấn đề chúng loại bỏ** thay vì nhớ chronology. LTS cũng không có nghĩa feature “tốt hơn”; nó chủ yếu phản ánh support cadence phù hợp long-lived production.
 
 ---
 

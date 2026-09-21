@@ -1,161 +1,492 @@
 # Logistics, cảng biển và mạng phân phối Hàn Quốc (Logistics, Ports & Distribution / 물류·항만·유통망)
 
-Một nền kinh tế export-oriented không thể tồn tại chỉ với factories. Value phải di chuyển: raw materials vào Korea, intermediate goods giữa plants, finished products ra ports, parcels tới household. Logistics (물류) là connective tissue giữa manufacturing và market.
+Một nền kinh tế định hướng xuất khẩu không thể tồn tại chỉ với nhà máy. Nguyên liệu phải đi vào Hàn Quốc, linh kiện phải di chuyển giữa các nhà máy, thành phẩm phải tới cảng hoặc sân bay và bưu kiện phải tới hộ gia đình. **Logistics (물류)** là mô liên kết giữa sản xuất và thị trường.
 
-## Logistics không chỉ là transportation
+Điểm quan trọng nhất là logistics không đơn giản tối ưu “chi phí vận chuyển thấp nhất”. Nó tối ưu **tổng chi phí đưa hàng tới nơi sử dụng + thời gian + độ tin cậy + vốn lưu động + mức dịch vụ**.
 
-Logistics gồm inventory, warehousing, transport, order processing, customs và information flow. Mục tiêu không phải “ship rẻ nhất” mà tối ưu total landed cost và service level.
+## Logistics gồm dòng vật lý và dòng thông tin
 
-Một simplified total cost:
+Một hệ thống logistics hoàn chỉnh gồm:
 
-\[
-Total\ Logistics\ Cost = Transport + Warehousing + Inventory\ Carrying + Stockout + Handling
-\]
+- vận tải;
+- kho bãi;
+- tồn kho;
+- hải quan;
+- xử lý đơn hàng;
+- lập tuyến;
+- theo dõi;
+- hoàn trả hàng.
 
-Nếu dùng sea freight rẻ hơn nhưng lead time tăng 20 ngày, inventory carrying cost có thể lớn hơn shipping saving.
+Dòng vật lý không có dòng thông tin sẽ tạo bất định; bất định buộc doanh nghiệp phải giữ tồn kho an toàn cao hơn.
 
-## Korea geography: peninsula nhưng trade bằng sea/air
-
-Political division làm overland connection với Eurasia limited, nên ports và airports có vai trò rất lớn. Busan là global container hub; Incheon hỗ trợ capital-region logistics và air/sea connection; Ulsan/Gwangyang/Pohang gắn bulk industrial cargo.
-
-Port specialization phản ánh industrial geography. Steel, petrochemicals, automobiles và containers có handling requirement khác nhau.
-
-## Busan: transshipment economics
-
-Transshipment port không chỉ phục vụ domestic cargo mà chuyển containers giữa shipping routes. Network effect xuất hiện: càng nhiều routes gọi cảng, càng hấp dẫn carriers/cargo; càng nhiều cargo, càng justify frequency.
-
-Nhưng hub position phụ thuộc port efficiency, automation, labor, hinterland connection và competition với China/Japan/other Asian ports.
-
-## Containerization thay đổi trade economics
-
-Standard container giảm handling cost và damage, cho phép intermodal transport ship–rail–truck. Đây là technology có enormous economic impact vì nó giảm transaction/friction cost, giống API standard trong software.
-
-> Mental model: container là “standardized interface” của physical supply chain.
-
-## Inventory: cash bị khóa trong hàng hóa
-
-Inventory không chỉ là operational object mà là working capital. Days Inventory Outstanding (DIO):
+Có thể hình dung tổng chi phí:
 
 \[
-DIO = \frac{Average\ Inventory}{COGS}\times365
+Tổng\ chi\ phí\ logistics = Vận\ tải + Kho\ bãi + Chi\ phí\ giữ\ tồn\ kho + Xử\ lý + Thiếu\ hàng + Chi\ phí\ chậm\ trễ
 \]
 
-Nếu shipping disruption làm company giữ thêm 30 ngày inventory, cash conversion cycle dài hơn. Resilience có financial cost.
+Vận tải biển có thể rẻ hơn hàng không, nhưng nếu thời gian giao dài thêm 30 ngày làm tồn kho tăng hoặc khiến nhà máy chậm sản xuất, tổng chi phí có thể cao hơn.
 
-Xem [11_banks_finance_and_corporate_funding](./11_banks_finance_and_corporate_funding.md).
+## Địa lý Hàn Quốc: bán đảo nhưng thương mại phụ thuộc mạnh vào biển và hàng không
 
-## Just-in-time và resilience
+Do kết nối đường bộ xuyên bán đảo bị giới hạn, cảng biển và sân bay có vai trò chiến lược.
 
-Just-in-time giảm inventory nhưng tăng sensitivity với disruption. Sau pandemic, chip shortage và geopolitical risk, nhiều firms chuyển sang “just-in-case” cho critical components.
+Các nút logistics có chuyên môn khác nhau:
 
-Optimal buffer phụ thuộc shortage cost. A cheap screw nếu thiếu có thể stop entire assembly line; economic value của buffer không tỷ lệ với purchase price.
+- Busan: trung tâm container và trung chuyển;
+- Incheon: hàng hóa vùng thủ đô và kết nối biển–hàng không;
+- Ulsan, Gwangyang, Pohang: hàng công nghiệp và hàng rời;
+- Incheon Airport: hàng giá trị cao, nhạy với thời gian.
 
-## Cold chain và specialized logistics
+Địa lý cảng phản ánh địa lý công nghiệp. Thép, hóa dầu, ô tô, container và bán dẫn cần các loại hạ tầng khác nhau.
 
-Biopharma, food và chemicals cần temperature/control compliance. Cold chain failure có thể destroy product value even if transport arrives on time.
+## Container hóa: giao diện tiêu chuẩn của thương mại vật lý
 
-High-regulation logistics tạo entry barrier qua certifications, equipment, tracking và quality system.
+Container tiêu chuẩn đã làm thay đổi thương mại toàn cầu bằng cách giảm thời gian bốc dỡ, thiệt hại hàng và ma sát giữa các phương thức vận tải.
 
-## E-commerce last mile
+Có thể xem container như một **chuẩn giao diện (interface standard)** cho hàng hóa vật lý: tàu, xe tải, đường sắt và cần cẩu cùng thao tác trên một đơn vị tiêu chuẩn.
 
-Coupang và Korean e-commerce ecosystem cho thấy warehouse density, routing software và delivery network có thể trở thành moat. Last-mile cost cao vì parcel phải đi từ shared network tới individual door.
+Điều này giảm mạnh chi phí giao dịch và giúp chuỗi giá trị toàn cầu phức tạp trở nên khả thi.
 
-Route density giảm unit cost: nếu driver giao nhiều packages trong cùng apartment complex, cost/order thấp hơn sparse rural route. Đây là **density economics**.
+## Kinh tế cảng: lưu lượng, mạng lưới và hạ tầng cố định
 
-## Logistics automation và IT
+Cảng và terminal có tài sản cố định lớn như cầu cảng, cần cẩu, bãi container, hệ thống CNTT và hạ tầng luồng tàu.
 
-Warehouse Management System (WMS), Transportation Management System (TMS), barcode/RFID, routing algorithms và robotics biến logistics thành data problem.
+Doanh thu thường gắn với lượng hàng thông qua và dịch vụ. Quy mô quan trọng vì chi phí cố định được phân bổ trên nhiều container hoặc lượng hàng hơn.
 
-Shortest-path, vehicle-routing và inventory optimization liên hệ trực tiếp graph theory và operations research. Software quality có impact physical cost: bad demand forecast tạo excess inventory hoặc stockout.
+Nhưng quá tải lại tạo chi phí ngược: tàu chờ lâu, bãi đầy và xe tải quay vòng chậm.
 
-## Shipping rates và exporter margin
+Vì vậy hiệu quả cảng không phải sản lượng tối đa bằng mọi giá, mà là **lưu lượng lớn đi cùng dòng vận hành đáng tin cậy**.
 
-Exporter quote terms theo Incoterms quyết định ai chịu freight/risk ở từng stage. Nếu ocean freight tăng, impact margin phụ thuộc contract terms và pricing power.
+## Busan và hiệu ứng mạng trung chuyển
 
-Không nên thấy shipping index tăng rồi kết luận mọi exporter margin giảm như nhau.
+Cảng trung chuyển xử lý hàng không nhất thiết xuất phát hoặc kết thúc tại địa phương; container được chuyển giữa các tuyến tàu.
 
-## Air cargo và semiconductors
+```text
+Nhiều tuyến tàu hơn
+→ nhiều lựa chọn kết nối hơn
+→ hàng trung chuyển tăng
+→ hãng tàu có thêm lý do ghé cảng
+→ tần suất tuyến tăng
+```
 
-High-value, low-weight products như chips phù hợp air cargo hơn bulk commodities. Time value cao hơn transport cost. Incheon airport vì vậy là logistics infrastructure quan trọng cho advanced manufacturing.
+Đây là hiệu ứng mạng. Nhưng vị thế trung tâm không cố định; hãng tàu so sánh chi phí, năng suất, độ đúng lịch và các cảng thay thế trong khu vực.
 
-## 3PL và contract logistics
+Tự động hóa cảng, quan hệ lao động và kết nối hậu phương vì vậy đều quan trọng.
 
-Third-party logistics (3PL / 제3자물류) cho phép firm outsource warehousing/transport. 3PL economics phụ thuộc network scale, utilization, customer concentration và labor/automation.
+## Nhà khai thác cảng và hãng tàu: cùng container nhưng kinh tế khác nhau
 
-A logistics provider có low margin nhưng high asset turnover có thể vẫn tạo acceptable ROIC. Vì vậy margin alone không đủ.
+Terminal thu phí xử lý và phụ thuộc lưu lượng, tỷ lệ sử dụng tài sản.
 
-## Mental Model
+Hãng vận tải container sở hữu hoặc thuê tàu và chịu chu kỳ cước, nhiên liệu và cung tàu.
 
-> Logistics tối ưu **time + reliability + working capital + transport cost**, không chỉ distance. Trong export economy, supply-chain design là một phần của competitive advantage.
+Cùng một mức thương mại có thể tạo biến động lợi nhuận rất khác cho hai loại doanh nghiệp.
 
-## Common misconceptions
+Không nên gộp toàn bộ “shipping/logistics” thành một ngành duy nhất.
 
-Inventory càng thấp không phải lúc nào càng tốt; stockout risk có thể lớn hơn carrying cost.
+# Vận tải container (Container Shipping / 해운)
 
-Port lớn không chỉ vì domestic economy lớn; transshipment/network position matter.
+## Cước vận tải được quyết định bởi nhu cầu so với nguồn cung tàu điều chỉnh chậm
 
-Fast delivery không miễn phí. Cost có thể nằm trong margin, membership fee, seller fee hoặc labor intensity.
+Trong ngắn hạn, nguồn cung tàu tương đối kém linh hoạt vì đóng tàu mới mất nhiều năm.
 
-## Connections
+Khi nhu cầu thương mại tăng đột ngột hoặc công suất bị gián đoạn, cước có thể tăng mạnh.
 
-Đọc cùng [02_trade_export_and_global_value_chains](./02_trade_export_and_global_value_chains.md), [16_shipbuilding_steel_chemicals_heavy_industry](./16_shipbuilding_steel_chemicals_heavy_industry.md), [17_platform_telecom_content_retail_services](./17_platform_telecom_content_retail_services.md) và [24_regional_clusters_and_industrial_geography](./24_regional_clusters_and_industrial_geography.md).
+Cước cao sau đó kích thích đặt tàu mới. Vài năm sau nhiều tàu được giao, nguồn cung tăng và cước có thể giảm ngay cả khi thương mại toàn cầu vẫn tăng.
 
-## Shipping company economics khác port economics
+```text
+Cước tăng
+→ lợi nhuận hãng tàu tăng
+→ đơn đặt tàu mới tăng
+→ trễ 2–3+ năm
+→ đội tàu tăng
+→ áp lực giảm cước
+```
 
-Container shipping carrier sở hữu/charter vessels và chịu freight-rate cycle, bunker fuel và vessel supply. Port operator kiếm fee từ throughput/terminal services. Cùng container volume nhưng earnings volatility khác.
+Chu kỳ này liên kết với đóng tàu nhưng có độ trễ thời gian khác nhau.
 
-Shipping supply rất inelastic short-term vì build ship mất years. Khi demand jump, freight rate có thể spike; khi many new ships deliver, rates fall even if trade still grows.
+## Đòn bẩy hoạt động và phơi nhiễm hợp đồng thuê tàu
 
-## HMM và national shipping capability
+Kinh tế hãng tàu phụ thuộc tàu sở hữu hay tàu thuê.
 
-Korean shipping history cho thấy container line có strategic value cho export economy nhưng business economics cực cyclical. Financial distress của carrier lớn có spillover tới exporters, ports và trade finance.
+Hợp đồng thuê tàu khóa chi phí trong một giai đoạn trong khi doanh thu cước giao ngay hoặc hợp đồng dài hạn có thể biến động khác.
 
-Điều này giải thích vì sao shipping đôi khi nhận policy attention cao hơn normal industry of similar GDP share.
+Hãng tàu ký hợp đồng thuê đắt ở đỉnh chu kỳ có thể chịu áp lực lớn khi cước giảm.
 
-## Bunker fuel và IMO regulation
+Vì vậy cấu trúc sở hữu đội tàu và lịch đáo hạn hợp đồng thuê rất quan trọng.
 
-Vessel economics chịu fuel price và environmental rules. Slow steaming giảm fuel consumption nhưng tăng transit time/capacity tied up.
+## Nhiên liệu tàu (bunker fuel)
 
-Sulfur/carbon rules có thể làm modern efficient fleet more valuable, nhưng require capex/new fuels.
+Nhiên liệu là chi phí biến đổi lớn.
 
-## Freight forwarder vs carrier
+```text
+Cước vận tải
+- nhiên liệu
+- thuê tàu / khấu hao
+- phí cảng / kênh đào
+- chi phí vận hành
+= lợi nhuận
+```
 
-Freight forwarder không nhất thiết own ships/trucks; họ coordinate capacity, documentation và routing. Asset-light model có lower capex nhưng margin phụ thuộc procurement scale và customer relationships.
+Hãng tàu có thể thu phụ phí nhiên liệu hoặc phòng hộ, nhưng thời gian chuyển chi phí sang khách hàng khác nhau theo hợp đồng.
 
-3PL có thể combine asset-heavy warehouses với asset-light coordination.
+## Giảm tốc độ tàu: đánh đổi nhiên liệu với công suất và thời gian
 
-## Customs và bonded logistics
+Tàu chạy chậm giúp tiết kiệm nhiên liệu.
 
-Goods crossing border cần classification, valuation, origin và documentation. Error có thể delay shipment or trigger duties/penalties.
+Nhưng thời gian hành trình dài hơn khiến mỗi tàu bị sử dụng lâu hơn trên một tuyến, tức làm công suất đội tàu hiệu dụng giảm.
 
-Bonded warehouse cho phép goods stored before duties paid/clearance, useful for re-export/transshipment. Customs competence là operational capability, not admin afterthought.
+Vì vậy một quyết định vận hành tác động đồng thời chi phí và nguồn cung.
 
-## Incoterms: ai chịu cost và risk?
+Quy định môi trường có thể làm **chạy chậm (slow steaming)** trở nên hấp dẫn hơn về kinh tế.
 
-FOB, CIF, DDP và các Incoterms phân allocation của transport cost, insurance/risk và customs responsibility. Incoterm không xác định ownership/payment alone; nó xác định delivery obligations.
+## Vận tải biển là hạ tầng chiến lược
 
-Khi compare exporter margins, shipping cost exposure phải đọc cùng Incoterm.
+Một hãng tàu quốc gia lớn có thể có giá trị chiến lược vì doanh nghiệp xuất khẩu cần tiếp cận công suất container khi chuỗi cung ứng gián đoạn.
 
-## Parcel density và Korean apartment geography
+Đó là lý do vận tải biển đôi khi nhận sự quan tâm chính sách vượt quá tỷ trọng GDP trực tiếp.
 
-Korea high urban density/apartment concentration tạo favorable last-mile route economics. Driver có thể deliver many parcels per stop/building relative low-density suburbs.
+Nhưng giá trị chiến lược không xóa chu kỳ cước rất mạnh.
 
-Đây là geographic source của delivery speed, not software alone. Software routing + dense housing combine thành moat.
+# Forwarder và 3PL (포워더·3PL)
 
-## Fulfillment center economics
+## Forwarder bán năng lực điều phối hơn là bán tàu
 
-Warehouse automation có high fixed capex. Return phụ thuộc throughput. Peak season cần excess capacity; off-season utilization thấp.
+**Doanh nghiệp giao nhận (freight forwarder)** đặt chỗ vận tải, xử lý chứng từ, hải quan và tuyến đường mà không nhất thiết sở hữu tàu hay máy bay.
 
-Robotics investment rational khi labor saving + throughput + error reduction exceed depreciation/maintenance.
+Mô hình có thể ít tài sản hơn, nhưng biên lợi nhuận phụ thuộc quy mô mua công suất, quan hệ khách hàng và biến động cước.
 
-## Reverse logistics
+Nếu giá mua chỗ vận tải từ hãng tàu tăng nhanh hơn khả năng điều chỉnh giá cho khách hàng, biên lợi nhuận bị ép.
 
-E-commerce returns tạo reverse flow: pickup, inspection, refurbish/disposal và refund. Fashion returns especially high có thể erase front-end gross margin.
+## 3PL kết hợp điều phối và tài sản vật lý
 
-A company reporting GMV growth nhưng return rate rising có lower economic quality.
+**Logistics bên thứ ba (Third-Party Logistics / 3PL / 제3자물류)** có thể vận hành kho, xe tải, fulfillment và hệ thống thông tin.
 
-## Supply-chain visibility
+Kinh tế phụ thuộc:
 
-Digital tracking giúp firm know location/status inventory. Visibility không prevent disruption, nhưng reduce reaction time and safety stock uncertainty.
+- tỷ lệ sử dụng kho;
+- năng suất lao động;
+- mật độ tuyến;
+- thời hạn hợp đồng;
+- mức tập trung khách hàng.
 
-For software analogy, supply chain without visibility giống distributed system without observability: failure occurs, nhưng team không biết node nào broken.
+Biên lợi nhuận thấp vẫn có thể tạo ROIC tốt nếu vòng quay tài sản cao.
+
+# Tồn kho và vốn lưu động
+
+## Tồn kho là tiền mặt dưới dạng vật lý
+
+Tồn kho sử dụng vốn.
+
+**Số ngày tồn kho (Days Inventory Outstanding / DIO)**:
+
+\[
+DIO = \frac{Tồn\ kho\ bình\ quân}{Giá\ vốn}\times365
+\]
+
+Nếu gián đoạn vận tải buộc doanh nghiệp giữ thêm 30 ngày linh kiện, chu kỳ chuyển đổi tiền mặt tăng.
+
+Đó là chi phí tài chính của khả năng chống chịu.
+
+Xem [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md).
+
+## Tồn kho an toàn giống một khoản bảo hiểm
+
+Giữ hàng dự phòng trông kém hiệu quả cho tới khi thiếu một linh kiện khiến toàn nhà máy dừng.
+
+Mức tồn kho tối ưu cần so:
+
+```text
+Chi phí giữ thêm hàng
+so với
+Tổn thất kỳ vọng nếu thiếu hàng / đứt gãy
+```
+
+Một linh kiện trị giá 2 USD vẫn có thể đáng giữ lượng lớn tồn kho an toàn nếu thiếu nó làm dừng dây chuyền trị giá 100 triệu USD.
+
+Tầm quan trọng của tồn kho không tỷ lệ thuận với giá mua đơn vị.
+
+## Just-in-time và just-in-case
+
+**Just-in-time (JIT)** giảm tồn kho khi nguồn cung ổn định và dễ dự đoán.
+
+**Just-in-case** giữ thêm bộ đệm cho các mắt xích quan trọng.
+
+Sau đại dịch, chuỗi cung ứng thường phân loại:
+
+- hàng phổ thông, dễ thay thế → tồn kho gọn;
+- linh kiện quan trọng, thời gian cung ứng dài → bộ đệm lớn hơn hoặc hai nguồn cung.
+
+Một triết lý tồn kho duy nhất cho mọi linh kiện là không tối ưu.
+
+# Hải quan và vận hành thương mại
+
+## Hải quan là một năng lực vận hành
+
+Giao dịch xuyên biên giới cần:
+
+- phân loại HS;
+- xác định trị giá hải quan;
+- chứng từ xuất xứ;
+- giấy phép;
+- thuế và phí;
+- quy tắc an ninh.
+
+Sai sót có thể làm hàng bị giữ hoặc phát sinh phạt.
+
+Với FTA, chứng từ xuất xứ đúng quyết định doanh nghiệp có được hưởng ưu đãi thuế quan hay không.
+
+Vì vậy năng lực hải quan có thể tạo lợi thế chi phí thật sự.
+
+## Kho ngoại quan
+
+**Kho ngoại quan (bonded warehouse)** cho phép lưu trữ hoặc xử lý hàng dưới giám sát hải quan trước khi hoàn tất nghĩa vụ thuế, tùy cấu trúc.
+
+Mô hình hữu ích cho trung chuyển, tái xuất và trung tâm tồn kho khu vực, giúp giảm ma sát tiền mặt và thuế trong mạng lưới toàn cầu.
+
+## Incoterms: phân bổ chi phí và rủi ro giao hàng
+
+FOB, CIF, DDP và các **Incoterms** quy định trách nhiệm, chi phí và rủi ro giao hàng giữa người mua và người bán.
+
+Incoterms không tự quyết định quyền sở hữu hay điều khoản thanh toán.
+
+Muốn hiểu phơi nhiễm cước của nhà xuất khẩu phải đọc cùng Incoterm.
+
+Hai doanh nghiệp bán cùng mức doanh thu theo FOB hoặc CIF có thể chịu rủi ro logistics rất khác nhau.
+
+# Vận tải hàng không (Air Cargo / 항공화물)
+
+## Hàng giá trị cao, trọng lượng thấp có thể hợp lý khi đi hàng không
+
+Bán dẫn, điện tử, dược phẩm và linh kiện khẩn cấp có giá trị thời gian rất cao.
+
+Hàng không đắt hơn theo kg nhưng giảm thời gian vận chuyển, tồn kho và chi phí gián đoạn.
+
+Vì vậy Incheon Airport là hạ tầng của sản xuất tiên tiến, không chỉ phục vụ hành khách.
+
+## Giá cước và công suất hàng hóa
+
+Cước hàng không phụ thuộc máy bay chở hàng chuyên dụng và khoang bụng của máy bay chở khách.
+
+Khi vận tải hành khách bị gián đoạn, công suất khoang bụng giảm và cước hàng hóa có thể tăng mạnh.
+
+Do đó thị trường hành khách và hàng hóa có liên hệ với nhau.
+
+# Chuỗi lạnh (Cold Chain / 콜드체인)
+
+Dược sinh học, vaccine, thực phẩm và một số hóa chất cần nhiệt độ hoặc độ ẩm được kiểm soát.
+
+Một lô hàng tới đúng giờ nhưng vượt phạm vi nhiệt độ có thể mất toàn bộ giá trị.
+
+Kinh tế chuỗi lạnh gồm:
+
+- container chuyên dụng;
+- cảm biến;
+- chứng nhận;
+- giám sát;
+- quy trình dự phòng.
+
+Năng lực tuân thủ tạo rào cản gia nhập.
+
+Xem [`31_biohealth_pharma_medical_devices_and_kbeauty.md`](./31_biohealth_pharma_medical_devices_and_kbeauty.md).
+
+# Fulfillment thương mại điện tử và giao chặng cuối
+
+## Giao diện phía trước là số, phía sau vẫn là vật lý
+
+Thương mại điện tử có thể trông như phần mềm nhưng fulfillment cần kho, lao động, phương tiện và điều phối tồn kho.
+
+Mô hình có thể thâm dụng tài sản dù giao diện đặt hàng hoàn toàn số.
+
+## Kinh tế mật độ
+
+Chi phí giao trên mỗi đơn giảm khi mật độ tuyến tăng:
+
+\[
+Chi\ phí\ giao/đơn \downarrow \quad khi \quad Mật\ độ\ điểm\ giao/tuyến \uparrow
+\]
+
+Địa lý đô thị và chung cư mật độ cao của Hàn Quốc có thể tạo lợi thế vì một tài xế giao được nhiều đơn trong cùng tòa nhà hoặc khu vực.
+
+Đây là lợi thế địa lý kết hợp phần mềm định tuyến.
+
+## Kinh tế trung tâm fulfillment
+
+Kho có CAPEX cố định và chi phí lao động/tự động hóa.
+
+Mức sinh lời phụ thuộc lưu lượng xử lý và tỷ lệ sử dụng.
+
+Mùa cao điểm cần công suất dự phòng; mùa thấp điểm có tỷ lệ sử dụng thấp hơn.
+
+Tự động hóa chỉ hợp lý khi lợi ích tiết kiệm lao động, tăng lưu lượng và tăng độ chính xác lớn hơn chi phí khấu hao/bảo trì.
+
+## WMS/TMS và phần mềm
+
+**Hệ thống quản lý kho (Warehouse Management System / WMS)** kiểm soát vị trí hàng, tồn kho và quy trình lấy hàng.
+
+**Hệ thống quản lý vận tải (Transportation Management System / TMS)** hỗ trợ lập kế hoạch, tuyến đường và phân bổ hãng vận tải.
+
+Lập tuyến, dự báo và bố trí vị trí hàng kết nối logistics với nghiên cứu vận hành và thuật toán đồ thị.
+
+Dự báo phần mềm kém tạo hậu quả vật lý: dư hàng, thiếu hàng hoặc xe chạy rỗng.
+
+## Logistics ngược
+
+Hàng hoàn trả tạo dòng chảy ngược:
+
+```text
+Nhận hàng từ khách
+→ vận chuyển
+→ kiểm tra
+→ nhập kho lại / sửa lại / tiêu hủy
+→ hoàn tiền
+```
+
+Tỷ lệ trả hàng ở thời trang và thương mại điện tử có thể cao tới mức xóa phần lớn biên lợi nhuận phía trước.
+
+GMV tăng nhưng tỷ lệ hoàn trả xấu đi có thể là tăng trưởng chất lượng thấp.
+
+# Khả năng quan sát chuỗi cung ứng
+
+Theo dõi không ngăn được gián đoạn nhưng làm giảm bất định và rút ngắn thời gian phản ứng.
+
+Có thể so sánh với phần mềm:
+
+> Chuỗi cung ứng thiếu khả năng quan sát giống một hệ thống phân tán không có observability: sự cố xảy ra nhưng đội vận hành không biết mắt xích nào hỏng đủ nhanh.
+
+Khả năng quan sát có thể giảm nhu cầu giữ tồn kho an toàn do bất định và cải thiện giao tiếp với khách hàng.
+
+## Control tower và logistics theo sự kiện
+
+Hệ thống logistics hiện đại kết hợp sự kiện vận chuyển, tồn kho, thời tiết/trạng thái cảng và đơn hàng để đổi tuyến hoặc ưu tiên lại.
+
+Giá trị kinh tế không nằm ở dashboard, mà ở số lần tránh được thiếu hàng/chậm giao và lượng bộ đệm có thể giảm.
+
+# Logistics và cụm công nghiệp
+
+Khoảng cách tới cảng, sân bay và kho ảnh hưởng kinh tế địa điểm.
+
+Hàng rời nặng coi trọng gần cảng. Bán dẫn giá trị cao coi trọng sân bay và tốc độ nhà cung cấp. Fulfillment thương mại điện tử coi trọng mật độ hộ gia đình và khả năng tiếp cận đường cao tốc.
+
+Vì vậy “địa điểm logistics tốt nhất” phụ thuộc đặc tính vật lý của sản phẩm.
+
+Xem [`24_regional_clusters_and_industrial_geography.md`](./24_regional_clusters_and_industrial_geography.md).
+
+# Khả năng chống chịu và đa nguồn cung
+
+Hai nguồn cung làm giảm rủi ro điểm lỗi duy nhất nhưng có thể làm mất chiết khấu quy mô và hiệu quả học tập chất lượng.
+
+Chiến lược chống chịu nên phân loại linh kiện theo:
+
+- mức độ quan trọng;
+- khả năng thay thế;
+- thời gian cung ứng;
+- phơi nhiễm địa chính trị.
+
+Không phải con ốc nào cũng cần nhà cung cấp thứ hai; một số chip quan trọng thì có thể cần.
+
+# Cước vận tải tác động nhà xuất khẩu tùy hợp đồng
+
+Cước tăng ảnh hưởng mỗi doanh nghiệp khác nhau tùy:
+
+- Incoterm;
+- hợp đồng dài hạn với hãng vận tải;
+- biên lợi nhuận sản phẩm;
+- quyền định giá;
+- phương thức vận tải.
+
+Vì vậy không nên đưa chỉ số cước vào mô hình biên lợi nhuận của mọi nhà xuất khẩu một cách máy móc.
+
+# Cách phân tích doanh nghiệp logistics
+
+## Hãng vận tải container
+
+```text
+Cước
+Sản lượng
+Công suất đội tàu
+Đơn đặt tàu / lượng tàu mới bàn giao
+Nhiên liệu
+Tàu sở hữu và tàu thuê
+Doanh thu hợp đồng và giao ngay
+Nợ ròng
+```
+
+## Cảng / terminal
+
+```text
+Lưu lượng hàng
+Tỷ trọng trung chuyển
+Tỷ lệ sử dụng
+Cơ cấu phí
+CAPEX
+Năng suất / thời gian quay vòng
+```
+
+## 3PL / fulfillment
+
+```text
+Mức tập trung khách hàng
+Tỷ lệ sử dụng kho
+Mật độ tuyến
+Chi phí lao động
+CAPEX tự động hóa
+Biên lợi nhuận hợp đồng
+```
+
+## Logistics thương mại điện tử
+
+```text
+Số đơn/ngày
+Chi phí giao/đơn
+Tỷ lệ sử dụng fulfillment
+Tỷ lệ hoàn trả
+Hội viên / trợ giá
+Mật độ địa lý
+```
+
+# Kiểm tra sức chịu đựng
+
+- cước vận tải giảm 40% sau khi tàu mới được giao;
+- nhiên liệu +30%;
+- tắc nghẽn cảng;
+- tuyến vận tải quan trọng bị đóng;
+- thời gian giao tăng 20 ngày;
+- mật độ đơn fulfillment giảm 15%;
+- tỷ lệ trả hàng tăng 5 điểm %.
+
+Luôn nối cú sốc vận hành với vốn lưu động và tiền mặt.
+
+# Mô hình tư duy
+
+> Logistics tối ưu **thời gian + độ tin cậy + tồn kho + vận tải + thông tin**. Cước rẻ nhất chưa chắc tạo chuỗi cung ứng rẻ nhất.
+
+```text
+Dự báo nhu cầu
+   ↓
+Vị trí tồn kho
+   ↓
+Quyết định vận tải / kho
+   ↓
+Thời gian giao / mức dịch vụ
+   ↓
+Chu kỳ tiền mặt + trải nghiệm khách hàng
+```
+
+# Những nhầm lẫn thường gặp
+
+**“Tồn kho thấp luôn tốt.”** Sai. Chi phí thiếu hàng hoặc gián đoạn có thể lớn hơn chi phí giữ hàng.
+
+**“Cảng lớn chỉ vì kinh tế nội địa lớn.”** Sai. Vị trí mạng và hàng trung chuyển cũng rất quan trọng.
+
+**“Giao nhanh là tính năng số gần như miễn phí.”** Sai. Nó cần mật độ, lao động, kho và vốn vận tải.
+
+**“Cước tăng thì mọi nhà xuất khẩu đều giảm biên lợi nhuận.”** Sai. Hợp đồng, Incoterm và quyền định giá khác nhau.
+
+**“Tự động hóa luôn giảm chi phí logistics.”** Chỉ đúng nếu lưu lượng và tỷ lệ sử dụng biện minh cho đầu tư cố định.
+
+**“Khả năng quan sát ngăn được cú sốc chuỗi cung ứng.”** Không. Nó cải thiện phản ứng nhưng không loại bỏ giới hạn vật lý.
+
+# Liên kết
+
+Đọc cùng [`02_trade_export_and_global_value_chains.md`](./02_trade_export_and_global_value_chains.md), [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md), [`16_shipbuilding_steel_chemicals_heavy_industry.md`](./16_shipbuilding_steel_chemicals_heavy_industry.md), [`17_platform_telecom_content_retail_services.md`](./17_platform_telecom_content_retail_services.md), [`24_regional_clusters_and_industrial_geography.md`](./24_regional_clusters_and_industrial_geography.md) và [`31_biohealth_pharma_medical_devices_and_kbeauty.md`](./31_biohealth_pharma_medical_devices_and_kbeauty.md).

@@ -29,6 +29,12 @@ const completedItems = items.filter(item => item.done);
 
 Nguyên tắc này giảm duplicate source of truth và giảm Effect không cần thiết.
 
+## 1A. Rules of React và Rules of Hooks
+
+Hook phải gọi ở top level của Function Component hoặc Custom Hook, không tùy ý trong condition, loop, nested function hay event handler. React dựa vào thứ tự call ổn định để ghép mỗi Hook với state tương ứng giữa các render; vì vậy `eslint-plugin-react-hooks` là correctness tooling, không chỉ style.
+
+Trước React 16.8, tái sử dụng stateful logic chủ yếu qua class, HOC và render props. Hooks giảm wrapper nesting và colocate concern tốt hơn nhưng không làm HOC/render props sai; chúng vẫn gặp trong Redux/router/library cũ. Migration nên chuyển concern chứ không search-replace syntax.
+
 ## 2. `useEffect`: synchronization chứ không phải “code chạy sau render”
 
 `useEffect` dùng để đồng bộ component với một hệ thống nằm ngoài mô hình render React, ví dụ network connection, timer, browser event, WebSocket, observer, analytics integration hoặc widget imperative.
@@ -235,6 +241,14 @@ UNSAFE_componentWillUpdate()
 
 Vấn đề của chúng là side effect hoặc assumptions trong render-phase work không an toàn với rendering có thể bị restart, suspend hoặc bỏ. Không migrate bằng search-replace. `componentWillMount` thường tách initialization vào constructor/state initializer và side effect vào mount Effect/lifecycle; `componentWillReceiveProps` thường thay bằng render derivation, controlled data hoặc reducer; `componentWillUpdate` thường chuyển sang `componentDidUpdate`, `getSnapshotBeforeUpdate` hoặc layout/effect logic tùy mục tiêu.
 
+## 2B. Effect có lifecycle start/stop riêng, không phải bản sao lifecycle component
+
+Component được mô tả bằng mount/update/unmount, nhưng một Effect nên được đọc như một **synchronization process** có hai hành động: bắt đầu đồng bộ và dừng đồng bộ. Khi dependency thay đổi, React có thể stop process cũ rồi start process mới dù component vẫn là cùng một instance. Vì vậy một Effect kết nối room theo `roomId` nên được hiểu là “giữ connection bên ngoài khớp với `roomId` hiện tại”, không phải “chạy đoạn code này khi update”.
+
+Dependency array không phải lịch hẹn do developer tùy chọn. Nó là mô tả các reactive values mà process đọc. Nếu phải tắt lint để giữ dependency thiếu, thường mental model đang sai: hoặc logic là event nên đặt trong event handler, hoặc value nên được derive trong render, hoặc Effect đang gộp nhiều process độc lập. Một Effect tốt thường có setup/cleanup đối xứng và có thể chạy lại mà không làm hệ thống ngoài bị leak hoặc nhân đôi subscription.
+
+Khi migrate class, đừng ghép máy móc `componentDidMount + componentDidUpdate + componentWillUnmount` vào một Effect chỉ vì tên lifecycle tương ứng. Hãy xác định resource nào cần synchronize, dependency nào làm configuration của resource đó, rồi viết một start/stop cycle cho chính resource ấy.
+
 ## 3. Dependency và stale closure
 
 Mỗi render tạo closure mới. Function trong render nhìn thấy props/state của render đó.
@@ -330,6 +344,14 @@ async function handleSubmit(event) {
 thường tốt hơn pattern set một flag rồi Effect nhìn flag để gọi `postForm()`.
 
 Effect phù hợp khi semantics là: “Vì component hiện đang tồn tại với cấu hình X nên resource bên ngoài phải được đồng bộ với X.”
+
+## 5A. Hook mental model: memory slot theo component identity
+
+Hooks không phải magic function toàn cục. React gắn state/ref/effect bookkeeping với component identity và dựa vào **thứ tự Hook call ổn định** để nối lần render hiện tại với dữ liệu của lần render trước. Đây là lý do Hook phải được gọi ở top level thay vì condition hoặc loop.
+
+Mỗi render tạo closure mới. Hook không “cập nhật biến cũ”; React gọi component lại, trả snapshot mới và các callback của render đó đóng trên snapshot tương ứng. `useRef` là ngoại lệ có object identity ổn định nhưng mutation `current` không yêu cầu render, vì thế ref phù hợp dữ liệu kỹ thuật chứ không phải source of truth cho UI.
+
+Custom Hook chia sẻ **logic và protocol**, không chia sẻ một state instance mặc định. Hai component gọi `useOnlineStatus()` thường có hai Hook instances; nếu chúng cùng subscribe một external store thì source dữ liệu được chia sẻ nằm ở store/subscription layer, không phải do “Hook là global”.
 
 ## 6. `useRef`
 
@@ -588,6 +610,27 @@ dispatch({
 
 Reducer phải pure. Action nên mô tả intent hoặc điều xảy ra thay vì cách mutate chi tiết.
 
+## 9A. Reducer là transition function, không phải Redux thu nhỏ
+
+`useReducer` hữu ích khi nhiều event cùng thay đổi một state model có rule rõ. Reducer nên trả next state từ `(state, action)` mà không làm side effect. Event handler chịu trách nhiệm tạo action; reducer chịu trách nhiệm tính transition; Effect chỉ dùng nếu transition cần đồng bộ một hệ thống bên ngoài sau commit.
+
+```jsx
+function reducer(state, action) {
+  switch (action.type) {
+    case 'renamed':
+      return { ...state, name: action.name };
+    case 'submitted':
+      return { ...state, status: 'submitting' };
+    case 'succeeded':
+      return { ...state, status: 'success' };
+    default:
+      return state;
+  }
+}
+```
+
+Khi state bắt đầu có các trạng thái loại trừ nhau như `idle/loading/success/error`, một field `status` hoặc state machine rõ ràng thường tốt hơn nhiều boolean có thể rơi vào tổ hợp vô nghĩa. Reducer không bắt buộc cho mọi form; nó đáng giá khi transition semantics quan trọng hơn độ ngắn của setter.
+
 ## 10. Context và `useContext`
 
 Context truyền dữ liệu xuyên subtree mà không phải prop drilling qua các tầng không cần dữ liệu đó.
@@ -827,6 +870,14 @@ function Tooltip() {
 
 Custom Hook tái sử dụng stateful logic mà không tạo thêm wrapper component. Tuy nhiên HOC/render props không phải API bị remove; chúng vẫn hợp lệ khi library/API phù hợp.
 
+## 12B. Custom Hook contract: input, output, ownership và effect boundary
+
+Một Custom Hook tốt không chỉ gom vài Hook calls vào một function. Nó phải có contract rõ: input reactive nào điều khiển behavior, output nào là data hay command, ai sở hữu state, và side effect nằm ở đâu. Tên `use...` nói rằng function tham gia React Hook model; nó không đảm bảo abstraction tốt.
+
+Nếu Hook trả một object mới với nhiều callback mỗi render, consumer dùng memoization có thể bị invalidation liên tục. Nếu Hook giấu network mutation, caller cần biết pending/error/cancellation semantics. Nếu Hook chỉ bọc một dòng `useState`, abstraction có thể không mang thêm domain meaning.
+
+Khi đọc code cũ, HOC và render props thường giải quyết cùng bài toán tái sử dụng stateful logic. Migration sang Hook nên giữ nguyên contract nghiệp vụ trước, sau đó mới giảm wrapper hoặc prop injection; không cần rewrite HOC ổn định chỉ để “trông hiện đại”.
+
 ## 13. `useMemo`, `useCallback`, `memo`
 
 `useMemo` memoize value:
@@ -1003,6 +1054,12 @@ function UserPage({ userId }) {
 
 Server state có owner nằm ngoài client và có thể stale; client UI state như modal open lại thuộc app hiện tại. Không trộn tùy tiện hai loại này.
 
+## 19A. Data fetching evolution: lifecycle → Effect → data layer → Suspense/RSC
+
+Class code cũ thường fetch ở `componentDidMount`/`componentDidUpdate`; Hooks chuyển synchronization tương tự sang `useEffect`. Fetch Effect thủ công vẫn phải tự xử lý cancellation, race, cache, retry, dedupe và invalidation, nên production thường chuyển server state sang query/framework data layer. Suspense/RSC lại thay nơi request bắt đầu và cách loading được reveal; Suspense không tự biến mọi `fetch()` thành cache.
+
+Old lifecycle fetch vẫn gặp nhiều trong React 15–17 và không cần rewrite chỉ vì dùng class. Migrate khi ownership, cancellation, cache hoặc routing architecture thực sự tốt hơn.
+
 ## 20. Router và URL state
 
 Routing không thuộc React core. React Router phổ biến trong SPA; framework như Next.js có router riêng.
@@ -1036,6 +1093,10 @@ async function handleSubmit(event) {
 ```
 
 Browser validation dùng `required`, `minLength`, `pattern`, `type="email"`. Validation nghiệp vụ phức tạp có thể dùng schema validator/form library. Client validation cải thiện UX; server validation mới bảo vệ integrity/security.
+
+## 21A. Forms qua các thế hệ
+
+Controlled form có từ thời class: field nằm trong `this.state`; Hooks chuyển API sang `useState`/reducer nhưng source-of-truth model không đổi. Production form không nhất thiết controlled mọi field: `FormData`, native validation hoặc field subscription có thể giảm coupling. React 19 Actions/`useActionState`/`useFormStatus`/`useOptimistic` thêm async mutation workflow nhưng không xóa controlled/uncontrolled fundamentals.
 
 ## 22. Accessibility
 
@@ -1121,6 +1182,10 @@ HTTP API
 ```
 
 State nên ở gần nơi dùng. URL state ở URL. Server data ở server-state cache. Form state ở form. Truly global client state chỉ đưa vào store/context khi thực sự global.
+
+## 25A. State management bắt đầu từ ownership
+
+Trước khi chọn Context, Redux hay Zustand, hãy phân loại: local UI state ở component; form state ở form; filter/page shareable ở URL; server data ở query/framework cache; cross-feature client state mới là ứng viên external store. Redux/Flux đời cũ thường chứa mọi loại state vì ecosystem thiếu specialized layers. Old Redux vẫn hợp lý khi domain cần selector, middleware, devtools hoặc global event flow; không migrate chỉ vì library mới ngắn hơn.
 
 ## 26. Anti-pattern thường gặp
 
