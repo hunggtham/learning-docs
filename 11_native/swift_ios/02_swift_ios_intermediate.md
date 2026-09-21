@@ -1,12 +1,16 @@
 # Swift & iOS Master Note — Intermediate
 
-> Mục tiêu: chuyển từ “biết viết màn hình và gọi API” sang “xây được iOS app có cấu trúc, data flow rõ, concurrency đúng, test được và bảo trì được”.
+> Mục tiêu: chuyển từ “biết viết màn hình và gọi API” sang “xây được feature có ownership rõ, concurrency đúng, state flow giải thích được, test được và bảo trì được”.
+>
+> Prerequisite: đã hiểu Beginner, đặc biệt value/reference semantics, closure escaping/capture, ARC, `async`/`await`, `@State`/`@Binding`, UIKit lifecycle cơ bản và network/persistence failure.
 
-# 1. Swift type system ở mức thực dụng
+Intermediate không cố biến mọi feature thành architecture nhiều layer. Trọng tâm là **reasoning**: ai sở hữu state, task sống bao lâu, mutable data được isolate ở đâu, side effect bắt đầu/kết thúc khi nào, và boundary nào cần abstraction.
+
+---
+
+# 1. Type system ở mức dùng để thiết kế API
 
 ## 1.1 Value semantics, reference semantics và copy-on-write
-
-`struct`/`enum` có value semantics; `class` có reference semantics. Đây không chỉ là kiến thức phỏng vấn mà ảnh hưởng trực tiếp đến state management, mutation và concurrency.
 
 ```swift
 struct Profile {
@@ -18,13 +22,11 @@ var b = a
 b.name = "B"
 ```
 
-`a` không đổi. Với class thì cả hai reference có thể nhìn thấy mutation của cùng object.
+`a` và `b` độc lập về semantics. Collection chuẩn như `Array`, `Dictionary`, `String` có thể chia sẻ storage và copy khi mutation, nhưng đó là optimization; public mental model vẫn là value semantics.
 
-Collection chuẩn như `Array`, `Dictionary`, `String` thường dùng copy-on-write: nhiều value có thể chia sẻ storage cho đến khi một bên mutate. Bạn vẫn phải suy nghĩ theo value semantics; đừng dựa vào implementation detail để viết logic.
+Reference type có identity và shared mutable state. Khi nhiều owner cùng thấy một class instance, bạn phải trả lời cả hai câu hỏi: ai giữ lifetime và ai được phép mutate.
 
 ## 1.2 `Equatable`, `Hashable`, `Comparable`, `Identifiable`
-
-Các protocol chuẩn này xuất hiện khắp API.
 
 ```swift
 struct Product: Identifiable, Hashable {
@@ -33,9 +35,23 @@ struct Product: Identifiable, Hashable {
 }
 ```
 
-`Hashable` cho phép dùng trong `Set`, key của dictionary và nhiều API navigation. `Identifiable` cung cấp stable identity cho UI/data diffing. Stable identity phải đại diện entity, không phải vị trí hiện tại trong array.
+`Identifiable.id` phải đại diện stable identity của entity trong khoảng lifetime phù hợp. Nếu ID thay đổi theo vị trí array, diffing/navigation/state restoration có thể gắn state vào sai item.
 
-## 1.3 Generic, associated type và opaque type
+## 1.3 Generic, `where` và capability-oriented API
+
+```swift
+func merge<C1: Collection, C2: Collection>(
+    _ lhs: C1,
+    _ rhs: C2
+) -> [C1.Element]
+where C1.Element == C2.Element {
+    Array(lhs) + rhs
+}
+```
+
+Chỉ yêu cầu capability thực sự cần. Nếu function chỉ iterate một lần, `Sequence` có thể phù hợp hơn `Array`; nếu cần random access, constraint mạnh hơn mới có ý nghĩa.
+
+## 1.4 Associated type, `some` và `any`
 
 ```swift
 protocol Repository {
@@ -44,86 +60,53 @@ protocol Repository {
 }
 ```
 
-Protocol có associated type khó dùng như existential trong một số thiết kế; Swift hiện đại hỗ trợ `any Protocol` rõ hơn:
-
-```swift
-let service: any AnalyticsService
-```
-
-`some Protocol` là opaque type: caller biết có một concrete type ổn định nhưng không biết type nào.
+`some P` là opaque type: API che concrete type nhưng vẫn giữ một concrete type ổn định cho compiler. `any P` là existential value có thể chứa các concrete conformer khác nhau ở runtime.
 
 ```swift
 func makeView() -> some View {
     Text("Hello")
 }
+
+let analytics: any AnalyticsService
 ```
 
-`any P` và `some P` không tương đương. `any P` là existential box/interface value; `some P` giữ một hidden concrete type.
+Đừng dùng existential chỉ vì syntax ngắn. Generic/opaque type giữ nhiều static type information hơn; existential phù hợp khi runtime heterogeneity/substitution là requirement thật.
 
 ---
 
-# 2. Advanced Optional, Pattern Matching và Result
+# 2. Optional, Result và error boundary
 
-Optional là enum về mặt khái niệm:
-
-```swift
-enum Optional<Wrapped> {
-    case none
-    case some(Wrapped)
-}
-```
-
-Vì vậy pattern matching hoạt động tự nhiên:
-
-```swift
-switch value {
-case .some(let v):
-    print(v)
-case .none:
-    print("nil")
-}
-```
-
-`Result<Success, Failure>` biểu diễn success/failure như value:
+Optional mô hình hóa “có hoặc không có value”. `Result<Success, Failure>` mô hình hóa success/failure thành value. `async throws` thường tự nhiên hơn `Result` cho async call chain, nhưng Result hữu ích khi cần lưu kết quả, bridge callback hoặc đưa result qua state machine.
 
 ```swift
 let result: Result<User, APIError>
 ```
 
-Trong async/await code, function `async throws` thường tự nhiên hơn Result. Result hữu ích khi cần lưu kết quả, chuyển qua callback boundary hoặc compose theo kiểu value.
+Đừng flatten mọi error thành `Error` quá sớm nếu UI/domain cần phân biệt unauthorized, validation, offline hay server failure. Ngược lại, đừng tạo hàng chục enum error chỉ để “type-safe” nếu caller không có behavior khác nhau.
 
 ---
 
-# 3. Protocol extension và conditional conformance
+# 3. Protocol extension và dispatch trap
 
 ```swift
-protocol CacheKey {
-    var cacheKey: String { get }
+protocol Named {
+    func name() -> String
 }
 
-extension CacheKey {
-    var cacheKey: String {
-        String(describing: self)
-    }
+extension Named {
+    func name() -> String { "default" }
 }
 ```
 
-Protocol extension cung cấp default implementation. Cần hiểu dispatch semantics: method chỉ tồn tại trong extension nhưng không phải requirement của protocol có thể dispatch khác với kỳ vọng khi value được nhìn qua existential.
+Nếu method là protocol requirement, conforming type override được qua protocol witness. Nếu method chỉ tồn tại ở extension nhưng không nằm trong requirement, dispatch qua existential có thể khác kỳ vọng. Khi polymorphism là intent, đưa operation vào protocol contract.
 
-Conditional conformance:
-
-```swift
-extension Array: SomeProtocol where Element: SomeConstraint {
-}
-```
-
-Đây là nền tảng của nhiều generic API trong standard library.
+Conditional conformance cho phép type generic conform khi Element thỏa điều kiện; đây là nền tảng của nhiều API standard library.
 
 ---
 
 # 4. Property wrapper, result builder và macro
 
-Property wrapper đóng gói behavior của property:
+Property wrapper đóng gói storage/access behavior:
 
 ```swift
 @propertyWrapper
@@ -143,17 +126,22 @@ struct Clamped<Value: Comparable> {
 }
 ```
 
-SwiftUI dùng rất nhiều wrapper như `@State`, `@Binding`, `@Environment`.
-
-Result builder là cơ chế đứng sau cú pháp declarative kiểu `ViewBuilder`.
-
-Macro là compile-time transformation. `@Observable` và `@Model` là ví dụ quan trọng. Macro giúp sinh code nhưng cũng làm tăng “magic”; khi debug, cần biết macro expansion có thể xem trong Xcode.
+Result builder đứng sau nhiều DSL declarative. Macro là compile-time transformation; `@Observable` và `@Model` là ví dụ quan trọng. Khi diagnostic “magic”, xem macro expansion/generated interface trong Xcode thay vì đoán.
 
 ---
 
-# 5. Concurrency nền tảng đúng chuẩn Swift 6.x
+# 5. Swift concurrency — mental model trước API
 
-## 5.1 Structured concurrency
+Swift concurrency có bốn trục cần tách:
+
+- **task lifetime**: công việc nào là parent/child, ai cancel ai;
+- **suspension**: `await` cho phép task tạm dừng nhưng không đồng nghĩa đổi thread;
+- **isolation**: mutable state thuộc actor/global actor nào;
+- **sendability**: value nào được phép đi qua isolation boundary.
+
+Nếu bốn trục này rõ, phần lớn compiler diagnostic Swift 6 trở nên có lý do thay vì “annotation ceremony”.
+
+## 5.1 Structured concurrency với `async let`
 
 ```swift
 async let profile = api.profile()
@@ -162,29 +150,74 @@ async let messages = api.messages()
 let (p, m) = try await (profile, messages)
 ```
 
-`async let` tạo child task có lifetime gắn với scope. `TaskGroup` dùng khi số task động:
+Child task gắn lifetime với lexical scope. Scope không kết thúc hợp lệ khi child task còn bị bỏ quên; error/cancellation có quan hệ rõ hơn unstructured task.
+
+## 5.2 Dynamic child task với TaskGroup
 
 ```swift
-let values = await withTaskGroup(of: Int.self) { group in
+let values = try await withThrowingTaskGroup(of: Int.self) { group in
     for id in ids {
         group.addTask {
-            await loadValue(id)
+            try await loadValue(id)
         }
     }
 
-    var result: [Int] = []
-    for await value in group {
-        result.append(value)
+    var output: [Int] = []
+    for try await value in group {
+        output.append(value)
     }
-    return result
+    return output
 }
 ```
 
-Structured concurrency giúp cancellation và lifetime dễ reasoning hơn detached task.
+Task group phù hợp fan-out động. Đừng tạo vô hạn task chỉ vì API cho phép; concurrency cần bounded theo resource/backend constraints khi input lớn.
 
-## 5.2 Actor
+## 5.3 `Task {}` là unstructured task, không phải child scope tự động
 
-Actor bảo vệ mutable state khỏi data race:
+```swift
+let task = Task {
+    await model.refresh()
+}
+```
+
+`Task {}` hữu ích để bridge synchronous context vào async hoặc tạo task có owner rõ. Nhưng task này không được lexical scope chờ/cancel giống child task của `async let`/group. Nếu lưu task trong model, model phải có policy cancel/supersede.
+
+```swift
+private var searchTask: Task<Void, Never>?
+
+func search(_ query: String) {
+    searchTask?.cancel()
+    searchTask = Task {
+        try? await Task.sleep(for: .milliseconds(300))
+        guard !Task.isCancelled else { return }
+        await performSearch(query)
+    }
+}
+```
+
+## 5.4 `Task.detached` là escape hatch
+
+Detached task không nên là “background thread button”. Nó tách khỏi nhiều context mà `Task {}` kế thừa. Dùng khi thật sự cần independent unstructured work và bạn hiểu priority/task-local/isolation implications. Với app feature bình thường, structured task hoặc `Task {}` có owner rõ thường tốt hơn.
+
+## 5.5 Cancellation là cooperative
+
+`cancel()` không giết code tùy ý. Nó đặt cancellation state; API suspension point hoặc code của bạn cần kiểm:
+
+```swift
+try Task.checkCancellation()
+```
+
+Cancellation thường không phải “error UX”. Khi user đổi search query hay rời màn hình, task cũ bị cancel là control flow hợp lệ; đừng hiện alert “CancellationError” như server failure.
+
+## 5.6 Priority không phải QoS guarantee tuyệt đối
+
+Task priority là scheduling hint và có inheritance/escalation semantics. Không thiết kế correctness dựa trên assumption “high priority chắc chắn chạy trước low priority”. Correctness phải độc lập scheduler timing.
+
+---
+
+# 6. Actor isolation — mutable state thuộc về đâu
+
+Actor serialize access tới actor-isolated mutable state theo concurrency model.
 
 ```swift
 actor TokenStore {
@@ -200,28 +233,69 @@ actor TokenStore {
 }
 ```
 
-Truy cập actor-isolated member từ bên ngoài thường cần `await`.
+Gọi actor member từ domain khác thường cần `await` vì call có thể suspend để executor chạy actor job.
 
-## 5.3 `@MainActor`
+## 6.1 Actor không phải lock syntax mới
 
-UI state thường thuộc main actor:
+Actor bảo vệ isolation, nhưng method actor có thể suspend. Khi gặp `await`, actor có thể xử lý công việc khác trước khi method tiếp tục. Vì vậy invariant đọc trước `await` có thể không còn đúng sau `await`.
 
 ```swift
-@MainActor
-final class HomeModel {
-    var items: [Item] = []
+actor Inventory {
+    private var stock = 1
 
-    func load() async {
-        items = (try? await api.fetchItems()) ?? []
+    func reserve() async throws {
+        guard stock > 0 else { throw StockError.empty }
+        await validateExternally()
+
+        // state có thể đã thay đổi trong lúc suspend
+        guard stock > 0 else { throw StockError.empty }
+        stock -= 1
     }
 }
 ```
 
-`@MainActor` là isolation guarantee, không chỉ là “dispatch main queue”.
+Đây là **actor reentrancy**, không phải data race. Compiler ngăn unsynchronized access nhưng không tự chứng minh business invariant qua suspension point.
 
-## 5.4 `Sendable`
+## 6.2 `@MainActor`
 
-`Sendable` biểu diễn value an toàn để transfer giữa concurrency domains. Value type chứa immutable/sendable field thường dễ conform:
+UI-facing observable state thường thuộc MainActor:
+
+```swift
+@MainActor
+@Observable
+final class HomeModel {
+    var items: [Item] = []
+    var state: LoadState = .idle
+
+    func load() async {
+        state = .loading
+        do {
+            items = try await api.fetchItems()
+            state = .loaded
+        } catch is CancellationError {
+            // giữ/khôi phục state theo product policy
+        } catch {
+            state = .failed(error)
+        }
+    }
+}
+```
+
+`@MainActor` là isolation contract, không chỉ là synonym của `DispatchQueue.main.async`.
+
+## 6.3 `nonisolated`
+
+Member không cần actor-isolated state có thể được thiết kế `nonisolated` khi semantics cho phép. Không thêm `nonisolated` chỉ để compiler ngừng báo; hãy đảm bảo implementation không lén đọc mutable actor state.
+
+## 6.4 Global actor
+
+`@MainActor` là global actor có sẵn. Custom global actor có thể hợp lý cho một domain isolation đặc biệt, nhưng đừng tạo một actor toàn app để “hết race”; isolation boundary phải phản ánh ownership thật.
+
+---
+
+# 7. `Sendable` và crossing isolation boundary
+
+`Sendable` biểu diễn value có thể transfer giữa concurrency domains an toàn theo model của compiler.
 
 ```swift
 struct UserSnapshot: Sendable {
@@ -230,53 +304,197 @@ struct UserSnapshot: Sendable {
 }
 ```
 
-Class mutable thường khó Sendable. `@unchecked Sendable` là lời hứa thủ công với compiler; dùng sai có thể đưa data race trở lại.
+Immutable value type gồm field Sendable thường tự nhiên. Mutable class shared reference khó hơn vì hai isolation domain có thể mutate cùng object.
 
-## 5.5 Swift 6.x approachable concurrency
+`@unchecked Sendable` là lời hứa của programmer rằng synchronization/invariant bên trong đã đúng. Nó không “làm object thread-safe”; nó tắt một phần kiểm tra compiler. Mỗi `@unchecked Sendable` nên có lý do/invariant được review.
 
-Swift 6.2 đưa ra hướng “single-threaded by default” thông qua default actor isolation option và cho phép opt-in concurrency rõ ràng hơn với `@concurrent`. Điều quan trọng là project setting ảnh hưởng semantics. Khi migrate project cũ, phải kiểm tra Swift language mode, default isolation và strict concurrency diagnostics thay vì copy annotation từ bài blog cũ.
+## 7.1 `@Sendable` closure
+
+Closure được chạy ở concurrency context khác có thể cần `@Sendable`. Compiler kiểm capture để tránh closure mang mutable non-Sendable state qua boundary.
+
+```swift
+func perform(_ operation: @Sendable @escaping () async -> Void) {
+    Task { await operation() }
+}
+```
+
+Nếu compiler phàn nàn capture, đừng mặc định thêm `@unchecked`. Hãy hỏi capture có thể chuyển thành immutable snapshot/value hay dependency actor-isolated không.
+
+## 7.2 Snapshot pattern
+
+Thay vì gửi mutable reference qua actor boundary, tạo Sendable snapshot:
+
+```swift
+struct ProfileSnapshot: Sendable {
+    let id: UUID
+    let displayName: String
+}
+```
+
+Pattern này làm data flow dễ reasoning và tách persistence/UI object lifetime khỏi async worker.
 
 ---
 
-# 6. SwiftUI data flow trung cấp
+# 8. Swift 6.x approachable concurrency và project settings
 
-## 6.1 Ownership trước wrapper
+Swift 6.x tăng compile-time data-race checking. Từ Swift 6.2, language/tooling tiếp tục làm concurrency approachable hơn với default actor isolation option và explicit opt-in concurrency ở nơi phù hợp. Điều quan trọng là **language mode và build setting là một phần semantics project**.
 
-Đừng chọn `@State`, `@Binding`, `@Environment`, `@Observable` theo mẹo ghi nhớ. Hãy hỏi: ai sở hữu dữ liệu? ai được mutate? lifetime thuộc view hay app/domain?
+Khi migrate code cũ, ghi lại ít nhất: Xcode version, Swift compiler version, Swift language mode, deployment target, default actor isolation setting và các upcoming/strict concurrency feature đang bật. Cùng source có thể cho diagnostic khác khi những setting này khác nhau.
 
-Một view sở hữu local transient state dùng `@State`. Parent sở hữu value nhưng child cần mutate dùng `@Binding`. Shared model có reference semantics có thể dùng `@Observable` và inject rõ ràng.
+Không “fix migration” bằng cách rải `@MainActor`/`nonisolated`/`@unchecked Sendable` theo compiler error. Phân loại ownership trước rồi annotate boundary tương ứng.
+
+---
+
+# 9. AsyncSequence, AsyncStream và event stream
+
+`AsyncSequence` mô hình hóa nhiều value đến theo thời gian:
 
 ```swift
-@Observable
-final class Cart {
-    var products: [Product] = []
+for await event in events {
+    guard !Task.isCancelled else { break }
+    handle(event)
 }
+```
 
-struct RootView: View {
-    @State private var cart = Cart()
+`AsyncStream`/`AsyncThrowingStream` hữu ích bridge delegate/callback API. Khi bridge, phải có policy buffering, termination và cleanup producer khi consumer cancel; nếu không producer có thể chạy mãi.
 
-    var body: some View {
-        CartView()
-            .environment(cart)
+Swift 6.4 tiếp tục tăng integration giữa Observation và async change streams. Dù API mới thuận tiện hơn, event stream và UI observation vẫn là hai abstraction khác nhau: UI dependency tracking không tự nhiên trở thành domain event log.
+
+---
+
+# 10. Continuation — bridge legacy callback có kỷ luật
+
+```swift
+func load() async throws -> Data {
+    try await withCheckedThrowingContinuation { continuation in
+        legacyLoad { result in
+            continuation.resume(with: result)
+        }
     }
 }
 ```
 
-## 6.2 Derived state
+Continuation phải được resume đúng semantics một lần. Missing resume làm task treo; double resume là bug. Checked continuation giúp phát hiện nhiều lỗi nhưng không thay ownership/cancellation design.
 
-Không lưu state có thể tính được nếu không cần:
+Nếu legacy operation có cancel token, bridge nên propagate cancellation khi có thể thay vì chỉ đổi callback thành `await` về mặt syntax.
+
+---
+
+# 11. SwiftUI state — source of truth trước property wrapper
+
+SwiftUI state bug thường không phải thiếu wrapper, mà do cùng một fact có nhiều owner hoặc view identity không như người viết tưởng.
+
+Hãy phân loại:
+
+- local presentation state: sheet mở, tab chọn, text đang edit;
+- feature state: loading/result/filter/navigation của feature;
+- domain state: business truth;
+- persisted/server state: nguồn dữ liệu durable/remote;
+- derived state: tính từ source khác.
+
+Đừng lưu lại derived state nếu có thể tính rẻ và deterministic.
+
+---
+
+# 12. `@State` — storage gắn với view identity
 
 ```swift
-var canCheckout: Bool {
-    !cart.products.isEmpty && address != nil
+struct SearchView: View {
+    @State private var query = ""
+    @State private var model = SearchModel()
+
+    var body: some View { ... }
 }
 ```
 
-Duplicate state dễ bị inconsistency.
+`View` struct được tạo lại nhiều lần; `@State` storage được SwiftUI giữ theo view identity. Vì vậy không reasoning “struct bị init lại thì state chắc reset”. State reset khi identity/lifetime của view thay đổi theo tree semantics.
 
-## 6.3 State machine
+Với Xcode 27, `State` implementation tiếp tục được hiện đại hóa; đừng dựa vào undocumented detail như “initializer expression chắc chạy mỗi body recomputation”. Hãy dựa vào public ownership/lifetime semantics.
 
-Thay vì ba Boolean:
+---
+
+# 13. `@Binding` — capability mutate state của owner khác
+
+```swift
+struct NameField: View {
+    @Binding var name: String
+
+    var body: some View {
+        TextField("Name", text: $name)
+    }
+}
+```
+
+Binding không copy state và cũng không trở thành owner. Nó là getter/setter projection. Khi binding chain quá sâu, đó có thể là dấu hiệu feature boundary/state ownership cần xem lại.
+
+---
+
+# 14. Observation với `@Observable`
+
+```swift
+@Observable
+final class CartModel {
+    var products: [Product] = []
+    var coupon: Coupon?
+
+    var total: Decimal {
+        calculateTotal(products, coupon: coupon)
+    }
+}
+```
+
+Observation track property dependency mà view đọc. Điều này giúp invalidation granular hơn broad notification model cũ trong nhiều trường hợp.
+
+Observable reference vẫn là class: ownership/lifetime và shared mutation vẫn cần thiết kế. `@Observable` không biến class thành value type và không tự làm nó concurrency-safe.
+
+---
+
+# 15. `@Bindable` — tạo Binding vào Observable model
+
+Khi child cần binding trực tiếp tới property của observable model, `@Bindable` tạo projected binding surface:
+
+```swift
+struct ProfileEditor: View {
+    @Bindable var model: ProfileModel
+
+    var body: some View {
+        TextField("Name", text: $model.name)
+    }
+}
+```
+
+`@Bindable` không sở hữu model. Owner vẫn phải được quyết định ở parent/composition root.
+
+---
+
+# 16. Environment và dependency scope
+
+```swift
+@Environment(CartModel.self) private var cart
+```
+
+Environment phù hợp dependency/context scoped theo view subtree. Nhưng nếu một domain object không thể hoạt động thiếu API client, constructor injection thường thể hiện invariant tốt hơn giấu dependency trong environment global.
+
+Một pattern tốt: App/composition root dựng concrete dependency; feature root nhận dependency; environment chỉ dùng cho những thứ thực sự hợp với tree scope.
+
+---
+
+# 17. Legacy SwiftUI wrapper mapping
+
+Codebase cũ có thể dùng:
+
+- `ObservableObject` + `@Published`;
+- `@StateObject` để view sở hữu reference object;
+- `@ObservedObject` khi object do nơi khác sở hữu;
+- `@EnvironmentObject` cho shared object qua tree.
+
+Đừng migrate chỉ bằng search-replace. Chuyển sang Observation cần giữ nguyên ownership/lifetime. Mental model cũ “StateObject owns / ObservedObject borrows” vẫn hữu ích để đọc legacy, nhưng API mới biểu diễn bằng `@State` + observable reference và các projection phù hợp.
+
+---
+
+# 18. Derived state và state machine
+
+Bad state:
 
 ```swift
 var isLoading = false
@@ -284,7 +502,7 @@ var hasError = false
 var isEmpty = false
 ```
 
-model hóa:
+Có nhiều combination vô nghĩa. Enum state machine làm invariant explicit:
 
 ```swift
 enum ScreenState {
@@ -296,25 +514,59 @@ enum ScreenState {
 }
 ```
 
-State machine giảm impossible combinations.
+Nếu `canCheckout` luôn tính từ cart/address, hãy để computed property thay vì lưu thêm Boolean phải sync thủ công.
 
 ---
 
-# 7. SwiftUI layout sâu hơn
+# 19. View identity, conditional tree và `.id`
 
-SwiftUI layout là negotiation giữa parent và child. Parent đề xuất size; child trả size; parent đặt child vào bounds. Vì vậy `.frame(width:height:)` không phải lúc nào cũng “ép kích thước” theo cách UIKit frame.
+State lifetime phụ thuộc identity. Hai branch conditional có thể tạo identity/lifetime khác:
 
-Các container quan trọng: `ScrollView`, `LazyVStack`, `LazyHStack`, `LazyVGrid`, `Grid`, `List`, `Form`.
+```swift
+if isLoggedIn {
+    HomeView()
+} else {
+    LoginView()
+}
+```
 
-`GeometryReader` mạnh nhưng hay bị lạm dụng. Dùng API layout mới, alignment guide, container-relative sizing hoặc custom Layout khi phù hợp.
+`.id(...)` thay identity chủ động và có thể reset state/task. Đừng dùng `.id(UUID())` như “force refresh”; nó thường che data-flow bug và phá state continuity.
 
-Custom `Layout` cho phép kiểm soát measurement/placement mà không cần hack geometry.
+List/ForEach identity cũng phải là domain-stable ID, không phải index nếu data reorder/insert/delete.
 
 ---
 
-# 8. Navigation architecture
+# 20. `.task` và task lifetime theo view
 
-`NavigationPath` cho navigation type-erased. Với app phức tạp, route enum giúp centralized navigation:
+```swift
+.task {
+    await model.load()
+}
+
+.task(id: query) {
+    await model.search(query)
+}
+```
+
+Task modifier gắn work vào view lifetime/identity và có cancellation semantics khi view/task identity đổi. Đây là idiom tốt cho screen-scoped load/search.
+
+Nhưng business operation cần sống lâu hơn screen không nên vô tình bị sở hữu bởi view. Ví dụ upload phải tiếp tục khi user rời màn hình có thể cần service/background URLSession owner khác.
+
+---
+
+# 21. SwiftUI layout sâu hơn
+
+SwiftUI layout là negotiation parent → child → placement. `frame` tham gia proposal/constraint chứ không đơn giản mutate frame như UIKit.
+
+Container quan trọng: `ScrollView`, `LazyVStack`, `LazyHStack`, `LazyVGrid`, `Grid`, `List`, `Form`.
+
+`GeometryReader` không phải default solution. Ưu tiên layout protocol, alignment, container-relative sizing và built-in adaptive container khi phù hợp.
+
+Custom `Layout` hữu ích khi parent cần đo/place nhiều child theo thuật toán riêng.
+
+---
+
+# 22. Navigation là state
 
 ```swift
 enum Route: Hashable {
@@ -328,29 +580,25 @@ final class Router {
 }
 ```
 
-Root:
-
 ```swift
 NavigationStack(path: $router.path) {
     HomeView()
         .navigationDestination(for: Route.self) { route in
             switch route {
-            case .product(let id):
-                ProductView(id: id)
-            case .settings:
-                SettingsView()
+            case .product(let id): ProductView(id: id)
+            case .settings: SettingsView()
             }
         }
 }
 ```
 
-Deep link có thể parse URL → Route. Điều quan trọng là navigation trở thành data, giúp test và restore state tốt hơn.
+Route-as-data giúp deep link, restoration và test. Router không nên trở thành nơi chứa business logic.
 
 ---
 
-# 9. Networking layer có cấu trúc
+# 23. Networking layer có cấu trúc
 
-Không nên để mọi view tự tạo URLRequest và decode.
+View không nên tự build URL, auth header, status mapping và decode lặp lại.
 
 ```swift
 struct Endpoint<Response: Decodable> {
@@ -365,9 +613,7 @@ protocol HTTPClient {
 }
 ```
 
-Một client production phải tách concern: request construction, auth header, transport, status validation, decoding, error mapping, retry/cancellation và logging.
-
-`URLRequest`:
+Client production phân tách request construction, transport, HTTP validation, decoding, auth, retry/cancellation, cache và logging.
 
 ```swift
 var request = URLRequest(url: url)
@@ -377,15 +623,21 @@ request.setValue("application/json", forHTTPHeaderField: "Content-Type")
 request.httpBody = try JSONEncoder().encode(body)
 ```
 
-`URLSessionConfiguration` quyết định cache, timeout, cookies, waitsForConnectivity và nhiều behavior khác.
-
-Không retry mù quáng mọi request. GET idempotent dễ retry hơn POST tạo resource. Với 401, refresh token cần coordination để tránh nhiều request cùng refresh một lúc.
+`URLSessionConfiguration` quyết định cache, cookie, timeout, connectivity behavior và nhiều policy khác.
 
 ---
 
-# 10. Codable nâng cao
+# 24. Retry, idempotency và authentication coordination
 
-Custom decoder:
+Không retry mù quáng mọi failure. Network offline, timeout, HTTP 429, HTTP 500 và validation 400 có policy khác nhau.
+
+GET thường idempotent; POST tạo resource có thể duplicate nếu retry sau timeout khi server đã xử lý request đầu. Với mutation quan trọng, backend/client nên có idempotency strategy nếu hệ thống hỗ trợ.
+
+Token refresh phải tránh refresh storm. Nếu 10 request cùng nhận 401, thường chỉ nên có một refresh in-flight và các request khác chờ kết quả thay vì 10 refresh độc lập.
+
+---
+
+# 25. Codable và tolerant boundary
 
 ```swift
 let decoder = JSONDecoder()
@@ -393,26 +645,20 @@ decoder.keyDecodingStrategy = .convertFromSnakeCase
 decoder.dateDecodingStrategy = .iso8601
 ```
 
-Nếu server date format khác, dùng custom strategy.
-
-Không expose DTO trực tiếp đến toàn bộ UI nếu API shape thay đổi thường xuyên. Có thể tách:
+Tách transport DTO khỏi domain model khi server schema và business semantics khác nhau:
 
 ```swift
 struct UserDTO: Decodable { ... }
 struct User { ... }
-
-extension User {
-    init(dto: UserDTO) { ... }
-}
 ```
 
-Đây là boundary giữa transport model và domain model.
+Server enum có thể thêm case trong tương lai. Nếu API contract cho phép forward evolution, client cần unknown/fallback strategy thay vì crash/decode fail toàn payload khi gặp giá trị mới.
 
 ---
 
-# 11. Persistence: SwiftData và Core Data ở mức ứng dụng
+# 26. Persistence: SwiftData và Core Data mental model
 
-SwiftData model:
+SwiftData:
 
 ```swift
 @Model
@@ -423,19 +669,25 @@ final class TaskItem {
 }
 ```
 
-Relationship, delete rule, migration và indexing phải được thiết kế như database chứ không chỉ “lưu object”.
+Persistence phải nghĩ như database: schema, unique/index, relationship, delete rule, transaction, migration, query shape và concurrency.
 
-SwiftData thuận tiện nhưng không làm mất các vấn đề nền tảng: schema evolution, consistency, transaction boundary, background work và data migration.
+Core Data vẫn rất phổ biến. Các khái niệm cần nắm: persistent container/store, `NSManagedObjectContext`, managed object identity, fetch request, relationship, merge policy, background context và migration.
 
-Core Data vẫn dùng rộng rãi trong production. Các khái niệm cần biết: `NSManagedObjectContext`, persistent store, fetch request, relationship, merge policy, background context và migration.
-
-Repository có thể tách persistence detail khỏi feature, nhưng đừng tạo abstraction vô nghĩa chỉ để “đúng Clean Architecture”.
+Đừng truyền managed object mutable tùy ý giữa queue/context. Khi crossing boundary, object ID hoặc immutable snapshot thường an toàn hơn.
 
 ---
 
-# 12. Dependency Injection
+# 27. SwiftData query/observation và boundary
 
-Constructor injection là default dễ test:
+`@Query` ergonomic cho UI đơn giản. Nhưng feature có sync/domain rule phức tạp không nên để persistence query tràn khắp view tree.
+
+SwiftData mới tiếp tục mở rộng query/index/history/observation capability. API tiện hơn không thay requirement xác định source of truth và migration policy.
+
+Repository/store abstraction chỉ có giá trị nếu nó che data-source/domain boundary thật; đừng tạo repository chỉ để mỗi method forward thẳng một call rồi tăng ceremony.
+
+---
+
+# 28. Dependency injection và composition root
 
 ```swift
 final class ProductService {
@@ -447,31 +699,36 @@ final class ProductService {
 }
 ```
 
-Protocol không phải lúc nào cũng cần. Nếu dependency là concrete stable type và test không cần substitution, concrete injection vẫn tốt.
+Constructor injection làm dependency bắt buộc explicit. Không phải dependency nào cũng cần protocol; concrete type có thể inject/test bằng fake wrapper/function nếu đơn giản hơn.
 
-Environment injection trong SwiftUI phù hợp dependency xuyên hierarchy. Global singleton tiện nhưng làm ownership/test/lifetime khó kiểm soát.
-
----
-
-# 13. Architecture: MVC, MVVM, unidirectional flow
-
-MVC của UIKit thường đặt ViewController ở trung tâm; dễ thành Massive View Controller nếu business logic dồn vào controller.
-
-MVVM tách View và ViewModel. Với SwiftUI, View vốn là lightweight value description nên ViewModel không phải mandatory cho mọi màn hình. Tạo ViewModel khi cần quản lý state/lifecycle/use case phức tạp, không phải vì template.
-
-Unidirectional data flow mô tả state đi xuống và event đi lên. Reducer architecture là một dạng formal hóa mô hình này.
-
-Một architecture tốt phải trả lời được: state nằm đâu, mutation xảy ra ở đâu, dependency đi vào bằng cách nào, effect/network chạy ở đâu, feature boundary là gì, và test tại lớp nào.
+Composition root là nơi app dựng concrete implementation và nối graph. Nếu mỗi feature tự đọc singleton global, dependency flow trở nên ẩn và test/lifetime khó kiểm soát.
 
 ---
 
-# 14. UIKit trung cấp
+# 29. Architecture: chọn boundary, không sưu tầm pattern
 
-Auto Layout dùng constraint relation giữa anchor:
+MVC có thể tốt nếu controller nhỏ. MVVM hữu ích khi presentation state/effect đủ phức tạp; SwiftUI view không bắt buộc có ViewModel 1:1. Reducer/unidirectional architecture phù hợp state machine nhiều action/effect và team cần convention explicit.
+
+Một architecture tốt trả lời được:
+
+- source of truth ở đâu;
+- mutation xảy ra ở đâu;
+- async effect do ai sở hữu;
+- dependency vào feature bằng cách nào;
+- navigation thuộc layer nào;
+- persistence/network DTO được map ở boundary nào;
+- test behavior ở đâu.
+
+Nếu phải tạo `BaseViewModel`, `BaseUseCase`, `BaseRepository` chỉ để mọi file “đúng template”, architecture đang phục vụ pattern thay vì product.
+
+---
+
+# 30. UIKit trung cấp — layout, reuse và lifecycle consequences
+
+Auto Layout:
 
 ```swift
 titleLabel.translatesAutoresizingMaskIntoConstraints = false
-
 NSLayoutConstraint.activate([
     titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
     titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
@@ -479,9 +736,9 @@ NSLayoutConstraint.activate([
 ])
 ```
 
-Hugging và compression resistance quyết định view co giãn khi constraint cạnh tranh.
+Content hugging/compression resistance giải quyết conflict khi intrinsic size cạnh tranh.
 
-`UITableView`/`UICollectionView` hiện đại nên biết diffable data source:
+Diffable data source dùng stable identity:
 
 ```swift
 var snapshot = NSDiffableDataSourceSnapshot<Section, Item.ID>()
@@ -490,13 +747,11 @@ snapshot.appendItems(items.map(\.id))
 dataSource.apply(snapshot, animatingDifferences: true)
 ```
 
-Delegate pattern phổ biến trong UIKit. Đừng tạo retain cycle: nhiều delegate property được khai báo `weak`.
+Cell reuse yêu cầu cancel/reset async image/task và mọi visual state không còn hợp lệ khi cell được reuse.
 
 ---
 
-# 15. SwiftUI ↔ UIKit interoperability
-
-Nhúng UIKit:
+# 31. SwiftUI ↔ UIKit interoperability trung cấp
 
 ```swift
 struct CameraView: UIViewControllerRepresentable {
@@ -508,62 +763,56 @@ struct CameraView: UIViewControllerRepresentable {
         _ uiViewController: CameraViewController,
         context: Context
     ) {
+        // sync SwiftUI state -> UIKit object
+    }
+
+    func makeCoordinator() -> Coordinator {
+        Coordinator()
     }
 }
 ```
 
-Coordinator bridge delegate/callback.
+Coordinator thường bridge delegate/callback UIKit → SwiftUI state. Đừng để `update...` tạo lại controller/resource nặng; `make...` tạo object, `update...` đồng bộ thay đổi.
 
-Nhúng SwiftUI vào UIKit:
+UIKit host SwiftUI:
 
 ```swift
-let controller = UIHostingController(rootView: ProfileView())
+let host = UIHostingController(rootView: ProfileView())
 ```
 
-Khi migration app lớn, incremental adoption thường thực tế hơn rewrite toàn bộ.
+Nếu add child controller thủ công, phải tuân view-controller containment lifecycle. Advanced sẽ đi sâu.
 
 ---
 
-# 16. App lifecycle và scene lifecycle
+# 32. App lifecycle, scene lifecycle và background work
 
-SwiftUI app lifecycle dùng `App`/`Scene`. UIKit cũ dùng `UIApplicationDelegate` và `UISceneDelegate`.
-
-Trong SwiftUI vẫn có thể bridge app delegate:
-
-```swift
-@UIApplicationDelegateAdaptor(AppDelegate.self)
-private var appDelegate
-```
-
-Lifecycle event có thể theo dõi:
+SwiftUI app dùng `App`/`Scene`; UIKit legacy dùng `UIApplicationDelegate`/`UISceneDelegate`.
 
 ```swift
 @Environment(\.scenePhase) private var scenePhase
 ```
 
-`active`, `inactive`, `background` không nên bị hiểu như guarantee cho thời lượng background execution. iOS quản lý resource rất chặt.
+`active`, `inactive`, `background` là lifecycle state, không phải lời hứa app được chạy bao lâu khi background.
+
+BackgroundTasks, background URLSession, location/audio có rule/capability khác nhau. Nếu operation cần survive process suspension/termination, thiết kế phải dựa đúng system API, không chỉ giữ một `Task` trong memory.
 
 ---
 
-# 17. Background tasks, notifications và deep links
+# 33. Notification và deep link
 
-Background execution không phải “app chạy tự do khi đóng”. Tùy use case có BackgroundTasks framework, background URLSession, location, audio và capability tương ứng.
+Local notification được schedule trên device; remote push đi qua APNs/provider server. Permission, token lifecycle, foreground handling và user action routing là concern riêng.
 
-Local notification được schedule trên device; push notification đi qua APNs. Push flow production gồm device token, provider server, APNs credential, payload, user authorization và handling foreground/background behavior.
-
-Deep link có thể dùng custom URL scheme hoặc Universal Links. Universal Links đáng tin cậy hơn cho web-to-app nhưng cần Associated Domains và `apple-app-site-association`.
+Universal Link thường phù hợp web-to-app hơn custom URL scheme, nhưng cần Associated Domains và `apple-app-site-association` đúng. Parse deep link thành typed route/command sớm thay vì truyền raw string xuyên feature.
 
 ---
 
-# 18. Testing trung cấp
+# 34. Testing async/state có tính deterministic
 
-Test pure domain logic trước vì nhanh và ổn định.
-
-Swift Testing:
+Test pure logic nhanh trước. Swift Testing:
 
 ```swift
 @Suite
-struct PriceCalculatorTests {
+struct PriceTests {
     @Test(arguments: [
         (100, 0.1, 90),
         (200, 0.2, 160)
@@ -574,7 +823,7 @@ struct PriceCalculatorTests {
 }
 ```
 
-Async test:
+Async:
 
 ```swift
 @Test
@@ -584,129 +833,37 @@ func loadUser() async throws {
 }
 ```
 
-UI test dùng accessibility identifier để chọn element ổn định. Không dựa vào sleep cố định nếu có thể chờ expectation/state.
+Inject time/UUID/random/filesystem/network dependency nếu behavior phụ thuộc chúng. Test không nên sleep vài giây để “chờ async”; dùng controllable dependency/clock/expectation/state transition.
+
+Concurrency test cần có case cancellation, duplicate request, refresh single-flight và actor reentrancy, không chỉ happy path.
 
 ---
 
-# 19. Logging, metrics và error strategy
+# 35. Diagnostics và sanitizer
 
-Phân loại error thành domain/network/auth/decoding/persistence nếu giúp UI và observability.
+Xcode Memory Graph tìm retain path. Address Sanitizer hữu ích đặc biệt ở unsafe/C/C++ boundary. Thread Sanitizer phát hiện runtime race ở các đường code thực thi; Swift 6 isolation checking ngăn nhiều race ở compile time. Hai lớp bổ sung nhau.
 
-Không show trực tiếp mọi `localizedDescription` cho user. Error message cho developer và message UX là hai concern khác nhau.
-
-Dùng `OSLog` privacy annotations cho log nhạy cảm. Production nên có crash reporting/analytics phù hợp privacy policy.
+Main Thread Checker vẫn hữu ích cho UIKit/legacy API. Với code Swift concurrency mới, actor isolation là mental model chính.
 
 ---
 
-# 20. Xcode workflow trung cấp
+# 36. Logging và error strategy
 
-Biết dùng Debug Navigator, Memory Graph, View Hierarchy Debugger, Organizer, Instruments, Test Plans, Scheme environment variables và Build Configuration.
+Dùng `Logger`/OSLog theo category/subsystem; không log token/password/PII. Error developer cần diagnostic detail; error user cần actionable message. Đừng đưa raw `localizedDescription` của mọi infrastructure error thẳng lên UI.
 
-Breakpoints nâng cao gồm symbolic breakpoint và exception breakpoint.
-
-Build phase cần hiểu `Compile Sources`, `Link Binary With Libraries`, `Copy Bundle Resources`, run script. Script build phải deterministic và tránh làm build chậm không cần thiết.
-
-Swift Package Manager là dependency manager ưu tiên trong ecosystem Apple hiện đại. `Package.swift` mô tả package/target/dependency cho Swift package; trong app project, Xcode quản lý package dependency qua UI/project metadata.
+Metrics/crash reporting là production concern; Advanced sẽ đi vào signpost, Instruments và field telemetry.
 
 ---
 
-# 21. Intermediate Senior Notes
+# 37. SwiftPM và module boundary
 
-Một codebase khỏe mạnh không được đánh giá bằng số pattern nó dùng. Dấu hiệu tốt là dependency flow dễ hiểu, state ownership rõ, side effect có boundary, async task có lifetime rõ, error không bị nuốt, feature test được và build setting có chủ đích.
+Package target tạo compile-time module boundary thật. Tránh dependency cycle và “Core” mega-module mà mọi feature import.
 
-Đừng tạo `BaseViewModel`, `BaseRepository`, `BaseUseCase` quá sớm. Inheritance abstraction thường làm code Swift khó compose hơn. Protocol + composition hữu ích nhưng chỉ khi giảm coupling thật.
-
-Đừng “async hóa” function chỉ để có thể gọi trong Task. Async nên phản ánh operation có suspension hoặc concurrency semantics thật.
-
-Đừng bắt mọi model thành class observable. Domain value nên ưu tiên struct nếu identity/reference sharing không phải yêu cầu.
+Một module khỏe mạnh có cohesion rõ, public API nhỏ, dependency direction có chủ đích. Swift 6.4 dùng Swift Build làm default SwiftPM build system; package đa nền tảng cần `platforms`, conditional dependency và `#if canImport` chỉ ở boundary phù hợp.
 
 ---
 
-# 22. Sequence, Collection, lazy evaluation và complexity
-
-`Sequence` mô tả một chuỗi phần tử có thể iterate; `Collection` mạnh hơn vì có index ổn định trong một số điều kiện và cho phép multi-pass. `RandomAccessCollection` cung cấp distance/index movement hiệu quả hơn. Hiểu protocol hierarchy giúp bạn thiết kế generic API không đòi hỏi capability mạnh hơn mức cần thiết.
-
-`lazy` trên sequence/collection trì hoãn transformation:
-
-```swift
-let result = numbers.lazy
-    .filter { $0.isMultiple(of: 2) }
-    .map { expensiveTransform($0) }
-    .prefix(10)
-```
-
-Nó có thể tránh tạo intermediate array và tránh tính phần tử không dùng. Tuy nhiên lazy chain không tự động nhanh hơn trong mọi trường hợp; đo khi hot path quan trọng.
-
-# 23. Advanced generics: `where`, same-type constraint và generic API design
-
-Generic constraint giúp compiler giữ type safety mà vẫn tái sử dụng code:
-
-```swift
-func merge<C1: Collection, C2: Collection>(
-    _ lhs: C1,
-    _ rhs: C2
-) -> [C1.Element]
-where C1.Element == C2.Element {
-    Array(lhs) + rhs
-}
-```
-
-Hãy đặt constraint đúng capability thực sự cần. Nếu chỉ cần iterate thì nhận `Sequence`, không ép caller thành `Array`. Đây là một trong những idiom quan trọng khi chuyển từ app code sang reusable library code.
-
-# 24. AsyncSequence, stream và event pipeline
-
-`AsyncSequence` là counterpart async của Sequence. Nó phù hợp với stream event theo thời gian như notification, byte stream, location update hoặc observation change.
-
-```swift
-for await event in events {
-    guard !Task.isCancelled else { break }
-    handle(event)
-}
-```
-
-`AsyncStream`/`AsyncThrowingStream` thường dùng để bridge delegate/callback API. Khi tạo stream, bạn phải nghĩ đến buffering policy, termination và cleanup; nếu producer tiếp tục chạy sau khi consumer cancel, bạn có thể leak resource hoặc làm việc vô ích.
-
-# 25. Cancellation, timeout và task group thực tế
-
-Cancellation trong Swift là cooperative. `Task.cancel()` chỉ đánh dấu trạng thái; code cần chạm cancellation-aware suspension point hoặc tự gọi `Task.checkCancellation()`.
-
-Timeout có thể model bằng task group/race giữa operation và clock tùy toolchain/API. Không dùng `DispatchQueue.asyncAfter` như default cho async logic mới nếu Clock/Task sleep đáp ứng được.
-
-Khi fan-out nhiều request, giới hạn concurrency nếu số item lớn. Tạo hàng chục nghìn child task cùng lúc có thể gây pressure dù structured concurrency đúng về mặt semantics.
-
-# 26. Networking: upload, download, cache, cookie và delegate
-
-Ngoài `data(for:)`, URLSession có upload/download task, streaming bytes và delegate cho authentication challenge, progress hoặc background transfer. `URLCache` tuân theo HTTP caching semantics; app không nên tự cache response vô điều kiện nếu server header nói khác, trừ khi có layer cache domain riêng với policy rõ.
-
-Cookie-based auth và token-based auth có lifecycle khác nhau. `HTTPCookieStorage` và session configuration quyết định cookie persistence. Với token, hãy tránh đọc Keychain cho từng byte/request nếu có thể giữ snapshot an toàn trong memory và update nhất quán.
-
-# 27. SwiftData 2026: query, index, history và observation
-
-SwiftData không chỉ là `@Model` + `@Query`. Các bản mới hỗ trợ index/unique constraint, persistent history và tiếp tục bổ sung khả năng query/observe. Trong 2026, SwiftData có thêm sectioned query, hỗ trợ attribute `Codable` theo schema option, `ResultsObserver` cho real-time result matching và `HistoryObserver` cho remote model changes.
-
-Điểm thiết kế quan trọng là persistence query không nên len vào toàn bộ view tree nếu feature cần domain rule/testability. Với màn hình đơn giản, `@Query` trực tiếp rất ergonomic; với logic đồng bộ phức tạp, repository/store boundary có thể hợp lý hơn.
-
-# 28. Animation trung cấp: transaction, phase và matched geometry
-
-Animation không nên chỉ là `.animation(.default, value:)` khắp nơi. `Transaction` cho phép điều chỉnh animation theo update context. `matchedGeometryEffect` hoặc API transition hiện đại giúp chuyển continuity giữa layout, nhưng identity và namespace phải ổn định.
-
-Animation production cần tôn trọng Reduce Motion. Motion không nên che latency network hay trì hoãn interaction vô lý.
-
-# 29. Environment, dependency scope và test override
-
-Environment rất mạnh cho dependency theo view hierarchy, nhưng dependency bắt buộc của domain object nên được truyền explicit ở initializer để compiler đảm bảo object không tồn tại ở trạng thái thiếu dependency.
-
-Một pattern hữu ích là root composition tạo concrete services, sau đó inject xuống feature. Test có thể thay API client bằng fake in-memory mà không cần global singleton.
-
-# 30. Swift Package Manager trung cấp và module boundaries
-
-Package target tạo module boundary thực sự. Khi modularize app, hãy tránh cycle dependency và tránh một `Core` khổng lồ chứa mọi thứ. Một module tốt có trách nhiệm/cohesion rõ, public API nhỏ và không buộc consumer import dependency nội bộ không cần thiết.
-
-Swift 6.4 sử dụng Swift Build làm default trong SwiftPM. Với package đa nền tảng, hãy khai báo `platforms`, conditional dependency/compilation rõ ràng và kiểm tra `#if canImport(...)` chỉ tại boundary cần thiết.
-
-# 31. Conditional compilation và availability
-
-Compile-time condition khác runtime availability:
+# 38. Availability và conditional compilation
 
 ```swift
 #if DEBUG
@@ -714,27 +871,31 @@ let endpoint = URL(string: "https://staging.example.com")!
 #endif
 
 if #available(iOS 27, *) {
-    // API runtime mới
+    // runtime API mới
 }
 ```
 
-`#if os(iOS)`, `targetEnvironment(simulator)`, `canImport` quyết định source được compile. `#available` quyết định branch runtime theo OS version. Nhầm hai loại này là lỗi khá phổ biến khi làm framework multi-platform.
+`#if` chọn source lúc compile; `#available` chọn branch runtime. Đừng dùng compile-time condition để giả lập runtime availability.
 
-# 32. Sanitizers và diagnostics
+---
 
-Xcode cung cấp Address Sanitizer, Thread Sanitizer và các runtime diagnostic khác. Address Sanitizer đặc biệt hữu ích khi có C/C++/unsafe memory bridge. Thread Sanitizer tìm data race ở runtime nhưng không thay Swift 6 compile-time isolation checking; hai lớp này bổ sung nhau.
+# 39. Intermediate capstone — feature có ownership hoàn chỉnh
 
-Main Thread Checker giúp phát hiện một số UIKit/AppKit API bị gọi sai thread. Với Swift concurrency, actor isolation là mental model chính, nhưng diagnostic runtime vẫn có giá trị cho legacy API.
+Hãy xây một feature Catalog/Search đủ các path: list + detail + search debounce + pagination + cache/persistence + login token mock + deep link.
 
-# 33. Testability của time, UUID, random và side effect
+Yêu cầu architecture không phải số layer mà là bạn phải chỉ được trên code:
 
-Code khó test thường không phải do “thiếu protocol” mà do đọc dependency không kiểm soát như `Date.now`, UUID random, global singleton, notification hoặc filesystem trực tiếp.
+1. owner của observable feature state;
+2. task search nào bị cancel khi query đổi;
+3. state nào actor-isolated và vì sao;
+4. data nào crossing actor boundary và có Sendable semantics ra sao;
+5. UI state nào derived, state nào persisted/server source of truth;
+6. network retry/auth refresh nằm ở đâu;
+7. SwiftData/Core Data object có crossing context/isolation không;
+8. UIKit bridge nếu có, coordinator/lifetime nằm ở đâu;
+9. test cancellation, error, duplicate request và state transition thế nào.
 
-Hãy inject clock/generator khi behavior phụ thuộc chúng. Ví dụ, thay vì domain function tự gọi `Date()`, nhận `now` hoặc dependency clock. Test sẽ deterministic và không cần sleep.
-
-# 34. Intermediate capstone architecture
-
-Một feature production-size vừa phải có thể tổ chức theo chiều dọc:
+Một cấu trúc feature có thể theo chiều dọc:
 
 ```text
 FeatureCatalog/
@@ -742,9 +903,13 @@ FeatureCatalog/
   CatalogModel.swift
   CatalogRoute.swift
   CatalogService.swift
-  CatalogRepository.swift   // chỉ khi thực sự cần data-source abstraction
+  CatalogRepository.swift   // chỉ nếu data-source abstraction có giá trị
   Models/
   Tests/
 ```
 
-Từ level này, mục tiêu không còn là “mỗi pattern một folder” mà là để người đọc nhìn một feature và biết state ở đâu, event đi đâu, side effect chạy ở đâu, dependency được cấp ở đâu, và test điểm nào.
+## Checklist trước khi sang Advanced/Senior
+
+Bạn phải giải thích được sự khác nhau giữa structured child task, `Task {}` và detached task; actor reentrancy; MainActor isolation; `Sendable`/`@Sendable`; cancellation; `@State` ownership; `@Binding` projection; `@Bindable`; observable reference lifetime; view identity; `.task(id:)`; persistence context boundary; HTTP retry/idempotency; và vì sao architecture tốt làm state/effect/dependency flow rõ chứ không chỉ nhiều protocol.
+
+Nếu một compiler concurrency warning chỉ được “sửa” bằng annotation mà bạn không giải thích được ownership/isolation trước và sau thay đổi, hãy xem đó là kiến thức chưa hoàn thành chứ không phải compiler khó tính.
