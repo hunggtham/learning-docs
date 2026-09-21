@@ -1,62 +1,93 @@
-# Logic và chứng minh
+# Logic và chứng minh: ngôn ngữ của suy luận đúng
 
-Logic (Logic / 논리) là hạ tầng của suy luận toán học. Nó không quyết định tiền đề của ta có đúng ngoài đời hay không; nó quyết định nếu chấp nhận các tiền đề đó thì kết luận nào bắt buộc theo sau. Điều này giống một type checker cho reasoning: nó không đảm bảo business requirement đúng, nhưng có thể phát hiện những phép suy luận không hợp lệ trong hệ quy tắc đã định.
+Logic (logic / 논리) không nói một tiền đề có đúng ngoài đời hay không. Nó trả lời câu hỏi khác: **nếu chấp nhận các tiền đề hiện có, kết luận nào thực sự theo sau?** Đây là lý do logic đứng trước proof, discrete mathematics, algorithms, probability, database predicates và formal verification.
 
-## Mệnh đề và giá trị chân lý
-
-Mệnh đề (Proposition / 명제) là câu có thể được gán giá trị đúng hoặc sai trong ngữ cảnh xác định. “7 là số nguyên tố” là mệnh đề. “Hãy mở cửa” không phải mệnh đề vì đó là mệnh lệnh. “x > 3” chưa phải một mệnh đề hoàn chỉnh nếu chưa biết `x` hoặc chưa lượng hóa nó.
-
-Ký hiệu thường dùng:
+Một cách nhìn hữu ích là tách ba tầng:
 
 ```text
-p, q, r
+mô hình / giả định
+→ quy tắc suy luận
+→ kết luận
 ```
 
-để đại diện cho các mệnh đề.
+Nếu assumption sai, reasoning hoàn hảo vẫn có thể cho conclusion vô ích. Nếu assumption đúng nhưng inference sai, conclusion không được bảo đảm. Vì vậy mathematical rigor không thay thế modeling judgment; hai việc giải quyết hai loại lỗi khác nhau.
 
-## Phủ định
+## 1. Mệnh đề: đơn vị cơ bản của reasoning
 
-Phủ định (Negation / 부정) của `p`, ký hiệu
+Mệnh đề (proposition / 명제) là câu có thể được gán giá trị đúng hoặc sai trong một ngữ cảnh xác định.
+
+“7 là số nguyên tố” là một proposition. “Mở cửa đi” không phải proposition vì đó là command. Câu `x > 3` chưa phải một proposition hoàn chỉnh nếu `x` chưa được gán hoặc chưa được lượng hóa.
+
+Ta thường ký hiệu propositions bằng `p`, `q`, `r`.
+
+Phủ định (negation / 부정) của `p` được viết
 
 ```math
-\neg p
+\neg p.
 ```
 
-có giá trị chân lý ngược lại với `p`.
-
-Nếu `p` là “x > 5”, phủ định chính xác là
+Nếu `p` là `x>5`, phủ định chính xác là
 
 ```math
-x \le 5
+x\le 5,
 ```
 
-không phải chỉ `x < 5`, vì trường hợp `x=5` cũng phải nằm trong phủ định.
+không phải chỉ `x<5`, vì phủ định phải bao phủ **mọi case không thuộc statement gốc**.
 
-## AND, OR và XOR
+Đây là một pattern quan trọng: khi negate một claim, ta không đoán câu “nghe đối lập”; ta lấy complement logic của toàn bộ condition.
 
-Phép hội (Conjunction / 논리곱) `p∧q` đúng khi cả hai đúng.
+## 2. AND, OR, XOR và cách conditions tạo cấu trúc
 
-Phép tuyển (Disjunction / 논리합) `p∨q` trong logic toán thường là inclusive OR: đúng nếu ít nhất một trong hai đúng, kể cả khi cả hai đều đúng.
+Phép hội (conjunction / 논리곱)
 
-XOR (Exclusive OR / 배타적 논리합) đúng khi chính xác một trong hai đúng.
+```math
+p\land q
+```
 
-Trong programming, khác biệt inclusive OR và XOR xuất hiện trực tiếp trong boolean expressions và bit operations.
+chỉ đúng khi cả `p` và `q` đúng.
 
-## Implication: nếu p thì q
+Phép tuyển (disjunction / 논리합)
 
-Mệnh đề kéo theo (Implication / 함의)
+```math
+p\lor q
+```
+
+trong toán học thường là inclusive OR: ít nhất một proposition đúng, kể cả trường hợp cả hai cùng đúng.
+
+XOR (exclusive OR / 배타적 논리합) chỉ đúng khi chính xác một trong hai đúng.
+
+Điểm đáng học không phải bảng truth table riêng lẻ mà là việc **compound condition có thể được xem như một object toán học**. Điều này nối trực tiếp sang Boolean algebra, circuit design, SQL predicates và program guards.
+
+## 3. Implication: statement về việc counterexample không được phép tồn tại
+
+Implication
 
 ```math
 p\Rightarrow q
 ```
 
-chỉ sai khi `p` đúng nhưng `q` sai.
+thường được đọc “nếu `p` thì `q`”. Nó chỉ sai khi `p` đúng và `q` sai.
 
-Điều này ban đầu dễ gây khó hiểu. Tại sao nếu `p` sai thì implication được xem là đúng? Vì implication tuyên bố rằng không tồn tại trường hợp `p` xảy ra mà `q` không xảy ra. Nếu `p` không xảy ra, ta chưa tìm được counterexample cho claim đó.
+Tại sao khi `p` sai implication lại không bị xem là sai? Vì claim thực chất nói:
 
-Trong requirements, “nếu user là admin thì user được phép truy cập” không nói gì về non-admin. Một lỗi reasoning phổ biến là suy ngược rằng “nếu được phép truy cập thì chắc chắn là admin”. Điều đó không đi theo implication ban đầu.
+> Không tồn tại trường hợp nào `p` xảy ra nhưng `q` không xảy ra.
 
-## Converse, inverse và contrapositive
+Một counterexample của `p→q` phải thỏa
+
+```text
+p = true
+q = false
+```
+
+Ví dụ:
+
+> Nếu một integer chia hết cho 4 thì nó chẵn.
+
+Muốn bác bỏ, cần tìm một số chia hết cho 4 nhưng không chẵn. Không tìm được chỉ bằng vài examples chưa phải proof, nhưng nó cho ta biết **dạng counterexample cần tìm**.
+
+Trong software requirements, “nếu user là admin thì có quyền X” không nói rằng chỉ admin mới có quyền X. Suy ngược thành “có quyền X ⇒ admin” là đổi implication thành converse mà không có cơ sở.
+
+## 4. Converse, inverse, contrapositive
 
 Từ
 
@@ -64,37 +95,49 @@ Từ
 p\Rightarrow q
 ```
 
-ta có converse
+converse là
 
 ```math
-q\Rightarrow p
+q\Rightarrow p,
 ```
 
-và contrapositive
+inverse là
 
 ```math
-\neg q\Rightarrow \neg p.
+\neg p\Rightarrow\neg q,
 ```
 
-Implication ban đầu luôn logically equivalent với contrapositive, nhưng không nhất thiết equivalent với converse.
+và contrapositive là
+
+```math
+\neg q\Rightarrow\neg p.
+```
+
+Original implication luôn equivalent với contrapositive:
+
+```math
+p\Rightarrow q
+\iff
+\neg q\Rightarrow\neg p.
+```
+
+Đây không phải mẹo proof. Nó đến từ việc hai statements loại trừ cùng một bad case: `p` đúng nhưng `q` sai.
 
 Ví dụ:
 
-> Nếu một integer chia hết cho 4 thì nó chẵn.
+> Nếu `n` chia hết cho 4 thì `n` chẵn.
 
 Contrapositive:
 
-> Nếu integer không chẵn thì nó không chia hết cho 4.
-
-đúng.
+> Nếu `n` không chẵn thì `n` không chia hết cho 4.
 
 Converse:
 
-> Nếu integer chẵn thì nó chia hết cho 4.
+> Nếu `n` chẵn thì `n` chia hết cho 4.
 
-sai; `6` là counterexample.
+sai vì `6` là counterexample.
 
-## Necessary và sufficient
+## 5. Necessary và sufficient conditions
 
 Nếu
 
@@ -104,35 +147,44 @@ p\Rightarrow q,
 
 thì `p` là sufficient condition cho `q`, còn `q` là necessary condition cho `p`.
 
-Ví dụ chia hết cho 4 là sufficient để chẵn. Chẵn là necessary để chia hết cho 4.
+“Chia hết cho 4” đủ để kết luận chẵn. “Chẵn” là điều cần nếu muốn chia hết cho 4.
 
-Nếu cả hai chiều đúng:
-
-```math
-p\Leftrightarrow q
-```
-
-ta có “if and only if”, hay điều kiện cần và đủ (Necessary and sufficient condition / 필요충분조건).
-
-## Quantifiers
-
-Lượng từ phổ quát (Universal quantifier / 전칭 기호)
+Nếu cả hai chiều đều đúng:
 
 ```math
-\forall x
+p\Leftrightarrow q,
 ```
 
-nghĩa là “với mọi x”.
+ta có điều kiện cần và đủ (necessary and sufficient condition / 필요충분조건).
 
-Lượng từ tồn tại (Existential quantifier / 존재 기호)
+Một proof của `p↔q` thường cần hai proof riêng:
+
+```text
+p → q
+q → p
+```
+
+Đây là pattern thường xuyên trong set equality, invertibility, characterization theorems và equivalence of algorithm conditions.
+
+## 6. Quantifiers: nơi rất nhiều proof sai
+
+Lượng từ phổ quát (universal quantifier / 전칭 기호)
 
 ```math
-\exists x
+\forall x\,P(x)
 ```
 
-nghĩa là “tồn tại ít nhất một x”.
+nghĩa “với mọi `x`, `P(x)` đúng”.
 
-Negation phải đổi quantifier:
+Lượng từ tồn tại (existential quantifier / 존재 기호)
+
+```math
+\exists x\,P(x)
+```
+
+nghĩa “tồn tại ít nhất một `x` sao cho `P(x)` đúng”.
+
+Negation đổi quantifier:
 
 ```math
 \neg(\forall x\,P(x))
@@ -140,9 +192,7 @@ Negation phải đổi quantifier:
 \exists x\,\neg P(x)
 ```
 
-Tức “không phải mọi request đều thành công” nghĩa là “có ít nhất một request không thành công”.
-
-Tương tự:
+và
 
 ```math
 \neg(\exists x\,P(x))
@@ -150,9 +200,29 @@ Tương tự:
 \forall x\,\neg P(x).
 ```
 
-## De Morgan's laws
+Vì vậy một universal claim có thể bị phá chỉ bằng **một counterexample**.
 
-Cho propositions:
+Ngược lại, để chứng minh existential claim, chỉ cần xây được một witness hợp lệ.
+
+Thứ tự quantifier cũng quan trọng. Hai statements
+
+```math
+\forall x\,\exists y\,P(x,y)
+```
+
+và
+
+```math
+\exists y\,\forall x\,P(x,y)
+```
+
+thường rất khác nhau. Statement đầu cho phép chọn `y` khác nhau cho từng `x`; statement sau đòi một `y` duy nhất hoạt động cho mọi `x`.
+
+Đây là source của nhiều nhầm lẫn trong analysis, algorithms và optimization guarantees.
+
+## 7. De Morgan: logic của complement
+
+De Morgan cho propositions:
 
 ```math
 \neg(p\land q)
@@ -160,31 +230,43 @@ Cho propositions:
 \neg p\lor\neg q
 ```
 
-và
-
 ```math
 \neg(p\lor q)
 \equiv
 \neg p\land\neg q.
 ```
 
-Trong set theory, cùng cấu trúc trở thành De Morgan cho union/intersection. Trong code, nó giúp refactor conditions:
+Cùng structure xuất hiện trong set theory:
+
+```math
+(A\cap B)^c=A^c\cup B^c
+```
+
+```math
+(A\cup B)^c=A^c\cap B^c.
+```
+
+Và trong code:
 
 ```text
 !(isAdmin && isActive)
 ```
 
-tương đương
+logic-equivalent với
 
 ```text
 !isAdmin || !isActive
 ```
 
-## Direct proof
+nhưng runtime behavior có thể khác nếu expressions có side effects hoặc short-circuit semantics phức tạp. Đây là ví dụ cho distinction giữa **logical equivalence** và **operational equivalence**.
 
-Direct proof bắt đầu từ assumptions rồi dùng định nghĩa và kết quả đã biết.
+## 8. Proof không phải một format duy nhất
 
-Chứng minh tổng hai số chẵn là chẵn. Cho
+Proof là chuỗi reasoning biến assumptions thành conclusion bằng các bước hợp lệ. Method được chọn theo structure của claim.
+
+### Direct proof
+
+Muốn chứng minh tổng hai số chẵn là chẵn, dùng definition:
 
 ```math
 a=2m,\qquad b=2n.
@@ -193,43 +275,71 @@ a=2m,\qquad b=2n.
 Khi đó
 
 ```math
-a+b=2(m+n)
+a+b=2(m+n),
 ```
 
-nên là số chẵn.
+mà `m+n` là integer, nên `a+b` chẵn.
 
-Điểm mạnh nằm ở việc dùng definition “even = 2×integer”.
+Proof mạnh vì nó expose structure “even = 2×integer”, không vì nó dài.
 
-## Proof by contradiction
+### Proof by contrapositive
 
-Chứng minh phản chứng (Proof by contradiction / 귀류법) giả sử phủ định của điều muốn chứng minh, rồi dẫn tới contradiction.
+Muốn chứng minh `p→q`, đôi khi `¬q→¬p` dễ hơn.
 
-Ví dụ kinh điển: `√2` là irrational. Giả sử
+Ví dụ: nếu `n^2` chẵn thì `n` chẵn. Contrapositive là: nếu `n` lẻ thì `n^2` lẻ.
+
+Viết `n=2k+1`:
+
+```math
+n^2=(2k+1)^2=4k^2+4k+1=2(2k^2+2k)+1,
+```
+
+nên lẻ.
+
+### Proof by contradiction
+
+Giả sử phủ định của conclusion rồi derive impossibility.
+
+Proof `\sqrt2` irrational là example kinh điển. Nếu
 
 ```math
 \sqrt2=\frac ab
 ```
 
-với `a,b` là integers tối giản. Bình phương:
+ở lowest terms, thì từ
 
 ```math
-a^2=2b^2.
+a^2=2b^2
 ```
 
-`a^2` chẵn nên `a` chẵn; đặt `a=2k`. Khi đó
+suy ra cả `a` và `b` chẵn, mâu thuẫn với lowest terms.
 
-```math
-4k^2=2b^2
-\Rightarrow b^2=2k^2,
-```
+Contradiction proof đặc biệt hữu ích khi statement nói một object **không thể tồn tại**.
 
-nên `b` cũng chẵn. Vậy `a,b` cùng có factor 2, mâu thuẫn với giả định phân số tối giản.
+### Proof by cases
 
-## Mathematical induction
+Khi domain tự nhiên chia thành finite cases, proof từng case có thể hợp lý. Ví dụ integer hoặc chẵn hoặc lẻ.
 
-Quy nạp toán học (Mathematical induction / 수학적 귀납법) chứng minh statement `P(n)` cho integers bằng hai bước: base case và inductive step.
+Điểm quan trọng là cases phải **exhaustive** và ideally disjoint để không bỏ sót trạng thái.
 
-Ví dụ
+### Existence proof
+
+Có hai kiểu chính.
+
+Constructive proof đưa ra object cụ thể.
+
+Non-constructive proof chứng minh object phải tồn tại mà không nhất thiết cho algorithm để tìm nó.
+
+Mathematics chấp nhận cả hai; computer science thường quan tâm thêm câu hỏi computational: “tồn tại” có đi kèm cách tìm hiệu quả không?
+
+## 9. Mathematical induction: proof trên recursive structure
+
+Quy nạp toán học (mathematical induction / 수학적 귀납법) có hai phần:
+
+1. base case;
+2. inductive step `P(k)→P(k+1)`.
+
+Ví dụ:
 
 ```math
 1+2+\cdots+n=\frac{n(n+1)}2.
@@ -237,41 +347,106 @@ Ví dụ
 
 Base case `n=1` đúng.
 
-Giả sử đúng cho `n=k`:
+Giả sử
 
 ```math
 1+\cdots+k=\frac{k(k+1)}2.
 ```
 
-Với `k+1`:
+Khi đó
 
 ```math
 1+\cdots+k+(k+1)
 =
 \frac{k(k+1)}2+(k+1)
-```
-
-```math
-=
-(k+1)\left(\frac k2+1\right)
 =
 \frac{(k+1)(k+2)}2.
 ```
 
-Nên statement đúng cho `k+1`.
+Induction không nói “statement đúng cho `k` vì ta muốn thế”. Inductive hypothesis là assumption **cục bộ trong bước chứng minh implication**.
 
-Induction rất gần recursive reasoning trong computer science: nếu base case đúng và một instance đúng kéo theo next instance đúng, chain bao phủ toàn bộ domain.
+Strong induction cho phép giả sử statement đúng cho mọi values nhỏ hơn `n`, rất tự nhiên trong divide-and-conquer và recurrence proofs.
 
-## Proof và testing không thay thế nhau
+Structural induction áp cùng idea cho trees, syntax trees, recursive data structures và formal languages.
 
-Testing nhiều input có thể tăng confidence nhưng không chứng minh một universal statement trên infinite input domain. Proof có thể chứng minh algorithm đúng theo specification, nhưng proof không đảm bảo specification phản ánh đúng nhu cầu business hoặc code không có lỗi implementation nếu proof chỉ áp dụng cho model khác.
+## 10. Invariants: proof bằng điều không đổi
 
-Formal verification cố thu hẹp khoảng cách này bằng cách biểu diễn specification và implementation trong systems có thể reasoning machine-checkable.
+Invariant là property được giữ qua mỗi transformation hoặc iteration.
+
+Trong loop proof, ta thường có:
+
+```text
+initialization
+→ maintenance
+→ termination
+```
+
+Đây chính là induction trên số iteration.
+
+Trong algorithms, chọn đúng invariant thường khó hơn algebra sau đó. Ví dụ binary search giữ invariant rằng nếu target tồn tại thì nó vẫn nằm trong current interval.
+
+Trong physics, conservation laws đóng vai trò tương tự ở level model: một quantity không đổi dưới dynamics nhất định.
+
+## 11. Counterexample: công cụ mạnh nhất để phá universal claim
+
+Nếu claim là
+
+```math
+\forall x\,P(x),
+```
+
+chỉ cần một `x` sao cho `P(x)` sai.
+
+Ví dụ claim “mọi prime đều lẻ” bị phá bởi `2`.
+
+Counterexample không chỉ dùng để bác bỏ. Khi tìm counterexample, ta thường học được assumption nào còn thiếu để theorem trở thành đúng.
+
+Đây là workflow rất mạnh:
+
+```text
+conjecture
+→ search edge cases
+→ counterexample
+→ identify missing assumption
+→ refine theorem
+```
+
+Nó giống debugging specification trong software.
+
+## 12. Proof idea và formal proof
+
+Một proof tốt thường có hai layers.
+
+**Proof idea** giải thích mechanism chính: invariant nào, contradiction nào, decomposition nào, induction measure nào.
+
+**Formal proof** đảm bảo không có logical gap.
+
+Nếu chỉ có formal symbols mà không có proof idea, người học khó transfer reasoning. Nếu chỉ có intuition mà không kiểm tra details, edge case có thể bị bỏ sót.
+
+Tài liệu này ưu tiên intuition trước, nhưng formalism xuất hiện sau đó để khóa reasoning lại.
+
+## 13. Proof, testing và formal verification
+
+Testing kiểm tra finite examples. Một test suite tốt có thể tăng confidence rất nhiều nhưng không chứng minh universal property trên infinite input domain.
+
+Proof có thể chứng minh property của một model hoặc algorithm, nhưng không bảo đảm implementation thực tế đúng nếu model/specification không match code.
+
+Formal verification cố đưa specification, program semantics và proof vào một system machine-checkable. Tuy nhiên verification vẫn phụ thuộc vào correctness của specification và abstraction boundary.
+
+## 14. Connection với Probability và Statistics
+
+Logic xử lý truth dưới assumptions; probability mở rộng sang uncertainty về events. Event operations dùng cùng AND/OR/NOT structure:
+
+```math
+P(A\cap B),\qquad P(A\cup B),\qquad P(A^c).
+```
+
+Bayes reasoning cũng phụ thuộc vào việc condition/event được định nghĩa chính xác. Nếu events mơ hồ, công thức đúng vẫn cho answer không meaningful.
 
 ## Mental Model
 
-> Logic là hệ thống quản lý “được phép kết luận gì từ điều gì”. Proof là chương trình chạy trong hệ thống đó: assumptions là input, inference rules là operations, theorem là output.
+> Logic quản lý **đường đi hợp lệ từ assumptions đến conclusions**. Proof là một chương trình reasoning: definition tạo objects, inference rules là operations, invariant/contradiction/induction là control structures, và theorem là output. Một proof tốt không chỉ đúng; nó làm lộ mechanism khiến statement buộc phải đúng.
 
 ## Common Misconceptions
 
-`p→q` không có nghĩa `q→p`. “Không chứng minh được p” không tự động chứng minh `¬p`. Một nghìn example phù hợp không thay proof cho universal claim, trong khi một counterexample hợp lệ đủ để phá universal claim.
+`p→q` không cho phép suy `q→p`. Không tìm được proof của `p` không đồng nghĩa `¬p`. Nhiều examples phù hợp không thay proof cho universal claim, nhưng một counterexample hợp lệ đủ để phá claim đó. Inductive hypothesis không phải circular reasoning; nó là assumption trong proof của implication `P(k)→P(k+1)`. Formal proof không tự đảm bảo model ban đầu mô tả đúng reality.

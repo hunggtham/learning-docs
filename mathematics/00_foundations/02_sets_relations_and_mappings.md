@@ -1,10 +1,23 @@
-# Tập hợp, quan hệ và ánh xạ
+# Tập hợp, quan hệ và ánh xạ: từ membership đến cấu trúc
 
-Tập hợp (Set / 집합) là một cách gom các đối tượng theo membership. Ý tưởng nghe đơn giản nhưng nó là hạ tầng chung cho phần lớn toán học hiện đại: domain của hàm là một set, solution của equation là một set, rows thỏa `WHERE` tạo một subset của table result, và probability event cũng được mô hình hóa như subset của sample space.
+Tập hợp (set / 집합), quan hệ (relation / 관계) và ánh xạ (mapping / 사상) là ba lớp abstraction xuất hiện gần như khắp toán học và Computer Science. Set trả lời **đối tượng nào đang thuộc universe ta xét**. Relation trả lời **những cặp nào được xem là có liên hệ**. Function/mapping thêm discipline: **mỗi input phải đi tới đúng một output**.
 
-## Membership
+Điểm quan trọng là ba concept này không phải ba chapter rời nhau. Chúng tạo một dependency chain:
 
-Nếu `x` thuộc set `A`, viết
+```text
+membership
+→ subset
+→ product space
+→ relation
+→ equivalence / order
+→ function
+→ injective / surjective / bijective
+→ quotient / inverse / structure preservation
+```
+
+## 1. Set là abstraction về membership
+
+Nếu `x` thuộc set `A`:
 
 ```math
 x\in A.
@@ -16,95 +29,120 @@ Nếu không:
 x\notin A.
 ```
 
-Set quan tâm membership chứ không quan tâm order và duplicate theo definition thông thường. `{1,2,2,3}` biểu diễn cùng set với `{1,2,3}`.
+Ordinary set không quan tâm order hay duplicate. `{1,2,2,3}` biểu diễn cùng set với `{1,2,3}`.
 
-Điều này khác list/array trong programming, nơi order và duplicates thường có ý nghĩa.
+Điều này khác list/array, nơi order và multiplicity thường là part of meaning.
 
-## Subset
+Set abstraction mạnh vì nó cho phép ta tách **identity của elements** khỏi **cách lưu trữ chúng**. Trong probability, event là subset của sample space. Trong optimization, feasible set chứa mọi decision hợp lệ. Trong databases, một query predicate chọn một subset của rows về mặt conceptual, dù SQL thực tế có bag semantics và NULL.
 
-`A` là subset của `B` nếu mọi element của `A` cũng thuộc `B`:
+## 2. Subset: universal statement dưới dạng set language
 
-```math
-A\subseteq B.
-```
-
-Nếu `A⊆B` và `B⊆A` thì
+`A` là subset của `B` nếu
 
 ```math
-A=B.
+A\subseteq B
 ```
 
-Đây là phương pháp phổ biến để chứng minh hai sets bằng nhau: chứng minh containment theo cả hai hướng.
+nghĩa là
 
-## Empty set
+```math
+\forall x\;(x\in A\Rightarrow x\in B).
+```
 
-Tập rỗng (Empty set / 공집합)
+Đây là connection trực tiếp giữa set theory và logic.
+
+Muốn chứng minh hai sets bằng nhau, strategy canonical là **double inclusion**:
+
+```text
+A ⊆ B
+B ⊆ A
+```
+
+Vì set được xác định hoàn toàn bởi membership, nếu hai sets chứa đúng cùng elements thì chúng bằng nhau.
+
+## 3. Empty set và vacuous truth
+
+Tập rỗng (empty set / 공집합)
 
 ```math
 \varnothing
 ```
 
-không có element nào.
+là subset của mọi set.
 
-Nó là subset của mọi set. Lý do đến từ logic: để bác bỏ `∅⊆A`, cần tìm một element thuộc `∅` nhưng không thuộc `A`; nhưng không có element nào để làm counterexample.
+Lý do không phải convention tùy ý. `∅⊆A` nghĩa:
 
-## Union, intersection và difference
+```math
+\forall x\;(x\in\varnothing\Rightarrow x\in A).
+```
 
-Hợp (Union / 합집합):
+Không có `x` nào thuộc `∅`, nên không tồn tại counterexample làm implication sai.
+
+Đây là ví dụ quan trọng của vacuous truth. Cùng pattern xuất hiện trong graph theory, universal quantification và proofs trên empty structures.
+
+## 4. Union, intersection, difference và complement
+
+Union:
 
 ```math
 A\cup B
 ```
 
-gồm elements thuộc `A` hoặc `B` hoặc cả hai.
+chứa elements thuộc `A` hoặc `B` hoặc cả hai.
 
-Giao (Intersection / 교집합):
+Intersection:
 
 ```math
 A\cap B
 ```
 
-gồm elements thuộc cả hai.
+chứa elements thuộc cả hai.
 
-Hiệu (Set difference / 차집합):
+Difference:
 
 ```math
 A\setminus B
 ```
 
-gồm elements thuộc `A` nhưng không thuộc `B`.
+chứa elements thuộc `A` nhưng không thuộc `B`.
 
-Các operations này có connection trực tiếp với boolean logic và database filtering.
-
-## Complement
-
-Nếu có universe `U`, complement của `A` là
+Nếu có universe `U`, complement:
 
 ```math
 A^c=U\setminus A.
 ```
 
-De Morgan:
+Membership biến các identities này thành Boolean logic. Ví dụ:
+
+```math
+x\in(A\cap B)
+\iff
+(x\in A)\land(x\in B).
+```
+
+Do đó De Morgan cho sets:
 
 ```math
 (A\cup B)^c=A^c\cap B^c
 ```
 
+và
+
 ```math
 (A\cap B)^c=A^c\cup B^c.
 ```
 
-Cấu trúc này giống boolean conditions vì membership có thể xem như true/false.
+không phải hai formula ngẫu nhiên; chúng là De Morgan logic applied vào membership predicates.
 
-## Cartesian product
+## 5. Cartesian product tạo không gian của possible pairs
 
-Tích Descartes (Cartesian product / 데카르트 곱)
+Tích Descartes (Cartesian product / 데카르트 곱):
 
 ```math
 A\times B
+=
+\{(a,b):a\in A,b\in B\}.
 ```
-
-là set của ordered pairs `(a,b)` với `a∈A,b∈B`.
 
 Nếu
 
@@ -116,46 +154,84 @@ B={x,y}
 thì
 
 ```text
-A×B={(1,x),(1,y),(2,x),(2,y)}
+A×B={(1,x),(1,y),(2,x),(2,y)}.
 ```
 
-Cartesian product là nền để định nghĩa relation và function.
+Cartesian product quan trọng vì nó tạo universe cho relation.
 
-## Relation
-
-Quan hệ (Relation / 관계) từ `A` tới `B` là một subset của
-
-```math
-A\times B.
-```
-
-Tức relation chỉ định cặp nào được xem là có liên hệ.
-
-Ví dụ relation “user follows user” trong social network là subset của
+Ví dụ:
 
 ```text
-Users × Users
+Users × Products
 ```
 
-Relation “employee worksFor company” là subset của
+là mọi user-product pairs có thể có. “User purchased product” chỉ chọn một subset của possible pairs đó.
+
+Trong probability, joint sample space thường là product của component spaces khi model phù hợp. Trong state machines, state-action pairs cũng có product structure.
+
+## 6. Relation là subset của product space
+
+Một binary relation `R` từ `A` tới `B` là
+
+```math
+R\subseteq A\times B.
+```
+
+Nếu `(a,b)∈R`, ta nói `a` liên hệ với `b`.
+
+Ví dụ relation “employee works for company” là subset của
 
 ```text
 Employees × Companies.
 ```
 
-Database relation trong relational model có conceptual connection với set of tuples, mặc dù SQL implementation có thêm concerns như duplicates và NULL.
+Relation “user follows user” là subset của
 
-## Equivalence relation
+```text
+Users × Users.
+```
 
-Một equivalence relation (Quan hệ tương đương / 동치관계) có ba properties:
+Graph directed cũng có thể nhìn như relation trên vertices: edge `(u,v)` nghĩa `uRv`.
 
-- reflexive: `a~a`;
-- symmetric: `a~b ⇒ b~a`;
-- transitive: `a~b` và `b~c ⇒ a~c`.
+Đây là reason graph theory, database relations và order relations có family resemblance: tất cả đều bắt đầu từ **which tuples are allowed**.
 
-Nó partition set thành equivalence classes.
+## 7. Properties của relation và ý nghĩa structural
 
-Ví dụ integers cùng remainder modulo 3:
+### Reflexive
+
+```math
+aRa
+```
+
+cho mọi `a`.
+
+### Symmetric
+
+```math
+aRb\Rightarrow bRa.
+```
+
+### Antisymmetric
+
+```math
+aRb\land bRa\Rightarrow a=b.
+```
+
+Antisymmetric không có nghĩa “không symmetric”; nó nói mutual relation giữa distinct elements bị cấm.
+
+### Transitive
+
+```math
+aRb\land bRc\Rightarrow aRc.
+```
+
+Những properties này không chỉ là checklist. Chúng quyết định relation tạo ra structure gì.
+
+## 8. Equivalence relation: formal hóa “khác representation nhưng cùng object class”
+
+Equivalence relation (quan hệ tương đương / 동치관계) là reflexive, symmetric và transitive.
+
+Ví dụ modulo 3:
 
 ```math
 a\sim b
@@ -163,80 +239,255 @@ a\sim b
 3\mid(a-b).
 ```
 
-Mỗi integer rơi vào một trong ba classes remainder `0,1,2`.
+Integers được partition thành ba equivalence classes:
 
-Đây là nền cho modular arithmetic.
+```text
+[0], [1], [2]
+```
 
-## Order relation
+Mọi integer nằm đúng một class.
 
-Quan hệ thứ tự (Order relation / 순서관계) mô tả notion “trước/sau”, “nhỏ/lớn” hoặc dependency.
+Điểm sâu là equivalence relation cho phép ta **collapse details không quan trọng**. Thay vì phân biệt mọi integer, modulo 3 chỉ giữ remainder class.
 
-Partial order không yêu cầu mọi pair đều comparable. Trong Git commit DAG, một commit có thể là ancestor của commit khác, nhưng hai commits ở hai branches có thể không phải ancestor của nhau. Dependency graphs và package version constraints thường có structures gần partial order.
+Cùng idea xuất hiện khi:
 
-## Mapping và function
+- coi fractions `1/2` và `2/4` là cùng rational number;
+- coi vectors khác nhau bởi một transformation nào đó là same orbit/class;
+- quotient spaces trong algebra/topology;
+- canonicalization trong software.
 
-Ánh xạ (Mapping / 사상) gán elements từ một set tới set khác. Function là mapping với requirement rằng mỗi input trong domain có chính xác một output.
+## 9. Partial order: formal hóa dependency và hierarchy
 
-Viết
+Partial order (thứ tự bộ phận / 부분순서) thường reflexive, antisymmetric và transitive.
+
+Không phải mọi pair đều cần comparable.
+
+Ví dụ set inclusion:
 
 ```math
-f:A\to B.
+A\subseteq B
+```
+
+là partial order trên power set.
+
+Dependency relations cũng thường partial-order-like khi không có cycles. Hai tasks độc lập có thể không đứng trước/sau nhau.
+
+Total order thêm requirement rằng mọi pair comparable. Number line với `≤` là total order; dependency DAG nói chung không phải total order.
+
+## 10. Function là relation có tính đơn trị toàn phần
+
+Function
+
+```math
+f:A\to B
+```
+
+có thể được xem là relation `R⊆A×B` thỏa:
+
+1. với mọi `a∈A`, tồn tại output;
+2. output đó là duy nhất.
+
+Nói cách khác, mỗi input có **exactly one** output.
+
+Function không cần formula. Lookup table, parser, database projection, image transform hay trained model đều có thể là functions nếu mapping deterministic trong model đang xét.
+
+## 11. Domain, codomain và image không thể bỏ qua
+
+Trong
+
+```math
+f:A\to B,
 ```
 
 `A` là domain, `B` là codomain.
 
-Function có thể được xem như một special relation `R⊆A×B` sao cho với mỗi `a∈A`, tồn tại đúng một pair `(a,b)` trong relation.
+Image/range là subset của `B` thực sự được hit:
 
-Điều này giúp thấy function không nhất thiết phải là formula. Lookup table, hash function, image transformation và trained ML model đều có thể được xem như mappings.
+```math
+f(A)=\{f(a):a\in A\}.
+```
 
-## Injective, surjective, bijective
+Cùng formula nhưng khác domain/codomain có thể là functions khác nhau về structural properties.
 
-Injective (Đơn ánh / 단사) nghĩa different inputs không collapse vào cùng output:
+Ví dụ `f(x)=x^2`:
+
+```math
+f:\mathbb R\to\mathbb R
+```
+
+không surjective.
+
+Nhưng
+
+```math
+f:[0,\infty)\to[0,\infty)
+```
+
+là bijective.
+
+Vì vậy domain/codomain không phải metadata phụ.
+
+## 12. Injective, surjective, bijective như information behavior
+
+Injective (đơn ánh / 단사):
 
 ```math
 f(a)=f(b)\Rightarrow a=b.
 ```
 
-Surjective (Toàn ánh / 전사) nghĩa mọi element trong codomain được hit bởi ít nhất một input.
+Different inputs không collapse vào cùng output. Theo information viewpoint, injective mapping không mất distinction giữa inputs.
 
-Bijective (Song ánh / 전단사) nghĩa cả injective và surjective.
+Surjective (toàn ánh / 전사): mọi output trong codomain reachable.
 
-Bijective function có inverse function trên codomain tương ứng, vì mỗi output có exactly one input nguồn.
+Bijective (song ánh / 전단사): vừa injective vừa surjective.
 
-Trong data engineering, unique identifier gần với injectivity: nếu hai entities khác nhau nhận cùng ID, information bị mất. Compression lossless cần mapping đủ để recover original data, conceptually liên quan invertibility.
-
-## Cardinality
-
-Lực lượng (Cardinality / 기수) đo số lượng elements trong set.
-
-Với finite sets, đó đơn giản là count. Với infinite sets, tình hình thú vị hơn. Natural numbers và even numbers có cùng cardinality vì mapping
+Bijective mapping có inverse:
 
 ```math
-n\mapsto2n
+f^{-1}:B\to A.
 ```
 
-là bijection, dù even numbers có vẻ chỉ là “một nửa” natural numbers.
+Đây là lý do invertibility gắn với information preservation.
 
-Đây là một ví dụ cho thấy intuition hữu hạn không phải lúc nào kéo sang vô hạn được.
+Lossless encoding cần recovery mapping; unique IDs cần injectivity; coordinate changes dùng bijections trên suitable domains.
 
-## Power set
+## 13. Composition: nối mappings thành pipeline
 
-Power set `P(A)` là set của mọi subsets của `A`.
-
-Nếu `A` có `n` elements:
+Nếu
 
 ```math
-|\mathcal P(A)|=2^n.
+f:A\to B,
+\qquad
+g:B\to C,
 ```
 
-Lý do: mỗi element có hai choices độc lập — include hoặc exclude. Với `n` elements, số bit patterns là `2^n`.
+thì
 
-Connection với computing rất trực tiếp: một subset của `n` flags có thể được represent bằng `n` bits.
+```math
+(g\circ f)(x)=g(f(x)).
+```
+
+Composition là ngôn ngữ của pipelines.
+
+Trong software:
+
+```text
+raw input
+→ parse
+→ validate
+→ transform
+→ serialize
+```
+
+Trong neural networks, layers compose thành model. Trong geometry, transformations compose. Trong category theory, composition trở thành central primitive.
+
+Composition generally không commutative:
+
+```math
+g\circ f\ne f\circ g.
+```
+
+Order matters vì intermediate spaces/meaning khác nhau.
+
+## 14. Cardinality: đo size bằng bijection
+
+Với finite sets, cardinality chỉ là count.
+
+Với infinite sets, definition bằng bijection trở nên sâu hơn. Natural numbers và even numbers có cùng cardinality vì
+
+```math
+n\mapsto 2n
+```
+
+là bijection.
+
+Điều này phá intuition hữu hạn “proper subset luôn nhỏ hơn”.
+
+Cantor's diagonal idea còn cho thấy power set của một set có cardinality strictly lớn hơn chính set đó:
+
+```math
+|A|<|\mathcal P(A)|.
+```
+
+Với finite set `|A|=n`:
+
+```math
+|\mathcal P(A)|=2^n
+```
+
+vì mỗi element tương ứng một include/exclude bit.
+
+## 15. Power set và state-space explosion
+
+Power set không chỉ là concept pure math. Nếu system có `n` Boolean flags, mỗi subset các flags-on là một state, nên có
+
+```math
+2^n
+```
+
+possible states.
+
+Đây là source của combinatorial explosion trong exhaustive search, feature subsets, access combinations và state verification.
+
+Set theory vì vậy nối trực tiếp sang complexity.
+
+## 16. Database connection: relation toán học và SQL relation không hoàn toàn giống nhau
+
+Relational model toán học gần với set of tuples. SQL tables thực tế có thể cho duplicate rows và `NULL`, nên SQL semantics không trùng set theory thuần.
+
+Điều này là ví dụ quan trọng của model layering:
+
+```text
+mathematical relation
+≠ implementation data structure
+```
+
+Nhưng set/relation thinking vẫn giúp hiểu joins, keys, functional dependencies và normalization.
+
+## 17. Probability connection
+
+Sample space `Ω` là set outcomes; event `A` là subset:
+
+```math
+A\subseteq\Omega.
+```
+
+Intersection là “A và B”, union là “A hoặc B”, complement là “không A”.
+
+Probability measure gán number cho subsets/events. Vì vậy probability theory xây trực tiếp trên set logic.
+
+Conditional probability còn có thể nhìn như việc **restrict universe sang event B đã biết xảy ra**, rồi renormalize probability trong universe mới.
+
+## 18. Common proof strategies với sets
+
+Để chứng minh
+
+```math
+A=B,
+```
+
+chọn arbitrary `x`, rồi chứng minh
+
+```math
+x\in A\iff x\in B.
+```
+
+Hoặc double inclusion.
+
+Để chứng minh two sets disjoint:
+
+```math
+A\cap B=\varnothing,
+```
+
+show rằng giả sử `x` thuộc cả hai dẫn tới contradiction.
+
+Proof set identities thường trở thành propositional logic sau khi expand membership definitions.
 
 ## Mental Model
 
-> Set trả lời “những object nào đang nằm trong universe của ta?”. Relation trả lời “những pairs nào được nối với nhau?”. Function là relation có kỷ luật hơn: mỗi input đi tới đúng một output. Từ ba ý tưởng này có thể xây database relation, graph, probability event, state transition và nhiều cấu trúc khác.
+> Set định nghĩa **universe của objects**. Cartesian product tạo **universe của possible tuples**. Relation chọn **tuples được phép nối**. Equivalence relation gom representations thành classes; partial order tạo hierarchy/dependency; function ép mỗi input đi tới đúng một output. Phần lớn cấu trúc toán học cao hơn chỉ là thêm rules lên những nền này.
 
 ## Common Misconceptions
 
-Codomain không nhất thiết bằng actual image của function. Function injective không có nghĩa surjective. Set không phải list: order và duplicate không thuộc bản chất của ordinary set. Với infinite sets, “subset nhỏ hơn” không nhất thiết có cardinality nhỏ hơn.
+Set không phải list: order và duplicates không thuộc ordinary set. `A⊂B` convention có thể khác textbook về proper subset, nên nên dùng ký hiệu rõ. Antisymmetric không phải opposite của symmetric. Codomain không nhất thiết bằng image. Injective không imply surjective. Với infinite sets, proper subset có thể có cùng cardinality với parent set.
