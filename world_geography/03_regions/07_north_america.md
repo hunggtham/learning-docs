@@ -1,127 +1,147 @@
-# Bắc Mỹ: continental scale, resource corridor và metropolitan network
+# Bắc Mỹ: continental scale, resource hinterland và metropolitan production network
 
 ## Thesis không gian
 
-Bắc Mỹ được tổ chức bởi **western mountain system, central plain/river basin, Great Lakes–St. Lawrence corridor và Atlantic/Pacific/Gulf coasts**. Quy mô lục địa tạo climate gradient lớn; transport network nối resource hinterland với urban–industrial coast và border market.
+Bắc Mỹ được tổ chức bởi **western mountain system, central plain/river basin, Great Lakes–St. Lawrence corridor và Atlantic/Pacific/Gulf coasts**. Quy mô lục địa tạo climate/resource gradient lớn; dense transport network nối hinterland với metropolitan/industrial nodes và cross-border market.
 
-Causal chain:
+Chuỗi causal:
 
-**relief + river + resource → agricultural/industrial specialization → continental transport → metropolitan corridor → cross-border production network**.
+**relief/water/resource → agricultural/industrial specialization → continental transport → metropolitan concentration → cross-border production and trade → global regional role**.
 
-## Western cordillera và rain shadow
+## Western Cordillera: relief, water storage và risk
 
-Rocky Mountains và các range phía west tạo high relief, snowpack, watershed divide và rain shadow. Pacific coast climate khác interior dry region rõ rệt.
+Rockies và western ranges tạo high relief, watershed divide, snowpack và rain shadow. Mountain snow là seasonal storage cấp water cho city/agriculture downstream.
 
-Mountain snow hoạt động như seasonal water storage cho river và agriculture. Khi snow timing đổi, reservoir operation và irrigation cũng phải đổi.
+Khi snow timing đổi, reservoir operation và irrigation calendar phải đổi. West còn có active tectonic margin ở nhiều segment, tạo earthquake/volcanic hazard.
 
-West còn có active tectonic margin ở nhiều segment, tạo earthquake/volcanic hazard.
+Physical geography vì thế đồng thời tạo water resource, scenery/tourism và systemic risk.
 
-## Central plain và agriculture scale
+## Central plain: scale economy của agriculture và transport
 
-Great Plains/Central Lowlands có relief tương đối thuận lợi cho mechanized agriculture, road/rail và large settlement grid.
+Great Plains/Central Lowlands có low relief tương đối, thuận mechanized agriculture, road/rail và large field.
 
-Corn Belt, wheat belt hoặc ranching zone là **fuzzy region** hình thành từ soil, climate, market và technology. Boundary dịch theo crop price, irrigation và climate.
+Corn/wheat/ranching belts là fuzzy regions do soil, climate, irrigation, market và technology. Boundary dịch theo crop price và climate, không phải natural line bất biến.
 
-Agricultural productivity phụ thuộc fertilizer, machinery, storage, rail/barge và export terminal; farmland không vận hành tách logistics.
+High productivity phụ thuộc machinery, fertilizer, storage, rail/barge và export terminal. Farm geography là **production + logistics system**.
 
-## Mississippi–Missouri: drainage và logistics backbone
+## Mississippi–Missouri: basin và freight backbone
 
-Mississippi basin gom water từ vùng rộng. Navigable river làm bulk cargo như grain, coal/industrial material có transport cost thấp.
+Mississippi basin gom runoff từ diện tích rất lớn. Navigable river giảm cost cho grain, fertilizer và bulk material.
 
-River engineering, levee và channelization hỗ trợ navigation/flood protection nhưng thay đổi sediment và floodplain connection.
+Levee, channelization và engineering hỗ trợ navigation/flood protection nhưng thay floodplain connectivity và sediment delivery tới delta. Upstream land use có downstream consequence.
 
-Mississippi Delta/Gulf Coast cho thấy upstream land use và sediment management có downstream consequence.
+## Great Lakes–St. Lawrence: freshwater industrial corridor
 
-## Great Lakes–St. Lawrence corridor
+Great Lakes cung cấp freshwater, port và industrial location; St. Lawrence nối inland system với Atlantic.
 
-Great Lakes cung cấp freshwater, port và industrial location. St. Lawrence nối inland water system với Atlantic.
+Historical steel/auto/manufacturing cluster dựa ore/coal transport, market và labor. Khi industry restructure, city trajectory khác nhau tùy ability reuse skill, university, logistics và brownfield.
 
-Historical steel/auto/manufacturing cluster dựa trên ore/coal transport, market và labor. Khi industry restructure, city trajectory khác nhau tùy ability chuyển sang service/technology/logistics.
+Đây là path dependence ở continental scale.
 
-Đây là path dependence điển hình.
+## Atlantic seaboard và Northeast megalopolis
 
-## Atlantic seaboard và megalopolis
+Northeast corridor có dense metro, rail/highway/airport, finance, government và university. **Megalopolis** là functional region chứ không phải một city hành chính.
 
-Northeast corridor có chuỗi metropolitan area với rail/highway/airport density cao. Economic centrality đến từ long urban history, port, finance, government, university và market.
+High network density giảm effective distance giữa metropolitan nodes và hỗ trợ specialization: một city không cần cung cấp mọi function nếu có thể access neighboring nodes nhanh.
 
-Megalopolis là functional region, không phải một city hành chính.
+## Pacific urban corridor và gateway economy
+
+West-coast metro kết nối trans-Pacific trade, technology, agriculture và service. Port/airport vai trò lớn nhưng mountain/interior distance làm hinterland structure khác Atlantic.
+
+Coastal gateway đồng thời phụ thuộc inland rail/truck. Container ở port chỉ tạo value nếu move được tới warehouse/factory/consumer.
+
+## Gulf Coast: energy, petrochemical và storm exposure
+
+Gulf Coast tập trung port, refinery/petrochemical và energy infrastructure nhờ hydrocarbon basin, pipeline và maritime access.
+
+Cùng coastal lowland tạo hurricane/storm-surge exposure. Đây là classic **resource/logistics advantage ↔ concentrated risk** trade-off.
 
 ## Sun Belt và spatial shift
 
-Population/economic growth ở south/west trong nhiều thập kỷ liên quan air conditioning, highway/aviation, defense/technology investment, lower cost ở một số place và amenity/climate.
+Growth ở south/west liên quan air conditioning, highway/aviation, lower land cost ở nhiều place, defense/technology investment và amenity.
 
-Nhưng “Sun Belt” cũng là fuzzy region; Phoenix, Texas metros, Southeast manufacturing và Florida service economy không cùng một mechanism.
+Nhưng “Sun Belt” không phải mechanism duy nhất: Texas energy/industry, Florida service/tourism, Southwest metro và Southeast manufacturing khác nhau về driver.
 
-## Auto-oriented urban form
+## Auto-oriented urban form và induced geography
 
-Highway expansion, low-density zoning và suburban mortgage/land market tạo urban sprawl ở nhiều metro.
+Highway, low-density zoning và land market tạo suburban expansion. Feedback:
 
-Feedback:
+**road capacity → accessible land ↑ → dispersed development → trip distance ↑ → car dependence ↑**.
 
-**road capacity → accessible land tăng → dispersed development → trip distance tăng → car dependence tăng**.
+New lane có thể tạm giảm congestion nhưng long-run land-use response làm traffic tăng trở lại. Transport infrastructure tạo geography mới chứ không chỉ phục vụ geography sẵn có.
 
-Public transit viability giảm nếu density thấp và destination phân tán. Đây là transport–land-use feedback hơn là preference cá nhân đơn giản.
+## Housing, labor market và metropolitan inequality
 
-## Housing và metropolitan inequality
+Job cluster, school, zoning, transit và housing supply tạo spatial inequality. Household ở xa center có rent thấp hơn nhưng commute/time cost cao hơn.
 
-Job cluster, school district, zoning, transit access và housing supply tạo spatial inequality. Household ở xa job center có thể trả rent thấp hơn nhưng time/transport cost cao hơn.
+Opportunity nên đo bằng **accessibility to jobs/services**, không chỉ income hay house price.
 
-Do đó development phải đo **accessibility**, không chỉ income/housing price.
+## Technology cluster vẫn là geography
 
-## Energy geography
+Digital/technology industry vẫn tập trung tại metro có university, venture capital, specialized labor, supplier và airport. Remote work làm một số task dispersible nhưng knowledge network và matching vẫn tạo agglomeration.
 
-Oil/gas basin, hydropower, coal legacy, nuclear, wind/solar phân bố không đều. Pipeline và transmission line nối source với demand.
+Data center còn phụ thuộc electricity, cooling và fiber. “Tech economy” không thoát physical infrastructure.
 
-Shale development cho thấy technology có thể biến geological formation thành economic resource, nhưng output phụ thuộc price, infrastructure và regulation.
+## Energy geography: geology + network + market
 
-## Mexico–US–Canada production network
+Oil/gas basin, hydro, coal legacy, nuclear, wind/solar phân bố không đều. Pipeline và transmission nối source–demand.
 
-Manufacturing supply chain vượt border, đặc biệt automotive/electronics/agriculture. Component có thể cross border nhiều lần.
+Shale development minh họa technology có thể biến geological formation thành economic reserve khi price/infrastructure phù hợp. Resource status thay theo technology và market.
 
-Border friction vì vậy là time/cost trong production network, không chỉ political line.
+## Western water: stock, allocation và urban growth
 
-Nearshoring hay supply-chain diversification cần map supplier, port, rail, power và labor—not simply distance.
+Western city/agriculture phụ thuộc snowpack, reservoir, groundwater và long-distance aqueduct. Scarcity là relation giữa supply, timing, allocation và demand.
 
-## Mexico geography trong North America
+Urban growth không tự động “gây cạn nước”; crop choice, leakage, pricing, reuse và allocation institution cùng quyết định pressure.
 
-Mexico nối North American industrial network với Central America/Caribbean-Pacific space. Northern manufacturing corridor, central highland urban system và Gulf/Pacific coast có roles khác nhau.
+## Canada: southern corridor và sparse north
 
-Mountain relief làm internal travel và climate complex; plateau city có altitude climate khác tropical coast.
+Population tập trung mạnh gần southern corridor trong khi northern area rộng nhưng sparse do climate/accessibility.
 
-## Canada và sparse northern space
+Remote resource project cần road/rail/air/port và quan hệ land/community. Territory size không đồng nghĩa usable settlement area.
 
-Population Canada tập trung mạnh near southern corridor, while northern territory rộng nhưng sparse do climate/accessibility.
+## Mexico: highland–coast–border production geography
 
-Resource project ở remote north phụ thuộc rail/road/port/air và indigenous land relation. Area lớn không đồng nghĩa settlement capacity lớn.
+Mexico nối North American manufacturing với Central America/Caribbean-Pacific. Northern industrial corridor, central highland urban system, Gulf/Pacific ports có role khác nhau.
+
+Mountain relief làm domestic travel/climate phức tạp; border access tạo supplier/assembly network xuyên quốc gia.
+
+## Cross-border production network
+
+Automotive, electronics, agriculture và energy flow vượt US–Canada–Mexico borders. Component có thể cross border nhiều lần trước final product.
+
+Border delay do đó là production cost, không chỉ administrative issue. Nearshoring cần power, labor, supplier, industrial land và customs — proximity alone không đủ.
+
+## Continental freight: rail, truck, barge, pipeline
+
+North America có multiple freight mode. Bulk grain/mineral dùng rail/barge; high-value/manufactured goods dựa truck/rail intermodal; energy dùng pipeline/grid.
+
+Resilience đến từ mode substitution nhưng không hoàn hảo vì commodity, terminal và capacity khác nhau.
 
 ## Hazard mosaic
 
-West: earthquake, wildfire, drought. Gulf/Atlantic: hurricane, storm surge. Central: tornado/severe storm, flood, drought. North: cold/permafrost/coastal Arctic change.
+West: earthquake/wildfire/drought. Gulf/Atlantic: hurricane/surge. Central: severe storm/flood/drought. North: cold/permafrost/Arctic coastal change.
 
-Risk pattern phản ánh physical process + settlement pattern. Insurance market và building code vì thế có regional geography.
+Risk phản ánh **hazard + settlement + building + infrastructure**. Insurance và building code có regional geography rõ.
 
-## Water scarcity và interbasin infrastructure
+## Indigenous geography và historical layer
 
-Western city/agriculture phụ thuộc reservoir, snowpack, groundwater và long-distance aqueduct. Water allocation giữa urban, agriculture, ecosystem tạo multi-objective problem.
+Modern state boundary không phải điểm bắt đầu của spatial history. Indigenous mobility, trade, hunting/agriculture và territorial relation tồn tại trước current borders và tiếp tục ảnh hưởng land/resource governance.
 
-Growing population không tự động tạo scarcity; demand management, crop choice và allocation institution quyết định outcome cùng physical supply.
+Regional geography tốt cần giữ historical layer thay vì coi map hiện tại là tự nhiên.
 
-## Indigenous geography và land
+## Bắc Mỹ trong global economy
 
-North America không bắt đầu với modern state boundary. Indigenous societies có territorial/mobility system gắn river, hunting, agriculture và trade route.
+Region kết hợp large consumer market, high-value service/technology, agriculture, energy/resource và Pacific/Atlantic gateways. Nhưng supply chain phụ thuộc external semiconductor, critical mineral, shipping lane và global capital.
 
-Hiện tại land right, resource project và protected area vẫn có geographic dimension. Regional geography nên nhận ra historical layer thay vì coi current boundary là điểm bắt đầu tuyệt đối.
+Self-sufficiency không phải binary. Một region resource-rich vẫn có strong interdependence qua processing specialization.
 
 ## Common misconceptions
 
-“Bắc Mỹ = Hoa Kỳ” làm mất Canada/Mexico và cross-border system.
-
-“Resource-rich nên tự động self-sufficient” sai vì refinery, grid, pipeline và trade tạo interdependence.
-
-“Sprawl do người dân chỉ thích nhà rộng” quá đơn giản; policy, road, zoning và finance tạo incentive structure.
+“North America = United States” sai. “Resource-rich = self-sufficient” bỏ qua processing/network. “Sprawl chỉ do preference” bỏ policy/finance/road. “Nearshoring chỉ cần ở gần market” bỏ power/supplier/customs. “Technology sector không phụ thuộc geography” bỏ labor cluster và infrastructure.
 
 ## Mô hình tư duy
 
-Bắc Mỹ = **continental resource hinterland + river/lake corridor + metropolitan coast + integrated border supply chain**.
+Bắc Mỹ = **continental resource/agriculture hinterland + river/lake freight corridors + metropolitan coasts + integrated cross-border production + global gateways**.
 
-Xem tiếp: [United States Atlas](../06_world_atlas/americas/northern_america/USA_united_states.md), [Economic geography](../02_human_geography/05_economic_geography.md), [Natural hazards](../01_physical_geography/07_natural_hazards_risk.md).
+Xem tiếp: [United States Atlas](../06_world_atlas/americas/northern_america/USA_united_states.md), [Economic geography](../02_human_geography/05_economic_geography.md), [Transport & trade](../02_human_geography/08_transport_trade_globalization.md), [Natural hazards](../01_physical_geography/07_natural_hazards_risk.md).
