@@ -1211,7 +1211,7 @@ Senior phải biết data đi vào từ đâu và cuối cùng được dùng �
 
 ## Validation, encoding và sanitization không phải cùng một việc
 
-**Validation** trả lời “data có đúng shape/range/allowlist mà operation chấp nhận không?”. Ví dụ `action` chỉ được là `"+"SAVE"+"` hoặc `"+"CANCEL"+"`.
+**Validation** trả lời “data có đúng shape/range/allowlist mà operation chấp nhận không?”. Ví dụ `action` chỉ được là `"SAVE"` hoặc `"CANCEL"`.
 
 **Encoding/escaping** biến data để nó được hiểu như dữ liệu chứ không trở thành syntax trong context cụ thể, ví dụ HTML/URL/JavaScript context.
 
