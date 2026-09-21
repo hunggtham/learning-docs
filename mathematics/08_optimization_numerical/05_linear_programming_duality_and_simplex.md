@@ -1,8 +1,8 @@
-# Linear programming, duality và simplex
+# Linear programming, duality và simplex: geometry, certificates và resource prices
 
-Nhiều optimization problems trong logistics, scheduling, production và resource allocation có một structure đặc biệt: objective và constraints đều tuyến tính. **Quy hoạch tuyến tính (Linear Programming, LP / 선형계획법)** tận dụng structure này để giải problems rất lớn một cách có hệ thống.
+**Quy hoạch tuyến tính (linear programming, LP / 선형계획법)** giải bài toán tối ưu khi objective và constraints đều tuyến tính.
 
-Một LP tiêu chuẩn có dạng
+Dạng điển hình:
 
 ```math
 \max_x c^Tx
@@ -12,128 +12,303 @@ subject to
 
 ```math
 Ax\le b,
-\qquad
-x\ge0.
+\qquad x\ge0.
 ```
 
-`x` là decision vector, `c` chứa value/cost coefficients, `A` mô tả resource usage và `b` là available limits.
+Nhìn bề ngoài đây chỉ là “linear equations + inequalities”. Nhưng structure tuyến tính tạo ra một geometry cực mạnh:
 
-## Geometry của feasible region
+```text
+linear constraints
+→ convex polyhedron
+→ extreme points
+→ dual certificates
+→ sensitivity / shadow prices
+```
 
-Mỗi linear inequality xác định một half-space. Intersection của các half-spaces tạo **feasible region / 실행가능영역**, một convex polyhedron.
+Đây là lý do LP vừa có theory đẹp vừa có solvers công nghiệp rất mạnh.
 
-Ví dụ:
+## 1. Modeling trước optimization
+
+Một LP không bắt đầu từ simplex; nó bắt đầu từ **decision variables**.
+
+Ví dụ production planning:
+
+```text
+x1 = units product A
+x2 = units product B
+```
+
+Profit:
 
 ```math
-\max 3x+2y
+\max 30x_1+20x_2.
+```
+
+Nếu machine hours:
+
+```math
+2x_1+x_2\le100
+```
+
+và material:
+
+```math
+x_1+2x_2\le80,
+```
+
+cùng nonnegativity:
+
+```math
+x_1,x_2\ge0.
+```
+
+Điểm quan trọng: LP chỉ đúng nếu linearity assumptions hợp lý.
+
+Nếu unit cost thay đổi theo volume, capacity có startup threshold hoặc decision phải integer, pure LP chỉ là approximation/relaxation.
+
+## 2. Geometry của feasible region
+
+Mỗi inequality tuyến tính:
+
+```math
+a_i^Tx\le b_i
+```
+
+xác định một **half-space / 반공간**.
+
+Intersection của các half-spaces tạo feasible set:
+
+```math
+\mathcal F=\{x:Ax\le b\}.
+```
+
+Vì half-spaces convex, feasible region cũng convex.
+
+Điều này rất quan trọng: nếu `x` và `y` feasible thì mọi convex combination
+
+```math
+\theta x+(1-\theta)y,
+\qquad 0\le\theta\le1
+```
+
+cũng feasible.
+
+Không có “hole” hoặc disconnected feasible islands như trong nhiều nonconvex problems.
+
+## 3. Vì sao optimum thường nằm ở extreme point?
+
+Objective tuyến tính:
+
+```math
+c^Tx
+```
+
+có level sets là parallel hyperplanes.
+
+Ta có thể tưởng tượng dịch hyperplane theo direction `c` cho tới khi nó rời feasible polyhedron.
+
+Nếu finite optimum tồn tại, ít nhất một optimum nằm ở một **extreme point (đỉnh cực biên / 극점)**.
+
+Proof intuition: nếu optimum nằm strictly bên trong line segment giữa hai feasible points khác nhau, linearity làm objective tại midpoint bằng weighted average objectives. Khi đó ít nhất một endpoint không tệ hơn.
+
+Điều này không nói optimum luôn unique. Một whole edge/face có thể optimal.
+
+## 4. Feasible, infeasible và unbounded là ba trạng thái khác nhau
+
+Một LP có thể:
+
+```text
+feasible + finite optimum
+infeasible
+unbounded
+```
+
+**Infeasible** nghĩa constraints mâu thuẫn: không có point nào satisfy tất cả.
+
+**Unbounded** nghĩa có feasible direction làm objective tăng vô hạn.
+
+Hai failure modes này khác nhau và solvers thường trả status riêng.
+
+Trong production modeling, phân biệt rất quan trọng:
+
+```text
+infeasible → business constraints conflict
+unbounded → model thiếu limiting constraint hoặc objective có structural issue
+```
+
+## 5. Slack variables và unused resource
+
+Constraint:
+
+```math
+x_1+x_2\le4
+```
+
+có thể đổi thành:
+
+```math
+x_1+x_2+s=4,
+\qquad s\ge0.
+```
+
+`s` là **slack variable (biến dư / 여유변수)**.
+
+Interpretation:
+
+```text
+s = unused resource
+```
+
+Nếu `s=0`, constraint **binding/active**.
+Nếu `s>0`, resource còn dư.
+
+Khái niệm này nối trực tiếp sang complementary slackness và KKT.
+
+## 6. Basic solution: algebra phía sau vertex
+
+Trong standard form:
+
+```math
+Ax=b,
+\qquad x\ge0,
+```
+
+với `m` independent equations, một **basic solution** chọn roughly `m` basic variables rồi set remaining nonbasic variables bằng zero.
+
+Khi basic solution thỏa nonnegativity, ta có **basic feasible solution**.
+
+Geometrically, basic feasible solutions tương ứng các vertices dưới nondegeneracy assumptions.
+
+Simplex vì vậy có hai viewpoints cùng lúc:
+
+```text
+algebra → basis of columns
+geometry → vertex of polyhedron
+```
+
+## 7. Simplex method: local moves nhưng global guarantee trong LP
+
+Simplex bắt đầu từ basic feasible solution và thay basis để đi tới adjacent vertex có objective tốt hơn.
+
+Mental flow:
+
+```text
+current basis
+→ identify improving nonbasic direction
+→ ratio test để giữ feasibility
+→ pivot
+→ new basis
+```
+
+Điểm đặc biệt là dù move local, convex/linear structure cho phép kết luận global optimality khi không còn improving reduced-cost direction.
+
+Đây là contrast với nonconvex optimization, nơi local stationarity không đủ.
+
+## 8. Pivot không chỉ là row operation
+
+Pivot trong simplex thay đổi representation của solution theo một basis mới.
+
+Linear algebra phía dưới gồm repeatedly solving systems liên quan basis matrix `B`:
+
+```math
+Bx_B=b.
+```
+
+Production solvers không rebuild mọi thứ từ đầu; chúng dùng sparse factorization/update để tận dụng structure.
+
+Vì vậy numerical linear algebra là engine bên dưới simplex.
+
+## 9. Degeneracy và cycling
+
+Một vertex có thể tương ứng nhiều different bases. Khi một basic variable bằng zero, solution **degenerate / 퇴화**.
+
+Simplex pivot có thể đổi basis mà objective không cải thiện.
+
+Trong pathological cases, naive pivot rules có thể cycle. Rules như Bland's rule tránh cycling theoretically.
+
+Lesson: “đi qua vertices” là mental model tốt, nhưng implementation cần handle algebraic degeneracy.
+
+## 10. Dual problem: constraints trở thành prices
+
+Với primal:
+
+```math
+\max c^Tx
 ```
 
 subject to
 
 ```math
-x+y\le4,
-\qquad
-x\le2,
-\qquad
-x,y\ge0.
-```
-
-Objective `3x+2y` có level sets là parallel lines. Ta “đẩy” line theo direction tăng objective cho đến khi nó chạm feasible region lần cuối. Vì region convex polygon và objective linear, optimum — nếu finite và tồn tại — có thể đạt tại một **extreme point / 꼭짓점**.
-
-Đây là geometric reason simplex method có thể di chuyển qua vertices thay vì search mọi interior point.
-
-## Slack variables và standard form
-
-Inequality
-
-```math
-x+y\le4
-```
-
-có thể viết thành equality bằng **slack variable / 여유변수** `s≥0`:
-
-```math
-x+y+s=4.
-```
-
-Slack đo unused resource. Nếu `s=0`, constraint active/binding; nếu `s>0`, còn resource dư.
-
-KKT conditions ở optimization tổng quát cũng có notion active constraints. LP là một setting nơi geometry và algebra của constraints nhìn rất rõ.
-
-## Simplex method: đi từ vertex sang vertex
-
-**Simplex method / 심플렉스법** bắt đầu từ một basic feasible solution, tương ứng một vertex, rồi chọn adjacent vertex cải thiện objective. Quá trình lặp đến khi không còn improving direction theo simplex criterion.
-
-Worst-case complexity của simplex có thể exponential với special constructions, nhưng trong thực tế nó rất hiệu quả trên nhiều classes of LPs. Interior-point methods cung cấp polynomial-time algorithms theo theory và thường cạnh tranh tốt trên large problems.
-
-Điểm cần giữ: linear programming không đồng nghĩa “thử tất cả corners”. Algorithms khai thác matrix structure, sparsity và factorization để xử lý dimensions cực lớn.
-
-## Dual problem: mỗi constraint có một price
-
-Mỗi primal LP có một **dual / 쌍대문제**. Với primal
-
-```math
-\max c^Tx
-\quad\text{s.t.}\quad
 Ax\le b,
-\ x\ge0,
+\qquad x\ge0,
 ```
 
-dual điển hình là
+một dual form là:
 
 ```math
 \min b^Ty
-\quad\text{s.t.}\quad
-A^Ty\ge c,
-\ y\ge0.
 ```
 
-Dual variables `y` có thể được hiểu như **shadow prices / 잠재가격** cho constraints/resources.
+subject to
 
-Nếu một unit resource thứ `i` tăng thêm một chút, optimal value có thể tăng gần `y_i` trong regime nơi active set không đổi. Đây là sensitivity interpretation của dual variables.
+```math
+A^Ty\ge c,
+\qquad y\ge0.
+```
 
-## Weak duality
+`y_i` có thể interpret như **shadow price (giá bóng / 잠재가격)** của resource constraint `i`.
 
-Lấy any primal feasible `x` và dual feasible `y`. Vì
+Dual không chỉ là “bài toán phụ”. Nó cung cấp một cách định giá resources đủ cao để chứng minh rằng không feasible production plan nào tạo profit vượt upper bound `b^Ty`.
+
+## 11. Weak duality: certificate bằng một inequality chain
+
+Cho primal feasible `x` và dual feasible `y`.
+
+Từ:
 
 ```math
 Ax\le b,
-\qquad
-y\ge0,
+\qquad y\ge0
 ```
 
-nên
+suy ra:
 
 ```math
 y^TAx\le y^Tb.
 ```
 
-Vì
+Từ:
 
 ```math
 A^Ty\ge c,
-\qquad x\ge0,
+\qquad x\ge0
 ```
 
-nên
+suy ra:
 
 ```math
-x^TA^Ty\ge x^Tc=c^Tx.
+x^TA^Ty\ge c^Tx.
 ```
 
-Nhưng `x^TA^Ty=y^TAx`, do đó
+Vì:
+
+```math
+x^TA^Ty=y^TAx,
+```
+
+nên:
 
 ```math
 c^Tx\le b^Ty.
 ```
 
-Đây là **weak duality / 약한 쌍대성**: mọi dual feasible objective là upper bound cho primal maximization objective.
+Đây là **weak duality / 약한 쌍대성**.
 
-Nó cho một certificate cực mạnh. Nếu tìm được primal feasible `x` và dual feasible `y` có equal objective values, cả hai đều optimal.
+Mọi dual feasible solution là upper bound cho primal maximization.
 
-## Strong duality
+## 12. Strong duality: optimal value có hai cách nhìn
 
-Dưới standard LP feasibility conditions, nếu primal có finite optimum thì dual cũng có optimum và
+Dưới standard LP conditions, nếu finite optimum tồn tại thì:
 
 ```math
 c^Tx^*=b^Ty^*.
@@ -141,56 +316,313 @@ c^Tx^*=b^Ty^*.
 
 Đây là **strong duality / 강한 쌍대성**.
 
-Duality không chỉ là trick tạo bài toán khác. Nó nói optimization có hai viewpoints complementary: trực tiếp chọn decisions và gián tiếp định giá constraints sao cho không decision nào tạo value vượt chi phí implied bởi prices.
+Ý nghĩa sâu:
 
-## Complementary slackness
-
-Primal slack và dual variables liên hệ bằng **complementary slackness / 상보적 느슨성**. Trực giác: nếu một resource constraint không binding, shadow price của nó phải zero tại optimum; nếu shadow price positive, resource phải fully used.
-
-Dạng component-wise thường là
-
-```math
-y_i(b_i-(Ax)_i)=0.
+```text
+best achievable decision value
+=
+best valid resource-price certificate
 ```
 
-Và tương tự giữa primal variables và dual constraint slacks.
+Optimization và proof of optimality gặp nhau.
 
-Condition này là special case của complementary slackness trong KKT theory.
+Nếu tìm primal feasible `x` và dual feasible `y` có same objective, ta có certificate rằng cả hai optimal mà không cần enumerate alternatives.
 
-## Integer programming: khi decision không thể fractional
+## 13. Complementary slackness
 
-Nhiều real problems yêu cầu `x_i` integer hoặc binary. Không thể mua `0.37` chiếc xe hoặc chọn `0.6` project. Khi thêm integrality constraints ta có **Integer Linear Programming (ILP / 정수선형계획)** hoặc Mixed-Integer Linear Programming.
+Một primal resource constraint có slack:
 
-Geometry thay đổi mạnh: feasible set không còn convex continuous polyhedron mà chỉ gồm discrete lattice points. LP relaxation bỏ integrality để lấy bound; branch-and-bound, cutting planes và heuristics dùng bound đó để search.
+```math
+s_i=b_i-(Ax)_i.
+```
 
-Đây là reason scheduling/routing có thể khó dù formulas nhìn “chỉ tuyến tính”. Discreteness làm computational complexity tăng mạnh.
+Complementary slackness:
 
-## Network flow như LP đặc biệt
+```math
+y_i s_i=0.
+```
 
-Max-flow/min-cost-flow problems có LP formulations với network incidence matrices. Structure đặc biệt cho phép algorithms nhanh hơn generic LP.
+Nghĩa là:
 
-Ví dụ flow conservation tại node là linear equality: inflow minus outflow bằng supply/demand. Capacities là linear inequalities. Routing, transportation và matching nhiều khi có thể nhìn như optimization trên graph.
+```text
+resource dư → shadow price zero
+shadow price positive → resource fully used
+```
 
-## LP trong công việc và đời sống
+Tương tự, positive primal variable liên hệ với binding dual constraint.
 
-Production planning: chọn quantities để maximize profit dưới machine-hours và material constraints. Portfolio ở dạng đơn giản: allocate capital dưới budget/exposure constraints. Workforce scheduling: cover demand với minimum cost. Cloud capacity planning: allocate workloads dưới CPU/memory/network limits.
+Đây là LP-specialized version của KKT complementary slackness.
 
-Tất cả đều cần cẩn thận với model assumptions. Nếu cost curve thực ra nonlinear, demand uncertain hoặc decisions indivisible, pure LP chỉ là approximation hoặc relaxation.
+## 14. Worked example: production và shadow prices
+
+Giả sử:
+
+```math
+\max 3x+2y
+```
+
+subject to:
+
+```math
+x+y\le4
+```
+
+```math
+x\le2
+```
+
+```math
+x,y\ge0.
+```
+
+Vertices:
+
+```text
+(0,0)
+(2,0)
+(0,4)
+(2,2)
+```
+
+Objective:
+
+```text
+0
+6
+8
+10
+```
+
+nên optimum tại:
+
+```math
+(x,y)=(2,2).
+```
+
+Cả hai constraints active.
+
+Nếu resource của first constraint tăng nhẹ, optimal objective có thể tăng theo dual multiplier tương ứng cho tới khi active-set structure thay đổi.
+
+Đây là sensitivity interpretation, không phải global law cho mọi mức perturbation.
+
+## 15. Sensitivity analysis và allowable range
+
+Shadow price thường chỉ valid trong một range nơi optimal basis không đổi.
+
+Nếu thay `b_i` quá mạnh, active constraints có thể đổi và marginal value cũng đổi.
+
+Vì vậy output kiểu:
+
+```text
+shadow price = 5
+```
+
+không nên đọc là “mỗi resource unit mãi mãi worth 5”. Nó là local sensitivity result theo current LP regime.
+
+## 16. Duality và KKT
+
+LP là convex optimization với linear constraints.
+
+KKT conditions trở thành:
+
+```text
+primal feasibility
+dual feasibility
+stationarity
+complementary slackness
+```
+
+Trong LP, these conditions align rất cleanly với primal/dual optimality.
+
+Hiểu LP trước giúp KKT bớt abstract; hiểu KKT sau giúp thấy LP chỉ là một member đặc biệt của broader convex duality.
+
+## 17. Interior-point methods: không cần đi theo edges
+
+Simplex đi vertex-to-vertex. **Interior-point methods / 내부점법** đi xuyên interior của feasible region bằng barrier ideas.
+
+Theory hiện đại cho polynomial-time guarantees cho LP.
+
+Practical solver choice phụ thuộc:
+
+```text
+problem size
+sparsity
+warm starts
+need for basis/sensitivity info
+numerical conditioning
+```
+
+Không có rule “simplex luôn tốt hơn” hoặc “interior-point luôn mới hơn nên tốt hơn”.
+
+## 18. Integer programming: discreteness phá convex simplicity
+
+Nếu decision phải integer:
+
+```math
+x_i\in\mathbb Z
+```
+
+hoặc binary:
+
+```math
+x_i\in\{0,1\},
+```
+
+ta có ILP/MILP.
+
+Feasible solutions giờ là discrete points, không phải toàn polyhedron.
+
+LP relaxation bỏ integrality:
+
+```text
+integer feasible set
+⊂ LP relaxation polyhedron
+```
+
+Đối với maximization, LP optimum cho upper bound.
+
+Branch-and-bound dùng bound này để prune search tree.
+
+## 19. Integrality gap
+
+Difference giữa integer optimum và LP relaxation optimum gọi broadly là **integrality gap**.
+
+Nếu gap nhỏ, LP relaxation rất informative.
+Nếu gap lớn, rounding naive có thể tệ.
+
+Đây là reason relaxation quality quan trọng trong combinatorial optimization.
+
+## 20. Total unimodularity: khi LP tự cho integer solution
+
+Một số structured matrices như network incidence matrices có property **total unimodularity**.
+
+Với integer right-hand side phù hợp, LP vertices tự integer.
+
+Điều này giải thích vì sao một số graph problems có polynomial LP formulations dù nhìn giống discrete optimization.
+
+Structure matrix có thể biến “integer-looking problem” thành pure LP tractable problem.
+
+## 21. Network flow như structured LP
+
+Max flow có variables trên edges:
+
+```math
+f_e
+```
+
+constraints gồm capacity:
+
+```math
+0\le f_e\le c_e
+```
+
+và flow conservation tại intermediate nodes.
+
+Objective maximize total source-to-sink flow.
+
+Graph structure cho specialized algorithms nhanh hơn generic LP.
+
+Max-flow/min-cut theorem cũng là một duality statement: max primal flow value bằng min cut capacity.
+
+## 22. LP trong Finance
+
+Simplified portfolio allocation có thể là LP nếu objective/risk constraints được linearized.
+
+Ví dụ:
+
+```text
+maximize expected return
+subject to budget
+sector exposure limits
+transaction bounds
+```
+
+Nhưng classical variance risk:
+
+```math
+w^T\Sigma w
+```
+
+là quadratic, nên problem trở thành quadratic programming.
+
+Model class phải follow actual structure, không ép mọi optimization thành LP.
+
+## 23. LP trong Software/Operations
+
+LP/MILP xuất hiện trong:
+
+```text
+cloud resource allocation
+workforce scheduling
+transportation
+supply chain
+ad placement
+capacity planning
+network routing
+```
+
+Một system design lesson quan trọng:
+
+> Solver chỉ optimize model đã viết; model sai thì optimum có thể rất chính xác nhưng operationally vô nghĩa.
+
+## 24. Numerical considerations
+
+LP theory dùng exact real arithmetic, nhưng solver dùng floating point.
+
+Problems có coefficients khác scale quá lớn có thể gây numerical difficulty.
+
+Scaling, presolve và tolerances ảnh hưởng practical result.
+
+Constraint:
+
+```math
+10^{-9}x+10^9y\le1
+```
+
+có severe scale imbalance.
+
+Optimization status như “feasible within tolerance” không phải exact symbolic proof trong floating-point implementation.
+
+## 25. Common failure modes
+
+### Objective misspecification
+
+Nếu objective không capture real cost/value, solver sẽ optimize wrong proxy.
+
+### Missing constraints
+
+Unbounded solution thường reveal missing physical/business limit.
+
+### Arbitrary rounding
+
+Rounding fractional LP solution có thể violate constraints.
+
+### Shadow price overinterpretation
+
+Dual sensitivity thường local theo current basis/regime.
+
+### Ignoring uncertainty
+
+Deterministic LP với uncertain demand có thể produce brittle plan. Robust/stochastic optimization thêm uncertainty explicitly.
 
 ## Knowledge Connection
 
-Linear programming nối geometry của convex sets, linear algebra của `Ax`, optimization duality và economics của shadow prices. KKT conditions generalize nhiều LP optimality ideas. Graph algorithms xuất hiện như structured LPs. Numerical linear algebra nằm dưới solvers thực tế.
+LP nằm tại giao điểm:
 
-Trong machine learning, linear programming xuất hiện trong certain robust optimization, sparse formulations và piecewise-linear models. Duality cũng là nền tảng để hiểu support vector machines và Lagrangian methods.
+```text
+linear algebra → Ax
+geometry → convex polyhedra
+graph theory → network flow
+KKT → complementary slackness
+economics → shadow prices
+combinatorics → integer programming
+numerical analysis → sparse factorization / conditioning
+```
 
 ## Mental Model
 
-> LP là bài toán “đẩy một hyperplane tuyến tính đến mép của một polyhedron”. Primal hỏi nên chọn decisions nào; dual hỏi mỗi constraint/resource phải có price bao nhiêu để chứng minh không solution nào tốt hơn. Equality giữa hai viewpoints là certificate của optimality.
+> LP là geometry của decisions dưới linear constraints. Simplex nhìn feasible polyhedron qua các bases/vertices. Duality biến constraints thành prices và tạo certificate của optimality. Khi thêm integrality, geometry continuous không còn đủ và search/combinatorics quay trở lại.
 
 ## Common Misconceptions
 
-Linear programming không phải lập trình máy tính theo nghĩa coding; “programming” ở đây có nghĩa planning/optimization.
-
-Optimum tại vertex không có nghĩa unique. Cả một edge/face có thể optimal nếu objective song song với nó.
-
-LP solution fractional không tự động dùng được cho integer decisions. Rounding arbitrary có thể violate constraints hoặc mất optimality rất lớn; integer optimization cần methods riêng.
+“Programming” trong linear programming nghĩa planning, không phải coding. LP optimum không nhất thiết unique. Vertex theorem không có nghĩa phải brute-force mọi corners. Simplex worst-case exponential không đồng nghĩa unusable trong practice. LP relaxation không phải integer solution. Dual variable là sensitivity quantity dưới assumptions, không phải universal economic truth.
