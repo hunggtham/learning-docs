@@ -1,124 +1,230 @@
-# Hình học tọa độ: biến không gian thành algebra
+# Hình học tọa độ: từ không gian hình học đến representation bằng số
 
-Hình học tọa độ (Analytic geometry / 해석기하학) nối geometry với algebra bằng cách gán numbers cho positions. Khi point trở thành tuple `(x,y)`, questions hình học có thể được giải bằng equations.
+Hình học tọa độ (analytic geometry / 해석기하학) không đơn giản là “hình học có công thức”. Ý tưởng cốt lõi là chọn một hệ tọa độ để **mã hóa vị trí bằng numbers**, rồi dùng algebra xử lý những câu hỏi vốn mang tính geometric.
 
-## Cartesian coordinates
+Điểm quan trọng là phải phân biệt:
 
-Trong 2D, hai perpendicular axes xác định mỗi point bởi ordered pair `(x,y)`. `x` cho displacement horizontal từ origin, `y` vertical.
+> geometric object là object; coordinates chỉ là representation của object trong một frame đã chọn.
 
-Trong 3D thêm `z`. Trong higher dimensions, point có thể là vector `(x_1,...,x_n)`, dù ta không còn visualize trực tiếp.
+Một point ngoài đời không thay đổi khi ta đổi origin, xoay axes hay chuyển từ world coordinates sang camera coordinates. Chỉ description bằng số thay đổi.
 
-## Distance formula
+## 1. Vì sao coordinates hữu ích?
 
-Giữa points `P(x_1,y_1)` và `Q(x_2,y_2)`, horizontal difference là
+Không dùng coordinates, ta có thể nói hai đoạn thẳng bằng nhau, hai góc vuông hay một point nằm trên circle. Nhưng khi gán point thành
 
 ```math
-\Delta x=x_2-x_1
+P=(x,y),
 ```
 
-vertical difference:
+những quan hệ đó trở thành equations có thể tính, solve và generalize.
+
+Ví dụ, “P cách origin đúng 5 units” trở thành
 
 ```math
-\Delta y=y_2-y_1
+x^2+y^2=25.
 ```
 
-Pythagorean theorem cho
+Geometry được chuyển thành algebra mà không mất meaning hình học.
+
+## 2. Cartesian coordinates là một choice, không phải truth tuyệt đối
+
+Trong 2D, Cartesian system dùng hai perpendicular axes. Một point được represent bởi ordered pair
 
 ```math
-d=\sqrt{(\Delta x)^2+(\Delta y)^2}
+(x,y).
+```
+
+`x` và `y` là signed displacements theo chosen basis directions.
+
+Trong 3D:
+
+```math
+(x,y,z).
 ```
 
 Trong `n` dimensions:
 
 ```math
-d(\mathbf x,\mathbf y)=\sqrt{\sum_{i=1}^n(x_i-y_i)^2}
+(x_1,\ldots,x_n).
 ```
 
-Đây là Euclidean distance và chính là L2 norm của difference vector.
+Ta không cần visualize `n=1000`; algebra của coordinates vẫn hoạt động.
 
-## Midpoint
+Điều này mở đường từ geometry sang vectors, feature spaces và state spaces.
 
-Midpoint là average coordinates:
+## 3. Point và vector: cùng numbers, khác concept
+
+Point `P=(3,4)` là một **location** trong chosen coordinate system.
+
+Vector
 
 ```math
-M=\left(\frac{x_1+x_2}{2},\frac{y_1+y_2}{2}\right)
+v=(3,4)
 ```
 
-Tại sao average? Vì midpoint phải nằm half-way theo mỗi axis; parameterization line segment
+có thể là displacement từ một point tới point khác.
+
+Nếu
 
 ```math
-P+t(Q-P)
+P=(1,2),\qquad Q=(4,6),
 ```
 
-với `t=1/2` cho formula này.
-
-## Slope
-
-Slope line qua hai points:
+thì displacement
 
 ```math
-m=\frac{y_2-y_1}{x_2-x_1}
+Q-P=(3,4).
 ```
 
-là ratio vertical change trên horizontal change. Nếu denominator 0, line vertical và slope theo representation này undefined.
-
-Slope liên hệ tangent angle `θ` qua
+Ta có thể cộng vector vào point:
 
 ```math
-m=\tan\theta
+P+v=Q.
 ```
 
-khi line không vertical.
+Nhưng “cộng hai points” không luôn có geometric meaning độc lập với chosen origin. Phân biệt point/vector trở nên quan trọng trong affine geometry, graphics và robotics.
 
-## Equation of a line
+## 4. Distance formula đến từ orthogonal decomposition
 
-Point-slope form:
+Giữa
 
 ```math
-y-y_1=m(x-x_1)
+P=(x_1,y_1)
 ```
 
-nói displacement từ point known phải follow slope ratio.
-
-General form:
+và
 
 ```math
-Ax+By+C=0
+Q=(x_2,y_2),
 ```
 
-có vector normal `(A,B)` perpendicular với line. Representation này hữu ích vì vertical lines không cần special case `x=c` ngoài form general.
-
-## Circle equation
-
-Circle center `(h,k)`, radius `r` là set points distance `r` từ center:
+difference vector là
 
 ```math
-(x-h)^2+(y-k)^2=r^2
+\Delta=(x_2-x_1,\ y_2-y_1).
 ```
 
-Equation không cần học thuộc nếu nhớ definition circle = constant-distance locus.
+Hai coordinate directions vuông góc, nên Pythagoras cho
 
-## Conic sections
+```math
+d(P,Q)^2
+=(x_2-x_1)^2+(y_2-y_1)^2.
+```
 
-Parabola, ellipse và hyperbola có thể định nghĩa bằng distance relationships. Parabola là set points equidistant from a focus và directrix. Ellipse có constant sum of distances tới hai foci; hyperbola có constant absolute difference.
+Do đó
 
-Các definitions này giải thích optical properties và orbital models tốt hơn chỉ nhớ standard equations.
+```math
+d(P,Q)
+=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}.
+```
 
-## Coordinate transforms
+Trong `n` dimensions:
 
-Đổi coordinate system không nhất thiết đổi geometric object. Một point physical có thể có coordinates khác dưới origin/basis khác.
+```math
+d(x,y)=\sqrt{\sum_{i=1}^{n}(x_i-y_i)^2}.
+```
 
-Trong graphics, world coordinates, camera coordinates và screen coordinates là các representations của cùng scene qua transformations.
+Đây chính là Euclidean norm của difference vector.
 
-## Mental Model
+### Assumption quan trọng
 
-> Coordinate geometry gắn một numerical address cho position. Sau đó distance, angle và shape trở thành equations. Geometry không biến mất; algebra chỉ trở thành ngôn ngữ tính toán của geometry.
+Formula trên assume coordinate axes là orthonormal trong Euclidean geometry. Nếu coordinates không orthogonal, hoặc geometry không Euclidean, metric formula thay đổi.
 
-## Common Misconceptions
+## 5. Midpoint và affine combinations
 
-Coordinates không phải bản thân point; chúng phụ thuộc coordinate system. Slope undefined cho vertical line không có nghĩa line “không có direction”. Distance formula là Pythagorean theorem áp vào coordinate differences.
+Midpoint giữa `P` và `Q` là
 
-## Worked Example: distance từ point tới line
+```math
+M=\frac{P+Q}{2}.
+```
+
+Trong coordinates:
+
+```math
+M=
+\left(
+\frac{x_1+x_2}{2},
+\frac{y_1+y_2}{2}
+\right).
+```
+
+Cách derive sâu hơn dùng parameterized segment:
+
+```math
+L(t)=P+t(Q-P),\qquad 0\le t\le1.
+```
+
+`t=0` cho `P`, `t=1` cho `Q`, còn `t=1/2` cho midpoint.
+
+Expression
+
+```math
+(1-t)P+tQ
+```
+
+là affine combination. Đây là nền của interpolation trong graphics, animation và geometry processing.
+
+## 6. Slope là ratio của directional change
+
+Với hai points,
+
+```math
+m=\frac{\Delta y}{\Delta x}
+```
+
+nếu `\Delta x\ne0`.
+
+Slope không phải property “magic” của line; nó là ratio giữa hai components của direction vector.
+
+Nếu direction vector là
+
+```math
+v=(a,b),
+```
+
+thì
+
+```math
+m=\frac ba
+```
+
+khi `a\ne0`.
+
+Vertical line có `a=0`; slope representation `b/a` undefined, nhưng direction vector vẫn hoàn toàn hợp lệ.
+
+Điều này cho thấy vector representation tổng quát hơn slope.
+
+## 7. Equation của line từ hai viewpoints
+
+### Direction viewpoint
+
+Line qua `P` với direction `v`:
+
+```math
+L(t)=P+tv.
+```
+
+Đây là parametric form.
+
+### Normal-vector viewpoint
+
+Nếu `n=(A,B)` vuông góc line, thì mọi point `x=(x,y)` trên line thỏa
+
+```math
+n\cdot(x-P)=0.
+```
+
+Khai triển cho
+
+```math
+Ax+By+C=0.
+```
+
+General form mạnh vì vertical lines không cần special case.
+
+Direction form và normal form là hai representations của cùng line.
+
+## 8. Distance từ point tới line là projection
 
 Line
 
@@ -126,14 +232,186 @@ Line
 Ax+By+C=0
 ```
 
-có normal vector `n=(A,B)`. Với point `P=(x_0,y_0)`, signed projection của displacement lên unit normal dẫn tới distance
+có normal vector
 
 ```math
-d=\frac{|Ax_0+By_0+C|}{\sqrt{A^2+B^2}}
+n=(A,B).
 ```
 
-Numerator đo line equation residual tại point; denominator normalize length của normal. Đây là bridge trực tiếp từ analytic geometry tới projection trong linear algebra.
+Với point `P=(x_0,y_0)`, signed distance theo normal direction tỷ lệ với
 
-## Coordinate system và numerical data
+```math
+Ax_0+By_0+C.
+```
 
-Latitude/longitude không phải Cartesian coordinates trên flat plane toàn cầu. Nếu tính distance xa bằng Euclidean formula trực tiếp trên degrees, model geometry sai. Geographic systems cần spherical/ellipsoidal geometry hoặc suitable map projection. Đây là ví dụ điển hình cho việc “có coordinates” không đồng nghĩa Euclidean distance hợp lệ.
+Normalize bởi length của normal:
+
+```math
+d=
+\frac{|Ax_0+By_0+C|}{\sqrt{A^2+B^2}}.
+```
+
+Đây không phải formula tách rời. Nó là projection của displacement lên unit normal.
+
+Nó nối coordinate geometry trực tiếp với dot product và projection trong linear algebra.
+
+## 9. Circle là locus từ distance constraint
+
+Circle center `C=(h,k)` radius `r` được định nghĩa là set points `P=(x,y)` sao cho
+
+```math
+d(P,C)=r.
+```
+
+Square hai phía:
+
+```math
+(x-h)^2+(y-k)^2=r^2.
+```
+
+Equation đến trực tiếp từ geometric definition. Nếu nhớ definition, không cần học thuộc formula như một object riêng.
+
+## 10. Conics là distance relationships
+
+Coordinate equations của conics có meaning hình học.
+
+**Parabola:** points equidistant từ focus và directrix.
+
+**Ellipse:** sum distances tới hai foci là constant.
+
+**Hyperbola:** absolute difference distances tới hai foci là constant.
+
+Các standard equations xuất hiện sau khi chọn coordinates phù hợp với symmetry của object.
+
+Đây là lesson quan trọng: chọn coordinate system tốt có thể làm equation đơn giản mạnh.
+
+## 11. Rotation và change of coordinates
+
+Giả sử point có coordinates `x` trong basis cũ. Khi basis thay đổi, coordinates mới có thể khác dù geometric point không đổi.
+
+Trong 2D, rotation matrix
+
+```math
+R(\theta)=
+\begin{bmatrix}
+\cos\theta&-\sin\theta\\
+\sin\theta&\cos\theta
+\end{bmatrix}
+```
+
+có thể dùng để rotate vector hoặc đổi representation tùy convention active/passive.
+
+Hai operations dùng same matrix structure nhưng interpretation khác. Vì vậy trong graphics/robotics cần luôn rõ: ta đang move object hay đổi frame?
+
+## 12. Worked example: intersection của line và circle
+
+Circle:
+
+```math
+x^2+y^2=25.
+```
+
+Line:
+
+```math
+y=3.
+```
+
+Substitute:
+
+```math
+x^2+9=25
+```
+
+```math
+x^2=16
+```
+
+nên
+
+```math
+x=\pm4.
+```
+
+Intersection points:
+
+```math
+(4,3),\qquad(-4,3).
+```
+
+Algebra giải system; geometry nói line cắt circle tại hai points. Discriminant của resulting quadratic encode số intersections.
+
+## 13. Coordinate geometry trong Computer Graphics
+
+Graphics thường có nhiều coordinate systems:
+
+```text
+model/local
+→ world
+→ view/camera
+→ clip
+→ normalized device
+→ screen
+```
+
+Một vertex vật lý được transform qua pipeline matrices. Bug thường không đến từ matrix multiplication sai syntax, mà từ nhầm frame, multiplication order hoặc handedness convention.
+
+Coordinate geometry vì vậy là prerequisite thực tế của 2D/3D graphics.
+
+## 14. Robotics và localization
+
+Robot có thể cần biết:
+
+- point trong robot frame;
+- point trong world frame;
+- sensor measurement trong camera/LiDAR frame.
+
+Transformation giữa frames thường dùng rotation + translation.
+
+Cùng một obstacle có coordinates khác nhau trong mỗi frame. Điều quan trọng là relationship giữa frames, không phải một coordinate tuple duy nhất.
+
+## 15. AI/Data: coordinates không tự động có metric meaning
+
+Feature vector cũng là coordinate representation.
+
+Nếu feature 1 là age `0–100`, feature 2 là income `0–100000000`, Euclidean distance trên raw coordinates sẽ bị income dominate.
+
+Do đó metric meaningful phụ thuộc:
+
+- scaling;
+- units;
+- feature semantics;
+- covariance structure;
+- representation learned bởi model.
+
+Có coordinates không có nghĩa Euclidean geometry là model đúng.
+
+## 16. Geographic coordinates: counterexample quan trọng
+
+Latitude/longitude là coordinates trên curved Earth surface. Nếu lấy degree differences rồi dùng flat Euclidean distance cho points xa nhau, model geometry sai.
+
+Ta cần spherical/ellipsoidal distance hoặc suitable projection.
+
+Đây là example rõ:
+
+> representation bằng numbers không quyết định geometry; metric assumptions mới quyết định distance.
+
+## 17. Finance: state spaces và coordinate choice
+
+Một portfolio có thể được represent bằng holdings vector, factor exposures hoặc principal components. Cùng economic position có nhiều coordinate systems.
+
+Trong risk modeling, đổi từ asset coordinates sang factor coordinates có thể làm covariance structure dễ hiểu hơn — tương tự đổi basis trong linear algebra.
+
+## Mental Model
+
+> Coordinate geometry là nghệ thuật chọn một numerical representation cho space. Point, line, circle và distance không sinh ra từ coordinates; coordinates chỉ làm các relationships đó trở thành equations. Đổi coordinate system có thể đổi numbers mạnh nhưng không đổi geometric object.
+
+## Common Misconceptions
+
+**Coordinates là object.** Không; chúng phụ thuộc frame/basis.
+
+**Slope undefined nghĩa vertical line không có direction.** Không; chỉ slope ratio representation bị singular.
+
+**Euclidean distance dùng được cho mọi numerical data.** Không; metric phải match geometry/semantics.
+
+**Rotation matrix luôn nghĩa rotate object.** Cùng matrix structure còn có thể represent change of coordinates; convention cần được nói rõ.
