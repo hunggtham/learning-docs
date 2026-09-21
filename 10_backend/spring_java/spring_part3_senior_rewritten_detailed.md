@@ -224,6 +224,18 @@ Khi hai methods cần proxy policies khác nhau, đó thường là dấu hiệu
 
 ---
 
+<!-- SPRING_BATCH2_REQUEST_SENIOR -->
+## Request lifecycle dưới góc production: queueing, context và failure ownership
+
+Senior debugging cần nối HTTP lifecycle với capacity. Một request có thể chờ ở connector accept queue, server executor, Security filter, rate limiter, DB connection pool, remote HTTP client hoặc lock. Tất cả đều biểu hiện cuối cùng là “endpoint chậm”, nhưng cách xử lý hoàn toàn khác. Metrics và traces phải cho phép tách **server queue time, application execution time và downstream wait time** thay vì chỉ có một timer tổng.
+
+Filter order là security/correctness concern. CORS preflight phải được xử lý đúng trước authentication assumptions; correlation/tracing context phải có sớm để security/controller logs cùng một request ID; body-caching/logging filter có thể phá streaming hoặc tăng memory nếu wrap toàn payload. Interceptor phù hợp cho handler-aware policy, nhưng không nhìn thấy request bị security chain reject trước controller.
+
+Một rule vận hành quan trọng là layer nào tạo side effect thì layer đó phải chịu lifecycle của side effect. Filter mở MDC/context phải đóng trong `finally`. Controller không nên manually close transaction-managed EntityManager. Service không nên giữ servlet request để dùng trong async background task sau khi request đã kết thúc. Tách ownership đúng làm shutdown, timeout và error handling dễ reasoning hơn.
+<!-- SPRING_BATCH2_REQUEST_SENIOR_END -->
+
+---
+
 # 10. Transaction Internals: từ annotation tới resource
 
 Declarative transaction flow:

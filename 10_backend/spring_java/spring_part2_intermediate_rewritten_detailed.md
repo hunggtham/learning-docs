@@ -713,6 +713,22 @@ Mỗi stage giải quyết một loại abstraction khác.
 
 ---
 
+<!-- SPRING_BATCH2_REQUEST_INTERMEDIATE -->
+## Request lifecycle end-to-end: từ servlet container tới response commit
+
+Một request MVC bắt đầu trước Spring MVC. Tomcat hoặc Jetty nhận network data, parse HTTP và tạo `HttpServletRequest`/`HttpServletResponse`. Container chọn execution thread; với cấu hình virtual-thread hiện đại, execution model có thể khác platform-thread pool nhưng Servlet contract vẫn là request đi qua filter chain trước khi tới servlet đích.
+
+Spring Security nếu được dùng nằm trong filter chain này, vì vậy authentication/authorization thường hoàn tất **trước** `DispatcherServlet`. Sau đó `DispatcherServlet#doDispatch` hỏi `HandlerMapping` để lấy `HandlerExecutionChain`, gọi `preHandle` của interceptors, chọn `HandlerAdapter`, rồi `RequestMappingHandlerAdapter` chuẩn bị invoke controller method. Argument resolvers lấy path variable, query parameter, request body, principal hoặc custom context; data binding/conversion tạo Java values; validation có thể reject request trước khi business service được gọi.
+
+Nếu controller gọi application service transactional, lúc đó control mới đi qua service proxy và transaction interceptor. Repository/JPA chạy bên trong transaction; controller nhận result; return-value handler quyết định xử lý `ResponseEntity`, DTO, async type hoặc view; `HttpMessageConverter` serialize body. Chỉ khi servlet response được commit thì status/headers/body bắt đầu trở thành output không thể tự do thay đổi nữa.
+
+Exception cũng có lifecycle. Exception từ controller không nhất thiết nhảy thẳng ra container; `HandlerExceptionResolver` chain, trong đó có resolver cho `@ExceptionHandler`/`@ControllerAdvice`, có cơ hội map exception thành response. Exception ở filter trước DispatcherServlet lại nằm ngoài MVC exception-resolver path và thường cần security/filter-level handling riêng. Đây là lý do cùng một exception type có thể được xử lý khác tùy nó phát sinh ở layer nào.
+
+Async MVC thêm một boundary khác. Khi controller trả `Callable`, `DeferredResult` hoặc supported async type, servlet request có thể được đưa vào async mode và processing tiếp tục ở execution khác trước khi có một async dispatch quay lại hoàn tất response. ThreadLocal context tự chế có thể mất ở boundary này; security, tracing và request context phải dùng cơ chế propagation đúng. Vì vậy request lifecycle phải được hiểu theo **dispatches và execution context**, không chỉ “một request = một thread từ đầu tới cuối”.
+<!-- SPRING_BATCH2_REQUEST_INTERMEDIATE_END -->
+
+---
+
 # 26. HandlerMapping
 
 `HandlerMapping` trả lời:

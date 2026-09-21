@@ -148,6 +148,18 @@ request
 
 `DispatcherServlet` là Front Controller phối hợp strategy interfaces thay vì hard-code mọi handler model.
 
+<!-- SPRING_BATCH2_REQUEST_MASTER -->
+## Source trace: `DispatcherServlet#doDispatch` thực sự phối hợp những strategy nào?
+
+Trong `doDispatch`, DispatcherServlet không trực tiếp gọi controller bằng reflection tùy ý. Nó lấy handler qua `getHandler`, chọn adapter qua `getHandlerAdapter`, rồi delegate việc invoke. Với annotated controller, `RequestMappingHandlerAdapter` tạo `ServletInvocableHandlerMethod`; argument resolution đi qua các composite resolver đã được đăng ký theo order. Một resolver chỉ tham gia khi `supportsParameter` trả true, sau đó mới resolve value. Return values đi qua một composite tương tự để chọn handler phù hợp.
+
+`RequestResponseBodyMethodProcessor` là một mắt xích quan trọng cho `@RequestBody` và response body: nó phối hợp message converters, content negotiation, validation/binding hooks và body advice. Vì vậy lỗi JSON deserialize, validation và media type xảy ra trước controller body execution trong nhiều case. Khi custom converter/resolver được thêm sai order, bạn đang thay dispatch algorithm của framework chứ không chỉ “thêm annotation hỗ trợ”.
+
+Exception resolution cũng là strategy chain. `ExceptionHandlerExceptionResolver` tìm `@ExceptionHandler`; `ResponseStatusExceptionResolver` xử lý status-oriented exceptions; default resolver map một số framework exceptions. Master-level extension nên chọn đúng strategy interface thay vì override DispatcherServlet hoặc viết filter bắt mọi Throwable làm mất semantics MVC.
+<!-- SPRING_BATCH2_REQUEST_MASTER_END -->
+
+---
+
 # 16. `RequestMappingHandlerMapping`
 
 Annotated mappings được đăng ký theo path, HTTP method, params, headers, consumes/produces và ở Framework 7 còn có API-version semantics. Ambiguous route là conflict trong mapping registry, không phải DispatcherServlet ngẫu nhiên chọn sai.
