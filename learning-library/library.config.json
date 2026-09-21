@@ -85,6 +85,12 @@
       "category": "Linux",
       "language": "vi-en",
       "rights": "author-confirmed"
+    },
+    {
+      "path": "world_geography",
+      "category": "World geography",
+      "language": "vi-en",
+      "rights": "author-confirmed"
     }
   ],
   "allowedDocuments": [
