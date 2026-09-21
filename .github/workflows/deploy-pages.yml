@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -26,6 +26,255 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Polish Vietnamese terminology once
+        if: "${{ github.event.head_commit.message == 'chore: polish HTML XML Vietnamese terminology' }}"
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          html_files = [
+              Path('10_frontend/html/html_01_beginner_to_senior_detailed.md'),
+              Path('10_frontend/html/html_02_master_implementation_detailed.md'),
+          ]
+          xml_files = [
+              Path('10_frontend/xml/xml_01_beginner_detailed.md'),
+              Path('10_frontend/xml/xml_02_intermediate_detailed.md'),
+              Path('10_frontend/xml/xml_03_senior_detailed.md'),
+              Path('10_frontend/xml/xml_04_master_supplement_detailed.md'),
+          ]
+
+          html_glossary = """## Quy ước thuật ngữ trong tài liệu
+
+          Tài liệu dùng tiếng Việt tự nhiên làm ngôn ngữ giải thích chính và giữ thuật ngữ gốc ở lần định nghĩa để tiện tra cứu. Các cách gọi được dùng thống nhất gồm: **trình duyệt (browser)**, **phân tích cú pháp (parsing)**, **bộ phân tích cú pháp (parser)**, **HTML ngữ nghĩa (semantic HTML)**, **ngữ nghĩa (semantics)**, **khả năng tiếp cận (accessibility)**, **cây trợ năng (accessibility tree)**, **tên trợ năng (accessible name)**, **siêu dữ liệu (metadata)**, **kiểm tra ràng buộc của biểu mẫu (constraint validation)**, **mô hình nội dung (content model)**, **thuộc tính DOM (DOM property)**, **trạng thái hiện thời (live state)**, **lớp trên cùng (top layer)**, **hiệu năng (performance)** và **bảo mật (security)**. Sau khi đã định nghĩa ở đây, phần nội dung bên dưới ưu tiên dùng cách gọi tiếng Việt để câu văn không bị nặng. Các tên chuẩn như DOM, ARIA, CORS, CSP, Shadow DOM, Web Components, `iframe`, tên tag, attribute và API cụ thể được giữ nguyên nếu dịch sẽ làm mất nghĩa hoặc gây khó đối chiếu tài liệu kỹ thuật.
+
+          """
+
+          xml_glossary = """## Quy ước thuật ngữ trong tài liệu
+
+          Tài liệu dùng tiếng Việt tự nhiên làm ngôn ngữ giải thích chính và giữ thuật ngữ gốc ở lần định nghĩa để tiện tra cứu. Các cách gọi được dùng thống nhất gồm: **phần tử (element)**, **thuộc tính (attribute)**, **phần tử gốc (root element)**, **không gian tên (namespace)**, **tiền tố (prefix)**, **tên mở rộng (expanded name)**, **lược đồ (schema)**, **đúng cú pháp XML (well-formed)**, **kiểm tra tính hợp lệ (validation)**, **phân tích cú pháp (parsing)**, **bộ phân tích cú pháp (parser)**, **xử lý theo luồng (streaming)**, **truy vấn (query)**, **chuyển đổi (transformation)**, **ánh xạ/liên kết (binding)**, **tuần tự hóa (serialization)** và **chuẩn hóa chính tắc (canonicalization/C14N)**. Sau khi đã định nghĩa ở đây, phần nội dung bên dưới ưu tiên dùng cách gọi tiếng Việt để tránh lặp ngoặc tiếng Anh quá dày. Các tên chuẩn như XML, DTD, XSD, XPath, XSLT, XQuery, DOM, SAX, StAX, SOAP, WSDL, QName, PSVI và tên API cụ thể được giữ nguyên.
+
+          """
+
+          html_cleanup = [
+              ('cây trợ năng (khả năng tiếp cận (accessibility) tree)', 'cây trợ năng'),
+              ('HTML ngữ nghĩa (ngữ nghĩa (semantics) HTML)', 'HTML ngữ nghĩa'),
+              ('trình duyệt (browser) platform', 'nền tảng trình duyệt'),
+              ('DOM trạng thái hiện thời (live state)', 'trạng thái hiện thời của DOM'),
+              ('script quá trình tải (loading)', 'quá trình tải script'),
+              ('hệ thống cũ (legacy) migration', 'chuyển đổi hệ thống cũ'),
+              ('native ngữ nghĩa (semantics)', 'ngữ nghĩa gốc của phần tử'),
+              ('resource/bảo mật (security) policy', 'chính sách tài nguyên và bảo mật'),
+              ('document structure', 'cấu trúc tài liệu'),
+              ('form internals', 'cơ chế nội bộ của form'),
+              ('modern declarative HTML', 'HTML khai báo hiện đại'),
+              ('responsive images', 'ảnh đáp ứng'),
+              ('native interactive elements', 'các phần tử tương tác gốc của trình duyệt'),
+              ('trình duyệt (browser)', 'trình duyệt'),
+              ('Trình duyệt (browser)', 'Trình duyệt'),
+              ('khả năng tiếp cận (accessibility)', 'khả năng tiếp cận'),
+              ('bảo mật (security)', 'bảo mật'),
+              ('hiệu năng (performance)', 'hiệu năng'),
+              ('siêu dữ liệu (metadata)', 'siêu dữ liệu'),
+              ('HTML ngữ nghĩa (semantic HTML)', 'HTML ngữ nghĩa'),
+              ('các phần tử mang ngữ nghĩa (semantic elements)', 'các phần tử mang ngữ nghĩa'),
+              ('phần tử mang ngữ nghĩa (semantic element)', 'phần tử mang ngữ nghĩa'),
+              ('ý nghĩa ngữ nghĩa (semantic meaning)', 'ý nghĩa ngữ nghĩa'),
+              ('ngữ nghĩa (semantics)', 'ngữ nghĩa'),
+              ('bộ phân tích cú pháp HTML (HTML parser)', 'bộ phân tích cú pháp HTML'),
+              ('bộ phân tích cú pháp (parser)', 'bộ phân tích cú pháp'),
+              ('phân tích cú pháp (parsing)', 'phân tích cú pháp'),
+              ('cây trợ năng (accessibility tree)', 'cây trợ năng'),
+              ('tên trợ năng (accessible name)', 'tên trợ năng'),
+              ('mô tả trợ năng (accessible description)', 'mô tả trợ năng'),
+              ('kiểm tra ràng buộc (constraint validation)', 'kiểm tra ràng buộc'),
+              ('mô hình nội dung (content model)', 'mô hình nội dung'),
+              ('các mô hình nội dung (content models)', 'các mô hình nội dung'),
+              ('trạng thái hiện thời (live state)', 'trạng thái hiện thời'),
+              ('thuộc tính DOM (DOM property)', 'thuộc tính DOM'),
+              ('các thuộc tính DOM (DOM properties)', 'các thuộc tính DOM'),
+              ('lớp trên cùng (top layer)', 'lớp trên cùng'),
+              ('biểu mẫu chủ quản (form owner)', 'biểu mẫu chủ quản'),
+              ('điều khiển gửi biểu mẫu (submitter)', 'điều khiển gửi biểu mẫu'),
+              ('các điều khiển được đưa vào dữ liệu gửi đi (successful controls)', 'các điều khiển được đưa vào dữ liệu gửi đi'),
+              ('phần tử tùy biến (custom element)', 'phần tử tùy biến'),
+              ('các phần tử tùy biến (custom elements)', 'các phần tử tùy biến'),
+              ('thuộc tính boolean (boolean attribute)', 'thuộc tính boolean'),
+              ('các thuộc tính boolean (boolean attributes)', 'các thuộc tính boolean'),
+              ('thuộc tính toàn cục (global attribute)', 'thuộc tính toàn cục'),
+              ('các thuộc tính toàn cục (global attributes)', 'các thuộc tính toàn cục'),
+              ('phần tử rỗng đặc biệt (void element)', 'phần tử rỗng đặc biệt'),
+              ('các phần tử rỗng đặc biệt (void elements)', 'các phần tử rỗng đặc biệt'),
+              ('thuộc tính nội dung (content attribute)', 'thuộc tính nội dung'),
+              ('các thuộc tính nội dung (content attributes)', 'các thuộc tính nội dung'),
+              ('trình đọc màn hình (screen reader)', 'trình đọc màn hình'),
+              ('các trình đọc màn hình (screen readers)', 'các trình đọc màn hình'),
+              ('tiêu điểm (focus)', 'tiêu điểm'),
+              ('tương tác (interaction)', 'tương tác'),
+              ('kết xuất (rendering)', 'kết xuất'),
+              ('quá trình tải (loading)', 'quá trình tải'),
+              ('hệ thống cũ (legacy)', 'hệ thống cũ'),
+              ('không còn khuyến nghị (deprecated)', 'không còn khuyến nghị'),
+              ('lỗi thời (obsolete)', 'lỗi thời'),
+              ('phương án dự phòng (fallback)', 'phương án dự phòng'),
+              ('trạng thái mặc định (default state)', 'trạng thái mặc định'),
+              ('trạng thái hiện tại (current state)', 'trạng thái hiện tại'),
+              ('cùng nguồn (same-origin)', 'cùng nguồn'),
+              ('khác nguồn (cross-origin)', 'khác nguồn'),
+          ]
+
+          xml_cleanup = [
+              ('phần tử (element)', 'phần tử'),
+              ('các phần tử (elements)', 'các phần tử'),
+              ('thuộc tính (attribute)', 'thuộc tính'),
+              ('các thuộc tính (attributes)', 'các thuộc tính'),
+              ('phần tử gốc (root element)', 'phần tử gốc'),
+              ('các phần tử gốc (root elements)', 'các phần tử gốc'),
+              ('không gian tên mặc định (default namespace)', 'không gian tên mặc định'),
+              ('không gian tên (namespace)', 'không gian tên'),
+              ('các không gian tên (namespaces)', 'các không gian tên'),
+              ('URI của không gian tên (namespace URI)', 'URI của không gian tên'),
+              ('nhận biết không gian tên (namespace-aware)', 'nhận biết không gian tên'),
+              ('tiền tố (prefix)', 'tiền tố'),
+              ('các tiền tố (prefixes)', 'các tiền tố'),
+              ('tên mở rộng (expanded name)', 'tên mở rộng'),
+              ('các tên mở rộng (expanded names)', 'các tên mở rộng'),
+              ('lược đồ (schema)', 'lược đồ'),
+              ('các lược đồ (schemas)', 'các lược đồ'),
+              ('đúng cú pháp XML (well-formed)', 'đúng cú pháp XML'),
+              ('thực thể (entity)', 'thực thể'),
+              ('các thực thể (entities)', 'các thực thể'),
+              ('thực thể ngoài (external entity)', 'thực thể ngoài'),
+              ('các thực thể ngoài (external entities)', 'các thực thể ngoài'),
+              ('nội dung hỗn hợp (mixed content)', 'nội dung hỗn hợp'),
+              ('hướng dữ liệu (data-centric)', 'hướng dữ liệu'),
+              ('hướng tài liệu (document-centric)', 'hướng tài liệu'),
+              ('bộ phân tích cú pháp (parser)', 'bộ phân tích cú pháp'),
+              ('phân tích cú pháp (parsing)', 'phân tích cú pháp'),
+              ('xử lý theo luồng (streaming)', 'xử lý theo luồng'),
+              ('tuần tự hóa (serialization)', 'tuần tự hóa'),
+              ('chuẩn hóa chính tắc (canonicalization)', 'chuẩn hóa chính tắc'),
+              ('chữ ký số (digital signature)', 'chữ ký số'),
+              ('tấn công bọc chữ ký (signature wrapping)', 'tấn công bọc chữ ký'),
+              ('truy vấn (query)', 'truy vấn'),
+              ('các truy vấn (queries)', 'các truy vấn'),
+              ('chuyển đổi (transformation)', 'chuyển đổi'),
+              ('ánh xạ (mapping)', 'ánh xạ'),
+              ('ánh xạ/liên kết (binding)', 'ánh xạ/liên kết'),
+              ('bộ phân giải (resolver)', 'bộ phân giải'),
+              ('ký tự đại diện (wildcard)', 'ký tự đại diện'),
+              ('các ký tự đại diện (wildcards)', 'các ký tự đại diện'),
+              ('điểm mở rộng (extension point)', 'điểm mở rộng'),
+              ('các điểm mở rộng (extension points)', 'các điểm mở rộng'),
+              ('ràng buộc định danh (identity constraints)', 'ràng buộc định danh'),
+              ('hệ kiểu (type system)', 'hệ kiểu'),
+              ('khả năng liên vận (interoperability)', 'khả năng liên vận'),
+              ('khả năng tương thích (compatibility)', 'khả năng tương thích'),
+              ('gia cố bảo mật (hardening)', 'gia cố bảo mật'),
+              ('chuỗi xử lý (pipeline)', 'chuỗi xử lý'),
+              ('tài nguyên bên ngoài (external resource)', 'tài nguyên bên ngoài'),
+              ('các tài nguyên bên ngoài (external resources)', 'các tài nguyên bên ngoài'),
+              ('bề mặt tấn công (attack surface)', 'bề mặt tấn công'),
+              ('mô hình đe dọa (threat model)', 'mô hình đe dọa'),
+              ('tích hợp doanh nghiệp (enterprise integration)', 'tích hợp doanh nghiệp'),
+              ('tiến hóa lược đồ (schema evolution)', 'tiến hóa lược đồ'),
+              ('lược đồ validation', 'kiểm tra tính hợp lệ theo lược đồ'),
+              ('lược đồ rules', 'quy tắc lược đồ'),
+              ('lược đồ version', 'phiên bản lược đồ'),
+              ('lược đồ processor', 'bộ xử lý lược đồ'),
+              ('phần tử tree', 'cây phần tử'),
+              ('phần tử name', 'tên phần tử'),
+              ('phần tử children', 'các phần tử con'),
+              ('thuộc tính value', 'giá trị thuộc tính'),
+              ('thuộc tính name', 'tên thuộc tính'),
+              ('không gian tên declaration', 'khai báo không gian tên'),
+              ('không gian tên binding', 'liên kết không gian tên'),
+              ('không gian tên scope', 'phạm vi không gian tên'),
+              ('không gian tên identity', 'định danh không gian tên'),
+              ('truy vấn expression', 'biểu thức truy vấn'),
+              ('kiểm tra tính hợp lệ fail', 'kiểm tra tính hợp lệ thất bại'),
+              ('bộ phân tích cú pháp config', 'cấu hình bộ phân tích cú pháp'),
+              ('bộ phân tích cú pháp behavior', 'hành vi bộ phân tích cú pháp'),
+          ]
+
+          heading_cleanup = [
+              ('## Trình duyệt phân tích cú pháp, form internals, khả năng tiếp cận API, bảo mật, hệ thống cũ migration và modern declarative HTML',
+               '## Phân tích cú pháp của trình duyệt, cơ chế nội bộ của form, API trợ năng, bảo mật, chuyển đổi hệ thống cũ và HTML khai báo hiện đại'),
+              ('# PHẦN 1 — HTML LÀ GÌ VÀ BROWSER HIỂU NÓ THẾ NÀO?',
+               '# PHẦN 1 — HTML LÀ GÌ VÀ TRÌNH DUYỆT (BROWSER) HIỂU NÓ THẾ NÀO?'),
+              ('# Parser Models', '# Các mô hình phân tích cú pháp (Parser Models)'),
+              ('# Schema Design và Contract Evolution', '# Thiết kế lược đồ (Schema Design) và tiến hóa hợp đồng dữ liệu (Contract Evolution)'),
+              ('# XML Binding và Java', '# Ánh xạ XML (XML Binding) và Java'),
+              ('# Large XML và Streaming', '# XML dung lượng lớn và xử lý theo luồng (streaming)'),
+              ('# Security', '# Bảo mật (Security)'),
+              ('# Integration Architecture', '# Kiến trúc tích hợp (Integration Architecture)'),
+              ('# XML Design Idioms', '# Quy ước thiết kế XML (XML Design Idioms)'),
+              ('# Senior Anti-patterns', '# Các phản mẫu ở mức Senior (Senior Anti-patterns)'),
+              ('# Performance và Observability', '# Hiệu năng (performance) và khả năng quan sát (observability)'),
+              ('# Full Mental Model', '# Mô hình tư duy tổng thể (Full Mental Model)'),
+              ('# DTD Deeper', '# DTD chuyên sâu'),
+              ('# Namespace Deeper', '# Không gian tên (Namespace) chuyên sâu'),
+              ('# Resolver và External Resources', '# Bộ phân giải (resolver) và tài nguyên bên ngoài (external resources)'),
+              ('# Canonical XML', '# XML chính tắc (Canonical XML)'),
+              ('# XML Signature sâu hơn', '# Chữ ký XML (XML Signature) chuyên sâu'),
+              ('# Parser Differential và Resource Limits', '# Khác biệt giữa bộ phân tích cú pháp (parser differential) và giới hạn tài nguyên (resource limits)'),
+              ('# Serialization và Lexical Preservation', '# Tuần tự hóa (serialization) và bảo toàn biểu diễn từ vựng (lexical preservation)'),
+              ('# Alternative Schema Languages', '# Các ngôn ngữ lược đồ thay thế (alternative schema languages)'),
+              ('# XSD Design Patterns', '# Các mẫu thiết kế XSD (XSD design patterns)'),
+              ('# Contract-first và Code-first', '# Thiết kế từ hợp đồng (contract-first) và từ mã nguồn (code-first)'),
+              ('# Master Design Patterns', '# Các mẫu thiết kế mức Master (Master Design Patterns)'),
+              ('# Debug và Review', '# Gỡ lỗi (debug) và rà soát (review)'),
+          ]
+
+          def replace_outside_code(text, replacements):
+              out = []
+              fenced = False
+              for line in text.splitlines(keepends=True):
+                  if line.lstrip().startswith('```'):
+                      fenced = not fenced
+                      out.append(line)
+                      continue
+                  if fenced:
+                      out.append(line)
+                      continue
+                  parts = re.split(r'(`[^`]*`)', line)
+                  for i in range(0, len(parts), 2):
+                      for old, new in replacements:
+                          parts[i] = parts[i].replace(old, new)
+                  out.append(''.join(parts))
+              return ''.join(out)
+
+          def set_glossary(text, glossary):
+              pattern = r'## Quy ước thuật ngữ trong tài liệu\n.*?\n\n---\n'
+              replacement = glossary.rstrip() + '\n\n---\n'
+              return re.sub(pattern, replacement, text, count=1, flags=re.S)
+
+          for path in html_files:
+              text = path.read_text(encoding='utf-8')
+              text = replace_outside_code(text, html_cleanup)
+              text = replace_outside_code(text, heading_cleanup)
+              text = set_glossary(text, html_glossary)
+              path.write_text(text, encoding='utf-8')
+
+          for path in xml_files:
+              text = path.read_text(encoding='utf-8')
+              text = replace_outside_code(text, xml_cleanup)
+              text = replace_outside_code(text, heading_cleanup)
+              text = set_glossary(text, xml_glossary)
+              path.write_text(text, encoding='utf-8')
+          PY
+
+          git checkout HEAD^ -- .github/workflows/deploy-pages.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add 10_frontend/html 10_frontend/xml .github/workflows/deploy-pages.yml
+          git commit -m "docs(html-xml): polish Vietnamese terminology prose"
+          git pull --rebase origin main
+          git push origin main
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
