@@ -55,6 +55,12 @@
       "category": "Mathematics",
       "language": "vi-en-ko",
       "rights": "author-confirmed"
+    },
+    {
+      "path": "linux",
+      "category": "Linux",
+      "language": "vi-en",
+      "rights": "author-confirmed"
     }
   ],
   "allowedDocuments": [
@@ -66,9 +72,9 @@
       "rights": "author-confirmed"
     },
     {
-      "path": "10_backend/putty_ssh_linux_server_commands_extended.md",
+      "path": "linux/reference/putty_ssh_linux_server_commands.md",
       "title": "PuTTY, SSH and Linux server commands",
-      "category": "Backend",
+      "category": "Linux",
       "language": "vi-en",
       "rights": "author-confirmed"
     },
@@ -89,8 +95,8 @@
     {
       "path": "10_frontend/scss/SCSS_Beginner_to_Senior_2026.md",
       "title": "SCSS: Beginner to Senior",
-      "category": "Frontend",
       "language": "vi-en",
+      "category": "Frontend",
       "rights": "author-confirmed"
     },
     {
