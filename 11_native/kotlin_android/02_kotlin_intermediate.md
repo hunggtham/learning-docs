@@ -155,6 +155,7 @@ Collection nhỏ/chain ngắn không mặc định nhanh hơn; performance cần
 
 # 8. Coroutine nền tảng
 
+<!-- merge: preserve both canonical variants -->
 Coroutine không đồng nghĩa thread. `suspend` chỉ nói function có thể suspend; nó không đảm bảo function chạy background.
 
 ```kotlin
@@ -180,6 +181,102 @@ suspend fun parseLargeFile(file: File): Model = withContext(ioDispatcher) {
 # 9. Structured concurrency
 
 Coroutine con sống trong scope cha. Điều này tạo ownership và cancellation có cấu trúc.
+<!-- merge: preserve both canonical variants -->
+Coroutine là một computation có **lifetime, cancellation và execution context**, không phải “thread nhẹ” theo nghĩa mỗi coroutine tương ứng một thread riêng. Coroutine có thể suspend mà không block thread, rồi resume sau đó theo dispatcher/context. Nhưng `suspend` **không tự động biến blocking code thành non-blocking**: nếu gọi JDBC/file/network API blocking bên trong suspend function trên Main, main thread vẫn bị block.
+
+```kotlin
+suspend fun loadUser(): User {
+    delay(100) // suspend, không giữ thread trong lúc chờ
+    return User(...)
+}
+```
+
+## 8.1 Scope là owner của lifetime
+
+Mỗi coroutine phải trả lời được “ai chịu trách nhiệm cancel nó?”. Android có vài scope phổ biến:
+
+```text
+viewModelScope
+= work sống cùng ViewModel
+
+lifecycleScope
+= work sống cùng LifecycleOwner
+
+LaunchedEffect scope
+= work sống cùng vị trí/key trong Composition
+
+WorkManager worker scope
+= work sống cùng execution của Worker
+
+application/external scope
+= chỉ dùng khi operation thật sự phải sống lâu hơn screen và có owner toàn app rõ ràng
+```
+
+Nếu tạo `CoroutineScope(SupervisorJob() + Dispatchers.IO)` tùy ý trong repository mà không có owner/shutdown policy, ta đã tạo lifetime ẩn.
+
+## 8.2 `launch`, `async`, `withContext` khác nhau về contract
+
+```kotlin
+scope.launch { ... }       // Job, side-effect/lifecycle work
+scope.async { ... }        // Deferred<T>, concurrent result
+withContext(dispatcher) { ... } // chuyển context và chờ kết quả
+```
+
+`async` chỉ hữu ích khi có **concurrency có chủ đích**. Viết:
+
+```kotlin
+val value = async { repository.load() }.await()
+```
+
+mà không chạy song song với gì thường chỉ thêm `Deferred` không cần thiết.
+
+`withContext` không tạo “background job độc lập”; caller chờ block đó hoàn tất và cancellation vẫn nằm trong structured scope.
+
+## 8.3 Main-safety là contract của lower layer
+
+Suspend function ở repository/use case nên đủ main-safe để caller không phải nhớ dispatcher implementation detail.
+
+```kotlin
+class FileRepository(
+    private val ioDispatcher: CoroutineDispatcher
+) {
+    suspend fun readLargeFile(): Data = withContext(ioDispatcher) {
+        blockingParser.read()
+    }
+}
+```
+
+Nếu mỗi ViewModel phải nhớ method nào cần `Dispatchers.IO`, threading policy đã leak lên UI layer.
+
+## 8.4 Cancellation là cooperative
+
+Cancellation không “giết thread”. Coroutine dừng tại suspension point hoặc khi code chủ động kiểm tra cancellation.
+
+CPU loop dài nên có checkpoint khi phù hợp:
+
+```kotlin
+while (hasMoreWork()) {
+    ensureActive()
+    processChunk()
+}
+```
+
+Cleanup thường đặt trong `finally`. Không dùng `NonCancellable` cho toàn operation; chỉ cân nhắc vùng cleanup ngắn thật sự phải hoàn thành.
+
+```kotlin
+try {
+    repository.sync()
+} finally {
+    releaseResource()
+}
+```
+
+Không swallow `CancellationException` thành domain error thông thường. Cancellation thường là control signal cho lifetime, không phải “network failed”.
+
+# 9. Structured concurrency
+
+Structured concurrency nghĩa coroutine tạo ra một **Job tree** có parent-child relationship rõ ràng. Parent không được xem là hoàn tất trong khi child còn chạy; cancellation và failure đi theo rule của tree thay vì coroutine “bay tự do”.
+<!-- end merged variant -->
 
 ```kotlin
 suspend fun loadPage(): Page = coroutineScope {
@@ -189,6 +286,7 @@ suspend fun loadPage(): Page = coroutineScope {
 }
 ```
 
+<!-- merge: preserve both canonical variants -->
 Chỉ parallel khi hai operation độc lập. `supervisorScope` phù hợp khi sibling failure độc lập; nó không tự xử lý error.
 
 Tránh `GlobalScope`. Hỏi: **ai sở hữu coroutine và khi owner chết thì work có nên tiếp tục không?**
@@ -196,15 +294,152 @@ Tránh `GlobalScope`. Hỏi: **ai sở hữu coroutine và khi owner chết thì
 # 10. Flow, StateFlow và SharedFlow
 
 `Flow<T>` thường cold: upstream chạy khi collect. `StateFlow` là hot state holder có current value. `SharedFlow` là hot broadcast stream với replay/buffer cấu hình được.
+<!-- merge: preserve both canonical variants -->
+Ở đây `user` và `posts` thực sự chạy concurrent. Nếu một child fail trong `coroutineScope`, sibling còn lại thường bị cancel vì kết quả `Page` không còn tạo được đầy đủ.
+
+`supervisorScope` dùng khi failure của một child không nên tự động cancel sibling:
+
+```kotlin
+supervisorScope {
+    launch { refreshAvatar() }
+    launch { refreshRecommendations() }
+}
+```
+
+Nhưng supervision không có nghĩa “bỏ qua exception”. Mỗi failure vẫn cần owner và error policy.
+
+## 9.1 Concurrency không đồng nghĩa parallelism
+
+Hai coroutine có thể concurrent nhưng chạy trên cùng thread theo thời gian xen kẽ. Parallelism chỉ xảy ra khi runtime/dispatcher cho phép chạy thật sự đồng thời trên nhiều thread/core.
+
+Điều cần thiết kế là:
+
+```text
+operation nào có thể overlap?
+operation nào phải serialize?
+operation cũ có được overwrite result mới không?
+bao nhiêu request cùng lúc là hợp lý?
+```
+
+## 9.2 Duplicate action và stale result là bug concurrency rất phổ biến
+
+Ví dụ user đổi search query nhanh:
+
+```text
+request A(query="ko") bắt đầu
+request B(query="kotlin") bắt đầu sau
+B trả về trước → UI đúng
+A trả về sau → nếu update state vô điều kiện, UI bị quay về result cũ
+```
+
+Giải pháp có thể là `flatMapLatest`, cancel job cũ, generation/version token hoặc repository contract khác. Mutex không tự giải quyết stale-result semantic.
+
+Tránh `GlobalScope` trong application code. Scope phải có owner. Nếu operation cần sống qua screen navigation hoặc process scheduling, hãy chọn owner/primitive đúng thay vì cố kéo dài một coroutine UI.
+
+# 10. Flow, StateFlow và SharedFlow
+
+`Flow<T>` biểu diễn chuỗi giá trị theo thời gian. Cold Flow thường chỉ chạy upstream khi có collector.
+
+```kotlin
+fun observeUsers(): Flow<List<User>> = dao.observeUsers()
+```
+
+Một cold Flow không phải “background task tự chạy”. Nếu không collect, phần lớn upstream cold flow không thực thi.
+
+## 10.1 Operator là semantic, không chỉ syntax chain
+
+```kotlin
+flow
+    .map { ... }
+    .filter { ... }
+    .distinctUntilChanged()
+    .debounce(300)
+    .catch { ... }
+    .combine(other) { a, b -> ... }
+```
+
+`combine` giữ latest value từ nhiều stream; `zip` ghép theo cặp emission; `debounce` đợi khoảng yên; `distinctUntilChanged` bỏ emission lặp theo equality. Chọn operator sai có thể tạo bug ordering chứ không chỉ khác performance.
+
+`flatMapLatest` rất hữu ích cho search/query mà request mới phải làm result cũ hết hiệu lực:
+
+```kotlin
+query
+    .debounce(300)
+    .flatMapLatest(repository::search)
+```
+
+## 10.2 Flow context và `flowOn`
+
+Flow giữ context preservation. `flowOn(dispatcher)` thay context của **upstream trước nó**, không đơn giản là “mọi thứ sau đây chạy IO”. Collector vẫn chạy trong context nơi collect trừ khi boundary khác thay đổi.
+
+```kotlin
+flow {
+    emit(loadBlocking())
+}
+    .flowOn(ioDispatcher)
+    .map(::toUiModel)
+```
+
+Hiểu upstream/downstream quan trọng khi debug thread, cancellation và performance.
+
+## 10.3 Backpressure: producer nhanh hơn consumer
+
+Không phải mọi emission đều cần render. Các tool có semantic khác nhau:
+
+```text
+buffer
+= cho producer và consumer overlap với buffer
+
+conflate
+= bỏ intermediate value khi consumer chậm, giữ latest direction
+
+collectLatest
+= cancel xử lý value cũ khi value mới tới
+```
+
+Không dùng `conflate` cho event mà từng item đều phải xử lý, ví dụ transaction mutation queue.
+
+## 10.4 `StateFlow` là state holder
+
+`StateFlow` là hot, có current value và phù hợp state có thể đọc ở bất kỳ thời điểm nào.
+<!-- end merged variant -->
 
 ```kotlin
 private val _uiState = MutableStateFlow(UiState())
 val uiState: StateFlow<UiState> = _uiState.asStateFlow()
 ```
 
+<!-- merge: preserve both canonical variants -->
 Không chọn SharedFlow chỉ vì “event”. Trước hết hỏi event có cần survive collector inactive/recreation không. Nếu câu trả lời có, có thể đó là durable state chứ không phải one-off event.
 
 Các operator như `debounce`, `combine`, `distinctUntilChanged`, `flatMapLatest` cần dùng theo semantics. `flatMapLatest` hợp search latest-wins nhưng không hợp audit stream nơi mọi item phải xử lý.
+<!-- merge: preserve both canonical variants -->
+UI state nên immutable từ bên ngoài; ViewModel là owner mutation.
+
+`StateFlow` conflates theo equality/value update semantics; collector chậm không có nghĩa được nhận mọi intermediate snapshot. Đây thường đúng với state vì UI quan tâm latest truth.
+
+## 10.5 `SharedFlow` là shared stream, không mặc định là “event solution”
+
+`SharedFlow` có thể cấu hình replay/buffer và share emission cho nhiều collector. Nó hữu ích cho shared upstream hoặc event stream thực sự.
+
+Nhưng các event có business meaning lâu dài nên thường model thành state/durable data thay vì phát một tín hiệu có thể mất khi UI không collect. Ví dụ “payment completed” là domain state; snackbar “Copied” có thể transient.
+
+## 10.6 `stateIn` và `shareIn`
+
+Cold Flow có thể được convert thành hot shared stream trong scope rõ ràng:
+
+```kotlin
+val uiState = repository.observeUsers()
+    .map(::toUiState)
+    .stateIn(
+        scope = viewModelScope,
+        started = SharingStarted.WhileSubscribed(5_000),
+        initialValue = UiState.Loading
+    )
+```
+
+`SharingStarted` quyết định upstream sống khi nào. Đây là **lifetime decision**, không chỉ optimization. `Eagerly`, `Lazily`, `WhileSubscribed` có trade-off khác nhau về freshness, resource và restart.
+<!-- end merged variant -->
 
 # 11. Android app architecture
 
@@ -242,7 +477,11 @@ Use case có giá trị khi operation chứa policy/business rule/reuse. Nếu `
 
 # 12. ViewModel và UI State
 
+<!-- merge: preserve both canonical variants -->
 ViewModel là screen-level state holder/orchestrator, không phải nơi chứa toàn bộ networking, SQL và service locator.
+<!-- merge: preserve both canonical variants -->
+ViewModel là state holder ở screen/navigation scope, không phải nơi “mọi logic Android” phải chuyển vào. Nó thường nhận event, gọi domain/data operation và expose state cho UI.
+<!-- end merged variant -->
 
 ```kotlin
 data class UserUiState(
@@ -251,9 +490,103 @@ data class UserUiState(
     val isRefreshing: Boolean = false,
     val error: UiError? = null
 )
+<!-- merge: preserve both canonical variants -->
 ```
 
 Phân biệt initial load và refresh giúp UI giữ cached content thay vì thay toàn màn hình bằng spinner.
+<!-- merge: preserve both canonical variants -->
+
+class UserViewModel(
+    private val repository: UserRepository
+) : ViewModel() {
+    private val _uiState = MutableStateFlow(UserUiState())
+    val uiState = _uiState.asStateFlow()
+
+    fun refresh() {
+        viewModelScope.launch {
+            _uiState.update { it.copy(loading = true, errorMessage = null) }
+            try {
+                repository.refresh()
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Throwable) {
+                _uiState.update { it.copy(errorMessage = e.message) }
+            } finally {
+                _uiState.update { it.copy(loading = false) }
+            }
+        }
+    }
+}
+```
+
+## 12.1 State ownership trước API choice
+
+Trước khi chọn `remember`, `StateFlow` hay SavedStateHandle, hỏi state phải sống bao lâu.
+
+```text
+chỉ trong một recomposition tree
+→ remember
+
+qua configuration recreation cho UI value nhỏ
+→ rememberSaveable hoặc SavedStateHandle tùy owner
+
+screen state/business interaction trong cùng process
+→ ViewModel + StateFlow thường phù hợp
+
+qua process death
+→ reconstruct từ SavedStateHandle nhỏ + repository/database/server
+
+durable business data
+→ database/DataStore/server, không dựa vào ViewModel
+```
+
+ViewModel sống qua configuration change nhưng **không sống qua process death**.
+
+## 12.2 Authoritative state và derived state
+
+Không lưu cùng một fact thành nhiều mutable source nếu có thể derive.
+
+Sai hướng:
+
+```text
+repository có users
+ViewModel copy users vào mutable list riêng
+Composable lại copy vào remember list khác
+```
+
+Ba source có thể lệch nhau.
+
+Tốt hơn là xác định source of truth, sau đó derive filter/sort/presentation state từ nó.
+
+## 12.3 Impossible state và state machine
+
+Nhiều boolean độc lập dễ tạo tổ hợp vô nghĩa:
+
+```text
+loading=true
+contentVisible=true
+fatalError=true
+```
+
+Có thể dùng sealed state cho mutually exclusive screen state hoặc giữ content + refresh/error metadata nếu UX cho phép content và refresh đồng thời. Không có một data class duy nhất đúng; state model phải phản ánh invariant UI.
+
+## 12.4 Concurrency trong ViewModel
+
+Hai `refresh()` cùng chạy có thể tạo duplicate request; request cũ trả sau có thể overwrite state mới; logout/account switch có thể để response từ session cũ quay lại UI.
+
+Giải pháp tùy semantic:
+
+```text
+cancel previous job
+single-flight
+Mutex/serialization
+flatMapLatest cho query-driven work
+generation/session token để bỏ stale result
+repository làm source of truth để UI không apply raw response trực tiếp
+```
+
+Không giải quyết race bằng cách thêm `loading` boolean nếu ordering vẫn không được định nghĩa.
+<!-- end merged variant -->
 
 ViewModel nhận action, gọi repository/use case, rồi expose state. Nó không giữ Activity/View context và không tạo Retrofit/Room trực tiếp.
 
@@ -358,6 +691,7 @@ Scope sai gây leak/state-sharing. `@Singleton` không phải default tốt cho 
 
 Navigation gồm back stack, route identity, deep link, argument và ViewModel scope. Truyền stable ID thay object lớn/stale:
 
+<!-- merge: preserve both canonical variants -->
 ```text
 navigate(articleId)
 → destination reconstruct data từ repository
@@ -370,6 +704,25 @@ Deep link là external input, phải validate và authorization lại ở destin
 `remember` sống qua recomposition trong cùng composition. `rememberSaveable` có thể save qua recreation cho value phù hợp. `LaunchedEffect(key)` chạy coroutine theo composition lifetime; `DisposableEffect` cleanup resource; `rememberUpdatedState` cập nhật latest callback mà không restart effect.
 
 Không gọi network trực tiếp trong Composable body. Business operation nên do owner phù hợp quản lý.
+<!-- merge: preserve both canonical variants -->
+Không nên truyền object lớn qua navigation argument. Truyền stable identifier rồi load dữ liệu tại destination thường tốt hơn, tránh vượt Binder transaction limit và tránh stale object.
+
+# 18. Compose state và effect
+
+Compose có nhiều API state/effect với mục đích khác nhau. Chúng không thay ViewModel/repository; chúng quản lý state/effect **gắn với composition**.
+
+`remember` giữ value qua recomposition. `rememberSaveable` thêm khả năng save qua recreation khi value saveable. `derivedStateOf` tạo derived state và hữu ích khi derived result cần tránh invalidation không cần thiết. `LaunchedEffect` chạy coroutine gắn với composition lifecycle theo key. `DisposableEffect` có cleanup. `SideEffect` publish state ra non-Compose object sau successful composition. `rememberUpdatedState` giữ latest value trong long-lived effect mà không restart effect.
+
+```kotlin
+LaunchedEffect(userId) {
+    viewModel.load(userId)
+}
+```
+
+Key là lifetime contract. Nếu `userId` đổi, effect cũ bị cancel và effect mới chạy. `LaunchedEffect(Unit)`/`LaunchedEffect(true)` có nghĩa “sống cùng vị trí composition này”, không phải “chạy đúng một lần toàn app”.
+
+Business operation quan trọng thường nên có owner ngoài Composable nếu nó phải tiếp tục khi composition rời màn hình hoặc phải survive UI recreation. Không gọi network trực tiếp trong Composable body vì recomposition có thể gọi body nhiều lần.
+<!-- end merged variant -->
 
 # 19. XML interoperability
 
@@ -379,7 +732,21 @@ XML/Fragment/RecyclerView/View Binding không “sai” chỉ vì Compose tồn 
 
 # 20. Lifecycle-aware collection
 
+<!-- merge: preserve both canonical variants -->
 Compose thường dùng `collectAsStateWithLifecycle()`. View system dùng `repeatOnLifecycle`.
+<!-- merge: preserve both canonical variants -->
+Lifecycle của **producer** và **collector** là hai chuyện khác nhau.
+
+Ví dụ ViewModel `StateFlow` có thể sống khi screen tạm STOPPED, nhưng UI collector nên dừng khi UI không visible để tránh render/effect không cần thiết.
+
+Trong Compose, thường dùng:
+
+```kotlin
+val state by viewModel.uiState.collectAsStateWithLifecycle()
+```
+
+Trong View system:
+<!-- end merged variant -->
 
 ```kotlin
 lifecycleScope.launch {
@@ -389,7 +756,33 @@ lifecycleScope.launch {
 }
 ```
 
+<!-- merge: preserve both canonical variants -->
 Collector lifecycle phải phản ánh việc UI có cần nhận update khi invisible không.
+<!-- merge: preserve both canonical variants -->
+`repeatOnLifecycle` cancel child collection khi lifecycle xuống dưới state yêu cầu và launch lại khi quay lên. Vì vậy upstream cold Flow có thể restart nếu không được share ở layer phù hợp. Đây là lý do `stateIn/shareIn` và sharing policy có liên hệ trực tiếp với lifecycle.
+
+Không nên `lifecycleScope.launch { flow.collect { ... } }` vô hạn cho UI stream mà không hiểu behavior khi Activity/Fragment STOPPED.
+
+## 20.1 Lifetime matrix cần thuộc bằng reasoning
+
+```text
+Recomposition
+< Composition entry
+< Fragment view lifecycle
+< Activity/Fragment lifecycle
+< ViewModel
+< Process
+< Persisted storage / server
+```
+
+State phải được đặt ở owner ngắn nhất nhưng đủ sống qua requirement. Đặt quá ngắn gây mất state; đặt quá dài gây leak, stale data hoặc shared state ngoài ý muốn.
+
+## 20.2 Fragment có hai lifecycle đáng chú ý
+
+Fragment object lifecycle và Fragment **view lifecycle** không giống nhau. Binding/collector chạm View phải gắn với `viewLifecycleOwner`, vì Fragment có thể còn tồn tại sau khi View đã destroy.
+
+Đây là nguồn leak/crash phổ biến ở XML/View codebase và là một lý do Compose route/state ownership cần được hiểu qua lifetime thay vì chỉ syntax.
+<!-- end merged variant -->
 
 # 21. WorkManager
 
@@ -442,7 +835,13 @@ sealed interface DataError {
 }
 ```
 
+<!-- merge: preserve both canonical variants -->
 UI map error sang behavior phù hợp: offline có thể vẫn render cache; unauthorized có thể trigger session recovery; validation focus field.
+<!-- merge: preserve both canonical variants -->
+Race test tốt phải kiểm soát ordering, không dựa vào `delay(100)` và hy vọng scheduler chạy theo ý mình. Test stale-result nên chủ động giữ request A, hoàn tất B trước rồi hoàn tất A để chứng minh state mới không bị overwrite.
+
+# 24. Error handling
+<!-- end merged variant -->
 
 GET read thường dễ retry hơn mutation. Với POST tạo side effect, timeout có thể xảy ra sau khi server đã commit. Muốn retry an toàn cần backend idempotency contract/key.
 
@@ -458,6 +857,7 @@ Dùng HTTPS, Network Security Config khi cần, Keystore cho key material, trán
 
 Phân loại legacy trước khi rewrite:
 
+<!-- merge: preserve both canonical variants -->
 ```text
 Deprecated/unsafe
 Supported nhưng có replacement
@@ -477,6 +877,9 @@ Historical-only
 | kapt | KSP khi processor hỗ trợ | migrate per dependency |
 
 Modern stack không tự động tạo architecture tốt. Migration cần test/telemetry và benefit cụ thể.
+<!-- merge: preserve both canonical variants -->
+`LiveData` vẫn hợp lệ và phổ biến trong app cũ; app Kotlin/Compose mới thường dùng Flow/StateFlow. `AsyncTask` deprecated và nên thay bằng coroutine/WorkManager **theo lifetime**, không phải replacement một-một. `startActivityForResult`/`onActivityResult` nên thay bằng Activity Result API. `SharedPreferences` không bị “cấm”, nhưng DataStore thường là lựa chọn mới tốt hơn. XML/View system không deprecated; Compose chỉ là hướng UI hiện đại được ưu tiên.
+<!-- end merged variant -->
 
 # 27. Project architecture mẫu
 
@@ -503,7 +906,35 @@ Folder structure không phải architecture. Dependency direction/source of trut
 
 # 28. Serialization và DTO boundary
 
+<!-- merge: preserve both canonical variants -->
 Transport DTO phản ánh wire schema; domain model phản ánh nghiệp vụ.
+<!-- merge: preserve both canonical variants -->
+## Intermediate Senior Notes
+
+Một Android developer ở mức intermediate nên nhìn app như một hệ thống **state + side effect + lifetime + ordering** chứ không phải collection các callback.
+
+Với mỗi state/operation, hãy trả lời:
+
+```text
+owner là ai?
+sống qua recomposition không?
+sống qua configuration change không?
+sống qua process death không?
+operation có thể overlap không?
+result cũ có thể tới sau result mới không?
+cancellation có nghĩa gì?
+collector dừng thì producer có tiếp tục không?
+state authoritative nằm ở đâu?
+```
+
+Coroutine phải có scope owner; Flow phải có sharing/lifecycle semantics; repository phải có source-of-truth policy; UI không được trực tiếp biết chi tiết storage/network nếu không có lý do rõ ràng. Khi các câu này rõ, framework choice thường trở nên đơn giản hơn.
+
+---
+
+# 28. Serialization, DTO và boundary giữa network/domain
+
+Network payload thường là JSON, nhưng object nhận từ server không nên mặc định trở thành domain model dùng khắp ứng dụng. DTO (**Data Transfer Object**) phản ánh contract transport; domain model phản ánh ý nghĩa nghiệp vụ. Tách hai loại này cho phép backend thay field, nullable hoặc naming mà không làm domain layer bị phụ thuộc trực tiếp.
+<!-- end merged variant -->
 
 ```kotlin
 @Serializable
@@ -575,6 +1006,7 @@ fun loadUser_updatesState() = runTest {
 
 Với race/latest-wins, fake repository có thể cho phép test điều khiển thứ tự completion thay vì dựa timing ngẫu nhiên.
 
+<!-- merge: preserve both canonical variants -->
 # 35. Process death như test case thiết kế
 
 ViewModel sống qua configuration change nhưng không sống qua process death. Phân loại state:
@@ -584,9 +1016,46 @@ reloadable data → repository/source of truth
 small reconstruct key → SavedStateHandle/rememberSaveable
 durable business data → DB/DataStore/server
 ```
+<!-- merge: preserve both canonical variants -->
+Đối với `stateIn(WhileSubscribed(...))`, test cần có collector nếu muốn upstream chạy. Đây là lỗi test phổ biến: assert StateFlow nhưng không tạo subscription, trong khi sharing policy cố ý chưa start upstream.
+
+# 35. Process death như một test case thiết kế
+
+Configuration change và process death không giống nhau. ViewModel giúp sống qua recreation trong cùng process nhưng không tồn tại sau khi process bị kill.
+
+Hãy phân loại state theo lifetime:
+
+```text
+Derived/reloadable data
+→ reconstruct từ repository/source of truth
+
+Small navigation/form state
+→ SavedStateHandle hoặc rememberSaveable nếu phù hợp
+
+Durable business data
+→ database/DataStore/server
+
+Transient animation/scroll detail
+→ chỉ save nếu UX thực sự yêu cầu
+```
+
+`SavedStateHandle` không phải database. Nhét object graph lớn vào saved state tạo serialization/Binder cost và khiến state cũ trở thành source of truth ngoài ý muốn.
+
+Một screen production nên có reconstruction recipe:
+
+```text
+stable route ID
++ small saved user input
++ repository persisted data
+→ rebuild UiState
+```
+
+Test process death nên kiểm tra recipe này thay vì chỉ rotate screen. Configuration change có thể giữ ViewModel; process recreation thì không.
+<!-- end merged variant -->
 
 Nếu screen chỉ restore được bằng cách save toàn object graph vào Bundle, architecture có thể đang thiếu stable identity/source of truth.
 
+<!-- merge: preserve both canonical variants -->
 # 36. Intermediate integration project
 
 Một project kết thúc Intermediate nên chứng minh được flow:
@@ -833,3 +1302,8 @@ debug chạy nhưng release fail thì kiểm tra gì?
 ```
 
 Nếu các câu trả lời đều dựa trên **owner, lifetime, state, failure và compatibility** thay vì chỉ tên framework, bạn đã sẵn sàng cho level Advanced/Senior.
+<!-- merge: preserve both canonical variants -->
+Một project kết thúc Intermediate nên có ít nhất một flow từ UI → ViewModel → Repository → local/network data source; UI state expose bằng StateFlow; Room làm local persistence; network layer map DTO sang domain; navigation có typed/validated argument; DI rõ ràng; coroutine có lifecycle owner; loading/error/empty/success state được model; unit test cho ViewModel/repository và ít nhất một integration test cho DB hoặc serialization.
+
+Ngoài happy path, project nên chứng minh được ít nhất các case: rotate/recreate screen không mất state cần thiết; process death có thể reconstruct bằng stable ID/source of truth; search/query mới không bị result cũ overwrite; collector dừng khi UI không active; cancellation không bị convert thành generic error; release behavior không phụ thuộc `GlobalScope` hay ad-hoc lifetime.
+<!-- end merged variant -->

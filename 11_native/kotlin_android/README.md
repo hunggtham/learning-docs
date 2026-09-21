@@ -1,30 +1,58 @@
 # Kotlin + Android Master Notes
 
-Bộ tài liệu học Kotlin cho Android theo lộ trình:
+Bộ tài liệu học Kotlin cho Android có **learning spine canonical duy nhất** theo thứ tự:
 
 1. `01_kotlin_beginner.md` — nền tảng Kotlin, Android Studio, Gradle, Android components, Compose và XML/View.
 2. `02_kotlin_intermediate.md` — idioms, generics, coroutine/Flow, ViewModel, architecture, Room, network, DI, WorkManager, DataStore và testing.
 3. `03_kotlin_advanced_senior.md` — coroutine/Flow internals, Compose runtime, modularization, offline-first, performance, security, Java interop và production design.
 4. `04_kotlin_master.md` — Kotlin 1.x→2.x, K2, bytecode awareness, large-scale architecture/build/release, KMP awareness, observability và master heuristics.
-5. [`05_kotlin_android_version_evolution.md`](05_kotlin_android_version_evolution.md) — bản đồ version Kotlin/Android từ Kotlin 1.x → 2.4, K1 → K2, Compose compiler cũ/mới, legacy → modern API, compatibility matrix và upgrade strategy.
 
-Bốn file đầu là **learning spine theo level**: chúng giữ thứ tự Beginner → Intermediate → Advanced/Senior → Master. File `05_kotlin_android_version_evolution.md` là **version map xuyên suốt**, dùng để hiểu codebase thuộc thế hệ nào, vì sao API/build setup thay đổi theo thời gian và cách migrate giữa các thế hệ. Các phần bổ sung nằm trong `deep_dive/` để tăng chiều sâu mà không biến file chính thành tài liệu khổng lồ khó đọc. Sau khi đã hiểu từng concept riêng lẻ, `production_casebook/` nối chúng thành các hệ thống end-to-end và hạ xuống cả Android platform/runtime/build/distribution để người học thấy state, lifecycle, data, network, security, UI system, hardware capability, process, compiler, native layer và artifact release tương tác với nhau trong production như thế nào.
+**Learning flow luôn là Beginner → Intermediate → Advanced/Senior → Master.** Không có “level 5”. [`05_kotlin_android_version_evolution.md`](05_kotlin_android_version_evolution.md) là **cross-cutting reference về version/evolution**, dùng song song khi gặp project cũ, migration/toolchain compatibility hoặc muốn hiểu vì sao API/build setup thay đổi theo thời gian.
+
+Các thư mục bổ sung không thay thế canonical spine:
+
+```text
+01–04 canonical
+= nơi concept bắt buộc phải đủ rõ để học theo level
+
+deep_dive/
+= completion layer cùng level; đào thêm chi tiết nhưng không tạo learning path cạnh tranh
+
+production_casebook/
+= nối nhiều concept thành system/scenario production end-to-end
+
+depth_labs/
+= reasoning lab về invariant, race, failure, compatibility và forensic
+
+05_kotlin_android_version_evolution.md
+= reference xuyên level cho timeline/version/migration
+```
+
+## Quy tắc chống duplicate note
+
+Khi update library, **ưu tiên sửa canonical file đang sở hữu concept**. Không tạo note mới chỉ vì phần hiện tại còn mỏng.
+
+Một file bổ sung chỉ hợp lý nếu nó có vai trò khác hẳn canonical, ví dụ casebook mô phỏng một hệ thống end-to-end hoặc depth lab đào failure ordering. Nếu cùng câu hỏi học tập, cùng level và cùng mục tiêu giải thích đã tồn tại trong `01–04`, hãy cập nhật file đó thay vì tạo `*_v2`, `*_complete`, `*_extra` hoặc một Master Note song song.
+
+Khi nội dung quan trọng chỉ tồn tại ở supplement nhưng cần thiết để đi từ Beginner → Master, hãy kéo **mental model tối thiểu bắt buộc** trở lại canonical rồi giữ supplement cho phần forensic/edge case. Đây là nguyên tắc được áp dụng cho version evolution, modern-vs-legacy API, lifecycle/concurrency, coroutine/Flow và Compose trong các vòng audit gần đây.
+
+Không xóa file chỉ vì có overlap từ khóa. Overlap có chủ đích giữa canonical → deep dive → casebook → depth lab được giữ khi mỗi tầng trả lời câu hỏi khác nhau. Chỉ xóa/merge khi hai file cùng owner, cùng learning objective và một file không còn giá trị riêng.
 
 ## Version evolution — đọc project cũ và hiểu toolchain hiện đại
 
-[`05_kotlin_android_version_evolution.md`](05_kotlin_android_version_evolution.md) nên được dùng khi cần trả lời các câu hỏi như:
+[`05_kotlin_android_version_evolution.md`](05_kotlin_android_version_evolution.md) nên được mở như reference khi cần trả lời:
 
 - project Kotlin 1.3/1.5/1.9 khác project Kotlin 2.x ở đâu;
 - K1 và K2 compiler khác nhau về thế hệ như thế nào;
 - khi nào JVM IR trở thành mặc định;
 - `sealed interface`, value class, `data object`, enum `entries`, context parameters và explicit backing fields xuất hiện/stable ở version nào;
 - vì sao Compose compiler trước Kotlin 2.0 cần compatibility mapping nhưng Kotlin 2.0+ dùng plugin cùng Kotlin version;
-- khác biệt giữa Kotlin version, `languageVersion`, `apiVersion`, `jvmTarget`, JDK toolchain, KGP, AGP và Gradle;
+- khác biệt giữa Kotlin version, `languageVersion`, `apiVersion`, `jvmTarget`, JDK toolchain, KGP/AGP và Gradle;
 - khác biệt giữa `minSdk`, `compileSdk`, `targetSdk` và Android OS thực tế;
-- cách nhận diện code legacy như synthetic view, `AsyncTask`, LiveData/Rx-heavy, `kotlinOptions {}`, kapt-heavy và cách map sang modern stack mà không rewrite máy móc;
-- cách upgrade Kotlin/toolchain theo compatibility matrix, full-variant build, generated-code test và release validation.
+- cách nhận diện synthetic view, `AsyncTask`, LiveData/Rx-heavy, `kotlinOptions {}`, kapt-heavy và map sang modern stack mà không rewrite máy móc;
+- cách upgrade toolchain bằng compatibility matrix, full-variant build, generated-code test và release validation.
 
-Đây là file nên đọc song song với `production_casebook/18_android_compatibility_api_levels_sdk_extensions.md` và `depth_labs/06_build_compatibility_startup_release_forensics.md` khi làm migration thực tế.
+Khi học canonical, có thể mở file này theo nhu cầu; khi làm migration thực tế, đọc thêm `production_casebook/18_android_compatibility_api_levels_sdk_extensions.md` và `depth_labs/08_version_compatibility_migration_forensics.md`.
 
 ## Deep dives theo từng level
 
@@ -33,11 +61,11 @@ Bốn file đầu là **learning spine theo level**: chúng giữ thứ tự Beg
 - [`deep_dive/03_advanced_senior_completion.md`](deep_dive/03_advanced_senior_completion.md) — generic/type-erasure, cancellation safety, Flow backpressure, Compose Snapshot/CompositionLocal/identity, background execution, retry/idempotency/TLS, storage/backup, test layers, benchmark và static analysis.
 - [`deep_dive/04_master_completion.md`](deep_dive/04_master_completion.md) — Gradle/build governance, dependency locking/SBOM, ABI/module contract, target-SDK migration, observability, performance budget, security/integrity, privacy, accessibility/adaptive UI, ADR/ownership, release/rollback, KMP và operating model.
 
-[`coverage_audit.md`](coverage_audit.md) là ma trận coverage và checklist dùng cho những vòng update tiếp theo.
+[`coverage_audit.md`](coverage_audit.md) là ma trận coverage và checklist dùng để chọn **canonical gap yếu nhất** cho vòng update tiếp theo.
 
 ## Depth Labs — tăng độ sâu reasoning
 
-Sau khi đã đọc các file chính và casebook tương ứng, dùng [`depth_labs/README.md`](depth_labs/README.md) để đào sâu correctness ở những boundary khó nhất. Depth Labs không mở thêm domain mới; chúng đi sâu vào invariant, race condition, transaction semantics, cancellation, stale state, consistency, effect lifetime, performance evidence, failure injection, compatibility, artifact forensics và API/ABI evolution.
+Sau khi canonical concept đã rõ, dùng [`depth_labs/README.md`](depth_labs/README.md) để đào correctness ở boundary khó. Depth Labs không mở learning level mới; chúng đi sâu invariant, race condition, transaction semantics, cancellation, stale state, consistency, effect lifetime, performance evidence, failure injection, compatibility, artifact forensics và API/ABI evolution.
 
 Các lab hiện có:
 
@@ -48,10 +76,11 @@ Các lab hiện có:
 5. [`depth_labs/05_testing_reliability_observability_failure_injection.md`](depth_labs/05_testing_reliability_observability_failure_injection.md) — invariant-based testing, migration/rollback, race test, Macrobenchmark, telemetry, SLI/SLO và rollout guardrail.
 6. [`depth_labs/06_build_compatibility_startup_release_forensics.md`](depth_labs/06_build_compatibility_startup_release_forensics.md) — Gradle/variant/R8, API compatibility, startup critical path và release artifact forensics.
 7. [`depth_labs/07_sdk_native_boundary_api_evolution_consumer_safety.md`](depth_labs/07_sdk_native_boundary_api_evolution_consumer_safety.md) — public API/ABI, SDK consumer safety, JNI/native ownership, compatibility và publishing evolution.
+8. [`depth_labs/08_version_compatibility_migration_forensics.md`](depth_labs/08_version_compatibility_migration_forensics.md) — Kotlin metadata, producer/consumer compiler boundary, JVM target mismatch, compiler-plugin lockstep, migration forensics, CI compatibility gates và artifact traceability.
 
 ## Production Casebook — nối kiến thức thành hệ thống thực tế
 
-Sau level Master, đọc [`production_casebook/README.md`](production_casebook/README.md) và các case theo thứ tự. Casebook không lặp lại syntax/API đã giải thích mà tập trung vào boundary, failure mode, system contract và trade-off của một app production.
+Sau level Master, đọc [`production_casebook/README.md`](production_casebook/README.md) theo case phù hợp. Casebook không phải level 5; nó dùng kiến thức đã học để reasoning qua system boundary, failure mode và trade-off production.
 
 1. [`production_casebook/01_architecture_end_to_end.md`](production_casebook/01_architecture_end_to_end.md) — requirement → UiState/UDF → ViewModel → repository → Room/network source of truth → DI/module boundary.
 2. [`production_casebook/02_auth_session_network_security.md`](production_casebook/02_auth_session_network_security.md) — Credential Manager, authentication vs authorization, session, access/refresh token, single-flight refresh, logout, secure storage và network security.
@@ -84,40 +113,51 @@ Sau level Master, đọc [`production_casebook/README.md`](production_casebook/R
 - Google Play target requirement từ 2026-08-31: app/update Android thông thường phải target **Android 16 / API 36+**, với ngoại lệ riêng cho một số form factor.
 - UI direction: Jetpack Compose cho code hiện đại; XML/View system và API legacy quan trọng vẫn được cover để đọc, maintain và migrate project cũ.
 
-Version ở đây là snapshot để đọc project tại thời điểm biên soạn, không phải con số phải copy cứng mãi mãi. Khi upgrade cần đọc compatibility matrix và release notes của Kotlin, Android Studio/AGP, Android platform, Google Play policy và từng Jetpack/library dependency. Timeline và migration reasoning chi tiết nằm trong [`05_kotlin_android_version_evolution.md`](05_kotlin_android_version_evolution.md).
+Version ở đây là snapshot để đọc project tại thời điểm biên soạn, không phải con số phải copy cứng mãi mãi. Khi upgrade cần đọc compatibility matrix và release notes của Kotlin, Android Studio/AGP, Android platform, Google Play policy và từng Jetpack/library dependency.
 
 ## Cách học
 
-Nên đọc theo thứ tự. Không chuyển level chỉ vì đã “đọc hết”; hãy tự viết lại ví dụ, làm mini app và tự giải thích các khái niệm bằng lời của mình. Sau mỗi file chính, đọc deep-dive cùng level trước khi chuyển sang level kế tiếp nếu mục tiêu là hiểu sâu thay vì chỉ làm tutorial.
-
-Một vòng học hoàn chỉnh là:
+Đường học chính không đổi:
 
 ```text
 01 Beginner
-→ deep_dive/01
-→ mini app nhỏ
 → 02 Intermediate
-→ deep_dive/02
-→ app có ViewModel + Flow + Room + network
 → 03 Advanced/Senior
-→ deep_dive/03
-→ profiling/testing/migration exercise
 → 04 Master
-→ 05 Version Evolution: Kotlin 1.x → 2.x + Android/toolchain version map
-→ deep_dive/04
-→ Production Casebook 01 → 08: architecture + compiler/runtime
-→ Production Casebook 09 → 14: Android platform + device/system integration
-→ Production Casebook 15 → 20: build + distribution + native + compatibility + startup + SDK authoring
-→ Depth Labs 01 → 07: invariant + race + failure + compatibility reasoning
-→ tự thiết kế, build, package, release và giải thích trade-off của một production app
 ```
 
-Khi học Casebook và Depth Labs, không nên chỉ copy code. Với mỗi case hãy tự trả lời: state owner là ai; source of truth ở đâu; process/thread/lifecycle nào đang chạy; invariant nào bắt buộc luôn đúng; failure nào retry được; result nào có thể stale; operation nào có ambiguous outcome; permission/capability nào có thể biến mất; artifact nào thật sự tới device; native/resource/build boundary nào có thể leak; dữ liệu nào nhạy cảm; operation nào cần idempotency; test nào chứng minh invariant; release gặp lỗi thì rollback hoặc disable bằng cách nào. Khi gặp issue “magic” ở Kotlin/Gradle/runtime, dùng Case 08–09, 15–18, file Version Evolution và Depth Labs để hạ xuống tầng compiler/JVM/ART/Binder/build/artifact/platform contract thay vì đoán.
+Ở mỗi level, sau khi hiểu canonical file có thể đọc `deep_dive/0N` để mở rộng. `05_kotlin_android_version_evolution.md` là reference ngang: mở khi gặp version/API generation/toolchain question, không phải một level bắt buộc sau Master.
+
+Sau Master, Casebook và Depth Labs chuyển trọng tâm từ “học concept” sang “ghép system và chứng minh correctness”:
+
+```text
+Canonical Beginner → Master
+→ Production Casebook: system integration
+→ Depth Labs: invariant/race/failure/forensics
+→ tự thiết kế, build, release và giải thích trade-off production
+```
+
+Khi học Casebook và Depth Labs, không chỉ copy code. Với mỗi case hãy tự trả lời: state owner là ai; source of truth ở đâu; process/thread/lifecycle nào đang chạy; invariant nào bắt buộc luôn đúng; failure nào retry được; result nào có thể stale; operation nào có ambiguous outcome; permission/capability nào có thể biến mất; artifact nào thật sự tới device; native/resource/build boundary nào có thể leak; dữ liệu nào nhạy cảm; operation nào cần idempotency; test nào chứng minh invariant; release gặp lỗi thì rollback hoặc disable bằng cách nào.
 
 ## Phạm vi đã cover
 
 Bộ tài liệu không chỉ dạy syntax Kotlin. Nó nối Kotlin language với Android runtime, lifecycle, Compose lẫn XML/View, Gradle/AGP, coroutine/Flow, persistence/networking, DI, navigation, background work, testing, performance, security, build/release, AAB/delivery, native NDK/JNI, platform compatibility, startup, library authoring, legacy migration, system components, hardware capability và production architecture.
 
-Các gap thường bị tutorial bỏ qua đã được cover rõ hơn: process death, Activity Result API, Context lifetime, storage/URI, serialization boundary, coroutine cancellation, Flow backpressure, Compose Snapshot/identity/effect, retry/idempotency, token refresh race, R8/signing, source-set/manifest merge, API-level migration, foreground/background policy, database migration, offline mutation queue, conflict resolution, backup/privacy, dependency governance, SBOM, observability, performance budget, staged rollout/rollback, Kotlin/JVM abstraction leak, Android process/Binder/MessageQueue, permission/capability migration, adaptive/accessibility UI, camera/media/BLE integration, cold-start system surface, split delivery, ABI/page-size compatibility, startup critical path, SDK binary compatibility, architecture invariant, stale-state race, ambiguous network outcome, sync consistency, deterministic failure injection, Kotlin version evolution, legacy/modern API mapping và long-term maintenance.
+Mục tiêu cuối cùng không phải nhớ mọi API, mà là khi gặp requirement mới có thể tự suy luận theo các trục:
 
-Mục tiêu cuối cùng của bộ note không phải để người đọc nhớ mọi API, mà để khi gặp một requirement mới có thể tự suy luận theo các trục **invariant → lifetime → ownership → source of truth → execution context → capability → build variant → artifact → concurrency → ordering → failure → compatibility → security → observability → distribution/release**, và khi cần có thể hạ xuống tầng compiler/runtime/platform/native/build system để giải thích behavior thay vì dựa vào “magic”.
+```text
+invariant
+→ lifetime
+→ ownership
+→ source of truth
+→ execution context
+→ capability
+→ build variant / artifact
+→ concurrency / ordering
+→ failure / compatibility
+→ security
+→ observability
+→ release / recovery
+```
+
+và khi cần có thể hạ xuống compiler/runtime/platform/native/build system để giải thích behavior thay vì dựa vào “magic”.
