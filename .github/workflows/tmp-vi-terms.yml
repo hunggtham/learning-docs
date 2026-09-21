@@ -30,6 +30,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
-          git diff --cached --check
           git commit -m "Normalize Vietnamese technical terminology in CSS SCSS Tailwind notes"
           git push origin HEAD:tmp-vi-terms-style
