@@ -1,0 +1,34 @@
+name: Temporary CSS SCSS Tailwind priority audit
+
+on:
+  push:
+    paths:
+      - '.github/workflows/tmp-style-priority-audit.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  audit-style-notes:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Apply canonical note audit
+        run: python .github/tmp-style-audit/apply.py
+      - name: Commit canonical updates
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          rm -rf .github/tmp-style-audit
+          rm -f .github/workflows/tmp-style-priority-audit.yml
+          git add 10_frontend/css 10_frontend/scss 10_frontend/tailwind .github
+          git diff --cached --stat
+          git commit -m 'Refine canonical CSS SCSS Tailwind mental models'
+          git push origin HEAD:main
