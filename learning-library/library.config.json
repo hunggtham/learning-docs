@@ -67,6 +67,12 @@
       "category": "Psychology",
       "language": "vi-en",
       "rights": "author-confirmed"
+    },
+    {
+      "path": "physics",
+      "category": "Physics",
+      "language": "vi-en-ko",
+      "rights": "author-confirmed"
     }
   ],
   "allowedDocuments": [
