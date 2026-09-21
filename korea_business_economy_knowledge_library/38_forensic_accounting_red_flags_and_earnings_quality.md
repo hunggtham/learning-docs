@@ -1,577 +1,569 @@
-# Forensic Accounting, Earnings Quality và Red Flags khi đọc doanh nghiệp Hàn Quốc (포렌식 회계·이익의 질·회계 경고신호)
+# Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)
 
-Financial statements không phải lời nói dối mặc định, nhưng cũng không phải “sự thật kinh tế” hoàn hảo. Accounting là hệ thống measurement dựa trên rules, estimates và timing assumptions. Vì vậy cùng một mức reported profit có thể có chất lượng rất khác nhau.
+Báo cáo tài chính không phải lời nói dối mặc định, nhưng cũng không phải “sự thật kinh tế” hoàn hảo. Kế toán là hệ thống đo lường dựa trên quy tắc, ước tính và giả định về thời điểm. Vì vậy cùng một mức lợi nhuận báo cáo có thể có chất lượng rất khác nhau.
 
-**Earnings quality / 이익의 질** hỏi một câu thực tế: phần lợi nhuận đang thấy có phản ánh economics lặp lại, có convert thành cash, có dựa quá nhiều vào estimate hay one-off, và có bền vững qua cycle hay không?
+**Chất lượng lợi nhuận (earnings quality / 이익의 질)** hỏi một câu rất thực tế: lợi nhuận đang thấy có phản ánh hoạt động lặp lại không, có chuyển thành tiền mặt không, có phụ thuộc quá nhiều vào ước tính hay khoản một lần không và có bền vững qua chu kỳ hay không?
 
-Forensic accounting không có nghĩa đi săn fraud ở mọi company. Mục tiêu là nhận ra nơi accounting có thể che business deterioration, làm profit trông tốt hơn cash economics, hoặc khiến analyst hiểu sai risk.
+**Kế toán điều tra (forensic accounting)** không có nghĩa đi săn gian lận ở mọi doanh nghiệp. Mục tiêu là nhận ra nơi cách ghi nhận kế toán có thể che sự suy yếu của hoạt động kinh doanh, làm lợi nhuận trông tốt hơn dòng tiền thực hoặc khiến người đọc hiểu sai rủi ro.
 
-Chapter này mở rộng [`09_disclosure_accounting_dart_kind.md`](./09_disclosure_accounting_dart_kind.md) và biến việc đọc báo cáo thành một process kiểm tra consistency.
+Chapter này mở rộng [`09_disclosure_accounting_dart_kind.md`](./09_disclosure_accounting_dart_kind.md) và biến việc đọc báo cáo thành một quy trình kiểm tra tính nhất quán.
 
-## 1. Profit không bằng cash
+## 1. Lợi nhuận không bằng tiền mặt
 
-Accrual accounting ghi nhận revenue/cost theo economic event, không chỉ theo cash receipt/payment.
+Kế toán dồn tích (accrual accounting) ghi nhận doanh thu và chi phí theo sự kiện kinh tế, không chỉ theo lúc thu hoặc chi tiền.
 
-Điều đó cần thiết. Nếu chỉ dùng cash accounting, một project dài hạn sẽ rất khó phản ánh performance.
+Điều đó là cần thiết. Nếu chỉ dùng kế toán tiền mặt, dự án dài hạn rất khó phản ánh đúng hiệu quả trong từng kỳ.
 
-Nhưng accrual tạo khoảng cách giữa reported income và cash.
+Nhưng kế toán dồn tích tạo khoảng cách giữa lợi nhuận báo cáo và dòng tiền.
 
-Một starting relation:
-
-\[
-CFO \approx Net\ Income + Noncash\ Charges - Working\ Capital\ Investment + Other\ Adjustments
-\]
-
-Nếu net income tăng nhiều năm nhưng CFO không đi cùng, cần tìm reason.
-
-## 2. Earnings quality là gì?
-
-High-quality earnings thường có vài đặc điểm:
-
-- đến từ core business;
-- cash conversion hợp lý;
-- không phụ thuộc lớn vào one-off gain;
-- estimate không quá aggressive;
-- repeatable trong normal conditions;
-- không được tạo chủ yếu bằng giảm investment cần thiết.
-
-Low-quality earnings không nhất thiết illegal. Nó có thể hoàn toàn GAAP-compliant nhưng ít predictive value.
-
-## 3. Accruals
-
-**Accrual / 발생액** là chênh lệch giữa accounting earnings và cash-related realization.
-
-Một simple lens:
+Một quan hệ gần đúng:
 
 \[
-Total\ Accruals \approx Net\ Income - CFO
+CFO \approx Lợi\ nhuận\ ròng + Chi\ phí\ không\ tiền\ mặt - Đầu\ tư\ vốn\ lưu\ động + Điều\ chỉnh\ khác
 \]
 
-Nếu accruals persistently cao, hỏi company đang recognize revenue sớm, defer costs hay working capital đang deteriorate.
+Nếu lợi nhuận ròng tăng nhiều năm nhưng CFO không đi cùng, cần tìm nguyên nhân.
 
-Nhưng cyclical inventory build hoặc rapid growth cũng có thể làm accrual cao hợp lý. Context luôn cần thiết.
+## 2. Chất lượng lợi nhuận là gì?
 
-## 4. Receivables tăng nhanh hơn revenue
+Lợi nhuận chất lượng cao thường có các đặc điểm:
 
-Nếu revenue tăng 10% nhưng accounts receivable tăng 40%, có thể là:
+- đến từ hoạt động cốt lõi;
+- chuyển đổi sang tiền mặt hợp lý;
+- không phụ thuộc lớn vào khoản lãi một lần;
+- các giả định kế toán không quá lạc quan;
+- có khả năng lặp lại trong điều kiện bình thường;
+- không được tạo chủ yếu bằng cắt giảm đầu tư cần thiết cho tương lai.
 
-- customer payment terms dài hơn;
-- mix chuyển sang customers trả chậm;
-- company push sales bằng generous credit;
-- collection quality xấu;
-- revenue recognition aggressive.
+Lợi nhuận chất lượng thấp không nhất thiết bất hợp pháp. Nó có thể hoàn toàn tuân thủ chuẩn mực nhưng ít giá trị dự báo hơn.
 
-Một metric:
+## 3. Dồn tích (accruals)
+
+**Dồn tích (accrual / 발생액)** là phần chênh lệch giữa lợi nhuận kế toán và mức hiện thực hóa bằng tiền.
+
+Một cách nhìn đơn giản:
 
 \[
-DSO = \frac{Average\ Receivables}{Revenue} \times Days
+Dồn\ tích\ tổng \approx Lợi\ nhuận\ ròng - CFO
 \]
 
-DSO tăng không phải proof fraud. Nó là signal để hỏi quality của sales.
+Nếu phần dồn tích cao kéo dài, hãy hỏi doanh nghiệp có đang ghi nhận doanh thu quá sớm, trì hoãn chi phí hay vốn lưu động đang xấu đi hay không.
 
-## 5. Inventory tăng nhanh
+Tuy nhiên tích lũy tồn kho theo chu kỳ hoặc tăng trưởng rất nhanh cũng có thể làm dồn tích cao một cách hợp lý. Bối cảnh luôn cần thiết.
 
-Inventory có thể tăng vì growth preparation, supply-chain buffer hoặc new product launch.
+## 4. Khoản phải thu tăng nhanh hơn doanh thu
 
-Nhưng nếu inventory tăng trong khi demand yếu, risk gồm markdown, obsolescence và cash lock-up.
+Nếu doanh thu tăng 10% nhưng khoản phải thu tăng 40%, có thể do:
 
-Với semiconductors, electronics, fashion, chemicals hoặc autos, inventory quality phải đọc theo cycle.
+- thời hạn thanh toán cho khách hàng dài hơn;
+- cơ cấu khách hàng chuyển sang nhóm trả chậm;
+- doanh nghiệp thúc đẩy bán hàng bằng tín dụng dễ dãi;
+- chất lượng thu tiền xấu đi;
+- ghi nhận doanh thu quá sớm.
 
-Useful questions:
+Một chỉ số:
+
+\[
+DSO = \frac{Khoản\ phải\ thu\ bình\ quân}{Doanh\ thu} \times Số\ ngày
+\]
+
+DSO tăng không chứng minh gian lận. Nó là tín hiệu để hỏi chất lượng doanh số.
+
+## 5. Tồn kho tăng nhanh
+
+Tồn kho có thể tăng vì chuẩn bị cho tăng trưởng, tạo bộ đệm chuỗi cung ứng hoặc ra mắt sản phẩm mới.
+
+Nhưng nếu tồn kho tăng trong khi nhu cầu yếu, rủi ro gồm giảm giá hàng, lỗi thời và tiền bị khóa.
+
+Với bán dẫn, điện tử, thời trang, hóa chất hay ô tô, chất lượng tồn kho phải đọc theo chu kỳ.
+
+Cần hỏi:
 
 ```text
-Inventory volume tăng vì capacity hay unsold goods?
-Finished goods hay raw materials tăng?
-Inventory days trend?
-Provision/impairment?
+Tồn kho tăng vì tăng công suất hay hàng chưa bán?
+Thành phẩm hay nguyên liệu tăng?
+Số ngày tồn kho thay đổi thế nào?
+Có trích lập giảm giá / suy giảm giá trị không?
 ```
 
-## 6. Payables tăng và cash flow “đẹp” tạm thời
+## 6. Khoản phải trả tăng có thể làm dòng tiền “đẹp” tạm thời
 
-Company có thể cải thiện CFO bằng kéo dài payment to suppliers.
+Doanh nghiệp có thể cải thiện CFO bằng cách kéo dài thời gian trả tiền nhà cung cấp.
 
-Nếu DPO tăng mạnh, CFO có thể tốt hơn dù operational economics không đổi.
+Nếu DPO tăng mạnh, CFO có thể đẹp hơn dù kinh tế hoạt động không đổi.
 
 \[
 CCC = DIO + DSO - DPO
 \]
 
-Cash flow improvement do supplier financing không nhất thiết repeatable.
+Cải thiện dòng tiền nhờ nhà cung cấp tài trợ không nhất thiết lặp lại được. Nó cũng có thể phản ánh quyền thương lượng mạnh hoặc áp lực thanh khoản.
 
-Đây còn là signal về bargaining power hoặc liquidity stress.
+## 7. Tài sản hợp đồng và doanh thu chưa lập hóa đơn
 
-## 7. Contract assets và unbilled revenue
+Xây dựng, SI, đóng tàu và doanh nghiệp dự án dài hạn có thể ghi nhận doanh thu trước khi lập hóa đơn hoặc thu tiền theo quy tắc tiến độ.
 
-Construction, SI, shipbuilding và long-term project businesses có thể recognize revenue trước billing/cash collection theo progress rules.
+**Tài sản hợp đồng (contract asset / 계약자산)** tăng nhanh hơn doanh thu cần được hiểu kỹ.
 
-**Contract asset / 계약자산** tăng nhanh hơn revenue cần được hiểu kỹ.
+Hãy hỏi:
 
-Câu hỏi:
+- phương pháp đo tiến độ?
+- điều kiện khách hàng chấp nhận?
+- mốc lập hóa đơn?
+- lịch sử thu tiền?
+- rủi ro sửa đổi ước tính chi phí?
 
-- progress measurement method?
-- customer acceptance condition?
-- billing milestone?
-- collection history?
-- cost estimate revision risk?
+Kế toán dự án cho ban quản lý nhiều không gian ước tính hơn bán lẻ đơn giản.
 
-Project accounting cho management nhiều estimate hơn simple retail sale.
+## 8. Rủi ro ghi nhận theo tiến độ
 
-## 8. Percentage-of-completion risk
+Nếu biên lợi nhuận dự án được ước tính cao từ sớm nhưng chi phí vượt kế hoạch xuất hiện muộn, lợi nhuận ban đầu có thể bị ghi nhận quá cao tương đối.
 
-Nếu project margin được estimate sớm nhưng cost overrun xuất hiện muộn, profit ban đầu có thể bị overstated tương đối.
+Ví dụ hợp đồng = 100, chi phí kỳ vọng = 80 → biên kỳ vọng = 20.
 
-Ví dụ project contract = 100, expected cost = 80 → expected margin = 20.
+Nếu tới giữa dự án chi phí kỳ vọng tăng lên 95, phần lợi nhuận tích lũy phải được điều chỉnh.
 
-Nếu halfway later expected cost rises to 95, cumulative recognized margin phải adjust.
+Do đó backlog lớn không tự động nghĩa lợi nhuận tương lai chắc chắn.
 
-Do đó backlog lớn không tự động nghĩa future profit chắc chắn.
+## 9. Ghi nhận doanh thu: giao hàng chưa chắc là hoàn thành kinh tế
 
-## 9. Revenue recognition: shipment không phải lúc nào cũng economic completion
+Ghi nhận doanh thu phụ thuộc việc chuyển quyền kiểm soát và hoàn thành nghĩa vụ thực hiện, không đơn giản là “đã xuất hóa đơn”.
 
-Revenue recognition phụ thuộc transfer of control/performance obligation, không đơn giản “invoice issued”.
+Các câu hỏi cần kiểm tra:
 
-Red-flag questions:
+- quyền trả hàng?
+- hàng đã ghi nhận nhưng vẫn giữ tại kho người bán (bill-and-hold)?
+- đẩy hàng vào kênh phân phối (channel stuffing)?
+- bán ký gửi (consignment)?
+- doanh thu với bên liên quan?
+- tăng đột biến bất thường cuối quý?
 
-- return rights?
-- bill-and-hold?
-- channel stuffing?
-- consignment?
-- related-party sales?
-- unusual quarter-end spike?
+Không nên kết luận sai phạm; chỉ cần kiểm tra điều khoản.
 
-Không nên accuse misconduct; chỉ cần kiểm tra terms.
+## 10. Các khoản lãi một lần
 
-## 10. One-off gains
+Lợi nhuận ròng có thể tăng nhờ:
 
-Net income có thể tăng nhờ:
+- lãi bán tài sản;
+- bán cổ phần;
+- lãi đánh giá giá trị hợp lý;
+- lãi tỷ giá;
+- dàn xếp kiện tụng;
+- hoàn nhập dự phòng.
 
-- asset disposal gain;
-- stake sale;
-- fair-value gain;
-- FX gain;
-- litigation settlement;
-- reversal of provision.
+Nếu mục tiêu là lợi nhuận chuẩn hóa, phải tách hoạt động định kỳ khỏi khoản một lần.
 
-Nếu mục tiêu là normalized earnings, phải tách recurring operation khỏi one-off.
+Một doanh nghiệp bán tòa nhà rồi báo lợi nhuận kỷ lục không có nghĩa năng lực kinh doanh cốt lõi tăng.
 
-Một company bán building rồi report record net income không có nghĩa core profitability tăng.
+## 11. Lợi nhuận hoạt động cũng chứa phán đoán kế toán
 
-## 11. Operating profit cũng có thể chứa judgment
+Nhiều người coi lợi nhuận hoạt động “sạch” hơn lợi nhuận ròng. Thường đúng hơn, nhưng vẫn phải xem cách phân loại.
 
-Nhiều analyst tin operating profit “sạch” hơn net income. Thường đúng hơn, nhưng vẫn cần xem classification.
+Ví dụ vốn hóa chi phí phát triển có thể chuyển chi phí hôm nay thành tài sản và khấu hao trong tương lai.
 
-Ví dụ capitalization of development costs có thể chuyển expense hôm nay thành asset amortized sau này.
+Nếu một doanh nghiệp vốn hóa nhiều hơn đối thủ, lợi nhuận hoạt động hiện tại có thể cao hơn tương đối.
 
-Nếu company capitalize nhiều hơn peers, current operating profit có thể cao hơn tương đối.
+## 12. Vốn hóa chi phí phát triển
 
-## 12. Capitalized development cost
+R&D có thể gồm phần ghi chi phí ngay và phần được vốn hóa thành tài sản phát triển nếu đủ điều kiện.
 
-R&D có thể gồm expense và capitalized development asset tùy criteria.
+Câu hỏi kinh tế là:
 
-Economic question:
+> Khoản chi này đã đủ chắc chắn tạo lợi ích kinh tế tương lai để ghi thành tài sản chưa?
 
-> Chi phí này thực sự tạo future economic benefit đủ chắc để asset hóa chưa?
+Nếu vốn hóa tăng nhanh nhưng thành công thương mại yếu, suy giảm giá trị có thể xuất hiện sau đó.
 
-Nếu capitalization tăng nhanh nhưng commercial success yếu, impairment có thể đến sau.
+Điều này đặc biệt liên quan phần mềm, game, biotech và phát triển công nghệ.
 
-Đặc biệt relevant trong software, game, biotech và technology development.
+## 13. CAPEX so với chi phí sửa chữa
 
-## 13. CAPEX vs repair expense
+Vốn hóa chi phí làm chi phí kỳ hiện tại thấp hơn, tài sản cao hơn và sau đó khấu hao/phân bổ qua nhiều kỳ.
 
-Capitalizing cost làm current expense thấp hơn, asset cao hơn, sau đó depreciation/amortization xuất hiện nhiều kỳ.
+Nếu ban quản lý phân loại chi phí bảo trì thường xuyên thành tài sản quá tích cực, lợi nhuận ngắn hạn có thể được đẩy lên.
 
-Nếu management classify routine maintenance thành capital asset quá aggressive, short-term profit có thể được boost.
+Nên so CAPEX, khấu hao và tuổi tài sản với lịch sử và doanh nghiệp cùng ngành.
 
-Analyst nên compare CAPEX, depreciation và asset age với peers/history.
+## 14. Giả định khấu hao
 
-## 14. Depreciation assumptions
+Thời gian sử dụng hữu ích dài hơn → khấu hao mỗi năm thấp hơn → lợi nhuận cao hơn.
 
-Useful life dài hơn → annual depreciation thấp hơn → profit cao hơn.
+Thay đổi tuổi thọ hữu ích hoặc giá trị còn lại có thể hợp lý khi công nghệ hoặc cách sử dụng tài sản thay đổi, nhưng cần hiểu tác động.
 
-Thay đổi useful life hoặc residual value có thể legitimate khi technology/asset use thay đổi, nhưng cần understand impact.
+Trong ngành thâm dụng vốn, chính sách khấu hao ảnh hưởng đáng kể EBIT.
 
-Trong capital-intensive industry, depreciation policy materially affects EBIT.
+## 15. Dự phòng
 
-## 15. Provision và reserve
+**Dự phòng (provision / 충당부채)** ghi nhận nghĩa vụ kỳ vọng khi số tiền hoặc thời điểm chưa chắc chắn.
 
-**Provision / 충당부채** ghi expected obligation khi amount/timing uncertain.
+Ví dụ:
 
-Examples:
+- bảo hành;
+- kiện tụng;
+- tái cấu trúc;
+- chi phí môi trường;
+- tổn thất tín dụng.
 
-- warranty;
-- litigation;
-- restructuring;
-- environmental cost;
-- credit loss.
+Ước tính quá thấp làm lợi nhuận hiện tại cao hơn. Ước tính quá cao trong năm tốt rồi hoàn nhập sau cũng có thể làm lợi nhuận trông ổn định hơn thực tế.
 
-Estimate thấp quá có thể làm current profit cao hơn; estimate cao trong good year rồi reverse sau có thể smooth earnings.
+## 16. Dự phòng bảo hành
 
-## 16. Warranty reserve
+Doanh nghiệp ô tô hoặc điện tử có doanh số tăng nhưng tỷ lệ dự phòng bảo hành giảm mạnh cần giải thích.
 
-Auto/electronics company tăng sales nhưng warranty provision rate giảm mạnh cần explanation.
+Có thể chất lượng thực sự tốt hơn. Cũng có thể giả định quá lạc quan.
 
-Có thể quality thật sự tốt hơn. Cũng có thể assumption optimistic.
+Nếu sau đó xuất hiện thu hồi sản phẩm lớn, chi phí có thể tăng mạnh.
 
-Later recall có thể làm cost jump.
+## 17. Tổn thất tín dụng kỳ vọng
 
-## 17. Expected credit loss
+Ngân hàng, công ty tài chính hoặc doanh nghiệp có nhiều khoản phải thu phải ước tính tổn thất kỳ vọng.
 
-Bank/finance/receivable-heavy company phải estimate expected losses.
+Nếu cho vay tăng nhanh nhưng tỷ lệ dự phòng giảm trong khi chất lượng người vay không cải thiện rõ, cần kiểm tra sâu.
 
-Nếu loan growth nhanh nhưng provision ratio giảm trong khi borrower quality không cải thiện rõ, analyst nên deep-dive.
+Thời điểm trích lập dự phòng là một phần cốt lõi của chất lượng lợi nhuận tại tổ chức tài chính.
 
-Provision timing là core part của earnings quality trong financial institutions.
+## 18. Tài sản thuế hoãn lại
 
-## 18. Deferred tax asset
+**Tài sản thuế hoãn lại (Deferred Tax Asset / DTA / 이연법인세자산)** chỉ có giá trị nếu doanh nghiệp có lợi nhuận chịu thuế trong tương lai để sử dụng khoản khấu trừ hoặc lỗ chuyển tiếp.
 
-**Deferred tax asset / 이연법인세자산** có value nếu company có future taxable profit để use deductions/losses.
+Doanh nghiệp thua lỗ nhưng ghi nhận DTA lớn cần kiểm tra giả định khả năng thu hồi.
 
-Loss-making company với large DTA cần assess recoverability assumption.
+Việc ghi nhận kế toán không biến lỗ tính thuế thành tiền mặt ngay lập tức.
 
-Accounting recognition không biến tax loss carryforward thành cash ngay.
+## 19. Giao dịch với bên liên quan
 
-## 19. Related-party transactions
+Bán hàng, cho vay, bảo lãnh hoặc chuyển tài sản giữa các bên liên quan có thể hoàn toàn hợp pháp trong cấu trúc tập đoàn.
 
-Related-party sales, loans, guarantees hoặc asset transfers có thể hoàn toàn legitimate trong group structure.
-
-Nhưng chúng cần extra scrutiny vì price/terms có thể không giống arm's-length market.
+Nhưng cần kiểm tra kỹ hơn vì giá và điều khoản có thể khác thị trường độc lập.
 
 Hỏi:
 
 ```text
-Counterparty là ai?
-Transaction size?
-Pricing basis?
-Payment terms?
-Receivable outstanding?
-Guarantee?
+Đối tác là ai?
+Quy mô giao dịch?
+Cơ sở định giá?
+Điều khoản thanh toán?
+Khoản phải thu còn tồn tại?
+Có bảo lãnh không?
 ```
 
 Xem [`08_corporate_governance_ownership_and_control.md`](./08_corporate_governance_ownership_and_control.md).
 
-## 20. Consolidated vs separate statements
+## 20. Báo cáo hợp nhất và báo cáo riêng
 
-Profit ở parent separate statement có thể đến từ dividends từ subsidiaries, trong khi consolidated economics khác.
+Lợi nhuận ở báo cáo riêng của công ty mẹ có thể đến từ cổ tức từ công ty con, trong khi kinh tế hợp nhất khác.
 
-Ngược lại, profitable subsidiary có thể bị offset bởi loss ở entity khác trong consolidation.
+Ngược lại, công ty con có lãi có thể bị bù bởi thua lỗ ở pháp nhân khác khi hợp nhất.
 
-Do đó luôn xác định perimeter trước khi compare ratios.
+Luôn xác định phạm vi kế toán trước khi so tỷ số.
 
-## 21. Non-controlling interest
+## 21. Lợi ích cổ đông không kiểm soát
 
-Consolidated net income có thể gồm profit attributable to non-controlling interests.
+Lợi nhuận ròng hợp nhất có thể gồm phần thuộc về **lợi ích không kiểm soát (Non-Controlling Interest / NCI / 비지배지분)**.
 
-Nếu analyst dùng total consolidated profit nhưng valuation chỉ cho parent common shareholders, cần lấy phần **attributable to owners of parent** phù hợp.
+Nếu định giá chỉ dành cho cổ đông phổ thông của công ty mẹ, phải sử dụng phần lợi nhuận thuộc chủ sở hữu công ty mẹ phù hợp.
 
-## 22. Equity-method income
+## 22. Thu nhập theo phương pháp vốn chủ sở hữu
 
-Company sở hữu associate có thể recognize share of profit mà không receive equivalent cash dividend.
+Doanh nghiệp sở hữu công ty liên kết có thể ghi nhận phần lợi nhuận tương ứng mà chưa nhận lượng tiền mặt tương đương dưới dạng cổ tức.
 
-Equity-method earnings tăng nhưng cash upstream hạn chế có thể làm holding-company liquidity khác apparent profit.
+Thu nhập theo phương pháp vốn chủ sở hữu tăng nhưng tiền chuyển lên công ty mẹ hạn chế có thể làm thanh khoản của holding company khác xa lợi nhuận kế toán.
 
-## 23. Cash balance không phải luôn freely available
+## 23. Tiền mặt không phải lúc nào cũng sử dụng tự do
 
-Cash có thể:
+Tiền mặt có thể:
 
-- restricted;
-- pledged;
-- nằm ở regulated subsidiary;
-- nằm ở overseas entity;
-- cần cho working capital.
+- bị hạn chế sử dụng;
+- cầm cố;
+- nằm ở công ty con chịu giám sát;
+- nằm ở pháp nhân nước ngoài;
+- cần cho vốn lưu động.
 
-Vì vậy “cash = X” không đồng nghĩa X hoàn toàn available cho dividend/debt repayment.
+Vì vậy “tiền mặt = X” không đồng nghĩa X hoàn toàn có thể dùng cho cổ tức hoặc trả nợ.
 
-## 24. Net cash company vẫn có risk
+## 24. Doanh nghiệp có tiền mặt ròng vẫn có thể rủi ro
 
-Một company có net cash nhưng:
+Doanh nghiệp có tiền mặt ròng nhưng đồng thời có:
 
-- large purchase commitments;
-- guarantees;
-- pension deficit;
-- litigation;
-- growth CAPEX commitments.
+- cam kết mua hàng lớn;
+- bảo lãnh;
+- thiếu hụt quỹ hưu trí;
+- kiện tụng;
+- cam kết CAPEX tăng trưởng.
 
-Balance-sheet headline có thể quá optimistic nếu bỏ footnotes.
+Bảng cân đối nhìn đơn giản có thể quá lạc quan nếu bỏ qua thuyết minh.
 
-## 25. Off-balance-sheet và contingent exposure
+## 25. Rủi ro ngoài bảng cân đối và nghĩa vụ tiềm tàng
 
-Look for:
+Cần tìm:
 
-- guarantees;
-- leases;
-- take-or-pay contracts;
-- JV commitments;
-- PF support;
-- derivatives;
-- supplier finance;
-- factoring with recourse.
+- bảo lãnh;
+- hợp đồng thuê;
+- hợp đồng take-or-pay;
+- cam kết JV;
+- hỗ trợ PF;
+- phái sinh;
+- tài trợ nhà cung cấp;
+- bao thanh toán có quyền truy đòi.
 
-Economic leverage có thể lớn hơn accounting borrowings.
+Đòn bẩy kinh tế có thể lớn hơn nợ vay kế toán.
 
-## 26. Factoring receivables
+## 26. Bao thanh toán khoản phải thu
 
-Nếu company sell receivables, CFO/liquidity có thể improve.
+Nếu doanh nghiệp bán khoản phải thu, CFO và thanh khoản có thể cải thiện.
 
-Nhưng cần hỏi transfer có truly remove risk không. Nếu company retains recourse, credit risk vẫn partly quay lại.
+Nhưng phải hỏi việc chuyển nhượng có thật sự chuyển toàn bộ rủi ro hay không. Nếu doanh nghiệp vẫn chịu truy đòi, rủi ro tín dụng vẫn quay lại một phần.
 
-Repeated factoring để maintain cash flow có thể signal working-capital pressure.
+Việc liên tục dùng bao thanh toán để duy trì dòng tiền có thể là dấu hiệu áp lực vốn lưu động.
 
-## 27. Supplier finance
+## 27. Tài trợ nhà cung cấp
 
-Supplier-finance arrangement có thể economically giống borrowing nhưng nằm gần trade payables.
+Một số chương trình tài trợ nhà cung cấp về kinh tế giống vay nợ nhưng được trình bày gần khoản phải trả thương mại.
 
-Nếu payment term được kéo dài nhờ finance provider, analyst nên consider whether part of payable should be viewed as financial debt.
+Nếu thời hạn thanh toán được kéo dài nhờ tổ chức tài chính trung gian, nên xem xét liệu một phần khoản phải trả có thực chất là nợ tài chính hay không.
 
-## 28. Sale-and-leaseback
+## 28. Bán rồi thuê lại
 
-Company bán asset rồi lease lại tạo immediate cash nhưng future lease payments tăng.
+Doanh nghiệp bán tài sản rồi thuê lại có thể tạo tiền mặt ngay nhưng đồng thời phát sinh nghĩa vụ thuê tương lai.
 
-Không nên coi toàn bộ proceeds như value creation. Đây là financing/asset-structure change.
+Không nên coi toàn bộ tiền thu là tạo giá trị; đây chủ yếu là thay đổi cấu trúc tài sản–tài trợ.
 
-## 29. Frequent “non-recurring” charges
+## 29. Các khoản “không lặp lại” nhưng lặp lại thường xuyên
 
-Nếu restructuring charge xuất hiện năm nào cũng có, nó không còn truly non-recurring.
+Nếu chi phí tái cấu trúc xuất hiện gần như năm nào cũng có, nó không còn thực sự không lặp lại.
 
-Normalized earnings không nên add back mọi “one-off” management label.
+Lợi nhuận chuẩn hóa không nên cộng lại mọi khoản được ban quản lý gắn nhãn “một lần”.
 
-Một rule:
+> Nếu một loại chi phí lặp lại qua nhiều chu kỳ, hãy coi ít nhất một phần là chi phí bình thường của hoạt động kinh doanh.
 
-> Nếu một loại charge lặp nhiều cycle, hãy treat ít nhất một phần như normal cost of doing business.
+## 30. EBITDA điều chỉnh
 
-## 30. Adjusted EBITDA
+Tài liệu IR có thể công bố **EBITDA điều chỉnh (adjusted EBITDA)** loại bỏ nhiều khoản mục.
 
-Company IR có thể report adjusted EBITDA loại nhiều items.
+Chỉ số này hữu ích nếu phần điều chỉnh thực sự bất thường. Nhưng phải đối chiếu lại số kiểm toán.
 
-Useful nếu adjustments thật sự unusual. Nhưng analyst phải reconcile về audited numbers.
+Cần hỏi:
 
-Questions:
+- có loại chi phí cổ phiếu cho nhân viên không?
+- tái cấu trúc có xuất hiện năm nào cũng có không?
+- chi phí M&A có thực sự hiếm không?
+- cách xử lý thuê tài sản có nhất quán không?
 
-- stock compensation removed?
-- restructuring every year?
-- acquisition cost recurring?
-- lease treatment consistent?
+Chỉ số điều chỉnh không sai; vấn đề là khi điều chỉnh xóa đi chi phí kinh tế thực.
 
-Adjusted metric không sai; problem là khi adjustment xóa economic cost thật.
+## 31. Chi phí trả bằng cổ phiếu
 
-## 31. Share-based compensation
+Chi phí trả bằng cổ phiếu không tạo dòng tiền ra ngay nhưng vẫn là chi phí kinh tế thực vì làm pha loãng quyền sở hữu.
 
-Share-based compensation không phải immediate cash outflow nhưng là real economic cost vì dilute owners.
+Bỏ qua hoàn toàn có thể làm kinh tế của cổ đông bị đánh giá quá cao.
 
-Ignoring it hoàn toàn có thể overstate owner economics.
+## 32. Mua lại cổ phiếu có thể che pha loãng
 
-## 32. Buyback che dilution
+Doanh nghiệp có thể mua lại cổ phiếu nhưng đồng thời phát hành cổ phiếu hoặc quyền chọn cho nhân viên hay dùng cổ phiếu cho M&A.
 
-Company có thể buy back shares nhưng đồng thời issue shares/options cho employees or acquisition.
+Do đó hãy xem **số cổ phiếu ròng**, không chỉ thông báo mua lại.
 
-Do đó check **net share count**, không chỉ gross buyback announcement.
+## 33. Thuế suất bất thường
 
-## 33. Tax rate bất thường
+Thuế suất hiệu dụng có thể biến động vì thuế hoãn lại, cơ cấu lợi nhuận quốc tế, ưu đãi thuế hoặc khoản một lần.
 
-Effective tax rate có thể biến động vì deferred tax, foreign mix, tax credits hoặc one-off.
+Nếu lợi nhuận ròng tăng chủ yếu nhờ lợi ích thuế, kinh tế hoạt động cốt lõi chưa chắc cải thiện.
 
-Nếu net income jump chủ yếu vì tax benefit, core operating economics chưa chắc cải thiện.
+Khi dự báo nên chuẩn hóa thuế.
 
-Normalize tax when forecasting.
+## 34. Lãi/lỗ tỷ giá
 
-## 34. FX gains/losses
+Nhà xuất khẩu hoặc nhập khẩu có thể ghi ảnh hưởng tỷ giá ở hoạt động hoặc ngoài hoạt động tùy loại phơi nhiễm và cách kế toán.
 
-Exporter/importer có thể có FX effect trong operating/non-operating items tùy exposure/accounting.
-
-Temporary KRW move có thể boost earnings nhưng không nên extrapolate như structural margin gain.
+KRW biến động tạm thời có thể làm lợi nhuận tăng nhưng không nên ngoại suy như cải thiện biên lợi nhuận mang tính cấu trúc.
 
 Xem [`21_economy_to_company_transmission.md`](./21_economy_to_company_transmission.md).
 
-## 35. Pension assumptions
+## 35. Giả định quỹ hưu trí
 
-Defined-benefit obligations phụ thuộc discount rate, salary growth và demographic assumptions.
+Nghĩa vụ phúc lợi xác định phụ thuộc lãi suất chiết khấu, tăng lương và giả định nhân khẩu học.
 
-Lower discount rate thường làm liability present value tăng.
+Lãi suất chiết khấu thấp hơn thường làm giá trị hiện tại của nghĩa vụ tăng.
 
-Pension deficit có thể là quasi-debt-like claim cần xem trong long-term analysis.
+Thiếu hụt quỹ hưu trí có thể được xem như một nghĩa vụ gần giống nợ trong phân tích dài hạn.
 
-## 36. Auditor opinion
+## 36. Ý kiến kiểm toán
 
-Audit opinion không phải guarantee company healthy. Auditor chủ yếu opine financial statements materially conform to accounting framework.
+Ý kiến kiểm toán không bảo đảm doanh nghiệp khỏe. Kiểm toán viên chủ yếu đánh giá liệu báo cáo tài chính có được trình bày phù hợp trọng yếu với chuẩn mực kế toán hay không.
 
-Still, qualified/adverse/disclaimer opinion hoặc emphasis matters đáng đọc kỹ.
+Tuy nhiên ý kiến ngoại trừ, bất lợi, từ chối đưa ý kiến hoặc đoạn nhấn mạnh vẫn cần đọc kỹ.
 
-Change of auditor, repeated restatement hoặc material weakness signal cũng đáng attention.
+Thay kiểm toán viên, điều chỉnh báo cáo lặp lại hoặc điểm yếu kiểm soát trọng yếu cũng đáng chú ý.
 
-## 37. Restatement
+## 37. Điều chỉnh lại báo cáo
 
-**Restatement / 재작성·정정공시** xảy ra khi prior numbers cần correction.
+**Điều chỉnh lại báo cáo (restatement / 재작성·정정공시)** xảy ra khi số liệu kỳ trước cần sửa.
 
-Một small typo khác hoàn toàn material correction affecting revenue/profit/equity.
+Một lỗi đánh máy nhỏ khác hoàn toàn với điều chỉnh trọng yếu ảnh hưởng doanh thu, lợi nhuận hoặc vốn chủ sở hữu.
 
-When restatement appears, ask:
+Khi có restatement, hãy hỏi:
 
-- what changed?
-- periods affected?
-- cash impact?
-- control weakness?
-- management credibility?
+- thay đổi gì?
+- kỳ nào bị ảnh hưởng?
+- có tác động tiền mặt không?
+- có cho thấy điểm yếu kiểm soát không?
+- ảnh hưởng độ tin cậy của ban quản lý thế nào?
 
-## 38. Quarter-end behavior
+## 38. Hành vi cuối quý
 
-Nếu Q4 luôn có unusual revenue surge, receivable increase hoặc inventory adjustment, investigate seasonality vs accounting pressure.
+Nếu Q4 luôn có doanh thu tăng bất thường, phải thu tăng mạnh hoặc điều chỉnh tồn kho lớn, cần phân biệt tính mùa vụ với áp lực ghi nhận kế toán.
 
-Do not infer manipulation automatically. Many industries genuinely seasonal.
+Không suy luận thao túng tự động. Nhiều ngành thực sự có mùa vụ.
 
-The key is consistency between operational explanation and cash/working-capital pattern.
+Điểm quan trọng là câu chuyện vận hành phải nhất quán với dòng tiền và mẫu hình vốn lưu động.
 
-## 39. Beneish-style mindset, không mechanical score
+## 39. Tư duy kiểu Beneish: dùng để sàng lọc, không kết án
 
-Academic forensic models combine accrual, receivables, margins và leverage to flag manipulation risk. Useful as screening, not verdict.
+Các mô hình kế toán điều tra học thuật kết hợp dồn tích, khoản phải thu, biên lợi nhuận và đòn bẩy để phát hiện khả năng bất thường.
 
-A score cannot understand industry-specific accounting better than detailed analysis.
+Chúng hữu ích cho sàng lọc, không phải phán quyết. Một điểm số không thể hiểu đặc thù kế toán ngành tốt hơn phân tích chi tiết.
 
-Use models to ask better questions, not to accuse.
+Dùng mô hình để đặt câu hỏi tốt hơn, không để buộc tội.
 
-## 40. Cash conversion ratio
+## 40. Tỷ lệ chuyển đổi tiền mặt
 
-One lens:
+Một góc nhìn:
 
 \[
-Cash\ Conversion = \frac{CFO}{Net\ Income}
+Tỷ\ lệ\ chuyển\ đổi\ tiền = \frac{CFO}{Lợi\ nhuận\ ròng}
 \]
 
-Long-run ratio around reasonable levels can support earnings quality. But high CAPEX business, financial firms or rapid-growth firms require context.
+Tỷ lệ hợp lý trong dài hạn có thể hỗ trợ đánh giá chất lượng lợi nhuận. Nhưng doanh nghiệp thâm dụng CAPEX, công ty tài chính hoặc doanh nghiệp tăng trưởng nhanh cần bối cảnh riêng.
 
-One year ratio is rarely decisive.
+Một năm riêng lẻ hiếm khi đủ kết luận.
 
-## 41. FCF quality
+## 41. Chất lượng FCF
 
-FCF can be “improved” by cutting CAPEX below maintenance need.
+FCF có thể được “cải thiện” bằng cách cắt CAPEX xuống dưới nhu cầu bảo trì.
 
-If old factory needs 500 annual maintenance but company spends 200 to show FCF, future reliability/capacity may deteriorate.
-
-Thus:
+Nếu nhà máy cũ cần 500 mỗi năm để duy trì nhưng doanh nghiệp chỉ chi 200 nhằm thể hiện FCF đẹp, độ tin cậy và công suất tương lai có thể suy giảm.
 
 ```text
-Reported FCF
-≠ sustainable owner cash flow
+FCF báo cáo
+≠ dòng tiền bền vững cho chủ sở hữu
 ```
 
-Need distinguish maintenance vs growth CAPEX conceptually.
+Cần phân biệt CAPEX bảo trì với CAPEX tăng trưởng về mặt khái niệm.
 
-## 42. Earnings quality bridge
+## 42. Cầu nối chất lượng lợi nhuận
 
-A useful bridge:
+Có thể dựng:
 
 ```text
-Reported Net Income
-- one-off gains
-+ one-off losses judged truly non-recurring
-± accounting normalization
-= Normalized Earnings
+Lợi nhuận ròng báo cáo
+- khoản lãi một lần
++ khoản lỗ một lần thực sự không lặp lại
+± chuẩn hóa kế toán
+= lợi nhuận chuẩn hóa
 
-Normalized Earnings
-± working-capital normalization
-- maintenance CAPEX
-= Sustainable Cash Earnings approximation
+Lợi nhuận chuẩn hóa
+± chuẩn hóa vốn lưu động
+- CAPEX bảo trì
+≈ dòng tiền lợi nhuận bền vững
 ```
 
-This is not official accounting. It is analyst reconstruction.
+Đây không phải chỉ tiêu kế toán chính thức mà là tái dựng của nhà phân tích.
 
-## 43. Forensic workflow trên DART
+## 43. Quy trình forensic trên DART
 
-Khi review company:
+Khi rà doanh nghiệp:
 
 ```text
-1. Compare 5 years income statement
-2. Compare CFO vs net income
-3. Track receivable/inventory/payable days
-4. Read accounting policies
-5. Read major estimates/provisions
-6. Read related-party notes
-7. Read commitments/guarantees
-8. Reconcile non-GAAP/IR metrics
-9. Search corrections/restatements
-10. Build normalized earnings bridge
+1. So sánh 5 năm báo cáo kết quả kinh doanh
+2. So CFO với lợi nhuận ròng
+3. Theo dõi DSO / DIO / DPO
+4. Đọc chính sách kế toán
+5. Đọc các ước tính / dự phòng quan trọng
+6. Đọc thuyết minh bên liên quan
+7. Đọc cam kết / bảo lãnh
+8. Đối chiếu chỉ số IR/non-GAAP với số kiểm toán
+9. Tìm điều chỉnh / restatement
+10. Dựng cầu lợi nhuận chuẩn hóa
 ```
 
-## 44. Red-flag cluster quan trọng hơn single signal
+## 44. Cụm dấu hiệu quan trọng hơn một tín hiệu đơn lẻ
 
-Receivable increase một mình có thể harmless. Inventory increase một mình cũng có thể growth.
+Khoản phải thu tăng một mình có thể vô hại. Tồn kho tăng một mình cũng có thể do tăng trưởng.
 
-Nhưng cluster:
+Nhưng nếu đồng thời:
 
 ```text
-Revenue growth slows
-+ receivables accelerate
-+ inventory accelerates
-+ CFO falls
-+ factoring increases
-+ debt rises
+Tăng trưởng doanh thu chậm lại
++ phải thu tăng nhanh
++ tồn kho tăng nhanh
++ CFO giảm
++ bao thanh toán tăng
++ nợ tăng
 ```
 
-thì risk picture mạnh hơn rất nhiều.
+thì bức tranh rủi ro mạnh hơn nhiều.
 
-Forensic analysis là pattern recognition across statements.
+Phân tích forensic là nhận diện mẫu hình xuyên nhiều báo cáo.
 
-## 45. Example: SI/SM company
+## 45. Ví dụ: công ty SI/SM
 
-Một IT-services company có revenue tăng nhờ long-term projects. Nhưng contract assets tăng nhanh, subcontractor payables tăng và cash collection chậm.
+Một công ty dịch vụ CNTT có doanh thu tăng nhờ dự án dài hạn. Nhưng tài sản hợp đồng tăng nhanh, phải trả nhà thầu phụ tăng và thu tiền chậm.
 
-Reported operating margin stable, nhưng CFO negative hai năm.
+Biên lợi nhuận hoạt động báo cáo ổn định nhưng CFO âm hai năm.
 
-Analysis không kết luận “fraud”. Instead:
+Không kết luận “gian lận”. Thay vào đó hỏi:
 
 ```text
-Project mix changed?
-Milestone billing delayed?
-Customer acceptance issue?
-Cost estimate aggressive?
-Subcontractor financing supporting cash?
+Cơ cấu dự án thay đổi?
+Mốc lập hóa đơn bị chậm?
+Khách hàng chưa nghiệm thu?
+Ước tính chi phí quá lạc quan?
+Nhà thầu phụ đang tài trợ dòng tiền?
 ```
 
-This is a proper forensic question set.
+Đó mới là bộ câu hỏi forensic đúng.
 
-## 46. Example: manufacturer
+## 46. Ví dụ: doanh nghiệp sản xuất
 
-Manufacturer report profit growth 20%, nhưng inventory +50%, receivable +35%, utilization falling và discounting increasing.
+Doanh nghiệp sản xuất báo lợi nhuận tăng 20%, nhưng tồn kho +50%, phải thu +35%, tỷ lệ sử dụng công suất giảm và giảm giá bán tăng.
 
-Possible interpretation: production ahead of demand and channel pressure.
+Một cách giải thích khả dĩ là sản xuất đang chạy trước nhu cầu và kênh bán chịu áp lực.
 
-Need compare industry cycle, inventory category và subsequent sales.
+Cần so chu kỳ ngành, loại tồn kho và doanh số các kỳ sau.
 
-## 47. Example: holding company
+## 47. Ví dụ: holding company
 
-Holding company shows high accounting profit from equity-method affiliates but parent standalone cash low.
+Holding company báo lợi nhuận kế toán cao nhờ công ty liên kết theo phương pháp vốn chủ sở hữu nhưng tiền mặt riêng tại công ty mẹ thấp.
 
-Debt maturity at parent cannot be paid automatically by subsidiary profit unless dividends/asset sales upstream cash.
+Nợ đáo hạn ở công ty mẹ không thể tự động trả bằng lợi nhuận của công ty con nếu chưa có cổ tức hoặc bán tài sản chuyển tiền lên.
 
-This illustrates difference between economic ownership and liquidity.
+Đây là khác biệt giữa quyền sở hữu kinh tế và thanh khoản thực tế.
 
-## Mental Model
+## Mô hình tư duy
 
-> Accounting quality analysis là kiểm tra xem **reported earnings → balance-sheet changes → cash flow → economic reality** có kể cùng một câu chuyện hay không.
-
-Flow:
+> Phân tích chất lượng kế toán là kiểm tra xem **lợi nhuận báo cáo → thay đổi bảng cân đối → dòng tiền → thực tế kinh tế** có kể cùng một câu chuyện hay không.
 
 ```text
-Revenue claim
-→ receivable / cash
-→ margin
-→ inventory / cost / provision
-→ operating cash flow
-→ capex / financing
-→ final liquidity
+Tuyên bố doanh thu
+→ khoản phải thu / tiền mặt
+→ biên lợi nhuận
+→ tồn kho / chi phí / dự phòng
+→ dòng tiền hoạt động
+→ CAPEX / tài trợ
+→ thanh khoản cuối cùng
 ```
 
-Nếu một link trong chain diverges, đừng vội kết luận; hãy tìm explanation trong business model và footnotes.
+Nếu một mắt xích lệch nhau, đừng kết luận vội; hãy tìm lời giải thích trong mô hình kinh doanh và thuyết minh.
 
-## Common misconceptions
+## Những nhầm lẫn thường gặp
 
-**“CFO thấp hơn net income = fraud.”** Sai. Growth và working capital có thể giải thích hợp lý.
+**“CFO thấp hơn lợi nhuận ròng = gian lận.”** Sai. Tăng trưởng và vốn lưu động có thể giải thích hợp lý.
 
-**“Audited = không có risk.”** Sai. Audit giảm material misstatement risk nhưng không đảm bảo business economics tốt.
+**“Đã kiểm toán = không có rủi ro.”** Sai. Kiểm toán giảm rủi ro sai sót trọng yếu nhưng không bảo đảm kinh tế doanh nghiệp tốt.
 
-**“One-off nên add back hết.”** Sai. Chi phí lặp lại dưới nhiều tên khác nhau vẫn là economic cost.
+**“Khoản một lần nên cộng lại hết.”** Sai. Chi phí lặp lại dưới nhiều tên khác nhau vẫn là chi phí kinh tế.
 
-**“Goodwill impairment không cash nên bỏ qua.”** Cash outflow đã xảy ra khi acquisition; impairment có thể là evidence capital allocation trước đó kém.
+**“Suy giảm goodwill không dùng tiền mặt nên bỏ qua.”** Sai. Tiền đã chi khi mua doanh nghiệp; suy giảm có thể là bằng chứng phân bổ vốn trước đây kém.
 
-**“Net cash nghĩa balance sheet an toàn.”** Chưa chắc nếu commitments/guarantees lớn.
+**“Tiền mặt ròng nghĩa bảng cân đối chắc chắn an toàn.”** Chưa chắc nếu cam kết và bảo lãnh lớn.
 
 ## Liên kết tiếp theo
 
