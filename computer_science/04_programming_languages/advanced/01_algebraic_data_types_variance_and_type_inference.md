@@ -1,72 +1,125 @@
 # Algebraic data types, variance và type inference
 
-Type system không chỉ ngăn việc cộng string với integer. Ở mức sâu hơn, type là ngôn ngữ mô tả **shape của state**, operation nào hợp lệ và quan hệ nào compiler có thể chứng minh trước runtime. Algebraic data types, variance và type inference là ba mảnh quan trọng để hiểu vì sao generic API có thể vừa expressive vừa safe.
+Type system không chỉ gắn nhãn `int`, `String` hay `User`. Ở mức advanced, type trở thành một ngôn ngữ mô tả **shape của state hợp lệ**, cách các shape kết hợp và quan hệ substitutability giữa chúng. Algebraic Data Types, variance và inference là ba mảnh giúp xây API vừa biểu đạt mạnh vừa giảm invalid states.
 
-## Product type: nhiều giá trị cùng tồn tại
+## Product type: nhiều phần cùng tồn tại
 
-Một record như `User(name, age)` chứa đồng thời `name` **và** `age`. Trong type theory, đây là **product type (곱 타입)**. Số trạng thái khả dĩ của product gần với tích số trạng thái của từng field.
+Một record/object đơn giản có thể được nhìn như product type:
 
-Struct, tuple, record và class data object thường mang trực giác product: một value được tạo từ nhiều component cùng hiện diện.
+```text
+User = Name × Email × Age
+```
 
-## Sum type: một trong nhiều khả năng
+Một value `User` chứa đồng thời một value của mỗi component. Nếu `Name` có `a` khả năng và `Age` có `b` khả năng hữu hạn, product có khoảng `a*b` combinations.
 
-Một result có thể là `Success(value)` **hoặc** `Failure(error)`. Đây là **sum type (합 타입)**. Rust `enum`, Haskell algebraic data type, Kotlin sealed hierarchy và Java sealed types + pattern matching đều biểu diễn ý tưởng tương tự ở mức khác nhau.
+Struct, tuple, record và class data-holder thường mang intuition này.
 
-Sum type mạnh hơn việc dùng `null` hoặc magic integer vì alternatives được đưa vào type. Compiler có thể kiểm tra exhaustiveness: nếu domain có ba case mà code chỉ xử lý hai, thiếu case trở thành lỗi có thể phát hiện sớm.
+## Sum type: một trong nhiều case
 
-## Modeling state để loại bỏ invalid state
+Sum type biểu diễn value thuộc **một trong các alternatives**:
 
-Giả sử payment có `status`, `paidAt`, `failureReason`. Một model phẳng cho phép trạng thái vô nghĩa như `status=SUCCESS` nhưng `paidAt=null` và `failureReason` lại có giá trị.
+```text
+PaymentResult = Success(Receipt)
+              | Declined(Reason)
+              | Retryable(Error)
+```
 
-Một sum type có thể tách thành `Pending`, `Succeeded(paidAt)`, `Failed(reason)`. Khi representation phản ánh invariant, nhiều validation chuyển từ runtime convention thành compile-time structure.
+Thay vì object có nhiều nullable fields và flag khó đồng bộ, sum type encode trực tiếp state machine hợp lệ.
 
-Đây là nguyên tắc **make invalid states unrepresentable**.
+Trong Rust có `enum`, Kotlin có sealed hierarchy, TypeScript có discriminated union, functional languages có ADT native. Java sealed types + records giúp gần hơn mô hình này.
 
-## Generic type và variance
+## Invalid state explosion
 
-Giả sử `Cat` là subtype của `Animal`. Câu hỏi khó hơn là `List<Cat>` có phải subtype của `List<Animal>` không. Câu trả lời phụ thuộc operation mà container cho phép.
+Giả sử API dùng:
 
-Nếu một `List<Cat>` được xem như mutable `List<Animal>`, caller có thể thêm `Dog`; invariant của list bị phá. Vì vậy mutable generic thường phải **invariant**.
+```text
+status: string
+receipt: Receipt?
+error: Error?
+```
 
-Nếu abstraction chỉ produce `T`, covariance thường an toàn: nơi cần producer của `Animal` có thể dùng producer của `Cat`. Nếu abstraction chỉ consume `T`, contravariance có thể phù hợp: consumer xử lý mọi `Animal` cũng xử lý được `Cat`.
+Ta có thể tạo trạng thái vô nghĩa như `status=SUCCESS` nhưng `receipt=null`, hoặc vừa có receipt vừa error.
 
-Java wildcard `? extends T` / `? super T`, Kotlin `out` / `in`, C# `out` / `in` là các cách language biểu đạt quan hệ này.
+ADT chuyển nhiều rule runtime thành rule construction/type checking. Đây là ví dụ principle: **make invalid states unrepresentable** khi chi phí phù hợp.
 
-## PECS là hệ quả, không phải câu thần chú
+## Pattern matching và exhaustiveness
 
-Trong Java, “Producer Extends, Consumer Super” hữu ích nhưng nên hiểu từ capability. `List<? extends Animal>` cho phép đọc value như `Animal` nhưng không cho thêm arbitrary `Animal`, vì actual list có thể là `List<Cat>`. `List<? super Cat>` cho phép thêm `Cat`, nhưng khi đọc chỉ biết chắc value là `Object`.
+Nếu sum type có tập cases đóng, compiler có thể kiểm tra pattern matching đã xử lý đủ case chưa.
 
-Compiler không gây khó dễ; nó đang bảo vệ information bị mất khi type bị existentially abstracted.
+Khi thêm case mới, compile error ở các match site trở thành một dạng impact analysis tự động.
+
+Điều này mạnh hơn chuỗi `if(status == "...")` phân tán vì relationship giữa variants và consumers được type system theo dõi.
+
+## Parametric polymorphism
+
+Generic type như `List<T>` cho phép viết algorithm độc lập type cụ thể. Nhưng câu hỏi khó xuất hiện khi có subtype relation.
+
+Nếu `Dog <: Animal`, liệu `List<Dog> <: List<Animal>`? Không tự động. Nếu cho phép và `List<Animal>` có method add, ta có thể add `Cat` vào list thực chất là `List<Dog>`, phá type safety.
+
+## Variance
+
+**Covariance** cho phép quan hệ đi cùng chiều: `Producer<Dog>` có thể dùng nơi cần `Producer<Animal>` nếu interface chỉ produce `T`.
+
+**Contravariance** đi ngược chiều: consumer có thể nhận broader type. Một `Consumer<Animal>` dùng được nơi cần consumer của `Dog` vì nó biết xử lý mọi Animal.
+
+**Invariance** không cho subtype relation giữa parameterized types.
+
+Mental model hữu ích:
+
+```text
+output position  -> covariance thường hợp lý
+input position   -> contravariance thường hợp lý
+both directions  -> invariance thường cần thiết
+```
+
+Đây là intuition, không thay formal rules của từng language.
+
+## Java/Kotlin examples
+
+Java dùng wildcard-site variance như `? extends T` và `? super T`.
+
+PECS mnemonic — Producer Extends, Consumer Super — hữu ích nhưng nên hiểu qua direction dữ liệu chứ không học thuộc khẩu hiệu.
+
+Kotlin hỗ trợ declaration-site variance `out`/`in`, giúp contract variance nằm ở type declaration khi phù hợp.
 
 ## Type inference là constraint solving
 
-Khi viết generic function mà không chỉ rõ type parameter, compiler thu thập constraints từ argument, expected return type và language rules rồi tìm substitution phù hợp.
+Khi compiler suy ra type, nó không “đoán” bằng AI. Nó thu thập constraints từ literals, function applications, assignments và generic parameters rồi tìm substitution thỏa rules.
 
 Ví dụ conceptual:
 
 ```text
-identity(x: T) -> T
-name = identity("Alice")
+identity(x) = x
 ```
 
-Argument tạo constraint `T = String`. Với generic phức tạp, compiler phải giải subtype constraints, variance và overload resolution. Vì vậy đôi lúc một biểu thức “rõ ràng với người” vẫn cần explicit type annotation để giảm ambiguity.
+Nếu không có operation nào yêu cầu type cụ thể, compiler có thể suy ra polymorphic form tương tự `T -> T` trong hệ thống phù hợp.
 
-## Local inference và global inference
+Type inference phức tạp hơn khi có subtyping, overload, higher-rank polymorphism hoặc effects. Language thường giới hạn inference để compile time/diagnostics còn kiểm soát được.
 
-Một số language cố suy luận phần lớn type toàn chương trình; Java/Kotlin/C# chủ yếu dùng inference cục bộ quanh expression/generic call. Local inference giữ API type contract explicit hơn và giúp compiler/tooling scale tốt, đổi lại programmer phải viết type ở boundary nhiều hơn.
+## Local inference vs global inference
 
-Không có lựa chọn tuyệt đối tốt: đây là trade-off giữa annotation burden, error message, compile-time complexity và readability.
+Một số language suy type mạnh trong function body nhưng yêu cầu public API annotation. Đây là design trade-off tốt cho maintainability: implementation có ergonomics, boundary vẫn explicit.
 
-## Higher-kinded abstraction: type constructor như parameter
+Nếu inference lan quá xa, error message có thể xuất hiện cách xa nguyên nhân và refactor thay type ngoài ý muốn.
 
-`List<T>` không phải một concrete type cho tới khi `T` được cung cấp; có thể xem `List` như type constructor. Higher-kinded types cho phép abstraction trên chính các constructor dạng `F<T>` thay vì chỉ trên `T`.
+## Higher-kinded abstraction intuition
 
-Điều này hữu ích khi muốn diễn đạt pattern chung giữa `List`, `Option`, `Future`... nhưng cũng tăng độ phức tạp của type system. Một số language hỗ trợ trực tiếp, một số dùng interface/generic encoding thay thế.
+Type parameter thường đại diện một concrete type `T`. Higher-kinded abstraction cho phép parameter hóa trên **type constructor** như `F<_>` — ví dụ “một context/container bất kỳ”.
 
-## API design consequence
+Nó hữu ích để biểu đạt patterns như mapping/traversal chung, nhưng tăng complexity type system đáng kể. Java không có higher-kinded types trực tiếp; ecosystems mô phỏng bằng interface patterns với ergonomic cost.
 
-Type càng precise, compiler càng có nhiều information để giúp caller. Nhưng type quá phức tạp có thể làm error message và onboarding tệ. Senior design không phải tối đa hóa type cleverness mà chọn boundary nơi compile-time guarantee đáng giá hơn complexity.
+## Mental Model
 
-## Mental model
+> Product type mô tả “A và B”; sum type mô tả “A hoặc B”; generics mô tả structure độc lập element type; variance kiểm soát direction substitutability; inference giải constraints để giảm annotation mà vẫn giữ static guarantees.
 
-> Product type mô tả “A và B”; sum type mô tả “A hoặc B”; variance mô tả subtype relation biến đổi thế nào khi đi qua generic constructor; inference là quá trình giải constraints. Khi dùng chúng đúng, type system trở thành công cụ modeling domain chứ không chỉ bộ kiểm tra syntax.
+## Common Misconceptions
+
+**“Generic collection của subtype luôn là subtype collection.”** Mutable collection làm điều này unsafe nếu vừa đọc vừa ghi.
+
+**“Type inference nghĩa compiler biết business meaning.”** Nó chỉ giải constraints trong type rules.
+
+**“ADT chỉ dành cho functional programming.”** Sealed classes, enums có payload và discriminated unions mang cùng mental model trong OOP/TypeScript ecosystems.
+
+## Kết nối
+
+Chapter tiếp theo về ownership cho thấy type system còn có thể encode resource lifetime. Với Java backend, variance xuất hiện trực tiếp trong generic APIs; với TypeScript/React, discriminated unions rất hữu ích cho UI/request state machines.

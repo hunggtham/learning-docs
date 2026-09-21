@@ -1,53 +1,99 @@
 # Failure detectors, membership và gossip protocols
 
-Trong một process đơn lẻ, crash thường rõ ràng: process biến mất. Trong distributed system, node A không nhận response từ node B không đủ để kết luận B đã chết. B có thể crash, network có thể partition, packet có thể mất, B có thể pause vì GC hoặc A có thể đang quá tải. **Failure detection** vì thế là reasoning dưới uncertainty.
+Trong distributed system, node không thể trực tiếp biết “node kia đã chết”. Nó chỉ biết **message/reply chưa đến trong một khoảng thời gian**. Network delay, GC pause, CPU saturation, packet loss và process crash đều có thể tạo cùng observation. Vì vậy failure detection là bài toán suy luận dưới uncertainty.
 
-## Timeout là một giả định về thời gian
+## Timeout chỉ tạo suspicion
 
-Khi đặt timeout 2 giây, hệ thống không chứng minh peer đã chết sau 2 giây. Nó tuyên bố: “nếu chưa có response sau khoảng này, ta sẽ hành động như thể peer không còn usable cho mục tiêu hiện tại”.
+Nếu A ping B và sau 1 giây không có reply, A có thể suspect B. Nhưng B có thể vẫn sống, chỉ chậm hoặc network partition.
 
-Timeout quá ngắn tăng false suspicion; quá dài làm failover chậm. Giá trị đúng phụ thuộc latency distribution, workload, network và hậu quả của false positive.
+Timeout ngắn phát hiện nhanh nhưng false positive nhiều. Timeout dài giảm false positive nhưng failover chậm.
 
-## Perfect failure detector khó đạt trong asynchronous system
+Không có threshold hoàn hảo nếu network delay không có upper bound chắc chắn.
 
-Trong model hoàn toàn asynchronous, không có upper bound chắc chắn cho message delay hoặc process pause. Một node chậm không thể phân biệt hoàn hảo với node chết chỉ bằng việc chờ.
+## Perfect failure detector là abstraction mạnh
 
-Distributed algorithms vì thế thường dựa trên failure detector có property yếu hơn hoặc giả định partial synchrony: sau một thời điểm nào đó, timing trở nên đủ ổn định để protocol tiến triển.
+Theory distributed systems mô tả failure detectors theo properties như completeness và accuracy.
 
-## Heartbeat và suspicion
+Perfect detector lý tưởng cuối cùng phát hiện mọi process crash và không nghi nhầm process đúng. Trong asynchronous network thuần, guarantee này không thực tế vì “rất chậm” không phân biệt được với “đã chết”.
 
-Heartbeat định kỳ cung cấp evidence peer còn hoạt động. Nhưng “không thấy heartbeat” chỉ tạo **suspicion**, không phải sự thật tuyệt đối. Hệ thống trưởng thành thường có intermediate state: alive → suspect → failed/dead, thay vì flip ngay từ healthy sang dead.
+Production systems vì vậy dùng eventually-accurate assumptions, heartbeats và adaptive timeout.
 
-Accrual failure detector thậm chí có thể tính suspicion score dựa trên lịch sử inter-arrival time thay vì fixed threshold cứng.
+## Membership là state machine riêng
 
-## Membership là distributed state
+Cluster cần biết tập members: joining, alive, suspect, leaving, dead.
 
-Cluster cần biết node nào thuộc group, incarnation/version nào hiện tại và thay đổi nào mới hơn. Nếu node rời rồi quay lại cùng identifier mà không có generation/incarnation, message cũ có thể làm state mới bị ghi đè.
+Membership không chỉ là một list IP. Nó cần version/epoch/incarnation để phân biệt old information với node restart.
 
-Membership protocol vì thế thường gắn monotonic incarnation/version để phân biệt “node A trước restart” và “node A sau restart”.
+Nếu node B restart với cùng address nhưng incarnation mới, gossip cũ nói “B dead” không được phép giết membership mới.
 
-## Gossip lan truyền information theo xác suất
+## Heartbeat
 
-Trong **gossip protocol (가십 프로토콜)**, mỗi node định kỳ trao đổi state với một số peer. Information lan ra theo nhiều vòng giống epidemic dissemination.
+Node gửi heartbeat định kỳ hoặc peers chủ động probe nhau. Missing heartbeats tạo suspicion.
 
-Gossip tránh coordinator trung tâm và scale tốt vì mỗi node chỉ giao tiếp với subset nhỏ. Đổi lại convergence không tức thời; trong một khoảng thời gian, các node có thể có membership view khác nhau.
+Central coordinator đơn giản nhưng thành bottleneck/single dependency. All-to-all heartbeat scale `O(n^2)` messages. Large clusters thường dùng subset probing + gossip.
 
-## Anti-entropy và reconciliation
+## Gossip
 
-Gossip không nhất thiết gửi toàn bộ state mỗi lần. Node có thể trao digest/version rồi chỉ đồng bộ phần khác biệt. Anti-entropy giúp state cuối cùng hội tụ dù message bị mất hoặc node tạm thời disconnected.
+Mỗi round, node trao đổi membership/state với một số peers ngẫu nhiên. Information lan truyền epidemic-style.
 
-Thiết kế phải có rule merge rõ ràng: version, timestamp, vector metadata hoặc domain-specific conflict resolution. “Gửi state cho nhau” không tự tạo consistency.
+Gossip có ưu điểm decentralized, robust và message cost per node thấp hơn broadcast toàn cluster. Đổi lại, convergence không instant và state tạm thời không đồng nhất.
 
-## Failure detector tác động tới consensus
+Một node có thể biết failure trước node khác; protocol sử dụng membership phải chịu được điều đó.
 
-Consensus safety không nên phụ thuộc vào việc failure detector đoán luôn đúng; false suspicion không được phép khiến hai leaders cùng commit conflicting history. Nhưng liveness thường cần timing assumption để cuối cùng chọn được leader ổn định.
+## SWIM intuition
 
-Đây là phân biệt quan trọng: **safety** phải giữ ngay cả khi network xấu; **liveness** có thể tạm dừng cho tới khi communication đủ tốt.
+Family protocol như SWIM tách failure detection và information dissemination. Node probe target; nếu direct ping fail, có thể nhờ một số peers indirect ping để phân biệt local path issue.
 
-## Operational example
+Sau suspicion, status được piggyback qua gossip.
 
-Nếu Kubernetes-like control plane đánh dấu node unavailable quá nhanh khi có network jitter, workload có thể bị reschedule dù node cũ vẫn chạy. Nếu fencing không đủ mạnh, hai nơi có thể cùng tin mình đang phục vụ cùng resource. Failure detection vì thế phải đi cùng lease/fencing, không chỉ heartbeat.
+Chi tiết implementation khác nhau, nhưng mental model quan trọng là **randomized probing + suspicion + epidemic dissemination**.
 
-## Mental model
+## False positive nguy hiểm hơn tưởng tượng
 
-> Failure detector không trả lời “peer có thật sự chết không?”; nó cung cấp một mức suspicion đủ để protocol ra quyết định. Membership là replicated state có version; gossip là cơ chế dissemination eventual. Correctness đến từ việc thiết kế hệ thống chịu được false suspicion, stale view và delayed message.
+Nếu suspect lập tức trigger leader election, shard reassignment và data replication, một network hiccup nhỏ có thể tạo “recovery storm”.
+
+Membership layer cần hysteresis/suspicion period và downstream control plane cần rate limit remediation.
+
+Failure detector không nên tự động biến uncertainty thành destructive action quá sớm.
+
+## Partition
+
+Hai halves của cluster có thể cùng nghĩ phía kia dead. Nếu cả hai tiếp tục nhận writes như primary, split-brain xảy ra.
+
+Membership/failure detector không tự giải split-brain. Cần quorum, consensus, lease/fencing hoặc external authority để quyết định ai có quyền mutate shared state.
+
+Đây là lý do “health check fail” không tương đương “safe to promote standby”.
+
+## Phi accrual detector
+
+Thay vì binary timeout cố định, detector có thể tính suspicion level dựa distribution heartbeat intervals. Phi accrual trả continuous score biểu diễn observation hiện tại bất thường mức nào so history.
+
+Điều này thích ứng latency variation tốt hơn fixed timeout trong một số systems, nhưng vẫn không biến uncertainty thành certainty.
+
+## Clock và timer assumptions
+
+Failure detection dùng local timeouts nên phụ thuộc timer scheduling và process pauses. Long GC stop-the-world có thể làm node khỏe bị peers suspect.
+
+Production tuning phải xem GC, CPU starvation, event-loop stalls và network tail latency cùng nhau.
+
+## Membership change và state ownership
+
+Khi member set đổi, shard ownership hoặc replica placement có thể phải rebalance. Nếu membership flaps, data movement liên tục tạo load lớn.
+
+Do đó stable membership và controlled reconfiguration là prerequisite cho storage cluster khỏe.
+
+## Mental Model
+
+> Failure detector không nói “ai chết”; nó cung cấp **suspicion signal dưới timing assumptions**. Membership biến signals đó thành versioned cluster view; safety-critical ownership phải dựa thêm quorum/consensus/fencing.
+
+## Common Misconceptions
+
+**“Ping timeout = node chết.”** Chỉ là một observation không có reply đúng hạn.
+
+**“Gossip cho mọi node state giống nhau ngay.”** Gossip converges dần và chấp nhận temporary inconsistency.
+
+**“Detect failure là đủ để failover an toàn.”** Failover mutation authority cần fencing/quorum để tránh split-brain.
+
+## Kết nối
+
+Tiếp theo đọc [Leases, fencing tokens và split-brain prevention](./02_leases_fencing_tokens_and_split_brain_prevention.md). Sau đó consensus internals giải thích cách cluster đồng ý durable log/state transitions.

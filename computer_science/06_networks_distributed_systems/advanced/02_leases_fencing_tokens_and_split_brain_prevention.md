@@ -1,59 +1,103 @@
 # Leases, fencing tokens và split-brain prevention
 
-Distributed lock thường được mô tả như mutex qua network, nhưng phép so sánh này nguy hiểm. Process có thể giữ “lock” rồi pause rất lâu; network partition có thể khiến lock service cấp quyền cho client khác; client cũ sau đó tỉnh lại và tiếp tục ghi. Vì vậy distributed mutual exclusion cần nhiều hơn một boolean `locked=true`.
+Distributed lock hoặc “primary ownership” khó hơn local mutex vì client có thể pause, mất network rồi quay lại sau khi hệ thống đã trao quyền cho client khác. Nếu old owner vẫn ghi được, ta có **stale owner** và có thể corrupt state. Leases và fencing giải quyết hai phần khác nhau của vấn đề.
 
-## Lease là quyền có thời hạn
+## Lock ownership không nên dựa vào niềm tin local
 
-**Lease (임대/리스)** cấp quyền sử dụng resource trong một khoảng thời gian. Nếu holder không renew, quyền hết hạn và coordinator có thể cấp cho client khác.
+Giả sử worker A lấy lock xử lý file. Sau đó A pause 60 giây vì GC. Lock service cho rằng A timeout và cấp lock cho B. B xử lý xong. A tỉnh lại và tiếp tục write vì trong memory nó vẫn “tin” mình giữ lock.
 
-Lease giúp hệ thống phục hồi khi holder crash mà không cần chờ explicit unlock. Nhưng nó đưa clock/time assumption vào correctness. Client không nên tự kết luận lease còn hiệu lực chỉ dựa vào wall clock của mình nếu protocol không bảo đảm clock relation phù hợp.
+Nếu storage chấp nhận write của A, lock timeout đã không bảo vệ correctness.
 
-## Pause tạo stale holder
+Đây là failure mode kinh điển của distributed lock không có fencing.
 
-Giả sử client A nhận lease 30 giây rồi bị stop-the-world pause 60 giây. Trong thời gian đó lease hết hạn và B nhận lease mới. Khi A tỉnh lại, local state của A vẫn có thể chứa object “I am leader” và tiếp tục gửi write.
+## Lease
 
-Nếu storage chỉ tin lời client rằng “tôi từng có lock”, split-brain write có thể xảy ra.
+Lease là quyền có thời hạn. Holder chỉ được coi có authority trước expiry theo protocol.
 
-## Fencing token biến generation thành authority
+Lease giúp system tự thu hồi ownership khi holder mất liên lạc. Nhưng clock uncertainty, pause và delayed messages khiến holder không thể chỉ nhìn local clock rồi tuyệt đối tin quyền còn hiệu lực.
 
-Mỗi lần cấp lease/lock, coordinator phát một **fencing token** tăng đơn điệu: 41, 42, 43...
+Lease protocol cần assumptions về clock drift/network delay hoặc authority central kiểm tra validity.
 
-Storage/resource server ghi nhớ token lớn nhất đã chấp nhận. Nếu A với token 41 tỉnh lại sau khi B đã dùng token 42, request của A bị từ chối vì stale generation.
+## Fencing token
 
-Điểm cốt lõi: correctness được enforce ở **resource boundary**, không chỉ ở lock service.
+Mỗi lần quyền được cấp, coordinator phát token đơn điệu tăng:
 
-## Vì sao random UUID chưa đủ?
+```text
+A gets token 41
+lease expires
+B gets token 42
+```
 
-UUID phân biệt holders nhưng không cho resource biết token nào mới hơn. Fencing cần ordering/generation để stale request bị nhận diện. Một epoch/term/monotonic sequence phù hợp hơn khi protocol yêu cầu “new authority supersedes old authority”.
+Storage/resource server nhớ token lớn nhất đã chấp nhận. Nếu A quay lại gửi write với 41 sau khi B đã dùng 42, storage reject 41.
 
-## Leader election và term
+Fencing biến stale-owner problem thành monotonic ordering check ở nơi side effect xảy ra.
 
-Consensus systems thường có khái niệm term/epoch. Leader mới hoạt động trong term cao hơn; message từ term cũ bị reject. Đây là cùng một mental model với fencing: authority phải gắn generation để delayed message từ quá khứ không thể ghi đè hiện tại.
+## Vì sao fencing mạnh hơn “check lock trước write”
 
-## Split brain không chỉ là hai leaders
+A có thể check lock và thấy valid, rồi pause trước write. Trong pause, lease hết và B nhận quyền mới. Khi A tiếp tục, check cũ đã stale.
 
-Split brain rộng hơn việc hai node cùng tự gọi mình leader. Vấn đề thực sự là hai actor có thể đồng thời tạo **side effect không tương thích** trên shared resource.
+Đây là TOCTOU — time-of-check to time-of-use.
 
-Nếu hai leaders tồn tại tạm thời nhưng chỉ một bên có quorum/fencing authority để commit, safety vẫn có thể giữ. Vì vậy “single leader” nên được định nghĩa theo quyền commit, không theo label trong process memory.
+Nếu write mang fencing token và resource server validate atomically, stale client không thể bypass chỉ vì check xảy ra trước pause.
 
-## External side effect khó fence
+## Token cần được enforce ở resource
 
-Database có thể kiểm tra fencing token trong transaction. Nhưng email server, payment gateway hoặc thiết bị vật lý có thể không hiểu token của lock service. Khi side effect nằm ngoài authority boundary, cần idempotency key, provider-side deduplication, transactional outbox hoặc workflow design khác.
+Nếu lock service phát token nhưng database/file service không kiểm tra token, fencing chỉ là metadata trang trí.
 
-Distributed lock không magically biến arbitrary external action thành exactly-once.
+Safety boundary phải đặt ở system thực hiện side effect: storage, state machine hoặc API owner của data.
 
-## Lease duration là trade-off
+## Leader lease
 
-Lease dài giảm renewal traffic và false expiration khi jitter, nhưng failover chậm. Lease ngắn failover nhanh hơn nhưng nhạy với pause/network delay. Renewal nên có safety margin thay vì đợi sát expiry.
+Consensus-based system có thể dùng lease để leader phục vụ read nhanh mà không quorum mỗi read, nếu đảm bảo không leader khác hợp lệ đồng thời trong interval.
 
-Nếu correctness phụ thuộc chặt vào time, phải định nghĩa clock source, drift bound và behavior khi clock bất thường. Nhiều hệ thống cố dùng monotonic clock cho duration thay vì wall-clock time có thể nhảy.
+Điều này thường cần clock bounds hoặc quorum interaction cẩn thận. Nếu assumptions clock sai, stale leader có thể serve stale/unsafe result.
 
-## Practical pattern
+Lease optimization luôn phải nêu rõ timing assumption.
 
-Một robust flow có thể là: client acquire lease → nhận fencing token → mọi mutation tới storage kèm token → storage chỉ chấp nhận token >= generation đã ghi nhận → renewal duy trì lease nhưng không giảm token.
+## Split-brain
 
-Nếu client mất lease, nó có thể tiếp tục chạy code nhưng không còn khả năng tạo authoritative mutation.
+Split-brain xảy ra khi nhiều actors cùng tin mình có quyền primary/write.
 
-## Mental model
+Failure detector có thể gây split-brain nếu mỗi partition tự promote local node. Prevention cần một authority rule mà hai sides không cùng thỏa, thường quorum majority hoặc external fencing device/token service.
 
-> Lease giải quyết quyền có thời hạn; fencing giải quyết stale actor. Distributed correctness không đến từ việc mọi node luôn đồng ý ai là leader, mà từ việc resource cuối cùng có thể từ chối authority cũ. Hãy đặt enforcement tại nơi side effect thực sự xảy ra.
+Trong cluster 3 nodes, partition 2-1 cho phép side 2 giữ majority và side 1 phải ngừng writes. Availability bị hy sinh ở minority để giữ single-writer safety.
+
+## Epoch/term như fencing concept
+
+Consensus protocols dùng term/epoch tăng dần. Message từ old leader term thấp có thể bị reject.
+
+Đây là cùng mental model với fencing token, nhưng integrated vào replicated state machine protocol.
+
+Epoch giúp phân biệt “message cũ đến muộn” với current authority.
+
+## Database primary failover
+
+Một standby được promote nhưng old primary chưa thật sự chết, chỉ mất network với control plane. Nếu clients hoặc storage path vẫn gửi write tới old primary, divergence xảy ra.
+
+Production failover cần đảm bảo old primary bị **fenced**: revoke storage access, change epoch/quorum authority, disable network path hoặc mechanism tương đương.
+
+“Promote new primary” chỉ là nửa đầu của failover; “old primary cannot write” mới hoàn tất safety.
+
+## Distributed job ownership
+
+Scheduler có thể phát fencing token per job attempt. Output sink chỉ accept attempt token mới nhất.
+
+Nếu old worker chậm hoàn thành sau retry worker mới, sink reject stale result thay vì overwrite new result.
+
+Pattern này hữu ích cho batch, workflow engine và exactly-once-like processing.
+
+## Mental Model
+
+> Lease trả lời **quyền có hiệu lực trong khoảng nào**; fencing token trả lời **làm sao resource từ chối owner cũ dù nó quay lại**. Split-brain prevention cần authority được enforce tại side-effect boundary.
+
+## Common Misconceptions
+
+**“Distributed lock timeout là đủ.”** Stale holder có thể tiếp tục sau pause nếu downstream không fence.
+
+**“Clock đồng bộ bằng NTP nên lease tuyệt đối an toàn.”** Clock vẫn có drift/step và process pause; protocol phải dựa assumption rõ.
+
+**“Failover xong khi standby thành primary.”** Old primary phải mất khả năng mutate state.
+
+## Kết nối
+
+Đọc trước [Failure detectors và membership](./01_failure_detectors_membership_and_gossip.md). Chapter consensus tiếp theo sẽ cho thấy term/epoch, quorum và log authority tạo fencing semantics ở cấp protocol.

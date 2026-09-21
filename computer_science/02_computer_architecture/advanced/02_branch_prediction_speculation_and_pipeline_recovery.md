@@ -1,55 +1,120 @@
 # Branch prediction, speculation và pipeline recovery
 
-Pipeline chỉ đạt throughput cao khi front-end liên tục biết instruction tiếp theo nằm ở đâu. Conditional branch phá tính liên tục đó: trước khi điều kiện được tính xong, CPU chưa chắc nên fetch từ nhánh taken hay fall-through. Nếu chờ kết quả thật rồi mới fetch, pipeline sâu sẽ tạo nhiều bubble. **Branch prediction (분기 예측)** biến uncertainty này thành speculation có kiểm soát.
+Một pipeline sâu cần biết instruction tiếp theo trước khi branch condition thực sự được tính. Nếu CPU chờ mọi `if`, loop và indirect call resolve rồi mới fetch tiếp, front-end sẽ thường xuyên đói instruction. **Branch prediction (분기 예측)** cho phép CPU đoán control flow và tiếp tục fetch/execute speculative.
 
-## Prediction gồm nhiều câu hỏi khác nhau
+## Control dependency tạo bubble
 
-Một branch predictor không chỉ đoán “taken hay not taken”. Front-end còn phải biết branch instruction nằm ở đâu, target address là gì và với indirect branch/call/return thì control flow sẽ chuyển tới target nào.
+Ví dụ:
 
-Các cấu trúc như **Branch Target Buffer (BTB)** lưu thông tin target đã thấy; direction predictor học pattern taken/not-taken; **Return Address Stack (RAS)** chuyên dự đoán return target. Processor thực tế phối hợp nhiều predictor thay vì dựa vào một bảng duy nhất.
+```c
+if (x > 0) {
+    y += a;
+} else {
+    y += b;
+}
+```
 
-## Vì sao history hữu ích?
+Instruction xác định `x > 0` có thể cần vài stage mới ra kết quả. Trong thời gian đó, fetch unit phải chọn địa chỉ tiếp theo. Không đoán thì pipeline dừng; đoán thì có thể tiếp tục nhưng phải chịu cost nếu sai.
 
-Branch thường có pattern. Loop branch có thể taken hàng nghìn lần rồi not-taken một lần. Một condition có thể tương quan với branch trước đó. Predictor vì thế dùng **local history**, **global history** hoặc tổ hợp nhiều history để dự đoán.
+## Predictor không chỉ đoán taken/not-taken
 
-Hai-bit saturating counter là mental model cơ bản: thay vì đổi prediction ngay sau một lần sai, predictor cần đủ evidence để chuyển giữa strongly/weakly taken và not-taken. Predictor hiện đại phức tạp hơn nhiều, nhưng nguyên lý vẫn là khai thác correlation trong control-flow history.
+CPU cần trả lời ít nhất hai câu hỏi: branch có taken không, và nếu taken thì target ở đâu.
 
-## Speculative execution bắt đầu ngay sau prediction
+**Branch Target Buffer (BTB)** cache target của branch đã thấy trước đó. Conditional predictor dự đoán direction. Return Address Stack giúp dự đoán `return`. Indirect branch predictor xử lý call/jump có nhiều target như virtual dispatch hoặc function pointer.
 
-Khi predictor chọn một path, CPU fetch, decode, rename và có thể execute các instruction trên path đó trước khi branch được resolve. Các kết quả vẫn speculative và chưa được retire. Nếu prediction đúng, processor đã che được phần lớn branch latency.
+Các cấu trúc này phối hợp để front-end tạo một predicted instruction stream gần như liên tục.
 
-Nếu sai, các instruction trẻ hơn trên wrong path phải bị **squash**. Rename map được khôi phục từ checkpoint, front-end chuyển sang correct target và pipeline phải được refill. Chi phí này là **misprediction penalty**.
+## Từ 1-bit predictor tới history-based predictors
 
-Pipeline càng sâu và front-end càng rộng, một prediction sai càng có thể lãng phí nhiều work. Vì thế predictor accuracy là thành phần kiến trúc rất quan trọng.
+Predictor đơn giản nhớ lần trước branch taken hay not taken. Nhưng loop có pattern như `T T T T N`, khiến predictor 1-bit sai khi loop kết thúc rồi lại sai ở lần vào loop sau.
 
-## Branch predictability liên hệ với code và data
+2-bit saturating counter cần nhiều evidence hơn để đổi bias và xử lý loop tốt hơn.
 
-Một condition có distribution 50/50 không đồng nghĩa luôn khó predict. Nếu kết quả có pattern lặp hoặc tương quan với history, predictor vẫn có thể học. Ngược lại, branch phụ thuộc dữ liệu gần-random có thể gây misprediction cao.
+Predictor hiện đại còn dùng **local history**, **global branch history** và nhiều bảng/pattern components. Ý tưởng chung: behavior của branch hiện tại có thể tương quan với chính lịch sử của nó hoặc những branch xảy ra trước đó.
 
-Ví dụ, xử lý một mảng đã sort theo threshold thường tạo một vùng false rồi một vùng true, dễ dự đoán. Cùng condition trên dữ liệu trộn ngẫu nhiên có thể khó hơn. Đây là một trong các lý do benchmark micro-level phải kiểm soát data distribution.
+## Aliasing trong predictor state
 
-## Branchless code không tự động nhanh hơn
+Predictor có bộ nhớ hữu hạn. Nhiều branch khác nhau có thể map vào cùng entry và làm nhiễu state của nhau. Đây gọi là aliasing/interference.
 
-Thay branch bằng conditional move, masking hoặc vector operation có thể tránh misprediction, nhưng lại có thể buộc CPU thực hiện work ở cả hai phía hoặc kéo dài dependency chain. Nếu branch vốn rất predictable, branchless transformation có thể không mang lợi ích.
+Tăng table size giảm collision nhưng tốn transistor/power. Dùng history dài hơn có thể bắt pattern phức tạp nhưng làm indexing/training khó hơn. Predictor design là bài toán accuracy–latency–energy.
 
-Optimization đúng phải dựa trên profile và cost model: misprediction rate, instruction count, dependency, vectorization và cache behavior.
+## Speculation kéo dài hơn front-end
 
-## Indirect branch và polymorphism
+Sau khi branch được predict, các instruction trên đường dự đoán có thể decode, rename, issue và thậm chí complete trước khi branch resolve. Chúng chỉ chưa được retire nếu vẫn speculative.
 
-Virtual dispatch, function pointer, interpreter dispatch và dynamic-language runtime thường tạo indirect branches. Khi một call site chỉ gặp một target, prediction khá dễ; khi target thay đổi nhiều, front-end khó giữ instruction stream ổn định.
+Nếu dự đoán đúng, latency branch gần như được che. Nếu sai, CPU phải loại bỏ work sai và khôi phục rename/front-end state.
 
-JIT compiler có thể dùng profiling để specialization: nếu một call site gần như luôn nhận cùng type, runtime sinh fast path cho type đó và guard assumption. Nếu assumption không còn đúng, deoptimization đưa execution về generic path. Đây là ví dụ trực tiếp về cùng mental model speculation ở hardware và runtime.
+## Misprediction recovery
 
-## Security consequence của speculation
+Khi branch resolve khác prediction:
 
-Speculative instruction bị squash không được commit architectural state, nhưng nó có thể để lại dấu vết **microarchitectural state** như cache occupancy. Các vulnerability thuộc lớp Spectre khai thác khoảng cách giữa architectural rollback và microarchitectural side effect.
+```text
+1. phát hiện mispredict
+2. xác định correct target
+3. squash younger speculative instructions
+4. phục hồi rename/checkpoint state
+5. redirect fetch
+6. refill pipeline
+```
 
-Bài học kiến trúc quan trọng không phải kỹ thuật khai thác, mà là: “không retire” không đồng nghĩa “không có observable effect”. Security boundary phải xem xét cả transient execution và shared microarchitectural resources.
+Cost phụ thuộc pipeline depth, front-end width, branch resolution latency và lượng speculative work đã đi xa.
 
-## Đo lường
+Một mispredict trên CPU rộng/sâu có thể mất hàng chục cycle effective opportunity, nên code với branch khó đoán có thể chậm đáng kể dù mỗi branch instruction nhìn rất nhỏ.
 
-Khi performance counter cho thấy branch-miss cao, cần liên hệ với workload thay vì sửa code mù quáng. Hãy xác định hot branch, distribution của input, compiler transformation và liệu stall thực sự bị branch hay memory latency chi phối. Một tỷ lệ miss nhỏ trong đoạn code chạy cực nhiều lần có thể quan trọng hơn tỷ lệ miss lớn trong cold path.
+## Branchless code không phải luôn nhanh hơn
 
-## Mental model
+Có thể thay branch bằng arithmetic, conditional move hoặc vector mask. Điều này hữu ích khi branch gần 50/50 và khó predict.
 
-> Branch prediction là cơ chế biến control-flow uncertainty thành một giả thuyết có thể rollback. Prediction tốt giữ front-end bận; prediction sai tiêu tốn speculative work và pipeline refill. Tối ưu branch vì thế là bài toán xác suất + workload + pipeline, không phải quy tắc “if là chậm”.
+Nhưng branch predictable gần như miễn phí tương đối, trong khi branchless version có thể luôn thực hiện cả hai phía hoặc tạo dependency dài hơn. Vì vậy “tránh branch” không phải universal optimization.
+
+Cần benchmark với workload thật và hiểu predictor behavior.
+
+## Speculation và memory hierarchy
+
+Instruction speculative có thể phát sinh cache lookup, TLB lookup, prefetch-like effects hoặc tranh chấp resources dù cuối cùng bị squash. Architectural result bị rollback nhưng **microarchitectural side effects** không nhất thiết biến mất hoàn toàn.
+
+Đây là nền tảng reasoning của Spectre-class attacks: attacker lợi dụng speculative execution để làm thay đổi cache state rồi suy ra secret qua timing.
+
+Vì vậy ranh giới “speculative state không commit” đủ cho functional correctness nhưng không tự động đủ cho security.
+
+## Indirect branches khó hơn conditional branches
+
+Virtual method call, switch table, interpreter dispatch hoặc JIT-generated code có thể tạo indirect branches với nhiều target. Predictor phải đoán target dựa history/context.
+
+Workload runtime động có thể làm BTB/indirect predictor pressure tăng, liên hệ trực tiếp với VM/JIT performance.
+
+## Front-end bandwidth và instruction cache
+
+Branch predictor accuracy chỉ là một phần. CPU còn phải cung cấp đủ instruction bytes qua I-cache, instruction TLB, decode hoặc uop cache.
+
+Mispredict làm lãng phí front-end bandwidth và làm pipeline refill. Code layout, hot/cold splitting và inlining có thể tác động cả predictor lẫn I-cache footprint.
+
+## Security boundary: Spectre intuition
+
+Một pattern đơn giản:
+
+```text
+if (index < length) {
+    value = array[index];
+}
+```
+
+Nếu predictor đã quen condition true, CPU có thể speculative load với `index` ngoài bounds trước khi check resolve. Architectural result sẽ bị squash, nhưng cache state phụ thuộc secret-derived access có thể còn lại và được đo bằng timing.
+
+Mitigation có thể cần fencing, masking, compiler transformations hoặc thay đổi hardware predictor/speculation policy tùy threat model.
+
+## Mental Model
+
+> Branch prediction biến control uncertainty thành **speculative work**. Accuracy cao giúp pipeline luôn có việc; misprediction cần rollback; security phải tính cả side effect microarchitectural chứ không chỉ state đã retire.
+
+## Common Misconceptions
+
+**“Prediction sai chỉ chạy nhầm vài instruction rồi thôi.”** Nó có thể gây pipeline flush lớn và để lại microarchitectural effects.
+
+**“Branchless luôn nhanh.”** Chỉ đúng trong một số pattern/workload; predictable branches thường rất hiệu quả.
+
+**“Rollback xóa mọi dấu vết.”** Rollback architectural state không đồng nghĩa rollback cache/TLB/predictor state.
+
+## Kết nối
+
+Chapter này nối [OoO execution và ROB](./01_out_of_order_execution_register_renaming_and_reorder_buffer.md) với roadmap về microarchitectural side channels. Ở tầng compiler, profile-guided optimization và code layout có thể cải thiện branch behavior; ở tầng security, speculation trở thành một attack surface.
