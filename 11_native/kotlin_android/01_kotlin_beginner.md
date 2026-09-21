@@ -2,7 +2,7 @@
 
 > Mục tiêu: học từ gần như số 0 để có thể đọc, viết và chạy một ứng dụng Android cơ bản bằng Kotlin. Tài liệu ưu tiên Kotlin hiện đại và Jetpack Compose, đồng thời vẫn giải thích XML/View system để bạn hiểu code Android cũ.
 >
-> Baseline phiên bản khi biên soạn: Kotlin 2.4.x; Android Studio Quail 4 / 2026.1.4 Patch 1 stable. Khi gặp API cũ, tài liệu sẽ đánh dấu rõ `Legacy`, `Deprecated` hoặc `Historical`.
+> Baseline phiên bản khi biên soạn: Kotlin 2.4.x; Android Studio Quail 4 / 2026.1.4 Patch 1 stable. Khi gặp API theo thế hệ khác nhau, tài liệu dùng bốn nhãn: `Modern preferred` cho hướng ưu tiên khi viết code mới; `Supported legacy/coexistence` cho API cũ hơn nhưng vẫn hợp lệ và phổ biến trong production; `Deprecated` cho API đã có hướng rời bỏ chính thức; `Historical` cho API chủ yếu cần biết để đọc project rất cũ. **Cũ không đồng nghĩa sai** và **mới không tự động tốt hơn trong mọi codebase**.
 
 ## Mục lục
 
@@ -536,7 +536,7 @@ startActivity(intent)
 
 # 17. Jetpack Compose căn bản
 
-Jetpack Compose là UI toolkit declarative. Thay vì tạo View rồi mutation từng thuộc tính, bạn mô tả UI như function của state. Khi state thay đổi, Compose chạy recomposition ở phần cần thiết.
+Jetpack Compose là UI toolkit declarative và là hướng ưu tiên cho UI mới trong baseline hiện tại. Thay vì tạo View rồi mutation từng thuộc tính, bạn mô tả UI như function của state. Khi state thay đổi, Compose chạy recomposition ở phần cần thiết.
 
 ```kotlin
 @Composable
@@ -588,7 +588,7 @@ Vì modifier được áp dụng theo chain và mỗi node có thể wrap node t
 
 # 18. XML/View system căn bản
 
-Trước Compose, Android UI chủ yếu dùng XML layout với `View`/`ViewGroup`. Hệ thống này vẫn rất phổ biến trong codebase cũ.
+XML + View/ViewGroup hiện là **Supported legacy/coexistence**, không phải “API sai”. Hệ thống này vẫn rất phổ biến trong production và còn phù hợp khi maintain màn hình cũ, dùng widget/View-only SDK hoặc migrate từng phần. Với feature UI mới trong stack hiện đại, Compose thường là hướng ưu tiên; nhưng việc rewrite một màn hình View đang ổn chỉ để “modern” không tự động tạo giá trị.
 
 ```xml
 <LinearLayout
@@ -605,14 +605,14 @@ Trước Compose, Android UI chủ yếu dùng XML layout với `View`/`ViewGrou
 </LinearLayout>
 ```
 
-Trong Activity cũ:
+Trong Activity cũ hoặc View-based Activity:
 
 ```kotlin
 setContentView(R.layout.activity_main)
 val title = findViewById<TextView>(R.id.titleText)
 ```
 
-`findViewById` vẫn dùng được nhưng View Binding an toàn và dễ maintain hơn.
+`findViewById` **vẫn được support**. Nó không phải deprecated; chỉ là View Binding thường giảm cast/lookup boilerplate và an toàn hơn cho code View mới.
 
 ```kotlin
 private lateinit var binding: ActivityMainBinding
@@ -625,7 +625,9 @@ override fun onCreate(savedInstanceState: Bundle?) {
 }
 ```
 
-Kotlin Android Extensions synthetic view access (`kotlinx.android.synthetic`) là cách cũ và đã bị loại bỏ; không nên học như cách triển khai mới.
+Kotlin Android Extensions synthetic view access (`kotlinx.android.synthetic`) thuộc nhóm **Historical/removed workflow** và không nên học như cách triển khai mới.
+
+Một codebase có Compose + Fragment/XML cùng tồn tại không phải “migration thất bại”. Đây thường là trạng thái chuyển đổi hợp lý. Compose có `AndroidView` để host View; View hierarchy có thể host Compose qua `ComposeView`. Interop boundary sẽ được học sâu hơn ở Intermediate/Senior.
 
 # 19. State, event và lifecycle nhập môn
 
@@ -674,7 +676,7 @@ NavHost(navController, startDestination = "home") {
 }
 ```
 
-Ở project mới nên ưu tiên type-safe navigation API nếu version Navigation đang dùng hỗ trợ và codebase thống nhất. Route string vẫn rất phổ biến trong code cũ.
+Route string là cách rất phổ biến trong project Compose cũ và vẫn có thể hoạt động tốt. Với project mới và Navigation version hỗ trợ, type-safe route API là hướng ưu tiên vì giảm stringly-typed argument/route error. Đây là ví dụ điển hình của **Supported legacy/coexistence → Modern preferred**, không phải “cũ = lỗi”.
 
 # 21. Resource, Manifest và permission
 
@@ -749,13 +751,83 @@ fun TodoScreen() {
 
 Sau level này, bạn nên tự giải thích được sự khác nhau giữa Kotlin language, Android SDK và Jetpack; hiểu Gradle module/dependency cơ bản; dùng `val`, `var`, nullable type, safe call, Elvis, `when`, loop, function, class, inheritance, interface, data class, sealed class và collection; viết lambda; hiểu Activity/Context/Intent; tạo Compose UI; hiểu state/recomposition ở mức cơ bản; đọc được XML/View Binding code; hiểu resource/manifest/permission; chạy debugger và đọc Logcat.
 
+Bạn cũng phải phân biệt được ba câu hoàn toàn khác nhau:
+
+```text
+API này cũ hơn
+API này deprecated
+API này không còn nên dùng cho code mới
+```
+
+Một API có thể “cũ” nhưng vẫn được support và đúng với context hiện tại. Nếu chưa phân biệt được điều này, rất dễ biến modernization thành rewrite không cần thiết.
+
 Nếu còn thấy `?.`, `?:`, `let`, lambda, `@Composable`, `remember`, `Modifier`, `Context`, `Intent`, `ViewModel` là những từ “ma thuật” chưa giải thích được bằng lời của mình, chưa nên chuyển nhanh sang các architecture phức tạp.
 
 ---
 
-## Version & Legacy Notes
+## Version & Legacy Notes — cách đọc API cũ và mới
 
-Kotlin hiện đại sử dụng K2 compiler line và Kotlin 2.x. Code Kotlin 1.x phần lớn vẫn đọc được, nhưng plugin/compiler/build configuration có khác biệt. Với Android UI, Compose là hướng hiện đại, còn XML/View system vẫn rất quan trọng trong codebase hiện hữu. `kotlinx.android.synthetic` là legacy đã bị loại bỏ; `AsyncTask` là deprecated từ lâu; `startActivityForResult`/`onActivityResult` đã được thay thế bằng Activity Result APIs trong code mới. Các phần này sẽ được giải thích sâu hơn ở level sau.
+Kotlin hiện đại sử dụng K2 compiler line và Kotlin 2.x, nhưng Android project tồn tại qua nhiều thế hệ. Beginner cần học cách **phân loại** thay vì học một bảng “cũ → mới” rồi thay thế máy móc.
+
+### Nhóm 1 — Modern preferred cho code mới
+
+Trong baseline hiện tại, các hướng thường được ưu tiên gồm Compose cho UI mới; Activity Result APIs cho result/permission contract; coroutine cho asynchronous logic có lifetime rõ; ViewModel cho screen-level state holder; WorkManager cho durable deferred work; DataStore cho nhiều use case settings mới; type-safe navigation khi Navigation stack hỗ trợ.
+
+Những lựa chọn này vẫn phải đúng với requirement. Coroutine không thay WorkManager; WorkManager không thay foreground service; DataStore không thay database; Compose không làm lifecycle tự biến mất.
+
+### Nhóm 2 — Supported legacy / coexistence
+
+Các API như XML/View, Fragment, RecyclerView, View Binding, LiveData, SharedPreferences và RxJava vẫn có thể xuất hiện hợp lệ trong production. Chúng không cần rewrite chỉ vì tutorial mới dùng stack khác.
+
+Ví dụ:
+
+```text
+XML/View
+→ vẫn đúng khi maintain màn hình View hoặc SDK chỉ expose View
+
+LiveData
+→ vẫn hoạt động tốt với lifecycle-aware observer trong codebase hiện hữu
+
+SharedPreferences
+→ vẫn usable cho một số key-value đơn giản; DataStore là hướng hiện đại hơn cho nhiều case mới
+
+RxJava
+→ vẫn có thể là nền tảng async ổn định của codebase lớn; migration sang Flow nên incremental
+```
+
+### Nhóm 3 — Deprecated: cần migration plan
+
+`AsyncTask` và `startActivityForResult`/`onActivityResult` là ví dụ dễ gặp. Deprecated không có nghĩa app lập tức ngừng chạy; nó có nghĩa platform/library đã chỉ hướng khác và technical debt sẽ tăng nếu tiếp tục mở rộng code mới dựa trên API đó.
+
+Đặc biệt, không có replacement one-to-one cho mọi API:
+
+```text
+AsyncTask
+→ coroutine nếu work gắn với scope/lifecycle
+→ WorkManager nếu work cần durable/deferred execution
+
+Service
+→ không tự động đổi thành WorkManager
+→ service vẫn đúng khi requirement thật sự là service semantics
+```
+
+### Nhóm 4 — Historical/removed workflow
+
+`kotlinx.android.synthetic` là ví dụ cần biết để đọc source cũ nhưng không nên dùng cho code mới. Tutorial cũ có thể vẫn chứa import synthetic; khi gặp chúng, cần hiểu đó là dấu vết generation của project thay vì copy vào template hiện đại.
+
+### Beginner migration rule
+
+Trước khi thay API, luôn hỏi:
+
+```text
+API hiện tại có deprecated không?
+replacement giải quyết cùng lifetime/contract không?
+test nào giữ behavior cũ?
+migration có thể làm incremental không?
+code cũ và mới cần coexist trong bao lâu?
+```
+
+Nếu chưa trả lời được các câu này, “đổi sang API mới” chưa phải một migration plan.
 
 ---
 
