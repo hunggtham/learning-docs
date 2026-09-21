@@ -5,6 +5,11 @@
 >
 > Các tư duy kiểu Senior, Language Idiom, Programming Pattern và Design Pattern được hòa vào nội dung. Khi một pattern được nhắc tên, nó được giải thích cùng trade-off và failure mode thay vì xuất hiện như một checklist để học thuộc.
 
+
+## Vị trí của Part 3 trong learning flow
+
+Part 3 giả định bạn đã đọc [Java Part 2 — Intermediate](./java_part2_intermediate_rewritten_detailed.md). Mục tiêu là đưa kiến thức Java sang production: Java Memory Model sâu hơn, thread/executor saturation, JVM/JIT/GC, profiling, database/HTTP resource boundaries, API compatibility và incident debugging. Những internals quá thấp như AQS, VarHandle, agents, Class-File API và FFM được để cho [Java Master Supplement](./java_master_supplement_rewritten_detailed.md) để không làm hỏng learning flow.
+
 ---
 
 # 1. Senior Java không đồng nghĩa với thuộc nhiều API
@@ -1287,6 +1292,20 @@ virtual thread events
 
 Run continuous low-overhead recording where policy allows so incident history exists before problem.
 
+
+
+---
+
+## Profiling production: chọn bằng chứng theo loại bottleneck
+
+Profiling không phải mở một profiler rồi nhìn flame graph cho mọi vấn đề. Trước hết hãy phân loại symptom. Nếu CPU cao, CPU sampling/JFR là điểm bắt đầu tốt. Nếu CPU thấp nhưng latency cao, hãy nhìn thread states, socket/DB waits, connection-pool acquisition, lock contention và distributed trace. Nếu GC CPU/pause cao, cần allocation profile, live-set/heap occupancy và GC events. Nếu RSS tăng nhưng heap ổn, heap profiler một mình không đủ; phải xét direct buffers, thread stacks, metaspace và native memory.
+
+Một workflow production có thể bắt đầu bằng metrics để xác nhận khi nào và phạm vi sự cố, sau đó JFR để xem JVM-level events, thread dump để xem execution đang chờ ở đâu, heap dump nếu cần retained-object analysis, và database/network tooling cho downstream. Không có tool duy nhất nhìn thấy toàn hệ thống.
+
+CPU sampling trả lời “stack nào đang tiêu CPU theo thời gian”. Allocation profiling trả lời “code nào đang tạo nhiều object/bytes”. Lock profiling trả lời “thread nào đang chờ monitor/lock”. Khi nhìn flame graph, width biểu thị sample frequency/cost tương đối chứ không phải call count chính xác; hãy đọc từ stack root tới hot leaf và kiểm tra source/workload trước khi tối ưu.
+
+Quan trọng nhất là luôn có **before/after measurement**. Nếu đổi data structure nhưng p99, CPU và allocation không cải thiện, đó không phải optimization có giá trị. Performance engineering là vòng lặp hypothesis → measurement → change → verification.
+
 ---
 
 # 70. Performance: Latency vs Throughput
@@ -2465,6 +2484,24 @@ JPMS optional stronger module boundary.
 Don't only change `<java.version>`.
 
 Run tests, dependency compatibility, performance baseline, GC/JFR, startup, container memory and deprecated/internal API scans.
+
+
+
+---
+
+## Java 8 → 11 → 17 → 21 dưới góc nhìn production engineer
+
+Ở level Senior, version evolution không còn là câu chuyện syntax đẹp hơn. Mỗi mốc thay đổi assumptions của build, runtime hoặc concurrency model.
+
+Java 8 đưa lambdas/streams/`java.time` vào mainstream, nhưng cũng là generation nơi rất nhiều enterprise frameworks dựa classpath, deep reflection và JDK-bundled Java EE APIs. “Java 8 application” thường mang assumptions mà source code không thể hiện rõ.
+
+Java 11 buộc build trở nên explicit hơn. JAXB/JAX-WS và Java EE/CORBA modules không còn bundled trong JDK, standard HTTP Client xuất hiện và một số deployment assumptions cũ biến mất. Khi migration, dependency graph và packaging quan trọng ngang source compatibility. `ClassNotFoundException` sau upgrade có thể là platform component đã bị removed chứ không phải bug mới trong business code.
+
+Java 17 làm encapsulation boundary cứng hơn. Strong encapsulation làm nhiều illegal reflective accesses trở thành lỗi thay vì warning. Đồng thời records, sealed classes và pattern matching giúp application model closed/value-centric concepts bằng type system thay vì conventions.
+
+Java 21 thay đổi concurrency economics với Virtual Threads. High-concurrency blocking servers có thể giữ imperative style với rất nhiều lightweight threads, nhưng Senior vẫn phải đặt bulkhead tại database, HTTP client, rate limit và CPU. Thread không còn là scarce resource theo cùng cách; **downstream capacity vẫn scarce**. Pattern matching for `switch` và record patterns cũng làm sealed hierarchies hữu ích hơn vì compiler có thể check exhaustiveness.
+
+Khi nâng version production, tách platform upgrade, dependency upgrade và source modernization khi có thể. Chạy tests trên target JDK, dùng `jdeps`/`jdeprscan`, kiểm tra removed/deprecated APIs, đo startup/heap/GC/JFR baseline, rồi mới quyết định dùng feature mới. Version upgrade thành công không chỉ là “compile được”; nó phải giữ correctness và SLO.
 
 ---
 
