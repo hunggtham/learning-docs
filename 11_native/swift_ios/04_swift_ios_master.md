@@ -1,607 +1,835 @@
 # Swift & iOS Master Note — Master
 
-> Đây là phần bổ sung để tiến từ senior implementation sang mastery: language evolution, migration strategy, framework design, package/API stability, performance engineering, production operations và những khác biệt version quan trọng.
+> Mục tiêu: từ Senior implementation tiến tới mastery: hiểu **language/platform evolution**, migration strategy, framework/API stability, distributed data compatibility, performance/security governance, release engineering và cách giữ một iOS system sống qua nhiều năm.
+>
+> Baseline cập nhật 21/09/2026: **Xcode 27 + Swift 6.4 + iOS 27 SDK**. Swift 6.4 phát hành chính thức 15/09/2026. Xcode 27.1/27.2 vẫn là beta tại thời điểm cập nhật nên không dùng làm stable baseline.
 
-# 1. Version map cần ghi nhớ
-
-Tại thời điểm cập nhật 20/09/2026, baseline hiện hành là Xcode 27 với Swift 6.4 và iOS 27 SDK. Swift 6.4 phát hành chính thức ngày 15/09/2026. Xcode 27.1 và 27.2 đang ở beta, vì vậy tài liệu chỉ coi API của Xcode 27/iOS 27 stable là baseline; behavior chỉ có ở minor beta được ghi chú riêng.
-
-Mốc lịch sử hữu ích:
-
-| Mốc | Ý nghĩa chính |
-|---|---|
-| Swift 5.x | ABI stability era, SwiftUI/Combine/concurrency dần trưởng thành |
-| Swift 5.5 | async/await, structured concurrency, actors |
-| Swift 5.9 | macro, Observation ecosystem bắt đầu phổ biến |
-| Swift 6.0 | strict data-race safety language mode, typed throws, Synchronization |
-| Swift 6.1 | tiếp tục cải thiện concurrency diagnostics, `nonisolated` mở rộng |
-| Swift 6.2 | approachable concurrency, default isolation option, `@concurrent`, `InlineArray`, `Span` và nhiều cải tiến testing/concurrency |
-| Swift 6.3 | giai đoạn tiếp tục hoàn thiện compiler, build/debug tooling và chuẩn bị các thay đổi ownership/interoperability của 6.4 |
-| Swift 6.4 / Xcode 27 | baseline 2026 hiện hành; Swift Build mặc định trong SwiftPM, ownership/memory-safe APIs và interop tiếp tục mở rộng |
-
-Không nên học Swift bằng cách đóng đinh “một syntax từ blog năm X”. Hãy luôn biết language mode của target và deployment target.
+Master không dạy lại `@State`, actor hay UIKit lifecycle. Nó giả định bạn đã có thể vẽ ownership/task/isolation/state/module graph từ Advanced và dùng các graph đó để đánh giá migration, compatibility và production risk.
 
 ---
 
-# 2. Migration Swift 5 → Swift 6
+# 1. Cách đọc version: compiler, language mode, SDK, OS và package là các trục khác nhau
 
-Migration lớn nhất không phải syntax mà là concurrency correctness.
+Một project có ít nhất các version axis sau:
 
-Quy trình tốt:
+- Xcode/toolchain version;
+- Swift compiler version;
+- Swift language mode/feature settings;
+- iOS SDK dùng lúc compile;
+- minimum deployment target;
+- Swift package tools/dependency versions;
+- binary SDK/framework versions;
+- backend API/schema version;
+- local persistence schema version.
 
-1. Bật warning/diagnostic theo từng target thay vì đổi toàn workspace một lần.
-2. Phân loại warning theo ownership: UI state, shared mutable state, callback crossing isolation, non-Sendable dependency.
-3. Đặt isolation đúng nơi thay vì dùng `@unchecked Sendable` để dập compiler.
-4. Migrate library boundary trước hoặc sau tùy dependency graph, nhưng giữ build xanh theo từng bước.
-5. Test behavior và performance vì isolation change có thể thay scheduling/lifetime.
+“Dùng Swift 6.4” không tự động nghĩa app chỉ chạy iOS 27. “Build bằng iOS 27 SDK” cũng không nghĩa được gọi mọi API iOS 27 trên thiết bị iOS 17 mà không availability check.
 
-Các fix phổ biến gồm đưa UI model về `@MainActor`, biến mutable shared singleton thành actor, chuyển snapshot sang Sendable value, bridge delegate callback về actor phù hợp và thay closure escaping không rõ sendability bằng API structured concurrency.
-
----
-
-# 3. Swift 6.x approachable concurrency và tác động thiết kế
-
-Swift 6.2 thay đổi cách người mới tiếp cận concurrency: code có thể default vào main actor trong target phù hợp, giúp sequential code an toàn hơn, rồi opt-in concurrency tại nơi cần.
-
-Điều này khuyến khích “progressive disclosure”: đừng biến mọi function thành concurrent. Chỉ đưa CPU-heavy, independent work ra concurrent executor khi có lợi.
-
-`@concurrent` làm intent “chạy concurrent” rõ hơn trong model mới. Nhưng API availability/language mode phải được kiểm tra trong project cụ thể.
-
-Senior migration note: cùng một source file có thể cho diagnostic khác khi build dưới Swift language mode khác hoặc feature flag khác. Vì vậy bug report phải kèm Xcode version, Swift version, language mode, target setting và deployment target.
+Version debugging phải ghi đủ context. Bug report chỉ nói “Swift 6 lỗi” thường thiếu dữ liệu để reproduce.
 
 ---
 
-# 4. Memory safety và systems features
+# 2. Swift evolution — thay đổi cách lập trình, không phải danh sách release note
 
-Swift luôn tập trung memory safety nhưng vẫn có escape hatch như `UnsafePointer`.
+## 2.1 Swift 1–2: ngôn ngữ mới, ecosystem còn biến động
 
-Swift 6.x bổ sung và tiếp tục mở rộng `Span` để truy cập contiguous memory có lifetime safety tốt hơn và `InlineArray` cho fixed-size inline storage. Đây là công cụ phù hợp framework thấp tầng, game/media, parsing, interop hoặc performance-sensitive code hơn là CRUD app thông thường.
+Các đời đầu đặt nền cho Optional, value types, protocol-oriented design và safety, nhưng syntax/API thay đổi mạnh. Code legacy từ thời này ít gặp trực tiếp hơn, nhưng lịch sử giải thích vì sao nhiều API wrapper/blog cũ không compile trên Swift hiện đại.
 
-Nguyên tắc mastery: chỉ dùng unsafe API khi boundary bắt buộc, encapsulate nó trong surface nhỏ, document invariant và viết test/fuzz nếu parsing binary/untrusted input.
+Bài học: source compatibility chưa phải điều mặc định trong giai đoạn đầu; khi đọc code rất cũ, đừng cố “sửa từng syntax” mà phải hiểu intent rồi map sang modern API.
 
-Strict memory safety opt-in giúp audit unsafe construct. Với app xử lý dữ liệu security-critical, đây là hướng đáng cân nhắc.
+## 2.2 Swift 3: API design và call-site readability trở thành convention lớn
+
+Swift 3 là bước chuẩn hóa naming/import style rất mạnh. Apple SDK Swift names được thiết kế lại theo API Design Guidelines, argument labels/call-site trở nên tự nhiên hơn.
+
+Ảnh hưởng lâu dài: Swift code hiện đại coi API naming là một phần semantics. Function không chỉ “tên + parameter”; call site cần đọc rõ hành động và relation giữa argument.
+
+## 2.3 Swift 4.x: Codable và model boundary trở nên type-safe hơn
+
+`Codable` làm JSON/property-list mapping phổ biến chuyển từ `[String: Any]`/manual cast sang compiler-checked model. Key path và standard-library improvements tiếp tục khuyến khích strongly typed APIs.
+
+Ảnh hưởng: transport model có thể được type hóa dễ hơn, nhưng “Codable được” không có nghĩa transport DTO nên trở thành domain model. Boundary design vẫn là architecture concern.
+
+## 2.4 Swift 5.0: ABI stability thay đổi cách phân phối Swift app/framework
+
+ABI stability trên Apple platforms giảm nhu cầu bundle Swift runtime theo cách cũ và tạo nền tảng cho binary ecosystem ổn định hơn. Đây không phải lời hứa rằng mọi Swift framework tự động binary-compatible vĩnh viễn.
+
+Swift 5.x còn là thời kỳ source compatibility tốt hơn, làm enterprise codebase có thể sống qua nhiều Xcode generation hơn.
+
+## 2.5 Swift 5.1 + SwiftUI era: opaque type/property wrapper/result builder thay đổi UI style
+
+`some View`, property wrappers và result-builder-style DSL tạo điều kiện cho SwiftUI. UI chuyển từ imperative object mutation sang declarative state-driven description.
+
+Ảnh hưởng architecture: identity/state ownership trở nên quan trọng hơn view-object lifetime kiểu UIKit. Nhưng UIKit không biến mất; hybrid architecture trở thành skill production.
+
+## 2.6 iOS 13 era: SwiftUI + Combine
+
+SwiftUI và Combine đưa declarative UI/reactive stream vào Apple ecosystem. Nhiều codebase 2019–2022 có `ObservableObject`, `@Published`, `AnyPublisher`, `sink`, scheduler-heavy pipeline.
+
+Khi maintain code này, không cần rewrite chỉ vì async/await/Observation mới hơn. Xác định boundary nào được hưởng lợi từ migration và giữ behavior/test trước.
+
+## 2.7 Swift 5.5: async/await, structured concurrency và actor
+
+Đây là thay đổi programming model lớn. Callback pyramid và nhiều Combine use case có alternative structured hơn. Actor đưa isolation vào language thay vì chỉ convention queue/lock.
+
+Ảnh hưởng: “thread-safe” dần chuyển thành “isolation/sendability correct”. Nhưng API callback/Combine/OperationQueue/GCD vẫn tồn tại ở framework legacy và cần bridge đúng.
+
+## 2.8 Swift 5.7–5.9: existential clarity, macros, Observation
+
+`any` làm existential intent rõ hơn; generic/opaque/existential trade-off dễ nói chính xác hơn. Macro mở compile-time code generation. Observation giảm boilerplate `ObservableObject/@Published` và track dependency granular hơn.
+
+SwiftData xuất hiện ở iOS 17 era, giúp persistence Swift-native hơn nhưng không xóa database fundamentals như schema/migration/index/transaction.
+
+## 2.9 Swift 6.0: data-race safety trở thành language-level migration
+
+Swift 6 language mode đưa concurrency correctness từ “warning/convention” tới compile-time guarantee mạnh hơn. `Sendable`, actor isolation, global actor và closure sendability trở thành API contract thực sự.
+
+Typed throws và Synchronization/tooling tiếp tục mở rộng khả năng express contract.
+
+Ảnh hưởng lớn nhất: API library giờ phải nghĩ đến isolation/sendability như public surface, không thể coi concurrency là implementation detail hoàn toàn.
+
+## 2.10 Swift 6.2: approachable concurrency và safe systems direction
+
+Swift 6.2 làm concurrency dễ tiếp cận hơn qua default isolation/configuration và explicit concurrent execution intent, đồng thời phát triển `Span`, `InlineArray` và memory-safety tooling.
+
+Ảnh hưởng: mental model “mọi async function tự chạy background” càng không còn đúng. Sequential/isolation-first code là default hợp lý; concurrency được opt-in ở nơi có lợi.
+
+## 2.11 Swift 6.4: ownership, build và cross-platform maturity
+
+Swift 6.4 là stable baseline hiện tại. Những thay đổi đáng chú ý ở mức direction:
+
+- Swift Build trở thành build system mặc định của SwiftPM;
+- ownership/memory-safe performance APIs mở rộng với `Ref`, `MutableRef`, `UniqueBox`, `UniqueArray`, `Iterable` và safe raw-memory access;
+- `Span` interop với C++20 `std::span` sâu hơn;
+- Observation/testing/debug tooling tiếp tục cải thiện;
+- Swift tiếp tục mở rộng Android, WebAssembly, Embedded và server/tooling use cases.
+
+Đối với iOS app, không cần thay `Array` bằng `UniqueArray` hay dùng systems API chỉ vì mới. Điều cần hiểu là Swift đang dịch chuyển về compile-time ownership/safety mạnh hơn và build/tooling thống nhất hơn.
 
 ---
 
-# 5. Typed throws
+# 3. UIKit → SwiftUI evolution — vì sao hai mental model cùng tồn tại
 
-Swift 6 hỗ trợ typed throws:
+UIKit dùng object/lifecycle/delegate/target-action/Auto Layout. SwiftUI dùng value description/state/identity/dependency tracking.
+
+Không có một ngày “UIKit hết hạn”. Nhiều framework system vẫn expose UIKit/UIViewController pattern hoặc API thấp tầng dễ bridge qua representable. Production migration nên chọn seam, không chọn ideology.
+
+Mốc platform đáng nhớ theo ảnh hưởng lập trình:
+
+- SwiftUI/Combine era: declarative/reactive bắt đầu;
+- SwiftUI App/Scene lifecycle: app entry/lifecycle có declarative surface mới;
+- NavigationStack era: route/state-driven navigation thay dần `NavigationView` cho app hiện đại;
+- Observation/SwiftData era: state/persistence Swift-native hơn;
+- Xcode 27/iOS 27: state/builder internals, caching/data-flow/tooling tiếp tục tiến hóa.
+
+Mỗi lần nâng framework, regression test phải tập trung identity/lifetime/navigation/focus/accessibility hơn là chỉ compile success.
+
+---
+
+# 4. Version support policy — trước khi viết code mới
+
+Mỗi product nên có policy rõ:
+
+- minimum iOS version;
+- Xcode version dùng ở CI/release;
+- Swift language mode;
+- package update cadence;
+- khoảng backend backward-compatibility;
+- số local schema version phải hỗ trợ migration;
+- thời gian app version cũ còn được backend hỗ trợ.
+
+Không có policy thì mỗi engineer tự quyết và compatibility debt tích lũy âm thầm.
+
+---
+
+# 5. Availability strategy
+
+Runtime API:
 
 ```swift
-enum ParseError: Error {
-    case invalidHeader
-    case corruptedPayload
-}
-
-func parse(_ data: Data) throws(ParseError) -> Model {
-    ...
-}
-```
-
-Typed throws đặc biệt có giá trị với generic/embedded/API muốn express error domain compile-time. Nhưng app layer thường vẫn phải compose nhiều error source, nên `throws(any Error)` vẫn tự nhiên ở nhiều boundary.
-
-Đừng tạo 40 error enum chỉ để “type-safe” nếu caller cuối cùng không phân biệt được chúng.
-
----
-
-# 6. Observation thế hệ mới
-
-`@Observable` khác `ObservableObject`: macro tạo tracking instrumentation và SwiftUI có thể track property read granularly.
-
-```swift
-@Observable
-final class SearchModel {
-    var query = ""
-    var results: [ResultItem] = []
-}
-```
-
-`@ObservationIgnored` loại property khỏi tracking.
-
-Swift 6.4 mở rộng Observation với API theo dõi thay đổi liên tục/fine-grained có thể tích hợp tự nhiên với async flow. Đây là bridge quan trọng giữa observation model và async sequence.
-
-Mastery point: observation là dependency tracking, không phải domain event bus. Nếu business cần audit event hoặc workflow explicit, dùng event/action abstraction riêng.
-
----
-
-# 7. AsyncSequence
-
-`AsyncSequence` là abstraction cho stream async:
-
-```swift
-for await value in stream {
-    consume(value)
-}
-```
-
-Nó phù hợp notification stream, bytes, socket messages, sensor events, observation changes.
-
-Cancellation và backpressure semantics phải hiểu theo implementation. Không assume mọi AsyncSequence buffer vô hạn hay replay event.
-
-Có thể viết custom AsyncStream:
-
-```swift
-let stream = AsyncStream<Int> { continuation in
-    continuation.yield(1)
-    continuation.finish()
-}
-```
-
-Phải quản termination và resource cleanup.
-
----
-
-# 8. API design cho framework/package
-
-Public API là commitment. Một khi consumer phụ thuộc, rename/break signature có cost.
-
-Thiết kế framework:
-
-- surface nhỏ;
-- type semantic rõ;
-- avoid leaking third-party types nếu không muốn lock dependency;
-- sendability/isolation phải là một phần contract trong Swift 6;
-- document availability và thread/actor requirements;
-- test binary/source compatibility tùy distribution model.
-
-SPI (`@_spi`) và underscored attribute là implementation detail không nên dùng tùy tiện trong public ecosystem.
-
----
-
-# 9. Library evolution và ABI
-
-ABI stability cho Swift runtime trên Apple platform không đồng nghĩa mọi framework binary tự động future-proof.
-
-Module stability, library evolution và `.swiftinterface` liên quan consumer build bằng compiler khác version.
-
-`@frozen` cam kết stored layout của public struct/enum không thay đổi theo cách nhất định; sử dụng sai khóa evolution.
-
-Đa số app developer không cần `@frozen`. Framework vendor cần hiểu sâu.
-
----
-
-# 10. Macros trong production
-
-Macro giúp giảm boilerplate nhưng compile-time toolchain complexity tăng.
-
-Phân loại: freestanding expression/declaration macro và attached macro như member/accessor/conformance-related macro.
-
-Khi chọn macro:
-
-- code generated có predictable không;
-- diagnostic có tốt không;
-- compile time có chấp nhận được không;
-- debugging có rõ không;
-- consumer cần compiler/plugin dependency nào.
-
-Không dùng macro để tạo “mini-language” khó discover nếu function/generic thông thường đủ tốt.
-
----
-
-# 11. SwiftUI rendering mastery
-
-SwiftUI View là description, không phải object UI persistent theo cách UIKit.
-
-Identity quyết định lifetime của state storage. Nếu identity đổi, state có thể reset. Structural identity từ view tree và explicit identity qua `id` cần dùng có chủ đích.
-
-Conditional view:
-
-```swift
-if isLoggedIn {
-    HomeView()
+if #available(iOS 27, *) {
+    useNewAPI()
 } else {
-    LoginView()
+    useFallback()
 }
 ```
 
-Hai branch có identity/type structure khác nhau. Đây có thể ảnh hưởng transition/state.
-
-`AnyView` type-erases view nhưng có thể làm mất static structure/optimization và thường không cần với `@ViewBuilder`.
-
-Đừng dùng `.id(UUID())` để “force refresh”; nó phá identity và thường che bug state.
-
----
-
-# 12. View lifetime và task lifetime
-
-`.task` được gắn với view identity và có cancellation semantics khi view biến mất/identity đổi.
+Compile-time source/platform:
 
 ```swift
-.task(id: query) {
-    await model.search(query)
-}
+#if canImport(UIKit)
+import UIKit
+#endif
 ```
 
-Đây là idiom tốt cho task phụ thuộc input. Nhưng service-level work không nên vô tình bị cancel vì view redraw/navigation nếu business yêu cầu tiếp tục; lifetime của task phải thuộc đúng owner.
+Public framework API có thể dùng `@available` để encode requirement/deprecation vào compiler.
+
+Đừng tạo fallback chỉ để “support version cũ” nếu fallback semantics sai. Đôi khi đúng hơn là disable feature với UX rõ hoặc nâng deployment target sau product analysis.
 
 ---
 
-# 13. Data architecture mastery
+# 6. Migration Swift 5 → Swift 6.x — ownership-first workflow
+
+Migration concurrency tốt không bắt đầu bằng fix compiler warning ngẫu nhiên.
+
+## 6.1 Inventory
+
+Lập bản đồ:
+
+- global/singleton mutable state;
+- UI model/controller isolation;
+- callback/delegate crossing queue;
+- non-Sendable SDK type;
+- closure lưu lâu;
+- database context/object boundary;
+- GCD/OperationQueue/Combine pipeline;
+- test phụ thuộc timing.
+
+## 6.2 Move boundary theo batch
+
+Migrate module/feature có test trước. Giữ commit nhỏ đủ bisect. Khi annotation thay đổi execution semantics/lifetime, thêm regression test.
+
+## 6.3 Không dùng escape hatch như migration strategy
+
+`@unchecked Sendable`, `nonisolated(unsafe)` hoặc global `@MainActor` có thể hữu ích ở boundary được chứng minh, nhưng nếu dùng để silence compiler hàng loạt, bạn đã xóa safety mà migration định đạt được.
+
+## 6.4 Bridge legacy thay vì rewrite đồng loạt
+
+Callback → continuation, Combine → async sequence, GCD-protected store → actor có thể migrate từng seam. Giữ bridge ở boundary và xóa khi consumer mới đã ổn định.
+
+---
+
+# 7. API/library evolution và source/binary compatibility
+
+Public API là commitment. Framework/package sống lâu phải cân nhắc:
+
+- source compatibility;
+- semantic compatibility;
+- binary/module compatibility nếu phân phối binary;
+- actor/isolation/sendability contract;
+- availability;
+- deprecation window.
+
+ABI stability của Swift runtime trên Apple platform không tự động làm mọi binary framework future-proof.
+
+Module stability/library evolution/`.swiftinterface` liên quan consumer compiler khác version. `@frozen` khóa một phần layout/evolution của public type; dùng sai làm future change khó hơn.
+
+SPI/underscored API không nên bị consumer coi như public stable contract.
+
+---
+
+# 8. Semantic versioning nội bộ và deprecation
+
+Ngay cả package chỉ dùng nội bộ cũng cần version/change discipline nếu nhiều module/team consume.
+
+Breaking change có thể:
+
+1. thêm API mới;
+2. deprecate API cũ với migration message;
+3. migrate consumer;
+4. xóa sau window đã thống nhất.
+
+```swift
+@available(*, deprecated, message: "Use load(request:) instead")
+func loadLegacy() { }
+```
+
+Đừng giữ compatibility shim vô hạn; mỗi shim là branch cần test.
+
+---
+
+# 9. Macros và generated code governance
+
+Macro giảm boilerplate nhưng thêm compiler plugin/tooling dependency và generated code không thấy trực tiếp ở source.
+
+Production checklist:
+
+- expansion có deterministic không;
+- diagnostic có readable không;
+- compile-time cost có đo không;
+- public API generated có stable không;
+- security/supply-chain của macro package có được review không;
+- developer có biết xem expansion khi debug không.
+
+Nếu ordinary generic/function đủ rõ, macro không nhất thiết tốt hơn.
+
+---
+
+# 10. Ownership/memory-safe systems boundary
+
+Unsafe API chỉ nên nằm ở adapter nhỏ với invariant rõ. Với binary parser/C/C++ interop:
+
+- validate bounds/alignment;
+- document lifetime/ownership;
+- convert sang Swift-safe representation sớm;
+- fuzz untrusted input;
+- bật safety diagnostics phù hợp.
+
+Swift 6.4 thêm nhiều safe alternative cho use case trước đây cần pointer/CoW workaround. Adoption nên theo benchmark và resource semantics, không theo novelty.
+
+---
+
+# 11. Data architecture — source of truth theo loại dữ liệu
 
 Phân biệt:
 
-- View state: trạng thái trình bày tạm thời.
-- Feature state: state của flow.
-- Domain state: business truth.
-- Persisted state: dữ liệu lưu dài.
-- Server state: dữ liệu remote authoritative.
-- Cache: copy tối ưu.
-- Derived state: tính từ state khác.
+- presentation/view state;
+- feature workflow state;
+- domain state;
+- local persisted state;
+- server authoritative state;
+- cache;
+- derived state.
 
-Bug lớn xảy ra khi một giá trị bị lưu ở nhiều lớp mà không có synchronization rule.
+“Single source of truth” không có nghĩa toàn app có một global store. Nó nghĩa mỗi fact biết authoritative owner và synchronization rule.
 
-Single source of truth không có nghĩa toàn app chỉ có một object global. Nó nghĩa với một fact cụ thể phải biết source authoritative.
-
----
-
-# 14. Offline-first và sync engine
-
-Một app offline-first thực sự cần:
-
-- local durable store;
-- operation queue/outbox;
-- sync cursor/version;
-- conflict strategy;
-- retry/backoff;
-- idempotency;
-- tombstone/delete semantics;
-- account/logout data isolation;
-- clock skew awareness.
-
-Last-write-wins chỉ phù hợp một số domain. Collaborative data có thể cần server authority, field-level merge, version vectors hoặc CRDT tùy bài toán.
+Ví dụ, `isFavorite` có thể authoritative ở server, mirrored local để offline, optimistic UI tạm thời. Ba representation tồn tại nhưng phải có reconciliation policy rõ.
 
 ---
 
-# 15. Design System
+# 12. Persistence schema là public contract với dữ liệu user
 
-Design system production không chỉ là color constant. Nó gồm token, typography, spacing, radius, component state, accessibility, theming, localization và interaction behavior.
+App binary có thể rollback không dễ, nhưng user database phải upgrade forward đáng tin.
 
-SwiftUI environment phù hợp theme token. Component public API không nên expose quá nhiều magic Boolean kiểu:
+Migration strategy cần test:
 
-```swift
-ButtonView(isSmall: true, isRed: true, hasIcon: true, ...)
+- fresh install;
+- N-1 → N;
+- các version cũ còn thực tế ngoài field → N;
+- interrupted/crash giữa migration nếu framework/store có risk;
+- account logout/login;
+- corrupted/partial data policy;
+- large real-world dataset performance.
+
+SwiftData/Core Data abstraction không loại bỏ requirement này.
+
+---
+
+# 13. Core Data/SwiftData context-isolation mastery
+
+Managed/persisted object có context/model-container lifetime. Không xem nó như Sendable domain DTO tùy ý.
+
+Cross-boundary pattern thường tốt hơn:
+
+```text
+DB context/model actor
+      ↓ map
+Sendable immutable snapshot/domain value
+      ↓
+feature/UI actor
 ```
 
-Thay vào đó model variant/role semantic.
+Nếu UI cần live observation trực tiếp từ persistence, boundary có thể khác nhưng ownership/context rule vẫn phải rõ.
+
+Index/query/predicate shape thường ảnh hưởng performance lớn hơn việc “chạy background” một query xấu.
 
 ---
 
-# 16. Feature flags
+# 14. Offline-first là sync system, không phải cache
 
-Feature flag giúp rollout/experiment nhưng có debt. Mỗi flag cần owner, expiry/removal plan và default behavior.
+Một offline-first engine thực sự thường cần:
 
-Remote config không được dùng như security authorization. Client flag có thể bị sửa.
+- durable local source;
+- outbox/pending operations;
+- idempotency key;
+- retry/backoff;
+- sync cursor/version;
+- conflict resolution;
+- tombstone/delete semantics;
+- auth/account data isolation;
+- clock-skew awareness;
+- observability cho stuck sync.
 
-Code path cũ sau khi rollout hoàn tất phải xóa để giảm combinatorial state.
-
----
-
-# 17. Observability
-
-Production mastery cần biết app ngoài đời đang xảy ra gì.
-
-Ba nhóm chính:
-
-- logs: event detail;
-- metrics: aggregate trend;
-- traces: flow qua operation/service.
-
-Mobile app còn cần crash/nonfatal, launch time, hang, frame hitch, network latency, energy và memory footprint.
-
-Telemetry phải respect privacy và sampling.
+Last-write-wins chỉ là một conflict policy, không phải default đúng cho mọi domain.
 
 ---
 
-# 18. Performance budget
+# 15. Mobile API compatibility là distributed systems problem
 
-Đặt budget thay vì “cố nhanh”:
+Tại cùng một thời điểm có thể tồn tại:
+
+```text
+backend N
+app N
+app N-1
+app N-3 offline nhiều ngày
+local schema cũ
+cache cũ
+feature flags khác nhau
+```
+
+Server phải giữ compatibility window. Client nên tolerant với additive field/enum evolution nếu contract yêu cầu. Breaking semantic change cần versioned endpoint/feature negotiation/migration strategy phù hợp.
+
+Không release backend và app theo giả định mọi user cập nhật đồng thời.
+
+---
+
+# 16. HTTP semantics và resilience
+
+Retry policy phải dựa trên operation semantics.
+
+GET/read thường dễ retry hơn mutation. POST/payment/order có thể đã được server commit trước khi client timeout; retry mù có thể duplicate side effect.
+
+Production client cần nghĩ đến:
+
+- connect/request/resource timeout;
+- cancellation;
+- `Retry-After`;
+- 401 refresh single-flight;
+- 429/rate limit;
+- idempotency key;
+- exponential backoff + jitter;
+- cache validation;
+- offline/poor connectivity;
+- background transfer.
+
+Reachability không nên được dùng như oracle “request chắc chắn sẽ thành công”. Network state có thể đổi giữa check và request.
+
+---
+
+# 17. Background URLSession và recoverable workflow
+
+Nếu download/upload cần tiếp tục khi app bị suspend/terminated theo system policy, background `URLSession` là primitive phù hợp hơn giữ `Task` trong process.
+
+Workflow cần persist identifier/state đủ để process mới reconnect/reconcile result. Memory-only progress model không đủ cho operation sống qua process death.
+
+---
+
+# 18. Architecture mastery — dependency rule theo volatility
+
+Architecture không phải số layer. Boundary nên bảo vệ phần ổn định khỏi phần biến động:
+
+- domain rule khỏi REST schema;
+- feature state khỏi concrete database;
+- UI khỏi third-party SDK;
+- module consumer khỏi implementation helper;
+- product behavior khỏi analytics vendor.
+
+Nếu một SDK thay đổi làm 50 file feature sửa trực tiếp, SDK type đã leak quá sâu.
+
+---
+
+# 19. Anti-corruption adapter tại framework/SDK boundary
+
+Third-party payment/analytics/map SDK nên được wrap khi API/type của nó không nên trở thành domain contract.
+
+Adapter không phải wrapper 1:1 vô nghĩa. Nó map semantic: domain event → vendor call, vendor result → domain result, và giữ vendor lifecycle/config ở một boundary.
+
+Điều này tạo exit strategy khi vendor thay đổi.
+
+---
+
+# 20. Large-scale modular architecture
+
+Module boundary nên cân bằng:
+
+- cohesion;
+- build performance;
+- team ownership;
+- testability;
+- public API size;
+- dependency fan-in/fan-out.
+
+Micro-module hóa quá mức tạo package graph phức tạp; mega-module làm mọi thay đổi recompile/ripple. Đo build graph và change pattern thật.
+
+Architecture Decision Record (ADR) hữu ích cho quyết định khó đảo: persistence engine, navigation ownership, minimum OS, sync strategy, key security policy, modular boundary.
+
+ADR tốt ghi context, alternatives, decision, consequence và trigger để revisit — không phải tài liệu marketing.
+
+---
+
+# 21. Design System là product API
+
+Design system gồm token, typography, spacing, components, interaction states, accessibility, localization và theming.
+
+Component API nên semantic:
+
+```swift
+PrimaryButton(role: .destructive, size: .compact)
+```
+
+thay vì nhiều Boolean khó tạo combination hợp lệ.
+
+Design system versioning cũng là API evolution: component behavior change có thể affect hàng chục feature và snapshot/accessibility test.
+
+---
+
+# 22. Observability — từ log đến field diagnosis
+
+Ba lớp:
+
+- log: event/context cục bộ;
+- metric: aggregate trend;
+- trace/signpost: duration/flow qua operation.
+
+Mobile-specific signal gồm crash, nonfatal, launch/hang, frame hitch, memory footprint, energy, network latency/error, DB latency và sync backlog.
+
+Telemetry cần privacy minimization, sampling và stable event schema. Nếu release N đổi tên mọi event, so sánh trước/sau release khó hơn.
+
+---
+
+# 23. Symbolication và release artifact traceability
+
+Crash stack chỉ hữu ích khi symbolicate đúng build. Mỗi release cần giữ mapping giữa:
+
+- app version/build;
+- commit SHA;
+- Xcode/toolchain;
+- archive;
+- dSYM/symbol artifact;
+- feature flag/config version nếu có.
+
+“Không reproduce được” thường trở nên dễ hơn khi field report có đủ artifact identity.
+
+---
+
+# 24. Performance engineering — budget trước micro-optimization
+
+Đặt SLO/budget phù hợp product:
 
 - cold/warm launch;
-- memory peak;
-- scroll hitch;
-- network request;
-- database query;
-- package/build time;
-- binary size.
+- memory peak/steady state;
+- scrolling hitch/frame time;
+- image decode;
+- request latency;
+- DB query;
+- sync throughput;
+- energy/background wakeup;
+- binary size;
+- build time.
 
-Regression performance nên được detect trong CI/lab khi có thể.
-
----
-
-# 19. Launch performance
-
-Không nhồi synchronous work vào app init hoặc first view.
-
-Deferred initialization, lazy dependency, background-safe work và cache precomputation có thể giúp, nhưng phải đo.
-
-Static initializer/global singleton đôi khi chạy sớm ngoài kỳ vọng.
-
-Dùng Instruments/App launch metrics thay vì đo bằng `Date()` đơn giản.
+Optimization workflow: measure → hypothesis → change → remeasure. Không chọn `struct`/`final`/manual cache chỉ vì “nghe nhanh hơn” nếu bottleneck nằm ở network/image/layout.
 
 ---
 
-# 20. Memory pressure
+# 25. Launch performance
 
-iOS có thể terminate app khi memory pressure lớn. Cache phải có eviction strategy. Image bitmap memory thường lớn hơn file compressed.
+Startup critical path phải nhỏ. Tránh synchronous DB migration/network/SDK initialization hàng loạt trên main actor trước first meaningful UI.
 
-`NSCache` có behavior phù hợp cache memory hơn dictionary trong nhiều use case.
+Có thể lazy/defer noncritical service, nhưng deferred work vẫn cần owner và error handling. Đừng biến “defer” thành task storm ngay sau first frame.
 
-Downsample image trước khi render nếu source resolution cực lớn.
-
----
-
-# 21. Networking resilience
-
-Timeout gồm nhiều loại: request/resource/connectivity. `URLSessionConfiguration` phải được hiểu theo behavior.
-
-Background transfer dùng background URLSession, không phải Task sống mãi.
-
-App lifecycle có thể bị suspend/kill; workflow quan trọng cần thiết kế recoverable từ persisted state.
+Global/static initializer có thể làm work sớm ngoài ý định; profile launch stack để thấy sự thật.
 
 ---
 
-# 22. Security mastery
+# 26. Memory pressure và cache economics
 
-Threat model trước implementation. Xác định asset, attacker capability, trust boundary, attack surface.
+iOS có thể terminate process khi memory pressure. Cache phải có eviction/size policy; decoded image có thể lớn hơn file compressed rất nhiều.
 
-Biometric auth qua LocalAuthentication chỉ xác minh local user presence; không thay backend authorization.
+`NSCache` phù hợp cho nhiều in-memory cache use case vì có eviction behavior, nhưng không phải persistence/source of truth.
 
-Secure Enclave phù hợp key operation nhất định, không phải “nơi lưu mọi secret”.
-
-Keychain accessibility cần chọn theo use case: accessible khi unlocked, after first unlock, device-only variants, v.v.
-
-Certificate pinning chỉ dùng khi threat model justify và có rotation/backup pin strategy.
+Downsample ảnh theo display target, cancel decode/prefetch không còn cần và profile resident memory trên device.
 
 ---
 
-# 23. Privacy và App Store compliance
+# 27. Energy/thermal là performance requirement
 
-Permission string phải giải thích đúng mục đích. Request permission đúng thời điểm context, không hỏi tất cả ngay launch.
+CPU/GPU/network/location/background wakeups tiêu pin và sinh nhiệt. Polling, retry loop, location high accuracy, animation liên tục có thể làm system throttle.
 
-Data minimization: không collect thứ không cần.
-
-Tracking/analytics SDK third-party là supply-chain/privacy risk. Kiểm soát manifest, disclosure và version.
+Measure bằng Instruments/field metrics; Simulator không phản ánh đầy đủ thermal/energy behavior.
 
 ---
 
-# 24. App Extensions
+# 28. Threat modeling trước security control
 
-Widget, Share Extension, Notification Service Extension, Live Activity-related extension có process/lifecycle/resource constraint riêng.
+Xác định:
 
-Không giả định extension chia sẻ memory với main app. App Group/container dùng cho data sharing khi phù hợp.
+- asset cần bảo vệ;
+- attacker capability;
+- trust boundary;
+- entry point;
+- hậu quả compromise;
+- mitigation cost.
 
-Extension execution time/memory thường hạn chế hơn app chính.
-
----
-
-# 25. WidgetKit và Live Activities
-
-Widget không phải mini app chạy liên tục. Timeline/provider và system policy quyết định refresh.
-
-Live Activity dùng ActivityKit cho ongoing state trên Lock Screen/Dynamic Island tương ứng device/platform. Update strategy phải tiết kiệm và phù hợp push capability khi remote update.
+Không mọi app cần certificate pinning/Secure Enclave/custom crypto. Control không match threat model có thể thêm operational risk mà không giảm attack đáng kể.
 
 ---
 
-# 26. App Intents
+# 29. Keychain, biometrics và Secure Enclave
 
-App Intents expose action/entity cho Siri, Shortcuts, Spotlight và system experiences.
+Keychain accessibility option quyết định khi item truy cập được và có migrate/backup/device-only hay không tùy option. Chọn theo use case, không copy snippet mặc định.
 
-Design intent phải ổn định, parameter semantic rõ, query entity hiệu quả và permission đúng.
+LocalAuthentication xác minh user presence/biometry policy ở device; nó không thay authorization backend.
 
-Đây là một phần ngày càng quan trọng của integration “bên ngoài app UI”.
-
----
-
-# 27. StoreKit
-
-In-App Purchase production cần hiểu product loading, purchase result, transaction verification, entitlement, restore và server-side validation tùy product.
-
-StoreKit 2 dùng async sequence cho transaction updates. Không chỉ dựa vào UI callback một lần.
-
-Subscription state có grace period, billing retry, revoked/refunded state.
+Secure Enclave phù hợp protected key operations nhất định; không phải generic database để bỏ mọi secret.
 
 ---
 
-# 28. CloudKit
+# 30. Secret, transport và trust boundary
 
-CloudKit phù hợp một số app Apple ecosystem muốn sync mà không dựng backend đầy đủ.
+Secret server-side không thể được giấu an toàn vĩnh viễn trong client binary. API key có privilege cao phải nằm backend.
 
-Cần hiểu container, public/private/shared database, record zone, subscription và sync error.
+ATS giúp enforce secure transport; exception nên scope nhỏ và có lý do. Certificate pinning cần key/cert rotation/recovery plan trước khi ship.
 
-Không chọn CloudKit nếu requirement cross-platform/backend query không phù hợp.
-
----
-
-# 29. Core Location, MapKit, camera và permission-heavy frameworks
-
-Framework hệ thống có lifecycle/permission/energy constraint riêng.
-
-Location accuracy, background location và “always” permission phải có business reason mạnh.
-
-Camera capture pipeline có thread/performance consideration; SwiftUI thường bridge UIKit/AVFoundation ở layer thấp.
+Client validation cải thiện UX/hardening nhưng server vẫn phải enforce authorization/business rule.
 
 ---
 
-# 30. Metal và rendering
+# 31. Privacy và supply-chain security
 
-Đa số app không cần Metal trực tiếp. Nhưng custom rendering/game/video/compute có thể cần.
+Chỉ collect data cần cho product/operation. Permission request đúng context; purpose string phải phản ánh usage thật.
 
-Core Animation/UIKit/SwiftUI đã sử dụng GPU pipeline bên dưới. Đừng nhảy sang Metal để tối ưu UI bình thường.
+Third-party SDK có thể thêm network endpoint, data collection, binary size và vulnerability surface. Review transitive dependency, privacy manifest/disclosure, maintainer/release cadence và update strategy.
 
----
-
-# 31. Accessibility mastery
-
-VoiceOver semantic tree có thể khác visual tree. Custom component phải expose role/value/action đúng.
-
-Dynamic Type test ở size cực lớn, không chỉ default.
-
-Reduced Motion/Transparency, Bold Text, Differentiate Without Color và contrast cần được cân nhắc.
-
-Accessibility automation không thay test người dùng hoàn toàn.
+Dependency pin quá cứng có thể giữ vulnerability; auto-update không review có thể đưa breaking/malicious change. Cần policy cân bằng.
 
 ---
 
-# 32. Localization mastery
+# 32. App Extension/process boundary
 
-String Catalog giúp quản translation/pluralization. `String(localized:)` và localized resource phải dùng đúng context/comment.
+Widget, Share Extension, Notification Service Extension, Live Activity-related component có process/resource/lifecycle riêng. Không giả định main app và extension share in-memory singleton.
 
-Không concatenate localized fragments nếu grammar có thể đổi thứ tự.
-
-Date/number/list formatting dùng locale-aware formatter/style.
-
-Pseudo-localization giúp phát hiện clipping và hard-code.
+Data sharing qua App Group/container hoặc system-defined mechanism cần consistency/security policy. Extension budget thường khắt khe hơn app chính; heavy work phải được thiết kế lại, không copy nguyên service graph.
 
 ---
 
-# 33. Release engineering
+# 33. StoreKit và entitlement state
 
-Mỗi release nên có:
+Purchase success UI callback không phải nguồn duy nhất. StoreKit 2 transaction updates/verification và entitlement reconstruction cần xử lý across launch/device/account.
 
-- build reproducible;
-- changelog/release note;
-- migration test;
-- feature flag plan;
-- observability;
-- rollback/kill switch nếu backend/feature cho phép;
-- symbol upload cho crash symbolication;
-- staged rollout khi phù hợp.
+Subscription có grace period, billing retry, revoked/refunded state. Server-side verification có thể cần khi entitlement liên quan backend service/value.
 
-Mobile rollback khác web: user có thể giữ version cũ lâu. Backend phải backward compatible với nhiều app version trong window hỗ trợ.
+Idempotency đặc biệt quan trọng khi fulfillment/reward có side effect.
 
 ---
 
-# 34. Xcode 27 / iOS 27 current-version notes
+# 34. WidgetKit, ActivityKit và App Intents
 
-Xcode 27 stable đi cùng Swift 6.4 và SDK iOS 27. Khi nâng project, vẫn cần đọc release notes vì behavior của SwiftUI, compiler diagnostics và SDK có thay đổi so với Xcode 26.
+Widget refresh do system policy; không phải mini-app timer. Live Activity cũng có update/budget/lifecycle riêng.
 
-SwiftUI thế hệ Xcode 27 giới thiệu thêm API về toolbar, document, reorderable containers và performance/data flow. Một số thay đổi như AsyncImage caching mặc định hoặc State macro/lazy initialization có thể ảnh hưởng assumption cũ, nên migration phải có regression test.
+App Intents expose domain action/entity cho Shortcuts/Siri/Spotlight/system experience. API intent là public-like contract với system; naming/parameter/entity query cần stable semantic.
 
-Xcode 27 còn mở rộng coding agent integration. AI coding assistant không thay code review, test, security review hay understanding framework lifecycle.
-
----
-
-# 35. Master-level learning strategy
-
-Master Swift/iOS không có nghĩa thuộc toàn bộ SDK. SDK quá lớn và thay đổi mỗi năm.
-
-Mastery thực tế là:
-
-1. Đọc được API contract và availability.
-2. Hiểu type system, ownership, isolation, lifecycle.
-3. Thiết kế state/dependency boundary rõ.
-4. Debug từ symptom xuống runtime/network/database.
-5. Đo performance thay vì đoán.
-6. Migrate framework/version mà không phá production.
-7. Viết API dễ dùng đúng và khó dùng sai.
-8. Biết khi nào không nên dùng abstraction/pattern mới.
-9. Có release, monitoring và incident mindset.
-10. Có khả năng đọc release notes/Swift Evolution và cập nhật mental model.
+Đừng để extension/intent trực tiếp import toàn app module nếu chỉ cần domain/service subset.
 
 ---
 
-# 36. Bản đồ chủ đề để tra cứu sâu sau khi hoàn thành 4 note
+# 35. CloudKit và sync choice
 
-Ngôn ngữ: generics, existentials, opaque types, protocol dispatch, ownership, macros, concurrency, Sendable, actors, typed throws, memory safety.
+CloudKit phù hợp Apple ecosystem sync use case nhất định, nhưng không tự động phù hợp cross-platform/backend analytics/query requirement.
 
-UI: SwiftUI layout, identity, Observation, navigation, animation, accessibility, UIKit interoperability, collection view.
-
-Data: URLSession, Codable, cache, SwiftData/Core Data, sync/offline, Keychain.
-
-Platform: notification, deep links, background task, StoreKit, WidgetKit, ActivityKit, App Intents, CloudKit, Core Location, AVFoundation.
-
-Engineering: SPM, modularization, architecture, testing, CI/CD, signing, release, observability, performance, security/privacy.
-
-Tooling: Xcode, Simulator, LLDB, Instruments, Organizer, `xcodebuild`, Test Plans, package resolution, build settings.
-
-Nếu bạn có thể giải thích và triển khai các nhóm trên mà không chỉ copy sample code, bạn đã vượt qua mức “biết Swift” và đang ở mức iOS engineer có khả năng ownership production system.
+Khi chọn sync backend, đánh giá identity, sharing, conflict, offline, migration, observability và vendor lock-in — không chỉ “không cần dựng server”.
 
 ---
 
-# 37. Swift 6.4 — những điểm mới cần hiểu ở mức Master
+# 36. Accessibility/localization là release quality gate
 
-Swift 6.4 phát hành chính thức ngày 15/09/2026. Ngoài phần language/app iOS, release này cho thấy Swift đang mở rộng từ Apple-app language thành general-purpose systems/cross-platform language. Swift Build trở thành default của SwiftPM; Subprocess đạt 1.0; WebAssembly bridge cải thiện đáng kể; Android SDK tiếp tục trưởng thành; Embedded Swift có thêm capability; và ownership/memory-safe performance APIs được mở rộng.
+VoiceOver tree, Dynamic Type cực lớn, Reduce Motion, Differentiate Without Color, contrast và custom action phải được test ở critical flow.
 
-Đối với iOS engineer, không cần dùng toàn bộ ngay. Điều cần học là direction của language: compile-time safety mạnh hơn, ownership explicit hơn, interop rộng hơn và build/tooling cross-platform thống nhất hơn. Khi thiết kế library sống nhiều năm, direction này ảnh hưởng lựa chọn API hôm nay.
+Localization cần pluralization/context, không concatenate sentence fragment nếu grammar có thể đổi order. Pseudo-localization bắt clipping/hard-code trước khi translation thật.
 
-# 38. `UniqueArray`, `UniqueBox`, `Ref`, `MutableRef` và `Iterable`
+Accessibility/localization regression nên nằm trong Definition of Done của component/flow có user-facing UI, không phải phase “sau khi code xong”.
 
-Các kiểu mới giải quyết nhóm bài toán “muốn performance/ownership control nhưng không muốn rơi xuống unsafe pointer”. `UniqueBox` biểu diễn unique ownership của value trên heap; `UniqueArray` hỗ trợ phần tử noncopyable mà không dựa vào copy-on-write như Array truyền thống; `Ref`/`MutableRef` tạo reference an toàn có borrowing/exclusive mutation semantics; `Iterable` cho phép iteration không buộc copy element như Sequence model truyền thống trong một số trường hợp.
+---
 
-Đây là công cụ library/systems-oriented. Đừng thay `Array` bằng `UniqueArray` trong app business chỉ vì mới hơn. Chỉ dùng khi ownership hoặc copying profile thực sự yêu cầu.
+# 37. Feature flag governance
 
-# 39. Build technology: Xcode build, Swift Build và SwiftPM
+Flag cần:
 
-Xcode và SwiftPM historically có build pipeline khác nhau ở một số môi trường. Swift Build được open-source từ engine phía sau Xcode và đến Swift 6.4 trở thành default trong SwiftPM. Điều này giảm khác biệt giữa local/CI/cross-platform package build.
+- owner;
+- purpose;
+- default;
+- rollout audience;
+- metric success/failure;
+- kill-switch semantics nếu có;
+- expiry/removal ticket.
 
-Master-level build debugging cần biết đọc build log, module dependency, derived data, explicit modules, linker failure, package resolution và compiler invocation. Xóa DerivedData chỉ là troubleshooting tactic cuối đường, không phải giải pháp cho mọi lỗi build.
+Flag không phải authorization. Client flag có thể bị manipulate. Khi rollout xong, xóa dead branch để giảm state-space test.
 
-# 40. Debug information và LLDB module tracking
+---
 
-Swift 6.4 hoàn tất một chuỗi cải tiến cách compiler ghi module dependency vào debug info, giúp LLDB tìm đúng module chính xác hơn thay vì lookup mơ hồ theo tên. Với Xcode user, lợi ích chủ yếu tự động: debug expression đáng tin hơn và build product có thể gọn hơn. Với custom build system như Bazel/CMake, maintainer cần theo metadata/module tracking requirement mới.
+# 38. Release engineering — build artifact là sản phẩm
 
-Điểm rộng hơn: debugger correctness phụ thuộc build graph/module metadata. Một lỗi `po`/expression evaluator không nhất thiết nghĩa object runtime sai.
+Pipeline không kết thúc ở unit test. Release artifact cần:
 
-# 41. Documentation engineering với DocC
+1. reproducible dependency/toolchain config;
+2. archive Release configuration;
+3. signing/entitlement verification;
+4. migration install/upgrade test;
+5. critical UI/background/push/deep-link smoke test;
+6. symbol upload;
+7. TestFlight/staged rollout policy;
+8. monitoring/rollback/kill-switch readiness.
 
-Một codebase lâu dài cần documentation gần code. DocC hỗ trợ API reference, article và tutorial. Public framework nên document semantics, invariants, actor/thread requirement, error, availability và example call site; không chỉ lặp lại tên method.
+Fresh install pass không chứng minh upgrade từ production version pass.
 
-Documentation là một phần API design. Nếu rất khó viết một đoạn ngắn giải thích “type này sở hữu gì, khi nào gọi method này, failure là gì”, thường abstraction chưa đủ rõ.
+---
 
-# 42. Binary size và dependency economics
+# 39. Mobile rollback strategy
 
-Mỗi dependency có cost: binary size, launch/load, compile time, supply-chain risk, privacy manifest, transitive dependency và upgrade maintenance. Không đánh giá package chỉ bằng số star.
+App Store binary không rollback tức thì cho toàn bộ user. Vì vậy mitigation hierarchy thường gồm:
 
-Trước khi thêm SDK, hỏi capability có thể làm bằng Foundation/system framework không, SDK có privacy/security posture ra sao, release cadence có ổn không, API surface có leak vào domain không và exit strategy là gì.
+- disable feature qua server/flag nếu được thiết kế;
+- backend compatibility fix;
+- hotfix binary;
+- staged rollout pause;
+- data repair/migration nếu cần.
 
-# 43. Energy efficiency và thermal behavior
+Rollback plan phải được nghĩ trước khi release feature có migration/destructive side effect.
 
-Mobile performance không chỉ là latency. CPU/GPU/network/location/background wakeup tiêu pin và tạo nhiệt. Polling thường xuyên, animation liên tục, GPS high accuracy không cần thiết hoặc retry loop có thể làm app bị hệ thống throttle và UX xấu.
+---
 
-Instruments Energy và MetricKit/system metrics nên được dùng khi feature có cost đáng kể. Optimize theo workload thật trên device, không chỉ Simulator.
+# 40. Disaster recovery và data repair
 
-# 44. MetricKit, crash/hang và field performance
+Nếu migration/sync bug làm dữ liệu sai, cần biết:
 
-Lab profiling không bắt được mọi device/OS/network. Field telemetry giúp phát hiện crash, hang, launch regression và responsiveness issue sau release. Symbolication phải được vận hành đúng với dSYM/build artifact.
+- có backup/server authority không;
+- có audit history/event log không;
+- repair có idempotent không;
+- app version cũ có tiếp tục làm hỏng data không;
+- kill switch nào chặn writer;
+- communication/rollout sequence nào tránh race giữa repair và client.
 
-Telemetry design cần privacy minimization. Event đủ để debug không đồng nghĩa thu toàn bộ user data.
+Đây là nơi observability, schema version và feature flag gặp nhau.
 
-# 45. Schema/API migration như một bài toán distributed system
+---
 
-Một mobile release tạo ra distributed version set: backend mới, app mới, app cũ, database local cũ, cache cũ và user có thể offline nhiều ngày. Vì vậy migration phải được thiết kế như distributed systems problem.
+# 41. Xcode 27 / iOS 27 current notes
 
-Database migration cần forward path rõ; server API phải giữ compatibility; feature flag rollout phải tính old client; sync conflict phải deterministic. Đây là điểm khác biệt giữa app demo và app sống nhiều năm.
+Baseline stable của library là Xcode 27/Swift 6.4/iOS 27 SDK. Minor Xcode 27.1/27.2 vẫn beta tại thời điểm cập nhật nên behavior chỉ có ở beta không được viết như production baseline.
 
-# 46. Multi-platform Apple architecture
+Xcode 27 generation tiếp tục thay đổi SwiftUI state/builder implementation, caching/data-flow/tooling và coding-agent integration. Khi behavior thay đổi giữa Xcode 26 → 27:
 
-SwiftUI giúp chia sẻ UI logic giữa iOS, iPadOS, macOS, watchOS, tvOS và visionOS, nhưng “compile được” không đồng nghĩa UX đúng. Navigation, input modality, windowing, menu/command, focus, pointer, remote, Digital Crown và spatial interaction khác nhau.
+- đọc release notes;
+- tìm API contract thay vì dựa vào implementation detail;
+- chạy UI state/identity regression;
+- profile build/runtime nếu compiler/builder change liên quan;
+- test archive, không chỉ Preview.
 
-Shared domain/data layer thường dễ tái sử dụng hơn shared view 100%. Platform-specific adapter/view là bình thường và thường tốt hơn hàng loạt `#if os` xuyên code.
+AI coding agent có thể viết/refactor/test, nhưng compiler green không chứng minh lifecycle, entitlement, security hay migration correctness.
 
-# 47. Cross-platform Swift ngoài Apple
+---
 
-Swift 6.4 tiếp tục đẩy mạnh Linux, Windows, WebAssembly, Android và Embedded. Với iOS engineer, đây là kiến thức mở rộng chứ không phải yêu cầu để làm app iPhone. Tuy nhiên nó thay đổi cách nhìn về package: Foundation subset, filesystem/process/network availability và platform condition cần được cân nhắc nếu library muốn portable.
+# 42. Build technology và debugging evolution
 
-Không để portability giả định làm phức tạp app chỉ chạy iOS. Chỉ xây portability khi product/library thực sự cần.
+Swift 6.4 dùng Swift Build làm default trong SwiftPM, giúp build behavior cross-platform thống nhất hơn.
 
-# 48. AI-assisted Xcode workflow và giới hạn kỹ thuật
+Master-level build debugging cần đọc:
 
-Xcode 27 mở rộng coding-agent integration. Agent có thể hỗ trợ tra API, refactor, viết test hoặc migrate code, nhưng output vẫn phải qua compiler, test, review và threat model. UI lifecycle, entitlement, signing, privacy và concurrency bug là những vùng mà “code nhìn hợp lý” vẫn có thể sai production.
+- package resolution;
+- target/module graph;
+- compiler invocation;
+- explicit module dependency;
+- linker error;
+- architecture slice;
+- generated interface;
+- debug symbol/module metadata.
 
-Một workflow an toàn là giao task nhỏ có acceptance criteria, yêu cầu agent giải thích file changed, chạy test/static check, review diff, rồi mới merge. Không cấp secret/signing credential vào prompt hoặc generated log.
+Xóa DerivedData chỉ là troubleshooting step, không phải root-cause analysis.
 
-# 49. Master checklist trước khi gọi một iOS system là production-ready
+Swift 6.4 cũng tiếp tục cải thiện module tracking trong debug info, giúp LLDB tìm đúng module dependency chính xác hơn. Nếu `po`/expression evaluator lỗi, chưa chắc runtime object sai; build/debug metadata cũng là một layer cần kiểm tra.
 
-Bạn phải trả lời được: source of truth của mỗi state ở đâu; ownership/lifetime của task và object; behavior khi network mất/cancel/retry; database migrate thế nào; app cũ nói chuyện backend mới ra sao; token/PII được bảo vệ thế nào; accessibility/localization hoạt động ra sao; performance budget có đo không; crash/log có symbolicate không; release có staged rollout/flag không; critical flow có test không; API mới có availability fallback không.
+---
 
-Không cần mọi app có kiến trúc enterprise. Nhưng mọi app production cần câu trả lời có chủ đích cho những failure mode phù hợp quy mô của nó.
+# 43. Documentation engineering với DocC
 
-# 50. Lộ trình đọc lại bộ note như một hệ thống
+Public/shared module nên document:
 
-Lần đầu, đọc Beginner theo thứ tự và code lại ví dụ. Lần hai, học Intermediate đồng thời xây một app có network + persistence + authentication mock + deep link. Lần ba, dùng Advanced để refactor app đó: actor isolation, modular package, cache, test strategy, profiling, CI. Lần bốn, dùng Master để audit migration/version/release/security/observability và viết ADR giải thích các quyết định lớn.
+- semantics/invariant;
+- ownership/lifetime;
+- actor/thread requirement;
+- error/cancellation;
+- availability;
+- side effect;
+- usage example;
+- migration/deprecation.
 
-Mục tiêu cuối cùng không phải thuộc tên API. Mục tiêu là có mental model đủ chắc để khi Apple thay API hoặc Swift thêm language feature, bạn có thể đặt cái mới vào đúng lớp kiến thức cũ: type, ownership, state, effect, lifecycle, boundary, performance và compatibility.
+DocC cho phép API reference/article/tutorial nằm gần source. Nếu rất khó giải thích abstraction bằng vài đoạn rõ ràng, abstraction có thể đang ôm quá nhiều responsibility.
 
-# 51. Nguồn chính thức nên theo dõi
+---
 
-Nguồn ưu tiên là Swift.org/Swift Documentation cho language và evolution; Apple Developer Documentation cho iOS SDK, SwiftUI, UIKit, SwiftData, StoreKit và framework; Xcode Release Notes/System Requirements cho toolchain; WWDC session cho design intent và migration example. Blog/tutorial bên ngoài hữu ích để học cách triển khai, nhưng khi behavior/version mâu thuẫn, API contract và release note chính thức phải được ưu tiên.
+# 44. ADR và technical governance
+
+ADR phù hợp quyết định khó đảo hoặc ảnh hưởng nhiều team: minimum OS, Swift language mode, architecture boundary, persistence/sync, navigation ownership, security policy, observability vendor.
+
+Template tối thiểu:
+
+```text
+Context
+Constraints
+Options considered
+Decision
+Consequences / trade-offs
+Migration plan
+Revisit trigger
+```
+
+Không biến ADR thành approval bureaucracy cho mọi refactor nhỏ.
+
+---
+
+# 45. Production Definition of Done theo risk
+
+Definition of Done không cần giống nhau cho mọi change. Một label text và migration database không có risk ngang nhau.
+
+Risk cao có thể yêu cầu:
+
+- unit/integration/UI regression;
+- migration fixture;
+- performance baseline;
+- accessibility check;
+- threat/privacy review;
+- feature flag/rollback plan;
+- observability metric;
+- staged rollout.
+
+Risk-based rigor tốt hơn checklist enterprise áp cho mọi commit.
+
+---
+
+# 46. Master audit matrix
+
+Trước khi gọi một system production-ready, trả lời được:
+
+| Trục | Câu hỏi bắt buộc |
+|---|---|
+| Language | language mode/toolchain nào, unsafe/ownership boundary ở đâu? |
+| Memory | object/resource lifetime và retain graph có rõ không? |
+| Concurrency | task owner, cancellation, isolation, reentrancy, Sendable contract? |
+| UI | SwiftUI identity/state owner, UIKit lifecycle/interop boundary? |
+| Data | server/local/cache authority và reconciliation? |
+| Persistence | schema migration/context isolation/repair plan? |
+| Network | timeout/retry/idempotency/auth refresh/background transfer? |
+| Architecture | dependency direction/module API/vendor boundary? |
+| Performance | budget + measurement trên release-like device? |
+| Security | threat model, key/secret/transport/privacy controls? |
+| Release | archive/signing/migration/staged rollout/symbols/rollback? |
+| Operations | log/metric/trace/crash + incident/runbook? |
+
+Không phải app nhỏ phải triển khai mọi enterprise mechanism. Nhưng các trục có rủi ro thật phải có câu trả lời có chủ đích.
+
+---
+
+# 47. Learning flow hoàn chỉnh Beginner → Master
+
+**Beginner** xây semantics: value/reference, Optional, closure/ARC, SwiftUI state, async suspension, UIKit lifecycle và interop cơ bản.
+
+**Intermediate** xây ownership/isolation: structured/unstructured task, actor/reentrancy, Sendable, Observation state ownership, network/persistence boundary và feature architecture.
+
+**Advanced/Senior** xây production implementation: UIKit/SwiftUI hybrid lifecycle, modularization, API resilience, Instruments, persistence/network reliability, security, CI/CD và incident reasoning.
+
+**Master** xây longevity: version evolution, source/binary/schema/API compatibility, governance, threat/performance budget, release/rollback/disaster recovery.
+
+Nếu một khái niệm Master không nối được về graph ở Advanced hoặc semantics ở Beginner/Intermediate, quay lại level trước thay vì học thêm tool mới.
+
+---
+
+# 48. Cách tự cập nhật kiến thức sau khi tài liệu này lỗi thời
+
+Không tài liệu Swift/iOS nào giữ đúng mãi. Workflow cập nhật:
+
+1. đọc Swift.org release post + Swift Evolution proposal liên quan;
+2. đọc Xcode release notes/system requirements;
+3. đọc Apple framework API availability/documentation;
+4. xác định change thuộc language, compiler, SDK hay runtime;
+5. mapping vào mental model: type/ownership/isolation/state/lifecycle/boundary/compatibility;
+6. viết reproduction nhỏ;
+7. migration trên một feature trước;
+8. đo build/runtime/test trước khi rollout toàn repo.
+
+Tutorial/blog/community post hữu ích cho implementation idea, nhưng khi mâu thuẫn với API contract/release note của toolchain thực tế, ưu tiên nguồn chính thức.
+
+---
+
+# 49. Nguồn chính thức nên theo dõi
+
+Ưu tiên Swift.org và Swift Documentation/Evolution cho language/compiler; Apple Developer Documentation cho UIKit/SwiftUI/Foundation/SwiftData/StoreKit và platform framework; Xcode Release Notes/System Requirements cho toolchain/SDK; WWDC sessions cho design intent/migration examples.
+
+Mục tiêu Master không phải thuộc toàn bộ SDK. Mục tiêu là có mental model và production discipline đủ mạnh để khi Swift 6.5/7.x hoặc iOS thế hệ sau thay đổi API, bạn biết **cái gì thật sự đổi**, **boundary nào bị ảnh hưởng**, **test nào cần chạy** và **release thế nào để không biến user thành migration test**.
