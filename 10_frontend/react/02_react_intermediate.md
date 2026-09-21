@@ -29,6 +29,12 @@ const completedItems = items.filter(item => item.done);
 
 Nguyên tắc này giảm duplicate source of truth và giảm Effect không cần thiết.
 
+## 1A. Rules of React và Rules of Hooks
+
+Hook phải gọi ở top level của Function Component hoặc Custom Hook, không tùy ý trong condition, loop, nested function hay event handler. React dựa vào thứ tự call ổn định để ghép mỗi Hook với state tương ứng giữa các render; vì vậy `eslint-plugin-react-hooks` là correctness tooling, không chỉ style.
+
+Trước React 16.8, tái sử dụng stateful logic chủ yếu qua class, HOC và render props. Hooks giảm wrapper nesting và colocate concern tốt hơn nhưng không làm HOC/render props sai; chúng vẫn gặp trong Redux/router/library cũ. Migration nên chuyển concern chứ không search-replace syntax.
+
 ## 2. `useEffect`: synchronization chứ không phải “code chạy sau render”
 
 `useEffect` dùng để đồng bộ component với một hệ thống nằm ngoài mô hình render React, ví dụ network connection, timer, browser event, WebSocket, observer, analytics integration hoặc widget imperative.
@@ -1003,6 +1009,12 @@ function UserPage({ userId }) {
 
 Server state có owner nằm ngoài client và có thể stale; client UI state như modal open lại thuộc app hiện tại. Không trộn tùy tiện hai loại này.
 
+## 19A. Data fetching evolution: lifecycle → Effect → data layer → Suspense/RSC
+
+Class code cũ thường fetch ở `componentDidMount`/`componentDidUpdate`; Hooks chuyển synchronization tương tự sang `useEffect`. Fetch Effect thủ công vẫn phải tự xử lý cancellation, race, cache, retry, dedupe và invalidation, nên production thường chuyển server state sang query/framework data layer. Suspense/RSC lại thay nơi request bắt đầu và cách loading được reveal; Suspense không tự biến mọi `fetch()` thành cache.
+
+Old lifecycle fetch vẫn gặp nhiều trong React 15–17 và không cần rewrite chỉ vì dùng class. Migrate khi ownership, cancellation, cache hoặc routing architecture thực sự tốt hơn.
+
 ## 20. Router và URL state
 
 Routing không thuộc React core. React Router phổ biến trong SPA; framework như Next.js có router riêng.
@@ -1036,6 +1048,10 @@ async function handleSubmit(event) {
 ```
 
 Browser validation dùng `required`, `minLength`, `pattern`, `type="email"`. Validation nghiệp vụ phức tạp có thể dùng schema validator/form library. Client validation cải thiện UX; server validation mới bảo vệ integrity/security.
+
+## 21A. Forms qua các thế hệ
+
+Controlled form có từ thời class: field nằm trong `this.state`; Hooks chuyển API sang `useState`/reducer nhưng source-of-truth model không đổi. Production form không nhất thiết controlled mọi field: `FormData`, native validation hoặc field subscription có thể giảm coupling. React 19 Actions/`useActionState`/`useFormStatus`/`useOptimistic` thêm async mutation workflow nhưng không xóa controlled/uncontrolled fundamentals.
 
 ## 22. Accessibility
 
@@ -1121,6 +1137,10 @@ HTTP API
 ```
 
 State nên ở gần nơi dùng. URL state ở URL. Server data ở server-state cache. Form state ở form. Truly global client state chỉ đưa vào store/context khi thực sự global.
+
+## 25A. State management bắt đầu từ ownership
+
+Trước khi chọn Context, Redux hay Zustand, hãy phân loại: local UI state ở component; form state ở form; filter/page shareable ở URL; server data ở query/framework cache; cross-feature client state mới là ứng viên external store. Redux/Flux đời cũ thường chứa mọi loại state vì ecosystem thiếu specialized layers. Old Redux vẫn hợp lý khi domain cần selector, middleware, devtools hoặc global event flow; không migrate chỉ vì library mới ngắn hơn.
 
 ## 26. Anti-pattern thường gặp
 

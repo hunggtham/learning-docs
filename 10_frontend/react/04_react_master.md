@@ -2,7 +2,7 @@
 
 > Mục tiêu của level Master không phải “thuộc mọi API”, mà là hiểu sâu invariants của React, compiler/runtime boundary, server architecture, library design, migration, observability, security và cách ra quyết định khi ecosystem tiếp tục thay đổi.
 
-## 1. Baseline React 19.3 và cách đọc version đúng
+## 1. Version map React 15 → 19.3 và cách đọc version đúng
 
 Tại thời điểm biên soạn, React 19.3 là stable hiện hành. Đây là chi tiết quan trọng vì React 19.x đã bổ sung feature qua minor release chứ không chỉ sửa bug. Vì vậy câu “project dùng React 19” chưa đủ để suy ra project có thể dùng API nào.
 
@@ -853,6 +853,14 @@ Gọi API, analytics, mutate global.
 ### Authentication-only UI
 
 Ẩn nút nhưng server không authorize.
+
+## 38A. Production deployment: build → canary → rollback
+
+Deployment React không chỉ là `npm run build`. SPA/static hosting cần asset hashing, cache policy khác nhau giữa HTML entry và immutable JS/CSS, cùng history fallback để deep link không 404. Giá trị environment bundle vào client phải xem là public; secret chỉ ở server runtime.
+
+SSR/RSC còn có server runtime, streaming, server/client manifests, cache/invalidation và compatibility giữa framework với React server packages. CDN cache key phải phân biệt public với personalized data để tránh cross-user leak.
+
+Pipeline production nên có lint/typecheck/test/build, dependency/security scan, accessibility/performance checks cho critical flow, preview/canary, release ID cho source maps/logs, health check, error/Web Vitals monitoring và rollback artifact known-good. Feature flag tách deploy code khỏi enable behavior. Khi migrate CRA → Vite/framework cần audit env semantics, public path, router fallback, dynamic imports, service worker/PWA, test runner và deployment base path.
 
 ## 39. Architecture review checklist
 

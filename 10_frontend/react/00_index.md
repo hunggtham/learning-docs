@@ -48,6 +48,12 @@ Các mốc dưới đây đủ để đọc phần lớn code React hiện đạ
 
 Một nguyên tắc quan trọng là **major/minor của React không hoàn toàn thay thế patch version**. Đặc biệt với React Server Components, các security fix từng được backport vào nhiều nhánh 19.0.x, 19.1.x và 19.2.x. Trong production phải theo patch/security advisory của framework và React, không chỉ nhìn “19.x”.
 
+## Nguyên tắc học sau audit
+
+Luồng canonical là **render tree → props/state/context → state snapshot/update queue → reconciliation/identity/key → commit → event/Effect → Hooks nâng cao → concurrency/server architecture**. Hooks không được học như danh sách API trước khi hiểu rendering và state ownership.
+
+Với kiến thức qua nhiều version, luôn đọc theo chuỗi **old pattern → new pattern → reason → migration → khi còn gặp old code**. Class Component, lifecycle, HOC, render props và legacy APIs được giữ lại vì vẫn xuất hiện trong code enterprise.
+
 ## Cách dùng bộ note
 
 Đây là tài liệu học, không phải cheat sheet. Hãy đọc tuần tự. Sau mỗi level nên tự xây một project nhỏ và giải thích lại được các quyết định về state ownership, render purity, Effect synchronization và component identity trước khi đi tiếp.

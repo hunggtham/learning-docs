@@ -6,6 +6,23 @@
 
 Nếu gặp API lạ trong codebase cũ, hãy tìm ở đây để biết nó từng làm gì, version nào thường dùng, trạng thái hiện tại và hướng migrate. Việc một API được giữ trong tài liệu không có nghĩa API đó được khuyên dùng cho code mới.
 
+## 1A. Old pattern → new pattern → reason → migration → khi còn gặp
+
+| Old | New/default | Reason và migration | Khi còn gặp |
+|---|---|---|---|
+| `createClass` + mixins | class rồi Function Component + Hooks | mixin dependency/autobind khó compose; tách concern từng phần trước khi đổi component form | React 0.x–15 |
+| class state/lifecycle | Function Component + Hooks | colocate concern; map state ownership trước, không đổi lifecycle 1:1 sang Effect | React 15–18 enterprise |
+| `componentWill*` | derivation/reducer/`componentDidUpdate`/Effect tùy intent | render phase có thể restart; xác định derive, reset, DOM hay network rồi chọn primitive | `UNSAFE_*` legacy |
+| HOC / render props | Custom Hook/composition khi phù hợp | giảm wrapper/prop collision; giữ old pattern nếu là public contract | Redux/router/headless libraries |
+| `ReactDOM.render`/`hydrate` | `createRoot`/`hydrateRoot` | modern root mở React 18 scheduling/batching; nâng 18.3 trước 19 và retest | React ≤17 bootstrap |
+| string refs / `findDOMNode` | explicit refs | ownership/composition/concurrency rõ hơn | animation/UI libs cũ |
+| legacy Context | `createContext` + modern consumers | propagation/composition rõ hơn | pre-16.3 |
+| mount-lifecycle fetch | Effect hoặc query/route/server layer | cancellation/cache/dedupe/invalidation tốt hơn | React 15–17 screens |
+| giant Redux store | local + URL + form + server-state + external store theo ownership | các dữ liệu có lifecycle khác nhau không nên mặc định chung store | enterprise Redux |
+| Enzyme/shallow instance tests | DOM behavior/integration/E2E | giảm coupling implementation; migrate assertion trước khi refactor component | class-era test suites |
+
+Quy tắc là **migrate semantics, không migrate tên API**. Một lifecycle cũ có thể làm nhiều việc; tách render derivation, user event và external synchronization trước khi chọn API mới.
+
 ## 2. Component creation và composition
 
 ### `React.createClass`

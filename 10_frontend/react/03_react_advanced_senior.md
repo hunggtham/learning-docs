@@ -1,6 +1,6 @@
 # React Master Note — Advanced / Senior
 
-> Baseline: React 19.3. File này tập trung concurrency, React 19 APIs, SSR/hydration/RSC, architecture, performance, API design, security và production practices.
+> React 19.3 là mốc stable hiện hành cho API mới; file này tập trung invariants xuyên version: reconciliation/identity, concurrency, Suspense, server/client boundary, architecture, performance, security và production practices.
 
 ## 1. Render architecture và Fiber mental model
 
@@ -46,6 +46,10 @@ state thường được preserve. Nếu draft phải reset khi document đổi,
 Concurrent React không có nghĩa component JavaScript chạy multi-thread. Nó nghĩa React có thể làm render work theo cách interruptible/prioritized. Update có priority khác nhau, nên một render non-urgent có thể bị urgent input chen vào.
 
 Concurrency API không thay kiến trúc tốt. Trước tiên giảm work, tránh waterfall và profile.
+
+## 4A. Reconciliation dưới concurrent rendering
+
+Concurrent rendering không thay identity rules; nó thay cách render work được schedule. React có thể bắt đầu, pause, restart hoặc abandon render trước commit, nên render phải pure. Reconciliation trả lời tree nào là cùng identity và cần thay gì; scheduling trả lời work nào ưu tiên và có thể ngắt. External store cần snapshot nhất quán với concurrency, là lý do React 18 có `useSyncExternalStore` thay cho subscription Effect tự chế dễ tearing.
 
 ## 5. `useTransition` và `startTransition`
 
@@ -331,6 +335,12 @@ async function updateUser(formData) {
 
 Server Component không cần directive `"use server"`.
 
+## 24A. Server/Client boundary là dependency graph
+
+Trong RSC, `'use client'` tạo module boundary; dependency dưới client boundary có khả năng đi vào client bundle. Vì vậy không import database SDK, filesystem hay secret-bearing module vào client graph. Props server → client phải tuân serialization contract; Server Function reference là trường hợp protocol riêng, không có nghĩa function JavaScript bất kỳ truyền được qua network.
+
+Evolution đi từ SPA mọi component chạy client, qua SSR render HTML server rồi hydrate client, tới RSC nơi một phần component chỉ chạy server. Migration nên đặt interactive boundary nhỏ nhất hợp lý thay vì thêm `'use client'` lên root cho hết lỗi.
+
 ## 25. Server Functions và security
 
 Server Function phải được coi như public network surface dù syntax trông giống function call. Dữ liệu từ client luôn là untrusted input.
@@ -368,6 +378,10 @@ Quyết định “Redux, Zustand hay Context?” chỉ nên đặt sau khi phâ
 Local state là mặc định vì locality dễ hiểu và dễ xóa. Context phù hợp dependency/value theo subtree. Reducer phù hợp state transition phức tạp trong một scope. External store như Zustand/Redux phù hợp khi nhiều nhánh xa nhau cùng đọc/ghi client state, cần selector, middleware, devtools hoặc convention mạnh.
 
 Redux Toolkit hợp với domain/action flow lớn và team cần cấu trúc chặt. Zustand nhẹ hơn nhưng convention do team tự quyết định nhiều hơn. Không nên tự xây HTTP cache bên trong global store khi server-state library đã giải quyết stale/retry/invalidation tốt hơn.
+
+## 27A. State-management evolution
+
+Flux/Redux giải quyết predictable shared state trong thời class. Hooks giảm nhu cầu container/HOC cho local logic; Context lo dependency theo subtree; query/router/form layers tách server, URL và form state khỏi global store. Redux không obsolete: external store vẫn phù hợp khi domain client state lớn, nhiều nhánh cùng đọc/ghi và cần selector, middleware, event log hoặc convention tổ chức mạnh. Chọn theo ownership/update topology, không theo thời thượng.
 
 ## 28. Component API design
 
