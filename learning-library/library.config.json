@@ -61,6 +61,12 @@
       "category": "Mathematics",
       "language": "vi-en-ko",
       "rights": "author-confirmed"
+    },
+    {
+      "path": "psychology",
+      "category": "Psychology",
+      "language": "vi-en",
+      "rights": "author-confirmed"
     }
   ],
   "allowedDocuments": [
