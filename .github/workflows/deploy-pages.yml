@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -26,6 +26,176 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 20
+
+      - name: Restore natural prose and refine terminology
+        if: "${{ github.event.head_commit.message == 'chore: restore and refine HTML XML terminology' }}"
+        shell: bash
+        run: |
+          git checkout 4f32a8073f98bb31566714c40b495d31165ff1ae -- \
+            10_frontend/html/html_01_beginner_to_senior_detailed.md \
+            10_frontend/html/html_02_master_implementation_detailed.md \
+            10_frontend/xml/xml_01_beginner_detailed.md \
+            10_frontend/xml/xml_02_intermediate_detailed.md \
+            10_frontend/xml/xml_03_senior_detailed.md \
+            10_frontend/xml/xml_04_master_supplement_detailed.md
+
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          html_files = [
+              Path('10_frontend/html/html_01_beginner_to_senior_detailed.md'),
+              Path('10_frontend/html/html_02_master_implementation_detailed.md'),
+          ]
+          xml_files = [
+              Path('10_frontend/xml/xml_01_beginner_detailed.md'),
+              Path('10_frontend/xml/xml_02_intermediate_detailed.md'),
+              Path('10_frontend/xml/xml_03_senior_detailed.md'),
+              Path('10_frontend/xml/xml_04_master_supplement_detailed.md'),
+          ]
+
+          html_glossary = """## Quy ước thuật ngữ trong tài liệu
+
+          Tài liệu dùng tiếng Việt tự nhiên làm ngôn ngữ giải thích chính và giữ thuật ngữ gốc ở lần định nghĩa để tiện đối chiếu. Các cách gọi được dùng thống nhất gồm: **trình duyệt (browser)**, **mã đánh dấu (markup)**, **mã nguồn (source)**, **tài liệu (document)**, **phần tử (element)**, **thuộc tính (attribute)**, **biểu mẫu (form)**, **gửi biểu mẫu (submit)**, **bố cục (layout)**, **hành vi (behavior)**, **tính năng (feature)**, **mô hình tư duy (mental model)**, **phân tích cú pháp (parsing)**, **bộ phân tích cú pháp (parser)**, **HTML ngữ nghĩa (semantic HTML)**, **ngữ nghĩa (semantics)**, **khả năng tiếp cận (accessibility)**, **cây trợ năng (accessibility tree)**, **tên trợ năng (accessible name)**, **siêu dữ liệu (metadata)**, **kiểm tra ràng buộc của biểu mẫu (constraint validation)**, **mô hình nội dung (content model)**, **thuộc tính DOM (DOM property)**, **trạng thái hiện thời (live state)**, **lớp trên cùng (top layer)**, **hiệu năng (performance)**, **bảo mật (security)**, **đáp ứng (responsive)** và **môi trường thực tế (production)**. Sau khi thuật ngữ đã được định nghĩa, phần nội dung ưu tiên cách gọi tiếng Việt để câu văn nhẹ và dễ học. Những tên chuẩn được dùng phổ biến hơn bằng tiếng Anh như DOM, ARIA, CORS, CSP, Shadow DOM, Web Components, `iframe`, framework, tên tag, tên attribute và tên API cụ thể được giữ nguyên khi dịch sẽ làm mất nghĩa hoặc gây khó tra cứu.
+
+          """
+
+          xml_glossary = """## Quy ước thuật ngữ trong tài liệu
+
+          Tài liệu dùng tiếng Việt tự nhiên làm ngôn ngữ giải thích chính và giữ thuật ngữ gốc ở lần định nghĩa để tiện đối chiếu. Các cách gọi được dùng thống nhất gồm: **tài liệu XML (XML document)**, **phần tử (element)**, **thuộc tính (attribute)**, **phần tử gốc (root element)**, **nút văn bản (text node)**, **không gian tên (namespace)**, **tiền tố (prefix)**, **tên mở rộng (expanded name)**, **bộ từ vựng (vocabulary)**, **lược đồ (schema)**, **giao thức (protocol)**, **quy tắc nghiệp vụ (business rule)**, **đúng cú pháp XML (well-formed)**, **kiểm tra tính hợp lệ (validation)**, **phân tích cú pháp (parsing)**, **bộ phân tích cú pháp (parser)**, **xử lý theo luồng (streaming)**, **luồng (stream)**, **truy vấn (query)**, **chuyển đổi (transformation)**, **ánh xạ/liên kết (binding)**, **tuần tự hóa (serialization)**, **bộ tuần tự hóa (serializer)**, **chuẩn hóa chính tắc (canonicalization/C14N)**, **cấu hình (configuration)**, **thời gian chạy (runtime)** và **dữ liệu tải (payload)**. Sau khi thuật ngữ đã được định nghĩa, nội dung ưu tiên cách gọi tiếng Việt. Những tên chuẩn như XML, DTD, XSD, XPath, XSLT, XQuery, DOM, SAX, StAX, SOAP, WSDL, QName, PSVI, CDATA và tên API cụ thể được giữ nguyên.
+
+          """
+
+          html_safe = [
+              ('mental model', 'mô hình tư duy'),
+              ('markup', 'mã đánh dấu'),
+              ('production', 'môi trường thực tế'),
+              ('resource loading', 'quá trình tải tài nguyên'),
+              ('resource hints', 'các gợi ý tải tài nguyên'),
+              ('resource hint', 'gợi ý tải tài nguyên'),
+              ('source order', 'thứ tự trong mã nguồn'),
+              ('source markup', 'mã đánh dấu nguồn'),
+              ('source text', 'văn bản nguồn'),
+              ('layout viewport', 'khung nhìn bố cục (layout viewport)'),
+              ('layout shift', 'dịch chuyển bố cục (layout shift)'),
+              ('layout', 'bố cục'),
+              ('browser behavior', 'hành vi của trình duyệt'),
+              ('browser behaviors', 'các hành vi của trình duyệt'),
+              ('behavior', 'hành vi'),
+              ('behaviors', 'các hành vi'),
+              ('modern feature', 'tính năng hiện đại'),
+              ('modern features', 'các tính năng hiện đại'),
+              ('feature', 'tính năng'),
+              ('features', 'các tính năng'),
+              ('parser layer', 'tầng phân tích cú pháp'),
+              ('security layer', 'tầng bảo mật'),
+              ('application layer', 'tầng ứng dụng'),
+              ('layer', 'tầng'),
+              ('layers', 'các tầng'),
+              ('responsive images', 'ảnh đáp ứng'),
+              ('responsive image', 'ảnh đáp ứng'),
+              ('responsive page', 'trang đáp ứng'),
+              ('responsive UI', 'giao diện đáp ứng'),
+              ('progressive enhancement', 'tăng cường dần (progressive enhancement)'),
+          ]
+
+          xml_safe = [
+              ('XML document', 'tài liệu XML'),
+              ('business rules', 'các quy tắc nghiệp vụ'),
+              ('business rule', 'quy tắc nghiệp vụ'),
+              ('application-specific', 'đặc thù ứng dụng'),
+              ('applications', 'các ứng dụng'),
+              ('application', 'ứng dụng'),
+              ('protocols', 'các giao thức'),
+              ('protocol', 'giao thức'),
+              ('vocabularies', 'các bộ từ vựng'),
+              ('vocabulary', 'bộ từ vựng'),
+              ('text nodes', 'các nút văn bản'),
+              ('text node', 'nút văn bản'),
+              ('stream events', 'các sự kiện trong luồng'),
+              ('streaming parser', 'bộ phân tích theo luồng'),
+              ('processing instructions', 'các chỉ thị xử lý'),
+              ('processing instruction', 'chỉ thị xử lý'),
+              ('mapping rule', 'quy tắc ánh xạ'),
+              ('serializer', 'bộ tuần tự hóa'),
+              ('runtime behavior', 'hành vi tại thời gian chạy'),
+              ('runtime', 'thời gian chạy'),
+              ('configuration file', 'tệp cấu hình'),
+              ('configuration files', 'các tệp cấu hình'),
+              ('configuration', 'cấu hình'),
+              ('payload', 'dữ liệu tải (payload)'),
+          ]
+
+          def replace_outside_code(text, replacements):
+              replacements = sorted(replacements, key=lambda x: len(x[0]), reverse=True)
+              out = []
+              fenced = False
+              for line in text.splitlines(keepends=True):
+                  if line.lstrip().startswith('```'):
+                      fenced = not fenced
+                      out.append(line)
+                      continue
+                  if fenced:
+                      out.append(line)
+                      continue
+                  parts = re.split(r'(`[^`]*`)', line)
+                  for i in range(0, len(parts), 2):
+                      segment = parts[i]
+                      for old, new in replacements:
+                          pattern = r'(?<![A-Za-z0-9_-])' + re.escape(old) + r'(?![A-Za-z0-9_-])'
+                          segment = re.sub(pattern, new, segment)
+                      parts[i] = segment
+                  out.append(''.join(parts))
+              return ''.join(out)
+
+          def set_glossary(text, glossary):
+              pattern = r'## Quy ước thuật ngữ trong tài liệu\n.*?\n\n---\n'
+              return re.sub(pattern, glossary.rstrip() + '\n\n---\n', text, count=1, flags=re.S)
+
+          for path in html_files:
+              text = path.read_text(encoding='utf-8')
+              text = replace_outside_code(text, html_safe)
+              text = set_glossary(text, html_glossary)
+              if path.name.startswith('html_01'):
+                  old = ('Tài liệu này được viết cho người học HTML từ đầu, không giả định bạn đã có kiến thức frontend trước đó. '
+                         'Mục tiêu không phải là giúp bạn nhớ thật nhiều tag, mà là xây một mô hình tư duy đủ chắc để bạn hiểu trình duyệt đang làm gì với HTML, vì sao HTML ngữ nghĩa quan trọng, khi nào nên dùng một element thay vì `div`, form thực sự submit dữ liệu như thế nào, vì sao khả năng tiếp cận và SEO liên quan trực tiếp tới mã đánh dấu, và HTML ảnh hưởng bảo mật/hiệu năng ra sao.')
+                  new = ('Tài liệu này được viết cho người học HTML từ đầu, không giả định bạn đã có kiến thức về giao diện web (frontend). '
+                         'Mục tiêu không phải là giúp bạn nhớ thật nhiều thẻ (tag), mà là xây một mô hình tư duy đủ chắc để hiểu trình duyệt xử lý HTML như thế nào, vì sao HTML ngữ nghĩa quan trọng, khi nào nên dùng một phần tử (element) thay vì `div`, biểu mẫu (form) thực sự gửi dữ liệu (submit) ra sao, vì sao khả năng tiếp cận và SEO liên quan trực tiếp tới mã đánh dấu, và HTML ảnh hưởng đến bảo mật lẫn hiệu năng như thế nào.')
+                  text = text.replace(old, new)
+                  text = text.replace('Trình duyệt parse HTML thành DOM. CSS sử dụng DOM/element structure để presentation, còn JavaScript tương tác với DOM để thêm hành vi.',
+                                      'Trình duyệt phân tích cú pháp (parse) HTML để tạo DOM. CSS dựa trên cấu trúc DOM/phần tử để quyết định cách trình bày (presentation), còn JavaScript tương tác với DOM để bổ sung hành vi (behavior).')
+                  text = text.replace('Trong project hiện đại, ba tầng có thể được viết thông qua framework như React hoặc Vue, nhưng trình duyệt cuối cùng vẫn phải nhận được DOM tương ứng với HTML ngữ nghĩa.',
+                                      'Trong dự án hiện đại, ba tầng này có thể được xây dựng thông qua framework như React hoặc Vue, nhưng cuối cùng trình duyệt vẫn phải làm việc với DOM mang đúng ngữ nghĩa HTML.')
+              if path.name.startswith('html_02'):
+                  text = text.replace('# HTML — Master Implementation', '# HTML — Triển khai mức Master (Master Implementation)')
+                  first = ('Tài liệu này tiếp nối `html_01_beginner_to_senior_detailed.md`. File đầu xây nền tảng từ cấu trúc tài liệu, ngữ nghĩa, forms, media, khả năng tiếp cận, SEO và hiệu năng. File Master này đi sâu vào phần khiến HTML trở thành một **nền tảng trình duyệt** chứ không chỉ là tập hợp tag: bộ phân tích cú pháp có thể sửa mã đánh dấu như thế nào, trạng thái hiện thời của DOM khác source ra sao, biểu mẫu chủ quản và điều khiển gửi biểu mẫu hoạt động thế nào, cây trợ năng nhận ngữ nghĩa từ đâu, các phần tử tùy biến kết nối với Shadow DOM ra sao, và vì sao những tính năng mới như Popover hoặc Declarative Shadow DOM có thể thay thế một phần JavaScript thủ công.')
+                  replacement = ('Tài liệu này tiếp nối `html_01_beginner_to_senior_detailed.md`. File đầu xây nền tảng về cấu trúc tài liệu, ngữ nghĩa, biểu mẫu (form), nội dung đa phương tiện (media), khả năng tiếp cận, SEO và hiệu năng. File Master đi sâu vào HTML như một **nền tảng của trình duyệt**: bộ phân tích cú pháp có thể sửa mã đánh dấu ra sao, trạng thái hiện thời của DOM khác mã nguồn (source) thế nào, biểu mẫu chủ quản và điều khiển gửi biểu mẫu hoạt động ra sao, cây trợ năng nhận ngữ nghĩa từ đâu, các phần tử tùy biến kết nối với Shadow DOM như thế nào, và vì sao các tính năng như Popover hoặc Declarative Shadow DOM có thể thay thế một phần JavaScript thủ công.')
+                  text = text.replace(first, replacement)
+              path.write_text(text, encoding='utf-8')
+
+          for path in xml_files:
+              text = path.read_text(encoding='utf-8')
+              text = replace_outside_code(text, xml_safe)
+              text = set_glossary(text, xml_glossary)
+              if path.name.startswith('xml_01'):
+                  text = text.replace('Tài liệu này được viết cho người chưa có nền tảng XML. Mục tiêu không phải là giúp bạn “nhớ vài tag”, mà là giúp bạn hiểu XML đang giải quyết vấn đề gì, XML document được tổ chức ra sao, vì sao cú pháp của XML chặt chẽ hơn HTML, và một XML bộ phân tích cú pháp thực sự nhìn dữ liệu như thế nào.',
+                                      'Tài liệu này được viết cho người chưa có nền tảng XML. Mục tiêu không phải là giúp bạn “nhớ vài thẻ (tag)”, mà là giúp bạn hiểu XML giải quyết vấn đề gì, tài liệu XML (XML document) được tổ chức ra sao, vì sao cú pháp XML chặt chẽ hơn HTML, và bộ phân tích cú pháp XML (XML parser) thực sự nhìn dữ liệu như thế nào.')
+                  text = text.replace('Một XML bộ phân tích cú pháp không chỉ “tìm text giữa hai tag”.',
+                                      'Một bộ phân tích cú pháp XML không chỉ “tìm văn bản giữa hai thẻ”.')
+              if path.name.startswith('xml_04'):
+                  text = text.replace('# XML — Master Supplement', '# XML — Bổ sung mức Master (Master Supplement)')
+              path.write_text(text, encoding='utf-8')
+          PY
+
+          git checkout HEAD^ -- .github/workflows/deploy-pages.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add 10_frontend/html 10_frontend/xml .github/workflows/deploy-pages.yml
+          git commit -m "docs(html-xml): refine Vietnamese terminology without mechanical translation"
+          git pull --rebase origin main
+          git push origin main
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
