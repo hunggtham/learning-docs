@@ -1641,6 +1641,20 @@ Nếu request không vào controller, lỗi có thể nằm trong security chain
 
 ---
 
+<!-- SPRING_BATCH4_SECURITY_INTERMEDIATE -->
+## Spring Security request flow: từ filter matching tới `Authentication`
+
+Servlet container nhìn Spring Security như một filter. `DelegatingFilterProxy` bridge container lifecycle với bean `FilterChainProxy`. `FilterChainProxy` giữ nhiều `SecurityFilterChain`; mỗi chain có request matcher và ordered filters. Với một request, chain phù hợp được chọn, vì vậy multiple-chain configuration thực chất là **routing security policy trước MVC routing**.
+
+Một authentication filter đọc credential phù hợp protocol, tạo một `Authentication` chưa authenticated rồi giao cho `AuthenticationManager`. Common `ProviderManager` thử các `AuthenticationProvider` hỗ trợ loại token đó. Password provider có thể dùng `UserDetailsService` + `PasswordEncoder`; resource server JWT dùng provider/decoder khác. Khi thành công, authenticated `Authentication` được đặt vào SecurityContext theo configured strategy/repository để phần còn lại của request thấy principal/authorities.
+
+Authorization xảy ra sau khi authentication context tồn tại. Request authorization dùng authorization manager/filter infrastructure; method security lại là method-interceptor/proxy layer, nghĩa là cùng một request có thể vượt HTTP rule nhưng bị chặn ở use-case method vì object-level policy. Đó là defense in depth khi boundary được chọn có chủ đích, không phải lý do copy cùng role expression ở mọi layer.
+
+Authentication failure và access denied cũng có hai semantics khác nhau. Unauthenticated caller cần `AuthenticationEntryPoint`; authenticated caller thiếu quyền đi `AccessDeniedHandler`. Trộn cả hai thành HTTP 401 hoặc 403 tùy tiện làm client behavior và incident diagnosis sai.
+<!-- SPRING_BATCH4_SECURITY_INTERMEDIATE_END -->
+
+---
+
 # 77. Authentication và SecurityContext
 
 Sau authentication thành công, Spring Security có `Authentication` chứa principal/authorities và được đặt trong security context theo configured strategy.
@@ -1705,6 +1719,20 @@ Spring Boot test slices load phần context cần thiết.
 `@RestClientTest` hỗ trợ client layer tùy generation/module.
 
 Chọn slice giúp test nhanh và failure localized.
+
+---
+
+<!-- SPRING_BATCH4_TEST_INTERMEDIATE -->
+## Chọn test theo boundary thay vì chọn annotation theo thói quen
+
+Plain unit test tạo object bằng constructor và test business rule nhanh nhất vì không cần Spring context. MVC slice test hỏi mapping, validation, serialization và controller advice có đúng không. Data slice test hỏi mapping/query/transaction với persistence infrastructure. Full `@SpringBootTest` hỏi object graph và integration giữa nhiều subsystem có khởi động/hoạt động cùng nhau không. End-to-end với real port chỉ cần ở những flow mà network/server behavior thật mang thêm confidence.
+
+`@SpringBootTest` mặc định không đồng nghĩa “browser gọi server thật”; web environment quyết định mock servlet context hay embedded server với port. `MockMvc` chạy MVC infrastructure không cần network socket, rất phù hợp controller/filter integration. `RANDOM_PORT` phù hợp khi bạn cần HTTP client/server stack thật hơn.
+
+`@MockitoBean` thay một Spring bean trong test context, khác với Mockito `@Mock` chỉ tạo object mock trong test class. Bean override thay cấu hình context và có thể ảnh hưởng TestContext cache key; hàng trăm test classes mỗi class override beans/properties khác nhau có thể tạo hàng trăm contexts. Khi suite chậm, đo context reuse trước khi chỉ tăng parallelism.
+
+Transactional test auto-rollback rất tiện nhưng có blind spot: commit-time constraint, `afterCommit` callback, outbox publisher và lazy-loading sau transaction có thể không được exercise giống production. Hãy có tests explicit commit hoặc non-transactional request boundary cho những behavior này.
+<!-- SPRING_BATCH4_TEST_INTERMEDIATE_END -->
 
 ---
 

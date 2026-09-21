@@ -198,6 +198,18 @@ Framework 7 có `ApiVersionStrategy`, resolver/parser/validation/deprecation han
 
 Boot 4 ưu tiên Jackson 3. Code chỉ dùng DTO + Boot auto-config thường migrate dễ. Code custom mapper/modules/polymorphic serialization phải review package changes và behavioral compatibility. `spring-boot-jackson2` tồn tại như deprecated stop-gap, không phải long-term target.
 
+<!-- SPRING_BATCH4_SECURITY_TEST_MASTER -->
+## Source trace Spring Security và TestContext
+
+`DelegatingFilterProxy` resolve filter bean từ ApplicationContext nhưng delegate security execution cho `FilterChainProxy`. `FilterChainProxy` chọn first matching `SecurityFilterChain` theo order rồi chạy list security filters. Authentication filters delegate tới `AuthenticationManager`; `ProviderManager` chọn `AuthenticationProvider`; authorization filter/interceptors dùng `AuthorizationManager`. `ExceptionTranslationFilter` chuyển security exceptions thành entry-point/access-denied responses ở servlet security layer. Trace theo các object này giúp debug 401/403 mà không cần bật debug log toàn hệ thống.
+
+Method security lại đi qua Spring AOP infrastructure. Advisor/interceptor được gắn vào bean method; call phải qua proxy. Điều này nối trực tiếp knowledge của container/AOP với Security: self-invocation có thể bypass method-security advice giống transaction/cache nếu call path không đi qua proxy.
+
+Ở testing, Spring TestContext tạo `MergedContextConfiguration` từ annotations/configuration/profiles/properties/context customizers rồi dùng nó như nền của cache key. Bean override annotations như `@MockitoBean` tham gia context customization, nên thay mock set có thể làm context không reuse. Hiểu cache key giúp tối ưu suite bằng architecture thay vì chỉ tăng CPU runner.
+<!-- SPRING_BATCH4_SECURITY_TEST_MASTER_END -->
+
+---
+
 # 20. Spring TestContext Framework
 
 TestContext quản lý context loading, caching, listeners, DI, test transactions và bean overrides. Suite chậm thường do nhiều unique context configurations/profiles/mock combinations làm cache reuse kém. Master nên đo context fragmentation trước khi kết luận “Spring test chậm”.

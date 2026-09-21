@@ -987,6 +987,18 @@ Hiểu flow này quan trọng khi có multiple chains cho `/api/**`, `/admin/**`
 
 ---
 
+<!-- SPRING_BATCH4_SECURITY_SENIOR -->
+## Security production model: credential transport, key lifecycle và object-level authorization
+
+Security configuration phải bắt đầu từ credential transport. Session cookie nghĩa browser tự gửi credential và CSRF threat quan trọng. Bearer token trong `Authorization` header có threat khác nhưng vẫn cần XSS/storage/leak controls ở client. CORS chỉ là browser origin policy; nó không authenticate request và không thay authorization.
+
+Với JWT resource server, signature validation mới chỉ chứng minh token phù hợp key/algorithm. Production policy còn phải kiểm issuer, audience, time claims/clock skew, key rotation/JWK refresh và mapping claims thành authorities đúng domain. Log không được ghi raw access token. Nếu identity provider outage xảy ra, behavior phụ thuộc key cache/discovery strategy; đây là availability dependency cần được observability hóa.
+
+Authorization theo role thường chưa đủ cho business resource. “USER có thể cancel order” còn cần xác minh order thuộc user nào, trạng thái order và tenant. Policy này nên nằm ở use-case/domain authorization collaborator hoặc method authorization có access tới domain facts, không chỉ ở URL matcher. Nếu policy chỉ nằm controller, internal/batch/message entry point có thể bypass.
+<!-- SPRING_BATCH4_SECURITY_SENIOR_END -->
+
+---
+
 # 59. AuthenticationManager và AuthenticationProvider
 
 Authentication filter tạo authentication request/token rồi gọi `AuthenticationManager`.
@@ -1666,6 +1678,18 @@ Senior chọn theo deployment economics, không hype.
 Một healthy suite có nhiều plain unit tests cho business, slice tests cho framework boundaries, integration tests với real DB/external fakes và ít full end-to-end tests.
 
 Không cần ratio cố định. Mỗi test phải trả lời câu hỏi cụ thể.
+
+---
+
+<!-- SPRING_BATCH4_TEST_SENIOR -->
+## Testing architecture phải mô phỏng đúng failure boundary
+
+Một test suite production-grade không được dùng một kiểu test cho mọi thứ. Business invariant nên được ép qua plain unit/property tests; persistence concurrency cần real database vì locking/isolation khác H2; HTTP adapter cần contract/stub server để kiểm headers, timeout và error mapping; Security cần test cả unauthenticated, authenticated-but-forbidden và object ownership; transaction/outbox cần test commit thật.
+
+Context caching là một phần hiệu năng test. Profiles, dynamic properties, bean overrides và configuration classes tham gia cache identity. `@DirtiesContext` làm context bị loại khỏi cache và nên được coi là expensive operation. Nếu một test cần mutate global singleton state rồi dirties context để cleanup, đó có thể là feedback rằng production design có global mutable state khó cô lập.
+
+Testcontainers tăng fidelity nhưng không phải lý do đưa mọi unit test vào Docker. Hãy dùng container ở boundary nơi engine semantics quan trọng: PostgreSQL JSON/locking/index behavior, Kafka broker protocol, Redis TTL/serialization. Test nhanh ở inner loop và realistic ở integration boundary là hai mục tiêu bổ sung nhau.
+<!-- SPRING_BATCH4_TEST_SENIOR_END -->
 
 ---
 
