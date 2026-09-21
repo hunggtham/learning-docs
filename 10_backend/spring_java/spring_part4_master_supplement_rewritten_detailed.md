@@ -44,6 +44,20 @@ Cách đọc này giúp mỗi class có vị trí rõ thay vì trở thành hàn
 
 Spring có machinery cho singleton creation state và một số early references để xử lý historical setter/field circular dependencies. Điều này trở nên khó hơn khi auto-proxying tham gia vì reference sớm và final proxy không được mâu thuẫn. Dù framework có thể giải một số cycle, application không nên dựa vào circular dependency như design feature; cycle thường là tín hiệu boundary sai.
 
+<!-- SPRING_BATCH1_IOC_MASTER -->
+## Source trace: từ `getBean()` tới `doCreateBean()` và final exposed reference
+
+Khi muốn đọc Spring source thay vì chỉ dùng API, một trace có giá trị là bắt đầu từ `AbstractBeanFactory#doGetBean`. Lookup trước hết kiểm tra singleton cache; nếu chưa có instance, framework lấy merged BeanDefinition, bảo đảm dependencies cần tạo trước, rồi đi vào creation path phù hợp scope. Với singleton, singleton registry kiểm soát “create once” semantics và trạng thái currently-in-creation để phát hiện cycle.
+
+`AbstractAutowireCapableBeanFactory#createBean` và `doCreateBean` là nơi object creation pipeline trở nên rõ. Framework có cơ hội resolve class, cho `InstantiationAwareBeanPostProcessor` can thiệp trước instantiation, chọn constructor/factory method, instantiate bean, populate properties/injection points, chạy initialization callbacks rồi apply post-processors. Auto-proxy creator thường thay final exposed reference ở cuối lifecycle bằng proxy.
+
+Circular-reference support làm pipeline phức tạp vì framework có thể đăng ký một **singleton factory cho early reference** trước khi bean hoàn tất initialization. `SmartInstantiationAwareBeanPostProcessor#getEarlyBeanReference` cho phép auto-proxy infrastructure bảo đảm early reference tương thích với object sẽ được expose cuối. Đây là mechanism để hiểu source, không phải invitation xây graph dựa vào circular references.
+
+Khi đọc source, đừng biến tên method nội bộ thành public contract. Contract mà application có thể dựa vào nằm ở documented container semantics, lifecycle interfaces và API reference. Tên helper hoặc ordering implementation có thể đổi giữa Framework versions. Mastery là dùng internals để giải thích behavior, rồi quay lại public contract để thiết kế code ổn định.
+<!-- SPRING_BATCH1_IOC_MASTER_END -->
+
+---
+
 # 5. `ConfigurationClassPostProcessor`
 
 `@Configuration`, `@ComponentScan`, `@Import` và `@Bean` chỉ là metadata cho tới khi Spring parse chúng. `ConfigurationClassPostProcessor` chạy ở BeanFactory post-processing phase và mở rộng root configuration thành một graph definitions/imports/components. Khi startup có missing/duplicate definitions, hãy trace metadata expansion thay vì chỉ nhìn constructor injection.

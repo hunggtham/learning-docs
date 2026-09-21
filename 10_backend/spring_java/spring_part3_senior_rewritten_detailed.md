@@ -94,6 +94,18 @@ AOT/native constraints
 
 ---
 
+<!-- SPRING_BATCH1_IOC_SENIOR -->
+## Dependency resolution ở production: type contract, lifecycle và exposed object phải được xem cùng nhau
+
+Ở production, “bean tồn tại” chưa đủ. Bạn cần phân biệt **definition type**, **target type** và **exposed type**. Một `@Bean` factory method có thể khai báo interface return type trong khi object thật là implementation cụ thể; sau đó auto-proxying có thể expose JDK proxy chỉ implement interfaces hoặc class proxy subclass target. Code dùng `getBean(SomeConcreteClass.class)` có thể vì vậy phụ thuộc proxy strategy một cách vô tình, trong khi constructor injection theo stable interface ít nhạy hơn.
+
+Dependency resolution cũng có lifecycle cost. Injecting một heavy singleton trực tiếp vào infrastructure bean có thể kéo cả application graph vào startup sớm. Injecting `ObjectProvider<T>` hoặc thiết kế lại boundary đôi khi không phải “lazy trick” mà là cách giữ phase separation đúng. Tuy nhiên provider bị dùng khắp business code lại làm dependencies khó nhìn, nên deferred lookup chỉ nên xuất hiện khi lifecycle/optionality thực sự cần.
+
+Khi custom framework code can thiệp vào bean creation, hãy giữ một invariant: metadata processors không nên vô tình instantiate application beans, instance processors không nên phụ thuộc sâu vào business graph, và caller không nên phụ thuộc implementation detail của proxy. Ba nguyên tắc này giảm phần lớn các lỗi startup/proxy khó đoán.
+<!-- SPRING_BATCH1_IOC_SENIOR_END -->
+
+---
+
 # 4. Early Bean Creation và “not eligible for all BeanPostProcessors”
 
 Một advanced startup bug xảy ra khi infrastructure bean trong lúc tạo post-processor lại yêu cầu application bean quá sớm. Bean đó được instantiate trước khi toàn bộ post-processors được register. Kết quả nó có thể không nhận proxy/advice mà bạn kỳ vọng.
@@ -110,7 +122,7 @@ Spring infrastructure dùng ordering contracts như `PriorityOrdered`, `Ordered`
 
 Application code bình thường không nên dùng post-processor để implement business feature. Vì post-processor chạy ở lifecycle layer, lỗi dễ ảnh hưởng toàn context và khó debug.
 
-**Senior Rule.** Nếu một requirement có thể giải bằng explicit composition/bean configuration, ưu tiên nó trước metaprogramming.
+Nếu một requirement có thể giải bằng explicit composition/bean configuration, ưu tiên nó trước metaprogramming.
 
 ---
 
@@ -165,7 +177,7 @@ Object invoke(MethodInvocation invocation)
 
 Transactions, observations và custom aspects có thể conceptually nằm trong chain kiểu này.
 
-**Design Pattern.** Đây là Proxy + Chain of Responsibility/Interceptor.
+Đây là Proxy + Chain of Responsibility/Interceptor.
 
 ---
 
@@ -208,7 +220,7 @@ và `process()` gọi `this.saveAudit()`, advice thứ hai bị bypass.
 
 Technical fix có thể dùng self proxy, nhưng architecture fix thường tốt hơn: `AuditService` là collaborator có transaction policy riêng.
 
-**Programming Pattern — Policy boundary as collaborator.** Khi hai methods cần proxy policies khác nhau, đó thường là dấu hiệu chúng đại diện hai execution boundaries khác nhau.
+Khi hai methods cần proxy policies khác nhau, đó thường là dấu hiệu chúng đại diện hai execution boundaries khác nhau.
 
 ---
 
@@ -1222,7 +1234,7 @@ Nếu code chỉ dùng normal DTO + Boot auto-config, migration dễ hơn.
 
 Nếu bạn inject/customize Jackson internal types everywhere, migration lớn hơn.
 
-**Senior Pattern.** Depend on stable framework/application abstractions, không leak third-party implementation sâu khắp domain.
+Depend on stable framework/application abstractions, không leak third-party implementation sâu khắp domain.
 
 ---
 

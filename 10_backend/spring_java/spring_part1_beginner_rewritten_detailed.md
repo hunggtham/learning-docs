@@ -91,13 +91,13 @@ OrderService orderService = new OrderService(gateway);
 
 Khi application lớn lên, việc tự tay viết hàng trăm dòng `new A(new B(new C(...)))` trở nên khó quản lý. Bạn còn phải giải quyết lifecycle, configuration, environment, test replacement, proxy, transaction, web infrastructure và nhiều dependency có quan hệ với nhau. Spring cung cấp một **container** làm công việc tạo và liên kết các object đó.
 
-**Language Idiom.** Trong Java/Spring hiện đại, dependency bắt buộc nên được biểu diễn bằng constructor parameter. Điều này làm object graph rõ ràng, field có thể `final`, và object không tồn tại ở trạng thái “chưa được inject xong”.
+Trong Java/Spring hiện đại, dependency bắt buộc nên được biểu diễn bằng constructor parameter. Điều này làm object graph rõ ràng, field có thể `final`, và object không tồn tại ở trạng thái “chưa được inject xong”.
 
-**Programming Pattern.** Pattern quan trọng ở đây là **Constructor Injection** và **Explicit Dependencies**. Một class có constructor gồm `OrderRepository`, `PaymentGateway` và `Clock` nói rất rõ nó cần gì để hoạt động.
+Pattern quan trọng ở đây là **Constructor Injection** và **Explicit Dependencies**. Một class có constructor gồm `OrderRepository`, `PaymentGateway` và `Clock` nói rất rõ nó cần gì để hoạt động.
 
-**Design Pattern.** Ở tầng design, Spring hỗ trợ **Dependency Injection**, đồng thời giúp thực hiện **Dependency Inversion Principle** khi business code phụ thuộc vào abstraction thay vì vendor implementation.
+Ở tầng design, Spring hỗ trợ **Dependency Injection**, đồng thời giúp thực hiện **Dependency Inversion Principle** khi business code phụ thuộc vào abstraction thay vì vendor implementation.
 
-**Senior Note.** Nếu constructor của một service có mười hai dependency, đừng chữa bằng field injection để constructor trông ngắn hơn. Đó thường là tín hiệu class đang có quá nhiều trách nhiệm hoặc use case boundary chưa rõ.
+Nếu constructor của một service có mười hai dependency, đừng chữa bằng field injection để constructor trông ngắn hơn. Đó thường là tín hiệu class đang có quá nhiều trách nhiệm hoặc use case boundary chưa rõ.
 
 ---
 
@@ -134,7 +134,34 @@ Phần wiring lớn được chuyển sang Spring container.
 
 Điều quan trọng là Spring không “đoán business logic”. Nó chỉ quản lý object và infrastructure dựa trên metadata/configuration bạn cung cấp.
 
-**Senior Note.** Một cách rất hiệu quả để debug Spring là luôn dịch câu hỏi về Java thuần: “Object này do ai tạo?”, “Reference này được truyền vào khi nào?”, “Method này có đang được gọi qua proxy không?”, “Ai mở resource?”, “Ai chịu trách nhiệm close?”. Khi trả lời được các câu đó, phần lớn “Spring magic” biến thành một flow Java bình thường.
+Một cách rất hiệu quả để debug Spring là luôn dịch câu hỏi về Java thuần: “Object này do ai tạo?”, “Reference này được truyền vào khi nào?”, “Method này có đang được gọi qua proxy không?”, “Ai mở resource?”, “Ai chịu trách nhiệm close?”. Khi trả lời được các câu đó, phần lớn “Spring magic” biến thành một flow Java bình thường.
+
+---
+
+<!-- SPRING_BATCH1_IOC_BEGINNER -->
+## Từ metadata tới bean instance: container thực sự làm gì khi “inject dependency”? 
+
+Khi mới học, câu “Spring scan `@Service` rồi inject bean” đủ để bắt đầu, nhưng mental model đó quá ngắn để debug hệ thống thật. Container thực tế phải đi qua ba lớp khác nhau: **metadata cấu hình**, **BeanDefinition**, rồi mới tới **object instance**. `@Component`, `@Service`, `@Repository`, `@Configuration` và `@Bean` cung cấp metadata. Spring đọc metadata đó để đăng ký BeanDefinition, tức bản mô tả cách tạo object: class nào, scope nào, factory method nào, dependency nào, có lazy hay không, có qualifier gì và callback lifecycle nào. Chỉ sau khi context bước vào giai đoạn tạo bean, BeanDefinition mới được dùng để instantiate object.
+
+Vì vậy một bean có thể “được Spring biết tới” nhưng object thật chưa hề tồn tại. Lazy bean là ví dụ rõ nhất. Request-scoped bean còn cho thấy một BeanDefinition có thể đại diện nhiều instance theo từng request thay vì một singleton duy nhất. Khi bạn hiểu definition và instance là hai khái niệm khác nhau, nhiều lỗi startup bắt đầu dễ đọc hơn.
+
+Khi tạo một singleton service, container conceptually làm việc như sau:
+
+```text
+BeanDefinition của OrderService
+→ chọn constructor
+→ resolve từng constructor parameter
+→ lấy hoặc tạo dependency bean tương ứng
+→ gọi constructor Java bình thường
+→ chạy injection/lifecycle processors
+→ có thể wrap object bằng proxy
+→ đặt final reference vào singleton registry
+```
+
+Điểm cuối rất quan trọng: reference mà controller nhận đôi khi không phải object do constructor vừa tạo mà là **proxy** bao quanh object đó. Transaction, method security, cache, async và AOP dựa trên khả năng này. Spring không thay đổi quy tắc Java; nó thay object mà caller đang giữ reference tới.
+
+Dependency Injection vì vậy nên được hiểu là **xây object graph có kiểm soát**, không phải “tìm bean toàn cục”. Nếu business class tự giữ `ApplicationContext` rồi gọi `getBean()` ở mọi nơi, dependency lại trở thành hidden global lookup và bạn đã biến DI thành Service Locator. Constructor injection giữ graph hiển thị trong type signature, làm test dễ hơn và giúp container fail sớm nếu graph không thể xây.
+<!-- SPRING_BATCH1_IOC_BEGINNER_END -->
 
 ---
 
@@ -186,7 +213,7 @@ import jakarta.persistence.Entity;
 
 Sự đổi tên này không chỉ là style. Library cũ phụ thuộc `javax.*` có thể không tương thích với application Jakarta mới.
 
-**Senior Note.** Khi đọc Stack Overflow hoặc blog, trước tiên hãy nhìn năm bài viết, Java version và Spring Boot version. Một lời khuyên đúng cho Boot 2.1 có thể sai hoặc không còn cần thiết ở Boot 4.
+Khi đọc Stack Overflow hoặc blog, trước tiên hãy nhìn năm bài viết, Java version và Spring Boot version. Một lời khuyên đúng cho Boot 2.1 có thể sai hoặc không còn cần thiết ở Boot 4.
 
 ---
 
@@ -268,7 +295,7 @@ Starter không phải “một framework khác”. Nó chủ yếu là dependenc
 
 Một lợi ích lớn của Boot là **dependency management**. Boot phát hành một tập hợp version đã được kiểm thử cùng nhau. Vì vậy nếu dependency đã được Boot quản lý, bạn thường không tự ghi version. Tự ép Jackson, Hibernate hoặc Spring Framework sang một version khác chỉ vì “mới hơn” có thể gây lỗi linkage/runtime.
 
-**Senior Pattern.** Hãy để platform/BOM quản lý dependency versions và chỉ override khi có lý do cụ thể, ví dụ security patch hoặc library compatibility đã được xác minh.
+Hãy để platform/BOM quản lý dependency versions và chỉ override khi có lý do cụ thể, ví dụ security patch hoặc library compatibility đã được xác minh.
 
 ---
 
@@ -318,7 +345,7 @@ public class TimeConfiguration {
 
 `Clock` là class của JDK nên bạn không thể thêm `@Component` vào source của nó. `@Bean` cho phép bạn nói rõ Spring phải tạo object bằng factory method nào.
 
-**Programming Pattern.** Application components mà bạn sở hữu source thường dùng stereotype annotation. Infrastructure object hoặc third-party object thường được tạo rõ ràng trong `@Configuration`.
+Application components mà bạn sở hữu source thường dùng stereotype annotation. Infrastructure object hoặc third-party object thường được tạo rõ ràng trong `@Configuration`.
 
 ---
 
@@ -384,9 +411,9 @@ public class UserController {
 }
 ```
 
-**Language Idiom.** Dùng stereotype thể hiện role thật. `@Component` không sai, nhưng `@Repository` nói nhiều hơn về kiến trúc so với một annotation generic.
+Dùng stereotype thể hiện role thật. `@Component` không sai, nhưng `@Repository` nói nhiều hơn về kiến trúc so với một annotation generic.
 
-**Senior Note.** Annotation không tạo “layer” một cách thần kỳ. Nếu `@Service` chứa SQL, HTTP parsing, file handling và security logic hỗn hợp, nó vẫn là God Service dù có annotation đúng tên.
+Annotation không tạo “layer” một cách thần kỳ. Nếu `@Service` chứa SQL, HTTP parsing, file handling và security logic hỗn hợp, nó vẫn là God Service dù có annotation đúng tên.
 
 ---
 
@@ -425,7 +452,7 @@ Bạn có thể cấu hình scan:
 
 nhưng không nên xử lý mọi lỗi bằng cách scan quá rộng như `"com"`. Điều đó làm container nhìn thấy component không chủ đích và làm object graph khó hiểu hơn.
 
-**Senior Pattern.** Package structure là một architectural boundary. Main application class ở root package và package-by-feature thường giúp scanning tự nhiên.
+Package structure là một architectural boundary. Main application class ở root package và package-by-feature thường giúp scanning tự nhiên.
 
 ---
 
@@ -473,7 +500,7 @@ UserService service = new UserService(repository);
 
 khác ở chỗ Spring làm wiring.
 
-**Language Idiom.** Required dependency → constructor. Optional dependency chỉ nên optional nếu business/lifecycle thực sự cho phép thiếu.
+Required dependency → constructor. Optional dependency chỉ nên optional nếu business/lifecycle thực sự cho phép thiếu.
 
 ---
 
@@ -582,7 +609,7 @@ public PaymentService(
 }
 ```
 
-**Senior Note.** Nếu application phải chọn gateway động dựa trên `PaymentType`, rải `@Qualifier` vào business methods không phải thiết kế tốt. Ở Intermediate ta sẽ học inject `List`/`Map` strategy và tạo registry.
+Nếu application phải chọn gateway động dựa trên `PaymentType`, rải `@Qualifier` vào business methods không phải thiết kế tốt. Ở Intermediate ta sẽ học inject `List`/`Map` strategy và tạo registry.
 
 ---
 
@@ -711,7 +738,7 @@ OrderService orderService(
 
 Đọc method là thấy ngay dependencies.
 
-**Design Pattern.** `@Bean` giống Factory Method ở mức khái niệm; container trở thành object factory lớn quản lý lifecycle và dependency graph.
+`@Bean` giống Factory Method ở mức khái niệm; container trở thành object factory lớn quản lý lifecycle và dependency graph.
 
 ---
 
@@ -818,7 +845,7 @@ Bạn có thể đăng ký qua `@ConfigurationPropertiesScan` hoặc `@EnableCon
 
 **Programming Pattern — Typed Configuration.** Parse và validate external configuration một lần ở boundary, sau đó core application sử dụng type có nghĩa.
 
-**Senior Note.** `int timeout = 3` rất tệ nếu không biết đơn vị là giây hay millisecond. `Duration` làm unit explicit.
+`int timeout = 3` rất tệ nếu không biết đơn vị là giây hay millisecond. `Duration` làm unit explicit.
 
 ---
 
@@ -1050,7 +1077,7 @@ public record UserResponse(
 
 **Programming Pattern — Boundary DTO.** Transport contract được tách khỏi persistence/domain representation.
 
-**Senior Note.** Tách boundary không có nghĩa phải tạo DTO cho từng private method. Mapping ceremony chỉ có giá trị ở boundary có ý nghĩa.
+Tách boundary không có nghĩa phải tạo DTO cho từng private method. Mapping ceremony chỉ có giá trị ở boundary có ý nghĩa.
 
 ---
 
@@ -1237,7 +1264,7 @@ problem.setProperty(
 
 Bạn không bắt buộc phải dùng ngay ở Beginner, nhưng nên biết nó tồn tại vì error response trong Spring mới không chỉ có custom DTO.
 
-**Senior Note.** Public error response không nên lộ stack trace, SQL, table name, filesystem path hoặc internal host.
+Public error response không nên lộ stack trace, SQL, table name, filesystem path hoặc internal host.
 
 ---
 
@@ -1318,7 +1345,7 @@ public class Money {
 
 Nó không phải shared service.
 
-**Senior Note.** “Spring-managed everything” tạo domain model phụ thuộc framework vô ích.
+“Spring-managed everything” tạo domain model phụ thuộc framework vô ích.
 
 ---
 
@@ -1448,7 +1475,7 @@ public class JdbcUserRepository
 
 Spring handles resource cleanup and exception translation around common JDBC flow, nhưng SQL vẫn do bạn kiểm soát.
 
-**Senior Note.** Framework abstraction không thay kiến thức index, join, transaction, query plan và locking.
+Framework abstraction không thay kiến thức index, join, transaction, query plan và locking.
 
 ---
 
@@ -1701,7 +1728,7 @@ Các endpoint/capability khác có thể liên quan metrics, config, mappings, t
 
 Health endpoint thường được load balancer hoặc Kubernetes dùng để biết application có sẵn sàng không.
 
-**Senior Note.** Management endpoints có thể lộ thông tin nhạy cảm. Không expose tất cả ra public Internet.
+Management endpoints có thể lộ thông tin nhạy cảm. Không expose tất cả ra public Internet.
 
 ---
 
@@ -1754,7 +1781,7 @@ void appliesDiscount() {
 
 Không có lý do load Spring context nếu test chỉ cần plain Java behavior.
 
-**Language Idiom.** “Don’t start Spring if you don’t need Spring.”
+“Don’t start Spring if you don’t need Spring.”
 
 ---
 
@@ -1873,7 +1900,7 @@ order/
 
 Project nhỏ dùng layered packages vẫn được. Nhưng khi lớn, package-by-feature thường giúp cohesion tốt hơn.
 
-**Senior Note.** Folder structure không chữa được coupling nếu các module gọi nhau tùy tiện. Boundary là dependency rules, không chỉ thư mục.
+Folder structure không chữa được coupling nếu các module gọi nhau tùy tiện. Boundary là dependency rules, không chỉ thư mục.
 
 ---
 

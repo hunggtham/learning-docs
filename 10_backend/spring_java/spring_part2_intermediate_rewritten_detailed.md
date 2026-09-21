@@ -154,6 +154,22 @@ Nếu bạn hiểu hai giai đoạn này, `BeanFactoryPostProcessor` và `BeanPo
 
 ---
 
+<!-- SPRING_BATCH1_IOC_INTERMEDIATE -->
+## `ApplicationContext.refresh()` dưới dạng một pipeline metadata → object graph
+
+Một `ApplicationContext` đi vào trạng thái usable không phải bằng một lệnh “scan rồi new tất cả”. Với `AbstractApplicationContext`, mental model hữu ích là method `refresh()` điều phối nhiều phase. Environment và configuration sources được chuẩn bị; BeanDefinitions được load; factory-level processors có cơ hội thay metadata; BeanPostProcessors được đăng ký; sau đó eager singletons mới được instantiate; cuối cùng lifecycle/event infrastructure được hoàn tất.
+
+`ConfigurationClassPostProcessor` là một component quan trọng ở nửa **metadata**. Nó parse `@Configuration`, `@ComponentScan`, `@Import`, `@Bean` và mở rộng configuration graph thành thêm BeanDefinitions. `AutowiredAnnotationBeanPostProcessor` lại làm việc ở nửa **instance/lifecycle**, đọc injection metadata và hỗ trợ resolve dependency cho constructor/field/method injection. Hai class đều có chữ “processor” nhưng tham gia ở hai thời điểm rất khác nhau; đây là lý do phải tách metadata processing và instance processing trong đầu.
+
+`DefaultListableBeanFactory` là nơi dependency resolution trở nên cụ thể. Khi constructor yêu cầu `PaymentGateway`, container không chỉ tìm string bean name. Nó xem type assignability, generic type metadata khi có thể, qualifier, primary/fallback semantics, bean-name fallback và trạng thái candidate. Nếu dependency là `List<PaymentGateway>`, container resolve nhiều beans rồi order chúng theo ordering contract. Nếu dependency là `ObjectProvider<PaymentGateway>`, việc resolve object có thể bị trì hoãn tới lúc provider được gọi.
+
+Một dependency graph tốt phải có thể giải từ ngoài vào trong. Constructor cycle như `A(B)` và `B(A)` không thể tạo theo Java semantics vì để construct A cần B hoàn chỉnh, còn construct B lại cần A. Historical Spring machinery có thể xử lý một số setter/field cycles bằng early singleton references, nhưng constructor cycle cho thấy graph không có điểm bắt đầu rõ. Thay vì bật circular-reference option như một fix mặc định, hãy tìm responsibility đang bị trộn hoặc introduce một abstraction/event boundary phù hợp.
+
+Một quy tắc debug rất hiệu quả là phân loại lỗi theo phase. `NoSuchBeanDefinitionException` và `NoUniqueBeanDefinitionException` thường thuộc dependency resolution. Bean tạo được nhưng `@Transactional` không chạy thường thuộc proxy/post-processing hoặc call path. Bean không xuất hiện vì condition không match thuộc metadata/auto-configuration. Khi xác định đúng phase, số lượng hypothesis giảm mạnh.
+<!-- SPRING_BATCH1_IOC_INTERMEDIATE_END -->
+
+---
+
 # 6. BeanFactoryPostProcessor
 
 `BeanFactoryPostProcessor` làm việc với bean factory/definitions trước khi normal beans được tạo.
@@ -190,7 +206,7 @@ Một post-processor có thể trả về cùng object hoặc object khác, ví 
 
 Đây là cửa ngõ để hiểu rất nhiều Spring features. Injection annotations, lifecycle annotations, AOP proxy creation và nhiều framework behaviors được triển khai qua post-processing hoặc các infrastructure tương tự.
 
-**Senior Note.** Nếu một bean “đáng lẽ phải transactional” nhưng không được proxy, một hypothesis là bean được tạo quá sớm trước khi auto-proxy creator có cơ hội xử lý.
+Nếu một bean “đáng lẽ phải transactional” nhưng không được proxy, một hypothesis là bean được tạo quá sớm trước khi auto-proxy creator có cơ hội xử lý.
 
 ---
 
@@ -356,7 +372,7 @@ Order
 → proceed
 ```
 
-**Programming Pattern.** Inject collection của strategies thay vì viết một God Validator với `if` khổng lồ.
+Inject collection của strategies thay vì viết một God Validator với `if` khổng lồ.
 
 ---
 
@@ -491,7 +507,7 @@ JDK proxy có thể implement `PaymentService`.
 
 Nếu code inject concrete `PaymentServiceImpl` thay vì interface, proxy strategy có thể ảnh hưởng type compatibility.
 
-**Language Idiom.** “Program to intended public abstraction” giúp giảm coupling với proxy mechanics.
+“Program to intended public abstraction” giúp giảm coupling với proxy mechanics.
 
 ---
 
@@ -630,7 +646,7 @@ Condition nào fail?
 
 Ví dụ DataSource auto-config không chạy có thể vì JDBC class thiếu, không có URL hoặc một condition khác.
 
-**Senior Pattern — Evidence over guessing.** Không thêm annotation ngẫu nhiên khi có condition report giải thích nguyên nhân.
+Không thêm annotation ngẫu nhiên khi có condition report giải thích nguyên nhân.
 
 ---
 
@@ -865,7 +881,7 @@ UserResponse get(
 }
 ```
 
-**Language Idiom — Strong boundary types.** Conversion ở web boundary cho phép core dùng `UserId` thay vì raw `long`.
+Conversion ở web boundary cho phép core dùng `UserId` thay vì raw `long`.
 
 ---
 
@@ -1051,7 +1067,7 @@ Spring expose isolation options tương ứng relational transaction concepts nh
 
 Nhưng tên giống nhau không có nghĩa mọi database implement chi tiết giống nhau. PostgreSQL, MySQL/InnoDB, Oracle có MVCC/locking semantics khác.
 
-**Senior Note.** Học Spring isolation mà không học database isolation là thiếu một nửa.
+Học Spring isolation mà không học database isolation là thiếu một nửa.
 
 ---
 
@@ -1490,7 +1506,7 @@ Bạn phải biết executor nào thực thi task. Với platform-thread pool, q
 
 Một unbounded queue có thể giữ hàng triệu tasks khi producer nhanh hơn consumer.
 
-**Programming Pattern — Bounded Queue / Backpressure.** Async không loại overload; nó chỉ chuyển overload sang queue nếu không có capacity policy.
+Async không loại overload; nó chỉ chuyển overload sang queue nếu không có capacity policy.
 
 ---
 
