@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -26,6 +26,81 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 30
+
+      - name: Restore audited prose and add terminology guide
+        if: "${{ github.event.head_commit.message == 'chore: restore canonical prose with terminology guide' }}"
+        shell: bash
+        run: |
+          git checkout 9744401005b4a4365927fe375e295f755e53a5f8 -- \
+            10_frontend/html/html_01_beginner_to_senior_detailed.md \
+            10_frontend/html/html_02_master_implementation_detailed.md
+
+          git checkout d576752d8bd25a2ecfc49baa7a3759bb5b0e5cbf -- \
+            10_frontend/xml/xml_01_beginner_detailed.md \
+            10_frontend/xml/xml_02_intermediate_detailed.md \
+            10_frontend/xml/xml_03_senior_detailed.md \
+            10_frontend/xml/xml_04_master_supplement_detailed.md
+
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          html_files = [
+              Path('10_frontend/html/html_01_beginner_to_senior_detailed.md'),
+              Path('10_frontend/html/html_02_master_implementation_detailed.md'),
+          ]
+          xml_files = [
+              Path('10_frontend/xml/xml_01_beginner_detailed.md'),
+              Path('10_frontend/xml/xml_02_intermediate_detailed.md'),
+              Path('10_frontend/xml/xml_03_senior_detailed.md'),
+              Path('10_frontend/xml/xml_04_master_supplement_detailed.md'),
+          ]
+
+          html_guide = """## Quy ước thuật ngữ Việt–Anh
+
+Tài liệu ưu tiên tiếng Việt tự nhiên và giữ thuật ngữ tiếng Anh ở lần giới thiệu để bạn có thể đối chiếu với MDN, HTML Living Standard và tài liệu framework. Các cách gọi cốt lõi được thống nhất như sau: **trình duyệt (browser)**, **mã đánh dấu (markup)**, **mã nguồn (source)**, **tài liệu (document)**, **phần tử (element)**, **thuộc tính (attribute)**, **biểu mẫu (form)**, **gửi biểu mẫu (submit)**, **bố cục (layout)**, **hành vi (behavior)**, **tính năng (feature)**, **mô hình tư duy (mental model)**, **phân tích cú pháp (parsing)**, **bộ phân tích cú pháp (parser)**, **HTML ngữ nghĩa (semantic HTML)**, **ngữ nghĩa (semantics)**, **khả năng tiếp cận (accessibility)**, **cây trợ năng (accessibility tree)**, **tên trợ năng (accessible name)**, **siêu dữ liệu (metadata)**, **kiểm tra ràng buộc của biểu mẫu (constraint validation)**, **mô hình nội dung (content model)**, **thuộc tính DOM (DOM property)**, **trạng thái hiện thời (live state)**, **lớp trên cùng (top layer)**, **hiệu năng (performance)**, **bảo mật (security)**, **đáp ứng (responsive)** và **môi trường thực tế (production)**.
+
+Sau lần giới thiệu đầu tiên, tài liệu có thể dùng cách gọi tiếng Việt ngắn gọn để câu văn dễ đọc. Những tên chuẩn mà cộng đồng thường dùng trực tiếp bằng tiếng Anh như DOM, ARIA, CORS, CSP, Shadow DOM, Web Components, `iframe`, framework, tên tag, tên attribute và tên API được giữ nguyên khi bản dịch tiếng Việt không giúp người học hiểu tốt hơn.
+
+"""
+
+          xml_guide = """## Quy ước thuật ngữ Việt–Anh
+
+Tài liệu ưu tiên tiếng Việt tự nhiên và giữ thuật ngữ tiếng Anh ở lần giới thiệu để bạn có thể đối chiếu với đặc tả và tài liệu thư viện. Các cách gọi cốt lõi được thống nhất như sau: **tài liệu XML (XML document)**, **phần tử (element)**, **thuộc tính (attribute)**, **phần tử gốc (root element)**, **nút văn bản (text node)**, **không gian tên (namespace)**, **tiền tố (prefix)**, **tên mở rộng (expanded name)**, **bộ từ vựng (vocabulary)**, **lược đồ (schema)**, **giao thức (protocol)**, **quy tắc nghiệp vụ (business rule)**, **đúng cú pháp XML (well-formed)**, **kiểm tra tính hợp lệ (validation)**, **phân tích cú pháp (parsing)**, **bộ phân tích cú pháp (parser)**, **xử lý theo luồng (streaming)**, **luồng (stream)**, **truy vấn (query)**, **chuyển đổi (transformation)**, **ánh xạ/liên kết (binding)**, **tuần tự hóa (serialization)**, **bộ tuần tự hóa (serializer)**, **chuẩn hóa chính tắc (canonicalization/C14N)**, **cấu hình (configuration)**, **thời gian chạy (runtime)** và **dữ liệu tải (payload)**.
+
+Sau lần giới thiệu đầu tiên, tài liệu ưu tiên cách gọi tiếng Việt ngắn gọn. Các tên chuẩn như XML, DTD, XSD, XPath, XSLT, XQuery, DOM, SAX, StAX, SOAP, WSDL, QName, PSVI, CDATA, namespace URI và tên API cụ thể được giữ nguyên nếu đó là cách gọi chuẩn cần tra cứu.
+
+"""
+
+          def inject(text, guide):
+              if '## Quy ước thuật ngữ Việt–Anh' in text:
+                  return text
+              marker = '\n---\n'
+              idx = text.find(marker)
+              if idx == -1:
+                  return guide + text
+              return text[:idx] + '\n\n' + guide.rstrip() + '\n' + text[idx:]
+
+          for p in html_files:
+              text = p.read_text(encoding='utf-8')
+              text = inject(text, html_guide)
+              p.write_text(text, encoding='utf-8')
+
+          for p in xml_files:
+              text = p.read_text(encoding='utf-8')
+              text = inject(text, xml_guide)
+              p.write_text(text, encoding='utf-8')
+          PY
+
+          git checkout HEAD^ -- .github/workflows/deploy-pages.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add 10_frontend/html 10_frontend/xml .github/workflows/deploy-pages.yml
+          git commit -m "docs(html-xml): restore natural prose and add Vietnamese-English terminology guide"
+          git pull --rebase origin main
+          git push origin main
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
