@@ -59,8 +59,57 @@
   ],
   "allowedDocuments": [
     {
-      "path": "10_backend/java/java_beginner_explained_with_senior_notes.md",
-      "title": "Java: Beginner explained with senior notes",
+      "path": "10_backend/java/java_part1_beginner_rewritten_detailed.md",
+      "title": "Java Core — Part 1: Beginner",
+      "category": "Backend",
+      "language": "vi-en",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "10_backend/java/java_part2_intermediate_rewritten_detailed.md",
+      "title": "Java Core — Part 2: Intermediate",
+      "category": "Backend",
+      "language": "vi-en",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "10_backend/java/java_part3_senior_rewritten_detailed.md",
+      "title": "Java Core — Part 3: Senior",
+      "category": "Backend",
+      "language": "vi-en",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "10_backend/java/java_master_supplement_rewritten_detailed.md",
+      "title": "Java Core — Master Supplement",
+      "category": "Backend",
+      "language": "vi-en",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "10_backend/spring_java/spring_part1_beginner_rewritten_detailed.md",
+      "title": "Spring / Spring Boot — Part 1: Beginner",
+      "category": "Backend",
+      "language": "vi-en",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "10_backend/spring_java/spring_part2_intermediate_rewritten_detailed.md",
+      "title": "Spring / Spring Boot — Part 2: Intermediate",
+      "category": "Backend",
+      "language": "vi-en",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "10_backend/spring_java/spring_part3_senior_rewritten_detailed.md",
+      "title": "Spring / Spring Boot — Part 3: Senior",
+      "category": "Backend",
+      "language": "vi-en",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "10_backend/spring_java/spring_part4_master_supplement_rewritten_detailed.md",
+      "title": "Spring / Spring Boot — Part 4: Master Supplement",
       "category": "Backend",
       "language": "vi-en",
       "rights": "author-confirmed"
