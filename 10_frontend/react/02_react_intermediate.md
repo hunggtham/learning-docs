@@ -241,6 +241,14 @@ UNSAFE_componentWillUpdate()
 
 Vấn đề của chúng là side effect hoặc assumptions trong render-phase work không an toàn với rendering có thể bị restart, suspend hoặc bỏ. Không migrate bằng search-replace. `componentWillMount` thường tách initialization vào constructor/state initializer và side effect vào mount Effect/lifecycle; `componentWillReceiveProps` thường thay bằng render derivation, controlled data hoặc reducer; `componentWillUpdate` thường chuyển sang `componentDidUpdate`, `getSnapshotBeforeUpdate` hoặc layout/effect logic tùy mục tiêu.
 
+## 2B. Effect có lifecycle start/stop riêng, không phải bản sao lifecycle component
+
+Component được mô tả bằng mount/update/unmount, nhưng một Effect nên được đọc như một **synchronization process** có hai hành động: bắt đầu đồng bộ và dừng đồng bộ. Khi dependency thay đổi, React có thể stop process cũ rồi start process mới dù component vẫn là cùng một instance. Vì vậy một Effect kết nối room theo `roomId` nên được hiểu là “giữ connection bên ngoài khớp với `roomId` hiện tại”, không phải “chạy đoạn code này khi update”.
+
+Dependency array không phải lịch hẹn do developer tùy chọn. Nó là mô tả các reactive values mà process đọc. Nếu phải tắt lint để giữ dependency thiếu, thường mental model đang sai: hoặc logic là event nên đặt trong event handler, hoặc value nên được derive trong render, hoặc Effect đang gộp nhiều process độc lập. Một Effect tốt thường có setup/cleanup đối xứng và có thể chạy lại mà không làm hệ thống ngoài bị leak hoặc nhân đôi subscription.
+
+Khi migrate class, đừng ghép máy móc `componentDidMount + componentDidUpdate + componentWillUnmount` vào một Effect chỉ vì tên lifecycle tương ứng. Hãy xác định resource nào cần synchronize, dependency nào làm configuration của resource đó, rồi viết một start/stop cycle cho chính resource ấy.
+
 ## 3. Dependency và stale closure
 
 Mỗi render tạo closure mới. Function trong render nhìn thấy props/state của render đó.
@@ -336,6 +344,14 @@ async function handleSubmit(event) {
 thường tốt hơn pattern set một flag rồi Effect nhìn flag để gọi `postForm()`.
 
 Effect phù hợp khi semantics là: “Vì component hiện đang tồn tại với cấu hình X nên resource bên ngoài phải được đồng bộ với X.”
+
+## 5A. Hook mental model: memory slot theo component identity
+
+Hooks không phải magic function toàn cục. React gắn state/ref/effect bookkeeping với component identity và dựa vào **thứ tự Hook call ổn định** để nối lần render hiện tại với dữ liệu của lần render trước. Đây là lý do Hook phải được gọi ở top level thay vì condition hoặc loop.
+
+Mỗi render tạo closure mới. Hook không “cập nhật biến cũ”; React gọi component lại, trả snapshot mới và các callback của render đó đóng trên snapshot tương ứng. `useRef` là ngoại lệ có object identity ổn định nhưng mutation `current` không yêu cầu render, vì thế ref phù hợp dữ liệu kỹ thuật chứ không phải source of truth cho UI.
+
+Custom Hook chia sẻ **logic và protocol**, không chia sẻ một state instance mặc định. Hai component gọi `useOnlineStatus()` thường có hai Hook instances; nếu chúng cùng subscribe một external store thì source dữ liệu được chia sẻ nằm ở store/subscription layer, không phải do “Hook là global”.
 
 ## 6. `useRef`
 
@@ -594,6 +610,27 @@ dispatch({
 
 Reducer phải pure. Action nên mô tả intent hoặc điều xảy ra thay vì cách mutate chi tiết.
 
+## 9A. Reducer là transition function, không phải Redux thu nhỏ
+
+`useReducer` hữu ích khi nhiều event cùng thay đổi một state model có rule rõ. Reducer nên trả next state từ `(state, action)` mà không làm side effect. Event handler chịu trách nhiệm tạo action; reducer chịu trách nhiệm tính transition; Effect chỉ dùng nếu transition cần đồng bộ một hệ thống bên ngoài sau commit.
+
+```jsx
+function reducer(state, action) {
+  switch (action.type) {
+    case 'renamed':
+      return { ...state, name: action.name };
+    case 'submitted':
+      return { ...state, status: 'submitting' };
+    case 'succeeded':
+      return { ...state, status: 'success' };
+    default:
+      return state;
+  }
+}
+```
+
+Khi state bắt đầu có các trạng thái loại trừ nhau như `idle/loading/success/error`, một field `status` hoặc state machine rõ ràng thường tốt hơn nhiều boolean có thể rơi vào tổ hợp vô nghĩa. Reducer không bắt buộc cho mọi form; nó đáng giá khi transition semantics quan trọng hơn độ ngắn của setter.
+
 ## 10. Context và `useContext`
 
 Context truyền dữ liệu xuyên subtree mà không phải prop drilling qua các tầng không cần dữ liệu đó.
@@ -832,6 +869,14 @@ function Tooltip() {
 ```
 
 Custom Hook tái sử dụng stateful logic mà không tạo thêm wrapper component. Tuy nhiên HOC/render props không phải API bị remove; chúng vẫn hợp lệ khi library/API phù hợp.
+
+## 12B. Custom Hook contract: input, output, ownership và effect boundary
+
+Một Custom Hook tốt không chỉ gom vài Hook calls vào một function. Nó phải có contract rõ: input reactive nào điều khiển behavior, output nào là data hay command, ai sở hữu state, và side effect nằm ở đâu. Tên `use...` nói rằng function tham gia React Hook model; nó không đảm bảo abstraction tốt.
+
+Nếu Hook trả một object mới với nhiều callback mỗi render, consumer dùng memoization có thể bị invalidation liên tục. Nếu Hook giấu network mutation, caller cần biết pending/error/cancellation semantics. Nếu Hook chỉ bọc một dòng `useState`, abstraction có thể không mang thêm domain meaning.
+
+Khi đọc code cũ, HOC và render props thường giải quyết cùng bài toán tái sử dụng stateful logic. Migration sang Hook nên giữ nguyên contract nghiệp vụ trước, sau đó mới giảm wrapper hoặc prop injection; không cần rewrite HOC ổn định chỉ để “trông hiện đại”.
 
 ## 13. `useMemo`, `useCallback`, `memo`
 
