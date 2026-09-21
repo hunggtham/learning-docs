@@ -2,97 +2,75 @@
 
 ## Coverage phải tách inventory khỏi learning content
 
-Atlas có inventory rộng và nhiều country/area file từ các batch trước. Sự tồn tại của file **không đồng nghĩa completed content**.
+Sự tồn tại của `.md` file không đồng nghĩa nội dung hoàn thành. Atlas dùng bốn trạng thái:
 
-Từ canonical audit hiện tại, Atlas dùng bốn trạng thái:
+- **Inventory**: có tên/mã trong index.
+- **Planned**: đáng viết nhưng chưa có full learning content.
+- **Reference**: compact legacy note, không tính completion.
+- **Learning profile**: đạt Definition of Done và dùng được như chapter ứng dụng.
 
-**Inventory** — tên/mã tồn tại trong global inventory; không yêu cầu chapter riêng.
+## Inventory coverage
 
-**Planned** — case có learning value và nằm trong roadmap nhưng chưa đủ chiều sâu.
+Inventory toàn cầu đã rộng theo baseline M49 sử dụng trong project. Không cần sinh thêm file để chứng minh completeness của danh sách.
 
-**Reference** — legacy short file có orientation cơ bản; không nằm trong completion metric.
+## High-value learning profiles hiện tại
 
-**Learning profile** — chapter có causal chain đầy đủ và cross-link core; chỉ trạng thái này được tính hoàn chỉnh.
+Nhóm ưu tiên Korea–Vietnam / East Asia:
 
-## Definition of Done cho Learning Profile
+**Republic of Korea, Viet Nam, China, Japan**.
 
-Profile đủ chuẩn khi:
+Nhóm vừa được promote trong batch hiện tại:
 
-1. Có spatial thesis rõ: territory được tổ chức bởi cấu trúc nào.
-2. Physical base, climate và water được giải thích bằng mechanism.
-3. Resource endowment được nối tới khả năng khai thác, processing và network thay vì chỉ liệt kê.
-4. Settlement/population được giải thích bằng water, relief, accessibility, history và agglomeration.
-5. Economy được nối với production zone, labor, resource, market và institution.
-6. Transport được đọc như node–corridor–hinterland–chokepoint network.
-7. Society/institution được dùng để giải thích cách constraint vật lý được chuyển thành outcome khác nhau.
-8. Hazard được tách thành hazard–exposure–vulnerability.
-9. Có misconception/limitation và mental model.
-10. Có relative links về core + region; tránh số liệu nhanh lỗi thời nếu không có năm/nguồn.
+**Singapore, Indonesia, India**.
 
-Một template có đủ heading nhưng chỉ vài câu không đạt Definition of Done.
+Nhóm global economy đã có profile sâu:
 
-## Learning profiles ưu tiên cao đã có chiều sâu
+**United States, Germany, France, United Kingdom, Italy, Netherlands**.
 
-Các profile trọng tâm hiện có chiều sâu rõ và tiếp tục được xem là canonical learning cases gồm:
+Một số Africa profile đã qua depth pass và giữ giá trị case study, nhưng toàn bộ Africa Atlas chưa được gắn nhãn “completed”; cần QA từng file theo cùng standard.
 
-**East Asia:** Republic of Korea, China, Japan.
+## Planned priority — không tạo skeleton trước
 
-**Southeast Asia:** Viet Nam là case trọng tâm đã được depth-pass sâu; các ASEAN node khác vẫn được re-audit riêng trước khi gắn nhãn completed.
+Các candidates tiếp theo nếu quay lại Atlas:
 
-**North America:** United States.
+**Brazil, Australia, Malaysia, Thailand, Philippines**, sau đó mới cân nhắc Saudi Arabia, Iran, Türkiye, UAE, Egypt, Panama hoặc profile khác dựa trên learning value.
 
-**Major European economies:** Germany, France, United Kingdom, Italy, Netherlands đã được depth-pass thành selective learning profiles.
-
-Một số Africa profile cũng đã được nâng trong các batch trước và được giữ khi có giá trị cơ chế về Sahel, Nile, Congo Basin, Rift, resource belt hoặc landlocked corridor. Tuy nhiên Atlas không dùng “số Africa profile” như metric ưu tiên mới.
-
-## Planned priority queue
-
-Những case nên được promote tiếp theo **chỉ khi có một batch đủ sâu**, không tạo skeleton trước:
-
-**Korea–Vietnam regional network:** Singapore, Indonesia, Malaysia, Thailand, Philippines.
-
-**Global economy:** India, Brazil, Australia và các economy/corridor có learning value rõ.
-
-**Energy/chokepoint:** Saudi Arabia, Iran, Türkiye, United Arab Emirates, Egypt, Panama và các gateway tương tự.
-
-Planned nghĩa “đáng làm sau”, không phải “đã hoàn thành”.
+Planned nghĩa là **không cần file mới** nếu file chưa tồn tại; nếu đã có reference file thì giữ status reference/planned cho tới khi được promote.
 
 ## Legacy short profiles
 
-Nhiều file 3–25 dòng còn tồn tại từ giai đoạn coverage expansion ở Africa, Americas, Asia và Europe. Các file này mặc định là **Reference**, trừ khi đã được depth-pass rõ.
+Các file 3–25 dòng từ giai đoạn coverage được xem là transitional references. Chúng không nằm trong learning route và không được tính completed.
 
-Không dùng line count như Definition of Done, nhưng một file vài dòng chỉ nêu vị trí/khí hậu chắc chắn không đủ làm learning profile.
+Mỗi file sau audit sẽ nhận một trong ba quyết định:
 
-Khi cleanup từng subregion, mỗi file nhận một quyết định:
+**promote** → viết full learning profile;
 
-**promote** → learning profile;
+**merge** → đưa insight vào region/comparative chapter;
 
-**merge** → nhập knowledge vào regional/comparative chapter;
-
-**reference/planned** → giữ navigation nhưng không tính completed;
-
-**remove** → xóa nếu inventory đã đủ và file không thêm learning value.
-
-## Priority theo mechanism, không theo quốc kỳ
-
-Country chỉ đáng ưu tiên nếu giúp học một mechanism có khả năng transfer:
-
-- Korea/Vietnam/China/Japan: demographic transition, manufacturing GVC, port dependency, urban concentration;
-- United States: continental market, resource/transport network, urban hierarchy;
-- Germany/France/UK/Italy/Netherlands: European production/service/port networks;
-- Singapore/Panama/Egypt/Türkiye: gateway/chokepoint logic;
-- Gulf exporters: resource–energy–water–trade nexus;
-- Brazil/Indonesia: tropical continental/archipelagic scale, commodity/resource and urban networks;
-- India: monsoon–population–service/manufacturing–Indian Ocean system.
-
-## Không dùng Atlas để thay Core
-
-Nếu chưa hiểu demographic transition, monsoon, plate tectonics, agglomeration, comparative advantage hoặc chokepoint, phải quay lại core chapter. Profile chỉ minh họa cách nhiều mechanism kết hợp ở một place.
+**remove** → xóa file nếu không tạo learning value ngoài inventory.
 
 ## Completion metric
 
-Metric chính của Atlas là:
+Không dùng số `.md`.
 
-**learning profiles có causal depth + cross-link tốt + khả năng transfer mental model**.
+Theo dõi:
 
-Không dùng tổng số `.md`, tỷ lệ country có file hay số heading làm completion metric.
+- số core/region chapters đạt depth standard;
+- số Atlas learning profiles có causal reasoning;
+- chất lượng relative links/prerequisites;
+- mức trùng lặp giữa region và country;
+- số legacy skeleton được classify/cleanup.
+
+## Profile quality gate
+
+Learning profile phải giải thích:
+
+**relief/tectonics/climate/water → resources → settlement/population → production/economy → transport/corridors → urban hierarchy → trade/external dependency → society/institution → hazards → regional role**.
+
+Nếu chỉ có capital, climate, population và vài bullet economy thì vẫn là Reference.
+
+## Current direction
+
+Core và Regional Geography đang có priority cao hơn Atlas long tail. Atlas chỉ được mở rộng khi profile có giá trị học rõ hoặc liên hệ mạnh với Korea, Vietnam, global economy, resources, trade hay geopolitics.
+
+Xem [Atlas README](./README.md) và [Core Coverage Audit](../CORE_COVERAGE_AUDIT.md).

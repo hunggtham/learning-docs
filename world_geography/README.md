@@ -1,40 +1,34 @@
 # Knowledge Library — Địa lý thế giới
 
-Bộ tài liệu này được tổ chức theo **khái niệm (concept) → cơ chế (mechanism) → quan hệ (relationship) → ứng dụng (application)**. Mục tiêu là hiểu **vì sao** thế giới có các pattern địa hình, khí hậu, dân cư, thành phố, biên giới và mạng kinh tế như hiện nay, thay vì ghi nhớ địa danh hoặc tạo encyclopedia rời rạc.
+Bộ tài liệu này được tổ chức theo **khái niệm (concept) → cơ chế (mechanism) → dependency → relationship → application**. Mục tiêu không phải nhớ country list mà hiểu **vì sao địa hình, khí hậu, tài nguyên, dân cư, thành phố, hạ tầng, thương mại và regional role tạo ra pattern hiện nay**.
 
-> **Mental model trung tâm:** Địa lý là khoa học về **mẫu (pattern) + quá trình (process) + mạng/dòng (network/flow) + quy mô (scale) + bằng chứng (evidence)**.
+> **Mental model trung tâm:** Geography = **pattern + process + network/flow + scale + evidence**.
 
-## Canonical source
+## Cách dùng library
 
-Nội dung World Geography hiện được phát triển trên branch `feature/world-geography-knowledge-library`. Các branch `feature/world-geography-africa-*` và `feature/world-geography-americas-batch` là nhánh lịch sử đã nằm phía sau canonical branch và không phải nguồn tiếp tục phát triển.
+Nếu học từ đầu, bắt đầu ở [Learning Route](./LEARNING_ROUTE.md). Nếu muốn biết chỗ nào còn yếu, xem [Core Coverage Audit](./CORE_COVERAGE_AUDIT.md).
 
-`main` có thể tiến nhanh vì các Knowledge Library khác; việc `main` có commit mới hơn không đồng nghĩa nội dung Geography ở đó mới hơn. Khi merge sau này phải so sánh tree/commit thực tế, không suy từ timestamp.
+World Atlas là **application layer**, không phải tiêu chí completion. Một file country ngắn không được tính là chapter hoàn chỉnh chỉ vì nó tồn tại.
 
-## Bắt đầu ở đâu?
+## Kiến trúc
 
-Đọc [Learning Route](./LEARNING_ROUTE.md) nếu học từ đầu hoặc muốn biết dependency. Xem [Core Coverage Audit](./CORE_COVERAGE_AUDIT.md) để biết phần nào đã sâu và phần nào cần audit tiếp.
+`00_foundations` xây geographic thinking, scale, location, coordinates, time zones, cartography, projection, GIS, geospatial data và remote sensing.
 
-World Atlas là **application layer**, không phải foundation. Không cần đọc mọi country file để “học hết địa lý”.
+`01_physical_geography` giải thích tectonics, geomorphology, atmosphere, weather, climate, hydrology, oceans/coasts, soils/ecosystems và hazards/risk.
 
-## Kiến trúc Knowledge Library
+`02_human_geography` đi từ population–migration–urbanization tới culture, political/economic geography, agriculture, industry/energy/resources, transport/trade và development/inequality.
 
-`00_foundations` xây geographic thinking, scale, location, coordinates, time zones, cartography, map projection, GIS, geospatial data và remote sensing.
+`03_regions` tổng hợp core mechanism vào regional systems. Region chapter phải giải thích **physical base → resources/water → settlement → economy → transport → urban network → trade → regional role**, không phải country encyclopedia.
 
-`01_physical_geography` giải thích Earth systems, geological time, plate tectonics, geomorphology, atmosphere, weather, climate, hydrology, oceans/coasts, soils, biomes, ecosystems và natural-hazard risk.
+`04_global_systems` nghiên cứu system vượt border: climate change, Water–Food–Energy Nexus, chokepoints/resources, global cities, sustainability và [global trade networks](./04_global_systems/05_global_trade_networks.md).
 
-`02_human_geography` đi từ population–migration–urbanization sang culture/language/religion, political/economic geography, agriculture/food systems, industry/resources/energy, transport/trade/globalization và development/inequality.
+`05_earth_global_geography` mở rộng sang Địa cầu như một vật thể: geodesy, rotation/orbit, continental–ocean structure, relief, planetary circulation, gravity/geoid, magnetic field, reference systems và human footprint.
 
-`03_regions` tổng hợp các mechanism để đọc region. Mỗi region phải nối **physical geography → resources/water → settlement → economy → transport → society → regional role**, không trở thành danh sách quốc gia.
-
-`04_global_systems` nghiên cứu system vượt biên giới: climate change, Water–Food–Energy nexus, resource/chokepoint networks, global cities/trade networks và sustainability.
-
-`05_earth_global_geography` mở rộng sang Địa cầu như một vật thể hành tinh: geodesy, rotation/orbit/seasons, reference systems, continents/ocean basins, global relief, water–energy circulation, gravity/geoid, magnetic field và human footprint.
-
-`06_world_atlas` dùng country/territory như case study có chọn lọc. Inventory có thể rộng, nhưng profile chỉ được coi hoàn chỉnh khi đạt chuẩn learning chapter. Xem [Atlas coverage status](./06_world_atlas/03_coverage_status.md).
+`06_world_atlas` dùng country/territory như case study có chọn lọc. Xem [Atlas coverage status](./06_world_atlas/03_coverage_status.md).
 
 `90_connections` nối Geography với Math/Statistics, IT/GIS/Data, Economics/Finance và mental models tổng hợp.
 
-## Sơ đồ dependency
+## Dependency graph
 
 ```mermaid
 graph TD
@@ -49,50 +43,53 @@ graph TD
   A --> I[Population]
   I --> J[Migration / Urbanization / Culture]
   J --> K[Economic / Political geography]
-  K --> L[Agriculture / Industry / Trade]
+  K --> L[Agriculture / Industry / Transport]
   L --> M[Development / Inequality]
-  B --> N[Earth / Global Geography]
-  D --> O[Regional geography]
-  E --> O
-  M --> O
-  N --> O
-  O --> P[Global systems]
-  B --> Q[GIS / IT / Data applications]
-  P --> R[Selective World Atlas cases]
+  D --> N[Regional geography]
+  E --> N
+  M --> N
+  N --> O[Global systems]
+  O --> T[Global trade networks]
+  B --> P[GIS / Data applications]
+  T --> Q[Selective World Atlas]
 ```
 
-## Standard causal chain cho Regional Geography và Atlas
+## Chuỗi causal bắt buộc cho chapter ứng dụng
 
-Khi viết hoặc audit region/profile, ưu tiên chuỗi:
+Khi viết region hoặc country profile, ưu tiên chuỗi:
 
-**physical base → climate/water → resources → settlement/population → production/economy → transport/network → society/institutions → regional/global role → hazards/transformation**.
+**địa hình / khí hậu / nước → tài nguyên và constraint → phân bố dân cư → production/economy → transport corridor → urban system → trade network → society/institution → regional/global role → hazard/transformation**.
 
-Chuỗi này không có nghĩa môi trường quyết định xã hội. Physical geography tạo constraint và opportunity; history, technology, institutions và network quyết định cách các constraint đó được chuyển thành outcome.
+Đây không phải linear determinism. Institution, technology và history có thể thay đổi hoặc đảo chiều từng arrow.
 
-## Cách đánh giá chất lượng chapter
+## Trạng thái sau các depth pass gần nhất
 
-Một chapter tốt phải trả lời được: khái niệm là gì; vì sao cần nó; cơ chế hoạt động thế nào; biến/flow/constraint nào quan trọng; ở scale nào kết luận có thể đổi; dữ liệu đo bằng gì; limitation và misconception ở đâu; nó nối với prerequisite/application chapter nào.
+Core không còn lỗ hổng lớn kiểu “có file nhưng chỉ định nghĩa”. Earth Systems và Natural Hazards vừa được nâng sâu thêm về system boundary, timescale, critical-zone coupling, expected loss, dynamic vulnerability và critical-infrastructure dependency.
+
+Human Geography vừa được integration pass ở Culture, Political Geography, Economic Geography và Transport/Trade để các chapter nối trực tiếp physical constraint–settlement–production–network.
+
+Regional Geography vừa được nâng ở Europe, Africa, North America và Latin America/Caribbean; South/Central/West Asia đã được nâng ở batch trước. East Asia và Southeast Asia tiếp tục là reference standard cho Korea–Vietnam route.
+
+Global Systems hiện có chapter riêng về [Mạng thương mại toàn cầu](./04_global_systems/05_global_trade_networks.md), nối production tiers, resources, ports, inventory, finance, cities và systemic risk.
+
+Atlas vừa nâng Singapore, Indonesia và India; không tăng số skeleton.
+
+## Quy tắc chất lượng
+
+Một chapter tốt phải trả lời: khái niệm là gì; mechanism nào tạo pattern; stock/flow/node/boundary nào quan trọng; scale nào làm kết luận đổi; evidence đo bằng gì; limitation/misconception ở đâu; chapter nối sang system nào.
 
 Số file, số heading và số dòng không phải metric chất lượng.
 
 ## Quy tắc ngôn ngữ
 
-Phần giải thích dùng tiếng Việt tự nhiên. Thuật ngữ tiếng Anh được giữ như keyword bổ sung khi giúp tra cứu, ví dụ `khả năng tiếp cận (accessibility)`, `tự tương quan không gian (spatial autocorrelation)`. Code, công thức, acronym và canonical name giữ nguyên khi dịch làm mất chính xác.
+Giải thích chính bằng tiếng Việt tự nhiên. English keyword giữ trong ngoặc khi giúp tra cứu, ví dụ `khả năng tiếp cận (accessibility)`, `tự tương quan không gian (spatial autocorrelation)`, `chuỗi giá trị toàn cầu (global value chain)`.
 
-## Nội dung thay đổi theo thời gian
-
-Core ưu tiên kiến thức tương đối bền vững. Population, GDP, trade share, current government, current border/dispute status hoặc ranking nếu được dùng phải có mốc thời gian và nguồn phù hợp. Atlas không nên trở thành snapshot nhanh lỗi thời.
-
-## Trạng thái audit hiện tại
-
-Foundations, Physical Geography, Human Geography và Global Systems đã có depth pass tương đối đồng đều. Earth/Global Geography vừa được nâng thêm ở continents/ocean basins, hypsometry và planetary water–energy circulation. Regional Geography vừa được cân bằng thêm ở South Asia, Central Asia và West Asia; East Asia và Southeast Asia vẫn là reference standard vì liên hệ trực tiếp Korea–Vietnam.
-
-Khoảng trống tiếp theo chủ yếu là **cross-link consistency, comparative regional synthesis và cleanup Atlas legacy stubs**, không phải thiếu chapter nền tảng.
+Code, formula, acronym, proper noun và canonical technical name giữ nguyên nếu dịch làm mất chính xác.
 
 ## Roadmap tiếp theo
 
-Thứ tự ưu tiên:
+Ưu tiên sau batch hiện tại:
 
-**cross-link audit → comparative regional chapters → selective high-value Atlas depth → cleanup/merge legacy stubs**.
+**physical cross-link QA → Oceania/Polar regional depth → Development/Agriculture/Energy integration QA → selective Brazil/Australia/Malaysia/Thailand/Philippines profiles nếu đạt learning-profile standard → Atlas cleanup các reference stub → link validation**.
 
-Không quay lại chiến lược tạo hàng trăm country skeleton.
+Không quay lại chiến lược sinh hàng trăm country skeleton.
