@@ -1,301 +1,293 @@
 # Hệ thống tài chính ngoài ngân hàng tại Hàn Quốc (Securities, Insurance, Asset Management / 증권·보험·자산운용)
 
-Nếu chỉ nhìn ngân hàng, ta sẽ bỏ sót một phần rất lớn của cách capital di chuyển trong nền kinh tế Hàn Quốc. Doanh nghiệp không chỉ vay tiền từ bank. Họ còn phát hành bond, issue shares, securitize assets, raise private capital, mua bảo hiểm, dùng derivatives, nhận underwriting từ securities firms và được định giá rủi ro bởi credit-rating agencies. Ở phía đối diện, household và institutional investors đưa tiền vào funds, pension products, insurance contracts và securities accounts. Vì vậy hệ thống tài chính thực tế là một network gồm **banks, securities companies, insurers, asset managers, pension funds, credit-rating agencies, exchanges, clearing systems và regulators**.
+Nếu chỉ nhìn ngân hàng, ta sẽ bỏ sót một phần rất lớn cách vốn di chuyển trong nền kinh tế Hàn Quốc. Doanh nghiệp không chỉ vay ngân hàng. Họ còn phát hành trái phiếu, phát hành cổ phiếu, chứng khoán hóa tài sản, huy động vốn tư nhân, mua bảo hiểm, dùng công cụ phái sinh, nhận dịch vụ bảo lãnh phát hành từ công ty chứng khoán và được đánh giá rủi ro bởi tổ chức xếp hạng tín nhiệm.
 
-Chapter này nối trực tiếp với [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md), nhưng tập trung vào phần **market-based finance / 시장성 금융** và các institution ngoài ngân hàng.
+Ở phía còn lại, hộ gia đình và nhà đầu tư tổ chức đưa tiền vào quỹ, sản phẩm hưu trí, hợp đồng bảo hiểm và tài khoản chứng khoán. Vì vậy hệ thống tài chính thực tế là một mạng lưới gồm **ngân hàng, công ty chứng khoán, công ty bảo hiểm, công ty quản lý tài sản, quỹ hưu trí, tổ chức xếp hạng tín nhiệm, sở giao dịch, hệ thống thanh toán bù trừ và cơ quan quản lý**.
 
-## 1. Tại sao nền kinh tế cần nhiều loại financial intermediary?
+Chapter này nối trực tiếp với [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md), nhưng tập trung vào **tài chính dựa trên thị trường (market-based finance / 시장성 금융)** và các tổ chức ngoài ngân hàng.
 
-Nếu mọi company chỉ có thể vay bank, allocation of capital sẽ phụ thuộc quá nhiều vào balance sheet và risk appetite của banking system. Market-based finance giúp mở thêm kênh vốn cho những firm lớn, firm tăng trưởng cao hoặc project có profile không phù hợp với traditional bank lending.
+## 1. Vì sao nền kinh tế cần nhiều loại trung gian tài chính?
 
-Một cách nhìn đơn giản:
+Nếu mọi doanh nghiệp chỉ có thể vay ngân hàng, việc phân bổ vốn sẽ phụ thuộc quá nhiều vào bảng cân đối và mức chấp nhận rủi ro của hệ thống ngân hàng. Tài chính dựa trên thị trường mở thêm kênh vốn cho doanh nghiệp lớn, doanh nghiệp tăng trưởng cao hoặc dự án có đặc điểm không phù hợp với khoản vay ngân hàng truyền thống.
 
 ```text
-Household / institution có vốn
+Hộ gia đình / tổ chức có vốn
           ↓
-Bank deposit / fund / insurance / securities account
+Tiền gửi / quỹ / bảo hiểm / tài khoản chứng khoán
           ↓
-Financial intermediary / market
+Trung gian tài chính / thị trường
           ↓
-Loan / bond / equity / structured product
+Khoản vay / trái phiếu / cổ phiếu / sản phẩm cấu trúc
           ↓
-Company / project / household borrower
+Doanh nghiệp / dự án / người đi vay
 ```
 
-Mỗi intermediary giải một problem khác nhau. Bank xử lý maturity transformation và credit screening. Securities firm giúp issuance, trading và market making. Asset manager gom vốn rồi đầu tư theo mandate. Insurer nhận premium đổi lấy risk protection và trở thành long-duration investor. Credit-rating agency giảm một phần information asymmetry giữa issuer và bond investor.
+Mỗi loại trung gian giải một bài toán khác nhau. Ngân hàng thực hiện chuyển đổi kỳ hạn và sàng lọc tín dụng. Công ty chứng khoán hỗ trợ phát hành, giao dịch và tạo lập thị trường. Công ty quản lý tài sản gom vốn và đầu tư theo nhiệm vụ được giao. Công ty bảo hiểm nhận phí bảo hiểm để đổi lấy việc gánh rủi ro và đồng thời trở thành nhà đầu tư dài hạn. Tổ chức xếp hạng tín nhiệm giúp giảm một phần bất cân xứng thông tin giữa tổ chức phát hành và nhà đầu tư trái phiếu.
 
-## 2. Securities company là gì? (Securities Firm / 증권사)
+## 2. Công ty chứng khoán là gì? (Securities Firm / 증권사)
 
-Một **securities company / 증권회사·증권사** không chỉ là app mua cổ phiếu. Business của họ thường có nhiều engine khác nhau: brokerage, investment banking, underwriting, wealth management, trading, derivatives, structured finance, prime brokerage và đôi khi real-estate/project finance exposure.
+Một **công ty chứng khoán (securities company / 증권회사·증권사)** không chỉ là ứng dụng mua bán cổ phiếu. Mô hình kinh doanh có thể gồm môi giới, ngân hàng đầu tư, bảo lãnh phát hành, quản lý tài sản cá nhân, giao dịch tự doanh, phái sinh, tài chính cấu trúc, prime brokerage và đôi khi cả bất động sản/PF.
 
-Điều này quan trọng vì cùng một securities firm có thể có revenue rất khác theo cycle. Khi stock trading boom, brokerage commissions tăng. Khi IPO/M&A mạnh, investment-banking fees tăng. Khi bond yield hoặc asset prices biến động mạnh, proprietary trading result có thể đổi nhanh. Khi real-estate PF xấu đi, credit cost hoặc valuation loss có thể xuất hiện.
+Điều này quan trọng vì doanh thu của cùng một công ty chứng khoán có thể thay đổi mạnh theo chu kỳ. Khi giao dịch cổ phiếu bùng nổ, phí môi giới tăng. Khi IPO/M&A mạnh, phí ngân hàng đầu tư tăng. Khi lợi suất trái phiếu hoặc giá tài sản biến động, kết quả tự doanh có thể thay đổi nhanh. Khi bất động sản PF suy yếu, chi phí tín dụng hoặc lỗ đánh giá lại có thể xuất hiện.
 
-Vì vậy không nên nhìn một 증권사 như “brokerage business” duy nhất.
+Vì vậy không nên xem một `증권사` chỉ là “công ty môi giới”.
 
-## 3. Brokerage và transaction economics
+## 3. Môi giới và kinh tế giao dịch
 
-**Brokerage / 위탁매매** tạo revenue khi client giao dịch securities. Revenue thường liên quan tới trading volume, fee rate, margin financing và asset mix.
-
-Một mental model:
+**Môi giới (brokerage / 위탁매매)** tạo doanh thu khi khách hàng giao dịch chứng khoán. Doanh thu thường liên quan tới khối lượng giao dịch, mức phí hiệu dụng, cho vay ký quỹ và cơ cấu tài sản giao dịch.
 
 \[
-Brokerage\ Revenue \approx Trading\ Volume \times Effective\ Fee\ Rate
+Doanh\ thu\ môi\ giới \approx Khối\ lượng\ giao\ dịch \times Mức\ phí\ hiệu\ dụng
 \]
 
-Nhưng fee rate có thể giảm vì competition. Do đó growth của brokerage không chỉ đến từ volume mà còn từ margin lending, overseas securities, wealth products và cross-selling.
+Mức phí có thể giảm do cạnh tranh. Vì vậy tăng trưởng môi giới không chỉ đến từ khối lượng mà còn từ cho vay ký quỹ, chứng khoán nước ngoài, sản phẩm quản lý tài sản và bán chéo.
 
-Nếu revenue phụ thuộc quá mạnh vào retail trading activity, earnings sẽ cyclical hơn một wealth-management model có recurring assets-under-management fee.
+Nếu doanh thu phụ thuộc quá mạnh vào hoạt động giao dịch của nhà đầu tư cá nhân, lợi nhuận sẽ mang tính chu kỳ cao hơn mô hình quản lý tài sản có phí định kỳ trên AUM.
 
-## 4. Investment Banking: underwriting, IPO, bond và M&A
+## 4. Ngân hàng đầu tư: bảo lãnh phát hành, IPO, trái phiếu và M&A
 
-**Investment Banking / IB / 투자은행 업무** là business giúp client huy động vốn hoặc thực hiện transaction.
+**Ngân hàng đầu tư (Investment Banking / IB / 투자은행 업무)** hỗ trợ khách hàng huy động vốn hoặc thực hiện giao dịch doanh nghiệp.
 
-Khi company IPO, issue corporate bonds, rights issue hoặc làm acquisition, securities firm có thể đóng vai trò arranger, underwriter hoặc advisor.
+Khi doanh nghiệp IPO, phát hành trái phiếu, tăng vốn hoặc mua lại doanh nghiệp khác, công ty chứng khoán có thể đóng vai trò thu xếp, bảo lãnh phát hành hoặc tư vấn.
 
-Underwriter không chỉ “giới thiệu nhà đầu tư”. Họ phải structure deal, assess pricing, market security, coordinate disclosure và trong một số case chịu underwriting risk nếu securities không bán hết.
+Đơn vị bảo lãnh không chỉ “giới thiệu nhà đầu tư”. Họ phải cấu trúc giao dịch, đánh giá mức giá, phân phối chứng khoán, phối hợp công bố thông tin và trong một số trường hợp chịu rủi ro nếu chứng khoán không bán hết.
 
-Một deal tốt cho issuer chưa chắc tốt cho underwriter nếu risk được price quá thấp. Ngược lại, underwriting fee cao nhưng deal fail có thể gây reputation cost.
+Một thương vụ tốt cho tổ chức phát hành chưa chắc tốt cho bên bảo lãnh nếu rủi ro được định giá quá thấp. Ngược lại, phí bảo lãnh cao nhưng giao dịch thất bại có thể tạo chi phí danh tiếng.
 
-## 5. Proprietary trading và market risk
+## 5. Tự doanh và rủi ro thị trường
 
-Nhiều securities firms giữ bond, equity, derivatives hoặc structured positions trên balance sheet. Khi đó firm không chỉ nhận fee mà còn chịu **market risk / 시장위험**.
+Nhiều công ty chứng khoán nắm giữ trái phiếu, cổ phiếu, phái sinh hoặc sản phẩm cấu trúc trên bảng cân đối. Khi đó doanh nghiệp không chỉ nhận phí mà còn chịu **rủi ro thị trường (market risk / 시장위험)**.
 
-Nếu interest rate tăng, giá bond fixed-rate giảm. Nếu volatility tăng, derivative books có thể thay đổi value nhanh. Nếu funding ngắn hạn nhưng asset dài hạn, liquidity risk xuất hiện tương tự bank nhưng cấu trúc khác.
+Nếu lãi suất tăng, giá trái phiếu lãi cố định giảm. Nếu biến động thị trường tăng, giá trị sổ phái sinh có thể thay đổi nhanh. Nếu nguồn vốn ngắn hạn dùng để tài trợ tài sản dài hạn, rủi ro thanh khoản xuất hiện tương tự ngân hàng nhưng với cấu trúc khác.
 
-Điểm cần nhớ:
+> Công ty chứng khoán có thể trông giống một doanh nghiệp “ít tài sản, nhiều phí” trên báo cáo kết quả kinh doanh, nhưng bảng cân đối vẫn có thể chứa lượng rủi ro rất lớn.
 
-> Securities company có thể nhìn giống “asset-light fee business” ở income statement nhưng thực tế balance sheet vẫn rất quan trọng.
+## 6. Tài chính cấu trúc và Project Finance
 
-## 6. Structured finance và Project Finance
+Công ty chứng khoán Hàn Quốc có thể tham gia **tài chính cấu trúc (structured finance / 구조화금융)**, chứng khoán hóa hoặc bất động sản PF.
 
-Korean securities firms có thể tham gia **structured finance / 구조화금융**, securitization hoặc real-estate PF. Đây là khu vực cần đọc kỹ vì return cao thường đi kèm complexity cao.
-
-Một PF structure có thể gồm:
+Một cấu trúc PF có thể gồm:
 
 ```text
-Developer / Sponsor
-       ↓ equity
-Project SPV
-       ↓ bridge financing
-Land acquisition / permits
+Chủ đầu tư / nhà tài trợ
+       ↓ vốn chủ sở hữu
+SPV dự án
+       ↓ vốn cầu nối
+Mua đất / giấy phép
        ↓
-Main PF
+PF chính
        ↓
-Construction / presales / completion
+Xây dựng / bán trước / hoàn thành
 ```
 
-Securities firm có thể arrange loan, provide guarantee, purchase securitized paper hoặc hold mezzanine risk. Vì vậy analyst phải phân biệt direct loan, guarantee, contingent liability và off-balance-sheet commitment.
+Công ty chứng khoán có thể thu xếp khoản vay, cung cấp bảo lãnh, mua chứng khoán hóa hoặc nắm phần rủi ro trung gian (mezzanine). Vì vậy phải phân biệt khoản vay trực tiếp, bảo lãnh, nghĩa vụ tiềm tàng và cam kết ngoài bảng cân đối.
 
 Xem thêm [`18_construction_real_estate_and_project_finance.md`](./18_construction_real_estate_and_project_finance.md).
 
-## 7. Asset Management là gì? (Asset Management / 자산운용)
+## 7. Quản lý tài sản là gì? (Asset Management / 자산운용)
 
-**Asset manager / 자산운용사** quản lý tiền của investor theo mandate. Họ không sở hữu toàn bộ asset bằng equity của chính mình; phần lớn tài sản thuộc fund investors.
+**Công ty quản lý tài sản (asset manager / 자산운용사)** quản lý tiền của nhà đầu tư theo mục tiêu và giới hạn đã thống nhất. Công ty không sở hữu toàn bộ tài sản đó bằng vốn của chính mình; phần lớn tài sản thuộc nhà đầu tư trong quỹ.
 
-Business model thường dựa trên **Assets Under Management / AUM / 운용자산** và fee rate:
+Mô hình doanh thu thường dựa trên **tài sản đang quản lý (Assets Under Management / AUM / 운용자산)** và mức phí:
 
 \[
-Management\ Fee \approx AUM \times Fee\ Rate
+Phí\ quản\ lý \approx AUM \times Mức\ phí
 \]
 
-Do đó revenue có thể tăng vì net inflow hoặc asset price tăng. Ngược lại, market giảm vừa làm AUM giảm vừa có thể gây redemption.
+Doanh thu có thể tăng vì dòng vốn ròng vào quỹ hoặc vì giá tài sản tăng. Ngược lại, thị trường giảm vừa làm AUM giảm vừa có thể gây rút vốn.
 
-Điểm khác với manufacturing company là asset manager có thể có operating leverage rất cao: thêm AUM không luôn cần tăng headcount tương ứng.
+Khác với sản xuất, công ty quản lý tài sản có thể có đòn bẩy hoạt động cao: thêm AUM không nhất thiết phải tăng nhân sự tương ứng.
 
-## 8. Active vs Passive
+## 8. Quản lý chủ động và thụ động
 
-**Active management / 액티브 운용** cố gắng outperform benchmark thông qua security selection, allocation hoặc timing. **Passive management / 패시브 운용** chủ yếu tracking index.
+**Quản lý chủ động (active management / 액티브 운용)** cố gắng vượt chuẩn tham chiếu thông qua lựa chọn chứng khoán, phân bổ tài sản hoặc thời điểm. **Quản lý thụ động (passive management / 패시브 운용)** chủ yếu bám theo chỉ số.
 
-Passive thường fee thấp hơn, nên economics dựa nhiều vào scale. Active có fee cao hơn nhưng phải chứng minh value sau cost.
+Quỹ thụ động thường có phí thấp hơn nên kinh tế dựa nhiều vào quy mô. Quỹ chủ động có thể thu phí cao hơn nhưng phải chứng minh giá trị sau chi phí.
 
-Điều này tạo pressure dài hạn lên traditional active managers: nếu alpha không bền vững, investor chuyển sang low-cost index products.
+Nếu khả năng tạo lợi suất vượt trội (alpha) không bền vững, nhà đầu tư có xu hướng chuyển sang sản phẩm chỉ số chi phí thấp. Đây là áp lực dài hạn đối với nhà quản lý chủ động truyền thống.
 
-## 9. ETF và ecosystem
+## 9. ETF và hệ sinh thái vận hành
 
-ETF không chỉ là một ticker trên exchange. Nó là ecosystem gồm sponsor/asset manager, authorized participants, liquidity providers, custodian và underlying market.
+ETF không chỉ là một mã chứng khoán trên sàn. Nó là hệ sinh thái gồm công ty quản lý tài sản, thành viên được ủy quyền (authorized participant), nhà cung cấp thanh khoản, ngân hàng lưu ký và thị trường tài sản cơ sở.
 
-ETF price có thể lệch NAV trong ngắn hạn, nhưng creation/redemption mechanism giúp arbitrage kéo price về gần underlying value.
+Giá ETF có thể lệch NAV trong ngắn hạn, nhưng cơ chế tạo/rút chứng chỉ quỹ giúp hoạt động arbitrage kéo giá lại gần giá trị tài sản cơ sở.
 
-Khi phân tích ETF business của asset manager, câu hỏi không chỉ là “fund performance tốt không” mà còn là:
+Khi phân tích mảng ETF của công ty quản lý tài sản, cần xem:
 
-- AUM growth;
-- market share;
-- fee compression;
-- product differentiation;
-- distribution power;
-- liquidity và tracking quality.
+- tăng trưởng AUM;
+- thị phần;
+- áp lực giảm phí;
+- khác biệt sản phẩm;
+- sức mạnh phân phối;
+- thanh khoản và chất lượng bám chỉ số.
 
-## 10. Insurance: risk transfer trước, investment sau
+## 10. Bảo hiểm: chuyển giao rủi ro trước, đầu tư sau
 
-**Insurance / 보험** có logic khác bank và securities company. Customer trả premium để transfer một risk contractually defined sang insurer.
+**Bảo hiểm (insurance / 보험)** có logic khác ngân hàng và công ty chứng khoán. Khách hàng trả phí để chuyển một rủi ro được định nghĩa trong hợp đồng sang công ty bảo hiểm.
 
-Hai broad groups là **life insurance / 생명보험** và **non-life insurance / 손해보험**.
+Hai nhóm lớn là **bảo hiểm nhân thọ (life insurance / 생명보험)** và **bảo hiểm phi nhân thọ (non-life insurance / 손해보험)**.
 
-Insurer nhận premium hôm nay nhưng có thể phải trả claim nhiều năm sau. Vì vậy họ vừa là risk underwriter vừa là long-duration asset allocator.
-
-Mental model:
+Công ty bảo hiểm nhận phí hôm nay nhưng có thể phải trả quyền lợi nhiều năm sau. Vì vậy họ vừa là đơn vị định giá rủi ro vừa là nhà đầu tư dài hạn.
 
 ```text
-Premium inflow
+Dòng phí bảo hiểm
    ↓
-Reserve / liability recognition
+Ghi nhận dự phòng / nghĩa vụ
    ↓
-Investment portfolio earns return
+Danh mục đầu tư tạo lợi suất
    ↓
-Claims + expenses + capital requirement
+Bồi thường + chi phí + yêu cầu vốn
 ```
 
-## 11. Underwriting economics
+## 11. Kinh tế thẩm định bảo hiểm
 
-Đối với non-life insurance, một metric trực quan là **combined ratio**:
+Với bảo hiểm phi nhân thọ, một chỉ số trực quan là **tỷ lệ kết hợp (combined ratio)**:
 
 \[
 Combined\ Ratio = Loss\ Ratio + Expense\ Ratio
 \]
 
-Nếu dưới 100%, underwriting business trước investment income đang profitable. Nếu trên 100%, insurer cần investment income hoặc pricing adjustment để bù.
+Nếu dưới 100%, hoạt động bảo hiểm cốt lõi trước thu nhập đầu tư đang có lãi. Nếu trên 100%, doanh nghiệp cần thu nhập đầu tư hoặc điều chỉnh giá để bù.
 
-Nhưng không nên mechanical. Product mix, reserve development, catastrophes và regulatory accounting có thể làm ratio biến động.
+Tuy nhiên không nên đọc máy móc. Cơ cấu sản phẩm, thay đổi dự phòng, thảm họa và chuẩn mực kế toán có thể làm tỷ lệ biến động.
 
-## 12. Life insurer và duration mismatch
+## 12. Bảo hiểm nhân thọ và lệch kỳ hạn
 
-Life insurer bán long-term liabilities. Nếu guarantee cho policyholder một mức return tương đối cao nhưng portfolio yield giảm lâu dài, spread compression xuất hiện.
+Công ty bảo hiểm nhân thọ bán các nghĩa vụ rất dài hạn. Nếu cam kết mức lợi suất tương đối cao với người mua trong khi lợi suất danh mục đầu tư giảm trong thời gian dài, biên chênh lệch bị thu hẹp.
 
-Đây là **asset-liability management / ALM / 자산부채관리** problem.
+Đây là bài toán **quản lý tài sản–nợ phải trả (Asset-Liability Management / ALM / 자산부채관리)**.
 
-Insurer phải match duration, currency và cash-flow characteristics giữa assets và liabilities. Nếu liabilities rất dài nhưng asset duration ngắn hơn, reinvestment risk tăng.
+Công ty bảo hiểm phải khớp kỳ hạn, loại tiền và đặc tính dòng tiền giữa tài sản và nghĩa vụ. Nếu nghĩa vụ rất dài nhưng tài sản có kỳ hạn ngắn hơn, rủi ro tái đầu tư tăng.
 
-## 13. Float và investment portfolio
+## 13. Float và danh mục đầu tư
 
-Premium được giữ trước khi claim được trả tạo ra **float**. Float có economic value nếu insurer underwrite discipline tốt và đầu tư thận trọng.
+Phần phí bảo hiểm được giữ trước khi chi trả quyền lợi tạo ra **float**. Float có giá trị kinh tế nếu doanh nghiệp định phí kỷ luật và đầu tư thận trọng.
 
-Nhưng float không phải “free money”. Nó là liability-backed capital. Nếu claim assumptions sai hoặc asset quality xấu, losses có thể xuất hiện đồng thời ở cả underwriting và investment side.
+Nhưng float không phải “tiền miễn phí”. Nó là nguồn vốn đi kèm nghĩa vụ. Nếu giả định bồi thường sai hoặc chất lượng tài sản kém, tổn thất có thể xuất hiện đồng thời ở cả hoạt động bảo hiểm lẫn đầu tư.
 
-## 14. Reinsurance
+## 14. Tái bảo hiểm
 
-Insurer có thể chuyển một phần risk sang **reinsurer / 재보험사**. Reinsurance giúp giảm tail risk và capital volatility.
+Công ty bảo hiểm có thể chuyển một phần rủi ro sang **công ty tái bảo hiểm (reinsurer / 재보험사)**. Tái bảo hiểm giúp giảm rủi ro đuôi dài và biến động nhu cầu vốn.
 
-Ví dụ, một insurer không muốn giữ toàn bộ exposure của một natural-disaster portfolio nên cede một phần premium để reinsurer gánh một phần loss.
+Ví dụ, doanh nghiệp không muốn giữ toàn bộ rủi ro từ danh mục thiên tai nên nhượng một phần phí bảo hiểm để đơn vị tái bảo hiểm gánh một phần tổn thất.
 
-Điều này giống risk-sharing layer chứ không phải loại bỏ risk khỏi system.
+Đây là một lớp chia sẻ rủi ro, không phải xóa rủi ro khỏi toàn hệ thống.
 
-## 15. Credit-card, consumer finance và specialized finance
+## 15. Thẻ tín dụng, tài chính tiêu dùng và tài chính chuyên biệt
 
-Ngoài bank/securities/insurance, Korea còn có **credit-card companies / 카드사**, capital companies và specialized finance firms.
+Ngoài ngân hàng, chứng khoán và bảo hiểm, Hàn Quốc còn có **công ty thẻ (credit-card company / 카드사)**, công ty tài chính và các tổ chức tài chính chuyên biệt.
 
-Economics của credit-card company thường kết hợp merchant fees, revolving/loan income, installment finance và credit losses.
+Kinh tế của công ty thẻ thường kết hợp phí từ người bán, thu nhập từ dư nợ quay vòng/khoản vay, trả góp và tổn thất tín dụng.
 
-Khi household credit quality xấu, delinquency và provisioning tăng. Vì vậy consumer-finance business nhạy với labor market, household debt, policy rate và regulation.
+Khi chất lượng tín dụng hộ gia đình xấu đi, nợ quá hạn và trích lập dự phòng tăng. Vì vậy tài chính tiêu dùng nhạy với thị trường lao động, nợ hộ gia đình, lãi suất chính sách và quy định.
 
-## 16. Pension funds và institutional capital
+## 16. Quỹ hưu trí và vốn của nhà đầu tư tổ chức
 
-Pension capital có investment horizon dài hơn household trading capital. Điều này giúp pension funds trở thành important institutional investor trong domestic và global markets.
+Quỹ hưu trí có thời hạn đầu tư dài hơn hoạt động giao dịch ngắn hạn của hộ gia đình. Vì vậy đây là nguồn vốn tổ chức quan trọng trên cả thị trường trong nước và quốc tế.
 
-Một pension system phải giải đồng thời ba bài toán:
+Một hệ thống hưu trí phải giải đồng thời ba bài toán:
 
-1. liability dài hạn;
-2. contribution inflow/outflow;
-3. investment return phù hợp risk tolerance.
+1. nghĩa vụ dài hạn;
+2. dòng tiền đóng góp và chi trả;
+3. lợi suất đầu tư phù hợp mức chịu rủi ro.
 
-Nếu demographics aging nhanh, cash-flow structure của pension cũng thay đổi. Vì vậy financial-market structure nối trực tiếp với [`27_demographics_households_and_consumption.md`](./27_demographics_households_and_consumption.md).
+Nếu dân số già hóa nhanh, cấu trúc dòng tiền của quỹ hưu trí cũng thay đổi. Vì vậy hệ thống tài chính nối trực tiếp với [`27_demographics_households_and_consumption.md`](./27_demographics_households_and_consumption.md).
 
-## 17. Credit-rating agencies (신용평가사)
+## 17. Tổ chức xếp hạng tín nhiệm (신용평가사)
 
-Bond investor không thể tự deep-dive mọi issuer. **Credit-rating agency / 신용평가사** giúp chuẩn hóa assessment về default risk tương đối.
+Nhà đầu tư trái phiếu không thể tự phân tích sâu mọi tổ chức phát hành. **Tổ chức xếp hạng tín nhiệm (credit-rating agency / 신용평가사)** giúp chuẩn hóa đánh giá tương đối về rủi ro vỡ nợ.
 
-Rating thường xem xét business risk, financial risk, leverage, coverage, liquidity, group support và event risk.
+Xếp hạng thường xem xét rủi ro kinh doanh, rủi ro tài chính, đòn bẩy, khả năng trả lãi, thanh khoản, hỗ trợ từ tập đoàn và rủi ro sự kiện.
 
-Nhưng rating không phải guarantee. Nó có thể lag so với market hoặc không capture tail event tốt. Analyst nên dùng rating như một input, không phải conclusion.
-
-Một pattern quan trọng:
+Nhưng xếp hạng không phải bảo đảm. Nó có thể chậm hơn thị trường hoặc phản ứng không tốt với rủi ro đuôi dài. Nên dùng xếp hạng như một đầu vào, không phải kết luận cuối cùng.
 
 ```text
-Operating weakness
-→ leverage rises
-→ rating outlook weakens
-→ spread widens
-→ refinancing cost rises
-→ cash flow weakens further
+Hoạt động kinh doanh yếu
+→ đòn bẩy tăng
+→ triển vọng xếp hạng xấu đi
+→ chênh lệch tín dụng tăng
+→ chi phí tái cấp vốn tăng
+→ dòng tiền tiếp tục yếu hơn
 ```
 
-Đây là feedback loop giữa real economy và capital market.
+Đây là vòng phản hồi giữa nền kinh tế thực và thị trường vốn.
 
-## 18. Regulation và capital adequacy
+## 18. Quy định và an toàn vốn
 
-Financial firms khác industrial companies vì leverage là core business. Vì vậy regulation tập trung mạnh vào capital adequacy, liquidity, consumer protection, suitability, market conduct và systemic risk.
+Doanh nghiệp tài chính khác doanh nghiệp công nghiệp vì đòn bẩy là một phần cốt lõi của mô hình kinh doanh. Vì vậy quy định tập trung mạnh vào an toàn vốn, thanh khoản, bảo vệ người tiêu dùng, tính phù hợp sản phẩm, hành vi thị trường và rủi ro hệ thống.
 
-Điều này có một implication quan trọng: equity capital của financial institution không chỉ là funding source; nó còn là **loss-absorbing buffer** và regulatory constraint.
+Một hệ quả quan trọng là vốn chủ sở hữu của tổ chức tài chính không chỉ là nguồn tài trợ; nó còn là **bộ đệm hấp thụ tổn thất (loss-absorbing buffer)** và ràng buộc pháp lý.
 
-Do đó ROE cao nhờ leverage phải luôn được đọc cùng capital ratio và asset quality.
+Do đó ROE cao nhờ đòn bẩy phải luôn được đọc cùng tỷ lệ vốn và chất lượng tài sản.
 
-## 19. Financial holding company
+## 19. Công ty mẹ tài chính
 
-Một **financial holding company / 금융지주회사** có thể sở hữu bank, securities, card, insurance, asset-management subsidiaries.
+Một **công ty mẹ tài chính (financial holding company / 금융지주회사)** có thể sở hữu ngân hàng, chứng khoán, thẻ, bảo hiểm và công ty quản lý tài sản.
 
-Group logic cho phép cross-selling và capital allocation nhưng cũng tạo complexity. Cash ở regulated subsidiary không thể tùy ý upstream giống ordinary industrial subsidiary.
+Cấu trúc tập đoàn cho phép bán chéo và phân bổ vốn nhưng cũng làm tăng độ phức tạp. Tiền mặt tại công ty con chịu giám sát không thể tự do chuyển lên công ty mẹ như công ty công nghiệp thông thường.
 
-Vì vậy group-level cash không đồng nghĩa fully fungible cash.
+Vì vậy tiền mặt ở cấp tập đoàn không đồng nghĩa toàn bộ đều có thể sử dụng tùy ý.
 
 Xem [`05_group_structure_affiliates_holding_companies.md`](./05_group_structure_affiliates_holding_companies.md).
 
-## 20. Cách đọc một Korean financial company
+## 20. Cách đọc một công ty tài chính Hàn Quốc
 
-Đừng dùng template manufacturing.
+Không dùng một mẫu phân tích sản xuất cho tất cả.
 
-Đối với bank, focus vào NIM, loan growth, deposit mix, credit cost, capital ratio.
+Với ngân hàng, tập trung vào NIM, tăng trưởng cho vay, cơ cấu tiền gửi, chi phí tín dụng và tỷ lệ vốn.
 
-Đối với securities firm, focus vào brokerage, IB pipeline, trading exposure, PF/structured exposure, liquidity và leverage.
+Với công ty chứng khoán, tập trung vào môi giới, pipeline ngân hàng đầu tư, rủi ro giao dịch, phơi nhiễm PF/tài chính cấu trúc, thanh khoản và đòn bẩy.
 
-Đối với insurer, focus vào underwriting margin, reserve quality, ALM, investment yield và capital adequacy.
+Với công ty bảo hiểm, tập trung vào biên thẩm định bảo hiểm, chất lượng dự phòng, ALM, lợi suất đầu tư và an toàn vốn.
 
-Đối với asset manager, focus vào AUM, net flow, fee rate, product mix và operating leverage.
+Với công ty quản lý tài sản, tập trung vào AUM, dòng vốn ròng, mức phí, cơ cấu sản phẩm và đòn bẩy hoạt động.
 
 Một câu hỏi tổng quát hữu ích là:
 
-> Firm kiếm spread, fee hay underwriting margin? Và balance sheet chịu risk ở đâu?
+> Doanh nghiệp kiếm tiền chủ yếu từ **chênh lệch lãi (spread), phí, biên bảo hiểm hay rủi ro bảng cân đối**? Và rủi ro tập trung ở đâu?
 
-## 21. Financial sector truyền shock vào real economy như thế nào?
+## 21. Khu vực tài chính truyền cú sốc sang nền kinh tế thực như thế nào?
 
-Shock không dừng ở financial market.
+Cú sốc không dừng ở thị trường tài chính.
 
 ```text
-Rate / credit shock
+Cú sốc lãi suất / tín dụng
       ↓
-Funding cost hoặc risk appetite đổi
+Chi phí vốn hoặc mức chấp nhận rủi ro thay đổi
       ↓
-Bank / securities / insurer điều chỉnh balance sheet
+Ngân hàng / chứng khoán / bảo hiểm điều chỉnh bảng cân đối
       ↓
-Credit availability và asset prices đổi
+Khả năng tiếp cận tín dụng và giá tài sản thay đổi
       ↓
-Corporate capex / household spending đổi
+CAPEX doanh nghiệp / chi tiêu hộ gia đình thay đổi
       ↓
-GDP / employment / earnings đổi
+GDP / việc làm / lợi nhuận thay đổi
 ```
 
-Do đó financial sector là transmission mechanism chứ không chỉ sector riêng biệt.
+Do đó khu vực tài chính là **cơ chế truyền dẫn (transmission mechanism)** chứ không chỉ là một ngành đứng riêng.
 
-## Mental Model
+## Mô hình tư duy
 
-> Bank chủ yếu **transform deposits thành credit**. Securities firms **connect issuers với capital market và intermediate trading risk**. Asset managers **allocate investor capital theo mandate**. Insurers **price risk và invest long-duration liabilities**. Credit-rating agencies **compress information thành risk categories**.
+> Ngân hàng chủ yếu **biến tiền gửi thành tín dụng**. Công ty chứng khoán **kết nối tổ chức phát hành với thị trường vốn và trung gian hóa rủi ro giao dịch**. Công ty quản lý tài sản **phân bổ vốn của nhà đầu tư theo nhiệm vụ đầu tư**. Công ty bảo hiểm **định giá rủi ro và đầu tư nguồn vốn gắn với nghĩa vụ dài hạn**. Tổ chức xếp hạng tín nhiệm **nén thông tin thành các nhóm rủi ro dễ so sánh hơn**.
 
-Muốn phân tích một financial company, trước tiên xác định nó đang kiếm tiền bằng **spread, fee, underwriting hoặc balance-sheet risk**; sau đó tìm constraint về capital, liquidity và regulation.
+Muốn phân tích một công ty tài chính, trước tiên xác định nó đang kiếm tiền bằng chênh lệch lãi, phí, biên bảo hiểm hay rủi ro bảng cân đối; sau đó tìm ràng buộc về vốn, thanh khoản và quy định.
 
-## Common misconceptions
+## Những nhầm lẫn thường gặp
 
-**“Financial company asset-light nên ít risk.”** Sai. Nhiều financial firms có balance-sheet risk rất lớn dù physical assets ít.
+**“Công ty tài chính ít tài sản vật lý nên ít rủi ro.”** Sai. Nhiều công ty tài chính có rủi ro bảng cân đối rất lớn dù tài sản vật lý ít.
 
-**“AUM là revenue.”** Sai. Asset manager chỉ thu fee trên AUM; underlying asset thuộc investor.
+**“AUM là doanh thu.”** Sai. Công ty quản lý tài sản chỉ thu phí trên AUM; tài sản cơ sở thuộc nhà đầu tư.
 
-**“Insurance premium càng cao càng tốt.”** Chưa đủ. Growth với underpricing có thể tạo loss tương lai.
+**“Phí bảo hiểm tăng càng nhiều càng tốt.”** Chưa đủ. Tăng trưởng đi cùng định phí quá thấp có thể tạo tổn thất tương lai.
 
-**“Credit rating cao nghĩa không thể default.”** Sai. Rating là probabilistic assessment và có thể thay đổi.
+**“Xếp hạng tín nhiệm cao nghĩa không thể vỡ nợ.”** Sai. Đây là đánh giá xác suất và có thể thay đổi.
 
-**“Brokerage app = toàn bộ securities business.”** Sai. IB, trading, structured finance và PF có thể quan trọng ngang hoặc hơn brokerage.
+**“Ứng dụng môi giới là toàn bộ công ty chứng khoán.”** Sai. IB, tự doanh, tài chính cấu trúc và PF có thể quan trọng ngang hoặc hơn môi giới.
 
 ## Liên kết tiếp theo
 
-- [`10_capital_markets_kospi_kosdaq_konex.md`](./10_capital_markets_kospi_kosdaq_konex.md) — market structure và securities.
-- [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md) — funding và leverage.
+- [`10_capital_markets_kospi_kosdaq_konex.md`](./10_capital_markets_kospi_kosdaq_konex.md) — cấu trúc thị trường và chứng khoán.
+- [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md) — tài trợ và đòn bẩy.
 - [`18_construction_real_estate_and_project_finance.md`](./18_construction_real_estate_and_project_finance.md) — PF.
-- [`27_demographics_households_and_consumption.md`](./27_demographics_households_and_consumption.md) — household/pension connection.
-- [`34_digital_fintech_cloud_and_it_services.md`](./34_digital_fintech_cloud_and_it_services.md) — fintech, digital finance và cloud.
+- [`27_demographics_households_and_consumption.md`](./27_demographics_households_and_consumption.md) — liên hệ hộ gia đình và quỹ hưu trí.
+- [`34_digital_fintech_cloud_and_it_services.md`](./34_digital_fintech_cloud_and_it_services.md) — fintech, tài chính số và cloud.
