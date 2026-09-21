@@ -64,4 +64,4 @@ Event loop xử lý nhiều concurrent connections với ít threads bằng các
 
 ## Kết nối
 
-Đọc cùng [I/O, interrupt và DMA ở architecture](../02_computer_architecture/03_io_interrupts_dma_and_devices.md), [process scheduling](./01_processes_threads_and_scheduling.md), [IPC](./06_ipc_signals_pipes_and_shared_memory.md) và [network sockets](../06_networks_distributed_systems/06_sockets_ipv6_nat_firewalls_vpn.md).
+Đọc cùng [I/O, interrupt và DMA ở architecture](../02_computer_architecture/03_io_interrupts_dma_and_devices.md), [process scheduling](./01_processes_threads_and_scheduling.md), [IPC](./06_ipc_signals_pipes_and_shared_memory.md) và [network sockets](../06_networks_distributed_systems/06_sockets_ipv6_nat_firewalls_and_vpn.md).

@@ -1,0 +1,19 @@
+@charset 'utf-8';
+
+fieldset,img{border:0}
+html,legend{color:#000}
+@font-face{font-weight:400;font-style:normal;font-family:"Nanum Gothic";src:url(font/NanumGothic-Regular.eot);src:url(font/NanumGothic-Regular.eot?#iefix) format('embedded-opentype'),url(font/NanumGothic-Regular.woff2) format('woff2'),url(font/NanumGothic-Regular.woff) format('woff'),url(font/NanumGothic-Regular.ttf) format('truetype')}
+@font-face{font-weight:700;font-style:normal;font-family:"Nanum Gothic";src:url(font/NanumGothic-Bold.eot);src:url(font/NanumGothic-Bold.eot?#iefix) format('embedded-opentype'),url(font/NanumGothic-Bold.woff2) format('woff2'),url(font/NanumGothic-Bold.woff) format('woff'),url(font/NanumGothic-Bold.ttf) format('truetype')}
+/*! reset */
+html{background:#FFF;font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
+article,aside,audio,blockquote,body,canvas,code,dd,details,div,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,input,legend,li,mark,menu,nav,ol,p,pre,section,summary,td,textarea,th,time,ul,video{margin:0;padding:0}
+body{background-color:#FFF;color:#54585e;letter-spacing:0px;font-size: 12px !important;font-family:Dotum,'돋움',"Nanum Gothic","나눔고딕",Gulim,'굴림',Helvetica Neue,Helvetica,Arial,Verdana,Tahoma,sans-serif !important;line-height:normal;}
+img{vertical-align:middle}
+button,input,select,textarea{margin:0;vertical-align:middle;font-size:100%}
+table{border-spacing:0;border-collapse:collapse}
+address,caption,cite,code,dfn,em,th,var{font-weight:400;font-style:normal}
+ol,ul{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-weight:400;font-size:100%;line-height:1.2}
+caption,hr,legend{width:0;height:0;text-indent:-9999em;font-size:1px;line-height:0}
+a,a:active,a:focus,a:hover,a:link,a:visited{color:inherit ;text-decoration:none;font-size:100%}

@@ -20,7 +20,7 @@ De Morgan's laws:
 
 Các luật này không chỉ dùng trong bài logic. Chúng giúp refactor condition, xây query predicate, firewall rule và circuit.
 
-Xem nền toán chi tiết tại [Logic & Proof](../../mathematics/00_foundations/01_logic_and_proof.md) và [Boolean Algebra](../../mathematics/07_discrete_cs/03_boolean_algebra_and_digital_logic.md).
+Xem nền toán chi tiết tại [Logic & Proof](../../../mathematics/00_foundations/01_logic_and_proof.md) và [Boolean Algebra](../../../mathematics/07_discrete_cs/03_boolean_algebra_and_digital_logic.md).
 
 ## State: những gì quá khứ để lại cho hiện tại
 

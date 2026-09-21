@@ -58,7 +58,7 @@ IEEE 754 binary floating point thường tách bits thành sign, exponent và fr
 
 Khoảng cách giữa các representable floats không đều. Gần 1, spacing rất nhỏ; ở magnitude lớn, spacing lớn hơn. Đây là lý do thêm 1 vào một số floating-point cực lớn có thể không thay đổi value.
 
-So sánh floats thường cần tolerance phù hợp với scale và domain, nhưng “luôn dùng epsilon = 1e-9” cũng không đúng chung. Numerical analysis quan tâm conditioning và accumulated error; xem [Numerical Methods](../../mathematics/08_optimization_numerical/02_numerical_methods_and_error.md).
+So sánh floats thường cần tolerance phù hợp với scale và domain, nhưng “luôn dùng epsilon = 1e-9” cũng không đúng chung. Numerical analysis quan tâm conditioning và accumulated error; xem [Numerical Methods](../../../mathematics/08_optimization_numerical/02_numerical_methods_and_error.md).
 
 ## NaN, infinity và signed zero
 

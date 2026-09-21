@@ -8,7 +8,7 @@ Graph `G=(V,E)` gồm vertices/nodes `V` và edges `E`. Directed graph có edge 
 
 Degree đếm connections; path là sequence vertices nối qua edges; cycle quay về vertex đã gặp. Connected components phân vùng graph undirected thành vùng reachable. Directed graph có strongly connected components khi mỗi node reach nhau theo hướng.
 
-Xem nền toán tại [Graph Theory](../../mathematics/07_discrete_cs/00_graph_theory.md).
+Xem nền toán tại [Graph Theory](../../../mathematics/07_discrete_cs/00_graph_theory.md).
 
 ## Representation: adjacency list vs matrix
 

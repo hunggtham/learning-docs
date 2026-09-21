@@ -6,7 +6,7 @@ Mục tiêu của phần foundation không phải cover mọi biến thể chuy�
 
 ## Foundation và Advanced được tách như thế nào?
 
-Các file `.md` nằm trực tiếp trong thư mục này là **foundation chapters**. Chúng ưu tiên bức tranh tổng thể, terminology, first principles và connection giữa các chủ đề Computer Science.
+Các foundation chapter hiện nằm trong [`../basic/01_algorithms_data_structures/`](../basic/01_algorithms_data_structures/). Chúng ưu tiên bức tranh tổng thể, terminology, first principles và connection giữa các chủ đề Computer Science. Thư mục hiện tại dành cho phần DSA chuyên sâu.
 
 Thư mục [`advanced/`](./advanced/README.md) là **Knowledge Library DSA chuyên sâu**. Phần đó phân rã domain theo conceptual boundary thành nhiều chapter riêng, đi sâu vào invariant, proof, implementation, complexity, edge cases và runtime behavior bằng **C, Java và JavaScript**.
 
@@ -26,17 +26,17 @@ implementation + proof + specialized structures + system connections
 
 | Chapter | Vai trò trong foundation |
 |---|---|
-| [00 — Algorithmic Thinking & Correctness](./00_algorithmic_thinking_and_correctness.md) | Xây cách nhìn problem → algorithm → invariant → correctness. |
-| [01 — Complexity & Asymptotic Analysis](./01_complexity_and_asymptotic_analysis.md) | Hiểu time/space complexity và cách growth thay đổi theo input. |
-| [02 — Memory Models & Data Layout](./02_memory_models_and_data_layout.md) | Nối abstraction DSA với memory, locality, references và representation. |
-| [03 — Linear Data Structures](./03_linear_data_structures.md) | Array, list, stack, queue và các trade-off tuyến tính cơ bản. |
-| [04 — Hashing & Hash Tables](./04_hashing_and_hash_tables.md) | Exact-key lookup, collision và hashing model. |
-| [05 — Trees, Heaps & Search Structures](./05_trees_heaps_and_search_structures.md) | Hierarchy, ordered search và priority structures. |
-| [06 — Graphs & Graph Algorithms](./06_graphs_and_graph_algorithms.md) | Modeling relationship, traversal, paths và connectivity. |
-| [07 — Sorting, Searching & Selection](./07_sorting_searching_and_selection.md) | Order, search-space reduction và selection problems. |
-| [08 — Algorithmic Strategies](./08_algorithmic_strategies.md) | Recursion, divide-and-conquer, greedy, dynamic programming và backtracking. |
-| [09 — String Algorithms & Text Indexing](./09_string_algorithms_and_text_indexing.md) | Sequence/prefix/pattern ideas trong text processing. |
-| [10 — Randomized, Approximation & Online Algorithms](./10_randomized_approximation_and_online_algorithms.md) | Mở rộng deterministic model sang randomness, approximation và streaming/online decisions. |
+| [00 — Algorithmic Thinking & Correctness](../basic/01_algorithms_data_structures/00_algorithmic_thinking_and_correctness.md) | Xây cách nhìn problem → algorithm → invariant → correctness. |
+| [01 — Complexity & Asymptotic Analysis](../basic/01_algorithms_data_structures/01_complexity_and_asymptotic_analysis.md) | Hiểu time/space complexity và cách growth thay đổi theo input. |
+| [02 — Memory Models & Data Layout](../basic/01_algorithms_data_structures/02_memory_models_and_data_layout.md) | Nối abstraction DSA với memory, locality, references và representation. |
+| [03 — Linear Data Structures](../basic/01_algorithms_data_structures/03_linear_data_structures.md) | Array, list, stack, queue và các trade-off tuyến tính cơ bản. |
+| [04 — Hashing & Hash Tables](../basic/01_algorithms_data_structures/04_hashing_and_hash_tables.md) | Exact-key lookup, collision và hashing model. |
+| [05 — Trees, Heaps & Search Structures](../basic/01_algorithms_data_structures/05_trees_heaps_and_search_structures.md) | Hierarchy, ordered search và priority structures. |
+| [06 — Graphs & Graph Algorithms](../basic/01_algorithms_data_structures/06_graphs_and_graph_algorithms.md) | Modeling relationship, traversal, paths và connectivity. |
+| [07 — Sorting, Searching & Selection](../basic/01_algorithms_data_structures/07_sorting_searching_and_selection.md) | Order, search-space reduction và selection problems. |
+| [08 — Algorithmic Strategies](../basic/01_algorithms_data_structures/08_algorithmic_strategies.md) | Recursion, divide-and-conquer, greedy, dynamic programming và backtracking. |
+| [09 — String Algorithms & Text Indexing](../basic/01_algorithms_data_structures/09_string_algorithms_and_text_indexing.md) | Sequence/prefix/pattern ideas trong text processing. |
+| [10 — Randomized, Approximation & Online Algorithms](../basic/01_algorithms_data_structures/10_randomized_approximation_and_online_algorithms.md) | Mở rộng deterministic model sang randomness, approximation và streaming/online decisions. |
 
 Foundation nên được đọc như một **bản đồ Computer Science có chiều sâu vừa đủ**. Nếu một chủ đề ở đây trở thành trọng tâm học tập hoặc công việc, hãy chuyển sang chapter chuyên sâu tương ứng trong [`advanced/`](./advanced/README.md).
 

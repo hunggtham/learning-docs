@@ -1,0 +1,2148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0073)https://www.kbi.or.kr/platformWeb/Appraisal.do?cmd=homeExamScoreResultPop -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko" class="mdl-js"><script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/content/location/location.js" id="eppiocemhmnlbhjplcgkofciiegomcon"></script><script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/extend-native-history-api.js"></script><script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/requests.js"></script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, user-scalable=yes">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="./dap-an-thi-1_files/common_bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="./dap-an-thi-1_files/reset_kbi.css">
+<link rel="stylesheet" type="text/css" href="./dap-an-thi-1_files/common_kbi.css">
+<link rel="stylesheet" type="text/css" href="./dap-an-thi-1_files/all.min.css">
+
+<script type="text/javascript">
+var jslang = "ko";
+var isMultiLang = false;
+</script>
+<script type="text/javascript" src="./dap-an-thi-1_files/multiLangSet.js"></script>
+<script type="text/javascript" charset="utf-8" src="./dap-an-thi-1_files/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./dap-an-thi-1_files/jquery-ui-1.9.1.js"></script>
+<script type="text/javascript" charset="utf-8" src="./dap-an-thi-1_files/jquery.slider.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="./dap-an-thi-1_files/jquery.fileupload.js"></script>
+<script type="text/javascript" charset="utf-8" src="./dap-an-thi-1_files/jQuery.print.js"></script>
+<script type="text/javascript" charset="utf-8" src="./dap-an-thi-1_files/jquery.form.js"></script>
+<script type="text/javascript" charset="utf-8" src="./dap-an-thi-1_files/common_kbi.js"></script><script src="./dap-an-thi-1_files/placeholders.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="./dap-an-thi-1_files/namo_scripteditor.js"></script>
+<script type="text/javascript" charset="utf-8" src="./dap-an-thi-1_files/common_bootstrap.min.js"></script>
+<script type="text/javascript" src="./dap-an-thi-1_files/common.js"></script>
+<script type="text/javascript" src="./dap-an-thi-1_files/common_conf.js"></script>
+<script type="text/javascript" src="./dap-an-thi-1_files/common_util.js"></script>
+
+
+<script type="text/javascript">
+document.addEventListener('contextmenu', function(e) {
+	e.preventDefault();
+});
+var message="오른쪽 마우스 클릭을 사용할 수 없습니다.";
+function clickIE() {
+	if (document.all) {
+		alert(message);
+		reCount();
+		return;
+	}
+}
+function clickNS(e) {
+	if(document.layers||(document.getElementById&&!document.all)) {
+		if (e.which==2||e.which==3) {
+			alert(message);				
+			reCount();
+			return;
+		}
+	}
+}
+if (document.layers) {
+	document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;
+}else{
+	document.onmouseup=clickNS;document.oncontextmenu=clickIE;
+}
+document.oncontextmenu=new Function("return false")
+document.addEventListener('keydown', function(event) {
+  if (event.ctrlKey) {
+    event.preventDefault(); 
+    event.stopPropagation();
+  }
+  if (event.ctrlKey && event.keyCode === 80) {
+    alert('인쇄 기능이 제한되었습니다.');
+  }
+  if (event.ctrlKey && event.keyCode === 67) {
+    alert('복사 기능이 제한되었습니다.');
+  }
+});
+document.getElementById('printButton').addEventListener('click', function(event) {
+    event.preventDefault(); // 기본 동작 방지
+    alert('인쇄 기능이 제한되었습니다.');
+  });
+window.onbeforeprint = function() {
+   document.querySelectorAll('.no-print').forEach(el => el.style.display = 'none');
+ };
+ window.onafterprint = function() {
+   document.querySelectorAll('.no-print').forEach(el => el.style.display = '');
+ };
+</script>
+<style type="text/css">
+@media print {
+          .no-print {
+            display: none; 
+            user-select: none;
+            pointer-events: none;
+          }
+          body {
+            font-size: 12pt; 
+          }
+        }
+</style>
+<script bis_use="true" type="text/javascript" charset="utf-8" nonce="" data-dynamic-id="7743a958-bd3d-4912-bf29-410d57324384" src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/executors/200.js"></script><script bis_use="true" type="text/javascript" charset="utf-8" nonce="" data-dynamic-id="7743a958-bd3d-4912-bf29-410d57324384" src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/executors/101.js"></script></head>
+<body style="" bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWllZ29tY29uIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJlbmFibGVkIiwiRkFDRUJPT0siOiJlbmFibGVkIiwiVFdJVFRFUiI6ImVuYWJsZWQiLCJSRURESVQiOiJlbmFibGVkIiwiUElOVEVSRVNUIjoiZW5hYmxlZCIsIklOU1RBR1JBTSI6ImVuYWJsZWQiLCJUSUtUT0siOiJkaXNhYmxlZCIsIkxJTktFRElOIjoiZW5hYmxlZCIsIkNPTkZJRyI6ImRpc2FibGVkIn0sInZlcnNpb24iOiIyLjMuMCIsInNjb3JlIjoyMDMwMDB9XQ==" __processed_42333187-bdbc-4856-adba-f73dc104e46a__="true" data-new-gr-c-s-check-loaded="14.1326.0" data-gr-ext-installed="">
+	<!-- 
+		★ 평가하기 > 첨삭확인(시험) (화면설계번호 : m-009-07) : S
+	-->
+	
+	<div class="popTestStart popTestStartStep07 no-print" oncopy="return false" aria-hidden="true" bis_skin_checked="1">
+		<div class="side_head464" bis_skin_checked="1"></div>
+		<div class="pop_header" bis_skin_checked="1"><strong class="pop_title">평가결과</strong></div>
+		<div class="pop_body" bis_skin_checked="1">
+			<!-- s:기수정보 -->
+			<div class="eval_result01" bis_skin_checked="1">
+				<ul class="ev_ul clfix">
+					<li class="col01">
+						<span class="ev_span">기수명</span>
+						<div class="ev_div" bis_skin_checked="1">증권투자기초</div>
+					</li>
+					<li class="col02">
+						<span class="ev_span">기수</span>
+						<div class="ev_div" bis_skin_checked="1">1         </div>
+					</li>
+					<li class="col01">
+						<span class="ev_span">평가명</span>
+						<div class="ev_div" bis_skin_checked="1">1차평가</div>
+					</li>
+					<li class="col02">
+						<span class="ev_span">이름</span>
+						<div class="ev_div" bis_skin_checked="1">PHAM HUNG THAM</div>
+					</li>
+				</ul>
+				<div class="tbl tbl_type01 border02" style="border: none;" bis_skin_checked="1">
+					<table class="border">
+						<caption>평가결과</caption>
+						<colgroup>
+							<col width="33%">
+							<col width="33%">
+							<col width="33%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>문제수</th>
+								<th>정답수</th>
+								<th>득점</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><span class="txt_blu">20</span></td>
+								<td>20</td>
+								<td>10</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- e:기수정보 -->
+			
+			<!-- s:문제정보 -->
+			
+			
+			
+			
+			
+			
+				<div class="eval_result02" bis_skin_checked="1">
+			
+			
+				<div class="tbl tbl_type01 border" bis_skin_checked="1">
+					
+						
+						
+						
+						
+					
+					 
+					<table class="border">
+						<colgroup>
+							<col width="515">
+							<col width="125">
+						</colgroup>
+							<thead>
+							<tr>
+								<th class="alg_left"><b class="txt_blc">1. [진위형] 유가증권의 상장형태에 따른 분류 중 신규상장은 상장법인이 유, 무상증자 등으로 새로 발행한 주권을 상장하는 것을 말한다.</b></th>
+								<th class="last">채점/득점</th>
+							</tr>
+							</thead>
+						<tbody>
+							
+							<tr>
+								<td class="alg_left">
+									<ul class="exam_form">
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r25" value="1" disabled=""><span class="label_txt">O</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r25" value="2" checked="" disabled=""><span class="label_txt">X</span></label>
+										</li>
+										
+									</ul>
+								</td>
+								<td class="last">
+									
+									
+										
+										
+											<b class="txt_blu">O</b>
+										/0.5점
+									
+								</td>
+							</tr>
+							
+							
+							
+							
+						</tbody>
+						<tfoot class="explan">
+							
+								<tr>
+									<th colspan="4" class="alg_left last"><b class="txt_blu">정답 : 2</b></th>
+								</tr>
+							
+							
+								
+								<tr>
+									<td colspan="4" class="alg_left last"><b>문제해설 : 상장법인이 유, 무상증자 등으로 새로 발행한 주권을 상장하는 것을 신주상장이라 한다. 신규상장은 처음으로 주식시장에 상장되는 경우를 말한다.</b></td>
+								</tr>
+							
+							<tr>
+								<td colspan="4" class="alg_left last"><b>출제원 : 1권 76페이지</b></td>
+							</tr>
+							
+						</tfoot>
+					</table>
+				</div>
+			</div>
+			
+			
+			
+				<div class="eval_result02" bis_skin_checked="1">
+			
+			
+				<div class="tbl tbl_type01 border" bis_skin_checked="1">
+					
+						
+						
+						
+						
+					
+					 
+					<table class="border">
+						<colgroup>
+							<col width="515">
+							<col width="125">
+						</colgroup>
+							<thead>
+							<tr>
+								<th class="alg_left"><b class="txt_blc">2. [진위형] 주문의 종류 중 지정가주문은 지정된 가격 또는 그보다 유리한 가격으로 매매거래를 하고자 하는 주문이다.</b></th>
+								<th class="last">채점/득점</th>
+							</tr>
+							</thead>
+						<tbody>
+							
+							<tr>
+								<td class="alg_left">
+									<ul class="exam_form">
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r26" value="1" checked="" disabled=""><span class="label_txt">O</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r26" value="2" disabled=""><span class="label_txt">X</span></label>
+										</li>
+										
+									</ul>
+								</td>
+								<td class="last">
+									
+									
+										
+										
+											<b class="txt_blu">O</b>
+										/0.5점
+									
+								</td>
+							</tr>
+							
+							
+							
+							
+						</tbody>
+						<tfoot class="explan">
+							
+								<tr>
+									<th colspan="4" class="alg_left last"><b class="txt_blu">정답 : 1</b></th>
+								</tr>
+							
+							
+								
+								<tr>
+									<td colspan="4" class="alg_left last"><b>문제해설 : 지정가주문은 지정된 가격 또는 그보다 유리한 가격으로 매매거래를 하고자 하는 주문이다.</b></td>
+								</tr>
+							
+							<tr>
+								<td colspan="4" class="alg_left last"><b>출제원 : 1권 106페이지</b></td>
+							</tr>
+							
+						</tfoot>
+					</table>
+				</div>
+			</div>
+			
+			
+			
+				<div class="eval_result02" bis_skin_checked="1">
+			
+			
+				<div class="tbl tbl_type01 border" bis_skin_checked="1">
+					
+						
+						
+						
+						
+					
+					 
+					<table class="border">
+						<colgroup>
+							<col width="515">
+							<col width="125">
+						</colgroup>
+							<thead>
+							<tr>
+								<th class="alg_left"><b class="txt_blc">3. [진위형] 펀드가입자가 부담해야 하는 보수 중 자산운용사에 지급하는 것은 환매수수료다.</b></th>
+								<th class="last">채점/득점</th>
+							</tr>
+							</thead>
+						<tbody>
+							
+							<tr>
+								<td class="alg_left">
+									<ul class="exam_form">
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r53" value="1" disabled=""><span class="label_txt">O</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r53" value="2" checked="" disabled=""><span class="label_txt">X</span></label>
+										</li>
+										
+									</ul>
+								</td>
+								<td class="last">
+									
+									
+										
+										
+											<b class="txt_blu">O</b>
+										/0.5점
+									
+								</td>
+							</tr>
+							
+							
+							
+							
+						</tbody>
+						<tfoot class="explan">
+							
+								<tr>
+									<th colspan="4" class="alg_left last"><b class="txt_blu">정답 : 2</b></th>
+								</tr>
+							
+							
+								
+								<tr>
+									<td colspan="4" class="alg_left last"><b>문제해설 : 자산운용사에 지급하는 것은 운용보수이다.</b></td>
+								</tr>
+							
+							<tr>
+								<td colspan="4" class="alg_left last"><b>출제원 : 1권 249-250페이지</b></td>
+							</tr>
+							
+						</tfoot>
+					</table>
+				</div>
+			</div>
+			
+			
+			
+				<div class="eval_result02" bis_skin_checked="1">
+			
+			
+				<div class="tbl tbl_type01 border" bis_skin_checked="1">
+					
+						
+						
+						
+						
+					
+					 
+					<table class="border">
+						<colgroup>
+							<col width="515">
+							<col width="125">
+						</colgroup>
+							<thead>
+							<tr>
+								<th class="alg_left"><b class="txt_blc">4. [진위형] 베타란 펀드의 수익률이 벤치마크 수익률의 변화에 대해 어느 정도의 민감도를 가지고 있는가를 나타내는 척도다.</b></th>
+								<th class="last">채점/득점</th>
+							</tr>
+							</thead>
+						<tbody>
+							
+							<tr>
+								<td class="alg_left">
+									<ul class="exam_form">
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r57" value="1" checked="" disabled=""><span class="label_txt">O</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r57" value="2" disabled=""><span class="label_txt">X</span></label>
+										</li>
+										
+									</ul>
+								</td>
+								<td class="last">
+									
+									
+										
+										
+											<b class="txt_blu">O</b>
+										/0.5점
+									
+								</td>
+							</tr>
+							
+							
+							
+							
+						</tbody>
+						<tfoot class="explan">
+							
+								<tr>
+									<th colspan="4" class="alg_left last"><b class="txt_blu">정답 : 1</b></th>
+								</tr>
+							
+							
+								
+								<tr>
+									<td colspan="4" class="alg_left last"><b>문제해설 : 베타란 펀드의 수익률이 벤치마크 수익률의 변화에 대해 어느 정도의 민감도를 가지고 있는가를 나타내는 척도다.</b></td>
+								</tr>
+							
+							<tr>
+								<td colspan="4" class="alg_left last"><b>출제원 : 1권 326페이지</b></td>
+							</tr>
+							
+						</tfoot>
+					</table>
+				</div>
+			</div>
+			
+			
+			
+				<div class="eval_result02" bis_skin_checked="1">
+			
+			
+				<div class="tbl tbl_type01 border" bis_skin_checked="1">
+					
+						
+						
+						
+						
+					
+					 
+					<table class="border">
+						<colgroup>
+							<col width="515">
+							<col width="125">
+						</colgroup>
+							<thead>
+							<tr>
+								<th class="alg_left"><b class="txt_blc">5. [진위형] 시장의 이자율보다 채권의 액면 이자율이 낮으면 채권가격은 할증되어 거래된다.</b></th>
+								<th class="last">채점/득점</th>
+							</tr>
+							</thead>
+						<tbody>
+							
+							<tr>
+								<td class="alg_left">
+									<ul class="exam_form">
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r55" value="1" disabled=""><span class="label_txt">O</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r55" value="2" checked="" disabled=""><span class="label_txt">X</span></label>
+										</li>
+										
+									</ul>
+								</td>
+								<td class="last">
+									
+									
+										
+										
+											<b class="txt_blu">O</b>
+										/0.5점
+									
+								</td>
+							</tr>
+							
+							
+							
+							
+						</tbody>
+						<tfoot class="explan">
+							
+								<tr>
+									<th colspan="4" class="alg_left last"><b class="txt_blu">정답 : 2</b></th>
+								</tr>
+							
+							
+								
+								<tr>
+									<td colspan="4" class="alg_left last"><b>문제해설 : 시장의 이자율보다 채권의 액면 이자율이 낮으면 채권가격은 할인되어 거래된다.</b></td>
+								</tr>
+							
+							<tr>
+								<td colspan="4" class="alg_left last"><b>출제원 : 1권 275페이지</b></td>
+							</tr>
+							
+						</tfoot>
+					</table>
+				</div>
+			</div>
+			
+			
+			
+				<div class="eval_result02" bis_skin_checked="1">
+			
+			
+				<div class="tbl tbl_type01 border" bis_skin_checked="1">
+					
+						
+						
+						
+						
+					
+					 
+					<table class="border">
+						<colgroup>
+							<col width="515">
+							<col width="125">
+						</colgroup>
+							<thead>
+							<tr>
+								<th class="alg_left"><b class="txt_blc">6. [4지선다형] 유가증권의 발행기관이 공모에 따른 사무처리와 인수에 따르는 위험을 분리하여 처리하는 방법으로 일정기간 동안 공모한 다음 부족액이 발생한 경우 그 잔량에 대하여 인수기관에 인수시키는 방법은? </b></th>
+								<th class="last">채점/득점</th>
+							</tr>
+							</thead>
+						<tbody>
+							
+							
+							<tr>
+								<td class="alg_left">
+									<ul class="exam_form">
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r5" value="1" disabled=""><span class="label_txt">직접발행 </span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r5" value="2" disabled=""><span class="label_txt">총액인수 </span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r5" value="3" checked="" disabled=""><span class="label_txt">잔액인수 </span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r5" value="4" disabled=""><span class="label_txt">모집주선</span></label>
+										</li>
+										
+									</ul>
+								</td>
+								<td class="last">
+									
+									
+										
+										
+											<b class="txt_blu">O</b>
+										/0.5점
+									
+								</td>
+							</tr>
+							
+							
+							
+						</tbody>
+						<tfoot class="explan">
+							
+								<tr>
+									<th colspan="4" class="alg_left last"><b class="txt_blu">정답 : 3</b></th>
+								</tr>
+							
+							
+								
+								<tr>
+									<td colspan="4" class="alg_left last"><b>문제해설 : 발행기관의 발행사무위험과 인수위험을 분리시키는 것은 잔액인수의 방법이다.</b></td>
+								</tr>
+							
+							<tr>
+								<td colspan="4" class="alg_left last"><b>출제원 : 1권 43페이지</b></td>
+							</tr>
+							
+						</tfoot>
+					</table>
+				</div>
+			</div>
+			
+			
+			
+				<div class="eval_result02" bis_skin_checked="1">
+			
+			
+				<div class="tbl tbl_type01 border" bis_skin_checked="1">
+					
+						
+						
+						
+						
+					
+					 
+					<table class="border">
+						<colgroup>
+							<col width="515">
+							<col width="125">
+						</colgroup>
+							<thead>
+							<tr>
+								<th class="alg_left"><b class="txt_blc">7. [4지선다형] 피인수회사의 경영진의 이해를 얻고 인수합병을 하는 것은 무엇인가?</b></th>
+								<th class="last">채점/득점</th>
+							</tr>
+							</thead>
+						<tbody>
+							
+							
+							<tr>
+								<td class="alg_left">
+									<ul class="exam_form">
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r22" value="1" disabled=""><span class="label_txt">적대적 M&amp;A</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r22" value="2" disabled=""><span class="label_txt">현금인수</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r22" value="3" disabled=""><span class="label_txt">주식교환에 의한 인수</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r22" value="4" checked="" disabled=""><span class="label_txt">우호적 M&amp;A</span></label>
+										</li>
+										
+									</ul>
+								</td>
+								<td class="last">
+									
+									
+										
+										
+											<b class="txt_blu">O</b>
+										/0.5점
+									
+								</td>
+							</tr>
+							
+							
+							
+						</tbody>
+						<tfoot class="explan">
+							
+								<tr>
+									<th colspan="4" class="alg_left last"><b class="txt_blu">정답 : 4</b></th>
+								</tr>
+							
+							
+								
+								<tr>
+									<td colspan="4" class="alg_left last"><b>문제해설 : 우호적 M&amp;A에 대한 설명이다.</b></td>
+								</tr>
+							
+							<tr>
+								<td colspan="4" class="alg_left last"><b>출제원 : 1권 203페이지</b></td>
+							</tr>
+							
+						</tfoot>
+					</table>
+				</div>
+			</div>
+			
+			
+			
+				<div class="eval_result02" bis_skin_checked="1">
+			
+			
+				<div class="tbl tbl_type01 border" bis_skin_checked="1">
+					
+						
+						
+						
+						
+					
+					 
+					<table class="border">
+						<colgroup>
+							<col width="515">
+							<col width="125">
+						</colgroup>
+							<thead>
+							<tr>
+								<th class="alg_left"><b class="txt_blc">8. [4지선다형] 펀드재산의 50%를 초과하여 선박·항공기·건설기계·자동차 등에 투자하는 펀드를 무엇이라고 하는가?</b></th>
+								<th class="last">채점/득점</th>
+							</tr>
+							</thead>
+						<tbody>
+							
+							
+							<tr>
+								<td class="alg_left">
+									<ul class="exam_form">
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r41" value="1" disabled=""><span class="label_txt">REITs</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r41" value="2" disabled=""><span class="label_txt">일반상품투자형 특별자산펀드</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r41" value="3" checked="" disabled=""><span class="label_txt">동산투자형 특별자산펀드</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r41" value="4" disabled=""><span class="label_txt">혼합자산펀드</span></label>
+										</li>
+										
+									</ul>
+								</td>
+								<td class="last">
+									
+									
+										
+										
+											<b class="txt_blu">O</b>
+										/0.5점
+									
+								</td>
+							</tr>
+							
+							
+							
+						</tbody>
+						<tfoot class="explan">
+							
+								<tr>
+									<th colspan="4" class="alg_left last"><b class="txt_blu">정답 : 3</b></th>
+								</tr>
+							
+							
+								
+								<tr>
+									<td colspan="4" class="alg_left last"><b>문제해설 : 펀드재산의 50%를 초과하여 선박·항공기·건설기계·자동차 등에 투자하는 펀드는 동산투자형 특별자산펀드이다.</b></td>
+								</tr>
+							
+							<tr>
+								<td colspan="4" class="alg_left last"><b>출제원 : 1권 289페이지</b></td>
+							</tr>
+							
+						</tfoot>
+					</table>
+				</div>
+			</div>
+			
+			
+			
+				<div class="eval_result02" bis_skin_checked="1">
+			
+			
+				<div class="tbl tbl_type01 border" bis_skin_checked="1">
+					
+						
+						
+						
+						
+					
+					 
+					<table class="border">
+						<colgroup>
+							<col width="515">
+							<col width="125">
+						</colgroup>
+							<thead>
+							<tr>
+								<th class="alg_left"><b class="txt_blc">9. [4지선다형] 주식편입비율 50% 이상인 국내펀드를 16시 30분에 환매청구한 경우 적용되는 기준가 영업일은?</b></th>
+								<th class="last">채점/득점</th>
+							</tr>
+							</thead>
+						<tbody>
+							
+							
+							<tr>
+								<td class="alg_left">
+									<ul class="exam_form">
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r35" value="1" disabled=""><span class="label_txt">T일(당일)</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r35" value="2" disabled=""><span class="label_txt">T+1일(2일차)</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r35" value="3" checked="" disabled=""><span class="label_txt">T+2일(3일차)</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r35" value="4" disabled=""><span class="label_txt">T+3일(4일차)</span></label>
+										</li>
+										
+									</ul>
+								</td>
+								<td class="last">
+									
+									
+										
+										
+											<b class="txt_blu">O</b>
+										/0.5점
+									
+								</td>
+							</tr>
+							
+							
+							
+						</tbody>
+						<tfoot class="explan">
+							
+								<tr>
+									<th colspan="4" class="alg_left last"><b class="txt_blu">정답 : 3</b></th>
+								</tr>
+							
+							
+								
+								<tr>
+									<td colspan="4" class="alg_left last"><b>문제해설 : 주식편입비율 50% 이상인 국내펀드를 15시 30분 이후에 환매청구한 경우 적용되는 기준가 영업일은 T+2일이다.</b></td>
+								</tr>
+							
+							<tr>
+								<td colspan="4" class="alg_left last"><b>출제원 : 1권 259페이지</b></td>
+							</tr>
+							
+						</tfoot>
+					</table>
+				</div>
+			</div>
+			
+			
+			
+				<div class="eval_result02" bis_skin_checked="1">
+			
+			
+				<div class="tbl tbl_type01 border" bis_skin_checked="1">
+					
+						
+						
+						
+						
+					
+					 
+					<table class="border">
+						<colgroup>
+							<col width="515">
+							<col width="125">
+						</colgroup>
+							<thead>
+							<tr>
+								<th class="alg_left"><b class="txt_blc">10. [4지선다형] 다음 중 펀드의 자산 리밸런싱이 필요한 경우와 거리가 먼 것은?</b></th>
+								<th class="last">채점/득점</th>
+							</tr>
+							</thead>
+						<tbody>
+							
+							
+							<tr>
+								<td class="alg_left">
+									<ul class="exam_form">
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r50" value="1" disabled=""><span class="label_txt">1년 이상의 장기성과가 동일 유형의 펀드에 비해 계속 부진하다.</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r50" value="2" checked="" disabled=""><span class="label_txt">동일 유형 펀드에 비해 변동성 위험이 낮아졌다.</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r50" value="3" disabled=""><span class="label_txt">보유하고 있는 다른 펀드와 상관성이 높아졌다.</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r50" value="4" disabled=""><span class="label_txt">펀드의 매매회전율이 급격히 높아졌다.</span></label>
+										</li>
+										
+									</ul>
+								</td>
+								<td class="last">
+									
+									
+										
+										
+											<b class="txt_blu">O</b>
+										/0.5점
+									
+								</td>
+							</tr>
+							
+							
+							
+						</tbody>
+						<tfoot class="explan">
+							
+								<tr>
+									<th colspan="4" class="alg_left last"><b class="txt_blu">정답 : 2</b></th>
+								</tr>
+							
+							
+								
+								<tr>
+									<td colspan="4" class="alg_left last"><b>문제해설 : 동일 유형 펀드에 비해 변동성 위험이 높아진 경우 자산 리밸런싱을 검토한다.</b></td>
+								</tr>
+							
+							<tr>
+								<td colspan="4" class="alg_left last"><b>출제원 : 1권 331페이지</b></td>
+							</tr>
+							
+						</tfoot>
+					</table>
+				</div>
+			</div>
+			
+			
+			
+				<div class="eval_result02" bis_skin_checked="1">
+			
+			
+				<div class="tbl tbl_type01 border" bis_skin_checked="1">
+					
+						
+						
+						
+						
+					
+					 
+					<table class="border">
+						<colgroup>
+							<col width="515">
+							<col width="125">
+						</colgroup>
+							<thead>
+							<tr>
+								<th class="alg_left"><b class="txt_blc">11. [4지선다형] 다음 중 유가증권시장의 시장안정화를 위한 제도에 대한 설명으로 바르지 못한 것은? </b></th>
+								<th class="last">채점/득점</th>
+							</tr>
+							</thead>
+						<tbody>
+							
+							
+							<tr>
+								<td class="alg_left">
+									<ul class="exam_form">
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r12" value="1" disabled=""><span class="label_txt">서킷브레이커스 1단계는 종합주가지수가 전일대비 8%이상 하락하면 20분간 매매정지 후 10분간 단일가매매로 매매재개가 된다.</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r12" value="2" disabled=""><span class="label_txt">서킷브레이커스 3단계는 종합주가지수가 전일대비 20%이상 하락하면 당일매매가 종료된다.</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r12" value="3" disabled=""><span class="label_txt">사이드카는 선물가격이 기준가대비 5%이상 변동하여 1분간 지속되면 발동된다. </span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r12" value="4" checked="" disabled=""><span class="label_txt">사이드카가 발동되면 주식시장의 모든 매매거래가 중단된다.</span></label>
+										</li>
+										
+									</ul>
+								</td>
+								<td class="last">
+									
+									
+										
+										
+											<b class="txt_blu">O</b>
+										/0.5점
+									
+								</td>
+							</tr>
+							
+							
+							
+						</tbody>
+						<tfoot class="explan">
+							
+								<tr>
+									<th colspan="4" class="alg_left last"><b class="txt_blu">정답 : 4</b></th>
+								</tr>
+							
+							
+								
+								<tr>
+									<td colspan="4" class="alg_left last"><b>문제해설 : 사이드카가 발동되면 주식시장에서 프로그램매매만 중단되고 나머지 거래는 정상적으로 이루어진다.</b></td>
+								</tr>
+							
+							<tr>
+								<td colspan="4" class="alg_left last"><b>출제원 : 1권 111-112페이지</b></td>
+							</tr>
+							
+						</tfoot>
+					</table>
+				</div>
+			</div>
+			
+			
+			
+				<div class="eval_result02" bis_skin_checked="1">
+			
+			
+				<div class="tbl tbl_type01 border" bis_skin_checked="1">
+					
+						
+						
+						
+						
+					
+					 
+					<table class="border">
+						<colgroup>
+							<col width="515">
+							<col width="125">
+						</colgroup>
+							<thead>
+							<tr>
+								<th class="alg_left"><b class="txt_blc">12. [4지선다형] 펀드와 관련된 회사 중 투자자(수익자)에 대하여 선관의무와 충실의무를 모두 지어야 하는 회사는?</b></th>
+								<th class="last">채점/득점</th>
+							</tr>
+							</thead>
+						<tbody>
+							
+							
+							<tr>
+								<td class="alg_left">
+									<ul class="exam_form">
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r32" value="1" checked="" disabled=""><span class="label_txt">수탁회사</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r32" value="2" disabled=""><span class="label_txt">펀드 판매회사</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r32" value="3" disabled=""><span class="label_txt">사무관리회사</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r32" value="4" disabled=""><span class="label_txt">펀드평가회사</span></label>
+										</li>
+										
+									</ul>
+								</td>
+								<td class="last">
+									
+									
+										
+										
+											<b class="txt_blu">O</b>
+										/0.5점
+									
+								</td>
+							</tr>
+							
+							
+							
+						</tbody>
+						<tfoot class="explan">
+							
+								<tr>
+									<th colspan="4" class="alg_left last"><b class="txt_blu">정답 : 1</b></th>
+								</tr>
+							
+							
+								
+								<tr>
+									<td colspan="4" class="alg_left last"><b>문제해설 : 자산운용회사와 수탁회사는 투자자(수익자)에 대하여 선관의무와 충실의무를 진다.</b></td>
+								</tr>
+							
+							<tr>
+								<td colspan="4" class="alg_left last"><b>출제원 : 1권 246~247페이지</b></td>
+							</tr>
+							
+						</tfoot>
+					</table>
+				</div>
+			</div>
+			
+			
+			
+				<div class="eval_result02" bis_skin_checked="1">
+			
+			
+				<div class="tbl tbl_type01 border" bis_skin_checked="1">
+					
+						
+						
+						
+						
+					
+					 
+					<table class="border">
+						<colgroup>
+							<col width="515">
+							<col width="125">
+						</colgroup>
+							<thead>
+							<tr>
+								<th class="alg_left"><b class="txt_blc">13. [4지선다형] 다음 중 유가증권시장에의 신규상장 요건을 충족한 것으로 보기 어려운 상황은? </b></th>
+								<th class="last">채점/득점</th>
+							</tr>
+							</thead>
+						<tbody>
+							
+							
+							<tr>
+								<td class="alg_left">
+									<ul class="exam_form">
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r8" value="1" disabled=""><span class="label_txt">자기자본 300억 원 이상</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r8" value="2" disabled=""><span class="label_txt">설립 후 3년 이상 경과하고 계속적인 영업활동</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r8" value="3" checked="" disabled=""><span class="label_txt">일반주주 300명 이상</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r8" value="4" disabled=""><span class="label_txt">회사주식에 대한 양도제한이 전혀 없다.</span></label>
+										</li>
+										
+									</ul>
+								</td>
+								<td class="last">
+									
+									
+										
+										
+											<b class="txt_blu">O</b>
+										/0.5점
+									
+								</td>
+							</tr>
+							
+							
+							
+						</tbody>
+						<tfoot class="explan">
+							
+								<tr>
+									<th colspan="4" class="alg_left last"><b class="txt_blu">정답 : 3</b></th>
+								</tr>
+							
+							
+								
+								<tr>
+									<td colspan="4" class="alg_left last"><b>문제해설 : 유가증권시장에 상장하기 위해서는 일반주주수가 500명 이상이어야 한다.</b></td>
+								</tr>
+							
+							<tr>
+								<td colspan="4" class="alg_left last"><b>출제원 : 1권 80페이지</b></td>
+							</tr>
+							
+						</tfoot>
+					</table>
+				</div>
+			</div>
+			
+			
+			
+				<div class="eval_result02" bis_skin_checked="1">
+			
+			
+				<div class="tbl tbl_type01 border" bis_skin_checked="1">
+					
+						
+						
+						
+						
+					
+					 
+					<table class="border">
+						<colgroup>
+							<col width="515">
+							<col width="125">
+						</colgroup>
+							<thead>
+							<tr>
+								<th class="alg_left"><b class="txt_blc">14. [4지선다형] 주가지수옵션시장에서 신규상장종목의 거래개시일은 언제인가?</b></th>
+								<th class="last">채점/득점</th>
+							</tr>
+							</thead>
+						<tbody>
+							
+							
+							<tr>
+								<td class="alg_left">
+									<ul class="exam_form">
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r19" value="1" disabled=""><span class="label_txt">최종거래일의 전일</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r19" value="2" disabled=""><span class="label_txt">최종거래일의 전월</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r19" value="3" disabled=""><span class="label_txt">최종거래일 당일</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r19" value="4" checked="" disabled=""><span class="label_txt">최종거래일의 익일</span></label>
+										</li>
+										
+									</ul>
+								</td>
+								<td class="last">
+									
+									
+										
+										
+											<b class="txt_blu">O</b>
+										/0.5점
+									
+								</td>
+							</tr>
+							
+							
+							
+						</tbody>
+						<tfoot class="explan">
+							
+								<tr>
+									<th colspan="4" class="alg_left last"><b class="txt_blu">정답 : 4</b></th>
+								</tr>
+							
+							
+								
+								<tr>
+									<td colspan="4" class="alg_left last"><b>문제해설 : 신규상장종목의 거래개시일은 최종거래일의 익일이다.</b></td>
+								</tr>
+							
+							<tr>
+								<td colspan="4" class="alg_left last"><b>출제원 : 1권 172페이지</b></td>
+							</tr>
+							
+						</tfoot>
+					</table>
+				</div>
+			</div>
+			
+			
+			
+				<div class="eval_result02" bis_skin_checked="1">
+			
+			
+				<div class="tbl tbl_type01 border" bis_skin_checked="1">
+					
+						
+						
+						
+						
+					
+					 
+					<table class="border">
+						<colgroup>
+							<col width="515">
+							<col width="125">
+						</colgroup>
+							<thead>
+							<tr>
+								<th class="alg_left"><b class="txt_blc">15. [4지선다형] 투자자의 투자성향을 5단계로 구분할 경우 투자원금에 손실이 발생하는 것을 원하지 않는 유형은?</b></th>
+								<th class="last">채점/득점</th>
+							</tr>
+							</thead>
+						<tbody>
+							
+							
+							<tr>
+								<td class="alg_left">
+									<ul class="exam_form">
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r48" value="1" disabled=""><span class="label_txt">안정성장형</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r48" value="2" disabled=""><span class="label_txt">안정추구형</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r48" value="3" disabled=""><span class="label_txt">위험중립형</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r48" value="4" checked="" disabled=""><span class="label_txt">안정형</span></label>
+										</li>
+										
+									</ul>
+								</td>
+								<td class="last">
+									
+									
+										
+										
+											<b class="txt_blu">O</b>
+										/0.5점
+									
+								</td>
+							</tr>
+							
+							
+							
+						</tbody>
+						<tfoot class="explan">
+							
+								<tr>
+									<th colspan="4" class="alg_left last"><b class="txt_blu">정답 : 4</b></th>
+								</tr>
+							
+							
+								
+								<tr>
+									<td colspan="4" class="alg_left last"><b>문제해설 : 안정형은 예금 또는 적금 수준의 수익률을 기대하며, 투자원금에 손실이 발생하는 것을 원하지 않는다.</b></td>
+								</tr>
+							
+							<tr>
+								<td colspan="4" class="alg_left last"><b>출제원 : 1권 316페이지</b></td>
+							</tr>
+							
+						</tfoot>
+					</table>
+				</div>
+			</div>
+			
+			
+			
+				<div class="eval_result02" bis_skin_checked="1">
+			
+			
+				<div class="tbl tbl_type01 border" bis_skin_checked="1">
+					
+						
+						
+						
+						
+					
+					 
+					<table class="border">
+						<colgroup>
+							<col width="515">
+							<col width="125">
+						</colgroup>
+							<thead>
+							<tr>
+								<th class="alg_left"><b class="txt_blc">16. [4지선다형] 하나의 펀드아래 성격이 서로 다른 여러 개의 하위펀드가 구성돼 있는 형태로 하위펀드들 사이에서 전환이 자유로운 펀드는?</b></th>
+								<th class="last">채점/득점</th>
+							</tr>
+							</thead>
+						<tbody>
+							
+							
+							<tr>
+								<td class="alg_left">
+									<ul class="exam_form">
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r43" value="1" disabled=""><span class="label_txt">모자펀드</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r43" value="2" disabled=""><span class="label_txt">종류형 펀드</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r43" value="3" disabled=""><span class="label_txt">펀드랩</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r43" value="4" checked="" disabled=""><span class="label_txt">엄브렐러 펀드</span></label>
+										</li>
+										
+									</ul>
+								</td>
+								<td class="last">
+									
+									
+										
+										
+											<b class="txt_blu">O</b>
+										/0.5점
+									
+								</td>
+							</tr>
+							
+							
+							
+						</tbody>
+						<tfoot class="explan">
+							
+								<tr>
+									<th colspan="4" class="alg_left last"><b class="txt_blu">정답 : 4</b></th>
+								</tr>
+							
+							
+								
+								<tr>
+									<td colspan="4" class="alg_left last"><b>문제해설 : 엄브렐러 펀드는 하나의 펀드아래 성격이 서로 다른 여러 개의 하위펀드가 구성돼 있는 형태로 하위펀드들 사이에서 전환이 자유로운 것이 특징이다.</b></td>
+								</tr>
+							
+							<tr>
+								<td colspan="4" class="alg_left last"><b>출제원 : 1권 295~298페이지</b></td>
+							</tr>
+							
+						</tfoot>
+					</table>
+				</div>
+			</div>
+			
+			
+			
+				<div class="eval_result02" bis_skin_checked="1">
+			
+			
+				<div class="tbl tbl_type01 border" bis_skin_checked="1">
+					
+						
+						
+						
+						
+					
+					 
+					<table class="border">
+						<colgroup>
+							<col width="515">
+							<col width="125">
+						</colgroup>
+							<thead>
+							<tr>
+								<th class="alg_left"><b class="txt_blc">17. [4지선다형] KOSPI200 주가지수선물의 가격제한폭은 얼마인가? </b></th>
+								<th class="last">채점/득점</th>
+							</tr>
+							</thead>
+						<tbody>
+							
+							
+							<tr>
+								<td class="alg_left">
+									<ul class="exam_form">
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r18" value="1" disabled=""><span class="label_txt">상하 15%</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r18" value="2" checked="" disabled=""><span class="label_txt">상하 20%</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r18" value="3" disabled=""><span class="label_txt">상하 25%</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r18" value="4" disabled=""><span class="label_txt">상하 30%</span></label>
+										</li>
+										
+									</ul>
+								</td>
+								<td class="last">
+									
+									
+										
+										
+											<b class="txt_blu">O</b>
+										/0.5점
+									
+								</td>
+							</tr>
+							
+							
+							
+						</tbody>
+						<tfoot class="explan">
+							
+								<tr>
+									<th colspan="4" class="alg_left last"><b class="txt_blu">정답 : 2</b></th>
+								</tr>
+							
+							
+								
+								<tr>
+									<td colspan="4" class="alg_left last"><b>문제해설 : 주가지수선물 시장의 가격제한 폭은 단계별로 기준가 대비 상하 ① ±8%  ② ±15%  ③ ±20%이나 하루 중 20%를 넘어갈 수 없으므로 상하한가 제한폭은 20%이다.</b></td>
+								</tr>
+							
+							<tr>
+								<td colspan="4" class="alg_left last"><b>출제원 : 1권 169페이지</b></td>
+							</tr>
+							
+						</tfoot>
+					</table>
+				</div>
+			</div>
+			
+			
+			
+				<div class="eval_result02" bis_skin_checked="1">
+			
+			
+				<div class="tbl tbl_type01 border" bis_skin_checked="1">
+					
+						
+						
+						
+						
+					
+					 
+					<table class="border">
+						<colgroup>
+							<col width="515">
+							<col width="125">
+						</colgroup>
+							<thead>
+							<tr>
+								<th class="alg_left"><b class="txt_blc">18. [4지선다형] ELW의 매매방법으로 잘못된 것은? </b></th>
+								<th class="last">채점/득점</th>
+							</tr>
+							</thead>
+						<tbody>
+							
+							
+							<tr>
+								<td class="alg_left">
+									<ul class="exam_form">
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r20" value="1" disabled=""><span class="label_txt">매매거래시간은 09:00~15:30이다.</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r20" value="2" disabled=""><span class="label_txt">호가가격단위는 5원이다.</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r20" value="3" checked="" disabled=""><span class="label_txt">매매증권은 5증권이다.</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r20" value="4" disabled=""><span class="label_txt">주문의 종류는 지정가주문이다.</span></label>
+										</li>
+										
+									</ul>
+								</td>
+								<td class="last">
+									
+									
+										
+										
+											<b class="txt_blu">O</b>
+										/0.5점
+									
+								</td>
+							</tr>
+							
+							
+							
+						</tbody>
+						<tfoot class="explan">
+							
+								<tr>
+									<th colspan="4" class="alg_left last"><b class="txt_blu">정답 : 3</b></th>
+								</tr>
+							
+							
+								
+								<tr>
+									<td colspan="4" class="alg_left last"><b>문제해설 : 매매증권은 10증권이다.</b></td>
+								</tr>
+							
+							<tr>
+								<td colspan="4" class="alg_left last"><b>출제원 : 1권 178페이지</b></td>
+							</tr>
+							
+						</tfoot>
+					</table>
+				</div>
+			</div>
+			
+			
+			
+				<div class="eval_result02" bis_skin_checked="1">
+			
+			
+				<div class="tbl tbl_type01 border" bis_skin_checked="1">
+					
+						
+						
+						
+						
+					
+					 
+					<table class="border">
+						<colgroup>
+							<col width="515">
+							<col width="125">
+						</colgroup>
+							<thead>
+							<tr>
+								<th class="alg_left"><b class="txt_blc">19. [4지선다형] 부동산펀드 투자 시 유의점에 관한 설명 중 적절하지 않은 것은?</b></th>
+								<th class="last">채점/득점</th>
+							</tr>
+							</thead>
+						<tbody>
+							
+							
+							<tr>
+								<td class="alg_left">
+									<ul class="exam_form">
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r40" value="1" checked="" disabled=""><span class="label_txt">부동산펀드는 중도환매가 자유스러운 특징을 가지고 있다.</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r40" value="2" disabled=""><span class="label_txt">부동산펀드는 소액으로 부동산에 투자를 할 수 있다는 장점이 있다.</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r40" value="3" disabled=""><span class="label_txt">대출채권을 근거로 ABS를 발행하면 사업성공 여부와 상관없이 투자자금을 회수할 수도 있다.</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r40" value="4" disabled=""><span class="label_txt">직접개발형 펀드는 다른 형태의 부동산 펀드에 비해 위험도가 상대적으로 크다.</span></label>
+										</li>
+										
+									</ul>
+								</td>
+								<td class="last">
+									
+									
+										
+										
+											<b class="txt_blu">O</b>
+										/0.5점
+									
+								</td>
+							</tr>
+							
+							
+							
+						</tbody>
+						<tfoot class="explan">
+							
+								<tr>
+									<th colspan="4" class="alg_left last"><b class="txt_blu">정답 : 1</b></th>
+								</tr>
+							
+							
+								
+								<tr>
+									<td colspan="4" class="alg_left last"><b>문제해설 : 부동산펀드는 중도환매가 제한되어 있다.</b></td>
+								</tr>
+							
+							<tr>
+								<td colspan="4" class="alg_left last"><b>출제원 : 1권 285-286페이지</b></td>
+							</tr>
+							
+						</tfoot>
+					</table>
+				</div>
+			</div>
+			
+			
+			
+				<div class="eval_result02" bis_skin_checked="1">
+			
+			
+				<div class="tbl tbl_type01 border" bis_skin_checked="1">
+					
+						
+						
+						
+						
+					
+					 
+					<table class="border">
+						<colgroup>
+							<col width="515">
+							<col width="125">
+						</colgroup>
+							<thead>
+							<tr>
+								<th class="alg_left"><b class="txt_blc">20. [4지선다형] 금융투자업의 종류로 옳지 않은 것은?</b></th>
+								<th class="last">채점/득점</th>
+							</tr>
+							</thead>
+						<tbody>
+							
+							
+							<tr>
+								<td class="alg_left">
+									<ul class="exam_form">
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r7" value="1" disabled=""><span class="label_txt">투자매매업</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r7" value="2" checked="" disabled=""><span class="label_txt">보험업</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r7" value="3" disabled=""><span class="label_txt">신탁업</span></label>
+										</li>
+										
+										
+										<li class="ex_ch">
+											<label><input type="radio" name="r7" value="4" disabled=""><span class="label_txt">투자일임업</span></label>
+										</li>
+										
+									</ul>
+								</td>
+								<td class="last">
+									
+									
+										
+										
+											<b class="txt_blu">O</b>
+										/0.5점
+									
+								</td>
+							</tr>
+							
+							
+							
+						</tbody>
+						<tfoot class="explan">
+							
+								<tr>
+									<th colspan="4" class="alg_left last"><b class="txt_blu">정답 : 2</b></th>
+								</tr>
+							
+							
+								
+								<tr>
+									<td colspan="4" class="alg_left last"><b>문제해설 : 금융투자업은 투자매매업, 투자중개업, 집합투자업, 투자자문업, 투자일임업 및 신탁업 등이 있다.</b></td>
+								</tr>
+							
+							<tr>
+								<td colspan="4" class="alg_left last"><b>출제원 : 1권 54-55페이지</b></td>
+							</tr>
+							
+						</tfoot>
+					</table>
+				</div>
+			</div>
+			
+			
+			
+			
+			<!-- e:문제정보 -->
+			
+			
+		<!--</div> -->
+		<br>
+		<br>
+		<!-- s:진단평가 피드백 -->
+		
+		<!-- e:진단평가 피드백 -->
+		
+		<div class="pop_btn_wrap bottom" bis_skin_checked="1">
+			<a href="https://www.kbi.or.kr/platformWeb/Appraisal.do?cmd=homeExamScoreResultPop#" onclick="window.close();">닫기</a>
+		</div>
+		<a href="https://www.kbi.or.kr/platformWeb/Appraisal.do?cmd=homeExamScoreResultPop#" class="btn_exit ui_btn_exit"><span class="hide_txt">팝업창 닫기</span></a>
+		<div class="side_footer464" bis_skin_checked="1"></div>
+		<div class="pop_shadow" bis_skin_checked="1"></div>
+	</div>
+	<!-- : E -->
+
+<iframe id="hiddenFrame" name="hiddenFrame" style="display:none" width="0" height="0" frameborder="0" title="히든프레임" src="./dap-an-thi-1_files/saved_resource.html"></iframe>
+
+</div><a id="bottomBar" style="position: fixed; bottom: -40px; left: 0px; z-index: 9999; transform: translateX(-50%); background-color: transparent; border-radius: 5px 5px 0px 0px; opacity: 0.3; padding: 5px; transition: 0.3s; cursor: pointer; max-height: 100px; max-width: 45px;"><img src="chrome-extension://kobncfkmjelbefaoohoblamnbackjggk/icon/icon_32.png" style="width: 32px; height: 32px;"></a><div class="click-down-disable" bis_skin_checked="1" style="all: initial !important;"><template shadowrootmode="closed" shadowrootdelegatesfocus><div class="glotdojo-float" id="glotdojo-move" style="position: absolute; left: 603px; top: 1042.12px; width: 24px; height: 24px; background: rgb(242, 201, 76); border-radius: 3px; overflow: visible; display: none !important;"><div class="glot-popup-header glot-popup-header-theme-dark  glot-popup-header-1x  scan-disable"><div id="glot-con-logo" class="glot-con-logo"><img src="chrome-extension://dbnjpielondlkmdjbembloegkaabfakc/icons/96.png"></div></div><iframe data-glotdojo-theme="default" data-glotdojo-site-color="light"></iframe></div><style>div.glotdojo-float {
+  all: initial;
+  /* background-color: #fff; */
+  /* border: 1px solid #999; */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  /* position: fixed; */
+  position: absolute;
+  resize: both;
+  /* visibility: hidden; */
+  z-index: 2147483647;
+  box-sizing: border-box;
+  display: none;
+  justify-content: center;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+div.glotdojo-float iframe {
+  width: 100%;
+}
+
+div.glotdojo-float[data-glotdojo-theme="dark"],
+div.glotdojo-float[data-glotdojo-theme="auto"][data-glotdojo-site-color="dark"] {
+  background-color: #1e1e1e;
+  border: 1px solid #666;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+div.glotdojo-float.glotdojo-float-full-width {
+  border-left: none;
+  border-right: none;
+  box-sizing: border-box;
+  resize: none;
+}
+
+div.glotdojo-float.glotdojo-float-full-width:not(.glotdojo-float-above) {
+  border-bottom: none;
+}
+
+div.glotdojo-float.glotdojo-float-full-width.glotdojo-float-above {
+  border-top: none;
+}
+
+div.glotdojo-float iframe {
+  all: initial;
+  /* background-color: #fff;
+    border: 1px solid #999;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    resize: both;
+    visibility: hidden;
+    z-index: 2147483647;
+    box-sizing: border-box; */
+  width: 100%;
+  height: 100%;
+  /* height: calc(100% - 32px); */
+}
+
+/* div.glotdojo-float iframe[data-glotdojo-theme=dark],
+div.glotdojo-float iframe[data-glotdojo-theme=auto][data-glotdojo-site-color=dark] {
+    background-color: #1e1e1e;
+    border: 1px solid #666;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+} */
+
+div.glotdojo-float iframe.glotdojo-float-full-width {
+  border-left: none;
+  border-right: none;
+  box-sizing: border-box;
+  resize: none;
+}
+
+div.glotdojo-float iframe.glotdojo-float-full-width:not(.glotdojo-float-above) {
+  border-bottom: none;
+}
+
+div.glotdojo-float iframe.glotdojo-float-full-width.glotdojo-float-above {
+  border-top: none;
+}
+
+.glot-popup-header {
+  width: 50%;
+  height: 32px;
+  /* background: white; */
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  /* transition: all 0.3s; */
+  color: #2c2c2c;
+  /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.glot-popup-header.glot-popup-header-small {
+  width: 42%;
+  height: 30px;
+}
+
+.glot-con-empty-div {
+  flex-grow: 1;
+}
+
+.glot-popup-header > div:not(.glot-con-empty-div) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.glot-popup-header > .glot-con-logo {
+  width: 24px;
+  height: 24px;
+}
+
+.glot-con-logo img {
+  width: 16px;
+  height: 16px;
+}
+
+.glot-popup-header-small {
+  width: 42%;
+}
+
+.glot-popup-header svg {
+  width: 16px;
+  height: 16px;
+}
+
+.glot-popup-header.glot-popup-header-small svg {
+  width: 15px;
+  height: 15px;
+}
+
+.glot-popup-header-2x{
+  height: 48px;
+  /* width: 70% !important; */
+}
+.glot-popup-header-3x{
+  height: 64px;
+  /* width: 80% !important; */
+}
+
+.glot-popup-header-2x.glot-popup-header-small{
+  /* height: 44px; */
+ 
+}
+.glot-popup-header-3x.glot-popup-header-small{
+  /* height: 58px; */
+}
+
+.glot-popup-header-2x svg{
+  /* height: 24px;
+  width: 24px; */
+}
+.glot-popup-header-3x svg{
+  /* width: 32px;
+  height: 32px; */
+}
+
+.glot-popup-header-2x.glot-popup-header-small svg{
+  /* height: 22px;
+  width: 22px; */
+}
+.glot-popup-header-3x.glot-popup-header-small svg{
+  /* height: 29px;
+  width: 29px; */
+}
+
+.glot-popup-header-theme-dark .glot-con-pin{
+  color: #d4d4d4 !important;
+}
+
+/* .glot-btn-spin > svg {
+    width: 20px;
+    height: 20px;
+} */
+
+/* .glot-btn-spin:hover{
+    transform: scale(1.2);
+} */
+
+
+.gl-tooltip {
+  position: relative;
+}
+.gl-tooltip::after {
+  font-family: "Montserrat", Helvetica, Arial, serif;
+  background-color: #2c2c2c;
+  border-radius: 10px;
+  color: #b2b2b2;
+  display: none;
+  font-size: 14px;
+  white-space: normal;
+  padding: 10px 12px !important;
+  position: absolute;
+  width: 300px;
+  line-height: 1.2;
+  text-align: left;
+  word-break: break-word;
+  z-index: 999;
+  font-weight: 300;
+  /* text-transform: lowercase; */
+  font-weight: normal;
+}
+.gl-tooltip.tooltip-size-small::after {
+  width: 200px;
+}
+.gl-tooltip.tooltip-size-large::after {
+  width: 400px;
+}
+.gl-tooltip::before {
+  background-color: #2c2c2c;
+  content: " ";
+  display: none;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  z-index: 999;
+}
+.gl-tooltip:hover::after {
+  display: block;
+}
+.gl-tooltip:hover::before {
+  display: block;
+}
+.gl-tooltip.bottom-tooltip::after {
+  content: attr(tooltip-data) " ";
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, calc(100% + 10px));
+}
+.gl-tooltip.bottom-tooltip::before {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, calc(100% + 5px)) rotate(45deg);
+}
+
+.glot-con-pin::after{
+  width: 8rem !important;
+  text-align: center;
+}</style><style></style></template></div></body><grammarly-desktop-integration data-grammarly-shadow-root="true" style="visibility: visible !important;"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>

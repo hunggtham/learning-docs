@@ -28,7 +28,7 @@ Constants và lower-order terms bị bỏ qua vì asymptotic analysis quan tâm 
 
 Logarithm xuất hiện tự nhiên khi liên tục chia đôi. Nếu sau k bước còn `n/2^k = 1`, thì `k = log₂n`.
 
-Xem toán sâu hơn tại [Algorithms, Complexity và Logarithms](../../mathematics/07_discrete_cs/01_algorithms_complexity_and_logarithms.md).
+Xem toán sâu hơn tại [Algorithms, Complexity và Logarithms](../../../mathematics/07_discrete_cs/01_algorithms_complexity_and_logarithms.md).
 
 ## Worst, average và best case
 
