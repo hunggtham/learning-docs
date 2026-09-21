@@ -1,183 +1,448 @@
-# Covariance, xác suất nhiều biến và multivariate Gaussian
+# Covariance, xác suất nhiều biến và Gaussian geometry
 
-Một biến ngẫu nhiên đơn lẻ mô tả uncertainty theo một dimension. Nhưng dữ liệu thực tế thường có nhiều quantities cùng thay đổi: height và weight, return của nhiều assets, pixels trong image, features trong ML. Khi đó câu hỏi không chỉ là từng variable biến thiên bao nhiêu, mà còn **chúng biến thiên cùng nhau thế nào**.
+Một random variable mô tả uncertainty theo một dimension. Dữ liệu thực tế thường nhiều chiều: height–weight, asset returns, sensor readings, pixels, embeddings, features. Khi đó câu hỏi không chỉ là từng biến phân tán bao nhiêu, mà là **chúng cùng biến động theo cấu trúc nào**.
 
-## Joint distribution
+Core chain:
 
-Với hai random variables `X,Y`, joint distribution mô tả probability của pairs `(X,Y)`.
+```text
+joint distribution
+→ marginal / conditional
+→ covariance
+→ covariance matrix
+→ quadratic geometry
+→ Gaussian model
+→ linear transforms / inference / optimization
+```
 
-Discrete case dùng joint probability mass function:
+## 1. Joint distribution: uncertainty trên nhiều dimensions
+
+Với two variables `X,Y`, joint distribution mô tả probability của pairs `(X,Y)`.
+
+Discrete:
 
 ```math
 p(x,y)=P(X=x,Y=y).
 ```
 
-Continuous case dùng density `f(x,y)` sao cho probability trên region `A` là
+Continuous:
 
 ```math
-P((X,Y)\in A)=\iint_A f(x,y)\,dx\,dy.
+P((X,Y)\in A)
+=
+\iint_A f(x,y)\,dx\,dy.
 ```
 
-Marginal distribution của `X` được lấy bằng cách sum/integrate out `Y`:
+Joint distribution chứa nhiều information hơn hai marginals riêng lẻ, vì nó encode dependence structure.
+
+## 2. Marginalization là “sum out” uncertainty không quan tâm
+
+Continuous case:
 
 ```math
 f_X(x)=\int f(x,y)\,dy.
 ```
 
-“Marginalize” nghĩa bỏ một dimension uncertainty bằng accumulation qua tất cả values có thể của dimension đó.
+Discrete:
 
-## Covariance
+```math
+p_X(x)=\sum_y p(x,y).
+```
 
-Covariance (Covariance / 공분산) được định nghĩa
+Marginalization là operation cực kỳ quan trọng trong probability, Bayesian inference và probabilistic graphical models.
+
+## 3. Conditional distribution
+
+Nếu `f_Y(y)>0`:
+
+```math
+f_{X|Y}(x|y)
+=
+\frac{f_{X,Y}(x,y)}{f_Y(y)}.
+```
+
+Conditional distribution trả lời: sau khi biết một coordinate/value, uncertainty ở coordinate khác thay đổi thế nào?
+
+Đây là multivariate version của Bayes/conditional probability.
+
+## 4. Independence factorizes joint distribution
+
+Nếu `X,Y` independent:
+
+```math
+f(x,y)=f_X(x)f_Y(y).
+```
+
+Geometrically/statistically, knowing one variable không thay distribution của variable kia.
+
+Dependence có thể tồn tại ngay cả khi covariance bằng 0.
+
+## 5. Covariance: signed co-movement quanh means
 
 ```math
 \operatorname{Cov}(X,Y)
-=E[(X-E[X])(Y-E[Y])].
+=
+E[(X-E[X])(Y-E[Y])].
 ```
 
-Tương đương
+Equivalent:
 
 ```math
 \operatorname{Cov}(X,Y)=E[XY]-E[X]E[Y].
 ```
 
-Nếu `X` thường cao hơn mean khi `Y` cũng cao hơn mean, product deviations thường dương nên covariance dương. Nếu một biến cao khi biến kia thấp, covariance âm.
+Positive covariance: deviations thường cùng sign. Negative: opposite signs. Zero: không có linear co-movement theo measure này.
 
-Units của covariance là product units của hai variables, nên magnitude khó so giữa datasets.
+## 6. Covariance phụ thuộc units
 
-## Correlation là covariance đã chuẩn hóa
+Nếu `X` đo meter và `Y` đo kilogram, covariance có unit `m·kg`.
 
-Pearson correlation:
+Scale `X` by 100:
 
 ```math
-\rho_{XY}=
+\operatorname{Cov}(100X,Y)=100\operatorname{Cov}(X,Y).
+```
+
+Do đó covariance magnitude không comparable trực tiếp across differently scaled variables.
+
+## 7. Correlation chuẩn hóa covariance
+
+```math
+\rho_{XY}
+=
 \frac{\operatorname{Cov}(X,Y)}{\sigma_X\sigma_Y}.
 ```
 
-Nó dimensionless và nằm trong `[-1,1]` khi variances hữu hạn.
+Correlation dimensionless và nằm `[-1,1]` khi variances finite/nonzero.
 
-`\rho=1` hoặc `-1` nghĩa perfect linear relationship. `\rho=0` nghĩa zero linear covariance, không nhất thiết independence.
+Nhưng correlation chỉ capture linear association. Nếu `Y=X^2` với symmetric `X`, correlation có thể zero dù dependence deterministic.
 
-Ví dụ nếu `X` symmetric quanh 0 và `Y=X^2`, relationship deterministic nhưng covariance có thể bằng 0 vì positive/negative `X` cancel.
+## 8. Covariance matrix
 
-## Independence mạnh hơn uncorrelated
-
-Nếu `X,Y` independent, thì khi expectations tồn tại:
+Random vector:
 
 ```math
-E[XY]=E[X]E[Y],
-```
-
-nên covariance bằng 0.
-
-Chiều ngược thường sai. Một exception quan trọng: với jointly Gaussian variables, zero covariance implies independence.
-
-## Covariance matrix
-
-Cho random vector
-
-```math
-X=\begin{bmatrix}X_1\\\vdots\\X_n\end{bmatrix},
-```
-
-mean vector là
-
-```math
+X=
+\begin{bmatrix}
+X_1\\\vdots\\X_n
+\end{bmatrix},
+\qquad
 \mu=E[X].
 ```
 
 Covariance matrix:
 
 ```math
-\Sigma=E[(X-\mu)(X-\mu)^T].
+\Sigma
+=E[(X-\mu)(X-\mu)^T].
 ```
 
-Entry diagonal là variances; off-diagonal là pairwise covariances.
+Entries:
 
-`\Sigma` luôn symmetric và positive semidefinite vì với mọi vector `a`:
+```math
+\Sigma_{ij}=\operatorname{Cov}(X_i,X_j).
+```
+
+Diagonal = variances. Off-diagonal = pairwise covariances.
+
+## 9. Vì sao covariance matrix positive semidefinite?
+
+Với any vector `a`:
 
 ```math
 a^T\Sigma a
-=\operatorname{Var}(a^TX)\ge0.
+=
+\operatorname{Var}(a^TX)
+\ge0.
 ```
 
-Đây là bridge sâu giữa probability và linear algebra.
+Do đó `\Sigma` symmetric positive semidefinite.
 
-## Geometry của covariance
+Đây là bridge rất sâu: một probability object trở thành quadratic form trong Linear Algebra.
 
-Trong 2D, data cloud có thể dài theo một diagonal direction. Covariance matrix encode orientation và spread của ellipse xác suất.
+## 10. Variance của linear combination
 
-Eigenvectors của `\Sigma` cho principal directions; eigenvalues cho variance dọc theo các directions đó. PCA khai thác chính structure này để rotate coordinate system sang axes mà covariance matrix trở thành diagonal.
-
-## Multivariate Gaussian
-
-Multivariate normal distribution có density
+Nếu scalar:
 
 ```math
-f(x)=\frac{1}{(2\pi)^{n/2}|\Sigma|^{1/2}}
-\exp\left(
+Y=a^TX,
+```
+
+thì:
+
+```math
+\operatorname{Var}(Y)=a^T\Sigma a.
+```
+
+Đây là formula dùng khắp Finance, signal processing, uncertainty propagation và portfolio optimization.
+
+## 11. Geometry của covariance ellipse
+
+Level sets:
+
+```math
+(x-\mu)^T\Sigma^{-1}(x-\mu)=c
+```
+
+là ellipses/ellipsoids nếu `\Sigma` positive definite.
+
+Eigenvectors của `\Sigma` cho principal directions. Eigenvalues cho variance dọc mỗi direction.
+
+Do đó covariance matrix encode orientation + spread của probability cloud.
+
+## 12. PCA là rotate sang covariance eigenbasis
+
+Nếu:
+
+```math
+\Sigma=Q\Lambda Q^T,
+```
+
+thì coordinates:
+
+```math
+Z=Q^T(X-\mu)
+```
+
+có diagonal covariance `\Lambda`.
+
+PCA chọn directions có eigenvalues lớn nhất để giữ nhiều variance nhất.
+
+Đây không phải magic dimensionality reduction; nó là basis change theo covariance geometry.
+
+## 13. Multivariate Gaussian
+
+Density:
+
+```math
+f(x)=
+\frac1{(2\pi)^{n/2}|\Sigma|^{1/2}}
+\exp\left[
 -\frac12(x-\mu)^T\Sigma^{-1}(x-\mu)
-\right).
+\right].
 ```
 
-Quadratic form
+Có ba structures chính:
+
+```text
+\mu → center
+\Sigma → geometry/spread
+|\Sigma| → volume scaling normalization
+```
+
+Quadratic exponent tạo ellipsoidal contours.
+
+## 14. Mahalanobis distance
 
 ```math
-(x-\mu)^T\Sigma^{-1}(x-\mu)
+d_M(x,\mu)^2
+=(x-\mu)^T\Sigma^{-1}(x-\mu).
 ```
 
-là squared Mahalanobis distance: distance đã điều chỉnh theo variance và correlations.
+Euclidean distance coi mọi directions cùng scale. Mahalanobis distance chuẩn hóa theo covariance.
 
-Nếu một direction có variance lớn, deviation dọc direction đó ít “surprising” hơn cùng Euclidean distance ở direction variance nhỏ.
+Deviation dọc high-variance direction ít surprising hơn same Euclidean displacement dọc low-variance direction.
 
-## Linear transformations của random vectors
+## 15. Whitening
 
-Nếu
+Nếu `\Sigma=Q\Lambda Q^T`, whitening transform conceptually:
+
+```math
+Z=\Lambda^{-1/2}Q^T(X-\mu)
+```
+
+cho covariance gần identity.
+
+Whitening rotate + rescale để remove second-order correlation structure.
+
+Trong ML preprocessing, whitening có thể useful nhưng cũng có numerical/noise issues nếu eigenvalues nhỏ.
+
+## 16. Linear transformation of uncertainty
+
+Nếu:
 
 ```math
 Y=AX+b,
 ```
 
-thì
+thì:
 
 ```math
-E[Y]=A\mu+b
+E[Y]=A\mu+b,
 ```
-
-và
 
 ```math
 \operatorname{Cov}(Y)=A\Sigma A^T.
 ```
 
-Công thức covariance transformation là một lý do matrices xuất hiện tự nhiên trong uncertainty propagation.
+Derivation covariance:
 
-Trong sensor fusion, finance và Kalman filtering, ta repeatedly transform means và covariance matrices để track uncertainty.
+```math
+Y-E[Y]=A(X-\mu),
+```
 
-## Portfolio variance
+nên:
 
-Nếu asset return vector là `R`, portfolio weights `w`, portfolio return là
+```math
+E[A(X-\mu)(X-\mu)^TA^T]
+=A\Sigma A^T.
+```
+
+Đây là uncertainty propagation chính xác cho linear maps.
+
+## 17. First-order nonlinear uncertainty propagation
+
+Với nonlinear `Y=g(X)`, linearize quanh mean:
+
+```math
+Y\approx g(\mu)+J(X-\mu).
+```
+
+Do đó:
+
+```math
+\operatorname{Cov}(Y)
+\approx J\Sigma J^T.
+```
+
+Đây là connection giữa Jacobian, Taylor approximation và covariance propagation.
+
+## 18. Conditional Gaussian
+
+Một đặc tính quan trọng của multivariate Gaussian: conditional distributions vẫn Gaussian.
+
+Partition:
+
+```math
+X=
+\begin{bmatrix}X_1\\X_2\end{bmatrix}
+```
+
+với block covariance. Conditional mean của one block given another là affine function của observed value; conditional covariance giảm theo information gained.
+
+Structure này đứng sau Gaussian regression, Kalman filtering và nhiều probabilistic models.
+
+## 19. Zero covariance và independence
+
+General case:
+
+```text
+independence ⇒ covariance zero
+```
+
+nhưng converse sai.
+
+Special jointly Gaussian case:
+
+```text
+zero covariance ⇔ independence
+```
+
+Đây là lý do Gaussian models đặc biệt tractable: second-order structure đủ mô tả dependence hoàn toàn.
+
+## 20. Singular covariance
+
+Nếu features có exact linear dependency, `\Sigma` singular.
+
+Ví dụ:
+
+```math
+X_3=X_1+X_2.
+```
+
+Random vector thực chất sống trên lower-dimensional subspace.
+
+Then:
+
+```math
+|\Sigma|=0,
+```
+
+và inverse không tồn tại.
+
+Conceptually đây không chỉ là numerical bug; nó nói support của distribution collapse xuống dimension thấp hơn.
+
+## 21. Portfolio variance
+
+Asset return vector `R`, weights `w`:
 
 ```math
 R_p=w^TR.
 ```
 
-Variance:
+Portfolio variance:
 
 ```math
 \operatorname{Var}(R_p)=w^T\Sigma w.
 ```
 
-Diversification không chỉ phụ thuộc individual variances mà phụ thuộc covariances. Hai assets biến động mạnh nhưng negatively correlated có thể giảm total portfolio variance khi kết hợp.
+Diversification phụ thuộc covariance, không chỉ individual volatility.
+
+Hai assets risk riêng cao vẫn có thể giảm portfolio variance nếu co-movement thấp/negative.
+
+## 22. Correlation matrix và feature scaling
+
+Correlation matrix là covariance của standardized variables.
+
+Nó hữu ích khi features có units/scales khác nhau. Nhưng standardization thay geometry; không phải luôn correct choice nếu absolute scale mang domain meaning.
+
+## 23. Gaussian không tự động đúng vì data “trông bell-shaped”
+
+Multivariate Gaussian assumptions gồm shape của joint distribution, not just each marginal.
+
+Có distributions mà each marginal Gaussian nhưng joint structure không jointly Gaussian.
+
+Outliers/heavy tails cũng có thể phá covariance estimates mạnh.
+
+## 24. Robustness và heavy tails
+
+Sample covariance nhạy với extreme points vì dùng squared deviations/products.
+
+Trong Finance hoặc sensor data có heavy tails/outliers, covariance estimate có thể unstable. Robust covariance, shrinkage hoặc heavy-tailed models có thể phù hợp hơn.
+
+## 25. Worked example: two-asset portfolio
+
+Giả sử:
+
+```math
+\sigma_1=0.20,
+\qquad
+\sigma_2=0.10,
+\qquad
+\rho=0.2.
+```
+
+Covariance:
+
+```math
+\sigma_{12}=\rho\sigma_1\sigma_2=0.004.
+```
+
+Equal weights `w=(0.5,0.5)`:
+
+```math
+\operatorname{Var}(R_p)
+=0.25(0.20^2)+0.25(0.10^2)+2(0.25)(0.004).
+```
+
+Covariance term quyết định diversification benefit; không thể tính portfolio risk bằng average volatilities.
 
 ## Knowledge Connection
 
-Covariance nối probability với dot products và quadratic forms. PCA diagonalizes covariance. Gaussian models nối determinant, inverse matrix và exponential. Regression, Kalman filters, Gaussian processes và portfolio optimization đều dựa trên multivariate uncertainty structure.
+```text
+probability
+→ covariance
+→ quadratic forms
+→ eigenvectors/PCA
+→ Gaussian geometry
+→ regression/Kalman/portfolio optimization
+```
+
+Trong AI, covariance links tới feature normalization, PCA và Gaussian latent models. Trong Physics, covariance describes fluctuations. Trong Finance, covariance drives quadratic portfolio risk.
 
 ## Mental Model
 
-> Variance hỏi một variable phân tán bao nhiêu. Covariance hỏi hai variables nghiêng cùng nhau thế nào. Covariance matrix gom toàn bộ hình học của spread bậc hai thành một linear-algebra object.
+> Covariance matrix là metric-like map của uncertainty: nó cho biết cloud trải rộng theo directions nào và variables co-move ra sao. Gaussian model biến structure đó thành ellipsoidal probability geometry.
 
 ## Common Misconceptions
 
-Zero correlation không nói chung imply independence. Covariance magnitude phụ thuộc units. Correlation gần 1 không chứng minh causality. Covariance matrix singular có thể xảy ra khi một feature là linear combination của các features khác; khi đó inverse không tồn tại và model Gaussian full-rank cần xử lý riêng.
+Zero correlation không nói chung imply independence. Correlation không imply causation. Covariance magnitude phụ thuộc units. Singular covariance có thể phản ánh genuine lower-dimensional structure. Gaussian marginals không đảm bảo joint Gaussian. Inverting a poorly conditioned covariance matrix có thể numerically unstable.
