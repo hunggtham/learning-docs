@@ -64,19 +64,49 @@ Khi viết region hoặc country profile, ưu tiên chuỗi:
 
 ## Trạng thái sau các depth pass gần nhất
 
-Core không còn lỗ hổng lớn kiểu “có file nhưng chỉ định nghĩa”. Earth Systems và Natural Hazards vừa được nâng sâu thêm về system boundary, timescale, critical-zone coupling, expected loss, dynamic vulnerability và critical-infrastructure dependency.
+### Core và Physical Geography
 
-Human Geography vừa được integration pass ở Culture, Political Geography, Economic Geography và Transport/Trade để các chapter nối trực tiếp physical constraint–settlement–production–network.
+Earth Systems và Natural Hazards đã được nâng sâu về system boundary, timescale, coupled processes, expected loss, dynamic vulnerability và infrastructure dependency. Các physical chapter riêng lẻ hiện khá cân bằng; priority mới chuyển sang **cross-link QA** giữa tectonics–relief–sediment–hydrology–coast–hazard thay vì rewrite từng file.
 
-Regional Geography vừa được nâng ở Europe, Africa, North America và Latin America/Caribbean; South/Central/West Asia đã được nâng ở batch trước. East Asia và Southeast Asia tiếp tục là reference standard cho Korea–Vietnam route.
+### Human Geography
+
+Culture, Political Geography, Economic Geography và Transport/Trade đã qua integration pass trước đó.
+
+Batch mới nhất nối sâu thêm:
+
+**Agriculture ↔ Industry/Energy/Resources ↔ Development/Inequality**
+
+qua shared chain `resource base → energy/water/input → production/processing → corridor/trade → value capture → household access → inequality/resilience`.
+
+Điều này giúp Human Geography hoạt động như một system thay vì tập hợp sector notes.
+
+### Regional Geography
+
+Europe, Africa, North America, Latin America/Caribbean, South/Central/West Asia đã qua depth pass. Oceania/Pacific và Polar Regions vừa được nâng tiếp.
+
+[Oceania/Pacific](./03_regions/09_oceania_pacific.md) giờ nối island type, water/resources, urban primacy, public-service scale, gateway dependency, food/energy imports, cables, fisheries và Australia–Asia network.
+
+[Polar Regions](./03_regions/10_polar_regions.md) giờ nối ice/permafrost với settlement/service nodes, infrastructure, resource economics, shipping reliability, research logistics và global climate/ocean transmission.
+
+### Global Systems
 
 Global Systems hiện có chapter riêng về [Mạng thương mại toàn cầu](./04_global_systems/05_global_trade_networks.md), nối production tiers, resources, ports, inventory, finance, cities và systemic risk.
 
-Atlas vừa nâng Singapore, Indonesia và India; không tăng số skeleton.
+### Selective Atlas
+
+Không tăng số skeleton. Các compact files chỉ được promote khi đủ chiều sâu.
+
+Batch mới đã nâng:
+
+- [Australia](./06_world_atlas/oceania/australia_new_zealand/AUS_australia.md);
+- [Brazil](./06_world_atlas/americas/south_america/BRA_brazil.md);
+- [Malaysia](./06_world_atlas/asia/south_eastern_asia/MYS_malaysia.md).
+
+Chúng được chọn vì có learning value về resources, commodity/industrial networks, ports, urban systems và liên hệ East/Southeast Asia.
 
 ## Quy tắc chất lượng
 
-Một chapter tốt phải trả lời: khái niệm là gì; mechanism nào tạo pattern; stock/flow/node/boundary nào quan trọng; scale nào làm kết luận đổi; evidence đo bằng gì; limitation/misconception ở đâu; chapter nối sang system nào.
+Một chapter tốt phải trả lời: khái niệm là gì; mechanism nào tạo pattern; stock/flow/node/boundary nào quan trọng; physical constraint và resource nào tác động; scale nào làm kết luận đổi; evidence đo bằng gì; limitation/misconception ở đâu; chapter nối sang system nào.
 
 Số file, số heading và số dòng không phải metric chất lượng.
 
@@ -88,8 +118,8 @@ Code, formula, acronym, proper noun và canonical technical name giữ nguyên n
 
 ## Roadmap tiếp theo
 
-Ưu tiên sau batch hiện tại:
+Ưu tiên mới sau batch hiện tại:
 
-**physical cross-link QA → Oceania/Polar regional depth → Development/Agriculture/Energy integration QA → selective Brazil/Australia/Malaysia/Thailand/Philippines profiles nếu đạt learning-profile standard → Atlas cleanup các reference stub → link validation**.
+**physical cross-link QA → population/urban/development causal examples → regional prerequisite/application links → selective Thailand/Philippines profiles nếu đủ chiều sâu → Atlas reference cleanup → internal-link validation**.
 
 Không quay lại chiến lược sinh hàng trăm country skeleton.

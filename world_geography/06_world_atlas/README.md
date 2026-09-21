@@ -39,33 +39,56 @@ Causal chain mặc định:
 
 **physical geography → resources/water → settlement → economy → transport → urban system → trade → society/institution → regional role**.
 
+Một file có đủ heading nhưng chỉ vài câu vẫn không đạt Definition of Done.
+
 ## Learning profiles ưu tiên cao
 
-### East/Southeast/South Asia
+### East/Southeast Asia
 
-Các profile đã có độ sâu cao hoặc vừa được promote gồm:
+Các profile trọng tâm:
 
-- Republic of Korea;
-- Viet Nam;
-- China;
-- Japan;
-- Singapore;
-- Indonesia;
-- India.
+- [Republic of Korea](./asia/eastern_asia/KOR_republic_of_korea.md)
+- [China](./asia/eastern_asia/CHN_china.md)
+- [Japan](./asia/eastern_asia/JPN_japan.md)
+- [Viet Nam](./asia/south_eastern_asia/VNM_viet_nam.md)
+- [Singapore](./asia/south_eastern_asia/SGP_singapore.md)
+- [Indonesia](./asia/south_eastern_asia/IDN_indonesia.md)
+- [Malaysia](./asia/south_eastern_asia/MYS_malaysia.md)
 
-Đây là core Atlas route vì liên hệ trực tiếp Korea–Vietnam, manufacturing, maritime trade, demographic transition và Asian production networks.
+Đây là core Atlas route cho Korea–Vietnam vì cho phép so sánh demographic transition, city systems, manufacturing, archipelago/gateway geography và maritime trade.
 
-### North America và Europe
+### Major continental/global cases
 
-United States là high-value learning profile. Germany, France, United Kingdom, Italy và Netherlands đã được promote như comparative European cases.
+- [India](./asia/southern_asia/IND_india.md)
+- [United States](./americas/northern_america/USA_united_states.md)
+- [Brazil](./americas/south_america/BRA_brazil.md)
+- [Australia](./oceania/australia_new_zealand/AUS_australia.md)
 
-### Tiếp theo nếu quay lại Atlas
+Bốn profile này dùng để so monsoon megaregion, continental market, tropical basin/frontier và dry resource-corridor geography.
 
-Brazil, Australia, Malaysia, Thailand và Philippines có learning value cao về commodities, maritime/archipelago systems, manufacturing, resources và trade. Nhưng để `Planned` cho đến khi có thể viết full profile; không tạo note 10 dòng.
+### Major European economies
+
+Germany, France, United Kingdom, Italy và Netherlands đã được promote thành comparative learning profiles về manufacturing, service, ports, urban networks và European connectivity.
+
+## Atlas promotions gần nhất
+
+Batch gần nhất **không tạo file mới**. Ba compact references được nâng thành full learning profiles:
+
+- Australia;
+- Brazil;
+- Malaysia.
+
+Mỗi profile đều dùng causal chain physical → resources → settlement → economy → transport → cities → trade → development/regional role.
+
+## Planned, chưa completed
+
+Thailand và Philippines có learning value cao cho Southeast Asia nhưng vẫn giữ Planned/Reference cho tới khi có thể viết full profile. Không tạo bản tóm tắt 10 dòng để đổi trạng thái.
+
+Các energy/chokepoint cases như Saudi Arabia, Iran, Türkiye, UAE, Egypt hay Panama chỉ được ưu tiên khi bổ sung một mechanism chưa được Atlas hiện tại minh họa tốt.
 
 ## Africa profiles
 
-Một số Africa files đã qua depth pass và có giá trị về Sahel, Nile, Congo Basin, Great Rift, landlocked corridors và resource belts. Tuy nhiên chúng vẫn cần QA theo cùng Definition of Done trước khi coi toàn nhóm hoàn chỉnh.
+Một số Africa files đã qua depth pass và có giá trị về Sahel, Nile, Congo Basin, Great Rift, landlocked corridors và resource belts. Tuy nhiên chúng vẫn cần QA theo cùng Definition of Done; không có khái niệm “Africa completed” chỉ vì đủ file.
 
 ## Khi nào nên merge thay vì giữ country file?
 
@@ -73,6 +96,6 @@ Nếu một file chỉ lặp region chapter và không có mechanism riêng, nê
 
 ## Atlas phải phụ thuộc core
 
-Nếu chưa hiểu monsoon, tectonics, demographic transition, agglomeration hay chokepoint, quay lại core chapter. Country profile không thay core.
+Nếu chưa hiểu monsoon, tectonics, demographic transition, agglomeration, resource conversion hay chokepoint, quay lại core chapter. Country profile không thay core.
 
 Bắt đầu từ [Learning Route](../LEARNING_ROUTE.md), sau đó mới chọn Atlas profile.

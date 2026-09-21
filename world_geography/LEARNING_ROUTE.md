@@ -4,6 +4,8 @@
 
 Học theo **cách suy nghĩ → công cụ biểu diễn → physical systems → human systems → regions → global systems → selective Atlas**. Country profile chỉ có giá trị sau khi hiểu core mechanism.
 
+Mỗi giai đoạn nên trả lời được không chỉ “cái gì ở đâu” mà còn “vì sao pattern đó xuất hiện, flow nào duy trì nó, và scale nào làm kết luận đổi”.
+
 ## 1. Geographic thinking
 
 Bắt đầu bằng [Tư duy địa lý](./00_foundations/00_geographical_thinking.md) rồi [Trái Đất như một hệ thống](./00_foundations/01_earth_as_system.md).
@@ -26,7 +28,9 @@ Mục tiêu là hiểu planet geometry và global circulation trước khi đi v
 
 [Plate Tectonics](./01_physical_geography/00_plate_tectonics_geologic_time.md) → [Geomorphology](./01_physical_geography/01_landforms_geomorphology.md).
 
-Đọc landform như balance giữa uplift, weathering, erosion, sediment transport, gravity và time.
+Đừng dừng ở tên landform. Hãy theo chuỗi **uplift/tectonics → weathering/erosion → sediment production → transport/deposition → basin/coast**.
+
+Chuỗi này sẽ quay lại ở Hydrology, Coasts, Hazards và Regional Geography.
 
 ## 5. Atmosphere, climate và water
 
@@ -34,11 +38,13 @@ Mục tiêu là hiểu planet geometry và global circulation trước khi đi v
 
 Mục tiêu: thấy water cycle là energy cycle, river/coast là sediment system và climate signal luôn được lọc qua local geography.
 
+Khi review, thử nối `rainfall → soil moisture → runoff/groundwater → river sediment → delta/coast → settlement risk`.
+
 ## 6. Soils, ecosystems và risk
 
 [Soils/Biomes/Ecosystems](./01_physical_geography/06_soils_biomes_ecosystems.md) → [Natural Hazards & Risk](./01_physical_geography/07_natural_hazards_risk.md).
 
-Chuyển từ “hazard xảy ra ở đâu” sang `hazard × exposure × vulnerability × dependency`. Đây là bridge trực tiếp sang settlement/urbanization.
+Chuyển từ “hazard xảy ra ở đâu” sang `hazard × exposure × vulnerability × dependency`. Đây là bridge trực tiếp sang settlement/urbanization và development.
 
 ## 7. Population, migration, urbanization, culture
 
@@ -52,6 +58,10 @@ Hãy theo dõi cách physical setting và accessibility ảnh hưởng settlemen
 
 Sau đó đọc [Agriculture](./02_human_geography/06_agriculture_food_systems.md) → [Industry/Energy/Resources](./02_human_geography/07_industry_energy_resources.md) → [Transport/Trade/Globalization](./02_human_geography/08_transport_trade_globalization.md) → [Development/Inequality](./02_human_geography/09_development_inequality.md).
 
+Sau integration pass mới nhất, bốn chapter cuối nên được đọc như một system:
+
+**resource base → water/energy/input → production/processing → corridor/port → market/trade → value capture → household access → inequality/resilience**.
+
 Mục tiêu: đọc region như `resource + labor + market + infrastructure + institution + history`, không như danh sách sector.
 
 ## 9. Regional Geography
@@ -62,7 +72,9 @@ Mục tiêu: đọc region như `resource + labor + market + infrastructure + in
 
 Route ưu tiên Korea–Vietnam:
 
-[East Asia](./03_regions/01_east_asia.md) → [Southeast Asia](./03_regions/02_southeast_asia.md) → [South Asia](./03_regions/03_south_asia.md) → [Central Asia](./03_regions/04a_central_asia.md) → [West Asia](./03_regions/04b_west_asia.md) → [Europe](./03_regions/05_europe.md) → [Africa](./03_regions/06_africa.md) → [North America](./03_regions/07_north_america.md) → [Latin America & Caribbean](./03_regions/08_latin_america_caribbean.md) → Oceania → Polar regions.
+[East Asia](./03_regions/01_east_asia.md) → [Southeast Asia](./03_regions/02_southeast_asia.md) → [South Asia](./03_regions/03_south_asia.md) → [Central Asia](./03_regions/04a_central_asia.md) → [West Asia](./03_regions/04b_west_asia.md) → [Europe](./03_regions/05_europe.md) → [Africa](./03_regions/06_africa.md) → [North America](./03_regions/07_north_america.md) → [Latin America & Caribbean](./03_regions/08_latin_america_caribbean.md) → [Oceania & Pacific](./03_regions/09_oceania_pacific.md) → [Polar Regions](./03_regions/10_polar_regions.md).
+
+Oceania nên được đọc bằng `island type → water/resources → settlement/gateway → trade dependency → resilience`; Polar Regions bằng `energy/ice/permafrost → accessibility → settlement/infrastructure → logistics/resources → global climate role`.
 
 ## 10. Global Systems
 
@@ -74,17 +86,27 @@ Chapter trade network là synthesis: resource → processing → port/corridor �
 
 ## 11. Selective World Atlas
 
-Chỉ sau core route mới dùng [World Atlas](./06_world_atlas/README.md).
+Chỉ sau core route mới dùng [World Atlas](./06_world_atlas/README.md). Reference stub ngắn không phải bài bắt buộc và không được tính completion.
 
-Các profile hiện có giá trị cao cho route học gồm Korea, Vietnam, China, Japan, United States, Singapore, Indonesia, India và một số major European economies.
+### Route East/Southeast Asia
 
-Reference stub ngắn không phải bài bắt buộc và không được tính completion.
+[Korea](./06_world_atlas/asia/eastern_asia/KOR_republic_of_korea.md) → [China](./06_world_atlas/asia/eastern_asia/CHN_china.md) → [Japan](./06_world_atlas/asia/eastern_asia/JPN_japan.md) → [Vietnam](./06_world_atlas/asia/south_eastern_asia/VNM_viet_nam.md) → [Singapore](./06_world_atlas/asia/south_eastern_asia/SGP_singapore.md) → [Indonesia](./06_world_atlas/asia/south_eastern_asia/IDN_indonesia.md) → [Malaysia](./06_world_atlas/asia/south_eastern_asia/MYS_malaysia.md).
+
+Đọc các profile này như nodes trong production–shipping–migration network, không như seven separate encyclopedias.
+
+### Route major global systems
+
+[United States](./06_world_atlas/americas/northern_america/USA_united_states.md) → [Brazil](./06_world_atlas/americas/south_america/BRA_brazil.md) → [India](./06_world_atlas/asia/southern_asia/IND_india.md) → [Australia](./06_world_atlas/oceania/australia_new_zealand/AUS_australia.md), sau đó dùng major European profiles để so industrial/port/service networks.
+
+Brazil và Australia đặc biệt hữu ích để so hai kiểu resource/commodity geography: tropical giant-basin/frontier system và dry continental resource-corridor system.
+
+Thailand và Philippines vẫn ở trạng thái Planned/Reference; chỉ đọc như orientation nếu chưa được promote.
 
 ## Route Korea–Vietnam
 
-Foundations → Physical Core → Population/Migration/Urbanization → Economic Geography → Industry/Energy → Transport/Trade → East Asia + Southeast Asia → Global Trade Networks → Korea/Vietnam/China/Japan/Singapore/Indonesia profiles.
+Foundations → Physical Core → Population/Migration/Urbanization → Economic Geography → Agriculture/Industry/Energy → Transport/Trade → East Asia + Southeast Asia → Global Trade Networks → Korea/Vietnam/China/Japan/Singapore/Indonesia/Malaysia profiles.
 
-Mục tiêu là nhìn Korea–Vietnam như node trong East/Southeast Asian production–shipping–migration network.
+Mục tiêu là nhìn Korea–Vietnam như nodes trong East/Southeast Asian production–shipping–migration network, rồi dùng Malaysia/Singapore/Indonesia để hiểu division of functions trong ASEAN.
 
 ## Route IT/GIS/Data
 
@@ -96,6 +118,6 @@ Hữu ích cho spatial database, routing, geofencing, location intelligence, rem
 
 Chọn một region/system rồi trả lời:
 
-**boundary ở đâu? stock gì? flow gì? physical constraint gì? node/corridor nào? feedback nào? settlement ở đâu? economy bám vào resource/market nào? trade đi tuyến nào? hazard truyền qua dependency nào? scale nào có thể đảo kết luận?**
+**boundary ở đâu? stock gì? flow gì? physical constraint gì? resource nào? settlement ở đâu? node/corridor nào? economy tạo value ở bước nào? trade đi tuyến nào? household nào access opportunity? hazard truyền qua dependency nào? scale nào có thể đảo kết luận?**
 
 Nếu không trả lời được, quay lại prerequisite chapter tương ứng.
