@@ -830,3 +830,166 @@ bytes
 Không nối XML bằng string nếu có serializer phù hợp. Không parse XML bằng regex. Không coi text `"27"` là integer nếu chưa có type layer. Không nghĩ CDATA là encryption. Không để secret trong comment. Không bỏ qua encoding. Không coi XML và HTML là cùng parser. Không quên rằng whitespace có thể là dữ liệu thật.
 
 Nếu các nguyên tắc này trở thành phản xạ, bạn đã có nền tảng đúng để học XML nghiêm túc.
+
+---
+
+# PHẦN BỔ SUNG — XML TRONG CÁC HỆ THỐNG THỰC TẾ
+
+## 40. XML trong file cấu hình không có nghĩa mọi tag đều thuộc XML Standard
+
+Khi bạn mở một file như `pom.xml`, `AndroidManifest.xml` hoặc một file Spring XML cũ, điều quan trọng đầu tiên là tách hai lớp kiến thức. Lớp thứ nhất là **XML syntax**: element phải đóng đúng, attribute phải quote, namespace phải được bind đúng, document phải well-formed. Lớp thứ hai là **vocabulary của công cụ**: Maven mới định nghĩa `dependency`, Android mới định nghĩa `activity`, Spring mới định nghĩa `bean`. XML parser chỉ hiểu cấu trúc; framework hiểu ý nghĩa nghiệp vụ của từng tag.
+
+Đây là mental model giúp bạn đọc một XML configuration lạ mà không bị choáng. Bạn không cần học lại XML cho từng framework. Bạn giữ nguyên kiến thức XML core, sau đó học vocabulary và schema/reference của framework đó.
+
+---
+
+## 41. Android dùng XML như thế nào?
+
+Android là một ví dụ rất rõ cho việc XML được dùng như một **declarative configuration language**. Mỗi Android app vẫn có `AndroidManifest.xml`. File manifest mô tả những thông tin mà Android build tools, hệ điều hành và Google Play cần biết về application, chẳng hạn application components, permissions, intent filters và required features.
+
+Một manifest đơn giản có thể có dạng:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission
+        android:name="android.permission.INTERNET" />
+
+    <application
+        android:label="@string/app_name">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+    </application>
+
+</manifest>
+```
+
+Ở đây XML core chỉ nói rằng `manifest` là root, `application` và `activity` là child elements, còn các `android:*` là namespaced attributes. Chính Android định nghĩa rằng `activity` đại diện cho một Activity component, `uses-permission` khai báo permission, và `intent-filter` mô tả loại Intent mà component có thể nhận.
+
+Namespace declaration:
+
+```xml
+xmlns:android="http://schemas.android.com/apk/res/android"
+```
+
+là một ví dụ thực tế cho kiến thức namespace mà bạn sẽ học sâu ở Intermediate. Prefix `android` giúp phân biệt attributes thuộc Android vocabulary với unprefixed attributes hoặc vocabulary khác.
+
+Android còn dùng XML cho resource files. Với View-based UI, layout thường nằm trong `res/layout/*.xml` và mô tả hierarchy của `View`/`ViewGroup`:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name" />
+
+</LinearLayout>
+```
+
+Điểm đáng chú ý là value như `@string/app_name`, `@drawable/icon` hoặc `@layout/main` không phải syntax đặc biệt của XML Standard. Đó là syntax reference do Android resource system định nghĩa. XML parser chỉ thấy chúng là attribute strings; Android build tools hiểu và compile chúng thành resource references.
+
+Jetpack Compose làm giảm nhu cầu dùng XML layout cho những UI viết hoàn toàn bằng Compose, nhưng điều đó không làm XML biến mất khỏi Android. Manifest và nhiều loại resource/configuration XML vẫn là một phần quan trọng của Android ecosystem. Vì vậy khi học Android/Kotlin, hiểu XML namespace và resource XML vẫn rất hữu ích.
+
+---
+
+## 42. Maven, Spring và configuration XML trong Java enterprise
+
+Maven POM là ví dụ data-centric XML được dùng làm build configuration. `pom.xml` mô tả project model, dependencies, plugins và build configuration. Maven thường dùng default namespace và XSD-related metadata, vì vậy đây là một file rất tốt để luyện cách đọc namespace thay vì chỉ nhìn local tag names.
+
+Spring hiện đại thường ưu tiên Java configuration, annotations và Spring Boot conventions, nhưng hệ thống enterprise cũ vẫn có thể chứa nhiều Spring XML configuration. Ví dụ:
+
+```xml
+<bean
+    id="userService"
+    class="com.example.UserService">
+
+    <property
+        name="repository"
+        ref="userRepository" />
+
+</bean>
+```
+
+Trong ví dụ này, XML không tự biết `bean` là object Java. Spring container đọc vocabulary của Spring và biến configuration thành object definitions/dependency wiring.
+
+Khi maintain legacy Java application, bạn thường phải đọc XML cùng Java code. Cách hiệu quả là xác định namespace/schema của file trước, sau đó xem framework map từng element/attribute sang runtime behavior như thế nào.
+
+---
+
+## 43. Cách đọc một XML configuration mà bạn chưa từng thấy
+
+Khi gặp một file XML lạ, trước tiên hãy tìm root element và namespace declarations. Root cho bạn biết loại document tổng quát, còn namespace cho biết vocabulary nào đang được dùng. Sau đó hãy phân biệt element nào là structure chính, attribute nào là metadata/configuration, và value nào chỉ là string theo XML core nhưng được framework diễn giải thành enum, class name, URI hoặc resource reference.
+
+Ví dụ nếu thấy:
+
+```xml
+<config
+    xmlns="urn:example:config"
+    xmlns:sec="urn:example:security">
+
+    <server port="8080" />
+
+    <sec:authentication enabled="true" />
+
+</config>
+```
+
+bạn đã có thể suy ra rất nhiều trước khi biết framework cụ thể. `server` thuộc default namespace `urn:example:config`; `authentication` thuộc security namespace; `port="8080"` ở XML core vẫn là text attribute value và framework/schema mới quyết định nó phải là integer; `enabled="true"` cũng tương tự.
+
+Sau đó mới tìm schema hoặc documentation của vocabulary. Đây là cách đọc XML từ **cấu trúc chung → namespace → contract → framework meaning**, thay vì học thuộc từng file cấu hình.
+
+---
+
+## 44. Khi nào XML hợp hơn JSON và khi nào JSON hợp hơn XML?
+
+Nếu dữ liệu chỉ là object/array đơn giản cho REST API giữa web frontend và backend, JSON thường ngắn, dễ đọc và map tự nhiên vào JavaScript/Java DTO. Nếu protocol đã có XSD contract, cần namespace để kết hợp nhiều vocabularies, cần mixed content như document publishing, cần XSLT transformation hoặc phải tương thích với SOAP/B2B standards có sẵn, XML có những khả năng mà JSON không thay thế trực tiếp chỉ bằng việc đổi cú pháp.
+
+Ví dụ một JSON object thường biểu diễn dữ liệu record rất tự nhiên:
+
+```json
+{
+  "id": 123,
+  "name": "Alice"
+}
+```
+
+Trong khi XML mạnh hơn khi một document cần kết hợp metadata, namespace và mixed content:
+
+```xml
+<article
+    xmlns="urn:example:article"
+    xmlns:meta="urn:example:metadata"
+    meta:id="A123">
+
+    <p>
+        Learn <em>XML</em> from its data model.
+    </p>
+
+</article>
+```
+
+Vì vậy lựa chọn đúng không phải “XML hay JSON cái nào hiện đại hơn”, mà là **data model và ecosystem nào phù hợp contract của hệ thống**. Đây là tư duy bạn sẽ dùng lại khi học SOAP, XSD, Android resources và enterprise integration ở các phần sau.
