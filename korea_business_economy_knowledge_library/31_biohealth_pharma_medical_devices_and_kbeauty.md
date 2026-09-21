@@ -1,528 +1,518 @@
 # Biohealth, dược phẩm, thiết bị y tế và K-Beauty Hàn Quốc (Biohealth / 바이오헬스·제약·의료기기·K뷰티)
 
-Biohealth là một trong những lĩnh vực cho thấy Korea đang chuyển từ manufacturing-centric growth sang **science + regulation + IP + high-value production**. Nhưng “bio” là label rất rộng. Innovative drug discovery, biosimilar, CDMO, diagnostics, medical devices và cosmetics có business model, capital requirement và failure mode khác nhau hoàn toàn.
+Biohealth là một trong những lĩnh vực cho thấy Hàn Quốc đang chuyển từ tăng trưởng thiên về sản xuất sang mô hình kết hợp **khoa học + quy định + IP + sản xuất giá trị cao**. Nhưng “bio” là nhãn rất rộng. Phát triển thuốc mới, biosimilar, CDMO, chẩn đoán, thiết bị y tế và mỹ phẩm có mô hình kinh doanh, yêu cầu vốn và dạng thất bại hoàn toàn khác nhau.
 
-Nếu dùng một valuation multiple hoặc một logic “aging → bio tốt” cho tất cả companies, analysis gần như chắc chắn sai.
+Nếu dùng một bội số định giá hoặc một logic kiểu “già hóa → bio tốt” cho tất cả doanh nghiệp, phân tích gần như chắc chắn sai.
 
-## Ba cổng của biohealth economics
+## Ba cổng của kinh tế biohealth
 
-Một health technology phải đi qua ba cổng:
+Một công nghệ y tế thường phải đi qua ba cổng:
 
 ```text
-Technical success
+Thành công kỹ thuật
       ↓
-Regulatory permission
+Được cơ quan quản lý cho phép
       ↓
-Commercial adoption / Reimbursement
+Được thị trường chấp nhận / được hoàn trả chi phí
 ```
 
-Failure ở bất kỳ gate nào có thể làm expected value giảm mạnh.
+Thất bại ở bất kỳ cổng nào đều có thể làm giá trị kỳ vọng giảm mạnh.
 
-Đây là điểm khác lớn với ordinary manufacturing. A factory can often sell once product works; drug/device may still need years of approval and payer acceptance.
+Đây là điểm khác lớn với sản xuất thông thường. Một nhà máy thường có thể bán sản phẩm khi sản phẩm hoạt động và đạt tiêu chuẩn; thuốc hoặc thiết bị y tế còn phải đi qua nhiều năm thử nghiệm, phê duyệt và chấp nhận của bên thanh toán.
 
-# Phần I — Innovative pharma / 신약개발
+# Phần I — Phát triển thuốc mới (Innovative Pharma / 신약개발)
 
-## Drug development là probabilistic pipeline
+## Phát triển thuốc là một chuỗi xác suất
 
-Simplified pipeline:
+Một pipeline đơn giản:
 
 ```text
-Discovery
-→ Preclinical
-→ Phase 1
-→ Phase 2
-→ Phase 3
-→ Regulatory review
-→ Launch
-→ Post-market monitoring
+Khám phá hoạt chất
+→ Tiền lâm sàng
+→ Giai đoạn 1
+→ Giai đoạn 2
+→ Giai đoạn 3
+→ Thẩm định của cơ quan quản lý
+→ Ra mắt thị trường
+→ Theo dõi sau lưu hành
 ```
 
-Each stage has failure probability.
+Mỗi giai đoạn có xác suất thất bại riêng.
 
-If stage probabilities are `p1...pn`:
+Nếu xác suất thành công ở các bước là `p1...pn`:
 
 \[
-P(success) \approx \prod_i p_i
+P(thành\ công) \approx \prod_i p_i
 \]
 
-This multiplication is why a promising Phase 1 asset is not worth expected peak sales discounted only by time. It needs **probability-adjusted value**.
+Đây là lý do một tài sản đang ở Phase 1 không thể được định giá chỉ bằng doanh số đỉnh tương lai rồi chiết khấu theo thời gian. Nó cần **giá trị đã điều chỉnh xác suất**.
 
-## rNPV: risk-adjusted valuation logic
+## rNPV: logic định giá đã điều chỉnh rủi ro
 
-A simplified drug rNPV:
+Một rNPV đơn giản:
 
 \[
-rNPV = \sum_t \frac{P_t \times Expected\ CashFlow_t}{(1+r)^t} - Remaining\ R\&D\ Cost
+rNPV = \sum_t \frac{P_t \times Dòng\ tiền\ kỳ\ vọng_t}{(1+r)^t} - Chi\ phí\ R\&D\ còn\ lại
 \]
 
-`P_t` reflects probability of reaching future stage/commercialization.
+`P_t` phản ánh xác suất đạt tới giai đoạn tương lai hoặc thương mại hóa.
 
-rNPV is highly assumption-sensitive. It is a framework, not truth.
+rNPV rất nhạy với giả định. Nó là khung tư duy, không phải “sự thật định giá”.
 
-## Clinical endpoint and trial design are economic variables
+## Tiêu chí đánh giá thử nghiệm và thiết kế nghiên cứu là biến kinh tế
 
-Trial outcome depends not only “drug works” but endpoint, comparator, patient population and statistical design.
+Kết quả thử nghiệm không chỉ phụ thuộc “thuốc có tác dụng hay không”. Nó còn phụ thuộc **tiêu chí đánh giá (clinical endpoint)**, thuốc đối chứng, quần thể bệnh nhân và thiết kế thống kê.
 
-A drug can have biological effect but fail commercial/regulatory threshold.
+Một thuốc có thể có tác dụng sinh học nhưng vẫn không đạt ngưỡng cơ quan quản lý hoặc ngưỡng thương mại cần thiết.
 
-Thus analyst needs understand what success actually means in trial protocol.
+Vì vậy người phân tích cần hiểu “thành công” trong protocol thực sự nghĩa là gì.
 
-## Cash runway: pre-revenue biotech can die before science resolves
+## Runway tiền mặt: biotech có thể hết tiền trước khi khoa học cho câu trả lời
 
-Small biotech often has little recurring revenue.
-
-Cash runway:
+Biotech nhỏ thường ít doanh thu định kỳ.
 
 \[
-Runway \approx \frac{Cash}{Quarterly\ Cash\ Burn}
+Runway \approx \frac{Tiền\ mặt}{Mức\ đốt\ tiền\ mỗi\ quý}
 \]
 
-If runway ends before next major data milestone, dilution/financing risk becomes central.
+Nếu runway kết thúc trước mốc dữ liệu lâm sàng quan trọng tiếp theo, rủi ro pha loãng và huy động vốn trở thành trung tâm.
 
-A great molecule with weak financing can still destroy shareholder value through repeated low-price equity issuance.
+Một phân tử rất tốt nhưng tài chính yếu vẫn có thể phá hủy giá trị cổ đông qua nhiều vòng phát hành cổ phiếu giá thấp.
 
-## Licensing deals: headline size is usually not guaranteed cash
+## Hợp đồng cấp phép: giá trị headline thường không phải tiền chắc chắn
 
-Biotech licensing often includes:
-
-```text
-Upfront payment
-Development milestones
-Regulatory milestones
-Sales milestones
-Royalties
-```
-
-Headline “$1bn deal” may include mostly contingent milestones.
-
-Always separate:
+Hợp đồng licensing biotech thường gồm:
 
 ```text
-Guaranteed cash now
-vs
-Probability-dependent future cash
+Khoản trả trước (upfront)
+Mốc phát triển
+Mốc phê duyệt
+Mốc doanh số
+Tiền bản quyền (royalty)
 ```
 
-## Patent protection and patent cliff
+Một thương vụ được quảng bá “1 tỷ USD” có thể phần lớn là các khoản mốc có điều kiện.
 
-Pharma value depends on exclusivity.
-
-Patent landscape can include product, formulation, process and use patents with different expirations.
-
-After exclusivity erosion, generics/biosimilars can compress price/share.
-
-Therefore commercial cash flows need finite exclusivity assumptions.
-
-# Phần II — Biosimilar / 바이오시밀러
-
-## Biosimilar is not “generic biologic” in a simple sense
-
-Biologics are complex molecules produced through living systems/processes. Manufacturing conditions can influence characteristics.
-
-A biosimilar must demonstrate high similarity and regulatory comparability; process/quality capability matters strongly.
-
-Thus barriers include:
-
-- analytical characterization;
-- clinical/regulatory evidence;
-- GMP manufacturing;
-- scale;
-- global commercial partnerships.
-
-## Patent expiry creates opportunity, not automatic share
-
-Originator exclusivity expiry opens market, but share depends on:
-
-- physician confidence;
-- payer incentives;
-- switching rules;
-- price discount;
-- hospital procurement;
-- brand/commercial execution.
-
-Biosimilar economics therefore combine science, regulation and market-access strategy.
-
-## Price erosion and portfolio strategy
-
-Early entrant can gain attractive share, but more competitors usually compress price.
-
-Company needs pipeline of multiple biosimilars/new biologics rather than rely one molecule indefinitely.
-
-This makes product portfolio timing important.
-
-# Phần III — CDMO / 위탁개발생산
-
-## CDMO sells manufacturing capability as service
-
-**Contract Development and Manufacturing Organization** helps clients develop/manufacture biologics/drugs.
-
-CDMO business resembles high-tech industrial service more than biotech lottery.
-
-Core variables:
+Luôn tách:
 
 ```text
-Installed capacity
-Utilization
-Customer backlog/contracts
-Batch success/quality
-Client concentration
-Capex/depreciation
+Tiền chắc chắn nhận ngay
+so với
+Tiền tương lai phụ thuộc xác suất
 ```
 
-## High fixed cost creates operating leverage
+## Bằng sáng chế và “vách bằng sáng chế”
 
-Bioreactors/plants require expensive facilities and validation.
+Giá trị dược phẩm phụ thuộc thời gian độc quyền.
 
-At low utilization, depreciation/fixed labor per batch high. At high utilization, unit cost falls.
+Hệ thống bằng sáng chế có thể gồm bằng sáng chế cho phân tử, công thức, quy trình và mục đích sử dụng với ngày hết hạn khác nhau.
 
-Same logic as semiconductor fabs, but regulation/quality makes switching slower.
+Khi độc quyền suy yếu, thuốc generic hoặc biosimilar có thể làm giá và thị phần giảm.
 
-## Qualification and GMP create switching cost
+Vì vậy dòng tiền thương mại phải có giả định hữu hạn về thời gian độc quyền.
 
-Client moving biologic manufacturing site may need process transfer, validation and regulatory filings.
+# Phần II — Biosimilar (바이오시밀러)
 
-Therefore successful validated plant can have high switching cost.
+## Biosimilar không đơn giản là “generic của thuốc sinh học”
 
-Quality history becomes **intangible economic asset**.
+Thuốc sinh học là phân tử phức tạp được tạo qua hệ thống sống và quy trình sản xuất. Điều kiện sản xuất có thể ảnh hưởng đặc tính sản phẩm.
 
-A contamination/deviation event can stop production, trigger inspection and damage trust much beyond direct batch loss.
+Biosimilar phải chứng minh mức tương đồng cao và tính tương đương theo quy định; năng lực quy trình và chất lượng vì vậy rất quan trọng.
 
-## Capacity expansion risk
+Rào cản gồm:
 
-High demand can encourage simultaneous industry capex.
+- phân tích đặc tính sản phẩm;
+- bằng chứng lâm sàng và pháp quy;
+- sản xuất GMP;
+- quy mô sản xuất;
+- đối tác thương mại toàn cầu.
 
-If too much capacity comes online before demand, utilization/margin falls.
+## Hết bằng sáng chế tạo cơ hội, không bảo đảm thị phần
 
-Therefore announced bioreactor capacity is not future revenue guarantee.
+Khi độc quyền của thuốc gốc hết, thị trường mở ra nhưng thị phần còn phụ thuộc:
 
-# Phần IV — Medical devices and diagnostics / 의료기기·진단
+- niềm tin của bác sĩ;
+- động lực của bên thanh toán;
+- quy tắc chuyển đổi thuốc;
+- mức giảm giá;
+- mua sắm bệnh viện;
+- năng lực thương mại và thương hiệu.
 
-## Medical device sits between electronics and healthcare regulation
+Kinh tế biosimilar vì vậy là sự kết hợp giữa khoa học, quy định và chiến lược tiếp cận thị trường.
 
-Imaging, ultrasound, surgical devices, diagnostics and digital-health systems combine hardware/software with regulatory evidence.
+## Giá giảm dần và chiến lược danh mục sản phẩm
 
-Commercial success needs:
+Doanh nghiệp vào sớm có thể giành thị phần hấp dẫn, nhưng khi nhiều đối thủ tham gia, giá thường chịu áp lực giảm.
 
-- approval;
-- hospital procurement;
-- clinical workflow fit;
-- service/training;
-- reimbursement in some products.
+Vì vậy doanh nghiệp cần pipeline gồm nhiều biosimilar hoặc sản phẩm sinh học mới thay vì phụ thuộc mãi vào một phân tử.
 
-Technical superiority alone may not overcome procurement inertia.
+Thời điểm ra mắt từng sản phẩm trong danh mục trở thành biến quan trọng.
 
-## Installed-base economics
+# Phần III — CDMO (위탁개발생산)
 
-A device vendor can place equipment, then earn recurring revenue from:
+## CDMO bán năng lực phát triển và sản xuất dưới dạng dịch vụ
 
-- consumables;
-- reagents;
-- service contracts;
-- software upgrades.
+**Tổ chức phát triển và sản xuất theo hợp đồng (Contract Development and Manufacturing Organization / CDMO)** giúp khách hàng phát triển và sản xuất thuốc sinh học hoặc dược phẩm.
 
-This resembles printer/razor-and-blades economics.
+Mô hình này gần với dịch vụ công nghiệp công nghệ cao hơn là “đặt cược nghiên cứu” của biotech phát triển thuốc mới.
 
-Installed base can create switching cost because staff are trained and workflows integrated.
+Các biến cốt lõi:
 
-## Diagnostics: test volume × reimbursement × consumable margin
+```text
+Công suất lắp đặt
+Tỷ lệ sử dụng
+Backlog / hợp đồng khách hàng
+Tỷ lệ mẻ sản xuất đạt chuẩn
+Mức tập trung khách hàng
+CAPEX / khấu hao
+```
 
-Diagnostic system economics often depend not device shipment but tests run over installed base.
+## Chi phí cố định cao tạo đòn bẩy hoạt động
 
-Therefore installed equipment can be acquisition channel for recurring reagent revenue.
+Bioreactor và nhà máy cần cơ sở vật chất đắt đỏ, hệ thống vô trùng và quy trình thẩm định nghiêm ngặt.
 
-Need distinguish instrument sale and downstream consumables.
+Khi tỷ lệ sử dụng thấp, khấu hao và lao động cố định trên mỗi mẻ cao. Khi tỷ lệ sử dụng tăng, chi phí đơn vị giảm.
 
-# Phần V — Reimbursement and payer economics / 보험·약가
+Logic giống fab bán dẫn, nhưng quy định và yêu cầu chất lượng làm việc chuyển nhà sản xuất khó hơn.
 
-## Patient need is not equal commercial market
+## Chứng nhận và GMP tạo chi phí chuyển đổi
 
-For drug/device:
+Khi khách hàng chuyển địa điểm sản xuất thuốc sinh học, họ có thể phải chuyển quy trình, thẩm định lại và nộp hồ sơ pháp quy.
+
+Vì vậy nhà máy đã được chứng nhận thành công có thể có chi phí chuyển đổi cao.
+
+Lịch sử chất lượng trở thành **tài sản vô hình**.
+
+Một sự cố nhiễm bẩn hoặc sai lệch quy trình có thể dừng sản xuất, kích hoạt thanh tra và phá niềm tin nhiều hơn rất nhiều so với giá trị của một mẻ bị mất.
+
+## Rủi ro mở rộng công suất
+
+Nhu cầu cao có thể khiến toàn ngành đồng thời mở rộng CAPEX.
+
+Nếu quá nhiều công suất đi vào vận hành trước nhu cầu thực, tỷ lệ sử dụng và biên lợi nhuận giảm.
+
+Vì vậy công suất bioreactor công bố không phải bảo đảm doanh thu tương lai.
+
+# Phần IV — Thiết bị y tế và chẩn đoán (Medical Devices & Diagnostics / 의료기기·진단)
+
+## Thiết bị y tế nằm giữa điện tử và quy định y tế
+
+Máy chẩn đoán hình ảnh, siêu âm, thiết bị phẫu thuật, xét nghiệm và hệ thống y tế số kết hợp phần cứng/phần mềm với bằng chứng pháp quy.
+
+Thành công thương mại cần:
+
+- phê duyệt;
+- được bệnh viện mua;
+- phù hợp quy trình lâm sàng;
+- dịch vụ và đào tạo;
+- cơ chế hoàn trả trong một số sản phẩm.
+
+Ưu thế kỹ thuật một mình có thể không vượt được sự trì trệ trong mua sắm và thay đổi quy trình bệnh viện.
+
+## Kinh tế của nền thiết bị đã lắp đặt
+
+Nhà cung cấp có thể bán hoặc đặt thiết bị rồi tạo doanh thu định kỳ từ:
+
+- vật tư tiêu hao;
+- thuốc thử;
+- hợp đồng dịch vụ;
+- nâng cấp phần mềm.
+
+Mô hình này gần với logic “máy in–mực in”: thiết bị tạo một nền khách hàng đã cài đặt, sau đó vật tư và dịch vụ tạo doanh thu lặp lại.
+
+Nền thiết bị đã lắp đặt có thể tạo chi phí chuyển đổi vì nhân viên đã được đào tạo và workflow đã tích hợp.
+
+## Chẩn đoán: số xét nghiệm × mức hoàn trả × biên vật tư
+
+Kinh tế của hệ thống chẩn đoán thường phụ thuộc nhiều vào số xét nghiệm thực hiện trên nền thiết bị đã lắp hơn là số thiết bị bán mới.
+
+Vì vậy thiết bị có thể đóng vai trò “kênh thu hút” cho doanh thu thuốc thử và vật tư tiêu hao định kỳ.
+
+Cần tách doanh thu bán máy với doanh thu vật tư phía sau.
+
+# Phần V — Hoàn trả chi phí và kinh tế bên thanh toán (Reimbursement & Payer Economics / 보험·약가)
+
+## Nhu cầu bệnh nhân không bằng quy mô thị trường thương mại
 
 \[
-Commercial\ Market \neq Patient\ Population \times List\ Price
+Thị\ trường\ thương\ mại \neq Số\ bệnh\ nhân \times Giá\ niêm\ yết
 \]
 
-Need adjust for:
+Cần điều chỉnh theo:
 
-- diagnosed patients;
-- eligible population;
-- reimbursement coverage;
-- negotiated price;
-- physician adoption;
-- adherence;
-- competition.
+- số bệnh nhân được chẩn đoán;
+- quần thể đủ điều kiện;
+- phạm vi bảo hiểm/hoàn trả;
+- giá sau đàm phán;
+- mức chấp nhận của bác sĩ;
+- mức tuân thủ điều trị;
+- cạnh tranh.
 
-National health insurance means payer has bargaining power.
+Hệ thống bảo hiểm y tế quốc gia làm bên thanh toán có quyền thương lượng đáng kể.
 
-## Aging raises need but not unlimited pricing power
+## Già hóa làm tăng nhu cầu nhưng không tạo quyền định giá vô hạn
 
-Aging increases demand for chronic disease, diagnostics and care.
+Dân số già làm nhu cầu bệnh mạn tính, chẩn đoán và chăm sóc tăng.
 
-But payer budget constraint remains. Volume can rise while reimbursement price is pressured.
+Nhưng ngân sách bên thanh toán vẫn có giới hạn. Khối lượng có thể tăng trong khi giá hoàn trả bị gây áp lực.
 
-Thus **demographic tailwind ≠ guaranteed margin expansion**.
+Vì vậy **gió thuận nhân khẩu học không đồng nghĩa biên lợi nhuận chắc chắn mở rộng**.
 
-# Phần VI — K-Beauty / K뷰티
+# Phần VI — K-Beauty (K뷰티)
 
-## Cosmetics is consumer-brand economics, not pharma economics
+## Mỹ phẩm là kinh tế thương hiệu tiêu dùng, không phải kinh tế dược phẩm
 
-K-Beauty often appears in biohealth export statistics, but business model is closer to consumer goods.
+K-Beauty thường xuất hiện trong thống kê xuất khẩu biohealth, nhưng mô hình kinh doanh gần hàng tiêu dùng hơn dược phẩm.
 
-Barriers to entry are lower than innovative pharma. Product cycle faster, brand/social-media/distribution more important.
+Rào cản gia nhập thấp hơn thuốc mới. Chu kỳ sản phẩm nhanh hơn, còn thương hiệu, mạng xã hội và phân phối quan trọng hơn.
 
-A cosmetics company can launch quickly, but so can competitors.
+Một thương hiệu mỹ phẩm có thể tung sản phẩm rất nhanh, nhưng đối thủ cũng vậy.
 
-## ODM/OEM ecosystem reduces factory barrier
+## Hệ sinh thái ODM/OEM làm giảm rào cản nhà máy
 
-Korea has strong cosmetics **ODM/OEM** ecosystem.
+Hàn Quốc có hệ sinh thái **ODM/OEM mỹ phẩm** mạnh. Thương hiệu có thể thuê ngoài công thức và sản xuất, nhờ đó ra mắt nhanh mà không cần sở hữu nhà máy.
 
-Brand may outsource formulation/manufacturing, allowing rapid launch without owning plant.
+Chuỗi giá trị mô-đun này làm nhu cầu vốn thấp hơn nhưng chuyển trọng tâm khác biệt sang:
 
-This modular value chain lowers capital need but shifts differentiation toward:
+- thương hiệu;
+- cộng đồng/influencer;
+- ý tưởng sản phẩm;
+- kênh bán;
+- tốc độ;
+- mua lặp lại.
 
-- brand;
-- community/influencer;
-- product concept;
-- channel;
-- speed;
-- repeat purchase.
+## Tăng trưởng viral khác thương hiệu bền vững
 
-## Viral growth vs durable brand
+Một SKU lan truyền mạnh có thể làm doanh thu bùng nổ.
 
-One viral SKU can drive explosive revenue.
+Nhưng tính bền vững cần:
 
-But durability requires:
+- mua lặp lại;
+- pipeline sản phẩm mới;
+- phân phối đa kênh;
+- đa dạng địa lý;
+- giá trị thương hiệu vượt khỏi một sản phẩm.
 
-- repeat purchase;
-- new-product pipeline;
-- multi-channel distribution;
-- geographic diversification;
-- brand equity beyond one product.
+Vì vậy tăng follower hoặc độ nóng trên mạng xã hội nên được nối với dữ liệu bán thực tế nếu có thể.
 
-Therefore follower growth/social buzz should be tied to sell-through data where possible.
+## Sell-in và sell-through
 
-## Sell-in vs sell-through
+**Sell-in:** thương hiệu giao hàng cho nhà phân phối hoặc nhà bán lẻ.
 
-**Sell-in:** brand ships to distributor/retailer.
+**Sell-through:** người tiêu dùng cuối mua hàng.
 
-**Sell-through:** end consumer purchases.
+Sell-in mạnh nhưng sell-through yếu có thể tạo tồn kho trong kênh và sau đó dẫn tới hoàn trả hoặc giảm giá.
 
-Strong sell-in with weak sell-through can create channel inventory and later returns/discounting.
+Nên kiểm tra khoản phải thu, tồn kho và dữ liệu nhà phân phối, không chỉ doanh thu.
 
-Analyst should check receivables, inventory and distributor data, not revenue alone.
+## Kinh tế từng kênh phân phối
 
-## Channel economics
+Kênh có thể gồm cửa hàng chuyên mỹ phẩm, trung tâm thương mại, D2C, marketplace toàn cầu và nhà phân phối địa phương.
 
-Channels include domestic specialty retailers, department stores, D2C, global marketplaces and local distributors.
+Mỗi kênh có khác biệt về:
 
-Each has different:
+- biên lợi nhuận gộp;
+- chi phí marketing;
+- ai sở hữu tồn kho;
+- khả năng tiếp cận dữ liệu khách hàng;
+- chi phí thu hút khách hàng.
 
-- gross margin;
-- marketing cost;
-- inventory ownership;
-- data access;
-- customer acquisition cost.
+D2C có thể có biên gộp cao hơn nhưng CAC, logistics và đổi trả cũng cao. Marketplace giúp mở rộng quốc tế nhanh nhưng phụ thuộc phí nền tảng và thuật toán xếp hạng.
 
-D2C may have higher gross margin but high CAC/logistics/returns.
+## Tồn kho và hạn sử dụng
 
-Marketplace gives faster global reach but platform fees and ranking dependency.
+Mỹ phẩm và dược phẩm có hạn sử dụng.
 
-## Inventory and expiry
+Tăng trưởng nhanh rồi nhu cầu giảm có thể tạo giảm giá hàng tồn kho hoặc bán tháo.
 
-Cosmetics/pharma have shelf-life.
+Doanh thu cao gần cuối quý nên được so cùng khoản phải thu và sell-through phía dưới nếu rủi ro tập trung nhà phân phối lớn.
 
-Rapid growth followed by demand slowdown can create inventory write-down/discounting.
+# Đa dạng hóa xuất khẩu
 
-High reported revenue near quarter end should be compared with receivables and downstream sell-through if concentration/distributor risk high.
+Xuất khẩu biohealth và mỹ phẩm đã mở rộng từ Trung Quốc sang Mỹ, châu Âu, Nhật Bản và các thị trường khác.
 
-# Export diversification
+Đa dạng hóa giảm rủi ro phụ thuộc một quốc gia nhưng làm tăng phức tạp pháp quy và kênh bán.
 
-Biohealth/cosmetics exports have expanded beyond China toward US, Europe, Japan and other markets.
+Mỗi khu vực có thể yêu cầu phê duyệt, nhãn, hồ sơ và chiến lược thương mại riêng.
 
-Diversification reduces one-country demand risk but raises regulatory/channel complexity.
+Mở rộng toàn cầu vì vậy cần năng lực tổ chức pháp quy, không chỉ dịch ngôn ngữ và marketing.
 
-Each jurisdiction may require different approval, labeling and commercial strategy.
+## Ảnh chụp xuất khẩu năm 2025
 
-Global expansion therefore requires regulatory organization, not just translation/marketing.
+KHIDI công bố xuất khẩu biohealth Hàn Quốc năm 2025 khoảng **27,87 tỷ USD**, gồm dược phẩm, thiết bị y tế và mỹ phẩm. Đây là ảnh chụp có mốc thời gian, được công bố năm 2026; phân tích hiện tại phải dùng dữ liệu chính thức mới nhất.
 
-## 2025 export snapshot
+Thông điệp cấu trúc rộng hơn là biohealth và K-Beauty đang trở thành động cơ xuất khẩu đáng kể bên cạnh công nghiệp nặng truyền thống.
 
-KHIDI reported 2025 Korean biohealth exports around **USD 27.87bn**, including pharmaceuticals, medical devices and cosmetics. This is a dated snapshot released in 2026; use official latest data for current analysis.
+# Các kiểu doanh nghiệp: không so sánh những mô hình không cùng loại
 
-Structural takeaway is broader: biohealth/K-beauty are becoming meaningful export engines beyond traditional heavy manufacturing.
+## Biotech phát triển thuốc
 
-# Company archetypes: do not compare unlike models
-
-## Discovery biotech
-
-Metrics:
+Theo dõi:
 
 ```text
-Cash runway
-Pipeline stage
-Trial catalysts
-rNPV assumptions
-Licensing/upfront
-Dilution risk
+Runway tiền mặt
+Giai đoạn pipeline
+Mốc thử nghiệm lâm sàng
+Giả định rNPV
+Licensing / upfront
+Rủi ro pha loãng
 ```
 
 ## Biosimilar
 
 ```text
-Approvals
-Launch timing
-Market share
-Price erosion
-Manufacturing cost
-Commercial partners
+Phê duyệt
+Thời điểm ra mắt
+Thị phần
+Mức giảm giá
+Chi phí sản xuất
+Đối tác thương mại
 ```
 
 ## CDMO
 
 ```text
-Capacity
-Utilization
-Backlog/contracts
-Client concentration
-Capex/depreciation
-Quality/inspection track record
+Công suất
+Tỷ lệ sử dụng
+Backlog / hợp đồng
+Mức tập trung khách hàng
+CAPEX / khấu hao
+Lịch sử chất lượng / thanh tra
 ```
 
-## Device/diagnostics
+## Thiết bị / chẩn đoán
 
 ```text
-Installed base
-Consumable/reagent revenue
-Approval/reimbursement
-Hospital channel
-Service margin
+Nền thiết bị đã lắp
+Doanh thu vật tư / thuốc thử
+Phê duyệt / hoàn trả
+Kênh bệnh viện
+Biên dịch vụ
 ```
 
-## Beauty brand
+## Thương hiệu mỹ phẩm
 
 ```text
-SKU concentration
-Repeat rate
-Channel/geography mix
-Marketing efficiency
-Inventory/receivables
+Mức tập trung SKU
+Tỷ lệ mua lặp lại
+Cơ cấu kênh / địa lý
+Hiệu quả marketing
+Tồn kho / phải thu
 Sell-through
 ```
 
-## Cosmetics ODM
+## ODM mỹ phẩm
 
 ```text
-Customer concentration
-Order volume
-R&D/formulation capability
-Plant utilization
-Margin by product mix
+Mức tập trung khách hàng
+Khối lượng đơn hàng
+Năng lực R&D / công thức
+Tỷ lệ sử dụng nhà máy
+Biên lợi nhuận theo cơ cấu sản phẩm
 ```
 
-One “bio multiple” for all models is meaningless.
+Dùng một “bội số bio” chung cho tất cả mô hình là vô nghĩa.
 
-# Capital allocation and financing differences
+# Khác biệt về phân bổ vốn và tài trợ
 
-Pre-revenue biotech should generally preserve runway and fund milestones.
+Biotech chưa có doanh thu nên ưu tiên bảo toàn runway và tài trợ cho các mốc nghiên cứu.
 
-Mature CDMO can support more debt because contracted manufacturing cash flows are more visible.
+CDMO trưởng thành có thể dùng nợ nhiều hơn vì dòng tiền sản xuất theo hợp đồng dễ dự báo hơn.
 
-Beauty brand may be asset-light but needs working capital/marketing.
+Thương hiệu mỹ phẩm có thể ít tài sản cố định nhưng vẫn cần vốn lưu động và marketing.
 
-Device company can require service organization and inventory.
+Công ty thiết bị có thể cần tổ chức dịch vụ sau bán hàng và tồn kho.
 
-Same leverage ratio has different risk across archetypes.
+Cùng một tỷ lệ đòn bẩy có mức rủi ro khác nhau giữa các mô hình.
 
-# Clinical/regulatory moat: regulation is both barrier and binary risk
+# Lợi thế pháp quy: vừa là rào cản vừa là rủi ro nhị phân
 
-Compliance costs slow entry, but once company builds quality system and approval history, this can create moat.
+Chi phí tuân thủ làm chậm đối thủ mới, nhưng khi doanh nghiệp xây được hệ thống chất lượng và lịch sử phê duyệt, đó có thể trở thành lợi thế.
 
-However same dependence creates binary downside:
+Tuy nhiên cùng sự phụ thuộc đó tạo rủi ro giảm mạnh nếu xảy ra:
 
-- failed trial;
-- inspection issue;
-- warning/recall;
-- approval delay.
+- thử nghiệm thất bại;
+- sự cố thanh tra;
+- cảnh báo / thu hồi;
+- chậm phê duyệt.
 
-Regulatory success should never be assumed just because technology promising.
+Không được giả định thành công pháp quy chỉ vì công nghệ có vẻ hứa hẹn.
 
-# Manufacturing quality is economic asset
+# Chất lượng sản xuất là tài sản kinh tế
 
-GMP, validation, batch records and inspection history do not appear fully on balance sheet.
+GMP, hồ sơ mẻ sản xuất, thẩm định và lịch sử thanh tra không được phản ánh đầy đủ trên bảng cân đối.
 
-Yet customer willingness to entrust biologic production depends on them.
+Nhưng khách hàng có dám giao sản xuất thuốc sinh học cho một CDMO hay không phụ thuộc rất mạnh vào chúng.
 
-One quality event can destroy years of trust.
+Một sự cố chất lượng có thể phá nhiều năm niềm tin.
 
-Therefore quality system is **intangible capital**.
+Vì vậy hệ thống chất lượng là **vốn vô hình (intangible capital)**.
 
-# Stress tests
+# Kiểm tra sức chịu đựng
 
-Discovery biotech:
+Biotech phát triển thuốc:
 
-- trial delayed 1 year;
-- probability of success reduced;
-- financing market closes.
+- thử nghiệm chậm 1 năm;
+- xác suất thành công giảm;
+- thị trường vốn đóng lại.
 
 CDMO:
 
-- utilization -15pt;
-- top client delayed;
-- new plant ramp slow.
+- tỷ lệ sử dụng giảm 15 điểm %;
+- khách hàng lớn trì hoãn;
+- nhà máy mới tăng công suất chậm.
 
 Biosimilar:
 
-- launch delayed;
-- price erosion faster;
-- competitor enters earlier.
+- ra mắt chậm;
+- giá giảm nhanh hơn;
+- đối thủ vào sớm hơn.
 
 Beauty:
 
-- viral SKU growth stops;
-- CAC doubles;
-- distributor inventory rises;
-- China/US channel regulation changes.
+- SKU viral mất đà;
+- CAC tăng gấp đôi;
+- tồn kho nhà phân phối tăng;
+- quy định kênh Trung Quốc/Mỹ thay đổi.
 
-# Mental Model
+# Mô hình tư duy
 
-> Biohealth transforms **science into cash flow through technical success, regulation, manufacturing quality and commercial access**. K-Beauty shares export/global-brand logic but follows consumer-brand economics rather than pharmaceutical probability economics.
-
-A compact chain:
+> Biohealth biến **khoa học thành dòng tiền thông qua thành công kỹ thuật, quy định, chất lượng sản xuất và khả năng tiếp cận thương mại**. K-Beauty chia sẻ logic xuất khẩu/thương hiệu toàn cầu nhưng vận hành theo kinh tế hàng tiêu dùng thay vì kinh tế xác suất của dược phẩm.
 
 ```text
-Knowledge / Formula / IP
+Tri thức / công thức / IP
           ↓
-Development / Manufacturing
+Phát triển / sản xuất
           ↓
-Regulatory / Quality gate
+Cổng pháp quy / chất lượng
           ↓
-Channel / Reimbursement
+Kênh bán / hoàn trả
           ↓
-Adoption / Repeat use
+Chấp nhận / sử dụng lặp lại
           ↓
-Cash flow
+Dòng tiền
 ```
 
-# Common misconceptions
+# Những nhầm lẫn thường gặp
 
-**“Large patient population = large revenue.”** Reimbursement/adoption matter.
+**“Dân số bệnh nhân lớn = doanh thu lớn.”** Sai. Hoàn trả và mức chấp nhận quyết định thị trường thương mại thực.
 
-**“Biosimilar is just generic biologic.”** Process/regulatory complexity is much higher.
+**“Biosimilar chỉ là generic của thuốc sinh học.”** Sai. Độ phức tạp quy trình và pháp quy cao hơn nhiều.
 
-**“CDMO is risk-free because it does not develop drugs.”** Capacity, client and quality risk remain.
+**“CDMO không phát triển thuốc nên gần như không có rủi ro.”** Sai. Công suất, khách hàng và chất lượng vẫn là rủi ro lớn.
 
-**“Aging guarantees healthcare profit.”** Payer cost controls can offset volume growth.
+**“Già hóa bảo đảm lợi nhuận y tế tăng.”** Sai. Bên thanh toán có thể gây áp lực giá.
 
-**“K-Beauty export growth means every brand has moat.”** ODM lowers entry barrier; repeat/brand/channel matter.
+**“K-Beauty xuất khẩu tăng nghĩa thương hiệu nào cũng có moat.”** Sai. ODM làm rào cản sản xuất thấp; mua lặp lại, thương hiệu và kênh mới quyết định độ bền.
 
-**“Licensing deal headline = guaranteed cash.”** Usually much is contingent milestone value.
+**“Headline licensing deal = tiền chắc chắn.”** Sai. Phần lớn giá trị có thể là các mốc phụ thuộc điều kiện.
 
-# Connections
+# Liên kết
 
 Đọc cùng [`02_trade_export_and_global_value_chains.md`](./02_trade_export_and_global_value_chains.md), [`07_startups_venture_and_scaleups.md`](./07_startups_venture_and_scaleups.md), [`27_demographics_households_and_consumption.md`](./27_demographics_households_and_consumption.md), [`29_innovation_rnd_education_and_human_capital.md`](./29_innovation_rnd_education_and_human_capital.md) và [`33_logistics_ports_and_distribution_networks.md`](./33_logistics_ports_and_distribution_networks.md).
 
 ### Nguồn nền
 
-- Korea Health Industry Development Institute (KHIDI), 2025 Biohealth Export Results released in 2026: https://www.khidi.or.kr/board/view?linkId=48940966&menuId=MENU00100
-- KHIDI industry/export outlook materials.
-- Korean/global regulatory authority disclosures and company filings for product-specific analysis.
+- Korea Health Industry Development Institute (KHIDI), kết quả xuất khẩu Biohealth 2025 công bố năm 2026: https://www.khidi.or.kr/board/view?linkId=48940966&menuId=MENU00100
+- Tài liệu triển vọng ngành/xuất khẩu của KHIDI.
+- Công bố của cơ quan quản lý Hàn Quốc/quốc tế và hồ sơ doanh nghiệp cho phân tích từng sản phẩm.
