@@ -432,7 +432,7 @@ status = "loading";
 console.log(readStatus()); // "loading"
 ```
 
-Nếu closure chỉ snapshot `"+"idle"+"`, output đã là `"+"idle"+"`. Nhưng nó đọc binding hiện tại.
+Nếu closure chỉ snapshot `"idle"`, output đã là `"idle"`. Nhưng nó đọc binding hiện tại.
 
 Điều này giải thích cả sức mạnh lẫn bug của closure. Một callback có thể thấy state mới nếu binding bị mutate; nhưng một hệ thống render tạo **binding mới cho mỗi render/call** có thể khiến callback giữ binding cũ, tạo stale closure.
 
@@ -504,7 +504,7 @@ const logOld = createLogger("old");
 const logNew = createLogger("new");
 ```
 
-`logOld` đúng khi in `"+"old"+"`; nó giữ environment của lần gọi cũ. Framework render systems có thể tạo tình huống tương tự: callback cũ sống sau khi UI đã có state mới. Cách giải quyết không phải “tránh closure”, mà là thiết kế dependency/lifecycle đúng.
+`logOld` đúng khi in `"old"`; nó giữ environment của lần gọi cũ. Framework render systems có thể tạo tình huống tương tự: callback cũ sống sau khi UI đã có state mới. Cách giải quyết không phải “tránh closure”, mà là thiết kế dependency/lifecycle đúng.
 
 ### Closure và memory
 
@@ -1592,7 +1592,7 @@ const value = await Promise.reject(
 });
 ```
 
-`value` là `"+"fallback"+"`.
+`value` là `"fallback"`.
 
 `finally()` chủ yếu dùng cleanup không phụ thuộc success/failure. Nếu finally callback không throw/return rejected Promise, original outcome đi tiếp.
 
