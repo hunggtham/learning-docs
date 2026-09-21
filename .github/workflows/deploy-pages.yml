@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -26,6 +26,109 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 30
+
+      - name: Apply contextual Vietnamese terminology
+        if: "${{ github.event.head_commit.message == 'chore: contextual terminology edit for HTML XML' }}"
+        shell: bash
+        run: |
+          git checkout 9744401005b4a4365927fe375e295f755e53a5f8 -- 10_frontend/html/html_01_beginner_to_senior_detailed.md 10_frontend/html/html_02_master_implementation_detailed.md
+          git checkout d576752d8bd25a2ecfc49baa7a3759bb5b0e5cbf -- 10_frontend/xml/xml_01_beginner_detailed.md 10_frontend/xml/xml_02_intermediate_detailed.md 10_frontend/xml/xml_03_senior_detailed.md 10_frontend/xml/xml_04_master_supplement_detailed.md
+
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          html_paths = [Path('10_frontend/html/html_01_beginner_to_senior_detailed.md'), Path('10_frontend/html/html_02_master_implementation_detailed.md')]
+          xml_paths = [Path('10_frontend/xml/xml_01_beginner_detailed.md'), Path('10_frontend/xml/xml_02_intermediate_detailed.md'), Path('10_frontend/xml/xml_03_senior_detailed.md'), Path('10_frontend/xml/xml_04_master_supplement_detailed.md')]
+
+          html_guide = '''## Quy ước thuật ngữ Việt–Anh
+
+Tài liệu ưu tiên cách diễn đạt tiếng Việt tự nhiên và giữ thuật ngữ tiếng Anh ở lần giới thiệu để tiện đối chiếu với MDN, HTML Living Standard và tài liệu framework. Các thuật ngữ cốt lõi được hiểu thống nhất như sau: **trình duyệt (browser)**, **mã đánh dấu (markup)**, **mã nguồn (source)**, **tài liệu (document)**, **phần tử (element)**, **thuộc tính (attribute)**, **biểu mẫu (form)**, **gửi biểu mẫu (submit)**, **bố cục (layout)**, **hành vi (behavior)**, **tính năng (feature)**, **mô hình tư duy (mental model)**, **phân tích cú pháp (parsing)**, **bộ phân tích cú pháp (parser)**, **HTML ngữ nghĩa (semantic HTML)**, **ngữ nghĩa (semantics)**, **khả năng tiếp cận (accessibility)**, **cây trợ năng (accessibility tree)**, **tên trợ năng (accessible name)**, **siêu dữ liệu (metadata)**, **kiểm tra ràng buộc của biểu mẫu (constraint validation)**, **mô hình nội dung (content model)**, **thuộc tính DOM (DOM property)**, **trạng thái hiện thời (live state)**, **lớp trên cùng (top layer)**, **hiệu năng (performance)**, **bảo mật (security)**, **đáp ứng (responsive)** và **môi trường thực tế (production)**.
+
+Sau khi đã giới thiệu thuật ngữ, phần giải thích có thể dùng cách gọi tiếng Việt ngắn hơn để câu văn dễ đọc. Những tên chuẩn mà cộng đồng thường dùng trực tiếp bằng tiếng Anh như DOM, ARIA, CORS, CSP, Shadow DOM, Web Components, `iframe`, framework, tên tag, tên attribute và tên API được giữ nguyên nếu dịch sang tiếng Việt làm mất nghĩa hoặc gây khó tra cứu.
+'''
+
+          xml_guide = '''## Quy ước thuật ngữ Việt–Anh
+
+Tài liệu ưu tiên cách diễn đạt tiếng Việt tự nhiên và giữ thuật ngữ tiếng Anh ở lần giới thiệu để tiện đối chiếu với đặc tả và tài liệu thư viện. Các thuật ngữ cốt lõi được hiểu thống nhất như sau: **tài liệu XML (XML document)**, **phần tử (element)**, **thuộc tính (attribute)**, **phần tử gốc (root element)**, **nút văn bản (text node)**, **không gian tên (namespace)**, **tiền tố (prefix)**, **tên mở rộng (expanded name)**, **bộ từ vựng (vocabulary)**, **lược đồ (schema)**, **giao thức (protocol)**, **quy tắc nghiệp vụ (business rule)**, **đúng cú pháp XML (well-formed)**, **kiểm tra tính hợp lệ (validation)**, **phân tích cú pháp (parsing)**, **bộ phân tích cú pháp (parser)**, **xử lý theo luồng (streaming)**, **luồng (stream)**, **truy vấn (query)**, **chuyển đổi (transformation)**, **ánh xạ/liên kết (binding)**, **tuần tự hóa (serialization)**, **bộ tuần tự hóa (serializer)**, **chuẩn hóa chính tắc (canonicalization/C14N)**, **cấu hình (configuration)**, **thời gian chạy (runtime)**, **hợp đồng dữ liệu (contract)** và **dữ liệu tải (payload)**.
+
+Sau khi đã giới thiệu thuật ngữ, phần giải thích có thể dùng cách gọi tiếng Việt ngắn hơn. Các tên chuẩn như XML, DTD, XSD, XPath, XSLT, XQuery, DOM, SAX, StAX, SOAP, WSDL, QName, PSVI, CDATA, URI và tên API cụ thể được giữ nguyên nếu đó là cách gọi chuẩn cần dùng khi tra cứu.
+'''
+
+          html_phrases = [
+              ('semantic HTML', 'HTML ngữ nghĩa'), ('accessibility tree', 'cây trợ năng'), ('accessible name', 'tên trợ năng'), ('accessible description', 'mô tả trợ năng'),
+              ('constraint validation', 'kiểm tra ràng buộc của biểu mẫu'), ('content model', 'mô hình nội dung'), ('DOM property', 'thuộc tính DOM'), ('live state', 'trạng thái hiện thời'), ('top layer', 'lớp trên cùng'),
+              ('browser parser', 'bộ phân tích cú pháp của trình duyệt'), ('HTML parser', 'bộ phân tích cú pháp HTML'), ('parser error recovery', 'cơ chế phục hồi lỗi của bộ phân tích cú pháp'), ('error recovery', 'cơ chế phục hồi lỗi'), ('tree construction', 'quá trình dựng cây DOM'),
+              ('resource loading', 'quá trình tải tài nguyên'), ('resource hints', 'các gợi ý tải tài nguyên'), ('render-blocking', 'chặn kết xuất (render-blocking)'), ('parser-blocking', 'chặn phân tích cú pháp (parser-blocking)'), ('layout shift', 'dịch chuyển bố cục (layout shift)'), ('layout viewport', 'khung nhìn bố cục (layout viewport)'),
+              ('progressive enhancement', 'tăng cường dần (progressive enhancement)'), ('form owner', 'biểu mẫu chủ quản'), ('form submission', 'việc gửi biểu mẫu'), ('form data', 'dữ liệu biểu mẫu'), ('form controls', 'các điều khiển biểu mẫu'), ('form control', 'điều khiển biểu mẫu'), ('form validation', 'kiểm tra biểu mẫu'), ('successful controls', 'các điều khiển được đưa vào dữ liệu gửi đi'), ('submitter', 'điều khiển gửi biểu mẫu'),
+              ('boolean attribute', 'thuộc tính boolean'), ('global attribute', 'thuộc tính toàn cục'), ('void element', 'phần tử rỗng đặc biệt'), ('content attribute', 'thuộc tính nội dung'), ('screen reader', 'trình đọc màn hình'), ('keyboard user', 'người dùng bàn phím'),
+              ('native semantics', 'ngữ nghĩa gốc của HTML'), ('native behavior', 'hành vi gốc của trình duyệt'), ('responsive images', 'ảnh đáp ứng'), ('legacy HTML', 'HTML cũ (legacy HTML)'), ('deprecated elements', 'các phần tử không còn được khuyến nghị (deprecated elements)'), ('obsolete elements', 'các phần tử lỗi thời (obsolete elements)'), ('security boundary', 'ranh giới bảo mật (security boundary)'), ('security controls', 'các cơ chế kiểm soát bảo mật')
+          ]
+
+          xml_phrases = [
+              ('XML document', 'tài liệu XML'), ('root element', 'phần tử gốc'), ('document element', 'phần tử tài liệu'), ('text node', 'nút văn bản'), ('namespace URI', 'URI của không gian tên'), ('default namespace', 'không gian tên mặc định'), ('namespace declaration', 'khai báo không gian tên'), ('namespace binding', 'liên kết không gian tên'), ('namespace scope', 'phạm vi không gian tên'), ('expanded name', 'tên mở rộng'),
+              ('schema validation', 'kiểm tra tính hợp lệ theo lược đồ'), ('schema processor', 'bộ xử lý lược đồ'), ('schema evolution', 'tiến hóa lược đồ'), ('schema design', 'thiết kế lược đồ'), ('schema registry', 'kho quản lý lược đồ (schema registry)'), ('type system', 'hệ kiểu'), ('well-formed', 'đúng cú pháp XML'), ('mixed content', 'nội dung hỗn hợp'), ('data-centric', 'hướng dữ liệu (data-centric)'), ('document-centric', 'hướng tài liệu (document-centric)'),
+              ('processing instruction', 'chỉ thị xử lý'), ('entity reference', 'tham chiếu thực thể'), ('external entity', 'thực thể ngoài'), ('external resource', 'tài nguyên bên ngoài'), ('streaming parser', 'bộ phân tích theo luồng'), ('streaming processing', 'xử lý theo luồng'), ('object binding', 'ánh xạ đối tượng (object binding)'), ('XML binding', 'ánh xạ XML (XML binding)'), ('marshaling', 'tuần tự hóa đối tượng sang XML (marshaling)'), ('unmarshaling', 'ánh xạ XML thành đối tượng (unmarshaling)'),
+              ('digital signature', 'chữ ký số'), ('signature wrapping', 'tấn công bọc chữ ký (signature wrapping)'), ('canonicalization', 'chuẩn hóa chính tắc'), ('attack surface', 'bề mặt tấn công'), ('threat model', 'mô hình đe dọa'), ('security boundary', 'ranh giới bảo mật'), ('performance cost', 'chi phí hiệu năng'), ('enterprise integration', 'tích hợp doanh nghiệp'), ('business rule', 'quy tắc nghiệp vụ'), ('contract evolution', 'tiến hóa hợp đồng dữ liệu'), ('backward-compatible', 'tương thích ngược (backward-compatible)'), ('forward compatibility', 'khả năng tương thích tiến (forward compatibility)'), ('interoperability', 'khả năng liên vận')
+          ]
+
+          def replace_outside_code(text, pairs):
+              pairs = sorted(pairs, key=lambda x: len(x[0]), reverse=True)
+              out, fenced = [], False
+              for line in text.splitlines(keepends=True):
+                  if line.lstrip().startswith('```'):
+                      fenced = not fenced
+                      out.append(line)
+                      continue
+                  if fenced:
+                      out.append(line)
+                      continue
+                  parts = re.split(r'(`[^`]*`)', line)
+                  for i in range(0, len(parts), 2):
+                      s = parts[i]
+                      for old, new in pairs:
+                          s = re.sub(r'(?<![A-Za-z0-9_-])' + re.escape(old) + r'(?![A-Za-z0-9_-])', new, s)
+                      parts[i] = s
+                  out.append(''.join(parts))
+              return ''.join(out)
+
+          def inject(text, guide):
+              marker = '\n---\n'
+              i = text.find(marker)
+              return text[:i] + '\n\n' + guide.rstrip() + '\n' + text[i:] if i >= 0 else guide + text
+
+          for p in html_paths:
+              t = p.read_text(encoding='utf-8')
+              t = replace_outside_code(t, html_phrases)
+              t = inject(t, html_guide)
+              if p.name.startswith('html_01'):
+                  t = t.replace('Mục tiêu không phải là giúp bạn nhớ thật nhiều tag, mà là xây một mental model đủ chắc', 'Mục tiêu không phải là giúp bạn nhớ thật nhiều thẻ (tag), mà là xây một mô hình tư duy (mental model) đủ chắc')
+                  t = t.replace('Browser parse HTML thành DOM.', 'Trình duyệt phân tích cú pháp (parse) HTML để tạo DOM.')
+              if p.name.startswith('html_02'):
+                  t = t.replace('# HTML — Master Implementation', '# HTML — Triển khai mức Master (Master Implementation)')
+                  t = t.replace('HTML trở thành một **browser platform**', 'HTML trở thành một **nền tảng trình duyệt (browser platform)**')
+              p.write_text(t, encoding='utf-8')
+
+          for p in xml_paths:
+              t = p.read_text(encoding='utf-8')
+              t = replace_outside_code(t, xml_phrases)
+              t = inject(t, xml_guide)
+              if p.name.startswith('xml_01'):
+                  t = t.replace('Mục tiêu không phải là giúp bạn “nhớ vài tag”', 'Mục tiêu không phải là giúp bạn “nhớ vài thẻ (tag)”')
+                  t = t.replace('một XML parser thực sự nhìn dữ liệu như thế nào', 'một bộ phân tích cú pháp XML (XML parser) thực sự nhìn dữ liệu như thế nào')
+              if p.name.startswith('xml_04'):
+                  t = t.replace('# XML — Master Supplement', '# XML — Bổ sung mức Master (Master Supplement)')
+              p.write_text(t, encoding='utf-8')
+          PY
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add 10_frontend/html 10_frontend/xml
+          git commit -m "docs(html-xml): apply contextual Vietnamese-English terminology"
+          git pull --rebase origin main
+          git push origin main
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
