@@ -23,7 +23,7 @@ CI → CD → safe change
         ↓
 container image/runtime
         ↓
-infrastructure as code
+infrastructure as code + cloud primitives
         ↓
 Kubernetes reconciliation
         ↓
@@ -44,18 +44,18 @@ Không cần học thuộc công cụ theo thứ tự này. Dependency quan tr�
 
 | Phần | Mục tiêu |
 |---|---|
-| [`00_foundations`](./00_foundations/) | Hiểu DevOps/Platform Engineering như một socio-technical system, flow, feedback, ownership và cognitive load |
-| [`01_runtime_foundations`](./01_runtime_foundations/) | Hiểu execution environment và request path đủ sâu để vận hành production |
-| [`02_delivery_system`](./02_delivery_system/) | Từ source change đến reproducible artifact và safe delivery |
-| [`03_containers`](./03_containers/) | Container image/runtime, build cache, isolation boundary và production usage |
-| [`04_infrastructure_as_code`](./04_infrastructure_as_code/) | Declarative infrastructure, state, plan/apply, drift và lifecycle |
-| [`05_kubernetes`](./05_kubernetes/) | Reconciliation, control plane, workload, networking, storage, scheduling và resource behavior |
-| [`06_gitops`](./06_gitops/) | Dùng Git làm desired-state interface và reconciliation làm deployment mechanism |
-| [`07_observability_sre`](./07_observability_sre/) | Telemetry, evidence-driven debugging, SLI/SLO, error budget, incident, capacity và DR |
-| [`08_security_governance`](./08_security_governance/) | Identity, secrets, policy, artifact provenance và supply-chain controls |
-| [`09_platform_engineering`](./09_platform_engineering/) | Platform as product, golden path, self-service, tenancy, governance và cost |
-| [`10_production_practice`](./10_production_practice/) | Troubleshooting xuyên tầng và các failure pattern của thay đổi production |
-| [`90_connections`](./90_connections/) | Bản đồ nối DevOps/Platform với Computer Science và các canonical docs khác |
+| [`00_foundations`](./00_foundations/00_devops_platform_operating_model.md) | Hiểu DevOps/Platform Engineering như một socio-technical system, flow, feedback, ownership và cognitive load |
+| [`01_runtime_foundations`](./01_runtime_foundations/00_linux_execution_and_service_model.md) | Hiểu execution environment và request path đủ sâu để vận hành production |
+| [`02_delivery_system`](./02_delivery_system/00_git_build_artifacts_and_reproducibility.md) | Từ source change đến reproducible artifact và safe delivery |
+| [`03_containers`](./03_containers/00_container_image_runtime_and_builds.md) | Container image/runtime, build cache, isolation boundary và production usage |
+| [`04_infrastructure_as_code`](./04_infrastructure_as_code/00_iac_state_drift_and_change_management.md) | Declarative infrastructure, state, plan/apply, drift, cloud primitives và lifecycle |
+| [`05_kubernetes`](./05_kubernetes/00_kubernetes_reconciliation_and_control_plane.md) | Reconciliation, control plane, workload, networking, storage, scheduling và resource behavior |
+| [`06_gitops`](./06_gitops/00_gitops_reconciliation_and_promotion.md) | Dùng Git làm desired-state interface và reconciliation làm deployment mechanism |
+| [`07_observability_sre`](./07_observability_sre/00_observability_telemetry_and_evidence_driven_debugging.md) | Telemetry, evidence-driven debugging, SLI/SLO, error budget, incident, capacity và DR |
+| [`08_security_governance`](./08_security_governance/00_identity_secrets_policy_and_supply_chain.md) | Identity, secrets, policy, artifact provenance và supply-chain controls |
+| [`09_platform_engineering`](./09_platform_engineering/00_platform_as_product_golden_paths_and_abstractions.md) | Platform as product, golden path, self-service, tenancy, governance và cost |
+| [`10_production_practice`](./10_production_practice/00_production_troubleshooting_and_change_failure_patterns.md) | Troubleshooting xuyên tầng và các failure pattern của thay đổi production |
+| [`90_connections`](./90_connections/00_devops_platform_cross_domain_map.md) | Bản đồ nối DevOps/Platform với Computer Science và các canonical docs khác |
 
 [`GLOSSARY.md`](./GLOSSARY.md) là tài liệu tra thuật ngữ. [`COVERAGE_AUDIT.md`](./COVERAGE_AUDIT.md) ghi rõ boundary, phần đã bao phủ, phần cố ý cross-link và các điểm cần audit khi mở rộng.
 
