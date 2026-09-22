@@ -362,8 +362,6 @@ Canonical parent vẫn là `feat/computer-science`. Vòng này làm việc trên
 
 Không tạo root library mới. Không tạo file `_final`, `_updated`, `_version2` trong canonical documentation tree. Các chapter mới đều nằm trong owner domain hiện có và README domain đã được cập nhật để tránh orphan file.
 
-Một branch phụ `feat/computer-science-depth-expansion-v2` đã được tạo từ child branch trong quá trình thao tác nhưng không được dùng làm canonical work branch và không chứa thay đổi riêng của vòng này. Canonical work tiếp tục ở `feat/computer-science-depth-expansion`.
-
 ## 19. Coverage còn thiếu sau expansion
 
 Các gap đáng xem tiếp nhưng chưa mặc định cần chapter mới:
