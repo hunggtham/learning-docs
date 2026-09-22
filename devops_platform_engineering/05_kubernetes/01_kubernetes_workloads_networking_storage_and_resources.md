@@ -203,3 +203,43 @@ Giả sử node chứa một database replica chết. Autoscaler tạo node mớ
 Causal chain nằm ở storage fencing/attach lifecycle, không ở scheduler capacity. Force-detach có thể rút ngắn recovery nhưng tăng risk nếu node cũ thực ra vẫn ghi được. Đây là trade-off giữa recovery time và split-brain/data corruption.
 
 Bài học là recovery của stateful workload bị giới hạn bởi **data ownership transfer**, không chỉ bởi tốc độ tạo Pod/node.
+
+## 31. Eviction là protocol có nhiều nguyên nhân, không phải mọi Pod biến mất đều giống nhau
+
+Pod có thể rời node vì operator drain, cluster autoscaler scale-down, node pressure, preemption, node failure hoặc controller rollout. Các đường này có semantics khác nhau: có đường tôn trọng PDB, có đường không; có đường cho grace period đầy đủ, có đường process biến mất cùng node.
+
+Runbook không nên chỉ nhìn trạng thái cuối `Terminated/Evicted`. Evidence cần giữ reason, initiator, node condition, PDB decision và replacement timing. Nếu 20 Pod cùng biến mất vì autoscaler consolidation, remediation khác hoàn toàn 20 Pod bị OOM hoặc zone mất điện.
+
+Platform nên coi disruption source như change telemetry. Availability budget chỉ có ý nghĩa khi biết ai đang tiêu budget và mechanism đó có thể pause/throttle được không.
+
+## 32. Cluster autoscaler scale-down cũng là một control loop gây disruption
+
+Scale-up thường được chú ý vì thiếu capacity, nhưng scale-down có thể tạo churn khi node vừa trở nên “ít dùng”. Evict Pod để consolidate node làm replacement schedule ở nơi khác, pull image, warm cache và mở lại connection. Nếu traffic tăng lại ngay sau đó, cluster có thể vừa scale down xong đã phải scale up.
+
+Một hệ thống ổn định cần hysteresis/stabilization: không thu hồi capacity quá nhanh chỉ vì một cửa sổ utilization thấp. Với workload có startup lâu hoặc traffic theo burst, một phần idle headroom có thể rẻ hơn latency/recovery cost của việc liên tục tạo-hủy node.
+
+Evidence nên nối `scale-down decision → evictions → rescheduling/warm-up → user latency/SLO → scale-up tiếp theo`. Nếu chỉ nhìn cloud cost giảm, ta có thể bỏ qua oscillation mà autoscaler tạo ra.
+
+## 33. HPA, VPA và rollout có thể tranh quyền trên cùng workload
+
+Horizontal scaling thay replica count; vertical scaling thay request/limit; rollout thay Pod template và tạo replacement. Nếu nhiều controller cùng điều chỉnh resource mà không có ownership contract, một action có thể làm signal của controller khác đổi đột ngột.
+
+Ví dụ VPA tăng CPU request làm Pod cũ cần recreate; scheduler cần node lớn hơn; rollout đang surge; HPA lại scale replica dựa trên utilization tính theo request mới. Từng controller local có thể đúng nhưng composition tạo Pending Pod, churn hoặc capacity spike.
+
+Platform cần xác định controller nào được phép mutate field nào, recommendation nào chỉ advisory và maintenance window nào cho disruptive resize. Mental model là **multi-controller composition**, không phải bật càng nhiều autoscaler càng tốt.
+
+## 34. Sau failure, topology có thể hồi phục capacity nhưng chưa hồi phục redundancy
+
+Giả sử service ba replica trải ba zone. Một zone mất, scheduler tạo replacement ở hai zone còn lại để khôi phục replica count. Dashboard lại thấy `3/3 Ready`, nhưng failure tolerance đã giảm vì hai hoặc ba replica có thể tập trung vào ít failure domain hơn.
+
+Khi zone cũ trở lại, scheduler không nhất thiết tự di chuyển Pod chỉ để tái cân bằng nếu placement hiện tại vẫn hợp lệ. Vì vậy recovery criterion cần kiểm tra **redundancy/topology invariant**, không chỉ desired replica count. Có thể cần controlled rebalance với disruption budget và capacity headroom.
+
+Đây là distinction quan trọng giữa `capacity recovered` và `resilience recovered`.
+
+## 35. Sidecar và init lifecycle có thể giữ Pod chưa thật sự hoàn tất hoặc chưa thật sự sẵn sàng
+
+Một Pod có nhiều container nên lifecycle của business process không luôn trùng lifecycle toàn Pod. Init work có thể block startup; sidecar proxy/agent có thể cần sẵn sàng trước application traffic hoặc cần sống đủ lâu để flush telemetry/drain network khi shutdown.
+
+Nếu readiness chỉ kiểm tra application nhưng sidecar data plane chưa nhận config, Pod có thể được route quá sớm. Nếu Job business container hoàn thành nhưng helper container không có completion semantics đúng, logical work đã xong nhưng Pod vẫn chưa kết thúc như operator kỳ vọng.
+
+Thiết kế cần xác định dependency order giữa containers, readiness của **request path đầy đủ**, và shutdown order để in-flight work/telemetry không mất. “Container chính healthy” chưa chắc đồng nghĩa Pod capability mà user cần đã healthy.
