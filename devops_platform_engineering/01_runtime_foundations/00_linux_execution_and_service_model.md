@@ -1,0 +1,85 @@
+# Linux như môi trường thực thi production
+
+## 1. Vì sao DevOps phải hiểu Linux dù đang dùng container
+
+Container không loại bỏ hệ điều hành; nó thay cách process nhìn hệ điều hành. Một workload trong container cuối cùng vẫn được kernel schedule, cấp memory, xử lý file descriptor, socket, signal và I/O. Vì vậy khi production có CPU throttling, OOM kill, file descriptor exhaustion hoặc process không nhận signal shutdown, chỉ biết `docker ps` hay `kubectl get pods` là chưa đủ.
+
+Chapter này không viết lại Operating Systems. Mục tiêu là nối các abstraction Linux quan trọng với công việc vận hành. Nền sâu hơn về kernel/syscall xem [canonical OS foundation](../../computer_science/basic/03_operating_systems/00_kernel_syscalls_and_os_abstractions.md), process/thread xem [processes, threads và scheduling](../../computer_science/basic/03_operating_systems/01_processes_threads_and_scheduling.md), filesystem/I/O xem [filesystems, storage và I/O](../../computer_science/basic/03_operating_systems/04_filesystems_storage_and_io.md).
+
+## 2. Process là đơn vị đầu tiên để suy luận
+
+Một service đang chạy không phải “một ứng dụng” theo nghĩa trừu tượng. Ở mức OS, nó là một hoặc nhiều process có PID, address space, open file descriptor, credential, environment, current working directory và set resource limit. Mọi câu hỏi vận hành nên dần quy về các state có thể quan sát này.
+
+Khi service “không chạy”, cần tách ít nhất bốn khả năng. Process chưa được tạo. Process tạo rồi thoát ngay. Process còn sống nhưng không listen. Process listen nhưng request path không tới được. Bốn trạng thái này có biểu hiện bên ngoài gần giống nhau nhưng evidence khác nhau.
+
+Ví dụ, một service Java chạy dưới `systemd` có thể kiểm tra theo chuỗi:
+
+```bash
+systemctl status orders.service
+journalctl -u orders.service --since "10 min ago"
+ps -ef | grep java
+ss -lntp
+```
+
+Lệnh không phải đáp án; mỗi lệnh kiểm tra một giả thuyết. `systemctl` kiểm tra supervisor state, `journalctl` kiểm tra lifecycle evidence, `ps` kiểm tra process existence, `ss` kiểm tra socket/listener.
+
+## 3. Service manager và supervision
+
+Một process production cần lifecycle manager. `systemd` hoặc container orchestrator làm nhiều hơn “start chương trình”: chúng định nghĩa khi nào restart, environment nào được inject, dependency nào phải có, log đi đâu và signal nào được gửi khi shutdown.
+
+Nếu application tự fork, daemonize và giữ PID file trong khi supervisor cũng mong process chạy foreground, ownership lifecycle bị chia đôi. Production practice hiện đại thường để process chính chạy foreground và để supervisor quản restart, health và shutdown.
+
+Điều cần hiểu là parent/child ownership. Nếu supervisor nghĩ process đã chết trong khi child vẫn còn, có thể xuất hiện orphan hoặc duplicated service. Nếu process PID 1 trong container không forward/reap signal đúng, graceful shutdown và zombie handling có thể hỏng. Đây là lý do “process model” quan trọng hơn câu lệnh start.
+
+## 4. Signal và graceful shutdown
+
+Khi deploy phiên bản mới, orchestrator thường không “tắt điện” ngay. Nó yêu cầu workload dừng bằng signal, cho một khoảng grace period, rồi mới force kill nếu process không thoát. Application production phải coi shutdown là một protocol.
+
+Một sequence tốt thường là: ngừng nhận request mới, cho load balancer/endpoints cập nhật, hoàn tất hoặc hủy request đang xử lý theo deadline, flush state/log cần thiết, đóng connection pool và thoát. Nếu application bắt signal nhưng mất 90 giây trong khi grace period là 30 giây, cuối cùng vẫn bị kill giữa transaction.
+
+Điểm senior cần nhớ: “graceful” phải được chứng minh bằng traffic behavior chứ không phải chỉ có shutdown hook trong code.
+
+## 5. File descriptor và socket là tài nguyên hữu hạn
+
+Linux biểu diễn nhiều I/O resource bằng file descriptor (FD). Socket, file, pipe và nhiều kernel object đều tiêu tốn FD. Một service leak connection có thể vẫn còn CPU và memory nhưng không mở thêm socket/file được.
+
+`ulimit -n` cho biết giới hạn ở shell hiện tại nhưng service có thể chạy dưới limit khác do `systemd`, container runtime hoặc policy. Khi thấy lỗi “too many open files”, đừng chỉ tăng limit. Trước hết phải hỏi số FD tăng vì workload hợp lệ hay leak; loại FD nào đang chiếm; connection pool có close đúng không; downstream latency có làm socket sống lâu bất thường không.
+
+Có thể kiểm tra theo PID:
+
+```bash
+ls /proc/<pid>/fd | wc -l
+lsof -p <pid>
+```
+
+`/proc` là nguồn evidence mạnh vì nó cho thấy kernel đang nhìn process như thế nào.
+
+## 6. Memory: RSS không phải toàn bộ câu chuyện
+
+Production thường hiển thị một số “memory usage”, nhưng số đó có thể đại diện RSS, working set, cgroup usage hoặc metric runtime. Page cache, mapped file, heap và native allocation có semantics khác nhau.
+
+Một service có thể bị OOM dù host còn memory nếu cgroup limit đã chạm. Ngược lại, host có memory pressure dù từng container chưa chạm limit. Kernel reclaim, page cache và memory pressure được đào sâu tại [memory pressure, reclaim và page faults](../../computer_science/03_operating_systems/advanced/02_memory_pressure_reclaim_and_page_faults.md).
+
+Về vận hành, hãy tách ba câu hỏi: application đang giữ memory nào; container/cgroup đang bị giới hạn thế nào; host/node đang chịu pressure ra sao. Nếu chỉ nhìn một dashboard application heap, bạn có thể bỏ sót native memory hoặc kernel pressure.
+
+## 7. CPU usage khác CPU entitlement
+
+`100% CPU` chỉ có nghĩa khi biết đơn vị đo. Trên host nhiều core, một process một-thread có thể dùng đầy một core nhưng chỉ chiếm phần nhỏ tổng host. Trong container, CPU request/limit có thể thêm một tầng entitlement. Khi workload bị CFS throttling, latency có thể tăng dù node chưa “100% CPU”.
+
+Do đó reasoning đúng là: demand bao nhiêu, allocation/limit bao nhiêu, scheduler cho chạy thực tế bao nhiêu, queue/run time tăng ra sao. Nền scheduler xem [scheduler internals](../../computer_science/03_operating_systems/advanced/01_scheduler_internals_runqueues_and_latency.md).
+
+## 8. Filesystem và “disk full”
+
+“Disk full” có thể là hết block, hết inode, filesystem read-only sau lỗi, quota bị chạm hoặc layer writable của container đầy. `df -h` chỉ trả lời một phần. `df -i` kiểm tra inode; `du` giúp tìm tree sử dụng dung lượng nhưng có thể không thấy file đã xóa mà process còn giữ open FD.
+
+Một tình huống điển hình là log file lớn bị `rm`, nhưng process vẫn giữ FD. Tên file biến mất khỏi directory nhưng block chưa được giải phóng cho tới khi FD đóng. `lsof +L1` có thể lộ trường hợp này. Đây là ví dụ rõ cho việc mental model filesystem quan trọng hơn thao tác xóa file.
+
+## 9. Evidence ladder cho Linux incident
+
+Khi một workload lỗi, nên đi từ evidence ít phá hoại đến sâu hơn. Trước hết xác định symptom và time window. Sau đó kiểm tra process/service state, logs/events, listener/socket, resource pressure, dependency connectivity. Chỉ khi các lớp này không đủ mới đi sâu vào `/proc`, syscall tracing, packet capture hoặc kernel evidence.
+
+Đừng restart quá sớm nếu chưa thu evidence tối thiểu. Restart có thể phục hồi service nhưng đồng thời xóa state quý giá để tìm root cause. Trong incident có user impact lớn, recovery vẫn ưu tiên; nhưng nên có quy ước ai capture evidence nào trước khi restart khi thời gian cho phép.
+
+## 10. Production invariant
+
+Một service vận hành tốt cần có lifecycle rõ ràng: process foreground, supervisor ownership, signal handling, resource boundary, log/telemetry path và health semantics nhất quán. Container hay VM chỉ thay packaging và isolation boundary; invariant này vẫn còn.
