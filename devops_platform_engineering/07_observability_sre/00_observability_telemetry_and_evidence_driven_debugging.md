@@ -131,3 +131,67 @@ Giả sử support nhận nhiều complaint nhưng error dashboard không tăng.
 Kiểm tra raw edge/access evidence, telemetry exporter/collector drop metric, version/region/tenant dimension và business outcome. Nếu HTTP 200 nhưng payload chứa business failure, transport error metric sẽ vẫn xanh.
 
 Bài học là observability chỉ tốt bằng semantics đã instrument. “Dashboard xanh” không phải bằng chứng user experience xanh nếu sensor đo sai contract.
+
+## 22. Missing data khác zero và khác healthy
+
+Một dashboard trả `0 errors` có thể nghĩa thật sự không có lỗi, nhưng cũng có thể vì exporter chết, target không scrape được hoặc query vô tình loại bỏ series mất dữ liệu. Đây là khác biệt giữa **absence of bad events** và **absence of observations**.
+
+Monitoring design nên làm missing-data semantics explicit. Với metric critical, loss of signal có thể cần alert riêng. Một SLI pipeline không được mặc định coi missing sample là success nếu điều đó làm outage telemetry biến thành availability 100%.
+
+Khi service biến mất khỏi dashboard đúng lúc incident, hãy hỏi target có còn emit không, collector có nhận không, backend có ingest không và query có còn match label mới không trước khi kết luận service idle.
+
+## 23. Counter reset và process restart làm rate query dễ sai
+
+Counter thường tăng đơn điệu trong lifetime của process, nhưng process restart đưa counter về 0. Query tính rate cần hiểu reset semantics; lấy chênh lệch hai sample thủ công có thể tạo rate âm hoặc spike giả.
+
+Tương tự, một fleet scale-out tạo nhiều time series mới. Nếu dashboard cộng raw counter không chuẩn hóa theo thời gian hoặc instance lifetime, số nhìn có thể thay đổi chỉ vì topology thay đổi chứ business traffic không đổi.
+
+Operational lesson là biết metric type và lifecycle. Dashboard formula là code; nó cần review, test với restart/gap và version cùng semantic contract giống application logic quan trọng khác.
+
+## 24. Log delivery thường không có exactly-once semantics
+
+Agent/collector có thể buffer rồi retry khi backend tạm lỗi. Điều này tốt cho durability nhưng có thể tạo duplicate log. Network/retry/batching cũng có thể làm event tới backend khác thứ tự timestamp hoặc ingestion order.
+
+Vì vậy đếm business event bằng log line cần cẩn thận. Nếu một payment success log bị gửi lại hai lần, query `count()` không nhất thiết bằng số payment thật. Với audit/business invariant quan trọng, event cần stable identity/deduplication semantics hoặc source dữ liệu authoritative hơn.
+
+Log là evidence tuyệt vời nhưng không nên vô thức biến thành transaction ledger nếu pipeline không có contract tương ứng.
+
+## 25. Telemetry schema cũng tiến hóa như API
+
+Đổi tên metric, label, log field hoặc span attribute có thể làm dashboard/alert/query im lặng mà application vẫn chạy. Nếu rollout application và dashboard không coordinated, một phần fleet dùng schema cũ, phần khác schema mới, aggregate có thể double-count hoặc bỏ sót.
+
+Shared semantic convention cần version/migration window. Có thể emit old+new field tạm thời, update query trước rồi mới remove old, hoặc dùng recording/translation layer tùy system.
+
+Đây là một compatibility problem: observability consumer cũng là consumer của telemetry API.
+
+## 26. Observer effect: instrumentation có thể làm workload thay đổi
+
+Tracing mọi request với payload lớn, synchronous log flush hoặc stack-profile quá nặng có thể tăng CPU, I/O và latency. Trong incident, bật debug log toàn fleet đôi khi làm disk/network pressure nặng thêm và che root cause ban đầu.
+
+Instrumentation cần budget và activation scope. Debug mode nên có TTL, sampling hoặc targeted cohort khi có thể. Một diagnostic action tốt luôn hỏi thêm: evidence mới tạo ra có làm thay đổi system đủ lớn để invalidate observation không?
+
+Điều này đặc biệt quan trọng với profiling, packet capture và verbose logging trên path latency-sensitive.
+
+## 27. Sampling policy có thể bias chính failure muốn tìm
+
+Nếu sampling quyết định dựa trên latency threshold, error code hoặc tenant, dataset giữ lại không còn đại diện traffic tổng thể. Điều đó không xấu nếu mục tiêu là debugging rare failure, nhưng không được dùng sample đó để ước lượng tỷ lệ toàn bộ user mà không biết selection bias.
+
+Tail sampling còn phụ thuộc việc trace hoàn thành và collector có đủ buffer. Trong overload, slow trace có thể bị drop do memory pressure đúng lúc ta muốn giữ chúng nhất.
+
+Một observability platform trưởng thành tách use case: metric đầy đủ cho population-level rate/SLO, sampled traces cho causal detail, và policy rõ về bias của sample.
+
+## 28. Black-box và white-box telemetry trả lời hai phía khác nhau của contract
+
+White-box metric nhìn từ bên trong service: queue, thread pool, GC, DB pool. Black-box probe nhìn như consumer: DNS resolve được không, TLS/HTTP có trả đúng không, synthetic transaction có hoàn thành không.
+
+Một service có internal dashboard xanh nhưng edge route hỏng; ngược lại synthetic probe fail từ một region trong khi service process khỏe. Hai perspective không cạnh tranh mà giúp xác định boundary failure.
+
+Với capability critical, một số external/synthetic check giúp phát hiện class failure mà self-reported telemetry không thể thấy — đặc biệt khi chính service hoặc telemetry agent đã chết.
+
+## 29. Stale telemetry có thể nguy hiểm hơn missing telemetry
+
+Missing signal thường dễ nhận ra. Stale signal khó hơn vì dashboard vẫn có giá trị cuối cùng và người xem tưởng nó mới. Cache, exporter stuck, delayed ingestion hoặc query window có thể giữ “CPU 40%, replicas 10” dù actual state đã đổi.
+
+Mọi critical signal nên có freshness context: sample timestamp, scrape age, ingestion lag hoặc heartbeat phù hợp. Khi incident, một evidence item không chỉ cần hỏi “giá trị là gì?” mà còn “được quan sát khi nào và từ state version nào?”.
+
+Senior reasoning coi freshness như một dimension của evidence. Dữ liệu chính xác nhưng quá cũ có thể dẫn tới action sai giống dữ liệu sai.
