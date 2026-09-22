@@ -85,3 +85,73 @@ Khi exception cần nhiều lần, có thể golden path đang thiếu use case 
 Multi-tenancy tăng utilization nhưng blast radius tăng. Dedicated resource giảm coupling nhưng cost/toil tăng. Quyết định tenancy phải xem workload criticality, compliance, scaling pattern và team maturity.
 
 Không có topology “chuẩn cho mọi công ty”. Có contract rõ và evidence để điều chỉnh mới là maturity.
+
+## 15. Isolation phải được mô tả theo failure và threat model, không theo tên resource
+
+Hai tenant ở hai namespace có thể vẫn chia node kernel, CNI data plane, ingress controller, DNS, API server, registry và observability backend. Vì vậy câu “đã tách namespace” chưa trả lời được tenant A có thể ảnh hưởng tenant B ra sao.
+
+Hãy hỏi theo từng failure class: A có thể ăn hết CPU/memory/I/O không; tạo quá nhiều object có làm API server chậm không; log cardinality có làm observability backend quá tải không; network policy có ngăn data path không; secret/audit/log query có bị đọc chéo tenant không.
+
+Nếu một workload có compliance hoặc hostile-code risk cao, logical isolation có thể không đủ; dedicated node/account/cluster hoặc sandbox boundary mạnh hơn có thể hợp lý dù cost cao hơn.
+
+## 16. Shared control plane là một tài nguyên cần quota riêng
+
+Team thường nhìn CPU/memory workload nhưng quên control-plane resource. Một tenant tạo hàng trăm nghìn object, event, watch hoặc GitOps reconciliation có thể làm API server/controller/etcd pressure tăng dù application request vẫn ít.
+
+Platform nên đặt boundary cho object count, API rate, concurrent reconciliation và automation fan-out khi cần. Multi-tenancy fairness phải bảo vệ cả **control plane** lẫn data plane.
+
+Đây cũng là lý do “mỗi team tự chạy controller tùy ý trong shared cluster” cần governance về permission và load, không chỉ security.
+
+## 17. Quota cần phân biệt hard ceiling và planning signal
+
+Một hard quota bảo vệ shared resource bằng cách từ chối work mới khi chạm giới hạn. Nhưng capacity planning còn cần soft threshold để cảnh báo trước. Nếu tenant chỉ biết vấn đề khi deployment bị reject, feedback đã quá muộn.
+
+Self-service tốt hiển thị current usage, forecast và headroom ngay lúc user chọn tier hoặc scale. Quota increase có thể tự động khi nằm trong policy và capacity còn đủ; chỉ exception lớn mới cần human decision.
+
+Quota cũng phải xét failure mode. Nếu production chạy bình thường ở 80% quota nhưng failover cần gấp đôi replica, quota hiện tại có thể chặn chính recovery path.
+
+## 18. Showback và chargeback tạo incentive khác nhau
+
+Showback cho team thấy chi phí họ tạo nhưng chưa chuyển chi phí đó vào ngân sách trực tiếp. Chargeback phân bổ cost thật về đơn vị sử dụng. Cả hai đều là feedback mechanism; không phải tổ chức nào cũng cần chargeback cứng.
+
+Nếu cost allocation thiếu shared-cost model, team có thể tối ưu cục bộ nhưng platform bill vẫn lớn. Shared ingress, observability, cluster control plane và network backbone cần cách phân bổ minh bạch: theo usage driver, tỷ lệ cố định hoặc coi là central investment tùy mục tiêu.
+
+Mục tiêu là tạo quyết định tốt hơn, không phải làm hóa đơn nội bộ đẹp hơn.
+
+## 19. Unit cost chỉ hữu ích khi denominator có nghĩa
+
+`cost/request` giảm có thể vì workload hiệu quả hơn, nhưng cũng có thể vì traffic bot/cache-hit rẻ tăng mạnh. `cost/user` có thể méo nếu user activity rất khác nhau.
+
+Do đó unit economics cần chọn denominator gần value/work thực: completed order, GB processed, successful build, active tenant hoặc business transaction. Phải giữ quality guardrail như SLO/error rate; nếu giảm cost bằng cách reject nhiều request, unit cost của request thành công có thể nhìn đẹp giả tạo.
+
+Senior FinOps luôn hỏi numerator và denominator đã thay đổi vì architecture, price hay traffic mix.
+
+## 20. Commitment/discount không sửa được resource waste
+
+Reserved capacity, savings plan hoặc volume discount có thể giảm đơn giá nhưng không loại bỏ idle architecture. Nếu commit dựa trên peak ngắn hạn rồi demand giảm, tổ chức chỉ chuyển waste thành hợp đồng dài hạn.
+
+Thứ tự reasoning tốt là hiểu baseline/seasonality, rightsizing và architecture trước, sau đó mới quyết định phần usage ổn định nào đáng commit. Discount strategy là financial optimization trên workload đã hiểu, không thay thế engineering optimization.
+
+## 21. Cost anomaly phải nối lại change telemetry
+
+Một bill tăng đột ngột thường có causal event: release bật debug log, retry storm tăng egress, retention policy đổi, preview environment không cleanup hoặc autoscaler stuck.
+
+Cost monitoring có giá trị hơn khi có dimension owner/service/environment và deployment/config event. Khi daily log cost tăng 4 lần sau release R, operator có thể drill từ FinOps signal sang telemetry/release thay vì chờ cuối tháng.
+
+Cost vì vậy cũng là observability signal của platform.
+
+## 22. Self-service deletion cần mạnh như self-service creation
+
+Platform thường tối ưu “Create” nhưng lifecycle thật còn resize, rotate, migrate, suspend và delete. Nếu tạo database mất 5 phút nhưng xóa cần ticket hai tuần, resource leak là hệ quả thiết kế chứ không phải user lười.
+
+Deletion cần safety: dependency discovery, retention/backup policy, grace period hoặc approval theo criticality. Nhưng common ephemeral resource nên có TTL và cleanup path mặc định.
+
+Day-2 operation mới quyết định platform có thật sự self-service hay chỉ là provisioning portal.
+
+## 23. Senior walkthrough: shared cluster rẻ hơn nhưng một team làm toàn platform chậm
+
+Giả sử team analytics tạo hàng chục nghìn short-lived Job mỗi giờ. CPU application vẫn còn headroom nhưng API server latency, scheduler queue và event volume tăng; các team khác thấy deployment chậm và HPA update trễ.
+
+Nếu chỉ nhìn namespace CPU quota, tenant analytics “không vi phạm”. Failure nằm ở shared control-plane resource chưa được accounting.
+
+Mitigation có thể rate-limit creation, batch work, tách workload class sang cluster/pool riêng hoặc tăng control-plane capacity. Long-term contract cần quota theo object/API behavior và SLO platform. Đây là lý do multi-tenancy economics phải tính externality, không chỉ utilization compute.
