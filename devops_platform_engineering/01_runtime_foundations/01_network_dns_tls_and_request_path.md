@@ -129,3 +129,51 @@ Giả sử 30% Pod timeout khi gọi external payment API, server payment không
 Kiểm tra node NAT/conntrack/SNAT port, CNI/network policy và outbound route. Nếu conntrack gần đầy hoặc SNAT allocation cạn đúng trên node lỗi, scale thêm Pod vào cùng node có thể làm tệ hơn. Mitigation có thể phân tán workload/node, giảm connection churn/retry hoặc tăng gateway capacity tùy architecture.
 
 Causal chain quan trọng: partial failure theo node là dimension giúp giảm search space từ “external API không ổn” xuống “shared egress state trên subset node”.
+
+## 18. Negative DNS cache có thể kéo dài failure sau khi record đã được sửa
+
+Cache không chỉ lưu câu trả lời thành công. Resolver/runtime cũng có thể cache kết quả âm như `NXDOMAIN` hoặc lookup failure trong một khoảng thời gian. Vì vậy một hostname vừa được tạo hoặc vừa sửa có thể vẫn fail trên một số client dù authoritative DNS hiện đã đúng.
+
+Trong incident migration, cần hỏi client nào đã lookup vào thời điểm record chưa tồn tại và runtime đó giữ negative result bao lâu. Restart process đôi khi “sửa” vì xóa cache cục bộ, nhưng đó chỉ là observation. Long-term fix là hiểu resolver/cache contract, chuẩn bị record trước cutover và tránh giả định mọi client re-query ngay.
+
+DNS debugging trưởng thành luôn xác định **resolver path + cache lifetime + connection lifetime**, không chỉ chạy một `dig` từ laptop operator.
+
+## 19. Connection pool có queue riêng và có thể che network khỏe
+
+Application thường không mở socket mới cho mỗi request mà mượn connection từ pool. Khi pool đã dùng hết, request có thể chờ trong pool queue trước khi bất kỳ packet nào được gửi đi. Từ góc nhìn server downstream, không có traffic; từ góc nhìn user, request vẫn timeout.
+
+Do đó cần tách `pool wait time`, `connect time`, TLS time và request/service time. Nếu pool wait tăng nhưng connect/request latency của connection đã mượn vẫn bình thường, bottleneck nằm ở client-side concurrency/pool sizing hoặc connection leak, không nằm ở network path.
+
+Tăng pool size không luôn là fix. Pool lớn hơn làm tăng concurrency downstream và có thể đẩy database/API vào saturation. Connection pool là một admission-control boundary nhỏ; sizing phải gắn với downstream budget.
+
+## 20. MTU mismatch có thể tạo “kết nối được nhưng request lớn bị treo”
+
+Đường mạng có giới hạn kích thước packet tối đa theo từng hop. Nếu Path MTU Discovery hoạt động không đúng hoặc ICMP cần thiết bị chặn, packet lớn có thể bị drop trong khi packet nhỏ vẫn đi được. Triệu chứng điển hình là TCP connect/TLS ban đầu có vẻ ổn nhưng upload, response lớn hoặc một số protocol message lại timeout.
+
+Failure này dễ bị hiểu nhầm thành application bug vì health check nhỏ vẫn xanh. Evidence cần so request nhỏ/lớn, packet retransmission và MTU trên overlay/VPN/tunnel path. Trong môi trường container/VXLAN/WireGuard, encapsulation làm effective MTU nhỏ hơn physical network.
+
+Không nên “fix” bằng hạ MTU ngẫu nhiên toàn hệ thống. Mục tiêu là tìm boundary nào làm packet vượt effective path MTU và cấu hình endpoint/tunnel nhất quán.
+
+## 21. HTTP/2 multiplexing giảm connection count nhưng tạo failure scope khác
+
+Với HTTP/1.1, nhiều client thường dùng pool nhiều connection để song song request. HTTP/2 cho phép nhiều stream multiplex trên một connection. Điều này giảm connection churn nhưng làm một connection trở thành shared transport cho nhiều request.
+
+Nếu connection HTTP/2 gặp packet loss, GOAWAY, flow-control hoặc proxy reset, nhiều stream có thể bị ảnh hưởng cùng lúc. Vì vậy metric “chỉ có vài connection” không có nghĩa blast radius nhỏ. Cần quan sát stream/request error cùng connection lifecycle.
+
+Platform không cần buộc mọi team hiểu frame protocol chi tiết, nhưng phải tránh assumption `1 connection = 1 request`. Capacity và failure reasoning phải theo protocol semantics thực tế.
+
+## 22. Load balancer health là một observation có độ trễ
+
+Backend có thể vừa fail nhưng load balancer chưa mark unhealthy cho tới vài lần probe; hoặc backend vừa hồi nhưng chưa được đưa lại vào pool. Trong cửa sổ đó, một phần traffic có thể vẫn đi sai nơi hoặc capacity thực thấp hơn dashboard application nghĩ.
+
+Health-check interval, unhealthy/healthy threshold, connection draining và endpoint propagation tạo một control loop riêng. Nếu rollout đổi hàng loạt backend nhanh hơn health system hội tụ, transient 5xx có thể xuất hiện dù từng process shutdown “đúng”.
+
+Khi điều tra, overlay backend lifecycle với health-state transition và routing evidence. “Pod Ready” và “load balancer đã route ổn định” là hai state khác nhau.
+
+## 23. Senior walkthrough: health check xanh nhưng upload file lớn timeout
+
+Giả sử GET `/health` và request JSON nhỏ đều thành công, nhưng upload trên 2 MiB treo qua VPN/overlay path. Server application không thấy request hoàn chỉnh, CPU và pool bình thường. Đây là clue rằng failure phụ thuộc packet size/path chứ không phụ thuộc business logic.
+
+So sánh direct path với tunneled path, kiểm tra retransmission và effective MTU. Nếu tunnel thêm encapsulation làm packet lớn bị black-hole trong khi ICMP feedback bị chặn, health check nhỏ sẽ không phát hiện.
+
+Bài học là synthetic check chỉ chứng minh đúng workload mà nó thực sự phát. Production verification phải đại diện đủ các property quan trọng của request path: size, protocol, identity, route và deadline.
