@@ -82,3 +82,11 @@ File này dùng để tra nhanh thuật ngữ, không thay thế chapter giải 
 | Policy audit mode | Chạy policy để ghi nhận violation/impact mà chưa chặn request, thường dùng trước staged enforcement. |
 | Recovery convergence | Quá trình sau mitigation đưa backlog, data invariant, capacity và degraded mode trở lại steady state có kiểm soát. |
 | Causal graph | Biểu diễn quan hệ mechanism giữa trigger, amplifier và hậu quả thay vì chỉ xếp sự kiện theo timestamp. |
+| Circuit breaker | Cơ chế tạm ngừng gửi work tới dependency đang fail theo policy để bảo vệ caller và giảm work vô ích; không tự chữa dependency. |
+| Bulkhead | Tách concurrency/resource pool theo dependency hoặc workload class để một failure không chiếm toàn bộ resource caller. |
+| Hedged request | Gửi thêm attempt khi request đầu chậm để giảm tail latency; đổi lại tăng load và cần idempotency/cancellation semantics. |
+| Backfill | Workload di chuyển/bổ sung dữ liệu sau schema change; cần throttle, checkpoint, resume và invariant cho mixed state. |
+| Dual-write | Tạm ghi cùng logical update sang nhiều representation/store; không atomic mặc định nên cần source-of-truth, reconciliation và discrepancy evidence. |
+| Telemetry priority | Chính sách ưu tiên signal khi observability pipeline quá tải để giữ evidence critical thay vì drop ngẫu nhiên mọi dữ liệu. |
+| Safe mode | Trạng thái degraded của control plane cho phép một tập operation an toàn trong khi chặn mutation rủi ro lúc dependency/state chưa đáng tin. |
+| Recoverable capacity | Capacity có thể được thu hồi/sẵn sàng trong deadline recovery, khác với capacity chỉ đang được workload khác mượn trên giấy. |
