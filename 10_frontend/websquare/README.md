@@ -1,6 +1,6 @@
 # WebSquare JavaScript Knowledge Library
 
-WebSquare trong repository này được đặt tại `10_frontend/websquare/` vì đây là một nền tảng phát triển giao diện web doanh nghiệp (enterprise web UI platform / 엔터프라이즈 웹 UI 플랫폼) chạy trên nền browser, JavaScript, XML và HTTP. Nó không phải là một ngôn ngữ lập trình mới. Vì vậy library này không lặp lại JavaScript, XML, CSS hay kiến thức browser đã có canonical source; thay vào đó nó tập trung vào lớp abstraction riêng của WebSquare: page model, component object, Scope, `scwin`, `$p`, DataCollection, Submission, WFrame, GridView, popup, SPA, lifecycle và production practice.
+WebSquare trong repository này được đặt tại `10_frontend/websquare/` vì đây là một nền tảng phát triển giao diện web doanh nghiệp (enterprise web UI platform / 엔터프라이즈 웹 UI 플랫폼) chạy trên nền browser, JavaScript, XML và HTTP. Nó không phải là một ngôn ngữ lập trình mới. Vì vậy library này không lặp lại JavaScript, XML, CSS hay kiến thức browser đã có canonical source; thay vào đó nó tập trung vào lớp abstraction riêng của WebSquare: page model, component object, Scope, `scwin`, `$p`, DataCollection, Submission, WFrame, GridView, popup, SPA, lifecycle, reusable component architecture và production practice.
 
 Nếu JavaScript cơ bản còn chưa chắc, hãy đọc [JavaScript Beginner](../javascript/javascript_beginner_rebuilt.md) và [JavaScript Intermediate](../javascript/javascript_intermediate.md). Khi cần hiểu event loop, async, browser runtime, memory, security và performance sâu hơn, dùng [JavaScript Senior](../javascript/javascript_senior.md) và [JavaScript Master](../javascript/javascript_master_supplement_detailed.md). XML syntax và parsing model nằm ở [XML Beginner](../xml/xml_01_beginner_detailed.md) và các chapter tiếp theo. Library WebSquare chỉ tóm tắt phần prerequisite đủ để đọc liền mạch rồi đi vào semantics của framework.
 
@@ -8,7 +8,7 @@ Nếu JavaScript cơ bản còn chưa chắc, hãy đọc [JavaScript Beginner](
 
 Baseline thực hành chính của library là **WebSquare5 SP5**, vì đây là dòng tài liệu WebSquare5 có đầy đủ development guide, API reference, DataCollection, Submission, WFrame/Scope, GridView và production configuration. Tài liệu chính thức năm 2026 đồng thời đã có API reference cho dòng **6.0 / WebSquare AI**. Library không giả định API giữa các generation là drop-in replacement. Mental model ổn định được giải thích ở chapter chính; khác biệt generation, legacy behavior và cách kiểm chứng API theo engine build được gom ở chapter migration/reference.
 
-Trong WebSquare, build engine cụ thể quan trọng hơn việc chỉ nhớ tên “WebSquare5”. Nhiều API/property tồn tại lâu nhưng behavior, default, deprecation hoặc rendering implementation có thể thay đổi giữa SP và build. Khi làm production, luôn đối chiếu API reference đúng build đang chạy trước khi áp dụng một property ít phổ biến.
+Trong WebSquare, build engine cụ thể quan trọng hơn việc chỉ nhớ tên “WebSquare5”. Nhiều API/property tồn tại lâu nhưng behavior, default, deprecation hoặc rendering implementation có thể thay đổi giữa SP và build. Release notes 2026 tiếp tục bổ sung behavior Scope/WFrame như `scopeInherit="recursive"`, cho thấy ngay cả những primitive cốt lõi vẫn tiến hóa. Khi làm production, luôn đối chiếu API reference và release note đúng build đang chạy trước khi áp dụng property ít phổ biến.
 
 ## Mental model cốt lõi
 
@@ -35,13 +35,18 @@ Khi một lỗi xảy ra, câu hỏi đầu tiên không nên là “API nào sa
 5. [05 — GridView, CRUD & Enterprise Screen Patterns](05_gridview_crud_patterns.md) nối GridView với DataList, row status, query/edit/save flow, large dataset, Excel, validation và các anti-pattern thường gặp trong màn hình nghiệp vụ.
 6. [06 — Debugging, Performance, Security & Production](06_debugging_performance_security.md) trình bày evidence-driven debugging, network trace, scope inspection, submission diagnostics, rendering cost, memory, XSS, authorization boundary, config, observability và incident reasoning.
 7. [07 — Legacy, Modern Evolution & Migration](07_legacy_modern_migration.md) giúp đọc project WebSquare nhiều thế hệ: global-style code, IFrame SPA, `$w` → `$p`, Scope adoption, SP behavior, WebSquare5 SP5 và hướng 6.0/WebSquare AI.
-8. [Glossary & Coverage Audit](GLOSSARY_AND_COVERAGE.md) dùng để tra thuật ngữ Việt–Anh–Hàn và tự kiểm tra xem đã hiểu library ở mức nào.
+8. [08 — Reusable Architecture, UDC & Common Modules](08_reusable_architecture_udc_common_modules.md) giải thích khi nào dùng UDC, WFrame, common module, template hay snippet; cách thiết kế property/method/event contract, state ownership, dynamic component, Generator và versioning reusable layer.
+9. [09 — Forms, Validation, Internationalization & Accessibility](09_forms_validation_i18n_accessibility.md) tách input filtering khỏi validation và security; đi sâu canonical value, cross-field rules, focus/tab order, language pack, locale key, Grid accessibility, upload/Excel trust boundary và multilingual layout.
+10. [10 — Rendering, Lazy Loading & Resource Lifetime](10_rendering_lazy_loading_lifetime.md) xây state model `source → object → render → active → data-ready → disposed`; giải thích TabControl `alwaysDraw`, `wframePreload`, lazy cost, stale async result, timer/listener cleanup, W-Pack/cache và lifecycle performance.
+11. [Glossary & Coverage Audit](GLOSSARY_AND_COVERAGE.md) dùng để tra thuật ngữ Việt–Anh–Hàn và tự kiểm tra xem đã hiểu library ở mức nào.
 
 Luồng dependency nên nhớ là:
 
-`JavaScript/browser → WebSquare page/component model → Scope → DataCollection → Submission → WFrame/SPA → Grid/CRUD → production reasoning`.
+`JavaScript/browser → WebSquare page/component model → Scope → DataCollection → Submission → WFrame/SPA → Grid/CRUD → reusable contracts → form/accessibility boundaries → rendering/lifetime → production reasoning`.
 
 GridView được đặt sau DataCollection và Scope có chủ đích. Nếu học Grid API trước, người học thường thao tác bằng index và handler một cách máy móc nhưng không hiểu dữ liệu thật nằm ở đâu, row state thuộc object nào, hoặc tại sao cùng một component ID lại hoạt động ở nhiều WFrame.
+
+Các chapter 08–10 cũng không phải “advanced API reference”. Chúng giải quyết ba vấn đề architecture thường chỉ lộ ra khi project lớn: abstraction dùng chung bắt đầu coupling mọi page, UI validation bị nhầm với trust boundary, và lazy/preload/render lifecycle tạo race hoặc memory leak. Đọc chúng sau khi đã hiểu page/data/scope sẽ hiệu quả hơn nhiều.
 
 ## Coding style của library
 
@@ -49,20 +54,28 @@ Ví dụ mặc định dùng `scwin` cho page-scope function và `$p` cho page-a
 
 Handler nên mỏng: đọc input cần thiết, validate, cập nhật model hoặc gọi một hàm orchestration. Business rule dài không nên bị nhét trực tiếp vào `onclick`. Network call phải có đường đi thành công, lỗi, retry/cancel khi cần và guard chống duplicate submission. Khi code cần đi qua nhiều Scope bằng chuỗi `parent().parent()` hoặc phụ thuộc mạnh vào component ID của page khác, đó là tín hiệu coupling cao cần xem lại boundary.
 
+Reusable component nên expose contract theo capability thay vì internals. Một UDC tốt cho consumer biết property nào cấu hình behavior, method nào là command và event nào trả kết quả; consumer không cần biết ID Input/Grid/DataMap bên trong. Common function càng thuần và càng ít phụ thuộc page Scope càng dễ test và tái sử dụng.
+
 ## First principles: WebSquare giải quyết vấn đề gì?
 
 Ứng dụng enterprise thường có rất nhiều form, grid, popup, validation, request/response mapping và màn hình CRUD. Nếu mỗi màn hình tự làm DOM manipulation, serialization, AJAX, row-state tracking và popup coordination, code nhanh chóng trở nên không đồng nhất. WebSquare cung cấp một runtime và một tập component/data abstraction thống nhất để đội phát triển có thể xây nhiều màn hình nghiệp vụ theo cùng convention.
 
 Lợi ích đó đi kèm một trade-off quan trọng: developer phải hiểu **framework state** chứ không chỉ JavaScript. Một `input1` không đơn thuần là DOM `<input>`, GridView không phải chỉ là HTML table, DataList không chỉ là Array, và một page trong WFrame không phải lúc nào cũng chia sẻ global scope với page cha. Những abstraction này giúp project lớn quản lý được complexity, nhưng cũng tạo ra failure mode riêng nếu developer coi chúng như DOM/JavaScript thuần.
 
+Ở cấp cao hơn, WebSquare còn buộc developer reasoning về **lifetime**. Một object có thể được preload nhưng UI chưa render; một tab có thể bị ẩn nhưng page instance vẫn sống; một Submission có thể trả response sau khi user đã chuyển page; một common object global có thể giữ reference làm Scope không được garbage collect. Vì vậy “đã load chưa?” phải được thay bằng câu hỏi chính xác hơn: source, object, view, data hay business state nào đã ready?
+
 ## Cách học bằng project nhỏ
 
 Sau chapter 01–03, hãy tự dựng một màn hình tra cứu gồm điều kiện tìm kiếm, một `DataMap` cho request, một `DataList` cho kết quả, một `Submission` và một GridView. Sau đó thêm chức năng sửa một dòng, theo dõi row status và lưu. Sau chapter 04, đặt màn hình đó trong WFrame và mở một popup chi tiết bằng parameter object. Sau chapter 06, dùng DevTools để giải thích được request nào chạy, scope nào chứa object, dữ liệu thay đổi ở DataList hay chỉ ở UI, và bottleneck nằm ở network, JavaScript hay rendering.
 
-Mục tiêu không phải nhớ càng nhiều API càng tốt. Mục tiêu là nhìn một màn hình WebSquare và có thể mô tả được **state nằm ở đâu, event chạy ở scope nào, dữ liệu đi qua object nào, network call được điều phối ra sao, và evidence nào chứng minh giả thuyết khi có lỗi**.
+Sau chapter 08, tách employee selector hoặc date-range selector thành UDC có public property/method/event mà page cha không biết internal IDs. Sau chapter 09, chạy cùng screen bằng Korean/English hoặc Vietnamese text dài hơn, thao tác hoàn toàn bằng keyboard và fault-inject server validation error. Sau chapter 10, đặt screen vào TabControl lazy, mở/đóng lặp 30 lần, kiểm tra Network/heap/listener và chứng minh không có stale request ghi đè page mới.
+
+Mục tiêu không phải nhớ càng nhiều API càng tốt. Mục tiêu là nhìn một màn hình WebSquare và có thể mô tả được **state nằm ở đâu, event chạy ở scope nào, dữ liệu đi qua object nào, network call được điều phối ra sao, abstraction nào sở hữu lifecycle, readiness hiện tại là gì, và evidence nào chứng minh giả thuyết khi có lỗi**.
 
 ## Nguồn chuẩn để kiểm chứng API
 
 Library ưu tiên tài liệu chính thức của Inswave Systems: WebSquare5 SP5 Development Guide, SP5 API Reference, SP5 Release Notes và API reference của dòng 6.0/WebSquare AI. Những URL cụ thể thay đổi theo build, vì vậy chapter không hard-code một build làm “chân lý vĩnh viễn”. Với API/property version-sensitive, hãy tra đúng engine build của project.
+
+Các chapter 08–10 có ghi link đến guide chính thức cho UDC, multilingual configuration, TabControl rendering, performance, file upload và WFrame lifecycle để người đọc kiểm tra exact property theo build thay vì biến library thành bản sao API reference.
 
 Các nguồn nền tảng ngoài WebSquare được giữ ở canonical JavaScript/XML/Computer Science docs của repository để tránh duplicate.
