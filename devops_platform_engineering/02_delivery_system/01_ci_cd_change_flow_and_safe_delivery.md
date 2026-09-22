@@ -185,3 +185,35 @@ Giả sử artifact D1 pass staging và được approve. Sau approval, pipeline
 Lỗi cấu trúc là gate bind tới source commit thay vì immutable artifact subject. Correct flow là build/publish D1 một lần, gắn evidence/approval vào D1 rồi promote chính digest đó. Nếu buộc rebuild, D2 phải được coi release subject mới và validation tương ứng phải chạy lại.
 
 Bài học là CI/CD maturity phụ thuộc **evidence identity + freshness + ownership**, không phụ thuộc số stage hay số nút approval.
+
+## 27. Online schema change phải xét lock, rewrite và runtime cost chứ không chỉ DDL hợp lệ
+
+Một migration có thể đúng về cú pháp nhưng nguy hiểm về vận hành. `ALTER TABLE` tùy database/version có thể lấy lock mạnh, rewrite lượng dữ liệu lớn, tăng WAL/replication lag hoặc giữ transaction lâu. Vì vậy câu hỏi production không phải chỉ là “migration chạy được không?” mà là “nó tranh resource gì, trong bao lâu và failure giữa chừng để lại state nào?”.
+
+Pipeline nên tách validation schema khỏi execution risk. Với bảng lớn, cần estimate row/data volume, lock behavior, replication headroom và maintenance/retry semantics; có thể dùng online migration mechanism hoặc chia thay đổi thành nhiều phase. Database internals cụ thể thuộc canonical Data & Databases, nhưng delivery contract phải nhìn thấy operational consequence.
+
+Một migration chạy tốt trên staging nhỏ không chứng minh production an toàn nếu cost tăng theo data size. Evidence phải đại diện volume và concurrency thực tế hoặc có model đủ bảo thủ.
+
+## 28. Backfill là một workload production cần throttle, checkpoint và invariant
+
+Sau khi thêm field/schema mới, backfill hàng triệu record thường kéo dài lâu hơn deploy application. Nếu chạy tối đa tốc độ, backfill có thể chiếm I/O, connection và lock budget của traffic user. Nếu dừng giữa chừng mà không có checkpoint, rerun có thể làm duplicate side effect hoặc phải quét lại toàn bộ.
+
+Backfill trưởng thành có stable progress identity, chunk/checkpoint, rate/concurrency limit, resume semantics và metric về remaining work/error. Quan trọng hơn, phải định nghĩa invariant trong giai đoạn mixed state: record cũ chưa migrate được đọc thế nào, record mới được ghi theo schema nào, và khi nào có thể tuyên bố old representation không còn cần.
+
+Deployment controller không nhất thiết chạy backfill trực tiếp, nhưng release state phải biết dependency này. Không được contract/drop old field chỉ vì application N+1 đã deploy 100% nếu data migration vẫn chưa converge.
+
+## 29. Dual-write tạo cửa sổ inconsistency cần reconciliation chứ không chỉ test happy path
+
+Một migration có thể tạm thời ghi cả old store và new store. Hai write không atomic qua hai hệ thống nên có thể xảy ra `old success/new fail`, `new success/old fail`, timeout không biết side effect nào đã commit hoặc retry tạo duplicate. Vì vậy dual-write là distributed consistency problem, không phải shortcut miễn phí.
+
+Nếu buộc dùng dual-write, cần xác định source of truth trong từng phase, idempotency key, retry/compensation, discrepancy detector và reconciliation job. Read path cũng cần strategy: đọc old, đọc new, shadow compare hay fallback; mỗi lựa chọn tạo evidence khác nhau.
+
+Cutover chỉ nên xảy ra khi mismatch rate, lag và unresolved discrepancy nằm trong threshold đã định nghĩa. Sau cutover vẫn nên giữ compatibility window trước khi xóa old path để rollback/forensic còn khả thi.
+
+## 30. Contract evolution phải theo consumer lag, không theo producer deploy success
+
+API/event/schema producer có thể deploy version mới trong vài phút nhưng consumer nâng chậm hàng tuần. Nếu producer ngừng phát field/event cũ ngay sau khi chính nó xanh, hidden consumer có thể vỡ mà release dashboard producer vẫn healthy.
+
+Compatibility window cần dựa trên inventory/telemetry của consumer thực: version nào đang đọc, consumer nào offline/batch theo lịch, replay có thể đọc event cũ bao lâu và retention kéo dài thế nào. Với event log, một consumer mới restart từ offset cũ có thể gặp schema lịch sử dù live traffic đã chuyển hết.
+
+Mental model release vì vậy là `producer capability → coexistence → consumer adoption → evidence không còn old dependency → contract removal`. “Deploy xong producer” chỉ là đầu migration, không phải điểm kết thúc.
