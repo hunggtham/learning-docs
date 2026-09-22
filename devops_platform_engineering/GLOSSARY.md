@@ -62,3 +62,15 @@ File này dùng để tra nhanh thuật ngữ, không thay thế chapter giải 
 | Schedulability fragmentation | Tổng resource còn đủ nhưng bị chia trên nhiều node/failure domain nên một workload lớn không fit vào bất kỳ placement hợp lệ nào. |
 | Coordinated omission | Sai lệch benchmark khi load generator giảm gửi work đúng lúc hệ thống chậm, khiến latency/saturation nhìn tốt hơn production thật. |
 | Effective configuration | Configuration mà process/workload thực sự đang sử dụng tại runtime, có thể khác object/source-of-truth vừa được cập nhật. |
+| Ephemeral port | Source port tạm thời mà OS cấp cho outbound connection; có thể trở thành capacity boundary khi connection churn hoặc NAT fan-out rất lớn. |
+| Connection tracking — conntrack | State kernel/firewall/NAT giữ để theo dõi flow; table hoặc translation capacity cạn có thể gây network failure dù application còn resource. |
+| PID 1 | Process đầu tiên trong PID namespace; trong container thường là process chính và có trách nhiệm signal/child-reaping cần được hiểu rõ. |
+| Writable layer | Layer ghi tạm phía trên image read-only khi container chạy; không phải durable storage contract. |
+| Multi-architecture image | Image index/manifest có variant theo kiến trúc như `amd64`/`arm64`; runtime chọn artifact tương thích node. |
+| Time-to-capacity | Thời gian từ lúc demand cần thêm resource đến khi capacity mới thực sự sẵn sàng phục vụ traffic/work. |
+| Durability | Khả năng dữ liệu tồn tại lâu dài mà không bị mất/corrupt; khác availability là khả năng truy cập/phục vụ tại thời điểm cần. |
+| Availability | Khả năng capability truy cập và phục vụ theo contract trong thời gian quan sát; không tự động đồng nghĩa dữ liệu durable hoặc có backup. |
+| Showback | Hiển thị chi phí cho owner/team để tạo visibility và incentive mà chưa hạch toán trực tiếp vào ngân sách của họ. |
+| Chargeback | Phân bổ/hạch toán chi phí shared platform/cloud về đơn vị sử dụng theo mô hình đã định. |
+| Unit cost | Chi phí trên một đơn vị work/value như successful request, order, build minute hoặc GB processed; denominator phải phản ánh outcome có ý nghĩa. |
+| Control-plane fairness | Bảo vệ tài nguyên điều khiển dùng chung như API server, scheduler, controller hoặc CI coordinator khỏi một tenant/workload gây starvation cho tenant khác. |
