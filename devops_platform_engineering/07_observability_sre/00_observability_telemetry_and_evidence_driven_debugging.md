@@ -195,3 +195,43 @@ Missing signal thường dễ nhận ra. Stale signal khó hơn vì dashboard v�
 Mọi critical signal nên có freshness context: sample timestamp, scrape age, ingestion lag hoặc heartbeat phù hợp. Khi incident, một evidence item không chỉ cần hỏi “giá trị là gì?” mà còn “được quan sát khi nào và từ state version nào?”.
 
 Senior reasoning coi freshness như một dimension của evidence. Dữ liệu chính xác nhưng quá cũ có thể dẫn tới action sai giống dữ liệu sai.
+
+## 30. Telemetry cần priority khi chính observability pipeline quá tải
+
+Khi ingestion vượt capacity, drop ngẫu nhiên mọi signal có thể làm mất đúng error/security event quan trọng trong khi giữ hàng triệu debug log ít giá trị. Vì vậy overload policy nên phản ánh giá trị evidence: SLO metric, audit/security event và critical error có thể cần durability/priority cao hơn verbose trace hoặc debug log.
+
+Priority không có nghĩa mọi critical signal được giữ vô hạn. Nếu buffer không bound, observability agent có thể làm application/node OOM. Cần explicit queue limit, spill/durable path khi phù hợp, drop counter và degradation policy. Điều quan trọng là khi mất dữ liệu, ta biết **loại nào bị mất, bao nhiêu và vì sao**.
+
+Đây là admission control áp dụng cho telemetry: system bảo vệ capability chẩn đoán cốt lõi thay vì để overload biến toàn bộ evidence thành ngẫu nhiên.
+
+## 31. Observability backend cũng có noisy-neighbor và query blast radius
+
+Một truy vấn regex rộng trên log nhiều tháng, dashboard fan-out hàng nghìn series hoặc tenant có cardinality bùng nổ có thể làm query/ingestion backend chậm cho người khác. Multi-tenancy của observability vì vậy cần quota không chỉ ở ingestion mà cả retained data, concurrent query, scan volume và cardinality.
+
+Trong incident, operator cần query nhanh nhất đúng lúc toàn tổ chức cùng mở dashboard. Capacity model phải xét **incident concurrency**, không chỉ traffic ngày thường. Có thể cần precomputed/recording data cho SLO, query priority, per-tenant limit và isolation cho audit/critical telemetry.
+
+Nếu observability backend là shared dependency toàn công ty, một query xấu không nên có blast radius tương đương outage monitoring toàn bộ fleet.
+
+## 32. Retention nên đi từ câu hỏi điều tra và nghĩa vụ, không từ một con số chung
+
+Không phải mọi telemetry cần giữ 90 ngày ở cùng độ chi tiết. High-resolution metric hữu ích cho incident gần; aggregate dài hạn hữu ích cho capacity/trend. Full trace có thể chỉ cần giữ ngắn, trong khi security/audit evidence có retention dài hơn vì forensic/compliance.
+
+Một retention design tốt hỏi: failure thường được phát hiện sau bao lâu; capacity cần seasonality dài bao nhiêu; audit yêu cầu gì; replay/debug cần raw detail hay aggregate. Sau đó mới chọn tier hot/warm/archive hoặc downsampling. Xóa detail quá sớm làm forensic bất khả thi; giữ mọi thứ mãi mãi tăng cost, privacy exposure và query surface.
+
+Retention vì vậy là product/security/reliability contract, không chỉ storage setting.
+
+## 33. Telemetry cost cần attribution theo signal driver
+
+Bill observability thường tăng vì một số driver cụ thể: log volume, retained bytes, high-cardinality series, trace span count, egress hoặc query scan. Nếu chỉ phân bổ theo số service, team ít có feedback để sửa instrumentation gây cost.
+
+Platform nên expose cost/usage theo service hoặc tenant ở mức đủ gần causal driver: `GB ingested`, `GB-day retained`, active series/cardinality, sampled span volume, expensive query class. Nhưng cost guardrail phải đi cùng reliability guardrail; cắt trace sampling xuống gần zero để đạt budget có thể phá diagnosability.
+
+Mental model FinOps ở đây là `question/evidence value → signal design → ingestion/retention/query cost → feedback cho owner`. Mục tiêu không phải telemetry rẻ nhất mà là **chi phí thấp nhất vẫn giữ được quyết định production cần thiết**.
+
+## 34. Senior walkthrough: incident làm observability chết trước application
+
+Giả sử release lỗi tạo exception loop, mỗi request phát hàng trăm log line. Application vẫn còn phục vụ một phần traffic nhưng log ingestion tăng 50 lần, collector queue đầy, backend query timeout và on-call mất visibility. Tăng log backend vô hạn không phải fix bền vững vì chính failure path có amplification factor không bound.
+
+Causal chain là `application fault → telemetry amplification → collector/backend saturation → evidence loss → recovery chậm`. Mitigation có thể rate-limit/sampling log lặp, ưu tiên error summary/SLO signal, bảo vệ backend bằng tenant/query quota và giữ drop counter. Sau incident, instrumentation phải được sửa để một lỗi application không thể biến thành observability outage có blast radius lớn hơn lỗi gốc.
+
+Đây là ví dụ rõ rằng observability nằm trong production dependency graph và cần overload/failure design giống mọi shared platform khác.
