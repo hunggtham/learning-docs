@@ -85,3 +85,67 @@ Bắt đầu staging/lab không có nghĩa đủ; production có traffic/data/de
 Backup, failover và incident process không nên là tài liệu tồn tại riêng. Chúng là capability cần version, test, ownership và telemetry. Nếu recovery chỉ được thử khi disaster thật xảy ra, đó không phải plan mà là hy vọng.
 
 Một platform trưởng thành biến recovery path thành workflow lặp lại: snapshot/backup tự động, restore drill, environment bootstrap bằng code, access khẩn cấp được audit và communication template sẵn.
+
+## 15. MTTR nên được phân rã để biết đang tối ưu phần nào
+
+Một con số MTTR tổng hợp có thể che nhiều vấn đề khác nhau. Có thể tách timeline thành detection, triage/understanding, mitigation, repair và verification. Hai incident cùng mất 60 phút nhưng một cái mất 50 phút mới phát hiện, cái kia phát hiện ngay nhưng rollback không chạy được, cần cải tiến hoàn toàn khác nhau.
+
+Một decomposition thực dụng:
+
+```text
+failure begins
+→ detected
+→ acknowledged / triaged
+→ mitigation starts
+→ user impact recovered
+→ permanent repair
+→ learning/action closed
+```
+
+Không nhất thiết mọi tổ chức phải dùng cùng tên metric. Điều quan trọng là timestamp có semantics rõ để tránh “MTTR giảm” chỉ vì đổi cách bắt đầu/kết thúc đồng hồ.
+
+## 16. Backup consistency có nhiều mức
+
+Snapshot storage không tự động bảo đảm application-consistent state. Với database đang ghi, snapshot crash-consistent có thể tương đương mất điện đột ngột: engine phải dựa WAL/journal/recovery khi restore. Một số hệ thống cần quiesce, checkpoint hoặc coordination giữa nhiều volume/component để tạo backup nhất quán.
+
+Nếu application có nhiều datastore, restore mỗi datastore về thời điểm khác nhau còn có thể vi phạm business invariant dù từng database riêng lẻ đều hợp lệ. Ví dụ order state ở DB A đã commit nhưng payment event ở store B restore về trước đó.
+
+Backup design vì vậy phải xác định consistency boundary, không chỉ “snapshot đã success”. Database internals sâu hơn giữ ở canonical Data & Databases; DevOps cần bảo đảm restore workflow hiểu application contract.
+
+## 17. Point-in-time recovery cần cả base backup và log chain usable
+
+Point-in-time recovery thường dựa trên một base snapshot/backup cộng chuỗi log/transaction change tới mốc cần phục hồi. Có backup full nhưng thiếu một đoạn log hoặc key giải mã có thể làm recovery tới thời điểm mục tiêu bất khả thi.
+
+Restore drill nên kiểm tra chain end-to-end, không chỉ list file tồn tại. RPO thực tế được quyết định bởi log shipping/retention và mốc gần nhất có thể phục hồi thành công, không phải con số trong policy document.
+
+## 18. DR bootstrap phải được xem như dependency closure
+
+Khi region chính mất, recovery environment cần một tập tối thiểu dependency để có thể tự dựng phần còn lại. Nếu IaC state backend, DNS admin, KMS key, identity provider và artifact registry đều chỉ truy cập được từ region đã mất, automation DR có thể không khởi động.
+
+Hãy vẽ bootstrap graph và hỏi component nào cần tồn tại trước để tạo component sau. Một số control-plane asset cần replication/cross-region access độc lập với application data. Recovery plan tốt biết **thứ tự khởi động** chứ không chỉ danh sách resource.
+
+## 19. Failover cũng là một distributed-state change
+
+Chuyển traffic sang replica/region mới cần đảm bảo writer ownership. Nếu old primary chưa chắc đã chết mà new primary được mở write không có fencing, split brain có thể xuất hiện. Đây là lý do lease/fencing/consensus là canonical dependency quan trọng cho HA.
+
+Ở DevOps layer, runbook phải biết failure detector có uncertainty và thao tác promote/failback có condition nào. “Không ping được primary nên promote ngay” có thể nguy hiểm nếu network partition chỉ tách operator khỏi primary nhưng primary vẫn phục vụ một phần traffic.
+
+## 20. Failback thường khó hơn failover
+
+Sau khi chạy ở DR region nhiều giờ, data/state mới đã sinh ở nơi dự phòng. Chuyển ngược không phải chỉ đổi DNS về. Cần đồng bộ data direction, bảo đảm old primary đã catch up hoặc rebuild, kiểm tra version/config drift và staged traffic return.
+
+Một DR plan chỉ mô tả failover mà không có failback/reconciliation để lại hệ thống ở trạng thái tạm kéo dài và tăng risk cho incident tiếp theo.
+
+## 21. Chaos experiment cần phân biệt hypothesis failure với experiment failure
+
+Nếu experiment inject network loss nhưng tool inject chỉ vào một subset khác dự kiến, kết quả không chứng minh system resilient. Experiment phải verify fault thực sự xảy ra, steady-state signal được đo đúng và stop condition hoạt động.
+
+Ví dụ hypothesis “mất một zone checkout vẫn đạt SLO”. Experiment cần chứng minh workload/traffic của zone thật sự unavailable, không phải scheduler vô tình chưa đặt replica ở zone đó. Sau đó mới đọc SLO/user impact.
+
+## 22. Senior walkthrough: backup hàng ngày nhưng RTO vẫn không đạt
+
+Giả sử backup database 500 GB chạy mỗi ngày thành công. Disaster thật cần restore sang region khác; tải backup mất 2 giờ, replay log 90 phút, provisioning network/secret thêm 45 phút, validation 30 phút. Tổng recovery hơn 4 giờ trong khi RTO business là 60 phút.
+
+Backup success rate 100% không giải quyết mismatch này. Kiến trúc cần thay đổi: warm standby, snapshot locality, pre-provisioned capacity, faster restore path hoặc điều chỉnh RTO nếu cost không hợp lý.
+
+Đây là ví dụ vì sao RTO là end-to-end capability metric, không phải thuộc tính của một backup job.
