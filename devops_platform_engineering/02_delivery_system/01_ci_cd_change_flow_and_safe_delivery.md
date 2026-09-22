@@ -69,3 +69,63 @@ Giả sử `orders-api` thay logic tính phí. CI xác minh unit/contract test r
 Khi pipeline chậm, phản xạ nguy hiểm là bỏ test. Trước tiên tìm critical path: setup dependency, duplicate build, serialized job, scarce runner, flaky rerun hay test suite không partition. Tối ưu feedback time bằng cache đúng, parallelism, test selection và architecture tốt hơn.
 
 Delivery performance cao và reliability không phải hai mục tiêu đối nghịch nếu hệ thống được thiết kế để thay đổi nhỏ, feedback nhanh và rollback/risk boundary rõ.
+
+## 13. Pipeline là DAG có critical path, không phải một danh sách stage
+
+Một pipeline có thể có 30 job nhưng lead time chủ yếu do chuỗi dependency dài nhất quyết định. Hai job 20 phút chạy song song chỉ thêm khoảng 20 phút vào critical path, còn chạy tuần tự thành 40 phút.
+
+Vì vậy tối ưu pipeline nên vẽ dependency DAG: job nào thật sự cần output của job trước, job nào có thể chạy song song, job nào rebuild cùng artifact và job nào chỉ chờ scarce runner. Việc đổi tên stage hoặc tăng runner không giúp nếu critical path nằm ở integration environment mất 40 phút provision.
+
+Pipeline design tốt tách **feedback fast path** cho developer khỏi **evidence deep path** nhưng vẫn giữ policy release. Ví dụ lint/unit/security static chạy sớm; integration suite nặng có thể parallel và promotion chỉ chờ đúng evidence cần thiết.
+
+## 14. Validation có thể stale khi base thay đổi
+
+Một pull request pass toàn bộ test trên commit X + base B. Trong lúc chờ merge, base có thêm change C. Nếu merge tạo state X+C nhưng pipeline không revalidate combination đó, “PR xanh” không chứng minh mainline mới xanh.
+
+Đây là integration race. Cách xử lý có thể là merge queue, rebase/merge-latest-base rồi test lại, hoặc post-merge verification nhanh tùy repository risk. Mental model quan trọng: **evidence phải gắn với exact revision/composition được release**, không chỉ với branch từng xanh.
+
+IaC/GitOps cũng có stale-plan problem tương tự; đây là pattern chung của concurrent change.
+
+## 15. Deploy concurrency phải có ownership theo environment/service
+
+Hai pipeline cùng deploy một service/environment có thể race. Release A bắt đầu canary, release B tới sau thay desired state; metric của A và B trộn lẫn làm verification không còn nghĩa.
+
+Platform nên có concurrency policy: serialize production rollout theo service, cancel superseded run khi safe, hoặc dùng release controller có state machine rõ. “Pipeline job chạy song song nhanh hơn” không áp dụng cho mutation cùng một ownership boundary.
+
+Nếu release B phụ thuộc A, explicit dependency/version tốt hơn để race ngẫu nhiên quyết định order.
+
+## 16. Migration nên được coi là một release contract riêng
+
+Database/schema/message migration có lifecycle dài hơn process deploy. Expand-and-contract thường gồm ít nhất: thêm schema mới tương thích, deploy producer/consumer hiểu cả hai, migrate/backfill data nếu cần, verify usage, rồi mới remove old path.
+
+Pipeline không nên coi migration thành một shell command chạy trước deploy mà không có idempotency, lock/ownership và resume semantics. Migration failure giữa chừng có thể để state partial; rerun phải an toàn hoặc có recovery plan.
+
+Change metadata nên lưu migration version/trạng thái cùng artifact/config để incident biết code nào tương thích data state nào.
+
+## 17. Canary cần guardrail chống false confidence
+
+Canary 1% traffic chỉ có giá trị nếu sample chạm workload đại diện. Rare tenant, write path, batch job hoặc region nhỏ có thể không xuất hiện. Metric aggregate toàn fleet cũng có thể che canary failure vì 1% signal bị 99% stable traffic pha loãng.
+
+Verification nên dimension theo version/canary cohort và chọn business/technical invariant phù hợp. Một canary healthy 10 phút không chứng minh memory leak xảy ra sau 6 giờ; observation window phải phù hợp failure class.
+
+Canary là cách giảm blast radius và tăng evidence, không phải chứng minh tuyệt đối release an toàn.
+
+## 18. Rollback decision cần compatibility matrix
+
+Trước production release, team nên biết ít nhất bốn lớp có thể rollback độc lập đến đâu: application artifact, configuration, database/schema/data và external protocol/event contract.
+
+Có thể biểu diễn mental model:
+
+```text
+code N+1 ↔ config C2 ↔ schema S2 ↔ event/API E2
+```
+
+Rollback code về N chỉ an toàn nếu N còn hiểu C2/S2/E2 hoặc các lớp kia cũng có recovery path tương thích. Nếu schema S2 đã drop column N cần, rollback image nhanh sẽ fail ngay.
+
+Senior delivery review không chỉ hỏi “có nút rollback không?” mà hỏi “rollback target có còn compatible với actual state sau release không?”.
+
+## 19. Pipeline SLO và error budget cũng áp dụng cho developer experience
+
+Nếu CI availability thấp hoặc p95 feedback 50 phút, developer batch change lớn hơn và rerun nhiều hơn, làm integration risk tăng. Pipeline là shared production system có downstream impact lên delivery behavior.
+
+Platform team có thể đo queue time, execution time, flaky rerun rate, runner saturation và failure do platform vs source. Mục tiêu không phải pipeline luôn xanh; source bug phải làm đỏ. Mục tiêu là **signal đúng, nhanh và đáng tin** để developer không học thói quen bypass.
