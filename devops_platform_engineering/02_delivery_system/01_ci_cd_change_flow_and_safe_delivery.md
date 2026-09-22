@@ -129,3 +129,59 @@ Senior delivery review không chỉ hỏi “có nút rollback không?” mà h�
 Nếu CI availability thấp hoặc p95 feedback 50 phút, developer batch change lớn hơn và rerun nhiều hơn, làm integration risk tăng. Pipeline là shared production system có downstream impact lên delivery behavior.
 
 Platform team có thể đo queue time, execution time, flaky rerun rate, runner saturation và failure do platform vs source. Mục tiêu không phải pipeline luôn xanh; source bug phải làm đỏ. Mục tiêu là **signal đúng, nhanh và đáng tin** để developer không học thói quen bypass.
+
+## 20. Superseded work nên được hủy khi evidence của nó không còn giá trị
+
+Developer push commit B sau commit A nhưng pipeline A vẫn chiếm runner 40 phút. Nếu kết quả A không còn được dùng để merge/release, tiếp tục chạy chỉ làm tăng queue cho evidence mới hơn. Tuy nhiên không phải job nào cũng cancel an toàn; migration/test environment có side effect cần cleanup.
+
+Pipeline nên phân biệt work **pure verification** có thể cancel với work **mutation** cần state machine/cleanup. Cancel-on-new-commit cho lint/unit thường hợp lý; cancel một production deployment giữa migration cần semantics rõ.
+
+Đây là queue discipline: giảm WIP không phải bằng bỏ test mà bằng ngừng tiêu capacity cho evidence đã stale.
+
+## 21. Approval cũng có thể stale
+
+Một người approve release khi evidence gắn với artifact D và config C. Sau đó pipeline rerun build tạo D2 hoặc config thay C2 nhưng approval cũ vẫn được reuse. Khi đó approval không còn xác nhận subject thực sự được deploy.
+
+Manual gate chỉ có ý nghĩa nếu nó bind tới exact release subject: artifact digest, config/revision, migration state và risk context liên quan. Nếu subject đổi đáng kể, approval/evidence cần được đánh giá lại theo policy.
+
+Điều này giống cryptographic attestation ở cấp quy trình: statement “tôi chấp nhận risk” phải nói rõ chấp nhận **cái gì**.
+
+## 22. Shared integration environment là nguồn nondeterminism và coupling
+
+Hai pipeline dùng cùng database/test tenant có thể ảnh hưởng nhau: test A xóa data test B, schema migration race, rate limit chung hoặc background job chạy chéo. Kết quả flaky không nhất thiết do test code mà do environment không có isolation contract.
+
+Có ba chiến lược chính: environment per change, shared environment nhưng namespace/data isolation mạnh, hoặc serialize class test có conflict. Mỗi lựa chọn đổi cost, fidelity và feedback time.
+
+Không cần mọi PR có full production clone. Nhưng test signal phải biết dependency nào shared và failure do environment phải được phân biệt với failure của source change.
+
+## 23. Release controller cần trạng thái `paused`, không chỉ pass/fail
+
+Trong progressive delivery, signal có thể chưa đủ rõ để promote cũng chưa đủ xấu để rollback. Nếu state machine chỉ có “continue” hoặc “fail”, operator dễ chọn action vội.
+
+`Paused` cho phép giữ cohort hiện tại, thu thêm evidence hoặc điều tra dependency mà không tăng blast radius. Tuy nhiên pause có cost: hai version cùng tồn tại lâu hơn, schema/config compatibility window kéo dài và capacity surge tiếp tục bị giữ.
+
+Do đó release state cần timeout/owner: ai quyết định tiếp, evidence nào cần thêm và sau bao lâu phải rollback/roll-forward. “Để canary treo” không phải strategy.
+
+## 24. Health verification cần phân biệt release fault với platform/dependency fault
+
+Nếu canary error tăng đúng lúc external payment provider outage toàn fleet, tự động rollback canary có thể không cải thiện gì và còn tạo thêm churn. Ngược lại aggregate fleet error có thể che lỗi chỉ ở canary.
+
+Verification tốt dùng comparative/cohort reasoning: canary vs baseline trong cùng region/tenant/dependency window, kết hợp absolute SLO guardrail. Nếu cả old và new cùng xấu, suspect shared dependency/platform; nếu new xấu riêng, evidence cho release fault mạnh hơn.
+
+Automation vẫn có thể chọn conservative stop, nhưng reason phải observable để operator biết rollback dự kiến tác động gì.
+
+## 25. Merge queue là một controller cho integration concurrency
+
+Khi nhiều PR cùng xanh trên base cũ, merge queue tạo candidate composition gần state sẽ vào main rồi verify theo thứ tự. Nó không “làm test tốt hơn”; nó quản concurrency và freshness của evidence.
+
+Queue cũng có throughput/capacity. Nếu test lâu và arrival rate PR cao hơn merge service rate, wait time tăng. Tối ưu cần giảm critical path, tăng parallelism an toàn hoặc giảm batch size; bypass queue khi đông chỉ chuyển queue từ CI sang broken mainline.
+
+Đây là cùng mental model với production admission control: khi resource verification hữu hạn, cần policy chọn work nào được vào và bằng chứng nào còn fresh.
+
+## 26. Senior walkthrough: release được approve nhưng deploy artifact khác
+
+Giả sử artifact D1 pass staging và được approve. Sau approval, pipeline dùng lệnh build lại trước production, tạo D2 vì base image đã đổi. Production incident xảy ra và audit log chỉ ghi commit giống nhau.
+
+Lỗi cấu trúc là gate bind tới source commit thay vì immutable artifact subject. Correct flow là build/publish D1 một lần, gắn evidence/approval vào D1 rồi promote chính digest đó. Nếu buộc rebuild, D2 phải được coi release subject mới và validation tương ứng phải chạy lại.
+
+Bài học là CI/CD maturity phụ thuộc **evidence identity + freshness + ownership**, không phụ thuộc số stage hay số nút approval.
