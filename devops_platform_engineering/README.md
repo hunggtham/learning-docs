@@ -57,6 +57,28 @@ Không cần học thuộc công cụ theo thứ tự này. Dependency quan tr�
 | [`10_production_practice`](./10_production_practice/00_production_troubleshooting_and_change_failure_patterns.md) | Troubleshooting xuyên tầng và các failure pattern của thay đổi production |
 | [`90_connections`](./90_connections/00_devops_platform_cross_domain_map.md) | Bản đồ nối DevOps/Platform với Computer Science và các canonical docs khác |
 
+## Trình tự đọc chi tiết
+
+1. [DevOps và Platform Engineering: từ vấn đề delivery đến operating model](./00_foundations/00_devops_platform_operating_model.md)
+2. [Linux như môi trường thực thi production](./01_runtime_foundations/00_linux_execution_and_service_model.md)
+3. [Từ URL đến process: DNS, TCP, TLS, proxy và request path](./01_runtime_foundations/01_network_dns_tls_and_request_path.md)
+4. [Từ source đến artifact: Git, build và tính tái lập](./02_delivery_system/00_git_build_artifacts_and_reproducibility.md)
+5. [CI/CD: biến thay đổi thành flow có bằng chứng](./02_delivery_system/01_ci_cd_change_flow_and_safe_delivery.md)
+6. [Container: image, runtime, isolation và production behavior](./03_containers/00_container_image_runtime_and_builds.md)
+7. [Infrastructure as Code: desired state, state model, drift và lifecycle](./04_infrastructure_as_code/00_iac_state_drift_and_change_management.md)
+8. [Cloud primitives: identity, network, compute, storage và shared responsibility](./04_infrastructure_as_code/01_cloud_primitives_identity_network_compute_storage.md)
+9. [Kubernetes: reconciliation, API objects và control plane](./05_kubernetes/00_kubernetes_reconciliation_and_control_plane.md)
+10. [Kubernetes workload, networking, storage, scheduling và resource behavior](./05_kubernetes/01_kubernetes_workloads_networking_storage_and_resources.md)
+11. [GitOps: desired state trong Git và reconciliation liên tục](./06_gitops/00_gitops_reconciliation_and_promotion.md)
+12. [Observability: từ telemetry đến suy luận có bằng chứng](./07_observability_sre/00_observability_telemetry_and_evidence_driven_debugging.md)
+13. [SLI, SLO, error budget và capacity: reliability có mục tiêu](./07_observability_sre/01_sli_slo_error_budget_and_capacity.md)
+14. [Incident, resilience, backup và disaster recovery](./07_observability_sre/02_incidents_resilience_backup_and_disaster_recovery.md)
+15. [Security và governance: identity, secrets, policy và software supply chain](./08_security_governance/00_identity_secrets_policy_and_supply_chain.md)
+16. [Platform Engineering: platform as product, golden path và abstraction](./09_platform_engineering/00_platform_as_product_golden_paths_and_abstractions.md)
+17. [Self-service, multi-tenancy, governance và FinOps](./09_platform_engineering/01_self_service_multitenancy_cost_and_governance.md)
+18. [Production troubleshooting: từ symptom đến evidence xuyên tầng](./10_production_practice/00_production_troubleshooting_and_change_failure_patterns.md)
+19. [Knowledge connections: DevOps / Platform Engineering ↔ Computer Science](./90_connections/00_devops_platform_cross_domain_map.md)
+
 [`GLOSSARY.md`](./GLOSSARY.md) là tài liệu tra thuật ngữ. [`COVERAGE_AUDIT.md`](./COVERAGE_AUDIT.md) ghi rõ boundary, phần đã bao phủ, phần cố ý cross-link và các điểm cần audit khi mở rộng.
 
 ## Nguyên tắc học
