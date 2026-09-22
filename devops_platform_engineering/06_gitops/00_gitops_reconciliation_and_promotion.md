@@ -79,3 +79,49 @@ Giữ layer boundary giúp không biến mọi lỗi thành “ArgoCD lỗi”.
 GitOps có giá trị khi tạo contract: mọi desired production change có history; reconciliation identity rõ; drift observable; manual change có policy; promotion giữ artifact identity; rollback/roll-forward có thể thao tác bằng revision có kiểm soát.
 
 Nếu team vẫn thường xuyên `kubectl edit`, controller hay bị disable và source of truth không phản ánh production, tổ chức chỉ có GitOps tool chứ chưa có GitOps operating model.
+
+## 13. Git là source of desired state, không phải source of toàn bộ reality
+
+Git có thể nói workload **nên** chạy image digest D với config C. Nó không chứa toàn bộ trạng thái runtime như pod nào đang crash, HPA vừa scale bao nhiêu, cloud load balancer đã provision xong chưa hay database đang replication lag.
+
+Vì vậy câu “Git là source of truth” cần đọc chính xác hơn: Git là source of truth cho **intent thuộc ownership của GitOps**. Actual state vẫn phải được quan sát từ control plane/data plane. Khi incident xảy ra, không được kết luận “Git đúng nên production phải đúng”.
+
+## 14. Field ownership phải được thiết kế như API ownership
+
+Kubernetes và các controller có thể cùng chạm một object. Một số cơ chế apply có metadata field manager giúp theo dõi ai sở hữu field nào, nhưng tool không thể tự quyết định ownership business.
+
+Ví dụ Deployment template, image và policy có thể thuộc GitOps; replica count thuộc HPA; annotation do service mesh controller inject; status thuộc workload controller. Nếu Git render cả field động mà không có lý do, reconciliation có thể liên tục overwrite controller khác.
+
+Khi thấy object “cứ đổi qua đổi lại”, hãy kiểm tra audit/event/managed-field evidence và vẽ bảng ownership. Đây thường là control-loop conflict chứ không phải random drift.
+
+## 15. Rollback Git revision không rollback external state
+
+Revert commit có thể đưa manifest về phiên bản trước, nhưng không chắc đảo được database migration, message schema, external side effect hoặc cloud resource đã mutate. Git history chỉ version hóa intent; external state có lifecycle riêng.
+
+Do đó GitOps rollback phải dùng cùng compatibility reasoning như CI/CD rollback. Nếu release N+1 đã ghi data mà N không đọc được, revert image reference có thể làm outage nặng hơn. Expand-and-contract, forward-compatible schema và roll-forward path vẫn cần.
+
+## 16. Promotion repo có thể tạo race nếu nhiều actor sửa cùng environment
+
+Hai automation cùng mở change cho production có thể từng pass test riêng nhưng khi merge liên tiếp lại tạo combination chưa được verify. Ví dụ release A nâng application, release B đổi config/dependency; mỗi PR xanh trên base cũ nhưng production nhận A+B.
+
+Pipeline nên verify effective desired state gần với revision cuối sẽ reconcile, hoặc serialize/rerun verification khi base thay đổi. Đây là cùng vấn đề stale plan ở IaC: evidence phải gắn với state gần state thực sự được apply.
+
+## 17. Emergency change cần một protocol trước incident
+
+Nếu GitOps controller tự-heal mạnh, live patch có thể bị revert đúng lúc operator đang mitigate. Nhưng tắt controller tùy tiện cũng làm mất safety net và tạo drift không visible.
+
+Platform nên định nghĩa break-glass flow: ai được suspend reconciliation, scope nào, trong bao lâu, change live được ghi ở đâu, khi nào back-port vào Git và điều kiện resume. Sau resume cần verify controller không “undo” mitigation theo desired state cũ.
+
+## 18. Repository security là production security
+
+Khi Git commit có thể dẫn tới production reconciliation, branch protection, reviewer permission, bot token, webhook/controller credential và dependency của rendering pipeline đều trở thành part of production trust chain.
+
+Một repository private nhưng token bot bị lộ vẫn không an toàn. Ngược lại, commit signing đơn lẻ cũng không đủ nếu signer có quyền quá rộng hoặc controller không verify policy. Security chapter sẽ đào sâu nguyên tắc identity + provenance + authorization thay vì dựa vào một control đơn lẻ.
+
+## 19. Senior walkthrough: trạng thái cứ bị đổi ngược sau vài phút
+
+Giả sử operator tăng replicas từ 10 lên 20 để mitigate traffic spike. Vài phút sau nó quay về 10. Có ít nhất ba possibility: GitOps đang reconcile spec 10; HPA đang tính desired 10; hoặc một automation khác patch field.
+
+Đừng tiếp tục `kubectl scale` nhiều lần. Hãy xác định actor từ event/audit/field ownership, rồi sửa desired owner đúng. Nếu HPA sở hữu replica, thay policy/metric/minimum phù hợp. Nếu GitOps sở hữu, emergency change phải đi qua Git hoặc suspend theo protocol.
+
+Đây là lợi ích của GitOps khi được vận hành đúng: drift không chỉ bị sửa, mà còn buộc tổ chức phải làm rõ **ai có quyền định nghĩa state nào**.
