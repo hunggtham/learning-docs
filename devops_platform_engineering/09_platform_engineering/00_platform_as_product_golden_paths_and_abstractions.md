@@ -200,3 +200,59 @@ Mọi abstraction đều có lúc rò: database plan không đủ mô tả IOPS,
 Platform team nên phân loại escape hatch: one-off exceptional requirement hay repeated missing capability. Nếu repeated, hãy đưa concept thật sự cần thiết lên API ở mức domain — ví dụ `durabilityClass`, `trafficProfile`, `recoveryTier` — thay vì expose raw provider field hàng loạt.
 
 Mục tiêu của abstraction không phải che mọi chi tiết mãi mãi; nó là giữ **decision surface nhỏ nhưng đúng với physics và invariant mà consumer cần kiểm soát**.
+
+## 28. Long-running operation cần cancellation semantics rõ ràng
+
+Một operation provisioning kéo dài 20 phút có thể bị user cancel ở phút thứ 8, nhưng external API đã tạo network, database hoặc reservation. “Cancel request” không tự động đồng nghĩa mọi side effect biến mất.
+
+Platform API cần nói cancellation là best-effort hay guaranteed trước một checkpoint nào đó; operation đang ở phase nào; resource nào đã materialize; cleanup có tự động không; và khi cleanup fail thì trạng thái cuối là `Cancelled`, `CancelRequested` hay `Degraded`.
+
+Nếu cancel chỉ dừng worker local nhưng external side effect vẫn tiếp tục, controller sau đó phải reconcile/adopt hoặc cleanup. Cancellation vì vậy là một state transition có ownership, không phải nút UI đơn giản.
+
+## 29. Compensation khác rollback thật sự
+
+Trong workflow phân tán, nhiều action không có inverse hoàn hảo. Tạo database rồi xóa lại có thể để backup, audit record, cost hoặc external identifier; gửi notification không thể “unsend”; rotate credential có thể làm connection cũ chết.
+
+Khi transaction atomic không tồn tại, platform thường dùng compensating action: tạo bước mới để đưa system về invariant chấp nhận được thay vì giả vờ quay ngược thời gian. Contract cần phân biệt rollback có thể đảo exact state với compensation chỉ phục hồi business invariant.
+
+Điều này quan trọng cho UX và runbook. Nếu platform nói “rollback succeeded”, operator phải biết đó là artifact revert, traffic revert hay workflow compensation sau partial side effect.
+
+## 30. Orphan và adoption là lifecycle bình thường của controller mạnh
+
+External resource có thể tồn tại mà platform state mất record do crash/state corruption, hoặc resource được tạo thủ công rồi cần đưa vào ownership. Xóa ngay mọi object “không nhận ra” là nguy hiểm; bỏ mặc chúng lại tạo drift, cost và security debt.
+
+Platform nên có semantics discover/adopt/quarantine. Adoption cần verify identity, ownership, policy compatibility và state mapping trước khi controller bắt đầu mutate. Orphan cleanup cần grace period và evidence đủ mạnh rằng resource không còn owner hợp lệ.
+
+Mental model là **ownership cũng là state cần reconcile**. Resource tồn tại không nói ai có quyền sửa/xóa nó.
+
+## 31. “Ai vận hành platform khi platform hỏng?” là bootstrap problem
+
+Platform có thể phụ thuộc vào chính Kubernetes cluster, GitOps, secret store, DNS, identity hoặc CI mà nó cung cấp cho user. Nếu control plane platform down và recovery tool cũng nằm hoàn toàn bên trong cùng failure domain, team có circular dependency.
+
+Recovery design phải có bootstrap path tối thiểu: source/config nào còn truy cập được, credential break-glass nào tồn tại độc lập, artifact/controller image lấy từ đâu, state backend restore thế nào và component nào phải lên trước. Có thể cần một management plane/cell nhỏ hơn hoặc documented manual recovery step được drill định kỳ.
+
+Platform SLO vì vậy không chỉ đo normal self-service. Nó phải có recovery contract cho chính control plane — một dạng “operator của operator”.
+
+## 32. Deprecation thành công phải đo migration state, không chỉ gửi thông báo
+
+Một platform version cũ được tuyên bố deprecated nhưng không biết consumer nào còn dùng thì deadline chỉ là hy vọng. Migration program cần inventory theo exact version/capability, owner, blocker và risk nếu quá hạn.
+
+Telemetry nên phân biệt `supported`, `deprecated`, `migration-in-progress`, `exception`, `unsupported`. Auto-remediation có thể mở PR hoặc mutate source khi safe, nhưng breaking semantic change vẫn cần evidence từ consumer behavior.
+
+Deprecation hoàn tất khi old path không còn production dependency và support burden được gỡ bỏ có kiểm soát, không phải khi announcement đã gửi ba lần.
+
+## 33. Cell architecture cần global metadata nhưng tránh global execution dependency
+
+Khi platform chia nhiều cell để giảm blast radius, vẫn thường cần catalog, identity mapping, policy version hoặc routing metadata chung. Nếu mọi request runtime phải đồng bộ gọi một global control plane, cell isolation có thể bị phá bởi global outage.
+
+Một thiết kế tốt phân biệt metadata cần phân phối với execution decision cần local autonomy. Global state có thể replicate/cache/version; cell dùng revision đã biết để tiếp tục phục vụ trong một khoảng, rồi degrade có chủ đích nếu state quá cũ.
+
+Trade-off chuyển từ “một global control plane đơn giản” sang bài toán consistency và version skew. Nhưng mục tiêu là giữ failure domain thật sự bounded, không chỉ chia cluster trên sơ đồ.
+
+## 34. Supportability là một phần của platform contract
+
+Golden path không chỉ cần create nhanh mà còn phải giúp người dùng hiểu failure khi abstraction rò. Platform nên expose operation ID, current phase, owning controller, relevant revision, dependency status và đường drill-down đủ để support/operator giảm search space.
+
+Nếu portal chỉ báo `Provisioning failed` còn nguyên nhân nằm trong ba hệ thống nội bộ không có correlation ID, self-service đã chuyển ticket từ “hãy tạo giúp” thành “hãy debug giúp”. Cognitive load không biến mất mà chỉ đổi thời điểm.
+
+Một abstraction trưởng thành tối ưu cả **happy-path simplicity** lẫn **failure-path diagnosability**. Đường đi chuẩn thật sự tốt là đường dễ dùng khi bình thường và vẫn giữ causal chain khi bất thường.
