@@ -121,3 +121,59 @@ Giả sử Pod trên node cũ start trong 5 giây, nhưng Pod trên node mới m
 Causal chain nên kiểm tra image pull size/layer cache, registry latency, node egress và volume/network setup. Nếu node cũ đã cache base layer còn node mới phải kéo image 1,5 GiB qua constrained registry/NAT, application không phải bottleneck.
 
 Mitigation có thể là giảm artifact size hợp lý, pre-pull cho workload critical, tăng registry/egress capacity hoặc giữ warm capacity. Bài học không phải “image càng nhỏ càng tốt”, mà là startup SLO phải tính cả distribution path, không chỉ process boot time.
+
+## 19. Image config và runtime override tạo một precedence chain
+
+Image có thể khai báo `ENTRYPOINT`, `CMD`, `ENV`, user và working directory, nhưng orchestrator/runtime có thể override một phần. Khi container chạy khác local, cần xác định **effective runtime config**, không chỉ đọc Dockerfile.
+
+Ví dụ image có `ENTRYPOINT ["java", "-jar", "app.jar"]` nhưng deployment override command sai; hoặc image `USER 10001` nhưng platform security context ép UID khác. Cả hai đều là legitimate composition nhưng source of behavior nằm ở nhiều layer.
+
+Release metadata nên cho operator thấy image digest cùng effective command/env/security context quan trọng. “Image đúng” chưa chứng minh process được khởi động theo contract mong muốn.
+
+## 20. Init container giải sequencing cục bộ, không biến dependency thành healthy
+
+Init container có thể chuẩn bị file, permissions hoặc chờ một prerequisite trước khi main container start. Nhưng dùng loop `until curl database` để “đảm bảo DB sẵn sàng” có thể tạo coupling và startup storm khi dependency outage.
+
+Dependency availability thường là runtime concern cần retry/backoff/degradation, không phải điều kiện phải đúng một lần ở startup. Nếu 500 Pod cùng init-poll dependency mỗi giây khi dependency hồi, chính init logic có thể tạo thundering herd.
+
+Dùng init container khi có finite setup work với completion semantics rõ; không biến nó thành supervisor của mọi external service.
+
+## 21. Startup resource spike khác steady-state usage
+
+Một service có thể cần CPU/memory cao lúc JIT, load model, decompress data hoặc warm cache rồi giảm đáng kể khi steady state. Nếu resource policy chỉ dựa average production, container có thể bị throttled/OOM đúng lúc startup và không bao giờ Ready.
+
+Ngược lại cấp limit theo startup peak cho toàn thời gian có thể lãng phí capacity. Platform cần hiểu workload class: có thể precompute artifact, lazy-load, dùng startup probe, giữ headroom hoặc tách initialization khỏi serving path.
+
+Startup SLO là composition của image distribution + runtime setup + application initialization + readiness, không chỉ “main process đã spawn”.
+
+## 22. Read-only root filesystem cần explicit writable paths
+
+Chạy root filesystem read-only giảm một lớp mutation/attack surface nhưng application vẫn có thể cần `/tmp`, cache hoặc generated file. Nếu không model writable path, workload chỉ fail khi code chạm filesystem ở production.
+
+Pattern tốt là xác định path nào thật sự cần ghi, mount `tmpfs`/ephemeral volume hoặc durable volume theo semantics, rồi giữ phần còn lại read-only. Điều này biến filesystem mutation thành contract có thể review.
+
+Không nên bỏ read-only chỉ vì một library viết temp file mặc định; trước hết xác định data đó cần lifetime/size/security nào và cung cấp đúng storage boundary.
+
+## 23. Container restart che state cục bộ nhưng không sửa external side effect
+
+Restart tạo process/root writable state mới, nên có thể chữa deadlock, memory leak tạm thời hoặc corrupted local cache. Nhưng transaction đã gửi tới database/payment, message đã publish hoặc lock external vẫn tồn tại.
+
+Vì vậy “restart sạch” chỉ đúng cho state nằm trong instance. Runbook phải biết operation nào có side effect ngoài container và idempotency/recovery của chúng. Nếu retry request sau restart mà không có business idempotency, recovery có thể tạo duplicate effect.
+
+Container replaceability là infrastructure property; business statelessness là property khác.
+
+## 24. Image pull policy và cache tạo consistency trade-off
+
+Node cache giúp startup nhanh và giảm registry load. Nhưng nếu deployment dùng mutable tag, behavior có thể phụ thuộc node đã cache bytes nào và pull policy ra sao. Hai Pod cùng tag có khả năng chạy digest khác nếu workflow cho phép tag bị overwrite.
+
+Pin digest loại bỏ ambiguity này: cache chỉ là optimization cho cùng content identity. Với immutable digest, node cache cũ không làm version stale; runtime biết chính xác content cần có.
+
+Đây là lý do artifact immutability làm nhiều operational problem đơn giản hơn, không chỉ supply-chain security.
+
+## 25. Senior walkthrough: chỉ Pod mới restart bị lỗi sau secret/config change
+
+Giả sử fleet cũ vẫn khỏe, nhưng mọi Pod reschedule mới đều fail startup. Image digest giống nhau. Investigation cho thấy runtime inject environment variable/secret revision mới; process cũ chưa restart nên vẫn giữ effective config cũ.
+
+Causal dimension là **instance birth time/config revision**, không phải image version. Nếu operator chỉ rollback image, failure vẫn tiếp tục vì config source không đổi.
+
+Platform nên expose artifact digest + config/secret revision + startup timestamp để cohort mới/cũ dễ phân biệt. Production identity của một instance là composition của artifact và runtime inputs, không chỉ container image.
