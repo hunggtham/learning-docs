@@ -109,3 +109,69 @@ Không phải incident nào tìm được single root cause. Có thể ghi causa
 Một operator senior không nhất thiết nhớ nhiều lệnh hơn; họ biết command nào trả lời câu hỏi nào, dữ liệu nằm ở layer nào và khi nào abstraction bị rò.
 
 Platform nên hỗ trợ drill-down từ service catalog → deployment → pod → node → trace/log/metric mà vẫn giữ ownership và version context. Đây là nơi developer experience và incident response gặp nhau.
+
+## 18. Latency phải tách queue time và service time
+
+Một request chậm không có nghĩa code xử lý business logic chậm. Tổng latency có thể gồm chờ connection pool, chờ thread/executor, chờ queue, thời gian CPU thực thi, GC pause, network và downstream.
+
+Nếu application trace chỉ đo từ lúc handler bắt đầu, thời gian request nằm chờ trước handler có thể biến mất khỏi trace. Vì vậy cần đặt instrumentation ở boundary phù hợp và so client-observed latency với server span. Khoảng chênh là clue cho proxy/network/queue/scheduling.
+
+Một hệ thống saturation thường biểu hiện service time chưa tăng nhiều nhưng queue time tăng mạnh. Scale đúng bottleneck hoặc shed load sẽ giảm queue; tối ưu code handler trong trường hợp đó có thể không chạm nguyên nhân chính.
+
+## 19. Coordinated omission có thể làm load test nói dối
+
+Nếu load generator gửi request tiếp theo chỉ sau khi request trước hoàn thành, khi service chậm nó tự động giảm arrival rate. Kết quả latency nhìn “đỡ xấu” đúng lúc production thật sẽ tiếp tục nhận traffic và queue tăng.
+
+Load test cần mô phỏng arrival pattern thực tế đủ tốt và ghi nhận request đáng lẽ đã đến trong thời gian service stall. Nếu không, throughput/latency benchmark có thể bỏ sót saturation cliff.
+
+Điều cần nhớ không phải một tool benchmark cụ thể, mà là assumption của workload generator: closed-loop hay open-loop, concurrency cố định hay arrival rate cố định, data/cache có đại diện production không.
+
+## 20. Failure case: rollout tạo burst 502 dù Pod không crash
+
+Giả sử mỗi rollout xuất hiện 502 trong 3–5 giây. Pod cũ nhận `SIGTERM` và đóng listener gần như ngay lập tức. Tuy nhiên endpoint/load-balancer propagation mất vài giây nên một phần request vẫn route tới Pod đang shutdown.
+
+Evidence: 502 tập trung đúng termination timestamp, process exit code bình thường, không OOM, Pod mới Ready, application log Pod cũ có shutdown event ngay trước connection reset. Đây không phải “Kubernetes không stable”; là termination/data-plane race.
+
+Mitigation có thể gồm readiness/draining choreography và graceful shutdown để Pod ngừng nhận traffic trước khi listener biến mất, đồng thời giữ grace period đủ cho in-flight request. Sau fix cần canary rollout và quan sát 5xx theo pod/version/termination event.
+
+## 21. Failure case: Java heap chỉ 60% nhưng container bị OOMKilled
+
+Giả sử dashboard JVM cho heap 1,2 GiB trên max heap 2 GiB, trong khi Pod memory limit là 2 GiB và vẫn bị OOMKilled. Heap metric không bao gồm mọi memory: metaspace, thread stack, direct buffer, native library, mmap/page cache accounting tùy context và runtime overhead đều có thể góp vào cgroup usage.
+
+Evidence chain cần nối `lastState/exit`, cgroup/container memory metric, node event và JVM native/heap telemetry. Nếu cgroup usage chạm 2 GiB nhưng heap không chạm max, nguyên nhân là total process/container footprint vượt boundary, không phải heap OOM.
+
+Fix có thể là giảm heap target để chừa native headroom, sửa direct-buffer/thread leak hoặc tăng limit sau capacity review. Chỉ đặt `-Xmx` bằng đúng container limit là một anti-pattern vì giả định heap là toàn bộ memory.
+
+## 22. Failure case: scale application làm outage database nặng hơn
+
+Traffic tăng làm latency app tăng. Team scale từ 20 lên 100 replica. Mỗi replica có pool tối đa 50 connection nên theoretical connection demand tăng từ 1.000 lên 5.000, trong khi DB chỉ chịu khoảng 1.500 concurrent connection hữu ích. DB bắt đầu queue/lock/context overhead, latency tăng thêm và retry khuếch đại load.
+
+Evidence tốt là app replica count tăng trước DB connection saturation; throughput business không tăng tương ứng; pool wait/query latency và outbound retry tăng. Root cause không phải “thiếu replica”, mà là bottleneck downstream và thiếu connection/concurrency budget end-to-end.
+
+Mitigation có thể giới hạn app concurrency/pool, shed load, giảm retry và scale DB nếu có headroom. Long-term fix là capacity model nối autoscaling application với downstream budget.
+
+## 23. Failure case: config store đúng nhưng process vẫn dùng config cũ
+
+ConfigMap/secret manager cho thấy value mới, nhưng một số instance vẫn behavior cũ. Có thể process chỉ đọc config lúc startup, volume sync có delay, reload hook fail hoặc connection đã mở bằng credential cũ.
+
+Troubleshooting phải xác định **effective config** của từng process/version, không dừng ở source of truth. Nếu chỉ instance chưa restart lỗi, hypothesis mạnh là lifecycle/reload. Nếu tất cả instance nhận file mới nhưng behavior không đổi, xem application reload semantics.
+
+Platform nên expose config revision trong telemetry/status để operator nối runtime behavior với exact config, giống artifact version.
+
+## 24. Evidence matrix giúp điều tra song song mà không hỗn loạn
+
+Trong incident lớn, thay vì năm người cùng mở log, có thể chia hypothesis theo layer với expected evidence. Ví dụ một người kiểm tra change/version, một người dependency/DB, một người node/resource, một người traffic edge. Mỗi nhánh phải trả về kết luận có thể bác bỏ: “không thấy version correlation”, “DB pool wait tăng từ 10 ms lên 900 ms”, không phải “DB có vẻ ổn”.
+
+Incident commander sau đó cập nhật hypothesis tree. Cách này tận dụng parallelism mà vẫn tránh action conflict.
+
+## 25. Mitigation thành công không chứng minh root cause
+
+Restart làm service khỏe lại có thể do xóa leaked state, reset connection, di chuyển Pod sang node khác hoặc đơn giản trùng lúc dependency hồi phục. “Restart fixed it” là observation, chưa phải explanation.
+
+Sau recovery, cần hỏi state nào đã bị reset và evidence nào phân biệt hypothesis. Nếu không còn evidence, postmortem nên ghi uncertainty và thêm instrumentation để lần sau phân biệt, thay vì gán root cause giả chắc chắn.
+
+## 26. Production debugging nên kết thúc bằng cải thiện hệ thống
+
+Mỗi incident có ba loại output tiềm năng: fix defect trực tiếp, tăng khả năng phát hiện/chẩn đoán, và giảm blast radius/recovery time. Ví dụ một memory leak cần code fix; thiếu cgroup metric cần observability fix; rollout ồ ạt cần delivery guardrail.
+
+Nếu chỉ sửa defect mà không cải thiện signal hoặc safety khi failure class có thể tái diễn, learning loop chưa đóng. Troubleshooting là input cho Platform Engineering: failure lặp lại ở nhiều team nên được biến thành default, guardrail hoặc self-service diagnostic capability.
