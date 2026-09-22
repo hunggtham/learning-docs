@@ -221,3 +221,56 @@ intent + stable identity
 Platform API chỉ trưởng thành khi idempotency đi qua toàn workflow, status phản ánh invariant thật và delete có retention semantics rõ. Portal/UI là bề mặt; mechanism là state machine + reconciliation + ownership.
 
 Khi semantics chuyển sang exactly-once/idempotency/distributed transaction nền, đọc Distributed Systems canonical. Platform chapter giữ contract mà developer/operator cần để không phải hiểu mọi provider detail.
+
+## 20. Route reasoning 10 — từ delivery constraint tới feedback delay
+
+Flow engineering nên đi theo constraint chứ không theo tool đang dễ tối ưu nhất:
+
+```text
+work arrives
+→ queue / WIP
+→ current constraint
+→ processing
+→ feedback delay
+→ rework / next decision
+```
+
+Nếu constraint là review queue, tăng build speed không đổi throughput. Nếu feedback production đến quá muộn, batch change tăng và rework đắt hơn. Nếu shared environment luôn 100% utilization, urgent change phải chờ dù tài nguyên nhìn “được tận dụng tốt”.
+
+Foundations giữ operating-model reasoning; khi cần queueing theory chính thức có thể đọc Mathematics. Platform Engineering dùng kết quả này để quyết định chỗ nào nên self-service, chỗ nào cần reserve capacity và chỗ nào automation chỉ đang đẩy queue sang layer khác.
+
+## 21. Route reasoning 11 — từ sensor tới decision: evidence phải có semantics và freshness
+
+Một decision production không nên chỉ hỏi “dashboard đang hiển thị gì” mà cần đi qua chuỗi:
+
+```text
+system event/state
+→ instrumentation
+→ export / sampling / buffering
+→ backend ingestion
+→ query / aggregation
+→ displayed evidence
+→ human/controller decision
+```
+
+Failure có thể xuất hiện ở bất kỳ arrow nào. `0 errors` có thể là zero thật hoặc missing series; log có thể duplicate; trace sample có bias; dashboard có thể stale. Vì vậy evidence cần biết metric type, population/sample, schema version và freshness.
+
+Observability chapter sở hữu sensor semantics. Production Practice sở hữu cách evidence được dùng để bác bỏ hypothesis. Reliability/Security quyết định signal nào đủ quan trọng để loss-of-signal tự nó trở thành incident.
+
+## 22. Route reasoning 12 — từ mitigation tới recovery convergence
+
+Mitigation thành công chỉ là đầu recovery loop:
+
+```text
+user impact reduced
+→ writer/traffic ownership stable
+→ backlog / deferred work drain
+→ data/business invariant verify
+→ optional capability staged restore
+→ degraded mode exit
+→ steady state + headroom restored
+```
+
+Nếu mở toàn bộ backlog ngay sau failover, recovery có thể tạo outage thứ hai. Nếu endpoint 200 nhưng data giữa các system lệch, recovery chưa complete. Nếu old writer chưa fenced, failover có thể tạo split brain.
+
+Incident/DR chapter giữ sequencing, exit criteria và validation; Distributed Systems canonical giải fencing/consistency mechanism; Platform Engineering có nhiệm vụ biến recovery pattern lặp lại thành workflow có idempotency, status và safe defaults.
