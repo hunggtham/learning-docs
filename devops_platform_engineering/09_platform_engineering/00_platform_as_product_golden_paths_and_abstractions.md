@@ -79,3 +79,67 @@ Conway's Law nhắc rằng system architecture phản ánh communication structu
 Một bug trong shared pipeline template, base image hoặc ingress platform có thể ảnh hưởng toàn công ty. Vì vậy platform cần chính SLO, canary, compatibility test, incident response và staged rollout như bất kỳ product critical nào.
 
 Platform Engineering không phải “DevOps team đổi tên”. Nó là product discipline áp dụng cho shared engineering capabilities.
+
+## 14. Platform có control plane và data plane riêng
+
+Một platform trưởng thành thường có thể nhìn thành hai lớp. **Control plane** nhận intent, validate policy, tạo workflow, lưu trạng thái và điều phối controller. **Data plane** là workload/resource thực sự phục vụ traffic hoặc chạy job.
+
+Ví dụ developer yêu cầu “internal HTTP service”. Platform control plane có thể tạo repository metadata, identity, deployment object và observability config. Sau đó Kubernetes/cloud/runtime data plane mới chạy process và traffic.
+
+Phân biệt này quan trọng khi incident. Portal/API platform down có thể làm không tạo service mới được nhưng workload hiện tại vẫn phục vụ user. Ngược lại platform UI xanh không chứng minh data plane application khỏe.
+
+## 15. Self-service operation nên là asynchronous state machine
+
+Provision database, cluster resource hoặc environment thường không hoàn thành trong một HTTP request ngắn. Platform API tốt không giả vờ mọi operation là synchronous. Nó nhận intent, tạo operation/resource identity rồi expose status/condition cho user theo dõi.
+
+Mental model:
+
+```text
+request intent
+→ accepted + resource/operation ID
+→ validation/policy
+→ provisioning/reconciliation
+→ ready | failed | degraded
+```
+
+Điều này cho phép retry, timeout và partial failure có semantics rõ. Nếu user bấm nút lần hai vì trang web timeout mà backend không có idempotency key/resource identity, platform có thể tạo duplicate infrastructure.
+
+## 16. Platform contract phải nói cả happy path lẫn failure semantics
+
+API “CreateDatabase(plan=medium)” chưa đủ. Consumer còn cần biết create mất bao lâu, failure có retry được không, delete có giữ backup không, version upgrade có downtime không, credential rotate thế nào và SLO/support boundary là gì.
+
+Abstraction mạnh không chỉ giảm số field; nó nén nhiều decision vào một contract ổn định. Nếu contract chỉ mô tả provisioning mà bỏ Day 2 operation, developer vẫn phải học implementation khi upgrade/incident.
+
+## 17. Version evolution cần compatibility window
+
+Platform interface thay đổi có thể ảnh hưởng hàng trăm team. Một breaking migration “mọi service đổi manifest trong tuần này” chuyển toil từ platform team sang toàn tổ chức.
+
+Evolution tốt thường cần coexistence window: version cũ tiếp tục được support trong thời gian xác định; version mới có migration tool/preview; platform biết consumer nào còn ở old version; deprecation có telemetry và deadline.
+
+Nếu có thể tự động migrate source/config an toàn, platform nên làm automation thay vì phát documentation dài yêu cầu từng team sửa tay.
+
+## 18. Golden path phải encode escape hatch cost
+
+Escape hatch không chỉ là boolean “được phép custom”. Nó cần ownership model. Team rời paved road có thể mất một phần support/SLO, tự chịu upgrade của custom component hoặc phải đáp ứng policy bổ sung.
+
+Nếu custom path miễn mọi cost nhưng vẫn được platform team support đầy đủ, golden path khó duy trì. Ngược lại nếu escape hatch bị phạt quá nặng, team sẽ giấu workaround. Contract minh bạch giúp lựa chọn trade-off có chủ đích.
+
+## 19. Platform SLO nên theo developer journey
+
+Một platform có nhiều internal component nhưng user quan tâm journey end-to-end: tạo service, merge change, deploy, provision environment, rotate secret, debug incident. SLI chỉ đo API uptime của portal có thể xanh trong khi provisioning queue treo hàng giờ.
+
+Ví dụ SLI platform có thể đo tỷ lệ provisioning hoàn tất trong 15 phút, tỷ lệ deploy pipeline thành công không do platform fault, hoặc time-to-first-production trên paved road. Khi SLO cháy, platform team có evidence để ưu tiên reliability thay vì chỉ nhìn support ticket.
+
+## 20. Product discovery phải phân biệt cognitive load thiết yếu và accidental
+
+Không phải mọi complexity đều nên giấu. Developer cần hiểu consistency, timeout, idempotency, resource demand và data ownership vì đó là physics của distributed application. Nhưng họ không nhất thiết phải biết account ID, subnet naming, ingress annotation hay secret-store wiring của tổ chức.
+
+Platform tốt giảm **accidental complexity** nhưng giữ **essential complexity** đủ visible để user đưa quyết định đúng. Nếu abstraction biến mọi database thành một nút “Create” mà che RPO, connection limit và cost tier, cognitive load giảm ngắn hạn nhưng incident/risk tăng dài hạn.
+
+## 21. Senior walkthrough: platform migration gây blast radius toàn công ty
+
+Giả sử shared base image mới nâng runtime/CA bundle và platform cập nhật template để mọi build dùng ngay version mới. Nếu rollout đồng loạt, một compatibility bug có thể làm hàng trăm service fail cùng lúc.
+
+Platform release nên được xử lý như production release: canary một nhóm consumer, compatibility test trên representative workload, đo failure signal, sau đó staged adoption. Có thể giữ old/new version song song và auto-open migration PR thay vì force-update instant.
+
+Điểm cốt lõi là platform có **fan-out blast radius** lớn. Mức discipline cần cao hơn, không thấp hơn, application team bình thường.
