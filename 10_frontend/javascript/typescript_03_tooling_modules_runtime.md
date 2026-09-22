@@ -255,6 +255,158 @@ TypeScript từng phổ biến `experimentalDecorators` dựa trên proposal cũ
 
 `tsconfig`, package metadata và bundler config cùng mô tả cách source biến thành runtime artifact. Chúng không phải “setup một lần rồi quên”. Khi runtime/platform thay đổi, config phải được audit như source code: assumption nào còn đúng, option nào legacy, alias nào drift, declaration nào không còn match implementation?
 
+## 25. Compiler internals: parser, binder, checker và emit giữ những invariant khác nhau
+
+Pipeline compiler không phải một “hàm compile” nguyên khối. Parser biến token/source thành syntax tree. Binder đi qua tree để tạo symbol relationships và nối declarations vào scopes. Checker dùng symbols, types, control-flow facts và assignability relations để tạo diagnostics/inference. Emit tạo JavaScript, declarations và source maps tùy config.
+
+Mental model này giải thích nhiều lỗi tưởng như vô lý. Syntax hợp lệ nhưng symbol trùng có thể fail ở binding. Symbol resolve được nhưng relation type không hợp lệ fail ở checker. Type-check hoàn toàn sạch vẫn có thể emit/import artifact không chạy nếu runtime/module assumptions sai.
+
+Trong debugging compiler issue, hãy phân loại trước:
+
+```text
+parse/syntax
+→ name/symbol resolution
+→ type relation/control flow
+→ emit/declaration generation
+→ host/runtime loading
+```
+
+Nếu không phân layer, rất dễ dùng type assertion để “sửa” một module-resolution bug hoặc thay tsconfig để che một modeling bug.
+
+## 26. Program graph và language service: editor không chỉ check file đang mở
+
+IDE phải duy trì một **project graph** gồm source files, dependencies, declaration files, config inheritance và package metadata. Auto-complete, rename, find references và diagnostics đều phụ thuộc graph này.
+
+Một thay đổi ở shared `.d.ts`, `tsconfig`, package `exports` hoặc generated file có thể làm hàng nghìn files invalidate dù bạn chỉ sửa một dòng. Đây là lý do editor latency thường liên quan graph topology chứ không chỉ độ dài file đang mở.
+
+TypeScript 7 chuyển editor foundation sang Language Server Protocol (LSP) và native multithreaded implementation. Điều này giúp nhiều editor dùng cùng protocol và cho phép language server xử lý nhiều request đồng thời. Tuy vậy, embedded-language ecosystems như Vue/Svelte/Astro/MDX hoặc framework tooling cần compiler API có thể vẫn phụ thuộc TypeScript 6 trong giai đoạn 7.0 vì TypeScript 7.0 chưa có stable programmatic API.
+
+## 27. `verbatimModuleSyntax`: source phải nói rõ import nào tồn tại ở runtime
+
+Trước đây import elision có nhiều rule khó đoán: compiler có thể bỏ import nếu nó chỉ được dùng như type. `verbatimModuleSyntax` làm mental model đơn giản hơn:
+
+```ts
+import type { User } from "./user.js";
+import { createUser } from "./user.js";
+```
+
+Type-only syntax bị xóa; import/export không có `type` được giữ theo module semantics thay vì compiler “đoán intent”. Điều này đặc biệt quan trọng khi module có side effects hoặc toolchain transpile từng file độc lập.
+
+Senior practice là dùng type/value distinction rõ ở source. Một import bị giữ hay xóa có thể thay runtime side effect, tree-shaking và cycle behavior; đây không chỉ là style.
+
+## 28. `isolatedModules` và `isolatedDeclarations`: khi mỗi file phải tự đủ thông tin
+
+Một số transpiler xử lý từng file mà không có toàn program graph. `isolatedModules` cảnh báo những pattern không thể transform an toàn theo kiểu per-file.
+
+`isolatedDeclarations` đi vào public type surface: nó buộc exported API cung cấp đủ annotation để declaration emit có thể được thực hiện mà không cần full semantic check toàn program. Điều này hữu ích cho build system muốn song song hóa declaration generation hoặc cache theo file/package.
+
+Trade-off là author phải viết explicit public annotations nhiều hơn. Đây là ví dụ tốt của architecture pressure làm coding style thay đổi: annotation không phải vì compiler “không inference được”, mà vì build pipeline muốn giảm coupling giữa files.
+
+## 29. Package `exports` là allow-list, không phải metadata trang trí
+
+Khi resolver hiện đại đọc `package.json` có `exports`, subpath không match có thể bị chặn dù file vật lý tồn tại.
+
+```json
+{
+  "name": "my-lib",
+  "exports": {
+    ".": "./dist/index.js",
+    "./client": "./dist/client.js"
+  }
+}
+```
+
+`import "my-lib/internal.js"` có thể fail dù `dist/internal.js` tồn tại. `exports` định nghĩa public package surface.
+
+TypeScript ở `node16`/`nodenext`/`bundler` còn ưu tiên tìm condition `types` khi resolve declaration surface. Package author vì thế phải test cả JavaScript runtime resolution và TypeScript type resolution; publish đúng file nhưng sai condition vẫn có thể làm consumer mất types.
+
+## 30. `typesVersions` và versioned `types` conditions: phục vụ compiler cũ có chủ đích
+
+Khi public `.d.ts` dùng syntax chỉ compiler mới hiểu, library có thể cung cấp declaration khác theo TypeScript version. `typesVersions` là cơ chế legacy/phổ biến cho việc này, còn resolver qua `exports` có thể dùng versioned `types@...` conditions.
+
+Điểm dễ nhầm: khi `exports` được đọc, `typesVersions` không phải lúc nào cũng quyết định resolution như bạn kỳ vọng. Package càng nhiều conditions càng cần consumer fixtures trên nhiều compiler/module modes.
+
+Senior lesson: đừng hứa “support TypeScript >= X” chỉ dựa trên source build của chính package. Hãy install tarball vào consumer project thật với minimum compiler version và check public imports.
+
+## 31. Bundler-compatible source có thể tạo `.d.ts` không tương thích `nodenext`
+
+Một library build bằng bundler có thể viết:
+
+```ts
+import { Component } from "./component";
+```
+
+Bundler hiểu extensionless relative import và xóa/ghép nó trong JavaScript output. Nhưng nếu `tsc` đồng thời emit nhiều declaration files, `.d.ts` có thể giữ specifier `./component`. Consumer chạy `nodenext` có thể từ chối specifier đó vì ESM Node yêu cầu extension phù hợp.
+
+Đây là failure mode quan trọng: **JavaScript bundle chạy được nhưng declaration graph của consumer fail**.
+
+Nếu library không bundle declarations, cấu hình declaration emit cần model consumer runtime đủ chặt; với library cho Node consumers, `nodenext` thường cung cấp safety tốt hơn. Cách chắc chắn nhất vẫn là test package artifact trong consumer fixtures với module modes bạn tuyên bố hỗ trợ.
+
+## 32. Chạy `.ts` trực tiếp và `erasableSyntaxOnly`: “type erasure” trở thành runtime contract
+
+Một số runtime hiện đại có thể strip TypeScript syntax và chạy file `.ts` trực tiếp. Nhưng strip-only runtime chỉ hỗ trợ syntax TypeScript có thể xóa mà không cần transform semantics.
+
+Các construct như `enum`, namespace có runtime code, parameter properties, `import =`/`export =` không chỉ là type syntax; chúng cần emit transform. `erasableSyntaxOnly` giúp compiler báo sớm những construct không phù hợp với strip-only execution.
+
+Nếu architecture chọn direct-TypeScript runtime, hãy xem đây là một **source-language subset** có chủ đích. Thường cần kết hợp với `verbatimModuleSyntax`, module settings đúng host và test runtime thật. Không nên suy từ “tsc type-check pass” sang “Node/Bun/Deno chắc chắn chạy source này”.
+
+## 33. `.ts` extension trong import: source host và output host có thể là hai thế giới khác nhau
+
+`allowImportingTsExtensions` hữu ích khi bundler/runtime đọc `.ts` trực tiếp hoặc project `noEmit`. Nhưng nếu cuối cùng phát hành `.js`, specifier `.ts` cần được host/bundler rewrite hoặc TypeScript dùng `rewriteRelativeImportExtensions` cho relative imports phù hợp.
+
+Ví dụ:
+
+```ts
+import { parse } from "./parse.ts";
+```
+
+Có ba câu hỏi riêng:
+
+```text
+Dev runtime có load .ts trực tiếp không?
+Compiler có emit .js không?
+Published/runtime specifier cuối cùng là gì?
+```
+
+Không trả lời đủ ba câu sẽ tạo project chạy trong dev loader nhưng fail sau build, hoặc library chạy test source nhưng package publish hỏng.
+
+## 34. TypeScript 7 parallelism: nhiều CPU hơn không phải luôn nhanh hơn
+
+TypeScript 7 có thể chạy parsing/checking/emitting song song. `--checkers` điều khiển số checker workers; `--builders` điều khiển số project-reference builders; `--singleThreaded` hữu ích khi debug, benchmark hoặc CI ít tài nguyên.
+
+Tăng workers làm tăng parallelism nhưng có thể tăng aggregate memory và duplicate work. Trong monorepo, `--checkers 4 --builders 4` có thể tạo áp lực gần như nhiều checker đồng thời hơn dự kiến. Vì vậy tuning phải dựa trên CPU, RAM, graph shape và CI contention.
+
+Một failure mode hiếm nhưng quan trọng là order-dependent checking có thể lộ ra khi thay số checker. Nếu team gặp diagnostic khác giữa môi trường, cố định worker count trong điều tra và dùng `--singleThreaded` làm control case trước khi quy lỗi cho source.
+
+## 35. TypeScript 7 `--watch`: file-system behavior cũng là performance layer
+
+Watch mode không chỉ là “chạy compiler lại khi save”. Nó phụ thuộc file watcher, invalidation graph, package directories và OS behavior. TypeScript 7 rebuild watch foundation để giảm polling/resource overhead và cải thiện cross-platform stability.
+
+Nếu watch mode ngốn CPU, đừng chỉ profile checker. Hãy xem workspace có symlink/worktree lớn, generated directories, dependency trees hoặc tool khác cùng theo dõi quá nhiều files không. Production developer experience là tổng của file watching + project graph invalidation + checking + bundling, không phải một con số `tsc` duy nhất.
+
+## 36. TypeScript 6/7 defaults: upgrade phải audit assumptions, không chỉ sửa diagnostics
+
+Các default hiện đại thay đổi mạnh: `strict` bật mặc định, `module` hướng `esnext`, `target` theo ECMAScript stable gần nhất, `noUncheckedSideEffectImports` bật, `rootDir` mặc định theo project root và `types` mặc định thành `[]`. TypeScript 7 còn biến nhiều deprecation của 6.0 thành hard error.
+
+Điều nguy hiểm là một số thay đổi không tạo cùng dạng error. `types: []` có thể làm global `process`, `describe` hay `jest` biến mất; `rootDir` mới có thể làm output path đổi; `moduleResolution node10` không còn hợp lệ; `baseUrl` legacy không còn là nền nên `paths` cần được hiểu relative theo project config hiện đại.
+
+Upgrade runbook đúng nên là:
+
+```text
+1. Chốt runtime/module host thật.
+2. Nâng lên TS 6 và xử lý toàn bộ deprecation.
+3. Ghi explicit những defaults mà project muốn sở hữu lâu dài.
+4. Chạy clean type-check + package consumer tests.
+5. Chuyển sang TS 7.
+6. Benchmark build/editor/watch trên workload thật.
+```
+
+## 37. TypeScript 7 không có compiler API: side-by-side không phải hack tạm bợ vô tổ chức
+
+TypeScript 7.0 chưa ship stable programmatic compiler API. Team TypeScript cung cấp đường chạy side-by-side với TypeScript 6 cho tooling còn phụ thuộc API. Điều này có nghĩa một repository có thể hợp lệ khi `tsc` CLI dùng 7.0 nhưng linter/framework plugin dùng 6.x compatibility layer.
+
+Điều cần quản lý là **version ownership**: tool nào dùng compiler nào, diagnostics nào là source of truth, và CI step nào bảo vệ semantics tương thích. Đừng để dependency resolver vô tình đổi toàn bộ ecosystem sang một compiler version rồi coi lỗi plugin là lỗi application.
+
 ---
 
 Tiếp theo: [TypeScript 04 — Senior Production Engineering](typescript_04_senior_production.md).

@@ -297,6 +297,236 @@ TypeScript không thay scope/closure, prototype, event loop, Promise ordering ha
 
 Nếu một bug xảy ra sau khi code đã compile, quay lại runtime layer trước khi thêm type annotation. Nếu bug là invalid state được compiler cho qua, quay lại model/invariant. Nếu IDE và runtime disagree về import, quay lại module/tooling layer. Đây là cách tách failure mode có hệ thống.
 
+## 28. Validation là protocol transition, không chỉ là `schema.parse()`
+
+Một boundary tốt không chỉ hỏi “shape có đúng không?” mà còn hỏi data đang ở **protocol version nào**, semantic invariant có đúng không, và sau parse value có được normalize về representation ổn định hay không.
+
+Ví dụ timestamp string có thể đúng shape nhưng invalid date; amount có thể là number nhưng âm trong domain không cho phép; status có thể là string hợp schema cũ nhưng không còn được business chấp nhận.
+
+```text
+bytes / unknown value
+→ syntactic parse
+→ structural validation
+→ semantic validation
+→ normalization
+→ domain value
+```
+
+TypeScript thường bắt đầu có giá trị mạnh nhất từ domain value trở đi. Nếu team gọi schema validator nhưng schema quá permissive hoặc bỏ semantic step, static type phía sau vẫn có thể trở thành false confidence.
+
+## 29. Serialization boundary: TypeScript type không bảo đảm value truyền qua JSON được
+
+Một object TypeScript có thể chứa `Date`, `Map`, `Set`, `bigint`, function, class instance hoặc cyclic references. `JSON.stringify` không preserve toàn bộ semantics đó; `bigint` còn gây lỗi nếu không có strategy riêng.
+
+Vì vậy DTO qua HTTP/storage nên dùng representation serialization-safe có chủ đích:
+
+```ts
+type UserDto = {
+  id: string;
+  createdAt: string;
+};
+
+type User = {
+  id: UserId;
+  createdAt: Date;
+};
+```
+
+Nếu dùng cùng một `User` type cho domain object lẫn transport payload, bạn đang che mất một state transition thật. Mapper không phải boilerplate vô ích; nó là nơi ownership của representation được xác định.
+
+## 30. Schema evolution: backward/forward compatibility không nằm trong union type đơn lẻ
+
+Event/queue payload thường sống lâu hơn một deploy. Producer v2 có thể gửi field mới khi consumer v1 vẫn chạy. Một type alias mới nhất không mô tả deployment topology này.
+
+Có thể model version rõ:
+
+```ts
+type UserCreatedV1 = {
+  version: 1;
+  userId: string;
+};
+
+type UserCreatedV2 = {
+  version: 2;
+  userId: string;
+  source: string;
+};
+
+type UserCreatedEvent = UserCreatedV1 | UserCreatedV2;
+```
+
+Decoder xử lý version, normalize về domain command hiện tại. Khi xóa support V1, đó là compatibility decision có telemetry/migration evidence, không chỉ là “remove union member cho code sạch”.
+
+## 31. Generated types: generated không đồng nghĩa verified
+
+OpenAPI, GraphQL, Protobuf hoặc database codegen có thể tạo TypeScript rất chính xác **so với schema input**, nhưng schema input có thể stale so với deployed producer. Code generation chứng minh consistency giữa code và schema snapshot, không chứng minh production system đang chạy đúng snapshot đó.
+
+Pipeline đáng tin hơn thường có:
+
+```text
+source schema có ownership/version
+→ deterministic codegen
+→ generated diff review
+→ compile
+→ contract/integration test với producer hoặc fixture chuẩn
+```
+
+Đừng edit generated file bằng tay để “fix TypeScript”; hãy sửa source schema/generator hoặc adapter layer. Nếu phải patch generated output tạm thời, patch phải có owner và test để không biến mất âm thầm ở lần regenerate sau.
+
+## 32. Domain utility type có thể vô tình phá invariant
+
+`Partial<User>` rất tiện, nhưng một business PATCH command không nhất thiết là “mọi property của User đều optional”. Có field không được đổi, field đổi theo nhóm, hoặc null/absent có semantics khác nhau.
+
+```ts
+type UpdateUserCommand = {
+  displayName?: string;
+  locale?: Locale;
+};
+```
+
+Explicit command thường tốt hơn:
+
+```ts
+type UpdateUserCommand = Partial<User>;
+```
+
+nếu `User` còn chứa `id`, audit metadata hoặc derived fields.
+
+Utility types nên transform technical shapes; domain command quan trọng nên encode operation semantics trực tiếp.
+
+## 33. Capability typing cho security tốt hơn role string lan khắp codebase
+
+Một `role: "admin"` không tự bảo đảm action đã được authorize. Một pattern tốt hơn là authorization layer tạo capability/token object chỉ khi policy pass:
+
+```ts
+declare const deleteUserCapability: unique symbol;
+
+type DeleteUserCapability = {
+  readonly [deleteUserCapability]: true;
+  actorId: UserId;
+};
+```
+
+Domain operation nhận capability thay vì raw role. TypeScript giúp API khó gọi sai hơn, nhưng capability chỉ đáng tin nếu constructor/factory nằm sau runtime authorization và không export escape hatch assertion.
+
+Đây là ví dụ TypeScript hỗ trợ security architecture, không thay thế security check.
+
+## 34. React Server/Client boundary: serializability và execution placement là runtime constraint
+
+Trong React ecosystem hiện đại, server/client component boundary có rules về nơi code chạy và value nào được truyền qua protocol của framework. TypeScript prop type có thể đúng nhưng value vẫn không serializable hoặc object identity/runtime API không tồn tại phía bên kia.
+
+TypeScript nên model DTO/server action result rõ, nhưng canonical semantics của render, RSC, hydration và Actions vẫn thuộc [React docs](../react/00_index.md). Khi lỗi chỉ xuất hiện server build/hydration, đừng thêm assertion vào prop; kiểm tra execution boundary và framework serialization rules trước.
+
+## 35. Monorepo: internal import path có thể phá package boundary dù type-check pass
+
+Trong workspace, developer dễ import sâu:
+
+```ts
+import { internalHelper } from "../../packages/domain/src/internal";
+```
+
+TypeScript resolve được nên mọi thứ xanh, nhưng architecture boundary đã bị bypass. Khi package đổi layout, build/publish tách riêng hoặc project references được siết, dependency vỡ.
+
+Production practice là import qua public package surface và dùng `exports`/lint/dependency rules để enforce. TypeScript graph chỉ nói dependency **có thể resolve**, không nói dependency **được phép tồn tại theo architecture**.
+
+## 36. Public type change cần compatibility matrix, không chỉ semantic version intuition
+
+Một type refactor có thể breaking theo nhiều chiều:
+
+```text
+consumer compiler version
+× moduleResolution mode
+× ESM/CJS package condition
+× strict flags
+× runtime target
+```
+
+Ví dụ `.d.ts` dùng syntax mới có thể làm TypeScript cũ parse fail; conditional export có thể khiến `bundler` thấy type khác `nodenext`; thêm required generic parameter có thể phá inference dù JavaScript runtime API không đổi.
+
+Library release quan trọng nên có consumer fixtures ở minimum supported TypeScript + current TypeScript và module modes được tuyên bố hỗ trợ.
+
+## 37. `satisfies` cho config tốt khi config vẫn cần runtime validation
+
+`satisfies` rất hữu ích với in-repo config do developer viết vì nó giữ literal inference và bắt typo. Nhưng config đến từ environment variable, JSON deploy file hoặc remote feature flag vẫn là external input.
+
+```ts
+const routes = {
+  users: { method: "GET", secure: true }
+} satisfies RouteConfig;
+```
+
+Đây là static proof cho source literal. Nếu cùng structure được load từ JSON, cần parser/validator riêng. Đừng copy type và tin data chỉ vì shape “giống config trong source”.
+
+## 38. Environment variables: `process.env.X as string` là một production smell
+
+Environment variable có thể absent, malformed hoặc khác giữa local/CI/container. Cast từng chỗ phân tán proof giả khắp codebase.
+
+Tốt hơn là parse một lần ở startup:
+
+```ts
+type AppConfig = {
+  apiBaseUrl: URL;
+  timeoutMs: number;
+};
+
+function loadConfig(env: Record<string, string | undefined>): AppConfig {
+  // validate + normalize, fail fast nếu cấu hình sai
+  // ...
+  throw new Error("example");
+}
+```
+
+Sau bootstrap, application nhận `AppConfig` trusted. Điều này biến lỗi config từ random runtime branch thành startup failure có log rõ.
+
+## 39. Async result type không model cancellation, deadline hay ownership
+
+`Promise<User>` không nói operation có thể bị cancel, timeout hay request nào owns result. Nếu API lifecycle quan trọng, contract runtime nên expose `AbortSignal`, deadline/context hoặc state machine phù hợp.
+
+```ts
+function loadUser(id: UserId, signal: AbortSignal): Promise<User> {
+  // ...
+}
+```
+
+Ngay cả signature này cũng không “chứng minh cancellation”; nó chỉ tạo capability để runtime implementation phối hợp. TypeScript giúp call site không quên channel, còn temporal correctness vẫn phải test bằng concurrency behavior.
+
+## 40. Observability cho validation/type boundary cần cardinality và privacy discipline
+
+Validation error rất hữu ích nếu log `schemaVersion`, error code/path, producer, endpoint, request ID. Nhưng log toàn raw payload có thể rò PII/secret và tăng cardinality/cost.
+
+Một pattern production tốt là validator trả structured failure reason đã sanitize. Metrics aggregate theo reason/version; trace gắn correlation ID; sample payload chỉ khi policy cho phép. TypeScript có thể type structured diagnostic để logging API không nhận raw domain secret ngoài ý muốn.
+
+## 41. TypeScript 7 adoption: CLI, editor và embedded tooling có thể không cùng version
+
+TypeScript 7.0 có native CLI/language server nhưng chưa có stable programmatic compiler API. Vì vậy framework/tooling nhúng TypeScript có thể vẫn cần TypeScript 6 trong một thời gian.
+
+Một repo có thể chạy:
+
+```text
+TS7 tsc trong CI
+TS7 language server cho file .ts/.tsx thông thường
+TS6 compatibility/API cho typescript-eslint hoặc embedded framework tooling
+```
+
+Điều này không sai nếu được quản lý rõ. Failure mode là tưởng tất cả diagnostics đến từ cùng compiler rồi chase khác biệt behavior như bug source code. Upgrade plan phải ghi tool → compiler-version mapping và chỉ bỏ TS6 khi dependency ecosystem đã hỗ trợ API mới.
+
+## 42. Production debugging runbook: đi từ evidence runtime ngược về proof source
+
+Khi một lỗi “TypeScript lẽ ra phải bắt” xuất hiện, trace ngược:
+
+```text
+runtime failure
+↑ artifact/module actually deployed
+↑ serialized/external value actually received
+↑ validator/adapter that created trusted value
+↑ assertion/declaration/generic proof source
+↑ source type model
+```
+
+Nếu proof source là `as`, `any`, ambient `.d.ts` hoặc generated declaration, ưu tiên audit nó trước khi làm type phức tạp hơn. Nếu proof hoàn toàn do checker suy ra nhưng runtime vẫn khác, kiểm tra artifact/version/module mismatch. Nếu model đúng mà temporal behavior sai, quay về JavaScript concurrency/runtime.
+
+Senior TypeScript là khả năng nối **proof tĩnh** với **evidence động** và biết chính xác chỗ hai thế giới tách nhau.
+
 ---
 
 Hoàn tất track: quay lại [TypeScript Index](typescript_00_index.md) để review coverage và glossary.

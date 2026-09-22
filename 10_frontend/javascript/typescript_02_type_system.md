@@ -412,6 +412,212 @@ Hai parameters có relationship rõ. Nếu thêm `TContext`, `TError`, `TOptions
 
 Một advanced type chỉ có giá trị nếu nó làm illegal state khó represent hơn, giữ relationship quan trọng qua abstraction, hoặc giúp refactor an toàn. Nếu người đọc phải chạy mental compiler để hiểu business rule, bạn đã chuyển complexity từ runtime sang source mà chưa chắc giảm tổng complexity.
 
+## 24. Control-flow analysis là data-flow proof, không chỉ là `typeof`
+
+Narrowing nên được hiểu như một bài toán luồng dữ liệu. Checker theo dõi những facts đã được chứng minh trên từng nhánh, assignment nào có thể làm fact mất hiệu lực và điểm merge control flow nơi nhiều possibility phải hợp lại.
+
+```ts
+function format(value: string | null) {
+  if (value === null) {
+    return "-";
+  }
+
+  // Ở đây checker biết value là string vì nhánh null đã return.
+  return value.trim();
+}
+```
+
+Đây là **reachability analysis**: compiler không chỉ nhìn condition mà còn biết branch nào không thể tiếp tục. Early return vì thế vừa làm code runtime dễ đọc, vừa làm proof static đơn giản hơn.
+
+Assignment có thể thay đổi proof:
+
+```ts
+let value: string | number = "10";
+
+if (typeof value === "string") {
+  value = 10;
+  // Sau assignment, value không còn được xem là string.
+}
+```
+
+Senior debugging nên hỏi: “fact nào khiến checker narrow ở đây, và operation nào làm fact đó hết đáng tin?” thay vì nghĩ type là một label cố định dán vào variable.
+
+## 25. Type predicate và assertion function: biến runtime evidence thành proof có tên
+
+Khi validation logic lặp lại, có thể đóng gói bằng **type predicate**:
+
+```ts
+type User = {
+  id: string;
+  name: string;
+};
+
+function isUser(value: unknown): value is User {
+  return (
+    typeof value === "object" &&
+    value !== null &&
+    "id" in value &&
+    typeof value.id === "string" &&
+    "name" in value &&
+    typeof value.name === "string"
+  );
+}
+```
+
+`value is User` không tự kiểm tra gì thêm; implementation của predicate vẫn phải đúng. Nếu predicate nói dối, checker sẽ tin proof sai. Vì vậy predicate là một **trusted proof-producing function** và cần test kỹ hơn helper thông thường.
+
+Assertion function đi xa hơn: nếu function return bình thường, checker xem invariant đã được chứng minh.
+
+```ts
+function assertUser(value: unknown): asserts value is User {
+  if (!isUser(value)) {
+    throw new Error("Invalid User");
+  }
+}
+```
+
+Sau `assertUser(raw)`, `raw` được narrow thành `User`. Pattern này hữu ích ở request boundary, config bootstrap và test setup, nhưng không nên dùng assertion để che parsing thiếu evidence.
+
+TypeScript từ 5.5 còn có thể suy ra type predicate trong một số function đơn giản. Dù vậy, public validation API nên ưu tiên signature dễ đọc và test được thay vì dựa hoàn toàn vào inference tinh vi.
+
+## 26. Tuple: array có positional contract
+
+Tuple không chỉ là “array ngắn”. Nó encode ý nghĩa theo vị trí:
+
+```ts
+type Coordinate = readonly [x: number, y: number];
+```
+
+Named tuple labels giúp documentation nhưng không tạo runtime keys. Value vẫn là array `[10, 20]`.
+
+Variadic tuple cho phép giữ relation qua function composition:
+
+```ts
+type WithContext<TArgs extends readonly unknown[]> =
+  [context: RequestContext, ...args: TArgs];
+```
+
+Tuple mạnh khi protocol thực sự positional, như `[error, result]`, coordinate hoặc parameter list. Nếu các vị trí có nhiều optional branch và người đọc phải đếm index, object thường tốt hơn vì field names giữ meaning ở runtime lẫn source.
+
+`readonly` tuple đặc biệt hữu ích cho inference literal và covariance-like read-only flow. Nó không freeze runtime array.
+
+## 27. Class typing: instance side khác constructor side
+
+Một `class` tạo ra ít nhất hai khái niệm liên quan: runtime constructor value và instance type.
+
+```ts
+class UserService {
+  constructor(readonly endpoint: string) {}
+
+  load(): Promise<void> {
+    return Promise.resolve();
+  }
+}
+```
+
+`UserService` trong value position là constructor. `UserService` trong type position thường nói về instance. Khi generic factory cần constructor, contract phải mô tả constructor side:
+
+```ts
+type Constructor<T> = new (...args: any[]) => T;
+
+function create<T>(Ctor: Constructor<T>): T {
+  return new Ctor();
+}
+```
+
+`private`/`protected` của TypeScript ảnh hưởng assignability và access checking, nhưng không phải security boundary. ECMAScript `#private` fields mới có runtime privacy semantics. Hai thứ không nên bị nhập làm một.
+
+`abstract` class cũng là static contract: nó ngăn instantiate trực tiếp và yêu cầu subclass implement members, nhưng runtime inheritance vẫn là JavaScript prototype/class semantics. Vì vậy mọi vấn đề về `this`, prototype chain và initialization order vẫn quay về JavaScript canonical docs.
+
+## 28. `this` typing: JavaScript quyết định runtime, TypeScript chỉ mô hình contract
+
+TypeScript có thể mô tả `this` parameter giả, không được emit thành JavaScript argument:
+
+```ts
+interface HandlerContext {
+  requestId: string;
+}
+
+function handle(this: HandlerContext, value: string) {
+  console.log(this.requestId, value);
+}
+```
+
+Signature trên giúp checker yêu cầu cách gọi có `this` phù hợp, nhưng runtime `this` vẫn tuân theo call-site semantics của JavaScript. Arrow function vẫn capture lexical `this`; method extraction vẫn có thể mất receiver nếu runtime call thay đổi.
+
+Trong callback API, `this: void` có thể nói callback không được phụ thuộc receiver. Đây là type-level documentation cho một runtime invariant, không phải cơ chế bind.
+
+## 29. `const` type parameter: yêu cầu inference giữ literal information
+
+Từ TypeScript 5.0, generic API có thể dùng `const` modifier để ưu tiên const-like inference:
+
+```ts
+function defineRoutes<const T extends readonly string[]>(routes: T) {
+  return routes;
+}
+
+const routes = defineRoutes(["/", "/users", "/settings"]);
+// T giữ tuple/literal information tốt hơn so với inference rộng thông thường.
+```
+
+Điểm quan trọng là `const T` không làm runtime value immutable. Nó thay chiến lược inference ở call site. Constraint vẫn phải phù hợp; nếu constraint mutable nhưng argument inference muốn readonly, checker có thể fallback theo cách gây bất ngờ.
+
+Dùng feature này cho config-builder, route definitions và schema-like APIs nơi literal identity mang meaning. Đừng thêm `const` vào mọi generic chỉ vì “chính xác hơn”; public type càng literal-heavy càng dễ tạo union lớn và diagnostic dài.
+
+## 30. `NoInfer<T>`: ngăn một vị trí tham gia suy luận generic
+
+Đôi khi nhiều arguments cùng “bỏ phiếu” cho T nhưng chỉ một nguồn nên quyết định type. `NoInfer<T>` cho phép giữ constraint mà không dùng vị trí đó làm inference source.
+
+```ts
+function createFSM<TState extends string>(
+  states: readonly TState[],
+  initial: NoInfer<TState>
+) {
+  return { states, initial };
+}
+
+createFSM(["open", "closed"] as const, "open");
+// "missing" sẽ không được dùng để làm rộng TState rồi hợp thức hóa chính nó.
+```
+
+Mental model là **control inference direction**, không phải đổi assignability cuối cùng. Đây là công cụ API design tốt hơn các generic phụ chỉ được tạo để “hack inference”.
+
+## 31. Function compatibility: parameter count, bivariance legacy và `strictFunctionTypes`
+
+JavaScript thường bỏ qua extra callback arguments, nên TypeScript cho phép một số function assignment mà nominal language có thể không cho. Tuy nhiên với `strictFunctionTypes`, parameter types của function properties/callbacks được kiểm tra chặt hơn để tránh consumer quá hẹp.
+
+Một subtlety là method syntax có historical bivariance behavior ở một số context để giữ compatibility với ecosystem. Vì vậy hai signatures trông gần giống nhưng viết dạng method hay property function có thể cho assignability khác nhau.
+
+Senior lesson không phải thuộc từng exception, mà là: khi callback variance tạo diagnostic bất ngờ, kiểm tra **data direction**, `strictFunctionTypes`, và xem signature được khai báo như method hay function property. Đừng cast callback chỉ vì hai parameter “trông gần giống”.
+
+## 32. Index signature và key space: “mọi string key” là một lời hứa rất lớn
+
+```ts
+type UserMap = {
+  [id: string]: User;
+};
+```
+
+Type này nói bất kỳ string key nào cũng có value theo declared type ở type level. Runtime object thì key có thể thiếu. Đây là lý do `noUncheckedIndexedAccess` quan trọng.
+
+Nếu key space hữu hạn, `Record<UserRole, Permission[]>` hoặc mapped type trên literal union diễn đạt invariant mạnh hơn `Record<string, ...>`. Nếu map thật sự sparse/dynamic, hãy chấp nhận `undefined` trong lookup hoặc dùng `Map` với API runtime rõ ràng.
+
+Index signature cũng constrain named properties: nếu mọi string property phải là `number`, một named property `name: string` sẽ mâu thuẫn. Đây là consequence trực tiếp của câu “mọi string key”.
+
+## 33. Type-system failure mode: proof quá mạnh hơn runtime evidence
+
+Một codebase có thể “100% strict” nhưng vẫn unsound ở boundary nếu developer liên tục tạo proof bằng assertion, predicate sai, ambient declaration sai hoặc generic parser kiểu `parse<T>()`.
+
+Hãy phân biệt:
+
+```text
+proof được compiler suy ra từ code
+proof được runtime validator tạo ra
+proof developer tự tuyên bố bằng assertion/declaration
+```
+
+Ba loại proof có mức trust khác nhau. Senior TypeScript không chỉ giảm số error; nó quản lý **nguồn gốc của bằng chứng** và blast radius khi bằng chứng sai.
+
 ---
 
 Tiếp theo: [TypeScript 03 — Compiler, Modules & Tooling](typescript_03_tooling_modules_runtime.md).
