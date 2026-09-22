@@ -239,3 +239,51 @@ NTP/clock health vẫn quan trọng, nhưng incident analysis nên biết uncert
 Mỗi signal có detection boundary: sampling, retention, scrape interval, dropped log, missing label hoặc instrumentation gap. Senior debugging luôn hỏi **nếu hypothesis đúng, detector này có chắc nhìn thấy không?**
 
 Khi detector yếu, kết luận đúng là “chưa quan sát được”, không phải “đã loại trừ”. Điều này giúp hypothesis tree trung thực hơn và thường chỉ ra observability debt cần sửa sau incident.
+
+## 35. Causal graph tốt hơn một timeline phẳng khi nhiều yếu tố tương tác
+
+Timeline chỉ nói sự kiện nào xảy ra trước sau. Causal graph cố gắng biểu diễn dependency: traffic tăng làm queue tăng; queue tăng làm latency tăng; timeout làm retry tăng; retry lại làm traffic downstream tăng. Một node có thể vừa là hậu quả của cause trước vừa trở thành cause của failure tiếp theo.
+
+Khi incident phức tạp, hãy vẽ arrow “A có thể làm B bằng mechanism nào?” thay vì chỉ liệt kê timestamp. Nếu không mô tả được mechanism nối hai event, correlation cần được giữ ở mức hypothesis.
+
+Causal graph cũng giúp phân biệt trigger, amplifier và latent condition. Bad deploy có thể là trigger, retry policy là amplifier, còn thiếu admission control là điều kiện khiến blast radius lớn.
+
+## 36. Intervention tạo evidence mạnh nhưng đồng thời làm system thay đổi
+
+Rollback, scale, disable feature hoặc restart vừa là mitigation vừa là experiment. Nếu rollback làm error giảm, confidence vào change tăng — nhưng traffic, cache, dependency hoặc autoscaler cũng có thể đổi cùng lúc.
+
+Một intervention hữu ích nên thay ít biến nhất có thể trong giới hạn incident safety và ghi rõ expected effect. Khi có thể, dùng cohort nhỏ/canary thay vì toàn fleet để giữ comparison group. Khi user impact buộc phải hành động mạnh, ưu tiên recovery nhưng đừng overclaim causal certainty sau đó.
+
+Production không phải laboratory sạch. Discipline nằm ở việc biết intervention nào đã phá counterfactual nào.
+
+## 37. Incident state-change discipline ngăn operator tự tạo race
+
+Trong incident lớn, nhiều người cùng scale, patch config, restart và rollback có thể làm actual state thay đổi nhanh hơn khả năng quan sát. Evidence thu ở phút 10 có thể không còn mô tả state sau action phút 11.
+
+Nên có một owner cho mutation path hoặc ít nhất serialized log: action nào, target/revision nào, ai thực hiện, expected effect, timestamp và rollback condition. Read-only investigation có thể parallel; state mutation cần coordination mạnh hơn.
+
+Điều này đặc biệt quan trọng với controller/GitOps: manual patch có thể bị reconcile ngược, tạo cảm giác system “tự thay đổi” trong khi hai actor đang tranh ownership.
+
+## 38. Detector coverage nên được xem như bản đồ, không phải danh sách dashboard
+
+Một organization thường biết rõ các failure đã instrument nhưng ít biết vùng mù. Có thể lập coverage map theo failure class: edge reachability, business correctness, dependency latency, resource pressure, data freshness, queue age, control-plane convergence và security authorization.
+
+Với mỗi class, hỏi sensor nằm ở đâu, sampling/freshness ra sao, failure nào sensor không nhìn thấy và signal mất thì có được phát hiện không. Coverage map không cần hoàn hảo; mục tiêu là biết “unknown unknown” nào đang hoàn toàn phụ thuộc complaint của user.
+
+Incident mới phát hiện vùng mù nên tạo observability action cụ thể, không chỉ thêm dashboard chung chung.
+
+## 39. Fault injection chỉ tạo evidence nếu experiment có control và verification
+
+Inject 500 ms network delay rồi thấy latency tăng không dạy nhiều nếu không xác nhận delay thật sự đi vào path nào, cohort nào bị ảnh hưởng và control cohort nào không bị inject.
+
+Một experiment tốt định nghĩa hypothesis, fault boundary, steady-state metric, stop condition, control/comparison group và evidence chứng minh injection đã hoạt động. Nếu tool báo “fault injected” nhưng packet path thực không qua target đó, kết luận resilience là vô nghĩa.
+
+Fault injection có giá trị nhất khi kiểm tra một invariant cụ thể, ví dụ “mất một replica không làm checkout burn budget > X”, không phải khi chỉ cố tạo chaos cho giống production.
+
+## 40. Senior walkthrough: restart giúp ngay nhưng root cause vẫn chưa rõ
+
+Giả sử service latency tăng dần, restart toàn replica làm latency trở lại bình thường. Có ít nhất vài hypothesis: memory/cache leak, connection pool state xấu, thread starvation, DNS/connection refresh hoặc workload được reschedule khỏi node lỗi.
+
+Restart đã reset nhiều state cùng lúc nên intervention có độ phân giải thấp. Sau incident, hãy tìm cohort/process evidence còn giữ được, thử targeted restart hoặc reproduction trong environment kiểm soát, và bổ sung metric cho state nghi ngờ.
+
+Kết luận trưởng thành là: **restart chứng minh failure phụ thuộc một state đã bị reset, nhưng chưa xác định state nào**. Giữ uncertainty chính xác tốt hơn gán nhãn “memory leak” chỉ vì restart có hiệu quả.
