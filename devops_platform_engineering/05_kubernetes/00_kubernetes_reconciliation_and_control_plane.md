@@ -164,3 +164,59 @@ Giả sử nhiều team cùng báo `kubectl apply` timeout, GitOps controller ba
 Kiểm tra API request latency theo verb, admission webhook latency/error, etcd/storage, controller client retry. Nếu một validating webhook mới deploy có latency 8–10 giây và mọi create/update đều đi qua nó, root layer khá rõ.
 
 Mitigation có thể rollback/scope lại webhook theo policy; không nên restart application pods vì chúng không nằm trên failure path. Đây là giá trị của control-plane/data-plane separation trong reasoning.
+
+## 22. Finalizer biến delete thành protocol, không phải một thao tác tức thời
+
+Khi object có cleanup bên ngoài cluster — cloud database, load balancer, DNS record, volume hoặc secret — xóa API object ngay có thể làm mất dấu resource cần cleanup. Finalizer cho phép object đi vào trạng thái terminating trong khi controller hoàn tất side effect rồi mới cho deletion kết thúc.
+
+Invariant là: **đừng xóa record điều phối trước khi hoàn tất cleanup bắt buộc**. Nhưng finalizer cũng tạo failure mode: controller chết, credential mất hoặc provider outage có thể làm object kẹt `Terminating` vô thời hạn.
+
+Force-remove finalizer chỉ nên làm khi operator hiểu orphan nào có thể còn lại và recovery path là gì. “Xóa được object” không đồng nghĩa external resource đã biến mất.
+
+## 23. Owner reference và garbage collection encode lifecycle graph
+
+Kubernetes có object graph: Deployment sở hữu ReplicaSet, ReplicaSet sở hữu Pod. Owner reference cho garbage collector biết resource con có lifecycle gắn với owner nào.
+
+Đây là khác biệt với label/selector. Label thể hiện quan hệ chọn động; owner reference thể hiện ownership/lifecycle. Dùng nhầm hai khái niệm dẫn tới bug như resource con không được cleanup hoặc bị xóa ngoài ý muốn.
+
+Operator tự viết cần nghĩ ownership graph trước khi create child resource. Nếu một external resource không thể biểu diễn bằng owner reference, controller phải tự giữ mapping/identity đủ bền để reconcile/delete an toàn.
+
+## 24. Leader election giảm duplicate active controller nhưng không tự tạo fencing
+
+Nhiều replica controller thường dùng lease/leader election để chỉ một instance active cho một responsibility nhất định. Nhưng network partition, pause dài hoặc delayed actor có thể tạo thời điểm old leader vẫn tiếp tục side effect dù lease đã mất.
+
+Với action chỉ ghi Kubernetes API, optimistic concurrency có thể giúp reject stale write. Với external system không kiểm tra fencing token, leader election một mình có thể chưa đủ cho operation nguy hiểm.
+
+Đây là boundary nơi DevOps nên chuyển sang [leases, fencing và split-brain](../../computer_science/06_networks_distributed_systems/advanced/02_leases_fencing_tokens_and_split_brain_prevention.md). Operational lesson là: **“có leader election” không tự chứng minh side effect external không thể bị duplicate/stale actor thực hiện**.
+
+## 25. Informer cache tăng scale nhưng tạo staleness cần được chấp nhận có chủ đích
+
+Controller thường đọc từ local cache/informer thay vì gọi API server trực tiếp cho mọi reconcile. Điều này giảm load và latency, nhưng cache có thể chậm hơn authoritative API state một khoảng ngắn.
+
+Controller vì vậy phải được viết theo eventual reconciliation, không dựa vào assumption “vừa ghi xong thì cache chắc chắn đã thấy ngay”. Nếu một invariant cần read-after-write mạnh hơn, có thể phải dùng response của write, direct read có chọn lọc hoặc generation/resourceVersion logic phù hợp.
+
+Nhiều bug controller xuất hiện khi developer vô tình trộn semantics của cache với semantics của database transaction.
+
+## 26. Status condition phải là machine-readable contract, không phải log mini
+
+Một CRD có `status.message = "something failed"` chưa đủ cho automation. Condition tốt nên có type ổn định, boolean/status, reason có taxonomy hữu hạn, observed generation và timestamp hữu ích.
+
+Consumer cần phân biệt failure transient với terminal-invalid-spec; degraded nhưng usable với not-ready; dependency pending với policy denied. Nếu mọi lỗi đều thành `Ready=False`, platform user phải đọc controller log để hiểu abstraction — contract đã rò.
+
+Status nên trả lời “controller đã observe intent nào, invariant nào đang đạt, invariant nào chưa và vì lý do loại nào”. Chi tiết dài vẫn có thể ở event/log.
+
+## 27. CRD schema evolution là API evolution thật sự
+
+CRD không chỉ là YAML tùy ý. Khi nhiều client/controller dùng nó, field rename, default thay đổi, semantic đổi hoặc version conversion sai đều có thể phá production.
+
+Một version mới cần compatibility strategy: field cũ được giữ/deprecate bao lâu, default cũ/new khác nhau thế nào, object stored version nào, conversion có reversible không và controller nào support version nào.
+
+Nếu conversion webhook nằm trên API read/write path, availability của nó cũng trở thành control-plane dependency. Platform CRD vì vậy cần cùng discipline versioning/canary/rollback như public API.
+
+## 28. Control-plane fairness cần bảo vệ request quan trọng khi overload
+
+Không phải API request nào có cùng giá trị. Health/control traffic, scheduler/controller action và bulk automation có thể tranh cùng control-plane capacity. Nếu một client gửi burst list/update lớn, request critical có thể bị queue dài.
+
+Operational reasoning nên phân loại caller/verb/resource và xem queue/rejection theo class khi control plane pressure. Rate limit phía client, bounded concurrency và ưu tiên/fairness ở API path giúp tránh noisy automation làm toàn cluster mất khả năng điều khiển.
+
+Điều này nối Kubernetes với multi-tenancy: fairness của shared control plane là reliability contract, không chỉ tuning performance.
