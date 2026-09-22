@@ -71,3 +71,25 @@ Một pipeline chạy nhanh hơn không có giá trị nếu nó đẩy lỗi sa
 Operating model này dựa trên nhiều cơ chế không nên duplicate trong library. Process, syscall và isolation xem tại [Operating Systems foundation](../../computer_science/basic/03_operating_systems/00_kernel_syscalls_and_os_abstractions.md). Container internals xem [namespaces, cgroups, capabilities và seccomp](../../computer_science/03_operating_systems/advanced/06_containers_namespaces_cgroups_capabilities_and_seccomp.md). Distributed failure semantics xem [Networks & Distributed Systems advanced](../../computer_science/06_networks_distributed_systems/advanced/README.md). Deployment strategy ở mức software engineering xem [deployment safety](../../computer_science/09_software_engineering/advanced/05_deployment_safety_canary_blue_green_flags_and_rollback.md).
 
 Các chapter tiếp theo dùng những nền đó để xây delivery system và platform ở cấp production.
+
+## 10. Flow phải được nhìn bằng queue, WIP và batch size
+
+Một delivery system có thể rất tự động nhưng vẫn chậm vì thay đổi nằm chờ trong queue. Để hiểu flow, cần tách **lead time** — thời gian từ lúc nhu cầu/thay đổi bắt đầu đến lúc tạo giá trị — khỏi **processing time** — thời gian hệ thống thực sự đang xử lý thay đổi. Khoảng cách giữa hai con số thường chính là queue, handoff, chờ review, chờ environment hoặc chờ approval.
+
+Công việc đang dở (work in progress — WIP) càng lớn thì càng nhiều thay đổi phải chia sẻ attention, runner, reviewer và môi trường. Một quan hệ quan trọng từ lý thuyết hàng đợi là: khi throughput tương đối ổn định, WIP tăng sẽ kéo thời gian hoàn thành trung bình tăng. Vì vậy cách cải thiện flow thường không phải “bắt mọi người làm nhanh hơn”, mà là giảm batch size, giới hạn WIP và làm feedback xuất hiện trước khi một thay đổi tích tụ thêm dependency.
+
+Hãy so hai release. Release A chứa 40 thay đổi và mất hai tuần để test; khi lỗi xảy ra phải tìm trong một batch lớn. Release B gồm nhiều thay đổi nhỏ, mỗi thay đổi đi qua pipeline trong vài chục phút. Cùng một tổng khối lượng code nhưng release B có search space nhỏ hơn, rollback/roll-forward dễ hơn và feedback quay về author khi context còn mới. Đây là lý do batch size là một biến reliability chứ không chỉ là biến tốc độ.
+
+## 11. Metric delivery là sensor, không phải mục tiêu để game
+
+Các metric như lead time, deployment frequency, tỷ lệ thay đổi gây lỗi và thời gian phục hồi hữu ích vì chúng quan sát các phần khác nhau của flow. Nhưng chúng chỉ là sensor. Nếu ép “deployment frequency phải tăng” mà team chia một thay đổi nguy hiểm thành nhiều deploy phụ thuộc lẫn nhau, số đẹp hơn nhưng system risk có thể tăng. Nếu định nghĩa “failure” quá hẹp để giảm change failure rate, metric mất giá trị.
+
+Cách dùng đúng là nhìn metric theo causal question. Lead time tăng vì review queue hay vì test chậm? Tỷ lệ release lỗi tăng ở một service hay toàn platform? Recovery chậm vì detection muộn, access khó, rollback không tương thích hay operator thiếu runbook? Metric chỉ hữu ích khi dẫn tới một hypothesis có thể kiểm tra và một thay đổi hệ thống cụ thể.
+
+## 12. Socio-technical system: kiến trúc và tổ chức phản hồi lẫn nhau
+
+Delivery system không chỉ gồm code và tool. Quyền hạn, ownership, cấu trúc team và incentive quyết định automation được dùng ra sao. Một team có quyền deploy nhưng không có quyền xem production telemetry vẫn chưa thật sự sở hữu outcome. Một platform team bị đo bằng số ticket đóng có thể vô tình tối ưu việc xử lý ticket thay vì xóa nhu cầu ticket.
+
+Khi một bước luôn tạo bottleneck, đừng chỉ hỏi tool nào chậm. Hãy hỏi tại sao quyết định đó phải đi qua boundary hiện tại, information nào chỉ một nhóm đang giữ, risk nào đang được gate thủ công thay vì encode thành guardrail, và liệu interface giữa các team có thể trở thành contract kỹ thuật ổn định hay không.
+
+Đây là điểm Platform Engineering nối với organizational design: mục tiêu không phải xóa mọi specialization mà là biến giao tiếp lặp lại thành capability có contract, để chuyên gia tập trung vào exception và evolution thay vì trở thành queue cho common path.
