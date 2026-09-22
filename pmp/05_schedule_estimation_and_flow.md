@@ -250,6 +250,38 @@ Nếu QA là bottleneck, tăng coding throughput có thể làm WIP và cycle ti
 
 Bottleneck có thể di chuyển sau khi được cải thiện. Vì vậy optimization là loop, không phải one-time fix.
 
+## Schedule, finance và risk là ba projection của cùng một future state
+
+Schedule delay hiếm khi chỉ là vấn đề ngày tháng. Một milestone trượt có thể làm payment milestone trượt, kéo cash inflow sang kỳ sau, tăng burn, kéo dài thuê vendor/resource và làm risk exposure tồn tại lâu hơn. Ngược lại, funding bị cắt có thể làm resource giảm, queue tăng và critical path đổi. Vì vậy schedule, finance và risk phải được đọc như các projection liên kết của cùng project state.
+
+Ví dụ một cutover trễ ba ngày nhưng bỏ lỡ monthly regulatory window có thể tạo delay thực tế bốn tuần. Bốn tuần đó không chỉ làm finish date đổi: team phải duy trì environment thêm một tháng, vendor support kéo dài, benefit realization lùi, contingency exposure tăng và có thể chạm contractual penalty. Local schedule variance nhỏ đã trở thành economic/risk discontinuity lớn.
+
+Khi forecast date đổi material, PM nên hỏi ít nhất ba propagation question: cash/funding state nào đổi, risk nào tồn tại lâu hơn hoặc mới xuất hiện, và commitment nào với stakeholder/vendor phải được cập nhật. Đây là điểm nối trực tiếp với [Finance & Value](./06_finance_cost_and_value_measurement.md), [Risk & Decisions](./08_risk_uncertainty_issues_and_decisions.md) và [Integration & Scope](./04_integration_scope_requirements_and_change.md).
+
+## Forecast divergence: khi nhiều metric kể các câu chuyện khác nhau
+
+Một schedule có thể báo finish date ổn định trong khi SPI xấu; velocity có thể tăng nhưng milestone forecast vẫn trượt; percent complete có thể cao trong khi acceptance evidence thấp. Không nên ép các metric phải “khớp” bằng cách chọn một con số làm sự thật duy nhất. Trước hết phải xác định chúng đo state nào.
+
+SPI nhìn performance so với baseline trong phần work được đo; critical-path forecast nhìn logic còn lại; throughput/cycle time nhìn flow; milestone evidence nhìn state transition. Nếu SPI thấp vì work noncritical bị chậm nhưng critical path vẫn ổn, finish forecast có thể chưa đổi. Ngược lại SPI gần 1 vẫn có thể che một regulatory dependency mới chưa được baseline/model phản ánh.
+
+Divergence là diagnostic signal. PM cần giải thích causal bridge giữa metric và forecast: metric nào là leading signal, metric nào lagging, boundary nào không được model hóa, và evidence nào đủ mạnh để update remaining duration. Cross-metric consistency được đào sâu thêm ở [Quantitative Reasoning](./15_quantitative_reasoning_worked_examples.md).
+
+## Recovery option phải được đánh giá theo marginal economics và reversibility
+
+Khi forecast trượt, câu hỏi không phải luôn là “làm sao lấy lại ngày cũ?”. Recovery chỉ có lý khi value của việc giữ date lớn hơn marginal cost và risk của recovery. Crashing có thể mua thêm capacity; fast tracking có thể mua time bằng rework risk; de-scope có thể giữ date bằng cách giảm value; đổi sequence có thể giữ option nhưng tăng coordination.
+
+Decision boundary thay đổi theo loại date. Với regulatory deadline không thể dời, organization có thể chấp nhận recovery cost cao hơn nhưng vẫn không được phá safety/compliance boundary. Với internal target có flexibility, overtime kéo dài hoặc quality compromise để giữ một ngày tượng trưng có thể là local optimization. Với market window, value của một ngày có thể phi tuyến nếu miss window làm mất cả mùa bán hàng.
+
+Một recovery decision tốt vì vậy so sánh ít nhất `time saved`, `marginal cost`, `new risk`, `quality/rework consequence`, `resource sustainability` và `value protected`. Sau recovery, network phải được tính lại vì bottleneck/critical path có thể đã chuyển sang nơi khác.
+
+## Failure cascade: delay có thể tự khuếch đại
+
+Schedule failure thường lan qua feedback loop thay vì dừng ở một task. Một vendor trễ làm integration trễ; integration trễ bỏ lỡ test window; test window trễ làm acceptance/payment trễ; cash pressure khiến organization trì hoãn external specialist; specialist thiếu lại làm remediation chậm hơn. Đây là reinforcing loop khiến một variance ban đầu nhỏ trở thành project recovery problem.
+
+Cách ngắt cascade không nhất thiết là tăng tốc activity đầu tiên. Có thể cần giữ test window bằng partial scope, thay payment structure, mua temporary capacity, đổi sequence hoặc negotiate interface. Root action phải đánh vào propagation mechanism đang khuếch đại delay.
+
+Một dấu hiệu quan trọng là **schedule consequence đã vượt boundary của schedule**: finance forecast đổi, reserve bị consume, contract exposure tăng, benefit date đổi hoặc governance tolerance bị breach. Khi đó issue phải được xử lý bằng integrated decision, không còn là việc planner chỉnh Gantt.
+
 ## Schedule health: logic trước màu status
 
 Một schedule “green” có thể unhealthy nếu thiếu predecessor/successor, dùng quá nhiều hard constraint, có activity dài hàng tháng không milestone, hoặc không phản ánh resource calendar.
@@ -290,14 +322,18 @@ Một adaptive team có throughput ổn 8 item/tuần nhưng cycle time tăng t�
 
 Một project khác có ba parallel workstream cùng cần security approval trước go-live. Mỗi workstream riêng lẻ có P80 đúng hạn, nhưng tất cả hội tụ vào một approval window duy nhất. PM cần nhìn convergence/common-cause reviewer capacity thay vì cộng confidence từng path như độc lập.
 
+Một scenario khác có finish forecast trượt năm ngày. Sponsor yêu cầu overtime để “lấy lại schedule”, nhưng date chỉ là internal target; recovery cần thêm 40 triệu, tăng defect risk và không bảo vệ revenue window nào. Trong trường hợp này, câu hỏi đúng không phải team có thể ép năm ngày hay không mà là năm ngày đó đáng giá bao nhiêu và consequence của recovery là gì. Nếu ngược lại năm ngày làm miss annual regulatory window, decision boundary thay đổi hoàn toàn.
+
 ## Failure modes
 
 Date-driven scheduling xảy ra khi planner đặt ngày trước rồi ép logic theo. Constraint masking xảy ra khi hard constraint che infeasible network. Resource fantasy xảy ra khi cùng specialist được booking full-time ở nhiều activity. Merge blindness bỏ qua tail ở convergence point. Open-end network tạo false float. Percent-complete theater báo tiến độ mà không update remaining duration.
+
+Metric isolation xảy ra khi SPI, velocity hoặc percent complete được dùng tách khỏi network/evidence. Recovery reflex xảy ra khi mọi variance đều bị crash/fast-track mà không so marginal value với cost/risk. Schedule silo xảy ra khi date đổi nhưng finance, risk, contract và benefit forecast không đổi theo. Cascade blindness xảy ra khi management nhìn delay one-hop mà bỏ feedback loop làm consequence tự khuếch đại.
 
 Schedule management trưởng thành không cố làm mọi activity “đúng ngày”; nó giữ model causal đủ thật để forecast và trade-off còn đáng tin.
 
 ## Mental model
 
-> Schedule là causal model của dependency, resource, calendar, queue và uncertainty. Quản lý schedule tốt là biết path/window/resource nào thật sự quyết định outcome, nhận ra khi constraint làm model infeasible, và cập nhật forecast trước khi variance quá khứ biến thành surprise tương lai.
+> Schedule là causal model của dependency, resource, calendar, queue và uncertainty. Quản lý schedule tốt là biết path/window/resource nào thật sự quyết định outcome, nhận ra khi constraint làm model infeasible, đọc schedule cùng finance/risk state, và chỉ mua recovery khi value được bảo vệ lớn hơn cost/risk mới tạo ra.
 
 Tiếp theo: [Finance, cost, reserves và value measurement](./06_finance_cost_and_value_measurement.md).
