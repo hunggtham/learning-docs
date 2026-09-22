@@ -221,3 +221,9 @@ Composition tạo nền cho chain rule, matrix products, coordinate transformati
 ## Common Misconceptions
 
 `f^{-1}` không phải `1/f`. Không phải function nào cũng có inverse trên domain hiện tại. Composition không thường giao hoán. `f(x-h)` dịch phải chứ không phải trái vì transformation xảy ra bên trong input coordinate.
+
+## Liên kết kiến thức
+
+Chapter này giả định bạn đã nắm [Function Concept](./00_function_concept.md) và [Sets, Relations and Mappings](../00_foundations/02_sets_relations_and_mappings.md). Composition được dùng tiếp trong [Linear Transformations](../04_vectors_linear_algebra/02_linear_transformations.md) và [Derivatives](../05_calculus/01_derivatives.md), nơi chain rule chính là sensitivity của một composition.
+
+Trong AI/Software, xem [Matrix Calculus, Jacobian, Hessian và Autodiff](../04_vectors_linear_algebra/09_matrix_calculus_jacobian_hessian_and_autodiff.md) và [Math for AI, Data and Software](../09_connections/03_math_for_ai_data_and_software.md) để thấy computational graph, pipeline và information loss dưới cùng mental model.
