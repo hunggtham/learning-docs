@@ -211,3 +211,35 @@ Policy có owner, version, rollout ring, telemetry, deprecation và rollback gi�
 Nếu exception không bao giờ hết hạn, policy dần trở thành nominal. Nếu policy không có migration path, platform tạo shadow workflow và bypass. Governance trưởng thành tối ưu **risk reduction trên flow**, không tối đa số rule.
 
 Một signal tốt là exception rate theo policy. Nếu một rule liên tục cần exception hợp lệ, rule hoặc golden path có thể đang model sai thực tế và cần product discovery lại.
+
+## 31. Reservation và borrowing cần reclamation semantics
+
+Shared platform thường muốn vừa bảo đảm capacity cho workload critical vừa cho workload khác mượn phần đang rảnh để tăng utilization. Borrowing có ích, nhưng nếu không có reclamation contract thì “capacity dự phòng” chỉ tồn tại trên giấy: khi Tier-0 cần scale, batch job đang mượn resource có thể không nhả đủ nhanh.
+
+Contract cần nói resource nào reserved, ai được borrow, khi nào bị reclaim, workload bị preempt có checkpoint/resume được không và thời gian thu hồi có phù hợp RTO không. Một batch job mất 20 phút để shutdown không phải spare capacity hữu ích cho failover cần 2 phút.
+
+Vì vậy headroom phải đo ở **recoverable capacity**, không chỉ free capacity. Game day nên chứng minh borrowed resource thực sự có thể được reclaim trong deadline.
+
+## 32. Preemption là policy về ai chịu thiệt khi scarcity xảy ra
+
+Priority class chỉ có ý nghĩa khi organization chấp nhận workload thấp hơn bị delay/evict để bảo vệ workload cao hơn. Nếu mọi workload đều gắn priority cao nhất, policy mất tác dụng. Nếu preemption giết stateful/batch work không checkpoint, recovery cost có thể lớn hơn lợi ích.
+
+Thiết kế priority cần nối business criticality với failure semantics: request-serving Tier-0 có thể giữ reserved concurrency; batch low-priority có thể pause; background cleanup có thể shed; security/recovery control work có thể cần lane riêng. Sau preemption phải có retry/backoff để tránh tất cả workload thấp cùng quay lại tạo thundering herd.
+
+Scarcity policy tốt trả lời trước incident: **ai được phục vụ, ai chờ, ai bị hủy, và trạng thái của work bị hủy được phục hồi thế nào**.
+
+## 33. Isolation mạnh hơn làm giảm pooling efficiency và tăng fragmentation
+
+Tách tenant thành nhiều cluster/cell/account giảm blast radius nhưng capacity không còn pooling hoàn toàn. Mỗi cell phải giữ headroom riêng, workload nhỏ có thể không tận dụng hết node/database tier và operator phải duy trì nhiều control plane hơn.
+
+Đây là trade-off cấu trúc, không phải lý do tránh isolation. Quyết định đúng cần so `blast-radius reduction + compliance + predictable performance` với `fragmentation + duplicated reserve + operational surface`. Một Tier-0 có thể đáng trả cost đó; hàng trăm workload dev nhỏ có thể không.
+
+FinOps vì vậy phải hiểu topology. So đơn giá CPU giữa shared và dedicated mà bỏ qua failure budget/support burden sẽ cho kết luận sai.
+
+## 34. Tenant isolation cần kiểm tra cả recovery path và operator path
+
+Hai tenant có thể được tách tốt ở steady state nhưng dùng chung break-glass admin, restore bucket, registry mirror hoặc recovery queue. Khi incident, operator dùng quyền rộng hoặc restore nhiều tenant qua cùng pipeline có thể phá boundary vốn tồn tại lúc bình thường.
+
+Threat/failure model nên hỏi cả Day-2: backup của tenant A có thể restore nhầm sang tenant B không; support engineer có thể query log chéo tenant không; emergency tool có audit/target confirmation không; bulk recovery của A có starve B không.
+
+Isolation trưởng thành là property của toàn lifecycle `create → run → observe → recover → delete`, không chỉ namespace/network policy lúc workload đang khỏe.
