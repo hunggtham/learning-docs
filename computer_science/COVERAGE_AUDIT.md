@@ -1,553 +1,378 @@
 # Coverage Audit — Computer Science Canonical Library
 
-Audit này đánh giá `computer_science/` theo **chiều sâu reasoning**, không theo số chapter. Một domain chỉ được xem là có coverage tốt khi người đọc có thể đi theo đường:
+> Audit cập nhật: 2026-09-22. Vòng này **không tạo Computer Science library mới và không tăng chapter count**. Các thay đổi tập trung rewrite sâu những canonical chapters hiện có theo chuỗi: **foundation → internals → failure modes → performance/concurrency/consistency → production evidence**.
 
-```text
-foundation
-→ internals
-→ failure modes
-→ performance / concurrency / consistency pressure
-→ production evidence
-→ cross-layer connections
-```
+Audit này không hỏi “đã có keyword X chưa?”. Một domain chỉ được coi là mạnh khi người đọc có thể đi từ **problem → invariant → internal mechanism → failure → pressure-induced behavior → evidence → lower abstraction layer** mà không phải nhảy sang một chapter mới chỉ để có reasoning cơ bản.
 
-Số file không phải mục tiêu. Trong vòng audit này, chapter trùng mental model đã được hợp nhất; các gap mới chủ yếu được hấp thụ vào canonical file hiện có thay vì tạo thêm chapter.
+## 1. Boundary và cấu trúc tổng thể
 
-## 1. Tiêu chí chung
+`computer_science/basic/` tiếp tục là prerequisite/foundation layer. Các domain canonical ở root đi sâu hơn theo conceptual boundary, và `advanced/` chỉ chứa những concept có mental model riêng đủ sâu. `90_connections/` nối các layer thay vì duplicate nội dung domain.
 
-Một concept advanced được xem là đủ sâu khi có thể trả lời phần lớn các câu hỏi sau:
-
-```text
-Vấn đề ban đầu là gì?
-Invariant nào cần được duy trì?
-Internals giữ invariant bằng mechanism nào?
-Assumption nào đang được dùng?
-Failure xảy ra khi assumption nào mất hiệu lực?
-Performance pressure làm behavior thay đổi ra sao?
-Evidence nào giúp phân biệt các hypothesis?
-Abstraction layer nào bên dưới thực sự quyết định behavior?
-Fix nên đặt ở layer nào sở hữu invariant?
-```
-
-Một chapter chỉ liệt kê technology, API, annotation hoặc pattern mà không tạo thêm mental model không được tính là chiều sâu mới.
-
----
-
-## 2. Computer Architecture — coverage: mạnh
-
-Foundation đã có CPU/ISA/instruction cycle, memory hierarchy/cache, I/O/interrupt/DMA, ABI, multicore/SIMD/GPU, storage hardware và performance measurement.
-
-Advanced hiện có đường reasoning rõ từ memory consistency/cache coherence tới OoO execution, speculation, cache hierarchy, NUMA, TLB và SIMD/GPU. Vòng audit đã hợp nhất duplicate OoO chapter và đào sâu hai chuỗi chính:
-
-```text
-cache/coherence
-→ memory ordering
-→ ISA memory model
-→ language memory model
-```
-
-và:
-
-```text
-instruction stream
-→ register renaming
-→ scheduling window
-→ speculative execution
-→ ROB
-→ precise retirement/exception
-```
-
-Invariant đã rõ hơn: internal reordering/speculation được phép để tăng performance, nhưng architectural state, precise exception và ISA memory contract phải được giữ.
-
-Failure/performance coverage đã có false sharing, cache-line bouncing, NUMA locality, dependency chain, branch miss, memory-level parallelism và distinction giữa architectural correctness với microarchitectural side channel.
-
-Production evidence đã có PMU/perf-counter mental model: IPC, branch miss, cache/TLB miss, stalled cycles, cache-to-cache traffic, memory bandwidth và NUMA evidence.
-
-**Gap còn lại:** roofline/benchmark methodology và power/thermal throttling có thể được làm sâu hơn trong performance/canonical Architecture chapter hiện có; chưa cần chapter mới.
-
----
-
-## 3. Operating Systems — coverage: mạnh
-
-Foundation đã bao phủ kernel/syscall, process/thread/scheduling, synchronization/deadlock, virtual memory, filesystem/I/O, isolation/container, IPC và device/async I/O.
-
-Advanced đã được làm sạch duplicate scheduler và memory-pressure chapters. Canonical scheduler hiện reasoning theo:
-
-```text
-runnable work
-→ per-CPU run queue
-→ fairness / priority / preemption
-→ migration / cache / NUMA locality
-→ wake-up latency
-→ production scheduler evidence
-```
-
-Memory-pressure chapter reasoning theo:
-
-```text
-working set
-→ page fault
-→ reclaim
-→ dirty/writeback
-→ storage pressure
-→ direct reclaim / cgroup / OOM
-```
-
-Invariant đã rõ: scheduler là allocator CPU time; VM subsystem phải giữ address/mapping/lifetime correctness trong khi tái sử dụng physical memory; dirty state không được mất khi backing protocol yêu cầu persistence.
-
-Production evidence đã nối application symptom với run queue, context switch, throttling, steal time, faults, reclaim, dirty pages, swap, cgroup events và storage correlation.
-
-**Gap còn lại:** RCU/kernel synchronization và eBPF/tracing internals vẫn mỏng. Nếu tiếp tục, nên hấp thụ vào concurrency/syscall/observability chapter hiện tại trước khi cân nhắc chapter mới.
-
----
-
-## 4. Programming Languages & Runtime / Concurrency — coverage: mạnh
-
-Foundation đã có semantics, values/references, scope/control flow, compiler/interpreter/JIT, paradigms, resource safety, type systems, parsing/AST và concurrency models.
-
-Advanced đi từ type/effect systems tới ADT/variance/inference, ownership, compiler IR/SSA, JIT/deoptimization, GC và coroutine/structured concurrency.
-
-Vòng audit đã hợp nhất duplicate ownership chapters. Canonical ownership hiện reasoning theo:
-
-```text
-resource state machine
-→ ownership authority
-→ borrow/lifetime relation
-→ linear/affine usage discipline
-→ typestate
-→ unsafe/FFI boundary
-```
-
-Foundation concurrency cũng đã được đào sâu để không còn là catalogue `threads / actors / async`. Mental model hiện tách rõ:
-
-```text
-ownership
-communication
-ordering
-lifetime
-progress
-```
-
-và phân biệt:
-
-```text
-data race
-≠ logical race
-
-atomicity
-≠ visibility
-≠ ordering
-
-concurrency
-≠ parallelism
-```
-
-Threads/locks, atomics, actors/mailboxes, CSP/channels, async/await, structured concurrency và ownership đều được giải thích như cách chuyển invariant/failure mode sang boundary khác.
-
-Performance connection đã rõ hơn: lock contention, retry/CAS pressure, cache coherence, event-loop stall, worker saturation và scheduler/NUMA interaction.
-
-Production evidence gồm race detector/sanitizer, stress test, invariant assertion, lock/park waits, thread dump, event-loop/on-CPU evidence, scheduler delay và hardware coherence evidence khi cần.
-
-**Gap còn lại:** FFI/ABI/object layout và memory reclamation trong lock-free structures có thể sâu hơn trong canonical ownership/compiler/runtime chapters; chưa cần root Concurrency library.
-
----
-
-## 5. Database Internals — coverage: mạnh
-
-Foundation đã có relational model, transaction/isolation, index/query execution, storage/WAL/recovery, SQL semantics, optimizer và distributed/analytical database overview.
-
-Advanced hiện bao phủ MVCC/WAL, lock manager/serializability, B+Tree internals, LSM, buffer pool, optimizer/cardinality, join/vectorized execution và distributed transactions.
-
-Vòng audit đã hợp nhất duplicate B-tree chapter và đào sâu canonical B+Tree theo page-oriented invariant:
-
-```text
-ordered search invariant
-→ page layout/fan-out
-→ buffer residency
-→ split/merge
-→ latch coupling
-→ WAL/structural write
-→ hot-key/contention evidence
-```
-
-Durability connection đã được mở rộng xuyên:
-
-```text
-application transaction
-→ MVCC/commit state
-→ WAL/LSN
-→ buffer/page cache
-→ filesystem/block layer
-→ device persistence
-→ replication/quorum
-```
-
-Production evidence hiện có execution plan, cardinality, buffer hit/miss, latch/lock waits, WAL/flush latency, dirty pages, replication positions và storage queueing.
-
-**Gap còn lại:** replication/read consistency, failover behavior và analytical columnar/compression internals còn có thể sâu hơn. Ưu tiên mở rộng distributed database/join/storage canonical chapters trước khi thêm file.
-
----
-
-## 6. Networks & Distributed Systems — coverage: mạnh
-
-Foundation bao phủ packet/layering, Ethernet/IP/routing, TCP/UDP/congestion, DNS/HTTP/TLS, distributed failure/time/consistency, replication/consensus, sockets/NAT/firewall/VPN, routing protocols và HTTP2/HTTP3/QUIC.
-
-Advanced distributed track có failure detector, lease/fencing, consensus, CRDT, multi-region replication và clocks/causality.
-
-Consensus chapter đã được đào sâu theo invariant:
-
-```text
-single authoritative history
-→ term/epoch
-→ quorum intersection
-→ log replication
-→ commit/apply
-→ membership reconfiguration
-→ snapshot
-→ linearizable read
-```
-
-Network production path không được tách thành root library mới. Cross-layer request path hiện đi xuyên:
-
-```text
-DNS
-→ TCP/TLS
-→ proxy/WAF/load balancer
-→ runtime
-→ connection pool
-→ DB/storage
-```
-
-và chứa feedback loop:
-
-```text
-slowdown
-→ timeout
-→ retry
-→ queue growth
-→ saturation
-→ service-time increase
-→ cascading failure
-```
-
-Production evidence đã nối DNS/connection/retransmission, proxy queue, attempts, trace context với leader epoch, quorum state, replica position và clock uncertainty.
-
-**Gap còn lại:** packet-level congestion/retransmission diagnosis, path MTU và QUIC internals có thể sâu hơn trong foundation/connection chapters. Không tạo Network hoặc Distributed Systems root library mới chỉ vì các phần này còn mỏng.
-
----
-
-## 7. Security & Reliability — coverage: mạnh
-
-Foundation đã có threat model, cryptography, identity/authentication/authorization, vulnerabilities, testing/debugging, reliability, web security, key/secret operations và supply chain.
-
-Advanced security có trust boundary, crypto misuse, PKI/mTLS, OAuth/OIDC, memory isolation, browser-origin isolation và KMS/HSM lifecycle.
-
-PKI chapter đã được đào sâu theo service-identity invariant, issuance/rotation/revocation, control-plane dependency, authorization separation và production certificate evidence.
-
-Cross-layer security connection hiện được hấp thụ vào debugging path:
-
-```text
-identity
-→ authorization
-→ secret/capability
-→ TLS/service identity
-→ service boundary
-→ KMS/resource access
-→ audit
-→ incident containment
-```
-
-Reliability foundation cũng đã được nâng từ “pattern list” thành reasoning theo:
-
-```text
-failure model
-→ user-visible invariant
-→ redundancy/failure domain
-→ timeout/retry/backpressure
-→ SLI/SLO
-→ error budget/burn rate
-→ containment/recovery
-→ fault injection evidence
-```
-
-Error budget và burn rate hiện đã có định lượng cơ bản; correlated failure và dependency graph được tách khỏi giả định failure độc lập; chaos/fault injection được đặt dưới hypothesis + blast-radius + abort condition + observable recovery expectation.
-
-Production evidence hiện chú trọng principal/certificate/token identity, policy version, key operation, service boundary, retry/timeout, SLI/SLO burn, saturation, failover state và containment timeline.
-
-**Gap còn lại:** incident forensics/detection engineering và abuse/adversarial load có thể sâu hơn. Nên mở rộng security boundary/reliability canonical chapters thay vì tạo SRE root library.
-
----
-
-## 8. Software Systems / Performance Engineering — coverage: mạnh
-
-Canonical advanced track bao gồm queueing/backpressure, capacity/admission control, cache consistency, load balancing/pools/locality, event streams, idempotency và schema/protocol evolution. Duplicate capacity và cache chapters đã được hợp nhất.
-
-Capacity chapter có invariant vận hành rõ:
-
-> accepted work phải nằm trong vùng mà system còn khả năng hoàn thành theo deadline/SLO đã công bố.
-
-Nó đã cover utilization knee, Little's Law, service-time distribution, concurrency limit, bounded queue, admission control, retry amplification, adaptive control, bulkhead, headroom và graceful degradation.
-
-Performance foundation đã được đào sâu thành reasoning xuyên tầng:
-
-```text
-arrival rate
-→ service centers/resources
-→ service time + waiting time
-→ utilization/queueing
-→ contention/locality
-→ bottleneck attribution
-→ production evidence
-```
-
-Các điểm đã được bổ sung gồm CPU utilization vs useful work, cache/TLB/NUMA locality, concurrency-vs-contention curve, tail latency/fan-out, batching trade-off, connection-pool queue placement, retry amplification, warm/cold state, coordinated omission và measurement workflow từ SLO xuống resource evidence.
-
-Performance optimization được đặt dưới correctness/reliability invariant: không coi việc bỏ fsync, giảm isolation, bỏ auth hoặc tăng stale window ngoài contract là “optimization”.
-
-Caching chapter đã được đào sâu theo stale-state/invalidation/hot-key/stampede reasoning thay vì chỉ TTL pattern.
-
-**Gap còn lại:** multi-tenant noisy-neighbor, resource fairness và whole-system profiling có thể sâu hơn bằng cách mở rộng capacity/load-balancing/debugging chapters hiện có.
-
----
-
-## 9. System Design — coverage: mạnh nhưng giữ trong Software Systems
-
-System Design không được tách thành root library riêng. Canonical entry point `system_decomposition_services_and_boundaries.md` đã được đào sâu để design bắt đầu bằng invariant/state ownership thay vì pattern catalogue.
-
-Reasoning hiện đi theo:
-
-```text
-business/system invariant
-→ state ownership
-→ consistency/freshness requirement
-→ sync/async communication
-→ queue/cache/partition/replication semantics
-→ security/failure boundary
-→ capacity/overload behavior
-→ observability evidence
-→ organizational ownership
-```
-
-Boundary được đánh giá bằng nhiều loại coupling: code, schema, temporal, release, semantic và operational. Shared database, event-driven architecture, saga/compensation, idempotency, queues, cache, sharding, replication, service discovery, gateway/mesh và failure domains đều được giải thích theo invariant/failure cost thay vì “best practice” tuyệt đối.
-
-System Design cũng đã nối security containment và graceful degradation: mTLS không thay authorization; nhiều replicas không tạo availability nếu failure domain/authority protocol sai; fallback không được phá correctness/security invariant.
-
-Production evidence cho boundary gồm latency/error/retry, queue/backlog, schema compatibility, authorization decision, resource saturation, deploy independence và failure propagation.
-
-**Gap còn lại:** cost modeling và capacity estimation cho multi-region/multi-tenant system có thể sâu hơn trong canonical performance/capacity chapters; chưa cần chapter System Design mới.
-
----
-
-## 10. Software Engineering — coverage: mạnh
-
-Foundation có requirements/specification, architecture reasoning, testing strategy, delivery/operations và maintenance/evolution.
-
-Advanced track giữ canonical chapters cho architecture decisions, modularity/service boundary, API/schema compatibility, large-scale migration, test architecture và deployment safety.
-
-Architecture-decision chapter đã được đào sâu theo quality attribute, reversibility, option value, socio-technical constraint và evidence-based review.
-
-Deployment chapter reasoning theo:
-
-```text
-old version
-→ mixed fleet
-→ partial exposure
-→ data/protocol transition
-→ guardrail evidence
-→ rollout / rollback / roll-forward
-```
-
-và nhấn mạnh rollback không phải time machine khi có irreversible side effect hoặc destructive data migration.
-
-Boundary giữa Software Systems và Software Engineering được giữ rõ: Software Systems giải runtime behavior; Software Engineering giải cách thay đổi system đó an toàn theo thời gian.
-
-**Gap còn lại:** incident learning, technical-debt economics và engineering-metric measurement traps có thể sâu hơn trong architecture/evolution chapters; chưa cần chapter mới.
-
----
-
-## 11. AI Foundations — coverage: tốt và đúng boundary
-
-Foundation đã có search/agents, knowledge/probabilistic inference, ML foundations, neural networks/representation learning và evaluation/data/responsibility.
-
-Advanced hiện có model lifecycle, transformer/KV-cache inference cost và distributed training.
-
-Model-lifecycle chapter đã được đào sâu theo systems reasoning:
-
-```text
-data/version
-→ input pipeline
-→ optimization/checkpoint state
-→ model artifact
-→ serving runtime
-→ batching/KV cache/accelerator memory
-→ online evaluation/feedback
-```
-
-Performance đã phân biệt compute-bound, memory-bound, communication-bound, queue/batching latency và accelerator-memory pressure.
-
-Production evidence bao gồm artifact lineage, utilization, checkpoint state, communication stalls, serving queue, model version/cohort, drift/data-quality và offline-online gap.
-
-AI specialization như retrieval, NLP, CV, robotics hoặc MLOps platform không nên bị nhồi vào Computer Science foundation chỉ vì công nghệ đang phổ biến. Cross-link tới dedicated AI library tốt hơn duplicate.
-
-**Gap còn lại:** evaluation under distribution shift và serving reliability có thể được làm sâu hơn trong AI canonical chapters nếu cần.
-
----
-
-## 12. Cross-layer Connections — coverage: mạnh
-
-Bốn canonical advanced connection paths hiện bao phủ các causal chains trọng tâm.
-
-### Correctness
-
-```text
-CPU cache/coherence
-→ ISA memory ordering
-→ compiler/runtime mapping
-→ language memory model
-→ happens-before
-→ concurrency bug
-```
-
-### Durability
-
-```text
-application transaction
-→ MVCC/commit state
-→ WAL/LSN
-→ filesystem/block/device
-→ replication/quorum
-→ recovery
-```
-
-### Request / overload
-
-```text
-DNS
-→ TCP/TLS
-→ proxy/LB
-→ runtime/pool
-→ database/storage
-→ timeout/retry
-→ queue/backpressure/load shedding
-```
-
-### Security / containment
-
-```text
-identity
-→ authorization
-→ secret/capability
-→ TLS/service boundary
-→ downstream authority
-→ audit
-→ containment
-```
-
-Các connection không cần tách thành chapter mới cho mỗi arrow. Nếu causal loop mới có thể được giải thích trong path hiện tại, ưu tiên rewrite sâu hơn.
-
-Một nguyên tắc đã được củng cố trong vòng này là: **lower layer giải thích mechanism; fix phải đặt tại abstraction layer sở hữu invariant**, trừ khi contract của lower layer thực sự bị vi phạm.
-
----
-
-## 13. Các foundation domain khác
-
-Computation & Information, Algorithms & Data Structures, HCI & Graphics, Society/Ethics/Profession vẫn có foundational coverage rộng và không phải trọng tâm của vòng depth audit này.
-
-Không vì thế coi chúng hoàn tất vĩnh viễn. Chúng tiếp tục tuân quality rule:
-
-```text
-problem
-→ invariant/mechanism
-→ assumptions
-→ failure/edge case
-→ evidence/connection khi phù hợp
-```
-
-Mathematical/statistical foundations tiếp tục cross-reference sang `mathematics/` thay vì duplicate.
-
----
-
-## 14. Duplicate cleanup trong vòng audit này
-
-Các advanced chapters trùng conceptual boundary đã được hợp nhất và bản dư được loại bỏ:
-
-```text
-Computer Architecture
-- duplicate OoO / register-renaming / ROB
-
-Operating Systems
-- duplicate scheduler
-- duplicate memory-pressure/reclaim
-
-Programming Languages
-- duplicate ownership / linear-affine
-
-Database
-- duplicate B-tree/B+Tree page-layout
-
-Software Systems
-- duplicate capacity/admission-control
-- duplicate caching consistency/invalidation
-```
-
-Nguyên tắc canonical là: **một mental model chính có một chapter chính**. Variant wording hoặc tên file khác nhẹ không phải lý do tồn tại chapter thứ hai.
-
----
-
-## 15. Những thứ cố ý không tách thành root library mới
-
-Không tách Network, Distributed Systems, Security, Reliability, Performance Engineering, Concurrency hoặc System Design thành root library mới chỉ để taxonomy chi tiết hơn.
-
-Các boundary hiện tại đã đủ:
+Các boundaries lớn hiện tại vẫn đúng:
 
 ```text
 Computer Architecture
 Operating Systems
 Programming Languages & Runtime
-Database
+Data & Databases
 Networks & Distributed Systems
 Security & Reliability
-Software Systems
+Software Systems / Performance / System Design
 Software Engineering
 AI Foundations
-90_connections
+Cross-layer Connections
 ```
 
-Specialization chỉ nên tách khi có dependency graph và body of knowledge đủ độc lập để việc đặt trong canonical domain hiện tại làm mất conceptual clarity.
+Không tách Network, Distributed Systems, Security, Reliability, Performance Engineering, Concurrency hay System Design thành root library mới. Specialized AI vẫn nằm trong `02_artificial_intelligence/`; `10_ai_foundations/` giữ vai trò CS systems/foundational bridge.
 
----
+## 2. Computer Architecture — mạnh, đã tăng depth về memory-order reasoning
 
-## 16. Priority gaps sau vòng audit
+Coverage hiện có gồm OoO/ROB/register renaming, branch prediction/speculation, advanced caches/prefetch/replacement, NUMA/interconnect/coherence, TLB/page walk/huge page/virtualization, SIMD/GPU execution và memory consistency.
 
-Các gap có giá trị nhất cho vòng tiếp theo, theo thứ tự conceptual chứ không phải “technology mới”, là:
+Vòng này `advanced/00_memory_consistency_cache_coherence_and_ordering.md` được đào sâu theo đúng cross-layer requirement:
 
 ```text
-1. OS: RCU/kernel synchronization + tracing evidence
-2. Database: replication/failover/read-consistency + columnar internals
-3. Network: packet-level retransmission/congestion/path diagnosis
-4. Security: forensics/detection + adversarial load/abuse resistance
-5. Software Systems: noisy-neighbor/resource fairness + whole-system profiling
-6. Software Engineering: incident learning + technical-debt economics
-7. AI: evaluation under shift + serving reliability
+cache coherence
+→ store buffer/invalidate visibility
+→ ISA memory ordering
+→ compiler mapping
+→ language happens-before
+→ publication/RMW/lock-free bug
 ```
 
-Mỗi gap trước hết phải thử mở rộng canonical chapter hiện tại. Chỉ tạo chapter nếu topic có invariant/mechanism riêng đủ lớn và việc nhét vào file cũ thực sự làm mất conceptual boundary.
+Đã bổ sung litmus-test reasoning, message passing, compiler-vs-ISA distinction, RMW serialization/coherence pressure, ABA + memory reclamation boundary, architecture-sensitive failures và evidence từ runtime → OS → PMU.
 
----
+**Coverage status:** strong cho concurrency/memory hierarchy reasoning.
 
-## 17. Maintenance rules sau audit
+**Gap còn lại nên absorb vào chapter hiện có nếu mở rộng:** roofline/operational-intensity benchmark methodology sâu hơn; power/thermal/DVFS throttling; hardware prefetch pathologies và memory-bandwidth saturation case studies. Không cần chapter mới nếu không có mental model mới.
 
-Khi tiếp tục đào sâu `computer_science/`:
+## 3. Operating Systems — mạnh hơn rõ ở crash consistency và async I/O
 
-1. Đọc foundation và canonical advanced chapter trước khi tạo file.
-2. Nếu gap cùng invariant/failure model với chapter hiện có, rewrite chapter đó.
-3. Mỗi phần advanced phải tạo thêm mental model hoặc reasoning, không chỉ thêm terminology.
-4. Production claim nên đi kèm evidence model: metric, trace, wait, log, counter hoặc state cần quan sát.
-5. Cross-layer explanation phải chỉ ra abstraction nào thật sự sở hữu invariant và lower layer nào chỉ giải thích mechanism.
-6. Không dùng chapter count làm proxy cho completeness.
-7. Coverage audit phải ghi cả **gap còn lại**, không chỉ liệt kê những gì đã có.
-8. Không thêm chapter chỉ vì một công nghệ đang nổi hoặc vì roadmap còn một mục chưa có file.
+OS advanced đã cover syscall/kernel contexts, scheduler/run queues, page faults/reclaim, VM/TLB shootdown, filesystem, async I/O/DMA và isolation/container boundaries.
 
-Mục tiêu lâu dài của canonical library là trả lời được câu hỏi:
+Hai chapter mỏng trước đây đã được rewrite:
 
-> **Computation và software systems duy trì correctness, performance, consistency, security và reliability như thế nào khi đi từ hardware → OS → runtime → application → network → storage → distributed system, và evidence nào cho phép ta chứng minh nguyên nhân khi abstraction bắt đầu leak?**
+### Filesystem crash consistency
+
+Giờ có explicit crash-state model, separation atomicity/visibility/durability, pointer-before-object ordering invariant, journal commit protocol, metadata-vs-data journaling, barriers/flush/FUA, torn writes, COW root publication, file-vs-directory durability, writeback error propagation, dirty-page pressure, background amplification, failure injection và production evidence.
+
+### epoll/io_uring/zero-copy/DMA
+
+Giờ phân biệt readiness vs completion; cover partial I/O, level/edge trigger protocol, fd reuse/stale-event race, submission/completion ownership, cancellation/late completion, registered/pinned buffer lifetime, queue-depth trade-off, DMA/IOMMU, zero-copy lifetime, event-loop starvation, backpressure và evidence xuyên runtime/OS/device.
+
+**Coverage status:** strong cho user/kernel execution + memory + I/O + persistence path.
+
+**Gap còn lại:** kernel synchronization patterns như RCU/seqlock và tracing/eBPF internals có thể được absorb vào scheduler/kernel/evidence chapters nếu thực sự cần production diagnosis; không nên tạo technology-centric chapter chỉ vì eBPF phổ biến.
+
+## 4. Programming Languages & Runtime — strong, JIT internals đã đạt production reasoning
+
+Existing coverage đã có type/effect/runtime contract, ownership/borrowing/linear types, compiler IR/SSA, GC barriers, coroutines/continuations/structured concurrency và concurrency memory safety.
+
+`advanced/05_jit_profiling_speculative_optimization_and_deoptimization.md` được rewrite từ mô tả tier/profile thành full runtime state machine:
+
+```text
+profile
+→ speculative assumption
+→ guard
+→ optimized representation
+→ invalidation
+→ deoptimization/materialization
+→ reprofile/recompile
+```
+
+Đã cover inline-cache polymorphism, code-size/I-cache trade-off, deopt state reconstruction, safepoint metadata, OSR, escape analysis, optimization cliffs, deopt storms, code cache, warm-up/phase change, benchmark traps và production evidence.
+
+**Coverage status:** strong cho compiler/runtime/JIT/GC/async mental models.
+
+**Gap còn lại:** FFI/ABI/object-layout and native boundary; lock-free memory reclamation có thể cross-link sâu thêm giữa ownership chapter và Architecture memory-ordering chapter thay vì chapter mới.
+
+## 5. Concurrency — strong và có proof path xuyên layers
+
+Concurrency hiện không bị cô lập thành một root library, đúng boundary. Nó được phân bố theo ownership của invariant:
+
+```text
+Architecture   → cache/coherence/ordering cost
+OS             → threads/scheduler/atomics/waiting
+Language       → memory model/happens-before/ownership
+Runtime        → coroutine/task scheduling/cancellation
+Software Sys   → queues/backpressure/fairness
+Distributed    → causality/consensus/partial failure
+```
+
+`90_connections/advanced/02_correctness_path_language_os_cpu_memory_ordering.md` đã đủ mạnh và được giữ nguyên để tránh rewrite không cần thiết. Architecture chapter mới làm sâu lower-layer mechanisms mà connection này dựa vào.
+
+**Coverage status:** strong.
+
+**Gap còn lại:** additional case study về reclamation/hazard-pointer/epoch có thể đi vào existing ownership or memory-ordering chapter nếu cần, không cần root concurrency library.
+
+## 6. Database internals — strong hơn ở transaction-history lifecycle và buffer management
+
+Existing advanced coverage có lock/predicate/serializable, B+Tree internals, LSM, optimizer/cardinality, execution/vectorization và distributed transactions.
+
+### MVCC/WAL/recovery
+
+`advanced/00_mvcc_visibility_wal_and_recovery_internals.md` giờ tổ chức theo ba frontiers:
+
+```text
+visibility
+→ durability
+→ reclamation
+```
+
+Đã làm rõ transaction authority, snapshot vs serializability, WAL/commit acknowledgement, steal/no-steal + force/no-force, LSN/page state, conceptual recovery state machine, crash scenarios, group commit, torn pages, checkpoint debt, vacuum horizon, replica receive/persist/apply frontier, feedback loops và evidence.
+
+### Buffer pool
+
+`advanced/04_buffer_pool_replacement_and_dirty_page_management.md` giờ cover page table/frame lifecycle, pin-vs-latch-vs-lock, dirty write debt, WAL frontier, foreground/background flush, scan-resistant admission, plan/cache feedback, double buffering, NUMA, memory pressure, multi-tenant noisy neighbor và phase changes từ hit-dominated tới flush/storage saturation.
+
+**Coverage status:** strong cho OLTP storage-engine internals.
+
+**Gap còn lại:** LSM compaction/Bloom/write-amplification chapter vẫn tương đối ngắn; analytical columnar compression/vectorized storage path có thể được tăng trong existing execution/storage chapters. Không cần thêm DB library.
+
+## 7. Networks — strong ở end-to-end request path, còn packet-level diagnosis là gap hợp lệ
+
+Foundation hiện có Ethernet/IP/routing, TCP/UDP/congestion, DNS/HTTP/TLS, sockets/IPv6/NAT/firewall/VPN, BGP và HTTP/2–HTTP/3/QUIC.
+
+`90_connections/advanced/01_end_to_end_latency_browser_edge_service_db_storage.md` đã có full path:
+
+```text
+DNS
+→ TCP/QUIC connection
+→ TLS identity
+→ proxy/WAF/load balancer
+→ runtime/event loop/thread pool
+→ pool/queue
+→ DB/storage
+```
+
+Nó cũng đã cover deadline propagation, retry amplification, fan-out tail, backoff/jitter, load shedding, utilization knee và evidence waterfall. Vì vậy vòng này không rewrite chỉ để lặp lại nội dung.
+
+**Coverage status:** strong ở systems/network boundary reasoning.
+
+**Gap còn lại:** packet-level congestion/retransmission diagnosis, path-MTU/black-hole behavior và QUIC transport internals vẫn là areas có thể đào sâu. Ưu tiên absorb vào existing transport/modern-HTTP chapters thay vì tạo `Networks` library mới.
+
+## 8. Distributed Systems — strong hơn ở replication authority và multi-region failover
+
+Existing advanced coverage có failure detectors/membership/gossip, lease/fencing/split-brain, consensus log replication/reconfiguration/snapshots, CRDT/causal consistency, time/clocks/causality và distributed transaction semantics.
+
+`advanced/05_multi_region_replication_and_geo_distributed_tradeoffs.md` được rewrite theo authority + history frontiers:
+
+```text
+leader authority/epoch
+→ local durable frontier
+→ replica received/persisted/applied frontier
+→ read freshness contract
+→ failover promotion/fencing
+```
+
+Đã thêm read-your-writes/session consistency, lag as history distance, safe promotion/failback, multi-leader conflict invariants, geo-partitioning, hotspot/skew, failure-domain correlation, active-active caveats, regional retry cascade, global coordination cost, data residency/identity dependency, evidence và partial-failure testing.
+
+**Coverage status:** strong cho consensus/replication/geo-distribution reasoning.
+
+**Gap còn lại:** more concrete reconfiguration/joint-consensus case study và queueing under network partitions nếu muốn tăng depth; không cần chapter công nghệ mới.
+
+## 9. Security & Reliability — authority graph và adversarial-load reasoning đã mạnh hơn
+
+Existing Security advanced có cryptographic protocol composition, PKI/mTLS, OAuth/OIDC token lifecycle, memory safety/sandbox, browser isolation và Secrets/KMS/HSM.
+
+`advanced/00_security_boundaries_attack_chains_and_exploitability.md` giờ đi theo authority graph:
+
+```text
+identity
+→ authorization
+→ credential/secret capability
+→ TLS/mTLS channel
+→ service/resource boundary
+→ delegated/downstream authority
+→ detection
+→ incident containment
+```
+
+Đã bổ sung confused-deputy/delegation, rotation as distributed transition, reliability failure of security control, abuse/cost amplification, multi-tenant fairness, parser differential, containment ordering, time dependency, retry classification, evidence và boundary-failure tests.
+
+Reliability vẫn giữ đúng conceptual boundary: retry/timeout/backpressure/overload nằm ở Software Systems, identity/control-plane failure nằm ở Security, incident diagnosis nằm ở cross-layer connections.
+
+**Coverage status:** strong.
+
+**Gap còn lại:** detection engineering/forensic pipeline có thể tăng thêm trong existing security-boundary/evidence material; chaos/fault-injection methodology có thể deepen existing reliability/testing files.
+
+## 10. Software Systems & Performance Engineering — strong hơn ở feedback loops và fairness
+
+Existing advanced coverage có capacity/utilization knee/admission control, cache invalidation/stampede/hot keys, load balancing/connection pools/locality, streams/watermarks/replay, idempotency/dedup và schema/protocol evolution.
+
+`advanced/00_queueing_tail_latency_and_backpressure.md` được rewrite thành full overload model:
+
+```text
+arrival variability
+→ queue debt
+→ tail latency
+→ timeout
+→ retry/hedge amplification
+→ resource contention
+→ service rate decreases
+→ overload collapse
+```
+
+Đã cover Little's Law boundary, queue-vs-service time, deadline propagation, bounded queues, backpressure reachability, pool as concurrency limiter, admission/load shedding, priority enforcement, multi-tenant fairness, rate-vs-concurrency limiting, circuit breaker behavior, queue placement, recovery storms và evidence by work flow.
+
+**Coverage status:** strong cho performance/reliability interaction.
+
+**Gap còn lại:** whole-system profiling methodology (on-CPU + off-CPU + queues + PMU + I/O) và cost/performance modeling across heterogeneous hardware có thể tăng trong existing evidence/capacity chapters.
+
+## 11. System Design — giữ đúng boundary trong Software Systems, đã tăng chiều sâu
+
+Không tạo System Design root library. Canonical entry point `08_software_systems/07_system_decomposition_services_and_boundaries.md` đã được rewrite.
+
+Chapter giờ bắt đầu từ invariant/state ownership và coi mỗi boundary là:
+
+```text
+contract boundary
++ ownership boundary
++ failure boundary
++ capacity boundary
++ security authority boundary
+```
+
+Đã thêm remote-outcome ambiguity, sync-vs-async costs, saga as durable state machine, API behavioral contract, capacity/admission, multi-tenant isolation, principal delegation, gateway/mesh retry layers, data/network locality, multi-region coordination classification, cost modeling/fan-out amplification, failure-domain graph, deployment/data compatibility và production boundary evidence.
+
+**Coverage status:** strong như systems-design reasoning, không phải checklist technology.
+
+**Gap còn lại:** end-to-end numerical capacity/cost case studies cho multi-region/multi-tenant có thể absorb vào capacity/System Design chapter; không cần tạo “System Design library”.
+
+## 12. Software Engineering — migration state-machine depth đã tăng
+
+Existing advanced coverage có architecture decisions/evolution/socio-technical constraints, modular-monolith vs services economics, API/schema compatibility, test architecture và deployment safety.
+
+`advanced/03_large_scale_refactoring_strangler_and_branch_by_abstraction.md` giờ coi migration là:
+
+```text
+code state
++ data state
++ protocol versions
++ traffic routing
++ ownership
+```
+
+Đã cover phase invariants, source-of-truth authority, expand-contract, naive dual-write atomicity gap, dual-read hidden divergence, backfill concurrency, shadow safety, semantic comparison, cutover gates, rollback-vs-roll-forward, irreversible steps, capacity ramp, observability dimensions, transition fault tests, ownership handoff và deletion criteria cho temporary compatibility.
+
+**Coverage status:** strong cho evolutionary change under production constraints.
+
+**Gap còn lại:** technical-debt economics, incident-learning loops và engineering-metric Goodhart traps có thể deepen existing architecture/maintenance/testing chapters.
+
+## 13. AI Foundations — giữ boundary hẹp, systems depth đã tăng đáng kể
+
+Không kéo RAG, agent frameworks, product-specific LLMOps hay model catalog vào `10_ai_foundations/`. Specialized AI vẫn ở `02_artificial_intelligence/`.
+
+### Transformer inference
+
+`advanced/01_transformer_attention_kv_cache_and_inference_cost.md` giờ cover request/model/KV ownership, prefill-vs-decode, KV lifecycle/paged allocation, bandwidth-bound decode, batching/admission, head-of-line/fairness, context capacity, quantization, tensor parallel communication, prefix-cache semantic identity, model-version rollout, memory-pressure phases, retry amplification và evidence.
+
+### Distributed training
+
+`advanced/02_distributed_training_data_model_and_pipeline_parallelism.md` giờ cover logical step invariant, global-batch semantics, topology-aware collectives, compute/communication overlap, stragglers, tensor/pipeline/sharded-state trade-offs, input pipeline, data-sampling correctness, collective failure, consistent distributed checkpoints, RPO/RTO, restart storms, numerical reduction ordering và rank-level evidence.
+
+**Coverage status:** strong ở systems foundations cho training/inference; specialization vẫn đúng chỗ ở AI library riêng.
+
+**Gap còn lại:** accelerator compiler/kernel scheduling, inference disaggregation and heterogeneous-memory case studies chỉ nên thêm nếu chúng tạo durable mental model; không thêm chapter vì một serving framework đang thịnh hành.
+
+## 14. Cross-layer Connections — hiện là một trong các phần mạnh nhất
+
+`90_connections/advanced/` hiện có bốn canonical reasoning paths và **không cần tăng chapter count**:
+
+```text
+00 Debugging across abstraction layers
+   symptom → invariant → evidence → lower layer → fix/containment
+
+01 End-to-end request
+   DNS/TCP/TLS → proxy/LB → runtime → pools/DB/storage
+   + retry → timeout → queue → overload → backpressure/cascading failure
+
+02 Correctness path
+   CPU cache/coherence → memory ordering → language memory model
+   → happens-before → concurrency bug
+
+03 Durability path
+   application commit → MVCC/WAL → buffer/filesystem → storage
+   → replication/authority
+```
+
+Security connection trong `00` đã có identity → authorization → secret/KMS → TLS/mTLS → service boundary → revocation/incident containment. Vì nội dung đã mạnh, vòng này cố ý giữ nguyên thay vì rewrite để tạo diff không có giá trị.
+
+**Coverage status:** strong.
+
+## 15. Production Evidence — coverage đã chuyển từ “có observability” sang “evidence theo invariant”
+
+Sau vòng này, các domain quan trọng đều có evidence chain rõ hơn:
+
+```text
+Concurrency:
+race/contention evidence → scheduler/off-CPU → cache/NUMA/PMU
+
+Durability:
+transaction/WAL frontier → dirty/checkpoint → filesystem/writeback → device/replica
+
+Request latency:
+trace → queue wait → runtime/pool → network/storage saturation
+
+Security:
+principal → policy decision → key/credential → service boundary → containment timeline
+
+AI:
+request/token distribution → scheduler/KV/collective → accelerator/interconnect evidence
+```
+
+Rule tiếp tục là: **evidence không thay proof/invariant; evidence dùng để xác định mechanism nào đang active trong execution thật.**
+
+## 16. Những gap có giá trị cao nhất cho vòng tiếp theo
+
+Không cần tăng breadth bằng chapter mới. Nếu tiếp tục, ưu tiên rewrite sâu các canonical file còn mỏng theo thứ tự conceptual value:
+
+1. LSM compaction/Bloom/write amplification và interaction với cache/checkpoint/storage pressure.
+2. Packet-level TCP/QUIC congestion, retransmission và Path-MTU failure diagnosis trong existing network chapters.
+3. Whole-system performance profiling: on-CPU/off-CPU/queue/PMU/I/O correlation trong existing capacity/evidence chapters.
+4. FFI/ABI/object layout/native-runtime boundary trong Programming Languages.
+5. Detection/forensic evidence pipeline và chaos/fault-injection methodology trong existing Security/Reliability chapters.
+6. Multi-tenant cost/capacity case studies trong Software Systems/System Design.
+7. Technical-debt economics + incident learning + engineering metrics traps trong Software Engineering.
+8. AI accelerator/kernel/memory case studies only where they generalize beyond one framework/vendor.
+
+Các mục này là **depth backlog**, không phải lý do tạo root library mới.
+
+## 17. Quality gate cho mọi advanced rewrite tiếp theo
+
+Một advanced concept chỉ coi là hoàn thiện khi người đọc có thể trả lời:
+
+```text
+Vấn đề ban đầu là gì?
+Invariant nào phải giữ?
+Mechanism nội bộ giữ invariant bằng cách nào?
+Assumption nào đang được dựa vào?
+Failure xảy ra ở transition/boundary nào?
+Performance pressure làm behavior đổi phase ra sao?
+Evidence nào phân biệt các mechanisms cạnh tranh?
+Lower abstraction layer nào thật sự quyết định behavior?
+Fix nên đặt ở tầng nào sở hữu invariant?
+```
+
+Nếu chapter chỉ thêm API, framework, protocol name hoặc trend mà không thêm mental model/reasoning, không nên tạo file mới.
+
+## 18. Kết luận audit
+
+Canonical `computer_science/` hiện có foundation rộng và một advanced systems spine khá đồng nhất. Sau vòng này, các phần từng mỏng nhất ở crash consistency, async I/O, JIT, MVCC/WAL, buffer pool, multi-region replication, security boundaries, queueing/backpressure, System Design, large-scale migration và AI systems đã được nâng theo cùng một reasoning grammar.
+
+Điểm quan trọng nhất là library giờ ngày càng ít phụ thuộc vào “technology catalog” và nhiều hơn vào các invariants lặp lại xuyên layers:
+
+```text
+ownership
+ordering
+visibility
+authority
+lifetime
+capacity
+backpressure
+durability
+consistency
+failure containment
+```
+
+Đây là đúng boundary cần giữ cho những vòng update tiếp theo.

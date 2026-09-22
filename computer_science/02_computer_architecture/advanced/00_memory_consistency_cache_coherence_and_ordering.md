@@ -1,40 +1,40 @@
 # Memory consistency, cache coherence và ordering
 
-Trong single-thread code, ta dễ tưởng tượng mỗi read/write xảy ra đúng thứ tự source. Trên multicore hiện đại, compiler, CPU pipeline, store buffer, invalidate queue và cache hierarchy đều được phép trì hoãn hoặc sắp xếp lại một số memory operations để che latency. Vì vậy concurrency correctness không thể reasoning chỉ bằng “dòng nào viết trước”.
+Trong single-thread code, ta thường hình dung read/write xảy ra theo đúng thứ tự source. Trên multicore hiện đại, compiler, CPU pipeline, store buffer, invalidate queue, cache hierarchy và interconnect đều được phép trì hoãn hoặc sắp xếp lại một số memory operations để che latency. Vì vậy concurrency correctness không thể reasoning bằng trực giác “dòng nào viết trước”.
 
-Chương này tập trung vào invariant giữa phần cứng và software: **coherence giữ một location có lịch sử hợp lệ; memory-consistency model định nghĩa cross-location observations nào được phép; fence/atomic operations tạo ordering edges để tầng ngôn ngữ xây happens-before.**
+Chương này giữ một invariant xuyên nhiều tầng: **cache coherence giữ lịch sử hợp lệ của từng location; ISA memory-consistency model giới hạn những quan sát cross-location phần cứng được phép tạo ra; language memory model định nghĩa contract mà source code có quyền dựa vào; synchronization primitives tạo ordering edges đủ để chứng minh invariant của chương trình.**
 
 ## 1. Bài toán ban đầu: performance cần tự do, software cần một hợp đồng
 
-Nếu mỗi store phải chờ mọi core khác quan sát được giá trị mới trước khi core hiện tại chạy tiếp, multicore sẽ lãng phí rất nhiều cycle. Hardware vì thế dùng store buffer, speculative execution và nhiều outstanding memory requests để tiếp tục làm việc trong khi coherence traffic còn đang chạy.
+Nếu mỗi store phải chờ mọi core khác quan sát được giá trị mới trước khi core hiện tại chạy tiếp, CPU sẽ lãng phí rất nhiều cycle. Hardware vì thế dùng store buffer, speculative execution, out-of-order execution và nhiều outstanding memory requests để tiếp tục làm việc khi coherence traffic hoặc DRAM access còn đang chờ.
 
-Nhưng software vẫn cần những invariant như:
+Software lại cần các property như:
 
 ```text
-nếu lock được release rồi thread khác acquire lock đó,
-state trong critical section trước phải được quan sát theo contract
+release lock xong
+→ thread acquire cùng lock phải thấy state được bảo vệ
 
-nếu flag publication được release-store,
-reader acquire-load flag đó phải có ordering đủ để dùng payload đã publish
+publish payload xong bằng release
+→ reader acquire publication flag phải được phép dùng payload
 ```
 
-Thiết kế memory model là thỏa hiệp: cho hardware/compiler đủ freedom để tối ưu nhưng định nghĩa các primitive đủ mạnh để software chứng minh correctness.
+Thiết kế memory model là một thỏa hiệp: cho compiler/hardware đủ freedom để tối ưu nhưng vẫn cung cấp primitive đủ mạnh để software chứng minh correctness.
 
-## 2. Coherence và consistency là hai câu hỏi khác nhau
+## 2. Coherence và consistency trả lời hai câu hỏi khác nhau
 
-**Nhất quán cache (cache coherence / 캐시 일관성)** chủ yếu hỏi: với **một memory location**, các cores có thể quan sát writes theo một lịch sử tương thích hay không? Protocol như MESI/MOESI quản lý ownership/state của cache lines để nhiều cache không tự do ghi các phiên bản mâu thuẫn.
+**Nhất quán cache (cache coherence / 캐시 일관성)** chủ yếu hỏi: với **một memory location**, các cores có quan sát writes theo một lịch sử tương thích hay không? Protocol kiểu MESI/MOESI quản lý ownership/state của cache lines để nhiều cache không tự do ghi các phiên bản mâu thuẫn.
 
-**Mô hình nhất quán bộ nhớ (memory consistency model / 메모리 일관성 모델)** hỏi rộng hơn: với nhiều locations và nhiều processors, những order nào của reads/writes được phép quan sát?
+**Mô hình nhất quán bộ nhớ (memory consistency model / 메모리 일관성 모델)** hỏi rộng hơn: với nhiều locations và nhiều processors, những ordering nào của reads/writes được phép quan sát?
 
 Sequential consistency là model trực quan: kết quả như thể mọi memory operations của mọi threads được xen kẽ trong một global order trong khi mỗi thread giữ program order. Hardware thực tế thường cho phép model yếu hơn để đạt performance tốt hơn.
 
-Điểm phải giữ là: **coherence không tự tạo cross-location ordering**. Hai locations `payload` và `ready` có thể từng location đều coherent nhưng reader vẫn không được suy luận `ready == true` kéo theo payload đã visible nếu thiếu synchronization contract.
+Điểm phải giữ: **coherence của từng location không tự tạo cross-location ordering**. `payload` và `ready` có thể đều coherent nhưng reader không được suy luận `ready == true` kéo theo payload đã visible nếu protocol thiếu synchronization contract.
 
-## 3. Store buffer: vì sao write chưa chắc thấy ngay
+## 3. Store buffer giải thích vì sao store chưa chắc visible ngay
 
 Khi core thực hiện store, nó có thể đặt write vào store buffer rồi tiếp tục thay vì chờ ownership/cache propagation hoàn tất. Core đó thường forward được value từ buffer cho chính nó, nhưng core khác chưa chắc thấy write ngay.
 
-Xét hai threads:
+Xét litmus test Store Buffering:
 
 ```text
 Initially x = 0, y = 0
@@ -44,120 +44,190 @@ x = 1           y = 1
 r1 = y           r2 = x
 ```
 
-Trong intuition sequential đơn giản, ta dễ tin `r1 = 0` và `r2 = 0` không thể cùng xảy ra. Với memory model cho phép store→load reordering/visibility delay, outcome đó có thể hợp lệ nếu không có synchronization phù hợp.
+Trực giác sequential dễ cho rằng `r1 = 0 && r2 = 0` “không thể”. Nhưng trên model cho phép store→load reordering hoặc delayed visibility, outcome này có thể hợp lệ khi không có synchronization phù hợp.
 
-Đây không phải cache “bị sai”. Hardware đang thực hiện đúng một model yếu hơn intuition source-order.
+Litmus test không phải mẹo phỏng vấn. Nó là cách cô lập contract: đưa một execution rất nhỏ, liệt kê outcome nào model cho phép, rồi so sánh language → compiler → ISA. Nếu một outcome bị cấm ở language level thì compiler/runtime phải phát machine code đủ mạnh để cấm nó trên target ISA.
 
-## 4. Invalidate queue và visibility không phải một sự kiện toàn cục tức thì
+## 4. Message-passing test: publication cần một ordering edge
 
-Coherence request cũng phải đi qua interconnect và queues. Một core có thể nhận invalidation, acknowledge theo protocol và xử lý local consequences ở thời điểm khác tùy microarchitecture, miễn behavior cuối vẫn nằm trong ISA memory model.
-
-Vì vậy câu “write đã tới L1 nên core khác phải thấy ngay” không phải reasoning hợp lệ. Software không có contract trực tiếp với internal timing của coherence messages; software có contract với ISA ordering primitives và language memory model.
-
-## 5. Fence/barrier làm gì?
-
-Memory fence không phải “flush toàn bộ cache”. Nó áp ordering constraints lên classes memory operations theo semantics của ISA.
-
-Acquire thường được dùng để ngăn operations sau acquire bị quan sát như đã đi trước synchronization point theo contract cần thiết. Release giữ effects trước release không bị đẩy qua publication point theo cách phá protocol. Full fence mạnh hơn và thường hạn chế optimization nhiều hơn.
-
-Một fence đúng phải được reasoning theo câu hỏi:
+Xét:
 
 ```text
-operation A phải đứng trước operation B trong quan sát nào?
-reader/writer nào cần edge đó?
-ISA primitive nào thực hiện guarantee tối thiểu cần thiết?
+Writer:                 Reader:
+payload = 42            if (ready) {
+ready = true                use(payload)
+                        }
 ```
 
-Dùng fence “cho chắc” có thể che design yếu và trả performance cost không cần thiết.
+Invariant mong muốn là: **nếu reader quan sát publication event `ready`, nó phải quan sát initialization của `payload` tương ứng**.
 
-## 6. Language atomics không map một-một xuống instruction
+Plain stores/loads không nhất thiết tạo invariant này. Một protocol đúng thường biểu diễn publication bằng release-store và observation bằng acquire-load, hoặc dùng lock/monitor/primitive có semantics tương đương ở language level.
 
-Java `volatile`, C/C++/Rust atomics và lock primitives định nghĩa semantics ở **mô hình bộ nhớ ngôn ngữ (language memory model)**. Compiler/runtime ánh xạ contract đó xuống instruction/fence phù hợp với target ISA.
+Điểm quan trọng là không hỏi “CPU có reorder hai instruction này không?” trước. Hãy hỏi **source-level protocol có happens-before edge không?** Nếu không, việc code “chạy đúng trên máy tôi” không tạo guarantee.
 
-Cùng một acquire-load ở source có thể compile khác trên x86 và ARM vì baseline ordering của hai ISA khác nhau. Điều cần giữ invariant không phải “phải có instruction fence giống nhau”, mà là **machine code trên mỗi target phải thực hiện cùng language-level contract**.
+## 5. Invalidate queue và visibility không phải một sự kiện toàn cục tức thì
 
-Do đó porting bug thường xuất hiện khi code dựa vào accidental hardware property thay vì language guarantee.
+Coherence request đi qua interconnect, directories và queues. Một core có thể nhận invalidation/ownership traffic ở thời điểm khác core khác, miễn hành vi cuối vẫn nằm trong ISA memory model.
 
-## 7. Happens-before là abstraction software nên dùng
+Vì vậy câu “write đã tới L1 nên mọi core phải thấy ngay” không phải reasoning hợp lệ. Software không có contract trực tiếp với thời điểm nội bộ của coherence messages; software có contract với ordering primitives của ISA và language memory model.
 
-Ở application/runtime layer, ta hiếm khi reasoning trực tiếp bằng MESI states. Ta dùng relation như **xảy-ra-trước (happens-before)**: program order, synchronization edges và transitivity tạo ra visibility/order guarantees hợp lệ.
+Tương tự, “cache coherent” không nghĩa “tất cả cores có cùng snapshot tại cùng nanosecond”. Coherence là protocol về thứ tự/ownership, không phải barrier toàn hệ thống sau mọi store.
 
-Điểm quan trọng: “thời gian thực xảy ra trước” không đồng nghĩa với happens-before. Một write có thể xảy ra vật lý trước, nhưng nếu reader không có synchronization edge, language model có thể không cho phép suy luận visibility cần thiết.
+## 6. Fence không phải lệnh “flush toàn bộ cache”
 
-Lower layer giải thích **tại sao** stale/reordered observation có thể xuất hiện; language model quyết định **program có quyền dựa vào điều gì**.
+Memory fence áp ordering constraints lên classes memory operations theo semantics của ISA. Acquire thường ngăn operations sau acquire vượt qua synchronization point theo contract cần thiết; release giữ effects trước release không bị đẩy qua publication point theo cách phá protocol; full fence mạnh hơn và thường hạn chế optimization nhiều hơn.
 
-## 8. False sharing: coherence đúng nhưng performance sụp
-
-Coherence hoạt động theo cache line, không theo field. Hai threads sửa hai variables khác nhau nhưng nằm cùng cache line có thể làm line ping-pong giữa cores. Đây là **chia sẻ giả (false sharing)**: source không có logical sharing nhưng hardware có physical sharing ở coherence granularity.
-
-Failure ở đây không phải correctness mà là scalability:
+Reasoning đúng phải bắt đầu bằng:
 
 ```text
-thread count tăng
+operation A phải precede operation B trong quan sát nào?
+writer và reader liên hệ qua primitive nào?
+ordering tối thiểu nào đủ để giữ invariant?
+```
+
+Dùng fence “cho chắc” có thể che protocol yếu và tạo cost không cần thiết. Dùng fence quá yếu có thể giữ benchmark nhanh nhưng làm proof sai.
+
+## 7. Compiler reordering và CPU reordering là hai tầng khác nhau
+
+Compiler có thể hoist/sink load-store, giữ value trong register, eliminate redundant access hoặc transform control flow nếu language specification cho phép. CPU lại có freedom riêng theo ISA memory model.
+
+Do đó cùng một source-level acquire/release có thể compile thành machine sequence khác nhau trên x86-64 và ARM64. Một ISA có baseline ordering mạnh hơn có thể cần ít explicit fence hơn; ISA yếu hơn có thể cần instruction/order primitive rõ hơn.
+
+Invariant cần giữ không phải “assembly trên mọi CPU phải giống nhau”, mà là:
+
+> Machine code trên mỗi target phải thực hiện cùng contract mà language memory model đã hứa.
+
+Đây là lý do code tự chế dựa vào behavior accidental của một architecture có thể fail sau khi port, đổi compiler hoặc bật optimization khác.
+
+## 8. Happens-before là abstraction software nên dùng
+
+Ở application/runtime layer, ta hiếm khi reasoning trực tiếp bằng MESI states. Ta dùng **xảy-ra-trước (happens-before)**: program order, synchronization edges và transitivity tạo ra visibility/order guarantees hợp lệ.
+
+```text
+write data
+   ↓ program order
+release / unlock
+   ↓ synchronization edge
+acquire / lock
+   ↓ program order
+read data
+```
+
+“Xảy ra sớm hơn theo wall clock” không đồng nghĩa happens-before. Một write có thể vật lý xảy ra trước nhưng reader vẫn không có quyền suy luận visibility nếu thiếu synchronization edge.
+
+Lower layer giải thích vì sao stale/reordered observation có thể xuất hiện; language model quyết định chương trình **được phép dựa vào điều gì**.
+
+## 9. Atomicity, visibility và ordering phải được tách riêng
+
+Một atomic load/store bảo vệ một loại property, nhưng protocol có thể còn cần ordering. Một fence tạo ordering nhưng không tự biến chuỗi read→modify→write thành atomic transaction.
+
+Khi review code, tách ba câu hỏi:
+
+```text
+Atomicity   : operation có thể bị interleave thành lost update không?
+Visibility  : write nào reader được bảo đảm nhìn thấy?
+Ordering    : reader được phép suy luận operation nào đứng trước/sau?
+```
+
+Rất nhiều bug xuất phát từ việc lấy primitive giải một câu hỏi rồi giả định hai câu còn lại cũng được giải tự động.
+
+## 10. Atomic RMW tạo serialization point vật lý
+
+Compare-and-swap, fetch-add và các atomic read-modify-write thường cần exclusive ownership của cache line. Khi nhiều cores cùng cập nhật một global counter, correctness có thể hoàn hảo nhưng cache line phải ping-pong qua interconnect.
+
+Causal path:
+
+```text
+threads tăng
+→ nhiều RMW cùng một line
 → ownership transfer/invalidation tăng
-→ cache-to-cache traffic tăng
+→ retries hoặc serialization tăng
 → stalled cycles tăng
 → throughput dừng tăng hoặc giảm
 ```
 
-Padding/alignment hoặc thay data layout có thể sửa vì tầng abstraction thực sự quyết định behavior là cache-line placement.
+Ở đây lower abstraction thực sự quyết định scalability là **coherence granularity + topology**, không phải ALU speed. Sharded/per-core counters, batching hoặc partitioned ownership có thể tốt hơn một atomic global counter tùy invariant.
 
-## 9. NUMA làm “memory” không còn có một latency duy nhất
+## 11. False sharing: logic độc lập nhưng vật lý vẫn tranh một cache line
 
-Trên NUMA machine, memory page có home node; core truy cập remote memory phải đi qua interconnect. Shared cache line bị ghi qua nhiều sockets có thể tạo coherence traffic đắt hơn nhiều so với cùng socket.
+Hai threads sửa hai fields khác nhau nhưng nằm cùng cache line có thể làm line ping-pong giữa cores. Đây là **chia sẻ giả (false sharing)**: source không có logical sharing nhưng hardware có physical sharing ở coherence granularity.
 
-Synchronization design vì thế có topology. Một global counter/lock đúng về logic có thể trở thành bottleneck vật lý do remote cache-line bouncing.
+Padding/alignment hoặc thay data layout có thể sửa vì abstraction quyết định behavior là cache-line placement. Đây cũng là lời nhắc rằng performance bug có thể nằm dưới abstraction mà correctness hoàn toàn đúng.
+
+## 12. Lock-free không đồng nghĩa “không còn lifetime problem”
+
+CAS cho phép xây lock-free structure, nhưng proof phải bao gồm linearization point, memory ordering, ABA, object lifetime và reclamation.
+
+ABA minh họa leaky abstraction:
+
+```text
+thread A đọc pointer P
+thread B remove P, free/reuse memory, rồi một pointer có cùng bit pattern P xuất hiện lại
+thread A CAS thấy bit pattern vẫn giống
+```
+
+CAS chỉ so sánh value theo contract của nó; nó không chứng minh object identity/lifetime vẫn là object cũ. Hazard pointer, epoch-based reclamation, reference counting hoặc tagged/versioned pointer là các family giải pháp khác nhau vì chúng bổ sung **lifetime invariant** mà atomic primitive đơn lẻ không cung cấp.
+
+Lock-free chỉ hứa system-wide progress theo định nghĩa; một thread cụ thể vẫn có thể starve. Wait-free mạnh hơn nhưng proof burden cũng cao hơn.
+
+## 13. NUMA làm “memory” không còn có một latency duy nhất
+
+Trên NUMA machine, page có home node; core truy cập remote memory phải đi qua interconnect. Shared cache line bị ghi xuyên socket có thể đắt hơn nhiều so với cùng socket.
+
+Một global lock/counter đúng về logic có thể trở thành bottleneck vật lý do remote cache-line bouncing. Thread placement, page placement và ownership topology vì vậy thuộc performance reasoning của concurrency.
 
 Đọc tiếp [NUMA, interconnects và scalable coherence](./04_numa_interconnects_and_scalable_coherence.md).
 
-## 10. Lock-free không đồng nghĩa wait-free
+## 14. Performance pressure làm behavior thay đổi theo phase
 
-Atomics và compare-and-swap cho phép lock-free algorithms, nhưng correctness đòi hỏi memory ordering, ABA handling, reclamation và progress proof.
+Ở low contention, một atomic hoặc mutex có thể gần như miễn phí so với business work. Khi contention tăng, cost không còn tuyến tính vì ownership transfer, spinning, parking/unparking, scheduler interaction và cache miss bắt đầu dominate.
 
-Lock-free chỉ hứa system-wide progress theo định nghĩa; một thread cụ thể vẫn có thể starve. Wait-free mạnh hơn: mỗi operation hoàn tất trong bounded number of steps theo model.
+Ordering mạnh hơn có thể hạn chế compiler/hardware reordering; ordering yếu hơn cho nhiều performance latitude nhưng tăng proof burden. Optimization đúng phải giữ invariant và đo workload thật, không chọn `relaxed` chỉ vì microbenchmark ngắn hơn.
 
-Memory order càng yếu, proof burden càng lớn. Nếu chọn `relaxed` chỉ vì benchmark nhanh hơn mà chưa chứng minh invariant, optimization đang đổi correctness contract.
+## 15. Vì sao bug có thể “chỉ xảy ra trên ARM” hoặc “chỉ khi tải cao”?
 
-## 11. Performance pressure làm behavior thay đổi như thế nào?
-
-Ordering mạnh hơn có thể hạn chế compiler/hardware reordering, serialize một số paths hoặc tăng coherence/fence cost. Ordering yếu hơn cho nhiều performance latitude hơn nhưng yêu cầu protocol tinh vi hơn.
-
-Ngoài fence cost, contention có thể khiến atomic read-modify-write trở thành serialization point. Khi nhiều cores CAS cùng một cache line, throughput bị giới hạn bởi ownership transfer chứ không phải ALU speed.
-
-Vì vậy performance engineering của concurrency phải đo **contention topology**, không chỉ số threads.
-
-## 12. Production evidence
-
-Evidence phù hợp phụ thuộc tầng:
+Hai trường hợp cần tách:
 
 ```text
-Language/runtime:
-- race detector hoặc concurrency sanitizer khi ecosystem hỗ trợ
-- lock/park/contention profiler
-- thread dump, structured-concurrency state
+Architecture-sensitive correctness:
+program vô tình dựa vào ordering mạnh hơn của platform cũ
+→ target ISA/compiler mới lộ execution vốn đã không được language guarantee
 
-OS:
-- context switch, migration, run queue, scheduler delay
-- CPU affinity/NUMA placement
-
-Hardware:
-- cache miss và stalled-cycle counters
-- cache-to-cache transfer / HITM-like events khi CPU/tool hỗ trợ
-- memory bandwidth, NUMA local/remote accesses
+Load-sensitive correctness/performance:
+contention/interleaving window mở rộng
+→ race xuất hiện thường hơn hoặc coherence bottleneck tăng mạnh
 ```
 
-PMU event name khác theo CPU vendor/model nên không nên hard-code một counter name như universal truth. Mental model phải là: **tìm evidence cho cache-line movement, ordering/contention cost và pipeline stalls**.
+Không nên kết luận “ARM có bug” hay “CPU quá tải làm sai dữ liệu”. Hãy kiểm tra contract source-level trước, rồi dùng ISA/microarchitecture để giải thích tại sao symptom lộ ở môi trường đó.
 
-## 13. Failure reasoning theo abstraction layer
+## 16. Production evidence: chọn evidence theo tầng
 
-Nếu symptom là wrong value/data race, bắt đầu từ language-level ownership/happens-before. Nếu symptom là correct nhưng scaling xấu, kiểm tra lock contention, cache-line sharing, NUMA placement và memory bandwidth. Nếu chỉ một architecture fail, kiểm tra code có vô tình dựa ordering mạnh của ISA cũ hay không.
+Ở language/runtime layer, tìm race detector hoặc concurrency sanitizer khi ecosystem hỗ trợ, lock/park/contention profile, thread/task dump và stress test có invariant check.
+
+Ở OS layer, quan sát run queue, context switch, CPU migration, off-CPU wait, affinity và NUMA placement.
+
+Ở hardware layer, dùng performance counters phù hợp CPU/tool để tìm cache miss, cache-to-cache transfer, stalled cycles, memory bandwidth và local/remote NUMA access. PMU event names khác theo vendor/model; mental model là tìm evidence cho **cache-line movement + ordering/contention cost + pipeline stalls**, không học thuộc một counter name.
+
+Evidence không thay proof. PMU cho biết line đang ping-pong nhưng không chứng minh happens-before; race detector có thể bỏ sót execution. Correctness cần kết hợp:
+
+```text
+invariant/proof
++
+reproducible stress/litmus execution
++
+runtime/OS/hardware evidence
+```
+
+## 17. Failure reasoning theo abstraction layer
+
+Nếu symptom là wrong value/data race, bắt đầu từ language-level ownership và happens-before. Nếu program đúng nhưng scaling xấu, kiểm tra lock/RMW contention, false sharing, NUMA placement và bandwidth. Nếu chỉ một architecture fail, kiểm tra code có dựa vào accidental ISA property hay undefined/data-race behavior không.
 
 Không xuống microarchitecture chỉ vì nó thú vị; xuống khi evidence cho thấy abstraction trên không đủ giải thích symptom.
 
-## 14. Mô hình tư duy
+## 18. Mô hình tư duy
 
-> Coherence giữ lịch sử của một location không tự mâu thuẫn; memory-consistency model định nghĩa những cross-location observations hợp lệ; synchronization primitives tạo ordering edge mà language/runtime có thể dựa vào. Store buffer, coherence traffic và NUMA topology giải thích cost/visibility vật lý, nhưng **program correctness phải được chứng minh ở language memory model**.
+> Coherence giữ lịch sử của một location không tự mâu thuẫn; ISA memory model giới hạn những observation phần cứng được phép; language memory model biến chúng thành contract source-level; synchronization tạo happens-before; cache-line ownership và NUMA quyết định nhiều cost vật lý. **Program correctness phải được chứng minh ở abstraction sở hữu invariant, còn lower layer giải thích vì sao bug hoặc bottleneck có thể xuất hiện.**
 
 ## Kết nối
 
-Nền tảng: [Cache hierarchy](../../basic/02_computer_architecture/02_memory_hierarchy_and_cache.md) và [OS concurrency](../../basic/03_operating_systems/02_concurrency_synchronization_and_deadlock.md). Đường xuyên tầng hoàn chỉnh: [CPU cache → language memory model → concurrency bug](../../90_connections/advanced/02_correctness_path_language_os_cpu_memory_ordering.md). Đọc tiếp [OoO/ROB](./01_out_of_order_execution_register_renaming_and_rob.md) và [NUMA](./04_numa_interconnects_and_scalable_coherence.md).
+Nền tảng: [Cache hierarchy](../../basic/02_computer_architecture/02_memory_hierarchy_and_cache.md), [OS concurrency](../../basic/03_operating_systems/02_concurrency_synchronization_and_deadlock.md) và [Programming Languages concurrency](../../basic/04_programming_languages/08_concurrency_models_and_memory_safety.md). Đường xuyên tầng hoàn chỉnh: [CPU cache → language memory model → concurrency bug](../../90_connections/advanced/02_correctness_path_language_os_cpu_memory_ordering.md). Đọc tiếp [OoO/ROB](./01_out_of_order_execution_register_renaming_and_rob.md), [NUMA](./04_numa_interconnects_and_scalable_coherence.md) và [Runtime concurrency](../../04_programming_languages/advanced/07_coroutines_continuations_async_runtimes_and_structured_concurrency.md).
