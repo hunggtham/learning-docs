@@ -179,3 +179,9 @@ Parametric curves nối functions với motion và vector calculus. Implicit equ
 ## Common Misconceptions
 
 Parameter `t` không nhất thiết là x-coordinate hay time. Polar coordinates không unique: `(r,\theta)` và `(r,\theta+2k\pi)` cùng point, và negative `r` có thể được reinterpreted bằng angle shift. `dy/dx=(dy/dt)/(dx/dt)` cần chú ý khi `dx/dt=0`.
+
+## Liên kết kiến thức
+
+Nên đọc sau [Function Concept](./00_function_concept.md), [Coordinate Geometry](../03_geometry_trigonometry/01_coordinate_geometry.md) và [Trigonometry](../03_geometry_trigonometry/04_trigonometry.md). Formula arc length và implicit differentiation dùng trực tiếp [Derivatives](../05_calculus/01_derivatives.md) và [Integrals](../05_calculus/03_integrals_and_accumulation.md).
+
+Khi chuyển sang nhiều chiều, cùng ý tưởng representation/coordinate change phát triển thành [Multivariable Calculus](../05_calculus/04_multivariable_calculus.md), [Vector Calculus](../05_calculus/09_vector_calculus.md) và [Matrix Calculus/Jacobian](../04_vectors_linear_algebra/09_matrix_calculus_jacobian_hessian_and_autodiff.md). Geometry của implicit conics được đào sâu trong [Circles, Conics and Loci](../03_geometry_trigonometry/06_circles_conics_and_loci.md).

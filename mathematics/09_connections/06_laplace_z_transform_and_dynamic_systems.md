@@ -231,3 +231,9 @@ Laplace transform không chỉ là bảng công thức inverse transforms. Giá 
 Pole ở đâu quyết định stability chỉ khi assumptions về system và region of convergence phù hợp. Không nên dùng rule “pole inside/outside” ngoài đúng continuous/discrete setting.
 
 Fourier, Laplace và Z-transform không interchangeable một cách vô điều kiện. Chúng có domains, convergence conditions và purposes khác nhau dù liên hệ chặt chẽ.
+
+## Liên kết kiến thức
+
+Prerequisite trực tiếp gồm [Complex Numbers](../01_algebra/05_complex_numbers.md), [Sequences, Series and Recurrence](../02_functions/03_sequences_series_and_recurrence.md), [Differential Equations](../05_calculus/05_differential_equations.md) và [Eigenvalues/Eigenvectors](../04_vectors_linear_algebra/04_eigenvalues_and_eigenvectors.md).
+
+Để hiểu basis/frequency viewpoint trước khi học pole-zero geometry, đọc [Fourier, Signals and Frequency](./05_fourier_signals_and_frequency.md). Với control/decision dynamics, đọc tiếp [Dynamic Programming, Bellman and Optimal Control](../08_optimization_numerical/06_dynamic_programming_bellman_and_optimal_control.md). Numerical implementation và stability caveats nối với [Numerical Methods and Error](../08_optimization_numerical/02_numerical_methods_and_error.md).
