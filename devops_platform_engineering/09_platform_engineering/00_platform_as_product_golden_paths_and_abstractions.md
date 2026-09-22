@@ -256,3 +256,45 @@ Golden path không chỉ cần create nhanh mà còn phải giúp người dùng
 Nếu portal chỉ báo `Provisioning failed` còn nguyên nhân nằm trong ba hệ thống nội bộ không có correlation ID, self-service đã chuyển ticket từ “hãy tạo giúp” thành “hãy debug giúp”. Cognitive load không biến mất mà chỉ đổi thời điểm.
 
 Một abstraction trưởng thành tối ưu cả **happy-path simplicity** lẫn **failure-path diagnosability**. Đường đi chuẩn thật sự tốt là đường dễ dùng khi bình thường và vẫn giữ causal chain khi bất thường.
+
+## 35. Control-plane state phải có durability contract riêng với resource bên ngoài
+
+Platform thường lưu intent, ownership, operation progress và mapping tới cloud/Kubernetes resource. Nếu state store mất nhưng resource thật vẫn tồn tại, restore một backup cũ có thể khiến controller tin resource chưa được tạo rồi tạo duplicate, hoặc coi resource hợp lệ là orphan.
+
+Vì vậy backup control-plane state không đủ nếu không có reconciliation sau restore. Recovery cần biết checkpoint nào được restore, external side effect nào có thể đã xảy ra sau checkpoint, rồi discover/adopt/reconcile trước khi mở lại mutation bình thường. Đây là cùng failure semantics với database + external system, nhưng blast radius lớn hơn vì platform sở hữu nhiều tenant.
+
+RPO của metadata platform và RPO của workload data có thể khác nhau, nhưng cả hai phải được explicit. “Có backup database platform” không tự chứng minh restore sẽ hội tụ đúng với world state.
+
+## 36. Safe mode/read-only mode là degraded capability có chủ đích
+
+Khi policy service, state backend hoặc một global dependency có vấn đề, lựa chọn không chỉ là “platform hoạt động đầy đủ” hoặc “tắt toàn bộ”. Một control plane có thể chuyển sang mode hạn chế: cho phép đọc status/catalog, giữ workload hiện tại, chặn create/delete nguy hiểm hoặc chỉ cho operation đã xác minh an toàn.
+
+Safe mode cần contract rõ về action nào được phép và stale state tối đa bao lâu. Nếu user không biết request bị từ chối vì safety mode hay vì policy business, họ sẽ retry/tạo workaround và tăng incident load.
+
+Thiết kế degraded mode trước incident giúp tránh operator tự chế fail-open bằng cách disable hàng loạt guardrail. Đây là brownout ở platform control plane: giữ capability cốt lõi và giảm mutation surface để bảo vệ invariant.
+
+## 37. Control-plane admission phải bảo vệ reconciliation work quan trọng
+
+Self-service API có thể nhận create hàng loạt đúng lúc controller đang xử lý recovery của resource hiện có. Nếu tất cả operation vào chung queue FIFO, burst provisioning mới có thể làm health reconciliation, secret rotation hoặc failover chậm tới mức vi phạm SLO.
+
+Platform cần phân loại work theo urgency/ownership: steady-state reconciliation, recovery, user provisioning, bulk migration, background cleanup. Priority không nên biến thành starvation; cần concurrency/reservation/fairness phù hợp. Một số work có thể bị shed hoặc pause khi control plane saturation, trong khi recovery work giữ reserved capacity.
+
+Đây là connection giữa platform product và SRE overload control: control plane cũng cần admission, queue discipline và recovery headroom như data plane.
+
+## 38. Platform DR phải kiểm tra dependency ordering chứ không chỉ restore từng component
+
+Một runbook liệt kê “restore database, start controller, start portal” có thể sai nếu controller cần identity issuer, DNS, KMS, registry hoặc policy bundle chưa sẵn sàng. Recovery graph nên biểu diễn prerequisite và capability tối thiểu cần cho bước tiếp theo.
+
+```text
+break-glass identity + artifact access
+→ state/KMS/DNS tối thiểu
+→ core controller
+→ reconcile/adopt external resources
+→ policy/catalog/observability
+→ mở mutation dần
+→ full self-service
+```
+
+Game day phải chứng minh operator thực sự có thể đi từ failure domain bị mất tới trạng thái hội tụ, bao gồm credential độc lập, artifact khả dụng và external resource discovery. Nếu drill chỉ restart component trong environment đang khỏe, bootstrap path chưa được test.
+
+Platform recovery hoàn tất khi control plane và external world đồng thuận đủ về ownership/state để mutation trở lại an toàn, không phải khi portal HTTP 200.
