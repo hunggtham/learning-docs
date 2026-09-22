@@ -61,3 +61,91 @@ Nếu nội dung giải thích **cơ chế nền độc lập với operating pl
 Nếu nội dung giải thích **cách tổ chức delivery, automation, control loop, production operation hoặc developer self-service** trên các cơ chế đó, đặt trong DevOps / Platform Engineering.
 
 Nếu một chapter mới chỉ mô tả một product/tool mà không tạo mental model mới, không nên tạo chapter riêng; thêm ví dụ vào chapter concept tương ứng là đủ.
+
+## 11. Route reasoning 1 — từ latency user xuống scheduler/kernel
+
+Khi user báo request chậm, không nên nhảy ngay xuống CPU flame graph. Đi từ contract ngoài vào trong:
+
+```text
+user-observed latency
+→ edge / DNS / TLS / proxy
+→ service routing
+→ application queue / connection pool
+→ downstream dependency
+→ container cgroup pressure
+→ node scheduler / memory / I/O
+```
+
+DevOps chapters giữ phần symptom, timeout budget, telemetry, resource boundary và production evidence. Khi evidence đã chỉ rõ scheduler latency, reclaim/page fault hoặc filesystem behavior là bottleneck, lúc đó chuyển sang OS canonical để hiểu internals.
+
+Boundary này ngăn hai lỗi đối lập: operator chỉ nhìn dashboard cấp cao và không hiểu kernel, hoặc operator lao xuống kernel quá sớm khi failure thực ra là config/dependency.
+
+## 12. Route reasoning 2 — từ commit đến bytes đang phục vụ production
+
+Một release có thể được truy theo chuỗi:
+
+```text
+commit
+→ reviewed source state
+→ build inputs / dependency lock / builder
+→ artifact digest + provenance
+→ registry
+→ desired deployment state
+→ runtime image digest
+→ workload version serving traffic
+```
+
+Mỗi arrow là một trust/identity boundary. Delivery System sở hữu reproducibility và artifact identity; Security sở hữu trust policy/provenance/signature; GitOps/Kubernetes sở hữu desired→actual reconciliation; Observability xác nhận version nào thực sự tạo outcome.
+
+Nếu production khác staging, route này giúp hỏi đúng thứ tự: bytes có giống không, config có giống contract không, runtime có resolve đúng digest không, data/dependency có khác không. Không rebuild artifact giữa chừng vì rebuild làm mất biến kiểm soát.
+
+## 13. Route reasoning 3 — từ desired state đến control-loop conflict
+
+IaC, Kubernetes, GitOps, HPA, autoscaler và operator đều có thể được nhìn như controller:
+
+```text
+desired state
+→ observe current state
+→ compute difference
+→ act
+→ observe again
+```
+
+Khi state dao động hoặc “bị đổi ngược”, câu hỏi đầu tiên là **ai sở hữu field/state này**. Nếu hai loop có desired state khác nhau, từng controller có thể hoàn toàn đúng cục bộ nhưng hệ thống không hội tụ.
+
+Distributed Systems canonical giải các vấn đề consensus/failure detector/fencing khi chúng đi xuống cơ chế nền. DevOps/Platform Engineering giữ bài toán ownership, reconciliation latency, backoff, operational evidence và safe emergency override.
+
+## 14. Route reasoning 4 — từ SLO đến topology/cost
+
+SLO không chỉ là monitoring target. Nó truyền ngược thành yêu cầu kiến trúc:
+
+```text
+business impact
+→ SLO / RPO / RTO
+→ failure domain cần chịu
+→ redundancy + capacity headroom
+→ rollout / recovery strategy
+→ tenancy / isolation boundary
+→ cost
+```
+
+Nếu FinOps tối ưu chi phí mà không giữ failure headroom cần cho SLO, optimization là sai boundary. Nếu multi-region được chọn mà business chỉ cần RTO dài và dữ liệu có thể restore, có thể đang trả complexity/cost không cần thiết.
+
+Vì vậy Platform Engineering kết nối Reliability với Economics: platform tier nên biểu diễn capability và failure contract, không chỉ kích thước CPU/RAM.
+
+## 15. Route reasoning 5 — incident quay lại platform default
+
+Một incident có giá trị lâu dài khi causal factor được chuyển thành system improvement:
+
+```text
+incident evidence
+→ failure class
+→ missing signal / unsafe default / missing guardrail
+→ canonical fix
+→ platform default / automation / runbook
+→ verify recurrence risk giảm
+```
+
+Nếu năm team đều gặp cùng lỗi certificate rotation, solution không nên chỉ là năm postmortem. Platform có thể chuẩn hóa issuance/rotation/expiry telemetry. Nếu nhiều service OOM vì heap bằng đúng container limit, golden path/runtime guidance có thể encode native headroom.
+
+Đây là connection quan trọng nhất giữa Production Practice và Platform Engineering: troubleshooting không kết thúc ở chữa service; failure lặp lại phải trở thành feedback cho shared capability.
