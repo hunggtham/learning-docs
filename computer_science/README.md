@@ -3,11 +3,11 @@
 `computer_science/` được tổ chức thành hai lớp kiến thức rõ ràng:
 
 - **Nền tảng (Basic / Foundation / 기초)** tại [`basic/`](./basic/README.md): xây dựng các mô hình tư duy cốt lõi của Khoa học máy tính (Computer Science).
-- **Nâng cao và chuyên sâu (Advanced / Specialized)** tại các nhóm chủ đề cùng tên ở cấp `computer_science/`: đi sâu vào cơ chế bên trong (internals), chứng minh, cách triển khai, hành vi trong hệ thống thực tế, kiểu lỗi và các đánh đổi ở mức kỹ sư nhiều kinh nghiệm.
+- **Nâng cao và chuyên sâu (Advanced / Specialized)** tại các nhóm chủ đề cùng tên ở cấp `computer_science/`: đi sâu vào cơ chế bên trong (internals), invariant, hành vi khi có failure hoặc pressure, cách quan sát production và các đánh đổi ở mức kỹ sư nhiều kinh nghiệm.
 
 “Nền tảng” không có nghĩa là sơ sài. Đây là lớp kiến thức tiên quyết (prerequisite) chung. Phần nâng cao không lặp lại toàn bộ kiến thức nền mà dựa trên những giả định đã được giải thích để đào sâu hơn.
 
-Xem [quy ước ngôn ngữ](./LANGUAGE_STYLE.md) để hiểu cách thư viện ưu tiên tiếng Việt và giữ thuật ngữ tiếng Anh trong ngoặc khi cần.
+Xem [quy ước ngôn ngữ](./LANGUAGE_STYLE.md) để hiểu cách thư viện ưu tiên tiếng Việt và giữ thuật ngữ tiếng Anh trong ngoặc khi cần. Xem [Coverage Audit](./COVERAGE_AUDIT.md) để biết domain nào đang mạnh, gap nào còn lại và quy tắc maintenance hiện tại.
 
 ## Bản đồ Nền tảng → Nâng cao
 
@@ -38,7 +38,7 @@ Thư viện này đi theo quan hệ phụ thuộc khái niệm và mở rộng t
 
 ## Cách học
 
-Không cần học hết phần nền tảng rồi mới đọc phần nâng cao. Cách hợp lý hơn là đọc chương nền tảng tương ứng để có vốn thuật ngữ và hiểu cơ chế chính, sau đó chuyển sang phần nâng cao khi cần hiểu cơ chế bên trong, chứng minh, hiệu năng, kiểu lỗi hoặc thiết kế cho hệ thống thực tế.
+Không cần học hết phần nền tảng rồi mới đọc phần nâng cao. Cách hợp lý hơn là đọc chapter nền tảng tương ứng để có vocabulary và mental model chính, sau đó chuyển sang phần nâng cao khi cần hiểu internals, invariant, failure behavior, performance hoặc production evidence.
 
 ### Learning route 1 — từ phần cứng đến application
 
@@ -56,7 +56,7 @@ network / remote service
 distributed coordination / replication / consistency
 ```
 
-Route này phù hợp khi muốn hiểu vì sao cùng một đoạn code có thể chậm hoặc sai vì nguyên nhân ở tầng thấp hơn. Nên đọc lần lượt các phần Architecture → OS → Programming Languages & Runtime → Software Systems → Networks & Distributed Systems, rồi quay lại [`90_connections/advanced`](./90_connections/advanced/README.md) để nối các tầng bằng symptom thực tế.
+Route này phù hợp khi muốn hiểu vì sao cùng một đoạn code có thể chậm hoặc sai vì nguyên nhân ở tầng thấp hơn. Nên đọc lần lượt Architecture → OS → Programming Languages & Runtime → Software Systems → Networks & Distributed Systems, rồi quay lại [`90_connections/advanced`](./90_connections/advanced/README.md) để nối các tầng bằng symptom thực tế.
 
 ### Learning route 2 — durability và consistency
 
@@ -90,7 +90,7 @@ network ordering / timeout
 distributed causality / consensus
 ```
 
-Route này giúp phân biệt data race, logical race, thread scheduling, memory reordering và distributed ordering. Không nên dùng từ “concurrent” như một khái niệm duy nhất cho mọi tầng.
+Route này giúp phân biệt data race, logical race, thread scheduling, memory reordering và distributed ordering. Không dùng từ “concurrent” như một khái niệm duy nhất cho mọi tầng.
 
 ### Learning route 4 — reliability và security boundary
 
@@ -112,34 +112,46 @@ Route này nối Security với Reliability thay vì coi chúng là hai môn r�
 
 ## Quy tắc dependency trong chapter nâng cao
 
-Một chapter nâng cao không được giả định người đọc đã hiểu sâu thuật ngữ hệ thống chỉ vì thuật ngữ đó phổ biến. Khi lần đầu dùng các khái niệm như `process`, `thread`, `virtual memory`, `syscall`, `cache`, `WAL`, `MVCC`, `consensus`, `idempotency`, chapter phải hoặc giải thích bản chất ngắn gọn trước, hoặc link trực tiếp đến chapter nền tảng chứa định nghĩa và mental model.
+Một chapter nâng cao không được giả định người đọc đã hiểu sâu thuật ngữ hệ thống chỉ vì thuật ngữ đó phổ biến. Khi lần đầu dùng các khái niệm như `process`, `thread`, `virtual memory`, `syscall`, `cache`, `WAL`, `MVCC`, `consensus`, `idempotency`, chapter phải giải thích bản chất ngắn gọn hoặc link trực tiếp tới foundation chứa mental model đó.
 
-Mỗi chapter nâng cao nên trả lời được bốn lớp câu hỏi:
+Một concept advanced nên cố gắng trả lời tự nhiên chuỗi câu hỏi sau:
 
 ```text
-1. Concept tồn tại để giải bài toán gì?
-2. Internals duy trì invariant bằng cơ chế nào?
-3. Khi failure/performance pressure xuất hiện thì nó hỏng hoặc chậm ra sao?
-4. Nó phụ thuộc và tác động các tầng khác thế nào?
+1. Vấn đề ban đầu là gì?
+2. Invariant nào cần được duy trì?
+3. Internals giữ invariant bằng mechanism nào?
+4. Failure xảy ra khi assumption nào mất hiệu lực?
+5. Performance / concurrency / consistency pressure làm behavior thay đổi ra sao?
+6. Evidence nào giúp quan sát và phân biệt các hypothesis?
+7. Abstraction layer nào bên dưới thực sự quyết định behavior?
+8. Fix nên đặt ở layer nào sở hữu invariant?
 ```
 
-Nếu một nội dung chỉ liệt kê API hoặc công nghệ mà không tạo thêm mental model, nó không nên trở thành chapter riêng trong Computer Science Library.
+Không cần ép mọi chapter thành template cứng, nhưng nếu một phần advanced không tạo thêm khả năng reasoning theo các câu hỏi trên thì chưa đủ lý do để tồn tại như một chapter riêng.
 
 ## Nguyên tắc audit coverage
 
-Coverage được xem là đủ khi domain đã có đường reasoning từ foundation → internals → failure modes → performance/concurrency/consistency → production evidence. Không tăng số chapter chỉ để làm roadmap dài hơn.
+Coverage được xem là đủ khi domain có đường reasoning:
 
-Khi audit một domain, ưu tiên tìm:
+```text
+foundation
+→ internals
+→ failure modes
+→ performance / concurrency / consistency
+→ production evidence
+→ cross-layer connections
+```
 
-- chapter quá mỏng, chỉ định nghĩa mà chưa giải thích mechanism;
-- dependency ẩn khiến người mới không hiểu thuật ngữ đang được dùng;
-- thiếu failure matrix hoặc edge cases;
-- thiếu connection tới hardware/OS/runtime/network khi connection đó quyết định behavior;
-- thiếu cách quan sát thực tế như metric, trace, execution plan, GC log, wait event hoặc kernel evidence;
-- duplicate giữa các domain có thể thay bằng cross-link.
+Không tăng số chapter chỉ để làm roadmap dài hơn. Khi audit một domain, ưu tiên tìm chapter quá mỏng; dependency ẩn; assumption chưa nói rõ; failure/edge case còn thiếu; connection tới lower layer quyết định behavior; evidence production còn thiếu; và duplicate có thể thay bằng cross-link.
 
-Cấu trúc dữ liệu và thuật toán (DSA) đã có phần nâng cao riêng theo cùng mô hình và đi sâu vào implementation bằng C, Java và JavaScript. Các domain khác tiếp tục được cải thiện trong chính `computer_science/`, không tách thêm root library nếu conceptual boundary đã được bao phủ ở đây.
+Production evidence có thể là metric, trace, execution plan, GC log, wait event, scheduler evidence, PMU counter, replication position hoặc state-transition evidence tùy domain. Mục tiêu không phải thêm tool name, mà giúp người đọc biết **cần quan sát tín hiệu nào để kiểm chứng mechanism**.
+
+Cấu trúc dữ liệu và thuật toán (DSA) đã có phần nâng cao riêng theo cùng mô hình và đi sâu vào implementation bằng C, Java và JavaScript. Các domain khác tiếp tục được cải thiện trong chính `computer_science/`, không tách Network, Distributed Systems, Security, Reliability, Performance Engineering, Concurrency hoặc System Design thành root library mới nếu conceptual boundary hiện tại đã đủ.
 
 ## Nguyên tắc biên soạn phần nâng cao
 
-Một chương nâng cao phải đào sâu hơn phần nền tảng ở ít nhất một hướng: cơ chế bên trong; bất biến hoặc chứng minh hình thức; mô hình hiệu năng; ngữ nghĩa đồng thời và lỗi; chiến lược triển khai; khả năng quan sát và gỡ lỗi; đánh đổi trong môi trường thực tế; hoặc tương tác giữa nhiều tầng trừu tượng. Không thêm một chương chỉ vì một công nghệ đang phổ biến nếu nó không tạo ra mô hình tư duy mới.
+Một chương nâng cao phải đào sâu hơn foundation ở ít nhất một hướng: cơ chế bên trong; invariant hoặc chứng minh; mô hình performance; concurrency/consistency semantics; failure behavior; khả năng quan sát và gỡ lỗi; deployment/evolution trade-off; hoặc interaction giữa nhiều abstraction layers.
+
+Ưu tiên giữ cấu trúc canonical hiện có. Nếu gap có cùng invariant và failure model với chapter đang tồn tại, rewrite sâu chapter đó trước. Chỉ tạo file mới khi topic có mental model riêng, là dependency quan trọng cho nhiều phần khác và việc đặt vào chapter cũ thực sự làm mất conceptual boundary.
+
+Không thêm chapter chỉ vì một technology đang phổ biến.
