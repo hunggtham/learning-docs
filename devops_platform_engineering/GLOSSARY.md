@@ -90,3 +90,9 @@ File này dùng để tra nhanh thuật ngữ, không thay thế chapter giải 
 | Telemetry priority | Chính sách ưu tiên signal khi observability pipeline quá tải để giữ evidence critical thay vì drop ngẫu nhiên mọi dữ liệu. |
 | Safe mode | Trạng thái degraded của control plane cho phép một tập operation an toàn trong khi chặn mutation rủi ro lúc dependency/state chưa đáng tin. |
 | Recoverable capacity | Capacity có thể được thu hồi/sẵn sàng trong deadline recovery, khác với capacity chỉ đang được workload khác mượn trên giấy. |
+| Release composition | Tổ hợp artifact, runtime configuration, feature-flag state và migration phase thực sự tạo behavior production tại một thời điểm. |
+| Feature-flag lifecycle | Chu trình tạo flag an toàn, mở theo cohort, promote thành default rồi xóa old code path và flag definition; tránh để temporary state trở thành permanent complexity. |
+| Shadow traffic | Copy workload thật sang candidate để đo behavior mà không dùng response cho user; cần side-effect isolation, capacity budget và comparison semantics. |
+| Disruption source | Actor/mechanism làm workload rời runtime như rollout, drain, autoscaler, pressure, preemption hay node failure; cần giữ như evidence vì recovery semantics khác nhau. |
+| Multi-controller composition | Reasoning về nhiều controller cùng tác động một workload/state; từng loop có thể đúng cục bộ nhưng tương tác tạo oscillation, churn hoặc conflict. |
+| Resilience recovered | Trạng thái không chỉ phục hồi đủ replica/capacity mà còn phục hồi topology, redundancy và failure tolerance theo invariant ban đầu. |
