@@ -221,3 +221,43 @@ Giả sử region A outage 20 phút. Region B failover thành công, realtime tr
 Failover mechanism ban đầu đúng. Failure thứ hai đến từ thiếu recovery-rate control. Mitigation tốt là ưu tiên realtime path, throttle replay, tăng consumer dần theo downstream headroom và theo dõi queue age thay vì chỉ queue depth.
 
 Bài học cuối cùng: **recovery là một state transition cần capacity budget, sequencing và evidence riêng**, không phải khoảnh khắc infrastructure chuyển từ đỏ sang xanh.
+
+## 32. Recovery graph phải mô tả dependency ordering và capability tối thiểu
+
+Danh sách “khởi động A, B, C” không đủ nếu dependency giữa chúng thay đổi theo mode. Ví dụ application cần DNS để gọi database, DNS automation lại cần identity, identity service cần KMS, còn KMS policy được deploy từ control plane đang hỏng. Recovery phải tìm một **dependency closure tối thiểu** có thể tự đứng lên trước, rồi mới mở rộng capability.
+
+Một cách reasoning là vẽ graph theo capability thay vì tên server: `break-glass identity → key/decrypt → artifact + state access → network/DNS tối thiểu → writer/data path → observability → background workload`. Mỗi cạnh phải trả lời dependency có thật sự bắt buộc ở recovery mode hay có thể bypass/degrade an toàn.
+
+Runbook tốt vì vậy không chỉ có order mà còn có **precondition** và **proof** cho từng bước. Nếu bước “promote database” yêu cầu fencing old writer, evidence fencing phải tồn tại trước khi action tiếp theo được phép chạy.
+
+## 33. Evidence survivability là một requirement của resilience
+
+Incident lớn có thể làm mất chính hệ thống dùng để điều tra: log backend ở cùng region, dashboard phụ thuộc SSO đang outage, deployment history chỉ có trong CI control plane hoặc audit trail nằm trên database vừa corrupt. Khi đó hệ thống có thể phục hồi chậm không phải vì thiếu operator skill mà vì bằng chứng cùng failure domain với workload.
+
+Critical evidence cần được phân loại theo câu hỏi recovery: ai đã thay đổi gì, artifact/config nào đang chạy, writer nào có ownership, backup nào usable, request/business invariant nào đang fail. Một phần evidence có thể cần replication hoặc retention ở failure domain độc lập; phần khác cần export/snapshot trước destructive mitigation.
+
+Không phải mọi telemetry phải sống qua disaster. Invariant là **minimum diagnostic and recovery evidence** phải còn truy cập được bằng bootstrap identity/path đã thiết kế, nếu không runbook đang giả định sensor tồn tại khi cần nhất.
+
+## 34. Recovery control plane và serving data plane có thể khỏe theo thứ tự khác nhau
+
+Một service đang phục vụ user có thể vẫn chạy trong khi control plane deploy/config/identity management bị hỏng. Ngược lại control plane có thể hồi trước nhưng data plane còn stale, thiếu capacity hoặc chưa có writer hợp lệ. Vì vậy trạng thái “platform xanh” và “business capability xanh” phải được đo riêng.
+
+Trong recovery, không nên mở mutation hàng loạt chỉ vì portal/API quản trị đã trả 200. Trước hết cần xác minh controller có state đủ mới, external world đã reconcile, data-plane invariant đúng và operation mới không tạo duplicate/orphan. Tương tự, data plane đang sống không có nghĩa có thể trì hoãn vô hạn recovery control plane nếu certificate/secret/lease sắp hết hạn.
+
+Mental model là hai trục: **serving continuity** và **management/recovery capability**. Resilience trưởng thành biết degraded mode nào giữ được trục thứ nhất trong lúc khôi phục trục thứ hai.
+
+## 35. Recovery verification phải kiểm tra negative space, không chỉ happy signal
+
+Sau failover, việc thấy request thành công là evidence cần thiết nhưng chưa đủ. Cần hỏi những điều **không được phép còn xảy ra**: còn write tới old primary không, còn traffic vào region bị cô lập không, consumer cũ có tiếp tục phát side effect không, credential bị revoke có còn dùng được không, queue poison có tiếp tục retry vô hạn không.
+
+Negative-space check giúp bắt split brain và zombie workload mà dashboard success-rate có thể che. Evidence thường đến từ writer lease/fencing state, access log theo region/version, audit auth, queue attempt và reconciliation mismatch.
+
+Exit criteria tốt gồm cả positive invariant lẫn forbidden state. Recovery chỉ hoàn tất khi hệ thống vừa làm được điều cần làm vừa **không còn làm những điều nguy hiểm của topology cũ**.
+
+## 36. Recovery debt xuất hiện khi trạng thái tạm trở thành trạng thái lâu dài
+
+Sau incident, team có thể giữ capacity gấp đôi, bypass policy, dùng break-glass credential, disable autoscaler, pin traffic một region hoặc để feature ở degraded mode. Những action này hợp lý để phục hồi nhưng tạo **recovery debt** nếu không có owner/expiry.
+
+Debt nguy hiểm vì nó thay assumption cho incident tiếp theo: capacity tưởng còn nhưng thực ra đang dành cho workaround; policy bị bypass nên authority rộng hơn; failover lần sau không còn region sạch; manual route bị quên trong source of truth. Vì vậy stabilization phải tạo inventory cho temporary exception và plan hội tụ trở lại supported steady state.
+
+Post-incident closure nên xác nhận workaround đã được remove hoặc được chuyển thành design chính thức có test/SLO/ownership. “User hết lỗi” là mốc mitigation; “temporary recovery state đã được thu hồi” mới là một phần của recovery completion.
