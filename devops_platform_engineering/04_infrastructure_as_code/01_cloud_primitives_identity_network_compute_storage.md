@@ -73,3 +73,65 @@ Incident runbook phải phân biệt “service data path down” với “provi
 Cloud provider có hàng trăm service, nhưng platform không nên expose catalog nguyên xi. Hãy gom theo capability: chạy HTTP service, chạy batch, lưu relational data, publish event, lưu object, expose public endpoint. Sau đó platform chọn implementation/default dựa trên tổ chức.
 
 Cách này giảm vendor-specific cognitive load và cho phép evolution mà không bắt product team học lại toàn bộ provider.
+
+## 13. API success không luôn đồng nghĩa resource đã usable
+
+Cloud control plane thường có hành vi bất đồng bộ và nhất quán cuối cùng (eventual consistency). API tạo role, route, DNS record hoặc database có thể trả thành công trước khi mọi subsystem nhìn thấy state mới.
+
+Vì vậy automation không nên giả định `create` thành công là bước sau có thể dùng ngay. Cần waiter/retry có backoff cho condition cụ thể, nhưng retry phải phân biệt trạng thái “chưa hội tụ” với lỗi permission/config không thể tự hết.
+
+Một pipeline tạo IAM role rồi ngay lập tức assume role có thể thỉnh thoảng fail dù code không đổi. Nếu chỉ rerun đến khi pass, ta che mất propagation contract. Platform nên encode stabilization semantics để consumer không phải tự đoán sleep bao nhiêu giây.
+
+## 14. Durability, availability và backup là ba property khác nhau
+
+Một storage service có durability rất cao nghĩa xác suất mất bytes lâu dài thấp, nhưng vẫn có thể tạm unavailable do network, identity, control plane hoặc regional issue. Ngược lại service highly available không thay thế backup nếu dữ liệu bị xóa/corrupt hợp lệ rồi replication lan truyền thay đổi đó.
+
+Do đó “provider quảng cáo nhiều số 9” phải hỏi đang nói về durability hay availability và scope nào. Business RPO/RTO vẫn cần recovery design riêng.
+
+Object versioning, cross-region replication và backup vault có thể cung cấp các failure boundary khác nhau; không nên coi chúng là cùng một control.
+
+## 15. Multi-zone không có nghĩa dependency graph đã multi-zone
+
+Application replica có thể nằm ba zone nhưng NAT gateway, database writer, secret endpoint hoặc external dependency vẫn tạo single failure domain. Availability phải được reasoning theo **đường request và dependency graph**, không theo số zone của riêng compute.
+
+Một review hữu ích là chọn một zone rồi giả định zone đó biến mất: traffic route lại ra sao, workload còn capacity không, storage attach/failover mất bao lâu, DNS/identity/control plane có phụ thuộc resource trong zone đó không.
+
+Nếu hệ thống chỉ sống được khi autoscaler thêm node sau failure nhưng node provisioning mất 15 phút còn SLO không chịu được 15 phút degraded capacity, topology trên giấy chưa đủ.
+
+## 16. Autoscaling bị giới hạn bởi provisioning latency và downstream budget
+
+Cloud API giúp scale nhanh hơn datacenter truyền thống nhưng không tức thời. VM/node có thể mất phút để provision, image pull thêm thời gian, application warm-up thêm thời gian nữa. Serverless có abstraction khác nhưng vẫn có concurrency limit, cold-start hoặc downstream quota.
+
+Capacity planning cần so **time-to-capacity** với tốc độ demand tăng. Nếu traffic có thể tăng gấp bốn trong 30 giây còn thêm capacity cần 8 phút, phải giữ headroom, pre-scale theo event hoặc shed load.
+
+Scale compute cũng không tạo thêm database connection budget, third-party API quota hay NAT capacity. Autoscaling là một actuator, không phải nguồn capacity vô hạn.
+
+## 17. Managed service version lifecycle vẫn là trách nhiệm của consumer
+
+Provider có thể patch OS hoặc vận hành failover, nhưng application vẫn phụ thuộc engine/API version, parameter compatibility và maintenance behavior. Major database/cache/runtime upgrade có thể đổi query plan, protocol default hoặc extension compatibility.
+
+Production cần inventory version, deprecation timeline, test path và staged upgrade. “Managed” không biến version evolution thành zero-work; nó chuyển một phần execution cho provider nhưng compatibility contract vẫn thuộc system owner.
+
+Maintenance window cũng là production event. Nếu provider failover/reboot trong window, application phải có reconnect/retry semantics phù hợp; connection pool giữ connection chết quá lâu có thể làm user impact kéo dài hơn infrastructure event.
+
+## 18. IAM policy phải xét resource, action và context cùng lúc
+
+Permission rộng không chỉ đến từ `Action: *`. Một action hẹp trên mọi resource hoặc trust policy cho phép principal quá rộng cũng có blast radius lớn. Điều kiện theo environment, source identity, audience, network context hoặc tag có thể thu hẹp capability khi semantics đáng tin.
+
+Nhưng policy càng phức tạp càng khó reasoning. Platform nên cung cấp role theo capability đã thiết kế thay vì bắt mỗi team tự viết hàng trăm dòng IAM. Exception cần review theo capability thực sự được mở, không chỉ diff JSON.
+
+## 19. Egress cost và latency có thể phát hiện boundary kiến trúc sai
+
+Giả sử service A ở region Seoul gọi service B ở region Tokyo cho mỗi request chỉ để lấy metadata nhỏ nhưng thường xuyên. Hệ thống trả cả latency xuyên region lẫn egress cost cho một dependency chatty.
+
+Thay vì chỉ mua discount, hãy hỏi data có thể cache/replicate gần consumer, API có quá fine-grained hay service boundary có đặt sai không. Cost ở đây là telemetry về architecture.
+
+Tương tự, log ingestion tăng 5 lần sau một release có thể là debug verbosity bị bật hoặc retry loop; FinOps signal nên có đường quay lại production investigation.
+
+## 20. Senior walkthrough: failover database thành công nhưng application vẫn outage
+
+Giả sử managed DB tự failover trong 45 giây và endpoint DNS trỏ writer mới. Dashboard provider báo healthy nhưng application lỗi thêm 8 phút.
+
+Evidence cho thấy connection pool giữ các TCP connection cũ; client driver không refresh DNS/reconnect nhanh; retry timeout dài làm worker bị giữ. Infrastructure failover đã hoàn thành, nhưng application recovery contract chưa hoàn thành.
+
+Fix nằm ở connection validation/reconnect, timeout/backoff và test failover end-to-end. Đây là bài học cốt lõi của managed service: provider chỉ sở hữu một phần causal chain; user-visible recovery phải được kiểm chứng ở consumer.
