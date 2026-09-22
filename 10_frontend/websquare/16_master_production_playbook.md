@@ -504,3 +504,205 @@ Intent
 Bao quanh flow đó là Scope, lifetime, security, performance, testing và deployment identity.
 
 Khi bạn có thể giữ tất cả boundary này rõ trong đầu, WebSquare không còn là một tập API khó nhớ. Nó trở thành một runtime có quy tắc mà bạn có thể reasoning, đo, test và vận hành một cách có hệ thống.
+
+---
+
+## 31. Master extension — thêm ba graph cho file, native và evidence
+
+Khi library mở rộng sang file transfer, hybrid app và observability, năm graph ban đầu vẫn đúng nhưng chưa đủ chi tiết cho production system hiện đại. Hãy bổ sung ba graph chuyên biệt.
+
+**Artifact graph** theo dõi file/upload/export artifact từ browser đến storage, metadata và business owner.
+
+**Native capability graph** theo dõi WebSquare intent → bridge request → native/plugin operation → callback/deep link → WebSquare reconciliation.
+
+**Evidence graph** theo dõi user action → request/correlation ID → client log → network → server/native log → metric/trace.
+
+Một incident có thể giao cả ba:
+
+```text
+User export report trong hybrid app
+→ server tạo file
+→ native download
+→ app background
+→ callback về page cũ
+→ log không có requestId
+```
+
+Nếu chỉ nhìn Submission graph, bạn sẽ bỏ lỡ storage/native/lifetime boundary.
+
+## 32. Identity model mở rộng
+
+Master track mới cần phân biệt thêm:
+
+```text
+attachment/file ID
+physical storage key
+upload session/intent ID
+export job ID
+native operation request ID
+app/web build ID
+correlation/trace ID
+```
+
+`fileName`, `rowIndex`, `URL` hay callback function name không phải identity ổn định cho các operation dài.
+
+Rule tổng quát:
+
+```text
+identity phải sống ít nhất lâu bằng operation mà nó đại diện
+```
+
+Nếu operation sống qua page reload/background, identity không thể chỉ là local variable trong page.
+
+## 33. Case study K — Upload thành công nhưng Save fail
+
+User upload ba attachment, sau đó Save contract bị optimistic lock conflict. Storage đã có file nhưng contract transaction rollback.
+
+Nếu hệ thống không có staging/cleanup, ba file trở thành orphan.
+
+Reasoning:
+
+```text
+file transfer success ≠ business commit success
+```
+
+Fix architecture có thể là upload session/staging + promote sau commit hoặc compensating cleanup có expiry. Regression test phải kiểm tra storage/metadata sau failed Save, không chỉ UI message.
+
+## 34. Case study L — Excel import “thành công” nhưng dữ liệu sai cột
+
+User thêm một column ở đầu template. Import code map theo index nên `CUSTOMER_NAME` nhận giá trị của column khác. Parser không throw exception.
+
+Đây là silent semantic corruption, nguy hiểm hơn parse failure.
+
+Fix:
+
+```text
+version/header validation
+→ explicit column mapping
+→ type conversion
+→ business validation
+→ preview/error report
+→ commit
+```
+
+Test phải bao gồm reordered/missing/extra header, không chỉ happy template.
+
+## 35. Case study M — Hybrid eKYC callback về sau khi user đóng screen
+
+Page A start camera với `nativeRequestId=R1`. User chuyển screen. Native SDK hoàn tất và callback R1.
+
+Nếu bridge gateway gọi trực tiếp `scwin.onSuccess`, stale scope có thể không còn hoặc callback update nhầm screen instance mới.
+
+Fix boundary:
+
+```text
+native callback
+→ gateway
+→ resolve request owner/session
+→ owner còn valid?
+   ├─ yes → deliver result
+   └─ no  → persist/ignore theo workflow contract
+```
+
+Đây là stale Submission problem mở rộng qua native boundary.
+
+## 36. Case study N — Web deploy mới phá app native cũ
+
+Web build mới gọi plugin API V2 nhưng nhiều user chưa update app và chỉ có V1.
+
+Source web đúng, backend đúng, browser desktop đúng, chỉ hybrid app cũ fail.
+
+Root cause là release graph không chứa compatibility matrix.
+
+Fix architecture:
+
+```text
+capability/version handshake
+→ compatible adapter path
+→ minimum supported app policy
+→ telemetry appVersion + webBuildId
+```
+
+Web và native release cadence phải được coi là distributed deployment.
+
+## 37. Case study O — Production incident không reproduce được vì thiếu build identity
+
+User báo Save treo. Team kiểm tra source mới nhất và không thấy bug. Sau đó mới phát hiện browser đang dùng W-Pack artifact cũ từ cache node khác.
+
+Root cause không phải chỉ cache; root cause operational là evidence không ghi artifact identity.
+
+Sau incident cần thêm:
+
+```text
+build ID visible trong diagnostics
+resource version/cache policy
+correlation ID
+release dashboard
+runbook kiểm tra artifact trước source
+```
+
+Một fix tốt thay đổi khả năng phát hiện lần sau, không chỉ xóa cache một lần.
+
+## 38. Master design review cho file/hybrid/observability
+
+Khi PR thêm upload/export/native capability, review thêm các câu:
+
+```text
+File content, metadata và business row có cùng transaction không?
+Orphan cleanup ở đâu?
+Filename/path có được tin từ client không?
+Large export chạy client hay server và vì sao?
+Native callback có request identity không?
+Page đóng/background thì operation ra sao?
+Web build có compatible với app cũ không?
+Bridge expose capability tối thiểu chưa?
+Sensitive data có đi qua log/JS global không?
+Nếu incident xảy ra, request/build/file/native identity nào giúp trace?
+```
+
+Đây là những câu hỏi architecture, không phải framework trivia.
+
+## 39. Master capstone mở rộng
+
+Mở rộng mini enterprise app ở section 27 bằng ba capability.
+
+Thứ nhất, thêm attachment staging cho Employee Detail. Upload trước Save, fail Save bằng version conflict và chứng minh orphan cleanup đúng.
+
+Thứ hai, thêm Excel import cho Employee Search. File phải qua header/schema validation, preview invalid rows và chỉ commit khi user xác nhận.
+
+Thứ ba, giả lập hybrid identity verification. Fake native bridge trả callback chậm, callback sau page close, permission denied và app-version mismatch.
+
+Cuối cùng thêm observability:
+
+```text
+screenInstanceKey
+requestId
+uploadSessionId
+nativeRequestId
+webBuildId
+engineBuild
+elapsed stage timings
+```
+
+Tạo ba runbook và fault-inject để người khác có thể điều tra mà không đọc source trước.
+
+Nếu capstone chỉ chạy happy path thì chưa phải Master.
+
+## 40. Master definition sau khi mở rộng đến chapter 19
+
+Một WebSquare engineer ở mức Master không được định nghĩa bởi số API nhớ được. Người đó có thể:
+
+```text
+mô hình hóa state và owner;
+phân biệt identity theo lifetime;
+thiết kế page/data/server/file/native contract;
+reason async ordering và transaction ambiguity;
+đo performance thay vì đoán;
+coi browser/native client là untrusted;
+thiết kế compatibility giữa engine/web/native/backend;
+truy vết incident bằng correlation và artifact identity;
+biến incident thành regression guard/runbook;
+đọc official API/release note đúng build khi exact behavior cần xác minh.
+```
+
+Từ đây, chapter mới chỉ nên được thêm nếu nó mở một boundary hoặc mental model chưa được library giải thích. Danh sách API dài, workaround riêng của một project hoặc copy nguyên reference không làm tăng mastery.
