@@ -209,3 +209,59 @@ Khi backend rời pool để deploy hoặc failover, ngừng gửi **connection 
 Một sequence thường mong muốn là: endpoint ngừng nhận work mới, routing state hội tụ, existing connection/in-flight work có grace period, rồi process mới đóng listener và thoát. Với long-lived stream/WebSocket, contract cần rõ có cho phép sống tới hết session, gửi reconnect signal hay cưỡng bức close sau deadline.
 
 Production evidence nên nối `readiness/drain state → endpoint membership → active connection/stream → process termination`. Nếu chỉ nhìn Pod termination timestamp, ta có thể bỏ lỡ việc proxy vẫn reuse connection cũ hoặc client reconnect storm sau cutover.
+
+## 28. Egress source identity vừa là security contract vừa là capacity contract
+
+Nhiều hệ thống bên ngoài allowlist theo source IP, trong khi workload nội bộ có thể đi qua node SNAT, NAT gateway hoặc egress proxy. Vì vậy “IP của service” thường không phải thuộc tính cố định của Pod mà là kết quả của egress topology. Nếu autoscaling hoặc failover chuyển workload sang một NAT pool khác, request có thể bị từ chối dù application và DNS đều khỏe.
+
+Cùng một source IP còn có capacity hữu hạn cho translation/port mapping. Gom hàng nghìn workload qua một vài egress address giúp policy đơn giản nhưng tạo shared failure domain. Mở thêm source IP có thể tăng capacity, nhưng lại thay đổi allowlist/audit contract với dependency bên ngoài.
+
+Platform cần coi egress identity như capability được quản lý: workload nào dùng pool nào, destination nào yêu cầu stable identity, capacity/port utilization ra sao và failover có giữ cùng policy contract không. Security và networking gặp nhau ở cùng một boundary.
+
+## 29. DNS cache stampede có thể biến TTL expiry thành traffic burst
+
+Cache giảm tải resolver, nhưng nếu rất nhiều process nhận cùng TTL và cùng hết hạn gần một thời điểm, chúng có thể đồng loạt query lại. Khi autoscaling tạo hàng nghìn instance hoặc record có TTL quá thấp, resolver/authoritative DNS có thể nhận burst lớn dù request rate business không đổi.
+
+Failure chain có thể là `TTL expiry → synchronized lookup → resolver saturation → lookup latency/failure → application retry → resolver load tăng thêm`. Vì vậy giảm TTL không phải luôn làm migration “an toàn hơn”; nó đổi freshness lấy query load và làm control loop nhạy hơn.
+
+Evidence cần tách cache hit/miss, query rate, resolver latency/error và application retry. Cơ chế giảm burst có thể gồm cache hierarchy, prefetch/refresh phù hợp, jitter ở refresh path hoặc capacity resolver đủ cho miss storm. Mục tiêu là tránh đồng bộ hóa client quanh cùng một expiry boundary.
+
+## 30. TCP listen queue và accept queue tạo saturation trước khi business handler chạy
+
+Một process có thể đang listen trên port nhưng chưa chắc nhận connection mới kịp. Kernel giữ state cho connection đang handshake và connection đã hoàn tất handshake nhưng chưa được application `accept()`. Khi queue tương ứng đầy, client có thể thấy connect latency, retransmission hoặc timeout trước khi request chạm application handler.
+
+Điều này giải thích trường hợp health metric business nhìn bình thường nhưng connection setup xấu dưới burst. CPU trung bình thấp cũng không loại trừ accept bottleneck nếu event loop/thread accept bị block hoặc queue limit quá nhỏ so với burst shape.
+
+Evidence nên nối SYN/retransmission, listen/accept queue, socket state, process scheduling và request arrival ở application. Tăng backlog mù quáng chỉ dời queue sang kernel; nếu application không drain đủ nhanh, latency vẫn tích lũy. Fix phải nhắm vào service rate, admission hoặc burst absorption phù hợp.
+
+## 31. Connection budget có thể reasoning bằng arrival rate và holding time
+
+Số connection đồng thời không chỉ phụ thuộc request rate. Theo intuition của Little's Law, concurrency xấp xỉ arrival rate nhân thời gian mỗi unit giữ resource. Nếu service gọi dependency 2.000 lần/giây và mỗi call giữ connection trung bình 100 ms, order-of-magnitude concurrency đã khoảng 200 trước retry, tail latency hoặc pool wait.
+
+Khi latency tăng từ 100 ms lên 1 giây mà arrival rate giữ nguyên, số work/connection cần giữ có thể tăng khoảng mười lần. Đây là lý do downstream chậm có thể làm caller cạn socket/thread/pool dù traffic user không tăng. Retry còn tăng effective arrival rate, tạo feedback dương.
+
+Capacity planning nên có budget cho pool, file descriptor, ephemeral/SNAT port, conntrack và downstream concurrency thay vì chỉ nhìn bandwidth. Một network path có băng thông dư vẫn có thể chết vì stateful resource exhaustion.
+
+## 32. Keep-alive stale connection tạo failure sau cutover dù DNS đã đúng
+
+Connection reuse giảm handshake cost nhưng giữ state lâu hơn topology. Sau failover hoặc endpoint replacement, pool có thể chứa connection tới backend cũ, half-closed socket hoặc path đã không còn hợp lệ. Request đầu tiên reuse connection stale có thể fail rồi request sau mới reconnect thành công, tạo pattern lỗi rải rác khó thấy.
+
+Pool cần lifecycle contract: idle timeout, max connection age khi cần, validation/retry semantics và behavior khi nhận GOAWAY/RST. Timeout quá ngắn làm connection churn/SNAT pressure; quá dài làm cutover/draining chậm và giữ stale state lâu.
+
+Vì vậy tuning keep-alive phải nối ba mục tiêu: giảm setup cost, giới hạn resource churn và bảo đảm topology change hội tụ trong thời gian chấp nhận được.
+
+## 33. Network evidence phải được đọc theo layer và theo cohort
+
+Một dashboard aggregate có thể nói error 5%, nhưng 5% đó có thể tập trung ở một node, một NAT gateway, một resolver, một AZ, một protocol version hoặc một destination IP. Dimension đúng thường quan trọng hơn thêm metric mới.
+
+Khi debug, nên xây evidence chain theo thứ tự `resolve → connect → TLS → route → pool/queue → application → dependency`, rồi chia theo cohort như node/AZ/source IP/destination/revision. Packet-level evidence hữu ích khi cần chứng minh handshake/retransmission; proxy/access log hữu ích để xác định emitter/routing; trace giúp nối application dependency. Không layer nào một mình là “source of truth” cho toàn request path.
+
+Operational implication là instrumentation phải giữ đủ identity để correlate các perspective. Nếu NAT log chỉ có translated tuple còn application log chỉ có request ID mà không có cách nối chúng, incident sẽ tốn thời gian ở bước chứng minh hai observation thuộc cùng flow.
+
+## 34. Senior walkthrough: autoscale làm external API lỗi dù server bên ngoài khỏe
+
+Giả sử traffic tăng làm service từ 50 lên 300 Pod. Ngay sau scale-out, outbound call tới một partner bắt đầu timeout/403 theo từng nhóm Pod; partner báo backend khỏe. Nếu Pod mới nằm ở node/egress pool khác, hai hypothesis cần kiểm tra song song: source IP mới chưa nằm trong allowlist và shared NAT/SNAT capacity đã cạn do connection churn lúc scale-out.
+
+Đừng chỉ tăng replica thêm vì chính scale-out có thể tăng connection creation và fan-out qua cùng gateway. Hãy group failure theo node/source egress IP, kiểm tra partner access log, SNAT/conntrack utilization, connection reuse và effective retry rate. Nếu 403 chỉ theo source IP mới, đó là identity/policy mismatch; nếu connect timeout tăng cùng port allocation saturation, đó là capacity failure; hai failure còn có thể xảy ra đồng thời.
+
+Mental model cuối cùng là **network path có cả identity, state và queue**. Reachability nhị phân không đủ để reasoning production: một flow phải có đúng name, route, authority, connection state, capacity và deadline xuyên suốt đường đi.
