@@ -274,3 +274,74 @@ user impact reduced
 Nếu mở toàn bộ backlog ngay sau failover, recovery có thể tạo outage thứ hai. Nếu endpoint 200 nhưng data giữa các system lệch, recovery chưa complete. Nếu old writer chưa fenced, failover có thể tạo split brain.
 
 Incident/DR chapter giữ sequencing, exit criteria và validation; Distributed Systems canonical giải fencing/consistency mechanism; Platform Engineering có nhiệm vụ biến recovery pattern lặp lại thành workflow có idempotency, status và safe defaults.
+
+## 23. Route reasoning 13 — từ user contract tới SLO measurement correctness
+
+Một SLO có thể nhìn đẹp nhưng sai nếu denominator hoặc measurement window không đại diện user journey:
+
+```text
+user journey
+→ valid-event population
+→ good/bad semantics
+→ sensor boundary
+→ aggregation/window
+→ SLO state
+→ engineering action
+```
+
+Low-traffic service cần xem sample size/synthetic signal; asynchronous workload cần age/deadline chứ không chỉ request latency; composite journey cần vẽ mandatory/fallback path trước khi ghép availability.
+
+Observability/SRE giữ measurement semantics. Architecture quyết định path nào thật sự critical; Platform/Security cần biết SLO state có đáng tin trước khi dùng nó để freeze release hay tự động thay policy.
+
+## 24. Route reasoning 14 — từ self-service operation tới cancellation, compensation và adoption
+
+Distributed platform workflow không dừng ở create/retry:
+
+```text
+intent
+→ long-running operation
+→ partial side effects
+→ cancel / timeout / failure
+→ observe external state
+→ compensate | adopt | cleanup
+→ reconcile ownership
+```
+
+Cancellation có thể chỉ dừng controller chứ không đảo external API. Compensation phục hồi invariant nhưng không nhất thiết trở lại exact state cũ. Resource orphan cần adoption/quarantine semantics thay vì xóa mù.
+
+Khi platform control plane tự hỏng, route còn phải kéo dài tới bootstrap path: state backend, identity, artifact và recovery controller nào tồn tại ngoài failure domain. Đây là connection trực tiếp giữa Platform Engineering, Distributed Systems và Incident/DR.
+
+## 25. Route reasoning 15 — từ secret/policy change tới security migration lifecycle
+
+Security change cũng là state transition:
+
+```text
+new credential/policy
+→ staged distribution or audit
+→ consumer/policy evidence
+→ cutover/enforce
+→ revoke old / remove compatibility
+→ verify no stale authority
+```
+
+Rotation chưa complete nếu consumer vẫn dùng credential cũ. Policy audit mode chưa bảo vệ invariant nếu không có đường sang enforce. Break-glass chưa kết thúc nếu privileged session/token chưa expire.
+
+Security chapter giữ trust/authority lifecycle; Observability cung cấp evidence; Platform biến pattern này thành default workflow để security không phụ thuộc thao tác thủ công khó kiểm chứng.
+
+## 26. Route reasoning 16 — từ symptom tới causal confidence
+
+Production investigation trưởng thành đi xa hơn timeline:
+
+```text
+symptom
+→ hypothesis
+→ expected mechanism
+→ detector / cohort
+→ intervention or counterfactual
+→ observed response
+→ causal confidence + uncertainty
+```
+
+Deploy trước incident là correlation; causal graph phải giải thích arrow. Restart giúp service khỏe chỉ chứng minh một state nào đó bị reset, không tự chứng minh memory leak. Fault injection chỉ có giá trị khi fault boundary và control cohort được verify.
+
+Production Practice giữ discipline này; Observability quyết định detector coverage; Incident process điều phối state mutation để intervention của nhiều operator không phá chính evidence đang dùng để suy luận.
