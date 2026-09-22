@@ -169,3 +169,9 @@ Rational expressions nối đại số với calculus qua limits và asymptotes.
 ## Common Misconceptions
 
 Rút gọn `(x-1)` không tự động thêm lại `x=1` vào domain. Zero của denominator không phải lúc nào cũng là vertical asymptote; factor có thể cancel và tạo hole. Tiệm cận ngang không có nghĩa graph không bao giờ cắt đường tiệm cận. “So bậc” chỉ là hệ quả của limit, không phải quy tắc độc lập cần học thuộc.
+
+## Liên kết kiến thức
+
+Prerequisite gần nhất là [Phương trình và bất phương trình](./01_equations_and_inequalities.md), [Đa thức và phân tích nhân tử](./04_polynomials_and_factorization.md) và [Hàm số](../02_functions/00_function_concept.md). Khi chuyển sang behavior ở singularity và vô cực, đọc [Giới hạn và tính liên tục](../05_calculus/00_limits_and_continuity.md).
+
+Partial fractions và pole-like behavior được dùng tiếp trong [Phương trình vi phân](../05_calculus/05_differential_equations.md), [Laplace/Z-transform và Dynamic Systems](../09_connections/06_laplace_z_transform_and_dynamic_systems.md), còn vấn đề singularity/conditioning nối trực tiếp với [Toán số](../08_optimization_numerical/02_numerical_methods_and_error.md).
