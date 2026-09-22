@@ -87,3 +87,61 @@ Không nên chọn vanity metric như “số cluster được quản”. Platfo
 CPU headroom, replica, multi-zone, test time, review effort và engineering attention đều là budget. SLO cung cấp objective để phân bổ chúng. Nếu service vượt xa SLO với cost cao, có thể đang over-engineer. Nếu budget luôn cháy, architecture/change process có debt.
 
 SRE trưởng thành không phải làm mọi service cực kỳ redundant; nó làm mức reliability **có chủ đích, đo được và phù hợp giá trị**.
+
+## 15. Worked example: 99.9% thực sự cho phép bao nhiêu failure
+
+Với SLO time-based 99.9% trong 30 ngày, tổng cửa sổ có 43.200 phút. Phần 0,1% tương ứng khoảng 43,2 phút không đáp ứng SLO. Con số này chỉ đúng nếu SLI thực sự là time-based availability; request-based SLI phải tính theo event.
+
+Nếu có 1.000.000 request hợp lệ trong cửa sổ và SLO là 99.9% good events, error budget là 1.000 bad events. Một outage 5 phút ở giờ thấp điểm và một outage 5 phút ở giờ cao điểm có thể tiêu budget request-based rất khác nhau. Đây là lý do phải định nghĩa SLI trước rồi mới diễn giải “bao nhiêu downtime”.
+
+## 16. Burn rate là tốc độ tiêu budget tương đối
+
+Giả sử SLO cho phép bad-event ratio 0,1%. Nếu trong một window service đang có 1% bad event, nó đang burn nhanh khoảng 10 lần tốc độ bền vững. Nếu giữ nguyên, error budget của cả cửa sổ dài sẽ bị tiêu nhanh hơn nhiều so với thiết kế.
+
+Burn rate giúp thống nhất severity theo SLO. Một spike 5% kéo dài vài phút có thể đáng page ngay vì burn cực nhanh; 0,12% kéo dài ngắn có thể chưa cần đánh thức người trực nếu budget/window còn khỏe. Alert policy thực tế thường kết hợp nhiều window để vừa nhạy với outage lớn vừa tránh noise.
+
+Điều quan trọng không phải thuộc một bộ threshold cố định, mà hiểu ratio:
+
+```text
+burn rate = observed bad-event rate / allowed bad-event rate
+```
+
+## 17. Little's Law nối queue với latency
+
+Trong một hệ thống ổn định, Little's Law cho một mental model rất mạnh:
+
+```text
+L = λ × W
+```
+
+`L` là lượng work trung bình đang ở trong hệ thống, `λ` là throughput/arrival rate trung bình, `W` là thời gian trung bình một work item ở trong hệ thống. Đây không phải công thức để dự đoán mọi spike, mà là sanity check cho queue/capacity.
+
+Ví dụ service xử lý trung bình 100 request/s và mỗi request ở trong system 0,2 giây thì concurrency trung bình xấp xỉ 20. Nếu latency tăng lên 1 giây trong khi throughput tương tự, số request in-flight trung bình tăng lên khoảng 100. Connection pool, thread pool và memory pressure có thể tăng theo dù traffic không đổi.
+
+Đây là lý do latency degradation tự nó có thể tạo thêm resource pressure.
+
+## 18. Khi arrival rate lớn hơn service rate, backlog tăng theo thời gian
+
+Nếu producer đưa vào `λ` work/giây nhưng consumer chỉ xử lý `μ` work/giây và `λ > μ`, queue sẽ tăng gần theo chênh lệch `λ - μ` trong giai đoạn đó. Autoscaling chỉ cứu được nếu cuối cùng làm `μ` vượt `λ` trước khi queue age vi phạm SLO hoặc storage/TTL bị chạm.
+
+Ví dụ queue nhận 1.200 message/s nhưng consumer chỉ hoàn thành 1.000 message/s. Backlog tăng khoảng 200 message mỗi giây. Sau 10 phút đã có khoảng 120.000 message tích thêm, chưa tính traffic biến động. “Queue vẫn hoạt động” không có nghĩa system healthy; message age mới phản ánh user delay.
+
+## 19. Retry cần một budget riêng
+
+Retry làm arrival rate mà downstream nhìn thấy lớn hơn user traffic. Nếu mỗi request có tối đa ba attempt, outage downstream có thể khiến request rate thực tế tiến gần nhiều lần traffic gốc. Nhiều layer cùng retry — SDK, service mesh, load balancer, application — còn có thể nhân lên mạnh hơn.
+
+Một reliability design tốt xác định retry budget: operation nào retry được, tổng deadline, attempt tối đa, backoff/jitter và layer nào sở hữu retry. Khi downstream saturation, load shedding/circuit breaking có thể quan trọng hơn cố tăng success bằng retry.
+
+## 20. Dependency budget phải được phân bổ có chủ đích
+
+Một checkout service có SLO 99.9% nhưng gọi tuần tự nhiều dependency critical thì end-to-end reliability chịu ảnh hưởng của tất cả dependency. Không thể chỉ đặt cho mỗi dependency cùng 99.9% rồi kỳ vọng composition vẫn đạt 99.9%.
+
+Có ba cách xử lý chính: dependency phải mạnh hơn SLO end-to-end; system thêm redundancy/fallback/cache; hoặc flow được thiết kế để dependency không critical, ví dụ recommendation fail thì checkout vẫn tiếp tục.
+
+Đây là nơi SLO trở thành input cho architecture. SLO không phải dashboard decoration; nó quyết định chỗ nào cần redundancy, chỗ nào có thể degrade và chỗ nào cost thêm không tạo giá trị.
+
+## 21. Capacity test phải đo saturation cliff, không chỉ peak throughput
+
+Một load test chỉ hỏi “tối đa bao nhiêu request/s” dễ bỏ qua behavior khi vượt ngưỡng. Điều quan trọng hơn là khi load tăng, latency, error, queue, GC, connection pool và downstream pressure thay đổi theo curve nào; khi load giảm lại system có hồi phục hay không.
+
+Một service có thể đạt 5.000 request/s trong test ngắn nhưng sau vài phút connection queue tích tụ, tail latency tăng và retry đẩy database vào collapse. Capacity usable phải là vùng hệ thống giữ SLO ổn định với headroom cho rollout/failure, không phải con số throughput lớn nhất từng thấy.
