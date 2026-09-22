@@ -104,3 +104,8 @@ File này dùng để tra nhanh thuật ngữ, không thay thế chapter giải 
 | Capability negotiation | Consumer/orchestrator xác minh capability được một cell/version hỗ trợ trước admission/execution thay vì giả định mọi nơi đã nâng đồng thời. |
 | Status API | Evidence surface machine-readable mô tả actual state/condition/observed revision; cần compatibility discipline giống spec/intent API. |
 | Negative-space verification | Kiểm tra các state/hành vi bị cấm sau recovery như old writer còn ghi, traffic còn tới failure domain cũ hoặc credential revoked vẫn hoạt động. |
+| Egress identity | Source identity mà dependency bên ngoài thực sự quan sát sau SNAT/NAT/egress proxy; vừa ảnh hưởng allowlist/audit vừa gắn với failure domain và capacity của egress path. |
+| DNS cache stampede | Burst lookup khi nhiều cache/client hết hạn gần đồng thời, có thể làm resolver saturation và kích hoạt retry amplification. |
+| Accept queue | Queue kernel giữ connection đã hoàn tất handshake nhưng chưa được application `accept()`; saturation có thể làm connect path xấu trước business handler. |
+| Connection budget | Giới hạn concurrency/state cho socket, pool, file descriptor, ephemeral/SNAT port, conntrack và downstream; cần tính cùng arrival rate và holding time. |
+| Stale connection | Connection được reuse nhưng topology/peer state đã thay đổi hoặc socket đã half-closed; thường gây lỗi rải rác sau cutover/failover cho tới khi pool refresh. |
