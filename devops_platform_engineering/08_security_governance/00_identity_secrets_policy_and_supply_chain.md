@@ -135,3 +135,51 @@ Giả sử repo public nhận PR từ fork. Workflow chạy test trên code chư
 Boundary an toàn hơn là tách untrusted verification khỏi trusted release. PR job dùng permission tối thiểu, không nhận production secret; sau merge vào protected branch, trusted workflow checkout exact revision và build/publish bằng identity riêng. Artifact promotion sau đó dựa trên digest/provenance thay vì tin output từ untrusted job.
 
 Điểm cốt lõi không phụ thuộc GitHub Actions/Jenkins/GitLab CI: **code chưa được trust không được tự động nhận capability của production trust domain**.
+
+## 21. Confused deputy: principal hợp lệ vẫn có thể làm việc không nên làm
+
+Một service trung gian có quyền mạnh có thể bị user ít quyền lợi dụng để thực hiện action thay họ. Đây là confused-deputy problem. Ví dụ platform provisioner có quyền tạo database ở nhiều account; nếu API chỉ nhận `accountId` từ request mà không kiểm tra caller được phép target account nào, user có thể khiến provisioner dùng authority hợp lệ cho mục tiêu không hợp lệ.
+
+Authentication của caller và authentication của provisioner đều có thể đúng, nhưng authorization chain vẫn sai. Platform phải bind **request intent → caller identity → allowed target/capability** trước khi dùng automation identity mạnh hơn.
+
+Do đó audit log nên giữ cả actor gốc và execution identity. Nếu log chỉ thấy `platform-controller` tạo resource, forensic không trả lời ai đã yêu cầu và policy nào cho phép.
+
+## 22. Identity propagation cần tránh biến service trung gian thành superuser mù context
+
+Trong một request xuyên nhiều service, downstream cần biết authority nào thật sự được chuyển tiếp. Có ba pattern khác nhau: service gọi bằng identity riêng; service impersonate/delegate một phần identity user; hoặc service trao đổi token thành capability hẹp hơn.
+
+Không nên forward nguyên token quyền rộng qua mọi hop chỉ vì tiện. Mỗi hop cần audience đúng, TTL ngắn và scope tối thiểu. Downstream cũng không nên tin một header như `X-User` chỉ vì nó đến từ internal network nếu ingress/service trước đó có thể bị compromise.
+
+Mental model là **identity propagation không bằng authority propagation**. Biết request bắt nguồn từ user A không tự động nghĩa service B được phép làm mọi thứ A làm, và ngược lại service B có quyền riêng cũng không được dùng quyền đó thay A nếu policy không cho phép.
+
+## 23. TOCTOU: policy check đúng ở thời điểm A có thể sai ở thời điểm B
+
+Time-of-check to time-of-use xuất hiện khi hệ thống kiểm tra policy/state rồi action xảy ra sau đó trên state đã thay đổi. Ví dụ pipeline verify artifact digest/signature lúc approve, nhưng deploy step sau lại resolve mutable tag; hoặc platform check quota rồi async provision nhiều phút sau trong khi capacity/ownership đã đổi.
+
+Cách giảm race là bind decision với immutable identity/version: artifact digest, generation/resource version, policy revision, request id và target identity. Với action dài, controller có thể cần revalidate invariant trước bước irreversible thay vì tin check ban đầu mãi mãi.
+
+Security policy vì vậy không chỉ là “đã check hay chưa” mà còn là **check cái gì, ở revision nào, và action sử dụng đúng object đã được check hay không**.
+
+## 24. Revocation không tức thời nếu verifier/cache/session còn state cũ
+
+Credential ngắn hạn giảm cửa sổ rủi ro nhưng revoke một identity không bảo đảm mọi connection/token hiện hữu biến mất ngay. JWT self-contained có thể còn hợp lệ tới expiry; TLS connection đã establish có thể sống lâu; authorization cache có TTL; cloud control plane có propagation delay.
+
+Incident response phải biết revocation semantics thực tế của từng layer. Nếu cần containment nhanh, có thể phải vừa revoke role/key, vừa chặn network/session, rotate downstream credential hoặc restart connection-owning workload tùy threat model.
+
+Đây là lý do TTL, cache duration và connection lifetime là security parameter, không chỉ performance parameter.
+
+## 25. Security boundary cần xét control-plane compromise và data-plane compromise khác nhau
+
+Nếu application pod bị compromise, attacker có thể lấy workload token, gọi dependency trong scope và đọc data process đang thấy. Nếu GitOps/controller/CI release identity bị compromise, attacker có thể thay desired state của hàng trăm workload — blast radius khác hẳn.
+
+Control-plane principal thường cần permission rộng để tự động hóa, nên phải được cô lập, monitor và chia scope mạnh hơn: per-environment identity, protected branch, separate signer/builder role, bounded controller permission và high-signal audit.
+
+Một design “mọi automation dùng chung admin role cho tiện” biến compromise nhỏ thành organizational blast radius. Least privilege có giá trị nhất ở các principal có fan-out lớn.
+
+## 26. Security evidence phải chứng minh invariant, không chỉ chứng minh tool đã chạy
+
+Scan job xanh không chứng minh artifact production chính là artifact đã scan. Policy test pass không chứng minh production admission đang chạy đúng revision. Secret manager tồn tại không chứng minh workload không còn secret hard-coded.
+
+Evidence chain tốt nối object cụ thể: source revision → build provenance → artifact digest → signature/attestation → deployment digest → runtime identity → authorization decision. Mỗi bước có thể hỏi “evidence này bound vào subject nào?”.
+
+Khi audit/security review chỉ thu screenshot dashboard hoặc tên sản phẩm mà không bind được tới artifact/workload/identity cụ thể, control có thể chỉ tồn tại trên giấy. Platform security trưởng thành ưu tiên **verifiable linkage** hơn số lượng security tool.
