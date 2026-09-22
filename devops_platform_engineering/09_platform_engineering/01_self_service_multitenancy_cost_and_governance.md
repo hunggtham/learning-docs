@@ -155,3 +155,59 @@ Giả sử team analytics tạo hàng chục nghìn short-lived Job mỗi giờ.
 Nếu chỉ nhìn namespace CPU quota, tenant analytics “không vi phạm”. Failure nằm ở shared control-plane resource chưa được accounting.
 
 Mitigation có thể rate-limit creation, batch work, tách workload class sang cluster/pool riêng hoặc tăng control-plane capacity. Long-term contract cần quota theo object/API behavior và SLO platform. Đây là lý do multi-tenancy economics phải tính externality, không chỉ utilization compute.
+
+## 24. Fairness khác với quota: ai được phục vụ khi resource khan hiếm?
+
+Quota trả lời tenant có thể sở hữu tối đa bao nhiêu resource; fairness trả lời khi nhiều tenant cùng tranh resource tại một thời điểm thì scheduler/queue phân phối ra sao. Hai tenant đều ở dưới quota vẫn có thể gây starvation nếu một tenant luôn submit work trước hoặc giữ connection lâu.
+
+Shared CI runner, deployment queue, API server và database proxy đều cần fairness model. Có thể dùng weighted queue, priority class, per-tenant concurrency hoặc reservation. Không có một thuật toán universal; contract phải phản ánh business criticality mà vẫn tránh tenant priority cao chiếm mọi capacity vô thời hạn.
+
+Fairness metric nên nhìn wait time/service rate theo tenant hoặc workload class, không chỉ aggregate throughput. Aggregate 10.000 job/giờ có thể che việc một team chờ 40 phút còn team khác gần như không chờ.
+
+## 25. Isolation level nên được chọn theo blast-radius budget
+
+Thay vì hỏi “shared hay dedicated?”, hãy hỏi organization chấp nhận một failure ảnh hưởng tối đa bao nhiêu workload/tenant. Từ đó mới chọn cell, account, cluster, node pool, ingress hay observability partition phù hợp.
+
+Ví dụ workload Tier-0 có thể cần cell riêng vì một policy rollout hoặc noisy tenant không được ảnh hưởng nó; workload internal low-criticality có thể share mạnh hơn để tăng utilization. Isolation là một reliability/economic tier, không chỉ security option.
+
+Platform catalog có thể encode `isolationClass` hoặc `criticalityTier` ở mức intent. User không cần chọn raw topology, nhưng contract phải nói blast radius và support expectation tương ứng.
+
+## 26. Tenant-aware SLO ngăn aggregate metric che unfairness
+
+Một shared platform có thể đạt 99.9% aggregate success nhưng một tenant nhỏ bị lỗi 20% nếu traffic tenant lớn thống trị denominator. Vì vậy ngoài global SLO, cần slice theo tenant class, region hoặc critical journey khi đó là boundary product quan trọng.
+
+Không nên tạo SLO riêng cho hàng nghìn tenant nếu operational cost quá lớn; có thể dùng cohort/tier hoặc fairness guardrail. Mục tiêu là phát hiện systematic isolation failure mà aggregate metric che mất.
+
+Đây cũng áp dụng cho provisioning latency: median toàn platform thấp không có ý nghĩa nếu một account/region luôn bị queue starvation.
+
+## 27. Recovery capacity là một shared resource cần reservation
+
+Trong incident, nhiều tenant có thể cùng cần scale, recreate pod, restore database hoặc pull image. Nếu platform chỉ capacity cho steady state, recovery fan-out có thể làm registry, API server, node provisioning hoặc backup service saturation đúng lúc cần nhất.
+
+Capacity planning multi-tenant nên có **recovery concurrency budget**: bao nhiêu workload có thể restart/reconcile/restore đồng thời mà control plane và dependency vẫn giữ SLO. Game day nên test burst recovery, không chỉ normal traffic.
+
+Điều này giải thích vì sao overcommit quá mạnh hoặc quota “vừa đủ ngày thường” có thể biến một failure nhỏ thành recovery storm.
+
+## 28. Cost allocation phải tính externality chứ không chỉ resource sở hữu trực tiếp
+
+Một tenant có thể dùng ít CPU nhưng tạo log cardinality cực cao, egress lớn, API request storm hoặc nhiều short-lived object khiến shared service phải scale. Nếu chargeback chỉ dựa trên CPU/RAM, incentive bị lệch.
+
+Không nhất thiết billing phải chính xác tuyệt đối từng byte. Quan trọng là chọn driver đủ gần causal cost: ingestion GB, retained GB-day, egress, build minute, object/API volume hoặc dedicated capacity reservation.
+
+Khi externality không được visible, team gây cost có ít feedback để tối ưu còn central platform phải hấp thụ bill và toil.
+
+## 29. Idle capacity không luôn là waste nếu nó mua được option value
+
+Capacity chưa dùng có thể là headroom cho failover, rollout, incident recovery hoặc seasonal spike. FinOps nhìn utilization thấp rồi cắt toàn bộ spare capacity có thể phá reliability contract.
+
+Cần phân biệt **unowned idle** — resource thừa do request sai hoặc lifecycle leak — với **intentional reserve** — capacity được giữ vì failure model/SLO. Metadata và capacity model nên làm reserve explicit để cost review không nhầm nó với waste.
+
+Senior discussion về cost nên hỏi “resource này mua capability gì?” thay vì “tại sao utilization không 90%?”.
+
+## 30. Governance tốt cần lifecycle cho chính policy và exception
+
+Policy có owner, version, rollout ring, telemetry, deprecation và rollback giống software. Exception cũng là resource: có requester, reason, scope, expiry, reviewer và evidence cho việc gia hạn.
+
+Nếu exception không bao giờ hết hạn, policy dần trở thành nominal. Nếu policy không có migration path, platform tạo shadow workflow và bypass. Governance trưởng thành tối ưu **risk reduction trên flow**, không tối đa số rule.
+
+Một signal tốt là exception rate theo policy. Nếu một rule liên tục cần exception hợp lệ, rule hoặc golden path có thể đang model sai thực tế và cần product discovery lại.
