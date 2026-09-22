@@ -201,6 +201,14 @@ useEffect(() => {
 
 Connection phụ thuộc `roomId`; notification đọc `theme` mới nhất mà không reconnect chỉ vì theme đổi. Không dùng API này để lách dependency sai.
 
+### 13A. Effect Event là event do Effect phát ra, không phải “callback ổn định để khỏi thêm dependency”
+
+Điểm khó của `useEffectEvent` là nó giải quyết **hai loại reactivity khác nhau trong cùng một Effect**. Phần setup connection phải reactive theo `roomId`: đổi room thì resource bên ngoài phải disconnect/reconnect. Callback notification lại chỉ cần đọc `theme` mới nhất tại thời điểm sự kiện `connected` xảy ra; `theme` không phải configuration của connection. Nếu cho `theme` vào dependency, đổi theme làm reconnect vô nghĩa. Nếu cố tình bỏ `theme` khỏi dependency, closure có thể stale và linter mất khả năng bảo vệ.
+
+Effect Event tách hai semantics đó. Callback được khai báo bằng `useEffectEvent` luôn đọc props/state mới nhất khi được gọi, nhưng chính Effect Event **không được đưa vào dependency array**. Nó cũng chỉ được khai báo trong cùng component hoặc Custom Hook với Effect sở hữu nó. Vì đây là contract correctness, project dùng API này nên chạy phiên bản `eslint-plugin-react-hooks` đủ mới để linter hiểu Effect Events.
+
+Một dấu hiệu dùng sai là bọc gần như mọi function bằng `useEffectEvent` chỉ để dependency array ngắn lại. Hãy hỏi trước: “Đây có thật sự là một event phát sinh từ synchronization process không?” Nếu value quyết định resource nào được mở, URL nào được subscribe, timer interval bao nhiêu hoặc observer theo dõi node nào, value đó vẫn là dependency của Effect.
+
 ## 14. `<Activity />`
 
 React 19.2 giới thiệu Activity để quản lý subtree visible/hidden theo semantics React hiểu, cho phép giữ state trong những flow phù hợp thay vì unmount hoàn toàn.
@@ -213,19 +221,81 @@ React 19.2 giới thiệu Activity để quản lý subtree visible/hidden theo 
 
 Khác conditional rendering vì conditional có thể unmount và mất state. API mới cần kiểm tra version compatibility trước khi dùng trong library public.
 
+### 14A. Hidden không có nghĩa “component vẫn chạy bình thường nhưng CSS `display:none`”
+
+Khi Activity chuyển sang `hidden`, React ẩn children, unmount các Effect của subtree và trì hoãn các update của phần ẩn tới lúc scheduler không còn việc quan trọng hơn. State của subtree vẫn được giữ, nên khi quay lại `visible`, người dùng có thể nhận lại draft/input state thay vì bắt đầu từ đầu. Đây là điểm khác cả với conditional rendering — vốn unmount subtree — lẫn một wrapper CSS đơn thuần — vốn thường để subscriptions, timers và Effects tiếp tục chạy dù UI không nhìn thấy.
+
+Mental model hữu ích là **“preserve state, suspend active side effects, lower scheduling priority”**. Điều này làm Activity phù hợp cho tab/screen có khả năng quay lại, hoặc pre-render màn hình có khả năng được mở tiếp theo. Nhưng giữ state và tree cũng tiêu tốn memory; nếu subtree chứa dữ liệu lớn và xác suất quay lại thấp, unmount thật có thể rẻ hơn. Activity là một trade-off giữa resume latency, background work và memory footprint chứ không phải mặc định thay thế mọi `condition ? <Page /> : null`.
+
 > ### Version Note — React 19.2
 >
 > `useEffectEvent` và `<Activity />` được thêm ở **React 19.2**. Nếu package khai hỗ trợ React 19.0+, không được import chúng vô điều kiện rồi kỳ vọng consumer 19.0/19.1 chạy được. Đây là ví dụ điển hình cho việc minor version React 19 có thể bổ sung public feature chứ không chỉ bug fix.
 
 ## 15. View Transitions trong React 19.3
 
-React 19.3 bổ sung integration View Transitions để phối hợp chuyển đổi hình ảnh giữa UI states với browser capability. Hãy coi đây là progressive enhancement, kiểm tra browser support và `prefers-reduced-motion`, đồng thời đảm bảo animation có thể bị interrupt mà UI vẫn đúng.
+React 19.3 đưa `<ViewTransition>` thành API stable để React phối hợp với browser View Transition API khi UI enter, exit, thay đổi hoặc một named element được “share” giữa hai vị trí.
 
-Animation không thay thế loading architecture.
+Điểm quan trọng là **không phải mọi state update đều animate**. React chỉ kích hoạt View Transition khi thay đổi đó thuộc một Transition, ví dụ update bên trong `startTransition`, reveal của Suspense hoặc update đi qua `useDeferredValue`. Urgent update không bị buộc chờ animation vì phản hồi trực tiếp với input vẫn phải xuất hiện ngay.
+
+```jsx
+import {
+  startTransition,
+  ViewTransition,
+} from "react";
+
+function ProductSwitcher() {
+  const [productId, setProductId] = useState("a");
+
+  function openProduct(nextId) {
+    startTransition(() => {
+      setProductId(nextId);
+    });
+  }
+
+  return (
+    <>
+      <ProductPicker onSelect={openProduct} />
+      <ViewTransition>
+        <ProductDetails productId={productId} />
+      </ViewTransition>
+    </>
+  );
+}
+```
+
+Default behavior là cross-fade; production UI có thể cấu hình riêng enter/exit/update/share và, khi cần, gắn **transition type** bằng `addTransitionType` để phân biệt nguyên nhân như next/previous. Đây là semantic tốt hơn việc animation code tự suy luận direction từ DOM cũ. Tuy vậy View Transition hiện là DOM capability: phải kiểm tra browser support, tôn trọng `prefers-reduced-motion`, và đảm bảo correctness không phụ thuộc animation có chạy hay không.
+
+Senior review cũng cần kiểm tra interruption. User có thể click tiếp khi transition trước chưa kết thúc, Suspense có thể reveal ở thời điểm khác dự kiến, hoặc navigation có thể fail. Animation layer phải là progressive enhancement bên trên state/navigation architecture, không được trở thành source of truth.
 
 ## 16. Fragment refs trong React 19.3
 
-Fragment refs cho phép làm việc với tập host children mà không bắt buộc thêm wrapper DOM chỉ để có ref. Điều này hữu ích cho focus management, measurement và DOM integration mà vẫn giữ semantic/layout. Vì API rất mới, library cần minimum peer version rõ.
+Fragment refs giải quyết trường hợp một behavior cần thao tác với **một nhóm sibling DOM nodes** nhưng không muốn thêm wrapper chỉ để có ref, hoặc children đến từ component không expose raw DOM ref.
+
+```jsx
+import {
+  Fragment,
+  useEffect,
+  useRef,
+} from "react";
+
+function FocusableGroup({ children }) {
+  const groupRef = useRef(null);
+
+  useEffect(() => {
+    groupRef.current?.focus();
+  }, []);
+
+  return (
+    <Fragment ref={groupRef}>
+      {children}
+    </Fragment>
+  );
+}
+```
+
+Ref này nhận một `FragmentInstance`, không phải một DOM element ảo. Instance cung cấp một tập capability giới hạn trên DOM children: quản lý event ở first-level children, di chuyển focus bằng `focus`/`focusLast`/`blur`, gắn `IntersectionObserver` hoặc `ResizeObserver` qua `observeUsing`, lấy geometry bằng `getClientRects`, xác định root/relative position và scroll group vào view. Nhờ vậy component có thể thêm focus/measurement/observation behavior mà không phá semantic HTML hoặc CSS layout bằng một wrapper thừa.
+
+Đừng suy ra Fragment ref là “query selector mới”. Nó cố ý chỉ expose capability React có thể duy trì qua một group children. Nếu abstraction nghiệp vụ cần một node cụ thể, explicit ref vào node đó vẫn rõ hơn. Library public dùng Fragment refs cũng phải khai minimum React 19.3 thay vì nói chung chung `>=19`.
 
 ## 17. External store và `useSyncExternalStore`
 
@@ -238,6 +308,31 @@ const snapshot = useSyncExternalStore(
 ```
 
 API này cung cấp contract để React đọc store ngoài React nhất quán với concurrency/SSR. Library state management thường bọc nó. `getSnapshot` phải trả snapshot ổn định khi store không đổi; trả object mới mọi lần dễ gây render loop hoặc render dư.
+
+Một external store có thể thay đổi giữa lúc React đang render. Nếu component tự `subscribe` bằng Effect rồi đọc mutable singleton trực tiếp, hai component trong cùng một render có thể quan sát hai phiên bản store khác nhau — hiện tượng thường được gọi là tearing. `useSyncExternalStore` tồn tại để store cung cấp snapshot/subscribe contract mà React có thể phối hợp với concurrent rendering và hydration.
+
+`getServerSnapshot` không chỉ là “fallback cho SSR”. Giá trị server snapshot phải tương thích với initial client snapshot dùng trong hydration; nếu server trả `0` nhưng client ngay lần đầu trả `42`, bạn lại tạo mismatch ở một layer khó nhìn thấy. Với selector library, identity của snapshot và equality semantics cũng là một phần performance contract.
+
+### 17A. `cacheSignal`: lifetime của RSC cache phải đi xuống I/O
+
+React 19.2 thêm `cacheSignal()` cho **React Server Components**. Khi một operation nằm trong lifetime của `cache()`, signal cho phép I/O bên dưới biết lúc kết quả cache không còn được dùng — ví dụ render đã hoàn thành, bị abort hoặc fail — để dừng request/resource tương ứng.
+
+```jsx
+import {
+  cache,
+  cacheSignal,
+} from "react";
+
+const load = cache(async url => {
+  const response = await fetch(url, {
+    signal: cacheSignal(),
+  });
+
+  return response.json();
+});
+```
+
+Điểm bản chất không phải API `AbortSignal` mới, mà là **resource lifetime propagation**. Nếu render/cached computation bị hủy nhưng database/HTTP call vẫn chạy đến cùng, server vẫn tiêu connection, CPU và upstream quota cho kết quả không còn consumer. Khi framework hỗ trợ, cancellation signal nên được truyền sâu qua client HTTP, database adapter hoặc service call có khả năng abort. `cacheSignal` không dành cho Client Component fetch Effect; ở client vẫn dùng lifecycle/cancellation của data layer hoặc `AbortController` phù hợp.
 
 ## 18. `useInsertionEffect`
 
@@ -285,6 +380,42 @@ Các API server hiện đại gồm `renderToReadableStream`, `renderToPipeableS
 
 SSR không đồng nghĩa Server Components. SSR là render thành HTML initial; RSC là mô hình component chạy server/build và compose qua protocol với Client Components.
 
+### 21A. React DOM `browser()` trong React 19.3: opt-out SSR bằng Suspense thay vì đoán environment
+
+Phần lớn component SSR phải tạo initial HTML tương thích với initial client render. Nhưng có component thực sự không thể tạo UI có nghĩa trên server, ví dụ nó cần `localStorage`, browser timezone hoặc một browser-only data source. Trước đây developer thường thêm `mounted` state trong Effect hoặc rải `typeof window !== "undefined"`, dễ tạo hai render path thiếu cấu trúc và dễ che hydration bug.
+
+React DOM 19.3 thêm `browser()` để biểu đạt boundary này trực tiếp qua `use`:
+
+```jsx
+import {
+  Suspense,
+  use,
+} from "react";
+import { browser } from "react-dom";
+
+function LocalTimeZone() {
+  use(browser());
+
+  const zone = new Intl.DateTimeFormat()
+    .resolvedOptions()
+    .timeZone;
+
+  return <p>{zone}</p>;
+}
+
+function Page() {
+  return (
+    <Suspense fallback={<p>Đang xác định múi giờ...</p>}>
+      <LocalTimeZone />
+    </Suspense>
+  );
+}
+```
+
+Trên server, `use(browser())` suspend nên nearest Suspense fallback đi vào HTML. Trên client nó không suspend, vì vậy component tiếp tục render khi hydrate. Vì đây là `use`, call có thể nằm sau early return hoặc trong condition theo Rules của `use`; ví dụ nếu server đã có `initialData`, component có thể render ngay và chỉ opt-out SSR khi thiếu dữ liệu ban đầu.
+
+Trade-off phải được nhìn rõ: opt-out nghĩa server không gửi content thật của subtree đó, nên có thể làm initial content/SEO kém hơn và đẩy work sang client. `browser()` vì vậy không phải cách “sửa nhanh mọi hydration mismatch”; trước tiên hãy làm render deterministic. Chỉ dùng khi browser environment thật sự là một phần của dữ liệu cần render.
+
 ## 22. Hydration mismatch
 
 Initial client render phải tương thích server HTML. Các nguồn mismatch phổ biến:
@@ -295,6 +426,14 @@ Initial client render phải tương thích server HTML. Các nguồn mismatch p
 ```
 
 hoặc đọc browser-only state khi server không có. Hãy làm initial render deterministic hoặc dùng framework pattern thích hợp. `suppressHydrationWarning` chỉ là escape hatch phạm vi nhỏ, không phải cách che bug hệ thống.
+
+### 22A. Debug hydration bằng evidence, không bằng việc thêm `suppressHydrationWarning`
+
+Hydration bug thường chỉ xuất hiện ở production vì server và browser khác timezone, locale, cookie, extension, CDN mutation hoặc release artifact. Cách debug tốt là so ba thứ: **HTML server thực sự gửi**, **input serialized dùng cho initial client render**, và **output client ở lần render đầu tiên trước Effect**. Nếu ba lớp này không cùng một snapshot, React chỉ đang phơi ra inconsistency đã tồn tại.
+
+Các nguồn cần kiểm tra theo thứ tự gồm dữ liệu nondeterministic (`Date.now`, random, ID tự sinh), locale/timezone, invalid HTML nesting bị browser tự sửa, conditional dựa vào `window`, cache trả hai version data khác nhau, và deployment nơi HTML cũ trỏ tới JS bundle mới. Đừng chỉ nhìn component stack; Network/View Source/CDN headers và release ID thường mới là evidence quyết định.
+
+Một nguyên tắc production hữu ích là server render và initial client render phải cùng một **logical snapshot**. Sau hydration, Effect hoặc normal update có thể chuyển sang browser-specific state. Nếu component không thể tuân invariant đó một cách có nghĩa, `browser()`/Suspense hoặc framework client-only boundary mới là lựa chọn rõ ràng hơn.
 
 ## 23. Server Components
 
@@ -359,6 +498,36 @@ SSR trả HTML từ server để có initial content sớm; hydration gắn Reac
 
 Khi debug, cần hỏi đúng boundary: mismatch là vấn đề server HTML khác initial client render; bundle lớn là vấn đề client dependency graph; secret leak là vấn đề module boundary/serialization; waterfall có thể nằm ở routing/data architecture. Gọi tất cả là “SSR issue” làm migration và profiling thiếu chính xác.
 
+### 24C. Context qua RSC boundary trong React 19.3
+
+Server Component không thể tự gọi `createContext` để tạo một Context server-native. Nhưng từ React 19.3, nó có thể import một Context được khai báo trong module `'use client'` rồi render Context đó trực tiếp làm provider.
+
+```jsx
+// user-context.js
+"use client";
+
+import { createContext } from "react";
+
+export const UserContext = createContext(null);
+```
+
+```jsx
+// Layout.server.jsx
+import { UserContext } from "./user-context.js";
+
+export async function Layout({ children }) {
+  const currentUser = await getCurrentUser();
+
+  return (
+    <UserContext value={currentUser}>
+      {children}
+    </UserContext>
+  );
+}
+```
+
+Trước đó framework/app thường cần một Client wrapper chỉ để nhận prop từ server rồi render provider. Capability mới giảm wrapper nhưng không xóa client boundary: Context vẫn được tạo từ module client và giá trị truyền qua boundary vẫn phải phù hợp serialization/security constraints. Đừng truyền database entity chứa secret hoặc object lớn chỉ vì provider syntax ngắn hơn.
+
 ## 25. Server Functions và security
 
 Server Function phải được coi như public network surface dù syntax trông giống function call. Dữ liệu từ client luôn là untrusted input.
@@ -375,6 +544,14 @@ async function deleteUser(userId) {
 Cần authenticate, authorize resource/action, validate input, giới hạn error leakage và bảo vệ secrets. Serialized argument từ client không chứng minh user có quyền. Client UI có thể ẩn button nhưng authorization thật phải nằm ở server.
 
 RSC ecosystem từng có security advisory quan trọng, vì vậy production framework/React package phải được patch theo advisory chính thức, không chỉ “đúng major version”.
+
+### 25A. Trusted Types trong React 19.3: React hỗ trợ policy, không thay bạn sanitize
+
+React vốn escape text node/attribute thông thường, nhưng XSS boundary thay đổi khi app cố ý đi vào injection sink như `innerHTML`. Browser Trusted Types cho phép CSP yêu cầu những sink này chỉ nhận object đã đi qua policy, chẳng hạn `TrustedHTML`, thay vì raw string.
+
+Trước React 19.3, React có thể coerce Trusted Types object thành string trước khi đưa xuống DOM, làm browser mất evidence rằng value đã qua policy. React 19.3 truyền object Trusted Types xuống injection sink mà không phá type marker đó, nên app có thể dùng CSP như `require-trusted-types-for 'script'` cùng policy/sanitizer của mình.
+
+Điều này **không có nghĩa `dangerouslySetInnerHTML` trở nên an toàn tự động**. React không chứng minh HTML của bạn sạch; Trusted Types cũng chỉ mạnh bằng policy tạo ra object trusted. Production security vẫn cần sanitize đúng context, CSP hợp lý, tránh URL/script sink nguy hiểm và audit third-party code. Hãy coi React 19.3 là sửa plumbing để browser security boundary hoạt động đúng, không phải một sanitizer mới.
 
 ## 26. Data architecture production
 
@@ -504,6 +681,14 @@ Các tối ưu structural thường thắng memoization rải rác: giữ state 
 ## 33. Profiling
 
 React DevTools Profiler cho biết component render/commit cost và các thông tin liên quan. Browser Performance panel cần dùng khi bottleneck gồm scripting, layout, paint, network. Hãy profile production-like build vì development mode có Strict Mode/debug overhead.
+
+### 33A. React Performance Tracks: nối Scheduler evidence với browser timeline
+
+Từ React 19.2, Chrome DevTools Performance có React-specific tracks giúp nhìn scheduling thay vì chỉ thấy một khối JavaScript dài. **Scheduler track** cho biết work nào thuộc blocking/user interaction, work nào thuộc transition, update nào đang bị work priority khác chặn và React đang chờ paint ở đâu. **Components track** cho thấy component tree đang render hoặc chạy Effects, kèm các trạng thái như mount/blocked và thời gian tương ứng.
+
+Điều này thay đổi cách debug câu “transition không giúp gì”. React DevTools Profiler trả lời tốt câu hỏi component nào render tốn thời gian; browser Performance trả lời main thread còn bận bởi layout/paint/third-party task nào; React Performance Tracks nối thêm câu hỏi scheduler đã phân loại và xen kẽ React work ra sao. Senior investigation nên đối chiếu cả ba thay vì nhìn một flame chart rồi đoán.
+
+Một worked reasoning đơn giản: nếu Scheduler cho thấy transition work thường xuyên yield đúng cách nhưng INP vẫn xấu vì event handler tự parse 20 MB JSON trước khi gọi setter, đổi thêm `startTransition` không giải quyết được. Ngược lại, nếu CPU cost nằm trong một render subtree non-urgent và input bị cạnh tranh với nó, transition/structural split mới là hướng có evidence.
 
 ## 34. List virtualization
 
