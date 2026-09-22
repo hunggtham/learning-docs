@@ -40,15 +40,21 @@ Khi một lỗi xảy ra, câu hỏi đầu tiên không nên là “API nào sa
 10. [10 — Rendering, Lazy Loading & Resource Lifetime](10_rendering_lazy_loading_lifetime.md) xây state model `source → object → render → active → data-ready → disposed`; giải thích TabControl `alwaysDraw`, `wframePreload`, lazy cost, stale async result, timer/listener cleanup, W-Pack/cache và lifecycle performance.
 11. [11 — Testing, Testability & Regression Engineering](11_testing_testability_regression.md) chuyển mental model thành executable evidence: pure/page/UDC/integration/E2E boundaries, deterministic async, race/lifecycle test, DataList row-status regression, accessibility/i18n/security negative test, memory/performance regression và CI strategy.
 12. [12 — Build, Configuration, Deployment & Environment Reasoning](12_build_config_deployment.md) đi từ canonical source → W-Pack artifact → config → deployment → cache/browser runtime; giải thích reproducible build, `client.config.xml`/`server.config.xml`, context root, engine build, artifact identity, cache invalidation, rollback, smoke test và config drift.
-13. [Glossary & Coverage Audit](GLOSSARY_AND_COVERAGE.md) dùng để tra thuật ngữ Việt–Anh–Hàn và tự kiểm tra xem đã hiểu library ở mức nào.
+13. [13 — GridView Editing, Identity & View Internals](13_gridview_editing_identity_internals.md) đi sâu editor state so với DataList state, edit commit lifecycle, view/model index, sort/filter/group identity, selection, bulk mutation, formatter/summary cost, server paging và Excel import/export semantics.
+14. [14 — Application Shell, Navigation & Multi-Screen State](14_application_shell_navigation_state.md) nâng Scope/WFrame lên architecture app shell: screen definition/instance identity, TabControl/WindowContainer host, navigation key, reuse policy, global state, unsaved-close protocol, deep link, cross-screen communication và shell observability.
+15. [15 — Backend Contract, Transaction & Concurrency Integration](15_backend_contract_transaction_concurrency.md) làm rõ ranh giới WebSquare–server: C/U/D contract, writable fields, null semantics, error taxonomy, idempotency, optimistic locking, all-or-nothing/partial batch, created-row correlation, session expiration và contract versioning.
+16. [16 — Master Production Playbook & End-to-End Case Studies](16_master_production_playbook.md) hợp nhất toàn bộ library thành năm graph reasoning, sáu identity, readiness/trust/state ownership, design/debug/performance/memory/security/migration/release playbook và các case study production end-to-end.
+17. [Glossary & Coverage Audit](GLOSSARY_AND_COVERAGE.md) dùng để tra thuật ngữ Việt–Anh–Hàn và tự kiểm tra xem đã hiểu library ở mức nào.
 
 Luồng dependency nên nhớ là:
 
-`JavaScript/browser → WebSquare page/component model → Scope → DataCollection → Submission → WFrame/SPA → Grid/CRUD → reusable contracts → form/accessibility boundaries → rendering/lifetime → testable contracts → build/config/deployment → production reasoning`.
+`JavaScript/browser → WebSquare page/component model → Scope → DataCollection → Submission → WFrame/SPA → Grid/CRUD → reusable contracts → form/accessibility boundaries → rendering/lifetime → testable contracts → build/config/deployment → Grid identity internals → application shell → backend transaction contract → Master production reasoning`.
 
 GridView được đặt sau DataCollection và Scope có chủ đích. Nếu học Grid API trước, người học thường thao tác bằng index và handler một cách máy móc nhưng không hiểu dữ liệu thật nằm ở đâu, row state thuộc object nào, hoặc tại sao cùng một component ID lại hoạt động ở nhiều WFrame.
 
-Các chapter 08–12 cũng không phải “advanced API reference”. Chúng giải quyết các vấn đề architecture chỉ lộ ra khi project lớn: abstraction dùng chung bắt đầu coupling mọi page, UI validation bị nhầm với trust boundary, lazy/preload/render lifecycle tạo race hoặc memory leak, regression test trở nên flaky vì không có observable contract, và production chạy artifact/config khác thứ developer đang nhìn. Đọc chúng sau khi đã hiểu page/data/scope sẽ hiệu quả hơn nhiều.
+Các chapter 08–12 giải quyết các vấn đề architecture chỉ lộ ra khi project lớn: abstraction dùng chung bắt đầu coupling mọi page, UI validation bị nhầm với trust boundary, lazy/preload/render lifecycle tạo race hoặc memory leak, regression test trở nên flaky vì không có observable contract, và production chạy artifact/config khác thứ developer đang nhìn.
+
+Các chapter 13–16 là **Master track**. Chúng không phải danh sách API nâng cao. Chúng nối ba loại identity quan trọng nhất của ứng dụng enterprise: row/entity identity trong Grid, screen-instance identity trong app shell và request/transaction identity ở server boundary. Chapter 16 sau đó hợp nhất các lớp này thành cách design và debug hệ thống end-to-end.
 
 ## Coding style của library
 
@@ -58,13 +64,15 @@ Handler nên mỏng: đọc input cần thiết, validate, cập nhật model ho
 
 Reusable component nên expose contract theo capability thay vì internals. Một UDC tốt cho consumer biết property nào cấu hình behavior, method nào là command và event nào trả kết quả; consumer không cần biết ID Input/Grid/DataMap bên trong. Common function càng thuần và càng ít phụ thuộc page Scope càng dễ test và tái sử dụng.
 
+Ở Master track, tên biến phải thể hiện identity và coordinate system. `rowIndex` dùng lâu dài là mơ hồ; `viewRowIndex`, `modelRowIndex`, `orderId`, `screenInstanceKey`, `requestId` làm dependency rõ hơn. Tương tự, từ “loaded” nên được thay bằng source-ready, object-ready, render-ready hoặc data-ready khi lifecycle là nguyên nhân của behavior.
+
 ## First principles: WebSquare giải quyết vấn đề gì?
 
 Ứng dụng enterprise thường có rất nhiều form, grid, popup, validation, request/response mapping và màn hình CRUD. Nếu mỗi màn hình tự làm DOM manipulation, serialization, AJAX, row-state tracking và popup coordination, code nhanh chóng trở nên không đồng nhất. WebSquare cung cấp một runtime và một tập component/data abstraction thống nhất để đội phát triển có thể xây nhiều màn hình nghiệp vụ theo cùng convention.
 
 Lợi ích đó đi kèm một trade-off quan trọng: developer phải hiểu **framework state** chứ không chỉ JavaScript. Một `input1` không đơn thuần là DOM `<input>`, GridView không phải chỉ là HTML table, DataList không chỉ là Array, và một page trong WFrame không phải lúc nào cũng chia sẻ global scope với page cha. Những abstraction này giúp project lớn quản lý được complexity, nhưng cũng tạo ra failure mode riêng nếu developer coi chúng như DOM/JavaScript thuần.
 
-Ở cấp cao hơn, WebSquare còn buộc developer reasoning về **lifetime** và **artifact identity**. Một object có thể được preload nhưng UI chưa render; một tab có thể bị ẩn nhưng page instance vẫn sống; một Submission có thể trả response sau khi user đã chuyển page; một common object global có thể giữ reference làm Scope không được garbage collect; source XML trên Git có thể mới nhưng browser vẫn chạy W-Pack artifact cũ. Vì vậy “đã load chưa?” và “đã deploy chưa?” đều phải được thay bằng câu hỏi chính xác hơn: object/data/business state nào đã ready, và browser đang thực thi artifact/config identity nào?
+Ở cấp cao hơn, WebSquare còn buộc developer reasoning về **lifetime**, **identity** và **artifact provenance**. Một object có thể được preload nhưng UI chưa render; một tab có thể bị ẩn nhưng page instance vẫn sống; một Submission có thể trả response sau khi user đã chuyển page; một Grid row có thể đổi index sau sort; một common object global có thể giữ reference làm Scope không được garbage collect; source XML trên Git có thể mới nhưng browser vẫn chạy W-Pack artifact cũ. Vì vậy “đã load chưa?”, “row nào?” và “đã deploy chưa?” đều phải được thay bằng câu hỏi chính xác hơn.
 
 ## Cách học bằng project nhỏ
 
@@ -74,12 +82,14 @@ Sau chapter 08, tách employee selector hoặc date-range selector thành UDC c�
 
 Sau chapter 11, biến các invariant đó thành regression suite: đảo thứ tự response, double-click Save, đóng page khi request pending, dùng nested WFrame topology và kiểm tra UDC qua public contract. Sau chapter 12, chạy W-Pack bằng build pipeline, gắn build identity, deploy cùng artifact qua environment, rồi chứng minh browser thực sự nhận đúng version bằng Network/evidence thay vì dựa vào việc source đã merge.
 
-Mục tiêu không phải nhớ càng nhiều API càng tốt. Mục tiêu là nhìn một màn hình WebSquare và có thể mô tả được **state nằm ở đâu, event chạy ở scope nào, dữ liệu đi qua object nào, network call được điều phối ra sao, abstraction nào sở hữu lifecycle, readiness hiện tại là gì, contract nào cần regression test, artifact/config nào đang chạy, và evidence nào chứng minh giả thuyết khi có lỗi**.
+Với Master track 13–16, nâng project thành mini enterprise app: server paging, Grid bulk edit, multi-tab detail theo business key, unsaved-close guard, optimistic locking, partial/all-or-nothing batch contract, session expiration, correlation ID và fault injection. Cuối cùng phải giải thích được cùng một incident qua page graph, data graph, event graph, request graph và lifetime graph.
+
+Mục tiêu không phải nhớ càng nhiều API càng tốt. Mục tiêu là nhìn một màn hình WebSquare và có thể mô tả được **state nằm ở đâu, identity nào đang được dùng, event chạy ở scope nào, dữ liệu đi qua object nào, network call được điều phối ra sao, abstraction nào sở hữu lifecycle, readiness hiện tại là gì, transaction contract là gì, artifact/config nào đang chạy, test nào bảo vệ invariant và evidence nào chứng minh giả thuyết khi có lỗi**.
 
 ## Nguồn chuẩn để kiểm chứng API
 
 Library ưu tiên tài liệu chính thức của Inswave Systems: WebSquare5 SP5 Development Guide, SP5 API Reference, SP5 Release Notes và API reference của dòng 6.0/WebSquare AI. Những URL cụ thể thay đổi theo build, vì vậy chapter không hard-code một build làm “chân lý vĩnh viễn”. Với API/property version-sensitive, hãy tra đúng engine build của project.
 
-Các chapter 08–12 có ghi rõ boundary cần đối chiếu official guide cho UDC, multilingual configuration, TabControl rendering, performance, debugging, W-Pack, client/server configuration, file upload và WFrame lifecycle để người đọc kiểm tra exact property theo build thay vì biến library thành bản sao API reference.
+Các chapter 08–16 ghi rõ boundary cần đối chiếu official guide cho UDC, multilingual configuration, TabControl/WindowContainer, Grid editing/event ordering, Excel, performance, debugging, W-Pack, client/server configuration, file upload và WFrame lifecycle để người đọc kiểm tra exact property theo build thay vì biến library thành bản sao API reference.
 
-Các nguồn nền tảng ngoài WebSquare được giữ ở canonical JavaScript/XML/Computer Science docs của repository để tránh duplicate.
+Các nguồn nền tảng ngoài WebSquare được giữ ở canonical JavaScript/XML/Computer Science/backend docs của repository để tránh duplicate.
