@@ -76,3 +76,54 @@ Nếu “rebuild commit cũ nhưng artifact khác”, kiểm tra dependency lock
 ## 10. Invariant cần giữ
 
 Một delivery system trưởng thành phải trả lời được: thay đổi nào sinh artifact; artifact nào được deploy; artifact có bất biến không; input build có được version hóa không; ai/automation nào tạo artifact; và cùng artifact có được promote xuyên môi trường không. Khi các câu trả lời này rõ, CI/CD phía sau mới có nền ổn định.
+
+## 11. Reproducible build khác hermetic build
+
+Hai khái niệm liên quan nhưng không giống nhau. Build tái lập được (reproducible build) nhấn mạnh cùng input cho output tương đương theo contract. Build kín (hermetic build) nhấn mạnh quá trình build chỉ được phép thấy những input đã khai báo, thay vì vô tình đọc tool, file, network hoặc package state từ môi trường host.
+
+Một build có thể cho kết quả giống nhau nhiều lần trong cùng runner nhưng vẫn không hermetic nếu nó âm thầm dùng JDK cài sẵn trong máy. Ngày runner được nâng cấp, output hoặc behavior có thể đổi. Ngược lại, build hermetic nhưng artifact chứa timestamp ngẫu nhiên có thể chưa bit-for-bit reproducible.
+
+Mental model tốt là khai báo **input closure**: source, dependency, toolchain, build rule và dữ liệu nào thực sự ảnh hưởng output. Càng ít input ẩn, debugging và provenance càng đáng tin.
+
+## 12. Reproducible không đồng nghĩa trusted
+
+Một attacker kiểm soát build script hoàn toàn có thể tạo malware theo cách rất reproducible. Vì vậy correctness và trust là hai trục khác nhau. Reproducibility giúp biết cùng input tạo cùng output; provenance/attestation giúp biết input và builder nào đã được dùng; authorization/policy quyết định có tin builder và source đó hay không.
+
+Chuỗi reasoning nên là:
+
+```text
+identity của source/change
+→ identity và isolation của builder
+→ declared inputs
+→ artifact digest
+→ provenance/attestation
+→ policy cho phép promotion/deploy hay không
+```
+
+Nếu chỉ scan artifact cuối cùng mà không kiểm soát builder, một compromised runner có thể chèn code sau test. Nếu chỉ tin builder nhưng dependency không pin, build vẫn có input ngoài dự kiến.
+
+## 13. Cache là trust boundary, không chỉ performance feature
+
+Shared cache có thể làm tăng tốc đáng kể, nhưng nếu key collision hoặc writer không đáng tin có thể ghi output độc hại vào cache, job khác sẽ consume mà không chạy lại bước tạo output. Với cache chứa package, compiled object hoặc Docker layer, cần biết ai được ghi, key có bao phủ input quan trọng không và cache có được phân tách theo trust level hay repository hay không.
+
+Pull request từ fork/untrusted source đặc biệt cần cẩn thận. Một pattern an toàn là cho job không tin cậy đọc cache phù hợp nhưng không ghi vào cache dùng bởi trusted release job, hoặc dùng namespace/cache key tách biệt. Chi tiết phụ thuộc CI system nhưng invariant không đổi: **output từ trust domain thấp không được trở thành input ngầm của trust domain cao**.
+
+## 14. Attestation là statement có subject và predicate
+
+Attestation có thể hiểu đơn giản là một statement được một identity ký/xác nhận về một subject. Subject thường là artifact digest; predicate có thể mô tả provenance, test result hoặc policy fact. Điều quan trọng là không đánh đồng “có signature” với “nội dung statement đúng và đủ”.
+
+Verifier phải kiểm tra ít nhất: subject có đúng digest đang deploy không; signer/builder có nằm trong trust policy không; statement type có đúng điều đang cần chứng minh không; và identity/key có còn hợp lệ theo lifecycle hiện tại không.
+
+Nhờ đó promotion có thể chuyển từ “pipeline trước đã xanh” sang một contract machine-verifiable: artifact D chỉ được vào production nếu có provenance từ trusted builder, source revision được review theo policy và các verification cần thiết gắn đúng với D.
+
+## 15. Build metadata phải sống cùng artifact identity
+
+Log CI thường bị retention ngắn hoặc khó tìm. Metadata quan trọng cho production không nên chỉ nằm trong một pipeline run URL. Artifact catalog/registry nên cho phép lần từ digest tới source revision, builder, SBOM, provenance và release history.
+
+Điều này đặc biệt hữu ích trong incident hoặc vulnerability response. Khi có CVE mới, câu hỏi không còn là “repo nào có dependency này?” mà là “artifact nào đang hoặc từng chạy production chứa component bị ảnh hưởng, được build từ revision nào, và có replacement nào đã verify?”.
+
+## 16. Senior note: promotion là chuyển trust, không phải copy bytes
+
+Khi artifact D đi từ staging sang production, bytes không nên đổi. Thứ thay đổi là **mức evidence và authorization** gắn với D. Staging có thể chứng minh integration behavior; canary production thêm evidence từ traffic thật; approval nếu cần xác nhận risk/business decision.
+
+Nhìn như vậy giúp tránh anti-pattern “rebuild cho production để sạch hơn”. Rebuild tạo subject mới và reset một phần evidence. Một delivery system mạnh giữ artifact identity ổn định rồi tích lũy evidence quanh identity đó.
