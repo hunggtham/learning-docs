@@ -79,3 +79,45 @@ Hãy nhìn IaC qua mental model control loop. Config là desired state, provider
 Khi hiểu như vậy, câu hỏi rõ hơn: ai trigger reconciliation; bao lâu drift được phát hiện; nếu hai controller cùng quản một field thì sao; failure giữa apply để lại state nào; và evidence nào chứng minh convergence.
 
 IaC thành công khi hạ tầng trở thành hệ thống thay đổi có review, identity, rollback/recovery và ownership rõ, không chỉ khi “mọi resource đã viết bằng HCL”.
+
+## 14. Apply là transaction không hoàn chỉnh
+
+Nhiều người vô thức nghĩ `apply` giống một database transaction: hoặc mọi thứ thành công, hoặc mọi thứ rollback. Thực tế provider API thường không cung cấp atomic transaction xuyên nhiều resource. Engine có thể tạo network thành công, tạo database thất bại, rồi dừng ở trạng thái **một phần đã thay đổi**.
+
+Vì vậy failure handling phải bắt đầu từ câu hỏi: operation nào đã thực sự commit ở provider, state đã ghi nhận đến đâu, resource nào đang tồn tại nhưng chưa đạt desired graph và chạy lại apply sẽ làm gì. Idempotency/convergence giúp retry an toàn hơn, nhưng không biến sequence thành atomic.
+
+Một runbook tốt cho IaC failure không bắt đầu bằng “rerun”. Nó bắt đầu bằng refresh/read actual state, xác định side effect đã xảy ra và chỉ retry khi biết engine sẽ tiếp tục từ state đúng.
+
+## 15. Lock bảo vệ writer concurrency, không bảo vệ mọi race
+
+State locking ngăn hai apply cùng sửa một state backend tại cùng thời điểm. Nhưng nó không ngăn người khác thay cloud resource qua console, controller khác sửa cùng field, hoặc provider-side automation chạy giữa plan và apply.
+
+Do đó locking chỉ giải một loại race: **concurrent state writer**. Ownership và policy mới giải race giữa nhiều control plane. Khi thấy plan thay đổi ngoài dự kiến ngay sau một apply thành công, hãy tìm external actor/controller thay vì chỉ nghi state lock hỏng.
+
+## 16. Eventual consistency làm dependency graph có thời gian
+
+IaC graph mô tả thứ tự logic nhưng provider có thể trả “create thành công” trước khi resource hoàn toàn visible cho API khác. Ví dụ identity vừa tạo có thể chưa được authorization subsystem nhận ra ngay; DNS/resource attachment có thể cần thời gian hội tụ.
+
+Provider implementation thường thêm retry/backoff cho những trường hợp này, nhưng user vẫn cần nhận diện eventual consistency để không chèn `sleep 60` như một fix ngẫu nhiên. Fix tốt hơn là chờ condition có semantics, retry theo bounded backoff hoặc để provider/controller sở hữu dependency readiness.
+
+`depends_on` chỉ nói A phải được tạo trước B; nó không tự chứng minh A đã **usable** theo business contract.
+
+## 17. Refactor configuration không được đồng nghĩa recreate infrastructure
+
+Khi cấu trúc code thay đổi — đổi tên module, tách module, đổi logical address — intent business có thể giữ nguyên nhưng address trong state thay đổi. Nếu không dùng move/import/state-migration semantics phù hợp, engine có thể hiểu đây là “xóa cũ, tạo mới”.
+
+Vì vậy refactor IaC có hai lớp review: semantic diff của hạ tầng và refactor diff của code. Mục tiêu lý tưởng của một refactor thuần túy là plan no-op đối với remote object. Nếu plan cho thấy replace resource stateful, phải dừng và xác nhận đó có thực sự là intent hay chỉ là state-address mismatch.
+
+## 18. Provider và module version là dependency production
+
+IaC engine, provider plugin và module đều tiến hóa. Một upgrade provider có thể đổi default, schema hoặc diff behavior dù configuration của bạn không đổi. Vì vậy version pinning và upgrade testing quan trọng như dependency ứng dụng.
+
+Nhưng pin vĩnh viễn cũng tạo debt. Pattern tốt là khóa version trong normal run, rồi mở explicit upgrade change có release note review, plan comparison và staged environment verification. Với module platform dùng chung, compatibility contract và migration guide phải được coi như API evolution.
+
+## 19. Destroy là operation có asymmetry
+
+Tạo resource thường có thể retry; destroy có thể không thể đảo. Xóa bucket, key, database hoặc network route có hậu quả khác nhau và đôi khi làm mất chính dữ liệu cần để rollback.
+
+Critical resource nên có layered protection phù hợp: lifecycle protection ở IaC, retention/backup ở service, policy hạn chế identity được destroy và review riêng cho destructive plan. Không một lớp nào đủ một mình vì emergency hoặc migration thật sự vẫn có lúc cần phá protection.
+
+Senior reasoning ở đây là phân biệt **reversible change** và **irreversible change**. Hai thay đổi có cùng số dòng diff nhưng risk class hoàn toàn khác nhau.
