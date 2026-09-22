@@ -83,3 +83,35 @@ Khi một workload lỗi, nên đi từ evidence ít phá hoại đến sâu hơ
 ## 10. Production invariant
 
 Một service vận hành tốt cần có lifecycle rõ ràng: process foreground, supervisor ownership, signal handling, resource boundary, log/telemetry path và health semantics nhất quán. Container hay VM chỉ thay packaging và isolation boundary; invariant này vẫn còn.
+
+## 11. Load average không đồng nghĩa CPU utilization
+
+`load average` trên Linux gần với số task đang muốn chạy hoặc đang ở một số trạng thái chờ không ngắt được, chứ không phải phần trăm CPU. Vì vậy load cao có thể đến từ CPU run queue lớn, nhưng cũng có thể đến từ I/O hoặc kernel wait. Một máy 16 CPU với load 8 có ý nghĩa khác máy 2 CPU với load 8.
+
+Khi latency tăng cùng load average, đừng kết luận “thiếu CPU” trước khi xem run queue, CPU utilization, I/O wait và pressure. Đây là ví dụ điển hình của việc một metric tổng hợp chỉ là đầu mối, không phải diagnosis.
+
+## 12. Pressure Stall Information giúp đo thời gian workload bị thiếu tài nguyên
+
+Pressure Stall Information (PSI) cho biết trong một khoảng thời gian, task đã phải chờ vì thiếu CPU, memory hoặc I/O bao lâu. Đây là góc nhìn khác utilization. CPU có thể chưa 100% trung bình nhưng một workload latency-sensitive vẫn chịu pressure do cgroup quota hoặc run queue. Memory usage có thể chưa chạm limit nhưng reclaim liên tục làm task stall.
+
+Trong incident, PSI hữu ích vì nó hỏi trực tiếp: “workload có đang bị trì hoãn bởi resource contention không?”. Sau đó mới đi sâu xem contention đến từ cgroup boundary, node overcommit, reclaim, storage latency hay workload khác.
+
+## 13. Cgroup v2: resource control là hierarchy chứ không chỉ một con số limit
+
+Trong hệ thống dùng cgroup v2, CPU, memory và nhiều resource được quản theo một hierarchy thống nhất. Workload có thể chịu constraint từ chính cgroup của nó và từ ancestor. Vì vậy “container limit là X” chưa đủ nếu node hoặc parent slice đang có policy khác.
+
+Memory control cũng không chỉ có hard limit. Các ngưỡng như `memory.high` có thể tạo reclaim/throttling pressure trước khi `memory.max` dẫn tới OOM. Về operational reasoning, điều quan trọng là phân biệt **pressure** với **hard failure**: service có thể chậm nghiêm trọng trước khi bị kill.
+
+## 14. OOM phải xác định scope: process, cgroup hay host
+
+Một dòng log “OOM” chưa nói rõ failure domain. Có trường hợp process/runtime tự ném lỗi vì heap limit. Có trường hợp cgroup OOM kill vì workload vượt memory boundary. Có trường hợp host chịu global memory pressure và kernel chọn victim.
+
+Ba trường hợp cần evidence khác nhau. Runtime heap metrics trả lời câu hỏi bên trong process. Cgroup events trả lời workload có chạm boundary không. Kernel log/node pressure trả lời host có thiếu memory toàn cục không. Chỉ tăng heap hoặc tăng pod limit mà không xác định scope có thể chuyển failure sang tầng khác.
+
+## 15. Senior walkthrough: latency tăng nhưng CPU dashboard chỉ 45%
+
+Giả sử `orders-api` p99 tăng từ 200 ms lên 2 giây, node CPU trung bình 45%. Kết luận “CPU không phải vấn đề” là quá sớm. Hãy kiểm tra CPU quota/throttling của workload, run queue/PSI, số thread runnable, GC và dependency wait.
+
+Nếu throttling tăng đúng lúc latency tăng, workload có thể đang đòi nhiều CPU hơn entitlement dù host còn idle capacity. Nếu không throttling nhưng PSI I/O tăng, nguyên nhân có thể là storage. Nếu cả hai bình thường nhưng thread dump cho thấy nhiều thread chờ connection pool, bottleneck chuyển sang downstream.
+
+Cách reasoning này giữ nguyên nguyên tắc của chapter: một metric ở một layer không phủ định pressure ở layer khác.
