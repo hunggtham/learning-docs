@@ -217,3 +217,47 @@ API/event/schema producer có thể deploy version mới trong vài phút nhưng
 Compatibility window cần dựa trên inventory/telemetry của consumer thực: version nào đang đọc, consumer nào offline/batch theo lịch, replay có thể đọc event cũ bao lâu và retention kéo dài thế nào. Với event log, một consumer mới restart từ offset cũ có thể gặp schema lịch sử dù live traffic đã chuyển hết.
 
 Mental model release vì vậy là `producer capability → coexistence → consumer adoption → evidence không còn old dependency → contract removal`. “Deploy xong producer” chỉ là đầu migration, không phải điểm kết thúc.
+
+## 31. Runtime configuration là một release surface độc lập với artifact
+
+Một binary/image không đổi nhưng thay timeout, pool size, routing weight, cache policy hoặc business threshold vẫn có thể tạo incident lớn. Vì vậy configuration phải được coi là một release subject có identity, history, validation và rollout semantics riêng, không phải “text file nhỏ nên ít rủi ro”.
+
+Invariant quan trọng là operator phải trả lời được `artifact nào + config revision nào + flag state nào` đang tạo behavior quan sát được. Nếu config được mutate trực tiếp mà không có revision/effective-state evidence, rollback code có thể không thay đổi behavior vì nguyên nhân thực nằm ở config mới.
+
+Config rollout cũng cần staged exposure khi blast radius lớn. Một thay đổi pool từ 20 lên 200 có thể làm service local khỏe hơn nhưng đẩy database vào saturation; một timeout dài hơn có thể giảm error bề mặt nhưng giữ resource lâu hơn. Validation phải xét system effect, không chỉ schema/type của config.
+
+## 32. Feature flag là state machine có cohort và cleanup invariant
+
+Flag không chỉ là boolean. Progressive release thường có rule theo tenant, region, percentage, account class hoặc prerequisite flag khác. Vì vậy effective behavior là kết quả của `code revision + flag definition + targeting rule + evaluation context`.
+
+Một flag lifecycle trưởng thành có ít nhất các state: tạo ở trạng thái an toàn, enable cho cohort nhỏ, mở rộng theo evidence, đạt default mới, rồi **xóa cả old branch lẫn flag definition**. Nếu chỉ để flag ở 100% mãi mãi, codebase vẫn mang hai behavior path và operator vẫn phải reasoning về một control surface không còn giá trị.
+
+Rollback bằng flag cũng có giới hạn. Nếu behavior mới đã ghi data theo representation mới, phát external side effect hoặc consumer khác đã phụ thuộc output mới, tắt flag không đảo state đã tạo. Vì vậy flag giảm exposure nhưng không thay thế compatibility/recovery design.
+
+## 33. Shadow traffic và dark launch tạo evidence nhưng không chứng minh side effect an toàn
+
+Một cách kiểm tra version mới là copy request production sang candidate nhưng không dùng response của candidate cho user. Cách này cho workload distribution thực tế tốt hơn synthetic test, đặc biệt cho parsing, query planning hoặc read path. Tuy nhiên traffic shadow làm tăng downstream load và có thể vô tình tạo side effect nếu request không được biến thành read-only/dry-run semantics.
+
+Candidate cũng có thể nhận request trễ hơn original, thiếu session state hoặc dùng dependency khác nên kết quả mismatch chưa chắc là bug. Evidence cần phân biệt input equivalence, dependency revision và comparison semantics. Với nondeterministic output, so byte-for-byte có thể tạo false alarm.
+
+Dark launch vì vậy là **measurement experiment**: phải định nghĩa cái gì được phép thực thi, workload overhead budget, mismatch nào có nghĩa và cách dừng experiment nếu candidate gây pressure. Nó không phải cách miễn phí để “test production trước khi release”.
+
+## 34. Release identity phải bao phủ artifact, config, flag và migration state
+
+Nhiều incident khó điều tra vì dashboard chỉ dimension theo application version trong khi behavior thực phụ thuộc nhiều control surface. Một release identity hữu ích nên liên kết immutable artifact digest với config revision, relevant flag snapshot/rule revision, schema/migration phase và environment/region.
+
+Điều này không có nghĩa đóng băng mọi dynamic config. Nó có nghĩa mọi mutation quan trọng phải có event/revision để reconstruct effective state tại thời điểm T. Khi operator hỏi “vì sao cùng version nhưng chỉ tenant A lỗi?”, cohort/flag/config evidence phải cho phép giải thích khác biệt đó.
+
+Mental model cuối cùng là:
+
+```text
+source change
+→ artifact identity
+→ config + flag + migration composition
+→ staged exposure
+→ runtime evidence theo cohort
+→ promote / pause / compensate / rollback-compatible action
+→ cleanup old compatibility state
+```
+
+Safe delivery chỉ hoàn tất khi temporary compatibility/flag/migration state đã được thu hồi và hệ thống trở lại một steady state dễ reasoning, không phải ngay khi 100% traffic chạy binary mới.
