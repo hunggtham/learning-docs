@@ -46,18 +46,18 @@ Dependency không được hiểu như “học xong phần trước mới đư�
 |---|---|---|
 | DevOps operating model, flow, feedback, ownership | Đủ sâu cho platform reasoning | Có queue/WIP/batch-size, feedback quality và local-vs-system optimization |
 | Platform Engineering boundary và cognitive load | Đủ sâu | `00_foundations`, `09_platform_engineering` |
-| Linux process/service/signal/resource | Đủ cho production operations | Internals link `computer_science/03_operating_systems` |
-| Linux pressure/throttling/evidence | Đủ applied | Kernel scheduler/memory internals vẫn giữ ở OS canonical |
-| DNS/TCP/TLS/proxy/request path | Đủ cho troubleshooting | Có retry/deadline/connection-path reasoning; protocol depth cross-link CS |
+| Linux process/service/signal/resource | Đủ cho production operations | Có effective-limit composition, accept queue, dirty-page/writeback và clock dependency; internals link `computer_science/03_operating_systems` |
+| Linux pressure/throttling/evidence | Đủ applied | Có PSI, cgroup hierarchy, OOM scope, I/O service-rate reasoning; kernel internals vẫn giữ ở OS canonical |
+| DNS/TCP/TLS/proxy/request path | Đủ cho troubleshooting | Có retry/deadline, negative cache, pool wait, MTU black-hole, HTTP/2 failure scope và load-balancer health propagation; protocol depth cross-link CS |
 | Git/change flow | Đủ theo delivery context | Không biến thành Git command manual |
-| Reproducible/hermetic build, artifact identity, cache trust | Đủ sâu | Supply-chain nối security; language-specific build tool không tách chapter |
-| CI/CD, flaky tests, concurrency, stale evidence, migration safety | Đủ sâu | Deployment theory link Software Engineering |
-| Container image/runtime/build/security/resource | Đủ production depth | Có image pull/recovery, runtime contract, filesystem/layer, UID/PID1, multi-arch và memory-accounting concerns; internals link OS |
-| IaC desired state/state/drift/modules/import/partial failure | Đủ sâu | Tool-specific Terraform/OpenTofu syntax cố ý không thành chapter riêng |
-| Cloud IAM/network/compute/storage/failure domain | Đủ production depth | Có eventual consistency, control-plane/data-plane, managed failover, durability-vs-availability, quota, provisioning latency và locality; provider catalog không duplicate |
+| Reproducible/hermetic build, artifact identity, cache trust | Đủ sâu | Có hidden nondeterminism, build-time network, independent rebuild, platform target identity và generated-code/toolchain inputs |
+| CI/CD, flaky tests, concurrency, stale evidence, migration safety | Đủ sâu | Có superseded work, stale approval, shared-test-environment coupling, paused release state, comparative verification và merge-queue semantics |
+| Container image/runtime/build/security/resource | Đủ production depth | Có image pull/recovery, runtime override precedence, startup spike, init semantics, writable-path contract, external side-effect boundary và config-cohort reasoning; internals link OS |
+| IaC desired state/state/drift/modules/import/partial failure | Đủ sâu | Có unknown values, replacement ordering/headroom, external lookup stability, state recovery và plan-vs-actual policy boundary |
+| Cloud IAM/network/compute/storage/failure domain | Đủ production depth | Có API rate-limit, zonal capacity scarcity, failure-state capacity, replication bandwidth/lag và private-endpoint composition; provider catalog không duplicate |
 | Kubernetes control plane/reconciliation | Đủ sâu | Có optimistic concurrency, watch/resync, work queue/backoff, admission, API saturation, finalizer, owner graph, cache staleness, leader-election/fencing boundary và control-plane fairness |
-| Kubernetes workload/network/storage/resources/autoscaling | Đủ sâu | Có schedulable-vs-aggregate capacity, PDB, topology, termination race và interacting autoscalers |
-| GitOps | Đủ sâu | Có field ownership, rollback limits, promotion race, break-glass và repository trust; product syntax không canonical |
+| Kubernetes workload/network/storage/resources/autoscaling | Đủ sâu | Có schedulable-vs-aggregate capacity, PDB, topology, termination race, storage attach/fencing, ephemeral storage, Job/CronJob business semantics và endpoint-churn cost |
+| GitOps | Đủ sâu | Có field ownership, rollback limits, revision-vs-serving distinction, deterministic rendering, prune semantics, readiness-vs-ordering, multi-cluster fan-out và decrypt trust path |
 | Metrics/logs/traces/events/alerting | Đủ sâu | Có telemetry-pipeline failure, sampling, cardinality, percentile caveat và exemplars |
 | SLI/SLO/error budget/capacity/backpressure | Đủ sâu | Có burn-rate reasoning, Little's Law, retry budget, admission/concurrency control, failover headroom, correlated failure, brownout và saturation cliff |
 | Incident/postmortem/runbook | Đủ sâu | Có recovery-vs-root-cause, counterfactual/cohort reasoning, timeline uncertainty, negative evidence và multi-loop oscillation |
@@ -96,9 +96,9 @@ Modern không được đồng nghĩa với “công nghệ mới hơn”. Một
 
 ## 7. Production evidence audit
 
-Các chapter đều nối concept với evidence: process/socket `/proc`, pressure/throttling signal, deployment event, artifact digest/provenance, IaC plan/state, cloud quota/control-plane status, Kubernetes object generation/conditions/events/controller queue, telemetry pipeline, SLI burn, tenancy/fairness/cost attribution và audit log.
+Các chapter đều nối concept với evidence: process/socket `/proc`, PSI/throttling/writeback/accept-queue signal, DNS resolver/cache và packet-size/path evidence, deployment event, artifact digest/provenance/toolchain identity, IaC plan/state/remote actual state, cloud quota/rate-limit/capacity status, Kubernetes generation/conditions/events/storage attach state/controller queue, GitOps observed/applied/serving revision, telemetry pipeline, SLI burn, tenancy/fairness/cost attribution và audit log.
 
-Các worked failure case quan trọng đều cố gắng giữ causal chain `symptom → hypothesis → evidence → layer → mitigation → verify`, thay vì biến thành danh sách lệnh. Vòng depth mới bổ sung counterfactual/cohort comparison, detector reliability và recovery-phase evidence để tránh kết luận nhân quả quá sớm.
+Các worked failure case quan trọng đều cố gắng giữ causal chain `symptom → hypothesis → evidence → layer → mitigation → verify`, thay vì biến thành danh sách lệnh. Các vòng depth gần đây bổ sung counterfactual/cohort comparison, detector reliability, transition-state capacity và recovery-phase evidence để tránh kết luận nhân quả quá sớm.
 
 ## 8. Security audit
 
@@ -108,13 +108,15 @@ Security control nằm trên production control path như admission/policy cũng
 
 Vòng depth mới kiểm tra thêm effective authority: caller identity phải được bind với requested target trước khi automation identity mạnh hơn thực hiện action; token forwarding không được mặc định đồng nghĩa authority forwarding; policy/evidence phải bind vào immutable subject/revision để tránh TOCTOU.
 
+Build/GitOps depth mới cũng củng cố chain-of-custody: artifact evidence phải bind đúng digest/target variant; desired-state rendering cần declared inputs; encrypted Git secret vẫn có decrypt identity/KMS lifecycle riêng.
+
 ## 9. Performance và capacity audit
 
-Library hiện nối performance từ Linux/cgroup pressure lên container resource behavior, Kubernetes scheduling/autoscaling, cloud provisioning latency và SRE queue/capacity model.
+Library hiện nối performance từ Linux/cgroup pressure lên container startup/runtime behavior, Kubernetes scheduling/autoscaling/storage attach, cloud provisioning/API/physical-capacity latency và SRE queue/capacity model.
 
-Phần DevOps chỉ giữ performance ở mức operational reasoning: saturation, headroom, queue, throttling, warm-up, connection budget, admission control, failover capacity và evidence. CPU architecture, scheduler algorithm, virtual memory, page-table hoặc formal queueing depth sâu hơn vẫn thuộc Computer Science/Mathematics canonical docs.
+Phần DevOps chỉ giữ performance ở mức operational reasoning: saturation, headroom, queue, throttling, warm-up, connection budget, I/O service rate, admission control, failover capacity và evidence. CPU architecture, scheduler algorithm, virtual memory, page-table hoặc formal queueing depth sâu hơn vẫn thuộc Computer Science/Mathematics canonical docs.
 
-Capacity không còn được hiểu chỉ là peak throughput. Audit hiện kiểm tra cả recovery concurrency, failure headroom, correlated failure, fairness và intentional idle reserve phục vụ SLO.
+Capacity không còn được hiểu chỉ là peak throughput hay steady-state utilization. Audit hiện kiểm tra cả transition-state headroom cho replace/surge, recovery concurrency, failure headroom, correlated failure, control-plane rate limit, physical capacity scarcity, fairness và intentional idle reserve phục vụ SLO.
 
 ## 10. Coverage cố ý chưa tách chapter
 
@@ -134,7 +136,7 @@ Không tạo link giả đến chapter tool-specific chưa tồn tại. Link t�
 
 ## 12. Dependency-hidden audit sau depth pass
 
-Các prerequisite dễ bị coi là “ai cũng biết” đã được làm rõ thêm trong canonical chapter thay vì tách file mới: queue/WIP và feedback ở Foundations; pressure/resource boundary ở Linux; deadline/retry/connection path ở Network; hermetic/reproducible/trust ở Build; concurrency/stale evidence ở CI; layer/runtime/recovery dependency ở Container; state/partial failure ở IaC; control-plane eventual behavior ở Cloud; reconciliation/field ownership/lifecycle graph ở Kubernetes/GitOps; sampling/aggregation ở Observability; queue/capacity/retry/admission ở SRE; effective authority và evidence binding ở Security; async lifecycle/idempotency/fault cell ở Platform; isolation/fairness/recovery capacity ở Multi-tenancy.
+Các prerequisite dễ bị coi là “ai cũng biết” đã được làm rõ thêm trong canonical chapter thay vì tách file mới: queue/WIP và feedback ở Foundations; pressure/resource boundary/writeback/accept queue/clock ở Linux; deadline/retry/cache/connection pool/MTU ở Network; hermetic/reproducible/toolchain/remote input ở Build; concurrency/stale evidence/approval subject/test isolation ở CI; layer/runtime/startup/effective config ở Container; state/partial failure/unknown value/transition headroom ở IaC; control-plane eventual behavior/API capacity/physical scarcity ở Cloud; reconciliation/field ownership/lifecycle graph/storage fencing/batch semantics ở Kubernetes/GitOps; sampling/aggregation ở Observability; queue/capacity/retry/admission ở SRE; effective authority và evidence binding ở Security; async lifecycle/idempotency/fault cell ở Platform; isolation/fairness/recovery capacity ở Multi-tenancy.
 
 Điểm này quan trọng vì một chapter có thể dài nhưng vẫn có prerequisite ẩn. Coverage hiện được đánh giá theo causal reasoning, không theo số heading hoặc số dòng.
 
@@ -146,7 +148,7 @@ Các file hiện tại đều có vai trò canonical rõ; không có raw/source 
 
 Branch domain duy nhất là `feat/devops-platform-engineering-knowledge-library`; không phát hiện branch DevOps/Platform Engineering thứ hai cần hợp nhất hoặc xóa.
 
-Branch đã từng được sync với `main` trước vòng depth này; trạng thái ahead/behind cần được kiểm tra lại ở cuối mỗi editing pass vì repository có thể nhận commit song song trong lúc domain đang được đào sâu.
+Branch đã từng được sync với `main` trước các vòng depth; trạng thái ahead/behind phải được kiểm tra lại ở cuối mỗi editing pass vì repository có thể nhận commit song song trong lúc domain đang được đào sâu.
 
 ## 14. Criteria cho lần mở rộng tiếp theo
 
@@ -154,9 +156,9 @@ Một chapter mới chỉ nên được thêm nếu đáp ứng ít nhất một
 
 Nếu nhu cầu mới chủ yếu là syntax hoặc sản phẩm — ví dụ “cách viết Helm chart”, “lệnh Argo CD”, “Terraform provider X” — ưu tiên example/reference bên trong chapter hiện có hoặc tài liệu thực hành riêng nếu repository sau này có boundary cho labs. Không dùng số lượng chapter làm thước đo hoàn thành.
 
-## 15. Latest invariants/failure-semantics depth pass
+## 15. Invariants/failure-semantics depth pass
 
-Vòng đào sâu mới nhất cố ý không mở chapter mới. Nó tăng reasoning density ở năm canonical area.
+Một vòng đào sâu trước đó cố ý không mở chapter mới và tăng reasoning density ở các canonical area phía control-plane/platform.
 
 Kubernetes được bổ sung delete/finalizer protocol, owner graph, leader-election/fencing boundary, informer-cache staleness, status-condition contract, CRD evolution và control-plane fairness. SRE được bổ sung admission/concurrency control, failover capacity, correlated failure, brownout và error-budget policy như feedback controller. Security được bổ sung confused deputy, authority propagation, TOCTOU, revocation propagation và control-plane compromise blast radius.
 
@@ -166,21 +168,34 @@ Production Practice được bổ sung counterfactual/cohort reasoning, interact
 
 Các phần này đều tạo mental model/failure class mới và đã được nối lại trong `90_connections`, thay vì tồn tại như các đoạn senior note rời rạc.
 
-## 16. Kết luận audit hiện tại
+## 16. Source-to-runtime và transition-state depth pass
+
+Vòng đào sâu mới nhất tiếp tục giữ nguyên canonical structure nhưng tăng độ sâu từ source cho tới workload runtime.
+
+Linux bổ sung dirty-page/writeback stall, listen/accept queue, effective limit composition và clock dependency. Network bổ sung negative DNS caching, connection-pool queue, Path MTU black-hole, HTTP/2 multiplexing failure scope và load-balancer health propagation. Build bổ sung nondeterministic input, build-time network trust, independent rebuild, target architecture identity và generated-code/toolchain closure. CI/CD bổ sung superseded-work cancellation semantics, subject-bound approval, shared environment coupling, paused release state, cohort comparison và merge-queue capacity.
+
+Container bổ sung image-vs-runtime precedence, init-container limitation, startup resource spike, explicit writable path, external-side-effect boundary và config-revision cohorts. IaC bổ sung unknown values, replacement ordering, transition headroom, remote lookup stability, state recovery và pre/post-apply policy boundary. Cloud bổ sung control-plane API capacity, zonal physical capacity scarcity, N-1/failure-state headroom, replication bandwidth/lag và private endpoint composition.
+
+Kubernetes workload bổ sung storage topology/attach fencing, StatefulSet-vs-data invariant, ephemeral-storage pressure, Job/CronJob business idempotency và endpoint churn. GitOps bổ sung observed/applied/serving revision separation, repository outage semantics, deterministic rendering, prune risk, readiness-vs-ordering, multi-cluster rollout và decrypt/KMS path.
+
+Mental model chung của vòng này là **steady state không đủ để đánh giá safety**. Phải reasoning cả transition state: build input thay đổi, release evidence stale, replacement/surge cần headroom, failover cần capacity, controller cần thời gian hội tụ và stateful ownership transfer cần fencing.
+
+## 17. Kết luận audit hiện tại
 
 Library hiện có đường reasoning liên tục:
 
 ```text
 flow / ownership
-→ runtime + request path
-→ source / artifact / evidence
-→ container + infrastructure lifecycle
-→ cloud + Kubernetes control loops
-→ GitOps desired state
+→ runtime + request path + resource/queue pressure
+→ source / artifact / evidence freshness
+→ container runtime + effective inputs
+→ infrastructure state transition + cloud capacity
+→ Kubernetes workload/control loops + stateful ownership
+→ GitOps desired/applied/serving state
 → telemetry / SLO / overload / capacity / recovery
 → identity / effective authority / policy / supply-chain trust
 → platform contract / distributed lifecycle / tenancy / fairness / economics
 → cross-layer causal production diagnosis
 ```
 
-Coverage hiện đủ để đọc như một giáo trình DevOps/Platform Engineering tổng quát mà không biến thành catalog sản phẩm. Các lần mở rộng tiếp theo nên tiếp tục xuất phát từ incident/failure class hoặc platform invariant thực tế, không từ xu hướng công nghệ.
+Coverage hiện đủ để đọc như một giáo trình DevOps/Platform Engineering tổng quát mà không biến thành catalog sản phẩm. Các lần mở rộng tiếp theo nên tiếp tục xuất phát từ incident/failure class, transition-state invariant hoặc platform requirement thực tế, không từ xu hướng công nghệ.
