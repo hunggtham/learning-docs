@@ -14,8 +14,9 @@ Nếu chưa chắc về JavaScript runtime, hãy quay lại [JavaScript Beginner
 
 1. [01 — Foundations & Runtime Boundary](typescript_01_foundations.md) giải thích TypeScript là gì, type erasure, inference, annotation, `unknown`/`any`/`never`, union/intersection, object/function types, narrowing, discriminated union, `satisfies`, assertion và các failure mode cơ bản.
 2. [02 — Type System Internals & Generic Modeling](typescript_02_type_system.md) đào sâu structural typing, assignability, variance, generic constraints/inference, `keyof`, indexed access, mapped/conditional types, `infer`, template literal types, recursive types, control-flow analysis, type predicate/assertion function, tuple/class/`this` typing, `const` type parameters, `NoInfer` và type-system performance.
-3. [03 — Compiler, Modules & Tooling](typescript_03_tooling_modules_runtime.md) giải thích compiler pipeline, project graph/language service, `tsconfig`, `target`/`lib`, module resolution, ESM/CJS, `verbatimModuleSyntax`, declaration files, `isolatedDeclarations`, package `exports`/`typesVersions`, direct `.ts` runtime, `erasableSyntaxOnly`, project references, TypeScript 6 → 7 migration, TS7 parallelism/watch mode và debugging compiler/tooling.
+3. [03 — Compiler, Modules & Tooling](typescript_03_tooling_modules_runtime.md) giải thích compiler pipeline, project graph/language service, `tsconfig`, target/lib, module resolution, ESM/CJS, `verbatimModuleSyntax`, declaration files, `isolatedDeclarations`, package `exports`/`typesVersions`, direct `.ts` runtime, `erasableSyntaxOnly`, project references, TypeScript 6 → 7 migration, TS7 parallelism/watch mode và debugging compiler/tooling.
 4. [04 — Senior Production Engineering](typescript_04_senior_production.md) đưa type model vào boundary thật: API payload, runtime/semantic validation, schema evolution, serialization, generated types, domain modeling, React/Node, monorepo/library authoring, security capability, performance, observability, migration legacy JavaScript và production diagnostics.
+5. [05 — Version Evolution & Migration](typescript_05_version_evolution_migration.md) theo dõi TypeScript 1.x → 7.0 theo các thay đổi có ý nghĩa về type system, compiler, module/tooling và production compatibility; giải thích vì sao 4.x/5.x hình thành TypeScript hiện đại, vai trò cầu nối của 6.0, native architecture của 7.0 và cách nâng version có evidence thay vì chỉ sửa cho build xanh.
 
 Luồng reasoning xuyên suốt là **JavaScript value/runtime → TypeScript model → compiler proof/diagnostic → emitted/runtime code → production evidence**. Nếu một type trick làm code “thông minh hơn” nhưng che khuất runtime behavior hoặc tạo compiler cost không đáng có, track này ưu tiên code dễ reasoning hơn.
 
@@ -31,7 +32,7 @@ Sau depth audit, một mental model thứ hai được thêm rõ hơn: **type l�
 
 TypeScript 1.x đặt nền với annotation, interface, class và generic. TypeScript 2.x làm hệ kiểu trưởng thành hơn với control-flow based analysis, `strictNullChecks`, mapped types và conditional types ở các mốc khác nhau trong nhánh 2.x. TypeScript 3.x bổ sung `unknown`, project references và optional chaining/nullish coalescing ở giai đoạn cuối 3.x. TypeScript 4.x phát triển mạnh type-level programming với variadic tuple, template literal types, nhiều cải tiến inference và `satisfies` ở 4.9. TypeScript 5.x hiện đại hóa decorator semantics, module options, const type parameters, `NoInfer`, inferred predicates, isolated declaration workflows và support cho direct-TypeScript runtimes. TypeScript 6.0 thay đổi nhiều default/deprecation để chuẩn bị cho native compiler. TypeScript 7.0 là bước chuyển kiến trúc compiler lớn nhất: native Go implementation, LSP-oriented editor integration, parallel parser/checker/emitter/project builder và build performance cao hơn đáng kể, trong khi cố giữ type-checking behavior tương thích với 6.0.
 
-Một consequence thực tế là khi đọc bài cũ, phải tách **language feature** khỏi **compiler/toolchain generation**. `satisfies`, conditional type hay discriminated union vẫn là kiến thức type-system; native compiler 7.0 chủ yếu thay đổi cách tool chạy và scale chứ không làm những concept đó thành legacy.
+Phần trên chỉ là map nhanh. Timeline, các mốc 4.x/5.x quan trọng, migration consequence và playbook nâng 5.x/6.x → 7.0 được giải thích riêng trong [Version Evolution & Migration](typescript_05_version_evolution_migration.md). Một consequence thực tế là khi đọc bài cũ, phải tách **language feature** khỏi **compiler/toolchain generation**: `satisfies`, conditional type hay discriminated union vẫn là kiến thức type-system; native compiler 7.0 chủ yếu thay đổi cách tool chạy và scale chứ không làm những concept đó thành legacy.
 
 ## Thuật ngữ chính
 
@@ -61,7 +62,9 @@ Coverage compiler/tooling được coi là đủ khi người đọc giải thí
 
 Coverage production được coi là đủ khi người đọc có thể trace một runtime mismatch từ artifact → external value → validator/adapter → proof source → static model; phân biệt structural validation với semantic validation; hiểu schema evolution/serialization/generation không được TypeScript tự bảo đảm; biết TypeScript hỗ trợ security architecture nhưng không thay authorization/sanitization; và biết thiết kế consumer fixture/observability để kiểm tra public contract ngoài source tree.
 
-Không tạo chapter riêng chỉ để liệt kê syntax mới. Feature mới chỉ được thêm khi nó thay đổi mental model, migration behavior hoặc production practice.
+Coverage version/migration được coi là đủ khi người đọc có thể phân biệt feature timeline với compiler-generation change; giải thích vì sao `satisfies`, `NoInfer`, `isolatedDeclarations`, `erasableSyntaxOnly`, TypeScript 6.0 và TypeScript 7.0 xuất hiện; biết upgrade có thể làm thay đổi checker, `lib.d.ts`, module resolution hoặc declaration surface dù application source gần như không đổi; và biết audit consumer/tooling compatibility trước khi nâng production compiler.
+
+Không tạo chapter riêng chỉ để liệt kê syntax mới. Version chapter chỉ giữ những mốc thay đổi mental model, migration behavior hoặc production compatibility.
 
 ## Nguồn chuẩn để đối chiếu version
 
@@ -70,4 +73,4 @@ Không tạo chapter riêng chỉ để liệt kê syntax mới. Feature mới c
 - ECMAScript/JavaScript runtime semantics được giữ ở JavaScript canonical docs của repository này.
 - Module/package behavior phải được đối chiếu thêm với runtime/bundler thật; TypeScript chỉ cố model host đó chứ không định nghĩa host semantics.
 
-Track được audit lại theo trạng thái TypeScript 7.0, tháng 09/2026. Depth audit hiện tại tập trung vào proof origin, compiler/project graph, modern module/package boundary và production evidence thay vì tăng số chapter.
+Track được audit lại theo trạng thái TypeScript 7.0, tháng 09/2026. Depth audit hiện tại tập trung vào proof origin, compiler/project graph, modern module/package boundary, version evolution và production evidence thay vì tăng chapter theo từng release nhỏ.
