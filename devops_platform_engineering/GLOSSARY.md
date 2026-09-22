@@ -74,3 +74,11 @@ File này dùng để tra nhanh thuật ngữ, không thay thế chapter giải 
 | Chargeback | Phân bổ/hạch toán chi phí shared platform/cloud về đơn vị sử dụng theo mô hình đã định. |
 | Unit cost | Chi phí trên một đơn vị work/value như successful request, order, build minute hoặc GB processed; denominator phải phản ánh outcome có ý nghĩa. |
 | Control-plane fairness | Bảo vệ tài nguyên điều khiển dùng chung như API server, scheduler, controller hoặc CI coordinator khỏi một tenant/workload gây starvation cho tenant khác. |
+| Evidence freshness | Độ mới của evidence so với actual state; dữ liệu đúng nhưng quá cũ vẫn có thể dẫn tới quyết định production sai. |
+| Compensation | Action mới nhằm phục hồi invariant sau partial side effect khi không thể rollback chính xác về state cũ. |
+| Adoption | Quy trình đưa một external resource đã tồn tại vào ownership/reconciliation của platform sau khi xác minh identity, policy và state mapping. |
+| Orphan resource | Resource còn tồn tại nhưng không còn ownership/state mapping đáng tin trong control plane; cần quarantine/adoption/cleanup semantics thay vì xóa mù. |
+| Break-glass access | Phiên nâng quyền khẩn cấp có scope, TTL, reason, audit và lifecycle riêng; không nên là admin account cố định dùng hằng ngày. |
+| Policy audit mode | Chạy policy để ghi nhận violation/impact mà chưa chặn request, thường dùng trước staged enforcement. |
+| Recovery convergence | Quá trình sau mitigation đưa backlog, data invariant, capacity và degraded mode trở lại steady state có kiểm soát. |
+| Causal graph | Biểu diễn quan hệ mechanism giữa trigger, amplifier và hậu quả thay vì chỉ xếp sự kiện theo timestamp. |
