@@ -77,3 +77,55 @@ Kiểm tra route/service mapping. Nếu Kubernetes service không có endpoint, 
 Một request synchronous là một chuỗi dependency về thời gian. Nếu request đi qua năm hop và mỗi hop dùng timeout 30 giây độc lập, worst-case behavior có thể vượt xa user deadline. Platform nên cung cấp convention về connection timeout, request deadline, retry và propagation của correlation/trace context.
 
 Khi topology thay đổi, mental model vẫn giữ nguyên: xác định name resolution, connection, identity, routing, endpoint health, application behavior và downstream dependency. Tool chỉ giúp lấy evidence ở từng điểm.
+
+## 11. Connection cũng là tài nguyên hữu hạn ở phía client
+
+Mỗi TCP connection dùng socket/file descriptor và thường chiếm một source port tạm thời (ephemeral port). Khi application mở rất nhiều outbound connection ngắn sống, không reuse connection hoặc retry storm, client/NAT có thể hết port khả dụng trước khi server CPU cao.
+
+Triệu chứng có thể là connect timeout hoặc lỗi mở connection trong khi DNS, server listener và server CPU đều bình thường. Vì vậy outbound failure cần nhìn cả client-side socket state, connection pool và NAT boundary, không chỉ server.
+
+`TIME_WAIT` không tự động là bug; nó là phần của TCP lifecycle giúp tránh packet cũ bị nhầm với connection mới. Nhưng connection churn cực lớn làm port/socket state tăng và trở thành capacity concern. Reuse/pooling/keep-alive đúng cách thường tốt hơn chỉ tăng port range.
+
+## 12. NAT/conntrack có state và có thể là bottleneck ẩn
+
+Firewall/NAT/load balancer thường giữ connection-tracking state. Một node hoặc gateway có thể hết conntrack table/translation capacity dù application metric bình thường. Khi đó packet mới bị drop hoặc connection setup thất bại không đồng đều.
+
+Pattern hay gặp là nhiều Pod cùng node gọi một external endpoint qua cùng NAT, hoặc retry storm làm số connection mới tăng đột biến. Evidence cần đi xuống node/gateway metric: active connection, conntrack usage, SNAT port allocation, packet drop.
+
+Đây là ví dụ network abstraction “rò”: service chỉ thấy `connect timeout`, nhưng bottleneck nằm ở shared network state bên dưới.
+
+## 13. Long-lived connection làm DNS change không có hiệu lực ngay
+
+DNS TTL chỉ ảnh hưởng lần resolve. Nếu client đã giữ HTTP keep-alive, HTTP/2 hoặc database connection lâu dài, nó có thể tiếp tục nói chuyện với endpoint cũ ngay cả khi DNS cache đã hết hạn cho lookup mới.
+
+Vì vậy migration bằng DNS cần xét connection lifetime và draining. “TTL đã xuống 30 giây nên sau 30 giây mọi traffic sang IP mới” là giả định sai nếu connection hiện tại sống hàng phút hoặc hàng giờ.
+
+Khi thay load balancer/database endpoint, cần plan cho cả resolver cache **và** connection pool lifecycle.
+
+## 14. Timeout budget phải tính cả retry và queue
+
+Giả sử user deadline là 2 giây. Service A gọi B timeout 1,5 giây và retry một lần. Nếu attempt đầu dùng hết 1,5 giây, attempt hai gần như không còn thời gian để hoàn thành trước user deadline. Nếu B còn queue nội bộ, timeout ở A không biết work đã bắt đầu hay chưa.
+
+Thiết kế tốt truyền deadline hoặc tính remaining budget. Downstream timeout phải ngắn hơn remaining upstream deadline đủ để trả failure có kiểm soát. Retry chỉ được thực hiện nếu còn budget và operation an toàn.
+
+Timeout không nên được chọn độc lập từng team. Nó là một contract xuyên call graph.
+
+## 15. Retry multiplication giữa nhiều layer
+
+Nếu client retry 3 lần, proxy retry 2 lần và application SDK retry 3 lần, một user request có thể tạo số attempt downstream lớn hơn rất nhiều so với ý định của từng layer. Không phải lúc nào cũng đạt tích số tối đa vì timeout/deadline, nhưng risk amplification là thật.
+
+Vì vậy platform cần convention “layer nào sở hữu retry”. Proxy có thể retry connect failure cho idempotent request; application có domain context để biết operation nào safe. Không nên bật retry mặc định ở mọi layer mà không nhìn toàn path.
+
+## 16. 502, 503 và 504 chỉ là clue theo vị trí phát sinh
+
+Mã lỗi từ proxy thường gợi layer nhưng không phải universal truth. `502` thường nghĩa proxy không nhận response hợp lệ từ upstream; `503` có thể không có backend ready/overload; `504` thường là upstream timeout. Implementation cụ thể có thể khác.
+
+Do đó luôn xác định **ai phát status** bằng response header/access log rồi mới suy luận. Một application cũng có thể tự trả 503; nhìn status code mà không biết emitter dễ đi sai layer.
+
+## 17. Senior walkthrough: chỉ một số Pod không gọi được external API
+
+Giả sử 30% Pod timeout khi gọi external payment API, server payment không thấy request tương ứng. DNS giống nhau, Pod CPU/memory bình thường. Nếu các Pod lỗi tập trung trên vài node, hypothesis chuyển sang node/network boundary.
+
+Kiểm tra node NAT/conntrack/SNAT port, CNI/network policy và outbound route. Nếu conntrack gần đầy hoặc SNAT allocation cạn đúng trên node lỗi, scale thêm Pod vào cùng node có thể làm tệ hơn. Mitigation có thể phân tán workload/node, giảm connection churn/retry hoặc tăng gateway capacity tùy architecture.
+
+Causal chain quan trọng: partial failure theo node là dimension giúp giảm search space từ “external API không ổn” xuống “shared egress state trên subset node”.
