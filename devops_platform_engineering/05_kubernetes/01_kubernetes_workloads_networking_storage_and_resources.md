@@ -147,3 +147,59 @@ Giả sử Deployment 20 replica dùng `maxSurge: 25%`, nhưng cluster gần đ�
 Ứng dụng mới không có bug, readiness chưa có cơ hội chạy. Failure nằm ở interaction giữa rollout policy, resource request, cluster headroom và cloud quota. Fix có thể là tăng capacity/quota, điều chỉnh rollout budget hoặc giảm request sau khi có evidence; restart Pod không giải được causal chain.
 
 Đây là kiểu production reasoning Kubernetes cần: object status là symptom của nhiều control loop lồng nhau, không phải một lỗi đơn lẻ.
+
+## 24. Persistent volume có topology và attach lifecycle riêng
+
+Một PVC tồn tại không có nghĩa volume có thể mount ở mọi node. Nhiều block volume gắn với zone hoặc có giới hạn số volume attach trên node. Scheduler/storage controller phải phối hợp placement với topology của volume.
+
+Vì vậy Pod stateful có thể `Pending` dù CPU/memory còn nhiều nếu volume ở zone không có node phù hợp, attach limit đã chạm hoặc volume vẫn đang detach từ node cũ. Đây là failure path khác hoàn toàn với application startup.
+
+Khi điều tra, nối `PVC/PV → StorageClass/topology → selected node → attach/mount event`. Scale node ở zone khác không giúp nếu volume không di chuyển được. Storage topology phải là input của capacity/recovery design, không phải chi tiết CSI bị phát hiện lần đầu trong incident.
+
+## 25. StatefulSet stable identity không tự tạo data safety
+
+StatefulSet giữ ordinal/network identity và thường gắn mỗi replica với PVC riêng. Nhưng nó không tự hiểu replication/quorum của database. Xóa hoặc restart replica theo thứ tự “đẹp” vẫn có thể mất quorum nếu data system có topology khác Kubernetes topology.
+
+Rolling update của stateful workload cần biết node nào leader, replica nào lag, partition/update order và application-level readiness thật sự có nghĩa gì. Probe chỉ trả lời condition được encode; nó không thay thế consistency invariant của database.
+
+Vì vậy platform không nên biến StatefulSet thành “database button” nếu không sở hữu backup, replication, upgrade và recovery semantics tương ứng.
+
+## 26. Ephemeral storage cũng là resource có pressure và eviction
+
+Pod có thể ghi writable layer, `emptyDir`, logs hoặc temporary files. Những bytes này dùng node ephemeral storage. Workload có CPU/memory khỏe nhưng vẫn bị evict hoặc fail khi node disk pressure nếu temporary/log output tăng bất thường.
+
+Resource planning cần nhìn cả byte capacity lẫn I/O rate. Một batch job tạo hàng trăm GiB temporary data có thể ảnh hưởng node khác dù final output được upload object storage. Requests/limits/quota cho ephemeral storage, log rotation và cleanup lifecycle giúp biến resource ẩn thành contract.
+
+Khi `DiskPressure` xuất hiện, chỉ xóa Pod thường giải phóng tạm thời nhưng không sửa producer tạo data không bounded.
+
+## 27. Job retry semantics phải đi cùng idempotency của business work
+
+`Job` có thể chạy lại Pod khi process fail. Điều đó tốt cho transient infrastructure failure nhưng nguy hiểm nếu business operation đã side-effect một phần rồi exit trước khi ghi completion state.
+
+Ví dụ job charge invoice: payment API đã nhận request nhưng process chết trước khi lưu “done”. Pod mới chạy lại và charge lần hai nếu operation không có idempotency key/transaction protocol phù hợp. Kubernetes chỉ biết process completion, không biết business effect.
+
+Batch platform nên expose retry/backoff/dead-letter semantics và khuyến khích work item có durable identity. “At least one successful Pod” không đồng nghĩa “business side effect exactly once”.
+
+## 28. CronJob phải reasoning về missed run và overlapping run
+
+Scheduled job phụ thuộc controller clock, scheduling delay và previous run duration. Nếu job 10 phút nhưng chạy mỗi 5 phút, overlap có thể tạo concurrent work ngoài ý muốn. Nếu control plane down, một số schedule có thể bị trễ/missed theo policy.
+
+Vì vậy batch contract cần quyết định overlap có được phép không, late execution còn giá trị không, deadline là gì và work có deduplicate theo logical schedule ID không. Không nên giả định cron expression tự tạo business correctness.
+
+Một report “mỗi ngày lúc 00:00” thường thực sự có invariant về data window, timezone và exactly-one logical output; đó là application contract cần được encode ngoài scheduler.
+
+## 29. Endpoint scale tạo pressure lên control plane và data plane
+
+Một Service có vài endpoint khác với một Service có hàng chục nghìn endpoint. Endpoint update, watch fan-out và proxy programming đều có cost. Khi workload churn lớn, control plane có thể xử lý liên tục endpoint changes trong khi data plane chưa hội tụ hoàn toàn.
+
+Vì vậy “thêm thật nhiều replica” không miễn phí. Replica count lớn tăng scheduling, image pull, readiness probe, endpoint propagation, connection warming và observability cardinality. Có lúc scale-up làm reliability giảm vì control-plane/data-plane churn lớn hơn lợi ích capacity.
+
+Capacity engineering cần tìm điểm mà thêm replica còn tăng throughput hữu ích, thay vì dùng replica count như actuator không giới hạn.
+
+## 30. Senior walkthrough: Pod stateful failover chậm dù node mới đã sẵn sàng
+
+Giả sử node chứa một database replica chết. Autoscaler tạo node mới trong 2 phút nhưng Pod vẫn `Pending` thêm 8 phút. CPU/memory fit và image đã pull. Event cho thấy volume cũ chưa detach khỏi node mất liên lạc nên attach vào node mới bị block để tránh simultaneous writer.
+
+Causal chain nằm ở storage fencing/attach lifecycle, không ở scheduler capacity. Force-detach có thể rút ngắn recovery nhưng tăng risk nếu node cũ thực ra vẫn ghi được. Đây là trade-off giữa recovery time và split-brain/data corruption.
+
+Bài học là recovery của stateful workload bị giới hạn bởi **data ownership transfer**, không chỉ bởi tốc độ tạo Pod/node.
