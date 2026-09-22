@@ -135,3 +135,51 @@ Giả sử managed DB tự failover trong 45 giây và endpoint DNS trỏ writer
 Evidence cho thấy connection pool giữ các TCP connection cũ; client driver không refresh DNS/reconnect nhanh; retry timeout dài làm worker bị giữ. Infrastructure failover đã hoàn thành, nhưng application recovery contract chưa hoàn thành.
 
 Fix nằm ở connection validation/reconnect, timeout/backoff và test failover end-to-end. Đây là bài học cốt lõi của managed service: provider chỉ sở hữu một phần causal chain; user-visible recovery phải được kiểm chứng ở consumer.
+
+## 21. API rate limit là capacity của control plane
+
+Cloud API không có throughput vô hạn. Một autoscaler, IaC loop hoặc controller fan-out quá mạnh có thể chạm rate limit/throttle dù data-plane workload vẫn khỏe. Khi đó reconcile chậm, scale-out bị trì hoãn hoặc automation bắt đầu retry và tự tạo thêm áp lực.
+
+Vì vậy control-plane client cần bounded concurrency, exponential backoff với jitter và ưu tiên action quan trọng. Nếu 10.000 resource cùng cần refresh sau outage, “retry càng nhanh càng tốt” có thể biến provider recovery thành thundering herd.
+
+Platform nên quan sát API request rate, throttling, queue/reconcile latency và actor identity. Đây là capacity dimension riêng với CPU/memory của workload.
+
+## 22. Zonal capacity scarcity khác quota
+
+Có quota không đồng nghĩa provider chắc chắn có physical capacity ngay tại zone/instance class mong muốn. Một loại VM/GPU có thể tạm thiếu capacity trong một zone dù account quota còn. Autoscaler lúc đó có thể retry mãi trên một option không thể cấp phát trong thời gian cần thiết.
+
+Thiết kế resilient có thể cần nhiều instance type tương đương, nhiều zone hoặc reserved capacity cho workload critical. Nhưng diversity cũng tăng complexity về architecture/performance. Quyết định phải quay về SLO và workload constraint.
+
+Runbook scale failure nên phân biệt `quota exceeded`, `rate limited`, `capacity unavailable`, `permission denied` và `invalid configuration`; cùng biểu hiện “node không lên” nhưng recovery path khác nhau.
+
+## 23. Recovery cần capacity ở failure state, không chỉ steady state
+
+Hệ thống chạy bình thường với 50% utilization trên hai zone có vẻ có headroom. Nhưng nếu mất một zone chứa 50% capacity, zone còn lại lập tức lên gần 100% trước khi autoscaling kịp tạo resource. Nếu provider không còn capacity hoặc quota cho failover, redundancy trên sơ đồ không chuyển thành user availability.
+
+Capacity planning vì vậy phải tính N-1 hoặc failure scenario phù hợp: sau khi mất failure domain lớn nhất, còn bao nhiêu capacity phục vụ traffic trong suốt `time-to-recover-capacity`? Headroom có thể cố ý “idle” ở steady state nhưng là insurance cho SLO.
+
+FinOps cần hiểu reserve này để không tối ưu nhầm reliability headroom thành waste.
+
+## 24. Cross-zone/region replication có consistency và bandwidth budget
+
+Replication không phải phép nhân bản miễn phí. Synchronous replication thường tăng write latency và availability phụ thuộc quorum/path; asynchronous replication giảm coupling trên write path nhưng có replication lag và RPO khác 0 khi failover.
+
+DevOps/Platform layer không cần viết lại distributed-consistency theory, nhưng phải expose consequence: metric lag nào cần theo dõi, failover ở lag bao nhiêu chấp nhận được, egress/bandwidth có đủ khi backfill/recovery không, và failback có conflict/data divergence semantics gì.
+
+Nếu replication thường ngày chỉ dùng 20% network nhưng recovery/backfill cần gấp 10 lần throughput, đường truyền có thể trở thành bottleneck đúng lúc DR cần nhất. Recovery capacity phải được test ở scale thực tế.
+
+## 25. Private endpoint vẫn cần DNS, IAM và route cùng hội tụ
+
+Dịch vụ dùng private endpoint thường được xem “an toàn và đơn giản hơn Internet”, nhưng request path vẫn phụ thuộc nhiều lớp: private DNS resolve đúng address, route tới subnet/endpoint tồn tại, security policy cho phép flow và IAM/service policy cho phép operation.
+
+Một migration từ public sang private endpoint có thể tạo partial failure nếu một VPC dùng DNS mới còn VPC khác cache record cũ, hoặc identity policy chỉ cho source endpoint mới. Vì vậy network privacy là một composition của name, topology và authorization, không phải một checkbox.
+
+Troubleshooting vẫn theo nguyên tắc cũ: name → route → transport → identity → service response.
+
+## 26. Senior walkthrough: autoscaler muốn thêm node nhưng recovery vẫn không tới
+
+Giả sử sau khi một zone mất, workload Pending tăng và cluster autoscaler yêu cầu 30 node mới ở zone còn lại. Cloud quota đủ, nhưng API trả `capacity unavailable` cho instance type chính; controller retry nhanh và bắt đầu bị rate-limit. Mười phút sau provider capacity mới xuất hiện nhưng retry storm làm provisioning vẫn chậm.
+
+Causal chain có ba boundary: physical capacity scarcity, control-plane rate limit và autoscaler retry policy. Chỉ tăng quota không giải quyết. Mitigation có thể mở thêm instance class/zone đã test, giảm retry concurrency và dùng reserved/warm capacity cho tier critical.
+
+Bài học là “cloud elastic” luôn có **time, quota, API và physical-capacity constraints**. Elasticity là capability có latency và failure semantics, không phải định luật rằng capacity luôn xuất hiện khi gọi API.
