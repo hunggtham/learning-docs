@@ -177,3 +177,35 @@ Giả sử GET `/health` và request JSON nhỏ đều thành công, nhưng uplo
 So sánh direct path với tunneled path, kiểm tra retransmission và effective MTU. Nếu tunnel thêm encapsulation làm packet lớn bị black-hole trong khi ICMP feedback bị chặn, health check nhỏ sẽ không phát hiện.
 
 Bài học là synthetic check chỉ chứng minh đúng workload mà nó thực sự phát. Production verification phải đại diện đủ các property quan trọng của request path: size, protocol, identity, route và deadline.
+
+## 24. Circuit breaker là admission control theo dependency state, không phải cơ chế chữa dependency
+
+Khi một dependency đang timeout hàng loạt, tiếp tục cho mọi request chờ hết timeout vừa giữ thread/connection vừa làm downstream nhận thêm load. Circuit breaker có thể tạm ngừng gửi một class request sau khi failure vượt điều kiện, trả lỗi/fallback sớm rồi cho một lượng probe nhỏ kiểm tra khả năng hồi phục.
+
+Giá trị của breaker nằm ở việc **giới hạn work vô ích và bảo vệ caller**, không nằm ở việc làm downstream khỏe lại. Threshold quá nhạy có thể mở breaker vì một burst ngắn; threshold quá chậm thì resource caller đã cạn trước khi breaker hành động. `half-open` cũng là một recovery experiment: probe phải đủ nhỏ để không tạo recovery storm nhưng đủ đại diện để quyết định đóng breaker.
+
+Breaker cần được đặt ở boundary có semantics đúng. Nếu proxy breaker theo HTTP 5xx nhưng application trả HTTP 200 cho business failure, signal sai. Nếu mỗi instance tự breaker nhưng dependency failure chỉ ảnh hưởng một region, aggregate dashboard có thể che state phân mảnh. Vì vậy breaker state, rejected request và probe outcome nên observable theo dependency/cohort.
+
+## 25. Bulkhead giới hạn blast radius của một dependency hoặc workload class
+
+Một service có thể gọi payment, recommendation và email. Nếu tất cả outbound call dùng chung thread pool/connection budget, email provider treo có thể chiếm hết resource và làm payment cũng fail dù payment dependency khỏe. **Bulkhead** tách concurrency/resource pool theo failure domain để một dependency không tiêu hết capacity của caller.
+
+Isolation không miễn phí: pool quá nhỏ làm utilization kém hoặc tạo queue cục bộ; pool quá lớn lại không còn bảo vệ. Sizing nên dựa trên criticality, expected concurrency, timeout và downstream capacity. Với asynchronous system, partition queue/consumer concurrency có vai trò tương tự.
+
+Mental model là `shared caller resource → partition theo failure class → admission riêng → graceful degradation`. Đây là connection trực tiếp giữa networking, SRE overload control và multi-tenancy fairness.
+
+## 26. Hedged request đổi tail latency lấy load và duplicate-work risk
+
+Một kỹ thuật giảm tail latency là gửi request thứ hai khi attempt đầu chậm bất thường, rồi dùng response đến trước. Cách này có thể hữu ích với read idempotent trên replicated backend khi tail chủ yếu do straggler, nhưng nó **chủ động tăng load đúng lúc request chậm**.
+
+Nếu threshold quá thấp hoặc backend đang saturation, hedging khuếch đại outage giống retry storm. Với write/side effect, duplicate execution còn nguy hiểm hơn nếu không có idempotency. Vì vậy hedging chỉ nên xuất hiện sau khi đã hiểu latency distribution, remaining deadline, idempotency và spare capacity; không phải default retry “thông minh hơn”.
+
+Evidence cần tách original attempt, hedge attempt, winner, cancellation success và extra downstream work. Nếu request thứ hai thắng nhưng attempt đầu không được cancel và vẫn chạy tới cuối, user latency giảm nhưng system cost/concurrency có thể tăng đáng kể.
+
+## 27. Draining phải bao phủ cả routing state và connection state
+
+Khi backend rời pool để deploy hoặc failover, ngừng gửi **connection mới** chưa đủ nếu client/proxy đang giữ keep-alive hoặc HTTP/2 connection cũ. Ngược lại đóng connection ngay có thể reset in-flight request. Safe draining là protocol giữa endpoint lifecycle, load-balancer routing và connection lifetime.
+
+Một sequence thường mong muốn là: endpoint ngừng nhận work mới, routing state hội tụ, existing connection/in-flight work có grace period, rồi process mới đóng listener và thoát. Với long-lived stream/WebSocket, contract cần rõ có cho phép sống tới hết session, gửi reconnect signal hay cưỡng bức close sau deadline.
+
+Production evidence nên nối `readiness/drain state → endpoint membership → active connection/stream → process termination`. Nếu chỉ nhìn Pod termination timestamp, ta có thể bỏ lỡ việc proxy vẫn reuse connection cũ hoặc client reconnect storm sau cutover.
