@@ -65,3 +65,59 @@ Build một lần, ký/scanning metadata một lần, rồi promote digest là p
 Khi container fail start, xem image/entrypoint/config trước network. Khi chạy nhưng unhealthy, xem process, ports, probe và dependency. Khi bị kill, xem exit code, OOM/event và resource pressure. Khi latency tăng, xem CPU throttling, memory/GC, I/O và network.
 
 Container không nên trở thành abstraction khiến operator quên Linux. Nó chỉ thêm một layer packaging và isolation vào cùng execution model.
+
+## 12. Layer bất biến không có nghĩa filesystem runtime bất biến
+
+Image layer là content-addressed và read-only khi runtime ghép filesystem, nhưng container thường có thêm writable layer phía trên. Khi process sửa một file vốn nằm trong lower layer, storage driver có thể phải thực hiện copy-up trước khi ghi. Vì vậy một workload ghi nhiều dữ liệu vào writable layer có behavior I/O khác hẳn đọc image bất biến.
+
+Điều này giải thích hai production pattern. Thứ nhất, ghi log dung lượng lớn vào filesystem container có thể làm ephemeral storage đầy dù application không lưu “business data”. Thứ hai, workload write-heavy không nên mặc định dùng overlay writable layer như durable storage chỉ vì path nhìn giống filesystem bình thường.
+
+Container packaging và storage durability là hai contract khác nhau.
+
+## 13. UID/GID và quyền file phải được reasoning xuyên image–runtime–volume
+
+`USER 10001` trong image chỉ chọn identity process bên trong user namespace/runtime context. Khi mount volume, file trên volume có owner/mode riêng. Một image chạy tốt trên laptop có thể fail production với `Permission denied` nếu volume được provision với UID/GID khác.
+
+Không nên chữa bằng `chmod 777` hoặc quay lại root theo phản xạ. Hãy xác định process effective UID/GID, ownership của mount, cơ chế `fsGroup`/runtime policy nếu có và ai chịu trách nhiệm initialize permission. Shared volume còn cần xét nhiều process có cùng mapping identity hay không.
+
+Đây là ví dụ abstraction leak giữa image metadata và filesystem authorization thực tế.
+
+## 14. PID 1 có semantics khác process bình thường
+
+Trong Linux, PID 1 có vai trò đặc biệt đối với signal mặc định và reaping orphaned child. Nếu application hoặc shell wrapper trở thành PID 1 nhưng không xử lý child lifecycle, zombie process có thể tích tụ trong workload tạo nhiều subprocess.
+
+Một init nhỏ có thể hữu ích khi application không làm tốt vai trò này, nhưng không nên thêm theo nghi thức. Trước hết cần biết process tree thật, ai spawn child và ai phải `wait()` chúng.
+
+Khi shutdown không hoạt động, kiểm tra signal thực sự tới PID nào và wrapper có dùng `exec` hay không. “Orchestrator đã gửi SIGTERM” chưa chứng minh business process nhận được SIGTERM.
+
+## 15. Memory trong container là tổng footprint theo accounting boundary
+
+Heap chỉ là một phần. Native allocation, thread stack, JIT/code cache, mmap, shared memory và page cache accounting có thể góp vào cgroup memory tùy workload/kernel/runtime. Vì vậy đặt JVM `-Xmx` bằng đúng memory limit gần như không để headroom cho phần còn lại.
+
+Một cách reasoning thực dụng là bắt đầu từ total cgroup usage rồi phân rã xuống runtime heap/native và kernel/file-backed behavior. Nếu container bị OOMKilled nhưng heap chưa đầy, đó không phải mâu thuẫn; hai metric đang đo boundary khác nhau.
+
+CPU cũng tương tự. Application có thể báo CPU utilization vừa phải nhưng cgroup có throttled time cao vì demand vượt quota theo từng period. Tail latency thường nhạy với throttling hơn average CPU chart.
+
+## 16. Image architecture và runtime architecture phải tương thích
+
+Một image có thể được build cho `amd64`, `arm64` hoặc nhiều architecture bằng manifest list/index. Tag giống nhau không có nghĩa bytes executable giống nhau ở mọi node; runtime chọn variant phù hợp architecture.
+
+Điều này quan trọng khi build trên Apple Silicon nhưng production dùng x86, hoặc cluster có node hỗn hợp. Emulation có thể làm build/test “chạy được” nhưng khác performance hoặc native dependency behavior so với execution thật.
+
+Release metadata nên giữ platform/architecture identity khi nó ảnh hưởng artifact. Native library, JNI, Python wheel hoặc binary downloaded trong build là các điểm dễ tạo mismatch.
+
+## 17. Registry availability là dependency của scaling và recovery
+
+Workload đang chạy có thể khỏe khi registry lỗi vì image đã nằm trên node. Nhưng scale-out, node replacement hoặc disaster recovery cần pull image mới. Vì vậy registry là dependency control-plane của capacity/recovery dù không nằm trên request data path bình thường.
+
+Runbook cần phân biệt “application đang phục vụ” với “cluster có khả năng tạo replica mới”. Image pull failure trong lúc node autoscale có thể biến traffic spike thành capacity incident.
+
+Artifact retention cũng là recovery contract. Nếu manifest rollback trỏ digest đã bị garbage-collect khỏi registry, rollback logic đúng trên Git nhưng không thể materialize workload.
+
+## 18. Senior walkthrough: Pod khởi động chậm chỉ sau khi node mới được thêm
+
+Giả sử Pod trên node cũ start trong 5 giây, nhưng Pod trên node mới mất 90 giây. Application init log chỉ mất 4 giây. Phần còn lại nằm trước process startup.
+
+Causal chain nên kiểm tra image pull size/layer cache, registry latency, node egress và volume/network setup. Nếu node cũ đã cache base layer còn node mới phải kéo image 1,5 GiB qua constrained registry/NAT, application không phải bottleneck.
+
+Mitigation có thể là giảm artifact size hợp lý, pre-pull cho workload critical, tăng registry/egress capacity hoặc giữ warm capacity. Bài học không phải “image càng nhỏ càng tốt”, mà là startup SLO phải tính cả distribution path, không chỉ process boot time.
