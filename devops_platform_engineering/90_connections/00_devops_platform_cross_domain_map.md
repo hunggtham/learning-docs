@@ -149,3 +149,75 @@ incident evidence
 Nếu năm team đều gặp cùng lỗi certificate rotation, solution không nên chỉ là năm postmortem. Platform có thể chuẩn hóa issuance/rotation/expiry telemetry. Nếu nhiều service OOM vì heap bằng đúng container limit, golden path/runtime guidance có thể encode native headroom.
 
 Đây là connection quan trọng nhất giữa Production Practice và Platform Engineering: troubleshooting không kết thúc ở chữa service; failure lặp lại phải trở thành feedback cho shared capability.
+
+## 16. Route reasoning 6 — từ overload tới admission, degradation và recovery
+
+Một saturation incident nên được nhìn như chuỗi control decision chứ không chỉ biểu đồ CPU:
+
+```text
+arrival rate / concurrency tăng
+→ queue + held resource tăng
+→ latency tăng
+→ timeout / retry khuếch đại load
+→ admission / load shedding / brownout
+→ protected core work giữ SLO
+→ recovery ramp-up + backlog drain
+```
+
+SRE sở hữu capacity, retry budget, admission và degradation contract. Production Practice quan sát xem timeout có cancel work thật không, retry có tạo duplicate hay recovery có tạo second storm. Platform Engineering biến các cơ chế lặp lại thành default hoặc tier.
+
+Khi cần formal queueing sâu hơn, chuyển sang Mathematics/Computer Science; DevOps giữ operational invariant: **không nhận work vượt khả năng rồi để tất cả chết chậm**.
+
+## 17. Route reasoning 7 — từ identity tới effective authority
+
+Security incident không nên dừng ở “token này của ai”. Chuỗi cần theo authority:
+
+```text
+caller identity
+→ requested intent / target
+→ authorization decision
+→ delegated / automation identity
+→ downstream capability
+→ audit evidence
+```
+
+Đây là nơi confused deputy và identity propagation xuất hiện. Caller hợp lệ vẫn có thể khiến privileged platform controller làm action ngoài scope nếu request intent không được bind vào caller authorization.
+
+Computer Science Security giải token/PKI/OIDC mechanism; DevOps/Platform giữ scope, workload identity, delegated control và evidence chain trên production path.
+
+## 18. Route reasoning 8 — từ tenant isolation tới fairness và economics
+
+Multi-tenancy không chỉ hỏi “resource có tách không” mà còn:
+
+```text
+shared resource
+→ failure/threat boundary
+→ quota
+→ fairness khi contention
+→ recovery concurrency
+→ tenant-aware SLO
+→ shared-cost/externality attribution
+```
+
+Một tenant dưới CPU quota vẫn có thể làm API server, log backend hoặc scheduler quá tải. Vì vậy isolation contract phải phủ cả control plane, data plane và shared service. Economics phải phản ánh externality đủ tốt để feedback quay về đúng owner.
+
+SLO quyết định blast-radius budget; blast-radius budget quyết định cell/dedicated/shared topology; topology lại quyết định cost. Đây là vòng Reliability ↔ Platform ↔ FinOps, không phải ba chủ đề rời nhau.
+
+## 19. Route reasoning 9 — từ self-service intent tới distributed lifecycle
+
+Một nút `Create` trên portal thực chất có thể là workflow phân tán:
+
+```text
+intent + stable identity
+→ authn/authz/policy
+→ accepted operation
+→ multiple side effects
+→ partial failure / retry
+→ reconcile existing state
+→ Ready / Degraded / Failed
+→ Day-2 resize / rotate / migrate / delete
+```
+
+Platform API chỉ trưởng thành khi idempotency đi qua toàn workflow, status phản ánh invariant thật và delete có retention semantics rõ. Portal/UI là bề mặt; mechanism là state machine + reconciliation + ownership.
+
+Khi semantics chuyển sang exactly-once/idempotency/distributed transaction nền, đọc Distributed Systems canonical. Platform chapter giữ contract mà developer/operator cần để không phải hiểu mọi provider detail.
