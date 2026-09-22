@@ -30,6 +30,12 @@ File này có hai vai trò. Phần đầu là glossary để nhận diện thu�
 | vòng đời | lifecycle | 생명주기 | Trình tự load script, tạo component, render, event, unload/cleanup. |
 | quốc tế hóa | internationalization (i18n) | 국제화 | Chuẩn bị UI cho nhiều ngôn ngữ/locale, không chỉ dịch text. |
 | khả năng truy cập | accessibility | 접근성 | Khả năng thao tác/hiểu UI bằng keyboard, screen reader và nhiều nhu cầu sử dụng khác. |
+| khả năng kiểm thử | testability | 테스트 용이성 | Mức độ architecture cho phép quan sát và kiểm chứng behavior mà không phải boot toàn hệ thống cho mọi rule. |
+| kiểm thử hồi quy | regression testing | 회귀 테스트 | Chứng minh behavior đã đúng trước đây không bị phá bởi thay đổi mới. |
+| dữ liệu kiểm thử có chủ đích | test fixture | 테스트 픽스처 | Dataset/config nhỏ, deterministic và có ownership dùng để tái tạo scenario. |
+| hiện vật build | build artifact | 빌드 산출물 | Output thực thi/đóng gói được tạo từ source, ví dụ W-Pack JavaScript. |
+| nguồn gốc build | build provenance | 빌드 추적 정보 | Quan hệ giữa source commit, tool/config build, artifact và deployment identity. |
+| lệch cấu hình | configuration drift | 설정 드리프트 | Environment chạy config/build khác canonical expectation dù application source giống nhau. |
 | trạng thái nguồn chuẩn | source of truth | 단일 진실 공급원 | Nơi canonical state được giữ để tránh duplicate state. |
 | bất biến | invariant | 불변 조건 | Điều luôn phải đúng, ví dụ unique key hoặc authorization. |
 | điều kiện tranh chấp | race condition | 경쟁 상태 | Kết quả phụ thuộc thứ tự timing của nhiều async operation. |
@@ -77,7 +83,11 @@ File này có hai vai trò. Phần đầu là glossary để nhận diện thu�
 
 `localeRef`, `useLocale`, language pack — mechanism đa ngôn ngữ của WebSquare cho component/build hỗ trợ.
 
-`W-Pack` — cơ chế build/chuyển page source XML sang JavaScript artifact trong WebSquare5.
+`W-Pack` — cơ chế build/chuyển page source XML sang JavaScript artifact trong WebSquare5; SP5 có stand-alone W-Pack để dùng trong command-line/CI workflow.
+
+`client.config.xml` — resource cấu hình phía client trong SP5 Studio; exact generated/runtime representation cần kiểm tra theo project/build.
+
+`server.config.xml` — resource cấu hình phía server/engine trong SP5 Studio; quản lý nhóm setting engine/server thay vì page business logic.
 
 ## 3. Những cặp khái niệm dễ nhầm
 
@@ -148,6 +158,18 @@ Gọi function giữa scope có thể synchronous, nhưng function có thể b�
 ### source XML vs runtime JavaScript artifact
 
 XML là authoring source; runtime có thể dùng JS artifact do W-Pack tạo.
+
+### source identity vs build identity vs deployment identity
+
+Commit đã merge chỉ chứng minh source state. Build identity chứng minh artifact nào được tạo; deployment identity chứng minh artifact/config nào environment đang phục vụ.
+
+### test delay vs lifecycle synchronization
+
+`setTimeout`/sleep chỉ chờ thời gian. Test đúng nên chờ observable condition như request completion, DataList state hoặc ready contract.
+
+### mock correctness vs production correctness
+
+Mock giúp cô lập boundary nhưng không chứng minh WebSquare integration nếu mock đã bỏ qua Scope, async hoặc lifecycle semantics quan trọng.
 
 ## 4. Coverage audit — Foundation
 
@@ -333,7 +355,59 @@ Engine upgrade cần regression areas nào?
 
 UDC/common layer cũ có public contract nào phải giữ khi refactor?
 
-## 12. Failure-mode matrix
+## 12. Coverage audit — Testing & Testability
+
+Bạn đạt mức này khi có thể biến mental model thành regression evidence thay vì chỉ manual-click:
+
+Business invariant nào nên được test bằng pure function và invariant nào cần WebSquare Engine thật?
+
+Tại sao mock Submission callback synchronous có thể che race bug production?
+
+DataList CRUD test phải assert value, business identity và row status như thế nào?
+
+Tại sao E2E selector dựa vào physical DOM ID/private engine structure dễ vỡ?
+
+Bạn chờ async bằng observable condition nào thay vì `sleep(1000)`?
+
+Làm sao fault-inject response A về sau response B để kiểm tra latest intent?
+
+Nested WFrame topology có thể lộ hidden `parent().parent()` dependency thế nào?
+
+UDC contract test nên phụ thuộc public property/method/event hay internal component ID?
+
+Memory regression cần lặp lifecycle bao nhiêu lần và evidence nào chứng minh retained object/listener?
+
+Security negative test nào chứng minh hidden/readOnly không phải authorization?
+
+Một flaky test cần được root-cause ở synchronization, fixture, selector hay cleanup như thế nào thay vì retry đến xanh?
+
+## 13. Coverage audit — Build, Config & Deployment
+
+Bạn đạt mức này khi có thể trace một release từ Git đến browser:
+
+Source identity, build identity và deployment identity khác nhau thế nào?
+
+Vì sao commit đã merge không chứng minh `_wpack_` artifact mới đang chạy?
+
+Stand-alone W-Pack giúp CI/reproducible build ở boundary nào?
+
+`client.config.xml` và `server.config.xml` khác nhau về logical responsibility nào?
+
+Context root sai có thể biểu hiện thành WFrame/Submission/resource bug ra sao?
+
+Tại sao UAT và PROD khác engine build làm regression evidence yếu đi?
+
+Cache key/version phải thay đổi khi artifact content đổi vì sao?
+
+Tại sao sửa trực tiếp generated W-Pack JS tạo divergence với canonical source?
+
+Build-once-promote giảm rủi ro “test artifact A, deploy artifact B” như thế nào?
+
+Config diff nào cần lấy khi source giống nhau nhưng chỉ PROD lỗi?
+
+Rollback cần xử lý artifact, config, cache và backend compatibility ra sao?
+
+## 14. Failure-mode matrix
 
 | Triệu chứng | Hypothesis ưu tiên | Evidence đầu tiên |
 |---|---|---|
@@ -352,9 +426,12 @@ UDC/common layer cũ có public contract nào phải giữ khi refactor?
 | Data đúng nhưng screen lag | rendering/script cost | Performance trace |
 | Screen chậm dần | leak/timer/listener | repeat test + heap/request count |
 | Duplicate record | duplicate request/idempotency | Network + server trace |
+| E2E test lúc pass lúc fail | timing/shared fixture/private selector | trace + retry comparison + test isolation |
+| Git có code mới nhưng UI vẫn cũ | stale W-Pack/deployment/cache identity | Network artifact + build manifest |
+| WFrame 404 chỉ ở PROD | context root/proxy/artifact path | resolved URL + config diff |
 | Chỉ production lỗi | config/build/cache drift | engine/config/artifact diff |
 
-## 13. Internal knowledge connections
+## 15. Internal knowledge connections
 
 JavaScript execution, closure, event loop và Promise: [JavaScript Intermediate](../javascript/javascript_intermediate.md).
 
@@ -368,9 +445,13 @@ Form/i18n/accessibility boundaries: [09 — Forms, Validation, Internationalizat
 
 Rendering/lazy/lifetime: [10 — Rendering, Lazy Loading & Resource Lifetime](10_rendering_lazy_loading_lifetime.md).
 
+Testing/testability/regression: [11 — Testing, Testability & Regression Engineering](11_testing_testability_regression.md).
+
+Build/config/deployment: [12 — Build, Configuration, Deployment & Environment Reasoning](12_build_config_deployment.md).
+
 Nếu backend là Java/Spring, transaction, authorization và API correctness không thuộc WebSquare. Hãy cross-reference canonical backend docs trong `10_backend/` thay vì đưa server semantics vào UI library.
 
-## 14. Practical capstone
+## 16. Practical capstone
 
 Library được coi là thực sự “học xong” khi bạn có thể tự dựng và giải thích một flow:
 
@@ -408,7 +489,32 @@ Lazy TabControl
 → cleanup timer/listener khi close
 ```
 
-Cuối cùng phải debug được ít nhất sáu fault injection:
+Tiếp theo biến flow thành regression evidence:
+
+```text
+pure validation test
+→ DataList/row-status test
+→ UDC contract test
+→ nested WFrame integration
+→ E2E critical path
+→ race/fault injection
+→ repeated lifecycle memory test
+```
+
+Cuối cùng đưa chính artifact đã test qua release pipeline:
+
+```text
+source commit
+→ clean W-Pack build
+→ artifact/build identity
+→ UAT smoke/regression
+→ promote cùng artifact
+→ production smoke
+→ verify browser artifact/config
+→ observe/rollback nếu cần
+```
+
+Phải debug được ít nhất tám fault injection:
 
 Server response chậm 5 giây.
 
@@ -422,12 +528,16 @@ Language pack thiếu một key và English text dài làm vỡ layout.
 
 UDC bị dùng trong một parent topology khác và hidden dependency bị lộ.
 
-Nếu bạn có thể chỉ ra failure mode, evidence và fix boundary cho các case này, kiến thức đã chuyển từ “biết API” sang “reasoning được hệ thống”.
+Response của search cũ cố tình về sau search mới.
 
-## 15. Coverage status của library
+Production cố tình giữ W-Pack artifact/cache cũ dù source commit đã thay đổi.
 
-Library hiện bao phủ các trục canonical cần thiết cho WebSquare JavaScript enterprise development: platform/runtime, page model, component API, events, binding, DataCollection, DataMap/DataList/LinkedDataList, row status, Submission, async communication, WFrame, Scope, `scwin`, `$p`, popup, SPA, GridView/CRUD, reusable UDC/common architecture, input/validation, internationalization, accessibility, file/Excel trust boundary, eager/lazy/preload rendering, resource lifetime, performance, memory, security, observability, legacy patterns và migration reasoning.
+Nếu bạn có thể chỉ ra failure mode, evidence, test boundary và fix boundary cho các case này, kiến thức đã chuyển từ “biết API” sang “reasoning được hệ thống và delivery pipeline”.
 
-Những thứ cố ý **không** biến thành chapter riêng gồm danh sách toàn bộ property của từng component, exhaustive API reference, mọi option GridView, mọi config tag, mọi UDC property schema và mọi build release note. Các nội dung đó thay đổi theo engine build và đã có official reference. Library này ưu tiên mental model giúp bạn đọc reference đúng và áp dụng an toàn.
+## 17. Coverage status của library
 
-Coverage cũng không coi “đã nhắc tên feature” là đủ. Một topic chỉ được xem là đã học khi người đọc giải thích được owner của state, lifecycle prerequisite, trust boundary, failure mode và evidence cần lấy khi behavior sai.
+Library hiện bao phủ các trục canonical cần thiết cho WebSquare JavaScript enterprise development: platform/runtime, page model, component API, events, binding, DataCollection, DataMap/DataList/LinkedDataList, row status, Submission, async communication, WFrame, Scope, `scwin`, `$p`, popup, SPA, GridView/CRUD, reusable UDC/common architecture, input/validation, internationalization, accessibility, file/Excel trust boundary, eager/lazy/preload rendering, resource lifetime, testing/testability, deterministic async regression, CI boundary, W-Pack/build provenance, client/server configuration, deployment/cache/rollback, performance, memory, security, observability, legacy patterns và migration reasoning.
+
+Những thứ cố ý **không** biến thành chapter riêng gồm danh sách toàn bộ property của từng component, exhaustive API reference, mọi option GridView, mọi config tag, mọi UDC property schema, một testing framework tutorial và mọi build release note. Các nội dung đó thay đổi theo engine build/toolchain và đã có official reference hoặc tài liệu riêng của tool. Library này ưu tiên mental model giúp bạn đọc reference đúng và áp dụng an toàn.
+
+Coverage cũng không coi “đã nhắc tên feature” là đủ. Một topic chỉ được xem là đã học khi người đọc giải thích được owner của state, lifecycle prerequisite, trust boundary, observable contract, artifact/config provenance, failure mode và evidence cần lấy khi behavior sai.
