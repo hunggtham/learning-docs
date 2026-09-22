@@ -127,3 +127,51 @@ Log CI thường bị retention ngắn hoặc khó tìm. Metadata quan trọng c
 Khi artifact D đi từ staging sang production, bytes không nên đổi. Thứ thay đổi là **mức evidence và authorization** gắn với D. Staging có thể chứng minh integration behavior; canary production thêm evidence từ traffic thật; approval nếu cần xác nhận risk/business decision.
 
 Nhìn như vậy giúp tránh anti-pattern “rebuild cho production để sạch hơn”. Rebuild tạo subject mới và reset một phần evidence. Một delivery system mạnh giữ artifact identity ổn định rồi tích lũy evidence quanh identity đó.
+
+## 17. Nondeterminism có thể đến từ những input tưởng như vô hại
+
+Timestamp build, timezone, locale, filesystem iteration order, random seed, generated archive metadata hoặc absolute workspace path đều có thể làm output bytes khác dù source/dependency giống nhau. Không phải mọi khác biệt byte đều ảnh hưởng behavior, nhưng chúng làm content digest và binary comparison khó dùng hơn.
+
+Reproducibility work vì vậy cần xác định **equivalence contract**. Với artifact ký theo digest, bit-for-bit determinism có giá trị cao. Với một số package, có thể chấp nhận metadata khác nếu executable semantics giống, nhưng phải biết phần nào được normalize và phần nào không.
+
+Không nên xóa metadata phục vụ traceability chỉ để đạt digest giống nhau. Mục tiêu là loại nondeterminism không có chủ đích, không phải làm artifact mất provenance.
+
+## 18. Build-time network là dependency production gián tiếp
+
+Một build cho phép download tùy ý từ Internet có hidden dependency vào DNS, package registry, mirror, certificate chain và nội dung remote tại thời điểm build. Lockfile có thể pin version nhưng nếu registry cho phép artifact cùng version bị thay hoặc script tải binary ngoài package manager, reproducibility vẫn yếu.
+
+Một hướng mạnh hơn là dùng trusted mirror/proxy, checksum/content digest, dependency cache có ownership và policy rõ. Với hermetic build nghiêm ngặt, network có thể bị tắt sau khi declared input đã được materialize.
+
+Điểm cốt lõi là phân biệt **resolution** với **build execution**. Dependency update/resolution có thể cần network; build của revision đã khóa nên càng ít phụ thuộc remote mutable state càng tốt.
+
+## 19. Rebuild độc lập là một kỹ thuật kiểm chứng, không chỉ disaster recovery
+
+Nếu hai builder độc lập nhận cùng declared inputs và tạo artifact tương đương, confidence tăng rằng output không phụ thuộc runner hidden state. Trong supply-chain security, independent rebuild còn giúp phát hiện một builder bị compromise nếu output lệch bất ngờ.
+
+Không phải mọi team cần hệ thống reproducible-build cấp distro. Nhưng với artifact critical, có thể dùng periodic clean-room rebuild hoặc rebuild khi incident để kiểm tra hidden input/cache contamination.
+
+Nếu rebuild chỉ pass khi dùng lại cùng cache/runner image cũ, đó là signal rằng input closure chưa thật sự được kiểm soát.
+
+## 20. Artifact phải mang identity của platform target khi target ảnh hưởng bytes
+
+Cùng source có thể build cho `linux/amd64`, `linux/arm64`, GPU runtime khác hoặc libc khác. Gọi tất cả là “version 1.2.3” mà không giữ platform dimension có thể làm deployment lấy artifact không tương thích hoặc khiến vulnerability inventory sai.
+
+Artifact identity nên đủ để phân biệt target quan trọng, đồng thời release metadata có thể gom nhiều variant dưới một logical version. Container manifest index là một ví dụ: logical image reference có nhiều digest con theo architecture.
+
+Traceability production phải đi tới digest/variant thực sự chạy, không dừng ở marketing version/tag.
+
+## 21. Generated code và compiler flag là source theo nghĩa delivery
+
+Một repository có thể chứa schema/IDL rồi generate client/server code trong build. Nếu generator version hoặc flag thay đổi, output thay đổi dù handwritten source không đổi. Tương tự compiler optimization, feature toggle compile-time hoặc build profile có thể làm behavior khác.
+
+Vì vậy “source revision” trong provenance cần đi cùng build recipe/toolchain. Nếu generated output được commit, repository phải có policy tránh source và generated file drift. Nếu generate lúc build, generator phải nằm trong declared input closure.
+
+Điều quan trọng không phải commit generated code hay không; điều quan trọng là có **một authority rõ** cho output và có thể tái tạo nó.
+
+## 22. Senior walkthrough: cùng commit nhưng production binary khác staging
+
+Giả sử staging và production đều ghi commit `abc123`, nhưng checksum binary khác. Staging được build tuần trước trên runner image JDK 21.0.4; production pipeline rebuild hôm nay sau khi runner image tự động lên 21.0.5 và một code-generation plugin lấy `latest`.
+
+Commit identity đúng nhưng build input closure khác. Điều tra phải so toolchain/provenance/dependency resolution, không so source diff. Corrective action là build một artifact bất biến từ exact declared inputs rồi promote cùng digest, thay vì dùng commit SHA như thể nó là artifact identity.
+
+Bài học là `commit → artifact` là một hàm chỉ đáng tin khi input ngoài commit được kiểm soát và được ghi lại.
