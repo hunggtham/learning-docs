@@ -6,6 +6,8 @@ Library sở hữu kiến thức về delivery system, infrastructure lifecycle,
 
 Các phần cố ý cross-link thay vì duplicate gồm kernel/process/filesystem internals, namespaces/cgroups internals, distributed consensus/ordering, cryptographic protocol, PKI internals, database internals và software architecture/test/deployment theory ở mức Computer Science.
 
+Boundary được giữ nguyên qua các vòng đào sâu. Không tạo thêm root library, không tách chapter theo tên sản phẩm và không biến DevOps thành catalog Docker/Kubernetes/Terraform/cloud provider.
+
 ## 2. Dependency audit
 
 Dependency chính hiện tại:
@@ -50,9 +52,9 @@ Dependency không được hiểu như “học xong phần trước mới đư�
 | Git/change flow | Đủ theo delivery context | Không biến thành Git command manual |
 | Reproducible/hermetic build, artifact identity, cache trust | Đủ sâu | Supply-chain nối security; language-specific build tool không tách chapter |
 | CI/CD, flaky tests, concurrency, stale evidence, migration safety | Đủ sâu | Deployment theory link Software Engineering |
-| Container image/runtime/build/security/resource | Đủ production depth | Có image pull/recovery, runtime contract, filesystem/layer và architecture concerns; internals link OS |
+| Container image/runtime/build/security/resource | Đủ production depth | Có image pull/recovery, runtime contract, filesystem/layer, UID/PID1, multi-arch và memory-accounting concerns; internals link OS |
 | IaC desired state/state/drift/modules/import/partial failure | Đủ sâu | Tool-specific Terraform/OpenTofu syntax cố ý không thành chapter riêng |
-| Cloud IAM/network/compute/storage/failure domain | Đủ production depth | Có control-plane/data-plane, managed failover, quota, provisioning latency và locality; provider catalog không duplicate |
+| Cloud IAM/network/compute/storage/failure domain | Đủ production depth | Có eventual consistency, control-plane/data-plane, managed failover, durability-vs-availability, quota, provisioning latency và locality; provider catalog không duplicate |
 | Kubernetes control plane/reconciliation | Đủ sâu | Có optimistic concurrency, watch/resync, work queue/backoff, admission và API saturation; consensus internals link Distributed Systems |
 | Kubernetes workload/network/storage/resources/autoscaling | Đủ sâu | Có schedulable-vs-aggregate capacity, PDB, topology, termination race và interacting autoscalers |
 | GitOps | Đủ sâu | Có field ownership, rollback limits, promotion race, break-glass và repository trust; product syntax không canonical |
@@ -63,8 +65,8 @@ Dependency không được hiểu như “học xong phần trước mới đư�
 | IAM/workload identity/secrets/policy | Đủ sâu ở platform layer | Crypto/PKI/KMS internals link Security CS |
 | Supply chain/SBOM/provenance/signing | Đủ sâu về trust model | Có verifier trust policy, CI untrusted-code boundary và dependency execution trust |
 | Platform as product/golden path/IDP/catalog | Đủ sâu | Có control-plane/data-plane, async operation, failure contract, compatibility window và platform SLO |
-| Self-service/multi-tenancy/quota/governance | Đủ sâu | Có isolation theo failure/threat model, control-plane fairness và Day-2 lifecycle |
-| FinOps/cost attribution/rightsizing | Đủ sâu cho platform reasoning | Có showback/chargeback, unit economics, shared cost, anomaly feedback và reliability headroom |
+| Self-service/multi-tenancy/quota/governance | Đủ sâu | Có isolation theo failure/threat model, control-plane fairness, recovery quota và Day-2 lifecycle |
+| FinOps/cost attribution/rightsizing | Đủ sâu cho platform reasoning | Có showback/chargeback, unit economics, commitment caveat, shared cost, anomaly feedback và reliability headroom |
 | Cross-layer troubleshooting | Đủ sâu | Có latency decomposition, coordinated omission và worked failure cases |
 | Cross-domain links | Đủ | `90_connections` |
 
@@ -134,11 +136,13 @@ Các prerequisite dễ bị coi là “ai cũng biết” đã được làm rõ
 
 ## 13. Naming và canonical-state audit
 
-Root domain duy nhất là `devops_platform_engineering/`. Các subdomain đang dùng numbering theo dependency `00` → `10`, sau đó `90_connections`. Không có root DevOps thứ hai hoặc chapter trùng tên cần consolidate.
+Root domain duy nhất là `devops_platform_engineering/`. Các subdomain dùng numbering theo dependency `00` → `10`, sau đó `90_connections`. Không có root DevOps thứ hai hoặc chapter trùng tên cần consolidate.
 
 Các file hiện tại đều có vai trò canonical rõ; không có raw/source trong domain cần sửa. `GLOSSARY.md`, `LANGUAGE_STYLE.md` và `COVERAGE_AUDIT.md` là tài liệu hỗ trợ, không cạnh tranh với chapter chính.
 
-Branch domain hiện dùng `feat/devops-platform-engineering-knowledge-library`; audit branch cho thấy không có branch DevOps/Platform Engineering thứ hai cần hợp nhất hoặc xóa.
+Branch domain duy nhất là `feat/devops-platform-engineering-knowledge-library`; không phát hiện branch DevOps/Platform Engineering thứ hai cần hợp nhất hoặc xóa.
+
+Trong lúc depth pass diễn ra, `main` nhận thêm hai commit canonical Mathematics. Branch DevOps đã được đồng bộ bằng merge commit với `main` mới nhất, giữ DevOps subtree và root README hiện tại. Sau sync, compare với `main` cho trạng thái **ahead, behind 0** và merge-base chính là HEAD `main`; vì vậy branch không còn drift repository-level trước final review.
 
 ## 14. Criteria cho lần mở rộng tiếp theo
 
@@ -148,7 +152,7 @@ Nếu nhu cầu mới chủ yếu là syntax hoặc sản phẩm — ví dụ �
 
 ## 15. Kết luận audit hiện tại
 
-Library hiện đã có đường reasoning liên tục:
+Library hiện có đường reasoning liên tục:
 
 ```text
 flow / ownership
