@@ -73,3 +73,61 @@ OpenTelemetry cung cấp chuẩn instrumentation/telemetry pipeline cho traces, 
 Khi thiết kế service, hãy hỏi trước: nếu request chậm, evidence nào phân biệt app CPU, DB, network và retry? Nếu deployment xấu, version có dimension trong metric không? Nếu queue backlog, có metric age/depth không? Nếu customer báo một request lỗi, có correlation identifier nào truy ra không?
 
 Observability tốt được thiết kế cùng system, không phải gắn dashboard sau khi production đã khó hiểu.
+
+## 14. Telemetry pipeline cũng là một distributed system có thể fail
+
+Application phát metric/log/trace nhưng signal thường còn đi qua agent, collector, queue, network và backend lưu trữ. Vì vậy “không thấy log” có ít nhất hai khả năng: event không xảy ra hoặc telemetry path làm mất event.
+
+Platform cần quan sát chính observability pipeline: queue/backpressure, dropped spans/logs, export error, backend ingestion latency và sampling policy. Nếu collector quá tải trong đúng lúc incident traffic spike, evidence quý giá nhất có thể bị mất.
+
+Đây là lý do telemetry pipeline cần capacity và failure semantics, không nên được coi là hệ thống phụ “không thể lỗi”.
+
+## 15. Sampling phải biết câu hỏi cần trả lời
+
+Head sampling quyết định giữ trace từ đầu request, rẻ và đơn giản nhưng có thể bỏ rare error trước khi biết request sẽ lỗi. Tail sampling quyết định sau khi thấy nhiều span/kết quả, có thể ưu tiên error/slow trace nhưng cần buffering/state và tăng complexity.
+
+Không có một tỷ lệ sampling tốt cho mọi service. High-volume healthy traffic có thể sample thấp; error/security/critical transaction có thể giữ nhiều hơn. Quan trọng là biết signal nào vẫn đầy đủ — thường metric aggregate — và signal nào chỉ đại diện sample.
+
+Khi điều tra “không có trace của request lỗi”, trước hết kiểm tra sampling/propagation trước khi kết luận request chưa vào service.
+
+## 16. Percentile không cộng và không average đơn giản qua service
+
+Nếu service A p99 = 200 ms và B p99 = 300 ms, không thể kết luận end-to-end p99 = 500 ms. Hai percentile có thể đến từ các request khác nhau. Tương tự average của p99 giữa nhiều instance không tạo p99 toàn fleet.
+
+Histogram/distribution giữ count theo bucket cho phép aggregate đúng hơn trong nhiều hệ thống. Khi dashboard hiển thị percentile, operator cần biết percentile được tính từ raw events, histogram merge hay average của precomputed percentile.
+
+Đây là assumption quan trọng vì tail latency thường quyết định SLO.
+
+## 17. Clock và timestamp có thể làm causal order khó đọc
+
+Distributed trace/log dựa vào timestamp từ nhiều host/process. Clock skew nhỏ có thể làm span trông như child bắt đầu trước parent hoặc log order lộn xộn. Protocol tracing thường có parent/child relation giúp reasoning tốt hơn chỉ sort timestamp.
+
+Time synchronization vẫn quan trọng cho incident timeline, certificate và audit. Nhưng khi hai log lệch vài trăm mili giây, đừng suy luận causality chỉ từ timestamp tuyệt đối nếu có trace/event relation mạnh hơn.
+
+## 18. Correlation ID không thay trace context
+
+Một request ID tự tạo giúp search log nhưng thường chỉ là opaque label. Trace context còn mang trace/span relationship và sampling state qua hop. Hai thứ có thể cùng tồn tại; platform nên chuẩn hóa propagation qua HTTP, messaging và background task.
+
+Đặc biệt với asynchronous queue, request lifecycle không còn một call stack đồng bộ. Message ID, trace/link và business entity ID có vai trò khác nhau. Không nên nhét tất cả vào một `correlation_id` rồi kỳ vọng query nào cũng dễ.
+
+## 19. Cardinality explosion thường đến từ dimension tưởng như vô hại
+
+Label `endpoint` có thể an toàn nếu chỉ vài route template như `/orders/{id}`. Nhưng nếu instrumentation dùng raw URL `/orders/12345`, mỗi ID tạo series mới. Tương tự error message nguyên văn, SQL text hoặc user ID.
+
+Cardinality cao làm memory/index/query cost tăng và có thể khiến backend drop data hoặc rate-limit đúng lúc incident. Instrumentation nên normalize dimension và để detail high-cardinality sang trace/log.
+
+Platform observability cần lint/convention để ngăn lỗi này sớm thay vì chữa bill/backend outage sau đó.
+
+## 20. Exemplars nối aggregate metric với request cụ thể
+
+Metric histogram cho thấy p99/slow bucket nhưng không nói request nào. Exemplar có thể gắn một sample trace ID vào bucket/point, cho phép drill-down từ aggregate anomaly sang trace cụ thể mà không biến metric label thành high-cardinality.
+
+Đây là pattern hữu ích cho developer experience: dashboard latency tăng → click exemplar → trace → downstream span → log tương ứng. Correlation tốt giảm thời gian chuyển tool và giữ causal context.
+
+## 21. Senior walkthrough: dashboard im lặng trong lúc user báo lỗi
+
+Giả sử support nhận nhiều complaint nhưng error dashboard không tăng. Có ba nhóm hypothesis: SLI/metric không bao phủ failure business; telemetry pipeline/drop lỗi; hoặc complaint nằm ở subset dimension bị aggregate che.
+
+Kiểm tra raw edge/access evidence, telemetry exporter/collector drop metric, version/region/tenant dimension và business outcome. Nếu HTTP 200 nhưng payload chứa business failure, transport error metric sẽ vẫn xanh.
+
+Bài học là observability chỉ tốt bằng semantics đã instrument. “Dashboard xanh” không phải bằng chứng user experience xanh nếu sensor đo sai contract.
