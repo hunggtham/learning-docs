@@ -100,3 +100,67 @@ Ví dụ Deployment không Available: xem desired replicas và conditions; Repli
 Một ứng dụng Kubernetes thường nằm trong nhiều loop: Deployment controller, HPA, GitOps controller, service mesh controller, cloud load balancer controller và autoscaler. Hai controller cùng sửa một field có thể tạo oscillation.
 
 Khi platform tự động hóa nhiều hơn, câu hỏi quan trọng không phải “controller có chạy không?” mà là **ai sở hữu field nào, control loop có stable không, latency của feedback là bao lâu và failure có bị khuếch đại giữa các loop không?**
+
+## 14. API update là optimistic concurrency, không phải khóa object dài hạn
+
+Kubernetes object thay đổi liên tục bởi nhiều actor. API không giữ một lock dài quanh object để ngăn mọi writer. Thay vào đó, mỗi version state có identity/version metadata; update có thể bị từ chối nếu actor dựa trên state cũ.
+
+Mental model là optimistic concurrency: đọc state, tính thay đổi, cố ghi; nếu object đã đổi, reconcile lại trên state mới. Controller vì vậy phải chấp nhận conflict/retry thay vì giả định event chỉ đến đúng một lần và state đứng yên trong lúc xử lý.
+
+Đối với operator/platform controller tự viết, logic “read-modify-write” cần idempotent và chịu conflict. Nếu retry tạo duplicate external resource, bug nằm ở controller contract chứ không phải API server.
+
+## 15. `resourceVersion`, generation và observedGeneration trả lời câu hỏi khác nhau
+
+`resourceVersion` giúp nhận diện phiên bản object trong API/storage/watch semantics. `metadata.generation` thường tăng khi desired spec thay đổi. Controller có thể ghi `observedGeneration`/condition để nói nó đã xử lý generation nào.
+
+Khi spec vừa đổi nhưng status vẫn xấu, hãy hỏi controller đã observe generation mới chưa. Nếu chưa, lỗi có thể ở controller queue/watch. Nếu đã observe nhưng condition vẫn fail, controller đã xử lý intent và tìm thấy failure downstream.
+
+Điều này tốt hơn nhìn timestamp hoặc chỉ chờ vài giây theo cảm giác.
+
+## 16. Admission nằm trên write path nên policy có thể ảnh hưởng availability của control plane
+
+Một request tạo/sửa object thường đi qua authentication, authorization, defaulting/validation và có thể qua admission policy/webhook trước khi persist. Admission cho phép encode guardrail nhưng cũng thêm dependency vào write path.
+
+Nếu admission webhook timeout/fail theo policy fail-closed, deploy có thể bị chặn diện rộng. Nếu fail-open, availability tốt hơn nhưng security invariant có thể tạm không được enforce. Đây là trade-off phải quyết định theo loại policy, không có default đúng cho mọi rule.
+
+Policy engine cần timeout nhỏ hợp lý, HA, telemetry và staged rollout. Một webhook global chậm có thể làm người dùng nghĩ “Kubernetes API chậm” trong khi read path vẫn bình thường.
+
+## 17. Watch biến polling thành event stream nhưng không xóa nhu cầu resync
+
+Controller thường `list` để có snapshot rồi `watch` thay đổi. Watch có thể bị ngắt; event có thể được coalesced hoặc controller restart. Vì vậy controller không nên dựa vào assumption “tôi sẽ nhận chính xác từng event một lần”.
+
+Reconciliation pattern mạnh vì event chỉ là **hint rằng state có thể cần xử lý**. Controller đọc current desired/actual state và hội tụ. Đây là lý do idempotency quan trọng hơn event-processing chính xác từng message.
+
+Khi controller backlog lớn, event delivery vẫn tiếp tục nhưng reconciliation latency tăng. Metric queue depth/reconcile duration/error rate của controller trở thành evidence quan trọng.
+
+## 18. Work queue và backoff bảo vệ control plane khỏi hot loop
+
+Nếu reconcile failure ngay lập tức được retry không giới hạn, một object lỗi có thể tạo hot loop, làm API/provider bị spam và che workload khác. Controller thường cần rate limit/backoff và phân biệt transient failure với invalid desired state.
+
+Ví dụ external cloud API đang outage: retry có bounded exponential backoff hợp lý hơn hàng nghìn request/giây. Ngược lại spec invalid nên surface condition rõ để user sửa, không retry vô hạn như thể dependency sẽ tự hồi.
+
+Một controller tốt không chỉ “eventually reconcile”; nó phải reconcile theo cách không tự khuếch đại outage.
+
+## 19. API server saturation có thể đến từ client hành xử xấu
+
+Control plane có finite CPU/memory/storage bandwidth và request budget. Client list toàn bộ cluster quá thường xuyên, controller tạo update storm hoặc automation retry không backoff có thể gây pressure.
+
+Khi API latency tăng, cần phân dimension read/write, resource kind, client identity/user-agent, request rate và etcd/storage latency. Scale control plane có thể cần nhưng trước hết tìm noisy client/control loop.
+
+Platform controller nên dùng informer/cache/watch phù hợp thay vì polling full list ngắn chu kỳ nếu không cần.
+
+## 20. Upgrade cluster là compatibility problem nhiều chiều
+
+Control plane, kubelet, API version, admission webhook, CRD và controller/operator đều có lifecycle version. “Cluster upgrade thành công” không chỉ là API server lên version mới; workload/controller cũ có thể dùng API đã deprecated hoặc assumptions cũ.
+
+Production upgrade cần inventory API usage, compatibility của extension/controller, staged node/control-plane rollout theo support matrix và rollback/recovery plan. CRD conversion/admission component đặc biệt nhạy vì chúng nằm trên API path.
+
+Không cần thuộc mọi version rule trong chapter này; invariant là **version skew phải nằm trong compatibility contract được support và được test trước production**.
+
+## 21. Senior walkthrough: deploy toàn cluster bị treo nhưng application traffic vẫn khỏe
+
+Giả sử nhiều team cùng báo `kubectl apply` timeout, GitOps controller backlog tăng, nhưng user traffic application vẫn bình thường. Đây là clue control plane write path lỗi chứ không phải data plane outage.
+
+Kiểm tra API request latency theo verb, admission webhook latency/error, etcd/storage, controller client retry. Nếu một validating webhook mới deploy có latency 8–10 giây và mọi create/update đều đi qua nó, root layer khá rõ.
+
+Mitigation có thể rollback/scope lại webhook theo policy; không nên restart application pods vì chúng không nằm trên failure path. Đây là giá trị của control-plane/data-plane separation trong reasoning.
