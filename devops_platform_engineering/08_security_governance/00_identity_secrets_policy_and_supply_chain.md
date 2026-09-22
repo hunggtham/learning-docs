@@ -85,3 +85,53 @@ Platform nên ưu tiên theo asset exposure, exploitability, runtime context và
 Nếu security control quá khó dùng, team tìm đường vòng. Platform tốt làm secure path nhanh hơn insecure DIY: identity tự cấp theo workload, secret injection chuẩn, signed artifact tự động, policy feedback ngay PR.
 
 Security và developer experience không đối lập; guardrail tốt biến security thành property của platform.
+
+## 14. Threat model delivery system theo capability chiếm được
+
+Threat modeling không cần bắt đầu bằng danh sách hàng trăm attack. Với platform, hãy hỏi nếu một principal hoặc component bị compromise thì attacker có thể thay state nào.
+
+Nếu developer account bị chiếm, attacker có thể merge code trực tiếp hay vẫn cần reviewer khác? Nếu CI runner bị chiếm, nó chỉ build artifact hay có thể deploy production? Nếu registry token lộ, attacker có thể overwrite mutable tag hay artifact được pin digest/signature? Nếu GitOps bot token lộ, scope là một repo hay toàn organization?
+
+Cách hỏi theo capability làm blast radius rõ hơn và dẫn tới control cụ thể: separation of duties, short-lived token, environment-scoped role, immutable artifact, approval cho high-risk path và audit.
+
+## 15. Workload identity giảm secret distribution nhưng không xóa authorization problem
+
+Federation/workload identity cho phép workload chứng minh identity bằng credential ngắn hạn do runtime/control plane cấp, rồi exchange/assume role để gọi cloud/service khác. Lợi ích lớn là không cần bake static key vào image hoặc Git.
+
+Nhưng nếu service account có quyền quá rộng, credential ngắn hạn vẫn nguy hiểm trong thời gian hiệu lực. Vì vậy identity lifecycle và authorization scope phải đi cùng nhau. Audience, subject, role binding và environment boundary cần đủ chặt để token của workload A không được chấp nhận như workload B.
+
+Mental model là: **bootstrap identity → token ngắn hạn → policy quyết định capability**. Không nên dừng ở “không còn secret file nên đã secure”.
+
+## 16. Provenance/signature chỉ mạnh bằng trust policy của verifier
+
+Một artifact có signature nhưng verifier chấp nhận bất kỳ key nào thì signature không tạo trust hữu ích. Một provenance statement ghi builder identity nhưng policy không phân biệt trusted builder với laptop cá nhân cũng tương tự.
+
+Verifier cần policy rõ: artifact digest nào là subject; statement type nào được chấp nhận; builder/source identity nào thuộc trust domain; policy nào bắt buộc cho production; revocation hoặc compromised identity được xử lý ra sao.
+
+Đây là lý do supply-chain security nên được xem như **authorization trên evidence**, không phải checkbox “đã ký image”.
+
+## 17. Policy rollout cũng có thể gây outage
+
+Admission/policy engine nằm trên critical control path. Một rule sai có thể chặn toàn bộ deploy; webhook chậm có thể tăng API latency; policy thay đổi global có blast radius lớn hơn một application release.
+
+Policy nên có test fixture, dry-run/audit mode khi phù hợp, staged rollout và observability về denial/latency. Exception cũng phải versioned và có expiry. Platform security control là production software nên cần cùng discipline canary/rollback như application.
+
+## 18. Secret exfiltration response khác secret rotation bình thường
+
+Rotation định kỳ giả định old credential chưa chắc bị attacker giữ. Khi có bằng chứng exfiltration, cần containment nhanh hơn: xác định scope, revoke/disable credential cũ, tìm nơi credential đã được dùng, rotate dependent secret/key nếu trust chain bị ảnh hưởng và kiểm tra audit log cho misuse.
+
+Nếu cùng một static secret được share cho 20 service, blast radius và forensic khó hơn nhiều. Đây là lợi ích thực tế của per-workload identity và short-lived credential: containment boundary nhỏ hơn.
+
+## 19. Supply-chain dependency cần phân biệt source, package và execution trust
+
+Một dependency có thể đến từ source repository, package registry hoặc binary/tool download. Pin version giúp reproducibility nhưng không tự chứng minh package đó là artifact mong muốn. Checksum/signature/provenance có thể bổ sung integrity, còn sandbox/least privilege giảm impact nếu dependency thực thi build script độc hại.
+
+Đặc biệt trong CI, package manager hook, build plugin và third-party action có thể thực thi code với credential job. Vì vậy dependency review không chỉ nhìn runtime library; build-time dependency cũng nằm trong attack surface.
+
+## 20. Senior walkthrough: pull request từ fork chạm release pipeline
+
+Giả sử repo public nhận PR từ fork. Workflow chạy test trên code chưa tin cậy. Nếu job này có registry write token hoặc cloud deploy role, contributor có thể sửa test/build script để exfiltrate token.
+
+Boundary an toàn hơn là tách untrusted verification khỏi trusted release. PR job dùng permission tối thiểu, không nhận production secret; sau merge vào protected branch, trusted workflow checkout exact revision và build/publish bằng identity riêng. Artifact promotion sau đó dựa trên digest/provenance thay vì tin output từ untrusted job.
+
+Điểm cốt lõi không phụ thuộc GitHub Actions/Jenkins/GitLab CI: **code chưa được trust không được tự động nhận capability của production trust domain**.
