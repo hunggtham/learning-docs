@@ -1,34 +1,32 @@
-# Đường đi của durability: application commit → WAL → filesystem → thiết bị lưu trữ
+# Đường đi của durability: application transaction → MVCC/WAL → filesystem → storage → replication
 
-Khi application nhận được câu trả lời `COMMIT OK`, người đọc thường hình dung dữ liệu đã “được ghi xuống đĩa”. Thực tế có nhiều tầng cache, buffer và queue nằm giữa application và thiết bị lưu trữ. Muốn hiểu **độ bền dữ liệu (durability / 내구성)** ở mức hệ thống, phải theo dõi toàn bộ đường đi và xác định chính xác tại tầng nào dữ liệu chỉ đang nằm trong memory, tại tầng nào đã được ghi vào log, và tại tầng nào thiết bị thật sự bảo đảm nó sẽ sống sót sau mất điện.
+Khi application nhận `COMMIT OK`, câu hỏi đúng không phải chỉ là “database đã ghi xuống disk chưa?”. Một transaction đi qua nhiều state machine và nhiều failure boundary: application transaction, MVCC/lock state, WAL, buffer pool, kernel page cache hoặc direct-I/O path, filesystem/block layer, controller, non-volatile media và có thể cả replication protocol.
 
-## 1. Durability là một hợp đồng xuyên nhiều tầng
+Muốn hiểu **độ bền dữ liệu (durability / 내구성)** phải xác định chính xác invariant nào được giữ tại từng tầng và acknowledgement ở tầng trên được phép phát ra sau evidence nào ở tầng dưới.
 
-Một transaction database có thể đi qua:
+## 1. Invariant cốt lõi: acknowledgement không được mạnh hơn state đã đạt
 
-```text
-application
-  ↓
-database transaction layer
-  ↓
-WAL / redo log
-  ↓
-OS page cache hoặc direct I/O path
-  ↓
-filesystem / block layer
-  ↓
-device queue
-  ↓
-SSD/HDD controller cache
-  ↓
-non-volatile media
-```
+Một durability contract có thể phát biểu như sau:
 
-Nếu một tầng báo thành công quá sớm hoặc hiểu sai guarantee của tầng dưới, application có thể nhận `COMMIT OK` nhưng dữ liệu vẫn mất sau crash/power loss.
+> Sau khi hệ thống trả success cho một transaction ở durability level X, mọi failure nằm trong failure model của X phải vẫn cho phép recovery một lịch sử chứa transaction đó đúng theo consistency contract.
 
-## 2. WAL giải bài toán gì?
+Điều này quan trọng vì “failure model” khác nhau giữa các mode. Local durable commit có thể chỉ bảo vệ process/host crash với storage còn nguyên. Synchronous replicated commit có thể yêu cầu survive mất leader hoặc cả một failure domain. Async commit có thể chủ động chấp nhận một cửa sổ mất dữ liệu.
 
-**Nhật ký ghi trước (Write-Ahead Logging, WAL)** yêu cầu thông tin cần để phục hồi thay đổi được ghi durable trước khi data page tương ứng được coi là đã commit theo protocol.
+Không nên dùng từ `commit` mà bỏ qua phần contract này.
+
+## 2. Transaction visibility và durability là hai trục khác nhau
+
+MVCC trả lời **version nào được phép nhìn thấy**; WAL/recovery trả lời **history nào sống sót sau crash**. Hai subsystem gặp nhau ở transaction identity và commit state.
+
+Một version có thể đã tồn tại trong buffer pool nhưng chưa được transaction khác phép nhìn thấy. Một data page có thể đã được ghi ra storage dù transaction tạo thay đổi trên đó chưa commit; recovery phải dùng WAL/undo/transaction metadata để không biến state vật lý thành state logic hợp lệ một cách sai lầm.
+
+Do đó invariant không phải “disk luôn chỉ chứa committed data”. Invariant là recovery có đủ information và ordering để dựng lại **committed history hợp lệ**.
+
+Đọc sâu hơn tại [MVCC, visibility, WAL và recovery internals](../../05_data_databases/advanced/00_mvcc_visibility_wal_and_recovery_internals.md).
+
+## 3. WAL giải bài toán gì?
+
+**Nhật ký ghi trước (Write-Ahead Logging, WAL)** yêu cầu log chứa đủ information để recovery một thay đổi phải đạt durability cần thiết trước khi data page phụ thuộc vào log đó được coi là an toàn để ghi theo protocol.
 
 Mental model:
 
@@ -37,188 +35,209 @@ log trước
 page sau
 ```
 
-Database không cần flush mọi data page ngay lúc commit. Nó chỉ cần bảo đảm log chứa đủ thông tin để replay/undo sau crash. Đây là lý do WAL giảm số lượng random write đồng bộ trên đường commit.
+Database không cần flush mọi data page khi commit. Sequential log flush thường rẻ hơn buộc nhiều random data-page writes đồng bộ, vì vậy WAL vừa bảo vệ correctness vừa tạo performance architecture cho storage engine.
 
-## 3. Commit record và fsync
+## 4. LSN nối log với page state
 
-Trong nhiều thiết kế, transaction chỉ được coi là durable sau khi commit record hoặc log record liên quan đã đi qua một primitive đồng bộ như `fsync`, `fdatasync`, `O_DSYNC` hoặc cơ chế tương đương.
+**Log Sequence Number (LSN)** tạo logical order của log records. Data page có thể mang `pageLSN` cho biết page đã phản ánh log tới đâu. Recovery so sánh log position với page state để quyết định redo nào còn cần thiết.
 
-Nhưng gọi `write()` thành công chưa đủ. `write()` có thể chỉ copy data từ user space vào page cache của kernel.
+Đây là một invariant rất cụ thể:
+
+```text
+page state không được đi trước durable log state theo cách làm recovery mất khả năng giải thích page đó
+```
+
+Nếu write ordering bị phá ở storage stack, WAL protocol có thể mất ý nghĩa dù database code nhìn đúng.
+
+## 5. `write()` success không đồng nghĩa durable
+
+`write()` thường chỉ chứng minh kernel đã nhận bytes. Với buffered I/O, bytes có thể mới nằm trong **bộ đệm trang (page cache)** và page chỉ được đánh dấu dirty.
 
 ```text
 write() success
-≠ durable on storage media
+≠
+non-volatile persistence
 ```
 
-Đây là một trong những boundary quan trọng nhất giữa application/database và OS.
+Primitive như `fsync`, `fdatasync`, `O_DSYNC` hoặc mechanism tương đương truyền durability intent xuống stack. Nhưng guarantee cuối vẫn phụ thuộc filesystem, block layer, driver và device thực hiện đúng contract.
 
-## 4. Page cache
+## 6. Page cache và buffer pool tạo hai lớp state
 
-OS thường giữ file data trong **bộ đệm trang (page cache)**. Ghi vào file có thể chỉ làm page cache trở thành “dirty”. Kernel sẽ flush dirty page xuống storage sau đó.
+Database thường có buffer pool riêng. OS lại có page cache. Nếu database dùng buffered file I/O, cùng logical data có thể đi qua cả hai lớp cache; direct I/O có thể giảm double caching nhưng không làm crash consistency tự động đúng.
 
-Page cache cải thiện throughput vì gom nhiều write và tránh I/O sync liên tục. Đổi lại, application phải dùng đúng durability primitive khi thật sự cần persistence trước khi trả success.
+Pressure ở hai tầng cũng tương tác: database dirty-page policy ảnh hưởng writeback burst; kernel reclaim có thể tạo I/O contention; device queue depth và flush latency lại phản hồi ngược lên commit latency.
 
-## 5. Filesystem ordering
+Vì vậy “DB CPU thấp nhưng commit p99 tăng” vẫn có thể là storage-stack problem.
 
-Filesystem phải cập nhật nhiều metadata/data structure. Sau crash, nếu các write xuất hiện trên disk theo thứ tự khác dự kiến, cấu trúc có thể không nhất quán.
+## 7. Filesystem ordering và journaling
 
-Journaling hoặc copy-on-write filesystem giải quyết một phần vấn đề bằng protocol riêng. Tuy nhiên database WAL và filesystem journal phục vụ boundary khác nhau:
+Filesystem phải bảo vệ metadata/data structure của chính nó qua crash. Journaling hoặc copy-on-write filesystem dùng protocol riêng để giữ filesystem-consistency invariant.
 
-- database WAL bảo vệ transaction semantics;
-- filesystem journal bảo vệ filesystem metadata/data consistency.
-
-Một lớp không tự thay thế lớp kia.
-
-## 6. Barrier và flush
-
-Storage stack có thể reorder write để tối ưu throughput. **Rào ghi (write barrier)** và flush command giúp bảo đảm một số write phải được stable trước write khác.
-
-Nếu database giả định log record A đã durable trước data page B nhưng device reorder ngược lại, crash consistency có thể bị phá.
-
-Do đó durability phụ thuộc protocol ordering từ database xuống block device.
-
-## 7. Device cache
-
-SSD/HDD controller có thể có volatile write cache. Nếu device báo write complete khi data mới chỉ nằm trong RAM của controller và mất điện xảy ra, data có thể biến mất.
-
-Enterprise device có thể dùng capacitor hoặc power-loss protection để flush cache khi mất điện. Consumer device không phải lúc nào cũng có guarantee tương tự.
-
-Vì vậy “fsync xong” vẫn dựa vào device firmware/hardware thực hiện đúng storage contract.
-
-## 8. Torn write
-
-Một page có thể lớn hơn atomic write unit của device. Nếu power loss xảy ra giữa write, page có thể ở trạng thái **ghi rách (torn write)** — một phần mới, một phần cũ.
-
-Database thường dùng checksum, double-write buffer, page LSN hoặc WAL replay để phát hiện/phục hồi tình huống này.
-
-## 9. Group commit
-
-Nếu mỗi transaction riêng lẻ gọi storage flush, throughput thấp vì flush latency cao. **Commit theo nhóm (group commit)** gom nhiều transaction chờ cùng một WAL flush:
+Database WAL và filesystem journal không trùng boundary:
 
 ```text
-T1 commit
-T2 commit
-T3 commit
-   ↓
-one log flush
-   ↓
-ack T1,T2,T3
+database WAL      -> transaction/recovery semantics
+filesystem journal -> filesystem metadata/data-structure consistency
 ```
 
-Đây là trade-off latency/throughput. Chờ thêm một khoảng nhỏ có thể tăng throughput mạnh bằng cách amortize flush cost.
+Một lớp không tự thay thế lớp kia. Database vẫn cần biết write/flush semantics mà filesystem cung cấp.
 
-## 10. Async commit và durability level
+## 8. Controller cache, flush và power-loss protection
 
-Một số hệ thống cho phép trả success trước khi WAL thật sự durable để giảm latency. Điều này đổi guarantee:
+SSD/HDD có thể có volatile write cache. Nếu controller báo complete trước khi data đến non-volatile media, power loss có thể làm mất write trừ khi device có power-loss protection hoặc firmware thực hiện flush semantics đúng.
+
+Do đó một chuỗi durability thực tế là:
 
 ```text
-ack nhanh hơn
-↔ có cửa sổ mất transaction khi crash
+DB WAL flush intent
+→ syscall
+→ filesystem/block ordering
+→ device flush/FUA semantics
+→ controller
+→ non-volatile media
 ```
 
-Không nên gọi hai mode đều là “commit” mà không giải thích durability semantics. Product requirement quyết định có chấp nhận cửa sổ mất dữ liệu hay không.
+Mỗi boundary là một nơi abstraction có thể leak nếu guarantee bị hiểu sai.
 
-## 11. Replication không tự thay thế local durability
+## 9. Torn write và atomicity granularity
 
-Nếu leader gửi log entry sang replica nhưng leader và replica đều chỉ giữ entry trong volatile cache, mất điện đồng thời có thể mất dữ liệu.
+Database page có thể lớn hơn atomic write unit của storage. Power loss giữa write có thể tạo **ghi rách (torn write)**: một phần page mới, một phần cũ.
 
-Ngược lại, synchronous replication durable trên nhiều failure domain có thể tăng guarantee nhưng thêm network + disk latency.
+Checksum chỉ giúp phát hiện corruption; recovery cần mechanism như WAL redo, page LSN, double-write buffer hoặc page-image strategy tùy engine. Correctness requirement là crash không được biến partial physical write thành logical state không thể phát hiện/phục hồi.
 
-Durability và replication là hai trục khác nhau:
+## 10. Group commit: performance pressure thay đổi timing, không đổi invariant
+
+Nếu mỗi transaction flush storage riêng, flush latency giới hạn throughput. **Commit theo nhóm (group commit)** gom nhiều commit records vào cùng một durable flush.
 
 ```text
-local persistence
-replica count
+T1 ─┐
+T2 ─┼─> one WAL flush -> acknowledge T1,T2,T3
+T3 ─┘
+```
+
+Performance behavior thay đổi: một transaction có thể chờ thêm để amortize flush cost, nhưng acknowledgement vẫn chỉ được phát khi durability condition của group đã đạt.
+
+Đây là mẫu reasoning quan trọng: optimization được phép đổi batching/timing, không được âm thầm làm yếu invariant nếu API không đổi contract.
+
+## 11. Checkpoint đổi recovery cost chứ không thay commit truth
+
+Checkpoint giới hạn lượng WAL phải scan/replay sau restart. Fuzzy checkpoint có thể chạy khi workload vẫn hoạt động; nó không nhất thiết đồng nghĩa mọi dirty page đã sạch.
+
+Checkpoint quá thường xuyên tăng write pressure; quá thưa tăng recovery time và WAL retention. Đây là trade-off giữa runtime cost và **mục tiêu thời gian khôi phục (Recovery Time Objective, RTO)**.
+
+## 12. Replication thêm một state machine khác
+
+Replication không đơn giản “copy file sang máy khác”. Log entry có thể đi qua các trạng thái:
+
+```text
+created locally
+→ written to local log
+→ sent to replicas
+→ received
+→ persisted remotely
+→ accepted by quorum/replication rule
+→ applied/visible
+```
+
+Tùy protocol, client acknowledgement có thể gắn với một mốc khác nhau. Nếu system hứa survive leader loss, ack chỉ sau local persistence có thể chưa đủ. Nếu system hứa synchronous quorum durability, protocol phải chứng minh một committed entry vẫn hiện diện trong quorum có authority sau failover.
+
+Đây là nơi transaction durability nối với consensus/log replication thay vì kết thúc ở local disk.
+
+## 13. Replication không tự động đồng nghĩa durability
+
+Nếu leader và replica đều chỉ giữ write trong volatile cache, một power event chung vẫn có thể làm mất state. Nếu các replica cùng failure domain, “ba bản sao” cũng không bảo vệ khỏi mất cả domain đó.
+
+Durability cần reasoning theo ba chiều độc lập:
+
+```text
+local persistence guarantee
+×
+replication/commit rule
+×
 failure-domain independence
 ```
 
-## 12. Database page và filesystem page không nhất thiết trùng nhau
+Số replica tự nó không trả lời được ba câu hỏi trên.
 
-Database có page size riêng, filesystem có block/page abstraction riêng, device có sector/page nội bộ riêng. Alignment không phù hợp có thể làm write amplification hoặc read-modify-write.
+## 14. Synchronous replication đổi critical path
 
-Direct I/O đôi khi được dùng để database tự quản buffer pool và tránh double caching. Nhưng direct I/O không làm durability tự động đúng; vẫn cần flush/order semantics phù hợp.
+Khi commit phải đợi remote quorum, network RTT, remote queue và remote storage flush đều nằm trên critical path. Tail latency có thể tăng mạnh khi một replica chậm hoặc cross-region link dao động.
 
-## 13. SSD FTL và write amplification
+Protocol tốt phải quyết định replica nào nằm trong quorum, khi nào follower chậm bị loại khỏi critical path, và authority sau failover được xác định thế nào. Đây là nơi durability, consistency và availability gặp nhau.
 
-SSD không overwrite NAND page tùy ý như RAM. Firmware dùng **Flash Translation Layer (FTL)** để ánh xạ logical block sang physical location. Garbage collection và wear leveling có thể khiến một logical write tạo nhiều physical write.
+Đọc thêm [Consensus internals](../../06_networks_distributed_systems/advanced/03_consensus_log_replication_reconfiguration_and_snapshots.md).
 
-Database write pattern, filesystem và SSD internals vì vậy có thể ảnh hưởng nhau. Sequential WAL thường thân thiện hơn random small writes, nhưng device behavior vẫn phụ thuộc firmware và queue depth.
+## 15. Async replication tạo một failure window có chủ đích
 
-## 14. Crash recovery
+Async replication có thể giảm foreground latency vì leader ack trước khi remote copy đạt durability. Đổi lại có replication lag và **mất dữ liệu tiềm năng (Recovery Point Objective, RPO)** khi failover.
 
-Sau restart, database không đơn giản “mở file rồi chạy”. Nó phải xác định:
+Điều quan trọng là contract phải nói rõ window này, metrics phải đo được lag, và failover procedure phải hiểu replica mới có history tới đâu.
 
-```text
-log record nào durable
-transaction nào đã commit
-page nào đã phản ánh log tới đâu
-redo gì
-undo gì
-```
+## 16. Virtualization và cloud storage kéo dài chuỗi lời hứa
 
-LSN hoặc tương đương giúp liên kết page state với log position. Recovery protocol biến durability thành một câu chuyện có thể kiểm chứng sau crash.
-
-## 15. Checkpoint
-
-Nếu replay WAL từ đầu lịch sử mỗi lần restart thì recovery quá lâu. **Checkpoint** ghi lại mốc cho biết phần state nào đã được materialize đủ để recovery bắt đầu gần hơn.
-
-Checkpoint quá thường xuyên tăng I/O; quá thưa làm recovery dài và WAL retention lớn. Đây là trade-off giữa runtime overhead và recovery time objective.
-
-## 16. Durability và latency tail
-
-Storage flush latency có distribution, không phải số cố định. Khi device GC, queue congestion hoặc filesystem writeback xảy ra, p99 commit latency có thể tăng mạnh.
-
-Do đó database latency spike có thể bắt nguồn từ storage layer dù CPU và query plan không thay đổi.
-
-## 17. Virtualization và cloud storage
-
-Trong VM/cloud, đường đi có thể dài hơn:
+Trong VM/cloud, path có thể là:
 
 ```text
 guest filesystem
 → virtual block device
-→ hypervisor
-→ host/storage service
-→ replicated storage backend
+→ hypervisor/host
+→ storage network
+→ replicated storage service
+→ physical media
 ```
 
-Một flush chỉ đáng tin nếu toàn chuỗi virtual layer truyền đúng durability intent. Cloud storage service thường cung cấp contract riêng; cần đọc guarantee của service thay vì suy luận từ local-disk intuition.
+Một guest `fsync` chỉ đáng tin nếu mọi layer truyền durability intent đúng. Với managed storage, guarantee phải lấy từ service contract, không suy luận từ intuition local disk.
 
-## 18. Backup không đồng nghĩa durability
+## 17. Performance pressure thường lộ qua tail, không qua average
 
-Durability bảo vệ transaction khỏi crash/power loss theo contract hiện tại. Backup bảo vệ khỏi corruption, operator error, ransomware hoặc lỗi logic đã replicate khắp cluster.
+Storage GC, dirty-page writeback, checkpoint burst, queue congestion hoặc replica lag có thể làm p99 commit latency tăng trong khi average vẫn ổn.
 
-Một database có WAL + synchronous replication vẫn có thể cần backup/PITR.
+Khi throughput tăng gần capacity, group commit có thể cải thiện throughput nhưng queue wait cũng tăng. Khi checkpoint/writeback trùng peak traffic, foreground flush có thể tranh bandwidth với background maintenance.
 
-## 19. Kiểm thử crash consistency
+Performance engineering vì thế phải đo **latency distribution + queue + saturation + background activity** cùng lúc.
 
-Happy-path test không đủ. Hệ thống storage/database cần thử:
+## 18. Production evidence theo từng tầng
+
+Application layer cần transaction latency, timeout và acknowledgement semantics. Database layer cần WAL bytes/flush latency, checkpoint activity, dirty pages, lock/MVCC horizon và replication LSN/lag. OS layer cần dirty/writeback pages, I/O wait, block-device latency/queue depth và filesystem errors. Storage layer cần device latency, utilization, error counters và flush behavior nếu telemetry cho phép. Distributed layer cần quorum state, leader term/epoch, replica match/applied positions và failover timeline.
+
+Một graph `DB commit latency` đơn độc không đủ để xác định cơ chế.
+
+## 19. Crash testing là cách kiểm tra invariant, không phải edge-case luxury
+
+Happy-path test chỉ chứng minh path không crash hoạt động. Durability cần fault injection tại interruption points:
 
 ```text
-kill process giữa write
-kill host sau fsync
-power-loss simulation
-partial write
-reorder injection
-recovery lặp nhiều lần
+kill process trước/sau WAL flush
+crash host giữa writeback
+force replica lag rồi fail leader
+replay recovery nhiều lần
+inject partial/reordered write trong test harness nếu stack cho phép
 ```
 
-Mục tiêu là kiểm tra invariant sau mọi interruption point có thể xảy ra.
+Sau mỗi failure phải kiểm tra invariant: committed transaction theo contract còn tồn tại; uncommitted transaction không xuất hiện sai; recovery idempotent; replica mới không phát history trái với commit rule.
+
+## 20. Backup giải bài toán khác
+
+WAL + replication bảo vệ một số crash/failure scenarios. Chúng không tự bảo vệ khỏi operator error, logical corruption, ransomware hoặc bad write đã replicate tới mọi node.
+
+Backup/PITR có retention và trust boundary riêng. Một durability design hoàn chỉnh phải phân biệt **survive crash**, **survive node loss**, **survive region loss** và **recover historical state**.
 
 ## Common Misconceptions
 
-**“COMMIT nghĩa là data page đã nằm trên disk.”** Không nhất thiết; thường WAL durable là đủ để transaction recoverable.
+**“COMMIT nghĩa data page đã nằm trên disk.”** Không nhất thiết; durable WAL có thể đủ để recovery committed change.
 
-**“write() thành công nghĩa là dữ liệu an toàn.”** Không; data có thể chỉ nằm trong page cache.
+**“`write()` thành công nghĩa data an toàn.”** Không; bytes có thể chỉ ở volatile cache.
 
-**“RAID/replication là backup.”** Không; lỗi logic hoặc corruption có thể được replicate.
+**“Ba replicas nghĩa không thể mất dữ liệu.”** Không nếu acknowledgement rule, local persistence hoặc failure-domain independence không đủ mạnh.
 
-**“SSD không có seek nên write nào cũng như nhau.”** FTL, GC, erase block và queue behavior vẫn tạo cost khác nhau.
+**“Replication là backup.”** Không; lỗi logic và corruption có thể được replicate.
+
+**“SSD không seek nên mọi write có cùng cost.”** FTL, garbage collection, erase block, write amplification và queueing vẫn làm latency biến động.
 
 ## Mô hình tư duy
 
-> Durability là một chuỗi lời hứa. Mỗi tầng chỉ an toàn nếu hiểu đúng lời hứa của tầng bên dưới và không trả success trước khi invariant của chính nó được bảo đảm.
+> Durability là một chuỗi invariant và acknowledgement. MVCC quyết định history nào được nhìn thấy; WAL/recovery quyết định history nào sống sót crash; filesystem/storage giữ ordering và persistence vật lý; replication quyết định history nào còn authority sau mất node. **Một tầng chỉ được hứa mạnh bằng guarantee đã được chứng minh từ tầng bên dưới.**
 
-Khi debug mất dữ liệu hoặc commit latency, hãy đi theo đường: transaction → WAL → syscall → page cache/filesystem → block layer → device → media, rồi quay ngược qua recovery protocol để xác minh guarantee.
+## Kết nối
 
-Xem thêm: [MVCC/WAL](../../05_data_databases/advanced/00_mvcc_visibility_wal_and_recovery_internals.md), [Filesystem crash consistency](../../03_operating_systems/advanced/04_filesystem_crash_consistency_journaling_and_cow.md), [Storage hardware](../../basic/02_computer_architecture/06_storage_hardware_ssd_disks_and_persistence.md).
+Đọc cùng [MVCC/WAL](../../05_data_databases/advanced/00_mvcc_visibility_wal_and_recovery_internals.md), [Filesystem crash consistency](../../03_operating_systems/advanced/04_filesystem_crash_consistency_journaling_and_cow.md), [Storage hardware](../../basic/02_computer_architecture/06_storage_hardware_ssd_disks_and_persistence.md), [Consensus internals](../../06_networks_distributed_systems/advanced/03_consensus_log_replication_reconfiguration_and_snapshots.md) và [End-to-end latency](./01_end_to_end_latency_browser_edge_service_db_storage.md).
