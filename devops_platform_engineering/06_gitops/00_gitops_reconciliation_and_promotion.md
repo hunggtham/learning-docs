@@ -125,3 +125,77 @@ Giả sử operator tăng replicas từ 10 lên 20 để mitigate traffic spike.
 Đừng tiếp tục `kubectl scale` nhiều lần. Hãy xác định actor từ event/audit/field ownership, rồi sửa desired owner đúng. Nếu HPA sở hữu replica, thay policy/metric/minimum phù hợp. Nếu GitOps sở hữu, emergency change phải đi qua Git hoặc suspend theo protocol.
 
 Đây là lợi ích của GitOps khi được vận hành đúng: drift không chỉ bị sửa, mà còn buộc tổ chức phải làm rõ **ai có quyền định nghĩa state nào**.
+
+## 20. Revision observed, revision applied và revision serving traffic là ba state khác nhau
+
+Một GitOps controller có thể đã fetch commit `R2`, render thành công và ghi resource vào API nhưng workload vẫn đang phục vụ phần lớn traffic bằng artifact từ `R1`. Nếu chỉ lưu một nhãn “Synced R2”, operator dễ nghĩ production đã hoàn tất release.
+
+Một causal chain hữu ích là:
+
+```text
+Git revision observed
+→ rendered desired state
+→ API objects applied
+→ workload controller observed generation
+→ new replicas Ready
+→ routing đưa traffic tới replica mới
+→ telemetry xác nhận outcome của artifact/config mới
+```
+
+Release metadata nên cho phép nối các state này. Điều này đặc biệt quan trọng khi rollback hoặc incident xảy ra giữa rollout: source desired state có thể là R2 nhưng actual fleet là mixture R1/R2.
+
+## 21. Git/repository outage ảnh hưởng khả năng đổi state, không nhất thiết traffic hiện tại
+
+Nếu repository hoặc Git provider down, controller có thể không fetch revision mới nhưng workload đang chạy vẫn khỏe. Đây là control-plane dependency giống registry/cloud API: data plane có thể tiếp tục nhưng deploy, recovery hoặc scale path liên quan desired state bị giới hạn.
+
+Runbook cần biết controller giữ cache/revision cuối ra sao và behavior khi không reach repo: giữ last-known desired state, fail closed hay liên tục retry. Retry fan-out từ hàng trăm cluster/controller còn có thể gây thundering herd khi Git provider hồi phục.
+
+Do đó Git availability cần được đánh giá theo **change/recovery capability**, không chỉ “application uptime hiện tại”.
+
+## 22. Rendering phải deterministic đủ để revision có nghĩa
+
+Nếu cùng Git revision render ra manifest khác vì chart dependency `latest`, remote lookup mutable, environment variable ngoài source hoặc plugin version khác, commit SHA không còn là identity đầy đủ của desired state.
+
+GitOps tốt cố gắng version hóa rendering inputs: chart/module dependency, plugin/tool version, values và external reference quan trọng. Nếu output cần remote data, phải biết remote input đó thuộc contract nào và có được snapshot/pin không.
+
+Mental model giống reproducible build: **desired-state artifact** cũng nên có input closure đủ rõ. “Git không đổi nhưng cluster diff đổi” là dấu hiệu có mutable input ngoài Git hoặc controller/runtime behavior thay đổi.
+
+## 23. Prune/delete có risk class khác apply/update
+
+GitOps thường có khả năng xóa resource khi object biến mất khỏi desired source. Đây là convergence hợp lý nhưng destructive semantics khác create/update. Một rename/move sai path hoặc selector scope rộng có thể làm controller hiểu resource không còn được mong muốn và prune hàng loạt.
+
+Critical resource cần protection phù hợp: review effective diff, deletion policy/retention, finalizer hoặc explicit allow-prune tùy architecture. Nhưng protection không được biến thành resource vĩnh viễn không ai xóa được.
+
+Senior review nên highlight **object leaving desired set** như một state transition riêng, không chỉ nhìn số dòng Git bị xóa.
+
+## 24. Dependency ordering không chứng minh readiness của dependency
+
+GitOps tool có thể hỗ trợ wave/order/hook để apply database trước application, CRD trước Custom Resource hoặc namespace trước workload. Nhưng “đã apply trước” khác “đã usable”. Database object Created chưa chắc endpoint ready; CRD registered chưa chắc conversion webhook healthy.
+
+Ordering chỉ giải dependency về mutation sequence. Readiness dependency cần condition semantics và timeout/retry phù hợp. Chèn sleep cố định thường che propagation time thay vì model dependency.
+
+Nếu application phải đợi migration hoàn tất, migration completion nên có durable status/evidence mà release controller có thể đọc, không chỉ dựa vào thứ tự file trong repository.
+
+## 25. Multi-cluster fan-out làm một commit có blast radius lớn
+
+Một repository/template có thể được hàng chục hoặc hàng trăm cluster reconcile. Đây là leverage lớn nhưng cũng biến một commit sai thành organization-wide event. “Change nhỏ trong shared base” có thể có blast radius lớn hơn một application deploy bình thường.
+
+Platform nên hỗ trợ progressive rollout của desired-state changes: cohort/cell/canary cluster, pause giữa wave, compatibility check và global kill switch có audit. Không nên đồng bộ mọi cluster production ngay chỉ vì Git merge là atomic.
+
+Multi-cluster GitOps vì vậy cần hai tầng progression: artifact/application rollout bên trong cluster và rollout của **platform desired state** giữa các cluster.
+
+## 26. Secret decryption controller nằm trên trust và availability path
+
+Nếu Git lưu ciphertext, một controller/plugin phải decrypt bằng key/identity phù hợp trước khi tạo runtime Secret. Failure có thể đến từ key rotation, KMS outage, permission drift hoặc ciphertext format/version mismatch.
+
+Git revision có thể hoàn toàn đúng nhưng reconciliation fail ở decrypt stage. Evidence nên tách source fetch, render, decrypt, apply và workload consumption. Key rotation còn phải bảo đảm controller mới đọc được ciphertext cũ hoặc repository được re-encrypt theo migration plan.
+
+Security gain từ encrypted Git không loại bỏ lifecycle complexity; nó chuyển plaintext boundary từ repository sang decrypt/runtime path.
+
+## 27. Senior walkthrough: GitOps báo Synced nhưng 40% traffic vẫn ở version cũ
+
+Giả sử controller báo revision R2 `Synced`, Deployment spec đã là image D2, nhưng metrics theo artifact cho thấy 40% request vẫn do D1 xử lý. Một số Pod D2 `Ready`, một số old Pod chưa terminate vì connection draining/PDB/capacity; service mesh giữ long-lived connection tới old endpoint.
+
+GitOps không sai: desired object đã được áp dụng. Nhưng release chưa hội tụ ở data plane. Investigation phải chuyển xuống workload rollout, endpoint/routing và connection lifecycle.
+
+Bài học là **sync state không phải serving state**. GitOps dashboard là một evidence source trong causal chain, không phải oracle cuối cùng của production outcome.
