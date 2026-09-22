@@ -183,3 +183,59 @@ Scan job xanh không chứng minh artifact production chính là artifact đã s
 Evidence chain tốt nối object cụ thể: source revision → build provenance → artifact digest → signature/attestation → deployment digest → runtime identity → authorization decision. Mỗi bước có thể hỏi “evidence này bound vào subject nào?”.
 
 Khi audit/security review chỉ thu screenshot dashboard hoặc tên sản phẩm mà không bind được tới artifact/workload/identity cụ thể, control có thể chỉ tồn tại trên giấy. Platform security trưởng thành ưu tiên **verifiable linkage** hơn số lượng security tool.
+
+## 27. Rotation chỉ hoàn tất khi chứng minh consumer đã chuyển sang credential mới
+
+Có secret mới trong manager và workload đã restart chưa đủ. Consumer có thể giữ connection pool cũ, process khác chưa reload hoặc background worker ít traffic vẫn dùng credential cũ. Nếu revoke old quá sớm, failure chỉ xuất hiện muộn ở cohort chưa chuyển.
+
+Rotation protocol tốt cần evidence: version mới đã được phân phối, connection/session mới đang dùng credential mới, consumer inventory không còn reference cũ và old-credential usage giảm về zero trong một khoảng phù hợp. Sau đó revoke mới biến overlap thành cutover có kiểm soát.
+
+Với certificate hoặc key, dual-trust window cũng cần giới hạn. Overlap quá dài làm hai credential cùng hợp lệ và kéo dài blast radius. Rotation là migration có deadline, không phải trạng thái “giữ cả cũ lẫn mới cho chắc”.
+
+## 28. Break-glass là một privileged session có lifecycle, không phải một account đặc biệt
+
+Một tài khoản admin cố định dùng hàng ngày rồi gọi là break-glass đã mất ý nghĩa. Quyền khẩn cấp nên được cấp theo session/request cụ thể, có TTL, target scope, reason và ideally approval/elevation độc lập với normal role.
+
+Sau khi incident kết thúc, access phải tự expire hoặc bị revoke, active session/token cần được kiểm tra, action quan trọng được review và credential/bootstrap path phải rotate nếu exposure risk thay đổi. “Ticket đã đóng” không chứng minh quyền cao đã biến mất.
+
+Break-glass path cũng phải được test. Nếu đến incident mới phát hiện MFA device, recovery code hoặc identity provider phụ thuộc chính hệ thống đang outage, emergency access chỉ tồn tại trên tài liệu.
+
+## 29. Audit mode và enforce mode là hai phase khác nhau của policy rollout
+
+Một policy mới có thể chạy ở audit/shadow mode để đo bao nhiêu workload sẽ bị deny, false positive nằm ở đâu và exception nào cần thiết. Khi evidence đủ, policy mới chuyển sang enforce theo release ring hoặc environment.
+
+Nhưng shadow mode không được kéo dài vô hạn. Nếu rule chỉ log suốt nhiều tháng mà không owner hoặc deadline, organization có cảm giác “đã có policy” nhưng invariant chưa được bảo vệ.
+
+Rollout mature là: define invariant → test fixture → audit impact → fix/exception → staged enforce → monitor deny/latency → remove temporary compatibility. Policy-as-code cũng cần migration lifecycle giống API.
+
+## 30. Fail-open hay fail-closed là reliability-security trade-off phải quyết định trước outage
+
+Nếu admission/policy service không reachable, chặn mọi deploy giữ security invariant nhưng có thể ngăn emergency recovery. Cho phép mọi request tiếp tục giữ availability của control path nhưng mở cửa bypass policy.
+
+Không có lựa chọn universal. Critical invariant như “artifact phải từ trusted registry” có thể fail-closed; low-risk metadata validation có thể fail-open có audit tùy threat model. Quan trọng là behavior khi dependency policy hỏng phải explicit, observable và được game-day test.
+
+Nếu operator chỉ biết semantics này sau khi webhook outage xảy ra, policy system đang giấu một failure mode quan trọng.
+
+## 31. Identity lifecycle phải bao gồm offboarding và stale principal
+
+Least privilege lúc cấp quyền chưa đủ nếu principal không được dọn khi service/team/người dùng biến mất. Service account cũ, bot token không owner, role dành cho project đã archive tạo attack surface khó nhìn vì không còn traffic bình thường để lộ chúng.
+
+Platform nên có inventory principal → owner → purpose → last-used → scope → expiry/review. Unused permission hoặc principal lâu không dùng là signal để thu hẹp, nhưng removal vẫn cần kiểm tra dependency batch/DR hiếm khi chạy.
+
+Offboarding là reconciliation problem: source-of-truth về ownership thay đổi thì credential, role binding, repository access và break-glass membership liên quan phải hội tụ theo.
+
+## 32. Least privilege cần runtime evidence nhưng không được học mù từ traffic hiện tại
+
+Quan sát permission thực sự được dùng giúp phát hiện wildcard hoặc quyền thừa. Tuy nhiên “30 ngày không gọi action X” không chứng minh action X vô dụng nếu nó chỉ cần cho quarterly restore, certificate rotation hoặc disaster recovery.
+
+Permission reduction nên kết hợp observed usage với declared capability/runbook và rare-path test. Mục tiêu là giảm quyền tới tập cần thiết cho cả normal path lẫn recovery path, không tối ưu policy theo traffic sample ngắn.
+
+Đây là cùng bài toán observability: absence of use chỉ có ý nghĩa khi detector/window bao phủ behavior cần bảo vệ.
+
+## 33. Audit log cũng là security asset cần integrity và retention boundary
+
+Audit log hữu ích chỉ khi attacker hoặc principal bị điều tra không dễ sửa/xóa chính evidence của mình. Nếu CI admin có thể vừa deploy vừa xóa audit record cùng account, forensic trust bị yếu.
+
+High-value audit trail nên có write/read/delete permission tách biệt phù hợp, retention/immutability theo threat model, clock/source identity rõ và export sang boundary khó bị cùng compromise. Không phải mọi application log cần WORM, nhưng privileged control-plane action cần evidence mạnh hơn debug log thông thường.
+
+Security control cuối cùng vẫn cần khả năng chứng minh: **ai đã làm gì, lên subject nào, bằng authority nào, policy revision nào và evidence đó còn đáng tin không**.
