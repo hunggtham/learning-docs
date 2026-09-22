@@ -175,3 +175,67 @@ Sau recovery, cần hỏi state nào đã bị reset và evidence nào phân bi�
 Mỗi incident có ba loại output tiềm năng: fix defect trực tiếp, tăng khả năng phát hiện/chẩn đoán, và giảm blast radius/recovery time. Ví dụ một memory leak cần code fix; thiếu cgroup metric cần observability fix; rollout ồ ạt cần delivery guardrail.
 
 Nếu chỉ sửa defect mà không cải thiện signal hoặc safety khi failure class có thể tái diễn, learning loop chưa đóng. Troubleshooting là input cho Platform Engineering: failure lặp lại ở nhiều team nên được biến thành default, guardrail hoặc self-service diagnostic capability.
+
+## 27. Counterfactual tốt hơn narrative sau sự cố
+
+Sau incident rất dễ kể một câu chuyện mượt: “deploy X làm latency tăng nên X là nguyên nhân”. Causal confidence mạnh hơn khi có counterfactual: cohort không nhận X có khỏe không; rollback X có đảo signal trong cùng traffic/dependency không; một zone/version tương đương có behavior khác không.
+
+Canary, version dimension, tenant cohort và region split tạo natural experiment. Chúng không chứng minh tuyệt đối nhưng giúp phân biệt correlation với mechanism.
+
+Khi không có counterfactual, postmortem nên nói rõ evidence level. Một hypothesis có timeline phù hợp nhưng chưa được reproduce khác với root cause đã được isolation/reproduction xác nhận.
+
+## 28. Nhiều feedback loop có thể tạo oscillation dù từng loop “đúng”
+
+Production hiện đại có HPA, cluster autoscaler, retry, circuit breaker, load balancer health check, queue autoscaler và GitOps/controller cùng phản ứng với signal. Nếu response time và gain không được phối hợp, chúng có thể đẩy hệ thống qua lại.
+
+Ví dụ latency tăng → HPA scale app → DB connection tăng → DB chậm hơn → retry tăng → latency tăng thêm. Sau đó circuit breaker mở → load giảm → HPA scale down; breaker đóng → traffic dồn lại và chu kỳ lặp.
+
+Khi metric dao động tuần hoàn, đừng chỉ debug component riêng. Hãy vẽ loop: **signal nào kích action nào, delay bao lâu, action thay resource/load gì, loop khác quan sát signal gì**. Oscillation thường là property của interaction, không phải một controller đơn độc.
+
+## 29. Client timeout không có nghĩa server đã dừng work
+
+Một request timeout ở client/proxy có thể vẫn tiếp tục chạy trong server hoặc downstream nếu cancellation không propagate. Client retry sau timeout có thể tạo hai operation đồng thời. Với write không idempotent, đây là đường tới duplicate side effect.
+
+Evidence cần so client timeout timestamp với server trace và downstream operation. Nếu server hoàn thành sau khi client đã bỏ, latency/error dashboard phía client và server có thể kể hai câu chuyện khác nhau.
+
+Deadline propagation, cancellation và idempotency key là reliability mechanism. Troubleshooting phải hỏi “work đã bị hủy thật chưa?” thay vì đồng nhất timeout với failure kết thúc.
+
+## 30. Partial failure nên được cắt theo cohort trước khi nhìn global average
+
+Một incident có thể chỉ ảnh hưởng node image mới, AZ cụ thể, tenant tier, certificate chain cũ, IPv6 path, browser version hoặc shard dữ liệu. Global error 2% có thể là 100% failure của một cohort nhỏ.
+
+Dimension hữu ích nhất thường là dimension gần failure boundary: version, zone, node pool, target dependency, config revision, identity principal, shard/partition. High-cardinality không có nghĩa phải index mọi thứ vô hạn; cần chọn dimension có khả năng phân biệt hypothesis.
+
+Câu hỏi senior là: **những request fail có điểm chung nào mà request thành công không có?** Đây thường là đường ngắn nhất tới isolation boundary.
+
+## 31. Recovery storm là một failure phase riêng
+
+Khi dependency hoặc control plane hồi phục, hệ thống chưa chắc ổn ngay. Backlog, retry queue, reconnect, cache miss, image pull, leader election và pod restart có thể đồng loạt tạo load lớn hơn steady state trước outage.
+
+Nếu operator thấy dependency “đã xanh” nhưng latency tiếp tục xấu, hãy kiểm tra recovery workload: queue age đang drain ra sao, reconnect rate, cache hit, DB connection churn, controller backlog và node provisioning.
+
+Recovery cần throttling/ramp-up giống startup. Mở toàn bộ traffic ngay khi health check xanh có thể tạo second outage.
+
+## 32. Brownout cần được phân biệt với silent data-quality failure
+
+Graceful degradation có chủ đích có thể trả stale cache, bỏ recommendation hoặc defer non-critical work. Nhưng nếu telemetry chỉ nhìn HTTP 200, brownout và business correctness failure có thể bị che.
+
+Degradation mode phải có explicit signal: feature disabled, data freshness, fallback ratio, stale age hoặc quality tier. SLO có thể cho core availability xanh trong khi product quality giảm; dashboard phải cho operator biết đây là intentional degraded mode hay unknown failure.
+
+Troubleshooting không nên “fix” brownout ngay nếu nó đang bảo vệ core flow. Trước hết xác nhận trigger, protected invariant và điều kiện thoát mode.
+
+## 33. Clock và event ordering có thể làm timeline đánh lừa
+
+Log từ nhiều host/service có thể lệch clock, batch trước khi ship hoặc ghi timestamp ở thời điểm khác nhau. Trace span cũng có sampling/clock assumption. Vì vậy thứ tự hiển thị không luôn bằng causal order tuyệt đối.
+
+Khi vài giây quyết định hypothesis, ưu tiên correlation ID/trace parent, sequence/version, deployment event từ source of truth và monotonic duration trong cùng process hơn việc so raw wall-clock timestamp giữa host.
+
+NTP/clock health vẫn quan trọng, nhưng incident analysis nên biết uncertainty của timeline thay vì suy luận causality từ chênh 200 ms không đáng tin.
+
+## 34. Negative evidence có giá trị nếu biết detector đáng tin tới đâu
+
+“Không có log error” chỉ loại trừ hypothesis nếu code path chắc chắn phải log và log pipeline không mất dữ liệu. “Không thấy CPU cao” chỉ hữu ích nếu metric resolution bắt được spike và đúng cgroup/node. Absence of evidence không tự động là evidence of absence.
+
+Mỗi signal có detection boundary: sampling, retention, scrape interval, dropped log, missing label hoặc instrumentation gap. Senior debugging luôn hỏi **nếu hypothesis đúng, detector này có chắc nhìn thấy không?**
+
+Khi detector yếu, kết luận đúng là “chưa quan sát được”, không phải “đã loại trừ”. Điều này giúp hypothesis tree trung thực hơn và thường chỉ ra observability debt cần sửa sau incident.
