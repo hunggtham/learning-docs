@@ -143,3 +143,60 @@ Giả sử shared base image mới nâng runtime/CA bundle và platform cập nh
 Platform release nên được xử lý như production release: canary một nhóm consumer, compatibility test trên representative workload, đo failure signal, sau đó staged adoption. Có thể giữ old/new version song song và auto-open migration PR thay vì force-update instant.
 
 Điểm cốt lõi là platform có **fan-out blast radius** lớn. Mức discipline cần cao hơn, không thấp hơn, application team bình thường.
+
+## 22. Declarative platform resource cần invariant rõ hơn trạng thái `Ready`
+
+Một resource self-service như `Database`, `Service` hoặc `Environment` thường là aggregate của nhiều object thật. `Ready=true` chỉ có ý nghĩa nếu platform định nghĩa invariant đứng sau nó: network reachable, identity bound, credential issued, backup policy active, monitoring registered và dependency required đã usable.
+
+Nếu controller set Ready ngay sau khi cloud API trả “accepted” nhưng endpoint còn chưa routable, abstraction đang báo trạng thái quá sớm. Ngược lại nếu một capability optional như dashboard lỗi mà toàn resource bị `Failed`, contract có thể quá chặt.
+
+Platform cần phân biệt condition theo capability và severity, ví dụ `Provisioned`, `Reachable`, `BackupConfigured`, `Degraded`. Status là API cho automation và operator, không phải text trang trí UI.
+
+## 23. Idempotency cần đi qua toàn workflow, không chỉ API front door
+
+Một `POST` có idempotency key chưa đủ nếu backend workflow tạo resource A thành công, timeout, rồi retry tạo resource B lần nữa. Mỗi side effect cần được bind vào stable resource identity và controller phải có cách discover/adopt state đã tồn tại.
+
+Mental model tốt là:
+
+```text
+stable intent identity
+→ deterministic/external resource identity
+→ observe existing state
+→ create only what is missing
+→ record progress
+→ retry safely
+```
+
+Nếu external provider không hỗ trợ idempotent create, platform có thể cần naming deterministic, client token hoặc reconciliation/adoption logic. Partial failure là normal state của distributed workflow, không phải edge case hiếm.
+
+## 24. Delete là state machine có data-retention semantics
+
+Delete thường nguy hiểm hơn create vì có thể irreversible. Một platform contract cần trả lời: xóa logical resource có xóa data ngay không; backup giữ bao lâu; dependency nào chặn delete; finalizer/cleanup fail thì resource ở trạng thái gì; force-delete có bỏ lại orphan không.
+
+Một pattern an toàn là tách `DeletionRequested` khỏi `Deleted`, thực hiện dependency check, snapshot/retention theo policy, revoke identity/traffic rồi mới destroy resource. Với data critical, platform có thể thêm grace period hoặc recovery window.
+
+Nếu user phải biết implementation để đoán data còn hay mất sau nút Delete, abstraction đã thất bại ở failure semantics quan trọng nhất.
+
+## 25. Platform nên chia fault-containment cell thay vì một global control plane vô hạn
+
+Shared platform tạo leverage nhưng cũng tạo blast radius. Một controller/global queue/global registry dependency có thể trở thành common-mode failure cho toàn tổ chức. Khi scale lớn, có thể cần chia cell theo region, business criticality, tenant group hoặc workload class.
+
+Cell không nhất thiết nghĩa mỗi team một platform riêng. Nó nghĩa failure trong một partition không được mặc định lan tới tất cả consumer. Control plane có thể federation chung về policy/catalog nhưng execution queue, cluster/account hoặc release ring được partition.
+
+Trade-off là duplication/cost tăng và global operation phức tạp hơn. Vì vậy cell boundary nên xuất phát từ SLO, failure domain và operational blast radius, không phải organizational chart đơn thuần.
+
+## 26. Platform dependency graph cần được quản như API dependency
+
+Golden path thường kéo theo base image, runtime, CI action, policy bundle, ingress class, observability agent và cloud module. Nếu mỗi dependency tự upgrade độc lập, consumer có thể nhận breaking change gián tiếp mà platform version không đổi.
+
+Platform release nên có một notion về tested compatibility set. Không nhất thiết lock mọi component mãi mãi, nhưng cần biết version nào đã được verify cùng nhau và rollout dependency nào có fan-out lớn.
+
+Khi một shared CA bundle hoặc agent mới gây lỗi, catalog/telemetry phải cho biết consumer nào đang ở release ring/version nào. Đây là application của artifact/version reasoning vào chính platform product.
+
+## 27. Abstraction leakage là signal để cải tiến contract, không phải luôn là lỗi user
+
+Mọi abstraction đều có lúc rò: database plan không đủ mô tả IOPS, ingress abstraction thiếu timeout mode, service tier không biểu diễn failover requirement. Khi nhiều team cùng cần escape hatch ở cùng điểm, đó là evidence contract thiếu dimension quan trọng.
+
+Platform team nên phân loại escape hatch: one-off exceptional requirement hay repeated missing capability. Nếu repeated, hãy đưa concept thật sự cần thiết lên API ở mức domain — ví dụ `durabilityClass`, `trafficProfile`, `recoveryTier` — thay vì expose raw provider field hàng loạt.
+
+Mục tiêu của abstraction không phải che mọi chi tiết mãi mãi; nó là giữ **decision surface nhỏ nhưng đúng với physics và invariant mà consumer cần kiểm soát**.
