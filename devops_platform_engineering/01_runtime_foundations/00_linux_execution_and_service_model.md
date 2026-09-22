@@ -58,7 +58,7 @@ lsof -p <pid>
 
 Production thường hiển thị một số “memory usage”, nhưng số đó có thể đại diện RSS, working set, cgroup usage hoặc metric runtime. Page cache, mapped file, heap và native allocation có semantics khác nhau.
 
-Một service có thể bị OOM dù host còn memory nếu cgroup limit đã chạm. Ngược lại, host có memory pressure dù từng container chưa chạm limit. Kernel reclaim, page cache và memory pressure được đào sâu tại [memory pressure, reclaim và page faults](../../computer_science/03_operating_systems/advanced/02_memory_pressure_reclaim_and_page_faults.md).
+Một service có thể bị OOM dù host còn memory nếu cgroup limit đã chạm. Ngược lại, host có memory pressure dù từng container chưa chạm limit. Kernel reclaim, page cache và memory pressure được đào sâu tại [memory pressure, reclaim và page faults](../../computer_science/03_operating_systems/advanced/02_page_faults_reclaim_dirty_pages_and_memory_pressure.md).
 
 Về vận hành, hãy tách ba câu hỏi: application đang giữ memory nào; container/cgroup đang bị giới hạn thế nào; host/node đang chịu pressure ra sao. Nếu chỉ nhìn một dashboard application heap, bạn có thể bỏ sót native memory hoặc kernel pressure.
 
@@ -66,7 +66,7 @@ Về vận hành, hãy tách ba câu hỏi: application đang giữ memory nào;
 
 `100% CPU` chỉ có nghĩa khi biết đơn vị đo. Trên host nhiều core, một process một-thread có thể dùng đầy một core nhưng chỉ chiếm phần nhỏ tổng host. Trong container, CPU request/limit có thể thêm một tầng entitlement. Khi workload bị CFS throttling, latency có thể tăng dù node chưa “100% CPU”.
 
-Do đó reasoning đúng là: demand bao nhiêu, allocation/limit bao nhiêu, scheduler cho chạy thực tế bao nhiêu, queue/run time tăng ra sao. Nền scheduler xem [scheduler internals](../../computer_science/03_operating_systems/advanced/01_scheduler_internals_runqueues_and_latency.md).
+Do đó reasoning đúng là: demand bao nhiêu, allocation/limit bao nhiêu, scheduler cho chạy thực tế bao nhiêu, queue/run time tăng ra sao. Nền scheduler xem [scheduler internals](../../computer_science/03_operating_systems/advanced/01_scheduler_run_queues_fairness_and_latency.md).
 
 ## 8. Filesystem và “disk full”
 

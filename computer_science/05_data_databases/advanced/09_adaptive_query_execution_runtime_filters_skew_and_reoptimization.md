@@ -221,7 +221,7 @@ Fix có thể nằm ở statistics, plan policy, adaptive broadcast threshold ho
 
 Đọc chapter này sau [cost-based optimizer](./05_cost_based_optimizer_cardinality_estimation_and_statistics.md), [join/vectorized execution](./06_join_algorithms_vectorized_execution_and_late_materialization.md) và [columnar storage](./08_columnar_storage_encoding_pruning_and_vectorized_scans.md).
 
-Ở tầng hệ thống, adaptive execution nối với [queueing/backpressure](../../08_software_systems/advanced/00_queueing_backpressure_and_overload_control.md) và [fleet profiling/cost attribution](../../08_software_systems/advanced/07_fleet_profiling_cost_attribution_and_multi_tenant_efficiency.md).
+Ở tầng hệ thống, adaptive execution nối với [queueing/backpressure](../../08_software_systems/advanced/00_queueing_tail_latency_and_backpressure.md) và [fleet profiling/cost attribution](../../08_software_systems/advanced/07_fleet_profiling_cost_attribution_and_multi_tenant_efficiency.md).
 
 Mental model cuối cùng:
 
