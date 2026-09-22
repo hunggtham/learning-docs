@@ -193,3 +193,57 @@ Một SLO chỉ có giá trị tổ chức khi budget state thay đổi hành vi
 Policy có thể nói khi burn kéo dài thì giảm risky rollout, bắt buộc canary, ưu tiên reliability work hoặc yêu cầu owner review. Nhưng policy không nên cơ học đến mức mọi budget dip nhỏ đều đóng băng delivery; cần phân biệt transient event, known incident và structural unreliability.
 
 Senior SRE xem error budget như **feedback controller cho engineering decision**. Signal phải gần user impact, action phải proportional và sau khi reliability hồi phục, constraint cũng phải được nới lại thay vì trở thành permanent bureaucracy.
+
+## 28. SLO traffic thấp cần semantics khác service nhiều request
+
+Với service xử lý hàng triệu request mỗi giờ, một tỷ lệ bad-event có sample đủ lớn để burn-rate ổn định. Nhưng một admin API chỉ có vài chục request mỗi ngày có thể bị một lỗi duy nhất làm tỷ lệ lỗi nhảy rất mạnh. Alert theo phần trăm lúc này dễ vừa noisy vừa chậm.
+
+Low-traffic SLO nên hỏi user journey thực sự là gì. Có thể synthetic transaction định kỳ phù hợp hơn request ratio; hoặc measurement window cần dài hơn; hoặc cần kết hợp event count tối thiểu trước khi diễn giải một tỷ lệ. Không nên giả định cùng một công thức alert phù hợp cho checkout 50.000 request/s và backup-restore API 20 lần/ngày.
+
+Điểm quan trọng là **mẫu quan sát (sample) quyết định độ ổn định của phép đo**. SLO là contract sản phẩm, nhưng signal dùng để đánh giá contract vẫn chịu giới hạn thống kê.
+
+## 29. Valid-event denominator là một phần của correctness
+
+Trong công thức `good / valid`, denominator quyết định SLO đang nói về population nào. Nếu pipeline vô tình loại request timeout trước khi chúng tới application log, hoặc bỏ tenant/region lỗi vì label missing, SLI có thể đẹp lên chính vì bad event biến mất khỏi denominator.
+
+Do đó cần định nghĩa nơi đo và điều kiện eligibility. Edge/load balancer thường nhìn được cả request không tới application; application nhìn được business outcome sâu hơn. Với critical journey, đôi khi cần kết hợp nhiều sensor để tránh survivorship bias.
+
+Một SLI review tốt không chỉ hỏi “good event là gì?” mà hỏi thêm **event nào có quyền biến mất khỏi phép tính và tại sao**.
+
+## 30. Window semantics thay đổi hành vi của error budget
+
+Rolling window 30 ngày, calendar month và fixed release window không tương đương. Rolling window luôn trượt theo thời gian nên một incident lớn dần rời khỏi window; calendar window reset ở mốc lịch; release window gắn reliability với một cohort/version cụ thể.
+
+Không có một loại window luôn đúng. Rolling window phù hợp vận hành liên tục; calendar window dễ align reporting; cohort/release window hữu ích khi muốn so rollout. Điều quan trọng là policy phải biết window nào đang điều khiển decision, nếu không team có thể thấy “budget hồi phục” chỉ vì đồng hồ reset chứ system chưa đáng tin hơn.
+
+## 31. SLO cho asynchronous work nên đo age và completion semantics
+
+Queue consumer hoặc batch pipeline không có “request latency” giống HTTP. User có thể quan tâm việc message được xử lý trong 5 phút, report hoàn tất trước 08:00 hoặc data freshness không quá 15 phút.
+
+SLI phù hợp có thể là tỷ lệ work item hoàn tất trước deadline hoặc age của oldest valid item. Queue depth đơn thuần không đủ: 100.000 item mới có thể ít nghiêm trọng hơn 1.000 item đã chờ 6 giờ.
+
+Với retry, cần quyết định success sau retry còn là good event không và deadline tính từ attempt đầu hay cuối. Đây là nơi domain semantics phải đi trước metric syntax.
+
+## 32. Composite journey cần phân biệt serial dependency và fallback path
+
+Nếu một user journey bắt buộc đi qua A rồi B rồi C và failure tương đối độc lập, end-to-end success không thể tốt hơn các thành phần và thường thấp hơn từng thành phần riêng. Nhưng nếu B có cache/fallback hoặc C chỉ chạy cho 10% request, cách composition thay đổi.
+
+Vì vậy không nên nhân các số availability một cách máy móc nếu topology có conditional path, retry, quorum hoặc graceful degradation. Trước hết vẽ journey graph: dependency nào mandatory, dependency nào optional, branch nào chiếm bao nhiêu traffic và failure nào được che bởi fallback.
+
+SLO decomposition là bài toán architecture trước khi là bài toán số học.
+
+## 33. Multi-SLI service cần biết trade-off giữa availability, latency và correctness
+
+Một service có thể tăng availability bằng cách trả stale cache, nhưng freshness/correctness giảm. Có thể giữ latency thấp bằng fail-fast, nhưng tỷ lệ request thành công giảm. Vì vậy chỉ một SLO có thể tạo incentive lệch.
+
+Critical capability thường cần một tập nhỏ SLI bổ sung nhau: success/correctness, latency/freshness và đôi khi durability. Các SLI này không nên biến thành dashboard hàng chục mục tiêu; mỗi cái phải đại diện một failure dimension user thực sự quan tâm.
+
+Brownout càng làm điều này rõ: core availability có thể đạt trong khi quality tier đang giảm có chủ đích. Reliability contract phải cho phép nói chính xác **điều gì đang được giữ và điều gì đang được hy sinh**.
+
+## 34. SLO measurement pipeline cũng cần version và audit
+
+Đổi query, bucket, denominator, label mapping hoặc data source có thể làm SLO nhảy mà service behavior không đổi. Đây là change production vì error budget state có thể điều khiển release policy và paging.
+
+Measurement definition nên được versioned/reviewed; khi migration lớn có thể chạy old/new song song để so difference trước khi đổi source of truth. Dashboard nên cho biết SLO definition revision hoặc change event để operator phân biệt reliability regression với measurement change.
+
+Senior reasoning coi SLO pipeline là một control system: **sensor definition sai có thể làm actuator engineering ra quyết định sai**, dù application hoàn toàn không thay đổi.
