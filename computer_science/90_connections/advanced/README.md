@@ -13,17 +13,25 @@ Các chapter ở đây không lặp lại domain content. Chúng bắt đầu t�
 
 Không tạo chapter riêng chỉ để có thêm tên connection.
 
-**Retry → timeout → overload → queue → backpressure → cascading failure** nằm trong request/latency path, vì đây là một feedback loop làm thay đổi arrival rate và service time trên cùng causal graph.
+**Retry → timeout → overload → queue → backpressure → cascading failure** nằm trong request/latency path, vì đây là feedback loop làm thay đổi arrival rate và service time trên cùng causal graph.
+
+**Socket → transport → qdisc → NIC queue → wire → peer socket** cũng thuộc request path. Chapter [kernel packet path](../../06_networks_distributed_systems/advanced/08_kernel_packet_path_qdisc_nic_offload_and_observability.md) cung cấp owner depth cho bufferbloat, offload, per-queue skew và packet evidence; connection path chỉ dùng nó khi network queue thực sự nằm trên critical path.
 
 **Identity → authorization → secret → TLS → service boundary → incident containment** nằm trong debugging path, vì đây là authority path cần được reconstruct khi failure hoặc compromise lan qua nhiều service boundaries.
+
+**Source/dependency → build identity → artifact digest/provenance → deployment policy → runtime workload** cũng được xử lý như authority/evidence path khi incident liên quan software supply chain. Canonical owner là [software supply chain, provenance và build trust](../../07_security_reliability/advanced/08_software_supply_chain_provenance_signing_and_build_trust.md), không tạo connection chapter riêng.
 
 **CPU cache → memory ordering → language memory model → concurrency bug** là correctness path và phải luôn phân biệt physical visibility với language-level happens-before.
 
 **Application transaction → MVCC/WAL → filesystem → storage → replication** là durability path và phải phân biệt visibility, local persistence, quorum commit và backup/recovery.
 
+**Workload → power/thermal controller → DVFS → sustained throughput** là lower-layer performance path. Chỉ đi xuống [power/thermal/DVFS](../../02_computer_architecture/advanced/07_power_thermal_dvfs_and_sustained_performance.md) khi evidence cho thấy frequency/power/thermal state thực sự giải thích capacity change, không dùng hardware như nguyên nhân mặc định.
+
+**AI admission → prefill → KV state → placement/transfer → decode → stream** là stateful queueing path. Canonical owner là [inference disaggregation](../../10_ai_foundations/advanced/03_inference_disaggregation_prefill_decode_and_kv_cache_placement.md); các queue/capacity/failure concepts được tái sử dụng từ Software Systems và Distributed Systems.
+
 ## Cách dùng khi debug production
 
-Bắt đầu từ property người dùng quan sát được: sai dữ liệu, mất dữ liệu, timeout, duplicate side effect, auth failure hoặc latency tail. Sau đó:
+Bắt đầu từ property người dùng quan sát được: sai dữ liệu, mất dữ liệu, timeout, duplicate side effect, auth failure, artifact trust failure hoặc latency tail. Sau đó:
 
 ```text
 1. Viết invariant bị nghi vi phạm.
@@ -38,7 +46,7 @@ Không mặc định nguyên nhân ở layer thấp nhất. CPU/cache/kernel ch�
 
 ## Production evidence
 
-Cross-layer evidence phải nối được nhiều loại signal: trace/span, queue/pool wait, runtime pause, scheduler pressure, DB wait/plan/WAL, network connection/retransmission, certificate/policy identity, storage flush/queue, quorum/replica position và hardware counters khi cần.
+Cross-layer evidence phải nối được nhiều loại signal: trace/span, queue/pool wait, runtime pause, scheduler pressure, DB wait/plan/WAL/runtime cardinality, socket/qdisc/NIC queue, retransmission, certificate/policy identity, artifact digest/provenance, storage flush/queue, quorum/replica position, accelerator/KV placement và hardware power/thermal counters khi cần.
 
 Một dashboard đơn lẻ thường chỉ cho symptom. Mục tiêu là xây **causal model có confidence**, dùng nhiều independent signals để phân biệt correlation với mechanism.
 
