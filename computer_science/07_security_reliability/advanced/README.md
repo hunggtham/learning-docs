@@ -11,6 +11,7 @@ Phần này giữ Security và Reliability trong cùng conceptual boundary vì s
 5. [Memory safety, mitigations và sandbox boundaries](./04_memory_safety_mitigations_and_sandbox_boundaries.md)
 6. [Browser isolation, CSP, SameSite và cross-origin trust](./05_browser_isolation_csp_samesite_and_cross_origin_trust.md)
 7. [Secret, KMS, HSM, rotation và envelope encryption](./06_secrets_kms_hsm_rotation_and_envelope_encryption.md)
+8. [Detection engineering, forensics và incident evidence](./07_detection_engineering_forensics_and_incident_evidence.md)
 
 ## Mental models cần đạt
 
@@ -29,6 +30,8 @@ evidence nào reconstruct được authority path?
 
 Identity không đồng nghĩa authorization. TLS không đồng nghĩa least privilege. Encryption at rest không đồng nghĩa database process không thấy plaintext. KMS không loại bỏ trust mà chuyển trust sang workload identity, policy và key-use capability.
 
+Detection/forensics giờ có canonical chapter riêng vì evidence trust, base-rate problem, event correlation, clock/provenance, tamper resistance, retention/privacy, containment và effective revocation tạo một reasoning path độc lập với preventive controls.
+
 ## Reliability được đọc như failure containment
 
 Retry, timeout, circuit breaker, bulkhead, backpressure, load shedding và error budget không cần tách thành root library mới. Foundation nằm ở [`basic/07_security_reliability`](../../basic/07_security_reliability/) và production queue/capacity mechanisms nằm tại [`08_software_systems/advanced`](../../08_software_systems/advanced/README.md).
@@ -39,7 +42,7 @@ Cross-layer containment được nối tại [Debugging xuyên abstraction layer
 
 Security/reliability evidence cần đủ để trả lời không chỉ “có lỗi không?” mà “principal nào, policy version nào, credential nào, boundary nào, retry/queue nào và failure domain nào liên quan?”.
 
-Ưu tiên identity metadata, certificate/token issuer-audience-subject, policy decision, KMS key id/operation, service boundary, timeout/retry attempt, SLO burn, queue/saturation và containment timeline. Không log raw secret/token chỉ để tăng observability.
+Ưu tiên identity metadata, certificate/token issuer-audience-subject, policy decision, KMS key id/operation, service boundary, timeout/retry attempt, SLO burn, queue/saturation, audit provenance và containment timeline. Không log raw secret/token chỉ để tăng observability.
 
 ## Quy tắc mở rộng
 
