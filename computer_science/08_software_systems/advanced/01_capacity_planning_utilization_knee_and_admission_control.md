@@ -6,19 +6,7 @@ Khi system tiếp tục accept work sau vùng đó, queue debt, timeout và retr
 
 ## 1. Capacity là một safe operating envelope
 
-Một service có nhiều bottleneck resources:
-
-```text
-CPU
-memory / GC
-thread or event-loop concurrency
-DB connections
-sockets/file descriptors
-I/O bandwidth
-network bandwidth
-downstream quota
-locks/shared state
-```
+Một service có nhiều bottleneck resources: CPU, memory/GC, thread hoặc event-loop concurrency, DB connections, sockets/file descriptors, I/O bandwidth, network bandwidth, downstream quota và locks/shared state.
 
 Throughput tối đa bị giới hạn bởi resource đầu tiên saturate hoặc bởi interaction giữa nhiều resources. CPU 40% không chứng minh service còn nhiều capacity nếu DB pool đã 100% busy.
 
@@ -106,7 +94,7 @@ Static limit có thể sai khi downstream capacity thay đổi. Adaptive control
 
 Phản ứng quá nhanh gây oscillation; quá chậm cho overload lan rộng. Measurement delay và noisy tail metrics có thể làm controller chase noise.
 
-Vì vậy adaptive limit phải reasoning như feedback controller, không phải magic autoscaling switch.
+Adaptive limit phải reasoning như feedback controller, không phải magic autoscaling switch.
 
 ## 11. Bulkhead tạo failure-domain boundary
 
@@ -136,18 +124,7 @@ Nhưng không được “degrade” bằng cách bỏ authorization, durability
 
 ## 15. Production evidence
 
-Capacity diagnosis cần kết hợp:
-
-```text
-arrival rate và completion rate
-active concurrency
-queue depth + queue wait
-service-time distribution
-retry/attempt rate
-resource saturation tại bottleneck
-rejection/load-shed count
-remaining deadline/cancellation rate
-```
+Capacity diagnosis cần kết hợp arrival rate và completion rate, active concurrency, queue depth + queue wait, service-time distribution, retry/attempt rate, resource saturation tại bottleneck, rejection/load-shed count và remaining deadline/cancellation rate.
 
 Nếu throughput đứng yên nhưng concurrency/queue tăng, system đang tích debt. Nếu CPU thấp mà pool wait cao, bottleneck nằm downstream/resource khác.
 
@@ -159,10 +136,156 @@ Nếu application queue tăng vì CPU run queue dài, scheduler là lower layer.
 
 Capacity model chỉ đúng khi biết resource thật sự đang giới hạn progress.
 
-## 17. Mô hình tư duy
+## 17. Whole-system profiling bắt đầu từ time decomposition
 
-> Capacity engineering là giữ system **bên trái điểm overload**. Utilization cao làm queue nhạy với variance; concurrency limit giữ active work hữu hạn; bounded queue giới hạn debt; admission control/load shedding từ chối work trước khi bottleneck collapse; retry budget ngăn caller biến slowdown thành load amplifier. Capacity là safe operating envelope, không phải maximum RPS đẹp nhất.
+Một request mất 500 ms không đồng nghĩa CPU đã dùng 500 ms. Wall-clock time có thể gồm queue wait, scheduler delay, lock wait, page fault, network wait, DB pool wait, storage flush và chỉ một phần nhỏ on-CPU execution.
+
+**Lập hồ sơ toàn hệ thống (whole-system profiling / 전체 시스템 프로파일링)** cần tách ít nhất:
+
+```text
+queueing time
+on-CPU time
+off-CPU blocked/waiting time
+runtime pause/GC
+network/downstream wait
+storage I/O wait
+```
+
+CPU flame graph rất hữu ích khi work thật sự on-CPU. Nhưng nếu thread ngủ chờ mutex hoặc socket, flame graph on-CPU có thể nhìn “khỏe” trong khi user latency rất xấu.
+
+## 18. On-CPU và off-CPU trả lời hai câu hỏi khác nhau
+
+**On-CPU profiling** hỏi CPU cycles đang được tiêu ở code path nào. Nó giúp tìm serialization, hashing, regex, GC work, lock spinning, compression hoặc algorithm hot path.
+
+**Off-CPU profiling** hỏi execution context đang bị block ở đâu: futex/mutex, condition variable, socket, disk I/O, page fault hoặc scheduler wait.
+
+Một lock contention incident có thể có CPU tổng thể thấp vì đa số threads ngủ; tăng CPU cores không giải quyết. Ngược lại spin lock có thể làm CPU 100% nhưng useful throughput không tăng.
+
+Evidence phải khớp failure mechanism, không phải tool quen tay nhất.
+
+## 19. Scheduler evidence nối application concurrency với CPU reality
+
+Application có thể báo 200 runnable workers, nhưng máy chỉ có 8 cores. Khi runnable set lớn hơn execution capacity, run queue và context switching tăng. Thread migration còn làm cache locality xấu hơn.
+
+Useful evidence gồm run-queue length, runnable-vs-blocked threads, scheduler delay, context switches và CPU migrations. Nếu p99 request tăng đúng lúc run queue tăng dù handler compute không đổi, capacity boundary nằm ở scheduling contention chứ không phải network.
+
+Logical concurrency, OS runnable concurrency và physical cores là ba tầng khác nhau.
+
+## 20. PMU counters cho biết CPU chờ cái gì, nhưng cần hypothesis trước
+
+**Bộ đếm hiệu năng phần cứng (Performance Monitoring Unit counters, PMU / 성능 모니터링 카운터)** có thể cung cấp evidence về cycles, instructions, cache misses, branch misses, stalled cycles, memory bandwidth hoặc cache-to-cache traffic tùy CPU/model/tool.
+
+Counter không tự giải thích root cause. LLC miss cao có thể hợp lý với streaming workload; branch miss thấp không chứng minh code tối ưu; event names khác giữa architectures.
+
+Cách dùng đúng là bắt đầu bằng hypothesis, ví dụ “throughput dừng tăng vì memory bandwidth”, rồi tìm evidence tương ứng.
+
+## 21. Roofline reasoning phân biệt compute-bound và bandwidth-bound
+
+Một workload thực hiện nhiều phép tính trên mỗi byte dữ liệu có **cường độ tính toán (operational intensity / 연산 집약도)** cao và có thể tiến gần compute limit. Workload đọc lượng lớn memory để làm ít arithmetic thường bị memory-bandwidth limit trước.
+
+Mental model roofline đơn giản:
+
+```text
+performance thực tế
+≤ min(compute ceiling,
+      memory bandwidth × operational intensity)
+```
+
+Nếu workload bandwidth-bound, tăng core count có thể làm các cores tranh cùng memory channels và không tăng throughput. Tối ưu data layout/cache reuse có thể giá trị hơn vectorizing thêm arithmetic.
+
+## 22. I/O queue depth cũng có utilization knee
+
+Storage throughput có thể tăng khi nhiều operations in-flight vì device có parallelism. Nhưng queue depth quá cao làm requests chờ lâu trước device và tail latency tăng.
+
+Network NIC, NVMe, remote storage và database connection pool đều có biến thể của cùng pattern: cần đủ concurrency để giữ pipeline bận, nhưng không để queue debt vượt latency budget.
+
+Với latency-sensitive foreground work, background compaction/checkpoint có thể cần throttle dù bandwidth chưa đạt peak benchmark đẹp nhất.
+
+## 23. Cost/performance phải tính theo bottleneck unit
+
+Hai instance cùng giá không có nghĩa cùng economics. Workload có thể bị giới hạn bởi CPU, memory capacity, memory bandwidth, network egress, local NVMe, accelerator memory hoặc managed-service quota.
+
+Một useful cost model có dạng:
+
+```text
+cost per completed useful request
+cost per durable transaction
+cost per GB processed
+cost per model token under SLO
+```
+
+thay vì chỉ `$/instance-hour`.
+
+Nếu instance đắt hơn 30% nhưng hoàn thành gấp đôi useful work trước utilization knee, nó có thể rẻ hơn trên một đơn vị outcome. Ngược lại scale-up CPU không giúp nếu bottleneck là shared database.
+
+## 24. Heterogeneous hardware làm capacity thành placement problem
+
+Modern fleet có thể có cores khác tốc độ, NUMA topology khác, local vs remote memory, GPU/accelerator khác generation hoặc storage class khác nhau. Một request “giống nhau” có service time khác tùy placement.
+
+Scheduler/load balancer cần hiểu resource shape khi workload nhạy topology. Memory-heavy worker chạy trên NUMA placement xấu có thể tăng latency; AI model không fit accelerator memory có thể spill/offload và đổi bottleneck từ compute sang PCIe/network transfer.
+
+Capacity model vì vậy phải ghi rõ **hardware class**, không gộp mọi replica thành một số instance count.
+
+## 25. Worked example: CPU thấp nhưng p99 tăng mạnh
+
+Giả sử service có 100 request/s, CPU chỉ 35%, query database mất 20 ms nhưng end-to-end p99 là 900 ms. DB connection pool có 20 slots và pool-acquire p99 là 700 ms.
+
+```text
+request concurrency tăng
+→ 20 DB slots giữ lâu
+→ queue trước pool tăng
+→ handler phần lớn off-CPU chờ connection
+→ process CPU vẫn thấp
+→ p99 tăng
+```
+
+Tăng application threads từ 100 lên 500 làm queue lớn hơn nhưng không tạo DB capacity. Tăng pool lên 100 có thể chuyển queue vào DB và làm lock/I/O contention xấu hơn.
+
+Evidence cần đo transaction lifetime, pool hold time, acquire wait, DB active sessions và DB saturation.
+
+## 26. Worked example: thêm cores nhưng throughput không tăng
+
+Một analytics workload scan vùng memory lớn, arithmetic ít và LLC miss cao. Từ 8 lên 16 cores, CPU utilization vẫn cao nhưng throughput gần như đứng yên, memory bandwidth đã gần ceiling.
+
+Ở đây core count không còn là capacity dimension hữu ích. Lower abstraction quyết định behavior là memory subsystem. Tối ưu representation, batching/cache locality hoặc giảm bytes touched có thể tốt hơn mua thêm CPU.
+
+## 27. Benchmark phải tìm phase transition, không chỉ một điểm đẹp
+
+Capacity test tốt tăng load theo các bậc và quan sát khi system đổi phase:
+
+```text
+service-time dominated
+→ queue begins growing
+→ tail increases sharply
+→ retries/errors appear
+→ useful throughput plateaus
+→ collapse/recovery behavior
+```
+
+Cần giữ workload mix, payload size, cache state và dependency condition đủ gần production. Nếu benchmark chỉ chạy ngắn, autoscaling/warm-up/GC/compaction/checkpoint có thể chưa lộ.
+
+Sau khi giảm load, còn phải quan sát **recovery**. System có queue/retry debt lớn có thể tiếp tục xấu sau khi traffic trở lại bình thường.
+
+## 28. Evidence chain cho performance incident
+
+Whole-system diagnosis có thể đi theo thứ tự:
+
+```text
+SLO symptom
+→ trace critical path
+→ queue/service-time split
+→ on-CPU vs off-CPU
+→ subsystem saturation
+→ OS scheduler/I/O evidence
+→ PMU/device evidence nếu cần
+```
+
+Không phải incident nào cũng cần xuống PMU. Mục tiêu là xuống đủ thấp để mechanism rõ rồi sửa ở layer sở hữu invariant/capacity boundary.
+
+## 29. Mô hình tư duy
+
+> Capacity engineering là giữ system **bên trái điểm overload** và biết resource nào thật sự giới hạn progress. Utilization cao làm queue nhạy với variance; concurrency limit giữ active work hữu hạn; admission control giới hạn debt. Whole-system profiling nối request time với on-CPU, off-CPU, scheduler, memory và I/O evidence. Cost/performance chỉ có ý nghĩa khi tính trên useful outcome dưới SLO, không phải peak benchmark hay giá instance riêng lẻ.
 
 ## Kết nối
 
-Đọc cùng [Queueing, tail latency và backpressure](./00_queueing_tail_latency_and_backpressure.md), [Load balancing và connection pools](./03_load_balancing_connection_pools_and_locality.md), [End-to-end request và retry overload](../../90_connections/advanced/01_end_to_end_latency_browser_edge_service_db_storage.md) và [OS scheduler internals](../../03_operating_systems/advanced/01_scheduler_run_queues_fairness_and_latency.md).
+Đọc cùng [Queueing, tail latency và backpressure](./00_queueing_tail_latency_and_backpressure.md), [Load balancing và connection pools](./03_load_balancing_connection_pools_and_locality.md), [End-to-end request và retry overload](../../90_connections/advanced/01_end_to_end_latency_browser_edge_service_db_storage.md), [Debugging xuyên layers](../../90_connections/advanced/00_debugging_across_abstraction_layers.md), [OS scheduler internals](../../03_operating_systems/advanced/01_scheduler_run_queues_fairness_and_latency.md), [Memory hierarchy/cache](../../basic/02_computer_architecture/02_memory_hierarchy_and_cache.md) và [NUMA/interconnect](../../02_computer_architecture/advanced/04_numa_interconnects_and_scalable_coherence.md).
