@@ -199,3 +199,9 @@ R(\theta)=
 apply lên vector `(x,y)`. Nếu encode point thành `z=x+iy`, multiply bằng `e^{i\theta}` tạo đúng coordinates rotated tương tự. Complex multiplication và rotation matrix là hai representations của cùng transformation.
 
 Trong code xử lý 2D rotations, matrix form generalizes dễ tới affine pipelines, còn complex form có thể compact hơn nếu chỉ cần planar rotations/scales.
+
+## Liên kết kiến thức
+
+Nên đọc cùng [Trigonometry](../03_geometry_trigonometry/04_trigonometry.md) để thấy unit circle và rotation, [Eigenvalues và eigenvectors](../04_vectors_linear_algebra/04_eigenvalues_and_eigenvectors.md) để nối complex modes với linear dynamics, và [Complex analysis](../05_calculus/12_complex_analysis_and_analytic_functions.md) khi cần mở rộng calculus sang complex plane.
+
+Ứng dụng downstream quan trọng nhất nằm ở [Fourier, Signals và Frequency](../09_connections/05_fourier_signals_and_frequency.md) và [Laplace/Z-transform và Dynamic Systems](../09_connections/06_laplace_z_transform_and_dynamic_systems.md). Các links này là canonical path thay cho việc lặp lại cùng explanation ở nhiều chapter.
