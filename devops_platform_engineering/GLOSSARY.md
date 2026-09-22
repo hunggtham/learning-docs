@@ -96,3 +96,11 @@ File này dùng để tra nhanh thuật ngữ, không thay thế chapter giải 
 | Disruption source | Actor/mechanism làm workload rời runtime như rollout, drain, autoscaler, pressure, preemption hay node failure; cần giữ như evidence vì recovery semantics khác nhau. |
 | Multi-controller composition | Reasoning về nhiều controller cùng tác động một workload/state; từng loop có thể đúng cục bộ nhưng tương tác tạo oscillation, churn hoặc conflict. |
 | Resilience recovered | Trạng thái không chỉ phục hồi đủ replica/capacity mà còn phục hồi topology, redundancy và failure tolerance theo invariant ban đầu. |
+| Evidence survivability | Khả năng giữ và truy cập được tập evidence tối thiểu cần cho diagnosis/recovery ngay cả khi primary observability/control-plane failure domain bị mất. |
+| Recovery debt | Temporary exception/workaround sau incident còn tồn tại như bypass policy, break-glass authority, pinned routing hoặc excess capacity và làm thay đổi assumption cho failure tiếp theo. |
+| Version skew | Trạng thái các client, API schema, controller hoặc cell chạy version khác nhau trong một compatibility window; cần contract rõ thay vì giả định upgrade đồng thời. |
+| Defaulting | Cơ chế platform điền quyết định khi user không khai báo field; default là behavior/versioned policy và có thể đổi effective state dù source manifest không đổi. |
+| Conversion | Chuyển representation giữa các API/schema version; an toàn khi bảo toàn intent hoặc lossiness được explicit, không chỉ khi JSON parse thành công. |
+| Capability negotiation | Consumer/orchestrator xác minh capability được một cell/version hỗ trợ trước admission/execution thay vì giả định mọi nơi đã nâng đồng thời. |
+| Status API | Evidence surface machine-readable mô tả actual state/condition/observed revision; cần compatibility discipline giống spec/intent API. |
+| Negative-space verification | Kiểm tra các state/hành vi bị cấm sau recovery như old writer còn ghi, traffic còn tới failure domain cũ hoặc credential revoked vẫn hoạt động. |
