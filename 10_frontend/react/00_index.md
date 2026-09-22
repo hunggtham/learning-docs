@@ -2,6 +2,8 @@
 
 Baseline của bộ tài liệu: React 19.3 (stable ngày 09/09/2026). Cách viết mặc định là Function Component + Hooks; Class Component được giữ lại ở phần Master để đọc và migrate code cũ.
 
+Nếu project dùng TypeScript, hãy học type system ở [TypeScript canonical track](../javascript/typescript_00_index.md) trước hoặc song song với React. React docs chỉ giải thích type ở nơi type làm thay đổi component/API reasoning; các khái niệm structural typing, narrowing, generic, declaration, module resolution và runtime validation được giữ ở TypeScript canonical source để tránh duplicate.
+
 ## Thứ tự học
 
 1. `01_react_beginner.md` — nền tảng, JSX, component, props, event, state, render, form, list, composition, styling và mental model cơ bản.
