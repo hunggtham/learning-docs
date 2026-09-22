@@ -121,3 +121,51 @@ Tạo resource thường có thể retry; destroy có thể không thể đảo.
 Critical resource nên có layered protection phù hợp: lifecycle protection ở IaC, retention/backup ở service, policy hạn chế identity được destroy và review riêng cho destructive plan. Không một lớp nào đủ một mình vì emergency hoặc migration thật sự vẫn có lúc cần phá protection.
 
 Senior reasoning ở đây là phân biệt **reversible change** và **irreversible change**. Hai thay đổi có cùng số dòng diff nhưng risk class hoàn toàn khác nhau.
+
+## 20. Unknown value là một phần semantics của plan
+
+Có những thuộc tính chỉ biết sau khi resource được tạo, ví dụ generated ID, hostname, assigned IP hoặc provider-computed field. Trong plan, chúng có thể ở trạng thái “known after apply”. Đây không phải lỗi hiển thị; nó phản ánh rằng engine chưa có đủ information để tính toàn bộ graph trước mutation.
+
+Điều này quan trọng khi policy hoặc downstream resource phụ thuộc vào value chưa biết. Một policy chỉ kiểm tra text plan mà giả định mọi field đã concrete có thể bỏ sót risk. Ngược lại, cố ép mọi value thành known bằng data lookup hoặc script ngoài có thể tạo hidden dependency mới.
+
+Review IaC trưởng thành phân biệt ba trạng thái: value đã biết từ config/state, value đọc từ remote hiện tại, và value chỉ hình thành sau actuation. Confidence của plan phải tương ứng với mức information thật sự có sẵn.
+
+## 21. Replacement ordering là availability decision, không chỉ lifecycle flag
+
+Khi một property bắt buộc replace resource, có hai order tổng quát: destroy old rồi create new, hoặc create replacement trước rồi retire old. `create-before-destroy` có thể giảm downtime nhưng chỉ hoạt động nếu provider cho phép hai resource cùng tồn tại, quota còn đủ và name/identity không conflict.
+
+Với stateful resource, tạo song song còn kéo theo data sync/cutover. Với network route hoặc singleton identity, hai bản cùng tồn tại có thể tạo ambiguity. Vì vậy replacement strategy phải dựa trên resource semantics, không phải bật một flag chung cho mọi module.
+
+Một plan có chữ `replace` nên kích hoạt câu hỏi: có downtime không, có double-capacity headroom không, data/state chuyển thế nào, endpoint/identity cutover ra sao và rollback target còn tồn tại bao lâu.
+
+## 22. Data source và remote lookup có thể biến build-plan thành dependency runtime
+
+IaC thường đọc thông tin từ resource ngoài ownership của state hiện tại: image ID mới nhất, subnet được team khác tạo, secret metadata hoặc account data. Những lookup này tiện nhưng làm plan phụ thuộc trạng thái external tại thời điểm chạy.
+
+Nếu query “latest image” trả giá trị mới vào ngày mai, cùng source commit có thể plan khác. Nếu team khác rename/tag resource, apply của bạn có thể fail dù code không đổi. Vì vậy remote lookup cũng phải có contract về ownership, stability và versioning.
+
+Khi reproducibility quan trọng, nên pin identity cụ thể hoặc promote value qua interface rõ thay vì truy vấn “mới nhất” ngầm. Đây là cùng nguyên tắc với artifact build: hidden mutable input làm evidence yếu đi.
+
+## 23. State recovery phải tránh biến backup cũ thành authority sai
+
+Backend state được backup/versioned là cần thiết, nhưng restore state snapshot cũ không tự động restore cloud resource về thời điểm cũ. Remote object có thể đã thay đổi sau snapshot. Nếu nạp state cũ rồi apply ngay, engine có thể đưa ra mutation nguy hiểm dựa trên mapping stale.
+
+Recovery đúng thường tách hai bước: phục hồi metadata state đủ để đọc được ownership, sau đó refresh/reconcile với actual remote state trước khi cho phép destructive action. Với resource quan trọng, cần test runbook “state backend mất/corrupt” như một failure class riêng.
+
+State backup bảo vệ **knowledge về ownership**, không phải backup data/application resource. Hai loại recovery phải được thiết kế riêng.
+
+## 24. Policy trên plan và policy trên actual state bảo vệ hai thời điểm khác nhau
+
+Policy-as-code trước apply cho feedback sớm: cấm public exposure, enforce tag, giới hạn instance class hoặc destroy. Nhưng plan có unknown value và race; sau apply actual state có thể khác vì provider default, external controller hoặc eventual behavior.
+
+Vì vậy critical invariant có thể cần nhiều lớp: policy trong code/module default, policy ở plan/admission trước mutation, và continuous audit trên actual cloud state. Mục tiêu không phải duplicate mọi rule ba lần mà đặt enforcement tại boundary nơi violation có thể phát sinh.
+
+Một rule security cần chặn trước creation khác với một rule hygiene có thể detect rồi remediate sau. Fail-closed hay eventual remediation là risk decision, không chỉ lựa chọn tool.
+
+## 25. Senior walkthrough: plan “không downtime” nhưng apply vẫn kẹt vì quota
+
+Giả sử module thay launch configuration và dùng replacement trước khi destroy để giữ capacity. Plan trông an toàn: tạo 20 instance mới rồi bỏ 20 instance cũ. Nhưng account chỉ còn quota cho 5 instance. Apply tạo 5 rồi provider reject phần còn lại; old fleet vẫn tồn tại nhưng rollout mắc giữa chừng.
+
+Failure không nằm ở diff business mà ở **temporary capacity required by transition**. Safe-change review phải tính steady-state capacity và transition-state capacity riêng. Canary, surge, replacement, DR failover đều có cùng pattern: safety thường cần headroom tạm thời.
+
+Bài học tổng quát là IaC plan cần được đọc như một state transition có resource/time/failure semantics, không phải như ảnh chụp before/after.
