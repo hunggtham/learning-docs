@@ -145,3 +145,51 @@ Có ba cách xử lý chính: dependency phải mạnh hơn SLO end-to-end; syst
 Một load test chỉ hỏi “tối đa bao nhiêu request/s” dễ bỏ qua behavior khi vượt ngưỡng. Điều quan trọng hơn là khi load tăng, latency, error, queue, GC, connection pool và downstream pressure thay đổi theo curve nào; khi load giảm lại system có hồi phục hay không.
 
 Một service có thể đạt 5.000 request/s trong test ngắn nhưng sau vài phút connection queue tích tụ, tail latency tăng và retry đẩy database vào collapse. Capacity usable phải là vùng hệ thống giữ SLO ổn định với headroom cho rollout/failure, không phải con số throughput lớn nhất từng thấy.
+
+## 22. Admission control giữ hệ thống trong vùng có thể phục vụ
+
+Khi một service đã ở gần saturation, nhận thêm mọi request không phải lúc nào cũng tăng useful throughput. Work mới có thể chỉ làm queue dài hơn, timeout nhiều hơn và giữ resource lâu hơn. Admission control đặt một giới hạn trước khi work đi sâu vào hệ thống: concurrent request limit, queue bound, rate limit hoặc per-tenant budget.
+
+Mental model quan trọng là **protect useful work, không maximize accepted work**. Nếu service xử lý ổn định 800 request/s nhưng nhận 1.500 request/s rồi để tất cả chờ 20 giây trước khi timeout, user experience và resource usage đều tệ hơn việc reject nhanh phần vượt khả năng với signal retry rõ.
+
+Admission point nên đặt gần resource khan hiếm mà nó bảo vệ. Limit ở edge có thể bảo vệ toàn service; semaphore ở application có thể bảo vệ thread/connection pool; quota ở downstream bảo vệ database hoặc external API. Một limit quá xa bottleneck có thể không kiểm soát đúng resource pressure.
+
+## 23. Concurrency limit nên dựa trên latency và resource budget, không chỉ CPU
+
+Một service I/O-bound có thể CPU thấp nhưng connection pool hoặc downstream concurrency đã đầy. Vì vậy autoscaling chỉ theo CPU và admission chỉ theo request rate đều có thể miss bottleneck.
+
+Nếu mỗi request giữ một DB connection trung bình 200 ms và DB chỉ dành 400 connection hữu ích cho service, concurrency vượt xa 400 sẽ chủ yếu tạo wait. Giới hạn application concurrency quanh downstream budget thường ổn định hơn việc mở pool vô hạn.
+
+Adaptive concurrency control có thể điều chỉnh limit theo latency/saturation signal, nhưng controller phải phản ứng chậm hơn noise và có floor/ceiling. Nếu limit controller, autoscaler và retry cùng phản ứng mạnh trên cùng signal, hệ thống có thể oscillate.
+
+## 24. Failover capacity phải được reserve trước failure
+
+Một hệ thống chạy bình thường ở 70–80% utilization mỗi zone có thể nhìn “hiệu quả”, nhưng nếu một zone mất và traffic dồn sang phần còn lại, capacity có thể lập tức vượt saturation cliff. Headroom cần được tính theo failure model, không chỉ daily peak.
+
+Ví dụ ba zone mỗi zone phục vụ 1/3 traffic. Nếu thiết kế chịu mất một zone mà vẫn giữ SLO, hai zone còn lại phải hấp thụ khoảng 1,5 lần load bình thường, cộng thêm rollout/autoscaling delay. Capacity target vì vậy thường thấp hơn mức utilization tối đa kỹ thuật.
+
+Điều tương tự áp dụng cho database replica, queue consumer, NAT gateway, external API quota và CI runner. “Có redundancy” nhưng không có **spare capacity under failover** chỉ tạo redundancy hình thức.
+
+## 25. Correlated failure phá assumption độc lập
+
+Nhiều mô hình reliability ngầm giả định replica hoặc zone fail độc lập. Thực tế dependency chung như DNS, identity provider, registry, certificate authority, control plane, shared network hoặc bad rollout có thể làm nhiều replica fail cùng lúc.
+
+Vì vậy redundancy phải hỏi **common-mode dependency nào còn dùng chung**. Hai region cùng dùng một global configuration rollout hoặc cùng một external API chưa chắc tạo independence thực sự.
+
+Load test/failure exercise nên bao gồm correlated event: secret rotation sai toàn fleet, DNS degradation, policy rollout chặn deploy hoặc regional dependency failure. Đây là cách kiểm tra blast radius của shared control plane, không chỉ process crash đơn lẻ.
+
+## 26. Brownout là intentional degradation để bảo vệ core SLO
+
+Trong overload, một service có thể tạm tắt feature không thiết yếu thay vì để toàn request path chậm. Ví dụ bỏ recommendation, giảm image transformation chất lượng cao, defer analytics hoặc trả stale-but-safe cache cho một số read path.
+
+Brownout khác outage ngẫu nhiên ở chỗ degradation được thiết kế trước, observable và reversible. Feature nào được bỏ phải dựa trên business criticality và data correctness; không phải mọi operation đều có thể stale hoặc async.
+
+Một platform tốt cho phép declare priority class hoặc degradation mode đủ rõ để incident response không phải phát minh logic mới giữa lúc hệ thống đang cháy.
+
+## 27. Error budget policy phải điều khiển decision, không chỉ tạo dashboard
+
+Một SLO chỉ có giá trị tổ chức khi budget state thay đổi hành vi. Nếu budget cháy nhưng release cadence, review depth và reliability backlog không thay đổi, SLO chỉ là reporting.
+
+Policy có thể nói khi burn kéo dài thì giảm risky rollout, bắt buộc canary, ưu tiên reliability work hoặc yêu cầu owner review. Nhưng policy không nên cơ học đến mức mọi budget dip nhỏ đều đóng băng delivery; cần phân biệt transient event, known incident và structural unreliability.
+
+Senior SRE xem error budget như **feedback controller cho engineering decision**. Signal phải gần user impact, action phải proportional và sau khi reliability hồi phục, constraint cũng phải được nới lại thay vì trở thành permanent bureaucracy.
