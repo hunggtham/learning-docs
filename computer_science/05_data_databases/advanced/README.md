@@ -15,8 +15,8 @@ Bắt đầu từ [nền tảng cơ sở dữ liệu](../../basic/05_data_databa
 
 Track đi từ transaction/recovery và concurrency control xuống storage engine, buffer management, optimizer/execution rồi lên distributed transaction. Mỗi chapter cần trả lời visibility/durability invariant, internal state machine, contention/I/O pressure, failure recovery và production evidence như plan/wait/lock/I/O/log position.
 
-## Depth priorities
+Replication/failover/read consistency hiện đã được đào sâu trong foundation distributed-database chapter theo authority/commit horizon/read semantics thay vì tạo chapter mới chỉ để lặp Distributed Systems. Columnar storage cũng đã được mở rộng theo projection pushdown, compression, data skipping, vectorized execution, late materialization và spill evidence; phần execution sâu tiếp tục nối với canonical join/vectorized chapter.
 
-Replication/failover/read consistency nên đào sâu qua distributed transaction + consensus chapters và cross-link sang Networks & Distributed Systems. Analytical columnar execution nên được bổ sung nơi join/vectorized execution và storage layout thực sự quyết định behavior. Schema evolution thuộc Software Systems/Engineering nếu trọng tâm là compatibility/migration. Database observability phải nằm ngay trong các mechanism chapters thay vì tách thành catalog tool riêng.
+Khi mở rộng tiếp, chỉ tạo file mới nếu replication/storage topic thực sự có invariant và mechanism riêng không còn phù hợp với các canonical file hiện tại. Schema evolution vẫn thuộc Software Systems/Engineering khi trọng tâm là compatibility/migration. Database observability phải nằm ngay trong mechanism chapters thay vì tách thành catalog tool riêng.
 
 Cross-layer path bắt buộc: [application transaction → WAL → filesystem → storage → replication](../../90_connections/advanced/03_durability_path_application_commit_wal_filesystem_device.md).
