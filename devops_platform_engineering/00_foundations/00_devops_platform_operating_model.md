@@ -93,3 +93,51 @@ Delivery system không chỉ gồm code và tool. Quyền hạn, ownership, cấ
 Khi một bước luôn tạo bottleneck, đừng chỉ hỏi tool nào chậm. Hãy hỏi tại sao quyết định đó phải đi qua boundary hiện tại, information nào chỉ một nhóm đang giữ, risk nào đang được gate thủ công thay vì encode thành guardrail, và liệu interface giữa các team có thể trở thành contract kỹ thuật ổn định hay không.
 
 Đây là điểm Platform Engineering nối với organizational design: mục tiêu không phải xóa mọi specialization mà là biến giao tiếp lặp lại thành capability có contract, để chuyên gia tập trung vào exception và evolution thay vì trở thành queue cho common path.
+
+## 13. Bottleneck quyết định throughput toàn hệ thống
+
+Một hệ thống delivery có nhiều bước nhưng throughput dài hạn thường bị giới hạn bởi constraint hẹp nhất. Nếu build mất 5 phút nhưng security review phải chờ hai ngày, tối ưu build xuống 3 phút gần như không thay đổi lead time. Nếu reviewer là bottleneck, tăng số pull request mở đồng thời còn có thể làm queue dài hơn.
+
+Điều này dẫn tới một discipline quan trọng: trước khi tối ưu, xác định **constraint hiện tại** bằng evidence. Queue nào tăng dần? Resource hoặc role nào luôn bận? Bước nào tạo waiting time lớn nhất? Khi constraint được cải thiện, bottleneck có thể chuyển sang bước khác; tối ưu hệ thống là quá trình lặp, không phải một dự án “tăng tốc pipeline” một lần.
+
+Local utilization 100% không luôn tốt. Một reviewer hoặc môi trường test chạy kín 100% thời gian thường đồng nghĩa queue phía trước không có slack để hấp thụ biến động. Hệ thống flow-sensitive cần một mức capacity headroom để urgent work và variation không biến thành waiting time phi tuyến.
+
+## 14. Feedback delay có thể làm control decision sai dù signal đúng
+
+Feedback không chỉ cần chính xác mà còn phải đủ sớm. Nếu một deployment lỗi sau 30 phút nhưng team deploy 20 release khác trong khoảng đó, khi alert xuất hiện search space đã lớn. Nếu cost report chỉ đến cuối tháng, feedback quá trễ để developer liên hệ với change cụ thể.
+
+Một loop có delay dài dễ bị over-correction. Team thấy queue dài nên tăng concurrency; vài phút sau downstream quá tải, lại giảm mạnh; rồi khi backlog giảm thì capacity dư thừa. Cùng pattern xuất hiện ở autoscaling, approval queue và incident response.
+
+Vì vậy khi thiết kế feedback loop phải hỏi bốn thứ: sensor đo gì, delay bao lâu, actuator thay state nào và action có effect sau bao lâu. “Có metric” không đủ nếu delay lớn hơn tốc độ hệ thống thay đổi.
+
+## 15. Queue discipline là policy, không chỉ implementation detail
+
+Khi capacity hữu hạn, thứ tự xử lý work trở thành quyết định sản phẩm/vận hành. FIFO đơn giản và công bằng theo thời gian, nhưng incident fix hoặc security patch critical có thể cần priority. Nếu mọi team đánh request của mình là urgent, priority queue mất nghĩa và normal work bị starvation.
+
+Expedite lane nên có entry criterion rõ, giới hạn WIP và audit. Mục tiêu là giữ khả năng phản ứng với work thật sự khẩn cấp mà không biến hệ thống thành “ai kêu to hơn được làm trước”.
+
+Điều này áp dụng từ ticket/review queue đến CI runner, deploy queue và platform provisioning. Queue semantics là một phần operating model vì nó quyết định latency dưới contention.
+
+## 16. Handoff làm mất information, không chỉ thêm waiting time
+
+Mỗi handoff giữa team hoặc tool có thể làm mất intent. Developer nói “cần DB để xử lý order” nhưng ticket chỉ còn “tạo PostgreSQL 4 CPU”; operator thấy resource request nhưng không biết RPO, connection pattern hay criticality. Khi incident xảy ra, context business ban đầu đã biến mất.
+
+Một interface tốt phải giữ lại information cần cho quyết định downstream dưới dạng contract hoặc metadata: owner, criticality, SLO, data class, artifact/config identity và reason của exception. Đây là lý do platform API có giá trị hơn chỉ tự động hóa thao tác: nó chuẩn hóa **semantic handoff**.
+
+Giảm handoff không nghĩa xóa mọi team boundary. Nó nghĩa giữ intent machine-readable đủ để boundary không biến thành mất ngữ cảnh rồi hỏi lại bằng ticket/chat.
+
+## 17. Toil là công việc lặp lại thiếu giá trị bền vững, nhưng không phải mọi manual work đều xấu
+
+Toil thường là thao tác thủ công lặp lại, có tính operational, tăng gần tuyến tính theo quy mô và không tạo cải thiện lâu dài: tạo namespace bằng tay, rotate cùng loại secret cho hàng trăm service, copy deployment status vào ticket. Những việc này là ứng viên tốt cho automation hoặc self-service.
+
+Nhưng automation có fixed cost và maintenance cost. Một thao tác hiếm, rủi ro cao, thay đổi liên tục có thể chưa đáng encode thành platform feature. Tự động hóa quá sớm còn khóa assumption chưa hiểu rõ vào code và mở blast radius mới.
+
+Một cách reasoning tốt là xem frequency, volume, error probability, waiting time, cognitive load và cost nếu automation sai. Mục tiêu không phải “zero manual operation”; mục tiêu là con người tập trung vào decision cần judgment còn common path trở nên repeatable.
+
+## 18. Senior walkthrough: tăng utilization làm lead time tệ hơn
+
+Giả sử một organization có hai shared staging environment và muốn “tận dụng tài nguyên tốt hơn”, nên scheduler luôn giữ cả hai environment bận. Khi một release critical cần test, nó phải chờ các job dài hiện tại kết thúc. Team bắt đầu gộp nhiều change vào mỗi lượt staging để “đỡ phải chờ”, batch size tăng; khi test fail, search space lớn và lượt retry tiếp tục chiếm environment lâu hơn.
+
+Tối ưu utilization cục bộ đã tạo feedback xấu: utilization cao → queue dài → batch lớn → failure/rework lớn → queue càng dài. Fix có thể là giữ reserve capacity cho high-priority flow, giới hạn job duration, tạo ephemeral environment hoặc giảm setup cost để capacity co giãn được.
+
+Bài học là delivery system nên tối ưu **flow và outcome**, không tối đa hóa việc mọi resource luôn bận.
