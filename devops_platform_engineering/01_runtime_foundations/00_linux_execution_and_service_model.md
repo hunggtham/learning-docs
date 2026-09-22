@@ -115,3 +115,43 @@ Giả sử `orders-api` p99 tăng từ 200 ms lên 2 giây, node CPU trung bình
 Nếu throttling tăng đúng lúc latency tăng, workload có thể đang đòi nhiều CPU hơn entitlement dù host còn idle capacity. Nếu không throttling nhưng PSI I/O tăng, nguyên nhân có thể là storage. Nếu cả hai bình thường nhưng thread dump cho thấy nhiều thread chờ connection pool, bottleneck chuyển sang downstream.
 
 Cách reasoning này giữ nguyên nguyên tắc của chapter: một metric ở một layer không phủ định pressure ở layer khác.
+
+## 16. Dirty page và writeback có thể tạo latency trước khi disk “đầy”
+
+Khi process ghi file, nhiều write không lập tức đi thẳng xuống storage; dữ liệu có thể đi vào page cache rồi kernel flush dần xuống thiết bị. Điều này làm write bình thường nhìn rất nhanh, nhưng nếu tốc độ dirty data cao hơn tốc độ writeback lâu đủ, kernel phải throttle writer hoặc application gặp burst latency khi flush/fsync.
+
+Vì vậy một service ghi log, temporary file hoặc local database có thể xuất hiện p99 latency tăng trong khi disk usage vẫn còn nhiều. Evidence cần nối application write latency, I/O PSI, device latency/queue và dirty/writeback behavior. “Disk chưa đầy” chỉ loại trừ capacity theo dung lượng, không loại trừ saturation theo throughput/latency.
+
+Operational lesson là storage có ít nhất hai loại headroom: còn bao nhiêu bytes và còn bao nhiêu service rate cho I/O. Hai thứ không thay thế nhau.
+
+## 17. Listen socket có queue trước khi application `accept()` connection
+
+Một process có thể đang `LISTEN` nhưng vẫn không theo kịp connection mới. Kernel giữ state cho connection setup và hàng đợi connection đã hoàn thành chờ application `accept()`. Nếu application event loop/thread pool bị stall hoặc accept rate thấp hơn arrival rate, queue có thể đầy và client thấy timeout/reset dù process vẫn sống và port vẫn mở.
+
+Do đó `ss -lntp` xác nhận listener tồn tại nhưng chưa chứng minh listener đang phục vụ đủ nhanh. Khi có connect failure dưới load, cần nối socket backlog/accept behavior với application thread state, CPU throttling và event-loop latency.
+
+Đây là cùng mental model queueing: kernel queue hấp thụ burst, nhưng queue không tạo thêm service capacity. Nếu producer connection đến nhanh hơn application nhận lâu đủ, failure cuối cùng vẫn xuất hiện.
+
+## 18. Resource limit có nhiều tầng và effective limit là tầng chặt nhất
+
+Một process có thể chịu `RLIMIT_NOFILE`, `systemd` unit limit, cgroup boundary, container runtime setting và node-level pressure cùng lúc. Operator thường nhìn một tầng rồi nghĩ đó là “limit thực”. Thực tế effective behavior đến từ constraint chặt nhất trên đường thực thi.
+
+Ví dụ shell tương tác báo `ulimit -n` rất cao nhưng service unit có `LimitNOFILE` thấp hơn; hoặc container memory limit 4 GiB nhưng parent cgroup của cả workload class đang bị pressure. Vì vậy evidence phải lấy từ context của chính process/service, không lấy từ shell khác rồi suy diễn.
+
+Mental model này áp dụng rộng hơn Linux: production abstraction thường là composition của nhiều policy; giá trị hiển thị ở một layer chỉ có nghĩa trong boundary đó.
+
+## 19. Clock là dependency production dù không tiêu CPU đáng kể
+
+Nhiều protocol và hệ thống phụ thuộc thời gian: TLS certificate validity, token expiry, distributed trace ordering, lease, cron/scheduler, cache TTL và log correlation. Nếu clock skew lớn, service có thể fail authentication hoặc tạo timeline điều tra sai dù CPU/memory/network đều khỏe.
+
+Không nên dùng wall clock như một nguồn ordering tuyệt đối cho distributed event. Trong incident, timestamp giữa hai host lệch nhau có thể làm causal chain nhìn đảo ngược. NTP/time-sync health vì vậy là operational dependency; còn ordering/causality sâu hơn thuộc Distributed Systems canonical docs.
+
+Khi failure gắn với “token chưa có hiệu lực”, “certificate chưa hợp lệ” hoặc event dường như xảy ra trước cause, hãy kiểm tra clock/source-time assumption trước khi invent một race condition phức tạp.
+
+## 20. Senior walkthrough: API timeout tăng cùng log burst nhưng CPU và DB đều bình thường
+
+Giả sử sau khi bật debug log, request p99 tăng mạnh. CPU chỉ 35%, DB latency không đổi, network bình thường. Node cho thấy I/O PSI tăng và device write latency xuất hiện burst; application thread dump có nhiều thread chờ flush/logging path.
+
+Causal chain hợp lý là log volume làm dirty data tăng, writeback/storage bắt đầu stall writer, request thread bị giữ lâu hơn, concurrency tăng và tail latency khuếch đại. Tăng CPU replica có thể không giúp nếu tất cả replica cùng ghi vào bottleneck storage/log path.
+
+Mitigation có thể giảm log verbosity, chuyển logging sang buffered/asynchronous path có backpressure hợp lý hoặc tăng I/O capacity. Long-term fix là coi logging pipeline như dependency có budget, không phải side effect “miễn phí” của application.
