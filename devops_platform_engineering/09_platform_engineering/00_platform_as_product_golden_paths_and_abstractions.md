@@ -298,3 +298,51 @@ break-glass identity + artifact access
 Game day phải chứng minh operator thực sự có thể đi từ failure domain bị mất tới trạng thái hội tụ, bao gồm credential độc lập, artifact khả dụng và external resource discovery. Nếu drill chỉ restart component trong environment đang khỏe, bootstrap path chưa được test.
 
 Platform recovery hoàn tất khi control plane và external world đồng thuận đủ về ownership/state để mutation trở lại an toàn, không phải khi portal HTTP 200.
+
+## 39. API compatibility phải xét cả stored state, client và controller version
+
+Platform API declarative thường sống lâu hơn một lần deploy controller. Resource đã lưu từ version cũ có thể tiếp tục tồn tại khi API server/controller đã nâng version; CLI, portal, GitOps agent và automation của consumer cũng không nâng cùng lúc. Vì vậy compatibility không chỉ là “request mới có parse được không?” mà là **version skew trên toàn vòng đời resource**.
+
+Một field bị đổi nghĩa nhưng giữ cùng tên đặc biệt nguy hiểm: manifest cũ vẫn hợp lệ về schema nhưng controller mới diễn giải khác. Breaking semantic change nên được version hóa hoặc migration rõ, thay vì dựa vào validation syntax. Evidence cần biết resource được tạo/last-converted theo revision nào và controller nào đang reconcile nó.
+
+Platform contract tốt định nghĩa skew được support: client N-1 có nói chuyện với control plane N không, resource schema cũ được đọc bao lâu, controller rollback có hiểu state đã được controller mới ghi không. Đây là compatibility matrix của chính platform.
+
+## 40. Defaulting là behavior và có thể trở thành breaking change âm thầm
+
+Khi user bỏ trống một field, platform thường áp default. Nếu default thay từ `single-zone` sang `multi-zone`, `small` sang `medium` hoặc retention 7 ngày sang 30 ngày, manifest source không đổi nhưng effective infrastructure, cost và failure behavior đổi.
+
+Vì vậy default phải được coi là versioned policy. Với resource đã tồn tại, cần quyết định default được materialize/freeze lúc create hay được recompute mỗi reconciliation. Hai lựa chọn có semantics rất khác: recompute giúp policy mới lan nhanh nhưng có thể mutate hàng nghìn resource chỉ vì controller upgrade.
+
+Status/effective-state nên cho operator thấy default nào đã được resolve. “Không có field trong YAML” không đồng nghĩa “không có quyết định”. Default ẩn là một phần của API surface.
+
+## 41. Conversion phải bảo toàn intent, không chỉ chuyển được JSON
+
+Khi schema có `v1alpha1 → v1beta1 → v1`, conversion có thể map field cũ sang representation mới. Nhưng nếu model mới biểu diễn concept khác, conversion cú pháp có thể làm mất intent. Ví dụ field `replicas: 3` trước đây ngầm nghĩa cùng zone, còn version mới tách `capacity` và `failureDomainSpread`.
+
+Một conversion an toàn cần invariant về round-trip hoặc lossiness được explicit. Nếu `old → new → old` làm mất thông tin, rollback control plane có thể không an toàn. Một số migration cần materialize field mới hoặc yêu cầu user quyết định thay vì tự đoán.
+
+Conversion webhook/controller cũng là dependency runtime. Nếu API server cần conversion service để đọc object cũ mà service đó down trong control-plane incident, chính resource cần cho recovery có thể không đọc được. Upgrade design phải xét bootstrap path của conversion.
+
+## 42. Capability negotiation tốt hơn assumption khi nhiều cell/version cùng tồn tại
+
+Trong rollout platform nhiều cell/region, không nên giả định mọi nơi hỗ trợ capability mới cùng lúc. Consumer hoặc orchestrator có thể cần biết cell nào hỗ trợ storage class mới, policy revision nào hoặc operation semantic nào trước khi gửi intent.
+
+Capability có thể được expose qua version/status/catalog thay vì để request fail ngẫu nhiên. Tuy nhiên negotiation không nên biến thành hàng trăm feature bit không có lifecycle. Capability cần semantic ổn định, owner và deprecation giống API field.
+
+Mental model là `intent requirement → advertised capability → admission → execution`. Nếu capability không đủ, reject sớm với reason rõ tốt hơn accept rồi fail sâu sau 20 phút provisioning.
+
+## 43. Controller upgrade phải giữ reconciliation monotonic theo invariant
+
+Hai controller version có thể chạy chồng trong rolling upgrade hoặc old version có thể quay lại sau rollback. Nếu chúng sở hữu cùng field nhưng dùng logic khác, desired state có thể oscillate: version mới thêm config, version cũ xóa nó, rồi version mới thêm lại.
+
+Upgrade strategy cần field ownership và compatibility rõ. Có thể cần leader/version gate, staged controller rollout, schema migration trước behavior activation hoặc chỉ cho một version mutate resource class nhất định. Quan trọng là mỗi reconciliation trong supported skew phải đưa system gần invariant hơn, không tạo tug-of-war.
+
+Evidence cần dimension theo controller version, resource generation và mutation reason. Nếu external resource đổi qua lại mà source intent không đổi, hãy nghi reconciliation conflict/version skew trước khi đổ lỗi provider.
+
+## 44. Status schema cũng là API và cần evolution discipline
+
+Automation thường đọc `Ready`, condition reason, endpoint, operation phase hoặc observed generation từ status. Đổi tên reason, bỏ condition hoặc thay nghĩa `Ready` có thể phá pipeline dù spec vẫn tương thích.
+
+Status nên tách machine-stable field khỏi human message. Consumer automation không nên parse chuỗi lỗi tự do. Condition cần ownership, observed revision/generation và transition semantics đủ rõ để biết signal mới hay stale.
+
+Platform API trưởng thành version cả **intent surface** lẫn **evidence surface**. Consumer cần gửi desired state ổn định, nhưng cũng cần đọc actual state đáng tin để quyết định tiếp theo; compatibility chỉ bảo vệ một phía là chưa đủ.
