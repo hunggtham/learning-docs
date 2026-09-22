@@ -345,3 +345,78 @@ symptom
 Deploy trước incident là correlation; causal graph phải giải thích arrow. Restart giúp service khỏe chỉ chứng minh một state nào đó bị reset, không tự chứng minh memory leak. Fault injection chỉ có giá trị khi fault boundary và control cohort được verify.
 
 Production Practice giữ discipline này; Observability quyết định detector coverage; Incident process điều phối state mutation để intervention của nhiều operator không phá chính evidence đang dùng để suy luận.
+
+## 27. Route reasoning 17 — từ dependency latency tới isolation và load amplification
+
+Một dependency chậm có thể trở thành failure của caller trước khi dependency chết hoàn toàn:
+
+```text
+slow/error dependency
+→ held connection/thread/concurrency
+→ queue tăng
+→ timeout
+→ retry/hedge amplification
+→ caller saturation
+→ circuit breaker / bulkhead / shedding
+→ controlled recovery probes
+```
+
+Network chapter giữ connection/deadline/retry/breaker/bulkhead semantics. SRE giữ admission và overload budget. Distributed Systems giữ idempotency/failure ambiguity khi attempt bị lặp. Platform có thể chuẩn hóa default nhưng không thể chọn threshold đúng nếu không biết workload/dependency contract.
+
+Điểm quan trọng là resilience mechanism cũng là traffic generator. Retry, hedge và half-open probe phải được tính vào downstream load thay vì coi chúng là “free reliability”.
+
+## 28. Route reasoning 18 — từ schema change tới migration convergence
+
+Một release stateful nên được nhìn như workflow dài hơn deployment:
+
+```text
+expand compatible schema/contract
+→ deploy code hiểu mixed state
+→ backfill / dual-write / shadow-read
+→ detect discrepancy + reconcile
+→ consumer adoption evidence
+→ cutover source of truth
+→ compatibility window
+→ contract old state
+```
+
+CI/CD giữ orchestration/evidence và rollback compatibility. Database canonical giải lock/WAL/MVCC/storage internals. Distributed Systems giải dual-write/idempotency ambiguity. Observability phải đo lag, mismatch và old-path usage.
+
+Migration hoàn tất khi data và consumer dependency đã converge, không phải khi DDL/job/deploy trả exit code 0.
+
+## 29. Route reasoning 19 — từ telemetry amplification tới observability survivability
+
+Observability có thể trở thành amplifier của incident:
+
+```text
+application fault
+→ log/span/cardinality volume tăng
+→ collector/backend queue tăng
+→ ingestion/query saturation
+→ evidence drop/stale
+→ operator mất visibility
+```
+
+Observability chapter giữ priority, retention, cardinality và backend multi-tenancy. FinOps nối signal driver với cost. Multi-tenancy đặt quota/fairness cho ingestion/query. Production Practice phải kiểm tra sensor health trước khi dùng dashboard im lặng làm negative evidence.
+
+Mục tiêu không phải giữ mọi byte telemetry mà là bảo vệ **minimum diagnostic capability** khi hệ thống đang xấu nhất.
+
+## 30. Route reasoning 20 — từ platform control-plane loss tới safe recovery
+
+Platform DR không chỉ là restore database:
+
+```text
+control-plane failure
+→ bootstrap identity/artifact/state access
+→ restore state checkpoint
+→ discover external world
+→ adopt/reconcile ownership
+→ safe/read-only mode
+→ prioritized recovery reconciliation
+→ staged mutation enablement
+→ full self-service
+```
+
+Platform Engineering giữ state-machine/ownership/bootstrap semantics. Incident/DR giữ recovery ordering và drill. Security giữ break-glass authority. Multi-tenancy giữ priority/reservation để recovery của một tenant hoặc bulk create mới không starve control-plane work quan trọng.
+
+Điểm kết thúc không phải portal HTTP 200 mà là state đủ đáng tin để mutation mới không tạo duplicate, orphan hoặc cross-tenant blast radius.
