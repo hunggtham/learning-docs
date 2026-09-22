@@ -43,3 +43,22 @@ File này dùng để tra nhanh thuật ngữ, không thay thế chapter giải 
 | Immutable infrastructure | Thay vì sửa trực tiếp server/workload đang chạy, tạo phiên bản mới từ source of truth rồi thay thế instance cũ. |
 | Cattle, not pets | Mental model coi instance là thay thế được; không có nghĩa bỏ qua stateful workload hoặc forensic evidence. |
 | Day 0 / Day 1 / Day 2 | Thiết kế/provision ban đầu, đưa hệ thống vào hoạt động, rồi vận hành dài hạn gồm upgrade, backup, scaling, incident, rotation và cleanup. |
+| Lead time | Thời gian từ lúc một nhu cầu/thay đổi bắt đầu đến khi tạo giá trị hoặc chạm trạng thái đích; gồm cả processing time và thời gian chờ. |
+| Cycle/processing time | Thời gian work item thực sự được xử lý trong một bước hoặc một flow; cần phân biệt với lead time chứa queue/handoff. |
+| Công việc đang dở (Work in Progress — WIP) | Số work item đang nằm trong flow nhưng chưa hoàn tất; WIP cao thường kéo queue và thời gian hoàn thành tăng. |
+| Build kín (hermetic build) | Build chỉ được thấy các input đã khai báo thay vì phụ thuộc ngầm vào host, network hoặc tool cài sẵn. |
+| Attestation | Statement có subject và predicate được một identity xác nhận/ký, dùng để chứng minh provenance, verification hoặc policy fact cho artifact. |
+| Trust domain | Boundary trong đó identity/output được coi có mức tin cậy tương đương; output từ trust domain thấp không nên trở thành input ngầm của domain cao. |
+| Pressure Stall Information — PSI | Telemetry của Linux mô tả thời gian task bị trì hoãn do thiếu CPU, memory hoặc I/O; bổ sung cho utilization metric. |
+| Capacity có thể schedule (schedulable capacity) | Capacity thật mà một workload cụ thể có thể được đặt vào sau khi xét kích thước request, constraint và fragmentation; khác tổng capacity còn trống. |
+| PodDisruptionBudget — PDB | Budget giới hạn một số voluntary eviction của Pod; không phải guarantee chống node crash hoặc mọi failure. |
+| Preemption | Cơ chế cho workload priority cao giành resource bằng cách loại workload priority thấp hơn; phân bổ lại scarcity chứ không tạo thêm capacity. |
+| Burn rate | Tốc độ tiêu error budget tương đối, thường nhìn như observed bad-event rate chia allowed bad-event rate. |
+| Backpressure | Cơ chế truyền tín hiệu ngược khi downstream không theo kịp để upstream giảm tốc hoặc giới hạn work mới. |
+| Load shedding | Chủ động từ chối/bỏ bớt work theo policy khi capacity thiếu để bảo vệ core capability khỏi collapse. |
+| Field ownership | Contract chỉ rõ controller/actor nào chịu trách nhiệm cho từng phần state; thiếu ownership dễ tạo reconciliation conflict/oscillation. |
+| Partial apply | IaC/provisioning thay được một phần remote state rồi fail; không có guarantee transaction atomic xuyên nhiều resource. |
+| Eventual consistency | State mới cần thời gian lan truyền giữa subsystem; API create success không luôn đồng nghĩa resource đã usable ở mọi dependency. |
+| Schedulability fragmentation | Tổng resource còn đủ nhưng bị chia trên nhiều node/failure domain nên một workload lớn không fit vào bất kỳ placement hợp lệ nào. |
+| Coordinated omission | Sai lệch benchmark khi load generator giảm gửi work đúng lúc hệ thống chậm, khiến latency/saturation nhìn tốt hơn production thật. |
+| Effective configuration | Configuration mà process/workload thực sự đang sử dụng tại runtime, có thể khác object/source-of-truth vừa được cập nhật. |
