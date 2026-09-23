@@ -9,8 +9,20 @@
   ],
   "allowedPrefixes": [
     {
+      "path": "10_backend/python",
+      "category": "Python",
+      "language": "vi-en",
+      "rights": "author-confirmed"
+    },
+    {
       "path": "10_backend",
       "category": "Backend",
+      "language": "vi-en",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "10_frontend/websquare",
+      "category": "WebSquare",
       "language": "vi-en",
       "rights": "author-confirmed"
     },
@@ -35,6 +47,12 @@
     {
       "path": "biology",
       "category": "Biology",
+      "language": "vi-en",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "computer_science",
+      "category": "Computer Science",
       "language": "vi-en",
       "rights": "author-confirmed"
     },
@@ -69,6 +87,18 @@
       "rights": "author-confirmed"
     },
     {
+      "path": "data_engineering",
+      "category": "Data Engineering",
+      "language": "vi-en",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "devops_platform_engineering",
+      "category": "DevOps / Platform Engineering",
+      "language": "vi-en",
+      "rights": "author-confirmed"
+    },
+    {
       "path": "mathematics",
       "category": "Mathematics",
       "language": "vi-en-ko",
@@ -77,6 +107,12 @@
     {
       "path": "psychology",
       "category": "Psychology",
+      "language": "vi-en",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "pmp",
+      "category": "PMP / Project Management",
       "language": "vi-en",
       "rights": "author-confirmed"
     },
