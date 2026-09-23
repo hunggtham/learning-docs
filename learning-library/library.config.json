@@ -39,12 +39,6 @@
       "rights": "author-confirmed"
     },
     {
-      "path": "ielts_docs/output",
-      "category": "English",
-      "language": "en-vi",
-      "rights": "author-confirmed"
-    },
-    {
       "path": "biology",
       "category": "Biology",
       "language": "vi-en",
@@ -239,83 +233,6 @@
       "title": "Tailwind CSS Master Supplement",
       "category": "Frontend",
       "language": "vi-en",
-      "rights": "author-confirmed"
-    },
-    {
-      "path": "ielts_docs/output/english_structures_beginner.md",
-      "title": "English Structures — Beginner",
-      "category": "English",
-      "language": "en-vi",
-      "rights": "author-confirmed"
-    },
-    {
-      "path": "ielts_docs/output/english_structures_pre_intermediate.md",
-      "title": "English Structures — Pre-Intermediate",
-      "category": "English",
-      "language": "en-vi",
-      "rights": "author-confirmed"
-    },
-    {
-      "path": "ielts_docs/output/english_structures_intermediate.md",
-      "title": "English Structures — Intermediate",
-      "category": "English",
-      "language": "en-vi",
-      "rights": "author-confirmed"
-    },
-    {
-      "path": "ielts_docs/output/grammar/english_structures_beginner_revised.md",
-      "title": "English Structures — Beginner (revised)",
-      "category": "English",
-      "language": "en-vi",
-      "rights": "author-confirmed"
-    },
-    {
-      "path": "ielts_docs/output/grammar/english_structures_pre_intermediate_revised.md",
-      "title": "English Structures — Pre-Intermediate (revised)",
-      "category": "English",
-      "language": "en-vi",
-      "rights": "author-confirmed"
-    },
-    {
-      "path": "ielts_docs/output/grammar/english_structures_intermediate_revised.md",
-      "title": "English Structures — Intermediate (revised)",
-      "category": "English",
-      "language": "en-vi",
-      "rights": "author-confirmed"
-    },
-    {
-      "path": "ielts_docs/output/grammar/english_structures_pre_advanced_revised.md",
-      "title": "English Structures — Pre-Advanced",
-      "category": "English",
-      "language": "en-vi",
-      "rights": "author-confirmed"
-    },
-    {
-      "path": "ielts_docs/output/grammar/english_structures_advanced_revised.md",
-      "title": "English Structures — Advanced",
-      "category": "English",
-      "language": "en-vi",
-      "rights": "author-confirmed"
-    },
-    {
-      "path": "ielts_docs/output/grammar/english_structures_advanced_plus_plus_revised.md",
-      "title": "English Structures — Advanced++",
-      "category": "English",
-      "language": "en-vi",
-      "rights": "author-confirmed"
-    },
-    {
-      "path": "ielts_docs/output/cert/ielts_complete_exam_guide.md",
-      "title": "IELTS Complete Exam Guide",
-      "category": "English exams",
-      "language": "en-vi",
-      "rights": "author-confirmed"
-    },
-    {
-      "path": "ielts_docs/output/cert/toeic_complete_exam_guide.md",
-      "title": "TOEIC Complete Exam Guide",
-      "category": "English exams",
-      "language": "en-vi",
       "rights": "author-confirmed"
     }
   ]

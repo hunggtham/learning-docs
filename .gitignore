@@ -14,3 +14,6 @@ build/
 *.webloc
 # Large IELTS archive (4+ GB); keep outside Git history.
 ielts/
+
+# English study Markdown is maintained in the separate language-docs repository.
+ielts_docs/

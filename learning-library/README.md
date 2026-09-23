@@ -50,7 +50,7 @@ Use `allowedPrefixes` for reviewed Markdown folders. The `output` segment is rem
 }
 ```
 
-See [PUBLISHING.md](PUBLISHING.md) for the current Korean/English source review and the paths intentionally held back.
+See [PUBLISHING.md](PUBLISHING.md) for the current publication scope, source review, and paths intentionally held back.
 
 ## GitHub Pages setup
 
