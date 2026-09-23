@@ -28,6 +28,8 @@ World Atlas là **application layer**, không phải tiêu chí completion. Mộ
 
 `90_connections` nối Geography với Math/Statistics, IT/GIS/Data, Economics/Finance và mental models tổng hợp.
 
+Để hiểu vì sao các pattern không gian hình thành theo thời gian, đọc song song [World History](../world_history/README.md). Geography cung cấp physical constraint, resource base và network location; history bổ sung institutions, technology, warfare, demography và ideas đã biến đổi chúng. Không dùng địa lý như lời giải định mệnh cho lịch sử.
+
 ## Dependency graph
 
 ```mermaid

@@ -39,6 +39,19 @@ graph TD
 
 Nếu xây lại nền tảng từ đầu, bắt đầu ở `00_foundations` và đi theo dependency graph. Nếu học một chủ đề cụ thể, có thể vào thẳng chapter và dùng phần **Knowledge Connection** để quay lại prerequisite hoặc đi tiếp.
 
+## Điểm nối sang Electrical Engineering
+
+Physics dừng ở việc mô tả các định luật và giới hạn tự nhiên. Khi câu hỏi chuyển sang **chọn topology, thiết kế mạch, quản lý timing/power, đóng vòng điều khiển hoặc biến peripheral thành software contract**, hãy đi tiếp sang [Electrical Engineering Knowledge Library](../electrical_engineering/README.md). Route bridge là:
+
+```text
+Maxwell / circuits / semiconductor / signal-noise
+→ electronics
+→ digital logic
+→ computer architecture
+→ embedded
+→ software
+```
+
 # Mục lục
 
 ## 00 — Nền tảng và ngôn ngữ

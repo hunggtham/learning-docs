@@ -13,10 +13,11 @@ Bắt đầu từ [nền tảng cơ sở dữ liệu](../../basic/05_data_databa
 7. [Thuật toán join, thực thi vector hóa và vật chất hóa muộn](./06_join_algorithms_vectorized_execution_and_late_materialization.md)
 8. [Giao dịch phân tán: 2PC, consensus, saga và transactional outbox](./07_distributed_transactions_2pc_consensus_sagas_and_outbox.md)
 9. [Columnar storage, encoding, pruning và vectorized scans](./08_columnar_storage_encoding_pruning_and_vectorized_scans.md)
+10. [Adaptive query execution, runtime filters, skew và re-optimization](./09_adaptive_query_execution_runtime_filters_skew_and_reoptimization.md)
 
 Track đi từ transaction/recovery và concurrency control xuống storage engine, buffer management, optimizer/execution rồi lên distributed transaction và analytical storage. Mỗi chapter cần trả lời visibility/durability invariant, internal state machine, contention/I/O pressure, failure recovery và production evidence như plan/wait/lock/I/O/log position.
 
-Replication/failover/read consistency vẫn thuộc Distributed Systems khi trọng tâm là authority/quorum/failover. Columnar storage giờ có canonical chapter riêng vì physical layout, compression/encoding, row-group pruning, projection/predicate pushdown, late materialization và spill tạo một mental model độc lập với OLTP B+Tree/LSM. Execution sâu tiếp tục nối với canonical join/vectorized chapter thay vì duplicate operator internals.
+Replication/failover/read consistency vẫn thuộc Distributed Systems khi trọng tâm là authority/quorum/failover. Columnar storage giờ có canonical chapter riêng vì physical layout, compression/encoding, row-group pruning, projection/predicate pushdown, late materialization và spill tạo một mental model độc lập với OLTP B+Tree/LSM. Adaptive query execution giờ có owner riêng cho runtime feedback, dynamic filtering, skew mitigation, re-optimization và plan-state transitions; execution sâu tiếp tục nối với canonical join/vectorized chapter thay vì duplicate operator internals.
 
 Khi mở rộng tiếp, chỉ tạo file mới nếu storage/query topic thực sự có invariant và mechanism riêng không còn phù hợp với các canonical file hiện tại. Schema evolution vẫn thuộc Software Systems/Engineering khi trọng tâm là compatibility/migration. Database observability phải nằm ngay trong mechanism chapters thay vì tách thành catalog tool riêng.
 

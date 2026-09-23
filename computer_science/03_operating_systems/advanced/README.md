@@ -12,10 +12,13 @@ Bắt đầu từ [nền tảng hệ điều hành](../../basic/03_operating_sys
 6. [I/O nâng cao: epoll, io_uring, zero-copy và DMA](./05_epoll_io_uring_zero_copy_and_dma.md)
 7. [Cơ chế container: namespace, cgroup, capability và seccomp](./06_containers_namespaces_cgroups_capabilities_and_seccomp.md)
 8. [RCU, seqlock và safe memory reclamation](./07_rcu_seqlock_and_safe_memory_reclamation.md)
+9. [eBPF, tracing kernel, observability và safety](./08_ebpf_tracing_kernel_observability_and_safety.md)
 
 Track này nối system call/scheduling với kernel synchronization, object lifetime, memory pressure, address translation, durability, async I/O và isolation. Mỗi phần phải chỉ ra resource/kernel invariant, context nào được phép sleep/preempt, failure under pressure, queue/wait nào hình thành và production evidence nào quan sát được.
 
-Chapter syscall/context vẫn giữ overview về synchronization và RCU vì đây là prerequisite để đọc kernel path. Chapter RCU/seqlock mới là canonical depth cho publication, grace period, quiescent state, deferred reclamation, ABA, epoch/hazard-pointer comparison, retry starvation và production evidence của reclamation debt. Nội dung mới không biến synchronization thành danh sách primitive; trọng tâm vẫn là state/lifetime proof.
+Chapter syscall/context vẫn giữ overview về synchronization và RCU vì đây là prerequisite để đọc kernel path. Chapter RCU/seqlock mới là canonical depth cho publication, grace period, quiescent state, deferred reclamation, ABA, epoch/hazard-pointer comparison, retry starvation và production evidence của reclamation debt. Chapter eBPF/tracing sở hữu reasoning path từ probe attachment → verifier/JIT → helper/map/ring-buffer → event loss/overhead → packet lifecycle/queue boundary → production evidence và safety boundary. Nội dung mới không biến synchronization hoặc observability thành danh sách primitive/tool; trọng tâm vẫn là state/lifetime proof và evidence quality.
+
+Kernel networking path đã được deepen trong chapter eBPF qua ingress/egress lifecycle, NAPI/softirq, socket/qdisc boundaries, GRO/GSO, drop-vs-delay-vs-retransmission và flow-correlated evidence. Bước tiếp theo là validate trên workload/driver cụ thể nếu có incident thực tế; không mở chapter riêng chỉ để lặp lại packet-path overview.
 
 Production evidence cần nối application symptom với syscall latency, blocked/off-CPU stack, wakeup/run-queue delay, interrupt/softirq CPU, lock/spin contention, page fault/reclaim, block I/O, network drop/retransmission, cgroup throttling và khi phù hợp grace-period/reclamation backlog. Tool name có thể thay đổi; evidence model không đổi.
 

@@ -30,6 +30,44 @@ Bản chất của chính sách thay thế là ước lượng **khoảng cách 
 
 Nạp trước không miễn phí. Nếu quá mạnh, nó có thể chiếm băng thông (bandwidth), làm ô nhiễm cache và đẩy dữ liệu nóng ra ngoài. Vì vậy độ chính xác và thời điểm nạp đều quan trọng: dự đoán đúng nhưng quá muộn không che được độ trễ; dự đoán đúng nhưng quá sớm có thể khiến dòng dữ liệu bị loại trước khi được dùng.
 
+### Hardware-prefetch pathology
+
+Một prefetch request chỉ có giá trị khi dòng dữ liệu đến đúng lúc, được dùng trước khi bị loại và không lấy mất tài nguyên có giá trị hơn. Vì vậy cần phân biệt:
+
+```text
+prefetch accuracy  = dòng được nạp có thực sự được dùng không
+prefetch timeliness = dòng đến trước demand load đủ lâu không
+prefetch pollution = dòng nạp sớm đẩy dòng hữu ích ra ngoài bao nhiêu
+prefetch coverage   = bao nhiêu demand miss được che phủ
+```
+
+Các failure pattern thường gặp:
+
+- **Over-prefetch:** stream detector tiếp tục kéo dữ liệu dù consumer đã đổi phase, làm tăng memory traffic và queue occupancy.
+- **Cache pollution:** dòng được dự đoán đúng nhưng reuse distance dài hơn cache residency; nó chỉ chiếm way rồi đẩy out working set nóng.
+- **Bandwidth theft:** prefetch dùng chung DRAM/interconnect bandwidth với demand request. Khi bandwidth gần bão hòa, latency của demand có thể tăng dù prefetch accuracy không thấp.
+- **MLP và queue pressure:** nhiều prefetch outstanding làm tăng memory-level parallelism đến mức request queue, miss-status holding register hoặc controller bị đầy; demand load phải chờ lâu hơn.
+- **Phase confusion:** một pattern tuần tự trong phase A có thể trở thành random/strided pattern ở phase B. Prefetcher cần học lại nhưng trong thời gian đó vẫn tạo request theo history cũ.
+- **Translation interaction:** prefetch data không tự giải quyết page walk, TLB miss hoặc NUMA placement. Nó có thể đưa dữ liệu đến một cache nhưng demand vẫn bị giới hạn bởi address-translation hoặc remote-memory path.
+
+Do đó “prefetch đúng” không đồng nghĩa “prefetch có ích”. Một prefetcher có accuracy cao vẫn có thể làm throughput giảm nếu pollution, bandwidth theft hoặc queue pressure lớn hơn latency được che phủ.
+
+### Chẩn đoán pathology bằng đối chứng
+
+Không suy ra pathology từ `cache-misses` đơn lẻ. Hãy so sánh cùng workload và hardware cohort theo các biến thể: prefetch mặc định, policy giảm aggressiveness nếu có, software prefetch hoặc baseline không prefetch. Timeline cần đặt cạnh nhau:
+
+```text
+demand latency / LLC miss latency
+→ prefetch requests và useful-prefetch ratio
+→ memory bandwidth / read-write queue occupancy
+→ LLC eviction / working-set hit rate
+→ MLP, stall cycles và effective frequency
+```
+
+Nếu tắt hoặc giảm prefetch làm LLC miss count tăng nhưng demand latency và useful throughput giảm ít hơn, prefetch trước đó có thể đang tạo pollution hoặc tranh bandwidth. Nếu workload chỉ nhanh hơn ở cold phase rồi mất lợi thế khi warm, hãy kiểm tra timeliness và phase change thay vì chỉ nhìn hit rate. Với NUMA, phải tách local/remote traffic; cùng một miss rate nhưng remote DRAM latency có thể làm tail khác hẳn.
+
+Prefetch pathology cũng nối với power/thermal: request thừa làm memory fabric và DRAM hoạt động nhiều hơn, tăng energy per useful outcome và có thể đẩy controller vào operating point thấp hơn. Vì vậy cache tuning cần đánh giá cả useful work, bandwidth và sustained performance, không chỉ peak IPC.
+
 ## Bố trí dữ liệu trong phần mềm
 
 Cấu trúc “mảng các cấu trúc” (Array of Structures — AoS) thuận tiện cho mô hình đối tượng nhưng có thể tải nhiều trường không cần dùng. “Cấu trúc các mảng” (Structure of Arrays — SoA) gom các trường cùng loại thành vùng liên tục, thường phù hợp hơn với xử lý véc-tơ (vectorization) và tính cục bộ của cache. Đây là một lý do thiết kế hướng dữ liệu (data-oriented design) có thể hiệu quả hơn bố trí hướng đối tượng trên đường chạy nóng (hot path), dù thuật toán cấp cao không thay đổi.
@@ -47,6 +85,8 @@ Xem thêm: [Memory consistency, cache coherence và ordering](./00_memory_consis
 Khi một dịch vụ có mức sử dụng CPU cao nhưng số lệnh hoàn thành mỗi chu kỳ (IPC) thấp và tỷ lệ trượt LLC cao, tăng thêm luồng (thread) có thể làm tình hình tệ hơn vì các tập dữ liệu làm việc cạnh tranh cache. Khi nhiều luồng cập nhật các bộ đếm nằm sát nhau, chia sẻ giả có thể tạo lưu lượng coherence lớn dù logic chương trình không khóa lẫn nhau.
 
 Các bộ đếm hiệu năng (performance counter) như `cache-misses`, `LLC-loads` và `stalled-cycles` chỉ có ý nghĩa khi đặt cạnh kiểu truy cập và kích thước tập dữ liệu làm việc. Không nên kết luận “cache là nút thắt cổ chai (bottleneck)” chỉ từ một chỉ số đơn lẻ.
+
+Khi điều tra prefetch, hãy ghi rõ counter là demand hay prefetch traffic nếu phần cứng cung cấp distinction đó. Nếu không có distinction, dùng controlled comparison và hardware event correlation để tránh gán toàn bộ memory traffic cho demand path. Kết luận tốt phải chỉ ra được pathology nào chiếm ưu thế: coverage thấp, timeliness kém, pollution, bandwidth theft hay queue pressure.
 
 ## Mô hình tư duy
 

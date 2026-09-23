@@ -30,7 +30,7 @@ evidence nào reconstruct được authority path?
 
 Identity không đồng nghĩa authorization. TLS không đồng nghĩa least privilege. Encryption at rest không đồng nghĩa database process không thấy plaintext. KMS không loại bỏ trust mà chuyển trust sang workload identity, policy và key-use capability.
 
-Detection/forensics giờ có canonical chapter riêng vì evidence trust, base-rate problem, event correlation, clock/provenance, tamper resistance, retention/privacy, containment và effective revocation tạo một reasoning path độc lập với preventive controls.
+Detection/forensics giờ có canonical chapter riêng vì evidence trust, base-rate problem, detector measurement, event correlation, clock/provenance, tamper resistance, retention/privacy, containment và effective revocation tạo một reasoning path độc lập với preventive controls.
 
 ## Reliability được đọc như failure containment
 

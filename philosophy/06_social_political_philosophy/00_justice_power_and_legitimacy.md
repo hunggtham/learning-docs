@@ -1,0 +1,24 @@
+# Justice, Power và Political Legitimacy
+
+Social–political philosophy hỏi xã hội nên phân phối lợi ích, gánh nặng, quyền và tiếng nói thế nào; ai có quyền ra quyết định; và khi nào quyền lực trở nên chính đáng.
+
+## Những trục cần tách
+
+- **liberty**: không bị can thiệp và có năng lực thực tế để hành động;
+- **equality**: bình đẳng về rule, opportunity, resource hay status;
+- **justice**: phân phối, thủ tục, recognition và sửa chữa harm;
+- **legitimacy**: quyền lực có thể được biện minh với người chịu nó hay không.
+
+Power không chỉ là mệnh lệnh công khai; nó còn định hình agenda, category, access to knowledge và khả năng được lắng nghe. Một thủ tục hợp lệ trên giấy có thể vẫn tái tạo bất bình đẳng nếu điểm xuất phát, thông tin hoặc chi phí tham gia phân bố không đều.
+
+## Từ cá nhân đến thể chế
+
+Thought experiment như social contract hữu ích để làm lộ nguyên tắc, nhưng institution thực tế còn phụ thuộc history, economy, law, culture và collective action. Cần nối normative ideal với evidence về behavior và governance thay vì suy ra chính sách trực tiếp từ một mô hình trừu tượng.
+
+## Policy reasoning: equality hay equity?
+
+Giả sử một dịch vụ công có cùng rule cho mọi người nhưng nhóm A phải đi xa hơn, thiếu internet và chịu discrimination khi tiếp cận. Formal equality giữ một procedure; substantive equality hỏi năng lực sử dụng và outcome có bị cấu trúc ban đầu làm lệch không. Equity không có nghĩa tùy tiện ưu ái; nó cần principle về disadvantage, eligibility, transparency và sunset/review.
+
+## Power audit
+
+Với một institution, hãy hỏi: ai đặt agenda, ai sở hữu data, ai định nghĩa category, ai có quyền veto, ai chịu cost của error, và ai có appeal? Quyền lực ẩn trong default và omission cũng quan trọng như mệnh lệnh công khai. Một process legitimate phải cho người bị ảnh hưởng khả năng biết, chất vấn và thay đổi quyết định, không chỉ có chữ ký hợp lệ.

@@ -126,6 +126,92 @@ Kernel observability có thể kiểm tra drop reason, queue occupancy, retransm
 
 Đây là nơi eBPF kết nối trực tiếp với [BGP/routing policy](../../06_networks_distributed_systems/advanced/07_bgp_routing_policy_convergence_and_route_security.md) và transport evidence: BGP giải thích route control plane; kernel tracing giải thích packet thực tế đi qua host như thế nào.
 
+### Packet lifecycle và các queue boundary
+
+Một mô hình host-level đơn giản cho chiều vào là:
+
+```text
+NIC DMA / RX ring
+→ driver + NAPI poll / softirq
+→ packet representation (thường là skb, tùy hook)
+→ XDP/tc/ingress processing
+→ routing + firewall/netfilter
+→ transport state (TCP/UDP)
+→ socket receive queue
+→ task wakeup
+→ application read()
+```
+
+Chiều ra có các boundary tương ứng:
+
+```text
+application write()
+→ socket send buffer
+→ TCP segmentation / UDP packetization
+→ qdisc / egress policy
+→ driver TX ring
+→ NIC DMA / wire
+```
+
+Mỗi mũi tên có thể tạo queue, drop hoặc delay. `read()` thành công chỉ chứng minh application đã lấy bytes khỏi socket queue; nó không chứng minh packet vừa đến, cũng không cho biết bytes đã đi qua wire ở chiều ra. Tương tự, packet rời một hook ingress không chứng minh nó sẽ được deliver tới process.
+
+Thứ tự chi tiết phụ thuộc driver, offload, namespace, kernel configuration và hook type. Vì vậy phải ghi rõ semantics của attachment point thay vì vẽ một pipeline duy nhất rồi coi đó là mọi máy.
+
+### GRO, GSO và offload làm thay đổi đơn vị quan sát
+
+NIC và kernel có thể gộp nhiều packet thành một representation lớn ở receive path (GRO), hoặc trì hoãn segmentation tới driver/NIC ở transmit path (GSO/TSO). Firewall, qdisc, TCP counters và user-space capture vì vậy có thể đếm các đơn vị khác nhau.
+
+Một event “packet” trong trace không nhất thiết tương ứng một Ethernet frame trên wire. Nếu không biết layer đang đếm gì, ta dễ kết luận sai về packet rate, MTU, retransmission hoặc cost per packet. Khi cần đối chiếu, ghi rõ:
+
+```text
+wire frame count
+→ kernel aggregate/segment count
+→ transport segment/byte count
+→ socket read/write bytes
+→ application message count
+```
+
+Offload cũng có thể làm stack trace hoặc timestamp nằm ở điểm khác với intuition. Đây là lý do packet capture, NIC counters, kernel hook và application trace nên được dùng như các evidence source độc lập, không trộn chúng thành một metric “packets” duy nhất.
+
+### Drop, delay và retransmission là ba hypothesis khác nhau
+
+Khi request timeout, tối thiểu phải tách:
+
+```text
+drop: packet bị loại ở một boundary
+delay: packet còn sống nhưng chờ queue/processing
+retransmission: transport không nhận ACK/response đúng hạn và gửi lại
+```
+
+Một retransmission counter tăng không tự chứng minh host đã drop packet; loss có thể xảy ra trên link, remote host, middlebox hoặc do ACK bị mất. Ngược lại, socket backlog đầy có thể tạo local drop trước khi TCP có cơ hội phản ứng như operator mong đợi.
+
+Evidence hữu ích nên ghép theo cùng flow/connection và time window:
+
+```text
+RX/TX ring và softirq work
+→ ingress/egress drop reason
+→ qdisc/socket backlog và queue age
+→ TCP state, retransmission, RTT/RTO
+→ wakeup/read/write delay
+→ application span/message deadline
+```
+
+Nếu queue age tăng trước khi drop, capacity/servicing là hypothesis mạnh. Nếu kernel path pass nhưng retransmission chỉ xuất hiện ở một link/vantage point, cần quay lên network path/control plane. Nếu socket có bytes nhưng task không wake/read kịp, bottleneck có thể nằm ở scheduler hoặc application backpressure thay vì packet forwarding.
+
+### Tracing packet path mà không biến tracing thành bottleneck
+
+Packet-level tracing toàn bộ traffic thường không bền vững. Một workflow an toàn hơn là:
+
+```text
+flow/CPU/drop counters
+→ sample connection hoặc namespace/CPU bị nghi
+→ correlate queue boundary bằng flow identity
+→ chỉ emit stack/event chi tiết cho một fraction nhỏ
+→ kiểm tra event loss và instrumentation overhead
+```
+
+Khi dùng per-CPU maps, phải merge theo flow/CPU mà không tạo cardinality vô hạn. Khi dùng ring buffer, ghi drop counter và consumer lag cạnh event count. Khi trace container, cần giữ network namespace, cgroup, pod/task identity và interface index; thiếu một chiều identity có thể ghép nhầm hai flow giống tuple ở các namespace khác nhau.
+
 ## 11. Off-CPU profiling
 
 CPU profiler truyền thống tập trung nơi chương trình đang execute. Nhiều production latency lại đến từ thời gian **không chạy**: lock wait, scheduler wait, I/O sleep, page fault hoặc throttling.

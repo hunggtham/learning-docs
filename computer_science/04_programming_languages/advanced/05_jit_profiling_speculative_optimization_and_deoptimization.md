@@ -239,4 +239,4 @@ Lower layer quyết định behavior có thể là instruction cache, branch beh
 
 ## Kết nối
 
-Ôn [compiler/runtime foundation](../../basic/04_programming_languages/03_compilers_interpreters_vms_and_runtime.md), đọc [compiler IR/SSA](./04_compiler_ir_ssa_dataflow_and_optimization.md), [GC internals](./06_garbage_collection_generational_concurrent_compacting_and_barriers.md), [CPU OoO](../../02_computer_architecture/advanced/01_out_of_order_execution_register_renaming_and_rob.md) và [Performance/capacity](../../08_software_systems/advanced/01_capacity_planning_utilization_knee_and_admission_control.md).
+Ôn [compiler/runtime foundation](../../basic/04_programming_languages/03_compilers_interpreters_vm_and_jit.md), đọc [compiler IR/SSA](./04_compiler_ir_ssa_dataflow_and_optimization.md), [GC internals](./06_garbage_collection_generational_concurrent_compacting_and_barriers.md), [CPU OoO](../../02_computer_architecture/advanced/01_out_of_order_execution_register_renaming_and_rob.md) và [Performance/capacity](../../08_software_systems/advanced/01_capacity_planning_utilization_knee_and_admission_control.md).

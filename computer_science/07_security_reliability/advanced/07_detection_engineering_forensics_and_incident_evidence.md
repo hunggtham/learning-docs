@@ -71,6 +71,42 @@ Giả sử detector có độ chính xác tưởng như rất tốt nhưng attac
 
 Alert fatigue là failure mode của system design, không chỉ là vấn đề con người “không tập trung”.
 
+### Đo chất lượng detector trong production
+
+Một detector không thể được đánh giá chỉ bằng số alert hoặc một accuracy score. Trước hết phải xác định **đơn vị phát hiện** và nguồn label:
+
+```text
+event-level: event nào đáng nghi?
+session/identity-level: principal nào cần điều tra?
+incident-level: chuỗi hành vi nào thực sự tạo impact?
+```
+
+Labels có thể đến từ incident đã được adjudicate, replay dữ liệu lịch sử, controlled benign/malicious scenario hoặc analyst review. Mỗi nguồn có bias riêng: incident thật thường hiếm, replay có thể thiếu attacker adaptation, còn synthetic scenario dễ sạch hơn production.
+
+Một measurement set hữu ích nên giữ ít nhất:
+
+```text
+precision = TP / (TP + FP)
+recall    = TP / (TP + FN)
+alert rate / analyst-minute
+false-negative exposure theo asset/identity/impact
+time-to-detect và time-to-triage
+```
+
+`Recall` không có ý nghĩa nếu denominator chỉ gồm những case detector đã nhìn thấy. Cần ghi rõ scope, observation window và những blind spot do telemetry thiếu. Ngược lại, precision cao nhưng mỗi alert cần một giờ điều tra vẫn có thể vượt analyst capacity.
+
+Threshold nên được chọn theo cost asymmetry:
+
+```text
+false negative cost × exposure
+vs
+false positive cost × analyst capacity
+```
+
+Khi prevalence thay đổi, precision có thể đổi dù rule không đổi. Vì vậy measurement nên được phân tầng theo tenant/asset criticality, traffic regime, deployment cohort và attack scenario; không gộp mọi event thành một con số đẹp. Calibration cũng quan trọng: score 0.8 chỉ hữu ích nếu ranking/meaning của score ổn định giữa các cohort.
+
+Quality gate tối thiểu là detector có regression set, data-quality monitor, known blind-spot list, owner chịu trách nhiệm và lịch review sau incident. Không dùng số alert thấp làm proxy cho chất lượng nếu chưa chứng minh recall và telemetry coverage.
+
 ## 5. Correlation tạo context nhưng cũng có failure modes
 
 Một login lạ chưa chắc là attack. Một privilege change riêng lẻ có thể hợp lệ. Nhưng chuỗi:

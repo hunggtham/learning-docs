@@ -117,4 +117,4 @@ Mitigation có thể cần fencing, masking, compiler transformations hoặc tha
 
 ## Kết nối
 
-Chapter này nối [OoO execution và ROB](./01_out_of_order_execution_register_renaming_and_reorder_buffer.md) với roadmap về microarchitectural side channels. Ở tầng compiler, profile-guided optimization và code layout có thể cải thiện branch behavior; ở tầng security, speculation trở thành một attack surface.
+Chapter này nối [OoO execution và ROB](./01_out_of_order_execution_register_renaming_and_rob.md) với roadmap về microarchitectural side channels. Ở tầng compiler, profile-guided optimization và code layout có thể cải thiện branch behavior; ở tầng security, speculation trở thành một attack surface.

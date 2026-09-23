@@ -36,6 +36,8 @@ Ngoài tuyến `basic/10_ai_foundations → 10_ai_foundations/advanced`, reposit
 
 Thư viện này đi theo quan hệ phụ thuộc khái niệm và mở rộng từ Transformer, LLM, Retrieval/Vector Search, RAG, Tool Calling và Agents tới Evaluation, AI Engineering, LLMOps, Reliability và Security. Nó bổ sung chiều sâu theo domain, không thay thế lớp AI Foundations dùng chung của Computer Science.
 
+> **Naming note:** `02_artificial_intelligence/` là thư viện AI chuyên sâu, `02_computer_architecture/` là Computer Architecture, còn `10_ai_foundations/` là tuyến AI foundations nằm trong bản đồ CS. README giữ boundary rõ ràng; numbering hiện tại vẫn có thể gây nhầm khi nhìn tree trực tiếp và chỉ nên đổi trong một migration có kế hoạch.
+
 ## Cách học
 
 Không cần học hết phần nền tảng rồi mới đọc phần nâng cao. Cách hợp lý hơn là đọc chapter nền tảng tương ứng để có vocabulary và mental model chính, sau đó chuyển sang phần nâng cao khi cần hiểu internals, invariant, failure behavior, performance hoặc production evidence.

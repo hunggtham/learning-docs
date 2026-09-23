@@ -108,4 +108,4 @@ Thông tin hữu ích: blocking session, lock mode/resource, wait duration, tran
 
 ## Kết nối
 
-Tiếp theo đọc [B+Tree page layout và latch coupling](./02_btree_page_layout_splits_merges_and_latch_coupling.md). Với Oracle/SQL systems, nên kết hợp execution plan, index range và transaction scope để hiểu lock footprint thực tế.
+Tiếp theo đọc [B+Tree page layout và latch coupling](./02_bplus_tree_pages_splits_merges_and_latch_coupling.md). Với Oracle/SQL systems, nên kết hợp execution plan, index range và transaction scope để hiểu lock footprint thực tế.

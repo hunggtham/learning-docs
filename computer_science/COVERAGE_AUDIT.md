@@ -1,6 +1,6 @@
 # Coverage Audit — Computer Science Canonical Library
 
-> Audit cập nhật: 2026-09-22. Vòng này vẫn **không tạo Computer Science library mới**, nhưng chủ động mở **6 canonical advanced chapters mới** cho các gap đã đủ lớn để có mental model, invariant và failure model riêng. Mục tiêu vẫn là: **foundation → internals → failure modes → pressure behavior → production evidence → lower abstraction layer**.
+> Audit cập nhật: 2026-09-23. Computer Science đã đủ rộng để vòng tiếp theo ưu tiên **deepening các gap trong owner hiện có**, không mở thêm domain lớn. Mục tiêu vẫn là: **foundation → internals → failure modes → pressure behavior → production evidence → lower abstraction layer**.
 
 Audit không hỏi “đã có keyword X chưa?”. Một domain được coi là mạnh khi người đọc có thể đi từ **problem → invariant → mechanism → assumption → failure → pressure-induced behavior → evidence → lower layer** mà không cần rời chapter chỉ để hiểu prerequisite ẩn.
 
@@ -23,7 +23,7 @@ AI Foundations
 Cross-layer Connections
 ```
 
-Không tách Network, Distributed Systems, Security, Reliability, Performance Engineering, Concurrency hay System Design thành root library mới. Specialized AI vẫn thuộc `02_artificial_intelligence/`; `10_ai_foundations/` chỉ giữ bridge CS systems/foundations.
+Không tách Network, Distributed Systems, Security, Reliability, Performance Engineering, Concurrency hay System Design thành root library mới. Specialized AI vẫn thuộc `02_artificial_intelligence/`; `10_ai_foundations/` chỉ giữ bridge CS systems/foundations. Các root mới như `cybersecurity/`, `distributed_systems/` hay `system_design/` chỉ được xem xét sau khi các gap bên dưới đã được deepen và chứng minh không còn owner phù hợp.
 
 ## 2. Computer Architecture — strong
 
@@ -31,7 +31,7 @@ Coverage đã có OoO/ROB/register renaming, speculation, cache/prefetch/replace
 
 Memory-order path đủ để reasoning từ store buffer/coherence tới ISA ordering, compiler mapping, language happens-before, RMW contention, ABA/reclamation và PMU evidence.
 
-**Gap còn lại:** power/thermal/DVFS behavior và hardware-prefetch pathology. Chỉ mở chapter nếu hai topic này không còn đặt tự nhiên trong canonical performance/memory chapters.
+Vòng này đã thêm `02_computer_architecture/advanced/07_power_thermal_dvfs_and_sustained_performance.md`, sở hữu reasoning path từ activity → power/heat → DVFS/control → sustained throughput. Hardware-prefetch pathology đã được deepen trong `02_computer_architecture/advanced/03_advanced_cache_hierarchy_prefetching_and_replacement.md`, gồm accuracy/timeliness/coverage, pollution, bandwidth theft, queue pressure và controlled comparison. Bước tiếp theo là lower-layer validation bằng hardware-event evidence, không mở chapter mới.
 
 ## 3. Operating Systems — RCU/reclamation đã thành canonical unit
 
@@ -57,7 +57,7 @@ Nó phân biệt mutual exclusion với lifetime safety, grace period với time
 
 `00_kernel_execution_contexts_and_syscall_path.md` vẫn giữ overview để người đọc hiểu context/lock/lifetime trước khi chuyển sang chapter chuyên sâu. Đây là cross-link có chủ đích, không phải hai canonical owners cạnh tranh.
 
-**Gap còn lại:** eBPF/tracing internals và selected kernel-networking path nếu tạo reasoning value độc lập.
+Vòng này đã thêm `03_operating_systems/advanced/08_ebpf_tracing_kernel_observability_and_safety.md`, sở hữu verifier/JIT, helper/map/ring-buffer, event loss, overhead và safety boundary. Chapter đã được deepen thêm cho kernel networking path: ingress/egress lifecycle, NAPI/softirq, socket/qdisc boundaries, GRO/GSO, drop-vs-delay-vs-retransmission và flow-correlated evidence. Bước tiếp theo là lower-layer validation theo driver/workload cụ thể, không mở chapter riêng nếu chỉ lặp packet-path overview.
 
 ## 4. Programming Languages & Runtime — strong
 
@@ -122,7 +122,7 @@ Pruning metadata được giữ theo invariant: false-positive work có thể ch
 
 **Coverage status:** strong cho OLTP storage-engine internals và analytical storage/execution path.
 
-**Gap còn lại:** deeper analytical cost-model/adaptive execution case studies nếu thực sự cần.
+Vòng này đã thêm `05_data_databases/advanced/09_adaptive_query_execution_runtime_filters_skew_and_reoptimization.md`, đóng gap chính về runtime feedback, dynamic filtering, skew và plan adaptation. **Gap còn lại:** analytical cost-model case studies chỉ khi có invariant/production evidence mới, không mở chapter theo technology name.
 
 ## 7. Networks — transport và inter-domain routing đều có advanced reasoning
 
@@ -158,7 +158,7 @@ Failure detectors, membership/gossip, lease/fencing, consensus/reconfiguration, 
 
 BGP chapter bổ sung một distributed policy/control-plane case nhưng không thay owner của consensus/replication material.
 
-**Gap còn lại:** joint-consensus/reconfiguration worked case và queueing under partition có thể deepen existing chapters.
+Joint-consensus/reconfiguration đã có owner trong `06_networks_distributed_systems/advanced/03_consensus_log_replication_reconfiguration_and_snapshots.md`. **Gap còn lại:** queueing under partition và worked proof sâu hơn, ưu tiên deepen chapter consensus/replication hiện có.
 
 ## 9. Security & Reliability — detection/forensics đã có canonical evidence path
 
@@ -185,7 +185,7 @@ security invariant
 
 **Coverage status:** strong cho preventive controls + production detection/forensics.
 
-**Gap còn lại:** deeper detection-quality measurement hoặc selected supply-chain security mechanism nếu tạo independent reasoning path.
+Detection/forensics và detection-quality measurement đã có canonical owner trong `07_security_reliability/advanced/07_detection_engineering_forensics_and_incident_evidence.md`; chapter hiện có measurement protocol cho label provenance, prevalence, precision/recall, analyst capacity, false-negative exposure, calibration và regression gates. **Gap còn lại:** selected software-supply-chain trust mechanism nếu tạo independent reasoning path.
 
 ## 10. Software Systems & Performance — từ single host đến fleet economics
 
@@ -272,21 +272,45 @@ Repo không có dedicated glossary cho `computer_science/`; không tạo glossar
 
 `main` có các thay đổi mới hơn thuộc TypeScript/React/Mathematics, không thuộc Computer Science. Khi đưa Computer Science lên `main`, phải preserve các thay đổi đó và merge/copy đúng `computer_science/` subtree thay vì reset hoặc force-update `main` về feature branch.
 
-## 16. Coverage còn thiếu sau expansion
+## 16. P1 — Computer Science: chỉ deepen gap, không mở thêm domain lớn
 
-Các gap đáng xem tiếp nhưng chưa mặc định cần chapter mới:
+Computer Science đã rất rộng: computation, DSA, architecture, OS, runtime, database, networking/distributed, security, software systems, software engineering, AI và HCI. Vì vậy, các gap dưới đây là backlog P1 trước khi cân nhắc mở thêm một domain root:
 
 ```text
-Architecture: power/thermal/DVFS, prefetch pathology
-OS: deeper eBPF/tracing internals, selected kernel network path
-Database: adaptive analytical execution case studies
-Distributed: reconfiguration worked proofs, partition queueing
-Security: supply-chain trust/detection-quality measurement
-AI systems: accelerator compiler/kernel scheduling, inference disaggregation
-Cross-layer: case studies nối incident evidence với cost/correctness/durability
+Architecture
+✓ power / thermal / DVFS (canonical chapter đã có)
+✓ hardware-prefetch pathology (đã deepen trong canonical cache chapter)
+
+Operating Systems
+✓ eBPF / tracing internals (canonical chapter đã có)
+✓ kernel networking path (đã deepen trong eBPF chapter; cần validation theo workload)
+
+Database
+✓ adaptive analytical execution (canonical chapter đã có)
+→ deeper analytical cost-model case studies
+
+Distributed Systems
+✓ reconfiguration owner (canonical consensus chapter đã có)
+→ reconfiguration worked proofs
+→ partition + queueing behavior
+
+Security
+→ software supply-chain trust
+✓ detection quality measurement (đã deepen trong detection chapter)
+
+AI Systems
+→ accelerator compiler / kernel scheduling
+→ inference disaggregation
+
+Cross-layer
+→ incident → correctness / durability / cost
 ```
 
-Nguyên tắc tiếp tục vẫn là **absorb vào canonical file nếu cùng invariant; chỉ tăng chapter count khi topic có mental model riêng, dependency rộng và owner boundary rõ**.
+Đây là những việc cần làm trước khi nghĩ tới các root như `cybersecurity/`, `distributed_systems/` hoặc `system_design/`; repository hiện đã có owner phù hợp cho các boundary này.
+
+Một chi tiết naming nên cân nhắc sau: hiện tồn tại cả `02_artificial_intelligence` và `02_computer_architecture`, đồng thời còn `10_ai_foundations`. README đã giải thích boundary, nhưng numbering vẫn dễ gây nhầm khi nhìn tree trực tiếp. Không rename trong vòng P1 này; chỉ chuẩn hóa khi có kế hoạch migration và cập nhật toàn bộ internal links.
+
+Các dấu `✓` là gap đã có canonical owner; mũi tên `→` là phần cần deepen tiếp theo. Nguyên tắc tiếp tục vẫn là **absorb vào canonical file nếu cùng invariant; chỉ tăng chapter count khi topic có mental model riêng, dependency rộng và owner boundary rõ**.
 
 ## 17. Quality gate
 

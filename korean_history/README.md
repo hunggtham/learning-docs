@@ -4,6 +4,8 @@ Bộ tài liệu này được thiết kế như một **knowledge library** đ�
 
 Lịch sử ở đây được đọc theo First-Principles Thinking (제1원리 사고). Một triều đại không chỉ là tên vua và niên đại. Ta sẽ hỏi nhà nước huy động thuế và quân đội bằng cách nào, tri thức được lưu trữ ra sao, ai có quyền tiếp cận đất đai, công nghệ làm thay đổi năng suất thế nào, chiến tranh làm biến dạng demographic structure ra sao, và vì sao một institution có thể tiếp tục tồn tại dù regime đã thay đổi.
 
+Đây là một case study khu vực trong [World History](../world_history/README.md): các chapter thế giới cung cấp mạng lưới Đông Á, thương mại, đế quốc, công nghiệp hoá và Chiến tranh Lạnh; library này đi sâu vào cách những lực đó được các xã hội trên bán đảo Triều Tiên tiếp nhận, thương lượng và biến đổi.
+
 ## Quy ước tên riêng Việt – Hàn – Anh
 
 Trong toàn bộ library, tên người, địa danh, triều đại, công trình, sự kiện, tác phẩm và các danh xưng lịch sử quan trọng được ghi theo nguyên tắc **tiếng Việt trước, tiếng Hàn gốc thứ hai, English/Romanization thứ ba** ở lần xuất hiện đầu tiên trong mỗi tài liệu. Ví dụ: **Cung Cảnh Phúc (경복궁 / Gyeongbokgung Palace)**, **Đại vương Thế Tông (세종대왕 / King Sejong the Great)**, **Cao Ly (고려 / Goryeo)** và **Lý Thuấn Thần (이순신 / Yi Sun-sin)**.

@@ -4,6 +4,12 @@ Bộ tài liệu này được tổ chức theo từng lĩnh vực (domain) thay
 
 Ngoài sáu lĩnh vực kiến thức chính, thư viện còn có một file quy chuẩn chung về thuật ngữ, công thức và phương pháp nghiên cứu, cùng một phần bài tập tích hợp (capstone) để nối toàn bộ quá trình từ lý thuyết → phân tích → xây vị thế → thực thi → đánh giá lại.
 
+### Ranh giới với Economics library độc lập
+
+Economics đã bắt đầu được tách tại [`../economics/README.md`](../economics/README.md). Thư viện này giữ phần general-purpose như economic reasoning, consumer/producer theory, market structure, game theory, labor, public, trade, development economics, industrial organization, econometrics và economic history.
+
+`investing/04_economics/` vẫn là nguồn chuyên sâu cho macro, monetary system, capital flows, crisis transmission, public debt, demographics, productivity và policy regime trong bối cảnh đầu tư. Hai nhánh sẽ cross-link và migrate dần; không duplicate hàng loạt nội dung.
+
 ## 00 — Thuật ngữ, công thức và quy chuẩn nghiên cứu
 
 [00_GLOSSARY_FORMULAS_AND_RESEARCH_CONVENTIONS.md](./00_GLOSSARY_FORMULAS_AND_RESEARCH_CONVENTIONS.md)

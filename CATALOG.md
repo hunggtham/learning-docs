@@ -23,7 +23,17 @@ domains:
     last_reviewed: 2026-09-23
     scope: Physics from measurement and mechanics through electromagnetism, quantum theory, matter, and astrophysics.
     prerequisites: [mathematics]
-    related: [chemistry, computer_science, biology]
+    related: [chemistry, electrical_engineering, computer_science, biology]
+  - id: electrical_engineering
+    title: Electrical Engineering
+    group: Engineering
+    path: electrical_engineering/
+    entrypoint: electrical_engineering/README.md
+    status: canonical
+    last_reviewed: 2026-09-23
+    scope: Circuits, analog and digital electronics, signals, communications, control, embedded systems, power electronics, and hardware–software interfaces.
+    prerequisites: [mathematics, physics]
+    related: [computer_science, native, devops_platform_engineering]
   - id: chemistry
     title: Chemistry
     group: Science
@@ -44,6 +54,16 @@ domains:
     scope: Life from chemistry and cells through genetics, evolution, physiology, ecology, biotechnology, and systems biology.
     prerequisites: [chemistry]
     related: [psychology, chemistry, computer_science]
+  - id: philosophy
+    title: Philosophy
+    group: Human & Society
+    path: philosophy/
+    entrypoint: philosophy/README.md
+    status: canonical
+    last_reviewed: 2026-09-23
+    scope: Philosophical reasoning, epistemology, metaphysics, philosophy of science, philosophy of mind, ethics, social-political philosophy, technology, history, and cross-domain connections.
+    prerequisites: []
+    related: [mathematics, physics, biology, psychology, computer_science]
 
   - id: computer_science
     title: Computer Science
@@ -54,15 +74,15 @@ domains:
     last_reviewed: 2026-09-23
     scope: Computing foundations, algorithms, systems, AI, databases, networks, security, software engineering, and professional connections.
     prerequisites: [mathematics]
-    related: [data_engineering, devops_platform_engineering, backend, frontend]
+    related: [electrical_engineering, data_engineering, devops_platform_engineering, backend, frontend]
   - id: backend
     title: Backend Development
     group: Computing
     path: 10_backend/
-    entrypoint: 10_backend/python/README.md
+    entrypoint: 10_backend/README.md
     status: canonical
     last_reviewed: 2026-09-23
-    scope: Backend language and framework tracks including Java, Spring, and Python runtime and production engineering.
+    scope: Framework-independent backend core concepts plus Java, Spring, and Python language/framework tracks.
     prerequisites: [computer_science]
     related: [data_engineering, devops_platform_engineering, frontend]
   - id: frontend
@@ -145,7 +165,17 @@ domains:
     last_reviewed: 2026-09-23
     scope: Korean peninsula history from prehistory through contemporary Korea with social, economic, and technology history.
     prerequisites: []
-    related: [korean_culture, korea_business_economy, korea_law_civic_life]
+    related: [world_history, korean_culture, korea_business_economy, korea_law_civic_life]
+  - id: world_history
+    title: World History
+    group: Human & Society
+    path: world_history/
+    entrypoint: world_history/README.md
+    status: canonical
+    last_reviewed: 2026-09-23
+    scope: World history as a causal system from human origins through agrarian states, classical and medieval networks, industrialisation, imperialism, world wars, the Cold War, decolonisation, and the post-Cold-War world.
+    prerequisites: []
+    related: [world_geography, korean_history, korean_culture, investing, korea_law_civic_life]
   - id: korean_culture
     title: Korean Culture
     group: Human & Society
@@ -165,7 +195,7 @@ domains:
     last_reviewed: 2026-09-23
     scope: Korean business, economy, company cases, institutions, and market reasoning.
     prerequisites: [korean_history]
-    related: [investing, korean_culture, korea_law_civic_life]
+    related: [economics, investing, korean_culture, korea_law_civic_life]
   - id: korea_law_civic_life
     title: Korea Law, Civic & Everyday Life
     group: Human & Society
@@ -176,6 +206,16 @@ domains:
     scope: Korean law, public administration, labor, housing, tax, insurance, finance, immigration, and daily procedures.
     prerequisites: [korean_history, korean_culture]
     related: [kiip, korea_business_economy]
+  - id: economics
+    title: Economics
+    group: Human & Society
+    path: economics/
+    entrypoint: economics/README.md
+    status: canonical
+    last_reviewed: 2026-09-23
+    scope: Economic reasoning, microeconomics, macroeconomics, market structure, game theory, applied fields, econometrics, and economic history and institutions.
+    prerequisites: [mathematics]
+    related: [investing, korea_business_economy, psychology, world_history]
   - id: world_geography
     title: World Geography
     group: Human & Society
@@ -185,7 +225,7 @@ domains:
     last_reviewed: 2026-09-23
     scope: Earth systems, regional geography, world atlas, human geography, and global connections.
     prerequisites: []
-    related: [biology, physics, korea_business_economy]
+    related: [world_history, biology, physics, korea_business_economy]
 
   - id: investing
     title: Investing
@@ -194,9 +234,9 @@ domains:
     entrypoint: investing/README.md
     status: canonical
     last_reviewed: 2026-09-23
-    scope: Investing foundations, asset classes, company analysis, economics, trading, derivatives, and Korea/Vietnam markets.
+    scope: Investing foundations, asset classes, company analysis, applied economics, trading, derivatives, and Korea/Vietnam markets.
     prerequisites: [mathematics]
-    related: [korea_business_economy, pmp, sql]
+    related: [economics, korea_business_economy, pmp, sql]
   - id: pmp
     title: Project Management / PMP
     group: Professional
@@ -272,6 +312,9 @@ Science
 ├── Chemistry
 └── Biology
 
+Engineering
+└── Electrical Engineering
+
 Computing
 ├── Computer Science
 ├── Backend Development
@@ -283,11 +326,14 @@ Computing
 └── Automation
 
 Human & Society
+├── Philosophy
 ├── Psychology
 ├── Korean History
+├── World History
 ├── Korean Culture
 ├── Korea Business & Economy
 ├── Korea Law, Civic & Everyday Life
+├── Economics
 └── World Geography
 
 Professional
@@ -316,6 +362,44 @@ Mỗi entry trong YAML front matter có các field tối thiểu:
 - `related`: các domain có quan hệ knowledge graph trực tiếp.
 
 Khi thêm library mới, cập nhật cả YAML metadata và cây domain trong file này. Không rename/move hàng loạt folder nếu chưa có kế hoạch cập nhật internal links.
+
+## 7. Economics: bắt đầu tách thành domain độc lập
+
+Đã tạo [`economics/`](economics/README.md) ở mức bootstrap để học Economics như một ngành độc lập với investment. Lộ trình mới bao phủ consumer/producer theory, market structure, game theory, labor economics, public economics, international trade, development economics, industrial organization, econometrics và economic history.
+
+Phần Economics hiện có trong [`investing/04_economics/`](investing/04_economics/) vẫn là nguồn chuyên sâu cho bối cảnh đầu tư. Hai nhánh sẽ được migrate và cross-link dần; không copy hàng loạt nội dung hoặc làm hỏng internal links. Trong giai đoạn chuyển tiếp, `economics/` giữ foundation và các chủ đề general-purpose, còn `investing/04_economics/` giữ macro/policy/market-transmission phục vụ investment.
+
+## 8. P3 — Electrical / Electronics / Control
+
+Physics hiện đã rất mạnh, bao gồm Maxwell, circuits, transmission line, semiconductor, MOSFET, signal/noise và các nền tảng liên quan. Nhưng **Physics không đồng nghĩa với Electrical Engineering**: engineering cần thêm topology, design trade-off, measurement, timing, power, control, verification và failure handling.
+
+Vì vậy đã thêm [`electrical_engineering/`](electrical_engineering/README.md) như một domain P3, với cấu trúc:
+
+```text
+electrical_engineering/
+├── circuits
+├── analog_electronics
+├── digital_electronics
+├── signals_and_systems
+├── communication_systems
+├── control_systems
+├── embedded_systems
+├── power_electronics
+└── hardware_software_interfaces
+```
+
+Bridge kiến thức chủ đích:
+
+```text
+Physics
+→ Electronics
+→ Digital logic
+→ Computer Architecture
+→ Embedded
+→ Software
+```
+
+Đây là một library canonical đã có core chapter cho cả 9 nhánh, dependency map và coverage audit; các chapter chuyên sâu sẽ được mở rộng theo từng nhánh, không duplicate Physics hoặc Computer Science.
 
 ## Domain entrypoints
 
