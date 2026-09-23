@@ -1,12 +1,12 @@
-# 8. 정보 보안 일반 및 시스템 보안 (Bảo mật thông tin & Hệ thống)
+# 2. 데이터 전송 방식 및 변조 (Phương thức truyền & Điều chế)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **8. 정보 보안 일반 및 시스템 보안 (Bảo mật thông tin & Hệ thống)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **2. 데이터 전송 방식 및 변조 (Phương thức truyền & Điều chế)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-정보, 보안, 일반, 시스템
+데이터, 전송, 방식, 변조
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,28 +22,32 @@
 
 ---
 
-## 8. 정보 보안 일반 및 시스템 보안 (Bảo mật thông tin & Hệ thống)
+## 2. 데이터 전송 방식 및 변조 (Phương thức truyền & Điều chế)
 
-### 8.1 보안 기본 요소 및 프레임워크
-- **보안 3대 요소 (CIA Triad):**
-  - **기밀성 (Confidentiality):** 인가된 사용자에게만 접근 허용.
-  - **무결성 (Integrity):** 인가된 사용자만 수정 가능.
-  - **가용성 (Availability):** 인가받은 사용자는 언제라도 사용 가능.
-- **Seven Touchpoints:** 소프트웨어 보안 모범사례를 SDLC(소프트웨어 생명주기)에 통합.
-- **OWASP:** 웹 보안 취약점을 연구하는 비영리 단체.
-- **관리적/물리적/기술적 보안:**
-  - 관리적 (정책, 교육), 물리적 (출입 통제, 재해 복구), 기술적 (사용자 인증, 접근 제어).
-- **Tiếng Việt:** 3 yếu tố bảo mật CIA: Tính bảo mật, Tính toàn vẹn, Tính sẵn sàng.
+### 2.1 통신 방식 및 전송 동기 (Transmission Modes & Sync)
+- **방향에 따른 분류:** 단방향 (Simplex), 반이중 (Half-Duplex, 무전기), 전이중 (Full-Duplex, 전화).
+- **비동기식 (Asynchronous):** 문자마다 Start Bit / Stop Bit를 붙여 전송. 저속 단거리, 오버헤드 큼.
+- **동기식 (Synchronous):** 프레임(블록) 단위로 일시에 전송. 속도 빠르고 효율 좋음. 비트/블록 동기 방식.
+- **Tiếng Việt:**
+  - Đơn công (Simplex), Bán song công (Half-Duplex), Song công toàn phần (Full-Duplex).
+  - Bất đồng bộ: Dùng Start/Stop bit (overhead cao). Đồng bộ: Truyền theo block (nhanh, hiệu quả).
 
-### 8.2 시스템 보안 기술
-- **TCP 래퍼 (TCP Wrapper):** 외부 접속 인가 여부를 점검하여 허용/거부하는 도구.
-- **Secure OS:** 보안 기능을 갖춘 커널을 이식하여 시스템 자원 보호.
-- **침입 탐지 시스템 (IDS):** 실시간으로 비정상적 사용 탐지 (오용 탐지: 패턴 기반, 이상 탐지: 평균 상태 기준).
-- **고가용성 솔루션 (HACMP):** 장애 발생 시 즉시 다른 시스템으로 대체 가능하게 하는 환경.
-- **인증 (Authentication):** 지식 기반(패스워드), 소유 기반(스마트카드), 행위 기반(서명).
-- **커널 로그:**
-  - `wtmp`: 성공한 로그인/로그아웃.
-  - `utmp`: 현재 로그인 상태.
-  - `btmp`: 실패한 로그인.
-  - `lastlog`: 마지막 성공 로그인.
-- **Tiếng Việt:** Secure OS, IDS (phát hiện xâm nhập), HACMP (giải pháp độ sẵn sàng cao). Phân loại log kernel (wtmp, utmp, v.v.).
+### 2.2 신호 변환 장치 (MODEM & DSU)
+- **모뎀 (MODEM):** 디지털 ↔ 아날로그 변환.
+- **DSU (Digital Service Unit):** 디지털 ↔ 디지털 (단극성 ↔ 양극성 변환). 디지털 전용선에 사용.
+- **Tiếng Việt:** MODEM (Chuyển đổi Số <-> Tương tự). DSU (Chuyển đổi Số <-> Số).
+- 💡 **Mẹo ghi nhớ:** MO-Dem = MOdulation - DEModulation. D-SU = Digital - Digital.
+
+### 2.3 디지털 변조 (Digital Modulation - Keying)
+- **ASK (진폭 편이):** 진폭 변화.
+- **FSK (주파수 편이):** 주파수 변화 (1,200bps 이하).
+- **PSK (위상 편이):** 위상 변화 (중/고속 모뎀).
+- **QAM (직교 진폭 변조):** 진폭과 위상 동시 변화 (고속, 9,600bps 표준).
+- **Tiếng Việt:** Điều chế tín hiệu số sang tương tự: ASK (Biên độ), FSK (Tần số), PSK (Pha), QAM (Biên độ + Pha kết hợp cho tốc độ cao).
+
+### 2.4 PCM (Pulse Code Modulation)
+- 아날로그 데이터를 디지털 신호로 변환. CODEC 이용.
+- **과정:** 표본화(Sampling) → 양자화(Quantizing) → 부호화(Encoding) → 복호화(Decoding) → 여파화(Filtering).
+- **표본화 (Sampling):** 횟수 = 2 × 최고 주파수.
+- **Tiếng Việt:** Biến đổi Tương tự -> Số (dùng CODEC). Quá trình: Lấy mẫu -> Lượng tử hóa -> Mã hóa.
+- 💡 **Mẹo ghi nhớ:** Mẫu Lượng Mã Giải Lọc (Lấy mẫu -> Lượng tử hóa -> Mã hóa -> Giải mã -> Lọc).

@@ -66,6 +66,14 @@ def main() -> int:
         for required in ("Source canonical", "Quality gates", "2023.1.1–2025.12.31"):
             if required not in matrix_text:
                 errors.append(f"output/COVERAGE_MATRIX.md: missing marker {required}")
+    research = OUTPUT / "RESEARCH_REGISTER.md"
+    if not research.exists():
+        errors.append("output/RESEARCH_REGISTER.md: missing research register")
+    else:
+        research_text = research.read_text(encoding="utf-8")
+        for required in ("Q-Net", "RFC 8200", "Oracle Java Language Specification"):
+            if required not in research_text:
+                errors.append(f"output/RESEARCH_REGISTER.md: missing source {required}")
 
     total_links = 0
     for path in files:

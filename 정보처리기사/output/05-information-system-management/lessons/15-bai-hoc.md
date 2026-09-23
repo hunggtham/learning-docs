@@ -1,12 +1,12 @@
-# 9. 암호화 기술 (Công nghệ Mã hóa)
+# 4. 오류 제어 및 교환 방식 (Kiểm soát lỗi & Chuyển mạch)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **9. 암호화 기술 (Công nghệ Mã hóa)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **4. 오류 제어 및 교환 방식 (Kiểm soát lỗi & Chuyển mạch)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-암호화, 기술
+오류, 제어, 교환, 방식
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,22 +22,52 @@
 
 ---
 
-## 9. 암호화 기술 (Công nghệ Mã hóa)
+## 4. 오류 제어 및 교환 방식 (Kiểm soát lỗi & Chuyển mạch)
 
-### 9.1 개인키 vs 공개키 암호화 (대칭키 vs 비대칭키)
-- **개인키(대칭키) 암호화 (Private/Symmetric Key):**
-  - **동일한 키**로 암호화/복호화. 속도가 빠름. 암호화 키 개수: n(n-1)/2.
-  - 종류:
-    - **블록 암호화:** DES, SEED, AES, ARIA, IDEA
-    - **스트림 암호화:** LFSR, RC4
-- **공개키(비대칭키) 암호화 (Public/Asymmetric Key):**
-  - 암호화(공개키), 복호화(비밀키/개인키). 키 개수: **2n**.
-  - 대표 알고리즘: **RSA** (소인수분해 기반).
+### 4.1 오류 발생 원인 및 제어 (Error Causes & Control)
+- **원인:** 감쇠, 지연 왜곡, 상호 변조, 누화 잡음, 충격성 잡음(디지털 통신 주요인).
+- **FEC (순방향 오류 수정):** 여분 비트를 함께 보내 수신 측이 재전송 없이 오류를 검출·수정 (해밍 코드 등). 오버헤드가 크고 역채널이 필요 없다.
+- **BEC/ARQ (역방향 오류 제어):** 수신 측이 오류를 검출한 뒤 송신 측에 재전송을 요청한다. CRC·패리티는 주로 검출에 사용되고, Stop-and-Wait·Go-Back-N·Selective Repeat가 대표적인 ARQ 방식이다.
 - **Tiếng Việt:**
-  - Khóa cá nhân (Đối xứng): Cùng 1 khóa, nhanh. (DES, AES, ARIA).
-  - Khóa công khai (Bất đối xứng): 2 khóa (Public để mã hóa, Private để giải mã), an toàn nhưng chậm. (RSA).
+  - FEC: Tự sửa lỗi (vd: Hamming Code).
+  - BEC: Yêu cầu gửi lại (vd: CRC, Parity).
 
-### 9.2 해시 및 기타 암호화 요소
-- **해시 (Hash):** 임의의 길이를 고정된 길이로 변환. 복호화가 불가한 **일방향 함수**. (종류: SHA, MD4, MD5 등).
-- **솔트 (Salt):** 암호화 전 원문에 무작위 값을 덧붙이는 과정. (패스워드 보안 강화용).
-- **Tiếng Việt:** Hash là hàm một chiều không thể giải mã (SHA, MD5). Salt là thêm chuỗi ngẫu nhiên trước khi mã hóa để chống tấn công từ điển.
+### 4.2 ARQ (자동 반복 요청) 및 오류 검출 방식
+- **ARQ 종류:**
+  - **Stop-and-Wait:** 한 블록 보내고 기다림.
+  - **Go-Back-N:** 오류 발생 지점부터 *모두* 재전송.
+  - **Selective Repeat:** 오류 발생 블록*만* 재전송 (버퍼 필요, 복잡).
+  - **Adaptive:** 채널 상태에 따라 동적 변경.
+- **오류 검출 및 수정:**
+  - **패리티 (Parity):** 1비트 검출, 짝수오류 검출 불가.
+  - **CRC:** 다항식 기반, 집단 오류 검출 특화 (HDLC 사용).
+  - **해밍 코드 (Hamming Code):** 1비트 *수정* 가능. `2^n` 번째 자리에 비트 삽입.
+- **Tiếng Việt:**
+  - Go-Back-N: Gửi lại từ lỗi. Selective Repeat: Chỉ gửi lại gói lỗi.
+  - CRC: Kiểm tra đa thức (phổ biến nhất). Hamming Code: Sửa được lỗi 1 bit.
+
+### 4.3 교환 방식 (Switching Methods)
+- **회선 교환 (Circuit Switching):** 물리적 전용선 할당. 고정 대역, 연속적 데이터 전송. (접속 지연 O, 전송 지연 X). 전화망.
+- **축적 교환 (Store-and-Forward):** 데이터를 저장했다가 경로를 찾아 전송.
+  - **메시지 교환 (Message Switching):** 전체 메시지 전송. 지연 매우 긺.
+  - **패킷 교환 (Packet Switching):** 패킷 단위로 잘라서 전송 (다음 파트에서 상세 서술).
+- **Tiếng Việt:**
+  - Circuit Switching (Chuyển mạch kênh): Tạo đường truyền vật lý (Điện thoại).
+  - Message Switching (Chuyển mạch thông điệp): Lưu rồi chuyển toàn bộ.
+
+### 4.4 패킷 교환 방식 및 네트워크 기능 (Packet Switching & Network Functions)
+- **가상 회선 (Virtual Circuit):** 패킷 교환 전에 논리적인 가상 회선을 설정. 전송 순서가 보장되며 신뢰성이 높음. (호 설정 → 데이터 전송 → 호 해제).
+- **데이터그램 (Datagram):** 연결 경로 설정 없이 각 패킷이 독립적으로 운반됨. 패킷마다 경로가 다르고 순서가 다를 수 있음. 짧은 데이터 전송에 적합.
+- **패킷 교환망의 기능:** 패킷 다중화, 논리 채널 설정, 경로 제어, 순서 제어, 트래픽 제어, 오류 제어.
+- **Tiếng Việt:**
+  - Virtual Circuit: Tạo đường dẫn ảo trước khi truyền (thứ tự được đảm bảo).
+  - Datagram: Truyền độc lập không cần tạo đường dẫn (thứ tự có thể thay đổi).
+
+### 4.5 트래픽 제어 및 라우팅 심화 (Traffic Control & Routing)
+- **경로 설정 방식 (Routing Strategies):**
+  - **고정 경로 (Static):** 미리 정해진 경로 사용.
+  - **적응 경로 (Adaptive):** 트래픽 상황에 따라 동적 변경.
+  - **범람 (Flooding):** 모든 경로로 패킷 복사 전송 (네트워크 정보 불필요).
+  - **임의 경로 (Random):** 인접 교환기 중 임의 선택.
+- **폭주(혼잡) 제어 (Congestion Control):** 오버플로를 방지하기 위해 네트워크 내 패킷 수 조절.
+- **Tiếng Việt:** Routing có Static (Tĩnh), Adaptive (Động), Flooding (Tràn ngập). Congestion Control giúp chống quá tải mạng.

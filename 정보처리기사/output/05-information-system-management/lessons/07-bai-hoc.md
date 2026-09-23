@@ -1,12 +1,12 @@
-# 4. 오류 제어 및 교환 방식 (Kiểm soát lỗi & Chuyển mạch)
+# 프로젝트 일정 관리 (Project Schedule Management)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **4. 오류 제어 및 교환 방식 (Kiểm soát lỗi & Chuyển mạch)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **프로젝트 일정 관리 (Project Schedule Management)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-오류, 제어, 교환, 방식
+프로젝트, 일정, 관리
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,52 +22,14 @@
 
 ---
 
-## 4. 오류 제어 및 교환 방식 (Kiểm soát lỗi & Chuyển mạch)
+## 프로젝트 일정 관리 (Project Schedule Management)
 
-### 4.1 오류 발생 원인 및 제어 (Error Causes & Control)
-- **원인:** 감쇠, 지연 왜곡, 상호 변조, 누화 잡음, 충격성 잡음(디지털 통신 주요인).
-- **FEC (순방향 오류 수정):** 여분 비트를 함께 보내 수신 측이 재전송 없이 오류를 검출·수정 (해밍 코드 등). 오버헤드가 크고 역채널이 필요 없다.
-- **BEC/ARQ (역방향 오류 제어):** 수신 측이 오류를 검출한 뒤 송신 측에 재전송을 요청한다. CRC·패리티는 주로 검출에 사용되고, Stop-and-Wait·Go-Back-N·Selective Repeat가 대표적인 ARQ 방식이다.
-- **Tiếng Việt:**
-  - FEC: Tự sửa lỗi (vd: Hamming Code).
-  - BEC: Yêu cầu gửi lại (vd: CRC, Parity).
+### 1. PERT (Program Evaluation and Review Technique)
+과거 경험이 없어 예측이 어려운 프로젝트에 사용. 각 작업별로 낙관치, 기대치, 비관치를 나누어 종료 시기를 계산합니다.
+- `예측치 = (비관치 + 4*기대치 + 낙관치) / 6`
 
-### 4.2 ARQ (자동 반복 요청) 및 오류 검출 방식
-- **ARQ 종류:**
-  - **Stop-and-Wait:** 한 블록 보내고 기다림.
-  - **Go-Back-N:** 오류 발생 지점부터 *모두* 재전송.
-  - **Selective Repeat:** 오류 발생 블록*만* 재전송 (버퍼 필요, 복잡).
-  - **Adaptive:** 채널 상태에 따라 동적 변경.
-- **오류 검출 및 수정:**
-  - **패리티 (Parity):** 1비트 검출, 짝수오류 검출 불가.
-  - **CRC:** 다항식 기반, 집단 오류 검출 특화 (HDLC 사용).
-  - **해밍 코드 (Hamming Code):** 1비트 *수정* 가능. `2^n` 번째 자리에 비트 삽입.
-- **Tiếng Việt:**
-  - Go-Back-N: Gửi lại từ lỗi. Selective Repeat: Chỉ gửi lại gói lỗi.
-  - CRC: Kiểm tra đa thức (phổ biến nhất). Hamming Code: Sửa được lỗi 1 bit.
+### 2. CPM (Critical Path Method, 임계 경로 기법)
+작업 사이의 의존 관계를 노드와 간선으로 구성. 네트워크에서 최장 경로가 **임계 경로(Critical Path)**가 됩니다.
 
-### 4.3 교환 방식 (Switching Methods)
-- **회선 교환 (Circuit Switching):** 물리적 전용선 할당. 고정 대역, 연속적 데이터 전송. (접속 지연 O, 전송 지연 X). 전화망.
-- **축적 교환 (Store-and-Forward):** 데이터를 저장했다가 경로를 찾아 전송.
-  - **메시지 교환 (Message Switching):** 전체 메시지 전송. 지연 매우 긺.
-  - **패킷 교환 (Packet Switching):** 패킷 단위로 잘라서 전송 (다음 파트에서 상세 서술).
-- **Tiếng Việt:**
-  - Circuit Switching (Chuyển mạch kênh): Tạo đường truyền vật lý (Điện thoại).
-  - Message Switching (Chuyển mạch thông điệp): Lưu rồi chuyển toàn bộ.
-
-### 4.4 패킷 교환 방식 및 네트워크 기능 (Packet Switching & Network Functions)
-- **가상 회선 (Virtual Circuit):** 패킷 교환 전에 논리적인 가상 회선을 설정. 전송 순서가 보장되며 신뢰성이 높음. (호 설정 → 데이터 전송 → 호 해제).
-- **데이터그램 (Datagram):** 연결 경로 설정 없이 각 패킷이 독립적으로 운반됨. 패킷마다 경로가 다르고 순서가 다를 수 있음. 짧은 데이터 전송에 적합.
-- **패킷 교환망의 기능:** 패킷 다중화, 논리 채널 설정, 경로 제어, 순서 제어, 트래픽 제어, 오류 제어.
-- **Tiếng Việt:**
-  - Virtual Circuit: Tạo đường dẫn ảo trước khi truyền (thứ tự được đảm bảo).
-  - Datagram: Truyền độc lập không cần tạo đường dẫn (thứ tự có thể thay đổi).
-
-### 4.5 트래픽 제어 및 라우팅 심화 (Traffic Control & Routing)
-- **경로 설정 방식 (Routing Strategies):**
-  - **고정 경로 (Static):** 미리 정해진 경로 사용.
-  - **적응 경로 (Adaptive):** 트래픽 상황에 따라 동적 변경.
-  - **범람 (Flooding):** 모든 경로로 패킷 복사 전송 (네트워크 정보 불필요).
-  - **임의 경로 (Random):** 인접 교환기 중 임의 선택.
-- **폭주(혼잡) 제어 (Congestion Control):** 오버플로를 방지하기 위해 네트워크 내 패킷 수 조절.
-- **Tiếng Việt:** Routing có Static (Tĩnh), Adaptive (Động), Flooding (Tràn ngập). Congestion Control giúp chống quá tải mạng.
+### 3. 간트 차트 (Gantt Chart, 시간선 차트)
+각 작업의 시작과 종료를 막대 도표로 표시하는 일정표. 적응성이 약하지만 이정표와 작업 기간을 한눈에 파악하기 쉽습니다.

@@ -8,7 +8,7 @@
 | Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm) | 94 | `Subject_2.md` | 필기 범위 검토 완료 |
 | Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu) | 55 | `Subject_3.md` | 필기 범위 검토 완료 |
 | Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình) | 77 | `Subject_4.md` | 필기 범위 검토 완료 |
-| Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin) | 19 | `Subject_5.md` | 필기 범위 검토 완료 |
+| Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin) | 61 | `Subject_5.md` | 필기 범위 검토 완료 |
 
 ## Quality gates
 

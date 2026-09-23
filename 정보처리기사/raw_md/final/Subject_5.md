@@ -2623,7 +2623,7 @@ SJF의 단점(긴 작업 불리)을 보완하여 대기 시간과 실행 시간�
 
 ### 소프트웨어 재사용과 재공학 (Software Reuse & Reengineering)
 - **소프트웨어 재사용 (Reuse)**: 이미 검증된 소프트웨어를 새로운 개발에 사용하여 개발 시간 및 비용 단축, 품질 향상.
-- **소프트웨어 재공학 (Reengineering)**: 기존 시스템을 유지보수 관점에서 개조 및 개선하여 새로운 기능을 추가하고 성능을 높이는 기술 (예방 유지보수 측면).
+- **소프트웨어 재공학 (Reengineering)**: 기존 시스템의 분석·재구성·역공학·이식 등을 통해 유지보수성과 수명을 개선하는 활동이다. 신규 기능 추가 자체와 동일한 개념은 아니다.
 
 > **Vietnamese Explanation**: 
 > - **Methodologies**: Structured (Tập trung vào quá trình), Information Engineering (Tập trung vào dữ liệu), CBD (Lắp ráp từ các linh kiện có sẵn).
@@ -2659,10 +2659,10 @@ SJF의 단점(긴 작업 불리)을 보완하여 대기 시간과 실행 시간�
 
 ### 2. 수학적 산정 기법
 과거의 프로젝트 데이터를 기반으로 한 상향식 비용 산정 모델입니다.
-- **COCOMO 모형 (Boehm 제안)**: LOC 기반 산정. 소프트웨어 규모에 따라 3가지로 분류.
-  1. **조직형 (Organic)**: 5만 라인 이하 (중소 규모 업무용).
-  2. **반분리형 (Semi-Detached)**: 30만 라인 이하 (컴파일러, 유틸리티).
-  3. **내장형 (Embedded)**: 30만 라인 이상 (초대형 운영체제, 미사일 제어).
+- **COCOMO 모형 (Boehm 제안)**: LOC 기반 산정. 고전 COCOMO의 경계는 다음처럼 겹치지 않게 해석한다.
+  1. **조직형 (Organic)**: `≤ 50 KDSI` (중소 규모 업무용).
+  2. **반분리형 (Semi-Detached)**: `> 50 ~ 300 KDSI` (컴파일러, 유틸리티).
+  3. **내장형 (Embedded)**: `> 300 KDSI` (초대형 운영체제, 미사일 제어).
 - **Putnam 모형 (생명 주기 예측 모형)**: 시간에 따른 **Rayleigh-Norden 곡선**의 노력 분포도를 기초로 산정.
 - **FP (Function Point, 기능 점수) 모형**: 알브레히트(Albrecht) 제안. 기능 요인(입력, 출력, 사용자 질의, 데이터 파일, 외부 인터페이스)별로 가중치를 부여해 산정.
 
@@ -2865,7 +2865,7 @@ SJF의 단점(긴 작업 불리)을 보완하여 대기 시간과 실행 시간�
 - **종류**: RSA.
 
 ### 3. 해시(Hash)와 솔트(Salt)
-- **해시 (Hash)**: 임의의 길이 데이터를 고정된 길이의 값으로 변환(단방향). 무결성 검증 및 패스워드 암호화에 사용 (예: SHA-256, MD5).
+- **해시 (Hash)**: 임의의 길이 데이터를 고정된 길이의 값으로 변환하는 일방향 함수다. 무결성 검증에 사용하며, 패스워드는 전용 password hashing/KDF와 salt를 사용해야 한다. 해시는 암호화처럼 복호화하지 않는다 (예: SHA-256, MD5).
 - **솔트 (Salt)**: 암호화 전 원문에 덧붙이는 무작위 값. 동일한 패스워드라도 솔트가 다르면 해시값이 달라져 레인보우 테이블 공격을 방어합니다.
 
 > **Vietnamese Explanation**: 
@@ -2964,7 +2964,7 @@ SJF의 단점(긴 작업 불리)을 보완하여 대기 시간과 실행 시간�
 
 
 
-# ⦁ 보안 취약점 및 보안 기능 (Lỗ hổng bảo mật & Chức năng bảo mật)
+## ⦁ 보안 취약점 및 보안 기능 (Lỗ hổng bảo mật & Chức năng bảo mật)
 
 ## 1. 메모리 버퍼 오버플로 (Memory Buffer Overflow / Tràn bộ đệm bộ nhớ)
 - **개념**: 연속된 메모리 공간을 사용하는 프로그램에서 할당된 메모리의 범위를 넘어선 위치에서 자료를 읽거나 쓰려고 할 때 발생하는 취약점.
@@ -2984,12 +2984,12 @@ SJF의 단점(긴 작업 불리)을 보완하여 대기 시간과 실행 시간�
 - **대책**: 외부 입력값을 검증 없이 내부 명령어로 사용하지 않음.
 
 ## 3. 사이트 간 요청 위조 (CSRF; Cross-Site Request Forgery / Giả mạo yêu cầu liên trang)
-- **개념**: 사용자가 자신의 의지와 무관하게 공격자가 의도한 행위를 특정 웹사이트에 요청하게 하는 취약점.
+- **개념**: 로그인 세션이나 쿠키가 남아 있는 사용자의 브라우저가 공격자가 의도한 상태 변경 요청을 보내도록 유도하는 취약점.
 - **Tiếng Việt**: Lợi dụng phiên đăng nhập (session) hợp lệ của người dùng để thực hiện các yêu cầu không mong muốn.
 - **예시 (Example)**: 
   - (KR) 로그인된 상태에서 공격자가 보낸 링크를 클릭하면 내 계정에서 몰래 송금이 됨.
   - (VN) Khi đang đăng nhập ngân hàng, lỡ click vào link của hacker thì bị tự động chuyển tiền.
-- **대책**: GET 방식 대신 POST 방식 사용, CSRF 토큰 사용.
+- **대책**: CSRF 토큰과 SameSite 쿠키를 사용하고, 서버에서 Origin/Referer와 인증 상태를 검증한다. POST만으로는 충분하지 않다.
 - 💡 **Mẹo ghi nhớ**: C-S-R-F = Cứ Sợ Rằng Fake (Sợ người dùng thật nhưng gửi request fake).
 
 ## 4. 보안 기능 및 에러 처리 (Chức năng bảo mật & Xử lý lỗi)
@@ -3003,7 +3003,7 @@ SJF의 단점(긴 작업 불리)을 보완하여 대기 시간과 실행 시간�
 
 ---
 
-# ⦁ 코드 오류 및 API 오용 (Lỗi mã nguồn & Dùng sai API)
+## ⦁ 코드 오류 및 API 오용 (Lỗi mã nguồn & Dùng sai API)
 
 ## 1. 널 포인터 역참조 (Null Pointer Dereference / Tham chiếu ngược con trỏ Null)
 - **개념**: 널 포인터(값이 없는 메모리 주소)가 가리키는 메모리에 값을 저장하거나 읽을 때 발생하는 오류.
@@ -3018,15 +3018,15 @@ SJF의 단점(긴 작업 불리)을 보완하여 대기 시간과 실행 시간�
 - **초기화되지 않은 변수 사용 (Uninitialized Variable)**: 변수 선언 후 값을 넣지 않고 사용하여 이전 쓰레기 값이 노출됨. (Dùng biến chưa khởi tạo giá trị).
 
 ## 3. 취약한 API 사용 (Vulnerable API / API dễ bị tổn thương)
-- **개념**: 보안 문제로 금지된 함수 (예: C언어의 `strcpy`, `strcat`) 사용.
+- **개념**: 입력 길이·권한·오류 조건을 충분히 검증하지 않는 API를 사용하여 취약점을 만드는 것 (예: C언어의 `strcpy`, `strcat`).
 - **Tiếng Việt**: Sử dụng các hàm không an toàn, dễ gây lỗi tràn bộ đệm (như `strcpy`).
 - **예시 (Example)**: 
-  - (KR) 길이 제한이 없는 `strcpy()` 대신 길이를 지정하는 `strncpy()` 사용.
+  - (KR) 길이 제한이 없는 `strcpy()` 대신 입력 길이와 널 종료를 명시적으로 검증한다. `strncpy()`도 널 종료가 보장되지 않을 수 있으므로 무조건 안전한 대체재로 보지 않는다.
   - (VN) Dùng `strncpy()` (có giới hạn độ dài) thay cho `strcpy()` (copy không giới hạn).
 
 ---
 
-# 106 암호 알고리즘 (Cryptography Algorithms / Thuật toán mã hoá)
+## 106 암호 알고리즘 (Cryptography Algorithms / Thuật toán mã hoá)
 
 ## 1. 암호화 기본 개념 (Concepts)
 - **평문 (Plain)**: Bản rõ (chưa mã hoá)
@@ -3063,7 +3063,7 @@ SJF의 단점(긴 작업 불리)을 보완하여 대기 시간과 실행 시간�
 
 ---
 
-# 108 서버 인증 & 109 접근 제어 (Server Authentication & Access Control)
+## 108 서버 인증 & 109 접근 제어 (Server Authentication & Access Control)
 
 ## 1. 인증 기술 (Authentication Types)
 - **지식 기반 (Knowledge)**: 알고 있는 것 (Mật khẩu, mã PIN).
@@ -3088,7 +3088,7 @@ SJF의 단점(긴 작업 불리)을 보완하여 대기 시간과 실행 시간�
 
 ---
 
-# 5과목 추가: 소프트웨어 재사용, 산정 기법, 프레임워크
+## 5과목 추가: 소프트웨어 재사용, 산정 기법, 프레임워크
 
 ## 318. 소프트웨어 재사용 (Software Reuse / Tái sử dụng phần mềm)
 - **개념**: 검증된 소프트웨어의 일부를 다시 사용 (Sử dụng lại các phần mềm đã được kiểm chứng để giảm chi phí, tăng chất lượng).

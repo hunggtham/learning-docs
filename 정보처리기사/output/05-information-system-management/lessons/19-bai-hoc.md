@@ -1,12 +1,12 @@
-# 001. 소프트웨어 생명 주기 (Software Life Cycle)
+# 5. 네트워크 통신망 및 주소 체계 (Mạng lưới & Hệ thống Địa chỉ)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **001. 소프트웨어 생명 주기 (Software Life Cycle)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **5. 네트워크 통신망 및 주소 체계 (Mạng lưới & Hệ thống Địa chỉ)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-소프트웨어, 생명, 주기
+네트워크, 통신망, 주소, 체계
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,7 +22,40 @@
 
 ---
 
-## 001. 소프트웨어 생명 주기 (Software Life Cycle)
-* **개념**: 소프트웨어를 개발하기 위해 정의하고 운용, 유지보수 등의 과정을 각 단계별로 나눈 것. (소프트웨어 수명 주기)
-  * *Tiếng Việt*: Vòng đời phần mềm là việc chia quá trình từ định nghĩa, phát triển, vận hành đến bảo trì phần mềm thành các giai đoạn.
-  * *Ví dụ*: 앱을 기획하고, 만들고, 출시 후 업데이트하는 전체 과정. (Toàn bộ quá trình từ lên kế hoạch, tạo, đến cập nhật app sau khi ra mắt).
+## 5. 네트워크 통신망 및 주소 체계 (Mạng lưới & Hệ thống Địa chỉ)
+
+### 5.1 LAN 및 매체 접근 제어 (LAN & MAC)
+- **LAN (Local Area Network):** 단일 기관 소유, 고속 전송, 오류율 낮음.
+- **IEEE 802 주요 규격:**
+  - `802.1` (전체 구성), `802.2` (LLC), `802.3` (CSMA/CD), `802.4` (토큰 버스), `802.5` (토큰 링), `802.11` (무선 LAN).
+- **CSMA/CD (Carrier Sense Multiple Access/Collision Detection):** 채널 사용권 경쟁. 충돌 감지.
+  - 규격 명칭 (예: `10 BASE T` - 10Mbps, 베이스밴드, 꼬임선).
+  - **이더넷 (Ethernet):** CSMA/CD 방식을 사용하는 LAN.
+- **Tiếng Việt:** Mạng LAN cục bộ. IEEE 802.3 là tiêu chuẩn CSMA/CD (Ethernet - phát hiện xung đột).
+
+### 5.2 기타 통신망 (VAN, ISDN)
+- **VAN (부가 가치 통신망):** 공중 통신망을 임대해 정보 가공/변환 등 부가 가치를 첨가해 서비스 제공.
+- **ISDN (종합 정보 통신망):** 음성/문자/영상을 디지털 방식으로 종합 제공.
+- **Tiếng Việt:**
+  - VAN: Mạng giá trị gia tăng (thuê đường truyền, thêm dịch vụ).
+  - ISDN: Mạng số đa dịch vụ tích hợp.
+
+### 5.3 인터넷 주소 체계 (IP Addresses)
+- **IPv4:** 32비트 (8비트 × 4부분). 클래스 A~E (A: 대형 ~ C: 소규모망, D: 멀티캐스트).
+- **IPv6:** 128비트 (16비트 × 8부분, 16진수, 콜론 `:` 구분)로 주소 공간을 확장한다. 기본 헤더는 단순화되고 브로드캐스트 대신 멀티캐스트·애니캐스트를 사용한다.
+- **IPv4 → IPv6 전환 전략:** 듀얼 스택(Dual Stack), 터널링(Tunneling), 헤더/전송/응용 게이트웨이 변환(Translation).
+- **DNS (Domain Name System):** 문자 도메인 네임을 IP 주소로 변환.
+- **Tiếng Việt:** IPv4 (32 bit, Class A-E). IPv6 (128 bit, giải quyết cạn kiệt IP). DNS dịch tên miền sang IP.
+- 💡 **Mẹo ghi nhớ:** Chuyển đổi IPv4/IPv6: "Dual - Tunnel - Translate".
+
+### 5.4 네트워크 관련 장비 (Network Devices)
+- **허브 (Hub):** 물리 계층, 포트 통합 관리 및 리피터 역할.
+- **리피터 (Repeater):** 물리 계층, 신호 재생 및 증폭.
+- **브리지 (Bridge):** 데이터 링크 계층, LAN-LAN 연결.
+- **라우터 (Router):** 네트워크 계층, 경로 선택(Routing) 및 서로 다른 망 연결.
+- **게이트웨이 (Gateway):** 전 계층(주로 상위), 프로토콜이 전혀 다른 네트워크 연결.
+- **Tiếng Việt:**
+  - L1: Hub, Repeater (Khuếch đại tín hiệu).
+  - L2: Bridge (Nối LAN).
+  - L3: Router (Định tuyến).
+  - L4-L7: Gateway (Nối mạng khác giao thức).
