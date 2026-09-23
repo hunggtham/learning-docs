@@ -55,3 +55,23 @@ Case study là nơi kiểm tra mental model bằng failure thật, không phải
 ## Cách viết case study mới
 
 Mỗi case phải có `context → invariant → failure boundary → design → evidence → trade-off`. Không biến case study thành tutorial API; mục tiêu là chứng minh reasoning có thể chuyển giữa các tool và platform.
+
+## Ma trận đối chiếu case
+
+| Case | Primary time | State | Recovery unit | Evidence |
+|---|---|---|---|---|
+| CDC duplicate | source transaction time | dedup projection | offset range / snapshot | source-to-sink reconciliation |
+| late event | event time | window state | watermark range | late-rate + correction diff |
+| backfill race | partition effective time | output version | manifest range | metric/golden diff |
+| compaction race | snapshot commit time | metadata snapshot | snapshot id | file/snapshot validation |
+| semantic fan-out | metric time | aggregate state | model version | grain/cardinality check |
+
+## Câu hỏi senior cho mọi case
+
+1. Điều gì xảy ra nếu process chết ngay sau external side effect?
+2. Có thể replay cùng input nhưng khác code/schema version không?
+3. Consumer nhìn thấy provisional, partial hay stale output thế nào?
+4. Invariant nào được kiểm tra online và invariant nào chỉ kiểm tra offline?
+5. Chi phí recovery tăng theo input volume, state size hay dependency count?
+
+Case study chỉ hoàn thành khi trả lời được cả correctness và operability. Một sơ đồ đẹp nhưng không có failure timeline, rollback evidence và owner không phải production design.

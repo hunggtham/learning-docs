@@ -64,3 +64,31 @@ Một hệ thống trưởng thành có thể chạy replay nhỏ trên sample, 
 5. Replay có tái tạo đúng kết quả và không lặp side effect không?
 
 Đọc tiếp: [02 — Pipeline semantics](../02_pipeline_architecture.md), [06 — Distributed processing](../06_distributed_processing/README.md), [08 — Orchestration và backfill](../08_orchestration_and_backfill/README.md).
+
+## 9. Window result là state machine
+
+Một window không chỉ có giá trị số; nó có lifecycle:
+
+```text
+open → updating → provisional → finalized → corrected/expired
+```
+
+Watermark chuyển window từ open sang provisional/finalized theo policy. Late event sau finalized không được âm thầm mutate kết quả mà không phát version/correction evidence.
+
+## 10. State store và checkpoint
+
+Checkpoint phải bao phủ cả input position và state snapshot. Chỉ lưu offset mà không lưu state tương ứng có thể làm restart tính lại với state cũ hoặc bỏ mất event. State schema evolution cần migration/version, đặc biệt khi operator đổi key hoặc window definition.
+
+Checkpoint interval là trade-off: interval ngắn giảm replay work nhưng tăng I/O; interval dài giảm overhead nhưng recovery lâu hơn. Đo recovery point, checkpoint size, restore time và duplicate/correction behavior.
+
+## 11. CDC snapshot handoff
+
+Snapshot + log CDC cần một cutover point atomic. Nếu snapshot đọc lúc T1 nhưng log bắt đầu từ T2, mutation giữa T1 và T2 bị mất; nếu log bắt đầu trước T1, event có thể bị duplicate và phải dedup theo transaction position.
+
+Consumer nên lưu `snapshot_id`, `log_position`, schema version và source transaction metadata. Đây là evidence để chứng minh không có gap trong handoff.
+
+## 12. Backpressure
+
+Khi sink chậm hơn source, lag tăng. Backpressure có thể làm giảm ingest rate, tăng state/retention pressure hoặc đẩy dữ liệu sang durable buffer. Không nên chỉ tăng consumer count nếu bottleneck là sink partition, network hoặc skew key.
+
+Theo dõi lag theo partition, arrival rate, processing rate, watermark delay, state size và sink latency. Một average lag thấp có thể che một partition bị kẹt.

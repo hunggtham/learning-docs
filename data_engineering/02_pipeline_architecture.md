@@ -71,3 +71,42 @@ Một DAG xanh chỉ chứng minh task process trả về success theo điều k
 Thiết kế pipeline nên bắt đầu bằng câu hỏi "nếu process chết ở từng dòng code thì sao?". Thử failure trước và sau read, trước và sau write, trước và sau acknowledgement. Sau đó kiểm tra restart có tạo loss, duplicate, corruption hoặc inconsistent checkpoint không.
 
 Cách reasoning này mạnh hơn việc chỉ đọc happy-path architecture diagram, bởi production system được định nghĩa phần lớn bởi behavior khi một phần của nó thất bại.
+
+## 11. Checkpoint, watermark và commit marker không giống nhau
+
+Ba khái niệm thường bị gộp thành “đã chạy tới đâu”:
+
+- checkpoint: processing state để engine tiếp tục computation;
+- watermark: frontier về thời gian hoặc completeness của input;
+- commit marker: bằng chứng rằng output partition/snapshot đã public atomically.
+
+Checkpoint có thể tiến trong khi sink chưa commit. Watermark có thể tiến dù một late event còn đang trên đường đến. Commit marker chỉ nên được ghi sau reconciliation. Thiết kế sai boundary này tạo pipeline xanh nhưng output thiếu hoặc không thể replay.
+
+## 12. Input contract và output contract
+
+Input contract phải mô tả source authority, identity, ordering, schema version, delete/tombstone và retention. Output contract phải mô tả grain, freshness, completeness, late correction, ownership và compatibility.
+
+Một pipeline có thể “đọc được” payload nhưng vẫn vi phạm contract nếu source đổi timezone, đổi currency hoặc đổi ý nghĩa enum. Contract test nên kiểm tra semantics representative, không chỉ parser.
+
+## 13. Sink pattern theo loại output
+
+| Output | Write pattern thường phù hợp | Rủi ro chính |
+|---|---|---|
+| immutable event | append + dedup key | duplicate/reorder |
+| current state | upsert theo key/version | stale update ghi đè state mới |
+| partition aggregate | overwrite/replace partition | partial publish |
+| correction | append adjustment/version | consumer không áp dụng correction |
+| external side effect | outbox + idempotency key | retry lặp side effect |
+
+Chọn sink pattern trước khi chọn framework. Cùng một engine có thể implement mọi pattern nhưng guarantee và recovery khác nhau.
+
+## 14. Pipeline review bằng state machine
+
+Vẽ state của một record hoặc partition thay vì chỉ vẽ component:
+
+```text
+discovered → captured → transformed → validated → committed → published
+                   ↘ quarantined / retryable / expired
+```
+
+Mỗi transition cần event log hoặc metric đủ để điều tra. Nếu không biết record đang ở state nào, incident response sẽ phải đoán từ log rời rạc.

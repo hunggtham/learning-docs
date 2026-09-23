@@ -45,3 +45,29 @@ Governance nên liên kết contract với quality checks, lineage-aware alert v
 5. Delete/rectification có lan qua snapshot, backup và derived output không?
 
 Đọc tiếp: [04 — Reliability](../04_reliability_and_production.md), [09 — Warehouse/lakehouse](../09_warehouse_lake_lakehouse/README.md), [10 — Serving](../10_serving_semantic_layer/README.md).
+
+## 8. Classification và policy enforcement
+
+Sensitivity classification nên gắn với column/field và purpose, không chỉ gắn với database. Một dataset có thể chứa PII ở một column, aggregate an toàn ở column khác và secret ở payload nested.
+
+Policy enforcement cần xảy ra cả lúc đọc và lúc copy/export. Masking trong UI không đủ nếu user vẫn có quyền đọc raw file hoặc download cache. Policy test nên kiểm tra role, purpose, environment, region và audit event.
+
+## 9. Lineage confidence
+
+Không phải edge lineage nào cũng có cùng độ tin cậy:
+
+```text
+declared contract > runtime observed > static parser > naming convention
+```
+
+Catalog nên lưu source của edge và timestamp quan sát. Khi lineage thiếu, hiển thị “unknown” tốt hơn tạo graph giả chắc chắn khiến incident triage đi sai.
+
+## 10. Change management
+
+Một schema/semantic change cần blast-radius query: downstream tables, dashboards, ML features, exports, access policies và cost centers. Owner phê duyệt change phải khác với người chỉ sửa file nếu risk cao.
+
+Deprecation window cần có telemetry consumer. Không xóa field chỉ vì catalog không liệt kê consumer; absence of evidence không phải evidence of absence.
+
+## 11. Data deletion audit
+
+Deletion request nên tạo manifest gồm subject key, source tables, snapshots, derived outputs, backups và completion evidence. Reconciliation sau delete phải chứng minh subject không còn trong các serving path được scope, hoặc ghi rõ retention exception được phê duyệt.

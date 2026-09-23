@@ -60,3 +60,36 @@ Raw layer giữ evidence gần source; modeled layer chuẩn hóa grain, key và
 7. Có thể reconcile output với source hoặc upstream invariant nào?
 
 Đọc tiếp: [06 — Distributed processing](../06_distributed_processing/README.md), [08 — Orchestration và backfill](../08_orchestration_and_backfill/README.md), [10 — Serving và semantic layer](../10_serving_semantic_layer/README.md).
+
+## 8. Snapshot fact và temporal join
+
+Một fact event thường có `occurred_at`, `captured_at` và `loaded_at`. Khi dựng snapshot ngày D, filter theo `occurred_at` chưa đủ: event có thể được capture sau khi snapshot đã publish. Cần chọn một trong hai semantics:
+
+- snapshot as-of event time: phản ánh domain tại D và chấp nhận late correction;
+- snapshot as-observed: phản ánh platform đã biết gì tại D và không backdate event.
+
+Hai semantics cho hai câu hỏi khác nhau. Không đặt tên chung như `daily_sales` nếu không ghi rõ kiểu snapshot.
+
+Temporal join giữa fact và dimension phải chọn version thỏa `valid_from <= event_time < valid_to`. Nếu dimension có hai version cùng effective time, cần tie-breaker deterministic. Join với row `is_current = true` là shortcut nguy hiểm cho lịch sử.
+
+## 9. Null, unknown và deleted
+
+`NULL` có thể nghĩa là unknown, not-applicable, chưa nhận được hoặc đã bị redact. Nếu gom tất cả vào một giá trị, aggregate và quality check sẽ sai. Nên dùng semantic enum/flags khi domain cần phân biệt.
+
+Delete cũng có nhiều nghĩa: entity bị xóa thật, record bị retract, privacy deletion, hoặc source chỉ không còn trả row. Model phải biết tombstone nào là business event và tombstone nào là storage cleanup.
+
+## 10. Transformation test matrix
+
+Test model không chỉ dùng một happy-path fixture. Tối thiểu cần có:
+
+```text
+duplicate event
+late correction
+missing dimension
+duplicate dimension version
+empty partition
+timezone boundary / DST
+currency or unit conversion
+```
+
+Mỗi fixture nên kiểm tra cả expected rows và invariant tổng hợp. Một model có thể trả đúng sample row nhưng sai tổng vì fan-out hoặc filter null.

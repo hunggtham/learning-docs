@@ -59,3 +59,29 @@ Versioning metric là cần thiết khi business meaning thay đổi. Đổi log
 5. Có reconcile serving result với modeled/source layer không?
 
 Đọc tiếp: [05 — Modeling](../05_data_modeling_and_transformation/README.md), [04 — Reliability](../04_reliability_and_production.md), [11 — Governance](../11_governance_lineage_security/README.md).
+
+## 8. Metric algebra và composability
+
+Metric nên có tính chất cho phép biết khi nào được aggregate tiếp. `SUM(revenue)` thường composable; `AVG(price)` phải giữ cả `sum` và `count`; `COUNT(DISTINCT user)` cần state/merge algorithm; percentile không thể cộng trực tiếp.
+
+Semantic layer phải lưu measure definition và aggregation behavior, không chỉ SQL expression. Nếu một dashboard aggregate metric non-additive như additive, kết quả có thể sai mà không có schema error.
+
+## 9. Semantic versioning
+
+Đổi filter, timezone, refund policy hoặc dimension join có thể làm metric discontinuity. Metric version cần có effective date, migration note và cách so sánh old/new:
+
+```text
+metric_v1 → dual-run → reconcile delta → metric_v2 → deprecate v1
+```
+
+Dual-run tốn compute nhưng tạo evidence cho consumer. Không đổi tên metric để che một thay đổi semantics.
+
+## 10. Cache và invalidation
+
+Cache key phải bao gồm metric version, filter, time range và source snapshot/freshness boundary. Invalidate theo thời gian cố định có thể trả stale value sau correction; invalidate mỗi event có thể quá đắt.
+
+Serving contract nên nêu `as_of`, freshness và correction behavior để consumer biết giá trị đang provisional hay final. Cache không được trở thành một bản copy không có lineage.
+
+## 11. Golden dataset
+
+Mỗi metric quan trọng nên có golden fixture nhỏ với expected output cho timezone boundary, refund, duplicate, late correction, null và multi-currency. Chạy golden query trong CI và sau materialization giúp phát hiện semantic regression mà row-count check không thấy.

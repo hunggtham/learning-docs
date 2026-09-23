@@ -62,3 +62,39 @@ Run metadata nên lưu input partitions, code commit, schema version, row counts
 6. External side effect được deduplicate thế nào?
 
 Đọc tiếp: [04 — Reliability](../04_reliability_and_production.md), [07 — Streaming](../07_streaming_systems/README.md), [90 — Case studies](../90_case_studies/README.md).
+
+## 8. Backfill planner
+
+Một backfill lớn nên có planner tách khỏi executor. Planner tạo manifest các input partition, output partition, code/schema version, expected row count và dependency. Executor chỉ chạy manifest immutable; không tự suy luận target range từ “now”.
+
+```text
+plan → validate conflicts → execute isolated output → reconcile → publish
+```
+
+Nếu plan thay đổi giữa chừng, tạo plan version mới thay vì sửa file đang chạy. Điều này giúp rollback và forensic analysis biết run đã dựa trên assumption nào.
+
+## 9. Concurrency trên cùng partition
+
+Cho phép hai run cùng ghi partition là race condition nếu không có fencing/lease/commit protocol. Scheduler cần một trong các invariant:
+
+- một partition chỉ có một writer active;
+- writer có epoch/fencing token, writer cũ bị từ chối;
+- output version riêng, publish pointer tuần tự;
+- merge semantics chứng minh hai write giao nhau là an toàn.
+
+Distributed lock chỉ giải quyết mutual exclusion trong thời gian lock còn hiệu lực; nó không thay thế output reconciliation và stale-writer fencing.
+
+## 10. Retry taxonomy
+
+Retry theo lỗi, không theo cảm xúc:
+
+| Lỗi | Hành động |
+|---|---|
+| timeout/network transient | exponential backoff + jitter |
+| quota/capacity | retry có giới hạn hoặc reschedule |
+| schema/contract breaking | stop, alert owner |
+| malformed record | quarantine + metric |
+| code bug | rollback/version fix rồi rerun |
+| sink partial commit | inspect marker trước khi retry |
+
+Retry vô hạn biến lỗi deterministic thành incident lớn hơn và che khuất data loss.

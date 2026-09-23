@@ -53,3 +53,33 @@ Chọn storage bằng câu hỏi:
 5. Catalog, lineage, access control, deletion và cost ownership thuộc về ai?
 
 Đọc tiếp: [03 — Storage và formats](../03_storage_and_formats.md), [11 — Governance](../11_governance_lineage_security/README.md), [12 — Cost và capacity](../12_cost_performance_capacity/README.md).
+
+## 8. Snapshot isolation và conflict detection
+
+Hai writer có thể cùng đọc snapshot S0 rồi tạo S1a và S1b. Metadata commit phải quyết định:
+
+```text
+S0 + changes(a) → S1a
+S0 + changes(b) → reject/merge → S2
+```
+
+Nếu commit chỉ kiểm tra file path mới mà bỏ qua logical overlap, hai writer có thể cùng sửa một partition và làm mất update. Conflict detection phải xét partition/key/range mà operation đọc và ghi.
+
+## 9. Time travel, retention và GDPR-style delete
+
+Time travel hữu ích cho audit và rollback nhưng giữ snapshot cũ đồng nghĩa giữ bytes cũ. Retention policy cần đồng thời trả lời query rollback, replay window, backup window và deletion requirement.
+
+Khi cần xóa một subject, phải xác định data files, snapshots, manifests, materialized views, caches và downstream exports nào chứa record. Rewriting file để redact có thể phá snapshot lineage; do đó deletion job cần tạo evidence về version trước/sau và xác nhận các bản copy đã hết retention.
+
+## 10. Table maintenance contract
+
+Compaction, clustering, vacuum/garbage collection và statistics refresh là các workflow có dependency với reader/writer. Mỗi maintenance task cần:
+
+1. input snapshot và file set;
+2. output snapshot/manifest;
+3. conflict policy với concurrent writer;
+4. retention deadline của file cũ;
+5. correctness check trước publish;
+6. rollback hoặc restore path.
+
+Maintenance không nên chạy như cron vô danh; nó là một data product operation có owner và budget.

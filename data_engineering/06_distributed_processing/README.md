@@ -70,3 +70,27 @@ Worker failure buộc engine retry task hoặc stage. Nếu source và sink có 
 6. Thay đổi một boundary, chạy lại cùng input/version và so sánh correctness trước cost.
 
 Đọc tiếp: [03 — Storage và layout](../03_storage_and_formats.md), [07 — Streaming systems](../07_streaming_systems/README.md), [12 — Cost, performance và capacity](../12_cost_performance_capacity/README.md).
+
+## 9. Shuffle cost model
+
+Một approximation hữu ích khi phân tích stage:
+
+```text
+wall time ≈ max(task compute + local spill) + network shuffle + barrier wait
+```
+
+`max`, không phải average, quyết định long-tail latency. Nếu một partition có 10 lần bytes trung bình, tăng worker chỉ làm 99 task khác rảnh hơn; task hotspot vẫn giữ wall time.
+
+Trước shuffle, projection và filter làm giảm payload. Sau shuffle, pre-aggregation làm giảm số row gửi tới join/aggregate. Nhưng pre-aggregation chỉ hợp lệ nếu operation associative/commutative hoặc có rule preserve order.
+
+## 10. Skew diagnosis bằng phân phối
+
+Hãy ghi lại p50/p95/p99 task duration, input bytes mỗi task, spill bytes, peak memory và key frequency. Average duration có thể che khuất một heavy hitter. Một key `NULL`, tenant lớn hoặc ngày dữ liệu lỗi thường là đầu mối.
+
+Salting thay key `k` thành `(k, salt)` để chia heavy hitter, sau đó aggregate lần hai theo `k`. Đây là trade-off: thêm stage và state nhưng tránh một partition bị quá tải. Không salt nếu consumer cần ordering per key hoặc business semantics không cho phép chia key.
+
+## 11. Determinism và retry
+
+Distributed reduction không phải lúc nào cũng deterministic do thứ tự merge floating point, tie trong sort hoặc non-deterministic UDF. Nếu output được dùng cho reconciliation, cần canonical ordering, decimal arithmetic hoặc tolerance rõ ràng.
+
+Retry task cũng cần tránh side effect. Write temporary output theo task attempt, rồi commit một attempt thắng; không để mỗi retry append trực tiếp vào serving table.

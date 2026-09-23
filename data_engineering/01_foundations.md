@@ -65,3 +65,55 @@ Mental model này giúp tránh data swamp: rất nhiều table tồn tại nhưn
 Khi gặp một architecture mới, đừng bắt đầu bằng tên công cụ. Hãy viết invariant. Ví dụ: mỗi `payment_id` chỉ đóng góp doanh thu một lần; tổng item amount phải khớp order amount theo rule đã định; event không được publish trước khi transaction nguồn commit; partition của ngày D chỉ được coi complete khi điều kiện completeness được thỏa mãn.
 
 Sau đó hỏi từng component duy trì invariant bằng cơ chế nào và evidence nào chứng minh điều đó trong production. Đây là cách đi từ sơ đồ architecture đẹp sang engineering có thể vận hành.
+
+## 10. Các lớp của correctness
+
+Một data product hiếm khi có một cờ `correct/incorrect` duy nhất. Nên tách ít nhất năm lớp:
+
+| Lớp | Câu hỏi kiểm chứng |
+|---|---|
+| transport | record có bị mất, duplicate hoặc reorder ngoài giới hạn không? |
+| schema | type, nullability, enum và version có tương thích không? |
+| model | grain, key, join cardinality có đúng không? |
+| business | metric có giữ phương trình/invariant của domain không? |
+| temporal | freshness, completeness và event-time window có đúng không? |
+
+Một pipeline có thể pass transport nhưng fail business. Ví dụ tất cả message đến đủ nhưng `refund` bị tính như `sale`. Quality gate phải chỉ rõ đang bảo vệ lớp nào.
+
+## 11. Boundary của transaction và publish
+
+Source transaction, transport acknowledgement, processing checkpoint và sink commit thường là bốn state machine khác nhau. Không được gọi một record là “đã xử lý” nếu chỉ có một state trong bốn state đã chuyển.
+
+Mẫu reasoning cơ bản:
+
+```text
+source commit
+  → durable capture
+  → deterministic transform
+  → sink commit
+  → publish marker / serving pointer
+```
+
+Nếu crash giữa hai bước, recovery phải biết bước nào đã hoàn tất. Idempotent write hoặc transaction coordinator nối các state đó; offset riêng lẻ không làm được.
+
+## 12. Worked example: order revenue
+
+Giả sử source có `order_created`, `payment_captured` và `refund_issued`. Metric doanh thu không phải tổng mọi amount; nó là:
+
+```text
+net_revenue = Σ captured_amount − Σ valid_refund_amount
+```
+
+Muốn chứng minh metric đúng cần định nghĩa `valid_refund`: refund có thể đến sau nhiều ngày, có thể partial, và có thể bị retry. Model phải lưu event identity, currency, event time, source version và trạng thái reconciliation. Chỉ kiểm tra row count sẽ không phát hiện double-capture.
+
+## 13. Decision record tối thiểu
+
+Mỗi boundary quan trọng nên ghi lại:
+
+1. invariant cần bảo vệ;
+2. assumption về ordering, clock, schema hoặc retention;
+3. failure window và behavior khi retry;
+4. evidence/metric chứng minh guarantee;
+5. trade-off về latency, cost, completeness và operational complexity.
+
+Decision record ngắn nhưng giúp phân biệt guarantee thật với khẩu hiệu như “exactly once”, “real time” hoặc “high quality”.

@@ -83,3 +83,45 @@ Khi metric sai, debugging nên đi ngược lineage: consumer thấy gì → ser
 Giữ run metadata như code version, input partitions/snapshot, row counts, checkpoint, schema version và output commit giúp biến debugging từ suy đoán thành điều tra dựa trên evidence.
 
 Một hệ thống dữ liệu trưởng thành không phải hệ thống không bao giờ lỗi. Nó là hệ thống phát hiện lỗi sớm, giới hạn blast radius, giải thích được trạng thái, replay/recover có kiểm soát và học được từ incident để invariant được bảo vệ tốt hơn ở lần sau.
+
+## 12. Reliability budget cho data product
+
+Data product nên có SLO riêng thay vì chỉ dùng task success rate:
+
+```text
+freshness SLO       = thời gian tối đa từ source event đến publish
+completeness SLO    = tỷ lệ input cần có đã được xử lý
+correctness SLO     = tỷ lệ reconciliation/quality gate đạt
+availability SLO    = consumer có đọc được version hợp lệ không
+```
+
+Một job chạy xanh 99.9% nhưng freshness trễ 4 giờ vẫn có thể vi phạm product SLO. Error budget nên được dùng để quyết định có ưu tiên feature mới, backfill hay reliability work.
+
+## 13. Quality gate theo tầng
+
+Quality check nên đặt gần failure boundary:
+
+1. ingestion: schema, checksum, duplicate identity, source cursor;
+2. transformation: grain, uniqueness, referential integrity, accepted domain;
+3. publish: row count, freshness, reconciliation, snapshot completeness;
+4. serving: metric golden set, point-in-time correctness, consumer contract.
+
+Check ở tầng cuối không thay thế check ở tầng trước. Nếu chỉ kiểm tra dashboard, rất khó biết mất dữ liệu xảy ra ở source, transport hay join.
+
+## 14. Incident timeline và evidence
+
+Một incident report tốt không chỉ có “job failed”. Nó ghi lại source watermark, input partitions, code/schema version, checkpoint, output commit, quality results, consumer impact và các quyết định rollback/replay.
+
+Timeline cần phân biệt:
+
+```text
+first bad input → first bad transform → bad publish → first consumer observation
+```
+
+Phân biệt bốn mốc này giúp tránh sửa nhầm layer và đo được detection lag.
+
+## 15. Chaos và recovery test
+
+Recovery claim phải được kiểm chứng bằng thử nghiệm: kill worker trước/sau sink commit, làm mất acknowledgement, inject late event, truncate source retention giả lập, chạy duplicate backfill và restore snapshot. Test cần kiểm tra cả output correctness lẫn absence of unwanted side effect.
+
+Một runbook chưa từng chạy trong điều kiện gần production chỉ là giả thuyết. Recovery time phải được đo, không suy ra từ sơ đồ architecture.

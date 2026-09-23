@@ -2,6 +2,8 @@
 
 Data Engineering là lĩnh vực xây dựng các hệ thống biến dữ liệu thô, phân tán và thường không đáng tin cậy thành dữ liệu có cấu trúc, có ngữ nghĩa, có thể kiểm chứng và đủ ổn định để phục vụ phân tích, sản phẩm dữ liệu, machine learning và vận hành doanh nghiệp.
 
+Đọc [COVERAGE_AUDIT.md](COVERAGE_AUDIT.md) để xem quality gate, invariant checklist và các gap còn lại của toàn bộ library.
+
 Library này không được tổ chức như danh sách công cụ. Kafka, Spark, Airflow, dbt, một data warehouse hay một cloud service chỉ là các hiện thực cụ thể của những vấn đề sâu hơn: dữ liệu đến từ đâu, trạng thái nào là đúng, dữ liệu được lưu theo hình dạng nào, khi chạy lại pipeline có phá kết quả không, schema thay đổi thì điều gì xảy ra, một record đến muộn được xử lý thế nào, và khi dashboard sai thì làm sao lần ngược về nguyên nhân.
 
 Mục tiêu học tập vì vậy đi theo chuỗi reasoning:
@@ -9,6 +11,17 @@ Mục tiêu học tập vì vậy đi theo chuỗi reasoning:
 `nguồn dữ liệu → ingestion → storage → modeling → transformation → serving → observation/governance`
 
 Mỗi bước đều phải trả lời ba câu hỏi: invariant nào cần được giữ, failure nào có thể phá invariant đó, và evidence nào cho phép chứng minh hệ thống đang hoạt động đúng.
+
+## Chuẩn độ sâu của chapter
+
+Mỗi chapter canonical phải đi qua chuỗi:
+
+```text
+problem → mental model → mechanism → invariant
+       → failure/edge case → evidence → trade-off → lower-layer connection
+```
+
+Nếu một phần chỉ mô tả API hoặc tên sản phẩm mà không nói guarantee và failure behavior, nó là implementation note chứ chưa phải Data Engineering reasoning.
 
 ## Lộ trình canonical
 

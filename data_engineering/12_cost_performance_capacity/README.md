@@ -47,3 +47,25 @@ Theo dõi cost per TB processed, cost per successful pipeline run, cost per publ
 Không chấp nhận performance gain nếu làm mất late event, duplicate, history hoặc audit evidence.
 
 Đọc tiếp: [06 — Distributed processing](../06_distributed_processing/README.md), [09 — Warehouse/lakehouse](../09_warehouse_lake_lakehouse/README.md), [04 — Reliability](../04_reliability_and_production.md).
+
+## 8. Queueing và saturation
+
+Capacity không chỉ là tổng CPU. Khi arrival rate tiến gần service rate, queueing delay tăng phi tuyến. Một model đơn giản:
+
+```text
+utilization ρ = arrival rate / service rate
+```
+
+Khi `ρ` gần 1, một burst nhỏ có thể làm freshness trễ hàng giờ. Cần reserve headroom cho retry, compaction, backfill và incident replay; chạy production ở 100% average utilization là thiết kế không có recovery capacity.
+
+## 9. Cost attribution
+
+Cost cần gắn với domain/dataset/consumer bằng tags, query labels, run metadata hoặc allocation rule. Shared cluster không có attribution làm owner không thấy regression và platform team phải gánh “mystery cost”.
+
+Một unit economics tốt ghi rõ denominator: cost per TB input, per published partition, per successful run, per dashboard refresh hoặc per feature computation. Denominator thay đổi phải được version trong report.
+
+## 10. Optimization không phá semantics
+
+Mỗi optimization cần correctness guardrail: golden metric, row/key reconciliation, late-event sample, schema compatibility và rollback. Broadcast join có thể giảm shuffle nhưng fail khi dimension phình; approximate distinct giảm cost nhưng thay guarantee; caching giảm latency nhưng tăng staleness.
+
+Performance review nên ghi rõ semantic trade-off, không chỉ benchmark trước/sau.

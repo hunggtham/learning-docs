@@ -67,3 +67,31 @@ Safe evolution cần compatibility policy và deployment order. Ví dụ produce
 Trong cloud analytics, performance và cost thường cùng liên quan đến lượng data scan, shuffle và thời gian compute. Partition pruning, column pruning và compact file không chỉ là optimization kỹ thuật mà trực tiếp thay đổi hóa đơn.
 
 Tuy nhiên tối ưu storage để giảm scan có thể tăng ingestion/maintenance cost. Một hệ thống tốt tối ưu total cost of ownership, bao gồm compute, storage, network, operational complexity và thời gian kỹ sư, thay vì chỉ tối thiểu một metric.
+
+## 11. Layout invariants và read amplification
+
+Physical layout nên được đánh giá bằng tỷ lệ giữa dữ liệu hữu ích và dữ liệu phải đọc:
+
+```text
+read amplification = bytes read / bytes returned or used
+```
+
+Partition pruning và column pruning giảm read amplification. Nhưng statistics không đáng tin nếu row group quá lớn, dữ liệu không được cluster hoặc predicate có selectivity thấp. File nhỏ hơn không mặc định tốt hơn nếu số request và metadata overhead tăng mạnh.
+
+## 12. File commit và visibility
+
+Writer không nên ghi trực tiếp vào path mà reader coi là committed. Mẫu an toàn là ghi temporary files, validate schema/row count/checksum, rồi publish manifest hoặc metadata commit. Nếu object storage không có atomic rename, metadata pointer phải là source of truth về visibility.
+
+Khi retry, temporary files cũ phải có naming/version và garbage-collection policy. Nếu không, reader có thể double-count file hoặc compaction gom cả output chưa commit.
+
+## 13. Compaction và delete semantics
+
+Compaction rewrite data files nhưng không được thay đổi logical result. Cần kiểm tra số row, distinct key, min/max statistics, delete/tombstone và khả năng đọc snapshot cũ trong retention window. File cũ chỉ được xóa sau khi không còn reader cần.
+
+Delete vật lý và delete logic khác nhau. Tombstone bị compaction bỏ qua quá sớm có thể làm record đã xóa “sống lại” khi đọc snapshot cũ hoặc replay.
+
+## 14. Schema identity và type widening
+
+Schema evolution nên phân biệt add field, rename, drop và type widening. `INT → BIGINT` có thể an toàn hơn `STRING → TIMESTAMP`; rename cần field identity hoặc explicit migration để reader không coi là drop+add.
+
+Compatibility matrix phải kiểm tra writer mới/reader cũ, writer cũ/reader mới và file cũ/file mới. Chỉ test một hướng là không đủ cho rolling deployment.
