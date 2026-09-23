@@ -45,7 +45,12 @@ Sau bốn foundation chapters, đi theo các boundary sau. Mỗi phần bắt đ
 6. [10 — Serving và semantic layer](10_serving_semantic_layer/README.md): metric contract, point-in-time correctness, materialization và consumer shape.
 7. [11 — Governance, lineage và security](11_governance_lineage_security/README.md): ownership, data contract, lineage, access, retention và deletion.
 8. [12 — Cost, performance và capacity](12_cost_performance_capacity/README.md): scan, shuffle, spill, small files, concurrency và unit economics.
-9. [90 — Case studies](90_case_studies/README.md): CDC duplicate, late event, backfill race, compaction race và semantic fan-out.
+9. [13 — Approximate computation](13_approximate_computation/README.md): sketches, sampling, mergeability, quantile/cardinality error và uncertainty contract.
+10. [14 — Multi-region và residency](14_multi_region_and_residency/README.md): replication lag, conflict, failover, RPO/RTO và data residency.
+11. [15 — ML feature platform](15_ml_feature_platform/README.md): point-in-time correctness, offline/online parity, freshness và feature deletion.
+12. [16 — Privacy-preserving analytics](16_privacy_preserving_analytics/README.md): threat model, differential privacy, composition và aggregate release policy.
+13. [17 — Contract testing](17_contract_testing_and_compatibility/README.md): machine-readable contract, compatibility matrix, consumer-driven test và runtime enforcement.
+14. [90 — Case studies](90_case_studies/README.md): CDC duplicate, late event, backfill race, compaction race và semantic fan-out.
 
 ### Dependency map
 
@@ -57,6 +62,8 @@ Sau bốn foundation chapters, đi theo các boundary sau. Mỗi phần bắt đ
                                     ├── 11 governance ────┤
 05 modeling/transformation ─────────┴── 10 serving ───────┤
 06 distributed processing ───────────── 12 cost/capacity ─┤
+13 approximate ── 14 multi-region ── 16 privacy ─────────┤
+15 ML features ─── 17 contracts ─────────────────────────┤
                                                          90 case studies
 ```
 

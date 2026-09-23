@@ -27,6 +27,11 @@ Mỗi boundary phải mô tả được mechanism, invariant, failure mode, evid
 | 10 Serving/semantic layer | metric algebra, versioning, point-in-time, cache | Strong |
 | 11 Governance/lineage/security | contract, ownership, policy, lineage confidence, deletion | Strong |
 | 12 Cost/performance/capacity | queueing, saturation, attribution, semantic guardrails | Strong |
+| 13 Approximate computation | sketches, sampling, mergeability, error bounds | Strong |
+| 14 Multi-region/residency | replication lag, conflict, failover, RPO/RTO, residency | Strong |
+| 15 ML feature platform | point-in-time joins, offline/online parity, deletion | Strong |
+| 16 Privacy-preserving analytics | threat model, differential privacy, composition, release policy | Strong |
+| 17 Contract testing | compatibility matrix, consumer contracts, runtime enforcement | Strong |
 | 90 Case studies | end-to-end failure and evidence reasoning | Strong |
 
 ## Invariant checklist
@@ -43,13 +48,13 @@ Mỗi boundary phải mô tả được mechanism, invariant, failure mode, evid
 
 ## Gaps còn lại
 
-Các gap sau nên được xử lý bằng chapter/case mới chỉ khi có conceptual boundary độc lập:
+Các boundary P2 phía trên đã có chapter canonical. Những gap tiếp theo nên được mở chỉ khi có conceptual boundary độc lập:
 
-1. **Approximate computation:** HyperLogLog, sketches, approximate quantile và error bound.
-2. **Multi-region data systems:** replication lag, conflict resolution, residency và failover.
-3. **ML feature platform:** point-in-time joins, offline/online parity và feature deletion.
-4. **Privacy-preserving analytics:** differential privacy, k-anonymity limits và aggregate release policy.
-5. **Formal data contracts:** machine-readable compatibility test và consumer-driven contract.
+1. **Approximate query operations:** error propagation qua nhiều metric và calibration theo segment.
+2. **Multi-region active-active:** causal ordering, conflict-free merge và residency-aware routing.
+3. **ML feature operations:** drift, training-serving parity ở scale và model rollback với feature version.
+4. **Privacy composition:** privacy accountant liên domain và utility evaluation cho query workload thật.
+5. **Contract platform:** schema/semantic registry, exception expiry và automated blast-radius graph.
 
 Không mở chapter chỉ để liệt kê Kafka/Spark/Airflow/dbt. Mỗi gap phải có invariant/failure model riêng, nhiều downstream dependency và evidence có thể kiểm chứng.
 
