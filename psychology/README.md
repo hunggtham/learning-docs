@@ -2,7 +2,7 @@
 
 Thư viện này tổ chức Psychology theo **concept → dependency → mechanism → evidence → limitation → connection**, không chia Beginner/Intermediate/Advanced và không coi số lượng file là mục tiêu.
 
-Canonical branch hiện tại: `feat/psychology-knowledge-library`.
+Canonical source of truth hiện tại: `main`.
 
 ## Quy ước bắt buộc
 
@@ -244,8 +244,8 @@ Một chapter tốt cần trả lời tự nhiên:
 
 Không dùng bullet thay reasoning nếu phần đó cần explanatory prose.
 
-## Canonical branch và merge policy
+## Canonical source và merge policy
 
-`feat/psychology-knowledge-library` là canonical Psychology branch hiện tại. Các branch `feat/psychology-*` khác là snapshot cũ nếu không có commit riêng vượt branch này.
+Psychology đã được hợp nhất vào `main`. Các branch `feat/psychology-*` chỉ là snapshot lịch sử và không còn là source of truth.
 
-Không merge `main` cho tới khi [[COVERAGE_AUDIT]] cho thấy không còn quality gap lớn giữa các domain cốt lõi.
+Mọi thay đổi mới phải cập nhật trực tiếp canonical content trên `main` và ghi nhận quality gap, evidence refresh hoặc navigation change trong [[COVERAGE_AUDIT]].

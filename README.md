@@ -2,6 +2,8 @@
 
 Kho tài liệu học được tổ chức theo từng chủ đề. Mỗi bộ có nguồn gốc (`raw`/`raw_md`), script generate và thư mục `output` đã chuẩn hóa để học.
 
+Danh mục domain đầy đủ, metadata YAML, prerequisite và related links được quản lý tại [CATALOG.md](CATALOG.md). README này giữ phần giới thiệu ngắn; `CATALOG.md` là bản đồ cấu trúc repository và dùng `main` làm source of truth.
+
 ## Bộ tài liệu
 
 - [정보처리기사](정보처리기사/output/README.md): 5 môn, tài liệu Hàn–Anh–Việt, sắp xếp theo mạch kiến thức.

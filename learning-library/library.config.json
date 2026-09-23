@@ -131,6 +131,13 @@
   ],
   "allowedDocuments": [
     {
+      "path": "CATALOG.md",
+      "title": "Repository Catalog",
+      "category": "Repository",
+      "language": "vi-en",
+      "rights": "author-confirmed"
+    },
+    {
       "path": "10_backend/java/java_part1_beginner_rewritten_detailed.md",
       "title": "Java Core — Part 1: Beginner",
       "category": "Backend",

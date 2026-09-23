@@ -14,17 +14,11 @@ khái niệm là gì
 → liên hệ với kiến thức khác
 ```
 
-## Branch làm việc hiện tại
+## Trạng thái canonical
 
-Chemistry Library hiện được phát triển trên branch canonical:
+Chemistry Library hiện là nội dung canonical trên `main`. Các branch `feat/chemistry-*` chỉ còn giá trị lịch sử audit; không dùng tên branch để xác định source of truth hiện tại.
 
-```text
-feat/chemistry-knowledge-library
-```
-
-Branch `feat/chemistry-depth-pass` là ancestor cũ và đã được branch canonical bao trọn. Không tạo một thư viện `chemistry` mới hoặc các file kiểu `_final`, `_updated`, `_v2` khi canonical file hiện tại có thể được cập nhật trực tiếp.
-
-`main` có nhiều workstream khác phát triển song song, vì vậy việc merge chỉ nên thực hiện sau khi audit Chemistry hoàn tất và branch được đồng bộ an toàn với `main` mới nhất.
+Không tạo một thư viện `chemistry` mới hoặc các file kiểu `_final`, `_updated`, `_v2` khi canonical file hiện tại có thể được cập nhật trực tiếp. Mọi thay đổi mới nên đi qua `main` và được ghi nhận trong `COVERAGE_AUDIT.md`.
 
 ## Dependency flow cốt lõi
 

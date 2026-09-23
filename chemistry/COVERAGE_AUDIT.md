@@ -1,18 +1,10 @@
 # Thư viện kiến thức Hóa học — Kiểm tra độ bao phủ
 
-> Tài liệu này theo dõi **độ bao phủ khái niệm, quan hệ phụ thuộc, tính nhất quán ngôn ngữ, mức độ trùng lặp và chất lượng chiều sâu** của Chemistry Knowledge Library. Đây không phải bản tóm tắt để học nhanh. Mục tiêu là xác định những vấn đề còn phải xử lý trước khi branch Chemistry có thể được coi là sẵn sàng hợp nhất vào `main`.
+> Tài liệu này theo dõi **độ bao phủ khái niệm, quan hệ phụ thuộc, tính nhất quán ngôn ngữ, mức độ trùng lặp và chất lượng chiều sâu** của Chemistry Knowledge Library. Đây không phải bản tóm tắt để học nhanh. Nội dung Chemistry hiện là canonical trên `main`; các tên branch cũ chỉ được giữ trong lịch sử Git.
 
-## Branch canonical
+## Trạng thái canonical
 
-Branch Chemistry canonical:
-
-```text
-feat/chemistry-knowledge-library
-```
-
-`feat/chemistry-depth-pass` là ancestor cũ đã được gom đầy đủ vào canonical branch và đã được xóa sau pre-merge audit.
-
-`main` đang thay đổi liên tục bởi nhiều workstream khác. Vì vậy **không merge, không rebase cưỡng bức và không force-update `main` trong khi Chemistry chưa vượt qua các gate cuối**.
+Chemistry đã hoàn tất pre-merge audit và được quản lý trực tiếp trên `main`. Mọi audit mới phải cập nhật ngày review, coverage, dependency flow và các link canonical tại đây.
 
 ## Thứ tự ưu tiên audit
 
@@ -455,11 +447,9 @@ examples/mechanisms đủ cho chapter nền        ✓
 README phản ánh đúng cấu trúc                 ✓
 global internal links đã được kiểm tra        ✓
 Study Shelf build + Chemistry publication     ✓
-branch cũ đã gom/xóa                          ✓
+canonical content đã ở trên main             ✓
 ```
 
 Pre-merge audit xác nhận toàn bộ 119 tài liệu Chemistry được đưa vào Study Shelf khi prefix `chemistry` được allow-list.
 
-Có một blocker tồn tại sẵn trên `main` không thuộc Chemistry: publication manifest còn hai `allowedDocuments` trỏ tới file Java/CSS đã không tồn tại. Trong pre-merge audit, hai entry stale này chỉ được bỏ qua trong runner; chúng không được đưa vào thay đổi Chemistry.
-
-Chemistry Library hiện **content/link/build-ready cho việc merge**. Blocker manifest nói trên có thể làm workflow Pages toàn repo thất bại độc lập với Chemistry cho tới khi workstream tương ứng sửa nó.
+Chemistry Library hiện **content/link/build-ready trên main**. Các thay đổi sau này chỉ cần cập nhật trực tiếp canonical content và audit record, không cần duy trì một branch canonical riêng.

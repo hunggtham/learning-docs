@@ -1,6 +1,6 @@
 # Psychology Knowledge Library — Coverage Audit
 
-Cập nhật: 2026-09-21. Canonical branch: `feat/psychology-knowledge-library`.
+Cập nhật: 2026-09-23. Canonical source: `main`.
 
 Audit này theo dõi **coverage, độ sâu, trạng thái bằng chứng, ngôn ngữ, mechanism, limitation và conceptual gap**. Mục tiêu là làm đều chất lượng core domain, không tối đa số file.
 
@@ -110,6 +110,6 @@ Không tạo chapter mới nếu không phát hiện conceptual gap thực sự.
 
 ## 12. Merge gate
 
-Về **content coverage/depth**, merge gate hiện đã đạt: không còn core chapter rỗng/quá sơ sài trong audit hiện tại.
+Về **content coverage/depth**, merge gate đã đạt: không còn core chapter rỗng/quá sơ sài trong audit hiện tại.
 
-Tuy nhiên branch **chưa được merge tự động trong pass này**. Trước merge nên thực hiện một final targeted branch/navigation check theo workflow repo, đặc biệt xác minh canonical paths và build/site behavior nếu có.
+Psychology đã ở trên `main`; final targeted branch/navigation check và Study Shelf build là các kiểm tra hậu merge. Các branch cũ không còn được dùng để mô tả trạng thái canonical.
