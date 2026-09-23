@@ -13,7 +13,8 @@ The build runs `scripts/audit-library.mjs` and fails closed when a path is insid
 ## Current audit decision
 
 - Published: the author-confirmed technical notes listed in the manifest.
-- Held back: all Korean material for now, including `raw`, `raw_md`, `notion`, `generated_markdown*`, `final*`, `merged_subjects`, and PDF/DOCX captures. The generated Korean lessons contain source quotations and provenance notes, so they need a separate rights review and rewriting pass before publication.
+- Published exception: `정보처리기사/output/` is exposed in the web library under the virtual `cert/` folder after the owner confirmed permission to publish that output. Its source captures remain held back.
+- Held back: Korean source captures and intermediate material, including `raw`, `raw_md`, `notion`, `generated_markdown*`, `final*`, `merged_subjects`, and PDF/DOCX captures. These contain source quotations and provenance notes and are not published.
 - Held back: `pmp/raw` and `pmp/workflow-output` because the cleaned text includes a publisher copyright notice and “all rights reserved”.
 - English-language study materials are maintained in the separate `language-docs` repository; this repository does not store or publish English study Markdown files.
 - Held back: imported SQL books and OCR/translation files, including `input/*`, `sql/raw*`, and the SQL lessons that explicitly say they closely follow a source PDF.
@@ -31,5 +32,9 @@ To publish an approved file, add one object to `allowedDocuments`:
   "rights": "author-confirmed"
 }
 ```
+
+For an approved folder that should appear under a different web location, an
+`allowedPrefixes` entry may also set `displayPrefix`. This changes only the
+published navigation path; it does not move or duplicate the source files.
 
 Use `npm run audit:library` before `npm run build:library`. The site supports both `.md` and `.pdf`; Markdown under an approved prefix is discovered automatically, while PDFs remain explicit per-file entries after redistribution rights are confirmed. `raw` and `raw_md` are always skipped, and `output` is flattened only for display.

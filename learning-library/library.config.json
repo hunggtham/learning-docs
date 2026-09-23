@@ -9,6 +9,13 @@
   ],
   "allowedPrefixes": [
     {
+      "path": "정보처리기사/output",
+      "displayPrefix": "cert",
+      "category": "cert",
+      "language": "vi-ko-en",
+      "rights": "author-confirmed"
+    },
+    {
       "path": "10_backend/python",
       "category": "Python",
       "language": "vi-en",
