@@ -24,11 +24,10 @@
 
 ## 프로그래밍 언어 기초 (Programming Language Basics)
 ### 159. C/JAVA의 자료형 (Data Types / Kiểu dữ liệu)
-- **문자 (Character / Ký tự)**: `char` (1Byte) trong C và JAVA.
-- **정수 (Integer / Số nguyên)**: `int` (4Byte) trong C và JAVA; `long` (8Byte).
-- **논리 (Boolean / Logic)**: `boolean` (1Byte) chỉ có trong JAVA (C dùng 0/1).
+- **C (exam assumption / giả định đề thi phổ biến):** `char` 1 byte, `int` 4 bytes; `long` phụ thuộc ABI/compiler và không nên ghi là 8 bytes tuyệt đối.
+- **Java:** `byte` 1 byte, `short` 2 bytes, `int` 4 bytes, `long` 8 bytes, `char` 2 bytes (Unicode), `float` 4 bytes, `double` 8 bytes. `boolean` là kiểu logic; Java không quy định một kích thước lưu trữ cố định.
   - *Example / Ví dụ*: `int age = 25; boolean isStudent = true;`
-  - 💡 *Mẹo ghi nhớ*: 1 Byte = char/boolean, 4 Bytes = int, 8 Bytes = long.
+  - 💡 *Mẹo ghi nhớ*: Java `char` = 2 bytes; C `char` = 1 byte; không suy ra kích thước storage của `boolean` từ ví dụ JVM.
 
 ### 162. 변수명 작성 규칙 (Variable Naming Rules / Quy tắc đặt tên biến)
 - 영문자, 숫자, _(under bar)를 사용할 수 있다. (Có thể sử dụng chữ cái tiếng Anh, số và dấu gạch dưới).

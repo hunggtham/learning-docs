@@ -1,12 +1,12 @@
-# 5. 수식의 표기법 변환 (Expression Notation Conversion)
+# 026: 그래프 (Graph / Đồ thị)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **5. 수식의 표기법 변환 (Expression Notation Conversion)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **026: 그래프 (Graph / Đồ thị)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-수식의, 표기법, 변환
+그래프
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,10 +22,15 @@
 
 ---
 
-## 5. 수식의 표기법 변환 (Expression Notation Conversion)
-* **Infix → Prefix**: 연산자를 피연산자 두 개의 **앞(왼쪽)**으로 이동.
-* **Infix → Postfix**: 연산자를 피연산자 두 개의 **뒤(오른쪽)**로 이동.
-* **Postfix → Infix**: 연산자를 피연산자 두 개의 **가운데**로 이동.
-* **VI (Vietnamese) (Tiếng Việt):** Chuyển đổi biểu thức Infix sang Prefix (đưa toán tử ra trước) và Postfix (đưa toán tử ra sau).
-* **Example**: Infix `A/B` -> Postfix `A B /` -> Prefix `/ A B`.
-* 💡 **Mẹo ghi nhớ**: Prefix (Pre = trước), Postfix (Post = sau).
+## 026: 그래프 (Graph / Đồ thị)
+
+- **방향 그래프 (Directed Graph):** Có hướng. Tối đa `n(n-1)` cạnh (n là số đỉnh).
+- **무방향 그래프 (Undirected Graph):** Vô hướng. Tối đa `n(n-1)/2` cạnh.
+
+### 탐색 알고리즘 (Thuật toán tìm kiếm đồ thị)
+- **DFS (Depth-First Search - Tìm kiếm theo chiều sâu):** Đi sâu nhất có thể, hết đường mới lui lại (Dùng Stack).
+- **BFS (Breadth-First Search - Tìm kiếm theo chiều rộng):** Loang ra xung quanh, tầng nào xong mới xuống tầng sau (Dùng Queue).
+
+- 💡 **Mẹo ghi nhớ (Mnemonics):** DFS = Sâu = Stack (D/S). BFS = Rộng = Queue (B/Q). Vô hướng chia 2 vì AB và BA là một.
+
+---

@@ -32,7 +32,7 @@
 - **스크래피 (Scrapy):** Python 기반의 대규모 웹 크롤링 프레임워크.
 - **텐서플로 (TensorFlow):** 구글의 기계학습/데이터 흐름 프로그래밍용 오픈소스 라이브러리.
 - **앤 스크린 (N-Screen):** 여러(N개) 단말기에서 동일한 콘텐츠를 자유롭게 이용.
-- **Tiếng Việt:** 
+- **Tiếng Việt:**
   - Docker: Nền tảng container hóa mã nguồn mở.
   - Mashup: Kết hợp các API/dịch vụ web để tạo dịch vụ mới.
   - Digital Twin: Bản sao kỹ thuật số của thế giới thực.
@@ -43,7 +43,7 @@
 - **맵리듀스 (MapReduce):** 대용량 데이터를 분산 처리하기 위한 프로그래밍 모델.
 - **데이터 마이닝 (Data Mining):** 대량의 데이터에서 유용한 정보를 발견하는 기법.
 - **OLAP (Online Analytical Processing):** 다차원 데이터에서 통계적 요약 정보를 분석하여 의사결정에 활용. (연산: Roll-up, Drill-down, Pivoting, Slicing, Dicing 등).
-- **Tiếng Việt:** 
+- **Tiếng Việt:**
   - Hadoop: Nền tảng điện toán phân tán (dùng Sqoop kết nối RDB).
   - MapReduce: Mô hình lập trình xử lý phân tán.
   - Data Mining: Khai phá dữ liệu.

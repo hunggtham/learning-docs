@@ -39,8 +39,8 @@
 - **Ping Flood:** 많은 ICMP 메시지를 보내 응답으로 자원 고갈시킴.
 - **스머핑 (SMURFING):** IP/ICMP 특성을 악용해 한 사이트에 집중적으로 데이터 보냄.
 - **DPI (Deep Packet Inspection):** 전 계층의 프로토콜과 패킷 내부를 파악해 침입 탐지.
-- **Tiếng Việt:** 
-  - DDoS: Tấn công từ chối dịch vụ phân tán. 
+- **Tiếng Việt:**
+  - DDoS: Tấn công từ chối dịch vụ phân tán.
   - Ping of Death: Gửi gói ICMP quá lớn.
   - SMURFING: Gửi lượng lớn dữ liệu tập trung.
 
@@ -48,7 +48,7 @@
 - **백도어 (Back Door):** 보안을 제거하고 만들어 놓은 비밀 통로 (탐지: 무결성 검사, 열린 포트 등).
 - **키로거 공격 (Key Logger):** 키보드 움직임을 탐지해 개인정보 탈취.
 - **랜섬웨어 (Ransomware):** 문서 암호화 후 돈(Ransom)을 요구.
-- **웜 (Worm):** 연속적으로 **자신을 복제**하여 시스템 부하 유발 (바이러스의 일종).
+- **웜 (Worm):** 네트워크를 통해 스스로 전파·복제되는 악성 코드로, 숙주 파일에 기생해야 하는 바이러스와 구분한다.
 - **허니팟 (Honeypot):** 비정상 접근 탐지를 위해 의도적으로 설치한 시스템 (미끼).
 - **피싱 (Phishing):** 공공/금융 기관을 사칭해 개인정보 탈취.
 - **Tiếng Việt:** Backdoor (Cửa hậu), Key Logger (Ghi thao tác bàn phím), Ransomware (Mã độc tống tiền), Worm (Giun máy tính - tự nhân bản), Honeypot (Hệ thống mồi nhử).

@@ -1,12 +1,12 @@
-# 17. 시스템 연계 및 미들웨어 (Liên kết hệ thống & Middleware)
+# 13. 시스템 연계 및 인터페이스 (System Interface & Integration)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **17. 시스템 연계 및 미들웨어 (Liên kết hệ thống & Middleware)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **13. 시스템 연계 및 인터페이스 (System Interface & Integration)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-시스템, 연계, 미들웨어
+시스템, 연계, 인터페이스
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,38 +22,26 @@
 
 ---
 
-## 17. 시스템 연계 및 미들웨어 (Liên kết hệ thống & Middleware)
+## 13. 시스템 연계 및 인터페이스 (System Interface & Integration)
+### 13.1 시스템 연계 기술 (Các công nghệ liên kết hệ thống)
+1.  **DB Link:** DB 객체 이용 (Kết nối trực tiếp qua DB Link).
+2.  **API/Open API:** 프로그램 인터페이스 (Mở cổng API để ứng dụng khác gọi).
+3.  **EAI (연계 솔루션):** 중계 서버/클라이언트 사용 (Dùng máy chủ trung gian Enterprise Application Integration).
+4.  **Socket:** 포트 할당하여 연결 (Mở port mạng Socket để truyền dữ liệu).
+5.  **Web Service:** WSDL, UDDI, SOAP 프로토콜 사용 (Dịch vụ web dùng giao thức chuẩn XML/SOAP).
 
-### 요구사항 검증 방법 추가 (Các phương pháp kiểm chứng yêu cầu bổ sung)
-- **요구사항 검토 (Requirements Review):** 동료검토, 워크스루, 인스펙션. (Review thủ công bởi người).
-- **프로토타이핑 (Prototyping):** 견본품을 만들어 최종 결과물을 예측. (Làm bản nháp/prototype để dự đoán kết quả).
-- **테스트 설계 (Test Design):** 요구사항이 현실적으로 테스트 가능한지 검토 (Test Case 생성). (Tạo Test Case để xem yêu cầu có khả thi không).
-- **CASE 도구 활용 (CASE Tools):** 일관성 분석(Consistency Analysis)을 통해 요구사항 변경사항 추적 및 분석. (Dùng tool để phân tích tính nhất quán).
+### 13.2 인터페이스 통신 & 처리 유형 (Loại giao tiếp & xử lý)
+*   **통신 유형 (Loại Giao tiếp):**
+    *   **단방향 (Unidirectional):** 응답 없음 (Chỉ gửi, không cần phản hồi).
+    *   **동기 (Synchronous):** 응답 대기 (Gửi và đợi phản hồi).
+    *   **비동기 (Asynchronous):** 다른 작업 수행 (Gửi xong làm việc khác, trả lời sau).
+*   **처리 유형 (Loại Xử lý):**
+    *   **실시간 (Real-time):** 즉시 처리 (Xử lý ngay lập tức).
+    *   **지연 처리 (Deferred):** 비용 절감을 위해 모아서 처리 (Trì hoãn xử lý để tiết kiệm chi phí).
+    *   **배치 (Batch):** 대용량 일괄 처리 (Gom dữ liệu lớn xử lý 1 lần).
 
-### 시스템 연계 기술 (Các công nghệ liên kết hệ thống)
-- **DB Link:** DB에서 제공하는 DB Link 객체를 이용. (Dùng trực tiếp link kết nối của DB).
-- **API / Open API:** 송신 시스템의 DB에서 데이터를 읽어와 제공하는 프로그램. (Giao diện lập trình ứng dụng mở).
-- **연계 솔루션:** EAI 서버와 송·수신 시스템에 설치되는 클라이언트(Client)를 이용. (Giải pháp dùng EAI Server).
-- **Socket:** 통신을 위한 소켓을 생성하여 포트를 할당하고 클라이언트와 연결. (Tạo socket và cấp phát port để giao tiếp mạng).
-- **Web Service:** WSDL, UDDI, SOAP 프로토콜을 이용. (Dịch vụ web dùng chuẩn SOAP/WSDL).
-
-### 연계 매커니즘 구성요소 (Thành phần cơ chế liên kết)
-- **송신 시스템 (Sender System):** 데이터를 전송 형식에 맞게 변환하여 송신. (Hệ thống gửi, chuyển đổi dữ liệu ra định dạng chuẩn).
-- **수신 시스템 (Receiver System):** 수신한 데이터를 시스템에 맞게 변환하여 반영. (Hệ thống nhận, chuyển đổi dữ liệu chuẩn vào DB).
-- **연계 서버 (Integration Server):** 송수신 현황을 모니터링. (Server trung gian giám sát quá trình truyền dữ liệu).
-
-### 미들웨어(Middleware) 상세 (Chi tiết Middleware)
-- 운영체제와 응용 프로그램 사이에서 다양한 서비스를 제공.
-- **DB (DataBase):** 2-Tier 아키텍처에 주로 사용, 클라이언트와 원격 DB를 연결. (Kết nối Client-DB).
-- **RPC (Remote Procedure Call):** 원격 프로시저를 로컬 프로시저처럼 호출. (Gọi hàm từ xa như gọi hàm cục bộ).
-- **MOM (Message Oriented Middleware):** 비동기형 메시지 전달 (이기종 분산 데이터 시스템). (Truyền tin nhắn bất đồng bộ).
-- **TP-Monitor (Transaction Processing Monitor):** 온라인 트랜잭션 처리 및 감시 (항공기/철도 예약). (Quản lý giao dịch online tốc độ cao).
-- **ORB (Object Request Broker):** CORBA 표준 스펙을 구현한 객체 지향 미들웨어. (Middleware hướng đối tượng chuẩn CORBA).
-- **WAS (Web Application Server):** 동적인 콘텐츠를 처리하는 미들웨어. (Xử lý web động).
-
----
-
-# 3과목: 데이터베이스 (Phần 3: Cơ sở dữ liệu)
-*(Lưu ý: Tùy theo chương trình, Database có thể thuộc Subject 1 hoặc 3. Dưới đây là kiến thức cốt lõi về DB)*
+### 13.3 명세화 (Specification)
+*   **송수신 데이터 명세화:** 데이터 필드명, 타입, 사이즈, **암호화 여부** 정의 (Đặc tả dữ liệu: Tên trường, Kiểu, Kích thước, và có Cần Mã hóa không).
+*   **오류 식별 및 처리 방안 명세화:** 오류 코드, 메시지, 해결 방법 정의 (Đặc tả lỗi: Mã lỗi, Thông báo, Cách xử lý để dễ vận hành).
 
 ---

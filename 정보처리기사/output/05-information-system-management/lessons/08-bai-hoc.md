@@ -35,7 +35,7 @@
 - **SSO (Single Sign On):** 한 번 로그인으로 여러 사이트 이용.
 - **메시 네트워크 (Mesh Network):** 여러 디바이스를 그물망처럼 유기적으로 연결.
 - **피코넷 (PICONET):** 블루투스/UWB 기술로 형성하는 독립적 무선망.
-- **Tiếng Việt:** 
+- **Tiếng Việt:**
   - SDN/SDS/SDDC: Ảo hóa và điều khiển mạng/lưu trữ/trung tâm dữ liệu bằng phần mềm.
   - PaaS-TA: Nền tảng cloud mở của Hàn Quốc.
   - SSO: Đăng nhập một lần.
@@ -49,7 +49,7 @@
 - **버스형 (Bus Topology):** 한 통신 회선에 여러 단말장치 연결.
 - **VLAN (Virtual LAN):** 물리적 배치와 무관하게 논리적으로 네트워크 분리.
 - **WDM (Wavelength Division Multiplexing):** 파장이 다른 광선을 이용해 동시 통신 (광다중화).
-- **Tiếng Việt:** 
+- **Tiếng Việt:**
   - CSMA/CD: Phát hiện xung đột (Mạng có dây).
   - CSMA/CA: Tránh xung đột (Mạng không dây).
   - VLAN: Mạng LAN ảo, phân chia logic không phụ thuộc vật lý.
@@ -59,7 +59,7 @@
 - **RIP (Routing Information Protocol):** 거리 벡터 라우팅 (최대 홉 15 제한).
 - **OSPF (Open Shortest Path First):** 링크 상태 기반 최단 경로 라우팅 (대규모 망).
 - **흐름 제어 - 정지-대기 (Stop-and-Wait):** 수신 측의 ACK(확인 신호)를 받은 후 다음 패킷 전송.
-- **Tiếng Việt:** 
+- **Tiếng Việt:**
   - ARP: IP -> MAC.
   - RIP: Dựa trên số Hop (tối đa 15).
   - OSPF: Dựa trên trạng thái Link, tìm đường ngắn nhất.

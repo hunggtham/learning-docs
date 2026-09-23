@@ -1,12 +1,12 @@
-# 핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)
+# 핵심 039: 소프트웨어 품질 관련 국제 표준 (Software Quality Standards)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **핵심 039: 소프트웨어 품질 관련 국제 표준 (Software Quality Standards)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-핵심, 재사용, 기법
+핵심, 소프트웨어, 품질, 관련, 국제, 표준
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,20 +22,20 @@
 
 ---
 
-## 핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)
+## 핵심 039: 소프트웨어 품질 관련 국제 표준 (Software Quality Standards)
 
-- **재사용 (Reuse):** 이미 개발되어 인정받았던 소프트웨어의 전체 또는 일부분을 다시 사용하는 기법. (Sử dụng lại code/phần mềm cũ đã được kiểm chứng để tiết kiệm thời gian, chi phí và giảm lỗi.)
-- **Phân loại theo kỹ thuật:**
-  - **분석 (Analysis):** Hiểu code cũ để chọn cái cần tái sử dụng.
-  - **재구조 (Restructuring):** Đổi cấu trúc, không đổi chức năng.
-  - **역공학 (Reverse Engineering):** Dịch ngược từ code ra bản thiết kế.
-  - **이식 (Migration):** Chuyển sang môi trường / phần cứng mới.
-  - **재개발 (Re-Development):** Đập đi xây lại có tham khảo cái cũ.
-- **Phân loại theo phạm vi:**
-  - Hàm & Đối tượng (Function/Class), Component, Ứng dụng (Application).
+- **ISO/IEC 9126:** Đánh giá chất lượng phần mềm gồm 6 đặc tính: **기신사효유이**
+  - **기**능성 (Functionality): Đáp ứng đúng yêu cầu.
+  - **신**뢰성 (Reliability): Chạy ổn định, không lỗi, chịu lỗi tốt.
+  - **사**용성 (Usability): Dễ hiểu, dễ học, dễ dùng.
+  - **효**율성 (Efficiency): Tốn ít tài nguyên, chạy nhanh.
+  - **유**지 보수성 (Maintainability): Dễ sửa chữa, bảo trì, phân tích.
+  - **이**식성 (Portability): Dễ cài đặt, dễ chuyển sang môi trường/máy khác.
+- **ISO/IEC 14598:** Tiêu chuẩn đánh giá quá trình mua/phát triển.
+- **ISO/IEC 12119:** Tiêu chuẩn cho gói phần mềm thương mại.
+- **ISO/IEC 25000 (SQuaRE):** Tích hợp tất cả các tiêu chuẩn 9126, 14598, 12119.
 
-- 💡 **Mẹo ghi nhớ (Mnemonics):** Reverse Engineering (Dịch ngược) = Từ Code -> Bản thiết kế. Migration = Chuyển nhà (môi trường).
+- **Vietnamese Explanation:** ISO 9126 là kinh điển nhất, bạn phải nhớ 6 chữ cái đầu của 6 đặc tính. Nếu phần mềm khó dùng => Kém "Sử dụng tính". Nếu đổi máy tính mà không chạy được => Kém "Di thực tính" (Portability).
+- 💡 **Mẹo ghi nhớ (Mnemonics):** 6 Đặc tính của 9126: "Chức Tín Dùng Hiệu Bảo Di" (Chức năng - Đáng tin - Dễ dùng - Hiệu quả - Bảo trì - Di động). ISO 25000 = Chuẩn xịn nhất tổng hợp tất cả.
 
 ---
-
-# Chapter 3. 제품 소프트웨어 패키징 (Product Software Packaging)

@@ -45,7 +45,3 @@
 - 💡 **Mẹo ghi nhớ (Mnemonics):** IPSec = Tầng Mạng (IP). SSL = Tầng giữa (Socket). JSON = Key-Value. STAF = Phân tán (Phân tán (Distributed)).
 
 ---
-
-# [복습 / 심화 노트 - Revision & Deep Dive Notes]
-
----

@@ -1,12 +1,12 @@
-# 8. 재사용 (Reuse)
+# 6. N-S 차트 (Nassi-Schneiderman Chart)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **8. 재사용 (Reuse)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **6. N-S 차트 (Nassi-Schneiderman Chart)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-재사용
+N-S, 차트
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,14 +22,10 @@
 
 ---
 
-## 8. 재사용 (Reuse)
-**개념 (Khái niệm):** 기존 기능을 최적화하여 다시 쓰는 것 (Tái sử dụng chức năng để tiết kiệm thời gian và chi phí).
+## 6. N-S 차트 (Nassi-Schneiderman Chart)
+**개념 (Khái niệm):** 논리 기술 중점의 박스 다이어그램 (Biểu đồ dạng hộp tập trung mô tả logic).
 
-*   **Korean:** 결합도는 낮고 응집도는 높아야 함.
-*   **VI (Vietnamese) (Tiếng Việt):** Yêu cầu: Độ phụ thuộc (Coupling) THẤP và Độ gắn kết (Cohesion) CAO.
-*   **분류 (Phân loại):**
-    *   **함수와 객체 (Function & Object):** 소스 코드 단위 (Mức mã nguồn / Class).
-    *   **컴포넌트 (Component):** 인터페이스 통신 (Mức Interface, không sửa code gốc).
-    *   **애플리케이션 (Application):** 시스템 전체 (Mức ứng dụng hoàn chỉnh).
+*   **Korean:** GOTO나 화살표를 사용하지 않음. 단일 입구/단일 출구. Box Diagram, Chapin Chart라고도 부름. 순차, 선택, 반복 논리 구조 시각화.
+*   **VI (Vietnamese) (Tiếng Việt):** Đặc điểm quan trọng nhất: **KHÔNG DÙNG GOTO và KHÔNG CÓ MŨI TÊN**. Có một lối vào và một lối ra duy nhất. Còn gọi là Box Diagram hoặc Chapin Chart. Gồm 3 cấu trúc: Tuần tự, Lựa chọn (If-else), Lặp (Loop). Dễ chuyển sang code nhưng khó vẽ.
 
 ---

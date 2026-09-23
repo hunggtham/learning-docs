@@ -1,12 +1,12 @@
-# 13. 시스템 연계 및 인터페이스 (System Interface & Integration)
+# 2. 인터페이스 검토 및 연계 기술 (Interface Review & Tech)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **13. 시스템 연계 및 인터페이스 (System Interface & Integration)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **2. 인터페이스 검토 및 연계 기술 (Interface Review & Tech)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-시스템, 연계, 인터페이스
+인터페이스, 검토, 연계, 기술
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,26 +22,18 @@
 
 ---
 
-## 13. 시스템 연계 및 인터페이스 (System Interface & Integration)
-### 13.1 시스템 연계 기술 (Các công nghệ liên kết hệ thống)
-1.  **DB Link:** DB 객체 이용 (Kết nối trực tiếp qua DB Link).
-2.  **API/Open API:** 프로그램 인터페이스 (Mở cổng API để ứng dụng khác gọi).
-3.  **EAI (연계 솔루션):** 중계 서버/클라이언트 사용 (Dùng máy chủ trung gian Enterprise Application Integration).
-4.  **Socket:** 포트 할당하여 연결 (Mở port mạng Socket để truyền dữ liệu).
-5.  **Web Service:** WSDL, UDDI, SOAP 프로토콜 사용 (Dịch vụ web dùng giao thức chuẩn XML/SOAP).
-
-### 13.2 인터페이스 통신 & 처리 유형 (Loại giao tiếp & xử lý)
-*   **통신 유형 (Loại Giao tiếp):**
-    *   **단방향 (Unidirectional):** 응답 없음 (Chỉ gửi, không cần phản hồi).
-    *   **동기 (Synchronous):** 응답 대기 (Gửi và đợi phản hồi).
-    *   **비동기 (Asynchronous):** 다른 작업 수행 (Gửi xong làm việc khác, trả lời sau).
-*   **처리 유형 (Loại Xử lý):**
-    *   **실시간 (Real-time):** 즉시 처리 (Xử lý ngay lập tức).
-    *   **지연 처리 (Deferred):** 비용 절감을 위해 모아서 처리 (Trì hoãn xử lý để tiết kiệm chi phí).
-    *   **배치 (Batch):** 대용량 일괄 처리 (Gom dữ liệu lớn xử lý 1 lần).
-
-### 13.3 명세화 (Specification)
-*   **송수신 데이터 명세화:** 데이터 필드명, 타입, 사이즈, **암호화 여부** 정의 (Đặc tả dữ liệu: Tên trường, Kiểu, Kích thước, và có Cần Mã hóa không).
-*   **오류 식별 및 처리 방안 명세화:** 오류 코드, 메시지, 해결 방법 정의 (Đặc tả lỗi: Mã lỗi, Thông báo, Cách xử lý để dễ vận hành).
+## 2. 인터페이스 검토 및 연계 기술 (Interface Review & Tech)
+- **정형 기술 검토 (FTR - Formal Technical Review)**:
+  - **동료검토 (Peer Review)**: Tác giả tự giải thích tài liệu, đồng nghiệp tìm lỗi.
+  - **워크 스루 (Walk Through)**: Gửi tài liệu trước, họp review ngắn để tìm lỗi nhanh.
+  - **인스펙션 (Inspection)**: Chuyên gia khác (không phải tác giả) kiểm tra chặt chẽ để tìm lỗi.
+  - 💡 **Mẹo ghi nhớ**: 동료(Tự thuyết trình) / 워크스루(Họp ngắn) / 인스펙션(Chuyên gia chém).
+- **연계 기술 (Connection Tech)**:
+  - DB Link, API, Socket (Cấp phát cổng), JDBC.
+- **미들웨어 (Middleware)**: Phần mềm trung gian kết nối các hệ thống khác biệt.
+  - **TP Monitor**: Giám sát Transaction (Giao dịch).
+  - **MOM (Message-Oriented)**: Bất đồng bộ (비동기), dùng hàng đợi tin nhắn (메시지 큐).
+  - **ORB (Object Request Broker)**: Hướng đối tượng, chuẩn CORBA.
+  - **WAS (Web Application Server)**: Xử lý nội dung web động (동적인 콘텐츠).
 
 ---

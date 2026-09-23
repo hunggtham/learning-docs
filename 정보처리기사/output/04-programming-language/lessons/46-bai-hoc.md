@@ -1,12 +1,12 @@
-# 네트워크 프로토콜 및 장비 심화 (Network Protocols & Devices - Advanced)
+# 088. 인터넷 구성과 네트워크 - OSI 7계층 (OSI 7 Layer)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **네트워크 프로토콜 및 장비 심화 (Network Protocols & Devices - Advanced)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **088. 인터넷 구성과 네트워크 - OSI 7계층 (OSI 7 Layer)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-네트워크, 프로토콜, 장비, 심화
+인터넷, 구성과, 네트워크, OSI, 계층
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,23 +22,23 @@
 
 ---
 
-## 네트워크 프로토콜 및 장비 심화 (Network Protocols & Devices - Advanced)
-### 서브네팅 및 IP 클래스 (Subnetting & IP Classes)
-- **A Class**: 0~127. 대형 통신망 (Mạng rất lớn).
-- **B Class**: 128~191. 중대형 통신망 (Mạng trung-lớn).
-- **C Class**: 192~223. 소규모 통신망 (Mạng nhỏ).
-- **D Class**: 224~239. 멀티캐스트 (Multicast).
-- **서브네팅 (Subnetting)**: 서브넷 마스크를 이용해 네트워크 주소를 분할. (Dùng Subnet Mask để chia nhỏ mạng).
+## 088. 인터넷 구성과 네트워크 - OSI 7계층 (OSI 7 Layer)
+- **IEEE 802 표준**: 802.3 (Ethernet, 유선랜), 802.11 (무선랜, Wi-Fi).
+- **OSI 7계층 (상위 계층부터)**:
+  7. **응용 계층 (Application)**: 사용자 인터페이스. (HTTP, FTP, DNS) - 데이터 단위: Data.
+  6. **표현 계층 (Presentation)**: 암호화, 압축, 포맷 변환. - 데이터 단위: Data.
+  5. **세션 계층 (Session)**: 응용 프로그램 간 논리적 연결 생성/유지. - 데이터 단위: Data.
+  4. **전송 계층 (Transport)**: 종단 간(End-to-End) 신뢰성 있는 전송. 포트 번호 사용. (TCP, UDP). 장비: L4 스위치. - 데이터 단위: Segment.
+  3. **네트워크 계층 (Network)**: 경로 설정(Routing). IP 주소 사용. (IP, ICMP, ARP). 장비: 라우터, L3 스위치. - 데이터 단위: Packet.
+  2. **데이터 링크 계층 (Data Link)**: 인접 노드 간 전송 제어, 오류/흐름 제어. MAC 주소 사용. (HDLC, PPP). 장비: 브리지, L2 스위치. - 데이터 단위: Frame.
+  1. **물리 계층 (Physical)**: 전기적 신호 전송. 장비: 허브, 리피터. - 데이터 단위: Bit.
 
-### 계층별 주요 프로토콜 (Major Protocols by Layer / Giao thức theo tầng)
-- **응용 계층 (Application)**: FTP (파일 전송), SMTP (메일), TELNET (원격 접속), SNMP (네트워크 관리), DNS (도메인-IP 변환), HTTP (웹 문서).
-- **전송 계층 (Transport)**: TCP (신뢰성), UDP (빠른 속도), RTCP (실시간 제어).
-- **네트워크/인터넷 계층 (Network/Internet)**: IP (주소 지정, 비연결형), ICMP (오류 제어 메시지), IGMP (멀티캐스트 그룹 관리), ARP (IP -> MAC), RARP (MAC -> IP).
-- **데이터 링크 계층 (Data Link)**: Ethernet, HDLC, X.25.
-  - 💡 *Mẹo ghi nhớ*: ARP = "A"ddress Resolution (Tìm MAC từ IP). RARP = "R"everse (Ngược lại).
+**Giải thích (Vietnamese):**
+Mô hình OSI 7 lớp chia nhỏ quá trình gửi dữ liệu qua mạng.
+Tầng 1 (Cáp mạng, dây điện), Tầng 2 (Truyền giữa 2 máy tính kề nhau qua địa chỉ MAC), Tầng 3 (Tìm đường đi trên mạng Internet qua IP), Tầng 4 (Đảm bảo gói tin không bị rớt qua TCP/UDP), Tầng 5-7 (Phần mềm xử lý hiển thị lên màn hình).
 
-### 네트워크 장비 (Network Devices - Bổ sung)
-- **게이트웨이 (Gateway)**: 다른 네트워크로부터 데이터를 주고받는 출입구 역할, 프로토콜 구조가 다른 네트워크 연결. (Cổng ra vào giữa các mạng có giao thức hoàn toàn khác nhau).
-- **NIC (Network Interface Card)**: 랜카드, 컴퓨터를 네트워크에 연결. (Card mạng).
+**💡 Mẹo ghi nhớ (Mnemonics):**
+Tên 7 tầng từ dưới lên (1->7): **물데네 전세표응** (Vật - Dữ - Mạng - Truyền - Phiên - Biểu - Ứng).
+Đơn vị dữ liệu (1->4): **비프패세** (Bit, Frame, Packet, Segment).
 
 ---

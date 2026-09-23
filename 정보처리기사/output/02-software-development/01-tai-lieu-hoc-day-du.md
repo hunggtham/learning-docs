@@ -35,6 +35,27 @@
 
 ---
 
+## 073 & 074: 자료 구조의 정의 및 선형 리스트 (Data Structures & Linear List)
+
+### 자료 구조의 분류 (Phân loại)
+- **선형 구조 (Linear - Tuyến tính):** 배열 (Array), 리스트 (List), 스택 (Stack), 큐 (Queue), 데크 (Deque).
+- **비선형 구조 (Non-Linear - Phi tuyến):** 트리 (Tree), 그래프 (Graph).
+
+### 배열 (Array - Mảng)
+
+---
+
+- **구조화 (Structuring):** 대형 시스템을 분해하여 단위 기능별로 구분, 계층적으로 구성. (Cấu trúc hóa - chia nhỏ thành sơ đồ hình cây).
+- **정보 은닉 (Information Hiding):** 한 모듈 내의 정보가 다른 모듈에 영향을 주지 않도록 숨김. (Che giấu thông tin - dùng biến private để tránh đụng độ).
+
+### 입·출력 기능 및 알고리즘 구현 (I/O & Algorithm Implementation)
+- **입·출력 구현:** Nhận Input, trả Output. Chú ý liên kết giao diện (CLI/GUI) hoặc dùng Open Source API để kết nối mạng.
+- **알고리즘 구현:** Viết code xử lý logic bên trong (Process) sau khi đã có I/O.
+
+---
+
+---
+
 ## 2. 스택 (Stack) 및 응용 (Applications)
 * 리스트의 한쪽 끝으로만 자료의 삽입, 삭제 작업이 이루어지는 자료 구조.
 * 가장 나중에 삽입된 자료가 가장 먼저 삭제되는 후입선출(**LIFO**, Last-In First-Out) 방식.
@@ -159,7 +180,7 @@
 ---
 
 ## 31. 추가 정렬 알고리즘 (Additional Sorting Algorithms)
-* **퀵 정렬 (Quick Sort)**: 키를 기준으로 작은 값은 왼쪽, 큰 값은 오른쪽 서브파일로 분해시키는 방식. 분할(Divide)과 정복(Conquer)을 통해 자료를 정렬. 
+* **퀵 정렬 (Quick Sort)**: 키를 기준으로 작은 값은 왼쪽, 큰 값은 오른쪽 서브파일로 분해시키는 방식. 분할(Divide)과 정복(Conquer)을 통해 자료를 정렬.
   * 평균 시간 복잡도: O(n log n), 최악: O(n^2).
 * **2-Way 합병 정렬 (Merge Sort)**: 정렬되어 있는 두 개의 파일을 한 개의 파일로 합병하는 방식. 평균/최악 모두 O(n log n).
 * **힙 정렬 (Heap Sort)**: 전이진 트리(Complete Binary Tree)를 이용한 정렬 방식. 평균/최악 모두 O(n log n).
@@ -222,12 +243,10 @@
 | 제곱 탐색 (Quadratic Probing) | 해시충돌 시 제곱만큼 건너뛴 버킷에 삽입 (1, 4, 9, 16...). (Thử bậc hai: Nhảy xa dần theo bình phương để tránh tụ tập.) |
 | 이중 해시 (Double Hashing) | 해시충돌 시 다른 해싱함수를 한 번 더 적용. (Băm kép: Dùng thêm một hàm băm phụ để tìm khoảng nhảy.) |
 
-- **Vietnamese Explanation:** Khi hai dữ liệu băm ra cùng một địa chỉ (Collision), ta phải giải quyết. Chaining là cho chúng ở chung một nhà nhưng nối đuôi nhau (như xâu chuỗi). Open Addressing là "nhà này có người rồi, mời anh đi tìm nhà khác". 
+- **Vietnamese Explanation:** Khi hai dữ liệu băm ra cùng một địa chỉ (Collision), ta phải giải quyết. Chaining là cho chúng ở chung một nhà nhưng nối đuôi nhau (như xâu chuỗi). Open Addressing là "nhà này có người rồi, mời anh đi tìm nhà khác".
 - 💡 **Mẹo ghi nhớ (Mnemonics):** Chaining = Dây xích (Linked List). Open Addressing = Mở cửa đi tìm nhà khác (Linear, Quadratic, Double).
 
 ---
-
-# Chapter 2. 통합 구현 (Integration Implementation)
 
 ---
 
@@ -274,24 +293,6 @@
 
 - **Vietnamese Explanation:** Module là một khối code (như một hàm hoặc một class). Component là một khối lớn hơn, đóng gói sẵn và có thể lắp ráp vào nhiều phần mềm khác nhau (như một nút bấm UI, một bộ lịch).
 - 💡 **Mẹo ghi nhớ (Mnemonics):** Trình tự: Kế hoạch -> Code -> Dịch (Compile) -> Thử (Test). Module = Ghép lại thành chương trình. Component = Tái sử dụng qua Interface.
-
----
-
----
-
-## 093 & 093-1 & 093-2: 단위 모듈 및 명세서 (Unit Module & Specifications)
-
-### 단위 모듈 (Unit Module)
-- 프로그램의 단위 기능을 구현하는 독립적인 최소 소프트웨어 단위. (Đơn vị phần mềm nhỏ nhất, độc lập, thực hiện 1 chức năng duy nhất).
-
-### 단위 기능 명세서 작성 원칙 (Nguyên tắc viết Đặc tả chức năng)
-- **추상화 (Abstraction):** 복잡한 시스템을 단순하게 구현. (Trừu tượng hóa - ẩn đi sự phức tạp).
-- **구조화 (Structuring):** 대형 시스템을 분해하여 단위 기능별로 구분, 계층적으로 구성. (Cấu trúc hóa - chia nhỏ thành sơ đồ hình cây).
-- **정보 은닉 (Information Hiding):** 한 모듈 내의 정보가 다른 모듈에 영향을 주지 않도록 숨김. (Che giấu thông tin - dùng biến private để tránh đụng độ).
-
-### 입·출력 기능 및 알고리즘 구현 (I/O & Algorithm Implementation)
-- **입·출력 구현:** Nhận Input, trả Output. Chú ý liên kết giao diện (CLI/GUI) hoặc dùng Open Source API để kết nối mạng.
-- **알고리즘 구현:** Viết code xử lý logic bên trong (Process) sau khi đã có I/O.
 
 ---
 
@@ -358,7 +359,7 @@
   * **기능**: 형상 식별, 버전 제어, 형상 통제(변경 관리), 형상 감사, 형상 기록.
 * **버전 관리 방식 3가지**:
   1. **공유 폴더 방식 (Shared Folder)**: 로컬 공유 폴더에 저장. (SCCS, RCS 등).
-  2. **클라이언트/서버 방식 (C/S)**: 중앙 서버에 저장하여 관리. (CVS, SVN 등). 
+  2. **클라이언트/서버 방식 (C/S)**: 중앙 서버에 저장하여 관리. (CVS, SVN 등).
      * **SVN (Subversion)**: `trunk`에서 주로 개발, `branches`에서 추가 작업 후 병합(merge). 커밋 시 리비전(Revision) 1씩 증가.
   3. **분산 저장소 방식 (Distributed)**: 로컬 저장소와 원격 저장소에 함께 저장. (Git 등).
      * **Git**: 로컬에서 버전 관리가 가능해 빠르고 네트워크 문제 시에도 작업 가능. 스냅샷(Snapshot)으로 파일 변화를 저장.
@@ -492,7 +493,7 @@
 ## 099: 소프트웨어 패키징 (Software Packaging)
 
 - 실행 파일들을 묶어 배포용 설치 파일을 만드는 과정. (Gom tất cả file thực thi, file hình, file cấu hình thành 1 file cài đặt (Setup.exe) để tung ra thị trường).
-- **Nguyên tắc:** 
+- **Nguyên tắc:**
   - **사용자 중심 (Hướng tới người dùng):** Người dùng cài đặt dễ dàng, không cần biết code.
   - Cần phải 모듈화 (Module hóa) để dễ bảo trì, và tích hợp 보안 (Bảo mật / DRM).
 
@@ -669,7 +670,7 @@
 
 ## 35. 테스트 케이스 (Test Case)
 * 사용자의 요구사항을 정확하게 준수했는지 확인하기 위해 설계된 테스트 항목에 대한 명세서.
-* **구성 요소 (ISO/IEC/IEEE 29119-3)**: 
+* **구성 요소 (ISO/IEC/IEEE 29119-3)**:
   * 식별자, 테스트 항목, 입력 명세(Input), 출력 명세(Output/예상 결과), 환경 설정, 특수 절차 요구, 의존성 기술.
 * **VI (Vietnamese) (Tiếng Việt):** Kịch bản kiểm thử (Test Case). Bao gồm: ID, Môi trường, Đầu vào, Đầu ra mong đợi.
 * **Example**: 로그인 기능을 위해 "ID: admin, PW: 1234를 넣었을 때 관리자 페이지로 넘어가는가?"를 문서화한 것입니다.
@@ -832,7 +833,7 @@ Cả hai đều là **Dynamic Test** (Phải chạy code).
   - **루프 검사 (Loop Testing):** Test các vòng lặp for, while.
 
 - **Vietnamese Explanation:** Black-box giống như lái xe ô tô: đạp ga là chạy, không cần biết động cơ nổ ra sao. White-box giống như thợ máy: tháo tung động cơ ra kiểm tra từng con ốc, từng pít-tông.
-- 💡 **Mẹo ghi nhớ (Mnemonics):** 
+- 💡 **Mẹo ghi nhớ (Mnemonics):**
   - Black-box (Chức năng): Vùng (Partition), Biên (Boundary), Nhờ kinh nghiệm (Guessing).
   - White-box (Cấu trúc code): Dòng lệnh (Statement), Nhánh (Branch), Điều kiện (Condition), Vòng lặp (Loop).
 
@@ -993,7 +994,7 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
   - *Big Bang:* Lắp ráp toàn bộ rồi mới khởi động. Xe không nổ máy $\rightarrow$ Không biết do động cơ, bình ắc quy hay bugi.
   - *Incremental:* Lắp động cơ vào hộp số rồi test (OK). Lắp thêm bánh xe rồi test (OK) $\rightarrow$ Nếu có lỗi sẽ biết ngay tại bộ phận vừa lắp thêm.
 
-> 💡 **Mẹo ghi nhớ (Mnemonics):** 
+> 💡 **Mẹo ghi nhớ (Mnemonics):**
 > - **Big Bang** = "Bùm" một phát gom hết lại, nếu hỏng thì không biết sửa từ đâu.
 > - **Incremental** = "Từng bước", thêm một phần tử vào nếu sai thì do phần tử đó.
 
@@ -1010,7 +1011,7 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 - **상향식:** 클러스터(Cluster), **테스트 드라이버(Driver)**.
 
 **[3] 차이점 비교 (So sánh chi tiết):**
-- **하향식 (Top-Down):** 
+- **하향식 (Top-Down):**
   - 하위 모듈이 아직 없으므로, 이를 thay thế bằng **Stub** (모듈의 흉내를 내는 가짜 하위 모듈 - module giả lập cấp dưới).
   - 테스트 초기부터 시스템의 전체 구조를 보여주기 유리.
 - **상향식 (Bottom-Up):**
@@ -1021,7 +1022,7 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 - **Top-Down:** Kiểm tra màn hình Đăng nhập (Main). Vì chưa có database, ta tạo một `Stub` (hàm giả) cứ nhận id/pass là trả về "Thành công".
 - **Bottom-Up:** Đã viết xong hàm mã hóa mật khẩu (phụ), nhưng chưa có màn hình Đăng nhập. Ta viết một đoạn code ngắn (`Driver`) để gọi hàm mã hóa đó với các chuỗi khác nhau xem nó mã hóa đúng không.
 
-> 💡 **Mẹo ghi nhớ (Mnemonics):** 
+> 💡 **Mẹo ghi nhớ (Mnemonics):**
 > - **Top-Down = Stub** (Từ trên xuống gặp tảng đá - S).
 > - **Bottom-Up = Driver** (Từ dưới lên cần tài xế lái lên - D).
 
@@ -1045,7 +1046,7 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 **[1] 개념 (Khái niệm):** 수정된 모듈이나 컴포넌트가 다른 부분에 영향을 미치는지 확인하기 위해 테스트를 반복하는 것.
 *(Kiểm tra lại toàn bộ hoặc một phần hệ thống sau khi đã sửa lỗi hoặc thêm tính năng mới, để đảm bảo việc sửa chữa này không làm hỏng các tính năng cũ đang hoạt động tốt.)*
 
-**[2] 핵심 키워드 (Từ khóa chính):** 
+**[2] 핵심 키워드 (Từ khóa chính):**
 - 새로운 오류 확인 (Xác nhận không có lỗi mới)
 - 기존 기능 보장 (Đảm bảo chức năng cũ)
 - 테스트 케이스 선정 (Lựa chọn test case hiệu quả)
@@ -1053,7 +1054,7 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 **[3] 예시 (Ví dụ thực tế):**
 - Trang web có tính năng Đăng nhập và Thanh toán đang dùng tốt. Bạn vừa sửa tính năng Đăng nhập. Bạn phải chạy lại *Regression Test* để chắc chắn rằng sửa xong Đăng nhập thì nút Thanh toán không tự nhiên bị liệt.
 
-> 💡 **Mẹo ghi nhớ (Mnemonics):** 
+> 💡 **Mẹo ghi nhớ (Mnemonics):**
 > - **Regression (Hồi quy)** = Quay trở lại (Hồi) quy trình cũ để test xem có hỏng không.
 
 ---
@@ -1073,7 +1074,7 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 - **유의사항:** 시스템/모듈별로 분리 작성, 유스케이스 간 업무 흐름(Workflow) 검증.
 - **예시:** Kịch bản mua hàng: "Đăng nhập (Test Case 1) $\rightarrow$ Tìm kiếm sản phẩm (Test Case 2) $\rightarrow$ Thêm vào giỏ (Test Case 3) $\rightarrow$ Thanh toán (Test Case 4)."
 
-> 💡 **Mẹo ghi nhớ (Mnemonics):** 
+> 💡 **Mẹo ghi nhớ (Mnemonics):**
 > - **Test Case** = Từng bước đi độc lập (Kiểm tra 1 hành động).
 > - **Test Scenario** = Chuyến hành trình (Nhiều bước nối tiếp nhau tạo thành kịch bản).
 
@@ -1091,12 +1092,12 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 4. **일관성 오라클 (Consistent Oracle):** 애플리케이션 변경 시 테스트 전후 결과값이 같은지 확인 (Dùng trong Regression test).
 
 **[3] 예시 (Ví dụ thực tế):**
-- Máy tính bỏ túi: 
+- Máy tính bỏ túi:
   - *True Oracle:* Tính thử mọi phép tính có thể (Không tưởng).
   - *Sampling Oracle:* Chỉ tính thử $1+1$, $2*3$, $10/2$.
   - *Consistent Oracle:* Bản update mới của app máy tính, lấy kết quả của bản cũ so sánh với bản mới.
 
-> 💡 **Mẹo ghi nhớ (Mnemonics):** 
+> 💡 **Mẹo ghi nhớ (Mnemonics):**
 > - **Oracle** = Nhà tiên tri (đưa ra đáp án chuẩn). 4 loại: **T**rue - **S**ampling - **H**euristic - **C**onsistent.
 
 ---
@@ -1121,7 +1122,7 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 **[5] 예시 (Ví dụ thực tế):**
 - Sử dụng *Selenium* (Công cụ tự động hóa) để code một kịch bản: Tự động mở trình duyệt $\rightarrow$ Điền form $\rightarrow$ Bấm nút "Submit" hàng ngàn lần để test sức chịu đựng (Stress test). Việc này nếu dùng người bấm tay sẽ mất rất nhiều thời gian (손설거지 vs 식기세척기 - Rửa bát bằng tay vs Máy rửa bát).
 
-> 💡 **Mẹo ghi nhớ (Mnemonics):** 
+> 💡 **Mẹo ghi nhớ (Mnemonics):**
 > - Tự động hóa = "Máy rửa bát". Đắt tiền mua (초기 비용) nhưng rửa 1000 cái bát rất nhanh (반복 작업 최적화).
 
 ---
@@ -1144,7 +1145,7 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 **[1] 개념 (Khái niệm):** 소프트웨어가 개발자의 설계와 다르게 동작하거나 잘못된 결과를 발생시키는 현상 (Bug).
 *(Bất kỳ lỗi, thiếu sót nào khiến phần mềm chạy không đúng với tài liệu đặc tả yêu cầu).*
 
-**[2] 예시 (Ví dụ thực tế):** 
+**[2] 예시 (Ví dụ thực tế):**
 - Thiết kế: Nút "Hủy" phải có màu Đỏ. Thực tế: Lập trình viên làm nút "Hủy" màu Xanh $\rightarrow$ Đây cũng được tính là một 결함 (Fault) dù không gây crash app.
 
 ---
@@ -1159,19 +1160,18 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 
 **[2] 빅오 표기법 (Big-O Notation - Ký hiệu Big-O):**
 - 최악일 때(Worst Case)를 기준으로 알고리즘의 복잡도(실행 시간)를 표기.
-- **성능 순서 (Tốc độ từ nhanh $\rightarrow$ chậm):** 
+- **성능 순서 (Tốc độ từ nhanh $\rightarrow$ chậm):**
   $O(1)$ (Hằng số) $\rightarrow$ $O(log n)$ (Tìm kiếm nhị phân) $\rightarrow$ $O(n)$ (Tuyến tính) $\rightarrow$ $O(n log n)$ (Sắp xếp trộn) $\rightarrow$ $O(n^2)$ (Sắp xếp nổi bọt).
 
 **[3] 순환 복잡도 (Cyclomatic Complexity - Độ phức tạp theo chu trình McCabe):**
 - 프로그램의 논리적인 복잡도를 독립적인 경로의 수로 수치화. (Số lượng đường dẫn độc lập trong code).
-- **공식 (Công thức):** $V(G) = E - N + 2$ 
-  *(E: Edge - số mũi tên, N: Node - số nút).*
+- **공식 (Công thức):** với một đồ thị luồng liên thông, $V(G) = E - N + 2$ (E: Edge, N: Node); tổng quát là $V(G)=E-N+2P$ với P là số thành phần liên thông. Có thể dùng số vùng kín + 1.
 
 **[4] 예시 (Ví dụ thực tế):**
 - **Throughput vs Response Time:** Một quán phở có thể bán 100 bát/giờ (Throughput = 100). Nhưng khách vào gọi món phải chờ 15 phút mới bê ra (Response time = 15m).
 - **McCabe $V(G)$:** Nếu vẽ sơ đồ luồng (Flowchart) của hàm If-Else có 4 Node và 4 Edge $\rightarrow$ $V(G) = 4 - 4 + 2 = 2$ (Có 2 đường đi độc lập).
 
-> 💡 **Mẹo ghi nhớ (Mnemonics):** 
+> 💡 **Mẹo ghi nhớ (Mnemonics):**
 > - Công thức McCabe: **E**m **N**hớ **+ 2** ($E - N + 2$).
 
 ---
@@ -1206,7 +1206,7 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 - 애플리케이션 간 **약한 결합 (Loosely Coupled)**을 유지하여 유연성을 극대화.
 *(Cũng giống EAI nhưng ESB dựa trên các dịch vụ web tiêu chuẩn, các hệ thống kết nối lỏng lẻo (ít phụ thuộc nhau), phù hợp hệ thống cực lớn).*
 
-> 💡 **Mẹo ghi nhớ (Mnemonics):** 
+> 💡 **Mẹo ghi nhớ (Mnemonics):**
 > - **EAI** = Tích hợp hệ thống ứng dụng cục bộ.
 > - **ESB** = Tích hợp "Dịch vụ" (Service) theo SOA.
 
@@ -1359,7 +1359,7 @@ ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu R
 **[4] 예시 (Ví dụ thực tế):**
 - Bạn dùng **Git**. Khi cúp mạng internet, bạn vẫn có thể `git commit` để lưu lại phiên bản code trên máy mình. Khi có mạng lại, bạn mới `git push` để đẩy lên Server.
 
-> 💡 **Mẹo ghi nhớ (Mnemonics):** 
+> 💡 **Mẹo ghi nhớ (Mnemonics):**
 > - **Phân tán (Distributed) = Git:** Không có mạng vẫn lưu code được. Trái ngược với SVN (Tập trung) rớt mạng là khỏi lưu.
 
 ---
@@ -1383,6 +1383,28 @@ ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu R
 
 ---
 *(이하 전자계산기 구조 파트 - Computer Architecture)*
+
+---
+
+자료구조: 컴퓨터상 자료를 효율적으로 저장하기 위해 만들어진 논리적인 구조 (Cấu trúc logic để lưu trữ dữ liệu hiệu quả).
+
+### 선형 구조 (Linear - Nối tiếp nhau)
+- **리스트 (List):** 순서에 의해 나열된 구조. (Cấu trúc tuyến tính).
+  - **선형 리스트 (Linear List / Array):** Kích thước cố định (고정), lưu liên tục (연속). Tìm kiếm cực nhanh (검색 빠름), nhưng chèn/xóa cực chậm (삽입, 삭제 느림).
+  - **연결 리스트 (Linked List):** Kích thước linh hoạt (가변), liên kết bằng Pointer. Chèn/xóa cực nhanh, nhưng tìm kiếm chậm (phải dò từng cái) và tốn không gian lưu Pointer.
+- **스택 (Stack):** LIFO (Last-In-First-Out). Vào/Ra ở một đầu. Dùng cho: Gọi hàm (Subroutine), Lưu địa chỉ trở về, Đệ quy (Recursion), Tính biểu thức toán học, DFS (Duyệt sâu).
+- **큐 (Queue):** FIFO (First-In-First-Out). Vào một đầu, ra một đầu. Dùng cho: Lập lịch hệ điều hành (Job Scheduling), Hàng đợi in.
+- **데크 (Deque):** Kết hợp Stack và Queue, có thể Vào/Ra ở CẢ HAI đầu.
+
+### 비선형 구조 (Non-linear - Không nối tiếp)
+- **트리 (Tree):** Cây. Có Node (Đỉnh) và Branch (Nhánh). **Không có chu trình (Cycle).**
+- **그래프 (Graph):** Đồ thị. Có Đỉnh (Vertex) và Cạnh (Edge). Có thể có hướng hoặc vô hướng. (Cây là một dạng Đồ thị không có chu trình).
+
+- **Vietnamese Explanation:** Cấu trúc dữ liệu là cách sắp xếp thông tin.
+  - Linear List như dãy ghế đá (tìm số ghế thì nhanh, nhưng muốn chen vào giữa phải bắt mọi người xích ra).
+  - Linked List như trò chơi nắm tay nhau (muốn chen vào giữa chỉ cần thả tay và nắm người mới, rất dễ, nhưng tìm người thứ 10 thì phải đếm từ đầu).
+  - Stack như hộp bóng bàn (LIFO - vứt vào sau thì lấy ra trước). Queue như xếp hàng mua vé (FIFO - ai đến trước mua trước).
+- 💡 **Mẹo ghi nhớ (Mnemonics):** Stack = LIFO (Gọi Hàm, Đệ quy). Queue = FIFO (Lập lịch). Liên kết (Linked) = Nhanh chèn/xóa, Chậm tìm kiếm.
 
 ---
 
@@ -1445,10 +1467,6 @@ ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu R
 
 - **Vietnamese Explanation:** Khi gửi dữ liệu giữa các máy, JSON đang là vua vì nhẹ và dễ nhìn. YAML thì thường dùng để cấu hình server. Khi test xem các máy tính nói chuyện với nhau ổn không, người ta dùng xUnit (Test từng hàm) hoặc STAF (Test qua nhiều máy).
 - 💡 **Mẹo ghi nhớ (Mnemonics):** IPSec = Tầng Mạng (IP). SSL = Tầng giữa (Socket). JSON = Key-Value. STAF = Phân tán (Phân tán (Distributed)).
-
----
-
-# [복습 / 심화 노트 - Revision & Deep Dive Notes]
 
 ---
 
@@ -1600,7 +1618,7 @@ ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu R
 * **소스 코드 품질 분석 도구 심화**:
   * **정적 분석 도구**: pmd, cppcheck, SonarQube, checkstyle, ccm.
   * **동적 분석 도구**: Avalanche, Valgrind (메모리 누수, 스레드 결함 발견).
-* **VI (Vietnamese) (Tiếng Việt):** Tối ưu mã nguồn & Độ phức tạp Cyclomatic (McCabe). 
+* **VI (Vietnamese) (Tiếng Việt):** Tối ưu mã nguồn & Độ phức tạp Cyclomatic (McCabe).
   * Clean code > Bad code (Spaghetti/Alien).
   * V(G) = Cạnh(E) - Đỉnh(N) + 2. Số V(G) chính là số lượng test case cơ bản cần thiết.
   * Công cụ tĩnh (không chạy code): SonarQube. Động (chạy code tìm rò rỉ bộ nhớ): Valgrind.
@@ -1623,32 +1641,6 @@ ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu R
 
 ---
 
-## 023 & 024: 자료구조 (Data Structures / Cấu trúc dữ liệu)
-
-자료구조: 컴퓨터상 자료를 효율적으로 저장하기 위해 만들어진 논리적인 구조 (Cấu trúc logic để lưu trữ dữ liệu hiệu quả).
-
-### 선형 구조 (Linear - Nối tiếp nhau)
-- **리스트 (List):** 순서에 의해 나열된 구조. (Cấu trúc tuyến tính).
-  - **선형 리스트 (Linear List / Array):** Kích thước cố định (고정), lưu liên tục (연속). Tìm kiếm cực nhanh (검색 빠름), nhưng chèn/xóa cực chậm (삽입, 삭제 느림).
-  - **연결 리스트 (Linked List):** Kích thước linh hoạt (가변), liên kết bằng Pointer. Chèn/xóa cực nhanh, nhưng tìm kiếm chậm (phải dò từng cái) và tốn không gian lưu Pointer.
-- **스택 (Stack):** LIFO (Last-In-First-Out). Vào/Ra ở một đầu. Dùng cho: Gọi hàm (Subroutine), Lưu địa chỉ trở về, Đệ quy (Recursion), Tính biểu thức toán học, DFS (Duyệt sâu).
-- **큐 (Queue):** FIFO (First-In-First-Out). Vào một đầu, ra một đầu. Dùng cho: Lập lịch hệ điều hành (Job Scheduling), Hàng đợi in.
-- **데크 (Deque):** Kết hợp Stack và Queue, có thể Vào/Ra ở CẢ HAI đầu.
-
-### 비선형 구조 (Non-linear - Không nối tiếp)
-- **트리 (Tree):** Cây. Có Node (Đỉnh) và Branch (Nhánh). **Không có chu trình (Cycle).**
-- **그래프 (Graph):** Đồ thị. Có Đỉnh (Vertex) và Cạnh (Edge). Có thể có hướng hoặc vô hướng. (Cây là một dạng Đồ thị không có chu trình).
-
-- **Vietnamese Explanation:** Cấu trúc dữ liệu là cách sắp xếp thông tin. 
-  - Linear List như dãy ghế đá (tìm số ghế thì nhanh, nhưng muốn chen vào giữa phải bắt mọi người xích ra). 
-  - Linked List như trò chơi nắm tay nhau (muốn chen vào giữa chỉ cần thả tay và nắm người mới, rất dễ, nhưng tìm người thứ 10 thì phải đếm từ đầu).
-  - Stack như hộp bóng bàn (LIFO - vứt vào sau thì lấy ra trước). Queue như xếp hàng mua vé (FIFO - ai đến trước mua trước).
-- 💡 **Mẹo ghi nhớ (Mnemonics):** Stack = LIFO (Gọi Hàm, Đệ quy). Queue = FIFO (Lập lịch). Liên kết (Linked) = Nhanh chèn/xóa, Chậm tìm kiếm.
-
----
-
----
-
 ## 027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)
 
 ### 알고리즘 설계 기법 (Kỹ thuật thiết kế thuật toán)
@@ -1659,7 +1651,7 @@ ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu R
 
 ### 시간 복잡도 (Time Complexity - Độ phức tạp thời gian)
 - Đếm số lần thực thi các phép toán (không phải tính thời gian bằng giây).
-- Biểu diễn: Big-O (최악 - Tệ nhất), Theta (평균 - Trung bình), Omega (최상 - Tốt nhất).
+- Ký hiệu tiệm cận: Big-O là cận trên, Omega là cận dưới, Theta là cận chặt; chúng không tự động đồng nghĩa với lần lượt 최악/평균/최상. Khi đề bài nói rõ worst/best case thì mới gắn với trường hợp đó.
 - **Thứ tự (Nhanh -> Chậm):** O(1) < O(log n) < O(n) < O(n log n) < O(n²) < O(2ⁿ)
 - O(1) nghĩa là: Dữ liệu lớn đến đâu thời gian vẫn không đổi.
 
@@ -1686,8 +1678,6 @@ ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu R
 
 ---
 
-# Chapter 3. 제품 소프트웨어 패키징 (Product Software Packaging)
-
 ---
 
 ## 핵심 039: 소프트웨어 품질 관련 국제 표준 (Software Quality Standards)
@@ -1708,8 +1698,6 @@ ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu R
 
 ---
 
-# Chapter 4. 애플리케이션 테스트 관리 (Application Test Management)
-
 ---
 
 ## 핵심 클린 코드 작성 원칙 (Clean Code Principles)
@@ -1726,19 +1714,17 @@ ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu R
 | **중복성 최소화 (Minimizing Duplication)** | 코드의 중복을 최소화, 공통된 코드 사용. (DRY - Don't Repeat Yourself: Không copy-paste code.) |
 | **추상화 (Abstraction)** | 상위 수준에선 간략하게, 상세 내용은 하위에서 구현. (Trừu tượng hóa: Cái chung ở trên, cái chi tiết ở dưới.) |
 
-- **Vietnamese Explanation:** Clean Code là "đạo đức" của lập trình viên. Đừng viết Alien Code (code không ai hiểu nổi trừ người viết ban đầu). 
+- **Vietnamese Explanation:** Clean Code là "đạo đức" của lập trình viên. Đừng viết Alien Code (code không ai hiểu nổi trừ người viết ban đầu).
 - 💡 **Mẹo ghi nhớ (Mnemonics):** 5 nguyên tắc: Đọc - Đơn - Độc - Lặp - Trừu. (Đọc Đơn Độc Lặp Trừu (Đọc hiểu - Đơn giản - Độc lập - Không lặp - Trừu tượng)).
 
 ---
-
-# Chapter 5. 인터페이스 구현 (Interface Implementation)
 
 ---
 
 ## 097 & 120: 통합 개발 환경 (IDE - Integrated Development Environment)
 
 - 코딩, 디버그, 컴파일, 배포 등 모든 작업을 하나의 프로그램에서 처리. (Phần mềm tất-cả-trong-một).
-- **4대 기능 (4 Chức năng chính):** 
+- **4대 기능 (4 Chức năng chính):**
   - 코딩 (Coding): Gõ code.
   - 컴파일 (Compile): Dịch ra mã máy.
   - 디버깅 (Debugging): Tìm và sửa lỗi (Bug).
@@ -1781,7 +1767,7 @@ ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu R
 - **순서대로 (Theo trình tự):** Từ lúc bấm Next đến lúc Finish.
 - **예외 상황 / 오류 메시지:** Phải có cách xử lý khi cài đặt bị lỗi.
 - **Uninstall (Xóa cài đặt):** Bắt buộc phải hướng dẫn cách gỡ cài đặt sạch sẽ.
-- **서문 (Lời nói đầu) bao gồm:** 
+- **서문 (Lời nói đầu) bao gồm:**
   - 문서 이력 (Lịch sử chỉnh sửa v1.0, v1.1).
   - 주석 (Chú ý/Tham khảo).
   - 설치 환경 체크 (Kiểm tra OS, tắt app khác trước khi cài).
@@ -1804,9 +1790,9 @@ ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu R
 | **분산 저장소 (Distributed Repo)** | Mỗi máy cá nhân đều là 1 cái Kho thu nhỏ (Local Repo). Copy (Clone) từ Server (Remote Repo) về. Server chết vẫn làm việc bình thường ở máy cá nhân, lúc nào Server sống lại đẩy lên sau (Push). Rất an toàn. | **Git**, Mercurial, Bitkeeper |
 
 - **Vietnamese Explanation:** SVN là kiểu "Đi mượn sách thư viện", mất thư viện là khỏi đọc. Git là kiểu "Photo cuốn sách về nhà", thư viện cháy mình vẫn còn sách đọc, sửa sách thoải mái.
-- 💡 **Mẹo ghi nhớ (Mnemonics):** 
-  - 공유 폴더 (Share folder) = RCS, PVCS. 
-  - 클라이언트/서버 = CVS, SVN (Server tập trung). 
+- 💡 **Mẹo ghi nhớ (Mnemonics):**
+  - 공유 폴더 (Share folder) = RCS, PVCS.
+  - 클라이언트/서버 = CVS, SVN (Server tập trung).
   - 분산 (Phân tán) = Git.
 
 ---

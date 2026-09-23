@@ -1,12 +1,12 @@
-# 30. 트리 구조 추가 용어 (Tree Terminology Additional)
+# 4. 이진 트리의 운행법 (Binary Tree Traversal)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **30. 트리 구조 추가 용어 (Tree Terminology Additional)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **4. 이진 트리의 운행법 (Binary Tree Traversal)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-트리, 구조, 추가, 용어
+이진, 트리의, 운행법
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,13 +22,13 @@
 
 ---
 
-## 30. 트리 구조 추가 용어 (Tree Terminology Additional)
-* **자식 노드 (Son Node)**: 어떤 노드에 연결된 다음 레벨의 노드들.
-* **부모 노드 (Parent Node)**: 어떤 노드에 연결된 이전 레벨의 노드.
-* **형제 노드 (Sibling / Brother Node)**: 동일한 부모를 갖는 노드들.
-* **트리의 디그리 (Degree of a Tree)**: 전체 노드들의 디그리(자식 수) 중에서 가장 큰 값.
+## 4. 이진 트리의 운행법 (Binary Tree Traversal)
+* **Preorder (전위)**: Root → Left → Right
+* **Inorder (중위)**: Left → Root → Right
+* **Postorder (후위)**: Left → Right → Root
 * **VI (Vietnamese) (Tiếng Việt):**
-  * Son Node: Nút con.
-  * Parent Node: Nút cha.
-  * Sibling: Nút anh em (cùng cha).
-  * Degree of Tree: Bậc lớn nhất trong tất cả các nút của cây.
+  * Preorder: Gốc -> Trái -> Phải.
+  * Inorder: Trái -> Gốc -> Phải.
+  * Postorder: Trái -> Phải -> Gốc.
+* **Example**: 수식 `A + B`를 전위 표기하면 `+ A B`, 중위 표기하면 `A + B`, 후위 표기하면 `A B +`가 됩니다.
+* 💡 **Mẹo ghi nhớ**: Tiền/Trung/Hậu tố chỉ vị trí của Root (Gốc) so với Trái/Phải.

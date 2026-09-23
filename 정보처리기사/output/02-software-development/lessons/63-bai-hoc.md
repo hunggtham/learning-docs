@@ -61,7 +61,7 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
   - *Big Bang:* Lắp ráp toàn bộ rồi mới khởi động. Xe không nổ máy $\rightarrow$ Không biết do động cơ, bình ắc quy hay bugi.
   - *Incremental:* Lắp động cơ vào hộp số rồi test (OK). Lắp thêm bánh xe rồi test (OK) $\rightarrow$ Nếu có lỗi sẽ biết ngay tại bộ phận vừa lắp thêm.
 
-> 💡 **Mẹo ghi nhớ (Mnemonics):** 
+> 💡 **Mẹo ghi nhớ (Mnemonics):**
 > - **Big Bang** = "Bùm" một phát gom hết lại, nếu hỏng thì không biết sửa từ đâu.
 > - **Incremental** = "Từng bước", thêm một phần tử vào nếu sai thì do phần tử đó.
 
@@ -78,7 +78,7 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 - **상향식:** 클러스터(Cluster), **테스트 드라이버(Driver)**.
 
 **[3] 차이점 비교 (So sánh chi tiết):**
-- **하향식 (Top-Down):** 
+- **하향식 (Top-Down):**
   - 하위 모듈이 아직 없으므로, 이를 thay thế bằng **Stub** (모듈의 흉내를 내는 가짜 하위 모듈 - module giả lập cấp dưới).
   - 테스트 초기부터 시스템의 전체 구조를 보여주기 유리.
 - **상향식 (Bottom-Up):**
@@ -89,7 +89,7 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 - **Top-Down:** Kiểm tra màn hình Đăng nhập (Main). Vì chưa có database, ta tạo một `Stub` (hàm giả) cứ nhận id/pass là trả về "Thành công".
 - **Bottom-Up:** Đã viết xong hàm mã hóa mật khẩu (phụ), nhưng chưa có màn hình Đăng nhập. Ta viết một đoạn code ngắn (`Driver`) để gọi hàm mã hóa đó với các chuỗi khác nhau xem nó mã hóa đúng không.
 
-> 💡 **Mẹo ghi nhớ (Mnemonics):** 
+> 💡 **Mẹo ghi nhớ (Mnemonics):**
 > - **Top-Down = Stub** (Từ trên xuống gặp tảng đá - S).
 > - **Bottom-Up = Driver** (Từ dưới lên cần tài xế lái lên - D).
 
@@ -113,7 +113,7 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 **[1] 개념 (Khái niệm):** 수정된 모듈이나 컴포넌트가 다른 부분에 영향을 미치는지 확인하기 위해 테스트를 반복하는 것.
 *(Kiểm tra lại toàn bộ hoặc một phần hệ thống sau khi đã sửa lỗi hoặc thêm tính năng mới, để đảm bảo việc sửa chữa này không làm hỏng các tính năng cũ đang hoạt động tốt.)*
 
-**[2] 핵심 키워드 (Từ khóa chính):** 
+**[2] 핵심 키워드 (Từ khóa chính):**
 - 새로운 오류 확인 (Xác nhận không có lỗi mới)
 - 기존 기능 보장 (Đảm bảo chức năng cũ)
 - 테스트 케이스 선정 (Lựa chọn test case hiệu quả)
@@ -121,7 +121,7 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 **[3] 예시 (Ví dụ thực tế):**
 - Trang web có tính năng Đăng nhập và Thanh toán đang dùng tốt. Bạn vừa sửa tính năng Đăng nhập. Bạn phải chạy lại *Regression Test* để chắc chắn rằng sửa xong Đăng nhập thì nút Thanh toán không tự nhiên bị liệt.
 
-> 💡 **Mẹo ghi nhớ (Mnemonics):** 
+> 💡 **Mẹo ghi nhớ (Mnemonics):**
 > - **Regression (Hồi quy)** = Quay trở lại (Hồi) quy trình cũ để test xem có hỏng không.
 
 ---
@@ -141,7 +141,7 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 - **유의사항:** 시스템/모듈별로 분리 작성, 유스케이스 간 업무 흐름(Workflow) 검증.
 - **예시:** Kịch bản mua hàng: "Đăng nhập (Test Case 1) $\rightarrow$ Tìm kiếm sản phẩm (Test Case 2) $\rightarrow$ Thêm vào giỏ (Test Case 3) $\rightarrow$ Thanh toán (Test Case 4)."
 
-> 💡 **Mẹo ghi nhớ (Mnemonics):** 
+> 💡 **Mẹo ghi nhớ (Mnemonics):**
 > - **Test Case** = Từng bước đi độc lập (Kiểm tra 1 hành động).
 > - **Test Scenario** = Chuyến hành trình (Nhiều bước nối tiếp nhau tạo thành kịch bản).
 
@@ -159,12 +159,12 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 4. **일관성 오라클 (Consistent Oracle):** 애플리케이션 변경 시 테스트 전후 결과값이 같은지 확인 (Dùng trong Regression test).
 
 **[3] 예시 (Ví dụ thực tế):**
-- Máy tính bỏ túi: 
+- Máy tính bỏ túi:
   - *True Oracle:* Tính thử mọi phép tính có thể (Không tưởng).
   - *Sampling Oracle:* Chỉ tính thử $1+1$, $2*3$, $10/2$.
   - *Consistent Oracle:* Bản update mới của app máy tính, lấy kết quả của bản cũ so sánh với bản mới.
 
-> 💡 **Mẹo ghi nhớ (Mnemonics):** 
+> 💡 **Mẹo ghi nhớ (Mnemonics):**
 > - **Oracle** = Nhà tiên tri (đưa ra đáp án chuẩn). 4 loại: **T**rue - **S**ampling - **H**euristic - **C**onsistent.
 
 ---
@@ -189,7 +189,7 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 **[5] 예시 (Ví dụ thực tế):**
 - Sử dụng *Selenium* (Công cụ tự động hóa) để code một kịch bản: Tự động mở trình duyệt $\rightarrow$ Điền form $\rightarrow$ Bấm nút "Submit" hàng ngàn lần để test sức chịu đựng (Stress test). Việc này nếu dùng người bấm tay sẽ mất rất nhiều thời gian (손설거지 vs 식기세척기 - Rửa bát bằng tay vs Máy rửa bát).
 
-> 💡 **Mẹo ghi nhớ (Mnemonics):** 
+> 💡 **Mẹo ghi nhớ (Mnemonics):**
 > - Tự động hóa = "Máy rửa bát". Đắt tiền mua (초기 비용) nhưng rửa 1000 cái bát rất nhanh (반복 작업 최적화).
 
 ---
@@ -212,7 +212,7 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 **[1] 개념 (Khái niệm):** 소프트웨어가 개발자의 설계와 다르게 동작하거나 잘못된 결과를 발생시키는 현상 (Bug).
 *(Bất kỳ lỗi, thiếu sót nào khiến phần mềm chạy không đúng với tài liệu đặc tả yêu cầu).*
 
-**[2] 예시 (Ví dụ thực tế):** 
+**[2] 예시 (Ví dụ thực tế):**
 - Thiết kế: Nút "Hủy" phải có màu Đỏ. Thực tế: Lập trình viên làm nút "Hủy" màu Xanh $\rightarrow$ Đây cũng được tính là một 결함 (Fault) dù không gây crash app.
 
 ---
@@ -227,19 +227,18 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 
 **[2] 빅오 표기법 (Big-O Notation - Ký hiệu Big-O):**
 - 최악일 때(Worst Case)를 기준으로 알고리즘의 복잡도(실행 시간)를 표기.
-- **성능 순서 (Tốc độ từ nhanh $\rightarrow$ chậm):** 
+- **성능 순서 (Tốc độ từ nhanh $\rightarrow$ chậm):**
   $O(1)$ (Hằng số) $\rightarrow$ $O(log n)$ (Tìm kiếm nhị phân) $\rightarrow$ $O(n)$ (Tuyến tính) $\rightarrow$ $O(n log n)$ (Sắp xếp trộn) $\rightarrow$ $O(n^2)$ (Sắp xếp nổi bọt).
 
 **[3] 순환 복잡도 (Cyclomatic Complexity - Độ phức tạp theo chu trình McCabe):**
 - 프로그램의 논리적인 복잡도를 독립적인 경로의 수로 수치화. (Số lượng đường dẫn độc lập trong code).
-- **공식 (Công thức):** $V(G) = E - N + 2$ 
-  *(E: Edge - số mũi tên, N: Node - số nút).*
+- **공식 (Công thức):** với một đồ thị luồng liên thông, $V(G) = E - N + 2$ (E: Edge, N: Node); tổng quát là $V(G)=E-N+2P$ với P là số thành phần liên thông. Có thể dùng số vùng kín + 1.
 
 **[4] 예시 (Ví dụ thực tế):**
 - **Throughput vs Response Time:** Một quán phở có thể bán 100 bát/giờ (Throughput = 100). Nhưng khách vào gọi món phải chờ 15 phút mới bê ra (Response time = 15m).
 - **McCabe $V(G)$:** Nếu vẽ sơ đồ luồng (Flowchart) của hàm If-Else có 4 Node và 4 Edge $\rightarrow$ $V(G) = 4 - 4 + 2 = 2$ (Có 2 đường đi độc lập).
 
-> 💡 **Mẹo ghi nhớ (Mnemonics):** 
+> 💡 **Mẹo ghi nhớ (Mnemonics):**
 > - Công thức McCabe: **E**m **N**hớ **+ 2** ($E - N + 2$).
 
 ---
@@ -274,7 +273,7 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 - 애플리케이션 간 **약한 결합 (Loosely Coupled)**을 유지하여 유연성을 극대화.
 *(Cũng giống EAI nhưng ESB dựa trên các dịch vụ web tiêu chuẩn, các hệ thống kết nối lỏng lẻo (ít phụ thuộc nhau), phù hợp hệ thống cực lớn).*
 
-> 💡 **Mẹo ghi nhớ (Mnemonics):** 
+> 💡 **Mẹo ghi nhớ (Mnemonics):**
 > - **EAI** = Tích hợp hệ thống ứng dụng cục bộ.
 > - **ESB** = Tích hợp "Dịch vụ" (Service) theo SOA.
 
@@ -427,5 +426,5 @@ ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu R
 **[4] 예시 (Ví dụ thực tế):**
 - Bạn dùng **Git**. Khi cúp mạng internet, bạn vẫn có thể `git commit` để lưu lại phiên bản code trên máy mình. Khi có mạng lại, bạn mới `git push` để đẩy lên Server.
 
-> 💡 **Mẹo ghi nhớ (Mnemonics):** 
+> 💡 **Mẹo ghi nhớ (Mnemonics):**
 > - **Phân tán (Distributed) = Git:** Không có mạng vẫn lưu code được. Trái ngược với SVN (Tập trung) rớt mạng là khỏi lưu.

@@ -28,21 +28,21 @@
 - **LAN (Local Area Network):** 단일 기관 소유, 고속 전송, 오류율 낮음.
 - **IEEE 802 주요 규격:**
   - `802.1` (전체 구성), `802.2` (LLC), `802.3` (CSMA/CD), `802.4` (토큰 버스), `802.5` (토큰 링), `802.11` (무선 LAN).
-- **CSMA/CD (Carrier Sense Multiple Access/Collision Detection):** 채널 사용권 경쟁. 충돌 감지. 
+- **CSMA/CD (Carrier Sense Multiple Access/Collision Detection):** 채널 사용권 경쟁. 충돌 감지.
   - 규격 명칭 (예: `10 BASE T` - 10Mbps, 베이스밴드, 꼬임선).
   - **이더넷 (Ethernet):** CSMA/CD 방식을 사용하는 LAN.
-- **Tiếng Việt:** Mạng LAN cục bộ. IEEE 802.3 là tiêu chuẩn CSMA/CD (Ethernet - phát hiện xung đột). 
+- **Tiếng Việt:** Mạng LAN cục bộ. IEEE 802.3 là tiêu chuẩn CSMA/CD (Ethernet - phát hiện xung đột).
 
 ### 5.2 기타 통신망 (VAN, ISDN)
 - **VAN (부가 가치 통신망):** 공중 통신망을 임대해 정보 가공/변환 등 부가 가치를 첨가해 서비스 제공.
 - **ISDN (종합 정보 통신망):** 음성/문자/영상을 디지털 방식으로 종합 제공.
-- **Tiếng Việt:** 
-  - VAN: Mạng giá trị gia tăng (thuê đường truyền, thêm dịch vụ). 
+- **Tiếng Việt:**
+  - VAN: Mạng giá trị gia tăng (thuê đường truyền, thêm dịch vụ).
   - ISDN: Mạng số đa dịch vụ tích hợp.
 
 ### 5.3 인터넷 주소 체계 (IP Addresses)
 - **IPv4:** 32비트 (8비트 × 4부분). 클래스 A~E (A: 대형 ~ C: 소규모망, D: 멀티캐스트).
-- **IPv6:** 128비트 (16비트 × 8부분, 16진수, 콜론 `:` 구분). 주소 부족 문제 해결.
+- **IPv6:** 128비트 (16비트 × 8부분, 16진수, 콜론 `:` 구분)로 주소 공간을 확장한다. 기본 헤더는 단순화되고 브로드캐스트 대신 멀티캐스트·애니캐스트를 사용한다.
 - **IPv4 → IPv6 전환 전략:** 듀얼 스택(Dual Stack), 터널링(Tunneling), 헤더/전송/응용 게이트웨이 변환(Translation).
 - **DNS (Domain Name System):** 문자 도메인 네임을 IP 주소로 변환.
 - **Tiếng Việt:** IPv4 (32 bit, Class A-E). IPv6 (128 bit, giải quyết cạn kiệt IP). DNS dịch tên miền sang IP.
@@ -54,7 +54,7 @@
 - **브리지 (Bridge):** 데이터 링크 계층, LAN-LAN 연결.
 - **라우터 (Router):** 네트워크 계층, 경로 선택(Routing) 및 서로 다른 망 연결.
 - **게이트웨이 (Gateway):** 전 계층(주로 상위), 프로토콜이 전혀 다른 네트워크 연결.
-- **Tiếng Việt:** 
+- **Tiếng Việt:**
   - L1: Hub, Repeater (Khuếch đại tín hiệu).
   - L2: Bridge (Nối LAN).
   - L3: Router (Định tuyến).

@@ -39,7 +39,7 @@
 ### 11.2 네트워크 구조 및 표준 심화
 - **네트워크 토폴로지 (Network Topology):**
   - **성형 (Star):** 중앙 컴퓨터를 중심으로 연결 (포인트 투 포인트).
-  - **링형 (Ring):** 이웃하는 단말끼리 원형으로 연결. 
+  - **링형 (Ring):** 이웃하는 단말끼리 원형으로 연결.
   - **버스형 (Bus):** 하나의 통신 회선에 여러 단말 연결 (신뢰성 높음).
   - **망형 (Mesh):** 모든 지점을 서로 연결. 회선 수 = `n(n-1)/2`.
 - **IEEE 802 표준 규격:**
@@ -55,7 +55,7 @@
 - **흐름 제어 (Flow Control):**
   - **정지-대기 (Stop-and-Wait):** ACK를 받은 후 다음 패킷 전송.
   - **슬라이딩 윈도우 (Sliding Window):** ACK 없이도 미리 정해진 윈도우 크기(Window Size)만큼 연속 전송.
-- **Tiếng Việt:** 
+- **Tiếng Việt:**
   - Topology mạng: Star, Ring, Bus, Mesh (Số đường truyền = n(n-1)/2).
   - IEEE 802.11: Tiêu chuẩn mạng không dây (Wi-Fi).
   - Flow Control: Sliding Window truyền liên tục dựa vào kích thước cửa sổ mà không cần chờ ACK cho từng gói.
@@ -105,11 +105,8 @@
   - **제로 데이 공격 (Zero Day Attack):** 보안 취약점이 공표되기도 전에 이루어지는 신속한 공격.
   - **스미싱 (Smishing):** SMS를 이용한 개인정보 탈취.
   - **Evil Twin Attack:** 실제와 동일한 이름의 가짜 Wi-Fi(AP)를 송출해 정보 탈취.
-- **Tiếng Việt:** 
+- **Tiếng Việt:**
   - Zero Day Attack: Tấn công khai thác lỗ hổng trước khi có bản vá.
   - Smishing: Phishing qua tin nhắn SMS.
   - Evil Twin: Tấn công bằng trạm Wi-Fi giả mạo tên (SSID) giống hệt trạm thật.
   - DDoS Tools: Trin00, TFN, Stacheldraht (ẩn danh và mã hóa liên lạc).
-
-EOF
-# 데이터 통신 및 통신 프로토콜 (Truyền thông Dữ liệu & Giao thức)

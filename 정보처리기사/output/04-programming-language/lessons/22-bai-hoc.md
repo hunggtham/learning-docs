@@ -1,12 +1,12 @@
-# 075 - 077. 배열, 조건문, 반복문 (Arrays, Conditionals & Loops)
+# 258 - 261. 배열과 문자열 (Arrays & Strings)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **075 - 077. 배열, 조건문, 반복문 (Arrays, Conditionals & Loops)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **258 - 261. 배열과 문자열 (Arrays & Strings)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-배열, 조건문, 반복문
+배열과, 문자열
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,20 +22,13 @@
 
 ---
 
-## 075 - 077. 배열, 조건문, 반복문 (Arrays, Conditionals & Loops)
-- **배열 (Array)**: `자료형 변수명[개수] = {초깃값};` (C/Java). 2차원 배열은 `변수명[행][열]`.
-- **조건문 (if/switch)**:
-  - C/Java: `if (조건) { ... } else if (조건) { ... } else { ... }`
-  - Python: `if 조건:` -> `elif 조건:` -> `else:`
-  - switch문 (C/Java): 식의 값에 따라 `case`를 찾아가며, `break;`가 없으면 아래 문장들도 계속 실행됨.
-- **반복문 (for/while)**:
-  - for문 (C/Java): `for (초기식; 조건식; 증감식) { ... }`
-  - for문 (Python): `for 변수 in range(시작, 끝+1):`
-  - while문: 조건이 참일 동안 반복.
-  - do~while문 (C/Java): 조건과 상관없이 무조건 **최소 1번**은 실행하고 조건을 검사함.
+## 258 - 261. 배열과 문자열 (Arrays & Strings)
+- **배열 (Array)**: **동일한 자료형**의 변수들을 연속된 메모리에 모아둔 것. `인덱스(첨자)`는 0부터 시작. 배열 이름 자체가 **첫 번째 요소의 시작 주소**를 의미.
+- **2차원 배열**: 행과 열의 평면 구조 (예: `a[3][4]`는 3행 4열로 총 12개).
+- **배열 초기화**: 선언과 동시에 값을 넣는 것. 크기를 생략해도 값의 개수만큼 자동 결정됨. 초기화되지 않은 빈칸은 자동으로 `0`으로 채워짐.
+- **배열 형태의 문자열 (C언어)**: C언어는 문자열 자료형이 없어 `char` 배열을 사용. 문자열 끝에는 반드시 **널 문자(`\0`)**가 포함되어야 함 (글자수 + 1바이트 크기 필요).
 
 **Giải thích (Vietnamese):**
-- Trong Python, cấu trúc điều kiện là `if`, `elif` (viết tắt của else if) và `else`. Không cần ngoặc nhọn `{}` mà dùng thụt lề (indentation).
-- `do~while` khác `while` ở chỗ: `do~while` sẽ làm việc trước rồi mới kiểm tra điều kiện sau, nên chắc chắn code bên trong được chạy ít nhất 1 lần.
+Trong C, chuỗi "love" sẽ chiếm 5 ô nhớ (l, o, v, e, `\0`). Ký tự `\0` (Null) báo hiệu cho máy tính biết "đây là kết thúc của chuỗi".
 
 ---

@@ -1,12 +1,12 @@
-# 104-1 ~ 108: 소프트웨어 매뉴얼 (Software Manuals)
+# 113 ~ 115: 버전 관리 도구 방식 (Version Control Tool Types)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **104-1 ~ 108: 소프트웨어 매뉴얼 (Software Manuals)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **113 ~ 115: 버전 관리 도구 방식 (Version Control Tool Types)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-소프트웨어, 매뉴얼
+버전, 관리, 도구, 방식
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,21 +22,16 @@
 
 ---
 
-## 104-1 ~ 108: 소프트웨어 매뉴얼 (Software Manuals)
+## 113 ~ 115: 버전 관리 도구 방식 (Version Control Tool Types)
 
-### 설치 매뉴얼 (Installation Manual - Hướng dẫn cài đặt)
-- **사용자 기준 (Góc nhìn người dùng):** Viết cho khách hàng, không phải cho Dev.
-- **순서대로 (Theo trình tự):** Từ lúc bấm Next đến lúc Finish.
-- **예외 상황 / 오류 메시지:** Phải có cách xử lý khi cài đặt bị lỗi.
-- **Uninstall (Xóa cài đặt):** Bắt buộc phải hướng dẫn cách gỡ cài đặt sạch sẽ.
-- **서문 (Lời nói đầu) bao gồm:** 
-  - 문서 이력 (Lịch sử chỉnh sửa v1.0, v1.1).
-  - 주석 (Chú ý/Tham khảo).
-  - 설치 환경 체크 (Kiểm tra OS, tắt app khác trước khi cài).
+| 방식 (Cách thức) | 특징 (Đặc điểm) | 대표 도구 (Công cụ) |
+|---|---|---|
+| **공유 폴더 (Shared Folder)** | Copy đè file vào 1 folder dùng chung trên mạng Lan. Dễ mất dữ liệu. | SCCS, RCS, PVCS |
+| **클라이언트/서버 (Client/Server)** | Có 1 máy Server trung tâm giữ code. Máy cá nhân (Client) lấy về sửa rồi đẩy lên. Server chết là nghỉ làm. | **CVS, SVN** (Subversion), ClearCase |
+| **분산 저장소 (Distributed Repo)** | Mỗi máy cá nhân đều là 1 cái Kho thu nhỏ (Local Repo). Copy (Clone) từ Server (Remote Repo) về. Server chết vẫn làm việc bình thường ở máy cá nhân, lúc nào Server sống lại đẩy lên sau (Push). Rất an toàn. | **Git**, Mercurial, Bitkeeper |
 
-### 사용자 매뉴얼 (User Manual - Hướng dẫn sử dụng)
-- **컴포넌트 단위 (Theo từng Component):** Chia nhỏ theo từng tính năng (Ví dụ: Hướng dẫn riêng cho Word, Excel).
-- **버전 관리 (Quản lý phiên bản):** App update tính năng thì Manual cũng phải update theo.
-- **시각 자료 (Hình ảnh):** Bắt buộc phải có hình chụp màn hình UI để dễ hiểu.
-
----
+- **Vietnamese Explanation:** SVN là kiểu "Đi mượn sách thư viện", mất thư viện là khỏi đọc. Git là kiểu "Photo cuốn sách về nhà", thư viện cháy mình vẫn còn sách đọc, sửa sách thoải mái.
+- 💡 **Mẹo ghi nhớ (Mnemonics):**
+  - 공유 폴더 (Share folder) = RCS, PVCS.
+  - 클라이언트/서버 = CVS, SVN (Server tập trung).
+  - 분산 (Phân tán) = Git.

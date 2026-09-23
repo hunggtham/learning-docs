@@ -41,6 +41,7 @@ def clean_source(text: str) -> str:
     # The source already contains Korean and Vietnamese explanations. Normalize its
     # presentation without removing study content, examples, tables or mnemonics.
     lines = text.splitlines()
+    lines = [line.rstrip() for line in lines]
     if lines and lines[0].startswith("# "):
         lines = lines[1:]
     text = "\n".join(lines).strip()
@@ -181,12 +182,22 @@ def main() -> None:
             lesson_name = f"{number:02d}-bai-hoc.md"
             (lessons_dir / lesson_name).write_text(lesson_document(heading, lesson), encoding="utf-8")
             lesson_rows.append(f"{number}. [{heading}](lessons/{lesson_name})")
-        (target / "README.md").write_text(subject_readme(title, guide_name, lesson_rows), encoding="utf-8")
+        readme = subject_readme(title, guide_name, lesson_rows)
+        if folder == "01-software-design":
+            readme += (
+                "\n## Bài học bổ sung / Deep Dive\n\n"
+                "- [Vòng đời và phương pháp phát triển phần mềm](01-vong-doi-va-phuong-phap-phat-trien.md)\n"
+            )
+        (target / "README.md").write_text(readme, encoding="utf-8")
         index_rows.append(f"- [{title}]({folder}/README.md)")
 
     (OUTPUT / "README.md").write_text(
         "# 정보처리기사 — Bộ tài liệu học\n\n"
         "Tài liệu được chia thành 5 môn. Mỗi folder có một bài học đầy đủ và mục lục học tập; nguồn gốc được bảo toàn trong `raw` và `raw_md`.\n\n"
+        "## Phạm vi học\n\n"
+        "- Output này tập trung vào **정보처리기사 필기** và giữ ranh giới 5 môn theo cấu trúc đề thi.\n"
+        "- Nội dung **실기 (정보처리 실무)** chưa được xem là phạm vi hoàn tất của bộ output này; không dùng bộ 필기 này thay cho lộ trình 실기 riêng.\n"
+        "- Bản source hiện đối chiếu theo 출제기준 Q-Net giai đoạn **2023.1.1–2025.12.31**; đây không phải cam kết cho kỳ thi 2026. Trước khi thi, hãy kiểm tra bản mới nhất trên [Q-Net](https://www.q-net.or.kr/cst006.do?artlSeq=5210765&brdId=Q006&code=1202&gId=&gSite=Q&id=cst00602).\n\n"
         "## Các môn\n\n" + "\n".join(index_rows) + "\n\n"
         "## Phạm vi nguồn đã rà soát\n\n"
         "- `raw/`: PDF, DOCX và bản tóm tắt gốc.\n"

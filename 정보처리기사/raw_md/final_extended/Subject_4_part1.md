@@ -22,11 +22,10 @@
 
 ## 프로그래밍 언어 기초 (Programming Language Basics)
 ### 159. C/JAVA의 자료형 (Data Types / Kiểu dữ liệu)
-- **문자 (Character / Ký tự)**: `char` (1Byte) trong C và JAVA.
-- **정수 (Integer / Số nguyên)**: `int` (4Byte) trong C và JAVA; `long` (8Byte).
-- **논리 (Boolean / Logic)**: `boolean` (1Byte) chỉ có trong JAVA (C dùng 0/1).
+- **C (exam assumption / giả định đề thi phổ biến):** `char` 1 byte, `int` 4 bytes; `long` phụ thuộc ABI/compiler và không nên ghi là 8 bytes tuyệt đối.
+- **Java:** `byte` 1 byte, `short` 2 bytes, `int` 4 bytes, `long` 8 bytes, `char` 2 bytes (Unicode), `float` 4 bytes, `double` 8 bytes. `boolean` là kiểu logic; Java không quy định một kích thước lưu trữ cố định.
   - *Example / Ví dụ*: `int age = 25; boolean isStudent = true;`
-  - 💡 *Mẹo ghi nhớ*: 1 Byte = char/boolean, 4 Bytes = int, 8 Bytes = long.
+  - 💡 *Mẹo ghi nhớ*: Java `char` = 2 bytes; C `char` = 1 byte; không suy ra kích thước storage của `boolean` từ ví dụ JVM.
 
 ### 162. 변수명 작성 규칙 (Variable Naming Rules / Quy tắc đặt tên biến)
 - 영문자, 숫자, _(under bar)를 사용할 수 있다. (Có thể sử dụng chữ cái tiếng Anh, số và dấu gạch dưới).
@@ -578,7 +577,7 @@
 
 ### 286. UNIX의 특징 (UNIX Overview / Đặc điểm UNIX - Bổ sung)
 - **시분할 시스템 (Time Sharing System)**: 시간을 분할하여 대화식으로 운영.
-- **개방형 시스템 (Open System)**: 소스 공개. (Hệ thống mở, mã nguồn mở).
+- **개방형 시스템 (Open System)**: 표준 인터페이스와 이식성을 중시하며, 개방형이라는 사실이 곧 소스 코드 공개나 오픈 소스 라이선스를 뜻하지는 않는다.
 - **네트워킹 (Networking)**: 통신망 관리용으로 적합.
 
 ### 287. UNIX 시스템의 구성 (UNIX System Structure / Cấu trúc hệ thống UNIX)
@@ -586,9 +585,9 @@
 - **쉘 (Shell)**: 명령어 해석기, 인터페이스, 주기억장치에 상주하지 않음. (Trình thông dịch lệnh, giao diện người dùng, không thường trú trong RAM).
 - **유틸리티 (Utility)**: 에디터, 컴파일러 등. (Các chương trình tiện ích).
 
-### 288. 파일 디스크립터 (File Descriptor / FCB - Khối điều khiển tập tin)
-- 파일을 관리하기 위한 시스템 제어 블록 (Khối dữ liệu chứa thông tin quản lý tập tin).
-- 사용자가 직접 참조할 수 없다. (Người dùng không thể truy cập trực tiếp).
+### 288. 파일 디스크립터 (File Descriptor)
+- 프로세스가 열린 파일을 참조할 때 사용하는 정수 핸들이다. 파일 상태를 담는 FCB(또는 inode 등 커널 자료구조)와 동일한 개념이 아니다.
+- 응용 프로그램은 디스크립터 값을 통해 읽기·쓰기·닫기 연산을 요청한다.
 
 ## 가상기억장치 및 페이지 교체 (Virtual Memory & Page Replacement)
 ### 290. 페이징 기법 (Paging / Phân trang)
@@ -606,7 +605,7 @@
 - **FIFO (First In First Out)**: 가장 먼저 들어온 페이지 교체. (Vào trước ra trước).
 - **LRU (Least Recently Used)**: 최근에 가장 오랫동안 사용하지 않은 페이지 교체. (Thay thế trang lâu nhất chưa được truy cập).
 - **LFU (Least Frequently Used)**: 사용 빈도가 가장 적은 페이지 교체. (Thay thế trang có số lần truy cập ít nhất).
-- **NUR (Not Used Recently)**: 참조 비트와 변형 비트 사용. (Tương tự LRU nhưng dùng 2 bit để theo dõi).
+- **NUR (Not Used Recently)**: 참조 비트(R)와 변형/수정 비트(M)를 조합해 페이지를 네 등급으로 나누고 낮은 등급부터 교체한다.
 
 ### 293. 페이지 크기 (Page Size / Kích thước trang)
 - **작을 경우 (Kích thước nhỏ)**: 단편화 감소, 매핑 늦어짐, 디스크 접근 많아짐. (Phân mảnh ít, nhưng bảng ánh xạ lớn, truy cập ổ đĩa nhiều hơn).
@@ -691,4 +690,3 @@
 - **목적**: 소프트웨어의 위기 극복, 품질과 생산성 향상. (Khắc phục khủng hoảng, tăng chất lượng và năng suất).
 - 가장 경제적인 방법으로 양질의 제품을 생산하는 것. (Sản xuất phần mềm tốt với chi phí tiết kiệm nhất).
   - 💡 *Mẹo ghi nhớ*: Kỹ nghệ phần mềm = Khoa học + Quản lý + Tiết kiệm tiền & thời gian.
-

@@ -86,8 +86,7 @@
 - **Tiếng Việt:** Ước tính dựa trên số dòng code. Tính toán Nỗ lực (Person-Month) = Số dòng code / Số dòng code 1 người viết trong 1 tháng.
 
 #### 수학적 산정 기법 (Mathematical Models)
-- **COCOMO 모형:** 원시 프로그램의 규모(LOC)에 의한 산정.
-  - 개발 유형: **조직형 (Organic, <50K)**, **반분리형 (Semi-Detached, <300K)**, **내장형 (Embedded, >300K)**.
+- **COCOMO 모형:** 원시 프로그램의 규모(LOC)와 개발 유형에 의한 비용 산정. 고전 COCOMO의 경계는 조직형 `≤ 50 KDSI`, 반분리형 `> 50 ~ 300 KDSI`, 내장형 `> 300 KDSI`로 겹치지 않게 해석한다.
 - **Putnam 모형:** 생명 주기 동안 사용될 노력의 분포를 가정 (Rayleigh-Norden 곡선 기초). **SLIM** 도구 사용.
 - **기능 점수 (FP) 모형:** 기능적 요구사항을 점수화. 가중치 증대 요인: 자료 입력, 정보 출력, 명령어(질의), 데이터 파일, 외부 루틴 인터페이스.
 - **Tiếng Việt:** 
@@ -305,7 +304,7 @@
 - **백도어 (Back Door):** 보안을 제거하고 만들어 놓은 비밀 통로 (탐지: 무결성 검사, 열린 포트 등).
 - **키로거 공격 (Key Logger):** 키보드 움직임을 탐지해 개인정보 탈취.
 - **랜섬웨어 (Ransomware):** 문서 암호화 후 돈(Ransom)을 요구.
-- **웜 (Worm):** 연속적으로 **자신을 복제**하여 시스템 부하 유발 (바이러스의 일종).
+- **웜 (Worm):** 네트워크를 통해 스스로 전파·복제되는 악성 코드로, 숙주 파일에 기생해야 하는 바이러스와 구분한다.
 - **허니팟 (Honeypot):** 비정상 접근 탐지를 위해 의도적으로 설치한 시스템 (미끼).
 - **피싱 (Phishing):** 공공/금융 기관을 사칭해 개인정보 탈취.
 - **Tiếng Việt:** Backdoor (Cửa hậu), Key Logger (Ghi thao tác bàn phím), Ransomware (Mã độc tống tiền), Worm (Giun máy tính - tự nhân bản), Honeypot (Hệ thống mồi nhử).
@@ -514,8 +513,8 @@ EOF
 
 ### 4.1 오류 발생 원인 및 제어 (Error Causes & Control)
 - **원인:** 감쇠, 지연 왜곡, 상호 변조, 누화 잡음, 충격성 잡음(디지털 통신 주요인).
-- **FEC (순방향 오류 수정):** 수신 측에서 스스로 수정 (해밍 코드 등). 오버헤드 큼, 역채널 불필요.
-- **BEC (역방향 오류 수정):** 오류 시 재전송(ARQ) 요구 (패리티, CRC 등).
+- **FEC (순방향 오류 수정):** 여분 비트를 함께 보내 수신 측이 재전송 없이 오류를 검출·수정 (해밍 코드 등).
+- **BEC/ARQ (역방향 오류 제어):** 수신 측이 오류를 검출한 뒤 송신 측에 재전송을 요청한다. CRC·패리티는 주로 오류 검출에 사용된다.
 - **Tiếng Việt:** 
   - FEC: Tự sửa lỗi (vd: Hamming Code). 
   - BEC: Yêu cầu gửi lại (vd: CRC, Parity).
@@ -581,7 +580,7 @@ EOF
 
 ### 5.3 인터넷 주소 체계 (IP Addresses)
 - **IPv4:** 32비트 (8비트 × 4부분). 클래스 A~E (A: 대형 ~ C: 소규모망, D: 멀티캐스트).
-- **IPv6:** 128비트 (16비트 × 8부분, 16진수, 콜론 `:` 구분). 주소 부족 문제 해결.
+- **IPv6:** 128비트 (16비트 × 8부분, 16진수, 콜론 `:` 구분)로 주소 공간을 확장한다. 기본 헤더는 단순화되고 브로드캐스트 대신 멀티캐스트·애니캐스트를 사용한다.
 - **IPv4 → IPv6 전환 전략:** 듀얼 스택(Dual Stack), 터널링(Tunneling), 헤더/전송/응용 게이트웨이 변환(Translation).
 - **DNS (Domain Name System):** 문자 도메인 네임을 IP 주소로 변환.
 - **Tiếng Việt:** IPv4 (32 bit, Class A-E). IPv6 (128 bit, giải quyết cạn kiệt IP). DNS dịch tên miền sang IP.

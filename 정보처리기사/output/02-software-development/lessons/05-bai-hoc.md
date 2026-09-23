@@ -1,12 +1,12 @@
-# 4. 이진 트리의 운행법 (Binary Tree Traversal)
+# 3. 트리 (Tree)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **4. 이진 트리의 운행법 (Binary Tree Traversal)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **3. 트리 (Tree)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-이진, 트리의, 운행법
+트리
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,13 +22,13 @@
 
 ---
 
-## 4. 이진 트리의 운행법 (Binary Tree Traversal)
-* **Preorder (전위)**: Root → Left → Right
-* **Inorder (중위)**: Left → Root → Right
-* **Postorder (후위)**: Left → Right → Root
+## 3. 트리 (Tree)
+* 정점(Node)과 선분(Branch)을 이용하여 사이클을 이루지 않도록 구성한 그래프의 특수한 형태.
+* **디그리 (Degree, 차수)**: 각 노드에서 뻗어 나온 가지의 수.
+* **단말 노드 (Terminal Node) = 잎 노드 (Leaf Node)**: 자식이 하나도 없는 노드, 즉 디그리가 0인 노드.
 * **VI (Vietnamese) (Tiếng Việt):**
-  * Preorder: Gốc -> Trái -> Phải.
-  * Inorder: Trái -> Gốc -> Phải.
-  * Postorder: Trái -> Phải -> Gốc.
-* **Example**: 수식 `A + B`를 전위 표기하면 `+ A B`, 중위 표기하면 `A + B`, 후위 표기하면 `A B +`가 됩니다.
-* 💡 **Mẹo ghi nhớ**: Tiền/Trung/Hậu tố chỉ vị trí của Root (Gốc) so với Trái/Phải.
+  * Cây là đồ thị đặc biệt không có chu trình.
+  * Bậc (Degree): Số nhánh của một nút con.
+  * Nút lá (Leaf): Nút không có con (bậc = 0).
+* **Example**: 폴더 구조에서 하위 폴더가 없는 폴더가 단말 노드입니다. (Trong cấu trúc thư mục, thư mục không chứa thư mục con là nút lá).
+* 💡 **Mẹo ghi nhớ**: Degree là số con trực tiếp. Leaf là chiếc lá ở cuối cành không mọc thêm được nữa.

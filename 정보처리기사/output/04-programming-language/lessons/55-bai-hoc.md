@@ -1,12 +1,12 @@
-# 070. 서버개발 프레임워크 (Server Development Framework)
+# 소프트웨어 공학 (Software Engineering)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **070. 서버개발 프레임워크 (Server Development Framework)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **소프트웨어 공학 (Software Engineering)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-서버개발, 프레임워크
+소프트웨어, 공학
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,7 +22,10 @@
 
 ---
 
-## 070. 서버개발 프레임워크 (Server Development Framework)
+## 소프트웨어 공학 (Software Engineering)
+
+---
+
 - **모듈화 (Modularity)**: 캡슐화로 영향 최소화, 유지보수 용이.
 - **재사용성 (Reusability)**: 반복 모듈 제공으로 생산성/품질 향상.
 - **확장성 (Extensibility)**: 다형성 통한 인터페이스 확장.

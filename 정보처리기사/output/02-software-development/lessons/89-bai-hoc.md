@@ -1,12 +1,12 @@
-# 핵심 039: 소프트웨어 품질 관련 국제 표준 (Software Quality Standards)
+# 핵심 클린 코드 작성 원칙 (Clean Code Principles)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **핵심 039: 소프트웨어 품질 관련 국제 표준 (Software Quality Standards)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **핵심 클린 코드 작성 원칙 (Clean Code Principles)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-핵심, 소프트웨어, 품질, 관련, 국제, 표준
+핵심, 클린, 코드, 작성, 원칙
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,22 +22,21 @@
 
 ---
 
-## 핵심 039: 소프트웨어 품질 관련 국제 표준 (Software Quality Standards)
+## 핵심 클린 코드 작성 원칙 (Clean Code Principles)
 
-- **ISO/IEC 9126:** Đánh giá chất lượng phần mềm gồm 6 đặc tính: **기신사효유이**
-  - **기**능성 (Functionality): Đáp ứng đúng yêu cầu.
-  - **신**뢰성 (Reliability): Chạy ổn định, không lỗi, chịu lỗi tốt.
-  - **사**용성 (Usability): Dễ hiểu, dễ học, dễ dùng.
-  - **효**율성 (Efficiency): Tốn ít tài nguyên, chạy nhanh.
-  - **유**지 보수성 (Maintainability): Dễ sửa chữa, bảo trì, phân tích.
-  - **이**식성 (Portability): Dễ cài đặt, dễ chuyển sang môi trường/máy khác.
-- **ISO/IEC 14598:** Tiêu chuẩn đánh giá quá trình mua/phát triển.
-- **ISO/IEC 12119:** Tiêu chuẩn cho gói phần mềm thương mại.
-- **ISO/IEC 25000 (SQuaRE):** Tích hợp tất cả các tiêu chuẩn 9126, 14598, 12119.
+- **클린 코드 (Clean Code):** 누구나 쉽게 이해하고 수정 및 추가할 수 있는 단순 명료한 코드. (Code sạch: Dễ hiểu, dễ sửa, dễ thêm tính năng.)
+- **배드 코드 (Bad code):** 프로그램의 로직이 복잡하고 이해하기 어려운 코드. (Code rác: Lộn xộn, logic phức tạp.)
+- **외계인 코드 (Alien Code):** 매우 오래되거나 참고 문서 또는 개발자가 없어 유지보수 작업이 매우 어려운 코드. (Code "người ngoài hành tinh": Code cổ đại, người viết đã nghỉ việc, không có tài liệu, đụng vào là hỏng.)
 
-- **Vietnamese Explanation:** ISO 9126 là kinh điển nhất, bạn phải nhớ 6 chữ cái đầu của 6 đặc tính. Nếu phần mềm khó dùng => Kém "Sử dụng tính". Nếu đổi máy tính mà không chạy được => Kém "Di thực tính" (Portability).
-- 💡 **Mẹo ghi nhớ (Mnemonics):** 6 Đặc tính của 9126: "Chức Tín Dùng Hiệu Bảo Di" (Chức năng - Đáng tin - Dễ dùng - Hiệu quả - Bảo trì - Di động). ISO 25000 = Chuẩn xịn nhất tổng hợp tất cả.
+| 작성 원칙 (Nguyên tắc) | 설명 (Giải thích) |
+|---|---|
+| **가독성 (Readability)** | 누구든지 코드를 쉽게 읽을 수 있도록 작성. 이해하기 쉬운 용어, 들여쓰기. (Dễ đọc: Tên biến rõ ràng, thụt lề chuẩn.) |
+| **단순성 (Simplicity)** | 한 번에 한 가지를 처리하도록 작성, 최소 단위로 분리. (Đơn giản: Mỗi hàm chỉ làm 1 việc duy nhất.) |
+| **의존성 배제 (Independence)** | 다른 모듈에 미치는 영향을 최소화. (Độc lập: Đổi chỗ này không làm sập chỗ khác.) |
+| **중복성 최소화 (Minimizing Duplication)** | 코드의 중복을 최소화, 공통된 코드 사용. (DRY - Don't Repeat Yourself: Không copy-paste code.) |
+| **추상화 (Abstraction)** | 상위 수준에선 간략하게, 상세 내용은 하위에서 구현. (Trừu tượng hóa: Cái chung ở trên, cái chi tiết ở dưới.) |
+
+- **Vietnamese Explanation:** Clean Code là "đạo đức" của lập trình viên. Đừng viết Alien Code (code không ai hiểu nổi trừ người viết ban đầu).
+- 💡 **Mẹo ghi nhớ (Mnemonics):** 5 nguyên tắc: Đọc - Đơn - Độc - Lặp - Trừu. (Đọc Đơn Độc Lặp Trừu (Đọc hiểu - Đơn giản - Độc lập - Không lặp - Trừu tượng)).
 
 ---
-
-# Chapter 4. 애플리케이션 테스트 관리 (Application Test Management)

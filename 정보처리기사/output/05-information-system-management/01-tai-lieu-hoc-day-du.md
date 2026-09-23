@@ -78,16 +78,16 @@
   - 개발 유형: **조직형 (Organic, <50K)**, **반분리형 (Semi-Detached, <300K)**, **내장형 (Embedded, >300K)**.
 - **Putnam 모형:** 생명 주기 동안 사용될 노력의 분포를 가정 (Rayleigh-Norden 곡선 기초). **SLIM** 도구 사용.
 - **기능 점수 (FP) 모형:** 기능적 요구사항을 점수화. 가중치 증대 요인: 자료 입력, 정보 출력, 명령어(질의), 데이터 파일, 외부 루틴 인터페이스.
-- **Tiếng Việt:** 
+- **Tiếng Việt:**
   - COCOMO: Dựa vào số dòng code (LOC). Gồm Organic (nhỏ), Semi-Detached (vừa), Embedded (lớn).
   - Putnam: Dựa trên đường cong Rayleigh-Norden (Công cụ: SLIM).
-  - FP (Function Point): Dựa trên tính năng. 
+  - FP (Function Point): Dựa trên tính năng.
 
 ### 3.3 일정 관리 (Schedule Management)
 - **PERT (프로그램 평가 및 검토 기술):** 낙관, 가능, 비관적인 경우로 나누어 종료 시기를 결정. 결정 경로와 임계 경로를 알 수 있음.
 - **CPM (임계 경로 기법):** 임계 경로는 프로젝트에서 가장 긴(최장) 경로를 의미한다.
 - **간트 차트 (Gantt Chart):** 작업 일정을 막대 도표로 표시 (수평 막대 길이는 기간).
-- **Tiếng Việt:** 
+- **Tiếng Việt:**
   - PERT: Dựa trên thời gian lạc quan, bi quan, khả thi.
   - Đường găng (Critical Path): Đường dài nhất trong sơ đồ mạng.
   - Biểu đồ Gantt: Thể hiện tiến độ bằng thanh ngang.
@@ -136,10 +136,10 @@
 ### 1.1 데이터 통신 및 주요 발전
 - **데이터 통신:** 컴퓨터와 통신기기 사이에서 디지털(0과 1) 정보를 송수신. (데이터 통신 = 데이터 전송 기술 + 데이터 처리 기술).
 - **정보 통신:** 전기 통신 + 컴퓨터 (정보 처리). 통신의 3요소: 정보원, 수신원, 전송 매체.
-- **주요 시스템:** 
+- **주요 시스템:**
   - `SAGE`: 최초의 데이터 통신 시스템.
-  - `SABRE`: 최초 상업용. 
-  - `ARPANET`: 인터넷의 효시. 
+  - `SABRE`: 최초 상업용.
+  - `ARPANET`: 인터넷의 효시.
   - `ALOHA`: 최초 무선 패킷 교환.
 - **Tiếng Việt:** Truyền thông dữ liệu truyền thông tin số (0, 1). 3 yếu tố: Nguồn, Đích, Môi trường truyền. ARPANET là tiền thân của Internet.
 
@@ -148,7 +148,7 @@
 - **동축 케이블 (Coaxial Cable):** 대역폭이 넓고 누화 적음, 중계기 필요.
 - **광섬유 케이블 (Optical Fiber):** 빛의 반사 원리. 가장 빠르고 대역폭 큼. 도청 어려워 보안성 우수. 무유도, 무누화.
 - **마이크로파/위성 통신:** 장거리 대용량 통신. 다중 접속 방식: FDMA(주파수), TDMA(시간), CDMA(코드).
-- **Tiếng Việt:** 
+- **Tiếng Việt:**
   - Twisted Pair: Rẻ, dễ nhiễu.
   - Coaxial: Băng thông rộng, ít nhiễu.
   - Optical Fiber: Cáp quang (phản xạ ánh sáng), siêu tốc, siêu bảo mật.
@@ -167,7 +167,7 @@
 - **방향에 따른 분류:** 단방향 (Simplex), 반이중 (Half-Duplex, 무전기), 전이중 (Full-Duplex, 전화).
 - **비동기식 (Asynchronous):** 문자마다 Start Bit / Stop Bit를 붙여 전송. 저속 단거리, 오버헤드 큼.
 - **동기식 (Synchronous):** 프레임(블록) 단위로 일시에 전송. 속도 빠르고 효율 좋음. 비트/블록 동기 방식.
-- **Tiếng Việt:** 
+- **Tiếng Việt:**
   - Đơn công (Simplex), Bán song công (Half-Duplex), Song công toàn phần (Full-Duplex).
   - Bất đồng bộ: Dùng Start/Stop bit (overhead cao). Đồng bộ: Truyền theo block (nhanh, hiệu quả).
 
@@ -203,9 +203,9 @@
   - **ATDM (비동기식/통계적):** 데이터가 있는 단말에만 시간 할당 (효율 높음).
 - **역 다중화기 (Inverse MUX):** 하나의 고속 채널을 2개의 저속 채널로 분할.
 - **집중화기 (Concentrator):** 회선이 부족할 때 동적으로 할당(버퍼 필요). (입력 > 출력 회선).
-- **Tiếng Việt:** 
-  - FDM: Chia tần số (cần khoảng vệ bảo vệ Guard Band). 
-  - TDM: Chia thời gian. (STDM: Cố định, ATDM: Động/Thống kê). 
+- **Tiếng Việt:**
+  - FDM: Chia tần số (cần khoảng vệ bảo vệ Guard Band).
+  - TDM: Chia thời gian. (STDM: Cố định, ATDM: Động/Thống kê).
   - Concentrator: Gom kênh, cần bộ đệm, số đầu vào > đầu ra.
 
 ### 3.2 통신 속도 (Speed Metrics)
@@ -240,10 +240,10 @@
 
 ### 4.1 오류 발생 원인 및 제어 (Error Causes & Control)
 - **원인:** 감쇠, 지연 왜곡, 상호 변조, 누화 잡음, 충격성 잡음(디지털 통신 주요인).
-- **FEC (순방향 오류 수정):** 수신 측에서 스스로 수정 (해밍 코드 등). 오버헤드 큼, 역채널 불필요.
-- **BEC (역방향 오류 수정):** 오류 시 재전송(ARQ) 요구 (패리티, CRC 등).
-- **Tiếng Việt:** 
-  - FEC: Tự sửa lỗi (vd: Hamming Code). 
+- **FEC (순방향 오류 수정):** 여분 비트를 함께 보내 수신 측이 재전송 없이 오류를 검출·수정 (해밍 코드 등). 오버헤드가 크고 역채널이 필요 없다.
+- **BEC/ARQ (역방향 오류 제어):** 수신 측이 오류를 검출한 뒤 송신 측에 재전송을 요청한다. CRC·패리티는 주로 검출에 사용되고, Stop-and-Wait·Go-Back-N·Selective Repeat가 대표적인 ARQ 방식이다.
+- **Tiếng Việt:**
+  - FEC: Tự sửa lỗi (vd: Hamming Code).
   - BEC: Yêu cầu gửi lại (vd: CRC, Parity).
 
 ### 4.2 ARQ (자동 반복 요청) 및 오류 검출 방식
@@ -256,8 +256,8 @@
   - **패리티 (Parity):** 1비트 검출, 짝수오류 검출 불가.
   - **CRC:** 다항식 기반, 집단 오류 검출 특화 (HDLC 사용).
   - **해밍 코드 (Hamming Code):** 1비트 *수정* 가능. `2^n` 번째 자리에 비트 삽입.
-- **Tiếng Việt:** 
-  - Go-Back-N: Gửi lại từ lỗi. Selective Repeat: Chỉ gửi lại gói lỗi. 
+- **Tiếng Việt:**
+  - Go-Back-N: Gửi lại từ lỗi. Selective Repeat: Chỉ gửi lại gói lỗi.
   - CRC: Kiểm tra đa thức (phổ biến nhất). Hamming Code: Sửa được lỗi 1 bit.
 
 ### 4.3 교환 방식 (Switching Methods)
@@ -265,17 +265,16 @@
 - **축적 교환 (Store-and-Forward):** 데이터를 저장했다가 경로를 찾아 전송.
   - **메시지 교환 (Message Switching):** 전체 메시지 전송. 지연 매우 긺.
   - **패킷 교환 (Packet Switching):** 패킷 단위로 잘라서 전송 (다음 파트에서 상세 서술).
-- **Tiếng Việt:** 
+- **Tiếng Việt:**
   - Circuit Switching (Chuyển mạch kênh): Tạo đường truyền vật lý (Điện thoại).
   - Message Switching (Chuyển mạch thông điệp): Lưu rồi chuyển toàn bộ.
 
-EOF
 ### 4.4 패킷 교환 방식 및 네트워크 기능 (Packet Switching & Network Functions)
 - **가상 회선 (Virtual Circuit):** 패킷 교환 전에 논리적인 가상 회선을 설정. 전송 순서가 보장되며 신뢰성이 높음. (호 설정 → 데이터 전송 → 호 해제).
 - **데이터그램 (Datagram):** 연결 경로 설정 없이 각 패킷이 독립적으로 운반됨. 패킷마다 경로가 다르고 순서가 다를 수 있음. 짧은 데이터 전송에 적합.
 - **패킷 교환망의 기능:** 패킷 다중화, 논리 채널 설정, 경로 제어, 순서 제어, 트래픽 제어, 오류 제어.
-- **Tiếng Việt:** 
-  - Virtual Circuit: Tạo đường dẫn ảo trước khi truyền (thứ tự được đảm bảo). 
+- **Tiếng Việt:**
+  - Virtual Circuit: Tạo đường dẫn ảo trước khi truyền (thứ tự được đảm bảo).
   - Datagram: Truyền độc lập không cần tạo đường dẫn (thứ tự có thể thay đổi).
 
 ### 4.5 트래픽 제어 및 라우팅 심화 (Traffic Control & Routing)
@@ -302,7 +301,7 @@ EOF
 - **SSO (Single Sign On):** 한 번 로그인으로 여러 사이트 이용.
 - **메시 네트워크 (Mesh Network):** 여러 디바이스를 그물망처럼 유기적으로 연결.
 - **피코넷 (PICONET):** 블루투스/UWB 기술로 형성하는 독립적 무선망.
-- **Tiếng Việt:** 
+- **Tiếng Việt:**
   - SDN/SDS/SDDC: Ảo hóa và điều khiển mạng/lưu trữ/trung tâm dữ liệu bằng phần mềm.
   - PaaS-TA: Nền tảng cloud mở của Hàn Quốc.
   - SSO: Đăng nhập một lần.
@@ -316,7 +315,7 @@ EOF
 - **버스형 (Bus Topology):** 한 통신 회선에 여러 단말장치 연결.
 - **VLAN (Virtual LAN):** 물리적 배치와 무관하게 논리적으로 네트워크 분리.
 - **WDM (Wavelength Division Multiplexing):** 파장이 다른 광선을 이용해 동시 통신 (광다중화).
-- **Tiếng Việt:** 
+- **Tiếng Việt:**
   - CSMA/CD: Phát hiện xung đột (Mạng có dây).
   - CSMA/CA: Tránh xung đột (Mạng không dây).
   - VLAN: Mạng LAN ảo, phân chia logic không phụ thuộc vật lý.
@@ -326,7 +325,7 @@ EOF
 - **RIP (Routing Information Protocol):** 거리 벡터 라우팅 (최대 홉 15 제한).
 - **OSPF (Open Shortest Path First):** 링크 상태 기반 최단 경로 라우팅 (대규모 망).
 - **흐름 제어 - 정지-대기 (Stop-and-Wait):** 수신 측의 ACK(확인 신호)를 받은 후 다음 패킷 전송.
-- **Tiếng Việt:** 
+- **Tiếng Việt:**
   - ARP: IP -> MAC.
   - RIP: Dựa trên số Hop (tối đa 15).
   - OSPF: Dựa trên trạng thái Link, tìm đường ngắn nhất.
@@ -340,21 +339,21 @@ EOF
 - **LAN (Local Area Network):** 단일 기관 소유, 고속 전송, 오류율 낮음.
 - **IEEE 802 주요 규격:**
   - `802.1` (전체 구성), `802.2` (LLC), `802.3` (CSMA/CD), `802.4` (토큰 버스), `802.5` (토큰 링), `802.11` (무선 LAN).
-- **CSMA/CD (Carrier Sense Multiple Access/Collision Detection):** 채널 사용권 경쟁. 충돌 감지. 
+- **CSMA/CD (Carrier Sense Multiple Access/Collision Detection):** 채널 사용권 경쟁. 충돌 감지.
   - 규격 명칭 (예: `10 BASE T` - 10Mbps, 베이스밴드, 꼬임선).
   - **이더넷 (Ethernet):** CSMA/CD 방식을 사용하는 LAN.
-- **Tiếng Việt:** Mạng LAN cục bộ. IEEE 802.3 là tiêu chuẩn CSMA/CD (Ethernet - phát hiện xung đột). 
+- **Tiếng Việt:** Mạng LAN cục bộ. IEEE 802.3 là tiêu chuẩn CSMA/CD (Ethernet - phát hiện xung đột).
 
 ### 5.2 기타 통신망 (VAN, ISDN)
 - **VAN (부가 가치 통신망):** 공중 통신망을 임대해 정보 가공/변환 등 부가 가치를 첨가해 서비스 제공.
 - **ISDN (종합 정보 통신망):** 음성/문자/영상을 디지털 방식으로 종합 제공.
-- **Tiếng Việt:** 
-  - VAN: Mạng giá trị gia tăng (thuê đường truyền, thêm dịch vụ). 
+- **Tiếng Việt:**
+  - VAN: Mạng giá trị gia tăng (thuê đường truyền, thêm dịch vụ).
   - ISDN: Mạng số đa dịch vụ tích hợp.
 
 ### 5.3 인터넷 주소 체계 (IP Addresses)
 - **IPv4:** 32비트 (8비트 × 4부분). 클래스 A~E (A: 대형 ~ C: 소규모망, D: 멀티캐스트).
-- **IPv6:** 128비트 (16비트 × 8부분, 16진수, 콜론 `:` 구분). 주소 부족 문제 해결.
+- **IPv6:** 128비트 (16비트 × 8부분, 16진수, 콜론 `:` 구분)로 주소 공간을 확장한다. 기본 헤더는 단순화되고 브로드캐스트 대신 멀티캐스트·애니캐스트를 사용한다.
 - **IPv4 → IPv6 전환 전략:** 듀얼 스택(Dual Stack), 터널링(Tunneling), 헤더/전송/응용 게이트웨이 변환(Translation).
 - **DNS (Domain Name System):** 문자 도메인 네임을 IP 주소로 변환.
 - **Tiếng Việt:** IPv4 (32 bit, Class A-E). IPv6 (128 bit, giải quyết cạn kiệt IP). DNS dịch tên miền sang IP.
@@ -366,7 +365,7 @@ EOF
 - **브리지 (Bridge):** 데이터 링크 계층, LAN-LAN 연결.
 - **라우터 (Router):** 네트워크 계층, 경로 선택(Routing) 및 서로 다른 망 연결.
 - **게이트웨이 (Gateway):** 전 계층(주로 상위), 프로토콜이 전혀 다른 네트워크 연결.
-- **Tiếng Việt:** 
+- **Tiếng Việt:**
   - L1: Hub, Repeater (Khuếch đại tín hiệu).
   - L2: Bridge (Nối LAN).
   - L3: Router (Định tuyến).
@@ -397,19 +396,17 @@ EOF
 - **X.25:** 패킷 교환망 프로토콜 (물리 - 프레임 - 패킷 계층). LAPB 사용.
 - **TCP/IP:**
   - **응용 계층:** FTP, SMTP, HTTP, DNS 등.
-  - **전송 계층:** 
+  - **전송 계층:**
     - **TCP:** 연결형, 신뢰성 보장, 순서/흐름 제어, 스트림 전송.
     - **UDP:** 비연결형, 빠른 전송.
-  - **인터넷 계층:** 
+  - **인터넷 계층:**
     - **IP:** 비연결형(데이터그램), 경로 선택(Routing).
     - **ICMP:** IP 오류 처리 및 제어 메시지.
     - **ARP:** IP → MAC / **RARP:** MAC → IP.
   - **네트워크 액세스 계층:** 이더넷, X.25, RS-232C.
-- **Tiếng Việt:** 
+- **Tiếng Việt:**
   - TCP: Tin cậy, hướng kết nối. UDP: Nhanh, không kết nối.
   - IP: Định tuyến. ICMP: Báo lỗi mạng. ARP: Đổi IP sang MAC.
-
-# 정보처리기사 (Information Processing Engineer) - Part 2
 
 ---
 
@@ -444,7 +441,7 @@ EOF
   - **단위가 크면:** 로크 수가 작아 관리하기 쉽지만 병행성 저하.
   - **단위가 작으면:** 로크 수가 많아 관리 복잡/오버헤드 증가, 하지만 병행성 상승.
 - **타임 스탬프 순서 (Time Stamp Ordering):** 직렬성 순서를 결정하기 위해 트랜잭션 처리 순서를 미리 선택.
-- **Tiếng Việt:** 
+- **Tiếng Việt:**
   - Immediate Update: Cập nhật ngay lập tức (dùng Log để phục hồi).
   - Locking Granularity: Kích thước khóa. Khóa lớn -> dễ quản lý, đồng thời thấp. Khóa nhỏ -> khó quản lý, đồng thời cao.
 
@@ -475,10 +472,10 @@ EOF
 - **침입 탐지 시스템 (IDS):** 실시간으로 비정상적 사용 탐지 (오용 탐지: 패턴 기반, 이상 탐지: 평균 상태 기준).
 - **고가용성 솔루션 (HACMP):** 장애 발생 시 즉시 다른 시스템으로 대체 가능하게 하는 환경.
 - **인증 (Authentication):** 지식 기반(패스워드), 소유 기반(스마트카드), 행위 기반(서명).
-- **커널 로그:** 
-  - `wtmp`: 성공한 로그인/로그아웃. 
-  - `utmp`: 현재 로그인 상태. 
-  - `btmp`: 실패한 로그인. 
+- **커널 로그:**
+  - `wtmp`: 성공한 로그인/로그아웃.
+  - `utmp`: 현재 로그인 상태.
+  - `btmp`: 실패한 로그인.
   - `lastlog`: 마지막 성공 로그인.
 - **Tiếng Việt:** Secure OS, IDS (phát hiện xâm nhập), HACMP (giải pháp độ sẵn sàng cao). Phân loại log kernel (wtmp, utmp, v.v.).
 
@@ -501,8 +498,8 @@ EOF
 - **Ping Flood:** 많은 ICMP 메시지를 보내 응답으로 자원 고갈시킴.
 - **스머핑 (SMURFING):** IP/ICMP 특성을 악용해 한 사이트에 집중적으로 데이터 보냄.
 - **DPI (Deep Packet Inspection):** 전 계층의 프로토콜과 패킷 내부를 파악해 침입 탐지.
-- **Tiếng Việt:** 
-  - DDoS: Tấn công từ chối dịch vụ phân tán. 
+- **Tiếng Việt:**
+  - DDoS: Tấn công từ chối dịch vụ phân tán.
   - Ping of Death: Gửi gói ICMP quá lớn.
   - SMURFING: Gửi lượng lớn dữ liệu tập trung.
 
@@ -510,7 +507,7 @@ EOF
 - **백도어 (Back Door):** 보안을 제거하고 만들어 놓은 비밀 통로 (탐지: 무결성 검사, 열린 포트 등).
 - **키로거 공격 (Key Logger):** 키보드 움직임을 탐지해 개인정보 탈취.
 - **랜섬웨어 (Ransomware):** 문서 암호화 후 돈(Ransom)을 요구.
-- **웜 (Worm):** 연속적으로 **자신을 복제**하여 시스템 부하 유발 (바이러스의 일종).
+- **웜 (Worm):** 네트워크를 통해 스스로 전파·복제되는 악성 코드로, 숙주 파일에 기생해야 하는 바이러스와 구분한다.
 - **허니팟 (Honeypot):** 비정상 접근 탐지를 위해 의도적으로 설치한 시스템 (미끼).
 - **피싱 (Phishing):** 공공/금융 기관을 사칭해 개인정보 탈취.
 - **Tiếng Việt:** Backdoor (Cửa hậu), Key Logger (Ghi thao tác bàn phím), Ransomware (Mã độc tống tiền), Worm (Giun máy tính - tự nhân bản), Honeypot (Hệ thống mồi nhử).
@@ -532,13 +529,13 @@ EOF
 ### 9.1 개인키 vs 공개키 암호화 (대칭키 vs 비대칭키)
 - **개인키(대칭키) 암호화 (Private/Symmetric Key):**
   - **동일한 키**로 암호화/복호화. 속도가 빠름. 암호화 키 개수: n(n-1)/2.
-  - 종류: 
+  - 종류:
     - **블록 암호화:** DES, SEED, AES, ARIA, IDEA
     - **스트림 암호화:** LFSR, RC4
 - **공개키(비대칭키) 암호화 (Public/Asymmetric Key):**
   - 암호화(공개키), 복호화(비밀키/개인키). 키 개수: **2n**.
   - 대표 알고리즘: **RSA** (소인수분해 기반).
-- **Tiếng Việt:** 
+- **Tiếng Việt:**
   - Khóa cá nhân (Đối xứng): Cùng 1 khóa, nhanh. (DES, AES, ARIA).
   - Khóa công khai (Bất đối xứng): 2 khóa (Public để mã hóa, Private để giải mã), an toàn nhưng chậm. (RSA).
 
@@ -556,7 +553,7 @@ EOF
 - **방법 (Methods):**
   - **합성 중심 (Composition-based):** 전자 칩 같은 소프트웨어 부품(모듈)을 만들어 끼워 맞추는 방법.
   - **생성 중심 (Generation-based):** 추상화 형태로 쓰여진 명세를 구체화하여 프로그램을 만드는 방법.
-- **Tiếng Việt:** Tái sử dụng phần mềm giúp giảm thời gian/chi phí, tăng chất lượng. 
+- **Tiếng Việt:** Tái sử dụng phần mềm giúp giảm thời gian/chi phí, tăng chất lượng.
   - Tổng hợp: lắp ráp các module (như chip).
   - Khởi tạo: tạo chương trình từ đặc tả trừu tượng.
 - **Example:**
@@ -595,7 +592,7 @@ EOF
 - **스크래피 (Scrapy):** Python 기반의 대규모 웹 크롤링 프레임워크.
 - **텐서플로 (TensorFlow):** 구글의 기계학습/데이터 흐름 프로그래밍용 오픈소스 라이브러리.
 - **앤 스크린 (N-Screen):** 여러(N개) 단말기에서 동일한 콘텐츠를 자유롭게 이용.
-- **Tiếng Việt:** 
+- **Tiếng Việt:**
   - Docker: Nền tảng container hóa mã nguồn mở.
   - Mashup: Kết hợp các API/dịch vụ web để tạo dịch vụ mới.
   - Digital Twin: Bản sao kỹ thuật số của thế giới thực.
@@ -606,7 +603,7 @@ EOF
 - **맵리듀스 (MapReduce):** 대용량 데이터를 분산 처리하기 위한 프로그래밍 모델.
 - **데이터 마이닝 (Data Mining):** 대량의 데이터에서 유용한 정보를 발견하는 기법.
 - **OLAP (Online Analytical Processing):** 다차원 데이터에서 통계적 요약 정보를 분석하여 의사결정에 활용. (연산: Roll-up, Drill-down, Pivoting, Slicing, Dicing 등).
-- **Tiếng Việt:** 
+- **Tiếng Việt:**
   - Hadoop: Nền tảng điện toán phân tán (dùng Sqoop kết nối RDB).
   - MapReduce: Mô hình lập trình xử lý phân tán.
   - Data Mining: Khai phá dữ liệu.
@@ -636,7 +633,7 @@ EOF
 ### 11.2 네트워크 구조 및 표준 심화
 - **네트워크 토폴로지 (Network Topology):**
   - **성형 (Star):** 중앙 컴퓨터를 중심으로 연결 (포인트 투 포인트).
-  - **링형 (Ring):** 이웃하는 단말끼리 원형으로 연결. 
+  - **링형 (Ring):** 이웃하는 단말끼리 원형으로 연결.
   - **버스형 (Bus):** 하나의 통신 회선에 여러 단말 연결 (신뢰성 높음).
   - **망형 (Mesh):** 모든 지점을 서로 연결. 회선 수 = `n(n-1)/2`.
 - **IEEE 802 표준 규격:**
@@ -652,7 +649,7 @@ EOF
 - **흐름 제어 (Flow Control):**
   - **정지-대기 (Stop-and-Wait):** ACK를 받은 후 다음 패킷 전송.
   - **슬라이딩 윈도우 (Sliding Window):** ACK 없이도 미리 정해진 윈도우 크기(Window Size)만큼 연속 전송.
-- **Tiếng Việt:** 
+- **Tiếng Việt:**
   - Topology mạng: Star, Ring, Bus, Mesh (Số đường truyền = n(n-1)/2).
   - IEEE 802.11: Tiêu chuẩn mạng không dây (Wi-Fi).
   - Flow Control: Sliding Window truyền liên tục dựa vào kích thước cửa sổ mà không cần chờ ACK cho từng gói.
@@ -702,11 +699,15 @@ EOF
   - **제로 데이 공격 (Zero Day Attack):** 보안 취약점이 공표되기도 전에 이루어지는 신속한 공격.
   - **스미싱 (Smishing):** SMS를 이용한 개인정보 탈취.
   - **Evil Twin Attack:** 실제와 동일한 이름의 가짜 Wi-Fi(AP)를 송출해 정보 탈취.
-- **Tiếng Việt:** 
+- **Tiếng Việt:**
   - Zero Day Attack: Tấn công khai thác lỗ hổng trước khi có bản vá.
   - Smishing: Phishing qua tin nhắn SMS.
   - Evil Twin: Tấn công bằng trạm Wi-Fi giả mạo tên (SSID) giống hệt trạm thật.
   - DDoS Tools: Trin00, TFN, Stacheldraht (ẩn danh và mã hóa liên lạc).
 
-EOF
-# 데이터 통신 및 통신 프로토콜 (Truyền thông Dữ liệu & Giao thức)
+---
+
+## 001. 소프트웨어 생명 주기 (Software Life Cycle)
+* **개념**: 소프트웨어를 개발하기 위해 정의하고 운용, 유지보수 등의 과정을 각 단계별로 나눈 것. (소프트웨어 수명 주기)
+  * *Tiếng Việt*: Vòng đời phần mềm là việc chia quá trình từ định nghĩa, phát triển, vận hành đến bảo trì phần mềm thành các giai đoạn.
+  * *Ví dụ*: 앱을 기획하고, 만들고, 출시 후 업데이트하는 전체 과정. (Toàn bộ quá trình từ lên kế hoạch, tạo, đến cập nhật app sau khi ra mắt).

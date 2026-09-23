@@ -119,11 +119,13 @@
 ## 143-145. SQL 분류 (SQL Categories)
 - **DDL (데이터 정의어):** CREATE, ALTER, DROP (스키마, 테이블 등 정의/변경/삭제).
 - **DML (데이터 조작어):** SELECT, INSERT, DELETE, UPDATE (데이터 조회 및 변경).
-- **DCL (데이터 제어어):** COMMIT, ROLLBACK, GRANT, REVOKE (보안, 무결성, 권한 제어).
+- **DCL (데이터 제어어):** GRANT, REVOKE (권한 제어).
+- **TCL (트랜잭션 제어어):** COMMIT, ROLLBACK, SAVEPOINT (트랜잭션 제어).
 - **Vietnamese:** Phân loại SQL.
   - DDL (Định nghĩa dữ liệu): CREATE, ALTER, DROP.
   - DML (Thao tác dữ liệu): SELECT, INSERT, DELETE, UPDATE.
-  - DCL (Điều khiển dữ liệu): COMMIT, ROLLBACK, GRANT, REVOKE.
+  - DCL (Điều khiển dữ liệu): GRANT, REVOKE (điều khiển quyền).
+  - TCL (Điều khiển giao dịch): COMMIT, ROLLBACK, SAVEPOINT (điều khiển giao dịch).
 
 ## 150-155. 데이터 조작어 (DML) 확장 및 조건 연산자
 - **DELETE (150):** 튜플을 삭제. `DELETE FROM 테이블명 [WHERE 조건];`
@@ -283,20 +285,19 @@
   - SAN: Mạng lưu trữ chuyên dụng (tốc độ cao + chia sẻ).
 
 ## 204-219. SQL 명령어 심화 (SQL Commands Detail)
-- **DDL (204, 207-209):** , , .
-  -  옵션:  (참조하는 모든 개체 연쇄 제거),  (참조 중이면 제거 취소).
-- **DML (205, 214-218):** , , , .
-  - : 중복 튜플 제거.
-  - : 정렬 (오름차순/내림차순).
-- **DCL (206, 210-213):** , , , .
-  - : 권한 부여. (옵션: 남에게 권한 부여 가능).
-  - : 권한 회수.
-  - : 변경 내용을 DB에 영구 반영.
-  - : 변경 취소, 이전 상태로 복구.
+- **DDL (204, 207-209):** `CREATE`, `ALTER`, `DROP`, `TRUNCATE`.
+  - `CASCADE`: 참조하는 모든 개체를 연쇄 처리; `RESTRICT`: 참조 중이면 처리 취소.
+- **DML (205, 214-218):** `SELECT`, `INSERT`, `UPDATE`, `DELETE`.
+  - `DISTINCT`: 중복 튜플 제거; `ORDER BY`: 오름차순/내림차순 정렬.
+- **DCL (206, 210-213):** `GRANT`, `REVOKE`.
+  - `GRANT`: 권한 부여 (`WITH GRANT OPTION`으로 재부여 허용).
+  - `REVOKE`: 권한 회수.
+- **TCL:** `COMMIT`, `ROLLBACK`, `SAVEPOINT`.
+  - `COMMIT`: 변경 내용을 DB에 영구 반영; `ROLLBACK`: 변경 취소; `SAVEPOINT`: 부분 복귀 지점 설정.
 - **Vietnamese:** Chi tiết các lệnh SQL.
-  - : Xóa dây chuyền các phần phụ thuộc. : Không cho xóa nếu đang bị phụ thuộc.
-  - : Cấp quyền và cho phép người đó cấp quyền tiếp cho người khác.
-  - : Xác nhận lưu thay đổi. : Hoàn tác.
+  - `CASCADE`: Xử lý dây chuyền các đối tượng phụ thuộc. `RESTRICT`: Không xử lý nếu đang bị tham chiếu.
+  - `GRANT`/`REVOKE`: Cấp và thu hồi quyền.
+  - `COMMIT`/`ROLLBACK`/`SAVEPOINT`: Xác nhận, hoàn tác hoặc đánh dấu điểm khôi phục giao dịch.
 
 ## 220-230. 하위 질의, 트리거, DBMS 접속 및 데이터 전환
 - **하위 질의 (Subquery):** 조건절에 주어진 질의를 먼저 수행하여 결과를 피연산자로 사용.
@@ -450,12 +451,13 @@
 |---|---|---|---|
 | **DDL** (Data Definition Language) | CREATE, ALTER, DROP, TRUNCATE | 데이터베이스를 **정의**하는 언어, 구조 결정. (Ngôn ngữ định nghĩa dữ liệu - Cấu trúc). | Dùng để Tạo (CREATE), Sửa (ALTER), Xóa hoàn toàn (DROP), hoặc Xóa trắng (TRUNCATE) bảng. Giống như việc xây/đập một ngôi nhà. |
 | **DML** (Data Manipulation Language) | SELECT, INSERT, UPDATE, DELETE | 저장된 자료를 조회, 삽입, 수정, 삭제. (Ngôn ngữ thao tác dữ liệu - Nội dung). | Dùng để Thêm, Sửa, Xóa, Lấy dữ liệu bên trong bảng. Giống như việc sắp xếp đồ đạc trong nhà. |
-| **DCL** (Data Control Language) | GRANT, REVOKE, COMMIT, ROLLBACK | 데이터 보안, 무결성, 권한, 병행 수행제어. (Ngôn ngữ điều khiển dữ liệu - Quyền & Giao dịch). | Dùng để Cấp quyền (GRANT), Thu hồi quyền (REVOKE), hoặc kiểm soát giao dịch (COMMIT/ROLLBACK). |
+| **DCL** (Data Control Language) | GRANT, REVOKE | 데이터 보안과 권한 제어. (Ngôn ngữ điều khiển dữ liệu - Quyền). | Dùng để cấp quyền hoặc thu hồi quyền. |
+| **TCL** (Transaction Control Language) | COMMIT, ROLLBACK, SAVEPOINT | 트랜잭션의 확정, 취소, 부분 복귀. (Ngôn ngữ điều khiển giao dịch). | Dùng để xác nhận, hoàn tác hoặc đặt điểm khôi phục giao dịch. |
 
 > 💡 **Mẹo ghi nhớ:**
 > DDL: **CADT** (Create, Alter, Drop, Truncate - "Cắt" cấu trúc).
 > DML: **SUDI** (Select, Update, Delete, Insert - "Sửa đi" dữ liệu).
-> DCL: **GRCR** (Grant, Revoke, Commit, Rollback - "Gác cổng" bảo vệ).
+> DCL: **GR** (Grant, Revoke - "Gác quyền"). TCL: **CRS** (Commit, Rollback, Savepoint - "Chốt/Rút/Save").
 
 ---
 
@@ -484,6 +486,8 @@
 ### 6.2 DCL 문법 (Cú pháp DCL)
 - `GRANT 권한 ON 테이블 TO 사용자 [WITH GRANT OPTION];` (Cấp quyền. WITH GRANT OPTION: cho phép người đó cấp quyền tiếp cho người khác).
 - `REVOKE 권한 ON 테이블 FROM 사용자 [CASCADE CONSTRAINTS];` (Thu hồi quyền. CASCADE: thu hồi luôn quyền mà người này đã cấp cho người khác).
+
+### 6.3 TCL 문법 (Cú pháp TCL)
 - `COMMIT`: Lưu vĩnh viễn giao dịch (Transaction) thành công.
 - `ROLLBACK`: Hủy bỏ giao dịch bị lỗi, quay về trạng thái cũ.
 - `SAVEPOINT`: Đặt điểm lưu để Rollback về điểm đó thay vì toàn bộ.
@@ -807,7 +811,4 @@ Quản lý trạng thái lỗi trong quá trình chuyển đổi:
 - 산술 연산자 (Toán học: `* / + -`) **>** 관계 연산자 (So sánh: `< > = !=`) **>** 논리 연산자 (Logic: `NOT > AND > OR`).
 
 > 💡 **Mẹo ghi nhớ:** **Toán - Quan - Lo** (Toán học - Quan hệ - Logic). Nhân chia trước, cộng trừ sau, rồi đến so sánh, cuối cùng là AND/OR.
-
-EOF
-
 

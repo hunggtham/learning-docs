@@ -1,12 +1,12 @@
-# 1. 요구사항 개발 기법 (Requirements Elicitation Techniques)
+# 3. 요구사항 분석기법 및 자동화 도구 (Analysis Techniques & CASE)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **1. 요구사항 개발 기법 (Requirements Elicitation Techniques)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **3. 요구사항 분석기법 및 자동화 도구 (Analysis Techniques & CASE)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-요구사항, 개발, 기법
+요구사항, 분석기법, 자동화, 도구
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,9 +22,15 @@
 
 ---
 
-## 1. 요구사항 개발 기법 (Requirements Elicitation Techniques)
-- **도출 (Elicitation) 기법**:
-  - **인터뷰 (Interview)**: Phỏng vấn.
-  - **브레인스토밍 (Brainstorming)**: Công não ý tưởng (Không chỉ trích).
-  - **델파이 기법 (Delphi)**: Hỏi ý kiến chuyên gia ẩn danh.
-  - **프로토타이핑 (Prototyping)**: Làm mẫu thử.
+## 3. 요구사항 분석기법 및 자동화 도구 (Analysis Techniques & CASE)
+- **자료 흐름도 (DFD - Data Flow Diagram)**:
+  - 프로세스 (Process - Tròn), 자료 흐름 (Data Flow - Mũi tên), 자료 저장소 (Data Store - Đường thẳng), 단말 (Terminator - Vuông).
+- **자료 사전 (DD - Data Dictionary)**:
+  - `=`: Định nghĩa (is composed of)
+  - `+`: Kết nối (and)
+  - `( )`: Tùy chọn (Optional)
+  - `[ | ]`: Lựa chọn (or)
+  - `{ }`: Lặp lại (Iteration)
+  - `**`: Ghi chú (Comment)
+- **CASE 도구 (CASE Tools)**: SADT, SREM, PSL/PSA.
+- **HIPO (Hierarchical Input Process Output)**: Phân tích Top-down (가시적 도표, 총체적 도표, 세부적 도표).

@@ -1,12 +1,12 @@
-# 3. 트리 (Tree)
+# 29. 큐 (Queue)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **3. 트리 (Tree)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **29. 큐 (Queue)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-트리
+29. 큐 (Queue)
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,13 +22,10 @@
 
 ---
 
-## 3. 트리 (Tree)
-* 정점(Node)과 선분(Branch)을 이용하여 사이클을 이루지 않도록 구성한 그래프의 특수한 형태.
-* **디그리 (Degree, 차수)**: 각 노드에서 뻗어 나온 가지의 수.
-* **단말 노드 (Terminal Node) = 잎 노드 (Leaf Node)**: 자식이 하나도 없는 노드, 즉 디그리가 0인 노드.
-* **VI (Vietnamese) (Tiếng Việt):**
-  * Cây là đồ thị đặc biệt không có chu trình.
-  * Bậc (Degree): Số nhánh của một nút con.
-  * Nút lá (Leaf): Nút không có con (bậc = 0).
-* **Example**: 폴더 구조에서 하위 폴더가 없는 폴더가 단말 노드입니다. (Trong cấu trúc thư mục, thư mục không chứa thư mục con là nút lá).
-* 💡 **Mẹo ghi nhớ**: Degree là số con trực tiếp. Leaf là chiếc lá ở cuối cành không mọc thêm được nữa.
+## 29. 큐 (Queue)
+* 삽입은 한쪽 끝에서, 삭제는 반대쪽 끝에서 이루어지는 자료 구조.
+* 선입선출(**FIFO**, First-In First-Out) 방식.
+* 시작과 끝을 표시하는 두 개의 포인터(Front, Rear)가 있음.
+* **VI (Vietnamese) (Tiếng Việt):** Hàng đợi FIFO (Vào trước ra trước). Dùng 2 con trỏ chỉ vị trí đầu và cuối.
+* **Example**: 프린터의 인쇄 대기열이나 매표소 줄서기와 같습니다.
+* 💡 **Mẹo ghi nhớ**: Queue = Xếp hàng.

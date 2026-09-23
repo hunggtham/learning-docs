@@ -31,7 +31,7 @@
   - **단위가 크면:** 로크 수가 작아 관리하기 쉽지만 병행성 저하.
   - **단위가 작으면:** 로크 수가 많아 관리 복잡/오버헤드 증가, 하지만 병행성 상승.
 - **타임 스탬프 순서 (Time Stamp Ordering):** 직렬성 순서를 결정하기 위해 트랜잭션 처리 순서를 미리 선택.
-- **Tiếng Việt:** 
+- **Tiếng Việt:**
   - Immediate Update: Cập nhật ngay lập tức (dùng Log để phục hồi).
   - Locking Granularity: Kích thước khóa. Khóa lớn -> dễ quản lý, đồng thời thấp. Khóa nhỏ -> khó quản lý, đồng thời cao.
 

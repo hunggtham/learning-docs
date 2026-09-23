@@ -1,12 +1,12 @@
-# 264 - 274. 파이썬 문법 (Python Syntax & Basics)
+# 라이브러리 및 예외 처리 (Libraries & Exception Handling)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **264 - 274. 파이썬 문법 (Python Syntax & Basics)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **라이브러리 및 예외 처리 (Libraries & Exception Handling)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-파이썬, 문법
+라이브러리, 예외, 처리
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,21 +22,17 @@
 
 ---
 
-## 264 - 274. 파이썬 문법 (Python Syntax & Basics)
-- **기본 문법**: 자료형 선언 생략, 세미콜론(`;`) 불필요. 코드 블록은 중괄호 `{}` 대신 **콜론(`:`)과 들여쓰기(Indentation)**로 구분.
-- **입출력**: `input()` (기본적으로 모두 문자열로 입력받음), `print()`. `sep`(분리 문자), `end`(종료 문자).
-- **형변환 (Casting)**: `int()`(정수), `float()`(실수). 여러 개 입력 받을 땐 `map(int, input().split())` 사용.
-- **자료형**:
-  - **리스트 (List, `[]`)**: 수정/추가/삭제 자유로움 (Mutable). 서로 다른 타입 혼용 가능.
-  - **딕셔너리 (Dictionary, `{}`)**: `Key:Value` 쌍으로 저장 (해시 맵). Key로 빠르게 검색.
-  - **슬라이스 (Slice)**: `객체[시작:끝:증가값]`. 끝 번호는 제외됨 (n-1까지). 원본은 변경하지 않음.
-- **제어문**: `if`, **`elif`** (else if 아님), `else`. `for i in range(시작, 끝)` 또는 `for i in 리스트`. `while`문.
-- **클래스 (Class)**: `class` 키워드. 메소드(함수) 정의 시 첫 번째 매개변수로 반드시 **`self`**를 써야 함. 파이썬은 클래스 밖에서도 `def`로 독립된 함수를 만들 수 있음.
+## 라이브러리 및 예외 처리 (Libraries & Exception Handling)
+### 280. C언어의 표준 라이브러리 (C Standard Libraries / Thư viện chuẩn C)
+- **stdio.h**: 입출력 (`printf`, `scanf`, `fopen`).
+- **math.h**: 수학 함수 (`sqrt`, `pow`, `abs`).
+- **string.h**: 문자열 처리 (`strlen`, `strcpy`, `strcmp`).
+- **stdlib.h**: 자료형 변환, 메모리 할당, 난수 (`atoi`, `rand`, `malloc`, `free`).
+- **time.h**: 시간 처리 (`time`, `clock`).
+  - 💡 *Mẹo ghi nhớ*: io = Input/Output, lib = Library (chung chung như cấp phát bộ nhớ), str = String.
 
-**Giải thích (Vietnamese):**
-- Python dùng "thụt lề" (indentation) để phân chia các khối code thay vì `{}`.
-- `input()` luôn trả về chuỗi (String). Nếu nhập số 5, nó hiểu là chữ "5". Phải bọc lại bằng `int(input())`.
-- Dictionary giống như từ điển: tra chữ "Apple" (Key) ra "Quả táo" (Value).
-- Cắt lát (Slicing): `a[1:4]` lấy các phần tử ở index 1, 2, 3 (không lấy 4).
-
----
+### 281. 예외 처리 (Exception Handling / Xử lý ngoại lệ)
+- 프로그램의 정상적인 실행을 방해하는 조건을 예외라고 한다. (Điều kiện làm gián đoạn chương trình gọi là ngoại lệ).
+- 예외 발생 시 대처하는 루틴을 작성하는 것 (Viết mã để xử lý các sự cố này mà không làm sập chương trình).
+- C++, Java, JS는 내장 기능 제공. (Các ngôn ngữ hiện đại có tích hợp sẵn như `try-catch`).
+  - 💡 *Mẹo ghi nhớ*: Exception = Bắt lỗi chủ động.

@@ -32,9 +32,9 @@
   - **ATDM (비동기식/통계적):** 데이터가 있는 단말에만 시간 할당 (효율 높음).
 - **역 다중화기 (Inverse MUX):** 하나의 고속 채널을 2개의 저속 채널로 분할.
 - **집중화기 (Concentrator):** 회선이 부족할 때 동적으로 할당(버퍼 필요). (입력 > 출력 회선).
-- **Tiếng Việt:** 
-  - FDM: Chia tần số (cần khoảng vệ bảo vệ Guard Band). 
-  - TDM: Chia thời gian. (STDM: Cố định, ATDM: Động/Thống kê). 
+- **Tiếng Việt:**
+  - FDM: Chia tần số (cần khoảng vệ bảo vệ Guard Band).
+  - TDM: Chia thời gian. (STDM: Cố định, ATDM: Động/Thống kê).
   - Concentrator: Gom kênh, cần bộ đệm, số đầu vào > đầu ra.
 
 ### 3.2 통신 속도 (Speed Metrics)

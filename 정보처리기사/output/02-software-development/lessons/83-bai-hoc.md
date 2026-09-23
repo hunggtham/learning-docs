@@ -29,7 +29,7 @@
 * **소스 코드 품질 분석 도구 심화**:
   * **정적 분석 도구**: pmd, cppcheck, SonarQube, checkstyle, ccm.
   * **동적 분석 도구**: Avalanche, Valgrind (메모리 누수, 스레드 결함 발견).
-* **VI (Vietnamese) (Tiếng Việt):** Tối ưu mã nguồn & Độ phức tạp Cyclomatic (McCabe). 
+* **VI (Vietnamese) (Tiếng Việt):** Tối ưu mã nguồn & Độ phức tạp Cyclomatic (McCabe).
   * Clean code > Bad code (Spaghetti/Alien).
   * V(G) = Cạnh(E) - Đỉnh(N) + 2. Số V(G) chính là số lượng test case cơ bản cần thiết.
   * Công cụ tĩnh (không chạy code): SonarQube. Động (chạy code tìm rò rỉ bộ nhớ): Valgrind.

@@ -1,12 +1,12 @@
-# 027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)
+# 핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-알고리즘, 설계, 기법과, 시간, 복잡도
+핵심, 재사용, 기법
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,21 +22,18 @@
 
 ---
 
-## 027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)
+## 핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)
 
-### 알고리즘 설계 기법 (Kỹ thuật thiết kế thuật toán)
-- **분할과 정복 (Divide & Conquer):** Chia để trị. Chia nhỏ vấn đề đến khi không chia được nữa rồi gộp lại. (VD: Merge Sort, Quick Sort).
-- **동적계획법 (Dynamic Programming - Quy hoạch động):** Chia bài toán, nhưng CÓ lưu lại kết quả (bộ nhớ) để tận dụng cho lần sau. (VD: Fibonacci).
-- **탐욕법 (Greedy):** Tham lam. Chọn cái tốt nhất ở *ngay thời điểm hiện tại*, không cần biết tương lai.
-- **백트래킹 (Backtracking):** Quay lui. Đi thử, nếu thấy bế tắc (không triển vọng - promising) thì quay lại nút cha.
+- **재사용 (Reuse):** 이미 개발되어 인정받았던 소프트웨어의 전체 또는 일부분을 다시 사용하는 기법. (Sử dụng lại code/phần mềm cũ đã được kiểm chứng để tiết kiệm thời gian, chi phí và giảm lỗi.)
+- **Phân loại theo kỹ thuật:**
+  - **분석 (Analysis):** Hiểu code cũ để chọn cái cần tái sử dụng.
+  - **재구조 (Restructuring):** Đổi cấu trúc, không đổi chức năng.
+  - **역공학 (Reverse Engineering):** Dịch ngược từ code ra bản thiết kế.
+  - **이식 (Migration):** Chuyển sang môi trường / phần cứng mới.
+  - **재개발 (Re-Development):** Đập đi xây lại có tham khảo cái cũ.
+- **Phân loại theo phạm vi:**
+  - Hàm & Đối tượng (Function/Class), Component, Ứng dụng (Application).
 
-### 시간 복잡도 (Time Complexity - Độ phức tạp thời gian)
-- Đếm số lần thực thi các phép toán (không phải tính thời gian bằng giây).
-- Biểu diễn: Big-O (최악 - Tệ nhất), Theta (평균 - Trung bình), Omega (최상 - Tốt nhất).
-- **Thứ tự (Nhanh -> Chậm):** O(1) < O(log n) < O(n) < O(n log n) < O(n²) < O(2ⁿ)
-- O(1) nghĩa là: Dữ liệu lớn đến đâu thời gian vẫn không đổi.
-
-- **Vietnamese Explanation:** Greedy giống như đi nhặt tiền: cứ thấy tờ to nhất trước mặt là nhặt, bất chấp sau đó dẫn vào ngõ cụt. Dynamic Programming giống như làm toán: kết quả bài 1 lưu ra nháp để dùng cho bài 2.
-- 💡 **Mẹo ghi nhớ (Mnemonics):** Divide = Cắt nhỏ. Dynamic = Nhớ bài cũ. Greedy = Tham bát bỏ mâm. Backtrack = Đi lùi. O(1) là nhanh nhất.
+- 💡 **Mẹo ghi nhớ (Mnemonics):** Reverse Engineering (Dịch ngược) = Từ Code -> Bản thiết kế. Migration = Chuyển nhà (môi trường).
 
 ---

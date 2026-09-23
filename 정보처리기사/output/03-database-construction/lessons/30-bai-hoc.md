@@ -26,7 +26,7 @@
 - **DELETE (150):** 튜플을 삭제. `DELETE FROM 테이블명 [WHERE 조건];`
 - **UPDATE (151):** 튜플 내용 변경. `UPDATE 테이블명 SET 속성명 = 데이터 [WHERE 조건];`
 - **SELECT (152, 153):** 데이터 검색. `SELECT [DISTINCT] 속성명 FROM 테이블명 [WHERE] [GROUP BY] [HAVING] [ORDER BY ASC|DESC];`
-- **LIKE (154):** 문자 패턴 일치 검색. 
+- **LIKE (154):** 문자 패턴 일치 검색.
   - `%`: 모든 문자
   - `_`: 문자 하나
   - `#`: 숫자 하나

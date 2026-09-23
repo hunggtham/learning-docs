@@ -27,13 +27,13 @@
 ### 9.1 개인키 vs 공개키 암호화 (대칭키 vs 비대칭키)
 - **개인키(대칭키) 암호화 (Private/Symmetric Key):**
   - **동일한 키**로 암호화/복호화. 속도가 빠름. 암호화 키 개수: n(n-1)/2.
-  - 종류: 
+  - 종류:
     - **블록 암호화:** DES, SEED, AES, ARIA, IDEA
     - **스트림 암호화:** LFSR, RC4
 - **공개키(비대칭키) 암호화 (Public/Asymmetric Key):**
   - 암호화(공개키), 복호화(비밀키/개인키). 키 개수: **2n**.
   - 대표 알고리즘: **RSA** (소인수분해 기반).
-- **Tiếng Việt:** 
+- **Tiếng Việt:**
   - Khóa cá nhân (Đối xứng): Cùng 1 khóa, nhanh. (DES, AES, ARIA).
   - Khóa công khai (Bất đối xứng): 2 khóa (Public để mã hóa, Private để giải mã), an toàn nhưng chậm. (RSA).
 

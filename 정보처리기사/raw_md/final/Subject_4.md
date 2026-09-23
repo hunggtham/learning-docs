@@ -22,11 +22,10 @@
 
 ## 프로그래밍 언어 기초 (Programming Language Basics)
 ### 159. C/JAVA의 자료형 (Data Types / Kiểu dữ liệu)
-- **문자 (Character / Ký tự)**: `char` (1Byte) trong C và JAVA.
-- **정수 (Integer / Số nguyên)**: `int` (4Byte) trong C và JAVA; `long` (8Byte).
-- **논리 (Boolean / Logic)**: `boolean` (1Byte) chỉ có trong JAVA (C dùng 0/1).
+- **C (exam assumption / giả định đề thi phổ biến):** `char` 1 byte, `int` 4 bytes; `long` phụ thuộc ABI/compiler và không nên ghi là 8 bytes tuyệt đối.
+- **Java:** `byte` 1 byte, `short` 2 bytes, `int` 4 bytes, `long` 8 bytes, `char` 2 bytes (Unicode), `float` 4 bytes, `double` 8 bytes. `boolean` là kiểu logic; Java không quy định một kích thước lưu trữ cố định.
   - *Example / Ví dụ*: `int age = 25; boolean isStudent = true;`
-  - 💡 *Mẹo ghi nhớ*: 1 Byte = char/boolean, 4 Bytes = int, 8 Bytes = long.
+  - 💡 *Mẹo ghi nhớ*: Java `char` = 2 bytes; C `char` = 1 byte; không suy ra kích thước storage của `boolean` từ ví dụ JVM.
 
 ### 162. 변수명 작성 규칙 (Variable Naming Rules / Quy tắc đặt tên biến)
 - 영문자, 숫자, _(under bar)를 사용할 수 있다. (Có thể sử dụng chữ cái tiếng Anh, số và dấu gạch dưới).
@@ -578,7 +577,7 @@
 
 ### 286. UNIX의 특징 (UNIX Overview / Đặc điểm UNIX - Bổ sung)
 - **시분할 시스템 (Time Sharing System)**: 시간을 분할하여 대화식으로 운영.
-- **개방형 시스템 (Open System)**: 소스 공개. (Hệ thống mở, mã nguồn mở).
+- **개방형 시스템 (Open System)**: 표준 인터페이스와 이식성을 중시하며, 개방형이라는 사실이 곧 소스 코드 공개나 오픈 소스 라이선스를 뜻하지는 않는다.
 - **네트워킹 (Networking)**: 통신망 관리용으로 적합.
 
 ### 287. UNIX 시스템의 구성 (UNIX System Structure / Cấu trúc hệ thống UNIX)
@@ -586,9 +585,9 @@
 - **쉘 (Shell)**: 명령어 해석기, 인터페이스, 주기억장치에 상주하지 않음. (Trình thông dịch lệnh, giao diện người dùng, không thường trú trong RAM).
 - **유틸리티 (Utility)**: 에디터, 컴파일러 등. (Các chương trình tiện ích).
 
-### 288. 파일 디스크립터 (File Descriptor / FCB - Khối điều khiển tập tin)
-- 파일을 관리하기 위한 시스템 제어 블록 (Khối dữ liệu chứa thông tin quản lý tập tin).
-- 사용자가 직접 참조할 수 없다. (Người dùng không thể truy cập trực tiếp).
+### 288. 파일 디스크립터 (File Descriptor)
+- 프로세스가 열린 파일을 참조할 때 사용하는 정수 핸들이다. 파일 상태를 담는 FCB(또는 inode 등 커널 자료구조)와 동일한 개념이 아니다.
+- 응용 프로그램은 디스크립터 값을 통해 읽기·쓰기·닫기 연산을 요청한다.
 
 ## 가상기억장치 및 페이지 교체 (Virtual Memory & Page Replacement)
 ### 290. 페이징 기법 (Paging / Phân trang)
@@ -837,9 +836,9 @@ Làm web cần 6000 dòng code. Một Dev viết được 1000 dòng/tháng. Suy
 ## 176 - 177. 비용 산정 기법 - COCOMO 모형 (COnstructive COst MOdel / Kỹ thuật COCOMO)
 - 보헴(Boehm)이 제안. 원시 프로그램 규모(LOC)에 의한 비용 산정 기법.
 - 소프트웨어 개발 유형:
-  - **조직형 (Organic Mode)**: 기관 내부 중·소규모, 5만 라인(50KDSI) 이하 (예: 사무/업무용).
-  - **반분리형 (Semi-Detached Mode)**: 30만 라인(300KDSI) 이하 (예: 유틸리티, 트랜잭션 처리 시스템).
-  - **내장형 (Embedded Mode)**: 초대형 규모, 30만 라인 이상 (예: 미사일 유도, 운영체제, 실시간 제어).
+  - **조직형 (Organic Mode)**: 기관 내부 중·소규모, `≤ 50 KDSI` (예: 사무/업무용).
+  - **반분리형 (Semi-Detached Mode)**: `> 50 ~ 300 KDSI` (예: 유틸리티, 트랜잭션 처리 시스템).
+  - **내장형 (Embedded Mode)**: `> 300 KDSI`의 초대형 규모 (예: 미사일 유도, 운영체제, 실시간 제어).
 - **COCOMO 종류**:
   - **기본(Basic)**: 크기와 개발 유형만 이용.
   - **중간(Intermediate)**: 기본 + 제품/컴퓨터/개발자/프로젝트 특성 4가지 추가 반영.
@@ -1427,7 +1426,6 @@ Khi lập trình bằng C, bạn dùng `scanf` để nhận dữ liệu người
 
 ---
 
-# Chapter 3. 응용 SW 기초 기술 활용 (Phần 3: Ứng dụng kỹ thuật cơ sở phần mềm)
 
 ## 082. 운영체제 기능 및 종류 (Operating System OS)
 - **운영체제의 주요 프로그램**:
@@ -1470,7 +1468,7 @@ Khi một phần mềm cần RAM, OS sẽ nhét nó vào đâu?
 - **OPT (Optimal)**: 앞으로 가장 오랫동안 사용되지 않을 페이지를 교체 (이론상 최적).
 - **LRU (Least Recently Used)**: (과거 기준) 가장 오랫동안 사용되지 않은 페이지를 교체.
 - **LFU (Least Frequently Used)**: 사용(참조) 횟수가 가장 적은 페이지 교체.
-- **NUR (Not Used Recently)**: 최근에 사용하지 않은 페이지 교체 (참조 비트 사용).
+- **NUR (Not Used Recently)**: 참조 비트(R)와 변형/수정 비트(M)를 조합해 페이지를 네 등급으로 나누고 낮은 등급부터 교체한다.
 - **지역성 (Locality)**: 프로세스가 특정 메모리 영역을 집중적으로 참조하는 현상.
   - 공간 지역성: 근처 메모리 참조 (배열).
   - 시간 지역성: 방금 참조한 곳 다시 참조 (루프, 변수).
@@ -1623,7 +1621,7 @@ Tên 7 tầng từ dưới lên (1->7): **물데네 전세표응** (Vật - Dữ
   - Class C: `192.~` (소형 망)
 - **IPv4 vs IPv6**:
   - 주소 길이: IPv4(32비트) -> **IPv6(128비트)** 확장.
-  - IPv6 특징: 호스트 주소 자동 설정, 패킷 크기 제한 없음, 헤더 단순화, **보안(인증/무결성) 강화**, 플로 레이블링(QoS), 이동성 지원.
+  - IPv6 특징: 호스트 주소 자동 설정 지원, 기본 헤더 단순화, 플로 레이블링(QoS) 필드, 이동성 지원. 패킷 크기는 IPv6의 최대 패킷 크기와 경로 MTU 규칙을 따르며, IPsec 지원이 정의되어도 사용 여부는 별도 설정이다.
 - **데이터 전송 방법**:
   - **유니캐스트 (Unicast)**: 1:1 통신.
   - **멀티캐스트 (Multicast)**: 1:N (특정 그룹).
@@ -2006,7 +2004,7 @@ IPv6 전송 방식 3총사: **유멀애** (Unicast, Multicast, Anycast). *Broadc
 - **개념 (Khái niệm)**: 소스 코드를 컴파일하지 않고 인터프리터(Interpreter)가 한 줄씩 즉시 해석하여 실행하는 프로그래밍 언어. (Ngôn ngữ lập trình dịch và thực thi từng dòng mã nguồn trực tiếp mà không cần biên dịch toàn bộ.)
 - **핵심 키워드 (Từ khóa)**: 자바 스크립트 (JavaScript), PHP, 파이썬 (Python), 쉘 스크립트 (Shell script).
 - **시험 포인트 (Điểm thi)**: 클라이언트용(Client-side: JS)과 서버용(Server-side: ASP, JSP, PHP) 스크립트 언어를 구분하는 것이 단골 문제. (Phân biệt ngôn ngữ cho Client và Server là câu hỏi thường gặp.)
-- **한 문장 설명 (Tóm tắt)**: 컴파일 과정이 없어 실행 속도가 빠르고 수정이 용이하여 웹 개발 및 시스템 관리에 널리 사용됨. (Tốc độ khởi động nhanh và dễ sửa đổi vì không cần biên dịch, phổ biến trong web và quản trị hệ thống.)
+- **한 문장 설명 (Tóm tắt)**: 컴파일 과정이 없어 수정과 실행 시작이 편리하지만, 반복 실행 성능은 일반적으로 컴파일 방식보다 느릴 수 있다. (Dễ sửa và bắt đầu chạy vì không cần biên dịch trước, nhưng hiệu năng chạy lặp thường có thể chậm hơn kiểu biên dịch.)
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
 - **자바 스크립트 (JavaScript)**: 웹 브라우저 내에서 동작하며 입력 사항 확인 등 클라이언트 측 제어에 사용. (Chạy trên trình duyệt, kiểm soát phía client như xác thực đầu vào.)
@@ -2081,5 +2079,3 @@ IPv6 전송 방식 3총사: **유멀애** (Unicast, Multicast, Anycast). *Broadc
 - 문맥 교환(Context Switching) 시, 현재까지 진행 상황을 PCB에 저장. (Khi chuyển đổi ngữ cảnh, lưu tiến độ vào PCB để sau này chạy tiếp.)
 - **예시 (Ví dụ)**: 병원에서 환자(프로세스)마다 차트(PCB)를 만들어 병력과 현재 상태를 기록하는 것과 같음. 퇴원하면 차트를 닫음. (Giống như Bệnh án (PCB) của từng bệnh nhân (Process), ghi lại tình trạng, xuất viện thì đóng hồ sơ.)
 - 💡 **Mẹo ghi nhớ**: PCB giống như "Thẻ căn cước + Hồ sơ bệnh án" của một tiến trình.
-
-

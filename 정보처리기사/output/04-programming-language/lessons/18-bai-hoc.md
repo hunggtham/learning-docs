@@ -1,12 +1,12 @@
-# 제어문 심화 (Control Statements - Advanced)
+# 구조체, 배열 및 포인터 (Structs, Arrays, and Pointers)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **제어문 심화 (Control Statements - Advanced)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **구조체, 배열 및 포인터 (Structs, Arrays, and Pointers)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-제어문, 심화
+구조체, 배열, 포인터
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,34 +22,38 @@
 
 ---
 
-## 제어문 심화 (Control Statements - Advanced)
-### 252. 다중 if문 (Multi if statement / Câu lệnh if nhiều nhánh)
-- 조건이 여러 개일 때 사용하는 제어문이다. (Sử dụng khi có nhiều điều kiện khác nhau).
-- `if (조건1) ... else if (조건2) ... else ...`
-  - *Example / Ví dụ*: `if(jum >= 90) printf("A"); else if(jum >= 80) printf("B"); else printf("F");`
-  - 💡 *Mẹo ghi nhớ*: Xếp hạng hoặc các điều kiện loại trừ lẫn nhau thì dùng `else if`.
+## 구조체, 배열 및 포인터 (Structs, Arrays, and Pointers)
+### C언어의 구조체 (Struct in C / Cấu trúc trong C)
+- 자료의 종류가 다른 변수의 모임이다. (Tập hợp các biến có kiểu dữ liệu khác nhau).
+- 예약어 `struct`를 이용해 정의한다. (Định nghĩa bằng từ khóa `struct`).
+  - *Example / Ví dụ*: `struct Person { char name[20]; int age; };`
+  - 💡 *Mẹo ghi nhớ*: Mảng (Array) lưu các giá trị cùng kiểu, Cấu trúc (Struct) lưu các giá trị khác kiểu.
 
-### 253. switch문 (switch statement / Câu lệnh switch - Bổ sung)
-- `case`문의 레이블에는 상수만 지정할 수 있으며 변수는 지정할 수 없다. (Nhãn `case` chỉ chấp nhận hằng số, không dùng biến).
-- `int`, `char`, `enum`형의 상수만 가능하다. (Chỉ dùng được số nguyên, ký tự, hoặc kiểu enum).
-  - *Example / Ví dụ*: `switch (jum / 10) { case 10: case 9: printf("A"); break; ... }` (Chia cho 10 để tính điểm thập phân thành số nguyên).
-  - 💡 *Mẹo ghi nhớ*: `switch` thích sự chính xác tuyệt đối (giá trị cụ thể), không thích sự so sánh lớn/nhỏ.
+### 177. 1차원 배열 (1D Array / Mảng 1 chiều)
+- 변수들을 일직선상의 개념으로 조합한 배열이다. (Tập hợp các biến trên một đường thẳng).
+  - *Example / Ví dụ*: `char a[3] = {'A', 'B', 'C'};`
+  - 💡 *Mẹo ghi nhớ*: Chỉ số mảng luôn bắt đầu từ 0.
 
-### 254. for문 (for loop / Vòng lặp for - Bổ sung)
-- 처음부터 조건식을 만족하지 못하면 한 번도 수행하지 않는다. (Nếu điều kiện sai ngay từ đầu, vòng lặp không chạy lần nào).
-- `for(초기값; 최종값조건; 증가값) { 실행문; }`
+### 178. 2차원 배열 (2D Array / Mảng 2 chiều)
+- 변수들을 평면, 즉 행과 열로 조합한 배열이다. (Tập hợp các biến theo dạng bảng gồm hàng và cột).
+  - *Example / Ví dụ*: `int b[2][3] = {{11, 22, 33}, {44, 55, 66}};`
+  - 💡 *Mẹo ghi nhớ*: `[hàng][cột]` (Row x Column).
 
-### 255. while문 (while loop / Vòng lặp while - Bổ sung)
-- `while(조건) { 실행문; }`
-- Điều kiện được kiểm tra trước, nếu sai từ đầu sẽ bỏ qua.
-  - *Example / Ví dụ*: `while(a < 5) { a++; hap += a; }`
+### 179. 배열 형태의 문자열 변수 (String as Array / Chuỗi dưới dạng mảng)
+- C언어에서는 큰따옴표("")로 묶인 글자는 문자열로 처리된다. (Trong C, chữ nằm trong ngoặc kép được xem là chuỗi).
+- 배열에 문자열을 저장하면 널 문자('\0')가 문자열 끝에 자동으로 삽입된다. (Khi lưu chuỗi vào mảng, ký tự null `\0` tự động được thêm vào cuối).
+  - *Example / Ví dụ*: `char a[5] = "love";` (Bao gồm l, o, v, e, \0).
+  - 💡 *Mẹo ghi nhớ*: Độ dài mảng phải lớn hơn số ký tự của chuỗi ít nhất 1 (để chứa `\0`).
 
-### 256. do~while문 (do~while loop / Vòng lặp do~while - Bổ sung)
-- 실행할 문장을 무조건 한 번 실행한 다음 조건을 판단. (Thực hiện ít nhất 1 lần rồi mới kiểm tra điều kiện ở cuối).
-- `do { 실행문; } while(조건);` (Nhớ có dấu chấm phẩy ở cuối `while`).
+### 180. 포인터와 포인터 변수 (Pointers / Con trỏ)
+- 포인터 변수를 선언할 때는 자료형 뒤에 `*`를 붙인다. (Khai báo biến con trỏ bằng dấu `*`).
+- 변수의 주소를 알아낼 때는 `&`를 붙인다. (Lấy địa chỉ của biến bằng dấu `&`).
+- 실행문에서 포인터 변수에 `*`를 붙이면 해당 변수가 가리키는 곳의 값을 의미한다. (Dùng `*` trước con trỏ để lấy giá trị tại địa chỉ đó).
+  - *Example / Ví dụ*: `int a = 50; int *b = &a; printf("%d", *b);` (In ra 50).
+  - 💡 *Mẹo ghi nhớ*: `&` là địa chỉ (Address), `*` là giá trị (Value).
 
-### 257. break, continue (Keywords / Từ khóa điều khiển vòng lặp)
-- **break**: switch문이나 반복문 안에서 나오면 블록을 벗어난다. (Thoát ngay lập tức khỏi vòng lặp hoặc switch).
-- **continue**: 이후의 문장을 실행하지 않고 반복문의 처음으로 옮긴다. (Bỏ qua các lệnh bên dưới và quay lại đầu vòng lặp để tiếp tục vòng lặp mới).
-  - *Example / Ví dụ*: `if(a % 2 == 0) continue; hap += a;` (Bỏ qua số chẵn, chỉ cộng số lẻ).
-  - 💡 *Mẹo ghi nhớ*: `break` = Phá vỡ (thoát ra). `continue` = Tiếp tục (bước tiếp).
+### 181. 포인터와 배열 (Pointer and Array / Con trỏ và mảng)
+- 배열을 포인터 변수에 저장한 후 포인터를 이용해 배열의 요소에 접근할 수 있다. (Có thể dùng con trỏ để truy cập các phần tử mảng).
+- 배열의 대표명은 배열의 첫 번째 요소의 주소와 같다. (Tên mảng chính là địa chỉ của phần tử đầu tiên).
+  - *Example / Ví dụ*: `int a[5]; int *b = a;` tương đương với `b = &a[0];`.
+  - 💡 *Mẹo ghi nhớ*: `a[i]` hoàn toàn tương đương với `*(a + i)`.

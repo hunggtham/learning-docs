@@ -24,6 +24,7 @@
 16. [2. 소프트웨어 공학 기법 (Kỹ thuật Công nghệ Phần mềm)](lessons/16-bai-hoc.md)
 17. [6. IT 신기술 및 소프트웨어 (Công nghệ IT mới & Phần mềm)](lessons/17-bai-hoc.md)
 18. [11. 보충 및 심화 내용 (Bổ sung & Nâng cao)](lessons/18-bai-hoc.md)
+19. [001. 소프트웨어 생명 주기 (Software Life Cycle)](lessons/19-bai-hoc.md)
 
 ## Ghi chú học
 

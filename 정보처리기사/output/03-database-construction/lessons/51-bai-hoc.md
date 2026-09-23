@@ -37,6 +37,8 @@ DDL, DML, DCL, 상세
 ### 6.2 DCL 문법 (Cú pháp DCL)
 - `GRANT 권한 ON 테이블 TO 사용자 [WITH GRANT OPTION];` (Cấp quyền. WITH GRANT OPTION: cho phép người đó cấp quyền tiếp cho người khác).
 - `REVOKE 권한 ON 테이블 FROM 사용자 [CASCADE CONSTRAINTS];` (Thu hồi quyền. CASCADE: thu hồi luôn quyền mà người này đã cấp cho người khác).
+
+### 6.3 TCL 문법 (Cú pháp TCL)
 - `COMMIT`: Lưu vĩnh viễn giao dịch (Transaction) thành công.
 - `ROLLBACK`: Hủy bỏ giao dịch bị lỗi, quay về trạng thái cũ.
 - `SAVEPOINT`: Đặt điểm lưu để Rollback về điểm đó thay vì toàn bộ.

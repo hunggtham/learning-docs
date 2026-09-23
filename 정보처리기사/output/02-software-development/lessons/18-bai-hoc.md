@@ -1,12 +1,12 @@
-# 핵심 031: 모듈 구현 (Module Implementation)
+# 34. 단위 모듈과 IPC (Unit Module & Inter-Process Communication)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **핵심 031: 모듈 구현 (Module Implementation)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **34. 단위 모듈과 IPC (Unit Module & Inter-Process Communication)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-핵심, 모듈, 구현
+단위, 모듈과, IPC
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,14 +22,15 @@
 
 ---
 
-## 핵심 031: 모듈 구현 (Module Implementation)
-
-- **구현 (Implementation):** 설계 명세서가 컴퓨터가 알 수 있는 모습으로 변환되는 과정. 프로그래밍 또는 코딩. (Quá trình chuyển thiết kế thành code.)
-- **작업 절차 (Trình tự):** 코딩 계획 (Lập kế hoạch) → 코딩 (Code) → 컴파일 (Compile) → 테스트 (Test).
-- **모듈 (Module):** 독립적인 기능을 갖는 단위. 모듈이 모이면 프로그램이 됨. (Một đơn vị độc lập thực hiện một chức năng cụ thể.)
-- **컴포넌트 (Component):** 독립적으로 존재할 수 있는 부분, 재사용되는 단위, 인터페이스를 통해서만 접근. (Thành phần có thể tái sử dụng, giao tiếp qua Interface.)
-
-- **Vietnamese Explanation:** Module là một khối code (như một hàm hoặc một class). Component là một khối lớn hơn, đóng gói sẵn và có thể lắp ráp vào nhiều phần mềm khác nhau (như một nút bấm UI, một bộ lịch).
-- 💡 **Mẹo ghi nhớ (Mnemonics):** Trình tự: Kế hoạch -> Code -> Dịch (Compile) -> Thử (Test). Module = Ghép lại thành chương trình. Component = Tái sử dụng qua Interface.
-
----
+## 34. 단위 모듈과 IPC (Unit Module & Inter-Process Communication)
+* **단위 모듈 (Unit Module)**: 한 가지 동작을 수행하는 기능 모듈 (독립적인 컴파일 가능).
+* **IPC (프로세스 간 통신)**: 복수의 프로세스 간 통신을 구현하는 방법.
+* **IPC 대표 메소드**:
+  * **Shared Memory**: 다수 프로세스가 공유 가능한 메모리 구성.
+  * **Socket**: 네트워크 소켓을 이용한 통신.
+  * **Semaphores**: 공유 자원에 대한 접근 제어.
+  * **Pipes & Named Pipes**: 선입선출(FIFO) 형태의 공유 메모리 사용.
+  * **Message Queueing**: 메시지 전달 방식.
+* **VI (Vietnamese) (Tiếng Việt):** Giao tiếp giữa các tiến trình (IPC). Các phương thức: Bộ nhớ chia sẻ, Socket (mạng), Cờ hiệu (Semaphore), Ống dẫn (Pipes), Hàng đợi tin nhắn.
+* **Example**: 두 개의 프로그램이 채팅을 주고받을 때 Socket이나 Message Queue를 사용합니다.
+* 💡 **Mẹo ghi nhớ**: S-S-S-P-M (Shared memory, Socket, Semaphore, Pipe, Message Queue).

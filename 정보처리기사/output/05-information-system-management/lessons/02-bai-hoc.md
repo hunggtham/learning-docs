@@ -43,16 +43,16 @@
   - 개발 유형: **조직형 (Organic, <50K)**, **반분리형 (Semi-Detached, <300K)**, **내장형 (Embedded, >300K)**.
 - **Putnam 모형:** 생명 주기 동안 사용될 노력의 분포를 가정 (Rayleigh-Norden 곡선 기초). **SLIM** 도구 사용.
 - **기능 점수 (FP) 모형:** 기능적 요구사항을 점수화. 가중치 증대 요인: 자료 입력, 정보 출력, 명령어(질의), 데이터 파일, 외부 루틴 인터페이스.
-- **Tiếng Việt:** 
+- **Tiếng Việt:**
   - COCOMO: Dựa vào số dòng code (LOC). Gồm Organic (nhỏ), Semi-Detached (vừa), Embedded (lớn).
   - Putnam: Dựa trên đường cong Rayleigh-Norden (Công cụ: SLIM).
-  - FP (Function Point): Dựa trên tính năng. 
+  - FP (Function Point): Dựa trên tính năng.
 
 ### 3.3 일정 관리 (Schedule Management)
 - **PERT (프로그램 평가 및 검토 기술):** 낙관, 가능, 비관적인 경우로 나누어 종료 시기를 결정. 결정 경로와 임계 경로를 알 수 있음.
 - **CPM (임계 경로 기법):** 임계 경로는 프로젝트에서 가장 긴(최장) 경로를 의미한다.
 - **간트 차트 (Gantt Chart):** 작업 일정을 막대 도표로 표시 (수평 막대 길이는 기간).
-- **Tiếng Việt:** 
+- **Tiếng Việt:**
   - PERT: Dựa trên thời gian lạc quan, bi quan, khả thi.
   - Đường găng (Critical Path): Đường dài nhất trong sơ đồ mạng.
   - Biểu đồ Gantt: Thể hiện tiến độ bằng thanh ngang.

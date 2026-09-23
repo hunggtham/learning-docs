@@ -1,12 +1,12 @@
-# 097 & 120: 통합 개발 환경 (IDE - Integrated Development Environment)
+# 098 & 기타 협업 도구 (Build Tools & Collaboration Tools)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **097 & 120: 통합 개발 환경 (IDE - Integrated Development Environment)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **098 & 기타 협업 도구 (Build Tools & Collaboration Tools)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-통합, 개발, 환경
+기타, 협업, 도구
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,19 +22,20 @@
 
 ---
 
-## 097 & 120: 통합 개발 환경 (IDE - Integrated Development Environment)
+## 098 & 기타 협업 도구 (Build Tools & Collaboration Tools)
 
-- 코딩, 디버그, 컴파일, 배포 등 모든 작업을 하나의 프로그램에서 처리. (Phần mềm tất-cả-trong-một).
-- **4대 기능 (4 Chức năng chính):** 
-  - 코딩 (Coding): Gõ code.
-  - 컴파일 (Compile): Dịch ra mã máy.
-  - 디버깅 (Debugging): Tìm và sửa lỗi (Bug).
-  - 배포 (Deployment): Đóng gói và giao cho người dùng.
-- **대표 도구 (Các IDE tiêu biểu):**
-  - **이클립스 (Eclipse):** Của IBM, Đa nền tảng (Cross-platform), chuyên Java.
-  - **IntelliJ (IDEA):** Của JetBrains, Đa nền tảng, chuyên Java/Kotlin.
-  - **비주얼 스튜디오 (Visual Studio):** Của Microsoft, chuyên Windows, C#/.NET.
-  - **엑스 코드 (Xcode):** Của Apple, chuyên MacOS/iOS.
-  - **안드로이드 스튜디오 (Android Studio):** Của Google, chuyên Android.
+### 빌드 도구 (Build Tool)
+- 소스 코드를 실행할 수 있는 제품으로 변환(빌드)하는 과정을 자동화. (Công cụ tự động biên dịch và gom file code lại thành file chạy `.exe`, `.apk`...).
+- **Ant:** Cổ điển, dùng cho Java, của Apache.
+- **Maven:** Nâng cấp của Ant, quản lý thư viện (Dependencies) tự động.
+- **Gradle:** Hiện đại nhất, lai giữa Ant và Maven, dùng nhiều cho Android.
+
+### 기타 협업 도구 (Groupware / Collaboration Tools)
+- **프로젝트 및 일정 관리 (Quản lý dự án):** Jira (지라), Trello, Google Calendar.
+- **메신저 (Giao tiếp):** Slack, Jandi.
+- **디자인 (Thiết kế UI -> Code):** Zeplin, Sketch.
+- **기타:** Evernote (Ghi chú), Swagger (Tài liệu API tự động), GitHub (Lưu source code).
+
+- 💡 **Mẹo ghi nhớ (Mnemonics):** Jira = Quản lý công việc (Ticket). Slack = Chat. Zeplin = Thiết kế. Swagger = Viết Document cho API. Gradle = Build Android.
 
 ---

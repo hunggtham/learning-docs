@@ -1,12 +1,12 @@
-# 배열과 포인터 심화 (Arrays & Pointers - Advanced)
+# 075 - 077. 배열, 조건문, 반복문 (Arrays, Conditionals & Loops)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **배열과 포인터 심화 (Arrays & Pointers - Advanced)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **075 - 077. 배열, 조건문, 반복문 (Arrays, Conditionals & Loops)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-배열과, 포인터, 심화
+배열, 조건문, 반복문
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,24 +22,20 @@
 
 ---
 
-## 배열과 포인터 심화 (Arrays & Pointers - Advanced)
-### 260. 배열의 초기화 (Array Initialization / Khởi tạo mảng)
-- 배열 선언 시 초기값을 지정할 수 있다. (Có thể gán giá trị khởi tạo ngay khi khai báo mảng).
-- 배열의 크기를 생략하려면 반드시 초기값을 지정해야 한다. (Nếu bỏ trống kích thước mảng trong ngoặc `[]`, bắt buộc phải có giá trị khởi tạo để máy tự đếm).
-- 적은 수로 초기화하면 나머지 요소는 0이 입력된다. (Nếu khởi tạo ít phần tử hơn kích thước mảng, các phần tử còn lại tự động bằng 0).
-  - *Example / Ví dụ*: `int a[5] = {3};` -> `[3, 0, 0, 0, 0]`.
-  - 💡 *Mẹo ghi nhớ*: C/Java không tự làm sạch bộ nhớ trừ khi bạn khởi tạo ít nhất 1 phần tử.
+## 075 - 077. 배열, 조건문, 반복문 (Arrays, Conditionals & Loops)
+- **배열 (Array)**: `자료형 변수명[개수] = {초깃값};` (C/Java). 2차원 배열은 `변수명[행][열]`.
+- **조건문 (if/switch)**:
+  - C/Java: `if (조건) { ... } else if (조건) { ... } else { ... }`
+  - Python: `if 조건:` -> `elif 조건:` -> `else:`
+  - switch문 (C/Java): 식의 값에 따라 `case`를 찾아가며, `break;`가 없으면 아래 문장들도 계속 실행됨.
+- **반복문 (for/while)**:
+  - for문 (C/Java): `for (초기식; 조건식; 증감식) { ... }`
+  - for문 (Python): `for 변수 in range(시작, 끝+1):`
+  - while문: 조건이 참일 동안 반복.
+  - do~while문 (C/Java): 조건과 상관없이 무조건 **최소 1번**은 실행하고 조건을 검사함.
 
-### 261. 배열 형태의 문자열 변수 (String as Array / Chuỗi dưới dạng mảng - Bổ sung)
-- 배열에 문자열을 저장할 때는 초기값으로 지정해야 하며, 이미 선언된 배열에는 대입 연산자로 문자열을 통째로 저장할 수 없다. (Chỉ được gán chuỗi trực tiếp lúc khởi tạo. Không được gán chuỗi vào mảng đã khai báo bằng dấu `=`).
-- `%s`를 이용해 문자열을 출력할 때는 배열 이름이나 포인터 변수만 적어주면 된다. (Khi in chuỗi bằng `%s`, chỉ cần truyền tên mảng hoặc con trỏ, không cần dấu `&`).
+**Giải thích (Vietnamese):**
+- Trong Python, cấu trúc điều kiện là `if`, `elif` (viết tắt của else if) và `else`. Không cần ngoặc nhọn `{}` mà dùng thụt lề (indentation).
+- `do~while` khác `while` ở chỗ: `do~while` sẽ làm việc trước rồi mới kiểm tra điều kiện sau, nên chắc chắn code bên trong được chạy ít nhất 1 lần.
 
-### 262. 포인터와 포인터 변수 (Pointer & Pointer Variable / Con trỏ - Bổ sung)
-- 포인터 변수는 동적으로 할당되는 메모리 영역인 **힙(Heap) 영역**에 접근하는 동적 변수이다. (Con trỏ là biến động truy cập vào vùng nhớ Heap được cấp phát động).
-- `*` 연산자: 간접 연산자 (Lấy giá trị).
-- `&` 연산자: 번지 연산자 (Lấy địa chỉ).
-  - 💡 *Mẹo ghi nhớ*: Con trỏ giống như tấm bản đồ (chỉ chứa địa chỉ), dùng `*` để đi đến đích và lấy kho báu (giá trị).
-
-### 263. 포인터와 배열 (Pointer & Array / Con trỏ và mảng - Bổ sung)
-- `p + 1`은 메모리 주소가 1 증가하는 것이 아니라 해당 자료형의 크기(int는 4Byte)만큼 증가한다. (`p + 1` không cộng thêm 1 vào địa chỉ, mà cộng thêm kích thước của kiểu dữ liệu, ví dụ int thì cộng thêm 4 Bytes).
-  - *Example / Ví dụ*: `p` là `1000` -> `p + 1` là `1004` (với int).
+---

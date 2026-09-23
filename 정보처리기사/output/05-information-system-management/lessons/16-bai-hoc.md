@@ -29,7 +29,7 @@
 - **방법 (Methods):**
   - **합성 중심 (Composition-based):** 전자 칩 같은 소프트웨어 부품(모듈)을 만들어 끼워 맞추는 방법.
   - **생성 중심 (Generation-based):** 추상화 형태로 쓰여진 명세를 구체화하여 프로그램을 만드는 방법.
-- **Tiếng Việt:** Tái sử dụng phần mềm giúp giảm thời gian/chi phí, tăng chất lượng. 
+- **Tiếng Việt:** Tái sử dụng phần mềm giúp giảm thời gian/chi phí, tăng chất lượng.
   - Tổng hợp: lắp ráp các module (như chip).
   - Khởi tạo: tạo chương trình từ đặc tả trừu tượng.
 - **Example:**

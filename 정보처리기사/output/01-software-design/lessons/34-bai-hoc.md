@@ -1,12 +1,12 @@
-# 9. 효과적인 모듈 설계 방안 (Effective Module Design)
+# 7. 공통 모듈 (Common Module)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **9. 효과적인 모듈 설계 방안 (Effective Module Design)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **7. 공통 모듈 (Common Module)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-효과적인, 모듈, 설계, 방안
+공통, 모듈
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,9 +22,15 @@
 
 ---
 
-## 9. 효과적인 모듈 설계 방안 (Effective Module Design)
-*   **Korean:** 결합도↓, 응집도↑. 모듈의 영향 영역(Scope of Effect)이 제어 영역(Scope of Control) 안에 있어야 함. 단일 입구/단일 출구(Single Entry, Single Exit). 복잡도와 중복성 감소.
-*   **VI (Vietnamese) (Tiếng Việt):** Coupling thấp, Cohesion cao. **Phạm vi ảnh hưởng (Scope of Effect) phải nằm TRONG Phạm vi kiểm soát (Scope of Control)** của module. Chỉ có 1 đầu vào và 1 đầu ra. Giảm độ phức tạp và dư thừa.
-*   **Example:** Một hàm sắp xếp chỉ nên thay đổi mảng truyền vào nó (trong vùng kiểm soát), không nên vô tình thay đổi giao diện UI (vùng ảnh hưởng ngoài kiểm soát).
+## 7. 공통 모듈 (Common Module)
+**개념 (Khái niệm):** 여러 프로그램에서 공통적으로 사용할 수 있는 모듈 (Module dùng chung cho nhiều chương trình, ví dụ: Đăng nhập, tính toán).
+
+*   **명세 기법 5가지 (5 nguyên tắc viết đặc tả module):**
+    1.  **정확성 (Correctness):** 정확히 작성 (Chính xác).
+    2.  **명확성 (Clarity):** 중의적이지 않게 (Rõ ràng, không mơ hồ).
+    3.  **완전성 (Completeness):** 모든 것을 빠짐없이 (Đầy đủ).
+    4.  **일관성 (Consistency):** 상호 충돌 없게 (Nhất quán).
+    5.  **추적성 (Traceability):** 출처, 관계 추적 가능 (Có thể truy xuất nguồn gốc).
+💡 **Mẹo ghi nhớ:** C-M-H-N-T (Chính-Rõ-Đủ-Nhất-Truy) -> **Chỉ Mong Học Nhất Trường**
 
 ---

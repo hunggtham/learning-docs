@@ -1078,7 +1078,6 @@ CPU가 명령을 수행하기 위해 거치는 4가지 상태.
 ---
 
 # [과목 2] 소프트웨어 개발 (Subject 2: Software Development)
-# Chapter 1. 데이터 입출력 구현 (Data I/O Implementation)
 
 ## 023 & 024: 자료구조 (Data Structures / Cấu trúc dữ liệu)
 
@@ -1148,7 +1147,7 @@ CPU가 명령을 수행하기 위해 거치는 4가지 상태.
 
 ### 시간 복잡도 (Time Complexity - Độ phức tạp thời gian)
 - Đếm số lần thực thi các phép toán (không phải tính thời gian bằng giây).
-- Biểu diễn: Big-O (최악 - Tệ nhất), Theta (평균 - Trung bình), Omega (최상 - Tốt nhất).
+- Ký hiệu tiệm cận: Big-O là cận trên, Omega là cận dưới, Theta là cận chặt; chúng không tự động đồng nghĩa với lần lượt 최악/평균/최상. Khi đề bài nói rõ worst/best case thì mới gắn với trường hợp đó.
 - **Thứ tự (Nhanh -> Chậm):** O(1) < O(log n) < O(n) < O(n log n) < O(n²) < O(2ⁿ)
 - O(1) nghĩa là: Dữ liệu lớn đến đâu thời gian vẫn không đổi.
 
@@ -1200,7 +1199,6 @@ CPU가 명령을 수행하기 위해 거치는 4가지 상태.
 
 ---
 
-# Chapter 2. 통합 구현 (Integration Implementation)
 
 ## 핵심 031: 모듈 구현 (Module Implementation)
 
@@ -1256,7 +1254,6 @@ CPU가 명령을 수행하기 위해 거치는 4가지 상태.
 
 ---
 
-# Chapter 3. 제품 소프트웨어 패키징 (Product Software Packaging)
 
 ## 핵심 035 & 036: 소프트웨어 패키징 및 DRM (Software Packaging & DRM)
 
@@ -1314,7 +1311,6 @@ CPU가 명령을 수행하기 위해 거치는 4가지 상태.
 
 ---
 
-# Chapter 4. 애플리케이션 테스트 관리 (Application Test Management)
 
 ## 핵심 040: 애플리케이션 테스트 원리 및 종류 (Test Principles & Types)
 
@@ -1419,7 +1415,6 @@ Thứ tự Test từ nhỏ đến lớn: **단위 (Unit) → 통합 (Integration
 
 ---
 
-# Chapter 5. 인터페이스 구현 (Interface Implementation)
 
 ## 핵심 046: 인터페이스 설계 확인 (EAI 구축 유형 - EAI Integration Types)
 
@@ -1459,8 +1454,6 @@ Thứ tự Test từ nhỏ đến lớn: **단위 (Unit) → 통합 (Integration
 - 💡 **Mẹo ghi nhớ (Mnemonics):** IPSec = Tầng Mạng (IP). SSL = Tầng giữa (Socket). JSON = Key-Value. STAF = Phân tán (Phân tán (Distributed)).
 
 ---
-
-# [복습 / 심화 노트 - Revision & Deep Dive Notes]
 
 ## 073 & 074: 자료 구조의 정의 및 선형 리스트 (Data Structures & Linear List)
 
@@ -2241,8 +2234,7 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 
 **[3] 순환 복잡도 (Cyclomatic Complexity - Độ phức tạp theo chu trình McCabe):**
 - 프로그램의 논리적인 복잡도를 독립적인 경로의 수로 수치화. (Số lượng đường dẫn độc lập trong code).
-- **공식 (Công thức):** $V(G) = E - N + 2$ 
-  *(E: Edge - số mũi tên, N: Node - số nút).*
+- **공식 (Công thức):** với một đồ thị luồng liên thông, $V(G) = E - N + 2$ (E: Edge, N: Node); tổng quát là $V(G)=E-N+2P$ với P là số thành phần liên thông. Có thể dùng số vùng kín + 1.
 
 **[4] 예시 (Ví dụ thực tế):**
 - **Throughput vs Response Time:** Một quán phở có thể bán 100 bát/giờ (Throughput = 100). Nhưng khách vào gọi món phải chờ 15 phút mới bê ra (Response time = 15m).
@@ -2438,5 +2430,3 @@ ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu R
 
 > 💡 **Mẹo ghi nhớ (Mnemonics):** 
 > - **Phân tán (Distributed) = Git:** Không có mạng vẫn lưu code được. Trái ngược với SVN (Tập trung) rớt mạng là khỏi lưu.
-
-

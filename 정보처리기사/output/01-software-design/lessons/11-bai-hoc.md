@@ -1,12 +1,12 @@
-# 3. 현행 시스템 파악 (Understanding Current System)
+# 1. 현행 시스템 분석 (Current System Analysis)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **3. 현행 시스템 파악 (Understanding Current System)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **1. 현행 시스템 분석 (Current System Analysis)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-현행, 시스템, 파악
+현행, 시스템, 분석
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,7 +22,8 @@
 
 ---
 
-## 3. 현행 시스템 파악 (Understanding Current System)
-- **1단계**: 시스템 구성 (기간 업무/지원 업무), 기능 (계층형), 인터페이스 (Giao thức, loại liên kết).
-- **2단계**: 아키텍처 구성 (Kiến trúc), 소프트웨어 구성 (Bản quyền - 라이선스).
-- **3단계**: 하드웨어 구성 (Dự phòng - 이중화/Redundancy), 네트워크 구성 (Vị trí vật lý, mạng).
+## 1. 현행 시스템 분석 (Current System Analysis)
+- **플랫폼 성능 (Platform Performance)**:
+  - 가용성 (Availability), 경과 시간 (Turnaround Time), 응답 시간 (Response Time), 사용률 (Utilization).
+- **운영체제 및 DBMS 고려사항 (OS & DBMS Considerations)**:
+  - 신뢰도 (Reliability), 성능 (Performance), 기술 지원 (Tech Support), 주변 기기 (Peripherals), 구축 비용 (Cost), 상호 호환성 (Compatibility).

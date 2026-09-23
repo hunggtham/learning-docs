@@ -305,7 +305,7 @@
 - **백도어 (Back Door):** 보안을 제거하고 만들어 놓은 비밀 통로 (탐지: 무결성 검사, 열린 포트 등).
 - **키로거 공격 (Key Logger):** 키보드 움직임을 탐지해 개인정보 탈취.
 - **랜섬웨어 (Ransomware):** 문서 암호화 후 돈(Ransom)을 요구.
-- **웜 (Worm):** 연속적으로 **자신을 복제**하여 시스템 부하 유발 (바이러스의 일종).
+- **웜 (Worm):** 네트워크를 통해 스스로 전파·복제되는 악성 코드로, 숙주 파일에 기생해야 하는 바이러스와 구분한다.
 - **허니팟 (Honeypot):** 비정상 접근 탐지를 위해 의도적으로 설치한 시스템 (미끼).
 - **피싱 (Phishing):** 공공/금융 기관을 사칭해 개인정보 탈취.
 - **Tiếng Việt:** Backdoor (Cửa hậu), Key Logger (Ghi thao tác bàn phím), Ransomware (Mã độc tống tiền), Worm (Giun máy tính - tự nhân bản), Honeypot (Hệ thống mồi nhử).
@@ -408,8 +408,6 @@
   - Evil Twin: Tấn công bằng trạm Wi-Fi giả mạo tên (SSID) giống hệt trạm thật.
   - DDoS Tools: Trin00, TFN, Stacheldraht (ẩn danh và mã hóa liên lạc).
 
-EOF
-# 데이터 통신 및 통신 프로토콜 (Truyền thông Dữ liệu & Giao thức)
 
 ## 1. 데이터 통신 개요 (Tổng quan Truyền thông Dữ liệu)
 
@@ -514,8 +512,8 @@ EOF
 
 ### 4.1 오류 발생 원인 및 제어 (Error Causes & Control)
 - **원인:** 감쇠, 지연 왜곡, 상호 변조, 누화 잡음, 충격성 잡음(디지털 통신 주요인).
-- **FEC (순방향 오류 수정):** 수신 측에서 스스로 수정 (해밍 코드 등). 오버헤드 큼, 역채널 불필요.
-- **BEC (역방향 오류 수정):** 오류 시 재전송(ARQ) 요구 (패리티, CRC 등).
+- **FEC (순방향 오류 수정):** 여분 비트를 함께 보내 수신 측이 재전송 없이 오류를 검출·수정 (해밍 코드 등). 오버헤드가 크고 역채널이 필요 없다.
+- **BEC/ARQ (역방향 오류 제어):** 수신 측이 오류를 검출한 뒤 송신 측에 재전송을 요청한다. CRC·패리티는 주로 검출에 사용되고, Stop-and-Wait·Go-Back-N·Selective Repeat가 대표적인 ARQ 방식이다.
 - **Tiếng Việt:** 
   - FEC: Tự sửa lỗi (vd: Hamming Code). 
   - BEC: Yêu cầu gửi lại (vd: CRC, Parity).
@@ -543,7 +541,6 @@ EOF
   - Circuit Switching (Chuyển mạch kênh): Tạo đường truyền vật lý (Điện thoại).
   - Message Switching (Chuyển mạch thông điệp): Lưu rồi chuyển toàn bộ.
 
-EOF
 ### 4.4 패킷 교환 방식 및 네트워크 기능 (Packet Switching & Network Functions)
 - **가상 회선 (Virtual Circuit):** 패킷 교환 전에 논리적인 가상 회선을 설정. 전송 순서가 보장되며 신뢰성이 높음. (호 설정 → 데이터 전송 → 호 해제).
 - **데이터그램 (Datagram):** 연결 경로 설정 없이 각 패킷이 독립적으로 운반됨. 패킷마다 경로가 다르고 순서가 다를 수 있음. 짧은 데이터 전송에 적합.
@@ -581,7 +578,7 @@ EOF
 
 ### 5.3 인터넷 주소 체계 (IP Addresses)
 - **IPv4:** 32비트 (8비트 × 4부분). 클래스 A~E (A: 대형 ~ C: 소규모망, D: 멀티캐스트).
-- **IPv6:** 128비트 (16비트 × 8부분, 16진수, 콜론 `:` 구분). 주소 부족 문제 해결.
+- **IPv6:** 128비트 (16비트 × 8부분, 16진수, 콜론 `:` 구분)로 주소 공간을 확장한다. 기본 헤더는 단순화되고 브로드캐스트 대신 멀티캐스트·애니캐스트를 사용한다.
 - **IPv4 → IPv6 전환 전략:** 듀얼 스택(Dual Stack), 터널링(Tunneling), 헤더/전송/응용 게이트웨이 변환(Translation).
 - **DNS (Domain Name System):** 문자 도메인 네임을 IP 주소로 변환.
 - **Tiếng Việt:** IPv4 (32 bit, Class A-E). IPv6 (128 bit, giải quyết cạn kiệt IP). DNS dịch tên miền sang IP.
@@ -635,7 +632,6 @@ EOF
   - IP: Định tuyến. ICMP: Báo lỗi mạng. ARP: Đổi IP sang MAC.
 
 
-# 정보처리기사 (Information Processing Engineer) - Part 2
 
 ## 기본 프로토콜 (Basic Protocols)
 * **ARP**: 호스트의 IP 주소(논리 주소)를 호스트와 연결된 네트워크 접속장치의 물리적 주소(MAC Address)로 변환함.
@@ -3112,5 +3108,3 @@ SJF의 단점(긴 작업 불리)을 보완하여 대기 시간과 실행 시간�
 - **개념**: 개발에 공통 사용되는 구조를 제공하여 생산성을 높이는 기반.
 - **특성**: 모듈화, 재사용성, 확장성, **제어의 역흐름(IoC)**.
 - **Tiếng Việt**: Nền tảng cấu trúc sẵn giúp tăng năng suất (như Spring, .NET). Đặc tính: Module hóa, Tái sử dụng, Mở rộng, Đảo ngược luồng điều khiển (IoC).
-
-

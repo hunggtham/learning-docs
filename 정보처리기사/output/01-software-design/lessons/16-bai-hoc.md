@@ -1,12 +1,12 @@
-# 7. UML 심화 (Advanced UML)
+# 5. UML 구성요소 상세 (UML Components Detail)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **7. UML 심화 (Advanced UML)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **5. UML 구성요소 상세 (UML Components Detail)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-UML, 심화
+UML, 구성요소, 상세
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,9 +22,10 @@ UML, 심화
 
 ---
 
-## 7. UML 심화 (Advanced UML)
-- Do OMG chuẩn hóa từ phương pháp của Rumbaugh, Booch, Jacobson.
-- **다이어그램 (Diagrams)**:
-  - 구조적 (Structural / Tĩnh): Class, Object, Component, Deployment, Composite, Package.
-  - 행위적 (Behavioral / Động): Use Case, Sequence, Communication, State, Activity, Timing.
-- **스테레오 타입 (Stereotype)**: Mở rộng UML bằng dấu `<< >>` (Guillemet). Ví dụ: `<<include>>`, `<<extend>>`.
+## 5. UML 구성요소 상세 (UML Components Detail)
+- **클래스 다이어그램 (Class Diagram)**: Class Name, Attribute, Operation.
+  - 접근 제어자 (Access Modifier): `+` (Public), `-` (Private), `#` (Protected), `~` (Package).
+- **유스케이스 다이어그램 (Use Case Diagram)**: System, Use Case, Actor.
+  - Quan hệ: `<<include>>` (Bắt buộc), `<<extend>>` (Tùy chọn), Generalization (Kế thừa).
+- **순차 다이어그램 (Sequence Diagram)**: Object, Lifeline, Activation, Message, Self-Message.
+  - Thể hiện sự tương tác theo thời gian.

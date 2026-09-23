@@ -1,12 +1,12 @@
-# 088. 인터넷 구성과 네트워크 - OSI 7계층 (OSI 7 Layer)
+# 088. 인터넷 구성과 네트워크 - TCP vs UDP & 흐름/오류 제어
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **088. 인터넷 구성과 네트워크 - OSI 7계층 (OSI 7 Layer)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **088. 인터넷 구성과 네트워크 - TCP vs UDP & 흐름/오류 제어**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-인터넷, 구성과, 네트워크, OSI, 계층
+인터넷, 구성과, 네트워크, TCP, UDP, 흐름, 오류, 제어
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,23 +22,20 @@
 
 ---
 
-## 088. 인터넷 구성과 네트워크 - OSI 7계층 (OSI 7 Layer)
-- **IEEE 802 표준**: 802.3 (Ethernet, 유선랜), 802.11 (무선랜, Wi-Fi).
-- **OSI 7계층 (상위 계층부터)**:
-  7. **응용 계층 (Application)**: 사용자 인터페이스. (HTTP, FTP, DNS) - 데이터 단위: Data.
-  6. **표현 계층 (Presentation)**: 암호화, 압축, 포맷 변환. - 데이터 단위: Data.
-  5. **세션 계층 (Session)**: 응용 프로그램 간 논리적 연결 생성/유지. - 데이터 단위: Data.
-  4. **전송 계층 (Transport)**: 종단 간(End-to-End) 신뢰성 있는 전송. 포트 번호 사용. (TCP, UDP). 장비: L4 스위치. - 데이터 단위: Segment.
-  3. **네트워크 계층 (Network)**: 경로 설정(Routing). IP 주소 사용. (IP, ICMP, ARP). 장비: 라우터, L3 스위치. - 데이터 단위: Packet.
-  2. **데이터 링크 계층 (Data Link)**: 인접 노드 간 전송 제어, 오류/흐름 제어. MAC 주소 사용. (HDLC, PPP). 장비: 브리지, L2 스위치. - 데이터 단위: Frame.
-  1. **물리 계층 (Physical)**: 전기적 신호 전송. 장비: 허브, 리피터. - 데이터 단위: Bit.
+## 088. 인터넷 구성과 네트워크 - TCP vs UDP & 흐름/오류 제어
+- **TCP (Transmission Control Protocol)**: 연결 지향, 신뢰성 높음, 흐름 및 오류 제어 지원. 속도는 느림.
+- **UDP (User Datagram Protocol)**: 비연결 지향, 신뢰성 낮음(오류 복구 안함). 실시간 전송(스트리밍)에 유리하여 속도가 빠름.
+- **TCP 흐름 제어 (Flow Control)**: 수신측이 처리할 수 있는 만큼만 보냄 (Window 크기 사용).
+  - Stop and Wait: 1개 보내고 응답 기다림.
+  - Sliding Window: 윈도우 크기만큼 한 번에 여러 개 보냄 (효율적).
+- **TCP 오류 제어 (Error Control)**:
+  - Go Back n: 오류 발생한 패킷부터 **그 이후의 모든 패킷** 재전송.
+  - Selective Repeat: 오류가 발생한 **해당 패킷만** 골라서 재전송.
 
 **Giải thích (Vietnamese):**
-Mô hình OSI 7 lớp chia nhỏ quá trình gửi dữ liệu qua mạng.
-Tầng 1 (Cáp mạng, dây điện), Tầng 2 (Truyền giữa 2 máy tính kề nhau qua địa chỉ MAC), Tầng 3 (Tìm đường đi trên mạng Internet qua IP), Tầng 4 (Đảm bảo gói tin không bị rớt qua TCP/UDP), Tầng 5-7 (Phần mềm xử lý hiển thị lên màn hình).
-
-**💡 Mẹo ghi nhớ (Mnemonics):**
-Tên 7 tầng từ dưới lên (1->7): **물데네 전세표응** (Vật - Dữ - Mạng - Truyền - Phiên - Biểu - Ứng).
-Đơn vị dữ liệu (1->4): **비프패세** (Bit, Frame, Packet, Segment).
+- TCP giống như gửi thư bảo đảm, phải có người ký nhận mới yên tâm. Chậm nhưng chắc.
+- UDP giống như phát loa phóng thanh, cứ phát ra, ai nghe được thì nghe. Phù hợp gọi Video call (Rớt 1 hình cũng không sao, quan trọng là độ trễ thấp).
+- Trượt cửa sổ (Sliding Window): Kỹ thuật gửi liên tục nhiều gói tin mà không cần đợi từng gói báo nhận.
+- Go Back N: Bị lỗi gói số 3, hệ thống sẽ gửi lại từ gói 3, 4, 5... Selective Repeat: Lỗi gói 3 thì chỉ gửi lại đúng gói 3.
 
 ---

@@ -1,12 +1,12 @@
-# 235. JAVA의 데이터 타입 크기 (Data Type Sizes in JAVA)
+# 087. 환경변수와 쉘 스크립트 명령어 (Environment Variables & Shell Scripts)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **235. JAVA의 데이터 타입 크기 (Data Type Sizes in JAVA)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **087. 환경변수와 쉘 스크립트 명령어 (Environment Variables & Shell Scripts)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-데이터, 타입, 크기
+환경변수와, 스크립트, 명령어
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,15 +22,27 @@
 
 ---
 
-## 235. JAVA의 데이터 타입 크기 (Data Type Sizes in JAVA)
-- `byte`: 1바이트 (작은 숫자)
-- `boolean`: 1바이트 (참/거짓)
-- **`char`: 2바이트** (유니코드 지원으로 인해 C언어와 달리 2바이트를 차지함)
-- `int`: 4바이트
-- `long`: 8바이트 (C언어는 보통 4바이트지만 JAVA는 8바이트)
-- `float`: 4바이트 / `double`: 8바이트
+## 087. 환경변수와 쉘 스크립트 명령어 (Environment Variables & Shell Scripts)
+- **환경변수 명령어**:
+  - `printenv`: 단일 변수 반환.
+  - `env`: 환경 변수 출력/설정.
+  - `set` / `setenv`: 변수 추가/업데이트.
+  - `export`: 변수를 전역(Global) 변수로 변경 (export 안하면 현재 쉘에만 국한됨).
+- **운영체제별 주요 명령어 (Windows / Unix(Linux))**:
+  - 목록 보기: `dir` / `ls`
+  - 복사: `copy` / `cp`
+  - 삭제: `del` / `rm`
+  - 이름 변경/이동: `ren`, `move` / `mv`
+  - 폴더 생성: `md` / `mkdir`
+  - 기타 Unix 명령어:
+    - `chmod`: 권한 변경. / `chown`: 소유자 변경.
+    - `cat`: 파일 내용 출력.
+    - `grep`: 문자열(패턴) 검색 (Windows의 `find`).
+    - `ps`: 프로세스 상태. / `kill`: 프로세스 종료.
+    - `tar`: 파일 묶기/풀기. / `crontab`: 스케줄링.
 
 **Giải thích (Vietnamese):**
-Java có 2 điểm khác biệt lớn với C: `char` chiếm 2 byte (để lưu bảng mã Unicode đa ngôn ngữ), và có kiểu `boolean` (chỉ lưu True/False).
+- Lệnh `export` rất hay dùng trong Linux để set biến môi trường (Ví dụ: `export PATH=...`) để các chương trình khác cũng đọc được biến đó.
+- Các lệnh Linux kinh điển: `ls` (list - liệt kê), `cp` (copy), `rm` (remove), `mv` (move), `mkdir` (make directory), `grep` (tìm text).
 
 ---

@@ -1,12 +1,12 @@
-# 8. UI 및 UX, HCI (UI, UX, HCI)
+# 5. 요구공학 (Requirements Engineering)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **8. UI 및 UX, HCI (UI, UX, HCI)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **5. 요구공학 (Requirements Engineering)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-HCI
+요구공학
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,12 +22,12 @@ HCI
 
 ---
 
-## 8. UI 및 UX, HCI (UI, UX, HCI)
-- **UI 유형**: CLI (Văn bản), GUI (Đồ họa), NUI (Tự nhiên - Giọng nói/Hành động), OUI (Hữu cơ - Gắn với đồ vật vật lý).
-- **UI 설계 도구**: Wireframe (Khung xương), Mockup (Mô hình tĩnh giống thật), Storyboard (Kịch bản chi tiết), Prototype (Mô hình động tương tác).
-- **HCI (Human Computer Interaction)**: Nghiên cứu tương tác người-máy tính để mang lại trải nghiệm tốt nhất (UX).
-- **UX (User Experience - Trải nghiệm người dùng)**:
-  - **주관성 (Subjectivity)**: Tính chủ quan.
-  - **정황성 (Contextuality)**: Phụ thuộc vào hoàn cảnh (thời gian, địa điểm).
-  - **총체성 (Holistic)**: Trải nghiệm tổng thể.
-- **감성공학 (Affective Engineering)**: Khoa học kết hợp cảm xúc con người vào thiết kế (Dựa trên -> Thực hiện -> Ứng dụng).
+## 5. 요구공학 (Requirements Engineering)
+- **도출 (Elicitation)**: Lặp đi lặp lại trong suốt vòng đời (SDLC).
+- **분석 (Analysis)**: Giải quyết xung đột (중재), dùng DFD, DD.
+- **명세 (Specification)**: Viết tài liệu (Mini-Spec), đảm bảo tính truy xuất (추적성).
+  - 정형 (Toán học, VDM) vs 비정형 (Ngôn ngữ tự nhiên, ERD).
+- **확인 (Validation)**:
+  - 확인 (Validation): Có đúng sản phẩm khách cần không? (Right product).
+  - 검증 (Verification): Có làm đúng quy trình không? (Product right).
+  - Cần quản lý cấu hình (형상 관리).

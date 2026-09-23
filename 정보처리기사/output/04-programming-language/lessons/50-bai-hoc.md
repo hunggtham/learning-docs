@@ -1,12 +1,12 @@
-# 089. IP와 서브네팅, IPv4 vs IPv6 (IP & Subnetting)
+# 252. 다중 if문 (Multiple if Statement)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **089. IP와 서브네팅, IPv4 vs IPv6 (IP & Subnetting)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **252. 다중 if문 (Multiple if Statement)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-서브네팅, IPv4, IPv6
+다중
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,29 +22,9 @@
 
 ---
 
-## 089. IP와 서브네팅, IPv4 vs IPv6 (IP & Subnetting)
-- **IPv4 헤더 필드**: Version, Header Length, TOS, Total Length, TTL (수명), Source/Destination Address 등.
-- **IPv4 클래스**:
-  - Class A: `0.~` (거대 망)
-  - Class B: `128.~` (중형 망)
-  - Class C: `192.~` (소형 망)
-- **IPv4 vs IPv6**:
-  - 주소 길이: IPv4(32비트) -> **IPv6(128비트)** 확장.
-  - IPv6 특징: 호스트 주소 자동 설정, 패킷 크기 제한 없음, 헤더 단순화, **보안(인증/무결성) 강화**, 플로 레이블링(QoS), 이동성 지원.
-- **데이터 전송 방법**:
-  - **유니캐스트 (Unicast)**: 1:1 통신.
-  - **멀티캐스트 (Multicast)**: 1:N (특정 그룹).
-  - **브로드캐스트 (Broadcast)**: 1:전체 (IPv4에서만 사용, 과부하 원인).
-  - **애니캐스트 (Anycast)**: 1:가장 가까운 1개 노드 (IPv6에서 도입).
-
-**Giải thích (Vietnamese):**
-IPv4 sắp hết số (vì chỉ có 32 bit = khoảng 4 tỷ địa chỉ). Nên người ta sinh ra IPv6 (128 bit = số lượng vô hạn). IPv6 bảo mật tốt hơn, không cần cấu hình DHCP phức tạp (tự gán địa chỉ) và loại bỏ Broadcast để tránh nghẽn mạng.
-
-**💡 Mẹo ghi nhớ (Mnemonics):**
-Các kiểu truyền:
-- Unicast = Nói chuyện riêng.
-- Multicast = Nhắn tin vào group chat Zalo.
-- Broadcast = Cầm loa hét cho cả trường nghe (Chỉ IPv4).
-- Anycast = Gọi tổng đài, ai rảnh thì nhấc máy nghe trước (Chỉ IPv6).
+## 252. 다중 if문 (Multiple if Statement)
+- 처리할 조건이 여러 개일 때 `else if`를 사용해 순차적으로 판단.
+- 위에서 조건이 참이면 해당 블록을 실행하고 빠져나옴 (아래 조건은 검사하지 않음).
+- 모든 조건이 거짓일 때 마지막 `else`가 실행됨.
 
 ---

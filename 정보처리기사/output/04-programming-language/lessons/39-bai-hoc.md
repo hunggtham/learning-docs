@@ -1,12 +1,12 @@
-# 289 - 296. 메모리 관리 및 가상 기억장치 (Memory Management)
+# 프로세스 관리 (Process Management)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **289 - 296. 메모리 관리 및 가상 기억장치 (Memory Management)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **프로세스 관리 (Process Management)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-메모리, 관리, 가상, 기억장치
+프로세스, 관리
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,16 +22,36 @@
 
 ---
 
-## 289 - 296. 메모리 관리 및 가상 기억장치 (Memory Management)
-- **배치 전략 (Placement)**: 최초 적합(First Fit, 빠름), 최적 적합(Best Fit, 단편화 최소), 최악 적합(Worst Fit, 큰 공간 남김).
-- **페이징(Paging)**: 메모리를 **동일한 고정 크기**로 나눔. **내부 단편화** 발생 (빈 공간이 남아버림).
-- **세그먼테이션(Segmentation)**: 논리적 의미(함수 등)에 따라 **가변 크기**로 나눔. **외부 단편화** 발생 (공간이 작아서 못 들어감).
-- **페이지 크기**: 페이지가 작으면 내부 단편화는 줄지만, 맵 테이블이 커져 매핑 속도가 느려짐.
-- **스래싱 (Thrashing)**: 빈번한 페이지 교체로 인해 시스템 처리량보다 교체 시간이 더 많아져 CPU 이용률이 급감하는 마비 상태.
+## 프로세스 관리 (Process Management)
+### 297. 프로세스 (Process / Tiến trình)
+- 실행 중인 프로그램, PCB를 가진 프로그램. (Chương trình đang chạy, có chứa khối PCB).
 
-**Giải thích (Vietnamese):**
-- Paging (Phân trang): Cắt bánh thành các miếng bằng nhau. Điểm yếu: Ăn không hết 1 miếng sẽ dư thừa (Nội phân mảnh).
-- Segmentation (Phân đoạn): Cắt bánh theo sức ăn của mỗi người (to nhỏ khác nhau). Điểm yếu: Chừa lại các khoảng trống lắt nhắt không ai nhét vừa (Ngoại phân mảnh).
-- Thrashing: Máy quá tải, giật lag do mải lấy dữ liệu từ ổ cứng đắp vào RAM.
+### 298. PCB (Process Control Block / Khối điều khiển tiến trình)
+- 프로세스의 상태, 포인터, 식별자(PID), CPU 레지스터 정보 등 저장. (Lưu trạng thái, PID, bộ nhớ, thanh ghi CPU của tiến trình).
 
----
+### 299 & 300. 프로세스 상태 전이 및 용어 (Process States & Terms)
+- **Dispatch (디스패치)**: 준비(Ready) -> 실행(Run). (Cấp phát CPU cho tiến trình).
+- **Wake Up (깨움)**: 대기(Wait) -> 준비(Ready). (Hoàn tất I/O, sẵn sàng chạy lại).
+- **Spooling (스풀링)**: 입출력 데이터를 디스크에 한꺼번에 저장. (Lưu đệm vào đĩa để xử lý I/O mượt mà).
+
+### 301. 스레드 (Thread / Luồng)
+- 프로세스 내에서의 작업 단위. (Đơn vị thực thi nhỏ nhất bên trong một tiến trình).
+
+### 스레드 및 스케줄링 심화 (Threads & Scheduling - Advanced)
+- **스레드의 분류 (Thread Types)**:
+  - **사용자 수준 (User-level)**: 라이브러리 사용, 빠르지만 구현 어려움. (Dùng thư viện, nhanh nhưng khó code).
+  - **커널 수준 (Kernel-level)**: OS 커널이 관리, 구현 쉽지만 속도 느림. (OS quản lý, dễ code nhưng chậm).
+- **스레드 장점**: 병행성 증진, 응답 시간 단축, 기억장소 낭비 감소. (Tăng đồng thời, phản hồi nhanh, tiết kiệm RAM).
+- **FCFS (First Come First Service = FIFO)**: 도착한 순서대로 처리, 공평하지만 짧은 작업이 오래 대기할 수 있음. (Đến trước phục vụ trước, công bằng nhưng dễ gây kẹt xe).
+
+### 303. UNIX / LINUX 주요 환경 변수 (Environment Variables / Biến môi trường)
+- 명령어에서 사용 시 앞에 `$`를 붙인다. (Thêm `$` phía trước để gọi biến).
+- **`$HOME`**: 홈 디렉터리 (Thư mục gốc).
+- **`$PATH`**: 실행 파일 경로 (Đường dẫn tìm file thực thi).
+- **`$PWD`**: 현재 작업 디렉터리 (Thư mục hiện tại).
+- **`$LANG`**: 기본 언어 (Ngôn ngữ mặc định).
+
+### 304. UNIX / LINUX 기본 명령어 (Basic Commands - Bổ sung)
+- **`fsck`**: 파일 시스템 검사 및 보수 (Kiểm tra và sửa lỗi File System).
+- **`getpid`**: 자신의 프로세스 ID (Lấy PID của bản thân).
+- **`getppid`**: 부모 프로세스 ID (Lấy PID của tiến trình cha).

@@ -1,12 +1,12 @@
-# 핵심 클린 코드 작성 원칙 (Clean Code Principles)
+# 097 & 120: 통합 개발 환경 (IDE - Integrated Development Environment)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **핵심 클린 코드 작성 원칙 (Clean Code Principles)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **097 & 120: 통합 개발 환경 (IDE - Integrated Development Environment)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-핵심, 클린, 코드, 작성, 원칙
+통합, 개발, 환경
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,23 +22,19 @@
 
 ---
 
-## 핵심 클린 코드 작성 원칙 (Clean Code Principles)
+## 097 & 120: 통합 개발 환경 (IDE - Integrated Development Environment)
 
-- **클린 코드 (Clean Code):** 누구나 쉽게 이해하고 수정 및 추가할 수 있는 단순 명료한 코드. (Code sạch: Dễ hiểu, dễ sửa, dễ thêm tính năng.)
-- **배드 코드 (Bad code):** 프로그램의 로직이 복잡하고 이해하기 어려운 코드. (Code rác: Lộn xộn, logic phức tạp.)
-- **외계인 코드 (Alien Code):** 매우 오래되거나 참고 문서 또는 개발자가 없어 유지보수 작업이 매우 어려운 코드. (Code "người ngoài hành tinh": Code cổ đại, người viết đã nghỉ việc, không có tài liệu, đụng vào là hỏng.)
-
-| 작성 원칙 (Nguyên tắc) | 설명 (Giải thích) |
-|---|---|
-| **가독성 (Readability)** | 누구든지 코드를 쉽게 읽을 수 있도록 작성. 이해하기 쉬운 용어, 들여쓰기. (Dễ đọc: Tên biến rõ ràng, thụt lề chuẩn.) |
-| **단순성 (Simplicity)** | 한 번에 한 가지를 처리하도록 작성, 최소 단위로 분리. (Đơn giản: Mỗi hàm chỉ làm 1 việc duy nhất.) |
-| **의존성 배제 (Independence)** | 다른 모듈에 미치는 영향을 최소화. (Độc lập: Đổi chỗ này không làm sập chỗ khác.) |
-| **중복성 최소화 (Minimizing Duplication)** | 코드의 중복을 최소화, 공통된 코드 사용. (DRY - Don't Repeat Yourself: Không copy-paste code.) |
-| **추상화 (Abstraction)** | 상위 수준에선 간략하게, 상세 내용은 하위에서 구현. (Trừu tượng hóa: Cái chung ở trên, cái chi tiết ở dưới.) |
-
-- **Vietnamese Explanation:** Clean Code là "đạo đức" của lập trình viên. Đừng viết Alien Code (code không ai hiểu nổi trừ người viết ban đầu). 
-- 💡 **Mẹo ghi nhớ (Mnemonics):** 5 nguyên tắc: Đọc - Đơn - Độc - Lặp - Trừu. (Đọc Đơn Độc Lặp Trừu (Đọc hiểu - Đơn giản - Độc lập - Không lặp - Trừu tượng)).
+- 코딩, 디버그, 컴파일, 배포 등 모든 작업을 하나의 프로그램에서 처리. (Phần mềm tất-cả-trong-một).
+- **4대 기능 (4 Chức năng chính):**
+  - 코딩 (Coding): Gõ code.
+  - 컴파일 (Compile): Dịch ra mã máy.
+  - 디버깅 (Debugging): Tìm và sửa lỗi (Bug).
+  - 배포 (Deployment): Đóng gói và giao cho người dùng.
+- **대표 도구 (Các IDE tiêu biểu):**
+  - **이클립스 (Eclipse):** Của IBM, Đa nền tảng (Cross-platform), chuyên Java.
+  - **IntelliJ (IDEA):** Của JetBrains, Đa nền tảng, chuyên Java/Kotlin.
+  - **비주얼 스튜디오 (Visual Studio):** Của Microsoft, chuyên Windows, C#/.NET.
+  - **엑스 코드 (Xcode):** Của Apple, chuyên MacOS/iOS.
+  - **안드로이드 스튜디오 (Android Studio):** Của Google, chuyên Android.
 
 ---
-
-# Chapter 5. 인터페이스 구현 (Interface Implementation)

@@ -1,12 +1,12 @@
-# 087. 환경변수와 쉘 스크립트 명령어 (Environment Variables & Shell Scripts)
+# 237. 변수명 작성 규칙 (Variable Naming Rules)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **087. 환경변수와 쉘 스크립트 명령어 (Environment Variables & Shell Scripts)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **237. 변수명 작성 규칙 (Variable Naming Rules)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-환경변수와, 스크립트, 명령어
+변수명, 작성, 규칙
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,27 +22,14 @@
 
 ---
 
-## 087. 환경변수와 쉘 스크립트 명령어 (Environment Variables & Shell Scripts)
-- **환경변수 명령어**:
-  - `printenv`: 단일 변수 반환.
-  - `env`: 환경 변수 출력/설정.
-  - `set` / `setenv`: 변수 추가/업데이트.
-  - `export`: 변수를 전역(Global) 변수로 변경 (export 안하면 현재 쉘에만 국한됨).
-- **운영체제별 주요 명령어 (Windows / Unix(Linux))**:
-  - 목록 보기: `dir` / `ls`
-  - 복사: `copy` / `cp`
-  - 삭제: `del` / `rm`
-  - 이름 변경/이동: `ren`, `move` / `mv`
-  - 폴더 생성: `md` / `mkdir`
-  - 기타 Unix 명령어:
-    - `chmod`: 권한 변경. / `chown`: 소유자 변경.
-    - `cat`: 파일 내용 출력.
-    - `grep`: 문자열(패턴) 검색 (Windows의 `find`).
-    - `ps`: 프로세스 상태. / `kill`: 프로세스 종료.
-    - `tar`: 파일 묶기/풀기. / `crontab`: 스케줄링.
+## 237. 변수명 작성 규칙 (Variable Naming Rules)
+- 영문자, 숫자, 밑줄(`_`)의 조합만 가능.
+- **첫 글자는 숫자로 시작할 수 없음** (예: `1a` 안됨).
+- 공백이나 특수문자(`+`, `-`, `*`, `/`, `@` 등) 사용 금지.
+- 예약어(`if`, `for`, `while` 등) 사용 금지.
+- 대소문자 엄격히 구분.
 
 **Giải thích (Vietnamese):**
-- Lệnh `export` rất hay dùng trong Linux để set biến môi trường (Ví dụ: `export PATH=...`) để các chương trình khác cũng đọc được biến đó.
-- Các lệnh Linux kinh điển: `ls` (list - liệt kê), `cp` (copy), `rm` (remove), `mv` (move), `mkdir` (make directory), `grep` (tìm text).
+Quy tắc đặt tên biến: Không được bắt đầu bằng số, không có khoảng trắng, không chứa ký tự đặc biệt (trừ dấu gạch dưới `_`), không dùng từ khoá của ngôn ngữ.
 
 ---

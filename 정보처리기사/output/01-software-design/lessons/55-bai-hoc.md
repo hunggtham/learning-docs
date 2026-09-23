@@ -1,12 +1,12 @@
-# 10. 코드 (Code) 개요 & 종류
+# 8. 재사용 (Reuse)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **10. 코드 (Code) 개요 & 종류**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **8. 재사용 (Reuse)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-코드
+재사용
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,22 +22,14 @@
 
 ---
 
-## 10. 코드 (Code) 개요 & 종류
-**개념 (Khái niệm):** 데이터를 식별, 분류, 배열하기 위해 사용하는 기호 (Ký hiệu dùng để nhận dạng, phân loại và sắp xếp dữ liệu).
+## 8. 재사용 (Reuse)
+**개념 (Khái niệm):** 기존 기능을 최적화하여 다시 쓰는 것 (Tái sử dụng chức năng để tiết kiệm thời gian và chi phí).
 
-*   **기능 (Chức năng):** 식별(Nhận dạng), 분류(Phân loại), 배열(Sắp xếp), 표준화(Chuẩn hóa), 간소화(Đơn giản hóa).
-*   **종류 (Các loại Code):**
-    1.  **순차 코드 (Sequential):** 발생 순서대로 일련번호 부여 (Đánh số thứ tự 1, 2, 3...).
-    2.  **블록 코드 (Block):** 공통성 있는 항목을 블록으로 묶음 (Phân khối theo nhóm chung).
-    3.  **10진 코드 (Decimal):** 0~9까지 10진 분할 반복, 도서분류 (Phân loại thập phân như sách thư viện).
-    4.  **그룹 분류 코드 (Group Classification):** 대/중/소분류 (Phân nhóm lớn/vừa/nhỏ như 1-01-001).
-    5.  **연상 코드 (Mnemonic):** 명칭이나 약호와 관계있는 기호 (Mã gợi nhớ, ví dụ: TV-40 cho Tivi 40 inch).
-    6.  **표의 숫자 코드 (Significant Digit):** 물리적 수치를 직접 적용 (Dùng kích thước vật lý làm mã).
-    7.  **합성 코드 (Combined):** 2개 이상 조합 (Kết hợp nhiều mã).
-
-*   **코드 부여 체계 (Code Assignment System):**
-    *   **Korean:** 이름만으로 개체의 용도와 적용 범위를 알 수 있게 상세 명시 (자릿수, 구분자).
-    *   **VI (Vietnamese) (Tiếng Việt):** Hệ thống đánh mã sao cho nhìn vào tên mã là biết ngay công dụng và phạm vi (cần nêu rõ số chữ số, dấu phân cách).
-    *   **Example:** 연도(00) + 학과(00) + 개인번호(000) -> 2401001.
+*   **Korean:** 결합도는 낮고 응집도는 높아야 함.
+*   **VI (Vietnamese) (Tiếng Việt):** Yêu cầu: Độ phụ thuộc (Coupling) THẤP và Độ gắn kết (Cohesion) CAO.
+*   **분류 (Phân loại):**
+    *   **함수와 객체 (Function & Object):** 소스 코드 단위 (Mức mã nguồn / Class).
+    *   **컴포넌트 (Component):** 인터페이스 통신 (Mức Interface, không sửa code gốc).
+    *   **애플리케이션 (Application):** 시스템 전체 (Mức ứng dụng hoàn chỉnh).
 
 ---

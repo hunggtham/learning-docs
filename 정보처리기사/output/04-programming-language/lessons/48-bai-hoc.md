@@ -1,12 +1,12 @@
-# 088. 인터넷 구성과 네트워크 - TCP vs UDP & 흐름/오류 제어
+# 309 - 314. OSI 7계층과 네트워크 프로토콜 (OSI 7 Layers & Protocols)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **088. 인터넷 구성과 네트워크 - TCP vs UDP & 흐름/오류 제어**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **309 - 314. OSI 7계층과 네트워크 프로토콜 (OSI 7 Layers & Protocols)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-인터넷, 구성과, 네트워크, TCP, UDP, 흐름, 오류, 제어
+OSI, 계층과, 네트워크, 프로토콜
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,20 +22,19 @@
 
 ---
 
-## 088. 인터넷 구성과 네트워크 - TCP vs UDP & 흐름/오류 제어
-- **TCP (Transmission Control Protocol)**: 연결 지향, 신뢰성 높음, 흐름 및 오류 제어 지원. 속도는 느림.
-- **UDP (User Datagram Protocol)**: 비연결 지향, 신뢰성 낮음(오류 복구 안함). 실시간 전송(스트리밍)에 유리하여 속도가 빠름.
-- **TCP 흐름 제어 (Flow Control)**: 수신측이 처리할 수 있는 만큼만 보냄 (Window 크기 사용).
-  - Stop and Wait: 1개 보내고 응답 기다림.
-  - Sliding Window: 윈도우 크기만큼 한 번에 여러 개 보냄 (효율적).
-- **TCP 오류 제어 (Error Control)**:
-  - Go Back n: 오류 발생한 패킷부터 **그 이후의 모든 패킷** 재전송.
-  - Selective Repeat: 오류가 발생한 **해당 패킷만** 골라서 재전송.
+## 309 - 314. OSI 7계층과 네트워크 프로토콜 (OSI 7 Layers & Protocols)
+- **응용 계층 (Application, 7계층)**: HTTP(웹), FTP(파일), SMTP(메일), DNS(도메인->IP 변환), SNMP(네트워크 관리).
+- **전송 계층 (Transport, 4계층)**:
+  - **TCP**: 연결형, 신뢰성 보장, 양방향. 흐름 제어.
+  - **UDP**: 비연결형, 신뢰성 낮음. 속도가 빨라 스트리밍에 유리.
+- **인터넷/네트워크 계층 (Network, 3계층)**: 라우터 사용.
+  - **IP**: 경로 설정.
+  - **ICMP**: 오류 보고 및 제어.
+  - **ARP**: IP 주소 -> MAC 주소 변환. (**RARP**는 반대).
+- **데이터 링크/네트워크 액세스 계층 (Data Link, 2계층)**: Ethernet(CSMA/CD 방식), HDLC.
 
 **Giải thích (Vietnamese):**
-- TCP giống như gửi thư bảo đảm, phải có người ký nhận mới yên tâm. Chậm nhưng chắc.
-- UDP giống như phát loa phóng thanh, cứ phát ra, ai nghe được thì nghe. Phù hợp gọi Video call (Rớt 1 hình cũng không sao, quan trọng là độ trễ thấp).
-- Trượt cửa sổ (Sliding Window): Kỹ thuật gửi liên tục nhiều gói tin mà không cần đợi từng gói báo nhận.
-- Go Back N: Bị lỗi gói số 3, hệ thống sẽ gửi lại từ gói 3, 4, 5... Selective Repeat: Lỗi gói 3 thì chỉ gửi lại đúng gói 3.
+- **ARP**: Khi biết địa chỉ IP, dùng ARP để hỏi xem "Máy nào có IP này, cho xin địa chỉ MAC của card mạng (phần cứng)".
+- **ICMP**: Lệnh `ping` hay dùng trên máy tính chính là chạy giao thức ICMP để kiểm tra mạng có thông không.
 
 ---

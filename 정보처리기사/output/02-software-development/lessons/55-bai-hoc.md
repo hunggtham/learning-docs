@@ -44,7 +44,7 @@ Cả hai đều là **Dynamic Test** (Phải chạy code).
   - **루프 검사 (Loop Testing):** Test các vòng lặp for, while.
 
 - **Vietnamese Explanation:** Black-box giống như lái xe ô tô: đạp ga là chạy, không cần biết động cơ nổ ra sao. White-box giống như thợ máy: tháo tung động cơ ra kiểm tra từng con ốc, từng pít-tông.
-- 💡 **Mẹo ghi nhớ (Mnemonics):** 
+- 💡 **Mẹo ghi nhớ (Mnemonics):**
   - Black-box (Chức năng): Vùng (Partition), Biên (Boundary), Nhờ kinh nghiệm (Guessing).
   - White-box (Cấu trúc code): Dòng lệnh (Statement), Nhánh (Branch), Điều kiện (Condition), Vòng lặp (Loop).
 

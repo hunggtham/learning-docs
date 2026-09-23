@@ -1,12 +1,12 @@
-# 7. 스크럼(Scrum) 및 XP(eXtreme Programming)
+# 6. 애자일 방법론 (Agile Methodology)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **7. 스크럼(Scrum) 및 XP(eXtreme Programming)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **6. 애자일 방법론 (Agile Methodology)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-스크럼
+애자일, 방법론
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,14 +22,10 @@
 
 ---
 
-## 7. 스크럼(Scrum) 및 XP(eXtreme Programming)
-- **스크럼 (Scrum)**: Quản lý dự án Agile theo nhóm.
-  - **용어**: 제품 백로그 (Product Backlog - Yêu cầu tổng), 스프린트 (Sprint - Chu kỳ 2-4 tuần), 속도 (Velocity), 번 다운 차트 (Burn Down Chart - Biểu đồ tiến độ), PO (Product Owner), SM (Scrum Master).
-  - **프로세스**: Backlog -> Sprint Planning -> Sprint Execution (Daily Scrum) -> Sprint Review (Đánh giá) -> Sprint Retrospective (Hồi tưởng/Cải tiến).
-- **XP (eXtreme Programming)**: Tối ưu hóa phát triển phần mềm cùng khách hàng.
-  - **핵심 가치 (5 Core Values)**: 의사소통 (Communication), 단순성 (Simplicity), 용기 (Courage), 존중 (Respect), 피드백 (Feedback). 
-  - 💡 **Mẹo ghi nhớ**: Y/Đ/D/T/P -> **Ý Định Dũng Tướng Phàm**
-  - **기본 원리 (Principles)**: Pair Programming, CI (Tích hợp liên tục), TDD (Test-Driven Development), Refactoring (Tái cấu trúc mã), 40-Hour Work.
-
----
-# Chapter 2. 화면 설계 (Screen Design)
+## 6. 애자일 방법론 (Agile Methodology)
+- **개념**: Linh hoạt, phản hồi liên tục.
+- **4대 핵심 가치 (4 Core Values)**:
+  1. Cá nhân và tương tác (개인과의 상호작용) > Quy trình và công cụ.
+  2. Phần mềm chạy được (실행되는 소프트웨어) > Tài liệu.
+  3. Hợp tác với khách hàng (고객과의 협력) > Đàm phán hợp đồng.
+  4. Phản hồi với sự thay đổi (변화에 유연하게 대응) > Tuân thủ kế hoạch.

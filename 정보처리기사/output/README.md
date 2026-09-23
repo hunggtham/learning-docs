@@ -2,6 +2,12 @@
 
 Tài liệu được chia thành 5 môn. Mỗi folder có một bài học đầy đủ và mục lục học tập; nguồn gốc được bảo toàn trong `raw` và `raw_md`.
 
+## Phạm vi học
+
+- Output này tập trung vào **정보처리기사 필기** và giữ ranh giới 5 môn theo cấu trúc đề thi.
+- Nội dung **실기 (정보처리 실무)** chưa được xem là phạm vi hoàn tất của bộ output này; không dùng bộ 필기 này thay cho lộ trình 실기 riêng.
+- Bản source hiện đối chiếu theo 출제기준 Q-Net giai đoạn **2023.1.1–2025.12.31**; đây không phải cam kết cho kỳ thi 2026. Trước khi thi, hãy kiểm tra bản mới nhất trên [Q-Net](https://www.q-net.or.kr/cst006.do?artlSeq=5210765&brdId=Q006&code=1202&gId=&gSite=Q&id=cst00602).
+
 ## Các môn
 
 - [Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)](01-software-design/README.md)

@@ -45,16 +45,14 @@
 - **X.25:** 패킷 교환망 프로토콜 (물리 - 프레임 - 패킷 계층). LAPB 사용.
 - **TCP/IP:**
   - **응용 계층:** FTP, SMTP, HTTP, DNS 등.
-  - **전송 계층:** 
+  - **전송 계층:**
     - **TCP:** 연결형, 신뢰성 보장, 순서/흐름 제어, 스트림 전송.
     - **UDP:** 비연결형, 빠른 전송.
-  - **인터넷 계층:** 
+  - **인터넷 계층:**
     - **IP:** 비연결형(데이터그램), 경로 선택(Routing).
     - **ICMP:** IP 오류 처리 및 제어 메시지.
     - **ARP:** IP → MAC / **RARP:** MAC → IP.
   - **네트워크 액세스 계층:** 이더넷, X.25, RS-232C.
-- **Tiếng Việt:** 
+- **Tiếng Việt:**
   - TCP: Tin cậy, hướng kết nối. UDP: Nhanh, không kết nối.
   - IP: Định tuyến. ICMP: Báo lỗi mạng. ARP: Đổi IP sang MAC.
-
-# 정보처리기사 (Information Processing Engineer) - Part 2

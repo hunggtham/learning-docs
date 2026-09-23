@@ -1,12 +1,12 @@
-# 7. 공통 모듈 (Common Module)
+# 2. 모듈 (Module) & 독립성 (Independence)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **7. 공통 모듈 (Common Module)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **2. 모듈 (Module) & 독립성 (Independence)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-공통, 모듈
+모듈
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,15 +22,14 @@
 
 ---
 
-## 7. 공통 모듈 (Common Module)
-**개념 (Khái niệm):** 여러 프로그램에서 공통적으로 사용할 수 있는 모듈 (Module dùng chung cho nhiều chương trình, ví dụ: Đăng nhập, tính toán).
+## 2. 모듈 (Module) & 독립성 (Independence)
+**개념 (Khái niệm):** 시스템의 기능을 분리한 단위. 단독 컴파일과 재사용 가능 (Module là các đơn vị chức năng được phân tách của hệ thống, có thể biên dịch độc lập và tái sử dụng).
 
-*   **명세 기법 5가지 (5 nguyên tắc viết đặc tả module):**
-    1.  **정확성 (Correctness):** 정확히 작성 (Chính xác).
-    2.  **명확성 (Clarity):** 중의적이지 않게 (Rõ ràng, không mơ hồ).
-    3.  **완전성 (Completeness):** 모든 것을 빠짐없이 (Đầy đủ).
-    4.  **일관성 (Consistency):** 상호 충돌 없게 (Nhất quán).
-    5.  **추적성 (Traceability):** 출처, 관계 추적 가능 (Có thể truy xuất nguồn gốc).
-💡 **Mẹo ghi nhớ:** C-M-H-N-T (Chính-Rõ-Đủ-Nhất-Truy) -> **Chỉ Mong Học Nhất Trường**
+*   **기능적 독립성 (Functional Independence - Tính độc lập chức năng):**
+    *   **Korean:** 각 모듈이 하나의 기능만을 수행하고 상호작용을 최소화하는 것. 결합도(Coupling)는 약하게(Weak), 응집도(Cohesion)는 강하게(Strong) 해야 함.
+    *   **VI (Vietnamese) (Tiếng Việt):** Mỗi module chỉ thực hiện một chức năng và hạn chế tương tác với bên ngoài. Cần Độ phụ thuộc (Coupling) thấp và Độ gắn kết (Cohesion) cao. Kích thước module nên nhỏ gọn.
+    *   **Example:**
+        *   *KR:* 독립된 로그인 모듈은 다른 모듈 변경 시 영향을 받지 않음.
+        *   *VN:* Module đăng nhập đứng độc lập, khi sửa giỏ hàng thì module đăng nhập không bị ảnh hưởng.
 
 ---

@@ -1,12 +1,12 @@
-# 080 - 081. 라이브러리와 예외처리 (Libraries & Exception Handling)
+# 279 - 280. 라이브러리 (Library)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **080 - 081. 라이브러리와 예외처리 (Libraries & Exception Handling)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **279 - 280. 라이브러리 (Library)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-라이브러리와, 예외처리
+라이브러리
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,17 +22,15 @@
 
 ---
 
-## 080 - 081. 라이브러리와 예외처리 (Libraries & Exception Handling)
-- **C언어 표준 라이브러리**:
-  - `stdio.h`: 입출력 (`printf`, `scanf`).
-  - `stdlib.h`: 자료형 변환 (`atoi`: char->int).
-  - `string.h`: 문자열 처리 (`strlen`, `strcpy`).
-  - `math.h`: 수학 함수 (`sqrt`: 제곱근).
-- **예외처리 (Exception Handling)**:
-  - JAVA: `try { 실행 } catch (예외객체 e) { 에러처리 } finally { 무조건 실행 }`
-  - Python: `try: ... except 예외객체: ... finally: ...`
-  - 주요 예외객체: `NullPointerException` (객체가 없을 때), `ZeroDivisionError` (0으로 나눌 때).
+## 279 - 280. 라이브러리 (Library)
+- **라이브러리**: 자주 사용되는 함수/데이터를 모아 놓은 집합체 (개발 시간 단축, 코드 재사용).
+- **C언어 표준 라이브러리 (Header Files)**:
+  - `stdio.h`: 입출력 (`printf`, `scanf`)
+  - `math.h`: 수학 연산 (`sqrt`, `pow`, `abs`)
+  - `string.h`: 문자열 처리
+  - `stdlib.h`: 유틸리티, 자료형 변환, 메모리 할당
+
+**Giải thích (Vietnamese):**
+Thư viện (Library) giống như siêu thị bán đồ làm sẵn. Bạn không cần tự viết code để tính căn bậc 2, chỉ cần gọi hàm `sqrt` trong thư viện `math.h` là xong.
 
 ---
-
-# Chapter 3. 응용 SW 기초 기술 활용 (Phần 3: Ứng dụng kỹ thuật cơ sở phần mềm)
