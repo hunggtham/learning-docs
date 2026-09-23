@@ -20,7 +20,36 @@ Sau đó đọc [03 — Storage, file format và analytical layout](03_storage_a
 
 Cuối cùng đọc [04 — Reliability, quality và production reasoning](04_reliability_and_production.md), nơi pipeline được nhìn như một production system: data quality, contracts, lineage, observability, retry, recovery, security và cost.
 
-Các chapter sau sẽ tiếp tục đào sâu distributed processing, streaming internals, orchestration, warehouse/lake/lakehouse, governance và production architecture nhưng chỉ được tách thành file riêng khi conceptual boundary đủ rõ.
+## Lộ trình mở rộng theo conceptual boundary
+
+Sau bốn foundation chapters, đi theo các boundary sau. Mỗi phần bắt đầu từ invariant và failure mode rồi mới ánh xạ sang tool:
+
+1. [05 — Data modeling và transformation](05_data_modeling_and_transformation/README.md): grain, identity, event/state/snapshot, history và deterministic transformation.
+2. [06 — Distributed processing](06_distributed_processing/README.md): partition → shuffle → skew → spill, join semantics và fault recovery.
+3. [07 — Streaming systems](07_streaming_systems/README.md): event time → watermark → state → late event, CDC, schema evolution và replay.
+4. [08 — Orchestration và backfill](08_orchestration_and_backfill/README.md): dependency, partition completeness, retry, catchup và backfill correctness.
+5. [09 — Warehouse, lake và lakehouse](09_warehouse_lake_lakehouse/README.md): snapshot, commit protocol, compaction, schema evolution và object-storage boundaries.
+6. [10 — Serving và semantic layer](10_serving_semantic_layer/README.md): metric contract, point-in-time correctness, materialization và consumer shape.
+7. [11 — Governance, lineage và security](11_governance_lineage_security/README.md): ownership, data contract, lineage, access, retention và deletion.
+8. [12 — Cost, performance và capacity](12_cost_performance_capacity/README.md): scan, shuffle, spill, small files, concurrency và unit economics.
+9. [90 — Case studies](90_case_studies/README.md): CDC duplicate, late event, backfill race, compaction race và semantic fan-out.
+
+### Dependency map
+
+```text
+01 foundations
+  ├── 02 pipeline semantics ──┬── 07 streaming ────────┐
+  ├── 03 storage/layout ──────┴── 09 warehouse/lakehouse ┤
+  └── 04 reliability ───────────────┬── 08 orchestration ─┤
+                                    ├── 11 governance ────┤
+05 modeling/transformation ─────────┴── 10 serving ───────┤
+06 distributed processing ───────────── 12 cost/capacity ─┤
+                                                         90 case studies
+```
+
+### Tool boundary
+
+Kafka, Spark, Flink, Airflow, dbt, warehouse và cloud services chỉ nên xuất hiện như implementation mapping sau khi các chapter tương ứng đã giải thích mental model. Một tool mới phải trả lời được: nó duy trì invariant nào, failure boundary ở đâu, và evidence nào chứng minh guarantee đó trong production.
 
 ## Boundary với SQL và Database
 
