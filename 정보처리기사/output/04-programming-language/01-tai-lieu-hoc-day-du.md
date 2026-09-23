@@ -838,7 +838,7 @@ OS giống như quản gia của máy tính.
 - **UNIX의 특징**: 대화식 운영체제, **C언어로 작성**되어 이식성이 높음. 트리(Tree) 구조의 파일 시스템.
   - **커널(Kernel)**: UNIX의 핵심. 하드웨어/메모리/프로세스 관리.
   - **쉘(Shell)**: 사용자의 명령어를 해석하여 커널에 전달하는 인터페이스.
-- **파일 디스크립터 (File Descriptor)**: 시스템이 파일을 관리하기 위해 이름, 위치, 크기 등의 속성을 담아두는 제어 블록 (사용자가 직접 볼 수 없음).
+- **파일 디스크립터 (File Descriptor)**: 프로세스가 열린 파일을 참조할 때 사용하는 정수 핸들이다. 파일 속성을 담는 FCB/inode와 동일한 제어 블록이 아니다.
 - **UNIX 환경 변수**: `$HOME`(홈 디렉터리), `$PATH`(명령어 검색 경로), `$PWD`(현재 작업 폴더).
 - **UNIX 명령어**: `chmod`(권한 변경), `fork`(프로세스 복제).
 
@@ -1231,7 +1231,7 @@ IPv6 전송 방식 3총사: **유멀애** (Unicast, Multicast, Anycast). *Broadc
 - **FIFO (First In First Out)**: 가장 먼저 들어온 페이지 교체. (Vào trước ra trước).
 - **LRU (Least Recently Used)**: 최근에 가장 오랫동안 사용하지 않은 페이지 교체. (Thay thế trang lâu nhất chưa được truy cập).
 - **LFU (Least Frequently Used)**: 사용 빈도가 가장 적은 페이지 교체. (Thay thế trang có số lần truy cập ít nhất).
-- **NUR (Not Used Recently)**: 참조 비트와 변형 비트 사용. (Tương tự LRU nhưng dùng 2 bit để theo dõi).
+- **NUR (Not Used Recently)**: 참조 비트(R)와 변형/수정 비트(M)를 조합해 페이지를 네 등급으로 나누고 낮은 등급부터 교체한다. (Dùng hai bit R/M để phân loại bốn mức.)
 
 ### 293. 페이지 크기 (Page Size / Kích thước trang)
 - **작을 경우 (Kích thước nhỏ)**: 단편화 감소, 매핑 늦어짐, 디스크 접근 많아짐. (Phân mảnh ít, nhưng bảng ánh xạ lớn, truy cập ổ đĩa nhiều hơn).
@@ -1569,7 +1569,7 @@ Struct (Cấu trúc) dùng để gom nhóm nhiều biến khác kiểu lại v�
 - **FIFO (First-In First-Out)**: 들어온 지 가장 오래된 페이지 교체. (Thay trang vào bộ nhớ sớm nhất.)
 - **LRU (Least Recently Used)**: 최근에 가장 오랫동안 안 쓴 페이지 교체. (Thay trang lâu nhất chưa được sử dụng tính từ hiện tại.)
 - **LFU (Least Frequently Used)**: 참조 횟수가 가장 적은 페이지 교체. (Thay trang có số lần sử dụng ít nhất.)
-- **NUR (Not Used Recently)**: 참조 비트와 변형 비트를 사용해 최근 미사용 페이지 교체. (Dùng bit tham chiếu và bit sửa đổi để loại trang không dùng gần đây.)
+- **NUR (Not Used Recently)**: 참조 비트(R)와 변형/수정 비트(M)를 조합해 낮은 등급의 페이지부터 교체한다. (Dùng hai bit R/M để phân loại và thay trang.)
 - **예시 (Ví dụ)**: 스마트폰에서 앱을 여러 개 켜다가 램이 부족해지면, 제일 먼저 켰던 앱(FIFO)을 끄거나 최근에 가장 안 본 앱(LRU)을 종료시킴. (Khi điện thoại đầy RAM, nó sẽ tắt app mở đầu tiên (FIFO) hoặc app lâu rồi chưa đụng tới (LRU).)
 - 💡 **Mẹo ghi nhớ**: **R**ecently = Lâu không đụng (Thời gian), **F**requently = Ít dùng (Số lần).
 

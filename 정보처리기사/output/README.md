@@ -8,6 +8,8 @@ Tài liệu được chia thành 5 môn. Mỗi folder có một bài học đầ
 - Nội dung **실기 (정보처리 실무)** chưa được xem là phạm vi hoàn tất của bộ output này; không dùng bộ 필기 này thay cho lộ trình 실기 riêng.
 - Bản source hiện đối chiếu theo 출제기준 Q-Net giai đoạn **2023.1.1–2025.12.31**; đây không phải cam kết cho kỳ thi 2026. Trước khi thi, hãy kiểm tra bản mới nhất trên [Q-Net](https://www.q-net.or.kr/cst006.do?artlSeq=5210765&brdId=Q006&code=1202&gId=&gSite=Q&id=cst00602).
 
+- [Coverage matrix / ma trận độ phủ](COVERAGE_MATRIX.md) ghi số lesson, source canonical và trạng thái rà soát của từng môn.
+
 ## Các môn
 
 - [Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)](01-software-design/README.md)

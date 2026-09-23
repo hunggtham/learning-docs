@@ -160,6 +160,7 @@ def subject_readme(title: str, guide_name: str, lesson_rows: list[str]) -> str:
 def main() -> None:
     OUTPUT.mkdir(parents=True, exist_ok=True)
     index_rows = []
+    coverage_rows = []
     for folder, title, source_name, ranges in SUBJECTS:
         source_path = SOURCE / source_name
         content = select_lines(source_path.read_text(encoding="utf-8"), ranges)
@@ -177,6 +178,8 @@ def main() -> None:
             old_lesson.unlink()
         lesson_rows = []
         lessons = ordered_lessons
+        coverage_rows.append(
+            f"| {title} | {len(lessons)} | `{source_name}` | 필기 범위 검토 완료 |")
         for number, lesson in enumerate(lessons, start=1):
             heading = lesson.splitlines()[0].removeprefix("## ")
             lesson_name = f"{number:02d}-bai-hoc.md"
@@ -198,12 +201,25 @@ def main() -> None:
         "- Output này tập trung vào **정보처리기사 필기** và giữ ranh giới 5 môn theo cấu trúc đề thi.\n"
         "- Nội dung **실기 (정보처리 실무)** chưa được xem là phạm vi hoàn tất của bộ output này; không dùng bộ 필기 này thay cho lộ trình 실기 riêng.\n"
         "- Bản source hiện đối chiếu theo 출제기준 Q-Net giai đoạn **2023.1.1–2025.12.31**; đây không phải cam kết cho kỳ thi 2026. Trước khi thi, hãy kiểm tra bản mới nhất trên [Q-Net](https://www.q-net.or.kr/cst006.do?artlSeq=5210765&brdId=Q006&code=1202&gId=&gSite=Q&id=cst00602).\n\n"
+        "- [Coverage matrix / ma trận độ phủ](COVERAGE_MATRIX.md) ghi số lesson, source canonical và trạng thái rà soát của từng môn.\n\n"
         "## Các môn\n\n" + "\n".join(index_rows) + "\n\n"
         "## Phạm vi nguồn đã rà soát\n\n"
         "- `raw/`: PDF, DOCX và bản tóm tắt gốc.\n"
         "- `raw/notion/`: nội dung Notion theo môn.\n"
         "- `raw_md/generated_markdown*`, `final`, `final_extended`, `merged_subjects`: các lần OCR/dịch/tổng hợp trước.\n"
         "- Các file `final/Subject_*.md` cũ có đoạn ghép nhầm môn. Output đã lọc lại theo ranh giới môn trong `raw/notion/` (Môn 1: 0–72; Môn 2: 73–162; Môn 3: 163–231; Môn 4: 232–314; Môn 5: 315–376), đồng thời giữ các phần mở rộng cùng chủ đề.\n",
+        encoding="utf-8",
+    )
+    (OUTPUT / "COVERAGE_MATRIX.md").write_text(
+        "# 정보처리기사 필기 — Coverage Matrix\n\n"
+        "> Baseline của branch: 출제기준 Q-Net 2023.1.1–2025.12.31. Kiểm tra lại Q-Net trước kỳ thi; ma trận này không xác nhận syllabus 2026.\n\n"
+        "| Môn | Lessons | Source canonical | Status |\n"
+        "|---|---:|---|---|\n"
+        + "\n".join(coverage_rows)
+        + "\n\n## Quality gates\n\n"
+        "- Link nội bộ được kiểm tra bởi `scripts/audit_learning_output.py`.\n"
+        "- Output được regenerate từ `raw_md/final/` bằng `scripts/build_learning_output.py`.\n"
+        "- `실기` không nằm trong phạm vi hoàn tất của output này.\n",
         encoding="utf-8",
     )
 

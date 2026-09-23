@@ -165,6 +165,7 @@ Chạy hoặc kiểm tra các điều sau:
 - công thức/code mẫu đã được kiểm tra bằng ví dụ tối thiểu;
 - lesson giữ đúng tên file và numbering hiện tại;
 - full guide và lesson không lệch chủ đề;
+- `output/COVERAGE_MATRIX.md` phản ánh đúng số lesson, source canonical và phạm vi rà soát của từng môn;
 - output regenerate được từ source/script;
 - thay đổi không làm lộ raw, raw_md, PDF hoặc tài liệu nguồn chưa được phép;
 - web reader hiển thị được heading, list, code, table và link.

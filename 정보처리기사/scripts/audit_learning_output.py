@@ -58,6 +58,14 @@ def main() -> int:
     for required in ("정보처리기사 필기", "Q-Net", "실기"):
         if required not in root_text:
             errors.append(f"output/README.md: missing scope marker {required}")
+    matrix = OUTPUT / "COVERAGE_MATRIX.md"
+    if not matrix.exists():
+        errors.append("output/COVERAGE_MATRIX.md: missing coverage matrix")
+    else:
+        matrix_text = matrix.read_text(encoding="utf-8")
+        for required in ("Source canonical", "Quality gates", "2023.1.1–2025.12.31"):
+            if required not in matrix_text:
+                errors.append(f"output/COVERAGE_MATRIX.md: missing marker {required}")
 
     total_links = 0
     for path in files:
