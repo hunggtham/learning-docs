@@ -67,7 +67,6 @@
 59. [1. 인증 기술 (Authentication Types)](lessons/59-bai-hoc.md)
 60. [2. 접근 제어 정책 (Access Control Policies)](lessons/60-bai-hoc.md)
 61. [318. 소프트웨어 재사용 (Software Reuse / Tái sử dụng phần mềm)](lessons/61-bai-hoc.md)
-62. [Exam Pattern Pack 05 — 정보시스템 구축 관리](lessons/62-bai-hoc.md)
 
 ## Ghi chú học
 

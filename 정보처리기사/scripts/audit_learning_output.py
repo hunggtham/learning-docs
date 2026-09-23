@@ -74,14 +74,6 @@ def main() -> int:
         for required in ("Q-Net", "RFC 8200", "Oracle Java Language Specification", "PostgreSQL", "Python", "OWASP"):
             if required not in research_text:
                 errors.append(f"output/RESEARCH_REGISTER.md: missing source {required}")
-    exam_register = OUTPUT / "EXAM_PATTERN_REGISTER.md"
-    if not exam_register.exists():
-        errors.append("output/EXAM_PATTERN_REGISTER.md: missing exam pattern register")
-    else:
-        exam_text = exam_register.read_text(encoding="utf-8")
-        for required in ("Q-Net", "Exam Pattern Pack 01", "Exam Pattern Pack 05", "원문 기출"):
-            if required not in exam_text:
-                errors.append(f"output/EXAM_PATTERN_REGISTER.md: missing marker {required}")
 
     total_links = 0
     for path in files:

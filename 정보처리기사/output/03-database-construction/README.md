@@ -62,7 +62,6 @@
 54. [15. 관계 데이터 언어 (Ngôn ngữ Dữ liệu Quan hệ - Đại số quan hệ)](lessons/54-bai-hoc.md)
 55. [21. 데이터 전환 및 정제 (Chuyển đổi dữ liệu - ETL)](lessons/55-bai-hoc.md)
 56. [22. 기타 주요 개념 (Các khái niệm quan trọng khác)](lessons/56-bai-hoc.md)
-57. [Exam Pattern Pack 03 — 데이터베이스 구축](lessons/57-bai-hoc.md)
 
 ## Ghi chú học
 

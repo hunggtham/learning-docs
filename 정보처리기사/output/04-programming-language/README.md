@@ -84,7 +84,6 @@
 76. [287. UNIX 시스템의 구성 (Cấu trúc hệ thống UNIX)](lessons/76-bai-hoc.md)
 77. [292. 페이지 교체 알고리즘 (Thuật toán thay thế trang / Page Replacement)](lessons/77-bai-hoc.md)
 78. [298. PCB (Process Control Block)](lessons/78-bai-hoc.md)
-79. [Exam Pattern Pack 04 — 프로그래밍 언어 활용](lessons/79-bai-hoc.md)
 
 ## Ghi chú học
 

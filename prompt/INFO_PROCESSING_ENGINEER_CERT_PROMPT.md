@@ -166,7 +166,6 @@ Chạy hoặc kiểm tra các điều sau:
 - lesson giữ đúng tên file và numbering hiện tại;
 - full guide và lesson không lệch chủ đề;
 - `output/COVERAGE_MATRIX.md` phản ánh đúng số lesson, source canonical và phạm vi rà soát của từng môn;
-- `output/EXAM_PATTERN_REGISTER.md` phân biệt rõ đề chính thức, bản phục dựng và câu luyện tập nguyên bản;
 - output regenerate được từ source/script;
 - thay đổi không làm lộ raw, raw_md, PDF hoặc tài liệu nguồn chưa được phép;
 - web reader hiển thị được heading, list, code, table và link.
