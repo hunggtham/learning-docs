@@ -25,3 +25,21 @@ Một report chủ quan, behavioral access, neural decoding và perturbation có
 ## Identity, agency và continuity
 
 Trong thực hành, personal identity thường vận hành như một bundle: memory để quy trách nhiệm, body để duy trì causal continuity, values để nhận diện agent, social recognition để phân bổ rights. Thought experiment hữu ích khi làm một thành phần biến mất, nhưng policy cần thêm empirical evidence về năng lực, vulnerability và khả năng phục hồi — không thể suy ra trực tiếp từ intuition về “cùng người”.
+
+## Depth pass: consciousness giữa experience và measurement
+
+### Question và definitions
+
+Consciousness có thể chỉ phenomenal experience (what-it-is-like), access consciousness (thông tin có thể dùng để report/điều khiển) hoặc self-consciousness. Một theory cần nói rõ target, level và time scale; nếu một từ giải thích mọi thứ thì không tạo prediction phân biệt.
+
+### Strongest arguments và rival positions
+
+Functionalism lập luận rằng vai trò causal và information integration quan trọng hơn vật liệu cụ thể; higher-order views yêu cầu một trạng thái được đại diện như trạng thái của mình; enactivism nhấn mạnh sensorimotor coupling và embodied world. Primary-source context từ Nagel đặt giới hạn của third-person description, còn Dennett phản biện rằng nhiều intuition về “private qualia” có thể được giải thích qua access và report. Đây là rival arguments, không phải kết quả của một scan.
+
+### Objection và reply
+
+Neural correlate có thể chỉ là prerequisite, consequence hoặc common cause. Nếu theory giải thích được mọi pattern sau khi biết data, nó thiếu risky prediction. So sánh report, behavior, neural decoding và perturbation có thể thu hẹp hypothesis space; absence of report vẫn có thể do attention, language hoặc motor failure.
+
+### Empirical boundary và implication
+
+Consciousness measurement cần convergent evidence, adversarial paradigms và uncertainty, nhất là với trẻ nhỏ, bệnh nhân không giao tiếp và động vật. Implication cho identity và AI: functional performance không tự chứng minh experience; ngược lại, uncertainty về experience tạo lý do cho safeguards, consent và reversible deployment.

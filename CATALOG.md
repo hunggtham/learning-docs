@@ -112,7 +112,7 @@ domains:
     entrypoint: data_engineering/README.md
     status: canonical
     last_reviewed: 2026-09-23
-    scope: Data foundations, pipelines, storage formats, reliability, quality, and production reasoning.
+    scope: Data lifecycle and pipeline semantics; analytical storage; modeling and transformation; distributed and streaming processing; orchestration/backfill; warehouse/lakehouse; serving and semantic metrics; governance, lineage, security, cost/capacity; and end-to-end case studies.
     prerequisites: [computer_science, mathematics]
     related: [backend, devops_platform_engineering, sql]
   - id: devops_platform_engineering
@@ -269,13 +269,13 @@ domains:
     prerequisites: [computer_science]
     related: [data_engineering, investing]
   - id: kiip
-    title: KIIP / Korean Society
+    title: KIIP exam notes / Korean Society
     group: Certifications
-    path: kiip/
-    entrypoint: kiip/level5/README.md
+    path: korean_culture/kiip/
+    entrypoint: korean_culture/kiip/README.md
     status: canonical
     last_reviewed: 2026-09-23
-    scope: Korean Immigration and Integration Program study material for Korean society and naturalization preparation.
+    scope: Notes for the KIIP Korean Society comprehensive exam, organized by exam content rather than course-level folders.
     prerequisites: [korean_history, korean_culture, korea_law_civic_life]
     related: [korean_culture, korea_law_civic_life]
 

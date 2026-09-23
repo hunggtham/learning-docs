@@ -46,3 +46,21 @@ Mongol networks cho thấy conquest có thể mở corridor nhưng cũng gây ph
 ## Bằng chứng, giới hạn và cầu nối
 
 Charter, waqf/temple record, merchant letters, tax lists, cemetery evidence và climate proxies phải được đối chiếu vì mỗi archive có bias địa lý và giai cấp. Counterfactual: nếu corridor có nhiều node thay thế, plague/war shock có thể giảm centrality của một thành phố thay vì làm sụp toàn mạng. Cầu nối sang 07 là **credit, gunpowder, port và centralization** tăng khả năng huy động vượt qua jurisdiction địa phương.
+
+## Depth pass: trade systems, brokers và shock transmission
+
+### Initial conditions và actors
+
+Sau các đế chế cổ, nhiều vùng có sovereignty chồng lớp thay vì một vacuum. Nông dân, landlord, nomadic confederation, merchant house, religious endowment, port authority, guild và women’s household networks giữ các phần khác nhau của flow. Địa lý của caravan, sông, eo biển và gió mùa định hình opportunity trước khi một triều đại đặt luật.
+
+### Mechanism của mạng thương mại
+
+Một corridor cần security, thông tin, lưu trú, credit và dispute resolution. Merchant partnership và bill of exchange tách thời điểm thanh toán khỏi di chuyển vật chất; điều đó cho phép thương mại xa nhưng cũng tạo contagion khi một node default. Broker địa phương giảm transaction cost cho central ruler, đổi lại họ giữ rent và có thể block reform. Port–hinterland mismatch giải thích tại sao thành phố giàu không đồng nghĩa nông thôn thịnh vượng.
+
+### Event sequence và competing interpretations
+
+Mongol conquest vừa phá hủy vừa nối corridor; plague đi theo chính mạng làm giảm labor stock và đổi bargaining power. Một diễn giải nhấn mạnh “world system” xuyên Á–Âu; diễn giải khác nhấn mạnh các ecologies và luật địa phương không thể quy về một hệ thống duy nhất. Dữ liệu climate không đủ để kết luận collapse nếu chưa nối với tax, conflict và household adaptation.
+
+### Consequences và path dependence
+
+Religious law, waqf/temple endowment và guild practice tạo institutional memory; súng, giấy và kỹ thuật hàng hải về sau được hấp thụ trên nền đó. Nơi có nhiều node thay thế sẽ phục hồi nhanh hơn sau chiến tranh; nơi một port độc quyền, shock tạo lock-in nợ và cưỡng chế. Counterfactual về “nếu không có plague” chỉ có ý nghĩa khi nêu rõ labor, rent và health mechanism.

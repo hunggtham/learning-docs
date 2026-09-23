@@ -40,3 +40,21 @@ New borders và mandates không giải quyết hết minority, land, debt và tr
 ## Bằng chứng, giới hạn và cầu nối
 
 Mobilization tables, casualty rolls, ration data, soldier letters, refugee registers, newspapers và price series cho thấy war effort nhưng không tự đo trauma hay silence. Counterfactual: nếu chiến tranh kết thúc sớm, debt và empire vẫn gây khủng hoảng nhưng revolution, border và pandemic path có thể khác. Cầu nối sang 12 là **unresolved debt, minority, demobilization và mass politics**.
+
+## Depth pass: WWI từ security dilemma đến path dependence
+
+### Initial conditions và actors
+
+Trước 1914, alliance commitments, imperial rivalry, railway timetables, mass conscription, nationalist publics và finance làm decision window ngắn. Cabinet, general staff, parliament, industrial firm, worker, colonial soldier, minority và family đều là actors; “great powers” không đồng nghĩa xã hội nhất trí.
+
+### Mechanism và event sequence
+
+Mobilization biến một crisis địa phương thành commitment trap: mỗi bên sợ chậm hơn sẽ mất deterrence, nên timetable tự đẩy escalation. Trench, artillery, machine gun và blockade làm war thành industrial attrition; food, coal, shipping và credit quyết định endurance. Censorship và propaganda tạo legitimacy nhưng cũng che casualty và dissent; khi rationing, inflation và death vượt ngưỡng, empire cohesion suy yếu.
+
+### Competing interpretations
+
+Một trường phái nhấn mạnh diplomatic miscalculation; trường phái khác nhấn mạnh long-run imperial capitalism, nationalism và domestic politics. Không nên dùng Versailles như nguyên nhân duy nhất của mọi hậu quả: revolution, pandemic, border settlement và minority status có causal paths riêng.
+
+### Consequences và path dependence
+
+Mass army, passport, welfare, veterans’ claims và emergency bureaucracy trở thành năng lực nhà nước mới. Border drawing và mandate tạo minority problems; debt và reparations khóa policy space. Counterfactual về peace conference phải giữ mobilized publics và empire: treaty tốt hơn giảm một số grievances nhưng không xóa decolonization và class conflict.

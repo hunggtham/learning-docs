@@ -32,3 +32,21 @@ Ví dụ trong triage y tế, “cứu nhiều người nhất” có thể xung
 ## Moral remainder
 
 Ngay cả quyết định tốt nhất có thể còn lại loss, grief hoặc obligation chưa được đáp ứng. Ghi nhận moral remainder giúp policy không biến trade-off thành ngôn ngữ “không ai bị hại”, và tạo không gian cho repair, compensation hoặc solidarity.
+
+## Depth pass: từ giá trị đến phán đoán có thể biện minh
+
+### Question và definitions
+
+Ethics hỏi vừa “điều gì đúng?” vừa “ai có quyền yêu cầu ai gánh cost?”. Consequence, duty, virtue, care và contractualism là các sources of reasons; moral uncertainty là uncertainty về fact, framework hoặc weight. Tách harm, wronging, blame và repair để không biến mọi loss thành cùng một loại.
+
+### Strongest argument và premises
+
+Consequentialist argument tối ưu expected value, nhưng cần premise về aggregation, discounting và distribution. Deontological argument bảo vệ constraint như consent/non-domination, nhưng cần giải thích conflict và emergency. Virtue/care argument đặt agent trong quan hệ và context, nhưng phải tránh biến “character” thành excuse cho bias. Một decision đáng tin lộ premise, không giấu trade-off sau con số.
+
+### Objection, reply và primary-source context
+
+Trolley cases phản đối rằng trực giác thay đổi theo framing; Rawls, Kant, Mill, Aristotle và care theorists cung cấp các cách kiểm tra khác nhau chứ không phải authority list. Objection mạnh là framework có thể biện minh cho sacrifice nhóm yếu thế; reply cần threshold rights, prioritarian weighting, consent và cơ chế appeal. Không framework nào tự chứng minh bằng empirical outcome.
+
+### Empirical boundary và implication
+
+Moral psychology cho biết humans reason thế nào, không tự cho biết nên làm gì. Policy cần mapping affected parties, reversible pilots, distributional audit, compensation và review trigger. Khi evidence yếu nhưng harm irreversible, precaution phải được ghi như một normative choice, không ngụy trang thành certainty.

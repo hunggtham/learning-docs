@@ -48,3 +48,21 @@ Britain có coal/ports/finance và textile path; Germany dùng chemistry, rail v
 ## Bằng chứng, giới hạn và cầu nối
 
 Wage/price series, mine output, factory inspection, patent, correspondence, energy statistics và pollution proxies cho phép kiểm tra productivity nhưng coverage theo giới và thuộc địa không đều. Counterfactual: nếu coal rẻ nhưng patent/finance yếu, invention có thể không đạt scale; nếu labor law sớm hơn, health cost có thể phân phối khác. Cầu nối sang 10 là **industrial capacity biến raw material, market và strategic base thành động lực đế quốc**.
+
+## Depth pass: từ knowledge practice đến fossil lock-in
+
+### Initial conditions và actors
+
+Scientific Revolution dựa trên craft knowledge, in ấn, patronage, observatory, workshop và tranh luận tôn giáo–pháp lý; Industrial Revolution bắt đầu ở những nơi có than, wage labor, finance, cảng và thị trường. Inventor, artisan, engineer, investor, worker, household, colonial supplier và state regulator cùng tạo outcome. Không nên kể như một đường thẳng từ “science” tới factory.
+
+### Mechanism và event sequence
+
+Measurement và standardization làm tri thức có thể truyền; steam engine chỉ tạo scale khi coal supply, machine tools, transport và credit cùng hội tụ. Factory chuyển control từ household skill sang schedule, discipline và capital ownership. Coal giải phóng sản xuất khỏi giới hạn mùa vụ nhưng đưa pollution, mine death và carbon lock-in vào hệ thống; năng suất tăng không đồng nghĩa welfare tăng cho mọi nhóm.
+
+### Competing interpretations
+
+Một interpretation coi institutions và property rights là động lực; interpretation khác nhấn mạnh empire, slavery, enclosure và ecological subsidy. Cả hai cần kiểm tra theo vùng và ngành: textile, steel, rail và agriculture có sequence khác nhau. “Industrial Revolution” cũng gồm social reproduction, unpaid care và public health, không chỉ output nhà máy.
+
+### Consequences và path dependence
+
+Railway, grid, factory town và skill system tạo sunk cost khiến các nền kinh tế tiếp tục dùng fossil fuel dù biết externality. Labor organization, sanitation và compulsory education là institutional responses, không phải tự động của technology. Counterfactual: renewable energy sớm có thể giảm carbon nhưng vẫn cần finance, materials và quyền sở hữu để đạt scale.

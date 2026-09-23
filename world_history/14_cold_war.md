@@ -44,3 +44,21 @@ feedback: arms burden → fiscal stress → reform/repression → legitimacy cha
 ## Bằng chứng, giới hạn và cầu nối
 
 Declassified cables, aid records, arms transfers, oral history, development indicators và local newspapers cần được ghép với nhau; superpower archive dễ biến actor địa phương thành quân cờ. Counterfactual: nếu non-aligned states kiểm soát nhiều hơn aid conditions, development model và institutional autonomy có thể khác mà không loại bỏ rivalry. Cầu nối sang 15–16 là **sovereignty, debt, telecom, trade rule và development network**.
+
+## Depth pass: Cold War như hệ thống nhiều tầng
+
+### Initial conditions và actors
+
+1945 để lại power vacuum, nuclear asymmetry, decolonization pressure và institutional promise của UN. Superpowers, China, non-aligned governments, liberation movements, military elites, unions, students, women’s movements, firms và households tương tác; local legitimacy không thể suy ra từ bloc alignment.
+
+### Mechanism và event sequence
+
+Aid, arms và intelligence tạo sponsor–client relation; regime dùng chúng để tăng capacity hoặc repression. Proxy war nối civil conflict với system rivalry, nhưng ending thường đến khi domestic coalition, battlefield cost hoặc sponsor policy đổi. Development project tạo electricity, school và health nhưng cũng debt, displacement và surveillance. Nuclear deterrence giảm direct war giữa superpowers bằng cách chuyển risk sang proxy và accident.
+
+### Competing interpretations
+
+“Two-bloc” reading giải thích arms race; postcolonial reading cho thấy sovereignty và economic justice là mục tiêu độc lập. China’s trajectory, non-alignment và South–South bargaining bác bỏ câu chuyện chỉ có thắng–thua Mỹ–Xô. 1989–91 là conjuncture của stagnation, reform, nationalism và external conditions.
+
+### Consequences và path dependence
+
+Telecom, aid bureaucracy, military–civilian relations và debt regime tiếp tục định hình globalization sau 1991. Developmental state capacity có thể tồn tại cùng authoritarian rule; liberalization không tự giải phóng institutional lock-in. Counterfactual về non-alignment chỉ có giá trị khi giữ asymmetric finance, commodity prices và domestic class conflict.

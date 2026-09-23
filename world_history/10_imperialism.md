@@ -38,3 +38,21 @@ flow: taxes, exports, labor, settlers, troops, credit, information
 ## Bằng chứng, giới hạn và cầu nối
 
 Census, cadastral map, company archive và military report cho thấy state gaze; court petitions, labor records, landscape change và oral history kiểm tra sự khác biệt giữa rule trên giấy và đời sống. Counterfactual: nếu railway nối nội địa thay vì chỉ nối mỏ với cảng, state capacity và hậu thuộc địa có thể khác, nhưng cũng có thể tăng tốc quân sự hóa. Cầu nối sang 11 là **imperial rivalry, alliance và resource security làm biên giới thành hệ thống dễ leo thang**.
+
+## Depth pass: empire như một architecture của extraction
+
+### Initial conditions và actors
+
+Imperialism cuối thế kỷ XIX gặp các nhà nước, thương nhân và mạng xã hội bản địa đã có lịch sử; không phải “vùng trống”. European state, company, missionary, settler, soldier, local ruler, clerk, worker và anti-colonial organizer có quyền lực khác nhau. Industrial production làm tăng nhu cầu cao su, cotton, minerals, food và strategic ports nhưng không quyết định cách chiếm đoạt.
+
+### Mechanism và event sequence
+
+Treaty, concession hoặc conquest mở claim; survey và census làm dân/đất đọc được; tax, labor code và pass system buộc flow; railway, port và telegraph rút commodity ra ngoài. Indirect rule tiết kiệm personnel nhưng trao coercive authority cho broker; direct rule chuẩn hóa law nhưng tăng chi phí và resistance. Racial classification biến phân công kinh tế thành status truyền đời.
+
+### Competing interpretations
+
+Một narrative nhấn mạnh state competition và security dilemma; narrative khác nhấn mạnh capitalist extraction, race và anti-colonial agency. Hai cơ chế có thể đồng thời đúng ở các scale khác nhau. “Civilizing mission” là claim chính danh cần đối chiếu với mortality, land loss, labor discipline và education access, không phải bằng chứng tự thân.
+
+### Consequences và path dependence
+
+Colonial budgets thường mạnh ở customs và export nhưng yếu ở universal services; border và administrative language tiếp tục định hình hậu thuộc địa. Infrastructure tạo capability nhưng cũng khóa geography vào mine–port corridor. Counterfactual về “đầu tư phát triển” phải hỏi ai sở hữu, ai trả nợ và ai có quyền quyết định land use.

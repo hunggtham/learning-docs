@@ -21,3 +21,21 @@ Một recommender tối ưu watch time có thể làm tăng engagement nhưng th
 ## Agency dưới automation
 
 Human agency không chỉ là còn một nút “approve”. Người duyệt cần thấy uncertainty, alternatives, reason codes và có quyền override mà không bị penalty ngầm. Nếu workload khiến mọi người rubber-stamp output, oversight trên giấy trở thành automation bias. Thiết kế có trách nhiệm phải phân bổ cả quyền quyết định, năng lực hiểu và nghĩa vụ giải trình.
+
+## Depth pass: technology, agency và quyền lực được vật chất hóa
+
+### Question và definitions
+
+Technology vừa là artifact, practice, infrastructure và institution. Agency không chỉ là “có nút override”; nó cần information, competence, time, alternative và freedom from retaliation. Design làm một số action rẻ/dễ, một số action đắt/khó, qua đó phân bổ power trước cả khi có policy.
+
+### Strongest argument và premises
+
+Technological mediation argument nói artifact hình thành perception và habit; social-shaping rival nhấn mạnh procurement, labor, law và user adaptation. Một claim về bias cần nêu construct, population, metric, baseline và feedback loop. Accuracy chỉ là một property; legitimacy còn cần purpose, contestability, privacy, safety và distribution of error.
+
+### Objection, reply và primary-source context
+
+Objection với “technology is political” là thiết kế không tự quyết định outcome: cùng tool có thể có governance khác. Reply: non-determinism không có nghĩa neutrality; defaults và infrastructure tạo switching cost và path dependence. Primary-source context từ Winner và STS tradition hữu ích để đặt câu hỏi về built-in politics, nhưng phải kiểm tra bằng deployment evidence chứ không coi theory là case.
+
+### Empirical boundary và implication
+
+Audit cần test distribution shift, human workload, automation bias, opt-out, appeal và second-order effects. “Human in the loop” chỉ có nghĩa khi override thực tế, reason code và liability rõ. Implication: deploy theo staged/reversible path, log decisions, cho phép independent audit và thiết kế exit; agency cần được đo trong context chứ không suy ra từ giao diện.

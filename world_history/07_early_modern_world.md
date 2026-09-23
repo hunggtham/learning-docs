@@ -41,3 +41,21 @@ In ấn giảm chi phí copy nhưng không đảm bảo truth; censorship, liter
 ## Bằng chứng, giới hạn và cầu nối
 
 Customs ledgers, ship logs, price series, court records, maps và material culture giúp nối court với port nhưng thường bỏ qua informal trade và coerced labor. Counterfactual: nếu credit không mở rộng, gunpowder state vẫn có thể chiến thắng địa phương nhưng khó duy trì navy và payroll dài hạn. Cầu nối sang 08 là **port/plantation/silver flow vượt basin và biến unequal exchange thành hệ thống toàn cầu**.
+
+## Depth pass: state formation dưới áp lực chiến tranh và đại dương
+
+### Initial conditions và actors
+
+Early modern states kế thừa landlord, city, religious authority và merchant credit khác nhau. Ruler, provincial notable, soldier, tax farmer, shipowner, plantation laborer, Indigenous polity và household consumer đều có bargaining power riêng. Gunpowder tạo một constraint vật chất, không phải lời giải tự động cho centralization.
+
+### Mechanism: cơ chế nhà nước tài chính
+
+War demand buộc ruler kết hợp land tax, customs, monopoly, office sale và public/private debt. Credit chỉ thành capacity khi có collateral, credible repayment và institution cho phép creditor exit. Navy cần timber, rope, dock, skilled labor và food; bạc hoặc đường chỉ hữu ích sau khi được vận chuyển và chuyển thành payroll. Vì vậy chuỗi là **fiscal extraction → military logistics → protection/privilege → legitimacy**, với risk là debt và inflation.
+
+### Event sequence và competing interpretations
+
+Printing và Reformation mở public contest nhưng cũng tạo censorship, confessional war và new surveillance. Một interpretation coi period này là rise of sovereign state; interpretation khác nhấn mạnh empire, company và indigenous diplomacy cùng tạo sovereignty. “European ascent” vì thế là outcome của coalition, disease, finance và contingency, không phải superiority văn hóa cố định.
+
+### Consequences và path dependence
+
+Standardized tax, map, law và army tạo administrative memory mà colonial states sau này tái dùng. Plantation/slavery và silver inflation làm inequality xuyên đại dương, khóa các vùng vào commodity corridor. Counterfactual: thiếu credit dài hạn có thể trì hoãn state centralization, nhưng không xóa cạnh tranh giữa các empire hay agency địa phương.

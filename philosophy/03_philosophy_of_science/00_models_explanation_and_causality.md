@@ -33,3 +33,21 @@ Nếu chỉ quan sát sleep và performance, confounding từ stress/workload ch
 ## Model selection có giá trị
 
 Model đơn giản hơn không mặc nhiên đúng. Simplicity hữu ích vì giảm overfitting và làm assumption rõ; model phức tạp hữu ích nếu mechanism thêm explanatory power và generalize tốt hơn. So sánh cần out-of-sample prediction, intervention test, parameter sensitivity và failure case — không chỉ fit trên data đã dùng để chọn model.
+
+## Depth pass: causality như một claim có điều kiện
+
+### Question và definitions
+
+“X gây Y” phải được đọc như một intervention claim: thay X trong population, time window và context xác định sẽ đổi phân phối Y thế nào. Structural equation, potential outcomes và mechanistic explanation dùng ngôn ngữ khác nhau nhưng đều cần boundary. Association là pattern; mechanism là chuỗi tương tác; causal effect là counterfactual so sánh world có và không có can thiệp.
+
+### Strongest argument và premises
+
+Một causal argument mạnh cần: (1) treatment được định nghĩa đủ rõ; (2) temporal order; (3) confounder hoặc adjustment strategy; (4) measurement không làm sai exposure/outcome; (5) transportability được kiểm tra. DAG giúp lộ premise như exchangeability và no unmeasured confounding; randomized intervention thay một số premise bằng design nhưng vẫn cần adherence, interference và outcome validity.
+
+### Objection, reply và rival position
+
+Objection từ Nancy Cartwright và các nhà mechanism: average effect có thể không vận chuyển giữa context; reply là mô hình phải ghi effect modification và mechanism invariant. Structural realism giữ rằng model có thể đúng một phần về cấu trúc dù entities lý thuyết thay đổi; instrumentalism nhắc rằng predictive success chưa chứng minh ontology. Không có “gold standard” tách khỏi question.
+
+### Empirical boundary và implication
+
+Natural experiment, longitudinal data và intervention bổ sung nhau; machine-learning prediction có thể hữu ích mà không trả lời “what if”. Khi kết luận, ghi rõ population, intervention, outcome, horizon và failure mode. Implication: policy causal phải kèm monitoring, pre-specified stopping/revision và phân tích ai chịu spillover, không chỉ báo cáo một effect size.

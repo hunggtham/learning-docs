@@ -180,7 +180,7 @@ Lộ trình 6 đặc biệt quan trọng nếu mục tiêu không chỉ là “b
 
 ## KIIP — 한국사회 이해 시험 대비
 
-Thư mục [`kiip/`](kiip/README.md) tồn tại như **một lớp ôn thi riêng bên trong Korean Culture**. Nó không quyết định cấu trúc hoặc độ sâu của Master Knowledge Book. Khi phát triển bộ `korean_culture/`, ưu tiên của các chương chính vẫn là hiểu bản chất văn hoá và **cơ chế xã hội (social mechanism)**, không tối ưu theo dạng đề KIIP.
+Thư mục [`kiip/`](kiip/README.md) là **bộ note duy nhất về nội dung thi KIIP bên trong Korean Culture**. Nó không chia theo level và không quyết định cấu trúc hoặc độ sâu của Master Knowledge Book. Khi phát triển bộ `korean_culture/`, ưu tiên của các chương chính vẫn là hiểu bản chất văn hoá và **cơ chế xã hội (social mechanism)**, không tối ưu theo dạng đề KIIP.
 
 ## Nguyên tắc xuyên suốt
 

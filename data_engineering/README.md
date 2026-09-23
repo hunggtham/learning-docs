@@ -23,6 +23,24 @@ problem → mental model → mechanism → invariant
 
 Nếu một phần chỉ mô tả API hoặc tên sản phẩm mà không nói guarantee và failure behavior, nó là implementation note chứ chưa phải Data Engineering reasoning.
 
+## P1 — Trạng thái triển khai
+
+P1 của Data Engineering đã được triển khai, không còn là phần `Planned`. Bốn foundation chapter ban đầu được nối tiếp bằng các chapter dạng directory dưới đây. Tên trong review được giữ làm nhãn conceptual; tên canonical trong repository dài hơn để nêu rõ boundary của từng chapter và tránh các thư mục mơ hồ.
+
+| Nhãn trong review | Chapter canonical | Trạng thái |
+|---|---|---|
+| `05_data_modeling/` | [05 — Data modeling và transformation](05_data_modeling_and_transformation/README.md) | Implemented |
+| `06_distributed_processing/` | [06 — Distributed processing](06_distributed_processing/README.md) | Implemented |
+| `07_streaming/` | [07 — Streaming systems](07_streaming_systems/README.md) | Implemented |
+| `08_orchestration_backfill/` | [08 — Orchestration và backfill](08_orchestration_and_backfill/README.md) | Implemented |
+| `09_warehouse_lakehouse/` | [09 — Warehouse, lake và lakehouse](09_warehouse_lake_lakehouse/README.md) | Implemented |
+| `10_semantic_serving/` | [10 — Serving và semantic layer](10_serving_semantic_layer/README.md) | Implemented |
+| `11_governance_lineage/` | [11 — Governance, lineage và security](11_governance_lineage_security/README.md) | Implemented |
+| `12_cost_capacity/` | [12 — Cost, performance và capacity](12_cost_performance_capacity/README.md) | Implemented |
+| `90_case_studies/` | [90 — Case studies](90_case_studies/README.md) | Implemented |
+
+Mỗi chapter có mental model, mechanism, invariant, failure/edge case, evidence, trade-off và liên kết dependency; `COVERAGE_AUDIT.md` là checklist kiểm tra coverage và invariant của toàn bộ boundary.
+
 ## Lộ trình canonical
 
 Bắt đầu với [01 — Data Engineering từ first principles](01_foundations.md). Chapter này thiết lập mental model về data lifecycle, batch/streaming, OLTP/OLAP, correctness và vì sao pipeline không đơn giản là "copy dữ liệu từ A sang B".

@@ -39,3 +39,21 @@ Nuremberg, Tokyo, refugee regimes và UN human-rights language tạo institution
 ## Bằng chứng, giới hạn và cầu nối
 
 Operational records, survivor testimony, demographic reconstruction, satellite/industrial evidence và tribunal documents có độ gần sự kiện khác nhau; national archives thường im lặng về người bị chiếm đóng. Counterfactual: nếu không có total war, decolonization vẫn có động lực nhưng tốc độ, superpower legitimacy và human-rights institution có thể khác. Cầu nối sang 14–15 là **power vacuum, nuclear monopoly, refugee flow và anti-colonial claim**.
+
+## Depth pass: WWII như nhiều cuộc chiến nối bằng logistics
+
+### Initial conditions và actors
+
+Revisionist regimes kế thừa militarized states, racial law, unresolved borders và resource insecurity. Axis, Allies, occupied civilians, colonial troops, resistance networks, firms, forced laborers, women workers và refugees có mục tiêu không trùng nhau. “Total war” là institutional project, không chỉ là tổng số vũ khí.
+
+### Mechanism và event sequence
+
+Occupation biến land và labor thành resource; blockade, famine và forced migration truyền chiến tranh vào household. Factory relocation, convoy, lend-lease, radar, codebreaking và medical logistics nối stock vật chất với battlefield. Genocide cần bureaucracy, classification, transport và collaboration; resistance/collaboration thay đổi theo food, coercion và credible expectation of liberation.
+
+### Competing interpretations
+
+Một narrative đặt châu Âu làm trung tâm; narrative global nhấn mạnh China, Đông Nam Á, châu Phi, colonial soldiers và Pacific. Military victory không tự giải quyết justice: Nuremberg, Tokyo, refugee regime và UN vừa tạo norm mới vừa để lại selective impunity.
+
+### Consequences và path dependence
+
+Wartime planning, borders, intelligence agencies, nuclear science và social citizenship đi vào trật tự 1945. Displacement và partition tạo diaspora và conflict memory dài hạn. Counterfactual “không có Holocaust” không được dùng để làm nhẹ ideology: racial state, occupation và forced labor vẫn có thể gây mass violence theo đường khác.

@@ -44,3 +44,21 @@ shock: crash, drought, tariff, coup, border conflict
 ## Bằng chứng, giới hạn và cầu nối
 
 Unemployment, election, price, trade và fiscal data cần đọc cùng party membership, radio reach, memoir, police file và colonial archive; dữ liệu quốc gia có thể che giấu gender/class difference. Counterfactual: nếu collective security có enforcement và debt restructuring sớm, authoritarianism có thể mất một số openings nhưng không biến mất mọi racial/imperial conflict. Cầu nối sang 13 là **rearmament, occupation, genocide policy và resource war**.
+
+## Depth pass: interwar như feedback giữa kinh tế và legitimacy
+
+### Initial conditions và actors
+
+States bước vào 1919 với debt, veteran population, border claims và mass electorate. Central bank, party, union, landlord, industrialist, unemployed worker, colonial subject, media proprietor và minority organization chịu shock khác nhau. Gold standard và reparations là institutional constraints, không phải background trung tính.
+
+### Mechanism và event sequence
+
+Deflation làm real debt tăng; thất nghiệp làm coalition tan; protectionism co trade; emergency rule mở không gian cho party hứa restoration. Fascism kết hợp paramilitary, welfare có điều kiện và racial exclusion; social democracy, communism và liberal reform đưa ra cơ chế khác cho employment và security. Great Depression là amplifier: nó chỉ chuyển thành dictatorship khi có institutional openings và elite bargains.
+
+### Competing interpretations
+
+Một đọc economic-first dễ bỏ qua colonial violence và ideology; một đọc culture-first dễ bỏ qua credit và food. So sánh Đức, Mỹ, Liên Xô, Nhật và các thuộc địa cho thấy cùng crisis có thể tạo New Deal, planning, militarism hoặc anti-colonial mobilization tùy state capacity.
+
+### Consequences và path dependence
+
+Radio, party school, welfare registry và police file tạo mass politics infrastructure mà WWII thừa kế. Appeasement phản ánh memory WWI và fiscal limits, nhưng cũng thể hiện racial hierarchy và imperial interest. Counterfactual về collective security phải tính enforcement cost và domestic consent, không chỉ đổi một quyết định ngoại giao.

@@ -38,3 +38,21 @@ flow: components, capital, data, workers, emissions, pathogens
 ## Bằng chứng, giới hạn và cầu nối
 
 Input–output table, shipping/AIS data, FDI, wage distribution, migration/remittance, patent/IP và emissions giúp nhìn flow; GDP không cho biết ai chịu precarious work hay ecological loss. Counterfactual: nếu không có container standard, trade vẫn tăng qua air/rail/digital services nhưng geography, inventory và port power khác. Cầu nối sang 17 là **interdependence tạo capacity lẫn vulnerability trong một trật tự đang tranh chấp**.
+
+## Depth pass: globalization và việc phân bổ rủi ro
+
+### Initial conditions và actors
+
+Containerization, cheap telecom, trade rules, post-Cold-War finance và labor migration gặp các nhà nước với education, welfare và exchange regime khác nhau. Firm, port city, worker, migrant household, platform, regulator và environmental community nhận benefit/risk không đều. “Global market” là institutionally produced, không phải tự nhiên xuất hiện.
+
+### Mechanism và event sequence
+
+Standardization → fragmentation of production → specialization → lower unit cost → just-in-time exposure. Brand, IP, finance và platform giữ value capture cao hơn assembly; emissions, care burden và precarity bị đẩy sang supplier, household hoặc future generations. Một port closure hay chip shortage cho thấy bottleneck có thể truyền shock qua nhiều ngành.
+
+### Competing interpretations
+
+Trade-liberal reading nhấn mạnh productivity và consumer surplus; political-economy reading nhấn mạnh labor bargaining, tax competition và ecological externality. Cả hai phải kiểm tra distribution và time horizon. Digital flow không thay thế geography: cables, data centers, energy và minerals vẫn là material constraints.
+
+### Consequences và path dependence
+
+GVC, urbanization và migration tạo skill/infrastructure stock nhưng cũng lock-in supplier dependence và carbon. Resilience là multi-sourcing, buffers, public capacity và interoperability, không phải autarky. Counterfactual về deglobalization phải nói rõ route nào thay thế container, ai trả chi phí và nhóm nào mất market access.

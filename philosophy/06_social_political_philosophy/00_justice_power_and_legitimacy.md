@@ -22,3 +22,21 @@ Giả sử một dịch vụ công có cùng rule cho mọi người nhưng nhó
 ## Power audit
 
 Với một institution, hãy hỏi: ai đặt agenda, ai sở hữu data, ai định nghĩa category, ai có quyền veto, ai chịu cost của error, và ai có appeal? Quyền lực ẩn trong default và omission cũng quan trọng như mệnh lệnh công khai. Một process legitimate phải cho người bị ảnh hưởng khả năng biết, chất vấn và thay đổi quyết định, không chỉ có chữ ký hợp lệ.
+
+## Depth pass: justice và legitimacy trong institution thực
+
+### Question và definitions
+
+Justice không chỉ là phân phối income: còn có procedure, recognition, capability, repair và quyền tham gia. Legitimacy là khả năng biện minh quyền lực với người chịu nó; power là capacity định hình option, agenda, category và cost. Equality of rule khác equality of effective access.
+
+### Strongest argument và premises
+
+Social-contract reasoning (Hobbes, Locke, Rousseau) hỏi khi nào coercion có thể được biện minh; Rawls thêm veil of ignorance và fair opportunity; Sen/Nussbaum chuyển trọng tâm sang capability thực. Một argument phải nêu who counts, baseline, time horizon và liệu disadvantage có được sửa hay chỉ bù ex post.
+
+### Objection, reply và rival position
+
+Objection: hypothetical consent không thay thế consent của nhóm lịch sử bị loại trừ, và equal rule có thể tái tạo domination. Reply deliberative/agonistic approaches yêu cầu voice, contestability và institutional power-sharing; libertarian rival ưu tiên property và non-interference nhưng vẫn phải trả lời inherited advantage, public goods và coercion ẩn trong contract.
+
+### Empirical boundary và implication
+
+Governance evidence cần theo dõi who participates, who benefits, error burden, appeal success và policy feedback; survey trust không đủ đo legitimacy. Implication: thiết kế institution với transparency, accessible appeal, sunset/review và redistribution khi “neutral” default gây harm. Justice claim không được suy ra trực tiếp từ một metric efficiency.

@@ -41,3 +41,21 @@ Biên giới mới có thể nối các nhóm hoặc chia một mạng cũ. Refu
 ## Bằng chứng, giới hạn và cầu nối
 
 Constitution, parliamentary debate, census, commodity price, refugee data, memoir và local oral history giúp phân biệt elite narrative với state formation thực tế. Counterfactual: nếu biên giới được đàm phán lại theo economic/ecological network, conflict chưa chắc biến mất vì citizenship và land vẫn cần institution; nhưng refugee path và fiscal base có thể khác. Cầu nối sang 16 là **state, firm và household cùng bước vào global value/finance/migration network**.
+
+## Depth pass: độc lập chính trị và giới hạn của sovereignty
+
+### Initial conditions và actors
+
+Nationalist parties, unions, veterans, peasant movements, women organizers, chiefs, religious authorities, minorities và diaspora cùng tranh luận “nation” là ai. Colonial state thường để lại census, police, customs và export corridor nhưng thiếu local taxation và equal citizenship. International law và Cold War sponsor mở bargaining space nhưng cũng đặt điều kiện.
+
+### Mechanism và event sequence
+
+Mass mobilization → repression hoặc negotiation → constitution/flag → salary và border crisis → development, coup, federation hoặc civil war. Partition và refugee flow biến citizenship thành vấn đề vật chất: land records, language, police và food distribution quyết định ai được bảo vệ. Commodity boom tạo revenue; price crash và debt austerity làm legitimacy suy yếu.
+
+### Competing interpretations
+
+Một narrative coi decolonization là transfer of sovereignty; một narrative khác nhấn mạnh incomplete decolonization trong finance, military base, law và knowledge. “Failed state” che giấu variation giữa fiscal, security, welfare và local legitimacy. Agency grassroots cần được đọc cùng constraint của inherited border và external intervention.
+
+### Consequences và path dependence
+
+Development corridors, official language, land concentration và diaspora tạo lock-in lâu dài; nhưng education, health, regional federation và South–South institutions cũng mở path mới. Counterfactual về border không thể bỏ qua political identity và coercive apparatus; đổi đường biên chỉ thay đổi set of bargaining problems.

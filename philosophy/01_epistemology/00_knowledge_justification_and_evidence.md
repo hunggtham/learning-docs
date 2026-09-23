@@ -38,3 +38,21 @@ Ladder không phải thứ hạng tuyệt đối. Một observation hiếm có t
 ## Epistemic standard theo domain
 
 Mathematical proof cần validity trong hệ tiên đề; historical claim cần provenance và source criticism; causal medical claim cần intervention và safety evidence; moral claim cần normative premise có thể biện minh. Dùng standard của domain này để kết luận domain khác là category error.
+
+## Depth pass: khi nào belief trở thành knowledge?
+
+### Question và definitions
+
+Question trung tâm không chỉ là “belief có đúng không?” mà là **điều gì làm belief đúng một cách không quá may rủi, và có thể chia sẻ/kiểm tra được?** Internalism yêu cầu lý do có thể tiếp cận từ góc nhìn agent; externalism cho phép reliability của process đóng vai trò dù agent không mô tả hết được. Testimony, memory và perception là các nguồn khác nhau, không nên gộp thành một “intuition”.
+
+### Strongest argument và premises
+
+Một argument fallibilist mạnh có dạng: (1) claim thực nghiệm hiếm khi chắc chắn tuyệt đối; (2) justification tốt phải phân biệt claim với rival và cập nhật theo evidence; (3) process có calibration, track record và điều kiện áp dụng; do đó knowledge thực hành là belief đúng được hỗ trợ bởi process đáng tin, có thể sửa và có provenance. Primary-source context của Gettier cho thấy “justified true belief” có thể đúng do luck; không cần biến phản ví dụ thành phủ nhận mọi knowledge.
+
+### Objection, reply và rival position
+
+Objection: reliability không đủ vì một người may mắn dùng process đáng tin trong hoàn cảnh bất thường. Reply: cần thêm safety/anti-luck condition và mô tả environment, không phải thêm một nhãn “certainty”. Rival virtue epistemology chuyển trọng tâm sang intellectual character; social epistemology nhắc rằng credibility và institutional access phân bố bất bình đẳng. Không framework nào miễn khỏi vấn đề testimony bị thao túng.
+
+### Empirical boundary và implication
+
+Psychology đo calibration, memory error và group influence; nó không tự quyết định chuẩn normatively gọi là “đủ biết”. Trong nghiên cứu, audit trail, preregistration và replication làm justification public hơn nhưng không loại bỏ underdetermination. Implication: mỗi claim nên ghi source, uncertainty, disconfirming evidence và threshold hành động; knowledge không đồng nghĩa permission hành động rủi ro cao.

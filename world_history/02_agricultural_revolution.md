@@ -64,3 +64,21 @@ Surplus có thể nuôi chuyên gia và cứu trợ, nhưng ai kiểm soát kho 
 ## Bằng chứng, giới hạn và cầu nối
 
 Hạt giống, phytolith, pollen, xương, isotope, dấu răng và cấu trúc kho giúp tái dựng diet/labor, nhưng khó đo quyền sở hữu và cảm nhận của hộ. Counterfactual: nếu một cộng đồng giữ mobility và đa dạng thức ăn cao hơn, liệu density thấp hơn có đổi bargaining power không? Cầu nối sang 03 là lúc **surplus trở thành claim có thể ghi, thu và cưỡng chế**.
+
+## Depth pass: từ điều kiện sinh thái đến path dependence
+
+### Initial conditions và actors
+
+Holocene ấm hơn làm một số vùng có mùa vụ ổn định, nhưng kết quả còn tùy **wild resource base**, địa hình, bệnh tật và mobility. Hộ gia đình, nhóm săn bắt–hái lượm, người giữ giống, trưởng dòng họ, thợ thủ công và nghi lễ địa phương là các actors khác nhau; “nông dân” không phải một khối đồng nhất. Quyết định thuần hóa thường là tích lũy nhiều thử nghiệm nhỏ, không phải một phát minh duy nhất.
+
+### Mechanism và event sequence
+
+Quản lý giống và đàn vật nuôi tạo food stock có thể lưu trữ. Lưu trữ cần vessels, kho, lịch và quy tắc canh gác; quy tắc đó tạo quyền kiểm soát và nghĩa vụ. Định cư làm tăng density, từ đó tăng trao đổi kỹ năng nhưng cũng làm bệnh truyền nhiễm, xung đột đất và lao động cưỡng bức dễ lan. Khi mùa vụ thất bại, hộ có thể bán gia súc, nợ lao động hoặc di cư; nếu kho do temple/lineage kiểm soát, khủng hoảng trở thành quan hệ chính trị.
+
+### Competing interpretations và consequences
+
+Một cách đọc nhấn mạnh **surplus và hierarchy**; cách khác nhấn mạnh cooperation, commons và khả năng trì hoãn nhà nước. Bằng chứng về nhà lớn hay kho lớn không tự chứng minh elite extraction. Tuy vậy, một khi cư trú, ruộng và thừa kế gắn với nhau, switching cost tăng: xã hội đã đầu tư vào kênh mương và tường thành khó quay lại mobility hoàn toàn. Path dependence này giải thích vì sao năng suất tăng có thể đi cùng inequality và vulnerability.
+
+### Ranh giới bằng chứng
+
+Pollen, phytolith, isotope và xương cho biết diet, mobility và stress; chúng yếu hơn khi suy ra gendered authority hay cảm nhận công bằng. Không được ngoại suy từ một “fertile crescent” sang Andes, Tây Phi hay Đông Nam Á. Counterfactual có giới hạn: mobility cao hơn có thể giảm density và epidemic risk, nhưng cũng làm khó lưu kho và bảo vệ trẻ em trong mùa xấu.

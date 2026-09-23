@@ -1,14 +1,14 @@
-# KIIP — 한국사회 이해 시험 대비
+# KIIP exam notes — 한국사회 이해
 
-Thư mục này là **exam-prep layer nằm trực tiếp trong `korean_culture/`**, không phải một Knowledge Library tách biệt. Nội dung được tổng hợp theo chủ đề để học một mạch; **không chia folder riêng cho `영주용` và `귀화용`**.
+Đây là **bộ note duy nhất về nội dung thi KIIP trong repository**, nằm trực tiếp trong `korean_culture/`. Nội dung được tổng hợp theo chủ đề để học một mạch; **không chia theo level, không tạo cây thư mục riêng cho từng loại kỳ thi**.
 
-Mỗi phần cần phân biệt phạm vi được đánh dấu ngay tại chỗ:
+Các nhãn phạm vi được ghi ngay tại chỗ để người học biết nội dung nào áp dụng cho bài thi nào:
 
 - `공통`: phần cơ bản cần học cho **영주용**, đồng thời là nền tảng của **귀화용**.
 - `귀화용 심화`: phần cần học thêm cho mục tiêu 국적/귀화.
 - `현재 확인`: dữ liệu, luật hoặc policy có thể thay đổi và cần kiểm tra nguồn chính thức.
 
-> `공통` là nhãn tổ chức phạm vi học, không phải dự đoán “chắc chắn ra đề”.
+> `공통` và `귀화용 심화` chỉ là nhãn phạm vi **trong nội dung thi KIIP**, không phải các level hay các bộ tài liệu độc lập.
 
 ## Cấu trúc hiện tại
 

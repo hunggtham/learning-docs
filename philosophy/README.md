@@ -58,6 +58,8 @@ Hai file điều phối nằm ở root: [Conceptual Dependencies](CONCEPTUAL_DEP
 
 Các route nâng cao không phải thứ tự bắt buộc. Chúng làm lộ dependency: logic giúp kiểm tra argument; epistemology kiểm tra warrant; philosophy of science kiểm tra model/evidence; ethics và political philosophy kiểm tra action/institution; technology và AI đưa toàn bộ chuỗi vào case thực tế.
 
+Depth pass hiện tại không mở thêm namespace. Các node trung tâm về epistemology, causality, free will, consciousness, ethics, justice và technology đã được viết lại theo chuỗi `question → definition → strongest argument → premises → objection → reply → rival position → empirical boundary → implication`; primary-source context chỉ dùng để định vị tranh luận, không biến chapter thành tuyển tập trích dẫn.
+
 ## Knowledge connections
 
 - [Philosophy, science, mathematics và AI](90_connections/00_philosophy_science_mathematics_and_ai.md) nối epistemology, model, probability, computation và AI.

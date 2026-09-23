@@ -35,6 +35,8 @@ Một thay đổi chỉ trở thành bước ngoặt khi nó làm đổi **khả
 
 Các chương không tuyên bố rằng lịch sử đi theo một đường thẳng. Chúng dùng các **chuyển tiếp** để chỉ ra điều kiện đã thay đổi, những đường đi bị bỏ lỡ và các continuity còn sót lại. Sau tuyến chính, dùng [comparative case studies](20_comparative_case_studies.md), [transition matrix](21_transition_matrix.md), [source workbench](22_source_workbench.md) và [annotated bibliography](23_annotated_bibliography.md) để kiểm tra mô hình trong nhiều vùng và nhiều loại bằng chứng.
 
+Vòng depth pass hiện tại giữ nguyên tuyến và canonical files, nhưng làm dày 14 node từ Agricultural Revolution đến post-1991. Khi đọc các node này, theo chuỗi: `initial conditions → actors → institutions/material constraints → mechanism → event sequence → competing interpretations → consequences → path dependence`. Đây là tài liệu học độc lập ở mức advanced foundation, không phải chuyên khảo thay thế source workbench.
+
 ## Phạm vi và ranh giới
 
 - `world_history/` tập trung vào cơ chế xuyên vùng và so sánh; không thay thế lịch sử quốc gia chuyên sâu như [`korean_history/`](../korean_history/).

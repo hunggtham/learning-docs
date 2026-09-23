@@ -38,3 +38,21 @@ Archive của company/crown thường ghi output, thuế và rebellion, không g
 ## Bằng chứng, giới hạn và cầu nối
 
 Shipping/customs records, plantation accounts, slave voyages, Indigenous archaeology, pollen, disease history và oral tradition phải được đọc cùng nhau; output của công ty không đại diện cho wellbeing. Counterfactual: nếu disease shock nhỏ hơn, conquest vẫn cần labor, alliance và logistics nhưng cán cân dân số–quân sự có thể khác. Cầu nối sang 09 là **commodity, slavery và empire cung cấp vốn/nguyên liệu/thị trường cho tri thức và công nghiệp**, dù không phải nguyên nhân duy nhất.
+
+## Depth pass: thuộc địa hóa như một cơ chế tái phân phối năng lực
+
+### Initial conditions và actors
+
+Oceanic expansion gặp các polity bản địa, disease ecologies, merchant capital và rival empires đã tồn tại. Crown, company, settler, enslaved and indentured workers, Indigenous leaders, missionaries, brokers, sailors và households ở cả hai bờ là actors. Không có “global market” tách rời khỏi law và violence.
+
+### Mechanism và event sequence
+
+Conquest hoặc treaty mở land claim; census và property law biến claim thành title; armed labor regime tạo commodity; port, insurance và credit chuyển output thành revenue. Disease làm dân số bản địa sụt không đều, nhưng conquest vẫn cần alliance, food và logistics. Plantation/slavery, mining và settler frontier tạo các feedback khác nhau giữa land, labor và coercion.
+
+### Competing interpretations
+
+Một narrative nhấn mạnh exchange và hybridization; một narrative khác nhấn mạnh expropriation, racial capitalism và genocide. Hai bên không đối xứng: cultural exchange có thể diễn ra trong điều kiện bên kia mất đất, người và quyền tự trị. Indigenous resistance, legal petition và giữ giống cho thấy agency nhưng không xóa structural constraint.
+
+### Hệ quả và path dependence
+
+Export corridor, racial classification và unequal citizenship thường tồn tại sau independence dưới dạng debt, language, land concentration và border. Commodity specialization tạo revenue nhanh nhưng làm vulnerability với giá và climate. Counterfactual về disease phải giữ các biến khác: không có mortality shock vẫn còn military technology, alliance và labor demand; chỉ có distribution quyền lực là khác.
